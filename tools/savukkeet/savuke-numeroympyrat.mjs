@@ -1,5 +1,5 @@
 /*
- * Savuke: NUMEROYMPYRÄT KOHDEKARTALLA (Bryssel ja Ljubljana, omistajan
+ * Savuke: NUMEROYMPYRÄT KOHDEKARTALLA (Bryssel, Ljubljana ja Košice, omistajan
  * päätös 20.9.2026: kohteet numeroituina ympyröinä ilman miniatyyrejä,
  * ei "Muut"-riviä liuskassa).
  *
@@ -46,7 +46,7 @@ const vaadi = (nimi, ehto, lisa = '') => {
 };
 
 const selain = await chromium.launch({ executablePath: process.env.CHROMIUM });
-for (const kaupunki of ['bryssel', 'ljubljana']) {
+for (const kaupunki of ['bryssel', 'ljubljana', 'kosice']) {
   const kohteita = KAUPUNKIKARTAT[kaupunki].kohteet.length;
   const peli = new Game({ players: [{ name: 'Fogg', color: '#c9a227', start: kaupunki }], pack: packById('maailmankartta'), seed: 5 });
   peli.phase = 'action'; peli.tokens.delete(kaupunki);
@@ -89,7 +89,7 @@ for (const kaupunki of ['bryssel', 'ljubljana']) {
     const e = [...document.querySelectorAll('.nahtavyys-arkki, dialog[open]')].filter((x) => x.offsetParent !== null || x.open).pop();
     return e ? (e.innerText || '').replace(/\s+/g, ' ').slice(0, 120) : null;
   });
-  vaadi(`${kaupunki}: kolmannen ympyrän napautus avaa kortin`, Boolean(kortti) && /Kohde 3|Oikeuspalatsi|Prešernin|Križanke|Tromostovje/.test(kortti), String(kortti));
+  vaadi(`${kaupunki}: kolmannen ympyrän napautus avaa kortin`, Boolean(kortti) && /Kohde 3|Oikeuspalatsi|Prešernin|Križanke|Tromostovje|Hlavná|Valtionteatteri/.test(kortti), String(kortti));
   // Liuska: ei Muut-riviä.
   await sivu.evaluate(async () => { document.querySelectorAll('dialog[open]').forEach((d) => d.close?.()); });
   const rivit = await sivu.evaluate(async ([id, lat, lng]) => {
@@ -100,7 +100,7 @@ for (const kaupunki of ['bryssel', 'ljubljana']) {
     l.nostot.avaaLiuskaKaupungista(lat, lng, { id, nimi: id });
     await new Promise((v) => setTimeout(v, 900)); l.ladoHeti(); await new Promise((v) => setTimeout(v, 500));
     return (l.nostot.liuskanRivit?.() ?? []).map((r) => `${r.laji}:${r.nimi}`);
-  }, [kaupunki, kaupunki === 'bryssel' ? 50.85 : 46.05, kaupunki === 'bryssel' ? 4.35 : 14.51]);
+  }, [kaupunki, { bryssel: 50.85, ljubljana: 46.05, kosice: 48.721 }[kaupunki], { bryssel: 4.35, ljubljana: 14.51, kosice: 21.258 }[kaupunki]]);
   vaadi(`${kaupunki}: liuskassa ei ole "Muut"-riviä`, rivit.length > 0 && !rivit.some((r) => /Muut/.test(r)), rivit.join(' / '));
   vaadi(`${kaupunki}: ei sivuvirheitä`, virheet.length === 0, virheet.join(' | '));
   await ctx.close();

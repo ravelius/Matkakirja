@@ -621,6 +621,21 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: 50.851, etela: 50.8335, lansi: 4.342, ita: 4.376 },
     laajennus: 1.6,
   },
+  kosice: {
+    /*
+     * Košicen vanhakaupunki (20.9.2026; omistajan päätös: Slovakian
+     * pelikaupunki): Hlavná-kadun kara Pyhän Elisabetin
+     * tuomiokirkosta valtionteatterin ohi Immaculata-pylvääseen,
+     * idässä kaupunginmuurin kaari Pyövelin bastionilta ja
+     * Miklušin vankilalta Jakabin palatsiin. 0,8 × 0,55 km: kaikki
+     * kahdeksan kohdetta mahtuvat, ja koska kaupungin vanha ydin on
+     * pieni, tiukka rajaus pitää Hlavná-kadun kaarevan aukion
+     * luettavana. Hornád-joki jää kuvan ulkopuolelle idässä; vettä
+     * on vain Mlynský náhon -myllykanavan pätkä kuvan koillisosassa.
+     */
+    rajat: { pohjoinen: 48.7238, etela: 48.7188, lansi: 21.2545, ita: 21.265 },
+    laajennus: 1.6,
+  },
   kobenhavn: {
     // Satamakanava halkoo kuvan pohjois–eteläsuunnassa: vasemmalla
     // vanha kaupunki Tivolista Rundetårniin, oikealla Christianshavn

@@ -89,9 +89,9 @@ test('Sevillan kolme kohdetta osoittavat englanninkielisiin artikkeleihin', () =
   assert.equal(nimella('Plaza de España').wiki, 'Plaza de España, Seville');
 });
 
-test('numeroympyrat-lippu pitää kohteet kartalla eikä siirrä niitä liuskaan (Bryssel, Ljubljana)', async () => {
+test('numeroympyrat-lippu pitää kohteet kartalla eikä siirrä niitä liuskaan (Bryssel, Ljubljana, Košice)', async () => {
   const { kaupunkikartanSiirretyt } = await import('../js/nahtavyydet.js');
-  for (const id of ['bryssel', 'ljubljana']) {
+  for (const id of ['bryssel', 'ljubljana', 'kosice']) {
     assert.equal(KAUPUNKIKARTAT[id].numeroympyrat, true, `${id}: lippu puuttuu`);
     assert.deepEqual(kaupunkikartanSiirretyt(null, id), [], `${id}: kohteet eivät saa siirtyä liuskan "Muut"-riville`);
   }
