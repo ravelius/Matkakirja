@@ -90,10 +90,36 @@
  * väistä aihenostoa eivätkä toisiaan.
  */
 
+/*
+ * ── RUUDUN REUNA ON ESTE (omistaja 20.9.2026, Biskajanlahti ja Dune du
+ * Pilat maalehden reunassa; Sisältökirjurin mittaus docs/raportit/
+ * nimiot-reunassa-20260920.md: 68 elävää nimiötä 30 maassa yli reunan)
+ *
+ * Sovittelu väisti vain mustetta — ruudun reunaa ei koskaan, joten
+ * reunalla nimiö leikkautui. Nyt kutsuja antaa `reuna`n (ruudun
+ * laatikko turva-alueineen, js/pallolauta/lauta.js nostojenReuna), ja
+ * asento kelpaa vain, jos lapun laatikko on kokonaan sen sisällä:
+ *   - oma kylki ja muut kyljet kokeillaan kuten ennen, reunan sisällä;
+ *   - pienet siirrot samoin;
+ *   - UUSI PORRAS `reuna`: kylki kerrallaan lasketaan pienin siirto,
+ *     joka tuo laatikon reunan sisään, ja se hyväksytään, jos se on
+ *     enintään SOVITTELUN_REUNASIIRTO_PX ja vapaa. Siirto liikuttaa
+ *     koko merkkiä (ikoni + lappu ovat yhtä rasteria), mutta 24 px on
+ *     yhä alle napautussäteen (44 px), joten osuma ei siirry — sama
+ *     myönnytys kuin pienellä siirrolla.
+ *   - jos mikään ei riitä (ikoni itse on reunan takana), lappu
+ *     piilotetaan kuten ennenkin: ikoni jää, nimi palaa kun tilaa on.
+ * Sisältökirjurin ankkurinsiirto (tools/korjaa-nimio-reuna.mjs) ei
+ * toiminut juuri siksi, että tämä kerros laskee asennon uudestaan —
+ * siksi sääntö on täällä eikä koordinaateissa.
+ */
+
 /** Nimiön kyljet kokeilujärjestyksessä (js/fokusnosto-symbolit.js). */
 export const SOVITTELUN_KYLJET = Object.freeze(['oikea', 'vasen', 'yla', 'ala']);
 /** Pienen siirron mitta ruudulla (px) — reilusti alle napautussäteen. */
 export const SOVITTELUN_SIIRTO_PX = 6;
+/** Suurin siirto, jolla lappu vedetään ruudun reunan sisään (px). */
+export const SOVITTELUN_REUNASIIRTO_PX = 24;
 /** Kyljen oma suunta: merkistä poispäin. */
 export const SOVITTELUN_SUUNNAT = Object.freeze({
   oikea: { dx: 1, dy: 0 },
@@ -127,6 +153,18 @@ export const laatikkoKelpaa = (r) => Boolean(r)
 export const laatikotLimittyvat = (a, b) => laatikkoKelpaa(a) && laatikkoKelpaa(b)
   && a.x0 < b.x1 && b.x0 < a.x1 && a.y0 < b.y1 && b.y0 < a.y1;
 
+/** Onko laatikko kokonaan reunan sisällä (null-reuna = ei rajaa). */
+export const laatikkoSisalla = (r, reuna) => !reuna || !laatikkoKelpaa(r)
+  || (r.x0 >= reuna.x0 && r.y0 >= reuna.y0 && r.x1 <= reuna.x1 && r.y1 <= reuna.y1);
+
+/** Pienin siirto, joka tuo laatikon reunan sisään ({ dx, dy }). */
+export function reunaanSiirto(r, reuna) {
+  if (!reuna || !laatikkoKelpaa(r)) return { dx: 0, dy: 0 };
+  const dx = r.x0 < reuna.x0 ? reuna.x0 - r.x0 : (r.x1 > reuna.x1 ? reuna.x1 - r.x1 : 0);
+  const dy = r.y0 < reuna.y0 ? reuna.y0 - r.y0 : (r.y1 > reuna.y1 ? reuna.y1 - r.y1 : 0);
+  return { dx, dy };
+}
+
 /** Laatikon keskipiste. */
 const keski = (r) => ({ x: (r.x0 + r.x1) / 2, y: (r.y0 + r.y1) / 2 });
 
@@ -156,6 +194,10 @@ export function lahinEste(r, esteet) {
  * @param {Array} p.esteet kiinteät ruutulaatikot (kaupunkien nimet)
  * @param {number} [p.siirto] pienen siirron mitta px
  * @param {Array}  [p.kyljet] kokeiltavat kyljet
+ * @param {?{x0:number,y0:number,x1:number,y1:number}} [p.reuna] ruudun
+ *   laatikko turva-alueineen; lappu ei saa ylittää sitä (ks. RUUDUN
+ *   REUNA ON ESTE). null = ei rajaa (vanha käytös).
+ * @param {number} [p.reunasiirto] suurin reunaan vetävä siirto px
  * @returns {{ asennot: Map, siirretty: number, kylkiVaihtui: number,
  *   piilotettu: number, jaljella: number, kokeiltuja: number }}
  *   `asennot` on avain → { kylki, dx, dy, nimio, syy }; `jaljella` on
@@ -164,6 +206,7 @@ export function lahinEste(r, esteet) {
  */
 export function sovitteleLaput({
   laput = [], esteet = [], siirto = SOVITTELUN_SIIRTO_PX, kyljet = SOVITTELUN_KYLJET,
+  reuna = null, reunasiirto = SOVITTELUN_REUNASIIRTO_PX,
 } = {}) {
   const kiinteat = esteet.filter(laatikkoKelpaa);
   const asennot = new Map();
@@ -172,7 +215,9 @@ export function sovitteleLaput({
   let piilotettu = 0;
   let jaljella = 0;
   let kokeiltuja = 0;
-  const vapaa = (r, muut) => !kiinteat.some((e) => laatikotLimittyvat(r, e))
+  let reunalta = 0;
+  const vapaa = (r, muut) => laatikkoSisalla(r, reuna)
+    && !kiinteat.some((e) => laatikotLimittyvat(r, e))
     && !muut.some((e) => laatikotLimittyvat(r, e));
   /*
    * Ahtain ensin: lähin kiinteää nimeä saa valita ensimmäisenä.
@@ -199,7 +244,8 @@ export function sovitteleLaput({
     const muut = l.este ? sijoitetut : [];
     const omaKelpaa = laatikkoKelpaa(oma);
     if (!omaKelpaa
-      || ((!kiinteat.length || !kiinteat.some((e) => laatikotLimittyvat(oma, e)))
+      || (laatikkoSisalla(oma, reuna)
+        && (!kiinteat.length || !kiinteat.some((e) => laatikotLimittyvat(oma, e)))
         && !muut.some((e) => laatikotLimittyvat(oma, e)))) {
       asennot.set(l.avain, {
         kylki: l.kylki, dx: 0, dy: 0, nimio: true, syy: 'oma',
@@ -230,6 +276,24 @@ export function sovitteleLaput({
           }
         }
       }
+      // 3. reunaan vetävä siirto (ks. RUUDUN REUNA ON ESTE): kylki
+      //    kerrallaan pienin siirto, joka tuo laatikon reunan sisään.
+      if (reuna) {
+        for (const k of [l.kylki, ...kyljet.filter((x) => x !== l.kylki)]) {
+          const r0 = l.laatikko(k, 0, 0, true);
+          if (!laatikkoKelpaa(r0)) continue;
+          const { dx, dy } = reunaanSiirto(r0, reuna);
+          if (!dx && !dy) continue;
+          if (Math.abs(dx) > reunasiirto || Math.abs(dy) > reunasiirto) continue;
+          const r = l.laatikko(k, dx, dy, true);
+          kokeiltuja += 1;
+          if (laatikkoKelpaa(r) && vapaa(r, vastaan)) {
+            return {
+              kylki: k, dx, dy, nimio: true, syy: 'reuna', r,
+            };
+          }
+        }
+      }
       return null;
     };
     let valittu = etsi([...siirretyt, ...muut]);
@@ -249,7 +313,8 @@ export function sovitteleLaput({
      * jonka korjaamiseksi koko tarkennus kirjoitettiin.
      */
     if (!valittu && l.este) {
-      const omaVapaa = !kiinteat.some((e) => laatikotLimittyvat(oma, e));
+      const omaVapaa = laatikkoSisalla(oma, reuna)
+        && !kiinteat.some((e) => laatikotLimittyvat(oma, e));
       valittu = omaVapaa
         ? { kylki: l.kylki, dx: 0, dy: 0, nimio: true, syy: 'oma', r: oma }
         : etsi(siirretyt);
@@ -258,6 +323,7 @@ export function sovitteleLaput({
       if (valittu.syy !== 'oma') {
         siirretty += 1;
         if (valittu.syy === 'kylki') kylkiVaihtui += 1;
+        if (valittu.syy === 'reuna') reunalta += 1;
         siirretyt.push(valittu.r);
       }
       sijoitetut.push(valittu.r);
@@ -296,6 +362,6 @@ export function sovitteleLaput({
     });
   }
   return {
-    asennot, siirretty, kylkiVaihtui, piilotettu, jaljella, kokeiltuja,
+    asennot, siirretty, kylkiVaihtui, piilotettu, jaljella, kokeiltuja, reunalta,
   };
 }
