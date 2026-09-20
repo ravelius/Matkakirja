@@ -301,6 +301,38 @@ test('rantaviiva: nostokerros antaa kehän laatikot ja merkitsee meren laput', (
   assert.match(lauta, /pallonKorostusRenkaat\(pallonKorostettuMaa\(\)\)/);
 });
 
+
+/*
+ * ══ LAPUT EIVÄT LIMITY KESKENÄÄN (`keskinainen`, v1983 PR #2635:
+ * savuke-nimikyltti 9b 13 paria, raja 4) ══════════════════════════
+ */
+test('keskinainen: kaksi päällekkäistä lappua eivät jää limittäin — toinen vaihtaa kylkeä tai piiloutuu', () => {
+  const a = koelappu('a', 100, 100);
+  const b = koelappu('b', 110, 102); // sama kylki, kaistat päällekkäin
+  const t = sovitteleLaput({ laput: [a, b], esteet: [], keskinainen: true });
+  const ra = t.asennot.get('a');
+  const rb = t.asennot.get('b');
+  const la = a.laatikko(ra.kylki, ra.dx, ra.dy, ra.nimio);
+  const lb = b.laatikko(rb.kylki, rb.dx, rb.dy, rb.nimio);
+  // Kaksi NIMIÖTÄ ei saa limittyä; ikoni (piilotetun lapun jäänne) on
+  // karttapisteessään eikä sitä voi ottaa pois.
+  assert.ok(!(ra.nimio && rb.nimio && laatikotLimittyvat(la, lb)), 'nimiöt limittyvät yhä');
+  assert.ok(ra.nimio || rb.nimio, 'ainakin toinen nimiö jää näkyviin');
+  assert.equal(t.piilotettu + t.kylkiVaihtui + t.siirretty >= 1, true);
+});
+
+test('keskinainen: ilman lippua samat laput saavat jäädä limittäin (vanha käytös, vastakoe)', () => {
+  const a = koelappu('a', 100, 100);
+  const b = koelappu('b', 110, 102);
+  const t = sovitteleLaput({ laput: [a, b], esteet: [] });
+  assert.equal(t.asennot.get('a').syy, 'oma');
+  assert.equal(t.asennot.get('b').syy, 'oma');
+});
+
+test('keskinainen: nostokerros kytkee sen elävillä nimiöillä', () => {
+  assert.match(lue('../js/pallolauta/nostot.js'), /keskinainen: KOHDEMAAN_NIMIOT_ELAVINA,/);
+});
+
 test('kyljet ovat kirjaston omat neljä, eikä sovittelu keksi omiaan', () => {
   assert.deepEqual([...SOVITTELUN_KYLJET], [...NOSTOSYM_NIMIO_KYLJET]);
 });

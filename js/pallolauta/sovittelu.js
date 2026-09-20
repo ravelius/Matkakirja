@@ -228,9 +228,27 @@ export function lahinEste(r, esteet) {
  * kyljet kokeillaan järjestyksessä, meren lappu päätyy sille kyljelle,
  * joka on rannasta poispäin eli merelle.
  */
+/*
+ * ── LAPUT EIVÄT LIMITY KESKENÄÄN (`keskinainen`, 20.9.2026, v1983 PR
+ * #2635: savuke-nimikyltti 9b — limittyviä nimiöpareja 13 puhelimella
+ * ja 9 työpöydällä, raja 4) ────────────────────────────────────────
+ *
+ * Sääntö "paikallaan pysynyt lappu ei ole este" (ks. MIKÄ ON ESTE JA
+ * MIKÄ EI) nojasi siihen, että laattaladonta oli jo ratkaissut lappujen
+ * keskinäisen järjestyksen. Kun kohdemaan kaikki nimiöt ovat eläviä
+ * (js/laattapyramidi.js KOHDEMAAN_NIMIOT_ELAVINA), ruudulla on 40–70
+ * elävää lappua eikä yhtään laattaan poltettua, ja niiden datakyljet
+ * risteävät keskenään. `keskinainen: true` tekee jokaisesta jo
+ * sijoitetusta lapusta esteen seuraaville (sama mekanismi kuin
+ * aihenoston `este`-lipulla): lappu vaihtaa kylkeä tai siirtyy, ja jos
+ * mikään asento ei ole vapaa, se piiloutuu (ikoni jää) — limitystä ei
+ * synny koskaan. Järjestys on entinen (ahtain ensin), joten tiheimmät
+ * kohdat ratkaistaan ennen väljiä.
+ */
 export function sovitteleLaput({
   laput = [], esteet = [], siirto = SOVITTELUN_SIIRTO_PX, kyljet = SOVITTELUN_KYLJET,
   reuna = null, reunasiirto = SOVITTELUN_REUNASIIRTO_PX, rantaviiva = [],
+  keskinainen = false,
 } = {}) {
   const kiinteat = esteet.filter(laatikkoKelpaa);
   const ranta = rantaviiva.filter(laatikkoKelpaa);
@@ -268,7 +286,7 @@ export function sovitteleLaput({
     kokeiltuja += 1;
     // `este`-lappu katsoo myös jo sijoitettuja lappuja; muille
     // este on vain kiinteä muste, kuten ennenkin.
-    const muut = l.este ? sijoitetut : [];
+    const muut = (l.este || keskinainen) ? sijoitetut : [];
     const omaKelpaa = laatikkoKelpaa(oma);
     if (!omaKelpaa
       || (laatikkoSisalla(oma, reuna) && !rannalla(oma, l)
