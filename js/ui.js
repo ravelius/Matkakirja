@@ -7881,6 +7881,24 @@ export class UI {
     return auki;
   }
 
+  /**
+   * Lentokohteet, jotka lentolista tarjoaa juuri nyt (lentokentät ja
+   * mannerlennot). Tyhjä, ellei LENTÄEN-lista ole auki. Sama joukko
+   * piirtää lentokaaret (matkareittienValinta) ja tuo kohdekaupunkien
+   * merkit pallolle (js/pallolauta/lauta.js pelinKaupunkirajaus).
+   *
+   * @returns {string[]} kaupunkitunnukset, ilman kaksoiskappaleita
+   */
+  tarjotutLennot() {
+    const { game } = this;
+    if (!(this.travelExpanded && this.travelSuodatin === 'air')) return [];
+    if (this.katselu || game.player?.isBot) return [];
+    const kohteet = [];
+    for (const id of game.airportDestinations?.() ?? []) kohteet.push(id);
+    for (const k of game.mannerLennot?.() ?? []) kohteet.push(k.city);
+    return [...new Set(kohteet)];
+  }
+
   matkareittienValinta() {
     const { game } = this;
     const vaiheessa = game.phase === 'roll' || game.phase === 'move';
@@ -7932,21 +7950,28 @@ export class UI {
       }
       return kaaret.size ? [...kaaret] : null;
     };
-    const reittiTunnukset = kaupunki
-      ? (matkalla
-        ? (kantamanKaaret() ?? [...(game.board.adj.get(kaupunki.id) ?? [])])
-        : [])
-      : (kesken ? [kesken] : []);
     const lennotElavana = pyramidiKattaa(game.pack.id);
-    const lentoKohteet = [];
-    if (lennotElavana && naytetaan && kaupunki
-      && this.travelExpanded && this.travelSuodatin === 'air') {
-      for (const id of game.airportDestinations?.() ?? []) lentoKohteet.push(id);
-      for (const k of game.mannerLennot?.() ?? []) lentoKohteet.push(k.city);
-    }
+    const lentoKohteet = naytetaan && kaupunki ? this.tarjotutLennot() : [];
     if (lennotElavana && this.lentoKaari?.b) lentoKohteet.push(this.lentoKaari.b);
-    const lennot = [...new Set(lentoKohteet)];
+    const lennot = lennotElavana ? [...new Set(lentoKohteet)] : [];
     const lentoLahto = this.lentoKaari?.a ?? kaupunki?.id ?? null;
+    /*
+     * LENTONÄKYMÄSSÄ EI LIFTAUSKAARIA (omistaja 20.9.2026 klo 14.40,
+     * sanatarkasti: *"lentonäkymässä liftausreitit pitää piilottaa ja
+     * lentoreittien kohde kaupungit pitää näkyä"*). Kun lentolista on
+     * auki tai lento valittu, kartta puhuu vain lennosta: heiton
+     * kantaman kaaret veisivät silmän väärään matkaan. Kohdekaupunkien
+     * merkit tulevat näkyviin pallon kaupunkirajauksessa
+     * (js/pallolauta/lauta.js pelinKaupunkirajaus → tarjotutLennot).
+     */
+    const lentonakyma = lennot.length > 0;
+    const reittiTunnukset = lentonakyma
+      ? []
+      : (kaupunki
+        ? (matkalla
+          ? (kantamanKaaret() ?? [...(game.board.adj.get(kaupunki.id) ?? [])])
+          : [])
+        : (kesken ? [kesken] : []));
     const avain = naytetaan && (reittiTunnukset.length || lennot.length)
       // Siirron ajan avain on vakio: vaiheen vaihtuminen kesken
       // animaation ei saa piirtää viivaa uudestaan.
