@@ -877,3 +877,61 @@ test('työnkulku välittää piirikytkimen sekä laattashardille että luettelol
   assert.match(tyonkulku, /SYOTE_PIIRIT: \$\{\{ inputs\.piirit \|\| 'kylla' \}\}\n(.*\n){0,6}.*SYOTE_TASOT/,
     'luettelovaiheen env ei sisällä SYOTE_PIIRIT-muuttujaa');
 });
+
+/*
+ * JOEN VÄHIN LEVEYS: uoma ei saa kadota karkealla tasolla (omistaja
+ * 20.9.2026, "joet eivät näy Ranskan kartalla").
+ *
+ * MITATTU tuotannosta ennen korjausta: joet OVAT poltettuina joka
+ * tasolla — z7:n pallolaatassa uoma näkyy selvästi — mutta z5:n
+ * laatassa niitä ei erota. Leveys oli `leveys * R`, ja kun taso
+ * karkenee, 2,6 kutistuu alle pikselin; 0,72:n peittävyydellä
+ * alipikselinen viiva häipyy näkymättömiin.
+ */
+test('joen leveys ei mene alle vähimmäisleveyden karkealla tasolla', async () => {
+  const { piirraJoetKankaalle, JOKITYYLI } = await import('../tools/fokuskartta/maailmapiirto.js');
+
+  assert.ok(JOKITYYLI.vahin > 0, 'vähimmäisleveyttä ei ole');
+
+  /** Kangas, joka muistaa jokaisen asetetun viivanleveyden. */
+  const tekoKangas = () => {
+    const leveydet = [];
+    return {
+      leveydet,
+      ctx: {
+        set lineWidth(v) { leveydet.push(v); },
+        get lineWidth() { return leveydet[leveydet.length - 1] ?? 0; },
+        strokeStyle: '', lineJoin: '', lineCap: '', globalAlpha: 1,
+        beginPath() {}, moveTo() {}, lineTo() {}, bezierCurveTo() {},
+        stroke() {}, save() {}, restore() {}, setLineDash() {},
+      },
+    };
+  };
+
+  const sisalto = {
+    joet: [
+      { tarkeys: 1, pisteet: [[0, 0], [10, 10], [20, 5]] },
+      { tarkeys: 2, pisteet: [[0, 20], [10, 25], [20, 22]] },
+    ],
+  };
+  const mitta = {
+    lautaKuvaX: (x) => x, lautaKuvaY: (y) => y, GW: 1000,
+  };
+
+  // KARKEA TASO: R on pieni, ja ilman pohjaa leveys olisi 0,02 px.
+  const karkea = tekoKangas();
+  piirraJoetKankaalle(karkea.ctx, sisalto, { ...mitta, R: 0.01 });
+  assert.ok(karkea.leveydet.length >= 2, 'jokia ei piirretty lainkaan');
+  for (const w of karkea.leveydet) {
+    assert.ok(w >= JOKITYYLI.vahin,
+      `karkealla tasolla uoma on ${w} px — alle pikselin viiva häipyy näkymättömiin`);
+  }
+
+  // TARKKA TASO: pohja ei saa lihottaa uomaa, kun mittakaava riittää.
+  const tarkka = tekoKangas();
+  piirraJoetKankaalle(tarkka.ctx, sisalto, { ...mitta, R: 1 });
+  assert.ok(tarkka.leveydet.includes(JOKITYYLI.paa),
+    'tarkalla tasolla pääjoen leveys ei ole enää tyylin oma');
+  assert.ok(Math.max(...tarkka.leveydet) > Math.max(...karkea.leveydet),
+    'tarkan tason uoman pitää olla karkeaa leveämpi');
+});

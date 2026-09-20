@@ -99,7 +99,7 @@ test('meriLaatat kääntyy laattakartaksi: aukot eivät lähde hakuun', () => {
 
 test('tasot saavat reliefilipun, meripeiton ja meren taustavärin', () => {
   nollaaReliefi({
-    versio: '20260918',
+    versio: '20260920',
     tasot: [{ z: 7, sarakkeita: 169, riveja: 91, meriLaatat: ['0/0'] }],
   });
   const taso = reliefinTaso(7);
@@ -161,7 +161,7 @@ test('reliefi korvaa pohjan eikä peitä sitä', () => {
  */
 test('reliefin syvin taso on laattakoneen katto, ja kytkin herättää kerroksen', () => {
   nollaaReliefi({
-    versio: '20260918',
+    versio: '20260920',
     tasot: [
       { z: 6, sarakkeita: 85, riveja: 46, meriLaatat: [] },
       { z: 7, sarakkeita: 169, riveja: 91, meriLaatat: [] },
@@ -284,4 +284,60 @@ test('pelkkaaMerta ohittaa vain tasaisen laatan, ei syvää', async () => {
 
   // Tyhjä ruudukko ei ole laatta eikä merta.
   assert.equal(pelkkaaMerta(ruudukko([])), false, 'tyhjä ruudukko ei ole avomerta');
+});
+
+/*
+ * JÄRVIMASKI: merenpinnan yläpuoliset järvet vedeksi (omistaja
+ * 20.9.2026). Väriasteikko lukee vain korkeutta, joten Kaspianmeri
+ * (−28 m) piirtyy oikein vedeksi mutta Baikal (+456 m) maana. Maski
+ * tuo veden erikseen, vektorista.
+ */
+test('jarviMaski täyttää järven renkaan vain nollan yläpuolella', async () => {
+  const { jarviMaski, varjostaJaVarita, JARVEN_SYVYYS } = await import('../tools/tee-reliefipyramidi.mjs');
+
+  // 4 x 4 ruudukko, lon 0..3, lat 0..3. Järvi kattaa keskineliön.
+  // Ruudukko on lon0/lat0 + ruutu, kuten haeIkkuna palauttaa — EI
+  // valmiita lat/lon-taulukoita. Juuri se virhe jätti maskin tyhjäksi
+  // ensimmäisessä versiossa (mitattu Victorian laatalla 20.9.2026).
+  const leveys = 4; const korkeus = 4;
+  const lon0 = 0; const lat0 = 0; const ruutu = 1;
+  const z = new Int16Array([
+    100, 100, 100, 100,
+    100, 500, 500, 100,
+    100, 500, 500, 100,
+    100, 100, 100, 100,
+  ]);
+  const jarvi = [{ nimi: 'koe', renkaat: [[[0.5, 0.5], [2.5, 0.5], [2.5, 2.5], [0.5, 2.5]]] }];
+  const maski = jarviMaski({ z, leveys, korkeus, lon0, lat0, ruutu }, jarvi);
+  const paalla = [...maski].reduce((n, v) => n + v, 0);
+  assert.ok(paalla >= 4, `maski jäi tyhjäksi (${paalla} solua)`);
+  assert.equal(maski[0], 0, 'renkaan ulkopuoli ei saa olla järveä');
+  assert.equal(maski[1 * leveys + 1], 1, 'renkaan sisäpuoli jäi merkitsemättä');
+
+  // Merenpinnan alapuolinen ei kuulu maskiin: se on jo sinistä.
+  const zAlla = new Int16Array(z);
+  zAlla[1 * leveys + 1] = -50;
+  const maskiAlla = jarviMaski({ z: zAlla, leveys, korkeus, lon0, lat0, ruutu }, jarvi);
+  assert.equal(maskiAlla[1 * leveys + 1], 0,
+    'merenpinnan alapuolista ei pidä maalata järvimaskilla');
+
+  // Ilman järviä mikään ei muutu.
+  const tyhja = jarviMaski({ z, leveys, korkeus, lon0, lat0, ruutu }, []);
+  assert.equal([...tyhja].reduce((n, v) => n + v, 0), 0, 'tyhjä järvilista maalasi jotain');
+
+  // Väritys: maskattu piste saa VEDEN sävyn, maskaamaton maan.
+  // `ruutu` on varjostuksen solukoko asteina (tools/varjostus.mjs).
+  const ruudukko = {
+    z, leveys, korkeus, lon0, lat0, ruutu,
+  };
+  const maalla = varjostaJaVarita(ruudukko, null);
+  const vedella = varjostaJaVarita(ruudukko, maski);
+  const i = (1 * leveys + 1) * 3;
+  assert.notDeepEqual(
+    [maalla[i], maalla[i + 1], maalla[i + 2]],
+    [vedella[i], vedella[i + 1], vedella[i + 2]],
+    'järven sävy ei eronnut maasta',
+  );
+  assert.ok(vedella[i + 2] > vedella[i], 'järven sävyn pitää olla sinertävä');
+  assert.ok(JARVEN_SYVYYS < 0, 'järven sävy otetaan meriasteikolta');
 });

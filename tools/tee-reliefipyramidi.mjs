@@ -591,13 +591,101 @@ export async function haeIkkuna({
  * 15″-laatta liukuu vanhan kuvan päälle, ja hitusenkin eri asteikko
  * näkyisi rajalla värihyppynä keskellä merta.
  */
-export function varjostaJaVarita(ruudukko) {
+/*
+ * JÄRVIMASKI: MERENPINNAN YLÄPUOLISET JÄRVET VEDEKSI (omistaja
+ * 20.9.2026).
+ *
+ * Väriasteikko lukee vain korkeutta: alle 0 m sinistä, yli 0 m
+ * vihreää (tools/reliefivarit.mjs). Siksi Kaspianmeri (−28 m) piirtyy
+ * oikein vedeksi, mutta Suuret järvet (+183 m), Baikal (+456 m),
+ * Victoria (+1 135 m) ja Titicaca (+3 812 m) ovat maata. Korkeus ei
+ * kerro vedestä mitään, joten vesi on tuotava erikseen.
+ *
+ * MASKI ON VEKTORISTA, EI KORKEUDESTA: ne_10m_lakes, sama aineisto
+ * jota yleislehti jo käyttää (tools/fokuskartta/maailma.mjs `jarvet`).
+ * Täyttö on rivinvuoroinen pariteettitäyttö — sama sääntö kuin
+ * rannikolla — ja rengasjoukko esikarsitaan laatan laatikolla, koska
+ * jokaisen rivin läpikäynti kaikille tuhannelle järvelle olisi
+ * laatan hinta kerrottuna tuhannella.
+ *
+ * VAIN NOLLAN YLÄPUOLELLA: merenpinnan alapuoliset järvet ovat jo
+ * sinisiä, eikä maskin pidä maalata niiden päälle eri sävyä.
+ */
+export function jarviMaski(ruudukko, jarvilista = []) {
+  const {
+    z, leveys, korkeus, lon0, lat0, ruutu,
+  } = ruudukko;
+  const maski = new Uint8Array(z.length);
+  /*
+   * IKKUNAN KOORDINAATIT OVAT lon0/lat0 + ruutu, EIVÄT valmiita
+   * taulukoita: `haeIkkuna` palauttaa hilan alkupisteen ja solukoon
+   * (y kasvaa pohjoiseen). Ensimmäinen versio luki `lat`- ja
+   * `lon`-taulukoita, joita siinä ei ole — maski jäi tyhjäksi eikä
+   * yksikään järvi värittynyt, vaikka aineisto oli kunnossa (mitattu
+   * Victorian laatalla 20.9.2026).
+   */
+  if (!jarvilista.length || !Number.isFinite(lon0) || !Number.isFinite(lat0)
+    || !Number.isFinite(ruutu) || ruutu <= 0) return maski;
+  const lonA = lon0;
+  const lonB = lon0 + (leveys - 1) * ruutu;
+  const latA = lat0;
+  const latB = lat0 + (korkeus - 1) * ruutu;
+  /* Esikarsinta: vain laatan laatikkoon osuvat renkaat. */
+  const renkaat = [];
+  for (const jarvi of jarvilista) {
+    for (const rengas of jarvi.renkaat ?? []) {
+      let x0 = Infinity; let x1 = -Infinity; let y0 = Infinity; let y1 = -Infinity;
+      for (const [x, y] of rengas) {
+        if (x < x0) x0 = x; if (x > x1) x1 = x;
+        if (y < y0) y0 = y; if (y > y1) y1 = y;
+      }
+      if (x1 < lonA || x0 > lonB || y1 < latA || y0 > latB) continue;
+      renkaat.push(rengas);
+    }
+  }
+  if (!renkaat.length) return maski;
+  const osumat = [];
+  for (let ry = 0; ry < korkeus; ry += 1) {
+    const y = lat0 + ry * ruutu;
+    osumat.length = 0;
+    for (const rengas of renkaat) {
+      for (let i = 0; i < rengas.length; i += 1) {
+        const [x1, y1] = rengas[i];
+        const [x2, y2] = rengas[(i + 1) % rengas.length];
+        if ((y1 > y) === (y2 > y)) continue;
+        osumat.push(x1 + ((y - y1) / (y2 - y1)) * (x2 - x1));
+      }
+    }
+    if (osumat.length < 2) continue;
+    osumat.sort((p, q) => p - q);
+    for (let k = 0; k + 1 < osumat.length; k += 2) {
+      const a0 = osumat[k]; const a1 = osumat[k + 1];
+      const rx0 = Math.max(0, Math.ceil((a0 - lon0) / ruutu));
+      const rx1 = Math.min(leveys - 1, Math.floor((a1 - lon0) / ruutu));
+      for (let rx = rx0; rx <= rx1; rx += 1) {
+        const i = ry * leveys + rx;
+        if (z[i] >= 0) maski[i] = 1;
+      }
+    }
+  }
+  return maski;
+}
+
+/*
+ * JÄRVEN SÄVY. Sama asteikko kuin merellä, matalan veden kohdalta:
+ * järvi on vettä eikä valtameren syvänne, ja sama asteikko pitää
+ * kartan yhtenäisenä. Varjostus ajetaan silti päälle, joten järven
+ * ranta saa saman muodon kuin muukin maasto.
+ */
+export const JARVEN_SYVYYS = -30;
+
+export function varjostaJaVarita(ruudukko, maski = null) {
   const { z, leveys, korkeus } = ruudukko;
   const { varjo } = varjosta(ruudukko, { liioittelu: LIIOITTELU, lat0: ruudukko.lat0 });
   const tasainen = tasainenVarjo();
   const rgb = new Uint8ClampedArray(leveys * korkeus * 3);
   for (let i = 0; i < z.length; i++) {
-    const m = z[i];
+    const m = maski?.[i] ? JARVEN_SYVYYS : z[i];
     const l = ((m < -LUT_POHJA ? -LUT_POHJA : m > LUT_YLA ? LUT_YLA : Math.round(m))
       + LUT_POHJA) * 3;
     const k = varjo[i] / tasainen;
@@ -996,6 +1084,21 @@ async function main() {
   const pakotetut = new Set(
     String(lippu('--pakota-laatat', '')).split(',').map((s) => s.trim()).filter(Boolean),
   );
+  /*
+   * JÄRVIMASKIN AINEISTO (`--jarvet <kansio>`, ne_10m_lakes.geojson).
+   * Ilman kansiota työkalu toimii täsmälleen kuten ennen: maski on
+   * tyhjä eikä yksikään pikseli muutu. `vahinKoko` on pienempi kuin
+   * yleislehdellä (0,4°), koska tämä laatasto on tarkempi ja pienetkin
+   * järvet erottuvat z7:llä.
+   */
+  const jarviKansio = lippu('--jarvet', '');
+  let jarvilista = [];
+  if (jarviKansio) {
+    const { jarvet } = await import('./fokuskartta/maailma.mjs');
+    jarvilista = jarvet(jarviKansio, { vahinKoko: 0.05, harvennus: 0.002 });
+    const renkaita = jarvilista.reduce((n, j) => n + (j.renkaat?.length ?? 0), 0);
+    console.log(`järvimaski: ${jarvilista.length} järveä, ${renkaita} rengasta (${jarviKansio})`);
+  }
 
   mkdirSync(VALIMUISTI, { recursive: true });
 
@@ -1098,7 +1201,8 @@ async function main() {
         }
 
         const t1 = Date.now();
-        const rgb = varjostaJaVarita(ruudukko);
+        const maski = jarvilista.length ? jarviMaski(ruudukko, jarvilista) : null;
+        const rgb = varjostaJaVarita(ruudukko, maski);
         const kuva = laatanPikselit(rgb, ruudukko, bbox);
         const tVari = Date.now() - t1;
 
