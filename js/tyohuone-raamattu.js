@@ -9688,7 +9688,16 @@ export const RAAMATTU = {
           + 'pysahtyi. NUMEROYMPYRAT (Sonnet 3 b465c8d9, Fable 05.30): Bryssel 1-7 ja Ljubljana '
           + '1-8 kohdekartalla numeroituina (maakartat numeroympyrat: true, nahtavyydet.js), '
           + 'Muut-rivi poistuu, muut kaupungit ennallaan; savuke-numeroympyrat 16/16. '
-          + 'Sonnet 3 pysahtyi.',
+          + 'Sonnet 3 pysahtyi. VANHAT KUVAT ERA 2 SILMATARKISTUS VALMIS (Sonnet 2 5271385f, '
+          + '05.35): 394 kuvaa katsottu taydessa koossa, 71 hylatty (aikaleimat, kyltit, '
+          + 'lahihenkilot, liput, vinot), 8 kohteelle uudet kuvat; 199 nostolla >= 1 kuva, '
+          + 'yhteensa 338 (61 nostolla vain yksi); kansio vanhat-eur/ 446 tiedostoa. '
+          + 'FABLEN TARKISTETTAVA ennen ampparilatausta: Grutas (vartiotorni + piikkilanka) '
+          + 'ja nld/maas (kuva esittaa Dinantia Belgiassa - vaihda tai pudota). EI VIELA '
+          + 'ampparissa eika mergetty (omistajan pysaytys) - seuraavan session ensimmainen '
+          + 'Fable-tehtava: pistokoe, aws s3 cp karttanostot/20260920/, HEAD 200, merge. '
+          + 'Kartuscha-alku haarassa sonnet-kartuscha-aukot ab6e6e2d (GBR/DEU hetki-nimet, '
+          + 'BEL 5 aihetta / 20 nostoa; LUX, MLT, SVK, SVN jonossa). Sonnet 2 pysahtyi.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
