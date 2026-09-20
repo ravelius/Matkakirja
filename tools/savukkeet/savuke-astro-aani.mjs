@@ -665,31 +665,77 @@ async function ajaNakyma(nakymanNimi) {
   vaadi(nimessa('vastakoe: pitkiä soittimia on täsmälleen yksi (humina)'),
     pitkia === 1, String(pitkia));
 
-  /* --- 4: pelin musiikkikytkin vaientaa ja palauttaa ---------------- */
-  const kytkinPois = await s.evaluate(async () => {
+  /* --- 4: HUMINA ON TAUSTAÄÄNTÄ, EI MUSIIKKIA (omistaja 20.9.2026) --
+   *
+   * Kumoaa LISÄYS 8:n huminan osalta. Aiemmin tässä mitattiin, että
+   * musiikkikytkin vaientaa huminan; nyt mitataan päinvastainen —
+   * musiikin sulkeminen EI saa viedä avaruuden ääntä, koska humina on
+   * pohjaväriä eikä kappale.
+   */
+  const musiikkiPois = await s.evaluate(async () => {
     const v = await import('/js/musiikkivalitsin.js');
     v.asetaMusiikkiPaalla(false);
     await new Promise((r) => setTimeout(r, 1100));
     const m = await import('/js/linssit/satelliitti-aani.js');
     return { tila: m.astronautinAaniTila(), lahteita: window.__astroAani.lahteita };
   });
-  vaadi(nimessa('pelin musiikkikytkin pois vaientaa ja pysäyttää linssin äänen'),
-    kytkinPois.tila.kytkin === false && kytkinPois.tila.kerrokset.humina.soi === false
-      && kytkinPois.tila.kerrokset.humina.taso === 0,
-    JSON.stringify(kytkinPois.tila));
-  const kytkinPaalle = await s.evaluate(async () => {
+  vaadi(nimessa('musiikin sulkeminen EI vaienna huminaa (se on taustaääntä)'),
+    musiikkiPois.tila.kerrokset.humina.soi === true
+      && musiikkiPois.tila.kerrokset.humina.taso > 0
+      && musiikkiPois.tila.musiikkikytkin === false,
+    JSON.stringify(musiikkiPois.tila));
+  await s.evaluate(async () => {
     const v = await import('/js/musiikkivalitsin.js');
     v.asetaMusiikkiPaalla(true);
+    await new Promise((r) => setTimeout(r, 400));
+  });
+
+  /* Taustaäänten LIUKU säätää huminan voimakkuutta (omistajan tilaus). */
+  const liuku = await s.evaluate(async () => {
+    const k = await import('/js/kehittajan-voimat.js');
+    const m = await import('/js/linssit/satelliitti-aani.js');
+    const tayssa = m.astronautinTaso('humina');
+    k.asetaKehittajanKerroin('tausta', 0.25);
+    await new Promise((r) => setTimeout(r, 500));
+    const neljasosa = m.astronautinTaso('humina');
+    const soiva = m.astronautinAaniTila()?.kerrokset?.humina?.taso ?? null;
+    k.asetaKehittajanKerroin('tausta', 1);
+    await new Promise((r) => setTimeout(r, 500));
+    return { tayssa, neljasosa, soiva, palautettu: m.astronautinTaso('humina') };
+  });
+  vaadi(nimessa('taustaäänten liuku säätää huminan voimakkuutta'),
+    liuku.tayssa > 0 && liuku.neljasosa > 0 && liuku.neljasosa < liuku.tayssa * 0.6
+      && Math.abs(liuku.palautettu - liuku.tayssa) < liuku.tayssa * 0.05,
+    JSON.stringify(liuku));
+
+  /* Taustaäänten KYTKIN vaientaa ja palauttaa huminan kesken linssin. */
+  const taustaPois = await s.evaluate(async () => {
+    const { sfx } = await import('/js/sound.js');
+    sfx.setEnabled(false);
+    await new Promise((r) => setTimeout(r, 1100));
+    const m = await import('/js/linssit/satelliitti-aani.js');
+    return { tila: m.astronautinAaniTila(), lahteita: window.__astroAani.lahteita };
+  });
+  vaadi(nimessa('taustaäänten kytkin pois vaientaa ja pysäyttää huminan'),
+    taustaPois.tila.kytkin === false && taustaPois.tila.kerrokset.humina.soi === false
+      && taustaPois.tila.kerrokset.humina.taso === 0,
+    JSON.stringify(taustaPois.tila));
+  const taustaPaalle = await s.evaluate(async () => {
+    const { sfx } = await import('/js/sound.js');
+    sfx.setEnabled(true);
     await new Promise((r) => setTimeout(r, 2600));
     const m = await import('/js/linssit/satelliitti-aani.js');
     return { tila: m.astronautinAaniTila(), lahteita: window.__astroAani.lahteita };
   });
-  vaadi(nimessa('musiikkikytkin takaisin päälle käynnistää huminan uudestaan'),
-    kytkinPaalle.tila.kerrokset.humina.soi === true
-      && kytkinPaalle.tila.kerrokset.humina.taso > 0
-      && kytkinPaalle.lahteita > kytkinPois.lahteita,
-    JSON.stringify({ tila: kytkinPaalle.tila?.kerrokset?.humina,
-      lahteita: [kytkinPois.lahteita, kytkinPaalle.lahteita] }));
+  vaadi(nimessa('taustaäänten kytkin takaisin päälle käynnistää huminan uudestaan'),
+    taustaPaalle.tila.kerrokset.humina.soi === true
+      && taustaPaalle.tila.kerrokset.humina.taso > 0
+      && taustaPaalle.lahteita > taustaPois.lahteita,
+    JSON.stringify({ tila: taustaPaalle.tila?.kerrokset?.humina,
+      lahteita: [taustaPois.lahteita, taustaPaalle.lahteita] }));
+  const kytkinPois = taustaPois;
+  const kytkinPaalle = taustaPaalle;
+  void kytkinPois; void kytkinPaalle;
   // Linssillä ei ole omaa kytkintä (LISÄYS 8).
   const omaKytkin = await s.evaluate(() => ({
     valikoita: document.querySelectorAll('.satelliitti-valikko, .satelliitti-aani').length,

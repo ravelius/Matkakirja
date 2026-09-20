@@ -87,6 +87,8 @@ import {
 } from '../musiikkivalitsin.js';
 import { lisaaVaistaja } from '../ambience-stream.js';
 import { LINSSIN_HILJENNYS } from '../siirtymamusiikki.js';
+import { sfx, AANIVALINTA_TAPAHTUMA } from '../sound.js';
+import { kehittajanKerroin, kuunteleKehittajanKerrointa } from '../kehittajan-voimat.js';
 
 /*
  * HUMINAN VERSIOITU OSOITE (Codex 16.9.2026, kuitti
@@ -168,11 +170,45 @@ let nykyinen = null;
  * kertoja ja lukija väistävät yhä (pohja seuraa niitä) — täsmälleen
  * sama sääntö kuin js/siirtymamusiikki.js lajinVaisto.
  */
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * HUMINA ON TAUSTAÄÄNTÄ, EI MUSIIKKIA (omistaja 20.9.2026)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * KUMOAA LISÄYS 8:n huminan osalta. Humina oli pelin musiikkikytkimen
+ * takana ja seurasi musiikin liukua, ja se oli väärä paikka: aseman
+ * humina on −30,48 LUFS:n POHJAVÄRI, ei kappale. Pelaaja, joka sulkee
+ * taustamusiikin, menettää samalla avaruuden äänen — eikä
+ * taustaäänten oma säädin tehnyt sille mitään.
+ *
+ * Nyt humina kuuluu taustaäänikanavaan:
+ *   • kytkin  js/sound.js `sfx.enabled` (Äänimaisema),
+ *   • taso    rattaan "taustaäänet"-liuku
+ *             (js/kehittajan-voimat.js kerroin 'tausta', ks. js/main.js
+ *             AANIVOIMAT).
+ *
+ * MUSIIKKIKERROS JÄÄ MUSIIKIN TAAKSE. Se on yhä kytketty pois
+ * (ASTRONAUTIN_MUSIIKKI_KAYTOSSA), mutta jos se joskus palaa, se on
+ * kappale ja kuuluu musiikkikytkimen alle — kaksi kerrosta, kaksi
+ * kanavaa, kumpikin omansa.
+ */
+export function astronautinKanava(nimi) {
+  return nimi === 'musiikki' ? 'musiikki' : 'tausta';
+}
+
+/** Soiko kerroksen kanava lainkaan (kytkin, ei taso)? */
+export function astronautinKanavaPaalla(nimi) {
+  return astronautinKanava(nimi) === 'musiikki' ? musiikkiPaalla() : Boolean(sfx?.enabled);
+}
+
 export function astronautinTaso(nimi) {
   const kerros = KERROKSET[nimi];
-  if (!kerros || !musiikkiPaalla()) return 0;
+  if (!kerros || !astronautinKanavaPaalla(nimi)) return 0;
   const oma = vaistonSyyt.includes(LINSSIN_HILJENNYS) ? vaistonPohja : vaisto;
-  return kerros.voima * oma * musiikinKerroin();
+  const saadin = astronautinKanava(nimi) === 'musiikki'
+    ? musiikinKerroin()
+    : Math.min(1, kehittajanKerroin('tausta'));
+  return kerros.voima * oma * saadin;
 }
 
 /**
@@ -268,12 +304,12 @@ export function avaaAstronautinAani() {
   const kaynnista = async (nimi) => {
     if (!elossa || soivat.has(nimi)) return;
     if (nimi === 'musiikki' && !ASTRONAUTIN_MUSIIKKI_KAYTOSSA) return;
-    if (!musiikkiPaalla()) return;
+    if (!astronautinKanavaPaalla(nimi)) return;
     const ctx = musiikkiKonteksti();
     if (!ctx || ctx.state !== 'running' || typeof ctx.createBufferSource !== 'function') return;
     const puskuri = await haePuskuri(nimi, ctx);
     /* Lataus kesti: linssi on voitu sulkea tai kytkin sammuttaa sillä välin. */
-    if (!puskuri || !elossa || !musiikkiPaalla() || soivat.has(nimi)) return;
+    if (!puskuri || !elossa || !astronautinKanavaPaalla(nimi) || soivat.has(nimi)) return;
     try {
       const lahde = ctx.createBufferSource();
       lahde.buffer = puskuri;
@@ -312,8 +348,11 @@ export function avaaAstronautinAani() {
      */
     musiikkiKytkin() {
       if (!elossa) return;
-      if (musiikkiPaalla()) kaynnistaKaikki();
-      else for (const nimi of [...soivat.keys()]) lopetaKerros(nimi, LASKU_MS);
+      // Kumpikin kanava erikseen: humina taustaäänistä, musiikki musiikista.
+      for (const nimi of Object.keys(KERROKSET)) {
+        if (astronautinKanavaPaalla(nimi)) kaynnista(nimi);
+        else if (soivat.has(nimi)) lopetaKerros(nimi, LASKU_MS);
+      }
     },
     /** Musiikin säädin tai väistö muuttui: soiva taso uudestaan. */
     paivita: paivitaTasot,
@@ -332,7 +371,14 @@ export function avaaAstronautinAani() {
           poissa: nimi === 'musiikki' && !ASTRONAUTIN_MUSIIKKI_KAYTOSSA,
         };
       }
-      return { elossa, kytkin: musiikkiPaalla(), kerrokset };
+      return {
+        elossa,
+        // `kytkin` on huminan kanava (taustaäänet); musiikkikerroksen
+        // oma kytkin näkyy kerrosten tiedoissa.
+        kytkin: astronautinKanavaPaalla('humina'),
+        musiikkikytkin: musiikkiPaalla(),
+        kerrokset,
+      };
     },
     pura() {
       if (!elossa) return;
@@ -376,6 +422,16 @@ lisaaVaistaja((kerroin, kesto, tiedot) => {
 });
 
 kuunteleMusiikinKerrointa(() => nykyinen?.paivita?.(200));
+
+/*
+ * TAUSTAÄÄNIKANAVAN LIUKU JA KYTKIN (omistaja 20.9.2026). Sama heräte
+ * kuin musiikilla: liu'un veto kuuluu heti, ja kytkimen kääntö
+ * vaientaa tai palauttaa huminan kesken linssin.
+ */
+kuunteleKehittajanKerrointa('tausta', () => nykyinen?.paivita?.(200));
+if (typeof document !== 'undefined') {
+  document.addEventListener(AANIVALINTA_TAPAHTUMA, () => nykyinen?.musiikkiKytkin?.());
+}
 
 /*
  * PELIN YLEINEN MUSIIKKIKYTKIN (LISÄYS 8). Sama heräte kuin
