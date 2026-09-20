@@ -340,8 +340,12 @@ async function ajaNakyma(nakymanNimi) {
   /*
    * --- 0. OMA KUVAKE MATKALAUKUN LINSSIVALIKOSSA (omistaja 15.9.2026:
    * *"tee astronauttilinssille oma kuvake matkalaukkuun ... samankokoisena
-   * kuin muut"*). Mitataan vain työpöydällä — sama kuvake piirtyy
-   * kaikilla ruuduilla, eikä ruutukoko vaikuta 64 px:n varasoluun.
+   * kuin muut"*; 20.9.2026 klo 14.50: *"tee astronautin kameralle uusi
+   * kuvake, missä on astronautti ja kamera"* → Fable valitsi ehdokkaan
+   * 3, assets/varusteet/varuste-satelliitti.jpg). Kuvake on nyt oma
+   * VALOKUVA kuten muilla varusteilla; inline-SVG jäi varasoluksi
+   * (js/ui.js linssiLiuska, js/mapart.js 'linssi-satelliitti').
+   * Mitataan vain työpöydällä — sama kuvake piirtyy kaikilla ruuduilla.
    */
   if (nakymanNimi === 'tyopoyta') {
     const kuvake = await s.evaluate(async () => {
@@ -353,12 +357,12 @@ async function ajaNakyma(nakymanNimi) {
       }
       ui.openPassport();
       await ui.paivitaLinssit();
-      // Kuva (ihmisen-matka) ja SVG (satelliitti) latautuvat eri
-      // reittejä — odotetaan molemmat ehtineen piirtyä.
+      // Molemmat kuvat latautuvat verkosta — odotetaan, että kumpikin
+      // on purettu (naturalWidth > 0), ei vain liitetty DOMiin.
       for (let i = 0; i < 40; i += 1) {
-        const sat = document.querySelector('.linssi-liuskat button[data-linssi="satelliitti"] svg');
+        const sat = document.querySelector('.linssi-liuskat button[data-linssi="satelliitti"] img');
         const muu = document.querySelector('.linssi-liuskat button[data-linssi="ihmisen-matka"] img');
-        if (sat && muu && (muu.complete || muu.naturalWidth > 0)) break;
+        if (sat && muu && sat.naturalWidth > 0 && muu.naturalWidth > 0) break;
         // eslint-disable-next-line no-await-in-loop
         await new Promise((r) => setTimeout(r, 50));
       }
@@ -369,15 +373,26 @@ async function ajaNakyma(nakymanNimi) {
       };
       const satNappi = document.querySelector('.linssi-liuskat button[data-linssi="satelliitti"]');
       const muuNappi = document.querySelector('.linssi-liuskat button[data-linssi="ihmisen-matka"]');
+      const satKuva = satNappi?.querySelector('img');
+      // Kuvatiedosto on oikeasti olemassa palvelimella (HEAD 200), ei
+      // vain osoitteena — varasolu-SVG ilmestyisi vasta virheestä.
+      const vastaus = satKuva?.getAttribute('src')
+        ? await fetch(satKuva.getAttribute('src'), { method: 'HEAD' }).then((v) => v.status).catch(() => 0)
+        : 0;
       return {
-        satOnOmaSvg: Boolean(satNappi?.querySelector('svg.token-icon .icon-linssi-satelliitti')),
-        satOnKuva: Boolean(satNappi?.querySelector('img')),
+        satOnKuva: Boolean(satKuva),
+        satLahde: satKuva?.getAttribute('src') ?? null,
+        satLatautui: Boolean(satKuva) && satKuva.naturalWidth > 0,
+        satHead: vastaus,
+        satVarasolu: Boolean(satNappi?.querySelector('svg.token-icon .icon-linssi-satelliitti')),
         sat: mitat(satNappi),
         muu: mitat(muuNappi),
       };
     });
-    vaadi(nimessa('linssivalikon kuvake on oma inline-SVG, ei ulkoinen kuva'),
-      kuvake.satOnOmaSvg && !kuvake.satOnKuva, JSON.stringify(kuvake));
+    vaadi(nimessa('linssivalikon kuvake on oma varustekuva varuste-satelliitti.jpg, joka latautuu'),
+      kuvake.satOnKuva && /assets\/varusteet\/varuste-satelliitti\.jpg$/.test(kuvake.satLahde ?? '')
+        && kuvake.satHead === 200 && kuvake.satLatautui && !kuvake.satVarasolu,
+      JSON.stringify(kuvake));
     vaadi(nimessa('kuvake piirtyy samankokoisena kuin muiden linssien kuvake (± 1 px)'),
       Boolean(kuvake.sat && kuvake.muu)
         && Math.abs(kuvake.sat.w - kuvake.muu.w) <= 1 && Math.abs(kuvake.sat.h - kuvake.muu.h) <= 1,

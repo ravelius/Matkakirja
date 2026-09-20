@@ -446,7 +446,7 @@
         "NAKYMAT": "puhelin",
         "SAVUKE_SUORITUSKYKY": "1"
       },
-      "huomautus": "Suorituskykyrivi: 'reliefi ehti pinnalle kahdeksassa sekunnissa' OK/FAIL-vaitteena puhelinnakymassa. PR-portin rivit vaativat vain, etta reliefi tuli pinnalle, ja tulostavat keston INFO-rivina."
+      "huomautus": "Suorituskykyrivi: 'reliefi ehti pinnalle kahdeksassa sekunnissa' OK/FAIL-vaitteena puhelinnakymassa. PR-portin rivit vaativat vain, etta reliefi tuli pinnalle, ja tulostavat keston INFO-rivina. Lisaksi 45b 'pinta pisteen vieressa on kirkkaampi kuin kaukana' (kuormaherkka maastonaytevertailu, PR #2633 20.9.2026: CI -0,8 vs yksin 9,6)."
     },
     "savuke-topografialinssi.mjs#suorituskyky": {
       "env": {
