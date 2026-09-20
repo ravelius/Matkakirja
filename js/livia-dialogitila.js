@@ -4,11 +4,19 @@
 const LIVIAN_REAKTIODIALOGIT = new Set(['arrival-dialog', 'passport-dialog', 'quiz-dialog']);
 const LIVIAN_NAPPIDIALOGIT = new Set([...LIVIAN_REAKTIODIALOGIT, 'wiki-dialog', 'nahtavyys-dialog']);
 const dialogitilat = new WeakMap();
-const onDialogi = el => el?.localName === 'dialog';
+/* PULUN OMAT IKKUNAT EIVÄT OLE NÄKYMÄN VAIHDOS (mitattu 20.9.2026,
+ * savuke-pollo "nähtävyyslinkki avaa kevyen kuvapopupin"). Pulun oma
+ * kuvakortti on <dialog>, joka avataan showModalilla — vahti näki sen
+ * vieraana ikkunana, js/pollo.js seuraaNakymaa sulki koko chatin, ja
+ * suljeKuvapopup vei kortin mukanaan. Kortti siis välähti ja katosi
+ * samassa napautuksessa, joka sen avasi. Pulun omat dialogit merkitään
+ * data-livia-oma-attribuutilla, eivätkä ne kuulu tähän pinoon. */
+const LIVIAN_OMA = 'data-livia-oma';
+const onDialogi = el => el?.localName === 'dialog' && !el.hasAttribute?.(LIVIAN_OMA);
 
 function dialogitila(doc) {
  if (dialogitilat.has(doc)) return dialogitilat.get(doc);
- const avoimet = () => [...(doc.querySelectorAll?.('dialog[open]') || [])].filter(onDialogi);
+ const avoimet = () => [...(doc.querySelectorAll?.(`dialog[open]:not([${LIVIAN_OMA}])`) || [])].filter(onDialogi);
  let pino = avoimet();
  const kuuntelijat = new Set();
  function paivita(tietueet = []) {
@@ -45,6 +53,12 @@ function dialogitila(doc) {
  };
  dialogitilat.set(doc, tila);
  return tila;
+}
+
+/** Pulun oma ikkuna pois dialogipinosta (ks. LIVIAN_OMA). */
+export function merkitseLivianOmaDialogi(el) {
+ el?.setAttribute?.(LIVIAN_OMA, '');
+ return el;
 }
 
 export function livianYlinDialogi(doc) { return dialogitila(doc).ylin(); }
