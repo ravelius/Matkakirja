@@ -10033,7 +10033,12 @@ export const RAAMATTU = {
           + 'kaynnistysta ja jaa orvoksi) on aito mutta todistamatta; uusi ajo aanet '
           + 'valitettyna, mitataan currentTime. Korjausehdokas: playing-tapahtumassa '
           + 'kirjaus takaisin ui.luennat-tauluun. HUNTU-KAAPPAUKSET 25/50/75 % '
-          + '(kaappaukset/huntu-koe-20260920/) toimitettu omistajalle.',
+          + '(kaappaukset/huntu-koe-20260920/) toimitettu omistajalle. TUPLASAAPUMINEN EI '
+          + 'TOISTU (Opus 1 16.30, aanet valitettyna, currentTime-mitta): lennon jalkeen '
+          + 'tasan yksi luenta; prep sisaltaa v1977:n -> jaljella UI-polku (Opus 1 ajaa '
+          + 'napeilla) tai iPad-Safarin aanikaytos (Sonnet 1 laitteella). OPPI: play()-'
+          + 'kutsu ei ole aani - mittaa currentTime. V1978 PR #2630 avattu 15.47 (huntu '
+          + '50 %, astron aanet, humina, topografian koodi).',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
