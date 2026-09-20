@@ -99,7 +99,7 @@ test('meriLaatat kääntyy laattakartaksi: aukot eivät lähde hakuun', () => {
 
 test('tasot saavat reliefilipun, meripeiton ja meren taustavärin', () => {
   nollaaReliefi({
-    versio: '20260918',
+    versio: '20260920',
     tasot: [{ z: 7, sarakkeita: 169, riveja: 91, meriLaatat: ['0/0'] }],
   });
   const taso = reliefinTaso(7);
@@ -161,7 +161,7 @@ test('reliefi korvaa pohjan eikä peitä sitä', () => {
  */
 test('reliefin syvin taso on laattakoneen katto, ja kytkin herättää kerroksen', () => {
   nollaaReliefi({
-    versio: '20260918',
+    versio: '20260920',
     tasot: [
       { z: 6, sarakkeita: 85, riveja: 46, meriLaatat: [] },
       { z: 7, sarakkeita: 169, riveja: 91, meriLaatat: [] },
