@@ -775,18 +775,6 @@ export const MAASTOKOHTEET_AUT = [
       lisenssi: 'CC BY 2.5',
       lisenssiUrl: 'https://creativecommons.org/licenses/by/2.5',
     },
-    kuvat: [
-      {
-        osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-bregenzin-jarvinayttamo-efd41cfe.jpg',
-        lyhyt: 'Bregenzin järvinäyttämön katsomo vesirajassa.',
-        selite: 'Vihreät ja siniset katsomon istuimet nousevat porrastettuina festivaalirakennuksen edessä. Oikealla näkyy järven vesi.',
-        lahde: 'Valokuva: Olaf Kosinsky, Wikimedia Commons (CC BY-SA 3.0).',
-        tekija: 'Olaf Kosinsky',
-        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Carmen_Festspiele_Bregenz_2017_by_Olaf_Kosinsky-17.jpg',
-        lisenssi: 'CC BY-SA 3.0',
-        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/de',
-      },
-    ],
     nimi: 'Bregenzin järvinäyttämö',
     nimio: 'Bregenz',
     tyyppi: 'kulttuuri',

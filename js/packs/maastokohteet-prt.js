@@ -118,18 +118,6 @@ export const MAASTOKOHTEET_PRT = [
       lisenssi: 'CC BY-SA 4.0',
       lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
-    kuvat: [
-      {
-        osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-atlantti-5c690967.jpg',
-        lyhyt: 'Atlantin rannikkoa Sagresissa Portugalin lounaisrannikolla.',
-        selite: 'Jyrkkä kallioranta ja meri kohtaavat Euroopan mantereen lounaiskulmassa.',
-        lahde: 'Valokuva: pictures Jettcom, Wikimedia Commons (CC BY 3.0).',
-        tekija: 'pictures Jettcom',
-        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:August_Sagres_Coast_End_of_Continent_-_Magic_Portugal_Photography_1989_violent_Atlantic_Ocean_-_panoramio.jpg',
-        lisenssi: 'CC BY 3.0',
-        lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0',
-      },
-    ],
     nimi: 'Atlantti',
     tyyppi: 'meri',
     kysymykset: [
@@ -328,27 +316,15 @@ export const MAASTOKOHTEET_PRT = [
   {
     id: 'tomar',
     kuva: {
-      osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-tomar-d052b597.jpg',
-      lyhyt: 'Tomarin Kristuksen luostarin pyöreä Charola-kirkko.',
-      selite: 'Kaksitoistakulmainen temppeliherrojen rotunda kuuluu Tomarin linnoitusluostarin vanhimpaan osaan.',
-      lahde: 'Valokuva: GFreihalter, Wikimedia Commons (CC BY-SA 3.0).',
-      tekija: 'GFreihalter',
-      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Tomar_Convento_de_Cristo_Charola_750.jpg',
-      lisenssi: 'CC BY-SA 3.0',
-      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-tomar-231c456c.jpg',
+      lyhyt: 'Charolan sisätilaa Tomarin Kristuksen luostarissa.',
+      selite: 'Koristeellisia kaaria ja pylväitä keskiaikaisen temppeliherrojen kirkon sisällä.',
+      lahde: 'Valokuva: Palickap, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Palickap',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Tomar,_Convento_de_Cristo,_charola_(02).jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
-    kuvat: [
-      {
-        osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-tomar-231c456c.jpg',
-        lyhyt: 'Charolan sisätilaa Tomarin Kristuksen luostarissa.',
-        selite: 'Koristeellisia kaaria ja pylväitä keskiaikaisen temppeliherrojen kirkon sisällä.',
-        lahde: 'Valokuva: Palickap, Wikimedia Commons (CC BY-SA 4.0).',
-        tekija: 'Palickap',
-        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Tomar,_Convento_de_Cristo,_charola_(02).jpg',
-        lisenssi: 'CC BY-SA 4.0',
-        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
-      },
-    ],
     nimi: 'Tomarin luostari',
     tyyppi: 'historia',
     kysymykset: [
@@ -388,18 +364,6 @@ export const MAASTOKOHTEET_PRT = [
       lisenssi: 'CC BY-SA 3.0',
       lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
-    kuvat: [
-      {
-        osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-guimaraes-276a9bd4.jpg',
-        lyhyt: 'Paço dos Duques de Bragança ulkoa katsottuna.',
-        selite: 'Palatsin kivi- ja tiilirakenteita ja muuria Guimarãesissa.',
-        lahde: 'Valokuva: John Samuel, Wikimedia Commons (CC BY-SA 4.0).',
-        tekija: 'John Samuel',
-        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Exterior_view_of_Pa%C3%A7o_dos_Duques_de_Bragan%C3%A7a_(Guimar%C3%A3es)_02.jpg',
-        lisenssi: 'CC BY-SA 4.0',
-        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
-      },
-    ],
     nimi: 'Guimarães',
     tyyppi: 'historia',
     kysymykset: [
@@ -486,18 +450,6 @@ export const MAASTOKOHTEET_PRT = [
       lisenssi: 'CC BY-SA 4.0',
       lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
-    kuvat: [
-      {
-        osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-saovicente-d6ef4b89.jpg',
-        lyhyt: 'Kalliot ja meri São Vicenten niemellä Sagresissa.',
-        selite: 'Jyrkät rannikon kalliot ja Atlantin näkymä Euroopan lounaiskulmassa.',
-        lahde: 'Valokuva: Freebird from Madrid, Spain, Wikimedia Commons (CC BY-SA 2.0).',
-        tekija: 'Freebird from Madrid, Spain',
-        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Cape_St._Vincent_(Sagres,_Algarve)_(20927438946).jpg',
-        lisenssi: 'CC BY-SA 2.0',
-        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
-      },
-    ],
     nimi: 'São Vicenten niemi',
     tyyppi: 'merenkulku',
     kysymykset: [
@@ -587,18 +539,6 @@ export const MAASTOKOHTEET_PRT = [
       lisenssi: 'CC BY 4.0',
       lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
     },
-    kuvat: [
-      {
-        osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-obidos-5f9f24a1.jpg',
-        lyhyt: 'Óbidosin muurien ympäröimä valkoinen kaupunki.',
-        selite: 'Valkoiset talot punaisine kattoineen ryhmittyvät kaupunginmuurien sisään.',
-        lahde: 'Valokuva: Travelholic Path, Wikimedia Commons (CC BY 2.0).',
-        tekija: 'Travelholic Path',
-        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:%C3%93bidos,_a_city_within_the_walls_(23434109220).jpg',
-        lisenssi: 'CC BY 2.0',
-        lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
-      },
-    ],
     nimi: 'Óbidos',
     tyyppi: 'kulttuuri',
     kysymykset: [

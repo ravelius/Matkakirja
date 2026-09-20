@@ -42,18 +42,6 @@ export const MAASTOKOHTEET_ROU = [
       lisenssi: 'Public domain',
       lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
     },
-    kuvat: [
-      {
-        osoite: 'https://media.matkakirja.app/karttanostot/20260920/rou-nosto-negoiu-d84687ba.jpg',
-        lyhyt: 'Negoiun huipun pylväs ja kyltti Fagarasvuorilla.',
-        selite: 'Huipun kivipylvään kyltissä lukee Negoiu 2535, ja taustalla avautuvat vuoristolaaksot.',
-        lahde: 'Valokuva: Krzysztof Dudzik-Górnicki, Wikimedia Commons (CC BY-SA 3.0).',
-        tekija: 'Krzysztof Dudzik-Górnicki',
-        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Gory_Fogaraskie_(Fagaras_Mountains)_59.jpg',
-        lisenssi: 'CC BY-SA 3.0',
-        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
-      },
-    ],
     nimi: 'Negoiu',
     tyyppi: 'vuori',
     kysymykset: [

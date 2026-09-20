@@ -339,27 +339,15 @@ export const MAASTOKOHTEET_SWE = [
   {
     id: 'birka',
     kuva: {
-      osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-birka-76b486e7.jpg',
-      lyhyt: 'Aukko Birkan kaupunkia ympäröivässä maavallissa.',
-      selite: 'Ruohoinen vallinharjanne ja kivet erottuvat avaralla niityllä pilvisen sinisen taivaan alla.',
-      lahde: 'Valokuva: Jonathan Olsson, Wikimedia Commons (CC BY 4.0).',
-      tekija: 'Jonathan Olsson',
-      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Opening_in_Birka_town_rampart.jpg',
-      lisenssi: 'CC BY 4.0',
-      lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-birka-2d871fc7.jpg',
+      lyhyt: 'Birkan viikinkiajan taloja jäljittelevät olkikattoiset rakennukset.',
+      selite: 'Ruokokattoiset hirsirakennukset seisovat puiden lomassa Björkön saarella.',
+      lahde: 'Valokuva: Holger.Ellgaard, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Holger.Ellgaard',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Birka_hus_2008a.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
-    kuvat: [
-      {
-        osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-birka-2d871fc7.jpg',
-        lyhyt: 'Birkan viikinkiajan taloja jäljittelevät olkikattoiset rakennukset.',
-        selite: 'Ruokokattoiset hirsirakennukset seisovat puiden lomassa Björkön saarella.',
-        lahde: 'Valokuva: Holger.Ellgaard, Wikimedia Commons (CC BY-SA 3.0).',
-        tekija: 'Holger.Ellgaard',
-        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Birka_hus_2008a.JPG',
-        lisenssi: 'CC BY-SA 3.0',
-        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
-      },
-    ],
     nimi: 'Birka',
     tyyppi: 'kauppa',
     kysymykset: [
@@ -571,18 +559,6 @@ export const MAASTOKOHTEET_SWE = [
       lisenssi: 'CC BY-SA 4.0',
       lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
-    kuvat: [
-      {
-        osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-kiruna-5e2e61d9.jpg',
-        lyhyt: 'Kirunan keskusta jalankulkualueineen.',
-        selite: 'Keltainen puurakennus ja kivetty aukio erottuvat pilvisellä säällä kaupungin keskustassa.',
-        lahde: 'Valokuva: Arild Vågen, Wikimedia Commons (CC BY-SA 4.0).',
-        tekija: 'Arild Vågen',
-        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kiruna_centrum_September_2017_01.jpg',
-        lisenssi: 'CC BY-SA 4.0',
-        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
-      },
-    ],
     nimi: 'Kiruna',
     tyyppi: 'tekniikka',
     kysymykset: [
@@ -788,18 +764,6 @@ export const MAASTOKOHTEET_SWE = [
       lisenssi: 'CC BY-SA 4.0',
       lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
-    kuvat: [
-      {
-        osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-karlskrona-51da72b0.jpg',
-        lyhyt: 'Karlskronan Amiraliteettikirkko.',
-        selite: 'Punaseinäinen puukirkko, jonka vihreä kupolikatto ja pieni lyhty kohoavat puiden keskeltä.',
-        lahde: 'Valokuva: Sendelbach, Wikimedia Commons (CC BY-SA 3.0).',
-        tekija: 'Sendelbach',
-        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Karlskrona_Amiralitetskyrkan.jpg',
-        lisenssi: 'CC BY-SA 3.0',
-        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
-      },
-    ],
     nimi: 'Karlskrona',
     tyyppi: 'merenkulku',
     kysymykset: [

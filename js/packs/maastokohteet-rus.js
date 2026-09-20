@@ -254,27 +254,15 @@ export const MAASTOKOHTEET_RUS = [
   {
     id: 'ohotanmeri',
     kuva: {
-      osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-ohotanmeri-38b68854.jpg',
-      lyhyt: 'Ohotanmeren rannikko Sahalinin Tihii-niemellä.',
-      selite: 'Vihreä niitty ja pieni metsä johtavat kallioiselle niemelle, jonka takana meri jatkuu horisonttiin.',
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-ohotanmeri-3ee0b66a.jpg',
+      lyhyt: 'Norsukallio matalan veden paljastamalla Ohotanmeren rannalla.',
+      selite: 'Norsun näköinen kivi seisoo laskuveden paljastamalla kivikkoisella rannalla Tihii-niemen lähellä.',
       lahde: 'Valokuva: Vihljun, Wikimedia Commons (public domain).',
       tekija: 'Vihljun',
-      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Cape_Tihii._Sakhalin_coast_of_Sea_of_Okhotsk.JPG',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Elefant_Rock_near_Cape_Tihii._Sakhalin_coast_of_Sea_of_Okhotsk.JPG',
       lisenssi: 'Public domain',
       lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
     },
-    kuvat: [
-      {
-        osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-ohotanmeri-3ee0b66a.jpg',
-        lyhyt: 'Norsukallio matalan veden paljastamalla Ohotanmeren rannalla.',
-        selite: 'Norsun näköinen kivi seisoo laskuveden paljastamalla kivikkoisella rannalla Tihii-niemen lähellä.',
-        lahde: 'Valokuva: Vihljun, Wikimedia Commons (public domain).',
-        tekija: 'Vihljun',
-        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Elefant_Rock_near_Cape_Tihii._Sakhalin_coast_of_Sea_of_Okhotsk.JPG',
-        lisenssi: 'Public domain',
-        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
-      },
-    ],
     nimi: 'Ohotanmeri',
     tyyppi: 'meri',
     kysymykset: [
@@ -307,18 +295,6 @@ export const MAASTOKOHTEET_RUS = [
       lisenssi: 'Public domain',
       lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
     },
-    kuvat: [
-      {
-        osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-beringinmeri-c90b3b8f.jpg',
-        lyhyt: 'Aallot ja lumi Beringinmeren mustalla rannalla.',
-        selite: 'Tumma kivinen ranta kaartuu lumen peittämälle rinteelle, ja aallot murtuvat rantaan.',
-        lahde: 'Valokuva: Benson Poppy, U.S. Fish and Wildlife Service, Wikimedia Commons (public domain).',
-        tekija: 'Benson Poppy, U.S. Fish and Wildlife Service',
-        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Bering_sea_shore_in_ice.jpg',
-        lisenssi: 'Public domain',
-        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
-      },
-    ],
     nimi: 'Beringinmeri',
     tyyppi: 'meri',
     kysymykset: [
@@ -389,27 +365,15 @@ export const MAASTOKOHTEET_RUS = [
   {
     id: 'ob',
     kuva: {
-      osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-ob-cbc82663.jpg',
-      lyhyt: 'Jäänlähtö Ob-joella.',
-      selite: 'Rikkoutuneet jääkasat ovat kasautuneet joen rannalle kevään tullen.',
-      lahde: 'Valokuva: Игоревич, Wikimedia Commons (public domain).',
-      tekija: 'Игоревич',
-      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:IceDamOb.jpg',
-      lisenssi: 'Public domain',
-      lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-ob-97d1238f.jpg',
+      lyhyt: 'Metrosilta Ob-joen yllä Novosibirskissa.',
+      selite: 'Pitkä silta jatkuu kaupungin rannalta joen yli, kaukana horisontissa näkyy kaupunkia.',
+      lahde: 'Valokuva: Mikhail Koninin, Wikimedia Commons (CC BY 2.0).',
+      tekija: 'Mikhail Koninin',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Bridges_thru_Ob\'_river_Novosibirsk_Siberia_17.04.2012.jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
     },
-    kuvat: [
-      {
-        osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-ob-97d1238f.jpg',
-        lyhyt: 'Metrosilta Ob-joen yllä Novosibirskissa.',
-        selite: 'Pitkä silta jatkuu kaupungin rannalta joen yli, kaukana horisontissa näkyy kaupunkia.',
-        lahde: 'Valokuva: Mikhail Koninin, Wikimedia Commons (CC BY 2.0).',
-        tekija: 'Mikhail Koninin',
-        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Bridges_thru_Ob\'_river_Novosibirsk_Siberia_17.04.2012.jpg',
-        lisenssi: 'CC BY 2.0',
-        lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
-      },
-    ],
     nimi: 'Ob',
     tyyppi: 'joki',
     kysymykset: [
@@ -504,18 +468,6 @@ export const MAASTOKOHTEET_RUS = [
       lisenssi: 'CC BY-SA 4.0',
       lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
-    kuvat: [
-      {
-        osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-solovetskin-luostari-4a3a731f.jpg',
-        lyhyt: 'Solovetskin luostari ilmasta katsottuna.',
-        selite: 'Kivimuurien ympäröimä luostarikompleksi sijaitsee saaren rannalla, ja pieni satama näkyy oikealla.',
-        lahde: 'Valokuva: Trasprd, Wikimedia Commons (CC BY-SA 4.0).',
-        tekija: 'Trasprd',
-        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Solovetsky_Monastery_drone_1.jpg',
-        lisenssi: 'CC BY-SA 4.0',
-        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
-      },
-    ],
     nimi: 'Solovetskin luostari',
     tyyppi: 'historia',
     kysymykset: [
@@ -561,18 +513,6 @@ export const MAASTOKOHTEET_RUS = [
       lisenssi: 'CC BY-SA 3.0',
       lisenssiUrl: 'http://creativecommons.org/licenses/by-sa/3.0/',
     },
-    kuvat: [
-      {
-        osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-kazanin-kreml-226d18fa.jpg',
-        lyhyt: 'Kazanin kremlin Spasskaja-torni kadun päässä.',
-        selite: 'Valkoinen kellotorni, jonka huipulla on tähti, kohoaa katukiveyksen ja lyhtyjen takaa.',
-        lahde: 'Valokuva: Alexxx1979, Wikimedia Commons (CC BY-SA 4.0).',
-        tekija: 'Alexxx1979',
-        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kazan_Kremlin._Spasskaya_Tower_P8111872_2200.jpg',
-        lisenssi: 'CC BY-SA 4.0',
-        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
-      },
-    ],
     nimi: 'Kazanin kreml',
     tyyppi: 'historia',
     kysymykset: [
@@ -725,18 +665,6 @@ export const MAASTOKOHTEET_RUS = [
       lisenssi: 'Public domain',
       lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
     },
-    kuvat: [
-      {
-        osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-tunguskan-rajahdys-ca9a1beb.jpg',
-        lyhyt: 'Kartta Tunguskan tapahtuman vaikutusalueesta Siperiassa.',
-        selite: 'Karttaan on merkitty räjähdyksen keskusta, metsän tuhoutuma-alue ja Vanavaran kylä.',
-        lahde: 'Kartta: Merikanto, Wikimedia Commons (CC BY 4.0).',
-        tekija: 'Merikanto',
-        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Tunguska_explosion_effect_areas_1.png',
-        lisenssi: 'CC BY 4.0',
-        lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
-      },
-    ],
     nimi: 'Tunguskan räjähdys',
     tyyppi: 'historia',
     kysymykset: [
@@ -835,18 +763,6 @@ export const MAASTOKOHTEET_RUS = [
       lisenssi: 'CC BY-SA 3.0',
       lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
-    kuvat: [
-      {
-        osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-jasnaja-poljana-dc9efdc5.jpg',
-        lyhyt: 'Jasnaja Poljanan kartanon sisäänkäynnin valkoiset portintornit.',
-        selite: 'Kaksi pientä pyöreää tornia vihreine kattoineen reunustaa tietä kartanon portilla.',
-        lahde: 'Valokuva: Karel x, Wikimedia Commons (CC0).',
-        tekija: 'Karel x',
-        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Yasnaya_Polyana_Museum_Entrance.jpg',
-        lisenssi: 'CC0',
-        lisenssiUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en',
-      },
-    ],
     nimi: 'Jasnaja Poljana',
     tyyppi: 'kulttuuri',
     kysymykset: [
