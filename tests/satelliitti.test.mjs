@@ -791,8 +791,15 @@ test('jokaisella kuvalla on aika, kuvateksti, osoitteet ja lähdesivu', () => {
       // Sukkulakuvien tunnuksissa on väliviivat (sts059-213-019), asemakuvissa ei.
       assert.match(h.id, /^[a-z0-9]+(-[a-z0-9]+)*$/i, `${kohde.tunnus}: outo kuvatunnus`);
       assert.match(h.aika, /^\d{4}-\d{2}-\d{2}/);
-      assert.match(h.kuva, /^https:\/\/images-assets\.nasa\.gov\/image\/.*~large\.jpg$/);
-      assert.match(h.pikku, /^https:\/\/images-assets\.nasa\.gov\/image\/.*~(small|thumb)\.jpg$/);
+      // Poikkeus: 12 havaintoa on siirretty omaan ämpäriin, koska NASAn
+      // kuvassa oli alareunan valkoinen tekstipalkki, joka on rajattu
+      // pois käsin (sisalto-astro-palkit, ks. tools/hae-satelliittihavainnot.mjs
+      // KUVAPOIKKEUKSET).
+      const nasaKuva = /^https:\/\/images-assets\.nasa\.gov\/image\/.*~large\.jpg$/;
+      const nasaPikku = /^https:\/\/images-assets\.nasa\.gov\/image\/.*~(small|thumb)\.jpg$/;
+      const omaAmpari = /^https:\/\/media\.matkakirja\.app\/linssit\/astronautin-kamera\/.*~(large|small)\.jpg$/;
+      assert.ok(nasaKuva.test(h.kuva) || omaAmpari.test(h.kuva), `${h.id}: outo kuva-osoite`);
+      assert.ok(nasaPikku.test(h.pikku) || omaAmpari.test(h.pikku), `${h.id}: outo pikku-osoite`);
       assert.match(h.sivu, /^https:\/\/images\.nasa\.gov\/details\//);
       assert.ok(h.kuvaustapa, `${h.id}: kuvaustapa puuttuu`);
       // KUVATEKSTI ON TÄRKEIN: se on ainoa teksti, jonka pelaaja näkee.
