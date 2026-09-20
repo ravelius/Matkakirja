@@ -9588,7 +9588,12 @@ export const RAAMATTU = {
           + 'oletukseksi, nostotaso uusiksi versioon 2026-09-20b-nostot, sitten pallosarja, '
           + 'sitten luettelo + osoitin haaraan opus2-pohja-20260920 (ei ampariin). OPPI: '
           + 'skriptin ajo ei peri generaattorin lippuja - tarkista shardirivit ennen '
-          + 'globaalia ajoa.',
+          + 'globaalia ajoa. KARTUSCHAN AUKOT (Sonnet 2 juurisyy 04.30): sisaltovika - '
+          + 'MAA_KATEGORIAT tyhja 13 maalla (BEL, LUX, MLT, SVK, SVN + ALB, AND, BLR, MDA, '
+          + 'MKD, MNE, SRB, XKX), ja hetki-kategorioilla sama nimi "Historian hetki" (GBR 4, '
+          + 'DEU 3) -> Sonnet 2 kirjoittaa EU-maille >= 5 rivia ja erilliset hetki-nimet. '
+          + 'Sonnet 2:n sessio osui kayttorajaan (nollautui 04.10); Aveiron aikaleimakuva '
+          + 'poistettu (8730febf), muiden 394 kuvan silmatarkistus kesken.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
