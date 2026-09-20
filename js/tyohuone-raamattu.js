@@ -10000,7 +10000,17 @@ export const RAAMATTU = {
           + '(kaappaus kartuscha-v1977.png: lippu liian pieni) -> Opus 2; 3) "muuta '
           + 'avaruushumina taustaaaneksi, eli silloin taustaaanen taso saataa avaruushuminan '
           + 'voimakkuutta. eli irroita se taustamusiikista ja liita taustaaaneen" -> Opus 2 '
-          + '(kumoaa LISAYS 8:n musiikkikytkin-sidonnan huminan osalta).',
+          + '(kumoaa LISAYS 8:n musiikkikytkin-sidonnan huminan osalta). TUPLASAAPUMINEN '
+          + '(Opus 1 15.30): ei toistunut 4 skenaariossa; loydos: doFly ei kutsu '
+          + 'stopDiaryVoicea (8 muuta siirtymaa kutsuu) -> lisataan; Rooman kaksi luentaa '
+          + 'yhta aikaa (+20 s) tarkistetaan; omistaja: oli kaynyt Amsterdamissa aiemmin '
+          + 'samassa istunnossa -> toisto Bryssel-Amsterdam-Berliini-lento. TOPOGRAFIA '
+          + '(Opus 2 7f23bb9a): ei 404 - laattoja ei koskaan poltettu: pelkkaaMerta ohitti '
+          + 'kaikki alle -200 m laatat (98 % niista relievia >= 500 m) -> ehto tasaisuus '
+          + '(20 m); merenpinnan ylapuoliset jarvet vaativat jarvimaskin (ne_10m_lakes); '
+          + 'musiikin pito yhteiseksi portiksi (pidaMusiikkiKiinni). PAATOS (Fable 15.35): '
+          + 'reliefi poltetaan uusiksi jarvimaskin kanssa yhdessa taustassa (tunteja, '
+          + 'NOAA), julkaistaan kun amparissa. Koodi mergetty prepiin.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
