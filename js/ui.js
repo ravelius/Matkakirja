@@ -7898,8 +7898,44 @@ export class UI {
       && (matkalla || this.liukuAuki || vaiheessa);
     const paikka = siirtyva ?? game.player?.pos;
     const kesken = !kaupunki && paikka?.type === 'edge' ? paikka.edge : null;
+    /*
+     * REITIT HEITON KANTAMAN PÄÄHÄN (omistajan päätös 20.9.2026 klo
+     * 13.45: *"liftatessa piirretään ne kaaret, joita pitkin tällä
+     * heitolla voi edetä"*).
+     *
+     * AIEMMIN piirrettiin vain oman kaupungin omat kaaret. Brysselissä
+     * niitä on kaksi (Pariisi ja Amsterdam), joten kuutosella pelaaja
+     * näki kaksi viivaa vaikka pääsi Lontooseen ja Berliiniin asti —
+     * kartta laajeni heiton jälkeen, mutta viivoja ei tullut lisää.
+     *
+     * KANTAMA OTETAAN PELIN OMASTA LASKELMASTA, ei omasta haustani:
+     * game.moves on juuri tämän heiton lailliset siirrot
+     * (js/rules.js findMoves), ja jokainen niistä kantaa polkunsa.
+     * Polkujen kaarten unioni ON "kaikki tavoitettavat polut" — sama
+     * sääntö kuin siirron sallittavuudella, joten viiva ei voi luvata
+     * reittiä, jota peli ei hyväksy (eikä jättää pois sellaista, jonka
+     * se hyväksyy). Kulkutapa, kielletyt kaaret ja askelmäärät tulevat
+     * samalla ilmaiseksi.
+     *
+     * ENNEN HEITTOA kantamaa ei ole (game.moves on tyhjä tai edellisen
+     * vuoron), ja silloin pidetään entinen esikatselu: oman kaupungin
+     * kaaret.
+     */
+    const kantamanKaaret = () => {
+      const liikkeet = game.phase === 'move' ? game.moves : null;
+      if (!liikkeet?.size) return null;
+      const kaaret = new Set();
+      for (const { path } of liikkeet.values()) {
+        for (const askel of path ?? []) {
+          if (askel?.type === 'edge' && askel.edge) kaaret.add(askel.edge);
+        }
+      }
+      return kaaret.size ? [...kaaret] : null;
+    };
     const reittiTunnukset = kaupunki
-      ? (matkalla ? [...(game.board.adj.get(kaupunki.id) ?? [])] : [])
+      ? (matkalla
+        ? (kantamanKaaret() ?? [...(game.board.adj.get(kaupunki.id) ?? [])])
+        : [])
       : (kesken ? [kesken] : []);
     const lennotElavana = pyramidiKattaa(game.pack.id);
     const lentoKohteet = [];
@@ -7914,7 +7950,11 @@ export class UI {
     const avain = naytetaan && (reittiTunnukset.length || lennot.length)
       // Siirron ajan avain on vakio: vaiheen vaihtuminen kesken
       // animaation ei saa piirtää viivaa uudestaan.
+      // Heiton silmäluku ja kaarten määrä ovat osa avainta: sama
+      // kaupunki ja sama vaihe voivat antaa eri kantaman eri heitolla,
+      // ja ilman näitä kerros jäisi ensimmäisen heiton näköiseksi.
       ? `${game.pack.id}:${kaupunki?.id ?? kesken}:${siirtyva ? 'siirto' : game.phase}`
+        + `:${game.die ?? ''}/${reittiTunnukset.length}`
         + `:${lentoLahto ?? ''}>${lennot.join(',')}` : '';
     return { reittiTunnukset, lennot, lentoLahto, avain };
   }
