@@ -11755,6 +11755,187 @@ export const MAA_KATEGORIAT = {
       },
     },
     {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Puolan historia yhdistää tähtitiedettä, suolaa, musiikkia ja tarua: mies '
+        + 'joka siirsi Maan pois maailmankaikkeuden keskeltä, kaivos joka on oma '
+        + 'maanalainen kaupunkinsa, säveltäjän sydän ja lohikäärme joka yhä henkäisee '
+        + 'tulta.',
+      nostot: [
+        {
+          otsikko: 'Mies joka pysäytti Auringon ja liikutti Maata',
+          aika: '1543',
+          tiedosto: 'Nikolaus Kopernikus.jpg',
+          teksti: 'Nikolaus Kopernikus opiskeli Krakovan yliopistossa ja työskenteli '
+            + 'myöhemmin katolisena kirkonmiehenä Fromborkissa, mutta hänen elämäntyönsä '
+            + 'oli tähtitiede. Vuonna 1543, juuri ennen kuolemaansa, hän julkaisi teoksen '
+            + 'De revolutionibus orbium coelestium, jossa hän esitti Auringon eikä Maan '
+            + 'olevan aurinkokunnan keskipiste. Ajatus ei ollut aivan uusi — antiikin '
+            + 'kreikkalainen Aristarkhos Samoslainen oli esittänyt samankaltaisen mallin '
+            + 'jo lähes kaksi vuosituhatta aiemmin — mutta Kopernikuksen teos käynnisti '
+            + 'tieteellisen vallankumouksen, joka muutti lopullisesti käsityksen ihmisen '
+            + 'paikasta maailmankaikkeudessa.',
+          lyhyt: 'Kopernikus esitti vuonna 1543, että Aurinko eikä Maa on aurinkokunnan '
+            + 'keskipiste.',
+          selite: 'Nikolaus Kopernikuksen muotokuva; hän julkaisi heliosentrisen mallinsa '
+            + 'juuri ennen kuolemaansa.',
+          lahde: 'Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Suolakaivos jossa on kirkko maan alla',
+          aika: '13. vuosisata',
+          tiedosto: 'Poland-01583 - St. Kinga\'s Chapel (31547044100).jpg',
+          teksti: 'Wieliczkan suolakaivos Krakovan lähellä on kaivettu 1200-luvulta lähtien, '
+            + 'ja suolaa louhittiin siellä yhtäjaksoisesti aina vuoteen 1996 asti — yksi '
+            + 'maailman vanhimmista toimivista kaivoksista. Kaivos ulottuu 327 metrin '
+            + 'syvyyteen ja yli 287 kilometrin käytäväverkostoon. Vuosisatojen aikana '
+            + 'kaivosmiehet veistivät suolasta patsaita, kappeleita ja jopa kokonaisia '
+            + 'kirkkosaleja kattokruunuineen — kaikki, myös valaisimet, on veistetty tai '
+            + 'puhallettu suolasta. Nykyään kaivos on Unescon maailmanperintökohde ja '
+            + 'yksi Puolan suosituimmista nähtävyyksistä.',
+          lyhyt: 'Wieliczkan suolakaivoksessa kaivosmiehet veistivät kokonaisia kirkkosaleja '
+            + 'suolasta.',
+          selite: 'Pyhän Kingan kappeli Wieliczkan suolakaivoksessa; jopa kattokruunut on '
+            + 'veistetty suolasta.',
+          lahde: 'Dennis G. Jarvis, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Sydän joka jäi kotiin',
+          aika: '1849',
+          tiedosto: 'Warszawa, ul. Krakowskie Przedmieście 3 20170516 003.jpg',
+          teksti: 'Fryderyk Chopin kuoli Pariisissa 17. lokakuuta 1849 vain 39-vuotiaana, '
+            + 'kaukana kotimaastaan. Hänen oma toiveensa oli, että hänen sydämensä '
+            + 'palautettaisiin Puolaan, vaikka ruumis haudattiinkin Père Lachaisen '
+            + 'hautausmaalle Pariisiin. Ruumiinavauksen tehnyt lääkäri otti sydämen '
+            + 'talteen, ja Chopinin sisar Ludwika kuljetti sen alkoholiin säilöttynä '
+            + 'Varsovaan. Sydän muurattiin Pyhän Ristin kirkon pilariin, jossa se lepää '
+            + 'yhä tänään — säveltäjä jäi ruumiiltaan Ranskaan mutta sydämeltään kotiin '
+            + 'Puolaan.',
+          lyhyt: 'Chopinin sydän on säilötty Varsovan Pyhän Ristin kirkon pilariin vuodesta '
+            + '1849.',
+          selite: 'Pyhän Ristin kirkko Varsovassa; Chopinin sydän on muurattu erääseen kirkon '
+            + 'pilareista.',
+          lahde: 'Tilman2007, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Lohikäärme joka syttyy tuleen',
+          aika: 'nykyään',
+          tiedosto: 'SmokWawelski-Rzeźba-POL, Kraków.jpg',
+          teksti: 'Wawelin kukkulan luolassa Krakovassa asui tarun mukaan lohikäärme, joka '
+            + 'vaati kaupungilta uhrilampaita ja lopulta neitoja, kunnes köyhä '
+            + 'suutarinoppipoika täytti lampaan rikillä ja piellä — lohikäärme söi sen, '
+            + 'janosi hillittömästi ja lopulta räjähti juotuaan joesta niin paljon vettä. '
+            + 'Tarina on niin rakastettu, että Wawelin kukkulan juurelle pystytettiin '
+            + '1972 pronssinen lohikäärmepatsas, joka oikeasti henkäisee tulta muutaman '
+            + 'minuutin välein kaasuputken ansiosta — lasten suosikkinähtävyys '
+            + 'nykyaikaisen tekniikan ja vanhan tarun yhdistelmänä.',
+          lyhyt: 'Wawelin lohikäärmepatsas Krakovassa henkäisee oikeasti tulta muutaman '
+            + 'minuutin välein.',
+          selite: 'Pronssinen lohikäärmepatsas Wawelin kukkulan juurella Krakovassa.',
+          lahde: 'Mach240390, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miten Wawelin lohikäärme tarun mukaan lopulta kuoli?',
+        vaihtoehdot: [
+          'Se räjähti juotuaan liikaa vettä',
+          'Ritari surmasi sen miekalla',
+          'Se lensi vuorelta pois',
+          'Kuningas karkotti sen loitsulla',
+        ],
+        oikea: 0,
+        fakta: 'Suutarinoppipoika täytti lampaan rikillä ja piellä lohikäärmeen '
+          + 'syötäväksi.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Puolan ruokakulttuuri kasvaa metsästä ja niityiltä: taikinataskut joita '
+        + 'täytetään millä tahansa, hidas metsästäjän pata, viina jossa kelluu '
+        + 'heinänkorsi ja tulisavustettu vuoristojuusto.',
+      nostot: [
+        {
+          otsikko: 'Taskut jotka täytetään millä tahansa',
+          aika: 'nykyään',
+          tiedosto: 'Pierogi ruskie Słupsk.jpg',
+          teksti: 'Pierogit ovat taikinataskuja, jotka suljetaan täytteen ympärille ja '
+            + 'keitetään vedessä. Täyte voi olla melkein mitä tahansa: perunaa ja '
+            + 'raejuustoa, hapankaalia, jauhelihaa, sieniä tai marjoja. Suolaiset '
+            + 'pierogit tarjoillaan usein voissa paistettujen sipulien tai smetanan kera, '
+            + 'ja makeat versiot ovat jälkiruokaa. Jokaisella alueella ja perheellä on '
+            + 'omat suosikkitäytteensä, ja pierogien tekeminen yhdessä on monissa '
+            + 'perheissä juhlapyhien vakiintunut perinne — erityisesti joulunaattona.',
+          lyhyt: 'Pierogit ovat taikinataskuja, joiden täyte vaihtelee perunasta marjoihin.',
+          selite: 'Pierogi ruskie -taskuja lautasella; täytteenä perunaa ja raejuustoa.',
+          lahde: 'MOs810, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Metsästäjän pata joka paranee odottaessa',
+          aika: 'nykyään',
+          tiedosto: 'Bigos (1).jpg',
+          teksti: 'Bigos eli metsästäjän pata on hidas muhennos, jossa erilaiset lihat '
+            + 'haudutetaan yhdessä hapankaalin ja tuoreen kaalin kanssa. Ruokaan lisätään '
+            + 'usein makkaraa, sieniä, luumuja ja viiniä, ja mausteet vaihtelevat '
+            + 'perheittäin. Bigosin erikoisuus on, että se paranee uudelleenlämmittäessä: '
+            + 'monet väittävät parhaan bigosin olevan se, joka on saanut seistä ja '
+            + 'maustua useita päiviä, jopa viikon. Ruoka levisi alkuperäisestä Puolasta '
+            + 'laajalle koko Puolan–Liettuan unionin alueelle.',
+          lyhyt: 'Bigos-muhennoksen sanotaan maistuvan parhaalta vasta useiden päivien '
+            + 'jälkeen.',
+          selite: 'Lautasellinen bigosta eli metsästäjän patamuhennosta persiljalla '
+            + 'koristeltuna.',
+          lahde: 'Dr. Bernd Gross, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Viina jossa on heinänkorsi pullossa',
+          aika: 'nykyään',
+          tiedosto: 'Żubrówka Bison Grass.JPG',
+          teksti: 'Żubrówka on maustettu vodka, jonka jokaiseen pulloon lisätään yksi puhdas '
+            + 'heinänkorsi — biisoninheinää, joka kerätään käsin Białowieżan metsästä '
+            + 'Puolan itärajalta Valko-Venäjän vastaisella rajaseudulla. Sama metsä on '
+            + 'Euroopan alkuperäisten metsäbiisonien viimeinen laaja elinalue, ja heinä '
+            + 'saa nimensä juuri niiden laidunmaista. Kuivattu heinä antaa viinalle '
+            + 'vienon, hieman vaniljaisen ja tuoreen heinän tuoksun, joka erottaa sen '
+            + 'selvästi tavallisesta vodkasta — pullon pohjalle jäävä korsi on samalla '
+            + 'merkki aitoudesta.',
+          lyhyt: 'Żubrówka-vodkan jokaisessa pullossa on käsin kerätty biisoninheinän korsi.',
+          selite: 'Pullo Żubrówka-biisoninheinävodkaa; etiketissä on Białowieżan '
+            + 'metsäbiisoni.',
+          lahde: 'Bachelot Pierre J-P, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Juusto jonka muoto on suojattu lailla',
+          aika: 'nykyään',
+          tiedosto: 'Sery góralskie.jpg',
+          teksti: 'Oscypek on savustettu lampaanmaitojuusto, jota valmistetaan vain '
+            + 'Tatra-vuorten alueella Etelä-Puolassa, perinteisesti bacaksi kutsutun '
+            + 'mestaripaimenen käsin. Juuston muoto — kapeneva sukkulan malli '
+            + 'koristeellisine kuvioineen — on niin tunnusomainen, että se on suojattu '
+            + 'Euroopan unionin alkuperänimityksellä: vain tietyllä alueella tehty juusto '
+            + 'saa käyttää nimeä oscypek. Sitä syödään usein paistettuna ja tarjoillaan '
+            + 'puolukkahillon kanssa.',
+          lyhyt: 'Oscypek-juuston sukkulanmuotoinen kuviointi on suojattu EU:n '
+            + 'alkuperänimityksellä.',
+          selite: 'Perinteisiä sukkulanmuotoisia oscypek-juustoja myytävänä Puolan '
+            + 'vuoristossa.',
+          lahde: 'Pawel Swiegoda (Paberu), Wikimedia Commons (CC BY-SA 2.5)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mistä Żubrówka-vodkan heinänkorsi kerätään?',
+        vaihtoehdot: [
+          'Białowieżan metsästä',
+          'Tatra-vuorilta',
+          'Wieliczkan kaivoksesta',
+          'Masurian järviltä',
+        ],
+        oikea: 0,
+        fakta: 'Sama metsä on Euroopan alkuperäisten metsäbiisonien viimeinen laaja '
+          + 'elinalue.',
+      },
+    },
+    {
       id: 'menovinkit',
       nimi: 'Menovinkit',
       johdanto: 'Puola on avannut kokoelmansa verkkoon isolla kädellä: '
