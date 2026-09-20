@@ -1705,6 +1705,12 @@ export class Pollo {
     this.pinoTila = 'auki';
     this.pinonHistoriaLisatty = false;
     /*
+     * Mistä tilanteesta pinon kuplat ovat (ks.
+     * siivoaVanhanKontekstinKuplat). Alussa tyhjä: ensimmäinen kupla
+     * asettaa sen, eikä siivous poista mitään tyhjästä pinosta.
+     */
+    this.pinonKonteksti = '';
+    /*
      * AIEMMAT PUHEENVUOROT luetaan KERRAN, tässä: istunnon omat kuplat
      * ja vastaukset kirjautuvat samaan lokiin sitä mukaa kun ne
      * sanotaan, joten myöhempi luku näkisi ne kahdesti chatissa.
@@ -3441,6 +3447,10 @@ export class Pollo {
     const eka = pino.firstChild;
     for (const merkinta of vanhat) {
       const kupla = this.luoKupla('historia');
+      // Historiakupla kuuluu siihen tilanteeseen, jossa se nostettiin
+      // esiin: seuraava tilanteenvaihto vie senkin (ks.
+      // siivoaVanhanKontekstinKuplat).
+      if (kupla.dataset) kupla.dataset.konteksti = this.kuplaKonteksti();
       kupla.classList.add('pollo-vihje-maadoitus', 'pollo-vihje-vanha');
       for (const kappale of jaaKappaleiksi(merkinta.t)) {
         kupla.appendChild(polloElementti('p', 'pollo-vihje-lause', kappale));
@@ -3456,6 +3466,40 @@ export class Pollo {
   /** Pinon kuplat lukujärjestyksessä (vanhin ensin). */
   pinonKuplat() {
     return this.pino ? [...this.pino.children] : [];
+  }
+
+  /**
+   * VANHAN TILANTEEN KUPLAT POIS PINOSTA (Sonnet 1, kierros 17D:
+   * *"pulun kupla näyttää koko istunnon vastaushistorian (Mayotte,
+   * Ochtinska, Dubai yhdessä ketjussa)"*).
+   *
+   * JUURISYY. Pino tyhjennettiin vain kaupungin vaihtuessa
+   * (seuraaKohtauspiilotusta: 'startFlight') ja linssin alkaessa
+   * (linssiAlkoi). Saman kaupungin sisällä — nähtävyysjuttu, artikkeli,
+   * lehden aihesivu — kuplat vain kasautuivat, ja kolmannen jutun
+   * kohdalla ruudulla oli yhä ensimmäisen jutun repliikki.
+   * Kysymystarjokkaille sama siivous on ollut olemassa 18.8.2026 asti
+   * (siivoaTarjokkaat); tämä on sen pari kuplille, ja se lukee
+   * täsmälleen saman avaimen (kysymysAvain).
+   *
+   * MITÄÄN EI MENETETÄ: jokainen kupla kirjataan chattiin jo
+   * sanottaessa (kirjaaKuplaViestiin), ja pinon oma laajennus hakee
+   * lokin takaisin kartan päälle (taytaPinoHistorialla) — siksi myös
+   * `pinonHistoriaLisatty` nollataan, jotta laajennus toimii uudessa
+   * tilanteessa uudelleen.
+   *
+   * @returns {number} montako kuplaa poistettiin.
+   */
+  siivoaVanhanKontekstinKuplat() {
+    const avain = this.kuplaKonteksti();
+    if (avain === this.pinonKonteksti) return 0;
+    this.pinonKonteksti = avain;
+    const vanhat = this.pinonKuplat()
+      .filter((k) => (k.dataset?.konteksti ?? '') !== avain);
+    if (!vanhat.length) return 0;
+    this.poistaKuplat(vanhat);
+    this.pinonHistoriaLisatty = false;
+    return vanhat.length;
   }
 
   /**
@@ -3513,6 +3557,16 @@ export class Pollo {
     if (kupla.dataset?.laji === 'puhe') {
       this.unohdaPiilotettuKupla();
       this.peruKuplanPiilotus();
+    }
+    /*
+     * KUPLA MUISTAA TILANTEENSA (ks. siivoaVanhanKontekstinKuplat).
+     * Merkintä tehdään tässä eikä luoKuplassa, jotta se kattaa kaikki
+     * neljä kutsujaa yhdellä rivillä — ja jotta pinon konteksti on aina
+     * sen kuplan konteksti, joka pinoon oikeasti päätyi.
+     */
+    if (kupla.dataset && !kupla.dataset.konteksti) {
+      kupla.dataset.konteksti = this.kuplaKonteksti();
+      this.pinonKonteksti = kupla.dataset.konteksti;
     }
     const pino = this.varmistaPino();
     const vanhat = this.pinonKuplat();
@@ -4400,6 +4454,8 @@ export class Pollo {
     seuraaLivianDialogeja(this.doc, (ylin, edellinen) => {
       this.kiinnita();
       this.paivitaKuplanPalautus();
+      // Tilanne vaihtui: edellisen jutun kuplat pois kartan päältä.
+      this.siivoaVanhanKontekstinKuplat();
       if (this.auki && (edellinen && !edellinen.open || ylin && !livianDialogikoti(this.doc))) this.sulje();
       else this.tarkistaKonteksti();
     });
@@ -4414,8 +4470,28 @@ export class Pollo {
      */
     const kategoria = this.doc.getElementById('arrival-kategoria');
     if (kategoria) {
-      new MutationObserver(() => this.tarkistaKonteksti())
-        .observe(kategoria, { childList: true });
+      new MutationObserver(() => {
+        this.siivoaVanhanKontekstinKuplat();
+        this.tarkistaKonteksti();
+      }).observe(kategoria, { childList: true });
+    }
+    /*
+     * JUTUSTA JUTTUUN SAMASSA IKKUNASSA (Sonnet 1, kierros 17D).
+     *
+     * Nähtävyyshampurilainen ja artikkelilinkit vaihtavat ikkunan
+     * SISÄLLÖN sulkematta ikkunaa (js/nahtavyydet.js avaaNahtavyys),
+     * joten dialogien seuranta ei näe siirtymää lainkaan — ja juuri
+     * siinä kuplat kasautuivat. Otsikko on sama tunniste, jolla
+     * kysymysAvain erottaa jutut toisistaan (paallimmainenJuttu), joten
+     * sen muuttuminen on täsmälleen oikea signaali.
+     */
+    for (const ikkuna of ARTIKKELI_IKKUNAT) {
+      const otsikko = this.doc.querySelector?.(ikkuna.otsikko) ?? null;
+      if (!otsikko) continue;
+      new MutationObserver(() => {
+        this.siivoaVanhanKontekstinKuplat();
+        this.tarkistaKonteksti();
+      }).observe(otsikko, { childList: true, characterData: true, subtree: true });
     }
     if (intro) {
       new MutationObserver(() => this.paivitaNakyvyys())
