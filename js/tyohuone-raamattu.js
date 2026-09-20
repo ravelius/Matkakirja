@@ -9975,7 +9975,12 @@ export const RAAMATTU = {
           + 'uusi kuvake, missa on astronautti ja kamera" (varusteruudukossa nyt pelkka '
           + 'linssi, kaappaus varusteet-astro-kuvake.webp) -> Opus 2 astro-aanen jalkeen: '
           + 'kuvake muiden varustekuvien tyyliin (pyorea, akvarelli-sepia) kuvageneraattorilla '
-          + 'Macin avaimella; Fable hyvaksyy kuvan ennen julkaisua.',
+          + 'Macin avaimella; Fable hyvaksyy kuvan ennen julkaisua. OMISTAJA 14.55: '
+          + '"topografialinssista puuttuu meret seka sisajarvet. lisaksi ota taustamusiikki '
+          + 'pois linssin ajaksi" (kaappaus topografia-meret-puuttuvat.webp: Intian '
+          + 'valtameri tasaisina sinisina suorakaiteina, Kaspianmeri/jarvet puuttuvat) -> '
+          + 'Opus 2: merilaatat (batymetria) eivat lataudu tai puuttuvat amparista + '
+          + 'sisajarvet; musiikki pois linssin ajaksi samalla mekanismilla kuin astrossa.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
