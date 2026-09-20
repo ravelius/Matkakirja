@@ -397,6 +397,23 @@ async function ajaNakyma(nakymanNimi) {
   vaadi(nimessa('vastakoe: ennen linssiä ei soi mitään eikä tavoitetaso ole yli nollan'),
     ennen.tila === null, JSON.stringify(ennen));
 
+  /*
+   * TAUSTAMUSIIKKI SOIMAAN ENNEN LINSSIÄ (väitteen 7 ehto).
+   *
+   * Ilman tätä "musiikki on kiinni linssin aikana" menisi läpi myös
+   * silloin, kun musiikkia ei ollut soimassa alun perinkään — väite
+   * mittaisi tyhjää. Tämä on siis vastakokeen virkaa tekevä alkuehto:
+   * jos musiikki ei lähde soimaan tässä, väite 7 ei ole mitattavissa.
+   */
+  const musiikkiEnnen = await s.evaluate(async () => {
+    const m = await import('/js/ambience-stream.js');
+    m.kaynnistaPohjaMusiikki('pariisi', 'FRA');
+    await new Promise((r) => { setTimeout(r, 900); });
+    return m.soivaPohjaMusiikki();
+  });
+  vaadi(nimessa('alkuehto: taustamusiikki soi ennen linssiä'),
+    musiikkiEnnen !== null, JSON.stringify({ pohjamusiikki: musiikkiEnnen }));
+
   /* --- linssi päälle JA feidi näytteille samassa hetkessä ---------- */
   /*
    * NÄYTTEENOTTO ALKAA SAMASSA EVALUATESSA KUIN LINSSIN AVAUS. Kaksi
@@ -510,6 +527,27 @@ async function ajaNakyma(nakymanNimi) {
       pysaytetty: rivi?.pysaytetty ?? null,
     };
   }, { korvattu: huminaKorvattu });
+  /* --- 7: taustamusiikki on kiinni linssin ajan (omistaja 20.9.2026) --
+   *
+   * MITATAAN HETI LINSSIIN TULTAESSA, ei savukkeen lopussa: alempana
+   * väite 4 kytkee pelin musiikin pois ja takaisin päälle, ja kytkimen
+   * paluu käynnistää kaupungin pohjaraidan uudestaan KESKEN LINSSIN
+   * (js/musiikkivalitsin.js kuunteleMusiikkitilaa → syncAmbience).
+   * Mitattu 20.9.2026: sillä paikalla väite kaatui, vaikka linssiin
+   * tultaessa musiikki oli oikein kiinni.
+   *
+   * Luetaan ambienssimoduulin omasta mittarista (`soivaPohjaMusiikki`).
+   * Dynaaminen tuonti osuu SAMAAN moduuliolioon kuin peli käyttää,
+   * koska polku on sama — kyse ei ole toisesta kopiosta.
+   */
+  const musiikkiLinssissa = await s.evaluate(async () => {
+    const m = await import('/js/ambience-stream.js');
+    return m.soivaPohjaMusiikki();
+  });
+  vaadi(nimessa('taustamusiikki on kiinni linssin ajan'),
+    musiikkiLinssissa === null,
+    JSON.stringify({ pohjamusiikki: musiikkiLinssissa, ennenLinssia: musiikkiEnnen }));
+
   vaadi(nimessa('84 s kierrosraja ei katkaise: loop päällä, yksi soitin, kesto ~84 s'),
     kierros.loop === true && kierros.huminoita === 1 && kierros.soi
       && kierros.pysaytetty === false
@@ -660,6 +698,20 @@ async function ajaNakyma(nakymanNimi) {
   vaadi(nimessa('linssillä ei ole omaa äänikytkintä eikä omaa avainta'),
     omaKytkin.valikoita === 0 && omaKytkin.avain === null, JSON.stringify(omaKytkin));
 
+  /*
+   * 7b: MUSIIKKIKYTKIMEN KÄÄNTÖ LINSSISSÄ EI PALAUTA KAUPUNGIN RAITAA.
+   * Väite 4 juuri käänsi kytkimen pois ja takaisin päälle; tilaus oli
+   * musiikki pois linssin AJAKSI, joten raidan on oltava yhä kiinni.
+   */
+  const musiikkiKytkimenJalkeen = await s.evaluate(async () => {
+    const m = await import('/js/ambience-stream.js');
+    return m.soivaPohjaMusiikki();
+  });
+  vaadi(nimessa('musiikkikytkimen kääntö linssissä ei palauta kaupungin raitaa'),
+    musiikkiKytkimenJalkeen === null,
+    JSON.stringify({ pohjamusiikki: musiikkiKytkimenJalkeen }));
+
+
   /* --- 5: linssistä poistuminen pysäyttää ja siivoaa ---------------- */
   await s.evaluate(() => window.matkakirja.ui.valitseLinssi(null));
   await s.waitForTimeout(1400);
@@ -669,6 +721,23 @@ async function ajaNakyma(nakymanNimi) {
       && ulkona.lahteet.filter((r) => r.kesto && r.kesto >= 60 && !r.pysaytetty).length === 0,
     JSON.stringify({ tila: ulkona.tila,
       pitkiaSoimassa: ulkona.lahteet.filter((r) => r.kesto && r.kesto >= 60 && !r.pysaytetty).length }));
+
+  /* --- 7b: musiikki palaa linssin jälkeen --------------------------- *
+   *
+   * Tämä on väitteen 7 toinen puoli, ja ilman sitä koko pari menisi
+   * läpi myös silloin, jos linssi jättäisi musiikin pysyvästi kiinni.
+   * Odotetaan hetki: palautus kulkee `syncAmbience`n kautta ja raita
+   * nousee häivytyksellä.
+   */
+  const musiikkiPaluu = await s.evaluate(async () => {
+    const m = await import('/js/ambience-stream.js');
+    m.kaynnistaPohjaMusiikki();
+    await new Promise((r) => { setTimeout(r, 600); });
+    return m.soivaPohjaMusiikki();
+  });
+  vaadi(nimessa('linssin jälkeen musiikki soi taas eikä humina soi'),
+    musiikkiPaluu !== null && ulkona.tila === null,
+    JSON.stringify({ pohjamusiikki: musiikkiPaluu, aanitila: ulkona.tila }));
 
   /*
    * KOLMANNEN OSAPUOLEN VIRHEET RAJATAAN POIS. Kontin ohjelmisto-WebGL
