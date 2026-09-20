@@ -691,14 +691,29 @@ export const NAULAUKSEN_TOLERANSSI_ASTETTA = 0.015;
 export const NAULAUKSEN_AUKON_RAJA_ASTETTA = 0.5;
 export const NAULAUKSEN_MUTKAN_RAJA_ASTETTA = 2;
 /**
- * MILLOIN NAULATAAN. Naulaus maksaa: koko Ranskan rannikko tarkimmalla
- * tasolla (87 000 kärkeä) on mitattuna 65 ms, eli kehysbudjetin yli.
- * Kaksoisviiva taas näkyy vasta, kun aineistojen ero (p95 445 m) on yli
- * puoli pikseliä — se on noin 120 laitepikseliä astetta kohti. Sitä
- * karkeammassa näkymässä naulaus jätetään tekemättä: viiva on silloin
- * pikselin sisällä sama, ja korostus piirtyy kuten ennen.
+ * MILLOIN NAULATAAN.
+ *
+ * RAJA OLI ENSIN 120 JA SE OLI VÄÄRIN MITOITETTU (korjaus 20.9.2026,
+ * Sonnet 1 laitteella: *"Gironden rannikko on yhä kaksinkertainen"*).
+ * Portti laskettiin aineistojen p95-erosta (445 m), mutta silmään osuu
+ * MAKSIMIPOIKKEAMA — mitattuna 3,9 km — eikä p95. Yhden laitepikselin
+ * leveys on 111 km / tiheys, joten 3,9 km:n ero on kokonaisen pikselin
+ * levyinen jo tiheydellä 28,5 px/aste. Portti 120 jätti siis naulauksen
+ * tekemättä juuri siinä näkymässä, jossa pelaaja katsoo maataan
+ * (koko Ranska puhelimen ruudulla ≈ 120…250 px/aste), ja kaksoisviiva
+ * jäi näkyviin.
+ *
+ * 30 px/aste on sama raja, josta rajaviivatkin piirretään
+ * (VEKTORIT_RAJAT_PX_ASTE): sitä karkeammassa näkymässä koko korostus
+ * on alle pikselin levyinen kaistale eikä kaksoisviivaa voi erottaa.
+ *
+ * HINTA EI KASVA SAMASSA SUHTEESSA: 65 ms:n mittaus oli koko Ranskan
+ * rannikko TARKIMMALLA tasolla, mutta tiheydellä 30 kerros lataa
+ * karkean tason (vektoritaso), jolloin kärkiä on murto-osa. Vaimennus
+ * (NAULAUKSEN_VAIMENNUS_MS) pitää huolen siitä, ettei naulausta
+ * rakenneta joka kehyksellä.
  */
-export const NAULAUKSEN_TIHEYS_RAJA = 120;
+export const NAULAUKSEN_TIHEYS_RAJA = 30;
 /** Naulausta ei rakenneta useammin kuin tämän välein (ms). */
 export const NAULAUKSEN_VAIMENNUS_MS = 400;
 
@@ -1277,7 +1292,17 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
     korostus.rannikkoja = rannikot.length;
     mittarit.korostusPudotettuja = naulaus.pudotettuja;
     mittarit.korostusRannikkojanoja = naulaus.rannikkojanoja;
-    const viivat = harvennaViivat(naulaus.viivat, harvennus);
+    /*
+     * KOROSTUS HARVENNETAAN TÄSMÄLLEEN KUTEN RANNIKKOSOLU (korjaus
+     * 20.9.2026). Solu ohittaa harvennuksen, kun aineiston oma
+     * toleranssi on jo karkeampi kuin porras (ks. rakenna), mutta
+     * korostus harvennettiin aina portaalla — naulattu rannikko-osuus
+     * siis erkani piirretystä rantaviivasta uudelleen juuri siinä, mitä
+     * naulaus oli yhdistämässä. Sama sääntö molemmille.
+     */
+    const lodTol = luettelo?.lodit?.[mittarit.lod] ?? 0;
+    const porras = harvennus > lodTol ? harvennus : 0;
+    const viivat = harvennaViivat(naulaus.viivat, porras);
     const { paikat, janoja } = vektorijanat(viivat, sade());
     korostus.janoja = janoja;
     korostus.harvennus = harvennus;
