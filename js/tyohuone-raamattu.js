@@ -9676,7 +9676,16 @@ export const RAAMATTU = {
           + 'kuvat era 2 ampariin ja merge. FABLEN VIRHE 05.18: merge origin/main -> prep '
           + 'committoi konfliktimerkit neljaan tiedostoon (git commit -a ei pysahtynyt), '
           + 'korjattu 5aab3b54 prep-version mukaan; OPPI: konfliktin jalkeen aina grep '
-          + '<<<<<<< ennen committia, ei -a-lippua.',
+          + '<<<<<<< ennen committia, ei -a-lippua. SAVUKE-POLLO (Opus 1 d222b01e, Fable '
+          + '05.30): kuvapopup OLI TUOTEVIKA - pulun kuvakortti (<dialog>, showModal) luettiin '
+          + 'Livian dialogivahdissa vieraaksi ikkunaksi, seuraaNakymaa sulki chatin ja '
+          + 'kortin samasta napautuksesta -> data-livia-oma-attribuutti; matkustusnapit '
+          + 'olivat vanhentuneita mittoja (Liiku pysyva, 4 nappia). JONOON: savukkeen '
+          + 'loppuosassa 16 vanhaa punaista, tarkein: saapumistrailerin sumennus '
+          + 'blur(6px) jaa kartalle dialogin ja pollopaneelin sulkeuduttua (v1970, '
+          + 'pelaajalle nakyva) - ENSIMMAINEN ERA kun tyot jatkuvat; lisaksi paneelin '
+          + 'reunavalit, alanappirivi 345/390, move-vaiheen korostus, vihjekupla. Opus 1 '
+          + 'pysahtyi.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
