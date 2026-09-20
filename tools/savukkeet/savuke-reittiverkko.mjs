@@ -120,6 +120,8 @@ await ctx.addInitScript((d) => {
     localStorage.removeItem('matkakirja-lauta');
     localStorage.setItem('matkakirja-livia-avaus', '1');
     localStorage.setItem('matkakirja-livia-paljastus', '1');
+    // Verkko on oletuksena pois (v1984 hotfix); savuke kytkee sen päälle.
+    localStorage.setItem('matkakirja-reittiverkko', '1');
   } catch { /* yksityinen selaus */ }
 }, tallenne);
 const sivu = await ctx.newPage();
@@ -336,9 +338,18 @@ tieto('ennen Liikua', `${JSON.stringify(m0)}, kaukainen tummin ${l0.tummin.toFix
 vaadi('V1 ennen Liikua verkkoa ei näy', m0.verkkoNakyy === false && m0.nakyvia === 0, JSON.stringify(m0));
 const aikaIlman = await kehysaika();
 
-/* V2: heitto → matkasessio */
+/* V2: heitto → matkasessio. KAMERA EI SAA MUUTTUA verkon syttyessä (v1984:
+ * omistajan havainto v1983: liftaus zoomasi koko pallolle). Heitto itse
+ * sovittaa kameran kantaman kaariin (sovitaSiirtokohteet), joten mitataan
+ * korkeus ENNEN heittoa ja verkon syttymisen jälkeen: kasvu yli 2× on
+ * maailmakuva, ei sovitus. */
+const povEnnen = await sivu.evaluate(() => window.matkakirja.ui.pallolauta.pallo.pointOfView());
 const v1 = await heita(6);
 const m1 = await mittarit();
+const povJalkeen = await sivu.evaluate(() => window.matkakirja.ui.pallolauta.pallo.pointOfView());
+tieto('kamera ennen/jälkeen heiton', `${povEnnen.altitude.toFixed(3)} → ${povJalkeen.altitude.toFixed(3)}`);
+vaadi('V7 kamera ei zoomaa maailmakuvaan verkon syttyessä', povJalkeen.altitude < Math.max(0.6, povEnnen.altitude * 2),
+  `korkeus ${povEnnen.altitude.toFixed(3)} → ${povJalkeen.altitude.toFixed(3)}`);
 const k1 = await kaappaa('verkko-heiton-jalkeen');
 const l1 = leike(k1, piste);
 tieto('heiton jälkeen', `${JSON.stringify(m1)}, valinta.verkko ${v1.verkko}, kaaria ${v1.reittiTunnukset.length}`);
