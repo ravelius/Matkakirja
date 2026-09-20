@@ -152,6 +152,472 @@ export function maanAiheOtsikko(maanNimi, aiheNimi) {
 }
 
 export const MAA_KATEGORIAT = {
+  SVK: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Slovakian historia on kirjoitettu kiveen: linnoja on rakennettu jyrkille '
+        + 'kallioille, kruunuja vartioitu torneissa ja hopeaa kaivettu maasta '
+        + 'vuosisatojen ajan.',
+      nostot: [
+        {
+          otsikko: 'Linna, joka paloi raunioksi',
+          aika: '1811',
+          tiedosto: 'Bratislava Castle R01.jpg',
+          teksti: 'Maria Teresian aikana Bratislavan linnasta tehtiin hieno kuninkaallinen '
+            + 'residenssi, ja sen vesijohdon rakennutti keksijä Wolfgang von Kempelen. '
+            + 'Myöhemmin linna muutettiin sotilaiden asunnoksi, ja 28. toukokuuta 1811 '
+            + 'varusväen huolimattomuus sytytti sen palamaan. Rakennus seisoi raunioina '
+            + 'yli 140 vuotta, kunnes tutkimukset alkoivat 1953 ja restaurointi 1957. '
+            + 'Linnan kulmatorneista suurin, Kruunutorni, piti 1500-luvun puolivälistä '
+            + 'lähes kahden vuosisadan ajan sisällään Unkarin kruununjalokiviä.',
+          lyhyt: 'Tonavan yläpuolella kohoava nelitorninen linna, joka hallitsee Bratislavan '
+            + 'siluettia.',
+          selite: 'Linnan paikalla on ollut asutusta tuhansia vuosia. Nykyinen barokkiasu '
+            + 'palautettiin 1900-luvun jälleenrakennuksessa.',
+          lahde: 'Marc Ryckaert (MJJR), Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Bratislavan linna',
+        },
+        {
+          otsikko: 'Kuka sytytti Spišin linnan?',
+          aika: '1780',
+          tiedosto: 'Spissky hrad west.jpg',
+          teksti: 'Spišin linna kohoaa kalkkikivikukkulalla, ja sen vanhin kirjallinen '
+            + 'maininta on vuodelta 1120. Aluksi se vartioi Unkarin pohjoisrajaa, '
+            + 'myöhemmin siitä tuli koko Spišin läänin hallinnon ja kulttuurin keskus. '
+            + 'Viimeiset omistajat, Csákyn suku, muuttivat pois 1700-luvun alussa, koska '
+            + 'linna oli liian epämukava asua. Vuonna 1780 se paloi, eikä syytä tiedetä. '
+            + 'Yksi tarina kertoo, että katetuista rakennuksista peritty lisävero '
+            + 'houkutteli polttamaan katon, toinen väittää sotilaiden keittäneen salaa '
+            + 'viinaa. Linna kuuluu Unescon maailmanperintöön vuodesta 1993.',
+          lyhyt: 'Yksi Slovakian suurimmista linnoista, jonka rauniot näkyvät kauas Spišin '
+            + 'tasangolle.',
+          selite: 'Linna sijaitsee Spišské Podhradien kaupungin yläpuolella. Sen pinta-ala on '
+            + 'noin 3,9 hehtaaria.',
+          lahde: 'Ingo Mehling, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Spišin linna',
+        },
+        {
+          otsikko: 'Kreivi Orlokin kotilinna',
+          aika: '1267',
+          tiedosto: 'Oravský hrad (celkový pohled).jpg',
+          teksti: 'Oravan linna nojaa 112 metriä korkeaan kallioon Orava-joen rannalla. '
+            + 'Ensimmäinen kirjallinen maininta on vuodelta 1267, ja silloin vain '
+            + 'alakerros oli kiveä, yläkerrokset puuta. Rikas Thurzón suku rakennutti '
+            + 'linnaa 1500-luvun puolivälistä alkaen, ja nykyinen muoto valmistui vuonna '
+            + '1611. Vuonna 1800 valtava tulipalo tuhosi kaikki puuosat, eikä linnaa enää '
+            + 'asuttu. Sen jälkeen siitä tuli museo. Vuoden 1922 Nosferatu-elokuvassa '
+            + 'linna esitti kreivi Orlokin kartanoa, ja myös 2020 tehty Dracula-sarja '
+            + 'kuvasi täällä.',
+          lyhyt: 'Kalliolle rakennettu keskiaikainen linna Pohjois-Slovakiassa Orava-joen '
+            + 'varrella.',
+          selite: 'Linnan vanhimmat osat ovat 1200-luvulta. Nykyään siellä toimii yksi '
+            + 'Slovakian vanhimmista museoista.',
+          lahde: 'Lynx1211, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Oravanlinna',
+        },
+        {
+          otsikko: 'Kaupunki hopeavuoren päällä',
+          aika: '1735',
+          tiedosto: 'Banská Štiavnica from Nový zámok 2007.jpg',
+          teksti: 'Banská Štiavnica kasvoi hopean ja kullan varaan: vuonna 1782 se oli '
+            + 'Unkarin kuningaskunnan kolmanneksi suurin kaupunki Bratislavan ja '
+            + 'Debrecenin jälkeen. Kun kaivokset tulvivat, 1400–1700-luvuilla '
+            + 'rakennettiin kuusikymmentä tekojärveä eli tajchya, jotka yhdistettiin yli '
+            + 'sadan kilometrin kanavaverkolla. Kaupungissa toimi vuonna 1735 perustettu '
+            + 'kaivoskoulu, josta tuli myöhemmin kaivosakatemia, jota on kutsuttu '
+            + 'maailman ensimmäiseksi teknilliseksi yliopistoksi. Jo 1627 täällä '
+            + 'käytettiin ruutia kaivoksessa yhtenä maailman ensimmäisistä.',
+          lyhyt: 'Vanha kaivoskaupunki keskellä sammuneen tulivuoren kalderaa '
+            + 'Keski-Slovakiassa.',
+          selite: 'Kaupunki ympäristöineen liitettiin Unescon maailmanperintölistalle vuonna '
+            + '1993. Kaupungin kaksi linnaa on muutettu museoiksi.',
+          lahde: 'Adrian Tync, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Banská Štiavnica',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minä vuonna Bratislavan linna paloi, kun varusväen huolimattomuus sytytti '
+          + 'sen?',
+        vaihtoehdot: [
+          '1780',
+          '1811',
+          '1800',
+          '1857',
+        ],
+        oikea: 1,
+        fakta: 'Bratislavan linna syttyi palamaan 28. toukokuuta 1811 ja jäi raunioksi, '
+          + 'kunnes restaurointi alkoi 1957.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Slovakialainen ruoka tulee vuorilta: lampaanjuustoa, perunataikinaa ja '
+        + 'pekonia sekä lasillinen kultaista viiniä, jonka kellarit on kaivettu '
+        + 'vaikeiden aikojen suojaksi.',
+      nostot: [
+        {
+          otsikko: 'Kansallisruoka köyhien keittiöstä',
+          aika: 'nykyään',
+          tiedosto: 'Bryndzové halušky so slaninou.jpg',
+          teksti: 'Bryndzové halušky on Slovakian kansallisruokia: perunataikinasta tehtyjä '
+            + 'pieniä nyyttejä, joiden päälle sulatetaan pehmeää lampaanjuustoa ja '
+            + 'ripotellaan paistettua pekonia. Perunataikina syntyi vuoristossa, jossa '
+            + 'peruna menestyi karussakin maassa ja jauhoa tarvittiin vähemmän. '
+            + 'Turecká-kylässä järjestetään joka vuosi halušky-festivaali, jossa käydään '
+            + 'syöntikilpailu. Perinteinen juoma annoksen kanssa on žinčica, joka syntyy '
+            + 'juuston valmistuksen sivutuotteena.',
+          lyhyt: 'Perunataikinanyyttejä ja bryndza-juustoa sisältävä slovakialainen '
+            + 'kansallisruoka.',
+          selite: 'Päälle voi ripotella pekonia ja ruohosipulia. Unkarilaiset kutsuvat '
+            + 'lähisukulaista nimellä sztrapacska.',
+          lahde: 'Gregory finster, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Juusto, jota kutsuttiin Liptaueriksi',
+          aika: '1470',
+          tiedosto: 'Brynza.jpg',
+          teksti: 'Bryndza on pehmeää, kirpeää ja voimakkaanhajuista lampaanmaitojuustoa. '
+            + 'Slovakiassa se mainitaan ensimmäisen kerran vuonna 1470. Nykyisen '
+            + 'sivelykelpoisen version uskotaan syntyneen 1700-luvun lopulla, kun Stará '
+            + 'Turán yrittäjät perustivat juustolaitoksia vuoristoon ja kauppasivat '
+            + 'tuotetta ympäri Habsburgien valtakuntaa. Itävallassa sitä kutsuttiin '
+            + 'Liptovin alueen mukaan nimellä Liptauer. Slovenská bryndza sai EU:n '
+            + 'suojatun maantieteellisen merkinnän 16. heinäkuuta 2008, ja siitä '
+            + 'vähintään puolet on oltava lampaanmaitoa.',
+          lyhyt: 'Pehmeä, murumainen lampaanmaidosta tehty juusto, jota käytetään monissa '
+            + 'slovakialaisissa ruoissa.',
+          selite: 'Bryndza on tärkeä ainesosa halušky-annoksessa. Sivutuotteena syntyy '
+            + 'žinčica-juomaa.',
+          lahde: 'Dezidor, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Brynza',
+        },
+        {
+          otsikko: 'Höyrytetty juusto ruusukkeena',
+          aika: '1800-luku',
+          tiedosto: 'Parenica.jpg',
+          teksti: 'Parenica on slovakialainen juusto, joka valmistetaan höyryttämällä. Juusto '
+            + 'tehdään kaistaleina, jotka kierretään kotilomaisiksi spiraaleiksi, ja '
+            + 'tyypillinen kierre painaa noin sata grammaa. Nimi tulee slovakin sanasta '
+            + 'höyryttää. Höyry tummentaa kermankeltaisen juuston väriä, ja usein se '
+            + 'vielä savustetaan. 1800-luvulla parenicaa tehtiin vain pastöroimattomasta '
+            + 'lampaanmaidosta, nykyään usein lehmänmaidosta tai maitoseoksista. '
+            + 'Slovenská parenica on suojattu nimi EU:ssa.',
+          lyhyt: 'Höyrytetty ja usein savustettu slovakialainen juusto, joka on kierretty '
+            + 'spiraaliksi.',
+          selite: 'Kuvan juusto on peräisin Liptovin seudulta Pohjois-Slovakiasta. '
+            + 'Juustomassa punotaan kaistaleista kierteiksi.',
+          lahde: 'Stanislav Doronenko, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Kellarit, jotka pelastivat viinit',
+          aika: 'n. 1500-luku',
+          tiedosto: 'Cave in Slovak Tokaj.jpg',
+          teksti: 'Slovakian Tokajin viinialue on pieni: vain noin 908 hehtaaria seitsemässä '
+            + 'kylässä Trebišovin seudulla aivan Unkarin rajan tuntumassa. Alueen '
+            + 'kellarit ovat suurimmaksi osaksi peräisin siltä ajalta, jolloin seutu oli '
+            + 'yli 170 vuotta turkkilaisten vallan alla. Ne rakennettiin piilopaikoiksi, '
+            + 'joihin ihmiset ja omaisuus saatiin turvaan ryöstäjiltä. Tokajin olosuhteet '
+            + 'suosivat rypäleitä, joista saadaan luonnostaan makeita viinejä. '
+            + 'Slovakiassa tämä on kuudesta viinialueesta pienin.',
+          lyhyt: 'Slovakialaisen Tokajin viinialueen keskiaikainen tynnyrikellari.',
+          selite: 'Tokajin viinialue jakautuu Unkarin ja Slovakian kesken Trianonin '
+            + 'rauhansopimuksen jälkeen.',
+          lahde: 'Slavo O., Wikimedia Commons (public domain)',
+          wiki: 'Tokaj-Hegyalja',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Millä nimellä Slovakian bryndzaa kutsuttiin Itävallassa Liptovin alueen '
+          + 'mukaan?',
+        vaihtoehdot: [
+          'Wienerkäse',
+          'Tiroler',
+          'Pressburger',
+          'Liptauer',
+        ],
+        oikea: 3,
+        fakta: 'Itävallassa bryndzaa kutsuttiin Liptaueriksi, mutta sittemmin nimi siirtyi '
+          + 'juustolevitteelle, jossa käytetään rahkaa.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Slovakian luonto on äärimmäisyyksien maa: pohjoisessa lumihuippuiset '
+        + 'Tatrat, etelässä kalkkikiven alla piileviä luolia, joissa on tippukiviä ja '
+        + 'jopa jäätä.',
+      nostot: [
+        {
+          otsikko: 'Huippu, jolla oli monta nimeä',
+          aika: '1838',
+          tiedosto: 'Gerlachovský štít Vysoké Tatry 03.jpg',
+          teksti: 'Gerlachovský štít eli Gerlach on Korkeiden Tatrojen ja koko Karpaattien '
+            + 'korkein huippu, 2654 metriä. Vanhimman tunnetun nimen, Kösselberg eli '
+            + 'Kattilavuori, se sai kartalla 1762, ja slovakiaksi sitä kutsuttiin '
+            + 'Kotoliksi eli kattilaksi. Korkeimmaksi huipuksi sen tunnisti vasta 1838 '
+            + 'eräs tutkija. Sen jälkeen nimeä vaihdettiin aina vallanpitäjän mukaan: '
+            + '1896 se sai keisari Frans Joosefin nimen. Kaikkiaan nimiä oli neljä ja '
+            + 'nimenmuutoksia kuusi. Pääsy huipulle on nykyään rajoitettu.',
+          lyhyt: 'Karpaattien korkein vuorenhuippu Korkeissa Tatroissa Pohjois-Slovakiassa.',
+          selite: 'Nimi tulee Gerlachovin kylästä huipun juurella. Korkeuseroa laaksosta '
+            + 'huipulle on noin 2000 metriä.',
+          lahde: 'Pavol Svetoň, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Gerlachovský štít',
+        },
+        {
+          otsikko: 'Huipulle köysiradalla',
+          aika: '1793',
+          tiedosto: 'Lomnický štít Winter.jpg',
+          teksti: 'Lomnický štít on Korkeiden Tatrojen toiseksi korkein huippu, 2634 metriä. '
+            + 'Ensimmäinen kirjattu nousu tehtiin 16. elokuuta 1793, kun englantilainen '
+            + 'matkailija Robert Townson kiipesi sinne oppaan kanssa. Hän mittasi '
+            + 'korkeudeksi 2633 metriä eli vain metrin liian vähän. Talvella huipulle '
+            + 'noustiin ensimmäisen kerran 1891. Vuodesta 1940 lähtien Tatranská '
+            + 'Lomnicasta on päässyt huipulle köysiradalla, ja siellä saa viipyä 50 '
+            + 'minuuttia. Huipun asemalla toimii ympärivuotisesti aurinko-observatorio ja '
+            + 'sääasema.',
+          lyhyt: 'Korkeiden Tatrojen toiseksi korkein huippu, jonne pääsee köysiradalla.',
+          selite: 'Köysirata kulkee Tatranská Lomnican kylästä huipulle. Huipulla toimii '
+            + 'sääasema.',
+          lahde: 'Margoz, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Lomnický štít',
+        },
+        {
+          otsikko: 'Luola, jonka läpi virtasi Styx',
+          aika: '1926',
+          tiedosto: 'Domica Cave 13.jpg',
+          teksti: 'Domican luola Etelä-Slovakiassa löytyi vuonna 1926, kun Ján Majko osoitti, '
+            + 'että useat paikalliset luolat kuuluvat samaan verkostoon. Luolan käytävät '
+            + 'on muovannut maanalainen joki nimeltä Styx, ja seinillä on tippukivilampia '
+            + 'sekä lepakoiden ulosteesta syntyneitä kuoria. Jo neoliittiset ihmiset '
+            + 'asuivat täällä, ja kaivauksissa on löydetty asumusten paaluaukkoja ja '
+            + 'tulisijoja. Yleisölle on avattu 1600 metriä vuodesta 1932. Luola on osa '
+            + 'Aggtelekin ja Slovakian karstin luolastoa, joka sai Unescon '
+            + 'maailmanperintöstatuksen 1995.',
+          lyhyt: 'Etelä-Slovakian kalkkikiviluola, joka on osa rajat ylittävää karstiluolien '
+            + 'verkostoa.',
+          selite: 'Luolan koko pituus on 5140 metriä. Yhdessä Unkarin Baradla-luolan kanssa '
+            + 'se muodostaa rajat ylittävän luolaverkoston merkittävimmän osan.',
+          lahde: 'Jojo, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Jääluola, jonka jää on 26 metriä paksua',
+          aika: '1870',
+          tiedosto: 'Dobšinská ľadová jaskyňa Ice form well.jpg',
+          teksti: 'Dobšinská jääluola Slovakian paratiisin kansallispuistossa löydettiin 15. '
+            + 'kesäkuuta 1870, kun kaivosinsinööri Jenő Ruffinyi laskeutui sinne. '
+            + 'Paimenet ja metsästäjät olivat tunteneet aukon ammoin nimellä Kylmä reikä. '
+            + 'Luola avattiin yleisölle vuotta myöhemmin, ja 1887 se oli Euroopan '
+            + 'ensimmäinen sähkövalaistu luola. Pohjoiseen avautuva käytävä viettää '
+            + 'alaspäin, joten kylmä ilma valuu talvella sisään ja luola jäätyy. '
+            + 'Keskilämpötila on vuoden ympäri lähellä nollaa, ja jäätä on paikoin jopa '
+            + '26,5 metriä.',
+          lyhyt: 'Slovakian paratiisin jääluola, joka on yksi maailman merkittävimmistä '
+            + 'jääluolista.',
+          selite: 'Luola kuuluu Unescon maailmanperintökohteeseen Aggtelekin ja Slovakian '
+            + 'karstin luolat. Sen ikä on arviolta 250 000 vuotta.',
+          lahde: 'Margoz, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä huippu on Korkeiden Tatrojen ja koko Karpaattien korkein?',
+        vaihtoehdot: [
+          'Gerlach',
+          'Lomnický štít',
+          'Kriváň',
+          'Rysy',
+        ],
+        oikea: 0,
+        fakta: 'Gerlachovský štít on 2654 metrin korkeudellaan Karpaattien korkein huippu.',
+      },
+    },
+    {
+      id: 'keksinnot',
+      nimi: 'Keksinnöt',
+      johdanto: 'Pieni maa, isoja oivalluksia: Slovakiasta ovat kotoisin shakkia pelaava '
+        + 'huijauskone, laskuvarjopatentti, langaton lennätin ja höyryturbiinien '
+        + 'teoria.',
+      nostot: [
+        {
+          otsikko: 'Shakkikone, jonka sisällä istui ihminen',
+          aika: '1770',
+          tiedosto: 'Racknitz - The Turk 3.jpg',
+          teksti: 'Presburgissa eli nykyisessä Bratislavassa syntynyt Wolfgang von Kempelen '
+            + 'esitteli vuonna 1770 keisarinna Maria Teresialle turbaanipäisen '
+            + 'shakkiautomaatin. Turkkilaiseksi nimetty kone voitti useimmat pelinsä, '
+            + 'jopa Napoleonin ja Benjamin Franklinin, ja se kiersi Eurooppaa 84 vuotta. '
+            + 'Laatikossa piileskeli kuitenkin ihminen, joka liikutti nukkea vipujen ja '
+            + 'magneettien avulla. Kuvan piirros on vuodelta 1789: Joseph Racknitz yritti '
+            + 'siinä arvata salaisuuden. Kone tuhoutui tulipalossa 1854, ja täydellinen '
+            + 'selitys julkaistiin vasta 1857.',
+          lyhyt: 'Kempelenin shakkia pelaava esiaste tekoälystä, joka oli huijaus.',
+          selite: 'Piirros esittää Racknitzin arvailua siitä, miten pelaaja piileskeli '
+            + 'laatikossa. Kempelen rakensi myös puhekoneen.',
+          lahde: 'Joseph Racknitz, Wikimedia Commons (public domain)',
+          wiki: 'Wolfgang von Kempelen',
+        },
+        {
+          otsikko: 'Pappi, joka lähetti viestejä ilmassa',
+          aika: '1905',
+          tiedosto: 'Pamatnik Jozef Murgas.jpg',
+          teksti: 'Jozef Murgaš syntyi 1864 Tajovin kylässä, opiskeli papiksi ja maalasi '
+            + 'kirkkoihin alttaritauluja. Vuonna 1896 hän muutti Yhdysvaltoihin '
+            + 'Wilkes-Barren slovakkiseurakuntaan, rakensi laboratorion ja alkoi tutkia '
+            + 'langatonta lennätintä. Ensimmäiset kaksi patenttia hän sai 1904. Vuonna '
+            + '1905 viesti kulki Wilkes-Barresta Scrantoniin, noin 32 kilometrin matkan. '
+            + 'Pisteet ja viivat hän erotti toisistaan äänenkorkeudella: pisteet '
+            + 'korkealla ja viivat matalalla sävelellä. Laboratoriossa kävi vieraana myös '
+            + 'presidentti Theodore Roosevelt.',
+          lyhyt: 'Slovakialainen pappi, taidemaalari ja keksijä, jota kutsuttiin '
+            + 'radiopapiksi.',
+          selite: 'Muistolaatassa lukee, että Murgaš oli radiotelegrafian keksijä, tiedemies, '
+            + 'pappi ja taiteilija.',
+          lahde: 'Qery1337, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Jozef Murgaš',
+        },
+        {
+          otsikko: 'Sateenvarjo selässä',
+          aika: '1914',
+          tiedosto: 'Pomník Štefana Baniča, Letiště M. R. Štefánika, Bratislava - Ružinov, Slovensko 2026.jpg',
+          teksti: 'Štefan Banič syntyi 1870 Smolenican lähellä ja muutti Yhdysvaltoihin, '
+            + 'jossa hän työskenteli hiilikaivoksessa Pennsylvaniassa. Nähtyään '
+            + 'lentokoneen putoamisen 1912 hän rakensi sateenvarjon kaltaisen '
+            + 'laskuvarjon, joka kiinnitettiin kantajan kehoon. Patentti myönnettiin 25. '
+            + 'elokuuta 1914 numerolla 1 108 484. Hänen kerrotaan kokeilleen keksintöään '
+            + 'Washingtonissa hyppäämällä ensin 15-kerroksisen talon katolta ja sitten '
+            + 'lentokoneesta, mutta varmaa näyttöä ei ole. Myöhemmin hän palasi '
+            + 'kotiseudulleen ja auttoi tutkimaan Drinan luolaa.',
+          lyhyt: 'Bratislavan lentokentän muistomerkki laskuvarjon keksijälle Štefan '
+            + 'Baničille.',
+          selite: 'Muistomerkki seisoo Bratislavan lentokentän edessä. Banič sai '
+            + 'keksinnölleen Yhdysvaltain patentin vuonna 1914.',
+          lahde: 'Fry72 (Karel Frydrýšek), Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Professori, joka opetti turbiinit',
+          aika: '1903',
+          tiedosto: 'Košice - Aurel Stodola.jpg',
+          teksti: 'Aurel Stodola syntyi 1859 Liptovin seudulla ja valmistui vuonna 1876 '
+            + 'Košicen reaalikoulusta, kuten kaupungin muistolaatta kertoo. Hän opiskeli '
+            + 'Zürichin polyteknillisessä koulussa ja toimi siellä professorina vuodesta '
+            + '1892 eläkkeelle jäämiseen 1929 asti. Hänen kirjansa Die Dampfturbine '
+            + 'ilmestyi 1903, ja se käsitteli lämpöoppia, virtauksia ja värähtelyjä '
+            + 'höyryturbiineissa. Stodola perusti Zürichiin energianmuunnoksen '
+            + 'laboratorion ja piti ystävällistä yhteyttä Albert Einsteiniin. Sveitsin '
+            + 'kansalaisuuden hän sai 1905.',
+          lyhyt: 'Muistolaatta höyry- ja kaasuturbiinien teorian pioneerille Košicen '
+            + 'kaupungissa.',
+          selite: 'Stodolaa pidetään teknisen termodynamiikan pioneerina. Muistolaatta '
+            + 'paljastettiin 1989, hänen syntymänsä 130-vuotispäivänä.',
+          lahde: 'Ladislav Luppa, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuinka pitkän matkan Murgašin langaton viesti kulki Wilkes-Barresta '
+          + 'Scrantoniin 1905?',
+        vaihtoehdot: [
+          '1,5 kilometriä',
+          '8 kilometriä',
+          '32 kilometriä',
+          '200 kilometriä',
+        ],
+        oikea: 2,
+        fakta: 'Murgašin äänisävelillä toimiva järjestelmä lähetti viestin noin 32 '
+          + 'kilometrin matkan vuonna 1905.',
+      },
+    },
+    {
+      id: 'rakennukset',
+      nimi: 'Rakennukset',
+      johdanto: 'Slovakian rakennukset kertovat monesta maailmasta: hirsitaloista '
+        + 'vuoristokylässä, kaupunginportista kruunajaiskulkueiden reitillä ja '
+        + 'jugend-kirkosta, jota kutsutaan siniseksi.',
+      nostot: [
+        {
+          otsikko: 'Kylä, jossa aika pysähtyi',
+          aika: '1376',
+          tiedosto: 'Vlkolínec, Slovakia 006.jpg',
+          teksti: 'Vlkolínec Ružomberokin lähellä mainitaan ensimmäisen kerran vuonna 1376, '
+            + 'ja sen nimi tulee luultavasti sanasta vlk eli susi. Kylässä on yli 45 '
+            + 'hirsitaloa, joissa jokaisessa on kaksi tai kolme huonetta, sekä '
+            + '1700-luvulta peräisin oleva puinen kellotorni ja barokkikappeli. Talot '
+            + 'numero 16 ja 17 on muutettu kansanelämän museoksi, jossa on arjen ja työn '
+            + 'esineitä. Kylä on ollut Unescon maailmanperintökohde vuodesta 1993 ja on '
+            + 'Pohjois-Karpaattien kansanarkkitehtuurin ehjimpiä esimerkkejä.',
+          lyhyt: 'Perinteinen hirsitalokylä Keski-Slovakian vuoristossa.',
+          selite: 'Kylä on yksi Slovakian kymmenestä kansanarkkitehtuurin suojelualueesta. '
+            + 'Sen puinen kellotorni on peräisin 1700-luvulta.',
+          lahde: 'Maros Mraz, Wikimedia Commons (CC BY 2.5)',
+          wiki: 'Vlkolínec',
+        },
+        {
+          otsikko: 'Kirkko ilman nauloja',
+          aika: '1717',
+          tiedosto: 'Wooden articular church in Kežmarok, Slovakia 01.jpg',
+          teksti: 'Vuoden 1681 Sopronin sopimus salli luterilaisten rakentaa Unkarissa vain '
+            + 'vähän kirkkoja, ja niiden piti olla halvinta mahdollista materiaalia eli '
+            + 'puuta. Kežmarokin artikulaarikirkon naulatkin tehtiin puusta, ja '
+            + 'rakentamiseen sai käyttää 365 päivää. Kaupungin muurien ulkopuolella '
+            + 'sijainneesta entisestä kapakasta tehtiin tarkoituksella nöyryyttäen kirkon '
+            + 'sakaristo. Nykyinen barokkikirkko valmistui 1717 tasasivuisen ristin '
+            + 'muotoon, ja sinne mahtuu yli 1500 ihmistä. Urkuputkikin ovat puuta.',
+          lyhyt: 'Puinen luterilainen kirkko Kežmarokissa Pohjois-Slovakiassa.',
+          selite: 'Kirkko on yksi viidestä jäljellä olevasta luterilaisesta puukirkosta '
+            + 'Slovakiassa. Se on suojeltu historiallinen muistomerkki.',
+          lahde: 'Michal Klajban, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kruunajaiskulkueen viimeinen portti',
+          aika: 'n. 1300',
+          tiedosto: 'Michalská brána Bratislava October 2006 006.jpg',
+          teksti: 'Mikaelin portti on ainoa säilynyt Bratislavan keskiaikaisista '
+            + 'kaupunginporteista, ja sen historia ulottuu 1200-luvun loppuun. Vuosina '
+            + '1563–1830 Unkarin 19 kuningasta kulki kruunajaiskulkueessa tornin kautta, '
+            + 'ennen kuin kruunaus tapahtui Pyhän Martinin katedraalissa. Nykyisen '
+            + 'muotonsa torni sai 1753–1758 barokkikunnostuksessa, jolloin sen huipulle '
+            + 'asetettiin 51 metrin korkeuteen Pyhän Mikaelin ja lohikäärmeen patsas. '
+            + 'Portin edessä oleva tiilisilta vuodelta 1727 on kaupungin vanhin silta.',
+          lyhyt: 'Bratislavan vanhankaupungin ainoa säilynyt keskiaikainen kaupunginportti.',
+          selite: 'Portti sai nimensä sen edessä seisseestä Pyhän Mikaelin kirkosta. Läheltä '
+            + 'löytyy Bratislavan vallihaudan viimeinen jäljellä oleva pätkä.',
+          lahde: 'Gryffindor, Wikimedia Commons (CC BY 2.5)',
+          wiki: 'Bratislavan vanhakaupunki',
+        },
+        {
+          otsikko: 'Sininen kirkko',
+          aika: '1913',
+          tiedosto: 'Church of St. Elizabeth nicknamed The Blue Church (10267484804).jpg',
+          teksti: 'Pyhän Elisabetin kirkko rakennettiin 1908–1913 unkarilaisen Ödön Lechnerin '
+            + 'suunnitelmien mukaan jugend-tyyliin. Julkisivu maalattiin ensin vaaleilla '
+            + 'pastellisävyillä, mutta myöhemmin siitä tuli sininen: sinisiä ovat seinät, '
+            + 'mosaiikit, majolikat ja lasitettu katto. Sylinterimäinen torni on 36,8 '
+            + 'metriä korkea. Alun perin kirkolle suunniteltiin kupolia, mutta tilalle '
+            + 'tuli tynnyriholvi. Kirkko oli aluksi viereisen lukion koulukappeli, ja sen '
+            + 'pienoismalli edustaa Slovakiaa Mini-Europe-puistossa Brysselissä.',
+          lyhyt: 'Bratislavan vanhankaupungin jugend-kirkko, jota kutsutaan siniseksi '
+            + 'kirkoksi.',
+          selite: 'Kirkko on omistettu Unkarin Elisabetille, joka kasvoi Bratislavan '
+            + 'linnassa. Julkisivun sininen väri on peräisin myöhemmästä maalauksesta.',
+          lahde: 'Jorge Láscar, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Montako päivää Kežmarokin puisen artikulaarikirkon rakentamiseen sai '
+          + 'käyttää?',
+        vaihtoehdot: [
+          '100 päivää',
+          '365 päivää',
+          '730 päivää',
+          '1 000 päivää',
+        ],
+        oikea: 1,
+        fakta: 'Kežmarokin artikulaarikirkko piti Sopronin sopimuksen ehtojen mukaan '
+          + 'rakentaa 365 päivässä ja ilman metallisia nauloja.',
+      },
+    },
+  ],
   MLT: [
     {
       id: 'historia',
