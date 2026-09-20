@@ -9843,7 +9843,14 @@ export const RAAMATTU = {
           + 'kokonaan; testin infinite-poikkeus yhdistetty (kaksi nimettya leijuntaa); '
           + 'minipulu lukee asun samasta body-luokasta (kypara myos kulman minipulussa); '
           + 'astro-valokuva 180/180 uusine mittoineen; kaappaus kypara-lahikuva OK. '
-          + 'Mergetty v1973-prepiin (v1974).',
+          + 'Mergetty v1973-prepiin (v1974). PULUN KUPLAHISTORIA (Opus 1 75a90372, 10.00): '
+          + 'kuplapino tyhjennettiin vain lennossa ja linssin alussa; saman kaupungin '
+          + 'nahtavyysjutut kasasivat kuplat -> kupla merkitaan tilanteellaan '
+          + '(dataset.konteksti) ja vanhan tilanteen kuplat siivotaan dialogin, aihesivun '
+          + 'ja jutun vaihdossa (5 -> 2 kuplaa). "Ei kannata luottaa pulu" on mallin '
+          + 'tekstia, ei repliikki. LOYDOS (ei jonossa): savuke-pulun-kuplat 16/37 '
+          + 'vanhentunut (390 px imee kuplat muistiin, omistaja 14.9.) - ajettava '
+          + 'leveammalla. Mergetty.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
