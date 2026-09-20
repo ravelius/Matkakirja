@@ -199,3 +199,7 @@ Koelaatta Gironde/Arcachon: YKSI viiva. Omistajan epaily oikea: toinen viiva oli
 ## KARTUSCHAN VAJAAT MAAT TEHTY (Sisaltokirjuri 08eaead3, Fablen pistokoe ok) (21.9.2026 klo 01.01)
 
 BGR/EST/ROU/LTU/LVA 5 aiheeseen (+ DNK/FIN/HRV/POL edellisesta sessiosta samassa haarassa), 52 uutta nostoa, 13 tehtava-kysymysta; tutkimus ja kuvahaku viidella taustasessiolla, Sisaltokirjurin pistokokeet; BGR Madara-kuvan peilipolkutormays korjattu. Fablen pistokoe 4 Commons-kuvaa (Warszawa, Torvalds/LinuxCon - julkinen henkilo sallittu, viron kannel, Baltian ketju) ok. Raportti docs/raportit/kartuscha-vajaat-maat-20260921.md. Julkaisujonoon. Sisaltokirjuri: ESP/ITA/DEU nimisto 1873 + taso, sitten pysahtyy.
+
+## ESP/ITA/DEU NIMISTO 1873 + TASOT (Sisaltokirjuri; Fable tarkasti) (21.9.2026 klo 01.30)
+
+Haarat sisalto-nimisto-taso-deu cca22bea, -ita b8fcdbe0, -esp 5dc92810: 61 nimiota (DEU 29: Preussin provinssit + kuningaskunnat/herttuakunnat/hansakaupungit 1873, ITA 16, ESP 16) + 24 taso:1-nostoa. Kaanon ok. Fablen korjaukset nimiotason polttoon (ei kiire): ITA 'LATIUM' -> 'LAZIO' (pelin suomalainen nimisto), ESP 'KANTABRIA' ei ollut 1873 aluetta (Santanderin provinssi Vanhassa-Kastiliassa) -> poistetaan tai 'SANTANDER' pienena. Sisaltokirjuri pysahtyi sovitusti.
