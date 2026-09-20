@@ -693,27 +693,33 @@ export const NAULAUKSEN_MUTKAN_RAJA_ASTETTA = 2;
 /**
  * MILLOIN NAULATAAN.
  *
- * RAJA OLI ENSIN 120 JA SE OLI VÄÄRIN MITOITETTU (korjaus 20.9.2026,
- * Sonnet 1 laitteella: *"Gironden rannikko on yhä kaksinkertainen"*).
- * Portti laskettiin aineistojen p95-erosta (445 m), mutta silmään osuu
- * MAKSIMIPOIKKEAMA — mitattuna 3,9 km — eikä p95. Yhden laitepikselin
- * leveys on 111 km / tiheys, joten 3,9 km:n ero on kokonaisen pikselin
- * levyinen jo tiheydellä 28,5 px/aste. Portti 120 jätti siis naulauksen
- * tekemättä juuri siinä näkymässä, jossa pelaaja katsoo maataan
- * (koko Ranska puhelimen ruudulla ≈ 120…250 px/aste), ja kaksoisviiva
- * jäi näkyviin.
+ * KAKSI KERTAA VÄÄRIN, NYT MITATTU OIKEIN (20.9.2026).
  *
- * 30 px/aste on sama raja, josta rajaviivatkin piirretään
- * (VEKTORIT_RAJAT_PX_ASTE): sitä karkeammassa näkymässä koko korostus
- * on alle pikselin levyinen kaistale eikä kaksoisviivaa voi erottaa.
+ * Portti oli ensin 120 (laskettu aineistojen p95-erosta 445 m) ja
+ * sitten 30 (laskettu maksimipoikkeamasta 3 939 m). MOLEMMAT LUVUT
+ * OLIVAT MITTARIN HARHAA: ne mittasivat kehän kärjen etäisyyttä
+ * rantaviivan lähimpään KÄRKEEN, ja pitkän rantajanan keskikohta on
+ * satoja metrejä lähimmästä kärjestä vaikka se on täsmälleen viivalla.
+ * Oikea mitta on etäisyys lähimpään JANAAN, ja sillä ero on:
  *
- * HINTA EI KASVA SAMASSA SUHTEESSA: 65 ms:n mittaus oli koko Ranskan
- * rannikko TARKIMMALLA tasolla, mutta tiheydellä 30 kerros lataa
- * karkean tason (vektoritaso), jolloin kärkiä on murto-osa. Vaimennus
- * (NAULAUKSEN_VAIMENNUS_MS) pitää huolen siitä, ettei naulausta
- * rakenneta joka kehyksellä.
+ *   FRA  mediaani 62 m,  p95 141 m,  suurin 192 m
+ *   DNK  mediaani 49 m,  p95 112 m,  suurin 140 m
+ *   EST  mediaani 44 m,  p95 108 m,  suurin 141 m
+ *   GRC  mediaani 65 m,  p95 145 m,  suurin 187 m (ompelun jälkeen)
+ *
+ * Yhden laitepikselin leveys on 111 320 m / tiheys, joten 190 metrin
+ * ero täyttää pikselin vasta tiheydellä 586 px/aste. Kolmesataa on
+ * siitä puolet: siinä ero on noin puoli pikseliä, eli juuri se raja,
+ * jossa kaksi viivaa alkaa erottua toisistaan. Sitä karkeammassa
+ * näkymässä naulaus ei paranna kuvaa mutta maksaa (ks. hinta alla) —
+ * ja portti 30 teetti sitä koko ajan.
+ *
+ * HINTA: naulaus on mitattuna 29…83 ms koko Ranskan rannikolle tason
+ * mukaan. Tiheydellä 300 kerroksella on tarkka taso muistissa, mutta
+ * vain näkyvä alue — ja vaimennus (NAULAUKSEN_VAIMENNUS_MS) pitää
+ * huolen siitä, ettei naulausta rakenneta joka kehyksellä.
  */
-export const NAULAUKSEN_TIHEYS_RAJA = 30;
+export const NAULAUKSEN_TIHEYS_RAJA = 300;
 /** Naulausta ei rakenneta useammin kuin tämän välein (ms). */
 export const NAULAUKSEN_VAIMENNUS_MS = 400;
 
