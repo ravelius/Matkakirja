@@ -10042,7 +10042,9 @@ export const RAAMATTU = {
           + 'TUPLASAAPUMINEN: ei toistu myoskaan aidolla UI-polulla (Opus 1 cf1a3649, '
           + 'raportti viesti-fable-lento-tuplaluenta) -> jaa iPad-Safari-epailyksi; '
           + 'ensimmainen paikka katsoa: luenta vapautuu error-tapahtumassa ennen '
-          + 'viivastettya kaynnistysta (hidas verkko). Sonnet 1 laitteella seuraavaksi.',
+          + 'viivastettya kaynnistysta (hidas verkko). Sonnet 1 laitteella seuraavaksi. '
+          + 'OMISTAJA 16.05 kaappausten jalkeen: "Julkaise 80% peitolla" -> '
+          + 'KERMAN_PEITTO_KIINTEA = 0,8, v1979 PR #2631 avattu 16.03. v1978 tuotannossa 16.02.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
