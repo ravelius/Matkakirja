@@ -11,6 +11,10 @@
  *   3. Ympyrän napautus avaa kohteen kortin, jonka otsikossa lukee
  *      "Kohde N" tai, wiki-kohteilla, nimi (kortti aukeaa).
  *   4. Liuskassa ei ole "Muut"-riviä (kohteet eivät siirry liuskaan).
+ *   5. EI PÄÄLLEKKÄISIÄ YMPYRÖITÄ (Fablen löydös 20.9.2026): kaikkien
+ *      ympyröiden keskipisteet ovat vähintään halkaisijan päässä toisistaan
+ *      levossa ja zoomilla 2 ja 3; väistetyllä ympyrällä on viiva
+ *      (.kohde-osoitin) oikeaan pisteeseen ja siirto on enintään 24 px.
  *
  * Aja: NODE_USE_ENV_PROXY=1 NODE_PATH=<repon node_modules> \
  *      CHROMIUM=<chromium> node tools/savukkeet/savuke-numeroympyrat.mjs [kuvakansio]
@@ -46,7 +50,8 @@ const vaadi = (nimi, ehto, lisa = '') => {
 };
 
 const selain = await chromium.launch({ executablePath: process.env.CHROMIUM });
-for (const kaupunki of ['bryssel', 'ljubljana', 'kosice']) {
+// Kaikki kaupungit, joiden kartalla on numeroympyrat-lippu (ei kovakoodattua listaa).
+for (const kaupunki of Object.keys(KAUPUNKIKARTAT).filter((id) => KAUPUNKIKARTAT[id].numeroympyrat)) {
   const kohteita = KAUPUNKIKARTAT[kaupunki].kohteet.length;
   const peli = new Game({ players: [{ name: 'Fogg', color: '#c9a227', start: kaupunki }], pack: packById('maailmankartta'), seed: 5 });
   peli.phase = 'action'; peli.tokens.delete(kaupunki);
@@ -81,6 +86,43 @@ for (const kaupunki of ['bryssel', 'ljubljana', 'kosice']) {
   vaadi(`${kaupunki}: ympyrät ovat näkyvissä kartan kehyksessä`, ympyrat.every((y) => y.sisalla && y.w >= 20), JSON.stringify(ympyrat.filter((y) => !y.sisalla || y.w < 20)));
   vaadi(`${kaupunki}: jokaisella ympyrällä on nimi`, ympyrat.every((y) => (y.nimi ?? '').length > 2));
   if (KUVAKANSIO) await sivu.screenshot({ path: join(KUVAKANSIO, `numeroympyrat-${kaupunki}-390.png`) });
+  // 5. Ei päällekkäisiä ympyröitä: lepotila, zoom 2 ja zoom 3.
+  const mittaaErot = () => sivu.evaluate(() => {
+    const e = [...document.querySelectorAll('.maakartta-piste.kohde-numeroympyra')].map((el) => {
+      const r = el.getBoundingClientRect();
+      return { n: el.querySelector('.kohde-numeroteksti')?.textContent, cx: r.x + r.width / 2, cy: r.y + r.height / 2, w: r.width };
+    });
+    let pienin = Infinity; let pari = '';
+    for (let a = 0; a < e.length; a++) for (let b = a + 1; b < e.length; b++) {
+      const d = Math.hypot(e[a].cx - e[b].cx, e[a].cy - e[b].cy);
+      if (d < pienin) { pienin = d; pari = `${e[a].n}–${e[b].n}`; }
+    }
+    return { pienin, pari, halkaisija: e[0]?.w ?? 0 };
+  });
+  const lepo = await mittaaErot();
+  vaadi(`${kaupunki}: ei päällekkäisiä ympyröitä levossa`, lepo.pienin >= lepo.halkaisija - 0.5, `pienin väli ${lepo.pienin.toFixed(1)} px (${lepo.pari}), halkaisija ${lepo.halkaisija.toFixed(1)}`);
+  const vaistot = await sivu.evaluate(() => [...document.querySelectorAll('.maakartta-piste.kohde-numeroympyra.kohde-vaistetty')].map((el) => ({
+    osoitin: Boolean(el.querySelector(':scope > .kohde-osoitin')),
+    pituus: Math.hypot(parseFloat(el.style.getPropertyValue('--vx')), parseFloat(el.style.getPropertyValue('--vy'))),
+  })));
+  vaadi(`${kaupunki}: väistetyillä ympyröillä on viiva (kun siirto ≥ 16 px) ja siirto ≤ 24 px (${vaistot.length} väistetty)`, vaistot.every((v) => (v.osoitin || v.pituus < 16) && v.pituus <= 24.01), JSON.stringify(vaistot));
+  for (const zoom of [2, 3]) {
+    await sivu.evaluate((k) => {
+      const lava = document.querySelector('.kartta-lava');
+      lava.style.transform = `translate(0px, 0px) scale(${k})`;
+      lava.style.setProperty('--zoom', String(k));
+    }, zoom);
+    await sivu.waitForTimeout(300);
+    const z = await mittaaErot();
+    vaadi(`${kaupunki}: ei päällekkäisiä ympyröitä zoomilla ${zoom}`, z.pienin >= z.halkaisija - 0.5, `pienin väli ${z.pienin.toFixed(1)} px (${z.pari})`);
+  }
+  await sivu.evaluate(() => {
+    const lava = document.querySelector('.kartta-lava');
+    lava.style.transform = '';
+    lava.style.setProperty('--zoom', '1');
+  });
+  await sivu.waitForTimeout(200);
+  if (KUVAKANSIO) await sivu.screenshot({ path: join(KUVAKANSIO, `numeroympyrat-${kaupunki}-vaisto-390.png`) });
   // Napautus avaa kortin (kolmas kohde).
   const kolmas = ympyrat[2];
   await sivu.touchscreen.tap(kolmas.x + kolmas.w / 2, kolmas.y + kolmas.h / 2);
