@@ -9734,7 +9734,15 @@ export const RAAMATTU = {
           + 'taulun (FRA 2026-09-14b-tasoitus) ja erat-listan, jolloin Ranskan varitaso '
           + 'sammui. Fable palautti molemmat vanhasta luettelosta uuteen (06.16), vei '
           + 'uudestaan ja ajoi CI:n kolmannen kerran. VELKA Opus 2:lle: polta-paikallisesti/'
-          + 'kokoa-luettelo ei sailyta varitasot- ja erat-kenttia pohjan versiovaihdossa.',
+          + 'kokoa-luettelo ei sailyta varitasot- ja erat-kenttia pohjan versiovaihdossa. '
+          + 'CI 3.-5. AJO: kerma-reuna vihrea; reittihelmet (fps 48,5) ja zoom-pan jaivat '
+          + 'punaisiksi vuorotellen kuormitetulla koneella (load 8), 5. ajo vihrea. V1973 '
+          + 'MERGETTY 06.49, TUOTANNOSSA 06.52 (APP_VERSION 1973, pallo.js osoittaa 2026-09-'
+          + '20-pohja / 20260920i, luettelo amparissa). FABLE PYSAHTYY omistajan ohjeen '
+          + 'mukaan (05.21). SEURAAVAN SESSION ENSIMMAISET: 1) Sonnet 1 tarkistaa laitteella '
+          + 'v1973:n pohjan (Seinen mutkat, Gironde, varitaso, pallo); 2) vanhat kuvat era 2 '
+          + 'ampariin ja merge; 3) Gironden kaksoisviiva laitteella; 4) saapumistrailerin '
+          + 'sumennus jaa kartalle; 5) pulun kupla nayttaa koko historian.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
