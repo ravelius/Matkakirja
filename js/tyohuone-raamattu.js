@@ -9786,7 +9786,13 @@ export const RAAMATTU = {
           + '539 -> 212 m; mediaani jaa kvantisoinnin 334 m ruudukkoon). PAATOS (Fable): '
           + 'suistojen janteet poistetaan OMPELEMALLA rantaviivan polku kehaan generoinnissa '
           + '(vaihtoehto 1), jotta punainen keha sailyy; ei vaihtoehtoa 2 (rannikko-osuus '
-          + 'pois).',
+          + 'pois). OMPELU (Opus 1 653d17d4, 09.00): tehty (GRC suurin ero 1286 -> 187 m), '
+          + 'MUTTA MITTAUSVIRHE PALJASTUI: aiemmat luvut (3 939 m, 11,8 km vesijanne) '
+          + 'mittasivat etaisyytta lahimpaan KARKEEN, ei janaan; oikein mitattuna FRA:n keha '
+          + 'oli jo < 200 m rantaviivasta. Kaksoisviivan paasyy on siis 2,5-3 px:n korostus '
+          + 'ohuen rantaviivan PAALLA, ei geometria. PAATOS (Fable 09.00): tiheysportti '
+          + '30 -> 300; tasokartalla korostus piirretaan rantaviivan ALLE ja rannikko-'
+          + 'osuudella ohuempana/lapikuultavana (sama sadekeha-periaate kuin pallolla).',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
