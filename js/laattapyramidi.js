@@ -2055,7 +2055,7 @@ function variMaanSuoja(iso, L) {
  * 18.9. lattian 0,95 (PAATOKSET 34 kohta 17 d jaa taltioon).
  */
 export const KERMAN_PEITTO_VAHINTAAN = 0.5;
-export const KERMAN_PEITTO_KIINTEA = 0.5;
+export const KERMAN_PEITTO_KIINTEA = 0.8; // omistaja 20.9.2026 klo 16.05: "Julkaise 80% peitolla"
 
 export function pyramidinTasoitus() {
   const vt = varitasonKirjaus();
