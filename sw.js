@@ -15,6 +15,7 @@ const SHELL = [
   './css/fokusnosto.css',
   // Nosto aukeaa kuva edellä (js/nostokuva.js lataa tyylinsä itse).
   './css/nostokuva.css',
+  './css/kuvasarja.css',
   // Kaupungin iso pop-up ja turisti-info (js/kaupunkinosto.js lataa
   // tyylinsä itse; merkin oma tyyli on css/styles.css:ssä).
   './css/kaupunkinosto.css',

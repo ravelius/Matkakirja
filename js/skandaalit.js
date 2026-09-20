@@ -229,6 +229,7 @@ export function avaaSkandaali(ui, iso, skandaali) {
     // kirjoittaa valintansa kuvakehykseen (kehys.nostokuvaKuva).
     avaaSuurennos: (nappi) => avaaKohdeSuurennos(
       ui, kuvakehysRef?.nostokuvaKuva ?? paakuva, () => nappi, 'skandaaliZoom',
+      kuvakehysRef?.nostokuvaSarja?.(),
     ),
     latoNosto: latoSkandaali,
   }) : null;

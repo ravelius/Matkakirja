@@ -331,7 +331,7 @@ for (const [nimi, ruutuLeveys, ruutuKorkeus] of RUUDUT) {
   for (const [kuvanimi, kuvaLeveys, kuvaKorkeus] of KUVAT) {
     test(`kuva ei liiku vaiheenvaihdossa — ${nimi} ${ruutuLeveys}x${ruutuKorkeus}, ${kuvanimi}`,
       async () => {
-        const { sisalto, img } = await avaaMallissa({
+        const { sisalto, img, kortti } = await avaaMallissa({
           ruutuLeveys, ruutuKorkeus, kuvaLeveys, kuvaKorkeus,
         });
         const ennen = img.getBoundingClientRect();
@@ -342,9 +342,20 @@ for (const [nimi, ruutuLeveys, ruutuKorkeus] of RUUDUT) {
           `kuva jäi pieneksi: ${ennen.width}x${ennen.height} ruudulla ${ruutuLeveys}x${ruutuKorkeus}`);
         sisalto.querySelector('.nostokuva-lisaa').napauta();
         const jalkeen = img.getBoundingClientRect();
-        for (const kentta of ['x', 'y', 'width', 'height']) {
+        for (const kentta of ['x', 'width', 'height']) {
           assert.equal(jalkeen[kentta], ennen[kentta],
             `kuva liikkui: ${kentta} ${ennen[kentta]} → ${jalkeen[kentta]}`);
+        }
+        // Pystysuunnassa kuva saa siirtyä ALAS vain silloin, kun otsikko
+        // ei muuten mahtuisi ruudulle (nostokortti 2 kohta 4): kortti
+        // lepää silloin marginaalissa eikä sisältöä ole vieritetty, joten
+        // otsikko ja tyyppirivi ovat näkyvissä.
+        if (jalkeen.y !== ennen.y) {
+          const { NOSTOKUVA_MARGINAALI } = await import('../js/nostokuva.js');
+          assert.ok(jalkeen.y > ennen.y, `kuva nousi: y ${ennen.y} → ${jalkeen.y}`);
+          assert.equal(Number.parseFloat(kortti.style.top), NOSTOKUVA_MARGINAALI,
+            'kuva liikkui, vaikka kortti ei ole yläreunassa');
+          assert.equal(sisalto.scrollTop, 0, 'otsikko vieritettiin piiloon');
         }
       });
   }

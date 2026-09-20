@@ -1195,6 +1195,62 @@
 .fokuskohde-zoomlahde:empty { display: none; }
 
 /*
+ * SARJAN SELAUS SUURENNOKSESSA (omistaja 20.9.2026, nostokortti 2 kohta
+ * 3): samat hyvin pienet chevronit kuin kortilla (css/kuvasarja.css),
+ * paperin reunoilla (kehys on asemointipohja kuten ihmenauhalle);
+ * napautusala on kapea pystykaista, jotta sormi osuu, mutta merkki itse
+ * on pieni. Kehys ohittaa eleet, napit ottavat ne takaisin. Laskuri
+ * kuvan oikeassa yläkulmassa (vasen yläkulma on ihmenauhan).
+ */
+.fokuskohde-zoomnuoli {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 18%;
+  max-width: 4.5rem;
+  pointer-events: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  color: #f6f0e0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.15rem;
+  line-height: 1;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.9), 0 1px 3px rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  opacity: 0.85;
+  -webkit-tap-highlight-color: transparent;
+  z-index: 1;
+}
+.fokuskohde-zoomnuoli.edellinen { left: 0; text-align: left; padding-left: 0.4rem; }
+.fokuskohde-zoomnuoli.seuraava { right: 0; text-align: right; padding-right: 0.4rem; }
+button.fokuskohde-zoomnuoli:is(:hover, :active, :focus, :focus-visible) {
+  background: none;
+  box-shadow: none;
+  color: #fff;
+  opacity: 1;
+}
+.fokuskohde-zoomnuoli:focus { outline: none; }
+
+.fokuskohde-zoomlaskuri {
+  position: absolute;
+  right: 0.75rem;
+  top: 0.7rem;
+  padding: 0.05rem 0.45rem;
+  border-radius: 999px;
+  background: rgba(18, 12, 4, 0.55);
+  color: #f6f0e0;
+  font-family: var(--font-type);
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/*
  * TIETORUUTU JÄÄ NÄKYVIIN SUURENNOKSEN AJAKSI (omistajan tilaus
  * 25.8.2026). Aiemmin kortti häivytettiin — ja koska se palasi vasta
  * kutistumisen jälkeen, sulkeminen päättyi pomppuun: kuva laskeutui

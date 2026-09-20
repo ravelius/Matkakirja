@@ -308,8 +308,8 @@ test('kortti lataa lyhyen, suurennos pitkän ja lähderivin', () => {
   // Suurennos saa kuvatiedon sellaisenaan, ja piirtää siitä pitkän
   // selitteen ja lähderivin (js/fokuskohteet.js avaaKohdeSuurennos).
   const F = lue('js/fokuskohteet.js');
-  assert.match(F, /html\('span', 'fokuskohde-zoomselite', kuvatekstiPitka\(kuva\)\)/);
-  assert.match(F, /taytaLahderivi\(html\('span', 'fokuskohde-zoomlahde'\), kuva\.lahde \?\? '', kuva\)/);
+  assert.match(F, /selite\.textContent = kuvatekstiPitka\(kuva\)/);
+  assert.match(F, /taytaLahderivi\(lahderivi, kuva\.lahde \?\? '', kuva\)/);
 });
 
 test('nimiörivi on yksi rivi kortin sisällä, ei kolme aseteltua palaa', () => {
