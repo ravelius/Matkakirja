@@ -9777,7 +9777,9 @@ export const RAAMATTU = {
           + 'viivataso poltetaan uusiksi 2026-09-20b-viivat ja julkaistaan v1974:ssa. OPPI: '
           + 'peite lupaa vain mustetta jota ei valttamatta ole - tason siirrossa tarkista '
           + 'piirto selaimessa. KOSICEN KOHDEKARTTA (Sonnet 3 0001833e): 8 kohdetta, '
-          + 'mergetty; ympyroiden tormayksen vaisto tulossa.',
+          + 'mergetty; TORMAYSVAISTO (Sonnet 3 1b7dfbbc, 08.50): laskeNumeroympyroidenVaisto '
+          + '(vali >= 30 px, siirto <= 24 px, osoitinviiva yli 16 px:n siirrolla), savuke '
+          + '36/36 kaikille numeroympyrakaupungeille. Sonnet 3 pysahtyi - jono tyhja.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
