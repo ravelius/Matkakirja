@@ -13836,6 +13836,200 @@ export const MAA_KATEGORIAT = {
       },
     },
     {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Suomen luonto elää vuodenaikojen ääripäissä: revontulet syttyvät pimeinä '
+        + 'talviöinä, tunturit palavat ruskan väreissä syyskuussa, ja Saaristomeri '
+        + 'pilkkoutuu kymmeniksituhansiksi saariksi.',
+      nostot: [
+        {
+          otsikko: 'Vaara jolle uhrattiin ja jolla laidunnetaan yhä',
+          aika: '1991',
+          tiedosto: 'Koli National Park, North Karelia, Finland - Scenery from Ukkokoli.jpeg',
+          teksti: 'Kolin vaarat kohoavat Pielisjärven länsirannalla, ja Ukko-Kolin huipulta '
+            + 'avautuu näkymä kymmenien saarten ja selkien yli — yksi Suomen '
+            + 'tunnetuimmista maisemista. Paikka oli aikoinaan pyhä uhripaikka, ja '
+            + 'myöhemmin sen rinteillä harjoitettiin kaskiviljelyä, joka poltti metsän '
+            + 'tuhkalannoitteeksi pelloille. Kansallispuisto perustettiin vuonna 1991 '
+            + 'juuri tämän perinnemaiseman suojelemiseksi: 30 neliökilometrin alueella '
+            + 'niityt niitetään yhä käsin ja perinteiset suomalaiset lehmä- ja '
+            + 'lammasrodut laiduntavat avoimilla kedoilla, jotta harvinainen '
+            + 'niittykasvillisuus säilyy. Ilman jatkuvaa laidunnusta avoimet vaaranlaet '
+            + 'metsittyisivät muutamassa vuosikymmenessä.',
+          lyhyt: 'Ukko-Kolin huipulta avautuu yksi Suomen tunnetuimmista järvimaisemista.',
+          selite: 'Näkymä Ukko-Kolin huipulta Pielisjärvelle ja sen saarille syksyisenä '
+            + 'päivänä.',
+          lahde: 'Pentti Rautio, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Taivas joka syttyy vihreäksi',
+          aika: 'nykyään',
+          tiedosto: 'Aurora borealis over Saana fell.jpg',
+          teksti: 'Revontulet syntyvät, kun Auringosta virtaavat varatut hiukkaset törmäävät '
+            + 'ilmakehän happi- ja typpiatomeihin ja saavat ne hehkumaan — happi loistaa '
+            + 'vihreänä ja punaisena, typpi sinisenä ja violettina. Suomen Lappi '
+            + 'sijaitsee juuri sillä leveysasteella, jolla revontulet näkyvät useimmin, '
+            + 'koska maapallon magneettikenttä ohjaa hiukkaset kehämäiselle vyöhykkeelle '
+            + 'napojen ympärille. Pilvettöminä, pimeinä talvi-iltoina valot voivat '
+            + 'leimahtaa taivaalle verhoina, säteinä tai kiemuroina, jotka muuttavat '
+            + 'muotoaan minuuteissa. Ilmiö tunnetaan nimellä aurora borealis, ja Lapin '
+            + 'talvimatkailu ajoittuu pitkälti pimeän vuodenajan ympärille juuri '
+            + 'revontulten vuoksi.',
+          lyhyt: 'Revontulet näkyvät useimmin juuri Lapin leveysasteilla napojen ympärillä.',
+          selite: 'Vihreät revontulet leimuavat Saana-tunturin yllä Käsivarren Lapissa.',
+          lahde: 'WikiLucas00, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Meri jossa on 50 000 saarta',
+          aika: 'nykyään',
+          tiedosto: 'Kaarnitta and Vepsä and Satava, Archipelago Sea, Naantali and Turku, Finland.jpg',
+          teksti: 'Saaristomeri Turun ja Ahvenanmaan välissä on joidenkin määritelmien mukaan '
+            + 'maailman saarirunsain saaristo: sillä on arviolta 50 000 saarta, joskin '
+            + 'suuri osa niistä on aivan pieniä ja tiiviisti toistensa lähellä. Suurimmat '
+            + 'saaret ovat asuttuja ja niille pääsee lautoilla ja silloilla, kun taas '
+            + 'ulompi saaristo koostuu enimmäkseen asumattomista luodoista ja karikoista. '
+            + 'Ahvenanmaa, alueen suurin saariryhmä, on Suomen itsehallinnollinen, '
+            + 'ruotsinkielinen maakunta. Saaristomeri on suosittu purjehdus- ja '
+            + 'veneilykohde kesäisin, ja sen rikas saaristolintukanta ja poikkeuksellinen '
+            + 'kasvillisuus tekevät siitä myös merkittävän luontokohteen.',
+          lyhyt: 'Saaristomerellä on arviolta 50 000 saarta, joista suurin osa on hyvin '
+            + 'pieniä.',
+          selite: 'Pieniä metsäisiä saaria Saaristomerellä Turun ja Naantalin edustalla.',
+          lahde: 'Grzegorz Jereczek, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Kaksi viikkoa jolloin tunturi syttyy tuleen',
+          aika: 'syyskuu',
+          tiedosto: 'Vatikuru nature trail in Pallas-Yllastunturi National Park, Muonio, Lapland, Finland, 2021 September.jpg',
+          teksti: 'Ruska on lyhyt, muutaman viikon mittainen ajanjakso syyskuun alussa, '
+            + 'jolloin Lapin tunturikoivikot ja -kanervikot värjäytyvät nopeasti '
+            + 'keltaisiksi, oransseiksi ja tulipunaisiksi ennen lehtien putoamista. Ilmiö '
+            + 'johtuu siitä, että öiset pakkaset pysäyttävät lehtivihreän tuotannon, '
+            + 'jolloin lehdissä koko kasvukauden piilleet keltaiset ja punaiset '
+            + 'väripigmentit pääsevät näkyviin. Tunturien paljailla laella väri leviää '
+            + 'poikkeuksellisen laajana ja yhtenäisenä, toisin kuin metsäisemmällä '
+            + 'Etelä-Suomella. Ruska houkuttelee syksyisin retkeilijöitä '
+            + 'Pallas-Yllästunturin ja Urho Kekkosen kansallispuistoihin, ja ajankohta '
+            + 'vaihtelee vuosittain sään mukaan.',
+          lyhyt: 'Ruska värjää Lapin tunturit keltaisiksi ja punaisiksi muutamaksi '
+            + 'syysviikoksi.',
+          selite: 'Ruskan värittämä polku Pallas-Yllästunturin kansallispuistossa syyskuussa.',
+          lahde: 'Ximonic (Simo Räsänen), Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi öiset pakkaset saavat tunturikoivut muuttumaan väriltään ruskan aikaan?',
+        vaihtoehdot: [
+          'Ne pysäyttävät lehtivihreän tuotannon',
+          'Ne jäädyttävät lehtien nesteen',
+          'Ne houkuttelevat hyönteisiä syömään lehtiä',
+          'Ne lisäävät auringonvaloa',
+        ],
+        oikea: 0,
+        fakta: 'Lehdissä piilleet keltaiset ja punaiset pigmentit ovat olleet siellä koko '
+          + 'kesän.',
+      },
+    },
+    {
+      id: 'tiede',
+      nimi: 'Tiede',
+      johdanto: 'Suomi on tehnyt suuria asioita tietotekniikassa ja terveystutkimuksessa: '
+        + 'käyttöjärjestelmä joka pyörittää suurinta osaa maailman palvelimista, '
+        + 'ensimmäinen matkapuhelinverkko ja sauna jota tutkitaan '
+        + 'sydänlääketieteessä.',
+      nostot: [
+        {
+          otsikko: 'Käyttöjärjestelmä joka syntyi opiskelijan huoneessa',
+          aika: '1991',
+          tiedosto: 'LinuxCon Europe Linus Torvalds 01.jpg',
+          teksti: 'Linus Torvalds oli Helsingin yliopiston tietojenkäsittelytieteen '
+            + 'opiskelija, kun hän julkaisi 17. syyskuuta 1991 postituslistalla '
+            + 'harrastusprojektinsa lähdekoodin ja kirjoitti vaatimattomasti, ettei se '
+            + 'tule olemaan mitään ammattimaista GNU:n kaltaista. Projekti sai nimen '
+            + 'Linux, ja siitä kasvoi ilmainen, avoimen lähdekoodin käyttöjärjestelmän '
+            + 'ydin, jota kuka tahansa sai muokata ja jakaa edelleen. Nykyään Linux-ydin '
+            + 'pyörittää suurinta osaa maailman verkkopalvelimista ja supertietokoneista, '
+            + 'ja se on myös miljardien Android-puhelinten sydämessä. Torvalds asuu '
+            + 'nykyään Yhdysvalloissa mutta on säilyttänyt Suomen kansalaisuutensa.',
+          lyhyt: 'Linus Torvalds julkaisi Linux-käyttöjärjestelmän ytimen opiskelijana '
+            + 'vuonna 1991.',
+          selite: 'Linus Torvalds (oikealla) haastattelussa LinuxCon-konferenssissa.',
+          lahde: 'Krd, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Puhelu joka aloitti matkapuhelinajan',
+          aika: '1991',
+          tiedosto: 'Harri-Holkeri-1981.jpg',
+          teksti: '1. heinäkuuta 1991 pääministeri Harri Holkeri soitti Tampereen '
+            + 'apulaispormestari Kaarina Suoniolle Nokian ja Siemensin rakentamalla, '
+            + 'Radiolinjan operoimalla verkolla — puhelua on vuosikymmenet pidetty '
+            + 'maailman ensimmäisenä GSM-puheluna. Vuonna 2021 entinen Nokia-insinööri '
+            + 'Pekka Lonka paljasti Helsingin Sanomille soittaneensa testipuhelun pari '
+            + 'tuntia aiemmin samana päivänä Saloon: Maailman ensimmäisen GSM-puhelun '
+            + 'soitin minä. GSM kehitettiin yhteiseurooppalaisena hankkeena, ja Suomi oli '
+            + 'sen ensimmäisten kaupallisten verkkojen joukossa. Siitä kasvoi maailman '
+            + 'käytetyin matkapuhelinteknologia, josta 3G, 4G ja 5G ovat myöhempiä '
+            + 'kehitysaskeleita.',
+          lyhyt: 'Pääministeri Harri Holkeri soitti perinteisesti maailman ensimmäiseksi '
+            + 'tiedetyn GSM-puhelun 1991.',
+          selite: 'Pääministeri Harri Holkeri muotokuvassa vuodelta 1981, vuosikymmen ennen '
+            + 'kuuluisaa GSM-puhelua.',
+          lahde: 'Kuvasiskot, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Lauteet joita lääketiede tutkii',
+          aika: 'nykyään',
+          tiedosto: 'Wood stove of smoke sauna of Kuusijärvi, Kuninkaanmäki, Vantaa, Finland, 2023 April.jpg',
+          teksti: 'Sauna on niin keskeinen osa suomalaista arkea, että sana on lainattu '
+            + 'sellaisenaan lähes kaikkiin maailman kieliin. Perinteinen savusauna '
+            + 'lämmitetään kiukaalla ilman hormia, jolloin savu täyttää tilan ennen '
+            + 'löylyjä ja seinät mustuvat noesta. Ilmiö kiinnostaa myös lääketiedettä: '
+            + 'pitkäaikaisilla, säännöllisillä saunojilla on tutkimuksissa havaittu '
+            + 'pienempi riski äkilliseen sydänperäiseen kuolemaan, ja riski pienenee sitä '
+            + 'enemmän, mitä useammin saunotaan. Näyttöä on myös verenpaineen laskusta ja '
+            + 'valtimoiden joustavuuden paranemisesta, ja neljä kertaa viikossa '
+            + 'saunovilla on havaittu harvinaisempia muistisairauksia kuin kerran '
+            + 'viikossa saunovilla.',
+          lyhyt: 'Säännöllinen saunominen on tutkimuksissa yhdistetty pienempään '
+            + 'sydänriskiin.',
+          selite: 'Savusaunan kiuas hehkuu Kuusijärvellä Vantaalla; savusauna lämmitetään '
+            + 'ilman hormia.',
+          lahde: 'Ximonic (Simo Räsänen), Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Puhelin jota myytiin 250 miljoonaa kappaletta',
+          aika: '2003',
+          tiedosto: 'Nokia 1100.JPG',
+          teksti: 'Nokia 1100 esiteltiin elokuussa 2003 halpana ja kestävänä peruspuhelimena, '
+            + 'jossa ei ollut kameraa eikä väriruutua — vain soitto, tekstiviestit ja '
+            + 'pölynkestävä kotelo kehitysmaiden vaativiin oloihin. Puhelimesta tuli '
+            + 'silti kaikkien aikojen myydyin matkapuhelinmalli: sitä on myyty yli 250 '
+            + 'miljoonaa kappaletta, mikä tekee siitä myös maailman myydyimmän '
+            + 'yksittäisen kulutuselektroniikkatuotteen ilmestymisaikanaan. Malli oli '
+            + 'viimeinen Nokian puhelin, jossa soi vain yksiäänisiä soittoääniä — '
+            + 'poikkeuksena ylellinen 8910i, joka jatkoi markkinoilla vuoteen 2007 asti. '
+            + 'Nokia lopetti 1100:n valmistuksen vuonna 2010.',
+          lyhyt: 'Nokia 1100 on kaikkien aikojen myydyin matkapuhelinmalli, yli 250 '
+            + 'miljoonaa kappaletta.',
+          selite: 'Nokia 1100, vuonna 2003 esitelty peruspuhelin, josta tuli kaikkien aikojen '
+            + 'myydyin puhelinmalli.',
+          lahde: 'Georgy90, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuka paljasti soittaneensa maailman ensimmäisen GSM-puhelun, ei Harri Holkeri?',
+        vaihtoehdot: [
+          'Pekka Lonka',
+          'Linus Torvalds',
+          'Kaarina Suonio',
+          'Jorma Ollila',
+        ],
+        oikea: 0,
+        fakta: 'Hän paljasti asian vasta vuonna 2021, kolmekymmentä vuotta puhelun '
+          + 'jälkeen.',
+      },
+    },
+    {
       id: 'menovinkit',
       nimi: 'Menovinkit',
       johdanto: 'Suomessa moni parhaista paikoista on saarella, ja yhteen '
