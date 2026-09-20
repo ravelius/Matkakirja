@@ -4218,8 +4218,11 @@ export function nimiotasonLadonta(nimio, z, kaava, px, mittaa) {
  */
 export const KORISTEEN_KOOT = Object.freeze({
   kompassi: { 4: 28, 5: 40, 6: 56, 7: 80, 8: 110 },
-  laiva: { 5: 14, 6: 20, 7: 28, 8: 40 },
+  // Purjelaivat isommiksi (Fable 20.9. ilta: *"nyt tuskin näkyvät"*).
+  laiva: { 5: 22, 6: 32, 7: 44, 8: 60 },
 });
+/** Koristeiden muste: tummempi kuin meren nimiö, jotta hento viivapiirros erottuu. */
+export const KORISTEEN_VARI = 'rgba(52, 42, 34, 0.9)';
 
 function piirraKompassiruusu(ctx, x, y, r, vari) {
   ctx.save();
@@ -4253,7 +4256,7 @@ function piirraPurjelaiva(ctx, x, y, k, vari) {
   ctx.translate(x, y);
   ctx.strokeStyle = vari;
   ctx.fillStyle = vari;
-  ctx.lineWidth = Math.max(0.8, k / 18);
+  ctx.lineWidth = Math.max(1, k / 14);
   ctx.lineJoin = 'round';
   // Runko: kaareva pohja, keula oikealle.
   ctx.beginPath();
@@ -4346,12 +4349,12 @@ export function piirraNimiotaso(canvas, asetukset) {
       if (x1 + d < GX || x0 + d > GX + W || y1 < GY || y0 > GY + H) continue;
       const vari = NIMION_VARIT[nimio.luokka === 'maakunta' ? 'maakunta' : 'meri'];
       if (nimio.luokka === 'kompassi') {
-        piirraKompassiruusu(ctx, l.x + d - GX, l.y - GY, l.korkeus / 2, vari);
+        piirraKompassiruusu(ctx, l.x + d - GX, l.y - GY, l.korkeus / 2, KORISTEEN_VARI);
         piirretty += 1;
         continue;
       }
       if (nimio.luokka === 'laiva') {
-        piirraPurjelaiva(ctx, l.x + d - GX, l.y - GY, l.korkeus, vari);
+        piirraPurjelaiva(ctx, l.x + d - GX, l.y - GY, l.korkeus, KORISTEEN_VARI);
         piirretty += 1;
         continue;
       }

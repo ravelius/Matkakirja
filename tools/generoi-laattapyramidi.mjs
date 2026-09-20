@@ -2014,6 +2014,19 @@ function nimiotasonEsteet(mitat) {
     const nimi = String(c.name ?? c.id ?? '');
     laatikot.push([x - kaupunkiKorkeus, y - kaupunkiKorkeus, x + kaupunkiKorkeus * (1 + 0.6 * nimi.length), y + kaupunkiKorkeus]);
   }
+  // Nostot (kaikki maat, ks. keraaNostot): merkki + nimiö puolelleen.
+  // Nostot piirtyvät z5–z8, joten z4:llä ne eivät ole esteitä.
+  if (mitat.z >= 5) {
+    const nostoKorkeus = { 5: 10, 6: 12, 7: 15, 8: 20 }[mitat.z] ?? 14;
+    for (const n of nostot.merkit ?? []) {
+      if (!Number.isFinite(n.x) || !Number.isFinite(n.y)) continue;
+      const x = px(n.x); const y = py(n.y);
+      const nimi = n.nimioNakyy === false ? '' : String(n.nimio ?? '');
+      const lev = nostoKorkeus * 0.55 * nimi.length;
+      const vasen = n.nimioPuoli === 'vasen';
+      laatikot.push([x - nostoKorkeus - (vasen ? lev : 0), y - nostoKorkeus, x + nostoKorkeus + (vasen ? 0 : lev), y + nostoKorkeus]);
+    }
+  }
   // Joet: jokainen jana kapeana laatikkona (levennys 4 px).
   const joet = [];
   for (const joki of lautaSisalto.joet ?? []) {
