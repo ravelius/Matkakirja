@@ -10010,7 +10010,17 @@ export const RAAMATTU = {
           + '(20 m); merenpinnan ylapuoliset jarvet vaativat jarvimaskin (ne_10m_lakes); '
           + 'musiikin pito yhteiseksi portiksi (pidaMusiikkiKiinni). PAATOS (Fable 15.35): '
           + 'reliefi poltetaan uusiksi jarvimaskin kanssa yhdessa taustassa (tunteja, '
-          + 'NOAA), julkaistaan kun amparissa. Koodi mergetty prepiin.',
+          + 'NOAA), julkaistaan kun amparissa. Koodi mergetty prepiin. OMISTAJAN KOE 15.40: '
+          + '"huntu, joka peittaa muiden maiden korkeuserot, olisikin lapinakyva ... '
+          + 'viisikymmenta prosenttia. Ei haittaa, jos samalla paljastuu myos muiden maiden '
+          + 'karttanostot" -> Fable: KERMAN_PEITTO_KIINTEA = 0,5 (ohittaa luettelon 0,85 ja '
+          + '18.9. lattian 0,95; PAATOKSET 34 kohta 17 d taltioon), testit 3751/0, v1978. '
+          + 'TUPLASAAPUMINEN TOISTUI (Opus 1 15.45): Berliinin saapumisluenta (24 s) soi '
+          + 'viela lennon hetkella MOLEMPIEN kirjanpitojen ulkopuolella (diaryVoice null, '
+          + 'ei ui.luennoissa) -> mikaan vaiennus ei tavoita; syy: kirjanpito taytetaan '
+          + 'vasta onnistuneen play():n jalkeen, virhehaara nollaa pysayttamatta. PAATOS: '
+          + 'rekisterointi syntyhetkella + vaiennaPaikanPuhe vaientaa kaikki + virhehaara '
+          + 'pysayttaa (vaihtoehto 3).',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
