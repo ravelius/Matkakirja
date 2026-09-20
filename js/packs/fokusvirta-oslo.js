@@ -6,8 +6,9 @@
  * sama moottori (js/fokusvirta.js). Aalto 4B, Norja.
  *
  * KAUPUNGIN NIMI. Pelissä kaupunki on Oslo, mutta isoisän vuonna 1873
- * se on Kristiania — kaanon hoitaa vaihdoksen itse: paikkarivi lukee
- * Kristiania ja Livian kupla kertoo, että vanha nimi palautettiin 1925.
+ * se on Christiania (virallinen kirjoitusasu Kristiania vasta 1877) —
+ * kaanon hoitaa vaihdoksen itse: paikkarivi lukee Christiania ja Livian
+ * kupla kertoo, että vanha nimi palautettiin 1925 (Fable 20.9.2026).
  * Tämä paketti ei selitä sitä toistamiseen missään.
  *
  * ── MISTÄ TEKSTIT TULEVAT ──────────────────────────────────────────
