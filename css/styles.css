@@ -18246,6 +18246,52 @@ button.opas-nauha:hover { filter: brightness(1.06); }
   font-variant-numeric: lining-nums;
 }
 
+/*
+ * NUMEROYMPYRÄN VÄISTÖ (Fablen välittämä löydös 20.9.2026: lähekkäiset
+ * ympyrät osuivat päällekkäin). js/nahtavyydet.js vaistaNumeroympyrat
+ * asettaa lähekkäiselle ympyrälle `--vx`/`--vy` (ruutupikseleitä) ja
+ * lisää lapseksi viivan `.kohde-osoitin`. Siirto on ruutupikseleinä,
+ * koska ympyrä on vastaskaalattu (koko vakio): lavan pikseleinä se
+ * olisi zoomilla kertoimen verran liian suuri, joten jaetaan --zoom-
+ * arvolla, ja sama vakiosiirto pitää parin erillään joka zoomilla.
+ * Viiva asuu ympyrän omassa (vastaskaalatussa) koordinaatistossa, eli
+ * sen pituus on ruutupikseleitä: alkaa ympyrän reunasta ja päättyy
+ * pieneen pisteeseen, joka on kohteen todellinen paikka.
+ */
+.kartta-lava .maakartta-piste.kohde-numeroympyra.kohde-vaistetty {
+  transform:
+    translate(calc(-50% + var(--vx, 0px) / var(--zoom)), calc(-50% + var(--vy, 0px) / var(--zoom)))
+    scale(calc(1 / var(--zoom)));
+}
+.kohde-osoitin {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  transform: rotate(var(--kulma, 0rad));
+  pointer-events: none;
+}
+.kohde-osoitin::before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: -1px;
+  width: calc(var(--pituus, 0px) - 12px);
+  height: 2px;
+  background: #2c2318;
+}
+.kohde-osoitin::after {
+  content: '';
+  position: absolute;
+  left: calc(var(--pituus, 0px) - 3px);
+  top: -3px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #2c2318;
+}
+
 .kohde-piirros-kuva {
   position: absolute;
   inset: 0;
