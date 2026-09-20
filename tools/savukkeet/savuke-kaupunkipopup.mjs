@@ -410,6 +410,32 @@ for (const ruutu of RUUDUT) {
       ).then(() => true).catch(() => false);
       tieto(`${tunnus}: saapumistrailerin odotus`,
         `${Date.now() - traileriAlku} ms, ${traileriPois ? 'poissa' : 'yhä ruudulla'}`);
+      /*
+       * KAMERA LEVOSSA ENNEN NAPAUTUSTA (CI 21.9.2026, PR #2636, run
+       * 35545232135 diagnoosi): Pariisin napautus pisteessä 195,273 osui
+       * pintaan 48,506 N / 2,848 E — noin 15–20 px kaupungin
+       * kaakkoispuolelle — ja lähin osuma oli Versaillesin nosto (15 px),
+       * jonka kortti aukesi liuskan sijaan. Piste luettiin
+       * getScreenCoordsista, mutta kuormitetulla koneella saapumisajo
+       * oli yhä matkalla: renderkamera ja pisteen projektio olivat eri
+       * kehyksestä. Odotetaan, että ajo on ohi ja pisteen ruutupaikka
+       * pysyy paikallaan kahden mitan välillä — sama syy ja sama lääke
+       * kuin liuskan asettumisella (js/pallolauta/nostot.js LIUSKA
+       * ASETTUU ENSIN).
+       */
+      const lepoAlku = Date.now();
+      const lepo = await sivu.waitForFunction((id) => {
+        const l = window.matkakirja.ui.pallolauta;
+        if (l.kamera?.kameraAjossa?.()) { window.__lepoEdellinen = null; return false; }
+        const k = l.kaupunki(id);
+        const p = k ? l.pallo.getScreenCoords(k.lat, k.lon, 0) : null;
+        if (!p) return false;
+        const ed = window.__lepoEdellinen;
+        window.__lepoEdellinen = { x: p.x, y: p.y, hetki: performance.now() };
+        return Boolean(ed) && Math.hypot(p.x - ed.x, p.y - ed.y) < 0.5
+          && performance.now() - ed.hetki >= 250;
+      }, kaupunki.id, { timeout: 15000, polling: 300 }).then(() => true).catch(() => false);
+      tieto(`${tunnus}: kameran lepo ennen napautusta`, `${Date.now() - lepoAlku} ms, ${lepo ? 'levossa' : 'yhä ajossa'}`);
       for (let yritys = 0; yritys < 2; yritys += 1) {
         /* eslint-disable no-await-in-loop */
         /*
@@ -1449,6 +1475,10 @@ for (const ruutu of RUUDUT) {
       // kortin jälkeen portti nielaisee ensimmäisen napautuksen; osoitin
       // liikkuu ennen napautusta; piste luetaan tuoreena).
       for (let yritys = 0; yritys < 2 && !liuskaKuvattomana; yritys += 1) {
+        // Kamera levossa ennen napautusta (ks. KAMERA LEVOSSA ENNEN NAPAUTUSTA).
+        await sivu.waitForFunction(() => !window.matkakirja.ui.pallolauta.kamera?.kameraAjossa?.(),
+          null, { timeout: 10000, polling: 200 }).catch(() => {});
+        await sivu.waitForTimeout(400);
         const uusi = await kaupunkiPiste();
         if (!uusi) break;
         await sivu.mouse.move(uusi.x + 24, uusi.y + 24);
