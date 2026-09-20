@@ -3322,6 +3322,34 @@ export function luoNostot({
         }
       }
     }
+    /*
+     * EDELLINEN SOVITTELU KANNETAAN ETEENPÄIN (ks. NIMIÖN KYLKI
+     * LUKITAAN, KUN ANKKURI VALITAAN `sovittele`n yllä). Datumit
+     * rakennetaan joka ladonnassa datasta, joten ilman tätä nimiön
+     * kylki putoaisi takaisin merkin omaan kylkeen joka ladonnalla ja
+     * sovittelun olisi pakko ratkaista se uudestaan — juuri se, minkä
+     * kohta 13 c kieltää. Asento luetaan lukosta jo TÄSSÄ, jotta myös
+     * nimiladonnan varaukset ja osumapinnat kuvaavat sitä, mikä
+     * ruudulla on.
+     *
+     * JA ENNEN `merkit.aseta`A (20.9.2026, laitetestaaja kierros 20b:
+     * "Camarguen hevoset" ja "Camarguenvarsa" suoraan päällekkäin).
+     * Lukko luettiin ennen VASTA merkkien asettamisen jälkeen, ja
+     * merkit.aseta KOPIOI datumin kentät pysyvään datumiin — lukon
+     * asento ei siis koskaan päässyt ruudulle, ellei `sovittele`
+     * sattunut muuttamaan tulosta samalla ladonnalla. Kartalla näkyi
+     * datan kylki ja piilotettu nimiö, kun sovittelu uskoi lappujen
+     * väistäneen (mitattu 1400 px: 14 lappua 68:sta eri asennossa
+     * kuin sovittelun lukko, 2 piilotettua nimiötä näkyvissä).
+     */
+    for (const d of datumit) {
+      const a = sovitellutAsennot.get(d.avain);
+      if (!a) continue;
+      d.puoli = a.kylki;
+      d.dx = a.dx;
+      d.dy = a.dy;
+      if (d.nimi) d.nimioNakyy = d.nimioNakyy && a.nimio;
+    }
     merkit.aseta('nostot', datumit);
     tahdistaRasteriporras();
     /*
@@ -3427,24 +3455,6 @@ export function luoNostot({
         lappuja.push({ r, datum: datumit[i], laatikko: lapunLaatikko(r, datumit[i]) });
       }
     });
-    /*
-     * EDELLINEN SOVITTELU KANNETAAN ETEENPÄIN (ks. NIMIÖN KYLKI
-     * LUKITAAN, KUN ANKKURI VALITAAN `sovittele`n yllä). Datumit
-     * rakennetaan joka ladonnassa datasta, joten ilman tätä nimiön
-     * kylki putoaisi takaisin merkin omaan kylkeen joka ladonnalla ja
-     * sovittelun olisi pakko ratkaista se uudestaan — juuri se, minkä
-     * kohta 13 c kieltää. Asento luetaan lukosta jo TÄSSÄ, jotta myös
-     * nimiladonnan varaukset ja osumapinnat kuvaavat sitä, mikä
-     * ruudulla on.
-     */
-    for (const d of datumit) {
-      const a = sovitellutAsennot.get(d.avain);
-      if (!a) continue;
-      d.puoli = a.kylki;
-      d.dx = a.dx;
-      d.dy = a.dy;
-      if (d.nimi) d.nimioNakyy = d.nimioNakyy && a.nimio;
-    }
     const ikonilaatikko = ({ r, datum }) => (r.perhe === 'aihemerkki'
       ? aihemerkinLaatikko(r.p, datum, { dx: datum.dx, dy: datum.dy, nimio: false })
       : nostonLaatikko(r.p, r, {
