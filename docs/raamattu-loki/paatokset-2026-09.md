@@ -95,3 +95,7 @@ Tyopolkulahderivi pois kaikista nostotyypeista (historian hetken paikka-paivays 
 ## V1981 MERGETTY (Julkaisija PR #2633) (20.9.2026 klo 20.59)
 
 Astropulun vastaus ankkuroituu ja kortti 62 vh, lentonakyma ilman liftauskaaria ja lentokohteet nakyviin, Gironden janajako, kartuscha 3, keskeneraiset varusteet harmaana, Astronautin kameran kuvake, perf-savukkeet omaan sarjaan, Raamatun jako (230 kt). Savukekorjaukset: satelliittilinssin kuvakevartio paivitetty, astro-pallo 45b kuormaherkka -> suorituskykysarjaan, luentakuvat play()-ajoitus tunnetuksi. v1973-prep nollattu mainiin; Fablen Raamattu ja loki mergetty paalle (--ours, superset). Julkaisija ilmoittaa tuotannon. v1982-jono: nimiot-reuna, nostokortti. Laitetestaaja 19b WebKit-Playwrightilla (iPad-simulaattori vaatii omistajan kertaluontoisen luvan MCP-tyokalulle).
+
+## V1981 TUOTANNOSSA 20.56 (20.9.2026 klo 20.59)
+
+Julkaisija vahvisti APP_VERSION 1981 matkakirja.app:ssa.
