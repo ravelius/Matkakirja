@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1975, teksti: 'v1975: saapumisen piilot, astropulun kuva' },
   { v: 1974, teksti: 'v1974: joet kartalle, Gironde, Kosice-kartta, kartuscha' },
   { v: 1973, teksti: 'v1973: uusi pohjapyramidi (joet, ranta), Ljubljana-kartta' },
   { v: 1972, teksti: 'v1972: rannikon naulaus, Bryssel-kartta, Kosice-lehti' },
