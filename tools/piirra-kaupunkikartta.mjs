@@ -588,6 +588,7 @@ const KAUPUNGIT = {
      */
     meri: 'maa',
   },
+<<<<<<< HEAD
   ljubljana: {
     /*
      * Ljubljanan vanhakaupunki (20.9.2026; omistajan päätös 19.9.2026:
@@ -603,6 +604,8 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: 46.056, etela: 46.0455, lansi: 14.493, ita: 14.513 },
     laajennus: 1.6,
   },
+=======
+>>>>>>> origin/main
   bryssel: {
     /*
      * Brysselin ydinkeskusta (20.9.2026, pilotti; omistajan päätös

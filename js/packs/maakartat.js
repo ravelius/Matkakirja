@@ -7528,6 +7528,7 @@ export const KAUPUNKIKARTAT = {
       },
     ],
   },
+<<<<<<< HEAD
   /*
    * LJUBLJANA (20.9.2026, samalla kaavalla kuin Bryssel; omistajan
    * päätös 19.9.2026: Slovenian pelikaupunki). Kohdekartta piirretty
@@ -7674,6 +7675,8 @@ export const KAUPUNKIKARTAT = {
       },
     ],
   },
+=======
+>>>>>>> origin/main
   firenze: {
     polku: 'assets/kartat/firenze-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',

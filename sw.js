@@ -1530,8 +1530,11 @@ const SHELL = [
   './assets/kartat/firenze-varikartta.png',
   './assets/kartat/bryssel-keskusta.png',
   './assets/kartat/bryssel-varikartta.png',
+<<<<<<< HEAD
   './assets/kartat/ljubljana-keskusta.png',
   './assets/kartat/ljubljana-varikartta.png',
+=======
+>>>>>>> origin/main
   './assets/kartat/tampere-varikartta.png',
   './assets/kartat/bagdad-varikartta.png',
   './assets/kartat/teheran-varikartta.png',
