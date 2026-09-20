@@ -10026,7 +10026,14 @@ export const RAAMATTU = {
           + 'Opus 1 mittaa tunnisteilla ja korjaa oikean syyn; v1978 odottaa. HUMINA '
           + 'TAUSTAAANEKSI (Opus 2 002f026f): kanava sfx/taustaaanet-liuku (astronautinKanava), '
           + 'musiikkikerros musiikkikytkimen alle; vartija paivitetty; savuke 36/36; '
-          + 'mergetty. Reliefin poltto z7 44 % klo 15.27, arvio valmis n. 17.',
+          + 'mergetty. Reliefin poltto z7 44 % klo 15.27, arvio valmis n. 17. OIKAISU '
+          + '(Opus 1 16.10): "toistui" oli mittarin harha - luentojen mp3:t 404:ivat ilman '
+          + 'Node-valitysta, joten "paallekkaiset luennat" olivat aanettomia elementteja; '
+          + 'epailty kulku (luenta vapautuu error-tapahtumassa ennen viivastettya '
+          + 'kaynnistysta ja jaa orvoksi) on aito mutta todistamatta; uusi ajo aanet '
+          + 'valitettyna, mitataan currentTime. Korjausehdokas: playing-tapahtumassa '
+          + 'kirjaus takaisin ui.luennat-tauluun. HUNTU-KAAPPAUKSET 25/50/75 % '
+          + '(kaappaukset/huntu-koe-20260920/) toimitettu omistajalle.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
