@@ -166,16 +166,6 @@ export const MAASTOKOHTEET_NLD = [
       lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
     kuvat: [
-      {
-        osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-maas-a0075408.jpg',
-        lyhyt: 'Maas Dinantin kohdalla, kaupunki ja linnoitus rinteessä.',
-        selite: 'Joki kulkee kaupungin ohi jyrkkien rinteiden alla, ja kirkontorni kohoaa rannalla.',
-        lahde: 'Valokuva: DimiTalen, Wikimedia Commons (CC0).',
-        tekija: 'DimiTalen',
-        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:View_of_Dinant_from_on_the_Meuse_River_near_Neffe,_2025.jpg',
-        lisenssi: 'CC0',
-        lisenssiUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en',
-      },
     ],
     nimi: 'Maas',
     tyyppi: 'joki',
