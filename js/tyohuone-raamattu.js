@@ -10171,6 +10171,15 @@ export const RAAMATTU = {
           + 'lokia varten. 4) Fablen effort: medium oletuksena (reititys ja kirjaus), high '
           + 'vain tarinateksteihin, ristiriitojen tuomarointiin ja Raamatun jaon '
           + 'tarkastukseen; Fablen kulu on kontekstin pituus x kierrokset, ei effort.',
+        'PERF-PORTTI TEHTY (Pelikoodari 6cdc3cb2, Fable 20.09.2026 klo 18.27): uusi savukesarja '
+          + 'suorituskyky (schedule/taysi ja kasin), apuri tools/savukkeet/suorituskyky.mjs '
+          + '(SAVUKE_SUORITUSKYKY=1 -> OK/FAIL, muuten INFO); siirretty zoom-pan kokonaan, '
+          + 'pariisi-lahizoom 8o ja 8c, reittihelmet fps, astro-sumu fps, topografialinssi '
+          + '400 ms, astro-pallo 8 s; yhtaan vartiota ei poistettu; raportti docs/raportit/'
+          + 'viesti-fable-perf-portti-20260920.md. PAATOKSET (Fable): topografialinssin '
+          + 'valahdysvartio (kuormaherkka) siirtyy samaan sarjaan seuraavassa erassa; '
+          + 'suorituskyky-sarja ajetaan yolla sarjassa (yksi tyontekija). Julkaistaan '
+          + 'erillisena versiona.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
