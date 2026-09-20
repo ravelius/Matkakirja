@@ -213,6 +213,9 @@ Käyttö: tools/polta-paikallisesti.sh [valitsimet]
                              15 × rinnakkaiset prosessit; nosta, jos
                              lokissa on HTTP 429)
   --ei-luetteloa             älä koota äläkä vie pyramidi.jsonia
+  --hahmotelmat              polta MYÖS hahmotelmapakkojen nostot
+                             laattaan (oletus: ei — ne jäävät eläviksi,
+                             muuten merkki piirtyy kahdesti)
   --ei-luettelovientia       KOKOA luettelo mutta ÄLÄ vie sitä ämpäriin
                              (laatat viedään normaalisti). Uuden version
                              laatat eivät näy pelissä ennen kuin luettelo
@@ -279,6 +282,9 @@ KORVAA=0
 # nopeasti ja CLI yrittää uudestaan sen sijaan, että shardi jäisi roikkumaan.
 AWS_YHTEYSAIKA="${AWS_YHTEYSAIKA:-30}"
 LUETTELO=1; PAKOTA_LUETTELO=0; LISTA=0; LAPSI=0; OHITA_EHEYS=0
+# Hahmotelmat poltetaan VAIN pyydettäessä (ks. shardit): oletus on, että
+# ne jäävät eläviksi.
+HAHMOTELMAT=0
 # Luettelo kootaan mutta sitä ei viedä (--ei-luettelovientia): julkaisu
 # jää erilliseksi teoksi, vaikka laatat ovat jo ämpärissä.
 LUETTELON_VIENTI=1
@@ -324,6 +330,7 @@ while [ $# -gt 0 ]; do
     --noutovali) NOUTOVALI="$2"; shift 2 ;;
     --ei-luetteloa) LUETTELO=0; shift ;;
     --ei-luettelovientia) LUETTELON_VIENTI=0; shift ;;
+    --hahmotelmat) HAHMOTELMAT=1; shift ;;
     --pakota-luettelo) PAKOTA_LUETTELO=1; shift ;;
     --ohita-eheys) OHITA_EHEYS=1; shift ;;
     --ajo-id) AJO_ID="$2"; shift 2 ;;
@@ -613,7 +620,18 @@ nostoshardit () {
 }
 
 shardit () {
+  # HAHMOTELMAT JÄÄVÄT ELÄVIKSI (Fablen päätös 20.9.2026; erät L ja M,
+  # docs/raportit/viesti-fable-nostotaso-poltto-20260919.md).
+  #
+  # Hahmotelmapakkojen nostot (EU-maat ym.) EIVÄT kuulu laattaan: jos ne
+  # poltetaan, sama merkki piirtyy kahdesti tai kortti ja visa jäävät
+  # poltetun musteen alle. Maakohtaiset erät on siksi ajettu käsin
+  # lipulla `--ilman-hahmotelmia`, mutta tämä skripti ei maininnut
+  # hahmotelmia lainkaan — ja 20.9.2026 klo 02.36 alkanut ajo poltti ne
+  # mukaan, jolloin koko nostoversio (2026-09-20-nostot) oli kelvoton.
+  # Lippu on nyt OLETUS, ja hahmotelmien poltto vaatii `--hahmotelmat`.
   local nostoarg="--nostotaso --nostoversio $NOSTOVERSIO"
+  [ "$HAHMOTELMAT" -eq 0 ] && nostoarg="$nostoarg --ilman-hahmotelmia"
   local viivaarg="--viivataso --viivaversio $VIIVAVERSIO"
   [ "$PIIRIT" = "ei" ] && viivaarg="$viivaarg --eipiirit"
   # RANTATASO (omistaja 6.9.2026 ilta): rantaviiva pois pohjasta omalle
@@ -906,6 +924,19 @@ shardin_yritys () {
     --laatu "$LAATU" --patina "$PATINA" --versio "$VERSIO" >"$loki" 2>&1 || koodi=$?
   kill "$vahti" 2>/dev/null || true
   wait "$vahti" 2>/dev/null || true
+  # MAA ILMAN POLTETTAVIA NOSTOJA EI OLE VIRHE (korjattu 20.9.2026).
+  #
+  # Kun nostotaso poltetaan oletuksena --ilman-hahmotelmia, on maita
+  # joiden KAIKKI nostot ovat hahmotelmia: BEL, LUX, MLT, SVK ja SVN.
+  # Generaattori poistuu niilla koodilla 1 ja sanoo sen suoraan, ja
+  # skripti luki sen kaatumiseksi - jolloin koko ajo pysahtyi
+  # eheysvirheeseen eika luetteloa eika pallon sarjaa ajettu, vaikka
+  # mitaan ei ollut vialla. Tyhja maa on tyhja maa.
+  if [ "$koodi" -ne 0 ] \
+     && grep -q 'maalla ei ole yhtaan poltettavaa nostoa' "$loki" 2>/dev/null; then
+    echo "· $nimi: ei poltettavia nostoja (kaikki hahmotelmia) — ohitetaan"
+    koodi=0
+  fi
   if [ "$koodi" -ne 0 ]; then
     echo "VIRHE shardissa $nimi (yritys $yritys) — loki $loki" >&2
     tail -5 "$loki" >&2 || true
