@@ -9644,7 +9644,9 @@ export const RAAMATTU = {
           + '2026-09-20-pohja-nostot-20260920i, vanhat pyramidiversiot (30 Gt). OMISTAJA '
           + '20.9.2026 klo 05.06: "Pysayta kaikki" -> kaikille viidelle sessiolle '
           + 'pysaytyskasky, pallosarjan uusinta keskeytetaan, v1972 PR #2624 jaa auki '
-          + 'mergeamatta, Fablen CI-vahti pysaytetty. Ei uusia toita ennen omistajan ohjetta.',
+          + 'mergeamatta, Fablen CI-vahti pysaytetty. OMISTAJA 05.07: "Tai mac ajot voivat '
+          + 'jatkua" -> pysaytys peruttu Mac-sessioille, kaikki viisi jatkavat kesken '
+          + 'jaaneesta, CI-vahti uudelleen.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
