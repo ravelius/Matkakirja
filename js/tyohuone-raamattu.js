@@ -10191,6 +10191,18 @@ export const RAAMATTU = {
           + 'reitit.png on sama tiedosto kuin kartuscha-v1976.png (vaara kopio) - toteutus '
           + 'Raamatun sanoituksen mukaan. Julkaisija julkaisee. Pelikoodari jatkaa '
           + 'kartuscha 3:lla (haara pelikoodari-kartuscha-3).',
+        'GIRONDEN JUURISYY LOPULLINEN (Karttaseppa f8887c5c, Fable 20.09.2026 klo 18.49): korostuskeha '
+          + 'SISALTAA Medocin rannan, mutta 0,50 asteen (55 km) suora jana painuu pallon '
+          + 'pinnan alle keskelta ja syvyystesti leikkaa sen laatan alle (jänteen '
+          + 'keskikohta 0 tummaa px; depthTest pois -> 206) - laatat ovat oikein, "toinen '
+          + 'viiva" on tayton reuna ilman viivaa. Omistajan arvaus 10.45 ("viivan paalle '
+          + 'tulee jotain muuta") osui. KORJAUS: js/pallovektorit.js jakaa yli 0,1 asteen '
+          + 'janat paloiksi (korostus ja solut; janamaara maailma +14 %, Ranska +3 %), '
+          + 'savuke-korostus-janne 7/7 harvassa sarjassa (ilman jakoa 6/7), testit 3767/0; '
+          + 'raportti docs/raportit/viesti-fable-gironde-janne-20260920.md. PAATOS: '
+          + 'polygonitayttoa ei tehda ellei omistaja nae tayton ramppia laitteella. '
+          + 'Laitetestaaja tarkistaa Gironden versiossa; Karttaseppa jatkaa himmeisiin '
+          + 'kaariin (fps-mittaus suoraan Laitetestaajalta).',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
