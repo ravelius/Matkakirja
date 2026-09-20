@@ -89,20 +89,33 @@ mukaan (Gironde 35 → 63 janaa). Kaksoisviivaa ei jää yhtään janaa.
   (kaksoisviiva 0, pituus ei lyhene, sisämaan rajat säilyvät) — ajettavissa
   millä tahansa maalla `--iso=`.
 - `tools/savukkeet/savuke-maan-aariviiva.mjs` (kohdemaan kehän peitto,
-  8 nimettyä kohtaa): ajossa tätä kirjoittaessa, tulos ei ehtinyt tähän
-  raporttiin — kerron sen viestissä. Sen näkymä (koko Ranska työpöydällä)
-  on tiheysportin alapuolella, eli siinä korostus on muuttumaton; savuke
-  on siis regressiovartio, ei todiste naulauksesta.
+  8 nimettyä kohtaa, neljä näkymää): **70/70 vartiota läpi**, kuvat
+  `docs/raportit/kaappaukset/rannikon-naulaus-20260920/`. Kerroksen omat
+  mittarit kertovat, että savuke ajoi naulauksen MOLEMMILLA puolilla
+  porttia:
+
+  | näkymä | tiheys | pudotettuja | rannikkojanoja | korostusjanoja | peitto |
+  |---|---|---|---|---|---|
+  | zoom (Ranska lähellä) | 140,8 px/aste | 1 174 | 2 226 | 2 361 | 100 % |
+  | saapuminen (kauempaa) | 75 px/aste | 0 | 0 | 2 110 | ≥ 90 % |
+
+  Portti on 120 px/aste, eli se osuu näiden väliin: kauempi näkymä oli
+  naulaamaton jo ilman porttia (rannikkosoluja ei ollut muistissa) ja
+  lähempi naulattu. Savukkeen tulos pätee siis sellaisenaan committiin.
+  Tärkein luku on **peitto 100 % ja 16/16 rengasta**: naulattu kehä on
+  yhtä ehjä kuin admin_0:n oma, eikä yksikään nimetty kohta (mm.
+  Gironde) kadonnut.
 
 Sivukorjaus: `savuke-maan-aariviiva.mjs` lukee nyt `PLAYWRIGHT_JS`:n kuten
 muut savukkeet (kovakoodattu `/opt/node22/...` ei ole tällä koneella).
 
 ## Mitä jäi tekemättä
 
-- **Selainmittaus lähizoomissa**: naulauksen vaikutus on todistettu
-  geometriasta (mittari) ja yksikkötestillä, EI selaimen kuvasta
-  lähizoomissa. Portti on valittu laskien (0,5 px / 445 m), ei mittaamalla
-  ruudulta.
+- **Selaimen kuva ennen/jälkeen lähizoomissa**: naulauksen vaikutus on
+  todistettu geometriasta (mittari), kerroksen mittareista selaimessa
+  (1 174 janaa pudotettu, 2 226 rannikosta) ja yksikkötestillä — en
+  vertaillut Gironden lähikuvaa silmämääräisesti ennen/jälkeen. Portin
+  raja 120 px/aste on laskettu (0,5 px / 445 m), ei mitattu ruudulta.
 - **Silmämääräinen kaappausvertailu** on vain ääriviiva-savukkeen omista
   kuvista (`docs/raportit/kaappaukset/rannikon-naulaus-20260920/`); en
   ajanut erillistä Gironde-lähikuvaa ennen/jälkeen, koska poltto varasi

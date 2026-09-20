@@ -1,0 +1,509 @@
+{
+  "vastakoe": false,
+  "tulokset": [
+    {
+      "avain": "puhelin-saapuminen",
+      "pov": {
+        "lat": 46.599999999999945,
+        "lng": 2.4000000000000057,
+        "altitude": 0.20492975597087248
+      },
+      "mittarit": {
+        "tila": "nakyy",
+        "syy": "",
+        "lod": 4,
+        "tol": 0,
+        "tarvePxAste": 140.8,
+        "soluja": 12,
+        "ladattu": 12,
+        "janoja": 12284,
+        "tavua": 86020,
+        "pyyntoja": 13,
+        "paivitaMs": 21.4,
+        "rakennusMs": 4.5,
+        "linewidthCss": 1.656,
+        "pikselisuhde": 2,
+        "alue": {
+          "lat0": 39.89250642954532,
+          "lat1": 53.212242396550536,
+          "lon0": -3.0612328659155708,
+          "lon1": 7.861232865915582,
+          "naytteita": 49
+        },
+        "leveysCss": 1.006,
+        "pehmennys": 0.393,
+        "harvennus": 0.003,
+        "janojaSolua": 1024,
+        "pehmennysPaikka": true,
+        "korostus": "FRA",
+        "korostusRenkaita": 16,
+        "korostusJanoja": 2361,
+        "korostusPudotettuja": 1174,
+        "korostusRannikkojanoja": 2226,
+        "pyydetyt": [
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/luettelo.json",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rannikko/l4/17_3.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rannikko/l4/18_3.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rannikko/l4/17_4.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rannikko/l4/18_4.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rannikko/l4/17_5.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rannikko/l4/18_5.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rajat/l4/17_3.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rajat/l4/18_3.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rajat/l4/17_4.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rajat/l4/18_4.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rajat/l4/17_5.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rajat/l4/18_5.bin"
+        ]
+      },
+      "materiaali": {
+        "vari": "#6b5539",
+        "linewidth": 4.776244864762121,
+        "paatyt": 1,
+        "opacity": 1
+      },
+      "rajaMateriaali": {
+        "vari": "#6b5539",
+        "linewidth": 1.4543741441270202,
+        "opacity": 0.34
+      },
+      "paletti": "#6b5539",
+      "mark": "#b03a2b",
+      "pisteita": 682,
+      "nakyvia": 682,
+      "peitto": 1,
+      "kohdat": [
+        {
+          "nimi": "Pyreneet (keskeltä)",
+          "etaisyysAst": 0.04,
+          "osuma": true,
+          "paneelinAlla": false
+        },
+        {
+          "nimi": "Atlantin rannikko (Gironde)",
+          "etaisyysAst": 0.01,
+          "osuma": true,
+          "paneelinAlla": false
+        },
+        {
+          "nimi": "Bretagne (kärki)",
+          "etaisyysAst": 3.13,
+          "osuma": true,
+          "paneelinAlla": false
+        },
+        {
+          "nimi": "Kanaali (Cotentin)",
+          "etaisyysAst": 0.04,
+          "osuma": true,
+          "paneelinAlla": false
+        },
+        {
+          "nimi": "Belgian raja (Ardennit)",
+          "etaisyysAst": 0.04,
+          "osuma": true,
+          "paneelinAlla": false
+        },
+        {
+          "nimi": "Rein (Alsace)",
+          "etaisyysAst": 1.64,
+          "osuma": true,
+          "paneelinAlla": false
+        },
+        {
+          "nimi": "Alpit (Mont Blanc)",
+          "etaisyysAst": 0.77,
+          "osuma": true,
+          "paneelinAlla": false
+        },
+        {
+          "nimi": "Välimeri (Camargue)",
+          "etaisyysAst": 0.01,
+          "osuma": true,
+          "paneelinAlla": false
+        }
+      ]
+    },
+    {
+      "avain": "puhelin-zoom",
+      "pov": {
+        "lat": 46.599999999999945,
+        "lng": 2.3999999999999915,
+        "altitude": 0.20492975597087248
+      },
+      "mittarit": {
+        "tila": "nakyy",
+        "syy": "",
+        "lod": 4,
+        "tol": 0,
+        "tarvePxAste": 140.8,
+        "soluja": 12,
+        "ladattu": 12,
+        "janoja": 12284,
+        "tavua": 86020,
+        "pyyntoja": 13,
+        "paivitaMs": 21.4,
+        "rakennusMs": 4.5,
+        "linewidthCss": 1.656,
+        "pikselisuhde": 2,
+        "alue": {
+          "lat0": 39.89250642954532,
+          "lat1": 53.212242396550536,
+          "lon0": -3.0612328659155708,
+          "lon1": 7.861232865915582,
+          "naytteita": 49
+        },
+        "leveysCss": 1.006,
+        "pehmennys": 0.393,
+        "harvennus": 0.003,
+        "janojaSolua": 1024,
+        "pehmennysPaikka": true,
+        "korostus": "FRA",
+        "korostusRenkaita": 16,
+        "korostusJanoja": 2361,
+        "korostusPudotettuja": 1174,
+        "korostusRannikkojanoja": 2226,
+        "pyydetyt": [
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/luettelo.json",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rannikko/l4/17_3.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rannikko/l4/18_3.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rannikko/l4/17_4.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rannikko/l4/18_4.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rannikko/l4/17_5.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rannikko/l4/18_5.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rajat/l4/17_3.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rajat/l4/18_3.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rajat/l4/17_4.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rajat/l4/18_4.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rajat/l4/17_5.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rajat/l4/18_5.bin"
+        ]
+      },
+      "materiaali": {
+        "vari": "#6b5539",
+        "linewidth": 4.776244864762121,
+        "paatyt": 1,
+        "opacity": 1
+      },
+      "rajaMateriaali": {
+        "vari": "#6b5539",
+        "linewidth": 1.4543741441270202,
+        "opacity": 0.34
+      },
+      "paletti": "#6b5539",
+      "mark": "#b03a2b",
+      "pisteita": 682,
+      "nakyvia": 682,
+      "peitto": 1,
+      "kohdat": [
+        {
+          "nimi": "Pyreneet (keskeltä)",
+          "etaisyysAst": 0.04,
+          "osuma": true,
+          "paneelinAlla": false
+        },
+        {
+          "nimi": "Atlantin rannikko (Gironde)",
+          "etaisyysAst": 0.01,
+          "osuma": true,
+          "paneelinAlla": false
+        },
+        {
+          "nimi": "Bretagne (kärki)",
+          "etaisyysAst": 3.13,
+          "osuma": true,
+          "paneelinAlla": false
+        },
+        {
+          "nimi": "Kanaali (Cotentin)",
+          "etaisyysAst": 0.04,
+          "osuma": true,
+          "paneelinAlla": false
+        },
+        {
+          "nimi": "Belgian raja (Ardennit)",
+          "etaisyysAst": 0.04,
+          "osuma": true,
+          "paneelinAlla": false
+        },
+        {
+          "nimi": "Rein (Alsace)",
+          "etaisyysAst": 1.64,
+          "osuma": true,
+          "paneelinAlla": false
+        },
+        {
+          "nimi": "Alpit (Mont Blanc)",
+          "etaisyysAst": 0.77,
+          "osuma": true,
+          "paneelinAlla": false
+        },
+        {
+          "nimi": "Välimeri (Camargue)",
+          "etaisyysAst": 0.01,
+          "osuma": true,
+          "paneelinAlla": false
+        }
+      ]
+    },
+    {
+      "avain": "tyopoyta-saapuminen",
+      "pov": {
+        "lat": 46.59999999999999,
+        "lng": 2.4000000000000057,
+        "altitude": 0.20493352671271636
+      },
+      "mittarit": {
+        "tila": "nakyy",
+        "syy": "",
+        "lod": 3,
+        "tol": 0.004,
+        "tarvePxAste": 75,
+        "soluja": 20,
+        "ladattu": 20,
+        "janoja": 19831,
+        "tavua": 95020,
+        "pyyntoja": 21,
+        "paivitaMs": 0.1,
+        "rakennusMs": 2.5,
+        "linewidthCss": 2.189,
+        "pikselisuhde": 1,
+        "alue": {
+          "lat0": 38.6698318580143,
+          "lat1": 53.21234848786104,
+          "lon0": -15.185891528550968,
+          "lon1": 19.98589152855098,
+          "naytteita": 49
+        },
+        "leveysCss": 0.889,
+        "pehmennys": 0.594,
+        "harvennus": 0.003,
+        "janojaSolua": 992,
+        "pehmennysPaikka": true,
+        "korostus": "FRA",
+        "korostusRenkaita": 16,
+        "korostusJanoja": 2110,
+        "korostusPudotettuja": 0,
+        "korostusRannikkojanoja": 0,
+        "pyydetyt": [
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/luettelo.json",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rannikko/l3/16_3.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rannikko/l3/17_3.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rannikko/l3/18_3.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rannikko/l3/19_3.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rannikko/l3/17_4.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rannikko/l3/18_4.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rannikko/l3/19_4.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rannikko/l3/16_5.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rannikko/l3/17_5.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rannikko/l3/18_5.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rannikko/l3/19_5.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rajat/l3/17_3.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rajat/l3/18_3.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rajat/l3/19_3.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rajat/l3/17_4.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rajat/l3/18_4.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rajat/l3/19_4.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rajat/l3/17_5.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rajat/l3/18_5.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rajat/l3/19_5.bin"
+        ]
+      },
+      "materiaali": {
+        "vari": "#6b5539",
+        "linewidth": 4.899648521368623,
+        "paatyt": 1,
+        "opacity": 1
+      },
+      "rajaMateriaali": {
+        "vari": "#6b5539",
+        "linewidth": 2.0166080868947702,
+        "opacity": 0.34
+      },
+      "paletti": "#6b5539",
+      "mark": "#b03a2b",
+      "pisteita": 1700,
+      "nakyvia": 1700,
+      "peitto": 1,
+      "kohdat": [
+        {
+          "nimi": "Pyreneet (keskeltä)",
+          "etaisyysAst": 0.04,
+          "osuma": true,
+          "paneelinAlla": false
+        },
+        {
+          "nimi": "Atlantin rannikko (Gironde)",
+          "etaisyysAst": 0.01,
+          "osuma": true,
+          "paneelinAlla": false
+        },
+        {
+          "nimi": "Bretagne (kärki)",
+          "etaisyysAst": 0.04,
+          "osuma": true,
+          "paneelinAlla": false
+        },
+        {
+          "nimi": "Kanaali (Cotentin)",
+          "etaisyysAst": 0.04,
+          "osuma": true,
+          "paneelinAlla": false
+        },
+        {
+          "nimi": "Belgian raja (Ardennit)",
+          "etaisyysAst": 0.04,
+          "osuma": true,
+          "paneelinAlla": false
+        },
+        {
+          "nimi": "Rein (Alsace)",
+          "etaisyysAst": 0.02,
+          "osuma": true,
+          "paneelinAlla": false
+        },
+        {
+          "nimi": "Alpit (Mont Blanc)",
+          "etaisyysAst": 0.06,
+          "osuma": true,
+          "paneelinAlla": false
+        },
+        {
+          "nimi": "Välimeri (Camargue)",
+          "etaisyysAst": 0.01,
+          "osuma": true,
+          "paneelinAlla": false
+        }
+      ]
+    },
+    {
+      "avain": "tyopoyta-zoom",
+      "pov": {
+        "lat": 46.59999999999999,
+        "lng": 2.4000000000000057,
+        "altitude": 0.20493352671271636
+      },
+      "mittarit": {
+        "tila": "nakyy",
+        "syy": "",
+        "lod": 3,
+        "tol": 0.004,
+        "tarvePxAste": 75,
+        "soluja": 20,
+        "ladattu": 20,
+        "janoja": 19831,
+        "tavua": 95020,
+        "pyyntoja": 21,
+        "paivitaMs": 0.1,
+        "rakennusMs": 2.5,
+        "linewidthCss": 2.189,
+        "pikselisuhde": 1,
+        "alue": {
+          "lat0": 38.6698318580143,
+          "lat1": 53.21234848786104,
+          "lon0": -15.185891528550968,
+          "lon1": 19.98589152855098,
+          "naytteita": 49
+        },
+        "leveysCss": 0.889,
+        "pehmennys": 0.594,
+        "harvennus": 0.003,
+        "janojaSolua": 992,
+        "pehmennysPaikka": true,
+        "korostus": "FRA",
+        "korostusRenkaita": 16,
+        "korostusJanoja": 2110,
+        "korostusPudotettuja": 0,
+        "korostusRannikkojanoja": 0,
+        "pyydetyt": [
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/luettelo.json",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rannikko/l3/16_3.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rannikko/l3/17_3.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rannikko/l3/18_3.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rannikko/l3/19_3.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rannikko/l3/17_4.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rannikko/l3/18_4.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rannikko/l3/19_4.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rannikko/l3/16_5.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rannikko/l3/17_5.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rannikko/l3/18_5.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rannikko/l3/19_5.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rajat/l3/17_3.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rajat/l3/18_3.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rajat/l3/19_3.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rajat/l3/17_4.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rajat/l3/18_4.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rajat/l3/19_4.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rajat/l3/17_5.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rajat/l3/18_5.bin",
+          "https://media.matkakirja.app/julisteet/pallo/vektorit/2026-09-06a/rajat/l3/19_5.bin"
+        ]
+      },
+      "materiaali": {
+        "vari": "#6b5539",
+        "linewidth": 4.899648521368623,
+        "paatyt": 1,
+        "opacity": 1
+      },
+      "rajaMateriaali": {
+        "vari": "#6b5539",
+        "linewidth": 2.0166080868947702,
+        "opacity": 0.34
+      },
+      "paletti": "#6b5539",
+      "mark": "#b03a2b",
+      "pisteita": 1700,
+      "nakyvia": 1700,
+      "peitto": 1,
+      "kohdat": [
+        {
+          "nimi": "Pyreneet (keskeltä)",
+          "etaisyysAst": 0.04,
+          "osuma": true,
+          "paneelinAlla": false
+        },
+        {
+          "nimi": "Atlantin rannikko (Gironde)",
+          "etaisyysAst": 0.01,
+          "osuma": true,
+          "paneelinAlla": false
+        },
+        {
+          "nimi": "Bretagne (kärki)",
+          "etaisyysAst": 0.04,
+          "osuma": true,
+          "paneelinAlla": false
+        },
+        {
+          "nimi": "Kanaali (Cotentin)",
+          "etaisyysAst": 0.04,
+          "osuma": true,
+          "paneelinAlla": false
+        },
+        {
+          "nimi": "Belgian raja (Ardennit)",
+          "etaisyysAst": 0.04,
+          "osuma": true,
+          "paneelinAlla": false
+        },
+        {
+          "nimi": "Rein (Alsace)",
+          "etaisyysAst": 0.02,
+          "osuma": true,
+          "paneelinAlla": false
+        },
+        {
+          "nimi": "Alpit (Mont Blanc)",
+          "etaisyysAst": 0.06,
+          "osuma": true,
+          "paneelinAlla": false
+        },
+        {
+          "nimi": "Välimeri (Camargue)",
+          "etaisyysAst": 0.01,
+          "osuma": true,
+          "paneelinAlla": false
+        }
+      ]
+    }
+  ]
+}
