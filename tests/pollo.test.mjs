@@ -42,6 +42,7 @@ import {
   tekstiIlmanSpoilereita,
   tunnistaPuhuttelu,
   valitseSisainenSyote,
+  puhdistaWikiPutket,
   vastauskuvanAihe,
 } from '../js/pollo.js';
 // Kuplan napautusnielu asuu ui-apureissa: sama vuoto koskee kaikkia
@@ -1432,6 +1433,40 @@ test('konteksti pysyy katossa myös aineiston kanssa', () => {
 test('vastauskuvanAihe poimii ensimmäisen käsitteen perusmuodossa', () => {
   const teksti = 'Baikal on [[Baikal|Baikalin]] syvin kohta. Myös [[Siperia]] mainitaan.';
   assert.equal(vastauskuvanAihe(teksti, 'Kerro Baikalista'), 'Baikal');
+});
+
+test('vastauskuvanAihe ohittaa pelkän vuosiluvun (Košice 20.9.2026)', () => {
+  // Ochtinskán vastauksessa ensimmäinen käsite oli "1954", ja vuoden
+  // wikiartikkelista tuli mustavalkoinen sotakuva vastauksen viereen.
+  const teksti = 'Luola löydettiin [[1954]] ja se on kuuluisa [[aragoniitti]]kiteistään.';
+  assert.equal(vastauskuvanAihe(teksti, 'Milloin luola löydettiin?'), 'aragoniitti');
+  // Pelkkä vuosiluku ilman muita käsitteitä putoaa kysymykseen.
+  assert.equal(vastauskuvanAihe('Vastaus on [[1954]].', 'Milloin luola löydettiin?'),
+    'Milloin luola löydettiin');
+  // Luku osana nimeä EI ole pelkkä luku.
+  assert.equal(vastauskuvanAihe('Kohde on [[Apollo 11]].', 'Mikä?'), 'Apollo 11');
+});
+
+test('aineiston wikiputket puretaan ennen mallia (Košice 20.9.2026)', () => {
+  // Sonnet 1 näki pulun vastauksessa raakana "luolat|Aggtelekin ja
+  // Slovakian karstin luolia" — merkintä tuli aineistosta kontekstin
+  // kautta. Pelaaja ei saa nähdä pystyviivaa missään muodossa.
+  assert.equal(puhdistaWikiPutket('osa [[luolat|Aggtelekin ja Slovakian karstin luolia]] listaa'),
+    'osa Aggtelekin ja Slovakian karstin luolia listaa');
+  assert.equal(puhdistaWikiPutket('se on luolat|Aggtelekin karstin luolia, sanoi opas.'),
+    'se on Aggtelekin karstin luolia, sanoi opas.');
+  assert.equal(puhdistaWikiPutket('[[Ochtinská]] on luola'), 'Ochtinská on luola');
+  // Välilyönnillinen erotin ei ole merkintä eikä sitä kosketa.
+  assert.equal(puhdistaWikiPutket('taulukko a | b ja c'), 'taulukko a | b ja c');
+  assert.equal(puhdistaWikiPutket(null), '');
+  // Konteksti on se paikka, jossa puhdistus oikeasti tapahtuu.
+  const konteksti = kokoaKonteksti({
+    kohde: { nimi: 'Ochtinská aragoniittiluola', teksti: 'osa [[luolat|Aggtelekin luolia]]' },
+    aineisto: [{ leima: 'Slovakian maalehti', teksti: 'aragoniitti|aragoniittimuodostelmistaan kuuluisa' }],
+  });
+  assert.ok(!konteksti.includes('|'), konteksti);
+  assert.ok(konteksti.includes('Aggtelekin luolia'), konteksti);
+  assert.ok(konteksti.includes('aragoniittimuodostelmistaan kuuluisa'), konteksti);
 });
 
 test('vastauskuvanAihe: ilman käsitteitä aihe on siistitty kysymys', () => {
