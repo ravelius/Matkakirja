@@ -83,3 +83,7 @@ Tarkennus Raamatun kohtaan HAVAINNEKUVAT NOSTOISSA: todelliset historialliset he
 ## VISALASKENTA KORJATTU: 21 %, VISOJA LISATAAN (Sisaltokirjuri f740a7fc, Fable 20.09.2026 klo 20.54) (20.9.2026 klo 20.54)
 
 Inventaarion virhe: visa luettiin vaarasta kentasta ja osa nostoista laskettiin kahdesti. Oikeat luvut: 1198 nostoa, visoja 254 = 21,2 %, FRA 16/64 = 25 % (tasmaa Pelikoodarin lukuun), 29 maata alle 1/3, 8 maata ilman visaa (BIH, CHE, GBR, ISL, NOR, RUS, TUR, UKR), GRC 15,6 %, EST 19 %, DEU 20 %. Ihme (kadonnut) 8, rappeutunut 11, olemassa 1179; ilman kuvaa 198. PAATOS: Pelikoodarin visa-kolmannes-era perutaan; nostostandardin kohta 3 korjattu - visoja lisataan sisaltotyona joka maahan vahintaan kolmasosaan. Omistajan havainto oli oikea.
+
+## NOSTOTYYPPIEN KONTAKTIARKIT (Laitetestaaja) (20.9.2026 klo 20.55)
+
+docs/raportit/laitekierros-19-nostotyypit-20260920.md, kuvat docs/raportit/kaappaukset/nostotyypit-20260920/ (11 tyyppia + 3 kontaktiarkkia). Laitetestaaja oikaisi: visalaatikko nakyy kylla LISAA-tilassa kortin alaosassa (ei vieritetty) - ei tutkintaa. Fablen huomiot arkeista: kortin rakenne on yhtenainen kaikissa tyypeissa; tyyppi erottuu vain ylaotsikon pienesta kuvakkeesta (harkittavaksi tyyppikohtainen tunnus kortissa); merenkulku-esimerkin pienessa kortissa ei kuvaa; LISAA-tilan kuvan kutistuminen jo tilattu. Omistaja katsoo taysikokoiset.
