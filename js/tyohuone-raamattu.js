@@ -10149,6 +10149,16 @@ export const RAAMATTU = {
           + 'kokonaan (grep/head), paivittaa muistion vain virstanpylvaissa ja kasittelee '
           + 'saapuneet viestit yhdella kierroksella. Raamatunkarsija (opus) aloitti 18.15 '
           + 'haaralla raamatunkarsija, worktree ~/Matkakirja-raamattu.',
+        'SIIVOUSPAATOKSET (omistaja 20.9.2026 klo 18.25 kortilla): 1) vanhat worktreet '
+          + '(34 kpl kotihakemistossa ja .claude/worktrees/) poistetaan, kun puu on puhdas, '
+          + 'haara pushattu originiin eika puu ole nykyisen session kaytossa; haaroja ei '
+          + 'poisteta. OPPI: squash-merge ei jata haaran committeja mainiin, joten `git '
+          + 'branch --merged` ja merge-tree eivat kelpaa mergetty-tarkistukseen; worktreen '
+          + 'poisto ei havita mitaan kun haara on originissa. 2) Yhdeksan vanhaa avointa '
+          + 'PR:aa (#2527, #2493, #2459, #2457, #2450, #2446, #2413, #2325, #1455; Codexin '
+          + 'luonnoksia ja Fablen vanhoja) suljetaan kommentilla, haarat sailyvat. '
+          + 'Julkaisija (sonnet) tekee molemmat, lista docs/raportit/worktree-siivous-'
+          + '20260920.md.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
