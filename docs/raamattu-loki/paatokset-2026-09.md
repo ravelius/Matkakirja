@@ -151,3 +151,7 @@ Kohdemaan nimiot elavina (ei limityksia), himmea reittiverkko liftatessa (kerros
 ## RANSKAN NOSTOTASOT (Sisaltokirjuri e161176c) (20.9.2026 klo 23.23)
 
 docs/raportit/nostotasot-fra-20260920.md, kentta nosto.taso (oletus 2). Ykkostaso 8: Mont-Saint-Michel, Versailles, Lascaux, Mont Blanc, Pont du Gard, Chambord, Carcassonne, Etretat (Dune du Pilat tasolle 2). Lista Karttasepalle (vedos) ja kentan nimi Pelikoodarille (elavat nimiot). Sisaltokirjuri jatkaa kartuschan vajaisiin maihin.
+
+## OMISTAJA: ASTRONAUTIN KAMERAN KUVISTA VALKOISET PALKIT POIS (20.9.2026 klo 23.24)
+
+Osassa ISS-valokuvia on alareunassa valkoinen palkki tunnuksella (esim. Etna, ISS013E62714; kaappaus astro-etna-valkoinen-palkki.webp). -> Sisaltokirjuri rajaa palkit pois koneellisesti (kaikki astro-valokuvat), vie ampariin, HEAD 200; kuvateksti/lahde ennallaan.
