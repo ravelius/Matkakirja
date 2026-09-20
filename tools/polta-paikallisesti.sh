@@ -414,6 +414,32 @@ esac
 # toiseen — suhteellinen polku tarkoittaisi eri kansiota eri kohdissa.
 mkdir -p "$ULOS"
 ULOS="$(cd "$ULOS" && pwd)"
+# LAPSELLE SAMAT LIPUT KUIN VANHEMMALLE — YMPÄRISTÖN KAUTTA. Lapsi laskee
+# shardin argumentit uudestaan nimestä (shardit) ja kirjoittaa valmis-
+# merkin omalla ajon_tunnuksellaan, joten jokaisen shardilistaan tai
+# tunnukseen vaikuttavan lipun on kuljettava mukana. Lippujen arvoissa on
+# välilyöntejä, joten ne eivät kulje xargs-argumentteina vaan
+# POLTTO_*-muuttujina (vanhempi exporttaa ennen xargsia, ks. vie_lapsille).
+if [ "$LAPSI" -eq 1 ]; then
+  [ -n "$DATA" ] || DATA="${POLTTO_DATA:-}"
+  [ -n "$YHTEISLIPUT" ] || YHTEISLIPUT="${POLTTO_YHTEISLIPUT:-}"
+  [ -n "$POHJALIPUT" ] || POHJALIPUT="${POLTTO_POHJALIPUT:-}"
+  [ -n "$VIIVALIPUT" ] || VIIVALIPUT="${POLTTO_VIIVALIPUT:-}"
+  [ -n "$RANTALIPUT" ] || RANTALIPUT="${POLTTO_RANTALIPUT:-}"
+  [ -n "$NOSTOLIPUT" ] || NOSTOLIPUT="${POLTTO_NOSTOLIPUT:-}"
+  [ -n "$NIMIOVERSIO" ] || NIMIOVERSIO="${POLTTO_NIMIOVERSIO:-}"
+  [ -n "$NIMIOT" ] || NIMIOT="${POLTTO_NIMIOT:-}"
+  [ -n "$PALLOTUNNISTE" ] || PALLOTUNNISTE="${POLTTO_PALLOTUNNISTE:-}"
+  [ "$HAHMOTELMAT" -eq 1 ] || HAHMOTELMAT="${POLTTO_HAHMOTELMAT:-0}"
+  [ "$ILMAN_NOSTOJA" -eq 1 ] || ILMAN_NOSTOJA="${POLTTO_ILMAN_NOSTOJA:-0}"
+  [ "$ILMAN_NIMIOITA" -eq 1 ] || ILMAN_NIMIOITA="${POLTTO_ILMAN_NIMIOITA:-0}"
+fi
+vie_lapsille () {
+  export POLTTO_DATA="$DATA" POLTTO_YHTEISLIPUT="$YHTEISLIPUT" POLTTO_POHJALIPUT="$POHJALIPUT"
+  export POLTTO_VIIVALIPUT="$VIIVALIPUT" POLTTO_RANTALIPUT="$RANTALIPUT" POLTTO_NOSTOLIPUT="$NOSTOLIPUT"
+  export POLTTO_NIMIOVERSIO="$NIMIOVERSIO" POLTTO_NIMIOT="$NIMIOT" POLTTO_PALLOTUNNISTE="$PALLOTUNNISTE"
+  export POLTTO_HAHMOTELMAT="$HAHMOTELMAT" POLTTO_ILMAN_NOSTOJA="$ILMAN_NOSTOJA" POLTTO_ILMAN_NIMIOITA="$ILMAN_NIMIOITA"
+}
 # Aineistokansio absoluuttiseksi; oletus on ULOS/ne-data (hae_aineisto).
 if [ -n "$DATA" ]; then
   [ -d "$DATA" ] || { echo "VIRHE: --data $DATA ei ole kansio" >&2; exit 2; }
@@ -1557,6 +1583,7 @@ polta_pallo () {
   [ -n "$PALLO_LUETTELO" ] && echo "  luettelo: $PALLO_LUETTELO (ei viety ämpäriin)"
   local alkoi virhe=0
   alkoi="$(date +%s)"
+  vie_lapsille
   xargs -P "$rinnakkain" -I{} "$ITSE" --lapsi --vain {} \
     --pallotunniste "$PALLOTUNNISTE" --pallo-osia "$PALLO_OSIA" \
     --pallo-tasot "$PALLO_MIN-$PALLO_MAX" --noutovali "$NOUTOVALI" \
@@ -1762,6 +1789,7 @@ EOF
   maara="$(wc -l < "$lista" | tr -d ' ')"
   echo "· nostotason shardeja ajossa $maara (rinnakkain $YTIMET)"
   alkoi="$(date +%s)"
+  vie_lapsille
   xargs -P "$YTIMET" -I{} "$ITSE" --lapsi --vain {} \
     --sarjat nostot --versio "$VERSIO" --viivaversio "$VIIVAVERSIO" \
     --nostoversio "$NOSTOVERSIO" --rantaversio "$RANTAVERSIO" \
@@ -1850,7 +1878,10 @@ if [ "$ILMAN_RANTAVIIVAA" -eq 1 ] && [ "$VAIN_PALLO" -eq 0 ]; then
       echo "anna niille uudet versiot: --$nimi <uusi> (nyt $uusi = ämpärin)." >&2
       exit 2 ; }
   done
-  if [ "$VIE" -eq 1 ] && [ "$PALLO" -ne 1 ] && [ "$LISTA" -eq 0 ] && [ "$LAPSI" -eq 0 ]; then
+  # Kaksivaiheisen ajon ensimmäinen vaihe (--ei-luetteloa) vie vain
+  # laatat uusiin versiopolkuihin; luetteloa ei synny, joten vahti ei
+  # voi sammua. Pallo vaaditaan vasta luettelon kokoavalta ajolta.
+  if [ "$VIE" -eq 1 ] && [ "$PALLO" -ne 1 ] && [ "$LUETTELO" -eq 1 ] && [ "$LISTA" -eq 0 ] && [ "$LAPSI" -eq 0 ]; then
     echo "VIRHE: --ilman-rantaviivaa vaatii --pallo --pallotunniste <kirjain>:" >&2
     echo "pohjan versio vaihtuu, ja lepokerroksen versiovahti (js/pallo.js" >&2
     echo "lepokerroksenKerrokset) sammuttaa kerroksen, kunnes pallon sarja on" >&2
@@ -2025,7 +2056,8 @@ alkoi="$(date +%s)"
 # Jokainen shardi on oma prosessinsa, jotta yhden kaatuminen ei kaada
 # muita; xargs palauttaa nollasta poikkeavan koodin, jos yksikin kaatui.
 virhe=0
-xargs -P "$YTIMET" -I{} "$ITSE" --lapsi --vain {} \
+vie_lapsille
+  xargs -P "$YTIMET" -I{} "$ITSE" --lapsi --vain {} \
   --sarjat "$SARJAT" --versio "$VERSIO" --viivaversio "$VIIVAVERSIO" \
   --nostoversio "$NOSTOVERSIO" --rantaversio "$RANTAVERSIO" \
   --laatu "$LAATU" --patina "$PATINA" \

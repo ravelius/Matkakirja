@@ -4327,6 +4327,83 @@ function piirraPurjelaiva(ctx, x, y, k, vari) {
   ctx.restore();
 }
 
+/*
+ * LAIVA ISTUU VEDESSÄ (omistaja 21.9.2026, vedoksen muutos 1). Codexin
+ * laivakuvat ovat läpinäkyvällä pohjalla ja "leijuivat" meren päällä:
+ * runko piirretään hieman veteen UPONNEENA (kuvan alin läpinäkymätön
+ * rivi mitataan kerran kuvaa kohti, ja vesiraja on VESIRAJAN_UPOTUS
+ * kuvakorkeutta sen yläpuolella — sen alle jäävä osa leikataan pois),
+ * hieman läpikuultavana (LAIVAN_PEITTO), ja vesirajalle tulee samalla
+ * musteella varjoviiva rungon alle sekä aaltopari (piirraAaltomerkki,
+ * sama merkki kuin merten nimien alla) rungon molemmin puolin. Kuvia
+ * itseään ei kosketa. Tunnistus tiedostonimestä (`laiva-*`); rivin
+ * `vesiraja: false` kytkee pois.
+ */
+const VESIRAJAN_UPOTUS = 0.055;
+const LAIVAN_PEITTO = 0.9;
+const kuvanAlareunat = new WeakMap();
+export function laivakuva(nimio) {
+  if (nimio?.vesiraja === false) return false;
+  if (nimio?.vesiraja === true) return true;
+  return /(^|\/)laiva-[^/]*$/i.test(String(nimio?.kuva ?? ''));
+}
+/** Kuvan alimman läpinäkymättömän rivin osuus korkeudesta (0..1). */
+function kuvanAlareuna(kuva) {
+  if (kuvanAlareunat.has(kuva)) return kuvanAlareunat.get(kuva);
+  let osuus = 0.85;
+  try {
+    const w = kuva.naturalWidth || kuva.width;
+    const h = kuva.naturalHeight || kuva.height;
+    const c = typeof OffscreenCanvas !== 'undefined' ? new OffscreenCanvas(w, h) : document.createElement('canvas');
+    c.width = w; c.height = h;
+    const g = c.getContext('2d');
+    g.drawImage(kuva, 0, 0);
+    const d = g.getImageData(0, 0, w, h).data;
+    let alin = -1;
+    for (let y = h - 1; y >= 0 && alin < 0; y -= 1) {
+      for (let x = 0; x < w; x += 1) {
+        if (d[(y * w + x) * 4 + 3] > 40) { alin = y; break; }
+      }
+    }
+    if (alin >= 0) osuus = (alin + 1) / h;
+  } catch {
+    // Kuvaa ei voi lukea (esim. eri alkuperä): oletusosuus riittää.
+  }
+  kuvanAlareunat.set(kuva, osuus);
+  return osuus;
+}
+function piirraLaivaVedessa(ctx, kuva, leveys, korkeus) {
+  const ala = kuvanAlareuna(kuva);
+  const vesiraja = -korkeus / 2 + korkeus * (ala - VESIRAJAN_UPOTUS);
+  ctx.save();
+  ctx.beginPath();
+  ctx.rect(-leveys / 2, -korkeus / 2, leveys, vesiraja + korkeus / 2);
+  ctx.clip();
+  ctx.globalAlpha = LAIVAN_PEITTO;
+  ctx.drawImage(kuva, -leveys / 2, -korkeus / 2, leveys, korkeus);
+  ctx.restore();
+  // Varjoviiva rungon alla: vesirajan pituinen, keskeltä tummin.
+  const runko = leveys * 0.62;
+  const varjo = ctx.createLinearGradient(-runko / 2, 0, runko / 2, 0);
+  varjo.addColorStop(0, 'rgba(52,42,34,0)');
+  varjo.addColorStop(0.2, 'rgba(52,42,34,0.6)');
+  varjo.addColorStop(0.8, 'rgba(52,42,34,0.6)');
+  varjo.addColorStop(1, 'rgba(52,42,34,0)');
+  ctx.save();
+  ctx.strokeStyle = varjo;
+  ctx.lineWidth = Math.max(0.8, korkeus / 90);
+  ctx.lineCap = 'round';
+  ctx.beginPath();
+  ctx.moveTo(-runko / 2, vesiraja + ctx.lineWidth * 0.6);
+  ctx.lineTo(runko / 2, vesiraja + ctx.lineWidth * 0.6);
+  ctx.stroke();
+  ctx.restore();
+  // Aaltopari rungon molemmin puolin, hieman vesirajan alapuolella.
+  const aalto = leveys * 0.34;
+  piirraAaltomerkki(ctx, -leveys * 0.34, vesiraja + korkeus * 0.012, aalto, 'rgba(52,42,34,0.7)');
+  piirraAaltomerkki(ctx, leveys * 0.34, vesiraja + korkeus * 0.028, aalto, 'rgba(52,42,34,0.7)');
+}
+
 /** Kevyt aaltomerkki meren nimen alla: kolme loivaa kaarta. */
 function piirraAaltomerkki(ctx, x, y, leveys, vari) {
   ctx.save();
@@ -4421,7 +4498,11 @@ export function piirraNimiotaso(canvas, asetukset) {
           ctx.save();
           ctx.translate(l.x + d - GX, l.y - GY);
           if (l.kulma) ctx.rotate(l.kulma * Math.PI / 180);
-          ctx.drawImage(kuva, -l.leveys / 2, -l.korkeus / 2, l.leveys, l.korkeus);
+          if (laivakuva(nimio)) {
+            piirraLaivaVedessa(ctx, kuva, l.leveys, l.korkeus);
+          } else {
+            ctx.drawImage(kuva, -l.leveys / 2, -l.korkeus / 2, l.leveys, l.korkeus);
+          }
           ctx.restore();
           piirretty += 1;
         }

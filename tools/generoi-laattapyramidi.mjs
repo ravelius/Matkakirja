@@ -306,7 +306,7 @@ if (!kohdekansio || kohdekansio.startsWith('--')) {
     + '[--tasoja 8|9] '
     + '[--kaariminuutit 1|3] [--korkeuspalat <kansio>] [--vain-palat [tiedosto]] '
     + '[--vain-lista] [--paikkaus <lähdeversio>] '
-    + '[--nostotaso --nostoversio <v> [--nostomaa <ISO>] [--ilman-hahmotelmia]] '
+    + '[--nostotaso --nostoversio <v> [--nostomaa <ISO>] [--ilman-hahmotelmia [--polta-hahmotelmat t,t]] [--nostotasot <json>]] '
     + '[--viivataso --viivaversio <v> [--eipiirit] [--eireitit] [--eirajat] [--eijoet]] '
     + '[--vesiviivoitus tihea|harva] [--syvyysportaat m,m,…] [--resepti-json <json>] [--joet-pohjaan] '
     + '[--rantataso --rantaversio <v>] [--ilman-rantaviivaa] '
@@ -1217,6 +1217,14 @@ for (const rivi of nostot.tilasto.estot) console.log(`    esto ${rivi}`);
  */
 const ILMAN_HAHMOTELMIA = process.argv.includes('--ilman-hahmotelmia');
 /*
+ * POIKKEUKSET (`--polta-hahmotelmat tunnus,tunnus`, omistaja 21.9.2026):
+ * yksittäinen hahmotelmanosto saa palaa laattaan, vaikka muut jäävät
+ * eläviksi — Étretat ykköstasolle (docs/raportit/poltto-koe-20260920.md,
+ * vedos). Luettelon tiivistetaulu saa sen kuten muutkin poltetut, joten
+ * peli vaientaa elävän merkin.
+ */
+const POLTETTAVAT_HAHMOTELMAT = new Set(String(valitsin('polta-hahmotelmat', '')).split(',').map((s) => s.trim()).filter(Boolean));
+/*
  * NOSTOT KOLMEEN TASOON (omistajan tilaus 20.9.2026 ilta, vedos):
  * `--nostotasot <json>` = { <tunnus>: 1|2|3, "@kuvat": { <laji>: <png/svg> } }.
  * Taso 1 = tärkeimmät: symboli ja nimiö NOSTO_TASO1_KERROIN-kertaisina ja
@@ -1231,7 +1239,8 @@ const NOSTO_TASO3_ALIN_Z = 7;
 const nostonTaso = (m) => Number(NOSTOTASOT?.[m.tunnus] ?? m.taso ?? 2) || 2;
 const poltettavatMerkit = nostot.merkit
   .filter((m) => m.poltettava && (!NOSTO_MAA || m.iso === NOSTO_MAA))
-  .filter((m) => !ILMAN_HAHMOTELMIA || !String(m.tunnus ?? '').startsWith('hahmotelma-'))
+  .filter((m) => !ILMAN_HAHMOTELMIA || !String(m.tunnus ?? '').startsWith('hahmotelma-')
+    || POLTETTAVAT_HAHMOTELMAT.has(String(m.tunnus ?? '')))
   .map((m) => {
     const taso = nostonTaso(m);
     if (taso === 1) {
@@ -2967,6 +2976,20 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
       // Kuvamerkki symbolin paalle: porras on kuvapikselia lautayksikkoa
       // kohti ja minisymbolin sade on 6,5 yksikkoa (fokusnosto-symbolit.js).
       const k = porras * 24;
+      // PAPERINVAALEA SADEKEHA KUVAMERKIN ALLE (omistaja 21.9.2026, vedos:
+      // Mont Blancin merkki hukkui tummaan reliefiin). Pehmea kiekko
+      // paperin savylla, reunaan haipyva, jotta mustepiirros erottuu
+      // vuoristosta mutta ei nayta tarralta tasaisella maalla.
+      const kehä = ctx.createRadialGradient(0, 0, k * 0.18, 0, 0, k * 0.62);
+      kehä.addColorStop(0, 'rgba(244,236,214,0.92)');
+      kehä.addColorStop(0.7, 'rgba(244,236,214,0.7)');
+      kehä.addColorStop(1, 'rgba(244,236,214,0)');
+      ctx.save();
+      ctx.fillStyle = kehä;
+      ctx.beginPath();
+      ctx.arc(0, 0, k * 0.62, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
       ctx.drawImage(kuva, -k / 2, -k / 2, k, k);
     }
   };
