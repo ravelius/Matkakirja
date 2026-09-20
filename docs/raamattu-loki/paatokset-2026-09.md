@@ -147,3 +147,7 @@ docs/raportit/nostotekstit-fra-20260920.md: 64 nostoa, mediaani 524 merkkia (Q1 
 ## V1983 TUOTANNOSSA 23.14 (20.9.2026 klo 23.16)
 
 Kohdemaan nimiot elavina (ei limityksia), himmea reittiverkko liftatessa (kerroskytkin), kehan LOD, tekstilahderivi pois kohdekortilta, merinimion tuplauksen esto. Laitetestaaja: kierros 20b; omistaja katsoo iPadilla sujuvuuden (kaaret, nimiot).
+
+## RANSKAN NOSTOTASOT (Sisaltokirjuri e161176c) (20.9.2026 klo 23.23)
+
+docs/raportit/nostotasot-fra-20260920.md, kentta nosto.taso (oletus 2). Ykkostaso 8: Mont-Saint-Michel, Versailles, Lascaux, Mont Blanc, Pont du Gard, Chambord, Carcassonne, Etretat (Dune du Pilat tasolle 2). Lista Karttasepalle (vedos) ja kentan nimi Pelikoodarille (elavat nimiot). Sisaltokirjuri jatkaa kartuschan vajaisiin maihin.
