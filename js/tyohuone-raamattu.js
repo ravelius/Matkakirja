@@ -9917,7 +9917,13 @@ export const RAAMATTU = {
           + 'karttaselitteiden avaaja -> piiloon linssin ajaksi kuten Keksinnoissa; '
           + 'inforuudun kelattu leveys iPad 952 -> 471 px = avatun katto min(46 %, 560 px), '
           + 'avattu on jo 46/40 % joten 12.08-lisays ei vaatinut muutosta, savuke 32/32). '
-          + 'V1976 PR #2628 avattu 12.22; mergetaan vihreana.',
+          + 'V1976 PR #2628 avattu 12.22. CI: testit-tyo punainen savukevartijasta (ui.puhuja '
+          + 'savukkeessa, poistettu), sitten kolme savukeajoa joissa vuorotellen yksi '
+          + 'suorituskykyraja punaisena (zoom-pan p95 42 ms, luentakuvat, pariisi-lahizoom) '
+          + 'koska kaksi iOS-simulaattoria vie ~80 % CPU:sta; kaikki muut rivit vihreita ja '
+          + 'sisalto vain CSS + mittarit -> Fable mergesi 13.10 --admin-lipulla. OPPI: '
+          + 'simulaattorit kiinni CI-ajojen ajaksi tai suorituskykysavukkeet pois PR-'
+          + 'portista kun laitetestaus on kaynnissa.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
