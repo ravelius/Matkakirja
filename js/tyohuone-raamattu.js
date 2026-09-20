@@ -9593,7 +9593,16 @@ export const RAAMATTU = {
           + 'MKD, MNE, SRB, XKX), ja hetki-kategorioilla sama nimi "Historian hetki" (GBR 4, '
           + 'DEU 3) -> Sonnet 2 kirjoittaa EU-maille >= 5 rivia ja erilliset hetki-nimet. '
           + 'Sonnet 2:n sessio osui kayttorajaan (nollautui 04.10); Aveiron aikaleimakuva '
-          + 'poistettu (8730febf), muiden 394 kuvan silmatarkistus kesken.',
+          + 'poistettu (8730febf), muiden 394 kuvan silmatarkistus kesken. NOSTOTASO '
+          + 'UUSITTU (Opus 2 04.30-04.33): 2026-09-20b-nostot, 234/234 shardia, 4 883 '
+          + 'laattaa, nostotasot-taulu 112 maata, 0 hahmotelmaa tiivistetauluissa. '
+          + 'Skriptiin kolme korjausta: --ilman-hahmotelmia oletus (poltto vaatii '
+          + '--hahmotelmat); vanhat valmis-merkinnat ohittivat shardit -> --uudestaan; '
+          + 'hahmotelmamaat ilman poltettavaa (BEL, LUX, MLT, SVK, SVN) eivat ole '
+          + 'kaatuminen. VELKA: nostoajon luettelovaihe kirjoitti pohja.rantaviiva true '
+          + '(luettelo koottu kasin: pohja 2026-09-20-pohja rantaviiva false, ranta, viivat, '
+          + 'nostot 2026-09-20b); yhdista-nostoluettelo esti pallovaiheen julkaisemattoman '
+          + 'pohjan takia. PALLOSARJA 2026-09-20-i alkoi 04.37.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
