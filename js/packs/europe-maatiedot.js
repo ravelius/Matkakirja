@@ -13,6 +13,11 @@
 // samaan tapaan kuin Afrikan tiedoissa. Menetelmä tarkistettiin
 // toistamalla Italian ja Marokon valmiit luvut: sijoitukset osuivat
 // ±1 tarkkuudella.
+//
+// BEL, LUX, MLT, SVK ja SVN (20.9.2026, maalehden kartuschan aukot):
+// samat lähteet ja sama menetelmä; väkiluku 2024 ja keskitulo
+// Maailmanpankin tuoreimman havainnon mukaan (NLD-rivin luvut toistuivat
+// tarkasti), pinta-ala 2022, V-Dem 2025. Sijojen nimittäjät kuten NLD:llä.
 export const EUROPE_MAATIEDOT = {
   ITA: {
     vakiluku: '59 milj.',
@@ -731,6 +736,118 @@ export const EUROPE_MAATIEDOT = {
       { teksti: 'Goddag', kieli: 'tanska', lippu: 'Flag of Denmark.svg', osuus: '100 %' },
       { teksti: 'Aluu', kieli: 'grönlanti (Grönlanti)', lippu: 'Flag of Greenland.svg', osuus: '1 %' },
       { teksti: 'Góðan dag', kieli: 'fääri (Färsaaret)', lippu: 'Flag of the Faroe Islands.svg', osuus: '1 %' },
+    ],
+  },
+
+  BEL: {
+    vakiluku: '11,9 milj.',
+    vakilukuSija: '81./195',
+    pintaAla: '30 700 km²',
+    pintaAlaSija: '136./195',
+    demokratia: {
+      arvo: '0,79',
+      sija: '10./172',
+      linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~BEL',
+      selitys: 'Belgia on liittovaltio, jossa on kolme kieliyhteisöä ja useita '
+        + 'parlamentteja. Vaalit ovat vapaat ja tuomioistuimet '
+        + 'riippumattomia. Hallitusten muodostaminen kestää kielirajan '
+        + 'yli ulottuvien puolueiden takia poikkeuksellisen kauan: '
+        + 'vuosien 2010–2011 hallitusneuvottelut vei yli 500 päivää.',
+    },
+    keskitulo: { arvo: '59 500 $/v', sija: '16./190' },
+    tervehdykset: [
+      { teksti: 'Goedendag', kieli: 'hollanti (flaami)', lippu: 'Flag of the Netherlands.svg', osuus: '60 %' },
+      { teksti: 'Bonjour', kieli: 'ranska', lippu: 'Flag of France.svg', osuus: '40 %' },
+      { teksti: 'Guten Tag', kieli: 'saksa (Itä-Belgia)', lippu: 'Flag of Germany.svg', osuus: '1 %' },
+    ],
+  },
+
+  LUX: {
+    vakiluku: '0,7 milj.',
+    vakilukuSija: '162./195',
+    pintaAla: '2 590 km²',
+    pintaAlaSija: '167./195',
+    demokratia: {
+      arvo: '0,78',
+      sija: '17./172',
+      linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~LUX',
+      selitys: 'Luxemburg on perustuslaillinen monarkia, jonka suurherttua on '
+        + 'vain seremoniallinen valtionpäämies. Parlamentti valitaan '
+        + 'suhteellisilla vaaleilla, ja äänestäminen on pakollista. '
+        + 'Vapaat vaalit ja riippumattomat tuomioistuimet sijoittavat '
+        + 'maan Euroopan kärkijoukkoon.',
+    },
+    keskitulo: { arvo: '95 720 $/v', sija: '4./190' },
+    tervehdykset: [
+      { teksti: 'Moien', kieli: 'luxemburg', lippu: 'Flag of Luxembourg.svg', osuus: '80 %' },
+      { teksti: 'Bonjour', kieli: 'ranska', lippu: 'Flag of France.svg', osuus: '98 %' },
+      { teksti: 'Guten Tag', kieli: 'saksa', lippu: 'Flag of Germany.svg', osuus: '80 %' },
+    ],
+  },
+
+  MLT: {
+    vakiluku: '0,6 milj.',
+    vakilukuSija: '165./195',
+    pintaAla: '320 km²',
+    pintaAlaSija: '185./195',
+    demokratia: {
+      arvo: '0,62',
+      sija: '43./172',
+      linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~MLT',
+      selitys: 'Malta on tasavalta, jonka parlamentissa on käytännössä kaksi '
+        + 'suurta puoluetta. Vaalit ovat vapaat ja äänestysvilkkaus '
+        + 'kuuluu Euroopan korkeimpiin, mutta V-Demin arviota painavat '
+        + 'oikeusvaltion ongelmat: toimittaja Daphne Caruana Galizian '
+        + 'murha vuonna 2017 johti mielenosoituksiin ja pääministerin '
+        + 'eroon.',
+    },
+    keskitulo: { arvo: '41 440 $/v', sija: '27./190' },
+    tervehdykset: [
+      { teksti: 'Bongu', kieli: 'malta', lippu: 'Flag of Malta.svg', osuus: '90 %' },
+      { teksti: 'Good morning', kieli: 'englanti', lippu: 'Flag of the United Kingdom.svg', osuus: '88 %' },
+      { teksti: 'Buongiorno', kieli: 'italia', lippu: 'Flag of Italy.svg', osuus: '66 %' },
+    ],
+  },
+
+  SVK: {
+    vakiluku: '5,4 milj.',
+    vakilukuSija: '121./195',
+    pintaAla: '49 000 km²',
+    pintaAlaSija: '128./195',
+    demokratia: {
+      arvo: '0,57',
+      sija: '50./172',
+      linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~SVK',
+      selitys: 'Slovakia itsenäistyi 1993 ja liittyi EU:hun 2004. Vaalit ovat '
+        + 'vapaat ja hallitukset vaihtuvat, mutta V-Demin arviota '
+        + 'painavat korruptio ja median painostus: toimittaja Ján '
+        + 'Kuciakin murha vuonna 2018 pakotti pääministerin eroamaan.',
+    },
+    keskitulo: { arvo: '26 410 $/v', sija: '44./190' },
+    tervehdykset: [
+      { teksti: 'Dobrý deň', kieli: 'slovakki', lippu: 'Flag of Slovakia.svg', osuus: '80 %' },
+      { teksti: 'Jó napot', kieli: 'unkari', lippu: 'Flag of Hungary.svg', osuus: '8 %' },
+    ],
+  },
+
+  SVN: {
+    vakiluku: '2,1 milj.',
+    vakilukuSija: '145./195',
+    pintaAla: '20 500 km²',
+    pintaAlaSija: '150./195',
+    demokratia: {
+      arvo: '0,59',
+      sija: '47./172',
+      linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~SVN',
+      selitys: 'Slovenia irtautui Jugoslaviasta kymmenen päivän sodan jälkeen '
+        + '1991 ja liittyi EU:hun 2004. Vaalit ovat vapaat, '
+        + 'tuomioistuimet toimivat ja hallitukset vaihtuvat '
+        + 'rauhanomaisesti; V-Demin luku on EU:n keskikastia.',
+    },
+    keskitulo: { arvo: '35 520 $/v', sija: '35./190' },
+    tervehdykset: [
+      { teksti: 'Dober dan', kieli: 'sloveeni', lippu: 'Flag of Slovenia.svg', osuus: '88 %' },
+      { teksti: 'Dobar dan', kieli: 'kroaatti', lippu: 'Flag of Croatia.svg', osuus: '2 %' },
     ],
   },
 };

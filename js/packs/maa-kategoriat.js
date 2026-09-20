@@ -152,6 +152,2330 @@ export function maanAiheOtsikko(maanNimi, aiheNimi) {
 }
 
 export const MAA_KATEGORIAT = {
+  SVN: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Slovenian menneisyys on kaivettu maasta ja kirjoitettu linnoihin: täällä '
+        + 'on louhittu elohopeaa maailmalle, kasvatettu valkoisia ratsuja hoveille ja '
+        + 'häädetty talvea lampaantaljoilla.',
+      nostot: [
+        {
+          otsikko: 'Saavin pohjalla kimalsi elohopea',
+          aika: '1490',
+          tiedosto: 'Izvozni stolp Jaška Frančiške, Idrija, Slovenia (6918862385).jpg',
+          teksti: 'Legendan mukaan saavinvalmistaja huomasi vuonna 1490 Idrijan lähteessä '
+            + 'kimaltavan nestemäisen metallin. Se oli elohopeaa, ja löytö teki pienestä '
+            + 'vuoristokylästä tärkeän kaivoskaupungin. Habsburgien aikana Idrijan '
+            + 'elohopea kuljetettiin muun muassa Espanjan valtakunnan hopeakaivoksille, '
+            + 'joissa sitä tarvittiin hopean irrottamiseen malmista. Kaivos ulottui '
+            + 'lopulta lähes 400 metrin syvyyteen. Kuvan ristikkotorni on Frančiškan '
+            + 'kuilun nostotorni, ja sen huipulla risteävät vasarat, kaivosmiesten vanha '
+            + 'tunnus. Vuonna 2012 Idrija liitettiin yhdessä espanjalaisen Almadénin '
+            + 'kanssa Unescon maailmanperintölistalle.',
+          lyhyt: 'Idrija on slovenialainen kaivoskaupunki, jonka elohopeakaivos kuuluu '
+            + 'Unescon maailmanperintöön.',
+          selite: 'Frančiškan kuilun nostotorni Idrijan kaivosalueella. Kaivos ja kaupunki '
+            + 'kuuluvat Unescon maailmanperintökohteisiin.',
+          lahde: 'Stephen Colebourne, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Linna jonka osti skotti',
+          aika: '1656',
+          tiedosto: 'Ptuj Castle above the Drava riverbank 2024.jpg',
+          teksti: 'Ptujin linna kohoaa kukkulalla Drava-joen yllä. Se rakennettiin 1100-luvun '
+            + 'puolivälissä suojaamaan unkarilaisilta, ja myöhemmin siitä tuli Zagrebin '
+            + 'jesuiittojen omaisuutta. Vuonna 1656 rahapulaan joutuneet jesuiitat myivät '
+            + 'linnan skotlantilaissyntyiselle kenraalimarsalkka Walter Leslielle. Tämä '
+            + 'rakennutti sen barokkiaikaan uusiksi maaseutuasunnoksi, sillä '
+            + 'turkkilaisuhan väistyttyä linnan ei tarvinnut enää olla linnake. Lesliet '
+            + 'omistivat sen vuoteen 1802, ja vuonna 1873 kreivitär Theresia von '
+            + 'Herberstein osti linnan itselleen. Herbersteinien suvulla se pysyi vuoteen '
+            + '1945, jolloin linna valtiollistettiin ja muutettiin alueen historian '
+            + 'museoksi.',
+          lyhyt: 'Ptujin linna on 1100-luvulta periytyvä linna Drava-joen rannalla '
+            + 'Koillis-Sloveniassa.',
+          selite: 'Ptujin linna ja vanha kaupunki Drava-joen pohjoisrannalla. Linnassa toimii '
+            + 'nykyään alueen historian museo.',
+          lahde: 'PJakopin, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Lehmus jokaisen varsan kunniaksi',
+          aika: '1580',
+          tiedosto: 'Slovenia Lipica (8876401592).jpg',
+          teksti: 'Vuonna 1580 Sisä-Itävallan arkkiherttua Kaarle perusti Karstin alueelle '
+            + 'Lipican ratsutilan. Espanjalaista hevosta pidettiin ihanteellisena, ja '
+            + 'Karstin maaperä ja ilmasto muistuttivat Espanjan oloja, joten paikka '
+            + 'valittiin. Ensimmäiset hevoset, 24 tammaa ja kuusi oria, ostettiin '
+            + 'Espanjasta vuonna 1581, ja seudun maanviljelijät häädettiin muualle. '
+            + 'Paikan nimi tulee sanasta lipa, joka tarkoittaa lehmusta. Tilalla '
+            + 'istutetaan yhä uusi lehmus jokaisen syntyvän varsan kunniaksi. '
+            + 'Lipizzan-hevoset syntyvät tummina ja muuttuvat valkoisiksi vasta vuosien '
+            + 'kuluessa.',
+          lyhyt: 'Lipica on Karstin kylä, jossa lipizzan-hevosrotu on saanut alkunsa.',
+          selite: 'Hevoset laiduntavat Lipican ratsutilan niityllä. Rotu on saanut nimensä '
+            + 'Lipicasta.',
+          lahde: 'KLMircea from Focsani, Romania, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Lipizzanhevonen',
+        },
+        {
+          otsikko: 'Lampaantaljat häätävät talven',
+          aika: '1960',
+          tiedosto: 'Korant Ptuj 01.jpg',
+          teksti: 'Helmikuussa Ptujin kaduilla marssivat kurentit, lampaantaljoihin '
+            + 'pukeutuneet hahmot, joilla on värikäs naamio. Heidän kädessään on puinen '
+            + 'nuija, jonka päässä on siilinnahkoja, ja koko melu on tarkoitettu ajamaan '
+            + 'talvi pois. Ensimmäisen nykymuotoisen Kurentovanje-karnevaalin järjestivät '
+            + '27. helmikuuta 1960 Drago Hasl ja hänen ystävänsä. Aiemmin kurentiksi '
+            + 'pääsivät vain naimattomat miehet, mutta nykyään mukana on myös naisia ja '
+            + 'lapsia. Karnevaali on Slovenian suosituin, ja vuonna 2017 kurenttien '
+            + 'kiertäminen talosta taloon merkittiin Unescon aineettoman '
+            + 'kulttuuriperinnön listalle.',
+          lyhyt: 'Kurent on Ptujin karnevaalin lampaantaljaan pukeutunut talvenajaja.',
+          selite: 'Perinteinen kurent-naamio Ptujin linnan museossa. Kurentit ovat Ptujin '
+            + 'kevätkarnevaalin tunnetuimmat hahmot.',
+          lahde: 'Clemens Stockner, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä puu istutetaan Lipicassa jokaisen syntyvän varsan kunniaksi?',
+        vaihtoehdot: [
+          'Tammi',
+          'Lehmus',
+          'Mänty',
+          'Pyökki',
+        ],
+        oikea: 1,
+        fakta: 'Lipican nimi tulee sanasta lipa eli lehmus, ja ratsutilalla istutetaan '
+          + 'uusi lehmus jokaisen syntyvän varsan kunniaksi.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Slovenian pöydässä kohtaavat pähkinäinen juhlaleivonnainen, Adrianmeren '
+        + 'suola, hunaja ja yli nelisataavuotiaan köynnöksen rypäleet.',
+      nostot: [
+        {
+          otsikko: 'Pähkinärulla joka kiertää',
+          aika: '1575',
+          tiedosto: 'Potica (9501040588).jpg',
+          teksti: 'Potica on juhlaleivonnainen, jossa ohueksi kaulittu hiivataikina sivellään '
+            + 'täytteellä, kääritään rullaksi ja kierretään usein renkaaksi. Yleisin '
+            + 'täyte on pähkinä, mutta käytössä ovat myös rakuuna, rusina, tuorejuusto ja '
+            + 'unikonsiemen. Vanhimmat tunnetut maininnat ovat reformaattori Primož '
+            + 'Trubarin teksteistä vuosilta 1575 ja 1577, jolloin leivonnaista kutsuttiin '
+            + 'nimellä povitica, käärittävä. Johann Weikhard von Valvasor kuvasi '
+            + 'hunajaisen pähkinärullan jo vuonna 1689. Perinteisesti potica paistetaan '
+            + 'potičnik-vuoassa, jonka keskellä on piippu, ja sitä syödään pääsiäisenä ja '
+            + 'jouluna.',
+          lyhyt: 'Potica on slovenialainen juhlaleivonnainen, jossa täytetty hiivataikina '
+            + 'kääritään rullaksi.',
+          selite: 'Viipale pähkinäpoticaa, josta näkyy taikinan ja täytteen kierre. '
+            + 'Leivonnainen kuuluu Slovenian pääsiäisen ja joulun perinteisiin.',
+          lahde: 'Michael R Perry, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Adrianmeren suola 1200-luvulta',
+          aika: '1200-luvulta',
+          tiedosto: 'Secoveljske soline - Lera3.jpg',
+          teksti: 'Sečovljen suola-altaat Piranin lähellä ovat olleet toiminnassa jo '
+            + '1200-luvulta. Ne ovat Välimeren pohjoisimpia suolantuotantoalueita ja '
+            + 'harvoja paikkoja, joissa suolaa tehdään yhä perinteisin menetelmin: '
+            + 'merivesi haihtuu matalissa altaissa, ja jäljelle jää suola. Tuote myydään '
+            + 'nimellä Piranin suola, ja sillä on EU:n suojattu alkuperänimitys. Alue on '
+            + 'myös 650 hehtaarin kosteikko, jolla on nähty yli 280 lintulajia, ja siellä '
+            + 'toimiva suolanvalmistuksen museo sai Europa Nostra -palkinnon vuonna 2003. '
+            + 'Altaiden reunoilla kasvaa suolaa vaativia kasveja.',
+          lyhyt: 'Sečovljen suola-altaat ovat Slovenian suurin suolantuotantoalue '
+            + 'Adrianmeren rannalla.',
+          selite: 'Suolan haihdutusaltaita Leran toiminnassa olevalla alueella Sečovljen '
+            + 'suolatarhoissa. Alue on kansainvälisesti tärkeä kosteikko.',
+          lahde: 'Yerpo, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Mehiläisten opettaja maalasi pesät',
+          aika: '1770',
+          tiedosto: 'JansevCebelnjak1.jpg',
+          teksti: 'Anton Janša syntyi noin vuonna 1734 Breznican kylässä ja lähti '
+            + 'lukutaidottomana opiskelemaan maalariksi Wieniin. Isän yli sadan pesän '
+            + 'parissa kasvanut mies valitsi lopulta mehiläiset, ja vuonna 1770 hänestä '
+            + 'tuli kaikkien Itävallan maiden ensimmäinen keisarillinen mehiläishoidon '
+            + 'opettaja. Hän muotoili pesät niin, että ne voi pinota kuin palikat, '
+            + 'koristi niiden etupuolet maalauksilla ja neuvoi viemään pesät kukkivien '
+            + 'niittyjen luo. Seudun oma krainilainen mehiläinen on tunnettu '
+            + 'rauhallisuudestaan ja hunajavarastoistaan. Maria Teresia määräsi hänen '
+            + 'kuolemansa jälkeen kaikki opettajat käyttämään hänen kirjojaan.',
+          lyhyt: 'Anton Janša oli slovenialainen mehiläishoidon uranuurtaja 1700-luvulla.',
+          selite: 'Anton Janšan pesäkatos Breznicassa. Pesien etulaudat koristettiin '
+            + 'perinteisesti maalauksilla.',
+          lahde: 'Sl-Ziga, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Yli 400-vuotias köynnös',
+          aika: '1657',
+          tiedosto: 'Stara trta, Maribor 3.jpg',
+          teksti: 'Mariborin Lent-kaupunginosassa Drava-joen rannalla talon seinää peittää '
+            + 'köynnös, jonka Guinnessin ennätyskirja tunnustaa maailman vanhimmaksi yhä '
+            + 'hedelmää tuottavaksi viiniköynnökseksi. Se on Žametovka-lajiketta, ja '
+            + 'Grazin museon maalauksissa se näkyy talon seinällä jo vuonna 1657. '
+            + 'Pariisilainen laboratorio vahvisti vuonna 1972 sen olevan yli 400-vuotias. '
+            + 'Köynnös on selvinnyt turkkilaissodista, Napoleonin vallasta, '
+            + 'filloksera-tuhosta ja kahdesta maailmansodasta. Joka syksy siitä saadaan '
+            + 'noin 25 litraa viiniä, joka pullotetaan pieniin 250 millilitran pulloihin '
+            + 'ja annetaan kaupungin lahjoiksi vieraille.',
+          lyhyt: 'Vanha köynnös on Mariborin talon seinällä kasvava Žametovka-viiniköynnös.',
+          selite: 'Stara trta eli Vanha köynnös Mariborin Lentin kaupunginosassa. Sitä '
+            + 'pidetään maailman vanhimpana yhä hedelmää tuottavana viiniköynnöksenä.',
+          lahde: 'Marco Almbauer, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuinka paljon viiniä Mariborin vanha köynnös antaa yhtenä syksynä?',
+        vaihtoehdot: [
+          'Noin 2 litraa',
+          'Noin 10 litraa',
+          'Noin 100 litraa',
+          'Noin 25 litraa',
+        ],
+        oikea: 3,
+        fakta: 'Mariborin yli 400-vuotias Žametovka-köynnös tuottaa vuodessa noin 25 '
+          + 'litraa viiniä, jota ei myydä yleisölle.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Pienessä maassa mahtuvat samaan matkaan kolmipäinen vuori, smaragdinvihreä '
+        + 'joki ja saarelle rakennettu pyhiinvaelluskirkko.',
+      nostot: [
+        {
+          otsikko: 'Vuori jonka nimi on kolmipäinen',
+          aika: '1778',
+          tiedosto: 'Triglav north face.jpg',
+          teksti: 'Triglav on Slovenian korkein vuori, noin 2 864 metriä, ja sen nimi '
+            + 'tarkoittaa kolmipäistä, sillä Ylä-Kraiinin suunnasta se näyttää '
+            + 'kolmihuippuiselta. Ensimmäinen tunnettu nousu tehtiin vuonna 1778 '
+            + 'teollisuusmies Sigmund Zoisin aloitteesta. Huipulla seisoo pieni '
+            + 'metallitorni: pappi Jakob Aljaž osti huipun yhdellä floriinilla '
+            + 'huhtikuussa 1895, ja viisi miestä kokosi tornin viidessä tunnissa '
+            + 'elokuussa. Torni ja vuori ovat kansallissymboleja. Sanotaan, että jokaisen '
+            + 'aidon slovenialaisen pitäisi nousta huipulle kerran elämässään.',
+          lyhyt: 'Triglav on Slovenian ja Julian Alppien korkein vuori sekä '
+            + 'kansallissymboli.',
+          selite: 'Triglavin pohjoisseinä Vrata-laaksosta katsottuna. Vuori on Triglavin '
+            + 'kansallispuiston keskus.',
+          lahde: 'MKrolik-WMF, Wikimedia Commons (CC0)',
+          wiki: 'Triglav',
+        },
+        {
+          otsikko: 'Smaragdikaunotar',
+          aika: 'nykyään',
+          tiedosto: 'Soča River Panorama.jpg',
+          teksti: 'Soča saa alkunsa Trenta-laaksossa Julian Alpeilla 876 metrin korkeudessa '
+            + 'ja virtaa 138 kilometrin matkan Adrianmereen. Sen vesi on niin '
+            + 'smaragdinvihreää, että jokea markkinoidaan nimellä Smaragdikaunotar, ja '
+            + 'väri säilyy poikkeuksellisen pitkälle. Rannoilla syntyi myös runoutta: '
+            + 'Simon Gregorčič kirjoitti joesta runon Soči, jota pidetään slovenialaisen '
+            + 'kirjallisuuden mestariteoksena. Jokivarressa elää harvinaista '
+            + 'marmoritaimenta, ja alueella kuvattiin osa vuoden 2008 Narnia-elokuvasta '
+            + 'Prinssi Kaspian. Italiassa joki tunnetaan nimellä Isonzo.',
+          lyhyt: 'Soča on Julian Alppien joki, joka virtaa Sloveniasta Italiaan ja '
+            + 'Adrianmereen.',
+          selite: 'Soča Bovecin lähistöllä Länsi-Sloveniassa. Joki on 138 kilometriä pitkä ja '
+            + 'päätyy Adrianmereen.',
+          lahde: 'MarcusObal, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Soča',
+        },
+        {
+          otsikko: 'Saari jonne morsian kannetaan',
+          aika: '1655',
+          tiedosto: 'Bled Island and Bled Castle, Slovenia, 20240504 0906 8327.jpg',
+          teksti: 'Bledjärven pienellä saarella seisoo Neitsyt Marian taivaaseenoton '
+            + 'pyhiinvaelluskirkko, jonka torni on 52 metriä korkea. Kirkolle johtaa '
+            + 'barokkinen porrasnousu vuodelta 1655, jossa on 99 kiviporrasta, ja '
+            + 'perinteen mukaan onni seuraa sulhasta, joka kantaa morsiamensa ylös asti. '
+            + 'Sen jälkeen soitetaan kelloa ja tehdään toive. Saarelle ei mennä sillalla '
+            + 'vaan pletna-veneellä, jota soutaja ohjaa seisaaltaan kahdella airolla. '
+            + 'Vuonna 1740 Maria Teresia myönsi lauttaoikeuden 22 paikalliselle suvulle, '
+            + 'ja monet nykysoutajat polveutuvat suoraan heistä. Järveä lämmittää '
+            + '23-asteinen lämpölähde.',
+          lyhyt: 'Bledjärvi on Julian Alppien juurella oleva järvi, jonka saarella on '
+            + 'pyhiinvaelluskirkko.',
+          selite: 'Bledin saari ja pyhiinvaelluskirkko, taustalla Bledin linna kalliolla. '
+            + 'Järvi on noin 2,1 kilometriä pitkä ja enimmillään 29,5 metriä syvä.',
+          lahde: 'Jakub Hałun, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Bledjärvi',
+        },
+        {
+          otsikko: 'Rotko avattiin kävelijöille',
+          aika: '1893',
+          tiedosto: 'The-vintgar-gorge-2539912.jpg',
+          teksti: 'Vintgarin rotko Bledin luoteispuolella on 1,6 kilometrin mittainen kuilu, '
+            + 'jonka Radovna-joki on kaivertanut kallioon. Seinämät nousevat 50–100 '
+            + 'metrin korkeuteen, ja jokeen on syntynyt vesialtaita ja koskia. Rotko oli '
+            + 'pitkään melkein saavuttamaton, kunnes Gorjen pormestari Jakob Žumer ja '
+            + 'valokuvaaja Benedikt Lergetporer tutkivat sen vuonna 1891. Kaksi vuotta '
+            + 'myöhemmin siihen rakennettiin puisia kävelysiltoja, ja rotko avattiin '
+            + 'yleisölle 26. elokuuta 1893. Rotkon päässä putoaa 13-metrinen '
+            + 'Šum-vesiputous, Slovenian suurin jokivesiputous. Sana vintgar on sittemmin '
+            + 'alkanut tarkoittaa muitakin suojeltuja rotkoja.',
+          lyhyt: 'Vintgarin rotko on Radovna-joen kaivertama kuilu Bledin lähellä.',
+          selite: 'Vesialtaita Radovna-joessa Vintgarin rotkossa. Rotko sijaitsee Triglavin '
+            + 'kansallispuiston reunalla.',
+          lahde: 'ivabalk, Wikimedia Commons (CC0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä Triglav-vuoren nimi tarkoittaa?',
+        vaihtoehdot: [
+          'Kolmipäinen',
+          'Valkoinen kruunu',
+          'Jumalten istuin',
+          'Jäinen huippu',
+        ],
+        oikea: 0,
+        fakta: 'Triglav tarkoittaa kolmipäistä, koska vuori näyttää Ylä-Kraiinista katsoen '
+          + 'kolmihuippuiselta.',
+      },
+    },
+    {
+      id: 'tiede',
+      nimi: 'Tiede',
+      johdanto: 'Slovenian kalkkikivimaa on niin täynnä luolia, katoavia jokia ja kuivuvia '
+        + 'järviä, että koko karstitutkimuksen sanasto tulee täältä.',
+      nostot: [
+        {
+          otsikko: 'Joki joka katoaa maan alle',
+          aika: '1884',
+          tiedosto: 'SkocjanskeJame 2013jpg.jpg',
+          teksti: 'Škocjanin luolissa Reka-joki syöksyy Suureen sortumakuoppaan ja katoaa '
+            + 'kallion alle. Maan alla se virtaa 34 kilometriä ja nousee taas pintaan '
+            + 'Monfalconen lähellä, jossa siitä tulee kolmannes Timavo-joen vedestä. '
+            + 'Luolaston tutkittu pituus on 6 200 metriä, ja 2,2 miljoonan kuutiometrin '
+            + 'Martelin sali on Euroopan suurin tunnettu maanalainen sali. '
+            + 'Järjestelmällinen tutkimus alkoi vuonna 1884, ja Unesco merkitsi luolat '
+            + 'maailmanperintökohteeksi vuonna 1986. Alueelta on löytynyt merkkejä '
+            + 'ihmisasutuksesta yli kymmenentuhannen vuoden ajalta.',
+          lyhyt: 'Škocjanin luolat ovat Karstin alueen luolajärjestelmä, jonka läpi virtaa '
+            + 'maanalainen Reka-joki.',
+          selite: 'Turistipolku Škocjanin luolissa, joissa on runsaasti '
+            + 'tippukivimuodostelmia. Luolat ovat Unescon maailmanperintökohde.',
+          lahde: 'Lander, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Škocjanin luolat',
+        },
+        {
+          otsikko: 'Sähkövalo luolassa ennen pääkaupunkia',
+          aika: '1884',
+          tiedosto: 'Postojna Cave. 2012-07-26 12-45-36.jpg',
+          teksti: 'Postojnan luola on 24,3 kilometrin mittainen karstiluola, jonka Pivka-joki '
+            + 'on kaivertanut. Vuonna 1818 luolaa valmisteltiin keisari Frans I:n '
+            + 'vierailua varten, ja lamppujen sytyttäjä Luka Čeč löysi sattumalta uuden '
+            + 'osan luolaa. Hänestä tuli luolan ensimmäinen virallinen opas. Vuonna 1872 '
+            + 'luolaan laskettiin raiteet, ja aluksi oppaat työnsivät vieraita vaunuissa. '
+            + 'Sähkövalo saatiin luolaan 1884, ennen kuin Ljubljanassa oli sellaista. '
+            + 'Luolassa on myös maailman ensimmäinen ja ainoa maanalainen postitoimisto, '
+            + 'joka avattiin vuonna 1899.',
+          lyhyt: 'Postojnan luola on Slovenian toiseksi pisin luolajärjestelmä ja yksi maan '
+            + 'tärkeimpiä nähtävyyksiä.',
+          selite: 'Tippukivimuodostelmia Postojnan luolassa. Luola on karstiluola, jonka '
+            + 'Pivka-joki on kaivertanut.',
+          lahde: 'Shesmax, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Postojnanluola',
+        },
+        {
+          otsikko: 'Järvi joka katoaa kesäksi',
+          aika: '1689',
+          tiedosto: 'Dolenje Jezero (Cerknica).jpg',
+          teksti: 'Kun Cerknican järvi on täynnä, se on Slovenian suurin järvi, mutta kesällä '
+            + 'sen vesi valuu maan alle, ja pohjaan kasvaa vehreä kasvillisuus. Syksyn '
+            + 'sateiden jälkeen vesi nousee takaisin luolista niin nopeasti, että järvi '
+            + 'voi tulvia ympäristöönsä. Joskus se on ollut kuivana yli vuoden, kuten '
+            + 'vuosina 1834–35, ja kalat katoavat ja palaavat veden mukana. Vuonna 1689 '
+            + 'Johann Weikhard von Valvasor kuvasi järveä ja toi karst-sanan '
+            + 'eurooppalaisten tutkijoiden käyttöön kuvaamaan jokien maanalaista '
+            + 'virtausta. Järvi on tärkeä lintualue, ja sen pinta-ala vaihtelee 28 ja 38 '
+            + 'neliökilometrin välillä.',
+          lyhyt: 'Cerknican järvi on ajoittainen karstijärvi, joka katoaa maan alle ja '
+            + 'palaa.',
+          selite: 'Cerknican järvi ja Dolenje Jezeron kylä ilmasta nähtynä keväällä 2025. '
+            + 'Järven vesi nousee ja laskee vuodenaikojen mukaan.',
+          lahde: 'Petar Milošević, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Luolalohikäärmeen poikanen',
+          aika: '1689',
+          tiedosto: 'Proteus anguinus anguinus 48298877.jpg',
+          teksti: 'Olmi eli luolasalamanteri on sokea, valkoinen ja koko elämänsä pimeässä '
+            + 'uiva eläin. Ensimmäisen kerran sen mainitsi kirjassaan Johann Weikhard von '
+            + 'Valvasor vuonna 1689. Sateiden jälkeen olmeja huuhtoutui maan alta '
+            + 'pintaan, ja paikalliset uskoivat niiden olevan luolalohikäärmeen poikasia. '
+            + 'Olmin silmät ovat surkastuneet, mutta haju ja kuulo toimivat '
+            + 'erinomaisesti. Se voi elää jopa kymmenen vuotta ilman ruokaa, ja sen '
+            + 'enimmäiseliniäksi on arvioitu yli sata vuotta. Sloveniassa sitä kutsutaan '
+            + 'ihmiskalaksi, koska sen iho on ihmisen ihon värinen. Postojnan luolassa '
+            + 'olmeja voi nähdä erityisessä akvaariossa.',
+          lyhyt: 'Olmi on sokea luolasalamanteri, joka elää Dinaaristen Alppien '
+            + 'karstiluolien vesissä.',
+          selite: 'Olmi eli Proteus anguinus luolan vedessä. Laji on Slovenian '
+            + 'luonnonperinnön symboli.',
+          lahde: 'Julien Renoult, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Olmi',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuka toi sanan karst eurooppalaisten tutkijoiden käyttöön vuonna 1689?',
+        vaihtoehdot: [
+          'Belsazar Hacquet',
+          'Luka Čeč',
+          'Johann Valvasor',
+          'Jakob Aljaž',
+        ],
+        oikea: 2,
+        fakta: 'Johann Weikhard von Valvasor esitteli sanan karst eurooppalaisille '
+          + 'tutkijoille vuonna 1689 kuvatessaan Cerknican järven maanalaista '
+          + 'vesivirtausta.',
+      },
+    },
+    {
+      id: 'rakennukset',
+      nimi: 'Rakennukset',
+      johdanto: 'Ljubljanan sillat ja kirjasto kertovat, miten pieni pääkaupunki sai '
+        + 'ilmeensä: osa on Wienin secession-ajan betonia, osa arkkitehti Jože '
+        + 'Plečnikin käsialaa.',
+      nostot: [
+        {
+          otsikko: 'Kaksi siltaa vanhan viereen',
+          aika: '1932',
+          tiedosto: 'The Triple Bridge, Ljubljana (49402985288).jpg',
+          teksti: 'Ljubljanica-joen ylittävä Kolmoissilta on kaupungin vanhin siltapaikka, '
+            + 'sillä puusilta mainitaan täällä jo vuonna 1280. Nykyinen kivisilta '
+            + 'valmistui 1842 ja sai nimen Franzin silta arkkiherttua Franz Karlin '
+            + 'mukaan. Kun liikenne ahtautui, arkkitehti Jože Plečnik suunnitteli vuonna '
+            + '1929 sen viereen kaksi hieman vinoon asetettua jalankulkusiltaa, ja '
+            + 'kolmikko avattiin liikenteelle huhtikuussa 1932. Kaiteessa on 642 '
+            + 'kaidepylvästä. Vuodesta 2007 kaikki kolme siltaa ovat olleet vain '
+            + 'jalankulkijoille, ja vuonna 2021 ne liitettiin Unescon maailmanperintöön '
+            + 'osana Plečnikin perintöä.',
+          lyhyt: 'Kolmoissilta on Ljubljanan vanhimman siltapaikan kolmen sillan ryhmä '
+            + 'Ljubljanica-joen yllä.',
+          selite: 'Kolmoissilta ja Ljubljanica-joki, taustalla fransiskaanien Ilmestyskirkko. '
+            + 'Silta yhdistää keskiaikaisen vanhankaupungin Prešerenin aukioon.',
+          lahde: 'David Jones from Isle of Wight, United Kingdom, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Tromostovje',
+        },
+        {
+          otsikko: 'Lohikäärmeet keisarin kunniaksi',
+          aika: '1901',
+          tiedosto: 'Dragons Bridge, Ljubljana 2.jpg',
+          teksti: 'Ljubljanan Lohikäärmesilta avattiin liikenteelle 4. lokakuuta 1901, ja '
+            + 'alun perin sen nimi oli Keisari Frans Joosefin juhlasilta. Sen oli määrä '
+            + 'juhlistaa keisarin nelikymmenvuotista hallitusta. Silta korvasi vuonna '
+            + '1819 rakennetun tammisillan, jonka maanjäristys vaurioitti vuonna 1895. Se '
+            + 'oli Ljubljanan ensimmäinen betonisilta ja Melan-menetelmällä tehty, ja '
+            + 'avattaessa sen kaari oli Euroopan kolmanneksi suurin. Lohikäärmepatsaat '
+            + 'suunnitteli arkkitehti Giorgio Zaninović ja ne valmistettiin Wienissä. '
+            + 'Nykyisen nimensä silta sai heinäkuussa 1919, ja sitä pidetään usein Wienin '
+            + 'secession kauneimpana siltana.',
+          lyhyt: 'Lohikäärmesilta on Ljubljanan secession-tyylinen betonisilta, jota '
+            + 'koristavat lohikäärmepatsaat.',
+          selite: 'Lohikäärmesilta Ljubljanica-joen yllä, vasemmalla lohikäärmepatsas. Silta '
+            + 'on suojeltu tekniikan muistomerkki.',
+          lahde: 'Thomas Ledl, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Pegasos oven kahvana',
+          aika: '1936',
+          tiedosto: 'Jože Plečnik - National and University Library (37211035596).jpg',
+          teksti: 'Slovenian kansallis- ja yliopistokirjaston suunnitteli Jože Plečnik '
+            + 'vuosina 1930–31, ja se rakennettiin vuosina 1936–1941. Hanke kohtasi '
+            + 'aluksi vastustusta Belgradin viranomaisten taholta, mutta opiskelijoiden '
+            + 'sinnikkäät mielenosoitukset auttoivat sen eteenpäin. Julkisivussa tiili ja '
+            + 'kivi vuorottelevat, ja osa kivistä on paikalta löytyneitä arkeologisia '
+            + 'jäännöksiä. Pääoven kahvat päättyvät pieneen Pegasoksen päähän. Pääportaan '
+            + '32 pylvästä on tehty tummasta Podpečin marmorista, ja rakennuksen ajatus '
+            + 'on kulku tietämättömyyden hämärästä tiedon valoon. Kirjasto sai paikkansa '
+            + 'Unescon listalla vuonna 2021.',
+          lyhyt: 'Slovenian kansallis- ja yliopistokirjasto on Plečnikin suunnittelema '
+            + 'kirjastorakennus Ljubljanan keskustassa.',
+          selite: 'Hevosenpäinen ovenkahva Slovenian kansallis- ja yliopistokirjaston '
+            + 'pääovessa Ljubljanassa. Rakennuksen suunnitteli Jože Plečnik.',
+          lahde: 'Andrew Moore from Johannesburg, South Africa, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Slovenian kansallis- ja yliopistokirjasto',
+        },
+        {
+          otsikko: 'Satama joka muuttui toriksi',
+          aika: '1894',
+          tiedosto: 'Piran Tartini square from cathedral.jpg',
+          teksti: 'Piranin Tartinin aukio oli ennen kaupungin sisäsatama, jossa pienet '
+            + 'kalastusveneet lepäsivät muurien ulkopuolella. Satama ympäröitiin '
+            + 'keskiajalla tärkeillä rakennuksilla, mutta viemärin takia viranomaiset '
+            + 'päättivät täyttää sen, ja tori rakennettiin vuonna 1894. Aukio sai nimensä '
+            + 'viulisti ja säveltäjä Giuseppe Tartinin mukaan, jonka pronssinen patsas '
+            + 'paljastettiin 1896 kuvanveistäjä Antonio Dal Zòtton tekemänä. Ainoa '
+            + 'alkuperäisen ulkoasunsa säilyttänyt rakennus on 1400-luvun goottilainen '
+            + 'Venetsialainen talo. Myöhemmin torin lattiaksi tehtiin arkkitehti Boris '
+            + 'Podrecan suunnittelema valkoisesta kivestä muodostettu ellipsi.',
+          lyhyt: 'Tartinin aukio on Piranin suurin tori, joka rakennettiin entisen '
+            + 'sisäsataman paikalle.',
+          selite: 'Tartinin aukio Piranissa ylhäältä nähtynä, keskellä Tartinin patsas. Aukio '
+            + 'on Piranin suurin ja tärkein tori.',
+          lahde: 'Isiwal, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä hahmo koristaa Ljubljanan kansalliskirjaston pääoven kahvoja?',
+        vaihtoehdot: [
+          'Lohikäärme',
+          'Pegasos',
+          'Feeniks',
+          'Kentauri',
+        ],
+        oikea: 1,
+        fakta: 'Ljubljanan kansallis- ja yliopistokirjaston pääoven kahvat päättyvät '
+          + 'pieneen Pegasoksen päähän.',
+      },
+    },
+  ],
+  LUX: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Luxemburgin kalliosta kiisteltiin vuosisatoja, mutta lopulta siitä tuli '
+        + 'rauhan ja avointen rajojen paikka. Neljä kohdetta kertoo, miten linnoitus '
+        + 'purettiin, raja avattiin ja masuunit sammuivat.',
+      nostot: [
+        {
+          otsikko: 'Kallion sisään kaivettu linnoitus',
+          aika: '1644–1744',
+          tiedosto: 'Luxembourg Casemates (5).jpg',
+          teksti: 'Pääkäytävä on 110 metriä pitkä ja jopa seitsemän metriä leveä, ja sen '
+            + 'kylkiin louhittiin 25 tykkiasemaa. Espanjalaiset aloittivat tunnelien '
+            + 'kaivamisen Bock-kallioon 1644, ja itävaltalainen kenraali Neipperg '
+            + 'laajensi käytävät 1744. Kasemateissa majoittui tarvittaessa 1 200 '
+            + 'sotilasta, ja vesi tuli 47 metriä syvästä kaivosta. Kalliolle alkoi nousta '
+            + 'linna 963, kun kreivi Siegfried sai alueen vaihtokaupalla. Siitä kasvoi '
+            + 'Luxemburgin kaupunki.',
+          lyhyt: 'Luxemburgin kaupungin Bock-kallioon louhittu tunneliverkosto, vanhan '
+            + 'linnoituksen maanalainen osa.',
+          selite: 'Kasemattien kalliokäytävä Bock-kalliolla. Linnoituksen jäänteet kuuluvat '
+            + 'Luxemburgin kaupungin UNESCO-maailmanperintökohteeseen.',
+          lahde: 'LoKiLeCh, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Sopimus, joka purki linnoituksen',
+          aika: '1867',
+          tiedosto: 'Treaty of London 1867 Art VII and signatures.jpg',
+          teksti: 'Lontoossa 11. toukokuuta 1867 suurvaltojen edustajat panivat nimensä ja '
+            + 'vahasinettinsä paperille, joka lopetti Luxemburgin kriisin. Ranskan '
+            + 'keisari Napoleon III oli yrittänyt ostaa maan Hollannin kuninkaalta, eikä '
+            + 'Preussi sietänyt ajatusta. Sopimus vahvisti Luxemburgin puolueettomuuden, '
+            + 'ja Preussin varuskunta lähti. Kaupungin linnoitukset piti purkaa eikä '
+            + 'koskaan rakentaa uudelleen. Työ kesti 16 vuotta ja maksoi 1,5 miljoonaa '
+            + 'kultafrangia, ja pois meni yli 24 kilometriä maanalaisia käytäviä.',
+          lyhyt: 'Vuoden 1867 Lontoon sopimus vahvisti Luxemburgin puolueettomuuden ja '
+            + 'määräsi kaupungin linnoitukset purettaviksi.',
+          selite: 'Sopimuksen loppuasiakirjan VII artikla sekä allekirjoitukset ja '
+            + 'vahasinetit.',
+          lahde: 'Archives nationales du Luxembourg, Wikimedia Commons (public domain)',
+          wiki: 'Lontoon sopimus (1867)',
+        },
+        {
+          otsikko: 'Rajaton Eurooppa alkoi Moselilta',
+          aika: '1985',
+          tiedosto: 'SCHENGEN, Luxembourg.jpg',
+          teksti: 'Kesäkuun 14. päivänä 1985 jokilaiva Princesse Marie-Astrid oli ankkurissa '
+            + 'Moselilla Schengenin viinikylän kohdalla, missä Luxemburgin, Ranskan ja '
+            + 'Saksan rajat kohtaavat. Laivalla Belgian, Ranskan, Luxemburgin, '
+            + 'Alankomaiden ja Länsi-Saksan edustajat allekirjoittivat sopimuksen '
+            + 'rajatarkastusten asteittaisesta poistamisesta. Laiva myytiin 1992 Saksaan, '
+            + 'mutta se palasi: kesästä 2025 se on museolaivana Schengenin rannassa. '
+            + 'Nykyisin Schengen-alueeseen kuuluu 29 Euroopan maata.',
+          lyhyt: 'Schengen on Moselin rannalla sijaitseva luxemburgilainen viinikylä, jossa '
+            + 'allekirjoitettiin vuoden 1985 sopimus rajatarkastusten poistamisesta.',
+          selite: 'Schengenin kylän ranta Moselin varrella ja Markusbierg-viinirinne '
+            + 'taustalla.',
+          lahde: 'Denise Hastert, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Schengenin sopimus',
+        },
+        {
+          otsikko: 'Masuunit, joista tuli kampus',
+          aika: '1965–1997',
+          tiedosto: 'Belval Blast furnaces 2011-08.JPG',
+          teksti: 'Belvalin masuunit A ja B sytytettiin 1965 ja 1970, ja B:n '
+            + 'vuorokausikapasiteetti oli 3 000 tonnia. Tehdas kuului ARBEDille, joka '
+            + 'syntyi 1911 kolmen terästehtaan yhdistyessä. Luxemburgin teräksentuotanto '
+            + 'kasvoi 145 000 tonnista vuonna 1900 yli miljoonaan tonniin 1913. Huhtikuun '
+            + '30. päivänä 1953 Jean Monnet käynnisti Belvalissa ensimmäisen '
+            + 'eurooppalaisen teräsvalun. Viimeinen masuuni sammui heinäkuussa 1997, ja '
+            + 'vapautuneelle 120 hehtaarille on noussut yliopistoa, arkistoja ja '
+            + 'konserttisali Rockhal.',
+          lyhyt: 'Belvalin vanhat masuunit Esch-sur-Alzettessa ovat Luxemburgin '
+            + 'terästeollisuuden muistomerkki.',
+          selite: 'Belvalin masuunit A ja B, jotka on suojeltu kulttuurimuistomerkkeinä '
+            + 'vuodesta 2000. Alueella toimi ARBEDin terästehdas.',
+          lahde: 'Zinneke, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Esch-sur-Alzette',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuinka kauan Luxemburgin kaupungin linnoitusten purkaminen kesti?',
+        vaihtoehdot: [
+          '3 vuotta',
+          '16 vuotta',
+          '40 vuotta',
+          '100 vuotta',
+        ],
+        oikea: 1,
+        fakta: 'Linnoitusten purkaminen kesti 16 vuotta ja maksoi 1,5 miljoonaa '
+          + 'kultafrangia.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Luxemburgin keittiö on talonpoikaista ja asettuu ranskalaisen ja '
+        + 'saksalaisen ruokakulttuurin väliin. Pöytään tulee savustettua sianlihaa, '
+        + 'papukeittoa ja Moselin rinteiden viiniä.',
+      nostot: [
+        {
+          otsikko: 'Viinitarhat kahden maan rajalla',
+          aika: 'nykyään',
+          tiedosto: 'LUXEMBOURG\'s VINEYARDS at the Moselle.jpg',
+          teksti: 'Moselin rannalla Luxemburgin ja Saksan raja kulkee 42 kilometrin matkan, '
+            + 'ja rinteillä on viljelty viiniä jo roomalaisten ajoista. Yleisin lajike on '
+            + 'Rivaner, jota oli 29 prosenttia viinitarhoista vuonna 2006. Seuraavina '
+            + 'tulevat Auxerrois, Pinot gris ja Riesling. Viinit ovat enimmäkseen kuivia '
+            + 'valkoviinejä, ja kuohuviini kantaa nimeä Crémant. Vuodesta 1935 pullon '
+            + 'takana on ollut Marque Nationale -sinetti, joka kertoo viinin olevan tehty '
+            + 'kokonaan luxemburgilaisista rypäleistä.',
+          lyhyt: 'Moselin rinteillä kasvatetaan luxemburgilaisia viinirypäleitä, joista '
+            + 'tehdään kuivia valkoviinejä ja Crémant-kuohuviiniä.',
+          selite: 'Viiniköynnösrivejä Moselin rinteellä. Luxemburgin viinialue on maan '
+            + 'kaakkoisosassa Moselin varrella.',
+          lahde: 'Denise Hastert, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Savustettua sikaa ja härkäpapuja',
+          aika: 'nykyään',
+          tiedosto: 'Judd mat Gaardebounen.jpg',
+          teksti: 'Judd mat Gaardebounen on savustettua sianniskaa ja härkäpapuja, ja sitä '
+            + 'pidetään Luxemburgin kansallisruokana. Liha liotetaan yön yli ja keitetään '
+            + 'vihannesten ja mausteiden kanssa, joskus lasillisen Moselin viiniä kera. '
+            + 'Pavut tarjotaan sipulista, voista ja lihaliemestä tehdyssä kastikkeessa. '
+            + 'Annos yhdistetään erityisesti Gostingenin kylään maan kaakkoisosassa, '
+            + 'jonka asukkaita kutsutaan papujensa vuoksi nimellä Bounepatscherten eli '
+            + 'papuhullut. Lisukkeeksi tulee keitettyjä perunoita, ja juomaksi käy viini '
+            + 'tai olut.',
+          lyhyt: 'Judd mat Gaardebounen on savustettua sianniskaa ja härkäpapuja, '
+            + 'Luxemburgin tunnetuimpia kansallisruokia.',
+          selite: 'Annos savustettua sianlihaa, härkäpapuja ja keitettyjä perunoita.',
+          lahde: 'UnorthodoxY, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Papukeitto, joka ylittää rajat',
+          aika: 'nykyään',
+          tiedosto: 'Bouneschlupp16.jpg',
+          teksti: 'Bouneschlupp on vihreistä pavuista, perunoista, pekonista ja sipulista '
+            + 'keitetty sakea keitto. Sitä pidetään luxemburgilaisena kansallisruokana, '
+            + 'mutta sama keitto löytyy myös Saarlandista, Belgian Gaumesta ja '
+            + 'Arelerlandista sekä Lorrainesta. Resepti ei siis pysähtynyt rajalle. '
+            + 'Luxemburgin keittiö onkin rajaseudun sekoitus: arkiruoat ovat '
+            + 'talonpoikaisia kuten Saksassa, mutta ranskalainen vaikutus näkyy '
+            + 'ravintoloiden listoilla. Kuvan keitossa on myös makkaraviipaleita ja '
+            + 'porkkanaa.',
+          lyhyt: 'Bouneschlupp on vihreistä pavuista, perunoista ja pekonista keitetty '
+            + 'luxemburgilainen keitto.',
+          selite: 'Vihreää papukeittoa, jossa on porkkanaa, perunaa ja makkaraviipaleita.',
+          lahde: 'SITCK, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Rapeat perunaletut',
+          aika: 'nykyään',
+          tiedosto: 'Gromperekichelcher avec compote de pommes.jpg',
+          teksti: 'Gromperekichelcher ovat mausteisia perunalettuja: raastettua perunaa, '
+            + 'silputtua sipulia ja persiljaa, paistettuna rasvassa rapeiksi. Kuvan '
+            + 'tapaan niiden kanssa tarjotaan omenasosetta. Luxemburgin arkiruoka on '
+            + 'talonpoikaista, mutta listalta löytyy myös Moselin pieniä paistettuja '
+            + 'kaloja, taimenta Riesling-kastikkeessa ja luumupiirakka Quetschentaart. '
+            + 'Juustoista tunnetuin on Kachkéis, pehmeä levite, jota kutsutaan myös '
+            + 'nimellä Cancoillotte.',
+          lyhyt: 'Gromperekichelcher on luxemburgilainen perunalettu, joka paistetaan '
+            + 'sipulin ja persiljan kanssa.',
+          selite: 'Kolme Gromperekichelcher-lettua ja omenasosetta lautasella.',
+          lahde: 'Wikibubulle, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä papuja luxemburgilaisessa kansallisruoassa Judd mat Gaardebounen on?',
+        vaihtoehdot: [
+          'Vihreitä papuja',
+          'Kikherneitä',
+          'Soijapapuja',
+          'Härkäpapuja',
+        ],
+        oikea: 3,
+        fakta: 'Judd mat Gaardebounen on savustettua sianniskaa ja härkäpapuja, ja sitä '
+          + 'pidetään Luxemburgin kansallisruokana.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Luxemburgin luonto on pieni mutta jyrkkä: hiekkakivikallioita, metsäisiä '
+        + 'jokilaaksoja ja maan suurin tekojärvi. Neljä paikkaa vie Pikku-Sveitsin '
+        + 'rotkoista Ardenneille.',
+      nostot: [
+        {
+          otsikko: 'Pikku-Sveitsin kalliot',
+          aika: 'nykyään',
+          tiedosto: 'Mullerthal 01.jpg',
+          teksti: 'Luxemburgin Pikku-Sveitsi eli Müllerthal on hiekkakivikallioiden ja '
+            + 'tiheiden metsien seutu maan itäosassa. Se kattaa vain seitsemän prosenttia '
+            + 'maasta, mutta siellä on rotkoja, luolia ja lukemattomia pieniä puroja. '
+            + 'Korkein kohta on vain 414 metrissä. Alueen ainoa keskikokoinen asutus on '
+            + 'Echternach, Luxemburgin vanhin säilynyt kaupunki. Kalliot houkuttivat '
+            + 'kävijöitä jo 1800-luvulla: Berdorfin nuoriso kaiversi Hohllayn '
+            + 'kallioseinään 1880 kiitoksen hallitukselle, joka avasi rotkot yleisön '
+            + 'ulottuville.',
+          lyhyt: 'Müllerthal eli Pikku-Sveitsi on hiekkakiviseudun metsä- ja kallioalue '
+            + 'Luxemburgin itäosassa.',
+          selite: 'Hiekkakivikallio metsässä Müllerthalin alueella. Alue tunnetaan myös '
+            + 'nimellä Pikku-Sveitsi.',
+          lahde: 'Arths-at, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mullerthal',
+        },
+        {
+          otsikko: 'Silta putouksen päällä',
+          aika: '1879',
+          tiedosto: 'Schiessentümpel 11 08 2013.jpg',
+          teksti: 'Schiessentümpel on pieni vesiputous Mustan Ernzin joessa, noin kilometrin '
+            + 'päässä Müllerthalin kylästä lounaaseen. Putouksen päällä kaartuu '
+            + 'kivisilta, jonka kaide on tehty rustiikkisista puunrungoista. Valtion '
+            + 'budjettiin varattiin 1877 rahaa kolmelle pienelle sillalle Müllerthalin '
+            + 'alueelle. Piirustukset laati Diekirchin piirin insinööri Antoine Hartmann, '
+            + 'ja kivityön teki kivenhakkaaja Jean-Pierre Prommenschenkel. Silta '
+            + 'valmistui todennäköisesti 1879. Paikan nimi tarkoittaa sekä putousta että '
+            + 'sen kohdalla kulkevan tien varren aluetta.',
+          lyhyt: 'Schiessentümpel on Mustan Ernzin joen pieni putous, jonka päällä on '
+            + 'rustiikkinen kivisilta Müllerthalissa.',
+          selite: 'Schiessentümpelin putous ja kivisilta Mustan Ernzin varrella. Silta '
+            + 'rakennettiin todennäköisesti 1879.',
+          lahde: 'VT98Fan, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Järvi, joka rakennettiin',
+          aika: '1955–1958',
+          tiedosto: 'Lac de la Haute Sure - panoramio.jpg',
+          teksti: 'Luxemburgissa ei ole luonnostaan suuria järviä, joten maan suurin järvi '
+            + 'rakennettiin. Juomavesi alkoi loppua 1940-luvun lopulla, ja Sûre-joen '
+            + 'laaksoon nousi 47 metriä korkea holvipato vuosina 1955–1958. Järvi peittää '
+            + 'enimmillään 3,8 neliökilometriä ja on jopa 43 metriä syvä. Laaksosta piti '
+            + 'siirtää myllyjen ja tilojen asukkaat, ja sukeltajat voivat yhä käydä '
+            + 'raunioilla noin 30 metrin syvyydessä. Vuonna 2007 noin 80 prosenttia '
+            + 'väestöstä sai järven vettä.',
+          lyhyt: 'Yläsûren tekojärvi eli Lac de la Haute-Sûre on Luxemburgin suurin järvi ja '
+            + 'tärkeä juomavesivaranto.',
+          selite: 'Yläsûren tekojärvi Ardenneilla Luxemburgin luoteisosassa. Järven ympäristö '
+            + 'on Ramsar-suojelukohde.',
+          lahde: 'Martin D., Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          otsikko: 'Kylä joen mutkassa',
+          aika: 'nykyään',
+          tiedosto: 'Luxembourg Esch-sur-Sure 12 June 2011.jpg',
+          teksti: 'Esch-sur-Sûren vanha keskusta on ahtautunut Sûre-joen jyrkän mutkan '
+            + 'sisään, kapealle maankielekkeelle. Kielekkeen päällä seisoo 900-luvulle '
+            + 'juontuva linna. Kaupungissa asui vuonna 2025 vain 415 ihmistä. Heti sen '
+            + 'yläpuolella joki on padottu järveksi, joka ulottuu kymmenen kilometriä '
+            + 'laaksoon. Se oli pitkään maan toiseksi pienin kunta pinta-alaltaan, kunnes '
+            + 'kaksi naapurikuntaa liitettiin siihen 2011. Nimen loppuosa erottaa paikan '
+            + 'Esch-sur-Alzettesta, joka on maan toiseksi suurin kaupunki 45 kilometriä '
+            + 'etelämpänä.',
+          lyhyt: 'Esch-sur-Sûre on pieni Ardennien kaupunki, jonka linna ja keskusta ovat '
+            + 'Sûre-joen jyrkän mutkan sisällä.',
+          selite: 'Esch-sur-Sûren talot ja linna metsäisten Ardennien rinteiden keskellä. '
+            + 'Kaupunki sijaitsee Sûre-joen mutkassa.',
+          lahde: 'Cayambe, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuinka korkea on Yläsûren tekojärven holvipato?',
+        vaihtoehdot: [
+          '47 metriä',
+          '8 metriä',
+          '120 metriä',
+          '250 metriä',
+        ],
+        oikea: 0,
+        fakta: 'Luxemburgin suurimman järven 47 metriä korkea holvipato rakennettiin '
+          + 'Sûre-joen laaksoon vuosina 1955–1958.',
+      },
+    },
+    {
+      id: 'rakennukset',
+      nimi: 'Rakennukset',
+      johdanto: 'Pienessä maassa on suuria rakennuksia: myyty ja pelastettu linna, entinen '
+        + 'kaupungintalo, jossa suurherttua nykyään työskentelee, sekä silta, josta '
+        + 'tuli itsenäisyyden tunnus.',
+      nostot: [
+        {
+          otsikko: 'Linna, jonka katto myytiin pala palalta',
+          aika: '1820–1990',
+          tiedosto: 'Burg Vianden, Luxemburg.jpg',
+          teksti: 'Kuningas Vilhelm I myi Viandenin linnan 1820 neuvosmies Wenzel Costerille '
+            + '3 200 floriinilla. Coster alkoi purkaa linnaa: katon tiilet, '
+            + 'seinäpaneelit, ovet ja ikkunat myytiin kappale kerrallaan, ja jäljelle jäi '
+            + 'rauniot. Kansalaisten suuttumus oli niin suuri, että kuningas osti raunion '
+            + 'takaisin 1827 hintaan 1 100 floriinia. Kunnostus eteni hitaasti: '
+            + 'suurherttua Jean luovutti linnan valtiolle 1977, ja työt valmistuivat '
+            + '1990. Linna seisoo kalliolla noin sata metriä Our-joen yläpuolella.',
+          lyhyt: 'Viandenin linna on yksi Reinin länsipuolen suurimmista linnoitetuista '
+            + 'linnoista.',
+          selite: 'Viandenin linna kalliolla Our-joen laaksossa. Linna rakennettiin '
+            + 'romaanisessa tyylissä 1000–1300-luvuilla.',
+          lahde: 'Jeff Croisé, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Viandenin linna',
+        },
+        {
+          otsikko: 'Silta, jonka kaari löi ennätyksen',
+          aika: '1900–1903',
+          tiedosto: 'Adolphe Bridge over the valley of Petrusse in Luxembourg City.jpg',
+          teksti: 'Adolphe-sillan keskellä on kaksi rinnakkaista 84,65 metrin kaarta, ja sen '
+            + 'piti olla suurin koskaan rakennettu kivikaari. Suunnittelijat olivat '
+            + 'ranskalainen Paul Séjourné ja luxemburgilainen Albert Rodange. Tienpinta '
+            + 'tehtiin uutuusmateriaalista, raudoitetusta betonista, ja kaaret hakattiin '
+            + 'paikallisesta hiekkakivestä. Silta vihittiin käyttöön 24. heinäkuuta 1903. '
+            + 'Luxemburgilaiset kutsuvat sitä yhä Uudeksi sillaksi, Nei Bréckiksi. Vuonna '
+            + '2018 sen alle ripustettiin pyörätie.',
+          lyhyt: 'Adolphe-silta on Luxemburgin kaupungin kaksikerroksinen kaarisilta ja maan '
+            + 'epävirallinen tunnus.',
+          selite: 'Adolphe-silta ylittää Pétrusse-joen laakson Luxemburgin kaupungissa. Silta '
+            + 'on nimetty suurherttua Adolphen mukaan.',
+          lahde: 'Krzysztof Golik, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kaupungintalosta suurherttuan palatsiksi',
+          aika: '1572',
+          tiedosto: 'Luxembourg Grand Ducal Palace 01.jpg',
+          teksti: 'Rakennus oli Luxemburgin kaupungintalo vuosina 1572–1795, ja sen jälkeen '
+            + 'siellä toimivat prefektuuri ja hallitus. Vuodesta 1817 siellä asui '
+            + 'Hollannin suurherttuiden edustaja. Kun Nassau-Weilburgin suku nousi '
+            + 'valtaan 1890, palatsi varattiin suurherttuan perheelle, ja Adolphen aikana '
+            + 'siihen lisättiin uusi siipi. Nykyään palatsi on suurherttuan virallinen '
+            + 'työpaikka, mutta varsinainen koti on Bergin linna Colmar-Bergissä. '
+            + 'Jouluaattona suurherttuan tervehdys lähetetään palatsin Keltaisesta '
+            + 'salista.',
+          lyhyt: 'Suurherttuan palatsi on Luxemburgin valtionpäämiehen virallinen residenssi '
+            + 'kaupungin vanhassa keskustassa.',
+          selite: 'Suurherttuan palatsin julkisivu Luxemburgin kaupungissa. Oikealla näkyy '
+            + 'osa parlamenttitaloa.',
+          lahde: 'Cayambe, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Kolme terhoa kolmen tornin päällä',
+          aika: '1732–1733',
+          tiedosto: 'Fort thüngen Dräi Eechelen 01.jpg',
+          teksti: 'Tornien päällä on kolme terhoa, ja siitä Fort Thüngen sai lempinimensä '
+            + 'Dräi Eechelen, Kolme terhoa. Linnake rakennettiin 1732–1733 ja nimettiin '
+            + 'sotapäällikkö Adam Sigmund von Thüngenin mukaan. Lontoon sopimus vaati '
+            + '1867 Luxemburgin linnoitusten purkamista, ja linnakkeesta jäivät jäljelle '
+            + 'vain kolme tornia ja perustukset. Ne rakennettiin uudelleen 1990-luvulla, '
+            + 'kun viereen nousi nykytaiteen museo Mudam. Vuodesta 2012 rakennus on ollut '
+            + 'Musée Dräi Eechelen.',
+          lyhyt: 'Fort Thüngen eli Dräi Eechelen on 1730-luvulla rakennettu linnake '
+            + 'Luxemburgin kaupungin Kirchbergissä.',
+          selite: 'Fort Thüngenin kolme tornia, joiden päällä on terho. Linnake toimii '
+            + 'nykyään museona.',
+          lahde: 'Cayambe, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Fort Thüngen',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä on Fort Thüngenin lempinimi, joka viittaa tornien päällä oleviin '
+          + 'koristeisiin?',
+        vaihtoehdot: [
+          'Kolme kruunua',
+          'Kolme kellotornia',
+          'Kolme terhoa',
+          'Kolme kilpeä',
+        ],
+        oikea: 2,
+        fakta: 'Fort Thüngenin kolmen tornin päällä on kutakin terho, ja siitä linnake on '
+          + 'saanut lempinimensä Dräi Eechelen eli Kolme terhoa.',
+      },
+    },
+    {
+      id: 'arki',
+      nimi: 'Arki',
+      johdanto: 'Pieni maa pitää kiinni omista tavoistaan: omasta kielestä, laaksoon '
+        + 'kätketystä kaupunginosasta, pääsiäismaanantain savipilleistä ja '
+        + 'pyhiinvaeltajien hyppelystä.',
+      nostot: [
+        {
+          otsikko: 'Kaupunki kallion alla',
+          aika: 'nykyään',
+          tiedosto: '20180901 Grund Luxembourg City 03.jpg',
+          teksti: 'Grund on Luxemburgin kaupungin kaupunginosa, joka lepää Alzette-joen '
+            + 'rannalla vanhan kaupungin alapuolella laaksossa. Sinne pääsee kävellen tai '
+            + 'hissillä, joka laskeutuu kallion läpi. Asukkaita on vain 983, ja heistä '
+            + '43,74 prosenttia on luxemburgilaisia (vuoden 2025 lopussa). Illalla Grund '
+            + 'herää eloon, sillä se on suosittua yöelämän aluetta. Täällä toimii myös '
+            + 'Mosconi, yhden Michelin-tähden ravintola, joka erikoistuu pastaan. '
+            + 'Yläpuolella kohoavat vanhan linnoituksen kalliot ja muurit.',
+          lyhyt: 'Grund on Luxemburgin kaupungin kaupunginosa Alzette-joen laaksossa vanhan '
+            + 'kaupungin alapuolella.',
+          selite: 'Näkymä ylhäältä Grundiin, Alzette-joelle ja linnoituksen muurille.',
+          lahde: 'Flocci Nivis, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Lause kaupungintalon päädyssä',
+          aika: '1859',
+          tiedosto: 'Fronton City Hall Esch Alzette.JPG',
+          teksti: 'Esch-sur-Alzetten kaupungintalon päädyssä kaivostyöläinen ja '
+            + 'terästyöläinen tukevat kaupungin vaakunaa, ja alla lukee vanhalla '
+            + 'kirjoitusasulla Mir wölle bleiwe wat mer sin, Haluamme pysyä sellaisina '
+            + 'kuin olemme. Lause on maan tunnuslause, ja se on peräisin Michel Lentzin '
+            + 'runosta De Feierwon, jonka hän kirjoitti 1859 kaupungin rautatien '
+            + 'vihkiäisiin. Luxemburgin kieltä puhuu noin 400 000 ihmistä. Sen vanhin '
+            + 'tunnettu teksti on 1300-luvun alun Codex Mariendalensis.',
+          lyhyt: 'Esch-sur-Alzetten kaupungintalon päätykolmio, jossa on Luxemburgin '
+            + 'kansallinen tunnuslause luxemburgin kielellä.',
+          selite: 'Kaupungintalon päädyssä kaivostyöläinen ja terästyöläinen tukevat '
+            + 'kaupungin vaakunaa. Alla on tunnuslause vanhalla kirjoitusasulla.',
+          lahde: 'Zinneke, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Luxemburgin kieli',
+        },
+        {
+          otsikko: 'Pääsiäismaanantain savilinnut',
+          aika: 'pääsiäismaanantai',
+          tiedosto: 'Péckvillchen 6544.jpg',
+          teksti: 'Pääsiäismaanantaina Luxemburgin kaupungin Fëschmaartilla ja Nospeltin '
+            + 'kylässä pidetään Éimaischen-markkinat, joiden tähtituote on Péckvillchen, '
+            + 'pieni linnun muotoinen savipilli. Linnun pyrstö on suukappale, ja pilliin '
+            + 'saa kaksi eri korkeaa säveltä. Nospelt oli savenvalajien kylä, ja pillejä '
+            + 'tehtiin perinteen mukaan päivän jäännössavesta. Kaupungin markkina sai '
+            + 'nykyisen muotonsa 1937, Nospeltin 1957. Pillit vaihtuvat joka vuosi, joten '
+            + 'niitä kerätään.',
+          lyhyt: 'Péckvillchen on Luxemburgin pääsiäismaanantain markkinoilla myytävä linnun '
+            + 'muotoinen savipilli.',
+          selite: 'Nospeltissa vuonna 1991 valmistettu Péckvillchen-savipilli.',
+          lahde: 'Cornischong, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Hypitään pyhimyksen haudalle',
+          aika: 'helluntaitiistai',
+          tiedosto: 'Luxembourg, foulard procession dansante (101).jpg',
+          teksti: 'Helluntaitiistaina Echternachin kaduilla hypitään: pyhiinvaeltajat pitävät '
+            + 'kiinni valkoisen nenäliinan päistä ja tanssivat vasemmalta oikealle, '
+            + 'jolloin jono etenee hitaasti. Soittajat esittävät vuosisataista sävelmää, '
+            + 'joka muistuttaa irlantilaista jigiä ja perustuu kansanlauluun Adam had '
+            + 'seven sons. Matka jokisillalta basilikaan on noin 1,5 kilometriä, ja '
+            + 'perillä hypitään Pyhän Willibrordin haudan ohi. UNESCO merkitsi kulkueen '
+            + 'aineettoman kulttuuriperinnön luetteloon 2010.',
+          lyhyt: 'Echternachin hyppelykulkue on helluntaitiistaina järjestettävä '
+            + 'pyhiinvaellus, jossa kuljetaan tanssien nenäliinoista kiinni pitäen.',
+          selite: 'Hyppelykulkueessa käytetty nenäliina, jossa on kulkueen tunnus. Kulkue '
+            + 'kuuluu UNESCOn aineettoman kulttuuriperinnön luetteloon.',
+          lahde: 'GilPe, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mistä pyhiinvaeltajat pitävät kiinni Echternachin hyppelykulkueessa?',
+        vaihtoehdot: [
+          'Puisesta rististä',
+          'Nenäliinan päistä',
+          'Palavasta kynttilästä',
+          'Toistensa hatuista',
+        ],
+        oikea: 1,
+        fakta: 'Echternachin hyppelykulkueessa pyhiinvaeltajat pitävät kiinni valkoisen '
+          + 'nenäliinan päistä ja hyppivät vasemmalta oikealle.',
+      },
+    },
+  ],
+  SVK: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Slovakian historia on kirjoitettu kiveen: linnoja on rakennettu jyrkille '
+        + 'kallioille, kruunuja vartioitu torneissa ja hopeaa kaivettu maasta '
+        + 'vuosisatojen ajan.',
+      nostot: [
+        {
+          otsikko: 'Linna, joka paloi raunioksi',
+          aika: '1811',
+          tiedosto: 'Bratislava Castle R01.jpg',
+          teksti: 'Maria Teresian aikana Bratislavan linnasta tehtiin hieno kuninkaallinen '
+            + 'residenssi, ja sen vesijohdon rakennutti keksijä Wolfgang von Kempelen. '
+            + 'Myöhemmin linna muutettiin sotilaiden asunnoksi, ja 28. toukokuuta 1811 '
+            + 'varusväen huolimattomuus sytytti sen palamaan. Rakennus seisoi raunioina '
+            + 'yli 140 vuotta, kunnes tutkimukset alkoivat 1953 ja restaurointi 1957. '
+            + 'Linnan kulmatorneista suurin, Kruunutorni, piti 1500-luvun puolivälistä '
+            + 'lähes kahden vuosisadan ajan sisällään Unkarin kruununjalokiviä.',
+          lyhyt: 'Tonavan yläpuolella kohoava nelitorninen linna, joka hallitsee Bratislavan '
+            + 'siluettia.',
+          selite: 'Linnan paikalla on ollut asutusta tuhansia vuosia. Nykyinen barokkiasu '
+            + 'palautettiin 1900-luvun jälleenrakennuksessa.',
+          lahde: 'Marc Ryckaert (MJJR), Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Bratislavan linna',
+        },
+        {
+          otsikko: 'Kuka sytytti Spišin linnan?',
+          aika: '1780',
+          tiedosto: 'Spissky hrad west.jpg',
+          teksti: 'Spišin linna kohoaa kalkkikivikukkulalla, ja sen vanhin kirjallinen '
+            + 'maininta on vuodelta 1120. Aluksi se vartioi Unkarin pohjoisrajaa, '
+            + 'myöhemmin siitä tuli koko Spišin läänin hallinnon ja kulttuurin keskus. '
+            + 'Viimeiset omistajat, Csákyn suku, muuttivat pois 1700-luvun alussa, koska '
+            + 'linna oli liian epämukava asua. Vuonna 1780 se paloi, eikä syytä tiedetä. '
+            + 'Yksi tarina kertoo, että katetuista rakennuksista peritty lisävero '
+            + 'houkutteli polttamaan katon, toinen väittää sotilaiden keittäneen salaa '
+            + 'viinaa. Linna kuuluu Unescon maailmanperintöön vuodesta 1993.',
+          lyhyt: 'Yksi Slovakian suurimmista linnoista, jonka rauniot näkyvät kauas Spišin '
+            + 'tasangolle.',
+          selite: 'Linna sijaitsee Spišské Podhradien kaupungin yläpuolella. Sen pinta-ala on '
+            + 'noin 3,9 hehtaaria.',
+          lahde: 'Ingo Mehling, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Spišin linna',
+        },
+        {
+          otsikko: 'Kreivi Orlokin kotilinna',
+          aika: '1267',
+          tiedosto: 'Oravský hrad (celkový pohled).jpg',
+          teksti: 'Oravan linna nojaa 112 metriä korkeaan kallioon Orava-joen rannalla. '
+            + 'Ensimmäinen kirjallinen maininta on vuodelta 1267, ja silloin vain '
+            + 'alakerros oli kiveä, yläkerrokset puuta. Rikas Thurzón suku rakennutti '
+            + 'linnaa 1500-luvun puolivälistä alkaen, ja nykyinen muoto valmistui vuonna '
+            + '1611. Vuonna 1800 valtava tulipalo tuhosi kaikki puuosat, eikä linnaa enää '
+            + 'asuttu. Sen jälkeen siitä tuli museo. Vuoden 1922 Nosferatu-elokuvassa '
+            + 'linna esitti kreivi Orlokin kartanoa, ja myös 2020 tehty Dracula-sarja '
+            + 'kuvasi täällä.',
+          lyhyt: 'Kalliolle rakennettu keskiaikainen linna Pohjois-Slovakiassa Orava-joen '
+            + 'varrella.',
+          selite: 'Linnan vanhimmat osat ovat 1200-luvulta. Nykyään siellä toimii yksi '
+            + 'Slovakian vanhimmista museoista.',
+          lahde: 'Lynx1211, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Oravanlinna',
+        },
+        {
+          otsikko: 'Kaupunki hopeavuoren päällä',
+          aika: '1735',
+          tiedosto: 'Banská Štiavnica from Nový zámok 2007.jpg',
+          teksti: 'Banská Štiavnica kasvoi hopean ja kullan varaan: vuonna 1782 se oli '
+            + 'Unkarin kuningaskunnan kolmanneksi suurin kaupunki Bratislavan ja '
+            + 'Debrecenin jälkeen. Kun kaivokset tulvivat, 1400–1700-luvuilla '
+            + 'rakennettiin kuusikymmentä tekojärveä eli tajchya, jotka yhdistettiin yli '
+            + 'sadan kilometrin kanavaverkolla. Kaupungissa toimi vuonna 1735 perustettu '
+            + 'kaivoskoulu, josta tuli myöhemmin kaivosakatemia, jota on kutsuttu '
+            + 'maailman ensimmäiseksi teknilliseksi yliopistoksi. Jo 1627 täällä '
+            + 'käytettiin ruutia kaivoksessa yhtenä maailman ensimmäisistä.',
+          lyhyt: 'Vanha kaivoskaupunki keskellä sammuneen tulivuoren kalderaa '
+            + 'Keski-Slovakiassa.',
+          selite: 'Kaupunki ympäristöineen liitettiin Unescon maailmanperintölistalle vuonna '
+            + '1993. Kaupungin kaksi linnaa on muutettu museoiksi.',
+          lahde: 'Adrian Tync, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Banská Štiavnica',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minä vuonna Bratislavan linna paloi, kun varusväen huolimattomuus sytytti '
+          + 'sen?',
+        vaihtoehdot: [
+          '1780',
+          '1811',
+          '1800',
+          '1857',
+        ],
+        oikea: 1,
+        fakta: 'Bratislavan linna syttyi palamaan 28. toukokuuta 1811 ja jäi raunioksi, '
+          + 'kunnes restaurointi alkoi 1957.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Slovakialainen ruoka tulee vuorilta: lampaanjuustoa, perunataikinaa ja '
+        + 'pekonia sekä lasillinen kultaista viiniä, jonka kellarit on kaivettu '
+        + 'vaikeiden aikojen suojaksi.',
+      nostot: [
+        {
+          otsikko: 'Kansallisruoka köyhien keittiöstä',
+          aika: 'nykyään',
+          tiedosto: 'Bryndzové halušky so slaninou.jpg',
+          teksti: 'Bryndzové halušky on Slovakian kansallisruokia: perunataikinasta tehtyjä '
+            + 'pieniä nyyttejä, joiden päälle sulatetaan pehmeää lampaanjuustoa ja '
+            + 'ripotellaan paistettua pekonia. Perunataikina syntyi vuoristossa, jossa '
+            + 'peruna menestyi karussakin maassa ja jauhoa tarvittiin vähemmän. '
+            + 'Turecká-kylässä järjestetään joka vuosi halušky-festivaali, jossa käydään '
+            + 'syöntikilpailu. Perinteinen juoma annoksen kanssa on žinčica, joka syntyy '
+            + 'juuston valmistuksen sivutuotteena.',
+          lyhyt: 'Perunataikinanyyttejä ja bryndza-juustoa sisältävä slovakialainen '
+            + 'kansallisruoka.',
+          selite: 'Päälle voi ripotella pekonia ja ruohosipulia. Unkarilaiset kutsuvat '
+            + 'lähisukulaista nimellä sztrapacska.',
+          lahde: 'Gregory finster, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Juusto, jota kutsuttiin Liptaueriksi',
+          aika: '1470',
+          tiedosto: 'Brynza.jpg',
+          teksti: 'Bryndza on pehmeää, kirpeää ja voimakkaanhajuista lampaanmaitojuustoa. '
+            + 'Slovakiassa se mainitaan ensimmäisen kerran vuonna 1470. Nykyisen '
+            + 'sivelykelpoisen version uskotaan syntyneen 1700-luvun lopulla, kun Stará '
+            + 'Turán yrittäjät perustivat juustolaitoksia vuoristoon ja kauppasivat '
+            + 'tuotetta ympäri Habsburgien valtakuntaa. Itävallassa sitä kutsuttiin '
+            + 'Liptovin alueen mukaan nimellä Liptauer. Slovenská bryndza sai EU:n '
+            + 'suojatun maantieteellisen merkinnän 16. heinäkuuta 2008, ja siitä '
+            + 'vähintään puolet on oltava lampaanmaitoa.',
+          lyhyt: 'Pehmeä, murumainen lampaanmaidosta tehty juusto, jota käytetään monissa '
+            + 'slovakialaisissa ruoissa.',
+          selite: 'Bryndza on tärkeä ainesosa halušky-annoksessa. Sivutuotteena syntyy '
+            + 'žinčica-juomaa.',
+          lahde: 'Dezidor, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Brynza',
+        },
+        {
+          otsikko: 'Höyrytetty juusto ruusukkeena',
+          aika: '1800-luku',
+          tiedosto: 'Parenica.jpg',
+          teksti: 'Parenica on slovakialainen juusto, joka valmistetaan höyryttämällä. Juusto '
+            + 'tehdään kaistaleina, jotka kierretään kotilomaisiksi spiraaleiksi, ja '
+            + 'tyypillinen kierre painaa noin sata grammaa. Nimi tulee slovakin sanasta '
+            + 'höyryttää. Höyry tummentaa kermankeltaisen juuston väriä, ja usein se '
+            + 'vielä savustetaan. 1800-luvulla parenicaa tehtiin vain pastöroimattomasta '
+            + 'lampaanmaidosta, nykyään usein lehmänmaidosta tai maitoseoksista. '
+            + 'Slovenská parenica on suojattu nimi EU:ssa.',
+          lyhyt: 'Höyrytetty ja usein savustettu slovakialainen juusto, joka on kierretty '
+            + 'spiraaliksi.',
+          selite: 'Kuvan juusto on peräisin Liptovin seudulta Pohjois-Slovakiasta. '
+            + 'Juustomassa punotaan kaistaleista kierteiksi.',
+          lahde: 'Stanislav Doronenko, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Kellarit, jotka pelastivat viinit',
+          aika: 'n. 1500-luku',
+          tiedosto: 'Cave in Slovak Tokaj.jpg',
+          teksti: 'Slovakian Tokajin viinialue on pieni: vain noin 908 hehtaaria seitsemässä '
+            + 'kylässä Trebišovin seudulla aivan Unkarin rajan tuntumassa. Alueen '
+            + 'kellarit ovat suurimmaksi osaksi peräisin siltä ajalta, jolloin seutu oli '
+            + 'yli 170 vuotta turkkilaisten vallan alla. Ne rakennettiin piilopaikoiksi, '
+            + 'joihin ihmiset ja omaisuus saatiin turvaan ryöstäjiltä. Tokajin olosuhteet '
+            + 'suosivat rypäleitä, joista saadaan luonnostaan makeita viinejä. '
+            + 'Slovakiassa tämä on kuudesta viinialueesta pienin.',
+          lyhyt: 'Slovakialaisen Tokajin viinialueen keskiaikainen tynnyrikellari.',
+          selite: 'Tokajin viinialue jakautuu Unkarin ja Slovakian kesken Trianonin '
+            + 'rauhansopimuksen jälkeen.',
+          lahde: 'Slavo O., Wikimedia Commons (public domain)',
+          wiki: 'Tokaj-Hegyalja',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Millä nimellä Slovakian bryndzaa kutsuttiin Itävallassa Liptovin alueen '
+          + 'mukaan?',
+        vaihtoehdot: [
+          'Wienerkäse',
+          'Tiroler',
+          'Pressburger',
+          'Liptauer',
+        ],
+        oikea: 3,
+        fakta: 'Itävallassa bryndzaa kutsuttiin Liptaueriksi, mutta sittemmin nimi siirtyi '
+          + 'juustolevitteelle, jossa käytetään rahkaa.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Slovakian luonto on äärimmäisyyksien maa: pohjoisessa lumihuippuiset '
+        + 'Tatrat, etelässä kalkkikiven alla piileviä luolia, joissa on tippukiviä ja '
+        + 'jopa jäätä.',
+      nostot: [
+        {
+          otsikko: 'Huippu, jolla oli monta nimeä',
+          aika: '1838',
+          tiedosto: 'Gerlachovský štít Vysoké Tatry 03.jpg',
+          teksti: 'Gerlachovský štít eli Gerlach on Korkeiden Tatrojen ja koko Karpaattien '
+            + 'korkein huippu, 2654 metriä. Vanhimman tunnetun nimen, Kösselberg eli '
+            + 'Kattilavuori, se sai kartalla 1762, ja slovakiaksi sitä kutsuttiin '
+            + 'Kotoliksi eli kattilaksi. Korkeimmaksi huipuksi sen tunnisti vasta 1838 '
+            + 'eräs tutkija. Sen jälkeen nimeä vaihdettiin aina vallanpitäjän mukaan: '
+            + '1896 se sai keisari Frans Joosefin nimen. Kaikkiaan nimiä oli neljä ja '
+            + 'nimenmuutoksia kuusi. Pääsy huipulle on nykyään rajoitettu.',
+          lyhyt: 'Karpaattien korkein vuorenhuippu Korkeissa Tatroissa Pohjois-Slovakiassa.',
+          selite: 'Nimi tulee Gerlachovin kylästä huipun juurella. Korkeuseroa laaksosta '
+            + 'huipulle on noin 2000 metriä.',
+          lahde: 'Pavol Svetoň, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Gerlachovský štít',
+        },
+        {
+          otsikko: 'Huipulle köysiradalla',
+          aika: '1793',
+          tiedosto: 'Lomnický štít Winter.jpg',
+          teksti: 'Lomnický štít on Korkeiden Tatrojen toiseksi korkein huippu, 2634 metriä. '
+            + 'Ensimmäinen kirjattu nousu tehtiin 16. elokuuta 1793, kun englantilainen '
+            + 'matkailija Robert Townson kiipesi sinne oppaan kanssa. Hän mittasi '
+            + 'korkeudeksi 2633 metriä eli vain metrin liian vähän. Talvella huipulle '
+            + 'noustiin ensimmäisen kerran 1891. Vuodesta 1940 lähtien Tatranská '
+            + 'Lomnicasta on päässyt huipulle köysiradalla, ja siellä saa viipyä 50 '
+            + 'minuuttia. Huipun asemalla toimii ympärivuotisesti aurinko-observatorio ja '
+            + 'sääasema.',
+          lyhyt: 'Korkeiden Tatrojen toiseksi korkein huippu, jonne pääsee köysiradalla.',
+          selite: 'Köysirata kulkee Tatranská Lomnican kylästä huipulle. Huipulla toimii '
+            + 'sääasema.',
+          lahde: 'Margoz, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Lomnický štít',
+        },
+        {
+          otsikko: 'Luola, jonka läpi virtasi Styx',
+          aika: '1926',
+          tiedosto: 'Domica Cave 13.jpg',
+          teksti: 'Domican luola Etelä-Slovakiassa löytyi vuonna 1926, kun Ján Majko osoitti, '
+            + 'että useat paikalliset luolat kuuluvat samaan verkostoon. Luolan käytävät '
+            + 'on muovannut maanalainen joki nimeltä Styx, ja seinillä on tippukivilampia '
+            + 'sekä lepakoiden ulosteesta syntyneitä kuoria. Jo neoliittiset ihmiset '
+            + 'asuivat täällä, ja kaivauksissa on löydetty asumusten paaluaukkoja ja '
+            + 'tulisijoja. Yleisölle on avattu 1600 metriä vuodesta 1932. Luola on osa '
+            + 'Aggtelekin ja Slovakian karstin luolastoa, joka sai Unescon '
+            + 'maailmanperintöstatuksen 1995.',
+          lyhyt: 'Etelä-Slovakian kalkkikiviluola, joka on osa rajat ylittävää karstiluolien '
+            + 'verkostoa.',
+          selite: 'Luolan koko pituus on 5140 metriä. Yhdessä Unkarin Baradla-luolan kanssa '
+            + 'se muodostaa rajat ylittävän luolaverkoston merkittävimmän osan.',
+          lahde: 'Jojo, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Jääluola, jonka jää on 26 metriä paksua',
+          aika: '1870',
+          tiedosto: 'Dobšinská ľadová jaskyňa Ice form well.jpg',
+          teksti: 'Dobšinská jääluola Slovakian paratiisin kansallispuistossa löydettiin 15. '
+            + 'kesäkuuta 1870, kun kaivosinsinööri Jenő Ruffinyi laskeutui sinne. '
+            + 'Paimenet ja metsästäjät olivat tunteneet aukon ammoin nimellä Kylmä reikä. '
+            + 'Luola avattiin yleisölle vuotta myöhemmin, ja 1887 se oli Euroopan '
+            + 'ensimmäinen sähkövalaistu luola. Pohjoiseen avautuva käytävä viettää '
+            + 'alaspäin, joten kylmä ilma valuu talvella sisään ja luola jäätyy. '
+            + 'Keskilämpötila on vuoden ympäri lähellä nollaa, ja jäätä on paikoin jopa '
+            + '26,5 metriä.',
+          lyhyt: 'Slovakian paratiisin jääluola, joka on yksi maailman merkittävimmistä '
+            + 'jääluolista.',
+          selite: 'Luola kuuluu Unescon maailmanperintökohteeseen Aggtelekin ja Slovakian '
+            + 'karstin luolat. Sen ikä on arviolta 250 000 vuotta.',
+          lahde: 'Margoz, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä huippu on Korkeiden Tatrojen ja koko Karpaattien korkein?',
+        vaihtoehdot: [
+          'Gerlach',
+          'Lomnický štít',
+          'Kriváň',
+          'Rysy',
+        ],
+        oikea: 0,
+        fakta: 'Gerlachovský štít on 2654 metrin korkeudellaan Karpaattien korkein huippu.',
+      },
+    },
+    {
+      id: 'keksinnot',
+      nimi: 'Keksinnöt',
+      johdanto: 'Pieni maa, isoja oivalluksia: Slovakiasta ovat kotoisin shakkia pelaava '
+        + 'huijauskone, laskuvarjopatentti, langaton lennätin ja höyryturbiinien '
+        + 'teoria.',
+      nostot: [
+        {
+          otsikko: 'Shakkikone, jonka sisällä istui ihminen',
+          aika: '1770',
+          tiedosto: 'Racknitz - The Turk 3.jpg',
+          teksti: 'Presburgissa eli nykyisessä Bratislavassa syntynyt Wolfgang von Kempelen '
+            + 'esitteli vuonna 1770 keisarinna Maria Teresialle turbaanipäisen '
+            + 'shakkiautomaatin. Turkkilaiseksi nimetty kone voitti useimmat pelinsä, '
+            + 'jopa Napoleonin ja Benjamin Franklinin, ja se kiersi Eurooppaa 84 vuotta. '
+            + 'Laatikossa piileskeli kuitenkin ihminen, joka liikutti nukkea vipujen ja '
+            + 'magneettien avulla. Kuvan piirros on vuodelta 1789: Joseph Racknitz yritti '
+            + 'siinä arvata salaisuuden. Kone tuhoutui tulipalossa 1854, ja täydellinen '
+            + 'selitys julkaistiin vasta 1857.',
+          lyhyt: 'Kempelenin shakkia pelaava esiaste tekoälystä, joka oli huijaus.',
+          selite: 'Piirros esittää Racknitzin arvailua siitä, miten pelaaja piileskeli '
+            + 'laatikossa. Kempelen rakensi myös puhekoneen.',
+          lahde: 'Joseph Racknitz, Wikimedia Commons (public domain)',
+          wiki: 'Wolfgang von Kempelen',
+        },
+        {
+          otsikko: 'Pappi, joka lähetti viestejä ilmassa',
+          aika: '1905',
+          tiedosto: 'Pamatnik Jozef Murgas.jpg',
+          teksti: 'Jozef Murgaš syntyi 1864 Tajovin kylässä, opiskeli papiksi ja maalasi '
+            + 'kirkkoihin alttaritauluja. Vuonna 1896 hän muutti Yhdysvaltoihin '
+            + 'Wilkes-Barren slovakkiseurakuntaan, rakensi laboratorion ja alkoi tutkia '
+            + 'langatonta lennätintä. Ensimmäiset kaksi patenttia hän sai 1904. Vuonna '
+            + '1905 viesti kulki Wilkes-Barresta Scrantoniin, noin 32 kilometrin matkan. '
+            + 'Pisteet ja viivat hän erotti toisistaan äänenkorkeudella: pisteet '
+            + 'korkealla ja viivat matalalla sävelellä. Laboratoriossa kävi vieraana myös '
+            + 'presidentti Theodore Roosevelt.',
+          lyhyt: 'Slovakialainen pappi, taidemaalari ja keksijä, jota kutsuttiin '
+            + 'radiopapiksi.',
+          selite: 'Muistolaatassa lukee, että Murgaš oli radiotelegrafian keksijä, tiedemies, '
+            + 'pappi ja taiteilija.',
+          lahde: 'Qery1337, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Jozef Murgaš',
+        },
+        {
+          otsikko: 'Sateenvarjo selässä',
+          aika: '1914',
+          tiedosto: 'Pomník Štefana Baniča, Letiště M. R. Štefánika, Bratislava - Ružinov, Slovensko 2026.jpg',
+          teksti: 'Štefan Banič syntyi 1870 Smolenican lähellä ja muutti Yhdysvaltoihin, '
+            + 'jossa hän työskenteli hiilikaivoksessa Pennsylvaniassa. Nähtyään '
+            + 'lentokoneen putoamisen 1912 hän rakensi sateenvarjon kaltaisen '
+            + 'laskuvarjon, joka kiinnitettiin kantajan kehoon. Patentti myönnettiin 25. '
+            + 'elokuuta 1914 numerolla 1 108 484. Hänen kerrotaan kokeilleen keksintöään '
+            + 'Washingtonissa hyppäämällä ensin 15-kerroksisen talon katolta ja sitten '
+            + 'lentokoneesta, mutta varmaa näyttöä ei ole. Myöhemmin hän palasi '
+            + 'kotiseudulleen ja auttoi tutkimaan Drinan luolaa.',
+          lyhyt: 'Bratislavan lentokentän muistomerkki laskuvarjon keksijälle Štefan '
+            + 'Baničille.',
+          selite: 'Muistomerkki seisoo Bratislavan lentokentän edessä. Banič sai '
+            + 'keksinnölleen Yhdysvaltain patentin vuonna 1914.',
+          lahde: 'Fry72 (Karel Frydrýšek), Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Professori, joka opetti turbiinit',
+          aika: '1903',
+          tiedosto: 'Košice - Aurel Stodola.jpg',
+          teksti: 'Aurel Stodola syntyi 1859 Liptovin seudulla ja valmistui vuonna 1876 '
+            + 'Košicen reaalikoulusta, kuten kaupungin muistolaatta kertoo. Hän opiskeli '
+            + 'Zürichin polyteknillisessä koulussa ja toimi siellä professorina vuodesta '
+            + '1892 eläkkeelle jäämiseen 1929 asti. Hänen kirjansa Die Dampfturbine '
+            + 'ilmestyi 1903, ja se käsitteli lämpöoppia, virtauksia ja värähtelyjä '
+            + 'höyryturbiineissa. Stodola perusti Zürichiin energianmuunnoksen '
+            + 'laboratorion ja piti ystävällistä yhteyttä Albert Einsteiniin. Sveitsin '
+            + 'kansalaisuuden hän sai 1905.',
+          lyhyt: 'Muistolaatta höyry- ja kaasuturbiinien teorian pioneerille Košicen '
+            + 'kaupungissa.',
+          selite: 'Stodolaa pidetään teknisen termodynamiikan pioneerina. Muistolaatta '
+            + 'paljastettiin 1989, hänen syntymänsä 130-vuotispäivänä.',
+          lahde: 'Ladislav Luppa, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuinka pitkän matkan Murgašin langaton viesti kulki Wilkes-Barresta '
+          + 'Scrantoniin 1905?',
+        vaihtoehdot: [
+          '1,5 kilometriä',
+          '8 kilometriä',
+          '32 kilometriä',
+          '200 kilometriä',
+        ],
+        oikea: 2,
+        fakta: 'Murgašin äänisävelillä toimiva järjestelmä lähetti viestin noin 32 '
+          + 'kilometrin matkan vuonna 1905.',
+      },
+    },
+    {
+      id: 'rakennukset',
+      nimi: 'Rakennukset',
+      johdanto: 'Slovakian rakennukset kertovat monesta maailmasta: hirsitaloista '
+        + 'vuoristokylässä, kaupunginportista kruunajaiskulkueiden reitillä ja '
+        + 'jugend-kirkosta, jota kutsutaan siniseksi.',
+      nostot: [
+        {
+          otsikko: 'Kylä, jossa aika pysähtyi',
+          aika: '1376',
+          tiedosto: 'Vlkolínec, Slovakia 006.jpg',
+          teksti: 'Vlkolínec Ružomberokin lähellä mainitaan ensimmäisen kerran vuonna 1376, '
+            + 'ja sen nimi tulee luultavasti sanasta vlk eli susi. Kylässä on yli 45 '
+            + 'hirsitaloa, joissa jokaisessa on kaksi tai kolme huonetta, sekä '
+            + '1700-luvulta peräisin oleva puinen kellotorni ja barokkikappeli. Talot '
+            + 'numero 16 ja 17 on muutettu kansanelämän museoksi, jossa on arjen ja työn '
+            + 'esineitä. Kylä on ollut Unescon maailmanperintökohde vuodesta 1993 ja on '
+            + 'Pohjois-Karpaattien kansanarkkitehtuurin ehjimpiä esimerkkejä.',
+          lyhyt: 'Perinteinen hirsitalokylä Keski-Slovakian vuoristossa.',
+          selite: 'Kylä on yksi Slovakian kymmenestä kansanarkkitehtuurin suojelualueesta. '
+            + 'Sen puinen kellotorni on peräisin 1700-luvulta.',
+          lahde: 'Maros Mraz, Wikimedia Commons (CC BY 2.5)',
+          wiki: 'Vlkolínec',
+        },
+        {
+          otsikko: 'Kirkko ilman nauloja',
+          aika: '1717',
+          tiedosto: 'Wooden articular church in Kežmarok, Slovakia 01.jpg',
+          teksti: 'Vuoden 1681 Sopronin sopimus salli luterilaisten rakentaa Unkarissa vain '
+            + 'vähän kirkkoja, ja niiden piti olla halvinta mahdollista materiaalia eli '
+            + 'puuta. Kežmarokin artikulaarikirkon naulatkin tehtiin puusta, ja '
+            + 'rakentamiseen sai käyttää 365 päivää. Kaupungin muurien ulkopuolella '
+            + 'sijainneesta entisestä kapakasta tehtiin tarkoituksella nöyryyttäen kirkon '
+            + 'sakaristo. Nykyinen barokkikirkko valmistui 1717 tasasivuisen ristin '
+            + 'muotoon, ja sinne mahtuu yli 1500 ihmistä. Urkuputkikin ovat puuta.',
+          lyhyt: 'Puinen luterilainen kirkko Kežmarokissa Pohjois-Slovakiassa.',
+          selite: 'Kirkko on yksi viidestä jäljellä olevasta luterilaisesta puukirkosta '
+            + 'Slovakiassa. Se on suojeltu historiallinen muistomerkki.',
+          lahde: 'Michal Klajban, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kruunajaiskulkueen viimeinen portti',
+          aika: 'n. 1300',
+          tiedosto: 'Michalská brána Bratislava October 2006 006.jpg',
+          teksti: 'Mikaelin portti on ainoa säilynyt Bratislavan keskiaikaisista '
+            + 'kaupunginporteista, ja sen historia ulottuu 1200-luvun loppuun. Vuosina '
+            + '1563–1830 Unkarin 19 kuningasta kulki kruunajaiskulkueessa tornin kautta, '
+            + 'ennen kuin kruunaus tapahtui Pyhän Martinin katedraalissa. Nykyisen '
+            + 'muotonsa torni sai 1753–1758 barokkikunnostuksessa, jolloin sen huipulle '
+            + 'asetettiin 51 metrin korkeuteen Pyhän Mikaelin ja lohikäärmeen patsas. '
+            + 'Portin edessä oleva tiilisilta vuodelta 1727 on kaupungin vanhin silta.',
+          lyhyt: 'Bratislavan vanhankaupungin ainoa säilynyt keskiaikainen kaupunginportti.',
+          selite: 'Portti sai nimensä sen edessä seisseestä Pyhän Mikaelin kirkosta. Läheltä '
+            + 'löytyy Bratislavan vallihaudan viimeinen jäljellä oleva pätkä.',
+          lahde: 'Gryffindor, Wikimedia Commons (CC BY 2.5)',
+          wiki: 'Bratislavan vanhakaupunki',
+        },
+        {
+          otsikko: 'Sininen kirkko',
+          aika: '1913',
+          tiedosto: 'Church of St. Elizabeth nicknamed The Blue Church (10267484804).jpg',
+          teksti: 'Pyhän Elisabetin kirkko rakennettiin 1908–1913 unkarilaisen Ödön Lechnerin '
+            + 'suunnitelmien mukaan jugend-tyyliin. Julkisivu maalattiin ensin vaaleilla '
+            + 'pastellisävyillä, mutta myöhemmin siitä tuli sininen: sinisiä ovat seinät, '
+            + 'mosaiikit, majolikat ja lasitettu katto. Sylinterimäinen torni on 36,8 '
+            + 'metriä korkea. Alun perin kirkolle suunniteltiin kupolia, mutta tilalle '
+            + 'tuli tynnyriholvi. Kirkko oli aluksi viereisen lukion koulukappeli, ja sen '
+            + 'pienoismalli edustaa Slovakiaa Mini-Europe-puistossa Brysselissä.',
+          lyhyt: 'Bratislavan vanhankaupungin jugend-kirkko, jota kutsutaan siniseksi '
+            + 'kirkoksi.',
+          selite: 'Kirkko on omistettu Unkarin Elisabetille, joka kasvoi Bratislavan '
+            + 'linnassa. Julkisivun sininen väri on peräisin myöhemmästä maalauksesta.',
+          lahde: 'Jorge Láscar, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Montako päivää Kežmarokin puisen artikulaarikirkon rakentamiseen sai '
+          + 'käyttää?',
+        vaihtoehdot: [
+          '100 päivää',
+          '365 päivää',
+          '730 päivää',
+          '1 000 päivää',
+        ],
+        oikea: 1,
+        fakta: 'Kežmarokin artikulaarikirkko piti Sopronin sopimuksen ehtojen mukaan '
+          + 'rakentaa 365 päivässä ja ilman metallisia nauloja.',
+      },
+    },
+  ],
+  MLT: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Pienellä saarella kohtaavat yli 5 500 vuotta vanhat kivitemppelit, '
+        + 'maanalainen hautakammio ja kaupunki, joka suunniteltiin viivaimella. Malta '
+        + 'on aikamatka, jonka jokaisella pysäkillä on oma kivikerroksensa.',
+      nostot: [
+        {
+          otsikko: 'Jättiläisten temppeli',
+          aika: 'n. 3600–2500 eaa.',
+          tiedosto: 'Templo de Ġgantija, isla de Gozo, Malta, 2021-08-23, DD 17.jpg',
+          teksti: 'Gozon Xagħran tasangolla seisoo kiviseinä, jonka lohkareet ovat ihmistä '
+            + 'suurempia. Paikallisen tarinan mukaan sen rakensi jättiläisnainen Sansuna, '
+            + 'joka söi pelkkiä härkäpapuja ja hunajaa ja kantoi samalla lastaan '
+            + 'olallaan. Todellisuudessa Ġgantijan kaksi temppeliä pystytettiin yli 5 500 '
+            + 'vuotta sitten, ennen Egyptin pyramideja. Eteläisen temppelin seinä nousee '
+            + 'kuuteen metriin, ja se avautuu kaakkoon. Nimi tarkoittaa jättiläisten '
+            + 'paikkaa. Kohde liitettiin Unescon maailmanperintöluetteloon vuonna 1980.',
+          lyhyt: 'Gozon esihistoriallinen megaliittitemppeli, yksi maailman vanhimmista '
+            + 'säilyneistä uskonnollisista rakennuksista.',
+          selite: 'Ġgantijan temppelit kuuluvat Maltan megaliittisiin temppeleihin. Ne ovat '
+            + 'kaksi vierekkäistä temppeliä Xagħran tasangon reunalla.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Maltan megaliittiset temppelit',
+        },
+        {
+          otsikko: 'Katto romahti kaivuutyömaalla',
+          aika: '1902',
+          tiedosto: 'Hal Saflieni Hypogeum – Middle Level – The Holy of Holies.jpg',
+          teksti: 'Vuonna 1902 Paolassa rakennettiin uutta asuinaluetta, ja työmiehet '
+            + 'louhivat vesisäiliötä. Yhtäkkiä he puhkaisivat vahingossa katon, ja alta '
+            + 'paljastui kolmikerroksinen labyrintti, joka oli veistetty pehmeään '
+            + 'kalkkikiveen. Ħal Saflienin hypogeumi toimi pyhäkkönä ja hautakammiona, ja '
+            + 'sinne haudattiin arviolta 7 000 ihmistä. Kattoon on maalattu punaokralla '
+            + 'kierteitä ja pilkkuja, ja yhden kammion kolo saattoi vahvistaa laulun ja '
+            + 'rummutuksen kaikua muihin huoneisiin. Nykyään sisään pääsee vain 80 '
+            + 'kävijää päivässä.',
+          lyhyt: 'Maanalainen uuden kivikauden pyhäkkö ja hautakammio Paolassa.',
+          selite: 'Pyhien pyhä on hypogeumin keskitason kammio. Sen pyöreät muodot on '
+            + 'veistetty suoraan kallioon.',
+          lahde: 'xiquinhosilva, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Ħal Saflienin hypogeum',
+        },
+        {
+          otsikko: 'Kaupunki piirrettiin viivaimella',
+          aika: '1566',
+          tiedosto: 'Valletta, Malta (Aerial View).jpg',
+          teksti: 'Maaliskuun 28. päivänä 1566 suurmestari Jean de Valette laski peruskiven '
+            + 'uudelle kaupungille Sciberras-niemellä. Suuren piirityksen jälkeen '
+            + 'ritarikunta halusi rakentaa linnoitetun pääkaupungin, ja paavi lähetti '
+            + 'suunnittelijaksi Francesco Laparellin. Hän hylkäsi mutkittelevat kujat ja '
+            + 'piirsi suorakulmaisen ruutukaavan, jossa leveät kadut kulkevat '
+            + 'kaupunginportilta kohti Fort St. Elmoa. Laparellin kuoltua työtä johti '
+            + 'maltalainen Girolamo Cassar. Valletta valmistui pääosin 1570-luvun alkuun '
+            + 'mennessä, ja siitä tuli pääkaupunki vuonna 1571.',
+          lyhyt: 'Maltan pääkaupunki, jonka Pyhän Johanneksen ritarikunta perusti '
+            + '1500-luvulla.',
+          selite: 'Valletta sijaitsee kapealla niemellä Grand Harbourin ja Marsamxettin '
+            + 'satamien välissä. Kaupunki on Unescon maailmanperintökohde.',
+          lahde: 'Jonathan Mercieca, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Valletta',
+        },
+        {
+          otsikko: 'Hiljainen kaupunki',
+          aika: 'n. 700-luku eaa.',
+          tiedosto: 'Aerial view Mdina, Malta.jpg',
+          teksti: 'Foinikialaiset perustivat Mdinan paikalle asutuksen noin 700-luvulla eaa., '
+            + 'ja roomalaisten aikana se sai nimen Melita. Nykyinen nimi tulee arabian '
+            + 'sanasta madīnah, kaupunki. Mdina oli Maltan pääkaupunki antiikista '
+            + 'keskiajalle, kunnes Pyhän Johanneksen ritarikunta asettui vuonna 1530 '
+            + 'Birguun. Sen jälkeen kaupunki ei enää kasvanut muurien ulkopuolelle, ja '
+            + 'sitä alettiin kutsua Hiljaiseksi kaupungiksi. Vuonna 2024 muurien sisällä '
+            + 'asui vain 242 ihmistä, ja omaisuus siirtyy yhä sukupolvelta toiselle.',
+          lyhyt: 'Muurien ympäröimä entinen Maltan pääkaupunki, jossa asuu vain muutama sata '
+            + 'ihmistä.',
+          selite: 'Mdina on keskiaikainen linnoituskaupunki Maltan sisämaassa. Se on ollut '
+            + 'pitkään aateliston ja kirkon keskus.',
+          lahde: 'R Muscat, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Mdina',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minä vuonna suurmestari de Valette laski Valletan peruskiven?',
+        vaihtoehdot: [
+          '1530',
+          '1566',
+          '1571',
+          '1798',
+        ],
+        oikea: 1,
+        fakta: 'Valletan peruskiven laski suurmestari Jean de Valette 28. maaliskuuta '
+          + '1566.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Maltan keittiössä kohtaavat Italia, arabimaailma ja Britannia, ja tulos on '
+        + 'omaleimainen. Aamiaiseksi kelpaa rapea kerrospiirakka, ja kansallisruoka '
+        + 'syntyi luultavasti ritarien metsästyskiellon uhmasta.',
+      nostot: [
+        {
+          otsikko: 'Pastizzi täyttää aamun',
+          aika: 'nykyään',
+          tiedosto: 'Pastizzi in Rabat Nov 2014.JPG',
+          teksti: 'Maltalaisessa pastizzerijassa aamu alkaa pastizzeista. Piiras on suikea '
+            + 'tai pyöreä, ja sen taikina muistuttaa kreikkalaista filotaikinaa, vaikka '
+            + 'lehtitaikinaversiokin on olemassa. Perinteisiä täytteitä on kaksi: ricotta '
+            + 'eli irkotta tai currylla maustetut herneet eli piżelli. Täytteen tunnistaa '
+            + 'taitteesta, sillä ricottapiiraat taitetaan keskeltä ja hernepiiraat '
+            + 'sivulta. Kylissä pastizzit ovat suosittu aamiainen. Maltaksi hyvin '
+            + 'kaupaksi menevän tuotteen sanotaan myyvän kuin pastizzi.',
+          lyhyt: 'Maltalainen suolainen piirakka, jonka täyte on ricottaa tai hernemurskaa.',
+          selite: 'Pastizzi on yksi Maltan tunnetuimmista perinneruoista. Sitä myydään '
+            + 'pienissä pastizzerijoissa ja kahviloissa.',
+          lahde: 'Kritzolina, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Maltalainen keittiö',
+        },
+        {
+          otsikko: 'Kaniinipata kapinan makuna',
+          aika: 'n. 1700-luku',
+          tiedosto: 'The national dish of Malta – Stuffat tal-Fenek (rabbit stew).jpg',
+          teksti: 'Stuffat tal-fenek, kaniinipata, on Maltan kansallisruoka. Sen uskotaan '
+            + 'saaneen alkunsa hiljaisena vastarintana: Pyhän Johanneksen ritarit '
+            + 'rajoittivat metsästystä ja varasivat riistan itselleen, joten kaniinin '
+            + 'syöminen oli pienoista uhmaa. Ruoka yleistyi 1700-luvun lopulla, kun '
+            + 'rajoitukset purettiin, saarten oma Tax-Xiber-kaniini oli lisääntynyt ja '
+            + 'hinnat laskivat. Kesyjen kaniinien kasvatuksen arvellaan levinneen '
+            + 'Maltalle ranskalaisten ritarien mukana. Ruokalajin nimessä fenek '
+            + 'tarkoittaa kaniinia.',
+          lyhyt: 'Maltan kansallisruoaksi katsottu kaniinipata.',
+          selite: 'Stuffat tal-fenek on kaniinista valmistettu pata. Se on Maltan keittiön '
+            + 'tunnetuin ruokalaji.',
+          lahde: 'Renata Apan, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Maltalainen keittiö',
+        },
+        {
+          otsikko: 'Leipä Unescon listalla',
+          aika: 'n. 1500-luku',
+          tiedosto: 'Ftira with Tuna in Marsaxlokk 01.jpg',
+          teksti: 'Maltalainen ftira on hapanleipä, joka leivotaan rengasmaiseksi tai '
+            + 'litteäksi. Sen väliin tulee sardiineja, tonnikalaa, perunaa, tomaattia, '
+            + 'sipulia, kaprista ja oliiveja. Gozolla ftira tarjoillaan lähes pizzan '
+            + 'tapaan avoimena, ohuiden perunaviipaleiden peittämänä, tai kaksinkerroin '
+            + 'taitettuna calzonen tavoin. Ftiran leipomisen uskotaan ulottuvan '
+            + '1500-luvulle. Vuonna 2020 Unescon aineettoman kulttuuriperinnön luetteloon '
+            + 'lisättiin maltalaisen litteän hapanleivän, ftiran, valmistuksen taito.',
+          lyhyt: 'Maltalainen rengasmainen tai litteä hapanleipä, jonka väliin tulee kalaa '
+            + 'ja kasviksia.',
+          selite: 'Ftira on yksi Maltan tärkeimmistä leipäperinteistä. Sen leipomisen taito '
+            + 'on Unescon aineettoman kulttuuriperinnön luettelossa.',
+          lahde: 'Kritzolina, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Maltalainen keittiö',
+        },
+        {
+          otsikko: 'Joulun hunajarengas',
+          aika: 'perinteisesti joulu',
+          tiedosto: 'Traditional Honey Rings, a Maltese delicacy or “Qagħaq ta’ L-Għasel”.jpg',
+          teksti: 'Qagħaq tal-għasel on rengas, jonka sisällä on tumma täyte. Taikinaan '
+            + 'tehdään viiltoja, joista täyte pursuaa esiin. Täyte valmistetaan '
+            + 'perinteisesti hunajasta, melassista, aniksesta, kanelista ja neilikasta, '
+            + 'ja osa lisää mukaan kaakaota. Herkkua leivottiin alun perin jouluksi, '
+            + 'mutta siitä tuli niin suosittu, että sitä tehdään ympäri vuoden, eivätkä '
+            + 'monet enää tiedä sen joulutaustaa. Rengas symboloi ikuista onnea, ja ulos '
+            + 'valuva täyte kertoo, että hyvää riittää yllin kyllin.',
+          lyhyt: 'Maltalainen rengasleivonnainen, jonka täyte on hunajaa ja melassia.',
+          selite: 'Qagħaq tal-għasel on perinteinen maltalainen makeinen. Sen nimi tarkoittaa '
+            + 'hunajarenkaita.',
+          lahde: 'Renata Apan, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Maltalainen keittiö',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä perinteistä täytettä pastizzeissa on ricottan lisäksi?',
+        vaihtoehdot: [
+          'Sienet',
+          'Tonnikala',
+          'Oliivit',
+          'Herneet',
+        ],
+        oikea: 3,
+        fakta: 'Pastizzien perinteiset täytteet ovat ricotta ja currylla maustetut '
+          + 'herneet.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Kalkkikivi, meri ja tuuli ovat veistäneet Maltan saaristoon laguuneja, '
+        + 'jyrkänteitä ja kaaria. Yksi niistä on jo sortunut mereen, ja toinen '
+        + 'houkuttelee turkoosilla vedellään.',
+      nostot: [
+        {
+          otsikko: 'Turkoosi laguuni',
+          aika: 'nykyään',
+          tiedosto: 'Malta - Ghajnsielem - Comino + Large Blue Lagoon Rock + Small Blue Lagoon Rock + Cominotto + Blue Lagoon 01 ies.jpg',
+          teksti: 'Maltan ja Gozon välissä on pieni Comino eli Kemmuna. Saaren nimi tulee '
+            + 'kumminasta, ja pysyviä asukkaita siellä on vain kaksi. Comino on lintujen '
+            + 'suojelualue, ja sen kalkkikivirannat ovat jyrkkiä ja täynnä luolia. '
+            + 'Sininen laguuni on Cominon ja Cominotto-luodon välissä oleva kirkasvetinen '
+            + 'lahti, jonka vesi hohtaa turkoosina. Keskiajalla saaren luolissa '
+            + 'piileskelivät merirosvot, ja myöhemmin ritarit käyttivät saarta '
+            + 'metsästysmaanaan ja vartioivat riistaa tiukasti.',
+          lyhyt: 'Sininen laguuni on Cominon ja Cominotton välinen kirkasvetinen merenlahti '
+            + 'Maltan saaristossa.',
+          selite: 'Comino sijaitsee Maltan ja Gozon välissä. Saari on luonnonsuojelualue ja '
+            + 'tärkeä lintualue.',
+          lahde: 'Frank Vincentz, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Kemmuna',
+        },
+        {
+          otsikko: 'Kaari joka romahti myrskyssä',
+          aika: '8.3.2017',
+          tiedosto: 'Azure Window Gozo 2016.jpg',
+          teksti: 'Gozon Dwejran rannikolla seisoi kerran 28 metriä korkea kalkkikaari, jota '
+            + 'kutsuttiin Siniseksi ikkunaksi. Meri veisti sen hitaasti: aaltojen '
+            + 'kaivertama luola muuttui kaareksi, ja koko prosessin arvioidaan kestäneen '
+            + 'noin 500 vuotta. Vanhin tunnettu valokuva kaaresta on todennäköisesti '
+            + 'Richard Ellisin ottama vuodelta 1879. Kaari oli yksi saaren suosituimmista '
+            + 'nähtävyyksistä ja esiintyi useissa elokuvissa. Maaliskuun 8. päivänä 2017 '
+            + 'se romahti myrskyssä mereen.',
+          lyhyt: 'Gozon kuuluisa luonnonkaari, joka romahti mereen vuonna 2017.',
+          selite: 'Azure Window eli Dwejran ikkuna oli kalkkikiveä oleva luonnonkaari Dwejran '
+            + 'lahdella Gozolla. Sen lähellä ovat Sisämeri ja Sienikallio.',
+          lahde: 'Freddyolsson, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Gozo',
+        },
+        {
+          otsikko: 'Jyrkänne Maltan katolla',
+          aika: 'nykyään',
+          tiedosto: 'Dingli Cliffs 2009.JPG',
+          teksti: 'Maltan länsirannikolla Dinglin kylä seisoo tasangolla noin 230 metrin '
+            + 'korkeudessa, ja aivan sen vieressä jyrkänne pudottaa maiseman mereen. '
+            + 'Maltan korkein kohta, Ta\' Dmejrek, nousee 253 metriin. Ritarikunnan aikana '
+            + 'Dinglin seutua pidettiin turvallisena merirosvoilta, koska jyrkänteiden '
+            + 'takia rantaan oli mahdotonta nousta. Merellä näkyy pieni asumaton '
+            + 'Filfla-saari. Kylän nimen uskotaan tulevan englantilaisesta ritarista sir '
+            + 'Thomas Dingleystä, jonka omistuksessa oli suuri osa seudun maista.',
+          lyhyt: 'Dinglin jyrkänteet ovat Maltan länsirannikon korkeita kalliorantoja.',
+          selite: 'Dingli Cliffs on Maltan länsirannikon jyrkänne Dinglin kylän kupeessa. Sen '
+            + 'päältä avautuu näköala Filflan saarelle.',
+          lahde: 'Felix König, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          otsikko: 'Kansalliskasvi liikenneympyrässä',
+          aika: 'nykyään',
+          tiedosto: 'Cheirolophus crassifolius Malta Dingli Cliffs 01.jpg',
+          teksti: 'Yksi Maltan erikoisuuksista on kasvi, jota ei kasva luonnonvaraisena '
+            + 'missään muualla maailmassa: Cheirolophus crassifolius, maltaksi Widnet '
+            + 'il-Baħar. Se viihtyy kallioseinämillä ja rannikon laaksoissa, ja sen '
+            + 'lehdet ovat paksuja, mehevän lusikan muotoisia. Luonnossa se on '
+            + 'harvinainen, mutta Maltan länsirannikon jyrkänteillä sen voi nähdä. Kasvi '
+            + 'on niin tärkeä kansallinen symboli, että sitä viljellään jopa '
+            + 'liikenneympyröissä. Elinympäristön häviäminen uhkaa sitä.',
+          lyhyt: 'Maltan kansalliskasvi, joka kasvaa luonnonvaraisena vain Maltan saarilla.',
+          selite: 'Cheirolophus crassifolius on Maltan endeeminen kasvi. Se kasvaa '
+            + 'erityisesti saaren länsirannikon jyrkänteillä.',
+          lahde: 'Denis Barthel, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minä vuonna Gozon Sininen ikkuna romahti mereen?',
+        vaihtoehdot: [
+          '2017',
+          '2004',
+          '1998',
+          '2012',
+        ],
+        oikea: 0,
+        fakta: 'Gozon Azure Window romahti myrskyssä 8. maaliskuuta 2017.',
+      },
+    },
+    {
+      id: 'rakennukset',
+      nimi: 'Rakennukset',
+      johdanto: 'Linnoitukselta näyttävä kirkko kätkee sisäänsä kultaista barokkia, ja '
+        + 'pikkukylän kupoli kilpaili aikanaan Rooman Pantheonin kanssa. Maltan '
+        + 'rakennuksissa näkyy sekä ritarien että kyläläisten ylpeys.',
+      nostot: [
+        {
+          otsikko: 'Linnoitukselta näyttävä kultakirkko',
+          aika: '1573–1578',
+          tiedosto: 'St. John\'s Co-Cathedral, Valletta 070.jpg',
+          teksti: 'Ulkoa Pyhän Johanneksen konkatedraali Vallettassa muistuttaa linnoitusta: '
+            + 'julkisivu on lähes koruton, ja sitä reunustaa kaksi suurta kellotornia. '
+            + 'Sisällä odottaa aivan toinen maailma. Ritarikunta rakennutti kirkon '
+            + 'vuosina 1573–1578 Girolamo Cassarin suunnitelmien mukaan. 1660-luvulla '
+            + 'Mattia Preti muutti sisätilan täysin barokkiin, ja siitä tuli yksi '
+            + 'Euroopan hienoimmista barokkisisätiloista. Walter Scott kirjoitti vuonna '
+            + '1831, ettei ollut koskaan nähnyt niin vaikuttavaa kirkon sisätilaa.',
+          lyhyt: 'Vallettan barokkikirkko, joka rakennettiin Pyhän Johanneksen ritarikunnan '
+            + 'pääkirkoksi.',
+          selite: 'Pyhän Johanneksen konkatedraali on Vallettan tunnetuin kirkko. Sen '
+            + 'barokkisisustus on pääosin Mattia Pretin suunnittelema.',
+          lahde: 'Simon Burchell, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Valletta',
+        },
+        {
+          otsikko: 'Kylän kupoli Pantheonin mallilla',
+          aika: '1833–1860-luku',
+          tiedosto: 'Church of Santa Marija, Mosta (Rotunda of Mosta) 20.jpg',
+          teksti: 'Mostan asukkaat totesivat 1830-luvulla, että vanha kirkko oli liian pieni, '
+            + 'ja aloittivat uuden rakentamisen. Vanha kirkko pysyi käytössä koko ajan, '
+            + 'ja uusi nousi sen ympärille. Kyläläiset osallistuivat rakennustöihin '
+            + 'sunnuntaisin ja pyhäpäivinä. Esikuvana oli Rooman Pantheon: pyöreän kirkon '
+            + 'kupolin sisähalkaisija on 40 metriä, ja kupoli oli aikanaan maailman '
+            + 'kolmanneksi suurin. Rotunda valmistui 1860-luvun alussa 28 vuoden urakan '
+            + 'jälkeen, ja kirkko vihittiin käyttöön vuonna 1871.',
+          lyhyt: 'Mostan pyöreä basilika, jonka kupoli on yksi maailman suurimmista '
+            + 'tukemattomista kupoleista.',
+          selite: 'Mostan rotunda eli Santa Marijan basilika on Maltan suurin kirkko. Se on '
+            + 'omistettu Neitsyt Marian taivaaseenotolle.',
+          lahde: 'Simon Burchell, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mosta',
+        },
+        {
+          otsikko: 'Teatteri kymmenessä kuukaudessa',
+          aika: '1731',
+          tiedosto: 'Malta - Valletta - Manoel Theatre (monument 01140) 20220521.jpg',
+          teksti: 'Suurmestari António Manoel de Vilhena tilasi Vallettaan julkisen teatterin '
+            + 'vuonna 1731 ja maksoi sen itse, jotta ihmisillä olisi kunniallista huvia. '
+            + 'Rakennus valmistui kuulemma vain kymmenessä kuukaudessa. Ensimmäinen '
+            + 'näytelmä, Merope, esitettiin 9. tammikuuta 1732, ja näyttelijöinä olivat '
+            + 'ritarit itse. Salissa on 534 paikkaa, ja kolme parvekekerrosta on tehty '
+            + 'kokonaan puusta ja koristeltu lehtikullalla. Teatteria pidetään Euroopan '
+            + 'kolmanneksi vanhimpana yhä toimivana teatterina.',
+          lyhyt: 'Vallettan 1700-luvulla rakennettu kansallisteatteri ja Maltan '
+            + 'filharmonisen orkesterin koti.',
+          selite: 'Teatru Manoel on nimetty suurmestari Vilhenan mukaan. Se sijaitsee '
+            + 'Vallettan Old Theatre Streetillä.',
+          lahde: 'Otter, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Valletta',
+        },
+        {
+          otsikko: 'Linnake Grand Harbourin sydämessä',
+          aika: 'n. 1530–1690-luku',
+          tiedosto: 'Fuerte de San Ángel, Birgu, isla de Malta, Malta, 2021-08-25, DD 193.jpg',
+          teksti: 'Fort St. Angelo Birgussa seisoo Grand Harbourin keskellä niemellä, jolla '
+            + 'on ollut linnoitus jo keskiajalla. Antiikin aikaan paikalla oli Astarten '
+            + 'temppeli, ja myöhemmin linnaa kutsuttiin nimellä Castrum Maris, Meren '
+            + 'linna. Kun ritarikunta saapui Maltalle vuonna 1530, se valitsi '
+            + 'asuinpaikakseen Birgun, ja linnake tuli suurmestarin kotipaikaksi. '
+            + 'Nykyisen ilmeensä se sai 1690-luvun uudistuksessa, jonka suunnitteli '
+            + 'Carlos de Grunenbergh. Britit pitivät linnakkeessa varuskuntaa vuosina '
+            + '1800–1979.',
+          lyhyt: 'Birgun niemellä sijaitseva linnake, joka toimi ritarikunnan suurmestarin '
+            + 'asuinpaikkana.',
+          selite: 'Fort St. Angelo kuuluu Maltan satamien ritarikunnan linnoituksiin, jotka '
+            + 'ovat Unescon alustavalla maailmanperintöluettelolla.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Birgu',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minkä Rooman rakennuksen mukaan Mostan rotunda mallinnettiin?',
+        vaihtoehdot: [
+          'Colosseum',
+          'Forum Romanum',
+          'Pantheon',
+          'Peterinkirkko',
+        ],
+        oikea: 2,
+        fakta: 'Mostan rotunda mallinnettiin Rooman Pantheonin mukaan, ja sen kupolin '
+          + 'sisähalkaisija on 40 metriä.',
+      },
+    },
+    {
+      id: 'arki',
+      nimi: 'Arki',
+      johdanto: 'Maltalla arki on värikästä: kalastajaveneiden silmät katsovat merelle, '
+        + 'puuparvekkeet vihertävät kadun yllä ja kesäisin kylän kirkko syttyy '
+        + 'valoihin. Kaiken taustalla soi kieli, jonka juuret ovat arabiassa mutta '
+        + 'jota kirjoitetaan latinalaisilla aakkosilla.',
+      nostot: [
+        {
+          otsikko: 'Vene jonka keulassa on silmät',
+          aika: 'n. 1900-luvun alku',
+          tiedosto: 'Luzzu in Marsaxlokk 04.jpg',
+          teksti: 'Marsaxlokkin satamassa värikkäät luzzu-kalastusveneet keinuvat rivissä, ja '
+            + 'jokaisen keulassa on kaksi silmää. Silmien arvellaan olevan perua '
+            + 'muinaisten foinikialaisten tavasta, ja niiden sanotaan suojelevan '
+            + 'kalastajia merellä. Luzzu kehittyi 1900-luvun alussa italialaisesta '
+            + 'gozzo-veneestä. Rungon yläkaista, viiksi eli mustaċċ, kertoi ennen '
+            + 'omistajan kotipaikan, ja musta viiksi ilmaisi surua perheessä. Uusia '
+            + 'luzzuja ei enää rakenneta, mutta muutama sata on yhä käytössä.',
+          lyhyt: 'Maltalainen perinteinen kalastusvene, jonka keulassa on silmäpari.',
+          selite: 'Luzzu on Maltan symboleihin kuuluva kalastusvene. Marsaxlokkin satamassa '
+            + 'niitä on eniten.',
+          lahde: 'Kritzolina, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Marsaxlokk',
+        },
+        {
+          otsikko: 'Kylä syttyy juhlaan',
+          aika: 'nykyään',
+          tiedosto: 'Festa Time Mgarr.jpg',
+          teksti: 'Kesäisin lähes joka viikonloppu jokin Maltan kylä juhlii '
+            + 'suojelupyhimystään festalla. Pääkadut koristellaan brokadilipuilla, ja '
+            + 'kirkko valaistaan illalla lampuilla. Juhlan huippu on korkea messu, jonka '
+            + 'jälkeen pyhimyksen patsas kannetaan kulkueessa kylän kaduille. Sitten '
+            + 'alkaa useita päiviä kestävä riemu: soittokunnat marssivat, ilotulitteet '
+            + 'paukkuvat ja juhlat jatkuvat yöhön. Mġarrissa festaa vietetään 15. '
+            + 'elokuuta Neitsyt Marian taivaaseenoton kunniaksi, ja ilotulituksesta '
+            + 'vastaa oma seuransa.',
+          lyhyt: 'Maltalaisten kylien vuosittainen suojelupyhimyksen juhla.',
+          selite: 'Festa on suojelupyhimyksen kunniaksi järjestettävä kyläjuhla, joka kuuluu '
+            + 'erityisesti Maltan kesään.',
+          lahde: 'Lance Anthony, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Parveke josta näkee kaiken',
+          aika: '1600-luku',
+          tiedosto: 'Sliema Malta Colored-Balconies-01.jpg',
+          teksti: 'Maltalaisten talojen julkisivuja koristavat suljetut puuparvekkeet, '
+            + 'gallariji. Ne polveutuvat arabialaisista mashrabiya-parvekkeista, mutta '
+            + 'yleistyivät vasta 1600-luvulla. Vanhin tunnettu esitys on Vallettan '
+            + 'suurmestarin palatsin kulmaparveke noin vuodelta 1675. Vuonna 1679 eräs '
+            + 'vieras kirjoitti, että suurmestari käveli lasitetulla parvekkeella '
+            + 'mielellään, koska sieltä näki aukioiden tapahtumat itse näkymättä. '
+            + 'Parvekkeita kannattavia kivikonsoleja sanotaan saljaturiksi, ja lasiläpät '
+            + 'ovat purtelleja.',
+          lyhyt: 'Maltalainen perinteinen suljettu puuparveke.',
+          selite: 'Gallarija on maltalaisen kansanomaisen rakentamisen tunnusmerkki. Se '
+            + 'yleistyi Vallettassa ja Kolmessa kaupungissa 1700-luvulla.',
+          lahde: 'CEphoto, Uwe Aranas, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Vanhin maltankielinen runo',
+          aika: 'n. 1470-luku',
+          tiedosto: 'Peter Caxaro - Cantilena.jpg',
+          teksti: 'Maltan kieli on ainoa semiittinen kieli, jota kirjoitetaan latinalaisilla '
+            + 'aakkosilla. Sen juuret ovat Sisilian arabiassa, mutta sanastoon on tullut '
+            + 'paljon italiaa ja sisilian kieltä. Vanhin tunnettu maltankielinen '
+            + 'kirjallinen teksti on Il-Kantilena, Pietru Caxaron runo. Se on kirjoitettu '
+            + '1400-luvulla, luultavasti 1470-luvulla, mutta löydettiin vasta vuonna '
+            + '1966. Runo säilytetään Vallettan notaariarkistossa, ja huhtikuussa 2025 se '
+            + 'liitettiin Unescon Muisti maailmassa -luetteloon.',
+          lyhyt: 'Il-Kantilena on vanhin tunnettu maltankielinen kirjallinen teksti.',
+          selite: 'Maltan kieli on kehittynyt Sisilian arabiasta. Sitä kirjoitetaan '
+            + 'latinalaisilla aakkosilla, ja sanastossa on paljon italialaisia lainoja.',
+          lahde: 'Pietru Caxaro, Wikimedia Commons (public domain)',
+          wiki: 'Maltan kieli',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä koriste on maltalaisen luzzu-kalastusveneen keulassa?',
+        vaihtoehdot: [
+          'Kalastusverkko',
+          'Silmäpari',
+          'Lippu',
+          'Kultakruunu',
+        ],
+        oikea: 1,
+        fakta: 'Luzzu-veneen keulaan maalataan silmäpari, jonka sanotaan suojelevan '
+          + 'kalastajia merellä.',
+      },
+    },
+  ],
+  BEL: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Belgian kaupungit rikastuivat keskiajalla kankaalla ja rakensivat kilpaa '
+        + 'linnoja, halleja ja torneja. Kivet muistavat senkin, minkä arkistot ovat '
+        + 'menettäneet tulessa.',
+      nostot: [
+        {
+          otsikko: 'Linna, joka pelotteli omia kaupunkilaisiaan',
+          aika: '1180',
+          tiedosto: 'Gravensteen, Ghent (DSCF0191).jpg',
+          teksti: 'Vuonna 1180 Flanderin kreivi Filip Elsassilainen rakennutti Gentin ytimeen '
+            + 'kivilinnan, jonka tehtävä ei ollut vain torjua vihollisia. Se oli '
+            + 'tarkoitettu myös muistuttamaan kaupungin itsepäisiä porvareita siitä, kuka '
+            + 'on herra talossa. Kreivit asuivat linnassa vuoteen 1353 asti. Sen jälkeen '
+            + 'siellä toimi oikeussali, vankila ja rahapaja, ja 1800-luvulla osa '
+            + 'rakennuksista muutettiin puuvillatehtaaksi. Linna oli jo purkulistalla, '
+            + 'kunnes kaupunki osti sen vähitellen ja aloitti vuonna 1893 laajan '
+            + 'entisöinnin.',
+          lyhyt: 'Gentin keskiaikainen kreivien linna, joka on nykyään museo.',
+          selite: 'Gravensteen on Filip Elsassilaisen vuonna 1180 rakennuttama vallihautaa '
+            + 'ympäröivä linna Gentissä. Se on nykyään museo ja yksi kaupungin '
+            + 'tunnetuimmista nähtävyyksistä.',
+          lahde: 'Trougnouf (Benoit Brummer), Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Ihmiskäsin tehty kukkula leijonalle',
+          aika: '1826',
+          tiedosto: 'Lion\'s Mound.jpg',
+          teksti: 'Vuonna 1820 Alankomaiden kuningas Vilhelm I määräsi rakennettavaksi '
+            + 'Waterloon lähelle valtavan tekokukkulan. Se merkitsi paikkaa, jossa hänen '
+            + 'poikansa, Oranian prinssi, oli haavoittunut 18. kesäkuuta 1815. '
+            + 'Rakennustyöt kestivät vuodesta 1823 lokakuuhun 1826, jolloin leijonapatsas '
+            + 'nostettiin huipulle 28. lokakuuta illalla. Portaat huipulle rakennettiin '
+            + 'vasta 1860-luvulla, ja nykyään niitä on 226. Ylhäältä avautuu maisema '
+            + 'pellolle, jolla Napoleonin kohtalo ratkesi.',
+          lyhyt: 'Waterloon lähellä oleva leijonapatsaan kruunaama tekokukkula.',
+          selite: 'Leijonakumpu on Braine-l\'Alleudin kunnassa sijaitseva tekokukkula, joka '
+            + 'valmistui vuonna 1826. Sen vieressä on Waterloon panoraamamaalausta '
+            + 'esittelevä pyöreä rakennus.',
+          lahde: 'Flocci Nivis, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kangashalli rakennettiin uudestaan kivi kiveltä',
+          aika: '1200-luku',
+          tiedosto: '20141110 Cloth Hall, Ypres 01.jpg',
+          teksti: 'Ypresin kangashalli aloitettiin vuonna 1200 kellotornista, ja koko '
+            + 'kokonaisuus valmistui 1304. Se oli keskiajan suurimpia kauppakiinteistöjä: '
+            + '125 metriä leveä julkisivu ja 70 metrin torni kertoivat, kuinka rikas '
+            + 'flanderilainen kaupunki kankaalla oli. Ensimmäisessä maailmansodassa '
+            + 'rakennus tuhoutui lähes kokonaan. Vuosina 1933-1967 se rakennettiin '
+            + 'uudelleen niin uskollisesti kuin mahdollista ennen sotaa tehtyjen '
+            + 'mittausten mukaan, ja raunioista koottuja alkuperäisiä kiviä käytettiin '
+            + 'uudelleen.',
+          lyhyt: 'Ypresin 1200-luvun kauppahalli, jossa toimii nykyään museo.',
+          selite: 'Ypresin kangashalli on goottilainen kauppahalli, jossa toimii nykyään In '
+            + 'Flanders Fields -museo. Se kuuluu Belgian ja Ranskan kellotornien Unescon '
+            + 'maailmanperintökohteeseen.',
+          lahde: 'Mark Ahsmann, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Torni, joka on palanut kolmesti',
+          aika: 'n. 1240',
+          tiedosto: 'Bruges Belgium Belfry-02.jpg',
+          teksti: 'Bruggen kellotorni nousi Torille noin vuonna 1240, kun kaupunki rikastui '
+            + 'flanderilaisella kankaalla. Tornissa säilytettiin kaupungin arkistoja ja '
+            + 'aarteita, ja vartijat tähyilivät sieltä tulipaloja. Tuli tuhosi arkistot '
+            + 'vuonna 1280, ja salama poltti puisen huipun 1493. Kun seuraavakin '
+            + 'puuhuippu paloi vuonna 1741, sitä ei enää rakennettu, ja torni lyheni 102 '
+            + 'metristä nykyiseen 83 metriin. Huipulle johtaa 366 porrasta, ja torni '
+            + 'kallistuu itään 87 senttiä.',
+          lyhyt: 'Bruggen keskiaikainen kellotorni Torin laidalla.',
+          selite: 'Bruggen kellotorni on noin 83 metriä korkea keskiaikainen torni kaupungin '
+            + 'keskustorilla. Se kuuluu Unescon maailmanperintökohteisiin.',
+          lahde: 'CEphoto, Uwe Aranas, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuinka monta porrasta Waterloon leijonakummun huipulle johtaa?',
+        vaihtoehdot: [
+          '176 askelmaa',
+          '226 askelmaa',
+          '264 askelmaa',
+          '310 askelmaa',
+        ],
+        oikea: 1,
+        fakta: 'Waterloon leijonakummun huipulle johtaa 226 porrasta, jotka rakennettiin '
+          + '1860-luvulla.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Belgia on pieni maa, jonka keittiö on saanut suuria ihmisiä kiistelemään: '
+        + 'täytetty suklaa, vohvelit, ranskalaiset perunat ja luostarien olut '
+        + 'kuuluvat samaan pöytään.',
+      nostot: [
+        {
+          otsikko: 'Apteekkari peitti lääkkeet suklaalla',
+          aika: '1912',
+          tiedosto: 'Belgian chocolates assortment.JPG',
+          teksti: 'Sveitsiläissyntyinen Jean Neuhaus avasi vuonna 1857 apteekin Brysselin '
+            + 'Galeries Royales Saint-Hubertiin, aivan Grand-Placen lähelle. Hän peitti '
+            + 'lääkkeet suklaalla, jotta ne olisi helpompi nauttia, ja pian tiskillä oli '
+            + 'enemmän herkkuja kuin pillereitä. Vuonna 1912 hänen pojanpoikansa Jean '
+            + 'Neuhaus II keksi praliinin, jossa suklaakuoren sisällä on pehmeä täyte. '
+            + 'Kolme vuotta myöhemmin perhe kehitti ballotinin, paperisen lahjarasian, '
+            + 'koska paperitötteröissä herkut murskaantuivat.',
+          lyhyt: 'Valikoima belgialaisia täytesuklaita eli praliineja.',
+          selite: 'Belgialaiset praliinit ovat kuorisuklaita, joiden sisällä on pehmeä täyte. '
+            + 'Ensimmäisen täytetyn praliinin keksi brysseliläinen suklaaseppä Jean '
+            + 'Neuhaus II vuonna 1912.',
+          lahde: 'BrokenSphere, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Suklaa',
+        },
+        {
+          otsikko: 'Vohveli sai Amerikassa uuden nimen',
+          aika: '1964',
+          tiedosto: 'Wafelmetslagroom.JPG',
+          teksti: 'Belgiassa vohveleita on monta lajia, ja tunnetuimpia ovat Brysselin ja '
+            + 'Liègen vohvelit. Belgialainen vohveli on kevyttaikinainen ja '
+            + 'syvätaskuinen, ja sen taikina kohotettiin alun perin hiivalla. '
+            + 'Yhdysvalloissa vohveli tuli tutuksi vuoden 1964 New Yorkin '
+            + 'maailmannäyttelyssä, jossa brysseliläinen Maurice Vermersch myi sitä '
+            + 'kermavaahdolla ja mansikoilla. Hän nimesi vohvelin Bel-Gem-vohveliksi, '
+            + 'koska monet amerikkalaiset eivät osanneet sanoa, että Bryssel on Belgian '
+            + 'pääkaupunki.',
+          lyhyt: 'Belgialainen vohveli tomusokerilla ja kermavaahdolla.',
+          selite: 'Belgian tunnetuimpia vohveleita ovat Brysselin ja Liègen vohvelit. Vohveli '
+            + 'tarjoillaan usein tomusokerin, kermavaahdon ja hedelmien kanssa.',
+          lahde: 'Hortensja Bukietowa, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Vohveli',
+        },
+        {
+          otsikko: 'Peruna, josta kiistellään yhä',
+          aika: 'n. 1680',
+          tiedosto: 'Un cornet de frites (Grand-Place, Bruxelles).jpg',
+          teksti: 'Belgiassa ranskalaisia perunoita myydään frituureista ja '
+            + 'friteries-kioskeista, ja ne syödään tötteröstä monenlaisten kastikkeiden '
+            + 'kanssa. Belgialainen toimittaja väitti niiden syntyneen Maas-joen '
+            + 'laaksossa jo noin vuonna 1680, kun kalaa ei jäätyneistä joista saanut ja '
+            + 'perunoita paistettiin sen sijaan. Tarina nojaa väitettyyn vuoden 1781 '
+            + 'käsikirjoitukseen, jota toimittaja ei koskaan esittänyt, joten '
+            + 'historioitsijat epäilevät sitä. Ranskalaisten mukaan herkku on kotoisin '
+            + 'Pariisista. Bruggessa toimii jopa oma Frietmuseum, ranskalaisten '
+            + 'perunoiden museo.',
+          lyhyt: 'Belgialainen tötterö ranskalaisia perunoita.',
+          selite: 'Ranskalaisten perunoiden alkuperästä kiistellään Belgian ja Ranskan '
+            + 'kesken. Belgiassa niitä syödään paperitötteröstä erilaisten kastikkeiden '
+            + 'kera.',
+          lahde: 'Benoît Prieur, Wikimedia Commons (CC0)',
+          wiki: 'Ranskalaiset perunat',
+        },
+        {
+          otsikko: 'Olut, joka pääsi Unescon listalle',
+          aika: 'nykyään',
+          tiedosto: 'Trappist Beer 2013-08-31.jpg',
+          teksti: 'Belgiassa valmistetaan yli 1600 erilaista olutta, ja joukossa on '
+            + 'erikoisuus nimeltä trappistiolut. Aito trappisti valmistetaan luostarin '
+            + 'muurien sisällä munkkien valvonnassa ja panimon tuotto käytetään luostarin '
+            + 'ylläpitoon ja hyväntekeväisyyteen. Belgiassa trappistiolutta panee kuusi '
+            + 'luostaria, esimerkiksi Chimay, Orval ja Westmalle. Vuonna 2016 Unesco '
+            + 'nosti belgialaisen olutkulttuurin ihmiskunnan aineettoman '
+            + 'kulttuuriperinnön luetteloon.',
+          lyhyt: 'Belgialaisia trappistioluita pulloissa.',
+          selite: 'Trappistiolut on luostariolueen suojattu nimi, jonka saa antaa vain '
+            + 'luostarin sisällä valmistetulle oluelle. Belgiassa sitä valmistaa kuusi '
+            + 'luostaria.',
+          lahde: 'Philip Rowlands, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Trappist',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Missä kaupungissa toimii ranskalaisten perunoiden museo Frietmuseum?',
+        vaihtoehdot: [
+          'Antwerpen',
+          'Liège',
+          'Gent',
+          'Brugge',
+        ],
+        oikea: 3,
+        fakta: 'Frietmuseum toimii Bruggessa ja esittelee ranskalaisten perunoiden '
+          + 'historiaa.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Belgian luonto yllättää: keväällä metsänpohja värjäytyy siniseksi, '
+        + 'ylängöllä levittäytyy yli 10 000 vuotta vanha suo ja maan alla virtaa '
+        + 'joki.',
+      nostot: [
+        {
+          otsikko: 'Metsä, joka värjäytyy siniseksi',
+          aika: 'keväisin',
+          tiedosto: 'Hallerbos 1 - Halle.jpg',
+          teksti: 'Hallen kaupungin lähellä sijaitseva Hallerbos on 552 hehtaarin metsä, joka '
+            + 'tunnetaan sinisestä kevätmatostaan. Muutaman viikon ajan keväällä '
+            + 'metsänpohjaa peittävät siniset hyasintit, ja se houkuttelee runsaasti '
+            + 'kävijöitä. Metsä oli ennen osa muinaista Silva Carbonaria -metsää yhdessä '
+            + 'Soignesin metsän kanssa, ja vielä vuonna 1777 ne yhdisti kapea '
+            + 'metsäkaista. Ensimmäisen maailmansodan aikana suurin osa vanhoista puista '
+            + 'kaadettiin, ja metsä istutettiin uudelleen vuosina 1930-1950.',
+          lyhyt: 'Halle-kaupungin lähellä oleva metsä, joka tunnetaan hyasinttimatostaan.',
+          selite: 'Hallerbos on Flanderin Brabantissa sijaitseva 552 hehtaarin lehtimetsä. Se '
+            + 'tunnetaan keväisin kukkivasta hyasinttimatostaan.',
+          lahde: 'Anja Meert, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Suo, joka on yli 10 000 vuotta vanha',
+          aika: 'nykyään',
+          tiedosto: 'Weismes (B), Brackvenn -- 2021 -- 6576.jpg',
+          teksti: 'Itä-Belgian Hautes Fagnes on maan suurin luonnonsuojelualue, 4 500 '
+            + 'hehtaaria ylänköä Ardennien ja Eifelin välissä. Se ei ole tavallista '
+            + 'suota, sillä nevat saavat kosteutensa vain sateesta, ja turvekerrokset '
+            + 'ovat yli 10 000 vuotta vanhoja. Alueella on Belgian korkein kohta, Signal '
+            + 'de Botrange, joka nousee 694 metrin korkeuteen. Ylängön kosteikot '
+            + 'suojeltiin vuonna 1957, ja Euroopan neuvosto myönsi alueelle suojelun '
+            + 'kunniakirjan vuonna 1966.',
+          lyhyt: 'Belgian suurin luonnonsuojelualue ja turvesoiden ylänkö Ardenneilla.',
+          selite: 'Hautes Fagnes eli Hohes Venn on Ardennien ja Eifelin välinen ylänkö Liègen '
+            + 'maakunnassa. Se on Belgian suurin luonnonsuojelualue.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Joki katoaa kukkulan alle',
+          aika: 'nykyään',
+          tiedosto: 'Grottes de Han DSCF6960.jpg',
+          teksti: 'Lesse-joki mutkittelee Ardenneilla rauhallisena, mutta Han-sur-Lessen '
+            + 'luona se putoaa yhtäkkiä sortumakuoppaan nimeltä Belvaux\'n kuilu. Sieltä '
+            + 'vesi virtaa yli kilometrin matkan kalkkikivikukkulan sisällä ja on '
+            + 'kaivertanut sinne luolaston. Luolissa on aina noin 13 astetta ja ilma on '
+            + 'kosteaa. Suurin sali, Salle du Dôme, on noin 150 metriä leveä. Kävijät '
+            + 'ajavat luolille vanhalla vicinal-raitiovaunulla, ja opastettu kierros '
+            + 'kestää tunnista puoleentoista.',
+          lyhyt: 'Ardennien tippukiviluolasto, jonka läpi virtaa Lesse-joki.',
+          selite: 'Han-sur-Lessen luolat ovat kalkkikiveen syöpynyt luolasto Wallonian '
+            + 'Ardenneilla. Ne muodostuivat, kun Lesse-joki alkoi virrata kukkulan '
+            + 'sisällä.',
+          lahde: 'Musicaline, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Myrsky avasi Bruggelle tien merelle',
+          aika: '1134',
+          tiedosto: 'Zwin Natuur Park 17.jpg',
+          teksti: 'Vuonna 1134 myrsky puhkaisi Flanderin rannikon ja synnytti Zwin-nimisen '
+            + 'vuorovesikanavan, joka ulottui noin 15 kilometriä sisämaahan. Sen ansiosta '
+            + 'Brugge sai meriyhteyden ja kasvoi yhdeksi keskiajan tärkeimmistä '
+            + 'satamakaupungeista. 1200-luvun lopulta alkaen kanava kuitenkin liettyi, ja '
+            + 'noin vuodesta 1500 se oli käyttökelvoton. Nykyinen luonnonsuojelualue '
+            + 'perustettiin vuonna 1952. Siellä kasvaa suolaa kestäviä kasveja, ja Zwin '
+            + 'on harvoja paikkoja Belgiassa, joissa elää valkoisia haikaroita.',
+          lyhyt: 'Belgian ja Alankomaiden rajalla oleva rannikon luonnonsuojelualue.',
+          selite: 'Zwin on Pohjanmeren rannalla, Belgian ja Alankomaiden rajalla sijaitseva '
+            + 'luonnonsuojelualue. Se on entisen vuorovesikanavan suuosa.',
+          lahde: 'FrDr, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuinka korkealla on Belgian korkein kohta Signal de Botrange?',
+        vaihtoehdot: [
+          '694 metriä',
+          '1 022 metriä',
+          '1 350 metriä',
+          '2 277 metriä',
+        ],
+        oikea: 0,
+        fakta: 'Signal de Botrange Hautes Fagnesin alueella on 694 metrin korkeudessa '
+          + 'Belgian korkein kohta.',
+      },
+    },
+    {
+      id: 'keksinnot',
+      nimi: 'Keksinnöt',
+      johdanto: 'Pieni maa on antanut maailmalle saksofonin, merikartan projektion, '
+        + 'tehokkaan sähkökoneen ja ensimmäisen synteettisen muovin. Moni keksijä '
+        + 'teki työnsä kuitenkin ulkomailla.',
+      nostot: [
+        {
+          otsikko: 'Dinantin haamulapsi ja hänen soittimensa',
+          aika: '1846',
+          tiedosto: 'Alto saxophone in E-flat MET DP338623.jpg',
+          teksti: 'Adolphe Sax syntyi Dinantissa vuonna 1814. Tarinan mukaan hän selvisi '
+            + 'lapsena niin monesta hengenvaarallisesta tapaturmasta, että häntä '
+            + 'kutsuttiin Dinantin haamulapseksi. Hän kasvoi isänsä soitinverstaassa '
+            + 'Brysselissä, muutti vuonna 1842 Pariisiin ja patentoi saksofonin 28. '
+            + 'kesäkuuta 1846. Soitin yhdisti puupuhaltimen taipuisuuden ja '
+            + 'vaskisoittimen voiman. Keksinnöstä huolimatta Sax ajautui konkurssiin '
+            + 'kolme kertaa ja kuoli Pariisissa vuonna 1894 köyhänä.',
+          lyhyt: 'Adolphe Saxin itse valmistama alttosaksofoni 1850-luvulta.',
+          selite: 'Alttosaksofonin valmisti Adolphe Sax itse noin vuonna 1855. Saksofoni oli '
+            + 'hänen tunnetuin keksintönsä.',
+          lahde: 'Adolphe Sax (Metropolitan Museum of Art), Wikimedia Commons (CC0)',
+          wiki: 'Saksofoni',
+        },
+        {
+          otsikko: 'Kartta, jossa suora viiva on purjehdusreitti',
+          aika: '1569',
+          tiedosto: 'Mercator 1569 world map composite.jpg',
+          teksti: 'Flaamilainen Gerardus Mercator julkaisi vuonna 1569 maailmankartan, jonka '
+            + 'projektiossa vakiosuuntaa kulkeva laiva piirtyi suorana viivana. Kartta '
+            + 'painettiin kahdeksantoista arkille kuparilaatoista, jotka Mercator '
+            + 'kaiversi itse, ja koottuna se on 202 senttiä leveä ja 124 senttiä korkea. '
+            + 'Siinä on yli viisi tuhatta sanaa tekstiä. Mercator matkusti vain vähän, ja '
+            + 'tietonsa hän keräsi yli tuhannen kirjan kirjastostaan sekä '
+            + 'kirjeenvaihdostaan. Hänen keksimänsä projektio on yhä merikorttien '
+            + 'perusta.',
+          lyhyt: 'Gerardus Mercatorin vuoden 1569 maailmankartta.',
+          selite: 'Mercatorin vuoden 1569 maailmankartta on koottu kahdeksastatoista arkista. '
+            + 'Sen projektio helpotti merenkulkua, ja se on edelleen merikorttien '
+            + 'perusta.',
+          lahde: 'Gerardus Mercator, Wikimedia Commons (public domain)',
+          wiki: 'Mercatorin projektio',
+        },
+        {
+          otsikko: 'Puuseppä, joka rakensi voimakkaan dynamon',
+          aika: '1873',
+          tiedosto: 'Machine Gramme.jpg',
+          teksti: 'Zénobe Gramme oli lähes lukutaidoton puuseppä Jehay-Bodegnéen kylästä. Hän '
+            + 'muutti Pariisiin, pääsi töihin sähkölaitteita valmistavaan yritykseen ja '
+            + 'rakensi parannellun dynamon, joka tuotti tasaisempaa ja paljon '
+            + 'voimakkaampaa tasavirtaa kuin aiemmat koneet. Yhdessä Hippolyte Fontainen '
+            + 'kanssa hän perusti tehtaan, ja Grammen kone oli esillä Wienin '
+            + 'maailmannäyttelyssä 1873. Samana vuonna miehet huomasivat vahingossa, että '
+            + 'kone toimii myös toisin päin: kun siihen johdettiin virtaa, se pyöri '
+            + 'moottorina.',
+          lyhyt: 'Zénobe Grammen keksimä tasavirtadynamo.',
+          selite: 'Grammen kone oli ensimmäinen teollisuudessa menestynyt tehokas '
+            + 'sähkömoottori. Kuvan dynamo on rakennettu vuonna 1873.',
+          lahde: 'Icone5, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Grammen kone',
+        },
+        {
+          otsikko: 'Gentiläinen kemisti keksi muovin',
+          aika: '1907',
+          tiedosto: 'Vintage Fada Bakelite Table Radio, Model 740, Made in the USA, Circa 1947 (8507820945).jpg',
+          teksti: 'Leo Baekeland syntyi Gentissä vuonna 1863 suutarin poikana ja väitteli '
+            + 'tohtoriksi 21-vuotiaana. Hän muutti Yhdysvaltoihin ja rikastui ensin '
+            + 'Velox-valokuvapaperilla, jonka yritys myytiin vuonna 1899 George '
+            + 'Eastmanille 750 000 dollarilla. Rahoilla hän rakensi kotilaboratorion '
+            + 'Yonkersiin, ja vuonna 1907 sieltä syntyi bakeliitti, ensimmäinen '
+            + 'synteettisistä aineista tehty muovi. Se säilytti muotonsa kuumennettaessa '
+            + 'ja eristi sähköä, joten siitä valmistettiin puhelimia ja radioita. '
+            + 'Mainoksissa sitä kehuttiin tuhannen käyttötavan aineeksi.',
+          lyhyt: 'Bakeliitista valmistettu vanha pöytäradio.',
+          selite: 'Bakeliitti oli ensimmäinen kokonaan synteettisistä aineista valmistettu '
+            + 'muovi. Siitä tehtiin muun muassa radioiden ja puhelinten koteloita.',
+          lahde: 'Joe Haupt, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Bakeliitti',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minä vuonna Adolphe Sax patentoi saksofonin?',
+        vaihtoehdot: [
+          '1826',
+          '1836',
+          '1846',
+          '1856',
+        ],
+        oikea: 2,
+        fakta: 'Adolphe Sax patentoi saksofonin 28. kesäkuuta 1846.',
+      },
+    },
+    {
+      id: 'rakennukset',
+      nimi: 'Rakennukset',
+      johdanto: 'Belgian kaupungeissa kannattaa katsoa ylös: kiltojen kultaiset julkisivut, '
+        + 'jugendin ensimmäiset asuintalot, aseman kupolisali ja rautakiteen mallinen '
+        + 'torni kertovat kukin omasta ajastaan.',
+      nostot: [
+        {
+          otsikko: 'Tori, joka nousi tuhkasta',
+          aika: '1695',
+          tiedosto: 'Grand Place 1-7 during civil twilight, Brussels (DSCF1982).jpg',
+          teksti: 'Brysselin Grand-Placen rakentaminen alkoi 1000-luvulla, ja se oli pitkälti '
+            + 'valmis 1600-luvulle tultaessa. Vuonna 1695 Ranskan joukot ampuivat '
+            + 'kaupunkia tulipalloilla, ja tori paloi lähes kokonaan. Pystyyn jäi vain '
+            + 'kaupungintalon julkisivu ja torni sekä muutamia kivimuureja. Killat '
+            + 'rakensivat talonsa uudelleen seuraavina vuosina, ja siitä torin nykyinen '
+            + 'ilme periytyy. Tori on 68 kertaa 110 metriä ja kokonaan kivetty. Joka '
+            + 'toinen elokuu, parillisina vuosina, sen keskelle levitetään valtava '
+            + 'kukkamatto.',
+          lyhyt: 'Brysselin keskustori, jota reunustavat kiltojen talot.',
+          selite: 'Grand-Place on Brysselin keskustori, jota reunustavat kiltojen '
+            + 'barokkitalot ja goottilainen kaupungintalo. Se on ollut Unescon '
+            + 'maailmanperintökohde vuodesta 1998.',
+          lahde: 'Trougnouf (Benoit Brummer), Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Grand-Place',
+        },
+        {
+          otsikko: 'Rautakide suurennettuna 165 miljardia kertaa',
+          aika: '1958',
+          tiedosto: 'Atomium 20180627.jpg',
+          teksti: 'Atomium rakennettiin Brysselin vuoden 1958 maailmannäyttelyn '
+            + 'keskipisteeksi. Insinööri André Waterkeyn ja arkkitehdit André ja Jean '
+            + 'Polak suunnittelivat sen kunnianosoitukseksi tieteen edistykselle. '
+            + 'Yhdeksän 18 metrin läpimittaista teräspalloa muodostavat rakenteen, joka '
+            + 'esittää rautakiteen alkeiskoppia suurennettuna 165 miljardia kertaa. Torni '
+            + 'on 102 metriä korkea, ja putkissa kulkevat portaat, liukuportaat ja hissi '
+            + 'vievät kuuteen kävijöille avoimeen palloon. Nimi yhdistää sanat atomi ja '
+            + 'alumiini, sillä pallot peitettiin alun perin alumiinilla.',
+          lyhyt: 'Brysselin vuoden 1958 maailmannäyttelyn torni, jonka muoto esittää '
+            + 'rautakidettä.',
+          selite: 'Atomium on Brysselin Heysel-tasangolla sijaitseva 102-metrinen torni. '
+            + 'Nykyään siellä toimii museo ja näyttelytiloja.',
+          lahde: 'Suicasmo, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Atomium',
+        },
+        {
+          otsikko: 'Asema, joka korvasi puisen alkuperäisen',
+          aika: '1905',
+          tiedosto: 'Antwerpen - Station Antwerpen-Centraal (7).jpg',
+          teksti: 'Antwerpenin ensimmäinen asema oli puinen, ja sen rata Brysselistä '
+            + 'Mechelenin kautta avattiin 3. kesäkuuta 1836. Nykyisen kivisen '
+            + 'asemarakennuksen suunnitteli arkkitehti Louis Delacenserie, ja se '
+            + 'rakennettiin vuosina 1895-1905. Vuoteen 2007 asti asema oli päätepysäkki, '
+            + 'ja 23. maaliskuuta 2007 sen alle avattiin läpikulkutunneli. Odotussalin '
+            + 'yllä kohoaa suuri kupoli. Antwerpen-Centraal on yksi Belgian neljästä '
+            + 'suurnopeusjunien asemasta.',
+          lyhyt: 'Antwerpenin päärautatieasema, jonka nykyinen rakennus on vuodelta 1905.',
+          selite: 'Antwerpen-Centraal on Antwerpenin päärautatieasema. Nykyisen rakennuksen '
+            + 'suunnitteli arkkitehti Louis Delacenserie.',
+          lahde: 'Fred Romero, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Talo, jonka portaikko sai valoa lasikatosta',
+          aika: '1893',
+          tiedosto: 'Brussels - Hotel Hôtel Tassel.jpg',
+          teksti: 'Victor Horta suunnitteli Hôtel Tasselin tiedemies Emile Tasselille, ja '
+            + 'talo valmistui vuosina 1892-1893. Sitä pidetään yhtenä ensimmäisistä '
+            + 'jugendtyylin rakennuksista. Horta hylkäsi perinteisen belgialaisen '
+            + 'kaupunkitalon pohjan: katupuolen ja puutarhan puolen tavalliset '
+            + 'rakennukset yhdistettiin teräsrunkoisella ja lasikattoisella osalla, jossa '
+            + 'ovat portaat ja tasanteet. Lasikatto tuo luonnonvaloa talon keskelle. '
+            + 'Horta suunnitteli myös entisen Waucquezin kangasvaraston vuonna 1906, ja '
+            + 'nykyään siinä toimii Belgian sarjakuvakeskus.',
+          lyhyt: 'Victor Hortan suunnittelema jugendtyylinen kaupunkitalo Brysselissä.',
+          selite: 'Hôtel Tassel on Victor Hortan suunnittelema kaupunkitalo Brysselissä, yksi '
+            + 'ensimmäisistä jugendtyylin rakennuksista. Se kuuluu Unescon '
+            + 'maailmanperintökohteisiin.',
+          lahde: 'Arco Ardon, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Hôtel Tassel',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuinka monta teräspalloa Atomiumin rakenteessa on?',
+        vaihtoehdot: [
+          'Seitsemän',
+          'Yhdeksän',
+          'Kaksitoista',
+          'Kuusitoista',
+        ],
+        oikea: 1,
+        fakta: 'Atomiumin yhdeksän teräspalloa muodostavat rautakiteen alkeiskopin.',
+      },
+    },
+  ],
   GBR: [
     {
       id: 'historia',
@@ -1614,7 +3938,7 @@ export const MAA_KATEGORIAT = {
      */
     {
       id: 'hetki-cook-endeavour-plymouth-1768',
-      nimi: 'Historian hetki',
+      nimi: 'Löytöretki',
       otsikko: 'Historian hetki: Endeavour 1768',
       johdanto: 'Plymouthin laiturilla oli 26. elokuuta 1768 laatikoita, joita '
         + 'sotalaivaan ei yleensä kanneta: kasvipuristimia, lasipurkkeja ja '
@@ -1700,7 +4024,7 @@ export const MAA_KATEGORIAT = {
      */
     {
       id: 'hetki-titanic-southampton-1912',
-      nimi: 'Historian hetki',
+      nimi: 'Haaksirikko',
       otsikko: 'Historian hetki: Titanic 1912',
       johdanto: 'Titanicin neitsytmatka alkoi Southamptonista täsmälleen '
         + 'keskipäivällä 10. huhtikuuta 1912, ja muutamaa minuuttia myöhemmin se '
@@ -1795,7 +4119,7 @@ export const MAA_KATEGORIAT = {
      */
     {
       id: 'hetki-newton-prisma-1666',
-      nimi: 'Historian hetki',
+      nimi: 'Valon tutkimus',
       otsikko: 'Historian hetki: Newton 1666',
       johdanto: 'Lincolnshiren maalaistalossa nuori mies pimensi huoneen ja '
         + 'päästi luukun reiästä sisään yhden säteen — ja päätteli, että '
@@ -1873,7 +4197,7 @@ export const MAA_KATEGORIAT = {
      */
     {
       id: 'hetki-jenner-rokotus-1796',
-      nimi: 'Historian hetki',
+      nimi: 'Rokotus',
       otsikko: 'Historian hetki: Jenner 1796',
       johdanto: 'Gloucestershiren maalaislääkäri otti toukokuussa 1796 lypsäjän '
         + 'kädestä lehmärokkoa ja hieroi sen puutarhurinsa kahdeksanvuotiaan '
@@ -2917,7 +5241,7 @@ export const MAA_KATEGORIAT = {
      */
     {
       id: 'hetki-rosettan-kivi-1799',
-      nimi: 'Historian hetki',
+      nimi: 'Kirjoitus',
       otsikko: 'Historian hetki: Rosetta 1799',
       johdanto: 'Heinäkuussa 1799 ranskalaiset sotilaat kaivoivat Rosettan '
         + 'linnoituksen muurista mustan kiven, jonka kolme kirjoitusta avasivat '
@@ -3009,7 +5333,7 @@ export const MAA_KATEGORIAT = {
      */
     {
       id: 'hetki-suezin-kanava-avajaiset-1869',
-      nimi: 'Historian hetki',
+      nimi: 'Kanava',
       otsikko: 'Historian hetki: Suez 1869',
       johdanto: 'Välimeren hiekkasärkälle vuonna 1859 perustettu työmaakaupunki '
         + 'näki kymmenen vuotta myöhemmin keisarinnan jahdin kääntyvän kanavaan, '
@@ -6262,7 +8586,7 @@ export const MAA_KATEGORIAT = {
      */
     {
       id: 'hetki-rontgen-kasi-1895',
-      nimi: 'Historian hetki',
+      nimi: 'Röntgenkuva',
       otsikko: 'Historian hetki: Würzburg 1895',
       johdanto: 'Würzburgin yliopiston laboratoriossa otettiin 22. joulukuuta '
         + '1895 valokuva, jossa näkyi elävän ihmisen käden luut ja sormessa '
@@ -6342,7 +8666,7 @@ export const MAA_KATEGORIAT = {
      */
     {
       id: 'hetki-gutenberg-paino-1454',
-      nimi: 'Historian hetki',
+      nimi: 'Kirjapaino',
       otsikko: 'Historian hetki: Gutenberg 1454',
       johdanto: 'Reinin rannan kauppakaupungissa latojat asettivat 1450-luvulla '
         + 'kirjaimen kerrallaan peilikuvaksi riveille, ja ensimmäinen painettu '
@@ -6422,7 +8746,7 @@ export const MAA_KATEGORIAT = {
      */
     {
       id: 'hetki-luther-wittenberg-1517',
-      nimi: 'Historian hetki',
+      nimi: 'Uskonpuhdistus',
       otsikko: 'Historian hetki: Luther 1517',
       johdanto: 'Elben rannan yliopistokaupungista lähti lokakuussa 1517 '
         + 'kohtelias kirje arkkipiispalle, ja sen liitteenä olleet 95 '
@@ -28006,7 +30330,7 @@ export const MAA_KATEGORIAT = {
      */
     {
       id: 'hetki-wright-kitty-hawk-1903',
-      nimi: 'Historian hetki',
+      nimi: 'Lento',
       otsikko: 'Historian hetki: Kitty Hawk 1903',
       johdanto: 'Pohjois-Carolinan hiekkasärkillä nousi 17. joulukuuta 1903 '
         + 'ilmaan kone, jonka lento kesti kaksitoista sekuntia — ja jonka kuvan '
@@ -28086,7 +30410,7 @@ export const MAA_KATEGORIAT = {
      */
     {
       id: 'hetki-franklin-leija-1752',
-      nimi: 'Historian hetki',
+      nimi: 'Salama',
       otsikko: 'Historian hetki: Franklin 1752',
       johdanto: 'Philadelphian pellolla nousi kesäkuussa 1752 silkkileija '
         + 'ukkospilven alle, ja narun päässä roikkuva avain kertoi, että salama '
@@ -28150,7 +30474,7 @@ export const MAA_KATEGORIAT = {
      */
     {
       id: 'hetki-edison-lamppu-1879',
-      nimi: 'Historian hetki',
+      nimi: 'Sähkövalo',
       otsikko: 'Historian hetki: Edison 1879',
       johdanto: 'New Jerseyn maalaislaboratoriossa hiilletty ompelulanka hehkui '
         + 'lokakuussa 1879 kolmetoista ja puoli tuntia — ja sen ympärille '
