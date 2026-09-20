@@ -3,19 +3,42 @@
  * nostot takaisin työlistalle: visatarkistus n. joka kolmannessa,
  * havainnekuvia lisää Codexilta). EI SISÄLTÖMUUTOKSIA — pelkkä laskenta.
  *
- * LÄHDE: kunkin maan omat ISO-päätteiset paketit
- * (maastokohteet-<iso>.js, hahmotelma-<iso>.js, maalehtinostot-<iso>.js,
- * nakyvat-kaupungit-<iso>.js, fokuskohteet-<iso>.js) sekä jaettu
- * elaintakyt.js (yksi eläintäky per maa). EI SISÄLLÄ täky-, syvennys-,
- * skandaali- ja historian hetki -kerroksia (js/fokusnosto.js,
- * js/packs/syvennykset*.js, skandaalit*.js, historian-hetket.js) —
- * ne ovat dynaamisesti koottuja lisäkerroksia eikä maakohtaisia
- * sisältöyksiköitä samalla tavalla, ja niiden mukaan ottaminen olisi
- * sekoittanut "nostoja yhteensä" eri lähteestä kuin visa/kuva-osuudet.
- * Tästä syystä luvut ovat ALARAJA, ei koko kartan merkkimäärä
- * (vrt. tools/fokuskartta/nostot.mjs keraaNostot, joka laskee KAIKKI
- * ruudulle poltettavat merkit mukaan lukien nuo lisäkerrokset:
- * Euroopan osalta se antoi ajohetkellä huomattavasti suuremman luvun).
+ * KORJATTU 20.9.2026 ILTA: Pelikoodarin koodista laskema FRA-visaluku
+ * (16/64 = 25 %) ei täsmännyt tämän työkalun ensimmäisen version
+ * lukuun (51 %). Täsmäytys paljasti KAKSI virhettä täällä, ei
+ * eroa määritelmässä:
+ *
+ *   1. VÄÄRÄ VISA-KENTTÄ. "Visa" EI ole `kysymykset`-taulukko (se on
+ *      pöllö-chatin ehdotettuja kysymyksiä, ei pistemäinen tietovisa).
+ *      Oikea, pelin lukema kenttä on `nosto.visa` TÄSMÄLLEEN samassa
+ *      muodossa kuin lehden tehtävä (js/fokusnosto.js `nostonVisa`):
+ *      `{ kysymys, vaihtoehdot: [...], oikea, fakta?, otsake?, vihje? }`,
+ *      kelvollinen kun kysymys on ei-tyhjä merkkijono, vaihtoehtoja on
+ *      vähintään 2 ja oikea on kelvollinen indeksi. Sama tarkistus on
+ *      kopioitu tähän suoraan `nostonVisa`-funktiosta.
+ *   2. KAKSINKERTAINEN LASKENTA. `maalehtinostot-<iso>.js` vie sekä
+ *      käsitellyn taulun (`MAALEHTINOSTOT_FRA = JAKO.map(...)`) että
+ *      raakadatan (`MAALEHTIJAKO_FRA = JAKO`) — syvyyshaku kaikkien
+ *      export-arvojen läpi laski siis saman noston kahdesti (36/12
+ *      eikä 18/6). Korjattu: skannataan VAIN kunkin tiedoston
+ *      kanoninen vienti (nimi johdettu tiedostonimestä,
+ *      `maastokohteet-fra.js` -> `MAASTOKOHTEET_FRA`), ei kaikkia
+ *      exportteja.
+ *
+ * Täsmäytyksen jälkeen tämä työkalu antaa FRA:lle täsmälleen
+ * Pelikoodarin luvut (17/0 maastokohteet, 27/10 hahmotelma, 18/6
+ * maalehtinostot, 2/0 fokuskohteet = 64 nostoa, 16 visaa, 25 %).
+ *
+ * LÄHDE (kartalla näkyvä nostojoukko, sama kuin Pelikoodarin koodi):
+ * kunkin maan ISO-päätteiset paketit maastokohteet-<iso>.js,
+ * hahmotelma-<iso>.js, maalehtinostot-<iso>.js, fokuskohteet-<iso>.js
+ * — VAIN kanoninen export per tiedosto. `nakyvat-kaupungit-<iso>.js`
+ * (kaupunkikortit, oma korttityyppi) ja jaettu `elaintakyt.js` (oma
+ * "perhe", ei nosto) EIVÄT kuulu tähän joukkoon — pudotettu tässä
+ * korjauksessa, koska Pelikoodarin ryhmittely ei sisältänyt niitä.
+ * EI SISÄLLÄ myöskään täky-, syvennys-, skandaali- ja historian
+ * hetki -kerroksia (js/fokusnosto.js ja sisarpaketit) — dynaamisesti
+ * koottuja lisäkerroksia, ei maakohtaisia sisältöyksiköitä.
  *
  * TYYPPILUOKAT (Fablen pyytämät): vuori, saari, järvi, joki, meri,
  * historia, kulttuuri, ruoka, kauppa, tekniikka, merenkulku, muut.
@@ -25,12 +48,11 @@
  * HAVAINNEKUVA (generoitu-lippu): EI ole yhtenäistä boolean-kenttää
  * missään paketissa (tarkistettu: "generoitu" esiintyy vain
  * kommenteissa, ei datakentissä). Tunnistus on siis PÄÄTELTY:
- * `kuva.osoite`, joka sisältää polun "/karttanostot/", on AI-
- * generoitu havainnekuva (peliin syntynyt tools/generoi-*-työkalulla);
- * `tiedosto: '<Commons-tiedostonimi>.jpg'` on aito Commons-valokuva
- * (peiliputken kautta). Tämä on TÄMÄN TYÖKALUN PÄÄTELMÄ, ei koodin
- * oma sopimus — raportoitu erikseen, koska Fable pyysi kertomaan onko
- * kenttä yhtenäinen (EI OLE: kaksi eri kenttänimeä, ei yhtä lippua).
+ * `lahde`-kentän (kuva.lahde tai ylätason lahde) TÄSMÄLLINEN ALKU
+ * "Tekoälyllä tuotettu havainnekuva." on ainoa luotettava merkki —
+ * `/karttanostot/`-R2-polku EI kelpaa (aitojakin Commons-kuvia
+ * säilytetään siellä, todettu ensimmäisessä versiossa ja korjattu
+ * ennen julkaisua).
  *
  * AJO: node tools/nostoinventaario.mjs
  */
@@ -127,46 +149,71 @@ function keraaSyvyyshaulla(arvo, tulos, kierretyt) {
   for (const v of Object.values(arvo)) keraaSyvyyshaulla(v, tulos, kierretyt);
 }
 
-async function maanNostot(iso) {
-  const isoL = iso.toLowerCase();
-  const tiedostot = TIEDOSTOT.filter((f) => f === `maastokohteet-${isoL}.js`
-    || f === `hahmotelma-${isoL}.js`
-    || f === `maalehtinostot-${isoL}.js`
-    || f === `nakyvat-kaupungit-${isoL}.js`
-    || f === `fokuskohteet-${isoL}.js`
-    || f === `syvennyspaikat-${isoL}.js`
-    || f === `hetket-${isoL}.js`);
-  const nostot = [];
-  const kierretyt = new WeakSet();
-  for (const tiedosto of tiedostot) {
-    // eslint-disable-next-line no-await-in-loop
-    const moduuli = await import(join(PACKS, tiedosto));
-    for (const arvo of Object.values(moduuli)) keraaSyvyyshaulla(arvo, nostot, kierretyt);
+/*
+ * Vain nämä neljä tyyppiä lasketaan "nostoiksi" (sama joukko kuin
+ * Pelikoodarin koodi). Kanoninen export johdetaan tiedostonimestä:
+ * `maastokohteet-fra.js` -> `MAASTOKOHTEET_FRA`.
+ */
+const NOSTOTIEDOSTOT = ['maastokohteet', 'hahmotelma', 'maalehtinostot', 'fokuskohteet'];
+
+const kanoninenNimi = (tyyppi, iso) => `${tyyppi.toUpperCase().replace(/-/g, '_')}_${iso}`;
+
+/**
+ * Onko nostolla kelvollinen visa? Kopioitu suoraan js/fokusnosto.js
+ * `nostonVisa`-funktiosta (sama ehto, sama kenttä) — EI `kysymykset`,
+ * joka on eri asia (pöllö-chatin ehdotuskysymyksiä).
+ */
+function onkoVisa(nosto) {
+  const visa = nosto?.visa;
+  if (!visa || typeof visa.kysymys !== 'string' || !visa.kysymys.trim()) return false;
+  if (!Array.isArray(visa.vaihtoehdot) || visa.vaihtoehdot.length < 2) return false;
+  if (!Number.isInteger(visa.oikea) || visa.oikea < 0 || visa.oikea >= visa.vaihtoehdot.length) {
+    return false;
   }
-  return { nostot, tiedostot };
+  return true;
 }
 
-const { ELAINTAKYT } = await import('../js/packs/elaintakyt.js').catch(() => ({ ELAINTAKYT: {} }));
+async function maanNostot(iso) {
+  const isoL = iso.toLowerCase();
+  const nostot = [];
+  const luetutTiedostot = [];
+  for (const tyyppi of NOSTOTIEDOSTOT) {
+    const tiedosto = `${tyyppi}-${isoL}.js`;
+    if (!TIEDOSTOT.includes(tiedosto)) continue;
+    // eslint-disable-next-line no-await-in-loop
+    const moduuli = await import(join(PACKS, tiedosto));
+    const vientiNimi = kanoninenNimi(tyyppi, iso);
+    const vienti = moduuli[vientiNimi];
+    if (vienti === undefined) {
+      console.warn(`${iso}: ${tiedosto} ei vie nimeä ${vientiNimi} — ohitettu`);
+      continue;
+    }
+    luetutTiedostot.push(tiedosto);
+    keraaSyvyyshaulla(vienti, nostot, new WeakSet());
+  }
+  return { nostot, tiedostot: luetutTiedostot };
+}
 
 const rivit = [];
 for (const [iso, nimi] of Object.entries(EUROOPPA)) {
   // eslint-disable-next-line no-await-in-loop
-  const { nostot, tiedostot } = await maanNostot(iso);
-  const elaintaky = ELAINTAKYT[iso];
-  const kaikkiNostot = elaintaky ? [...nostot, { ...elaintaky, tyyppi: 'elaintaky' }] : nostot;
+  const { nostot: kaikkiNostot, tiedostot } = await maanNostot(iso);
 
   const tyypit = Object.fromEntries(TYYPIT.map((t) => [t, 0]));
   let visoja = 0;
   let kuvia = 0;
   let generoituja = 0;
   let ilmanKuvaa = 0;
+  const ihmeTila = { ihme: 0, rappeutunut: 0, olemassa: 0 };
   for (const n of kaikkiNostot) {
-    const luokka = n.tyyppi === 'elaintaky' ? 'muut'
-      : luokittele(n.tyyppi ?? n.kategoria ?? n.symLaji ?? n.laji);
+    const luokka = luokittele(n.tyyppi ?? n.kategoria ?? n.symLaji ?? n.laji);
     tyypit[luokka] += 1;
-    if (Array.isArray(n.kysymykset) && n.kysymykset.length) visoja += 1;
+    if (onkoVisa(n)) visoja += 1;
     const { onKuva, generoitu } = kuvaTiedot(n);
     if (onKuva) { kuvia += 1; if (generoitu) generoituja += 1; } else ilmanKuvaa += 1;
+    if (n.ihme?.kadonnut === true) ihmeTila.ihme += 1;
+    else if (n.ihme?.kadonnut === false) ihmeTila.rappeutunut += 1;
+    else ihmeTila.olemassa += 1;
   }
 
   const yhteensa = kaikkiNostot.length;
@@ -177,6 +224,7 @@ for (const [iso, nimi] of Object.entries(EUROOPPA)) {
     tyypit,
     visoja,
     visaOsuus: yhteensa ? visoja / yhteensa : 0,
+    ihmeTila,
     ilmanKuvaa,
     kuvia,
     generoituja,
@@ -190,6 +238,7 @@ for (const [iso, nimi] of Object.entries(EUROOPPA)) {
 const pros = (x) => `${Math.round(x * 1000) / 10}%`;
 const rivi = (r) => `| ${r.iso} | ${r.nimi} | ${r.yhteensa} | `
   + `${TYYPIT.map((t) => r.tyypit[t]).join(' / ')} | ${r.visoja} (${pros(r.visaOsuus)}) | `
+  + `${r.ihmeTila.ihme} / ${r.ihmeTila.rappeutunut} / ${r.ihmeTila.olemassa} | `
   + `${r.ilmanKuvaa} | ${r.kuvia} | ${r.generoituja} | ${r.kartuschaRiveja} |`;
 
 const yhtVisoja = rivit.reduce((a, r) => a + r.visoja, 0);
@@ -197,30 +246,48 @@ const yhtNostot = rivit.reduce((a, r) => a + r.yhteensa, 0);
 const yhtKuvia = rivit.reduce((a, r) => a + r.kuvia, 0);
 const yhtGeneroituja = rivit.reduce((a, r) => a + r.generoituja, 0);
 const yhtIlmanKuvaa = rivit.reduce((a, r) => a + r.ilmanKuvaa, 0);
+const yhtIhme = rivit.reduce((a, r) => a + r.ihmeTila.ihme, 0);
+const yhtRappeutunut = rivit.reduce((a, r) => a + r.ihmeTila.rappeutunut, 0);
+const yhtOlemassa = rivit.reduce((a, r) => a + r.ihmeTila.olemassa, 0);
 const allaKolmasosan = rivit.filter((r) => r.yhteensa > 0 && r.visaOsuus < 1 / 3)
   .sort((a, b) => a.visaOsuus - b.visaOsuus);
 
-const md = `# Nostoinventaario Euroopasta — ${new Date().toISOString().slice(0, 10)}
+const md = `# Nostoinventaario Euroopasta — ${new Date().toISOString().slice(0, 10)} (korjattu)
 
 Sisältökirjuri (Sonnet), Fablen tilaus: omistaja ottaa Euroopan maiden
 kaikki nostot takaisin työlistalle (tarkistus: noin joka kolmannessa
 tietovisa; havainnekuvia lisää Codexilta huomenna). Ei sisältömuutoksia
 tässä erässä — pelkkä laskenta, työkalu \`tools/nostoinventaario.mjs\`.
 
+**KORJATTU 20.9.2026 ILTA** täsmäytyksen jälkeen Pelikoodarin (opus)
+koodista lasketun FRA-luvun kanssa. Kaksi virhettä ensimmäisessä
+versiossa: (1) "visa" luettiin väärästä kentästä (\`kysymykset\`-
+taulukko, joka on pöllö-chatin ehdotuskysymyksiä — ei tietovisa) oikean
+\`nosto.visa\`-kentän sijaan (sama muoto kuin lehden tehtävä:
+\`{kysymys, vaihtoehdot, oikea, fakta?}\`, tarkistettu suoraan
+js/fokusnosto.js \`nostonVisa\`-funktion ehdolla); (2)
+\`maalehtinostot-<iso>.js\` vie sekä käsitellyn että raakadatan, ja
+kaikkien exporttien läpikäynti laski osan nostoista kahdesti.
+Täsmäytyksen jälkeen tämä työkalu antaa FRA:lle täsmälleen
+Pelikoodarin luvut: 64 nostoa, 16 visaa (25 %). Vanha raportti (51 %
+FRA:lle, 94 % kaikille) oli virheellinen — tämä korvaa sen kokonaan.
+
 ## Menetelmä ja rajaus
 
 Luvut tulevat kunkin maan ISO-päätteisistä paketeista
 (\`maastokohteet-<iso>.js\`, \`hahmotelma-<iso>.js\`,
-\`maalehtinostot-<iso>.js\`, \`nakyvat-kaupungit-<iso>.js\`,
-\`fokuskohteet-<iso>.js\`) sekä jaetusta \`elaintakyt.js\`:stä (yksi
-eläintäky per maa). **EI SISÄLLÄ** täky-, syvennys-, skandaali- ja
-historian hetki -kerroksia (dynaamisesti koottuja lisäkerroksia,
-js/fokusnosto.js ja sisarpaketit) — luvut ovat siis ALARAJA kartalla
-näkyvien merkkien kokonaismäärälle, ei koko \`keraaNostot\`-tulos
-(tools/fokuskartta/nostot.mjs), joka laski koko Euroopalle
-huomattavasti enemmän merkkejä mukaan lukien nuo lisäkerrokset.
-Rajaus tehtiin, jotta "nostoja yhteensä" ja visa/kuva-osuudet
-laskettaisiin SAMASTA joukosta eikä sekoitettaisi kahta eri lähdettä.
+\`maalehtinostot-<iso>.js\`, \`fokuskohteet-<iso>.js\`) — VAIN kunkin
+tiedoston KANONINEN export (esim. \`MAASTOKOHTEET_FRA\`), ei muita
+saman tiedoston vientejä. \`nakyvat-kaupungit-<iso>.js\` (kaupunki-
+kortit, oma korttityyppi) ja jaettu \`elaintakyt.js\` (oma "perhe")
+EIVÄT kuulu tähän joukkoon — pudotettu tässä korjauksessa, koska
+Pelikoodarin ryhmittely ei sisältänyt niitä eikä peli käsittele niitä
+"nostoina" visan tai tyyppijakauman kannalta. EI SISÄLLÄ myöskään
+täky-, syvennys-, skandaali- ja historian hetki -kerroksia
+(dynaamisesti koottuja lisäkerroksia, js/fokusnosto.js ja
+sisarpaketit) — luvut ovat siis ALARAJA kartalla näkyvien merkkien
+kokonaismäärälle, ei koko \`keraaNostot\`-tulos
+(tools/fokuskartta/nostot.mjs).
 
 **Havainnekuvan (generoitu-lippu) kenttä EI ole boolean eikä täysin
 yhtenäinen, mutta merkintätapa ON yhtenäinen siellä missä sitä
@@ -235,26 +302,35 @@ virhe, korjattu ennen julkaisua. OIKEA merkki on \`lahde\`-kentän
 riippuen) TÄSMÄLLINEN ALKU **"Tekoälyllä tuotettu havainnekuva."** —
 käytössä johdonmukaisesti neljässä paketissa: \`elaintakyt.js\`,
 \`kulttuuri-kategoriat.js\`, \`maa-kategoriat.js\`,
-\`nahtavyysjutut.js\`. Muissa (esim. maastokohteet-, hahmotelma- ja
-maalehtinostot-paketit) havainnekuvia ei tämän tarkistuksen mukaan
-ole lainkaan — kaikki niiden kuvat ovat aitoja Commons-valokuvia.
-**Tämän erän skanni EI kata** \`kulttuuri-kategoriat.js\`:ää (kaupungin
-nostot, avain on kaupunki-id eikä ISO) eikä \`nahtavyysjutut.js\`:ää,
-vaikka molemmissa käytetään havainnekuvia — niiden liittäminen
-maakohtaiseen tauluun vaatisi kaupunki→maa-yhdistämisen, mikä olisi
-kasvattanut tämän "pienen" erän laajuutta. \`ELAINTAKYT\`:n
-tekoälykuvat näyttävät koskevan vain Euroopan ulkopuolisia maita
-(Intia, Japani, Etelä-Afrikka, Chile, Uusi-Seelanti ym. pistokoe) —
-siksi Euroopan oma eläintäky-sarake on 0 tekoälykuvaa, ei virhe.
+\`nahtavyysjutut.js\` — joista YKSIKÄÄN ei kuulu tämän raportin
+nostojoukkoon (ks. yllä). "Havainnekuvia"-sarake alla kertoo siis
+vain, kuinka moni skannattujen neljän paketin (maastokohteet-,
+hahmotelma-, maalehtinostot-, fokuskohteet-) OMISTA kuvista täyttää
+tuon lahde-ehdon — se ei kata mainittuja neljää muuta pakettia.
 
 Tyyppiluokat normalisoitu Fablen 12 luokkaan lähdekentistä
 \`tyyppi\`/\`kategoria\`/\`symLaji\`/\`laji\`; tunnistamaton arvo → muut.
+
+**Ihme / rappeutunut / olemassa -sarake** (omistajan linjaus, Raamattu
+"HAVAINNEKUVAT NOSTOISSA") ei ole PÄÄTELTY tekstistä (avainsanahaku
+olisi epäluotettava) vaan luettu suoraan olemassa olevasta
+\`ihme\`-kentästä, jota koodi jo käyttää (js/fokuskohteet-gbr.js,
+-grc.js ym.): nosto jolla on \`ihme: { kadonnut: true, ... }\` on
+kokonaan kadonnut kohde (kortilla vain havainnekuva) → **ihme**; nosto
+jolla on \`ihme: { kadonnut: false, ... }\` on rappeutunut/muuttunut
+paikka, jolla on sekä nykykuva että kulta-ajan havainnekuva →
+**rappeutunut**; nosto ilman \`ihme\`-kenttää → **olemassa** (tavallinen
+nosto, havainnekuva vain jos tuo selvästi lisäarvoa). Tämä kattaa vain
+neljä skannattua pakettia — \`kulttuuri-kategoriat.js\` ja
+\`nahtavyysjutut.js\` saattavat sisältää lisää \`ihme\`-nostoja tämän
+ulkopuolella.
 
 ## Yhteenveto
 
 - Maita: ${rivit.length}
 - Nostoja yhteensä: ${yhtNostot}
 - Visoja yhteensä: ${yhtVisoja} (${pros(yhtNostot ? yhtVisoja / yhtNostot : 0)} kaikista)
+- Ihme (kadonnut kohde): ${yhtIhme}, rappeutunut (pari): ${yhtRappeutunut}, olemassa: ${yhtOlemassa}
 - Kuvallisia: ${yhtKuvia}, joista havainnekuvaksi tulkittuja: ${yhtGeneroituja}
 - Ilman kuvaa: ${yhtIlmanKuvaa}
 - Maita joissa visaosuus alle 1/3: ${allaKolmasosan.length}
@@ -265,10 +341,11 @@ ${allaKolmasosan.map((r) => `- ${r.iso} ${r.nimi}: ${r.visoja}/${r.yhteensa} (${
 
 ## Taulukko per maa
 
-Tyypit-sarakkeen järjestys: ${TYYPIT.join(' / ')}.
+Tyypit-sarakkeen järjestys: ${TYYPIT.join(' / ')}. Ihme-sarakkeen
+järjestys: ihme / rappeutunut / olemassa.
 
-| ISO | Maa | Nostoja | Tyypit | Visoja (osuus) | Ilman kuvaa | Kuvia | Havainnekuvia | Kartuschan rivejä |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| ISO | Maa | Nostoja | Tyypit | Visoja (osuus) | Ihme/Rap./Ole. | Ilman kuvaa | Kuvia | Havainnekuvia | Kartuschan rivejä |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 ${rivit.map(rivi).join('\n')}
 `;
 

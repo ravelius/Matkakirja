@@ -1,24 +1,39 @@
-# Nostoinventaario Euroopasta — 2026-09-20
+# Nostoinventaario Euroopasta — 2026-09-20 (korjattu)
 
 Sisältökirjuri (Sonnet), Fablen tilaus: omistaja ottaa Euroopan maiden
 kaikki nostot takaisin työlistalle (tarkistus: noin joka kolmannessa
 tietovisa; havainnekuvia lisää Codexilta huomenna). Ei sisältömuutoksia
 tässä erässä — pelkkä laskenta, työkalu `tools/nostoinventaario.mjs`.
 
+**KORJATTU 20.9.2026 ILTA** täsmäytyksen jälkeen Pelikoodarin (opus)
+koodista lasketun FRA-luvun kanssa. Kaksi virhettä ensimmäisessä
+versiossa: (1) "visa" luettiin väärästä kentästä (`kysymykset`-
+taulukko, joka on pöllö-chatin ehdotuskysymyksiä — ei tietovisa) oikean
+`nosto.visa`-kentän sijaan (sama muoto kuin lehden tehtävä:
+`{kysymys, vaihtoehdot, oikea, fakta?}`, tarkistettu suoraan
+js/fokusnosto.js `nostonVisa`-funktion ehdolla); (2)
+`maalehtinostot-<iso>.js` vie sekä käsitellyn että raakadatan, ja
+kaikkien exporttien läpikäynti laski osan nostoista kahdesti.
+Täsmäytyksen jälkeen tämä työkalu antaa FRA:lle täsmälleen
+Pelikoodarin luvut: 64 nostoa, 16 visaa (25 %). Vanha raportti (51 %
+FRA:lle, 94 % kaikille) oli virheellinen — tämä korvaa sen kokonaan.
+
 ## Menetelmä ja rajaus
 
 Luvut tulevat kunkin maan ISO-päätteisistä paketeista
 (`maastokohteet-<iso>.js`, `hahmotelma-<iso>.js`,
-`maalehtinostot-<iso>.js`, `nakyvat-kaupungit-<iso>.js`,
-`fokuskohteet-<iso>.js`) sekä jaetusta `elaintakyt.js`:stä (yksi
-eläintäky per maa). **EI SISÄLLÄ** täky-, syvennys-, skandaali- ja
-historian hetki -kerroksia (dynaamisesti koottuja lisäkerroksia,
-js/fokusnosto.js ja sisarpaketit) — luvut ovat siis ALARAJA kartalla
-näkyvien merkkien kokonaismäärälle, ei koko `keraaNostot`-tulos
-(tools/fokuskartta/nostot.mjs), joka laski koko Euroopalle
-huomattavasti enemmän merkkejä mukaan lukien nuo lisäkerrokset.
-Rajaus tehtiin, jotta "nostoja yhteensä" ja visa/kuva-osuudet
-laskettaisiin SAMASTA joukosta eikä sekoitettaisi kahta eri lähdettä.
+`maalehtinostot-<iso>.js`, `fokuskohteet-<iso>.js`) — VAIN kunkin
+tiedoston KANONINEN export (esim. `MAASTOKOHTEET_FRA`), ei muita
+saman tiedoston vientejä. `nakyvat-kaupungit-<iso>.js` (kaupunki-
+kortit, oma korttityyppi) ja jaettu `elaintakyt.js` (oma "perhe")
+EIVÄT kuulu tähän joukkoon — pudotettu tässä korjauksessa, koska
+Pelikoodarin ryhmittely ei sisältänyt niitä eikä peli käsittele niitä
+"nostoina" visan tai tyyppijakauman kannalta. EI SISÄLLÄ myöskään
+täky-, syvennys-, skandaali- ja historian hetki -kerroksia
+(dynaamisesti koottuja lisäkerroksia, js/fokusnosto.js ja
+sisarpaketit) — luvut ovat siis ALARAJA kartalla näkyvien merkkien
+kokonaismäärälle, ei koko `keraaNostot`-tulos
+(tools/fokuskartta/nostot.mjs).
 
 **Havainnekuvan (generoitu-lippu) kenttä EI ole boolean eikä täysin
 yhtenäinen, mutta merkintätapa ON yhtenäinen siellä missä sitä
@@ -33,80 +48,118 @@ virhe, korjattu ennen julkaisua. OIKEA merkki on `lahde`-kentän
 riippuen) TÄSMÄLLINEN ALKU **"Tekoälyllä tuotettu havainnekuva."** —
 käytössä johdonmukaisesti neljässä paketissa: `elaintakyt.js`,
 `kulttuuri-kategoriat.js`, `maa-kategoriat.js`,
-`nahtavyysjutut.js`. Muissa (esim. maastokohteet-, hahmotelma- ja
-maalehtinostot-paketit) havainnekuvia ei tämän tarkistuksen mukaan
-ole lainkaan — kaikki niiden kuvat ovat aitoja Commons-valokuvia.
-**Tämän erän skanni EI kata** `kulttuuri-kategoriat.js`:ää (kaupungin
-nostot, avain on kaupunki-id eikä ISO) eikä `nahtavyysjutut.js`:ää,
-vaikka molemmissa käytetään havainnekuvia — niiden liittäminen
-maakohtaiseen tauluun vaatisi kaupunki→maa-yhdistämisen, mikä olisi
-kasvattanut tämän "pienen" erän laajuutta. `ELAINTAKYT`:n
-tekoälykuvat näyttävät koskevan vain Euroopan ulkopuolisia maita
-(Intia, Japani, Etelä-Afrikka, Chile, Uusi-Seelanti ym. pistokoe) —
-siksi Euroopan oma eläintäky-sarake on 0 tekoälykuvaa, ei virhe.
+`nahtavyysjutut.js` — joista YKSIKÄÄN ei kuulu tämän raportin
+nostojoukkoon (ks. yllä). "Havainnekuvia"-sarake alla kertoo siis
+vain, kuinka moni skannattujen neljän paketin (maastokohteet-,
+hahmotelma-, maalehtinostot-, fokuskohteet-) OMISTA kuvista täyttää
+tuon lahde-ehdon — se ei kata mainittuja neljää muuta pakettia.
 
 Tyyppiluokat normalisoitu Fablen 12 luokkaan lähdekentistä
 `tyyppi`/`kategoria`/`symLaji`/`laji`; tunnistamaton arvo → muut.
 
+**Ihme / rappeutunut / olemassa -sarake** (omistajan linjaus, Raamattu
+"HAVAINNEKUVAT NOSTOISSA") ei ole PÄÄTELTY tekstistä (avainsanahaku
+olisi epäluotettava) vaan luettu suoraan olemassa olevasta
+`ihme`-kentästä, jota koodi jo käyttää (js/fokuskohteet-gbr.js,
+-grc.js ym.): nosto jolla on `ihme: { kadonnut: true, ... }` on
+kokonaan kadonnut kohde (kortilla vain havainnekuva) → **ihme**; nosto
+jolla on `ihme: { kadonnut: false, ... }` on rappeutunut/muuttunut
+paikka, jolla on sekä nykykuva että kulta-ajan havainnekuva →
+**rappeutunut**; nosto ilman `ihme`-kenttää → **olemassa** (tavallinen
+nosto, havainnekuva vain jos tuo selvästi lisäarvoa). Tämä kattaa vain
+neljä skannattua pakettia — `kulttuuri-kategoriat.js` ja
+`nahtavyysjutut.js` saattavat sisältää lisää `ihme`-nostoja tämän
+ulkopuolella.
+
 ## Yhteenveto
 
 - Maita: 43
-- Nostoja yhteensä: 1253
-- Visoja yhteensä: 1174 (93.7% kaikista)
-- Kuvallisia: 1010, joista havainnekuvaksi tulkittuja: 0
-- Ilman kuvaa: 243
-- Maita joissa visaosuus alle 1/3: 0
+- Nostoja yhteensä: 1198
+- Visoja yhteensä: 254 (21.2% kaikista)
+- Ihme (kadonnut kohde): 8, rappeutunut (pari): 11, olemassa: 1179
+- Kuvallisia: 1000, joista havainnekuvaksi tulkittuja: 0
+- Ilman kuvaa: 198
+- Maita joissa visaosuus alle 1/3: 29
 
 ### Maat joissa visaosuus alle 1/3
 
-(ei yhtään)
+- BIH Bosnia ja Hertsegovina: 0/16 (0%)
+- CHE Sveitsi: 0/16 (0%)
+- GBR Britannia: 0/13 (0%)
+- ISL Islanti: 0/17 (0%)
+- NOR Norja: 0/12 (0%)
+- RUS Venäjä: 0/16 (0%)
+- TUR Turkki: 0/28 (0%)
+- UKR Ukraina: 0/13 (0%)
+- GRC Kreikka: 10/64 (15.6%)
+- EST Viro: 8/42 (19%)
+- DEU Saksa: 10/50 (20%)
+- LVA Latvia: 7/35 (20%)
+- LTU Liettua: 7/34 (20.6%)
+- ITA Italia: 10/48 (20.8%)
+- FIN Suomi: 10/46 (21.7%)
+- SWE Ruotsi: 10/46 (21.7%)
+- BGR Bulgaria: 10/45 (22.2%)
+- HRV Kroatia: 10/45 (22.2%)
+- ROU Romania: 10/45 (22.2%)
+- AUT Itävalta: 10/44 (22.7%)
+- CZE Tšekki: 10/44 (22.7%)
+- DNK Tanska: 10/43 (23.3%)
+- ESP Espanja: 10/43 (23.3%)
+- HUN Unkari: 10/42 (23.8%)
+- NLD Alankomaat: 10/42 (23.8%)
+- PRT Portugali: 10/42 (23.8%)
+- FRA Ranska: 16/64 (25%)
+- POL Puola: 10/40 (25%)
+- IRL Irlanti: 10/39 (25.6%)
 
 ## Taulukko per maa
 
-Tyypit-sarakkeen järjestys: vuori / saari / järvi / joki / meri / historia / kulttuuri / ruoka / kauppa / tekniikka / merenkulku / muut.
+Tyypit-sarakkeen järjestys: vuori / saari / järvi / joki / meri / historia / kulttuuri / ruoka / kauppa / tekniikka / merenkulku / muut. Ihme-sarakkeen
+järjestys: ihme / rappeutunut / olemassa.
 
-| ISO | Maa | Nostoja | Tyypit | Visoja (osuus) | Ilman kuvaa | Kuvia | Havainnekuvia | Kartuschan rivejä |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| ALB | Albania | 0 | 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 | 0 (0%) | 0 | 0 | 0 | 0 |
-| AND | Andorra | 0 | 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 | 0 (0%) | 0 | 0 | 0 | 0 |
-| AUT | Itävalta | 45 | 5 / 0 / 5 / 3 / 0 / 13 / 11 / 1 / 3 / 2 / 0 / 2 | 44 (97.8%) | 1 | 44 | 0 | 6 |
-| BEL | Belgia | 26 | 1 / 0 / 0 / 2 / 1 / 7 / 8 / 2 / 1 / 4 / 0 / 0 | 26 (100%) | 0 | 26 | 0 | 5 |
-| BGR | Bulgaria | 46 | 13 / 0 / 0 / 1 / 3 / 12 / 10 / 2 / 1 / 0 / 2 / 2 | 44 (95.7%) | 18 | 28 | 0 | 2 |
-| BIH | Bosnia ja Hertsegovina | 17 | 4 / 0 / 0 / 2 / 1 / 3 / 5 / 0 / 0 / 0 / 0 / 2 | 16 (94.1%) | 12 | 5 | 0 | 2 |
-| BLR | Valko-Venäjä | 0 | 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 | 0 (0%) | 0 | 0 | 0 | 0 |
-| CHE | Sveitsi | 17 | 3 / 0 / 0 / 3 / 0 / 2 / 1 / 1 / 1 / 3 / 0 / 3 | 16 (94.1%) | 1 | 16 | 0 | 5 |
-| CYP | Kypros | 23 | 3 / 0 / 0 / 1 / 2 / 9 / 6 / 1 / 0 / 0 / 0 / 1 | 22 (95.7%) | 0 | 23 | 0 | 5 |
-| CZE | Tšekki | 45 | 7 / 0 / 3 / 3 / 0 / 11 / 7 / 4 / 3 / 4 / 1 / 2 | 44 (97.8%) | 1 | 44 | 0 | 6 |
-| DEU | Saksa | 51 | 6 / 3 / 2 / 5 / 3 / 12 / 10 / 2 / 3 / 4 / 0 / 1 | 50 (98%) | 22 | 29 | 0 | 11 |
-| DNK | Tanska | 44 | 5 / 3 / 0 / 0 / 2 / 13 / 8 / 1 / 4 / 2 / 3 / 3 | 43 (97.7%) | 1 | 43 | 0 | 4 |
-| ESP | Espanja | 44 | 7 / 0 / 1 / 2 / 2 / 14 / 6 / 4 / 1 / 6 / 0 / 1 | 43 (97.7%) | 1 | 43 | 0 | 8 |
-| EST | Viro | 43 | 2 / 2 / 3 / 3 / 3 / 12 / 7 / 0 / 1 / 5 / 1 / 4 | 42 (97.7%) | 1 | 42 | 0 | 2 |
-| FIN | Suomi | 47 | 5 / 1 / 1 / 4 / 3 / 13 / 8 / 0 / 2 / 6 / 2 / 2 | 46 (97.9%) | 1 | 46 | 0 | 3 |
-| FRA | Ranska | 90 | 6 / 0 / 0 / 3 / 5 / 15 / 16 / 2 / 0 / 3 / 2 / 38 | 46 (51.1%) | 39 | 51 | 0 | 8 |
-| GBR | Britannia | 14 | 2 / 0 / 0 / 1 / 2 / 4 / 1 / 0 / 0 / 3 / 0 / 1 | 13 (92.9%) | 4 | 10 | 0 | 15 |
-| GRC | Kreikka | 65 | 9 / 4 / 2 / 3 / 4 / 17 / 14 / 2 / 2 / 4 / 0 / 4 | 62 (95.4%) | 36 | 29 | 0 | 6 |
-| HRV | Kroatia | 46 | 5 / 8 / 3 / 4 / 1 / 12 / 10 / 0 / 0 / 0 / 2 / 1 | 45 (97.8%) | 20 | 26 | 0 | 3 |
-| HUN | Unkari | 43 | 6 / 0 / 4 / 4 / 0 / 11 / 13 / 3 / 1 / 0 / 0 / 1 | 42 (97.7%) | 18 | 25 | 0 | 6 |
-| IRL | Irlanti | 40 | 7 / 1 / 2 / 2 / 3 / 13 / 5 / 0 / 1 / 2 / 2 / 2 | 39 (97.5%) | 1 | 39 | 0 | 6 |
-| ISL | Islanti | 18 | 3 / 1 / 0 / 2 / 2 / 3 / 1 / 0 / 0 / 1 / 1 / 4 | 17 (94.4%) | 1 | 17 | 0 | 4 |
-| ITA | Italia | 49 | 7 / 3 / 2 / 1 / 4 / 12 / 10 / 3 / 2 / 3 / 0 / 2 | 48 (98%) | 17 | 32 | 0 | 8 |
-| LTU | Liettua | 35 | 2 / 1 / 4 / 1 / 1 / 10 / 14 / 0 / 0 / 0 / 0 / 2 | 34 (97.1%) | 1 | 34 | 0 | 3 |
-| LUX | Luxemburg | 15 | 0 / 0 / 0 / 0 / 0 / 9 / 3 / 2 / 0 / 1 / 0 / 0 | 15 (100%) | 0 | 15 | 0 | 5 |
-| LVA | Latvia | 36 | 1 / 0 / 1 / 1 / 2 / 10 / 8 / 3 / 1 / 1 / 3 / 5 | 35 (97.2%) | 1 | 35 | 0 | 3 |
-| MDA | Moldova | 0 | 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 | 0 (0%) | 0 | 0 | 0 | 0 |
-| MKD | Pohjois-Makedonia | 0 | 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 | 0 (0%) | 0 | 0 | 0 | 0 |
-| MLT | Malta | 11 | 1 / 1 / 0 / 0 / 0 / 7 / 1 / 0 / 0 / 0 / 1 / 0 | 11 (100%) | 0 | 11 | 0 | 5 |
-| MNE | Montenegro | 0 | 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 | 0 (0%) | 0 | 0 | 0 | 0 |
-| NLD | Alankomaat | 43 | 1 / 4 / 2 / 1 / 1 / 11 / 13 / 2 / 1 / 6 / 0 / 1 | 42 (97.7%) | 1 | 42 | 0 | 6 |
-| NOR | Norja | 13 | 1 / 0 / 0 / 1 / 2 / 3 / 2 / 0 / 0 / 2 / 1 / 1 | 12 (92.3%) | 1 | 12 | 0 | 5 |
-| POL | Puola | 41 | 4 / 1 / 1 / 4 / 2 / 10 / 11 / 1 / 3 / 3 / 0 / 1 | 40 (97.6%) | 2 | 39 | 0 | 3 |
-| PRT | Portugali | 43 | 3 / 1 / 1 / 2 / 3 / 18 / 8 / 1 / 1 / 3 / 1 / 1 | 42 (97.7%) | 1 | 42 | 0 | 6 |
-| ROU | Romania | 46 | 7 / 0 / 2 / 4 / 1 / 11 / 11 / 1 / 0 / 6 / 0 / 3 | 44 (95.7%) | 14 | 32 | 0 | 2 |
-| RUS | Venäjä | 17 | 2 / 0 / 0 / 2 / 4 / 4 / 3 / 0 / 0 / 1 / 0 / 1 | 16 (94.1%) | 1 | 16 | 0 | 3 |
-| SRB | Serbia | 0 | 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 | 0 (0%) | 0 | 0 | 0 | 0 |
-| SVK | Slovakia | 26 | 4 / 0 / 1 / 0 / 0 / 12 / 6 / 1 / 1 / 1 / 0 / 0 | 26 (100%) | 0 | 26 | 0 | 5 |
-| SVN | Slovenia | 24 | 4 / 0 / 2 / 1 / 0 / 7 / 4 / 2 / 0 / 4 / 0 / 0 | 24 (100%) | 0 | 24 | 0 | 5 |
-| SWE | Ruotsi | 47 | 5 / 2 / 1 / 2 / 4 / 11 / 9 / 2 / 3 / 6 / 1 / 1 | 46 (97.9%) | 1 | 46 | 0 | 8 |
-| TUR | Turkki | 29 | 3 / 0 / 1 / 2 / 3 / 7 / 7 / 0 / 1 / 0 / 0 / 5 | 26 (89.7%) | 24 | 5 | 0 | 7 |
-| UKR | Ukraina | 14 | 1 / 0 / 0 / 2 / 2 / 4 / 2 / 0 / 0 / 2 / 0 / 1 | 13 (92.9%) | 1 | 13 | 0 | 3 |
-| XKX | Kosovo | 0 | 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 | 0 (0%) | 0 | 0 | 0 | 0 |
+| ISO | Maa | Nostoja | Tyypit | Visoja (osuus) | Ihme/Rap./Ole. | Ilman kuvaa | Kuvia | Havainnekuvia | Kartuschan rivejä |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| ALB | Albania | 0 | 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 | 0 (0%) | 0 / 0 / 0 | 0 | 0 | 0 | 0 |
+| AND | Andorra | 0 | 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 | 0 (0%) | 0 / 0 / 0 | 0 | 0 | 0 | 0 |
+| AUT | Itävalta | 44 | 5 / 0 / 5 / 3 / 0 / 13 / 11 / 1 / 3 / 2 / 0 / 1 | 10 (22.7%) | 0 / 0 / 44 | 0 | 44 | 0 | 6 |
+| BEL | Belgia | 26 | 1 / 0 / 0 / 2 / 1 / 7 / 8 / 2 / 1 / 4 / 0 / 0 | 9 (34.6%) | 0 / 0 / 26 | 0 | 26 | 0 | 5 |
+| BGR | Bulgaria | 45 | 13 / 0 / 0 / 1 / 3 / 12 / 10 / 2 / 1 / 0 / 2 / 1 | 10 (22.2%) | 0 / 0 / 45 | 17 | 28 | 0 | 2 |
+| BIH | Bosnia ja Hertsegovina | 16 | 4 / 0 / 0 / 2 / 1 / 3 / 5 / 0 / 0 / 0 / 0 / 1 | 0 (0%) | 0 / 0 / 16 | 12 | 4 | 0 | 2 |
+| BLR | Valko-Venäjä | 0 | 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 | 0 (0%) | 0 / 0 / 0 | 0 | 0 | 0 | 0 |
+| CHE | Sveitsi | 16 | 3 / 0 / 0 / 3 / 0 / 2 / 1 / 1 / 1 / 3 / 0 / 2 | 0 (0%) | 0 / 0 / 16 | 0 | 16 | 0 | 5 |
+| CYP | Kypros | 22 | 3 / 0 / 0 / 1 / 2 / 9 / 6 / 1 / 0 / 0 / 0 / 0 | 10 (45.5%) | 0 / 0 / 22 | 0 | 22 | 0 | 5 |
+| CZE | Tšekki | 44 | 7 / 0 / 3 / 3 / 0 / 11 / 7 / 4 / 3 / 4 / 1 / 1 | 10 (22.7%) | 0 / 0 / 44 | 0 | 44 | 0 | 6 |
+| DEU | Saksa | 50 | 6 / 3 / 2 / 5 / 3 / 12 / 10 / 2 / 3 / 4 / 0 / 0 | 10 (20%) | 0 / 0 / 50 | 21 | 29 | 0 | 11 |
+| DNK | Tanska | 43 | 5 / 3 / 0 / 0 / 2 / 13 / 8 / 1 / 4 / 2 / 3 / 2 | 10 (23.3%) | 0 / 0 / 43 | 0 | 43 | 0 | 4 |
+| ESP | Espanja | 43 | 7 / 0 / 1 / 2 / 2 / 14 / 6 / 4 / 1 / 6 / 0 / 0 | 10 (23.3%) | 0 / 0 / 43 | 0 | 43 | 0 | 8 |
+| EST | Viro | 42 | 2 / 2 / 3 / 3 / 3 / 12 / 7 / 0 / 1 / 5 / 1 / 3 | 8 (19%) | 0 / 0 / 42 | 0 | 42 | 0 | 2 |
+| FIN | Suomi | 46 | 5 / 1 / 1 / 4 / 3 / 13 / 8 / 0 / 2 / 6 / 2 / 1 | 10 (21.7%) | 0 / 0 / 46 | 0 | 46 | 0 | 3 |
+| FRA | Ranska | 64 | 6 / 0 / 0 / 3 / 5 / 15 / 9 / 2 / 0 / 3 / 2 / 19 | 16 (25%) | 2 / 0 / 62 | 20 | 44 | 0 | 8 |
+| GBR | Britannia | 13 | 2 / 0 / 0 / 1 / 2 / 4 / 1 / 0 / 0 / 3 / 0 / 0 | 0 (0%) | 2 / 1 / 10 | 3 | 10 | 0 | 15 |
+| GRC | Kreikka | 64 | 9 / 4 / 2 / 3 / 4 / 17 / 14 / 2 / 2 / 4 / 0 / 3 | 10 (15.6%) | 1 / 6 / 57 | 35 | 29 | 0 | 6 |
+| HRV | Kroatia | 45 | 5 / 8 / 3 / 4 / 1 / 12 / 10 / 0 / 0 / 0 / 2 / 0 | 10 (22.2%) | 0 / 0 / 45 | 19 | 26 | 0 | 3 |
+| HUN | Unkari | 42 | 6 / 0 / 4 / 4 / 0 / 11 / 13 / 3 / 1 / 0 / 0 / 0 | 10 (23.8%) | 0 / 0 / 42 | 17 | 25 | 0 | 6 |
+| IRL | Irlanti | 39 | 7 / 1 / 2 / 2 / 3 / 13 / 5 / 0 / 1 / 2 / 2 / 1 | 10 (25.6%) | 0 / 0 / 39 | 0 | 39 | 0 | 6 |
+| ISL | Islanti | 17 | 3 / 1 / 0 / 2 / 2 / 3 / 1 / 0 / 0 / 1 / 1 / 3 | 0 (0%) | 0 / 0 / 17 | 0 | 17 | 0 | 4 |
+| ITA | Italia | 48 | 7 / 3 / 2 / 1 / 4 / 12 / 10 / 3 / 2 / 3 / 0 / 1 | 10 (20.8%) | 0 / 2 / 46 | 16 | 32 | 0 | 8 |
+| LTU | Liettua | 34 | 2 / 1 / 4 / 1 / 1 / 10 / 14 / 0 / 0 / 0 / 0 / 1 | 7 (20.6%) | 0 / 0 / 34 | 0 | 34 | 0 | 3 |
+| LUX | Luxemburg | 15 | 0 / 0 / 0 / 0 / 0 / 9 / 3 / 2 / 0 / 1 / 0 / 0 | 6 (40%) | 0 / 0 / 15 | 0 | 15 | 0 | 5 |
+| LVA | Latvia | 35 | 1 / 0 / 1 / 1 / 2 / 10 / 8 / 3 / 1 / 1 / 3 / 4 | 7 (20%) | 0 / 0 / 35 | 0 | 35 | 0 | 3 |
+| MDA | Moldova | 0 | 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 | 0 (0%) | 0 / 0 / 0 | 0 | 0 | 0 | 0 |
+| MKD | Pohjois-Makedonia | 0 | 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 | 0 (0%) | 0 / 0 / 0 | 0 | 0 | 0 | 0 |
+| MLT | Malta | 11 | 1 / 1 / 0 / 0 / 0 / 7 / 1 / 0 / 0 / 0 / 1 / 0 | 4 (36.4%) | 0 / 0 / 11 | 0 | 11 | 0 | 5 |
+| MNE | Montenegro | 0 | 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 | 0 (0%) | 0 / 0 / 0 | 0 | 0 | 0 | 0 |
+| NLD | Alankomaat | 42 | 1 / 4 / 2 / 1 / 1 / 11 / 13 / 2 / 1 / 6 / 0 / 0 | 10 (23.8%) | 0 / 0 / 42 | 0 | 42 | 0 | 6 |
+| NOR | Norja | 12 | 1 / 0 / 0 / 1 / 2 / 3 / 2 / 0 / 0 / 2 / 1 / 0 | 0 (0%) | 0 / 0 / 12 | 0 | 12 | 0 | 5 |
+| POL | Puola | 40 | 4 / 1 / 1 / 4 / 2 / 10 / 11 / 1 / 3 / 3 / 0 / 0 | 10 (25%) | 0 / 0 / 40 | 1 | 39 | 0 | 3 |
+| PRT | Portugali | 42 | 3 / 1 / 1 / 2 / 3 / 18 / 8 / 1 / 1 / 3 / 1 / 0 | 10 (23.8%) | 0 / 0 / 42 | 0 | 42 | 0 | 6 |
+| ROU | Romania | 45 | 7 / 0 / 2 / 4 / 1 / 11 / 11 / 1 / 0 / 6 / 0 / 2 | 10 (22.2%) | 0 / 0 / 45 | 13 | 32 | 0 | 2 |
+| RUS | Venäjä | 16 | 2 / 0 / 0 / 2 / 4 / 4 / 3 / 0 / 0 / 1 / 0 / 0 | 0 (0%) | 0 / 0 / 16 | 0 | 16 | 0 | 3 |
+| SRB | Serbia | 0 | 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 | 0 (0%) | 0 / 0 / 0 | 0 | 0 | 0 | 0 |
+| SVK | Slovakia | 26 | 4 / 0 / 1 / 0 / 0 / 12 / 6 / 1 / 1 / 1 / 0 / 0 | 9 (34.6%) | 0 / 0 / 26 | 0 | 26 | 0 | 5 |
+| SVN | Slovenia | 24 | 4 / 0 / 2 / 1 / 0 / 7 / 4 / 2 / 0 / 4 / 0 / 0 | 8 (33.3%) | 0 / 0 / 24 | 0 | 24 | 0 | 5 |
+| SWE | Ruotsi | 46 | 5 / 2 / 1 / 2 / 4 / 11 / 9 / 2 / 3 / 6 / 1 / 0 | 10 (21.7%) | 0 / 0 / 46 | 0 | 46 | 0 | 8 |
+| TUR | Turkki | 28 | 3 / 0 / 1 / 2 / 3 / 7 / 7 / 0 / 1 / 0 / 0 / 4 | 0 (0%) | 3 / 2 / 23 | 24 | 4 | 0 | 7 |
+| UKR | Ukraina | 13 | 1 / 0 / 0 / 2 / 2 / 4 / 2 / 0 / 0 / 2 / 0 / 0 | 0 (0%) | 0 / 0 / 13 | 0 | 13 | 0 | 3 |
+| XKX | Kosovo | 0 | 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 | 0 (0%) | 0 / 0 / 0 | 0 | 0 | 0 | 0 |
