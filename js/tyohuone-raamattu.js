@@ -9742,7 +9742,16 @@ export const RAAMATTU = {
           + 'mukaan (05.21). SEURAAVAN SESSION ENSIMMAISET: 1) Sonnet 1 tarkistaa laitteella '
           + 'v1973:n pohjan (Seinen mutkat, Gironde, varitaso, pallo); 2) vanhat kuvat era 2 '
           + 'ampariin ja merge; 3) Gironden kaksoisviiva laitteella; 4) saapumistrailerin '
-          + 'sumennus jaa kartalle; 5) pulun kupla nayttaa koko historian.',
+          + 'sumennus jaa kartalle; 5) pulun kupla nayttaa koko historian. OMISTAJA 06.58: '
+          + '"Tee vain nuo mitka ovat suunnitelmissa mutta ala aloita mitaan muuta" -> '
+          + 'sessiot jatkavat Raamatun jonoa: Opus 1 Gironde laitteella, sumennus, pulun '
+          + 'historia, tyopolut, astropulun kuva; Opus 2 nostoklikkaus, CYP/ITA/POL, '
+          + 'polttovelat; Sonnet 1 kierros 18 (v1973 pohja laitteella); Sonnet 2 kartuscha '
+          + 'LUX/MLT/SVK/SVN; Sonnet 3 Kosicen kohdekartta numeroympyroin. VANHAT KUVAT ERA '
+          + '2 VALMIS (Fable 08.24): Grutas hyvaksytty (patsas, rajavyohykenayttely), Maasin '
+          + 'Dinant-kuva pudotettu (Belgia); kansio vanhat-eur synkattu karttanostot/'
+          + '20260920/, kaikki 2 094 karttanostot-viitetta HEAD 200; mergetty v1973-prepiin '
+          + '(julkaistaan v1974).',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
