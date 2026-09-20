@@ -9685,7 +9685,10 @@ export const RAAMATTU = {
           + 'blur(6px) jaa kartalle dialogin ja pollopaneelin sulkeuduttua (v1970, '
           + 'pelaajalle nakyva) - ENSIMMAINEN ERA kun tyot jatkuvat; lisaksi paneelin '
           + 'reunavalit, alanappirivi 345/390, move-vaiheen korostus, vihjekupla. Opus 1 '
-          + 'pysahtyi.',
+          + 'pysahtyi. NUMEROYMPYRAT (Sonnet 3 b465c8d9, Fable 05.30): Bryssel 1-7 ja Ljubljana '
+          + '1-8 kohdekartalla numeroituina (maakartat numeroympyrat: true, nahtavyydet.js), '
+          + 'Muut-rivi poistuu, muut kaupungit ennallaan; savuke-numeroympyrat 16/16. '
+          + 'Sonnet 3 pysahtyi.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
