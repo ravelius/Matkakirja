@@ -18991,18 +18991,15 @@ export class UI {
       /*
        * Sama pyöreä rajaus kuin aarteilla; jos kuva ei lataudu, aarreIkoni
        * pudottaa tilalle laattatyypin viivakuvakkeen. ASTRONAUTIN KAMERA
-       * -linssillä (satelliitti) EI ole maalattua varustekuvaa (omistaja
-       * 15.9.2026: "SVG inline ... ei ulkoisia tiedostoja") — sille
-       * varasolu on oma vektorikuvake (js/mapart.js drawTokenIcon
-       * 'linssi-satelliitti') eikä muiden linssien jaettu taikalasi.
+       * -linssillä (satelliitti) on 20.9.2026 alkaen oma maalattu
+       * varustekuva (omistaja klo 14.50: *"tee astronautin kameralle
+       * uusi kuvake, missä on astronautti ja kamera"*; Fable valitsi
+       * ehdokkaan 3, docs/raportit/kaappaukset/astro-kuvake-20260920/).
+       * Varasolu on yhä sen oma vektorikuvake (js/mapart.js
+       * 'linssi-satelliitti'), ei muiden linssien jaettu taikalasi.
        */
       const onSatelliitti = tunnus === 'satelliitti';
-      // Ei kuva-osoitetta ollenkaan tälle linssille: aarreIkoni piirtää
-      // vektorikuvakkeen suoraan sen sijaan, että se yrittäisi ensin
-      // turhaan latautuvaa jpg:tä ja vaihtaisi vasta virheestä.
-      const tiedot = onSatelliitti
-        ? { name: nimi }
-        : { kuva: `assets/varusteet/varuste-${tunnus}.jpg`, name: nimi };
+      const tiedot = { kuva: `assets/varusteet/varuste-${tunnus}.jpg`, name: nimi };
       nappi.appendChild(aarreIkoni(tiedot, onSatelliitti ? 'linssi-satelliitti' : 'linssi', 64));
     } else {
       // "Ei linssiä" ei ole esine, jolla olisi valokuva: yliviivatut

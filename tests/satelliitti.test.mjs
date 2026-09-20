@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 
 /*
  * SATELLIITTILINSSI (omistajan tilaus 12.9.2026): hohtavat vihreät
@@ -1076,20 +1076,22 @@ test('linssin ikoni on kamera + Maan kaari, ei enää entinen piirros', () => {
   assert.match(LINSSI.ikoni, /<path d="M2 21c3.6-3.4 16.4-3.4 20 0"\/>/);
 });
 
-test('matkalaukun linssivalikko saa oman varasolun, ei jaettua taikalasia', () => {
+test('matkalaukun linssivalikko: oma varustekuva ja oma varasolu, ei jaettua taikalasia', () => {
   /*
    * Omistaja 15.9.2026: *"tee astronauttilinssille oma kuvake
-   * matkalaukkuun ... SVG inline samassa viivapaksuudessa ja
-   * värissä ... Ei ulkoisia tiedostoja, ei emojia"*. Varuste-
-   * satelliitti.jpg ei ole olemassa, joten linssiLiuska (js/ui.js)
-   * antaa sille oman vektorityypin 'linssi-satelliitti' eikä yleistä
-   * 'linssi'-taikalasia, jota muut ilman kuvaa jäävät linssit
-   * käyttäisivät.
+   * matkalaukkuun ... SVG inline"* → varasolu on oma vektorityyppi
+   * 'linssi-satelliitti', ei yleinen 'linssi'-taikalasi.
+   * Omistaja 20.9.2026 klo 14.50: *"tee astronautin kameralle uusi
+   * kuvake, missä on astronautti ja kamera"* → Fable valitsi
+   * ehdokkaan 3 ja assets/varusteet/varuste-satelliitti.jpg on nyt
+   * olemassa, joten linssiLiuska pyytää kuvan kuten muillekin;
+   * vektorikuvake jää varasoluksi kuvan puuttuessa.
    */
   const ui = lue('../js/ui.js');
   assert.match(ui, /onSatelliitti \? 'linssi-satelliitti' : 'linssi'/);
-  // Ei kuva-osoitetta satelliitille — ei turhaa 404-latausta.
-  assert.match(ui, /const tiedot = onSatelliitti\s*\n\s*\? \{ name: nimi \}/);
+  assert.match(ui, /const tiedot = \{ kuva: `assets\/varusteet\/varuste-\$\{tunnus\}\.jpg`, name: nimi \};/);
+  assert.ok(existsSync(new URL('../assets/varusteet/varuste-satelliitti.jpg', import.meta.url)),
+    'varuste-satelliitti.jpg puuttuu');
 
   const mapart = lue('../js/mapart.js');
   assert.match(mapart, /case 'linssi-satelliitti':/);
