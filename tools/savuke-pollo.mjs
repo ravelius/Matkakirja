@@ -648,15 +648,17 @@ const rivi = await sivu.evaluate(() => {
  * kytkimen takainen vanha kahden napin rivi mitataan heti alla.
  */
 /*
- * LIIKU ODOTTAA AARRETTA (omistajan tarkennus 25.8.2026): pelin alussa
- * fokusrivi on TYHJÄ — nappi ilmestyy vasta kun kaupungin laatta on
- * käännetty. Tyhjä rivi on tarkoitus, ei virhe (js/ui.js
- * liikuNappiNakyy). Napin ilmestyminen käännön jälkeen mitataan alla
- * liukukokeessa, joka kääntää laatan kirjanpidosta.
+ * LIIKU ON PYSYVÄ (omistajan linjaus 13.9.2026, js/fokusvirta.js
+ * `liikuNappiNakyvissa`): laattaportti purettiin, eikä nappi ole enää
+ * aarteen palkinto. Mitta oli jäänyt 25.8.2026:n porttiin, jossa rivi
+ * oli alussa tyhjä — VANHENTUNUT MITTA, ei tuotevika; korjattu
+ * 20.9.2026. Turvarajat ovat muualla: renderActions ei piirrä riviä
+ * botin vuorolla eikä vaiheissa pickstart/move/event/quiz/offer, ja
+ * nappi harmaantuu, kun matkustustapoja ei ole.
  */
-vaadi('fokusnäkymässä rivi on alussa tyhjä (Liiku odottaa aarretta)',
-  rivi.paikkoja === 0 && rivi.yksiRivi === true && rivi.monitoimi === false,
-  JSON.stringify(rivi));
+vaadi('fokusnäkymässä rivissä on Liiku heti alussa',
+  rivi.paikkoja === 1 && rivi.yksiRivi === true && rivi.monitoimi === true
+  && /^Liiku/.test(rivi.liiku), JSON.stringify(rivi));
 vaadi('pöllö ei ole alanappirivissä', rivi.polloRivissa === false, JSON.stringify(rivi));
 vaadi('pöllö kelluu myös pelinäkymässä', rivi.polloKelluu === true, JSON.stringify(rivi));
 vaadi('matkustusnapit ovat liu\'ussa', rivi.liukuNapit >= 1, `${rivi.liukuNapit} kpl`);
@@ -730,17 +732,25 @@ vaadi('monitoiminappi väistyy liu\'un tieltä', auki.perusPiilossa === true,
 vaadi('liu\'ussa on matkustusnapit', auki.napit.length >= 1, auki.napit.join(' | '));
 
 /*
- * KOLME NAPPIA: jalan, laiva ja lento erikseen (omistajan linjaus
- * 12.8.2026). Nimet luetaan aria-labelista, koska napit ovat liu'ussa
- * pelkkiä ikoneita. Estetyllä napilla nimen perässä on syy, joten
- * vertailu tehdään alkuosalla.
+ * NELJÄ NAPPIA: liftaus, bussi, laiva ja lento erikseen (omistaja
+ * 13.9.2026, Raamattu KARTTAUUDISTUS: *"Liikkumiseen tulee nelja
+ * vaihtoehtoa: liftaus (ilmainen), bussi kahden vierekkaisen kaupungin
+ * valilla (50p), laiva ja lento entisellaan."*). Liftaus on entinen
+ * "jalan": sama land-tunnus, uusi nimi ja kuvake (js/ui.js
+ * renderActions). Mitta oli jäänyt 12.8.2026:n kolmeen nappiin ja
+ * korjattiin 20.9.2026.
+ *
+ * Nimet luetaan aria-labelista, koska napit ovat liu'ussa pelkkiä
+ * ikoneita. Estetyllä napilla nimen perässä on syy, joten vertailu
+ * tehdään alkuosalla.
  */
-vaadi('liu\'ussa on kolme matkustusnappia', auki.napit.length === 3, auki.napit.join(' | '));
-vaadi('napit ovat jalan, laiva ja lento',
-  /^Jalan/.test(auki.napit[0] ?? '') && /^Laivalla/.test(auki.napit[1] ?? '')
-  && /^Lentäen/.test(auki.napit[2] ?? ''), auki.napit.join(' | '));
+vaadi('liu\'ussa on neljä matkustusnappia', auki.napit.length === 4, auki.napit.join(' | '));
+vaadi('napit ovat liftaus, bussi, laiva ja lento',
+  /^Liftaus/.test(auki.napit[0] ?? '') && /^Bussilla/.test(auki.napit[1] ?? '')
+  && /^Laivalla/.test(auki.napit[2] ?? '') && /^Lentäen/.test(auki.napit[3] ?? ''),
+  auki.napit.join(' | '));
 
-// Kolme nappia ei saa ahtautua kapealla ruudulla.
+// Napit eivät saa ahtautua kapealla ruudulla.
 const leveydet = await sivu.evaluate(() => [...document.querySelectorAll('.toimintorivi-liuku button')]
   .map((b) => Math.round(b.getBoundingClientRect().width)));
 vaadi('liu\'un napit eivät ahtaudu 390 pikselissä', leveydet.every((w) => w >= 44),
@@ -2045,11 +2055,34 @@ const kuvapopup = await sivu.evaluate(async () => {
   await odota(900);
   const linkki = [...document.querySelectorAll('.pollo-pollo a.pollo-tekstilinkki')].at(-1);
   if (!linkki) return { linkkia: false };
+  const elinkaari = [];
+  const vahti = new MutationObserver((muutokset) => {
+    for (const m of muutokset) {
+      for (const el of m.addedNodes) {
+        if (el.classList?.contains('pollo-kuvatausta')) elinkaari.push('syntyi');
+      }
+      for (const el of m.removedNodes) {
+        if (el.classList?.contains('pollo-kuvatausta')) elinkaari.push('poistui');
+      }
+    }
+  });
+  vahti.observe(document.body, { childList: true, subtree: true });
   linkki.click();
   await odota(600);
+  vahti.disconnect();
   const popup = document.querySelector('.pollo-kuvatausta');
   return {
     linkkia: true,
+    /*
+     * MIHIN LINKKI OSOITTI. Title on "Lue: <leima>" (js/pollo.js
+     * sidoLinkki). Ilman tätä punainen mitta ei kerro, oliko linkki
+     * nähtävyys vai lehtisivu — ja juuri se ratkaisee, kuuluuko kortin
+     * auketa. Elinkaari erottaa kaksi eri vikaa: jäikö kortti
+     * syntymättä vai sulkiko jokin sen heti (20.9.2026: se oli
+     * "syntyi>poistui", ja sulkija oli Livian dialogivahti).
+     */
+    linkkiTitle: linkki.title,
+    elinkaari: elinkaari.join('>'),
     auki: Boolean(popup),
     kuvia: popup?.querySelectorAll('img.pollo-kuva').length ?? 0,
     kuvateksti: popup?.querySelector('.pollo-kuvateksti')?.textContent ?? '',
@@ -2073,6 +2106,9 @@ await sivu.screenshot({ path: join(ULOS, 'pollo-kuvapopup-390.png') });
 const popupSulku = await sivu.evaluate(async () => {
   const odota = (ms) => new Promise((r) => setTimeout(r, ms));
   const tausta = document.querySelector('.pollo-kuvatausta');
+  // Punainen mitta ei saa lopettaa koko ajoa: ennen 20.9.2026 puuttuva
+  // kortti kaatoi savukkeen tähän, ja loput mitat jäivät ajamatta.
+  if (!tausta) return { eiKorttia: true };
   // Napautus kortin ulkopuolelle: kohteena tausta itse.
   tausta.dispatchEvent(new PointerEvent('pointerdown', { bubbles: true }));
   tausta.click();
@@ -2092,6 +2128,8 @@ const popupSulku = await sivu.evaluate(async () => {
     otsikko: document.getElementById('nahtavyys-otsikko')?.textContent ?? '',
   };
 });
+vaadi('kuvapopup oli auki sulkukoetta varten', !popupSulku.eiKorttia,
+  JSON.stringify(popupSulku));
 vaadi('napautus popupin ulkopuolelle sulkee sen',
   popupSulku.sulkeutui === true, JSON.stringify(popupSulku));
 vaadi('popupin sulku jättää chatin auki', popupSulku.chatAuki === true);
@@ -2255,8 +2293,9 @@ const leveaNapit = await leveaSivu.evaluate(async () => {
   return [...document.querySelectorAll('.toimintorivi-liuku button')]
     .map((b) => Math.round(b.getBoundingClientRect().width));
 });
+// Neljä nappia myös leveällä ruudulla (omistaja 13.9.2026; ks. yllä).
 vaadi('liu\'un napit eivät ahtaudu 900 pikselissä',
-  leveaNapit.length === 3 && leveaNapit.every((w) => w >= 44), leveaNapit.join(' / '));
+  leveaNapit.length === 4 && leveaNapit.every((w) => w >= 44), leveaNapit.join(' / '));
 await leveaSivu.screenshot({ path: join(ULOS, 'pollo-rivi-auki-900.png') });
 
 // Suodatettu laivavalikko myös leveällä ruudulla.
