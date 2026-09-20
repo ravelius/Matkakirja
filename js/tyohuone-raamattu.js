@@ -9770,7 +9770,14 @@ export const RAAMATTU = {
           + '-> Opus 2 heti; Gironde yha kaksinkertainen (korjaus v1974:ssa + tasokartta '
           + '1b); DNK/EST aariviiva kaukokuvassa musta moykky (vakavuus 2) -> Opus 1; '
           + 'Padisen arvonimi yha Pariisin (toinen polku) -> Opus 1; Ljubljanan numerot '
-          + '3/4 ja 7/8 paallekkain -> Sonnet 3 tormayksen vaisto. Sonnet 1 pysahtyi.',
+          + '3/4 ja 7/8 paallekkain -> Sonnet 3 tormayksen vaisto. Sonnet 1 pysahtyi. '
+          + 'JOKIREGRESSIO (Opus 2 c3bf34c3, 08.55): viivatason piirtaja ei tuntenut jokia '
+          + '(maailmapiirto.js piirsi uomat vain pohjan passissa) -> jaettu piirraJoetKankaalle '
+          + 'pohjalle ja viivatasolle, tests/viivataso vartioi piirtoa erikseen peitteesta; '
+          + 'viivataso poltetaan uusiksi 2026-09-20b-viivat ja julkaistaan v1974:ssa. OPPI: '
+          + 'peite lupaa vain mustetta jota ei valttamatta ole - tason siirrossa tarkista '
+          + 'piirto selaimessa. KOSICEN KOHDEKARTTA (Sonnet 3 0001833e): 8 kohdetta, '
+          + 'mergetty; ympyroiden tormayksen vaisto tulossa.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
