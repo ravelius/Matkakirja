@@ -9579,7 +9579,16 @@ export const RAAMATTU = {
           + 'ei ole raportoinut 02.36 jalkeen; avoinna onko nostotaso poltettu --ilman-'
           + 'hahmotelmia (polta-paikallisesti.sh ei valita lippua) - jos ei, nostotaso '
           + '2026-09-20-nostot ajetaan uusiksi; luetteloa ei julkaista ennen vastausta. '
-          + 'BRYSSELIN KOHDEKARTTA (Sonnet 3, 04.30): Overpass avaimeton, Atomium jaa pois.',
+          + 'BRYSSELIN KOHDEKARTTA (Sonnet 3, 04.30): Overpass avaimeton, Atomium jaa pois. '
+          + 'POLTON TULOS (Opus 2 04.28): pohja z0-z8 ilman rantaviivaa, rantataso ja '
+          + 'viivataso (joet) KELPAAVAT ja ovat amparissa; nostotaso 2026-09-20-nostot '
+          + 'poltettiin ILMAN --ilman-hahmotelmia-lippua (skripti ei valittanyt sita) -> '
+          + 'KELVOTON, jaa amparin roskaksi; luettelon nostotasot-taulu tyhja (koodi 1); '
+          + 'pallosarja 2026-09-20-i ei ajettu. PAATOS (Fable 04.30): lippu skriptin '
+          + 'oletukseksi, nostotaso uusiksi versioon 2026-09-20b-nostot, sitten pallosarja, '
+          + 'sitten luettelo + osoitin haaraan opus2-pohja-20260920 (ei ampariin). OPPI: '
+          + 'skriptin ajo ei peri generaattorin lippuja - tarkista shardirivit ennen '
+          + 'globaalia ajoa.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
