@@ -143,7 +143,11 @@
 import { html, polloNimilappu } from '../ui-apurit.js';
 import { polloUlkoinenKysymys } from '../pollo.js';
 import { asennaLivianAstronauttitila } from '../livia-astronautti.js';
-import { hiljennaAmbienssi, palautaAmbienssi, stopPlaceStream } from '../ambience-stream.js';
+import {
+  hiljennaAmbienssi, palautaAmbienssi, stopPlaceStream,
+  kaynnistaPohjaMusiikki, stopPohjaMusiikki,
+} from '../ambience-stream.js';
+import { kuunteleMusiikkitilaa } from '../musiikkivalitsin.js';
 import { LINSSIN_HILJENNYS } from '../siirtymamusiikki.js';
 import { stopDiaryVoice } from '../luenta.js';
 import { pysaytaLukija } from '../lukija.js';
@@ -236,6 +240,47 @@ export function vaiennaAanet(ui = null) {
   let purettu = false;
   try { hiljennaAmbienssi(LINSSIN_HILJENNYS); } catch { /* ääntä ei ole */ }
   try { stopPlaceStream(); } catch { /* äänimaisemaa ei ole */ }
+  /*
+   * TAUSTAMUSIIKKI KIINNI LINSSIN AJAKSI (omistaja 20.9.2026).
+   *
+   * MIKSI TÄMÄ EI TULLUT `hiljennaAmbienssi`STA. Se kutsuu
+   * `asetaMusiikkitila(LINSSIN_HILJENNYS, true)`, ja musiikkivalitsin
+   * ALOITTAA rivillä `if (!Object.hasOwn(TILARAIDAT, nimi)) return;`.
+   * TILARAIDAT tuntee vain `lehti` ja `matkalaukku`, ja linssin syy on
+   * `linssi` (js/siirtymamusiikki.js LINSSIN_HILJENNYS) — kutsu siis
+   * palasi tekemättä mitään, EIKÄ SANONUT SIITÄ. Kaupungin pohjaraita
+   * jäi soimaan koko linssin ajaksi, ja aseman humina jäi sen alle.
+   * Tuntemattoman nimen sietokyky on tarkoituksellinen (kaikkia
+   * hiljennyssyitä ei ole nimetty raidaksi), joten korjaus ei ole
+   * taulun laajennus vaan se, että linssi sanoo suoraan mitä haluaa.
+   *
+   * PYSÄYTYS EIKÄ VAIMENNUS: omistaja pyysi musiikin pois linssin
+   * ajaksi, ei hiljaisemmaksi. Paikka jää muistiin
+   * (js/musiikkivalitsin.js asetaMusiikkipaikka), joten `pura` palauttaa
+   * saman raidan samaan kaupunkiin.
+   */
+  try { stopPohjaMusiikki(); } catch { /* musiikkia ei ole */ }
+  /*
+   * JA PYSYY KIINNI, VAIKKA KYTKINTÄ KÄÄNNETTÄISIIN LINSSISSÄ.
+   *
+   * Musiikkikytkimen paluu päälle ajaa `syncAmbience`n, joka
+   * käynnistää kaupungin pohjaraidan uudestaan — kesken linssin.
+   * Mitattu savukkeessa 20.9.2026: kertaluontoinen pysäytys piti
+   * linssiin tultaessa, mutta väite kaatui heti kun savuke käänsi
+   * kytkimen pois ja takaisin. Tilaus oli "musiikki pois linssin
+   * AJAKSI", joten pysäytys on voimassa koko linssin ajan eikä vain
+   * sen alussa.
+   *
+   * Huminaan tämä ei kosketa: se on eri soitin (satelliitti-aani.js) ja
+   * seuraa kytkintä kuten ennenkin.
+   */
+  let irrotaMusiikkivahti = null;
+  try {
+    irrotaMusiikkivahti = kuunteleMusiikkitilaa(() => {
+      if (purettu) return;
+      try { stopPohjaMusiikki(); } catch { /* musiikkia ei ole */ }
+    });
+  } catch { /* kuuntelijaa ei voi asentaa */ }
   try { stopDiaryVoice(ui); } catch { /* luentaa ei ole */ }
   try { pysaytaLukija(); } catch { /* lukijaa ei ole */ }
   return {
@@ -244,8 +289,18 @@ export function vaiennaAanet(ui = null) {
     pura() {
       if (purettu) return;
       purettu = true;
+      try { irrotaMusiikkivahti?.(); } catch { /* jo irti */ }
+      irrotaMusiikkivahti = null;
       try { palautaAmbienssi(LINSSIN_HILJENNYS); } catch { /* ääntä ei ole */ }
       try { if (!ui?.dead) ui?.syncAmbience?.(); } catch { /* maisemaa ei ole */ }
+      /*
+       * MUSIIKKI TAKAISIN. `syncAmbience` tekee tämän, kun ui on
+       * elossa; ilman sitä (savuke, testi, purettu ui) raita jäisi
+       * pysäytetyksi linssin jälkeen. Kutsu ilman argumentteja
+       * palauttaa muistissa olevan paikan raidan, eikä se tee mitään,
+       * jos sama raita jo soi.
+       */
+      try { if (ui?.dead || !ui?.syncAmbience) kaynnistaPohjaMusiikki(); } catch { /* ei musiikkia */ }
     },
   };
 }
