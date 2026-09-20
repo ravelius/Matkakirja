@@ -160,6 +160,98 @@ export const NIMISTO_1873 = [
     teksti: 'KORSIKA', luokka: 'maakunta', lon: 9.1, lat: 42.2, iso: 'FRA', koko: 'suuri',
   },
 
+  // ── ITALIAN HALLINNOLLISET ALUEET (COMPARTIMENTI) 1873 ──────────────
+  //
+  // KAANONTARKKUUS: Italian kuningaskunta julistettiin 1861 Sardinian
+  // kuningaskunnasta (Piemonte-Liguria-Lombardia-Toscana-Emilia-Umbria-
+  // Marche-Napoli-Sisilia) — Lombardia oli liittynyt jo 1859. Veneto
+  // liitettiin 1866 kolmannen Italian itsenäisyyssodan (Preussi-Itävalta-
+  // sota) jälkeen. Rooma ja Lazio (Rooman valtaus 20.9.1870) liitettiin
+  // viimeisenä, ja Roomasta tuli pääkaupunki 1871. Vuonna 1873 Italiaan
+  // EIVÄT vielä kuulu Trentino, Etelä-Tiroli (Alto Adige/Südtirol),
+  // Triest eikä Friuli — ne olivat yhä Itävalta-Unkarin puolella
+  // (siirtyivät Italialle vasta 1918/1919, Saint-Germainin rauha 1919/
+  // 1920) eivätkä siis kuulu tähän erään (Itävalta-Unkari on tulossa
+  // omana eränään myöhemmin, sama kuin Elsass-Lothringenin tapauksessa
+  // Ranska-erässä).
+  //
+  // NIMET: suomalaisittain vakiintuneet muodot fi-Wikipedian mukaan,
+  // muuten italiankielinen alkuperäismuoto (sama periaate kuin Ranskan
+  // erässä). Sisilia, Sardinia ja Latium (Lazio) ja Apulia (Puglia)
+  // ovat fi-Wikipedian omia artikkelinimiä (vakiintuneet suomalaiset/
+  // latinapohjaiset eksonyymit); Piemonte, Liguria, Lombardia, Veneto,
+  // Toscana, Umbria, Marche, Campania, Calabria, Basilicata jäävät
+  // italiankielisiksi, koska fi-Wikipedia käyttää niitä sellaisenaan.
+  // Emilia on 1873-nimi (ei "Emilia-Romagna", joka on 1900-luvun
+  // nimitys). Abruzzi e Molise oli 1873 yksi yhtenäinen compartimento
+  // (Molise erotettiin omaksi alueekseen vasta 1963), joten se on
+  // merkitty yhtenä rivinä alkuperäisellä italiankielisellä nimellä.
+  //
+  // KOKOLUOKKA (koko): suuri = suuret/väestöltään tai historiallisesti
+  // merkittävät alueet (Piemonte, Lombardia, Veneto, Emilia, Toscana,
+  // Lazio, Campania, Puglia, Sisilia, Sardinia); pieni = pienemmät tai
+  // vähemmän keskeiset (Liguria, Umbria, Marche, Abruzzi e Molise,
+  // Basilicata, Calabria) — tämän kirjoittajan arvio pinta-alasta ja
+  // pelillisestä merkityksestä, sama vapaus kuin Ranska-erässä.
+  //
+  // LÄHTEET: en-Wikipedia "Unification of Italy", "Kingdom of Italy"
+  // ja "Regions of Italy" (yhdistymisen aikajana ja compartimenti-
+  // jaon periaate), fi-Wikipedian omat artikkelit kustakin alueesta
+  // (Sisilia, Sardinia, Latium, Apulia, Toscana, Piemonte, Lombardia,
+  // Umbria, Campania, Marche, Calabria, Basilicata — tarkistettu
+  // nimimuodon vakiintuneisuus 21.9.2026). Koordinaatit ovat tämän
+  // kirjoittajan arvioita alueen painopisteestä, EI tietokoneellisesti
+  // tarkistettuja — Karttaseppä tarkistaa visuaalisesti koelaatalla.
+
+  {
+    teksti: 'PIEMONTE', luokka: 'maakunta', lon: 7.9, lat: 45.0, iso: 'ITA', koko: 'suuri',
+  },
+  {
+    teksti: 'LIGURIA', luokka: 'maakunta', lon: 8.9, lat: 44.35, iso: 'ITA', koko: 'pieni',
+  },
+  {
+    teksti: 'LOMBARDIA', luokka: 'maakunta', lon: 9.7, lat: 45.5, iso: 'ITA', koko: 'suuri',
+  },
+  {
+    teksti: 'VENETO', luokka: 'maakunta', lon: 11.9, lat: 45.5, iso: 'ITA', koko: 'suuri',
+  },
+  {
+    teksti: 'EMILIA', luokka: 'maakunta', lon: 11.2, lat: 44.5, iso: 'ITA', koko: 'suuri',
+  },
+  {
+    teksti: 'TOSCANA', luokka: 'maakunta', lon: 11.1, lat: 43.3, iso: 'ITA', koko: 'suuri',
+  },
+  {
+    teksti: 'UMBRIA', luokka: 'maakunta', lon: 12.5, lat: 42.9, iso: 'ITA', koko: 'pieni',
+  },
+  {
+    teksti: 'MARCHE', luokka: 'maakunta', lon: 13.1, lat: 43.2, iso: 'ITA', koko: 'pieni',
+  },
+  {
+    teksti: 'LATIUM', luokka: 'maakunta', lon: 12.8, lat: 41.9, iso: 'ITA', koko: 'suuri',
+  },
+  {
+    teksti: 'ABRUZZI E MOLISE', luokka: 'maakunta', lon: 14.0, lat: 42.0, iso: 'ITA', koko: 'pieni',
+  },
+  {
+    teksti: 'CAMPANIA', luokka: 'maakunta', lon: 14.8, lat: 40.7, iso: 'ITA', koko: 'suuri',
+  },
+  {
+    teksti: 'APULIA', luokka: 'maakunta', lon: 16.6, lat: 41.0, iso: 'ITA', koko: 'suuri',
+  },
+  {
+    teksti: 'BASILICATA', luokka: 'maakunta', lon: 16.0, lat: 40.5, iso: 'ITA', koko: 'pieni',
+  },
+  {
+    teksti: 'CALABRIA', luokka: 'maakunta', lon: 16.3, lat: 39.0, iso: 'ITA', koko: 'pieni',
+  },
+  {
+    teksti: 'SISILIA', luokka: 'maakunta', lon: 14.0, lat: 37.6, iso: 'ITA', koko: 'suuri',
+  },
+  {
+    teksti: 'SARDINIA', luokka: 'maakunta', lon: 9.05, lat: 40.1, iso: 'ITA', koko: 'suuri',
+  },
+
   // ── EUROOPAN MERET, LAHDET JA SALMET ─────────────────────────────
   { teksti: 'VÄLIMERI', luokka: 'meri', lon: 15.0, lat: 38.0, iso: null },
   { teksti: 'ITÄMERI', luokka: 'meri', lon: 19.0, lat: 58.0, iso: null },
