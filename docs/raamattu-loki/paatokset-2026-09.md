@@ -175,3 +175,7 @@ Toisto Playwrightilla (Pariisi, Liiku -> Liftaus -> noppa 3, 2000x1300, prep ja 
 ## OMISTAJA: HUNTU PYSYY NAPPULAN LIIKKEEN AJAN, LAHTO- JA KOHDEMAA VAPAINA (20.9.2026 klo 23.39)
 
 Nopan heiton jalkeen nappulan liikkuessa kartan huntu (kerman peitto 80 %) katoaa kokonaan. SAANTO: huntu pysyy paalla myos nappulan etenemisen ajan, mutta liikkeen ajaksi seka lahtomaa etta kohdemaa ovat hunnun ulkopuolella (kaksi aukkoa); perilla vain kohdemaa. -> Pelikoodari.
+
+## LIFTAUSZOOMI: OMISTAJA EI OLLUT ZOOMANNUT, VIKA SATUNNAINEN - SEURANTAAN (20.9.2026 klo 23.40)
+
+Omistaja: ei ollut zoomannut oleellisesti ennen noppaa; kartta hyppasi yhtakkia aarimmaisen kauas; ei toistu joka kerta, jokin laukaisee. PAATOS: seurantaan - Pelikoodari lisaa kameran etaisyyden tallennuksen diagnostiikkalokiin (edellinen ja uusi korkeus, laukaisija: sovitus/ele/verkko/linssi) kehittajatilan lokiin, jotta seuraava toisto kertoo syyn; Karttaseppa lisaa savukkeeseen toiston satunnaisella ajoituksella (noppa heti saapumisen jalkeen, kesken trailerin, kesken luennan).
