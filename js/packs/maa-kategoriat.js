@@ -152,6 +152,464 @@ export function maanAiheOtsikko(maanNimi, aiheNimi) {
 }
 
 export const MAA_KATEGORIAT = {
+  BEL: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Belgian kaupungit rikastuivat keskiajalla kankaalla ja rakensivat kilpaa '
+        + 'linnoja, halleja ja torneja. Kivet muistavat senkin, minkä arkistot ovat '
+        + 'menettäneet tulessa.',
+      nostot: [
+        {
+          otsikko: 'Linna, joka pelotteli omia kaupunkilaisiaan',
+          aika: '1180',
+          tiedosto: 'Gravensteen, Ghent (DSCF0191).jpg',
+          teksti: 'Vuonna 1180 Flanderin kreivi Filip Elsassilainen rakennutti Gentin ytimeen '
+            + 'kivilinnan, jonka tehtävä ei ollut vain torjua vihollisia. Se oli '
+            + 'tarkoitettu myös muistuttamaan kaupungin itsepäisiä porvareita siitä, kuka '
+            + 'on herra talossa. Kreivit asuivat linnassa vuoteen 1353 asti. Sen jälkeen '
+            + 'siellä toimi oikeussali, vankila ja rahapaja, ja 1800-luvulla osa '
+            + 'rakennuksista muutettiin puuvillatehtaaksi. Linna oli jo purkulistalla, '
+            + 'kunnes kaupunki osti sen vähitellen ja aloitti vuonna 1893 laajan '
+            + 'entisöinnin.',
+          lyhyt: 'Gentin keskiaikainen kreivien linna, joka on nykyään museo.',
+          selite: 'Gravensteen on Filip Elsassilaisen vuonna 1180 rakennuttama vallihautaa '
+            + 'ympäröivä linna Gentissä. Se on nykyään museo ja yksi kaupungin '
+            + 'tunnetuimmista nähtävyyksistä.',
+          lahde: 'Trougnouf (Benoit Brummer), Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Ihmiskäsin tehty kukkula leijonalle',
+          aika: '1826',
+          tiedosto: 'Lion\'s Mound.jpg',
+          teksti: 'Vuonna 1820 Alankomaiden kuningas Vilhelm I määräsi rakennettavaksi '
+            + 'Waterloon lähelle valtavan tekokukkulan. Se merkitsi paikkaa, jossa hänen '
+            + 'poikansa, Oranian prinssi, oli haavoittunut 18. kesäkuuta 1815. '
+            + 'Rakennustyöt kestivät vuodesta 1823 lokakuuhun 1826, jolloin leijonapatsas '
+            + 'nostettiin huipulle 28. lokakuuta illalla. Portaat huipulle rakennettiin '
+            + 'vasta 1860-luvulla, ja nykyään niitä on 226. Ylhäältä avautuu maisema '
+            + 'pellolle, jolla Napoleonin kohtalo ratkesi.',
+          lyhyt: 'Waterloon lähellä oleva leijonapatsaan kruunaama tekokukkula.',
+          selite: 'Leijonakumpu on Braine-l\'Alleudin kunnassa sijaitseva tekokukkula, joka '
+            + 'valmistui vuonna 1826. Sen vieressä on Waterloon panoraamamaalausta '
+            + 'esittelevä pyöreä rakennus.',
+          lahde: 'Flocci Nivis, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kangashalli rakennettiin uudestaan kivi kiveltä',
+          aika: '1200-luku',
+          tiedosto: '20141110 Cloth Hall, Ypres 01.jpg',
+          teksti: 'Ypresin kangashalli aloitettiin vuonna 1200 kellotornista, ja koko '
+            + 'kokonaisuus valmistui 1304. Se oli keskiajan suurimpia kauppakiinteistöjä: '
+            + '125 metriä leveä julkisivu ja 70 metrin torni kertoivat, kuinka rikas '
+            + 'flanderilainen kaupunki kankaalla oli. Ensimmäisessä maailmansodassa '
+            + 'rakennus tuhoutui lähes kokonaan. Vuosina 1933-1967 se rakennettiin '
+            + 'uudelleen niin uskollisesti kuin mahdollista ennen sotaa tehtyjen '
+            + 'mittausten mukaan, ja raunioista koottuja alkuperäisiä kiviä käytettiin '
+            + 'uudelleen.',
+          lyhyt: 'Ypresin 1200-luvun kauppahalli, jossa toimii nykyään museo.',
+          selite: 'Ypresin kangashalli on goottilainen kauppahalli, jossa toimii nykyään In '
+            + 'Flanders Fields -museo. Se kuuluu Belgian ja Ranskan kellotornien Unescon '
+            + 'maailmanperintökohteeseen.',
+          lahde: 'Mark Ahsmann, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Torni, joka on palanut kolmesti',
+          aika: 'n. 1240',
+          tiedosto: 'Bruges Belgium Belfry-02.jpg',
+          teksti: 'Bruggen kellotorni nousi Torille noin vuonna 1240, kun kaupunki rikastui '
+            + 'flanderilaisella kankaalla. Tornissa säilytettiin kaupungin arkistoja ja '
+            + 'aarteita, ja vartijat tähyilivät sieltä tulipaloja. Tuli tuhosi arkistot '
+            + 'vuonna 1280, ja salama poltti puisen huipun 1493. Kun seuraavakin '
+            + 'puuhuippu paloi vuonna 1741, sitä ei enää rakennettu, ja torni lyheni 102 '
+            + 'metristä nykyiseen 83 metriin. Huipulle johtaa 366 porrasta, ja torni '
+            + 'kallistuu itään 87 senttiä.',
+          lyhyt: 'Bruggen keskiaikainen kellotorni Torin laidalla.',
+          selite: 'Bruggen kellotorni on noin 83 metriä korkea keskiaikainen torni kaupungin '
+            + 'keskustorilla. Se kuuluu Unescon maailmanperintökohteisiin.',
+          lahde: 'CEphoto, Uwe Aranas, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuinka monta porrasta Waterloon leijonakummun huipulle johtaa?',
+        vaihtoehdot: [
+          '176 askelmaa',
+          '226 askelmaa',
+          '264 askelmaa',
+          '310 askelmaa',
+        ],
+        oikea: 1,
+        fakta: 'Waterloon leijonakummun huipulle johtaa 226 porrasta, jotka rakennettiin '
+          + '1860-luvulla.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Belgia on pieni maa, jonka keittiö on saanut suuria ihmisiä kiistelemään: '
+        + 'täytetty suklaa, vohvelit, ranskalaiset perunat ja luostarien olut '
+        + 'kuuluvat samaan pöytään.',
+      nostot: [
+        {
+          otsikko: 'Apteekkari peitti lääkkeet suklaalla',
+          aika: '1912',
+          tiedosto: 'Belgian chocolates assortment.JPG',
+          teksti: 'Sveitsiläissyntyinen Jean Neuhaus avasi vuonna 1857 apteekin Brysselin '
+            + 'Galeries Royales Saint-Hubertiin, aivan Grand-Placen lähelle. Hän peitti '
+            + 'lääkkeet suklaalla, jotta ne olisi helpompi nauttia, ja pian tiskillä oli '
+            + 'enemmän herkkuja kuin pillereitä. Vuonna 1912 hänen pojanpoikansa Jean '
+            + 'Neuhaus II keksi praliinin, jossa suklaakuoren sisällä on pehmeä täyte. '
+            + 'Kolme vuotta myöhemmin perhe kehitti ballotinin, paperisen lahjarasian, '
+            + 'koska paperitötteröissä herkut murskaantuivat.',
+          lyhyt: 'Valikoima belgialaisia täytesuklaita eli praliineja.',
+          selite: 'Belgialaiset praliinit ovat kuorisuklaita, joiden sisällä on pehmeä täyte. '
+            + 'Ensimmäisen täytetyn praliinin keksi brysseliläinen suklaaseppä Jean '
+            + 'Neuhaus II vuonna 1912.',
+          lahde: 'BrokenSphere, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Suklaa',
+        },
+        {
+          otsikko: 'Vohveli sai Amerikassa uuden nimen',
+          aika: '1964',
+          tiedosto: 'Wafelmetslagroom.JPG',
+          teksti: 'Belgiassa vohveleita on monta lajia, ja tunnetuimpia ovat Brysselin ja '
+            + 'Liègen vohvelit. Belgialainen vohveli on kevyttaikinainen ja '
+            + 'syvätaskuinen, ja sen taikina kohotettiin alun perin hiivalla. '
+            + 'Yhdysvalloissa vohveli tuli tutuksi vuoden 1964 New Yorkin '
+            + 'maailmannäyttelyssä, jossa brysseliläinen Maurice Vermersch myi sitä '
+            + 'kermavaahdolla ja mansikoilla. Hän nimesi vohvelin Bel-Gem-vohveliksi, '
+            + 'koska monet amerikkalaiset eivät osanneet sanoa, että Bryssel on Belgian '
+            + 'pääkaupunki.',
+          lyhyt: 'Belgialainen vohveli tomusokerilla ja kermavaahdolla.',
+          selite: 'Belgian tunnetuimpia vohveleita ovat Brysselin ja Liègen vohvelit. Vohveli '
+            + 'tarjoillaan usein tomusokerin, kermavaahdon ja hedelmien kanssa.',
+          lahde: 'Hortensja Bukietowa, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Vohveli',
+        },
+        {
+          otsikko: 'Peruna, josta kiistellään yhä',
+          aika: 'n. 1680',
+          tiedosto: 'Un cornet de frites (Grand-Place, Bruxelles).jpg',
+          teksti: 'Belgiassa ranskalaisia perunoita myydään frituureista ja '
+            + 'friteries-kioskeista, ja ne syödään tötteröstä monenlaisten kastikkeiden '
+            + 'kanssa. Belgialainen toimittaja väitti niiden syntyneen Maas-joen '
+            + 'laaksossa jo noin vuonna 1680, kun kalaa ei jäätyneistä joista saanut ja '
+            + 'perunoita paistettiin sen sijaan. Tarina nojaa väitettyyn vuoden 1781 '
+            + 'käsikirjoitukseen, jota toimittaja ei koskaan esittänyt, joten '
+            + 'historioitsijat epäilevät sitä. Ranskalaisten mukaan herkku on kotoisin '
+            + 'Pariisista. Bruggessa toimii jopa oma Frietmuseum, ranskalaisten '
+            + 'perunoiden museo.',
+          lyhyt: 'Belgialainen tötterö ranskalaisia perunoita.',
+          selite: 'Ranskalaisten perunoiden alkuperästä kiistellään Belgian ja Ranskan '
+            + 'kesken. Belgiassa niitä syödään paperitötteröstä erilaisten kastikkeiden '
+            + 'kera.',
+          lahde: 'Benoît Prieur, Wikimedia Commons (CC0)',
+          wiki: 'Ranskalaiset perunat',
+        },
+        {
+          otsikko: 'Olut, joka pääsi Unescon listalle',
+          aika: 'nykyään',
+          tiedosto: 'Trappist Beer 2013-08-31.jpg',
+          teksti: 'Belgiassa valmistetaan yli 1600 erilaista olutta, ja joukossa on '
+            + 'erikoisuus nimeltä trappistiolut. Aito trappisti valmistetaan luostarin '
+            + 'muurien sisällä munkkien valvonnassa ja panimon tuotto käytetään luostarin '
+            + 'ylläpitoon ja hyväntekeväisyyteen. Belgiassa trappistiolutta panee kuusi '
+            + 'luostaria, esimerkiksi Chimay, Orval ja Westmalle. Vuonna 2016 Unesco '
+            + 'nosti belgialaisen olutkulttuurin ihmiskunnan aineettoman '
+            + 'kulttuuriperinnön luetteloon.',
+          lyhyt: 'Belgialaisia trappistioluita pulloissa.',
+          selite: 'Trappistiolut on luostariolueen suojattu nimi, jonka saa antaa vain '
+            + 'luostarin sisällä valmistetulle oluelle. Belgiassa sitä valmistaa kuusi '
+            + 'luostaria.',
+          lahde: 'Philip Rowlands, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Trappist',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Missä kaupungissa toimii ranskalaisten perunoiden museo Frietmuseum?',
+        vaihtoehdot: [
+          'Antwerpen',
+          'Liège',
+          'Gent',
+          'Brugge',
+        ],
+        oikea: 3,
+        fakta: 'Frietmuseum toimii Bruggessa ja esittelee ranskalaisten perunoiden '
+          + 'historiaa.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Belgian luonto yllättää: keväällä metsänpohja värjäytyy siniseksi, '
+        + 'ylängöllä levittäytyy yli 10 000 vuotta vanha suo ja maan alla virtaa '
+        + 'joki.',
+      nostot: [
+        {
+          otsikko: 'Metsä, joka värjäytyy siniseksi',
+          aika: 'keväisin',
+          tiedosto: 'Hallerbos 1 - Halle.jpg',
+          teksti: 'Hallen kaupungin lähellä sijaitseva Hallerbos on 552 hehtaarin metsä, joka '
+            + 'tunnetaan sinisestä kevätmatostaan. Muutaman viikon ajan keväällä '
+            + 'metsänpohjaa peittävät siniset hyasintit, ja se houkuttelee runsaasti '
+            + 'kävijöitä. Metsä oli ennen osa muinaista Silva Carbonaria -metsää yhdessä '
+            + 'Soignesin metsän kanssa, ja vielä vuonna 1777 ne yhdisti kapea '
+            + 'metsäkaista. Ensimmäisen maailmansodan aikana suurin osa vanhoista puista '
+            + 'kaadettiin, ja metsä istutettiin uudelleen vuosina 1930-1950.',
+          lyhyt: 'Halle-kaupungin lähellä oleva metsä, joka tunnetaan hyasinttimatostaan.',
+          selite: 'Hallerbos on Flanderin Brabantissa sijaitseva 552 hehtaarin lehtimetsä. Se '
+            + 'tunnetaan keväisin kukkivasta hyasinttimatostaan.',
+          lahde: 'Anja Meert, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Suo, joka on yli 10 000 vuotta vanha',
+          aika: 'nykyään',
+          tiedosto: 'Weismes (B), Brackvenn -- 2021 -- 6576.jpg',
+          teksti: 'Itä-Belgian Hautes Fagnes on maan suurin luonnonsuojelualue, 4 500 '
+            + 'hehtaaria ylänköä Ardennien ja Eifelin välissä. Se ei ole tavallista '
+            + 'suota, sillä nevat saavat kosteutensa vain sateesta, ja turvekerrokset '
+            + 'ovat yli 10 000 vuotta vanhoja. Alueella on Belgian korkein kohta, Signal '
+            + 'de Botrange, joka nousee 694 metrin korkeuteen. Ylängön kosteikot '
+            + 'suojeltiin vuonna 1957, ja Euroopan neuvosto myönsi alueelle suojelun '
+            + 'kunniakirjan vuonna 1966.',
+          lyhyt: 'Belgian suurin luonnonsuojelualue ja turvesoiden ylänkö Ardenneilla.',
+          selite: 'Hautes Fagnes eli Hohes Venn on Ardennien ja Eifelin välinen ylänkö Liègen '
+            + 'maakunnassa. Se on Belgian suurin luonnonsuojelualue.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Joki katoaa kukkulan alle',
+          aika: 'nykyään',
+          tiedosto: 'Grottes de Han DSCF6960.jpg',
+          teksti: 'Lesse-joki mutkittelee Ardenneilla rauhallisena, mutta Han-sur-Lessen '
+            + 'luona se putoaa yhtäkkiä sortumakuoppaan nimeltä Belvaux\'n kuilu. Sieltä '
+            + 'vesi virtaa yli kilometrin matkan kalkkikivikukkulan sisällä ja on '
+            + 'kaivertanut sinne luolaston. Luolissa on aina noin 13 astetta ja ilma on '
+            + 'kosteaa. Suurin sali, Salle du Dôme, on noin 150 metriä leveä. Kävijät '
+            + 'ajavat luolille vanhalla vicinal-raitiovaunulla, ja opastettu kierros '
+            + 'kestää tunnista puoleentoista.',
+          lyhyt: 'Ardennien tippukiviluolasto, jonka läpi virtaa Lesse-joki.',
+          selite: 'Han-sur-Lessen luolat ovat kalkkikiveen syöpynyt luolasto Wallonian '
+            + 'Ardenneilla. Ne muodostuivat, kun Lesse-joki alkoi virrata kukkulan '
+            + 'sisällä.',
+          lahde: 'Musicaline, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Myrsky avasi Bruggelle tien merelle',
+          aika: '1134',
+          tiedosto: 'Zwin Natuur Park 17.jpg',
+          teksti: 'Vuonna 1134 myrsky puhkaisi Flanderin rannikon ja synnytti Zwin-nimisen '
+            + 'vuorovesikanavan, joka ulottui noin 15 kilometriä sisämaahan. Sen ansiosta '
+            + 'Brugge sai meriyhteyden ja kasvoi yhdeksi keskiajan tärkeimmistä '
+            + 'satamakaupungeista. 1200-luvun lopulta alkaen kanava kuitenkin liettyi, ja '
+            + 'noin vuodesta 1500 se oli käyttökelvoton. Nykyinen luonnonsuojelualue '
+            + 'perustettiin vuonna 1952. Siellä kasvaa suolaa kestäviä kasveja, ja Zwin '
+            + 'on harvoja paikkoja Belgiassa, joissa elää valkoisia haikaroita.',
+          lyhyt: 'Belgian ja Alankomaiden rajalla oleva rannikon luonnonsuojelualue.',
+          selite: 'Zwin on Pohjanmeren rannalla, Belgian ja Alankomaiden rajalla sijaitseva '
+            + 'luonnonsuojelualue. Se on entisen vuorovesikanavan suuosa.',
+          lahde: 'FrDr, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuinka korkealla on Belgian korkein kohta Signal de Botrange?',
+        vaihtoehdot: [
+          '694 metriä',
+          '1 022 metriä',
+          '1 350 metriä',
+          '2 277 metriä',
+        ],
+        oikea: 0,
+        fakta: 'Signal de Botrange Hautes Fagnesin alueella on 694 metrin korkeudessa '
+          + 'Belgian korkein kohta.',
+      },
+    },
+    {
+      id: 'keksinnot',
+      nimi: 'Keksinnöt',
+      johdanto: 'Pieni maa on antanut maailmalle saksofonin, merikartan projektion, '
+        + 'tehokkaan sähkökoneen ja ensimmäisen synteettisen muovin. Moni keksijä '
+        + 'teki työnsä kuitenkin ulkomailla.',
+      nostot: [
+        {
+          otsikko: 'Dinantin haamulapsi ja hänen soittimensa',
+          aika: '1846',
+          tiedosto: 'Alto saxophone in E-flat MET DP338623.jpg',
+          teksti: 'Adolphe Sax syntyi Dinantissa vuonna 1814. Tarinan mukaan hän selvisi '
+            + 'lapsena niin monesta hengenvaarallisesta tapaturmasta, että häntä '
+            + 'kutsuttiin Dinantin haamulapseksi. Hän kasvoi isänsä soitinverstaassa '
+            + 'Brysselissä, muutti vuonna 1842 Pariisiin ja patentoi saksofonin 28. '
+            + 'kesäkuuta 1846. Soitin yhdisti puupuhaltimen taipuisuuden ja '
+            + 'vaskisoittimen voiman. Keksinnöstä huolimatta Sax ajautui konkurssiin '
+            + 'kolme kertaa ja kuoli Pariisissa vuonna 1894 köyhänä.',
+          lyhyt: 'Adolphe Saxin itse valmistama alttosaksofoni 1850-luvulta.',
+          selite: 'Alttosaksofonin valmisti Adolphe Sax itse noin vuonna 1855. Saksofoni oli '
+            + 'hänen tunnetuin keksintönsä.',
+          lahde: 'Adolphe Sax (Metropolitan Museum of Art), Wikimedia Commons (CC0)',
+          wiki: 'Saksofoni',
+        },
+        {
+          otsikko: 'Kartta, jossa suora viiva on purjehdusreitti',
+          aika: '1569',
+          tiedosto: 'Mercator 1569 world map composite.jpg',
+          teksti: 'Flaamilainen Gerardus Mercator julkaisi vuonna 1569 maailmankartan, jonka '
+            + 'projektiossa vakiosuuntaa kulkeva laiva piirtyi suorana viivana. Kartta '
+            + 'painettiin kahdeksantoista arkille kuparilaatoista, jotka Mercator '
+            + 'kaiversi itse, ja koottuna se on 202 senttiä leveä ja 124 senttiä korkea. '
+            + 'Siinä on yli viisi tuhatta sanaa tekstiä. Mercator matkusti vain vähän, ja '
+            + 'tietonsa hän keräsi yli tuhannen kirjan kirjastostaan sekä '
+            + 'kirjeenvaihdostaan. Hänen keksimänsä projektio on yhä merikorttien '
+            + 'perusta.',
+          lyhyt: 'Gerardus Mercatorin vuoden 1569 maailmankartta.',
+          selite: 'Mercatorin vuoden 1569 maailmankartta on koottu kahdeksastatoista arkista. '
+            + 'Sen projektio helpotti merenkulkua, ja se on edelleen merikorttien '
+            + 'perusta.',
+          lahde: 'Gerardus Mercator, Wikimedia Commons (public domain)',
+          wiki: 'Mercatorin projektio',
+        },
+        {
+          otsikko: 'Puuseppä, joka rakensi voimakkaan dynamon',
+          aika: '1873',
+          tiedosto: 'Machine Gramme.jpg',
+          teksti: 'Zénobe Gramme oli lähes lukutaidoton puuseppä Jehay-Bodegnéen kylästä. Hän '
+            + 'muutti Pariisiin, pääsi töihin sähkölaitteita valmistavaan yritykseen ja '
+            + 'rakensi parannellun dynamon, joka tuotti tasaisempaa ja paljon '
+            + 'voimakkaampaa tasavirtaa kuin aiemmat koneet. Yhdessä Hippolyte Fontainen '
+            + 'kanssa hän perusti tehtaan, ja Grammen kone oli esillä Wienin '
+            + 'maailmannäyttelyssä 1873. Samana vuonna miehet huomasivat vahingossa, että '
+            + 'kone toimii myös toisin päin: kun siihen johdettiin virtaa, se pyöri '
+            + 'moottorina.',
+          lyhyt: 'Zénobe Grammen keksimä tasavirtadynamo.',
+          selite: 'Grammen kone oli ensimmäinen teollisuudessa menestynyt tehokas '
+            + 'sähkömoottori. Kuvan dynamo on rakennettu vuonna 1873.',
+          lahde: 'Icone5, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Grammen kone',
+        },
+        {
+          otsikko: 'Gentiläinen kemisti keksi muovin',
+          aika: '1907',
+          tiedosto: 'Vintage Fada Bakelite Table Radio, Model 740, Made in the USA, Circa 1947 (8507820945).jpg',
+          teksti: 'Leo Baekeland syntyi Gentissä vuonna 1863 suutarin poikana ja väitteli '
+            + 'tohtoriksi 21-vuotiaana. Hän muutti Yhdysvaltoihin ja rikastui ensin '
+            + 'Velox-valokuvapaperilla, jonka yritys myytiin vuonna 1899 George '
+            + 'Eastmanille 750 000 dollarilla. Rahoilla hän rakensi kotilaboratorion '
+            + 'Yonkersiin, ja vuonna 1907 sieltä syntyi bakeliitti, ensimmäinen '
+            + 'synteettisistä aineista tehty muovi. Se säilytti muotonsa kuumennettaessa '
+            + 'ja eristi sähköä, joten siitä valmistettiin puhelimia ja radioita. '
+            + 'Mainoksissa sitä kehuttiin tuhannen käyttötavan aineeksi.',
+          lyhyt: 'Bakeliitista valmistettu vanha pöytäradio.',
+          selite: 'Bakeliitti oli ensimmäinen kokonaan synteettisistä aineista valmistettu '
+            + 'muovi. Siitä tehtiin muun muassa radioiden ja puhelinten koteloita.',
+          lahde: 'Joe Haupt, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Bakeliitti',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minä vuonna Adolphe Sax patentoi saksofonin?',
+        vaihtoehdot: [
+          '1826',
+          '1836',
+          '1846',
+          '1856',
+        ],
+        oikea: 2,
+        fakta: 'Adolphe Sax patentoi saksofonin 28. kesäkuuta 1846.',
+      },
+    },
+    {
+      id: 'rakennukset',
+      nimi: 'Rakennukset',
+      johdanto: 'Belgian kaupungeissa kannattaa katsoa ylös: kiltojen kultaiset julkisivut, '
+        + 'jugendin ensimmäiset asuintalot, aseman kupolisali ja rautakiteen mallinen '
+        + 'torni kertovat kukin omasta ajastaan.',
+      nostot: [
+        {
+          otsikko: 'Tori, joka nousi tuhkasta',
+          aika: '1695',
+          tiedosto: 'Grand Place 1-7 during civil twilight, Brussels (DSCF1982).jpg',
+          teksti: 'Brysselin Grand-Placen rakentaminen alkoi 1000-luvulla, ja se oli pitkälti '
+            + 'valmis 1600-luvulle tultaessa. Vuonna 1695 Ranskan joukot ampuivat '
+            + 'kaupunkia tulipalloilla, ja tori paloi lähes kokonaan. Pystyyn jäi vain '
+            + 'kaupungintalon julkisivu ja torni sekä muutamia kivimuureja. Killat '
+            + 'rakensivat talonsa uudelleen seuraavina vuosina, ja siitä torin nykyinen '
+            + 'ilme periytyy. Tori on 68 kertaa 110 metriä ja kokonaan kivetty. Joka '
+            + 'toinen elokuu, parillisina vuosina, sen keskelle levitetään valtava '
+            + 'kukkamatto.',
+          lyhyt: 'Brysselin keskustori, jota reunustavat kiltojen talot.',
+          selite: 'Grand-Place on Brysselin keskustori, jota reunustavat kiltojen '
+            + 'barokkitalot ja goottilainen kaupungintalo. Se on ollut Unescon '
+            + 'maailmanperintökohde vuodesta 1998.',
+          lahde: 'Trougnouf (Benoit Brummer), Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Grand-Place',
+        },
+        {
+          otsikko: 'Rautakide suurennettuna 165 miljardia kertaa',
+          aika: '1958',
+          tiedosto: 'Atomium 20180627.jpg',
+          teksti: 'Atomium rakennettiin Brysselin vuoden 1958 maailmannäyttelyn '
+            + 'keskipisteeksi. Insinööri André Waterkeyn ja arkkitehdit André ja Jean '
+            + 'Polak suunnittelivat sen kunnianosoitukseksi tieteen edistykselle. '
+            + 'Yhdeksän 18 metrin läpimittaista teräspalloa muodostavat rakenteen, joka '
+            + 'esittää rautakiteen alkeiskoppia suurennettuna 165 miljardia kertaa. Torni '
+            + 'on 102 metriä korkea, ja putkissa kulkevat portaat, liukuportaat ja hissi '
+            + 'vievät kuuteen kävijöille avoimeen palloon. Nimi yhdistää sanat atomi ja '
+            + 'alumiini, sillä pallot peitettiin alun perin alumiinilla.',
+          lyhyt: 'Brysselin vuoden 1958 maailmannäyttelyn torni, jonka muoto esittää '
+            + 'rautakidettä.',
+          selite: 'Atomium on Brysselin Heysel-tasangolla sijaitseva 102-metrinen torni. '
+            + 'Nykyään siellä toimii museo ja näyttelytiloja.',
+          lahde: 'Suicasmo, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Atomium',
+        },
+        {
+          otsikko: 'Asema, joka korvasi puisen alkuperäisen',
+          aika: '1905',
+          tiedosto: 'Antwerpen - Station Antwerpen-Centraal (7).jpg',
+          teksti: 'Antwerpenin ensimmäinen asema oli puinen, ja sen rata Brysselistä '
+            + 'Mechelenin kautta avattiin 3. kesäkuuta 1836. Nykyisen kivisen '
+            + 'asemarakennuksen suunnitteli arkkitehti Louis Delacenserie, ja se '
+            + 'rakennettiin vuosina 1895-1905. Vuoteen 2007 asti asema oli päätepysäkki, '
+            + 'ja 23. maaliskuuta 2007 sen alle avattiin läpikulkutunneli. Odotussalin '
+            + 'yllä kohoaa suuri kupoli. Antwerpen-Centraal on yksi Belgian neljästä '
+            + 'suurnopeusjunien asemasta.',
+          lyhyt: 'Antwerpenin päärautatieasema, jonka nykyinen rakennus on vuodelta 1905.',
+          selite: 'Antwerpen-Centraal on Antwerpenin päärautatieasema. Nykyisen rakennuksen '
+            + 'suunnitteli arkkitehti Louis Delacenserie.',
+          lahde: 'Fred Romero, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Talo, jonka portaikko sai valoa lasikatosta',
+          aika: '1893',
+          tiedosto: 'Brussels - Hotel Hôtel Tassel.jpg',
+          teksti: 'Victor Horta suunnitteli Hôtel Tasselin tiedemies Emile Tasselille, ja '
+            + 'talo valmistui vuosina 1892-1893. Sitä pidetään yhtenä ensimmäisistä '
+            + 'jugendtyylin rakennuksista. Horta hylkäsi perinteisen belgialaisen '
+            + 'kaupunkitalon pohjan: katupuolen ja puutarhan puolen tavalliset '
+            + 'rakennukset yhdistettiin teräsrunkoisella ja lasikattoisella osalla, jossa '
+            + 'ovat portaat ja tasanteet. Lasikatto tuo luonnonvaloa talon keskelle. '
+            + 'Horta suunnitteli myös entisen Waucquezin kangasvaraston vuonna 1906, ja '
+            + 'nykyään siinä toimii Belgian sarjakuvakeskus.',
+          lyhyt: 'Victor Hortan suunnittelema jugendtyylinen kaupunkitalo Brysselissä.',
+          selite: 'Hôtel Tassel on Victor Hortan suunnittelema kaupunkitalo Brysselissä, yksi '
+            + 'ensimmäisistä jugendtyylin rakennuksista. Se kuuluu Unescon '
+            + 'maailmanperintökohteisiin.',
+          lahde: 'Arco Ardon, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Hôtel Tassel',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuinka monta teräspalloa Atomiumin rakenteessa on?',
+        vaihtoehdot: [
+          'Seitsemän',
+          'Yhdeksän',
+          'Kaksitoista',
+          'Kuusitoista',
+        ],
+        oikea: 1,
+        fakta: 'Atomiumin yhdeksän teräspalloa muodostavat rautakiteen alkeiskopin.',
+      },
+    },
+  ],
   GBR: [
     {
       id: 'historia',
