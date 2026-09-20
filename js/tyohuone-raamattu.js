@@ -9646,7 +9646,17 @@ export const RAAMATTU = {
           + 'pysaytyskasky, pallosarjan uusinta keskeytetaan, v1972 PR #2624 jaa auki '
           + 'mergeamatta, Fablen CI-vahti pysaytetty. OMISTAJA 05.07: "Tai mac ajot voivat '
           + 'jatkua" -> pysaytys peruttu Mac-sessioille, kaikki viisi jatkavat kesken '
-          + 'jaaneesta, CI-vahti uudelleen.',
+          + 'jaaneesta, CI-vahti uudelleen. LEHDEN NAVIGOINTIVIKA PERUTTU (Sonnet 3 + Sonnet 1 '
+          + '05.10): simulaattorin kaappaus 920 px / laite 402 pt -> jakaja 2,289, Sonnet 1 '
+          + 'kaytti 2,36 ja napautti 14 pt liian ylos; oikeilla pisteilla kategoriarivi avaa '
+          + 'haitarin ja Turistiopas oppaan - ei pelivika, ei koodimuutoksia. Aihesivut '
+          + 'eivat aukea liuskasta suunnitellusti (PAATOKSET 34 kohta 16). PALLOSARJA '
+          + 'AJAMATTA: molemmat kansiot (2026-09-20-pohja-nostot-20260920i ja 2026-09-20-'
+          + 'pohja-20260920i) sisaltavat vain laatat.jsonin, roskaa; ajetaan puhtaalta '
+          + 'poydalta --vain-pallo --pallo-ilman-nostoja --pallotunniste 20260920i. '
+          + 'savuke-pollon kuvapopup on TUOTEVIKA (linkki osoittaa kohdekarttaan eika '
+          + 'nahtavyysjuttuun) - Opus 1 korjaa. Sonnet 2: silmatarkistuksen 75 hylkaysta '
+          + 'ei viela pakoissa, tark/4 epaluotettava.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
