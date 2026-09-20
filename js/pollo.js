@@ -498,6 +498,7 @@ export function kokoaKonteksti({
   paiva = null,
   nakyma = null,
   kohde = null,
+  avaruuskuva = null,
   matkakirja = null,
   aineisto = [],
   lohkot = [],
@@ -511,6 +512,19 @@ export function kokoaKonteksti({
   if (maa) rivit.push(`Maa, jossa pelaaja on: ${polloSiisti(maa)}`);
   if (paiva) rivit.push(`Matkapäivä: ${paiva}`);
   if (nakyma) rivit.push(`Näkymä: ${polloSiisti(nakyma)}`);
+  /*
+   * AVARUUSKUVA HETI NÄKYMÄN PERÄSSÄ (20.9.2026). Se on astronautin
+   * kamerassa ainoa pinta, jonka pelaaja näkee, ja siksi ainoa asia,
+   * josta hän voi kysyä. Seutu on kuvan oma paikka — EI pelaajan
+   * sijainti, joka avaruudessa jätetään pois tarkoituksella.
+   */
+  if (avaruuskuva?.nimi) {
+    const seutu = avaruuskuva.seutu ? ` (${polloSiisti(avaruuskuva.seutu)})` : '';
+    rivit.push(`Avattu valokuva avaruudesta: ${polloSiisti(avaruuskuva.nimi)}${seutu}`);
+    if (avaruuskuva.teksti) {
+      rivit.push(`Valokuvan selite: ${polloSiisti(avaruuskuva.teksti)}`);
+    }
+  }
   /*
    * AVOIN KOHDETIETORUUTU (omistajan tilaus 25.8.2026: *"Kysy minulta
    * mitä tahansa siitä, mitä kartalla tai lehdessä juuri nyt näkyy"*).
@@ -581,6 +595,43 @@ export function astronautinKameraPaalla(ui = null, doc = null) {
   return Boolean(doc?.body?.classList?.contains?.('satelliitti-kuva-auki'));
 }
 
+/**
+ * AVOIN AVARUUSKUVA PULUN KONTEKSTIIN (omistajan tilaus 20.9.2026:
+ * astronauttitilassa pulu saa valokuvan otsikon ja kuvauksen).
+ *
+ * JUURISYY SILLE, ETTÄ TÄTÄ TARVITAAN. Astronautin kamerassa konteksti
+ * riisuttiin tarkoituksella sijainnista (pelaaja on radalla, ei
+ * kaupungissa), mutta samalla siitä jäi pois kaikki muukin: pulu ei
+ * tiennyt, mitä kuvaa pelaaja katsoo. Kysymys *"mikä tuo vaalea rengas
+ * on?"* meni mallille ilman sanaa Richat.
+ *
+ * LUETAAN RUUDULTA, EI AINEISTOSTA. Selite on se, minkä pelaaja itse
+ * näkee (js/linssit/satelliitti.js: `.satelliitti-selite`), ja jos
+ * kuva on ehditty sulkea, DOM kertoo sen — vanhentunut kuva
+ * kontekstissa olisi pahempi kuin puuttuva. Lisätiedot (aineisto,
+ * lisenssi, kuvatunnus) jätetään pois: ne ovat lähdekirjanpitoa,
+ * eivät sitä mistä pelaaja kysyy.
+ *
+ * @param {Document|null} doc
+ * @returns {{nimi: string, seutu: string|null, teksti: string|null}|null}
+ */
+function avoinAvaruuskuva(doc) {
+  const selite = doc?.querySelector?.('.satelliitti-katselu .satelliitti-selite') ?? null;
+  const otsikko = selite?.querySelector?.('.satelliitti-selite-otsikko') ?? null;
+  if (!otsikko) return null;
+  // Seutu on otsikon sisällä omana jänteenään (" — Mauritania"), joten
+  // se irrotetaan omaksi kentäkseen eikä jää nimen perään viivalla.
+  const seutu = polloSiisti(otsikko.querySelector?.('.satelliitti-seutu')?.textContent)
+    .replace(/^[\s—–-]+/, '');
+  const koko = polloSiisti(otsikko.textContent);
+  const nimi = seutu && koko.endsWith(seutu)
+    ? polloSiisti(koko.slice(0, koko.length - seutu.length)).replace(/[\s—–-]+$/, '')
+    : koko;
+  if (!nimi) return null;
+  const teksti = polloSiisti(selite.querySelector?.('.satelliitti-selite-teksti')?.textContent);
+  return { nimi, seutu: seutu || null, teksti: teksti || null };
+}
+
 export function lueNakyma({ game = null, ui = null, doc = document, aineisto = [] } = {}) {
   const tila = pelinTila(game);
   /*
@@ -592,6 +643,7 @@ export function lueNakyma({ game = null, ui = null, doc = document, aineisto = [
     return kokoaKonteksti({
       lauta: tila.lauta,
       nakyma: 'Astronautin kamera: valokuva avaruudesta, ei pelaajan sijaintia',
+      avaruuskuva: avoinAvaruuskuva(doc),
       aineisto,
     });
   }

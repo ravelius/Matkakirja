@@ -2567,3 +2567,66 @@ test('sanarajaan pysähtynyt vastaus jatketaan kerran samaan kuplaan', () => {
   assert.match(kehote, /async function jatkaKeskenJaanyt\(env, \{ jarjestelma, viestit \}, raaka\)/);
   assert.match(kehote, /kolmessa virkkeessä\.'/);
 });
+
+/*
+ * ASTROPULUN KUVA (omistajan tilaus 20.9.2026): astronauttitilassa
+ * pulun pitää saada valokuvan otsikko ja kuvaus kontekstiin.
+ *
+ * Sijainti riisuttiin avaruudesta tarkoituksella (edellinen testi),
+ * mutta samalla pulu jäi ilman tietoa siitä, MITÄ kuvaa pelaaja
+ * katsoo: kysymys "mikä tuo vaalea rengas on?" meni mallille ilman
+ * sanaa Richat. Selite luetaan ruudulta, koska juuri se on se, minkä
+ * pelaaja näkee.
+ */
+function teeSeliteDoc({ nimi = 'Saharan silmä', seutu = 'Mauritania', teksti = '' } = {}) {
+  const osat = {
+    '.satelliitti-seutu': seutu ? { textContent: ` — ${seutu}` } : null,
+  };
+  const otsikko = {
+    textContent: `${nimi}${seutu ? ` — ${seutu}` : ''}`,
+    querySelector: (v) => osat[v] ?? null,
+  };
+  const selite = {
+    querySelector: (v) => {
+      if (v === '.satelliitti-selite-otsikko') return otsikko;
+      if (v === '.satelliitti-selite-teksti') return teksti ? { textContent: teksti } : null;
+      return null;
+    },
+  };
+  return {
+    getElementById: () => null,
+    querySelector: (v) => (v === '.satelliitti-katselu .satelliitti-selite' ? selite : null),
+    body: { classList: { contains: (l) => l === 'satelliitti-kuva-auki' } },
+  };
+}
+
+test('lueNakyma astronautin kamerassa: avatun valokuvan nimi ja selite ovat mukana', () => {
+  const SELITE = 'Richat-rakenne eli Saharan silmä on kohonnut kalliokupoli, '
+    + 'jonka kerrokset tuuli ja vesi ovat kuluttaneet paljaaksi renkaiksi.';
+  const konteksti = lueNakyma({
+    game: teeGame(), ui: { pallolinssi: { tunnus: 'satelliitti' } },
+    doc: teeSeliteDoc({ teksti: SELITE }),
+  });
+  assert.match(konteksti, /Avattu valokuva avaruudesta: Saharan silmä \(Mauritania\)/);
+  assert.ok(konteksti.includes(SELITE), konteksti);
+  // Seutu on KUVAN paikka; pelaajan oma sijainti ei silti palaa mukaan.
+  assert.ok(!konteksti.includes('Doha'), konteksti);
+  assert.ok(!/Matkapäivä/.test(konteksti), konteksti);
+});
+
+test('lueNakyma astronautin kamerassa: suljettu kuva ei jää kontekstiin', () => {
+  // VASTAKOE: sama tila ilman selitettä ruudulla — nimeä ei keksitä.
+  const tyhja = lueNakyma({
+    game: teeGame(),
+    ui: { pallolinssi: { tunnus: 'satelliitti' } },
+    doc: { getElementById: () => null, querySelector: () => null },
+  });
+  assert.ok(!/Avattu valokuva/.test(tyhja), tyhja);
+  assert.ok(tyhja.includes('Astronautin kamera'), tyhja);
+  // Ja ilman seutua otsikko kelpaa sellaisenaan.
+  const ilmanSeutua = lueNakyma({
+    game: teeGame(), ui: { linssiValittu: 'satelliitti' },
+    doc: teeSeliteDoc({ nimi: 'Betsibokan suisto', seutu: '' }),
+  });
+  assert.match(ilmanSeutua, /Avattu valokuva avaruudesta: Betsibokan suisto$/m);
+});
