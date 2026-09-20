@@ -14269,7 +14269,7 @@ export const NAHTAVYYSJUTUT = {
      */
     'Akershus': {
       nosto: 'syvennys-oslo-unionilippu',
-      teksti: 'Kun isoisäsi katsoi Kristianian satamassa norjalaisten laivojen '
+      teksti: 'Kun isoisäsi katsoi Christianian satamassa norjalaisten laivojen '
         + 'lippuja, niiden kannossa eli lipputangon puoleisessa yläkulmassa oli '
         + 'pieni kirjava merkki, jossa Norjan ja Ruotsin värit olivat sekaisin. '
         + 'Nykyinen lippu oli suunniteltu jo 1821; sen teki suurkäräjien jäsen '

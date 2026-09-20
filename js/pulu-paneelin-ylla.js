@@ -67,6 +67,22 @@ function onPaneeli(e, win) {
   return (e.innerText ?? '').trim().length >= PANEELIN_TEKSTI_MIN;
 }
 
+const nakyvissa = (e, win) => e?.isConnected && e.getClientRects().length > 0
+  && win.getComputedStyle(e).visibility !== 'hidden';
+
+/**
+ * OSUMATESTIN ULKOPUOLISET PANEELIT (Sonnet 1, kierros 16b, 20.9.2026:
+ * pulu jäi Ranskan kartuschan kielirivin päälle).
+ *
+ * Maalehden infotaulu on kokonaan `pointer-events: none` (PÄÄTÖKSET 21:
+ * rulla, nipistys ja raahaus menevät kartalle kuin kalustetta ei olisi),
+ * joten `elementsFromPoint` ei palauta sitä koskaan — vahti oli sille
+ * sokea. Tällainen paneeli merkitsee itsensä tällä luokalla, ja vahti
+ * lukee sen laatikosta. Luokka on sopimus: uusi läpinäkyvälle
+ * osoittimelle jäävä paneeli saa väistön lisäämällä sen.
+ */
+export const VAISTETTAVA_LUOKKA = 'pulu-vaistettava';
+
 /** Paneeli pisteessä (x, y) pulun alla, tai null. */
 function paneeliPisteessa(doc, win, nappi, x, y) {
   const pino = doc.elementsFromPoint?.(x, y) ?? [];
@@ -76,11 +92,15 @@ function paneeliPisteessa(doc, win, nappi, x, y) {
       if (onPaneeli(a, win)) return a;
     }
   }
+  // Osoittimelle läpinäkyvät paneelit luetaan laatikosta (ks. yllä).
+  for (const e of doc.querySelectorAll?.(`.${VAISTETTAVA_LUOKKA}`) ?? []) {
+    if (nappi.contains(e) || !nakyvissa(e, win)) continue;
+    const r = e.getBoundingClientRect();
+    if (x >= r.left && x <= r.right && y >= r.top && y <= r.bottom) return e;
+  }
   return null;
 }
 
-const nakyvissa = (e, win) => e?.isConnected && e.getClientRects().length > 0
-  && win.getComputedStyle(e).visibility !== 'hidden';
 
 /**
  * Asentaa vahdin pulun napille. Palauttaa { paivita, tila, pura }.

@@ -452,6 +452,16 @@ const PITKA_VASTAUS = 'Ensimmäinen rivi alkaa tästä. '
 const KASITEVASTAUS = 'Lontoon [[höyryveturit]] vetivät junia, ja '
   + '[[Thames]] kuljetti hiilen satamiin. [[Paddington]], [[Euston]], '
   + '[[Waterloo]] ja [[Beethoven]] mainitaan samassa lauseessa.';
+/*
+ * PUTKIVASTAUS (Sonnet 1:n havainto Košicessa 20.9.2026): pulun
+ * vastauksessa luki raakana *"luolat|Aggtelekin ja Slovakian karstin
+ * luolia"*. Merkintä on pelin oman aineiston korostusmuoto
+ * `perusmuoto|näkyvä muoto`, joka vuoti kontekstin kautta vastaukseen.
+ * Koevastaus sisältää putken MOLEMMISSA muodoissa — sulkeissa ja
+ * ilman — eikä pystyviiva saa näkyä pelaajalle kummastakaan.
+ */
+const PUTKIVASTAUS = 'Luola on osa luolat|Aggtelekin ja Slovakian karstin '
+  + 'luolia, ja sen [[aragoniitti|aragoniittikiteet]] hohtavat pimeässä.';
 const NAHTAVYYSVASTAUS = 'Tower Bridge avattiin vuonna 1894, ja sen '
   + 'maalattu teräsrunko piiloutuu kivikuoren sisään.';
 /*
@@ -475,6 +485,8 @@ function vastausTekstiin(kysymys) {
   if (/pitkä/i.test(kysymys)) return PITKA_VASTAUS;
   // "käsite": pöllölinkit eli [[avainkäsitteet]] keskellä vastausta.
   if (/käsite/i.test(kysymys)) return KASITEVASTAUS;
+  // "putki": aineiston korostusmerkintä vuotaa vastaukseen (Košice).
+  if (/putki/i.test(kysymys)) return PUTKIVASTAUS;
   // "Tower": nähtävyysjuttu, jolla on kuva → kevyt kuvapopup.
   if (/tower/i.test(kysymys)) return NAHTAVYYSVASTAUS;
   return 'Lontoon metro avattiin vuonna 1863 ja se oli maailman ensimmäinen.';
@@ -1961,6 +1973,44 @@ vaadi('pöllölinkin napautus kysyy lisää samasta käsitteestä',
   pollolinkki.kysytty === true, JSON.stringify(pollolinkki));
 
 await sivu.screenshot({ path: join(ULOS, 'pollo-pollolinkki-390.png') });
+
+/*
+ * PYSTYVIIVA EI PÄÄDY RUUDULLE EIKÄ MALLILLE (Košice 20.9.2026).
+ * Kaksi mittaa samassa: vastauksessa näkyvä teksti ja pyyntörunko.
+ * Rungossa on kontekstia, jonka pitää olla putkitonta jo ennen mallia
+ * (js/pollo.js puhdistaWikiPutket) — juuri sieltä vuoto tuli.
+ */
+const putkivastaus = await sivu.evaluate(async () => {
+  const odota = (ms) => new Promise((r) => setTimeout(r, ms));
+  // Paneeli on voinut sulkeutua nähtävyysjutun mukana: avataan tarvittaessa.
+  if (document.querySelector('.pollo-paneeli')?.hidden) {
+    document.querySelector('.pollo-nappi')?.click();
+    await odota(600);
+  }
+  document.querySelector('.pollo-kirjoita')?.click();
+  await odota(150);
+  const kentta = document.querySelector('.pollo-kentta');
+  if (kentta) kentta.value = 'Kerro putki luolasta';
+  document.querySelector('.pollo-rivi')?.dispatchEvent(new Event('submit', { cancelable: true }));
+  await odota(900);
+  const vastaus = [...document.querySelectorAll('.pollo-pollo')].at(-1);
+  return {
+    teksti: vastaus?.textContent ?? '',
+    kasitteet: [...(vastaus?.querySelectorAll('a.pollo-kasitelinkki') ?? [])]
+      .map((k) => k.textContent),
+  };
+});
+vaadi('aineiston pystyviiva ei näy pelaajalle',
+  !putkivastaus.teksti.includes('|'), putkivastaus.teksti.slice(0, 120));
+vaadi('sulkeeton putki purkautuu näkyvään muotoon',
+  /osa Aggtelekin ja Slovakian karstin luolia/.test(putkivastaus.teksti),
+  putkivastaus.teksti.slice(0, 120));
+vaadi('sulkeellinen putki linkittyy näkyvällä muodollaan',
+  putkivastaus.kasitteet.includes('aragoniittikiteet'),
+  putkivastaus.kasitteet.join(' / '));
+vaadi('yksikään pyyntörunko ei vie pystyviivaa mallille',
+  rungot.every((r) => !String(r.konteksti ?? '').includes('|')),
+  rungot.map((r) => String(r.konteksti ?? '').slice(0, 60)).join(' // ').slice(0, 200));
 
 /* ================================================================== */
 /* 20) Kuvapopup nähtävyyslinkin päällä                                */

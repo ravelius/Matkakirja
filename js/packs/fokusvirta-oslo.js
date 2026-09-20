@@ -6,8 +6,9 @@
  * sama moottori (js/fokusvirta.js). Aalto 4B, Norja.
  *
  * KAUPUNGIN NIMI. Pelissä kaupunki on Oslo, mutta isoisän vuonna 1873
- * se on Kristiania — kaanon hoitaa vaihdoksen itse: paikkarivi lukee
- * Kristiania ja Livian kupla kertoo, että vanha nimi palautettiin 1925.
+ * se on Christiania (virallinen kirjoitusasu Kristiania vasta 1877) —
+ * kaanon hoitaa vaihdoksen itse: paikkarivi lukee Christiania ja Livian
+ * kupla kertoo, että vanha nimi palautettiin 1925 (Fable 20.9.2026).
  * Tämä paketti ei selitä sitä toistamiseen missään.
  *
  * ── MISTÄ TEKSTIT TULEVAT ──────────────────────────────────────────
@@ -180,7 +181,7 @@ export const FOKUSVIRTA_OSLO = {
     },
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
-    paikkarivi: 'Kristiania, heinäkuussa 1873. Valoisaa myöhään; vuono tyyni; '
+    paikkarivi: 'Christiania, heinäkuussa 1873. Valoisaa myöhään; vuono tyyni; '
       + 'puntari korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 332 merkkiä (yläraja 400). */
     teksti: "Christianian laidalla valmistettiin nitroglyseriiniä. Työmies kantoi astiaa molemmin käsin. Yksi kolaus saattoi räjäyttää sen. Nostin hattua, ja hän vastasi pelkällä nyökkäyksellä. Minä en ole koskaan ollut niin kiitollinen huonosta käytöksestä.",
@@ -492,7 +493,7 @@ export const FOKUSVIRTA_OSLO = {
       id: 'unionilippu',
       nappi: 'Lippu, jonka nurkassa oli silakkasalaatti',
       otsikko: 'Unionimerkki lipun kannossa',
-      teksti: 'Kun isoisäsi katsoi Kristianian satamassa norjalaisten '
+      teksti: 'Kun isoisäsi katsoi Christianian satamassa norjalaisten '
         + 'laivojen lippuja, niiden kannossa eli lipputangon puoleisessa '
         + 'yläkulmassa oli pieni kirjava merkki, jossa Norjan ja Ruotsin '
         + 'värit olivat sekaisin. Nykyinen lippu oli suunniteltu jo 1821; sen teki '
@@ -562,7 +563,7 @@ export const FOKUSVIRTA_OSLO = {
        * ELÄINTÄKY (Raamatun linjaus: täkyihin myös eläinjuttuja) JA
        * ERÄN MAKU (tarinakaari, aistikierto).
        *
-       * MIKSI TÄMÄ TÄKY: isoisä söi Kristianiassa illalliseksi lohta. Se
+       * MIKSI TÄMÄ TÄKY: isoisä söi Christianiassa illalliseksi lohta. Se
        * lohi oli pyydetty; tämän päivän lohi kasvatetaan — ja juuri se
        * ero muutti sen, mitä lohesta tehdään toisella puolella maailmaa.
        *
@@ -742,7 +743,7 @@ export const FOKUSVIRTA_OSLO = {
    */
   oppitunti: {
     otsikko: 'Palkinto, jonka Nobel jätti rajan taakse',
-    teksti: 'Isoisäsi kuunteli Kristianiassa ylioppilaita, jotka väittelivät '
+    teksti: 'Isoisäsi kuunteli Christianiassa ylioppilaita, jotka väittelivät '
       + 'siitä, kenen Norja on. Kaksikymmentäkaksi vuotta myöhemmin, 27. '
       + 'marraskuuta 1895, ruotsalainen kemisti Alfred Nobel allekirjoitti '
       + 'testamentin, jossa hän jakoi omaisuutensa palkintoihin. Kaikki '

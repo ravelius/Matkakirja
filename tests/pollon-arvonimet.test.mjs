@@ -87,3 +87,41 @@ test('koko tiedostossa (yleiset + maanosittaiset + maakohtaiset) ei ole kaksoisk
     `kaksoiskappaleita: ${kaksoiskappaleet.map(([nimi, maara]) => `${nimi} (${maara}x)`).join(', ')}`,
   );
 });
+
+/* ══ Arvonimi kohteen maasta (kierros 16b, 20.9.2026) ══════════════ */
+
+test('arvonimenPaikkaMaalle antaa kohteen maan, ei pelaajan sijaintia', async () => {
+  const { arvonimenPaikkaMaalle } = await import('../js/ui-apurit.js');
+  const game = {
+    pack: {
+      cities: [
+        { id: 'pariisi', pallo: { lat: 48.9 } },
+        { id: 'vilna', pallo: { lat: 54.7 } },
+        { id: 'tromssa', pallo: { lat: 69.6 } },
+      ],
+      map: {
+        cityCountry: { pariisi: 'FRA', vilna: 'LTU', tromssa: 'NOR' },
+        cityManner: { pariisi: 'europe', vilna: 'europe', tromssa: 'europe' },
+      },
+    },
+    player: { pos: { type: 'city', city: 'pariisi' } },
+  };
+  assert.deepEqual(arvonimenPaikkaMaalle('LTU', game), { maanosa: 'europe', iso: 'LTU' });
+  // Napapiirin takana arvonimet ovat polaarisia myös maan kautta luettuna.
+  assert.deepEqual(arvonimenPaikkaMaalle('NOR', game), { maanosa: 'polar', iso: 'NOR' });
+  assert.deepEqual(arvonimenPaikkaMaalle('GRL', game), { maanosa: 'polar', iso: 'GRL' });
+  // Tuntematon tai puuttuva maa ei keksi paikkaa (arvonta menee yleisiin).
+  assert.deepEqual(arvonimenPaikkaMaalle(null, game), { maanosa: null, iso: null });
+  assert.deepEqual(arvonimenPaikkaMaalle('XXX', game), { maanosa: null, iso: 'XXX' });
+});
+
+test('kohteenIso löytää kohteen maan KOHDE_MAAT-taulusta', async () => {
+  const { KOHDE_MAAT, kohteenIso } = await import('../js/fokuskohteet.js');
+  const iso = Object.keys(KOHDE_MAAT).find((k) => (KOHDE_MAAT[k] ?? []).length);
+  const kohde = KOHDE_MAAT[iso][0];
+  assert.equal(kohteenIso(kohde), iso);
+  assert.equal(kohteenIso({ id: 'ei-ole-olemassa' }), null);
+  assert.equal(kohteenIso(null), null);
+  // Oma kenttä voittaa hakemiston.
+  assert.equal(kohteenIso({ id: kohde.id, iso: 'ZZZ' }), 'ZZZ');
+});

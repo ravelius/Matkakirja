@@ -779,6 +779,36 @@ export function arvonimenPaikka(game = globalThis.matkakirja?.game ?? null) {
 }
 
 /**
+ * ARVONIMEN PAIKKA ANNETULLE MAALLE (Sonnet 1, kierros 16b, 20.9.2026:
+ * Rumšiškėsin kortissa luki *"Pariisin salonkien pöllöltä"*, koska
+ * arvonimi luettiin PELAAJAN sijainnista — kortti oli Liettuassa, pelaaja
+ * Pariisissa). Kortti kertoo kohteestaan, joten sen arvonimi kuuluu
+ * kohteen maahan.
+ *
+ * Maanosa päätellään saman taulun kautta kuin pelaajan paikka
+ * (pack.map.cityManner) maan ensimmäisestä kaupungista; napapiirin takana
+ * ja Grönlannissa arvonimet ovat 'polar' kuten ennenkin.
+ *
+ * @param {?string} iso maatunnus (esim. 'LTU')
+ * @param {object} [game]
+ * @returns {{maanosa: ?string, iso: ?string}}
+ */
+export function arvonimenPaikkaMaalle(iso, game = globalThis.matkakirja?.game ?? null) {
+  if (!iso) return { maanosa: null, iso: null };
+  const pack = game?.pack ?? null;
+  const maat = pack?.map?.cityCountry ?? null;
+  const kaupunki = maat
+    ? (pack.cities ?? []).find((c) => maat[c.id] === iso) ?? null
+    : null;
+  const lat = kaupunki?.pallo?.lat;
+  if (iso === 'GRL' || (Number.isFinite(lat) && Math.abs(lat) >= NAPAPIIRI)) {
+    return { maanosa: 'polar', iso };
+  }
+  const manner = kaupunki ? pack.map?.cityManner?.[kaupunki.id] ?? null : null;
+  return { maanosa: ARVONIMEN_MAANOSA[manner] ?? null, iso };
+}
+
+/**
  * Tiivistyksen alaraja. Pisin nimi ("Pöllöltä, Jolla On Kaksi Tutkintoa
  * Enemmän Kuin Sinulla") tarvitsee 390 px:n kohdekortissa 0,447
  * (tools/savukkeet/savuke-arvonimet.mjs); raja jättää varaa.

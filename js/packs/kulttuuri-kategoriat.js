@@ -64118,6 +64118,664 @@ export const KULTTUURI_KATEGORIAT = {
   ],
 
   /*
+   * KOŠICE (20.9.2026, kaupunkilehti erä 2; omistajan päätös 19.9.2026:
+   * Slovakian pelikaupunki). Täysi lehti: etusivu (kansi- ja avauskuvat,
+   * ennen ja nyt, Matkailijalle-opas) sekä aihesivut Historia,
+   * Rakennukset ja Ruoka ja juoma. Tekstit omin sanoin en-Wikipediasta
+   * (luettu 20.9.2026); kuvat Commonsista, lisenssi ja tekijä luettu
+   * rajapinnan extmetadatasta ja jokainen kuva katsottu silmin.
+   */
+  kosice: [
+    {
+      id: 'kaupunki',
+      nimi: 'Košice',
+      johdanto: 'Hornád-joen varrella lepäävän kaupungin pääkatu on pitkä, kivetty ja lähes '
+          + 'autoton aukio. Sen keskellä laulaa suihkulähde, ja kaupungissa juostaan '
+          + 'Euroopan vanhinta maratonia.',
+      kansikuvat: [
+        {
+          tiedosto: 'Košice - Radnica.jpg',
+          lyhyt: 'Košicen vanha kaupungintalo on Hlavná-kadun varrella, ja sen kattoa '
+              + 'koristavat patsaat.',
+          selite: 'Košicen vanha kaupungintalo on Hlavná-kadun varrella. Klassistisen '
+              + 'julkisivun päällä seisoo veistoksia, ja kadun puolella on kukkaistutuksin '
+              + 'somistettu parveke.',
+          lahde: 'Ladislav Luppa, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Košice - Jakabov palác (1).jpg',
+          lyhyt: 'Jakabin palatsi Mlynská-kadun varrella on tornillinen ja '
+              + 'vihertäväkattoinen linnamainen talo.',
+          selite: 'Jakabin palatsi kuuluu vanhankaupungin historiallisiin rakennuksiin ja '
+              + 'seisoo Mlynská-kadun varrella. Sen tornit ja vihertävät katot erottuvat '
+              + 'kaupunkikuvassa, ja kävelysilta johtaa aivan sen viereen.',
+          lahde: 'Ladislav Luppa, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Park Moyzesova Bikeway From The North End.jpg',
+          lyhyt: 'Moyzesova-kadun puistossa vanhat puut reunustavat kävelytietä ja pyörätietä.',
+          selite: 'Moyzesova-kadun puisto oli yksi kaupunkitiloista, joita kunnostettiin '
+              + 'Euroopan kulttuuripääkaupunkivuoden 2013 hankkeissa. Puurivien alla '
+              + 'kulkee kävelytie, pyörätie ja penkkejä.',
+          lahde: 'Wkmdjay, Wikimedia Commons (CC0)',
+        },
+      ],
+      avauskuvat: [
+        {
+          tiedosto: 'View over Old Town from St. Elisabeth Cathedral Bell Tower - Kosice - Slovakia (36428414991).jpg',
+          lyhyt: 'Tuomiokirkon kellotornista näkyvät vanhankaupungin punaiset katot, '
+              + 'Hlavná-katu ja valtionteatteri.',
+          selite: 'Košicen vanhankaupungin katot ja Hlavná-katu avautuvat Pyhän Elisabetin '
+              + 'tuomiokirkon kellotornista. Keskellä kohoaa valtionteatteri, ja taustalla '
+              + 'vihertävät kukkulat.',
+          lahde: 'Adam Jones, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Košice z vyhliadkovej veže 5.JPG',
+          lyhyt: 'Hradová-vuoren näkötornista avautuu laaja näkymä kaupunkiin ja sen takana '
+              + 'siintäviin vuoriin.',
+          selite: 'Hradovan näkötornin ylätasanteelta näkee Košicen rakennuksia laaksossa ja '
+              + 'horisontissa siintävät vuoret; etualalla on metsää.',
+          lahde: 'Bubamara, Wikimedia Commons (CC BY 2.5)',
+        },
+        {
+          tiedosto: 'Košice Hlavná.jpg',
+          lyhyt: 'Tuomiokirkon tornista näkee Hlavná-kadun, valtionteatterin ja kaupungin '
+              + 'takaiset kukkulat.',
+          selite: 'Tuomiokirkon tornista katse kulkee kadun ja punakattoisten talojen yli '
+              + 'valtionteatteriin, ja horisontissa kohoavat kukkulat. Kuvan etualalla '
+              + 'näkyy suihkulähteen puisto.',
+          lahde: 'Patrick Hendriksen, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Kaschau Dom um 1900.jpg',
+          vuosi: 'noin 1900',
+          lyhyt: 'Tuomiokirkko ja Urbanin torni noin 1900: tornin ympärillä ei vielä ollut '
+              + 'kaariholvia.',
+          selite: 'Värillinen valokuvapainate esittää Pyhän Elisabetin tuomiokirkkoa ja '
+              + 'Urbanin tornia noin vuonna 1900. Tornin juurella ei vielä ole '
+              + 'kaariholvia, ja kirkon edustalla on hiekkainen katu ja nuorten puiden '
+              + 'reunustama puisto.',
+          lahde: 'Tuntematon, Library of Congress / Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Dom a Veza.jpg',
+          lyhyt: 'Urbanin tornin ympärille rakennettiin kaariholvi 1912, ja aukio on '
+              + 'nykyään kivetty.',
+          selite: 'Urbanin tornin ympärille rakennettiin kaariholvi vuonna 1912, ja se '
+              + 'kuuluu tornin ilmeeseen yhä. Sen taakse kohoaa tuomiokirkko, ja aukion '
+              + 'pinta on nykyään kiveä.',
+          lahde: 'Jerrybike, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Košice - Hrnčiarska ulica.jpg',
+          lyhyt: 'Hrnčiarska-kadun kivetyllä kujalla on kahvilapöytiä ja matalia vanhoja '
+              + 'taloja.',
+          selite: 'Hrnčiarska eli Savenvalajankatu on hiljainen vanhankaupungin katu, jonka '
+              + 'varrella on käsityöläisten puoteja ja kahvilaterasseja.',
+          lahde: 'Ladislav Luppa, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Košice on Slovakian toiseksi suurin kaupunki, mutta sen vanhakaupunki on '
+            + 'kävelijän kokoinen: Hlavná-pääkadun ympärille mahtuvat tuomiokirkko, '
+            + 'teatteri, museot ja suuri osa ravintoloista. Rautatieasema on kymmenen '
+            + 'minuutin kävelymatkan päässä, ja vanhassakaupungissa liikutaan jalan. '
+            + 'Košice oli Euroopan kulttuuripääkaupunki 2013, ja sen perintönä entisistä '
+            + 'kasarmeista, tehtaista ja uimahallista on tullut kulttuuripaikkoja.',
+        artikkeli: {
+          nimi: 'Matkailijan Košice',
+          teksti: 'Košiceen tutustutaan jalan: pääkadun ympärille mahtuu suurin osa '
+              + 'nähtävyyksistä, ravintoloista ja museoista.',
+          nosto: 'Košicen vanhassakaupungissa ei ole joukkoliikennettä lainkaan — kävely on '
+              + 'ainoa järkevä tapa liikkua.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Košicen lentoasema on noin kuuden kilometrin päässä keskustasta '
+                  + 'etelään, ja bussi 23 yhdistää sen keskustaan. Junalla Bratislavasta '
+                  + 'tulee viidessä tai kuudessa tunnissa, Prahasta noin kahdeksassa ja '
+                  + 'Budapestista kolmessa ja puolessa tunnissa. Rautatie- ja '
+                  + 'linja-autoasema ovat vierekkäin kymmenen minuutin kävelymatkan päässä '
+                  + 'vanhastakaupungista. Kaupungin raitiovaunuliikenne on Slovakian '
+                  + 'vanhin: ensimmäinen hevosvetoinen linja aloitti 1891 ja se '
+                  + 'sähköistettiin 1914. Joukkoliikenne kulkee tavallisesti viiden ja '
+                  + 'yhdentoista välillä.',
+              kuva: [
+                {
+                  tiedosto: 'Košice - Hlavná stanica.jpg',
+                  lyhyt: 'Raitiovaunu Košicen rautatieaseman edustalla.',
+                  selite: 'Košicen rautatieasema on useiden raitiovaunu- ja bussilinjojen '
+                      + 'päätepiste, ja sieltä on noin kymmenen minuutin kävely '
+                      + 'vanhaankaupunkiin.',
+                  lahde: 'Ladislav Luppa, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Kosice International Airport.jpg',
+                  lyhyt: 'Košicen kansainvälisen lentoaseman terminaali ja sen edustan penkit.',
+                  selite: 'Lentoasema sijaitsee noin kuuden kilometrin päässä keskustasta '
+                      + 'etelään, ja bussi 23 vie sieltä keskustaan.',
+                  lahde: 'Robo0000100, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Vanhakaupunki',
+              teksti: 'Vanhakaupunki keskittyy Hlavná-kadun ympärille, ja siellä on '
+                  + 'Slovakian suurin määrä suojeltuja historiallisia kohteita. Autot on '
+                  + 'suljettu pääkadulta, ja sivukujilla kävely on ainoa järkevä tapa '
+                  + 'liikkua, sillä vanhassakaupungissa ei ole joukkoliikennettä. '
+                  + 'Kaupungin vanhin säilynyt rakennus on 1250 rakennettu dominikaanien '
+                  + 'kirkko, jonka vieressä avautuu Dominikánske námestie. Hrnčiarskan eli '
+                  + 'Savenvalajankadun varrella myydään käsityöläistuotteita: kivikoruja, '
+                  + 'terrakottaesineitä ja yrttiteitä.',
+              kuva: {
+                tiedosto: 'Košice, Dominikánské námestie III.jpg',
+                lyhyt: 'Dominikánske námestien vanhoja porvaristaloja ja torikojujen '
+                    + 'markiiseja.',
+                selite: 'Dominikánske námestie on vanhankaupungin aukio, jonka laidoilla on '
+                    + 'matalia porvaristaloja ja torikojujen vihreitä markiiseja.',
+                lahde: 'Aktron, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Ruoka ja juoma',
+              teksti: 'Ravintolat keskittyvät Hlavná-kadun ja sen sivukatujen varrelle, ja '
+                  + 'hinnat ovat keskustassa hieman ulkoalueita korkeammat. Perinteisissä '
+                  + 'ravintoloissa tarjoillaan slovakialaista ja puolalaista ruokaa, ja '
+                  + 'lähes jokaisen listalta löytyy kasvisruokaa. Sunnuntaisin monet '
+                  + 'ravintolat avautuvat vasta illalliseksi. Kaupungin pääasiallinen tori '
+                  + 'on Dominikánske námestiella, ja kahviloita ja jäätelöpaikkoja on '
+                  + 'ympäri keskustaa. Muutamissa ravintoloissa on oma pienpanimo.',
+              kuva: [
+                {
+                  tiedosto: 'Dominik-churchKošice.jpg',
+                  lyhyt: 'Torikojuja ja dominikaanien kirkko Dominikánske námestiella.',
+                  selite: 'Dominikánske námestie on kaupungin pääasiallinen tori, jossa '
+                      + 'myydään tuoreita hedelmiä, vihanneksia ja kukkia.',
+                  lahde: 'Of, Wikimedia Commons (PD)',
+                },
+                {
+                  tiedosto: 'Café Slávia Košice interior.jpg',
+                  lyhyt: 'Kahvila Slávian tilassa on kaarevat ikkunat, kierreportaikko ja '
+                      + 'valaistut pullohyllyt.',
+                  selite: 'Kahvila Slávian sisätiloissa on kaarevat ikkunat, kierreportaikko '
+                      + 'ja tiskin takana valaistut pullohyllyt.',
+                  lahde: 'Helge Høifødt, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Ilta',
+              teksti: 'Illalla ohjelmaa riittää klassisesta kulttuurista vaihtoehtoiseen. '
+                  + 'Valtionteatterin ohjelmistoon kuuluvat ooppera, baletti ja näytelmät, '
+                  + 'ja kaupungissa toimii myös filharmoninen orkesteri. '
+                  + 'Kulttuuripääkaupunkivuoden 2013 perintöä ovat Kasárne Kulturpark, '
+                  + 'jossa 1800-luvun kasarmit ovat muuttuneet konsertti- ja '
+                  + 'näyttelytiloiksi, Kunsthalle entisessä uimahallissa sekä Tabačka, '
+                  + 'entinen tupakkatehdas ja itsenäisen kulttuurin keskus. Baarit ja '
+                  + 'panimoravintolat ovat tiiviisti vanhankaupungin kaduilla.',
+              kuva: [
+                {
+                  tiedosto: 'Kunsthalle Košice.jpg',
+                  lyhyt: 'Kunsthalle Košice hämärässä, edustalla teräksinen veistos.',
+                  selite: 'Kunsthalle Košice toimii 1960-luvun entisessä uimahallissa, ja '
+                      + 'rakennuksen edustalla on teräsveistos.',
+                  lahde: 'RickRichards, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Tabačka kaviareň.jpg',
+                  lyhyt: 'Tabačkan kahvilassa on tiiliseinä, riippuvalaisimia ja baaritiski.',
+                  selite: 'Tabačka Kulturfabrik toimii 1800-luvun entisessä '
+                      + 'tupakkatehtaassa, ja sen tiilipintaisessa kahvilassa on '
+                      + 'baaritiski ja riippuvalaisimia.',
+                  lahde: 'Andrew Lorien, Wikimedia Commons (CC BY-SA 2.0)',
+                },
+              ],
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Vanhakaupunki',
+                tahdet: 3,
+                selite: 'Slovakian suurin joukko suojeltuja historiallisia kohteita on '
+                    + 'kävelymatkan päässä pääkadun varrella.',
+              },
+              {
+                mita: 'Kulttuuri',
+                tahdet: 3,
+                selite: 'Kulttuuripääkaupunkivuoden perintönä kasarmit, uimahalli ja '
+                    + 'tupakkatehdas ovat nykyään taide- ja konserttipaikkoja.',
+              },
+              {
+                mita: 'Kävely-ympäristö',
+                tahdet: 3,
+                selite: 'Pääkatu on autoton ja keskusta tiivis: tärkeimmät kohteet mahtuvat '
+                    + 'jalkaisin kuljettavalle alueelle.',
+              },
+              {
+                mita: 'Ruoka ja juoma',
+                tahdet: 2,
+                selite: 'Slovakialaista ja puolalaista ruokaa, torit ja pienpanimot; hinnat '
+                    + 'ovat keskustassa hieman korkeammat.',
+              },
+              {
+                mita: 'Lapsille',
+                tahdet: 2,
+                selite: 'Eläintarha ja lasten museorautatie ovat kaupungin laidalla, ja '
+                    + 'Teknillisessä museossa on planetaario.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Kuinka kauan',
+                teksti: 'Useimmille matkailijoille noin vuorokausi kaupungissa riittää, ja '
+                    + 'monet Itä-Slovakian kohteet ovat päiväretken päässä.',
+              },
+              {
+                otsikko: 'Joukkoliikenne',
+                teksti: 'Raitiovaunut ja bussit kulkevat tavallisesti viiden ja yhdentoista '
+                    + 'välillä, yöbussit lähtevät rautatieasemalta. Lipun voi ostaa '
+                    + 'kuljettajalta, automaatista tai sovelluksesta ja se leimataan '
+                    + 'kulkuneuvossa.',
+              },
+              {
+                otsikko: 'Sunnuntai',
+                teksti: 'Sunnuntaisin monet ravintolat avautuvat vasta illalliseksi, joten '
+                    + 'päivän ateria kannattaa suunnitella etukäteen.',
+              },
+              {
+                otsikko: 'Illalla',
+                teksti: 'Keskusta on yleensä turvallinen, mutta illalla kannattaa välttää '
+                    + 'hiljaisia puistoja ja rautatieaseman ympäristöä.',
+              },
+            ],
+            parasAika: 'Paras aika on touko–kesäkuu, jolloin keskilämpö on 15–19 astetta, sekä '
+                + 'leuto syyskuu. Heinäkuu on lämpimin mutta myös sateisin kuukausi, ja '
+                + 'talvella kaupunki on pakkasella mutta kuivempi.',
+            kaudet: [
+              {
+                nimi: 'Kevät',
+                kk: 'maalis–toukokuu',
+                lampotila: '4,0…15,1 °C',
+                kuvaus: 'Maaliskuu on vielä viileä, keskimäärin neljä astetta, mutta '
+                    + 'toukokuussa lämpöä on jo yli viisitoista. Sadetta tulee 41–98 '
+                    + 'millimetriä kuukaudessa.',
+              },
+              {
+                nimi: 'Kesä',
+                kk: 'kesä–elokuu',
+                lampotila: '18,8…20,6 °C',
+                kuvaus: 'Lämpimin ja sateisin aika: heinäkuussa on keskimäärin 20,6 astetta '
+                    + 'ja sataa 115 millimetriä, kesäkuussa 97 ja elokuussa 86.',
+              },
+              {
+                nimi: 'Syksy',
+                kk: 'syys–marraskuu',
+                lampotila: '4,0…15,1 °C',
+                kuvaus: 'Syyskuu on vielä leuto, 15,1 astetta, mutta marraskuussa keskilämpö '
+                    + 'laskee neljään. Sade vähenee 67 millimetristä 47 millimetriin.',
+              },
+              {
+                nimi: 'Talvi',
+                kk: 'joulu–helmikuu',
+                lampotila: '−2,3…−0,5 °C',
+                kuvaus: 'Tammikuu on kylmin, keskimäärin −2,3 astetta, ja samalla vuoden '
+                    + 'kuivin: sadetta tulee vain 31 millimetriä.',
+              },
+            ],
+            linkit: [
+              {
+                nimi: 'Visit Košice — kaupungin matkailusivu',
+                url: 'https://visitkosice.org/',
+              },
+              {
+                nimi: 'Wikivoyage: Košice',
+                url: 'https://en.wikivoyage.org/wiki/Ko%C5%A1ice',
+              },
+              {
+                nimi: 'DPMK — raitiovaunut ja bussit',
+                url: 'https://www.dpmk.sk/',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+      nostot: [
+        {
+          tyyppi: 'kuva',
+          otsikko: 'Pääkatu, joka oli ennen keskiajan tori',
+          tiedosto: 'Košice - Hlavná ulica -b.jpg',
+          teksti: 'Hlavná eli Pääkatu on Košicen keskeinen katu, jonka varrella on suurin '
+              + 'osa kaupungin tärkeimmistä historiallisista kohteista. Keskiajalla sitä '
+              + 'kutsuttiin usein toriksi, ja sen pitkä, karan muotoinen pohjapiirros on '
+              + 'säilynyt nykypäiviin. Vuonna 1984 katu muuttui koko Tšekkoslovakian '
+              + 'ensimmäiseksi laajaksi jalankulkualueeksi, ja nykyään lähes koko matka on '
+              + 'autotonta. Kadun varrella on kolme puistoa, ja jokaisessa niistä on oma '
+              + 'suihkulähteensä.',
+          lyhyt: 'Hlavná-kadun kivetyllä jalankulkualueella on kahviloita, ja oikealla '
+              + 'näkyy Immaculata-pylväs.',
+          selite: 'Hlavná-katu on lähes kokonaan jalankulkualuetta. Kuvassa oikealla näkyy '
+              + 'Immaculata-rutopylväs, ja kadun varrella on kahviloita ja värikkäitä '
+              + 'vanhoja taloja.',
+          lahde: 'Ladislav Luppa, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Hlavná ulica',
+        },
+        {
+          tyyppi: 'kuva',
+          otsikko: 'Suihkulähde, joka reagoi musiikkiin',
+          tiedosto: 'National Theatre and Singing Fountain, Kosice.jpg',
+          teksti: 'Tuomiokirkon ja valtionteatterin välisessä puistossa keskellä '
+              + 'Hlavná-katua on Laulava suihkulähde. Vesisuihkut ja värivalot säätyvät '
+              + 'soivan musiikin taajuuksien mukaan, joten vesi tanssii kappaleen tahtiin. '
+              + 'Lähde rakennettiin 1986, ja sitä pidetään Tšekkoslovakian vanhimpana '
+              + 'laulavana suihkulähteenä. Noin kaksikymmentä vuotta myöhemmin se '
+              + 'uudistettiin nykyiseen muotoonsa, ja sen ohjelmistossa on yli kaksisataa '
+              + 'kappaletta rauhallisesta taustamusiikista elokuvasävelmiin ja klassiseen '
+              + 'musiikkiin.',
+          lyhyt: 'Laulavan suihkulähteen takana kohoaa Košicen valtionteatterin '
+              + 'uusbarokkinen julkisivu.',
+          selite: 'Laulava suihkulähde sijaitsee Hlavná-kadun puistossa valtionteatterin '
+              + 'edessä. Teatterin uusbarokkirakennus valmistui 1899.',
+          lahde: 'Ladislav Luppa, Wikimedia Commons (CC0)',
+        },
+        {
+          tyyppi: 'kuva',
+          otsikko: 'Euroopan vanhin maraton',
+          tiedosto: 'Kosice (Slovakia) - Memorial of the International Peace Marathon 2.jpg',
+          teksti: 'Košicen rauhanmaraton on juostu vuodesta 1924, ja se on Euroopan vanhin '
+              + 'maraton ja maailman kolmanneksi vanhin Bostonin ja Yonkersin jälkeen. Sen '
+              + 'järjesti ensimmäisen kerran kaupunkilainen urheilun ystävä Vojtech '
+              + 'Bukovský Pariisin olympialaisten innoittamana. Kisan ovat voittaneet muun '
+              + 'muassa Juan Carlos Zabala 1931, joka voitti seuraavana vuonna '
+              + 'olympiamaratonin, sekä Abebe Bikila 1961. Reitti on tasainen ja kulkee '
+              + 'kahtena kierroksena kaupungin keskustassa.',
+          lyhyt: 'Maratonin muistomerkin juoksijapatsas seisoo jalustallaan kaupungin '
+              + 'keskustassa.',
+          selite: 'Kansainvälisen rauhanmaratonin muistomerkin juoksijapatsas seisoo puiden '
+              + 'keskellä, ja jalustassa ja kivilaatoissa on kaiverrettuja tekstejä.',
+          lahde: 'Maros Mraz, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Košice Peace Marathon',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kassa oli keskiajalla Unkarin toiseksi arvokkain vapaa kaupunki, Euroopan '
+          + 'ensimmäinen oman vaakunan saanut ja viiden kaupungin liiton johtaja. Täällä '
+          + 'lepää myös Ferenc II Rákóczi.',
+      tehtava: {
+        kysymys: 'Minä vuonna Kassa sai Euroopan ensimmäisenä kaupunkina oman vaakunan?',
+        vaihtoehdot: [
+          '1347',
+          '1369',
+          '1657',
+          '1906',
+        ],
+        oikea: 1,
+        fakta: 'Kuningas Ludvig I Suuri myönsi vaakunan vuonna 1369, ja nykyinen vaakuna on '
+            + 'lähes muuttumaton vuodelta 1502.',
+      },
+      nostot: [
+        {
+          otsikko: 'Viiden kaupungin liiton johtaja',
+          tiedosto: 'View of Kassa.jpg',
+          teksti: 'Kassa oli keskiajalla Unkarin kuningaskunnan vapaa kuninkaallinen '
+              + 'kaupunki, jolla oli omat oikeutensa ja suora yhteys kuninkaaseen. Vuonna '
+              + '1347 se nousi kuninkaallisten vapaakaupunkien arvojärjestyksessä toiseksi '
+              + 'heti pääkaupunki Budan jälkeen. 1400-luvun alusta se johti '
+              + 'Pentapolitanaa, Ylä-Unkarin viiden tärkeimmän kaupungin liittoa, johon '
+              + 'kuuluivat myös Bardejov, Levoča, Prešov ja Sabinov. Liitto valvoi ja '
+              + 'kehitti kauppaa alueen vanhoilla reiteillä.',
+          lyhyt: 'Kassa vanhassa kaiverruksessa: kaupunginmuurit, tornit ja taustalla vuoret.',
+          selite: 'Kaiverruksen otsikko kutsuu Kassaa nimellä Cassovia ja Ylä-Unkarin '
+              + 'ensisijaiseksi kaupungiksi. Kuva on 1600-luvulta.',
+          lahde: 'Szilas, Wikimedia Commons (PD)',
+          wiki: 'Pentapolitana',
+        },
+        {
+          otsikko: 'Euroopan ensimmäinen kaupunkivaakuna',
+          tiedosto: 'Košice Coat of Arms.jpg',
+          teksti: 'Kassa oli ensimmäinen kaupunki Euroopassa, jolle myönnettiin oma vaakuna. '
+              + 'Kuningas Ludvig I Suuri antoi sen vuonna 1369 Diósgyőrin linnassa '
+              + 'nykyisen Miskolcin lähellä. Alkuperäisessä vaakunassa oli vain punaiset '
+              + 'ja hopeiset raidat sekä kolme liljaa sinisellä pohjalla. Vuoteen 1502 '
+              + 'mennessä kaupunki oli saanut neljä vaakunakirjaa neljältä hallitsijalta, '
+              + 'ja nykyinen vaakuna on lähes muuttumaton tuosta vuodesta. Hlavná-kadulle '
+              + 'paljastettiin vaakunapatsas vuonna 2002.',
+          lyhyt: 'Vaakunapatsaassa enkeli pitelee Kassan vaakunaa, taustalla Pyhän '
+              + 'Elisabetin tuomiokirkko.',
+          selite: 'Arpád Račkon veistämä vaakunapatsas paljastettiin joulukuussa 2002. '
+              + 'Jalustassa näkyy vaakunan eri vaiheita vuosilukuineen.',
+          lahde: 'Achintya Rao, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Coat of arms of Košice',
+        },
+        {
+          otsikko: 'Rákóczit ja kotiinpaluu Kassaan',
+          tiedosto: 'RákociKrypta.jpg',
+          teksti: 'Rákóczi-suku kuuluu Kassan historiaan kahdesti. Tammikuussa 1644 Kassan '
+              + 'valtiopäivät valitsivat György I Rákóczin Unkarin ruhtinaaksi. Vuosina '
+              + '1704–1711 Transilvanian ruhtinas Ferenc II Rákóczi teki Kassasta '
+              + 'pääasemansa vapaussodassaan. Hän kuoli maanpaossa Tekirdağissa 1735, ja '
+              + 'hänen jäänteensä siirrettiin 29. lokakuuta 1906 Pyhän Elisabetin '
+              + 'tuomiokirkkoon, jossa hän lepää äitinsä Ilona Zrínyin ja poikansa '
+              + 'vieressä.',
+          lyhyt: 'Ferenc II Rákóczin hauta Pyhän Elisabetin tuomiokirkon kryptassa.',
+          selite: 'Kryptassa lepäävät Ferenc II Rákóczi, hänen äitinsä Ilona Zrínyi ja '
+              + 'poikansa. Sarkofagien päällä on seppeleitä Unkarin lipun väreissä.',
+          lahde: 'Of, Wikimedia Commons (PD)',
+          wiki: 'Ferenc II Rákóczi',
+        },
+        {
+          otsikko: 'Jesuiittojen yliopisto ja Ylä-Unkarin museo',
+          tiedosto: 'East Slovak Museum in Košice - main (historic) building, Peace Marathon Square 2 - front facade (October 2017) 01.jpg',
+          teksti: 'Vuonna 1657 jesuiitat perustivat Kassaan kirjapainon ja yliopiston, jota '
+              + 'rahoitti keisari Leopold I. Universitas Cassoviensis toimi vuoteen 1921 '
+              + 'asti vaihtaen välillä nimeä kuninkaalliseksi akatemiaksi ja '
+              + 'oikeusakatemiaksi. Vanhan yliopiston perinteen jatkajana pidetään '
+              + 'nykyistä Pavol Jozef Šafárikin yliopistoa. Kaupungin museo perustettiin '
+              + '1872 nimellä Ylä-Unkarin museo, ja nykyään se on Itä-Slovakian museo, '
+              + 'yksi Slovakian vanhimmista.',
+          lyhyt: 'Itä-Slovakian museon uusrenessanssirakennus Rauhanmaratonin aukiolla '
+              + 'valmistui 1900-luvun alussa.',
+          selite: 'Museon päärakennus oli kaupungin ensimmäinen erityisesti museoksi '
+              + 'suunniteltu talo. Julkisivun yläosassa on Kassan vaakuna.',
+          lahde: 'ZemplinTemplar, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'East Slovak Museum',
+        },
+      ],
+    },
+    {
+      id: 'rakennukset',
+      nimi: 'Rakennukset',
+      johdanto: 'Košicen vanhan kaupungin ytimessä seisovat vierekkäin goottilainen '
+          + 'tuomiokirkko, renessanssin kellotorni ja uusbarokkiteatteri. Vanhoista '
+          + 'kaupunginmuureista on jäljellä vain pätkiä.',
+      tehtava: {
+        kysymys: 'Minkä ammattikunnan suojeluspyhimykselle Urbanin tornin seitsemän tonnin '
+            + 'kello on pyhitetty?',
+        vaihtoehdot: [
+          'Kalastajien',
+          'Kauppiaiden',
+          'Kelloseppien',
+          'Viinitarhurien',
+        ],
+        oikea: 3,
+        fakta: 'Pyhä Urbanus on viinitarhurien suojeluspyhimys, ja kello valettiin vuonna '
+            + '1557. Palossa tuhoutuneen kellon kopio on nykyään tornissa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kirkko, johon mahtuu yli viisituhatta ihmistä',
+          tiedosto: 'St. Elisabeth Cathedral Kosice.jpg',
+          teksti: 'Pyhän Elisabetin tuomiokirkko on Slovakian suurin kirkko ja yksi Euroopan '
+              + 'itäisimmistä goottilaisista katedraaleista. Se on 60 metriä pitkä ja 36 '
+              + 'metriä leveä, pohjoinen torni kohoaa 59 metriin, ja kirkkoon mahtuu yli 5 '
+              + '000 ihmistä. Nykyinen kirkko alkoi nousta noin vuoden 1380 palon jälkeen '
+              + 'aiemman, Elisabetille pyhitetyn kirkon paikalle, ja sen katsotaan '
+              + 'valmistuneen vuonna 1508. Sisällä keskilaivaa leikkaa yhtä korkea ja '
+              + 'leveä poikkilaiva, ja yhdessä ne muodostavat kreikkalaisen ristin.',
+          lyhyt: 'Tuomiokirkon kuoriosan tukipilarit ja värikäs laattakatto hohtavat '
+              + 'iltavalaistuksessa.',
+          selite: 'Tuomiokirkon kuoriosaa reunustavat tukipilarit ja suippokaariset ikkunat, '
+              + 'ja korkea laattakatto on valaistu illalla.',
+          lahde: 'OM8ARK, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Cathedral of St. Elizabeth',
+        },
+        {
+          otsikko: 'Seitsemän tonnin kello ja kappeli tuomiokirkon varjossa',
+          tiedosto: 'Kosice - St. Urban Tower.jpg',
+          teksti: 'Tuomiokirkon vieressä seisoo Urbanin torni, 1500-luvulla rakennettu '
+              + 'renessanssin kellotorni. Sen kellon valoi vuonna 1557 olomoucilainen '
+              + 'Franciscus Illenfeld; kello painoi seitsemän tonnia ja on pyhitetty '
+              + 'viinitarhurien suojeluspyhimykselle Urbanukselle. Tulipalo tuhosi kellon '
+              + 'vuonna 1966, ja korjattu torni avattiin uudelleen 1971. Aivan vieressä on '
+              + 'Pyhän Mikaelin kappeli, joka valmistui noin 1400 ja toimi seurakunnan '
+              + 'kirkkona, kun uutta tuomiokirkkoa vielä rakennettiin.',
+          lyhyt: 'Urbanin tornin juurella kiertää vuonna 1912 rakennettu arkadikäytävä.',
+          selite: 'Renessanssin kellotorni on peräisin 1500-luvulta, ja sen ulkoseiniin on '
+              + 'muurattu 36 vanhaa hautakiveä 1300- ja 1400-luvuilta.',
+          lahde: 'Ingo Mehling, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'St. Urban Tower',
+        },
+        {
+          otsikko: 'Shakespearen näytelmiä uusbarokkiteatterin katossa',
+          tiedosto: 'Statne divadlo Kosice (1899).jpg',
+          teksti: 'Košicen valtionteatteri seisoo pääkadun varrella kaupungin keskustassa. '
+              + 'Sen edustava uusbarokkirakennus tehtiin Adolf Langin suunnitelmien mukaan '
+              + 'vuosina 1879–1899, joten työhön meni kaksi vuosikymmentä. Sisätilat on '
+              + 'koristeltu runsaasti stukkityöllä, ja näyttämö on muodoltaan lyyran '
+              + 'mallinen. Katon maalauksissa nähdään kohtauksia Shakespearen näytelmistä: '
+              + 'Othellosta, Romeosta ja Juliasta, Kuningas Learista sekä Kesäyön unesta.',
+          lyhyt: 'Valtionteatterin uusbarokkijulkisivussa on keskellä kolmiopääty ja sen '
+              + 'yllä kupoli.',
+          selite: 'Valtionteatterin uusbarokkijulkisivun keskiosassa on pylväin jaetut '
+              + 'kaari-ikkunat, kolmiomainen päätykoriste ja kupoli.',
+          lahde: 'Lynx1211, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'National Theatre Košice',
+        },
+        {
+          otsikko: 'Ainoa bastioni, joka jäi kaupunginmuureista',
+          tiedosto: 'Katova bašta.JPG',
+          teksti: 'Pyövelin bastioni on puolipyöreä puolustusrakennus, jossa on kahdeksan '
+              + 'tykkikammiota. Se pystytettiin noin vuonna 1500, ja nimensä se sai '
+              + 'keskiaikaisen pyövelin talon läheisyydestä. Kaupungin muurit purettiin '
+              + 'vähitellen 1800-luvun alusta vuoteen 1856, ja bastioni on muurinpätkien '
+              + 'ohella ainoa osa linnoituksista, joka jäi pystyyn. Vuosina 1920–1930 se '
+              + 'sovitettiin Itä-Slovakian museon käyttöön, ja pihalla on Ferenc II '
+              + 'Rákóczin maanpakotalon jäljennös.',
+          lyhyt: 'Pyövelin bastioni on puolipyöreä, punakattoinen kivirakennus vanhan '
+              + 'kaupungin reunalla.',
+          selite: 'Pyövelin bastionin paksu kiviseinä ja punainen katto kaartuvat '
+              + 'puoliympyrän muotoon, ja seinässä on pieniä ikkuna-aukkoja.',
+          lahde: 'Viktor Hézsely, Wikimedia Commons (CC BY 1.0)',
+          wiki: 'Executioner\'s Bastion',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka ja juoma',
+      johdanto: 'Slovakian kansallisruoka tehdään perunanyyteistä ja lampaanjuustosta, '
+          + 'joulupöytään kuuluu hapankaalikeitto, ja Tokajin rinteiltä tulee makea viini. '
+          + 'Ruoka on maaseudun ja vuoristojen perintöä.',
+      tehtava: {
+        kysymys: 'Kuinka suuren osan lampaanmaitoa Slovakian bryndzan on sisällettävä EU:n '
+            + 'suojatun merkinnän mukaan?',
+        vaihtoehdot: [
+          'Vähintään viidesosan',
+          'Vähintään neljänneksen',
+          'Vähintään puolet',
+          'Vähintään kolme neljännestä',
+        ],
+        oikea: 2,
+        fakta: 'Täysin lampaanjuustosta tehtyä bryndzaa kutsutaan nimellä ovčia. Sen '
+            + 'valmistuksen sivutuotteena syntyy žinčica-juomaa, jota perinteisesti '
+            + 'nautitaan bryndzové halušky -annoksen kanssa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Perunanyyttejä lampaanjuustolla',
+          tiedosto: 'Stará Bystrica, Brynzové halušky.jpg',
+          teksti: 'Bryndzové halušky on yksi Slovakian kansallisruoista. Se koostuu '
+              + 'haluškyista, keitetyistä perunataikinanyyteistä, jotka muistuttavat '
+              + 'ulkonäöltään gnocchia, sekä pehmeästä lampaanjuustosta eli bryndzasta. '
+              + 'Päälle ripotellaan halutessa paistettuja savustetun sianrasvan tai '
+              + 'pekonin palasia sekä ruohosipulia tai kevätsipulia. Perunataikina syntyi '
+              + 'vuoristoseuduilla: perunaa sai kasvamaan ankarissakin oloissa, ja sillä '
+              + 'säästyi jauhoja. Ruoan kanssa juodaan perinteisesti žinčicaa, ja '
+              + 'Turecká-kylässä järjestetään vuosittain halušky-festivaali '
+              + 'syöntikilpailuineen.',
+          lyhyt: 'Bryndzové halušky pekonin palasilla ja kevätsipulilla puisella lautasella.',
+          selite: 'Perunataikinanyyttien päällä on pehmeää bryndza-juustoa, ja annoksen '
+              + 'kruunaavat paistetut pekonin palat ja kevätsipuli.',
+          lahde: 'Vojtasekd, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Bryndzové halušky',
+        },
+        {
+          otsikko: 'Juusto, jolla on EU:n suoja',
+          tiedosto: 'Brynza.jpg',
+          teksti: 'Slovenská bryndza on lampaanmaidosta tehtävä pehmeä juusto, joka on '
+              + 'kermanvalkoista ja maultaan voimakasta: alussa lievä, sitten tuhdimpi ja '
+              + 'lopuksi suolainen. Sana on lainattu romanian juustoa tarkoittavasta '
+              + 'sanasta, ja sen levittivät vaeltavat valakit. Nykyaikaisen, pehmeästi '
+              + 'levittyvän bryndzan uskotaan kehittyneen 1700-luvun lopulla '
+              + 'länsi-Slovakian Stará Turán yrittäjien käsissä. Heinäkuussa 2008 '
+              + 'Slovakian bryndza rekisteröitiin EU:ssa suojatuksi maantieteelliseksi '
+              + 'merkinnäksi: sen on sisällettävä vähintään puolet lampaanmaitoa, ja '
+              + 'ovčia-bryndza on täysin lampaanjuustoa.',
+          lyhyt: 'Pehmeää valkoista bryndza-juustoa kulhossa.',
+          selite: 'Bryndza on kermanvalkoista ja hieman kosteaa juustoa; kulhon vieressä '
+              + 'näkyy paloiteltua makkaraa.',
+          lahde: 'Dezidor, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Bryndza',
+        },
+        {
+          otsikko: 'Viinialue, jonka raja halkaisi',
+          tiedosto: 'Malá Tŕňa, Slovakia Jul 08, 2022 12-53-38 PM.jpeg',
+          teksti: 'Tokajin viinialue on historiallinen alue, joka ulottuu Koillis-Unkarista '
+              + 'Kaakkois-Slovakiaan. Vuoden 1920 Trianonin rauhansopimus jakoi sen, ja '
+              + 'Slovakian osaan kuuluu nykyään seitsemän kylää Trebišovin piirikunnassa '
+              + 'noin 908 hehtaarin viinitarhoineen. Se on Slovakian kuudesta '
+              + 'viinialueesta pienin. Maaperä on savea tai lössiä tulivuoriperäisen '
+              + 'pohjan päällä, ja viinit tehdään muun muassa furmintista ja keltaisesta '
+              + 'muskotista. Sekä unkarilaiset että slovakialaiset tuottajat saavat '
+              + 'käyttää Tokaj-nimeä: EU:n tuomioistuimet hylkäsivät Unkarin valituksen '
+              + 'vuonna 2013.',
+          lyhyt: 'Viinitarhoja Malá Tŕňan kylän maisemassa Slovakian Tokajin alueella.',
+          selite: 'Malá Tŕňa on yksi Slovakian Tokajin alueen seitsemästä kylästä, ja '
+              + 'viinitarhojen takana siintävät vuoret.',
+          lahde: 'Newklear007, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Tokaj wine region',
+        },
+        {
+          otsikko: 'Hapankaalikeitto joulupöytään',
+          tiedosto: 'Kapustnica (Sauerkraut soup).jpg',
+          teksti: 'Kapustnica on hapankaalista keitettävä keitto, joka tunnetaan Tšekissä ja '
+              + 'Slovakiassa joulun kaalikeittona. Slovakialaisessa keittiössä siihen '
+              + 'kuuluu usein sieniä, lihaa ja makkaraa, ja joskus se tarjoillaan '
+              + 'leipäkulhossa. Perinteinen slovakialainen ruoka rakentui aineksille, '
+              + 'jotka kestivät kuumat kesät ja kylmät talvet, sillä nykyaikaisia '
+              + 'säilytyskeinoja ei ollut: hapankaali oli sianlihan, perunan ja '
+              + 'maitotuotteiden rinnalla yksi peruselintarvikkeista. Kaalikeittoja '
+              + 'syödään myös Puolassa, Ukrainassa ja Venäjällä.',
+          lyhyt: 'Kapustnica-keitossa on hapankaalia ja makkaranpaloja.',
+          selite: 'Kapustnica tarjoillaan savikulhossa, ja punertavasta liemestä nousee '
+              + 'lusikalle hapankaalia ja makkaraa.',
+          lahde: 'young shanahan, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Cabbage soup',
+        },
+      ],
+    },
+  ],
+
+  /*
    * BERGEN on Euroopan laudan uusi kaupunkilehti (23.8.2026).
    * Aineisto: docs/mantereet-tyoaineisto/faktapohja-bergen.md ja sen
    * riippumaton tarkistus tarkistus-bergen.md — TARKISTUKSEN KORJAUKSET
