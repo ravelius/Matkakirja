@@ -152,6 +152,464 @@ export function maanAiheOtsikko(maanNimi, aiheNimi) {
 }
 
 export const MAA_KATEGORIAT = {
+  MLT: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Pienellä saarella kohtaavat yli 5 500 vuotta vanhat kivitemppelit, '
+        + 'maanalainen hautakammio ja kaupunki, joka suunniteltiin viivaimella. Malta '
+        + 'on aikamatka, jonka jokaisella pysäkillä on oma kivikerroksensa.',
+      nostot: [
+        {
+          otsikko: 'Jättiläisten temppeli',
+          aika: 'n. 3600–2500 eaa.',
+          tiedosto: 'Templo de Ġgantija, isla de Gozo, Malta, 2021-08-23, DD 17.jpg',
+          teksti: 'Gozon Xagħran tasangolla seisoo kiviseinä, jonka lohkareet ovat ihmistä '
+            + 'suurempia. Paikallisen tarinan mukaan sen rakensi jättiläisnainen Sansuna, '
+            + 'joka söi pelkkiä härkäpapuja ja hunajaa ja kantoi samalla lastaan '
+            + 'olallaan. Todellisuudessa Ġgantijan kaksi temppeliä pystytettiin yli 5 500 '
+            + 'vuotta sitten, ennen Egyptin pyramideja. Eteläisen temppelin seinä nousee '
+            + 'kuuteen metriin, ja se avautuu kaakkoon. Nimi tarkoittaa jättiläisten '
+            + 'paikkaa. Kohde liitettiin Unescon maailmanperintöluetteloon vuonna 1980.',
+          lyhyt: 'Gozon esihistoriallinen megaliittitemppeli, yksi maailman vanhimmista '
+            + 'säilyneistä uskonnollisista rakennuksista.',
+          selite: 'Ġgantijan temppelit kuuluvat Maltan megaliittisiin temppeleihin. Ne ovat '
+            + 'kaksi vierekkäistä temppeliä Xagħran tasangon reunalla.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Maltan megaliittiset temppelit',
+        },
+        {
+          otsikko: 'Katto romahti kaivuutyömaalla',
+          aika: '1902',
+          tiedosto: 'Hal Saflieni Hypogeum – Middle Level – The Holy of Holies.jpg',
+          teksti: 'Vuonna 1902 Paolassa rakennettiin uutta asuinaluetta, ja työmiehet '
+            + 'louhivat vesisäiliötä. Yhtäkkiä he puhkaisivat vahingossa katon, ja alta '
+            + 'paljastui kolmikerroksinen labyrintti, joka oli veistetty pehmeään '
+            + 'kalkkikiveen. Ħal Saflienin hypogeumi toimi pyhäkkönä ja hautakammiona, ja '
+            + 'sinne haudattiin arviolta 7 000 ihmistä. Kattoon on maalattu punaokralla '
+            + 'kierteitä ja pilkkuja, ja yhden kammion kolo saattoi vahvistaa laulun ja '
+            + 'rummutuksen kaikua muihin huoneisiin. Nykyään sisään pääsee vain 80 '
+            + 'kävijää päivässä.',
+          lyhyt: 'Maanalainen uuden kivikauden pyhäkkö ja hautakammio Paolassa.',
+          selite: 'Pyhien pyhä on hypogeumin keskitason kammio. Sen pyöreät muodot on '
+            + 'veistetty suoraan kallioon.',
+          lahde: 'xiquinhosilva, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Ħal Saflienin hypogeum',
+        },
+        {
+          otsikko: 'Kaupunki piirrettiin viivaimella',
+          aika: '1566',
+          tiedosto: 'Valletta, Malta (Aerial View).jpg',
+          teksti: 'Maaliskuun 28. päivänä 1566 suurmestari Jean de Valette laski peruskiven '
+            + 'uudelle kaupungille Sciberras-niemellä. Suuren piirityksen jälkeen '
+            + 'ritarikunta halusi rakentaa linnoitetun pääkaupungin, ja paavi lähetti '
+            + 'suunnittelijaksi Francesco Laparellin. Hän hylkäsi mutkittelevat kujat ja '
+            + 'piirsi suorakulmaisen ruutukaavan, jossa leveät kadut kulkevat '
+            + 'kaupunginportilta kohti Fort St. Elmoa. Laparellin kuoltua työtä johti '
+            + 'maltalainen Girolamo Cassar. Valletta valmistui pääosin 1570-luvun alkuun '
+            + 'mennessä, ja siitä tuli pääkaupunki vuonna 1571.',
+          lyhyt: 'Maltan pääkaupunki, jonka Pyhän Johanneksen ritarikunta perusti '
+            + '1500-luvulla.',
+          selite: 'Valletta sijaitsee kapealla niemellä Grand Harbourin ja Marsamxettin '
+            + 'satamien välissä. Kaupunki on Unescon maailmanperintökohde.',
+          lahde: 'Jonathan Mercieca, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Valletta',
+        },
+        {
+          otsikko: 'Hiljainen kaupunki',
+          aika: 'n. 700-luku eaa.',
+          tiedosto: 'Aerial view Mdina, Malta.jpg',
+          teksti: 'Foinikialaiset perustivat Mdinan paikalle asutuksen noin 700-luvulla eaa., '
+            + 'ja roomalaisten aikana se sai nimen Melita. Nykyinen nimi tulee arabian '
+            + 'sanasta madīnah, kaupunki. Mdina oli Maltan pääkaupunki antiikista '
+            + 'keskiajalle, kunnes Pyhän Johanneksen ritarikunta asettui vuonna 1530 '
+            + 'Birguun. Sen jälkeen kaupunki ei enää kasvanut muurien ulkopuolelle, ja '
+            + 'sitä alettiin kutsua Hiljaiseksi kaupungiksi. Vuonna 2024 muurien sisällä '
+            + 'asui vain 242 ihmistä, ja omaisuus siirtyy yhä sukupolvelta toiselle.',
+          lyhyt: 'Muurien ympäröimä entinen Maltan pääkaupunki, jossa asuu vain muutama sata '
+            + 'ihmistä.',
+          selite: 'Mdina on keskiaikainen linnoituskaupunki Maltan sisämaassa. Se on ollut '
+            + 'pitkään aateliston ja kirkon keskus.',
+          lahde: 'R Muscat, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Mdina',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minä vuonna suurmestari de Valette laski Valletan peruskiven?',
+        vaihtoehdot: [
+          '1530',
+          '1566',
+          '1571',
+          '1798',
+        ],
+        oikea: 1,
+        fakta: 'Valletan peruskiven laski suurmestari Jean de Valette 28. maaliskuuta '
+          + '1566.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Maltan keittiössä kohtaavat Italia, arabimaailma ja Britannia, ja tulos on '
+        + 'omaleimainen. Aamiaiseksi kelpaa rapea kerrospiirakka, ja kansallisruoka '
+        + 'syntyi luultavasti ritarien metsästyskiellon uhmasta.',
+      nostot: [
+        {
+          otsikko: 'Pastizzi täyttää aamun',
+          aika: 'nykyään',
+          tiedosto: 'Pastizzi in Rabat Nov 2014.JPG',
+          teksti: 'Maltalaisessa pastizzerijassa aamu alkaa pastizzeista. Piiras on suikea '
+            + 'tai pyöreä, ja sen taikina muistuttaa kreikkalaista filotaikinaa, vaikka '
+            + 'lehtitaikinaversiokin on olemassa. Perinteisiä täytteitä on kaksi: ricotta '
+            + 'eli irkotta tai currylla maustetut herneet eli piżelli. Täytteen tunnistaa '
+            + 'taitteesta, sillä ricottapiiraat taitetaan keskeltä ja hernepiiraat '
+            + 'sivulta. Kylissä pastizzit ovat suosittu aamiainen. Maltaksi hyvin '
+            + 'kaupaksi menevän tuotteen sanotaan myyvän kuin pastizzi.',
+          lyhyt: 'Maltalainen suolainen piirakka, jonka täyte on ricottaa tai hernemurskaa.',
+          selite: 'Pastizzi on yksi Maltan tunnetuimmista perinneruoista. Sitä myydään '
+            + 'pienissä pastizzerijoissa ja kahviloissa.',
+          lahde: 'Kritzolina, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Maltalainen keittiö',
+        },
+        {
+          otsikko: 'Kaniinipata kapinan makuna',
+          aika: 'n. 1700-luku',
+          tiedosto: 'The national dish of Malta – Stuffat tal-Fenek (rabbit stew).jpg',
+          teksti: 'Stuffat tal-fenek, kaniinipata, on Maltan kansallisruoka. Sen uskotaan '
+            + 'saaneen alkunsa hiljaisena vastarintana: Pyhän Johanneksen ritarit '
+            + 'rajoittivat metsästystä ja varasivat riistan itselleen, joten kaniinin '
+            + 'syöminen oli pienoista uhmaa. Ruoka yleistyi 1700-luvun lopulla, kun '
+            + 'rajoitukset purettiin, saarten oma Tax-Xiber-kaniini oli lisääntynyt ja '
+            + 'hinnat laskivat. Kesyjen kaniinien kasvatuksen arvellaan levinneen '
+            + 'Maltalle ranskalaisten ritarien mukana. Ruokalajin nimessä fenek '
+            + 'tarkoittaa kaniinia.',
+          lyhyt: 'Maltan kansallisruoaksi katsottu kaniinipata.',
+          selite: 'Stuffat tal-fenek on kaniinista valmistettu pata. Se on Maltan keittiön '
+            + 'tunnetuin ruokalaji.',
+          lahde: 'Renata Apan, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Maltalainen keittiö',
+        },
+        {
+          otsikko: 'Leipä Unescon listalla',
+          aika: 'n. 1500-luku',
+          tiedosto: 'Ftira with Tuna in Marsaxlokk 01.jpg',
+          teksti: 'Maltalainen ftira on hapanleipä, joka leivotaan rengasmaiseksi tai '
+            + 'litteäksi. Sen väliin tulee sardiineja, tonnikalaa, perunaa, tomaattia, '
+            + 'sipulia, kaprista ja oliiveja. Gozolla ftira tarjoillaan lähes pizzan '
+            + 'tapaan avoimena, ohuiden perunaviipaleiden peittämänä, tai kaksinkerroin '
+            + 'taitettuna calzonen tavoin. Ftiran leipomisen uskotaan ulottuvan '
+            + '1500-luvulle. Vuonna 2020 Unescon aineettoman kulttuuriperinnön luetteloon '
+            + 'lisättiin maltalaisen litteän hapanleivän, ftiran, valmistuksen taito.',
+          lyhyt: 'Maltalainen rengasmainen tai litteä hapanleipä, jonka väliin tulee kalaa '
+            + 'ja kasviksia.',
+          selite: 'Ftira on yksi Maltan tärkeimmistä leipäperinteistä. Sen leipomisen taito '
+            + 'on Unescon aineettoman kulttuuriperinnön luettelossa.',
+          lahde: 'Kritzolina, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Maltalainen keittiö',
+        },
+        {
+          otsikko: 'Joulun hunajarengas',
+          aika: 'perinteisesti joulu',
+          tiedosto: 'Traditional Honey Rings, a Maltese delicacy or “Qagħaq ta’ L-Għasel”.jpg',
+          teksti: 'Qagħaq tal-għasel on rengas, jonka sisällä on tumma täyte. Taikinaan '
+            + 'tehdään viiltoja, joista täyte pursuaa esiin. Täyte valmistetaan '
+            + 'perinteisesti hunajasta, melassista, aniksesta, kanelista ja neilikasta, '
+            + 'ja osa lisää mukaan kaakaota. Herkkua leivottiin alun perin jouluksi, '
+            + 'mutta siitä tuli niin suosittu, että sitä tehdään ympäri vuoden, eivätkä '
+            + 'monet enää tiedä sen joulutaustaa. Rengas symboloi ikuista onnea, ja ulos '
+            + 'valuva täyte kertoo, että hyvää riittää yllin kyllin.',
+          lyhyt: 'Maltalainen rengasleivonnainen, jonka täyte on hunajaa ja melassia.',
+          selite: 'Qagħaq tal-għasel on perinteinen maltalainen makeinen. Sen nimi tarkoittaa '
+            + 'hunajarenkaita.',
+          lahde: 'Renata Apan, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Maltalainen keittiö',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä perinteistä täytettä pastizzeissa on ricottan lisäksi?',
+        vaihtoehdot: [
+          'Sienet',
+          'Tonnikala',
+          'Oliivit',
+          'Herneet',
+        ],
+        oikea: 3,
+        fakta: 'Pastizzien perinteiset täytteet ovat ricotta ja currylla maustetut '
+          + 'herneet.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Kalkkikivi, meri ja tuuli ovat veistäneet Maltan saaristoon laguuneja, '
+        + 'jyrkänteitä ja kaaria. Yksi niistä on jo sortunut mereen, ja toinen '
+        + 'houkuttelee turkoosilla vedellään.',
+      nostot: [
+        {
+          otsikko: 'Turkoosi laguuni',
+          aika: 'nykyään',
+          tiedosto: 'Malta - Ghajnsielem - Comino + Large Blue Lagoon Rock + Small Blue Lagoon Rock + Cominotto + Blue Lagoon 01 ies.jpg',
+          teksti: 'Maltan ja Gozon välissä on pieni Comino eli Kemmuna. Saaren nimi tulee '
+            + 'kumminasta, ja pysyviä asukkaita siellä on vain kaksi. Comino on lintujen '
+            + 'suojelualue, ja sen kalkkikivirannat ovat jyrkkiä ja täynnä luolia. '
+            + 'Sininen laguuni on Cominon ja Cominotto-luodon välissä oleva kirkasvetinen '
+            + 'lahti, jonka vesi hohtaa turkoosina. Keskiajalla saaren luolissa '
+            + 'piileskelivät merirosvot, ja myöhemmin ritarit käyttivät saarta '
+            + 'metsästysmaanaan ja vartioivat riistaa tiukasti.',
+          lyhyt: 'Sininen laguuni on Cominon ja Cominotton välinen kirkasvetinen merenlahti '
+            + 'Maltan saaristossa.',
+          selite: 'Comino sijaitsee Maltan ja Gozon välissä. Saari on luonnonsuojelualue ja '
+            + 'tärkeä lintualue.',
+          lahde: 'Frank Vincentz, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Kemmuna',
+        },
+        {
+          otsikko: 'Kaari joka romahti myrskyssä',
+          aika: '8.3.2017',
+          tiedosto: 'Azure Window Gozo 2016.jpg',
+          teksti: 'Gozon Dwejran rannikolla seisoi kerran 28 metriä korkea kalkkikaari, jota '
+            + 'kutsuttiin Siniseksi ikkunaksi. Meri veisti sen hitaasti: aaltojen '
+            + 'kaivertama luola muuttui kaareksi, ja koko prosessin arvioidaan kestäneen '
+            + 'noin 500 vuotta. Vanhin tunnettu valokuva kaaresta on todennäköisesti '
+            + 'Richard Ellisin ottama vuodelta 1879. Kaari oli yksi saaren suosituimmista '
+            + 'nähtävyyksistä ja esiintyi useissa elokuvissa. Maaliskuun 8. päivänä 2017 '
+            + 'se romahti myrskyssä mereen.',
+          lyhyt: 'Gozon kuuluisa luonnonkaari, joka romahti mereen vuonna 2017.',
+          selite: 'Azure Window eli Dwejran ikkuna oli kalkkikiveä oleva luonnonkaari Dwejran '
+            + 'lahdella Gozolla. Sen lähellä ovat Sisämeri ja Sienikallio.',
+          lahde: 'Freddyolsson, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Gozo',
+        },
+        {
+          otsikko: 'Jyrkänne Maltan katolla',
+          aika: 'nykyään',
+          tiedosto: 'Dingli Cliffs 2009.JPG',
+          teksti: 'Maltan länsirannikolla Dinglin kylä seisoo tasangolla noin 230 metrin '
+            + 'korkeudessa, ja aivan sen vieressä jyrkänne pudottaa maiseman mereen. '
+            + 'Maltan korkein kohta, Ta\' Dmejrek, nousee 253 metriin. Ritarikunnan aikana '
+            + 'Dinglin seutua pidettiin turvallisena merirosvoilta, koska jyrkänteiden '
+            + 'takia rantaan oli mahdotonta nousta. Merellä näkyy pieni asumaton '
+            + 'Filfla-saari. Kylän nimen uskotaan tulevan englantilaisesta ritarista sir '
+            + 'Thomas Dingleystä, jonka omistuksessa oli suuri osa seudun maista.',
+          lyhyt: 'Dinglin jyrkänteet ovat Maltan länsirannikon korkeita kalliorantoja.',
+          selite: 'Dingli Cliffs on Maltan länsirannikon jyrkänne Dinglin kylän kupeessa. Sen '
+            + 'päältä avautuu näköala Filflan saarelle.',
+          lahde: 'Felix König, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          otsikko: 'Kansalliskasvi liikenneympyrässä',
+          aika: 'nykyään',
+          tiedosto: 'Cheirolophus crassifolius Malta Dingli Cliffs 01.jpg',
+          teksti: 'Yksi Maltan erikoisuuksista on kasvi, jota ei kasva luonnonvaraisena '
+            + 'missään muualla maailmassa: Cheirolophus crassifolius, maltaksi Widnet '
+            + 'il-Baħar. Se viihtyy kallioseinämillä ja rannikon laaksoissa, ja sen '
+            + 'lehdet ovat paksuja, mehevän lusikan muotoisia. Luonnossa se on '
+            + 'harvinainen, mutta Maltan länsirannikon jyrkänteillä sen voi nähdä. Kasvi '
+            + 'on niin tärkeä kansallinen symboli, että sitä viljellään jopa '
+            + 'liikenneympyröissä. Elinympäristön häviäminen uhkaa sitä.',
+          lyhyt: 'Maltan kansalliskasvi, joka kasvaa luonnonvaraisena vain Maltan saarilla.',
+          selite: 'Cheirolophus crassifolius on Maltan endeeminen kasvi. Se kasvaa '
+            + 'erityisesti saaren länsirannikon jyrkänteillä.',
+          lahde: 'Denis Barthel, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minä vuonna Gozon Sininen ikkuna romahti mereen?',
+        vaihtoehdot: [
+          '2017',
+          '2004',
+          '1998',
+          '2012',
+        ],
+        oikea: 0,
+        fakta: 'Gozon Azure Window romahti myrskyssä 8. maaliskuuta 2017.',
+      },
+    },
+    {
+      id: 'rakennukset',
+      nimi: 'Rakennukset',
+      johdanto: 'Linnoitukselta näyttävä kirkko kätkee sisäänsä kultaista barokkia, ja '
+        + 'pikkukylän kupoli kilpaili aikanaan Rooman Pantheonin kanssa. Maltan '
+        + 'rakennuksissa näkyy sekä ritarien että kyläläisten ylpeys.',
+      nostot: [
+        {
+          otsikko: 'Linnoitukselta näyttävä kultakirkko',
+          aika: '1573–1578',
+          tiedosto: 'St. John\'s Co-Cathedral, Valletta 070.jpg',
+          teksti: 'Ulkoa Pyhän Johanneksen konkatedraali Vallettassa muistuttaa linnoitusta: '
+            + 'julkisivu on lähes koruton, ja sitä reunustaa kaksi suurta kellotornia. '
+            + 'Sisällä odottaa aivan toinen maailma. Ritarikunta rakennutti kirkon '
+            + 'vuosina 1573–1578 Girolamo Cassarin suunnitelmien mukaan. 1660-luvulla '
+            + 'Mattia Preti muutti sisätilan täysin barokkiin, ja siitä tuli yksi '
+            + 'Euroopan hienoimmista barokkisisätiloista. Walter Scott kirjoitti vuonna '
+            + '1831, ettei ollut koskaan nähnyt niin vaikuttavaa kirkon sisätilaa.',
+          lyhyt: 'Vallettan barokkikirkko, joka rakennettiin Pyhän Johanneksen ritarikunnan '
+            + 'pääkirkoksi.',
+          selite: 'Pyhän Johanneksen konkatedraali on Vallettan tunnetuin kirkko. Sen '
+            + 'barokkisisustus on pääosin Mattia Pretin suunnittelema.',
+          lahde: 'Simon Burchell, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Valletta',
+        },
+        {
+          otsikko: 'Kylän kupoli Pantheonin mallilla',
+          aika: '1833–1860-luku',
+          tiedosto: 'Church of Santa Marija, Mosta (Rotunda of Mosta) 20.jpg',
+          teksti: 'Mostan asukkaat totesivat 1830-luvulla, että vanha kirkko oli liian pieni, '
+            + 'ja aloittivat uuden rakentamisen. Vanha kirkko pysyi käytössä koko ajan, '
+            + 'ja uusi nousi sen ympärille. Kyläläiset osallistuivat rakennustöihin '
+            + 'sunnuntaisin ja pyhäpäivinä. Esikuvana oli Rooman Pantheon: pyöreän kirkon '
+            + 'kupolin sisähalkaisija on 40 metriä, ja kupoli oli aikanaan maailman '
+            + 'kolmanneksi suurin. Rotunda valmistui 1860-luvun alussa 28 vuoden urakan '
+            + 'jälkeen, ja kirkko vihittiin käyttöön vuonna 1871.',
+          lyhyt: 'Mostan pyöreä basilika, jonka kupoli on yksi maailman suurimmista '
+            + 'tukemattomista kupoleista.',
+          selite: 'Mostan rotunda eli Santa Marijan basilika on Maltan suurin kirkko. Se on '
+            + 'omistettu Neitsyt Marian taivaaseenotolle.',
+          lahde: 'Simon Burchell, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mosta',
+        },
+        {
+          otsikko: 'Teatteri kymmenessä kuukaudessa',
+          aika: '1731',
+          tiedosto: 'Malta - Valletta - Manoel Theatre (monument 01140) 20220521.jpg',
+          teksti: 'Suurmestari António Manoel de Vilhena tilasi Vallettaan julkisen teatterin '
+            + 'vuonna 1731 ja maksoi sen itse, jotta ihmisillä olisi kunniallista huvia. '
+            + 'Rakennus valmistui kuulemma vain kymmenessä kuukaudessa. Ensimmäinen '
+            + 'näytelmä, Merope, esitettiin 9. tammikuuta 1732, ja näyttelijöinä olivat '
+            + 'ritarit itse. Salissa on 534 paikkaa, ja kolme parvekekerrosta on tehty '
+            + 'kokonaan puusta ja koristeltu lehtikullalla. Teatteria pidetään Euroopan '
+            + 'kolmanneksi vanhimpana yhä toimivana teatterina.',
+          lyhyt: 'Vallettan 1700-luvulla rakennettu kansallisteatteri ja Maltan '
+            + 'filharmonisen orkesterin koti.',
+          selite: 'Teatru Manoel on nimetty suurmestari Vilhenan mukaan. Se sijaitsee '
+            + 'Vallettan Old Theatre Streetillä.',
+          lahde: 'Otter, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Valletta',
+        },
+        {
+          otsikko: 'Linnake Grand Harbourin sydämessä',
+          aika: 'n. 1530–1690-luku',
+          tiedosto: 'Fuerte de San Ángel, Birgu, isla de Malta, Malta, 2021-08-25, DD 193.jpg',
+          teksti: 'Fort St. Angelo Birgussa seisoo Grand Harbourin keskellä niemellä, jolla '
+            + 'on ollut linnoitus jo keskiajalla. Antiikin aikaan paikalla oli Astarten '
+            + 'temppeli, ja myöhemmin linnaa kutsuttiin nimellä Castrum Maris, Meren '
+            + 'linna. Kun ritarikunta saapui Maltalle vuonna 1530, se valitsi '
+            + 'asuinpaikakseen Birgun, ja linnake tuli suurmestarin kotipaikaksi. '
+            + 'Nykyisen ilmeensä se sai 1690-luvun uudistuksessa, jonka suunnitteli '
+            + 'Carlos de Grunenbergh. Britit pitivät linnakkeessa varuskuntaa vuosina '
+            + '1800–1979.',
+          lyhyt: 'Birgun niemellä sijaitseva linnake, joka toimi ritarikunnan suurmestarin '
+            + 'asuinpaikkana.',
+          selite: 'Fort St. Angelo kuuluu Maltan satamien ritarikunnan linnoituksiin, jotka '
+            + 'ovat Unescon alustavalla maailmanperintöluettelolla.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Birgu',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minkä Rooman rakennuksen mukaan Mostan rotunda mallinnettiin?',
+        vaihtoehdot: [
+          'Colosseum',
+          'Forum Romanum',
+          'Pantheon',
+          'Peterinkirkko',
+        ],
+        oikea: 2,
+        fakta: 'Mostan rotunda mallinnettiin Rooman Pantheonin mukaan, ja sen kupolin '
+          + 'sisähalkaisija on 40 metriä.',
+      },
+    },
+    {
+      id: 'arki',
+      nimi: 'Arki',
+      johdanto: 'Maltalla arki on värikästä: kalastajaveneiden silmät katsovat merelle, '
+        + 'puuparvekkeet vihertävät kadun yllä ja kesäisin kylän kirkko syttyy '
+        + 'valoihin. Kaiken taustalla soi kieli, jonka juuret ovat arabiassa mutta '
+        + 'jota kirjoitetaan latinalaisilla aakkosilla.',
+      nostot: [
+        {
+          otsikko: 'Vene jonka keulassa on silmät',
+          aika: 'n. 1900-luvun alku',
+          tiedosto: 'Luzzu in Marsaxlokk 04.jpg',
+          teksti: 'Marsaxlokkin satamassa värikkäät luzzu-kalastusveneet keinuvat rivissä, ja '
+            + 'jokaisen keulassa on kaksi silmää. Silmien arvellaan olevan perua '
+            + 'muinaisten foinikialaisten tavasta, ja niiden sanotaan suojelevan '
+            + 'kalastajia merellä. Luzzu kehittyi 1900-luvun alussa italialaisesta '
+            + 'gozzo-veneestä. Rungon yläkaista, viiksi eli mustaċċ, kertoi ennen '
+            + 'omistajan kotipaikan, ja musta viiksi ilmaisi surua perheessä. Uusia '
+            + 'luzzuja ei enää rakenneta, mutta muutama sata on yhä käytössä.',
+          lyhyt: 'Maltalainen perinteinen kalastusvene, jonka keulassa on silmäpari.',
+          selite: 'Luzzu on Maltan symboleihin kuuluva kalastusvene. Marsaxlokkin satamassa '
+            + 'niitä on eniten.',
+          lahde: 'Kritzolina, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Marsaxlokk',
+        },
+        {
+          otsikko: 'Kylä syttyy juhlaan',
+          aika: 'nykyään',
+          tiedosto: 'Festa Time Mgarr.jpg',
+          teksti: 'Kesäisin lähes joka viikonloppu jokin Maltan kylä juhlii '
+            + 'suojelupyhimystään festalla. Pääkadut koristellaan brokadilipuilla, ja '
+            + 'kirkko valaistaan illalla lampuilla. Juhlan huippu on korkea messu, jonka '
+            + 'jälkeen pyhimyksen patsas kannetaan kulkueessa kylän kaduille. Sitten '
+            + 'alkaa useita päiviä kestävä riemu: soittokunnat marssivat, ilotulitteet '
+            + 'paukkuvat ja juhlat jatkuvat yöhön. Mġarrissa festaa vietetään 15. '
+            + 'elokuuta Neitsyt Marian taivaaseenoton kunniaksi, ja ilotulituksesta '
+            + 'vastaa oma seuransa.',
+          lyhyt: 'Maltalaisten kylien vuosittainen suojelupyhimyksen juhla.',
+          selite: 'Festa on suojelupyhimyksen kunniaksi järjestettävä kyläjuhla, joka kuuluu '
+            + 'erityisesti Maltan kesään.',
+          lahde: 'Lance Anthony, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Parveke josta näkee kaiken',
+          aika: '1600-luku',
+          tiedosto: 'Sliema Malta Colored-Balconies-01.jpg',
+          teksti: 'Maltalaisten talojen julkisivuja koristavat suljetut puuparvekkeet, '
+            + 'gallariji. Ne polveutuvat arabialaisista mashrabiya-parvekkeista, mutta '
+            + 'yleistyivät vasta 1600-luvulla. Vanhin tunnettu esitys on Vallettan '
+            + 'suurmestarin palatsin kulmaparveke noin vuodelta 1675. Vuonna 1679 eräs '
+            + 'vieras kirjoitti, että suurmestari käveli lasitetulla parvekkeella '
+            + 'mielellään, koska sieltä näki aukioiden tapahtumat itse näkymättä. '
+            + 'Parvekkeita kannattavia kivikonsoleja sanotaan saljaturiksi, ja lasiläpät '
+            + 'ovat purtelleja.',
+          lyhyt: 'Maltalainen perinteinen suljettu puuparveke.',
+          selite: 'Gallarija on maltalaisen kansanomaisen rakentamisen tunnusmerkki. Se '
+            + 'yleistyi Vallettassa ja Kolmessa kaupungissa 1700-luvulla.',
+          lahde: 'CEphoto, Uwe Aranas, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Vanhin maltankielinen runo',
+          aika: 'n. 1470-luku',
+          tiedosto: 'Peter Caxaro - Cantilena.jpg',
+          teksti: 'Maltan kieli on ainoa semiittinen kieli, jota kirjoitetaan latinalaisilla '
+            + 'aakkosilla. Sen juuret ovat Sisilian arabiassa, mutta sanastoon on tullut '
+            + 'paljon italiaa ja sisilian kieltä. Vanhin tunnettu maltankielinen '
+            + 'kirjallinen teksti on Il-Kantilena, Pietru Caxaron runo. Se on kirjoitettu '
+            + '1400-luvulla, luultavasti 1470-luvulla, mutta löydettiin vasta vuonna '
+            + '1966. Runo säilytetään Vallettan notaariarkistossa, ja huhtikuussa 2025 se '
+            + 'liitettiin Unescon Muisti maailmassa -luetteloon.',
+          lyhyt: 'Il-Kantilena on vanhin tunnettu maltankielinen kirjallinen teksti.',
+          selite: 'Maltan kieli on kehittynyt Sisilian arabiasta. Sitä kirjoitetaan '
+            + 'latinalaisilla aakkosilla, ja sanastossa on paljon italialaisia lainoja.',
+          lahde: 'Pietru Caxaro, Wikimedia Commons (public domain)',
+          wiki: 'Maltan kieli',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä koriste on maltalaisen luzzu-kalastusveneen keulassa?',
+        vaihtoehdot: [
+          'Kalastusverkko',
+          'Silmäpari',
+          'Lippu',
+          'Kultakruunu',
+        ],
+        oikea: 1,
+        fakta: 'Luzzu-veneen keulaan maalataan silmäpari, jonka sanotaan suojelevan '
+          + 'kalastajia merellä.',
+      },
+    },
+  ],
   BEL: [
     {
       id: 'historia',
