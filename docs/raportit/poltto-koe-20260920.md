@@ -86,3 +86,20 @@ nostot.json:sta ennen isoa polttoa). Biskajanlahden tuplaus (pelin elävä
 maastonimi "≈ Biskajanlahti") on yhä näkyvissä — se ei poistu nostotason
 mukana, koska se on FRA:n elävä maastokohde; Pelikoodari piilottaa sen
 `pyramidinNimiot()`-taulun `meri`-avaimella.
+
+## Merikoe 3: vyöhykkeet + tumma viivoitus + veneet (omistajan tarkennus 20.9. ilta)
+
+Kaappaukset `*-koe3.webp` (saapuminen, Biskaja, Lioninlahti, Kanaali). Resepti:
+`--syvyysportaat 30,120,600,1500,3000 --resepti-json '{"syvyys":{"litistys":0.8}}'
+--vesiviivoitus tumma` (patina.mjs VESIVIIVAT_TUMMA: 6 viivaa, voima 0,42) + joet
+pohjassa. Väliaikaiset koristeet (geneeriset musteviivat): 6 purjelaivaa (Biskaja 2,
+Kanaali 2, Lioninlahti/Liguria 2) ja 2 kompassiruusua (Biskaja, Lioninlahti);
+sijainnit `kaappaukset/poltto-koe-20260920/nimiot-koe3.json`.
+
+**Koristeiden rajapinta Codexin kuville** (maailmapiirto.js KUVAKORISTEET): nimiötason
+rivi `{ luokka: 'kuva', kuva: '<png/svg, läpinäkyvä>', lon, lat, koko: <leveys
+ruutupikseleinä z7:llä>, suhde?: <korkeus/leveys>, kierto?: <astetta> }` — generaattori
+tarjoilee tiedoston sivulle ja esilataa sen, piirto on drawImage keskipisteen ympäri
+kierrettynä; koko skaalautuu tasoittain (KUVAN_KOKOKERROIN z4 0,3 … z8 1,45).
+Luettelon metadataan kirjautuu `luokka: 'kuva'`, tiedostonimi ja kierto. Kuvat
+pudotetaan paikoilleen nimistötiedostoon ilman koodimuutosta.
