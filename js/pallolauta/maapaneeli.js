@@ -981,6 +981,14 @@ function asetaAuki(el, d) {
   if (valikko) valikko.hidden = !auki || !d.aiheet?.length;
   if (avain) avain.setAttribute('aria-expanded', String(auki));
   kortti.classList.toggle('valikko-auki', auki);
+  /*
+   * PULU VÄISTÄÄ AUKI OLEVAN KARTUSCHAN (Sonnet 1, kierros 16b,
+   * 20.9.2026: pulu jäi kielirivin päälle). Kaluste on kokonaan
+   * `pointer-events: none` (PÄÄTÖKSET 21), joten pulun vahti ei näe sitä
+   * osumatestissä — merkintä kertoo sen (js/pulu-paneelin-ylla.js
+   * VAISTETTAVA_LUOKKA).
+   */
+  kortti.classList.toggle('pulu-vaistettava', auki);
   if (!auki) kortti.classList.remove('sijat-auki');
   for (const nappi of kortti.querySelectorAll('.maapaneeli-aihe')) {
     nappi.classList.toggle('on', Boolean(d.avattuSivu) && nappi.dataset.aihe === d.avattuSivu);
