@@ -9779,7 +9779,14 @@ export const RAAMATTU = {
           + 'piirto selaimessa. KOSICEN KOHDEKARTTA (Sonnet 3 0001833e): 8 kohdetta, '
           + 'mergetty; TORMAYSVAISTO (Sonnet 3 1b7dfbbc, 08.50): laskeNumeroympyroidenVaisto '
           + '(vali >= 30 px, siirto <= 24 px, osoitinviiva yli 16 px:n siirrolla), savuke '
-          + '36/36 kaikille numeroympyrakaupungeille. Sonnet 3 pysahtyi - jono tyhja.',
+          + '36/36 kaikille numeroympyrakaupungeille. Sonnet 3 pysahtyi - jono tyhja. '
+          + 'LINSSIKARTAN KAKSOISVIIVA 1b (Opus 1 c74e3436, 08.50): generoi-maapolygonit '
+          + 'naulaa kehan karjet (< 1,7 km rannasta) ne_10m_ocean-rantaviivaan ennen '
+          + 'harvennusta (364 502 karkea, aineisto pieneni 1448 -> 1415 kt, suurin poikkeama '
+          + '539 -> 212 m; mediaani jaa kvantisoinnin 334 m ruudukkoon). PAATOS (Fable): '
+          + 'suistojen janteet poistetaan OMPELEMALLA rantaviivan polku kehaan generoinnissa '
+          + '(vaihtoehto 1), jotta punainen keha sailyy; ei vaihtoehtoa 2 (rannikko-osuus '
+          + 'pois).',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
