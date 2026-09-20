@@ -52,7 +52,8 @@ test('puuttuva piirros vie koko merkin: kartalla vain piirretyt', () => {
   assert.match(virhehaara, /piste\.remove\(\)/, 'merkki lähtee kartalta piirroksen mukana');
   assert.doesNotMatch(virhehaara, /classList\.remove\('kohde-piirros'\)/, 'täplää ei jää');
   // Miniatyyritön kohde ei piirry kartalle lainkaan.
-  assert.match(LAHDE, /if \(!miniatyyri\) \{\s*avaajat\.push\(null\);\s*return;/);
+  // (Poikkeus: kartta, jolla on `numeroympyrat: true`, ks. alla.)
+  assert.match(LAHDE, /if \(!miniatyyri && !kartta\.numeroympyrat\) \{\s*avaajat\.push\(null\);\s*return;/);
   assert.match(LAHDE, /const avattava = Boolean\(k\.teksti \|\| k\.wiki\);/);
   assert.match(LAHDE, /html\(avattava \? 'button' : 'span',/);
 });
@@ -86,4 +87,21 @@ test('Sevillan kolme kohdetta osoittavat englanninkielisiin artikkeleihin', () =
   assert.equal(nimella('Maestranzan areena').wiki, 'Maestranza (Seville)');
   assert.equal(nimella('Trianan silta').wiki, 'Puente de Isabel II');
   assert.equal(nimella('Plaza de España').wiki, 'Plaza de España, Seville');
+});
+
+test('numeroympyrat-lippu pitää kohteet kartalla eikä siirrä niitä liuskaan (Bryssel, Ljubljana)', async () => {
+  const { kaupunkikartanSiirretyt } = await import('../js/nahtavyydet.js');
+  for (const id of ['bryssel', 'ljubljana']) {
+    assert.equal(KAUPUNKIKARTAT[id].numeroympyrat, true, `${id}: lippu puuttuu`);
+    assert.deepEqual(kaupunkikartanSiirretyt(null, id), [], `${id}: kohteet eivät saa siirtyä liuskan "Muut"-riville`);
+  }
+  // Muut kartat ennallaan: Pariisin miniatyyrittömät siirtyvät edelleen liuskaan.
+  assert.ok(!KAUPUNKIKARTAT.pariisi.numeroympyrat);
+  assert.ok(kaupunkikartanSiirretyt(null, 'pariisi').length > 0, 'Pariisin siirretyt katosivat');
+});
+
+test('numeroympyrä syntyy vain miniatyyrittömälle kohteelle lipun kartalla, numero sisällä', () => {
+  assert.match(LAHDE, /if \(!miniatyyri\) \{\s*piste\.classList\.add\('kohde-numeroympyra'\);\s*piste\.appendChild\(html\('span', 'kohde-numeroteksti', numero\)\);/);
+  const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
+  assert.match(css, /\.maakartta-piste\.kohde-numero\.kohde-numeroympyra\s*\{[^}]*width:\s*26px/);
 });

@@ -239,6 +239,9 @@ export function kaupunkikartanSiirretyt(ui, cityId) {
 /** Varsinainen ladonta (ks. muisti yllä). */
 function laskeKaupunkikartanSiirretyt(ui, cityId, kartta) {
   const ulos = [];
+  // Numeroympyrälliset kartat (Bryssel, Ljubljana) pitävät piirroksettomat
+  // kohteet kartalla, joten liuskaan ei siirry mitään (ks. piirraKaupunkiKartta).
+  if (kartta.numeroympyrat) return ulos;
   (kartta.kohteet ?? []).forEach((raaka, i) => {
     if (MINIATYYRIT[cityId]?.[raaka.nimi]) return;
     const juttu = NAHTAVYYSJUTUT[cityId]?.[raaka.nimi];
@@ -543,7 +546,7 @@ export function piirraKaupunkiKartta(ui, kohde, {
      * saa silti tässäkin alkion, jotta indeksi pysyy kohteen
      * järjestysnumerona (kokoruudun klooni kytkee sillä napin).
      */
-    if (!miniatyyri) {
+    if (!miniatyyri && !kartta.numeroympyrat) {
       avaajat.push(null);
       return;
     }
@@ -567,6 +570,20 @@ export function piirraKaupunkiKartta(ui, kohde, {
      */
     const piste = html(avattava ? 'button' : 'span',
       'maakartta-piste kaupunki-kohde kohde-numero');
+    /*
+     * NUMEROYMPYRÄ ILMAN MINIATYYRIÄ (omistajan päätös 20.9.2026,
+     * Bryssel ja Ljubljana; kuvat lisätään myöhemmin). Kartan data
+     * kertoo lipulla `numeroympyrat: true`, että sen piirroksettomat
+     * kohteet piirretään kartalle numeroituina ympyröinä (numero
+     * sisällä, nimi alla) sen sijaan että ne siirtyisivät liuskan
+     * sisäisiksi nostoiksi (ks. kaupunkikartanSiirretyt). Muut kaupungit
+     * ovat ennallaan: lippu puuttuu, ja piirroksettomat kohteet
+     * siirtyvät liuskaan kuten PAATOKSET 34 kohta 18 b sanoo.
+     */
+    if (!miniatyyri) {
+      piste.classList.add('kohde-numeroympyra');
+      piste.appendChild(html('span', 'kohde-numeroteksti', numero));
+    }
     if (miniatyyri) {
       piste.classList.add('kohde-piirros');
       const pikku = document.createElement('img');

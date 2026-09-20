@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { livianYlinDialogi, livianDialogikoti, livianDialogiSalliiReaktion, seuraaLivianDialogeja } from '../js/livia-dialogitila.js';
+import { livianYlinDialogi, livianDialogikoti, livianDialogiSalliiReaktion, merkitseLivianOmaDialogi, seuraaLivianDialogeja } from '../js/livia-dialogitila.js';
 
 function ymparisto(t) {
  let pending=[],callback,disconnected=false;
@@ -32,6 +32,28 @@ test('dialogin koti ja reaktiolupa seuraavat avausjärjestystä myös ennen obse
  e.set('arrival-dialog',false);assert.equal(livianYlinDialogi(e.doc).id,'quiz-dialog');
  e.set('quiz-dialog',false);assert.equal(livianYlinDialogi(e.doc),null);
  assert.equal(e.changes.length,6);
+});
+
+test('pulun oma kuvakortti ei ole näkymän vaihdos (savuke-pollo 20.9.2026)',t=>{
+ /* Pulun kuvakortti on <dialog>, joka avataan showModalilla. Ennen
+  * korjausta vahti näki sen vieraana ikkunana, js/pollo.js
+  * seuraaNakymaa sulki chatin ja suljeKuvapopup vei kortin mukanaan:
+  * kortti välähti ja katosi samasta napautuksesta, joka sen avasi
+  * (mitattu savuke-pollon punaisesta, elinkaari "syntyi>poistui"). */
+ const e=ymparisto(t),lehti=e.set('arrival-dialog',true);e.flush();
+ assert.equal(livianYlinDialogi(e.doc),lehti);
+ const muutoksia=e.changes.length;
+ const kortti={id:'pollo-kuvatausta',localName:'dialog',open:true,isConnected:true,
+  hasAttribute:n=>n==='data-livia-oma'};
+ e.dialogs.push(kortti);
+ assert.equal(livianYlinDialogi(e.doc),lehti,'pulun oma kortti nousi pinoon');
+ assert.equal(livianDialogikoti(e.doc),lehti);
+ assert.equal(e.changes.length,muutoksia,'pulun oma kortti ilmoitti näkymän vaihdoksesta');
+ // Merkitsijä asettaa juuri sen attribuutin, jota vahti katsoo.
+ const asetetut=[];
+ merkitseLivianOmaDialogi({setAttribute:(n,v)=>asetetut.push([n,v])});
+ assert.deepEqual(asetetut,[['data-livia-oma','']]);
+ assert.equal(merkitseLivianOmaDialogi(null),null);
 });
 
 test('asetukset, voitto ja ilmoitus hiljentävät myös alla avoinna olevan lehden',t=>{
