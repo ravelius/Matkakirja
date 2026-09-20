@@ -651,8 +651,23 @@ const VESIVIIVAT_OHUT = {
   haipyma: 0.9,
   huojunta: 6,
 };
+/*
+ * TUMMA (merikoe 3, omistaja 20.9.2026: *"viivoitus vielä tummempana kuin
+ * vanhoissa kartoissa"*): 6 viivaa, sisin tiheä, muste selvästi näkyvä.
+ */
+const VESIVIIVAT_TUMMA = {
+  ...VESIVIIVAT_TIHEA,
+  aloitus: 4,
+  vali: 4.5,
+  kasvu: 2.2,
+  viivoja: 6,
+  paksuus: 1.05,
+  voima: 0.42,
+  haipyma: 0.8,
+  huojunta: 6,
+};
 export const VESIVIIVOITUKSET = Object.freeze({
-  tihea: VESIVIIVAT_TIHEA, harva: VESIVIIVAT_HARVA, ohut: VESIVIIVAT_OHUT,
+  tihea: VESIVIIVAT_TIHEA, harva: VESIVIIVAT_HARVA, ohut: VESIVIIVAT_OHUT, tumma: VESIVIIVAT_TUMMA,
 });
 
 /*

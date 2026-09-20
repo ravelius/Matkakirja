@@ -84,7 +84,9 @@ import {
   mkdirSync, readFileSync, writeFileSync, statSync, existsSync,
 } from 'node:fs';
 import { tmpdir } from 'node:os';
-import { dirname, join, resolve } from 'node:path';
+import {
+  basename, dirname, join, resolve,
+} from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { ikkunanRajat, keraaMaailma, rannikot } from './fokuskartta/maailma.mjs';
@@ -2075,14 +2077,14 @@ function nimiotasonLadonnat(mitat) {
   const ulos = [];
   // Meret ja koristeet ensin (isot, harvat), sitten maakunnat väistävät niitä.
   const jarjestys = [...nimiotasonNimiot()].sort((a, b) => {
-    const arvo = (n) => (n.luokka === 'meri' ? 0 : (n.luokka === 'kompassi' || n.luokka === 'laiva' ? 1 : 2));
+    const arvo = (n) => (n.luokka === 'meri' ? 0 : (n.luokka === 'kompassi' || n.luokka === 'laiva' || n.luokka === 'kuva' ? 1 : 2));
     return arvo(a) - arvo(b);
   });
   let siirrettyja = 0;
   for (const nimio of jarjestys) {
     const l = nimiotasonLadonta(nimio, mitat.z, arkkiKaava, mitat.px, mittaa);
     if (!l) continue;
-    const koriste = nimio.luokka === 'kompassi' || nimio.luokka === 'laiva';
+    const koriste = nimio.luokka === 'kompassi' || nimio.luokka === 'laiva' || nimio.luokka === 'kuva';
     const w = l.laatikko[2] - l.laatikko[0]; const h = l.laatikko[3] - l.laatikko[1];
     let valittu = null;
     for (const [sx, sy] of (koriste ? [[0, 0]] : NIMION_VAISTO_ASKELIA)) {
@@ -2929,9 +2931,19 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
     rannikot = (await (await fetch('./ranta.json')).json())?.rannikot ?? [];
   }
   let nimiotaso = null;
+  const koristekuvat = {};
   if (NIMIOTASO) {
     // Esiladotut nimiöt tasoittain (ks. TÖRMÄYSTEN VÄISTÖ): { z: [ {nimio, x, y, …} ] }.
     nimiotaso = (await (await fetch('./nimiot.json')).json())?.tasot ?? {};
+    // Kuvakoristeet esiladataan kerran: polku → Image (maailmapiirto.js KUVAKORISTEET).
+    const polut = new Set();
+    for (const lista of Object.values(nimiotaso)) for (const l of lista) if (l.nimio?.luokka === 'kuva' && l.nimio.kuva) polut.add(l.nimio.kuva);
+    await Promise.all([...polut].map((polku) => new Promise((ok) => {
+      const img = new Image();
+      img.onload = () => { koristekuvat[polku] = img; ok(); };
+      img.onerror = () => ok();
+      img.src = './koristeet/' + polku.split('/').pop();
+    })));
   }
   if (!TASOITUS && !NOSTOTASO && !VIIVATASO && !RANTATASO && !NIMIOTASO) {
     aineisto = await (await fetch('./aineisto.json')).json();
@@ -2988,7 +3000,7 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
     } else if (RANTATASO) {
       piirraRantataso(kangas, { ...yhteiset, rannikot });
     } else if (NIMIOTASO) {
-      piirraNimiotaso(kangas, { ...yhteiset, __z: saumaZ, ladonnat: nimiotaso[String(saumaZ)] ?? [] });
+      piirraNimiotaso(kangas, { ...yhteiset, __z: saumaZ, ladonnat: nimiotaso[String(saumaZ)] ?? [], kuvat: koristekuvat });
     } else {
       piirraMaailma(kangas, aineisto, {
         ...yhteiset, nostot, piirraNosto: piirraNostosymPolttoon,
@@ -3144,7 +3156,7 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
       } else if (RANTATASO) {
         piirraRantataso(kangas, { ...yhteiset, rannikot });
       } else if (NIMIOTASO) {
-        piirraNimiotaso(kangas, { ...yhteiset, __z: perus.__z ?? 7, ladonnat: nimiotaso[String(perus.__z ?? 7)] ?? [] });
+        piirraNimiotaso(kangas, { ...yhteiset, __z: perus.__z ?? 7, ladonnat: nimiotaso[String(perus.__z ?? 7)] ?? [], kuvat: koristekuvat });
       } else {
         piirraMaailma(kangas, aineisto, {
           ...yhteiset, nostot, piirraNosto: piirraNostosymPolttoon,
@@ -3236,7 +3248,7 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
        */
       piirraRantataso(kangas, { ...asetukset, rannikot });
     } else if (NIMIOTASO) {
-      piirraNimiotaso(kangas, { ...asetukset, ladonnat: nimiotaso[String(asetukset.__z)] ?? [] });
+      piirraNimiotaso(kangas, { ...asetukset, ladonnat: nimiotaso[String(asetukset.__z)] ?? [], kuvat: koristekuvat });
     } else {
       piirraMaailma(kangas, aineisto, {
         ...asetukset, sisalto, nostot, piirraNosto: piirraNostosymPolttoon,
@@ -3314,6 +3326,10 @@ const palvelin = createServer((req, res) => {
     '/ranta.json': join(tyokansio, 'ranta.json'),
     // Nimiötason aineisto: nimiölista (ks. NIMIÖTASO).
     '/nimiot.json': join(tyokansio, 'nimiot.json'),
+    // Kuvakoristeet (maailmapiirto.js KUVAKORISTEET): tiedostot nimiölistasta.
+    ...Object.fromEntries((NIMIOTASO ? nimiotasonNimiot() : [])
+      .filter((n) => n.luokka === 'kuva' && n.kuva)
+      .map((n) => [`/koristeet/${basename(n.kuva)}`, resolve(n.kuva)])),
     // Väritason leikkuri: kohdemaan aluevesirenkaat (ks. vari.json).
     '/vari.json': join(tyokansio, 'vari.json'),
     /*
@@ -3890,7 +3906,7 @@ function teeLuettelo() {
     const laatastot = {};
     for (const m of tasot) laatastot[m.z] = nostotasoBase64(m, nimiotasonPeite(m));
     const nimiot = {};
-    const tunnus = (n) => String(n.teksti).toLowerCase()
+    const tunnus = (n) => (['kompassi', 'laiva', 'kuva'].includes(n.luokka) ? `${n.luokka}-${n.lon}-${n.lat}` : String(n.teksti)).toLowerCase()
       .replace(/ä/g, 'a').replace(/ö/g, 'o').replace(/å/g, 'a').replace(/é/g, 'e').replace(/î/g, 'i')
       .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
     const asteiksi = (x, y) => {
@@ -3907,6 +3923,7 @@ function teeLuettelo() {
           ...(nimio.luokka === 'meri' ? { meri: id } : {}),
           ...(nimio.koko ? { koko: nimio.koko } : {}),
           ...(nimio.kulma ? { kulma: nimio.kulma } : {}),
+          ...(nimio.luokka === 'kuva' ? { kuva: basename(String(nimio.kuva)), kierto: nimio.kierto ?? 0 } : {}),
           tasot: [], laatikot: {},
         };
         nimiot[id].tasot.push(m.z);

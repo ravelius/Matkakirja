@@ -4170,6 +4170,20 @@ export const NIMION_VARIT = Object.freeze({
 export function nimiotasonLadonta(nimio, z, kaava, px, mittaa) {
   const x = kaava.lautaX(nimio.lon) * px;
   const y = kaava.lautaY(nimio.lat) * px;
+  // Kuvakoriste: leveys annettu z7:n ruutupikseleinä, korkeus kuvasta (suhde tai 1:1).
+  if (nimio.luokka === 'kuva') {
+    const kerroin = KUVAN_KOKOKERROIN[z];
+    if (!kerroin || !(nimio.koko > 0)) return null;
+    const w = nimio.koko * kerroin;
+    const h = w * (nimio.suhde > 0 ? nimio.suhde : 1);
+    const kulma = Number(nimio.kierto) || 0;
+    const c = Math.abs(Math.cos(kulma * Math.PI / 180)); const s = Math.abs(Math.sin(kulma * Math.PI / 180));
+    const bw = w * c + h * s; const bh = w * s + h * c;
+    return {
+      x, y, korkeus: h, leveys: w, kulma, luokka: 'kuva',
+      laatikko: [x - bw / 2, y - bh / 2, x + bw / 2, y + bh / 2],
+    };
+  }
   // Koristeet: neliömäinen laatikko, `korkeus` = koristeen koko.
   if (nimio.luokka === 'kompassi' || nimio.luokka === 'laiva') {
     const koko = KORISTEEN_KOOT[nimio.luokka]?.[z];
@@ -4216,6 +4230,20 @@ export function nimiotasonLadonta(nimio, z, kaava, px, mittaa) {
  * rivejä luokalla 'kompassi' ja 'laiva' (lon, lat, koko?) ja piirtyvät
  * samalla musteella kuin merinimiöt.
  */
+/*
+ * KUVAKORISTEET (Fable 20.9.2026 ilta): Codexin käsin piirretyt
+ * purjelaivat ja kompassiruusut pudotetaan paikoilleen ILMAN
+ * koodimuutosta nimiötason rivinä
+ *   { luokka: 'kuva', kuva: '<polku png/svg, läpinäkyvä>', lon, lat,
+ *     koko: <leveys ruutupikseleinä z7:llä>, kierto: <astetta> }.
+ * Koko skaalautuu tasoittain samalla suhteella kuin koristeet
+ * (KUVAN_KOKOKERROIN: z7 = 1). Generaattori tarjoilee tiedoston sivulle
+ * ja esilataa sen (asetukset.kuvat: polku → Image); piirto on
+ * drawImage keskipisteen ympäri kierrettynä. Metadataan kirjataan
+ * luokka 'kuva' ja tiedosto, jotta Pelikoodari tunnistaa koristeen.
+ */
+export const KUVAN_KOKOKERROIN = Object.freeze({ 4: 0.3, 5: 0.42, 6: 0.65, 7: 1, 8: 1.45 });
+
 export const KORISTEEN_KOOT = Object.freeze({
   kompassi: { 4: 28, 5: 40, 6: 56, 7: 80, 8: 110 },
   // Purjelaivat isommiksi (Fable 20.9. ilta: *"nyt tuskin näkyvät"*).
@@ -4316,6 +4344,7 @@ function piirraAaltomerkki(ctx, x, y, leveys, vari) {
 export function piirraNimiotaso(canvas, asetukset) {
   const {
     bbox, projektio, leveys, koko = null, siirto = null, nimiot = null, ladonnat = null, __z: z = 7,
+    kuvat = null,
   } = asetukset;
   const px = leveys / bbox.w;
   const W = Math.round(leveys);
@@ -4348,6 +4377,18 @@ export function piirraNimiotaso(canvas, asetukset) {
     for (const d of siirrot) {
       if (x1 + d < GX || x0 + d > GX + W || y1 < GY || y0 > GY + H) continue;
       const vari = NIMION_VARIT[nimio.luokka === 'maakunta' ? 'maakunta' : 'meri'];
+      if (nimio.luokka === 'kuva') {
+        const kuva = kuvat?.[nimio.kuva] ?? kuvat?.get?.(nimio.kuva);
+        if (kuva) {
+          ctx.save();
+          ctx.translate(l.x + d - GX, l.y - GY);
+          if (l.kulma) ctx.rotate(l.kulma * Math.PI / 180);
+          ctx.drawImage(kuva, -l.leveys / 2, -l.korkeus / 2, l.leveys, l.korkeus);
+          ctx.restore();
+          piirretty += 1;
+        }
+        continue;
+      }
       if (nimio.luokka === 'kompassi') {
         piirraKompassiruusu(ctx, l.x + d - GX, l.y - GY, l.korkeus / 2, KORISTEEN_VARI);
         piirretty += 1;
