@@ -2964,7 +2964,9 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
     piirraNostosymPolttoon(ctx, m, porras);
     const kuva = m.kuva ? nostokuvat[m.kuva] : null;
     if (kuva) {
-      const k = porras * 2.6;
+      // Kuvamerkki symbolin paalle: porras on kuvapikselia lautayksikkoa
+      // kohti ja minisymbolin sade on 6,5 yksikkoa (fokusnosto-symbolit.js).
+      const k = porras * 24;
       ctx.drawImage(kuva, -k / 2, -k / 2, k, k);
     }
   };
