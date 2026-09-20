@@ -25,6 +25,15 @@ Kaappaukset: `docs/raportit/kaappaukset/kierros17-20260920/` (nimet `b-*`, `bry-
 2. **Uuden noston avaus Turkissa ei matkusta:** Kappadokian merkin napautus avasi noston (ankaravuohi) mutta ylätunniste pysyi "Bryssel, kesäkuussa 1873" — maailma-tilassa tarkoituksellista?
 3. Arvonimi Košice (Ochtinská): "Krivanin huipun tähystäjältä". Turkki (ankaravuohi): ei pulua → ei nimeä.
 
+## Täydennys 4.48–4.53 (Fablen vastausten jälkeen)
+
+Liuskan kolme riviä Brysselissä (v1971), pisteinä (täyskuvassa 920 px = 390 pt, jakaja 2,36; kaappaukset `c-*`, `bry-lehti-*`):
+- Ylin rivi "Bryssel" (italic, ~ (201, 406)): napautus **sulkee liuskan**, lehteä ei avaudu (`c-lehti-c/d`).
+- Rivi **"Turistiopas"** (~ (211, 425)): **avaa lehden etusivun** — "BRYSSEL / BELGIA · 1. MATKAPÄIVÄ", karuselli 1/3 (lentokuva), Ennen/Nyt-kuvapari (Place Royale), pitkä esittelyteksti (Grand-Place, Manneken Pis, Galeries Royales Saint-Hubert, Palais de Justice); × oikeassa yläkulmassa (369, 106) sulkee (`c-turistiopas-b`, `bry-lehti-2`). Etusivun lopussa ei ole sivunvaihtoa/kategorioita: vaakasuora swipe ei tehnyt mitään, sivu loppui tekstiin. **Historia / Rakennukset / Ruoka -sivuja ei siis näy.**
+- Kategoriarivi "• Kulttuuri ja ruoka (1)" (~ (237, 461)): napautus **sulkee liuskan** heti (0 s ja 1 s myöhemmin ei haitaria), liuska oli varmasti auki (`c-kat-1-paneeli`, `c-kat-2-heti`, `c-kat-3-1s`). Tämä on Sonnet 3:lle pyydetty toisto; lähetin pisteet ja rivit hänelle.
+- Fablen kuvaus ("ylin rivi on lehti-rivi") ei täsmää: lehden avaa "Turistiopas", ei "Bryssel"-rivi.
+- Ratasvalikossa ei ole linssivalitsinta/varustekuvaruudukkoa (näkyy vain Äänentasot, Kehittäjä: maailma, mittari, Raamattu, Kehittäjälehti); ☰-valikossa Äänet/uusi peli/ehdota sisältöä. **Astronautin kameran avausreitti jäi löytymättä.**
+
 ## Ei ehditty
 
 ISS-merkki Astronautin kamerassa ja astropulun vastaukset — **en löytänyt linssin avausreittiä** (kokeilin: pallo pienimmällä zoomilla, karttaselitenappi, pallon napautus; ei linssiä). Kerro miten astronautin kamera avataan. Lisäksi: Ljubljanan pöllö/artikkeli/kuvat/radio (Ljubljanan nostoista vain Idrija v1970:ssä), Bryssel pöllö/artikkeli, Canigou (ei löytynyt, en ehtinyt Ranskan maakartalle Pyreneille), TUR Istanbul ja muut kuvat, Košicen muut nostot, Brysselin minitehtävät. Yksi kierros ~20 min; jatkan pyynnöstä.
