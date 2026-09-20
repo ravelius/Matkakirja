@@ -18834,6 +18834,299 @@ export const MAA_KATEGORIAT = {
       },
     },
     {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Romanian keskiaikaiset kaupungit ja legendat kietoutuvat todelliseen '
+        + 'historiaan: linnavuori jonka tarina venyi kauhutarinaksi, luostari jonka '
+        + 'rakentamisesta kerrotaan synkkä satu, ja äänestys joka loi uuden valtion.',
+      nostot: [
+        {
+          otsikko: 'Kellotorni, joka vartioi linnamäkeä',
+          aika: '1200-luku',
+          tiedosto: 'RO MS Sighisoara clock tower hdr 1.jpg',
+          teksti: 'Sighișoaran vanha kaupunki kohoaa kukkulalle Transilvaniassa, ja sen '
+            + 'ylle nousee kellotorni, jonka rakentaminen alkoi 1200-luvun lopulla '
+            + 'porttitorniksi. Nykyisin tornissa toimii kaupunginmuseo. Kivikaduilla '
+            + 'seisoo talo, jossa kerrotaan asuneen Vlad-nimisen pojan, josta tuli '
+            + 'myöhemmin tunnettu nimellä Vlad Seivästäjä — hän syntyi kaupungissa '
+            + 'vuonna 1431. Muurin yhdeksän jäljellä olevaa tornia rakensivat ja '
+            + 'puolustivat keskiajalla eri ammattikunnat, kukin oma tornistaan '
+            + 'vastuussa. Unesco otti koko vanhan kaupungin maailmanperintöluetteloon '
+            + 'vuonna 1999.',
+          lyhyt: 'Sighișoaran kellotorni valmistui 1200-luvun lopulla, ja kaupunki on Unescon perintökohde.',
+          selite: 'Sighișoaran kellotorni kohoaa Transilvanian vanhan kaupungin '
+            + 'ylle, ja siinä toimii nykyisin kaupunginmuseo.',
+          lahde: 'Andrei Stroe, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Sighișoara',
+        },
+        {
+          otsikko: 'Linna, jonka Vlad rakensi uudelleen',
+          aika: '1462',
+          tiedosto: 'Cetatea Poenari din distanta.jpg',
+          teksti: 'Poenarin linnavuori kohoaa 850 metrin korkeuteen jyrkän '
+            + 'kalliorinteen päällä, ja huipulle kiipeää nykyään 1480 betoniporrasta. '
+            + 'Linna oli rauniona, kunnes Vlad III eli Vlad Seivästäjä vahvisti sen '
+            + '1450-luvulla toiseksi turvapaikakseen: hän korotti muureja ja '
+            + 'rakennutti kymmeniä metrejä pitkän kivimuurin tornin ympärille. '
+            + 'Tarinan mukaan työhön määrättiin rangaistukseksi ruhtinasta vastaan '
+            + 'juonineita bojaareja. Vuonna 1462 osmanijoukot piirittivät linnan, '
+            + 'mutta Vlad pakeni salaista käytävää pitkin vuorten yli Transilvaniaan '
+            + 'ennen kuin linnoitus antautui.',
+          lyhyt: 'Poenarin linnavuoren vahvisti 1450-luvulla Vlad III eli Vlad Seivästäjä.',
+          selite: 'Poenarin linnavuoren rauniot kohoavat 850 metrin '
+            + 'korkeudessa, ja huipulle vie 1480 porrasta.',
+          lahde: 'Kvmgz, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Vlad III',
+        },
+        {
+          otsikko: 'Yksi mies, kaksi valtaistuinta',
+          aika: '1859',
+          tiedosto: 'Al I Cuza.jpg',
+          teksti: 'Tammikuussa 1859 Moldova ja Valakia olivat yhä erillisiä '
+            + 'ruhtinaskuntia, joilla Pariisin rauhansopimuksen mukaan piti olla '
+            + 'omat hallitsijansa. Unionistit keksivät kiertotien: molemmat maat '
+            + 'valitsisivat saman miehen ruhtinaakseen. Moldovan edustajat '
+            + 'valitsivat eversti Alexandru Ioan Cuzan 5. tammikuuta, ja Valakian '
+            + 'edustajat seurasivat perässä 24. tammikuuta. Osmanien hovi vastusti '
+            + 'aluksi kaksoisvaalia, mutta hyväksyi lopulta tosiasian. Cuza yhdisti '
+            + 'maiden hallinnon, rahan ja armeijan vuoteen 1862 mennessä, jolloin '
+            + 'syntyi Romanian ruhtinaskunta.',
+          lyhyt: 'Alexandru Ioan Cuza valittiin molempien ruhtinaskuntien hallitsijaksi tammikuussa 1859.',
+          selite: 'Alexandru Ioan Cuza (1820–1873) valittiin Moldovan ja '
+            + 'Valakian yhteiseksi ruhtinaaksi tammikuussa 1859.',
+          lahde: 'Carol Szathmari, Wikimedia Commons (PD)',
+          wiki: 'Alexandru Ioan Cuza',
+        },
+        {
+          otsikko: 'Luostari, joka vaati uhrin',
+          aika: '1517',
+          tiedosto: 'Church of the Dormition, Argeș monastery (by Pudelek) 01.jpg',
+          teksti: 'Curtea de Argeșin luostarikirkko rakennettiin ruhtinas Neagoe '
+            + 'Basarabin määräyksestä vuosina 1512–1517, ja sen kierteiset kupolit '
+            + 'ja koristeellinen kivijulkisivu tekevät siitä yhden Romanian '
+            + 'omaperäisimmistä rakennuksista. Kansanrunossa kerrotaan mestari '
+            + 'Manolesta, jonka rakennelma sortui joka yö, kunnes hän näki unessa, '
+            + 'että se pysyisi pystyssä vain, jos joku rakas muurattaisiin sen '
+            + 'seinään. Tarina päättyy synkästi, ja se tunnetaan Romaniassa laajasti '
+            + 'kansanperinteenä. Todellisuudessa kirkosta tuli 1880-luvulla kuningas '
+            + 'Carol I:n aikana kuninkaallinen hautaluostari, jonne on haudattu '
+            + 'useita Romanian hallitsijoita.',
+          lyhyt: 'Curtea de Argeșin luostarikirkko valmistui 1517 ja siitä tuli kuninkaallinen hautaluostari.',
+          selite: 'Curtea de Argeșin luostarikirkko valmistui vuonna 1517, ja '
+            + 'siitä tuli 1880-luvulla Romanian kuningashuoneen hautaluostari.',
+          lahde: 'Pudelek (Marcin Szala), Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Missä kaupungissa Vlad Seivästäjä syntyi vuonna 1431?',
+        vaihtoehdot: [
+          'Sighișoarassa',
+          'Bukarestissa',
+          'Brașovissa',
+          'Târgoviștessä',
+        ],
+        oikea: 0,
+        fakta: 'Vlad Seivästäjä syntyi Sighișoaran linnamäellä vuonna 1431.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Karpaattien vuoret ja Tonavan suisto tekevät Romaniasta Euroopan '
+        + 'luonnon aarrearkun: Euroopan suurin säilynyt kosteikko, ensimmäinen '
+        + 'kansallispuisto ja vuosituhansia vanha suolakaivos ovat kaikki saman maan '
+        + 'sisällä.',
+      nostot: [
+        {
+          otsikko: 'Suisto, jossa asuu 5500 lajia',
+          aika: '1991',
+          tiedosto: 'Pelicans at the Danube Delta, Romania.jpg',
+          teksti: 'Tonavan suisto on Euroopan suurin säilynyt kosteikko, ja se '
+            + 'levittäytyy yli 4100 neliökilometrille Romanian ja Ukrainan '
+            + 'rajalla. Alueella elää yli 5500 kasvi- ja eläinlajia — enemmän kuin '
+            + 'missään muualla Euroopassa — ja monimuotoisuudessa sen ohittavat '
+            + 'maailmassa vain Australian Suuri valliriutta ja Galapagossaaret. '
+            + 'Suistossa pesii yli 300 lintulajia, muun muassa suurin osa Euroopan '
+            + 'pelikaaneista ja punakaulahanhista, ja vesissä ui lähes 90 '
+            + 'kalalajia, joukossa sampia. Unesco otti suiston '
+            + 'maailmanperintöluetteloon vuonna 1991, vuosi sen jälkeen kun siitä '
+            + 'oli tehty biosfäärialue.',
+          lyhyt: 'Tonavan suisto on Euroopan suurin kosteikko, jossa elää yli 5500 eliölajia.',
+          selite: 'Tonavan suistossa elää yli 5500 kasvi- ja eläinlajia, ja se '
+            + 'on Unescon maailmanperintökohde vuodesta 1991.',
+          lahde: 'Thepinkfluffy1211, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Tonavan suisto',
+        },
+        {
+          otsikko: 'Vuoristo, josta tuli ensimmäinen',
+          aika: '1935',
+          tiedosto: 'Retezat near camp Bucura.JPG',
+          teksti: 'Retezatin kansallispuisto Hunedoaran alueella oli Romanian '
+            + 'ensimmäinen kansallispuisto: hallitus perusti sen vuonna 1935 '
+            + 'tiedemiesten Emil Racovițăn ja Alexandru Borzan aloitteesta, ja '
+            + 'aluksi suojeltiin sata neliökilometriä vuoristoa. Puistossa on '
+            + 'kymmeniä jäätikköjärviä, joista suurin, Bucuran järvi, on koko '
+            + 'Romanian suurin luonnonjärvi. Jyrkin huippu, Peleaga, kohoaa yli '
+            + '2500 metriin, ja rinteillä laiduntaa gemssejä eli piikkivuohia, joita '
+            + 'puisto perustettiin alun perin suojelemaan. Retezatista tuli '
+            + 'myöhemmin myös Unescon biosfäärialue, ja sen lainsäädäntö loi '
+            + 'mallin kaikille Romanian myöhemmille suojelualueille.',
+          lyhyt: 'Retezatin kansallispuisto perustettiin 1935 Romanian ensimmäiseksi kansallispuistoksi.',
+          selite: 'Retezatin kansallispuisto perustettiin vuonna 1935, ja '
+            + 'sen Bucuran järvi on Romanian suurin luonnonjärvi.',
+          lahde: 'Igor.skokan, Wikimedia Commons (PD)',
+          wiki: 'Retezatin kansallispuisto',
+        },
+        {
+          otsikko: 'Suolakaivos, josta tuli huvipuisto',
+          aika: '1992',
+          tiedosto: 'Salina Turda, Mina Terezia.JPG',
+          teksti: 'Turdan suolakaivoksessa on louhittu suolaa yli 2000 vuoden '
+            + 'ajan: työ alkoi maan pinnalla jo antiikin aikana ja siirtyi maan '
+            + 'alle roomalaisten valloitettua Daakian. Kaivostyöläiset louhivat '
+            + 'suolaa käsin hakuilla ja kiiloilla ja saivat palkakseen leipää, '
+            + 'olutta ja floriinia. Kaivos suljettiin vuonna 1932, mutta se '
+            + 'toimi sittemmin muun muassa väestönsuojana ja jopa juuston '
+            + 'varastona. Vuonna 1992 louhos avattiin yleisölle, ja vuosien '
+            + '2008–2010 peruskorjaus muutti 120 metrin syvyydessä olevan '
+            + 'Terezia-kaivoksen valoisaksi huvipuistoksi, jossa on tivolipyörä, '
+            + 'minigolfia ja soutuvene maanalaisella järvellä.',
+          lyhyt: 'Turdan suolakaivos on toiminut yli 2000 vuotta, ja vuodesta 1992 se on ollut huvipuisto.',
+          selite: 'Turdan suolakaivoksen Terezia-osa muutettiin '
+            + 'peruskorjauksessa 2008–2010 valoisaksi maanalaiseksi huvipuistoksi.',
+          lahde: 'Gabriel Tocu, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kivi, joka näyttää kasvoilta',
+          aika: '1936',
+          tiedosto: 'Bucegi Sphinx - Romania - July 2009.jpg',
+          teksti: 'Bucegin vuoristossa, 2216 metrin korkeudessa, seisoo kahdeksan '
+            + 'metriä korkea ja 12 metriä leveä hiekkakivipaasi, jonka tuuli ja '
+            + 'sade ovat muovanneet vuosituhansien aikana. Oikeasta kulmasta '
+            + 'katsottuna kivi muistuttaa ihmiskasvoja, ja siksi sille annettiin '
+            + 'vuonna 1936 nimi Sfinksi Egyptin suuren sfinksin mukaan. Lähellä '
+            + 'sijaitsee toinen kuuluisa kivikko, Babele eli Vanhat naiset: '
+            + 'sienenmuotoiset kalliot, jotka ovat syntyneet samalla eroosiolla '
+            + 'mutta eri kivikerroksista. Molempiin pääsee köysiradalla tai '
+            + 'vaeltaen, ja ne ovat Bucegin ylängön suosituimmat nähtävyydet.',
+          lyhyt: 'Bucegin Sfinksi on tuulen ja sateen 2216 metrin korkeuteen muovaama kivimuodostuma.',
+          selite: 'Bucegin Sfinksi sai nykyisen nimensä vuonna 1936 sen '
+            + 'muistuttaessa tietystä kulmasta ihmiskasvoja.',
+          lahde: 'Radu Privantu, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minä vuonna Retezatista tuli Romanian ensimmäinen kansallispuisto?',
+        vaihtoehdot: [
+          '1920',
+          '1935',
+          '1948',
+          '1990',
+        ],
+        oikea: 1,
+        fakta: 'Retezatin kansallispuisto perustettiin vuonna 1935.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Romanialainen arkiruoka syntyi rajaseudulla, jossa Osmanien, '
+        + 'slaavien ja paikallisten paimenten perinteet sekoittuivat: maissipuuro, '
+        + 'kaalikääryleet ja luumuista poltettu viina kuuluvat yhä joka pöytään.',
+      nostot: [
+        {
+          otsikko: 'Puuro, joka tuli laivalla',
+          aika: '1700-luku',
+          tiedosto: 'Mamaliga Moldova.jpg',
+          teksti: 'Mämäligä on maissijauhosta keitetty puuro, joka korvasi '
+            + 'Romaniassa vanhemmat hirssipuurot vähitellen: maissi levisi '
+            + 'Amerikasta Tonavan varren maihin 1600-luvulla, ja ensimmäiset '
+            + 'maininnat maissipuurosta ovat Transilvaniasta vuodelta 1718 ja '
+            + 'Valakiasta vuodelta 1723. Tonavan laakso sopi maissille '
+            + 'erinomaisesti, ja puurosta tuli 1700-luvulla maaseudun '
+            + 'perusruokaa: se oli halpaa, täyttävää ja pysyi syötävänä myös '
+            + 'huonoina satovuosina. Mämäligä keitetään paksuksi massaksi ja '
+            + 'käännetään lautaselle kuin kakku, ja perinteisesti kyljestä '
+            + 'leikataan siivuja langalla. Sitä syödään juuston ja smetanan '
+            + 'kanssa tai lisäkkeenä lihalle ja kaalikääryleille.',
+          lyhyt: 'Mämäligä on maissipuuro, joka yleistyi Romaniassa vasta maissin saavuttua 1600-luvulla.',
+          selite: 'Mämäligä on paksuksi keitetty maissipuuro, joka '
+            + 'käännetään lautaselle ja leikataan langalla.',
+          lahde: 'Unknown author, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Kääryle, joka tuli Osmanien mukana',
+          aika: '1500-luku',
+          tiedosto: 'Sarmale with mamaligă.jpg',
+          teksti: 'Kaalikääryleet eli sarmale tulivat Romaniaan Osmanien '
+            + 'valtakunnan mukana: turkin sana sarmak tarkoittaa kääriä, ja '
+            + 'samantapaisia täytettyjä kääryleitä syötiin Osmanien keittiössä '
+            + 'jo 1500-luvun alussa. Lähi-idässä kääre tehdään usein '
+            + 'viinilehteen, mutta Romaniassa käytettiin hapankaalin lehteä, '
+            + 'koska se kesti kylmää ilmastoa ja säilyi talven yli '
+            + 'suolavedessä. Täytteenä on jauhelihaa, riisiä ja sipulia, ja '
+            + 'kääröt haudutetaan tuntikausia tomaattikastikkeessa mämäligän ja '
+            + 'smetanan kanssa tarjoiltaviksi. Vaikka ruoka ei ole alun perin '
+            + 'romanialainen keksintö, mikään muu kansa ei ole omineet sitä '
+            + 'yhtä vahvasti osaksi kansallista ruokakulttuuriaan.',
+          lyhyt: 'Sarmale eli kaalikääryleet tulivat Romaniaan Osmanien valtakunnan mukana 1500-luvulla.',
+          selite: 'Sarmale eli hapankaalinlehteen käärityt jauhelihakääryleet '
+            + 'tarjoillaan Romaniassa mämäligän ja smetanan kanssa.',
+          lahde: 'Nicubunu (Nicu Buculei), Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Viina, joka poltetaan syksyisin',
+          aika: 'Loka–joulukuu',
+          tiedosto: 'A shot of Țuică for Orthodox Easter in Sighetu Marmației, Maramureș.jpg',
+          teksti: 'Țuică on luumuista poltettu paloviina, jota pidetään Romanian '
+            + 'kansallisjuomana. Perinne ulottuu keskiajalle asti, ja poltto '
+            + 'ajoittuu yhä samaan aikaan kuin ennen: luumut korjataan syksyllä, '
+            + 'ja mäski käy 6–8 viikkoa suurissa tynnyreissä ennen tislausta '
+            + 'loka–joulukuussa. Romania on maailman neljänneksi suurin '
+            + 'luumuntuottaja, ja noin kolme neljäsosaa sadosta päätyy juuri '
+            + 'țuican valmistukseen. Monella maaseutuperheellä on oma reseptinsä '
+            + 'ja usein oma tislauslaitteensakin, ja juomaa tarjotaan vieraille '
+            + 'heti kynnyksellä, häissä, kasteissa ja pääsiäisenä — pieni lasi '
+            + 'kirkasta juomaa on Romaniassa vieraanvaraisuuden merkki.',
+          lyhyt: 'Țuică on luumuista poltettu paloviina, joka valmistetaan Romaniassa syksyisin.',
+          selite: 'Țuică poltetaan syksyllä korjatuista luumuista, ja sitä '
+            + 'tarjotaan vieraille perinteisenä tervehdyksenä.',
+          lahde: 'Chainwit., Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kellari, jossa viini kypsyy vuosia',
+          aika: '1899',
+          tiedosto: 'RO IL Crama Hagianoff 29.jpg',
+          teksti: 'Romanian viininviljely on peräisin jo geto-daakialaiselta '
+            + 'ajalta: kuningas Burebistan hallitessa vuosina 82–44 eaa. viiniä '
+            + 'juotiin juhlamenoissa ja säilytettiin häränsarvista tehdyissä '
+            + 'astioissa. Roomalaiset toivat valloitettuun Daakiaan omat '
+            + 'viinilajikkeensa 100-luvun alussa, ja viininviljely on jatkunut '
+            + 'alueella siitä lähtien katkeamatta. Manasian kylässä Ialomițan '
+            + 'alueella seisoo Hagianoffin kartano viinitarhoineen, joka '
+            + 'rakennettiin vuonna 1899 — samaan aikaan kun useat muutkin '
+            + 'suurtilat rakensivat kivisiä viinikellareitaan. Kellarin '
+            + 'holvikäytävillä lepää yhä suuria tammitynnyreitä, joissa viini '
+            + 'kypsyy vuosia ennen pullotusta.',
+          lyhyt: 'Romanian viininviljely juontuu geto-daakialaiselta ajalta yli 2000 vuoden takaa.',
+          selite: 'Hagianoffin kartanon viinikellari Manasiassa rakennettiin '
+            + 'vuonna 1899 osana Romanian pitkää viininviljelyn perinnettä.',
+          lahde: 'Nicubunu (Nicu Buculei), Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mistä sana sarmale on peräisin?',
+        vaihtoehdot: [
+          'Turkin sanasta, joka tarkoittaa kääriä',
+          'Latinan sanasta, joka tarkoittaa täyttää',
+          'Unkarin sanasta, joka tarkoittaa kaalia',
+          'Kreikan sanasta, joka tarkoittaa lehteä',
+        ],
+        oikea: 0,
+        fakta: 'Sana sarmale tulee turkin sanasta sarmak, joka tarkoittaa kääriä.',
+      },
+    },
+    {
       id: 'menovinkit',
       nimi: 'Menovinkit',
       johdanto: 'Romaniassa aarteet ovat verkossa yllättävän hyvin esillä: '
