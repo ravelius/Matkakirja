@@ -9910,7 +9910,14 @@ export const RAAMATTU = {
           + 'venyy koko ruudun leveydelle; kaappaus astro-inforuutu-leveys-ipad.png) -> '
           + 'Opus 1 samaan eraan vakasten kanssa. OMISTAJA 12.08: "Avattu Inforuutu voisi '
           + 'olla myos itsessaan hieman kapeampi" -> avattua inforuutua kavennetaan hieman '
-          + '(esim. enintaan ~60 % ruudun leveydesta leveilla naytoilla), pienennetty seuraa.',
+          + '(esim. enintaan ~60 % ruudun leveydesta leveilla naytoilla), pienennetty seuraa. '
+          + 'TEHTY: KARTUSCHA SIISTI (Opus 2 cbbaabe3: vakaset pois, isosta 1873-rivit ja '
+          + 'NYT pois CSS:lla valikko-auki-ehdon takana, radiovalo soi-luokasta, piilossa '
+          + 'mailta ilman lahetysta, savuke 26/26); ASTRO (Opus 1 80819ea8: vakasnappi oli '
+          + 'karttaselitteiden avaaja -> piiloon linssin ajaksi kuten Keksinnoissa; '
+          + 'inforuudun kelattu leveys iPad 952 -> 471 px = avatun katto min(46 %, 560 px), '
+          + 'avattu on jo 46/40 % joten 12.08-lisays ei vaatinut muutosta, savuke 32/32). '
+          + 'V1976 PR #2628 avattu 12.22; mergetaan vihreana.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
