@@ -5,6 +5,7 @@ import { PULU_PANEELIN_ALLA_PIILOSSA } from './pulu-paneelin-ylla.js';
 /* Livian kokopulun SVG-eleet. Nykyinen chat ja puhekuplat omistavat sisällön;
  * tämä sovitin kuuntelee niitä ja äänen todellista toistotilaa. */
 import { LIVIA_SVG_ELEET, livianSvgAsento, luoLivianSvg, livianEleenVoima } from './livia-svg.js';
+import { LIVIAN_ASTRONAUTTI_LUOKKA, LIVIAN_ASTRONAUTTI_PUHE_LUOKKA } from './livia-astronautti.js';
 import { sfx, AANIVALINTA_TAPAHTUMA } from './sound.js';
 import { livianEleaaniIskut } from './livia-tehosteet.js';
 import { kuunteleLivianKasvopuhetta, kuunteleLivianKasvopuheenElinkaarta, livianKasvopuheenTila } from './livia-puhetila.js';
@@ -239,7 +240,8 @@ export function asennaLivianKasvot(pollo) {
   const lasit=!lasitPuettu&&s.ele==='glasses'&&s.p<.32?Math.max(0,Math.min(1,(s.p-.12)/.20)):1;
   if(lehtiPaalla&&lasit>=1)lasitPuettu=true;
   const compactExplain=(doc.documentElement?.clientWidth||doc.defaultView?.innerWidth||0)<=600;
-  const piirrettava={...s,compactExplain};
+  pinta.classList.toggle(LIVIAN_ASTRONAUTTI_PUHE_LUOKKA,puhe);
+  const piirrettava={...s,compactExplain,astronautti:doc.body.classList.contains(LIVIAN_ASTRONAUTTI_LUOKKA)};
   kasvot.paint(lehtiPaalla?{...piirrettava,glasses:lasit}:piirrettava);
  }};
  function vaienna(){for(const stop of aaniPois)stop?.();aaniPois=[];}
@@ -604,6 +606,7 @@ export function asennaLivianKasvot(pollo) {
   if(kohtausPiilossa())piilotaKohtaukseen();
  });
  const virtaVahti=new MutationObserver(mietintaMuuttui);
+ const astronauttiVahti=new MutationObserver(()=>piirraNyt(performance.now()));
  const kokoVahti=typeof ResizeObserver==='function'?new ResizeObserver(paikkaMuuttui):null;kokoVahti?.observe(nappi);
  function liikeAsetus(){
   const jatkettavaCue=nykyinen?.omistaja==='speechCue'?{...nykyinen}:null;
@@ -650,13 +653,14 @@ export function asennaLivianKasvot(pollo) {
  function tuhoa(){
   karttavahti?.tuhoa();karttavahti=null;
   doc.removeEventListener('wheel',toiminta,true);doc.removeEventListener('pointermove',raahaus,true);
-  if(kuollut)return;kuollut=true;irrotaTilanteet();irrotaDialogit();nostoTila?.tuhoa();chatTila?.tuhoa();tyhjennaChatOdotus();tyhjennaAlkulento();tyhjennaTraileri();katkaise();clearTimeout(kello);for(const tunnus of [...pitkatOdotukset.keys()])peruPitkaOdotus(tunnus);irrotaPuhe();irrotaPuheElinkaari();aktiivisetPuheet.clear();viimePuheTunnus=null;nappiVahti.disconnect();lehtiVahti?.disconnect();virtaVahti.disconnect();pinta.remove();nappi.classList.remove('livia-kasvot-valmis');
+  if(kuollut)return;kuollut=true;irrotaTilanteet();irrotaDialogit();nostoTila?.tuhoa();chatTila?.tuhoa();tyhjennaChatOdotus();tyhjennaAlkulento();tyhjennaTraileri();katkaise();clearTimeout(kello);for(const tunnus of [...pitkatOdotukset.keys()])peruPitkaOdotus(tunnus);irrotaPuhe();irrotaPuheElinkaari();aktiivisetPuheet.clear();viimePuheTunnus=null;nappiVahti.disconnect();lehtiVahti?.disconnect();virtaVahti.disconnect();astronauttiVahti.disconnect();pinta.remove();nappi.classList.remove('livia-kasvot-valmis');
   doc.removeEventListener('pointerdown',toiminta,true);doc.removeEventListener('keydown',toiminta,true);doc.removeEventListener('visibilitychange',tausta);doc.removeEventListener('visibilitychange',chatTausta);vahenna?.removeEventListener('change',liikeAsetus);globalThis.removeEventListener?.('pagehide',tausta);globalThis.removeEventListener?.('pagehide',chatPagehide);globalThis.removeEventListener?.('resize',paikkaMuuttui);doc.removeEventListener('scroll',paikkaMuuttui,true);nappi.removeEventListener('transitionend',paikkaMuuttui);doc.removeEventListener(AANIVALINTA_TAPAHTUMA,vaienna);kokoVahti?.disconnect();
  }
  const irrotaTilanteet=kuunteleLivianTilanteita(tilanne);
  doc.addEventListener('wheel',toiminta,{capture:true,passive:true});doc.addEventListener('pointermove',raahaus,{capture:true,passive:true});
  nostoTila=asennaLivianNostoTila(pollo,pinta,tilanne,paikkaMuuttui);
  nappiVahti.observe(nappi,{attributes:true,attributeFilter:['hidden','class','aria-expanded','style']});
+ astronauttiVahti.observe(doc.body,{attributes:true,attributeFilter:['class']});
  if(pollo.virta)virtaVahti.observe(pollo.virta,{childList:true,subtree:true,characterData:true});
  doc.addEventListener('pointerdown',toiminta,true);doc.addEventListener('keydown',toiminta,true);doc.addEventListener('visibilitychange',tausta);doc.addEventListener('visibilitychange',chatTausta);vahenna?.addEventListener('change',liikeAsetus);globalThis.addEventListener?.('pagehide',tausta);globalThis.addEventListener?.('pagehide',chatPagehide);globalThis.addEventListener?.('resize',paikkaMuuttui);doc.addEventListener('scroll',paikkaMuuttui,true);nappi.addEventListener('transitionend',paikkaMuuttui);doc.addEventListener(AANIVALINTA_TAPAHTUMA,vaienna);
   chatTila?.paivita();oliNakyva=nappiNakyy();if(oliNakyva)saapuminen();lehtiMuuttui();ajasta();mietintaMuuttui();
