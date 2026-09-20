@@ -9923,7 +9923,15 @@ export const RAAMATTU = {
           + 'koska kaksi iOS-simulaattoria vie ~80 % CPU:sta; kaikki muut rivit vihreita ja '
           + 'sisalto vain CSS + mittarit -> Fable mergesi 13.10 --admin-lipulla. OPPI: '
           + 'simulaattorit kiinni CI-ajojen ajaksi tai suorituskykysavukkeet pois PR-'
-          + 'portista kun laitetestaus on kaynnissa.',
+          + 'portista kun laitetestaus on kaynnissa. OMISTAJA 13.20, KARTUSCHA 2 (kaappaus '
+          + 'kartuscha-v1976.png): "Radionappi saisi olla hieman isompana ja keskitettyna '
+          + 'pystysuunnassa otsikon kanssa. Ranskatekstin jalkeen voisi tulla ranskan lippu '
+          + 'yhta korkeana kuin itse teksti ja sita klikkaamalla aukeaisi lipun pop-up, joka '
+          + 'on jo valmiiksi tehtyna. Radion punainen valo voisi vilkkua sen ajan, kun se '
+          + 'hakee kanavaa, ja voisit ottaa maailmanradiosta valmiin suhinan, joka on tehty '
+          + 'siihen viritysaaneksi. Siirra myos koko Suurempi ranska infoikkuna hieman '
+          + 'alaspain ja hieman oikealle, niin etta se on yhta paljon irti vasemmasta '
+          + 'reunasta kuin alareunasta." -> Opus 2, julkaistaan v1977.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
