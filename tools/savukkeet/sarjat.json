@@ -46,7 +46,8 @@
     "savuke-astro-pallo.mjs#vartija-b",
     "savuke-ihmisen-kappaleet.mjs",
     "savuke-astro-valokuva.mjs",
-    "savuke-arvonimet.mjs"
+    "savuke-arvonimet.mjs",
+    "savuke-reittiverkko.mjs"
   ],
   "harvaPolut": {
     "_kommentti": "PR:ssä harvan sarjan rivi ajetaan vain, jos PR:n muutetut tiedostot osuvat sen polkuihin (tools/savukkeet/valitse-harvat.mjs). Rivin oma savuketiedosto ja yhteiset apurit (YHTEISET) kuuluvat aina mukaan. * = mikä tahansa paitsi /, ** = mikä tahansa.",
@@ -147,6 +148,11 @@
       "js/packs/pollon-arvonimet.js",
       "js/fokuskohteet.js",
       "js/nostokuva.js"
+    ],
+    "savuke-reittiverkko.mjs": [
+      "js/pallolauta/reitit.js",
+      "js/pallolauta/lauta.js",
+      "js/pallovektorit.js"
     ]
   },
   "asetukset": {
@@ -381,6 +387,10 @@
     },
     "savuke-noppa-saapumisen-aikana.mjs": {
       "huomautus": "Nopanheiton kohteet jaavat ruudulle (Sonnetin puhelintesti v1952, Opus-era noppa-saapuminen 19.9.2026): sovitaSiirtokohteet zoomasi kameran ulos kohdemaan uloszoomauskaton yli, OrbitControlsin maxDistance kuristi korkeuden takaisin heti kun ajo lakkasi kirjoittamasta JA jatti panoroidun keskipisteen paikalleen - lahikuva tyhjaa maata, nappula ja kohteet ruudun ulkopuolella, vaihe jumissa 'move'issa myos tallennuksen yli. Chromium 5/5, WebKit 5/5, ~2 min; vastakoe ilman korjausta 2/5."
+    },
+    "savuke-reittiverkko.mjs": {
+      "kuvakansio": true,
+      "huomautus": "Himmea reittiverkko liftatessa (omistaja 20.9.2026 klo 13.50): kaikki laudan kaaret himmeina kantaman kaarten alla vain matkasession ajan, kerran per lauta (js/pallovektorit.js laji verkko). Bryssel 1400 x 900 dpr 2, kamera pakotettu Lansi-Eurooppaan; mittaa Kelttienmeren tummentuneet pikselit, kerran-per-lauta-olion ja kehysajan (Chromiumin ohjelmistopiirto, suhteellinen raja 60 %; laitteen fps Laitetestaajalta)."
     }
   }
 }

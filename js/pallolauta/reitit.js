@@ -525,11 +525,48 @@ export function luoReitit({ pallo, ui, siirtyma, asteet, siirtymat = null }) {
     aseta('avauslento', [jalkiDatum]);
   };
 
+  /*
+   * ══════════════════════════════════════════════════════════════
+   * HIMMEÄ REITTIVERKKO: KAIKKI LAUDAN KAARET ASTEINA, KERRAN
+   * ══════════════════════════════════════════════════════════════
+   *
+   * Omistaja 20.9.2026 klo 13.50: *"entä jos piirretaan myos muutkin
+   * reitit mutta himmeammalla"*. Piirtäjä on pallon vektorikerros
+   * (js/pallovektorit.js asetaVerkko/naytaVerkko — staattinen, ilman
+   * animaatiota, kerran per lauta); tämä antaa sille geometrian SAMASTA
+   * muistista kuin kirkkaat kantaman kaaret (reitinMuisti), joten himmeä
+   * viiva kulkee täsmälleen kirkkaan alla — päät kaupunkien
+   * pallopisteissä (REITIN PÄÄ SIIRTYY KAUPUNGIN MUKANA), ei laudan
+   * vanhoissa pisteissä.
+   *
+   * Vektorikerros lukee [lon, lat] (sama muoto kuin rannikkosolut);
+   * reittikerroksen pisteet ovat [lat, lng], joten järjestys käännetään
+   * tässä kerran. Muisti on laudan avaimella: sama lauta ei laske
+   * uudestaan, uusi lauta laskee.
+   */
+  let verkkoMuisti = null; // { avain, viivat }
+
+  const verkonViivat = () => {
+    const { board, pack } = ui.game;
+    const avain = pack?.id ?? '';
+    if (verkkoMuisti?.avain === avain) return verkkoMuisti.viivat;
+    const viivat = [];
+    for (const reitti of board.edgeById.values()) {
+      if (!reitti?.poly?.length) continue;
+      const { pisteet } = reitinMuisti(reitti);
+      if (pisteet.length < 2) continue;
+      viivat.push(pisteet.map(([lat, lng]) => [lng, lat]));
+    }
+    verkkoMuisti = { avain, viivat };
+    return viivat;
+  };
+
   return {
     paivita,
     aseta,
     jalki,
     helmet: () => helmet,
+    verkonViivat,
     /**
      * Reitin poly siinä muodossa, jossa PALLO sen piirtää: päät
      * kaupunkien omissa pallopisteissä (ks. REITIN PÄÄ SIIRTYY

@@ -7947,6 +7947,15 @@ export class UI {
     if (lennotElavana && this.lentoKaari?.b) lentoKohteet.push(this.lentoKaari.b);
     const lennot = [...new Set(lentoKohteet)];
     const lentoLahto = this.lentoKaari?.a ?? kaupunki?.id ?? null;
+    /*
+     * HIMMEÄ REITTIVERKKO (omistaja 20.9.2026 klo 13.50: *"entä jos
+     * piirretaan myos muutkin reitit mutta himmeammalla"*): liftatessa
+     * — samalla ehdolla kuin kantaman kaaret — koko laudan kaaret
+     * näkyvät himmeinä (js/pallovektorit.js naytaVerkko). Lippu on osa
+     * avainta, jotta sen vaihtuminen piirtää kerroksen uudestaan
+     * silloinkin, kun kaarilista sattuu olemaan sama.
+     */
+    const verkko = Boolean(kaupunki && matkalla && naytetaan);
     const avain = naytetaan && (reittiTunnukset.length || lennot.length)
       // Siirron ajan avain on vakio: vaiheen vaihtuminen kesken
       // animaation ei saa piirtää viivaa uudestaan.
@@ -7955,8 +7964,10 @@ export class UI {
       // ja ilman näitä kerros jäisi ensimmäisen heiton näköiseksi.
       ? `${game.pack.id}:${kaupunki?.id ?? kesken}:${siirtyva ? 'siirto' : game.phase}`
         + `:${game.die ?? ''}/${reittiTunnukset.length}`
-        + `:${lentoLahto ?? ''}>${lennot.join(',')}` : '';
-    return { reittiTunnukset, lennot, lentoLahto, avain };
+        + `:${lentoLahto ?? ''}>${lennot.join(',')}${verkko ? ':verkko' : ''}` : '';
+    return {
+      reittiTunnukset, lennot, lentoLahto, avain, verkko,
+    };
   }
 
   paivitaMatkareitit() {
