@@ -27,6 +27,7 @@
  * joten ne tuodaan tästä suoraan — sama ovi kuin tasokartalla.
  */
 import {
+  KOHDEMAAN_NIMIOT_ELAVINA,
   PYRAMIDIN_JAARAJA_LAT as JAARAJA_LAT,
   haePyramidinLuettelo, pyramidinKerrostasot, pyramidinLaattaOlemassa, pyramidinLaattaUrl,
   pyramidinLinssiketju, pyramidinReliefiAstronautilla, pyramidinReliefiKaytossa,
@@ -409,7 +410,9 @@ export function lepokerroksenKerrokset(pallonLuettelo, pyramidi, variMaa = null)
    * docs/raportit/viesti-fable-nostotaso-maittain-20260918.md.
    */
   const nostoKirjaus = variMaa ? (pyramidi.nostotasot?.[variMaa] ?? null) : null;
-  const nostotMaittain = !nostot
+  // Kohdemaan nimiöt elävinä (js/pallo.js KOHDEMAAN_NIMIOT_ELAVINA):
+  // nostolaatastoa ei ladota, muuten elävä nimiö piirtyisi poltetun päälle.
+  const nostotMaittain = !nostot && !KOHDEMAAN_NIMIOT_ELAVINA
     && Boolean(nostoKirjaus?.versio && nostoKirjaus.tasot?.length);
   /*
    * ══════════════════════════════════════════════════════════════

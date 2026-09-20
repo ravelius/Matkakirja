@@ -33,6 +33,7 @@ const {
   NIMIEN_KATTO, NIMIEN_VAHIN, NIMIBUDJETIN_KORKEUS, NIMEN_REUNAVARA_PX, nimibudjetti,
 } = await import('../js/pallolauta/nimet.js');
 const { PALLOLAUDAN_KERROKSET, HTML_MERKKIEN_KATTO } = await import('../js/pallolauta/lauta.js');
+const { KOHDEMAAN_NIMIOT_ELAVINA } = await import('../js/laattapyramidi.js');
 const { NOSTOJEN_KATTO } = await import('../js/pallolauta/nostot.js');
 const { pallonNostotaso, lahdetaso } = await import('../tools/tee-pallolaatat.mjs');
 const { laatatSaatavilla, pallonNostoOnPoltettu, pallonLaatoissaOnNostoja } = await import('../js/pallo.js');
@@ -125,8 +126,11 @@ test('piste vain nimen kanssa: pistekerros lukee nimettyjen joukon; kehittäjän
   assert.match(lauta, /const iso = taulu \? kohteidenNykyinenIso\(ui\) : null;/);
   // Maailmatila, linssi ja avauslento näyttävät kaikki kuten ennen.
   assert.match(lauta, /if \(lento \|\| linssiPaalla\(\) \|\| maailmatilassa\(\) \|\| ui\.maailmanakyma\?\.\(\)\) \{/);
-  // Siirtovaiheessa tarjolla olevat kohteet tulevat joukkoon.
-  assert.match(lauta, /game\.phase === 'move' && !game\.player\?\.isBot && !ui\.katselu/);
+  // Siirtovaiheessa tarjolla olevat kohteet JA lentolistan kohteet tulevat
+  // joukkoon (matkanKohteet; lentokohteet omistaja 20.9.2026 klo 14.40).
+  assert.match(lauta, /const kohdeIdt = \[\.\.\.matkanKohteet\(\)\];/);
+  assert.match(lauta, /if \(game\.phase === 'move'\) \{\n\s+for \(const o of game\.moveOptions\?\.\(\) \?\? \[\]\)/);
+  assert.match(lauta, /for \(const id of ui\.tarjotutLennot\?\.\(\) \?\? \[\]\) joukko\.add\(id\);/);
   /*
    * KAUPUNGIN PISTE PIILOON LIUSKAN AJAKSI (Raamattu, KARTTAUUDISTUKSEN
    * PAATOKSET 34 kohta 16 a, omistajan iPhone-kuva v1939: *"piste nakyy
@@ -163,9 +167,11 @@ test('piste vain nimen kanssa: pistekerros lukee nimettyjen joukon; kehittäjän
   assert.ok(!/^\s+levossa: /m.test(lauta), 'nimiladonta ei enää saa levossa-lippua');
   assert.match(lauta, /lepoAjastin = setTimeout\(ladoLevossa, viiveMs\);/);
   // Nostot ensin, nimikatto laskee kun nostoja on; kokonaiskatto 60.
-  assert.equal(HTML_MERKKIEN_KATTO, 60);
+  // 60 poltetuilla nimiöillä; 180 kun kohdemaan nimiöt ovat elävinä
+  // (js/laattapyramidi.js KOHDEMAAN_NIMIOT_ELAVINA, 20.9.2026).
+  assert.equal(HTML_MERKKIEN_KATTO, KOHDEMAAN_NIMIOT_ELAVINA ? 180 : 60);
   assert.equal(NIMIEN_KATTO, 40);
-  assert.equal(NOSTOJEN_KATTO, 40);
+  assert.equal(NOSTOJEN_KATTO, KOHDEMAAN_NIMIOT_ELAVINA ? 120 : 40);
   /*
    * Nimibudjetti tulee nyt ZOOMTASOSTA (omistaja 12.9.2026, ks.
    * js/pallolauta/nimet.js nimibudjetti); CSS2D-kerroksen oma katto on
@@ -264,7 +270,7 @@ test('poltetut nostot luetaan pallon omasta luettelosta, jonka laattatyökalu ki
   // Nostokerros kysyy pallon luetteloa, ei pyramidin.
   const nostot = lue('../js/pallolauta/nostot.js');
   assert.match(nostot, /import \{ pallonNostoOnPoltettu \} from '\.\.\/pallo\.js';/);
-  assert.doesNotMatch(nostot, /laattapyramidi\.js/);
+  // Kytkin tulee pallo.js:n kautta, ei suoraan pyramidista (kommentti saa mainita tiedoston).\n  assert.doesNotMatch(nostot, /from '\.\.\/laattapyramidi\.js'/);
   assert.match(nostot, /maanKohdemerkit\(pack, iso, pohja, onPoltettu\)/);
   assert.match(nostot, /naapurienPoltetutMerkit\(ui, nakyva, onPoltettu\)/);
   // Elävä nosto: sama merkki ja nimiö kuin kartalla, poltettu vain osuma.

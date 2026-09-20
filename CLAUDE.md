@@ -23,6 +23,13 @@ Pages-julkaisussa — dist/-kansiota EI committoida, historia paisuisi).
 
 ## Lue ensin
 
+- **Raamatun Ydinajatus-osion kohta 2 "TYÖTAPA JA SESSIOT"** (sitova
+  20.9.2026): kuusi roolisessiota (Fable, Julkaisija, Karttaseppä,
+  Pelikoodari, Sisältökirjuri, Laitetestaaja), worktreet, viestisäännöt
+  Fablelle (vain valmis erä, jumi tai kysymys; enintään 8 riviä),
+  lukusääntö (ei koko Raamattua), kanavat ja kirjaus lokiin. Tämä
+  korvaa docs/roolitus.md:n vanhan kolmen session työnjaon.
+
 - **docs/roolitus.md** — TYÖNJAKO KOLMEN SESSION KESKEN (Fable =
   tarina + koordinaatio, Opus = lehdet + koodi, Sonnet = QA).
   Omistaja kehittää kahdella tilillä ja ohjaa kaikkea Fablen kautta;

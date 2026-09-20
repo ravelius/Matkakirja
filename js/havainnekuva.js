@@ -49,6 +49,42 @@ import { ehdotusKaytossa } from './ehdotukset.js';
  * ei koko riviä.
  */
 export const HAVAINNEKUVA_RE = /Matkakirjan (?:havainnekuva|kuvitus)/;
+/**
+ * Yhtenäinen havainnekuvan merkki datassa (Fable 20.9.2026): kuvan
+ * `lahde`-rivi alkaa "Tekoälyllä tuotettu havainnekuva." (neljä pakettia),
+ * vanhemmissa paketeissa rivillä lukee "Matkakirjan havainnekuva".
+ * Ämpärin /karttanostot/-polku EI ole merkki — siellä on aitojakin
+ * Commons-kuvia.
+ */
+export const HAVAINNEKUVA_LAHDE_RE = /^\s*Tekoälyllä tuotettu havainnekuva\./;
+
+/** Onko kuva generoitu havainnekuva (lähderivin perusteella). */
+export function onHavainnekuva(kuva) {
+  const lahde = String(kuva?.lahde ?? '');
+  return HAVAINNEKUVA_LAHDE_RE.test(lahde) || HAVAINNEKUVA_RE.test(lahde);
+}
+
+/**
+ * PIENI "HAVAINNEKUVA"-MERKINTÄ LYHYEEN KUVATEKSTIIN (omistaja 20.9.2026,
+ * nostokortti-erä kohta 3): pelaajan on nähtävä jo kortilla — ei vasta
+ * lähderivistä tai suurennoksesta — että kuva on generoitu. Merkintä
+ * on `<small>` kuvatekstin perässä; lähderivin painettava selite
+ * (merkitseHavainnekuva) säilyy ennallaan.
+ *
+ * @param {HTMLElement} el kuvatekstin elementti (lyhyt teksti jo siinä)
+ * @param {object} kuva kuvaolio
+ * @returns {HTMLElement} sama elementti
+ */
+export function lisaaHavainnekuvaMerkki(el, kuva) {
+  if (!el || typeof document === 'undefined') return el;
+  const vanha = el.querySelector?.('.kuvateksti-havainne');
+  if (vanha) vanha.remove();
+  if (!onHavainnekuva(kuva)) return el;
+  const merkki = html('small', 'kuvateksti-havainne', 'Havainnekuva');
+  merkki.title = 'Tekoälyllä tuotettu havainnekuva';
+  el.appendChild(merkki);
+  return el;
+}
 
 /** Sanapari, joka merkitsee loistoaikarekonstruktion ilman ihmelippua. */
 const LOISTOAIKA_RE = /loistoaikansa asussa/i;

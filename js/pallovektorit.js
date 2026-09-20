@@ -387,6 +387,60 @@ export const KOROSTUKSEN_PIENIN_RENGAS_PX = 10;
  * vektoreilla — nostoa ei käytetä (VEKTORIT_KORKEUS 0, parallaksi).
  */
 export const VEKTORIT_KOROSTUS_RENDER_ORDER = -0.55;
+/*
+ * ═══════════════════════════════════════════════════════════════════
+ * HIMMEÄ REITTIVERKKO LIFTATESSA (omistaja 20.9.2026 klo 13.50)
+ * ═══════════════════════════════════════════════════════════════════
+ *
+ * Omistaja, sanatarkasti: *"entä jos piirretaan myos muutkin reitit
+ * mutta himmeammalla"* — Fablen sääntö: liftatessa piirretään heiton
+ * kantaman kaaret normaalisti (js/pallolauta/reitit.js) ja KAIKKI muut
+ * laudan kaaret himmeinä staattisena kerroksena, kerran per lauta,
+ * ilman animaatiota.
+ *
+ * MIKSI TÄSSÄ MODUULISSA EIKÄ REITTIKERROKSESSA: reittikerros
+ * (pathsData) on Globe.gl:n tweenattu kerros — jokainen datum siirtyy
+ * pathTransitionDurationin verran, ja 411 kaaren lisäys sinne
+ * animoituisi ja rakentuisi uudestaan joka valinnalla. Tämä moduuli on
+ * jo pallon staattisten viivojen piirtäjä: sama Line2-luokkaketju,
+ * sama ruutumittojen tahdistus, sama syvyyssiirto laattojen edelle,
+ * sama palajako (vektorijanat), ja olio rakennetaan KERRAN laudan
+ * avaimella ja kytketään näkyviin/piiloon `visible`-lipulla. Kirkkaat
+ * kantaman kaaret ovat reittikerroksessa pinnan yläpuolella
+ * (REITIN_KORKEUS), joten ne piirtyvät himmeän verkon PÄÄLLE ilman
+ * järjestyssääntöjä.
+ *
+ * VÄRI JA PEITTO: sama rajamuste kuin muillakin vektoreilla, peitto
+ * VERKKO_PEITTO — himmeämpi kuin rantaviiva (0,58), jotta verkko lukee
+ * taustana eikä kilpaile kantaman kaarten kanssa. Yhtenäinen viiva
+ * ilman katkoa: katko on kantaman kaarten oma kieli (50/50), ja himmeä
+ * verkko erottuu juuri siitä.
+ */
+/** Himmeän reittiverkon leveys css-pikseleinä (kaukopää, lähipää). */
+export const VEKTORIT_VERKKO_LEVEYS_CSS = [0.7, 1.1];
+/** Himmeän reittiverkon peitto. */
+export const VERKKO_PEITTO = 0.3;
+/**
+ * Himmeän reittiverkon KIINTEÄ harvennus asteina (Douglas–Peucker,
+ * harvennaViivat). Laudan reittipolyt ovat tiheitä (411 kaarta, 24 538
+ * pistettä), ja verkko on taustakerros liftauksen mittakaavassa
+ * (korkeus 0,3–0,9, pikseli 2–5 km): 0,01 astetta (≈ 1 km) pudottaa
+ * pisteet 4 585:een ilman näkyvää muutosta. Kiinteä eikä zoomin mukana,
+ * koska kerros rakennetaan kerran per lauta eikä uudestaan portaittain.
+ * Mitattu Chromium-ohjelmistopiirrolla 20.9.2026: 24 127 janaa nosti
+ * kehysajan mediaanin 141 → 346 ms; ks. savuke-reittiverkko.mjs.
+ */
+export const VERKON_HARVENNUS_AST = 0.01;
+/**
+ * Himmeän verkon PALAJAKO on väljempi kuin muilla vektoreilla (v1983,
+ * CI: 40 328 janaa kun jako oli 0,1°). Verkon kaaret ovat satojen
+ * kilometrien suoria kaupunkivälejä, joten 0,1° paloittelu kymmen-
+ * kertaisti janamäärän (4 174 → 40 428). Verkko on himmeä taustaviiva
+ * liftauksen mittakaavassa, ja 0,3°:n pala painuu pinnan alle vain
+ * 3,4·10⁻⁶·R — mitattu Kelttienmeren merireitillä samaksi kuin 0,1°
+ * (savuke-reittiverkko V2). 14 846 janaa.
+ */
+export const VERKON_JANAN_ENIMMAISPITUUS_AST = 0.3;
 /**
  * Lajin leveyspääte yhdessä taulussa: piirto, mittarit ja testit
  * lukevat saman rivin, joten uusi laji ei tarvitse yhtään ehtolausetta.
@@ -395,6 +449,7 @@ export const VEKTORIT_LEVEYDET = Object.freeze({
   rannikko: VEKTORIT_LEVEYS_CSS,
   rajat: VEKTORIT_RAJA_LEVEYS_CSS,
   korostus: VEKTORIT_KOROSTUS_LEVEYS_CSS,
+  verkko: VEKTORIT_VERKKO_LEVEYS_CSS,
 });
 /**
  * Rajan pistekuvio maailmayksikköinä (piste, väli): poltettu raja on
@@ -819,6 +874,76 @@ export function rannallaHilassa(piste, hila, {
  * @param {Array} renkaat korostuksen renkaat [[lon, lat], …]
  * @param {Array} rannikot rannikkoviivat samassa muodossa
  */
+/*
+ * JANAHAKEMISTO JA ETÄISYYS JANAAN (omistajan havainto v1982, 20.9.2026:
+ * *"rajoissa kahdenlaista viivaa"*). Rannikon jana luettiin maan omaksi
+ * vain, jos sen päät olivat kehän KÄRKIEN tuntumassa (0,015°) tai
+ * silloitettavissa kahden tuntumakärjen väliin SAMASSA rannikkoviivassa.
+ * Kehän kärjet ovat harvassa (harvennus 0,006° jättää suoraan rantaan
+ * kilometrien välit) ja rannikkoviivat katkeavat solun reunaan, joten
+ * osa rannasta jäi kehästä pois — MITATTU Gironden lähizoomilla
+ * (2000 px, tiheys 699 px/aste): rannikon janoista 109, kehässä 71.
+ * Siellä paksu kehä puuttui ja ohut rantaviiva kulki yksin sen
+ * rinnalla. Nyt tuntuma mitataan kehän JANOIHIN: rannan kärki on maan
+ * rantaa, jos se on toleranssin päässä lähimmästä kehän janasta —
+ * sama korjaus kuin Opus 1:n mittausvirheessä (kärki vs jana).
+ */
+export const NAULAUKSEN_JANATOLERANSSI_ASTETTA = 0.02;
+
+/** Janahakemisto: solun avain → janat [[a, b], …], jana lisätään joka soluun jonka laatikko peittää. */
+export function janahakemisto(viivat, ruutu = NAULAUKSEN_RUUTU_ASTETTA) {
+  const hila = new Map();
+  const jako = Math.round(360 / ruutu);
+  for (const viiva of viivat ?? []) {
+    for (let k = 1; k < (viiva?.length ?? 0); k += 1) {
+      const a = viiva[k - 1]; const b = viiva[k];
+      if (!Array.isArray(a) || !Array.isArray(b)) continue;
+      let dLon = b[0] - a[0];
+      if (dLon > 180) dLon -= 360; else if (dLon < -180) dLon += 360;
+      if (Math.abs(dLon) > 5 || Math.abs(b[1] - a[1]) > 5) continue; // saumajana tai roska
+      const gx0 = Math.round(Math.min(a[0], a[0] + dLon) / ruutu); const gx1 = Math.round(Math.max(a[0], a[0] + dLon) / ruutu);
+      const gy0 = Math.round(Math.min(a[1], b[1]) / ruutu); const gy1 = Math.round(Math.max(a[1], b[1]) / ruutu);
+      for (let gx = gx0; gx <= gx1; gx += 1) {
+        for (let gy = gy0; gy <= gy1; gy += 1) {
+          const avain = `${((gx % jako) + jako) % jako}|${gy}`;
+          const lista = hila.get(avain);
+          if (lista) lista.push([a, b]); else hila.set(avain, [[a, b]]);
+        }
+      }
+    }
+  }
+  return hila;
+}
+
+/** Onko piste toleranssin päässä jostakin hakemiston janasta (leveyspiirin kutistuma huomioiden)? */
+export function lahellaJanaa(piste, hila, {
+  ruutu = NAULAUKSEN_RUUTU_ASTETTA, toleranssi = NAULAUKSEN_JANATOLERANSSI_ASTETTA,
+} = {}) {
+  if (!hila?.size || !Array.isArray(piste)) return false;
+  const [lon, lat] = piste;
+  const jako = Math.round(360 / ruutu);
+  const gx = solunX(lon, ruutu);
+  const gy = Math.round(lat / ruutu);
+  const kerroin = Math.max(0.05, Math.cos(lat * Math.PI / 180));
+  const raja = toleranssi * toleranssi;
+  const dx = (x, y) => { let d = x - y; if (d > 180) d -= 360; else if (d < -180) d += 360; return d * kerroin; };
+  for (let ix = -1; ix <= 1; ix += 1) {
+    for (let iy = -1; iy <= 1; iy += 1) {
+      for (const [a, b] of hila.get(`${((gx + ix) % jako + jako) % jako}|${gy + iy}`) ?? []) {
+        const ax = dx(a[0], lon); const ay = a[1] - lat;
+        const bx = dx(b[0], lon); const by = b[1] - lat;
+        const vx = bx - ax; const vy = by - ay;
+        const l2 = vx * vx + vy * vy;
+        let s = l2 > 0 ? -(ax * vx + ay * vy) / l2 : 0;
+        s = Math.max(0, Math.min(1, s));
+        const px = ax + s * vx; const py = ay + s * vy;
+        if (px * px + py * py <= raja) return true;
+      }
+    }
+  }
+  return false;
+}
+
 export function naulaaKorostus(renkaat, rannikot, asetukset = {}) {
   const viivat = Array.isArray(renkaat) ? renkaat : [];
   const hila = rannikkoHakemisto(rannikot, asetukset.ruutu);
@@ -851,12 +976,15 @@ export function naulaaKorostus(renkaat, rannikot, asetukset = {}) {
   // Maan oma rannikko korostuksen väreillä: janat, joiden molemmat päät
   // ovat korostuskehän tuntumassa (eli tämän maan rantaa).
   const keha = rannikkoHakemisto(viivat, asetukset.ruutu);
+  const kehanJanat = janahakemisto(viivat, asetukset.ruutu);
+  const janaAsetukset = { ruutu: asetukset.ruutu, toleranssi: asetukset.janatoleranssi };
   const aukonRaja = asetukset.aukonRaja ?? NAULAUKSEN_AUKON_RAJA_ASTETTA;
   const mutkanRaja = asetukset.mutkanRaja ?? NAULAUKSEN_MUTKAN_RAJA_ASTETTA;
   let rannikkojanoja = 0;
   for (const viiva of rannikot ?? []) {
     if (!Array.isArray(viiva) || viiva.length < 2) continue;
-    const lahella = viiva.map((p) => rannallaHilassa(p, keha, asetukset));
+    // Tuntuma kärkeen TAI janaan (ks. JANAHAKEMISTO JA ETÄISYYS JANAAN).
+    const lahella = viiva.map((p) => rannallaHilassa(p, keha, asetukset) || lahellaJanaa(p, kehanJanat, janaAsetukset));
     // Kumulatiivinen polku ja lähimmät tuntumakärjet kumpaankin suuntaan,
     // jotta mutkan silloitus on vakioaikainen jokaiselle janalle.
     const matka = [0];
@@ -890,20 +1018,83 @@ export function naulaaKorostus(renkaat, rannikot, asetukset = {}) {
   return { viivat: ulos, pudotettuja, rannikkojanoja, sisamaajanoja };
 }
 
-export function vektorijanat(viivat, sade) {
+/*
+ * ═══════════════════════════════════════════════════════════════════
+ * PITKÄ JANA PAINUU PINNAN ALLE — JAETAAN PALOIKSI (mitattu 20.9.2026)
+ * ═══════════════════════════════════════════════════════════════════
+ *
+ * OMISTAJAN VIKA (Raamattu, Gironde 20.9.2026): Ranskan pelikartalla
+ * *"paksu tumma kehä seuraa suistoa ja toinen viiva kulkee suorana"*.
+ * Kaappauksissa (docs/raportit/kaappaukset/omistaja-20260920/gironde-*)
+ * Médocin Atlantin ranta Pointe de Gravesta Arcachoniin on ILMAN
+ * korostusta ja ilman rantaviivaa — näkyvissä on vain laatan meren
+ * täytön pehmeä reuna, ja se on se "toinen viiva".
+ *
+ * MITATTU JUURISYY (Chromium, Marseille-tallenne, kamera 45,45 N
+ * −0,95 E korkeus 0,055): korostus SISÄLTÄÄ Médocin rannan — sekä
+ * korostuksessa että rannikkosolussa on sama jana −1,199 E 45,121 N →
+ * −1,260 E 44,627 N, 0,50 astetta eli 55 km yhtenä suorana (ne_10m:n
+ * Côte d'Argent on oikeasti suora, ja 0,006 asteen harvennus jättää
+ * siihen vain päät). Jänteen keskikohdalla ruudulla 0 tummaa pikseliä
+ * 24 × 24:stä; kun korostuksen depthTest kytkettiin pois, samassa
+ * kohdassa 206. Lyhyet janat (0,16–0,21 astetta) piirtyivät molemmilla
+ * asetuksilla.
+ *
+ * SYY ON GEOMETRIAA: LineSegments2 piirtää janan SUORANA 3D-avaruudessa,
+ * ja pallon pinnan kahden pisteen välinen jänne painuu pinnan alle
+ * keskeltä R · (1 − cos(θ/2)) — 0,5 asteella 9,5 · 10⁻⁶ · R, kun taas
+ * 0,2 asteella 1,5 · 10⁻⁶ · R. Laattakerros on itsekin pinnan jänteitä
+ * (silmät 0,02–0,25 astetta), ja syvyyssiirto (−12 vs. laattojen −8)
+ * kattaa vain lyhyiden janojen painuman. Pitkä jänne jää laatan alle
+ * ja syvyystesti leikkaa sen keskeltä pois — se ei ole aineiston,
+ * naulauksen eikä harvennuksen vika, vaan piirron.
+ *
+ * KORJAUS: jokainen jana, joka on pidempi kuin VEKTORIT_JANAN_ENIMMAIS-
+ * PITUUS_AST, jaetaan tasavälein paloiksi, joiden päät ovat pinnalla.
+ * 0,1 asteen palan painuma on 3,8 · 10⁻⁷ · R — neljäsosa siitä, mikä
+ * mitattiin piirtyväksi (0,2 astetta). Palat lisätään VAIN pitkiin
+ * janoihin; rosoinen ranta ja raja ovat lähes aina lyhyempiä, joten
+ * janamäärä ei muutu niillä lainkaan. Sama kaava koskee korostusta ja
+ * soluja, koska tämä on niiden ainoa yhteinen pisteiden latoja.
+ *
+ * MIKSI EI NOSTOA PINNASTA: VEKTORIT_KORKEUS 0 on mitattu valinta
+ * (parallaksi 2–4 laitepikseliä, ks. yllä) — palat pitävät viivan
+ * pinnalla ilman nostoa.
+ */
+/** Vektorijanan enimmäispituus asteina pallon pinnalla; pidemmät jaetaan. */
+export const VEKTORIT_JANAN_ENIMMAISPITUUS_AST = 0.1;
+
+/** Moneenko palaan jana a→b jaetaan (vähintään yksi). */
+function janaPaloiksi(a, b, enimmaispituus) {
+  if (!(enimmaispituus > 0)) return 1;
+  return Math.max(1, Math.ceil(asteEtaisyys(a, b) / enimmaispituus));
+}
+
+export function vektorijanat(viivat, sade, enimmaispituus = VEKTORIT_JANAN_ENIMMAISPITUUS_AST) {
   let janoja = 0;
-  for (const v of viivat ?? []) janoja += Math.max(0, v.length - 1);
+  for (const v of viivat ?? []) {
+    for (let k = 1; k < v.length; k += 1) janoja += janaPaloiksi(v[k - 1], v[k], enimmaispituus);
+  }
   const paikat = new Float32Array(janoja * 6);
   let i = 0;
   for (const v of viivat ?? []) {
     if (v.length < 2) continue;
     let p = pallonPiste(v[0][1], v[0][0], sade);
     for (let k = 1; k < v.length; k += 1) {
-      const q = pallonPiste(v[k][1], v[k][0], sade);
-      paikat[i] = p.x; paikat[i + 1] = p.y; paikat[i + 2] = p.z;
-      paikat[i + 3] = q.x; paikat[i + 4] = q.y; paikat[i + 5] = q.z;
-      i += 6;
-      p = q;
+      const paloja = janaPaloiksi(v[k - 1], v[k], enimmaispituus);
+      // Sauman yli kulkeva jana: pituusaste kasvaa lyhyempää tietä.
+      let dLon = v[k][0] - v[k - 1][0];
+      if (dLon > 180) dLon -= 360; else if (dLon < -180) dLon += 360;
+      const dLat = v[k][1] - v[k - 1][1];
+      for (let j = 1; j <= paloja; j += 1) {
+        const q = j === paloja
+          ? pallonPiste(v[k][1], v[k][0], sade)
+          : pallonPiste(v[k - 1][1] + dLat * (j / paloja), v[k - 1][0] + dLon * (j / paloja), sade);
+        paikat[i] = p.x; paikat[i + 1] = p.y; paikat[i + 2] = p.z;
+        paikat[i + 3] = q.x; paikat[i + 4] = q.y; paikat[i + 5] = q.z;
+        i += 6;
+        p = q;
+      }
     }
   }
   return { paikat, janoja };
@@ -965,6 +1156,10 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
     korostusJanoja: 0,
     korostusPudotettuja: 0,
     korostusRannikkojanoja: 0,
+    /** Himmeän reittiverkon lauta-avain, janat ja näkyvyys. */
+    verkko: null,
+    verkkoJanoja: 0,
+    verkkoNakyy: false,
   };
   const pyydetyt = new Set();
   /** id (`<laji>/l<k>/<solu>`) → { laji, k, avain, lupaus, viivat, olio, janoja, tavua, kaytto } */
@@ -984,6 +1179,15 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
     rannikkoja: -1,
     /** Milloin naulaus viimeksi rakennettiin (vaimennus). */
     naulattuHetki: -Infinity,
+  };
+  /*
+   * HIMMEÄ REITTIVERKKO on korostuksen tapaan soluton laji (ks.
+   * HIMMEÄ REITTIVERKKO LIFTATESSA): viivat annetaan valmiina asteina
+   * (js/pallolauta/reitit.js verkonViivat), olio rakennetaan kerran
+   * laudan avaimella ja näkyvyys on pelkkä lippu.
+   */
+  const verkko = {
+    laji: 'verkko', avain: null, viivat: null, olio: null, janoja: 0, nakyy: false,
   };
   /** Häiveen ajaksi kloonatut materiaalit (ruutumitat päivitetään näihinkin). */
   const kloonit = new Set();
@@ -1083,6 +1287,8 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
     materiaalit = teeMateriaalit();
     // Maa on voitu pyytää jo ennen kuin luokat olivat valmiina.
     if (korostus.renkaat) rakennaKorostus(true);
+    // Sama himmeälle verkolle: lauta on voinut antaa viivansa jo.
+    if (verkko.viivat) rakennaVerkko();
     /*
      * PÄIVITYS PIIRTOKOUKUSSA, EI TAPAHTUMASSA (vika v1649). Ennen tätä
      * kerros heräsi ohjainten `change`-tapahtumasta — eli pointermoven
@@ -1134,6 +1340,10 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
       // kehällä JA kuin tavallisella rajalla, eikä toista heksalukua.
       ...yhteiset, color: rajanMuste(), opacity: KOROSTUS_PEITTO,
     });
+    // Himmeä reittiverkko: sama muste, oma peitto, yhtenäinen viiva.
+    const verkkoMateriaali = new luokat.LineMaterial({
+      ...yhteiset, color: rajanMuste(), opacity: VERKKO_PEITTO,
+    });
     /*
      * PEHMEÄ REUNA, EI PÄÄTYPYÖRYLÖITÄ (omistaja 7.9.2026). Paikka
      * tehdään ENNEN ensimmäistä käännöstä ja ennen leveyden asetusta:
@@ -1141,12 +1351,16 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
      * ja viiva on entisellään.
      */
     pehmennysPaikka = pehmennaLineMaterial(ranta) && pehmennaLineMaterial(raja)
-      && pehmennaLineMaterial(korostusMateriaali, { paatypyorylat: true });
+      && pehmennaLineMaterial(korostusMateriaali, { paatypyorylat: true })
+      && pehmennaLineMaterial(verkkoMateriaali);
     mittarit.pehmennysPaikka = pehmennysPaikka;
     ranta.linewidth = cssLeveys('rannikko');
     raja.linewidth = cssLeveys('rajat');
     korostusMateriaali.linewidth = cssLeveys('korostus');
-    return { rannikko: ranta, rajat: raja, korostus: korostusMateriaali };
+    verkkoMateriaali.linewidth = cssLeveys('verkko');
+    return {
+      rannikko: ranta, rajat: raja, korostus: korostusMateriaali, verkko: verkkoMateriaali,
+    };
   }
 
   /** Ruutumitat materiaaleihin: leveys laitepikseleinä, resoluutio css-pikseleinä. */
@@ -1273,6 +1487,44 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
     korostus.harvennus = -1;
   }
 
+  /** Himmeän reittiverkon olio pois (lauta vaihtui tai purku). */
+  function vapautaVerkko() {
+    if (!verkko.olio) return;
+    verkko.olio.parent?.remove(verkko.olio);
+    verkko.olio.geometry?.dispose?.();
+    verkko.olio = null;
+    verkko.janoja = 0;
+    mittarit.verkkoJanoja = 0;
+  }
+
+  /**
+   * Himmeä reittiverkko pallon pinnalle — KERRAN laudan avaimella, ilman
+   * häivettä ja KIINTEÄLLÄ harvennuksella (VERKON_HARVENNUS_AST), ei
+   * zoomin portaalla: verkko on staattinen kerros, jota ei rakenneta
+   * uudestaan zoomin mukana. Palajako (vektorijanat) on sama kuin
+   * muilla vektoreilla, jottei pitkä kaupunkiväli painu pinnan alle.
+   * Näkyvyys tulee `verkko.nakyy`-lipusta (naytaVerkko).
+   */
+  function rakennaVerkko() {
+    if (purettu || !materiaalit || !luokat || !kolmi?.juuri) return;
+    vapautaVerkko();
+    if (!verkko.viivat?.length) return;
+    const viivat = harvennaViivat(verkko.viivat, VERKON_HARVENNUS_AST);
+    const { paikat, janoja } = vektorijanat(viivat, sade(), VERKON_JANAN_ENIMMAISPITUUS_AST);
+    verkko.janoja = janoja;
+    mittarit.verkkoJanoja = janoja;
+    if (!janoja) return;
+    const geometria = new luokat.LineSegmentsGeometry();
+    geometria.setPositions(paikat);
+    const olio = new luokat.LineSegments2(geometria, materiaalit.verkko);
+    olio.renderOrder = VEKTORIT_RENDER_ORDER;
+    olio.raycast = () => {};
+    olio.visible = verkko.nakyy;
+    olio.userData.pallovektorit = { laji: 'verkko', avain: verkko.avain };
+    kolmi.juuri.add(olio);
+    verkko.olio = olio;
+  }
+
   /**
    * Korostettu ääriviiva pallon pinnalle nykyisellä harvennusportaalla.
    * `haivella` on tosi vain maanvaihdossa: portaan vaihtuessa viiva on
@@ -1287,10 +1539,26 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
    * naulaus tarkentuu sitä mukaa kuin soluja saapuu, ja korostus
    * rakennetaan uudelleen, kun rannikkoaineiston määrä muuttuu.
    */
+  /*
+   * VAIN NÄKYVÄT SOLUT (omistajan havainto v1982, 20.9.2026: *"rajoissa
+   * kahdenlaista viivaa"* — Gironden ja Arcachonin lähizoomilla paksu
+   * kehä oli kulmikas monikulmio ja sen rinnalla kulki ohuempi, sileä
+   * rantaviiva). MITATTU (Chromium 2000 px, korkeus 0,03, tiheys 699
+   * px/aste, solutaso l4 = harventamaton ne_10m): alueella rannikon
+   * janoja 102, korostuksen 62, korostuksen janan mediaani 4,5 km —
+   * kehä oli koottu KARKEAMMAN tason (l2–l3) solujen rannasta, jotka
+   * olivat yhä muistissa piilotettuina (LRU) ja joita tämä keräsi
+   * `solut`-taulusta tasosta välittämättä. Naulaus valitsi niistä
+   * harvemman kopion, ja piirretty rantaviiva (näkyvä l4-solu) kulki
+   * sen vieressä sileänä. Kerätään siksi vain näkyvien solujen viivat:
+   * ne ovat samaa tasoa kuin piirretty ranta, ja kehä yhtyy siihen.
+   * Solun tason vaihtuessa viivamäärä muuttuu ja kehä rakennetaan
+   * uudelleen (ks. rannikkoViivoja ja korostus.rannikkoja).
+   */
   function rannikkoviivat() {
     const ulos = [];
-    for (const s2 of solut.values()) {
-      if (s2.laji !== 'rannikko' || !s2.viivat?.length) continue;
+    for (const [id, s2] of solut) {
+      if (s2.laji !== 'rannikko' || !s2.viivat?.length || !nakyvat.has(id)) continue;
       for (const v of s2.viivat) ulos.push(v);
     }
     return ulos;
@@ -1299,8 +1567,8 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
   /** Sama luku ilman listan rakentamista — tätä kysytään joka kehys. */
   function rannikkoViivoja() {
     let n = 0;
-    for (const s2 of solut.values()) {
-      if (s2.laji === 'rannikko' && s2.viivat?.length) n += s2.viivat.length;
+    for (const [id, s2] of solut) {
+      if (s2.laji === 'rannikko' && s2.viivat?.length && nakyvat.has(id)) n += s2.viivat.length;
     }
     return n;
   }
@@ -1600,6 +1868,32 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
       rakennaKorostus(true);
       return true;
     },
+    /**
+     * HIMMEÄ REITTIVERKKO (ks. tiedoston alku). `avain` on lauta (pack.id):
+     * sama avain ei rakenna mitään uudestaan; uusi avain vaihtaa
+     * geometrian. `viivat` on lista viivoja, viiva on lista [lon, lat]
+     * -pisteitä — sama muoto kuin rannikkosoluilla. Tyhjä lista pyyhkii.
+     */
+    asetaVerkko(avain, viivat) {
+      const uusiAvain = avain || null;
+      const uudet = Array.isArray(viivat) && viivat.length ? viivat : null;
+      if (uusiAvain === verkko.avain && uudet === verkko.viivat) return false;
+      verkko.avain = uusiAvain;
+      verkko.viivat = uudet;
+      mittarit.verkko = uusiAvain;
+      if (!uudet) { vapautaVerkko(); return true; }
+      rakennaVerkko();
+      return true;
+    },
+    /** Verkko näkyviin tai piiloon — pelkkä lippu, ei häivettä, ei rakennusta. */
+    naytaVerkko(nakyy) {
+      const uusi = Boolean(nakyy);
+      if (uusi === verkko.nakyy) return false;
+      verkko.nakyy = uusi;
+      mittarit.verkkoNakyy = uusi;
+      if (verkko.olio) verkko.olio.visible = uusi;
+      return true;
+    },
     /** Mittarit savukkeille ja vartijalle (suunnitelman luku 5). */
     mittarit: () => ({ ...mittarit, pyydetyt: [...pyydetyt] }),
     pura() {
@@ -1610,6 +1904,9 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
       vapautaKorostus();
       korostus.iso = null;
       korostus.renkaat = null;
+      vapautaVerkko();
+      verkko.avain = null;
+      verkko.viivat = null;
       for (const s of solut.values()) vapauta(s);
       solut.clear();
       nakyvat = new Set();

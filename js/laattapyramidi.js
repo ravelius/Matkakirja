@@ -441,6 +441,51 @@ function nostotasonKirjaus() {
  * elävänä poltetun musteen päälle, ja CSS2D-katto (NOSTOJEN_KATTO 40)
  * pudottaisi osan merkeistä kokonaan pois osumalistalta.
  */
+/*
+ * ══ KOHDEMAAN KAIKKI NIMIÖT ELÄVINÄ (Fable 20.9.2026, omistajan
+ * päätös nimiöt-erän jatkoksi: *"KOHDEMAAN KAIKKI NIMIÖT ELÄVIKSI
+ * (myös musteeksi poltetut ja maan merinimiöt), muiden maiden nimiöt
+ * jäävät laattoihin"*) ═════════════════════════════════════════════
+ *
+ * Poltettu nimiö on laatan tekstuurissa, eikä sovittelu (ruudun reuna,
+ * kaupungin nimi, rantaviiva) voi siirtää sitä — 240 poltettua ylitystä
+ * 32 maassa (docs/raportit/viesti-fable-nimiot-reuna-20260920.md).
+ * Kytkimen ollessa päällä pallo ei pidä yhtään kohdemaan nostoa
+ * poltettuna (js/pallo.js pallonNostoOnPoltettu: kaikki piirtyvät
+ * elävinä sovittelun läpi) eikä maakohtaista nostolaatastoa ladota
+ * (js/pallolaatat.js nostotMaittain) — muuten elävä nimiö piirtyisi
+ * poltetun päälle. Muiden maiden nostot pysyvät poissa kuten ennenkin
+ * (js/pallolauta/nostot.js NAYTA_VAIN_KOHDEMAAN_NOSTOT). Vaatii pallon
+ * sarjan ILMAN --nostot-lippua (nykytila); jos sarjaan on poltettu
+ * nostot koko maailmasta, kytkin ei voi ottaa niitä pois. Elävien
+ * määrä nostaa CSS2D-budjettia (js/pallolauta/nostot.js
+ * NOSTOJEN_KATTO, js/pallolauta/lauta.js HTML_MERKKIEN_KATTO).
+ */
+export const KOHDEMAAN_NIMIOT_ELAVINA = true;
+
+/*
+ * NIMIÖTASON METADATA (Karttasepän uusintapoltto 20.9.2026, luettelon
+ * kenttä `nimiotaso.nimiot`: id → { luokka, teksti, lon, lat, iso, meri,
+ * laatikot }). Meren nimiöillä on `meri`-avain (= id). Elävä nostokerros
+ * lukee tästä, mitkä meret laatta jo nimeää, jottei sama meri tuplaannu
+ * elävänä maastonimenä (js/pallolauta/nostot.js poltetutMerinimet).
+ * Vanha luettelo ilman kenttää = null = ei mitään piilotettavaa.
+ */
+export function pyramidinNimiot() {
+  return luettelo?.nimiotaso?.nimiot ?? null;
+}
+
+/**
+ * Nimiötason meren nimien avaimet (id-tunnukset, esim. 'biskajanlahti',
+ * 'valimeri'). Tyhjä joukko ennen polttoa.
+ */
+export function pyramidinMerinimet() {
+  const nimiot = pyramidinNimiot();
+  const ulos = new Set();
+  for (const n of Object.values(nimiot ?? {})) if (n?.meri) ulos.add(String(n.meri));
+  return ulos;
+}
+
 export function nostotasonPoltetut() {
   if (!luettelo?.nostotasot) return null;
   return nostotasonKirjaus()?.nostot ?? null;

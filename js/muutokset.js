@@ -13,6 +13,9 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1983, teksti: 'Kohdemaan nimiot elavina; himmea reittiverkko liftatessa' },
+  { v: 1982, teksti: 'Nostokortti: karuselli, kuvakoko; nimiot reunasta' },
+  { v: 1981, teksti: 'Astropulun lento, Gironde, kartuscha 3, astro-kuvake' },
   { v: 1980, teksti: 'v1980: joet nakyviin, reliefin meret ja jarvet, raja 3 px' },
   { v: 1979, teksti: 'v1979: huntu 80 %' },
   { v: 1978, teksti: 'v1978: huntu 50 %, astron aanet, topografian merilaatat' },

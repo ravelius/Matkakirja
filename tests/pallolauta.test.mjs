@@ -1144,6 +1144,7 @@ test('reittien näkyvyys: naapuriviuhka on matkasessio Liikusta perille tai peru
     game: peli,
     matkaSessioKesken: UI.prototype.matkaSessioKesken,
     matkareittienValinta: UI.prototype.matkareittienValinta,
+    tarjotutLennot: UI.prototype.tarjotutLennot,
     ...tila,
   });
   const valinta = (tila) => luoUi(tila).matkareittienValinta();
@@ -1157,6 +1158,7 @@ test('reittien näkyvyys: naapuriviuhka on matkasessio Liikusta perille tai peru
     const v = valinta();
     assert.deepEqual(v.reittiTunnukset, [], `vaihe ${phase}: viuhka ei saa näkyä ennen Liikua`);
     assert.equal(v.avain, '', `vaihe ${phase}: tyhjä valinta tyhjentää kerroksen`);
+    assert.equal(v.verkko, false, `vaihe ${phase}: himmeä verkko ei saa näkyä ennen Liikua`);
   }
 
   // 2. Liiku painettu: matkasessio alkaa lähtökaupungista.
@@ -1165,6 +1167,9 @@ test('reittien näkyvyys: naapuriviuhka on matkasessio Liikusta perille tai peru
   const auki = liikuPainettu.matkareittienValinta();
   assert.deepEqual(auki.reittiTunnukset, naapurit, 'Liiku-napin painallus tuo viuhkan');
   assert.notEqual(auki.avain, '');
+  // Himmeä reittiverkko (omistaja 20.9.2026) syttyy samalla ehdolla kuin viuhka.
+  assert.equal(auki.verkko, true, 'himmeä verkko ei syttynyt Liikusta');
+  assert.match(auki.avain, /:verkko$/, 'verkon lippu ei ole avaimessa');
 
   /*
    * 3. HEITON JÄLKEEN VIUHKA PYSYY, vaikka liuku sulkeutuu: liu'un oma
@@ -1177,13 +1182,35 @@ test('reittien näkyvyys: naapuriviuhka on matkasessio Liikusta perille tai peru
   const heiton = luoUi({ liukuAuki: false, matkaSessio: 'varsova' });
   assert.deepEqual(heiton.matkareittienValinta().reittiTunnukset, naapurit,
     'viuhka katosi nopanheiton jälkeen');
+  assert.equal(heiton.matkareittienValinta().verkko, true, 'himmeä verkko sammui heittoon');
   assert.equal(heiton.matkaSessio, 'varsova', 'sessio ei saa päättyä heittoon');
 
-  // 4. kohdelista (bussi, laiva, lento) pitää viuhkan vaikka liuku sulkeutui.
+  // 4. kohdelista (bussi, laiva) pitää viuhkan vaikka liuku sulkeutui.
   peli.phase = 'action';
   const lista = luoUi({ liukuAuki: false, travelExpanded: true, travelSuodatin: 'sea', matkaSessio: 'varsova' });
   assert.deepEqual(lista.matkareittienValinta().reittiTunnukset, naapurit,
     'viuhka katosi kohdelistan ajaksi');
+  /*
+   * 4b. LENTONÄKYMÄSSÄ EI LIFTAUSKAARIA (omistaja 20.9.2026 klo 14.40:
+   * *"lentonäkymässä liftausreitit pitää piilottaa ja lentoreittien kohde
+   * kaupungit pitää näkyä"*). Berliinillä on lentokenttä: LENTÄEN-lista
+   * tarjoaa lennot, kaaret piirtyvät niihin ja viuhka jää pois. Kohteet
+   * tulevat samasta apurista (tarjotutLennot), josta pallon
+   * kaupunkirajaus lukee näytettävät merkit.
+   */
+  kaupunkiin('berliini');
+  const berliininLennot = peli.airportDestinations();
+  assert.ok(berliininLennot.length > 0, 'Berliinistä pitää olla lentoja mitattavaksi');
+  const lentonakymaUi = luoUi({ liukuAuki: false, travelExpanded: true, travelSuodatin: 'air', matkaSessio: 'berliini' });
+  const lentonakyma = lentonakymaUi.matkareittienValinta();
+  assert.deepEqual(lentonakyma.reittiTunnukset, [], 'liftauskaaret näkyvät lentonäkymässä');
+  assert.deepEqual(lentonakyma.lennot, berliininLennot, 'lentokaaret puuttuvat lentonäkymästä');
+  assert.deepEqual(lentonakymaUi.tarjotutLennot(), berliininLennot);
+  assert.notEqual(lentonakyma.avain, '');
+  // Ilman lentosuodatinta apuri on tyhjä, eikä katselija tai botti saa lentoja.
+  assert.deepEqual(lista.tarjotutLennot(), []);
+  assert.deepEqual(luoUi({ travelExpanded: true, travelSuodatin: 'air', katselu: true }).tarjotutLennot(), []);
+  kaupunkiin('varsova');
 
   // 5. kesken reittiä: se yksi reitti — sessiolla ja ilman (sivunlataus).
   peli.phase = 'move';
@@ -1205,6 +1232,7 @@ test('reittien näkyvyys: naapuriviuhka on matkasessio Liikusta perille tai peru
   const perilla = luoUi({ matkaSessio: 'varsova' });
   assert.deepEqual(perilla.matkareittienValinta().reittiTunnukset, [],
     'viuhka jäi päälle uuteen kaupunkiin saavuttaessa');
+  assert.equal(perilla.matkareittienValinta().verkko, false, 'himmeä verkko jäi päälle perillä');
   assert.equal(perilla.matkaSessio, null, 'sessio ei päättynyt perillä');
 
   /*

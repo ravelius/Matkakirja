@@ -1,5 +1,5 @@
 {
-  "_kommentti": "Yksi paikka savukesarjoille (.github/workflows/savukkeet.yml luku, tools/savukkeet/rakenna-matriisi.mjs jäsennys). 'julkaisu' listaa julkaisuraporttien savukkeet järjestyksessä (docs/raportit/viesti-fable-julkaisu-v1925..v1927); 'asetukset' antaa jokaiselle tiedostolle sen ympäristömuuttujat, mahdollisen kuvakansio-argumentin ja tunnetut punaiset (vertaillaan tools/savukkeet/vertaa-tulos.mjs:llä FAIL-riveihin — uusi täsmäämätön FAIL nostaa ::warning::-huomautuksen, ei kaada julkaisusarjan porttia niiltä tiedostoilta joilla salliEpaonnistua on tosi). Lähteet: docs/raportit/viesti-fable-julkaisu-v1925-20260916.md, -v1926-20260916.md, -v1927-20260917.md ja kunkin savukkeen oma alkukommentti (process.env-lukukohdat tarkistettu tekstistä, ei arvattu). JAETUT RIVIT (18.9.2026): 'julkaisu'-listan ja 'asetukset'-avaimen muoto 'savuke-x.mjs#osa' ajaa SAMAN savukkeen useana rinnakkaisena rivinä; '#':n jälkeinen osa on vain rivin nimilappu (kaappaus-, loki- ja artefaktipolku), ja rajaus tulee rivin omasta env-lohkosta. Lista on PITUUSJÄRJESTYKSESSÄ: aja-sarja.mjs antaa rivit työntekijöille tässä järjestyksessä, joten pisin rivi ei saa alkaa vasta lopussa. KIERROS 2 (18.9.2026, Raamattu TARKENNUS 11 kohta 24): rivit jaettiin niin, etta jokainen jaa alle kahden minuutin. pariisi-lahizoom jaettiin ruudun LISAKSI vartiolohkoittain (SAVUKE_LOHKOT=perus|liuska|vastakoe) ja astro-pallon vartijalohko kolmeen (vartija-a/b/c). Rivikohtaiset Chromium-liput: env-avain SAVUKE_CHROMIUM_LIPUT (esim. \"--use-gl=angle --use-angle=swiftshader\") ajaa sen rivin WebGL:n CPU:lla, ks. tools/savukkeet/chromium-liput.mjs. HARVA SARJA (omistaja 19.9.2026 klo 18.50, Raamattu SAVUKKEITA VAHENNETAAN SIELLA, MISSA ONGELMIA TULEE HARVOIN; raportti docs/raportit/viesti-fable-savukekarsinta-20260919.md): 'julkaisu' on PR-portti. 'harva' ajetaan kerran päivässä mainista (schedule) ja PR:ssä vain harvaPolut-osumilla. 'taysi' = julkaisu + harva (julkaisuraportin täysi ajo). Sarjanimiä voi yhdistää pilkulla tiedostonimien kanssa.",
+  "_kommentti": "Yksi paikka savukesarjoille (.github/workflows/savukkeet.yml luku, tools/savukkeet/rakenna-matriisi.mjs jäsennys). 'julkaisu' listaa julkaisuraporttien savukkeet järjestyksessä (docs/raportit/viesti-fable-julkaisu-v1925..v1927); 'asetukset' antaa jokaiselle tiedostolle sen ympäristömuuttujat, mahdollisen kuvakansio-argumentin ja tunnetut punaiset (vertaillaan tools/savukkeet/vertaa-tulos.mjs:llä FAIL-riveihin — uusi täsmäämätön FAIL nostaa ::warning::-huomautuksen, ei kaada julkaisusarjan porttia niiltä tiedostoilta joilla salliEpaonnistua on tosi). Lähteet: docs/raportit/viesti-fable-julkaisu-v1925-20260916.md, -v1926-20260916.md, -v1927-20260917.md ja kunkin savukkeen oma alkukommentti (process.env-lukukohdat tarkistettu tekstistä, ei arvattu). JAETUT RIVIT (18.9.2026): 'julkaisu'-listan ja 'asetukset'-avaimen muoto 'savuke-x.mjs#osa' ajaa SAMAN savukkeen useana rinnakkaisena rivinä; '#':n jälkeinen osa on vain rivin nimilappu (kaappaus-, loki- ja artefaktipolku), ja rajaus tulee rivin omasta env-lohkosta. Lista on PITUUSJÄRJESTYKSESSÄ: aja-sarja.mjs antaa rivit työntekijöille tässä järjestyksessä, joten pisin rivi ei saa alkaa vasta lopussa. KIERROS 2 (18.9.2026, Raamattu TARKENNUS 11 kohta 24): rivit jaettiin niin, etta jokainen jaa alle kahden minuutin. pariisi-lahizoom jaettiin ruudun LISAKSI vartiolohkoittain (SAVUKE_LOHKOT=perus|liuska|vastakoe) ja astro-pallon vartijalohko kolmeen (vartija-a/b/c). Rivikohtaiset Chromium-liput: env-avain SAVUKE_CHROMIUM_LIPUT (esim. \"--use-gl=angle --use-angle=swiftshader\") ajaa sen rivin WebGL:n CPU:lla, ks. tools/savukkeet/chromium-liput.mjs. HARVA SARJA (omistaja 19.9.2026 klo 18.50, Raamattu SAVUKKEITA VAHENNETAAN SIELLA, MISSA ONGELMIA TULEE HARVOIN; raportti docs/raportit/viesti-fable-savukekarsinta-20260919.md): 'julkaisu' on PR-portti. 'harva' ajetaan kerran päivässä mainista (schedule) ja PR:ssä vain harvaPolut-osumilla. 'taysi' = julkaisu + harva (julkaisuraportin täysi ajo). Sarjanimiä voi yhdistää pilkulla tiedostonimien kanssa. SUORITUSKYKYSARJA (omistaja 20.9.2026 klo 18.05): aikaa tai kehystahtia mittaavat vartiot eivät ole PR-portissa. 'suorituskyky' ajetaan vain schedule-ajossa ('taysi' = suorituskyky + harva + julkaisu) ja käsin (workflow_dispatch sarja=suorituskyky). Sen rivit asettavat SAVUKE_SUORITUSKYKY=1, jolloin savukkeen vaadiAika-väitteet (tools/savukkeet/suorituskyky.mjs) ovat OK/FAIL; PR-portissa samat mittaukset tulostuvat INFO-riveinä eikä yhtään vartiota ole poistettu. savuke-zoom-pan.mjs on kokonaan suorituskykysavuke ja siirtyi julkaisu-listasta tänne.",
   "julkaisu": [
     "savuke-pariisi-lahizoom.mjs#390-perus",
     "savuke-pariisi-lahizoom.mjs#1400-perus",
@@ -15,10 +15,12 @@
     "savuke-ihmisen-kehys.mjs",
     "savuke-ihmisen-esitys.mjs",
     "savuke-pallo-nostolaput.mjs",
+    "savuke-nimiot-elavat.mjs",
     "savuke-nimikyltti.mjs",
     "savuke-kerma-reuna.mjs",
     "savuke-ranskan-nostot-lukossa.mjs",
     "savuke-kaupungit-piiloon.mjs",
+    "savuke-lentonakyma.mjs",
     "savuke-maailmatila-zoomi.mjs",
     "savuke-reittihelmet.mjs",
     "savuke-siirtozoomi.mjs",
@@ -27,13 +29,13 @@
     "savuke-laivamatka-tanger.mjs",
     "savuke-noppa-saapumisen-aikana.mjs",
     "savuke-ihmisen-pulukysymykset.mjs",
+    "savuke-nostokortti.mjs",
     "savuke-nostokuva-karuselli.mjs",
     "savuke-nostokuva-suhde.mjs",
     "savuke-pulu-kartuscha.mjs",
     "savuke-kortti-sulku.mjs",
     "savuke-tekstivalinta.mjs",
     "savuke-saapumisblur.mjs",
-    "savuke-zoom-pan.mjs",
     "savuke-kuvalahteet.mjs"
   ],
   "harva": [
@@ -46,7 +48,20 @@
     "savuke-astro-pallo.mjs#vartija-b",
     "savuke-ihmisen-kappaleet.mjs",
     "savuke-astro-valokuva.mjs",
-    "savuke-arvonimet.mjs"
+    "savuke-arvonimet.mjs",
+    "savuke-korostus-janne.mjs",
+    "savuke-kartuscha-2.mjs",
+    "savuke-kartuscha-3.mjs",
+    "savuke-reittiverkko.mjs"
+  ],
+  "suorituskyky": [
+    "savuke-pariisi-lahizoom.mjs#390-suorituskyky",
+    "savuke-pariisi-lahizoom.mjs#1400-suorituskyky",
+    "savuke-astro-pallo.mjs#suorituskyky",
+    "savuke-topografialinssi.mjs#suorituskyky",
+    "savuke-astro-sumu.mjs#suorituskyky",
+    "savuke-reittihelmet.mjs#suorituskyky",
+    "savuke-zoom-pan.mjs"
   ],
   "harvaPolut": {
     "_kommentti": "PR:ssä harvan sarjan rivi ajetaan vain, jos PR:n muutetut tiedostot osuvat sen polkuihin (tools/savukkeet/valitse-harvat.mjs). Rivin oma savuketiedosto ja yhteiset apurit (YHTEISET) kuuluvat aina mukaan. * = mikä tahansa paitsi /, ** = mikä tahansa.",
@@ -147,6 +162,33 @@
       "js/packs/pollon-arvonimet.js",
       "js/fokuskohteet.js",
       "js/nostokuva.js"
+    ],
+    "savuke-korostus-janne.mjs": [
+      "js/pallovektorit.js",
+      "js/maanaariviivat.js",
+      "js/pallolaatat.js",
+      "assets/data/maapolygonit.json"
+    ],
+    "savuke-kartuscha-2.mjs": [
+      "js/pallolauta/maapaneeli.js",
+      "js/pallolauta/lauta.js",
+      "js/liput.js",
+      "js/packs/lipputiedot.js",
+      "js/packs/radiot.js",
+      "css/styles.css"
+    ],
+    "savuke-kartuscha-3.mjs": [
+      "js/pallolauta/maapaneeli.js",
+      "js/pallolauta/lauta.js",
+      "js/liput.js",
+      "js/packs/lipputiedot.js",
+      "js/packs/radiot.js",
+      "css/styles.css"
+    ],
+    "savuke-reittiverkko.mjs": [
+      "js/pallolauta/reitit.js",
+      "js/pallolauta/lauta.js",
+      "js/pallovektorit.js"
     ]
   },
   "asetukset": {
@@ -324,10 +366,7 @@
       },
       "kuvakansio": true,
       "huomautus": "Jaettu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19 seka TARKENNUS 11 kohta 24 a): PR-portin seinakello on niin pitka kuin sarjan PISIN rivi. Rajaus tulee TAMAN rivin env-lohkosta, ei savukkeen muutoksesta, ja tunnetut punaiset on kohdistettu sille puolikkaalle, jolla vaite oikeasti ajetaan. PERUS-LOHKO: vartiot 1c, 3i2, 5, 8o-8q (saapumisnakyma), 1, 1b, 2, 3, 3b, 3d-3f, 6, 6b seka napautus-/viuhkalohkon ja turisti-infon INFO-rivit. Ruutu 1400 px; ruuduittain jaettuna rivi oli 18.9.2026 224 s eli sarjan pisin, siita lohkojako (savuke-pariisi-lahizoom.mjs SAVUKE_LOHKOT). VASTAKOE-LOHKO EI OLE TALLA RIVILLA: 3c ja 3g ovat PAATOKSET 34:n jalkeen vanhentuneita vastakokeita (INFO, ei vartiota) ja avaavat oman sivun, joka odottaa oman 44 s saapumisen. Paikallisesti ne ajetaan yha oletuksena - ilman SAVUKE_LOHKOT-muuttujaa savuke ajaa kaikki kolme lohkoa kuten ennenkin.",
-      "tunnetutPunaisetMac": [
-        "8o. tyopoyta: kamera liikkuu <"
-      ],
-      "huomautusMac": "Mac 12 rinnakkain (kierros 2:n paikallinen mittaus 18.9.2026): vartio 8o mittasi 115,9 ms rajan ollessa 100 ms, kun SAMASSA ajossa #390-perus oli 28/28 vihrea ja kaikki muut vartiot lapi. Kyse on kellomittauksesta kahdentoista rinnakkaisen Chromiumin kuormassa, ei pelin hidastumisesta. SEURAAVA MEDIAANIEHDOKAS (Raamattu TARKENNUS 11 kohta 24 b): 8o mittaa YHTA lukua, joten sille sopii sama kolmen nayteen mediaani kuin topografialinssin valahdysvartiolle - mutta uusinta vaatii koko napautussarjan toiston, joten se on oma erikseen tehtava era. Poista tama merkinta, kun 8o mittaa mediaania tai kun se on kaksi kertaa perakkain vihrea kuormassa."
+      "huomautusMac": "8o:n aikaosa (8o'. kamera liikkuu < 100 ms) on 20.9.2026 alkaen suorituskykysarjassa (SAVUKE_SUORITUSKYKY=1), joten Macin kuormassa mitattu 115,9 ms ei enaa kaada tata rivia; toiminnallinen 8o (kamera liikkuu) jai tanne."
     },
     "savuke-pariisi-lahizoom.mjs#1400-liuska": {
       "env": {
@@ -381,6 +420,85 @@
     },
     "savuke-noppa-saapumisen-aikana.mjs": {
       "huomautus": "Nopanheiton kohteet jaavat ruudulle (Sonnetin puhelintesti v1952, Opus-era noppa-saapuminen 19.9.2026): sovitaSiirtokohteet zoomasi kameran ulos kohdemaan uloszoomauskaton yli, OrbitControlsin maxDistance kuristi korkeuden takaisin heti kun ajo lakkasi kirjoittamasta JA jatti panoroidun keskipisteen paikalleen - lahikuva tyhjaa maata, nappula ja kohteet ruudun ulkopuolella, vaihe jumissa 'move'issa myos tallennuksen yli. Chromium 5/5, WebKit 5/5, ~2 min; vastakoe ilman korjausta 2/5."
+    },
+    "savuke-zoom-pan.mjs": {
+      "env": {
+        "SAVUKE_SUORITUSKYKY": "1"
+      },
+      "huomautus": "Kokonaan suorituskykysavuke (kehysajan p95, pitkat tehtavat, CPU-kuristus 6x). Flakkasi PR-portissa v1976/v1979/v1980 simulaattorikuormassa (p95 46-70 ms rajan ollessa 40) -> siirretty suorituskyky-sarjaan 20.9.2026."
+    },
+    "savuke-pariisi-lahizoom.mjs#390-suorituskyky": {
+      "env": {
+        "SAVUKE_RUUTU": "390",
+        "SAVUKE_LOHKOT": "perus,liuska",
+        "SAVUKE_SUORITUSKYKY": "1"
+      },
+      "kuvakansio": true,
+      "huomautus": "Suorituskykyrivi: ajaa perus- ja liuskalohkon aikavaitteet 8o' (kamera liikkuu < 100 ms napautuksesta) ja 8c' (kaupunkimerkin napautus ajaa kameran < 2000 ms) OK/FAIL-vaitteina. PR-portin rivit tulostavat samat mittaukset INFO-riveina."
+    },
+    "savuke-pariisi-lahizoom.mjs#1400-suorituskyky": {
+      "env": {
+        "SAVUKE_RUUTU": "1400",
+        "SAVUKE_LOHKOT": "perus,liuska",
+        "SAVUKE_SUORITUSKYKY": "1"
+      },
+      "kuvakansio": true,
+      "huomautus": "Suorituskykyrivi: ajaa perus- ja liuskalohkon aikavaitteet 8o' (kamera liikkuu < 100 ms napautuksesta) ja 8c' (kaupunkimerkin napautus ajaa kameran < 2000 ms) OK/FAIL-vaitteina. PR-portin rivit tulostavat samat mittaukset INFO-riveina.",
+      "tunnetutPunaisetMac": [
+        "8o'. tyopoyta: kamera liikkuu <"
+      ],
+      "huomautusMac": "Siirretty #1400-perus-rivilta: Mac 12 rinnakkain mittasi 115,9 ms rajan ollessa 100 ms (18.9.2026). Poista, kun 8o mittaa mediaania tai on kaksi kertaa perakkain vihrea kuormassa."
+    },
+    "savuke-astro-pallo.mjs#suorituskyky": {
+      "env": {
+        "NAKYMAT": "puhelin",
+        "SAVUKE_SUORITUSKYKY": "1"
+      },
+      "huomautus": "Suorituskykyrivi: 'reliefi ehti pinnalle kahdeksassa sekunnissa' OK/FAIL-vaitteena puhelinnakymassa. PR-portin rivit vaativat vain, etta reliefi tuli pinnalle, ja tulostavat keston INFO-rivina. Lisaksi 45b 'pinta pisteen vieressa on kirkkaampi kuin kaukana' (kuormaherkka maastonaytevertailu, PR #2633 20.9.2026: CI -0,8 vs yksin 9,6)."
+    },
+    "savuke-topografialinssi.mjs#suorituskyky": {
+      "env": {
+        "SAVUKE_SUORITUSKYKY": "1"
+      },
+      "huomautus": "Suorituskykyrivi: 'napautuksesta ensimmaiseen reliefikehykseen alle 400 ms' (Chromium) ja 'avauksessa ei ole valahdysta' (kuormaherkka kirkkausmittari, Fable 20.9.2026) OK/FAIL-vaitteina. PR-portin rivi vaatii vain, etta kehys tuli ruudulle, ja tulostaa molemmat INFO-riveina."
+    },
+    "savuke-astro-sumu.mjs#suorituskyky": {
+      "env": {
+        "SAVUKE_SUORITUSKYKY": "1"
+      },
+      "huomautus": "Suorituskykyrivi: 'fps >= 50' OK/FAIL-vaitteena. PR-portin rivi tulostaa fps:n INFO-rivina."
+    },
+    "savuke-reittihelmet.mjs#suorituskyky": {
+      "env": {
+        "SAVUKE_SUORITUSKYKY": "1"
+      },
+      "huomautus": "Suorituskykyrivi: '7. fps >= 50 panoroinnissa' (390 ja 1400) OK/FAIL-vaitteena. PR-portin rivi tulostaa fps:n INFO-rivina."
+    },
+    "savuke-lentonakyma.mjs": {
+      "huomautus": "Lentonakyma (omistaja 20.9.2026 klo 14.40): lentolista auki -> ei liftauskaaria, lentokohteet pisteina ja nimina; vastakoe lista kiinni. Berliini, 390 ja 1400 px, ampari Noden kautta (kuten kaupungit-piiloon). ~60 s."
+    },
+    "savuke-korostus-janne.mjs": {
+      "kuvakansio": true,
+      "huomautus": "Gironden/Medocin kaksoisviiva (omistaja 20.9.2026): korostuksen pitka jana painui pallon pinnan alle ja syvyystesti leikkasi sen keskelta pois; vektorijanat jakaa yli 0,1 asteen janat paloiksi. Yksi ruutu 700 x 1000 dpr 2, kamera Gironde; vastakoe korostus piilossa. Kuvakansio: --kuvat <kansio> tai ensimmainen argumentti."
+    },
+    "savuke-kartuscha-2.mjs": {
+      "huomautus": "Harva (Fable 20.9.2026): kartuscha 2 - radio otsikon keskella, lippu otsikon perassa, vilkku haun ajan, kortin valit. Pariisi, 390 ja 1400 px, ampari Noden kautta. TUNNETTU PUNAINEN (mitattu 20.9.2026 puhtaalla prepilla): vartio 3 vaatii Ranskan lipulta lipputiedot, mutta LIPPUTIEDOT (js/packs/lipputiedot.js) kattaa vain Suomen ja Saksan -> Pariisissa lippu ei ole napautettava eika ikkuna aukea. Savukkeen oma vika (vaara maa), ei pelin; korjaus = mittaa vartio 3 maassa jolla on lipputiedot.",
+      "tunnetutPunaiset": [
+        "3 lipun napautus avaa lippuikkunan"
+      ]
+    },
+    "savuke-kartuscha-3.mjs": {
+      "huomautus": "Harva (Fable 20.9.2026): kartuscha 3 - pienessa ei lippua, lippu versaalin korkuinen, iso pienenee karttaa koskettaessa (napautus/veto/rulla), vastakoe kortin sisalle. ~70 s."
+    },
+    "savuke-nostokortti.mjs": {
+      "huomautus": "Nostokortti (omistaja 20.9.2026): lahderivi pois kaikista nostotyypeista, kohdekortin karuselli, Havainnekuva-merkki, kuvan koko LISAA-tilassa (>= 0,8), pyyhkaisy ja nuolinappaimet. 390 ja 1400 px, ampari Noden kautta. ~60 s."
+    },
+    "savuke-nimiot-elavat.mjs": {
+      "huomautus": "Kohdemaan nimiot elavina (Fable 20.9.2026, KOHDEMAAN_NIMIOT_ELAVINA): FRA/Marseille 390 ja 1400 px: ei poltettuja, nimiollisia >= 32/55, Valimeri irti korostuskehasta, ei reunaylityksia saapumisessa ja Marseillen zoomeissa, ladonta <= 12 ms. Ampari Noden kautta. ~70 s."
+    },
+    "savuke-reittiverkko.mjs": {
+      "kuvakansio": true,
+      "huomautus": "Himmea reittiverkko liftatessa (omistaja 20.9.2026 klo 13.50): kaikki laudan kaaret himmeina kantaman kaarten alla vain matkasession ajan, kerran per lauta (js/pallovektorit.js laji verkko). Bryssel 1400 x 900 dpr 2, kamera pakotettu Lansi-Eurooppaan; mittaa Kelttienmeren tummentuneet pikselit, kerran-per-lauta-olion ja kehysajan (Chromiumin ohjelmistopiirto, suhteellinen raja 60 %; laitteen fps Laitetestaajalta)."
     }
   }
 }

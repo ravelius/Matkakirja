@@ -918,6 +918,10 @@ const MODULES = [
    * (js/fokuskohteet.js ja js/fokusnosto.js). Se tuo ui-apurit,
    * kuvatekstit ja tekijäkortin — kaikki jo yllä.
    */
+  // Nostokortin kuvakaruselli (nostokortti-erä 20.9.2026): tuo ui-apurit,
+  // kuvatekstit, tekijäkortin, havainnekuva-merkin ja äänet — kaikki jo
+  // yllä — ennen nostokuva.js:ää ja fokuskohteet.js:ää, jotka sitä käyttävät.
+  'js/kuvasarja.js',
   'js/nostokuva.js',
   // Lisäkaupunkien kaupunkikortti (PAATOKSET 16) ennen fokuskohteet.js:ää,
   // joka tuo sen avaaLisakaupunginKortti-funktion.

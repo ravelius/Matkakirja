@@ -77,10 +77,12 @@ import { luoPallovektorit, pallovektoritPaalla } from '../pallovektorit.js';
  * kangasta eikä kerros, jonka voisi jälkikäteen piilottaa.
  */
 import {
+  KOHDEMAAN_NIMIOT_ELAVINA,
   asetaTasoituksenLiike, asetaTasoituksenMaailma, asetaVaritasonMaa, haePyramidinLuettelo,
 } from '../laattapyramidi.js';
 import {
   lataaMaapolygonit, maanLautalaatikko, nollaaPallonMaakorostus, paivitaPallonMaakorostus,
+  pallonKorostettuMaa, pallonKorostusRenkaat,
 } from '../maanaariviivat.js';
 // Tarkistusapu: kaupungit, joiden uusi pulukulku on kuunneltavissa.
 import { livianKorostetutKaupungit } from '../liviapuhe.js';
@@ -419,6 +421,46 @@ export const KOHDEKAUPUNGIN_NIMI_SUHDE = 1.3;
  * pidä kasvaa sumun mukana rajatta. Lattia on 1 — suurennus ei koskaan
  * pienennä mitään.
  */
+/** Nimiön turva-alue ruudun reunasta (px), laitteen turva-alueiden lisäksi. */
+export const NOSTOJEN_REUNAVARA_PX = 6;
+
+/**
+ * Ruudun laatikko sovittelua varten kotelon pikseleinä: reunavara joka
+ * laidalla ja laitteen turva-alueet (css :root --turva-yla/-ala/
+ * -vasen/-oikea = env(safe-area-inset-*)) siltä osin kuin ne
+ * ulottuvat kotelon sisään. Kotelo on karttaruutu, joka alkaa
+ * yläpalkin alta, joten yläturva-alue vähennetään kotelon omasta
+ * paikasta ikkunassa — ei koko lukuna.
+ *
+ * @param {HTMLElement} kotelo
+ * @returns {?{x0:number,y0:number,x1:number,y1:number}}
+ */
+export function nostojenReuna(kotelo, vara = NOSTOJEN_REUNAVARA_PX) {
+  const w = kotelo?.clientWidth ?? 0;
+  const h = kotelo?.clientHeight ?? 0;
+  if (!(w > 0) || !(h > 0)) return null;
+  let yla = 0;
+  let ala = 0;
+  let vasen = 0;
+  let oikea = 0;
+  if (typeof getComputedStyle === 'function' && typeof document !== 'undefined') {
+    const tyyli = getComputedStyle(document.documentElement);
+    const luku = (nimi) => parseFloat(tyyli.getPropertyValue(nimi)) || 0;
+    const r = kotelo.getBoundingClientRect?.();
+    const ikkunaW = window.innerWidth || w;
+    const ikkunaH = window.innerHeight || h;
+    // Turva-alue on ikkunan reunasta; kotelon sisään jää siitä se osa,
+    // jota kotelon oma etäisyys ikkunan reunaan ei jo kata.
+    yla = Math.max(0, luku('--turva-yla') - (r?.top ?? 0));
+    ala = Math.max(0, luku('--turva-ala') - (ikkunaH - (r?.bottom ?? ikkunaH)));
+    vasen = Math.max(0, luku('--turva-vasen') - (r?.left ?? 0));
+    oikea = Math.max(0, luku('--turva-oikea') - (ikkunaW - (r?.right ?? ikkunaW)));
+  }
+  return {
+    x0: vara + vasen, y0: vara + yla, x1: w - vara - oikea, y1: h - vara - ala,
+  };
+}
+
 export function poltetunMusteenSuurennus({
   leveysPx, dpr = 1, leveysYks, katto = PALLON_SALLITTU_VENYTYS,
 } = {}) {
@@ -978,7 +1020,14 @@ export function aloitusvalinnanKorkeus({
  * kohteet 12, elävät nostot 40 → priorisoidaan). Pelin merkit ja nostot
  * ensin, nimikatto laskee, kun nostoja on.
  */
-export const HTML_MERKKIEN_KATTO = 60;
+export const HTML_MERKKIEN_KATTO = KOHDEMAAN_NIMIOT_ELAVINA ? 180 : 60;
+/*
+ * 180 ELÄVILLÄ NIMIÖILLÄ (js/laattapyramidi.js KOHDEMAAN_NIMIOT_ELAVINA):
+ * kaupunkien nimibudjetti on HTML_MERKKIEN_KATTO − pelin merkit −
+ * nimiölliset nostot, ja 60:n katto olisi vienyt kaupunkien nimet
+ * kokonaan, kun nostoja on ~90. Nimibudjetin oma zoomraja
+ * (js/pallolauta/nimet.js nimibudjetti) pysyy ennallaan.
+ */
 /** Ladonnan lepoviive: sama hetki kuin laadun palautus (js/pallo.js). */
 export const LADONNAN_LEPOVIIVE_MS = LAATU_LEPOVIIVE_MS;
 /*
@@ -1970,6 +2019,15 @@ export async function avaaPallolauta(ui) {
      */
     ruutu: () => ({ leveys: kotelo.clientWidth, korkeus: kotelo.clientHeight }),
     /*
+     * RUUDUN REUNA SOVITTELUN ESTEENÄ (omistaja 20.9.2026: nimiöt
+     * maalehden reunassa; js/pallolauta/sovittelu.js RUUDUN REUNA ON
+     * ESTE). Laatikko on kotelon pikseleinä: turva-alue
+     * NOSTOJEN_REUNAVARA_PX joka laidalla ja lisäksi laitteen omat
+     * turva-alueet (iOS env(safe-area-inset-*), css :root --turva-*)
+     * siltä osin kuin ne ulottuvat kotelon sisään.
+     */
+    reuna: () => nostojenReuna(kotelo),
+    /*
      * PELIMERKIT OVAT LISTAN ESTEITÄ (PAATOKSET 32 kohta 3: lista ei
      * saa peittää *"kaupungin nimea eika pelinappulaa"*). Sama luku
      * kuin nimiladonnan `pinot`-varaus — nappula ja kohteet kotelon
@@ -2380,6 +2438,33 @@ export async function avaaPallolauta(ui) {
    * kartta on entisellään, mikä on juuri omistajan ehto *"jos ei olla
    * liikkumassa"*.
    */
+  /**
+   * Matkan tarjotut kohteet: nopanheiton kohdekaupungit (sama sääntö
+   * kuin drawTargets) JA lentolistan kohteet.
+   *
+   * LENTOKOHTEET NÄKYVIIN, KUN LENTO ON TARJOLLA (omistaja 20.9.2026
+   * klo 14.40: *"lentoreittien kohde kaupungit pitää näkyä"*).
+   * Lentolistan kohteet eivät ole nopanheiton kohteita (moveOptions),
+   * joten ilman tätä Berliinistä tarjotut Lontoo ja Rooma jäivät
+   * kaupunkirajauksen taakse: kaari piirtyi, mutta sen pää oli tyhjä.
+   * Sama lähde kuin kaarilla (js/ui.js tarjotutLennot). Joukko on myös
+   * ladonnan etusija (nimet.lado `etusija`): kohteen nimi ja piste
+   * eivät saa pudota nimibudjetista, koska piste näkyy vain nimen
+   * kanssa (pisteNakyy).
+   *
+   * @returns {Set<string>}
+   */
+  const matkanKohteet = () => {
+    const { game } = ui;
+    const joukko = new Set();
+    if (game.player?.isBot || ui.katselu) return joukko;
+    if (game.phase === 'move') {
+      for (const o of game.moveOptions?.() ?? []) if (o.city?.id) joukko.add(o.city.id);
+    }
+    for (const id of ui.tarjotutLennot?.() ?? []) joukko.add(id);
+    return joukko;
+  };
+
   let rajausAvain = null;
   let rajausJoukko = null;
   const pelinKaupunkirajaus = () => {
@@ -2392,9 +2477,7 @@ export async function avaaPallolauta(ui) {
     const iso = taulu ? kohteidenNykyinenIso(ui) : null;
     if (!iso) { rajausAvain = null; return null; }
     const oma = game.cityOf?.()?.id ?? null;
-    const kohdeIdt = game.phase === 'move' && !game.player?.isBot && !ui.katselu
-      ? (game.moveOptions?.() ?? []).map((o) => o.city?.id).filter(Boolean)
-      : [];
+    const kohdeIdt = [...matkanKohteet()];
     // Avain karsii turhan työn: joukko rakennetaan vasta kun maa,
     // oma kaupunki tai kohdejoukko on oikeasti vaihtunut.
     const avain = `${iso}|${oma ?? ''}|${kohdeIdt.join(',')}`;
@@ -4017,6 +4100,47 @@ export async function avaaPallolauta(ui) {
    * Lopuksi pisteet nimettyjen mukaan ja auki oleva kortti ankkurinsa
    * perään.
    */
+  /*
+   * ── RANTAVIIVAN LAATIKOT MEREN NIMIÖILLE (Fable 20.9.2026; sääntö
+   * js/pallolauta/sovittelu.js MEREN NIMIÖ EI JÄÄ RANTAVIIVAN ALLE) ──
+   *
+   * Kohdemaan korostuskehä on sama rengasjoukko, jonka
+   * paivitaPallonMaakorostus antoi 3D-viivalle (js/maanaariviivat.js
+   * pallonKorostusRenkaat, [lon, lat] asteina). Jokainen ruudulla
+   * näkyvä rengasjana muunnetaan laatikoksi viivan paksuudella
+   * (RANTAVIIVAN_VARA_PX kummallekin puolelle): laatikko on janan
+   * ympäri piirretty suorakaide, joka vinolla janalla on viivaa
+   * väljempi — meren nimiö väistää silloin hieman enemmän kuin viiva
+   * vaatii, mikä on oikea suunta (merelle päin). Pisteet, jotka eivät
+   * ole ruudulla (pallon takana tai reunan ulkopuolella), jätetään
+   * pois, joten lista on saapumisnäkymässä muutama sata laatikkoa ja
+   * lähizoomissa muutama kymmenen. Lasketaan vain, kun kohdemaa on
+   * korostettu — ilman maata lista on tyhjä eikä sovittelu muutu.
+   */
+  const RANTAVIIVAN_VARA_PX = 4;
+  const rantaviivanLaatikot = () => {
+    const renkaat = pallonKorostusRenkaat(pallonKorostettuMaa());
+    if (!renkaat.length) return [];
+    const ulos = [];
+    const w = kotelo.clientWidth;
+    const h = kotelo.clientHeight;
+    for (const rengas of renkaat) {
+      let edellinen = null;
+      for (const [lon, lat] of rengas) {
+        const p = ruudulla(lat, lon, 40);
+        if (p && edellinen) {
+          const x0 = Math.min(p.x, edellinen.x) - RANTAVIIVAN_VARA_PX;
+          const x1 = Math.max(p.x, edellinen.x) + RANTAVIIVAN_VARA_PX;
+          const y0 = Math.min(p.y, edellinen.y) - RANTAVIIVAN_VARA_PX;
+          const y1 = Math.max(p.y, edellinen.y) + RANTAVIIVAN_VARA_PX;
+          if (x1 >= 0 && y1 >= 0 && x0 <= w && y0 <= h) ulos.push({ x0, y0, x1, y1 });
+        }
+        edellinen = p;
+      }
+    }
+    return ulos;
+  };
+
   const ladoLevossa = () => {
     lepoAjastin = 0;
     // Kurituksen kello käy myös ohitetuista ajoista: piilossa oleva
@@ -4100,6 +4224,8 @@ export async function avaaPallolauta(ui) {
       pinot: merkit.laatikot('peli'),
       katto,
       vain,
+      // Matkan kohteet (noppa, lento) voittavat budjetin (ks. matkanKohteet).
+      etusija: matkanKohteet(),
       kokoKerroin: kaupunginMitat.nimiKerroin,
       /*
        * NIMIKYLTIT KARTTAAN (omistaja 14.9.2026; sääntö ja mitatut
@@ -4151,6 +4277,9 @@ export async function avaaPallolauta(ui) {
     const sovittelu = nostot.sovittele({
       nimet: nimet.laatikot(),
       kiinteat: [...infoTulos, ...merkit.laatikot('peli')],
+      // Meren nimiöt väistävät kohdemaan korostuskehää (ks. rantaviivanLaatikot).
+      rantaviiva: rantaviivanLaatikot,
+      rantaviivaOn: pallonKorostusRenkaat(pallonKorostettuMaa()).length > 0,
     });
     paivitaPisteet();
     // Ladonta ajetaan levossa, siirtymän jo mentyä: viimeinen sana
@@ -4327,6 +4456,18 @@ export async function avaaPallolauta(ui) {
       for (const k of kaupungit) k.kayty = kaydyt.has(k.id);
     }
     helmet = reitit.paivita(valinta);
+    /*
+     * HIMMEÄ REITTIVERKKO LIFTATESSA (omistaja 20.9.2026 klo 13.50; ks.
+     * js/pallovektorit.js HIMMEÄ REITTIVERKKO LIFTATESSA). Geometria
+     * annetaan vektorikerrokselle kerran laudan avaimella ja näkyvyys on
+     * valinnan lippu — sama sääntö (matkareittienValinta) kuin kirkkailla
+     * kaarilla, eri piirtäjä. Ilman vektorikerrosta (kytkin pois) verkkoa
+     * ei ole, kuten ei rantaviivaakaan.
+     */
+    if (vektorit?.asetaVerkko) {
+      if (valinta.verkko) vektorit.asetaVerkko(pack.id, reitit.verkonViivat());
+      vektorit.naytaVerkko(Boolean(valinta.verkko));
+    }
     /*
      * ENNAKKOZOOMIN AJAN NAPPULA ON LÄHTÖRUUDUSSAAN (Raamattu,
      * KARTTAUUDISTUKSEN PAATOKSET 40).

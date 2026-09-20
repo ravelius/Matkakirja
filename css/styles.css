@@ -181,6 +181,10 @@ body.paivittyy .app { visibility: hidden; }
    * suoraan, ja kehittäjätilan mittarivi tarvitsee ne. */
   --turva-yla: env(safe-area-inset-top, 0px);
   --turva-ala: env(safe-area-inset-bottom, 0px);
+  /* Sivut myös: pallolaudan nimiöt väistävät turva-alueita
+     (js/pallolauta/lauta.js nostojenReuna). */
+  --turva-vasen: env(safe-area-inset-left, 0px);
+  --turva-oikea: env(safe-area-inset-right, 0px);
   /* Kartan päällä kelluvat kortit: läpikuultava pergamentti kuten .event-toast. */
   --overlay-card: rgba(46, 33, 20, 0.88);
   --overlay-line: rgba(217, 161, 59, 0.45);
@@ -4616,6 +4620,30 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
 
 @media (prefers-reduced-motion: reduce) {
   .passport-card .linssi-valikko .linssi-liuskat button { transition: none; }
+}
+
+/*
+ * KESKENERÄISET VARUSTEET OMALLA RIVILLÄÄN RUUDUKON LOPUSSA (omistaja
+ * 20.9.2026 klo 15.10): harmaasävy ja pienempi kuvake kertovat, että
+ * varuste on vielä työn alla — se toimii, mutta ei lupaa valmista.
+ * Rivi on oma ruudukkonsa samalla sarakejaolla, jotta se alkaa aina
+ * uudelta riviltä eikä täytä valmiiden rivin loppua. Kuvake on 44 px
+ * (kosketuskohteen minimi), valmiit 64 px.
+ */
+.passport-card .linssi-valikko .linssi-liuskat-kesken {
+  padding-top: 0.2rem;
+  border-top: 1px solid rgba(70, 51, 31, 0.18);
+  border-bottom: 0;
+}
+.passport-card .linssi-valikko .linssi-liuskat-kesken button.kesken {
+  width: 44px;
+  filter: grayscale(1);
+  opacity: 0.62;
+}
+.passport-card .linssi-valikko .linssi-liuskat-kesken button.kesken:hover,
+.passport-card .linssi-valikko .linssi-liuskat-kesken button.kesken.esikatselu,
+.passport-card .linssi-valikko .linssi-liuskat-kesken button.kesken.paalla {
+  opacity: 0.85;
 }
 
 /* Valitun varusteen nimi ja kuvaus liuskojen alla: keskitetty kuten
@@ -26946,12 +26974,27 @@ button.maapaneeli-aihe:active:not(:disabled) {
   display: inline-block;
   flex: 0 0 auto;
   line-height: 0;
+  /*
+   * KARTUSCHA 3 (omistaja 20.9.2026 klo 15.20, kaappaus kartuscha-v1977.png:
+   * *"isonnetussa versiossa se pitää olla yhtä korkea kuin maan nimi
+   * teksti"*). Lipun em-mitta oli KORTIN kirjasinkoko, ei otsikon —
+   * otsikon koko on vain `.maapaneeli-nimi-suomi`-elementillä — joten
+   * 0,62 em jäi 12 px:iin 30 px:n otsikon vieressä. Nyt lippu perii
+   * otsikon koon muuttujasta ja kuvan korkeus on versaalin korkeus
+   * (`cap`; vara 0,68 em vanhoille selaimille). Reuna lasketaan
+   * korkeuteen, jotta lippu on tasan tekstin korkuinen.
+   */
+  font-size: var(--maapaneeli-otsikko);
 }
 .maapaneeli-lippu[hidden] { display: none; }
+/* Pienennetyssä kartuschassa EI lippua (omistaja 20.9.2026 klo 15.20). */
+.maapaneeli-kortti:not(.valikko-auki) .maapaneeli-lippu { display: none; }
 .maapaneeli-lippu.napautettava { cursor: pointer; }
 .maapaneeli-lippukuva {
   display: block;
-  height: 0.62em;
+  box-sizing: border-box;
+  height: 0.68em;
+  height: 1cap;
   width: auto;
   border: 1px solid rgba(74, 52, 33, 0.45);
   box-shadow: 0 1px 2px rgba(58, 40, 25, 0.2);
