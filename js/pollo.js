@@ -296,7 +296,39 @@ export const SPOILERI_LOHKOT = [
 
 /** Rivinvaihdot ja tuplavälit pois; tyhjästä tulee tyhjä merkkijono. */
 function polloSiisti(teksti) {
-  return String(teksti ?? '').replace(/\s+/g, ' ').trim();
+  return puhdistaWikiPutket(String(teksti ?? '')).replace(/\s+/g, ' ').trim();
+}
+
+/*
+ * WIKIMERKINNÄT POIS ENNEN MALLIA (Sonnet 1:n havainto Košicessa
+ * 20.9.2026: pulun vastauksessa luki raakana
+ * *"luolat|Aggtelekin ja Slovakian karstin luolia"*).
+ *
+ * Pelin oma aineisto käyttää samaa putkimerkintää kuin pöllölinkit
+ * (`'perusmuoto|näkyvä muoto'`, js/fokuskohteet.js puraKorostus) ja
+ * paikoin wikin hakasulkeita. Kortilla merkintä puretaan piirrettäessä,
+ * mutta KONTEKSTIIN teksti menee sellaisenaan — ja kun malli siteeraa
+ * aineistoa, putki tulee mukana. Pelaaja ei saa koskaan nähdä
+ * pystyviivaa (sama linjaus kuin puraPutki 13.8.2026), joten se
+ * puretaan jo ennen mallia: pelaajalle näkyvä muoto jää, perusmuoto
+ * karsiutuu.
+ *
+ * Bare-putki puretaan VAIN ilman välilyöntejä (`a|b`), koska juuri se
+ * on merkinnän muoto; välilyönnillinen " | " on tavallinen erotin eikä
+ * merkintä, eikä sitä kosketa.
+ */
+const WIKI_HAKASULKEET = /\[\[([^[\]\n]{1,120})\]\]/g;
+const WIKI_BARE_PUTKI = /([^\s|]{1,60})\|([^\s|][^|\n]{0,80}?)(?=[\s.,;:!?)\]]|$)/g;
+
+/** Aineistotekstin putket ja hakasulkeet pois. Puhdas funktio. */
+export function puhdistaWikiPutket(teksti) {
+  return String(teksti ?? '')
+    .replace(WIKI_HAKASULKEET, (_, sisus) => {
+      const kohta = sisus.indexOf('|');
+      return (kohta < 0 ? sisus : sisus.slice(kohta + 1).split('|').pop()).trim() || sisus.trim();
+    })
+    .replace(/\[\[|\]\]/g, '')
+    .replace(WIKI_BARE_PUTKI, (koko, perus, nakyva) => (nakyva.trim() || perus));
 }
 
 /** Leikkaa tekstin kattoon ja merkitsee leikkauksen. */
@@ -695,7 +727,15 @@ export function poistaKasiteMerkinnat(teksti) {
     // Rikkinäiset ja keskeneräiset jäänteet pois: pelaaja näkee vain
     // tekstin, ei koskaan sulkeita.
     .replace(/\[\[|\]\]/g, '')
-    .replace(/\[$/, '');
+    .replace(/\[$/, '')
+    /*
+     * MYÖS SULKEETON PUTKI (Košice 20.9.2026): kun malli siteeraa
+     * aineistoa, merkintä voi tulla ilman hakasulkeita
+     * ("luolat|Aggtelekin ja Slovakian karstin luolia"). Konteksti
+     * puhdistetaan jo ennen mallia (puhdistaWikiPutket), mutta
+     * pystyviiva ei saa päätyä ruudulle mitään reittiä.
+     */
+    .replace(WIKI_BARE_PUTKI, (koko, perus, nakyva) => (nakyva.trim() || perus));
 }
 
 /**
@@ -733,9 +773,19 @@ export function jasennaKasitteet(teksti, katto = KASITTEIDEN_KATTO) {
  * lauseen. Katkenneessa striimissä puolikas merkintä ei kelpaa
  * aiheeksi: jasennaKasitteet tunnistaa vain kokonaiset [[...]]-parit.
  */
+/*
+ * VUOSILUKU EI OLE KUVAN AIHE (Sonnet 1:n havainto Košicessa
+ * 20.9.2026): Ochtinskán vastauksen ensimmäinen käsite oli "1954", ja
+ * wikihaku antoi vuosiartikkelin kuvan — mustavalkoisen sotakuvan,
+ * jolla ei ole mitään tekemistä luolan kanssa. Pelkkä luku ei kerro
+ * aiheesta mitään, joten se ohitetaan ja kuva haetaan seuraavalla
+ * käsitteellä (tai kysymyksellä, kuten ennenkin).
+ */
+const PELKKA_LUKU = /^\d{1,4}(?:[.\-–]\d{1,4})?$/;
+
 export function vastauskuvanAihe(teksti, kysymys = '') {
   for (const pala of jasennaKasitteet(teksti)) {
-    if (pala.kasite && pala.aihe) return pala.aihe;
+    if (pala.kasite && pala.aihe && !PELKKA_LUKU.test(pala.aihe.trim())) return pala.aihe;
   }
   const siisti = polloSiisti(kysymys).replace(/[?!.]+$/, '').trim();
   return siisti || null;
