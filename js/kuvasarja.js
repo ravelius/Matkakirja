@@ -29,7 +29,7 @@
  * ── PYYHKÄISY JA NUOLINÄPPÄIMET (omistaja 20.9.2026, kohta 5) ──────
  *
  * Reunanuolet eivät riitä puhelimella: sarjaa selataan myös
- * pyyhkäisemällä (pointer-eleet: vaakasiirto ≥ PYYHKAISY_PX ja enemmän
+ * pyyhkäisemällä (pointer-eleet: vaakasiirto ≥ KUVASARJA_PYYHKAISY_PX ja enemmän
  * vaakaa kuin pystyä) ja nuolinäppäimillä (vasen/oikea, kun kortti on
  * auki eikä kohdistus ole tekstikentässä). Pyyhkäisyn päättävä click
  * nielaistaan, jottei se avaa suurennosta. Näppäinkuuntelija on
@@ -45,7 +45,7 @@ import { lisaaHavainnekuvaMerkki } from './havainnekuva.js';
 import { sfx } from './sound.js';
 
 /** Pyyhkäisyn vähimmäismatka vaakasuunnassa (px). */
-export const PYYHKAISY_PX = 30;
+export const KUVASARJA_PYYHKAISY_PX = 30;
 
 /**
  * @param {object} ui pelin ui
@@ -193,7 +193,7 @@ export function piirraKuvasarja(ui, sailio, kuvat, {
     const dx = e.clientX - alku.x;
     const dy = e.clientY - alku.y;
     alku = null;
-    if (Math.abs(dx) < PYYHKAISY_PX || Math.abs(dx) <= Math.abs(dy)) return;
+    if (Math.abs(dx) < KUVASARJA_PYYHKAISY_PX || Math.abs(dx) <= Math.abs(dy)) return;
     pyyhkaisty = Date.now();
     siirry(dx < 0 ? 1 : -1);
   };
