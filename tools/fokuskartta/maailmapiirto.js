@@ -2899,8 +2899,26 @@ export const REITTITYYLI = Object.freeze({
  * pisteiden LÄPI, ei murtoviiva, ja sauman yli menevä hyppy katkaisee
  * jakson kuten reiteillä.
  */
+/*
+ * JOEN VAHIN LEVEYS PIKSELEINA (omistaja 20.9.2026: "joet eivat nay
+ * Ranskan kartalla").
+ *
+ * MITATTU: joet OVAT poltettuina joka tasolla — z7:n pallolaatassa uoma
+ * nakyy selvasti — mutta z5:n laatassa niita ei erota lainkaan. Syy on
+ * tassa: leveys on `leveys * R`, ja R on tason mittakaava. Kun taso
+ * karkenee, 2,6 kutistuu alle pikselin, ja 0,72:n peittavyydella
+ * alipikselinen viiva haipyy nakymattomiin. Kommentti lupasi jo, etta
+ * "kaikki uomat piirretaan joka tasolla" — leveytta ei vain ollut
+ * pohjattu.
+ *
+ * Sama idiomi kuin muulla musteella tassa tiedostossa
+ * (`Math.max(0.2, v.leveys * px)`), mutta pohja on korkeampi: 0,2 px
+ * riittaa rajalle, joka on yhtenainen ja tumma, muttei siksakkaavalle
+ * uomalle vaaleassa musteessa. 0,9 px on pienin, jolla uoma pysyy
+ * luettavana koko maan nakymassa.
+ */
 export const JOKITYYLI = Object.freeze({
-  paa: 2.6, sivu: 1.9, muste: 'rgba(120,130,138,0.72)',
+  paa: 2.6, sivu: 1.9, vahin: 0.9, muste: 'rgba(120,130,138,0.72)',
 });
 
 export function piirraJoetKankaalle(ctx, sisalto, mitta) {
@@ -2954,7 +2972,10 @@ export function piirraJoetKankaalle(ctx, sisalto, mitta) {
   let piirretty = 0;
   for (const joki of sisalto.joet) {
     // Pääjoki on leveämpi; kaikki uomat piirretään joka tasolla.
-    ctx.lineWidth = (joki.tarkeys <= 1 ? JOKITYYLI.paa : JOKITYYLI.sivu) * R;
+    ctx.lineWidth = Math.max(
+      JOKITYYLI.vahin,
+      (joki.tarkeys <= 1 ? JOKITYYLI.paa : JOKITYYLI.sivu) * R,
+    );
     kaari([joki.pisteet]);
     ctx.stroke();
     piirretty += 1;
