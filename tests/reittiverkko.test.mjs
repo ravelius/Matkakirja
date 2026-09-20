@@ -19,6 +19,7 @@ import { luoReitit } from '../js/pallolauta/reitit.js';
 import { pallonKorjattuPoly } from '../js/pallo.js';
 import {
   RANTA_PEITTO, VEKTORIT_LEVEYDET, VEKTORIT_VERKKO_LEVEYS_CSS, VERKKO_PEITTO, VERKON_HARVENNUS_AST,
+  VERKON_JANAN_ENIMMAISPITUUS_AST,
   harvennaViivat,
 } from '../js/pallovektorit.js';
 
@@ -84,7 +85,9 @@ test('vektorikerros: verkko on neljäs laji samassa materiaalitaulussa, himmeäm
   // Näkyvyys on lippu, ei häive eikä rakennus.
   assert.match(lahde, /if \(verkko\.olio\) verkko\.olio\.visible = uusi;/);
   // Kiinteä harvennus ja sama palajako kuin muilla vektoreilla.
-  assert.match(lahde, /const viivat = harvennaViivat\(verkko\.viivat, VERKON_HARVENNUS_AST\);\n    const \{ paikat, janoja \} = vektorijanat\(viivat, sade\(\)\);\n    verkko\.janoja = janoja;/);
+  assert.match(lahde, /const viivat = harvennaViivat\(verkko\.viivat, VERKON_HARVENNUS_AST\);\n    const \{ paikat, janoja \} = vektorijanat\(viivat, sade\(\), VERKON_JANAN_ENIMMAISPITUUS_AST\);\n    verkko\.janoja = janoja;/);
+  // Verkon palajako on väljempi kuin rannikon (v1983: 0,1° antoi 40 328 janaa).
+  assert.ok(VERKON_JANAN_ENIMMAISPITUUS_AST >= 0.2 && VERKON_JANAN_ENIMMAISPITUUS_AST <= 0.5, 'verkon palajako 0,2–0,5°');
   assert.ok(VERKON_HARVENNUS_AST > 0 && VERKON_HARVENNUS_AST <= 0.02, 'harvennus 0 < x ≤ 0,02 astetta');
   // Purku siivoaa verkon kuten korostuksen.
   assert.match(lahde, /vapautaVerkko\(\);\n      verkko\.avain = null;/);

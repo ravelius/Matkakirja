@@ -432,6 +432,16 @@ export const VERKKO_PEITTO = 0.3;
  */
 export const VERKON_HARVENNUS_AST = 0.01;
 /**
+ * Himmeän verkon PALAJAKO on väljempi kuin muilla vektoreilla (v1983,
+ * CI: 40 328 janaa kun jako oli 0,1°). Verkon kaaret ovat satojen
+ * kilometrien suoria kaupunkivälejä, joten 0,1° paloittelu kymmen-
+ * kertaisti janamäärän (4 174 → 40 428). Verkko on himmeä taustaviiva
+ * liftauksen mittakaavassa, ja 0,3°:n pala painuu pinnan alle vain
+ * 3,4·10⁻⁶·R — mitattu Kelttienmeren merireitillä samaksi kuin 0,1°
+ * (savuke-reittiverkko V2). 14 846 janaa.
+ */
+export const VERKON_JANAN_ENIMMAISPITUUS_AST = 0.3;
+/**
  * Lajin leveyspääte yhdessä taulussa: piirto, mittarit ja testit
  * lukevat saman rivin, joten uusi laji ei tarvitse yhtään ehtolausetta.
  */
@@ -1427,7 +1437,7 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
     vapautaVerkko();
     if (!verkko.viivat?.length) return;
     const viivat = harvennaViivat(verkko.viivat, VERKON_HARVENNUS_AST);
-    const { paikat, janoja } = vektorijanat(viivat, sade());
+    const { paikat, janoja } = vektorijanat(viivat, sade(), VERKON_JANAN_ENIMMAISPITUUS_AST);
     verkko.janoja = janoja;
     mittarit.verkkoJanoja = janoja;
     if (!janoja) return;

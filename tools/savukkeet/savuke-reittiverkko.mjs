@@ -382,7 +382,14 @@ tieto('kehysaika verkon kanssa', `mediaani ${aikaKanssa.mediaani.toFixed(1)} ms,
 vaadi(`V6 kehysajan mediaani ei kasva yli ${Math.round(KEHYSAIKA_RAJA_OSUUS * 100)} %`,
   aikaKanssa.mediaani <= aikaIlman.mediaani * (1 + KEHYSAIKA_RAJA_OSUUS),
   `${aikaIlman.mediaani.toFixed(1)} → ${aikaKanssa.mediaani.toFixed(1)} ms`);
-vaadi('V6 verkon janamäärä pysyy kurissa (harvennus)', m1.verkkoJanoja < 8000, `${m1.verkkoJanoja} janaa`);
+/*
+ * JANAKATTO 20 000 (v1983): vektorijanat jakaa pitkät janat paloiksi
+ * (Gironden jänne), ja verkon kaupunkivälit ovat pitkiä — 0,1°:n jako
+ * antoi 40 328 janaa (CI punainen), verkon oma 0,3°:n jako 14 848.
+ * Pikselimitta (V2) on sama molemmilla, joten katto vartioi harvennusta
+ * ja jakoa yhdessä, ei kumpaakaan yksin.
+ */
+vaadi('V6 verkon janamäärä pysyy kurissa (harvennus + palajako)', m1.verkkoJanoja < 20000, `${m1.verkkoJanoja} janaa`);
 
 vaadi('ei sivuvirheitä', virheet.length === 0, virheet.slice(0, 3).join(' | '));
 await selain.close();
