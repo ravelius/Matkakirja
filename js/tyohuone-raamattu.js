@@ -9617,7 +9617,12 @@ export const RAAMATTU = {
           + 'PAATOKSET 21:n mukaista (kirjattu havaintona). NAULAUS MERGETTY v1972-prepiin '
           + '(04.49): savuke-maan-aariviiva 70/70, zoom-nakymassa 140,8 px/aste pudotettuja '
           + '1174 janaa, peitto 100 %, renkaita 16/16, Gironde OK. V1972 kootaan kun '
-          + 'pallosarja on ohi (CI-tauko).',
+          + 'pallosarja on ohi (CI-tauko). LEHDEN NAVIGOINTI LAITTEELLA (Sonnet 1 db36eb24, '
+          + '04.53): Brysselissa ylin kaupunkirivi sulkee liuskan, Turistiopas-rivi avaa '
+          + 'etusivun, aihesivuille (Historia, Rakennukset, Ruoka) ei paase, kategoriarivi '
+          + 'sulkee liuskan ilman haitaria -> Sonnet 3 selvittaa kaikki kolme ennen '
+          + 'Ljubljanan kohdekarttaa. Astronautin kameran reitti laitteella: Maailma-kytkin '
+          + 'paalle -> pallonakyman linssiruudukko.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
