@@ -9943,7 +9943,17 @@ export const RAAMATTU = {
           + 'paahan" + 13.50: "entä jos piirretaan myos muutkin reitit mutta himmeammalla" '
           + '-> SAANTO: liftatessa piirretaan heiton kantaman kaaret normaalisti ja kaikki '
           + 'muut laudan kaaret himmeina staattisena kerroksena (kerran per lauta, ei '
-          + 'animaatiota). Opus 1 toteuttaa, v1977.',
+          + 'animaatiota). TEHTY: KANTAMA (Opus 1 b8e4d5fb): kaaret game.moves-polkujen '
+          + 'unionista (Bryssel heitto 1 -> 2, 3 -> 6, 6 -> 10 kaarta / 411), savuke 7/7. '
+          + 'HIMMEAT KAARET EI TEHTY: maailmankartta on pallolauta (reitit.js), litteän '
+          + 'kartan kerros ei nakyisi -> oma era (411 kaarta isoympyroina, valimuisti, '
+          + 'kerroskytkin), odottaa omistajan sanaa. KARTUSCHA 2 (Opus 2 1ff37331): valo 0,66 '
+          + 'rem otsikon keskella (min-height 42 px voitti ennen), lippu spanina otsikossa '
+          + '(osumatesti ennen otsikkoa), avaaLippuikkuna vain LIPPUTIEDOT-mailla, vilkku '
+          + 'audio-elementin tilasta + 12 s aikakatkaisu, viritin radio.js:n sama viritin; '
+          + 'valit yhdesta luvusta (suurempi turva-alue) -> siirtyy oikealle, ei alas '
+          + '(alareunan turva-alue on laitteen vaatimus; omistaja katsoo laitteella). V1977 '
+          + 'PR #2629 avattu 14.28.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
