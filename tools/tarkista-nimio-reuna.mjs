@@ -172,9 +172,10 @@ const MITTAA = () => sivu.evaluate(async () => {
   const M = await import('/js/pallolauta/nostot.js');
   const W = window.innerWidth;
   const H = window.innerHeight;
-  const rivi = (r, nimi, lahde) => ({
+  const rivi = (r, nimi, lahde, iso) => ({
     lahde,
     nimi: nimi || '(nimetön)',
+    iso: iso ?? null,
     x0: r.x0,
     y0: r.y0,
     x1: r.x1,
@@ -187,12 +188,15 @@ const MITTAA = () => sivu.evaluate(async () => {
     },
   });
 
-  const elavat = l.nostot.lappuLaatikot().map((r) => rivi(r, r.nimi, 'elävä'));
+  /* TÄRKEÄÄ: osumat() voi sisältää NAAPURIMAAN jo poltettua mustetta,
+   * joka näkyy kehyksessä (ei vain kohdemaan omaa) — o.iso kertoo
+   * TODELLISEN omistajan, joka voi poiketa testattavasta maasta. */
+  const elavat = l.nostot.lappuLaatikot().map((r) => rivi(r, r.nimi, 'elävä', r.iso ?? null));
 
   const osumat = l.nostot.osumat?.() ?? [];
   const poltetut = osumat
     .filter((o) => o.poltettu && o.nimioNakyy && o.nimi && o.p)
-    .map((o) => rivi(M.nostonLaatikko(o.p, o), o.nimi, 'poltettu'));
+    .map((o) => rivi(M.nostonLaatikko(o.p, o), o.nimi, 'poltettu', o.iso ?? null));
 
   const kaikki = [...elavat, ...poltetut];
   for (const r of kaikki) r.maxYli = Math.max(r.yli.vasen, r.yli.oikea, r.yli.yla, r.yli.ala);
@@ -237,7 +241,11 @@ for (const iso of MAAT) {
 
       const tulos = await MITTAA();
       const yli = tulos.kaikki.filter((m) => m.maxYli > RAJA_PX);
-      for (const m of yli) loydokset.push({ maa: iso, nakyma: nakyma.nimi, ...m });
+      for (const m of yli) {
+        loydokset.push({
+          maa: m.iso || iso, testattuMaa: iso, nakyma: nakyma.nimi, ...m,
+        });
+      }
 
       console.log(`${iso} ${nakyma.nimi.padEnd(7)} nimiöitä ${String(tulos.kaikki.length).padStart(3)}`
         + ` reunalla ${String(yli.length).padStart(2)}`);
@@ -271,6 +279,9 @@ for (const l of loydokset) maittain[l.maa] = (maittain[l.maa] ?? 0) + 1;
 for (const [maa, n] of Object.entries(maittain).sort((a, b) => b[1] - a[1])) {
   console.log(`  ${maa}: ${n}`);
 }
+const JSON_ULOS = lippu('--json') ?? '/tmp/nimio-reuna-tulos.json';
+writeFileSync(JSON_ULOS, JSON.stringify(loydokset, null, 1));
+console.log(`\nJSON: ${JSON_ULOS}`);
 if (KUVAKANSIO) {
   writeFileSync(join(KUVAKANSIO, 'nimio-reuna.json'), JSON.stringify(loydokset, null, 1));
 }
