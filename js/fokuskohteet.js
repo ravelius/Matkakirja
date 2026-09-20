@@ -194,6 +194,8 @@ import { polloKysy } from './pollo.js';
 import { sfx } from './sound.js';
 import { asetaAkustiikka } from './tehosteketju.js';
 import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
+import { piirraKuvasarja } from './kuvasarja.js';
+import { lisaaHavainnekuvaMerkki } from './havainnekuva.js';
 
 /*
  * Maakohtaiset kohdelistat ISO-tunnuksella. Sama tunnus kuin
@@ -5093,6 +5095,40 @@ function piirraKohdeKuvat(ui, sisalto, kohde, valmisKuva) {
    * paikka näyttäisi ehjänä. Kuvaton kohde saa napin silti — muuten
    * lupaus katoaisi kokonaan, jos kuva jäisi lataamatta.
    */
+  /*
+   * USEAMPI KUVA ON KARUSELLI, EI PINO (omistaja 20.9.2026, kaappaus
+   * nosto-kuvat-paallekkain-v1980.webp: Avignonin paavinpalatsin `kuva`
+   * ja `kuvat` latoutuivat kahdeksi kuvaksi allekkain). Sama 1/2-
+   * karuselli kuin täky- ja skandaalinostolla (js/kuvasarja.js), kohteen
+   * omalla lataajalla ja suurennoksella; ihmenauha kulkee kuvan mukana
+   * (`koristele`). "Koe ihme" -nappi tulee sarjan alle, kuten se tuli
+   * ennen ensimmäisen kuvan alle. Peruttu kuvaesittely (valmisKuva
+   * null) vie vain pääkuvan: loput ladotaan sarjana kuten ennenkin.
+   */
+  const kuvat = valmisKuva === null ? lista.slice(1) : lista;
+  if (kuvat.length >= 2) {
+    piirraKuvasarja(ui, sisalto, kuvat, {
+      otsikko: kohde?.nimi ?? '',
+      valmisKehys: valmisKuva ?? undefined,
+      kehysLuokka: 'fokuskohde-kuva nostosarja-kuva',
+      nuoliLuokka: 'nostosarja-kuvanuoli',
+      laskuriLuokka: 'nostosarja-kuvalaskuri',
+      leveys: KOHDE_KUVAN_PX,
+      lataa: asetaKohdeKuva,
+      avaaSuurennos: (u, kuva, ankkuri) => avaaKohdeSuurennos(u, kuva, ankkuri),
+      koristele: (nappi, kuva) => {
+        const nauha = piirraIhmenauha(nappi, kuva.nauha);
+        if (nauha) nauha.classList.add('kuvasarja-koriste');
+        nappi.closest('figure')?.classList.toggle('fokuskohde-kuva-nauhalla', Boolean(kuva.nauha));
+      },
+      kuvatekstiLuokka: 'fokuskohde-kuvaselite',
+      lahdeLuokka: 'fokuskohde-kuvalahde',
+      kuvatekstiKaare: 'fokuskohde-kuvateksti',
+      nappiLuokka: 'fokuskohde-kuvanappi',
+    });
+    piirraKortinIhmenappi(ui, sisalto, kohde);
+    return;
+  }
   lista.forEach((kuva, i) => {
     if (i === 0 && valmisKuva !== undefined) {
       if (valmisKuva) sisalto.appendChild(valmisKuva);
@@ -5166,6 +5202,8 @@ function piirraKohdeKuva(ui, sisalto, kuva) {
   const kortinTeksti = kuvatekstiLyhyt(kuva);
   if (kortinTeksti || kuva.lahde) {
     const teksti = html('figcaption', 'fokuskohde-kuvateksti', kortinTeksti);
+    // Generoitu kuva kertoo sen jo kortilla (js/havainnekuva.js).
+    lisaaHavainnekuvaMerkki(teksti, kuva);
     // CC BY vaatii tekijän maininnan: lähde on aina kuvan vieressä.
     if (kuva.lahde) {
       teksti.appendChild(kortinKuvalahde(html('span', 'fokuskohde-kuvalahde'), kuva.lahde, kuva));

@@ -166,6 +166,25 @@ button.nostokuva-nappi:focus-visible { background: transparent; }
   border-color: rgba(122, 85, 20, 0.62);
 }
 
+/*
+ * KUVA PYSYY SAMANKOKOISENA LISÄÄ-TILASSA MYÖS KUVASARJANA (omistaja
+ * 20.9.2026, kaappaukset nosto-pieni-kortti-kuva-v1980.webp ja
+ * nosto-lisaa-kuva-pienenee-v1980.webp, Chaîne des Puys 1400 px:
+ * pienessä kortissa kuva täytti kortin, LISÄÄ-tilassa se kutistui
+ * noin puoleen). SYY: kahden kuvan nosto rakentaa vaiheessa 2 sarjan
+ * SAMAN kehyksen ympärille ja antaa sille luokat `fokusnosto-kuva
+ * nostosarja-kuva` — ja `.fokusnosto-kuva img { max-height: 42vh }`
+ * (css/fokusnosto.css, 1.9.2026 piirraNostonKuva-korteille) leikkasi
+ * lukitun laatikon. Yhden kuvan nosto ei koskaan saanut luokkaa, joten
+ * se pysyi oikean kokoisena. Lukittu laatikko (inline width/height,
+ * ks. KUVAN LAATIKKO ON LUKOSSA) voittaa nyt myös sarjassa; teksti
+ * tulee kuvan alle ja kortti vierittyy (js/nostokuva.js avaaLisaa).
+ */
+.nostokuva-kortti .nostokuva-kehys.fokusnosto-kuva .nostokuva-img {
+  max-height: none;
+  max-width: none;
+}
+
 /* ── KUVATEKSTI JA "LISÄÄ" ──────────────────────────────────────── */
 
 .nostokuva-selite {
