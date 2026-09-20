@@ -29,6 +29,7 @@ import { readFileSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join, extname, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { decodePng, luminanssi } from './pallon-liike-mittarit.mjs';
+import { suorituskykyVaatija } from './suorituskyky.mjs';
 import { PILVIEN_LEVEYS, PILVIEN_KORKEUS } from '../../js/linssit/astro-sumu.js';
 
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
@@ -88,6 +89,8 @@ const vaadi = (nimi, ok, lisa = '') => {
   tulokset.push({ nimi, ok });
   console.log(`${ok ? 'OK  ' : 'FAIL'}  ${nimi}${lisa ? ` — ${lisa}` : ''}`);
 };
+// Aikaväitteet PR-portin ohi (tools/savukkeet/suorituskyky.mjs).
+const vaadiAika = suorituskykyVaatija(vaadi);
 
 /** Keskiruudun kirkkauden keskiarvo ja keskihajonta (kaappauksesta). */
 function ruudunTilastot(kuva, { x0, y0, x1, y1 }) {
@@ -482,7 +485,7 @@ vaadi('kaksi sumukalvoa DOMissa ja peitot eri suuret', kalvoja === 2
   `kalvoja=${kalvoja} peitot=${JSON.stringify(luku(paalla, 'keski')?.tila?.peitot)}`);
 
 /* ---- väite 4: kehystahti ja muisti -------------------------------- */
-vaadi('fps >= 50', paalla.fps.fps >= 50, `${paalla.fps.fps} fps (sumuton ${pois.fps.fps})`);
+vaadiAika('fps >= 50', paalla.fps.fps >= 50, `${paalla.fps.fps} fps (sumuton ${pois.fps.fps})`);
 /*
  * TEKSTUURIBUDJETTI ON DETERMINISTINEN, JS-KEKO EI OLE. Kaksi eri
  * selainkontekstia roskienkeruineen antoi 264 ja 175 Mt, ja sama ajo
