@@ -10159,6 +10159,18 @@ export const RAAMATTU = {
           + 'luonnoksia ja Fablen vanhoja) suljetaan kommentilla, haarat sailyvat. '
           + 'Julkaisija (sonnet) tekee molemmat, lista docs/raportit/worktree-siivous-'
           + '20260920.md.',
+        'VIESTIKANAVAT JA FABLEN EFFORT (omistaja 20.9.2026 klo 18.40 kortilla): 1) Uudet '
+          + 'toiminnot seka omistajan huomaamat bugit ja pienet ideat -> Fable, joka '
+          + 'pilkkoo ja reitittaa sessioille (omistaja halusi bugit Fablen kautta). 2) '
+          + 'Codex-toimitukset (tekstit, animaatiot, kuvat) -> Julkaisija (sonnet) hakee '
+          + 'kerran tunnissa kansiosta ~/Documents/Codex/<pvm>/ ja postilaatikkohaarasta, '
+          + 'pushaa haaran, pitaa kirjanpitoa docs/raportit/codex-toimitukset.md ja '
+          + 'reitittaa: tekstit Fablelle (kaanon), animaatiot Pelikoodarille, kuvat '
+          + 'Sisaltokirjurille; omistajan ei tarvitse valittaa Codexin viesteja kasin. 3) '
+          + 'Kaikki, mika muuttaa saantoa tai linjausta, tulee Fablelle yhdella rivilla '
+          + 'lokia varten. 4) Fablen effort: medium oletuksena (reititys ja kirjaus), high '
+          + 'vain tarinateksteihin, ristiriitojen tuomarointiin ja Raamatun jaon '
+          + 'tarkastukseen; Fablen kulu on kontekstin pituus x kierrokset, ei effort.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
