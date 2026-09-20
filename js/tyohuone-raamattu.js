@@ -9991,7 +9991,16 @@ export const RAAMATTU = {
           + '"merkitse vertailulinssi, maidentiedot, seka vesistolinssi harmaalla ja siirra '
           + 'omalle rivilleen ja pienenna niiden ikonit. ne ovat viela liian keskeneraisia" '
           + '-> Opus 2 (varusteruudukko): kolme keskeneraista omalle riville ruudukon '
-          + 'loppuun, harmaasavy, pienempi ikoni; toimivat yha. Julkaistaan v1978.',
+          + 'loppuun, harmaasavy, pienempi ikoni; toimivat yha. Julkaistaan v1978. OMISTAJA '
+          + '15.20: 1) "ihmislinssissa ei nay enaa kuvat" (Ihmisen matka, kaappaus ihmisen-'
+          + 'matka-ei-kuvia.webp; regressio) -> Opus 1 tuplasaapumisen jalkeen; 2) '
+          + 'KARTUSCHA 3: "pienennetyssa versiossa ei saa nakya lippu ja isonnetussa '
+          + 'versiossa se pitaa olla yhta korkea kuin maan nimi teksti. lisaksi infokortti '
+          + 'pitaa pienentya automaattisesti jos pelaaja koskee karttaan tai liikuttaa sita" '
+          + '(kaappaus kartuscha-v1977.png: lippu liian pieni) -> Opus 2; 3) "muuta '
+          + 'avaruushumina taustaaaneksi, eli silloin taustaaanen taso saataa avaruushuminan '
+          + 'voimakkuutta. eli irroita se taustamusiikista ja liita taustaaaneen" -> Opus 2 '
+          + '(kumoaa LISAYS 8:n musiikkikytkin-sidonnan huminan osalta).',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
