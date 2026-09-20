@@ -12933,6 +12933,102 @@ export const MAA_KATEGORIAT = {
       },
     },
     {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Tanskan luonto on tasainen mutta yllättävä: liitukallio joka syöksyy '
+        + 'mereen, meri joka häviää ja palaa joka päivä, ja hiekkakumpu joka kävelee '
+        + 'koilliseen.',
+      nostot: [
+        {
+          otsikko: 'Liitukallio joka syöksyy mereen',
+          aika: '2025',
+          tiedosto: 'Møns Klint chalk cliffs 1.jpg',
+          teksti: 'Mönin saaren itärannikolla kohoaa kuuden kilometrin pituinen '
+            + 'liitukallioiden vyö, joka syöksyy jyrkästi mereen — korkein kohta, '
+            + 'Dronningestolen, on 128 metriä. Valkoinen kallio koostuu miljardeista '
+            + 'pikkuruisista merieliöiden kuorista, jotka kertyivät merenpohjaan '
+            + 'liitukaudella miljoonia vuosia sitten. Meri kuluttaa kalliota jatkuvasti, '
+            + 'ja lohkeamiset paljastavat uusia fossiileja — merisiilejä ja simpukoita — '
+            + 'jotka huuhtoutuvat rantaan etsittäviksi. Alueella kulkee poluilla '
+            + 'vuosittain noin 250 000 kävijää, ja heinäkuussa 2025 Unesco lisäsi Mönin '
+            + 'liitukalliot maailmanperintöluetteloon.',
+          lyhyt: 'Mönin liitukalliot kohoavat 128 metriin ja syöksyvät jyrkästi Itämereen.',
+          selite: 'Mönin saaren liitukalliot Tanskan itärannikolla; korkein kohta '
+            + 'Dronningestolen on 128 metriä merenpinnasta.',
+          lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Meri joka häviää joka päivä',
+          aika: '2014',
+          tiedosto: 'Nationalpark Vadehavet Wadden Sea walking Denmark (2026-08-10).jpg',
+          teksti: 'Vadehavi on Pohjanmeren matala rannikkovyöhyke, jonka vuorovesi paljastaa '
+            + 'ja peittää kahdesti vuorokaudessa: nousuveden aikaan kaikki on merta, '
+            + 'laskuveden aikaan silmänkantamattomiin avautuu lietettä ja hiekkasärkkiä. '
+            + 'Oppaat vievät kävijöitä avojaloin lietteen yli sinne, missä äsken kulki '
+            + 'vene. Alue on yksi maailman tärkeimmistä lintualueista: miljoonat muutto- '
+            + 'ja pesimälinnut käyttävät sitä matkalla tai kotina. Hollannin ja Saksan '
+            + 'vadehavi liitettiin Unescon maailmanperintöluetteloon 2009, ja Tanskan '
+            + 'osuus seurasi kesäkuussa 2014 — nyt koko rannikkokaistale Esbjergistä '
+            + 'Saksan rajalle on yhtä suojeltua merenpohjaa.',
+          lyhyt: 'Vadehavin vuorovesi paljastaa ja peittää valtavan lietealueen kahdesti '
+            + 'vuorokaudessa.',
+          selite: 'Kävelijöitä Tanskan vadehavin paljastuneella merenpohjalla laskuveden '
+            + 'aikaan.',
+          lahde: 'Olgierd Rudak, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Puu joka värjää koko maan vihreäksi',
+          aika: 'nykyään',
+          tiedosto: 'Lovely spring in the beech wood (4568212332).jpg',
+          teksti: 'Pyökki eli bøg on Tanskan kansallispuu, ja toukokuussa metsät käyvät läpi '
+            + 'bøgespringiksi kutsutun muutoksen: lehdet puhkeavat lähes koko maassa '
+            + 'saman viikon aikana, ja ruskea talvimetsä muuttuu muutamassa päivässä '
+            + 'kirkkaan vihreäksi. Juuri ennen lehtien puhkeamista metsän pohja peittyy '
+            + 'valkoisista vuokoista, jotka ehtivät kukkia ainoana hetkenä, jolloin '
+            + 'auringonvalo pääsee vielä paljaiden oksien läpi maahan asti. Ilmiö '
+            + 'houkuttelee joka kevät tuhansia retkeilijöitä metsiin, ja monet perheet '
+            + 'tekevät siitä vuotuisen perinteen. Pyökkimetsiä on eniten Sjællannin ja '
+            + 'Itä-Jyllannin alueilla, missä maaperä ja ilmasto sopivat puulle parhaiten.',
+          lyhyt: 'Pyökki on Tanskan kansallispuu, ja sen lehdet puhkeavat toukokuussa lähes '
+            + 'yhtä aikaa.',
+          selite: 'Vastapuhjenneet pyökinlehdet ja valkoiset vuokot tanskalaisessa '
+            + 'bøgeskovissa toukokuussa.',
+          lahde: 'Martin Nikolaj Christensen, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Hiekkasärkkä joka kävelee',
+          aika: 'noin 1700',
+          tiedosto: 'Råbjerg Mile (44).jpg',
+          teksti: 'Råbjerg Mile on Pohjois-Euroopan suurin liikkuva hiekkasärkkä: se on noin '
+            + 'kaksi neliökilometriä laaja ja jopa 40 metriä korkea, ja siinä on arviolta '
+            + 'neljä miljoonaa kuutiometriä hiekkaa. Tuuli työntää koko kummun koillista '
+            + 'kohti jopa 18 metriä vuodessa, ja hiekan takana paljastuu matala, kostea '
+            + 'vyöhyke, josta erottaa, mistä särkkä on kulkenut. Alkujaan hiekka nousi '
+            + 'Länsi-Jyllannin rannikolta yli 300 vuotta sitten, ja se on ainoa laaja '
+            + 'liikkuvien dyynien alue koko Tanskassa. Skagenin ja Frederikshavnin '
+            + 'välissä liikkuvaa hiekkavuorta katsoo vuosittain noin 250 000 kävijää, '
+            + 'jotka kiipeävät sen laelle katsomaan merta molempiin suuntiin.',
+          lyhyt: 'Råbjerg Mile on Pohjois-Euroopan suurin liikkuva hiekkasärkkä, ja se '
+            + 'siirtyy koilliseen.',
+          selite: 'Råbjerg Mile Pohjois-Jyllannissa; tuuli siirtää hiekkasärkkää koilliseen '
+            + 'jopa 18 metriä vuodessa.',
+          lahde: 'Ragnar1904, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mihin suuntaan Råbjerg Mile liikkuu?',
+        vaihtoehdot: [
+          'Etelään',
+          'Koilliseen',
+          'Länteen',
+          'Pohjoiseen',
+        ],
+        oikea: 1,
+        fakta: 'Se siirtyy jopa 18 metriä vuodessa ja on Pohjois-Euroopan suurin liikkuva '
+          + 'hiekkasärkkä.',
+      },
+    },
+    {
       id: 'menovinkit',
       nimi: 'Menovinkit',
       johdanto: 'Tanska on siirtänyt itsensä ruudulle: kansallisgallerian teokset '
