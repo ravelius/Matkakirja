@@ -916,11 +916,32 @@ export const FOKUSKOHTEET_BGR = [
    * pääkartalla 18 merkkiä, ja tavoite on vähintään kaksikymmentä.
    * Nesebar on 76 ja Belogradtšikin kalliot 43 lautayksikön päässä
    * lähimmästä pelikaupungista, joten kumpikin on pääkartan merkki
-   * eikä kuulu kohdekartalle. Kuvaton erä: tarkistamaton
-   * Commons-tiedosto olisi huonompi kuin kuvaton kortti.
+   * eikä kuulu kohdekartalle. Kuvat lisätty 20.9.2026 (ent. kuvaton erä).
    * ============================================================== */
   {
     id: 'nesebar',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/bgr-nosto-nesebar-0707cad0.jpg',
+      lyhyt: 'Nesebarin bysanttilainen Kristus Pantokrator -kirkko punatiilisine koristekaarineen.',
+      selite: 'Keskiaikaisen kirkon seinät on rakennettu vuorotellen kivestä ja punatiilestä, ja niitä koristavat kaarikuviot. Kirkko seisoo Nesebarin vanhassakaupungissa.',
+      lahde: 'Valokuva: Chrumps, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Chrumps',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Church_of_Christ_Pantocrator_Nesebar.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/bgr-nosto-nesebar-f01e8cc1.jpg',
+        lyhyt: 'Nesebarin vanhan kaupungin ahtaalla kujalla kohoavat puiset talot.',
+        selite: 'Perinteiset ullakko- ja ulokerakenteiset puutalot reunustavat kapeaa katua. Seinillä on puuluukut ja kadun varrella koristeellinen lyhty.',
+        lahde: 'Valokuva: Michal Gorski, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Michal Gorski',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:8230_Nessebar,_Bulgaria_-_panoramio_(11).jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
     nimi: 'Nesebar',
     tyyppi: 'kaupunki',
     kysymykset: [
@@ -953,6 +974,28 @@ export const FOKUSKOHTEET_BGR = [
   },
   {
     id: 'belogradtsik',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/bgr-nosto-belogradtsik-d81316cc.jpg',
+      lyhyt: 'Belogradtšikin punertavat kalliomuodostelmat kohoavat vehreyden keskeltä.',
+      selite: 'Hiekkakivestä ja konglomeraatista muodostuneet punaruskeat kalliopylväät nousevat polun yläpuolelle. Kalliot ovat pehmeäpintaisia ja niiden välissä kasvaa pensaita.',
+      lahde: 'Valokuva: Pudelek (Marcin Szala), Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Pudelek (Marcin Szala)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Belogradchik_Rocks_(%D0%91%D0%B5%D0%BB%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%D1%87%D0%B8%D1%88%D0%BA%D0%B8_%D1%81%D0%BA%D0%B0%D0%BB%D0%B8)_-_by_Pudelek.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/bgr-nosto-belogradtsik-b628765b.jpg',
+        lyhyt: 'Belogradtšikin linnoituksen muuri ja kalliotornit kukkulan harjalla.',
+        selite: 'Kivinen linnoitusmuuri seuraa kukkulan reunaa, ja sen takana kohoavat kapeat kallionhuiput. Taustalla häämöttävät Balkanvuorten sinertävät rinteet.',
+        lahde: 'Valokuva: Vislupus, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Vislupus',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Belogradchik_03.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Belogradtšikin kalliot',
     nimio: 'Belogradtšik',
     tyyppi: 'vuori',
