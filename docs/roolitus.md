@@ -1,5 +1,12 @@
 # !!! AGENTIT VAIN OPUS JA SONNET — FABLE-MALLIA EI KOSKAAN AGENTTINA !!!
 
+> **PÄIVITYS 20.9.2026 (sitova):** työnjako on nyt kuusi roolisessiota
+> (Fable, Julkaisija, Karttaseppä, Pelikoodari, Sisältökirjuri,
+> Laitetestaaja). Roolit, worktreet, viestisäännöt Fablelle ja
+> tokenikuri ovat Raamatun Ydinajatus-osion kohdassa 2 "TYÖTAPA JA
+> SESSIOT"; ristiriidassa se voittaa tämän dokumentin vanhat osiot.
+> Julkaisusäännöt-osio alla on yhä voimassa (Julkaisija noudattaa).
+
 Omistajan sitova sääntö (1.9. ja 7.9.2026): jokainen ali-agentti, parvi ja
 workflow ajetaan Opuksella (koodi, sisältö) tai Sonnetilla (lukeva työ,
 tarkistukset). Ei poikkeuksia vaikeaankaan ongelmaan. Parvina saa ajaa.
