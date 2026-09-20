@@ -1530,6 +1530,8 @@ const SHELL = [
   './assets/kartat/firenze-varikartta.png',
   './assets/kartat/bryssel-keskusta.png',
   './assets/kartat/bryssel-varikartta.png',
+  './assets/kartat/ljubljana-keskusta.png',
+  './assets/kartat/ljubljana-varikartta.png',
   './assets/kartat/tampere-varikartta.png',
   './assets/kartat/bagdad-varikartta.png',
   './assets/kartat/teheran-varikartta.png',

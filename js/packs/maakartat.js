@@ -7528,6 +7528,152 @@ export const KAUPUNKIKARTAT = {
       },
     ],
   },
+  /*
+   * LJUBLJANA (20.9.2026, samalla kaavalla kuin Bryssel; omistajan
+   * päätös 19.9.2026: Slovenian pelikaupunki). Kohdekartta piirretty
+   * tools/piirra-kaupunkikartta.mjs ljubljana (paperi) ja --vari
+   * (värikartta), OpenStreetMapin aineistosta. Kahdeksan kohdetta,
+   * järjestys lännestä itään; koordinaatit Overpassista. fi-Wikipediassa
+   * on artikkeli vain linnasta, Tromostovjesta ja tuomiokirkosta (haku
+   * 20.9.2026); muille viidelle on oma tiivis `teksti` en-Wikipedian
+   * pohjalta 1873-katseella ja yksi Commons-kuva.
+   */
+  ljubljana: {
+    polku: 'assets/kartat/ljubljana-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 46.056, etela: 46.0455, lansi: 14.493, ita: 14.513 },
+    // Laajennus 1,6 samasta keskipisteestä (piirra-kaupunkikartta
+    // --vari, 20.9.2026).
+    piirtoRajat: { pohjoinen: 46.05915, etela: 46.04235, lansi: 14.487, ita: 14.519 },
+    varikartta: 'assets/kartat/ljubljana-varikartta.png',
+    esittely: 'Ljubljanan vanhakaupunki mahtuu Ljubljanica-joen mutkaan '
+      + 'Linnavuoren juurelle, ja kaupunki on pieni: vielä vuonna 1895 '
+      + 'asukkaita on vasta noin 31 000. Isoisän matkan aikaan, vuonna '
+      + '1873, Wienistä kulkee jo juna (1849), linna toimii läänin '
+      + 'vankilana ja Tromostovje on vasta yksi kivisilta. Prešernin '
+      + 'aukio on suppilomainen katujen risteys eikä Lohikäärmesiltaa '
+      + 'ole vielä lainkaan: moni kartan kohde saa nykyisen ilmeensä '
+      + 'vasta vuoden 1895 maanjäristyksen jälkeen. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      {
+        nimi: 'Tivoli-puisto', lat: 46.05404, lon: 14.49574,
+        aika: '1813',
+        teksti: 'Tivoli on Ljubljanan suurin puisto. Sen suunnitteli ranskalainen '
+          + 'insinööri Jean Blanchard vuonna 1813, kun kaupunki oli Napoleonin '
+          + 'Illyrian maakuntien pääkaupunki, ja nimi tulee Pariisin Tivolista. '
+          + 'Puiston perällä seisoo Tivolin linna, joka rakennettiin '
+          + '1600-luvulla aiemman renessanssilinnan raunioille ja jonka omisti '
+          + 'aluksi jesuiittajärjestö.'
+          + '\n\n'
+          + '1800-luvun puolivälissä marsalkka Joseph Radetzky kunnosti linnan '
+          + 'uusklassiseen asuunsa, ja vuonna 1864 sen eteen pystytettiin neljä '
+          + 'valurautakoiraa. Linnalle johtava Jakopičin kävelykatu tulee '
+          + 'vasta 1920-luvulla, kun Jože Plečnik uudisti puistoa.',
+        kuvat: [
+          {
+            tiedosto: 'Lauterbach, H. - Ljubljana iz Tivolija (jeklorez, ok. 1855).jpg',
+            lyhyt: 'Näkymä Tivolin puistosta Ljubljanaan ja linnaan noin vuonna 1855.',
+            selite: 'Teräskaiverros noin vuodelta 1855: Tivolin puistosta näkyy kaupunki ja Linnavuoren linna, eli likimain sama näkymä, jonka isoisä olisi nähnyt.',
+            lahde: 'Lauterbach ja W. French, Wikimedia Commons (PD)',
+          },
+        ],
+      },
+      {
+        nimi: 'Križanke', lat: 46.04636, lon: 14.5032,
+        aika: '1228',
+        teksti: 'Križanken luostarin rakentamisen uskotaan alkaneen vuonna 1228 '
+          + 'saksalaisen ritarikunnan käyttöön. Vuoden 1511 maanjäristys '
+          + 'vaurioitti rakennuksia, ja ne rakennettiin osin uudelleen '
+          + '1567–1579. Barokkikirkko valmistui vuosina 1714–1715 venetsialaisen '
+          + 'Domenico Rossin suunnittelemana kreikkalaisen ristin muotoisena, ja '
+          + 'se oli ensimmäinen laatuaan Sloveniassa.'
+          + '\n\n'
+          + 'Isoisän matkan aikaan luostari on yhä olemassa. Vasta 1950-luvulla '
+          + 'Jože Plečnik muutti sen pihat Ljubljanan festivaalin kesäteatteriksi.',
+        kuvat: [
+          {
+            tiedosto: 'Križanke (1).JPG',
+            lyhyt: 'Križanken barokkikirkko ja luostarin rakennukset talvipäivänä.',
+            selite: 'Križanken barokkikirkko, jonka kupoli kohoaa luostarin rakennusten yläpuolelle.',
+            lahde: 'Ljuba brank, Wikimedia Commons (CC BY-SA 3.0)',
+          },
+        ],
+      },
+      {
+        nimi: 'Prešernin aukio', lat: 46.05165, lon: 14.50575,
+        aika: '1646–1660',
+        teksti: 'Prešernin aukio on Ljubljanan keskeinen aukio. Isoisän aikaan se '
+          + 'on vanhankaupungin porttien edessä sijaitseva suppilomainen '
+          + 'katujen risteys: etelään Tromostovje vie Ljubljanica-joen yli '
+          + 'vanhaankaupunkiin ja pohjoiseen Miklošičeva-katu kohti '
+          + 'rautatieasemaa. Aukion laidalla seisoo punainen Ilmestyksen '
+          + 'fransiskaanikirkko, joka rakennettiin vuosina 1646–1660.'
+          + '\n\n'
+          + 'Aukion nykyinen ilme on myöhäisempi: vuoden 1895 maanjäristyksen '
+          + 'jälkeen Max Fabiani suunnitteli sen neljän kadun ja neljän '
+          + 'pankin solmukohdaksi, ja pyöreäksi aukion muotoili Edvard '
+          + 'Ravnikar vuosina 1987–88.',
+        kuvat: [
+          {
+            tiedosto: 'Ljubljana, Prešernov trg (1).jpg',
+            lyhyt: 'Prešernin aukio ja punainen Ilmestyksen fransiskaanikirkko.',
+            selite: 'Prešernin aukiolla kohoaa punainen fransiskaanikirkko, ja aukion muut talot ovat myöhemmältä ajalta.',
+            lahde: 'Palickap, Wikimedia Commons (CC BY-SA 4.0)',
+          },
+        ],
+      },
+      {
+        nimi: 'Tromostovje', lat: 46.0511, lon: 14.50621,
+        wiki: 'Tromostovje',
+      },
+      { nimi: 'Ljubljanan tuomiokirkko', lat: 46.05076, lon: 14.50825, wiki: 'Ljubljanan tuomiokirkko' },
+      { nimi: 'Ljubljanan linna', lat: 46.04885, lon: 14.50857, wiki: 'Ljubljanan linna' },
+      {
+        nimi: 'Keskustori', lat: 46.0512, lon: 14.50966,
+        aika: '1940–1942',
+        teksti: 'Vodnikin aukiolla ei ole isoisän aikaan toria. Paikalla seisoo '
+          + 'vanha luostari, jossa toimii hiippakunnan tyttökoulu. Se tuhoutuu '
+          + 'vuoden 1895 maanjäristyksessä, ja tyhjentyneelle aukiolle syntyy '
+          + 'ulkotori.'
+          + '\n\n'
+          + 'Nykyisen torihallin suunnitteli Jože Plečnik vuosina 1931–1939, ja '
+          + 'se rakennettiin 1940–1942: kaksikerroksinen halli seuraa joen '
+          + 'kaarta, jokipuolella on suuret puolipyöreät ikkunat ja '
+          + 'katupuolella pylväskäytävä. Vuodesta 2021 tori kuuluu Plečnikin '
+          + 'perintönä UNESCOn maailmanperintöön.',
+        kuvat: [
+          {
+            tiedosto: 'Ljubljana - Central Market.jpg',
+            lyhyt: 'Keskustorin kojut Plečnikin torihallin edessä ylhäältä nähtynä.',
+            selite: 'Ljubljanan keskustori linnan suunnasta katsottuna: kojuja puiden alla ja Plečnikin pitkä torihalli joen rannassa.',
+            lahde: 'Tiia Monto, Wikimedia Commons (CC BY-SA 3.0)',
+          },
+        ],
+      },
+      {
+        nimi: 'Lohikäärmesilta', lat: 46.05181, lon: 14.51047,
+        aika: '1901',
+        teksti: 'Isoisän aikaan tässä ei ole vielä Lohikäärmesiltaa. Jokea ylittää '
+          + 'vanha tammisilta, Teurastajien silta, joka rakennettiin vuonna 1819 '
+          + 'ja vaurioitui pahoin vuoden 1895 maanjäristyksessä. Sen tilalle '
+          + 'rakennettiin pormestari Ivan Hribarin aikana teräsbetonisilta, '
+          + 'jonka työt alkoivat 1. heinäkuuta 1900.'
+          + '\n\n'
+          + 'Silta valmistui 1901 keisari Frans Joosefin jubileumisiltana, ja '
+          + 'lohikäärmeiden mukaan se nimettiin uudelleen heinäkuussa 1919. Se '
+          + 'on yksi parhaista Wienin secession-tyylisistä teräsbetonisilloista.',
+        kuvat: [
+          {
+            tiedosto: 'Dragons Bridge, Ljubljana 2.jpg',
+            lyhyt: 'Lohikäärmesilta ja sen vihreä lohikäärmepatsas Ljubljanica-joen yllä.',
+            selite: 'Lohikäärmesillan kaari ja vihreä lohikäärmepatsas sillan kulmassa.',
+            lahde: 'Thomas Ledl, Wikimedia Commons (CC BY-SA 4.0)',
+          },
+        ],
+      },
+    ],
+  },
   firenze: {
     polku: 'assets/kartat/firenze-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
