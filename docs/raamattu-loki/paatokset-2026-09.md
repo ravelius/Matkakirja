@@ -207,3 +207,7 @@ Haarat sisalto-nimisto-taso-deu cca22bea, -ita b8fcdbe0, -esp 5dc92810: 61 nimio
 ## KAUPUNKIPOPUP KORJATTU (Pelikoodari 06b438bc) (21.9.2026 klo 01.45)
 
 Syy: liuskan lepotesti alkoi kun kamera-ajon lupaus tayttyi ennen renderkameraa -> liuska aukesi ja sulkeutui heti (42 px jalkisiirto). Nyt liuska seuraa merkkia asettumisvaiheen (>= 1,5 s, piste levossa) ja lepotesti alkaa vasta sitten. Savuke-kaupunkipopup sai SAVUKE_HIDAS-kytkimen (CPU-hidastus = CI:n kuorma), polton kuormassa 45/45. v1984 voi menna CI:hin polton jalkeen.
+
+## TAYSI POLTTO VALMIS (Karttaseppa a4224925) (21.9.2026 klo 01.56)
+
+Koko pyramidi 2026-09-21-* + pallo 20260921a: 100 min, 209 850 laattaa, eheys tasmaa, laatat ja pallosarja amparissa; luettelo ~/pyramidi-poltto/vienti-20260921/pyramidi.json (EI amparissa ennen osoitinta). Muutokset: laivat vesirajaan (runko leikattu, varjo + aaltopari), Horation reitti pois (koodi jaa), Versailles/Etretat/Mont Blanc taso 1 (Etretat --polta-hahmotelmat, Mont Blancin merkille sadekeha), koristeet vaistavat meren nimia, z5 vain palavat nostot esteina. maapolygonit.json 1,4 -> 2,7 Mt (gz 889 kt). Nimiotaso erikseen uusintapoltettava (DEU/ITA/ESP huomenna). HUOM: tasot ja kuvamerkit nakyvat kohdemaassa vasta kun Pelikoodari tuo ne elavaan kerrokseen. Julkaisukaava: v1984 (korjaukset + sisalto) -> v1985 (osoitin; luettelo ampariin juuri ennen mergea, edellinen talletettu, tuotanto tarkistetaan heti).
