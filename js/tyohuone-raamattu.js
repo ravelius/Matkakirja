@@ -9853,7 +9853,14 @@ export const RAAMATTU = {
           + 'leveammalla. Mergetty. OMISTAJA 10.05: "Tokenit vahissa niin tehkaa vain '
           + 'valttamattomimmat" -> vain v1974:n julkaisu (pallosarja j + luettelo, Opus 2) '
           + 'ja tyopolut-era (Opus 1) loppuun, sitten kaikki pysahtyvat; astropulun kuva, '
-          + 'CYP/ITA/POL ja muut jonoon.',
+          + 'CYP/ITA/POL ja muut jonoon. V1974 MERGETTY 20.9.2026 klo 10.23, TUOTANNOSSA 10.25 '
+          + '(joet kartalle: viivat c + pallosarja 20260920j, luettelo amparissa; Gironde '
+          + 'laitteella, DNK/EST, Padise, Codexin astronauttikypara, pulun historia, '
+          + 'tyopolut 19 riviä siivottu, kohdekartat numeroympyroin, kartuscha, vanhat kuvat '
+          + 'era 2). KAIKKI SESSIOT PYSAHTYNEET. Silmatarkistus laitteella (joet, Gironde, '
+          + 'kypara) tekematta - seuraavan session ensimmainen. Jono: astropulun kuva, '
+          + 'CYP/ITA/POL, savuke-nostoklikkaus, 2026-09-20b-viivat siivous, savuke-pulun-'
+          + 'kuplat, kartuschan vajaat maat, savuke-pollon 11 punaista.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
