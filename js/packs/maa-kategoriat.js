@@ -16570,6 +16570,214 @@ export const MAA_KATEGORIAT = {
       },
     },
     {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Liettuan historia kertoo vallasta ja sitkeydestä: valtakunta joka '
+        + 'ulottui mereltä toiselle, kaupunki jonka rautasusi ennusti unessa, '
+        + 'paperi joka julisti itsenäisyyden, ja ketju käsiä joka ulottui yli '
+        + 'kolmen maan rajan.',
+      nostot: [
+        {
+          otsikko: 'Valtakunta ulottui mereltä merelle',
+          aika: '1430',
+          tiedosto: 'Map of the Grand Duchy of Lithuania (pink) and the Crown of the Kingdom of Poland (red) and its neighborhood in 1386 – 1434 (English version).png',
+          teksti: 'Liettuan suuriruhtinaskunta oli 1400-luvun alussa Euroopan '
+            + 'suurin valtio. Suuriruhtinas Vytautas Suuri hallitsi aluetta, '
+            + 'joka ulottui Itämereltä lähelle Mustaamerta ja kattoi nykyisen '
+            + 'Valko-Venäjän, suuren osan Ukrainaa sekä palasia Puolaa, Latviaa '
+            + 'ja Venäjää. Vuonna 1386 suuriruhtinas Jogaila meni naimisiin '
+            + 'Puolan kuningattaren kanssa ja otti kasteen, ja maat liittyivät '
+            + 'henkilöunioniin, joka näkyy tässä kartassa vierekkäisinä '
+            + 'valtakuntina. Liettuasta tuli näin viimeinen pakanallinen '
+            + 'valtio, joka kääntyi kristinuskoon Euroopassa.',
+          lyhyt: 'Liettuan suuriruhtinaskunta oli 1400-luvun alussa Euroopan pinta-alaltaan suurin valtio.',
+          selite: 'Liettuan suuriruhtinaskunta ulottui 1400-luvun alussa '
+            + 'Itämereltä lähelle Mustaamerta ja oli aikansa laajin '
+            + 'eurooppalainen valtio.',
+          lahde: 'Poznaniak ja Spiridon Ion Cepleanu, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Liettuan suuriruhtinaskunta',
+        },
+        {
+          otsikko: 'Rautasusi näytti unessa kaupungin paikan',
+          aika: '1323',
+          tiedosto: 'Gediminas statue at the cathedral square.jpg',
+          teksti: 'Tarinan mukaan suuriruhtinas Gediminas nukahti '
+            + 'metsästysretken jälkeen Vilnian ja Neriksen jokien '
+            + 'yhtymäkohdassa ja näki unta rautaisesta sudesta, joka ulvoi '
+            + 'kukkulalla sadan suden äänellä. Ylipappi Lizdeika tulkitsi '
+            + 'unen: kukkulalle nousisi pääkaupunki, jonka maine kaikuisi '
+            + 'yhtä kauas kuin suden ulvonta. Gediminas perusti kaupungin '
+            + 'paikalle perinteisesti vuonna 1323 ja kutsui sinne kauppiaita '
+            + 'ja käsityöläisiä ympäri Eurooppaa. Tuomiokirkkoaukiolla seisova '
+            + 'patsas muistuttaa perustajasta, ja rautasudesta on tullut yksi '
+            + 'Liettuan tunnetuimmista tunnuksista.',
+          lyhyt: 'Gediminas näki unessa rautaisen suden ja perusti perinteen mukaan Vilnan vuonna 1323.',
+          selite: 'Tuomiokirkkoaukion patsas muistuttaa suuriruhtinas '
+            + 'Gediminaksesta, joka perinteen mukaan perusti Vilnan unessa '
+            + 'nähdyn rautasuden ohjaamana.',
+          lahde: 'Ypsilon from Finland, Wikimedia Commons (CC0)',
+          wiki: 'Gediminas',
+        },
+        {
+          otsikko: 'Kaksikymmentä nimeä vapautti maan',
+          aika: '1918',
+          tiedosto: 'Vilnius, Signatarų namai.jpg',
+          teksti: 'Ensimmäisen maailmansodan lopulla, Venäjän ja Saksan '
+            + 'miehitysten välissä, Liettuan neuvosto kokoontui Vilnan '
+            + 'Pilies-kadun talossa ja allekirjoitti 16. helmikuuta 1918 '
+            + 'itsenäisyysjulistuksen. Sen allekirjoitti kaksikymmentä '
+            + 'jäsentä, puheenjohtajanaan lääkäri Jonas Basanavičius, ja se '
+            + 'julisti demokraattisen Liettuan valtion, jonka pääkaupunki '
+            + 'olisi Vilna. Talo tunnetaan nykyään Signatarų-talona. '
+            + 'Alkuperäinen asiakirja katosi Kaunasista neuvostomiehityksen '
+            + 'alla 1940 ja löytyi vasta 2017 Saksan ulkoministeriön '
+            + 'arkistosta Berliinistä.',
+          lyhyt: 'Liettuan itsenäisyysjulistus allekirjoitettiin Vilnassa 16. helmikuuta 1918.',
+          selite: 'Vilnan Pilies-kadun talossa allekirjoitettiin 16. '
+            + 'helmikuuta 1918 Liettuan itsenäisyysjulistus, ja talo tunnetaan '
+            + 'nykyään Signatarų-talona.',
+          lahde: 'Terminator216, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Liettuan itsenäisyysjulistus',
+        },
+        {
+          otsikko: 'Kaksi miljoonaa kättä yli kolmen maan',
+          aika: '1989',
+          tiedosto: 'A segment of the Baltic Way at the Green Bridge in Vilnius.jpg',
+          teksti: 'Elokuun 23. päivänä 1989 noin kaksi miljoonaa ihmistä '
+            + 'tarttui toisiaan käsistä ja muodosti yhtenäisen ketjun '
+            + 'Tallinnasta Riian kautta Vilnaan — matkaa kertyi yli '
+            + 'kuusisataa kilometriä. Baltian ketju järjestettiin '
+            + 'täsmälleen viisikymmentä vuotta sen jälkeen, kun '
+            + 'Neuvostoliitto ja natsi-Saksa olivat salaisessa sopimuksessa '
+            + 'jakaneet Baltian maat keskenään. Rauhanomainen mielenilmaus '
+            + 'vaati Viron, Latvian ja Liettuan miehitysten päättämistä, ja '
+            + 'tapahtuma näkyi television välityksellä kaikkialla '
+            + 'maailmassa. Kaksi vuotta myöhemmin kaikki kolme maata olivat '
+            + 'jälleen itsenäisiä.',
+          lyhyt: 'Baltian ketju yhdisti kaksi miljoonaa ihmistä yli 600 kilometrin matkalla vuonna 1989.',
+          selite: 'Elokuussa 1989 kaksi miljoonaa ihmistä muodosti käsi '
+            + 'kädessä ketjun Tallinnasta Vilnaan vaatien Baltian maiden '
+            + 'itsenäisyyttä.',
+          lahde: 'Jonas Kernagis, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Baltian ketju',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä suuriruhtinas Gediminas näki tarinan mukaan unessaan?',
+        vaihtoehdot: [
+          'Rautaisen suden',
+          'Kultaisen kotkan',
+          'Valkoisen hirven',
+          'Mustan käärmeen',
+        ],
+        oikea: 0,
+        fakta: 'Ylipappi Lizdeika tulkitsi unen tarkoittavan kaupunkia, jonka '
+          + 'maine kaikuisi kauas.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Liettuan ruoka kertoo niukkuudesta ja juhlasta: peruna joka '
+        + 'muutti nimensä ilmalaivan mukaan, keitto joka väriytyy pinkiksi, '
+        + 'leipä jota ei koskaan heitetä pois, ja makkara joka kypsyy '
+        + 'kuukausia savussa.',
+      nostot: [
+        {
+          otsikko: 'Peruna sai nimen ilmalaivasta',
+          aika: '1920-luku',
+          tiedosto: 'Cepelinai 1, Vilnius, Lithuania - Diliff.jpg',
+          teksti: 'Cepelinai on Liettuan tunnetuin ruokalaji: raastetusta ja '
+            + 'keitetystä perunataikinasta muotoillut, jauhelihalla, '
+            + 'raejuustolla tai sienillä täytetyt pallot, joita tarjoillaan '
+            + 'silava- tai smetanakastikkeen kanssa. Ruokalaji tunnettiin jo '
+            + '1800-luvulla nimellä didžkukuliai, mutta nykyinen nimi ja '
+            + 'soikea muoto vakiintuivat 1920- ja 1930-luvuilla, kun kreivi '
+            + 'Ferdinand von Zeppelinin ilmalaivat olivat lehtiotsikoissa ja '
+            + 'pallojen muoto muistutti niitä. Samalla cepelinaista tuli '
+            + 'tuoreen itsenäisen Liettuan uudistetun maatalouden symboli.',
+          lyhyt: 'Cepelinai on peruna-taikinasta tehty täytetty pallo, joka on nimetty ilmalaivojen mukaan.',
+          selite: 'Cepelinai on perunataikinasta muotoiltu, lihalla tai '
+            + 'raejuustolla täytetty pallo, joka on nimetty ilmalaivojen '
+            + 'mukaan 1920-luvulla.',
+          lahde: 'Diliff, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Cepelinai',
+        },
+        {
+          otsikko: 'Keitto joka väriytyy pinkiksi',
+          aika: 'Kesällä',
+          tiedosto: 'Šaltibarščiai, Pirmas blynas, Vilnius, June 2026.jpg',
+          teksti: 'Šaltibarščiai on kylmä, kirkkaanpinkki keitto, joka '
+            + 'tehdään keitetystä punajuuresta ja hapanmaitotuotteesta, '
+            + 'useimmiten kefiiristä tai piimästä. Sitä tarjoillaan kesällä '
+            + 'kylmänä, usein keitetyn munan, tillin ja lämpimien perunoiden '
+            + 'kanssa. Keiton juuret ulottuvat Liettuan suuriruhtinaskunnan '
+            + 'aikaan, jolloin ylimystön pöydässä kylmiin keittoihin '
+            + 'lisättiin ylellisiä aineksia kuten rapua tai riistaa isännän '
+            + 'varallisuuden osoitukseksi. Ajan myötä yksinkertaisempi '
+            + 'versio levisi tavallisiin koteihin, ja siitä tuli koko maan '
+            + 'rakastama kesäruoka.',
+          lyhyt: 'Šaltibarščiai on punajuuresta ja kefiiristä tehty kylmä, pinkki kesäkeitto.',
+          selite: 'Šaltibarščiai on punajuuresta ja kefiiristä tehty '
+            + 'kirkkaanpinkki kylmä keitto, jota tarjoillaan kesällä munan '
+            + 'ja perunoiden kanssa.',
+          lahde: 'Bdx, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Leipä jota ei koskaan heitetä pois',
+          aika: 'Joka aterialla',
+          tiedosto: 'Ruginė duona.jpg',
+          teksti: 'Tumma ruisleipä, ruginė duona, on liettualaisen '
+            + 'ruokapöydän perusta, ja se leivotaan yleensä hapanjuurella '
+            + 'pitkän vaivaamisen ja kypsytyksen jälkeen. Leipää on '
+            + 'arvostettu niin paljon, ettei sitä perinteisesti heitetä pois '
+            + 'eikä aseteta ylösalaisin pöydälle, ja jos pala putoaa '
+            + 'lattialle, se saatetaan nostaa ja suudella ennen syömistä. '
+            + 'Tapa juontaa juurensa ajoilta, jolloin leipä oli niukkaa ja '
+            + 'sen tuhlaaminen nähtiin sekä välinpitämättömyytenä että '
+            + 'kiittämättömyytenä ruoalle. Perinne elää yhä monissa '
+            + 'liettualaisissa kodeissa.',
+          lyhyt: 'Ruisleipää arvostetaan Liettuassa niin paljon, että pudonnut pala saatetaan suudella.',
+          selite: 'Tumma hapanjuuriruisleipä eli ruginė duona on '
+            + 'liettualaisen ruokapöydän perusta, jota kohdellaan '
+            + 'kunnioittaen.',
+          lahde: 'Bearas, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Makkara joka kypsyy kuukausia savussa',
+          aika: '1500-luvulta',
+          tiedosto: 'Lietuviškas skilandis.JPG',
+          teksti: 'Skilandis on liettualainen kylmäsavustettu makkara, joka '
+            + 'täytetään karkeaksi jauhetulla sianlihalla, suolalla, '
+            + 'pippurilla ja valkosipulilla ja jonka kuorena käytetään '
+            + 'perinteisesti sian mahalaukkua tai virtsarakkoa. Se kypsyy '
+            + 'savussa ja kuivuu useita kuukausia, jolloin siitä tulee '
+            + 'tiivis ja voimakkaan makuinen. Reseptejä tunnetaan jo '
+            + '1500-luvulta, ja erityisesti Suvalkijan alue on tunnettu '
+            + 'skilandiksestaan. Euroopan unioni myönsi liettualaiselle '
+            + 'skilandikselle suojatun maantieteellisen merkinnän 2009 ja '
+            + 'erillisen aidon perinteisen tuotteen aseman 2016.',
+          lyhyt: 'Skilandis on kylmäsavustettu, sian mahaan täytetty makkara, joka kypsyy kuukausia.',
+          selite: 'Skilandis on kylmäsavustettu, karkeaksi jauhetusta '
+            + 'sianlihasta tehty makkara, joka kypsyy kuukausia sian '
+            + 'mahalaukun sisällä.',
+          lahde: 'Vilensija, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minkä mukaan cepelinai on nimetty?',
+        vaihtoehdot: [
+          'Ilmalaivojen',
+          'Kalastusveneiden',
+          'Sotilasmerkkien',
+          'Höyryjunien',
+        ],
+        oikea: 0,
+        fakta: 'Ruokalaji nimettiin ja muotoiltiin ilmalaivojen mukaan '
+          + '1920- ja 1930-luvuilla.',
+      },
+    },
+    {
       id: 'menovinkit',
       nimi: 'Menovinkit',
       johdanto: 'Liettua on siirtänyt aarteensa ruudulle: yksi mies maalasi ja '
