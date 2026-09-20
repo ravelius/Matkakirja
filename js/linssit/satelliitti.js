@@ -143,7 +143,10 @@
 import { html, polloNimilappu } from '../ui-apurit.js';
 import { polloUlkoinenKysymys } from '../pollo.js';
 import { asennaLivianAstronauttitila } from '../livia-astronautti.js';
-import { hiljennaAmbienssi, palautaAmbienssi, stopPlaceStream } from '../ambience-stream.js';
+import {
+  hiljennaAmbienssi, palautaAmbienssi, stopPlaceStream,
+  kaynnistaPohjaMusiikki, pidaMusiikkiKiinni,
+} from '../ambience-stream.js';
 import { LINSSIN_HILJENNYS } from '../siirtymamusiikki.js';
 import { stopDiaryVoice } from '../luenta.js';
 import { pysaytaLukija } from '../lukija.js';
@@ -236,6 +239,13 @@ export function vaiennaAanet(ui = null) {
   let purettu = false;
   try { hiljennaAmbienssi(LINSSIN_HILJENNYS); } catch { /* ääntä ei ole */ }
   try { stopPlaceStream(); } catch { /* äänimaisemaa ei ole */ }
+  /*
+   * TAUSTAMUSIIKKI KIINNI LINSSIN AJAKSI (omistaja 20.9.2026).
+   * Perustelut ja mitattu juurisyy: js/ambience-stream.js
+   * `pidaMusiikkiKiinni`. Sama kahva on topografialinssillä.
+   */
+  let musiikkipito = null;
+  try { musiikkipito = pidaMusiikkiKiinni(); } catch { /* musiikkia ei ole */ }
   try { stopDiaryVoice(ui); } catch { /* luentaa ei ole */ }
   try { pysaytaLukija(); } catch { /* lukijaa ei ole */ }
   return {
@@ -244,8 +254,18 @@ export function vaiennaAanet(ui = null) {
     pura() {
       if (purettu) return;
       purettu = true;
+      try { musiikkipito?.pura?.(); } catch { /* jo purettu */ }
+      musiikkipito = null;
       try { palautaAmbienssi(LINSSIN_HILJENNYS); } catch { /* ääntä ei ole */ }
       try { if (!ui?.dead) ui?.syncAmbience?.(); } catch { /* maisemaa ei ole */ }
+      /*
+       * MUSIIKKI TAKAISIN. `syncAmbience` tekee tämän, kun ui on
+       * elossa; ilman sitä (savuke, testi, purettu ui) raita jäisi
+       * pysäytetyksi linssin jälkeen. Kutsu ilman argumentteja
+       * palauttaa muistissa olevan paikan raidan, eikä se tee mitään,
+       * jos sama raita jo soi.
+       */
+      try { if (ui?.dead || !ui?.syncAmbience) kaynnistaPohjaMusiikki(); } catch { /* ei musiikkia */ }
     },
   };
 }

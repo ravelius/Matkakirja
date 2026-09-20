@@ -2047,7 +2047,15 @@ function variMaanSuoja(iso, L) {
  *   renkaat: Array|null, avain: string}|null}
  */
 /** Kerman peiton lattia (ks. pyramidinTasoitus). */
-export const KERMAN_PEITTO_VAHINTAAN = 0.95;
+/*
+ * OMISTAJAN KOE 20.9.2026 klo 15.40: "huntu, joka peittaa muiden maiden
+ * korkeuserot, olisikin lapinakyva ... muuta lapinakyvyys arvoksi
+ * viisikymmenta prosenttia. Ei haittaa, jos samalla paljastuu myos muiden
+ * maiden karttanostot." Kiintea 0,5 ohittaa luettelon peiton (0,85) ja
+ * 18.9. lattian 0,95 (PAATOKSET 34 kohta 17 d jaa taltioon).
+ */
+export const KERMAN_PEITTO_VAHINTAAN = 0.5;
+export const KERMAN_PEITTO_KIINTEA = 0.5;
 
 export function pyramidinTasoitus() {
   const vt = varitasonKirjaus();
@@ -2060,7 +2068,7 @@ export function pyramidinTasoitus() {
    * Lattia 0,95 peittää musteen ja reliefin samalla siveltimellä ilman
    * lisäkuormaa; kohdemaan sisus palautetaan renkaista ennallaan.
    */
-  const peitto = Math.max(KERMAN_PEITTO_VAHINTAAN, Number.isFinite(vt.peitto) ? vt.peitto : 0);
+  const peitto = KERMAN_PEITTO_KIINTEA; // omistajan koe 20.9.2026: 50 %
   if (!(peitto > 0)) return null;
   if (variSuojaIso !== variMaaNyt) {
     const L = vt.laatikko;

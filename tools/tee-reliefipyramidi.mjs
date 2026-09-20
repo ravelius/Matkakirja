@@ -661,11 +661,47 @@ export function laatanPikselit(rgb, ruudukko, bbox) {
   return kuva;
 }
 
-/** Onko laatta pelkkää avomerta? Sellaista ei kannata polttaa. */
-export function pelkkaaMerta(ruudukko, raja = -200) {
+/*
+ * ONKO LAATTA TASAISTA VÄRIÄ? Sellaista ei kannata polttaa.
+ *
+ * MITTAUS 20.9.2026 (omistajan kaappaus: Intian valtameri tasaisina
+ * suorakaiteina). Tämä testi kysyi ENNEN vain syvyyttä: jos jokainen
+ * solu oli alle −200 m, laatta ohitettiin. Perustelu kommentissa oli
+ * "koska se on tasaista väriä" — mutta syvyys ei ole tasaisuus.
+ * Keski-Intian selänne, Ninetyeast Ridge ja Sundan hauta ovat kaikki
+ * kokonaan −200 metrin alapuolella, ja niissä on kilometrien
+ * korkeuserot.
+ *
+ * Mitattu ikkunassa 40…100° E, −30…25° N (z7-laatan koko 2,13°):
+ * ohitettuja "avomerilaattoja" 420, joista TASAISIA VAIN 31 ja
+ * reliefiä yli 500 m peräti 389 eli 93 %. Suurimmat korkeuserot
+ * 4 800 m. Juuri ne 389 laattaa piirtyivät pelissä yhtenä sinisenä
+ * suorakaiteena (js/reliefipyramidi.js MERIVARI).
+ *
+ * Nyt testi kysyy sitä, mitä perustelu aina sanoi: onko laatan
+ * korkeusero niin pieni, ettei siitä tulisi kuin yhtä väriä.
+ * Syvyysehto jää mukaan, koska matala vesi ja rannikko kuuluvat
+ * piirtää aina — ne ovat kartan muoto, eivät pohjaväri.
+ *
+ * TASAISUUDEN_RAJA on metreinä. Väriasteikko on metrin tarkkuudella
+ * (tools/reliefivarit.mjs LUT), mutta varjostus tekee jo muutaman
+ * metrin erosta näkyvää pintaa, joten raja on tiukka.
+ */
+export const TASAISUUDEN_RAJA = 20;
+
+export function pelkkaaMerta(ruudukko, raja = -200, tasaisuus = TASAISUUDEN_RAJA) {
   const { z } = ruudukko;
-  for (let i = 0; i < z.length; i++) if (z[i] > raja) return false;
-  return true;
+  let min = Infinity;
+  let max = -Infinity;
+  for (let i = 0; i < z.length; i++) {
+    const v = z[i];
+    if (v > raja) return false;
+    if (v < min) min = v;
+    if (v > max) max = v;
+  }
+  // Tyhjä ruudukko ei ole laatta; se ei myöskään ole merta.
+  if (!Number.isFinite(min)) return false;
+  return max - min <= tasaisuus;
 }
 
 /*

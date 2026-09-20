@@ -1376,6 +1376,18 @@ export function kaynnistaPohjaMusiikki(cityId = musiikinPaikka(), maa = musiikin
    * palatessa oikea raita palaa samaan kaupunkiin.
    */
   if (!sfx.enabled || !musiikkiPaalla()) { stopPohjaMusiikki(); return; }
+  /*
+   * PITO VOITTAA KAIKKI KUTSUJAT (20.9.2026).
+   *
+   * Ensin pito oli pelkkä kuuntelija musiikkitilan muutoksille, ja se
+   * kattoi sen reitin, jolla vika löydettiin (kytkin → syncAmbience).
+   * Savuke osoitti sen riittämättömäksi: SUORA `kaynnistaPohjaMusiikki`
+   * -kutsu kesken linssin käynnisti raidan silti. Pito, jonka ohi
+   * pääsee kutsumalla, ei ole pito — siksi ehto on tässä, kaikkien
+   * kutsujien yhteisessä portissa. Paikka talletetaan yllä ennen tätä,
+   * joten oikea raita palaa, kun pito puretaan.
+   */
+  if (musiikkiPidossa()) { stopPohjaMusiikki(); return; }
   const polku = pohjanPolku(cityId, maa);
   if (!polku || (pohja && pohjaPolku === polku)) return;
   /*
@@ -1495,6 +1507,53 @@ export function kaynnistaPohjaMusiikki(cityId = musiikinPaikka(), maa = musiikin
 }
 
 /** Sammuttaa pohjavireen pehmeästi (taustaäänet pois, radiotila). */
+/*
+ * TAUSTAMUSIIKKI KIINNI NIIN KAUAN KUIN LINSSI ON AUKI (omistaja
+ * 20.9.2026: astronautin kamera ja topografialinssi).
+ *
+ * MIKSI TÄMÄ EI OLE `hiljennaAmbienssi`. Se kutsuu
+ * `asetaMusiikkitila(syy, true)`, ja musiikkivalitsin aloittaa rivillä
+ * `if (!Object.hasOwn(TILARAIDAT, nimi)) return;` — TILARAIDAT tuntee
+ * vain `lehti` ja `matkalaukku`, joten linssin syy `linssi` palautti
+ * tekemättä mitään EIKÄ SANONUT SIITÄ. Tuntemattoman nimen sietokyky on
+ * tarkoituksellinen, joten linssi sanoo suoraan mitä haluaa.
+ *
+ * MIKSI KERTAPYSÄYTYS EI RIITÄ. Musiikkikytkimen paluu päälle ajaa
+ * `syncAmbience`n, joka käynnistää kaupungin raidan uudestaan kesken
+ * linssin (mitattu savukkeessa 20.9.2026). Siksi tämä jää kuuntelemaan
+ * musiikkitilaa ja pysäyttää raidan uudelleen, kunnes kahva puretaan.
+ *
+ * PAIKKA JÄÄ MUISTIIN (js/musiikkivalitsin.js asetaMusiikkipaikka),
+ * joten `pura` palauttaa saman raidan samaan kaupunkiin.
+ */
+let musiikkipitoja = 0;
+
+/** Onko jokin linssi pitämässä taustamusiikkia kiinni? */
+export const musiikkiPidossa = () => musiikkipitoja > 0;
+
+export function pidaMusiikkiKiinni() {
+  let purettu = false;
+  musiikkipitoja += 1;
+  const pysayta = () => {
+    if (purettu) return;
+    try { stopPohjaMusiikki(); } catch { /* musiikkia ei ole */ }
+  };
+  pysayta();
+  let irrota = null;
+  try { irrota = kuunteleMusiikkitilaa(pysayta); } catch { /* ei kuuntelijaa */ }
+  return {
+    /** Mittari savukkeille ja testeille. */
+    kiinni: () => !purettu,
+    pura() {
+      if (purettu) return;
+      purettu = true;
+      musiikkipitoja = Math.max(0, musiikkipitoja - 1);
+      try { irrota?.(); } catch { /* jo irti */ }
+      irrota = null;
+    },
+  };
+}
+
 export function stopPohjaMusiikki() {
   const vanha = pohja;
   pohja = null;
