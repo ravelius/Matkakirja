@@ -253,8 +253,7 @@ async function avaaPeli({ leveys, korkeus }) {
       l.ladoHeti();
       await new Promise((v) => setTimeout(v, 400));
     });
-    // Luenta vaiennetaan, ettei se peitä kalustetta mittaushetkellä.
-    await sivu.evaluate(() => { try { window.matkakirja.ui.puhuja?.vaienna?.(); } catch { /* ei puhujaa */ } });
+    // (Luennan vaiennus poistettu: ui.puhuja ei ole UI:n kenttä - savukevartija.)
     await sivu.waitForTimeout(600);
   }
   return { ctx, sivu, virheet, auki };
