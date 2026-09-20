@@ -144,8 +144,20 @@ for (const ruutu of RUUDUT) {
   await sivu.waitForTimeout(3000);
   await sivu.evaluate(() => { const { ui } = window.matkakirja; clearTimeout(ui.automaattiheittoAjastin); ui.automaattiheittoAjastin = null; });
 
-  const siivoa = () => sivu.evaluate(() => {
-    for (const el of document.querySelectorAll('.fokusnosto-kerros, .fokuskohde-popup, .elaintaky-kerros, .skandaali-kerros, .hetki-kerros')) el.remove();
+  /*
+   * SAAPUMISVIRTA POIS TIELTÄ (CI 20.9.2026, PR #2634: väite 5b punainen
+   * molemmilla ruuduilla, paikallisesti vihreä). Saapumisen kuvakortit
+   * (js/fokusvirta.js) nousevat kartan päälle omaan tahtiinsa, ja CI:n
+   * ajoituksella sellainen kuva osui täsmälleen pyyhkäisyn
+   * lähtöpisteeseen: pointerdown meni saapumiskuvan <img>:lle eikä
+   * kortin kuvanapille, joten sarja ei nähnyt elettä. Virta suljetaan
+   * pelin omalla sulkijalla ja jäänteet poistetaan ennen jokaista
+   * korttia — sama kuin savuke-kuvalahteet ja savuke-kartuscha-3.
+   */
+  const siivoa = () => sivu.evaluate(async () => {
+    const { suljeFokusvirta } = await import('/js/fokusvirta.js');
+    suljeFokusvirta(window.matkakirja.ui);
+    for (const el of document.querySelectorAll('.fokusnosto-kerros, .fokuskohde-popup, .elaintaky-kerros, .skandaali-kerros, .hetki-kerros, .saapumistraileri, .fokusvirta-isokuva, .fokuskohde-zoom')) el.remove();
   });
 
   /* ── 1 + 4 + 5: täkynosto, kaksi kuvaa (Chaîne des Puys) ─────────── */
@@ -190,6 +202,13 @@ for (const ruutu of RUUDUT) {
   const n = lisaa.nappi;
   if (n) {
     const x0 = n.x + Math.min(60, n.w * 0.2);
+    // Lähtöpisteen on oltava kortin kuvanapilla, ei minkään päälle
+    // nousseen kortin: muuten ele ei mittaa karusellia.
+    const alla = await sivu.evaluate(({ x, y }) => {
+      const e = document.elementFromPoint(x, y);
+      return e ? `${e.tagName}.${e.className}` : 'ei mitään';
+    }, { x: x0, y: n.y });
+    vaadi(`${ruutu.nimi} · pyyhkäisyn lähtöpiste on kortin kuvalla`, /nostokuva-img|nostokuva-nappi/.test(alla), alla);
     await sivu.mouse.move(x0, n.y);
     await sivu.mouse.down();
     await sivu.mouse.move(x0 - 90, n.y + 4, { steps: 8 });
