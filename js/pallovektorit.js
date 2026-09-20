@@ -352,7 +352,32 @@ export const KOROSTUS_PEITTO = 1;
  * TUMMENNUS_VIIVA); pallolla saaret piirtyvät laatoista eri
  * mittakaavassa eikä sama mittaus päde.
  */
-export const VEKTORIT_KOROSTUS_LEVEYS_CSS = [3.2, 5];
+/*
+ * KAUKOPÄÄ 3,2 → 1,6 css-px (Sonnet 1, kierros 18, 20.9.2026:
+ * *"Tanskan ja Viron ääriviiva on kaukokuvassa paksu musta möykky"*).
+ *
+ * MITATTU SYY: kaukokuvassa (tiheys 20 laitepx/aste) kehän janojen
+ * mediaanipituus on 1,1 laitepikseliä ja 43 % janoista on alle
+ * pikselin, kun viiva oli 9,6 laitepikseliä leveä (3,2 css × dpr 3).
+ * Viiva oli siis YHDEKSÄN KERTAA janaa pidempi kuin jana itse — ja
+ * saarivaltiolla (Tanska 15 rengasta, Viro 5) päällekkäiset janat
+ * täyttivät maan umpeen. Lähipäässä sama luku on 5 css-px eikä siinä
+ * ole vikaa: siellä jana on 5 laitepikseliä pitkä.
+ *
+ * 1,6 css-px on kaukopäässä kaksi kertaa rantaviivan leveys (0,8) —
+ * kehä erottuu yhä korostukseksi mutta ei enää ole leveämpi kuin
+ * kuvio, jota se seuraa.
+ */
+export const VEKTORIT_KOROSTUS_LEVEYS_CSS = [1.6, 5];
+/**
+ * PIENIN PIIRRETTÄVÄ RENGAS laitepikseleinä (sama havainto). Rengas,
+ * jonka laatikon lävistäjä on ruudulla tätä pienempi, ei piirrä muotoa
+ * vaan pisteen: Tanskan pikkusaaret olivat kaukokuvassa pelkkää
+ * mustetta. Raja on kaksi kertaa kaukopään viivanleveys (1,6 css ×
+ * dpr), eli rengas jätetään pois vasta kun se mahtuisi kokonaan oman
+ * viivansa sisään.
+ */
+export const KOROSTUKSEN_PIENIN_RENGAS_PX = 10;
 /**
  * Korostus piirtyy rannikkoviivan ja rajojen ALLE (ks. KOROSTUS ON
  * SÄDEKEHÄ yllä): läpinäkyvien jonossa pienempi luku piirtyy ensin,
@@ -1278,6 +1303,24 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
     return n;
   }
 
+  /**
+   * Piirtyykö rengas muotona vai pelkkänä mustepisteenä? Laatikon
+   * lävistäjä ruudulla = asteet × tiheys (laitepikseliä astetta kohti).
+   */
+  function rengasNakyy(rengas) {
+    if (!tiheys || !Array.isArray(rengas) || rengas.length < 2) return true;
+    let lon0 = Infinity; let lat0 = Infinity; let lon1 = -Infinity; let lat1 = -Infinity;
+    for (const [lon, lat] of rengas) {
+      if (lon < lon0) lon0 = lon;
+      if (lon > lon1) lon1 = lon;
+      if (lat < lat0) lat0 = lat;
+      if (lat > lat1) lat1 = lat;
+    }
+    const kerroin = Math.max(0.05, Math.cos((lat0 + lat1) / 2 * Math.PI / 180));
+    const lavistaja = Math.hypot((lon1 - lon0) * kerroin, lat1 - lat0) * tiheys;
+    return lavistaja >= KOROSTUKSEN_PIENIN_RENGAS_PX;
+  }
+
   /** Onko näkymä niin tarkka, että kaksoisviiva näkyisi? (ks. raja) */
   const naulattava = () => tiheys >= NAULAUKSEN_TIHEYS_RAJA;
 
@@ -1292,8 +1335,14 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
      * rannikon janat rannikkoaineistosta. Ilman ladattuja rannikkosoluja
      * korostus on entisellään.
      */
+    /*
+     * PIKKURENKAAT POIS KAUKOKUVASSA (ks. KOROSTUKSEN_PIENIN_RENGAS_PX).
+     * Mitta on renkaan laatikon lävistäjä ruudulla: asteet × tiheys.
+     */
+    const nakyvatRenkaat = renkaat.filter((r) => rengasNakyy(r));
+    if (!nakyvatRenkaat.length) return;
     const rannikot = naulattava() ? rannikkoviivat() : [];
-    const naulaus = naulaaKorostus(renkaat, rannikot);
+    const naulaus = naulaaKorostus(nakyvatRenkaat, rannikot);
     korostus.naulattuHetki = nyt();
     korostus.rannikkoja = rannikot.length;
     mittarit.korostusPudotettuja = naulaus.pudotettuja;
