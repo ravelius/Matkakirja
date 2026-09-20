@@ -316,10 +316,59 @@ test('korostus piirtyy rantaviivan ALLE mutta samassa kerroksessa', () => {
   const lahde = lue('../js/pallovektorit.js');
   // Sama pinta, sama syvyyssiirto, sama harvennus kuin muilla vektoreilla.
   assert.match(lahde, /const olio = new luokat\.LineSegments2\(geometria, materiaalit\.korostus\)/);
-  assert.match(lahde, /harvennaViivat\(renkaat, harvennus\)/);
+  /*
+   * NAULAUS 20.9.2026: harvennus ajetaan naulatuille viivoille
+   * (sisämaa admin_0:sta, rannikko rannikkoaineistosta), ei enää suoraan
+   * korostuksen renkaille. Sama funktio, sama harvennusporras.
+   */
+  assert.match(lahde, /naulaaKorostus\(renkaat, rannikot\)/);
+  assert.match(lahde, /harvennaViivat\(naulaus\.viivat, harvennus\)/);
   assert.match(lahde, /vektorijanat\(viivat, sade\(\)\)/);
   // Korostus on jaetussa materiaalitaulussa eikä oma kerroksensa.
   assert.match(lahde, /return \{ rannikko: ranta, rajat: raja, korostus: korostusMateriaali \};/);
+});
+
+/* ------------------------------------- 3b. rannikon naulaus */
+
+test('naulaus pudottaa rannan päällä kulkevat korostusjanat ja silloittaa suiston', async () => {
+  const { naulaaKorostus, rannallaHilassa, rannikkoHakemisto } = await import('../js/pallovektorit.js');
+  /*
+   * Koeasetelma on Gironden pienoismalli. Rannikko (ocean) kulkee suistoa
+   * ylös ja takaisin; korostus (admin_0) kulkee rannan päällä muutaman
+   * sadan metrin sivussa ja SULKEE suun jänteellä, minkä jälkeen se
+   * jatkaa sisämaahan. Naulauksen pitää pudottaa koko rantaosuus ja
+   * jänne, tuoda tilalle rannikon oma mutka ja jättää sisämaan raja.
+   */
+  const rannikko = [[[0, 0], [1, 0], [1.1, 0.2], [1.2, 0.2], [1.3, 0], [2, 0]]];
+  const korostus = [[[0, 0.004], [1, 0.006], [1.3, 0.004], [2, 0.006], [2, 1]]];
+  const tulos = naulaaKorostus(korostus, rannikko);
+  // Kolme rantajanaa (mukaan lukien suun sulkeva jänne) putosivat.
+  assert.equal(tulos.pudotettuja, 3, JSON.stringify(tulos));
+  // Sisämaan raja jäi ainoana korostuksen omana janana.
+  assert.equal(tulos.sisamaajanoja, 1, JSON.stringify(tulos));
+  assert.ok(tulos.viivat.some((v) => v.some((p) => p[1] > 0.5)),
+    `sisämaan raja katosi: ${JSON.stringify(tulos.viivat)}`);
+  // Suiston kärki tuli rannikkoaineistosta — tämä on silloitus.
+  assert.ok(tulos.viivat.some((v) => v.some((p) => p[0] === 1.2 && p[1] === 0.2)),
+    `suiston mutka puuttuu: ${JSON.stringify(tulos.viivat)}`);
+  assert.equal(tulos.rannikkojanoja, 5, JSON.stringify(tulos));
+
+  // Liian pitkä mutka ei silloitu (naapurin rannikko ei tule mukaan).
+  const tiukka = naulaaKorostus(korostus, rannikko, { mutkanRaja: 0.1 });
+  assert.ok(!tiukka.viivat.some((v) => v.some((p) => p[1] === 0.2)),
+    JSON.stringify(tiukka.viivat));
+
+  // Ilman rannikkoaineistoa korostus on entisellään.
+  const ilman = naulaaKorostus(korostus, []);
+  assert.deepEqual(ilman.viivat, korostus);
+  assert.equal(ilman.pudotettuja, 0);
+
+  // Hila ja etäisyystesti: sauman yli ei lasketa 360 asteen eroa.
+  const hila = rannikkoHakemisto([[[179.995, 0]]]);
+  assert.equal(rannallaHilassa([-179.995, 0], hila), true);
+  assert.equal(rannallaHilassa([0, 0], hila), false);
+  assert.equal(rannallaHilassa(null, hila), false);
+  assert.equal(rannallaHilassa([1, 1], new Map()), false);
 });
 
 /* ------------------------------------------ 4. puuttuva maa */

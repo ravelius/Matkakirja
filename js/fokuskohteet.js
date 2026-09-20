@@ -112,7 +112,8 @@ import { asetaKuva, assetOsoite } from './media.js';
 import { kuvatekstiLyhyt, kuvatekstiPitka } from './kuvatekstit.js';
 import {
   html, jaaKappaleiksi, kuunteleSulkevaNapautus, linssiEstaa, NAPAUTUKSEN_KESTO_MS,
-  nielaiseSulkevaNapautus, polloNimilappu, RAAHAUKSEN_KYNNYS, suurennoksenMitat,
+  arvonimenPaikkaMaalle, nielaiseSulkevaNapautus, polloNimilappu, RAAHAUKSEN_KYNNYS,
+  suurennoksenMitat,
 } from './ui-apurit.js';
 import { nostokuvaAloita, nostokuvaKortissa } from './nostokuva.js';
 import { piirraReaktiot } from './reaktiot.js';
@@ -1200,6 +1201,33 @@ export function maanKohdetiedot(ui, iso) {
     for (const rivi of hae(ui) ?? []) if (rivi?.kohde?.id) tiedot.set(rivi.kohde.id, rivi.kohde);
   }
   return tiedot;
+}
+
+/*
+ * KOHTEEN OMA MAA (Sonnet 1, kierros 16b, 20.9.2026). Kortin arvonimi
+ * luettiin pelaajan sijainnista, joten Liettuan kortissa luki
+ * *"Pariisin salonkien pöllöltä"*. Kohteet asuvat maittain
+ * (KOHDE_MAAT), joten tunnus löytyy taulusta; hakemisto rakennetaan
+ * kerran ja päivitetään, jos maita on tullut lisää (hahmotelmapaketit
+ * liitetään moduulin latauksessa).
+ */
+let kohteenIsoHakemisto = null;
+let kohteenIsoMaita = 0;
+
+export function kohteenIso(kohde) {
+  if (!kohde) return null;
+  if (typeof kohde.iso === 'string' && kohde.iso.length === 3) return kohde.iso;
+  const maat = Object.keys(KOHDE_MAAT);
+  if (!kohteenIsoHakemisto || maat.length !== kohteenIsoMaita) {
+    kohteenIsoHakemisto = new Map();
+    for (const iso of maat) {
+      for (const k of KOHDE_MAAT[iso] ?? []) {
+        if (k?.id && !kohteenIsoHakemisto.has(k.id)) kohteenIsoHakemisto.set(k.id, iso);
+      }
+    }
+    kohteenIsoMaita = maat.length;
+  }
+  return kohteenIsoHakemisto.get(kohde.id) ?? null;
 }
 
 /** Nykyinen maa (pallolauta lukee saman päättelyn kuin kohdekerros). */
@@ -5247,10 +5275,20 @@ function piirraKohdeKysymykset(ui, sisalto, kohde) {
   // muoto tarkennettu 31.8.2026): "Kysy viisaalta pöllöltä pululta:",
   // jossa koko nimi on yhden vedon alla. Ryhmän aria-label on pelkkää
   // tekstiä eikä siinä ole yliviivausta.
+  /*
+   * ARVONIMI KOHTEEN MAASTA, EI PELAAJAN SIJAINNISTA (kierros 16b,
+   * 20.9.2026): Liettuan kortissa luki *"Pariisin salonkien pöllöltä"*.
+   * Kortti kertoo kohteestaan, joten arvonimikin kuuluu sen maahan.
+   * Tuntemattomalle maalle paikka jää tyhjäksi, jolloin arvonta osuu
+   * yleisiin arvonimiin kuten ennen.
+   */
+  const paikka = arvonimenPaikkaMaalle(kohteenIso(kohde), ui?.game ?? null);
   sisalto.appendChild(polloNimilappu(html('p', 'fokuskohde-kysy-otsikko'), {
     ennen: 'Kysy ', yli: 'viisaalta pöllöltä', tilalle: 'pululta', jalkeen: ':',
     // Arvonimi vaihtuu joka avauksella (Raamattu VIISAAN POLLON ARVONIMET).
     arvonimi: true,
+    maanosa: paikka.maanosa,
+    iso: paikka.iso,
   }));
   const rivi = html('div', 'fokuskohde-kysymykset');
   rivi.setAttribute('role', 'group');

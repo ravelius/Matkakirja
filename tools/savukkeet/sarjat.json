@@ -29,6 +29,7 @@
     "savuke-ihmisen-pulukysymykset.mjs",
     "savuke-nostokuva-karuselli.mjs",
     "savuke-nostokuva-suhde.mjs",
+    "savuke-pulu-kartuscha.mjs",
     "savuke-kortti-sulku.mjs",
     "savuke-tekstivalinta.mjs",
     "savuke-saapumisblur.mjs",

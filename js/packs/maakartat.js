@@ -7061,8 +7061,8 @@ export const KAUPUNKIKARTAT = {
       + 'loppuu ja metsäiset kukkulat alkavat. Keskusta rakennettiin '
       + 'suoraviivaiseksi ruuduksi 1600-luvulla, kun vanha puukaupunki oli '
       + 'palanut ja Tanskan kuningas Kristian IV käski rakentaa uuden '
-      + 'linnoituksen suojaan; kaupunki kantoi hänen nimeään Kristianiana '
-      + 'aina vuoteen 1925. Alueella ovat kuninkaanlinna, sieltä '
+      + 'linnoituksen suojaan; kaupunki kantoi hänen nimeään — Christiania, '
+      + 'vuodesta 1877 Kristiania — aina vuoteen 1925. Alueella ovat kuninkaanlinna, sieltä '
       + 'tuomiokirkolle ja rautatieasemalle vievä Karl Johans gate, '
       + 'kaupungintalo, 1300-luvulta paikallaan seissyt Akershusin '
       + 'linnoitus sataman kupeessa sekä oopperatalo, jonka katolle voi '
@@ -7430,6 +7430,101 @@ export const KAUPUNKIKARTAT = {
       {
         nimi: 'Tuomiokirkko', lat: 61.5025, lon: 23.7697,
         nosto: 'syvennys-tampere-kaarme',
+      },
+    ],
+  },
+  /*
+   * BRYSSEL (20.9.2026, pilotti; omistajan päätös 19.9.2026: Belgian
+   * pelikaupunki Bryssel). Kohdekartta on piirretty
+   * tools/piirra-kaupunkikartta.mjs bryssel (paperi) ja --vari
+   * (värikartta), OpenStreetMapin aineistosta. Seitsemän kohdetta,
+   * järjestys lännestä itään; koordinaatit Overpassista (ei
+   * Wikipediasta). Atomium (5,4 km pohjoiseen) ja Cinquantenaire
+   * (2,5 km itään) jäävät rajauksen ulkopuolelle tarkoituksella
+   * (Fable 20.9.2026: ydinalue riittää, Atomium on jo lehdessä).
+   * Mont des Arts ja Oikeuspalatsi eivät ole fi-Wikipediassa (haku
+   * 20.9.2026), joten niillä on oma tiivis `teksti` en-Wikipedian
+   * pohjalta.
+   */
+  bryssel: {
+    polku: 'assets/kartat/bryssel-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 50.851, etela: 50.8335, lansi: 4.342, ita: 4.376 },
+    // Laajennus 1,6 samasta keskipisteestä (piirra-kaupunkikartta
+    // --vari, 20.9.2026).
+    piirtoRajat: { pohjoinen: 50.85625, etela: 50.82825, lansi: 4.3318, ita: 4.3862 },
+    varikartta: 'assets/kartat/bryssel-varikartta.png',
+    esittely: 'Brysselin sydän on Grand-Place, keskiaikainen kiltatori, jonka '
+      + 'ympärille vanhakaupunki kasvoi. Isoisän matkan aikaan kaupunki on '
+      + 'juuri uudistunut: Senne-joki katettiin vuosina 1867–1871 ja sen '
+      + 'päälle nousivat leveät bulevardit, uusi pörssipalatsi rakennettiin '
+      + 'vuosina 1868–1873 ja valtava Oikeuspalatsi on yhä rakenteilla '
+      + '(1866–1883). Kuninkaanpalatsi seisoo vanhakaupungin itäpuolella '
+      + 'kukkulalla, jonka rinteellä on vielä tiheää vanhaa asutusta: '
+      + 'Mont des Artsin puisto ja museot tulevat vasta 1900-luvulla. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      { nimi: 'Brysselin pörssi', lat: 50.84795, lon: 4.34916, wiki: 'Brysselin pörssi' },
+      { nimi: 'Manneken Pis', lat: 50.84499, lon: 4.34999, wiki: 'Manneken Pis' },
+      {
+        nimi: 'Oikeuspalatsi', lat: 50.83667, lon: 4.35162,
+        aika: '1866–1883',
+        teksti: 'Brysselin oikeuspalatsi on Belgian tärkein oikeustalo, ja se seisoo '
+          + 'Marollesin kaupunginosan reunalla ylä- ja alakaupungin välissä. '
+          + 'Isoisän matkan aikaan se on vielä rakenteilla: arkkitehti Joseph '
+          + 'Poelaertin suunnittelemat työt alkoivat vuonna 1866, ja rakennus '
+          + 'valmistuu vasta 1883. Kreikkalais-roomalaisvaikutteisen, '
+          + 'eklektisen jättipalatsin pohja-ala on yli 26 000 neliömetriä, ja '
+          + 'sitä pidetään 1800-luvun suurimpana rakennuksena.'
+          + '\n\n'
+          + 'Kupoli romahti myöhemmin tulipalossa sodan lopussa ja '
+          + 'rakennettiin uudelleen entistä korkeammaksi. Kunnostustyöt '
+          + 'alkoivat 1984, ja telineet ovat yhä paikoillaan.',
+        kuvat: [
+          {
+            tiedosto: 'Coupole du Palais de Justice de Bruxelles 04.jpg',
+            lyhyt: 'Oikeuspalatsin kupoli katsottuna suuren aulan lattialta.',
+            selite: 'Oikeuspalatsin kupoli suuren sisääntuloaulan lattialta '
+              + 'katsottuna: kassettikatto kaartuu kohti keskellä olevaa '
+              + 'pyöreää kattoikkunaa.',
+            lahde: 'M0tty, Wikimedia Commons (CC BY-SA 3.0)',
+          },
+        ],
+      },
+      { nimi: 'Grand-Place', lat: 50.8467, lon: 4.3525, wiki: 'Grand-Place' },
+      {
+        nimi: 'Galeries Royales Saint-Hubert', lat: 50.84774, lon: 4.35506,
+        wiki: 'Galeries Royales Saint-Hubert',
+      },
+      {
+        nimi: 'Mont des Arts', lat: 50.84377, lon: 4.3569,
+        aika: '1910',
+        teksti: 'Mont des Arts eli Kunstberg on Brysselin keskustan kukkulaan '
+          + 'rakennettu kulttuurikortteli. Isoisän matkan aikaan sitä ei ole '
+          + 'vielä olemassa: kukkulan rinnettä peittää vanha, tiheästi '
+          + 'rakennettu kaupunginosa. Kuningas Leopold II halusi siitä '
+          + 'taiteiden kaupunginosan, osti korttelit ja antoi purkaa vanhat '
+          + 'talot vuosina 1897–1898. Ensimmäinen puisto vihittiin käyttöön '
+          + 'vuonna 1910.'
+          + '\n\n'
+          + 'Nykyisen ilmeensä alue sai vuosina 1956–1969, kun sinne '
+          + 'rakennettiin kuninkaallinen kirjasto ja kongressipalatsi. '
+          + 'Puutarhan suunnitteli maisema-arkkitehti René Pechère, ja '
+          + 'ylhäältä näkyy kaupungintalon torni.',
+        kuvat: [
+          {
+            tiedosto: 'Mont des Arts, Brussels, Belgium.jpg',
+            lyhyt: 'Mont des Artsin geometrinen puutarha ja kaupungintalon torni taustalla.',
+            selite: 'Mont des Artsin geometrinen puutarha, jonka päässä '
+              + 'näkyy kaupungintalon torni. Nykyisen puutarhan suunnitteli '
+              + 'René Pechère.',
+            lahde: 'Julian Lupyan, Wikimedia Commons (CC0)',
+          },
+        ],
+      },
+      {
+        nimi: 'Kuninkaanpalatsi', lat: 50.84193, lon: 4.36245,
+        wiki: 'Brysselin kuninkaallinen palatsi',
       },
     ],
   },

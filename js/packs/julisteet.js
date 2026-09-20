@@ -589,9 +589,9 @@ export const JULISTEET = {
   oslo: {
     tiedosto: 'tuotanto/tuot-oslo.png',
     kaupunki: 'Oslo',
-    otsikko: 'Kristiania 1873',
-    lyhyt: 'Kristiania 1873: kuningas lakkauttaa Norjan sijaishallitsijan viran.',
-    selite: 'Isoisän matkavuonna kaupungin nimi oli Kristiania, ja kuningas '
+    otsikko: 'Christiania 1873',
+    lyhyt: 'Christiania 1873: kuningas lakkauttaa Norjan sijaishallitsijan viran.',
+    selite: 'Isoisän matkavuonna kaupungin nimi kirjoitettiin Christiania, ja kuningas '
       + 'Oscar II lakkautti samana vuonna 1873 Norjan sijaishallitsijan viran — '
       + 'askel kohti maan omaa hallitusta.',
   },

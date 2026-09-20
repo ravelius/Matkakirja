@@ -71,8 +71,10 @@ import { RAJA_MUSTE } from '../../js/pallovektorit.js';
 import { packById } from '../../js/pack.js';
 import { decodePng } from './pallon-liike-mittarit.mjs';
 
+// Playwrightin paikka vaihtelee koneittain (Mac Studio: naapuriworktree),
+// joten sama PLAYWRIGHT_JS-varatie kuin muissa savukkeissa.
 const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
+  .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
 const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
@@ -194,8 +196,12 @@ peli.phase = 'action';
 peli.tokens.delete('pariisi');
 const tallenne = JSON.stringify(peli.toJSON());
 
+// Chromiumin paikka vaihtelee koneittain (kontti /opt/pw-browsers,
+// Mac Studio Playwrightin oma välimuisti): sama CHROMIUM-varatie kuin
+// muissa mittareissa, ja ilman sitä Playwright etsii selaimen itse.
 const selain = await chromium.launch({
-  executablePath: '/opt/pw-browsers/chromium',
+  ...(process.env.CHROMIUM || existsSync('/opt/pw-browsers/chromium')
+    ? { executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' } : {}),
   args: ['--disable-dev-shm-usage'],
 });
 

@@ -2670,7 +2670,7 @@ export const EUROPE_FACTS = {
     'Oslo lahjoittaa joka vuosi kuusen Lontoon Trafalgar Squarelle kiitokseksi toisen maailmansodan aikaisesta tuesta.',
     'Norjan Oslovuono ja rannikko ovat niin syviä, että suuret risteilijät pääsevät aivan kaupungin keskustaan asti.',
     {
-      text: 'Kaupunki on Kristiania, ja vuono tuo laivat suoraan keskustaan. Norja on liitossa Ruotsin kanssa, mutta omasta lipusta puhutaan täällä yhä useammin.',
+      text: 'Kaupunki on Christiania, ja vuono tuo laivat suoraan keskustaan. Norja on liitossa Ruotsin kanssa, mutta omasta lipusta puhutaan täällä yhä useammin.',
       voice: 'isoisa',
     },
   ],
