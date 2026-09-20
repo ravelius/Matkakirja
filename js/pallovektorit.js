@@ -387,6 +387,50 @@ export const KOROSTUKSEN_PIENIN_RENGAS_PX = 10;
  * vektoreilla — nostoa ei käytetä (VEKTORIT_KORKEUS 0, parallaksi).
  */
 export const VEKTORIT_KOROSTUS_RENDER_ORDER = -0.55;
+/*
+ * ═══════════════════════════════════════════════════════════════════
+ * HIMMEÄ REITTIVERKKO LIFTATESSA (omistaja 20.9.2026 klo 13.50)
+ * ═══════════════════════════════════════════════════════════════════
+ *
+ * Omistaja, sanatarkasti: *"entä jos piirretaan myos muutkin reitit
+ * mutta himmeammalla"* — Fablen sääntö: liftatessa piirretään heiton
+ * kantaman kaaret normaalisti (js/pallolauta/reitit.js) ja KAIKKI muut
+ * laudan kaaret himmeinä staattisena kerroksena, kerran per lauta,
+ * ilman animaatiota.
+ *
+ * MIKSI TÄSSÄ MODUULISSA EIKÄ REITTIKERROKSESSA: reittikerros
+ * (pathsData) on Globe.gl:n tweenattu kerros — jokainen datum siirtyy
+ * pathTransitionDurationin verran, ja 411 kaaren lisäys sinne
+ * animoituisi ja rakentuisi uudestaan joka valinnalla. Tämä moduuli on
+ * jo pallon staattisten viivojen piirtäjä: sama Line2-luokkaketju,
+ * sama ruutumittojen tahdistus, sama syvyyssiirto laattojen edelle,
+ * sama palajako (vektorijanat), ja olio rakennetaan KERRAN laudan
+ * avaimella ja kytketään näkyviin/piiloon `visible`-lipulla. Kirkkaat
+ * kantaman kaaret ovat reittikerroksessa pinnan yläpuolella
+ * (REITIN_KORKEUS), joten ne piirtyvät himmeän verkon PÄÄLLE ilman
+ * järjestyssääntöjä.
+ *
+ * VÄRI JA PEITTO: sama rajamuste kuin muillakin vektoreilla, peitto
+ * VERKKO_PEITTO — himmeämpi kuin rantaviiva (0,58), jotta verkko lukee
+ * taustana eikä kilpaile kantaman kaarten kanssa. Yhtenäinen viiva
+ * ilman katkoa: katko on kantaman kaarten oma kieli (50/50), ja himmeä
+ * verkko erottuu juuri siitä.
+ */
+/** Himmeän reittiverkon leveys css-pikseleinä (kaukopää, lähipää). */
+export const VEKTORIT_VERKKO_LEVEYS_CSS = [0.7, 1.1];
+/** Himmeän reittiverkon peitto. */
+export const VERKKO_PEITTO = 0.3;
+/**
+ * Himmeän reittiverkon KIINTEÄ harvennus asteina (Douglas–Peucker,
+ * harvennaViivat). Laudan reittipolyt ovat tiheitä (411 kaarta, 24 538
+ * pistettä), ja verkko on taustakerros liftauksen mittakaavassa
+ * (korkeus 0,3–0,9, pikseli 2–5 km): 0,01 astetta (≈ 1 km) pudottaa
+ * pisteet 4 585:een ilman näkyvää muutosta. Kiinteä eikä zoomin mukana,
+ * koska kerros rakennetaan kerran per lauta eikä uudestaan portaittain.
+ * Mitattu Chromium-ohjelmistopiirrolla 20.9.2026: 24 127 janaa nosti
+ * kehysajan mediaanin 141 → 346 ms; ks. savuke-reittiverkko.mjs.
+ */
+export const VERKON_HARVENNUS_AST = 0.01;
 /**
  * Lajin leveyspääte yhdessä taulussa: piirto, mittarit ja testit
  * lukevat saman rivin, joten uusi laji ei tarvitse yhtään ehtolausetta.
@@ -395,6 +439,7 @@ export const VEKTORIT_LEVEYDET = Object.freeze({
   rannikko: VEKTORIT_LEVEYS_CSS,
   rajat: VEKTORIT_RAJA_LEVEYS_CSS,
   korostus: VEKTORIT_KOROSTUS_LEVEYS_CSS,
+  verkko: VEKTORIT_VERKKO_LEVEYS_CSS,
 });
 /**
  * Rajan pistekuvio maailmayksikköinä (piste, väli): poltettu raja on
@@ -1028,6 +1073,10 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
     korostusJanoja: 0,
     korostusPudotettuja: 0,
     korostusRannikkojanoja: 0,
+    /** Himmeän reittiverkon lauta-avain, janat ja näkyvyys. */
+    verkko: null,
+    verkkoJanoja: 0,
+    verkkoNakyy: false,
   };
   const pyydetyt = new Set();
   /** id (`<laji>/l<k>/<solu>`) → { laji, k, avain, lupaus, viivat, olio, janoja, tavua, kaytto } */
@@ -1047,6 +1096,15 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
     rannikkoja: -1,
     /** Milloin naulaus viimeksi rakennettiin (vaimennus). */
     naulattuHetki: -Infinity,
+  };
+  /*
+   * HIMMEÄ REITTIVERKKO on korostuksen tapaan soluton laji (ks.
+   * HIMMEÄ REITTIVERKKO LIFTATESSA): viivat annetaan valmiina asteina
+   * (js/pallolauta/reitit.js verkonViivat), olio rakennetaan kerran
+   * laudan avaimella ja näkyvyys on pelkkä lippu.
+   */
+  const verkko = {
+    laji: 'verkko', avain: null, viivat: null, olio: null, janoja: 0, nakyy: false,
   };
   /** Häiveen ajaksi kloonatut materiaalit (ruutumitat päivitetään näihinkin). */
   const kloonit = new Set();
@@ -1146,6 +1204,8 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
     materiaalit = teeMateriaalit();
     // Maa on voitu pyytää jo ennen kuin luokat olivat valmiina.
     if (korostus.renkaat) rakennaKorostus(true);
+    // Sama himmeälle verkolle: lauta on voinut antaa viivansa jo.
+    if (verkko.viivat) rakennaVerkko();
     /*
      * PÄIVITYS PIIRTOKOUKUSSA, EI TAPAHTUMASSA (vika v1649). Ennen tätä
      * kerros heräsi ohjainten `change`-tapahtumasta — eli pointermoven
@@ -1197,6 +1257,10 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
       // kehällä JA kuin tavallisella rajalla, eikä toista heksalukua.
       ...yhteiset, color: rajanMuste(), opacity: KOROSTUS_PEITTO,
     });
+    // Himmeä reittiverkko: sama muste, oma peitto, yhtenäinen viiva.
+    const verkkoMateriaali = new luokat.LineMaterial({
+      ...yhteiset, color: rajanMuste(), opacity: VERKKO_PEITTO,
+    });
     /*
      * PEHMEÄ REUNA, EI PÄÄTYPYÖRYLÖITÄ (omistaja 7.9.2026). Paikka
      * tehdään ENNEN ensimmäistä käännöstä ja ennen leveyden asetusta:
@@ -1204,12 +1268,16 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
      * ja viiva on entisellään.
      */
     pehmennysPaikka = pehmennaLineMaterial(ranta) && pehmennaLineMaterial(raja)
-      && pehmennaLineMaterial(korostusMateriaali, { paatypyorylat: true });
+      && pehmennaLineMaterial(korostusMateriaali, { paatypyorylat: true })
+      && pehmennaLineMaterial(verkkoMateriaali);
     mittarit.pehmennysPaikka = pehmennysPaikka;
     ranta.linewidth = cssLeveys('rannikko');
     raja.linewidth = cssLeveys('rajat');
     korostusMateriaali.linewidth = cssLeveys('korostus');
-    return { rannikko: ranta, rajat: raja, korostus: korostusMateriaali };
+    verkkoMateriaali.linewidth = cssLeveys('verkko');
+    return {
+      rannikko: ranta, rajat: raja, korostus: korostusMateriaali, verkko: verkkoMateriaali,
+    };
   }
 
   /** Ruutumitat materiaaleihin: leveys laitepikseleinä, resoluutio css-pikseleinä. */
@@ -1334,6 +1402,44 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
     korostus.olio = null;
     korostus.janoja = 0;
     korostus.harvennus = -1;
+  }
+
+  /** Himmeän reittiverkon olio pois (lauta vaihtui tai purku). */
+  function vapautaVerkko() {
+    if (!verkko.olio) return;
+    verkko.olio.parent?.remove(verkko.olio);
+    verkko.olio.geometry?.dispose?.();
+    verkko.olio = null;
+    verkko.janoja = 0;
+    mittarit.verkkoJanoja = 0;
+  }
+
+  /**
+   * Himmeä reittiverkko pallon pinnalle — KERRAN laudan avaimella, ilman
+   * häivettä ja KIINTEÄLLÄ harvennuksella (VERKON_HARVENNUS_AST), ei
+   * zoomin portaalla: verkko on staattinen kerros, jota ei rakenneta
+   * uudestaan zoomin mukana. Palajako (vektorijanat) on sama kuin
+   * muilla vektoreilla, jottei pitkä kaupunkiväli painu pinnan alle.
+   * Näkyvyys tulee `verkko.nakyy`-lipusta (naytaVerkko).
+   */
+  function rakennaVerkko() {
+    if (purettu || !materiaalit || !luokat || !kolmi?.juuri) return;
+    vapautaVerkko();
+    if (!verkko.viivat?.length) return;
+    const viivat = harvennaViivat(verkko.viivat, VERKON_HARVENNUS_AST);
+    const { paikat, janoja } = vektorijanat(viivat, sade());
+    verkko.janoja = janoja;
+    mittarit.verkkoJanoja = janoja;
+    if (!janoja) return;
+    const geometria = new luokat.LineSegmentsGeometry();
+    geometria.setPositions(paikat);
+    const olio = new luokat.LineSegments2(geometria, materiaalit.verkko);
+    olio.renderOrder = VEKTORIT_RENDER_ORDER;
+    olio.raycast = () => {};
+    olio.visible = verkko.nakyy;
+    olio.userData.pallovektorit = { laji: 'verkko', avain: verkko.avain };
+    kolmi.juuri.add(olio);
+    verkko.olio = olio;
   }
 
   /**
@@ -1663,6 +1769,32 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
       rakennaKorostus(true);
       return true;
     },
+    /**
+     * HIMMEÄ REITTIVERKKO (ks. tiedoston alku). `avain` on lauta (pack.id):
+     * sama avain ei rakenna mitään uudestaan; uusi avain vaihtaa
+     * geometrian. `viivat` on lista viivoja, viiva on lista [lon, lat]
+     * -pisteitä — sama muoto kuin rannikkosoluilla. Tyhjä lista pyyhkii.
+     */
+    asetaVerkko(avain, viivat) {
+      const uusiAvain = avain || null;
+      const uudet = Array.isArray(viivat) && viivat.length ? viivat : null;
+      if (uusiAvain === verkko.avain && uudet === verkko.viivat) return false;
+      verkko.avain = uusiAvain;
+      verkko.viivat = uudet;
+      mittarit.verkko = uusiAvain;
+      if (!uudet) { vapautaVerkko(); return true; }
+      rakennaVerkko();
+      return true;
+    },
+    /** Verkko näkyviin tai piiloon — pelkkä lippu, ei häivettä, ei rakennusta. */
+    naytaVerkko(nakyy) {
+      const uusi = Boolean(nakyy);
+      if (uusi === verkko.nakyy) return false;
+      verkko.nakyy = uusi;
+      mittarit.verkkoNakyy = uusi;
+      if (verkko.olio) verkko.olio.visible = uusi;
+      return true;
+    },
     /** Mittarit savukkeille ja vartijalle (suunnitelman luku 5). */
     mittarit: () => ({ ...mittarit, pyydetyt: [...pyydetyt] }),
     pura() {
@@ -1673,6 +1805,9 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
       vapautaKorostus();
       korostus.iso = null;
       korostus.renkaat = null;
+      vapautaVerkko();
+      verkko.avain = null;
+      verkko.viivat = null;
       for (const s of solut.values()) vapauta(s);
       solut.clear();
       nakyvat = new Set();

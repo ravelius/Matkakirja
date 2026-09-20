@@ -329,8 +329,9 @@ test('korostus piirtyy rantaviivan ALLE mutta samassa kerroksessa', () => {
   assert.match(lahde, /const porras = harvennus > lodTol \? harvennus : 0;/);
   assert.match(lahde, /harvennaViivat\(naulaus\.viivat, porras\)/);
   assert.match(lahde, /vektorijanat\(viivat, sade\(\)\)/);
-  // Korostus on jaetussa materiaalitaulussa eikä oma kerroksensa.
-  assert.match(lahde, /return \{ rannikko: ranta, rajat: raja, korostus: korostusMateriaali \};/);
+  // Korostus on jaetussa materiaalitaulussa eikä oma kerroksensa
+  // (himmeä reittiverkko liittyi samaan tauluun 20.9.2026).
+  assert.match(lahde, /rannikko: ranta, rajat: raja, korostus: korostusMateriaali, verkko: verkkoMateriaali,/);
 });
 
 /* ------------------------------------- 3b. rannikon naulaus */

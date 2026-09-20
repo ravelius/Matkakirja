@@ -1158,6 +1158,7 @@ test('reittien näkyvyys: naapuriviuhka on matkasessio Liikusta perille tai peru
     const v = valinta();
     assert.deepEqual(v.reittiTunnukset, [], `vaihe ${phase}: viuhka ei saa näkyä ennen Liikua`);
     assert.equal(v.avain, '', `vaihe ${phase}: tyhjä valinta tyhjentää kerroksen`);
+    assert.equal(v.verkko, false, `vaihe ${phase}: himmeä verkko ei saa näkyä ennen Liikua`);
   }
 
   // 2. Liiku painettu: matkasessio alkaa lähtökaupungista.
@@ -1166,6 +1167,9 @@ test('reittien näkyvyys: naapuriviuhka on matkasessio Liikusta perille tai peru
   const auki = liikuPainettu.matkareittienValinta();
   assert.deepEqual(auki.reittiTunnukset, naapurit, 'Liiku-napin painallus tuo viuhkan');
   assert.notEqual(auki.avain, '');
+  // Himmeä reittiverkko (omistaja 20.9.2026) syttyy samalla ehdolla kuin viuhka.
+  assert.equal(auki.verkko, true, 'himmeä verkko ei syttynyt Liikusta');
+  assert.match(auki.avain, /:verkko$/, 'verkon lippu ei ole avaimessa');
 
   /*
    * 3. HEITON JÄLKEEN VIUHKA PYSYY, vaikka liuku sulkeutuu: liu'un oma
@@ -1178,6 +1182,7 @@ test('reittien näkyvyys: naapuriviuhka on matkasessio Liikusta perille tai peru
   const heiton = luoUi({ liukuAuki: false, matkaSessio: 'varsova' });
   assert.deepEqual(heiton.matkareittienValinta().reittiTunnukset, naapurit,
     'viuhka katosi nopanheiton jälkeen');
+  assert.equal(heiton.matkareittienValinta().verkko, true, 'himmeä verkko sammui heittoon');
   assert.equal(heiton.matkaSessio, 'varsova', 'sessio ei saa päättyä heittoon');
 
   // 4. kohdelista (bussi, laiva) pitää viuhkan vaikka liuku sulkeutui.
@@ -1227,6 +1232,7 @@ test('reittien näkyvyys: naapuriviuhka on matkasessio Liikusta perille tai peru
   const perilla = luoUi({ matkaSessio: 'varsova' });
   assert.deepEqual(perilla.matkareittienValinta().reittiTunnukset, [],
     'viuhka jäi päälle uuteen kaupunkiin saavuttaessa');
+  assert.equal(perilla.matkareittienValinta().verkko, false, 'himmeä verkko jäi päälle perillä');
   assert.equal(perilla.matkaSessio, null, 'sessio ei päättynyt perillä');
 
   /*

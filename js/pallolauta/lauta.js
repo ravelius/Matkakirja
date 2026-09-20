@@ -4457,6 +4457,18 @@ export async function avaaPallolauta(ui) {
     }
     helmet = reitit.paivita(valinta);
     /*
+     * HIMMEÄ REITTIVERKKO LIFTATESSA (omistaja 20.9.2026 klo 13.50; ks.
+     * js/pallovektorit.js HIMMEÄ REITTIVERKKO LIFTATESSA). Geometria
+     * annetaan vektorikerrokselle kerran laudan avaimella ja näkyvyys on
+     * valinnan lippu — sama sääntö (matkareittienValinta) kuin kirkkailla
+     * kaarilla, eri piirtäjä. Ilman vektorikerrosta (kytkin pois) verkkoa
+     * ei ole, kuten ei rantaviivaakaan.
+     */
+    if (vektorit?.asetaVerkko) {
+      if (valinta.verkko) vektorit.asetaVerkko(pack.id, reitit.verkonViivat());
+      vektorit.naytaVerkko(Boolean(valinta.verkko));
+    }
+    /*
      * ENNAKKOZOOMIN AJAN NAPPULA ON LÄHTÖRUUDUSSAAN (Raamattu,
      * KARTTAUUDISTUKSEN PAATOKSET 40).
      *
