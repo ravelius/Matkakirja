@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1972, teksti: 'v1972: rannikon naulaus, Bryssel-kartta, Kosice-lehti' },
   { v: 1971, teksti: 'v1971: zoom/pan, Biskajanlahti, Bryssel- ja Ljubljana-lehdet' },
   { v: 1970, teksti: 'v1970: Ljubljana ja Kosice; tekstivalinta pois; saapumisblur' },
   { v: 1969, teksti: 'Latvia, Liettua; hyppy takaisin; astro-pulu; kartuscha' },
