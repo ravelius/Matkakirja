@@ -15,6 +15,7 @@
     "savuke-ihmisen-kehys.mjs",
     "savuke-ihmisen-esitys.mjs",
     "savuke-pallo-nostolaput.mjs",
+    "savuke-nimiot-elavat.mjs",
     "savuke-nimikyltti.mjs",
     "savuke-kerma-reuna.mjs",
     "savuke-ranskan-nostot-lukossa.mjs",
@@ -485,6 +486,9 @@
     },
     "savuke-nostokortti.mjs": {
       "huomautus": "Nostokortti (omistaja 20.9.2026): lahderivi pois kaikista nostotyypeista, kohdekortin karuselli, Havainnekuva-merkki, kuvan koko LISAA-tilassa (>= 0,8), pyyhkaisy ja nuolinappaimet. 390 ja 1400 px, ampari Noden kautta. ~60 s."
+    },
+    "savuke-nimiot-elavat.mjs": {
+      "huomautus": "Kohdemaan nimiot elavina (Fable 20.9.2026, KOHDEMAAN_NIMIOT_ELAVINA): FRA/Marseille 390 ja 1400 px: ei poltettuja, nimiollisia >= 32/55, Valimeri irti korostuskehasta, ei reunaylityksia saapumisessa ja Marseillen zoomeissa, ladonta <= 12 ms. Ampari Noden kautta. ~70 s."
     }
   }
 }
