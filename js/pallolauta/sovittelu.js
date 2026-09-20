@@ -120,6 +120,13 @@ export const SOVITTELUN_KYLJET = Object.freeze(['oikea', 'vasen', 'yla', 'ala'])
 export const SOVITTELUN_SIIRTO_PX = 6;
 /** Suurin siirto, jolla lappu vedetään ruudun reunan sisään (px). */
 export const SOVITTELUN_REUNASIIRTO_PX = 24;
+/** Suurin siirto, jolla meren lappu työnnetään rannasta merelle (px). */
+export const SOVITTELUN_MERISIIRTO_PX = 72;
+/** Kahdeksan suuntaa merelle työntämiseen (yksikkövektorit). */
+const MERISUUNNAT = Object.freeze([
+  [0, 1], [0, -1], [1, 0], [-1, 0],
+  [0.7071, 0.7071], [-0.7071, 0.7071], [0.7071, -0.7071], [-0.7071, -0.7071],
+]);
 /** Kyljen oma suunta: merkistä poispäin. */
 export const SOVITTELUN_SUUNNAT = Object.freeze({
   oikea: { dx: 1, dy: 0 },
@@ -198,17 +205,54 @@ export function lahinEste(r, esteet) {
  *   laatikko turva-alueineen; lappu ei saa ylittää sitä (ks. RUUDUN
  *   REUNA ON ESTE). null = ei rajaa (vanha käytös).
  * @param {number} [p.reunasiirto] suurin reunaan vetävä siirto px
+ * @param {Array} [p.rantaviiva] rantaviivan (korostuskehän) ruutulaatikot;
+ *   este VAIN lapuille, joilla on `meri: true` (ks. MEREN NIMIÖ EI JÄÄ
+ *   RANTAVIIVAN ALLE)
  * @returns {{ asennot: Map, siirretty: number, kylkiVaihtui: number,
  *   piilotettu: number, jaljella: number, kokeiltuja: number }}
  *   `asennot` on avain → { kylki, dx, dy, nimio, syy }; `jaljella` on
  *   niiden lappujen määrä, joiden IKONI jää yhä nimen päälle (ikonia ei
  *   voi piilottaa — nosto katoaisi kartalta).
  */
+/*
+ * ── MEREN NIMIÖ EI JÄÄ RANTAVIIVAN ALLE (Fable 20.9.2026, omistajan
+ * kaappaus marseille-nimiot-reunassa-v1980.webp: VÄLIMERI jäi
+ * korostuskehän ja Pétanque-nimiön alle lukukelvottomaksi) ─────────
+ *
+ * Kohdemaan korostuskehä on paksu 3D-viiva laatan päällä, ja meren
+ * nimiö istuu määritelmänsä mukaan rannan tuntumassa. Kehän
+ * ruutulaatikot (lauta.js rantaviivanLaatikot: rengasjanojen laatikot
+ * viivan paksuudella) ovat este VAIN meren lapuille (`meri: true`):
+ * maalla oleva nimiö saa ylittää rannan kuten ennenkin. Porras on sama
+ * kuin muilla esteillä — kylki, pieni siirto, reunasiirto — ja koska
+ * kyljet kokeillaan järjestyksessä, meren lappu päätyy sille kyljelle,
+ * joka on rannasta poispäin eli merelle.
+ */
+/*
+ * ── LAPUT EIVÄT LIMITY KESKENÄÄN (`keskinainen`, 20.9.2026, v1983 PR
+ * #2635: savuke-nimikyltti 9b — limittyviä nimiöpareja 13 puhelimella
+ * ja 9 työpöydällä, raja 4) ────────────────────────────────────────
+ *
+ * Sääntö "paikallaan pysynyt lappu ei ole este" (ks. MIKÄ ON ESTE JA
+ * MIKÄ EI) nojasi siihen, että laattaladonta oli jo ratkaissut lappujen
+ * keskinäisen järjestyksen. Kun kohdemaan kaikki nimiöt ovat eläviä
+ * (js/laattapyramidi.js KOHDEMAAN_NIMIOT_ELAVINA), ruudulla on 40–70
+ * elävää lappua eikä yhtään laattaan poltettua, ja niiden datakyljet
+ * risteävät keskenään. `keskinainen: true` tekee jokaisesta jo
+ * sijoitetusta lapusta esteen seuraaville (sama mekanismi kuin
+ * aihenoston `este`-lipulla): lappu vaihtaa kylkeä tai siirtyy, ja jos
+ * mikään asento ei ole vapaa, se piiloutuu (ikoni jää) — limitystä ei
+ * synny koskaan. Järjestys on entinen (ahtain ensin), joten tiheimmät
+ * kohdat ratkaistaan ennen väljiä.
+ */
 export function sovitteleLaput({
   laput = [], esteet = [], siirto = SOVITTELUN_SIIRTO_PX, kyljet = SOVITTELUN_KYLJET,
-  reuna = null, reunasiirto = SOVITTELUN_REUNASIIRTO_PX,
+  reuna = null, reunasiirto = SOVITTELUN_REUNASIIRTO_PX, rantaviiva = [],
+  keskinainen = false,
 } = {}) {
   const kiinteat = esteet.filter(laatikkoKelpaa);
+  const ranta = rantaviiva.filter(laatikkoKelpaa);
+  const rannalla = (r, l) => Boolean(l?.meri) && ranta.some((e) => laatikotLimittyvat(r, e));
   const asennot = new Map();
   let siirretty = 0;
   let kylkiVaihtui = 0;
@@ -216,7 +260,8 @@ export function sovitteleLaput({
   let jaljella = 0;
   let kokeiltuja = 0;
   let reunalta = 0;
-  const vapaa = (r, muut) => laatikkoSisalla(r, reuna)
+  const vapaa = (r, muut, l = null) => laatikkoSisalla(r, reuna)
+    && !rannalla(r, l)
     && !kiinteat.some((e) => laatikotLimittyvat(r, e))
     && !muut.some((e) => laatikotLimittyvat(r, e));
   /*
@@ -241,10 +286,10 @@ export function sovitteleLaput({
     kokeiltuja += 1;
     // `este`-lappu katsoo myös jo sijoitettuja lappuja; muille
     // este on vain kiinteä muste, kuten ennenkin.
-    const muut = l.este ? sijoitetut : [];
+    const muut = (l.este || keskinainen) ? sijoitetut : [];
     const omaKelpaa = laatikkoKelpaa(oma);
     if (!omaKelpaa
-      || (laatikkoSisalla(oma, reuna)
+      || (laatikkoSisalla(oma, reuna) && !rannalla(oma, l)
         && (!kiinteat.length || !kiinteat.some((e) => laatikotLimittyvat(oma, e)))
         && !muut.some((e) => laatikotLimittyvat(oma, e)))) {
       asennot.set(l.avain, {
@@ -260,7 +305,7 @@ export function sovitteleLaput({
         if (k === l.kylki) continue;
         const r = l.laatikko(k, 0, 0, true);
         kokeiltuja += 1;
-        if (laatikkoKelpaa(r) && vapaa(r, vastaan)) {
+        if (laatikkoKelpaa(r) && vapaa(r, vastaan, l)) {
           return { kylki: k, dx: 0, dy: 0, nimio: true, syy: 'kylki', r };
         }
       }
@@ -269,7 +314,7 @@ export function sovitteleLaput({
         for (const { dx, dy } of sovittelunSiirrot(k, siirto)) {
           const r = l.laatikko(k, dx, dy, true);
           kokeiltuja += 1;
-          if (laatikkoKelpaa(r) && vapaa(r, vastaan)) {
+          if (laatikkoKelpaa(r) && vapaa(r, vastaan, l)) {
             return {
               kylki: k, dx, dy, nimio: true, syy: 'siirto', r,
             };
@@ -287,10 +332,31 @@ export function sovitteleLaput({
           if (Math.abs(dx) > reunasiirto || Math.abs(dy) > reunasiirto) continue;
           const r = l.laatikko(k, dx, dy, true);
           kokeiltuja += 1;
-          if (laatikkoKelpaa(r) && vapaa(r, vastaan)) {
+          if (laatikkoKelpaa(r) && vapaa(r, vastaan, l)) {
             return {
               kylki: k, dx, dy, nimio: true, syy: 'reuna', r,
             };
+          }
+        }
+      }
+      // 4. MEREN LAPPU SIIRTYY MERELLE PÄIN (ks. MEREN NIMIÖ EI JÄÄ
+      //    RANTAVIIVAN ALLE): rannan tuntumassa mikään kylki ei ole
+      //    vapaa, joten lappua työnnetään kasvavin askelin kahdeksaan
+      //    suuntaan, kunnes se on rannasta irti. Ensimmäinen vapaa
+      //    suunta on se, jossa ranta ei ole — eli meri. Katto
+      //    SOVITTELUN_MERISIIRTO_PX pitää lapun merkkinsä lähellä.
+      if (reuna !== undefined && l.meri && ranta.length) {
+        for (let askel = siirto * 2; askel <= SOVITTELUN_MERISIIRTO_PX; askel += siirto * 2) {
+          for (const [sx, sy] of MERISUUNNAT) {
+            for (const k of [l.kylki, ...kyljet.filter((x) => x !== l.kylki)]) {
+              const r = l.laatikko(k, sx * askel, sy * askel, true);
+              kokeiltuja += 1;
+              if (laatikkoKelpaa(r) && vapaa(r, vastaan, l)) {
+                return {
+                  kylki: k, dx: sx * askel, dy: sy * askel, nimio: true, syy: 'meri', r,
+                };
+              }
+            }
           }
         }
       }
@@ -313,7 +379,7 @@ export function sovitteleLaput({
      * jonka korjaamiseksi koko tarkennus kirjoitettiin.
      */
     if (!valittu && l.este) {
-      const omaVapaa = laatikkoSisalla(oma, reuna)
+      const omaVapaa = laatikkoSisalla(oma, reuna) && !rannalla(oma, l)
         && !kiinteat.some((e) => laatikotLimittyvat(oma, e));
       valittu = omaVapaa
         ? { kylki: l.kylki, dx: 0, dy: 0, nimio: true, syy: 'oma', r: oma }
@@ -323,7 +389,7 @@ export function sovitteleLaput({
       if (valittu.syy !== 'oma') {
         siirretty += 1;
         if (valittu.syy === 'kylki') kylkiVaihtui += 1;
-        if (valittu.syy === 'reuna') reunalta += 1;
+        if (valittu.syy === 'reuna' || valittu.syy === 'meri') reunalta += 1;
         siirretyt.push(valittu.r);
       }
       sijoitetut.push(valittu.r);

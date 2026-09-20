@@ -15,6 +15,7 @@
     "savuke-ihmisen-kehys.mjs",
     "savuke-ihmisen-esitys.mjs",
     "savuke-pallo-nostolaput.mjs",
+    "savuke-nimiot-elavat.mjs",
     "savuke-nimikyltti.mjs",
     "savuke-kerma-reuna.mjs",
     "savuke-ranskan-nostot-lukossa.mjs",
@@ -50,7 +51,8 @@
     "savuke-arvonimet.mjs",
     "savuke-korostus-janne.mjs",
     "savuke-kartuscha-2.mjs",
-    "savuke-kartuscha-3.mjs"
+    "savuke-kartuscha-3.mjs",
+    "savuke-reittiverkko.mjs"
   ],
   "suorituskyky": [
     "savuke-pariisi-lahizoom.mjs#390-suorituskyky",
@@ -182,6 +184,11 @@
       "js/packs/lipputiedot.js",
       "js/packs/radiot.js",
       "css/styles.css"
+    ],
+    "savuke-reittiverkko.mjs": [
+      "js/pallolauta/reitit.js",
+      "js/pallolauta/lauta.js",
+      "js/pallovektorit.js"
     ]
   },
   "asetukset": {
@@ -485,6 +492,13 @@
     },
     "savuke-nostokortti.mjs": {
       "huomautus": "Nostokortti (omistaja 20.9.2026): lahderivi pois kaikista nostotyypeista, kohdekortin karuselli, Havainnekuva-merkki, kuvan koko LISAA-tilassa (>= 0,8), pyyhkaisy ja nuolinappaimet. 390 ja 1400 px, ampari Noden kautta. ~60 s."
+    },
+    "savuke-nimiot-elavat.mjs": {
+      "huomautus": "Kohdemaan nimiot elavina (Fable 20.9.2026, KOHDEMAAN_NIMIOT_ELAVINA): FRA/Marseille 390 ja 1400 px: ei poltettuja, nimiollisia >= 32/55, Valimeri irti korostuskehasta, ei reunaylityksia saapumisessa ja Marseillen zoomeissa, ladonta <= 12 ms. Ampari Noden kautta. ~70 s."
+    },
+    "savuke-reittiverkko.mjs": {
+      "kuvakansio": true,
+      "huomautus": "Himmea reittiverkko liftatessa (omistaja 20.9.2026 klo 13.50): kaikki laudan kaaret himmeina kantaman kaarten alla vain matkasession ajan, kerran per lauta (js/pallovektorit.js laji verkko). Bryssel 1400 x 900 dpr 2, kamera pakotettu Lansi-Eurooppaan; mittaa Kelttienmeren tummentuneet pikselit, kerran-per-lauta-olion ja kehysajan (Chromiumin ohjelmistopiirto, suhteellinen raja 60 %; laitteen fps Laitetestaajalta)."
     }
   }
 }

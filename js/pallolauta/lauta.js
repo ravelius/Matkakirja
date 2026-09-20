@@ -77,10 +77,12 @@ import { luoPallovektorit, pallovektoritPaalla } from '../pallovektorit.js';
  * kangasta eikä kerros, jonka voisi jälkikäteen piilottaa.
  */
 import {
+  KOHDEMAAN_NIMIOT_ELAVINA,
   asetaTasoituksenLiike, asetaTasoituksenMaailma, asetaVaritasonMaa, haePyramidinLuettelo,
 } from '../laattapyramidi.js';
 import {
   lataaMaapolygonit, maanLautalaatikko, nollaaPallonMaakorostus, paivitaPallonMaakorostus,
+  pallonKorostettuMaa, pallonKorostusRenkaat,
 } from '../maanaariviivat.js';
 // Tarkistusapu: kaupungit, joiden uusi pulukulku on kuunneltavissa.
 import { livianKorostetutKaupungit } from '../liviapuhe.js';
@@ -1018,7 +1020,14 @@ export function aloitusvalinnanKorkeus({
  * kohteet 12, elävät nostot 40 → priorisoidaan). Pelin merkit ja nostot
  * ensin, nimikatto laskee, kun nostoja on.
  */
-export const HTML_MERKKIEN_KATTO = 60;
+export const HTML_MERKKIEN_KATTO = KOHDEMAAN_NIMIOT_ELAVINA ? 180 : 60;
+/*
+ * 180 ELÄVILLÄ NIMIÖILLÄ (js/laattapyramidi.js KOHDEMAAN_NIMIOT_ELAVINA):
+ * kaupunkien nimibudjetti on HTML_MERKKIEN_KATTO − pelin merkit −
+ * nimiölliset nostot, ja 60:n katto olisi vienyt kaupunkien nimet
+ * kokonaan, kun nostoja on ~90. Nimibudjetin oma zoomraja
+ * (js/pallolauta/nimet.js nimibudjetti) pysyy ennallaan.
+ */
 /** Ladonnan lepoviive: sama hetki kuin laadun palautus (js/pallo.js). */
 export const LADONNAN_LEPOVIIVE_MS = LAATU_LEPOVIIVE_MS;
 /*
@@ -4091,6 +4100,47 @@ export async function avaaPallolauta(ui) {
    * Lopuksi pisteet nimettyjen mukaan ja auki oleva kortti ankkurinsa
    * perään.
    */
+  /*
+   * ── RANTAVIIVAN LAATIKOT MEREN NIMIÖILLE (Fable 20.9.2026; sääntö
+   * js/pallolauta/sovittelu.js MEREN NIMIÖ EI JÄÄ RANTAVIIVAN ALLE) ──
+   *
+   * Kohdemaan korostuskehä on sama rengasjoukko, jonka
+   * paivitaPallonMaakorostus antoi 3D-viivalle (js/maanaariviivat.js
+   * pallonKorostusRenkaat, [lon, lat] asteina). Jokainen ruudulla
+   * näkyvä rengasjana muunnetaan laatikoksi viivan paksuudella
+   * (RANTAVIIVAN_VARA_PX kummallekin puolelle): laatikko on janan
+   * ympäri piirretty suorakaide, joka vinolla janalla on viivaa
+   * väljempi — meren nimiö väistää silloin hieman enemmän kuin viiva
+   * vaatii, mikä on oikea suunta (merelle päin). Pisteet, jotka eivät
+   * ole ruudulla (pallon takana tai reunan ulkopuolella), jätetään
+   * pois, joten lista on saapumisnäkymässä muutama sata laatikkoa ja
+   * lähizoomissa muutama kymmenen. Lasketaan vain, kun kohdemaa on
+   * korostettu — ilman maata lista on tyhjä eikä sovittelu muutu.
+   */
+  const RANTAVIIVAN_VARA_PX = 4;
+  const rantaviivanLaatikot = () => {
+    const renkaat = pallonKorostusRenkaat(pallonKorostettuMaa());
+    if (!renkaat.length) return [];
+    const ulos = [];
+    const w = kotelo.clientWidth;
+    const h = kotelo.clientHeight;
+    for (const rengas of renkaat) {
+      let edellinen = null;
+      for (const [lon, lat] of rengas) {
+        const p = ruudulla(lat, lon, 40);
+        if (p && edellinen) {
+          const x0 = Math.min(p.x, edellinen.x) - RANTAVIIVAN_VARA_PX;
+          const x1 = Math.max(p.x, edellinen.x) + RANTAVIIVAN_VARA_PX;
+          const y0 = Math.min(p.y, edellinen.y) - RANTAVIIVAN_VARA_PX;
+          const y1 = Math.max(p.y, edellinen.y) + RANTAVIIVAN_VARA_PX;
+          if (x1 >= 0 && y1 >= 0 && x0 <= w && y0 <= h) ulos.push({ x0, y0, x1, y1 });
+        }
+        edellinen = p;
+      }
+    }
+    return ulos;
+  };
+
   const ladoLevossa = () => {
     lepoAjastin = 0;
     // Kurituksen kello käy myös ohitetuista ajoista: piilossa oleva
@@ -4227,6 +4277,9 @@ export async function avaaPallolauta(ui) {
     const sovittelu = nostot.sovittele({
       nimet: nimet.laatikot(),
       kiinteat: [...infoTulos, ...merkit.laatikot('peli')],
+      // Meren nimiöt väistävät kohdemaan korostuskehää (ks. rantaviivanLaatikot).
+      rantaviiva: rantaviivanLaatikot,
+      rantaviivaOn: pallonKorostusRenkaat(pallonKorostettuMaa()).length > 0,
     });
     paivitaPisteet();
     // Ladonta ajetaan levossa, siirtymän jo mentyä: viimeinen sana
@@ -4403,6 +4456,18 @@ export async function avaaPallolauta(ui) {
       for (const k of kaupungit) k.kayty = kaydyt.has(k.id);
     }
     helmet = reitit.paivita(valinta);
+    /*
+     * HIMMEÄ REITTIVERKKO LIFTATESSA (omistaja 20.9.2026 klo 13.50; ks.
+     * js/pallovektorit.js HIMMEÄ REITTIVERKKO LIFTATESSA). Geometria
+     * annetaan vektorikerrokselle kerran laudan avaimella ja näkyvyys on
+     * valinnan lippu — sama sääntö (matkareittienValinta) kuin kirkkailla
+     * kaarilla, eri piirtäjä. Ilman vektorikerrosta (kytkin pois) verkkoa
+     * ei ole, kuten ei rantaviivaakaan.
+     */
+    if (vektorit?.asetaVerkko) {
+      if (valinta.verkko) vektorit.asetaVerkko(pack.id, reitit.verkonViivat());
+      vektorit.naytaVerkko(Boolean(valinta.verkko));
+    }
     /*
      * ENNAKKOZOOMIN AJAN NAPPULA ON LÄHTÖRUUDUSSAAN (Raamattu,
      * KARTTAUUDISTUKSEN PAATOKSET 40).
