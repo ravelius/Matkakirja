@@ -9886,7 +9886,11 @@ export const RAAMATTU = {
           + 'matkakirjapaneeli ja pulun puhekupla EIVAT SAA NAKYA (v1974:ssa nakyvat, '
           + 'kaappaus saapuminen-pariisi-v1974.webp) = VIKA, jonon karki Gironden rinnalla '
           + '(Opus 1: piilota paneeli ja kupla trailerin ajaksi, savuke). Ei aloitettu '
-          + '(tokenit vahissa).',
+          + '(tokenit vahissa). OMISTAJA 11.20 "Tee" + "Julkaise vain kun valmistuu": '
+          + 'SAAPUMISEN PIILOT (Opus 1 9a6f2055): runkoluokka saapumistraileri-paalla '
+          + 'piilottaa .fact-cardin, kuplapinon ja vihjeen trailerin ajaksi (visibility), '
+          + 'savuke 18/18; kupla piilotetaan, ei lykata (lykkaysjono oma erä). V1975 PR '
+          + '#2627 avattu 11.41 (piilot + astropulun kuva); mergetaan vihreana.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
