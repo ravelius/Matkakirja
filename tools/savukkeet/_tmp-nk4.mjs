@@ -143,7 +143,7 @@ if ((await ampariHaku(`${AMPARI}vendor/globe.gl-2.46.2.min.js`))?.status !== 200
 }
 
 const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
+  .catch(() => import(process.env.PLAYWRIGHT_JS));
 const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const tallenne = (aloitus) => {
@@ -157,7 +157,7 @@ const tallenne = (aloitus) => {
   return JSON.stringify(peli.toJSON());
 };
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await chromium.launch({ executablePath: process.env.PW_CHROMIUM });
 const virheet = [];
 
 async function avaaPeli(kaupunki, leveys, korkeus) {
