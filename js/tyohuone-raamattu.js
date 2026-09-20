@@ -9667,7 +9667,16 @@ export const RAAMATTU = {
           + 'vuoda sijaintia OK; VIAT: astropulu ei tunnista kuvaa vaikka otsikko sanoo '
           + 'Dubai (vakavuus 2); Istanbulin Eskikaraagac-noston lahderivi nayttaa sisaiset '
           + 'tyopolut pelaajalle (vakavuus 3) -> Opus 1. Astronautin kameran aktivointi: '
-          + 'VARUSTEET-kuvake -> vierita -> AKTIVOI-nappi.',
+          + 'VARUSTEET-kuvake -> vierita -> AKTIVOI-nappi. OMISTAJA 05.21: "Pysayta kaikki '
+          + 'sitten kun nykyiset valmistuu" -> sessiot tekevat kesken olevan eran loppuun '
+          + 'ja pysahtyvat: Opus 2 roskakansiot + pallosarja + luettelohaara; Opus 1 savuke-'
+          + 'pollo; Sonnet 1 kierros 17d; Sonnet 2 silmatarkistus; Sonnet 3 numeroympyrat. '
+          + 'JONOON (ei aloiteta): CYP/ITA/POL nostotaso, lahderivin tyopolut (vakavuus 3), '
+          + 'astropulun kuva, kartuschan sisalto 13 maalle, Kosicen kohdekartta, vanhat '
+          + 'kuvat era 2 ampariin ja merge. FABLEN VIRHE 05.18: merge origin/main -> prep '
+          + 'committoi konfliktimerkit neljaan tiedostoon (git commit -a ei pysahtynyt), '
+          + 'korjattu 5aab3b54 prep-version mukaan; OPPI: konfliktin jalkeen aina grep '
+          + '<<<<<<< ennen committia, ei -a-lippua.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
