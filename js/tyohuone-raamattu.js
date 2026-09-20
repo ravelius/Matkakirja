@@ -9792,7 +9792,14 @@ export const RAAMATTU = {
           + 'oli jo < 200 m rantaviivasta. Kaksoisviivan paasyy on siis 2,5-3 px:n korostus '
           + 'ohuen rantaviivan PAALLA, ei geometria. PAATOS (Fable 09.00): tiheysportti '
           + '30 -> 300; tasokartalla korostus piirretaan rantaviivan ALLE ja rannikko-'
-          + 'osuudella ohuempana/lapikuultavana (sama sadekeha-periaate kuin pallolla).',
+          + 'osuudella ohuempana/lapikuultavana (sama sadekeha-periaate kuin pallolla). '
+          + 'KARTUSCHAN AUKOT (Sonnet 2 f5e44ab8, Fable 09.05): BEL, LUX, MLT, SVK, SVN saivat '
+          + 'MAA_KATEGORIAT 5 aihetta x 4 nostoa (100 nostoa, Commons-kuvat tiedosto-'
+          + 'kentalla) ja maatiedot; hetki-kategorioille valinnainen aihe-kentta (GBR 4, DEU '
+          + '3, EGY 2, USA 3 omat nimet), generaattori paivita-hetkisivut korjattu. Mergetty '
+          + 'v1973-prepiin. VELKA (ei jonossa): alle 5 erinimista rivia BGR 2, EST 2, ROU 2, '
+          + 'FIN 3, HRV 3, LTU 3, LVA 3, POL 3, DNK 4; ei-EU ALB, AND, BLR, MDA, MKD, MNE, SRB, '
+          + 'XKX yha tyhjia. Sonnet 2 pysahtyi - jono tyhja.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
