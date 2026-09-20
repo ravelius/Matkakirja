@@ -10064,7 +10064,10 @@ export const RAAMATTU = {
           + '-> ampariin, osoitin haaraan opus2-reliefi-2; julkaistaan v1980:ssa jokien '
           + 'kanssa. IHMISEN MATKAN KUVAT: piirtyvat Chromiumissa (16 kuvaa, 20 kohdekuvaa '
           + 'HEAD 200), omistajan jaksolla (omo) on kohde -> Opus 1 mittaa ilmestymishetken; '
-          + 'muuten iPad-tarkistus.',
+          + 'muuten iPad-tarkistus. MITATTU (Opus 1 e6ceb976): kuvatonta ikkunaa ei ole '
+          + '(omo 100 %, muut 99-100 %) -> ei toistu Chromiumissa; jaa iPad-Safari/verkko-'
+          + 'epailyksi Sonnet 1:lle (sama kuin tuplasaapuminen: hidas tai epaonnistuva '
+          + 'lataus laitteella). Opus 1 siirtyi maan tayttoon (Gironde).',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
