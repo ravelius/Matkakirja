@@ -18775,6 +18775,182 @@ export const MAA_KATEGORIAT = {
       },
     },
     {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Kroatian ruokakulttuuri kasvaa tuulesta ja kalliosta: valkotryffeli metsän '
+        + 'alla, lampaanjuusto saarella jossa tuuli suolaa laitumet, viini '
+        + 'pystysuoralta rinteeltä ja osterit suojaisasta lahdesta.',
+      nostot: [
+        {
+          otsikko: 'Tuoksuva timantti Motovunin metsästä',
+          aika: '1999',
+          tiedosto: 'Tuber Magnatum Pico.jpg',
+          teksti: 'Istrian metsissä Mirna-joen varrella kasvaa valkotryffeliä, samaa lajia '
+            + 'kuin Italian kuuluisassa Alban tryffelissä. Vuonna 1999 paikallinen '
+            + 'tryffelinmetsästäjä Giancarlo Zigante löysi koiransa Dianan avulla '
+            + 'Motovunin metsästä lähes 1,3 kilon painoisen valkotryffelin — sen ajan '
+            + 'suurimman koskaan löydetyn. Löytö teki pienestä kukkulakaupungista '
+            + 'Motovunista maailmankuulun, ja siitä lähtien siellä on joka syksy '
+            + 'järjestetty kansainvälinen tryffelifestivaali. Tryffeliä etsitään yhä '
+            + 'samalla tavalla kuin sata vuotta sitten: koulutetulla koiralla, joka '
+            + 'haistaa maan alla kasvavan sienen tuoksun.',
+          lyhyt: 'Vuonna 1999 Motovunin metsästä löytyi lähes 1,3 kilon valkotryffeli.',
+          selite: 'Valkotryffeleitä (Tuber magnatum) esillä torilla; samaa lajia kasvaa '
+            + 'Istrian metsissä.',
+          lahde: 'Lucarelli, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Juusto joka maistuu tuulelta',
+          aika: 'nykyään',
+          tiedosto: '20140507 Paški sir cheese from Pag.jpg',
+          teksti: 'Pagin saarella lampaat laiduntavat tuulisilla, suolaisen meriveden '
+            + 'huuhtomilla niityillä, joilla kasvaa villiä salviaa ja muita aromikkaita '
+            + 'yrttejä. Voimakas bura-tuuli kuljettaa suolaa ilmassa kauas rannasta ja '
+            + 'peittää laitumen ohuella suolakerroksella. Lampaiden maito saa tästä '
+            + 'ruokavaliosta ainutlaatuisen, hieman suolaisen ja yrttisen maun, joka '
+            + 'siirtyy juustoon: Paški sir on kova, pitkään kypsytetty juusto, jota '
+            + 'pidetään yhtenä Kroatian arvostetuimmista.',
+          lyhyt: 'Pagin saaren tuulinen, suolainen laidun antaa Paški sir -juustolle oman '
+            + 'makunsa.',
+          selite: 'Paški sir -juustokiekkoja kypsymässä hyllyillä Pagin saarella.',
+          lahde: 'Isiwal, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Viini joka kasvaa pystysuoralla rinteellä',
+          aika: 'nykyään',
+          tiedosto: 'Dingač i Postup.JPG',
+          teksti: 'Pelješacin niemimaan lounaisrinteillä, Zabrada-vuorten jyrkillä töyräillä '
+            + 'Trstenikin ja Podobučen kylien välissä, kasvaa Dingačin viinialue. Rypäle '
+            + 'on plavac mali, tumma ja pienimarjainen lajike, joka syntyi '
+            + 'kalifornialaisen zinfandelin kantalajikkeen crljenak kaštelanskin ja '
+            + 'dobričić-rypäleen risteytyksenä. Jyrkkä, aurinkoinen rinne ja meren '
+            + 'heijastama valo kypsyttävät rypäleet täyteläisiksi ja tanniinisiksi, ja '
+            + 'Dingač oli ensimmäinen kroatialainen viinialue, joka sai oman suojatun '
+            + 'alkuperänimityksensä.',
+          lyhyt: 'Dingačin plavac mali -viini kasvaa Pelješacin niemimaan jyrkillä '
+            + 'rinteillä.',
+          selite: 'Dingač- ja Postup-viinipulloja kaupan hyllyllä; molemmat ovat Pelješacin '
+            + 'plavac mali -viinejä.',
+          lahde: 'Silverije, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Lahti joka kasvattaa ostereita ja suolaa',
+          aika: 'nykyään',
+          tiedosto: 'MALI STON, CROATIA.jpg',
+          teksti: 'Pelješacin niemimaan tyvessä Mali Stonin lahti on niin suojaisa ja '
+            + 'ravinteikas, että siellä on kasvatettu ostereita ja simpukoita jo '
+            + 'vuosisatoja. Makean veden purot laimentavat lahden suolapitoisuutta juuri '
+            + 'sopivasti, ja tyyni vesi antaa ostereille aikaa kasvaa hitaasti ja '
+            + 'täyteläisiksi. Lahden reunalla kohoavat Euroopan toiseksi pisimmät '
+            + 'säilyneet kaupunginmuurit, jotka Dubrovnikin tasavalta rakensi suojaamaan '
+            + 'Stonin arvokkaita suolalammikoita — sama tasavalta, joka rikastui sekä '
+            + 'suolasta että lahden ostereista.',
+          lyhyt: 'Mali Stonin suojaisa lahti on kasvattanut ostereita vuosisatojen ajan.',
+          selite: 'Stonin kaupunginmuurit ja Mali Stonin lahti taustalla; muurit suojasivat '
+            + 'kaupungin suolalammikoita.',
+          lahde: 'Jerrye ja Roy Klotz MD, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä rypäle kasvaa Dingačin viinialueella Pelješacin niemimaalla?',
+        vaihtoehdot: [
+          'Plavac mali',
+          'Zinfandel',
+          'Malvasia',
+          'Graševina',
+        ],
+        oikea: 0,
+        fakta: 'Se on kalifornialaisen zinfandelin kantalajikkeen ja dobričić-rypäleen '
+          + 'risteytys.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Kroatian luonto rakentaa itse omat ihmeensä: järvet jotka patoavat itsensä '
+        + 'kalkkikivestä, saaristo joka on Välimeren tiheimpiä, ja vuori joka halkeaa '
+        + 'kahtia syväksi rotkoksi.',
+      nostot: [
+        {
+          otsikko: 'Järvet jotka rakentavat itse patonsa',
+          aika: '1979',
+          tiedosto: 'Plitvice Lakes1.jpg',
+          teksti: 'Plitvicen 16 järveä on kytketty toisiinsa vesiputouksilla ja '
+            + 'luonnollisilla travertiinipadoilla — kalkkikivipitoisesta vedestä '
+            + 'sakkautuvasta kivestä, jota sammal ja levät sitovat vuosisatojen kuluessa '
+            + 'yhä paksummaksi kerrokseksi. Padot kasvavat ja muuttavat muotoaan koko '
+            + 'ajan, joten järvien reitti ei ole koskaan täysin sama kahtena '
+            + 'vuosikymmenenä. Vesi vaihtaa väriään turkoosista vihreään sen mukaan, '
+            + 'kuinka paljon mineraaleja, planktonia ja auringonvaloa siihen osuu. '
+            + 'Plitvice on Kroatian vanhin ja suurin kansallispuisto, ja Unesco otti sen '
+            + 'maailmanperintöluetteloon jo vuonna 1979.',
+          lyhyt: 'Plitvicen järviä erottavat travertiinipadot, jotka kasvavat ja muuttuvat '
+            + 'yhä.',
+          selite: 'Vesiputouksia ja turkoosia järvivettä Plitvicen kansallispuistossa.',
+          lahde: 'Tesla Delacroix, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kosket jotka kohisevat kivikynnyksillä',
+          aika: '1985',
+          tiedosto: 'Skradinski buk Krka National Park 1.jpg',
+          teksti: 'Krkan kansallispuiston tunnetuin näky, Skradinski buk, syntyy samasta '
+            + 'travertiinin kerrostumisilmiöstä kuin Plitvicen padot: joki putoaa sarjana '
+            + 'pieniä ja suuria putouksia sammaleisten kivikynnysten yli. Puisto suojelee '
+            + 'Krka-joen keski- ja alajuoksua lähellä Šibenikin kaupunkia, ja siitä tuli '
+            + 'Kroatian seitsemäs kansallispuisto vuonna 1985. Putousten juurella syntyvä '
+            + 'vesisumu ja jatkuva kohina saavat kynnykset tuntumaan enemmän eläviltä '
+            + 'kuin kiviltä.',
+          lyhyt: 'Skradinski buk on Krkan kansallispuiston tunnetuin travertiiniputoussarja.',
+          selite: 'Vesi kuohuu sammaleisten travertiinikynnysten yli Krkan '
+            + 'kansallispuistossa.',
+          lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Meri jossa on 89 saarta',
+          aika: 'nykyään',
+          tiedosto: 'South part of Kornat island and nearby islands.jpg',
+          teksti: 'Kornatin saaristo Pohjois-Dalmatiassa koostuu 89 saaresta noin 320 '
+            + 'neliökilometrin merialueella ja tunnetaan koko Välimeren tiheimpänä '
+            + 'saaristona. Saaret ovat enimmäkseen paljasta, kasvitonta kalkkikiveä, '
+            + 'jonka jyrkät valkoiset kalliot nousevat suoraan sinisestä merestä. '
+            + 'Saariston nimi tulee sen suurimmasta saaresta, Kornatista. Tuulien ja '
+            + 'aaltojen kuluttama maisema näyttää ilmasta kuvattuna kartalta revityiltä '
+            + 'palasilta, ja se on suosittu purjehtijoiden ja sukeltajien kohde.',
+          lyhyt: 'Kornatin 89 saarta muodostavat Välimeren tiheimmän saariston.',
+          selite: 'Kornatin saariston paljaita kalkkikkikallioita ilmasta kuvattuna.',
+          lahde: 'Bogdan Giușcă, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Vuori joka halkeaa kahtia',
+          aika: 'nykyään',
+          tiedosto: 'CRO Paklenica NP.jpg',
+          teksti: 'Velebit-vuoriston eteläisillä rinteillä Paklenica halkeaa kahdeksi '
+            + 'jyrkkäseinäiseksi kalkkikivirotkoksi, Velika ja Mala Paklenicaksi. '
+            + 'Vuosituhansien aikana virtaava vesi on syövyttänyt vuoreen kapean, satoja '
+            + 'metrejä syvän kanjonin, jonka pystysuorat seinämät houkuttelevat '
+            + 'kalliokiipeilijöitä ympäri Eurooppaa. Rotkon pohjalla kulkeva polku on '
+            + 'varjoisa ja viileä silloinkin, kun Dalmatian rannikolla paahtaa kesähelle. '
+            + 'Paklenica on yksi Kroatian vanhimmista kansallispuistoista ja sijaitsee '
+            + 'lähellä Starigradin kaupunkia.',
+          lyhyt: 'Paklenica on Velebit-vuoristoon syöpynyt jyrkkäseinäinen kalkkikivirotko.',
+          selite: 'Paklenican kansallispuiston kalkkikivistä vuoristomaisemaa Velebitillä.',
+          lahde: 'Tadam, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mistä kivilajista Plitvicen järviä erottavat padot muodostuvat?',
+        vaihtoehdot: [
+          'Travertiinista',
+          'Graniitista',
+          'Liuskeesta',
+          'Marmorista',
+        ],
+        oikea: 0,
+        fakta: 'Sammal ja levät sitovat kalkkikivipitoisesta vedestä sakkautuvan kiven yhä '
+          + 'paksummaksi.',
+      },
+    },
+    {
       id: 'menovinkit',
       nimi: 'Menovinkit',
       johdanto: 'Kroatia on pieni maa, mutta sen museot ja kirjastot ovat vieneet '
