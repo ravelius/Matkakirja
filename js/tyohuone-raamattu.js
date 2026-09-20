@@ -9759,7 +9759,11 @@ export const RAAMATTU = {
           + 'harvennettiin eri saannolla kuin rannikko -> sama saanto; saapumisnakymassa '
           + 'pudotettuja 0 -> 1170. LOYDOS: maalehden kartta on staattinen valokuva; '
           + 'kaksoisviiva on LINSSIN TASOKARTALLA (rantataso + maatummennus.js admin_0-'
-          + 'keha) -> Opus 1 era 1b sumennuksen jalkeen (sama omistajan kohta A).',
+          + 'keha) -> Opus 1 era 1b sumennuksen jalkeen (sama omistajan kohta A). SUMENNUS '
+          + '(Opus 1 59f13671, 08.40): EI tuotevika - traileri poistaa itsensa 10 s:ssa, '
+          + 'savuke mittasi kesken trailerin -> mittari odottaa trailerin pois; savuke-'
+          + 'pollon punaiset 16 -> 11 (jaljella: alanappirivi 345/390, bittikartan '
+          + 'tarkkuus, paneelin reunavalit, move-korostus, vihjekupla - eivat jonossa).',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
