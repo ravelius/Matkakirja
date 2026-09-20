@@ -661,9 +661,8 @@ export const FOKUSKOHTEET_ROU = [
       + 'sitä — niinpä tuomarit saivat sen näkyviin ainoalla jäljellä '
       + 'olleella tavalla, muodossa 1.00. Samoissa kisoissa hän sai vielä '
       + 'kuusi kymppiä lisää ja voitti kolme kultaa.',
-    lahde: 'en-Wikipedia "Nadia Comăneci", johdanto ja osio "1976 Summer '
-      + 'Olympics" (tarkistettu 25.8.2026 työaineistoon '
-      + 'docs/mantereet-tyoaineisto/takynostot-romania.md, ehdokas 3).',
+    lahde: 'en-Wikipedia "Nadia Comăneci", johdanto ja osio "1976 Summer Olympics" '
+      + '(tarkistettu 25.8.2026).',
     /*
      * Commons 25.8.2026: 480×722, public domain, tekijä tuntematon
      * (agerpres-arkisto), kuvattu 3.8.1976, kuvaus "Nadia Comăneci at

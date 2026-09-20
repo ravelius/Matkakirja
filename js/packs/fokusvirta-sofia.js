@@ -1020,10 +1020,8 @@ export const FOKUSVIRTA_SOFIA = {
           + 'hotellin pohjakerroksessa — aukko lattiassa, ja sen alla se '
           + 'kuudesosa, joka säilyi.',
       ],
-      lahde: 'en-Wikipedia "Amphitheatre of Serdica", osiot "History", '
-        + '"Discovery" ja "Physical description" (tarkistettu 1.9.2026; '
-        + 'sama faktapohja kuin docs/mantereet-tyoaineisto/takyt-sofia.md, '
-        + 'täky 6).',
+      lahde: 'en-Wikipedia "Amphitheatre of Serdica", osiot "History", "Discovery" '
+        + 'ja "Physical description" (tarkistettu 1.9.2026).',
       /*
        * PÄÄKUVAKSI LOISTOAIKA (omistajan päätös 28.8.2026). Sama sarja
        * kuin assets/kartat/ihmeet/: repon oma generoitu havainnekuva,

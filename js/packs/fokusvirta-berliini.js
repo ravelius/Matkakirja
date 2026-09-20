@@ -633,10 +633,9 @@ export const FOKUSVIRTA_BERLIINI = {
           + 'jälkeen hän oli jo vahakabinetissa Unter den Lindenillä '
           + 'signeeraamassa kuviaan.',
       ],
-      lahde: 'en-Wikipedia "Wilhelm Voigt", johdanto ja osiot "Early life", '
-        + '"Captain of Köpenick", "Unraveling and capture" ja "Aftermath" '
-        + '(tarkistettu 25.8.2026 työaineistoon docs/mantereet-tyoaineisto/'
-        + 'takynostot-saksa.md, ehdokas 1).',
+      lahde: 'en-Wikipedia "Wilhelm Voigt", johdanto ja osiot "Early life", "Captain '
+        + 'of Köpenick", "Unraveling and capture" ja "Aftermath" (tarkistettu '
+        + '25.8.2026).',
       /*
        * PÄÄKUVAKSI HAVAINNEKUVA (28.8.2026, sama malli kuin Sofian
        * areenalla ja v1307:n neljällä nostolla): repon oma generoitu
@@ -709,9 +708,7 @@ export const FOKUSVIRTA_BERLIINI = {
           + 'Siemens — sama mies, jonka yhtiö oli rakentanut Berliinin '
           + 'putkipostin.',
       ],
-      lahde: 'en-Wikipedia "Archaeopteryx", osio yksilöistä (tarkistettu '
-        + '25.8.2026 työaineistoon docs/mantereet-tyoaineisto/'
-        + 'takynostot-saksa.md, ehdokas 2).',
+      lahde: 'en-Wikipedia "Archaeopteryx", osio yksilöistä (tarkistettu 25.8.2026).',
       /*
        * PÄÄKUVAKSI HAVAINNEKUVA (28.8.2026, sama malli kuin yllä):
        * repon oma generoitu kuva, joten kenttä on `osoite` eikä
@@ -785,9 +782,8 @@ export const FOKUSVIRTA_BERLIINI = {
           + 'yleisölle pian sen jälkeen. Sen jälkeen siellä on käynyt yli '
           + '61 miljoonaa ihmistä.',
       ],
-      lahde: 'en-Wikipedia "Neuschwanstein Castle", johdanto ja osio '
-        + '"Construction" (tarkistettu 25.8.2026 työaineistoon '
-        + 'docs/mantereet-tyoaineisto/takynostot-saksa.md, ehdokas 7).',
+      lahde: 'en-Wikipedia "Neuschwanstein Castle", johdanto ja osio "Construction" '
+        + '(tarkistettu 25.8.2026).',
       /*
        * PÄÄKUVAKSI HAVAINNEKUVA (28.8.2026, sama malli kuin yllä):
        * repon oma generoitu kuva, joten kenttä on `osoite` eikä
