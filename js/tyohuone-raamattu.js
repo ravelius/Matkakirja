@@ -9877,7 +9877,10 @@ export const RAAMATTU = {
           + '(Biskajanlahti, Dune du Pilat ja "varmasti paljon muitakin") -> TO-DO '
           + 'Sonnetille: kay Euroopan maalehtien nimiot lapi ja siirra reunasta; EI '
           + 'ALOITETA HETI (tokenit vahissa). 4) Tehdaan nyt: astropulun kuva (Opus 1) ja '
-          + 'b-viivojen siivous amparista (Opus 2).',
+          + 'b-viivojen siivous amparista (Opus 2). TEHTY 11.10: astropulun kuva (Opus 1 '
+          + '1592b206: konteksti saa avatun valokuvan nimen, seudun ja selitteen ruudulta; '
+          + 'mergetty v1973-prepiin, julkaistaan v1975:ssa); 2026-09-20b-viivat poistettu '
+          + 'amparista (11 978 objektia). Kaikki sessiot pysahtyneet.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
