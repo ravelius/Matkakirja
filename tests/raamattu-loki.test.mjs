@@ -1,5 +1,5 @@
 /*
- * RAAMATUN JAKO (omistaja 20.9.2026 klo 18.12): Raamatussa on vain
+ * RAAMATUN JAKO (omistaja 20.9.2026 klo 18.08): Raamatussa on vain
  * voimassa oleva linjaus, päätöshistoria on sanatarkasti kansiossa
  * docs/raamattu-loki/. Nämä vartiot pitävät jaon koossa:
  *   1. jokainen Raamatun "Loki: docs/raamattu-loki/<tiedosto> #<otsikko>"
@@ -62,7 +62,7 @@ test('lokitiedostojen alkurivi kertoo lähdeosion, ja kohdat ovat ##-otsikoita',
   for (const [tiedosto, osio, maara] of [
     ['paatokset-2026-08-24--09-03.md', 'Fokusmoodi', 125],
     ['paatokset-2026-09-03--09-14.md', 'Viisas Pöllö', 225],
-    ['paatokset-2026-09-13--09-20.md', 'Kaupungit', 98],
+    ['paatokset-2026-09-13--09-20.md', 'Kaupungit', 100],
   ]) {
     const teksti = readFileSync(new URL(tiedosto, LOKIKANSIO), 'utf8');
     assert.match(teksti.split('\n')[0], new RegExp(`osiosta "${osio}"`), `${tiedosto}: alkurivi`);

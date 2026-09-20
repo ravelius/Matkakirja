@@ -1,7 +1,7 @@
 # Codex-toimitusten kirjanpito
 
 Julkaisija (sonnet) pitää tätä listaa (Raamattu: VIESTIKANAVAT JA FABLEN
-EFFORT, omistaja 20.9.2026 klo 18.40): toimitukset haetaan kerran tunnissa
+EFFORT, omistaja 20.9.2026 klo 18.18): toimitukset haetaan kerran tunnissa
 kansiosta `~/Documents/Codex/<pvm>/` ja postilaatikkohaarasta, haara
 pushataan ja toimitus reititetään (tekstit Fablelle, animaatiot
 Pelikoodarille, kuvat Sisältökirjurille).

@@ -3,7 +3,7 @@
  *
  *   node tools/raamattu-kirjaa.mjs "<OTSIKKO>" "<teksti>"
  *
- * Omistajan päätös 20.9.2026 klo 18.12 (Raamattu, Ohjedokumenttien
+ * Omistajan päätös 20.9.2026 klo 18.08 (Raamattu, Ohjedokumenttien
  * kartta): Raamatussa (js/tyohuone-raamattu.js) on vain voimassa oleva
  * linjaus per aihe; koko päätöshistoria elää sanatarkasti kansiossa
  * docs/raamattu-loki/. Uudet päätökset kirjataan tällä työkalulla
