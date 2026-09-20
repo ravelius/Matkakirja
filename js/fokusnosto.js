@@ -73,8 +73,9 @@ import { merkitseLivianNosto } from './livia-tilanteet.js';
  * NOSTO_/nosto-etuliitteellä.
  */
 import {
-  fokusmoodiPaalla, html, jaaKappaleiksi, kuunteleSulkevaNapautus, linssiEstaa,
-  nielaiseSulkevaNapautus, polloNimilappu, TOAST_MS,
+  arvonimenPaikkaMaalle, fokusmoodiPaalla, html, jaaKappaleiksi,
+  kuunteleSulkevaNapautus, linssiEstaa, nielaiseSulkevaNapautus,
+  polloNimilappu, TOAST_MS,
 } from './ui-apurit.js';
 import { asetaKuva, assetOsoite } from './media.js';
 import { kuvatekstiLyhyt } from './kuvatekstit.js';
@@ -1721,6 +1722,40 @@ function piirraNostonVisa(ui, sisalto, nosto) {
  * kirjoittamalla kysymyksellä, eikä se riipu chatin omien
  * avausvalmiskysymysten lipusta.
  */
+/*
+ * NOSTON MAA (Sonnet 1, kierros 18, 20.9.2026: Padisen luostarin
+ * kortissa luki *"Pariisin salonkien pöllöltä"*, vaikka kohdekortin
+ * sama vika oli korjattu kierroksella 16b). Nostokortti oli TOINEN
+ * polku samaan arvonimeen, eikä se kertonut kohteen maata lainkaan —
+ * silloin `arvonimenPaikka` luki PELAAJAN sijainnin.
+ *
+ * Maa haetaan samalla kaavalla kuin kohteen (js/fokuskohteet.js
+ * kohteenIso): ensin noston oma `iso`, sitten maakohtainen pooli
+ * NOSTO_MAATista tunnuksen perusteella. Kaupungin omat täkynostot
+ * (fokusvirtaSisalto) eivät ole poolissa, ja niille oikea maa ON
+ * pelaajan kaupunki — kortti kertoo juuri siitä kaupungista, jossa
+ * pelaaja seisoo. Silloin paluuarvo on null ja arvonimi menee entistä
+ * reittiä.
+ */
+let nostonIsoHakemisto = null;
+let nostonIsoMaita = 0;
+
+export function nostonIso(nosto) {
+  if (!nosto) return null;
+  if (typeof nosto.iso === 'string' && nosto.iso.length === 3) return nosto.iso;
+  const maat = Object.keys(NOSTO_MAAT);
+  if (!nostonIsoHakemisto || maat.length !== nostonIsoMaita) {
+    nostonIsoHakemisto = new Map();
+    for (const iso of maat) {
+      for (const n of NOSTO_MAAT[iso] ?? []) {
+        if (n?.id && !nostonIsoHakemisto.has(n.id)) nostonIsoHakemisto.set(n.id, iso);
+      }
+    }
+    nostonIsoMaita = maat.length;
+  }
+  return nostonIsoHakemisto.get(nosto.id) ?? null;
+}
+
 function piirraNostonKysymykset(ui, sisalto, nosto) {
   const kysymykset = (Array.isArray(nosto.kysymykset) ? nosto.kysymykset : [])
     .map((k) => String(k ?? '').trim()).filter(Boolean).slice(0, 3);
@@ -1728,10 +1763,14 @@ function piirraNostonKysymykset(ui, sisalto, nosto) {
   // Sama nimilappuvitsi kuin kartan kohdekortissa (omistaja 27.8.2026,
   // muoto tarkennettu 31.8.2026): "Kysy viisaalta pöllöltä pululta:",
   // koko nimi yhden vedon alla.
+  // Arvonimi noston omasta maasta, ei pelaajan sijainnista (ks. nostonIso).
+  const paikka = arvonimenPaikkaMaalle(nostonIso(nosto), ui?.game ?? null);
   sisalto.appendChild(polloNimilappu(html('p', 'fokusnosto-kysy-otsikko'), {
     ennen: 'Kysy ', yli: 'viisaalta pöllöltä', tilalle: 'pululta', jalkeen: ':',
     // Arvonimi vaihtuu joka avauksella (Raamattu VIISAAN POLLON ARVONIMET).
     arvonimi: true,
+    maanosa: paikka.maanosa,
+    iso: paikka.iso,
   }));
   const rivi = html('div', 'fokusnosto-kysymykset');
   rivi.setAttribute('role', 'group');

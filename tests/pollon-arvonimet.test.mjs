@@ -11,6 +11,7 @@
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 
 import {
   POLLON_ARVONIMET_YLEISET,
@@ -113,6 +114,24 @@ test('arvonimenPaikkaMaalle antaa kohteen maan, ei pelaajan sijaintia', async ()
   // Tuntematon tai puuttuva maa ei keksi paikkaa (arvonta menee yleisiin).
   assert.deepEqual(arvonimenPaikkaMaalle(null, game), { maanosa: null, iso: null });
   assert.deepEqual(arvonimenPaikkaMaalle('XXX', game), { maanosa: null, iso: 'XXX' });
+});
+
+test('nostonIso löytää noston maan, ja nostokortti kysyy arvonimen siitä', async () => {
+  /*
+   * Sonnet 1, kierros 18 (20.9.2026): Padisen luostarin NOSTOKORTISSA
+   * luki yhä "Pariisin salonkien pöllöltä", vaikka kohdekortin sama
+   * vika korjattiin kierroksella 16b. Nostokortti oli toinen polku
+   * samaan arvonimeen eikä kertonut kohteen maata lainkaan.
+   */
+  const { nostonIso } = await import('../js/fokusnosto.js');
+  const lahde = readFileSync(new URL('../js/fokusnosto.js', import.meta.url), 'utf8');
+  // Kortti hakee paikan noston maasta ja antaa sen nimilapulle.
+  assert.match(lahde, /const paikka = arvonimenPaikkaMaalle\(nostonIso\(nosto\), ui\?\.game \?\? null\);/);
+  assert.match(lahde, /maanosa: paikka\.maanosa,\s*\n\s*iso: paikka\.iso,/);
+  // Oma kenttä voittaa hakemiston, tuntematon tunnus ei keksi maata.
+  assert.equal(nostonIso({ id: 'ei-ole-olemassa' }), null);
+  assert.equal(nostonIso(null), null);
+  assert.equal(nostonIso({ id: 'mika-tahansa', iso: 'EST' }), 'EST');
 });
 
 test('kohteenIso löytää kohteen maan KOHDE_MAAT-taulusta', async () => {
