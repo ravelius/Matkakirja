@@ -145,10 +145,88 @@ on Fablen esimerkkien mukainen niiltä osin kuin hän nimesi ne
 Lähde: en-Wikipedia "Provinces of France" ja "Alsace-Lorraine"
 (johdanto-osat), tarkistettu 20.9.2026.
 
+## c) Espanjan historialliset maakunnat/kuningaskunnat 1873 (16 riviä)
+
+Espanja Ranskan jälkeen, samalla kaanontarkkuudella: nimet ovat
+1800-luvun historiallisia alue-/kuningaskuntanimiä — EI vuoden 1833
+Javier de Burgosin 49 provinssin jakoa eikä nykyisiä 17
+itsehallintoaluetta. Nämä olivat vielä 1873 yleisesti käytössä
+maantieteellisinä ja kulttuurisina aluenimimä, samaan tapaan kuin
+Ranskan vanhat maakunnat.
+
+| Maakunta | Iso | Koko | Huomio |
+| --- | --- | --- | --- |
+| Galicia | ESP | suuri | |
+| Asturia | ESP | pieni | Entinen Asturian kuningaskunta |
+| Kantabria | ESP | pieni | Santander — ks. huomautus (2) alla |
+| Baskimaa | ESP | pieni | "Provincias Vascongadas" (Vizcaya, Guipúzcoa, Álava) yhtenä nimiönä, ks. huomautus (1) |
+| Navarra | ESP | pieni | Entinen Navarran kuningaskunta |
+| Aragonia | ESP | suuri | Entinen Aragonian kuningaskunta |
+| Katalonia | ESP | suuri | |
+| Valencia | ESP | suuri | Entinen Valencian kuningaskunta |
+| Murcia | ESP | pieni | Entinen Murcian kuningaskunta |
+| Vanha-Kastilia | ESP | suuri | Castilla la Vieja |
+| Uusi-Kastilia | ESP | suuri | Castilla la Nueva, Madridin ympäristö |
+| León | ESP | suuri | Entinen Leónin kuningaskunta — pidetty erillään Vanha-Kastiliasta, ks. huomautus (3) |
+| Extremadura | ESP | suuri | |
+| Andalusia | ESP | suuri | Entinen Andalusian kuningaskunta |
+| Baleaarit | ESP | pieni | Saaristo |
+| Kanariansaaret | ESP | pieni | Saaristo, kaukana Atlantilla |
+
+### Kolme harkinnanvaraista päätöstä (reviewer, tarkistakaa)
+
+1. **Baskimaa yhtenä nimiönä.** 1800-luvun kartat ja matkakirjat
+   käyttivät usein yhteisnimeä "Provincias Vascongadas" kolmesta
+   pienestä maakunnasta (Vizcaya, Guipúzcoa, Álava). Valitsin yhden
+   nimiön kolmen sijaan, koska yksittäiset maakunnat olisivat
+   nimiökartalla hyvin pieniä (samaa kokoluokkaa kuin Ranskan Béarn
+   tai Foix) ja koska Baskimaa on suomeksi vakiintunut yleisnimitys.
+   Jos Karttaseppä haluaa kolme erillistä pientä nimiötä, listan voi
+   pilkkoa.
+2. **Kantabria erillään Vanha-Kastiliasta.** Vuoden 1833 hallinnollinen
+   jako (ja siten myös fi-Wikipedian "Vanha-Kastilia"-artikkeli)
+   laskee Santanderin/Kantabrian osaksi Vanha-Kastiliaa. Valitsin
+   silti oman nimiön Kantabrialle, koska rantaviivan seutu ("La
+   Montaña") oli kulttuurisesti ja maantieteellisesti erottuva jo
+   ennen 1833-jakoa — sama logiikka kuin Ranskan Bretagnen tai
+   Normandian oma nimiö Île-de-Francen vieressä. Tämä on tulkinta,
+   jonka reviewer voi kumota: vaihtoehto olisi poistaa Kantabria
+   listalta ja siirtää Vanha-Kastilian keskipiste pohjoisemmaksi
+   rannikolle asti ulottuvaksi.
+3. **León erillään Vanha-Kastiliasta.** León oli oma kuningaskuntansa
+   ennen liittoa Kastiliaan vuonna 1230, ja seutu (nykyiset Leónin,
+   Zamoran ja Salamancan maakunnat) tunnettiin edelleen 1800-luvulla
+   omana historiallis-kulttuurisena alueenaan — siksi erillinen nimiö
+   eikä sulautus Vanha-Kastiliaan.
+
+### Suomenkieliset nimet (ESP)
+
+Fablen 20.9.2026 linjaus (ks. Ranskan lohko) — vain vakiintuneet
+suomenkieliset muodot suomennetaan, loput jäävät alkukielisiksi.
+Espanjan kohdalla lähes kaikilla alueilla ON vakiintunut suomenkielinen
+muoto (Galicia, Asturia, Kantabria, Baskimaa, Aragonia, Katalonia,
+Andalusia, Vanha-Kastilia, Uusi-Kastilia — tarkistettu fi-Wikipediasta
+21.9.2026), joten näiltä osin Espanjan lohko poikkeaa Ranskan lohkosta,
+jossa suurin osa jäi alkukielisiksi. Navarra, Valencia, Murcia,
+Extremadura ja León eivät saa erillistä suomenkielistä muotoa (samat
+sanat espanjaksi ja suomeksi vakiintuneesti), joten ne jäävät
+alkukielisiksi kapiteeleiksi Ranskan Bretagne/Provence-tapaan.
+Baleaarit ja Kanariansaaret ovat suomenkielisiä saaristonimiä.
+
+Lähde: en-Wikipedia "Old Castile", "New Castile", "Kingdom of León",
+"Kingdom of Asturias", "Basque Provinces" ja "Provinces of Spain"
+(johdanto-osat); suomenkieliset nimet tarkistettu fi-Wikipediasta
+(artikkelit "Vanha-Kastilia", "Kantabria", "Baleaarit", "Asturia",
+"Baskimaa" ym.). Tarkistettu 21.9.2026. Koordinaatit ovat tämän
+kirjoittajan arvioita alueen painopisteestä — EI tietokoneellisesti
+kartalta tarkistettuja; Karttaseppä tarkistaa visuaalisesti
+koelaatalla ja siirtää tarvittaessa, samaan tapaan kuin Ranskan ja
+merien lohkoissa.
+
 ## Seuraava vaihe
 
 Muu Eurooppa maa kerrallaan (sama kaanontarkkuus: 1873-rajat ja
 -nimet — Itävalta-Unkari, Osmanien Balkan jne., ei nykyisiä rajoja),
-samalla schemalla. Tehdään erillisenä jatko-eränä kartuschan vajaiden
-maiden ja kuvattomien nostojen jälkeen, Fablen antaman järjestyksen
-mukaisesti.
+samalla schemalla. Saksa ja Italia tehtiin samassa erässä (ESP:n
+kanssa rinnakkain, kukin omalla haarallaan), loput Fablen antaman
+järjestyksen mukaisesti.

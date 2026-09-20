@@ -311,6 +311,12 @@ export const MAASTOKOHTEET_ESP = [
       },
     ],
     nimi: 'Santiago de Compostela',
+    /*
+     * NOSTOTASOT (Fablen tilaus 20.9.2026, samaan tapaan kuin FRA:n
+     * docs/raportit/nostotasot-fra-20260920.md): ykköstaso = tunnetuin
+     * ja pelillisesti tärkein, isompi nimiö + kuvamerkki kartalla.
+     */
+    taso: 1,
     tyyppi: 'kulttuuri',
     kysymykset: [
       'Mistä nimi Compostela tulee?',
@@ -369,6 +375,12 @@ export const MAASTOKOHTEET_ESP = [
       },
     ],
     nimi: 'Segovian akvedukti',
+    /*
+     * NOSTOTASOT (Fablen tilaus 20.9.2026, samaan tapaan kuin FRA:n
+     * docs/raportit/nostotasot-fra-20260920.md): ykköstaso = tunnetuin
+     * ja pelillisesti tärkein, isompi nimiö + kuvamerkki kartalla.
+     */
+    taso: 1,
     tyyppi: 'tekniikka',
     kysymykset: [
       'Miten akveduktin ikä selvitettiin?',
@@ -425,6 +437,12 @@ export const MAASTOKOHTEET_ESP = [
       },
     ],
     nimi: 'Altamiran luola',
+    /*
+     * NOSTOTASOT (Fablen tilaus 20.9.2026, samaan tapaan kuin FRA:n
+     * docs/raportit/nostotasot-fra-20260920.md): ykköstaso = tunnetuin
+     * ja pelillisesti tärkein, isompi nimiö + kuvamerkki kartalla.
+     */
+    taso: 1,
     tyyppi: 'historia',
     kysymykset: [
       'Miksi maalauksia ei ensin uskottu esihistoriallisiksi?',
@@ -481,6 +499,12 @@ export const MAASTOKOHTEET_ESP = [
       },
     ],
     nimi: 'Toledo',
+    /*
+     * NOSTOTASOT (Fablen tilaus 20.9.2026, samaan tapaan kuin FRA:n
+     * docs/raportit/nostotasot-fra-20260920.md): ykköstaso = tunnetuin
+     * ja pelillisesti tärkein, isompi nimiö + kuvamerkki kartalla.
+     */
+    taso: 1,
     tyyppi: 'kaupunki',
     kysymykset: [
       'Minkä valtakunnan pääkaupunki Toledo oli?',
@@ -538,6 +562,12 @@ export const MAASTOKOHTEET_ESP = [
       },
     ],
     nimi: 'Córdoban moskeijakatedraali',
+    /*
+     * NOSTOTASOT (Fablen tilaus 20.9.2026, samaan tapaan kuin FRA:n
+     * docs/raportit/nostotasot-fra-20260920.md): ykköstaso = tunnetuin
+     * ja pelillisesti tärkein, isompi nimiö + kuvamerkki kartalla.
+     */
+    taso: 1,
     tyyppi: 'kulttuuri',
     kysymykset: [
       'Kuka määräsi suuren moskeijan rakennettavaksi?',
