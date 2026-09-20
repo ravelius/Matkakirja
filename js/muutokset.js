@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1977, teksti: 'v1977: kartuscha 2 (lippu, vilkku), liftauksen kantama' },
   { v: 1976, teksti: 'v1976: kartuscha siisti, radiovalo, astron inforuutu' },
   { v: 1975, teksti: 'v1975: saapumisen piilot, astropulun kuva' },
   { v: 1974, teksti: 'v1974: joet kartalle, Gironde, Kosice-kartta, kartuscha' },
