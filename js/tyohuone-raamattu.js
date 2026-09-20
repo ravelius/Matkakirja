@@ -9904,7 +9904,11 @@ export const RAAMATTU = {
           + 'V1975 MERGETTY 11.53, TUOTANNOSSA 11.56 (saapumisen piilot, astropulun kuva). '
           + 'OMISTAJA 12.00: "iPadilla avaruus linssissa ylareunassa nakyy turhaan vakaset. '
           + 'Ota se pois" (kaappaus omistaja-20260920/astro-vakaset-ipad.png: kolmen '
-          + 'vakasen nappi X-napin alla oikeassa ylakulmassa) -> Opus 1 poistaa.',
+          + 'vakasen nappi X-napin alla oikeassa ylakulmassa) -> Opus 1 poistaa. OMISTAJA '
+          + '12.05: "Pienennetty inforuutu pitaa olla saman leveyinen kuin avattu. Nyt liian '
+          + 'levea" (Astronautin kameran valokuvanakyma iPadilla, pienennetty inforuutu '
+          + 'venyy koko ruudun leveydelle; kaappaus astro-inforuutu-leveys-ipad.png) -> '
+          + 'Opus 1 samaan eraan vakasten kanssa.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
