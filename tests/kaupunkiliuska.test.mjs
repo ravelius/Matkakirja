@@ -320,39 +320,19 @@ test('liuskan rivit avaavat Muut-kategorian haitarin kuten muutkin', () => {
  * niiden takana on sisältöä; lauta antaa tiedon kaupunkinosto.js:n
  * datasta (lauta.js liuskanSisalto → nostot.js liuskanRivit).
  */
-<<<<<<< HEAD
 test('Alpit: opas on, kohdekarttaa ei → liuskassa vain kaupunki ja Turistiopas', () => {
   // Alpeilla on lehti ja opas mutta ei kohdekarttaa (Bryssel ja Ljubljana
   // saivat sen 20.9.2026, jolloin niiden liuskassa on kaikki kolme
   // yläryhmän riviä).
   assert.equal(kaupungillaKohdekartta('alpit'), false);
   assert.ok(turistiOppaanArtikkeli('alpit'), 'Alppien oppaan artikkeli puuttuu');
-=======
-test('Ljubljana: opas on, kohdekarttaa ei → liuskassa vain kaupunki ja Turistiopas', () => {
-  // Ljubljanalla on lehti ja opas mutta ei vielä kohdekarttaa (Bryssel sai
-  // sen 20.9.2026, jolloin sen liuskassa on kaikki kolme yläryhmän riviä).
-  assert.equal(kaupungillaKohdekartta('ljubljana'), false);
-  assert.ok(turistiOppaanArtikkeli('ljubljana'), 'Ljubljanan oppaan artikkeli puuttuu');
-  const rivit = liuskanRivit({
-    kaupunki: { nimi: 'Ljubljana', lat: 46.06, lng: 14.51 },
-    nostot: [],
-    nahtavyyksia: kaupungillaKohdekartta('ljubljana'),
-    opas: Boolean(turistiOppaanArtikkeli('ljubljana')),
-  });
-  assert.deepEqual(rivit.map((r) => r.laji), ['lehti', 'opas']);
-});
-
-test('Bryssel: kohdekartta ja opas → kaikki kolme yläryhmän riviä', () => {
-  assert.equal(kaupungillaKohdekartta('bryssel'), true);
-  assert.ok(turistiOppaanArtikkeli('bryssel'));
->>>>>>> origin/main
   const rivit = liuskanRivit({
     kaupunki: { nimi: 'Alpit', lat: 46.6, lng: 8.0 },
     nostot: [],
     nahtavyyksia: kaupungillaKohdekartta('alpit'),
     opas: Boolean(turistiOppaanArtikkeli('alpit')),
   });
-  assert.deepEqual(rivit.map((r) => r.laji), ['lehti', 'nahtavyydet', 'opas']);
+  assert.deepEqual(rivit.map((r) => r.laji), ['lehti', 'opas']);
 });
 
 test('Bryssel ja Ljubljana: kohdekartta ja opas → kaikki kolme yläryhmän riviä', () => {
