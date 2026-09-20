@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1980, teksti: 'v1980: joet nakyviin, reliefin meret ja jarvet, raja 3 px' },
   { v: 1979, teksti: 'v1979: huntu 80 %' },
   { v: 1978, teksti: 'v1978: huntu 50 %, astron aanet, topografian merilaatat' },
   { v: 1977, teksti: 'v1977: kartuscha 2 (lippu, vilkku), liftauksen kantama' },

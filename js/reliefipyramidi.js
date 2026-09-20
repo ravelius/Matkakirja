@@ -34,7 +34,7 @@
  * --- KYTKIN ON OLETUKSENA PÄÄLLÄ (18.9.2026, erä 4) ---
  *
  * Laatat ovat ämpärissä:
- * `https://media.matkakirja.app/matkakirja/reliefipyramidi/20260918/`
+ * `https://media.matkakirja.app/matkakirja/reliefipyramidi/20260920/`
  * (luettelo `reliefipyramidi.json`, laatat z0–z7 ikuisessa
  * välimuistissa). Erän 3 mittaus totesi laataston valmiiksi — ei
  * seepiapyyntöjä, 12 laattaa näkyvälle ikkunalle, terävämpi kuva, ei
@@ -71,7 +71,7 @@ const ALIPOLKU = 'matkakirja/reliefipyramidi/';
  * ennen kuin luetteloa on kädessä — jos luettelossa on `versio`, se
  * voittaa seuraavasta noudosta alkaen.
  */
-export const VERSIO_VARALLA = '20260918';
+export const VERSIO_VARALLA = '20260920';
 
 /*
  * AVOMEREN VÄRI. Polttotyökalu ei kirjoita avomerestä laattaa
@@ -84,6 +84,22 @@ export const VERSIO_VARALLA = '20260918';
  * kirjoittamista sinne ensin; se kuuluu seuraavaan polttoon.
  */
 export const MERIVARI = 'rgb(38, 78, 145)';
+
+/*
+ * AVOMERTA EI ENAA OHITETA (versio 20260920, omistaja 20.9.2026).
+ *
+ * Ylla oleva luku "6 228 laattaa 6 631:sta z7:lla" oli version 20260918
+ * tila. Ohitus kysyi SYVYYTTA eika tasaisuutta, joten Keski-Intian
+ * selanne ja Sundan hauta ohittuivat "avomerena" ja piirtyivat talla
+ * varilla — yhtena sinisena suorakaiteena (omistajan kaappaus
+ * topografia-meret-puuttuvat.webp). Uudessa versiossa ohitus mittaa
+ * korkeuseroa (tools/tee-reliefipyramidi.mjs TASAISUUDEN_RAJA), ja
+ * ohitettuja laattoja on NOLLA.
+ *
+ * VARI JAA SILTI: puuttuva laatta on yha mahdollinen (verkkovirhe,
+ * kesken jaanyt lataus, Etelamantereen raja), ja silloin meri on
+ * maalattava jollakin.
+ */
 
 /*
  * NAPAJÄÄN VÄRI. Sama luku kuin polttotyökalun `JAAN_VARI`
