@@ -9908,7 +9908,9 @@ export const RAAMATTU = {
           + '12.05: "Pienennetty inforuutu pitaa olla saman leveyinen kuin avattu. Nyt liian '
           + 'levea" (Astronautin kameran valokuvanakyma iPadilla, pienennetty inforuutu '
           + 'venyy koko ruudun leveydelle; kaappaus astro-inforuutu-leveys-ipad.png) -> '
-          + 'Opus 1 samaan eraan vakasten kanssa.',
+          + 'Opus 1 samaan eraan vakasten kanssa. OMISTAJA 12.08: "Avattu Inforuutu voisi '
+          + 'olla myos itsessaan hieman kapeampi" -> avattua inforuutua kavennetaan hieman '
+          + '(esim. enintaan ~60 % ruudun leveydesta leveilla naytoilla), pienennetty seuraa.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
