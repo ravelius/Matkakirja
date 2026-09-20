@@ -2365,7 +2365,8 @@ function luoLepokerros({ pallo, kotelo, ikkuna, renderer, laattataso = () => NaN
     const tasot = (pyramidinKerrostasot(taso.z) ?? [])
       .filter((t) => (t.nosto ? kerrokset.nosto
         : (t.viiva ? kerrokset.viiva
-          : (t.joki ? kerrokset.joki : (t.ranta ? kerrokset.ranta : true)))));
+          : (t.joki ? kerrokset.joki
+            : (t.nimio ? kerrokset.nimio : (t.ranta ? kerrokset.ranta : true))))));
     if (!tasot.length) return luovuta('pyramidin tasoa ei ole');
     // Pallon sarjassa nostot ovat tällä tasolla laatoissa: ilman pyramidin
     // nostotasoa kerros PEITTÄISI ne — silloin ei kerrosta.

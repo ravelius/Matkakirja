@@ -629,6 +629,13 @@ const VESIVIIVAT_HARVA = {
  * koskemattomina tallella, ja passi herää `null`-arvon vaihtamisella.
  */
 const VESIVIIVOITUS = null;
+/*
+ * KOE 20.9.2026 (omistajan kortti: rannikkoviivoitus TAI syvyysvyöhykkeet,
+ * omistaja valitsee koelaatoista): vaihtoehdot viedään nimellä, jotta
+ * generaattori voi kytkeä viivoituksen reseptiin ajokohtaisesti
+ * (`--vesiviivoitus tihea|harva`) koskematta oletukseen (null).
+ */
+export const VESIVIIVOITUKSET = Object.freeze({ tihea: VESIVIIVAT_TIHEA, harva: VESIVIIVAT_HARVA });
 
 /*
  * MAANRAJAT ASTEEN TUMMEMMIKSI.

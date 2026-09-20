@@ -493,6 +493,8 @@ export function lepokerroksenKerrokset(pallonLuettelo, pyramidi, variMaa = null)
      * liikkeessä omassa laatassaan, ja tämä on levon lisäkenttä.
      */
     joki: Boolean(pyramidi.jokitaso?.versio) && !astronautti,
+    // NIMIÖTASO (js/laattapyramidi.js NIMIÖTASO): sama laji kuin joki.
+    nimio: Boolean(pyramidi.nimiotaso?.versio) && !astronautti,
     nosto: (Boolean(nostot) || nostotMaittain) && !astronautti,
     vari: vari && !reliefi,
     reliefi,
@@ -2223,6 +2225,7 @@ export function luoLaattakerros({
         if (k.nosto) return kerrokset.nosto;
         if (k.viiva) return kerrokset.viiva;
         if (k.joki) return kerrokset.joki;
+        if (k.nimio) return kerrokset.nimio;
         if (k.ranta) return kerrokset.ranta;
         if (k.vari) return kerrokset.vari;
         if (k.reliefi) return kerrokset.reliefi;

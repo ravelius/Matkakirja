@@ -62,7 +62,7 @@ test('generaattori välittää reitti- ja rajakytkimen jokaiseen viivatason piir
     assert.match(k, /reitit: REITIT &&/, `piirtokutsu ilman reittikytkintä: ${k}`);
     assert.match(k, /rajat: RAJAT/, `piirtokutsu ilman rajakytkintä: ${k}`);
   }
-  assert.match(lahde, /const VIIVAOSAT = \(PIIRIT && REITIT && RAJAT\) \? null : \{ piirit: PIIRIT, reitit: REITIT, rajat: RAJAT \};/,
+  assert.match(lahde, /const VIIVAOSAT = \(PIIRIT && REITIT && RAJAT && JOET\) \? null\n  : \{ piirit: PIIRIT, reitit: REITIT, rajat: RAJAT, joet: JOET \};/,
     'peite ei kulje samoilla kytkimillä kuin piirto');
 });
 

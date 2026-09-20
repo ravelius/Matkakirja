@@ -574,7 +574,30 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
     bbox, projektio, leveys, tyyli = {}, esikatseluTausta,
     koko = null, siirto = null, sisalto = null, nostot = null, piirraNosto = null,
     paperiS = null, variPaletti = false, variVesi = null,
+    /*
+     * SYVYYSVYÖHYKKEET PORTAINA (poltto-koe 20.9.2026, omistajan kortti:
+     * *"rannikkoviivoitus TAI syvyysvyöhykkeet"*). Oletus null = jatkuva
+     * syvyysramppi kuten ennen. Lista syvyysrajoja metreinä (positiivisina,
+     * esim. [30, 120, 600, 1500, 3000]) porrastaa meren vyöhykkeiksi:
+     * jokainen pikseli saa vyöhykkeensä edustussyvyyden (rajojen
+     * geometrinen keskikohta) ennen sävyn hakua, joten vyöhykkeen sisällä
+     * sävy on tasainen ja rajalla hyppää — atlaksen syvyyskäyräkartta.
+     * Rajan aaltoilu tulee samasta kohinasta kuin ennenkin.
+     */
+    syvyysPortaat = null,
   } = asetukset;
+  const portaat = Array.isArray(syvyysPortaat) && syvyysPortaat.length
+    ? [...syvyysPortaat].map(Number).filter((v) => v > 0).sort((a, b) => a - b) : null;
+  const porrasta = (m) => {
+    if (!portaat) return m;
+    const d = -m;
+    let edellinen = 0;
+    for (const raja of portaat) {
+      if (d < raja) return -Math.sqrt(Math.max(1, edellinen) * raja);
+      edellinen = raja;
+    }
+    return -(edellinen * 1.6);
+  };
 
   /*
    * === PALETTI ON ASETUS, EI TOINEN MOOTTORI (karttauudistus, erä 1)
@@ -1056,7 +1079,7 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
           if (!Number.isFinite(m)) m = -900;
           const n = fbm(KOHINA, gx / (30 * P), gy / (30 * P), 4) - 0.5;
           const s = lerpSyvyysAsteikolla(syvyysAsteikko,
-            m + n * Math.min(150, Math.max(12, -m * 1.25)));
+            porrasta(m + n * Math.min(150, Math.max(12, -m * 1.25))));
           const a = MEREN_PEITTO;
           r = r * (1 - a) + s[0] * a;
           g = g * (1 - a) + s[1] * a;
@@ -4090,4 +4113,138 @@ export function piirraRantataso(canvas, asetukset) {
   ctx.restore();
   ctx.restore();
   return { w: W, h: H };
+}
+
+/* ============================================================ nimiötaso
+ *
+ * NIMIÖTASO — ATLAKSEN HARVENNETUT KAPITEELIT OMANA LÄPINÄKYVÄNÄ TASONA
+ * (omistajan kortti 20.9.2026 ilta; Fablen tilaus Karttasepälle):
+ * 1873-maakuntien ja merien nimet harvennetuin kapiteelein, merinimiöt
+ * merelle ja pois rantaviivan/korostuskehän alta, ja KAIKKI poltettu
+ * teksti erillään pohjasta ja viivatasosta (Pelikoodarin tarve:
+ * kohdemaan nimiöt piilotettavissa ja eläviksi).
+ *
+ * LADONTA ON PUHDAS FUNKTIO (nimiotasonLadonta), koska sama sääntö
+ * tarvitaan kolmessa paikassa: piirrossa (tässä), generaattorin
+ * peitteessä (mitkä laatat ovat tyhjiä) ja luettelon metadatassa
+ * (Pelikoodarin `laatikko` per nimiö per taso). Kolme kopiota
+ * ajautuisivat eri tavalla.
+ *
+ * KOKO ON RUUDUN PIKSELIÄ TASOA KOHTI, EI PAPERIVAKIO: alueen nimi on
+ * kartan pinnalla oleva teksti, joka kasvaa zoomatessa hitaammin kuin
+ * kartta (kuten atlaksissa maakunnan nimi täyttää alueensa kaukaa ja
+ * jää lähellä pieneksi). Taulukko NIMION_KOOT antaa kirjainkorkeuden
+ * tasoittain luokalle; `koko: 'pieni'` maakunnat alkavat vasta z7:llä
+ * (Sisältökirjurin luokitus).
+ *
+ * Fontti on sama serif kuin muulla poltetulla tekstillä, versaali +
+ * harvennus 0,32 em; sävy on rajamusteen sukuinen mutta himmeä, meri
+ * viileämpi. Ei haloa: taso on läpinäkyvä ja pohjan päällä, ja halo
+ * piirtäisi paperinvärisen laatikon reliefin päälle.
+ */
+
+/** Kirjainkorkeus ruutupikseleinä tasoittain; puuttuva taso = ei nimiötä. */
+export const NIMION_KOOT = Object.freeze({
+  meri: { 4: 14, 5: 18, 6: 24, 7: 34, 8: 46 },
+  maakunta: { 5: 13, 6: 17, 7: 24, 8: 32 },
+  'maakunta-pieni': { 7: 18, 8: 26 },
+});
+/** Harvennus em-yksikköinä (kirjainkorkeudesta). */
+export const NIMION_HARVENNUS_EM = 0.32;
+export const NIMION_FONTTI = '"Liberation Serif", "FreeSerif", serif';
+export const NIMION_VARIT = Object.freeze({
+  meri: 'rgba(58, 66, 84, 0.62)',
+  maakunta: 'rgba(70, 48, 29, 0.58)',
+});
+
+/**
+ * Yhden nimiön ladonta tasolla z.
+ *
+ * @param {object} nimio {teksti, luokka, lon, lat, koko?, kulma?}
+ * @param {number} z
+ * @param {{ lautaX: Function, lautaY: Function }} kaava laudan projektio
+ * @param {number} px kuvapikseliä lautayksikköä kohti tasolla z
+ * @param {Function} mittaa (teksti, fontti) → leveys pikseleinä (ilman harvennusta)
+ * @returns {null|{x, y, korkeus, leveys, kulma, laatikko:[x0,y0,x1,y1]}} kuvapikseleinä arkin origosta
+ */
+export function nimiotasonLadonta(nimio, z, kaava, px, mittaa) {
+  const luokka = nimio.luokka === 'meri' ? 'meri'
+    : (nimio.koko === 'pieni' ? 'maakunta-pieni' : 'maakunta');
+  const korkeus = NIMION_KOOT[luokka]?.[z];
+  if (!korkeus) return null;
+  const teksti = String(nimio.teksti ?? '').toUpperCase();
+  if (!teksti) return null;
+  const merkit = [...teksti];
+  const leveys = mittaa(teksti, `${korkeus}px ${NIMION_FONTTI}`)
+    + NIMION_HARVENNUS_EM * korkeus * (merkit.length - 1);
+  const x = kaava.lautaX(nimio.lon) * px;
+  const y = kaava.lautaY(nimio.lat) * px;
+  const kulma = Number(nimio.kulma) || 0;
+  // Laatikko kulman kanssa: kierretyn suorakaiteen rajat.
+  const c = Math.abs(Math.cos(kulma * Math.PI / 180));
+  const s = Math.abs(Math.sin(kulma * Math.PI / 180));
+  const w = leveys * c + korkeus * s;
+  const h = leveys * s + korkeus * c;
+  return {
+    x, y, korkeus, leveys, kulma, luokka,
+    laatikko: [x - w / 2, y - h / 2, x + w / 2, y + h / 2],
+  };
+}
+
+/**
+ * Nimiötason piirto lohkolle. `nimiot` on lista nimiöitä; `__z` tason
+ * numero (koko tulee siitä). Piirtää vain ne, joiden laatikko leikkaa
+ * lohkon — muut ovat toisten lohkojen asiaa.
+ */
+export function piirraNimiotaso(canvas, asetukset) {
+  const {
+    bbox, projektio, leveys, koko = null, siirto = null, nimiot = null, __z: z = 7,
+  } = asetukset;
+  const px = leveys / bbox.w;
+  const W = Math.round(leveys);
+  const H = Math.round(bbox.h * px);
+  canvas.width = W;
+  canvas.height = H;
+  const ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, W, H);
+  // Sama sääntö kuin rantatasolla: ilman arkkia ladonta on lohkon omaa.
+  const GX = asetukset.arkki ? (siirto?.x ?? 0) : 0;
+  const GY = asetukset.arkki ? (siirto?.y ?? 0) : 0;
+  const origo = asetukset.arkki ?? { x: bbox.x, y: bbox.y };
+  const kaava = laudanProjektio(projektio);
+  // Arkin origo: ladonnan x/y ovat arkin pikseleitä, lohko on siirretty.
+  const arkkiKaava = {
+    lautaX: (lon) => kaava.lautaX(lon) - origo.x,
+    lautaY: (lat) => kaava.lautaY(lat) - origo.y,
+  };
+  const mittaa = (teksti, fontti) => { ctx.font = fontti; return ctx.measureText(teksti).width; };
+  let piirretty = 0;
+  for (const nimio of nimiot ?? []) {
+    const l = nimiotasonLadonta(nimio, z, arkkiKaava, px, mittaa);
+    if (!l) continue;
+    const [x0, y0, x1, y1] = l.laatikko;
+    // Kiertävä lauta: nimiö voi olla lohkosta laudan leveyden päässä.
+    const siirrot = [0];
+    if (projektio?.leveys) siirrot.push(-projektio.leveys * px, projektio.leveys * px);
+    for (const d of siirrot) {
+      if (x1 + d < GX || x0 + d > GX + W || y1 < GY || y0 > GY + H) continue;
+      ctx.save();
+      ctx.translate(l.x + d - GX, l.y - GY);
+      if (l.kulma) ctx.rotate(l.kulma * Math.PI / 180);
+      ctx.font = `${l.korkeus}px ${NIMION_FONTTI}`;
+      ctx.textBaseline = 'middle';
+      ctx.textAlign = 'left';
+      ctx.fillStyle = NIMION_VARIT[nimio.luokka === 'meri' ? 'meri' : 'maakunta'];
+      const merkit = [...String(nimio.teksti).toUpperCase()];
+      let t = -l.leveys / 2;
+      for (const m of merkit) {
+        ctx.fillText(m, t, 0);
+        t += ctx.measureText(m).width + NIMION_HARVENNUS_EM * l.korkeus;
+      }
+      ctx.restore();
+      piirretty += 1;
+    }
+  }
+  void koko;
+  return { w: W, h: H, piirretty };
 }

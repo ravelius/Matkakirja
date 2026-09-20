@@ -727,6 +727,7 @@ const tasonVersio = (taso) => {
   }
   if (taso.viiva) return luettelo?.viivataso?.versio ?? '';
   if (taso.joki) return luettelo?.jokitaso?.versio ?? '';
+  if (taso.nimio) return luettelo?.nimiotaso?.versio ?? '';
   if (taso.ranta) return luettelo?.rantataso?.versio ?? '';
   if (taso.reliefi) return reliefinVersio();
   /*
@@ -860,6 +861,11 @@ function laattaUrl(taso, sarake, rivi) {
     return pyramidiUrl(`${luettelo.jokitaso.versio}/viivat/z${taso.z}/${sarake}/${rivi}`
       + `.${luettelo.muoto ?? 'webp'}`);
   }
+  // Nimiötaso: <nimioversio>/nimiot/z… (ks. NIMIÖTASO alempana).
+  if (taso.nimio) {
+    return pyramidiUrl(`${luettelo.nimiotaso.versio}/nimiot/z${taso.z}/${sarake}/${rivi}`
+      + `.${luettelo.muoto ?? 'webp'}`);
+  }
   // Rantataso samoin: <rantaversio>/ranta/z… (omistaja 6.9.2026 ilta).
   if (taso.ranta) {
     return pyramidiUrl(`${luettelo.rantataso.versio}/ranta/z${taso.z}/${sarake}/${rivi}`
@@ -895,6 +901,8 @@ const noutoEtuliite = (taso) => {
   if (taso.viiva) return 'v';
   // j = joki; jokitaso on eri tiedosto kuin saman ruudun viivataso.
   if (taso.joki) return 'j';
+  // t = teksti; nimiötaso.
+  if (taso.nimio) return 't';
   if (taso.ranta) return 'r';
   // f = reliefi; r on jo rantatasolla.
   if (taso.reliefi) return 'f';
@@ -2417,6 +2425,49 @@ export function pyramidinJokitaso() {
   return jt?.versio ? jt : null;
 }
 
+/*
+ * ═══════════════════════════════════════════════════════════════════
+ * NIMIÖTASO — POLTETUT NIMIÖT OMANA LÄPINÄKYVÄNÄ TASONA
+ * ═══════════════════════════════════════════════════════════════════
+ *
+ * Omistajan kortti 20.9.2026 ilta (uusintapoltto): nimiöt omaksi
+ * tasoksi, jotta Pelikoodari voi piilottaa kohdemaan poltetut tekstit
+ * (maapolygonimaski) ja piirtää ne elävinä; 1873-maakunnat ja meret
+ * harvennetuin kapiteelein (js/packs/nimisto-1873.js). Generaattori
+ * tools/generoi-laattapyramidi.mjs `--nimiotaso`; luettelokenttä
+ * `nimiotaso: { versio, tasot, laatastot, nimiot }`, jossa `nimiot`
+ * on Pelikoodarin rajapinta (luokka, teksti, lon, lat, iso, meri,
+ * koko, laatikot tasoittain asteina).
+ *
+ * PAIKKA: viivatason (tai jokitason) PÄÄLLÄ, nostojen ALLA — nosto
+ * merkitsee paikan ja sen nimiö on ladottu väistämään; alueen nimi
+ * on taustan typografiaa. Pallon lepokerros latoo tason; tasokartan
+ * kerrospäivitys on oma eränsä (Pelikoodarin elävä sovittelu on
+ * pallolla). Vanha luettelo ilman kenttää = ei tasoa.
+ */
+function nimiotasonTasot() {
+  const nt = luettelo?.nimiotaso;
+  if (!nt?.versio || !nt.tasot?.length || !nt.laatastot) return null;
+  if (!luettelo.__nimioTasot) {
+    luettelo.__nimioTasot = luettelo.tasot
+      .filter((t) => nt.tasot.includes(t.z) && nt.laatastot[t.z])
+      .map((t) => ({
+        ...t, laatasto: nt.laatastot[t.z], __bitit: undefined, nimio: true,
+      }));
+  }
+  return luettelo.__nimioTasot.length ? luettelo.__nimioTasot : null;
+}
+
+/** Nimiötason kirjaus (Pelikoodarin elävä sovittelu, savukkeet) tai null. */
+export function pyramidinNimiotaso() {
+  const nt = luettelo?.nimiotaso;
+  return nt?.versio ? nt : null;
+}
+/** Poltettujen nimiöiden metadata: id → { luokka, teksti, lon, lat, iso, meri, laatikot }. */
+export function pyramidinNimiot() {
+  return luettelo?.nimiotaso?.nimiot ?? null;
+}
+
 /**
  * Päivittää viivatason kerroksen.
  *
@@ -2809,6 +2860,8 @@ export function pyramidinKerrostasot(z) {
     if (viiva0) merkit.push(viiva0);
     const joki0 = jokitasonTasot()?.find((t) => t.z === z);
     if (joki0) merkit.push(joki0);
+    const nimio0 = nimiotasonTasot()?.find((t) => t.z === z);
+    if (nimio0) merkit.push(nimio0);
     const nosto0 = nostotasonTasot()?.find((t) => t.z === z);
     if (nosto0) merkit.push(nosto0);
     return [reliefi, ...merkit];
@@ -2835,6 +2888,9 @@ export function pyramidinKerrostasot(z) {
   // suodattaa viivatason pois ja jokitason mukaan — ei koskaan molempia.
   const joki = jokitasonTasot()?.find((t) => t.z === z);
   if (joki) kerrokset.push(joki);
+  // NIMIÖTASO viivojen päälle, nostojen alle (ks. NIMIÖTASO).
+  const nimio = nimiotasonTasot()?.find((t) => t.z === z);
+  if (nimio) kerrokset.push(nimio);
   const nosto = nostotasonTasot()?.find((t) => t.z === z);
   if (nosto) kerrokset.push(nosto);
   return kerrokset;
