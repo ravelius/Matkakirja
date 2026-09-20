@@ -635,7 +635,25 @@ const VESIVIIVOITUS = null;
  * generaattori voi kytkeä viivoituksen reseptiin ajokohtaisesti
  * (`--vesiviivoitus tihea|harva`) koskematta oletukseen (null).
  */
-export const VESIVIIVOITUKSET = Object.freeze({ tihea: VESIVIIVAT_TIHEA, harva: VESIVIIVAT_HARVA });
+/*
+ * OHUT (poltto-koe 2, omistaja 20.9.2026: *"viivoituksessa ja vyöhykkeissä
+ * kummassakin on hyvää, tarvitaan vielä jotain lisää"* → yhdistelmä: 3–4
+ * hentoa viivaa rannasta, ja sen ulkopuolella yksi vaalea syvyyssävy).
+ */
+const VESIVIIVAT_OHUT = {
+  ...VESIVIIVAT_TIHEA,
+  aloitus: 5,
+  vali: 5.5,
+  kasvu: 2.6,
+  viivoja: 4,
+  paksuus: 0.9,
+  voima: 0.2,
+  haipyma: 0.9,
+  huojunta: 6,
+};
+export const VESIVIIVOITUKSET = Object.freeze({
+  tihea: VESIVIIVAT_TIHEA, harva: VESIVIIVAT_HARVA, ohut: VESIVIIVAT_OHUT,
+});
 
 /*
  * MAANRAJAT ASTEEN TUMMEMMIKSI.
