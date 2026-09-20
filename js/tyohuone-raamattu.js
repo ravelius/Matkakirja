@@ -9931,7 +9931,13 @@ export const RAAMATTU = {
           + 'hakee kanavaa, ja voisit ottaa maailmanradiosta valmiin suhinan, joka on tehty '
           + 'siihen viritysaaneksi. Siirra myos koko Suurempi ranska infoikkuna hieman '
           + 'alaspain ja hieman oikealle, niin etta se on yhta paljon irti vasemmasta '
-          + 'reunasta kuin alareunasta." -> Opus 2, julkaistaan v1977.',
+          + 'reunasta kuin alareunasta." -> Opus 2, julkaistaan v1977. OMISTAJA 13.30 '
+          + '(kaappaus liftaus-reitit-puuttuvat.webp, Bryssel, v1976): "liftatessa nakyy '
+          + 'vain ne reitit jotka olivat piirtyneet ennen nopan heittoa. kun noppaa heitti '
+          + 'ja kartta laajeni ulospain, uudet nakyviin tulleet reitit eivat piirtyneet '
+          + 'kartalle" (kuvassa vain Pariisi-Bryssel-Amsterdam-katkoviiva, ei muita '
+          + 'reitteja vaikka kaupungit nakyvat) -> Opus 1: reittien piirto ei paivity '
+          + 'nakyman laajetessa heiton jalkeen; korjaus + savuke, v1977.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
