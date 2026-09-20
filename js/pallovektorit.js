@@ -652,6 +652,196 @@ export function puraDelta(puskuri) {
  * jokainen polyviivan väli kirjoitetaan omana janana (xyz, xyz).
  * Piste on täsmälleen säteellä `sade` (VEKTORIT_KORKEUS 0).
  */
+/* ═══ RANNIKON NAULAUS (Fablen päätös 20.9.2026, vaihtoehto 2) ══════
+ *
+ * Omistaja: *"Täällä virheitä rajaviivassa"*. Sama rannikko piirtyi
+ * kahdesta aineistosta: rannikkoviiva `ne_10m_ocean`ista ja pelaajan oman
+ * maan korostuskehä `ne_10m_admin_0`:sta. Ne ovat eri mieltä rannan
+ * kulusta (mediaani 72 m, p95 173 m, suurin 1,1 km), ja suistossa ero on
+ * rakenteellinen: ocean kulkee suistoa ylös, admin_0 sulkee sen suulta
+ * jänteellä. Sädekehä (v1971) peitti pienen eron, mutta suiston sulkeva
+ * viiva jäi näkyviin.
+ *
+ * NAULAUS: korostuksen rannikko-osuus otetaan SAMASTA geometriasta kuin
+ * rannikkoviiva. Korostuksen omista janoista pudotetaan ne, joiden
+ * MOLEMMAT päät ovat rannikkoviivan tuntumassa — tämä kattaa sekä
+ * rinnakkain kulkevan rannan että suiston sulkevan jänteen, jonka päät
+ * ovat suun rannoilla mutta keskikohta vedessä. Tilalle piirretään maan
+ * oman rannikon janat rannikkoaineistosta. Sisämaan rajat jäävät
+ * admin_0:aan, jossa ne ovat ainoa lähde.
+ */
+
+/** Hilan solun avain asteina (ks. rannikkoHakemisto). */
+export const NAULAUKSEN_RUUTU_ASTETTA = 0.05;
+/**
+ * Kuinka lähellä rannikkoviivaa korostuksen kärki on "rannalla".
+ * 0,015° on noin 1,7 km päiväntasaajalla — aineistojen p95-ero on 173 m
+ * ja suurin mitattu 1,1 km, joten kynnys kattaa erot mutta jättää
+ * sisämaan rajat (lähin naapurin raja on kaukana rannasta) rauhaan.
+ */
+export const NAULAUKSEN_TOLERANSSI_ASTETTA = 0.015;
+/**
+ * Suiston mutka: kun admin_0 sulkee suun jänteellä, rannikkoaineiston
+ * mutka poikkeaa korostuskehästä eikä pääsisi mukaan pelkällä
+ * tuntumasäännöllä. Mutka silloitetaan, jos sen päät ovat korostuksen
+ * tuntumassa lähekkäin (AUKON_RAJA, noin 55 km) ja rannan polku niiden
+ * välillä on kohtuullinen (MUTKAN_RAJA, noin 220 km). Näin Gironde tulee
+ * mukaan, mutta naapurimaan rannikko ei silloitu maan rajan yli.
+ */
+export const NAULAUKSEN_AUKON_RAJA_ASTETTA = 0.5;
+export const NAULAUKSEN_MUTKAN_RAJA_ASTETTA = 2;
+/**
+ * MILLOIN NAULATAAN. Naulaus maksaa: koko Ranskan rannikko tarkimmalla
+ * tasolla (87 000 kärkeä) on mitattuna 65 ms, eli kehysbudjetin yli.
+ * Kaksoisviiva taas näkyy vasta, kun aineistojen ero (p95 445 m) on yli
+ * puoli pikseliä — se on noin 120 laitepikseliä astetta kohti. Sitä
+ * karkeammassa näkymässä naulaus jätetään tekemättä: viiva on silloin
+ * pikselin sisällä sama, ja korostus piirtyy kuten ennen.
+ */
+export const NAULAUKSEN_TIHEYS_RAJA = 120;
+/** Naulausta ei rakenneta useammin kuin tämän välein (ms). */
+export const NAULAUKSEN_VAIMENNUS_MS = 400;
+
+/** Karkea asteetäisyys (pituusaste kutistuu leveyspiirillä). */
+function asteEtaisyys(a, b) {
+  let dLon = a[0] - b[0];
+  if (dLon > 180) dLon -= 360; else if (dLon < -180) dLon += 360;
+  const kerroin = Math.max(0.05, Math.cos((a[1] + b[1]) / 2 * Math.PI / 180));
+  const x = dLon * kerroin;
+  const y = a[1] - b[1];
+  return Math.sqrt(x * x + y * y);
+}
+
+/** Solun x-avain kierrettynä: 179,99° ja -179,99° osuvat naapureiksi. */
+function solunX(lon, ruutu) {
+  const jako = Math.round(360 / ruutu);
+  const gx = Math.round(lon / ruutu);
+  return ((gx % jako) + jako) % jako;
+}
+
+/**
+ * Rannikon kärjet hilaan: avain on solu, arvo pisteet [lon, lat].
+ * Puhdas funktio (tests/maakorostus.test.mjs).
+ */
+export function rannikkoHakemisto(viivat, ruutu = NAULAUKSEN_RUUTU_ASTETTA) {
+  const hila = new Map();
+  for (const viiva of viivat ?? []) {
+    for (const p of viiva ?? []) {
+      if (!Array.isArray(p) || !Number.isFinite(p[0]) || !Number.isFinite(p[1])) continue;
+      const avain = `${solunX(p[0], ruutu)}|${Math.round(p[1] / ruutu)}`;
+      const lista = hila.get(avain);
+      if (lista) lista.push(p); else hila.set(avain, [p]);
+    }
+  }
+  return hila;
+}
+
+/** Onko piste rannikkohilan mukaan rannalla? Puhdas funktio. */
+export function rannallaHilassa(piste, hila, {
+  ruutu = NAULAUKSEN_RUUTU_ASTETTA, toleranssi = NAULAUKSEN_TOLERANSSI_ASTETTA,
+} = {}) {
+  if (!hila?.size || !Array.isArray(piste)) return false;
+  const [lon, lat] = piste;
+  if (!Number.isFinite(lon) || !Number.isFinite(lat)) return false;
+  const jako = Math.round(360 / ruutu);
+  const gx = solunX(lon, ruutu);
+  const gy = Math.round(lat / ruutu);
+  const raja = toleranssi * toleranssi;
+  // Pituusasteen kutistuma leveyspiirillä: napojen lähellä aste on lyhyt.
+  const kerroin = Math.max(0.05, Math.cos(lat * Math.PI / 180));
+  for (let dx = -1; dx <= 1; dx += 1) {
+    for (let dy = -1; dy <= 1; dy += 1) {
+      for (const q of hila.get(`${((gx + dx) % jako + jako) % jako}|${gy + dy}`) ?? []) {
+        let dLon = lon - q[0];
+        if (dLon > 180) dLon -= 360; else if (dLon < -180) dLon += 360;
+        const x = dLon * kerroin;
+        const y = lat - q[1];
+        if (x * x + y * y <= raja) return true;
+      }
+    }
+  }
+  return false;
+}
+
+/**
+ * Korostuksen janat naulattuna: sisämaan osuudet admin_0:sta ja rannikon
+ * osuudet rannikkoaineistosta. Palauttaa viivat (polyviivoja) sekä
+ * mittarit. Puhdas funktio (tests/maakorostus.test.mjs).
+ *
+ * @param {Array} renkaat korostuksen renkaat [[lon, lat], …]
+ * @param {Array} rannikot rannikkoviivat samassa muodossa
+ */
+export function naulaaKorostus(renkaat, rannikot, asetukset = {}) {
+  const viivat = Array.isArray(renkaat) ? renkaat : [];
+  const hila = rannikkoHakemisto(rannikot, asetukset.ruutu);
+  if (!hila.size) {
+    return { viivat, pudotettuja: 0, rannikkojanoja: 0, sisamaajanoja: null };
+  }
+  const ulos = [];
+  let pudotettuja = 0;
+  let sisamaajanoja = 0;
+  for (const viiva of viivat) {
+    if (!Array.isArray(viiva) || viiva.length < 2) continue;
+    let pala = [];
+    let edellinenRannalla = rannallaHilassa(viiva[0], hila, asetukset);
+    for (let k = 1; k < viiva.length; k += 1) {
+      const rannalla = rannallaHilassa(viiva[k], hila, asetukset);
+      if (edellinenRannalla && rannalla) {
+        // Rannikko piirtää tämän: myös suiston sulkeva jänne (päät rannalla).
+        pudotettuja += 1;
+        if (pala.length >= 2) ulos.push(pala);
+        pala = [];
+      } else {
+        if (!pala.length) pala.push(viiva[k - 1]);
+        pala.push(viiva[k]);
+        sisamaajanoja += 1;
+      }
+      edellinenRannalla = rannalla;
+    }
+    if (pala.length >= 2) ulos.push(pala);
+  }
+  // Maan oma rannikko korostuksen väreillä: janat, joiden molemmat päät
+  // ovat korostuskehän tuntumassa (eli tämän maan rantaa).
+  const keha = rannikkoHakemisto(viivat, asetukset.ruutu);
+  const aukonRaja = asetukset.aukonRaja ?? NAULAUKSEN_AUKON_RAJA_ASTETTA;
+  const mutkanRaja = asetukset.mutkanRaja ?? NAULAUKSEN_MUTKAN_RAJA_ASTETTA;
+  let rannikkojanoja = 0;
+  for (const viiva of rannikot ?? []) {
+    if (!Array.isArray(viiva) || viiva.length < 2) continue;
+    const lahella = viiva.map((p) => rannallaHilassa(p, keha, asetukset));
+    // Kumulatiivinen polku ja lähimmät tuntumakärjet kumpaankin suuntaan,
+    // jotta mutkan silloitus on vakioaikainen jokaiselle janalle.
+    const matka = [0];
+    const edel = [lahella[0] ? 0 : -1];
+    for (let k = 1; k < viiva.length; k += 1) {
+      matka.push(matka[k - 1] + asteEtaisyys(viiva[k - 1], viiva[k]));
+      edel.push(lahella[k] ? k : edel[k - 1]);
+    }
+    const seur = new Array(viiva.length).fill(-1);
+    for (let k = viiva.length - 1; k >= 0; k -= 1) {
+      seur[k] = lahella[k] ? k : (k + 1 < viiva.length ? seur[k + 1] : -1);
+    }
+    let pala = [];
+    for (let k = 1; k < viiva.length; k += 1) {
+      let omaa = lahella[k - 1] && lahella[k];
+      if (!omaa) {
+        const a = edel[k - 1];
+        const b = seur[k];
+        omaa = a >= 0 && b >= 0
+          && asteEtaisyys(viiva[a], viiva[b]) <= aukonRaja
+          && (matka[b] - matka[a]) <= mutkanRaja;
+      }
+      if (omaa) {
+        if (!pala.length) pala.push(viiva[k - 1]);
+        pala.push(viiva[k]);
+        rannikkojanoja += 1;
+      } else if (pala.length >= 2) { ulos.push(pala); pala = []; } else pala = [];
+    }
+    if (pala.length >= 2) ulos.push(pala);
+  }
+  return { viivat: ulos, pudotettuja, rannikkojanoja, sisamaajanoja };
+}
+
 export function vektorijanat(viivat, sade) {
   let janoja = 0;
   for (const v of viivat ?? []) janoja += Math.max(0, v.length - 1);
@@ -725,6 +915,8 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
     korostusRenkaita: 0,
     /** Korostuksen janat (0 = maata ei ole aineistossa). */
     korostusJanoja: 0,
+    korostusPudotettuja: 0,
+    korostusRannikkojanoja: 0,
   };
   const pyydetyt = new Set();
   /** id (`<laji>/l<k>/<solu>`) → { laji, k, avain, lupaus, viivat, olio, janoja, tavua, kaytto } */
@@ -740,6 +932,10 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
    */
   const korostus = {
     laji: 'korostus', iso: null, renkaat: null, olio: null, janoja: 0, harvennus: -1,
+    // Monestako rannikkoviivasta naulaus viimeksi tehtiin (ks. rakennaKorostus).
+    rannikkoja: -1,
+    /** Milloin naulaus viimeksi rakennettiin (vaimennus). */
+    naulattuHetki: -Infinity,
   };
   /** Häiveen ajaksi kloonatut materiaalit (ruutumitat päivitetään näihinkin). */
   const kloonit = new Set();
@@ -1037,12 +1233,51 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
    * Ilman renkaita (maata ei ole aineistossa, aineistoa ei saatu) tämä
    * ei tee mitään — peli näyttää täsmälleen samalta kuin ennen.
    */
+  /**
+   * Ladattujen rannikkosolujen viivat yhtenä listana (naulaus, ks.
+   * RANNIKON NAULAUS). Vain ne solut, joiden aineisto on jo muistissa —
+   * naulaus tarkentuu sitä mukaa kuin soluja saapuu, ja korostus
+   * rakennetaan uudelleen, kun rannikkoaineiston määrä muuttuu.
+   */
+  function rannikkoviivat() {
+    const ulos = [];
+    for (const s2 of solut.values()) {
+      if (s2.laji !== 'rannikko' || !s2.viivat?.length) continue;
+      for (const v of s2.viivat) ulos.push(v);
+    }
+    return ulos;
+  }
+
+  /** Sama luku ilman listan rakentamista — tätä kysytään joka kehys. */
+  function rannikkoViivoja() {
+    let n = 0;
+    for (const s2 of solut.values()) {
+      if (s2.laji === 'rannikko' && s2.viivat?.length) n += s2.viivat.length;
+    }
+    return n;
+  }
+
+  /** Onko näkymä niin tarkka, että kaksoisviiva näkyisi? (ks. raja) */
+  const naulattava = () => tiheys >= NAULAUKSEN_TIHEYS_RAJA;
+
   function rakennaKorostus(haivella = false) {
     if (purettu || !materiaalit || !luokat || !kolmi?.juuri) return;
     vapautaKorostus();
     const renkaat = korostus.renkaat;
     if (!renkaat?.length) return;
-    const viivat = harvennaViivat(renkaat, harvennus);
+    /*
+     * RANNIKKO SAMASTA GEOMETRIASTA (Fablen päätös 20.9.2026): korostuksen
+     * rannalla kulkevat janat pudotetaan ja tilalle tulevat maan oman
+     * rannikon janat rannikkoaineistosta. Ilman ladattuja rannikkosoluja
+     * korostus on entisellään.
+     */
+    const rannikot = naulattava() ? rannikkoviivat() : [];
+    const naulaus = naulaaKorostus(renkaat, rannikot);
+    korostus.naulattuHetki = nyt();
+    korostus.rannikkoja = rannikot.length;
+    mittarit.korostusPudotettuja = naulaus.pudotettuja;
+    mittarit.korostusRannikkojanoja = naulaus.rannikkojanoja;
+    const viivat = harvennaViivat(naulaus.viivat, harvennus);
     const { paikat, janoja } = vektorijanat(viivat, sade());
     korostus.janoja = janoja;
     korostus.harvennus = harvennus;
@@ -1213,7 +1448,15 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
      * vaihtuessa se rakennetaan heti (Suomen renkaat ovat murto-osa
      * yhdestä solusta) ja ilman häivettä, koska viiva on jo ruudulla.
      */
-    if (korostus.renkaat && korostus.harvennus !== harvennus) rakennaKorostus();
+    if (korostus.renkaat && korostus.harvennus !== harvennus) {
+      rakennaKorostus();
+    } else if (korostus.renkaat
+      && korostus.rannikkoja !== (naulattava() ? rannikkoViivoja() : 0)
+      && nyt() - korostus.naulattuHetki >= NAULAUKSEN_VAIMENNUS_MS) {
+      // Rannikkoaineisto muuttui (solu saapui tai näkymä ylitti rajan):
+      // naulaus uusiksi, mutta korkeintaan vaimennusvälin tahdissa.
+      rakennaKorostus();
+    }
     const k = vektoritaso(luettelo.lodit, tarve, VEKTORIT_TERAVYYS_PX);
     mittarit.lod = k;
     mittarit.tol = luettelo.lodit[k];
