@@ -4825,6 +4825,17 @@ export async function avaaPallolauta(ui) {
     if (matkallaVapaana) {
       matkasyrjaytysTalteen = zoomirajaSyrjaytys;
       zoomirajaSyrjaytys = null;
+      /*
+       * KATON MUISTI NOLLATAAN MYÖS TÄSSÄ (v1984, liftauszoomi). Mitattu
+       * tools/savukkeet/savuke-liftaus-ajoitus.mjs:llä (Bryssel, 2000 ×
+       * 1300, 20.9.2026): kun siirto alkaa `sovitaSiirtokohteet` →
+       * `matkaZoomivapaus(true)` ENNEN kuin `paivita` ehtii nähdä
+       * korostusmaan katoavan, katto nousee tässä 0,205 → 2,5 ja
+       * `kattoPuristus` palautti kameran koko pallolle (`pointOfView`
+       * altitude 2,5, ms 0) — sama vika kuin `paivita`n haarassa,
+       * eri ovi. Matkan vapautus on tahallinen, ei mittauspiikki.
+       */
+      kattoPuristus = null;
     } else {
       zoomirajaSyrjaytys = matkasyrjaytysTalteen;
       matkasyrjaytysTalteen = null;

@@ -52,7 +52,8 @@
     "savuke-korostus-janne.mjs",
     "savuke-kartuscha-2.mjs",
     "savuke-kartuscha-3.mjs",
-    "savuke-reittiverkko.mjs"
+    "savuke-reittiverkko.mjs",
+    "savuke-liftaus-ajoitus.mjs"
   ],
   "suorituskyky": [
     "savuke-pariisi-lahizoom.mjs#390-suorituskyky",
@@ -189,6 +190,11 @@
       "js/pallolauta/reitit.js",
       "js/pallolauta/lauta.js",
       "js/pallovektorit.js"
+    ],
+    "savuke-liftaus-ajoitus.mjs": [
+      "js/pallolauta/lauta.js",
+      "js/pallolauta/kamera.js",
+      "js/ui.js"
     ]
   },
   "asetukset": {
@@ -499,6 +505,10 @@
     "savuke-reittiverkko.mjs": {
       "kuvakansio": true,
       "huomautus": "Himmea reittiverkko liftatessa (omistaja 20.9.2026 klo 13.50): kaikki laudan kaaret himmeina kantaman kaarten alla vain matkasession ajan, kerran per lauta (js/pallovektorit.js laji verkko). Bryssel 1400 x 900 dpr 2, kamera pakotettu Lansi-Eurooppaan; mittaa Kelttienmeren tummentuneet pikselit, kerran-per-lauta-olion ja kehysajan (Chromiumin ohjelmistopiirto, suhteellinen raja 60 %; laitteen fps Laitetestaajalta)."
+    },
+    "savuke-liftaus-ajoitus.mjs": {
+      "kuvakansio": true,
+      "huomautus": "Liftauksen nopanheitto ei zoomaa maailmakuvaan (omistaja v1983 20.9.2026): Bryssel 2000 x 1300, viisi ajoitusta (rauhassa, heti saapumisen jalkeen, kesken trailerin, kaksi heittoa, heitto kesken sovituksen); vaatii korkeuden < 1 ja nappulan ruudulla. Juurisyy lauta.js matkaZoomirajat + kattoPuristus. Ampari Noden kautta, ~2 min."
     }
   }
 }
