@@ -343,6 +343,16 @@ export function pallonKorostettuMaa() {
 }
 
 /**
+ * Korostetun maan renkaat asteina ([lon, lat] -pisteet) muistista, tai
+ * tyhjä lista ennen kuin aineisto on saapunut. Nimiöiden sovittelu lukee
+ * tästä rantaviivan (js/pallolauta/lauta.js rantaviivanLaatikot): meren
+ * nimiö ei saa jäädä korostuskehän alle.
+ */
+export function pallonKorostusRenkaat(iso = korostettu) {
+  return (iso && renkaatMuisti.get(iso)) || [];
+}
+
+/**
  * Pelaajan maan ääriviiva pallon vektorikerrokseen.
  *
  * Kutsutaan pallolaudan `paivita`-ohjauksesta (js/pallolauta/lauta.js),

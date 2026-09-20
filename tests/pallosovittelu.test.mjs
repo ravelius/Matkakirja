@@ -258,7 +258,7 @@ test('reuna: nostokerros antaa reunan sovittelulle ja kirjaa ylityksen avaimeen'
   const nostot = lue('../js/pallolauta/nostot.js');
   assert.match(nostot, /const reunaNyt = reuna\?\.\(\) \?\? null;/);
   assert.match(nostot, /reuna: reunaNyt,/);
-  assert.match(nostot, /`#reuna:\$\{reunalla\}#palaa:\$\{palaisi\}`/);
+  assert.match(nostot, /`#reuna:\$\{reunalla\}#palaa:\$\{palaisi\}#ranta:\$\{rantaviivaOn \? 1 : 0\}`/);
   // Reunan takia käännetty lappu saa lähtökohdakseen datan kyljen (paluu).
   assert.match(nostot, /kylki: palaavat\.has\(datum\.avain\) \? \(r\.puoli \?\? .oikea.\) : datum\.puoli,/);
   const lauta = lue('../js/pallolauta/lauta.js');
@@ -267,6 +267,38 @@ test('reuna: nostokerros antaa reunan sovittelulle ja kirjaa ylityksen avaimeen'
   const css = lue('../css/styles.css');
   assert.match(css, /--turva-vasen: env\(safe-area-inset-left, 0px\);/);
   assert.match(css, /--turva-oikea: env\(safe-area-inset-right, 0px\);/);
+});
+
+/*
+ * ══ MEREN NIMIÖ EI JÄÄ RANTAVIIVAN ALLE (Fable 20.9.2026, Välimeri
+ * Marseillen kaappauksessa) ═══════════════════════════════════════
+ */
+test('rantaviiva: meren lappu väistää kehän laatikoita, maan lappu ei', () => {
+  // Kehä kulkee vaakasuoraan lapun oikean kaistan poikki.
+  const ranta = [{ x0: 100, y0: 96, x1: 160, y1: 104 }];
+  const meri = { ...koelappu('meri', 100, 100), meri: true };
+  const maa = koelappu('maa', 100, 100);
+  const t = sovitteleLaput({ laput: [meri, maa], esteet: [], rantaviiva: ranta });
+  const m = t.asennot.get('meri');
+  assert.notEqual(m.syy, 'oma', 'meren lappu jäi rantaviivan alle');
+  assert.equal(m.nimio, true);
+  assert.ok(!laatikotLimittyvat(meri.laatikko(m.kylki, m.dx, m.dy, true), ranta[0]));
+  assert.equal(t.asennot.get('maa').syy, 'oma', 'maan lappu ei väistä rantaviivaa');
+});
+
+test('rantaviiva: ilman meri-lippua sama lappu pysyy omassa kyljessään (vastakoe)', () => {
+  const ranta = [{ x0: 100, y0: 96, x1: 160, y1: 104 }];
+  const t = sovitteleLaput({ laput: [koelappu('a', 100, 100)], esteet: [], rantaviiva: ranta });
+  assert.equal(t.asennot.get('a').syy, 'oma');
+});
+
+test('rantaviiva: nostokerros antaa kehän laatikot ja merkitsee meren laput', () => {
+  const nostot = lue('../js/pallolauta/nostot.js');
+  assert.match(nostot, /meri: r\.symLaji === 'meri' \|\| r\.kategoria === 'meri',/);
+  assert.match(nostot, /rantaviiva: typeof rantaviiva === 'function' \? rantaviiva\(\) : \(rantaviiva \?\? \[\]\),/);
+  const lauta = lue('../js/pallolauta/lauta.js');
+  assert.match(lauta, /rantaviiva: rantaviivanLaatikot,/);
+  assert.match(lauta, /pallonKorostusRenkaat\(pallonKorostettuMaa\(\)\)/);
 });
 
 test('kyljet ovat kirjaston omat neljä, eikä sovittelu keksi omiaan', () => {
@@ -310,7 +342,7 @@ test('turisti-infon kyltti on sovittelun este ja sen varaus on koko kyltti', () 
   const lauta = lue('../js/pallolauta/lauta.js');
   const nostot = lue('../js/pallolauta/nostot.js');
   // 1. Kerros ottaa muunkin liikkumattoman musteen kuin nimet.
-  assert.match(nostot, /const sovittele = \(\{ nimet = \[\], kiinteat = \[\] \} = \{\}\) => \{/);
+  assert.match(nostot, /const sovittele = \(\{\n\s*nimet = \[\], kiinteat = \[\], rantaviiva = null, rantaviivaOn = false,\n\s*\} = \{\}\) => \{/);
   assert.match(nostot, /esteet: kiinteat\.length \? \[\.\.\.nimet, \.\.\.kiinteat\] : nimet,/);
   // 2. Lauta antaa kyltin laatikot sekä nimiladonnalle että sovittelulle.
   assert.match(lauta, /varaukset: \[\.\.\.nostoTulos\.laatikot, \.\.\.infoTulos\]/);

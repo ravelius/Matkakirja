@@ -42,6 +42,7 @@
 import { laudaltaAsteiksi, projisoiLaudalle } from './fokusmitat.js';
 import { diagNyt, pallodiag } from './pallodiag.js';
 import {
+  KOHDEMAAN_NIMIOT_ELAVINA,
   haePyramidinLuettelo, nostotasonPoltetut, pyramidinKerrostasot, pyramidinLaattaOlemassa,
   pyramidinLaattaUrl,
 } from './laattapyramidi.js';
@@ -510,8 +511,13 @@ export function webglTuettu(doc = document) {
  * pyramidin maakohtainen taulu saa muuttaa sitä päätöstä — sama
  * järjestys kuin kerrosportissa (js/pallolaatat.js: `!nostot`).
  */
+// Kohdemaan nimiöt elävinä: kytkin ja perustelu js/laattapyramidi.js
+// KOHDEMAAN_NIMIOT_ELAVINA; viedään tästä nostokerrokselle.
+export { KOHDEMAAN_NIMIOT_ELAVINA };
 export function pallonNostoOnPoltettu(tunnus, tiiviste = null) {
   const nostot = laattaluettelo?.nostotaso?.nostot ?? nostotasonPoltetut();
+  // Elävät nimiöt: pallon oma sarja ilman nostoja → mikään ei ole poltettu.
+  if (KOHDEMAAN_NIMIOT_ELAVINA && !laattaluettelo?.nostotaso?.nostot) return false;
   if (!nostot || !tunnus) return false;
   const poltettu = nostot[tunnus];
   if (!poltettu) return false;

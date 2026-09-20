@@ -15,6 +15,7 @@
     "savuke-ihmisen-kehys.mjs",
     "savuke-ihmisen-esitys.mjs",
     "savuke-pallo-nostolaput.mjs",
+    "savuke-nimiot-elavat.mjs",
     "savuke-nimikyltti.mjs",
     "savuke-kerma-reuna.mjs",
     "savuke-ranskan-nostot-lukossa.mjs",
@@ -481,6 +482,9 @@
     },
     "savuke-kartuscha-3.mjs": {
       "huomautus": "Harva (Fable 20.9.2026): kartuscha 3 - pienessa ei lippua, lippu versaalin korkuinen, iso pienenee karttaa koskettaessa (napautus/veto/rulla), vastakoe kortin sisalle. ~70 s."
+    },
+    "savuke-nimiot-elavat.mjs": {
+      "huomautus": "Kohdemaan nimiot elavina (Fable 20.9.2026, KOHDEMAAN_NIMIOT_ELAVINA): FRA/Marseille 390 ja 1400 px: ei poltettuja, nimiollisia >= 32/55, Valimeri irti korostuskehasta, ei reunaylityksia saapumisessa ja Marseillen zoomeissa, ladonta <= 12 ms. Ampari Noden kautta. ~70 s."
     }
   }
 }
