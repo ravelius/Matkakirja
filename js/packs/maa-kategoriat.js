@@ -3375,7 +3375,7 @@ export const MAA_KATEGORIAT = {
      */
     {
       id: 'hetki-rosettan-kivi-1799',
-      nimi: 'Historian hetki',
+      nimi: 'Kirjoitus',
       otsikko: 'Historian hetki: Rosetta 1799',
       johdanto: 'Heinäkuussa 1799 ranskalaiset sotilaat kaivoivat Rosettan '
         + 'linnoituksen muurista mustan kiven, jonka kolme kirjoitusta avasivat '
@@ -3467,7 +3467,7 @@ export const MAA_KATEGORIAT = {
      */
     {
       id: 'hetki-suezin-kanava-avajaiset-1869',
-      nimi: 'Historian hetki',
+      nimi: 'Kanava',
       otsikko: 'Historian hetki: Suez 1869',
       johdanto: 'Välimeren hiekkasärkälle vuonna 1859 perustettu työmaakaupunki '
         + 'näki kymmenen vuotta myöhemmin keisarinnan jahdin kääntyvän kanavaan, '
@@ -28464,7 +28464,7 @@ export const MAA_KATEGORIAT = {
      */
     {
       id: 'hetki-wright-kitty-hawk-1903',
-      nimi: 'Historian hetki',
+      nimi: 'Lento',
       otsikko: 'Historian hetki: Kitty Hawk 1903',
       johdanto: 'Pohjois-Carolinan hiekkasärkillä nousi 17. joulukuuta 1903 '
         + 'ilmaan kone, jonka lento kesti kaksitoista sekuntia — ja jonka kuvan '
@@ -28544,7 +28544,7 @@ export const MAA_KATEGORIAT = {
      */
     {
       id: 'hetki-franklin-leija-1752',
-      nimi: 'Historian hetki',
+      nimi: 'Salama',
       otsikko: 'Historian hetki: Franklin 1752',
       johdanto: 'Philadelphian pellolla nousi kesäkuussa 1752 silkkileija '
         + 'ukkospilven alle, ja narun päässä roikkuva avain kertoi, että salama '
@@ -28608,7 +28608,7 @@ export const MAA_KATEGORIAT = {
      */
     {
       id: 'hetki-edison-lamppu-1879',
-      nimi: 'Historian hetki',
+      nimi: 'Sähkövalo',
       otsikko: 'Historian hetki: Edison 1879',
       johdanto: 'New Jerseyn maalaislaboratoriossa hiilletty ompelulanka hehkui '
         + 'lokakuussa 1879 kolmetoista ja puoli tuntia — ja sen ympärille '
