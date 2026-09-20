@@ -15815,6 +15815,329 @@ export const MAA_KATEGORIAT = {
           + 'lainkaan — se vatkataan piimään ja päälle pannaan marjoja.',
       },
     },
+  {
+    id: 'historia',
+    nimi: 'Historia',
+    johdanto: 'Viron historia näkyy kivessä: keskiajan kauppiaiden killan talo '
+      + 'Tallinnassa, Pohjois-Euroopan vanhin raatihuone, akatemia jonka '
+      + 'kuningas perusti sotien keskellä, ja luostari jonka venäläisjoukot '
+      + 'polttivat.',
+    nostot: [
+      {
+        otsikko: 'Raatihuone, joka on Pohjois-Euroopan vanhin',
+        aika: '1404',
+        tiedosto: 'Tallinn Town Hall.jpg',
+        teksti: 'Tallinnan raatihuone sai nykyisen muotonsa vuosina 1401–1404, '
+          + 'mutta rakennuksesta on mainintoja jo 1300-luvulta. Se on '
+          + 'Pohjois-Euroopan ainoa säilynyt goottilaistyylinen raatihuone ja '
+          + 'seisoo yhä keskiajan Raatihuoneentorin laidalla. Torninhuippua '
+          + 'koristaa Vanha Toomas, vartijaa esittävä tuuliviiri, josta on '
+          + 'tullut koko kaupungin tunnus. Toisessa maailmansodassa pommitus '
+          + 'tuhosi tornin maaliskuussa 1944, ja se rakennettiin uudelleen '
+          + 'vasta 1952. Raatihuoneen kellarissa toimi keskiajalla '
+          + 'viinikellari, ja rakennus oli vuosisatoja kaupunginhallinnon '
+          + 'keskus.',
+        lyhyt: 'Tallinnan raatihuone valmistui 1404 ja on Pohjois-Euroopan ainoa säilynyt goottilainen raatihuone.',
+        selite: 'Tallinnan raatihuone valmistui nykyiseen muotoonsa 1404, ja '
+          + 'sen torninhuippua koristaa Vanha Toomas -tuuliviiri.',
+        lahde: 'Medvedev, Wikimedia Commons (CC BY-SA 3.0)',
+        wiki: 'Tallinnan raatihuone',
+      },
+      {
+        otsikko: 'Nuorten kauppiaiden oma killanhuone',
+        aika: '1400',
+        tiedosto: 'House of the Brotherhood of Blackheads in Tallinn3.JPG',
+        teksti: 'Mustpeade vennaskunta oli tallinnalaisten nuorten, '
+          + 'naimattomien kauppiaiden ja laivanpäälliköiden killaksi vuonna '
+          + '1400 perustettu yhdistys — vanhimmat maininnat ovat jo vuodelta '
+          + '1399. Suurkillan jäseneksi pääsivät vain naimisissa olevat '
+          + 'kauppiaat, joten nuoremmat perustivat omansa. Killan '
+          + 'suojeluspyhimys oli Pyhä Mauritius, jota kuvattiin '
+          + 'tummaihoisena sotilaana, ja hänen kasvonsa näkyvät yhä killan '
+          + 'vaakunassa. Rauhan aikana veljeskunta juhli ja teki kauppaa, '
+          + 'mutta tarpeen tullen sen jäsenet toimivat kaupungin '
+          + 'puolustajina ja harjoittelivat aseiden käyttöä muurien '
+          + 'suojaksi.',
+        lyhyt: 'Mustpeade vennaskunta oli Tallinnan nuorten naimattomien kauppiaiden killaksi perustettu 1400.',
+        selite: 'Mustpeade vennaskunnan talo Pikk-kadulla oli tallinnalaisten '
+          + 'nuorten, naimattomien kauppiaiden ja laivanpäälliköiden killan '
+          + 'kokoontumispaikka.',
+        lahde: 'Alma Pater, Wikimedia Commons (CC BY-SA 3.0)',
+        wiki: 'Mustapäiden talo (Tallinna)',
+      },
+      {
+        otsikko: 'Akatemia, jonka kuningas perusti sodan keskellä',
+        aika: '1632',
+        tiedosto: 'Tartu Ülikooli peahoone 2014-12.JPG',
+        teksti: 'Ruotsin kuningas Kustaa II Aadolf allekirjoitti Tarton '
+          + 'yliopiston perustamiskirjan kesäkuussa 1632, '
+          + 'kolmikymmenvuotisen sodan riehuessa. Ensimmäiset opiskelijat '
+          + 'kirjoitettiin sisään huhtikuussa, ja avajaisia vietettiin '
+          + 'lokakuussa neljän tiedekunnan voimin: filosofian, '
+          + 'oikeustieteen, teologian ja lääketieteen. Sota Venäjää vastaan '
+          + 'pakotti yliopiston siirtymään välillä Tallinnaan, ja toiminta '
+          + 'pysähtyi kokonaan vuosiksi. Nykyinen, pylväikköinen '
+          + 'päärakennus valmistui vasta 1809 arkkitehti Johann Wilhelm '
+          + 'Krausen piirustuksin, ja yliopisto on yhä Viron vanhin ja '
+          + 'arvostetuin.',
+        lyhyt: 'Tarton yliopisto on Viron vanhin, ja kuningas Kustaa II Aadolf perusti sen vuonna 1632.',
+        selite: 'Tarton yliopiston pylväikköinen päärakennus valmistui 1809 '
+          + 'arkkitehti Johann Wilhelm Krausen piirustuksin.',
+        lahde: 'Metsavend, Wikimedia Commons (CC BY-SA 4.0)',
+        wiki: 'Tarton yliopisto',
+      },
+      {
+        otsikko: 'Luostari, jonka Iivana Julma poltti',
+        aika: '1436–1577',
+        tiedosto: 'Tallinn Klosterruine Pirita 1.JPG',
+        teksti: 'Pirita luostari rakennettiin Tallinnan kauppiaiden rahoilla '
+          + '1400-luvun alussa, ja sen kirkko vihittiin käyttöön 1436. '
+          + 'Birgittalaisluostarissa asuivat sekä munkit että nunnat saman '
+          + 'katon alla, miesten ja naisten puolet erotettuina kahdella '
+          + 'pihalla — poikkeuksellinen järjestely keskiajan Euroopassa. '
+          + 'Luostarista tuli Liivinmaan suurin, kunnes Iivana Julman '
+          + 'joukot polttivat ja ryöstivät sen Liivinmaan sodassa vuonna '
+          + '1577. Kiviset holvikaaret ja päätykolmio ovat seisoneet '
+          + 'raunioina siitä lähtien, ja nykyään niiden keskellä '
+          + 'järjestetään kesäisin konsertteja ja luostaripäivän juhlia.',
+        lyhyt: 'Pirita luostari valmistui 1436 ja poltettiin Liivinmaan sodassa 1577; rauniot seisovat yhä.',
+        selite: 'Pirita luostarin kiviset holvikaaret ovat seisoneet '
+          + 'raunioina siitä lähtien, kun Iivana Julman joukot polttivat '
+          + 'luostarin 1577.',
+        lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        wiki: 'Piritan luostari',
+      },
+    ],
+    tehtava: {
+      kysymys: 'Kuka perusti Tarton yliopiston vuonna 1632?',
+      vaihtoehdot: [
+        'Iivana Julma',
+        'Kustaa II Aadolf',
+        'Pietari Suuri',
+        'Kuningatar Kristiina',
+      ],
+      oikea: 1,
+      fakta: 'Ruotsin kuningas Kustaa II Aadolf allekirjoitti perustamiskirjan '
+        + 'kolmikymmenvuotisen sodan keskellä, ja yliopisto on yhä Viron '
+        + 'vanhin.',
+    },
+  },
+  {
+    id: 'ruoka',
+    nimi: 'Ruoka',
+    johdanto: 'Virolainen ruokapöytä on tumma ja suolainen: hapan ruisleipä '
+      + 'joka on jokaisen aterian pohja, makea marsipaani jonka synnystä '
+      + 'kiistellään Lyypekin kanssa, kansalliskala pienessä leivässä ja '
+      + 'joulun verinen makkara.',
+    nostot: [
+      {
+        otsikko: 'Ruisleipä, joka ei koskaan lopu pöydästä',
+        aika: 'Joka ateria',
+        tiedosto: 'Kala&Leib täistera rukkileib.jpg',
+        teksti: 'Musta ruisleipä eli must leib kuuluu virolaisilla lähes '
+          + 'jokaiseen ateriaan, aamiaisesta illalliseen. Se leivotaan '
+          + 'täysjyvärukiista hapanjuurella, ja taikinan annetaan kohota '
+          + 'vuorokausia ennen paistamista — siksi leipä on tiivis, tumma ja '
+          + 'hieman hapan. Neuvostoaikana leipää ei saanut heittää pois, ja '
+          + 'monissa perheissä tapa on säilynyt: vanhasta leivästä '
+          + 'paistetaan korppuja tai tehdään kylmää leipäkeittoa '
+          + 'kermavaahdolla. Ravintoloissa leipää tarjoillaan nykyään myös '
+          + 'paistettuina tikkuina valkosipulin kanssa, oluen kylkiäisenä. '
+          + 'Yksi leipä painaa perinteisesti 800 tai 400 grammaa, ja paino '
+          + 'on painettu jo pakkaukseen.',
+        lyhyt: 'Must leib on täysjyvärukiista hapanjuurella leivottu tumma leipä lähes joka ateriaan.',
+        selite: 'Must leib on täysjyvärukiista hapanjuurella leivottu tumma, '
+          + 'tiivis ruisleipä, jota myydään muun muassa 800 ja 400 gramman '
+          + 'leipinä.',
+        lahde: 'Kala&Leib, Wikimedia Commons (CC BY-SA 4.0)',
+      },
+      {
+        otsikko: 'Makeisen syntytarina, josta kiistellään',
+        aika: '1422',
+        tiedosto: 'Tallinn 0356 (28323773509).jpg',
+        teksti: 'Legendan mukaan marsipaani keksittiin Tallinnan raatihuoneen '
+          + 'apteekissa vuonna 1422, kun apteekkarin oppipoika Mart jauhoi '
+          + 'mantelia ja sokeria sairaalle raatimiehelle lääkkeen sijaan — '
+          + 'tuloksena syntyi makeus, jota alettiin kutsua nimellä '
+          + 'maiasmokk, makea suu. Saksalainen Lyypekki väittää keksineensä '
+          + 'saman herkun, eikä kiistaa ole koskaan ratkaistu. Vuonna 1864 '
+          + 'Tallinnaan avattu kahvila Maiasmokk jatkaa perinnettä yhä '
+          + 'samassa talossa Pikk-kadulla, ja sen marsipaanihuoneessa on '
+          + 'esillä yli kaksisataa vuosikymmenten takaisilla muoteilla '
+          + 'tehtyä marsipaanihahmoa.',
+        lyhyt: 'Legenda sijoittaa marsipaanin synnyn Tallinnan raatihuoneen apteekkiin vuonna 1422.',
+        selite: 'Kahvila Maiasmokin marsipaanihuoneessa Tallinnassa on '
+          + 'esillä yli kaksisataa vuosikymmenten takaisilla muoteilla '
+          + 'tehtyä marsipaanihahmoa.',
+        lahde: 'János Korom Dr., Wikimedia Commons (CC BY-SA 2.0)',
+        wiki: 'Marsipaani',
+      },
+      {
+        otsikko: 'Kansalliskala, joka mahtuu leivän päälle',
+        aika: '2007',
+        tiedosto: 'Räim.JPG',
+        teksti: 'Räim eli itämeren silakka valittiin Viron kansalliskalaksi '
+          + 'vuonna 2007 kansanäänestyksellä, joka herätti keskustelua '
+          + 'jopa parlamentissa. Kyseessä on tavallista silakkaa pienempi '
+          + 'Itämeren alalaji, jota on syöty rannikolla vuosisatoja: '
+          + 'suolattuna, savustettuna, marinoituna ja etenkin kiluna eli '
+          + 'mausteliemessä säilöttynä pikkukalana. Kiluvõileib eli '
+          + 'kilulla ja munalla katettu ruisleipäviipale on yksi maan '
+          + 'tunnetuimmista väliaterioista, ja sitä myydään kojuilta '
+          + 'toreilla ympäri vuoden. Räimeä juhlitaan omalla päivällään, '
+          + 'jolloin rannikkokaupungeissa järjestetään markkinoita ja '
+          + 'kalastuskilpailuja.',
+        lyhyt: 'Räim eli itämeren silakka valittiin Viron kansalliskalaksi kansanäänestyksellä 2007.',
+        selite: 'Räim eli Itämeren alalajin silakka on Viron '
+          + 'kansanäänestyksellä 2007 valittu kansalliskala.',
+        lahde: 'Olev Mihkelmaa, Wikimedia Commons (CC BY-SA 3.0)',
+        wiki: 'Silakka',
+      },
+      {
+        otsikko: 'Joulun tumma makkara',
+        aika: 'Jouluaattona',
+        tiedosto: 'Verivorstid.jpg',
+        teksti: 'Verivorst on jouluaaton pääruoka, jota ilman harva '
+          + 'virolaisperhe kuvittelee joulua. Makkara tehdään sianverestä, '
+          + 'ohrasuurimoista, läskistä ja mausteista, täytetään suoleen ja '
+          + 'keitetään ennen paistamista rapeaksi. Perinne juontaa juurensa '
+          + 'aikaan, jolloin jokainen maatila teurasti oman joulusikansa '
+          + 'marras-joulukuussa, ja veri, rasva ja sisäelimet piti käyttää '
+          + 'saman viikon aikana — mikään ei mennyt hukkaan. Pöydässä '
+          + 'verivorstin kylkeen kuuluvat hapankaali, paistetut perunat ja '
+          + 'lusikallinen puolukkahilloa lautasen reunalla. Monet perheet '
+          + 'tekevät makkaransa yhä itse suvun reseptillä, sukupolvesta '
+          + 'toiseen.',
+        lyhyt: 'Verivorst on virolaisen jouluaaton pääruoka: sianverestä ja ohrasuurimoista tehty makkara.',
+        selite: 'Verivorst on sianverestä, ohrasuurimoista, läskistä ja '
+          + 'mausteista tehty makkara, joka on virolaisen jouluaaton '
+          + 'pääruoka.',
+        lahde: 'Pikk de Päkk, Wikimedia Commons (CC BY-SA 3.0)',
+      },
+    ],
+    tehtava: {
+      kysymys: 'Missä marsipaani legendan mukaan keksittiin?',
+      vaihtoehdot: [
+        'Lyypekin kirkossa',
+        'Tallinnan raatihuoneen apteekissa',
+        'Tarton yliopistossa',
+        'Pirita luostarissa',
+      ],
+      oikea: 1,
+      fakta: 'Legenda kertoo apteekin oppipojasta Martista, joka jauhoi '
+        + 'mantelia ja sokeria — Lyypekki väittää kuitenkin keksineensä '
+        + 'saman herkun.',
+    },
+  },
+  {
+    id: 'kulttuuri',
+    nimi: 'Kulttuuri',
+    johdanto: 'Virolainen kulttuuri elää yhteislaulussa ja käsityössä: '
+      + 'laulujuhlat jotka alkoivat 1869, kirjava rahvaspuku joka kertoo '
+      + 'pitäjän, kanteleen sukulaissoitin ja kansalliseepos jonka sankari '
+      + 'on jättiläinen.',
+    nostot: [
+      {
+        otsikko: 'Kuoro, joka lauloi maan vapaaksi',
+        aika: '1869',
+        tiedosto: 'Tallinna laululava 1928.jpg',
+        teksti: 'Ensimmäiset yleiset laulujuhlat pidettiin Tartossa '
+          + 'kesäkuussa 1869 kustantaja Johann Voldemar Jannsenin '
+          + 'aloitteesta, ja lavalla lauloi lähes 900 miestä. Juhla oli '
+          + 'osa kansallista heräämistä Venäjän vallan alla, ja siitä tuli '
+          + 'nopeasti koko kansan yhteinen tapahtuma: vuodesta 1896 juhlat '
+          + 'on pidetty Tallinnassa joka viides vuosi. Neuvostoaikana '
+          + 'laulujuhlat muuttuivat hiljaiseksi vastarinnaksi, ja '
+          + '1988–1991 kymmenettuhannet lauloivat yhdessä kiellettyjä '
+          + 'isänmaallisia lauluja niin sanotussa laulavassa '
+          + 'vallankumouksessa, joka johti lopulta itsenäisyyteen. Unesco '
+          + 'lisäsi juhlat ihmiskunnan aineettoman kulttuuriperinnön '
+          + 'luetteloon.',
+        lyhyt: 'Viron laulujuhlia on pidetty vuodesta 1869, ja ne siirtyivät Tallinnaan vuonna 1896.',
+        selite: 'Tallinnan laululava vuonna 1928, jolloin laulujuhlia oli '
+          + 'jo pidetty kolme vuosikymmentä ensimmäisestä juhlasta '
+          + 'Tartossa 1869.',
+        lahde: 'Tuntematon valokuvaaja, Wikimedia Commons (public domain)',
+        wiki: 'Tallinnan laulujuhlat',
+      },
+      {
+        otsikko: 'Puku, josta näkee kotipitäjän',
+        aika: '1800-luku',
+        tiedosto: 'Eesti rahvarõivad-EE 1.jpg',
+        teksti: 'Virolaisessa kansanpuvussa jokainen pitäjä erottuu omalla '
+          + 'raidoituksellaan, väriyhdistelmällään ja koruillaan — '
+          + 'tunteva silmä näkee heti kuvasta, oliko kantaja kotoisin '
+          + 'Setumaalta, Muhusta vai Pärnun seudulta. Puvut ommeltiin '
+          + 'käsin kotikutoisesta villakankaasta, ja niiden yksityiskohdat '
+          + 'periytyivät äidiltä tyttärelle sukupolvien ajan. Kihnun '
+          + 'saarella perinne on yhä elossa arjessa, ei vain juhlissa: '
+          + 'naiset kutovat itse raidalliset hameensa ja neulovat '
+          + 'värikkäät lapasensa samoilla kuvioilla kuin esiäitinsä. '
+          + 'Unesco liitti Kihnun kulttuuriperinteen ihmiskunnan '
+          + 'aineettoman kulttuuriperinnön listalle vuonna 2003.',
+        lyhyt: 'Jokaisella pitäjällä on oma kansanpukunsa, ja Kihnussa pukua käytetään yhä arjessa.',
+        selite: 'Neljä Viron pitäjien kansanpukua kuvitettuna: kunkin '
+          + 'raidoitus ja korut kertovat kantajan kotiseudun.',
+        lahde: 'Tuntematon kuvittaja, Wikimedia Commons (public domain)',
+      },
+      {
+        otsikko: 'Soitin, joka soi tuhat vuotta',
+        aika: 'Yli 1000 vuotta',
+        tiedosto: 'Kromaatiline klaverivabriku kannel.jpg',
+        teksti: 'Kannel on virolainen kielisoitin, jonka sukulaisia ovat '
+          + 'suomalainen kantele ja latvialainen kokle — kaikki kuuluvat '
+          + 'itämerensuomalais-balttilaiseen sitrasoitinten perheeseen, '
+          + 'jonka juuret ulottuvat ainakin 1200-luvulle. Kansanrunouden '
+          + 'kerääjä Jakob Hurt nimesi kokoamansa laajan '
+          + 'kansanlaulujulkaisunsa Vana Kannel eli Vanha kannel vuosina '
+          + '1875–1876, ja nimi kuvasti soittimen asemaa kansallisena '
+          + 'tunnuksena. 1900-luvun alussa soitin oli lähes unohtua, mutta '
+          + 'neuvostoaikana kehitettiin suurempi, kromaattinen kannel, '
+          + 'jolla voi soittaa kaikki sävellajit. Perinteinen pienempi '
+          + 'kannel on sittemmin palannut suosioon, ja sitä opetetaan taas '
+          + 'musiikkikouluissa.',
+        lyhyt: 'Kannel on virolainen sitrasoitin, jonka juuret ulottuvat ainakin 1200-luvulle.',
+        selite: 'Kromaattinen kannel on 1900-luvulla kehitetty suurempi '
+          + 'versio perinteisestä virolaisesta sitrasoittimesta.',
+        lahde: 'Adeliine, Wikimedia Commons (CC BY-SA 3.0)',
+        wiki: 'Kannel',
+      },
+      {
+        otsikko: 'Eepos, jonka sankari on jättiläinen',
+        aika: '1857–1861',
+        tiedosto: 'Aleksander Mülber - Kalevipoeg (1915).jpg',
+        teksti: 'Kalevipoeg on Viron kansalliseepos, jonka lääkäri ja '
+          + 'kansanrunouden kerääjä Friedrich Reinhold Kreutzwald kokosi '
+          + 'kansantarinoista ja julkaisi jaksoina vuosina 1857–1861. Yli '
+          + '19 000 säkeen mittainen runoelma kertoo jättiläiskuningas '
+          + 'Kalevipojasta, joka kyntää, taistelee ja lopulta joutuu '
+          + 'manalan portille kätensä juuttuessa kiveen. Teos syntyi '
+          + 'samaan aikaan kuin Suomen Kalevala ja samasta kansallisen '
+          + 'heräämisen hengestä, ja siitä tuli nopeasti koko kansan '
+          + 'yhteinen tarina koulukirjoista taidemaalauksiin. Kalevipojan '
+          + 'hahmo elää yhä: hänen nimeään kantavat niin jäätä murtava '
+          + 'jäänmurtaja kuin lukuisat patsaat ja kadunnimet ympäri '
+          + 'Viroa.',
+        lyhyt: 'Kalevipoeg on Kreutzwaldin kansantarinoista kokoama Viron kansalliseepos vuosilta 1857–1861.',
+        selite: 'Aleksander Mülberin vuonna 1915 maalaama kohtaus kuvaa '
+          + 'Kalevipoeg-eepoksen jättiläissankaria taistelussa.',
+        lahde: 'Aleksander Mülber, Wikimedia Commons (public domain)',
+        wiki: 'Kalevipoeg',
+      },
+    ],
+    tehtava: {
+      kysymys: 'Missä ensimmäiset yleiset laulujuhlat pidettiin vuonna 1869?',
+      vaihtoehdot: [
+        'Tallinnassa',
+        'Tartossa',
+        'Pärnussa',
+        'Narvassa',
+      ],
+      oikea: 1,
+      fakta: 'Laulujuhlat siirtyivät Tallinnaan vasta vuodesta 1896 alkaen, '
+        + 'ja niitä on sen jälkeen pidetty siellä joka viides vuosi.',
+    },
+  },
     {
       id: 'menovinkit',
       nimi: 'Menovinkit',
