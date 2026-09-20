@@ -66,3 +66,23 @@ Loire-vika korjaantuu tällä), viivataso ilman jokia ja reittejä (pallolla),
   `~/pyramidi-poltto/koe-20260920/` (ei ämpäriin).
 - Ranta-taso pallolla ei näy (sarja k on rannaton, ranta vektorina) — koeranta
   on olemassa tasokarttaa varten.
+
+## Merikoe 2: yhdistelmä (Fablen tilaus 20.9. ilta, omistajan palaute)
+
+Kaappaukset `saapuminen-yhdistelma.webp`, `biskaja-yhdistelma.webp`,
+`lion-yhdistelma.webp` (Lioninlahti). Resepti: `--vesiviivoitus ohut` (4
+hentoa viivaa rannasta, patina.mjs VESIVIIVAT_OHUT) + `--syvyysportaat 200`
+(yksi vaalea syvyysvyöhyke mannerjalustan reunassa) + litistys 0,55 (pehmeä,
+ei tahrainen) + joet pohjassa. Koristeet nimiötasolla: kompassiruusu (lon
+−6,6 lat 44,6 — Biskajan tyhjä kulma, kuvan ulkopuolella saapumisnäkymässä),
+kaksi purjelaivamerkkiä (Biskaja, Lioninlahti), aaltomerkki meren nimen alla.
+
+Törmäysten väistö (generaattori, TÖRMÄYSTEN VÄISTÖ): maakuntanimi väistää
+laudan kaupunkeja, jokia ja muita nimiöitä (z6: 6 siirtoa, z7: 7, z8: 6) —
+Orléanais nousi Loiren yläpuolelle, Île-de-France Pariisin koilliseen,
+Provence Marseillen yläpuolelle. Auvergne ei väistä Puy de Sancyn NOSTOA eikä
+Languedoc Roquefortin nostoa: nostot eivät ole vielä esteitä (lisättävissä
+nostot.json:sta ennen isoa polttoa). Biskajanlahden tuplaus (pelin elävä
+maastonimi "≈ Biskajanlahti") on yhä näkyvissä — se ei poistu nostotason
+mukana, koska se on FRA:n elävä maastokohde; Pelikoodari piilottaa sen
+`pyramidinNimiot()`-taulun `meri`-avaimella.

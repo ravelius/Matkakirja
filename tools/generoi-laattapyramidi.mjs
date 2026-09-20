@@ -1986,18 +1986,105 @@ function nimiotasonNimiot() {
   else nimiotLista = NIMISTO_1873;
   return nimiotLista;
 }
+/*
+ * TÖRMÄYSTEN VÄISTÖ (Fable 20.9.2026, poltto-koe 2: *"maakuntanimi väistää
+ * kaupunkia ja jokea"*; omistajan havainnot Loire/Orléanais, Auvergne/
+ * nosto, Marseille/Provence, Île-de-France/Pariisi). Esteet ovat laudan
+ * kaupungit (pack.cities, nimiön ala kaupungin oikealla puolella kuten
+ * pelin nimilappu) ja joet (lautaSisalto.joet) sekä jo ladotut nimiöt.
+ * Nimiö kokeilee järjestyksessä: paikallaan, ylös, alas, ylä-/ala-
+ * viistoon, sivuille — askel on kirjainkorkeus — ja ottaa ensimmäisen
+ * vapaan; jos mikään ei ole vapaa, se jää paikalleen (parempi näkyä
+ * kuin kadota). Sama ladonta kirjoitetaan sivulle (nimiot.json
+ * `tasot[z]`), peitteeseen ja metadataan, joten kolme lukijaa näkevät
+ * saman paikan. Koristeet (kompassi, laiva) eivät väistä.
+ */
+const NIMION_VAISTO_ASKELIA = [[0, 0], [0, -1], [0, 1], [0.6, -0.8], [-0.6, -0.8], [0.6, 0.8], [-0.6, 0.8], [1.2, 0], [-1.2, 0], [0, -2], [0, 2]];
+let esteMuisti = null;
+function nimiotasonEsteet(mitat) {
+  esteMuisti ??= new Map();
+  if (esteMuisti.has(mitat.z)) return esteMuisti.get(mitat.z);
+  const laatikot = [];
+  const px = (bx) => (bx - arkinBbox.x) * mitat.px;
+  const py = (by) => (by - arkinBbox.y) * mitat.px;
+  // Kaupungit: piste + nimilapun ala oikealle (leveys ~ 7 merkkiä × 12 px).
+  const kaupunkiKorkeus = { 4: 10, 5: 12, 6: 14, 7: 18, 8: 24 }[mitat.z] ?? 14;
+  for (const c of pack.cities ?? []) {
+    const x = px(c.x); const y = py(c.y);
+    const nimi = String(c.name ?? c.id ?? '');
+    laatikot.push([x - kaupunkiKorkeus, y - kaupunkiKorkeus, x + kaupunkiKorkeus * (1 + 0.6 * nimi.length), y + kaupunkiKorkeus]);
+  }
+  // Joet: jokainen jana kapeana laatikkona (levennys 4 px).
+  const joet = [];
+  for (const joki of lautaSisalto.joet ?? []) {
+    const p = joki.pisteet ?? [];
+    for (let i = 1; i < p.length; i += 1) {
+      joet.push([Math.min(px(p[i - 1][0]), px(p[i][0])) - 4, Math.min(py(p[i - 1][1]), py(p[i][1])) - 4,
+        Math.max(px(p[i - 1][0]), px(p[i][0])) + 4, Math.max(py(p[i - 1][1]), py(p[i][1])) + 4, [px(p[i - 1][0]), py(p[i - 1][1]), px(p[i][0]), py(p[i][1])]]);
+    }
+  }
+  const esteet = { laatikot, joet };
+  esteMuisti.set(mitat.z, esteet);
+  return esteet;
+}
+const laatikotLeikkaavat = (a, b) => a[0] < b[2] && a[2] > b[0] && a[1] < b[3] && a[3] > b[1];
+function janaLeikkaaLaatikon(j, l) {
+  // Karkea: janan laatikko leikkaa ja janan keskikohta tai päät ovat laatikossa, tai jana ylittää laatikon.
+  const [x0, y0, x1, y1] = j;
+  const sisalla = (x, y) => x >= l[0] && x <= l[2] && y >= l[1] && y <= l[3];
+  if (sisalla(x0, y0) || sisalla(x1, y1) || sisalla((x0 + x1) / 2, (y0 + y1) / 2)) return true;
+  // Leikkaako jana laatikon jonkin sivun (parametrinen leikkaus).
+  const sivut = [[l[0], l[1], l[2], l[1]], [l[2], l[1], l[2], l[3]], [l[2], l[3], l[0], l[3]], [l[0], l[3], l[0], l[1]]];
+  const d = (ax, ay, bx, by, cx, cy) => (bx - ax) * (cy - ay) - (by - ay) * (cx - ax);
+  return sivut.some(([ax, ay, bx, by]) => {
+    const d1 = d(x0, y0, x1, y1, ax, ay); const d2 = d(x0, y0, x1, y1, bx, by);
+    const d3 = d(ax, ay, bx, by, x0, y0); const d4 = d(ax, ay, bx, by, x1, y1);
+    return ((d1 > 0) !== (d2 > 0)) && ((d3 > 0) !== (d4 > 0));
+  });
+}
+function laatikkoVapaa(laatikko, esteet, ladotut) {
+  for (const e of esteet.laatikot) if (laatikotLeikkaavat(laatikko, e)) return false;
+  for (const l of ladotut) if (laatikotLeikkaavat(laatikko, l)) return false;
+  for (const j of esteet.joet) if (laatikotLeikkaavat(laatikko, j) && janaLeikkaaLaatikon(j[4], laatikko)) return false;
+  return true;
+}
+const ladontaMuisti = new Map();
 function nimiotasonLadonnat(mitat) {
+  if (ladontaMuisti.has(mitat.z)) return ladontaMuisti.get(mitat.z);
   const mittaa = (teksti, fontti) => Number(fontti.match(/^(\d+(?:\.\d+)?)px/)?.[1] ?? 0)
     * NIMION_MERKKILEVEYS * [...teksti].length;
   const arkkiKaava = {
     lautaX: (lon) => kaava.lautaX(lon) - arkinBbox.x,
     lautaY: (lat) => kaava.lautaY(lat) - arkinBbox.y,
   };
+  const esteet = nimiotasonEsteet(mitat);
+  const ladotut = [];
   const ulos = [];
-  for (const nimio of nimiotasonNimiot()) {
+  // Meret ja koristeet ensin (isot, harvat), sitten maakunnat väistävät niitä.
+  const jarjestys = [...nimiotasonNimiot()].sort((a, b) => {
+    const arvo = (n) => (n.luokka === 'meri' ? 0 : (n.luokka === 'kompassi' || n.luokka === 'laiva' ? 1 : 2));
+    return arvo(a) - arvo(b);
+  });
+  let siirrettyja = 0;
+  for (const nimio of jarjestys) {
     const l = nimiotasonLadonta(nimio, mitat.z, arkkiKaava, mitat.px, mittaa);
-    if (l) ulos.push({ nimio, ladonta: l });
+    if (!l) continue;
+    const koriste = nimio.luokka === 'kompassi' || nimio.luokka === 'laiva';
+    const w = l.laatikko[2] - l.laatikko[0]; const h = l.laatikko[3] - l.laatikko[1];
+    let valittu = null;
+    for (const [sx, sy] of (koriste ? [[0, 0]] : NIMION_VAISTO_ASKELIA)) {
+      const askel = l.korkeus * 1.1;
+      const x = l.x + sx * askel * 2; const y = l.y + sy * askel;
+      const laatikko = [x - w / 2, y - h / 2, x + w / 2, y + h / 2];
+      if (koriste || laatikkoVapaa(laatikko, esteet, ladotut)) { valittu = { x, y, laatikko }; if (sx || sy) siirrettyja += 1; break; }
+    }
+    valittu ??= { x: l.x, y: l.y, laatikko: l.laatikko };
+    const ladonta = { ...l, x: valittu.x, y: valittu.y, laatikko: valittu.laatikko };
+    ladotut.push(ladonta.laatikko);
+    ulos.push({ nimio, ladonta });
   }
+  if (siirrettyja) console.log(`  nimiötaso z${mitat.z}: ${ulos.length} nimiötä, ${siirrettyja} väisti kaupunkia/jokea/nimiötä`);
+  ladontaMuisti.set(mitat.z, ulos);
   return ulos;
 }
 function nimiotasonPeite(mitat) {
@@ -2728,7 +2815,9 @@ writeFileSync(join(tyokansio, 'sisalto.json'), JSON.stringify(VIIVATASO
  * piirtää siitä mustetta läpinäkyvälle kankaalle.
  */
 writeFileSync(join(tyokansio, 'nimiot.json'),
-  JSON.stringify(NIMIOTASO ? { nimiot: nimiotasonNimiot() } : null));
+  JSON.stringify(NIMIOTASO ? {
+    tasot: Object.fromEntries(tasot.map((m) => [m.z, nimiotasonLadonnat(m).map(({ nimio, ladonta }) => ({ nimio, ...ladonta }))])),
+  } : null));
 writeFileSync(join(tyokansio, 'ranta.json'),
   JSON.stringify(RANTATASO ? { rannikot: rantaViivat() } : null));
 /*
@@ -2828,7 +2917,8 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
   }
   let nimiotaso = null;
   if (NIMIOTASO) {
-    nimiotaso = (await (await fetch('./nimiot.json')).json())?.nimiot ?? [];
+    // Esiladotut nimiöt tasoittain (ks. TÖRMÄYSTEN VÄISTÖ): { z: [ {nimio, x, y, …} ] }.
+    nimiotaso = (await (await fetch('./nimiot.json')).json())?.tasot ?? {};
   }
   if (!TASOITUS && !NOSTOTASO && !VIIVATASO && !RANTATASO && !NIMIOTASO) {
     aineisto = await (await fetch('./aineisto.json')).json();
@@ -2885,7 +2975,7 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
     } else if (RANTATASO) {
       piirraRantataso(kangas, { ...yhteiset, rannikot });
     } else if (NIMIOTASO) {
-      piirraNimiotaso(kangas, { ...yhteiset, nimiot: nimiotaso });
+      piirraNimiotaso(kangas, { ...yhteiset, __z: saumaZ, ladonnat: nimiotaso[String(saumaZ)] ?? [] });
     } else {
       piirraMaailma(kangas, aineisto, {
         ...yhteiset, nostot, piirraNosto: piirraNostosymPolttoon,
@@ -3041,7 +3131,7 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
       } else if (RANTATASO) {
         piirraRantataso(kangas, { ...yhteiset, rannikot });
       } else if (NIMIOTASO) {
-        piirraNimiotaso(kangas, { ...yhteiset, nimiot: nimiotaso });
+        piirraNimiotaso(kangas, { ...yhteiset, __z: perus.__z ?? 7, ladonnat: nimiotaso[String(perus.__z ?? 7)] ?? [] });
       } else {
         piirraMaailma(kangas, aineisto, {
           ...yhteiset, nostot, piirraNosto: piirraNostosymPolttoon,
@@ -3133,7 +3223,7 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
        */
       piirraRantataso(kangas, { ...asetukset, rannikot });
     } else if (NIMIOTASO) {
-      piirraNimiotaso(kangas, { ...asetukset, nimiot: nimiotaso });
+      piirraNimiotaso(kangas, { ...asetukset, ladonnat: nimiotaso[String(asetukset.__z)] ?? [] });
     } else {
       piirraMaailma(kangas, aineisto, {
         ...asetukset, sisalto, nostot, piirraNosto: piirraNostosymPolttoon,
