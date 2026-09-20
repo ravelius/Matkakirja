@@ -9962,7 +9962,16 @@ export const RAAMATTU = {
           + 'Rooma tarjolla, kaupunkimerkit eivat nay, liftauskaaret nakyvat) -> Opus 1; '
           + '3) ASTROLINSSIN AANI: "avaruuslinssin aikana ei kuulu avaruuden taustahuminaa '
           + 'joka on jo generoitu. lisaksi taustamusiikki pitaa sammuttaa linssin ajaksi" '
-          + '-> Opus 2. Julkaistaan v1978. V1977 MERGETTY 14.42 (CI vihrea).',
+          + '-> Opus 2. Julkaistaan v1978. V1977 MERGETTY 14.42, tuotannossa 14.44. OMISTAJA '
+          + '14.45, VAKAVA (v1977, Berliini -> lento Roomaan): "valittuani lennon roomaan, '
+          + 'peli siirtyi ilmeisesti taustalla myos amsterdamiin, koska kaiuttimista alkoi '
+          + 'kuulua seka rooman etta amsterdamin luenta aanet. kartta teki lentoanimaation '
+          + 'roomaan ja sen peraan se teki uuden liikkeen ... naytolla nakyi rooman kuvat '
+          + 'ja rooman kartta mutta taustalla kuului kahden kaupungin luenta aanet" -> '
+          + 'Opus 1 ENSIN ennen muita: lento laukaisee toisen saapumisen (Amsterdam = '
+          + 'liftauskantaman kohde? autoheitto lennon jalkeen? v1969 hyppy/autoheitto vai '
+          + 'v1977 kantama?) - juurisyy, korjaus, savuke; jos syy on v1977:ssa, korjaus '
+          + 'julkaistaan heti omana versiona.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
