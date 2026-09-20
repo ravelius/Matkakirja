@@ -1183,3 +1183,35 @@ button.satelliitti-pulunappi:focus-visible {
   .satelliitti-selite-runko { transition: none; }
   .satelliitti-vakanen { transition: none; }
 }
+
+/*
+ * ── KELATTU INFORUUTU EI SAA OLLA AVATTUA LEVEÄMPI ───────────────
+ *
+ * OMISTAJA 20.9.2026 klo 12.05 (kaappaus
+ * docs/raportit/kaappaukset/omistaja-20260920/astro-inforuutu-leveys-ipad.png):
+ * iPadilla pienennetty inforuutu ("Araljärvi — Kazakstan ja
+ * Uzbekistan") venyi lähes koko ruudun leveydelle, vaikka avattu
+ * inforuutu on kapea.
+ *
+ * MITATTU SYY: avatulla laatikolla on katto `min(46%, 560px)`, mutta
+ * kelatulla vain `calc(100% - ... - nappi - 14px)` eli käytännössä
+ * ruudun leveys miinus ✕. Kapealla ruudulla (≤ 620 px) ero ei näy,
+ * koska siellä avattu laatikko on itsekin lähes ruudun levyinen —
+ * leveällä ruudulla ero on satoja pikseleitä.
+ *
+ * KORJAUS ON KATTO, EI KIINTEÄ LEVEYS. Kelattu laatikko kutistuu yhä
+ * sisältönsä kokoiseksi (omistajan aiempi linjaus 16.9.2026: kiinteä
+ * leveys venyttäisi laatikon ✕:ään asti myös lyhyellä nimellä), mutta
+ * se ei voi enää kasvaa avattua leveämmäksi. Pitkällä nimellä
+ * molemmat osuvat samaan kattoon ja leveydet ovat samat.
+ *
+ * Kapea ruutu jätetään ennalleen: siellä avatulla on `max-width: none`
+ * ja oma laskettu leveytensä (@media max-width 620px).
+ */
+@media (min-width: 621px) {
+  .satelliitti-selite.satelliitti-selite-kiinni {
+    max-width: min(46%, 560px,
+      calc(100% - max(12px, env(safe-area-inset-left, 0px))
+        - var(--satelliitti-oikea) - var(--satelliitti-nappi) - 14px));
+  }
+}

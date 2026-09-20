@@ -11965,6 +11965,16 @@ body.linssi-topografia .fokusvirta-huudahdus {
  */
 body.aikajana-paalla .fact-card,
 body.aikajana-paalla .karttaselite,
+/*
+ * ASTRONAUTIN KAMERA (omistaja 20.9.2026 klo 12.00, kaappaus
+ * docs/raportit/kaappaukset/omistaja-20260920/astro-vakaset-ipad.png):
+ * iPadilla ✕:n alla näkyi kermanvärinen kolmen väkäsen nappi. Se on
+ * karttaselitteiden avaaja (.karttaselite-nappi, title
+ * "Karttaselitteet"), ja se selittää LAUDAN karttamerkit — joita
+ * avaruudessa ei ole yhtäkään. Sama piilotus kuin Keksinnöt-linssissä,
+ * ja samasta syystä. Luokan linssi-satelliitti lisää js/ui.js.
+ */
+body.linssi-satelliitti .karttaselite,
 body.aikajana-paalla .fokus-kartuutsi,
 body.aikajana-paalla .kartta-mittajana,
 body.aikajana-paalla .fokus-viivain {
