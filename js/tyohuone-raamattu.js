@@ -10046,7 +10046,14 @@ export const RAAMATTU = {
           + 'OMISTAJA 16.05 kaappausten jalkeen: "Julkaise 80% peitolla" -> '
           + 'KERMAN_PEITTO_KIINTEA = 0,8, v1979 PR #2631 avattu 16.03. v1978 tuotannossa 16.02. '
           + 'V1979 MERGETTY 16.28 --admin (zoom-pan ja pariisi-lahizoom flakkasivat '
-          + 'simulaattorikuormassa, sisalto yksi vakio).',
+          + 'simulaattorikuormassa, sisalto yksi vakio). OMISTAJA 16.45: "Tassa zoom-tasossa '
+          + 'maan rajan viiva liian paksu" -> Fable: VEKTORIT_KOROSTUS_LEVEYS_CSS lahipaa 5 '
+          + '-> 3 (v1980). OMISTAJA 16.46 (kaappaus gironde-tayton-reuna-v1979.png): "saisiko '
+          + 'taman rajaviivan korjattua vain yksinkertaisesti piirtamalla rajaviiva '
+          + 'paallimmaiseksi?" -> Fable: keha on jo paallimmaisena; nakyva vika on MEREN '
+          + 'TAYTON REUNA (harmaa) joka kulkee suorana suiston yli lahizoomilla; korjaus: '
+          + 'valitun maan polygoni taytetaan maan varilla kehan alle (vektori leikkaa '
+          + 'tayton) -> Opus 1 seuraava era Ihmisen matkan jalkeen.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
