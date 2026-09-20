@@ -335,8 +335,8 @@ test('Alpit: opas on, kohdekarttaa ei → liuskassa vain kaupunki ja Turistiopas
   assert.deepEqual(rivit.map((r) => r.laji), ['lehti', 'opas']);
 });
 
-test('Bryssel ja Ljubljana: kohdekartta ja opas → kaikki kolme yläryhmän riviä', () => {
-  for (const [id, nimi, lat, lng] of [['bryssel', 'Bryssel', 50.85, 4.35], ['ljubljana', 'Ljubljana', 46.06, 14.51]]) {
+test('Bryssel, Ljubljana ja Košice: kohdekartta ja opas → kaikki kolme yläryhmän riviä', () => {
+  for (const [id, nimi, lat, lng] of [['bryssel', 'Bryssel', 50.85, 4.35], ['ljubljana', 'Ljubljana', 46.06, 14.51], ['kosice', 'Košice', 48.72, 21.26]]) {
     assert.equal(kaupungillaKohdekartta(id), true, id);
     assert.ok(turistiOppaanArtikkeli(id), id);
     const rivit = liuskanRivit({

@@ -7678,6 +7678,177 @@ export const KAUPUNKIKARTAT = {
       },
     ],
   },
+  kosice: {
+    polku: 'assets/kartat/kosice-keskusta.png',
+    // Numeroidut ympyrät kartalla ilman miniatyyrejä (omistaja 20.9.2026).
+    numeroympyrat: true,
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 48.7238, etela: 48.7188, lansi: 21.2545, ita: 21.265 },
+    // Laajennus 1,6 samasta keskipisteestä (piirra-kaupunkikartta
+    // --vari, 20.9.2026).
+    piirtoRajat: { pohjoinen: 48.7253, etela: 48.7173, lansi: 21.25135, ita: 21.26815 },
+    varikartta: 'assets/kartat/kosice-varikartta.png',
+    esittely: 'Košicen vanha ydin kasvaa Hlavná-kadun eli Pääkadun ympärille, '
+      + 'joka on syntynyt keskiaikaisena toriaukiona ja jonka keskellä '
+      + 'seisoo Slovakian suurin kirkko. Isoisän matkan aikaan vuonna 1873 '
+      + 'kaupunki on unkarilaisittain Kassa, ja moni kartan kohde on vielä '
+      + 'vanha: Pyhän Elisabetin tuomiokirkko, Urbanin torni, Immaculata, '
+      + 'Pyövelin bastioni ja Miklušin vankila, joka toimii kaupungin '
+      + 'vankilana vuoteen 1909. Valtionteatteri ja Jakabin palatsi '
+      + 'valmistuvat vasta 1800-luvun lopussa. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      {
+        nimi: 'Pyhän Elisabetin tuomiokirkko', lat: 48.72027, lon: 21.2582,
+        wiki: 'Pyhän Elisabetin katedraali (Košice)',
+      },
+      {
+        nimi: 'Urbanin torni', lat: 48.72067, lon: 21.25814,
+        teksti: 'Urbanin torni on Pyhän Elisabetin tuomiokirkon kellotorni. Se on '
+          + 'omistettu pyhälle Urbanille, viinitarhurien suojeluspyhimykselle, ja '
+          + 'sen lähellä seisoo myös Pyhän Mikaelin kappeli. Vuonna 1970 torni, '
+          + 'tuomiokirkko ja kappeli julistettiin yhdessä kansalliseksi '
+          + 'kulttuurimonumentiksi.'
+          + '\n\n'
+          + 'Isoisän aikaan torni on jo vanha maamerkki keskellä Hlavná-katua. '
+          + 'Tornin nykyinen kaariholvillinen asu on myöhempi: vielä noin vuonna '
+          + '1900 otetussa kuvassa tornin juurella ei ole kaariholvia.',
+        kuvat: [
+          {
+            tiedosto: 'Kaschau Dom um 1900.jpg',
+            lyhyt: 'Tuomiokirkko ja Urbanin torni noin 1900: tornin ympärillä ei vielä ollut kaariholvia.',
+            selite: 'Värillinen valokuvapainate esittää Pyhän Elisabetin tuomiokirkkoa ja Urbanin tornia noin vuonna 1900. Tornin juurella ei vielä ole kaariholvia, ja kirkon edustalla on hiekkainen katu ja nuorten puiden reunustama puisto.',
+            lahde: 'Tuntematon, Library of Congress / Wikimedia Commons (PD)',
+          },
+        ],
+      },
+      {
+        nimi: 'Hlavná-katu', lat: 48.72118, lon: 21.25762,
+        teksti: 'Hlavná eli Pääkatu on Košicen keskuskatu, ja lähes koko katu on '
+          + 'nykyään kävelyaluetta. Se on syntynyt keskiaikaisena toriaukiona, ja '
+          + 'siksi sen pohjapiirros on kara: keskeltä leveä ja päistä kapea. '
+          + 'Katua reunustavat kaupungin tärkeimmät historialliset rakennukset, ja '
+          + 'sen keskellä seisoo tuomiokirkko.'
+          + '\n\n'
+          + 'Kadun puistoissa on kolme suihkulähdettä, ja suurin niistä, '
+          + 'laulava suihkulähde tuomiokirkon ja teatterin välissä, on vasta '
+          + 'vuodelta 1986. Isoisän aikaan tässä kohdassa ei siis vielä kuulu '
+          + 'musiikkia, vaan Hlavná on kaupungin tori ja kulkureitti.',
+        kuvat: [
+          {
+            tiedosto: 'Košice Hlavná.jpg',
+            lyhyt: 'Tuomiokirkon tornista näkee Hlavná-kadun, valtionteatterin ja kaupungin takaiset kukkulat.',
+            selite: 'Tuomiokirkon tornista katse kulkee kadun ja punakattoisten talojen yli valtionteatteriin, ja horisontissa kohoavat kukkulat. Kuvan etualalla näkyy suihkulähteen puisto.',
+            lahde: 'Patrick Hendriksen, Wikimedia Commons (CC BY-SA 3.0)',
+          },
+        ],
+      },
+      {
+        nimi: 'Valtionteatteri', lat: 48.72175, lon: 21.25731,
+        aika: '1879–1899',
+        teksti: 'Isoisän matkan aikaan Hlavná-kadun pohjoispäässä ei ole vielä '
+          + 'teatteria. Uusbarokkinen valtionteatteri rakennettiin Adolf Langin '
+          + 'suunnitelmien mukaan vuosina 1879–1899, ja rakennus on nykyään '
+          + 'Košicen kansallisteatterin päänäyttämö. Se vihittiin käyttöön '
+          + 'syyskuussa 1899.'
+          + '\n\n'
+          + 'Sisätilat on koristeltu runsaasti stukkityöllä, näyttämö on '
+          + 'lyyran muotoinen ja katossa on kohtauksia Shakespearen näytelmistä. '
+          + 'Teatterilla on oma näytelmä-, ooppera- ja balettiryhmänsä.',
+        kuvat: [
+          {
+            tiedosto: 'National Theatre Kosice.jpg',
+            lyhyt: 'Valtionteatterin historiallinen rakennus ja laulava suihkulähde puistossa Hlavná-kadun varrella.',
+            selite: 'Košicen valtionteatterin uusbarokkinen julkisivu ja sen edessä laulava suihkulähde Hlavná-kadun puistossa.',
+            lahde: 'Ladislav Luppa, Wikimedia Commons (CC0)',
+          },
+        ],
+      },
+      {
+        nimi: 'Immaculata', lat: 48.7228, lon: 21.2568,
+        aika: '1723',
+        teksti: 'Immaculata on barokkinen Neitsyt Marian kuvaryhmä eli ruttopylväs '
+          + 'Hlavná-kadun varrella. Se on pystytetty vuonna 1723, joten isoisän '
+          + 'aikaan se on ollut paikallaan jo 150 vuotta ja kuuluu kaupungin '
+          + 'vanhoihin katukuvan tuttuihin kohtiin.'
+          + '\n\n'
+          + 'Pylvään juurella on veistoksia, ja se on tehty muistoksi ajasta, jolloin '
+          + 'ruttoa vastaan rukoiltiin suojelusta Neitsyt Marialta.',
+        kuvat: [
+          {
+            tiedosto: 'Košice - Immaculata 01.jpg',
+            lyhyt: 'Immaculatan barokkinen Neitsyt Marian kuvaryhmä Hlavná-kadulla.',
+            selite: 'Immaculatan barokkipylväs edestä nähtynä; kuvaryhmä on vuodelta 1723.',
+            lahde: 'IDD5000, Wikimedia Commons (CC BY-SA 4.0)',
+          },
+        ],
+      },
+      {
+        nimi: 'Miklušin vankila', lat: 48.72281, lon: 21.25963,
+        aika: '1400-luvun alkupuoli',
+        teksti: 'Miklušin vankila koostuu kahdesta toisiinsa liitetystä gotiikan '
+          + 'ajan porvarintalosta, jotka rakennettiin 1400-luvun alkupuoliskolla. '
+          + '1600-luvun alussa ne muutettiin kaupungin vankilaksi ja '
+          + 'kidutushuoneeksi.'
+          + '\n\n'
+          + 'Isoisän aikaan vankila on yhä käytössä: se palveli tehtävässään aina '
+          + 'vuoteen 1909 asti. Sen jälkeen rakennukset siirrettiin '
+          + 'Ylä-Unkarin museon hoitoon, ja näyttely avattiin vasta 1940-luvun '
+          + 'alun peruskorjauksen jälkeen. Katu, jonka varrella talot seisovat, '
+          + 'on saanut nimensä niistä.',
+        kuvat: [
+          {
+            tiedosto: 'Kosice (Slovakia) - Miklus\'s Prison.jpg',
+            lyhyt: 'Miklušin vankilan gotiikan ajan rakennus Pri Miklušovej väznici -kadun varrella.',
+            selite: 'Miklušin vankilan rakennukset ovat entisiä gotiikan ajan porvarintaloja, jotka toimivat kaupungin vankilana vuoteen 1909.',
+            lahde: 'Maros M r a z, Wikimedia Commons (CC BY-SA 3.0)',
+          },
+        ],
+      },
+      {
+        nimi: 'Pyövelin bastioni', lat: 48.72263, lon: 21.26019,
+        aika: '1400-luku',
+        teksti: 'Pyövelin bastioni on Slovakian suurin ja parhaiten säilynyt '
+          + 'keskiaikaisen kaupunkilinnoituksen rakennus. Sen alkuperä ulottuu '
+          + '1400-luvulle, ja nimi tulee lähellä sijainneesta pyövelin talosta. '
+          + 'Puolipyöreässä rakennuksessa on kahdeksan tykkikammiota, ja se '
+          + 'rakennettiin kaupungin puolustukseksi.'
+          + '\n\n'
+          + 'Isoisän aikaan bastioni on vielä vanha puolustusrakennus. Sen '
+          + 'vieressä seisoo Miklušin vankila, ja vasta 1920–1930-luvuilla '
+          + 'bastioni muutettiin Itä-Slovakian museon käyttöön.',
+        kuvat: [
+          {
+            tiedosto: 'Košice - Hrnčiarska 7 - Katova bašta a Rodošto-1.jpg',
+            lyhyt: 'Pyövelin bastionin puolipyöreä muuri ja Rodoston muistotalo Hrnčiarska-kadun varrella.',
+            selite: 'Pyövelin bastioni on kaupunginmuurin säilynyt osa, ja sen vieressä on Rákóczin muistotalo.',
+            lahde: 'Ladislav Luppa, Wikimedia Commons (CC BY-SA 4.0)',
+          },
+        ],
+      },
+      {
+        nimi: 'Jakabin palatsi', lat: 48.72195, lon: 21.26273,
+        aika: '1899',
+        teksti: 'Jakabin palatsi on uusgoottilainen rakennus Mlynská- ja '
+          + 'Štefánikova-kadun kulmassa, lähellä entistä Mlynský náhon '
+          + '-myllykanavaa. Se valmistui vuonna 1899, joten isoisän matkan '
+          + 'aikaan paikalla ei ole vielä tornillista, vihertäväkattoista '
+          + 'linnamaista taloa.'
+          + '\n\n'
+          + 'Palatsi on nykyään yksi vanhankaupungin tunnetuimmista '
+          + 'rakennuksista, ja sen tornit ja vihertävät katot erottuvat '
+          + 'kaupunkikuvassa.',
+        kuvat: [
+          {
+            tiedosto: 'Košice - Jakabov palác (1).jpg',
+            lyhyt: 'Jakabin palatsi Mlynská-kadun varrella on tornillinen ja vihertäväkattoinen linnamainen talo.',
+            selite: 'Jakabin palatsi kuuluu vanhankaupungin historiallisiin rakennuksiin ja seisoo Mlynská-kadun varrella. Sen tornit ja vihertävät katot erottuvat kaupunkikuvassa, ja kävelysilta johtaa aivan sen viereen.',
+            lahde: 'Ladislav Luppa, Wikimedia Commons (CC BY-SA 4.0)',
+          },
+        ],
+      },
+    ],
+  },
   firenze: {
     polku: 'assets/kartat/firenze-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
