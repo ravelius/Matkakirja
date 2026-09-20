@@ -89,6 +89,7 @@ import { readFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join, extname, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { decodePng, luminanssi } from './pallon-liike-mittarit.mjs';
+import { suorituskykyVaatija } from './suorituskyky.mjs';
 
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const ULOS = process.env.KAAPPAUKSET ?? '';
@@ -199,6 +200,8 @@ const vaadi = (nimi, ok, lisa = '') => {
   tulokset.push({ nimi, ok });
   console.log(`${ok ? 'OK  ' : 'FAIL'}  ${nimi}${lisa ? ` — ${lisa}` : ''}`);
 };
+// Aikaväitteet PR-portin ohi (tools/savukkeet/suorituskyky.mjs).
+const vaadiAika = suorituskykyVaatija(vaadi);
 
 /*
  * PIKSELIT LUETAAN KUVAKAAPPAUKSESTA. WebGL-kangas ei anna
@@ -1829,7 +1832,11 @@ async function ajaNakyma(nimi) {
     Boolean(linssi.avaruus?.pinnanOsoite) && linssi.avaruus.pinnanOsoite !== 'null',
     `pinnanOsoite "${linssi.avaruus?.pinnanOsoite}", reliefi ${linssi.avaruus?.reliefi},`
     + ` kesto ${linssi.avaruus?.reliefinKestoMs} ms`);
-  vaadi(t('reliefi ehti pinnalle kahdeksassa sekunnissa'),
+  /* Kahtia: RELIEFI TULI on toiminnallinen, 8 s suorituskykyä (suorituskyky.mjs). */
+  vaadi(t('reliefi ehti pinnalle'),
+    linssi.avaruus?.reliefinKestoMs > 0,
+    `${linssi.avaruus?.reliefinKestoMs} ms`);
+  vaadiAika(t('reliefi ehti pinnalle kahdeksassa sekunnissa'),
     linssi.avaruus?.reliefinKestoMs > 0 && linssi.avaruus.reliefinKestoMs <= 8000,
     `${linssi.avaruus?.reliefinKestoMs} ms`);
   const keskiKuva = decodePng(await s.screenshot({ type: 'png', timeout: 120000 }));

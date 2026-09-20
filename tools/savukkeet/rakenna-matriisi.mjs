@@ -68,18 +68,23 @@ export function rakennaMatriisi(sarja) {
   /*
    * SARJANIMET JA TIEDOSTOT SAMASSA LISTASSA (savukekarsinta 19.9.2026,
    * docs/raportit/viesti-fable-savukekarsinta-20260919.md):
-   *   julkaisu  PR-portti
-   *   harva     aina vihreät ja hitaat (schedule + PR:ssä polkuosumilla)
-   *   taysi     julkaisu + harva
-   *   kaikki    kaikki savuke-*.mjs
+   *   julkaisu      PR-portti
+   *   harva         aina vihreät ja hitaat (schedule + PR:ssä polkuosumilla)
+   *   suorituskyky  aikaa/fps:ää mittaavat vartiot (SAVUKE_SUORITUSKYKY=1;
+   *                 vain schedule ja käsin — omistaja 20.9.2026 klo 18.05,
+   *                 ks. tools/savukkeet/suorituskyky.mjs)
+   *   taysi         suorituskyky + harva + julkaisu
+   *   kaikki        kaikki savuke-*.mjs
    * Pilkulla erotettu lista voi yhdistää nimiä ja tiedostoja, esim.
    * "julkaisu,savuke-luentakuvat.mjs" (tools/savukkeet/valitse-harvat.mjs).
    */
   const NIMETYT = {
     julkaisu: () => sarjat.julkaisu,
     harva: () => sarjat.harva ?? [],
-    // Harvat ensin: hitaimmat rivit alkavat heti (valitse-harvat.mjs sarjaPr).
-    taysi: () => [...(sarjat.harva ?? []), ...sarjat.julkaisu],
+    suorituskyky: () => sarjat.suorituskyky ?? [],
+    // Hitaimmat ensin: suorituskyvyn pariisi-rivit (~220 s) ja harvat
+    // alkavat heti (valitse-harvat.mjs sarjaPr).
+    taysi: () => [...(sarjat.suorituskyky ?? []), ...(sarjat.harva ?? []), ...sarjat.julkaisu],
     kaikki: () => kaikkiSavukeTiedostot(),
   };
   const tiedostot = String(sarja ?? '').split(',').map((s) => s.trim()).filter(Boolean)
@@ -136,7 +141,7 @@ export function rakennaMatriisi(sarja) {
 if (process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1])) {
   const sarja = process.argv[2];
   if (!sarja) {
-    console.error('Käyttö: node tools/savukkeet/rakenna-matriisi.mjs <julkaisu|harva|taysi|kaikki|tiedosto1,tiedosto2,...>');
+    console.error('Käyttö: node tools/savukkeet/rakenna-matriisi.mjs <julkaisu|harva|suorituskyky|taysi|kaikki|tiedosto1,tiedosto2,...>');
     process.exit(1);
   }
   let matriisi;
