@@ -831,6 +831,36 @@ const VARI_ILMAN_RAJAUSTA = lippu('ilman-rajausta');
  * rantataso on olemassa.
  */
 const ILMAN_RANTAVIIVAA = lippu('ilman-rantaviivaa');
+/*
+ * RANNIKON HARVENNUS: pienin sallittu askel asteina, kun meren renkaat
+ * luetaan (maailma.mjs meriRenkaat).
+ *
+ * Oletus 0,006 on yleislehden luku, ja EPAILIN SITA PYRAMIDISSA:
+ * syvimmalla tasolla yksi pikseli on noin 160 metria (0,0015 astetta
+ * pituudessa 45. leveyspiirilla), joten 0,006 asteen askel on nelja
+ * pikselia, ja pudonneet pisteet voisivat kasautua rannikolle.
+ *
+ * MITATTU 20.9.2026 (Gironden laatta z8/162/74, 0,006 vs. 0,001):
+ * EPAILY EI PITANYT. Reuna ei siirry: mediaanipoikkeama ne_10m_oceanin
+ * renkaista on 0,20 km (1,3 pikselia) kummallakin tarkkuudella, ja
+ * laatoista eroaa 20/206 niin, etta eroava ala on yksi 43 x 38 pikselin
+ * laikku ja suurin kanavaero 11/255 - alle silman erotuskyvyn.
+ *
+ * Aiempi mittaukseni antoi 0,70 km:n maallepain-virheen. Se oli
+ * MITTAUSVIRHE: maan ja meren raja ei ole askel vaan noin kahdeksan
+ * pikselin varjostusramppi (meri ~205, maa ~220), ja kiinteä kynnys 222
+ * osui rampin ylapaahan. Rampin puolivalista mitattuna virhe on
+ * pikselin luokkaa.
+ *
+ * Valitsin jaa tanne, jotta koe on toistettavissa ilman koodimuutosta.
+ * OLETUSTA EI OLE SYYTA MUUTTAA. Renkaita kaytetaan vain poltossa, joten
+ * tarkkuus maksaisi vain rasterointiaikaa - mutta se ei osta mitaan.
+ */
+const RANNIKON_HARVENNUS = Number(valitsin('rannikon-harvennus', '0.006'));
+if (!Number.isFinite(RANNIKON_HARVENNUS) || RANNIKON_HARVENNUS < 0) {
+  console.error(`--rannikon-harvennus ${valitsin('rannikon-harvennus', '')}: aste, 0 tai suurempi.`);
+  process.exit(1);
+}
 if ([NOSTOTASO, VIIVATASO, RANTATASO, VARITASO].filter(Boolean).length > 1) {
   console.error('--nostotaso, --viivataso, --rantataso ja --vari ovat eri ajoja; '
     + 'anna vain yksi.');
@@ -1334,7 +1364,7 @@ let rantaViivatMuisti = null;
 function rantaViivat() {
   if (rantaViivatMuisti) return rantaViivatMuisti;
   try {
-    rantaViivatMuisti = rannikot(dataKansio, { laatikko });
+    rantaViivatMuisti = rannikot(dataKansio, { laatikko, harvennus: RANNIKON_HARVENNUS });
   } catch (e) {
     console.error(`Rantataso tarvitsee ne_10m_ocean.geojson-tiedoston kansiosta ${dataKansio} `
       + `(--data <kansio>): ${e.message}`);
@@ -2178,6 +2208,7 @@ if (!ILMAN_AINEISTOA) {
     korkeuslaatikko,
     ruutu: RUUTU,
     palat: KORKEUSPALAT,
+    harvennus: RANNIKON_HARVENNUS,
   });
   const megatavua = (aineisto.korkeus.grid.byteLength / 1e6).toFixed(0);
   console.log(`  korkeusruudukko ${aineisto.korkeus.w} x ${aineisto.korkeus.h} `

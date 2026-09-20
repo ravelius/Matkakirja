@@ -55,6 +55,23 @@
 # koodirivi: PALLO_LAATTATUNNISTE (tai PALLO_LAATTAVERSIO, jos pohjan
 # versio vaihtui).
 #
+# TAMA SAANTO KOSKEE MYOS LUETTELON JULKAISUA YKSINAAN (20.9.2026).
+#
+# Saanto on ollut tassa yllä alusta asti, mutta se luetaan POLTON
+# ohjeena — ja 20.9.2026 klo 09.34 luettelo vietiin ampariin ILMAN
+# polttoa: viivataso oli poltettu versioon 2026-09-20c-viivat, uusi
+# luettelo vietiin, mutta pallon sarja oli yha poltettu versiosta
+# 2026-09-20-viivat. Lepokerros sammui tuotannossa kokonaan
+# (js/pallolaatat.js lepokerroksenKerrokset palauttaa null, kun
+# laatat.json:in `viivat` ei ole sama kuin luettelon viivataso.versio),
+# ja edellinen luettelo jouduttiin palauttamaan.
+#
+# ELI: pallon sarja ei ole POLTON vaan JULKAISUN ehto. Luetteloa ei saa
+# vieda ampariin, ennen kuin sita vastaava pallosarja on amparissa ja
+# js/pallo.js osoittaa siihen. Jarjestys on aina: laatat -> pallosarja
+# -> VASTA SITTEN luettelo (sama jarjestys kuin polta_nostot_ja_pallo
+# tekee automaattisesti).
+#
 # UUSI NOSTOVERSIO POLTTAA KOKO KERROKSEN, EI VAIN z8:AA. Luettelon
 # nostot-taulu (tunnus -> tiiviste) lasketaan nykyisestä reposta, ja
 # peli vaientaa elävästä kerroksesta jokaisen merkin, jonka se löytää
