@@ -9890,7 +9890,17 @@ export const RAAMATTU = {
           + 'SAAPUMISEN PIILOT (Opus 1 9a6f2055): runkoluokka saapumistraileri-paalla '
           + 'piilottaa .fact-cardin, kuplapinon ja vihjeen trailerin ajaksi (visibility), '
           + 'savuke 18/18; kupla piilotetaan, ei lykata (lykkaysjono oma erä). V1975 PR '
-          + '#2627 avattu 11.41 (piilot + astropulun kuva); mergetaan vihreana.',
+          + '#2627 avattu 11.41 (piilot + astropulun kuva); mergetaan vihreana. OMISTAJA '
+          + '11.50, MAALEHDEN KARTUSCHA (kaappaukset omistaja-20260920/kartuscha-*.png/jpg): '
+          + '"Ota vakaset pois pienesta ja isosta muodosta. Ota jalkimmaisen '
+          + 'ruutukaappauksen kaikki rivit pois isosta muodosta. Pienessa muodossa voi olla '
+          + 'kaikki samat kuin nytkin. Lisaa radion linkki oik ylakulmaan isossa muodossa. '
+          + 'Siina voi olla pelkka punainen valo joka syttyy striimin ollessa paalla ja sen '
+          + 'alla lukee pienella radio." -> Fablen tulkinta: vakaset = France-rivin '
+          + 'pistealleviivaus ja nuoli; isosta pois rivit "France - tasavalta v. 1873", '
+          + '"VALTIOMUOTO 1873 tasavalta" ja "NYT"; radio-merkki (punainen valo palaa kun '
+          + 'striimi soi, alla pienella "radio", napautus avaa/sulkee radion) isoon muotoon '
+          + 'oikeaan ylakulmaan. Opus 2 toteuttaa (kartuschan tekija), julkaistaan v1976.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
