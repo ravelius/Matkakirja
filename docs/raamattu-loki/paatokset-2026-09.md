@@ -187,3 +187,7 @@ Ranskan vedos (karttaseppa-poltto-koe d9e0fab6, kaappaukset *-vedos.webp): omist
 ## ASTRO-PALKIT TEHTY (Sisaltokirjuri 1c32cc39) (21.9.2026 klo 00.12)
 
 24 rajattua + 24 alkuperaista kuvaa media.matkakirja.app/linssit/astronautin-kamera/ (uudet polut, HEAD 200); satelliitti-data.js 12 rivia omaan ampariin NASAn sijaan; hae-satelliittihavainnot.mjs KUVAPOIKKEUKSET-lista. Raportti docs/raportit/astro-palkit-toteutus-20260921.md. Julkaisujonoon.
+
+## KAUPUNKIPOPUP-VIKA ON KUORMAVIKA PREPISSA, EI NOSTOKORTTI-2; CAMARGUE TEHTY (Pelikoodari 266574af) (21.9.2026 klo 00.15)
+
+savuke-kaupunkipopup 3->9 toistuu prepilla hidastetulla Chromiumilla (CPU 6x): liuska aukeaa ja sulkeutuu heti kun kameran ajo liikuttaa merkkia (lepotesti) - Pelikoodari korjaa liuskan (pelikoodari-v1984-kaupunkipopup). CAMARGUE: sovittelun lukko luettiin datumeihin vasta merkit.aseta-kutsun jalkeen -> ruutu naytti datan kyljen ja piilotetun nimion (1400 px 14/68 lappua vaarassa asennossa); savuke-nimikyltti vartiot 9g/9h. Jono: huntu-liike + kameradiagnostiikka.
