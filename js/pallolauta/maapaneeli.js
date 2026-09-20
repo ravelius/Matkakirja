@@ -178,6 +178,8 @@ import {
 } from '../fokusmitat.js';
 import { PALLO_LAUTA } from '../pallo.js';
 import { FOKUS_MAANIMET } from '../packs/fokus-grc.js';
+import { radioMaalle } from '../packs/radiot.js';
+import { MERKKI_SOITA } from '../ui-apurit.js';
 
 /**
  * Kortin peruskoko tyylitiedostossa (css .maapaneeli-kortti).
@@ -845,16 +847,42 @@ function paneeliElementti(d) {
   alarivi.appendChild(luo('span', 'maapaneeli-aika'));
   avain.appendChild(alarivi);
   /*
-   * NAPAUTUSVIHJE (kohta 5): pienennetty muoto pysyy ennallaan, vain
-   * alarivin alle tulee lyhyt pisteviiva ja väkänen — sama pisteviiva
-   * kuin pelin linkeissä. Auki ollessa väkänen kääntyy.
+   * NAPAUTUSVIHJE (pisteviiva ja väkänen) POISTUI omistajan päätöksellä
+   * 20.9.2026: väkäset pois molemmista muodoista. Kartuscha on painettu
+   * laatta eikä lomake, ja avautuminen opitaan kerran — vihje kertoi
+   * sitä joka näkymässä uudestaan.
    */
-  const vihje = luo('span', 'maapaneeli-vihje');
-  vihje.setAttribute('aria-hidden', 'true');
-  avain.appendChild(vihje);
   avain.addEventListener('click', () => d.avaaValikko?.(!d.valikkoAuki));
   kortti.appendChild(avain);
   kortti.appendChild(sisus);
+
+  /*
+   * RADION MERKKIVALO ISON MUODON OIKEASSA YLÄKULMASSA (omistaja
+   * 20.9.2026). Ei tekstiä muuta kuin pieni "radio" valon alla: valo
+   * palaa vain kun maan lähetys soi, ja napautus avaa tai sulkee sen.
+   *
+   * SOITIN ON SAMA KUIN MAALEHDESSÄ (ui.kulttuuriAaniNapista): se
+   * hoitaa taustan väistön, peilin varareitin ja pysäytyksen, ja se
+   * merkitsee soivan napin `soi`-luokalla — juuri se luokka sytyttää
+   * valon, joten valo ei voi olla soittimen kanssa eri mieltä.
+   *
+   * MERKKI JA AIKA KUULUVAT SOITTIMEN SOPIMUKSEEN, vaikka ne eivät näy:
+   * soitin vaihtaa `.merkki`-kuvakkeen ja kirjoittaa `.aika`-kenttään,
+   * ja ILMAN `.merkki`-elementtiä se kirjoittaisi "Pysäytä näyte"
+   * ensimmäiseen span-elementtiin — eli tämän napin valoon. CSS piilottaa
+   * molemmat.
+   */
+  const radio = luo('button', 'maapaneeli-radio');
+  radio.type = 'button';
+  radio.hidden = true;
+  radio.insertAdjacentHTML('beforeend', MERKKI_SOITA);
+  radio.appendChild(luo('span', 'maapaneeli-radio-valo'));
+  radio.appendChild(luo('span', 'maapaneeli-radio-nimi', 'radio'));
+  const radioAika = luo('span', 'aika');
+  radioAika.hidden = true;
+  radio.appendChild(radioAika);
+  radio.addEventListener('click', () => d.soitaRadio?.(radio));
+  kortti.appendChild(radio);
 
   el.appendChild(kortti);
   return el;
@@ -879,6 +907,26 @@ function taytaKortti(el, d) {
       ? ` · ${d.valtiomuoto}` : '';
     const avain = kortti.querySelector('.maapaneeli-avain');
     avain.setAttribute('aria-label', `${d.nimi}: näytä perustiedot ja lehden otsikot`);
+
+    /*
+     * RADIO VAIN NIILLE MAILLE, JOILLA SE ON (js/packs/radiot.js).
+     * Nappi on olemassa aina, mutta piilossa ilman lähetystä — muuten
+     * valo lupaisi radion maalle, jota ei ole.
+     *
+     * SOIVA LÄHETYS PYSÄYTETÄÄN MAAN VAIHTUESSA: nappi on sama elementti
+     * kaikille maille, ja ilman tätä Ranskan lähetys jäisi soimaan
+     * Espanjan kartuschan valo palaen.
+     */
+    const radio = kortti.querySelector('.maapaneeli-radio');
+    if (radio) {
+      if (radio.classList.contains('soi')) d.pysaytaRadio?.();
+      const kanava = radioMaalle(d.iso);
+      radio.hidden = !kanava;
+      radio.dataset.url = kanava?.url ?? '';
+      radio.setAttribute('aria-label', kanava
+        ? `${d.nimi}: kuuntele suoraa lähetystä (${kanava.asema})` : 'radio');
+      radio.title = kanava?.asema ?? '';
+    }
 
     /*
      * 1873 EDELLÄ (kohta 3). Lohkoon tulee vain se, mikä datassa on:
@@ -1132,6 +1180,43 @@ export function luoMaapaneeli({
   };
 
   /*
+   * RADION NAPAUTUS MENEE SAMAAN SOITTIMEEN KUIN MAALEHDEN RADIONAPPI
+   * (ui.kulttuuriAaniNapista): se vuorottelee itse soiton ja
+   * pysäytyksen, joten tämä ei pidä omaa tilaa — kaksi tilaa voisi
+   * ajautua erilleen, ja valo väittäisi väärää.
+   *
+   * `suora: true` kertoo soittimelle, että kyseessä on lähetys eikä
+   * nauha: ilman varareittiä, koska kartuschassa ei ole näytettä.
+   */
+  const soitaRadio = (nappi) => {
+    const kanava = radioMaalle(tila?.iso);
+    if (!kanava || !nappi) return;
+    /*
+     * JOKIN MUU SOIMASSA = SE KIINNI ENSIN, EI PELKKÄ PYSÄYTYS.
+     *
+     * Soitin on yhteinen (js/ui.js `lehtitila.kulttuuriAani`) ja lukee
+     * minkä tahansa soivan äänen omakseen: `kulttuuriAaniNapista`
+     * pysäyttää soivan äänen ja POISTUU. Ilman tätä radion napautus
+     * kulttuurinäytteen soidessa pysäyttäisi näytteen avaamatta
+     * radiota, ja valo jäisi pimeäksi vaikka käyttäjä pyysi radion.
+     *
+     * Kun soiva nappi on TÄMÄ, pysäytys jää soittimen omaksi työksi —
+     * silloin napautus sulkee radion, kuten kuuluukin.
+     */
+    const soiva = ui.lehtitila?.kulttuuriAani ?? null;
+    if (soiva && soiva.nappi !== nappi) ui.pysaytaKulttuuriAani?.();
+    ui.kulttuuriAaniNapista?.({
+      aani: kanava.url,
+      vara: null,
+      otsikko: kanava.asema,
+      suora: true,
+    }, nappi);
+  };
+
+  /** Soiva lähetys kiinni (maan vaihtuessa ja kalustetta purettaessa). */
+  const pysaytaRadio = () => ui.pysaytaKulttuuriAani?.();
+
+  /*
    * YKSI PYSYVÄ TILAOLIO. Kalusteen napautuskäsittelijät sulkevat tämän
    * olion sisäänsä kerran (`paneeliElementti`), joten sen kenttiä
    * PÄIVITETÄÄN eikä koskaan korvata uudella oliolla — muuten avain
@@ -1150,6 +1235,8 @@ export function luoMaapaneeli({
     avattuSivu: null,
     avaaValikko,
     avaaSivu,
+    soitaRadio,
+    pysaytaRadio,
   };
 
   /**
@@ -1191,6 +1278,19 @@ export function luoMaapaneeli({
       ...kortti.querySelectorAll('.maapaneeli-aihe')];
     // Nykylukujen napautus näyttää sijoitukset (Raamattu, MAALEHDEN
     // INFOTAULU kohta 3); rivit eivät ole nappeja, joten luokka vaihtuu tässä.
+    /*
+     * RADIO ENNEN NYKYLUKUJA: valo on pieni kohde ison muodon oikeassa
+     * yläkulmassa, ja rivien laatikko on suorakaide — päällekkäisyyden
+     * sattuessa tarkempi kohde voittaa.
+     */
+    const radio = kortti.querySelector('.maapaneeli-radio');
+    if (valikkoAuki && radio && !radio.hidden
+        && osuuLaatikkoon(radio, e.clientX, e.clientY)) {
+      e.preventDefault();
+      e.stopPropagation();
+      radio.click();
+      return;
+    }
     const rivit = kortti.querySelector('.maapaneeli-rivit');
     if (valikkoAuki && osuuLaatikkoon(rivit, e.clientX, e.clientY)) {
       e.preventDefault();
@@ -1247,7 +1347,9 @@ export function luoMaapaneeli({
      */
     paivita({ iso = null, laatikko = null } = {}) {
       if (!iso || !maapaneeliKartassa()) {
-        if (tila) { tila = null; valikkoAuki = false; kirjoita(); }
+        // Kaluste pois = lähetys kiinni: valoa ei ole enää näyttämässä,
+        // että jokin soi.
+        if (tila) { tila = null; valikkoAuki = false; pysaytaRadio(); kirjoita(); }
         return;
       }
       const omat = FOKUS_MAANIMET[iso] ?? {};
@@ -1307,6 +1409,7 @@ export function luoMaapaneeli({
       tila = null;
       valikkoAuki = false;
       avattuSivu = null;
+      pysaytaRadio();
       merkit?.aseta?.('maapaneeli', [], { haivyta: false });
       sailio?.remove();
       sailio = null;
