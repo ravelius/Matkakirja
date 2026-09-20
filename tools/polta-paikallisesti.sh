@@ -261,6 +261,27 @@ Käyttö: tools/polta-paikallisesti.sh [valitsimet]
                              (--nostot-ja-pallo noutaa lähteet verkosta)
   --lista                    tulosta shardit ja lopeta
 
+  Meriresepti ja tarkka rantaviiva (Karttaseppä 21.9.2026, GSHHG-poltto):
+  --data <kansio>            aineistokansio (oletus <ulos>/ne-data; GSHHG-
+                             rantaviiva tools/gshhs-meri.mjs:llä samaan
+                             muotoon, lahde.json kertoo lähteen)
+  --yhteisliput "<liput>"    lisäliput KAIKILLE shardeille ja luettelolle
+                             (esim. --rannikon-harvennus 0.004)
+  --pohjaliput "<liput>"     lisäliput pohjashardeille ja luettelolle
+                             (--joet-pohjaan --vesiviivoitus tumma
+                             --syvyysportaat … --resepti-json …)
+  --viivaliput "<liput>"     lisäliput viivatason shardeille (--eijoet)
+  --rantaliput "<liput>"     lisäliput rantatason shardeille
+  --nostoliput "<liput>"     lisäliput nostotason shardeille (--nostotasot <json>)
+  --nimioversio V            polta MYÖS nimiötaso (z4–z8, yksi shardi) tähän
+                             versioon; --nimiot <json> antaa nimistön
+  --nimiot <json>            nimiötason nimistö (oletus js/packs/nimisto-1873.js)
+  --ilman-nostoja            jätä nostoshardit pois tästä ajosta
+  --ilman-nimioita           jätä nimiöshardi pois tästä ajosta
+                             (kaksivaiheinen ajo: pohja ensin, nostot ja
+                             nimiöt samalla ajotunnuksella perään —
+                             valmiit shardit ohitetaan)
+
 Avaimet ympäristöstä (EI argumentteina):
   export AMPARI=<ämpärin nimi>
   export PAATE=https://<tili-id>.r2.cloudflarestorage.com
@@ -322,6 +343,9 @@ AJO_ID="${POLTTO_AJO_ID:-${GITHUB_RUN_ID:-}}"
 RAPORTTIVALI="${POLTTO_RAPORTTIVALI:-300}"
 TILAVALI="${POLTTO_TILAVALI:-15}"
 VAHTI_PID=""; RAPORTOI=0; EDISTYMISVAROITUS=0
+# Meriresepti ja tarkka rantaviiva (ks. ohje).
+DATA=""; YHTEISLIPUT=""; POHJALIPUT=""; VIIVALIPUT=""; RANTALIPUT=""; NOSTOLIPUT=""
+NIMIOVERSIO=""; NIMIOT=""; ILMAN_NOSTOJA=0; ILMAN_NIMIOITA=0
 
 while [ $# -gt 0 ]; do
   case "$1" in
@@ -364,6 +388,16 @@ while [ $# -gt 0 ]; do
     --ajo-id) AJO_ID="$2"; shift 2 ;;
     --raporttivali) RAPORTTIVALI="$2"; shift 2 ;;
     --lista) LISTA=1; shift ;;
+    --data) DATA="$2"; shift 2 ;;
+    --yhteisliput) YHTEISLIPUT="$2"; shift 2 ;;
+    --pohjaliput) POHJALIPUT="$2"; shift 2 ;;
+    --viivaliput) VIIVALIPUT="$2"; shift 2 ;;
+    --rantaliput) RANTALIPUT="$2"; shift 2 ;;
+    --nostoliput) NOSTOLIPUT="$2"; shift 2 ;;
+    --nimioversio) NIMIOVERSIO="$2"; shift 2 ;;
+    --nimiot) NIMIOT="$2"; shift 2 ;;
+    --ilman-nostoja) ILMAN_NOSTOJA=1; shift ;;
+    --ilman-nimioita) ILMAN_NIMIOITA=1; shift ;;
     --lapsi) LAPSI=1; shift ;;
     -h|--help) ohje; exit 0 ;;
     *) echo "Tuntematon valitsin: $1" >&2; ohje >&2; exit 2 ;;
@@ -380,6 +414,13 @@ esac
 # toiseen — suhteellinen polku tarkoittaisi eri kansiota eri kohdissa.
 mkdir -p "$ULOS"
 ULOS="$(cd "$ULOS" && pwd)"
+# Aineistokansio absoluuttiseksi; oletus on ULOS/ne-data (hae_aineisto).
+if [ -n "$DATA" ]; then
+  [ -d "$DATA" ] || { echo "VIRHE: --data $DATA ei ole kansio" >&2; exit 2; }
+  DATA="$(cd "$DATA" && pwd)"
+else
+  DATA="$ULOS/ne-data"
+fi
 case "$AJO_ID" in
   *[!A-Za-z0-9._-]*) echo "VIRHE: --ajo-id saa sisältää vain A-Z a-z 0-9 . _ -" >&2; exit 2 ;;
 esac
@@ -519,6 +560,8 @@ etsi_chromium () {
 # Natural Earth samoista osoitteista kuin työnkulun aineistojobi.
 # Välimuisti on ULOS/ne-data, jota ei committoida (.gitignore).
 hae_aineisto () {
+  # Oma --data-kansio on jo paikallaan (GSHHG-ranta: tools/gshhs-meri.mjs).
+  [ "$DATA" = "$ULOS/ne-data" ] || return 0
   mkdir -p "$ULOS/ne-data"
   local f
   for f in ne_10m_ocean ne_10m_lakes; do
@@ -670,6 +713,12 @@ shardit () {
   local rantaarg="--rantataso --rantaversio $RANTAVERSIO"
   local pohjaarg=""
   [ "$ILMAN_RANTAVIIVAA" -eq 1 ] && pohjaarg=" --ilman-rantaviivaa"
+  # Meriresepti ja kerroskohtaiset lisäliput (ks. ohje). Yhteiset liput
+  # annetaan shardin_yritys-funktiossa, jotta myös luettelo saa ne.
+  [ -n "$POHJALIPUT" ] && pohjaarg="$pohjaarg $POHJALIPUT"
+  [ -n "$VIIVALIPUT" ] && viivaarg="$viivaarg $VIIVALIPUT"
+  [ -n "$RANTALIPUT" ] && rantaarg="$rantaarg $RANTALIPUT"
+  [ -n "$NOSTOLIPUT" ] && nostoarg="$nostoarg $NOSTOLIPUT"
   # UUSI NOSTO- TAI VIIVAVERSIO POLTTAA KOKO KERROKSEN, EI VAIN z8:AA.
   #
   # Luettelon `nostotaso.nostot` (tunnus -> tiiviste) lasketaan aina
@@ -708,8 +757,18 @@ shardit () {
       echo "z7c|--tasot 7 --sarakkeet 88-131 --kaariminuutit $KORKEUS$pohjaarg"
       echo "z7d|--tasot 7 --sarakkeet 132-168 --kaariminuutit $KORKEUS$pohjaarg"
       echo "viiva-z0-z7|--tasot 0-7 $viivaarg"
-      nostoshardit "nosto-z5-z7" "--tasot 5-7" "$nostoarg"
+      [ "$ILMAN_NOSTOJA" -eq 0 ] && nostoshardit "nosto-z5-z7" "--tasot 5-7" "$nostoarg"
       [ "$ILMAN_RANTAVIIVAA" -eq 1 ] && echo "ranta-z0-z7|--tasot 0-7 $rantaarg"
+      # NIMIÖTASO (omistajan vedos 20.9.2026): merten ja maakuntien
+      # 1873-nimet, kompassiruusut ja laivat omalle läpinäkyvälle
+      # tasolleen z4–z8. Laattoja on vähän (vain nimiölliset), joten
+      # yksi shardi riittää; luettelon nimiotaso-kenttä kootaan sen
+      # pyramidi.jsonista (kokoa_nimiotaso).
+      if [ -n "$NIMIOVERSIO" ] && [ "$ILMAN_NIMIOITA" -eq 0 ]; then
+        local nimioarg="--nimiotaso --nimioversio $NIMIOVERSIO"
+        [ -n "$NIMIOT" ] && nimioarg="$nimioarg --nimiot $NIMIOT"
+        echo "nimio-z4-z8|--tasoja 9 --tasot 4-8 $nimioarg"
+      fi
       ;;
   esac
   case "$SARJAT" in
@@ -732,7 +791,7 @@ shardit () {
         printf 'viiva-z8-%02d|--tasoja 9 --tasot 8 --sarakkeet %s-%s %s\n' "$n" "$a" "$b" "$viivaarg"
         a=$((b + 1)); n=$((n + 1))
       done
-      nostoshardit "nosto-z8" "--tasoja 9 --tasot 8" "$nostoarg"
+      [ "$ILMAN_NOSTOJA" -eq 0 ] && nostoshardit "nosto-z8" "--tasoja 9 --tasot 8" "$nostoarg"
       if [ "$ILMAN_RANTAVIIVAA" -eq 1 ]; then
         a=0; n=1
         while [ "$a" -lt "$Z8_SARAKKEITA" ]; do
@@ -821,12 +880,12 @@ kirjaa_laskut () {
   : > "$polku.tmp"
   # Nostotaso on maakohtainen: sen tasokansiot ovat nostot/<ISO>/z*.
   for d in "$kansio"/z* "$kansio"/nostot/z* "$kansio"/nostot/*/z* \
-           "$kansio"/viivat/z* "$kansio"/ranta/z*; do
+           "$kansio"/viivat/z* "$kansio"/ranta/z* "$kansio"/nimiot/z*; do
     [ -d "$d" ] || continue
     z="$(basename "$d")"; z="${z#z}"
     kerros="$(basename "$(dirname "$d")")"
     case "$d" in *"/nostot/"*) kerros=nostot ;; esac
-    case "$kerros" in nostot|viivat|ranta) ;; *) kerros=pohja ;; esac
+    case "$kerros" in nostot|viivat|ranta|nimiot) ;; *) kerros=pohja ;; esac
     n="$(find "$d" -name "$pate" | wc -l | tr -d ' ')"
     printf '%s %s %s\n' "$kerros" "$z" "$n" >> "$polku.tmp"
   done
@@ -935,10 +994,10 @@ lopetus () {
 # Merkkiin kirjoitetaan siksi ajon TUNNUS, ja ohitus vaatii, että se on
 # sama; muuten shardi ajetaan uudestaan ja syy sanotaan ääneen.
 ajon_tunnus () {
-  printf '%s/%s/%s/%s/r%s/h%s/p%s/n%s' \
+  printf '%s/%s/%s/%s/r%s/h%s/p%s/n%s/t%s' \
     "${VERSIO:-}" "${VIIVAVERSIO:-}" "${NOSTOVERSIO:-}" "${RANTAVERSIO:-}" \
     "${ILMAN_RANTAVIIVAA:-0}" "${HAHMOTELMAT:-0}" \
-    "${PALLOTUNNISTE:-}" "${PALLON_NOSTOT:-}"
+    "${PALLOTUNNISTE:-}" "${PALLON_NOSTOT:-}" "${NIMIOVERSIO:-}"
 }
 
 # Onko shardin valmis-merkki tästä samasta ajosta?
@@ -974,7 +1033,7 @@ shardin_yritys () {
   local koodi=0
   # shellcheck disable=SC2086
   node "$JUURI/tools/generoi-laattapyramidi.mjs" "$kansio" \
-    --data "$ULOS/ne-data" $args $palat \
+    --data "$DATA" $args $palat $YHTEISLIPUT \
     --laatu "$LAATU" --patina "$PATINA" --versio "$VERSIO" >"$loki" 2>&1 || koodi=$?
   kill "$vahti" 2>/dev/null || true
   wait "$vahti" 2>/dev/null || true
@@ -1116,6 +1175,15 @@ vie_shardi () {
       --cli-connect-timeout "$AWS_YHTEYSAIKA" \
       --no-progress >/dev/null
   fi
+  if [ -d "$kansio/nimiot" ]; then
+    aws s3 sync "$kansio/nimiot" "s3://$AMPARI/julisteet/pyramidi/$NIMIOVERSIO/nimiot" \
+      --endpoint-url "$PAATE" \
+      --exclude '*' --include '*.webp' \
+      --content-type image/webp \
+      --cache-control 'public, max-age=31536000, immutable' \
+      --cli-connect-timeout "$AWS_YHTEYSAIKA" \
+      --no-progress >/dev/null
+  fi
   echo "$nimi viety ämpäriin."
 }
 
@@ -1148,12 +1216,34 @@ kokoa_luettelo () {
   rm -f "$kansio/pyramidi.json"
   # shellcheck disable=SC2086
   node "$JUURI/tools/generoi-laattapyramidi.mjs" "$kansio" \
-    --data "$ULOS/ne-data" \
+    --data "$DATA" \
     $tasoja --tasot "$tasot" --versio "$VERSIO" --nostoversio "$NOSTOVERSIO" \
     --viivaversio "$VIIVAVERSIO" --kaariminuutit "$KORKEUS" \
-    --laatu "$LAATU" --patina "$PATINA" $lisa --vain-luettelo \
+    --laatu "$LAATU" --patina "$PATINA" $lisa $YHTEISLIPUT $POHJALIPUT --vain-luettelo \
     > "$ULOS/lokit/luettelo.log" 2>&1
   echo "· luettelo koottu: $kansio/pyramidi.json"
+  kokoa_nimiotaso "$kansio/pyramidi.json"
+}
+
+# NIMIÖTASO LUETTELOON nimiöshardin omasta pyramidi.jsonista: ladonnat
+# (laatikot tasoittain) syntyvät vasta piirrossa, joten --vain-luettelo
+# ei voi tietää niitä. Kenttä kopioidaan sellaisenaan.
+kokoa_nimiotaso () {
+  local luettelo="$1" shardi="$ULOS/nimio-z4-z8/pyramidi.json"
+  [ -n "$NIMIOVERSIO" ] || return 0
+  if [ ! -s "$shardi" ]; then
+    echo "VIRHE: nimiöversio $NIMIOVERSIO annettu, mutta $shardi puuttuu" >&2
+    return 1
+  fi
+  node -e '
+    const fs = require("fs");
+    const luettelo = JSON.parse(fs.readFileSync(process.argv[1], "utf8"));
+    const shardi = JSON.parse(fs.readFileSync(process.argv[2], "utf8"));
+    if (!shardi.nimiotaso?.versio) { console.error("nimiöshardin luettelossa ei ole nimiotaso-kenttää"); process.exit(1); }
+    luettelo.nimiotaso = shardi.nimiotaso;
+    fs.writeFileSync(process.argv[1], JSON.stringify(luettelo, null, 2) + "\n");
+    console.log(`· nimiötaso luetteloon: versio ${shardi.nimiotaso.versio}, tasot ${shardi.nimiotaso.tasot.join(" ")}, nimiöitä ${Object.keys(shardi.nimiotaso.nimiot ?? {}).length}`);
+  ' "$luettelo" "$shardi"
 }
 
 vertaa_luettelo () {
@@ -1571,6 +1661,54 @@ kokoa_lahde () {
   PALLON_LAHDE="$lahde"
 }
 
+# LÄHDELAATAT LEVYN SHARDEISTA (ei ämpäristä): täyden polton shardit
+# ovat vielä levyllä (ilman --siivoa), joten pallon sarja kootaan niistä
+# kloonaamalla (APFS `cp -c`: ei kopioi tavuja). Rakenne on sama kuin
+# ämpärissä: <lahde>/<versio>/z*/…, <lahde>/<viivaversio>/viivat/z*/….
+# Rantataso jätetään pois kuten kokoa_lahde tekee oletuksena.
+kokoa_lahde_levylta () {
+  local lahde="$ULOS/lahde-levylta"
+  local alkoi kansio d zn
+  alkoi="$(date +%s)"
+  rm -rf "$lahde"
+  mkdir -p "$lahde/$VERSIO"
+  for kansio in "$ULOS"/z0-z6 "$ULOS"/z7? "$ULOS"/z8-*; do
+    [ -d "$kansio" ] || continue
+    for d in "$kansio"/z*; do
+      [ -d "$d" ] || continue
+      zn="$(basename "$d")"
+      mkdir -p "$lahde/$VERSIO/$zn"
+      cp -Rc "$d"/. "$lahde/$VERSIO/$zn/" 2>/dev/null || cp -R "$d"/. "$lahde/$VERSIO/$zn/"
+    done
+  done
+  if [ -n "$VIIVAVERSIO" ]; then
+    for kansio in "$ULOS"/viiva-*; do
+      [ -d "$kansio/viivat" ] || continue
+      for d in "$kansio"/viivat/z*; do
+        [ -d "$d" ] || continue
+        zn="$(basename "$d")"
+        mkdir -p "$lahde/$VIIVAVERSIO/viivat/$zn"
+        cp -Rc "$d"/. "$lahde/$VIIVAVERSIO/viivat/$zn/" 2>/dev/null || cp -R "$d"/. "$lahde/$VIIVAVERSIO/viivat/$zn/"
+      done
+    done
+  fi
+  if [ -n "$RANTAVERSIO" ] && [ "$PALLON_RANTA" -eq 1 ]; then
+    for kansio in "$ULOS"/ranta-*; do
+      [ -d "$kansio/ranta" ] || continue
+      for d in "$kansio"/ranta/z*; do
+        [ -d "$d" ] || continue
+        zn="$(basename "$d")"
+        mkdir -p "$lahde/$RANTAVERSIO/ranta/$zn"
+        cp -Rc "$d"/. "$lahde/$RANTAVERSIO/ranta/$zn/" 2>/dev/null || cp -R "$d"/. "$lahde/$RANTAVERSIO/ranta/$zn/"
+      done
+    done
+  fi
+  local n
+  n="$(find "$lahde" -name '*.webp' | wc -l | tr -d ' ')"
+  echo "· lähdekansio levyn shardeista: $lahde, $n laattaa, $(( $(date +%s) - alkoi )) s"
+  PALLON_LAHDE="$lahde"
+}
+
 # ----------------------------------- yksi ajo: nostotaso + pallo + luettelo
 #
 # POLTTO ILMAN VÄLITILAA (omistaja 18.9.2026, Raamattu AGENTIT TARKENNUS 10
@@ -1957,9 +2095,30 @@ if [ "$LUETTELO" -eq 1 ]; then
     const vm = Object.keys(vanha?.varitasot ?? {}).length, um = Object.keys(uusi.varitasot ?? {}).length;
     if (vm > 0 && um === 0) { console.error(`VIRHE: luettelon varitasot puuttuvat (ampäri ${vm} maata) — ei vientiä`); process.exit(1); }
   ' "$LUETTELO_VIETAVA" "$ULOS/ampari-luettelo.json" || exit 1
-  [ "$VIE" -eq 1 ] && vie_luettelo "$LUETTELO_VIETAVA"
+  # LUETTELOA EI VIEDÄ ENNEN PALLON SARJAA (ks. tiedoston alku: laatat →
+  # pallosarja → vasta sitten luettelo). `--ei-luettelovientia` jättää
+  # viennin erilliseksi teoksi (lippu oli aiemmin luettu muttei
+  # käytetty — korjattu 21.9.2026).
+  if [ "$VIE" -eq 1 ] && [ "$LUETTELON_VIENTI" -eq 1 ] && [ "$PALLO" -eq 0 ]; then
+    vie_luettelo "$LUETTELO_VIETAVA"
+  fi
 fi
 
-if [ "$PALLO" -eq 1 ]; then polta_pallo; fi
+if [ "$PALLO" -eq 1 ]; then
+  # TÄYSI POLTTO + PALLO: sarja luetaan TÄMÄN ajon luettelosta ja
+  # levyn shardeista, ei ämpärin (vanhasta) luettelosta — muuten pallo
+  # poltettaisiin edellisistä versioista (havaittu 21.9.2026 GSHHG-
+  # polttoa valmisteltaessa).
+  if [ "$LUETTELO" -eq 1 ] && [ -z "$PALLO_LUETTELO" ] && [ -s "${LUETTELO_VIETAVA:-}" ]; then
+    PALLO_LUETTELO="$LUETTELO_VIETAVA"
+  fi
+  if [ -z "$PALLON_LAHDE" ] && [ "$EI_LAHDETTA" -eq 0 ] && [ "$VAIN_PALLO" -eq 0 ]; then
+    kokoa_lahde_levylta
+  fi
+  polta_pallo
+  if [ "$LUETTELO" -eq 1 ] && [ "$VIE" -eq 1 ] && [ "$LUETTELON_VIENTI" -eq 1 ]; then
+    vie_luettelo "$LUETTELO_VIETAVA"
+  fi
+fi
 
 echo "Valmis."
