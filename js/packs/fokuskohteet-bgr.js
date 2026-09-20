@@ -558,8 +558,7 @@ export const FOKUSKOHTEET_BGR = [
       + 'ja 240 ihmishahmoa. Lahjoittajaparin, sebastokraattori Kaloyanin '
       + 'ja hänen vaimonsa Desislavan, muotokuvia pidetään kirkon '
       + 'elävimpinä ja vaikuttavimpina maalauksina.',
-    lahde: 'en-Wikipedia "Boyana Church" (tarkistettu 24.8.2026 '
-      + 'täkyraporttiin docs/mantereet-tyoaineisto/takyt-sofia.md, täky 7).',
+    lahde: 'en-Wikipedia "Boyana Church" (tarkistettu 24.8.2026).',
     // Category:Boyana Church. Sama tiedosto, jota en-Wikipedian artikkeli
     // itse käyttää — eli kuva on varmasti oikeasta rakennuksesta.
     kuva: {
@@ -894,8 +893,7 @@ export const FOKUSKOHTEET_BGR = [
       + 'moskeijaa samana yönä; ukkosmyrsky peitti räjähdysten äänen. '
       + 'Suurin osa kaupungin moskeijoista tuhoutui sodassa, ja suurin '
       + 'osa muslimiväestöstä lähti kaupungista sen jälkeen.',
-    lahde: 'en-Wikipedia "Sofia" (tarkistettu 25.8.2026 täkyraporttiin '
-      + 'docs/mantereet-tyoaineisto/takyt-sofia.md, täky 13).',
+    lahde: 'en-Wikipedia "Sofia" (tarkistettu 25.8.2026).',
     /*
      * Commons 25.8.2026: 700×485, public domain, tekijä tuntematon,
      * kuvaus "Баня баши джамия от края на 19 век", Category:Sofia in

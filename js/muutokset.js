@@ -445,7 +445,7 @@ export const MUUTOKSET = [
   { v: 1545, teksti: 'Karttapallo: sormi pysyy kartan kohdassa vedossa' },
   { v: 1544, teksti: 'Pallolaatat: alue-ajo rinnakkain tasoa 8 varten' },
   { v: 1543, teksti: 'Karttapallo laatoitettu: juliste Mercator-laatoiksi' },
-  { v: 1542, teksti: 'Koe: laatoitettu karttapallo (docs/kokeilut)' },
+  { v: 1542, teksti: 'Koe: laatoitettu karttapallo' },
   { v: 1541, teksti: 'Karttapallo: nipistys ei ole napautus (iPhone)' },
   { v: 1540, teksti: 'Karttapallo: otsikkorivi pois, kuori ylarivin alle' },
   { v: 1539, teksti: 'Miniatyyrit: 566 tunnusta kohdekartoille (M3 tilattu)' },

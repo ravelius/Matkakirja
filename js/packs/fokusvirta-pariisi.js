@@ -677,8 +677,7 @@ export const FOKUSVIRTA_PARIISI = {
           + 'joku ilmoitti, ja hän pakeni Yhdysvaltoihin.',
       ],
       lahde: 'en-Wikipedia "Victor Lustig", osio Eiffel-tornin huijauksesta '
-        + '(tarkistettu 25.8.2026 työaineistoon docs/mantereet-tyoaineisto/'
-        + 'takynostot-ranska.md, ehdokas 2).',
+        + '(tarkistettu 25.8.2026).',
       /*
        * PÄÄKUVA (28.8.2026, sama malli kuin Sofian areenalla ja
        * v1307:n neljällä nostolla): repon oma generoitu havainnekuva,
@@ -741,9 +740,8 @@ export const FOKUSVIRTA_PARIISI = {
           + 'kaiken. Aikalaiset kutsuivat eläintä nimellä la Belle '
           + 'Africaine, ja se eli Jardin des Plantes\'ssa 18 vuotta.',
       ],
-      lahde: 'en-Wikipedia "Zarafa (giraffe)", osiot matkasta ja '
-        + 'vastaanotosta (tarkistettu 25.8.2026 työaineistoon '
-        + 'docs/mantereet-tyoaineisto/takynostot-ranska.md, ehdokas 3).',
+      lahde: 'en-Wikipedia "Zarafa (giraffe)", osiot matkasta ja vastaanotosta '
+        + '(tarkistettu 25.8.2026).',
       /*
        * PÄÄKUVAKSI HAVAINNEKUVA (28.8.2026, sama malli kuin yllä):
        * repon oma generoitu kuva, joten kenttä on `osoite` eikä

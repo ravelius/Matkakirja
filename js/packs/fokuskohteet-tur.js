@@ -1094,10 +1094,9 @@ export const FOKUSKOHTEET_TUR = [
       + 'käsivarresta, ja läimäisi tätä vatsaan muistutuksena siitä, '
       + 'ettei oltu Ranskassa. Hovista vuoti kaksi eri huhua siitä, '
       + 'mihin sulttaanin äiti löi.',
-    lahde: 'en-Wikipedia "Abdulaziz", osio "European tour" (tarkistettu '
-      + '25.8.2026 työaineistoon docs/mantereet-tyoaineisto/'
-      + 'takynostot-turkki.md, ehdokas 1). Lähde varaa tapahtuman sanalla '
-      + '"reportedly", ja molemmat sen antamat versiot on kerrottu.',
+    lahde: 'en-Wikipedia "Abdulaziz", osio "European tour" (tarkistettu 25.8.2026). '
+      + 'Lähde varaa tapahtuman sanalla "reportedly", ja molemmat sen antamat '
+      + 'versiot on kerrottu.',
     /*
      * Commons (takynostot-turkki.md, ehdokas 1, varmennettu
      * 25.8.2026): 2481×3823, public domain, Franz Xaver Winterhalter,
@@ -1140,11 +1139,9 @@ export const FOKUSKOHTEET_TUR = [
       + 'ystävyyden ensi kerran 2016, siitä tehtiin palkittu '
       + 'dokumentti, ja kylän keskusaukiolle pystytettiin patsas '
       + 'kalastajasta ja haikarasta.',
-    lahde: 'en-Wikipedia "Yaren (stork)" ja "Eskikaraağaç, Karacabey" '
-      + '(tarkistettu 25.8.2026 työaineistoihin docs/mantereet-tyoaineisto/'
-      + 'takynostot-turkki.md, ehdokas 5, ja takyt-istanbul.md, täky 18). '
-      + 'Artikkelia ei ole päivitetty vuoden 2021 jälkeen, joten teksti on '
-      + 'menneessä aikamuodossa.',
+    lahde: 'en-Wikipedia "Yaren (stork)" ja "Eskikaraağaç, Karacabey" (tarkistettu '
+      + '25.8.2026). Artikkelia ei ole päivitetty vuoden 2021 jälkeen, joten '
+      + 'teksti on menneessä aikamuodossa.',
     /*
      * KUVAVALINTA ON TIETOINEN VARMAN PUOLEN VALINTA. Tarinan oma
      * alkuperäiskuva on `Adem Amca ve Yaren Leylek 2020.jpg`
