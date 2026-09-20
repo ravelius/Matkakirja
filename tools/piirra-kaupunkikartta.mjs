@@ -588,6 +588,21 @@ const KAUPUNGIT = {
      */
     meri: 'maa',
   },
+  ljubljana: {
+    /*
+     * Ljubljanan vanhakaupunki (20.9.2026; omistajan päätös 19.9.2026:
+     * Slovenian pelikaupunki): Ljubljanica-joen mutka linnavuoren
+     * juurella, Prešernin aukio ja Tromostovje joen länsirannalla,
+     * Lohikäärmesilta ja keskustori pohjoisessa, Križanke etelässä ja
+     * Tivoli-puiston itäreuna lännessä. 1,5 × 1,2 km: kaikki kahdeksan
+     * kohdetta mahtuvat, ja vanhakaupunki on pieni, joten tiukempi
+     * rajaus tekee kortteleista luettavia. Kaupunki on 1873 vielä
+     * pieni (vuonna 1895 noin 31 000 asukasta), ja sama ydinalue on
+     * sen koko keskusta.
+     */
+    rajat: { pohjoinen: 46.056, etela: 46.0455, lansi: 14.493, ita: 14.513 },
+    laajennus: 1.6,
+  },
   bryssel: {
     /*
      * Brysselin ydinkeskusta (20.9.2026, pilotti; omistajan päätös

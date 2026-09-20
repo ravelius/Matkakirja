@@ -76,6 +76,7 @@ import {
   nykyinenPoimintaAvain, paivitaPillerit, poimintaKehittaja, tallennaPoiminta,
 } from './pollopoiminnat.js';
 import { ehdotusKaytossa, lahetaEhdotus } from './ehdotukset.js';
+import { merkitseLivianOmaDialogi } from './livia-dialogitila.js';
 import { haeKuvallinenArtikkeli, suurennusportaat } from './wiki.js';
 import { lueAaneen, lueVirtana, lukijaTuettu, pysaytaLukija } from './lukija.js';
 import { sfx } from './sound.js';
@@ -4918,6 +4919,10 @@ export class Pollo {
      */
     const tausta = this.doc.createElement('dialog');
     tausta.className = 'pollo-kuvatausta';
+    // Pulun oma ikkuna ei ole näkymän vaihdos: ilman tätä merkintää
+    // seuraaNakymaa sulkisi chatin heti kortin auettua, ja kortti
+    // katoaisi mukana (js/livia-dialogitila.js LIVIAN_OMA).
+    merkitseLivianOmaDialogi(tausta);
     // Chat jää auki popupin taakse: napautus kortin ulkopuolelle
     // palauttaa keskusteluun eikä sulje sitä (seuraaSulkemista).
     tausta.addEventListener('pointerdown', (e) => e.stopPropagation());
@@ -5208,6 +5213,10 @@ export class Pollo {
     this.suljeKuvapopup();
     const tausta = this.doc.createElement('dialog');
     tausta.className = 'pollo-kuvatausta';
+    // Pulun oma ikkuna ei ole näkymän vaihdos: ilman tätä merkintää
+    // seuraaNakymaa sulkisi chatin heti kortin auettua, ja kortti
+    // katoaisi mukana (js/livia-dialogitila.js LIVIAN_OMA).
+    merkitseLivianOmaDialogi(tausta);
     tausta.addEventListener('pointerdown', (e) => e.stopPropagation());
     tausta.addEventListener('click', (e) => {
       if (e.target === tausta) this.suljeKuvapopup();
