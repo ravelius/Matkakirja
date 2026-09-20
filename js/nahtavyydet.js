@@ -485,6 +485,7 @@ export function piirraKaupunkiKartta(ui, kohde, {
   const kaupunki = kaupunkiId;
   // Piirrospisteet kerätään hajautusta varten (ks. metodin loppu).
   const piirrosPisteet = [];
+  const numeroympyrat = [];
   /*
    * KOHTEEN AVAAJA TALTEEN KOKORUUTUA VARTEN (omistajan tilaus
    * 22.8.2026: "Ei pysty klikkaamaan kohteita"). Kokoruutunäkymä
@@ -583,6 +584,7 @@ export function piirraKaupunkiKartta(ui, kohde, {
     if (!miniatyyri) {
       piste.classList.add('kohde-numeroympyra');
       piste.appendChild(html('span', 'kohde-numeroteksti', numero));
+      numeroympyrat.push({ piste, x: p.x, y: p.y });
     }
     if (miniatyyri) {
       piste.classList.add('kohde-piirros');
@@ -904,6 +906,7 @@ export function piirraKaupunkiKartta(ui, kohde, {
     else avaaKarttaSuurennos(ui, kehys, kartta, { avaajat, zoomiNapit });
   });
   hajautaPiirrospisteet(kotelo, piirrosPisteet, ydin);
+  vaistaNumeroympyrat(kotelo, numeroympyrat);
   /*
    * Näkymävipu piirroksen ja värikartan välillä (omistajan tilaus
    * 14.8.2026 satelliitille; värikartta korvasi satelliitin
@@ -1744,6 +1747,117 @@ export function piirraMatkailijalle(ui, kohde, { kansi = null } = {}) {
     viimeinenKappale.appendChild(lue);
   }
   kohde.appendChild(lohko);
+}
+
+/**
+ * NUMEROYMPYRÖIDEN VÄISTÖ (omistajan päätös 20.9.2026, Fablen välittämä
+ * kierroksen 18 löydös: Ljubljanassa ympyrät 3–4 ja 7–8 osuivat osittain
+ * päällekkäin). Laskee jokaiselle ympyrälle näyttösiirron `{ vx, vy }`
+ * ruutupikseleinä niin, että kahden ympyrän keskipisteet ovat vähintään
+ * halkaisija + rako päässä toisistaan.
+ *
+ * Koordinaattia ei muuteta: ympyrä piirtyy siirron verran sivuun ja
+ * lyhyt viiva osoittaa oikeaan pisteeseen (kuten nimiöiden väistö,
+ * `nimiPuoli`). Rentoutus on sama kuin `hajautaPiirrospisteet`:ssä —
+ * lähekkäiset parit työnnetään pienimmän siirron suuntaan eli pitkin
+ * niitä yhdistävää viivaa, kumpikin puolet matkasta — mutta siirto on
+ * rajattu (`enimmaisSiirto`), jottei ympyrä karkaa kohteestaan.
+ *
+ * Yksikkö on ruutupikseli eikä kartan pikseli: ympyrä on käyttöliittymän
+ * merkki, jonka koko ei kasva zoomin mukana (.kartta-lava-vastaskaalaus),
+ * joten sama vakiosiirto pitää parin erillään jokaisella zoomilla.
+ * Pure-funktio ilman DOMia, jotta savuke ja testi voivat käyttää sitä.
+ *
+ * @param {{X:number, Y:number}[]} paikat ympyröiden todelliset paikat
+ *   ruutupikseleinä (lavan lepomitoilla)
+ * @returns {{vx:number, vy:number}[]}
+ */
+export function laskeNumeroympyroidenVaisto(paikat, {
+  halkaisija = 26, rako = 4, enimmaisSiirto = 24,
+} = {}) {
+  const MIN = halkaisija + rako;
+  const siirrot = paikat.map(() => ({ vx: 0, vy: 0 }));
+  for (let kierros = 0; kierros < 120; kierros++) {
+    let liikkui = false;
+    for (let a = 0; a < paikat.length; a++) {
+      for (let b = a + 1; b < paikat.length; b++) {
+        let dx = (paikat[b].X + siirrot[b].vx) - (paikat[a].X + siirrot[a].vx);
+        let dy = (paikat[b].Y + siirrot[b].vy) - (paikat[a].Y + siirrot[a].vy);
+        let d = Math.hypot(dx, dy);
+        if (d >= MIN) continue;
+        // Täsmälleen päällekkäiset erotetaan vaakasuuntaan.
+        if (d < 0.001) { dx = 1; dy = 0; d = 1; }
+        const puoli = (MIN - d) / 2;
+        siirrot[a].vx -= (dx / d) * puoli;
+        siirrot[a].vy -= (dy / d) * puoli;
+        siirrot[b].vx += (dx / d) * puoli;
+        siirrot[b].vy += (dy / d) * puoli;
+        liikkui = true;
+      }
+    }
+    // Siirron katto joka kierroksella, ettei kolmen ympyrän rykelmä
+    // työnnä yhtäkään kauas kohteestaan.
+    for (const v of siirrot) {
+      const pituus = Math.hypot(v.vx, v.vy);
+      if (pituus > enimmaisSiirto) {
+        v.vx *= enimmaisSiirto / pituus;
+        v.vy *= enimmaisSiirto / pituus;
+      }
+    }
+    if (!liikkui) break;
+  }
+  return siirrot;
+}
+
+/**
+ * Asettaa numeroympyröiden väistön kartalle: `--vx`/`--vy` (ruutupikseliä,
+ * css/styles.css .kohde-vaistetty) ja viivan `.kohde-osoitin` ympyrän
+ * reunasta oikeaan pisteeseen. Mitataan lavan LEPOMITOILLA (offsetWidth,
+ * jota zoom-muunnos ei muuta) asettelun jälkeen, ja lasketaan uudelleen
+ * jokaisella koon muutoksella; laskenta lähtee aina prosenttipaikoista,
+ * joten se ei kasaa siirtoja päällekkäin.
+ */
+export function vaistaNumeroympyrat(kotelo, ympyrat) {
+  if (ympyrat.length < 2) return;
+  const asettele = () => {
+    const W = kotelo.offsetWidth;
+    const K = kotelo.offsetHeight;
+    // Etukäteispuskurin lehti renderöityy piilossa (leveys 0), ja
+    // kuvaa odottava lava on tyhjä rivilaatikko: odotetaan kokovahtia.
+    if (W < 40 || K < 40) return false;
+    const paikat = ympyrat.map((m) => ({ X: (m.x / 100) * W, Y: (m.y / 100) * K }));
+    const siirrot = laskeNumeroympyroidenVaisto(paikat);
+    ympyrat.forEach((m, i) => {
+      const { vx, vy } = siirrot[i];
+      const pituus = Math.hypot(vx, vy);
+      m.piste.querySelector(':scope > .kohde-osoitin')?.remove();
+      if (pituus < 2) {
+        m.piste.classList.remove('kohde-vaistetty');
+        m.piste.style.removeProperty('--vx');
+        m.piste.style.removeProperty('--vy');
+        return;
+      }
+      m.piste.classList.add('kohde-vaistetty');
+      m.piste.style.setProperty('--vx', `${vx.toFixed(1)}px`);
+      m.piste.style.setProperty('--vy', `${vy.toFixed(1)}px`);
+      // Alle 16 px:n siirrolla oikea piste jää ympyrän omalle alalle
+      // (säde 13 + pisteen säde 3), joten viivaa ei piirretä: piste
+      // istuisi numeron päällä.
+      if (pituus < 16) return;
+      // Viiva ympyrästä takaisin oikeaan pisteeseen (siirron vastasuunta).
+      const osoitin = html('span', 'kohde-osoitin');
+      osoitin.setAttribute('aria-hidden', 'true');
+      osoitin.style.setProperty('--kulma', `${Math.atan2(-vy, -vx).toFixed(4)}rad`);
+      osoitin.style.setProperty('--pituus', `${pituus.toFixed(1)}px`);
+      m.piste.appendChild(osoitin);
+    });
+    return true;
+  };
+  requestAnimationFrame(() => {
+    asettele();
+    const vahti = new ResizeObserver(() => { asettele(); });
+    vahti.observe(kotelo);
+  });
 }
 
 /**

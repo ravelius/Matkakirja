@@ -119,5 +119,34 @@ vaadi(jalkeen.length === 0, `kaksoisviivan janat: ennen ${ennen.length} → jäl
 vaadi(pituusKm(naulaus.viivat) >= pituusKm(renkaat) * 0.99,
   `piirretty pituus ${Math.round(pituusKm(renkaat))} km → ${Math.round(pituusKm(naulaus.viivat))} km`);
 vaadi(naulaus.sisamaajanoja > 0, `sisämaan rajat säilyivät (${naulaus.sisamaajanoja} janaa)`);
+/* ── hinta ja portti tasoittain ─────────────────────────────────────
+ *
+ * Portti NAULAUKSEN_TIHEYS_RAJA valittiin ensin p95-erosta ja se oli
+ * liian korkea (kaksoisviiva jäi näkyviin). Tämä osio näyttää, mitä
+ * naulaus maksaa sillä tasolla, jonka kerros lataa portin tienoilla —
+ * eli ettei portin lasku tuo 65 ms:n hintaa kehysbudjettiin.
+ */
+const kaikkiTasot = luettelo.lajit.rannikko.tasot;
+for (const t of kaikkiTasot) {
+  const avaimetT = Object.keys(t.tiedostot).filter((a) => {
+    const [x, y] = a.split('_').map(Number);
+    const lon0 = -180 + x * t.solu;
+    const lat0 = 90 - (y + 1) * t.solu;
+    return lon0 <= laatikko[2] && lon0 + t.solu >= laatikko[0]
+      && lat0 <= laatikko[3] && lat0 + t.solu >= laatikko[1];
+  });
+  const viivatT = [];
+  for (const a of avaimetT) {
+    const v = await fetch(`${PALLOVEKTORIT_JUURI}rannikko/l${t.k}/${a}.bin`);
+    if (!v.ok) continue;
+    for (const viiva of puraDelta(await v.arrayBuffer())) viivatT.push(viiva);
+  }
+  const pisteita = viivatT.reduce((a2, v) => a2 + v.length, 0);
+  const t0 = (globalThis.performance ?? Date).now();
+  naulaaKorostus(renkaat, viivatT);
+  const kesto = (globalThis.performance ?? Date).now() - t0;
+  tieto(`taso l${t.k} (tol ${t.tol}): rannikkokärkiä ${pisteita}, naulaus ${kesto.toFixed(1)} ms`);
+}
+
 console.log(virheita ? `X ${virheita} vartiota kaatui` : 'Y kaikki vartiot kunnossa');
 process.exit(virheita ? 1 : 0);

@@ -661,9 +661,8 @@ export const FOKUSKOHTEET_ROU = [
       + 'sitä — niinpä tuomarit saivat sen näkyviin ainoalla jäljellä '
       + 'olleella tavalla, muodossa 1.00. Samoissa kisoissa hän sai vielä '
       + 'kuusi kymppiä lisää ja voitti kolme kultaa.',
-    lahde: 'en-Wikipedia "Nadia Comăneci", johdanto ja osio "1976 Summer '
-      + 'Olympics" (tarkistettu 25.8.2026 työaineistoon '
-      + 'docs/mantereet-tyoaineisto/takynostot-romania.md, ehdokas 3).',
+    lahde: 'en-Wikipedia "Nadia Comăneci", johdanto ja osio "1976 Summer Olympics" '
+      + '(tarkistettu 25.8.2026).',
     /*
      * Commons 25.8.2026: 480×722, public domain, tekijä tuntematon
      * (agerpres-arkisto), kuvattu 3.8.1976, kuvaus "Nadia Comăneci at
@@ -683,12 +682,22 @@ export const FOKUSKOHTEET_ROU = [
    * nostoa per Euroopan maa; Romania oli 19:ssä.
    *
    * Kohde on kaukana Bukarestin laatasta (128 lautayksikköä), joten se
-   * on pääkartan merkki eikä valu kohdekartalle. Kuvaton nosto: sama
+   * on pääkartan merkki eikä valu kohdekartalle. Kuvat lisätty 20.9.2026 (ent. kuvaton nosto): sama
    * linja kuin muissa tämän erän kohteissa (js/packs/maastokohteet-aut.js),
    * kuvat tilataan erikseen. Faktat en-Wikipediasta 11.9.2026.
    * ============================================================== */
   {
     id: 'voronet',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/rou-nosto-voronet-0286ec46.jpg',
+      lyhyt: 'Voroneţin kirkon maalattu ulkoseinä ruusujen takana.',
+      selite: 'Kirkon ulkoseinät on peitetty värikkäillä pyhimyskuvilla ja kohtauksilla, jotka ulottuvat lavan alle.',
+      lahde: 'Valokuva: Adam Jones Adam63, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Adam Jones Adam63',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Voronet_Monastery_-_Romania_-_02.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
     nimi: 'Voronețin luostari',
     symboli: 'kulttuuri',
     tyyppi: 'kulttuuri',

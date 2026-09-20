@@ -54,14 +54,35 @@
  * js/fokuskohteet.js). Yksikään ei siis kuulu kohdekartalle, vaan
  * kaikki ovat pääkartan merkkejä.
  *
- * KUVATON ERÄ. Sama linja kuin maastokohteilla muutenkin: kortti kantaa
- * tekstin ja lähteen, ei kuvaa. Tarkistamaton Commons-tiedosto olisi
- * huonompi kuin kuvaton kortti (Perustuslaki, faktakuri). Faktat on
+ * KUVAT LISÄTTY 20.9.2026 (ent. kuvaton erä): kortti kantaa nyt kaksi tarkistettua
+ * Commons-kuvaa. Faktat on
  * tarkistettu en-Wikipediasta kohde kerrallaan 6.9.2026.
  */
 export const MAASTOKOHTEET_LTU = [
   {
     id: 'aukstojas',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/ltu-nosto-aukstojas-1818b49b.jpg',
+      lyhyt: 'Aukštojas-kukkulan huipulla on näkötorni ja kivinen rengas.',
+      selite: 'Kukkulan laella on puinen näkötorni ja hevospäillä koristeltu kiviympyrä. Ympärillä aukeaa Medininkain ylängön avara maaseutu.',
+      lahde: 'Valokuva: Vilensija, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Vilensija',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Juozapin%C4%97_(Medininkai),_ant_Auk%C5%A1tojo_kalno.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/ltu-nosto-aukstojas-216ae7f4.jpg',
+        lyhyt: 'Näkymä Aukštojas-kukkulan näkötornin tasanteelta yli peltojen.',
+        selite: 'Puisen tasanteen kaiteen takana avautuu laaja peltojen ja metsäsaarekkeiden maisema Medininkain ylängöllä.',
+        lahde: 'Valokuva: Aidas U., Wikimedia Commons (CC BY 3.0).',
+        tekija: 'Aidas U.',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Auk%C5%A1tojo_kalnas_-_panoramio.jpg',
+        lisenssi: 'CC BY 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0',
+      },
+    ],
     nimi: 'Aukštojas',
     tyyppi: 'vuori',
     kysymykset: [
@@ -83,6 +104,28 @@ export const MAASTOKOHTEET_LTU = [
   },
   {
     id: 'itameri',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/ltu-nosto-itameri-dddbec3f.jpg',
+      lyhyt: 'Itämeren hiekkaranta ja aallot Karklėn lähellä Liettuan rannikolla.',
+      selite: 'Metsäinen dyynirinne laskeutuu kapealle hiekkarannalle, jonka edessä levittäytyy aaltoileva meri. Horisontissa häämöttää kaukainen laiva.',
+      lahde: 'Valokuva: Mantas Volungevicius, Wikimedia Commons (CC BY 2.0).',
+      tekija: 'Mantas Volungevicius',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Sunny_day_on_the_coast_on_Baltic_sea.jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/ltu-nosto-itameri-c51f93fe.jpg',
+        lyhyt: 'Puinen ohjauspyörä hylyn kannella Itämeren pohjassa.',
+        selite: 'Vedenalaisessa valokuvassa ohjauspyörä on säilynyt hylyn ohjaamossa. Itämeren kylmässä ja vähäsuolaisessa vedessä laivamato ei syö puuta, joten vanhat hylyt säilyvät.',
+        lahde: 'Valokuva: Juha Flinkman, SubZone OY, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Juha Flinkman, SubZone OY',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kaubalaeva_%22E._Russ%22_vrakk.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Itämeri',
     tyyppi: 'meri',
     kysymykset: [
@@ -112,6 +155,28 @@ export const MAASTOKOHTEET_LTU = [
   },
   {
     id: 'nemunas',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/ltu-nosto-nemunas-11081a77.jpg',
+      lyhyt: 'Nemunas-joki levenee laajaksi virraksi Smalininkain kohdalla.',
+      selite: 'Leveä joki virtaa metsäisten ja niittyisten rantojen välissä Liettuan länsiosassa. Etualalla on nurmista rantaa.',
+      lahde: 'Valokuva: Julian Nyča, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Julian Nyča',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Memel_Nemunas_Smalininkai.JPG',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/ltu-nosto-nemunas-d6bae342.jpg',
+        lyhyt: 'Nemunas mutkittelee metsien halki Birštonasin lähellä.',
+        selite: 'Näkymä tähystystornista yli mäntymetsän: joki kaartaa vihreän maiseman läpi, ja oikealla näkyy peltoja.',
+        lahde: 'Valokuva: Tolmintonis, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Tolmintonis',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vaizdas_Bir%C5%A1tono_ap%C5%BEvalgos_bok%C5%A1to_aik%C5%A1tel%C4%97je.jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
     nimi: 'Nemunas',
     tyyppi: 'joki',
     kysymykset: [
@@ -138,6 +203,28 @@ export const MAASTOKOHTEET_LTU = [
    * ============================================================== */
   {
     id: 'trakain-saarilinna',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/ltu-nosto-trakain-saarilinna-f6d8b6bc.jpg',
+      lyhyt: 'Trakain punatiilinen saarilinna heijastuu Galvė-järven tyyneen pintaan.',
+      selite: 'Linna seisoo saarella, ja sen kulmissa on kartiokattoisia torneja. Etualalla on purjevene ja taustalla metsäisiä rantoja.',
+      lahde: 'Valokuva: Diliff, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Diliff',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Trakai_Island_Castle,_Lithuania_-_Diliff.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/ltu-nosto-trakain-saarilinna-242fb9ad.jpg',
+        lyhyt: 'Maalaus Trakain linnan raunioista Galvė-järvellä.',
+        selite: 'Vanhassa maalauksessa linnan rauniot kohoavat järven saarella, ja etualalla näkyy pienempiä saaria ja rantakumpuja. Linna on kuvassa rappeutuneena ennen jälleenrakennusta.',
+        lahde: 'Maalaus: Wincenty Dmochowski, Wikimedia Commons (public domain).',
+        tekija: 'Wincenty Dmochowski',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Wincenty_Dmochowski_-_Ruins_of_the_Castle_on_the_Trakai_Lake_(Lake_Galv%C4%97)_-_MNK_II-a-118_-_National_Museum_in_Krak%C3%B3w.jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+      },
+    ],
     nimi: 'Trakain saarilinna',
     tyyppi: 'historia',
     kysymykset: [
@@ -172,6 +259,28 @@ export const MAASTOKOHTEET_LTU = [
   },
   {
     id: 'kernave',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/ltu-nosto-kernave-0e951d1c.jpg',
+      lyhyt: 'Kernavėn muinaiset linnavuoret kohoavat vihreinä kumpuina.',
+      selite: 'Nurmipeitteiset linnavuoret nousevat laakson pohjalta sinistä taivasta vasten. Kumpujen kylkiä ja ympäröivää niittyä peittää heinä.',
+      lahde: 'Valokuva: Hugo.arg, Wikimedia Commons (public domain).',
+      tekija: 'Hugo.arg',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kernav%C4%97s_piliakalniai_1.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/ltu-nosto-kernave-ae0ff8f1.jpg',
+        lyhyt: 'Kernavėn linnavuoret ja Nerin laakso pilvisen taivaan alla.',
+        selite: 'Etualalla kohoaa nurmipeitteinen linnavuori, jonka rinnettä pitkin kulkee portaikko. Taustalla Neris-joen laakso ja metsät jatkuvat kauas.',
+        lahde: 'Valokuva: Phillip Capper, Wikimedia Commons (CC BY 2.0).',
+        tekija: 'Phillip Capper',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kernave_mounds_and_the_River_Neris,_Lithuania,_11_Sept,_2008.jpg',
+        lisenssi: 'CC BY 2.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+      },
+    ],
     nimi: 'Kernavė',
     tyyppi: 'historia',
     kysymykset: [
@@ -206,6 +315,16 @@ export const MAASTOKOHTEET_LTU = [
   },
   {
     id: 'ristien-kukkula',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/ltu-nosto-ristien-kukkula-4e21c661.jpg',
+      lyhyt: 'Ristien kukkulan tuhannet ristit peittävät rinteen.',
+      selite: 'Kukkulan polku nousee lukemattomien puisten ja metallisten ristien välissä. Oikealla kohoaa patsas, jonka kädet on ojennettu sivuille.',
+      lahde: 'Valokuva: Diliff, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Diliff',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Hill_of_Crosses_1,_Siauliai,_Lithuania.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
     nimi: 'Ristien kukkula',
     tyyppi: 'kulttuuri',
     kysymykset: [
@@ -238,6 +357,16 @@ export const MAASTOKOHTEET_LTU = [
   },
   {
     id: 'kuurinkynnas',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/ltu-nosto-kuurinkynnas-5b8e5abe.jpg',
+      lyhyt: 'Kuurinkynnäksen hiekkaranta ja mäntymetsä ilmasta nähtynä.',
+      selite: 'Kapea vaalea hiekkaranta erottaa vasemmalla aukeavan veden oikealla olevasta metsäisestä dyynialueesta. Ilta-aurinko värjää maiseman lämpimäksi.',
+      lahde: 'Valokuva: Baltictrails, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Baltictrails',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:The_Curonian_spit,_Lithuania.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
     nimi: 'Kuurinkynnäs',
     tyyppi: 'vuori',
     kysymykset: [
@@ -270,6 +399,28 @@ export const MAASTOKOHTEET_LTU = [
   },
   {
     id: 'palangan-meripihkamuseo',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/ltu-nosto-palangan-meripihkamuseo-3efe2f35.jpg',
+      lyhyt: 'Tiškevičiaiden palatsi, jossa Palangan meripihkamuseo toimii, illan valossa.',
+      selite: 'Valkoinen uusklassinen palatsi seisoo kukkaistutusten ja portaikon takana puistossa. Rakennuksessa on meripihkamuseo.',
+      lahde: 'Valokuva: Diliff, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Diliff',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ti%C5%A1kevi%C4%8Diai_Palace_at_dusk,_Palanga,_Lithuania_-_Diliff.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/ltu-nosto-palangan-meripihkamuseo-7f88fdcb.jpg',
+        lyhyt: 'Hyönteisiä säilyttäviä meripihkapaloja museon näyttelyssä.',
+        selite: 'Kullanruskeisiin meripihkakappaleisiin on jäänyt kiinni pieniä hyönteisiä ja hämähäkkejä, jotka näkyvät läpi valoa vasten.',
+        lahde: 'Valokuva: GraceKelly, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'GraceKelly',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Palanga_Amber_Museum_-_Inclusions.jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
     nimi: 'Palangan meripihkamuseo',
     tyyppi: 'kulttuuri',
     kysymykset: [
@@ -304,6 +455,16 @@ export const MAASTOKOHTEET_LTU = [
   },
   {
     id: 'rumsiskes',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/ltu-nosto-rumsiskes-0478b547.jpg',
+      lyhyt: 'Puinen tuulimylly viljapellon reunalla Rumšiškėssä.',
+      selite: 'Vanha lautavuorattu tuulimylly kohoaa peltojen ja pienten talonpoikaisrakennusten keskellä kansatieteellisessä ulkoilmamuseossa.',
+      lahde: 'Valokuva: Pudelek (Marcin Szala), Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Pudelek (Marcin Szala)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Rum%C5%A1i%C5%A1k%C4%97s_(Rumszyszki)_-_Open_air_ethnographic_museum_6_-_mill.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
     nimi: 'Rumšiškės',
     tyyppi: 'kulttuuri',
     kysymykset: [
@@ -334,6 +495,28 @@ export const MAASTOKOHTEET_LTU = [
   },
   {
     id: 'grutas-puisto',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/ltu-nosto-grutas-puisto-afd3b788.jpg',
+      lyhyt: 'Neuvostoajan betonipatsas kohottaa lehteä ylös lumisessa Grūtasin puistossa.',
+      selite: 'Grūtasin puiston patsas esittää kirjankuljettajaa, joka pitää kädessään Žemaitijos tiesa -lehteä. Patsas on siirretty puistoon Mosėdisista, ja sen taustalla näkyy puiston aitaus ja opastauluja.',
+      lahde: 'Valokuva: Vilensija, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Vilensija',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Grūtas,_knygnešys.jpeg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/ltu-nosto-grutas-puisto-f3bc2f37.jpg',
+        lyhyt: 'Piikkilanka-aidan takaa näkyvät Grūtasin puiston junanvaunu, rajapaalu ja vartiotorni järven rannalla.',
+        selite: 'Grūtasin puiston sisäänkäynnin luona piikkilankaaidat, junanvaunu ja raidoitettu rajapaalu luovat neuvostoajan museomiljöön. Taustalla häämöttää järvi ja vartiotorni.',
+        lahde: 'Valokuva: Adriao, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Adriao',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Grūto_parkas_-_Entrance.JPG',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
     nimi: 'Grūtasin puisto',
     tyyppi: 'kulttuuri',
     kysymykset: [
@@ -365,6 +548,28 @@ export const MAASTOKOHTEET_LTU = [
   },
   {
     id: 'yhdeksas-fortti',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/ltu-nosto-yhdeksas-fortti-d66bcf8d.jpg',
+      lyhyt: 'Yhdeksännen forttin punatiilinen muuri ja vartiotorni Kaunasissa.',
+      selite: 'Tiilimuurin takana kohoaa nurmen peittämä vallirakennelma. Muurin päässä on pieni tiilinen torni ja holvattu portti.',
+      lahde: 'Valokuva: Andrius Vanagas, Wikimedia Commons (CC BY 3.0).',
+      tekija: 'Andrius Vanagas',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:IX_Fort_(2008-09-20)02.jpg',
+      lisenssi: 'CC BY 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/ltu-nosto-yhdeksas-fortti-5600166c.jpg',
+        lyhyt: 'Yhdeksännen forttin sisäpiha ja paksuseinäiset rakennukset.',
+        selite: 'Fortin pihaa reunustavat kalkitut ja tiiliset seinät, joissa on kapeita ikkunoita ja ampuma-aukkoja. Etualalla on mustavalkoraidallinen vartiokoppi.',
+        lahde: 'Valokuva: Adam Jones from Kelowna, BC, Canada, Wikimedia Commons (CC BY-SA 2.0).',
+        tekija: 'Adam Jones from Kelowna, BC, Canada',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Courtyard_of_Ninth_Fort_-_Nazi_Genocide_Site_-_Kaunas_-_Lithuania_(27818243792)_(2).jpg',
+        lisenssi: 'CC BY-SA 2.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
+      },
+    ],
     nimi: 'Yhdeksäs fortti',
     tyyppi: 'historia',
     kysymykset: [
@@ -406,10 +611,32 @@ export const MAASTOKOHTEET_LTU = [
    * Kaikki kolme ovat kaukana Vilnasta (lähin 60 lautayksikköä), joten
    * ne ovat pääkartan merkkejä. Kohteet ovat eri paikkakunnilla kuin
    * pakin aiemmat nostot: Klaipėda rannikolla, Puntukas Anykščiaissa
-   * ja Aukštaitijan kansallispuisto koillisessa. Kuvaton erä.
+   * ja Aukštaitijan kansallispuisto koillisessa. Kuvat lisätty 20.9.2026 (ent. kuvaton erä).
    * ============================================================== */
   {
     id: 'klaipeda',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/ltu-nosto-klaipeda-c1b3c065.jpg',
+      lyhyt: 'Klaipėdan vanhankaupungin katot ja Danė-joki kesäisin ylhäältä nähtynä.',
+      selite: 'Punakattoisia taloja ja vehreitä puita joen molemmin puolin. Vasemmalla joen rannassa on purjelaivoja ja toritelttoja.',
+      lahde: 'Valokuva: Žiedas, Wikimedia Commons (public domain).',
+      tekija: 'Žiedas',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Klaip%C4%97da._Senamiestis.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/ltu-nosto-klaipeda-9bc9ffb3.jpg',
+        lyhyt: 'Danė-joen ranta ja tiilirakennukset Klaipėdan keskustassa.',
+        selite: 'Joen rannassa on veneitä ja punatiilisiä entisiä varastorakennuksia. Taustalla kohoaa punavalkoinen piippu.',
+        lahde: 'Valokuva: Andrzej Otrębski, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Andrzej Otrębski',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Klaipeda_bulwary_1.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Klaipėda',
     tyyppi: 'kaupunki',
     kysymykset: [
@@ -441,6 +668,38 @@ export const MAASTOKOHTEET_LTU = [
   },
   {
     id: 'puntukas',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/ltu-nosto-puntukas-92af81fd.jpg',
+      lyhyt: 'Puntukas-siirtolohkare paikallaan Anykščiain mäntymetsässä.',
+      selite: 'Puntukas on Liettuan toiseksi suurin siirtolohkare. Kiven kylkeen on veistetty muistoreliefi ja teksti, ja lohkare lepää hiekkaisella kehällä metsän keskellä.',
+      lahde: 'Postimerkki: Lietuvos paštas, Wikimedia Commons (public domain).',
+      tekija: 'Lietuvos paštas',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Puntukas_(cropped).jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/ltu-nosto-puntukas-85b017f8.jpg',
+        lyhyt: 'Vanhassa ryhmäkuvassa retkeläiset poseeraavat Puntukas-kiven edessä ja päällä.',
+        selite: 'Vanha mustavalkoinen ryhmävalokuva näyttää Puntukas-lohkareen valtavan koon: kivellä ja sen juurella seisoo kymmeniä retkeläisiä. Kivi täyttää lähes koko kuvan.',
+        lahde: 'Valokuva: tuntematon, Wikimedia Commons (CC0).',
+        tekija: 'tuntematon',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Pavasaris_members_at_Puntukas.jpeg',
+        lisenssi: 'CC0',
+        lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+      },
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/ltu-nosto-puntukas-5fe61582.jpg',
+        lyhyt: 'Puntukas-siirtolohkare mäntymetsän reunassa Anykščiaissa.',
+        selite: 'Valtava jääkauden tuoma lohkare makaa vaalean hiekkaympyrän keskellä. Sen kylkeen on hakattu kaksi muotokuvaa ja kirjoitus.',
+        lahde: 'Kuva: Post of Lithuania, Wikimedia Commons (public domain).',
+        tekija: 'Post of Lithuania',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Puntukas_(cropped).jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+      },
+    ],
     nimi: 'Puntukas',
     tyyppi: 'sana',
     kysymykset: [
@@ -470,6 +729,16 @@ export const MAASTOKOHTEET_LTU = [
   },
   {
     id: 'aukstaitija',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/ltu-nosto-aukstaitija-f533ff9a.jpg',
+      lyhyt: 'Sininen järvi ja metsäiset saarekkeet Aukštaitijan kukkuloiden keskellä.',
+      selite: 'Järvenlahti kaartuu tiheän metsän ympäröimänä, ja taustalla aaltoilee viljelymaita ja kumpuilevaa metsämaisemaa.',
+      lahde: 'Valokuva: Wojsyl, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Wojsyl',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Lithuania_Ladakalnis.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
     nimi: 'Aukštaitijan puisto',
     tyyppi: 'jarvi',
     kysymykset: [

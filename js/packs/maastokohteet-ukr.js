@@ -53,9 +53,8 @@
  * KAUPUNGIN_KOHDALLA_SADE on 7 (js/fokuskohteet.js), joten yksikään ei
  * kuulu kohdekartalle vaan kaikki ovat pääkartan merkkejä.
  *
- * KUVATON ERÄ. Kortti kantaa tekstin ja lähteen, ei kuvaa — sama linja
- * kuin erässä 1. Tarkistamaton Commons-tiedosto olisi huonompi kuin
- * kuvaton kortti (Perustuslaki, faktakuri). Faktat on tarkistettu
+ * KUVAT LISÄTTY 20.9.2026 (ent. kuvaton erä): kaksi tarkistettua Commons-kuvaa.
+ * Faktat on tarkistettu
  * en-Wikipediasta kohde kerrallaan 6.9.2026.
  *
  * Ukrainan maastokohteet. Faktat en-Wikipediasta 29.8.2026.
@@ -359,6 +358,28 @@ export const MAASTOKOHTEET_UKR = [
   },
   {
     id: 'hersonesos',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/ukr-nosto-hersonesos-a5ba03cc.jpg',
+      lyhyt: 'Hersonesoksen antiikin raunioiden marmoripylväät meren rannalla.',
+      selite: 'Valkoiset pylväät ja matalat kivimuurit nousevat rantatöyräällä, taustalla Mustanmeren sininen vesi.',
+      lahde: 'Valokuva: Иван Тарасенко, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Иван Тарасенко',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Херсонес_Таврический.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/ukr-nosto-hersonesos-d4d93d5a.jpg',
+        lyhyt: 'Hersonesoksen basilikan pylväät ja portti.',
+        selite: 'Kolme pylvästä ja kivinen porttiaukko erottuvat kirkkaalla taivaalla raunioituneen muurin vieressä.',
+        lahde: 'Valokuva: Andrey Butko, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Andrey Butko',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Базилика_1935_года_2.jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
     nimi: 'Hersonesos',
     tyyppi: 'historia',
     kysymykset: [
@@ -392,6 +413,28 @@ export const MAASTOKOHTEET_UKR = [
   },
   {
     id: 'lviv',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/ukr-nosto-lviv-7e41fb94.jpg',
+      lyhyt: 'Lvivin Rynok-aukion värikkäiden talojen katot ja kirkkojen kupolit kaupungintalon tornista katsottuna.',
+      selite: 'Kaupungintalon tornista aukeaa näkymä Rynok-aukion pohjoislaidan pastellinvärisiin taloihin ja punaisiin katoihin. Taustalla näkyvät vanhan kaupungin kirkot ja metsäiset kukkulat.',
+      lahde: 'Valokuva: Jorge Láscar from Australia, Wikimedia Commons (CC BY 2.0).',
+      tekija: 'Jorge Láscar from Australia',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Northern_side_of_the_Rinok_square_as_seen_from_the_town_hall_(8673863443).jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/ukr-nosto-lviv-dfd14c7e.jpg',
+        lyhyt: 'Ilmakuvassa Lvivin vanhan kaupungin kattojen ja katujen mosaiikki.',
+        selite: 'Kaupungintornista otetussa kuvassa näkyvät Lvivin vanhan kaupungin historialliset kerrostalot, jyrkkäkattoiset rakennukset ja pieni puistoalue kadun risteyksessä.',
+        lahde: 'Valokuva: Erik van Zummeren, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Erik van Zummeren',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Lviv_old_city_center.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Lviv',
     tyyppi: 'kaupunki',
     kysymykset: [
@@ -426,6 +469,28 @@ export const MAASTOKOHTEET_UKR = [
   },
   {
     id: 'hortytsja',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/ukr-nosto-hortytsja-065fb5f5.jpg',
+      lyhyt: 'Dnepr ja Hortytsjan lähisaari syksyisessä maisemassa.',
+      selite: 'Metsäinen niemi työntyy leveän joen mutkaan, taustalla horisontissa näkyy kaupunki.',
+      lahde: 'Valokuva: Yedmitry, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Yedmitry',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:О._Байда_(Мала_Хортиця).jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/ukr-nosto-hortytsja-d410c5b9.jpg',
+        lyhyt: 'Dnepr sumuisena syksynä keltaisen puun takaa.',
+        selite: 'Jokirannan kalliot ja lehtipuut heijastuvat tyyneen veteen.',
+        lahde: 'Valokuva: Anatoliy Volkov, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Anatoliy Volkov',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Вид_на_західний_берег_з_о._Байда.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Hortytsja',
     tyyppi: 'historia',
     kysymykset: [
@@ -460,6 +525,28 @@ export const MAASTOKOHTEET_UKR = [
   },
   {
     id: 'poltavan-taistelu',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/ukr-nosto-poltavan-taistelu-c5b42598.jpg',
+      lyhyt: 'Ristillä kruunattu muistomerkki seisoo Poltavan taistelukentän nurmella pensasaidan sisällä.',
+      selite: 'Poltavan taistelun paikalle pystytetty muistomerkki on kavennettu graniittipylväs, jonka päällä on risti. Muistomerkkiä ympäröi pensasaita, ja taustalla avautuu avoin pelto ja puurivi.',
+      lahde: 'Valokuva: Nataliya Shestakova, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Nataliya Shestakova',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Poltava_Complex_\'Field_of_Poltava_Battle\'_Monument_to_Swedish_Warriors_from_Russians_01_(YDS_7520).jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/ukr-nosto-poltavan-taistelu-f555c8de.jpg',
+        lyhyt: 'Poltavan Pyhän Ristin luostari kohoaa metsäisellä kukkulalla ilmasta katsottuna.',
+        selite: 'Ilmakuvassa Pyhän Ristin korotuksen luostarin valkoinen kirkko, kultaiset kupolit ja korkea kellotorni nousevat vehreän metsän keskeltä. Oikealla näkyy Poltavan pientaloalue.',
+        lahde: 'Valokuva: Максим Бондаревский, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Максим Бондаревский',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Monastery_of_Feast_of_the_Cross_Poltava_DJI_003811535151.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Poltavan taistelu',
     tyyppi: 'historia',
     kysymykset: [
@@ -491,6 +578,28 @@ export const MAASTOKOHTEET_UKR = [
   },
   {
     id: 'sofijivkan-puisto',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/ukr-nosto-sofijivkan-puisto-22b61bf5.jpg',
+      lyhyt: 'Suihkulähde kohoaa lammesta Sofijivkan puistossa.',
+      selite: 'Korkea vesisuihku nousee lammen keskeltä syksyisten puiden reunustamana.',
+      lahde: 'Valokuva: Bonbosch, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Bonbosch',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Sofiyivka_Uman_10.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/ukr-nosto-sofijivkan-puisto-e65af9ab.jpg',
+        lyhyt: 'Sofijivkan puiston nurmialue ja kukkaistutukset.',
+        selite: 'Viheralueen keskellä kiemurtelee kukkaistutuksia ja polkuja, taustalla puita ja kasvihuone.',
+        lahde: 'Valokuva: Bonbosch, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Bonbosch',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Sofiyivka_Uman_21.JPG',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
     nimi: 'Sofijivkan puisto',
     tyyppi: 'kulttuuri',
     kysymykset: [
@@ -525,6 +634,28 @@ export const MAASTOKOHTEET_UKR = [
   },
   {
     id: 'derzhprom',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/ukr-nosto-derzhprom-f2e4284c.jpg',
+      lyhyt: 'Ilta-auringon värjäämä Derzhprom ja Vapaudenaukio Harkovassa ilmasta katsottuna.',
+      selite: 'Ilmakuvassa Derzhpromin siipirakennukset ja niiden yli kaartuvat käytävät kohoavat Harkovan Vapaudenaukion päässä. Aukion suihkulähde ja puistot on valaistu illan hämärässä.',
+      lahde: 'Valokuva: Konstantin Brizhnichenko, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Konstantin Brizhnichenko',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Будинок_держпромисловості,_Харків_DJI_0068.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/ukr-nosto-derzhprom-de53794d.jpg',
+        lyhyt: 'Derzhpromin siluetti kohoaa suihkulähteen takana sinisessä illassa.',
+        selite: 'Konstruktivistinen Derzhprom ja sen huipun antennitorni erottuvat tummana siluettina illan sinistä taivasta vasten. Etualalla Vapaudenaukion suihkulähde loiskuttaa valaistuna.',
+        lahde: 'Valokuva: Serhii Bobok, Wikimedia Commons (CC BY 4.0).',
+        tekija: 'Serhii Bobok',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Derzhprom_Kharkiv_2025_-_01.jpg',
+        lisenssi: 'CC BY 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
+      },
+    ],
     nimi: 'Derzhprom',
     tyyppi: 'tekniikka',
     kysymykset: [

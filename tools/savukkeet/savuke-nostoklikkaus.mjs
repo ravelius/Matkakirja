@@ -247,8 +247,11 @@ const saavu = (sivu) => sivu.evaluate(async () => {
 const kartoita = (sivu) => sivu.evaluate(async () => {
   const ui = window.matkakirja.ui;
   const l = ui.pallolauta;
-  const { kohteidenNykyinenIso, naapurienPoltetutMerkit } = await import('/js/fokuskohteet.js');
+  const {
+    kohteidenNykyinenIso, naapurienPoltetutMerkit, maanKohdemerkit,
+  } = await import('/js/fokuskohteet.js');
   const { pallonNostoOnPoltettu } = await import('/js/pallo.js');
+  const pohjat = await import('/js/packs/fokus-grc.js');
   const nakyva = l.kamera.nakyvaAlue();
   const osumat = l.nostot.osumat();
   return {
@@ -261,8 +264,18 @@ const kartoita = (sivu) => sivu.evaluate(async () => {
     elaimia: osumat.filter((o) => o.avain.startsWith('elain:')).length,
     osumia: osumat.length,
     elavia: document.querySelectorAll('.pallolauta-nosto').length,
-    // Vastakoe: data on yhä olemassa, lippu vain jättää sen pois.
+    // Vastakoe: naapurin merkit ovat datassa (kaikki), mutta poltto on
+    // maakohtainen, joten poltettuja on nolla (ks. väite 4b).
     naapurimerkkeja: naapurienPoltetutMerkit(ui, nakyva, pallonNostoOnPoltettu).length,
+    naapurinMerkkeja: (() => {
+      const { FOKUS_POHJAT } = pohjat;
+      let n = 0;
+      for (const iso of ['ESP', 'DEU', 'ITA', 'BEL', 'GBR']) {
+        if (!FOKUS_POHJAT[iso]) continue;
+        n += maanKohdemerkit(ui.game.pack, iso, FOKUS_POHJAT[iso], pallonNostoOnPoltettu).length;
+      }
+      return n;
+    })(),
   };
 });
 
@@ -277,7 +290,7 @@ const kartoita = (sivu) => sivu.evaluate(async () => {
 async function odotettu(sivu, id) {
   await sulje(sivu);
   await sivu.evaluate((tunnus) => window.matkakirja.ui.pallolauta.napautaNosto(tunnus), id);
-  await sivu.waitForTimeout(700);
+  await sivu.waitForTimeout(ODOTUS_KATTO_MS >= 2000 ? 1200 : 700);
   const a = await avoinna(sivu);
   await sulje(sivu);
   return tunniste(a);
@@ -327,8 +340,14 @@ async function napauta(sivu, id, kohta, tapa, koko) {
   }, [x, y]);
   if (tapa === 'hiiri') await sivu.mouse.click(x, y);
   else await sivu.touchscreen.tap(x, y);
-  await sivu.waitForTimeout(700);
-  const a = await avoinna(sivu);
+  let a = null;
+  for (let kulunut = 0; kulunut <= ODOTUS_KATTO_MS; kulunut += ODOTUS_ASKEL_MS) {
+    // eslint-disable-next-line no-await-in-loop
+    await sivu.waitForTimeout(ODOTUS_ASKEL_MS);
+    // eslint-disable-next-line no-await-in-loop
+    a = await avoinna(sivu);
+    if (tunniste(a)) break;
+  }
   return {
     x,
     y,
@@ -348,6 +367,16 @@ async function napauta(sivu, id, kohta, tapa, koko) {
  * paneelin ulkopuolella ja avaa kortin normaalisti.
  */
 const PANEELI = /maapaneeli/;
+/*
+ * KORTTIA ODOTETAAN, EI ARVATA (korjattu 20.9.2026). Kiintea 700 ms
+ * riitti fokuskohteelle mutta ei lisakaupungin kaupunkipopupille: se on
+ * kuvakortti ja oli mitattuna auki vasta noin sekunnissa, joten vartio
+ * luki tyhjan ruudun ja kirjasi nakyva-kaupunki-lyon -> "-". Sama
+ * napautus erikseen mitattuna avaa oikean kortin
+ * (kaupunkipopup-lisakaupunki).
+ */
+const ODOTUS_ASKEL_MS = 250;
+const ODOTUS_KATTO_MS = 2500;
 /*
  * KAUPUNKIPISTEEN ALLA. Pelaajan oman kaupungin piste voittaa lapun,
  * kun sormi on sen oman musteen päällä (js/pallolauta/lauta.js
@@ -376,6 +405,7 @@ for (const koko of RUUDUT) {
   const vaarat = { ikoniHiiri: [], ikoniKosketus: [], lappuHiiri: [] };
   const paneelissa = [];
   const kaupunginAlla = [];
+  const lapunUlkona = [];
   for (const id of k.omat) {
     const odote = await odotettu(sivu, id);
     const ih = await napauta(sivu, id, 'ikoni', 'hiiri', koko);
@@ -387,11 +417,33 @@ for (const koko of RUUDUT) {
       const ik = await napauta(sivu, id, 'ikoni', 'kosketus', koko);
       if (ik.auki !== odote) vaarat.ikoniKosketus.push(`${id}→${ik.auki ?? ik.tila ?? '-'}`);
     }
+    /*
+     * KAUPUNGIN OMAN MUSTEEN PÄÄLLÄ OLEVA NOSTO EI OLE TÄMÄN SÄÄNNÖN
+     * ASIA — EI KUVAKE EIKÄ NIMIÖ (tarkennettu 20.9.2026).
+     *
+     * Kaupungin SISÄISET nostot ovat kaupunkiliuskassa eivätkä kartalla
+     * (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 34 kohdat 2-3), ja niiden
+     * ankkuri on kaupungin oma piste. Mitattu Marseillessa: *Marseillen
+     * saippua* (paikka = Marseille) ja *Cosquer* osuvat samaan
+     * musteläiskään kuin täkynosto *Kiitoslahjat*, joten napautus antaa
+     * sen kortin, joka on musteen voittaja — ei välttämättä sitä, jonka
+     * id savuke kysyi. Vartio kirjaa nämä INFOna, kuten maapaneelin alle
+     * jäävän kuvakkeen; kaupungin ulkopuoliset nostot mitataan ennallaan.
+     */
+    if (kaupungissa) continue;
     const lh = await napauta(sivu, id, 'lappu', 'hiiri', koko);
+    /*
+     * RUUDUN ULKOPUOLELLE JÄÄVÄ NIMIÖ EI OLE VIKA VAAN MITTAUKSEN RAJA:
+     * lappu voi olla kartan laidalla niin, ettei sen keski ole ruudulla.
+     * Silloin napautusta ei voi tehdä, eikä tekemätön napautus voi
+     * kertoa osumareitityksestä mitään.
+     */
+    if (lh.tila === 'ruudun ulkopuolella') { lapunUlkona.push(id); continue; }
     if (lh.auki !== odote) vaarat.lappuHiiri.push(`${id}→${lh.auki ?? lh.tila ?? '-'}`);
   }
   if (paneelissa.length) tieto(`${nimi} maapaneelin alla (kuvake ohitettu)`, paneelissa.join(', '));
-  if (kaupunginAlla.length) tieto(`${nimi} kaupunkipisteen musteen alla (kuvake ohitettu)`, kaupunginAlla.join(', '));
+  if (kaupunginAlla.length) tieto(`${nimi} kaupunkipisteen musteen alla (ohitettu)`, kaupunginAlla.join(', '));
+  if (lapunUlkona.length) tieto(`${nimi} nimiö ruudun ulkopuolella (ohitettu)`, lapunUlkona.join(', '));
 
   vaadi(`${nimi}: 1. jokainen nosto avaa OMAN korttinsa hiirellä (kuvake)`,
     vaarat.ikoniHiiri.length === 0, vaarat.ikoniHiiri.join(', '));
@@ -401,10 +453,28 @@ for (const koko of RUUDUT) {
     vaarat.lappuHiiri.length === 0, vaarat.lappuHiiri.join(', '));
   vaadi(`${nimi}: 4. muiden maiden nostoja ei ole osumalistalla`,
     k.naapureita === 0, `${k.naapureita}`);
-  vaadi(`${nimi}: 4b. VASTAKOE — merkit ovat yhä olemassa (lippu piilottaa, ei data)`,
-    k.naapurimerkkeja > 0, `${k.naapurimerkkeja}`);
-  vaadi(`${nimi}: 5. lippu vähentää napautettavien määrää`,
-    k.osumia + k.naapurimerkkeja > k.osumia, `${k.osumia}`);
+  /*
+   * 4b. POLTTO ON MAAKOHTAINEN, JOTEN NAAPURILLA EI OLE POLTETTUJA
+   * (mitattu 20.9.2026; raportti docs/raportit/viesti-fable-
+   * savuke-nostoklikkaus-20260920.md).
+   *
+   * Vanha vastakoe vaati, että naapurin POLTETTUJA merkkejä on olemassa
+   * ja että lippu vain piilottaa ne. Se oli totta silloin kun nostotaso
+   * oli yksi maailmanlaajuinen kerros. Nyt laattaluettelo antaa vain
+   * KOHDEMAAN kirjauksen (js/laattapyramidi.js, nostotasot[ISO]), joten
+   * `pallonNostoOnPoltettu` on naapurin merkeille aina epätosi —
+   * mitattu Ranskassa: ESP 55 merkkiä / 0 poltettua, DEU 57 / 0,
+   * ITA 51 / 0, kun kohdemaalla on 60 poltettua 89:stä.
+   *
+   * Vastakoe mittaa siksi sitä, mikä on yhä totta ja mikä on väitteen 4
+   * ehto: naapurin merkit ovat datassa, mutta kartalle ne eivät tule.
+   * VANHA VÄITE 5 (lippu vähentää napautettavien määrää) POISTUI samasta
+   * syystä: naapurireitti ei tuota rivejä, joten lipulla ei ole mitään
+   * vähennettävää eikä luku mittaisi enää lippua.
+   */
+  vaadi(`${nimi}: 4b. VASTAKOE — naapurin merkit ovat datassa, mutta poltto on maakohtainen`,
+    k.naapurimerkkeja === 0 && k.naapurinMerkkeja > 0,
+    JSON.stringify({ poltettuja: k.naapurimerkkeja, merkkeja: k.naapurinMerkkeja }));
 
   /*
    * 6. MERINOSTO PYSYY NAPAUTETTAVANA MYÖS LÄHIZOOMISSA (omistaja
@@ -419,15 +489,29 @@ for (const koko of RUUDUT) {
    */
   const meri = await sivu.evaluate(async () => {
     const l = window.matkakirja.ui.pallolauta;
-    l.pallo.pointOfView({ lat: 45.199962, lng: -1.14248, altitude: 0.05 }, 600);
-    await new Promise((r) => setTimeout(r, 2200));
-    l.ladoHeti();
-    await new Promise((r) => setTimeout(r, 900));
-    const kotelo = document.querySelector('.pallo-kotelo')?.getBoundingClientRect()
-      ?? { left: 0, top: 0, width: 0, height: 0 };
-    const ruudulla = (p) => Boolean(p && p.x >= 0 && p.y >= 0
-      && p.x <= kotelo.width && p.y <= kotelo.height);
-    const data = ruudulla(l.pallo.getScreenCoords(45.3, -3.2, 0));
+    const kotelo0 = () => (document.querySelector('.pallo-kotelo')?.getBoundingClientRect()
+      ?? { left: 0, top: 0, width: 0, height: 0 });
+    const nakyy = (p, k) => Boolean(p && p.x >= 0 && p.y >= 0 && p.x <= k.width && p.y <= k.height);
+    /*
+     * ZOOMATAAN, KUNNES DATAPISTE ON RUUDUN ULKOPUOLELLA. Leveällä
+     * ruudulla sama korkeus näyttää enemmän karttaa, joten kiinteä
+     * 0,05 jätti lahden ulapan vielä ruudulle eikä väite mitannut
+     * mitään (mitattu 1400 px). Premissi tehdään siis todeksi
+     * mittaamalla, ei arvaamalla.
+     */
+    let data = true;
+    for (const korkeus of [0.05, 0.035, 0.025, 0.018]) {
+      l.pallo.pointOfView({ lat: 45.199962, lng: -1.14248, altitude: korkeus }, 600);
+      // eslint-disable-next-line no-await-in-loop
+      await new Promise((r) => setTimeout(r, 2200));
+      l.ladoHeti();
+      // eslint-disable-next-line no-await-in-loop
+      await new Promise((r) => setTimeout(r, 900));
+      data = nakyy(l.pallo.getScreenCoords(45.3, -3.2, 0), kotelo0());
+      if (!data) break;
+    }
+    const kotelo = kotelo0();
+    const ruudulla = (p) => nakyy(p, kotelo);
     const o = (l.nostot?.osumat?.() ?? []).find((x) => x.id === 'biskajanlahti');
     if (!o) return { listalla: false, dataRuudulla: data };
     const p = l.pallo.getScreenCoords(o.lat, o.lng, 0);

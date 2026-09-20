@@ -55,6 +55,23 @@
 # koodirivi: PALLO_LAATTATUNNISTE (tai PALLO_LAATTAVERSIO, jos pohjan
 # versio vaihtui).
 #
+# TAMA SAANTO KOSKEE MYOS LUETTELON JULKAISUA YKSINAAN (20.9.2026).
+#
+# Saanto on ollut tassa yllä alusta asti, mutta se luetaan POLTON
+# ohjeena — ja 20.9.2026 klo 09.34 luettelo vietiin ampariin ILMAN
+# polttoa: viivataso oli poltettu versioon 2026-09-20c-viivat, uusi
+# luettelo vietiin, mutta pallon sarja oli yha poltettu versiosta
+# 2026-09-20-viivat. Lepokerros sammui tuotannossa kokonaan
+# (js/pallolaatat.js lepokerroksenKerrokset palauttaa null, kun
+# laatat.json:in `viivat` ei ole sama kuin luettelon viivataso.versio),
+# ja edellinen luettelo jouduttiin palauttamaan.
+#
+# ELI: pallon sarja ei ole POLTON vaan JULKAISUN ehto. Luetteloa ei saa
+# vieda ampariin, ennen kuin sita vastaava pallosarja on amparissa ja
+# js/pallo.js osoittaa siihen. Jarjestys on aina: laatat -> pallosarja
+# -> VASTA SITTEN luettelo (sama jarjestys kuin polta_nostot_ja_pallo
+# tekee automaattisesti).
+#
 # UUSI NOSTOVERSIO POLTTAA KOKO KERROKSEN, EI VAIN z8:AA. Luettelon
 # nostot-taulu (tunnus -> tiiviste) lasketaan nykyisestä reposta, ja
 # peli vaientaa elävästä kerroksesta jokaisen merkin, jonka se löytää
@@ -201,7 +218,11 @@ Käyttö: tools/polta-paikallisesti.sh [valitsimet]
                              js/pallovektorit.js)
   --vain-pallo               polta VAIN pallon sarja (ei pyramidia eikä
                              luetteloa); sama kuin --sarjat pallo
-  --pallo-ilman-nostoja      pallon sarja ilman nostotasoa (nostot maittain
+  --pallon-nostot            polta pallon sarjaan MYÖS nostotaso (oletus:
+                             ei — tuotanto lukee nostot lepokerroksesta,
+                             ja poltettuna ne piirtyisivät kahdesti)
+  --pallo-ilman-nostoja      sama kuin oletus; jätetty yhteensopivuuden
+                             vuoksi (nostot maittain
                              lepokerroksesta; PAATOKSET 34 kohta 17 d)
   --pallo-osia N             pallon sarjan shardeja (oletus: ytimet × 3;
                              yksi osa on kielletty monen ytimen koneella)
@@ -272,8 +293,14 @@ PALLON_RANTA=0; VAIN_PALLO=0; PALLO_OSIA=""; PALLO_TASOT="0-8"; NOUTOVALI=""
 # Pallon sarja ILMAN nostoja (omistaja 18.9.2026, PAATOKSET 34 kohta 17 d):
 # nostot piirtyvat maittain lepokerroksesta (js/pallolaatat.js
 # nostotMaittain), vedon aikana pallon tekstuurissa ei ole minkaan maan
-# nostoja. Lippu PALLON_NOSTOT="--nostot" on vanha kaytos.
-PALLON_NOSTOT="--nostot"
+# nostoja.
+#
+# OLETUS ON NYT SAMA KUIN TUOTANNOSSA (korjattu 20.9.2026, Fablen
+# paatos). Oletus oli "--nostot" eli vanha kaytos, ja 20.9.2026 se poltti
+# uuden pallosarjan nostojen kanssa: jokainen nosto olisi piirtynyt
+# kahdesti, poltettuna laatassa ja elavana lepokerroksesta. Nostojen
+# poltto vaatii nyt lipun --pallon-nostot.
+PALLON_NOSTOT=""
 # YKSI AJO ILMAN VÄLITILAA (omistaja 18.9.2026, ks. polta_nostot_ja_pallo).
 YKSI_AJO=0; PALLO_LUETTELO=""; PALLON_LAHDE=""; EI_LAHDETTA=0
 # Ylikirjoitussuoja pallon sarjalle (ks. polta_pallo).
@@ -321,6 +348,7 @@ while [ $# -gt 0 ]; do
     --vain-pallo) VAIN_PALLO=1; PALLO=1; shift ;;
     --pallo-osia) PALLO_OSIA="$2"; shift 2 ;;
     --pallo-ilman-nostoja) PALLON_NOSTOT=""; shift ;;
+    --pallon-nostot) PALLON_NOSTOT="--nostot"; shift ;;
     --pallo-tasot) PALLO_TASOT="$2"; shift 2 ;;
     --nostot-ja-pallo) YKSI_AJO=1; shift ;;
     --pallon-lahde) PALLON_LAHDE="$2"; shift 2 ;;
@@ -898,6 +926,32 @@ lopetus () {
 }
 
 # --------------------------------------------------------- yhden ajo
+# ══ VALMIS-MERKKI TUNTEE VERSION (korjattu 20.9.2026) ═══════════════
+#
+# Merkki oli `lokit/<shardi>.valmis` ja shardin nimi on sama versiosta
+# riippumatta, joten uusi versio ohitti vanhat shardit "valmiina" — ja
+# olisi julistanut vanhat laatat uudeksi versioksi (mitattu 20.9.2026:
+# hahmotelmilla poltettu nostotaso olisi mennyt versioon 2026-09-20b).
+# Merkkiin kirjoitetaan siksi ajon TUNNUS, ja ohitus vaatii, että se on
+# sama; muuten shardi ajetaan uudestaan ja syy sanotaan ääneen.
+ajon_tunnus () {
+  printf '%s/%s/%s/%s/r%s/h%s/p%s/n%s' \
+    "${VERSIO:-}" "${VIIVAVERSIO:-}" "${NOSTOVERSIO:-}" "${RANTAVERSIO:-}" \
+    "${ILMAN_RANTAVIIVAA:-0}" "${HAHMOTELMAT:-0}" \
+    "${PALLOTUNNISTE:-}" "${PALLON_NOSTOT:-}"
+}
+
+# Onko shardin valmis-merkki tästä samasta ajosta?
+valmis_tasmaa () {
+  local nimi="$1" tiedosto="$ULOS/lokit/$1.valmis" merkitty
+  [ -f "$tiedosto" ] || return 1
+  merkitty="$(awk '{ print $3 }' "$tiedosto")"
+  [ -n "$merkitty" ] || { echo "· $nimi: valmis-merkki on vanhasta muodosta — ajetaan uudestaan"; return 1; }
+  [ "$merkitty" = "$(ajon_tunnus)" ] && return 0
+  echo "· $nimi: valmis-merkki on eri ajosta ($merkitty) — ajetaan uudestaan"
+  return 1
+}
+
 shardin_yritys () {
   local nimi="$1" kansio="$2" args="$3" loki="$4" yritys="$5" alkoi="$6"
   # TYHJÄ KANSIO JOKAISEEN YRITYKSEEN. Shardi piirtää aina koko
@@ -957,7 +1011,7 @@ shardin_yritys () {
     fi
     if [ "$SIIVOA" -eq 1 ]; then rm -rf "$kansio"; fi
   fi
-  printf '%s %s\n' "$laattoja" "$kesto" > "$ULOS/lokit/$nimi.valmis"
+  printf '%s %s %s\n' "$laattoja" "$kesto" "$(ajon_tunnus)" > "$ULOS/lokit/$nimi.valmis"
   tila_kirjoita "$nimi" valmis "$laattoja" "$laattoja" "$alkoi" "$yritys" "$loki"
   return 0
 }
@@ -1273,7 +1327,7 @@ pallon_yritys () {
     fi
     if [ "$SIIVOA" -eq 1 ]; then rm -rf "$kansio"; fi
   fi
-  printf '%s %s\n' "$laattoja" "$kesto" > "$ULOS/lokit/$nimi.valmis"
+  printf '%s %s %s\n' "$laattoja" "$kesto" "$(ajon_tunnus)" > "$ULOS/lokit/$nimi.valmis"
   tila_kirjoita "$nimi" valmis "$laattoja" "$laattoja" "$alkoi" "$yritys" "$loki"
   return 0
 }
@@ -1395,7 +1449,7 @@ polta_pallo () {
   echo pallo > "$ULOS/lokit/vaihe.txt"
   local nimi
   for nimi in $(pallon_shardit); do
-    if [ "$UUDESTAAN" -eq 0 ] && [ -f "$ULOS/lokit/$nimi.valmis" ]; then
+    if [ "$UUDESTAAN" -eq 0 ] && valmis_tasmaa "$nimi"; then
       echo "· ohitetaan valmis shardi $nimi"
       continue
     fi
@@ -1558,7 +1612,7 @@ polta_nostot_ja_pallo () {
   local nimi
   while IFS='|' read -r nimi _; do
     [ -n "$nimi" ] || continue
-    if [ "$UUDESTAAN" -eq 0 ] && [ -f "$ULOS/lokit/$nimi.valmis" ]; then
+    if [ "$UUDESTAAN" -eq 0 ] && valmis_tasmaa "$nimi"; then
       echo "· ohitetaan valmis shardi $nimi"
       continue
     fi
@@ -1591,7 +1645,8 @@ EOF
   kokoa_luettelo
   # Maittaiset nostotasot shardeista luetteloon (luettelojobi ei tunne maita).
   node "$JUURI/tools/kokoa-nostotasot.mjs" --ulos "$ULOS" \
-    --luettelo "$ULOS/luettelo/pyramidi.json" || return 1
+    --luettelo "$ULOS/luettelo/pyramidi.json" \
+    --ampari "$ULOS/ampari-luettelo.json" --pohja-ennallaan || return 1
   tarkista_eheys "$ULOS/lokit/shardit.txt" --luettelo "$ULOS/luettelo/pyramidi.json" \
     || return 1
   # Nostotasoajo tuntee vain nostotason; muut kentät kannetaan ämpärin
@@ -1817,7 +1872,7 @@ shardit | awk -F'|' '{ print $1 }' > "$ULOS/lokit/shardit.txt"
 echo pyramidi > "$ULOS/lokit/vaihe.txt"
 while IFS='|' read -r nimi _; do
   [ -n "$nimi" ] || continue
-  if [ "$UUDESTAAN" -eq 0 ] && [ -f "$ULOS/lokit/$nimi.valmis" ]; then
+  if [ "$UUDESTAAN" -eq 0 ] && valmis_tasmaa "$nimi"; then
     echo "· ohitetaan valmis shardi $nimi"
     continue
   fi
@@ -1870,8 +1925,12 @@ if [ "$LUETTELO" -eq 1 ]; then
   # vasten: mitattu 18.9.2026 *"poltettu 425, luettelo lupaa 251"*.
   # Sama kokoaminen tähän, samaan kohtaan ennen tarkistusta.
   if grep -q '^nosto-' "$ULOS/lokit/shardit.txt" 2>/dev/null; then
+    # ÄMPÄRIN LUETTELO MUKAAN: varitasot ja erat kannetaan eteenpäin, ja
+    # pelkässä nostoajossa myös pohjan kenttä (ks. kokoa-nostotasot.mjs).
     node "$JUURI/tools/kokoa-nostotasot.mjs" --ulos "$ULOS" \
-      --luettelo "$ULOS/luettelo/pyramidi.json" || exit 1
+      --luettelo "$ULOS/luettelo/pyramidi.json" \
+      --ampari "$ULOS/ampari-luettelo.json" \
+      $( [ "$SARJAT" = "nostot" ] && echo --pohja-ennallaan ) || exit 1
   fi
   # EHEYS ENNEN VIENTIÄ: luettelo lupaa laatat, joten se viedään vasta
   # kun laatat on laskettu ja luvut täsmäävät.

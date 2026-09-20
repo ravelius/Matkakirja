@@ -1740,22 +1740,11 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
      * joskus alkavat sekoittua maareitteihin, syy on tässä luvussa
      * eikä reittien musteessa.
      */
-    const JOKI_PAA = 2.6;
-    const JOKI_SIVU = 1.9;
-    if (sisalto.joet?.length) {
-      ctx.save();
-      ctx.lineJoin = 'round';
-      ctx.lineCap = 'round';
-      ctx.strokeStyle = 'rgba(120,130,138,0.72)';
-      for (const joki of sisalto.joet) {
-        // Pääjoki on leveämpi; kaikki uomat piirretään joka tasolla.
-        ctx.lineWidth = (joki.tarkeys <= 1 ? JOKI_PAA : JOKI_SIVU) * R;
-        // Pehmeä käyrä pisteiden läpi, ei murtoviiva — ks. lautaKaari.
-        lautaKaari(ctx, [joki.pisteet]);
-        ctx.stroke();
-      }
-      ctx.restore();
-    }
+    // Sama funktio kuin viivatasolla (ks. JOET OVAT VIIVATASOLLA):
+    // pohja saa tyhjän listan, kun joet on siirretty viivatasolle.
+    piirraJoetKankaalle(ctx, sisalto, {
+      lautaKuvaX, lautaKuvaY, R, GW,
+    });
 
     /* --- reitit: pelilaudan rata askelmineen ------------------------
      *
@@ -1765,9 +1754,12 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
      * askelhelmet ovat `piirraReititKankaalle`-funktion johdannossa.
      *
      * PYRAMIDIN POHJA-AJO ANTAA TYHJÄT LISTAT (sisalto.reitit = [],
-     * lentoreitit = []): rata on siellä viivatasolla. JOET JÄÄVÄT
-     * POHJAAN (yllä) — joki on maastoa eikä rataa, eikä sitä ole
-     * tarpeen polttaa uudestaan silloin kun reittiverkko muuttuu.
+     * lentoreitit = [], ja 20.9.2026 alkaen myös joet = []): rata ja
+     * uomat ovat viivatasolla. Joet olivat pohjassa siksi, että joki
+     * on maastoa eikä rataa — mutta se maksoi koko pohjapyramidin
+     * uudelleenpolton joka kerta kun jokiaineisto korjataan (Fablen
+     * päätös 20.9.2026; tools/generoi-laattapyramidi.mjs, osio JOET
+     * SIIRTYIVÄT VIIVATASOLLE).
      */
     piirraReititKankaalle(ctx, sisalto, {
       lautaKuvaX, lautaKuvaY, px, P, R, GX, GY, W, H, GW,
@@ -2892,6 +2884,85 @@ export const REITTITYYLI = Object.freeze({
  *   W, H, GW, kierros }
  * @param {object} [tyyli] REITTITYYLIn osittainen korvaus
  */
+/*
+ * ══ JOET OVAT VIIVATASOLLA, JOTEN PIIRTO ON JAETTU ══════════════════
+ *
+ * Uomat piirrettiin ennen vain pohjan passissa (osio 8b). Kun joet
+ * siirtyivät viivatasolle 20.9.2026, pohja sai tyhjän jokilistan JA
+ * viivatason oma piirtäjä (`piirraViivataso`) ei tuntenut jokia
+ * lainkaan — kartalta katosivat kaikki uomat (Sonnet 1:n kierros 18
+ * v1973:lla: *"Ranskan pelikartalla ei näy jokiviivoja millään
+ * zoomilla"*). Sama funktio piirtää ne nyt molemmissa passeissa, joten
+ * muste ja käyrä eivät voi erota toisistaan.
+ *
+ * KÄYRÄ ON SAMA KUIN POHJASSA: epätasavälinen Catmull-Rom (alpha 0,5)
+ * pisteiden LÄPI, ei murtoviiva, ja sauman yli menevä hyppy katkaisee
+ * jakson kuten reiteillä.
+ */
+export const JOKITYYLI = Object.freeze({
+  paa: 2.6, sivu: 1.9, muste: 'rgba(120,130,138,0.72)',
+});
+
+export function piirraJoetKankaalle(ctx, sisalto, mitta) {
+  const {
+    lautaKuvaX, lautaKuvaY, R, GW,
+  } = mitta;
+  if (!sisalto?.joet?.length) return 0;
+  const kaari = (viivat) => {
+    ctx.beginPath();
+    const jakso = (p) => {
+      if (p.length < 2) return;
+      ctx.moveTo(p[0][0], p[0][1]);
+      if (p.length === 2) { ctx.lineTo(p[1][0], p[1][1]); return; }
+      for (let i = 0; i < p.length - 1; i += 1) {
+        const p0 = p[i === 0 ? 0 : i - 1];
+        const p1 = p[i];
+        const p2 = p[i + 1];
+        const p3 = p[i + 2 < p.length ? i + 2 : p.length - 1];
+        const d1 = Math.sqrt(Math.hypot(p1[0] - p0[0], p1[1] - p0[1]));
+        const d2 = Math.sqrt(Math.hypot(p2[0] - p1[0], p2[1] - p1[1]));
+        const d3 = Math.sqrt(Math.hypot(p3[0] - p2[0], p3[1] - p2[1]));
+        if (d2 === 0) { ctx.lineTo(p2[0], p2[1]); continue; }
+        const a = d1 > 0
+          ? [0, 1].map((k) => (d1 * d1 * p2[k] - d2 * d2 * p0[k]
+              + (2 * d1 * d1 + 3 * d1 * d2 + d2 * d2) * p1[k]) / (3 * d1 * (d1 + d2)))
+          : [p1[0], p1[1]];
+        const b = d3 > 0
+          ? [0, 1].map((k) => (d3 * d3 * p1[k] - d2 * d2 * p3[k]
+              + (2 * d3 * d3 + 3 * d3 * d2 + d2 * d2) * p2[k]) / (3 * d3 * (d3 + d2)))
+          : [p2[0], p2[1]];
+        ctx.bezierCurveTo(a[0], a[1], b[0], b[1], p2[0], p2[1]);
+      }
+    };
+    for (const viiva of viivat) {
+      let osa = [];
+      let edellinen = null;
+      for (let i = 0; i < viiva.length; i += 1) {
+        const x = lautaKuvaX(viiva[i][0]);
+        const y = lautaKuvaY(viiva[i][1]);
+        if (edellinen !== null && Math.abs(x - edellinen) > GW / 2) { jakso(osa); osa = []; }
+        osa.push([x, y]);
+        edellinen = x;
+      }
+      jakso(osa);
+    }
+  };
+  ctx.save();
+  ctx.lineJoin = 'round';
+  ctx.lineCap = 'round';
+  ctx.strokeStyle = JOKITYYLI.muste;
+  let piirretty = 0;
+  for (const joki of sisalto.joet) {
+    // Pääjoki on leveämpi; kaikki uomat piirretään joka tasolla.
+    ctx.lineWidth = (joki.tarkeys <= 1 ? JOKITYYLI.paa : JOKITYYLI.sivu) * R;
+    kaari([joki.pisteet]);
+    ctx.stroke();
+    piirretty += 1;
+  }
+  ctx.restore();
+  return piirretty;
+}
+
 export function piirraReititKankaalle(ctx, sisalto, mitta, tyyli = null) {
   const {
     lautaKuvaX, lautaKuvaY, px, P, R, GX, GY, W, H, GW, kierros,
@@ -3869,6 +3940,12 @@ export function piirraViivataso(canvas, asetukset) {
   if (P_.piirit !== false) {
     piirraErikoispiiritKankaalle(ctx, {
       S, P, GW, yYla, yAla, kuvaX, kuvaY, lautaLat, bbox,
+    });
+  }
+  if (P_.joet !== false && sisalto) {
+    // JOET ENNEN REITTEJÄ: rata kulkee uoman yli, kuten pohjassakin.
+    piirraJoetKankaalle(ctx, sisalto, {
+      lautaKuvaX, lautaKuvaY, R, GW,
     });
   }
   if (P_.reitit !== false && sisalto) {

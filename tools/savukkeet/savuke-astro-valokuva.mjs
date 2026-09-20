@@ -790,6 +790,13 @@ async function ajaNakyma(nakymanNimi) {
         const el = document.querySelector('.pollo-nappi');
         return el ? getComputedStyle(el).visibility : 'ei-nappia';
       })(),
+      // Astronauttiasu (Codexin toimitus 20.9.2026): bodyn luokka ja
+      // kypärä paperinuken päässä — sekä isossa pulussa että minipulussa.
+      astronauttiLuokka: document.body.classList.contains('livia-astronautti-paalla'),
+      kyparoita: document.querySelectorAll('[data-part="astronautti-kypara"]').length,
+      minipulunKypara: Boolean(document.querySelector(
+        '.satelliitti-pulunappi [data-part="astronautti-kypara"]',
+      )),
     };
   });
   vaadi(nimessa('minipulu kelluu ruudun oikeassa alakulmassa ≤ 16 px reunoista'),
@@ -853,12 +860,25 @@ async function ajaNakyma(nakymanNimi) {
    * mittasi siis vain omaa koekappalettaan, joten se on poistettu.
    */
   /*
-   * VASTAKOE: pelin ISO pulu on yhä piilossa (`aikajana-pulu-piilossa`),
-   * eli minipulun näkyvyys ei tullut purkamalla linssin piilotusta.
+   * PULUA EI ENÄÄ PIILOTETA — SE PUKEUTUU (Codexin toimitus 20.9.2026,
+   * PAATOKSET 53). Linssi piilotti ennen pelin ison pulun
+   * (`aikajana-pulu-piilossa`), ja tämä vastakoe vartioi sitä. Codex
+   * poisti koko `piilotaPulu`-mekanismin ja pollo-importit
+   * js/linssit/satelliitti.js:stä: asu on nyt bodyn luokka
+   * `livia-astronautti-paalla`, ja sama paperinukke saa kypärän niin
+   * chatissa kuin minipulussakin. Mitta seuraa uutta suunnittelua:
+   * asu on päällä, kypärä on ruudulla, ja se on MYÖS minipulussa —
+   * jälkimmäinen on se kohta, joka puuttui Codexin haarasta (minipulu
+   * rakentaa SVG-asentonsa itse, js/minipulu.js).
    */
-  vaadi(nimessa('vastakoe: pelin iso pulu on yhä piilossa'),
-    pulu.puluPiilossa === true && pulu.isoPulu !== 'visible',
-    JSON.stringify({ luokka: pulu.puluPiilossa, isoPulu: pulu.isoPulu }));
+  vaadi(nimessa('astronauttiasu on päällä eikä pulua piiloteta'),
+    pulu.astronauttiLuokka === true && pulu.kyparoita > 0,
+    JSON.stringify({
+      asu: pulu.astronauttiLuokka, kyparoita: pulu.kyparoita, isoPulu: pulu.isoPulu,
+    }));
+  vaadi(nimessa('minipulu on samassa kypärässä kuin iso pulu'),
+    pulu.minipulunKypara === true,
+    JSON.stringify({ minipulunKypara: pulu.minipulunKypara, kyparoita: pulu.kyparoita }));
   await kaappaa('minipulu');
 
   /* --- 9b: PULUN NORMAALI CHATTI (LISÄYS 10, kohta 29) -------------- */

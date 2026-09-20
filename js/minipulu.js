@@ -1,4 +1,5 @@
 import { livianSvgAsento, livianSvgKuva } from './livia-svg.js';
+import { LIVIAN_ASTRONAUTTI_LUOKKA } from './livia-astronautti.js';
 
 let sarja = 0;
 
@@ -39,6 +40,16 @@ export function luoMinipulu(container, { koko = 'auto', suunta = 'vasen' } = {})
   function piirra(p = 0) {
     if (tuhottu) return;
     const s = livianSvgAsento('blink', 0);
+    /*
+     * KYPÄRÄ MYÖS MINIPULUSSA (Codexin astronauttiasu + PAATOKSET 53,
+     * 20.9.2026). Kokopulun kasvot lukevat asun bodyn luokasta
+     * (js/livia-eleet.js), mutta minipulu rakentaa asentonsa itse eikä
+     * kulkenut sitä kautta — valokuvanäkymässä kuplan pulu oli
+     * astronautti ja kulman minipulu paljain päin. Sama luokka, sama
+     * lähde, ei omaa lippua kutsujalle.
+     */
+    const doc = elementti.ownerDocument ?? globalThis.document ?? null;
+    s.astronautti = Boolean(doc?.body?.classList?.contains?.(LIVIAN_ASTRONAUTTI_LUOKKA));
     if (tila === 'look' || (tila === 'reaction' && p > 0 && p < 1)) {
       s.frame = 'up';
     }

@@ -846,10 +846,9 @@ export const FOKUSVIRTA_ISTANBUL = {
        * KAIVAUS, Ateenan syvennystäky on TALO ja Kreikan täkynosto
        * `sofia-korut` on SEURAUKSET (js/fokusnosto.js NOSTO_MAAT.GRC).
        */
-      lahde: 'en-Wikipedia "Troy", osiot "Heinrich Schliemann", '
-        + '"Troy III–V" ja "Wilhelm Dörpfeld" (tarkistettu 25.8.2026 '
-        + 'työaineistoon docs/mantereet-tyoaineisto/takynostot-turkki.md, '
-        + 'ehdokas 6; lähderivi kirjattu korttiin 1.9.2026).',
+      lahde: 'en-Wikipedia "Troy", osiot "Heinrich Schliemann", "Troy III–V" ja '
+        + '"Wilhelm Dörpfeld" (tarkistettu 25.8.2026; lähderivi kirjattu korttiin '
+        + '1.9.2026).',
       /*
        * PÄÄKUVAKSI LOISTOAIKA (28.8.2026, sama malli kuin Sofian
        * areenalla ja Kreikan kahdella nostolla): repon oma generoitu

@@ -352,7 +352,32 @@ export const KOROSTUS_PEITTO = 1;
  * TUMMENNUS_VIIVA); pallolla saaret piirtyvät laatoista eri
  * mittakaavassa eikä sama mittaus päde.
  */
-export const VEKTORIT_KOROSTUS_LEVEYS_CSS = [3.2, 5];
+/*
+ * KAUKOPÄÄ 3,2 → 1,6 css-px (Sonnet 1, kierros 18, 20.9.2026:
+ * *"Tanskan ja Viron ääriviiva on kaukokuvassa paksu musta möykky"*).
+ *
+ * MITATTU SYY: kaukokuvassa (tiheys 20 laitepx/aste) kehän janojen
+ * mediaanipituus on 1,1 laitepikseliä ja 43 % janoista on alle
+ * pikselin, kun viiva oli 9,6 laitepikseliä leveä (3,2 css × dpr 3).
+ * Viiva oli siis YHDEKSÄN KERTAA janaa pidempi kuin jana itse — ja
+ * saarivaltiolla (Tanska 15 rengasta, Viro 5) päällekkäiset janat
+ * täyttivät maan umpeen. Lähipäässä sama luku on 5 css-px eikä siinä
+ * ole vikaa: siellä jana on 5 laitepikseliä pitkä.
+ *
+ * 1,6 css-px on kaukopäässä kaksi kertaa rantaviivan leveys (0,8) —
+ * kehä erottuu yhä korostukseksi mutta ei enää ole leveämpi kuin
+ * kuvio, jota se seuraa.
+ */
+export const VEKTORIT_KOROSTUS_LEVEYS_CSS = [1.6, 5];
+/**
+ * PIENIN PIIRRETTÄVÄ RENGAS laitepikseleinä (sama havainto). Rengas,
+ * jonka laatikon lävistäjä on ruudulla tätä pienempi, ei piirrä muotoa
+ * vaan pisteen: Tanskan pikkusaaret olivat kaukokuvassa pelkkää
+ * mustetta. Raja on kaksi kertaa kaukopään viivanleveys (1,6 css ×
+ * dpr), eli rengas jätetään pois vasta kun se mahtuisi kokonaan oman
+ * viivansa sisään.
+ */
+export const KOROSTUKSEN_PIENIN_RENGAS_PX = 10;
 /**
  * Korostus piirtyy rannikkoviivan ja rajojen ALLE (ks. KOROSTUS ON
  * SÄDEKEHÄ yllä): läpinäkyvien jonossa pienempi luku piirtyy ensin,
@@ -691,14 +716,35 @@ export const NAULAUKSEN_TOLERANSSI_ASTETTA = 0.015;
 export const NAULAUKSEN_AUKON_RAJA_ASTETTA = 0.5;
 export const NAULAUKSEN_MUTKAN_RAJA_ASTETTA = 2;
 /**
- * MILLOIN NAULATAAN. Naulaus maksaa: koko Ranskan rannikko tarkimmalla
- * tasolla (87 000 kärkeä) on mitattuna 65 ms, eli kehysbudjetin yli.
- * Kaksoisviiva taas näkyy vasta, kun aineistojen ero (p95 445 m) on yli
- * puoli pikseliä — se on noin 120 laitepikseliä astetta kohti. Sitä
- * karkeammassa näkymässä naulaus jätetään tekemättä: viiva on silloin
- * pikselin sisällä sama, ja korostus piirtyy kuten ennen.
+ * MILLOIN NAULATAAN.
+ *
+ * KAKSI KERTAA VÄÄRIN, NYT MITATTU OIKEIN (20.9.2026).
+ *
+ * Portti oli ensin 120 (laskettu aineistojen p95-erosta 445 m) ja
+ * sitten 30 (laskettu maksimipoikkeamasta 3 939 m). MOLEMMAT LUVUT
+ * OLIVAT MITTARIN HARHAA: ne mittasivat kehän kärjen etäisyyttä
+ * rantaviivan lähimpään KÄRKEEN, ja pitkän rantajanan keskikohta on
+ * satoja metrejä lähimmästä kärjestä vaikka se on täsmälleen viivalla.
+ * Oikea mitta on etäisyys lähimpään JANAAN, ja sillä ero on:
+ *
+ *   FRA  mediaani 62 m,  p95 141 m,  suurin 192 m
+ *   DNK  mediaani 49 m,  p95 112 m,  suurin 140 m
+ *   EST  mediaani 44 m,  p95 108 m,  suurin 141 m
+ *   GRC  mediaani 65 m,  p95 145 m,  suurin 187 m (ompelun jälkeen)
+ *
+ * Yhden laitepikselin leveys on 111 320 m / tiheys, joten 190 metrin
+ * ero täyttää pikselin vasta tiheydellä 586 px/aste. Kolmesataa on
+ * siitä puolet: siinä ero on noin puoli pikseliä, eli juuri se raja,
+ * jossa kaksi viivaa alkaa erottua toisistaan. Sitä karkeammassa
+ * näkymässä naulaus ei paranna kuvaa mutta maksaa (ks. hinta alla) —
+ * ja portti 30 teetti sitä koko ajan.
+ *
+ * HINTA: naulaus on mitattuna 29…83 ms koko Ranskan rannikolle tason
+ * mukaan. Tiheydellä 300 kerroksella on tarkka taso muistissa, mutta
+ * vain näkyvä alue — ja vaimennus (NAULAUKSEN_VAIMENNUS_MS) pitää
+ * huolen siitä, ettei naulausta rakenneta joka kehyksellä.
  */
-export const NAULAUKSEN_TIHEYS_RAJA = 120;
+export const NAULAUKSEN_TIHEYS_RAJA = 300;
 /** Naulausta ei rakenneta useammin kuin tämän välein (ms). */
 export const NAULAUKSEN_VAIMENNUS_MS = 400;
 
@@ -1257,6 +1303,24 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
     return n;
   }
 
+  /**
+   * Piirtyykö rengas muotona vai pelkkänä mustepisteenä? Laatikon
+   * lävistäjä ruudulla = asteet × tiheys (laitepikseliä astetta kohti).
+   */
+  function rengasNakyy(rengas) {
+    if (!tiheys || !Array.isArray(rengas) || rengas.length < 2) return true;
+    let lon0 = Infinity; let lat0 = Infinity; let lon1 = -Infinity; let lat1 = -Infinity;
+    for (const [lon, lat] of rengas) {
+      if (lon < lon0) lon0 = lon;
+      if (lon > lon1) lon1 = lon;
+      if (lat < lat0) lat0 = lat;
+      if (lat > lat1) lat1 = lat;
+    }
+    const kerroin = Math.max(0.05, Math.cos((lat0 + lat1) / 2 * Math.PI / 180));
+    const lavistaja = Math.hypot((lon1 - lon0) * kerroin, lat1 - lat0) * tiheys;
+    return lavistaja >= KOROSTUKSEN_PIENIN_RENGAS_PX;
+  }
+
   /** Onko näkymä niin tarkka, että kaksoisviiva näkyisi? (ks. raja) */
   const naulattava = () => tiheys >= NAULAUKSEN_TIHEYS_RAJA;
 
@@ -1271,13 +1335,29 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
      * rannikon janat rannikkoaineistosta. Ilman ladattuja rannikkosoluja
      * korostus on entisellään.
      */
+    /*
+     * PIKKURENKAAT POIS KAUKOKUVASSA (ks. KOROSTUKSEN_PIENIN_RENGAS_PX).
+     * Mitta on renkaan laatikon lävistäjä ruudulla: asteet × tiheys.
+     */
+    const nakyvatRenkaat = renkaat.filter((r) => rengasNakyy(r));
+    if (!nakyvatRenkaat.length) return;
     const rannikot = naulattava() ? rannikkoviivat() : [];
-    const naulaus = naulaaKorostus(renkaat, rannikot);
+    const naulaus = naulaaKorostus(nakyvatRenkaat, rannikot);
     korostus.naulattuHetki = nyt();
     korostus.rannikkoja = rannikot.length;
     mittarit.korostusPudotettuja = naulaus.pudotettuja;
     mittarit.korostusRannikkojanoja = naulaus.rannikkojanoja;
-    const viivat = harvennaViivat(naulaus.viivat, harvennus);
+    /*
+     * KOROSTUS HARVENNETAAN TÄSMÄLLEEN KUTEN RANNIKKOSOLU (korjaus
+     * 20.9.2026). Solu ohittaa harvennuksen, kun aineiston oma
+     * toleranssi on jo karkeampi kuin porras (ks. rakenna), mutta
+     * korostus harvennettiin aina portaalla — naulattu rannikko-osuus
+     * siis erkani piirretystä rantaviivasta uudelleen juuri siinä, mitä
+     * naulaus oli yhdistämässä. Sama sääntö molemmille.
+     */
+    const lodTol = luettelo?.lodit?.[mittarit.lod] ?? 0;
+    const porras = harvennus > lodTol ? harvennus : 0;
+    const viivat = harvennaViivat(naulaus.viivat, porras);
     const { paikat, janoja } = vektorijanat(viivat, sade());
     korostus.janoja = janoja;
     korostus.harvennus = harvennus;
