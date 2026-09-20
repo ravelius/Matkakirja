@@ -46,7 +46,9 @@
     "savuke-astro-pallo.mjs#vartija-b",
     "savuke-ihmisen-kappaleet.mjs",
     "savuke-astro-valokuva.mjs",
-    "savuke-arvonimet.mjs"
+    "savuke-arvonimet.mjs",
+    "savuke-kartuscha-2.mjs",
+    "savuke-kartuscha-3.mjs"
   ],
   "harvaPolut": {
     "_kommentti": "PR:ssä harvan sarjan rivi ajetaan vain, jos PR:n muutetut tiedostot osuvat sen polkuihin (tools/savukkeet/valitse-harvat.mjs). Rivin oma savuketiedosto ja yhteiset apurit (YHTEISET) kuuluvat aina mukaan. * = mikä tahansa paitsi /, ** = mikä tahansa.",
@@ -147,6 +149,22 @@
       "js/packs/pollon-arvonimet.js",
       "js/fokuskohteet.js",
       "js/nostokuva.js"
+    ],
+    "savuke-kartuscha-2.mjs": [
+      "js/pallolauta/maapaneeli.js",
+      "js/pallolauta/lauta.js",
+      "js/liput.js",
+      "js/packs/lipputiedot.js",
+      "js/packs/radiot.js",
+      "css/styles.css"
+    ],
+    "savuke-kartuscha-3.mjs": [
+      "js/pallolauta/maapaneeli.js",
+      "js/pallolauta/lauta.js",
+      "js/liput.js",
+      "js/packs/lipputiedot.js",
+      "js/packs/radiot.js",
+      "css/styles.css"
     ]
   },
   "asetukset": {
@@ -381,6 +399,15 @@
     },
     "savuke-noppa-saapumisen-aikana.mjs": {
       "huomautus": "Nopanheiton kohteet jaavat ruudulle (Sonnetin puhelintesti v1952, Opus-era noppa-saapuminen 19.9.2026): sovitaSiirtokohteet zoomasi kameran ulos kohdemaan uloszoomauskaton yli, OrbitControlsin maxDistance kuristi korkeuden takaisin heti kun ajo lakkasi kirjoittamasta JA jatti panoroidun keskipisteen paikalleen - lahikuva tyhjaa maata, nappula ja kohteet ruudun ulkopuolella, vaihe jumissa 'move'issa myos tallennuksen yli. Chromium 5/5, WebKit 5/5, ~2 min; vastakoe ilman korjausta 2/5."
+    },
+    "savuke-kartuscha-2.mjs": {
+      "huomautus": "Harva (Fable 20.9.2026): kartuscha 2 - radio otsikon keskella, lippu otsikon perassa, vilkku haun ajan, kortin valit. Pariisi, 390 ja 1400 px, ampari Noden kautta. TUNNETTU PUNAINEN (mitattu 20.9.2026 puhtaalla prepilla): vartio 3 vaatii Ranskan lipulta lipputiedot, mutta LIPPUTIEDOT (js/packs/lipputiedot.js) kattaa vain Suomen ja Saksan -> Pariisissa lippu ei ole napautettava eika ikkuna aukea. Savukkeen oma vika (vaara maa), ei pelin; korjaus = mittaa vartio 3 maassa jolla on lipputiedot.",
+      "tunnetutPunaiset": [
+        "3 lipun napautus avaa lippuikkunan"
+      ]
+    },
+    "savuke-kartuscha-3.mjs": {
+      "huomautus": "Harva (Fable 20.9.2026): kartuscha 3 - pienessa ei lippua, lippu versaalin korkuinen, iso pienenee karttaa koskettaessa (napautus/veto/rulla), vastakoe kortin sisalle. ~70 s."
     }
   }
 }

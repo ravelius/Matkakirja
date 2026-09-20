@@ -119,7 +119,8 @@ peli.tokens.delete('pariisi');
 const tallenne = JSON.stringify(peli.toJSON());
 
 const selain = await chromium.launch({
-  executablePath: process.env.PW_CHROMIUM ?? '/opt/pw-browsers/chromium',
+  // CHROMIUM kuten muissa savukkeissa (aja-sarja.mjs periyttää sen); PW_CHROMIUM jää varaksi.
+  executablePath: process.env.CHROMIUM ?? process.env.PW_CHROMIUM ?? '/opt/pw-browsers/chromium',
 });
 
 /** Yksi ajo: konteksti, peli Pariisissa, pallolauta auki. */

@@ -4618,6 +4618,30 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
   .passport-card .linssi-valikko .linssi-liuskat button { transition: none; }
 }
 
+/*
+ * KESKENERÄISET VARUSTEET OMALLA RIVILLÄÄN RUUDUKON LOPUSSA (omistaja
+ * 20.9.2026 klo 15.10): harmaasävy ja pienempi kuvake kertovat, että
+ * varuste on vielä työn alla — se toimii, mutta ei lupaa valmista.
+ * Rivi on oma ruudukkonsa samalla sarakejaolla, jotta se alkaa aina
+ * uudelta riviltä eikä täytä valmiiden rivin loppua. Kuvake on 44 px
+ * (kosketuskohteen minimi), valmiit 64 px.
+ */
+.passport-card .linssi-valikko .linssi-liuskat-kesken {
+  padding-top: 0.2rem;
+  border-top: 1px solid rgba(70, 51, 31, 0.18);
+  border-bottom: 0;
+}
+.passport-card .linssi-valikko .linssi-liuskat-kesken button.kesken {
+  width: 44px;
+  filter: grayscale(1);
+  opacity: 0.62;
+}
+.passport-card .linssi-valikko .linssi-liuskat-kesken button.kesken:hover,
+.passport-card .linssi-valikko .linssi-liuskat-kesken button.kesken.esikatselu,
+.passport-card .linssi-valikko .linssi-liuskat-kesken button.kesken.paalla {
+  opacity: 0.85;
+}
+
 /* Valitun varusteen nimi ja kuvaus liuskojen alla: keskitetty kuten
    tavaroiden selitteet, ja laukun oma muste. */
 .passport-card .linssi-tiedot { padding-top: 0.6rem; text-align: center; }

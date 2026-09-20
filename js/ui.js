@@ -18921,10 +18921,33 @@ export class UI {
     // "Ei linssiä" on aina ensimmäisenä: paluu tavalliseen karttaan on
     // yhtä lähellä kuin linssin valinta.
     liuskat.appendChild(this.linssiLiuska(null, 'Ei linssiä'));
-    for (const linssi of linssit) {
+    /*
+     * KESKENERÄISET OMALLE RIVILLEEN RUUDUKON LOPPUUN (omistaja
+     * 20.9.2026 klo 15.10: *"merkitse vertailulinssi, maidentiedot,
+     * sekä vesistölinssi harmaalla ja siirrä omalle rivilleen ja
+     * pienennä niiden ikonit. ne ovat vielä liian keskeneräisiä"*).
+     * Linssi kertoo itse (`kesken: true`, linssimoduulin oma metatieto
+     * kuten nimi ja kuvake); laukku latoo ne toiseen ruudukkoon
+     * harmaana ja pienempänä (css .linssi-liuskat-kesken). Napit ovat
+     * samat kuin valmiilla — esikatselu ja aktivointi toimivat.
+     */
+    const valmiit = linssit.filter((l) => !l.kesken);
+    const keskeneraiset = linssit.filter((l) => l.kesken);
+    for (const linssi of valmiit) {
       liuskat.appendChild(this.linssiLiuska(linssi.tunnus, linssi.nimi));
     }
     this.linssiValikko.appendChild(liuskat);
+    if (keskeneraiset.length) {
+      const kesken = html('nav', 'linssi-liuskat linssi-liuskat-kesken');
+      kesken.setAttribute('role', 'group');
+      kesken.setAttribute('aria-label', 'Keskeneräiset linssit');
+      for (const linssi of keskeneraiset) {
+        const nappi = this.linssiLiuska(linssi.tunnus, `${linssi.nimi} (keskeneräinen)`);
+        nappi.classList.add('kesken');
+        kesken.appendChild(nappi);
+      }
+      this.linssiValikko.appendChild(kesken);
+    }
     this.linssiTiedot = html('div', 'linssi-tiedot');
     this.linssiValikko.appendChild(this.linssiTiedot);
     this.paivitaLinssiNappi();

@@ -198,6 +198,51 @@ test('ruudukossa on "Ei linssiä" ja jokainen linssi', () => {
   assert.deepEqual(ruudut(ui).map((n) => n.dataset.linssi), ['', 'topografia', 'vesistot']);
 });
 
+/*
+ * KESKENERÄISET OMALLE RIVILLEEN RUUDUKON LOPPUUN (omistaja 20.9.2026
+ * klo 15.10: vertailulinssi, maidentiedot ja vesistölinssi harmaalla,
+ * omalle riville, pienemmin — toimivat yhä). Linssi kertoo itse
+ * (`kesken: true`); laukku latoo ne toiseen `.linssi-liuskat-kesken`-
+ * ruudukkoon `kesken`-luokalla, ja napautus toimii kuten valmiilla.
+ */
+test('keskeneräiset linssit ladotaan omalle riville ruudukon loppuun ja toimivat', async () => {
+  const ui = Object.create(UI.prototype);
+  ui.linssiValikko = new Elementti('div');
+  ui.linssiValittu = null;
+  ui.linssiEsikatselu = undefined;
+  const linssit = [
+    { tunnus: 'vertailu', nimi: 'Vertailulinssi', lyhyt: 'Vertaa.', kesken: true },
+    { tunnus: 'topografia', nimi: 'Topografia', lyhyt: 'Maasto.' },
+    { tunnus: 'vesistot', nimi: 'Vesistöt', lyhyt: 'Vesi.', kesken: true },
+  ];
+  ui.linssiTuki = { kaikki: linssit };
+  ui.valitsut = [];
+  ui.valitseLinssi = (tunnus) => { ui.valitsut.push(tunnus); };
+  ui.passportDialog = { open: true, close() { this.open = false; } };
+  ui.rakennaLinssivalikko(linssit);
+  const rivit = ui.linssiValikko.childNodes.filter((n) => n.luokat?.has('linssi-liuskat'));
+  assert.equal(rivit.length, 2, 'valmiit ja keskeneräiset ovat eri ruudukoissa');
+  assert.ok(!rivit[0].luokat.has('linssi-liuskat-kesken') && rivit[1].luokat.has('linssi-liuskat-kesken'),
+    'keskeneräisten rivi on viimeisenä');
+  assert.deepEqual(rivit[0].querySelectorAll('button').map((n) => n.dataset.linssi), ['', 'topografia']);
+  const kesken = rivit[1].querySelectorAll('button');
+  assert.deepEqual(kesken.map((n) => n.dataset.linssi), ['vertailu', 'vesistot']);
+  assert.ok(kesken.every((n) => n.luokat.has('kesken')), 'kesken-luokka harmaasävylle ja pienelle kuvakkeelle');
+  assert.match(kesken[0].title, /keskeneräinen/);
+  // Toimii yhä: napautus esikatselee, Aktivoi kytkee.
+  kesken[0].napauta();
+  assert.equal(ui.linssiEsikatselu, 'vertailu');
+  aktivointi(ui).napauta();
+  assert.deepEqual(ui.valitsut, ['vertailu']);
+  // Oikeat linssimoduulit kantavat lipun itse.
+  for (const tiedosto of ['vertailu', 'maatiedot', 'vesistot']) {
+    const { LINSSI } = await import(`../js/linssit/${tiedosto}.js`);
+    assert.equal(LINSSI.kesken, true, `${tiedosto}: kesken-lippu puuttuu`);
+  }
+  const { LINSSI: topografia } = await import('../js/linssit/topografia.js');
+  assert.ok(!topografia.kesken);
+});
+
 test('ruudun napautus ei kytke linssiä eikä sulje laukkua (omistaja 5.9.2026)', () => {
   const ui = laukku();
   ruudut(ui)[1].napauta();
