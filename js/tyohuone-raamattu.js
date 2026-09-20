@@ -10067,7 +10067,12 @@ export const RAAMATTU = {
           + 'muuten iPad-tarkistus. MITATTU (Opus 1 e6ceb976): kuvatonta ikkunaa ei ole '
           + '(omo 100 %, muut 99-100 %) -> ei toistu Chromiumissa; jaa iPad-Safari/verkko-'
           + 'epailyksi Sonnet 1:lle (sama kuin tuplasaapuminen: hidas tai epaonnistuva '
-          + 'lataus laitteella). Opus 1 siirtyi maan tayttoon (Gironde).',
+          + 'lataus laitteella). Opus 1 siirtyi maan tayttoon (Gironde). V1980 MERGETTY '
+          + '17.43 (--admin: luettelo d ja koodi k julkaistiin samassa ikkunassa, CI:n '
+          + 'savukkeet eivat voi olla vihreita ennen luetteloa), TUOTANNOSSA 17.46: joet, '
+          + 'reliefin meret ja jarvet, raja 3 px. LUOVUTUS: docs/raportit/viesti-fable-'
+          + 'luovutus-20260920.md. Omistajan kysymys: oma Opus/Sonnet-julkaisijasessio -> '
+          + 'Fablen vastaus: kylla, saastaisi paljon; kirjattu luovutukseen.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
