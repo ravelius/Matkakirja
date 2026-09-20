@@ -44,6 +44,7 @@ import { el } from '../mapart.js';
 import { kokoPallonKorkeus } from '../pallolauta/kamera.js';
 import { luoTarkennus } from './topografia-tarkennus.js';
 import { valitseReliefi } from './reliefikuva.js';
+import { pidaMusiikkiKiinni, kaynnistaPohjaMusiikki } from '../ambience-stream.js';
 import {
   asetaReliefiLinssi, reliefiKaytossa, reliefipyramidiPaalla, merkitseLinssiketju,
 } from '../reliefipyramidi.js';
@@ -876,9 +877,24 @@ export const LINSSI = {
     const kameraTalteen = lauta.pallo?.pointOfView?.()
       ? { ...lauta.pallo.pointOfView() } : null;
 
+    /*
+     * TAUSTAMUSIIKKI KIINNI LINSSIN AJAKSI (omistaja 20.9.2026, sama
+     * pyyntö kuin astronautin kameralla). Perustelut ja mitattu
+     * juurisyy: js/ambience-stream.js `pidaMusiikkiKiinni` — lyhyesti,
+     * `hiljennaAmbienssi` EI koske musiikkiin, koska linssin syytä ei
+     * ole TILARAIDAT-taulussa, ja kertapysäytys purkautuisi heti kun
+     * pelaaja kääntää musiikkikytkintä.
+     */
+    let musiikkipito = null;
+    try { musiikkipito = pidaMusiikkiKiinni(); } catch { /* musiikkia ei ole */ }
+
     return {
       pura: () => {
         suljettu = true;
+        // Musiikki takaisin: kaupungin raita jatkaa siitä, mihin jäi.
+        try { musiikkipito?.pura?.(); } catch { /* jo purettu */ }
+        musiikkipito = null;
+        try { kaynnistaPohjaMusiikki(); } catch { /* ei musiikkia */ }
         asetaReliefiLinssi(false);
         // Sama herätys kuin avatessa: seepiapohja takaisin heti eikä
         // vasta kun pelaaja liikuttaa karttaa.

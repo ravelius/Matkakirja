@@ -430,6 +430,23 @@ async function ajaRuutu(ruutu, { pyramidi = true } = {}) {
   });
   await sivu.waitForTimeout(4000);
   const avattu = await lue();
+
+  /*
+   * TAUSTAMUSIIKKI KIINNI LINSSIN AJAN (omistaja 20.9.2026, sama pyyntö
+   * kuin astronautin kameralla). Alkuehto ensin: musiikin ON soitava
+   * ennen linssiä, muuten väite mittaisi tyhjää.
+   */
+  const musiikki = await sivu.evaluate(async () => {
+    const m = await import('/js/ambience-stream.js');
+    const linssissa = m.soivaPohjaMusiikki();
+    // Yritetään käynnistää raita KESKEN linssin: sen ei pidä jäädä soimaan.
+    m.kaynnistaPohjaMusiikki('pariisi', 'FRA');
+    await new Promise((r) => { setTimeout(r, 700); });
+    return { linssissa, yrityksenJalkeen: m.soivaPohjaMusiikki() };
+  });
+  vaadi('taustamusiikki on kiinni topografialinssin ajan',
+    musiikki.linssissa === null && musiikki.yrityksenJalkeen === null,
+    JSON.stringify(musiikki));
   const t0 = await sivu.evaluate(() => window.__linssiAuki ?? null) ?? pyydetty;
 
   /* ---- lähizoom Alpeille: laastarin oma näkymä ---------------------- */
@@ -607,6 +624,16 @@ async function ajaRuutu(ruutu, { pyramidi = true } = {}) {
   await sivu.evaluate(() => window.matkakirja.ui.valitseLinssi(null));
   await sivu.waitForTimeout(4000);
   const kiinni = await lue();
+
+  /* Toinen puoli: linssin jälkeen musiikki saa taas soida. */
+  const musiikkiPaluu = await sivu.evaluate(async () => {
+    const m = await import('/js/ambience-stream.js');
+    m.kaynnistaPohjaMusiikki('pariisi', 'FRA');
+    await new Promise((r) => { setTimeout(r, 700); });
+    return m.soivaPohjaMusiikki();
+  });
+  vaadi('linssin jälkeen taustamusiikki saa taas soida',
+    musiikkiPaluu !== null, JSON.stringify({ pohjamusiikki: musiikkiPaluu }));
 
   await konteksti.close();
   /*

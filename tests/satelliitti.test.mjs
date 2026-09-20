@@ -392,13 +392,20 @@ test('kelluva ✕ on ruudun oikeassa yläkulmassa turva-alue huomioiden', () => 
   assert.ok(!lahde.includes('asemoiYlareuna'), 'palkin alareunan mittaus on yhä lähteessä');
 });
 
-test('linssillä ei ole omaa äänikytkintä — äänet seuraavat pelin musiikkiasetusta', () => {
+test('linssillä ei ole omaa äänikytkintä — humina on taustaääntä, musiikki musiikkia', async () => {
   /*
-   * OMISTAJA 16.9.2026 (Raamattu LISÄYS 8, kysymyskortti): linssin oma
-   * "Äänet päälle/pois" ja sen localStorage-avain poistuivat, ja
-   * humina ja musiikki noudattavat pelin yleistä musiikkiasetusta
-   * ('matkakirja-musiikki'). Kaksi säädintä samalle asialle oli juuri
-   * se, mistä musiikin tasovika aikanaan alkoi.
+   * OMISTAJA 16.9.2026 (LISÄYS 8): linssin oma "Äänet päälle/pois" ja
+   * sen localStorage-avain poistuivat. SE OSA PÄTEE YHÄ — linssillä ei
+   * ole omaa kytkintä.
+   *
+   * OMISTAJA 20.9.2026 KUMOSI LISÄYS 8:n HUMINAN OSALTA: humina oli
+   * musiikkikytkimen takana ja seurasi musiikin liukua, ja se oli väärä
+   * kanava. Aseman humina on −30,48 LUFS:n pohjaväri, ei kappale:
+   * pelaaja, joka sulkee taustamusiikin, menetti samalla avaruuden
+   * äänen, eikä taustaäänten oma säädin tehnyt sille mitään.
+   *
+   * Nyt humina kuuluu taustaäänikanavaan (js/sound.js `sfx.enabled` ja
+   * rattaan 'tausta'-liuku), ja musiikkikerros jää musiikin taakse.
    */
   assert.ok(!lahde.includes('LINSSIN_AANI_AVAIN'), 'linssin oma ääniavain on yhä lähteessä');
   assert.ok(!lahde.includes('linssiAaniPaalla'), 'linssin oma äänikytkin on yhä lähteessä');
@@ -406,8 +413,21 @@ test('linssillä ei ole omaa äänikytkintä — äänet seuraavat pelin musiikk
   assert.ok(!lahde.includes("satelliitti-aani'"), 'äänikytkimen nappi on yhä lähteessä');
   const aani = lue('../js/linssit/satelliitti-aani.js');
   assert.ok(!/localStorage[\s\S]{0,40}linssiaani/.test(aani), 'ääniavain on yhä soittimessa');
+
+  // Kanavajako on koodissa, ei vain kommentissa.
+  const { astronautinKanava } = await import('../js/linssit/satelliitti-aani.js');
+  assert.equal(astronautinKanava('humina'), 'tausta',
+    'humina ei ole taustaäänikanavassa — musiikin sulkeminen veisi avaruuden äänen');
+  assert.equal(astronautinKanava('musiikki'), 'musiikki',
+    'musiikkikerros kuuluu musiikkikytkimen alle');
+
+  // Taso tulee taustaäänten liu'usta, ja liu'un veto kuuluu heti.
+  assert.match(aani, /kehittajanKerroin\('tausta'\)/);
+  assert.match(aani, /kuunteleKehittajanKerrointa\('tausta'/);
+  // Taustaäänten kytkin vaientaa ja palauttaa kesken linssin.
+  assert.match(aani, /AANIVALINTA_TAPAHTUMA/);
+  // Musiikkikerros seuraa yhä musiikkia.
   assert.match(aani, /musiikkiPaalla/);
-  assert.match(aani, /kuunteleMusiikkitilaa\(\(\) => nykyinen\?\.musiikkiKytkin\?\.\(\)\)/);
 });
 
 test('kulmanapit ovat pyöreitä ja kasvavat kapealla ruudulla', () => {

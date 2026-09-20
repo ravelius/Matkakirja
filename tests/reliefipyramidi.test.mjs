@@ -242,3 +242,46 @@ test('laastarin sävy on pallon sävy', () => {
   const pyramidi = lue('../js/laattapyramidi.js');
   assert.match(pyramidi, /export function pyramidinReliefinSavy/, 'ovi on olemassa');
 });
+
+/*
+ * AVOMEREN OHITUS MITTAA TASAISUUTTA, EI SYVYYTTÄ (omistaja 20.9.2026,
+ * kaappaus topografia-meret-puuttuvat.webp).
+ *
+ * Vika: `pelkkaaMerta` ohitti laatan, jonka jokainen solu oli alle
+ * −200 m. Perustelu oli "se on tasaista väriä", mutta syvyys ei ole
+ * tasaisuus: Keski-Intian selänne ja Sundan hauta ovat kokonaan sen
+ * alapuolella ja niissä on kilometrien korkeuserot. Ohitetut laatat
+ * piirtyivät pelissä yhtenä sinisenä suorakaiteena.
+ *
+ * Mitattu ETOPO-ruudukosta 20.9.2026: koko maailmassa 5 300 laattaa
+ * ohittui avomerenä, ja niistä VAIN 129 oli tasaisia — 5 171 eli 98 %
+ * sisälsi yli 500 m korkeuseron.
+ */
+test('pelkkaaMerta ohittaa vain tasaisen laatan, ei syvää', async () => {
+  const { pelkkaaMerta, TASAISUUDEN_RAJA } = await import('../tools/tee-reliefipyramidi.mjs');
+
+  const ruudukko = (arvot) => ({ z: Int16Array.from(arvot) });
+
+  // Tasainen syvänmeren tasanko: ohitetaan kuten ennenkin.
+  assert.equal(pelkkaaMerta(ruudukko([-4000, -4002, -4005, -4001])), true,
+    'tasainen avomeri pitää yhä ohittaa — optimointi ei saa kadota');
+
+  // Syvä MUTTA muotoinen: selänne tai hauta. TÄMÄ ON SE VIKA.
+  assert.equal(pelkkaaMerta(ruudukko([-6000, -5200, -2400, -3100])), false,
+    'syvänmeren selänne ohittui avomerenä ja piirtyi sinisenä laatikkona');
+
+  // Matala vesi ja rannikko: ei koskaan ohiteta.
+  assert.equal(pelkkaaMerta(ruudukko([-150, -160, -155, -152])), false,
+    'mannerjalusta ei ole avomerta');
+  assert.equal(pelkkaaMerta(ruudukko([-4000, -4000, 120, -4000])), false,
+    'laatta, jossa on maata, ei ole avomerta');
+
+  // Raja on nimetty ja tiukka: varjostus tekee pienestäkin erosta pintaa.
+  assert.ok(TASAISUUDEN_RAJA > 0 && TASAISUUDEN_RAJA <= 50,
+    `tasaisuuden raja ${TASAISUUDEN_RAJA} m ei ole tiukka`);
+  assert.equal(pelkkaaMerta(ruudukko([-4000, -4000 - TASAISUUDEN_RAJA - 1])), false,
+    'rajan ylittävä korkeusero ei ole tasaista väriä');
+
+  // Tyhjä ruudukko ei ole laatta eikä merta.
+  assert.equal(pelkkaaMerta(ruudukko([])), false, 'tyhjä ruudukko ei ole avomerta');
+});
