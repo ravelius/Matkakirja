@@ -47,7 +47,9 @@
     "savuke-ihmisen-kappaleet.mjs",
     "savuke-astro-valokuva.mjs",
     "savuke-arvonimet.mjs",
-    "savuke-korostus-janne.mjs"
+    "savuke-korostus-janne.mjs",
+    "savuke-kartuscha-2.mjs",
+    "savuke-kartuscha-3.mjs"
   ],
   "suorituskyky": [
     "savuke-pariisi-lahizoom.mjs#390-suorituskyky",
@@ -163,6 +165,22 @@
       "js/maanaariviivat.js",
       "js/pallolaatat.js",
       "assets/data/maapolygonit.json"
+    ],
+    "savuke-kartuscha-2.mjs": [
+      "js/pallolauta/maapaneeli.js",
+      "js/pallolauta/lauta.js",
+      "js/liput.js",
+      "js/packs/lipputiedot.js",
+      "js/packs/radiot.js",
+      "css/styles.css"
+    ],
+    "savuke-kartuscha-3.mjs": [
+      "js/pallolauta/maapaneeli.js",
+      "js/pallolauta/lauta.js",
+      "js/liput.js",
+      "js/packs/lipputiedot.js",
+      "js/packs/radiot.js",
+      "css/styles.css"
     ]
   },
   "asetukset": {
@@ -454,6 +472,15 @@
     "savuke-korostus-janne.mjs": {
       "kuvakansio": true,
       "huomautus": "Gironden/Medocin kaksoisviiva (omistaja 20.9.2026): korostuksen pitka jana painui pallon pinnan alle ja syvyystesti leikkasi sen keskelta pois; vektorijanat jakaa yli 0,1 asteen janat paloiksi. Yksi ruutu 700 x 1000 dpr 2, kamera Gironde; vastakoe korostus piilossa. Kuvakansio: --kuvat <kansio> tai ensimmainen argumentti."
+    },
+    "savuke-kartuscha-2.mjs": {
+      "huomautus": "Harva (Fable 20.9.2026): kartuscha 2 - radio otsikon keskella, lippu otsikon perassa, vilkku haun ajan, kortin valit. Pariisi, 390 ja 1400 px, ampari Noden kautta. TUNNETTU PUNAINEN (mitattu 20.9.2026 puhtaalla prepilla): vartio 3 vaatii Ranskan lipulta lipputiedot, mutta LIPPUTIEDOT (js/packs/lipputiedot.js) kattaa vain Suomen ja Saksan -> Pariisissa lippu ei ole napautettava eika ikkuna aukea. Savukkeen oma vika (vaara maa), ei pelin; korjaus = mittaa vartio 3 maassa jolla on lipputiedot.",
+      "tunnetutPunaiset": [
+        "3 lipun napautus avaa lippuikkunan"
+      ]
+    },
+    "savuke-kartuscha-3.mjs": {
+      "huomautus": "Harva (Fable 20.9.2026): kartuscha 3 - pienessa ei lippua, lippu versaalin korkuinen, iso pienenee karttaa koskettaessa (napautus/veto/rulla), vastakoe kortin sisalle. ~70 s."
     }
   }
 }
