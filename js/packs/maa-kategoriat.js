@@ -1614,7 +1614,7 @@ export const MAA_KATEGORIAT = {
      */
     {
       id: 'hetki-cook-endeavour-plymouth-1768',
-      nimi: 'Historian hetki',
+      nimi: 'Löytöretki',
       otsikko: 'Historian hetki: Endeavour 1768',
       johdanto: 'Plymouthin laiturilla oli 26. elokuuta 1768 laatikoita, joita '
         + 'sotalaivaan ei yleensä kanneta: kasvipuristimia, lasipurkkeja ja '
@@ -1700,7 +1700,7 @@ export const MAA_KATEGORIAT = {
      */
     {
       id: 'hetki-titanic-southampton-1912',
-      nimi: 'Historian hetki',
+      nimi: 'Haaksirikko',
       otsikko: 'Historian hetki: Titanic 1912',
       johdanto: 'Titanicin neitsytmatka alkoi Southamptonista täsmälleen '
         + 'keskipäivällä 10. huhtikuuta 1912, ja muutamaa minuuttia myöhemmin se '
@@ -1795,7 +1795,7 @@ export const MAA_KATEGORIAT = {
      */
     {
       id: 'hetki-newton-prisma-1666',
-      nimi: 'Historian hetki',
+      nimi: 'Valon tutkimus',
       otsikko: 'Historian hetki: Newton 1666',
       johdanto: 'Lincolnshiren maalaistalossa nuori mies pimensi huoneen ja '
         + 'päästi luukun reiästä sisään yhden säteen — ja päätteli, että '
@@ -1873,7 +1873,7 @@ export const MAA_KATEGORIAT = {
      */
     {
       id: 'hetki-jenner-rokotus-1796',
-      nimi: 'Historian hetki',
+      nimi: 'Rokotus',
       otsikko: 'Historian hetki: Jenner 1796',
       johdanto: 'Gloucestershiren maalaislääkäri otti toukokuussa 1796 lypsäjän '
         + 'kädestä lehmärokkoa ja hieroi sen puutarhurinsa kahdeksanvuotiaan '
@@ -6262,7 +6262,7 @@ export const MAA_KATEGORIAT = {
      */
     {
       id: 'hetki-rontgen-kasi-1895',
-      nimi: 'Historian hetki',
+      nimi: 'Röntgenkuva',
       otsikko: 'Historian hetki: Würzburg 1895',
       johdanto: 'Würzburgin yliopiston laboratoriossa otettiin 22. joulukuuta '
         + '1895 valokuva, jossa näkyi elävän ihmisen käden luut ja sormessa '
@@ -6342,7 +6342,7 @@ export const MAA_KATEGORIAT = {
      */
     {
       id: 'hetki-gutenberg-paino-1454',
-      nimi: 'Historian hetki',
+      nimi: 'Kirjapaino',
       otsikko: 'Historian hetki: Gutenberg 1454',
       johdanto: 'Reinin rannan kauppakaupungissa latojat asettivat 1450-luvulla '
         + 'kirjaimen kerrallaan peilikuvaksi riveille, ja ensimmäinen painettu '
@@ -6422,7 +6422,7 @@ export const MAA_KATEGORIAT = {
      */
     {
       id: 'hetki-luther-wittenberg-1517',
-      nimi: 'Historian hetki',
+      nimi: 'Uskonpuhdistus',
       otsikko: 'Historian hetki: Luther 1517',
       johdanto: 'Elben rannan yliopistokaupungista lähti lokakuussa 1517 '
         + 'kohtelias kirje arkkipiispalle, ja sen liitteenä olleet 95 '
