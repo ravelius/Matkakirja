@@ -10020,7 +10020,13 @@ export const RAAMATTU = {
           + 'ei ui.luennoissa) -> mikaan vaiennus ei tavoita; syy: kirjanpito taytetaan '
           + 'vasta onnistuneen play():n jalkeen, virhehaara nollaa pysayttamatta. PAATOS: '
           + 'rekisterointi syntyhetkella + vaiennaPaikanPuhe vaientaa kaikki + virhehaara '
-          + 'pysayttaa (vaihtoehto 3).',
+          + 'pysayttaa (vaihtoehto 3). KOVENNUKSET EIVAT POISTANEET OIRETTA (Opus 1 15.55): '
+          + 'Berliinin luenta vapautuu kirjanpidosta ended-tapahtumassa ja soi silti -> '
+          + 'epaily: saapumisluennasta syntyy KAKSI elementtia, toinen orpo syntymastaan; '
+          + 'Opus 1 mittaa tunnisteilla ja korjaa oikean syyn; v1978 odottaa. HUMINA '
+          + 'TAUSTAAANEKSI (Opus 2 002f026f): kanava sfx/taustaaanet-liuku (astronautinKanava), '
+          + 'musiikkikerros musiikkikytkimen alle; vartija paivitetty; savuke 36/36; '
+          + 'mergetty. Reliefin poltto z7 44 % klo 15.27, arvio valmis n. 17.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
