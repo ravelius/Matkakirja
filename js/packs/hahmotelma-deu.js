@@ -821,6 +821,12 @@ export const HAHMOTELMA_DEU = [
       },
     ],
     nimi: 'Rothenburg ob der Tauber',
+    /*
+     * NOSTOTASOT (Fablen tilaus 20.9.2026, samaan tapaan kuin FRA:n
+     * docs/raportit/nostotasot-fra-20260920.md): ykköstaso = tunnetuin
+     * ja pelillisesti tärkein, isompi nimiö + kuvamerkki kartalla.
+     */
+    taso: 1,
     tyyppi: 'kulttuuri',
     lahi: true,
     kysymykset: [
@@ -1107,6 +1113,12 @@ export const HAHMOTELMA_DEU = [
       },
     ],
     nimi: 'Hameln',
+    /*
+     * NOSTOTASOT (Fablen tilaus 20.9.2026, samaan tapaan kuin FRA:n
+     * docs/raportit/nostotasot-fra-20260920.md): ykköstaso = tunnetuin
+     * ja pelillisesti tärkein, isompi nimiö + kuvamerkki kartalla.
+     */
+    taso: 1,
     tyyppi: 'kulttuuri',
     lahi: true,
     kysymykset: [

@@ -160,6 +160,140 @@ export const NIMISTO_1873 = [
     teksti: 'KORSIKA', luokka: 'maakunta', lon: 9.1, lat: 42.2, iso: 'FRA', koko: 'suuri',
   },
 
+  // ── SAKSAN KEISARIKUNNAN OSAVALTIOT 1873 ─────────────────────────
+  // (lisätään NIMISTO_1873-taulukkoon Ranska-lohkon jälkeen; älä toista
+  // jo olemassa olevaa ELSASS-LOTHRINGEN-riviä — se on tässä listassa
+  // ainoastaan tekstinä tässä kommentissa, ei uutena objektina)
+  //
+  // Saksan keisarikunta julistettiin 18.1.1871: liittovaltio, jossa oli
+  // 25 osavaltiota (Bundesstaaten) + Reichsland Elsass-Lothringen
+  // (jo NIMISTO_1873:ssa). Preussin kuningaskunta kattoi n. 2/3 koko
+  // valtakunnan pinta-alasta ja jakautui sisäisesti provinsseihin —
+  // yksi "PREUSSI"-nimiö puolen Saksan päällä olisi atlaksena
+  // hyödytön, joten Preussin suuret provinssit on nimetty erikseen
+  // (samaan tapaan kuin oikeissa 1800-luvun atlaksissa). Muut
+  // kuningaskunnat, suurherttuakunnat ja vapaakaupungit ovat omina
+  // riveinään. Pienimmät Thüringenin herttuakunnat/ruhtinaskunnat
+  // (Schwarzburg, Reuss, Waldeck, Lippe, Schaumburg-Lippe) on jätetty
+  // pois liian pieninä atlasmittakaavaan — ks. tarkempi perustelu
+  // docs/sisalto/nimisto-1873.md:n Saksa-osiosta.
+  //
+  // NIMEÄMISHUOMIO: "Saksin kuningaskunta" (Königreich Sachsen) ja
+  // Preussin "Sachsen"-provinssi ovat eri asioita — tekstit on erotettu
+  // selvästi ("SAKSIN KUNINGASKUNTA" vs. "PREUSSIN SAKSI"), ettei
+  // kumpaakaan sekoiteta toiseensa tai maatason SAKSA-nimiöön.
+  //
+  // LÄHTEET: en-Wikipedia "German Empire" (osio "States"), "Kingdom of
+  // Prussia" (osio "Provinces"), sekä kunkin osavaltion/provinssin oma
+  // artikkeli (johdanto-osat) nimien, asemien (kuningaskunta/
+  // suurherttuakunta/herttuakunta/vapaakaupunki) ja likimääräisten
+  // aluerajojen tarkistamiseen; fi-Wikipedia kunkin suomenkielisen
+  // nimen vakiintuneisuuden tarkistamiseen (Baijeri, Saksi, Hessen,
+  // Baden, Württemberg, Preussi ovat vakiintuneita suomenkielisiä
+  // muotoja; esim. Mecklenburg, Oldenburg, Braunschweig, Anhalt eivät
+  // suomennu erikseen, kuten Ranska-erässäkin osa maakunnista jäi
+  // alkukielisiksi). Tarkistettu 21.9.2026.
+
+  // -- PREUSSIN KUNINGASKUNNAN PROVINSSIT --
+  {
+    teksti: 'ITÄ-PREUSSI', luokka: 'maakunta', lon: 21.0, lat: 54.3, iso: 'DEU', koko: 'suuri',
+  },
+  {
+    teksti: 'LÄNSI-PREUSSI', luokka: 'maakunta', lon: 18.3, lat: 53.7, iso: 'DEU', koko: 'pieni',
+  },
+  {
+    teksti: 'POSEN', luokka: 'maakunta', lon: 17.2, lat: 52.5, iso: 'DEU', koko: 'suuri',
+  },
+  {
+    teksti: 'POMMERI', luokka: 'maakunta', lon: 15.5, lat: 53.8, iso: 'DEU', koko: 'suuri',
+  },
+  {
+    teksti: 'BRANDENBURG', luokka: 'maakunta', lon: 13.5, lat: 52.7, iso: 'DEU', koko: 'suuri',
+  },
+  {
+    teksti: 'PREUSSIN SAKSI', luokka: 'maakunta', lon: 11.8, lat: 51.6, iso: 'DEU', koko: 'suuri',
+  },
+  {
+    teksti: 'SCHLESIEN', luokka: 'maakunta', lon: 17.0, lat: 51.0, iso: 'DEU', koko: 'suuri',
+  },
+  {
+    teksti: 'HANNOVER', luokka: 'maakunta', lon: 9.7, lat: 52.6, iso: 'DEU', koko: 'suuri',
+  },
+  {
+    teksti: 'WESTFALEN', luokka: 'maakunta', lon: 8.0, lat: 51.7, iso: 'DEU', koko: 'suuri',
+  },
+  {
+    teksti: 'RHEINLAND', luokka: 'maakunta', lon: 7.0, lat: 50.7, iso: 'DEU', koko: 'suuri',
+  },
+  {
+    teksti: 'SCHLESWIG-HOLSTEIN', luokka: 'maakunta', lon: 9.7, lat: 54.4, iso: 'DEU', koko: 'suuri',
+  },
+  {
+    teksti: 'HESSEN-NASSAU', luokka: 'maakunta', lon: 8.6, lat: 50.5, iso: 'DEU', koko: 'pieni',
+  },
+
+  // -- MUUT KUNINGASKUNNAT --
+  {
+    teksti: 'BAIJERI', luokka: 'maakunta', lon: 11.5, lat: 49.0, iso: 'DEU', koko: 'suuri',
+  },
+  {
+    teksti: 'SAKSIN KUNINGASKUNTA', luokka: 'maakunta', lon: 13.3, lat: 51.0, iso: 'DEU', koko: 'suuri',
+  },
+  {
+    teksti: 'WÜRTTEMBERG', luokka: 'maakunta', lon: 9.3, lat: 48.6, iso: 'DEU', koko: 'suuri',
+  },
+
+  // -- SUURHERTTUAKUNNAT --
+  {
+    teksti: 'BADEN', luokka: 'maakunta', lon: 8.2, lat: 48.5, iso: 'DEU', koko: 'suuri',
+  },
+  {
+    teksti: 'HESSEN', luokka: 'maakunta', lon: 8.6, lat: 49.9, iso: 'DEU', koko: 'pieni',
+  },
+  {
+    teksti: 'MECKLENBURG-SCHWERIN', luokka: 'maakunta', lon: 12.0, lat: 53.7, iso: 'DEU', koko: 'pieni',
+  },
+  {
+    teksti: 'MECKLENBURG-STRELITZ', luokka: 'maakunta', lon: 13.1, lat: 53.4, iso: 'DEU', koko: 'pieni',
+  },
+  {
+    teksti: 'OLDENBURG', luokka: 'maakunta', lon: 8.2, lat: 53.1, iso: 'DEU', koko: 'pieni',
+  },
+  {
+    teksti: 'SACHSEN-WEIMAR-EISENACH', luokka: 'maakunta', lon: 11.3, lat: 50.9, iso: 'DEU', koko: 'pieni',
+  },
+
+  // -- HERTTUAKUNNAT --
+  // (25 Bundesstaatista puuttui alkuperäisestä listasta viisi
+  // herttuakuntaa; lisätty tarkistuksessa 21.9.2026 — vain seitsemän
+  // pienintä ruhtinaskuntaa on rajattu tietoisesti pois, ei nämä viisi.)
+  {
+    teksti: 'BRAUNSCHWEIG', luokka: 'maakunta', lon: 10.3, lat: 52.1, iso: 'DEU', koko: 'pieni',
+  },
+  {
+    teksti: 'SACHSEN-MEININGEN', luokka: 'maakunta', lon: 10.4, lat: 50.6, iso: 'DEU', koko: 'pieni',
+  },
+  {
+    teksti: 'SACHSEN-ALTENBURG', luokka: 'maakunta', lon: 12.4, lat: 51.0, iso: 'DEU', koko: 'pieni',
+  },
+  {
+    teksti: 'SACHSEN-COBURG-GOTHA', luokka: 'maakunta', lon: 10.8, lat: 50.6, iso: 'DEU', koko: 'pieni',
+  },
+  {
+    teksti: 'ANHALT', luokka: 'maakunta', lon: 12.2, lat: 51.8, iso: 'DEU', koko: 'pieni',
+  },
+
+  // -- VAPAAKAUPUNGIT --
+  {
+    teksti: 'HAMPURI', luokka: 'maakunta', lon: 10.0, lat: 53.55, iso: 'DEU', koko: 'pieni',
+  },
+  {
+    teksti: 'BREMEN', luokka: 'maakunta', lon: 8.8, lat: 53.1, iso: 'DEU', koko: 'pieni',
+  },
+  {
+    teksti: 'LÜBECK', luokka: 'maakunta', lon: 10.7, lat: 53.9, iso: 'DEU', koko: 'pieni',
+  },
+
   // ── EUROOPAN MERET, LAHDET JA SALMET ─────────────────────────────
   { teksti: 'VÄLIMERI', luokka: 'meri', lon: 15.0, lat: 38.0, iso: null },
   { teksti: 'ITÄMERI', luokka: 'meri', lon: 19.0, lat: 58.0, iso: null },
