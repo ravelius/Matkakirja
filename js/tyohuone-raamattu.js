@@ -9626,7 +9626,12 @@ export const RAAMATTU = {
           + 'kuvaketta, Ei linssia ensin); ei ratasvalikossa eika hampurilaisessa. '
           + 'SIMULAATTORIVUOROT (Fable 05.00): iOS-simulaattori on yksi; Sonnet 3 pitaa '
           + 'sen mittauksen ajan ja lahettaa Sonnet 1:lle "simulaattori vapaa", Sonnet 1 '
-          + 'kuittaa lopettaneensa; korjaukset ja savukkeet Chromiumissa.',
+          + 'kuittaa lopettaneensa; korjaukset ja savukkeet Chromiumissa. PULU-WIKI (Opus 1 '
+          + '62b5c32c, Fable 05.02): aineiston korostusmerkinta perusmuoto|nakyva vietiin '
+          + 'mallille sellaisenaan ja vastauksen purku osasi vain hakasulkeet -> '
+          + 'puhdistaWikiPutket kahdessa kohdassa; vastauskuvan aihe ei saa olla pelkka '
+          + 'luku (1954 toi sotakuvan) -> seuraava kasite. savuke-pollossa 7 vanhaa '
+          + 'punaista (matkustusnapit 4, nahtavyyslinkin kuvapopup 0 kuvaa) -> Opus 1 ottaa.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
