@@ -10126,7 +10126,7 @@ export const RAAMATTU = {
           + 'Laitetestaaja ilmoittaa Julkaisijalle simulaattorin kaynnistyksen ja sammutuksen. '
           + '5) Sessiomaara pidetaan viidessa: tyhjakaynti ei maksa, kaksi Opusta on '
           + 'lapimenon raja, tokenibudjetti tiukka.',
-        'RAAMATUN JAKO (omistaja 20.9.2026 klo 18.12 kortilla, Fablen esitys): Raamattu on '
+        'RAAMATUN JAKO (omistaja 20.9.2026 klo 18.08 kortilla, Fablen esitys): Raamattu on '
           + '983 kt ja peli importtaa sen kaynnistyksessa (js/ui.js, js/lehti.js) - '
           + 'pelaaja lataa megatavun paatoslokia; linjaukset ovat ~120 kt, loput 860 kt '
           + 'on Fokusmoodin, Viisaan Pollon ja Kaupunkien osioihin kertyneita PAATOKSET-'
@@ -10141,15 +10141,15 @@ export const RAAMATTU = {
           + 'kirjoittaa Raamattuun" toteutuu niin, etta Fable tarkastaa tiivistetyn '
           + 'linjausosan ja hyvaksyy ennen mergea. Sonnet ei riita ristiriitojen '
           + 'tuomarointiin, Fablella koko tiedoston luku maksaisi liikaa.',
-        'FABLEN KONTEKSTIKURI (Fable 20.9.2026 klo 18.15, omistajan kysymys): sessiot '
+        'FABLEN KONTEKSTIKURI (Fable 20.9.2026 klo 18.10, omistajan kysymys): sessiot '
           + 'viestivat Fablelle vain kun era on valmis ja pushattu, kun ne ovat jumissa tai '
           + 'tarvitsevat paatoksen, tai kun Fable kysyy - ei kuittauksia eika valiraportteja; '
           + 'valmistumisviesti enintaan 8 rivia, pitka raportti tiedostoon docs/raportit/ ja '
           + 'viestiin vain polku. Fable ei seuraa CI:ta (Julkaisija), ei lue tiedostoja '
           + 'kokonaan (grep/head), paivittaa muistion vain virstanpylvaissa ja kasittelee '
-          + 'saapuneet viestit yhdella kierroksella. Raamatunkarsija (opus) aloitti 18.15 '
+          + 'saapuneet viestit yhdella kierroksella. Raamatunkarsija (opus) aloitti 18.10 '
           + 'haaralla raamatunkarsija, worktree ~/Matkakirja-raamattu.',
-        'SIIVOUSPAATOKSET (omistaja 20.9.2026 klo 18.25 kortilla): 1) vanhat worktreet '
+        'SIIVOUSPAATOKSET (omistaja 20.9.2026 klo 18.13 kortilla): 1) vanhat worktreet '
           + '(34 kpl kotihakemistossa ja .claude/worktrees/) poistetaan, kun puu on puhdas, '
           + 'haara pushattu originiin eika puu ole nykyisen session kaytossa; haaroja ei '
           + 'poisteta. OPPI: squash-merge ei jata haaran committeja mainiin, joten `git '
@@ -10159,7 +10159,7 @@ export const RAAMATTU = {
           + 'luonnoksia ja Fablen vanhoja) suljetaan kommentilla, haarat sailyvat. '
           + 'Julkaisija (sonnet) tekee molemmat, lista docs/raportit/worktree-siivous-'
           + '20260920.md.',
-        'VIESTIKANAVAT JA FABLEN EFFORT (omistaja 20.9.2026 klo 18.40 kortilla): 1) Uudet '
+        'VIESTIKANAVAT JA FABLEN EFFORT (omistaja 20.9.2026 klo 18.18 kortilla): 1) Uudet '
           + 'toiminnot seka omistajan huomaamat bugit ja pienet ideat -> Fable, joka '
           + 'pilkkoo ja reitittaa sessioille (omistaja halusi bugit Fablen kautta). 2) '
           + 'Codex-toimitukset (tekstit, animaatiot, kuvat) -> Julkaisija (sonnet) hakee '
