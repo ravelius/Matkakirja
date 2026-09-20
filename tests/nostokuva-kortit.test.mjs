@@ -544,9 +544,10 @@ test('galleriat eivät rakenna kuvaa uudelleen vaiheenvaihdossa', () => {
   // kirjoittaa src:ää ensimmäisellä piirrolla (nayta(false)).
   //
   // js/skandaalit.js EI ole listalla 14.9.2026 jälkeen: sen kuvasarja on
-  // nyt kortin yhteinen toteutus (js/fokusnosto.js piirraNostonKuvasarja),
-  // ja sääntöä vahditaan siellä — skandaalikortti käyttää samaa koodia.
-  for (const polku of ['js/fokusnosto.js', 'js/historian-hetket.js']) {
+  // kortin yhteinen toteutus — 20.9.2026 alkaen js/kuvasarja.js
+  // piirraKuvasarja (nosto-, skandaali- ja kohdekortti) — ja sääntöä
+  // vahditaan siellä.
+  for (const polku of ['js/kuvasarja.js', 'js/historian-hetket.js']) {
     const src = lue(polku);
     assert.ok(/nayta\(!valmis(Kehys|Kuva)\)/.test(src),
       `${polku}: valmiin kehyksen src:ää ei saa kirjoittaa uudestaan`);

@@ -27,6 +27,7 @@
     "savuke-laivamatka-tanger.mjs",
     "savuke-noppa-saapumisen-aikana.mjs",
     "savuke-ihmisen-pulukysymykset.mjs",
+    "savuke-nostokortti.mjs",
     "savuke-nostokuva-karuselli.mjs",
     "savuke-nostokuva-suhde.mjs",
     "savuke-pulu-kartuscha.mjs",
@@ -381,6 +382,9 @@
     },
     "savuke-noppa-saapumisen-aikana.mjs": {
       "huomautus": "Nopanheiton kohteet jaavat ruudulle (Sonnetin puhelintesti v1952, Opus-era noppa-saapuminen 19.9.2026): sovitaSiirtokohteet zoomasi kameran ulos kohdemaan uloszoomauskaton yli, OrbitControlsin maxDistance kuristi korkeuden takaisin heti kun ajo lakkasi kirjoittamasta JA jatti panoroidun keskipisteen paikalleen - lahikuva tyhjaa maata, nappula ja kohteet ruudun ulkopuolella, vaihe jumissa 'move'issa myos tallennuksen yli. Chromium 5/5, WebKit 5/5, ~2 min; vastakoe ilman korjausta 2/5."
+    },
+    "savuke-nostokortti.mjs": {
+      "huomautus": "Nostokortti (omistaja 20.9.2026): lahderivi pois kaikista nostotyypeista, kohdekortin karuselli, Havainnekuva-merkki, kuvan koko LISAA-tilassa (>= 0,8), pyyhkaisy ja nuolinappaimet. 390 ja 1400 px, ampari Noden kautta. ~60 s."
     }
   }
 }

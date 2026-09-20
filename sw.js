@@ -110,6 +110,7 @@ const SHELL = [
   './js/vakasikoni.js',
   './js/ylapalkki-vaaka.js',
   './js/fokusnosto.js',
+  './js/kuvasarja.js',
   './js/syvennys.js',
   './js/packs/syvennyspaikat.js',
   './js/skandaalit.js',

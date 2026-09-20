@@ -99,6 +99,7 @@ import { elaintakyKarttarivit, elaintakyNimioKylki } from './elaintaky-rivit.js'
 import { ELAINTAKYT, elaintakynKuvat } from './packs/elaintakyt.js';
 import { assetOsoite } from './media.js';
 import { kuvatekstiLyhyt, kuvatekstiPitka } from './kuvatekstit.js';
+import { lisaaHavainnekuvaMerkki } from './havainnekuva.js';
 import { sfx } from './sound.js';
 import { lisaaLukijanappi } from './lukija.js';
 
@@ -632,13 +633,10 @@ export function avaaElaintaky(ui, iso) {
     }
     kotelo.appendChild(teksti);
     /*
-     * LÄHDERIVI ON SAMA RIVI KUIN TÄKYNOSTOLLA (1.9.2026, nostoaudit):
-     * sama luokka `fokusnosto-lahde` ja sama paikka — tekstin jälkeen,
-     * ennen lunastusta — kuin js/fokusnosto.js piirraNostonSisus.
+     * LÄHDERIVI EI ENÄÄ PIIRRY KORTILLE (omistaja 20.9.2026, sama päätös
+     * kuin täkynostolla: js/fokusnosto.js KORTIN LÄHDERIVI POIS).
+     * `taky.lahde` säilyy datassa tarkistuksen kirjanpitona.
      */
-    if (taky.lahde) {
-      kotelo.appendChild(taytaLahderivi(html('p', 'fokusnosto-lahde'), taky.lahde, taky));
-    }
     kotelo.appendChild(elaintakyLunasta(ui, iso));
   };
 
@@ -918,6 +916,7 @@ function elaintakyPiirraKaruselli(ui, kohde, kuvat, vakioselite) {
   const nayta = () => {
     const kuva = kuvat[kohdalla];
     selite.textContent = selitteet[kohdalla];
+    lisaaHavainnekuvaMerkki(selite, kuvat[kohdalla]);
     /*
      * LÄHDERIVI KULKEE taytaLahderivin LÄPI, jotta "Matkakirjan
      * havainnekuva" saa painettavan selitteensä (js/havainnekuva.js)
@@ -1076,6 +1075,7 @@ function elaintakyValmisKaruselli(ui, kohde, kuvat, vakioselite, kehys) {
     // Suurennos näyttää sen kuvan, joka on kohdalla (ks. avaaElaintaky).
     kehys.nostokuvaKuva = { osoite: osoitteet[kohdalla], selite: pitkat[kohdalla] };
     selite.textContent = selitteet[kohdalla];
+    lisaaHavainnekuvaMerkki(selite, kuvat[kohdalla]);
     img.alt = selitteet[kohdalla];
     nappi.setAttribute('aria-label', `${selitteet[kohdalla]} — avaa suurena`);
     /*
@@ -1243,7 +1243,7 @@ function elaintakyPiirraKuva(ui, kohde, taky, maa, valmisKuva) {
   });
   kehys.appendChild(nappi);
   const teksti = html('figcaption', 'fokusnosto-kuvateksti');
-  teksti.appendChild(html('span', 'fokusnosto-kuvaselite', selite));
+  teksti.appendChild(lisaaHavainnekuvaMerkki(html('span', 'fokusnosto-kuvaselite', selite), kuva));
   /*
    * LÄHDERIVI KUTEN MUISSA KORTEISSA (omistajan testikierros 30.8.2026:
    * *"Kilpikonnilta puuttuu lähde"*; media-sääntö vaatii lähteen
