@@ -3633,6 +3633,8 @@ export function luoNostot({
       esteet: kiinteat.length ? [...nimet, ...kiinteat] : nimet,
       reuna: reunaNyt,
       rantaviiva: typeof rantaviiva === 'function' ? rantaviiva() : (rantaviiva ?? []),
+      // Elävät laput eivät limity keskenään (sovittelu.js `keskinainen`).
+      keskinainen: KOHDEMAAN_NIMIOT_ELAVINA,
     });
     let muuttui = false;
     for (const { r, datum } of lappuja) {
