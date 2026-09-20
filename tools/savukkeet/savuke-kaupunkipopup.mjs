@@ -461,6 +461,39 @@ for (const ruutu of RUUDUT) {
         tieto(`${tunnus}: kaupunkimerkin napautus ${yritys + 1}`,
           `piste ${Math.round(piste.x)},${Math.round(piste.y)} (tuore ${tuore ? `${Math.round(tuore.x)},${Math.round(tuore.y)}` : '-'}), `
           + `alla ${alla}, liuska ${auki ?? '-'} ${Date.now() - alku} ms`);
+        if (!auki) {
+          /*
+           * DIAGNOOSI CI:N KUORMAAN (21.9.2026, PR #2636): kun liuska ei
+           * auennut, kerrotaan MIKÄ aukesi — kortin otsikko, laudan oma
+           * napautuskirjaus ja kaupungin lähimmät osumat — ja otetaan
+           * kuva. Paikallisesti vika ei toistu, joten loki on ainoa
+           * silminnäkijä.
+           */
+          const diagnoosi = await sivu.evaluate(({ x, y }) => {
+            const l = window.matkakirja.ui.pallolauta;
+            const koti = l.kotelo.getBoundingClientRect();
+            const kx = x - koti.left;
+            const ky = y - koti.top;
+            const osumat = (l.nostot?.osumaLaatikot?.() ?? [])
+              .map((o) => ({ ...o, d: Math.hypot((o.x0 + o.x1) / 2 - kx, (o.y0 + o.y1) / 2 - ky) }))
+              .filter((o) => o.d < 60)
+              .sort((a, b) => a.d - b.d)
+              .slice(0, 4)
+              .map((o) => `${o.nimi ?? o.id}(${o.perhe}) ${Math.round(o.d)} px`);
+            return {
+              kortti: document.querySelector('.fokusnosto-kortti-otsikko, .fokuskohde-otsikko, .elaintaky-kerros h3, .skandaali-kerros h3')?.textContent?.trim() ?? null,
+              kerrokset: [...document.querySelectorAll('.fokusnosto-kerros, .fokuskohde-popup, .elaintaky-kerros, .skandaali-kerros, .hetki-kerros, .fokusvirta-kortti')].map((e) => e.className.split(' ')[0]),
+              pinta: l.viimeinenNapautus?.() ?? null,
+              nyt: Date.now(),
+              liuskaAuki: l.nostot?.liuskaAuki?.() ?? null,
+              osumat,
+            };
+          }, piste);
+          tieto(`${tunnus}: napautuksen ${yritys + 1} diagnoosi`, JSON.stringify(diagnoosi));
+          if (KUVAKANSIO) {
+            await sivu.screenshot({ path: join(KUVAKANSIO, `napautus-${kaupunki.id}-${ruutu.width}-${yritys + 1}.png`) });
+          }
+        }
         /* eslint-enable no-await-in-loop */
         if (auki) break;
       }
