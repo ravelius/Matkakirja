@@ -455,6 +455,14 @@ export const LINSSI = {
   kerros: true,
 
   nimi: 'Vesistölinssi',
+  /*
+   * KESKENERÄINEN (omistaja 20.9.2026 klo 15.10: *"merkitse vertailulinssi,
+   * maidentiedot, sekä vesistölinssi harmaalla ja siirrä omalle rivilleen
+   * ja pienennä niiden ikonit. ne ovat vielä liian keskeneräisiä"*).
+   * Laukku latoo keskeneräiset omalle riville ruudukon loppuun harmaana
+   * ja pienempänä (js/ui.js rakennaLinssivalikko); linssi toimii yhä.
+   */
+  kesken: true,
   lyhyt: 'Joet ja järvet maaston päällä: vesi näkyy siellä minne maa viettää.',
   /*
    * Mutkitteleva joki ja järvi sen varrella. Ei pisaraa eikä aaltoa:

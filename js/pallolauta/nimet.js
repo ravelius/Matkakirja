@@ -230,6 +230,13 @@ const PELIMERKIN_VARA_PX = 4;
 export const NIMEN_REUNAN_SIETO_PX = 1;
 /** Pelaajan oma kaupunki voittaa kaikki muut ehdokkaat. */
 const OMAN_KAUPUNGIN_TARKEYS = 1000;
+/**
+ * Matkan tarjottu kohde (nopan kohde, lentolistan kohde) voittaa muut
+ * paitsi oman kaupungin: kohteen piste näkyy vain nimen kanssa
+ * (js/pallolauta/lauta.js pisteNakyy), joten nimibudjetti ei saa
+ * pudottaa sitä (omistaja 20.9.2026 klo 14.40, lentonäkymä).
+ */
+const KOHTEEN_TARKEYS = 500;
 
 /*
  * ══════════════════════════════════════════════════════════════════
@@ -418,6 +425,8 @@ export function luoNimet({
    */
   const lado = ({
     varaukset = [], pinot = [], katto = NIMIEN_KATTO, vain = null,
+    /** Kaupungit, jotka ladotaan ennen muita (ks. KOHTEEN_TARKEYS). */
+    etusija = null,
     kokoKerroin: kaupunginKerroin = 1, pisteSade = 0,
     karttaskaala = 0, vertailuskaala = 0,
     /*
@@ -460,7 +469,8 @@ export function luoNimet({
         y: p.y,
         lat: k.lat,
         lng: k.lng,
-        tarkeys: k.c.tarkeys + (k.c.id === oma ? OMAN_KAUPUNGIN_TARKEYS : 0),
+        tarkeys: k.c.tarkeys + (k.c.id === oma ? OMAN_KAUPUNGIN_TARKEYS : 0)
+          + (etusija?.has(k.c.id) ? KOHTEEN_TARKEYS : 0),
       });
     }
     /*
