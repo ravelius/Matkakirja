@@ -58,6 +58,14 @@ pitää CI-tauon, ei avaa PR:iä eikä käynnistä workflow_dispatchia.
    - a) *Syvyysvyöhykkeet* ovat JO pohjassa (maailmapiirto.js syvyysramppi, litistys 0,20 "bandingin" takia 30.8.). Muutos = litistyksen palautus (0,20 → 0,5–0,7) ja portaiden lukumäärä (`SYVYYS`-asteikko tools/patina.mjs): ~1 h + koelaatta. Kesto ei muutu.
    - b) *Rannikkoviivoitus* (rannan suuntaiset ohuet viivat merellä, 2–4 kaistaa, 1800-luvun kaiverrustyyli) on UUSI passi: rannikkopolygonin offsetit (sama `tyonnaUlos`-kaava kuin aluevesirajalla) ja häivytys ulospäin; ~1 pv + koelaatat; pohjan piirtoaika +10–20 %. Rannan pikkusaaret ja fjordit vaativat harvennuksen ettei viivoitus tukkeudu.
    - Suositus: a) nyt (halpa, jo mitattu banding-raja tiedossa), b) jonoon ellei omistaja halua kaiverrusilmettä juuri nyt.
+6. **Tarkempi rantaviiva-aineisto z≥7:lle** (Gironde/Arcachon-mittaus 20.9.: ne_10m:n
+   janat ovat 4–6 km, joten kehä, rantavektori ja laatan täytön reuna ovat kaikki
+   kulmikkaita lähizoomilla). Vaihtoehdot: GSHHS full (LGPL, ~1:250k, rannikko +
+   järvet) tai OSM coastline (ODbL). Vaikuttaa KAHTEEN paikkaan: pallon
+   vektorisolut (tee-pallovektorit, laji rannikko l4) ja polton meri/ranta
+   (maailma.mjs ne_10m_ocean → sama aineisto), muuten kehä ja täyttö eroavat.
+   Arvio 1 pv aineisto + polttoaika +10 % (tiheämpi ranta). Omistaja päättää polton
+   yhteydessä; ilman tätä lähizoomin kulmikkuus jää.
 5. **Nimiötaso** — jos Pelikoodari tarvitsee: uusi `--nimiotaso`-ajo viivatason mallilla (läpinäkyvä, peite nimiölaatikoista), luettelokenttä `nimiotaso`, peli lataa pallolle ja tasokartalle (js/laattapyramidi.js: sama malli kuin jokitaso 64e402d3, ~150 riviä + testit). 1 pv.
 
 ## 4. Pelikoodarin tarve (kysytty 20.9. suoraan)
