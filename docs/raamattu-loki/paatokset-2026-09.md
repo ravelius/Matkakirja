@@ -299,3 +299,7 @@ Kartuschan sisennys 12/24 px, painallus ei lavitse, nimiston aika-kentta. Osoiti
 ## KUVATTOMIA ON 8, EI 198 (Sisaltokirjuri 2a51bbce) (21.9.2026 klo 09.09)
 
 nostoinventaario.mjs ei tarkistanut kuva.tiedosto-kenttaa (maa-kategoriat/maalehtinostot-muoto), vain kuva.osoite -> korjattu, ajettu 43 maalle: aidosti kuvattomia 8 (TUR 3, GBR 2, FRA 2, GRC 1), kaikki fokuskohteet-kortteja ja enimmakseen tuhoutuneita monumentteja (Bastilji, Tuileries, Crystal Palace, vanha London Bridge, Rodoksen kolossi, Halikarnassoksen mausoleumi, Konstantinopolin hippodromi, Pergamonin alttari). PAATOS: nama 8 ovat Codexin havainnekuvatilauksen ydin (ihmeet, kulta-aika, historialliset henkilot sallittu); Pergamonin alttarille Commons-kuva Berliinin museosta + havainnekuva alkuperaisesta paikasta. Vaihe 1 kutistuu yhteen eraan; Sisaltokirjuri jatkaa vaiheeseen 2 (FRA siivous).
+
+## UUSI PYRAMIDI TUOTANNOSSA (Karttaseppa, luettelo viety v1987:n jalkeen) (21.9.2026 klo 09.10)
+
+Pohja 2026-09-21 (GSHHG, joet, meriresepti), viivat, ranta, nostot 112 maata tasoineen, nimiot 2026-09-21e (pysyvat + koristeet), pallo 20260921a, vektorit 2026-09-21-gshhs; tarkistettu main-koodilla (saapuminen Ranskaan, Gironde z8). Edellinen luettelo ~/pyramidi-poltto/vienti-20260921/pyramidi-edellinen.json. Karttasepan luovutus 853fb80c; sessio suljettavissa; uusi Karttaseppa aloittaa atlaslehti-vedoksesta.
