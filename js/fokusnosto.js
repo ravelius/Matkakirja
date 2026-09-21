@@ -797,6 +797,14 @@ function nostoMerkinKentat(nosto, paikka) {
      * KOHDE_MAAT-riveillä suoraan, koska ne OVAT kohdeolioita.
      */
     ...(nosto.lahi ? { lahi: true } : {}),
+    /*
+     * NOSTON TASO 1|2|3 (Sisältökirjuri 20.9.2026, maalehtinostot-fra
+     * `taso: 1`): kulkee merkkiriville kuten `lahi`, jotta poltto
+     * (tools/fokuskartta/nostot.mjs `r.kohde?.taso`) ja elävä kerros
+     * näkevät saman tason. Ilman tätä Versailles'n peilisali jäi
+     * vedoksessa kakkostasolle (docs/raportit/poltto-koe-20260920.md).
+     */
+    ...(nosto.taso ? { taso: Number(nosto.taso) } : {}),
   };
 }
 

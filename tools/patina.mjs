@@ -629,6 +629,46 @@ const VESIVIIVAT_HARVA = {
  * koskemattomina tallella, ja passi herää `null`-arvon vaihtamisella.
  */
 const VESIVIIVOITUS = null;
+/*
+ * KOE 20.9.2026 (omistajan kortti: rannikkoviivoitus TAI syvyysvyöhykkeet,
+ * omistaja valitsee koelaatoista): vaihtoehdot viedään nimellä, jotta
+ * generaattori voi kytkeä viivoituksen reseptiin ajokohtaisesti
+ * (`--vesiviivoitus tihea|harva`) koskematta oletukseen (null).
+ */
+/*
+ * OHUT (poltto-koe 2, omistaja 20.9.2026: *"viivoituksessa ja vyöhykkeissä
+ * kummassakin on hyvää, tarvitaan vielä jotain lisää"* → yhdistelmä: 3–4
+ * hentoa viivaa rannasta, ja sen ulkopuolella yksi vaalea syvyyssävy).
+ */
+const VESIVIIVAT_OHUT = {
+  ...VESIVIIVAT_TIHEA,
+  aloitus: 5,
+  vali: 5.5,
+  kasvu: 2.6,
+  viivoja: 4,
+  paksuus: 0.9,
+  voima: 0.2,
+  haipyma: 0.9,
+  huojunta: 6,
+};
+/*
+ * TUMMA (merikoe 3, omistaja 20.9.2026: *"viivoitus vielä tummempana kuin
+ * vanhoissa kartoissa"*): 6 viivaa, sisin tiheä, muste selvästi näkyvä.
+ */
+const VESIVIIVAT_TUMMA = {
+  ...VESIVIIVAT_TIHEA,
+  aloitus: 4,
+  vali: 4.5,
+  kasvu: 2.2,
+  viivoja: 6,
+  paksuus: 1.05,
+  voima: 0.42,
+  haipyma: 0.8,
+  huojunta: 6,
+};
+export const VESIVIIVOITUKSET = Object.freeze({
+  tihea: VESIVIIVAT_TIHEA, harva: VESIVIIVAT_HARVA, ohut: VESIVIIVAT_OHUT, tumma: VESIVIIVAT_TUMMA,
+});
 
 /*
  * MAANRAJAT ASTEEN TUMMEMMIKSI.

@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1984';
+const CACHE = 'matkakirja-2026-08-09.1985';
 const SHELL = [
   './',
   './index.html',
@@ -243,6 +243,7 @@ const SHELL = [
   './js/pallolauta/lauta.js',
   './js/pallolauta/avaus.js',
   './js/pallolauta/kamera.js',
+  './js/pallolauta/kameraloki.js',
   './js/pallolauta/linssikartta.js',
   './js/pallolauta/linssit.js',
   './js/pallolauta/merkit.js',
@@ -457,6 +458,18 @@ const SHELL = [
   './js/packs/maakartat.js',
   './js/packs/nahtavyysjutut.js',
   './js/packs/miniatyyrit.js',
+  // Ykköstason nostojen kuvamerkit (js/fokusnosto-symbolit.js NOSTOSYM_KUVAMERKIT).
+  './assets/nostotyypit/merkki-vuori.png',
+  './assets/nostotyypit/merkki-saari.png',
+  './assets/nostotyypit/merkki-jarvi.png',
+  './assets/nostotyypit/merkki-joki.png',
+  './assets/nostotyypit/merkki-meri.png',
+  './assets/nostotyypit/merkki-historia.png',
+  './assets/nostotyypit/merkki-kulttuuri.png',
+  './assets/nostotyypit/merkki-ruoka.png',
+  './assets/nostotyypit/merkki-kauppa.png',
+  './assets/nostotyypit/merkki-tekniikka.png',
+  './assets/nostotyypit/merkki-merenkulku.png',
   './assets/kartat/symbolit/sym-elain.webp',
   './assets/kartat/symbolit/sym-historia.webp',
   './assets/kartat/symbolit/sym-huuto.webp',
@@ -626,6 +639,7 @@ const SHELL = [
   './js/packs/maastokohteet-fin.js',
   './js/packs/maastokohteet-fji.js',
   './js/packs/maastokohteet-fra.js',
+  './js/packs/nimisto-1873.js',
   './js/packs/maastokohteet-gbr.js',
   './js/packs/maastokohteet-gha.js',
   './js/packs/maastokohteet-grl.js',
@@ -1912,9 +1926,9 @@ const LAATTAPOLKU = '/julisteet/pallo/laatat/';
  * on tahallinen: palvelutyöntekijä ei voi tuoda ES-moduulia, ja
  * tests/sw.test.mjs vartioi, että luvut ovat samat.
  */
-const LAATTAKANSIO = '2026-09-20-pohja-20260920k';
+const LAATTAKANSIO = '2026-09-21-pohja-20260921a';
 /** Varakansio syvimmälle tasolle (js/pallo.js PALLO_LAATAT_SYVA), kunnes nostosarja kattaa sen. */
-const LAATTAKANSIO_SYVA = '2026-09-20-pohja';
+const LAATTAKANSIO_SYVA = '2026-09-21-pohja';
 const LAATTAKANSIOT = [LAATTAKANSIO, LAATTAKANSIO_SYVA];
 /** Laattoja korissa enintään (≈ 30 Mt; yksi laatta 8–14 kt). */
 const LAATTAKATTO = 3000;

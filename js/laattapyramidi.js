@@ -771,6 +771,8 @@ const tasonVersio = (taso) => {
     return nk ? nostotasonKansio(nk) : (luettelo?.nostotaso?.versio ?? '');
   }
   if (taso.viiva) return luettelo?.viivataso?.versio ?? '';
+  if (taso.joki) return luettelo?.jokitaso?.versio ?? '';
+  if (taso.nimio) return luettelo?.nimiotaso?.versio ?? '';
   if (taso.ranta) return luettelo?.rantataso?.versio ?? '';
   if (taso.reliefi) return reliefinVersio();
   /*
@@ -897,6 +899,18 @@ function laattaUrl(taso, sarake, rivi) {
     return pyramidiUrl(`${luettelo.viivataso.versio}/viivat/z${taso.z}/${sarake}/${rivi}`
       + `.${luettelo.muoto ?? 'webp'}`);
   }
+  // Jokitaso on viivatason generaattorin tuote ilman reittejä, joten
+  // sen laatat asuvat samassa alipolussa: <jokiversio>/viivat/z…
+  // (ks. JOKITASO alempana).
+  if (taso.joki) {
+    return pyramidiUrl(`${luettelo.jokitaso.versio}/viivat/z${taso.z}/${sarake}/${rivi}`
+      + `.${luettelo.muoto ?? 'webp'}`);
+  }
+  // Nimiötaso: <nimioversio>/nimiot/z… (ks. NIMIÖTASO alempana).
+  if (taso.nimio) {
+    return pyramidiUrl(`${luettelo.nimiotaso.versio}/nimiot/z${taso.z}/${sarake}/${rivi}`
+      + `.${luettelo.muoto ?? 'webp'}`);
+  }
   // Rantataso samoin: <rantaversio>/ranta/z… (omistaja 6.9.2026 ilta).
   if (taso.ranta) {
     return pyramidiUrl(`${luettelo.rantataso.versio}/ranta/z${taso.z}/${sarake}/${rivi}`
@@ -930,6 +944,10 @@ function laattaUrl(taso, sarake, rivi) {
 const noutoEtuliite = (taso) => {
   if (taso.nosto) return 'n';
   if (taso.viiva) return 'v';
+  // j = joki; jokitaso on eri tiedosto kuin saman ruudun viivataso.
+  if (taso.joki) return 'j';
+  // t = teksti; nimiötaso.
+  if (taso.nimio) return 't';
   if (taso.ranta) return 'r';
   // f = reliefi; r on jo rantatasolla.
   if (taso.reliefi) return 'f';
@@ -1853,6 +1871,8 @@ let variMaaNyt = null;
  */
 export function asetaVaritasonMaa(iso) {
   const uusi = iso || null;
+  // Liikkeessä lähtömaa pysyy (ks. HUNTU PYSYY LIIKKEEN AJAN).
+  if (!uusi && variLiike && variMaaNyt) return false;
   if (uusi === variMaaNyt) return false;
   variMaaNyt = uusi;
   // Johdettu tasolista on maakohtainen: se on laskettava uudestaan.
@@ -2001,16 +2021,58 @@ export function tasoituksenMaailma() {
  */
 let variLiike = false;
 
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * HUNTU PYSYY LIIKKEEN AJAN — LÄHTÖ- JA KOHDEMAA AUKKOINA (omistaja
+ * 21.9.2026, Fablen erä "huntu liikkeen ajan")
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Aiempi sääntö (16.9.) otti hunnun kaikkialta pois liikkeen ajaksi.
+ * Omistaja: huntu pysyy päällä myös nappulan etenemisen ajan, mutta
+ * liikkeen ajaksi SEKÄ lähtömaa ETTÄ kohdemaa ovat hunnun ulkopuolella
+ * (kaksi aukkoa maapolygonien mukaan); perillä aukko on vain
+ * kohdemaassa kuten ennenkin. Koskee liftausta, bussia, laivaa ja
+ * lentoa.
+ *
+ * MIKSI SE ON NYT HALPA, VAIKKA 16.9. EI OLLUT: kerma maalataan
+ * pelin omalla maamaskilla koko laatalle ja kohdemaan renkaat ovat
+ * REIKÄ (PAATOKSET 37 TARKENNUS, js/pallolaatat.js maalaaTasoitus) —
+ * värilaatan kuvaa ei piirretä lainkaan, joten laattaan poltettu peite
+ * ei ole enää tiellä. Kaksi reikää on sama maski kahdella rengasjoukolla,
+ * ja kohdemaan renkaat tulevat samasta aineistosta
+ * (maanAluevesiRenkaat) kuin lähtömaan.
+ *
+ * LÄHTÖMAA PYSYY VÄRITASON MAANA LIIKKEEN AJAN. Liikkeessä pelaajalla
+ * ei ole kaupunkia (cityOf on null), joten lauta pyytäisi maaksi
+ * nullin ja koko tasoitus katoaisi — juuri se "huntu katoaa kokonaan",
+ * jonka omistaja näki. Nollapyyntö jätetään liikkeen ajaksi huomiotta
+ * (asetaVaritasonMaa); perillä lauta antaa kohdemaan, ja se vaihtuu
+ * normaalisti.
+ *
+ * ILMAN RENKAITA EI TOISTA AUKKOA: jos maa-aineisto on vielä haussa,
+ * kohdemaan aukko jää pois ja huntu on kuten perillä lähtömaan
+ * ympärillä — kartta ei ole koskaan väärä kuva.
+ */
+let variLiikeKohde = null;
+
 /**
- * Kerma pois matkan ajaksi (true) ja takaisin perillä (false).
+ * Liikkeen huntu päälle (true, `kohdeIso` = matkan kohdemaa) ja pois
+ * perillä (false).
  *
  * @returns {boolean} true, jos tila vaihtui
  */
-export function asetaTasoituksenLiike(paalla) {
+export function asetaTasoituksenLiike(paalla, kohdeIso = null) {
   const uusi = Boolean(paalla);
-  if (uusi === variLiike) return false;
+  const kohde = uusi ? (kohdeIso || null) : null;
+  if (uusi === variLiike && kohde === variLiikeKohde) return false;
   variLiike = uusi;
+  variLiikeKohde = kohde;
   return true;
+}
+
+/** Liikkeen kohdemaa (ISO A3) tai null (savukkeet, testit). */
+export function tasoituksenLiikkeenKohde() {
+  return variLiikeKohde;
 }
 
 /** Onko matkan kermattomuus pyydetty (savukkeet, testit). */
@@ -2027,6 +2089,18 @@ export function tasoituksenLiike() {
 function variMaanRenkaat() {
   if (!variSuojaPolygonit || !variMaaNyt) return null;
   const renkaat = maanAluevesiRenkaat(variSuojaPolygonit, variMaaNyt, 0);
+  return renkaat?.length ? renkaat : null;
+}
+
+/**
+ * Liikkeen kohdemaan renkaat (toinen aukko), tai null jos liikettä ei
+ * ole, kohde on sama maa tai aineisto puuttuu. Sama välimuisti kuin
+ * lähtömaalla (maanAluevesiRenkaat).
+ */
+function variLiikkeenKohteenRenkaat() {
+  if (!variLiike || !variLiikeKohde || variLiikeKohde === variMaaNyt) return null;
+  if (!variSuojaPolygonit) return null;
+  const renkaat = maanAluevesiRenkaat(variSuojaPolygonit, variLiikeKohde, 0);
   return renkaat?.length ? renkaat : null;
 }
 
@@ -2141,18 +2215,23 @@ export function pyramidinTasoitus() {
    * Renkaat tulevat samasta aineistosta kuin suoja, joten ne ovat
    * valmiina täsmälleen silloin kun suoja on tarkka.
    */
-  const renkaat = variMaanRenkaat();
-  // Ilman renkaita matkan kermattomuus jää pois (ks. ILMAN RENKAITA);
-  // maailmanäkymä on kehittäjän oma näkymä ja saa jäädä ennalleen.
-  const kermatta = variMaailma || (variLiike && Boolean(renkaat));
-  const tila = variMaailma ? 'M' : (kermatta ? 'L' : 'K');
+  const omat = variMaanRenkaat();
+  /*
+   * LIIKKEESSÄ KAKSI AUKKOA (ks. HUNTU PYSYY LIIKKEEN AJAN): lähtömaan
+   * ja kohdemaan renkaat samaan reikälistaan. Huntu itse pysyy —
+   * `maailma` on tosi vain kehittäjän maailmanäkymässä.
+   */
+  const kohteen = omat ? variLiikkeenKohteenRenkaat() : null;
+  const renkaat = kohteen ? [...omat, ...kohteen] : omat;
+  const tila = variMaailma ? 'M' : (variLiike ? 'L' : 'K');
   return {
     kerma: vt.kerma || '#faf4d6',
     peitto,
     suoja: s,
-    maailma: kermatta,
+    maailma: variMaailma,
     renkaat,
-    avain: `${variMaaNyt}|${tila}|${renkaat ? renkaat.length : 0}`
+    liikkeenKohde: kohteen ? variLiikeKohde : null,
+    avain: `${variMaaNyt}|${tila}|${kohteen ? variLiikeKohde : '-'}|${renkaat ? renkaat.length : 0}`
       + `|${s.tarkka ? 'T' : 'L'}|${Math.round(s.x)}|${Math.round(s.y)}`
       + `|${Math.round(s.w)}|${Math.round(s.h)}`,
   };
@@ -2398,6 +2477,99 @@ function viivatasonTasot() {
   }
   return luettelo.__viivaTasot.length ? luettelo.__viivaTasot : null;
 }
+
+/*
+ * ═══════════════════════════════════════════════════════════════════
+ * JOKITASO — JOET JA RAJAT ILMAN REITTEJÄ, PALLON LEPOKERROKSELLE
+ * ═══════════════════════════════════════════════════════════════════
+ *
+ * OMISTAJA 20.9.2026 (kaappaus docs/raportit/kaappaukset/omistaja-
+ * 20260920/pariisi-ei-jokia-v1980.webp): Ranskan kartalla "Loire"-nimiö
+ * mutta ei jokiviivaa. MITATTU (Karttaseppä, tuotannon polut): pohja
+ * 2026-09-20-pohja on poltettu ILMAN jokia (z7/82/35 tyhjä paperi),
+ * joet ovat viivatasolla 2026-09-20d (sama laatta: Loiren uoma) — ja
+ * pallon lepokerros jättää viivatason tietoisesti pois, koska sillä on
+ * reittiviuhka (js/pallolaatat.js lepokerroksenKerrokset `viiva:
+ * false`, Raamattu PAATOKSET 8). Liikkeessä pallon sarja k (poltettu
+ * viivat d:n kanssa) näyttää joen; levossa — juuri kun pelaaja katsoo
+ * — se katoaa.
+ *
+ * FABLEN PÄÄTÖS (20.9.2026, vaihtoehto A): viivatason generaattori
+ * polttaa toisen laataston ILMAN REITTEJÄ (`--eireitit`: joet + rajat),
+ * ja luettelo kantaa sen omassa kentässään `jokitaso` (versio, tasot,
+ * laatastot). Pallon lepokerros latoo jokitason siihen väliin, jossa
+ * viivataso olisi (ranta → JOKI → nosto); tasokartta ja linssikartta
+ * EIVÄT lataa sitä, koska niillä on viivataso jokineen — kaksi kertaa
+ * sama uoma olisi tuplamuste. Sarja k pysyy, pallosarjaa ei polteta
+ * (sääntö koskee pohjan ja VIIVATASON vaihtoa; tämä on lisäkenttä).
+ *
+ * VANHA KOODI SIETÄÄ UUDEN KENTÄN: luettelon lukijat poimivat tunnetut
+ * kentät nimeltä, ja ylimääräinen `jokitaso` on niille pelkkä
+ * tuntematon avain — siksi luettelo voidaan viedä ämpäriin vasta kun
+ * tämä osoitin on mainissa, mutta vanha peli ei kaadu, jos se ehtii
+ * ennen (tests/laattapyramidi.test.mjs).
+ *
+ * VANHA LUETTELO ILMAN `jokitaso`-KENTTÄÄ palauttaa nullin ja kerros
+ * jää pois — peli on täsmälleen v1980.
+ */
+function jokitasonTasot() {
+  const jt = luettelo?.jokitaso;
+  if (!jt?.versio || !jt.tasot?.length || !jt.laatastot) return null;
+  if (!luettelo.__jokiTasot) {
+    luettelo.__jokiTasot = luettelo.tasot
+      .filter((t) => jt.tasot.includes(t.z) && jt.laatastot[t.z])
+      .map((t) => ({
+        ...t, laatasto: jt.laatastot[t.z], __bitit: undefined, joki: true,
+      }));
+  }
+  return luettelo.__jokiTasot.length ? luettelo.__jokiTasot : null;
+}
+
+/** Jokitason kirjaus (savukkeet, testit) tai null. */
+export function pyramidinJokitaso() {
+  const jt = luettelo?.jokitaso;
+  return jt?.versio ? jt : null;
+}
+
+/*
+ * ═══════════════════════════════════════════════════════════════════
+ * NIMIÖTASO — POLTETUT NIMIÖT OMANA LÄPINÄKYVÄNÄ TASONA
+ * ═══════════════════════════════════════════════════════════════════
+ *
+ * Omistajan kortti 20.9.2026 ilta (uusintapoltto): nimiöt omaksi
+ * tasoksi, jotta Pelikoodari voi piilottaa kohdemaan poltetut tekstit
+ * (maapolygonimaski) ja piirtää ne elävinä; 1873-maakunnat ja meret
+ * harvennetuin kapiteelein (js/packs/nimisto-1873.js). Generaattori
+ * tools/generoi-laattapyramidi.mjs `--nimiotaso`; luettelokenttä
+ * `nimiotaso: { versio, tasot, laatastot, nimiot }`, jossa `nimiot`
+ * on Pelikoodarin rajapinta (luokka, teksti, lon, lat, iso, meri,
+ * koko, laatikot tasoittain asteina).
+ *
+ * PAIKKA: viivatason (tai jokitason) PÄÄLLÄ, nostojen ALLA — nosto
+ * merkitsee paikan ja sen nimiö on ladottu väistämään; alueen nimi
+ * on taustan typografiaa. Pallon lepokerros latoo tason; tasokartan
+ * kerrospäivitys on oma eränsä (Pelikoodarin elävä sovittelu on
+ * pallolla). Vanha luettelo ilman kenttää = ei tasoa.
+ */
+function nimiotasonTasot() {
+  const nt = luettelo?.nimiotaso;
+  if (!nt?.versio || !nt.tasot?.length || !nt.laatastot) return null;
+  if (!luettelo.__nimioTasot) {
+    luettelo.__nimioTasot = luettelo.tasot
+      .filter((t) => nt.tasot.includes(t.z) && nt.laatastot[t.z])
+      .map((t) => ({
+        ...t, laatasto: nt.laatastot[t.z], __bitit: undefined, nimio: true,
+      }));
+  }
+  return luettelo.__nimioTasot.length ? luettelo.__nimioTasot : null;
+}
+
+/** Nimiötason kirjaus (Pelikoodarin elävä sovittelu, savukkeet) tai null. */
+export function pyramidinNimiotaso() {
+  const nt = luettelo?.nimiotaso;
+  return nt?.versio ? nt : null;
+}
+// pyramidinNimiot (metadata Pelikoodarille) on ylempänä, Pelikoodarin erässä.
 
 /**
  * Päivittää viivatason kerroksen.
@@ -2789,6 +2961,10 @@ export function pyramidinKerrostasot(z) {
     if (ranta0) merkit.push(ranta0);
     const viiva0 = viivatasonTasot()?.find((t) => t.z === z);
     if (viiva0) merkit.push(viiva0);
+    const joki0 = jokitasonTasot()?.find((t) => t.z === z);
+    if (joki0) merkit.push(joki0);
+    const nimio0 = nimiotasonTasot()?.find((t) => t.z === z);
+    if (nimio0) merkit.push(nimio0);
     const nosto0 = nostotasonTasot()?.find((t) => t.z === z);
     if (nosto0) merkit.push(nosto0);
     return [reliefi, ...merkit];
@@ -2811,6 +2987,13 @@ export function pyramidinKerrostasot(z) {
   if (ranta) kerrokset.push(ranta);
   const viiva = viivatasonTasot()?.find((t) => t.z === z);
   if (viiva) kerrokset.push(viiva);
+  // JOKITASO viivatason paikalle pallolle (ks. JOKITASO): kutsuja
+  // suodattaa viivatason pois ja jokitason mukaan — ei koskaan molempia.
+  const joki = jokitasonTasot()?.find((t) => t.z === z);
+  if (joki) kerrokset.push(joki);
+  // NIMIÖTASO viivojen päälle, nostojen alle (ks. NIMIÖTASO).
+  const nimio = nimiotasonTasot()?.find((t) => t.z === z);
+  if (nimio) kerrokset.push(nimio);
   const nosto = nostotasonTasot()?.find((t) => t.z === z);
   if (nosto) kerrokset.push(nosto);
   return kerrokset;

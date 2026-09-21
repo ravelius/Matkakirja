@@ -183,3 +183,35 @@ Omistaja: ei ollut zoomannut oleellisesti ennen noppaa; kartta hyppasi yhtakkia 
 ## VEDOS HYVAKSYTTY, POLTTO ALKAA (omistaja 20.09.2026 klo 23.54) (20.9.2026 klo 23.54)
 
 Ranskan vedos (karttaseppa-poltto-koe d9e0fab6, kaappaukset *-vedos.webp): omistaja hyvaksyi polttoon kolmella muutoksella: laivat eivat istu veteen (vesiraja rungon alle), HORATION REITTIA EI POLTETA (muiden maiden reittia ei mietitty - sekoittava; koodi sailyy kerroksena), Versailles ja Etretat ykkostasolle, Mont Blancin merkki reliefin paalle. Rantaviiva GSHHS full/OSM samaan polttoon jos Karttaseppa arvioi alle 2 h lisaa. Poltto = koko pyramidi koko maailma + pallosarja; nimiotaso erikseen uudelleenpoltettava muiden maiden 1873-nimistolle. Omistaja: valmistele muutama muu maa samalla tavalla (Fable valitsi ESP, ITA, DEU: nimisto 1873 + nosto.taso), ei enempaa; jatketaan huomenna. V1984 PR #2636 KIINNI: savuke-kaupunkipopup 3->9, kaupunkimerkin napautus ei avaa liuskaa Pariisissa/Marseillessa 390 px (epailty nostokortti-2) -> Pelikoodari kiireellisena. ASTRO-PALKIT (Sisaltokirjuri, docs/raportit/astro-palkit-20260920.md): kuvat eivat ole omassa amparissa vaan NASAn CDN:ssa (satelliitti-data.js generoitu tools/hae-satelliittihavainnot.mjs:lla); 12 havaintoa / 24 tiedostoa palkillisia, rajatut valmiina -> PAATOS: Sisaltokirjuri vie omaan ampariin uusiin polkuihin, muuttaa datan 12 rivia ja lisaa generaattoriin poikkeuslistan.
+
+## ASTRO-PALKIT TEHTY (Sisaltokirjuri 1c32cc39) (21.9.2026 klo 00.12)
+
+24 rajattua + 24 alkuperaista kuvaa media.matkakirja.app/linssit/astronautin-kamera/ (uudet polut, HEAD 200); satelliitti-data.js 12 rivia omaan ampariin NASAn sijaan; hae-satelliittihavainnot.mjs KUVAPOIKKEUKSET-lista. Raportti docs/raportit/astro-palkit-toteutus-20260921.md. Julkaisujonoon.
+
+## KAUPUNKIPOPUP-VIKA ON KUORMAVIKA PREPISSA, EI NOSTOKORTTI-2; CAMARGUE TEHTY (Pelikoodari 266574af) (21.9.2026 klo 00.15)
+
+savuke-kaupunkipopup 3->9 toistuu prepilla hidastetulla Chromiumilla (CPU 6x): liuska aukeaa ja sulkeutuu heti kun kameran ajo liikuttaa merkkia (lepotesti) - Pelikoodari korjaa liuskan (pelikoodari-v1984-kaupunkipopup). CAMARGUE: sovittelun lukko luettiin datumeihin vasta merkit.aseta-kutsun jalkeen -> ruutu naytti datan kyljen ja piilotetun nimion (1400 px 14/68 lappua vaarassa asennossa); savuke-nimikyltti vartiot 9g/9h. Jono: huntu-liike + kameradiagnostiikka.
+
+## KAKSOISVIIVAN JUURISYY: KAKSI NE-AINEISTOA; GSHHG-RANTAVIIVA KAYTTOON; POLTTO ALKOI (Karttaseppa 044b8d90) (21.9.2026 klo 00.40)
+
+Koelaatta Gironde/Arcachon: YKSI viiva. Omistajan epaily oikea: toinen viiva oli keha (ne_10m admin_0) vs. ranta (ne_10m ocean), kaksi eri aineistoa jotka eroavat 0,1-4 km; tayton reuna on viivan alla. Muutos: GSHHG 2.3.7 full (tools/gshhs-meri.mjs) SAMASTA tiedostosta laattoihin, vektorisoluihin (harvennus 0,004) ja kehaan (generoi-maapolygonit --meri, ompelu GSHHG-renkailla; maapolygonit.json 1,4 -> 2,7 Mt; vektoritasot 0-1 130/467 kt gz). Kaappaukset gironde/arcachon-rantaviiva-ennen/jalkeen. SIVUTUOTE: liftauszoomin JUURISYY loytyi ja korjattu (lauta.js matkaZoomirajat + kattoPuristus; savuke 5/10 -> 10/10; karttaseppa-v1984-liftauszoomi 02b5cb86) -> Julkaisijalle polton jalkeen. POLTTO ALKOI: versiot 2026-09-21-{pohja,viivat,ranta,nostot,nimiot}, pallo 20260921a; laivojen vesiraja, Horatio pois, Versailles/Etretat taso 1, Mont Blanc -merkki.
+
+## KARTUSCHAN VAJAAT MAAT TEHTY (Sisaltokirjuri 08eaead3, Fablen pistokoe ok) (21.9.2026 klo 01.01)
+
+BGR/EST/ROU/LTU/LVA 5 aiheeseen (+ DNK/FIN/HRV/POL edellisesta sessiosta samassa haarassa), 52 uutta nostoa, 13 tehtava-kysymysta; tutkimus ja kuvahaku viidella taustasessiolla, Sisaltokirjurin pistokokeet; BGR Madara-kuvan peilipolkutormays korjattu. Fablen pistokoe 4 Commons-kuvaa (Warszawa, Torvalds/LinuxCon - julkinen henkilo sallittu, viron kannel, Baltian ketju) ok. Raportti docs/raportit/kartuscha-vajaat-maat-20260921.md. Julkaisujonoon. Sisaltokirjuri: ESP/ITA/DEU nimisto 1873 + taso, sitten pysahtyy.
+
+## ESP/ITA/DEU NIMISTO 1873 + TASOT (Sisaltokirjuri; Fable tarkasti) (21.9.2026 klo 01.30)
+
+Haarat sisalto-nimisto-taso-deu cca22bea, -ita b8fcdbe0, -esp 5dc92810: 61 nimiota (DEU 29: Preussin provinssit + kuningaskunnat/herttuakunnat/hansakaupungit 1873, ITA 16, ESP 16) + 24 taso:1-nostoa. Kaanon ok. Fablen korjaukset nimiotason polttoon (ei kiire): ITA 'LATIUM' -> 'LAZIO' (pelin suomalainen nimisto), ESP 'KANTABRIA' ei ollut 1873 aluetta (Santanderin provinssi Vanhassa-Kastiliassa) -> poistetaan tai 'SANTANDER' pienena. Sisaltokirjuri pysahtyi sovitusti.
+
+## KAUPUNKIPOPUP KORJATTU (Pelikoodari 06b438bc) (21.9.2026 klo 01.45)
+
+Syy: liuskan lepotesti alkoi kun kamera-ajon lupaus tayttyi ennen renderkameraa -> liuska aukesi ja sulkeutui heti (42 px jalkisiirto). Nyt liuska seuraa merkkia asettumisvaiheen (>= 1,5 s, piste levossa) ja lepotesti alkaa vasta sitten. Savuke-kaupunkipopup sai SAVUKE_HIDAS-kytkimen (CPU-hidastus = CI:n kuorma), polton kuormassa 45/45. v1984 voi menna CI:hin polton jalkeen.
+
+## TAYSI POLTTO VALMIS (Karttaseppa a4224925) (21.9.2026 klo 01.56)
+
+Koko pyramidi 2026-09-21-* + pallo 20260921a: 100 min, 209 850 laattaa, eheys tasmaa, laatat ja pallosarja amparissa; luettelo ~/pyramidi-poltto/vienti-20260921/pyramidi.json (EI amparissa ennen osoitinta). Muutokset: laivat vesirajaan (runko leikattu, varjo + aaltopari), Horation reitti pois (koodi jaa), Versailles/Etretat/Mont Blanc taso 1 (Etretat --polta-hahmotelmat, Mont Blancin merkille sadekeha), koristeet vaistavat meren nimia, z5 vain palavat nostot esteina. maapolygonit.json 1,4 -> 2,7 Mt (gz 889 kt). Nimiotaso erikseen uusintapoltettava (DEU/ITA/ESP huomenna). HUOM: tasot ja kuvamerkit nakyvat kohdemaassa vasta kun Pelikoodari tuo ne elavaan kerrokseen. Julkaisukaava: v1984 (korjaukset + sisalto) -> v1985 (osoitin; luettelo ampariin juuri ennen mergea, edellinen talletettu, tuotanto tarkistetaan heti).
+
+## HUNTU LIIKKEEN AJAN + KAMERALOKI TEHTY (Pelikoodari 6aad75f1, 97ef58ad) (21.9.2026 klo 02.29)
+
+Huntu pysyy liikkeen ajan, lahto- ja kohdemaa aukkoina (maapolygonien renkaat reikalistaan), perilla vain kohdemaa, kaikki kulkutavat. Juurisyy hunnun katoamiselle: liikkeessa cityOf null -> varitason maa nollattiin. Savuke-huntu-liike 10/10 (harva). Aukkojen laatat kootaan liikkeen alussa, nakyvat 1-2 s kuluttua. KAMERALOKI js/pallolauta/kameraloki.js: korkeuden hyppy > 3x -> aikaleima, korkeudet, laukaisija (pino 3 rivia), kaupunki, vaihe; luku: kehittajatilan konsoli [kameraloki], localStorage matkakirja-kameraloki (20 viimeista) tai window.matkakirja.ui.pallolauta.kameraloki(). Testit 3786/0. HUOM: v1984:n CI-kaupunkipopup-vika on ERI kuin korjattu liuskan lepotesti (CI:ssa takynostokortti aukeaa kaupungin napautuksesta) - Pelikoodari diagnosoi Julkaisijan kanssa.

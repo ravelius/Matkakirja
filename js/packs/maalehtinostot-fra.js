@@ -104,6 +104,12 @@ const JAKO = [
     nimio: 'Versaillesin peilisali',
     symboli: 'kulttuuri',
     lahi: true,
+    /*
+     * NOSTOTASOT (Fablen tilaus 20.9.2026, docs/raportit/
+     * nostotasot-fra-20260920.md): ykköstaso = tunnetuin ja
+     * pelillisesti tärkein, isompi nimiö + kuvamerkki kartalla.
+     */
+    taso: 1,
     // 2,1203 E / 48,8047 N — en-Wikipedia "Palace of Versailles",
     // prop=coordinates (haettu 14.9.2026)
     paikka: {
@@ -737,6 +743,7 @@ function korttiLehdesta(rivi) {
     symboli: rivi.symboli,
     ...(rivi.lahi ? { lahi: true } : {}),
     ...(rivi.visa ? { visa: rivi.visa } : {}),
+    ...(rivi.taso ? { taso: rivi.taso } : {}),
     paikka: rivi.paikka,
     lahde: `Maalehden sivu "${rivi.sivu}", nosto "${lahde.otsikko}" `
       + '(js/packs/maa-kategoriat.js FRA, pelin omaa tarkistettua '

@@ -574,7 +574,30 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
     bbox, projektio, leveys, tyyli = {}, esikatseluTausta,
     koko = null, siirto = null, sisalto = null, nostot = null, piirraNosto = null,
     paperiS = null, variPaletti = false, variVesi = null,
+    /*
+     * SYVYYSVYÖHYKKEET PORTAINA (poltto-koe 20.9.2026, omistajan kortti:
+     * *"rannikkoviivoitus TAI syvyysvyöhykkeet"*). Oletus null = jatkuva
+     * syvyysramppi kuten ennen. Lista syvyysrajoja metreinä (positiivisina,
+     * esim. [30, 120, 600, 1500, 3000]) porrastaa meren vyöhykkeiksi:
+     * jokainen pikseli saa vyöhykkeensä edustussyvyyden (rajojen
+     * geometrinen keskikohta) ennen sävyn hakua, joten vyöhykkeen sisällä
+     * sävy on tasainen ja rajalla hyppää — atlaksen syvyyskäyräkartta.
+     * Rajan aaltoilu tulee samasta kohinasta kuin ennenkin.
+     */
+    syvyysPortaat = null,
   } = asetukset;
+  const portaat = Array.isArray(syvyysPortaat) && syvyysPortaat.length
+    ? [...syvyysPortaat].map(Number).filter((v) => v > 0).sort((a, b) => a - b) : null;
+  const porrasta = (m) => {
+    if (!portaat) return m;
+    const d = -m;
+    let edellinen = 0;
+    for (const raja of portaat) {
+      if (d < raja) return -Math.sqrt(Math.max(1, edellinen) * raja);
+      edellinen = raja;
+    }
+    return -(edellinen * 1.6);
+  };
 
   /*
    * === PALETTI ON ASETUS, EI TOINEN MOOTTORI (karttauudistus, erä 1)
@@ -1056,7 +1079,7 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
           if (!Number.isFinite(m)) m = -900;
           const n = fbm(KOHINA, gx / (30 * P), gy / (30 * P), 4) - 0.5;
           const s = lerpSyvyysAsteikolla(syvyysAsteikko,
-            m + n * Math.min(150, Math.max(12, -m * 1.25)));
+            porrasta(m + n * Math.min(150, Math.max(12, -m * 1.25))));
           const a = MEREN_PEITTO;
           r = r * (1 - a) + s[0] * a;
           g = g * (1 - a) + s[1] * a;
@@ -4090,4 +4113,430 @@ export function piirraRantataso(canvas, asetukset) {
   ctx.restore();
   ctx.restore();
   return { w: W, h: H };
+}
+
+/* ============================================================ nimiötaso
+ *
+ * NIMIÖTASO — ATLAKSEN HARVENNETUT KAPITEELIT OMANA LÄPINÄKYVÄNÄ TASONA
+ * (omistajan kortti 20.9.2026 ilta; Fablen tilaus Karttasepälle):
+ * 1873-maakuntien ja merien nimet harvennetuin kapiteelein, merinimiöt
+ * merelle ja pois rantaviivan/korostuskehän alta, ja KAIKKI poltettu
+ * teksti erillään pohjasta ja viivatasosta (Pelikoodarin tarve:
+ * kohdemaan nimiöt piilotettavissa ja eläviksi).
+ *
+ * LADONTA ON PUHDAS FUNKTIO (nimiotasonLadonta), koska sama sääntö
+ * tarvitaan kolmessa paikassa: piirrossa (tässä), generaattorin
+ * peitteessä (mitkä laatat ovat tyhjiä) ja luettelon metadatassa
+ * (Pelikoodarin `laatikko` per nimiö per taso). Kolme kopiota
+ * ajautuisivat eri tavalla.
+ *
+ * KOKO ON RUUDUN PIKSELIÄ TASOA KOHTI, EI PAPERIVAKIO: alueen nimi on
+ * kartan pinnalla oleva teksti, joka kasvaa zoomatessa hitaammin kuin
+ * kartta (kuten atlaksissa maakunnan nimi täyttää alueensa kaukaa ja
+ * jää lähellä pieneksi). Taulukko NIMION_KOOT antaa kirjainkorkeuden
+ * tasoittain luokalle; `koko: 'pieni'` maakunnat alkavat vasta z7:llä
+ * (Sisältökirjurin luokitus).
+ *
+ * Fontti on sama serif kuin muulla poltetulla tekstillä, versaali +
+ * harvennus 0,32 em; sävy on rajamusteen sukuinen mutta himmeä, meri
+ * viileämpi. Ei haloa: taso on läpinäkyvä ja pohjan päällä, ja halo
+ * piirtäisi paperinvärisen laatikon reliefin päälle.
+ */
+
+/** Kirjainkorkeus ruutupikseleinä tasoittain; puuttuva taso = ei nimiötä. */
+export const NIMION_KOOT = Object.freeze({
+  meri: { 4: 14, 5: 18, 6: 24, 7: 34, 8: 46 },
+  maakunta: { 5: 13, 6: 17, 7: 24, 8: 32 },
+  'maakunta-pieni': { 7: 18, 8: 26 },
+});
+/** Harvennus em-yksikköinä (kirjainkorkeudesta). */
+export const NIMION_HARVENNUS_EM = 0.32;
+export const NIMION_FONTTI = '"Liberation Serif", "FreeSerif", serif';
+export const NIMION_VARIT = Object.freeze({
+  meri: 'rgba(58, 66, 84, 0.62)',
+  maakunta: 'rgba(70, 48, 29, 0.58)',
+});
+
+/**
+ * Yhden nimiön ladonta tasolla z.
+ *
+ * @param {object} nimio {teksti, luokka, lon, lat, koko?, kulma?}
+ * @param {number} z
+ * @param {{ lautaX: Function, lautaY: Function }} kaava laudan projektio
+ * @param {number} px kuvapikseliä lautayksikköä kohti tasolla z
+ * @param {Function} mittaa (teksti, fontti) → leveys pikseleinä (ilman harvennusta)
+ * @returns {null|{x, y, korkeus, leveys, kulma, laatikko:[x0,y0,x1,y1]}} kuvapikseleinä arkin origosta
+ */
+export function nimiotasonLadonta(nimio, z, kaava, px, mittaa) {
+  // Reittiviiva (esim. Horation reitti 1873): pisteet [lon, lat], teksti
+  // reitin keskikohdan viereen; laatikko koko polun ympäri.
+  if (nimio.luokka === 'reitti') {
+    const pisteet = Array.isArray(nimio.pisteet) ? nimio.pisteet : [];
+    if (pisteet.length < 2 || z < 5) return null;
+    const xs = pisteet.map((p) => kaava.lautaX(p[0]) * px); const ys = pisteet.map((p) => kaava.lautaY(p[1]) * px);
+    const korkeus = { 5: 10, 6: 13, 7: 17, 8: 22 }[z] ?? 13;
+    return {
+      x: xs[0], y: ys[0], korkeus, leveys: 0, kulma: 0, luokka: 'reitti',
+      pisteet: xs.map((x, i) => [x, ys[i]]),
+      laatikko: [Math.min(...xs) - korkeus, Math.min(...ys) - korkeus, Math.max(...xs) + korkeus, Math.max(...ys) + korkeus],
+    };
+  }
+  const x = kaava.lautaX(nimio.lon) * px;
+  const y = kaava.lautaY(nimio.lat) * px;
+  // Kuvakoriste: leveys annettu z7:n ruutupikseleinä, korkeus kuvasta (suhde tai 1:1).
+  if (nimio.luokka === 'kuva') {
+    const kerroin = KUVAN_KOKOKERROIN[z];
+    if (!kerroin || !(nimio.koko > 0)) return null;
+    const w = nimio.koko * kerroin;
+    const h = w * (nimio.suhde > 0 ? nimio.suhde : 1);
+    const kulma = Number(nimio.kierto) || 0;
+    const c = Math.abs(Math.cos(kulma * Math.PI / 180)); const s = Math.abs(Math.sin(kulma * Math.PI / 180));
+    const bw = w * c + h * s; const bh = w * s + h * c;
+    return {
+      x, y, korkeus: h, leveys: w, kulma, luokka: 'kuva',
+      laatikko: [x - bw / 2, y - bh / 2, x + bw / 2, y + bh / 2],
+    };
+  }
+  // Koristeet: neliömäinen laatikko, `korkeus` = koristeen koko.
+  if (nimio.luokka === 'kompassi' || nimio.luokka === 'laiva') {
+    const koko = KORISTEEN_KOOT[nimio.luokka]?.[z];
+    if (!koko) return null;
+    const puoli = nimio.luokka === 'kompassi' ? koko * 0.62 : koko * 0.6;
+    return {
+      x, y, korkeus: koko, leveys: koko, kulma: 0, luokka: nimio.luokka,
+      laatikko: [x - puoli, y - puoli, x + puoli, y + puoli],
+    };
+  }
+  const luokka = nimio.luokka === 'meri' ? 'meri'
+    : (nimio.koko === 'pieni' ? 'maakunta-pieni' : 'maakunta');
+  const korkeus = NIMION_KOOT[luokka]?.[z];
+  if (!korkeus) return null;
+  const teksti = String(nimio.teksti ?? '').toUpperCase();
+  if (!teksti) return null;
+  const merkit = [...teksti];
+  const leveys = mittaa(teksti, `${korkeus}px ${NIMION_FONTTI}`)
+    + NIMION_HARVENNUS_EM * korkeus * (merkit.length - 1);
+  const kulma = Number(nimio.kulma) || 0;
+  // Laatikko kulman kanssa: kierretyn suorakaiteen rajat; merellä
+  // aaltomerkki nimen alla kasvattaa korkeutta.
+  const c = Math.abs(Math.cos(kulma * Math.PI / 180));
+  const s = Math.abs(Math.sin(kulma * Math.PI / 180));
+  const kork = nimio.luokka === 'meri' ? korkeus * 1.6 : korkeus;
+  const w = leveys * c + kork * s;
+  const h = leveys * s + kork * c;
+  return {
+    x, y, korkeus, leveys, kulma, luokka,
+    laatikko: [x - w / 2, y - h / 2, x + w / 2, y + h / 2],
+  };
+}
+
+/**
+ * Nimiötason piirto lohkolle. `nimiot` on lista nimiöitä; `__z` tason
+ * numero (koko tulee siitä). Piirtää vain ne, joiden laatikko leikkaa
+ * lohkon — muut ovat toisten lohkojen asiaa.
+ */
+/*
+ * KORISTEET (omistaja 20.9.2026, poltto-koe 2: *"vanhan atlaksen
+ * koristeet merellä"*): pieni kompassiruusu kartan tyhjään merikulmaan,
+ * 1–2 pientä purjelaivamerkkiä isoilla merillä (musteviiva, ei kuvaa)
+ * ja meren nimen alla kevyt aaltomerkki. Koristeet ovat nimiötason
+ * rivejä luokalla 'kompassi' ja 'laiva' (lon, lat, koko?) ja piirtyvät
+ * samalla musteella kuin merinimiöt.
+ */
+/*
+ * KUVAKORISTEET (Fable 20.9.2026 ilta): Codexin käsin piirretyt
+ * purjelaivat ja kompassiruusut pudotetaan paikoilleen ILMAN
+ * koodimuutosta nimiötason rivinä
+ *   { luokka: 'kuva', kuva: '<polku png/svg, läpinäkyvä>', lon, lat,
+ *     koko: <leveys ruutupikseleinä z7:llä>, kierto: <astetta> }.
+ * Koko skaalautuu tasoittain samalla suhteella kuin koristeet
+ * (KUVAN_KOKOKERROIN: z7 = 1). Generaattori tarjoilee tiedoston sivulle
+ * ja esilataa sen (asetukset.kuvat: polku → Image); piirto on
+ * drawImage keskipisteen ympäri kierrettynä. Metadataan kirjataan
+ * luokka 'kuva' ja tiedosto, jotta Pelikoodari tunnistaa koristeen.
+ */
+export const KUVAN_KOKOKERROIN = Object.freeze({ 4: 0.3, 5: 0.42, 6: 0.65, 7: 1, 8: 1.45 });
+
+export const KORISTEEN_KOOT = Object.freeze({
+  kompassi: { 4: 28, 5: 40, 6: 56, 7: 80, 8: 110 },
+  // Purjelaivat isommiksi (Fable 20.9. ilta: *"nyt tuskin näkyvät"*).
+  laiva: { 5: 22, 6: 32, 7: 44, 8: 60 },
+});
+/** Koristeiden muste: tummempi kuin meren nimiö, jotta hento viivapiirros erottuu. */
+export const KORISTEEN_VARI = 'rgba(52, 42, 34, 0.9)';
+
+function piirraKompassiruusu(ctx, x, y, r, vari) {
+  ctx.save();
+  ctx.translate(x, y);
+  ctx.strokeStyle = vari;
+  ctx.fillStyle = vari;
+  ctx.lineWidth = Math.max(0.8, r / 40);
+  ctx.beginPath(); ctx.arc(0, 0, r, 0, Math.PI * 2); ctx.stroke();
+  ctx.beginPath(); ctx.arc(0, 0, r * 0.72, 0, Math.PI * 2); ctx.stroke();
+  // 16 sakaraa: pääilmansuunnat pisimmät, väli-ilmansuunnat lyhyemmät.
+  for (let i = 0; i < 16; i += 1) {
+    const kulma = (i * Math.PI) / 8 - Math.PI / 2;
+    const pit = i % 4 === 0 ? r * 0.98 : (i % 2 === 0 ? r * 0.68 : r * 0.42);
+    const lev = i % 4 === 0 ? r * 0.12 : r * 0.07;
+    ctx.save();
+    ctx.rotate(kulma);
+    ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(lev, -lev * 0.3); ctx.lineTo(pit, 0); ctx.lineTo(lev, lev * 0.3); ctx.closePath();
+    ctx.globalAlpha = i % 4 === 0 ? 1 : 0.7;
+    ctx.fill();
+    ctx.restore();
+  }
+  ctx.beginPath(); ctx.arc(0, 0, r * 0.06, 0, Math.PI * 2); ctx.fill();
+  ctx.font = `${Math.round(r * 0.34)}px ${NIMION_FONTTI}`;
+  ctx.textAlign = 'center'; ctx.textBaseline = 'alphabetic';
+  ctx.fillText('N', 0, -r * 1.08);
+  ctx.restore();
+}
+
+function piirraPurjelaiva(ctx, x, y, k, vari) {
+  ctx.save();
+  ctx.translate(x, y);
+  ctx.strokeStyle = vari;
+  ctx.fillStyle = vari;
+  ctx.lineWidth = Math.max(1, k / 14);
+  ctx.lineJoin = 'round';
+  // Runko: kaareva pohja, keula oikealle.
+  ctx.beginPath();
+  ctx.moveTo(-k * 0.55, k * 0.1);
+  ctx.quadraticCurveTo(-k * 0.1, k * 0.42, k * 0.55, k * 0.12);
+  ctx.lineTo(k * 0.62, -k * 0.02);
+  ctx.lineTo(-k * 0.6, -k * 0.02);
+  ctx.closePath();
+  ctx.stroke();
+  // Kaksi mastoa ja purjeet.
+  for (const [mx, korkeus] of [[-k * 0.18, k * 0.75], [k * 0.22, k * 0.62]]) {
+    ctx.beginPath(); ctx.moveTo(mx, -k * 0.02); ctx.lineTo(mx, -korkeus); ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(mx, -korkeus * 0.95);
+    ctx.quadraticCurveTo(mx + k * 0.34, -korkeus * 0.55, mx + k * 0.02, -k * 0.08);
+    ctx.lineTo(mx, -k * 0.08);
+    ctx.closePath();
+    ctx.globalAlpha = 0.55; ctx.fill(); ctx.globalAlpha = 1; ctx.stroke();
+  }
+  // Aallot rungon alla.
+  ctx.beginPath();
+  ctx.moveTo(-k * 0.8, k * 0.3);
+  ctx.quadraticCurveTo(-k * 0.5, k * 0.16, -k * 0.2, k * 0.3);
+  ctx.quadraticCurveTo(k * 0.1, k * 0.44, k * 0.4, k * 0.3);
+  ctx.quadraticCurveTo(k * 0.7, k * 0.16, k * 0.95, k * 0.3);
+  ctx.stroke();
+  ctx.restore();
+}
+
+/*
+ * LAIVA ISTUU VEDESSÄ (omistaja 21.9.2026, vedoksen muutos 1). Codexin
+ * laivakuvat ovat läpinäkyvällä pohjalla ja "leijuivat" meren päällä:
+ * runko piirretään hieman veteen UPONNEENA (kuvan alin läpinäkymätön
+ * rivi mitataan kerran kuvaa kohti, ja vesiraja on VESIRAJAN_UPOTUS
+ * kuvakorkeutta sen yläpuolella — sen alle jäävä osa leikataan pois),
+ * hieman läpikuultavana (LAIVAN_PEITTO), ja vesirajalle tulee samalla
+ * musteella varjoviiva rungon alle sekä aaltopari (piirraAaltomerkki,
+ * sama merkki kuin merten nimien alla) rungon molemmin puolin. Kuvia
+ * itseään ei kosketa. Tunnistus tiedostonimestä (`laiva-*`); rivin
+ * `vesiraja: false` kytkee pois.
+ */
+const VESIRAJAN_UPOTUS = 0.055;
+const LAIVAN_PEITTO = 0.9;
+const kuvanAlareunat = new WeakMap();
+export function laivakuva(nimio) {
+  if (nimio?.vesiraja === false) return false;
+  if (nimio?.vesiraja === true) return true;
+  return /(^|\/)laiva-[^/]*$/i.test(String(nimio?.kuva ?? ''));
+}
+/** Kuvan alimman läpinäkymättömän rivin osuus korkeudesta (0..1). */
+function kuvanAlareuna(kuva) {
+  if (kuvanAlareunat.has(kuva)) return kuvanAlareunat.get(kuva);
+  let osuus = 0.85;
+  try {
+    const w = kuva.naturalWidth || kuva.width;
+    const h = kuva.naturalHeight || kuva.height;
+    const c = typeof OffscreenCanvas !== 'undefined' ? new OffscreenCanvas(w, h) : document.createElement('canvas');
+    c.width = w; c.height = h;
+    const g = c.getContext('2d');
+    g.drawImage(kuva, 0, 0);
+    const d = g.getImageData(0, 0, w, h).data;
+    let alin = -1;
+    for (let y = h - 1; y >= 0 && alin < 0; y -= 1) {
+      for (let x = 0; x < w; x += 1) {
+        if (d[(y * w + x) * 4 + 3] > 40) { alin = y; break; }
+      }
+    }
+    if (alin >= 0) osuus = (alin + 1) / h;
+  } catch {
+    // Kuvaa ei voi lukea (esim. eri alkuperä): oletusosuus riittää.
+  }
+  kuvanAlareunat.set(kuva, osuus);
+  return osuus;
+}
+function piirraLaivaVedessa(ctx, kuva, leveys, korkeus) {
+  const ala = kuvanAlareuna(kuva);
+  const vesiraja = -korkeus / 2 + korkeus * (ala - VESIRAJAN_UPOTUS);
+  ctx.save();
+  ctx.beginPath();
+  ctx.rect(-leveys / 2, -korkeus / 2, leveys, vesiraja + korkeus / 2);
+  ctx.clip();
+  ctx.globalAlpha = LAIVAN_PEITTO;
+  ctx.drawImage(kuva, -leveys / 2, -korkeus / 2, leveys, korkeus);
+  ctx.restore();
+  // Varjoviiva rungon alla: vesirajan pituinen, keskeltä tummin.
+  const runko = leveys * 0.62;
+  const varjo = ctx.createLinearGradient(-runko / 2, 0, runko / 2, 0);
+  varjo.addColorStop(0, 'rgba(52,42,34,0)');
+  varjo.addColorStop(0.2, 'rgba(52,42,34,0.6)');
+  varjo.addColorStop(0.8, 'rgba(52,42,34,0.6)');
+  varjo.addColorStop(1, 'rgba(52,42,34,0)');
+  ctx.save();
+  ctx.strokeStyle = varjo;
+  ctx.lineWidth = Math.max(0.8, korkeus / 90);
+  ctx.lineCap = 'round';
+  ctx.beginPath();
+  ctx.moveTo(-runko / 2, vesiraja + ctx.lineWidth * 0.6);
+  ctx.lineTo(runko / 2, vesiraja + ctx.lineWidth * 0.6);
+  ctx.stroke();
+  ctx.restore();
+  // Aaltopari rungon molemmin puolin, hieman vesirajan alapuolella.
+  const aalto = leveys * 0.34;
+  piirraAaltomerkki(ctx, -leveys * 0.34, vesiraja + korkeus * 0.012, aalto, 'rgba(52,42,34,0.7)');
+  piirraAaltomerkki(ctx, leveys * 0.34, vesiraja + korkeus * 0.028, aalto, 'rgba(52,42,34,0.7)');
+}
+
+/** Kevyt aaltomerkki meren nimen alla: kolme loivaa kaarta. */
+function piirraAaltomerkki(ctx, x, y, leveys, vari) {
+  ctx.save();
+  ctx.strokeStyle = vari;
+  ctx.lineWidth = Math.max(0.8, leveys / 120);
+  ctx.lineCap = 'round';
+  const w = Math.min(leveys * 0.5, leveys);
+  const a = w / 6;
+  ctx.beginPath();
+  ctx.moveTo(x - w / 2, y);
+  for (let i = 0; i < 3; i += 1) {
+    const x0 = x - w / 2 + (i * w) / 3;
+    ctx.quadraticCurveTo(x0 + a * 0.5, y - a * 0.55, x0 + a, y);
+    ctx.quadraticCurveTo(x0 + a * 1.5, y + a * 0.55, x0 + a * 2, y);
+  }
+  ctx.stroke();
+  ctx.restore();
+}
+
+/**
+ * Nimiötason piirto lohkolle.
+ *
+ * Kaksi tilaa: `ladonnat` (generaattorin ESILADOTTU lista tälle tasolle:
+ * { nimio, x, y, korkeus, leveys, kulma } arkin pikseleinä — törmäysten
+ * väistö on jo tehty Node-puolella samasta lähteestä kuin peite ja
+ * metadata) tai `nimiot` (raaka lista; ladotaan tässä ilman väistöä).
+ */
+export function piirraNimiotaso(canvas, asetukset) {
+  const {
+    bbox, projektio, leveys, koko = null, siirto = null, nimiot = null, ladonnat = null, __z: z = 7,
+    kuvat = null,
+  } = asetukset;
+  const px = leveys / bbox.w;
+  const W = Math.round(leveys);
+  const H = Math.round(bbox.h * px);
+  canvas.width = W;
+  canvas.height = H;
+  const ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, W, H);
+  // Sama sääntö kuin rantatasolla: ilman arkkia ladonta on lohkon omaa.
+  const GX = asetukset.arkki ? (siirto?.x ?? 0) : 0;
+  const GY = asetukset.arkki ? (siirto?.y ?? 0) : 0;
+  const origo = asetukset.arkki ?? { x: bbox.x, y: bbox.y };
+  const kaava = laudanProjektio(projektio);
+  // Arkin origo: ladonnan x/y ovat arkin pikseleitä, lohko on siirretty.
+  const arkkiKaava = {
+    lautaX: (lon) => kaava.lautaX(lon) - origo.x,
+    lautaY: (lat) => kaava.lautaY(lat) - origo.y,
+  };
+  const mittaa = (teksti, fontti) => { ctx.font = fontti; return ctx.measureText(teksti).width; };
+  let piirretty = 0;
+  const lista = ladonnat
+    ? ladonnat.map((l) => ({ nimio: l.nimio, l }))
+    : (nimiot ?? []).map((nimio) => ({ nimio, l: nimiotasonLadonta(nimio, z, arkkiKaava, px, mittaa) }))
+      .filter((r) => r.l);
+  for (const { nimio, l } of lista) {
+    const [x0, y0, x1, y1] = l.laatikko;
+    // Kiertävä lauta: nimiö voi olla lohkosta laudan leveyden päässä.
+    const siirrot = [0];
+    if (projektio?.leveys) siirrot.push(-projektio.leveys * px, projektio.leveys * px);
+    for (const d of siirrot) {
+      if (x1 + d < GX || x0 + d > GX + W || y1 < GY || y0 > GY + H) continue;
+      const vari = NIMION_VARIT[nimio.luokka === 'maakunta' ? 'maakunta' : 'meri'];
+      if (nimio.luokka === 'reitti') {
+        // Katkoviiva ohuella musteella + pieni teksti keskijanan viereen.
+        ctx.save();
+        ctx.translate(d - GX, -GY);
+        ctx.strokeStyle = 'rgba(70, 48, 29, 0.7)';
+        ctx.lineWidth = Math.max(1, l.korkeus / 9);
+        ctx.setLineDash([l.korkeus * 0.7, l.korkeus * 0.45]);
+        ctx.lineCap = 'round';
+        ctx.beginPath();
+        l.pisteet.forEach(([x, y], i) => (i ? ctx.lineTo(x, y) : ctx.moveTo(x, y)));
+        ctx.stroke();
+        ctx.setLineDash([]);
+        const k = Math.floor(l.pisteet.length / 2);
+        const [ax, ay] = l.pisteet[k - 1]; const [bx, by] = l.pisteet[k];
+        const kulma = Math.atan2(by - ay, bx - ax);
+        ctx.translate((ax + bx) / 2, (ay + by) / 2);
+        ctx.rotate(kulma > Math.PI / 2 || kulma < -Math.PI / 2 ? kulma + Math.PI : kulma);
+        ctx.font = `italic ${l.korkeus}px ${NIMION_FONTTI}`;
+        ctx.textAlign = 'center'; ctx.textBaseline = 'bottom';
+        ctx.fillStyle = 'rgba(70, 48, 29, 0.75)';
+        ctx.fillText(String(nimio.teksti ?? ''), 0, -l.korkeus * 0.35);
+        ctx.restore();
+        piirretty += 1;
+        continue;
+      }
+      if (nimio.luokka === 'kuva') {
+        const kuva = kuvat?.[nimio.kuva] ?? kuvat?.get?.(nimio.kuva);
+        if (kuva) {
+          ctx.save();
+          ctx.translate(l.x + d - GX, l.y - GY);
+          if (l.kulma) ctx.rotate(l.kulma * Math.PI / 180);
+          if (laivakuva(nimio)) {
+            piirraLaivaVedessa(ctx, kuva, l.leveys, l.korkeus);
+          } else {
+            ctx.drawImage(kuva, -l.leveys / 2, -l.korkeus / 2, l.leveys, l.korkeus);
+          }
+          ctx.restore();
+          piirretty += 1;
+        }
+        continue;
+      }
+      if (nimio.luokka === 'kompassi') {
+        piirraKompassiruusu(ctx, l.x + d - GX, l.y - GY, l.korkeus / 2, KORISTEEN_VARI);
+        piirretty += 1;
+        continue;
+      }
+      if (nimio.luokka === 'laiva') {
+        piirraPurjelaiva(ctx, l.x + d - GX, l.y - GY, l.korkeus, KORISTEEN_VARI);
+        piirretty += 1;
+        continue;
+      }
+      ctx.save();
+      ctx.translate(l.x + d - GX, l.y - GY);
+      if (l.kulma) ctx.rotate(l.kulma * Math.PI / 180);
+      ctx.font = `${l.korkeus}px ${NIMION_FONTTI}`;
+      ctx.textBaseline = 'middle';
+      ctx.textAlign = 'left';
+      ctx.fillStyle = vari;
+      const merkit = [...String(nimio.teksti).toUpperCase()];
+      let t = -l.leveys / 2;
+      for (const m of merkit) {
+        ctx.fillText(m, t, 0);
+        t += ctx.measureText(m).width + NIMION_HARVENNUS_EM * l.korkeus;
+      }
+      // Meren nimen alla kevyt aaltomerkki (omistaja 20.9.2026).
+      if (nimio.luokka === 'meri') piirraAaltomerkki(ctx, 0, l.korkeus * 0.95, l.leveys, vari);
+      ctx.restore();
+      piirretty += 1;
+    }
+  }
+  void koko;
+  return { w: W, h: H, piirretty };
 }
