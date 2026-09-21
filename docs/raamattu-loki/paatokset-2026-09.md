@@ -587,3 +587,7 @@ Pelikoodari 21.9.2026 ilta: GL vaihe 2 valmis kokeiluun (pelikoodari-gl-nimiot 0
 ## GL-KERROS OLETUKSEKSI HETI ILMAN LIPPUA; OMISTAJA TESTAA VAIN NATIIVILLA iOS-APILLA (21.9.2026 klo 18.22)
 
 Omistaja 21.9.2026 ilta: GL-kerros (kaupunkinimet WebGL:ssä) otetaan suoraan oletukseksi ilman kokeilulippua; omistaja testaa aina natiivilla iOS-apilla, jossa URL-lippuja ei voi käyttää. Pelikoodari kääntää oletuksen päälle samaan erään (00b4d653 tai jatkocommit): GL päällä oletuksena, CSS2D perääntymistienä vain kehittäjälipulla ?glnimiot=0 ja automaattisesti kun WebGL-tekstuuri ei ole käytettävissä. Sama linja vaiheelle 3 (nostot, nappula, linssimerkit, crossfade): jokainen valmis erä oletukseksi heti, ei lippujen taakse. Laitetestaaja mittaa oletustilan (iPad, iPhone, simulaattori) ja vertaa ?glnimiot=0:aan. Korvaa 21.9. klo 16.30 aikataulun kohdan 'GL oletukseksi huomenna illalla'.
+
+## VISAT ERA 3 VALMIS (92e582c5): 43 VISAA, 8 MAATA KOLMASOSAAN (21.9.2026 klo 18.22)
+
+Sisältökirjuri 21.9.2026 ilta: visat erä 3 (sisalto-visat-3 92e582c5, rebasattu v1973-prepin päälle, sisältää visat-1:n v2008): 43 visaa, LVA/LTU/ITA/FIN/SWE/BGR/HRV/ROU 33–35 %; tarkistettu ettei kohteella ollut visaa; testit 0 fail. Erä 4 alkaa (AUT/CZE/DNK/ESP/HUN/NLD/PRT/FRA/POL/IRL) pohjana visat-3. Julkaisijan jonoon.
