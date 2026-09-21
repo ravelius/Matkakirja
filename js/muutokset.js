@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1988, teksti: 'Liftaussavuke: luenta ja linssin ajoitukset' },
   { v: 1987, teksti: 'Kartuschan sisennys, ei painallusta lavitse; nimiot-aika' },
   { v: 1986, teksti: 'Nimiot vakaat elerin aikana' },
   { v: 1985, teksti: 'GSHHG-rantaviiva, nostotasot, huntu liikkeen ajan' },

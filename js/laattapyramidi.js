@@ -2055,6 +2055,26 @@ let variLiike = false;
  */
 let variLiikeKohde = null;
 
+/*
+ * LÖYTÄMISEN SUMU — MAAN SISÄINEN SUMU (js/pallolauta/sumu.js,
+ * prototyyppi): lauta antaa käytyjen kaupunkien aukot laudan
+ * yksiköissä (sisasumunAukot) ja peiton; tasoitus kantaa ne laatoille
+ * (js/pallolaatat.js maalaaSisasumu). Avaimessa mukana, jotta laatat
+ * kootaan uudelleen kun käyntien joukko muuttuu.
+ */
+let variSisasumu = null;
+
+/**
+ * @param {{ aukot: Array, peitto: number, avain: string }|null} tiedot
+ * @returns {boolean} true, jos tila vaihtui
+ */
+export function asetaSisasumu(tiedot) {
+  const uusi = tiedot?.aukot ? tiedot : null;
+  if ((uusi?.avain ?? null) === (variSisasumu?.avain ?? null)) return false;
+  variSisasumu = uusi;
+  return true;
+}
+
 /**
  * Liikkeen huntu päälle (true, `kohdeIso` = matkan kohdemaa) ja pois
  * perillä (false).
@@ -2231,9 +2251,12 @@ export function pyramidinTasoitus() {
     maailma: variMaailma,
     renkaat,
     liikkeenKohde: kohteen ? variLiikeKohde : null,
+    // Löytämisen sumu vain levossa kohdemaassa (ei liikkeessä, ei maailmanäkymässä).
+    sumu: variSisasumu && !variLiike && !variMaailma && omat ? variSisasumu : null,
     avain: `${variMaaNyt}|${tila}|${kohteen ? variLiikeKohde : '-'}|${renkaat ? renkaat.length : 0}`
       + `|${s.tarkka ? 'T' : 'L'}|${Math.round(s.x)}|${Math.round(s.y)}`
-      + `|${Math.round(s.w)}|${Math.round(s.h)}`,
+      + `|${Math.round(s.w)}|${Math.round(s.h)}`
+      + (variSisasumu && !variLiike && !variMaailma ? `|sumu:${variSisasumu.avain}` : ''),
   };
 }
 

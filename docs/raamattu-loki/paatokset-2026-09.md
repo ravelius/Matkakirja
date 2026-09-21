@@ -267,3 +267,35 @@ Nimioiden vakaus (Google Earthin malli: kiintea asento, haivytys, hystereesi, ka
 ## NIMISTON JAKO: PYSYVAT POHJALLE, 1873-POLIITTISET LINSSIIN (omistaja 21.09.2026 klo 08.21) (21.9.2026 klo 08.21)
 
 Omistajan huoli: 1873-nimisto sekoittaa nykymaailmassa liikkuvaa pelaajaa. Paatos kortilla: pohjakartalle vain pysyvat nimet (meret, lahdet, kulttuurialueet), 1873-poliittiset nimet ja rajat omaan Vuosi 1873 -linssiin; myohemmin aikajanalinssi rajojen elamiselle. Kirjattu Raamattuun (Kaupungit: KARTAN NIMISTO) ja linssi-idea. Toimet: Sisaltokirjuri luokittelee nimisto-1873.js rivit (luokka pysyva/1873) FRA/ESP/ITA/DEU; Karttaseppa polttaa nimiotason uudelleen ilman 1873-luokkaa ja selvittaa historiallisen raja-aineiston linssia varten.
+
+## LOYTAMISEN SUMU PELIKARTALLE - KOKEILU (omistaja 21.09.2026 klo 08.31 kortilla) (21.9.2026 klo 08.31)
+
+Vaihe 1 kokeiluna (havainnekuva ennen paatosta): 1) kohdemaan loytamattomat nostot haaleina lyijykynaluonnoksina (ikoni + nimio), loydetyt mustetaan; loytosaanto: noin 150 km kaydyista kaupungeista mustetaan automaattisesti + luonnoksen avaaminen mustaa sen; ykkostaso aina musteena. 2) Naapurimaiden rajat feidautuvat vaaleiksi, jos pelaaja ei ole kaynyt maassa. 3) Jos maassa on useampi kohdekaupunki, kaymattoman osan korkeuskartta ja mahdollisesti aariviivat feidautuvat (kaydyn kaupungin ymparisto musteena). Isoisan reitti 1873 siirtyy Vuosi 1873 -linssiin (ei pelikartalle). -> Pelikoodari tekee prototyypin kehittajalipun takana + kaappaukset, omistaja katsoo. LINSSI 1873 -AINEISTO (Karttaseppa a51d1fe3, docs/raportit/linssi-1873-aineisto-20260921.md): historical-basemaps world_1878 (GPL-3.0) -> 1873 kasin ~6 muutosta, karkea (mediaani 18 km) -> muuttumattomat rajat NE:sta naulaamalla, muuttuneet OHM:sta (CC0) tai atlasskannista; CShapes CC BY-NC-SA, Euratlas maksullinen, MPIDR tutkimus -> eivat; Stieler 1875 PD-skannit rasterilinssiin. Omistajan paatokset avoinna: GPL-data vai oma PD-runko, rasterilinssi, aikajanan vuodet.
+
+## KARTUSCHAN SISENNYS JA KLIKKAUKSEN LAPIMENO TEHTY (Pelikoodari 085ea1cf) (21.9.2026 klo 08.31)
+
+Sisennys kartan kotelon reunasta: puhelin 12 px + turva-alue (max, ei summa), >= 768 px 24 px; mitattu 390/820/1400 -> 12/24/24. Lapimeno: Globe.gl:n osumatesti kulkee pointerdown/up-parilla, click-pysaytys ei riita -> painallus ja vapautus pysaytetaan capture-vaiheessa kortin napautettavilla osilla. Savuke-kartuscha-3 51/51, testit 3789/0. v1987:aan.
+
+## NIMISTON AIKA-KENTTA TEHTY (Sisaltokirjuri 7bd5f5e5) (21.9.2026 klo 08.48)
+
+121 rivia FRA/DEU/ITA/ESP + meret: 94 pysyva, 27 1873; Lazio, Kantabria pois; sw.js:n kaksoisrekisterointi korjattu. Karttaseppa polttaa nimiotason uudelleen pysyvilla nimilla (--nimiot-aika pysyva).
+
+## SUMU-PROTOTYYPPI VALMIS (Pelikoodari 4479df4b, lippu ?sumu=1) (21.9.2026 klo 08.54)
+
+js/pallolauta/sumu.js: nostot luonnoksina (peitto 0,45, mustaus 600 ms; loyto 150 km kaydysta kaupungista, avaus mustaa, taso 1 aina musteena, loydot localStorageen; laattaan poltetut nimet eivat voi olla luonnoksia), kaymattomien maiden rajat x 0,35, sisasumu 35 % kermaa 200 km:n pehmeilla aukoilla (hunnun maski). Huomiot: 35 % hienovarainen (SISASUMUN_PEITTO vakio); Ranskan merentakaiset (Cayenne, Noumea) pitavat sumun Manner-Ranskassa -> suodatin tarvittaessa. Savuke-sumu 10/10, testit 3780/0. Kaappaukset docs/raportit/kaappaukset/sumu-20260921/. Omistaja katsoo. KONTEKSTIT klo 06: Fable 61 %, Karttaseppa 49 %, Pelikoodari 11 % (pakkautunut), viikkokiintio 17 % (Fable 10 %). ISO AJO kaynnistetty Sisaltokirjurille (7 vaihetta, parvi sallittu), Karttasepalle liftauszoomin ajoitusvartiot (1873-linssi ei viela), Pelikoodarille pieni liike + pollon Matkakirja-linkit sumun jalkeen.
+
+## NIMIOTASON UUSINTAPOLTTO 2026-09-21e (Karttaseppa 4d5630c9) (21.9.2026 klo 08.58)
+
+Vain aika=pysyva: FRA 24, DEU 15, ITA 14, ESP 12, meret 29 = 94 nimiota + 8 Codexin koristetta; 27 poliittista 1873-nimea jaa Vuosi 1873 -linssille. Osoitinhaara karttaseppa-gshhs-rantaviiva 4d5630c9 (sis. Sisaltokirjurin aika-kentta), testit 3780/0; luettelo ampariin kun osoitin mainissa (v1987 tai v1988). Kaappaukset saksa/italia/espanja-nimiot-20260921e.webp. Sisaltokirjurille kaksi koordinaattisiirtoa (Schleswig-Holstein, Wurttemberg/Baden); erakoko 5 maata per nimiotason poltto. Karttaseppa jatkaa liftauszoomin ajoitusvartioihin; sen jalkeen KONTEKSTINOLLAUS (49 %): luovutus tiedostoon ja uusi sessio.
+
+## OMISTAJAN KORTIT 21.09.2026 klo 09.07: SUMU JULKAISUUN, GPL-DATA, ATLASLEHTI-VEDOS, ISOISAN LINSSI (21.9.2026 klo 09.07)
+
+1) Sumu: sisasumu 50 %, luonnoksille kynaraita, merentakaiset pois laskusta, julkaisuun kaikille -> Pelikoodari (v1988). 2) Vuosi 1873 -linssin raja-aineisto: GPL-3.0 historical-basemaps kay. 3) Atlaslehti-linssi: omistaja haluaa vedoksen ensin (Stieler 1875 Ranska pallon paalle) -> uuden Karttasepan ensimmainen era. 4) Aikajanalinssia ei nyt: isoisan linssi on vain vuosi 1873, retro, isoisan valokuvat/aanet/media; maailmansodat ym. omina linsseina nykykartan paalla - kirjattu Raamatun Karttalinssit-osioon (ISOISAN LINSSI). Karttaseppa: luovutus valmis (viesti-karttaseppa-luovutus-20260921.md), ajoitusvartiot 14/14 (1c802159); omistaja avaa uuden Karttaseppa-session.
+
+## V1987 TUOTANNOSSA 09.06 (21.9.2026 klo 09.08)
+
+Kartuschan sisennys 12/24 px, painallus ei lavitse, nimiston aika-kentta. Osoitin 2026-09-21e-nimiot odottaa viela (v1988 tai Karttasepan luettelovienti).
+
+## KUVATTOMIA ON 8, EI 198 (Sisaltokirjuri 2a51bbce) (21.9.2026 klo 09.09)
+
+nostoinventaario.mjs ei tarkistanut kuva.tiedosto-kenttaa (maa-kategoriat/maalehtinostot-muoto), vain kuva.osoite -> korjattu, ajettu 43 maalle: aidosti kuvattomia 8 (TUR 3, GBR 2, FRA 2, GRC 1), kaikki fokuskohteet-kortteja ja enimmakseen tuhoutuneita monumentteja (Bastilji, Tuileries, Crystal Palace, vanha London Bridge, Rodoksen kolossi, Halikarnassoksen mausoleumi, Konstantinopolin hippodromi, Pergamonin alttari). PAATOS: nama 8 ovat Codexin havainnekuvatilauksen ydin (ihmeet, kulta-aika, historialliset henkilot sallittu); Pergamonin alttarille Commons-kuva Berliinin museosta + havainnekuva alkuperaisesta paikasta. Vaihe 1 kutistuu yhteen eraan; Sisaltokirjuri jatkaa vaiheeseen 2 (FRA siivous).

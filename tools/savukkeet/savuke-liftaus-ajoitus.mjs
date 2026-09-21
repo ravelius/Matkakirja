@@ -158,7 +158,29 @@ const AJOITUKSET = [
   { nimi: 'kesken saapumistrailerin (kuvia ei ohiteta, 1,5 s)', ohita: false, odota: 1500, heitot: [3] },
   { nimi: 'kaksi nopeaa heittoa peräkkäin (300 ms väli)', ohita: true, odota: 4000, heitot: [3, 6], vali: 300 },
   { nimi: 'heitto kesken edellisen sovituksen (kuutonen, 120 ms väli)', ohita: true, odota: 4000, heitot: [6, 2], vali: 120 },
+  /*
+   * Fablen lisäys 21.9.2026: kesken luennan (päiväkirjan ääni soi:
+   * ui.luentaKesken() tosi — diaryVoice-olio jäljitellään, koska
+   * Chromium ei soita ääntä) ja heti linssin sulkemisen jälkeen
+   * (satelliittilinssi nostaa katon, sulku palauttaa — lauta.js
+   * zoomirajat + kattoPuristus; vaara sama kuin matkan vapautuksessa).
+   */
+  { nimi: 'kesken luennan (diaryVoice soi)', ohita: true, odota: 4000, heitot: [3], esityo: 'luenta' },
+  { nimi: 'heti linssin sulkemisen jälkeen (satelliitti 1,5 s, sulku, heitto 0 s)', ohita: true, odota: 4000, heitot: [3], esityo: 'linssi' },
 ];
+const esityot = {
+  luenta: (sivu) => sivu.evaluate(() => {
+    const { ui } = window.matkakirja;
+    ui.diaryVoice = { paused: false, currentTime: 1.5, ended: false, error: null, pause() { this.paused = true; } };
+    return ui.luentaKesken();
+  }),
+  linssi: async (sivu) => {
+    const auki = await sivu.evaluate(() => { const { ui } = window.matkakirja; ui.valitseLinssi('satelliitti'); return ui.linssiValittu; });
+    await sivu.waitForTimeout(1500);
+    const kiinni = await sivu.evaluate(() => { const { ui } = window.matkakirja; ui.valitseLinssi(null); return ui.linssiValittu; });
+    return `linssi ${auki} → ${kiinni}`;
+  },
+};
 for (const a of AJOITUKSET) {
   // eslint-disable-next-line no-await-in-loop
   const { ctx, sivu, virheet } = await avaa(a.ohita);
@@ -171,6 +193,7 @@ for (const a of AJOITUKSET) {
     const alkup = k.ajaKamera.bind(k);
     k.ajaKamera = (kohde, asetukset) => { window.__ajot.push({ kohde, asetukset, alt: +ui.pallolauta.pallo.pointOfView().altitude.toFixed(3), pino: new Error().stack.split('\n').slice(2, 5).map((r) => r.trim().slice(0, 60)) }); return alkup(kohde, asetukset); };
   });
+  if (a.esityo) tieto(`  esityö ${a.esityo}`, String(await esityot[a.esityo](sivu)));
   const ennen = await pov(sivu);
   for (let i = 0; i < a.heitot.length; i += 1) {
     await heita(sivu, a.heitot[i]);

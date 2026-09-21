@@ -18,6 +18,7 @@
     "savuke-nimiot-elavat.mjs",
     "savuke-nimiot-vakaat.mjs",
     "savuke-nostotasot.mjs",
+    "savuke-sumu.mjs",
     "savuke-nimikyltti.mjs",
     "savuke-kerma-reuna.mjs",
     "savuke-ranskan-nostot-lukossa.mjs",
@@ -518,6 +519,10 @@
     "savuke-nostotasot.mjs": {
       "huomautus": "Nostojen tasot elavissa nimioissa (Fable 21.9.2026): FRA/Marseille 390 ja 1400 px: ykkostaso nimiollisena kuvamerkilla ja 1,3x nimiolla (>= 4 / >= 6 ruudulla), ei piilotettuja ykkostasoja, kolmostaso piilossa saapumisessa ja nakyvissa lahizoomilla, ei reunaylityksia. Ampari Noden kautta. ~70 s."
     },
+    "savuke-sumu.mjs": {
+      "kuvakansio": true,
+      "huomautus": "Loytamisen sumu (omistaja 21.9.2026 julkaisuun): FRA/Pariisi 390 ja 1400 px — sisasumu 50 % kaymattomien kaupunkien seuduilla (aukko pariisi, Marseille sumussa), luonnosnostot katkoviivarenkaassa, kaymattomien maiden rajat vaaleampina; Marseillen jalkeen sumu pois (merentakaiset Cayenne ja Noumea eivat laske). Ampari Noden kautta. ~60 s."
+    },
     "savuke-nimiot-vakaat.mjs": {
       "huomautus": "Nimiot vakaat (Fable 21.9.2026, Google Earthin malli): FRA/Marseille 390 ja 1400 px — panoroinnin 2 s ja kolmen zoomiportaan aikana yhdenkaan lapun kylki, siirto tai nakyvyys ei muutu (DOM-asennot naytteittain); levossa ei reunaylityksia (ykkostason pakkoasento sallitaan) eika nakyvien nimioiden limityksia; haivytys <= 200 ms. Ampari Noden kautta. ~90 s."
     },
@@ -530,7 +535,7 @@
     },
     "savuke-liftaus-ajoitus.mjs": {
       "kuvakansio": true,
-      "huomautus": "Liftauksen nopanheitto ei zoomaa maailmakuvaan (omistaja v1983 20.9.2026): Bryssel 2000 x 1300, viisi ajoitusta (rauhassa, heti saapumisen jalkeen, kesken trailerin, kaksi heittoa, heitto kesken sovituksen); vaatii korkeuden < 1 ja nappulan ruudulla. Juurisyy lauta.js matkaZoomirajat + kattoPuristus. Ampari Noden kautta, ~2 min."
+      "huomautus": "Liftauksen nopanheitto ei zoomaa maailmakuvaan (omistaja v1983 20.9.2026): Bryssel 2000 x 1300, seitseman ajoitusta (rauhassa, heti saapumisen jalkeen, kesken trailerin, kaksi heittoa, heitto kesken sovituksen, kesken luennan, heti linssin sulkemisen jalkeen); vaatii korkeuden < 1 ja nappulan ruudulla. Juurisyy lauta.js matkaZoomirajat + kattoPuristus. Ampari Noden kautta, ~2 min."
     }
   }
 }

@@ -1,6 +1,6 @@
 # Linssikatalogi — aikajana-, alue- ja virtalinssien aiheluettelo
 
-Päivitetty: 2.9.2026 (Fable). Omistajan linjaus 2.9.2026 ilta: *"kaikkien
+Päivitetty: 21.9.2026 (Fable; osa Q lisätty). Omistajan linjaus 2.9.2026 ilta: *"kaikkien
 suurien uskontojen tapahtumista täytyy myös saada omat kuvansa ja niistä
 varmasti tehdään myös samanlainen aikajanalinssi kuin nyt tekniikasta
 Euroopassa. hiotaan vain ensin tuo linssi mahdollisimman hyväksi niin sitten
@@ -247,6 +247,20 @@ värialueita, joiden rajat liukuvat avainvuodesta toiseen.
 | P3 | Indoeurooppalaiset kielet | Euraasia | 3500 eaa–1500 | arot · Anatolia · Kreikka · Italia · germaanit · slaavit · Intia | idea |
 | P4 | Rautatieverkon kasvu | Eurooppa | 1825–1900 | Britannia · Belgia 1835 · Saksa · Ranska · Venäjä · Suomi 1862 | idea (verkko piirtyy vuosi vuodelta) |
 | P5 | Kirjapainon leviäminen | Eurooppa | 1450–1500 | Mainz · Venetsia · Pariisi · Lontoo 1476 · Tukholma 1483 | idea |
+
+## Q. Retro- ja pohjakarttalinssit (lisätty 21.9.2026, omistajan linjaus)
+
+- **Q1 Isoisän linssi — vuosi 1873** — vahvasti retro linssi VAIN isoisän
+  matkan vuodesta: 1873 rajat ja maiden nimet (nimistön aika=1873, raja-
+  aineisto historical-basemaps GPL-3.0 korjattuna), Horation reitti
+  katkoviivana, isoisän valokuvat (havainnekuvat), ajan äänet ja media
+  (CC-julisteet, ääninäytteet). Ei aikajanaa. Raamattu: Karttalinssit
+  "ISOISÄN LINSSI". Tila: aineisto valittu, toteutus odottaa Fablen sanaa.
+- **Q2 Atlaslehti** — rasterinen linssi: Stieler 1875 -atlaksen PD-skanni
+  georeferoituna pallon päälle, isoisän aikainen kartta sellaisenaan.
+  Tila: omistaja haluaa vedoksen ensin (Karttaseppä).
+- Muut historialliset tapahtumat (mm. N2 ja N3 maailmansodat) saavat omat
+  linssinsä nykyisen kartan päälle; Q1 ei korvaa niitä.
 
 ## Osa 3: Virtalinssit (kolmas moottori)
 
