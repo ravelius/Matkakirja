@@ -615,3 +615,7 @@ Pelikoodari 21.9.2026 ilta: #2667:n Savukevartija-vika korjattu (pelikoodari-gl-
 ## GL VAIHE 4 KOODATTU (57f9fd49): PELINAPPULA RUNGOLLE, KOHTEET JA LINSSIMERKIT JAAVAT CSS2D:HEN (21.9.2026 klo 19.42)
 
 Pelikoodari 21.9.2026 ilta: GL vaihe 4 (pelikoodari-gl-nostot 57f9fd49, vaiheen 3 päällä): pelinappula rungolle (sama svg rasteroituna, jalka pisteessä, koko ei seuraa zoomia), nappulan laatikko ladonnan esteeksi datumista; kohteet ja linssimerkit jäävät CSS2D:hen (sykkivä halo, vapaa HTML); napautus datumeista, nappula ei napautettava. Testit 3832/0, savukevartija ok, standalone ok. Vaiheiden 3+4 savuke ja kaappaus polton jälkeen, sitten Julkaisijalle oletukseksi. Seuraavaksi DOM-savukkeet GL-mittareiksi (nimiot-vakaat/sulavat lukemaan rungon instansseja).
+
+## MONUMENTTIEN NYKYKUVAT: 26 RAPPEUTUNUTTA KOHDETTA KYTKETTY (9cffb842); CURTEA VECHE PAALLEKKAIN BUKARESTIN MERKIN KANSSA (21.9.2026 klo 20.07)
+
+Sisältökirjuri 21.9.2026 ilta (sisalto-monumentit-nykykuvat 9cffb842): 26 rappeutunut-kohdetta kytketty 19 maahan + ESP-pilotti: aito Commons-nykykuva R2:ssa, koordinaatit, ihme.osoite odottaa Codexin kulta-aikakuvaa samalla rakenteella. Havainnot: ROU Curtea Veche lähes päällekkäin Bukarestin kaupunkimerkin kanssa, maakartan nosto-linkki puuttuu (Karttaseppä tarkistaa sovittelun); SVK Čachtice ja UKR Kultainen portti muotoiltu harhaanjohtamatta (Báthorya ei syytetty; Kultainen portti on 1982 rekonstruktio). Testit 0 fail. Julkaisijan jonoon. Seuraava: 198 kuvatonta nostoa.
