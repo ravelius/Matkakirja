@@ -101,6 +101,20 @@ const EU_CITIES = [
    */
   { id: 'kosice', name: 'Košice', wiki: 'Košice', ambience: 'kaupunki', x: 619, y: 612, la: 'start', lx: 16, ly: 5 },
   { id: 'ljubljana', name: 'Ljubljana', wiki: 'Ljubljana', ambience: 'kaupunki', x: 490, y: 682, la: 'middle', lx: 0, ly: -20 },
+  /*
+   * LUXEMBURG ON TODELLISELLA PAIKALLAAN (49,6117 N / 6,1296 E). Laudan
+   * kaava x = (lon + 11) x 19,2 ja y = (72 - lat) x 26,3 antaa
+   * (328,9, 588,8), ja se on tässä pyöristettynä kokonaisluvuiksi.
+   * Erillislautaa ei enää ole (Raamattu 30.8.2026), joten tätä pakkaa
+   * ei tarkisteta minCityDistance-portilla. Pelilauta on maailmankartta,
+   * jossa sama piste on (6037,7, 1407,0) ja lähimpään kaupunkiin,
+   * Brysseliin, on 80,2 yksikköä — yli vaaditun 60:n. Piste on siis
+   * mitattu oikeaksi juuri siellä missä peli sitä lukee, eikä sitä
+   * tarvitse siirtää. Omistajan päätös 21.9.2026: kolme maata ilman
+   * pelikaupunkia (Kypros, Luxemburg, Malta) saavat pelikaupungin;
+   * tämä on Luxemburgin osuus.
+   */
+  { id: 'luxemburg', name: 'Luxemburg', wiki: 'Luxemburg (kaupunki)', ambience: 'kaupunki', x: 329, y: 589, la: 'start', lx: 16, ly: 5 },
   { id: 'berliini', name: 'Berliini', wiki: 'Berliini', ambience: 'kaupunki', x: 468, y: 512, airport: true },
   { id: 'praha', name: 'Praha', wiki: 'Praha', ambience: 'kaupunki', x: 488, y: 576, la: 'end', lx: -16, ly: 5 },
   { id: 'wien', name: 'Wien', wiki: 'Wien', ambience: 'kaupunki', x: 526, y: 626, la: 'start', lx: 16, ly: -6 },
@@ -238,7 +252,16 @@ const EU_EDGES = [
   { a: 'pariisi', b: 'bryssel', steps: 2 },
   { a: 'bryssel', b: 'amsterdam', steps: 2 },
   { a: 'pariisi', b: 'marseille', steps: 4 },
-  { a: 'pariisi', b: 'alpit', steps: 3 },
+  /*
+   * Luxemburg katkaisi vanhan pariisi–alpit-yhteyden (3 askelta)
+   * kahdeksi (2 + 2), samalla tavalla kuin Bryssel, Ljubljana ja
+   * Košice katkaisivat omansa: mitattu lähin reitti (segDist)
+   * Luxemburgin pisteestä oli juuri tämä yhteys (68,3 laudan
+   * yksikköä), lähempänä kuin pariisi–bryssel (79,9) tai
+   * bryssel–amsterdam (80,2). Suora jätettiin pois.
+   */
+  { a: 'pariisi', b: 'luxemburg', steps: 2 },
+  { a: 'luxemburg', b: 'alpit', steps: 2 },
   { a: 'marseille', b: 'barcelona', steps: 3 },
   { a: 'marseille', b: 'alpit', steps: 3 },
   { a: 'madrid', b: 'lissabon', steps: 3 },
@@ -429,11 +452,11 @@ export const EUROPE = {
           + 'asti, ja kirkkaimpiin paloihin on jäänyt hyönteisiä kiinni.',
       },
     }),
-    // Laattoja on oltava tasan yhtä monta kuin kaupunkeja (48). Uusi
+    // Laattoja on oltava tasan yhtä monta kuin kaupunkeja (49). Uusi
     // kaupunki lisätään paikallisaarteisiin samassa suhteessa kuin
     // muutkin (noin kolmasosa isoja) — pääaarre ja mantereen aarre ovat
     // aina yksi kumpikin, eikä ryöstäjien määrä muutu kaupunkien mukana.
-    counts: { star: 1, mannerAarre: 1, isoAarre: 14, pieniAarre: 32 },
+    counts: { star: 1, mannerAarre: 1, isoAarre: 14, pieniAarre: 33 },
   },
 
   questions: EUROPE_QUESTIONS,

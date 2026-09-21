@@ -27,6 +27,7 @@ export const EUROPE_CITY_COUNTRY = {
   ljubljana: 'SVN',
   lissabon: 'PRT',
   lontoo: 'GBR',
+  luxemburg: 'LUX',
   madrid: 'ESP',
   moskova: 'RUS',
   odessa: 'UKR',

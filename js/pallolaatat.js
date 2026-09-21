@@ -872,7 +872,25 @@ export function laatanSyvyyssiirto(t, valittuZ) {
 }
 /** Ennakon katto muistista: näin monta laattaa jätetään tavukatosta vapaaksi. */
 export const LAATTAKERROS_ENNAKKO_MUISTIVARA = 4;
-/** Näkyviä laattoja enintään: tätä isompi määrä pudottaa tason karkeammaksi. */
+/*
+ * Näkyviä laattoja enintään: tätä isompi määrä pudottaa tason karkeammaksi.
+ *
+ * KATTO LASKETAAN AIDOSTI NÄKYVÄSTÄ ALUEESTA, EI VARALLA LAAJENNETUSTA
+ * (omistajan tuntumatesti 21.9.2026 ilta, iPhone dpr 3, Ranska z6–z8:
+ * *panoroidessa ruudulla on karkeampi taso, liikkeen loputtua hieno
+ * palaa*). Mitattu WebKit 390 × 844 dpr 3, korkeus 0,1: levossa z8 ja
+ * 45 näkyvää laattaa — katon alla vain kolmen laatan varalla. Alue, josta
+ * laatat lasketaan, on näkymä + vara (LAATTAKERROS_VARA_AST 0,5° ja 3 %),
+ * ja panoroinnissa laattaruudukon asento vaihtuu: sama laatikko osuu
+ * milloin 7 × 7:ään, milloin 8 × 8:aan laattaan. Kun määrä ylitti 48:n,
+ * taso putosi z7:ään KESKEN LIIKKEEN (z8-laatat purettiin, tukitaso
+ * näkyi alta paksuine viivoineen ja ilman nimiöitä), ja hystereesi
+ * (LAATTAKERROS_HYSTEREESI_ALAS 0,7) piti z7:n vielä levossakin. Nyt
+ * katto vertaa VAIN aidosti näkyvän alueen (ilman varaa) laattoja —
+ * vara ladataan yhä reunan laattoina, mutta se ei pudota tasoa — ja
+ * katon pudottama taso ei saa hystereesiä (ks. kattoRajoitti): kun
+ * näkyvä joukko taas mahtuu, palataan tarpeen tasolle.
+ */
 export const LAATTAKERROS_LAATTAKATTO_NAKYVA = 48;
 /** Valmiita mutta näkymättömiä laattoja muistissa enintään (LRU). */
 export const LAATTAKERROS_LAATTAKATTO_MUISTI = 24;
@@ -2150,7 +2168,7 @@ export function luoLaattakerros({
      * nakyviaScenessa / nakyvia on se luku, jonka on pysyttävä 100 %:ssa,
      * kun jo ladattua aluetta panoroidaan edestakaisin.
      */
-    nakyvia: 0, nakyviaScenessa: 0, nakyviaTaysin: 0, ladattavia: 0, ennakkoja: 0, pidettyja: 0, tukia: 0,
+    nakyvia: 0, nakyviaScenessa: 0, nakyviaTaysin: 0, ladattavia: 0, ennakkoja: 0, pidettyja: 0, tukia: 0, kattoRajoitti: false,
     /*
      * JUMISSA on tämän erän tarkin mitta: tietue, joka on tilassa
      * "ladataan", jota ei ole aloitettu eikä ole jonossa — laatta,
@@ -2215,6 +2233,8 @@ export function luoLaattakerros({
   let ladattavia = 0;
   let vientiRaf = 0;
   let taso = null;
+  /** Edellinen taso oli laattakaton (ei tarpeen) pudottama: ei hystereesiä seuraavassa valinnassa. */
+  let kattoRajoitti = false;
   let pyramidi;
   let pyramidiHaussa = false;
   let kerrokset = null;
@@ -3379,9 +3399,11 @@ export function luoLaattakerros({
      * Lukittu taso otetaan LÄHTÖKOHDAKSI, ei lopputulokseksi: alla oleva
      * silmukka laskee sitä yhä, jos alue ei mahdu laattakattoon.
      */
+    // Katon pudottama taso ei ole hystereesin lähtökohta (ks. LAATTAKATTO_NAKYVA).
+    const hystereesinTaso = kattoRajoitti ? null : taso;
     let valittu = kertomuslukko && Number.isFinite(kertomustaso)
-      ? (tasoZ(kertomustaso) ?? laattakerroksenTaso(pyramidi.tasot, tarvePxAste, taso))
-      : laattakerroksenTaso(pyramidi.tasot, tarvePxAste, taso);
+      ? (tasoZ(kertomustaso) ?? laattakerroksenTaso(pyramidi.tasot, tarvePxAste, hystereesinTaso))
+      : laattakerroksenTaso(pyramidi.tasot, tarvePxAste, hystereesinTaso);
     /*
      * RELIEFIN KATTO. Taso valitaan POHJAN luettelosta, jossa on z8;
      * reliefi on poltettu z7:ään asti. Mitattu 18.9.2026
@@ -3398,6 +3420,7 @@ export function luoLaattakerros({
     }
     let kartta = null;
     let nakyvatLaatat = null;
+    kattoRajoitti = false;
     while (valittu) {
       kartta = lepokerroksenLaatat({
         taso: valittu, laatta: laattaKoko(), arkki: pyramidi.arkki,
@@ -3408,8 +3431,21 @@ export function luoLaattakerros({
       nakyvatLaatat = kartta
         ? kartta.laatat.filter((l) => laattakerroksenNakyvissa(laatanAlue(valittu, l.sarake, l.rivi), pov))
         : null;
-      if (nakyvatLaatat?.length && nakyvatLaatat.length <= LAATTAKERROS_LAATTAKATTO_NAKYVA) break;
+      /*
+       * KATTO AIDOSTI NÄKYVISTÄ (ks. LAATTAKATTO_NAKYVA): varalla
+       * laajennettu alue ladataan, mutta tason pudottaa vain se, ettei
+       * näkymän oma alue mahdu kattoon.
+       */
+      const raakaKartta = nakyvatLaatat?.length ? lepokerroksenLaatat({
+        taso: valittu, laatta: laattaKoko(), arkki: pyramidi.arkki,
+        projektio: pyramidi.projektio, alue: raaka, laudanY,
+      }) : null;
+      const aidostiNakyvia = raakaKartta
+        ? raakaKartta.laatat.filter((l) => laattakerroksenNakyvissa(laatanAlue(valittu, l.sarake, l.rivi), pov)).length
+        : 0;
+      if (nakyvatLaatat?.length && aidostiNakyvia <= LAATTAKERROS_LAATTAKATTO_NAKYVA) break;
       valittu = tasoZ(valittu.z - 1);
+      kattoRajoitti = true;
       kartta = null;
       nakyvatLaatat = null;
     }
@@ -3754,6 +3790,7 @@ export function luoLaattakerros({
     mittarit.peittoTaso = naytteitaPallolla ? +(peitettyTaso / naytteitaPallolla).toFixed(3) : null;
     mittarit.jumissa = jumissa;
     mittarit.nakyvia = nakyvat.size;
+    mittarit.kattoRajoitti = kattoRajoitti;
     mittarit.nakyviaScenessa = nakyviaScenessa;
     mittarit.nakyviaTaysin = nakyviaTaysin;
     mittarit.ennakkoja = ennakko.size;

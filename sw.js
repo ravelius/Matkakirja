@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-09-21.2021';
+const CACHE = 'matkakirja-2026-09-21.2025';
 const SHELL = [
   './',
   './index.html',
@@ -601,6 +601,9 @@ const SHELL = [
   './js/packs/fokusvirta-ljubljana.js',
   // Košice (20.9.2026, omistajan päätös: Slovakian pelikaupunki).
   './js/packs/fokusvirta-kosice.js',
+  // Luxemburg (21.9.2026, omistajan päätös: Kypros, Luxemburg ja Malta
+  // saavat pelikaupungin).
+  './js/packs/fokusvirta-luxemburg.js',
   // Maat ilman omaa fokusvirtaa: kadonneiden ihmeiden erä 26.8.2026
   // ja Matkakirjan ihmeiden Euroopan erä 27.8.2026.
   './js/packs/fokuskohteet-egy.js',
@@ -1274,7 +1277,13 @@ const SHELL = [
   './assets/kartat/miniatyyrit/amsterdam-kissalaiva.webp',
   './assets/kartat/miniatyyrit/amsterdam-maitotytto.webp',
   './assets/kartat/miniatyyrit/amsterdam-yovartio.webp',
+  './assets/kartat/miniatyyrit/ateena-akropolis-museo.webp',
+  './assets/kartat/miniatyyrit/ateena-diogeneen-astia.webp',
+  './assets/kartat/miniatyyrit/ateena-elginin-marmorit.webp',
+  './assets/kartat/miniatyyrit/ateena-iliou-melathron.webp',
   './assets/kartat/miniatyyrit/ateena-louis-1896.webp',
+  './assets/kartat/miniatyyrit/ateena-maratonhuijaus.webp',
+  './assets/kartat/miniatyyrit/ateena-niken-temppeli.webp',
   './assets/kartat/miniatyyrit/bergen-fredriksbergin-linnake.webp',
   './assets/kartat/miniatyyrit/bergen-kaupunginkirjasto.webp',
   './assets/kartat/miniatyyrit/bergen-korskirken.webp',
@@ -1365,6 +1374,7 @@ const SHELL = [
   './assets/kartat/miniatyyrit/wien-rattaan-kulmat.webp',
   './assets/kartat/miniatyyrit/wien-taikahuilu.webp',
   './assets/kartat/miniatyyrit/wien-tonava-kaunoinen.webp',
+  './assets/kartat/miniatyyrit/wien-vuoristovesijohto.webp',
   './assets/kartat/miniatyyrit/wien-yhdeksas-1824.webp',
   // Matkakirjan ihmeet: sama kohde loistoaikansa asussa NYKYMAAILMASSA
   // (Raamattu, osio "Matkakirjan ihmeet"; kohteiden `ihme`-kenttä
@@ -1664,6 +1674,8 @@ const SHELL = [
   './assets/kartat/amsterdam-varikartta.png',
   './assets/kartat/kobenhavn-varikartta.png',
   './assets/kartat/firenze-varikartta.png',
+  './assets/kartat/luxemburg-keskusta.png',
+  './assets/kartat/luxemburg-varikartta.png',
   './assets/kartat/bryssel-keskusta.png',
   './assets/kartat/bryssel-varikartta.png',
   './assets/kartat/ljubljana-keskusta.png',
