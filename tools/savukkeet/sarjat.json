@@ -23,6 +23,7 @@
     "savuke-glnimiot.mjs",
     "savuke-glnimiot-nimet.mjs",
     "savuke-glnimiot-nostot.mjs",
+    "savuke-nimion-koko-panorointi.mjs",
     "savuke-kartan-liike.mjs",
     "savuke-nimiot-sulavat.mjs",
     "savuke-hiomassa-linssi.mjs",
@@ -605,6 +606,14 @@
     "savuke-reaktiot-sydan.mjs": {
       "kuvakansio": true,
       "huomautus": "Reaktiot sydämeksi (omistaja 21.9.2026, kaappaus Ranskan lehden Historia-osiosta): viisi symbolia ja lepotila korvattiin kahdella suoraan näkyvälla napilla (sydän, peukku alas), lehden jutun vuosiluku siirtyi otsikkorivin oikeaan reunaan omaan laatikkoonsa. Maalehti GBR, Historia-osio, Magna Carta -juttu ('Kuningas pakotettiin lain alle', naytaTutkiSivu-indeksi = tutkiSivut-indeksi + 1, mitattu käytännössä). Ruudut 390x844 ja 1400x900, ~1 min."
+    },
+    "savuke-nimion-koko-panorointi.mjs": {
+      "env": {
+        "SAVUKE_MOOTTORI": "webkit",
+        "NAKYMA": "puhelin"
+      },
+      "kuvakansio": true,
+      "huomautus": "Nostonimion koko ei riipu ladonnasta eika panoroinnista (omistaja 21.9.2026, iPhone v2021, Camargue: Camarguenvarsa 14 px ja Camarguen hevoset 40 px samassa kuvassa, koko vaihtui panoroidessa). Juurisyy: nimiorasterit.js talletti skaalan ja katon rasterin valimuistiin ensimmaisen datumin mitasta. WebKit puhelin, Camargue kolmella korkeudella (saapuminen 8,7 px, z7 16 px, syvin 22 px): kaikilla nimioilla sama perusmitta luokasta riippumatta ja sama fontti panoroinnin jalkeen. Samassa erassa KATTO NOUSEE LAHIZOOMISSA (16 px kertoimeen 2, 22 px kertoimesta 4). 13/13."
     }
   }
 }

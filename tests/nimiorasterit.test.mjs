@@ -103,6 +103,25 @@ test('rasterilähde: hae palauttaa ensin keskeneräisen ja tilaajalle avaimen, s
   assert.equal(lahde.tila().valmiita, 0);
 });
 
+test('noston mitta ja katto luetaan joka haulla datumista, ei rasterin välimuistista (21.9.2026 Camargue)', () => {
+  const kotelo = { style: { getPropertyValue: () => '' } };
+  const lahde = luoRasterilahde({ kotelo, dpr: 1, doc: null, luoKangas, bitmap: false, katto: 1.4545 });
+  const d = { laji: 'nosto', kategoria: 'kaupunki', symLaji: 'kaupunki', nimi: 'Arles', puoli: 'oikea', taso: 2, mitta: 1.2, mittaRaaka: 1.8 };
+  const [ikoni1, nimio1] = lahde.hae(d);
+  // Sama nosto sisemmällä zoomilla: sama rasteriavain, uusi mitta.
+  const [ikoni2, nimio2] = lahde.hae({ ...d, mitta: 1.4545, mittaRaaka: 2.4 });
+  assert.equal(ikoni1.avain, ikoni2.avain);
+  assert.equal(nimio1.avain, nimio2.avain);
+  assert.ok(ikoni2.skaala > ikoni1.skaala, 'skaala seuraa datumin mittaa');
+  assert.equal(ikoni2.skaala / ikoni1.skaala, nimio2.skaala / nimio1.skaala);
+  assert.deepEqual(nimio1.katto, { a: 1.5, b: 1.4545 / 1.2 });
+  assert.deepEqual(nimio2.katto, { a: 2.4 / 1.4545, b: 1 });
+  // Toinen saman kategorian nosto isommalla kertoimella: sama ikonikuva, oma koko.
+  const [ikoni3] = lahde.hae({ ...d, nimi: 'Nîmes', mitta: 1.2 * 1.3, mittaRaaka: 1.8 * 1.3 });
+  assert.equal(ikoni3.avain, ikoni1.avain);
+  assert.ok(Math.abs(ikoni3.skaala / ikoni1.skaala - 1.3) < 1e-9);
+});
+
 test('sw.js kantaa rasterilähteen', () => {
   const sw = readFileSync(new URL('../sw.js', import.meta.url), 'utf8');
   assert.match(sw, /'\.\/js\/pallolauta\/nimiorasterit\.js'/);

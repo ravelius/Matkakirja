@@ -64,7 +64,7 @@ import {
   NOSTOSYM_KUVAMERKIN_KERROIN,
   NOSTOSYM_MINI_R, NOSTOSYM_MINI_RUUTU, NOSTOSYM_MITAN_KATTO, NOSTOSYM_NIMIO_KATTO_PX,
   NOSTOSYM_NIMIO_KOKO,
-  nostosymAsetaPorras, nostosymKatettuMitta, nostosymKuvamerkki, nostosymMitanKatto, nostosymNimioAsemointi,
+  nostosymAsetaNimionKatto, nostosymAsetaPorras, nostosymKatettuMitta, nostosymKuvamerkki, nostosymMitanKatto, nostosymNimioAsemointi,
   nostosymNimioMitta, nostosymPaakategoria, nostosymVirkistaRasterit, piirraNostosymKartalle,
   piirraNostosymNimio,
 } from '../fokusnosto-symbolit.js';
@@ -2471,6 +2471,9 @@ export function luoNostot({
     nostonKarttakerroin = kartanMittaSallittu()
       ? nimenKarttakerroin(karttaskaala, vertailuskaala || undefined)
       : 1;
+    // Katto nousee lähizoomissa samasta kertoimesta (fokusnosto-symbolit.js
+    // KATTO NOUSEE LÄHIZOOMISSA): 16 px kertoimeen 2, 22 px kertoimesta 6.
+    nostosymAsetaNimionKatto(nostonKarttakerroin);
     // Liuska seuraa karttaa myös silloin, kun kartan merkit eivät
     // (ks. LIUSKAN TEKSTIKOKO = KARTTAAN POLTETUN TEKSTIN RUUTUKOKO).
     liuskanKarttakerroin = nimenKarttakerroin(karttaskaala, vertailuskaala || undefined);
