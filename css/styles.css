@@ -4646,6 +4646,32 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
   opacity: 0.85;
 }
 
+/*
+ * HIOMASSA OPTIKOLLA (omistaja 21.9.2026; js/linssit/rekisteri.js
+ * HIOMASSA): omistettu mutta toteuttamaton linssi samalla harmaalla
+ * rivillä kuin keskeneräiset, ilman aktivointia. VALMISTUI-MERKKI:
+ * pieni kultainen täplä valmiin linssin kulmassa, kunnes ruutua on
+ * napautettu (js/ui.js esikatseleLinssi → omistus.js merkitseNahdyksi).
+ */
+.passport-card .linssi-valikko .linssi-liuskat-hiomassa button.hiomassa {
+  filter: grayscale(1) contrast(0.85);
+  opacity: 0.55;
+  cursor: help;
+}
+.passport-card .linssi-valikko .linssi-liuskat button.valmistui { position: relative; }
+.passport-card .linssi-valikko .linssi-liuskat button.valmistui::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #c9a227;
+  border: 2px solid #f5f0e2;
+  box-shadow: 0 0 0 1px rgba(70, 51, 31, 0.35);
+}
+
 /* Valitun varusteen nimi ja kuvaus liuskojen alla: keskitetty kuten
    tavaroiden selitteet, ja laukun oma muste. */
 .passport-card .linssi-tiedot { padding-top: 0.6rem; text-align: center; }
