@@ -1050,6 +1050,16 @@ export const RAAMATTU = {
       otsikko: 'Karttalinssit',
       tila: 'luonnos',
       kohdat: [
+        'ISOISÄN LINSSI — VUOSI 1873 (omistaja 21.09.2026 klo 09.07, Fablen linjaus): oma vahvasti retro linssi '
+          + 'VAIN vuodesta 1873, isoisän matkan vuodesta: sen vuoden rajat ja maiden nimet '
+          + '(27 poliittista nimeä nimistöstä aika=1873; raja-aineisto historical-basemaps '
+          + 'GPL-3.0, 1878 → 1873 käsin, tarkennus nykyrajoilla, muutokset dokumentoidaan), '
+          + 'Horation reitti katkoviivana, isoisän ottamat valokuvat matkan varrelta '
+          + '(havainnekuvat), sen ajan äänet ja media (CC-julisteet, ääninäytteet) kun niitä '
+          + 'saadaan. Ei aikajanaa tässä linssissä: muut historialliset tapahtumat (mm. '
+          + 'kumpikin maailmansota) saavat omat linssinsä, jotka pyörivät nykyisen kartan '
+          + 'päällä. Erillinen rasterinen ATLASLEHTI-linssi (Stieler 1875 PD-skannit) '
+          + 'päätetään vedoksen jälkeen. Toteutus alkaa vasta Fablen sanasta.',
         'ENSIMMAINEN AIKAJANALINSSI: KEKSINNOT EUROOPASSA (omistajan '
           + 'tilaus 2.9.2026 ilta; Fablen ensimmainen kierros): yhteinen '
           + 'aikajanamoottori js/aikajana.js + linssi js/linssit/keksinnot.js '
