@@ -112,7 +112,7 @@ export const PALLO_TEKSTUURI = `${R2}julisteet/pallo/${PALLO_TEKSTUURIVERSIO}/te
  * tarkkuuskatto poistuu. Yksi z4-tekstuuri jää VARAKSI: jos laattojen
  * luetteloa (laatat.json) ei saada, pallo piirtyy kuten ennen.
  */
-export const PALLO_LAATTAVERSIO = '2026-09-20-pohja';
+export const PALLO_LAATTAVERSIO = '2026-09-21-pohja';
 /*
  * NOSTOTASOLLINEN KANSIO (omistaja 5.9.2026: "lisää palloon myös se
  * toinen kerros missä nimet ja kohteet yms." ja "päästään siitä
@@ -182,7 +182,7 @@ export const PALLO_LAATTAVERSIO = '2026-09-20-pohja';
  * versiovahti (js/pallolaatat.js lepokerroksenKerrokset) vaatii aina
  * saman viivaversion sarjaan ja luetteloon — muuten kerros sammuu.
  */
-export const PALLO_LAATTATUNNISTE = '20260920k';
+export const PALLO_LAATTATUNNISTE = '20260921a';
 /*
  * Sarja k on poltettu ILMAN nostoja (tools/tee-pallolaatat.mjs laattojenKansio:
  * kansiossa ei ole '-nostot'-osaa): nostot tulevat maittain lepokerroksesta
@@ -2369,7 +2369,10 @@ function luoLepokerros({ pallo, kotelo, ikkuna, renderer, laattataso = () => NaN
     mittarit.mercatorTaso = laattataso();
     if (!lepokerroksenTasoRiittaa(taso, laattataso(), pov.lat)) return luovuta(`pallon laatat jo tiheämmät (z${taso.z})`);
     const tasot = (pyramidinKerrostasot(taso.z) ?? [])
-      .filter((t) => (t.nosto ? kerrokset.nosto : (t.viiva ? kerrokset.viiva : (t.ranta ? kerrokset.ranta : true))));
+      .filter((t) => (t.nosto ? kerrokset.nosto
+        : (t.viiva ? kerrokset.viiva
+          : (t.joki ? kerrokset.joki
+            : (t.nimio ? kerrokset.nimio : (t.ranta ? kerrokset.ranta : true))))));
     if (!tasot.length) return luovuta('pyramidin tasoa ei ole');
     // Pallon sarjassa nostot ovat tällä tasolla laatoissa: ilman pyramidin
     // nostotasoa kerros PEITTÄISI ne — silloin ei kerrosta.

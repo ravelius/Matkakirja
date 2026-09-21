@@ -223,6 +223,7 @@ export function avaaHetki(ui, iso, hetki) {
     // kirjoittaa valintansa kuvakehykseen (kehys.nostokuvaKuva).
     avaaSuurennos: (nappi) => avaaKohdeSuurennos(
       ui, kuvakehysRef?.nostokuvaKuva ?? paakuva, () => nappi, 'hetkiZoom',
+      kuvakehysRef?.nostokuvaSarja?.(),
     ),
     latoNosto: latoHetki,
   }) : null;

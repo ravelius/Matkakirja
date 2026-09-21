@@ -13,6 +13,8 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1985, teksti: 'GSHHG-rantaviiva, nostotasot, huntu liikkeen ajan' },
+  { v: 1984, teksti: 'Nostokortti: vakio leveys, selattava suurennos; verkko pois' },
   { v: 1983, teksti: 'Kohdemaan nimiot elavina; himmea reittiverkko liftatessa' },
   { v: 1982, teksti: 'Nostokortti: karuselli, kuvakoko; nimiot reunasta' },
   { v: 1981, teksti: 'Astropulun lento, Gironde, kartuscha 3, astro-kuvake' },
