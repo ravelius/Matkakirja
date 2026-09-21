@@ -24,6 +24,7 @@
     "savuke-glnimiot-nimet.mjs",
     "savuke-marseille-valkkyy.mjs",
     "savuke-glnimiot-nostot.mjs",
+    "savuke-nostojen-tyyppimerkit.mjs",
     "savuke-nimion-koko-panorointi.mjs",
     "savuke-kartan-liike.mjs",
     "savuke-nimiot-sulavat.mjs",
@@ -625,6 +626,13 @@
       },
       "kuvakansio": true,
       "huomautus": "Kaupungin nimi ei valky zoomissa (omistaja v2026 21.9.2026: MARSEILLE valkkyy; Karttasepan mittaus: nimi poissa yhden kehyksen joka kuoren portaan vaihdossa, koska sovitin pudotti nimen CSS2D:hen kun uuden portaan rasteri oli kesken). Korjaus glnimiot-sovitin.js viimeSpritet: rungolla oleva nimi pysyy rungolla vanhalla rasterilla kunnes uusi on valmis; sama nostoille osittain. WebKit 1400x900 dpr 2, zoom 0,14 -> 0,05 40 askelta: nimi joka askeleella rungolla, GL<->CSS2D-vaihtoja 0, tumman musteen osuus nimen laatikossa ei putoa alle 80 % edellisesta. 4/4; vanhalla sovittimella 3/4 (41 -> 29 promillea)."
+    },
+    "savuke-nostojen-tyyppimerkit.mjs": {
+      "env": {
+        "SAVUKE_MOOTTORI": "webkit"
+      },
+      "kuvakansio": true,
+      "huomautus": "Nostojen tyyppimerkit lahizoomissa (omistaja 21.9.2026 klo 23.05: karttamerkit takaisin). z8:sta lahemmas (kartan kerroin >= 4) jokainen nosto saa tyyppinsa Codexin kuvamerkin pisteen tilalle, kauempana piste; ykkostaso 1,6x kaikilla zoomeilla; vaihto haivytetaan GL-rungolla (#ikoni-vanha). Ikonit ovat sovittelun esteita muille nimioille (kaupunki ja ykkostaso voittavat). WebKit puhelin, Ranska z6 + Camargue z8/z9: maara tasmaa tyyppeihin, ykkostason suhde 1,6, ikoni ei osu toisen nimion paalle (vahvat sallittu), haivytys z7->z8. 10/10."
     }
   }
 }
