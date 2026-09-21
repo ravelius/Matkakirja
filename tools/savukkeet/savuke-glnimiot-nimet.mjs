@@ -142,7 +142,11 @@ const kaappausGL3 = await sivu.screenshot({ type: 'png' });
   const laatikot = odotetut.laatikot.map((l) => {
     if (l.x == null) return null;
     const x = l.x * s; const y = l.y * s;
-    return { id: l.id, x0: x + l.dx0 * s - vara, x1: x + l.dx1 * s + vara, y0: y + l.dy0 * s - vara, y1: y + l.dy1 * s + vara };
+    // Ruudun reunaan leikattuna: lukittu nimi saa leikkautua (nimet.js), ja
+    // kotelo leikkaa CSS2D:n samoin — peitto mitataan näkyvästä osasta.
+    const r = { id: l.id, x0: x + l.dx0 * s - vara, x1: x + l.dx1 * s + vara, y0: y + l.dy0 * s - vara, y1: y + l.dy1 * s + vara };
+    r.x0 = Math.max(0, r.x0); r.y0 = Math.max(0, r.y0); r.x1 = Math.min(W - 1, r.x1); r.y1 = Math.min(H - 1, r.y1);
+    return r.x1 - r.x0 > 4 * s && r.y1 - r.y0 > 4 * s ? r : null;
   }).filter(Boolean);
   let sisalla = 0; let ulkona = 0;
   const peitto = laatikot.map(() => 0);

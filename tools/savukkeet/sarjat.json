@@ -20,6 +20,8 @@
     "savuke-nostotasot.mjs",
     "savuke-sumu.mjs",
     "savuke-nostot-nakyviin.mjs",
+    "savuke-glnimiot.mjs",
+    "savuke-glnimiot-nimet.mjs",
     "savuke-kartan-liike.mjs",
     "savuke-nimiot-sulavat.mjs",
     "savuke-hiomassa-linssi.mjs",
@@ -536,6 +538,18 @@
     "savuke-sumu.mjs": {
       "kuvakansio": true,
       "huomautus": "Loytamisen sumu (omistaja 21.9.2026 julkaisuun): FRA/Pariisi 390 ja 1400 px — sisasumu 50 % kaymattomien kaupunkien seuduilla (aukko pariisi, Marseille sumussa), luonnosnostot katkoviivarenkaassa, kaymattomien maiden rajat vaaleampina; Marseillen jalkeen sumu pois (merentakaiset Cayenne ja Noumea eivat laske). Ampari Noden kautta. ~60 s."
+    },
+    "savuke-glnimiot.mjs": {
+      "env": {
+        "NAKYMA": "puhelin"
+      },
+      "huomautus": "GL-nimiokerroksen runko (Karttaseppa 21.9.2026, ?glnimiot=testi): 40 testinimiota yhtena drawcallina, nimiot maapisteissaan (kaappausvertailu kerros nakyvissa/piilossa), kehys < 0,5 ms liikkeessa. NAKYMA=puhelin|tyopoyta. Ampari Noden kautta. ~60 s."
+    },
+    "savuke-glnimiot-nimet.mjs": {
+      "env": {
+        "NAKYMA": "puhelin"
+      },
+      "huomautus": "Ladonnan nimet GL-kerroksessa (Pelikoodari 21.9.2026, ?glnimiot=1): sovitin vie kaupunkien nimet rungolle — gl + css2d = ladotut, fonttien jalkeen DOMissa 0 nimea, jokainen nimi omassa ladonnan laatikossaan (kaappausvertailu), rakennuksia liikkeessa enintaan ladontojen verran, kehys < 0,5 ms. NAKYMA=puhelin|tyopoyta. Ampari Noden kautta. ~70 s."
     },
     "savuke-nostot-nakyviin.mjs": {
       "kuvakansio": true,
