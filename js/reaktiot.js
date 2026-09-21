@@ -1,33 +1,35 @@
 /*
- * REAKTIOT — viisi kaiverrettua symbolia jokaisen sisällön ja jokaisen
- * väliotsikon kylkeen (omistajan tilaus 27.8.2026, vahvistettu 28.8.).
+ * REAKTIOT — kaksi kaiverrettua nappia jokaisen sisällön kylkeen
+ * (omistajan tilaus 27.8.2026, vahvistettu 28.8.; UUDISTETTU 21.9.2026:
+ * kaappaus Ranskan lehden Historia-osiosta työpöydällä — viisi
+ * symbolia korvattiin kahdella suoraan näkyvällä napilla).
  *
  * MIKÄ TÄMÄ ON: pelaaja lukee lehteä, kohdekorttia tai nähtävyysjuttua
- * ja tuntee jotain. Kaikelle tuntemiselle on nyt sama ele ja viisi
- * sanaa:
+ * ja tuntee jotain. Kaksi nappia, sydän ja peukku alas:
  *
- *   laakeriseppele  Hieno
- *   sydän           Ihana
- *   suurennuslasi   Mielenkiintoinen
- *   tiimalasi       Tylsä
- *   mustetahra      Virhe
+ *   sydän        hyvä — yksi napautus, ei kysymyksiä
+ *   peukku alas  huono — avaa tarkentavan kysymyksen "Mikä oli
+ *                vialla?" (Tylsä / Virhe tiedoissa / Muu)
  *
- * Symbolit ovat 1873:n kaiverrusta samalla kynällä kuin kartan
- * merkit: pelkkä ääriviiva, ei täyttöä, ei somen hymiötä. Neljä
- * ensimmäistä on pelkkä ääni; mustetahra avaa tekstikentän, koska
- * virheestä pitää tietää MIKÄ on väärin.
+ * Napit ovat 1873:n kaiverrusta samalla kynällä kuin kartan merkit:
+ * pelkkä ääriviiva, ei täyttöä, ei somen hymiötä. "Virhe tiedoissa"
+ * avaa tekstikentän, koska virheestä pitää tietää MIKÄ on väärin;
+ * Tylsä ja Muu ovat pelkkä ääni.
  *
- * ── LEPOTILA ON YKSI NAPPI ─────────────────────────────────────────
+ * ── VIISI VANHAA LASKURIA ELÄÄ ALLA ────────────────────────────────
  *
- * Rivi ei ole nappirivi vaan YKSI pieni himmeä nappi, jossa on eniten
- * ääniä saanut symboli ja sen määrä. Napautus avaa kaikki viisi
- * äänimäärineen; oma ääni on korostettu ja vaihdettavissa. Näin lehden
- * marginaali pysyy marginaalina eikä muutu palautelomakkeeksi, mutta
- * äänestäminen on yhden napautuksen päässä.
+ * Palvelin ja laitteen oma ääni tuntevat yhä viisi symbolia
+ * (REAKTIO_SYMBOLIT: hieno, ihana, mielenkiintoinen, tylsä, virhe) —
+ * VANHAT ÄÄNET EIVÄT KATOA. Kaksi nappia on vain niiden NÄKYMÄ:
+ * sydän kokoaa hieno+ihana+mielenkiintoinen, peukku alas kokoaa
+ * tylsä+virhe (REAKTIO_HYVA_SYMBOLIT / REAKTIO_HUONO_SYMBOLIT).
+ * Uusi sydän-ääni kirjautuu 'ihana'-symbolina (se on jo sydämen
+ * ääriviiva); uusi peukku alas -ääni kirjautuu 'tylsa'-symbolina
+ * (Tylsä ja Muu) tai 'virhe'-symbolina (Virhe tiedoissa).
  *
  * YKSI ÄÄNI PER LAITE PER KOHDE. Oma ääni on laitteen muistissa
- * (localStorage) ja sen voi vaihtaa toiseen symboliin tai perua
- * napauttamalla samaa uudestaan. Rajoitus on kohteliaisuus eikä lukko:
+ * (localStorage) ja sen voi vaihtaa tai perua napauttamalla oman
+ * ryhmänsä nappia uudestaan. Rajoitus on kohteliaisuus eikä lukko:
  * palvelin ei tiedä laitteista mitään eikä voisi valvoa sitä ilman
  * juuri sitä tunnistetta, jota sinne ei haluta.
  *
@@ -37,23 +39,25 @@
  * ehdotuskanavan workerissa (worker/ehdotukset/reaktiot.js) samassa
  * R2-ämpärissä oman etuliitteensä alla:
  *
- *   GET  /reaktiot?kohteet=…  laskurit, kun nappi avataan
+ *   GET  /reaktiot?kohteet=…  laskurit, kun rivi piirtyy
  *   POST /reaktio             yksi ääni (uusi ja mahdollinen edellinen)
  *
- * Haku tehdään VASTA kun nappi avataan — ei jokaisen artikkelin
- * piirrossa. Oma ääni näkyy heti optimistisesti, ennen kuin verkosta
- * tiedetään mitään. Verkko poikki = nollanäkymä ja oma ääni, ei
- * virheilmoitusta eikä estettä: rivi ei koskaan blokkaa lukemista.
+ * Molemmat napit ovat aina näkyvissä (ei enää lepotilaa), joten haku
+ * tehdään heti rivin piirtyessä. Oma ääni näkyy heti optimistisesti,
+ * ennen kuin verkosta tiedetään mitään. Verkko poikki = nollanäkymä ja
+ * oma ääni, ei virheilmoitusta eikä estettä: rivi ei koskaan blokkaa
+ * lukemista.
  *
  * ── VIRHEILMOITUS ──────────────────────────────────────────────────
  *
- * Mustetahra avaa minipopupin (js/minipopup.js — sama komponentti kuin
- * pöllörivin i-nappi) tekstikentällä. Lähetys menee KAHTA reittiä:
- * laskuri saa tahran (näkyy julkisesti, kunnes omistaja merkitsee
- * virheen korjatuksi) ja vapaateksti kulkee vanhaa ehdotusreittiä
- * (js/ehdotukset.js lahetaEhdotus → POST /laheta) omistajan
- * Lukijoilta-lehdelle arvioitavaksi. Tekstireitin jono (localStorage)
- * pitää huolen siitä, ettei ilmoitus katoa verkkokatkoon.
+ * "Virhe tiedoissa" avaa minipopupin (js/minipopup.js — sama
+ * komponentti kuin pöllörivin i-nappi) tekstikentällä. Lähetys menee
+ * KAHTA reittiä: laskuri saa tahran (näkyy julkisesti, kunnes
+ * omistaja merkitsee virheen korjatuksi) ja vapaateksti kulkee vanhaa
+ * ehdotusreittiä (js/ehdotukset.js lahetaEhdotus → POST /laheta)
+ * omistajan Lukijoilta-lehdelle arvioitavaksi. Tekstireitin jono
+ * (localStorage) pitää huolen siitä, ettei ilmoitus katoa
+ * verkkokatkoon.
  *
  * KANAVA KIINNI = RIVIÄ EI OLE. Sama sääntö kuin ehdotuslomakkeella:
  * kun EHDOTUS_OSOITE on tyhjä, pelaajalle ei näytetä nappia, joka ei
@@ -126,6 +130,14 @@ const SYM_TAHRA = '<path d="M11.4 4.1C14.3 3.7 16.7 4.6 17.9 6.4 19 8.1 18 9.6 '
   + '<circle cx="17.6" cy="20.3" r=".8"/>';
 
 /**
+ * Peukku alas: käsi ja ranneke, sama kaiverruskynä kuin muut väliaikaiset
+ * viivaikonit (ks. yllä). Peukalo osoittaa alas — "huono".
+ */
+const SYM_PEUKKU = '<path d="M14.3 3.4H9.6a2 2 0 0 0-1.9 1.4L5.7 10.6a2 2 0 0 0 1.9 '
+  + '2.6h3.3l-1 5.2a1.7 1.7 0 0 0 3.1 1.3l3.5-5.7V5.2a1.8 1.8 0 0 0-1.8-1.8Z"/>'
+  + '<path d="M17.2 5.2h2.1a1.6 1.6 0 0 1 1.6 1.6v5.2a1.6 1.6 0 0 1-1.6 1.6h-2.1"/>';
+
+/**
  * VIISI SYMBOLIA — järjestys on sama napissa, valikossa ja workerissa
  * (worker/ehdotukset/reaktiot.js REAKTIO_SYMBOLIT).
  *
@@ -143,6 +155,49 @@ export const REAKTIO_SYMBOLIT = [
 /** Symbolin tiedot tunnuksesta. */
 export function reaktioSymboli(id) {
   return REAKTIO_SYMBOLIT.find((s) => s.id === id) ?? null;
+}
+
+/*
+ * KAKSI NÄKYVÄÄ RYHMÄÄ VIIDEN VANHAN SYMBOLIN PÄÄLLÄ (omistajan
+ * päätös 21.9.2026). Pelaaja näkee sydämen ja peukun; laskurit ja
+ * laitteen oma ääni pysyvät viidessä symbolissa, jotta vanhat äänet
+ * eivät katoa (ks. tiedoston alkukommentti).
+ */
+
+/** Sydän-nappiin kokoontuvat vanhat symbolit. */
+export const REAKTIO_HYVA_SYMBOLIT = ['hieno', 'ihana', 'mielenkiintoinen'];
+
+/** Peukku alas -nappiin kokoontuvat vanhat symbolit. */
+export const REAKTIO_HUONO_SYMBOLIT = ['tylsa', 'virhe'];
+
+/** Symboli, jolla uusi sydän-ääni kirjataan jaettuun laskuriin. */
+export const REAKTIO_HYVA_AANI = 'ihana';
+
+/** Symboli, jolla Tylsä- ja Muu-vastaus kirjataan (Virhe tiedoissa käyttää 'virhe'). */
+export const REAKTIO_HUONO_MUU_AANI = 'tylsa';
+
+/**
+ * Kumpaan näkyvään ryhmään symboli kuuluu.
+ *
+ * @param {string} symboliId vanha symbolitunnus tai tyhjä
+ * @returns {'hyva'|'huono'|''} ryhmä, tai tyhjä jos symboli ei kuulu kumpaankaan
+ */
+export function reaktioRyhma(symboliId) {
+  if (REAKTIO_HYVA_SYMBOLIT.includes(symboliId)) return 'hyva';
+  if (REAKTIO_HUONO_SYMBOLIT.includes(symboliId)) return 'huono';
+  return '';
+}
+
+/**
+ * Ryhmän yhteenlaskettu äänimäärä laskuririvistöstä.
+ *
+ * @param {object} aanet laskurit symboleittain (tyhjatAanet-muotoinen)
+ * @param {'hyva'|'huono'} ryhma kumpi ryhmä lasketaan
+ * @returns {number} ryhmän symbolien äänet yhteensä
+ */
+export function ryhmanAanet(aanet, ryhma) {
+  const symbolit = ryhma === 'huono' ? REAKTIO_HUONO_SYMBOLIT : REAKTIO_HYVA_SYMBOLIT;
+  return symbolit.reduce((summa, id) => summa + (aanet?.[id] ?? 0), 0);
 }
 
 /* ------------------------------------------------------------------ *
@@ -564,11 +619,12 @@ export function voittajaSymboli(aanet) {
  * ------------------------------------------------------------------ */
 
 /**
- * Piirtää reaktionapin sisällön loppuun tai väliotsikon perään.
+ * Piirtää reaktionapit sisällön loppuun tai väliotsikon perään.
  *
- * Lepotilassa nappeja on YKSI: voittajasymboli ja sen äänimäärä, tai
- * haalea seppele jos ääniä ei ole. Napautus avaa kaikki viisi
- * äänimäärineen, ja toinen napautus sulkee taas.
+ * Kaksi nappia ovat AINA suoraan näkyvissä, ei lepotilaa eikä
+ * avattavaa valikkoa: sydän (hyvä) ja peukku alas (huono), kumpikin
+ * omalla äänimäärällään. Peukku alas avaa tarkentavan kysymyksen
+ * "Mikä oli vialla?"; sydän äänestää suoraan.
  *
  * @param {HTMLElement} kohde säiliö, jonka loppuun rivi liitetään
  * @param {string} tunniste sisällön tunniste (ilman sitä riviä ei piirretä)
@@ -597,8 +653,6 @@ export function piirraReaktiot(kohde, tunniste, asetukset = {}) {
 
   let aanet = REAKTIO_VALIMUISTI.get(avain) ?? tyhjatAanet();
   let oma = omaAani(avain);
-  let auki = false;
-  let haettu = REAKTIO_VALIMUISTI.has(avain);
 
   const kuittaus = html('span', 'reaktio-kuittaus');
   kuittaus.setAttribute('role', 'status');
@@ -612,97 +666,73 @@ export function piirraReaktiot(kohde, tunniste, asetukset = {}) {
     }
   };
 
-  /* ---------- lepotilan nappi ---------- */
+  /* ---------- kaksi nappia ---------- */
 
-  const lepo = html('button', 'reaktionappi reaktio-lepo');
-  lepo.type = 'button';
-  lepo.setAttribute('aria-expanded', 'false');
-  const lepoIkoni = html('span', 'reaktio-lepoikoni');
-  const lepoLuku = html('span', 'reaktio-luku');
-  lepo.append(lepoIkoni, lepoLuku);
+  const hyvaNappi = html('button', 'reaktionappi reaktio-hyva');
+  hyvaNappi.type = 'button';
+  const hyvaIkoni = html('span', 'reaktio-ikoni');
+  hyvaIkoni.appendChild(reaktioIkoni(SYM_SYDAN));
+  const hyvaLuku = html('span', 'reaktio-luku');
+  hyvaNappi.append(hyvaIkoni, hyvaLuku);
 
-  const paivitaLepo = () => {
-    const voittaja = voittajaSymboli(aanet);
-    // Oma ääni voittaa näkymässä silloin, kun kukaan muu ei ole vielä
-    // äänestänyt: pelaajan on nähtävä oma valintansa napissa.
-    const nayta = voittaja ?? (oma ? { id: oma, maara: 1 } : null);
-    const symboli = nayta ? reaktioSymboli(nayta.id) : REAKTIO_SYMBOLIT[0];
-    lepoIkoni.replaceChildren(reaktioIkoni(symboli.polku));
-    lepoLuku.textContent = nayta ? String(nayta.maara) : '';
-    lepo.classList.toggle('tyhja', !nayta);
-    lepo.classList.toggle('oma', Boolean(oma) && nayta?.id === oma);
+  const huonoNappi = html('button', 'reaktionappi reaktio-huono');
+  huonoNappi.type = 'button';
+  const huonoIkoni = html('span', 'reaktio-ikoni');
+  huonoIkoni.appendChild(reaktioIkoni(SYM_PEUKKU));
+  const huonoLuku = html('span', 'reaktio-luku');
+  huonoNappi.append(huonoIkoni, huonoLuku);
+
+  const paivita = () => {
+    const hyvaMaara = ryhmanAanet(aanet, 'hyva');
+    const huonoMaara = ryhmanAanet(aanet, 'huono');
+    const omaRyhma = reaktioRyhma(oma);
     const nimi = otsikko ? ` — ${otsikko}` : '';
-    lepo.title = nayta
-      ? `${symboli.nimi}: ${nayta.maara} ${nayta.maara === 1 ? 'ääni' : 'ääntä'}`
-      : 'Anna reaktio';
-    lepo.setAttribute('aria-label', nayta
-      ? `Reaktiot${nimi}: eniten ${symboli.nimi.toLowerCase()}, ${nayta.maara}`
-      : `Anna reaktio${nimi}`);
+
+    hyvaLuku.textContent = hyvaMaara ? String(hyvaMaara) : '';
+    hyvaNappi.classList.toggle('oma', omaRyhma === 'hyva');
+    hyvaNappi.setAttribute('aria-pressed', omaRyhma === 'hyva' ? 'true' : 'false');
+    hyvaNappi.title = `Hyvä${nimi}${hyvaMaara ? `, ${hyvaMaara} ${hyvaMaara === 1 ? 'ääni' : 'ääntä'}` : ''}`;
+    hyvaNappi.setAttribute('aria-label', omaRyhma === 'hyva'
+      ? `Hyvä${nimi} — oma äänesi, napauta perumiseksi`
+      : `Anna hyvä ääni${nimi}`);
+
+    huonoLuku.textContent = huonoMaara ? String(huonoMaara) : '';
+    huonoNappi.classList.toggle('oma', omaRyhma === 'huono');
+    huonoNappi.setAttribute('aria-pressed', omaRyhma === 'huono' ? 'true' : 'false');
+    huonoNappi.title = `Huono${nimi}${huonoMaara ? `, ${huonoMaara} ${huonoMaara === 1 ? 'ääni' : 'ääntä'}` : ''}`;
+    huonoNappi.setAttribute('aria-label', omaRyhma === 'huono'
+      ? `Huono${nimi} — oma äänesi, napauta perumiseksi`
+      : `Mikä oli huonoa${nimi}? Avaa kysymyksen`);
   };
-
-  /* ---------- avattu valikko ---------- */
-
-  const valikko = html('div', 'reaktio-valikko');
-  valikko.hidden = true;
-  const napit = new Map();
-
-  for (const symboli of REAKTIO_SYMBOLIT) {
-    const nappi = html('button', `reaktionappi reaktio-symboli reaktio-${symboli.id}`);
-    nappi.type = 'button';
-    nappi.dataset.symboli = symboli.id;
-    nappi.appendChild(reaktioIkoni(symboli.polku, 16));
-    const luku = html('span', 'reaktio-luku');
-    nappi.appendChild(luku);
-    napit.set(symboli.id, { nappi, luku });
-    valikko.appendChild(nappi);
-  }
-
-  const paivitaValikko = () => {
-    for (const symboli of REAKTIO_SYMBOLIT) {
-      const { nappi, luku } = napit.get(symboli.id);
-      const maara = aanet[symboli.id] ?? 0;
-      luku.textContent = maara ? String(maara) : '';
-      const omaTama = oma === symboli.id;
-      nappi.classList.toggle('oma', omaTama);
-      nappi.setAttribute('aria-pressed', omaTama ? 'true' : 'false');
-      const lukema = maara ? `, ${maara} ${maara === 1 ? 'ääni' : 'ääntä'}` : '';
-      nappi.title = symboli.id === 'virhe'
-        ? `Virhe — kerro mikä on väärin${lukema}`
-        : `${symboli.nimi}${lukema}`;
-      nappi.setAttribute('aria-label', omaTama
-        ? `${symboli.nimi}${lukema} — oma äänesi, napauta perumiseksi`
-        : `${symboli.nimi}${lukema}`);
-    }
-    // Virheilmoituksen istuntoesto: tahran saa yhä painaa (ääni on
-    // ääni), mutta tekstikenttä ei aukea toista kertaa samalle
-    // sisällölle. Nappi kertoo sen otsikossaan.
-    if (reaktioIlmoitettu(avain)) {
-      const { nappi } = napit.get('virhe');
-      nappi.classList.add('ilmoitettu');
-      nappi.title = 'Virhe on jo ilmoitettu tästä sisällöstä';
-    }
-  };
-
-  const piirraKaikki = () => { paivitaLepo(); paivitaValikko(); };
 
   /* ---------- laskurien haku ---------- */
 
+  // Kumpikin nappi on aina näkyvissä (ei enää lepotilaa), joten haku
+  // tehdään heti rivin piirtyessä — kerran per kohde per istunto
+  // (REAKTIO_VALIMUISTI), ei jokaisella uudelleenpiirrolla.
   const hae = async () => {
-    if (haettu) return;
-    haettu = true;
+    if (REAKTIO_VALIMUISTI.has(avain)) return;
     const tulos = await haeReaktiolaskurit([avain]);
     if (!tulos[avain]) return; // verkko poikki: nollanäkymä jää voimaan
     aanet = tulos[avain];
     REAKTIO_VALIMUISTI.set(avain, aanet);
-    piirraKaikki();
+    paivita();
   };
 
   /* ---------- äänestys ---------- */
 
-  const aanesta = (symboliId) => {
+  /**
+   * Kirjaa uuden äänen (tai poistaa sen tyhjällä symbolilla). Kutsuja
+   * päättää kohdesymbolin: ryhmän napit eivät koskaan lähetä samaa
+   * symbolia, jonka ne itse juuri poistivat, vaan aina eksplisiittisen
+   * kohteen (ks. klikkaaHyva/klikkaaHuono alla) — näin vanha ääni
+   * ('hieno' tai 'mielenkiintoinen') siirtyy oikein sydämeksi eikä jää
+   * haamuäänenä laskuriin.
+   */
+  const aanestaSymboli = (kohdeSymboli) => {
     const edellinen = oma;
-    // Sama symboli uudestaan perii äänen — sama ele antaa ja ottaa.
-    const uusi = edellinen === symboliId ? '' : symboliId;
+    const uusi = kohdeSymboli;
+    if (edellinen === uusi) return;
     // OPTIMISTINEN PÄIVITYS: luvut liikkuvat heti, ennen kuin verkosta
     // tiedetään mitään. Palvelimen vastaus korjaa ne, jos joku muu
     // ehti äänestää samalla.
@@ -711,9 +741,9 @@ export function piirraReaktiot(kohde, tunniste, asetukset = {}) {
     oma = uusi;
     asetaOmaAani(avain, uusi);
     REAKTIO_VALIMUISTI.set(avain, aanet);
-    piirraKaikki();
+    paivita();
     if (uusi) {
-      const { nappi } = napit.get(uusi);
+      const nappi = reaktioRyhma(uusi) === 'huono' ? huonoNappi : hyvaNappi;
       nappi.classList.remove('reaktio-poks');
       void nappi.offsetWidth;
       nappi.classList.add('reaktio-poks');
@@ -722,7 +752,7 @@ export function piirraReaktiot(kohde, tunniste, asetukset = {}) {
       if (!vahvistetut) return;
       aanet = vahvistetut;
       REAKTIO_VALIMUISTI.set(avain, aanet);
-      piirraKaikki();
+      paivita();
     });
   };
 
@@ -767,8 +797,8 @@ export function piirraReaktiot(kohde, tunniste, asetukset = {}) {
       }
       REAKTIO_ILMOITETUT.add(avain);
       // Tahra on ääni siinä missä muutkin: sama polku, samat laskurit.
-      if (oma !== 'virhe') aanesta('virhe');
-      else piirraKaikki();
+      if (oma !== 'virhe') aanestaSymboli('virhe');
+      else paivita();
       lahetaReaktio('virhe', avain, { teksti, otsikko });
       livia.textContent = LIVIAN_KIITOKSET[Math.floor(Math.random() * LIVIAN_KIITOKSET.length)];
       livia.hidden = false;
@@ -786,36 +816,61 @@ export function piirraReaktiot(kohde, tunniste, asetukset = {}) {
     kentta.focus?.();
   };
 
-  /* ---------- eleet ---------- */
+  /* ---------- "Mikä oli vialla?" -kysymys (peukku alas) ---------- */
 
-  for (const symboli of REAKTIO_SYMBOLIT) {
-    const { nappi } = napit.get(symboli.id);
-    nappi.addEventListener('click', (tapahtuma) => {
-      tapahtuma.stopPropagation();
-      if (symboli.id !== 'virhe') { aanesta(symboli.id); return; }
-      // Tahra: jos siitä on jo ilmoitettu tässä istunnossa, napautus on
-      // pelkkä ääni (tai sen peruminen) eikä avaa kenttää uudestaan.
-      if (reaktioIlmoitettu(avain) || oma === 'virhe') { aanesta('virhe'); return; }
+  const avaaKysymys = () => {
+    const runko = html('div', 'reaktio-kysymys');
+    runko.appendChild(html('p', 'reaktio-kysymys-ohje', 'Mikä oli vialla?'));
+    const napit = html('div', 'reaktio-kysymys-napit');
+    const lisaaVaihtoehto = (teksti, kasittelija) => {
+      const nappi = html('button', 'reaktio-kysymys-nappi', teksti);
+      nappi.type = 'button';
+      nappi.addEventListener('click', kasittelija);
+      napit.appendChild(nappi);
+    };
+    lisaaVaihtoehto('Tylsä', () => {
+      suljeMinipopup();
+      aanestaSymboli(REAKTIO_HUONO_MUU_AANI);
+    });
+    lisaaVaihtoehto('Virhe tiedoissa', () => {
+      suljeMinipopup();
+      // Sama istuntoesto kuin ennenkin: kenttä ei aukea toista kertaa
+      // samalle sisällölle, mutta ääni kirjautuu silti.
+      if (reaktioIlmoitettu(avain) || oma === 'virhe') { aanestaSymboli('virhe'); return; }
       avaaVirheikkuna();
     });
-  }
-
-  const asetaAuki = (tila) => {
-    auki = tila;
-    valikko.hidden = !tila;
-    rivi.classList.toggle('auki', tila);
-    lepo.setAttribute('aria-expanded', tila ? 'true' : 'false');
-    if (tila) hae();
+    lisaaVaihtoehto('Muu', () => {
+      suljeMinipopup();
+      aanestaSymboli(REAKTIO_HUONO_MUU_AANI);
+    });
+    runko.appendChild(napit);
+    avaaMinipopup({
+      otsikko: otsikko ? `Mikä oli vialla? — ${otsikko}` : 'Mikä oli vialla?',
+      sisalto: runko,
+      luokka: 'minipopup-reaktio-kysymys',
+    });
   };
 
-  lepo.addEventListener('click', (tapahtuma) => {
+  /* ---------- eleet ---------- */
+
+  hyvaNappi.addEventListener('click', (tapahtuma) => {
     tapahtuma.stopPropagation();
-    asetaAuki(!auki);
+    // Oma ääni on jo hyvä-ryhmässä: sama ele antaa ja ottaa, joten
+    // toinen napautus peruu äänen riippumatta siitä, mikä vanhoista
+    // kolmesta symbolista se tarkalleen oli.
+    aanestaSymboli(reaktioRyhma(oma) === 'hyva' ? '' : REAKTIO_HYVA_AANI);
   });
 
-  rivi.append(lepo, valikko, kuittaus);
-  piirraKaikki();
+  huonoNappi.addEventListener('click', (tapahtuma) => {
+    tapahtuma.stopPropagation();
+    if (reaktioRyhma(oma) === 'huono') { aanestaSymboli(''); return; }
+    avaaKysymys();
+  });
+
+  rivi.append(hyvaNappi, huonoNappi, kuittaus);
+  paivita();
   kohde.appendChild(rivi);
+  hae();
   return rivi;
 }
 

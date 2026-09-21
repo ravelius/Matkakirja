@@ -28,12 +28,27 @@
  *   3. Zoomi: koko liukuu joka kehys — liikkeen kehyksistä ≥ 90 %
  *      muuttaa kokoa, yhden kehyksen porras < 5 % (myös levossa).
  *   4. Ei sivuvirheitä.
- * Vartiot 1–3 tuomitaan vain ≥ 20 fps:n mittauksesta (SAVUKE_IKKUNA=1,
+ *   5. Katto pätee myös liikkeessä (E2): noston nimiö ≤ 16 px joka
+ *      kehyksessä (NOSTOSYM_NIMIO_KATTO_PX, sallittu ylitys 0,5 %).
+ *   6. Levossa kuori on 1 (±0,3 %) ja liikkeen luokka
+ *      (.pallolauta-liikkuu) on poissa — siirtymät ovat taas käytössä.
+ *   7. Kylkivaihto häivyttää (E3): kun noston datumin kylki käännetään
+ *      ja asetteleNosto ajetaan, vanha nimiökuva jää häipymään
+ *      (.nostosym-nimio-vanha), uusi tulee häivytyksellä ja vanha on
+ *      poissa DOMista 400 ms:n kuluttua; ikoni ei liiku.
+ * ENNUSTE (E4b, Karttasepän kameran ennuste): kun kehyksen mitoissa on
+ * ennuste, nimiö johtaa todellista kameraa yhden kehyksen verran
+ * tahallaan; vartiot 1–2 mittaavat silloin siirtymän ENNUSTETUSTA
+ * maapisteestä (ennustevirhe) ja johto kirjataan tiedoksi. Vartiot 1–3
+ * tuomitaan vain ≥ 20 fps:n mittauksesta (SAVUKE_IKKUNA=1,
  * ks. alla); headlessissä ne kirjataan tiedoksi. LÄHTÖTASO 21.9.2026
  * (ikkunallinen Chromium, Mac Studio): panorointi 0 px; zoomi 0,04 /
  * 0,31 px, koko muuttuu 77 %:ssa kehyksistä ja yhden kehyksen porras
  * 16 % — ladonta kulkee 200 ms:n tahdissa (lauta.js LADONNAN_TAHTI_MS)
- * ja nimet vaihtavat kokoa vasta ladonnassa. E2 vie koon joka kehykseen.
+ * ja nimet vaihtavat kokoa vasta ladonnassa. E2 (21.9.2026, kuori
+ * liukuu joka kehys, js/pallolauta/nimet.js KOKO LIUKUU JOKA
+ * KEHYKSESSÄ): koko muuttuu 97 %:ssa kehyksistä, porras 0, zoomin
+ * pahin siirtymä 3,2 px → 0,7 px.
  *
  * Aja: PLAYWRIGHT_JS=… CHROMIUM=… node tools/savukkeet/savuke-nimiot-sulavat.mjs [kuvakansio]
  */
@@ -43,7 +58,8 @@ import { extname, join } from 'node:path';
 
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
-import { kehysnopeus, koonLiukuvuus, siirtymanMuutokset } from '../../js/pallolauta/sulavuusmittari.js';
+import { ennustevirhe, kehysnopeus, koonLiukuvuus, siirtymanMuutokset } from '../../js/pallolauta/sulavuusmittari.js';
+import { NOSTOSYM_NIMIO_KATTO_PX, NOSTOSYM_NIMIO_KOKO } from '../../js/fokusnosto-symbolit.js';
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const paketti = await import('playwright')
@@ -207,9 +223,17 @@ for (const ruutu of RUUDUT) {
   const panSiirtyma = siirtymanMuutokset(pan);
   const panFps = kehysnopeus(pan);
   tieto(`${tunnus}: panorointi`, `${pan.length} kehystä (${panFps.toFixed(1)} fps), seurattavia ${seurattavia}; siirtymän muutos mediaani ${panSiirtyma.mediaani} px, p95 ${panSiirtyma.p95} px, pahin ${JSON.stringify(panSiirtyma.pahin)}`);
-  vaadi(`${tunnus}: 1. panoroinnissa nimiö pysyy maapisteessään (mediaani < 1 px, p95 < 2 px)`,
-    panFps < 20 || (pan.length >= 5 && panSiirtyma.n > 20 && panSiirtyma.mediaani < 1 && panSiirtyma.p95 < 2),
-    JSON.stringify(panSiirtyma));
+  /*
+   * ENNUSTEEN KANSSA (E4b) nimiö johtaa todellista kameraa yhden kehyksen
+   * verran tahallaan; silloin vartio mittaa siirtymän ENNUSTETUSTA
+   * maapisteestä (ennustevirhe) ja johto todellisesta kirjataan tiedoksi.
+   */
+  const panEnnusteMitta = ennustevirhe(pan);
+  const panMitta = panEnnusteMitta ?? panSiirtyma;
+  if (panEnnusteMitta) tieto(`${tunnus}: panorointi, ennuste`, `ennustevirhe ${JSON.stringify(panEnnusteMitta)}; johto todellisesta kamerasta mediaani ${panSiirtyma.mediaani} px, p95 ${panSiirtyma.p95} px`);
+  vaadi(`${tunnus}: 1. panoroinnissa nimiö pysyy maapisteessään (mediaani < 1 px, p95 < 2 px${panEnnusteMitta ? '; ennustetusta' : ''})`,
+    panFps < 20 || (pan.length >= 5 && panMitta.n > 20 && panMitta.mediaani < 1 && panMitta.p95 < 2),
+    JSON.stringify(panMitta));
   if (KUVAKANSIO) writeFileSync(join(KUVAKANSIO, `sulavat-${tunnus}-pan.png`), await sivu.screenshot());
   await odotaLepo();
 
@@ -247,6 +271,10 @@ for (const ruutu of RUUDUT) {
   const zoom = await sivu.evaluate(`(${PYSAYTA})()`);
   const zoomSiirtyma = siirtymanMuutokset(zoom);
   const koko = koonLiukuvuus(zoom);
+  const zoomEnnuste = ennustevirhe(zoom);
+  const zoomMitta = zoomEnnuste ?? zoomSiirtyma;
+  if (zoomEnnuste) tieto(`${tunnus}: zoomi, ennuste`, `ennustevirhe ${JSON.stringify(zoomEnnuste)}; johto todellisesta kamerasta mediaani ${zoomSiirtyma.mediaani} px, p95 ${zoomSiirtyma.p95} px`);
+  else tieto(`${tunnus}: ennuste (E4b)`, 'ei ennustetta kehyksen mitoissa (karttaseppa-ennuste ei mukana)');
   const skaalat = zoom.map((n) => n.skaala);
   const fps = kehysnopeus(zoom);
   tieto(`${tunnus}: zoomi`, `${zoom.length} kehystä (${fps.toFixed(1)} fps), skaala ${skaalat[0]?.toFixed(4)} → ${skaalat.at(-1)?.toFixed(4)}; siirtymän muutos mediaani ${zoomSiirtyma.mediaani} px, p95 ${zoomSiirtyma.p95} px, pahin ${JSON.stringify(zoomSiirtyma.pahin)}; koko: kamera liikkui ${koko.liikkui} kehyksessä, koko muuttui niistä ${koko.liikkuiJaKokoMuuttui} (${koko.osuus}), kokoaskel levossa ${koko.lepoaskel}, liikkeessä ${koko.liikeaskel}`);
@@ -259,14 +287,96 @@ for (const ruutu of RUUDUT) {
    */
   const tuomari = fps >= 20;
   if (!tuomari) tieto(`${tunnus}: ohitus`, `${fps} fps — sulavuusvartiot 2–3 vain ikkunallisena (SAVUKE_IKKUNA=1)`);
-  vaadi(`${tunnus}: 2. zoomissa nimiö pysyy maapisteessään (mediaani < 1 px, p95 < 2 px)`,
-    !tuomari || (zoom.length >= 5 && zoomSiirtyma.n > 20 && zoomSiirtyma.mediaani < 1 && zoomSiirtyma.p95 < 2),
-    JSON.stringify(zoomSiirtyma));
+  vaadi(`${tunnus}: 2. zoomissa nimiö pysyy maapisteessään (mediaani < 1 px, p95 < 2 px${zoomEnnuste ? '; ennustetusta' : ''})`,
+    !tuomari || (zoom.length >= 5 && zoomMitta.n > 20 && zoomMitta.mediaani < 1 && zoomMitta.p95 < 2),
+    JSON.stringify(zoomMitta));
   vaadi(`${tunnus}: 3. zoomissa koko liukuu joka kehys: liikkeen kehyksistä ≥ 90 % muuttaa kokoa, yhden kehyksen porras < 5 %`,
     !tuomari || (koko.liikkui >= 3 && koko.lepoaskel < 0.05 && koko.liikeaskel < 0.05 && koko.osuus >= 0.9),
     JSON.stringify(koko));
   if (KUVAKANSIO) writeFileSync(join(KUVAKANSIO, `sulavat-${tunnus}-zoom.png`), await sivu.screenshot());
   vaadi(`${tunnus}: 4. ei sivuvirheitä`, virheet.length === 0, virheet.join(' | '));
+
+  /* ── 5. katto liikkeessä ────────────────────────────────────────── */
+  // Noston koko näytteissä on pohja × kuori (mitta); nimiö = mitta × NOSTOSYM_NIMIO_KOKO.
+  let suurinNimio = 0;
+  let nostonaytteita = 0;
+  for (const n of zoom) {
+    for (const [avain, m] of Object.entries(n.merkit)) {
+      if (avain.startsWith('kaupunki:')) continue;
+      nostonaytteita += 1;
+      suurinNimio = Math.max(suurinNimio, m.koko * NOSTOSYM_NIMIO_KOKO);
+    }
+  }
+  tieto(`${tunnus}: katto`, `nostonäytteitä ${nostonaytteita}, suurin nimiö ${suurinNimio.toFixed(2)} px (katto ${NOSTOSYM_NIMIO_KATTO_PX} px)`);
+  vaadi(`${tunnus}: 5. katto pätee liikkeessä: noston nimiö ≤ ${NOSTOSYM_NIMIO_KATTO_PX} px joka kehyksessä`,
+    nostonaytteita > 0 && suurinNimio <= NOSTOSYM_NIMIO_KATTO_PX * 1.005,
+    `suurin ${suurinNimio.toFixed(2)} px`);
+
+  /* ── 6. lepo: kuori 1, liikkeen luokka pois ─────────────────────── */
+  await odotaLepo();
+  const lepo = await sivu.evaluate(() => {
+    const l = window.matkakirja.ui.pallolauta;
+    const kuoret = [...document.querySelectorAll('.pallolauta-nosto > svg, .pallolauta-nimi > svg')]
+      .map((svg) => {
+        const m = /matrix\(([-\d.e]+),/.exec(getComputedStyle(svg).transform ?? '');
+        return m ? Math.abs(Number(m[1])) : 1;
+      });
+    return {
+      kuoria: kuoret.length,
+      min: Math.min(...kuoret),
+      max: Math.max(...kuoret),
+      kerroin: getComputedStyle(l.kotelo).getPropertyValue('--nimiokerroin').trim(),
+      liikkuu: l.kotelo.classList.contains('pallolauta-liikkuu'),
+    };
+  });
+  tieto(`${tunnus}: lepo`, JSON.stringify(lepo));
+  vaadi(`${tunnus}: 6. levossa kuori on 1 (±0,3 %) ja liikkeen luokka on poissa`,
+    lepo.kuoria > 0 && lepo.min > 0.997 && lepo.max < 1.003 && !lepo.liikkuu && lepo.kerroin !== '',
+    JSON.stringify(lepo));
+
+  /* ── 7. kylkivaihto häivyttää (E3) ──────────────────────────────── */
+  const kylki = await sivu.evaluate(async () => {
+    const { asetteleNosto } = await import('/js/pallolauta/nostot.js');
+    const l = window.matkakirja.ui.pallolauta;
+    const el = [...document.querySelectorAll('.pallolauta-nosto[data-nosto]')]
+      .find((e) => e.dataset.nimio && !e.querySelector('.nostosym-nimio-piilossa'));
+    if (!el) return { virhe: 'ei näkyvää nimiöllistä nostoa' };
+    const d = l.merkit.datum(el);
+    const g = el.querySelector('.pallolauta-nosto-siirto');
+    const ikoni = g.querySelector('.nostosym-rasteri:not(.nostosym-nimiokuva)');
+    const ennen = { lapsia: g.children.length, puoli: d.puoli, ikoniHref: ikoni?.getAttribute('href') ?? ikoni?.getAttribute('xlink:href') };
+    d.puoli = d.puoli === 'oikea' ? 'vasen' : 'oikea';
+    asetteleNosto(el, d);
+    const heti = {
+      vanha: g.querySelectorAll('.nostosym-nimio-vanha').length,
+      tulee: g.querySelectorAll('.nostosym-nimio-tulee').length,
+      lapsia: g.children.length,
+      ikoniSama: g.querySelector('.nostosym-rasteri:not(.nostosym-nimiokuva)') !== null,
+    };
+    await new Promise((r) => setTimeout(r, 60));
+    const kesken = {
+      tulee: g.querySelectorAll('.nostosym-nimio-tulee').length,
+      vanhaOpacity: getComputedStyle(g.querySelector('.nostosym-nimio-vanha') ?? g).opacity,
+    };
+    await new Promise((r) => setTimeout(r, 400));
+    const lopuksi = {
+      vanha: g.querySelectorAll('.nostosym-nimio-vanha').length,
+      nimioita: g.querySelectorAll('.nostosym-nimiokuva').length,
+      puoli: g.querySelector('.nostosym-nimiokuva')?.dataset.puoli ?? null,
+      opacity: getComputedStyle(g.querySelector('.nostosym-nimiokuva') ?? g).opacity,
+    };
+    // Palautus: datumin kylki takaisin, jotta lepoladonta ei jää ristiriitaan.
+    d.puoli = ennen.puoli;
+    asetteleNosto(el, d);
+    return { avain: el.dataset.nosto, ennen, heti, kesken, lopuksi };
+  });
+  tieto(`${tunnus}: kylkivaihto`, JSON.stringify(kylki));
+  vaadi(`${tunnus}: 7. kylkivaihto häivyttää: vanha nimiö häipyy, uusi tulee häivytyksellä, vanha poissa 400 ms:ssa`,
+    !kylki.virhe && kylki.heti.vanha === 1 && kylki.heti.tulee === 1 && kylki.heti.ikoniSama
+      && kylki.kesken.tulee === 0 && Number(kylki.kesken.vanhaOpacity) < 1
+      && kylki.lopuksi.vanha === 0 && kylki.lopuksi.nimioita === 1 && kylki.lopuksi.puoli !== kylki.ennen.puoli
+      && Number(kylki.lopuksi.opacity) === 1,
+    JSON.stringify(kylki));
   await ctx.close();
 }
 
