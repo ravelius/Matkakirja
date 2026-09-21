@@ -585,9 +585,32 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
      * Rajan aaltoilu tulee samasta kohinasta kuin ennenkin.
      */
     syvyysPortaat = null,
+    /*
+     * SYVYYSKÄYRÄT VIIVOINA (omistajan kysymys 21.9.2026: *"toimisiko
+     * atlaslehden tapainen syvyyskäyräpiirros"*). Lista syvyysrajoja
+     * metreinä kuten portaissa, mutta raja piirretään OHUENA VIIVANA
+     * (isobaatti, Stielerin "Tiefenlinie") eikä sävyhyppynä: meren sävy
+     * on jatkuva ramppi (tai portaat, jos molemmat annetaan), ja
+     * käyrän kohdalle — pikseli, jonka vyöhyke eroaa oikean tai
+     * alapuolisen naapurin vyöhykkeestä — sekoitetaan viivamuste
+     * `syvyysKayraMuste` peitolla `syvyysKayraPeitto`. Aaltoilu tulee
+     * samasta kohinasta kuin vyöhykkeillä, joten käyrä ei ole
+     * korkeusruudukon portaikko.
+     */
+    syvyysKayrat = null,
+    syvyysKayraMuste = [64, 78, 104],
+    syvyysKayraPeitto = 0.55,
   } = asetukset;
   const portaat = Array.isArray(syvyysPortaat) && syvyysPortaat.length
     ? [...syvyysPortaat].map(Number).filter((v) => v > 0).sort((a, b) => a - b) : null;
+  const kayrat = Array.isArray(syvyysKayrat) && syvyysKayrat.length
+    ? [...syvyysKayrat].map(Number).filter((v) => v > 0).sort((a, b) => a - b) : null;
+  const kayraVyohyke = (m) => {
+    const d = -m;
+    let i = 0;
+    for (const raja of kayrat) { if (d < raja) return i; i += 1; }
+    return i;
+  };
   const porrasta = (m) => {
     if (!portaat) return m;
     const d = -m;
@@ -1010,6 +1033,8 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
   {
     const img = ctx.createImageData(W, H);
     const d = img.data;
+    // Syvyyskäyrien vyöhykepuskuri: -1 = ei merta, muuten vyöhykkeen indeksi.
+    const vyohykkeet = kayrat ? new Int8Array(W * H).fill(-1) : null;
     // Paperin pohjaväri kolmena lukuna, jottei sitä pilkota silmukassa.
     const pohja = [
       parseInt(PAPERI.slice(1, 3), 16),
@@ -1078,8 +1103,9 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
           // --- meri: syvyysvyöhykkeet, raja aaltoilee kohinasta ---
           if (!Number.isFinite(m)) m = -900;
           const n = fbm(KOHINA, gx / (30 * P), gy / (30 * P), 4) - 0.5;
-          const s = lerpSyvyysAsteikolla(syvyysAsteikko,
-            porrasta(m + n * Math.min(150, Math.max(12, -m * 1.25))));
+          const mk = m + n * Math.min(150, Math.max(12, -m * 1.25));
+          if (vyohykkeet) vyohykkeet[y * W + x] = kayraVyohyke(mk);
+          const s = lerpSyvyysAsteikolla(syvyysAsteikko, porrasta(mk));
           const a = MEREN_PEITTO;
           r = r * (1 - a) + s[0] * a;
           g = g * (1 - a) + s[1] * a;
@@ -1102,6 +1128,25 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
         d[i + 1] = Math.max(0, Math.min(255, g));
         d[i + 2] = Math.max(0, Math.min(255, b));
         d[i + 3] = 255;
+      }
+    }
+    if (vyohykkeet) {
+      // Isobaatti: vyöhykkeen raja oikeaan tai alapuoliseen naapuriin.
+      const [mr, mg, mb] = syvyysKayraMuste;
+      const a = syvyysKayraPeitto;
+      for (let y = 0; y < H - 1; y += 1) {
+        for (let x = 0; x < W - 1; x += 1) {
+          const k = y * W + x;
+          const v = vyohykkeet[k];
+          if (v < 0) continue;
+          const o = vyohykkeet[k + 1];
+          const al = vyohykkeet[k + W];
+          if ((o < 0 || o === v) && (al < 0 || al === v)) continue;
+          const i = k * 4;
+          d[i] = d[i] * (1 - a) + mr * a;
+          d[i + 1] = d[i + 1] * (1 - a) + mg * a;
+          d[i + 2] = d[i + 2] * (1 - a) + mb * a;
+        }
       }
     }
     ctx.putImageData(img, 0, 0);

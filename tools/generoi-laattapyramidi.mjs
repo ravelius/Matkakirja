@@ -309,7 +309,7 @@ if (!kohdekansio || kohdekansio.startsWith('--')) {
     + '[--nostotaso --nostoversio <v> [--nostomaa <ISO>] [--ilman-hahmotelmia [--polta-hahmotelmat t,t]] [--nostotasot <json>]] '
     + '[--nimiotaso --nimioversio <v> [--nimiot <json>] [--nimiot-aika pysyva]] '
     + '[--viivataso --viivaversio <v> [--eipiirit] [--eireitit] [--eirajat] [--eijoet]] '
-    + '[--vesiviivoitus tihea|harva] [--syvyysportaat m,m,…] [--resepti-json <json>] [--joet-pohjaan] '
+    + '[--vesiviivoitus tihea|harva] [--syvyysportaat m,m,…] [--syvyyskayrat m,m,… [--syvyyskayrapeitto 0.55]] [--resepti-json <json>] [--joet-pohjaan] '
     + '[--rantataso --rantaversio <v>] [--ilman-rantaviivaa] '
     + '[--vari <ISO> --variversio <v> [--aluevesi <yksikköä>] '
     + '[--paletti murrettu|taysvari|tasoitus] [--vesi <0..1>] [--feidaus <0..1>] '
@@ -994,6 +994,11 @@ const PATINA_POHJA = PATINA_TASO === 'ei' ? null
 /** `--syvyysportaat 30,120,600,1500,3000` — meren syvyysvyöhykkeet portaina (koe). */
 const SYVYYSPORTAAT = valitsin('syvyysportaat', null)
   ? valitsin('syvyysportaat', null).split(',').map(Number).filter((v) => v > 0) : null;
+/** `--syvyyskayrat 200,1000,3000` — isobaatit ohuina viivoina (koe 21.9.2026, ks. maailmapiirto.js syvyysKayrat). */
+const SYVYYSKAYRAT = valitsin('syvyyskayrat', null)
+  ? valitsin('syvyyskayrat', null).split(',').map(Number).filter((v) => v > 0) : null;
+/** `--syvyyskayrapeitto 0.55` — isobaattiviivan peitto. */
+const SYVYYSKAYRAPEITTO = Number(valitsin('syvyyskayrapeitto', 0.55));
 const VESIVIIVOITUS_VALINTA = valitsin('vesiviivoitus', null);
 const RESEPTI_JSON = valitsin('resepti-json', null);
 if (VESIVIIVOITUS_VALINTA && !VESIVIIVOITUKSET[VESIVIIVOITUS_VALINTA]) {
@@ -2183,8 +2188,20 @@ function nimiotasonPeite(mitat) {
   const joukko = new Set();
   const marg = VIIVA_MARGINAALI_PX;
   for (const { ladonta } of nimiotasonLadonnat(mitat)) {
-    const [x0, y0, x1, y1] = ladonta.laatikko;
-    for (const d of [0, -mitat.leveys, mitat.leveys]) {
+    /*
+     * ALUERAJAN PEITE JANOITTAIN (maakuntavedos 21.9.2026): rajan
+     * laatikko on koko FRA+DEU:n kokoinen, ja laatikosta laskettu peite
+     * olisi lupannut z8:lla 336 laattaa, joista suurin osa tyhjiä
+     * (mitattu: 171 → 336). Viiva kulkee vain osassa niistä; peite
+     * kootaan janojen omista laatikoista.
+     */
+    const laatikot = Array.isArray(ladonta.polut)
+      ? ladonta.polut.flatMap((polku) => polku.slice(1).map(([x, y], i) => {
+        const [px, py] = polku[i];
+        return [Math.min(px, x), Math.min(py, y), Math.max(px, x), Math.max(py, y)];
+      }))
+      : [ladonta.laatikko];
+    for (const [x0, y0, x1, y1] of laatikot) for (const d of [0, -mitat.leveys, mitat.leveys]) {
       const s0 = Math.floor((x0 + d - marg) / LAATTA);
       const s1 = Math.floor((x1 + d + marg) / LAATTA);
       const r0 = Math.max(0, Math.floor((y0 - marg) / LAATTA));
@@ -3724,6 +3741,9 @@ for (const { mitat, bx, by } of lohkot.values()) {
     variVesi: VARITASO ? VARI_VESI : null,
     // Syvyysvyöhykkeet portaina (poltto-koe; ks. maailmapiirto.js syvyysPortaat).
     syvyysPortaat: SYVYYSPORTAAT,
+    // Isobaatit viivoina (koe 21.9.2026).
+    syvyysKayrat: SYVYYSKAYRAT,
+    syvyysKayraPeitto: SYVYYSKAYRAPEITTO,
   };
   /*
    * Patinan `maailma` on kankaan bbox LAUDAN koordinaateissa: siitä
@@ -3844,6 +3864,7 @@ function teeLuettelo() {
   // Ajokohtainen reseptimuutos (poltto-koe): kirjataan, jotta ämpäristä
   // näkee mitä ajettiin; peli ei lue kenttää.
   ...(SYVYYSPORTAAT ? { syvyysPortaat: SYVYYSPORTAAT } : {}),
+  ...(SYVYYSKAYRAT ? { syvyysKayrat: SYVYYSKAYRAT, syvyysKayraPeitto: SYVYYSKAYRAPEITTO } : {}),
   ...(Object.keys(PATINA_MUUTOS).length ? {
     patinaMuutos: {
       ...(VESIVIIVOITUS_VALINTA ? { vesiviivoitus: VESIVIIVOITUS_VALINTA } : {}),
