@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2031, teksti: 'Laattakerros: seuraavan tason keskilaatat ennakkoon' },
   { v: 2030, teksti: 'Nikosian, Luxemburgin ja Vallettan miniatyyrit' },
   { v: 2029, teksti: '69 Euroopan kadonnutta monumenttia loistoaikansa asussa' },
   { v: 2028, teksti: 'Savukevakaus: WebKit-kaatumiset ja aikakatkaisut' },
