@@ -26,6 +26,19 @@
  */
 
 /** Yksi V riviä kohden, ylhäältä alas. */
+/**
+ * TAVALLINEN HAMPURILAINEN — sama polku kuin index.html #menu-btn.
+ * Omistaja 21.9.2026 (Raamatun loki "BUGI: IPADIN YLAPALKKI POISSA MYOS
+ * PYSTYASENNOSSA; HAMPURILAINEN VS VAKASET"): *"aina kun on ylapalkki,
+ * niin silloin siina on normaali hampurilainen ja vain kun ylapalkkia
+ * ei ole, niin silloin ylakulmassa kelluva hampurilainen muuttuu
+ * kolmeksi v-kirjainta muistuttavaksi vakaseksi."* Linssien oma
+ * yläpalkki (js/aikajana-valikko.js) on yläpalkki, joten sen valikon
+ * kuvake on tämä; väkäset jäävät yksin kelluvalle napille
+ * (js/ylapalkki-vaaka.js).
+ */
+export const HAMPURILAISEN_POLKU = 'M4.5 7h15M4.5 12h15M4.5 17h15';
+
 export const VAKASIKONIN_POLUT = Object.freeze([
   'M4 4.5 L12 8.5 L20 4.5',
   'M4 10 L12 14 L20 10',

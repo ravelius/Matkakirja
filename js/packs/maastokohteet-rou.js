@@ -108,6 +108,17 @@ export const MAASTOKOHTEET_ROU = [
       + 'Georgia, Romania, Venäjä, Turkki ja Ukraina — mutta valuma-alue ulottuu 24 Euroopan '
       + 'maahan, koska meren suurimmat tulojoet ovat Tonava, Dnepr ja Dnestr.',
     lahde: 'en-Wikipedia "Black Sea", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Kuinka moneen maahan Mustanmeren valuma-alue ulottuu?',
+      vaihtoehdot: [
+        '24 maahan',
+        '6 maahan',
+        '10 maahan',
+        '3 maahan',
+      ],
+      oikea: 0,
+      fakta: 'Mustanmeren suurimmat tulojoet ovat Tonava, Dnepr ja Dnestr.',
+    },
   },
   {
     id: 'tonava',
@@ -152,6 +163,17 @@ export const MAASTOKOHTEET_ROU = [
       + 'pitkän pätkän Bulgarian vastaista rajaa ja päättyy suistoon, joka on koko matkan '
       + 'viimeinen ja laajin osa.',
     lahde: 'en-Wikipedia "Danube", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Mistä Tonava saa alkunsa?',
+      vaihtoehdot: [
+        'Ranskan Alpeilta',
+        'Saksan Schwarzwaldista',
+        'Sveitsin Juralta',
+        'Itävallan metsästä',
+      ],
+      oikea: 1,
+      fakta: 'Joki virtaa 2 850 kilometriä Saksasta Mustallemerelle.',
+    },
   },
 ];
 

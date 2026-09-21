@@ -110,6 +110,17 @@ export const MAASTOKOHTEET_NLD = [
       + 'kohta aina vuoteen 2010, jolloin Karibian Saba 887-metrisine tulivuorineen liitettiin '
       + 'maahan erityiskuntana.',
     lahde: 'en-Wikipedia "Vaalserberg", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Mikä muutti Vaalserbergin aseman maan korkeimpana kohtana vuonna 2010?',
+      vaihtoehdot: [
+        'Karibian Saba liitettiin maahan',
+        'Vaalserberg vajosi merenpinnan alle',
+        'NAP-taso määriteltiin uudelleen',
+        'Limburg erosi kuningaskunnasta',
+      ],
+      oikea: 0,
+      fakta: 'Karibian Saba on 887-metrinen tulivuori, joka liitettiin kuningaskuntaan erityiskuntana vuonna 2010.',
+    },
   },
   {
     id: 'pohjanmeri',
@@ -152,6 +163,17 @@ export const MAASTOKOHTEET_NLD = [
       + 'kanaalin kautta ja pohjoisessa Norjanmereen. Pituutta sillä on yli 970 kilometriä, '
       + 'leveyttä 580 ja pinta-alaa 570 000 neliökilometriä.',
     lahde: 'en-Wikipedia "North Sea", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Minkä kanavan kautta Pohjanmeri yhtyy Atlanttiin etelässä?',
+      vaihtoehdot: [
+        'Kielin kanavan',
+        'Englannin kanaalin',
+        'Suezin kanavan',
+        'Panaman kanavan',
+      ],
+      oikea: 1,
+      fakta: 'Etelässä Pohjanmeri yhtyy Atlanttiin Englannin kanaalin kautta.',
+    },
   },
   {
     id: 'maas',
@@ -185,6 +207,17 @@ export const MAASTOKOHTEET_NLD = [
       + 'Rein–Maas–Schelde-suistosta, samasta suistosta kuin Reinkin. Alankomaissa se on Reinin '
       + 'ohella maan kaksi suurta vesireittiä.',
     lahde: 'en-Wikipedia "Meuse", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Mistä maasta Maas-joki saa alkunsa?',
+      vaihtoehdot: [
+        'Saksasta',
+        'Belgiasta',
+        'Ranskasta',
+        'Luxemburgista',
+      ],
+      oikea: 2,
+      fakta: 'Maas nousee Ranskasta ja virtaa Belgian ja Alankomaiden läpi ennen Pohjanmerta.',
+    },
   },
   /* ================================================================
    * K2-ERÄ 3 6.9.2026 — KAHDEKSAN KOHDETTA. Perustelut tiedoston alussa.
@@ -650,5 +683,16 @@ export const MAASTOKOHTEET_NLD = [
       + 'unioni perustettiin. Kaupungissa on 1 677 valtakunnallisesti suojeltua rakennusta, '
       + 'enemmän kuin missään muualla Alankomaissa Amsterdamia lukuun ottamatta.',
     lahde: 'en-Wikipedia "Maastricht" (tarkistettu 11.9.2026).',
+    visa: {
+      kysymys: 'Mitä Maastrichtin latinankielinen nimi Trajectum ad Mosam tarkoittaa?',
+      vaihtoehdot: [
+        'Pyhää jokea',
+        'Kahta kirkkoa',
+        'Roomalaista siltaa',
+        'Maasin kahlaamoa',
+      ],
+      oikea: 3,
+      fakta: 'Latinankielinen nimi Trajectum ad Mosam tarkoittaa Maasin kahlaamoa.',
+    },
   },
 ];

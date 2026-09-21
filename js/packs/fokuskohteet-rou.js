@@ -180,6 +180,17 @@ export const FOKUSKOHTEET_ROU = [
         + 'Vanhakaupunki on ollut Unescon listalla vuodesta 1999.',
       lahde: 'Cezar Suceveanu, Wikimedia Commons (CC BY-SA 4.0)',
     },
+    visa: {
+      kysymys: 'Minä vuonna Sighișoaran vanhakaupunki tuli Unescon listalle?',
+      vaihtoehdot: [
+        '1435',
+        '1914',
+        '1999',
+        '1866',
+      ],
+      oikea: 2,
+      fakta: 'Vanhakaupunki on ollut Unescon maailmanperintökohteena vuodesta 1999.',
+    },
   },
   {
     id: 'peles',
@@ -673,6 +684,17 @@ export const FOKUSKOHTEET_ROU = [
       selite: 'Nadia Comăneci Montrealin olympialaisissa 1976.',
       lahde: 'Tuntematon kuvaaja (Agerpres-arkisto) 1976, Wikimedia '
         + 'Commons (public domain)',
+    },
+    visa: {
+      kysymys: 'Minkä yhtiön tulostaulu ei osannut näyttää täyttä kymppiä?',
+      vaihtoehdot: [
+        'Adidas',
+        'Rolex',
+        'Seiko',
+        'Omega',
+      ],
+      oikea: 3,
+      fakta: 'Omega ei ollut ohjelmoinut taulua näyttämään lukemaa 10.00, joten se näytti 1.00.',
     },
   },
   /* ================================================================

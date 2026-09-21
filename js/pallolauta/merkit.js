@@ -262,7 +262,11 @@ export function kohdeElementti(kohde) {
  * lista)`, `maara(osa)`, `laatikot(osa)` ja kohteiden luettelon
  * osumatestiä varten.
  */
-export function luoMerkit({ pallo, ui, siirtyma, asteet, kotelo = null, nakyvissa = null }) {
+export function luoMerkit({
+  pallo, ui, siirtyma, asteet, kotelo = null, nakyvissa = null,
+  /** Osan jako ennen asetusta (GL-kerros): (osa, lista) → CSS2D:hen jäävät; null = kaikki. */
+  jakaja = null,
+}) {
   const data = new Map(); // avain → pysyvä datum
   const osat = new Map(); // osan nimi → datumit
   const poistuvat = new Map(); // avain → ajastin
@@ -344,9 +348,11 @@ export function luoMerkit({ pallo, ui, siirtyma, asteet, kotelo = null, nakyviss
    * mahdollinen `asettele(el, d)` (sisäasettelu, kun sama datum saa
    * uudet mitat). Sama datum säilyy, kun avain säilyy.
    */
-  const aseta = (osa, uudet, { haivyta = true } = {}) => {
+  const aseta = (osa, annetut, { haivyta = true } = {}) => {
     const ennen = osat.get(osa) ?? [];
     const lista = [];
+    // GL-kerros voi ottaa osan riveistä itselleen (js/pallolauta/glnimiot-sovitin.js).
+    const uudet = typeof jakaja === 'function' ? (jakaja(osa, annetut) ?? annetut) : annetut;
     for (const tiedot of uudet) {
       let d = data.get(tiedot.avain);
       if (d) {
@@ -448,6 +454,8 @@ export function luoMerkit({ pallo, ui, siirtyma, asteet, kotelo = null, nakyviss
     maara: (osa) => (osat.get(osa) ?? []).length,
     /** Näkyvät kohteet osumatestiä varten ({ key, lat, lng, city }). */
     kohteet: () => kohteet,
+    /** Elementin datum (lat, lng, avain) — mittarit ja savukkeet (sulavuus). */
+    datum: (el) => elementinDatum.get(el) ?? null,
     /**
      * NAPAUTETTAVAT LINSSIMERKIT (aalto 2A). Linssin merkki
      * (js/pallolauta/linssit.js merkit, laji `linssi`) saa datumiinsa
@@ -478,6 +486,37 @@ export function luoMerkit({ pallo, ui, siirtyma, asteet, kotelo = null, nakyviss
         for (const d of lista) if (!d.poistuu && typeof d.avaa === 'function') ulos.push(d);
       }
       return ulos;
+    },
+    /**
+     * KIRJASTON SIIRTYMÄ POIS ELEEN AJAKSI (KARTAN SULAVUUS ENSIN, erä
+     * E3). Globe.gl tweenaa olemassa olevan merkin uuteen paikkaan
+     * htmlTransitionDuration-ajassa; liikkeessä merkin paikan on oltava
+     * SAMASSA kehyksessä kuin kuvan (lukittu ankkuri, ei tweeniä), joten
+     * lauta sammuttaa tweenin liikkeen ajaksi ja palauttaa sen levossa.
+     * Kirjaston prop on triggerUpdate:false — halpa, ei ladontaa.
+     * Poistumisen häivytys (poista) lukee edelleen omaa `siirtyma`ansa.
+     */
+    /**
+     * ELEMENTTIEN TILA (diagnostiikka, Laitetestaaja 21.9.2026 iPad:
+     * merkkejä 65, DOMissa 0): montako datumia kirjasto on jo
+     * muuttanut elementiksi (htmlElement-tehdas ajettu) ja montako
+     * niistä on liitetty DOMiin (CSS2DRenderer.render liittää vasta
+     * piirrossa). Luotu ilman liitosta = CSS2D-piirto ei aja.
+     */
+    /** Ensimmäinen nosto- tai nimidatum (diagnostiikka, ks. lauta.tila css2dNayte). */
+    naytedatum: () => [...data.values()].find((d) => d.el && (d.laji === 'nosto' || d.laji === 'nimi')) ?? null,
+    elementit: () => {
+      let luotu = 0;
+      let liitetty = 0;
+      for (const d of data.values()) {
+        if (!d.el) continue;
+        luotu += 1;
+        if (d.el.isConnected) liitetty += 1;
+      }
+      return { datumeja: data.size, luotu, liitetty };
+    },
+    kirjastonSiirtyma: (paalla) => {
+      pallo.htmlTransitionDuration?.(paalla ? siirtyma : 0);
     },
     pura: () => {
       for (const t of poistuvat.values()) clearTimeout(t);

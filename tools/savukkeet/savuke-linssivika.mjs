@@ -150,7 +150,7 @@ const TILA = `() => {
 const lue = () => sivu.evaluate(`(${TILA})()`);
 
 /* ---------------- peli auki Pariisiin (sama kaava kuin savuke-aikajana) */
-await sivu.goto(`http://127.0.0.1:${PORTTI}/index.html?lauta=pallo`, { waitUntil: 'load' });
+await sivu.goto(`http://127.0.0.1:${PORTTI}/index.html?lauta=pallo&glnimiot=0`, { waitUntil: 'load' });
 await sivu.waitForTimeout(2500);
 await sivu.evaluate(() => {
   [...document.querySelectorAll('button')].find((b) => /aloita seikkailu/i.test(b.textContent))?.click();

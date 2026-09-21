@@ -274,6 +274,13 @@ export const MAASTOKOHTEET_GBR = [
       + 'kuningaskunnan toiseksi pisin Severnin jälkeen. Osalla matkaa jokea kutsutaan yhä '
       + 'vanhalla nimellä Isis.',
     lahde: 'en-Wikipedia "River Thames", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Mikä joki on koko Yhdistyneessä kuningaskunnassa Thamesia pidempi?',
+      vaihtoehdot: ['Severn', 'Trent', 'Mersey', 'Ouse'],
+      oikea: 0,
+      fakta: 'Thames on Englannin pisin kokonaan maan sisällä virtaava joki, ja sen pituus '
+        + 'on 346 kilometriä.',
+    },
   },
   /* ================================================================
    * K2-ERÄ 4 6.9.2026 — VIISI KOHDETTA. Perustelut tiedoston alussa.

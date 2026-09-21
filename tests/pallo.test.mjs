@@ -27,8 +27,11 @@ import {
   PANOROINNIN_HERKKYYS, PANOROINNIN_KOHTISUORA_RAJA, PANOROINNIN_LEVEYSRAJA, RULLAN_LIUKU_MS,
   RULLAN_RIVI_PX, RULLAN_SIVU_PX, RULLAN_SUORA_RAJA, VAUHDIN_KATTO_MS, VEDON_KATTO_RUUTUA,
   nakyvaKaista, rajaaVauhti, rullanAskel, vedonSiirto,
+  ZOOMIN_ASKELKATTO, ZOOMIN_HERKKYYS, ZOOMIN_LIUKU_MS, kohdistaAnkkuri, zoominAskel,
+  ENNUSTE_KEHYS_MAX_MS, ennustaKamera, pallonEnnusteKaytossa,
 } from '../js/pallo.js';
 import { OSOITTIMEN_JALKIVIIVE_MS, pisteEdessa } from '../js/pallolauta/lauta.js';
+import { laattakerroksenOsuma } from '../js/pallolaatat.js';
 import {
   PALLON_TURVATILAN_RAJA, PALLON_TURVATILAN_UNOHDUS_MS, nollaaPallonKaatumiset, palloKaatui,
   palloTurvatilassa, pallonKaatumiset,
@@ -130,16 +133,16 @@ test('laatoitettu pallo: Mercator-laatat ämpäristä, z4-tekstuuri varana', asy
   const versio = PALLO_KIRJASTO.match(/globe\.gl-(\d+)\.(\d+)\.\d+\.min\.js$/);
   assert.ok(versio && (Number(versio[1]) > 2 || Number(versio[2]) >= 46), PALLO_KIRJASTO);
   /*
-   * TUNNISTE 20260921a, versio 2026-09-21-pohja (21.9.2026, GSHHG-poltto; edellinen 20260920k 20.9.2026, Macin
-   * pohja-ajo; docs/raportit/viesti-fable-pohja-20260920.md).
+   * TUNNISTE 20260922a, versio 2026-09-22-pohja (21.9.2026 ilta, isobaatit + merikoristeet,
+   * docs/raportit/poltto-20260922.md; edellinen 20260921a 21.9.2026, GSHHG-poltto).
    *
    * Sama sääntö kuin sarjalla i: sarja on poltettu ILMAN nostoja, joten
    * kansiossa ei ole '-nostot'-osaa ja nostot tulevat maittain
    * lepokerroksesta. Tunniste on pelkkiä kirjaimia ja numeroita, koska
    * tools/tee-pallolaatat.mjs hylkää muun.
    */
-  assert.equal(PALLO_LAATTAKANSIO, `${PALLO_LAATTAVERSIO}-20260921a`);
-  assert.equal(PALLO_LAATAT, `https://media.matkakirja.app/${laattojenKansio(PALLO_LAATTAVERSIO, false, '20260921a')}`);
+  assert.equal(PALLO_LAATTAKANSIO, `${PALLO_LAATTAVERSIO}-20260922a`);
+  assert.equal(PALLO_LAATAT, `https://media.matkakirja.app/${laattojenKansio(PALLO_LAATTAVERSIO, false, '20260922a')}`);
   assert.equal(pallonLaatta(3, 5, 4), `${PALLO_LAATAT}4/3/5.jpg`);
   assert.equal(PALLO_LAATTATASO_MAX, 8, 'taso 8 kaytossa 5.9.2026');
   /*
@@ -172,8 +175,8 @@ test('laatoitettu pallo: Mercator-laatat ämpäristä, z4-tekstuuri varana', asy
   assert.equal(laattatasoMax({ tasot: { min: 0, max: 7 } }), 7, 'varakansio ei kanna tasoa 8: vanha napalakki sekoittuisi (5.9.2026 klo 17.30)');
   assert.equal(laattatasoMax({ tasot: { min: 0, max: 6 } }), 6);
   assert.equal(laattatasoMax({ tasot: { min: 0, max: 8 } }), 8, 'luettelon 8 riittaa, kun sarja b kantaa sen');
-  assert.match(pallonLaatta(3, 5, 8), /laatat\/2026-09-21-pohja-20260921a\/8\/3\/5\.jpg$/, 'taso 8 samasta kansiosta (varakansio pois 5.9.2026 klo 17.30)');
-  assert.match(pallonLaatta(3, 5, 7), /laatat\/2026-09-21-pohja-20260921a\/7\/3\/5\.jpg$/, 'tasot 0-7 samasta sarjasta');
+  assert.match(pallonLaatta(3, 5, 8), /laatat\/2026-09-22-pohja-20260922a\/8\/3\/5\.jpg$/, 'taso 8 samasta kansiosta (varakansio pois 5.9.2026 klo 17.30)');
+  assert.match(pallonLaatta(3, 5, 7), /laatat\/2026-09-22-pohja-20260922a\/7\/3\/5\.jpg$/, 'tasot 0-7 samasta sarjasta');
   assert.equal(laattatasoMax({ tasot: { min: 0, max: 9 } }), PALLO_LAATTATASO_MAX);
   assert.equal(laattatasoMax(null), PALLO_LAATTATASO_MAX);
   const pallo = lue('../js/pallo.js');
@@ -725,11 +728,13 @@ test('rulla: kaappausvaiheessa, cmd/ctrl zoomaa, muuten panorointi ja pehmeä li
   // lapsessa, joten kotelon kaappaus ehtii ensin. passive: false, muuten
   // preventDefault ei tehoa.
   assert.match(kasittelija, /\{ capture: true, passive: false \}/);
-  // Cmd (mac) tai ctrl (Windows, nipistys) → kirjasto zoomaa kuten ennen.
-  assert.match(kasittelija, /if \(e\.metaKey \|\| e\.ctrlKey\) return;/);
-  const zoomKohta = kasittelija.indexOf('e.metaKey');
-  const estoKohta = kasittelija.indexOf('e.preventDefault()');
-  assert.ok(zoomKohta >= 0 && estoKohta > zoomKohta, 'zoom päästetään läpi ennen estoa');
+  // Cmd (mac) tai ctrl (Windows, nipistys) → zoom itse kohti osoitinta,
+  // liukuen (sulavuus E3): kirjaston dolly on pois (enableZoom false).
+  assert.match(kasittelija, /if \(e\.metaKey \|\| e\.ctrlKey\) \{/);
+  assert.match(ele, /ohjaimet\.enableZoom = false;/);
+  assert.match(kasittelija, /zoomi\.kohde \+ zoominAskel\(e\.deltaY, e\.deltaMode\)/);
+  assert.match(kasittelija, /requestAnimationFrame\(zoominLiuku\)/);
+  assert.match(ele, /kohdistaAnkkuri\(pov, ankkuri, sx, sy, alt, linssi\(\)\)/);
   // Muuten: selaimen oma vieritys/zoom pois ja kirjasto ohitetaan.
   assert.match(kasittelija, /e\.preventDefault\(\);\s*\n\s*e\.stopPropagation\(\);/);
   assert.match(kasittelija, /rullanAskel\(e\.deltaX, e\.deltaY, pov\.altitude/);
@@ -1066,4 +1071,66 @@ test('pallopisteitä on vain asutuksille, ja jokainen on laudan lähellä', () =
      */
     assert.ok(km < (id === 'sansibar' ? 560 : 500), `${id} siirtyisi ${km.toFixed(0)} km`);
   }
+});
+
+test('sulavuus E3: rullan pykälä ln-korkeutena, katto ja deltaMode', () => {
+  assert.equal(zoominAskel(100), 100 * ZOOMIN_HERKKYYS);
+  assert.ok(zoominAskel(100) > 0.1 && zoominAskel(100) < 0.25, 'sata pikseliä on noin kuudesosa');
+  assert.equal(zoominAskel(-100), -zoominAskel(100));
+  assert.equal(zoominAskel(3, 1), zoominAskel(3 * RULLAN_RIVI_PX));
+  assert.equal(zoominAskel(1, 2), ZOOMIN_ASKELKATTO, 'sivun pykälä leikkautuu kattoon');
+  assert.equal(zoominAskel(NaN), 0);
+  assert.ok(ZOOMIN_LIUKU_MS > 0 && ZOOMIN_LIUKU_MS <= 200, 'liuku on lyhyt');
+});
+
+test('sulavuus E3: ankkuri pysyy ruudun kohdassa zoomissa (Google Earth)', () => {
+  const linssi = { fov: 50, kuvasuhde: 390 / 844, sade: 100 };
+  const pov = { lat: 46.5, lng: 2.5, altitude: 0.2 };
+  // Ankkuri ruudun oikeassa yläneljänneksessä.
+  const sx = 0.6;
+  const sy = 0.5;
+  const ankkuri = laattakerroksenOsuma(pov, sx, sy, linssi);
+  assert.ok(ankkuri, 'ankkuri osuu palloon');
+  for (const alt of [0.1, 0.05, 0.4]) {
+    const uusi = kohdistaAnkkuri(pov, ankkuri, sx, sy, alt, linssi);
+    assert.equal(uusi.altitude, alt);
+    const osuma = laattakerroksenOsuma(uusi, sx, sy, linssi);
+    assert.ok(Math.abs(osuma.lat - ankkuri.lat) < 1e-3, `lat ${alt}: ${osuma.lat} vs ${ankkuri.lat}`);
+    assert.ok(Math.abs(osuma.lng - ankkuri.lng) < 1e-3, `lng ${alt}: ${osuma.lng} vs ${ankkuri.lng}`);
+    // Kamera siirtyi kohti ankkuria lähennettäessä ja siitä pois loitonnettaessa.
+    const lahemmas = alt < pov.altitude;
+    assert.equal(uusi.lng > pov.lng, lahemmas, `suunta ${alt}`);
+  }
+  // Ilman ankkuria (osoitin pallon ohi) vain korkeus vaihtuu.
+  assert.deepEqual(kohdistaAnkkuri(pov, null, sx, sy, 0.1, linssi), { lat: 46.5, lng: 2.5, altitude: 0.1 });
+  // Keskellä ruutua kamera ei liiku.
+  const keski = laattakerroksenOsuma(pov, 0, 0, linssi);
+  const paikallaan = kohdistaAnkkuri(pov, keski, 0, 0, 0.05, linssi);
+  assert.ok(Math.abs(paikallaan.lat - 46.5) < 1e-6 && Math.abs(paikallaan.lng - 2.5) < 1e-6);
+});
+
+test('sulavuus E4b: kameran ennuste ekstrapoloi liikkeen, lepää levossa ja kiertää sauman', () => {
+  const a = { aika: 1000, pov: { lat: 46.5, lng: 2.5, altitude: 0.2 } };
+  const b = { aika: 1016, pov: { lat: 46.6, lng: 2.7, altitude: 0.19 } };
+  const e = ennustaKamera(a, b);
+  assert.equal(e.dtMs, 16);
+  assert.ok(Math.abs(e.pov.lat - 46.7) < 1e-9 && Math.abs(e.pov.lng - 2.9) < 1e-9, `${e.pov.lat},${e.pov.lng}`);
+  assert.ok(Math.abs(e.pov.altitude - 0.19 * 0.19 / 0.2) < 1e-9, 'korkeus logaritmisesti');
+  // Levossa ei ennustetta.
+  const lepo = ennustaKamera(a, { aika: 1016, pov: { ...a.pov } });
+  assert.equal(lepo.dtMs, 0);
+  assert.deepEqual(lepo.pov, a.pov);
+  // Pitkä tauko (yli 250 ms) ei ennusta; kehysväli katkaistaan kattoon.
+  assert.equal(ennustaKamera(a, { aika: 1400, pov: b.pov }).dtMs, 0);
+  assert.equal(ennustaKamera(a, { aika: 1100, pov: b.pov }).dtMs, ENNUSTE_KEHYS_MAX_MS);
+  // Sauma: 179,9 → −179,9 on 0,2° itään, ei 359,8° länteen.
+  const s = ennustaKamera({ aika: 0, pov: { lat: 0, lng: 179.9, altitude: 0.2 } },
+    { aika: 16, pov: { lat: 0, lng: -179.9, altitude: 0.2 } });
+  assert.ok(Math.abs(s.pov.lng - (-179.7)) < 1e-9, `sauma ${s.pov.lng}`);
+  assert.deepEqual(ennustaKamera(null, b).pov, b.pov);
+  // Kytkin: ?ennuste=0 sammuttaa.
+  assert.equal(pallonEnnusteKaytossa({ location: { search: '?ennuste=0' } }), false);
+  assert.equal(pallonEnnusteKaytossa({ location: { search: '?ennuste=1' } }), true);
+  // Oletuksena pois (omistajan tuntuma 21.9.2026: nimiöt heiluivat työpöydällä).
+  assert.equal(pallonEnnusteKaytossa({ location: { search: '' } }), false);
 });

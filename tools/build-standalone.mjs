@@ -421,6 +421,7 @@ const MODULES = [
   'js/passport.js',
   'js/linssit/rekisteri.js',
   'js/linssit/omistus.js',
+  'js/linssit/aarteet.js',
   'js/packs/valokuvat-paikalliset.js',
   'js/packs/valokuvat-flickr.js',
   'js/packs/liput-paikalliset.js',
@@ -1031,6 +1032,9 @@ const MODULES = [
    */
   'js/pulu-paikka.js',
   'js/kartta-liike.js',
+  // Kehittäjän pikatie (?lauta=pallo&dev=<kaupunki>): main.js tuo sen staattisesti;
+  // ei pallolauta-tuonteja (kayttaa ui.pallolautaa vain ajossa, jos se on).
+  'js/kehittaja-pikatie.js',
   'js/main.js',
 ];
 

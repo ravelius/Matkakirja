@@ -104,6 +104,17 @@ export const MAASTOKOHTEET_BIH = [
       + 'sillä on kuudella maalla, ja Bosnia ja Hertsegovina on niistä se, jolla rantaa on '
       + 'kaikkein vähiten — kapea kaistale Neumin kohdalla.',
     lahde: 'en-Wikipedia "Adriatic Sea", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Kuinka moneen maahan Adrianmeren ranta ulottuu?',
+      vaihtoehdot: [
+        'Kuuteen maahan',
+        'Neljään maahan',
+        'Kahdeksaan maahan',
+        'Kolmeen maahan',
+      ],
+      oikea: 0,
+      fakta: 'Bosnia ja Hertsegovinalla on rantamaista vähiten rantaa — kapea kaistale Neumin kohdalla.',
+    },
   },
   /* ================================================================
    * ERÄ 11.9.2026 — KAKSI KOHDETTA LISÄÄ.

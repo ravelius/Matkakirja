@@ -29,7 +29,9 @@
  * Smolenicen linna 1900-luvulla) ovat mukana: teksti on nykytietoa ja
  * `nappi` katsoo vuodesta 1873.
  *
- * === KUVAT ===========================================================
+ * === KUVAT ====================================================    },
+  },
+  {
  *
  * Kuvat ovat JPEG-tiedostoja (1800 px tai alkuperäinen, jos se on
  * pienempi), nimeltään `svk-nosto-<id>-<8 hex sha256>.jpg`, ja osoite on
@@ -41,7 +43,9 @@
  * /Users/samireivinen/Matkakirja-nostot-kuvat/svk/. Kuvissa ei ole
  * tunnistettavia yksityishenkilöitä.
  *
- * === MIKSI TÄMÄ REITTI (KOHDE_MAAT) ==================================
+ * === MIKSI TÄMÄ REITTI (KOHDE_MAAT) ===========================    },
+  },
+  {
  *
  * Sama reitti kuin muidenkin EU-maiden hahmotelmilla: Slovakiassa ei ole
  * pelikaupunkia eikä muita nostoja, joten rivit liitetään
@@ -50,7 +54,9 @@
  * kuin Ranskan hahmotelmalla (js/pallolauta/nostot.js
  * PAAKARTAN_MERKKIKATTO).
  *
- * === KOORDINAATIT ====================================================
+ * === KOORDINAATIT =============================================    },
+  },
+  {
  *
  * Jokaisen asteet on haettu en-Wikipedian rajapinnasta
  * (`action=query&prop=coordinates`, haettu 19.9.2026) ja artikkelin nimi
@@ -1546,5 +1552,345 @@ export const HAHMOTELMA_SVK = [
       + 'kansalliskirjasto ja Matica slovenská.',
     lahde: 'en-Wikipedia "Martin, Slovakia", johdanto-osa ja osio "History" (tarkistettu '
       + '19.9.2026).',
+  },
+  {
+    id: 'hahmotelma-devin',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/svk-nosto-devin-d9d74d93.jpg',
+      lyhyt: 'Devínin linnan rauniot kalliolla Moravan laskiessa Tonavaan.',
+      selite: 'Kuvassa Devínin linnan rauniot kohoavat jyrkällä kalliolla, jonka juurella '
+        + 'Morava-joki yhtyy Tonavaan; joen toisella puolella siintää Itävalta.',
+      lahde: 'Valokuva: Uoaei1, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Uoaei1',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Devín_Castle_and_Morava-Danube_Confluence_01.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Devínin linna',
+    tyyppi: 'historia',
+    lahi: true,
+    kysymykset: [
+      'Minä vuonna Napoleonin joukot räjäyttivät Devínin linnan?',
+      'Minkä kahden joen yhtymäkohdassa Devínin linna sijaitsee?',
+    ],
+    korostukset: ['Napoleonin joukot|Napoleonin joukot', 'roomalaisen tornin|roomalaisen tornin'],
+    nappi: 'Keskiaikainen raja-linna Moravan ja Tonavan yhtymäkohdassa, jonka Napoleon räjäytti',
+    // 16.97833 E / 48.17361 N — en-Wikipedia "Devín Castle"
+    laudat: {
+      maailmankartta: { x: 6399.3, y: 1468.8 },
+      europe: { x: 537.2, y: 626.6 },
+    },
+    teksti: 'Devínin linna kohoaa jyrkällä kalliolla Bratislavan laidalla kohdassa, jossa '
+      + 'Morava-joki laskee Tonavaan ja muodostaa samalla rajan Itävallan ja Slovakian '
+      + 'välillä. Paikkaa on asutettu jo kivikaudelta lähtien, ja kalliolta on kaivettu esiin '
+      + '100-luvulla jaa. rakennetun roomalaisen tornin jäännökset, mikä kertoo paikan '
+      + 'strategisesta merkityksestä Tonavan kauppareittien vartiopaikkana jo roomalaisrajan '
+      + 'aikaan. Linna saatetaan mainita kirjallisissa lähteissä jo vuodelta 864, jolloin '
+      + 'Itä-Frankin kuningas Ludvig Saksalainen piiritti Määrin ruhtinas Rastislavia täällä, '
+      + 'joskin tulkinta on tutkijoiden kesken kiistanalainen. Keskiajalla paikalle '
+      + 'rakennettu linna toimi Unkarin kuningaskunnan raja- ja puolustuslinnana Moravan yli '
+      + 'kulkevalla reitillä. Napoleonin joukot räjäyttivät linnan vuonna 1809 Pressburgin '
+      + 'piirityksen jälkeen vetäytyessään alueelta, minkä jälkeen jäljelle jäivät vain '
+      + 'louhikkoiset rauniot. 1800-luvulta lähtien Devínistä on tullut slovakialaisen '
+      + 'kansallisen identiteetin symboli, ja se on esiintynyt muun muassa entisen 500 '
+      + 'Tšekkoslovakian korunan setelin kääntöpuolella ja 50 halerin kolikossa.',
+    lahde: 'en-Wikipedia "Devín Castle", johdanto-osa (tarkistettu 21.9.2026).',
+    ihme: {
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-devin-loistoaika.jpg',
+      kadonnut: false,
+      selite: 'Ennen Napoleonin joukkojen räjäytystä 1809 Devínin linna seisoi vielä ehjänä '
+        + 'kalliolinnoituksena Moravan ja Tonavan yhtymäkohdassa, vartioiden rajaa ja '
+        + 'kauppareittejä.',
+      lahde: 'Matkakirjan havainnekuva: kohde ennen 1809 tuhoa. Faktat: en-Wikipedia "Devín '
+        + 'Castle", tarkistettu 21.9.2026.',
+      url: 'https://en.wikipedia.org/wiki/Devín_Castle',
+    },
+  },
+  {
+    id: 'hahmotelma-cachtice',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/svk-nosto-cachtice-297f8d80.jpg',
+      lyhyt: 'Čachticen linnan rauniot kalliolla Pieni-Karpaattien pohjoisosassa.',
+      selite: 'Kuvassa Čachticen linnan sammaloituneet muurit ja tornit kohoavat metsäisen '
+        + 'kukkulan laella pilvisen taivaan alla.',
+      lahde: 'Valokuva: LMih, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'LMih',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Čachtice,_hrad,_Slovensko.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    nimi: 'Čachtice-n linna',
+    tyyppi: 'historia',
+    lahi: true,
+    kysymykset: [
+      'Minä vuonna Čachticen linna tuhoutui suurelta osin tulipalossa?',
+      'Kuka kreivitär asui Čachticen linnassa ja jota syytettiin palvelustyttöjen murhista?',
+    ],
+    korostukset: ['Erzsébet Báthorylle|Erzsébet Báthorylle', 'tulipalossa|tulipalossa'],
+    nappi: 'Verikreivitär Erzsébet Báthoryn koti ja vankila, tuhoutui tulipalossa 1799',
+    // 17.760833 E / 48.725 N — en-Wikipedia "Čachtice Castle"
+    laudat: {
+      maailmankartta: { x: 6425.4, y: 1445.3 },
+      europe: { x: 552.2, y: 612.1 },
+    },
+    teksti: 'Čachticen linna kohoaa jyrkällä kalliolla Pieni-Karpaattien pohjoisreunalla, ja '
+      + 'Hont-Pázmány-suvun Casimir rakennutti sen 1200-luvun puolivälissä vartiolinnaksi '
+      + 'Määrin-tielle. Linna laajeni vuosisatojen kuluessa romaanisesta goottilaiseksi ja '
+      + 'sai 1600-luvulla renessanssiaikaisia lisärakennuksia. Linna ja sitä ympäröivät kylät '
+      + 'olivat Nádasdyn suvun häälahja kreivitär Erzsébet Báthorylle, kun tämä avioitui '
+      + 'Ferenc Nádasdyn kanssa vuonna 1575, ja linnasta tuli hänen kotinsa. 1610-luvun '
+      + 'taitteessa satojen todistajien kertomukset syyttivät häntä kymmenien '
+      + 'palvelustyttöjen kidutuksesta ja murhasta; tammikuun 1611 oikeudenkäynneissä hänen '
+      + 'neljä apuriaan tuomittiin ja teloitettiin, mutta aatelisena Báthorya itseään ei '
+      + 'koskaan virallisesti asetettu syytteeseen, vaan hänet suljettiin linnaan tiukkaan '
+      + 'vartiointiin kuolemaansa elokuussa 1614 asti. Rákóczin kapinalliset valtasivat '
+      + 'linnan 1708, ja se tuhoutui suurelta osin tulipalossa vuonna 1799, minkä jälkeen se '
+      + 'seisoi raunioina yli 200 vuotta ennen kuin avattiin matkailijoille vasta vuonna '
+      + '2014.',
+    lahde: 'en-Wikipedia "Čachtice Castle" ja "Elizabeth Báthory", johdanto-osat ja osio '
+      + '"Torture and murder accusations" (tarkistettu 21.9.2026).',
+    ihme: {
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-cachtice-loistoaika.jpg',
+      kadonnut: false,
+      selite: 'Ennen vuoden 1799 tulipaloa Čachticen linna oli vielä asuttu renessanssilinna, '
+        + 'jonka muureilla vartijat kulkivat ja jonka saleissa aateliset kokoontuivat.',
+      lahde: 'Matkakirjan havainnekuva: kohde ennen 1799 tulipaloa. Faktat: en-Wikipedia '
+        + '"Čachtice Castle", tarkistettu 21.9.2026.',
+      url: 'https://en.wikipedia.org/wiki/Čachtice_Castle',
+    },
+  },
+  {
+    id: 'hahmotelma-krasna-horka',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/svk-nosto-krasna-horka-df812718.jpg',
+      lyhyt: 'Krásna Hôrkan linna kohoaa vihreän kukkulan laella Rožňavan seudulla.',
+      selite: 'Linna seisoo pyöreine torneineen ja punaisine kattoineen kukkulan huipulla, ja sen juurella siintävät kylän maalaistalot. Torninosturi kertoo 2010-luvun jälleenrakennustöistä.',
+      lahde: 'Valokuva: Palickap, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Palickap',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Krásna_Hôrka.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260921/svk-nosto-krasna-horka-2bb0ee0e.jpg',
+        lyhyt: 'Krásna Hôrkan porttitorni ja vanha tykki sisäänkäynnin edessä.',
+        selite: 'Kivinen porttirakennelma ja pyöreä kulmatorni kohoavat linnan sisäänkäynnin molemmin puolin; edessä on vanha tykki lavetteineen.',
+        lahde: 'Valokuva: PeterWiki56, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'PeterWiki56',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Krásna_Hôrka,_vstupná_brána_(2021).jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
+    nimi: 'Krásna Hôrka',
+    tyyppi: 'historia',
+    lahi: true,
+    kysymykset: [
+      'Minä vuonna Krásna Hôrka mainitaan kirjallisissa lähteissä ensimmäisen kerran?',
+      'Mikä sytytti linnan tuhoisan tulipalon vuonna 2012?',
+    ],
+    korostukset: ['Andrássy|Andrássyn suvulle'],
+    nappi: 'Andrássyjen sukulinna Gömörin komitaatissa, ehjänä 139 vuotta ennen kuin tuhopoltto runtelee sen 2012',
+    // 20.600325 E / 48.658236 N — en-Wikipedia "Krásna Hôrka Castle" (artikkelilla ei ole
+    // coord-mallinetta; piste haettu artikkeliin linkitetystä Wikidata-kohteesta Q592319,
+    // haettu 21.9.2026)
+    laudat: {
+      maailmankartta: { x: 6520, y: 1448.1 },
+      europe: { x: 606.7, y: 613.9 },
+    },
+    teksti: 'Krásna Hôrka on linna kalkkikivikukkulalla Krásnohorské Podhradien kylän '
+      + 'yläpuolella Rožňavan lähellä Itä-Slovakiassa. Unkarilaiset Ákos-veljekset rakensivat '
+      + 'linnan 1200-luvulla kaupparteille, joka kulki Transilvaniasta Košicen kautta Spišiin '
+      + 'ja nykyiseen Puolaan; ensimmäinen kirjallinen maininta on vuodelta 1333. Ákos-suku, '
+      + 'joka myöhemmin otti nimen Bebek, hallitsi linnaa 1200-luvun puolivälistä vuoteen 1566 '
+      + '(Mariássy-suvun lyhyttä väliaikaista haltuunottoa lukuun ottamatta), ja vuonna 1578 '
+      + 'linna siirtyi Andrássyn suvulle, joka omisti sen aina vuoteen 1918 asti. Linnasta on '
+      + 'tehty unkarilainen kansanballadi "Krasznahorka büszke vára", jota soitetaan '
+      + 'perinteisesti tárogató-puhaltimella.',
+    lahde: 'en-Wikipedia "Krásna Hôrka Castle", johdanto-osa ja osiot "History" ja "2012 fire" '
+      + '(tarkistettu 21.9.2026).',
+    visa: {
+      kysymys: 'Minkä suvun hallussa Krásna Hôrka oli vuodesta 1578 aina vuoteen 1918?',
+      vaihtoehdot: [
+        'Bebek',
+        'Andrássy',
+        'Thurzo',
+        'Pálffy',
+      ],
+      oikea: 1,
+      fakta: 'Bebek-suku (alun perin Ákos) omisti linnan sitä ennen 1200-luvun puolivälistä '
+        + 'vuoteen 1566.',
+    },
+  },
+  {
+    id: 'hahmotelma-strbske-pleso',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/svk-nosto-strbske-pleso-395e4b1c.jpg',
+      lyhyt: 'Štrbské pleso -järvi heijastaa Korkeiden Tatrojen huippuja tyynenä kesäpäivänä.',
+      selite: 'Jääkauden muovaama järvi kuvastaa tarkasti taustalla kohoavia lumitäpläisiä vuorenhuippuja ja rantametsää.',
+      lahde: 'Valokuva: Ingo Mehling, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Ingo Mehling',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Strbske_Pleso_-_Mountains.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260921/svk-nosto-strbske-pleso-021561ec.jpg',
+        lyhyt: 'Vanha mustavalkoinen valokuva Štrbské Plesosta ja sen hotellirakennuksista noin vuodelta 1928.',
+        selite: 'Kuva on julkaistu tšekkoslovakialaisessa opiskelijalehdessä: se näyttää järven rannalla rivin varhaisia hotelli- ja majoitusrakennuksia puiden lomasta.',
+        lahde: 'Kuva: tuntematon, Wikimedia Commons (public domain).',
+        tekija: 'tuntematon',
+        lisenssi: 'Public domain',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Štrbské_pleso,_c._1928.jpg',
+        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+      },
+    ],
+    nimi: 'Štrbské Pleso',
+    tyyppi: 'jarvi',
+    lahi: true,
+    kysymykset: [
+      'Minä vuonna Jozef Szentiványi avasi metsästysmajansa matkailijoille?',
+      'Minkä vuoristoiluseuran maja rakennettiin Štrbské pleson rannalle vuonna 1875?',
+    ],
+    korostukset: ['metsästysmaja|metsästysmajan'],
+    nappi: 'Szentiványin metsästysmaja avataan matkailijoille juuri tänä vuonna, 1873',
+    // 20.06666667 E / 49.11666667 N — en-Wikipedia "Štrbské Pleso", prop=coordinates
+    // (haettu 21.9.2026)
+    laudat: {
+      maailmankartta: { x: 6502.2, y: 1428.4 },
+      europe: { x: 596.5, y: 601.8 },
+    },
+    teksti: 'Štrbské Pleso on hiihto-, matkailu- ja terveyskylpyläkeskus Korkeilla Tatroilla, '
+      + 'rakennettu samannimisen jääkauden muovaaman järven rannalle; asukkaita on noin 200. '
+      + 'Rautatie saapui Popradiin Tatrojen juurelle vuonna 1871, minkä jälkeen aatelismies '
+      + 'Jozef Szentiványi rakensi vuonna 1872 metsästysmajan järven rannalle Štrban kylältä '
+      + 'vuokraamalleen maalle ja avasi paikan matkailijoille jo seuraavana vuonna. '
+      + 'Szentiványi salli vuoristoiluseura Karpaattien liiton rakentaa oman Joosef-majansa '
+      + 'lähelle vuonna 1875, ja lisääntyvät majoitustilat tekivät paikasta suositun; '
+      + 'hammasratasrata pääradalle valmistui 1896 ja ensimmäinen hiihtokoulu perustettiin '
+      + '1899. Valtio osti keskuksen vuonna 1901, ja viereen syntyi 1900-luvun alussa myös '
+      + 'pieni tekojärvi Nové Štrbské pleso, kun arkkitehti Karol Móry patosi Mlynica-puron.',
+    lahde: 'en-Wikipedia "Štrbské Pleso", osiot "Municipality" ja "History" (tarkistettu '
+      + '21.9.2026).',
+  },
+  {
+    id: 'hahmotelma-modra',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/svk-nosto-modra-030083fb.jpg',
+      lyhyt: 'Värikkäitä Modran majolikakeramiikan lautasia, kannuja ja maljakoita esillä.',
+      selite: 'Valkopohjaisia saviastioita, joissa on siniset, vihreät, keltaiset ja punaiset kukka- ja viinirypälekoristeet: lautasia, kannuja ja pieniä maljakoita.',
+      lahde: 'Valokuva: Horakvlado, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Horakvlado',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Modranská_keramika_(majolika),_Modra,_okres_Pezinok.JPG',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260921/svk-nosto-modra-ae9a37d5.jpg',
+        lyhyt: 'Ľudovít Štúrin hauta ja Slovakian kevät -patsas Modran hautausmaalla.',
+        selite: 'Pronssinen naishahmo seisoo korkealla jalustalla hautausmaan puiden keskellä; sen edessä on Štúrin hauta täynnä kukkia ja kynttilöitä.',
+        lahde: 'Valokuva: Renardo la vulpo, Wikimedia Commons (CC0).',
+        tekija: 'Renardo la vulpo',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Modra,_Tombo_de_Ľudovit_Štúr,_10.jpeg',
+        lisenssi: 'CC0',
+        lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/deed.en',
+      },
+    ],
+    nimi: 'Modra',
+    tyyppi: 'kulttuuri',
+    lahi: true,
+    kysymykset: [
+      'Minä vuonna Modra sai vapaan kuninkaallisen kaupungin aseman?',
+      'Kuka slovakialaisen kansallisen herätyksen johtohahmo kuoli Modrassa vuonna 1856?',
+    ],
+    korostukset: ['majolika|majolikan'],
+    nappi: 'Viini- ja savenvalajakaupunki, jossa kansallisherätyksen johtaja Štúr on haudattuna; Pyhän Tapanin kirkko on juuri rakenteilla (1873–1876)',
+    // 17.31 E / 48.33 N — en-Wikipedia "Modra", prop=coordinates (haettu 21.9.2026)
+    laudat: {
+      maailmankartta: { x: 6410.3, y: 1462.2 },
+      europe: { x: 543.6, y: 622.5 },
+    },
+    teksti: 'Modra on kaupunki Pienten Karpaattien juurella nykyisellä Bratislavan alueella, '
+      + 'yksi seudun tärkeimmistä viinikeskuksista ja tunnettu erityisesti sinivalkoisesta '
+      + 'savitavarastaan. Ensimmäinen maininta kaupungista on vuodelta 1158, jolloin se kuului '
+      + 'Nitran piispalle; mongolien hyökkäyksen 1241 jälkeen saksalaiset siirtolaiset '
+      + 'asuttivat sen uudelleen, ja ensimmäinen viinitarhamaininta on vuodelta 1321. Kaupunki '
+      + 'sai kaupunkioikeudet 1361 ja vapaan kuninkaallisen kaupungin aseman 1607; '
+      + 'savenvalajien ja muiden käsityöläisten keskuksena Modra on toiminut 1600-luvulta '
+      + 'lähtien, mutta varsinainen majolikan keramiikkakoulu, josta habaanien taidolla '
+      + 'syntyi niin kutsuttu slovakialainen keramiikka, perustetaan vasta 1883. Runoilija ja '
+      + 'poliitikko Ľudovít Štúr vietti elämänsä viimeiset vuodet Modrassa ja kuoli siellä '
+      + 'vuonna 1856; hänen hautansa on kaupungin hautausmaalla.',
+    lahde: 'en-Wikipedia "Modra", osiot "History" ja "Landmarks" (tarkistettu 21.9.2026).',
+  },
+  {
+    id: 'hahmotelma-tokaj',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/svk-nosto-tokaj-5f5850db.jpg',
+      lyhyt: 'Tokajin viinialueen slovakialaista osaa Malá Tŕňan kylän lähellä.',
+      selite: 'Ilmakuva viinitarhariveistä, jotka kiertyvät loivasti kumpuilevaa maisemaa pitkin kohti kaukaisia kukkuloita.',
+      lahde: 'Valokuva: Igor.vizner, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Igor.vizner',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vineyards_in_Slovakian_Tokaj.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260921/svk-nosto-tokaj-c1697872.jpg',
+        lyhyt: 'Viinikellari tammitynnyreineen Viničkyn kylässä Slovakian Tokajissa.',
+        selite: 'Holvattu, kalkkikiveen louhittu kellarikäytävä, jonka molemmin puolin on rivi tummia tammitynnyreitä ja himmeitä kattovaloja.',
+        lahde: 'Valokuva: Igor.vizner, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Igor.vizner',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Wine_Cellar_in_Slovakian_Tokaj.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
+    nimi: 'Tokaj (Slovakian puoli)',
+    tyyppi: 'ruoka',
+    lahi: true,
+    kysymykset: [
+      'Minä vuonna kuninkaallinen asetus rajasi Tokajin suljetuksi viinialueeksi?',
+      'Mikä rypäletuhooja hävitti suuren osan Tokajin viinitarhoista vuonna 1885?',
+    ],
+    korostukset: ['aszú|Tokaji aszú'],
+    nappi: 'Zemplénin komitaatin kuuluisa viinialue; fylloksera-tuho on vielä 12 vuoden päässä (1885)',
+    // 21.67 E / 48.4 N — en-Wikipedia "Slovenské Nové Mesto", prop=coordinates (Tokajin
+    // slovakialaisen osan suurin kylä; haettu 21.9.2026)
+    laudat: {
+      maailmankartta: { x: 6555.7, y: 1459.2 },
+      europe: { x: 627.3, y: 620.7 },
+    },
+    teksti: 'Tokajin viinialue ulottuu Koillis-Unkarista Kaakkois-Slovakiaan, ja sen 28 kylän '
+      + 'alueella on yhteensä noin 11 150 hehtaaria luokiteltua viinitarha-alaa; Unesco '
+      + 'julisti sen maailmanperintökohteeksi vuonna 2002. Alue on maailman vanhimman makean, '
+      + 'jalohomeen kypsyttämän Tokaji aszú -viinin syntysija, ja kuningas Béla IV kutsui '
+      + 'alueelle muun muassa valloonisia ja italialaisia siirtolaisia, jotka toivat mukanaan '
+      + 'furmint-rypäleen; italialaiset asettuivat muun muassa Baran kylään. Kuninkaallinen '
+      + 'asetus rajasi alueen suljetuksi viinialueeksi vuonna 1737, mitä pidetään maailman '
+      + 'varhaisimpana alkuperänimitysten suojajärjestelmänä, ja Ranskan Ludvig XIV kutsui '
+      + 'Tokajia saatuaan siitä pulloja Ferenc II Rákóczilta vuonna 1703 "kuninkaiden '
+      + 'viiniksi, viinien kuninkaaksi". Trianonin rauhansopimus jakoi alueen Unkarin ja '
+      + 'silloisen Tšekkoslovakian kesken 1920, jolloin nykyiselle Slovakian puolelle jäi '
+      + 'seitsemän kylää, muun muassa Slovenské Nové Mesto ja Malá Tŕňa; rypäletuhooja '
+      + 'fylloksera ei ole vielä 1870-luvun alussa saapunut alueelle, vaan se tuhoaa suuren '
+      + 'osan viinitarhoista vasta vuonna 1885.',
+    lahde: 'en-Wikipedia "Tokaj wine region", johdanto-osa ja osio "History" (tarkistettu '
+      + '21.9.2026).',
+    visa: {
+      kysymys: 'Mitä Tokaji aszú pidetään maailman vanhimpana esimerkkinä?',
+      vaihtoehdot: [
+        'Jalohomeen kypsyttämästä makeasta viinistä',
+        'Väkevästä viskistä',
+        'Kuohuviinistä',
+        'Roseeviinistä',
+      ],
+      oikea: 0,
+      fakta: 'Ranskan Ludvig XIV kutsui sitä "kuninkaiden viiniksi, viinien kuninkaaksi".',
+    },
   },
 ];

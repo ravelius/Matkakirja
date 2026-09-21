@@ -129,7 +129,7 @@ async function avaaSivu({ ankkurit = true } = {}) {
   // Kartan mitta on 18.9.2026 alkaen normaali polku (PAATOKSET 34
   // kohta 15 TILA), joten "ennen" tarvitsee vain ankkurilipun.
   const lippu = ankkurit ? '' : '&nostoankkurit=0';
-  await sivu.goto(`${osoite}?lauta=pallo${lippu}`, { waitUntil: 'domcontentloaded', timeout: 60000 });
+  await sivu.goto(`${osoite}?lauta=pallo&glnimiot=0${lippu}`, { waitUntil: 'domcontentloaded', timeout: 60000 });
   await sivu.waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null, { timeout: 90000 });
   // Saapuminen ajetaan loppuun: isoisän kuvasarja ja pulu kulkevat ruudun
   // poikki ensimmäiset 40 s (sama odotus kuin savuke-pariisi-lahizoom).

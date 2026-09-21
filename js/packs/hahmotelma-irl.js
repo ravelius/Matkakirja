@@ -385,6 +385,17 @@ export const HAHMOTELMA_IRL = [
       + 'Michael Davittin silta kulkee Achill Soundin ja Polrannyn kylien välillä.',
     lahde: 'en-Wikipedia "Achill Island", johdanto-osa ja osiot "History" ja "Geography" '
       + '(tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Kuinka monenneksi korkeimmat Euroopassa Croaghaunin merikalliot ovat?',
+      vaihtoehdot: [
+        'Korkeimmat',
+        'Toiseksi korkeimmat',
+        'Kolmanneksi korkeimmat',
+        'Kymmenenneksi korkeimmat',
+      ],
+      oikea: 2,
+      fakta: 'Croaghaunin kalliot ovat Euroopan kolmanneksi korkeimmat merikalliot.',
+    },
   },
   {
     id: 'hahmotelma-powerscourt',
@@ -1428,6 +1439,57 @@ export const HAHMOTELMA_IRL = [
       ],
       oikea: 1,
       fakta: 'Teleskoopin ennätyskokoa ei ylitetty ennen Hooker-teleskoopin valmistumista Mount Wilsonilla vuonna 1917.',
+    },
+  },
+  {
+    id: 'hahmotelma-mellifont',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/irl-nosto-mellifont-4f056d51.jpg',
+      lyhyt: 'Mellifontin luostarin kahdeksankulmainen lavabo ja kaariholvien rauniot.',
+      selite: 'Kuvassa on Mellifontin luostarin keskiaikaisia kiviraunioita: kahdeksankulmaisen '
+        + 'lavabo-rakennuksen jäänteet ja niitä ympäröivien kaariholvien pilareita nurmikentän '
+        + 'keskellä.',
+      lahde: 'Valokuva: Andreas F. Borchert, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Andreas F. Borchert',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Mellifont_Abbey_Lavabo_and_Cloister_Arcades_2013_09_27.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Mellifontin luostari',
+    tyyppi: 'historia',
+    lahi: true,
+    kysymykset: [
+      'Minä vuonna Mellifontin luostari perustettiin?',
+      'Mitä luostarin kivistä rakennettiin lakkauttamisen jälkeen?',
+    ],
+    korostukset: ['pyhä Malakia|pyhä Malakia', 'Henrik VIII|Henrik VIII'],
+    nappi: 'Irlannin ensimmäinen sistersiläisluostari, jonka Henrik VIII hajotti',
+    // 6.466481 W / 53.742317 N — en-Wikipedia "Mellifont Abbey" (coord-malline)
+    laudat: {
+      maailmankartta: { x: 5617.8, y: 1223.6 },
+      europe: { x: 87, y: 480.2 },
+    },
+    teksti: 'Mellifontin luostari Co. Louthissa oli Irlannin ensimmäinen sistersiläisluostari: '
+      + 'Armaghin arkkipiispa pyhä Malakia perusti sen vuonna 1142 ranskalaisten munkkien '
+      + 'avulla. Luostarin kahdeksankulmainen lavabo-rakennus, jossa munkit pesivät kätensä '
+      + 'ennen aterioita, oli ainutlaatuinen rakennelma Irlannissa. Henrik VIII:n luostarien '
+      + 'lakkautus päätti luostarin uskonnollisen käytön vuonna 1539, ja Edward Moore rakensi '
+      + 'paikalle linnoitetun kartanon vuonna 1556 käyttäen vanhan luostarin kiviä '
+      + 'rakennusaineena. Kartano toimi myöhemmin muun muassa Vilhelm Oranialaisen päämajana '
+      + 'Boynen taistelun aikaan 1690, mutta lopulta koko paikka hylättiin kokonaan. Nykyään '
+      + 'paikalla on nähtävissä keskiaikaisia raunioita, joista tunnetuin on juuri se '
+      + 'ainutlaatuinen kahdeksankulmainen lavabo.',
+    lahde: 'en-Wikipedia "Mellifont Abbey", johdanto-osa ja osio "History" (tarkistettu '
+      + '21.9.2026).',
+    ihme: {
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-mellifont-loistoaika.jpg',
+      kadonnut: false,
+      selite: 'Loistokaudellaan keskiajalla Mellifontin luostari oli vilkas sistersiläisyhteisö, '
+        + 'jonka kivikirkossa ja luostarikäytävillä munkit elivät tiukan rukous- ja työrytmin '
+        + 'mukaan, ja kahdeksankulmaisella lavabolla he pesivät kätensä ennen yhteisiä aterioita.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: '
+        + 'en-Wikipedia "Mellifont Abbey", tarkistettu 21.9.2026.',
+      url: 'https://en.wikipedia.org/wiki/Mellifont_Abbey',
     },
   },
 ];

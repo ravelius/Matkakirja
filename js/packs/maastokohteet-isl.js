@@ -91,6 +91,17 @@ export const MAASTOKOHTEET_ISL = [
       + 'kilometrin verran. Huippu ei siis ole oma vuorensa vaan jäätikön peittämän tulivuoren '
       + 'reuna.',
     lahde: 'en-Wikipedia "Hvannadalshnjúkur", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Millä reunalla Öræfajökull-tulivuoren huippukraatteria Hvannadalshnúkur kohoaa?',
+      vaihtoehdot: [
+        'Luoteisreunalla',
+        'Kaakkoisreunalla',
+        'Pohjoisreunalla',
+        'Eteläreunalla',
+      ],
+      oikea: 0,
+      fakta: 'Huippu ei ole oma erillinen vuori, vaan jäätikön peittämän tulivuoren kraatterin reunaa.',
+    },
   },
   {
     id: 'gronlanninmeri',
@@ -135,6 +146,17 @@ export const MAASTOKOHTEET_ISL = [
       + 'joskus osaksi Jäämerta ja joskus osaksi Atlanttia — Jäämeren ja sen sivumerten rajat '
       + 'ovat epätarkkoja. Merentutkimuksessa se luetaan Norjanmeren kanssa Pohjoisiin meriin.',
     lahde: 'en-Wikipedia "Greenland Sea", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Minkä toisen meren kanssa Grönlanninmeri luetaan merentutkimuksessa "Pohjoisiin meriin"?',
+      vaihtoehdot: [
+        'Barentsinmeren',
+        'Norjanmeren',
+        'Beringinmeren',
+        'Karanmeren',
+      ],
+      oikea: 1,
+      fakta: 'Jäämeren ja sen sivumerien rajat ovat epätarkkoja, joten Grönlanninmeri luokitellaan vaihtelevasti.',
+    },
   },
   {
     id: 'jorsa',
@@ -180,6 +202,17 @@ export const MAASTOKOHTEET_ISL = [
       + 'Landnámabókin mukaan joki nimettiin erään ensimmäisistä uudisasukaslaivoista '
       + 'keulakuvan mukaan, joka esitti härkää.',
     lahde: 'en-Wikipedia "Þjórsá", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Miksi Þjórsá-joki nimettiin härän mukaan?',
+      vaihtoehdot: [
+        'Rannoilla laidunsi paljon villihärkiä',
+        'Joki muistuttaa muodoltaan härän sarvia',
+        'Uudisasukaslaivan keulakuva oli härkä',
+        'Härkä oli paikallisten pyhä jumaluus',
+      ],
+      oikea: 2,
+      fakta: 'Landnámabókin mukaan joki nimettiin erään ensimmäisen uudisasukaslaivan keulakuvan mukaan.',
+    },
   },
   /* ================================================================
    * K2-ERÄ 2.9.2026 — KAHDEKSAN KOHDETTA. Perustelut tiedoston alussa.
@@ -450,6 +483,17 @@ export const MAASTOKOHTEET_ISL = [
       + 'piispa oli Guðbrandur Þorláksson. Nykyisen kirkon uskotaan valmistuneen '
       + 'vuonna 1763.',
     lahde: 'en-Wikipedia "Hólar", osiot "Location" ja "History" (tarkistettu 2.9.2026).',
+    visa: {
+      kysymys: 'Missä teloitettiin Hólarin viimeinen katolinen piispa Jón Arason?',
+      vaihtoehdot: [
+        'Hólarissa',
+        'Reykjavíkissa',
+        'Þingvellirillä',
+        'Skálholtissa',
+      ],
+      oikea: 3,
+      fakta: 'Jón Arason oli Hólarin viimeinen katolinen piispa, ja hänet mestattiin kahden poikansa kanssa.',
+    },
   },
   {
     id: 'heimaey',
@@ -866,6 +910,17 @@ export const MAASTOKOHTEET_ISL = [
       + 'pohjoispuolelta.',
     lahde: 'en-Wikipedia "Grímsey", johdanto-osa sekä osiot "Geography" ja "Arctic Circle" '
       + '(tarkistettu 11.9.2026).',
+    visa: {
+      kysymys: 'Minä vuonna napapiirin arvioidaan siirtyvän kokonaan Grímseyn pohjoispuolelle?',
+      vaihtoehdot: [
+        'Noin vuonna 2047',
+        'Noin vuonna 2050',
+        'Noin vuonna 1917',
+        'Noin vuonna 2100',
+      ],
+      oikea: 0,
+      fakta: 'Napapiiri on kulkenut Grímseyn yli vuodesta 1750 ja siirtyy pohjoiseen noin 14,5 metriä vuodessa.',
+    },
   },
   {
     id: 'skalholt',

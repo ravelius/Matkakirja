@@ -64,6 +64,7 @@ import {
   LEPOKERROS_NAYTTEITA, LEPOKERROS_SYVYYSSIIRTO, THREE_CLAMP, THREE_LINEAR,
   THREE_LINEAR_MIPMAP_LINEAR, lepokerroksenAlue, lepokerroksenKerrokset, lepokerroksenLaattakatto,
   lepokerroksenSilmat, lepokerroksenSuunnitelma, lepokerroksenTasoRiittaa, lepokerroksenVerkko,
+  laattakerroksenOsuma,
   luoLaattakerros, luoLepokerroksenAjoitus, pallonPiste, pinnanPiste, pyramidinKarttaAla,
 } from './pallolaatat.js';
 
@@ -78,7 +79,7 @@ export {
   LAATTAKERROS_SYVYYSSIIRTO, LAATTAKERROS_TERAVYYS, LAATTAKERROS_TEKSTUUREJA_PER_KEHYS,
   LAATTAKERROS_VARA_AST, LAATTAKERROS_VARA_OSUUS, laatanKartta, laatanPalloAlue, laattakerroksenLRU,
   laattakerroksenNakyvissa, laattakerroksenOsuma, laattakerroksenPeitto, laattakerroksenSilmat,
-  laattakerroksenTaso, luoLaattakerros,
+  laattakerroksenTaso, luoLaattakerros, pinnanRuutupiste,
 } from './pallolaatat.js';
 
 export {
@@ -112,7 +113,7 @@ export const PALLO_TEKSTUURI = `${R2}julisteet/pallo/${PALLO_TEKSTUURIVERSIO}/te
  * tarkkuuskatto poistuu. Yksi z4-tekstuuri jää VARAKSI: jos laattojen
  * luetteloa (laatat.json) ei saada, pallo piirtyy kuten ennen.
  */
-export const PALLO_LAATTAVERSIO = '2026-09-21-pohja';
+export const PALLO_LAATTAVERSIO = '2026-09-22-pohja';
 /*
  * NOSTOTASOLLINEN KANSIO (omistaja 5.9.2026: "lisää palloon myös se
  * toinen kerros missä nimet ja kohteet yms." ja "päästään siitä
@@ -182,7 +183,7 @@ export const PALLO_LAATTAVERSIO = '2026-09-21-pohja';
  * versiovahti (js/pallolaatat.js lepokerroksenKerrokset) vaatii aina
  * saman viivaversion sarjaan ja luetteloon — muuten kerros sammuu.
  */
-export const PALLO_LAATTATUNNISTE = '20260921a';
+export const PALLO_LAATTATUNNISTE = '20260922a';
 /*
  * Sarja k on poltettu ILMAN nostoja (tools/tee-pallolaatat.mjs laattojenKansio:
  * kansiossa ei ole '-nostot'-osaa): nostot tulevat maittain lepokerroksesta
@@ -1045,6 +1046,92 @@ export function lepokerroin(korkeusPx, teravyys = LAATU_TERAVYYS) {
 /** Pallon kehyskoukut: pallo → { kuuntelijat, kehys, scene, alkuperainen }. */
 const kehyskoukut = new WeakMap();
 
+/*
+ * ======== KAMERAN ENNUSTE (sulavuus E4b, 21.9.2026) ==================
+ *
+ * Omistaja 21.9.2026: nimiöt "pomppivat" liikkeessä. Kirjasto asettaa
+ * CSS2D-nimiöiden paikan samalla kameralla kuin WebGL-kuvan, mutta DOM ja
+ * kangas sommitellaan laitteella eri kerroksissa ja DOM-siirto ehtii
+ * ruudulle kehyksen (tai puolikkaan) kankaan jäljessä: nimiö laahaa
+ * pallon perässä ja nykii, kun kamera pysähtyy. Ennuste laskee
+ * SEURAAVAN kehyksen kameran viime kehysten liikkeestä (lineaarinen
+ * ekstrapolaatio, lat/lng kierretään lyhintä kautta, korkeus
+ * logaritmisena) ja tarjoaa sen kaikille kehyskoukun kuuntelijoille
+ * (`mitat.ennuste = { dtMs, pov, nopeus }`); CSS2D-elementit siirretään
+ * ennustettuun paikkaan (kytkePallonEnnuste) heti kirjaston asettaman
+ * paikan jälkeen kunkin CSS2DObjectin `onAfterRender`-koukusta — ei
+ * erillistä rAF:ia, joten järjestys kirjaston tickin kanssa on aina
+ * oikea. Levossa (nopeus alle kynnyksen) ennuste = nykyinen, jotta
+ * mikään ei värähtele. Kytkin `?ennuste=0`.
+ *
+ * MITTA (pallo.__ennusteMittarit): edellisen kehyksen ennusteen ja
+ * tämän kehyksen toteutuneen kameran ero pikseleinä (näkyvästä
+ * kaistasta). Ilman ennustetta "virhe" on koko kehyksen liike.
+ */
+/** Ennusteen aikaväli enintään (ms): pitkä tauko ei saa lennättää nimiöitä. */
+export const ENNUSTE_KEHYS_MAX_MS = 34;
+/** Liikekynnys (astetta/ms), jonka alla ennustetta ei tehdä. */
+export const ENNUSTE_KYNNYS = 2e-6;
+/** Ennusteen osuus kehysvälistä: 1 = koko kehys, 0,5 = puolikas. */
+export const ENNUSTE_OSUUS = 1;
+
+/*
+ * ENNUSTE OLETUKSENA POIS (omistajan tuntuma v2000, 21.9.2026 ilta):
+ * työpöydällä Marseille-nimiö, nappula ja nostot "heiluivat
+ * panoroitaessa ja palasivat paikalleen liikkeen loputtua". Ennuste
+ * johtaa aina yhden kehyksen verran; kun DOM ei laahaa kankaan perässä
+ * (Macin Chrome/Safari), johto näkyy nimiön heilumisena ja liikkeen
+ * lopussa yhden kehyksen palautumisena. Kunnes GL-kerros on oletus
+ * (nimiöt samassa renderissä, ennustetta ei tarvita), ennuste on
+ * `?ennuste=1`-kokeilu; mitat.ennuste lasketaan silti kuuntelijoille.
+ */
+export const ENNUSTE_OLETUS = false;
+
+/** Onko ennusteen CSS2D-siirto käytössä (`?ennuste=1` kytkee, `?ennuste=0` sammuttaa). */
+export function pallonEnnusteKaytossa(win = globalThis, oletus = ENNUSTE_OLETUS) {
+  try {
+    const arvo = new URLSearchParams(win.location?.search ?? '').get('ennuste');
+    if (arvo != null) return !/^(0|off|false|pois)$/.test(arvo);
+  } catch { /* ei osoitetta */ }
+  return oletus;
+}
+
+/**
+ * Seuraavan kehyksen kamera edellisen ja nykyisen kehyksen liikkeestä.
+ * Puhdas: { dtMs, pov, nopeus } tai nykyinen pov nopeudella 0, kun
+ * liike on alle kynnyksen tai mittoja puuttuu.
+ */
+export function ennustaKamera(edellinen, nykyinen, {
+  osuus = ENNUSTE_OSUUS, kattoMs = ENNUSTE_KEHYS_MAX_MS, kynnys = ENNUSTE_KYNNYS,
+} = {}) {
+  const pov = nykyinen?.pov;
+  const lepo = { dtMs: 0, pov: pov ? { ...pov } : null, nopeus: { lat: 0, lng: 0, lnAlt: 0 } };
+  if (!pov || !edellinen?.pov || !Number.isFinite(nykyinen.aika) || !Number.isFinite(edellinen.aika)) return lepo;
+  const dt = nykyinen.aika - edellinen.aika;
+  if (!(dt > 0) || dt > 250) return lepo;
+  let dLng = pov.lng - edellinen.pov.lng;
+  if (dLng > 180) dLng -= 360; else if (dLng < -180) dLng += 360;
+  const nopeus = {
+    lat: (pov.lat - edellinen.pov.lat) / dt,
+    lng: dLng / dt,
+    lnAlt: (Math.log(Math.max(1e-6, pov.altitude)) - Math.log(Math.max(1e-6, edellinen.pov.altitude))) / dt,
+  };
+  if (![nopeus.lat, nopeus.lng, nopeus.lnAlt].every(Number.isFinite)) return lepo;
+  if (Math.hypot(nopeus.lat, nopeus.lng) < kynnys && Math.abs(nopeus.lnAlt) < kynnys) return lepo;
+  const dtMs = Math.min(kattoMs, dt) * osuus;
+  let lng = pov.lng + nopeus.lng * dtMs;
+  if (lng > 180) lng -= 360; else if (lng < -180) lng += 360;
+  return {
+    dtMs,
+    pov: {
+      lat: Math.max(-89.5, Math.min(89.5, pov.lat + nopeus.lat * dtMs)),
+      lng,
+      altitude: Math.exp(Math.log(Math.max(1e-6, pov.altitude)) + nopeus.lnAlt * dtMs),
+    },
+    nopeus,
+  };
+}
+
 /**
  * Kehysmitat yhdestä lähteestä yhdellä hetkellä. Ruudun koko luetaan
  * RENDERÖIJÄLTÄ (getSize = piirretty koko css-pikseleinä); kotelo on
@@ -1099,6 +1186,11 @@ export function kytkePallonKehys(pallo, kotelo, kuuntelija, ikkuna = globalThis)
       nyt.kehys += 1;
       const mitat = pallonKehysmitat(pallo, kotelo, kamera, ikkuna);
       mitat.kehys = nyt.kehys;
+      // Kameran ennuste seuraavalle kehykselle (E4b) ja sen virhemitta.
+      mitat.ennuste = ennustaKamera(nyt.edellinen, mitat);
+      kirjaaEnnustevirhe(pallo, nyt.edellinen, mitat);
+      nyt.edellinen = mitat;
+      pallo.__viimeisinKehys = mitat;
       for (const k of [...nyt.kuuntelijat]) {
         try { k(mitat); } catch { /* yksi kerros ei kaada piirtoa */ }
       }
@@ -1114,6 +1206,95 @@ export function kytkePallonKehys(pallo, kotelo, kuuntelija, ikkuna = globalThis)
     nyt.scene.onBeforeRender = nyt.alkuperainen;
     kehyskoukut.delete(pallo);
   };
+}
+
+/** Ennusteen virhe: edellisen kehyksen ennuste vastaan tämän kehyksen kamera (px). */
+function kirjaaEnnustevirhe(pallo, edellinen, mitat) {
+  const m = pallo.__ennusteMittarit ?? (pallo.__ennusteMittarit = {
+    kehyksia: 0, ennustettuja: 0, virheSumma: 0, virheMax: 0, liikeSumma: 0,
+  });
+  m.kehyksia += 1;
+  const e = edellinen?.ennuste;
+  const pov = mitat.pov;
+  if (!e?.pov || !pov || !(mitat.H > 0)) return;
+  const kaista = nakyvaKaista(pov.altitude, mitat.fov);
+  const pxAste = mitat.H / Math.max(1e-6, kaista);
+  const ero = (a, b) => {
+    let dl = a.lng - b.lng;
+    if (dl > 180) dl -= 360; else if (dl < -180) dl += 360;
+    return Math.hypot(a.lat - b.lat, dl * Math.cos((pov.lat * Math.PI) / 180)) * pxAste;
+  };
+  // Liike = mitä nimiö laahaisi ilman ennustetta; virhe = ennusteen jäännös.
+  // Hyppy yli puolen ruudun on kameran siirto (pointOfView), ei liikettä.
+  const liike = ero(pov, edellinen.pov);
+  if (!(liike > 0.05) || liike > mitat.H / 2) return;
+  m.ennustettuja += 1;
+  m.liikeSumma += liike;
+  const virhe = e.dtMs > 0 ? ero(pov, e.pov) : liike;
+  m.virheSumma += virhe;
+  if (virhe > m.virheMax) m.virheMax = virhe;
+}
+
+/**
+ * CSS2D-ELEMENTIT ENNUSTETTUUN PAIKKAAN (E4b). Kirjaston CSS2DRenderer
+ * asettaa elementin `transform`in ja kutsuu heti perään CSS2DObjectin
+ * `onAfterRender`-koukkua; siinä paikka kirjoitetaan uudestaan
+ * ennustetulla kameralla lasketusta projektiosta. Näkyvyys (display)
+ * jää kirjastolle. Ennustettu näkymämatriisi lasketaan kerran
+ * kehyksessä kehyskoukussa; koukku kiinnitetään jokaiseen scenen
+ * CSS2DObjectiin kerran (uudet elementit löytyvät seuraavalla
+ * kehyksellä). Palauttaa purkajan.
+ */
+export function kytkePallonEnnuste(pallo, kotelo, ikkuna = globalThis) {
+  if (!pallonEnnusteKaytossa(ikkuna)) return () => {};
+  const scene = pallo?.scene?.();
+  const kamera = pallo?.camera?.();
+  if (!scene || !kamera?.projectionMatrix) return () => {};
+  const Matrix4 = kamera.projectionMatrix.constructor;
+  const Vector3 = kamera.position.constructor;
+  const nakyma = new Matrix4();
+  const kaanteinen = new Matrix4();
+  const vp = new Matrix4();
+  const silma = new Vector3();
+  const keski = new Vector3(0, 0, 0);
+  const ylos = new Vector3(0, 1, 0);
+  const piste = new Vector3();
+  let aktiivinen = false;
+  let puoliW = 0;
+  let puoliH = 0;
+  const merkitty = new WeakSet();
+  const siirra = function ennusteSiirto() {
+    if (!aktiivinen || !this.element) return;
+    piste.setFromMatrixPosition(this.matrixWorld).applyMatrix4(vp);
+    if (!(piste.z >= -1 && piste.z <= 1)) return;
+    pallo.__ennusteMittarit.siirtoja = (pallo.__ennusteMittarit.siirtoja ?? 0) + 1;
+    const cx = this.center?.x ?? 0.5;
+    const cy = this.center?.y ?? 0.5;
+    this.element.style.transform = `translate(${-100 * cx}%,${-100 * cy}%)translate(${piste.x * puoliW + puoliW}px,${-piste.y * puoliH + puoliH}px)`;
+  };
+  const kehys = (mitat) => {
+    const e = mitat.ennuste;
+    aktiivinen = Boolean(e?.pov && e.dtMs > 0);
+    if (!aktiivinen) return;
+    pallo.__ennusteMittarit ??= { kehyksia: 0, ennustettuja: 0, virheSumma: 0, virheMax: 0, liikeSumma: 0 };
+    const R = mitat.sade;
+    const p = pallonPiste(e.pov.lat, e.pov.lng, R * (1 + e.pov.altitude));
+    silma.set(p.x, p.y, p.z);
+    nakyma.lookAt(silma, keski, ylos);
+    nakyma.setPosition(silma);
+    kaanteinen.copy(nakyma).invert();
+    vp.multiplyMatrices(mitat.kamera.projectionMatrix, kaanteinen);
+    // CSS2D-kerros on kotelon css-pikseleissä (CSS2DRenderer.setSize).
+    puoliW = (kotelo?.clientWidth ?? mitat.W) / 2;
+    puoliH = (kotelo?.clientHeight ?? mitat.H) / 2;
+    scene.traverse((o) => {
+      if (!o.isCSS2DObject || merkitty.has(o)) return;
+      merkitty.add(o);
+      o.onAfterRender = siirra;
+    });
+  };
+  const pura = kytkePallonKehys(pallo, kotelo, kehys, ikkuna);
+  return () => { aktiivinen = false; pura(); };
 }
 
 /*
@@ -2646,6 +2827,89 @@ export function rajaaVauhti(lat, lng, pov, {
   return { lat: (lat * katto) / v, lng: (lng * katto) / v };
 }
 
+/*
+ * ======== ZOOM GOOGLE EARTHIN MALLIIN (sulavuus E3, 21.9.2026) ========
+ *
+ * Omistajan päätös 21.9.2026 "KARTAN SULAVUUS ENSIN": pallon on
+ * zoomattava kuten Google Earth — kohti osoitinta tai sormia, rullan
+ * pykälä liukuu eikä hyppää, nipistys seuraa sormia ilman askelia.
+ * OrbitControlsin dolly zoomasi aina pallon KESKIPISTEESEEN (kohta
+ * osoittimen alla karkasi sivulle), rullan pykälä oli hyppy ja
+ * kosketuksen dolly tuli askelina (mitattu E1: zoomAskel p50 0,044
+ * ln-yksikköä kehystä kohti). Kirjaston zoom on siksi pois
+ * (enableZoom false) ja zoom tehdään itse samalla kaavalla kuin
+ * sormiveto: pinnan piste osoittimen alla otetaan ankkuriksi, korkeus
+ * vaihtuu, ja kamera käännetään niin, että ankkuri on yhä samassa
+ * ruudun kohdassa (kohdistaAnkkuri). Kamera pysyy säteellä ilman
+ * kallistusta, joten laattakerroksen ja vektorikerroksen oletukset
+ * (laattakerroksenOsuma) pitävät.
+ *
+ *   cmd/ctrl + rulla  → tavoitekorkeus (ln) siirtyy pykälän verran,
+ *                       kamera liukuu kohti sitä aikavakiolla
+ *                       ZOOMIN_LIUKU_MS (trackpadin virta ja hiiren
+ *                       pykälä samaa polkua; hyppyä ei ole)
+ *   kaksi sormea      → korkeus täsmälleen sormien etäisyyden suhteessa
+ *                       joka liikkeessä, ankkuri sormien keskipisteen
+ *                       alla: nipistys ja kahden sormen panorointi
+ *                       samaa elettä, ei askelia eikä viivettä
+ *
+ * Rajat tulevat OrbitControlsin minDistance/maxDistancesta kuten
+ * ennenkin (js/pallolauta/lauta.js tahdistaZoomirajat), ja panoroinnin
+ * raja (ui.pallonPanorajaus) koskee myös zoomin kääntämää kameraa.
+ */
+/** ln-korkeutta pikseliä kohti (cmd/ctrl+rulla): 100 px ≈ 16 %. */
+export const ZOOMIN_HERKKYYS = 0.0015;
+/** Yksi wheel-tapahtuma enintään tämän verran (ln): sivun mittainen pykälä ei lennätä. */
+export const ZOOMIN_ASKELKATTO = 0.35;
+/** Rullan liu'un aikavakio (ms): kamera lähestyy tavoitetta eksponentiaalisesti. */
+export const ZOOMIN_LIUKU_MS = 90;
+/** Liuku päättyy, kun tavoite on tätä lähempänä (ln). */
+export const ZOOMIN_KYNNYS = 1e-4;
+/** Korkeuden varakatot, jos ohjaimilla ei ole rajoja (valikkopallo). */
+export const ZOOMIN_KORKEUS_MIN = 0.01;
+export const ZOOMIN_KORKEUS_MAX = 6;
+
+/** Rullan pykälä ln-korkeutena (positiivinen = loitonna). */
+export function zoominAskel(deltaY, deltaMode = 0, {
+  herkkyys = ZOOMIN_HERKKYYS, katto = ZOOMIN_ASKELKATTO,
+} = {}) {
+  if (!Number.isFinite(deltaY)) return 0;
+  const pikselia = deltaMode === 1 ? RULLAN_RIVI_PX : (deltaMode === 2 ? RULLAN_SIVU_PX : 1);
+  return Math.max(-katto, Math.min(katto, deltaY * pikselia * herkkyys));
+}
+
+/**
+ * Kamera korkeudelle `altitude` niin, että pinnan piste `ankkuri` on
+ * ruudun kohdassa (sx, sy; normalisoitu −1…1, y ylös). Ratkaistaan
+ * iteroimalla: kameran nadiiria siirretään ankkurin ja osuman erolla,
+ * kunnes osuma on ankkurissa (kolme kierrosta riittää ruudun laidallakin;
+ * mitattu jäännös alle 0,001°). Ilman ankkuria (osoitin pallon
+ * ohi) kamera vain vaihtaa korkeutta paikallaan.
+ *
+ * @param {object} pov      { lat, lng } nykyinen
+ * @param {object} ankkuri  { lat, lng } pinnan piste tai null
+ * @param {object} linssi   { fov, kuvasuhde, sade } (laattakerroksenOsuma)
+ */
+export function kohdistaAnkkuri(pov, ankkuri, sx, sy, altitude, linssi, kierroksia = 3) {
+  let lat = Number(pov?.lat) || 0;
+  let lng = Number(pov?.lng) || 0;
+  if (!ankkuri || !Number.isFinite(ankkuri.lat) || !Number.isFinite(ankkuri.lng)) {
+    return { lat, lng, altitude };
+  }
+  for (let i = 0; i < kierroksia; i += 1) {
+    const osuma = laattakerroksenOsuma({ lat, lng, altitude }, sx, sy, linssi);
+    if (!osuma) break;
+    let dLng = ankkuri.lng - osuma.lng;
+    if (dLng > 180) dLng -= 360; else if (dLng < -180) dLng += 360;
+    const dLat = ankkuri.lat - osuma.lat;
+    if (!Number.isFinite(dLat) || !Number.isFinite(dLng)) break;
+    lat = Math.max(-89.5, Math.min(89.5, lat + dLat));
+    lng += dLng;
+    if (lng > 180) lng -= 360; else if (lng < -180) lng += 360;
+  }
+  return { lat, lng, altitude };
+}
+
 /**
  * Pallon eleet: sormiseuranta (nipistys ei ole napautus), sormessa
  * pysyvä kierto, irrotuksen jälkeinen liuku ja työpöytäselaimen rulla
@@ -2951,9 +3215,133 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
     if (kohta.lngRajattu) rulla.lng = 0;
     rulla.raf = rulla.aikaa > 0 && (rulla.lat || rulla.lng) ? requestAnimationFrame(rullanLiuku) : 0;
   };
+  /* ---- zoom itse: rulla liukuu, nipistys seuraa sormia (E3) ---- */
+  ohjaimet.enableZoom = false;
+  const linssi = () => ({
+    fov: kamera.fov, kuvasuhde: Math.max(1e-3, kotelo.clientWidth / Math.max(1, kotelo.clientHeight)),
+    sade: pallo.getGlobeRadius(),
+  });
+  const korkeusrajat = () => {
+    const R = pallo.getGlobeRadius();
+    const min = Number.isFinite(ohjaimet.minDistance) ? ohjaimet.minDistance / R - 1 : ZOOMIN_KORKEUS_MIN;
+    const max = Number.isFinite(ohjaimet.maxDistance) ? ohjaimet.maxDistance / R - 1 : ZOOMIN_KORKEUS_MAX;
+    return {
+      min: Math.max(ZOOMIN_KORKEUS_MIN, min),
+      max: Math.min(ZOOMIN_KORKEUS_MAX, Number.isFinite(max) ? Math.max(max, min) : ZOOMIN_KORKEUS_MAX),
+    };
+  };
+  /** Ruudun kohta (clientX/Y) normalisoituna ja sen alla oleva pinnan piste. */
+  const ruudunKohta = (clientX, clientY) => {
+    const r = kotelo.getBoundingClientRect();
+    const W = Math.max(1, kotelo.clientWidth);
+    const H = Math.max(1, kotelo.clientHeight);
+    const x = clientX - r.left;
+    const y = clientY - r.top;
+    return {
+      sx: (2 * x) / W - 1,
+      sy: 1 - (2 * y) / H,
+      piste: pinnanPiste(pallo.camera(), x, y, W, H, pallo.getGlobeRadius()),
+    };
+  };
+  /** Kamera uuteen korkeuteen ankkuri paikallaan; panoroinnin raja kuten vedossa. */
+  const asetaZoomi = (altitude, ankkuri, sx, sy) => {
+    const pov = pallo.pointOfView();
+    const rajat = korkeusrajat();
+    const alt = Math.max(rajat.min, Math.min(rajat.max, altitude));
+    const uusi = kohdistaAnkkuri(pov, ankkuri, sx, sy, alt, linssi());
+    const kohta = rajaaKohta(uusi.lat, uusi.lng);
+    pallo.pointOfView({ lat: kohta.lat, lng: kohta.lng, altitude: alt }, 0);
+    return alt;
+  };
+  const zoomi = { kohde: 0, ankkuri: null, sx: 0, sy: 0, raf: 0, edellinen: 0 };
+  ui.pallonZoomi = zoomi; // mittausta varten (savukkeet)
+  const pysaytaZoomi = () => { if (zoomi.raf) cancelAnimationFrame(zoomi.raf); zoomi.raf = 0; };
+  const zoominLiuku = (nyt) => {
+    const dt = Math.max(1, Math.min(50, nyt - zoomi.edellinen));
+    zoomi.edellinen = nyt;
+    const nykyinen = Math.log(Math.max(1e-6, pallo.pointOfView().altitude));
+    const ero = zoomi.kohde - nykyinen;
+    const osa = ui.reducedMotion ? 1 : 1 - Math.exp(-dt / ZOOMIN_LIUKU_MS);
+    const seuraava = Math.abs(ero) <= ZOOMIN_KYNNYS ? zoomi.kohde : nykyinen + ero * osa;
+    asetaZoomi(Math.exp(seuraava), zoomi.ankkuri, zoomi.sx, zoomi.sy);
+    zoomi.raf = Math.abs(zoomi.kohde - seuraava) > ZOOMIN_KYNNYS ? requestAnimationFrame(zoominLiuku) : 0;
+  };
+  /*
+   * NIPISTYS: kaksi sormea, korkeus etäisyyden suhteessa, ankkuri
+   * keskipisteen alla. Sormien paikat kirjataan dokumentista
+   * kaappausvaiheessa (sormi saa poistua kotelosta kesken eleen);
+   * ele alkaa toisen sormen laskeutuessa ja päättyy, kun jompikumpi
+   * nousee. Ankkuri luetaan kerran eleen alussa — sormien keskipisteen
+   * siirto on silloin kahden sormen panorointia samaa kaavaa.
+   */
+  const paikat = new Map();
+  const nipistys = { idt: null, etaisyys: 0, ankkuri: null };
+  ui.pallonNipistys = nipistys; // mittausta varten (savukkeet)
+  const keskipiste = () => {
+    const a = paikat.get(nipistys.idt[0]);
+    const b = paikat.get(nipistys.idt[1]);
+    if (!a || !b) return null;
+    return { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2, etaisyys: Math.hypot(a.x - b.x, a.y - b.y) };
+  };
+  const aloitaNipistys = () => {
+    nipistys.idt = [...paikat.keys()].slice(0, 2);
+    const k = keskipiste();
+    if (!k) { nipistys.idt = null; return; }
+    pysaytaZoomi(); pysaytaLiuku(); pysaytaRulla();
+    vauhti.lat = 0; vauhti.lng = 0;
+    nipistys.etaisyys = Math.max(1, k.etaisyys);
+    nipistys.ankkuri = ruudunKohta(k.x, k.y).piste;
+  };
+  const lopetaNipistys = () => { nipistys.idt = null; nipistys.ankkuri = null; };
+  kuuntele(doc, 'pointerdown', (e) => {
+    if (!kotelo.contains(e.target)) return;
+    paikat.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    if (paikat.size === 2 && !nipistys.idt) aloitaNipistys();
+  }, true);
+  kuuntele(doc, 'pointermove', (e) => {
+    if (!paikat.has(e.pointerId)) return;
+    paikat.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    if (!nipistys.idt || !nipistys.idt.includes(e.pointerId)) return;
+    const k = keskipiste();
+    if (!k || !(k.etaisyys > 1)) return;
+    const pov = pallo.pointOfView();
+    const kohta = ruudunKohta(k.x, k.y);
+    // Pinnan mittakaava ruudulla on kääntäen verrannollinen korkeuteen:
+    // sormet 2× kauemmas toisistaan = korkeus puoleen.
+    asetaZoomi(pov.altitude * (nipistys.etaisyys / k.etaisyys), nipistys.ankkuri, kohta.sx, kohta.sy);
+    nipistys.etaisyys = k.etaisyys;
+  }, true);
+  const sormiPois = (e) => {
+    if (!paikat.delete(e.pointerId)) return;
+    if (nipistys.idt && nipistys.idt.includes(e.pointerId)) lopetaNipistys();
+  };
+  kuuntele(doc, 'pointerup', sormiPois, true);
+  kuuntele(doc, 'pointercancel', sormiPois, true);
+  kuuntele(doc, KOSKETUKSEN_VAPAUTUS, () => { paikat.clear(); lopetaNipistys(); });
+  kuuntele(ikkuna, 'blur', () => { paikat.clear(); lopetaNipistys(); });
+
   kotelo.addEventListener('wheel', (e) => {
-    // Cmd (mac) tai ctrl (Windows ja trackpadin nipistys) = zoom.
-    if (e.metaKey || e.ctrlKey) return;
+    // Cmd (mac) tai ctrl (Windows ja trackpadin nipistys) = zoom (E3).
+    if (e.metaKey || e.ctrlKey) {
+      e.preventDefault();
+      e.stopPropagation();
+      ohjaimet.autoRotate = false;
+      pysaytaLiuku(); vauhti.lat = 0; vauhti.lng = 0;
+      const pov = pallo.pointOfView();
+      const rajat = korkeusrajat();
+      if (!zoomi.raf) zoomi.kohde = Math.log(Math.max(1e-6, pov.altitude));
+      zoomi.kohde = Math.max(Math.log(rajat.min), Math.min(Math.log(rajat.max),
+        zoomi.kohde + zoominAskel(e.deltaY, e.deltaMode)));
+      const kohta = ruudunKohta(e.clientX, e.clientY);
+      zoomi.ankkuri = kohta.piste;
+      zoomi.sx = kohta.sx;
+      zoomi.sy = kohta.sy;
+      if (!zoomi.raf) {
+        zoomi.edellinen = performance.now();
+        zoomi.raf = requestAnimationFrame(zoominLiuku);
+      }
+      return;
+    }
     e.preventDefault();
     e.stopPropagation();
     ohjaimet.autoRotate = false;
@@ -2982,7 +3370,7 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
       rulla.raf = requestAnimationFrame(rullanLiuku);
     }
   }, { capture: true, passive: false });
-  return { sormet, pura: () => { pysaytaLiuku(); pysaytaRulla(); puraSormivahti(); } };
+  return { sormet, pura: () => { pysaytaLiuku(); pysaytaRulla(); pysaytaZoomi(); puraSormivahti(); } };
 }
 
 /** Sulkee pallon, jos se on auki. */

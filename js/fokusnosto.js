@@ -993,13 +993,36 @@ function piirraNostonSisus(ui, sisalto, nosto, valmisKuva) {
    * otsikko on oma rivinsä, joten napit saavat rivin heti sen alle.
    */
   piirraNostonMedia(ui, sisalto, nosto);
-  piirraNostonKuvat(ui, sisalto, nosto, valmisKuva);
+
+  /*
+   * KAKSIPALSTATAITTO ≥ 1100 PX (omistaja 21.9.2026, css/fokusnosto.css
+   * osio 13): kuva ja sen kuvateksti KUVAPALSTAAN (vasemmalle, entinen
+   * pari koskemattomana — kuvateksti on kuvan ALLA, ei sen vierellä),
+   * kaikki muu TEKSTIPALSTAAN (oikealle). Kaksi ERILLISTÄ koteloa eikä
+   * yhteinen grid-rivi: kokeiltu aiemmin `display: contents` -kikalla
+   * (kuvateksti irti kuvasta suoraan palstaan 2), mutta silloin
+   * gridin rivikorkeus periytyi kuvan korkeudesta myös tekstipalstalle
+   * — kuvateksti jäi ylälaitaan ja leipäteksti valahti kuvan
+   * alareunan tasalle, tyhjä kaista väliin (omistajan hylkäys 21.9.2026,
+   * kaappaus nosto-1400.png). Kaksi omaa koteloa (flex, align-items:
+   * flex-start) pitävät palstat toisistaan riippumattomina: kumpikin
+   * alkaa yhtä korkealta eikä kummankaan korkeus periydy toisesta.
+   *
+   * ILMAN KUVAA EI KOTELOIDA (alla `kuvapalsta.childElementCount`):
+   * tekstipalstan lapset liitetään silloin suoraan `sisalto`iin kuten
+   * ennen tätä ominaisuutta — sama DOM-muoto kuin kuvattomalla nostolla
+   * aina, riippumatta ruudun leveydestä.
+   */
+  const kuvapalsta = html('div', 'fokusnosto-kuvapalsta');
+  const tekstipalsta = html('div', 'fokusnosto-tekstipalsta');
+  piirraNostonKuvat(ui, kuvapalsta, nosto, valmisKuva);
+
   const teksti = html('div', looppi ? 'fokusnosto-teksti looppi-leipa' : 'fokusnosto-teksti');
   for (const kappale of jaaKappaleiksi(nosto.teksti)) {
     teksti.appendChild(html('p', '', kappale));
   }
-  sisalto.appendChild(teksti);
-  if (nosto.valokuva) piirraNostonValokuva(ui, sisalto, nosto.valokuva);
+  tekstipalsta.appendChild(teksti);
+  if (nosto.valokuva) piirraNostonValokuva(ui, tekstipalsta, nosto.valokuva);
   /*
    * KORTIN LÄHDERIVI POIS (omistaja 20.9.2026, kaappaus nosto-lahderivi-
    * pois-v1980.webp: *"Maalehden sivu 'ruoka', nosto '…' (js/packs/
@@ -1016,12 +1039,12 @@ function piirraNostonSisus(ui, sisalto, nosto, valmisKuva) {
    * (kortinKuvalahde, suurennoksessa), ei tekstin lähderivinä.
    */
   if (nosto.lahde && KUVAN_TEKIJARIVI.test(nosto.lahde) && Boolean(nosto.kuva || nosto.tiedosto)) {
-    sisalto.appendChild(kortinKuvalahde(html('p', 'fokusnosto-lahde'), nosto.lahde, nosto));
+    tekstipalsta.appendChild(kortinKuvalahde(html('p', 'fokusnosto-lahde'), nosto.lahde, nosto));
   }
   // Karttaliite tulee jutun JÄLKEEN, myös lähderivin jälkeen: se ei ole
   // jutun kuvitusta vaan erillinen arkki jutun välissä (ks.
   // piirraNostonKarttaliite).
-  if (nosto.kartta) piirraNostonKarttaliite(ui, sisalto, nosto.kartta);
+  if (nosto.kartta) piirraNostonKarttaliite(ui, tekstipalsta, nosto.kartta);
 
   /*
    * KOHDENAPPI, KUN KARTALLA ON SAMA PAIKKA. Nosto *"houkuttelee
@@ -1038,7 +1061,7 @@ function piirraNostonSisus(ui, sisalto, nosto, valmisKuva) {
    * kortti ehtisi kadota. Järjestys on siis: juttu, lähde, karttaliite,
    * kysymys, ja vasta sitten ne napit, joista lähdetään pois.
    */
-  piirraNostonVisa(ui, sisalto, nosto);
+  piirraNostonVisa(ui, tekstipalsta, nosto);
 
   const kohde = nostonKarttakohde(ui, nosto);
   if (kohde) {
@@ -1048,10 +1071,42 @@ function piirraNostonSisus(ui, sisalto, nosto, valmisKuva) {
       suljeNostonKortti(ui);
       avaaFokuskohde(ui, kohde);
     });
-    sisalto.appendChild(nappi);
+    tekstipalsta.appendChild(nappi);
   }
 
-  piirraNostonKysymykset(ui, sisalto, nosto);
+  piirraNostonKysymykset(ui, tekstipalsta, nosto);
+
+  if (kuvapalsta.childElementCount) {
+    const rivi = html('div', 'fokusnosto-rivi');
+    rivi.append(kuvapalsta, tekstipalsta);
+    sisalto.appendChild(rivi);
+  } else {
+    // Kuvaton nosto: sama DOM-muoto kuin ennen tätä ominaisuutta.
+    while (tekstipalsta.firstChild) sisalto.appendChild(tekstipalsta.firstChild);
+  }
+}
+
+/*
+ * PYSTYKUVASSA KUVAPALSTA KAPEAMPI (omistaja 21.9.2026, nostokortin
+ * kaksipalstataitto ≥ 1100 px, css/fokusnosto.css): CSS ei tiedä kuvan
+ * omaa muotosuhdetta, joten se pieni tieto tuodaan luokkana. `.fokusnosto-
+ * pysty` kortilla kaventaa kuvapalstaa (ks. tyylitiedosto); kortti ilman
+ * luokkaa saa oletuksen (vaakakuva, ~58 %).
+ *
+ * SEURAA KUVAA KOKO SEN ELINKAAREN (myös galleria): sama <img> vaihtaa
+ * src:ää selauksessa (js/kuvasarja.js), ja jokainen vaihto laukaisee
+ * uuden 'load'-tapahtuman — luokka päivittyy siis kuvan mukana, jos
+ * sarjassa on sekä pysty- että vaakakuvia.
+ */
+function nostoSeuraaKuvanSuuntaa(kortti, kehys) {
+  const img = kehys?.querySelector?.('img') ?? null;
+  if (!img) return;
+  const paivita = () => {
+    if (!img.naturalWidth || !img.naturalHeight) return;
+    kortti.classList.toggle('fokusnosto-pysty', img.naturalHeight > img.naturalWidth);
+  };
+  if (img.complete) paivita();
+  img.addEventListener('load', paivita);
 }
 
 function avaaNostonKortti(ui, nosto) {
@@ -1113,9 +1168,16 @@ function avaaNostonKortti(ui, nosto) {
       kuvakehysRef?.nostokuvaSarja?.(),
     ),
     latoNosto,
+    // KAKSIPALSTATAITTO ≥ 1100 px (css/fokusnosto.css osio 13): alle
+    // rajan kortti ei saa levetä kuvan ehdoilla ~760 px:ä leveämmäksi, ja
+    // rajan yläpuolella kuva kapenee palstaansa (omistaja 21.9.2026, ks.
+    // js/nostokuva.js NOSTOKUVA_LEVEA_RAJA).
+    kaksipalstaTaitto: true,
+    onKuvatta: () => kortti.classList.remove('fokusnosto-pysty'),
   }) : null;
   kuvakehysRef = kaksivaihe?.kehys ?? null;
   if (!kaksivaihe) latoNosto(sisalto, undefined);
+  nostoSeuraaKuvanSuuntaa(kortti, kaksivaihe?.kehys ?? null);
   // Kaiutin kortin otsikkoriville (js/lukija.js lisaaLukijanappi).
   lisaaLukijanappi(kortti, { otsikko: 'Kuuntele kortti' });
 
