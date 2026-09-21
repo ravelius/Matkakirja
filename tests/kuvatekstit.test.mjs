@@ -121,8 +121,8 @@ test('piirtopaikoissa ei enää lueta selitettä suoraan kuvatekstiin', () => {
 test('tietokuvissa pitkä, albumissa valittava lyhyt; lähde ei kahdenna havainnekuvamerkintää', () => {
   // Kartan kohteet ja täkynostot (js/fokuskohteet.js avaaKohdeSuurennos).
   const F = lue('js/fokuskohteet.js');
-  assert.match(F, /html\('span', 'fokuskohde-zoomselite', kuvatekstiPitka\(kuva\)\)/);
-  assert.match(F, /taytaLahderivi\(html\('span', 'fokuskohde-zoomlahde'\), kuva\.lahde \?\? '', kuva\)/);
+  assert.match(F, /selite\.textContent = kuvatekstiPitka\(kuva\)/);
+  assert.match(F, /taytaLahderivi\(lahderivi, kuva\.lahde \?\? '', kuva\)/);
   // Fokusvirran kuvat (js/fokusvirta.js avaaSuurennos).
   const V = lue('js/fokusvirta.js');
   assert.match(V, /selite\.textContent = lyhytTeksti \? kuvatekstiLyhyt\(kuva\) : kuvatekstiPitka\(kuva\)/);

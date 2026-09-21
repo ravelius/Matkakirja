@@ -2822,6 +2822,13 @@ export const SUURENNOS_NELIO_YLA = 1.1;
 export const SUURENNOS_VAHIN_KORKEUS = 0.28;
 /** Kuvasuhde, jota käytetään ennen kuin kuvan omat mitat tiedetään. */
 export const SUURENNOS_OLETUSSUHDE = 4 / 3;
+/**
+ * Kortin suurennoksen katto kumpaankin suuntaan, kun kuva saa täyttää
+ * ruudun contain-periaatteella (`tayteen`, omistaja 20.9.2026,
+ * nostokortti 2 kohta 3: "kokoruutuzoom näyttää kuvan niin isona kuin
+ * mahtuu"). Fokusvirran suurennos pitää entiset osuudet.
+ */
+export const SUURENNOS_TAYTEEN = 0.97;
 
 /**
  * Suurennetun kuvan mitat yllä kuvatulla säännöllä.
@@ -2835,11 +2842,13 @@ export const SUURENNOS_OLETUSSUHDE = 4 / 3;
  * @param {number} [p.pystyVara] kehyksen oma tila pystysuunnassa (kuvatekstipalkki)
  * @param {number} [p.enintaanLeveys] katto kuvan omasta koosta (ei venytetä puuroksi)
  * @param {number} [p.vahintaanLeveys] kapein sallittu kuva
+ * @param {boolean} [p.tayteen] kumpikin suunta SUURENNOS_TAYTEEN-kattoon (contain)
  * @returns {{leveys: number, korkeus: number, vastakkainen: boolean}}
  */
 export function suurennoksenMitat({
   kuvaLeveys, kuvaKorkeus, ruutuLeveys, ruutuKorkeus,
   vaakaVara = 0, pystyVara = 0, enintaanLeveys = Infinity, vahintaanLeveys = 0,
+  tayteen = false,
 } = {}) {
   const rl = Number.isFinite(ruutuLeveys) && ruutuLeveys > 0 ? ruutuLeveys : 0;
   const rk = Number.isFinite(ruutuKorkeus) && ruutuKorkeus > 0 ? ruutuKorkeus : 0;
@@ -2855,7 +2864,10 @@ export function suurennoksenMitat({
   const vastakkainen = kuvaPysty !== ruutuPysty;
   let leveysKatto;
   let korkeusKatto;
-  if (vastakkainen && ruutuPysty) {
+  if (tayteen) {
+    leveysKatto = rl * SUURENNOS_TAYTEEN;
+    korkeusKatto = rk * SUURENNOS_TAYTEEN;
+  } else if (vastakkainen && ruutuPysty) {
     leveysKatto = rl * SUURENNOS_VASTAKKAINEN;
     korkeusKatto = rk * SUURENNOS_TOINEN_SUUNTA;
   } else if (vastakkainen) {

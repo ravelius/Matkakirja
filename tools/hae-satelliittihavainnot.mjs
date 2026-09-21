@@ -86,6 +86,19 @@ export const RAJAPINTA = 'https://images-api.nasa.gov';
 export const KUVASIVU = 'https://images.nasa.gov/details/';
 
 /**
+ * POIKKEUKSET — nasa_id → oma ämpäri, kun NASAn kuvassa oli alareunan
+ * valkoinen tekstipalkki (leima), joka on rajattu pois käsin (sisalto-
+ * astro-palkit, 2026-09-20/21). Ilman tätä listaa ajo palauttaisi taas
+ * NASAn alkuperäiset, palkilliset osoitteet.
+ */
+const OMA_AMPARI = 'https://media.matkakirja.app/linssit/astronautin-kamera/';
+export const KUVAPOIKKEUKSET = new Set([
+  'iss005e19024', 'iss013e62714', 'iss020e009048', 'iss014e17165',
+  'iss025e009858', 'iss002e5693', 'iss010e12917', 'iss026e016287',
+  'iss024e011914', 'iss013e65526', 'iss015e29867', 'iss018e038182',
+]);
+
+/**
  * KOHTEET — käsin katsottu luettelo.
  *
  *   tunnus  pisteen avain (pysyvä)
@@ -1137,8 +1150,8 @@ export async function haeKuva({ id, teksti }) {
     retkikunta: retkikunta(id),
     kuvaaja: d.photographer || null,
     mitat: iso?.width && iso?.height ? [iso.width, iso.height] : null,
-    kuva: https(kuva),
-    pikku: https(pikku),
+    kuva: KUVAPOIKKEUKSET.has(id) ? `${OMA_AMPARI}${id}~large.jpg` : https(kuva),
+    pikku: KUVAPOIKKEUKSET.has(id) ? `${OMA_AMPARI}${id}~small.jpg` : https(pikku),
     sivu: `${KUVASIVU}${id}`,
   };
 }
