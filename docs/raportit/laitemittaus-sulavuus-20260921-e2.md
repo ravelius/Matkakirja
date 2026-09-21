@@ -121,3 +121,27 @@ kirjaudu** — liitos (`CSS2DObject`/`appendChild` CSS2D-juureen) ei
 koskaan tapahdu WebKitissä tässä ketjussa, tai se osuu eri solmuun
 kuin `css2d.loytyi` tarkistaa. Luvut lähetetty suoraan Pelikoodarille
 (ei vielä korjausta tässä raportissa).
+
+## Kierros 4 — css2dNayte (n. klo 13.43)
+
+Haara `pelikoodari-nimiot-sulavat-e3` (commit `b1d9699b`) lisäsi
+`tila().css2dNayte`: CSS2DRendererin näkyvyysehto yhdelle merkille
+(`nimi:marseille`) kameran omilla matriiseilla. Kaksi peräkkäistä
+lukemaa, sama tulos molemmilla:
+
+```json
+{"nakyva":true,"ketjuNakyva":[true,true,false,true],"kerros":true,
+ "z":0.9952,"x":0.363,"y":-0.549,
+ "paikka":{"x":"6.8","y":"68.6","z":"72.5"},
+ "maailma":[6.8,68.6,72.5],
+ "kameraOrigossa":false,"kameranVanhempi":false,
+ "kameraAuto":true,"olioAuto":true,
+ "kameraPaikka":{"x":"4.7","y":"87.2","z":"83.0"}}
+```
+
+`z` (0,9952) täsmää Chromiumin lukuun täsmälleen, `kameraOrigossa`
+on `false` kuten Chromiumilla, `maailma` ei ole `[0,0,0]` — Pelikoodarin
+kaksi hypoteesia (kameran matrixWorldInverse tai olion matriisi) eivät
+siis täsmää suoraan. Poikkeava havainto: **`ketjuNakyva[2]` on
+`false`, vaikka koko-olion `nakyva`-lippu on `true`** — esi-isäketjun
+kolmas jäsen on näkymätön. Lähetetty Pelikoodarille jatkoselvitykseen.
