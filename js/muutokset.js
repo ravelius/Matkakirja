@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1990, teksti: 'Laattapyramidin sulavuus E1: kangas ja työsäikeen naulaus' },
   { v: 1989, teksti: 'v1989: Kartan pieni liike; pollon Matkakirja-linkit' },
   { v: 1988, teksti: 'Liftaussavuke: luenta ja linssin ajoitukset' },
   { v: 1987, teksti: 'Kartuschan sisennys, ei painallusta lavitse; nimiot-aika' },
