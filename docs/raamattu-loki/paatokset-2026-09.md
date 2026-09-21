@@ -583,3 +583,15 @@ Omistaja 21.9.2026 ilta kysyi, miksi pohjapoltto vaatii CI-tauon ja voisiko CI:n
 ## GL VAIHE 2 KOKEILUUN: LADONNAN KAUPUNKINIMET WEBGL-KERROKSEEN ?glnimiot=1 (00b4d653) (21.9.2026 klo 18.18)
 
 Pelikoodari 21.9.2026 ilta: GL vaihe 2 valmis kokeiluun (pelikoodari-gl-nimiot 00b4d653, pohja v2007, sisältää Karttasepän rungon cb31dc47). ?glnimiot=1: ladonnan kaupunkinimet piirtyvät pallon WebGL-kerrokseen (sovitin js/pallolauta/glnimiot-sovitin.js → runko js/pallonimiot-gl.js), CSS2D vain perääntymistienä kun rasteri on kesken tai atlas täynnä; oletus pois; ?glnimiot=testi rungon testinimiöt. Savukkeet glnimiot-nimet 7/7, glnimiot 8/8, testit 3825/0, standalone ok. Fable: Julkaisijalle heti (lipun takana, ei omistajan korttia). Laitetestaaja mittaa iPad/iPhone ?glnimiot=1 kun tuotannossa (WebKit-tekstuuri, CSS2D-siirtymä). Vaihe 3 (nostot, nappula, linssimerkit, kylkivaihdon crossfade) alkaa; GL oletukseksi vasta Laitetestaajan luvun ja omistajan tuntuman jälkeen.
+
+## GL-KERROS OLETUKSEKSI HETI ILMAN LIPPUA; OMISTAJA TESTAA VAIN NATIIVILLA iOS-APILLA (21.9.2026 klo 18.22)
+
+Omistaja 21.9.2026 ilta: GL-kerros (kaupunkinimet WebGL:ssä) otetaan suoraan oletukseksi ilman kokeilulippua; omistaja testaa aina natiivilla iOS-apilla, jossa URL-lippuja ei voi käyttää. Pelikoodari kääntää oletuksen päälle samaan erään (00b4d653 tai jatkocommit): GL päällä oletuksena, CSS2D perääntymistienä vain kehittäjälipulla ?glnimiot=0 ja automaattisesti kun WebGL-tekstuuri ei ole käytettävissä. Sama linja vaiheelle 3 (nostot, nappula, linssimerkit, crossfade): jokainen valmis erä oletukseksi heti, ei lippujen taakse. Laitetestaaja mittaa oletustilan (iPad, iPhone, simulaattori) ja vertaa ?glnimiot=0:aan. Korvaa 21.9. klo 16.30 aikataulun kohdan 'GL oletukseksi huomenna illalla'.
+
+## VISAT ERA 3 VALMIS (92e582c5): 43 VISAA, 8 MAATA KOLMASOSAAN (21.9.2026 klo 18.22)
+
+Sisältökirjuri 21.9.2026 ilta: visat erä 3 (sisalto-visat-3 92e582c5, rebasattu v1973-prepin päälle, sisältää visat-1:n v2008): 43 visaa, LVA/LTU/ITA/FIN/SWE/BGR/HRV/ROU 33–35 %; tarkistettu ettei kohteella ollut visaa; testit 0 fail. Erä 4 alkaa (AUT/CZE/DNK/ESP/HUN/NLD/PRT/FRA/POL/IRL) pohjana visat-3. Julkaisijan jonoon.
+
+## POHJAPOLTTO ALKOI 18.35; MERIKORISTEET POHJAN KALUSTEIKSI (z1-z6) SAMAAN AJOON; VEDOKSEN TASOKARTTA VAIN TYOKALUN ESITYS (21.9.2026 klo 18.29)
+
+Karttaseppä 21.9.2026 klo 18.35: pohjapoltto 2026-09-22-pohja alkoi (114 shardia, 16 ydintä, vaihe 1 ~50 min + vaihe 2 ~50 min). Omistajan tasokarttakysymys: vedoskuvat maailma-z1/z2 ovat vain vedostyökalun tasoesitys pyramidin laatoista (Miller-arkki kehyksineen); pelissä ei ole tasokarttanäkymää, pallo lukee samoja laattoja. Muutos: nimiötasoversio ei näy pelissä (retina lukee maailmankuvaan z4–z5, lepokerros ei piirrä sarjaa), joten merikoristeet poltetaan pohjan kalusteiksi merten nimien ja ruusun rinnalle (z1–z6, karttaseppa-merikoristeet 83429d8c mergetty polton työhaaraan, --koristeet); ei erillistä nimiö g / pallo b -erää. Pelikaappaukset docs/raportit/kaappaukset/merikoristeet-20260921/pallo-*.jpg. Osoitin-PR:ään tulee myös generoi- ja maailmapiirtokoodi, ei pelikoodia.

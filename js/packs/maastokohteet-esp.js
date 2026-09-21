@@ -247,6 +247,17 @@ export const MAASTOKOHTEET_ESP = [
       + 'ihmistä Madridin seutu ja Lissabon mukaan luettuina — ja sen patoaltaisiin mahtuu noin '
       + '14 500 kuutiohehtometriä vettä.',
     lahde: 'en-Wikipedia "Tagus", osiot "Source", "Course" ja "Basin" (tarkistettu 1.9.2026).',
+    visa: {
+      kysymys: 'Miksi joen nimi muuttuu Tajosta Tejoksi?',
+      vaihtoehdot: [
+        'Se ylittää rajan Portugaliin',
+        'Se yhtyy toiseen jokeen',
+        'Se muuttaa virtaussuuntaa',
+        'Se saa uuden lähteen',
+      ],
+      oikea: 0,
+      fakta: 'Portugalin puolella joen nimi on Tejo.',
+    },
   },
   {
     id: 'ebro',
@@ -278,6 +289,17 @@ export const MAASTOKOHTEET_ESP = [
       + 'Douron jälkeen. Se on kuitenkin pisin kokonaan Espanjan sisällä virtaava joki: kaksi '
       + 'muuta jatkavat Portugaliin.',
     lahde: 'en-Wikipedia "Ebro", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Miksi Ebro on erikoinen muihin suuriin jokiin verrattuna?',
+      vaihtoehdot: [
+        'Se on lyhin Iberian joki',
+        'Se virtaa vain talvisin',
+        'Se pysyy kokonaan Espanjassa',
+        'Se saa alkunsa Portugalista',
+      ],
+      oikea: 2,
+      fakta: 'Ebro on pisin joki, joka virtaa kokonaan Espanjan sisällä.',
+    },
   },
   /* ================================================================
    * K2-ERÄ 4 6.9.2026 — KAHDEKSAN KOHDETTA. Perustelut tiedoston
@@ -349,6 +371,17 @@ export const MAASTOKOHTEET_ESP = [
       + 'löytyneen.',
     lahde: 'en-Wikipedia "Santiago de Compostela", johdanto-osa sekä osiot "Toponym" '
       + 'ja "City" (tarkistettu 6.9.2026).',
+    visa: {
+      kysymys: 'Mikä johdatti paimen Pelagiuksen haudan luo tarun mukaan?',
+      vaihtoehdot: [
+        'Kirkas tähti',
+        'Enkelin ääni',
+        'Karitsan ääni',
+        'Kuunvalo',
+      ],
+      oikea: 0,
+      fakta: 'Tarun mukaan kirkas tähti johdatti paimen Pelagiuksen haudalle.',
+    },
   },
   {
     id: 'segovian-akvedukti',
@@ -473,6 +506,17 @@ export const MAASTOKOHTEET_ESP = [
       + 'sarja, ja pääkäytävä on kahdesta kuuteen metriin korkea.',
     lahde: 'en-Wikipedia "Cave of Altamira", johdanto-osa ja osio "Description" '
       + '(tarkistettu 6.9.2026).',
+    visa: {
+      kysymys: 'Kuka löysi Altamiran luolan vuonna 1868?',
+      vaihtoehdot: [
+        'Marcelino Sanz de Sautuola',
+        'Juan de Vilanova y Piera',
+        'Pablo Picasso',
+        'Modesto Cubillas',
+      ],
+      oikea: 3,
+      fakta: 'Luolan löysi vuonna 1868 Modesto Cubillas.',
+    },
   },
   {
     id: 'toledo',
@@ -536,6 +580,17 @@ export const MAASTOKOHTEET_ESP = [
       + 'valmistuksessa. Unesco listasi kaupungin maailmanperintökohteeksi 1986.',
     lahde: 'en-Wikipedia "Toledo, Spain", johdanto-osa ja osio "Toponym" '
       + '(tarkistettu 6.9.2026).',
+    visa: {
+      kysymys: 'Minä vuonna kristityt valtasivat Toledon?',
+      vaihtoehdot: [
+        '1085',
+        '711',
+        '1492',
+        '1561',
+      ],
+      oikea: 0,
+      fakta: 'Kristityt valtasivat Toledon vuonna 1085.',
+    },
   },
   {
     id: 'cordoban-moskeijakatedraali',

@@ -385,6 +385,17 @@ export const HAHMOTELMA_IRL = [
       + 'Michael Davittin silta kulkee Achill Soundin ja Polrannyn kylien välillä.',
     lahde: 'en-Wikipedia "Achill Island", johdanto-osa ja osiot "History" ja "Geography" '
       + '(tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Kuinka monenneksi korkeimmat Euroopassa Croaghaunin merikalliot ovat?',
+      vaihtoehdot: [
+        'Korkeimmat',
+        'Toiseksi korkeimmat',
+        'Kolmanneksi korkeimmat',
+        'Kymmenenneksi korkeimmat',
+      ],
+      oikea: 2,
+      fakta: 'Croaghaunin kalliot ovat Euroopan kolmanneksi korkeimmat merikalliot.',
+    },
   },
   {
     id: 'hahmotelma-powerscourt',
