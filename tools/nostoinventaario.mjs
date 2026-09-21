@@ -114,8 +114,18 @@ function onNosto(o) {
 }
 
 function kuvaTiedot(o) {
-  const onKuva = Boolean(o.tiedosto) || Boolean(o.kuva?.osoite) || Boolean(o.kuvat?.length)
-    || Boolean(o.herokuva);
+  /*
+   * KORJATTU 21.9.2026 (iso ajon vaihe 1): puuttui `o.kuva?.tiedosto`
+   * (paljas Commons-tiedostonimi kuva-olion sisällä) — tätä muotoa
+   * käyttävät mm. maa-kategoriat.js:n nostot JA niistä
+   * korttiLehdesta()-funktiolla johdetut maalehtinostot-<iso>.js-kortit
+   * (js/packs/maalehtinostot-fra.js). Ilman tätä tarkistusta työkalu
+   * merkitsi virheellisesti kuvattomaksi 17 FRA-korttia, joilla oli jo
+   * aito Commons-kuva — löytyi kun yksittäistapaus (Roquefort)
+   * tarkistettiin käsin suoraan JSON.stringify:llä.
+   */
+  const onKuva = Boolean(o.tiedosto) || Boolean(o.kuva?.osoite) || Boolean(o.kuva?.tiedosto)
+    || Boolean(o.kuvat?.length) || Boolean(o.herokuva);
   /*
    * HUOM: /karttanostot/-polku EI tarkoita tekoälykuvaa — se on vain
    * R2-säilytyspolku, jota käyttävät sekä aidot Commons-valokuvat
