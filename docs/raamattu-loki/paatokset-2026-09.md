@@ -451,3 +451,7 @@ Pelikoodari 21.9.2026 (pelikoodari-kellot 594fb6f3): ensimmäinen leikkilinssi K
 ## LIPPUARVAUS-LINSSI VALMIS: XP 20, EUROOPPA-RAJAUS (21.9.2026 klo 14.48)
 
 Pelikoodari 21.9.2026 (pelikoodari-lippuarvaus abaea062): toinen leikkilinssi Lippuarvaus valmis. Euroopan 42 lippua pallolle (vipu Maailma 135), oma maa korostettu, napautus näyttää maan nimen; Livia kysyy Fablen kolmella lauseella ilman nimeä, neljä vaihtoehtoa = oikea + kolme lähintä naapuria, oikeasta 20 tietäjäpistettä (XP_LIPPUARVAUS). Eurooppa-rajaus: lon −25…45 ja lat > 34 sekä Venäjä, ilman Syyriaa ja Georgiaa. Jatkoerään: napautusmuoto (maapolygonit) sekä sarjat ja ennätys. Seuraava leikkilinssi: Tähtitaivas (Pelikoodari ehdottaa).
+
+## TARKENNUS: ISOISAN LINSSI ON LAHJA, EI AARRE; RENGAS 1 = 21 AARRETTA + 1 LAHJA (21.9.2026 klo 14.59)
+
+Fable 21.9.2026 (Sisältökirjurin kysymys): renkaan 1 kahdestakymmenestäkahdesta linssistä Isoisän linssi 1873 (Q1) ei ole aarrepalkkio vaan tarinan lahja isoisän matkakirjan mukana (kartoituksen poikkeus pätee). LINSSIAARTEET-tauluun tulee 21 kaupunki→linssi-mappausta; isoisän linssin jakelu (avautuu pelin alussa tai ensimmäisessä kaupungissa) on Pelikoodarin erillinen erä, kun linssi valmistuu Karttasepältä.
