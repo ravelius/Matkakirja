@@ -274,7 +274,8 @@ const JAKO = [
       + 'kuninkaan ja väkijoukon edessä nousi pallo, jonka korissa '
       + 'matkusti lammas, ankka ja kukko. Lento kesti kahdeksan '
       + 'minuuttia ja vei matkustajat noin kolmen kilometrin päähän '
-      + 'ehjinä. Ihmiset nousivat ilmaan vasta seuraavana vuonna.',
+      + 'ehjinä. Ihmiset nousivat ilmaan kaksi kuukautta myöhemmin, '
+      + 'marraskuussa 1783, Pariisissa.',
     // 4,6714 E / 45,2408 N — en-Wikipedia "Annonay", prop=coordinates
     // (haettu 14.9.2026). Kaupunki on tekstissä: veljekset tekivät
     // siellä paperia ja rakensivat siellä pallonsa.
