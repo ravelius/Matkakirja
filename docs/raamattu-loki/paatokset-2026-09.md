@@ -811,3 +811,7 @@ Omistaja 21.9.2026 klo 23.35: linssikatalogin saa julkaista yöllä ilman kortti
 ## MAAKUNNAN LUONNEHDINTAAN TAPPA: PIDEMPI VERSIO KUVAN KANSSA (21.9.2026 klo 23.29)
 
 Omistaja 21.9.2026 klo 23.40: karttatyökalun Maakunnat-tilassa lyhyen luonnehdinnan vieressä täppä (nuoli/plus), josta avautuu pidempi versio kuvan kanssa: yksi Commons-kuva alueesta (PD/CC, kuvaputken mukaan, lähde ja lisenssi) ja 3–5 virkkeen teksti Livian äänellä (maisema, ihmiset, yksi tarina tai erikoisuus; 1873-kytkös jos on). Pulun kysymykset sen rinnalla. Sisältökirjuri: erä 1 lyhyet luonnehdinnat (nyt), erä 2 pitkät + kuvat, erä 3 pulun kysymykset; kaikki samaan datarakenteeseen (lyhyt, pitka, kuva, pulu). Pelikoodari: paneelin rivi laajenee täpästä samaan tapaan kuin nostokortin Lisää.
+
+## CHE-SIIRROT KIRJATTU NIMIOVERSIOON h (PR #2690); KARTTASEPAN WORKTREE LUOTIIN UUDELLEEN (21.9.2026 klo 23.29)
+
+Karttaseppä 21.9.2026 klo 23.40: CHE:n viisi käsisiirtoa (Luzern, Valais, St. Gallen, Appenzell AR ja AI) kirjattu KASIN-taulukkoon ja nimistöön nimiot-poltto-5.json, ajo-ohje RESEPTI.md:ssä, ei polttoa (PR #2690, 5fdca5ecf). Worktree /Users/samireivinen/Matkakirja-karttaseppa oli poistunut kesken vuoron (syy epäselvä, todennäköisesti session oma worktree-siivous); Fable loi sen uudelleen haaralla karttaseppa-maakuntavektorit origin/mainista. Sääntö: rooli-worktreetä ei poisteta; väliaikaiset worktreet vain /Users/koodaus/-polkuihin.
