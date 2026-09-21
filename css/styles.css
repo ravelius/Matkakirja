@@ -26530,15 +26530,31 @@ svg.rough-annotation { pointer-events: none; }
  * laitteella. Alareunan turva-aluetta EI pienennetä — se on laitteen
  * vaatimus, ei tyylivalinta — joten kortti siirtyy oikealle eikä alas.
  */
+/*
+ * SISENNYS KARTAN REUNASTA (omistaja 20.9.2026, kaappaus kartuscha-
+ * sisennys-iphone-v1985.png: iPhonella kortti kaukana kartan reunasta,
+ * työpöydällä liian lähellä). Väli mitataan KARTAN KOTELON reunasta,
+ * ei ruudun: js/pallolauta/maapaneeli.js kirjoittaa kotelon etäisyyden
+ * ruudun reunasta muuttujiin --kotelon-vasen/--kotelon-ala, ja tähän
+ * lisätään --kartuschan-reuna (puhelin 12 px, ≥ 768 px 24 px) sekä
+ * laitteen turva-alue. Turva-alue on max, ei summa: se lasketaan vain
+ * kerran, vaikka kotelo jo väistäisi sen. Ennen väli oli
+ * gap + 0,4rem + 1px + max(turva-vasen, turva-ala) molempiin — iPhonella
+ * alareunan turva-alue (34 px) meni myös vasempaan reunaan.
+ */
 .maapaneeli-nurkka .pallolauta-maapaneeli {
-  --kartuschan-vali: calc(var(--gap) + 0.4rem + 1px
-    + max(env(safe-area-inset-left, 0px), env(safe-area-inset-bottom, 0px)));
+  --kartuschan-reuna: 12px;
+  --kotelon-vasen: var(--gap);
+  --kotelon-ala: var(--gap);
   position: fixed;
-  left: var(--kartuschan-vali);
-  bottom: var(--kartuschan-vali);
-  max-width: calc(100vw - 2 * (var(--gap) + 0.4rem + 1px)
+  left: calc(var(--kartuschan-reuna) + max(var(--kotelon-vasen), env(safe-area-inset-left, 0px)));
+  bottom: calc(var(--kartuschan-reuna) + max(var(--kotelon-ala), env(safe-area-inset-bottom, 0px)));
+  max-width: calc(100vw - 2 * (var(--kartuschan-reuna) + var(--kotelon-vasen))
     - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px));
   pointer-events: none;
+}
+@media (min-width: 768px) {
+  .maapaneeli-nurkka .pallolauta-maapaneeli { --kartuschan-reuna: 24px; }
 }
 
 /*

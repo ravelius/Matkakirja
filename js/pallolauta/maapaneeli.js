@@ -1373,7 +1373,43 @@ export function luoMaapaneeli({
    * `pointerdown` muistaa mistä sormi lähti, `click` ratkaisee.
    */
   let alku = null;
-  const painallus = (e) => { alku = { x: e.clientX, y: e.clientY }; };
+  /*
+   * KORTIN SISÄLTÄ EI OSUTA KARTTAAN (omistaja 21.9.2026: aiherivin
+   * painallus saattoi avata myös alla olevan noston tai kaupungin).
+   * Kortti on `pointer-events: none`, joten osoitintapahtumat menevät
+   * kankaalle, ja Globe.gl:n oma osumatesti kulkee pointerdown/
+   * pointerup-parilla — DOM:n click-tapahtuman pysäytys (alla) ei
+   * pysäytä sitä. Siksi jo painallus (ja sen pari, pointerup)
+   * pysäytetään dokumentin capture-vaiheessa, kun sormi on kortin
+   * napautettavan osan päällä: kangas ei näe elettä lainkaan, ja click
+   * hoitaa kohteen kuten ennen. Nykyluvut-rivit (sijat-auki) kuuluvat
+   * samaan joukkoon, samoin lippu ja radiovalo.
+   */
+  const kortinKohta = (x, y) => {
+    if (!el?.isConnected || !tila || sailio?.hidden) return false;
+    const kortti = el.querySelector('.maapaneeli-kortti');
+    if (!kortti) return false;
+    const osat = [
+      kortti.querySelector('.maapaneeli-avain'),
+      ...kortti.querySelectorAll('.maapaneeli-aihe'),
+      kortti.querySelector('.maapaneeli-lippu'),
+    ];
+    if (valikkoAuki) {
+      osat.push(kortti.querySelector('.maapaneeli-radio'), kortti.querySelector('.maapaneeli-rivit'));
+    }
+    return osat.some((o) => o && !o.hidden && osuuLaatikkoon(o, x, y));
+  };
+  let painallusKortissa = false;
+  const painallus = (e) => {
+    alku = { x: e.clientX, y: e.clientY };
+    painallusKortissa = kortinKohta(e.clientX, e.clientY);
+    if (painallusKortissa) e.stopPropagation();
+  };
+  const vapautus = (e) => {
+    if (!painallusKortissa) return;
+    painallusKortissa = false;
+    e.stopPropagation();
+  };
   const napautus = (e) => {
     if (!el?.isConnected || !tila || sailio?.hidden) return;
     const kortti = el.querySelector('.maapaneeli-kortti');
@@ -1440,6 +1476,21 @@ export function luoMaapaneeli({
     const kaluste = varmistaKortti();
     if (!kaluste) return;
     sailio.hidden = false;
+    /*
+     * SISENNYS KARTAN REUNASTA, EI RUUDUN (omistaja 20.9.2026, iPhone-
+     * kaappaus kartuscha-sisennys-iphone-v1985.png: kortti kaukana kartan
+     * reunasta, työpöydällä liian lähellä). Kalusteen `left`/`bottom`
+     * ovat ruudun suhteen (position: fixed), joten kartan kotelon oma
+     * etäisyys ruudun reunasta viedään css-muuttujiin ja css laskee
+     * välin siitä: kotelon etäisyys + KARTUSCHAN_REUNA_PX + laitteen
+     * turva-alue (max, ei summa — jos kotelo jo väistää turva-alueen,
+     * sitä ei lasketa toiseen kertaan). Ks. css .pallolauta-maapaneeli.
+     */
+    const r = kotelo.getBoundingClientRect?.();
+    if (r) {
+      kaluste.style.setProperty('--kotelon-vasen', `${Math.max(0, r.left).toFixed(1)}px`);
+      kaluste.style.setProperty('--kotelon-ala', `${Math.max(0, (globalThis.innerHeight ?? r.bottom) - r.bottom).toFixed(1)}px`);
+    }
     d.iso = tila.iso;
     d.nimi = tila.nimi;
     d.paikallinen = tila.paikallinen;
@@ -1480,6 +1531,8 @@ export function luoMaapaneeli({
 
   if (typeof document !== 'undefined') {
     document.addEventListener('pointerdown', painallus, true);
+    document.addEventListener('pointerup', vapautus, true);
+    document.addEventListener('pointercancel', vapautus, true);
     document.addEventListener('click', napautus, true);
     kotelo?.addEventListener?.('pointerdown', karttaanKoskettiin, true);
     kotelo?.addEventListener?.('wheel', karttaanKoskettiin, { capture: true, passive: true });
@@ -1570,6 +1623,8 @@ export function luoMaapaneeli({
         kotelo?.removeEventListener?.('pointerdown', karttaanKoskettiin, true);
         kotelo?.removeEventListener?.('wheel', karttaanKoskettiin, { capture: true });
         document.removeEventListener('pointerdown', painallus, true);
+        document.removeEventListener('pointerup', vapautus, true);
+        document.removeEventListener('pointercancel', vapautus, true);
         document.removeEventListener('click', napautus, true);
         document.documentElement?.style.removeProperty('--liiku-pohja');
         document.body?.classList.remove('infotaulu-auki');
