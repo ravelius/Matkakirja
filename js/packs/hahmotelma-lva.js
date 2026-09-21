@@ -1461,4 +1461,55 @@ export const HAHMOTELMA_LVA = [
     lahde: 'en-Wikipedia "Pape Nature Reserve" ja lv-Wikipedia "Pape (dabas parks)", '
       + 'johdanto-osat ja en-artikkelin osio "Fauna" (tarkistettu 19.9.2026).',
   },
+  {
+    id: 'hahmotelma-bauska',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/lva-nosto-bauska-cee86849.jpg',
+      lyhyt: 'Bauskan linnan punatiiliset rauniot vehreällä niemekkeellä jokien yhtymäkohdassa.',
+      selite: 'Kuvassa on Bauskan linnan keskiaikaisen osan raunioituneita tiili- ja '
+        + 'kivimuureja niemekkeellä, jonka ympärillä virtaavat Mūsan ja Mēmelen joet.',
+      lahde: 'Valokuva: Laima Gūtmane, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Laima Gūtmane',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Bauska_Castle_Ruins_-_panoramio.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    nimi: 'Bauskan linna',
+    tyyppi: 'historia',
+    lahi: true,
+    kysymykset: [
+      'Miksi linna rakennettiin juuri kahden joen yhtymäkohtaan?',
+      'Mitä linnalle tapahtui Ison Pohjan sodassa?',
+    ],
+    korostukset: ['Ison Pohjan sodan|Ison Pohjan sodan', 'Kuurinmaan ja Semgallian herttuakunnan|Kuurinmaan ja Semgallian herttuakunnan'],
+    nappi: 'Ison Pohjan sodan tuhoamat rauniot odottavat vielä ensimmäistä pelastajaansa',
+    // 24.17361111 E / 56.40361111 N — en-Wikipedia "Bauska Castle"
+    laudat: {
+      maailmankartta: { x: 6639.1, y: 1100.1 },
+      europe: { x: 675.3, y: 410.2 },
+    },
+    teksti: 'Liivinmaan ritarikunta rakensi Bauskan linnan vuosina 1443–1450 Mūsan ja '
+      + 'Mēmelen jokien yhtymäkohtaan kohoavalle niemekkeelle, jonka paikalla oli aiemmin '
+      + 'semigallialainen linnavuori. Linna vahvisti ritarikunnan valtaa Semgallian '
+      + 'alueella ja vartioi kauppareittiä Liettuasta Riikaan. Ritarikunnan hajottua '
+      + '1500-luvun puolivälissä linnasta tuli Kuurinmaan ja Semgallian herttuakunnan yksi '
+      + 'pääasunnoista, ja siihen lisättiin 1590-luvulla uusi renessanssisiipi kahdine '
+      + 'massiivisine pyöreine torneineen. Ison Pohjan sodan aikana vuonna 1706 '
+      + 'perääntyvät venäläisjoukot räjäyttivät sekä vanhan linnan että palatsin, ja '
+      + 'rauniot jäivät korjaamatta yli 150 vuodeksi. Vasta 1990-luvulta alkaen niitä on '
+      + 'osittain restauroitu, ja nykyään kunnostettu palatsiosa toimii museona, kun taas '
+      + 'keskiaikaisesta linnasta on jäljellä vain rauniot.',
+    lahde: 'en-Wikipedia "Bauska Castle", johdanto-osa ja osiot "History" ja "Today" '
+      + '(tarkistettu 21.9.2026).',
+    ihme: {
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-bauska-loistoaika.jpg',
+      kadonnut: false,
+      selite: 'Loistokaudellaan 1500–1600-lukujen taitteessa Bauskan linna oli Kuurinmaan '
+        + 'ja Semgallian herttuakunnan komea renessanssipalatsi kahden joen kainalossa, '
+        + 'jonka saleissa kokoontuivat herttuakunnan maapäivät.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: '
+        + 'en-Wikipedia "Bauska Castle", tarkistettu 21.9.2026.',
+      url: 'https://en.wikipedia.org/wiki/Bauska_Castle',
+    },
+  },
 ];

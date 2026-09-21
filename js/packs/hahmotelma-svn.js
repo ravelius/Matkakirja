@@ -43,7 +43,8 @@
  * (vuori, Slovenian ainoa piikivilajitteinen vuoristo). Kaikki kuusi ovat
  * riittävän kaukana toisistaan ja aiemmista 24 kohteesta.
  *
- * === KUVAT ===========================================================
+ * === KUVAT ====================================================  },
+  {
  *
  * Kuvat ovat JPEG-tiedostoja (1800 px tai alkuperäinen, jos se on
  * pienempi), nimeltään `svn-nosto-<id>-<8 hex sha256>.jpg`, ja osoite on
@@ -54,14 +55,16 @@
  * sarjasta. Tiedostot ovat kansiossa
  * /Users/samireivinen/Matkakirja-nostot-kuvat/svn/.
  *
- * === MIKSI TÄMÄ REITTI (KOHDE_MAAT) ==================================
+ * === MIKSI TÄMÄ REITTI (KOHDE_MAAT) ===========================  },
+  {
  *
  * Sama reitti kuin muidenkin EU-maiden hahmotelmilla (js/fokuskohteet.js
  * liittää rivit KOHDE_MAAT.SVN:ään). `lahi: true` on sama lähizoomiportti
  * kuin Ranskan hahmotelmalla (js/pallolauta/nostot.js
  * PAAKARTAN_MERKKIKATTO).
  *
- * === KOORDINAATIT ====================================================
+ * === KOORDINAATIT =============================================  },
+  {
  *
  * Jokaisen asteet on haettu en-Wikipedian rajapinnasta
  * (`action=query&prop=coordinates`, haettu 19.9.2026) ja artikkelin nimi
@@ -1694,6 +1697,111 @@ export const HAHMOTELMA_SVN = [
       + 'rakennettiin 1950-luvulla, ja se avattiin virallisesti 20. syyskuuta 1959.',
     lahde: 'en-Wikipedia "Velenje", johdanto-osa ja osio "Modern history" (tarkistettu '
       + '19.9.2026).',
+  },
+  {
+    id: 'hahmotelma-emona',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/svn-nosto-emona-c3df0092.jpg',
+      lyhyt: 'Emonan roomalaisajan raunioita Ursulinska-kirkon alla Ljubljanassa.',
+      selite: 'Kuvassa on Emonan roomalaiskaupungin kivijalkoja ja seinänpohjia, jotka on '
+        + 'kaivettu esiin Ljubljanan ursuliinikirkon alta nykyisen kaupungin keskeltä.',
+      lahde: 'Valokuva: Charlie from UK, Wikimedia Commons (CC BY 2.0).',
+      tekija: 'Charlie from UK',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Roman_ruins_under_Ursulinska_Church_(7448631442).jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+    },
+    nimi: 'Emona',
+    tyyppi: 'historia',
+    lahi: true,
+    kysymykset: [
+      'Miksi Emonan rauniot löytyvät nykyisen Ljubljanan katujen alta eivätkä maan päältä?',
+      'Mitkä kansat hyökkäsivät Emonaan 400- ja 500-luvuilla?',
+    ],
+    korostukset: ['Ljubljanan|Ljubljanan', 'hunnit|hunnit'],
+    nappi: 'Roomalainen kastrumkaupunki nukkuu jo vuosisatoja unohdettuna maan alla',
+    // 14.50092222 E / 46.04769444 N — en-Wikipedia "Emona" (coord-malline)
+    laudat: {
+      maailmankartta: { x: 6316.7, y: 1558.4 },
+      europe: { x: 489.6, y: 682.5 },
+    },
+    teksti: 'Emona oli roomalainen kastrumkaupunki, joka rakennettiin nykyisen Ljubljanan '
+      + 'paikalle Linnamäen juurelle: sotilaallinen varuskunta pystytettiin paikalle jo '
+      + '1. vuosisadalla eaa., ja varsinainen vahvasti muurein linnoitettu siirtokunta '
+      + 'perustettiin vuonna 14 jaa. Kaupungissa asui 5000–6000 '
+      + 'asukasta, enimmäkseen kauppiaita ja käsityöläisiä, ja se oli myös varhaiskristillinen '
+      + 'keskus. Länsigootit leiriytyivät Emonan lähellä talvella 408–409, hunnit hyökkäsivät '
+      + 'kaupunkiin vuonna 452 ja langobardit kulkivat sen läpi matkallaan Italiaan vuonna '
+      + '568, minkä jälkeen seurasivat vielä avaarien ja slaavien hyökkäysretket. 500-luvun '
+      + 'jälkipuoliskolla kaupungissa ei enää ollut asutusta, ja se hautautui vuosisadoiksi '
+      + 'maan alle: nykyisin sen katujen, talojen ja vesijohtojen jäänteitä kaivetaan esiin '
+      + 'Ljubljanan keskustan alta.',
+    lahde: 'en-Wikipedia "Emona", johdanto-osa ja osio "History" (tarkistettu 21.9.2026).',
+    ihme: {
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-emona-loistoaika.jpg',
+      kadonnut: false,
+      selite: 'Loistokaudellaan 100-luvulla Emona oli vilkas muurein linnoitettu '
+        + 'roomalaiskaupunki, jonka kaduilla kauppiaat ja legioonalaiset kulkivat '
+        + 'pylväshallien ja temppelien katveessa.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: '
+        + 'en-Wikipedia "Emona", tarkistettu 21.9.2026.',
+      url: 'https://en.wikipedia.org/wiki/Emona',
+    },
+  },
+  {
+    id: 'hahmotelma-zice',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/svn-nosto-zice-6a9e2ba2.jpg',
+      lyhyt: 'Žičen kartusiaaniluostarin Pyhän Johannes Kastajan kirkko raunioiden keskellä.',
+      selite: 'Kuvassa on Žičen kartuusiluostarin ainoa säilynyt kirkko, joka on omistettu '
+        + 'Johannes Kastajalle. Ympärillä näkyy vanhojen luostarirakennusten kivijalkoja ja '
+        + 'raunioita metsäisessä laaksossa.',
+      lahde: 'Valokuva: Shabicht, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Shabicht',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:St._John_the_Baptist%27s_Church1_%C5%BDi%C4%8De_Charterhouse_01.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Žička kartuzija',
+    tyyppi: 'historia',
+    lahi: true,
+    kysymykset: [
+      'Mikä teki Žičen luostarista poikkeuksellisen tärkeän koko kartusiaanien veljeskunnalle?',
+      'Miksi luostari lopulta lakkautettiin ja jätettiin rappeutumaan?',
+    ],
+    korostukset: ['kartusiaaniluostari|kartusiaaniluostari', 'Joosef II|Joosef II'],
+    nappi: 'Keisari lakkautti luostarin jo 90 vuotta sitten; rauniot rapistuvat yhä',
+    // 15.39260833 E / 46.3111 N — en-Wikipedia "Žiče Charterhouse" (coord-malline)
+    laudat: {
+      maailmankartta: { x: 6346.4, y: 1547.4 },
+      europe: { x: 506.7, y: 675.6 },
+    },
+    teksti: 'Žičen kartuusiluostari perustettiin vuosina 1155–1165 Steiermarkin '
+      + 'rajakreivi Ottokar III:n ja hänen poikansa herttua Ottokar IV:n toimesta '
+      + 'kapean Žičnica-puron laaksoon: se oli ensimmäinen kartusiaaniluostari '
+      + 'saksankielisellä alueella ja samalla ensimmäinen Ranskan ja Italian '
+      + 'ulkopuolella. Suuren skisman aikana koko kartusiaaniveljeskunnan ylipriorin '
+      + 'istuin siirtyi Žičeen lähes kahdeksi vuosikymmeneksi (1391–1410), ja kolme '
+      + 'Žičen prioria peräjälkeen toimi tänä aikana koko veljeskunnan ylipriorina. '
+      + 'Osmanien ryöstöretki vuonna 1531 käynnisti luostarin rappion, ja se siirtyi '
+      + 'välillä komendaattoripriorien ja jesuiittojen haltuun ennen kuin '
+      + 'kartusiaanit saivat sen takaisin 1593. Keisari Joosef II lakkautti '
+      + 'luostarin vuonna 1782 osana kirkollisia uudistuksiaan, minkä jälkeen '
+      + 'rakennusten annettiin rapistua: jäljellä on nykyisin raunioita ja '
+      + 'Johannes Kastajalle omistettu kirkko.',
+    lahde: 'en-Wikipedia "Žiče Charterhouse", johdanto-osa ja osiot "Charterhouse '
+      + 'foundation and foundation deed" sekä "History" (tarkistettu 21.9.2026).',
+    ihme: {
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-zice-loistoaika.jpg',
+      kadonnut: false,
+      selite: 'Loistokaudellaan 1400-luvulla Žičen luostari oli koko '
+        + 'kartusiaaniveljeskunnan hengellinen keskus, jonka kirjasto oli suurimpia '
+        + 'Vatikaanin ulkopuolella ja jonka kirkonkelloja munkit soittivat hiljaisessa '
+        + 'laaksossa.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: '
+        + 'en-Wikipedia "Žiče Charterhouse", tarkistettu 21.9.2026.',
+      url: 'https://en.wikipedia.org/wiki/%C5%BDi%C4%8De_Charterhouse',
+    },
   },
   {
     id: 'hahmotelma-koper',

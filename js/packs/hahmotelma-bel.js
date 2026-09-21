@@ -20,7 +20,9 @@
  * katsoo vuodesta 1873 eteenpäin. Tervurenin Kongon-näyttelystä (1897) ja
  * sen "ihmistarhasta" kerrotaan artikkelin mukaan asiallisesti.
  *
- * === KUVAT ===========================================================
+ * === KUVAT ====================================================    },
+  },
+  {
  *
  * Kuvat ovat JPEG-tiedostoja (1800 px tai alkuperäinen, jos se on
  * pienempi), nimeltään `bel-nosto-<id>-<8 hex sha256>.jpg`, ja osoite on
@@ -31,7 +33,9 @@
  * sarjasta. Tiedostot ovat kansiossa
  * /Users/samireivinen/Matkakirja-nostot-kuvat/bel/.
  *
- * === MIKSI TÄMÄ REITTI (KOHDE_MAAT) ==================================
+ * === MIKSI TÄMÄ REITTI (KOHDE_MAAT) ===========================    },
+  },
+  {
  *
  * Sama reitti kuin muidenkin EU-maiden hahmotelmilla: nämä ovat kaikki
  * kaupunkien ulkopuolella (Belgiassa ei ole pelikaupunkia eikä muita
@@ -40,7 +44,9 @@
  * KOHDE_MAAT.BEL:iin. `lahi: true` on sama lähizoomiportti kuin
  * Ranskan hahmotelmalla (js/pallolauta/nostot.js PAAKARTAN_MERKKIKATTO).
  *
- * === KOORDINAATIT ====================================================
+ * === KOORDINAATIT =============================================    },
+  },
+  {
  *
  * Jokaisen asteet on haettu en-Wikipedian rajapinnasta
  * (`action=query&prop=coordinates`, haettu 19.9.2026) ja artikkelin nimi
@@ -1475,6 +1481,55 @@ export const HAHMOTELMA_BEL = [
       ],
       oikea: 2,
       fakta: 'Turnhoutin mukaan on nimetty kaksi taistelua, vuosilta 1597 ja 1789.',
+    },
+  },
+  {
+    id: 'hahmotelma-coudenberg',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/bel-nosto-coudenberg-a7d3e25b.jpg',
+      lyhyt: 'Coudenbergin palatsin kaivetun aula magnan rauniot Brysselissä.',
+      selite: 'Kuvassa on Coudenbergin palatsin maan alle säilyneen aula magnan (suuren salin) '
+        + 'kivijalka- ja seinäraunioita kaivauksin esiin tuotuna.',
+      lahde: 'Valokuva: Chatsam, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Chatsam',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Remains_of_Coudenberg_Palace_aula_magna_02.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    nimi: 'Coudenbergin palatsi',
+    tyyppi: 'historia',
+    lahi: true,
+    kysymykset: [
+      'Minä vuonna tulipalo tuhosi koko palatsin?',
+      'Minkä aukion alle rauniot haudattiin 1770-luvulla?',
+    ],
+    korostukset: ['tulipalo|Tulipalo', 'Place Royale|Place Royalen'],
+    nappi: 'Brabantin herttuoiden ja Habsburgien palatsi, jonka tulipalo tuhosi 1731',
+    // 4.36009 E / 50.84263 N — en-Wikipedia "Coudenberg Palace" (infobox)
+    laudat: {
+      maailmankartta: { x: 5978.7, y: 1353.3 },
+      europe: { x: 294.9, y: 556.4 },
+    },
+    teksti: 'Coudenbergin kukkulalle Brysseliin nousi keskiajalla Brabantin herttuoiden '
+      + 'päälinna, josta kasvoi vuosisatojen kuluessa Burgundin herttaiden ja myöhemmin '
+      + 'Habsburgien hallitsijoiden komea palatsi. Palatsin suuressa salissa keisari Kaarle V '
+      + 'luopui valtaistuimestaan poikansa Filip II:n hyväksi vuonna 1555. Yöllä 3.2.1731 '
+      + 'keittiöstä syttynyt tulipalo levisi pakkasessa hallitsemattomasti, sillä sammutusvettä '
+      + 'ei saatu ajoissa paikalle, ja koko palatsi tuhoutui. Rauniot jäivät vuosikymmeniksi '
+      + 'paikoilleen, kunnes ne päätettiin 1770-luvulla haudata uuden, uusklassisen Place '
+      + 'Royale -aukion ja Kuninkaankadun alle vuosina 1775–1782. Maan alle säilyneet '
+      + 'kellarit ja salit kaivettiin esiin 1900-luvun lopulla, ja ne avattiin yleisölle '
+      + 'Coudenbergin museona, jonne kulku on nykyisin BELvue-museon kautta.',
+    lahde: 'en-Wikipedia "Coudenberg Palace", johdanto-osa (tarkistettu 21.9.2026).',
+    ihme: {
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-coudenberg-loistoaika.jpg',
+      kadonnut: false,
+      selite: 'Loistokaudellaan Coudenbergin palatsi oli Brabantin herttuoiden ja Habsburgien '
+        + 'hallitsijoiden komea hovilinna, jonka saleissa Kaarle V luopui valtaistuimestaan '
+        + 'vuonna 1555 — ennen kuin tulipalo tuhosi koko rakennuksen 1731.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: '
+        + 'en-Wikipedia "Coudenberg Palace", tarkistettu 21.9.2026.',
+      url: 'https://en.wikipedia.org/wiki/Coudenberg_Palace',
     },
   },
   {

@@ -6579,7 +6579,10 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Cișmigiun puutarha', lat: 44.4372, lon: 26.0906 },
       { nimi: 'Yliopiston aukio', lat: 44.43497, lon: 26.10088 },
       { nimi: 'Stavropoleoksen kirkko', lat: 44.43178, lon: 26.09883 },
-      { nimi: 'Vanha ruhtinaanhovi', lat: 44.43011, lon: 26.10131, wiki: 'Vlad III' },
+      {
+        nimi: 'Vanha ruhtinaanhovi', lat: 44.43011, lon: 26.10131, wiki: 'Vlad III',
+        nosto: 'hahmotelma-curtea-veche',
+      },
       {
         nimi: 'Parlamenttipalatsi',
         lat: 44.42751,

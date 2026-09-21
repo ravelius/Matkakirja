@@ -1973,4 +1973,58 @@ export const HAHMOTELMA_FIN = [
         + 'Renkaat toimii kaupungissa yhä.',
     },
   },
+  {
+    id: 'hahmotelma-vanha-vaasa-kirkko',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/fin-nosto-vanha-vaasa-kirkko-2856238b.jpg',
+      lyhyt: 'Pyhän Marian kirkon rauniomuurit Vanhassa Vaasassa.',
+      selite: 'Kuvassa on keskiaikaisen Pyhän Marian kirkon harmaakivestä muuratut '
+        + 'rauniomuurit Mustasaaressa, entisen Vanhan Vaasan keskustan paikalla.',
+      lahde: 'Valokuva: Santeri Viinamäki, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Santeri Viinamäki',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Old_Vaasa_church_20190603.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Vanhan Vaasan kirkko',
+    tyyppi: 'historia',
+    lahi: true,
+    kysymykset: [
+      'Miksi kirkkoa ei rakennettu uudelleen palon jälkeen?',
+      'Kuinka kaukana uusi Vaasa rakennettiin vanhan kaupungin paikalta?',
+    ],
+    korostukset: ['Vaasan suurpalo|Vaasan suurpalo', 'rauniomuurit|rauniomuurit'],
+    nappi: 'Keskiajan kivikirkko, jonka rauniomuurit jäivät pystyyn vuoden 1852 '
+      + 'suurpalon jälkeen',
+    // 21.722 E / 63.075 N — fi-Wikipedia "Pyhän Marian kirkon rauniot" (koordinaattimalline)
+    laudat: {
+      maailmankartta: { x: 6557.4, y: 768.7 },
+      europe: { x: 628.3, y: 234.7 },
+    },
+    teksti: 'Vanhan Vaasan Pyhän Marian kirkko rakennettiin harmaasta kivestä 1500-luvun '
+      + 'alkupuolella keskiaikaisen Mustasaaren kylän keskukseen, ja siitä tuli vuonna '
+      + '1606 perustetun Vaasan kaupungin pääkirkko. Kirkkoa laajennettiin 1649, ja se '
+      + 'muutettiin ristikirkoksi vuosina 1749–1753 koko maakunnan tarpeisiin. Elokuun '
+      + '3. päivänä 1852 syttynyt Vaasan suurpalo tuhosi lähes koko puisen kaupungin ja '
+      + 'kirkon sisustuksen, mutta paksut kivimuurit jäivät pystyyn. Kaupunki '
+      + 'rakennettiin palon jälkeen uudelleen noin seitsemän kilometrin päähän '
+      + 'nykyiselle paikalleen, eikä vanhaa kirkkoa koskaan kunnostettu käyttöön. '
+      + 'Kirkon rauniomuurit jätettiin muistomerkiksi entisen Vanhan Vaasan keskustan '
+      + 'paikalle, nykyiseen Mustasaareen, ja niitä on entisöity useaan otteeseen '
+      + '1910-luvulta lähtien, viimeksi Museoviraston toimesta 2007–2016.',
+    lahde: 'en-Wikipedia "Vaasa", osio "Town fire", ja fi-Wikipedia "Pyhän Marian '
+      + 'kirkon rauniot", johdanto-osa (tarkistettu 21.9.2026).',
+    ihme: {
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-vanha-vaasa-kirkko-loistoaika.jpg',
+      kadonnut: false,
+      selite: 'Ennen vuoden 1852 suurpaloa Pyhän Marian kirkko oli vanhan Vaasan '
+        + 'täysipainoinen ristikirkko: valkoiseksi rapatut kivimuurit ja korkea torni '
+        + 'hallitsivat puisen kaupungin keskustaa, ja penkit täyttyivät '
+        + 'seurakuntalaisista sunnuntaisin.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. '
+        + 'Faktat: en-Wikipedia "Vaasa" ja fi-Wikipedia "Pyhän Marian kirkon '
+        + 'rauniot", tarkistettu 21.9.2026.',
+      url: 'https://en.wikipedia.org/wiki/Vaasa',
+    },
+  },
 ];
