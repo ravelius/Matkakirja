@@ -13,7 +13,8 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 2032, teksti: 'Kartuscha BIH: kolme aihetta' },
+  { v: 2033, teksti: 'Kartuscha BIH: kolme aihetta' },
+  { v: 2032, teksti: 'Marseille-nimen valkkyminen korjattu (vanha rasteri)' },
   { v: 2031, teksti: 'Laattakerros: seuraavan tason keskilaatat ennakkoon' },
   { v: 2030, teksti: 'Nikosian, Luxemburgin ja Vallettan miniatyyrit' },
   { v: 2029, teksti: '69 Euroopan kadonnutta monumenttia loistoaikansa asussa' },
