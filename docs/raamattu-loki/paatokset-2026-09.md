@@ -215,3 +215,35 @@ Koko pyramidi 2026-09-21-* + pallo 20260921a: 100 min, 209 850 laattaa, eheys ta
 ## HUNTU LIIKKEEN AJAN + KAMERALOKI TEHTY (Pelikoodari 6aad75f1, 97ef58ad) (21.9.2026 klo 02.29)
 
 Huntu pysyy liikkeen ajan, lahto- ja kohdemaa aukkoina (maapolygonien renkaat reikalistaan), perilla vain kohdemaa, kaikki kulkutavat. Juurisyy hunnun katoamiselle: liikkeessa cityOf null -> varitason maa nollattiin. Savuke-huntu-liike 10/10 (harva). Aukkojen laatat kootaan liikkeen alussa, nakyvat 1-2 s kuluttua. KAMERALOKI js/pallolauta/kameraloki.js: korkeuden hyppy > 3x -> aikaleima, korkeudet, laukaisija (pino 3 rivia), kaupunki, vaihe; luku: kehittajatilan konsoli [kameraloki], localStorage matkakirja-kameraloki (20 viimeista) tai window.matkakirja.ui.pallolauta.kameraloki(). Testit 3786/0. HUOM: v1984:n CI-kaupunkipopup-vika on ERI kuin korjattu liuskan lepotesti (CI:ssa takynostokortti aukeaa kaupungin napautuksesta) - Pelikoodari diagnosoi Julkaisijan kanssa.
+
+## NOSTOJEN TASOT ELAVISSA NIMIOISSA TEHTY (Pelikoodari 7a37b1bc) (21.9.2026 klo 03.06)
+
+Taso 1: nimio 1,3x tummemmalla, Codexin kuvamerkki (assets/nostotyypit/merkki-<tyyppi>.png 128 px; 11 merkkia kategorian/lajin mukaan), ruutu 1,6x, sovittelussa etusija eika koskaan piiloudu. Taso 3: piilossa kohdemaassakin kunnes lahizoomi (osuus uloimmasta <= 0,7). Savuke-nostotasot 18/18 julkaisusarjaan (390: 5 ykkostasoa nakyvissa, lansirannikko ruudun ulkopuolella; 1400: 8). Testit 3784/0. Avoinna: taso-3-luokittelu puuttuu datasta (kentta toimii); Mont Blancin merkille halo tarvittaessa. Kaupunkipopup-CI: Pelikoodarin 69429052 Julkaisijalla (napautus vasta kameran levossa). PAATOS (Fable): Mont Blancin merkille halo (sama sadekeha kuin poltetussa).
+
+## V1984 TUOTANNOSSA 04.47 (21.9.2026 klo 04.49)
+
+Nostokortti 2, kaupunkiliuskan lepotesti ja CI-napautus, liftauszoomin juurisyy (matkaZoomirajat), Camargue, astro-palkit, kartuscha 9 maata, huntu liikkeen ajan + kameraloki (jos ehti). Seuraavaksi v1985: osoitin 20260921a + luettelo + nostotasot.
+
+## AVAINTEN TULOSTUS JULKAISIJAN TRANSKRIPTIIN (Julkaisija ilmoitti, ei kiireellinen) (21.9.2026 klo 05.41)
+
+Julkaisija ajoi vahingossa head ~/.zshrc etsiessaan AMPARI/PAATE-muuttujia: avainten selvakieliset arvot tulostuivat sen oman session tyokalulokiin (ei repoon, ei viesteihin). Sessio on Remote Control -yhteydessa, joten transkripti voi olla claude.ai:ssa. Raamatun MAC STUDIO -kohtaan lisatty AVAINSAANTO: avaintiedostoja ei tulosteta, vain nimet grepilla. Omistaja paattaa kierratetaanko avaimet (GitHub Actions secrets, amparin avaimet, gh-token).
+
+## V1985 TUOTANNOSSA 06.10; AVAIMIA EI KIERRATETA (omistaja) (21.9.2026 klo 06.47)
+
+v1985: osoitin pallo 20260921a + pyramidi 2026-09-21-* (joet pohjassa, GSHHG-rantaviiva, meri vyohykkeet + viivoitus, Codexin laivat ja kompassiruusut, 1873-nimisto FRA, nostotasot ja tyyppimerkit elavissa nimioissa), luettelo amparissa. Omistaja kortilla: avaimia ei tarvitse kierrattaa; AVAINSAANTO lisatty Raamatun MAC STUDIO -kohtaan.
+
+## KIERROS 21 (Laitetestaaja, v1985 iPhone) (21.9.2026 klo 06.54)
+
+docs/raportit/laitekierros-21-20260921.md. Ei vakavuus 1-2. OK: joet levossa, meri (vyohykkeet, viivoitus, laivat, kompassi), maakunnat ja meret versaaleina, nostotaso 1 (iso nimio + kuvamerkki), nostokortti 2:n vakaset, huntu lyhyella liftauksella. Kesken: nostotaso 3 lahizoomilla, suurennoksen selaus, kaupunkiliuska, huntu kaukaisilla mailla, ESP/DEU tarkempi laatta- ja meritarkistus -> jatketaan kierroksella 21b.
+
+## OMISTAJA v1985 VAKAVUUS 1: RANSKAN NOSTOT POMPPIVAT PANOROIDESSA JA ZOOMATESSA (21.9.2026 klo 06.55)
+
+Elavat nimiot (KOHDEMAAN_NIMIOT_ELAVINA + reunasaanto + nostotasot) latovat itsensa uudelleen eleen aikana: nimiot vaihtavat kylkea ja hyppivat. SAANTO: nimio ei liiku eleen aikana - sovittelu lukitaan eleen ajaksi ja ratkaistaan vasta eleen paatyttya (debounce), vain rikkovat laput (reuna/limitys) siirtyvat, hystereesi estaa edestakaisen vaihdon; pehmea siirtyma jos lappu siirtyy. -> Pelikoodari heti.
+
+## NIMIOIDEN VAKAUS: GOOGLE EARTHIN MALLI (Fable, omistajan kysymys) (21.9.2026 klo 06.57)
+
+Linjaus kirjattu Raamattuun Kaupungit-osioon (NIMIOIDEN VAKAUS): asento ankkurin ymparilta kerran lepotilassa, eleen aikana vain seuraa ankkuria; tormays ratkaistaan haivyttamalla prioriteetin mukaan, ei siirrolla; paatokset eleen jalkeen hystereesilla; ykkostaso ei haivy eika vaihda asentoa. Pelikoodari toteuttaa haarassa pelikoodari-nimiot-vakaat -> v1986.
+
+## KIERROS 21b (Laitetestaaja) (21.9.2026 klo 07.06)
+
+Ei vakavuus 1-2. Kaupunkiliuska Marseillessa toimii, suurennos avautuu oikein (aiempi testivirhe oli vaara CSS-valitsin). Kesken: huntu pitkalla lennolla ja ESP/DEU yksi zoomi - saapumisnakyman satunnaiset sisaltokortit estavat Playwright-automaation ja suora actionFly() ei laukaise lentoanimaatiota -> oikealle simulaattorille kun omistaja antaa laiteluvan. Laitetestaaja odottaa.

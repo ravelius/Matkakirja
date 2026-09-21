@@ -2311,6 +2311,17 @@ export function nostosymNimioMitta(nimi, laji, enintaan) {
  */
 /** Nimiön kyljet kokeilujärjestyksessä (sama kuin js/karttanimet.js). */
 export const NOSTOSYM_NIMIO_KYLJET = ['oikea', 'vasen', 'yla', 'ala'];
+/*
+ * KULMAT — NELJÄ LISÄASENTOA (Fable 21.9.2026, nimiöt vakaat, Google
+ * Earthin malli: kahdeksan ehdokasasentoa ankkurin ympärillä). Kulma on
+ * vaakakylki, jonka perusviiva on siirretty merkin ylä- tai alapuolelle:
+ * teksti alkaa merkin oikealta (koillinen, kaakko) tai päättyy sen
+ * vasemmalle (luode, lounas). Sama asemointi ohjaa piirron, rasterin ja
+ * laatikot; poltettu ladonta (data `puoli`) ei käytä kulmia.
+ */
+export const NOSTOSYM_NIMIO_KULMAT = ['koillinen', 'kaakko', 'luode', 'lounas'];
+/** Kaikki kahdeksan ehdokasasentoa: kyljet ensin, kulmat perässä. */
+export const NOSTOSYM_NIMIO_ASENNOT = [...NOSTOSYM_NIMIO_KYLJET, ...NOSTOSYM_NIMIO_KULMAT];
 
 /** Versaalin korkeus kirjasinkoosta — pystykylkien pystymitat. */
 const NOSTOSYM_NIMIO_VERSAALI = 0.78;
@@ -2383,6 +2394,27 @@ export function nostosymNimioAsemointi(puoli, leveys, ruutuKerroin = 1) {
   // Ruudun kasvu työntää vaakakyljen nimiön ulommas saman verran.
   const lisa = ruutu - NOSTOSYM_MINI_RUUTU;
   const ulko = NOSTOSYM_NIMIO_X + lisa + leveys;
+  if (NOSTOSYM_NIMIO_KULMAT.includes(puoli)) {
+    // Kulma: vaakakyljen x, perusviiva merkin ylä- tai alalaidan tasalla
+    // (yläkulmassa versaali päättyy ruudun yläreunaan, alakulmassa
+    // versaali alkaa ruudun alareunasta).
+    // Teksti KOKONAAN merkin vaakakaistan ylä- tai alapuolella, jotta
+    // kulma on aidosti eri asento kuin kylki: yläkulmassa perusviiva on
+    // ruudun yläreunassa, alakulmassa versaalin verran alareunan alla.
+    const vasemmalla = puoli === 'luode' || puoli === 'lounas';
+    const ylhaalla = puoli === 'koillinen' || puoli === 'luode';
+    const y = ylhaalla ? -ruutu : ruutu + koko * NOSTOSYM_NIMIO_VERSAALI;
+    return {
+      alku: vasemmalla ? -ulko : NOSTOSYM_NIMIO_X + lisa,
+      x: vasemmalla ? -(NOSTOSYM_NIMIO_X + lisa) : NOSTOSYM_NIMIO_X + lisa,
+      y,
+      ank: vasemmalla ? 'end' : 'start',
+      x1: vasemmalla ? -ulko : ruutu,
+      x2: vasemmalla ? -ruutu : ulko,
+      y1: y - koko * NOSTOSYM_NIMIO_VERSAALI,
+      y2: y + koko * NOSTOSYM_NIMIO_ALAOSA,
+    };
+  }
   if (puoli === 'vasen') {
     return {
       alku: -ulko,
@@ -2429,7 +2461,7 @@ export function nostosymNimioAsemointi(puoli, leveys, ruutuKerroin = 1) {
 export function nostosymNimioPuoli(arvo) {
   if (arvo === true) return 'vasen';
   if (!arvo) return 'oikea';
-  return NOSTOSYM_NIMIO_KYLJET.includes(arvo) ? arvo : 'oikea';
+  return NOSTOSYM_NIMIO_ASENNOT.includes(arvo) ? arvo : 'oikea';
 }
 
 export function nostosymNimioLaatikko(nimi, svg, laji, puoli = 'oikea', enintaan) {
@@ -2507,7 +2539,7 @@ function nostosymLataaKuvamerkki(osoite) {
 }
 
 async function nostosymRasteroi(tunnus, nimio, svg, porras, nimionLaji, puoli = 'oikea', {
-  kuvamerkki = null, ruutuKerroin = 1, tumma = false,
+  kuvamerkki = null, ruutuKerroin = 1, tumma = false, ilmanIkonia = false,
 } = {}) {
   const asu = nostosymAsuTai(svg, nimionLaji);
   const muste = nostosymMustelajit(svg);
@@ -2546,7 +2578,10 @@ async function nostosymRasteroi(tunnus, nimio, svg, porras, nimionLaji, puoli = 
   // Merkin origo on neliön keskellä, kuten SVG:ssäkin.
   ctx.save();
   ctx.translate(origoX * porras, origoY * porras);
-  if (merkkikuva) {
+  if (ilmanIkonia) {
+    // Pelkkä nimiö samaan laatikkoon (erillinen nimiökuva, ks.
+    // piirraNostosymKartalle `erillinenNimio`): ikonin ruutu jää tyhjäksi.
+  } else if (merkkikuva) {
     // Kuvamerkki koko ruutuun (2 × sade), keskitettynä origoon —
     // ensin paperinvaalea halo (ks. KUVAMERKIN HALO), sitten merkki.
     const koko = 2 * sade * porras;
@@ -2746,7 +2781,7 @@ export function nostosymPolttoLaatikko(merkki) {
  * Jos rasteria ei saada, ryhmään piirretään elävä merkki ja teksti.
  */
 export function piirraNostosymKartalle(g, symboli, nimio, laji, kylki = 'oikea', enintaan, {
-  kuvamerkki = null, ruutuKerroin = 1, tumma = false,
+  kuvamerkki = null, ruutuKerroin = 1, tumma = false, erillinenNimio = false,
 } = {}) {
   const tunnus = nostosymMiniTunnus(symboli, laji);
   const nimionLaji = nostosymNimionLaji(laji);
@@ -2784,7 +2819,14 @@ export function piirraNostosymKartalle(g, symboli, nimio, laji, kylki = 'oikea',
    * kortti kertoo) ja se nimi, joka kuvaan ladottiin.
    */
   kuva.dataset.symboli = NOSTOSYM_PIIRTAJAT[symboli] ? symboli : 'huuto';
-  kuva.dataset.nimio = teksti;
+  /*
+   * ERILLINEN NIMIÖKUVA (Fable 21.9.2026, nimiöt vakaat): kun kutsuja
+   * pyytää `erillinenNimio`, ikoni ja nimiö ovat KAKSI rasteria samassa
+   * ryhmässä — ikoni ilman tekstiä ja nimiö ilman ikonia — jotta nimiön
+   * voi häivyttää (css .nostosym-nimiokuva, opacity ≤ 200 ms) ikonin
+   * jäädessä paikoilleen. Ilman lippua kuva on yhä yksi rasteri.
+   */
+  kuva.dataset.nimio = erillinenNimio ? '' : teksti;
   kuva.dataset.puoli = puoli;
   /*
    * RESEPTI JÄÄ KUVAAN KIINNI, jotta sama merkki voidaan paistaa
@@ -2793,9 +2835,22 @@ export function piirraNostosymKartalle(g, symboli, nimio, laji, kylki = 'oikea',
    * minitunnus (ks. yllä), joten resepti ei mahdu niihin.
    */
   kuva.__nostosym = {
-    tunnus, teksti, nimionLaji, puoli, elavana, kuvamerkki, ruutuKerroin, tumma,
+    tunnus, teksti: erillinenNimio ? '' : teksti, nimionLaji, puoli, elavana, kuvamerkki, ruutuKerroin, tumma,
   };
   asetaRasteri(kuva, g);
+  if (erillinenNimio && teksti) {
+    const nimioKuva = el('image', {
+      class: 'nostosym-rasteri nostosym-nimiokuva',
+      preserveAspectRatio: 'xMidYMid meet',
+    }, g);
+    nimioKuva.dataset.symboli = kuva.dataset.symboli;
+    nimioKuva.dataset.nimio = teksti;
+    nimioKuva.dataset.puoli = puoli;
+    nimioKuva.__nostosym = {
+      tunnus, teksti, nimionLaji, puoli, elavana, kuvamerkki, ruutuKerroin, tumma, ilmanIkonia: true,
+    };
+    asetaRasteri(nimioKuva, g);
+  }
 }
 
 /**
@@ -2812,15 +2867,17 @@ function asetaRasteri(kuva, g) {
   if (!resepti) return;
   const {
     tunnus, teksti, nimionLaji, puoli, elavana, kuvamerkki = null, ruutuKerroin = 1, tumma = false,
+    ilmanIkonia = false,
   } = resepti;
   const porras = NOSTOSYM_PORRAS;
   kuva.__nostosymPorras = porras;
   const avain = `${porras}|${tunnus}|${nimionLaji}|${puoli}|${teksti}`
-    + (kuvamerkki || ruutuKerroin !== 1 || tumma ? `|${kuvamerkki ?? ''}|${ruutuKerroin}|${tumma ? 'T' : ''}` : '');
+    + (kuvamerkki || ruutuKerroin !== 1 || tumma ? `|${kuvamerkki ?? ''}|${ruutuKerroin}|${tumma ? 'T' : ''}` : '')
+    + (ilmanIkonia ? '|N' : '');
   let valmis = NOSTOSYM_RASTERIT.get(avain);
   if (!valmis) {
     valmis = nostosymRasteroi(tunnus, teksti, g.ownerSVGElement, porras, nimionLaji, puoli, {
-      kuvamerkki, ruutuKerroin, tumma,
+      kuvamerkki, ruutuKerroin, tumma, ilmanIkonia,
     });
     NOSTOSYM_RASTERIT.set(avain, valmis);
   }

@@ -1857,7 +1857,8 @@ export const RAAMATTU = {
           + 'Macilla CI:n ulkopuolella; 4) Chromium-osasarjan siirto GitHub-matriisiin vain, '
           + 'jos kuorma toistuu (WebKit- ja aikamittaukset pysyvat aina Macilla); 5) LUVAT JA '
           + 'PAATOKSET OMISTAJALTA AINA AskUserQuestion-KORTTINA, ei tekstikysymyksena. '
-          + 'Tila: 1-2 Opus local -eralla 19.9.2026, 3 ja 5 voimassa heti.',
+          + 'Tila: 1-2 Opus local -eralla 19.9.2026, 3 ja 5 voimassa heti.'
+          + ' AVAINSAANTO (Fable 21.9.2026, omistaja: avaimia ei kierrateta): avaintiedostoja (~/.zshrc ym.) ei koskaan tulosteta - ei cat/head/less/echo $AVAIN; vain nimet: grep -o "^export [A-Z_]*" ~/.zshrc, arvot luetaan source-komennolla hiljaa. Rikkomus kirjataan lokiin ja omistajalle.',
         'VAIKEAT NYKYAIHEET (omistaja 20.8.2026): Pöllö vastaa '
           + 'asiallisesti suoriin kysymyksiin vaikeista nykyaiheista '
           + '(esim. "miksi Mosul on tuhoutunut", "onko siellä elämää '
@@ -2089,6 +2090,14 @@ export const RAAMATTU = {
           + 'LIUSKAA, #KARTTAUUDISTUKSEN PAATOKSET 27: SAMAN AIHEEN NOSTOT YHDEKSI '
           + 'MERKIKSI, VIUHKA KLIKATTAESSA, #MAAT ILMAN PELIKAUPUNKIA SAAVAT '
           + 'PELIKAUPUNGIN.',
+        'NIMIÖIDEN VAKAUS — GOOGLE EARTHIN MALLI (Fable 21.9.2026, omistajan havainto v1985: '
+          + 'nostot pomppivat panoroidessa): nimiö ei liiku eleen aikana. Asento valitaan '
+          + 'ankkurin ympäriltä kerran lepotilassa (8 ehdokasasentoa karttakoordinaateissa) ja '
+          + 'pidetään; eleen aikana lappu vain seuraa ankkuria, reunan yli saa mennä. Törmäys '
+          + 'ratkaistaan näkyvyydellä, ei siirrolla: heikompi häivytetään ja palaa kun tilaa on; '
+          + 'prioriteetti kiinteä (taso 1 > kaupunki > taso 2 > taso 3). Päätökset vasta eleen '
+          + 'päätyttyä (~150 ms) ja zoomiportaittain, hystereesi estää vilkkumisen. Ykköstaso ei '
+          + 'häivy eikä vaihda asentoa. Loki: paatokset-2026-09.md#OMISTAJA v1985 VAKAVUUS 1.',
         'NOSTOT KARTALLA JA NIIDEN SISÄLTÖ (15.–20.9.2026): kohdemaalle ei '
           + 'merkkikattoa — kaikki nostot ja kaupungit piirtyvät heti saapuessa, '
           + 'muiden maiden merkit katon (21) alla; lisäkaupunkien nimiö n. 11–12 px '

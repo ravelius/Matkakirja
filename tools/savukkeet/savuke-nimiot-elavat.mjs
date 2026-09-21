@@ -223,8 +223,15 @@ for (const ruutu of RUUDUT) {
    * 69, nimiä 2 ja 2. Raja on puolivälissä, jotta kytkimen putoaminen
    * (takaisin 21/40) näkyy eikä ladonnan pieni vaihtelu kaada.
    */
-  const nimioRaja = ruutu.width >= 1000 ? 55 : 32;
-  vaadi(`${tunnus}: 2. nimiöllisiä eläviä nostoja ≥ ${nimioRaja} (prep ${ruutu.width >= 1000 ? 40 : 21}) ja kaupunkien nimiä yhä`,
+  /*
+   * NÄKYVYYSMALLI (21.9.2026, nimiöt vakaat): sovittelu ei enää siirrä
+   * lappuja ±6/24 px vaan häivyttää heikomman, ja reunan tuntumassa
+   * oleva ikoni jää ilman nimiötä. Mitattu 390 px 23, 1400 px 54
+   * (vanha malli 36 ja 69). Raja on puolivälissä prepin (21/40) ja
+   * mitatun välillä, jotta kytkimen putoaminen näkyy.
+   */
+  const nimioRaja = ruutu.width >= 1000 ? 47 : 22;
+  vaadi(`${tunnus}: 2. nimiöllisiä eläviä nostoja ≥ ${nimioRaja} (prep ${ruutu.width >= 1000 ? 40 : 21}, näkyvyysmalli ${ruutu.width >= 1000 ? 54 : 23}) ja kaupunkien nimiä yhä`,
     saapuminen.nimiollisia >= nimioRaja && saapuminen.nimia >= 1,
     JSON.stringify({ nimiollisia: saapuminen.nimiollisia, nimia: saapuminen.nimia }));
   /*

@@ -165,7 +165,7 @@ test('piste vain nimen kanssa: pistekerros lukee nimettyjen joukon; kehittäjän
   assert.match(lauta, /if \(heti\) ladoLevossa\(\);/);
   assert.ok(!/liikkeenLadonta/.test(lauta), 'liikkeen ladonnan lippu on poistettu');
   assert.ok(!/^\s+levossa: /m.test(lauta), 'nimiladonta ei enää saa levossa-lippua');
-  assert.match(lauta, /lepoAjastin = setTimeout\(ladoLevossa, viiveMs\);/);
+  assert.match(lauta, /lepoAjastin = setTimeout\(ladoLevossaLevossa, viiveMs\);/);
   // Nostot ensin, nimikatto laskee kun nostoja on; kokonaiskatto 60.
   // 60 poltetuilla nimiöillä; 180 kun kohdemaan nimiöt ovat elävinä
   // (js/laattapyramidi.js KOHDEMAAN_NIMIOT_ELAVINA, 20.9.2026).

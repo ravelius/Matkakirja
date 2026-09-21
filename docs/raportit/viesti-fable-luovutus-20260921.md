@@ -1,13 +1,13 @@
 # Fablen luovutus 21.09.2026 klo 01.31 (sessio 20.9. klo 17.57 → 21.9. yö)
 
 ## Tila
-- Tuotannossa **v1983** (20.9. 23.14). Tänä sessiona julkaistu v1981–v1983.
-- **v1984 PR #2636 KIINNI**: kaupunkimerkin napautus ei avaa liuskaa hitaalla koneella
+- Tuotannossa **v1985** (21.9. 06.10). Tänä sessiona julkaistu v1981–v1985. v1984 (04.47): nostokortti 2, kaupunkiliuskan lepotesti, liftauszoomin juurisyy, Camargue, astro-palkit, kartuscha 9 maata, huntu liikkeen ajan + kameraloki. v1985: osoitin pallo 20260921a + pyramidi 2026-09-21-* (poltto), nostotasot elävissä nimiöissä, luettelo ämpärissä.
+- (Ratkaistu) v1984 PR #2636 oli kiinni: kaupunkimerkin napautus ei avaa liuskaa hitaalla koneella
   (kuormavika prepissä, ei nostokortti-2:n) → Pelikoodari korjaa liuskan
   (pelikoodari-v1984-kaupunkipopup). Mukaan v1984:ään: nostokortti-2, liftauszoomin
   juurisyykorjaus 02b5cb86 (korvaa hotfixin), camargue, astro-palkit,
   kartuscha-vajaat-maat. CI vasta polton jälkeen (sama Mac).
-- **POLTTO KÄYNNISSÄ** (Karttaseppä): koko pyramidi 2026-09-21-{pohja,viivat,ranta,nostot,
+- **POLTTO TEHTY JA JULKAISTU v1985:ssä** (Karttaseppä): koko pyramidi 2026-09-21-{pohja,viivat,ranta,nostot,
   nimiot}, pallo 20260921a. Sisältö: joet pohjaan, GSHHG-rantaviiva (kehä+täyttö+vektorit
   samasta lähteestä → kaksoisviiva pois), syvyysvyöhykkeet + tumma rannikkoviivoitus,
   Codexin laivat (vesiraja) ja kompassiruusut, 1873-maakunnat ja meret kapiteelein (FRA;
@@ -27,7 +27,7 @@
 - Sisältökirjuri (sonnet): PYSÄHTYNYT sovitusti. Seuraavaksi iso ajo: kuvattomat 198 (Commons ensin,
   loput Codex-lista havainnekuvat-codexille-20260921.md), FRA siivous, BEL/SVK/SVN/CYP/MLT täydennys,
   muu Eurooppa 30:een, visat 1/3:aan joka maassa (oikea osuus 21 %).
-- Laitetestaaja (sonnet): kierros 21 kun v1984/v1985 tuotannossa; iPad-simulaattori vaatii omistajan
+- Laitetestaaja (sonnet): kierros 21 v1985:lle käynnissä; iPad-simulaattori vaatii omistajan
   klikkauksen sen sessiossa.
 - Raamatunkarsija (opus): tehtävä valmis, voi sulkea.
 
@@ -45,3 +45,7 @@
 - Nostostandardi: EU 40–50, pienet ≥ 15, muu Eurooppa 30; joka nostolla kuva; visa ≥ 1/3.
 - Huntu pysyy nappulan liikkeen ajan, lähtö- ja kohdemaa vapaina.
 - Uusi moduuli → build-standalone MODULES + sw.js.
+
+## Lisäys 21.9. aamu
+- Avainten arvot tulostuivat vahingossa Julkaisijan transkriptiin (ei repoon); omistaja: ei kierrätystä. AVAINSAANTO Raamatun MAC STUDIO -kohdassa.
+- Nimiötason uusintapoltto ESP/ITA/DEU (Latium→Lazio, Kantabria pois) odottaa Karttaseppää; taso-3-luokittelu puuttuu datasta.

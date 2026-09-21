@@ -472,9 +472,11 @@ for (const ruutu of RUUDUT) {
           domErot.push(`${lappu.nimi}: sovittelu ${lappu.puoli} ${lappu.dx},${lappu.dy} / ruutu ${domPuoli} ${tx},${ty}`);
         }
       }
-      const domNimiollisia = [...document.querySelectorAll('.pallolauta-nosto:not(.pallolauta-poistuu) .nostosym-rasteri')]
+      // Häivytetty nimiö on yhä DOMissa (nimiöt vakaat, 21.9.2026):
+      // vain näkyvät nimiörasterit lasketaan.
+      const domNimiollisia = [...document.querySelectorAll('.pallolauta-nosto:not(.pallolauta-poistuu) .pallolauta-nosto-siirto:not(.nostosym-nimio-piilossa) .nostosym-rasteri')]
         .filter((i) => i.dataset.nimio).length;
-      const camargue = [...document.querySelectorAll('.pallolauta-nosto:not(.pallolauta-poistuu) .nostosym-rasteri[data-nimio*="Camargue"]')]
+      const camargue = [...document.querySelectorAll('.pallolauta-nosto:not(.pallolauta-poistuu) .pallolauta-nosto-siirto:not(.nostosym-nimio-piilossa) .nostosym-rasteri[data-nimio*="Camargue"]')]
         .map((i) => { const r = i.getBoundingClientRect(); return { n: i.dataset.nimio, x0: r.left, y0: r.top, x1: r.right, y1: r.bottom }; });
       const camargueLimittyy = camargue.length === 2 && limittyy(camargue[0], camargue[1]);
       let viuhka = null;
