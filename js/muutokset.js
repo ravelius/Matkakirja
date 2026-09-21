@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1992, teksti: 'Hiomassa-linssi ja optikon hyvitys' },
   { v: 1991, teksti: 'Nimioiden sulavuusmittari E1' },
   { v: 1990, teksti: 'Laattapyramidin sulavuus E1: kangas ja työsäikeen naulaus' },
   { v: 1989, teksti: 'v1989: Kartan pieni liike; pollon Matkakirja-linkit' },
