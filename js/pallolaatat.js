@@ -849,6 +849,27 @@ export const LAATTAKERROS_LAATTAKATTO_TUKI = 16;
  * tavallisen laatan takana varmasti, ei jänteen varassa.
  */
 export const LAATTAKERROS_TUKI_SYVYYSSIIRTO = -4;
+/*
+ * SYVYYSSIIRTO TASON MUKAAN (21.9.2026, omistajan tuotantokaappaus v1997
+ * Ranska z6: meri laikukas Biskajalla, vaaleammat alueet päättyvät
+ * suoriin laatan reunoihin). Kun karkeampi laatta jää sceneen
+ * (näkymää laajempi, ei kokonaan peitossa) ja sen päällä on nykyisen
+ * tason laatta, syvyysero on vain jänteen painuma — syvyyspuskurin
+ * tarkkuuden rajoilla, ja koko laatan ala saattoi voittaa hienomman:
+ * karkean laatan meri (eri kohinan mittakaava) näkyi suorareunaisena
+ * laikkuna. Nyt jokainen scenen laatta saa siirron ASEMANSA mukaan
+ * (`laatanSyvyyssiirto`): nykyinen taso −8, sitä hienommat −10
+ * (edelleen −12:n eli vektorien ja kalvojen takana), karkeammat −6 ja
+ * tuki −4. Kokonaiset yksiköt eivät jää painuman varaan.
+ */
+export const LAATTAKERROS_SYVYYSSIIRTO_HIENOMPI = -10;
+export const LAATTAKERROS_SYVYYSSIIRTO_KARKEAMPI = -6;
+/** Laatan polygonOffsetUnits sen suhteesta valittuun tasoon. */
+export function laatanSyvyyssiirto(t, valittuZ) {
+  if (t?.tuki) return LAATTAKERROS_TUKI_SYVYYSSIIRTO;
+  if (!Number.isFinite(valittuZ) || !Number.isFinite(t?.z) || t.z === valittuZ) return LAATTAKERROS_SYVYYSSIIRTO;
+  return t.z > valittuZ ? LAATTAKERROS_SYVYYSSIIRTO_HIENOMPI : LAATTAKERROS_SYVYYSSIIRTO_KARKEAMPI;
+}
 /** Ennakon katto muistista: näin monta laattaa jätetään tavukatosta vapaaksi. */
 export const LAATTAKERROS_ENNAKKO_MUISTIVARA = 4;
 /** Näkyviä laattoja enintään: tätä isompi määrä pudottaa tason karkeammaksi. */
@@ -2970,7 +2991,7 @@ export function luoLaattakerros({
       const materiaali = new luokat.LaattaMateriaali({
         map: tekstuuri, transparent: true, opacity: 0, depthWrite: true,
         polygonOffset: true, polygonOffsetFactor: 0,
-        polygonOffsetUnits: t.tuki ? LAATTAKERROS_TUKI_SYVYYSSIIRTO : LAATTAKERROS_SYVYYSSIIRTO,
+        polygonOffsetUnits: laatanSyvyyssiirto(t, taso?.z),
         /*
          * Astronautin laastarin aukko (MERIVARI → alfa 0) ei saa kirjoittaa
          * syvyyttä: laastari piirtyy ENNEN pohjapalloa (renderOrder), ja
@@ -3737,6 +3758,12 @@ export function luoLaattakerros({
     mittarit.nakyviaTaysin = nakyviaTaysin;
     mittarit.ennakkoja = ennakko.size;
     mittarit.tukia = tuet.size;
+    // Syvyyssiirto aseman mukaan joka päivityksellä: taso vaihtui tai laatta vaihtoi roolia.
+    for (const t of laatat.values()) {
+      if (!t.materiaali) continue;
+      const siirto = laatanSyvyyssiirto(t, valittu.z);
+      if (t.materiaali.polygonOffsetUnits !== siirto) t.materiaali.polygonOffsetUnits = siirto;
+    }
     mittarit.pidettyja = pidettyjaN;
     mittarit.tila = 'nakyy';
     mittarit.taso = valittu.z;
