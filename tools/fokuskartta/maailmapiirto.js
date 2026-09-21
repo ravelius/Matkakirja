@@ -1660,6 +1660,47 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
     });
   }
 
+  /* ============================================ 9. VALTAMERTEN KORISTEET
+   *
+   * (Karttaseppä 21.9.2026 ilta, omistajan toive 20.9.: *"veneitä
+   * useampaan paikkaan"*; Codexin käsin piirretyt laivat ja
+   * kompassiruusut assets/koristeet/meri.) Ne ovat ARKIN KALUSTEITA
+   * kuten merten nimet ja ruusu, ja siksi POHJASSA: pohja on ainoa
+   * kerros, jonka pallo näyttää joka tilassa — yleiskuva lukee pallon
+   * sarjaa (tee-pallolaatat) ja lepo lepokerrosta, ja molemmat alkavat
+   * pohjalaatasta. Nimiötasolla ne katoaisivat yleiskuvasta ja
+   * viivatasolla levosta (jokitaso korvaa sen pallolla).
+   *
+   * Rivi (tyyli.koristeet, generaattorin --koristeet <json>):
+   *   { kuva, lon, lat, kokoPx, kierto?, tasot?: [z, …] }
+   * KOKO ON LAATAN PIKSELEITÄ EIKÄ KARTAN MITTAA: pallo valitsee tason
+   * laitepikseleistä (retina-työpöytä lukee maailmankuvaan z4–z5,
+   * puhelin z1–z2), joten vakio laattapikselikoko on vakio ruutukoko
+   * kaikilla laitteilla — sama syy kuin nostonimiöiden mitoituksella.
+   * `tasot` harventaa uloimmilta tasoilta (z1 vain isot laivat ja
+   * ruusut); ilman kenttää rivi piirretään tasoilla z1–z6. Kuvat tulevat
+   * esiladattuina (asetukset.kuvat: polku → Image) kuten nimiötason
+   * kuvakoristeet. Karsinta (generoi umpimeriSavy kohta 5) säästää
+   * laatat, joihin koriste osuu.
+   */
+  const koristeTaso = Math.round(Math.log2(px / KORISTEEN_TASO0_PX));
+  for (const k of tyyli.koristeet ?? []) {
+    const tasot = Array.isArray(k.tasot) ? k.tasot : KORISTEEN_OLETUSTASOT;
+    if (!tasot.includes(koristeTaso) || !(k.kokoPx > 0)) continue;
+    const kuva = asetukset.kuvat?.[k.kuva] ?? asetukset.kuvat?.get?.(k.kuva);
+    if (!kuva) continue;
+    const w = k.kokoPx;
+    const h = w * (k.suhde > 0 ? k.suhde : 1);
+    const cx = kuvaX(k.lon);
+    const cy = kuvaY(k.lat);
+    ctx.save();
+    ctx.translate(cx, cy);
+    if (k.kierto) ctx.rotate((Number(k.kierto) || 0) * Math.PI / 180);
+    if (laivakuva(k)) piirraLaivaVedessa(ctx, kuva, w, h);
+    else ctx.drawImage(kuva, -w / 2, -h / 2, w, h);
+    ctx.restore();
+  }
+
   /* =========================================== 8b. PYSYVÄT VIIVAT
    *
    * Joet ja isoisän reittiverkosto poltetaan laattoihin (Raamattu,
@@ -4276,6 +4317,7 @@ export function pienkapiteelienOsat(teksti) {
 }
 
 export function nimiotasonLadonta(nimio, z, kaava, px, mittaa) {
+  if (!nimioTasolla(nimio, z)) return null;
   if (nimio.luokka === 'raja') {
     const leveys = RAJAN_LEVEYDET[z];
     const viivat = Array.isArray(nimio.viivat) ? nimio.viivat.filter((v) => Array.isArray(v) && v.length > 1) : [];
@@ -4380,7 +4422,20 @@ export function nimiotasonLadonta(nimio, z, kaava, px, mittaa) {
  * drawImage keskipisteen ympäri kierrettynä. Metadataan kirjataan
  * luokka 'kuva' ja tiedosto, jotta Pelikoodari tunnistaa koristeen.
  */
+/** Pohjan koristeet (piirraMaailma osio 9): tason 0 tarkkuus px/lautayksikkö ja oletustasot. */
+export const KORISTEEN_TASO0_PX = 675 / 12000;
+export const KORISTEEN_OLETUSTASOT = Object.freeze([1, 2, 3, 4, 5, 6]);
 export const KUVAN_KOKOKERROIN = Object.freeze({ 4: 0.3, 5: 0.42, 6: 0.65, 7: 1, 8: 1.45 });
+/*
+ * NIMIÖN OMAT TASOT (Karttaseppä 21.9.2026 ilta): rivin kenttä
+ * `tasot: [z, …]` rajaa, millä pyramidin tasoilla rivi ladotaan. Ilman
+ * kenttää rivi ladotaan tasoilta z ≥ 4 kuten tähän asti (nimiötaso
+ * alkoi z4:stä). Valtamerten koristeet eivät kulje tätä kautta vaan
+ * pohjan kalusteina (piirraMaailma osio 9, tyyli.koristeet).
+ */
+export function nimioTasolla(nimio, z) {
+  return Array.isArray(nimio?.tasot) ? nimio.tasot.includes(z) : z >= 4;
+}
 
 export const KORISTEEN_KOOT = Object.freeze({
   kompassi: { 4: 28, 5: 40, 6: 56, 7: 80, 8: 110 },

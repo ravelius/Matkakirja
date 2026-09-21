@@ -4646,6 +4646,32 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
   opacity: 0.85;
 }
 
+/*
+ * HIOMASSA OPTIKOLLA (omistaja 21.9.2026; js/linssit/rekisteri.js
+ * HIOMASSA): omistettu mutta toteuttamaton linssi samalla harmaalla
+ * rivillä kuin keskeneräiset, ilman aktivointia. VALMISTUI-MERKKI:
+ * pieni kultainen täplä valmiin linssin kulmassa, kunnes ruutua on
+ * napautettu (js/ui.js esikatseleLinssi → omistus.js merkitseNahdyksi).
+ */
+.passport-card .linssi-valikko .linssi-liuskat-hiomassa button.hiomassa {
+  filter: grayscale(1) contrast(0.85);
+  opacity: 0.55;
+  cursor: help;
+}
+.passport-card .linssi-valikko .linssi-liuskat button.valmistui { position: relative; }
+.passport-card .linssi-valikko .linssi-liuskat button.valmistui::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #c9a227;
+  border: 2px solid #f5f0e2;
+  box-shadow: 0 0 0 1px rgba(70, 51, 31, 0.35);
+}
+
 /* Valitun varusteen nimi ja kuvaus liuskojen alla: keskitetty kuten
    tavaroiden selitteet, ja laukun oma muste. */
 .passport-card .linssi-tiedot { padding-top: 0.6rem; text-align: center; }
@@ -25350,6 +25376,15 @@ body.infotaulu-auki .toimintorivi .monitoimi-nappi {
  */
 .nostosym-nimiokuva { transition: opacity 180ms ease-out; }
 .nostosym-nimio-piilossa .nostosym-nimiokuva { opacity: 0; }
+/*
+ * KYLKI VAIHTUU HÄIVYTTÄMÄLLÄ (KARTAN SULAVUUS ENSIN, erä E3;
+ * js/pallolauta/nostot.js asetteleNosto): vanha kylki häipyy
+ * (.nostosym-nimio-vanha) ja uusi tulee (.nostosym-nimio-tulee →
+ * luokka pois seuraavassa kehyksessä → opacity 1 samalla 180 ms:n
+ * siirtymällä). Nimiö ei liu'u pisteen yli. Reduced motion: heti.
+ */
+.nostosym-nimiokuva.nostosym-nimio-vanha,
+.nostosym-nimiokuva.nostosym-nimio-tulee { opacity: 0; }
 @media (prefers-reduced-motion: reduce) {
   .nostosym-nimiokuva { transition: none; }
 }
@@ -26382,6 +26417,34 @@ svg.rough-annotation { pointer-events: none; }
 .pallolauta-nosto svg,
 .pallolauta-piste svg { display: block; overflow: visible; }
 .pallolauta-nimi-siirto { transition: transform 250ms ease-in-out; }
+/*
+ * KOKO LIUKUU JOKA KEHYKSESSÄ (js/pallolauta/nimet.js, erä E2): kotelon
+ * `--nimiokerroin` (kameran mittakaava / ladonnan mittakaava, pallon
+ * kehyskoukusta) skaalaa merkin SVG-KUOREN merkin omasta pisteestä;
+ * sisäryhmien style.transform ja font-size pysyvät ladonnan pohjana.
+ * Katto (PAATOKSET 31 kohta 2) tulee merkin omista muuttujista:
+ * näytetty mitta = pohja · min(kerroin · a, b) = min(raaka · kerroin, katto).
+ */
+.pallolauta-nimi > svg,
+.pallolauta-nosto > svg,
+.pallolauta-turisti-info > svg {
+  transform-origin: 0 0;
+  transform: scale(min(calc(var(--nimiokerroin, 1) * var(--nimio-a, 1)), var(--nimio-b, 1e9)));
+}
+/* Ruutuvakioiset nostot (?nostokoko=0) eivät liu'u; nimet liukuvat silti. */
+.pallolauta-nostot-ruutuvakio .pallolauta-nosto > svg,
+.pallolauta-nostot-ruutuvakio .pallolauta-turisti-info > svg { transform: none; }
+/*
+ * Siirtymät pois liikkeen ajaksi: ladonnan pohja ja kuori vaihtuvat
+ * samassa kehyksessä, eikä pohja saa liukua perässä (nimet.js
+ * SIIRTYMÄT POIS LIIKKEEN AJAKSI). Luonnoksen opacity/filter jäävät.
+ */
+.pallolauta-liikkuu .pallolauta-nimi-siirto,
+.pallolauta-liikkuu .pallolauta-aihemerkki-siirto,
+.pallolauta-liikkuu .pallolauta-turisti-info-siirto { transition: none; }
+.pallolauta-liikkuu .pallolauta-nosto .pallolauta-nosto-siirto {
+  transition: opacity 600ms ease-out, filter 600ms ease-out;
+}
 
 /*
  * LISTAN ALLE JÄÄNYT MUSTE PIILOUTUU LISTAN AJAKSI (Raamattu,
@@ -27595,52 +27658,52 @@ body.aikajana-paalla .pollo-nappi.pollo-kelluu.livia-kasvot-valmis { width:48px;
  * ruudulle, pitää kartta selite nappia siirtää hieman vasemmalle.
  * Uusi nappi saisi olla saman korkuinen kuin kartta selite."*
  *
- * RAJA ON KORKEUS EIKÄ ORIENTAATIO. `orientation: landscape` on tosi
- * myös leveällä työpöydällä, jossa palkille on tilaa yllin kyllin —
- * ongelma on matala ruutu. 520 px on pelin oma vaakapuhelinraja
- * (sama kuin .intro-tyopoyta yllä), joten uusi sääntö ei tuo peliin
- * uutta taitekohtaa.
+ * RAJA ON ORIENTAATIO (omistaja 21.9.2026, Raamatun loki "BUGI: IPADIN
+ * YLAPALKKI POISSA MYOS PYSTYASENNOSSA"): yläpalkki piilotetaan VAIN
+ * VAAKA-ASENNOSSA iPhonella ja iPadilla; pystyasennossa palkki on aina
+ * näkyvissä. Kun palkki näkyy, valikon kuvake on tavallinen
+ * hampurilainen; vain kun palkkia ei ole, kartalla kelluu kolmen
+ * väkäsen nappi. Tämä korvaa 18.9.2026 säännön (Raamattu,
+ * KARTTAUUDISTUKSEN PAATOKSET 43 kohta 9: *"Ylapalkin voisi piilottaa
+ * myos ipadilla niin kuin iphonella on"*), joka toteutettiin ehdolla
+ * `(pointer: coarse) and (min-width: 700px) and (max-width: 1366px)`
+ * — se osui iPadiin MOLEMMISSA suunnissa, ja siksi iPad pysty
+ * (834 × 1194) oli ilman palkkia. Tässä lohkossa luki aiemmin "raja on
+ * korkeus eikä orientaatio"; se ei enää päde.
  *
- * Nappi on olemassa DOM:ssa aina (js/ylapalkki-vaaka.js), mutta
- * näkyy vain tässä. Niin moduulin ei tarvitse mitata ruutua eikä
- * kuunnella koon muutoksia: sama raja on yhdessä paikassa.
+ * KAKSI EHTOA, MOLEMMAT VAAKASUUNNAN:
  *
- * ── SAMA KÄYTÖS IPADILLA, MOLEMMISSA SUUNNISSA ────────────────────
- * (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 43 kohta 9; omistaja
- * 18.9.2026 sanatarkasti: *"Ylapalkin voisi piilottaa myos ipadilla
- * niin kuin iphonella on."*)
+ *   (orientation: landscape) and (max-height: 520px)
+ *       vaakapuhelin (844 × 390) ja matala vaakaikkuna — 520 px on
+ *       pelin oma vaakapuhelinraja (sama kuin .intro-tyopoyta yllä).
+ *   (orientation: landscape) and (pointer: coarse) and (max-width: 1366px)
+ *       vaaka-iPad kosketuksella (1133 × 744 … 1366 × 1024). Työpöytä
+ *       (hiiri, `pointer: fine`) ei osu kumpaankaan missään
+ *       ikkunakoossa, joten se jää täsmälleen ennalleen. Pysty-iPad
+ *       (744 × 1133 … 1024 × 1366) ja pystypuhelin ovat `portrait`
+ *       eivätkä osu: palkki näkyy, väkäsnappi ei.
  *
- * IPADIN KUMPIKAAN SUUNTA EI OLE MATALA RUUTU: 1024 × 1366 ja
- * 1366 × 1024 ovat molemmat yli 520 px korkeita, joten pelkkä
- * korkeusraja ei tavoita niitä. Toinen ehto on siksi LAITELAATU JA
- * LEVEYS, ei orientaatio:
- *
- *   pointer: coarse   — sormi, ei hiiri. Työpöytä (1400 × 900 hiiri)
- *                       on `pointer: fine` eikä osu tähän missään
- *                       ikkunakoossa, joten se jää täsmälleen
- *                       ennalleen.
- *   min-width: 700px  — pelin oma puhelinraja on `max-width: 699px`
- *                       (ks. PUHELIN: ISOISÄN JA PULUN TEKSTIT
- *                       PIILOON alla). Pystypuhelin jää siis
- *                       ennalleen: siellä palkki mahtuu ja omistaja
- *                       pyysi muutosta vaakaan ja iPadiin, ei
- *                       pystypuhelimeen. Vaakapuhelin (844 × 390)
- *                       osuu yhä ylempään korkeusehtoon.
- *   max-width: 1366px — iPad Pro 12,9" on vaakasuunnassa laajin
- *                       iPad (1366 px). Sitä leveämpi kosketusnäyttö
- *                       on jo työpöytäluokan ruutu, jossa palkille
- *                       on tilaa.
- *
- * Mitatut laitteet rajan sisällä: iPad mini 744 × 1133 / 1133 × 744,
- * iPad 10,9" 820 × 1180 / 1180 × 820, iPad Pro 12,9" 1024 × 1366 /
- * 1366 × 1024. Nappi, sen paikka, karttaselitteen väistö ja
- * sulkusääntö ovat samat kaikissa — sääntölohko on yksi eikä kahta
- * taitekohtaa synny.
+ * Nappi on olemassa DOM:ssa aina (js/ylapalkki-vaaka.js), mutta näkyy
+ * vain tässä lohkossa — sama lohko piilottaa palkin ja näyttää napin,
+ * joten "palkki näkyvissä väkäsillä" ei voi syntyä: kumpikin seuraa
+ * yhtä ja samaa media-kyselyä. Moduulin ei tarvitse mitata ruutua
+ * eikä kuunnella koon muutoksia: raja on yhdessä paikassa.
  */
 .ylapalkki-nappi { display: none; }
+/*
+ * LINSSIN OMA YLÄPALKKI ON YLÄPALKKI (omistaja 21.9.2026): kun
+ * aikajanalinssi (keksinnöt, Ihmisen matka) korvaa Matkakirjan
+ * yläpalkin omallaan (css/aikajana.css body.aikajana-palkki-auki
+ * .topbar), ruudulla ON palkki ja sen valikko on hampurilainen
+ * (js/aikajana-valikko.js) — kelluvaa väkäsnappia ei silloin ole
+ * missään asennossa. Ennen tätä vaaka-asennossa näkyi linssin palkki
+ * JA sen alla väkäsnappi, joka avasi näkymättömäksi kutistetun pelin
+ * palkin: juuri se "yläpalkki, jossa on väkäset".
+ */
+body.aikajana-palkki-auki .ylapalkki-nappi { display: none; }
 
-@media (max-height: 520px),
-  (pointer: coarse) and (min-width: 700px) and (max-width: 1366px) {
+@media (orientation: landscape) and (max-height: 520px),
+  (orientation: landscape) and (pointer: coarse) and (max-width: 1366px) {
   /*
    * Palkki pois asettelusta, ei vain näkyvistä: `.app` on grid, jonka
    * ensimmäinen rivi on palkki. Pelkkä visibility jättäisi rivin
