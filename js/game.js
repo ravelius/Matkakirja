@@ -157,6 +157,7 @@ export const XP_HARD_ANSWER = 25;
 export const XP_STAR = 100;
 export const XP_PUZZLE = 25; // isoisän luonnoskirjan pulma ratkaistu
 export const XP_KELLOT = 20; // Kellot-linssin arvaus oikein (Livian kysymys)
+export const XP_LIPPUARVAUS = 20; // Lippuarvaus-linssin arvaus oikein (Livian kysymys)
 export const XP_EXPLORE = 15; // kaupungin tutkiminen ilman laattaa
 export const EXPLORE_REWARD = 50; // löytöpalkkio oikeasta tutkimisvastauksesta
 export const KAARI_YRITYKSET = 2; // kohtaamista saa yrittää näin monta kertaa
@@ -1193,6 +1194,25 @@ export class Game {
       icon: 'suurennuslasi', sub: kaupungit, tilanne: 'peli.kellot.oikein',
     });
     return XP_KELLOT;
+  }
+
+  /**
+   * LIPPUARVAUS (Fable 21.9.2026, toinen leikkilinssi): Livia näyttää
+   * lipun ja neljä maan nimeä; oikea tuo XP_LIPPUARVAUS tp, väärä ei
+   * mitään. Sama kaava kuin Kelloissa (js/linssit/lippuarvaus.js).
+   */
+  vastaaLippuarvaukseen(player, oikein, { maa = '' } = {}) {
+    if (!player || this.phase === 'over') return 0;
+    if (!oikein) {
+      this.say(player.id, `${player.name} arvasi lipun väärin (${maa}).`);
+      return 0;
+    }
+    this.awardXp(player, XP_LIPPUARVAUS);
+    this.say(player.id, `${player.name} tunnisti lipun (${maa}): +${XP_LIPPUARVAUS} tp.`);
+    this.emit('aid', `Lippu tunnistettu: +${XP_LIPPUARVAUS} tp`, {
+      icon: 'suurennuslasi', sub: maa, tilanne: 'peli.lippuarvaus.oikein',
+    });
+    return XP_LIPPUARVAUS;
   }
 
   /**
