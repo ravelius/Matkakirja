@@ -309,7 +309,7 @@ if (!kohdekansio || kohdekansio.startsWith('--')) {
     + '[--nostotaso --nostoversio <v> [--nostomaa <ISO>] [--ilman-hahmotelmia [--polta-hahmotelmat t,t]] [--nostotasot <json>]] '
     + '[--nimiotaso --nimioversio <v> [--nimiot <json>] [--nimiot-aika pysyva]] '
     + '[--viivataso --viivaversio <v> [--eipiirit] [--eireitit] [--eirajat] [--eijoet]] '
-    + '[--vesiviivoitus tihea|harva] [--syvyysportaat m,m,…] [--syvyyskayrat m,m,… [--syvyyskayrapeitto 0.55]] [--resepti-json <json>] [--joet-pohjaan] '
+    + '[--vesiviivoitus tihea|harva] [--syvyysportaat m,m,…] [--syvyyskayrat m,m,… [--syvyyskayrapeitto 0.55]] [--syvyyskohina lauta] [--resepti-json <json>] [--joet-pohjaan] '
     + '[--rantataso --rantaversio <v>] [--ilman-rantaviivaa] '
     + '[--vari <ISO> --variversio <v> [--aluevesi <yksikköä>] '
     + '[--paletti murrettu|taysvari|tasoitus] [--vesi <0..1>] [--feidaus <0..1>] '
@@ -999,6 +999,8 @@ const SYVYYSKAYRAT = valitsin('syvyyskayrat', null)
   ? valitsin('syvyyskayrat', null).split(',').map(Number).filter((v) => v > 0) : null;
 /** `--syvyyskayrapeitto 0.55` — isobaattiviivan peitto. */
 const SYVYYSKAYRAPEITTO = Number(valitsin('syvyyskayrapeitto', 0.55));
+/** `--syvyyskohina lauta` — vyöhykerajan kohina laudan yksiköissä (sama kuvio joka tasolla). */
+const SYVYYSKOHINA_LAUDALLA = valitsin('syvyyskohina', 'pikselit') === 'lauta';
 const VESIVIIVOITUS_VALINTA = valitsin('vesiviivoitus', null);
 const RESEPTI_JSON = valitsin('resepti-json', null);
 if (VESIVIIVOITUS_VALINTA && !VESIVIIVOITUKSET[VESIVIIVOITUS_VALINTA]) {
@@ -3744,6 +3746,7 @@ for (const { mitat, bx, by } of lohkot.values()) {
     // Isobaatit viivoina (koe 21.9.2026).
     syvyysKayrat: SYVYYSKAYRAT,
     syvyysKayraPeitto: SYVYYSKAYRAPEITTO,
+    syvyysKohinaLaudalla: SYVYYSKOHINA_LAUDALLA,
   };
   /*
    * Patinan `maailma` on kankaan bbox LAUDAN koordinaateissa: siitä
@@ -3865,6 +3868,7 @@ function teeLuettelo() {
   // näkee mitä ajettiin; peli ei lue kenttää.
   ...(SYVYYSPORTAAT ? { syvyysPortaat: SYVYYSPORTAAT } : {}),
   ...(SYVYYSKAYRAT ? { syvyysKayrat: SYVYYSKAYRAT, syvyysKayraPeitto: SYVYYSKAYRAPEITTO } : {}),
+  ...(SYVYYSKOHINA_LAUDALLA ? { syvyysKohina: 'lauta' } : {}),
   ...(Object.keys(PATINA_MUUTOS).length ? {
     patinaMuutos: {
       ...(VESIVIIVOITUS_VALINTA ? { vesiviivoitus: VESIVIIVOITUS_VALINTA } : {}),

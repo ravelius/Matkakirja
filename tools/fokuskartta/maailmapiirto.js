@@ -600,7 +600,19 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
     syvyysKayrat = null,
     syvyysKayraMuste = [64, 78, 104],
     syvyysKayraPeitto = 0.55,
+    /*
+     * SYVYYSKOHINA LAUDAN YKSIKÖISSÄ (omistajan havainto 21.9.2026 ilta,
+     * v2000: *"merellä laikukasta möhnää … vilkkuu zoomatessa"*).
+     * Vyöhykerajan aaltoilu laskettiin tason PIKSELEISSÄ, joten z6:n ja
+     * z7:n laikkukuvio oli eri, ja tason vaihdon häive sekoitti kaksi
+     * kuviota. Laudan yksiköissä kohina on sama joka tasolla (karkea
+     * taso vain näytteistää sen harvemmin) — tason vaihto ei muuta
+     * meren kuviota. Skaala on sama kuin z7:n entinen (30 px / 7,2
+     * px/yksikkö), joten z7 näyttää samalta kuin ennen.
+     */
+    syvyysKohinaLaudalla = false,
   } = asetukset;
+  const SYVYYSKOHINA_YKSIKOT = 30 / 7.2;
   const portaat = Array.isArray(syvyysPortaat) && syvyysPortaat.length
     ? [...syvyysPortaat].map(Number).filter((v) => v > 0).sort((a, b) => a - b) : null;
   const kayrat = Array.isArray(syvyysKayrat) && syvyysKayrat.length
@@ -1102,7 +1114,9 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
         if (vesi) {
           // --- meri: syvyysvyöhykkeet, raja aaltoilee kohinasta ---
           if (!Number.isFinite(m)) m = -900;
-          const n = fbm(KOHINA, gx / (30 * P), gy / (30 * P), 4) - 0.5;
+          const n = (syvyysKohinaLaudalla
+            ? fbm(KOHINA, (origo.x + gx / px) / SYVYYSKOHINA_YKSIKOT, (origo.y + gy / px) / SYVYYSKOHINA_YKSIKOT, 4)
+            : fbm(KOHINA, gx / (30 * P), gy / (30 * P), 4)) - 0.5;
           const mk = m + n * Math.min(150, Math.max(12, -m * 1.25));
           if (vyohykkeet) vyohykkeet[y * W + x] = kayraVyohyke(mk);
           const s = lerpSyvyysAsteikolla(syvyysAsteikko, porrasta(mk));
