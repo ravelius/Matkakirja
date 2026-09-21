@@ -20697,6 +20697,335 @@ export const MAA_KATEGORIAT = {
       },
     },
     {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Bosnian historia on kirjoitettu keskiajan kuninkaiden '
+        + 'sinettiin, sähköraitiovaunun kiskoihin ja hylätyn '
+        + 'bobrata-radan betoniin: sama maa ehti olla kuningaskunta, '
+        + 'kokeilualue ja piiritetty kaupunki.',
+      nostot: [
+        {
+          otsikko: 'Kirje joka on vanhin säilynyt suomalaisittain luettava teksti',
+          aika: '1189',
+          tiedosto: 'Povelja Kulina bana.jpg',
+          teksti: 'Bosnian ensimmäinen tunnettu hallitsija, ban Kulin, '
+            + 'kirjoitutti 29. elokuuta 1189 kauppasopimuksen '
+            + 'Dubrovnikin kaupungin kanssa: Dubrovnikin kauppiaat saivat '
+            + 'liikkua ja käydä kauppaa Bosniassa vapaasti ja turvallisesti. '
+            + 'Asiakirja on kirjoitettu bosančica-nimisellä kyrillisellä '
+            + 'kirjaimistolla tavallisella puhekielellä, ei kirkkoslaavilla, '
+            + 'minkä vuoksi sitä pidetään vanhimpana säilyneenä eteläslaavilaisen '
+            + 'puhekielen valtiollisena asiakirjana. Alkuperäiskappaleesta on '
+            + 'säilynyt keskiaikaisia jäljennöksiä, ja teksti tunnetaan '
+            + 'kokonaisuudessaan niiden ansiosta. Kulinin aikaa pidetään '
+            + 'Bosnian ensimmäisenä rauhan ja vaurauden kautena.',
+          lyhyt: 'Ban Kulinin 1189 kirjoitutettu kauppasopimus Dubrovnikin kanssa on vanhin säilynyt eteläslaavilainen valtionasiakirja.',
+          selite: 'Jäljennös ban Kulinin vuoden 1189 kauppasopimuksesta, '
+            + 'vanhimmasta säilyneestä eteläslaavilaisen puhekielen '
+            + 'valtiollisesta asiakirjasta.',
+          lahde: 'Tuntematon kirjuri, Wikimedia Commons (PD)',
+          wiki: 'Ban Kulinin kirja',
+        },
+        {
+          otsikko: 'Kuningas kruunattiin, ja linna jäi pääkaupungiksi',
+          aika: '1377',
+          tiedosto: 'Bobovac Fortress - panoramio.jpg',
+          teksti: 'Tvrtko I Kotromanić kruunattiin Bosnian kuninkaaksi vuonna '
+            + '1377, ja hänen hallintoaikanaan Bosnian kuningaskunta laajeni '
+            + 'suurimpaan koskaan ulottuvuuteensa. Kuninkaiden pääasiallinen '
+            + 'linnoitus oli Bobovac keskisessä Bosniassa: sinne oli '
+            + 'koottu valtakunnan kruununjalokivet ja kuninkaiden haudat, '
+            + 'eikä sinne johtanut kunnollista tietä turvallisuussyistä. '
+            + 'Bobovac kesti Ottomaanien piirityksiä vuosikymmeniä, kunnes '
+            + 'se kavallettiin vihollisille vuonna 1463 — samana vuonna '
+            + 'Bosnian viimeinen kuningas Stjepan Tomašević vangittiin ja '
+            + 'teloitettiin Jajcessa, ja itsenäinen keskiaikainen Bosnia '
+            + 'lakkasi olemasta.',
+          lyhyt: 'Bobovac oli keskiaikaisen Bosnian kuninkaiden päälinnoitus, kunnes se kavallettiin ottomaaneille 1463.',
+          selite: 'Bobovacin linnanrauniot keskisessä Bosniassa. Linna oli '
+            + 'Bosnian kuninkaiden päälinnoitus, kunnes se kavallettiin '
+            + 'vihollisille vuonna 1463.',
+          lahde: 'Branimir Mlakić, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Bobovac',
+        },
+        {
+          otsikko: 'Raitiovaunu joka kulkee yhä samoja kiskoja',
+          aika: '1885',
+          tiedosto: 'Sarajevo Tram City-Hall.jpg',
+          teksti: 'Itävalta-Unkari otti Bosnian hallintaansa 1878 ja alkoi '
+            + 'nykyaikaistaa Sarajevoa nopeasti: hevosvetoinen raitiovaunu '
+            + 'aloitti liikennöinnin jo 1885, ja se oli yksi tämän osan '
+            + 'Eurooppaa varhaisimmista pysyvistä raitiotiejärjestelmistä. '
+            + 'Rata kulki kaupungintalon eli Vijećnican ohi Miljacka-joen '
+            + 'vartta, ja samalla kaudella kaupunkiin rakennettiin '
+            + 'rautatieasemia, kouluja ja tehtaita. Raitiovaunuliikenne '
+            + 'jatkuu Sarajevossa yhä, ja osa nykyisistäkin reiteistä '
+            + 'kulkee samoja katuja kuin 1800-luvun hevosvaunu.',
+          lyhyt: 'Sarajevo sai hevosvetoisen raitiovaunun 1885 Itävalta-Unkarin nykyaikaistaessa kaupunkia.',
+          selite: 'Historiallinen raitiovaunu Sarajevon kaupungintalon '
+            + 'edustalla Itävalta-Unkarin kaudella.',
+          lahde: 'J. Studnička & Co., Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Bobiradasta tuli tulilinja, sitten graffititaidetta',
+          aika: '1984',
+          tiedosto: 'Trebevic Track 1983 DDR.jpg',
+          teksti: 'Sarajevo isännöi vuoden 1984 talviolympialaisia — '
+            + 'ensimmäisiä, jotka pidettiin sosialistisessa maassa. '
+            + 'Trebević-vuorelle rakennettu bob- ja kelkkarata oli '
+            + 'kisojen näkyvimpiä uutuuksia, betonista valettu 1300 '
+            + 'metrin mittainen kouru vuoren rinteessä. Kymmenen vuotta '
+            + 'myöhemmin, Sarajevon piirityksen aikana 1992–1996, '
+            + 'Trebević oli rintamalinjalla, ja hylätty rata toimi '
+            + 'tykistöasemana kaupunkia kohti. Rata jäi käyttämättömäksi '
+            + 'ja rappeutui, mutta 2000-luvulla siitä tuli suosittu '
+            + 'graffititaiteen näyttämö ja nähtävyys, jonne moni kulkee '
+            + 'yhä kävellen tai polkupyörällä.',
+          lyhyt: 'Trebevićin bobrata rakennettiin 1984 olympialaisiin ja toimi myöhemmin tykistöasemana piirityksen aikana.',
+          selite: 'Trebević-vuoren bob- ja kelkkarata rakennettiin vuoden '
+            + '1984 talviolympialaisia varten.',
+          lahde: 'XVI talviolympialaisten järjestelytoimikunta, Wikimedia Commons (PD)',
+          wiki: 'Vuoden 1984 talviolympialaiset',
+        },
+        {
+          otsikko: 'Ruusu joka ei koskaan kuihdu',
+          aika: '1992–1996',
+          tiedosto: 'Sarajevo Rose (1).jpg',
+          teksti: 'Sarajevon piiritys kesti huhtikuusta 1992 helmikuuhun '
+            + '1996, lähes neljä vuotta — pisin nykyaikaisen sodankäynnin '
+            + 'historiassa tunnettu pääkaupungin piiritys. Kaupungin '
+            + 'jalkakäytyihin jäi kranaatinsirpaleiden repimiä '
+            + 'tähtikuvioita, joihin sodan jälkeen alettiin valaa '
+            + 'punaista hartsia surmansa saaneiden muistoksi. Näitä '
+            + 'muistomerkkejä kutsutaan Sarajevon ruusuiksi, ja niitä on '
+            + 'kaupungin kaduilla yhä kymmeniä. Piirityksen jälkeen '
+            + 'kaupunki rakennettiin uudelleen, mutta ruusut jätettiin '
+            + 'paikoilleen muistuttamaan.',
+          lyhyt: 'Sarajevon piiritys 1992–1996 oli pisin pääkaupungin piiritys nykyaikaisessa sodankäynnissä.',
+          selite: 'Kranaatin jättämä jälki jalkakäytävällä, täytetty '
+            + 'punaisella hartsilla — yksi Sarajevon ruusuista.',
+          lahde: 'Jennifer Boyer, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Sarajevon piiritys',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä teki ban Kulinin vuoden 1189 asiakirjasta poikkeuksellisen?',
+        vaihtoehdot: [
+          'Se oli kirjoitettu kullalla',
+          'Se on vanhin säilynyt eteläslaavilaisen puhekielen valtionasiakirja',
+          'Se oli osoitettu paaville',
+          'Se allekirjoitettiin Bobovacin linnassa',
+        ],
+        oikea: 1,
+        fakta: 'Ban Kulinin 1189 kauppasopimus Dubrovnikin kanssa on kirjoitettu '
+          + 'tavallisella puhekielellä kirkkoslaavin sijaan, minkä vuoksi sitä '
+          + 'pidetään vanhimpana säilyneenä eteläslaavilaisena valtionasiakirjana.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Bosnialainen ruokapöytä on täynnä Ottomaanien perintöä: '
+        + 'grillattua jauhelihaa somunissa, kierteistä täytettyä taikinaa '
+        + 'ja omena joka on täytetty pähkinöillä eikä muulla.',
+      nostot: [
+        {
+          otsikko: 'Kymmenen pientä makkaraa yhdellä leivällä',
+          aika: 'nykyaika',
+          tiedosto: 'Cevapi (7714963036).jpg',
+          teksti: 'Ćevapi on Bosnian tunnetuin ruokalaji: pieniä, sormen '
+            + 'mittaisia jauhelihapihvejä, yleensä naudan- ja lampaanlihasta, '
+            + 'jotka grillataan hiilellä ja tarjoillaan tuoreessa, pehmeässä '
+            + 'somun-leivässä. Annos tulee yleensä kymmenessä kappaleessa, '
+            + 'mukana raakaa sipulia ja usein kajmakia, paksua kermaista '
+            + 'juustoa. Sarajevolainen versio on pieni ja niitä syödään '
+            + 'monta, kun taas Banja Lukassa ćevapi ovat isompia ja niitä '
+            + 'tarjoillaan harvempi ranskalaisten kera. Ruoan juuret ovat '
+            + 'Ottomaanien ajan lihapullaperinteessä.',
+          lyhyt: 'Ćevapi on pienistä jauhelihapihveistä ja somun-leivästä koostuva Bosnian kansallisruoka.',
+          selite: 'Ćevapi tarjoiltuna somun-leivän kanssa raa\'an sipulin '
+            + 'kera.',
+          lahde: 'Kurt Bauschardt, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Ćevapi',
+        },
+        {
+          otsikko: 'Kierre, jolla on eri nimi joka täytteelle',
+          aika: 'nykyaika',
+          tiedosto: 'Bosnian börek.jpg',
+          teksti: 'Ohuesta filotaikinasta kääritty, kierteiseksi taiteltu '
+            + 'piirakka tunnetaan Bosniassa yhteisnimellä pita, mutta '
+            + 'jokaisella täytteellä on oma nimensä: lihatäytteinen on '
+            + 'burek, juustotäytteinen sirnica, perunatäytteinen '
+            + 'krompiruša ja pinaattitäytteinen zeljanica. Sana burek tulee '
+            + 'ottomaanien turkin sanasta börek. Piirakka leivotaan usein '
+            + 'suurena pyöreänä vuokana ja leikataan viipaleiksi vasta '
+            + 'tarjolle pantaessa, ja sen kanssa juodaan perinteisesti '
+            + 'kiselo mlijekoa, hapanmaitojuomaa, joka tasapainottaa '
+            + 'rasvaisen taikinan.',
+          lyhyt: 'Bosnialainen filotaikinapiirakka tunnetaan yhteisnimellä pita, ja täyte antaa sille oman nimen.',
+          selite: 'Lihatäytteinen burek leivottu perinteiseen '
+            + 'kierrevuokaan.',
+          lahde: 'BosnianGourmet, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Burek',
+        },
+        {
+          otsikko: 'Omena joka täytetään pähkinöillä',
+          aika: 'Ottomaanien kausi',
+          tiedosto: 'Tufahija in Morića Han.JPG',
+          teksti: 'Tufahija on bosnialainen jälkiruoka, jonka juuret ovat '
+            + 'ottomaaniajan keittiössä: kokonainen omena kuoritaan ja '
+            + 'haudutetaan sokeriliemessä neilikan ja sitruunan kanssa, '
+            + 'kunnes se pehmenee mutta säilyttää muotonsa. Omenan '
+            + 'sisus kovetetaan ja täytetään jauhetuilla saksanpähkinöillä, '
+            + 'ja päälle lisätään kermavaahtoa. Nimi juontuu arabian ja '
+            + 'turkin omenaa tarkoittavasta sanasta tuffah. Jälkiruokaa '
+            + 'tarjoillaan yhä Sarajevon Baščaršijan vanhassa Morića '
+            + 'Han -karavaanimajatalossa, joka on 1600-luvulta.',
+          lyhyt: 'Tufahija on ottomaaniperäinen jälkiruoka: saksanpähkinöillä täytetty, sokeriliemessä haudutettu omena.',
+          selite: 'Tufahija tarjoiltuna Morića Hanin karavaanimajatalossa '
+            + 'Sarajevon Baščaršijalla.',
+          lahde: 'Antidiskriminator, Wikimedia Commons (CC0)',
+          wiki: 'Tufahija',
+        },
+        {
+          otsikko: 'Panimon lähde joka pelasti piiritetyn kaupungin',
+          aika: '1864',
+          tiedosto: 'Sarajevska pivara D.D..JPG',
+          teksti: 'Sarajevska pivara, Bosnian vanhin panimo, perustettiin '
+            + 'vuonna 1864 ja sen pseudomaurilaistyylinen tehdasrakennus on '
+            + '1800-luvun lopulta. Panimon alla on luonnollinen lähde, '
+            + 'josta saatiin puhdasta juomavettä jo ennen olutta. Sarajevon '
+            + 'piirityksen aikana 1992–1996 kaupungin vesi- ja '
+            + 'sähköverkot olivat pitkiä aikoja poikki, ja panimon lähteestä '
+            + 'tuli yksi harvoista turvallisista vedenhakupaikoista — '
+            + 'asukkaat kantoivat sieltä vettä tarkka-ampujien tulen alla. '
+            + 'Panimo toimii yhä samalla paikalla ja valmistaa Sarajevsko-olutta.',
+          lyhyt: 'Sarajevska pivaran lähde tarjosi puhdasta vettä piiritetylle Sarajevolle 1992–1996.',
+          selite: 'Sarajevska pivaran pseudomaurilaistyylinen tehdasrakennus '
+            + 'vuodelta 1864.',
+          lahde: 'Watalicom, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Sarajevska pivara',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mistä Sarajevon asukkaat hakivat vettä, kun kaupungin '
+          + 'vesijohtoverkko oli poikki piirityksen aikana?',
+        vaihtoehdot: [
+          'Naapurimaasta tuoduista tankkiautoista',
+          'Sarajevska pivaran panimon lähteestä',
+          'Miljacka-joesta suoraan',
+          'Kaivoista Trebević-vuorella',
+        ],
+        oikea: 1,
+        fakta: 'Sarajevska pivara-panimon alla oleva lähde tarjosi puhdasta '
+          + 'vettä, kun kaupungin vesijohtoverkko oli poikki, ja asukkaat '
+          + 'hakivat sieltä vettä tarkka-ampujien tulen alla.',
+      },
+    },
+    {
+      id: 'kulttuuri',
+      nimi: 'Kulttuuri',
+      johdanto: 'Bosnialainen kulttuuri kuulostaa haikealta laululta, näyttää '
+        + 'Ottomaanien moskeijalta ja mustavalkoiselta kirjonnalta, ja se '
+        + 'syntyi uudelleen elokuvafestivaalina keskellä piiritystä.',
+      nostot: [
+        {
+          otsikko: 'Laji jonka nimi tarkoittaa kaihoa',
+          aika: 'Ottomaanien kausi – nykyaika',
+          tiedosto: 'Damir Imamović Sevdah Takht (BH,HR,XS) - WOMEX 15, 2015.10.24 (1).JPG',
+          teksti: 'Sevdalinka on bosnialainen kaupunkilainen kansanlaulun '
+            + 'laji, joka syntyi Ottomaanien vallan aikana ja yhdistää '
+            + 'ottomaani-, sefardijuutalaista ja slaavilaista '
+            + 'musiikkiperinnettä. Nimi juontuu sanasta sevdah, joka '
+            + 'tulee arabian sydäntä ja mustaa sappea tarkoittavasta '
+            + 'käsitteestä ja viittaa syvään, usein onnettomaan '
+            + 'rakkauden kaihoon. Perinteisesti laulua säesti saz, pitkä­'
+            + 'kaulainen luuttu, myöhemmin haitari. Nykyisin lajia elvyttää '
+            + 'muun muassa muusikko Damir Imamović, tunnetun sevdalinka-'
+            + 'laulaja Zaim Imamovićin pojanpoika, joka on esiintynyt '
+            + 'lajilla kansainvälisillä musiikkifestivaaleilla.',
+          lyhyt: 'Sevdalinka on kaihoisa bosnialainen kansanlaulun laji, jota nykyään elvyttää muun muassa Damir Imamović.',
+          selite: 'Damir Imamović esiintymässä WOMEX-musiikkimessuilla '
+            + '2015.',
+          lahde: 'Elekes Andor, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Sevdalinka',
+        },
+        {
+          otsikko: 'Moskeija joka toi mukanaan koko korttelin',
+          aika: '1531',
+          tiedosto: "Gazi Husrev-beg's Mosque 01.jpg",
+          teksti: 'Gazi Husrev-begin moskeija valmistui Sarajevoon vuonna '
+            + '1531, ja sitä pidetään yhtenä Balkanin merkittävimmistä '
+            + 'ottomaaniarkkitehtuurin esimerkeistä. Sen rakennutti '
+            + 'ottomaanikuvernööri Gazi Husrev-beg, joka rahoitti samalla '
+            + 'alueelle kirjaston, koraanikoulun, kellotornin ja katetun '
+            + 'basaarin — hänen lahjoituksensa loivat pohjan koko '
+            + 'Baščaršijan kauppakorttelille. Moskeijan pihalla on hänen '
+            + 'hautansa, ja rakennus toimii yhä Sarajevon päämoskeijana. '
+            + 'Se selvisi 1990-luvun piirityksestä vaurioituneena mutta '
+            + 'pystyssä, ja se on sittemmin kunnostettu.',
+          lyhyt: 'Gazi Husrev-begin moskeija valmistui 1531 ja on yksi Balkanin merkittävimmistä ottomaaniarkkitehtuurin kohteista.',
+          selite: 'Gazi Husrev-begin moskeija Sarajevon Baščaršijalla, '
+            + 'valmistunut 1531.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Gazi Husrev-begin moskeija',
+        },
+        {
+          otsikko: 'Kirjonta jota opetetaan vain äidiltä tyttärelle',
+          aika: 'perinne, Unesco-status 2014',
+          tiedosto: 'Zmijanje embroidery in BL store 2.jpg',
+          teksti: 'Zmijanjen alueella Banja Lukan lähellä kirjotaan '
+            + 'mustavalkoista, tarkan geometrista kirjontaa, jolla '
+            + 'koristellaan perinteisesti naisten kansallispukuja. '
+            + 'Kuvioissa toistuvat auringot, oksat ja kasvit, ja taito on '
+            + 'kulkenut sukupolvelta toiselle äideiltä tyttärille ilman '
+            + 'kirjoitettuja ohjeita. Unesco lisäsi zmijanjen kirjonnan '
+            + 'ihmiskunnan aineettoman kulttuuriperinnön luetteloon vuonna '
+            + '2014, koska perinne oli säilynyt elävänä mutta harvojen '
+            + 'osaajien varassa. Nykyään kirjontaa opetetaan myös '
+            + 'kouluissa perinteen katoamisen estämiseksi.',
+          lyhyt: 'Zmijanjen mustavalkoinen geometrinen kirjonta pääsi Unescon aineettoman kulttuuriperinnön luetteloon 2014.',
+          selite: 'Zmijanjen perinteistä mustavalkoista kirjontaa '
+            + 'myynnissä Banja Lukassa.',
+          lahde: 'Smooth_O, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Zmijanjen kirjonta',
+        },
+        {
+          otsikko: 'Festivaali joka avattiin kesken piirityksen',
+          aika: '1995',
+          tiedosto: 'Sarajevo Film Festival 01.JPG',
+          teksti: 'Sarajevon elokuvafestivaali perustettiin vuonna 1995, '
+            + 'kun kaupungin piiritys oli yhä käynnissä: ensimmäiset '
+            + 'näytökset pidettiin ilman vakituista sähköä, osittain '
+            + 'generaattoreiden ja kynttilöiden valossa, tietoisena '
+            + 'vastarintana sodalle. Festivaali jatkui piirityksen '
+            + 'päätyttyä ja on kasvanut Kaakkois-Euroopan suurimmaksi ja '
+            + 'vaikutusvaltaisimmaksi elokuvatapahtumaksi, jonne saapuu '
+            + 'vuosittain kymmeniä tuhansia katsojia ja kansainvälisiä '
+            + 'elokuvantekijöitä. Festivaalia pidetään esimerkkinä siitä, '
+            + 'miten kaupunki piti kulttuurin hengissä sodan keskellä.',
+          lyhyt: 'Sarajevon elokuvafestivaali perustettiin 1995 kesken piirityksen ja on nyt Kaakkois-Euroopan suurin.',
+          selite: 'Yleisöä Sarajevon elokuvafestivaalilla, joka '
+            + 'perustettiin 1995.',
+          lahde: 'MirkoS18, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Sarajevon elokuvafestivaali',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Missä olosuhteissa Sarajevon elokuvafestivaali pidettiin ensimmäisen kerran 1995?',
+        vaihtoehdot: [
+          'Vasta sodan päätyttyä rauhan juhlana',
+          'Kesken kaupungin piirityksen, osin generaattorien valossa',
+          'Ulkomailla pakolaisleirillä',
+          'Vain televisiolähetyksenä ilman yleisöä',
+        ],
+        oikea: 1,
+        fakta: 'Sarajevon elokuvafestivaalin ensimmäiset näytökset pidettiin '
+          + '1995 kesken kaupungin piirityksen, osin generaattoreiden ja '
+          + 'kynttilöiden valossa, tietoisena vastarintana sodalle.',
+      },
+    },
+    {
       id: 'menovinkit',
       nimi: 'Menovinkit',
       johdanto: 'Bosnia ja Hertsegovina on pieni maa, mutta sen aarteet on viety '
