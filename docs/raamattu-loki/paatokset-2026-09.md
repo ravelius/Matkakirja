@@ -735,3 +735,7 @@ Omistaja 21.9.2026 klo 22.50: 1) Linssisivuille lajittelu: mitkä linssit ovat m
 ## MERGEVAROITUS: RINNAKKAISET KAUPUNKIHAARAT JA counts-LASKURIT (HILJAINEN KATOAMINEN) (21.9.2026 klo 22.23)
 
 Julkaisija 21.9.2026 ilta (PR #2683 Malta): kun kaksi haaraa samasta pohjasta kasvattaa saman laskurin (maailmankartta.js/europe.js counts.pieniAarre +1 per uusi kaupunki) samaan arvoon, git näkee rivit identtisinä eikä liputa konfliktia, ja toinen korotus katoaa hiljaa; Game.enterWorld kaatuu vasta ajossa. Löydetty ja korjattu Luxemburg+Valletta-yhdistelmästä testien ansiosta. Sääntö: kun kaksi sisältöhaaraa lisää kaupunkeja samaan pakkiin rinnakkain, Julkaisija tarkistaa counts-summat käsin; Sisältökirjuri tekee kaupunkihaarat ketjuun, ei rinnakkain samasta pohjasta.
+
+## KARTUSCHA BIH VALMIS (1ae02cb3): 3 UUTTA AIHETTA (21.9.2026 klo 22.24)
+
+Sisältökirjuri 21.9.2026 ilta: BIH kartuscha (sisalto-kartuscha-bih 1ae02cb3): historia 5, ruoka 4, kulttuuri 4 nostoa; BIH nyt 4 sisältöaihetta + menovinkit, sama taso kuin täysillä mailla; testit 0 fail. Haara pohjautuu mainiin (agentti ei luottanut kesken työn välitettyyn ohjeeseen) — kelpaa, Julkaisija rebasettaa tarvittaessa. UKR/RUS/ISL jatkuvat ketjuna.
