@@ -395,3 +395,7 @@ Laatan valmistelu piirtokoukun jonoon aikabudjetilla, rannikon naulaus Web Worke
 ## YLAPALKKIBUGI KORJATTU (Pelikoodari 6cabce66) + LUOVUTUKSET SIIRTOON (21.9.2026 klo 11.09)
 
 pelikoodari-ylapalkki 6cabce66: ylapalkki piiloon vain vaaka-asennossa, pystyssa aina; hampurilainen kun palkki on, vakaset vain ilman palkkia; savuke 60/60 (iPad ja iPhone, pysty ja vaaka, kortti ja linssi auki). Julkaisijalle seuraavaan versioon. Luovutukset siirtoon: Karttaseppa 4e4ae8cc, Sisaltokirjuri 6df9f127 (sisalto-vajaat-maat-30), Pelikoodari 606103ac (pelikoodari-luovutus-siirto).
+
+## CODEX AVASI OIKEUDET KAIKILLE PAIKALLISILLE KAYTTAJILLE; UUSI KAYTTAJA koodaus (21.9.2026 klo 11.22)
+
+Codex 21.9.2026 klo 11.15: ACL ryhmalle localaccounts (luku, muokkaus, luonti, uudelleennimeaminen, poisto, periytyva) repoihin Matkakirja ja Matkakirja-fable, kaikkiin Matkakirja-tyopuihin, kuvatuotannon tyotilaan ja Codex-toimituskansioihin; kotihakemiston lapikulku. Yhteiskansio /Users/Shared/Matkakirja-yhteinen/ (linkit + Fablen kopioima Clauden muisti claude-muisti/memory). Uusi kayttaja on koodaus. Jaljella vanhassa kayttajassa: avaintiedosto ~/.matkakirja-avaimet.zsh (omistaja ajaa) ja ACL ajurihakemistoihin actions-runner ja actions-runner-2; uudessa kayttajassa ohjeen vaiheet 3-7. Ohje paivitetty: docs/raportit/siirto-toiseen-kayttajaan-20260921.md.
