@@ -22117,15 +22117,17 @@ button.pollo-ehdotus:disabled { opacity: 0.5; cursor: default; }
 }
 
 /*
- * ALLEVIIVATTU LINKKI KESKELLÄ VASTAUSTA (omistajan tilaus 12.8.2026).
+ * PELINSISÄINEN LINKKI (omistajan tilaus 12.8.2026; 21.9.2026 alkaen
+ * vastauksen lopun Matkakirja-rivillä, ei enää keskellä tekstiä).
  *
- * Kun paikallishaku löytää osuvan jutun, vastaustekstin oma maininta
- * siitä muuttuu linkiksi — erillistä nappia ei silloin tarvita.
+ * Kun paikallishaku löytää osuvan jutun, se luetellaan vastauksen
+ * loppuun — erillistä nappia ei tarvita.
  * Alleviivaus on katkoviiva samalla kynällä kuin varapolun napin
  * kehys, jotta pelinsisäinen linkki näyttää samalta kummassakin
  * muodossa.
  */
-a.pollo-tekstilinkki {
+a.pollo-tekstilinkki,
+a.pollo-matkakirjalinkki {
   color: var(--pollo-korostus);
   text-decoration: underline;
   text-decoration-style: solid;
@@ -22243,13 +22245,29 @@ body[data-mode] .actions .pollo-paneeli button.pollo-ehdota:hover {
  * myös ilman väriaistia. :focus-visible saa saman asun kuin hover.
  */
 a.pollo-tekstilinkki:hover,
-a.pollo-tekstilinkki:focus-visible {
+a.pollo-tekstilinkki:focus-visible,
+a.pollo-matkakirjalinkki:hover,
+a.pollo-matkakirjalinkki:focus-visible {
   color: #5a3d0d;
   background: rgba(122, 85, 20, 0.12);
   text-decoration-thickness: 2px;
 }
 
-a.pollo-tekstilinkki:active { color: var(--pollo-muste); }
+a.pollo-tekstilinkki:active,
+a.pollo-matkakirjalinkki:active { color: var(--pollo-muste); }
+
+/*
+ * MATKAKIRJA-RIVI VASTAUKSEN LOPUSSA (omistaja 14.8.2026, jatko
+ * 21.9.2026; js/pollo.js liitaMatkakirjalinkit): "Matkakirja: <linkki>",
+ * enintään kaksi, pienemmällä ja hieman himmeämmällä kuin puhe — se on
+ * viite, ei pöllön lause. Sama kynä linkeillä kuin tekstilinkillä.
+ */
+.pollo-matkakirja {
+  margin: 0.45rem 0 0;
+  font-size: 0.85em;
+  color: var(--pollo-muste);
+  opacity: 0.82;
+}
 
 /*
  * PÖLLÖLINKKI: [[avainkäsite]] keskellä vastausta (omistajan tilaus
@@ -28317,4 +28335,66 @@ body[data-mode] .fact-card.pieni > button#fact-kuuntele.fact-kuuntele.ghost {
   stroke: var(--muste, #3a2f24);
   stroke-width: 0.6;
   opacity: 0.35;
+}
+
+/*
+ * PIENI LIIKE KARTALLE (js/pallolauta/liike.js): kerros kankaan päällä,
+ * ei osumia. Pilvi ja pulu liikkuvat vain `.paalla.levossa`; sävy
+ * vaihtuu pehmeästi. Kaikki transform/opacity — komposiittorin työtä.
+ */
+.pallo-kotelo > .pallolauta-liike {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+.pallolauta-liike-savy {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  mix-blend-mode: multiply;
+  transition: opacity 2000ms ease, background 2000ms ease;
+}
+.pallolauta-liike-pilvi {
+  position: absolute;
+  top: -20%;
+  left: 0;
+  width: 55%;
+  height: 140%;
+  opacity: 0;
+  mix-blend-mode: multiply;
+  background: radial-gradient(ellipse 50% 45% at 50% 50%, rgba(30, 30, 40, 1) 0%, rgba(30, 30, 40, 0.5) 45%, rgba(30, 30, 40, 0) 70%);
+  transform: translateX(-100%);
+  will-change: transform;
+  animation: pallolauta-pilvi-liuku var(--pilven-matka-ms, 40000ms) linear infinite;
+  animation-play-state: paused;
+}
+.pallolauta-liike.paalla.levossa .pallolauta-liike-pilvi {
+  opacity: var(--pilven-peitto, 0.08);
+  animation-play-state: running;
+}
+@keyframes pallolauta-pilvi-liuku {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(200%); }
+}
+.pallolauta-liike-pulu {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  will-change: transform;
+  transition: transform var(--pulun-lento-ms, 2000ms) linear;
+}
+.pallolauta-liike-pulu.lennossa { opacity: 0.72; }
+.pallolauta-liike-pulu svg { display: block; overflow: visible; fill: #2a241c; }
+.pallolauta-liike-pulu .pallolauta-pulu-siipi { animation: pallolauta-pulu-siipi 260ms ease-in-out infinite alternate; animation-play-state: paused; }
+.pallolauta-liike-pulu.lennossa .pallolauta-pulu-siipi { animation-play-state: running; }
+@keyframes pallolauta-pulu-siipi {
+  from { transform: scaleY(1); }
+  to { transform: scaleY(0.25); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pallolauta-liike-pilvi, .pallolauta-liike-pulu, .pallolauta-liike-pulu .pallolauta-pulu-siipi { animation: none; transition: none; }
+  .pallolauta-liike-pulu { display: none; }
 }

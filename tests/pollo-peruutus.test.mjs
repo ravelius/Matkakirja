@@ -60,7 +60,7 @@ function chat(t){
  t.mock.method(sfx,'play',()=>{});
  const p=asiakas(),rows=[];p.rows=rows;
  Object.assign(p,{kentta:{},saneluTila:{},ehdotukset:{replaceChildren(){}},kaytetytTarjonnat:new Set(),virta:{querySelectorAll:()=>[]},historia:[],paneeli:{classList:{remove(){}}},nappi:{setAttribute(){},classList:{remove(){}}},aaniPaalla:false,auki:true,naputusStop:0});
- for(const key of ['poistaValmiit','suljeKuvapopup','nollaaTyhjaTila','viritaTyhjaTila','ankkuroiYlos','lopetaSanelu','peruLuenta','merkitseAuki','oikaiseNakyma','paivitaTyhjaTila','aloitaNaputus','korostaLinkit','naytaJatkot','liitaVastausKuva','liitaPoimintaNapit','lueVastaus','suljeMikkiKanava','purkaSaneluKuulijat','merkitseMikki'])p[key]=()=>{};
+ for(const key of ['poistaValmiit','suljeKuvapopup','nollaaTyhjaTila','viritaTyhjaTila','ankkuroiYlos','lopetaSanelu','peruLuenta','merkitseAuki','oikaiseNakyma','paivitaTyhjaTila','aloitaNaputus','liitaMatkakirjalinkit','naytaJatkot','liitaVastausKuva','liitaPoimintaNapit','lueVastaus','suljeMikkiKanava','purkaSaneluKuulijat','merkitseMikki'])p[key]=()=>{};
  p.sailytaVieritys=fn=>fn();p.taytaVastaus=(row,text)=>{row.textContent=text;};p.poimiLinkit=()=>[];p.paataLuenta=()=>false;
  p.naytaUusinta=()=>{p.uusinnat=(p.uusinnat||0)+1;};p.vaihdaTilaan=tila=>{p.tila=tila;};p.keraaMikkiDiagnoosi=async()=> 'koe';
  p.kysymysAvain=()=>'';p.konteksti=()=>'';p.naytaPaikkaKartalla=()=>null;

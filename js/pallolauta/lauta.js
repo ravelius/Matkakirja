@@ -121,6 +121,7 @@ import { luoKameraloki } from './kameraloki.js';
 import {
   SISASUMUN_PEITTO, SUMUN_RAJAKERROIN, merkitseLoydetyksi, sisasumunAukot, sumuPaalla,
 } from './sumu.js';
+import { luoKartanLiike } from '../kartta-liike.js';
 import { MERKIN_KORKEUS, luoMerkit, luoMerkkienNakyvyysTahdistus } from './merkit.js';
 import { luoNimet, nimibudjetti } from './nimet.js';
 import {
@@ -4469,8 +4470,21 @@ export async function avaaPallolauta(ui) {
    * reittien vaihtuessa (ui.paivitaMatkareitit); avain karsii turhat.
    * Nimet ja nostot ladotaan perässä levossa (pyydaLadonta).
    */
+  /*
+   * PIENI LIIKE KARTALLE (js/kartta-liike.js): pulu, pilven varjo
+   * ja kellonajan sävy DOM-kerroksena kankaan päällä; lepo luetaan
+   * pallon tauosta, eleistä ja liuskasta. Kytkin hampurilaisessa.
+   */
+  const liike = luoKartanLiike({
+    ui,
+    kotelo,
+    tauolla: () => tauolla,
+    eleKaynnissa,
+    korttiAuki: () => Boolean(nostot.liuskaAuki?.()),
+  });
   const paivita = () => {
     if (ui.dead) return;
+    liike.paivita();
     /*
      * LÄHTÖVALINTA OHI (kaupunki valittu): pyörintä ja terävän tilan
      * pakotus pois myös silloin, kun silmukka oli jo pysähtynyt sormeen
@@ -5141,6 +5155,8 @@ export async function avaaPallolauta(ui) {
     viimeinenNapautus: () => viimeinenNapautus,
     /** Kameran matriisit samaan tilaan ennen mittaa (savukkeet; ks. korttivahti). */
     tahdistaKameranMatriisit,
+    /** Pieni liike kartalle (js/kartta-liike.js): tila, lennätys (savukkeet). */
+    liike: () => liike,
     /** Kameralokin merkinnät (js/pallolauta/kameraloki.js), uusin viimeisenä. */
     kameraloki: () => kameraloki.merkinnat(),
     /**
@@ -5228,6 +5244,7 @@ export async function avaaPallolauta(ui) {
       ohjaimet.removeEventListener('change', tahdistaPisteidenKoko);
       kehyspurku();
       kameraloki.pura();
+      liike.pura();
       // Omat pallopisteet ovat tämän laudan tilaa (ks. pallonAsteet).
       if (omatPisteet === laudanOmatPisteet) omatPisteet = new Map();
       valovahti.disconnect();
