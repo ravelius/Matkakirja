@@ -187,9 +187,16 @@ export function sovitteleLaput({
   // toisiaan (sääntö 4 alla), muut laput väistävät niitä — myös ikonia.
   const vahva = (l) => Boolean(l?.kaupunki) || l?.taso === 1;
   const estaa = (rr, l) => kiinteat.some((e) => (!e.avain || (!vahva(l) && e.avain !== l?.avain)) && laatikotLimittyvat(rr, e));
+  /*
+   * LIIKEVARA (omistaja 21.9.2026, työpöytä v2026: nostot tupsahtavat
+   * panoroitaessa jälkikäteen): ruudun ulkopuolella liikevarassa oleva
+   * lappu (`l.reuna`, nostot.js LIIKEVARA) sovitellaan omaa laajempaa
+   * reunaansa vasten — ruudun reuna koskee vain ruudussa olevia.
+   */
+  const reunaLle = (l) => l?.reuna ?? reuna;
   const vapaa = (r, l, vara = 0) => {
     const rr = laatikkoVaralla(r, vara);
-    return laatikkoSisalla(r, reuna)
+    return laatikkoSisalla(r, reunaLle(l))
       && !rannalla(r, l)
       && !estaa(rr, l)
       && !sijoitetut.some((e) => laatikotLimittyvat(rr, e));
@@ -200,14 +207,24 @@ export function sovitteleLaput({
    * painoarvon mukaan (taso 1, kaupunki, taso 2, taso 3; lyhyt nimi
    * ensin) ja tasapelissä lähinnä kiinteää mustetta oleva ensin.
    */
+  /*
+   * RUUDUSSA OLEVA VOITTAA TULOKKAAN (LIIKEVARA, Fable 21.9.2026:
+   * *"ruudussa olevien koko ja paikka eivät muutu"*): lappu, jolla on
+   * jo näkyvä lukittu asento, käsitellään ennen lukotonta tulokasta
+   * (samassa este-luokassa), jotta liikevarasta ruutuun tullut nimiö
+   * väistää tai häipyy — ei se, joka pelaajalla oli jo silmissä.
+   * Ykköstason pakkosääntö (alla) pysyy voimassa tulokkaillekin.
+   */
+  const lukittuNakyva = (l) => { const k = lukot?.get(l.avain); return Boolean(k) && k.nimio !== false; };
   const jono = laput
     .map((l) => ({
       l,
       paino: sovittelunPainoarvo(l),
       d: lahinEste(l.laatikko(l.kylki, 0, 0, true), kiinteat),
+      vanha: lukittuNakyva(l) ? 0 : 1,
     }))
     .sort((a, b) => (Number(Boolean(a.l.este)) - Number(Boolean(b.l.este)))
-      || (a.paino - b.paino) || (a.d - b.d))
+      || (a.vanha - b.vanha) || (a.paino - b.paino) || (a.d - b.d))
     .map((rivi) => rivi.l);
 
   for (const l of jono) {
@@ -238,7 +255,7 @@ export function sovitteleLaput({
       const kelpaa = (e, { sisalla, musteeton }) => {
         const r = l.laatikko(e, 0, 0, true);
         if (!laatikkoKelpaa(r)) return false;
-        if (sisalla && !laatikkoSisalla(r, reuna)) return false;
+        if (sisalla && !laatikkoSisalla(r, reunaLle(l))) return false;
         return !musteeton || (!rannalla(r, l) && !estaa(r, l));
       };
       const k = ehdokkaat.find((e) => kelpaa(e, { sisalla: true, musteeton: true })) ?? null;
@@ -249,7 +266,7 @@ export function sovitteleLaput({
       const vaihtui = valittu.kylki !== lahto;
       if (vaihtui) {
         kylkiVaihtui += 1;
-        if (!laatikkoSisalla(l.laatikko(lahto, 0, 0, true), reuna)) reunalta += 1;
+        if (!laatikkoSisalla(l.laatikko(lahto, 0, 0, true), reunaLle(l))) reunalta += 1;
       }
       sijoitetut.push(valittu.r);
       asennot.set(l.avain, {
@@ -264,8 +281,14 @@ export function sovitteleLaput({
     // Häivytys: nimiö pois, ikoni jää samaan asentoon. Ikoni ei ole
     // este muille — se on pieni ja kiinni omassa pisteessään.
     piilotettu += 1;
+    // Mittareille: mikä esti oman kyljen (reuna, ranta, kiinteä muste vai toinen lappu).
+    const oma = l.laatikko(lahto, 0, 0, true);
+    const este = !laatikkoKelpaa(oma) ? 'laatikko'
+      : !laatikkoSisalla(oma, reunaLle(l)) ? 'reuna'
+        : rannalla(oma, l) ? 'ranta'
+          : kiinteat.some((e) => laatikotLimittyvat(oma, e)) ? 'kiintea' : 'lappu';
     asennot.set(l.avain, {
-      kylki: lahto, dx: 0, dy: 0, nimio: false, syy: 'piilossa',
+      kylki: lahto, dx: 0, dy: 0, nimio: false, syy: 'piilossa', este,
     });
   }
   return {
