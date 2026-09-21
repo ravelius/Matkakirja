@@ -243,8 +243,9 @@ test('Kreikan fokuskohteet ovat rakenteeltaan ehjiä', () => {
   for (const kohde of FOKUSKOHTEET_GRC) {
     assert.ok(kohde.nimi && kohde.nappi, `${kohde.id}: nimi tai painike puuttuu`);
     assert.ok(kohde.teksti?.length > 120, `${kohde.id}: pop-up-teksti puuttuu`);
-    // Kohdenostossa EI ole visaa: se on tarjouksen ydin (ks. tilaus).
-    assert.equal(kohde.visa, undefined, `${kohde.id}: kohdenostoon ei kuulu minivisaa`);
+    // Visa sallittu fokuskohteissa 21.9.2026 (loki: FOKUSKOHTEIDEN
+    // VISAKIELTO PURETAAN) — aiempi kielto oli Ateenan pilotin
+    // aikainen rajaus, ei tietoinen, kaikkia maita koskeva linjaus.
     // Koordinaatit maailmankartalle — ainoalle pelilaudalle (Raamattu
     // 30.8.2026). Vanhat europe-rivit saavat jäädä, mutta niitä ei
     // vaadita eikä uusiin pakkoihin kirjoiteta.
