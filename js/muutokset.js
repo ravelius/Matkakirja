@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2024, teksti: 'Kypros/Nikosia: paikallisaarrepari' },
   { v: 2023, teksti: 'Laattakatto nakyvista laatoista, sulavuusmittariin laatat' },
   { v: 2022, teksti: 'Ateenaan ja Wieniin seitsemän puuttunutta miniatyyriä' },
   { v: 2021, teksti: 'Savukekorjaukset: nimiot-sulavat, nostot-lukossa, kerma' },
