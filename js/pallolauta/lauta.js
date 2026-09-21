@@ -2086,6 +2086,7 @@ export async function avaaPallolauta(ui) {
     merkit,
     asteet: pallonAsteet,
     ruudulla,
+    glSovitin,
     onPoltettu: pallonNostoOnPoltettu,
     /*
      * AIHEMERKIN VIUHKA (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 27;

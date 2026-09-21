@@ -1504,6 +1504,8 @@ const laudanAvain = (k) => `lauta:${k?.id ?? k?.nimi ?? k?.name ?? ''}`;
 
 export function luoNostot({
   ui, merkit, asteet, ruudulla, onPoltettu = pallonNostoOnPoltettu,
+  /** GL-nimiöiden sovitin (js/pallolauta/glnimiot-sovitin.js) tai null: nostot rungolle. */
+  glSovitin = null,
   /*
    * VIUHKA TARVITSEE KOLME ASIAA LAUDALTA (ks. js/pallolauta/aihemerkit.js).
    * `ruutu` on kotelon koko: kaari sovitetaan ruudulle eikä palloon.
@@ -1570,6 +1572,15 @@ export function luoNostot({
   let valot = [];
   let lappuja = []; // elävät nimiölaput sovittelua varten ({ r, datum })
   let datumit = []; // viimeksi asetetut nostodatumit (sovittelu päivittää)
+  /*
+   * GL-KERROS (vaihe 3, `?glnimiot=1`): sovitin vie valmiiksi rasteroidut
+   * nostot (ikoni + nimiö) rungolle ja palauttaa CSS2D:hen jäävät (rasteri
+   * kesken, atlas täynnä, liuska, luonnos, ankkuri, piste). Kun kesken
+   * ollut rasteri valmistuu, sama jako ajetaan uudestaan ilman uutta
+   * ladontaa. Sama datumilista kuin ennen: sovittelu kirjoittaa kyljen ja
+   * siirron datumiin ja kutsuu tätä uudestaan.
+   */
+  const naytaNostot = () => merkit.aseta('nostot', glSovitin ? glSovitin.nostot(datumit, naytaNostot) : datumit);
   // Viimeisin merkkiportin päätös (savukkeet ja vartijat lukevat sen).
   let portti = null;
   let viimeisinUloinOsuus = 0;
@@ -3602,7 +3613,7 @@ export function luoNostot({
       d.dy = a.dy;
       if (d.nimi) d.nimioNakyy = d.nimioNakyy && a.nimio;
     }
-    merkit.aseta('nostot', datumit);
+    naytaNostot();
     tahdistaRasteriporras();
     /*
      * NIMILAPPU ON OSA OSUMAPINTAA (Raamattu, VIAT v1672; omistaja
@@ -3892,7 +3903,7 @@ export function luoNostot({
     }
     // Vaihtunut kylki on myös vaihtunut varaus (js/pallolauta/lauta.js
     // lukee laatikot myös sovittelun jälkeen).
-    if (muuttui) { laskeLaatikot(); merkit.aseta('nostot', datumit); }
+    if (muuttui) { laskeLaatikot(); naytaNostot(); }
     // Lukko talteen: seuraavat ladonnat kantavat tämän eteenpäin
     // (ks. EDELLINEN SOVITTELU KANNETAAN ETEENPÄIN).
     sovitellutAsennot = new Map(tulos.asennot);
@@ -4271,6 +4282,8 @@ export function luoNostot({
      * kaupunkipisteen lattia olisi voimassa siellä, missä verrattavaa
      * ei ole (ks. lauta.js LATTIA ON YHDEN PISTEEN SÄÄNTÖ).
      */
+    /** GL-jako uudestaan viimeisimmillä nostodatumeilla (runko syntyi, rasteri valmistui). */
+    jaaUudestaan: () => naytaNostot(),
     lehdenOsuus: (nakyva) => {
       const { game } = ui;
       const pack = game?.pack;

@@ -142,6 +142,9 @@ test('kytkentä: nimet.js jakaa sovittimen kautta ja lauta antaa sen; sw.js list
   assert.match(lauta, /if \(!glTesti\) \{ nimet\.jaaUudestaan\?\.\(\); nostot\.jaaUudestaan\?\.\(\); \}/);
   // Oletus päällä (omistaja 21.9.2026): vain ?glnimiot=0 pudottaa CSS2D:hen; runko kaatuessaan puretaan.
   assert.match(lauta, /catch \(virhe\) \{\s*glVirhe = virhe;/);
+  const nostot = readFileSync(new URL('../js/pallolauta/nostot.js', import.meta.url), 'utf8');
+  assert.match(nostot, /const naytaNostot = \(\) => merkit\.aseta\('nostot', glSovitin \? glSovitin\.nostot\(datumit, naytaNostot\) : datumit\);/);
+  assert.equal((nostot.match(/naytaNostot\(\);/g) ?? []).length, 2, 'molemmat aseta-kohdat kulkevat sovittimen kautta');
   const sw = readFileSync(new URL('../sw.js', import.meta.url), 'utf8');
   assert.ok(sw.includes("'./js/pallolauta/glnimiot-sovitin.js'"));
   assert.ok(sw.includes("'./js/pallonimiot-gl.js'"));
@@ -156,4 +159,117 @@ test('GL on oletus; ?glnimiot=0 pudottaa CSS2D:hen, testi-tila kelpaa', async ()
   assert.equal(glNimiotKaytossa(win('?glnimiot=testi')), true);
   assert.equal(glNimiotKaytossa(win('?glnimiot=0')), false);
   assert.equal(glNimiotKaytossa(win('?lauta=pallo&glnimiot=off')), false);
+});
+
+/* ---- Nostot (vaihe 3) ---------------------------------------------- */
+import { NOSTON_HAIVYTYS_MS, glNostoKelpaa, glNostonPeitto } from '../js/pallolauta/glnimiot-sovitin.js';
+
+const NOSTO = (lisa = {}) => ({
+  avain: 'nosto:lascaux', laji: 'nosto', id: 'lascaux', perhe: 'nosto', lat: 45.05, lng: 1.17,
+  nimi: 'Lascaux', kategoria: 'historia', symLaji: 'luola', puoli: 'oikea', dx: 0, dy: 0,
+  nimioNakyy: true, mitta: 0.6, mittaRaaka: 0.6, taso: 2, kuvamerkki: null, luonnos: false,
+  ankkuri: false, viuhka: null, avattu: false, piiloListanAlla: false, piiloLiuskanAlla: false, lunastettu: false,
+  ...lisa,
+});
+
+/** Nostolähde: ikoni + nimiö per datum, nimiön avain kyljen mukaan. */
+function teeNostolahde() {
+  const tilaajat = new Set();
+  return {
+    haeNimi: () => [],
+    haeNosto: (d) => [
+      { osa: 'ikoni', avain: `nosto|${d.kategoria}|ikoni`, valmis: true, kuva: {}, w: 40, h: 40, ankkuriX: 20, ankkuriY: 20, skaala: 0.02, katto: { a: 1, b: 1.5 } },
+      { osa: 'nimio', avain: `nosto|${d.nimi}|${d.puoli}`, valmis: true, kuva: {}, w: 120, h: 30, ankkuriX: -4, ankkuriY: 15, skaala: 0.02, katto: { a: 1, b: 1.5 } },
+    ],
+    tilaaRasterit: (f) => { tilaajat.add(f); return () => tilaajat.delete(f); },
+    kuorenKerroin: () => 1,
+    tila: () => ({}),
+    pura: () => {},
+  };
+}
+
+test('nosto → ikoni ja nimiö rungolle sovittelun siirrolla ja katolla; muut lajit CSS2D:hen', () => {
+  const kerros = teeKerros();
+  const s = luoGlNimiosovitin({ kerros: () => kerros, rasterilahde: teeNostolahde(), ajasta: (f) => f() });
+  const datumit = [
+    NOSTO({ dx: 12, dy: -3 }),
+    NOSTO({ avain: 'nosto:ankkuri', id: 'ankkuri', ankkuri: true }),
+    NOSTO({ avain: 'nosto:luonnos', id: 'luonnos', luonnos: true }),
+    NOSTO({ avain: 'piste:x', id: 'x', laji: 'piste', perhe: 'piste' }),
+    NOSTO({ avain: 'aihe:y', id: 'y', laji: 'nosto', perhe: 'aihemerkki', viuhka: [{ nimi: 'a' }] }),
+  ];
+  const css2d = s.nostot(datumit);
+  assert.deepEqual(css2d.map((d) => d.avain), ['nosto:ankkuri', 'nosto:luonnos', 'piste:x', 'aihe:y']);
+  assert.deepEqual(kerros.lista.map((i) => i.tunnus), ['nosto:lascaux#ikoni', 'nosto:lascaux#nimio']);
+  const [ikoni, nimio] = kerros.lista;
+  assert.equal(ikoni.dx, 12); assert.equal(ikoni.dy, -3); assert.equal(nimio.dx, 12);
+  assert.deepEqual(ikoni.katto, { a: 1, b: 1.5 });
+  assert.equal(ikoni.skaala, 0.02);
+  assert.equal(nimio.opacity, 1);
+  assert.equal(s.tila().nostotGl, 1);
+});
+
+test('nimiön piilotus ja merkin piilotus ovat peittoja; lunastettu on haalea', () => {
+  const kerros = teeKerros();
+  const s = luoGlNimiosovitin({ kerros: () => kerros, rasterilahde: teeNostolahde(), ajasta: (f) => f() });
+  s.nostot([NOSTO({ nimioNakyy: false })]);
+  assert.equal(kerros.lista[0].opacity, 1);
+  assert.equal(kerros.lista[1].opacity, 0);
+  s.nostot([NOSTO({ piiloListanAlla: true })]);
+  assert.deepEqual(kerros.lista.map((i) => i.opacity), [0, 0]);
+  s.nostot([NOSTO({ lunastettu: true })]);
+  assert.deepEqual(kerros.lista.map((i) => i.opacity), [0.55, 0.55]);
+  assert.equal(glNostonPeitto(NOSTO({ piiloLiuskanAlla: true })), 0);
+  assert.equal(glNostoKelpaa(NOSTO({ avattu: true })), false);
+});
+
+test('kylkivaihto on crossfade: vanha nimiö häipyy paikallaan, uusi tulee häivytyksellä, ikoni ei liiku', () => {
+  const kerros = teeKerros();
+  let hetki = 1000;
+  const alkuperainen = globalThis.performance.now;
+  globalThis.performance.now = () => hetki;
+  try {
+    const s = luoGlNimiosovitin({ kerros: () => kerros, rasterilahde: teeNostolahde(), ajasta: (f) => f() });
+    s.nostot([NOSTO({ puoli: 'oikea', dx: 5 })]);
+    s.nostot([NOSTO({ puoli: 'vasen', dx: -5 })]);
+    const tunnukset = kerros.lista.map((i) => i.tunnus);
+    assert.deepEqual(tunnukset, ['nosto:lascaux#ikoni', 'nosto:lascaux#nimio', 'nosto:lascaux#nimio-vanha']);
+    const uusi = kerros.lista[1];
+    const vanha = kerros.lista[2];
+    assert.equal(uusi.avain, 'nosto|Lascaux|vasen');
+    assert.equal(uusi.opacity, 0, 'uusi alkaa näkymättömänä');
+    assert.equal(vanha.avain, 'nosto|Lascaux|oikea');
+    assert.equal(vanha.dx, 5, 'vanha jää vanhaan siirtoon');
+    assert.equal(vanha.opacity, 1);
+    assert.equal(kerros.lista[0].dx, -5, 'ikoni seuraa sovittelun uutta siirtoa');
+    // Puolivälissä: peitot ajan mukaan.
+    const peitot = {};
+    kerros.peitto = (t, v) => { peitot[t] = v; };
+    hetki += NOSTON_HAIVYTYS_MS / 2;
+    s.kehys();
+    assert.ok(Math.abs(peitot['nosto:lascaux#nimio'] - 0.5) < 1e-9);
+    assert.ok(Math.abs(peitot['nosto:lascaux#nimio-vanha'] - 0.5) < 1e-9);
+    assert.equal(s.haivytykset().size, 2);
+    // Lopussa vanha poistuu listalta, uusi on täysin näkyvissä.
+    hetki += NOSTON_HAIVYTYS_MS;
+    s.kehys();
+    assert.equal(s.haivytykset().size, 0);
+    assert.deepEqual(kerros.lista.map((i) => i.tunnus), ['nosto:lascaux#ikoni', 'nosto:lascaux#nimio']);
+    assert.equal(peitot['nosto:lascaux#nimio'], 1);
+  } finally {
+    globalThis.performance.now = alkuperainen;
+  }
+});
+
+test('nimet ja nostot ovat yksi lista rungolle: kumpikin jako säilyttää toisen', () => {
+  const kerros = teeKerros();
+  const nostolahde = teeNostolahde();
+  const nimilahde = teeLahde(new Set(['pariisi', 'marseille']));
+  const lahde = { ...nostolahde, haeNimi: nimilahde.haeNimi };
+  const s = luoGlNimiosovitin({ kerros: () => kerros, rasterilahde: lahde, ajasta: (f) => f() });
+  s.nimet(DATUMIT);
+  s.nostot([NOSTO()]);
+  assert.equal(kerros.lista.length, 4);
+  s.nimet([DATUMIT[0]]);
+  assert.deepEqual(kerros.lista.map((i) => i.tunnus), ['nimi:pariisi', 'nosto:lascaux#ikoni', 'nosto:lascaux#nimio']);
 });
