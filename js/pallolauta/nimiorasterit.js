@@ -175,7 +175,7 @@ export function rasteroiPiste({ sadePx, vari, reuna = null }, dpr, luoKangas = (
 /** Tyylit, jotka nappulan svg:stä kopioidaan inline ennen sarjallistusta. */
 const NAPPULAN_TYYLIT = [
   'fill', 'fill-opacity', 'stroke', 'stroke-width', 'stroke-opacity', 'stroke-linejoin',
-  'stroke-linecap', 'stroke-dasharray', 'opacity', 'display', 'visibility',
+  'stroke-linecap', 'stroke-dasharray', 'opacity',
 ];
 
 /**
@@ -199,7 +199,8 @@ export async function rasteroiNappula(ui, {
   if (!svg) return null;
   const leveys = Number(svg.getAttribute('width')) || 32;
   const korkeus = Number(svg.getAttribute('height')) || 36;
-  el.style.cssText = 'position:absolute;left:-9999px;top:0;visibility:hidden;pointer-events:none';
+  // Vain ruudun ulkopuolelle: visibility/opacity periytyisivät laskettuihin tyyleihin.
+  el.style.cssText = 'position:absolute;left:-9999px;top:0;pointer-events:none';
   kotelo?.appendChild?.(el);
   try {
     if (globalThis.getComputedStyle && el.isConnected) {
