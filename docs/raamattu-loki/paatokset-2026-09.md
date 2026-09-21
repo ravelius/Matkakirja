@@ -251,3 +251,7 @@ Ei vakavuus 1-2. Kaupunkiliuska Marseillessa toimii, suurennos avautuu oikein (a
 ## NIMIOT VAKAAT TEHTY (Pelikoodari 26300d5a) -> v1986 (21.9.2026 klo 07.47)
 
 Google Earthin malli toteutettu: 8 ehdokasasentoa ankkurin ymparilta, valinta 260 ms eleen paatyttya zoomiportaittain, eleen aikana lappu seuraa ankkuria; tormays haivyttamalla (180 ms, ikoni jaa), hystereesi 6 px; ykkostaso ei haivy eika vaihda asentoa. Savuke-nimiot-vakaat 14/14 julkaisusarjaan, testit 3779/0. Seuraus: nimiollisia vahemman (390 px 23 vs 36, 1400 px 54 vs 69) - hyvaksytty. PAATOS (Fable): kaupungin nimi voittaa ykkostason (Versailles/Pariisi puhelimella): prioriteetti kaupunki > taso 1 > taso 2 > taso 3; ykkostaso haipyy vain kaupungin tielta, ikoni jaa. Raamatun NIMIOIDEN VAKAUS -kohta paivitetaan tahan jarjestykseen.
+
+## OMISTAJA v1985: KARTUSCHAN SISENNYS - IPHONELLA LIIKAA, TYOPOYDALLA LIIAN VAHAN (21.9.2026 klo 08.05)
+
+Kaappaus kartuscha-sisennys-iphone-v1985.png (iPhone 8.04): iso kartuscha on kaukana vasemmasta ja alareunasta; tyopoydalla taas lahes kiinni reunassa. SAANTO: kartuschan etaisyys kartan reunasta sama silmamaaraisesti kaikilla laitteilla: puhelin ~12 px + turva-alue, tyopoyta ~24 px. -> Pelikoodari, samaan versioon nimioiden vakauden kanssa jos ehtii.
