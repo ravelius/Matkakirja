@@ -1,10 +1,10 @@
 /*
- * LÖYTÄMISEN SUMU — PROTOTYYPPI KEHITTÄJÄLIPUN TAKANA (Fable 21.9.2026,
- * omistajalle kaappauksina; ei julkaisuun ennen hyväksyntää).
+ * LÖYTÄMISEN SUMU (Fable 21.9.2026 prototyyppinä; omistaja hyväksyi
+ * julkaisuun samana päivänä muutoksin: sisäsumu 50 %, luonnoksille
+ * lyijykynäraita, merentakaiset kaupungit pois sisäsumun laskusta,
+ * päällä kaikille). Hunnun 80 % kermaan muualla maailmassa tämä ei koske.
  *
- * Kolme osaa, kaikki tämän lipun (`?sumu=1` tai localStorage
- * `matkakirja-sumu` = 1) takana, ja ilman lippua peli on täsmälleen
- * entinen:
+ * Kolme osaa (`?sumu=0` sammuttaa vertailua varten):
  *
  *   1. NOSTOT LUONNOKSINA. Kohdemaan löytämättömät nostot piirretään
  *      haaleina lyijykynäluonnoksina (css .pallolauta-nosto-luonnos:
@@ -34,8 +34,8 @@ export const LOYDETYT_AVAIN = 'matkakirja-loydetyt';
 export const LOYTOSADE_KM = 150;
 /** Käydyn kaupungin ympärille jäävä sumuton aukko. */
 export const SISASUMUN_SADE_KM = 200;
-/** Sisäisen sumun peitto (huntu on 0,8). */
-export const SISASUMUN_PEITTO = 0.35;
+/** Sisäisen sumun peitto (huntu on 0,8; omistaja 21.9.2026: 50 %). */
+export const SISASUMUN_PEITTO = 0.5;
 /** Käymättömän maan rajan peiton kerroin. */
 export const SUMUN_RAJAKERROIN = 0.35;
 /** Luonnoksen peitto (css .pallolauta-nosto-luonnos). */
@@ -43,14 +43,18 @@ export const LUONNOKSEN_PEITTO = 0.45;
 
 let sumuMuisti = null;
 
-/** Onko löytämisen sumu päällä (kehittäjälippu). */
+/**
+ * Onko löytämisen sumu päällä. JULKAISUSSA KAIKILLE (omistaja 21.9.2026);
+ * `?sumu=0` tai localStorage matkakirja-sumu = 0 sammuttaa (savukkeet,
+ * vertailu). Tulos muistetaan istunnon ajan.
+ */
 export function sumuPaalla() {
   if (sumuMuisti !== null) return sumuMuisti;
   try {
     const param = new URLSearchParams(globalThis.location?.search ?? '').get('sumu');
-    if (param != null) sumuMuisti = /^(1|on|true)$/.test(param);
-    else sumuMuisti = globalThis.localStorage?.getItem(SUMU_AVAIN) === '1';
-  } catch { sumuMuisti = false; }
+    if (param != null) sumuMuisti = !/^(0|off|false|pois)$/.test(param);
+    else sumuMuisti = globalThis.localStorage?.getItem(SUMU_AVAIN) !== '0';
+  } catch { sumuMuisti = true; }
   return sumuMuisti;
 }
 
@@ -137,6 +141,47 @@ export function loytosateella(piste, kaydyt, sadeKm = LOYTOSADE_KM) {
   return kaydyt.some((k) => etaisyysKm(piste, k) <= sadeKm);
 }
 
+/** Merentakainen kaupunki: kauempana kuin tämä jokaisesta maan muusta kaupungista. */
+export const MERENTAKAINEN_KM = 1500;
+
+/** Onko piste renkaan (GeoJSON [[lon, lat], …]) sisällä (säteenheitto). */
+export function pisteRenkaassa(piste, rengas) {
+  if (!piste || !Array.isArray(rengas) || rengas.length < 3) return false;
+  const { lon, lat } = piste;
+  let sisalla = false;
+  for (let i = 0, j = rengas.length - 1; i < rengas.length; j = i, i += 1) {
+    const [xi, yi] = rengas[i];
+    const [xj, yj] = rengas[j];
+    if ((yi > lat) !== (yj > lat) && lon < ((xj - xi) * (lat - yi)) / (yj - yi) + xi) sisalla = !sisalla;
+  }
+  return sisalla;
+}
+
+/**
+ * MERENTAKAISET POIS (omistaja 21.9.2026): Ranskan Cayenne ja Nouméa
+ * eivät ole Ranskan sisäistä sumua — muuten Manner-Ranska pysyisi
+ * sumussa, vaikka Pariisi ja Marseille on käyty. Kaupunki on
+ * merentakainen, kun se on YLI MERENTAKAINEN_KM:n päässä jokaisesta maan
+ * muusta kaupungista JA (jos maan renkaat on annettu) mannerrenkaan —
+ * pisteluvultaan suurimman renkaan — ulkopuolella. Kumpikin ehto yksin
+ * pettäisi: Kashgar on kaukana muista mutta Kiinan mantereella; Auckland
+ * on Uuden-Seelannin pienemmällä saarella mutta lähellä Wellingtonia.
+ */
+export function mantereenKaupungit(kaupungit, lauta, renkaat = null) {
+  if (kaupungit.length < 2) return kaupungit;
+  const asteet = kaupungit.map((c) => laudaltaAsteiksi(lauta, c.x, c.y));
+  const manner = Array.isArray(renkaat) && renkaat.length
+    ? renkaat.reduce((a, b) => (b.length > a.length ? b : a))
+    : null;
+  return kaupungit.filter((c, i) => {
+    const a = asteet[i];
+    if (!a) return true;
+    const eristetty = asteet.every((b, j) => j === i || !b || etaisyysKm(a, b) > MERENTAKAINEN_KM);
+    if (!eristetty) return true;
+    return manner ? pisteRenkaassa(a, manner) : false;
+  });
+}
+
 /**
  * Sisäisen sumun aukot laudan yksiköissä: ellipsi käydyn kaupungin
  * ympärillä (SISASUMUN_SADE_KM). Palauttaa null, jos maassa on alle
@@ -146,12 +191,16 @@ export function loytosateella(piste, kaydyt, sadeKm = LOYTOSADE_KM) {
  * @param {string} p.iso        kohdemaa
  * @param {object} p.game
  * @param {string} p.lauta      laudan tunnus (projisoiLaudalle)
+ * @param {Array} [p.renkaat]    maan renkaat asteina (pallonKorostusRenkaat); merentakaisten suodatin
  * @returns {{ aukot: Array<{x:number,y:number,rx:number,ry:number}>, kaymatta: string[] }|null}
  */
-export function sisasumunAukot({ iso, game, lauta, sadeKm = SISASUMUN_SADE_KM } = {}) {
+export function sisasumunAukot({
+  iso, game, lauta, sadeKm = SISASUMUN_SADE_KM, renkaat = null,
+} = {}) {
   const cityCountry = game?.pack?.map?.cityCountry;
   if (!iso || !cityCountry) return null;
-  const maan = (game.pack?.cities ?? []).filter((c) => cityCountry[c.id] === iso);
+  const kaikki = (game.pack?.cities ?? []).filter((c) => cityCountry[c.id] === iso);
+  const maan = mantereenKaupungit(kaikki, lauta, renkaat);
   if (maan.length < 2) return null;
   const kaydyt = new Set(game.world?.visited ?? []);
   const nyt = game.cityOf?.();

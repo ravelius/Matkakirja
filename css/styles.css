@@ -25300,13 +25300,22 @@ body.infotaulu-auki .toimintorivi .monitoimi-nappi {
 .nostosym-rasteri { pointer-events: none; }
 
 /*
- * LÖYTÄMISEN SUMU — LUONNOS (js/pallolauta/sumu.js, prototyyppi
- * kehittäjälipun takana): löytämätön nosto on haalea lyijykynäluonnos,
- * ja löytyessään se mustuu pehmeästi.
+ * LÖYTÄMISEN SUMU — LUONNOS (js/pallolauta/sumu.js; omistaja 21.9.2026
+ * julkaisuun): löytämätön nosto on haalea lyijykynäluonnos
+ * katkoviivarenkaassa (js/pallolauta/nostot.js asetaLuonnosraita), ja
+ * löytyessään se mustuu pehmeästi — rengas katoaa samalla.
  */
 .pallolauta-nosto-luonnos .pallolauta-nosto-siirto {
-  opacity: 0.45;
+  opacity: 0.55;
   filter: grayscale(1) contrast(0.8);
+}
+.pallolauta-luonnosraita {
+  fill: none;
+  stroke: var(--muste, #3a2f24);
+  stroke-width: 0.55;
+  stroke-dasharray: 1.5 1.3;
+  stroke-linecap: round;
+  opacity: 0.8;
 }
 .pallolauta-nosto .pallolauta-nosto-siirto {
   transition: transform 200ms ease-in-out, opacity 600ms ease-out, filter 600ms ease-out;

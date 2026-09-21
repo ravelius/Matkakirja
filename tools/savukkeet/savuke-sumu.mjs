@@ -1,8 +1,10 @@
 /*
- * SAVUKE: LÖYTÄMISEN SUMU — PROTOTYYPPI (Fable 21.9.2026, lipun takana).
+ * SAVUKE: LÖYTÄMISEN SUMU (Fable 21.9.2026; omistaja hyväksyi julkaisuun
+ * samana päivänä: sisäsumu 50 %, luonnosraita, merentakaiset pois).
  *
  * Kaappaa Ranskan saapumisnäkymän Pariisissa (Marseille käymättä) ja
- * saman Marseillen jälkeen 390 ja 1400 px:n ruuduilla, lippu `?sumu=1`.
+ * saman Marseillen jälkeen 390 ja 1400 px:n ruuduilla (sumu on päällä
+ * oletuksena).
  * Toteutus js/pallolauta/sumu.js; kytkennät lauta.js (sisäsumu +
  * rajat), nostot.js (luonnokset), pallolaatat.js maalaaSisasumu,
  * pallovektorit.js asetaSumu, css .pallolauta-nosto-luonnos.
@@ -11,9 +13,10 @@
  *   1. PARIISISSA: sisäsumu päällä (tasoituksen sumu, aukko pariisi,
  *      käymättä marseille) ja Marseillen seutu kermaisempi kuin Pariisin.
  *   2. PARIISISSA: kohdemaassa on luonnosnostoja (löytämättömiä) ja
- *      mustattuja (löytösäteellä tai taso 1).
- *   3. MARSEILLEN JÄLKEEN: sumun aukkoja kaksi, Marseillen seutu paljas,
- *      luonnoksia vähemmän kuin Pariisissa.
+ *      mustattuja (löytösäteellä tai taso 1); jokaisella luonnoksella
+ *      on katkoviivarengas.
+ *   3. MARSEILLEN JÄLKEEN: sisäsumu pois (Cayenne ja Nouméa eivät
+ *      laske), Marseillen seutu paljas, luonnoksia vähemmän.
  *   4. Rajojen peitto vaaleampi kuin oletus (pallovektorit asetaSumu).
  *   5. Ei sivuvirheitä.
  *
@@ -46,7 +49,7 @@ const palvelin = http.createServer((req, res) => {
   res.end(readFileSync(polku));
 });
 await new Promise((ok) => palvelin.listen(0, ok));
-const osoite = `http://localhost:${palvelin.address().port}/?lauta=pallo&sumu=1`;
+const osoite = `http://localhost:${palvelin.address().port}/?lauta=pallo`;
 
 let lapi = 0;
 let kaikki = 0;
@@ -187,7 +190,7 @@ for (const ruutu of RUUDUT) {
       avain: t?.avain ?? '',
       nostoja: nostot.length,
       luonnoksia: luonnokset.length,
-      luonnosIdt: luonnokset.map((n) => n.dataset.id ?? n.getAttribute('data-id') ?? '?').slice(0, 12),
+      raitoja: document.querySelectorAll('.pallolauta-nosto-luonnos .pallolauta-luonnosraita').length,
       raja,
       loydetyt: JSON.parse(localStorage.getItem('matkakirja-loydetyt') ?? '[]').length,
     };
@@ -206,7 +209,7 @@ for (const ruutu of RUUDUT) {
       arvot[p.nimi] = nakyy ? Math.round(kermaEtaisyys(kuva, p.x, p.y)) : null;
     }
     tieto(`${ruutu.nimi} · ${hetki}`, `kermaetäisyys ${JSON.stringify(arvot)}; sumu ${JSON.stringify(tila.sumu)}; `
-      + `nostoja ${tila.nostoja}, luonnoksia ${tila.luonnoksia} ${JSON.stringify(tila.luonnosIdt)}; raja ${JSON.stringify(tila.raja)}; `
+      + `nostoja ${tila.nostoja}, luonnoksia ${tila.luonnoksia} (raitoja ${tila.raitoja}); raja ${JSON.stringify(tila.raja)}; `
       + `löydetyt ${tila.loydetyt}; avain ${tila.avain}`);
     return { ...tila, arvot };
   };
@@ -219,16 +222,16 @@ for (const ruutu of RUUDUT) {
     pariisi.sumu?.aukot?.join() === 'pariisi' && pariisi.sumu.kaymatta.includes('marseille')
       && (pariisi.arvot.marseille == null || pariisi.arvot.marseille < SUMURAJA),
     JSON.stringify({ sumu: pariisi.sumu, arvot: pariisi.arvot }));
-  vaadi(`${ruutu.nimi} · 2. Pariisissa luonnoksia ja mustattuja nostoja`,
-    pariisi.luonnoksia > 0 && pariisi.luonnoksia < pariisi.nostoja,
-    `nostoja ${pariisi.nostoja}, luonnoksia ${pariisi.luonnoksia}`);
+  vaadi(`${ruutu.nimi} · 2. Pariisissa luonnoksia (renkaineen) ja mustattuja nostoja`,
+    pariisi.luonnoksia > 0 && pariisi.luonnoksia < pariisi.nostoja && pariisi.raitoja === pariisi.luonnoksia,
+    `nostoja ${pariisi.nostoja}, luonnoksia ${pariisi.luonnoksia}, raitoja ${pariisi.raitoja}`);
 
   /* ── 3. Marseillen jälkeen ───────────────────────────────────────── */
   await asetaKaupunki('marseille', ['pariisi', 'marseille']);
   await sivu.waitForTimeout(6000);
   const marseille = await mittaa('marseille');
-  vaadi(`${ruutu.nimi} · 3. Marseillen jälkeen kaksi aukkoa, Marseillen seutu paljas, luonnoksia vähemmän`,
-    marseille.sumu?.aukot?.length === 2 && !marseille.sumu.kaymatta.includes('marseille')
+  vaadi(`${ruutu.nimi} · 3. Marseillen jälkeen sisäsumu pois (merentakaiset eivät laske), Marseillen seutu paljas, luonnoksia vähemmän`,
+    marseille.sumu === null
       && (marseille.arvot.marseille == null || pariisi.arvot.marseille == null
         || marseille.arvot.marseille > pariisi.arvot.marseille)
       && marseille.luonnoksia < pariisi.luonnoksia,

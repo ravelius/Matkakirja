@@ -62,7 +62,8 @@ import { avaaFokuspiste, fokuspisteKuvio, fokuspisteenAsteet } from '../fokuspis
 import { fokusvirtaAarrepisteOhje, fokusvirtaKohtaamispiste } from '../fokusvirta.js';
 import {
   NOSTOSYM_KUVAMERKIN_KERROIN,
-  NOSTOSYM_MINI_RUUTU, NOSTOSYM_MITAN_KATTO, NOSTOSYM_NIMIO_KATTO_PX, NOSTOSYM_NIMIO_KOKO,
+  NOSTOSYM_MINI_R, NOSTOSYM_MINI_RUUTU, NOSTOSYM_MITAN_KATTO, NOSTOSYM_NIMIO_KATTO_PX,
+  NOSTOSYM_NIMIO_KOKO,
   nostosymAsetaPorras, nostosymKatettuMitta, nostosymKuvamerkki, nostosymNimioAsemointi,
   nostosymNimioMitta, nostosymPaakategoria, nostosymVirkistaRasterit, piirraNostosymKartalle,
   piirraNostosymNimio,
@@ -1099,6 +1100,25 @@ function piirraLiuskanRivi(g, r, kylki, suunta, teksti = null, { leveysYksikkoin
   if (nimi) piirraNostosymNimio(sisus, nimi, null, kylki, Infinity);
 }
 
+/**
+ * LUONNOKSEN LYIJYKYNÄRAITA (omistaja 21.9.2026, sumu julkaisuun):
+ * katkoviivarengas ikonin ympärillä, jotta luonnos erottuu musteesta
+ * myös työpöydällä, jossa haalennus yksin on hienovarainen. Rengas on
+ * merkin omissa yksiköissä (ikoni on NOSTOSYM_MINI_R:n ympyrä origossa),
+ * joten se ei odota rasteria. Sama ryhmä kuin ikoni: replaceChildren
+ * pyyhkii sen reseptin vaihtuessa, ja tämä piirtää sen uudestaan.
+ */
+export const LUONNOSRAIDAN_R = NOSTOSYM_MINI_R + 2.6;
+function asetaLuonnosraita(g, luonnos) {
+  let raita = g.querySelector('.pallolauta-luonnosraita');
+  if (!luonnos) { raita?.remove(); return; }
+  if (raita) return;
+  raita = document.createElementNS(SVG, 'circle');
+  raita.setAttribute('class', 'pallolauta-luonnosraita');
+  raita.setAttribute('r', LUONNOSRAIDAN_R.toFixed(1));
+  g.prepend(raita);
+}
+
 /** Elävän noston elementti: viivamerkki + nimiö samaan pieneen svg:hen. */
 export function nostoElementti(d) {
   const el = document.createElement('div');
@@ -1205,6 +1225,7 @@ export function asetteleNosto(el, d) {
   el.classList.toggle('pallolauta-nosto-taso1', taso1);
   // Löytämisen sumu: luonnos harmaana ja haaleana (css), mustaus siirtymällä.
   el.classList.toggle('pallolauta-nosto-luonnos', Boolean(d.luonnos));
+  asetaLuonnosraita(g, Boolean(d.luonnos));
   el.classList.toggle('lunastettu', Boolean(d.lunastettu));
   // Listan alle jäänyt merkki piiloutuu listan ajaksi (ks. LISTA EI
   // KOSKAAN TOISEN TEKSTIN PÄÄLLE); seuraava ladonta palauttaa sen.

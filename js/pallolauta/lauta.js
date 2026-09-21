@@ -4689,18 +4689,27 @@ export async function avaaPallolauta(ui) {
       const nyt = game.cityOf?.();
       if (nyt?.id && !kaydytIdt.includes(nyt.id)) kaydytIdt.push(nyt.id);
       const sumuAvain = `${korostusIso ?? '-'}|${kaydytIdt.sort().join(',')}`;
-      const aukot = korostusIso ? sisasumunAukot({ iso: korostusIso, game, lauta: PALLO_LAUTA }) : null;
-      const sumuVaihtui = asetaSisasumu(aukot ? { ...aukot, peitto: SISASUMUN_PEITTO, avain: sumuAvain } : null);
+      // Maan renkaat merentakaisten suodattimeen (sumu.js mantereenKaupungit);
+      // ne saapuvat laiskasti, joten avain erottaa tilan ilman renkaita.
+      const renkaat = korostusIso ? pallonKorostusRenkaat(korostusIso) : [];
+      const aukot = korostusIso
+        ? sisasumunAukot({ iso: korostusIso, game, lauta: PALLO_LAUTA, renkaat })
+        : null;
+      const sisasumunAvain = `${sumuAvain}|r${renkaat.length}`;
+      const sumuVaihtui = asetaSisasumu(aukot ? { ...aukot, peitto: SISASUMUN_PEITTO, avain: sisasumunAvain } : null);
       if (sumuVaihtui) heraa();
       if (sumuAvain !== sumunRajaAvain) {
         sumunRajaAvain = sumuAvain;
         const cityCountry = game.pack?.map?.cityCountry ?? {};
         const kaydytMaat = [...new Set(kaydytIdt.map((id) => cityCountry[id]).filter(Boolean))]
           .filter((iso) => iso !== korostusIso);
+        const renkaitaOli = renkaat.length > 0;
         lataaMaapolygonit().then((data) => {
-          if (!data || sumuAvain !== sumunRajaAvain) return;
+          if (!data || sumuAvain !== sumunRajaAvain || ui.dead) return;
           const viivat = kaydytMaat.flatMap((iso) => maanRenkaatAsteina(data, iso, pallonAsteet));
           vektorit?.asetaSumu?.({ paalla: true, avain: sumuAvain, viivat, kerroin: SUMUN_RAJAKERROIN });
+          // Renkaat saapuivat vasta nyt: sisäsumu uudestaan mantereen tiedolla.
+          if (!renkaitaOli && korostusIso && pallonKorostusRenkaat(korostusIso).length) paivita();
         }).catch(() => {});
       }
     }
