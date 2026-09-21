@@ -121,6 +121,12 @@ export const FOKUSKOHTEET_ITA = [
   {
     id: 'vesuvius',
     nimi: 'Vesuvius',
+    /*
+     * NOSTOTASOT (Fablen tilaus 20.9.2026, samaan tapaan kuin FRA:n
+     * docs/raportit/nostotasot-fra-20260920.md): ykköstaso = tunnetuin
+     * ja pelillisesti tärkein, isompi nimiö + kuvamerkki kartalla.
+     */
+    taso: 1,
     tyyppi: 'vuori',
     kysymykset: [
       'Miksi vuoren juurella asutaan yhä?',
@@ -156,6 +162,12 @@ export const FOKUSKOHTEET_ITA = [
   {
     id: 'pompeji',
     nimi: 'Pompeji',
+    /*
+     * NOSTOTASOT (Fablen tilaus 20.9.2026, samaan tapaan kuin FRA:n
+     * docs/raportit/nostotasot-fra-20260920.md): ykköstaso = tunnetuin
+     * ja pelillisesti tärkein, isompi nimiö + kuvamerkki kartalla.
+     */
+    taso: 1,
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'historia',
     tyyppi: 'historia',
@@ -232,6 +244,12 @@ export const FOKUSKOHTEET_ITA = [
   {
     id: 'pisa',
     nimi: 'Pisa',
+    /*
+     * NOSTOTASOT (Fablen tilaus 20.9.2026, samaan tapaan kuin FRA:n
+     * docs/raportit/nostotasot-fra-20260920.md): ykköstaso = tunnetuin
+     * ja pelillisesti tärkein, isompi nimiö + kuvamerkki kartalla.
+     */
+    taso: 1,
     tyyppi: 'kaupunki',
     kysymykset: [
       'Miksi tornia ei suoristettu kokonaan?',
@@ -267,6 +285,12 @@ export const FOKUSKOHTEET_ITA = [
   {
     id: 'capri',
     nimi: 'Capri ja Sininen luola',
+    /*
+     * NOSTOTASOT (Fablen tilaus 20.9.2026, samaan tapaan kuin FRA:n
+     * docs/raportit/nostotasot-fra-20260920.md): ykköstaso = tunnetuin
+     * ja pelillisesti tärkein, isompi nimiö + kuvamerkki kartalla.
+     */
+    taso: 1,
     // Puhujan akustiikka kortilla (js/tehosteketju.js): meriluolan kaiku.
     akustiikka: 'luola',
     // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
@@ -321,6 +345,12 @@ export const FOKUSKOHTEET_ITA = [
   {
     id: 'cinque-terre',
     nimi: 'Cinque Terre',
+    /*
+     * NOSTOTASOT (Fablen tilaus 20.9.2026, samaan tapaan kuin FRA:n
+     * docs/raportit/nostotasot-fra-20260920.md): ykköstaso = tunnetuin
+     * ja pelillisesti tärkein, isompi nimiö + kuvamerkki kartalla.
+     */
+    taso: 1,
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'luonto',
     tyyppi: 'meri',
@@ -397,6 +427,12 @@ export const FOKUSKOHTEET_ITA = [
   {
     id: 'dolomiitit',
     nimi: 'Dolomiitit',
+    /*
+     * NOSTOTASOT (Fablen tilaus 20.9.2026, samaan tapaan kuin FRA:n
+     * docs/raportit/nostotasot-fra-20260920.md): ykköstaso = tunnetuin
+     * ja pelillisesti tärkein, isompi nimiö + kuvamerkki kartalla.
+     */
+    taso: 1,
     tyyppi: 'vuori',
     kysymykset: [
       'Mitä dolomiittikivi oikeastaan on?',
@@ -432,6 +468,12 @@ export const FOKUSKOHTEET_ITA = [
   {
     id: 'etna',
     nimi: 'Etna',
+    /*
+     * NOSTOTASOT (Fablen tilaus 20.9.2026, samaan tapaan kuin FRA:n
+     * docs/raportit/nostotasot-fra-20260920.md): ykköstaso = tunnetuin
+     * ja pelillisesti tärkein, isompi nimiö + kuvamerkki kartalla.
+     */
+    taso: 1,
     tyyppi: 'vuori',
     kysymykset: [
       'Kuinka usein Etna purkautuu?',
@@ -776,6 +818,12 @@ export const FOKUSKOHTEET_ITA = [
   {
     id: 'colosseum',
     nimi: 'Colosseum',
+    /*
+     * NOSTOTASOT (Fablen tilaus 20.9.2026, samaan tapaan kuin FRA:n
+     * docs/raportit/nostotasot-fra-20260920.md): ykköstaso = tunnetuin
+     * ja pelillisesti tärkein, isompi nimiö + kuvamerkki kartalla.
+     */
+    taso: 1,
     tyyppi: 'urheilu',
     symboli: 'urheilu',
     kysymykset: [

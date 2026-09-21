@@ -307,6 +307,7 @@ if (!kohdekansio || kohdekansio.startsWith('--')) {
     + '[--kaariminuutit 1|3] [--korkeuspalat <kansio>] [--vain-palat [tiedosto]] '
     + '[--vain-lista] [--paikkaus <lähdeversio>] '
     + '[--nostotaso --nostoversio <v> [--nostomaa <ISO>] [--ilman-hahmotelmia [--polta-hahmotelmat t,t]] [--nostotasot <json>]] '
+    + '[--nimiotaso --nimioversio <v> [--nimiot <json>] [--nimiot-aika pysyva]] '
     + '[--viivataso --viivaversio <v> [--eipiirit] [--eireitit] [--eirajat] [--eijoet]] '
     + '[--vesiviivoitus tihea|harva] [--syvyysportaat m,m,…] [--resepti-json <json>] [--joet-pohjaan] '
     + '[--rantataso --rantaversio <v>] [--ilman-rantaviivaa] '
@@ -2017,10 +2018,25 @@ function rantatasonPeite(mitat) {
  */
 const NIMION_MERKKILEVEYS = 0.66;
 let nimiotLista = null;
+/*
+ * POHJAKARTAN NIMIÖTASOLLE VAIN PYSYVÄT NIMET (omistaja 21.9.2026, Fable):
+ * meret, lahdet ja kulttuurialueet; vuoden 1873 poliittiset nimet ja
+ * rajat siirtyvät Vuosi 1873 -linssiin. Nimistön rivillä on kenttä
+ * `aika: 'pysyva' | '1873'` (Sisältökirjuri); `--nimiot-aika pysyva`
+ * pitää vain sen arvon rivit. Koristeet (kuva, kompassi, laiva) ja
+ * rivit ilman kenttää pysyvät mukana — ne eivät ole poliittisia nimiä.
+ */
+const NIMIOT_AIKA = valitsin('nimiot-aika', null);
 function nimiotasonNimiot() {
   if (nimiotLista) return nimiotLista;
   if (NIMIOT_LAHDE) nimiotLista = JSON.parse(readFileSync(NIMIOT_LAHDE, 'utf8'));
   else nimiotLista = NIMISTO_1873;
+  if (NIMIOT_AIKA) {
+    const ennen = nimiotLista.length;
+    nimiotLista = nimiotLista.filter((n) => !n.aika || n.aika === NIMIOT_AIKA
+      || ['kuva', 'kompassi', 'laiva'].includes(n.luokka));
+    console.log(`  nimiöt          aika=${NIMIOT_AIKA}: ${nimiotLista.length}/${ennen} riviä`);
+  }
   return nimiotLista;
 }
 /*

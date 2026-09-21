@@ -273,6 +273,7 @@ Käyttö: tools/polta-paikallisesti.sh [valitsimet]
   --viivaliput "<liput>"     lisäliput viivatason shardeille (--eijoet)
   --rantaliput "<liput>"     lisäliput rantatason shardeille
   --nostoliput "<liput>"     lisäliput nostotason shardeille (--nostotasot <json>)
+  --nimioliput "<liput>"     lisäliput nimiöshardille (--nimiot-aika pysyva)
   --nimioversio V            polta MYÖS nimiötaso (z4–z8, yksi shardi) tähän
                              versioon; --nimiot <json> antaa nimistön
   --nimiot <json>            nimiötason nimistö (oletus js/packs/nimisto-1873.js)
@@ -344,7 +345,7 @@ RAPORTTIVALI="${POLTTO_RAPORTTIVALI:-300}"
 TILAVALI="${POLTTO_TILAVALI:-15}"
 VAHTI_PID=""; RAPORTOI=0; EDISTYMISVAROITUS=0
 # Meriresepti ja tarkka rantaviiva (ks. ohje).
-DATA=""; YHTEISLIPUT=""; POHJALIPUT=""; VIIVALIPUT=""; RANTALIPUT=""; NOSTOLIPUT=""
+DATA=""; YHTEISLIPUT=""; POHJALIPUT=""; VIIVALIPUT=""; RANTALIPUT=""; NOSTOLIPUT=""; NIMIOLIPUT=""
 NIMIOVERSIO=""; NIMIOT=""; ILMAN_NOSTOJA=0; ILMAN_NIMIOITA=0
 
 while [ $# -gt 0 ]; do
@@ -394,6 +395,7 @@ while [ $# -gt 0 ]; do
     --viivaliput) VIIVALIPUT="$2"; shift 2 ;;
     --rantaliput) RANTALIPUT="$2"; shift 2 ;;
     --nostoliput) NOSTOLIPUT="$2"; shift 2 ;;
+    --nimioliput) NIMIOLIPUT="$2"; shift 2 ;;
     --nimioversio) NIMIOVERSIO="$2"; shift 2 ;;
     --nimiot) NIMIOT="$2"; shift 2 ;;
     --ilman-nostoja) ILMAN_NOSTOJA=1; shift ;;
@@ -427,6 +429,7 @@ if [ "$LAPSI" -eq 1 ]; then
   [ -n "$VIIVALIPUT" ] || VIIVALIPUT="${POLTTO_VIIVALIPUT:-}"
   [ -n "$RANTALIPUT" ] || RANTALIPUT="${POLTTO_RANTALIPUT:-}"
   [ -n "$NOSTOLIPUT" ] || NOSTOLIPUT="${POLTTO_NOSTOLIPUT:-}"
+  [ -n "$NIMIOLIPUT" ] || NIMIOLIPUT="${POLTTO_NIMIOLIPUT:-}"
   [ -n "$NIMIOVERSIO" ] || NIMIOVERSIO="${POLTTO_NIMIOVERSIO:-}"
   [ -n "$NIMIOT" ] || NIMIOT="${POLTTO_NIMIOT:-}"
   [ -n "$PALLOTUNNISTE" ] || PALLOTUNNISTE="${POLTTO_PALLOTUNNISTE:-}"
@@ -436,7 +439,7 @@ if [ "$LAPSI" -eq 1 ]; then
 fi
 vie_lapsille () {
   export POLTTO_DATA="$DATA" POLTTO_YHTEISLIPUT="$YHTEISLIPUT" POLTTO_POHJALIPUT="$POHJALIPUT"
-  export POLTTO_VIIVALIPUT="$VIIVALIPUT" POLTTO_RANTALIPUT="$RANTALIPUT" POLTTO_NOSTOLIPUT="$NOSTOLIPUT"
+  export POLTTO_VIIVALIPUT="$VIIVALIPUT" POLTTO_RANTALIPUT="$RANTALIPUT" POLTTO_NOSTOLIPUT="$NOSTOLIPUT" POLTTO_NIMIOLIPUT="$NIMIOLIPUT"
   export POLTTO_NIMIOVERSIO="$NIMIOVERSIO" POLTTO_NIMIOT="$NIMIOT" POLTTO_PALLOTUNNISTE="$PALLOTUNNISTE"
   export POLTTO_HAHMOTELMAT="$HAHMOTELMAT" POLTTO_ILMAN_NOSTOJA="$ILMAN_NOSTOJA" POLTTO_ILMAN_NIMIOITA="$ILMAN_NIMIOITA"
 }
@@ -793,6 +796,7 @@ shardit () {
       if [ -n "$NIMIOVERSIO" ] && [ "$ILMAN_NIMIOITA" -eq 0 ]; then
         local nimioarg="--nimiotaso --nimioversio $NIMIOVERSIO"
         [ -n "$NIMIOT" ] && nimioarg="$nimioarg --nimiot $NIMIOT"
+        [ -n "$NIMIOLIPUT" ] && nimioarg="$nimioarg $NIMIOLIPUT"
         echo "nimio-$NIMIOVERSIO|--tasoja 9 --tasot 4-8 $nimioarg"
       fi
       ;;

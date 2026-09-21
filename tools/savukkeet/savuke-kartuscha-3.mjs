@@ -194,6 +194,10 @@ const lue = (sivu) => sivu.evaluate(() => {
     versaali,
     perusviiva,
     ruutu: { w: window.innerWidth, h: window.innerHeight },
+    // Sisennys kartan reunasta (omistaja v1985): kalusteen etäisyys
+    // pallon kotelon vasemmasta ja alareunasta.
+    kotelo: laatikko(window.matkakirja?.ui?.pallolauta?.kotelo),
+    kaluste: laatikko(document.querySelector('.pallolauta-maapaneeli')),
   };
 });
 
@@ -211,6 +215,7 @@ const kartanKohta = (t) => ({ x: Math.round(t.ruutu.w * 0.15), y: 140 });
 
 const KAIKKI_RUUDUT = [
   { nimi: '390', leveys: 390, korkeus: 844 },
+  { nimi: '820', leveys: 820, korkeus: 1180 },
   { nimi: '1400', leveys: 1400, korkeus: 900 },
 ];
 const RUUDUT = process.env.SAVUKE_RUUTU
@@ -242,6 +247,23 @@ for (const ruutu of RUUDUT) {
 
   /* --- 1. pienessä ei lippua ---------------------------------------- */
   const pieni = await lue(sivu);
+  const sisennys = (m) => (m.kotelo && m.kaluste ? {
+    vasen: +(m.kaluste.x0 - m.kotelo.x0).toFixed(1), ala: +(m.kotelo.y1 - m.kaluste.y1).toFixed(1),
+  } : null);
+  /*
+   * SISENNYS KARTAN REUNASTA (omistaja 20.9.2026, kaappaus kartuscha-
+   * sisennys-iphone-v1985.png): puhelimella 12 px + turva-alue,
+   * ≥ 768 px 24 px, mitattuna pallon kotelon vasemmasta ja alareunasta.
+   * Playwrightissa turva-alueet ovat 0, joten mitta on paljas reuna.
+   */
+  const reunaTavoite = ruutu.leveys >= 768 ? 24 : 12;
+  const sisennysOk = (m) => {
+    const si = sisennys(m);
+    return Boolean(si) && Math.abs(si.vasen - reunaTavoite) <= 1.5 && Math.abs(si.ala - reunaTavoite) <= 1.5;
+  };
+  tieto(`${ruutu.nimi} sisennys pienenä`, JSON.stringify(sisennys(pieni)));
+  vaadi(`${ruutu.nimi} · 6a pieni kartuscha on ${reunaTavoite} px kartan vasemmasta ja alareunasta (± 1,5)`,
+    sisennysOk(pieni), JSON.stringify(sisennys(pieni)));
   vaadi(`${ruutu.nimi} · 1 pienessä kartuschassa ei ole lippua`,
     !pieni.valikkoAuki && !pieni.lippuNakyy && (pieni.lippu?.w ?? 0) === 0,
     JSON.stringify({ auki: pieni.valikkoAuki, lippu: pieni.lippu }));
@@ -258,6 +280,9 @@ for (const ruutu of RUUDUT) {
   tieto(`${ruutu.nimi} lippu`, `kuva ${iso.lippukuva?.h?.toFixed(1)} px, versaali ${iso.versaali.toFixed(1)} px, `
     + `otsikkofontti ${iso.otsikkoFontti}, lipun fontti ${iso.lippuFontti}, `
     + `lipun alareuna ${iso.lippukuva?.y1?.toFixed(1)} vs perusviiva ${iso.perusviiva?.toFixed(1)}`);
+  tieto(`${ruutu.nimi} sisennys isona`, JSON.stringify(sisennys(iso)));
+  vaadi(`${ruutu.nimi} · 6b iso kartuscha on ${reunaTavoite} px kartan vasemmasta ja alareunasta (± 1,5)`,
+    sisennysOk(iso), JSON.stringify(sisennys(iso)));
   vaadi(`${ruutu.nimi} · 2a isossa lippu näkyy otsikon perässä`,
     iso.lippuNakyy && iso.lippu.x0 >= iso.otsikko.x1 - 2, JSON.stringify({ lippu: iso.lippu, otsikko: iso.otsikko }));
   vaadi(`${ruutu.nimi} · 2b lippu on yhtä korkea kuin maan nimen versaali (± 2 px)`,
@@ -315,6 +340,85 @@ for (const ruutu of RUUDUT) {
   const rullanJalkeen = await lue(sivu);
   vaadi(`${ruutu.nimi} · 3c rulla kartalla pienentää kartuschan`,
     !rullanJalkeen.valikkoAuki, JSON.stringify({ auki: rullanJalkeen.valikkoAuki }));
+
+  /*
+   * 7. VASTAKOE: AIHERIVIN PAINALLUS EI VÄLITY KARTALLE (omistaja
+   * 21.9.2026: aiherivin painallus saattoi avata myös alla olevan
+   * noston tai kaupungin). Kortti on pointer-events: none ja Globe.gl:n
+   * osumatesti kulkee pointerdown/pointerup-parilla, joten
+   * js/pallolauta/maapaneeli.js pysäyttää painalluksen dokumentin
+   * capture-vaiheessa. Napautus jokaiseen aiheeseen: maalehti aukeaa
+   * pyydetylle sivulle, EI nostokorttia eikä liuskaa.
+   */
+  await sivu.evaluate(async () => {
+    const { suljeFokusvirta } = await import('./js/fokusvirta.js');
+    suljeFokusvirta(window.matkakirja.ui);
+    for (const el of document.querySelectorAll('.fokusnosto-kerros, .fokuskohde-popup, .elaintaky-kerros, .skandaali-kerros, .hetki-kerros')) el.remove();
+  });
+  await sivu.waitForTimeout(500);
+  /** Valikko auki plussasta (sama ele kuin pelaajalla), jos se on kiinni. */
+  const avaaValikkoNapauttamalla = async () => {
+    const m = await lue(sivu);
+    if (m.valikkoAuki) return;
+    await napauta(sivu, m.avain.keskiX, m.avain.keskiY);
+  };
+  await avaaValikkoNapauttamalla();
+  /*
+   * MEKANISMIN MITTA: kankaan (pallon kotelon) ei pidä nähdä yhtään
+   * pointerdown/pointerup-tapahtumaa aiherivin napautuksesta — Globe.gl:n
+   * osumatesti kulkee juuri niillä. Laskuri kotelolla, capture-vaihe.
+   */
+  await sivu.evaluate(() => {
+    const k = window.matkakirja.ui.pallolauta.kotelo;
+    window.__kankaalle = { pointerdown: 0, pointerup: 0 };
+    for (const t of ['pointerdown', 'pointerup']) k.addEventListener(t, () => { window.__kankaalle[t] += 1; }, true);
+  });
+  const aiheet = await sivu.evaluate(() => [...document.querySelectorAll('.maapaneeli-kortti .maapaneeli-aihe')]
+    .map((n) => { const r = n.getBoundingClientRect(); return { id: n.dataset.aihe, nimi: n.textContent.trim(), x: r.left + r.width / 2, y: r.top + r.height / 2 }; }));
+  const aiheTulokset = [];
+  for (const aihe of aiheet) {
+    // Valikko auki ennen jokaista napautusta (edellinen sulki sen).
+    await avaaValikkoNapauttamalla();
+    await sivu.waitForTimeout(250);
+    const kohta = await sivu.evaluate((id) => {
+      const n = document.querySelector(`.maapaneeli-kortti .maapaneeli-aihe[data-aihe="${id}"]`);
+      const r = n?.getBoundingClientRect(); return r ? { x: r.left + r.width / 2, y: r.top + r.height / 2 } : null;
+    }, aihe.id);
+    if (!kohta) { aiheTulokset.push({ ...aihe, tulos: 'ei nappia' }); continue; }
+    await sivu.mouse.move(kohta.x + 10, kohta.y + 10);
+    await sivu.mouse.move(kohta.x, kohta.y, { steps: 2 });
+    await sivu.evaluate(() => { window.__kankaalle = { pointerdown: 0, pointerup: 0 }; });
+    await sivu.mouse.click(kohta.x, kohta.y);
+    await sivu.waitForTimeout(700);
+    const tila = await sivu.evaluate(() => {
+      const { ui } = window.matkakirja;
+      return {
+        kankaalle: { ...window.__kankaalle },
+        lehti: Boolean(ui.lehtitila?.tutkiLehti) && ui.lehtitila?.tutkiTila === 'maa',
+        sivu: ui.lehtitila?.tutkiSivut?.[ui.lehtitila?.tutkiSivu ?? 0]?.id ?? null,
+        arkki: Boolean(document.querySelector('#arrival-dialog[open]')),
+        kortti: Boolean(document.querySelector('.fokusnosto-kerros, .fokuskohde-popup, .elaintaky-kerros, .skandaali-kerros, .hetki-kerros')),
+        liuska: ui.pallolauta.nostot?.liuskaAuki?.() ?? null,
+      };
+    });
+    aiheTulokset.push({ ...aihe, tulos: tila });
+    // Lehti kiinni seuraavaa aihetta varten.
+    await sivu.evaluate(async () => {
+      const d = document.querySelector('#arrival-dialog');
+      if (d?.open) d.close?.();
+      window.matkakirja.ui.closeArrival?.();
+      const { suljeFokusvirta } = await import('./js/fokusvirta.js');
+      suljeFokusvirta(window.matkakirja.ui);
+      for (const el of document.querySelectorAll('.fokusnosto-kerros, .fokuskohde-popup')) el.remove();
+    });
+    await sivu.waitForTimeout(400);
+  }
+  tieto(`${ruutu.nimi} aihenapautukset`, aiheTulokset.map((a) => `${a.nimi}: ${a.tulos?.lehti ? 'lehti' : 'EI lehteä'}${a.tulos?.kortti ? ' +KORTTI' : ''}${a.tulos?.liuska ? ' +LIUSKA' : ''}`).join(' | '));
+  const aiheOk = (a) => a.tulos?.lehti && !a.tulos.kortti && !a.tulos.liuska
+    && a.tulos.kankaalle?.pointerdown === 0 && a.tulos.kankaalle?.pointerup === 0;
+  vaadi(`${ruutu.nimi} · 7 aiherivin napautus avaa maalehden eikä nostokorttia tai liuskaa, eikä kangas näe elettä (${aiheet.length} aihetta)`,
+    aiheet.length >= 3 && aiheTulokset.every(aiheOk),
+    JSON.stringify(aiheTulokset.filter((a) => !aiheOk(a)).map((a) => [a.nimi, a.tulos])));
 
   vaadi(`${ruutu.nimi} · 5 sivulla ei ole virheitä`, virheet.length === 0, virheet.slice(0, 2).join(' | '));
   await ctx.close();

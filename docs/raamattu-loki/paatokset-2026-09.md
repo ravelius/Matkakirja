@@ -247,3 +247,23 @@ Linjaus kirjattu Raamattuun Kaupungit-osioon (NIMIOIDEN VAKAUS): asento ankkurin
 ## KIERROS 21b (Laitetestaaja) (21.9.2026 klo 07.06)
 
 Ei vakavuus 1-2. Kaupunkiliuska Marseillessa toimii, suurennos avautuu oikein (aiempi testivirhe oli vaara CSS-valitsin). Kesken: huntu pitkalla lennolla ja ESP/DEU yksi zoomi - saapumisnakyman satunnaiset sisaltokortit estavat Playwright-automaation ja suora actionFly() ei laukaise lentoanimaatiota -> oikealle simulaattorille kun omistaja antaa laiteluvan. Laitetestaaja odottaa.
+
+## NIMIOT VAKAAT TEHTY (Pelikoodari 26300d5a) -> v1986 (21.9.2026 klo 07.47)
+
+Google Earthin malli toteutettu: 8 ehdokasasentoa ankkurin ymparilta, valinta 260 ms eleen paatyttya zoomiportaittain, eleen aikana lappu seuraa ankkuria; tormays haivyttamalla (180 ms, ikoni jaa), hystereesi 6 px; ykkostaso ei haivy eika vaihda asentoa. Savuke-nimiot-vakaat 14/14 julkaisusarjaan, testit 3779/0. Seuraus: nimiollisia vahemman (390 px 23 vs 36, 1400 px 54 vs 69) - hyvaksytty. PAATOS (Fable): kaupungin nimi voittaa ykkostason (Versailles/Pariisi puhelimella): prioriteetti kaupunki > taso 1 > taso 2 > taso 3; ykkostaso haipyy vain kaupungin tielta, ikoni jaa. Raamatun NIMIOIDEN VAKAUS -kohta paivitetaan tahan jarjestykseen.
+
+## OMISTAJA v1985: KARTUSCHAN SISENNYS - IPHONELLA LIIKAA, TYOPOYDALLA LIIAN VAHAN (21.9.2026 klo 08.05)
+
+Kaappaus kartuscha-sisennys-iphone-v1985.png (iPhone 8.04): iso kartuscha on kaukana vasemmasta ja alareunasta; tyopoydalla taas lahes kiinni reunassa. SAANTO: kartuschan etaisyys kartan reunasta sama silmamaaraisesti kaikilla laitteilla: puhelin ~12 px + turva-alue, tyopoyta ~24 px. -> Pelikoodari, samaan versioon nimioiden vakauden kanssa jos ehtii.
+
+## OMISTAJA v1985: KARTUSCHAN LINKIN PAINALLUS VOI MENNA LAPI KARTALLE (21.9.2026 klo 08.06)
+
+Kartuschan aiherivin (HISTORIA, RUOKA...) painallus saattaa avata myos alla olevan karttanoston/kaupungin. SAANTO: kortin sisalla painallus ei koskaan vality kartalle (stopPropagation + pointer-events kortin sisalla; kortti itse on pointer-events:none, joten sisaelementit ja niiden marginaalit tarkistettava). -> Pelikoodari samaan kartuscha-sisennys-eraan, savukkeeseen vastakoe.
+
+## V1986 TUOTANNOSSA 08.18 (21.9.2026 klo 08.18)
+
+Nimioiden vakaus (Google Earthin malli: kiintea asento, haivytys, hystereesi, kaupunki > taso 1). Kartuschan sisennys ja klikkauksen lapimeno todennakoisesti seuraavassa.
+
+## NIMISTON JAKO: PYSYVAT POHJALLE, 1873-POLIITTISET LINSSIIN (omistaja 21.09.2026 klo 08.21) (21.9.2026 klo 08.21)
+
+Omistajan huoli: 1873-nimisto sekoittaa nykymaailmassa liikkuvaa pelaajaa. Paatos kortilla: pohjakartalle vain pysyvat nimet (meret, lahdet, kulttuurialueet), 1873-poliittiset nimet ja rajat omaan Vuosi 1873 -linssiin; myohemmin aikajanalinssi rajojen elamiselle. Kirjattu Raamattuun (Kaupungit: KARTAN NIMISTO) ja linssi-idea. Toimet: Sisaltokirjuri luokittelee nimisto-1873.js rivit (luokka pysyva/1873) FRA/ESP/ITA/DEU; Karttaseppa polttaa nimiotason uudelleen ilman 1873-luokkaa ja selvittaa historiallisen raja-aineiston linssia varten.
