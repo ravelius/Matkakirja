@@ -491,3 +491,7 @@ Fable 21.9.2026 (omistajan pyyntö: merge-kysymykset loppuvat): GitHubissa main-
 ## ENNUSTEKOUKKU VALMIS; GL-KERROKSEN VAIHE 1 ALKAA HETI (21.9.2026 klo 15.51)
 
 Pelikoodari 21.9.2026 (pelikoodari-ennustekoukku 9be0de5d): nimiöiden koko lasketaan ennustetusta korkeudesta, mittariin ennustevirhe (panorointi 0 px, zoomi p95 0,33 px), tahallinen yhden kehyksen ennakko. Punaiset savukkeet selvitetty: nimiot-sulavat 4/5 mainissa on odotettu kunnes E2 on mainissa; Tanger johtui WebKitin puutteesta (asennettu). GL-kerroksen suunnitelma valmis (docs/raportit/gl-kerros-suunnitelma-20260921.md, 61 riviä, Karttaseppä + Pelikoodari). Fable: GL-kerroksen vaihe 1 aloitetaan heti, ei odoteta tuntumatestiä tyhjänä; omistajan palaute E2–E4:stä ohittaa GL-työn, jos korjattavaa tulee.
+
+## NYKYMAAKUNNAT TUOTANNOSSA: NIMIOVERSIO 2026-09-21f-nimiot (21.9.2026 klo 16.08)
+
+Karttaseppä 21.9.2026: maakuntien nimiötaso poltettu ja viety tuotantoon (versio 2026-09-21f-nimiot, 452 laattaa z4–z8: 19 nykyaluetta vahvalla ruostemusteella ja rajat, entiset 102 nimiötä ennallaan), luettelo ämpärissä, tuotanto tarkistettu kaappauksella (sama kuin paikallinen poltto). Sisältökirjuri vahvisti nimet ilman korjauksia. Nimet näkyvät z7:stä jos mahtuvat ja z8:sta, rajat z6:sta. Nimiöversio vaihtui e → f, vain nimiotaso-kenttä; edellinen luettelo tallessa. GL-kerroksen vaihe 1 (runko) työn alla haarassa karttaseppa-gl-runko, Pelikoodarin rasterilähde pushattu.
