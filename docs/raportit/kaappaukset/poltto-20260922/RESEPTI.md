@@ -1,0 +1,21 @@
+# Pohjapoltto 2026-09-22-pohja (isobaatit) — LÄHTI 21.9. klo 18.35 (Julkaisija: poltto voi alkaa)
+
+Resepti: pohja kuten 21.9. mutta `--syvyyskayrat 200,1000,3000 --syvyyskohina lauta` portaiden tilalla
+(muu ennallaan: joet pohjaan, vesiviivoitus tumma, litistys 0,8, GSHHG-ranta
+rantatasolla, rannikon harvennus 0,004, laatu 0,9, patina kevyt). Versiot:
+pohja 2026-09-22-pohja (UUSI), viivat 2026-09-22-viivat (UUSI, sama sisältö — skripti vaatii), ranta 2026-09-21-ranta,
+nostot 2026-09-22-nostot (UUSI, sama sisältö), nimiöt 2026-09-21f-nimiot, pallotunniste 20260922a.
+Koodi: haara karttaseppa-maakuntavedos (--syvyyskayrat) on oltava mergetty
+työhaaraan ennen ajoa (tai ajo tästä worktreestä).
+
+1. aja-1.sh: pohja z0–z8 + viivat + ranta, ~50 min (114 shardia, 16 ydintä),
+   vienti ämpäriin shardeittain.
+2. aja-2.sh: nostot + nimiöt + luettelo + pallon sarja 20260922a, ~50 min;
+   luettelo jää vientikansioon (--ei-luettelovientia).
+3. Julkaisija: js/pallo.js PALLO_LAATTAVERSIO '2026-09-22-pohja',
+   PALLO_LAATTATUNNISTE '20260922a' → versio mainiin.
+4. Luettelo ämpäriin VASTA kun osoitin on mainissa (edellinen luettelo talteen).
+
+CI-tauko: 2 h (vaiheet 1–2 peräkkäin), sovitaan Julkaisijan kanssa.
+
+Lisäys 21.9. ilta: pohjalippu `--koristeet assets/koristeet/meri/pallo-koristeet.json` (merikoristeet pohjan kalusteina, haara karttaseppa-merikoristeet 83429d8c mergetty työhaaraan 81394252). Ei erillistä nimiö-/pallosarjaerää.
