@@ -19,6 +19,7 @@
     "savuke-nimiot-vakaat.mjs",
     "savuke-nostotasot.mjs",
     "savuke-sumu.mjs",
+    "savuke-nostot-nakyviin.mjs",
     "savuke-kartan-liike.mjs",
     "savuke-nimiot-sulavat.mjs",
     "savuke-hiomassa-linssi.mjs",
@@ -525,6 +526,10 @@
     "savuke-sumu.mjs": {
       "kuvakansio": true,
       "huomautus": "Loytamisen sumu (omistaja 21.9.2026 julkaisuun): FRA/Pariisi 390 ja 1400 px — sisasumu 50 % kaymattomien kaupunkien seuduilla (aukko pariisi, Marseille sumussa), luonnosnostot katkoviivarenkaassa, kaymattomien maiden rajat vaaleampina; Marseillen jalkeen sumu pois (merentakaiset Cayenne ja Noumea eivat laske). Ampari Noden kautta. ~60 s."
+    },
+    "savuke-nostot-nakyviin.mjs": {
+      "kuvakansio": true,
+      "huomautus": "Nostot nakyviin maan rajan ylapuolella (omistajan kaappaus v2000, 21.9.2026): FRA/Marseille tallennettu peli 2000x1300 dpr 2 ja 390 — saapumisnakyma 68 nostoa ikoneineen; katto nostettuna ajon tapaan korkeuteen x4,5 (Ranska kokonaan ruudulla, osuus 0,44) portti auki (lehtiNakyvissa), nostot ikoneineen ja nimioineen, ei pisteetVain; puhelin ennallaan. Ampari Noden kautta. ~80 s."
     },
     "savuke-kartan-liike.mjs": {
       "kuvakansio": true,
