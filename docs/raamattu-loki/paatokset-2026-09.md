@@ -855,3 +855,7 @@ Karttaseppä 22.9.2026 klo 00.40: pallolaatat.js LAATTAKERROS_ALOITUKSIA_PER_KEH
 ## NOSTOTASOT GBR/POL/AUT VALMIIT; DEU/ITA/ESP-HAARAT VANHALTA POHJALTA, CHERRY-PICK (22.9.2026 klo 00.04)
 
 Sisältökirjuri 22.9.2026 klo 00.45: sisalto-nostotaso-gbr 560a120e6, -pol 5cc8226c4, -aut 2ff5ae303 (6 kukin, AUT Tonava pidetty, ei Wachau-nostoa), testit 0 fail. DEU/ITA/ESP-nostotasohaarat ovat vanhalta pohjalta (614 committia jäljessä) → Julkaisija cherry-pickaa kuten kartuschoissa. Seuraava erä NLD/BEL/CHE/PRT/GRC/CZE.
+
+## TYYPPIMERKIT LAHIZOOMISSA VALMIS JA HYVAKSYTTY (9a96e4f5c) (22.9.2026 klo 00.09)
+
+Pelikoodari 22.9.2026 klo 00.50: kartan kerroin ≥ 4 (z8) → jokainen nosto saa tyyppinsä Codexin kuvamerkin tavallisessa koossa, kauempana piste; ykköstaso 1,6× kaikilla zoomeilla; tyyppi ilman merkkiä (eläimet) pitää tyyppikuvakkeen; vaihto häivytetään rungolla 180 ms; muiden nostojen ikonit ovat esteitä nimiöille (kaupunki ja ykköstaso eivät väistä). Savuke 10/10, testit 3844/0. Puhelimen syvin zoomi (kerroin 4,4) juuri rajan yli, z8 ja z9 samat. Fable katsoi kaappaukset (z6 pisteet + ykköstason merkit, z8 kaikki merkkeinä, nimiöt eivät osu ikoneihin) ja hyväksyi ilman omistajan korttia (omistajan lupa 21.9. klo 23.45). Julkaisijalle.
