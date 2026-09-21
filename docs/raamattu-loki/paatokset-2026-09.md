@@ -595,3 +595,27 @@ Sisältökirjuri 21.9.2026 ilta: visat erä 3 (sisalto-visat-3 92e582c5, rebasat
 ## POHJAPOLTTO ALKOI 18.35; MERIKORISTEET POHJAN KALUSTEIKSI (z1-z6) SAMAAN AJOON; VEDOKSEN TASOKARTTA VAIN TYOKALUN ESITYS (21.9.2026 klo 18.29)
 
 Karttaseppä 21.9.2026 klo 18.35: pohjapoltto 2026-09-22-pohja alkoi (114 shardia, 16 ydintä, vaihe 1 ~50 min + vaihe 2 ~50 min). Omistajan tasokarttakysymys: vedoskuvat maailma-z1/z2 ovat vain vedostyökalun tasoesitys pyramidin laatoista (Miller-arkki kehyksineen); pelissä ei ole tasokarttanäkymää, pallo lukee samoja laattoja. Muutos: nimiötasoversio ei näy pelissä (retina lukee maailmankuvaan z4–z5, lepokerros ei piirrä sarjaa), joten merikoristeet poltetaan pohjan kalusteiksi merten nimien ja ruusun rinnalle (z1–z6, karttaseppa-merikoristeet 83429d8c mergetty polton työhaaraan, --koristeet); ei erillistä nimiö g / pallo b -erää. Pelikaappaukset docs/raportit/kaappaukset/merikoristeet-20260921/pallo-*.jpg. Osoitin-PR:ään tulee myös generoi- ja maailmapiirtokoodi, ei pelikoodia.
+
+## VISAT VALMIS: 153 VISAA, KAIKKI 29 MAATA VAHINTAAN KOLMASOSAAN; SISALTOKIRJURIN SEURAAVA ERA MONUMENTTIEN NYKYKUVAT JA NOSTOT ILMAN KUVAA (21.9.2026 klo 18.36)
+
+Sisältökirjuri 21.9.2026 ilta: visat erä 4 (sisalto-visat-4 4295c210): 45 visaa AUT/CZE/DNK/ESP/FRA/HUN/IRL/NLD/POL/PRT. Erät 1–4 yhteensä 153 visaa; kaikki 29 maata, jotka 20.9. inventaariossa olivat alle kolmasosan, ovat nyt vähintään 1/3; Euroopan visaosuus 22,4 → ~28 %. Testit 0 fail kaikissa. Fable: visastandardin kohta 3 täyttyy Euroopan osalta. Seuraava erä Sisältökirjurille: 1) fokusvirta-testin visakiellon poisto (jos ei vielä tehty); 2) kadonneiden monumenttien rappeutunut-luokan (11 kohdetta + tutkimuksen ehdottamat) aidot nykyvalokuvat Commonsista PD/CC tarkistettuina, kytkettynä kohteisiin niin että Codexin kulta-aikakuva täydentää parin myöhemmin; 3) sen jälkeen inventaarion 198 kuvatonta nostoa Commons-kuvilla maittain, huonoimmat ensin. Pienoismallien ja monumenttikuvien kytkentä heti kun Codex toimittaa.
+
+## GL OLETUKSEKSI TEHTY (6aac029d); VANHAT DOM-SAVUKKEET AJAVAT PERAANTYMISTIETA SIIRTYMAAJAN (21.9.2026 klo 18.41)
+
+Pelikoodari 21.9.2026 ilta: GL oletukseksi (pelikoodari-gl-nimiot 6aac029d), Julkaisijalle. ?glnimiot=0 = CSS2D-perääntymistie; ilman WebGL-tekstuuria runkoa ei synny ja kaikki jää CSS2D:hen; rungon kaatuessa se puretaan ja nimet palaavat CSS2D:hen samassa kehyksessä. GL-savukkeet mittaavat oletustilan; 25 vanhaa DOM-savuketta ajavat toistaiseksi perääntymistietä (&glnimiot=0) ja siirretään GL-mittareihin vaiheiden valmistuessa. Vaihe 3 (nostot ikoni+nimiö rungolle, kylkivaihdon crossfade) koodattu, odottaa savuketta, tulee omana eränä oletukseksi heti.
+
+## CODEX TYOSTAA 21.9. TILAUKSIA, ENSIMMAISET KUVAT TULOSSA (21.9.2026 klo 19.22)
+
+Omistaja 21.9.2026 ilta: Codex on lukenut tilaukset ja on vain hidas; ensimmäiset pienoismalli- ja monumenttikuvat ovat tulossa pian. Ei uusintatilausta. Postivahti ilmoittaa Fablelle toimituksista; Julkaisija hakee, Sisältökirjuri kytkee.
+
+## GL VAIHE 2 VARTIJAVIKA KORJATTU (827850f1); VAIHE 3 NOSTOT RUNGOLLE KOODATTU (b7db847f), SAVUKE ODOTTAA POLTON JALKEEN (21.9.2026 klo 19.26)
+
+Pelikoodari 21.9.2026 ilta: #2667:n Savukevartija-vika korjattu (pelikoodari-gl-nimiot 827850f1: ui.pallolautaGL() UI-metodi, lauta antaa ui.glKerros-kahvan). GL vaihe 3 koodattu (pelikoodari-gl-nostot b7db847f): nostot ikoni+nimiö rungolle, sovittelun siirto ja katto, piilotukset peittoina, kylkivaihdon crossfade 180 ms; CSS2D:hen jäävät ankkurit, liuskat, luonnokset ja pisteet; 61 nostoa rungolla, 8 CSS2D:ssä, 107 instanssia yhdellä drawcallilla; yksikkötestit 12/0. Ei vielä julkaistavaksi: savuke ja kaappaus ajamatta, kone jumissa polton takia (load 540). Fable: odotetaan polton loppu (~20.15), sitten savuke ja Julkaisijalle; Laitetestaajan laiteluku vasta v2014:n jälkeen tuotannosta, ei haarasta polton aikana.
+
+## GL VAIHE 4 KOODATTU (57f9fd49): PELINAPPULA RUNGOLLE, KOHTEET JA LINSSIMERKIT JAAVAT CSS2D:HEN (21.9.2026 klo 19.42)
+
+Pelikoodari 21.9.2026 ilta: GL vaihe 4 (pelikoodari-gl-nostot 57f9fd49, vaiheen 3 päällä): pelinappula rungolle (sama svg rasteroituna, jalka pisteessä, koko ei seuraa zoomia), nappulan laatikko ladonnan esteeksi datumista; kohteet ja linssimerkit jäävät CSS2D:hen (sykkivä halo, vapaa HTML); napautus datumeista, nappula ei napautettava. Testit 3832/0, savukevartija ok, standalone ok. Vaiheiden 3+4 savuke ja kaappaus polton jälkeen, sitten Julkaisijalle oletukseksi. Seuraavaksi DOM-savukkeet GL-mittareiksi (nimiot-vakaat/sulavat lukemaan rungon instansseja).
+
+## MONUMENTTIEN NYKYKUVAT: 26 RAPPEUTUNUTTA KOHDETTA KYTKETTY (9cffb842); CURTEA VECHE PAALLEKKAIN BUKARESTIN MERKIN KANSSA (21.9.2026 klo 20.07)
+
+Sisältökirjuri 21.9.2026 ilta (sisalto-monumentit-nykykuvat 9cffb842): 26 rappeutunut-kohdetta kytketty 19 maahan + ESP-pilotti: aito Commons-nykykuva R2:ssa, koordinaatit, ihme.osoite odottaa Codexin kulta-aikakuvaa samalla rakenteella. Havainnot: ROU Curtea Veche lähes päällekkäin Bukarestin kaupunkimerkin kanssa, maakartan nosto-linkki puuttuu (Karttaseppä tarkistaa sovittelun); SVK Čachtice ja UKR Kultainen portti muotoiltu harhaanjohtamatta (Báthorya ei syytetty; Kultainen portti on 1982 rekonstruktio). Testit 0 fail. Julkaisijan jonoon. Seuraava: 198 kuvatonta nostoa.

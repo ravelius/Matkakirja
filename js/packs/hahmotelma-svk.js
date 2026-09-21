@@ -29,7 +29,9 @@
  * Smolenicen linna 1900-luvulla) ovat mukana: teksti on nykytietoa ja
  * `nappi` katsoo vuodesta 1873.
  *
- * === KUVAT ===========================================================
+ * === KUVAT ====================================================    },
+  },
+  {
  *
  * Kuvat ovat JPEG-tiedostoja (1800 px tai alkuperäinen, jos se on
  * pienempi), nimeltään `svk-nosto-<id>-<8 hex sha256>.jpg`, ja osoite on
@@ -41,7 +43,9 @@
  * /Users/samireivinen/Matkakirja-nostot-kuvat/svk/. Kuvissa ei ole
  * tunnistettavia yksityishenkilöitä.
  *
- * === MIKSI TÄMÄ REITTI (KOHDE_MAAT) ==================================
+ * === MIKSI TÄMÄ REITTI (KOHDE_MAAT) ===========================    },
+  },
+  {
  *
  * Sama reitti kuin muidenkin EU-maiden hahmotelmilla: Slovakiassa ei ole
  * pelikaupunkia eikä muita nostoja, joten rivit liitetään
@@ -50,7 +54,9 @@
  * kuin Ranskan hahmotelmalla (js/pallolauta/nostot.js
  * PAAKARTAN_MERKKIKATTO).
  *
- * === KOORDINAATIT ====================================================
+ * === KOORDINAATIT =============================================    },
+  },
+  {
  *
  * Jokaisen asteet on haettu en-Wikipedian rajapinnasta
  * (`action=query&prop=coordinates`, haettu 19.9.2026) ja artikkelin nimi
@@ -1546,6 +1552,112 @@ export const HAHMOTELMA_SVK = [
       + 'kansalliskirjasto ja Matica slovenská.',
     lahde: 'en-Wikipedia "Martin, Slovakia", johdanto-osa ja osio "History" (tarkistettu '
       + '19.9.2026).',
+  },
+  {
+    id: 'hahmotelma-devin',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/svk-nosto-devin-d9d74d93.jpg',
+      lyhyt: 'Devínin linnan rauniot kalliolla Moravan laskiessa Tonavaan.',
+      selite: 'Kuvassa Devínin linnan rauniot kohoavat jyrkällä kalliolla, jonka juurella '
+        + 'Morava-joki yhtyy Tonavaan; joen toisella puolella siintää Itävalta.',
+      lahde: 'Valokuva: Uoaei1, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Uoaei1',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Devín_Castle_and_Morava-Danube_Confluence_01.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Devínin linna',
+    tyyppi: 'historia',
+    lahi: true,
+    kysymykset: [
+      'Minä vuonna Napoleonin joukot räjäyttivät Devínin linnan?',
+      'Minkä kahden joen yhtymäkohdassa Devínin linna sijaitsee?',
+    ],
+    korostukset: ['Napoleonin joukot|Napoleonin joukot', 'roomalaisen tornin|roomalaisen tornin'],
+    nappi: 'Keskiaikainen raja-linna Moravan ja Tonavan yhtymäkohdassa, jonka Napoleon räjäytti',
+    // 16.97833 E / 48.17361 N — en-Wikipedia "Devín Castle"
+    laudat: {
+      maailmankartta: { x: 6399.3, y: 1468.8 },
+      europe: { x: 537.2, y: 626.6 },
+    },
+    teksti: 'Devínin linna kohoaa jyrkällä kalliolla Bratislavan laidalla kohdassa, jossa '
+      + 'Morava-joki laskee Tonavaan ja muodostaa samalla rajan Itävallan ja Slovakian '
+      + 'välillä. Paikkaa on asutettu jo kivikaudelta lähtien, ja kalliolta on kaivettu esiin '
+      + '100-luvulla jaa. rakennetun roomalaisen tornin jäännökset, mikä kertoo paikan '
+      + 'strategisesta merkityksestä Tonavan kauppareittien vartiopaikkana jo roomalaisrajan '
+      + 'aikaan. Linna saatetaan mainita kirjallisissa lähteissä jo vuodelta 864, jolloin '
+      + 'Itä-Frankin kuningas Ludvig Saksalainen piiritti Määrin ruhtinas Rastislavia täällä, '
+      + 'joskin tulkinta on tutkijoiden kesken kiistanalainen. Keskiajalla paikalle '
+      + 'rakennettu linna toimi Unkarin kuningaskunnan raja- ja puolustuslinnana Moravan yli '
+      + 'kulkevalla reitillä. Napoleonin joukot räjäyttivät linnan vuonna 1809 Pressburgin '
+      + 'piirityksen jälkeen vetäytyessään alueelta, minkä jälkeen jäljelle jäivät vain '
+      + 'louhikkoiset rauniot. 1800-luvulta lähtien Devínistä on tullut slovakialaisen '
+      + 'kansallisen identiteetin symboli, ja se on esiintynyt muun muassa entisen 500 '
+      + 'Tšekkoslovakian korunan setelin kääntöpuolella ja 50 halerin kolikossa.',
+    lahde: 'en-Wikipedia "Devín Castle", johdanto-osa (tarkistettu 21.9.2026).',
+    ihme: {
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-devin-loistoaika.jpg',
+      kadonnut: false,
+      selite: 'Ennen Napoleonin joukkojen räjäytystä 1809 Devínin linna seisoi vielä ehjänä '
+        + 'kalliolinnoituksena Moravan ja Tonavan yhtymäkohdassa, vartioiden rajaa ja '
+        + 'kauppareittejä.',
+      lahde: 'Matkakirjan havainnekuva: kohde ennen 1809 tuhoa. Faktat: en-Wikipedia "Devín '
+        + 'Castle", tarkistettu 21.9.2026.',
+      url: 'https://en.wikipedia.org/wiki/Devín_Castle',
+    },
+  },
+  {
+    id: 'hahmotelma-cachtice',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/svk-nosto-cachtice-297f8d80.jpg',
+      lyhyt: 'Čachticen linnan rauniot kalliolla Pieni-Karpaattien pohjoisosassa.',
+      selite: 'Kuvassa Čachticen linnan sammaloituneet muurit ja tornit kohoavat metsäisen '
+        + 'kukkulan laella pilvisen taivaan alla.',
+      lahde: 'Valokuva: LMih, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'LMih',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Čachtice,_hrad,_Slovensko.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    nimi: 'Čachtice-n linna',
+    tyyppi: 'historia',
+    lahi: true,
+    kysymykset: [
+      'Minä vuonna Čachticen linna tuhoutui suurelta osin tulipalossa?',
+      'Kuka kreivitär asui Čachticen linnassa ja jota syytettiin palvelustyttöjen murhista?',
+    ],
+    korostukset: ['Erzsébet Báthorylle|Erzsébet Báthorylle', 'tulipalossa|tulipalossa'],
+    nappi: 'Verikreivitär Erzsébet Báthoryn koti ja vankila, tuhoutui tulipalossa 1799',
+    // 17.760833 E / 48.725 N — en-Wikipedia "Čachtice Castle"
+    laudat: {
+      maailmankartta: { x: 6425.4, y: 1445.3 },
+      europe: { x: 552.2, y: 612.1 },
+    },
+    teksti: 'Čachticen linna kohoaa jyrkällä kalliolla Pieni-Karpaattien pohjoisreunalla, ja '
+      + 'Hont-Pázmány-suvun Casimir rakennutti sen 1200-luvun puolivälissä vartiolinnaksi '
+      + 'Määrin-tielle. Linna laajeni vuosisatojen kuluessa romaanisesta goottilaiseksi ja '
+      + 'sai 1600-luvulla renessanssiaikaisia lisärakennuksia. Linna ja sitä ympäröivät kylät '
+      + 'olivat Nádasdyn suvun häälahja kreivitär Erzsébet Báthorylle, kun tämä avioitui '
+      + 'Ferenc Nádasdyn kanssa vuonna 1575, ja linnasta tuli hänen kotinsa. 1610-luvun '
+      + 'taitteessa satojen todistajien kertomukset syyttivät häntä kymmenien '
+      + 'palvelustyttöjen kidutuksesta ja murhasta; tammikuun 1611 oikeudenkäynneissä hänen '
+      + 'neljä apuriaan tuomittiin ja teloitettiin, mutta aatelisena Báthorya itseään ei '
+      + 'koskaan virallisesti asetettu syytteeseen, vaan hänet suljettiin linnaan tiukkaan '
+      + 'vartiointiin kuolemaansa elokuussa 1614 asti. Rákóczin kapinalliset valtasivat '
+      + 'linnan 1708, ja se tuhoutui suurelta osin tulipalossa vuonna 1799, minkä jälkeen se '
+      + 'seisoi raunioina yli 200 vuotta ennen kuin avattiin matkailijoille vasta vuonna '
+      + '2014.',
+    lahde: 'en-Wikipedia "Čachtice Castle" ja "Elizabeth Báthory", johdanto-osat ja osio '
+      + '"Torture and murder accusations" (tarkistettu 21.9.2026).',
+    ihme: {
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-cachtice-loistoaika.jpg',
+      kadonnut: false,
+      selite: 'Ennen vuoden 1799 tulipaloa Čachticen linna oli vielä asuttu renessanssilinna, '
+        + 'jonka muureilla vartijat kulkivat ja jonka saleissa aateliset kokoontuivat.',
+      lahde: 'Matkakirjan havainnekuva: kohde ennen 1799 tulipaloa. Faktat: en-Wikipedia '
+        + '"Čachtice Castle", tarkistettu 21.9.2026.',
+      url: 'https://en.wikipedia.org/wiki/Čachtice_Castle',
+    },
   },
   {
     id: 'hahmotelma-krasna-horka',
