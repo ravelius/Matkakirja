@@ -1,7 +1,8 @@
 /*
  * SAVUKE: GL-NIMIÖKERROKSEN RUNKO (vaihe 1, 21.9.2026).
  *
- * Avaa pallolaudan `?lauta=pallo&glnimiot=1`, odottaa, että kerros syntyy
+ * Avaa pallolaudan `?lauta=pallo&glnimiot=testi` (rungon testinimiöt;
+ * `glnimiot=1` on ladonnan nimet sovittimen kautta, savuke-glnimiot-nimet.mjs), odottaa, että kerros syntyy
  * (kirjaston luokat scenestä) ja saa 40 testinimiötä, ja mittaa:
  *   1. kerros: instansseja 40, sivuja ≥ 1, drawcalls = sivut, rakennus < 20 ms;
  *   2. paikka: kaappaus kytkimen kanssa ja ilman — erot keskittyvät
@@ -62,7 +63,7 @@ const avaa = async (glnimiot) => {
   await sivu.route(/media\.matkakirja\.app|r2\.dev\//, async (r) => { const v = await ampari(r.request().url()); if (!v) { r.abort(); return; } r.fulfill({ status: 200, contentType: v.tyyppi ?? 'application/octet-stream', body: v.body, headers: { 'access-control-allow-origin': '*' } }); });
   await sivu.route('**samireivinen.workers.dev/**', (r) => r.abort());
   await sivu.route(/wikimedia\.org/, (r) => r.abort());
-  await sivu.goto(`${osoite}?lauta=pallo${glnimiot ? '&glnimiot=1' : ''}`, { waitUntil: 'domcontentloaded', timeout: 90000 });
+  await sivu.goto(`${osoite}?lauta=pallo${glnimiot ? '&glnimiot=testi' : ''}`, { waitUntil: 'domcontentloaded', timeout: 90000 });
   await sivu.waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null, { timeout: 90000 });
   await sivu.waitForTimeout(2500);
   await sivu.evaluate(() => { setInterval(() => { const ui = window.matkakirja?.ui; const n = ui?.ohitaNappi?.isConnected ? ui.ohitaNappi : document.querySelector('.fokusvirta-ohitanappi'); if (n) n.click(); }, 150); });

@@ -43,7 +43,7 @@
 
 import { KARTTANIMI_FONTTI } from '../karttanimet.js';
 import {
-  nostosymMitanKatto, nostosymPorrasNyt, nostosymRasteri, nostosymRasterinAvain, nostosymReseptit,
+  NOSTOSYM_MITAN_KATTO, nostosymPorrasNyt, nostosymRasteri, nostosymRasterinAvain, nostosymReseptit,
 } from '../fokusnosto-symbolit.js';
 import { ruudunKerroin } from './nostot.js';
 
@@ -199,7 +199,7 @@ export function nostonKatto(d, katto) {
  * `--nimiokerroin`-muuttujan (E2, sama lähde kuin CSS).
  */
 export function luoRasterilahde({
-  kotelo, dpr = globalThis.devicePixelRatio || 1, doc = globalThis.document, katto = nostosymMitanKatto(),
+  kotelo, dpr = globalThis.devicePixelRatio || 1, doc = globalThis.document, katto = NOSTOSYM_MITAN_KATTO,
   luoKangas = null, bitmap = typeof createImageBitmap === 'function',
 } = {}) {
   const valmiit = new Map(); // avain → sprite

@@ -139,6 +139,7 @@ import { luoLinssikartta } from './linssikartta.js';
 import { luoMaapaneeli, paneelinLaatikko } from './maapaneeli.js';
 import { luoLinssit } from './linssit.js';
 import { glLuokat, glNimiotKaytossa, luoNimiokerrosGL, rasteroiTeksti } from '../pallonimiot-gl.js';
+import { luoGlNimiosovitin } from './glnimiot-sovitin.js';
 import { luoNappulanKuljettaja } from './siirto.js';
 import { luoAloituslennonKohtaus } from './avaus.js';
 
@@ -2008,8 +2009,12 @@ export async function avaaPallolauta(ui) {
    * reittien jälkeen. `?vektorit=0` jättää kerroksen pois.
    */
   const vektorit = pallovektoritPaalla() ? luoPallovektorit({ pallo, kotelo, reitit }) : null;
+  // GL-nimiöt (vaihe 2): ladonnan nimet rungolle sovittimen kautta, kun `?glnimiot=1`.
+  const glSovitin = glNimiotKaytossa() && !/[?&]glnimiot=testi\b/.test(globalThis.location?.search ?? '')
+    ? luoGlNimiosovitin({ kotelo, kerros: () => ui.pallolautaGL?.() ?? null })
+    : null;
   const nimet = luoNimet({
-    ui, merkit, asteet: pallonAsteet, ruudulla, kotelo, pack,
+    ui, merkit, asteet: pallonAsteet, ruudulla, kotelo, pack, glSovitin,
   });
   /*
    * ══ RUUDUN KALUSTEET OVAT LISTAN KOVIA ESTEITÄ ══════════════════
@@ -3712,15 +3717,19 @@ export async function avaaPallolauta(ui) {
   // Kameran ennuste: CSS2D-nimiöt ja merkit seuraavan kehyksen paikkaan (E4b, ?ennuste=0 pois).
   const ennustepurku = kytkePallonEnnuste(pallo, kotelo);
   /*
-   * GL-KERROS, VAIHE 1 (`?glnimiot=1`, docs/raportit/gl-kerros-suunnitelma-
+   * GL-KERROS (`?glnimiot=1`, docs/raportit/gl-kerros-suunnitelma-
    * 20260921.md): kerros syntyy laiskasti, kun kirjaston luokat ovat
-   * scenessä (laattaverkko + ilmakehän varjostin), ja saa testinimiöiksi
-   * 40 kameraa lähintä kaupunkia rungon omalla rasterilla. Tuotannon
-   * rasterit (Pelikoodarin nimiorasterit.js), napautus ja sovittelu
-   * tulevat vaiheissa 2–4; siihen asti CSS2D-nimiöt pysyvät rinnalla.
+   * scenessä (laattaverkko + ilmakehän varjostin). VAIHE 2: ladonnan
+   * nimet tulevat rungolle sovittimen kautta (glSovitin,
+   * js/pallolauta/glnimiot-sovitin.js; rasterit nimiorasterit.js);
+   * rungon omat 40 testinimiötä ovat vain `?glnimiot=testi`-tilassa
+   * (savuke-glnimiot.mjs). Napautus ja sovittelu tulevat vaiheissa
+   * 3–4; siihen asti CSS2D on perääntymistie (rasteri kesken, atlas
+   * täynnä, ei runkoa).
    */
   let glKerros = null;
-  let glSiemen = null; // pov, jonka ympäriltä testinimiöt valittiin
+  let glSiemen = null; // pov, jonka ympäriltä testinimiöt valittiin (vain ?glnimiot=testi)
+  const glTesti = glNimiotKaytossa() && /[?&]glnimiot=testi\b/.test(globalThis.location?.search ?? '');
   ui.pallolautaGL = () => glKerros;
   const glTestinimiot = (pov, dpr) => {
     glKerros.tyhjenna();
@@ -3741,11 +3750,14 @@ export async function avaaPallolauta(ui) {
       const luokat = glLuokat(pallo);
       if (!luokat) return;
       glKerros = luoNimiokerrosGL({ pallo, kotelo, luokat, juuri: pallonKolmiulotteinen(pallo)?.juuri ?? null });
+      // Ladonnan nimet rungolle heti, kun runko on olemassa (ei uutta ladontaa).
+      if (!glTesti) nimet.jaaUudestaan?.();
     }
-    // Testinimiöt kameran ympäriltä; uudet, kun kamera on siirtynyt kauas.
-    if (!glSiemen || Math.hypot(pov.lat - glSiemen.lat, ((pov.lng - glSiemen.lng + 540) % 360) - 180) > 10) {
+    // Testinimiöt kameran ympäriltä (vain ?glnimiot=testi); uudet, kun kamera on siirtynyt kauas.
+    if (glTesti && (!glSiemen || Math.hypot(pov.lat - glSiemen.lat, ((pov.lng - glSiemen.lng + 540) % 360) - 180) > 10)) {
       glTestinimiot(pov, mitat.suhde ?? 1);
     }
+    glSovitin?.kehys();
     glKerros.kehys(mitat);
   };
   const glpurku = glNimiotKaytossa() ? kytkePallonKehys(pallo, kotelo, glKehys) : () => {};
@@ -5251,6 +5263,8 @@ export async function avaaPallolauta(ui) {
     liike: () => liike,
     /** Kameralokin merkinnät (js/pallolauta/kameraloki.js), uusin viimeisenä. */
     kameraloki: () => kameraloki.merkinnat(),
+    /** GL-nimiöiden sovitin (js/pallolauta/glnimiot-sovitin.js) tai null (savukkeet). */
+    glSovitin: () => glSovitin,
     /** Nimiöiden sulavuusmittari (js/pallolauta/sulavuusmittari.js): aloita/lopeta/yhteenveto. */
     sulavuus: null,
     /**
@@ -5339,6 +5353,7 @@ export async function avaaPallolauta(ui) {
       kehyspurku();
       ennustepurku();
       glpurku();
+      glSovitin?.pura();
       glKerros?.pura();
       kameraloki.pura();
       liike.pura();
