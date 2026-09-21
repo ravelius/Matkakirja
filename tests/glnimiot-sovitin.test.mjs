@@ -134,7 +134,7 @@ test('kytkentä: nimet.js jakaa sovittimen kautta ja lauta antaa sen; sw.js list
   assert.match(nimet, /glSovitin \? glSovitin\.nimet\(nakyvatNimet, naytaNimet\) : nakyvatNimet/);
   assert.match(nimet, /jaaUudestaan: \(\) => naytaNimet\?\.\(\)/);
   const lauta = readFileSync(new URL('../js/pallolauta/lauta.js', import.meta.url), 'utf8');
-  assert.match(lauta, /luoGlNimiosovitin\(\{ kotelo, kerros: \(\) => ui\.pallolautaGL\(\), ui, ruutupiste: /);
+  assert.match(lauta, /luoGlNimiosovitin\(\{\n\s*kotelo, kerros: \(\) => ui\.pallolautaGL\(\), ui, ruutupiste: /);
   assert.match(lauta, /ui\.glKerros = \(\) => \(glVirhe \? null : glKerros\);/);
   const uiLahde = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
   assert.match(uiLahde, /pallolautaGL\(\) \{\s*return typeof this\.glKerros === 'function'/);

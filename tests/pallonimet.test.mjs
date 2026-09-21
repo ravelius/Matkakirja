@@ -162,7 +162,8 @@ test('piste vain nimen kanssa: pistekerros lukee nimettyjen joukon; kehittäjän
    * kummassakaan — ladonta väistää nappulan siinä ajossa, joka
    * SYNNYTTÄÄ lukon, ja kantaa sen sen jälkeen sellaisenaan.
    */
-  assert.match(lauta, /if \(heti\) ladoLevossa\(\);/);
+  // 22.9.2026 (LIIKKEESSÄ EI TÄYTTÄ LADONTAA): sama ajo, mutta liikkeessä vain kun kamera on siirtynyt riittävästi.
+  assert.match(lauta, /if \(heti\) \{\n\s*if \(ladontaTarpeen\(kamera\.nakyvaAlue\(\)\)\) ladoLevossa\(\);/);
   assert.ok(!/liikkeenLadonta/.test(lauta), 'liikkeen ladonnan lippu on poistettu');
   assert.ok(!/^\s+levossa: /m.test(lauta), 'nimiladonta ei enää saa levossa-lippua');
   assert.match(lauta, /lepoAjastin = setTimeout\(ladoLevossaLevossa, viiveMs\);/);
@@ -522,7 +523,7 @@ test('nimi ei leikkaudu ruudun reunasta: ulkopuoli on este', () => {
   const nimet = lue('../js/pallolauta/nimet.js');
   // Ehdokkaan pisteen on oltava ruudulla (ei enää +40 px ulkopuolelle).
   assert.equal(NIMEN_REUNAVARA_PX, 0);
-  assert.match(nimet, /ruutu: \{ w, h \}/);
+  assert.match(nimet, /ruutu: \{ w, h, vara: liikevara > 0 \? liikevara : 0 \}/);
   const w = 834;
   const h = 1112;
   const laidalla = ehdokkaat(834 / 12000, ateena, w, h);

@@ -94,7 +94,7 @@ test('kun mikään asento ei ole vapaa, nimiö häivytetään ja IKONI JÄÄ ase
   const kaikkialla = { x0: 0, y0: 0, x1: 300, y1: 300 };
   const t = sovitteleLaput({ laput: [koelappu('a', 100, 100)], esteet: [kaikkialla] });
   assert.deepEqual(asento(t, 'a'), {
-    kylki: 'oikea', dx: 0, dy: 0, nimio: false, syy: 'piilossa',
+    kylki: 'oikea', dx: 0, dy: 0, nimio: false, syy: 'piilossa', este: 'kiintea',
   });
   assert.equal(t.piilotettu, 1);
 });
@@ -149,7 +149,7 @@ test('vain kaupungin nimi häivyttää ykköstason: kiinteä muste joka ehdokkaa
   const kaikkialla = { x0: 0, y0: 0, x1: 300, y1: 300 };
   const t = sovitteleLaput({ laput: [koelappu('a', 100, 100, 'vasen', { taso: 1 })], esteet: [kaikkialla] });
   assert.deepEqual(asento(t, 'a'), {
-    kylki: 'vasen', dx: 0, dy: 0, nimio: false, syy: 'piilossa',
+    kylki: 'vasen', dx: 0, dy: 0, nimio: false, syy: 'piilossa', este: 'kiintea',
   });
   assert.equal(t.piilotettu, 1);
 });

@@ -92,9 +92,15 @@ const selain = await chromium.launch({
 /** DOM-asennot: avain → kylki|dx,dy|piilossa (vain resepti ja luokat, ei ruutupaikka). */
 const ASENNOT = `() => {
   const ulos = {};
+  // Liikevara (22.9.2026): ruudun ulkopuolelle ladottu lappu ei ole pelaajan silmissä —
+  // vain kotelon sisällä olevat merkit vertaillaan.
+  const koti = window.matkakirja.ui.pallolauta.kotelo.getBoundingClientRect();
   for (const el of document.querySelectorAll('.pallolauta-nosto[data-nosto]:not(.pallolauta-poistuu)')) {
     const g = el.querySelector('.pallolauta-nosto-siirto');
     if (!g) continue;
+    const r = el.getBoundingClientRect();
+    const cx = r.left + r.width / 2; const cy = r.top + r.height / 2;
+    if (cx < koti.left || cx > koti.right || cy < koti.top || cy > koti.bottom) continue;
     const puoli = (g.dataset.resepti ?? '').split('|')[2] ?? '';
     const m = /translate\\(([-\\d.]+)px, ([-\\d.]+)px\\)/.exec(g.style.transform ?? '');
     ulos[el.dataset.nosto] = puoli + '|' + (m ? Math.round(Number(m[1])) + ',' + Math.round(Number(m[2])) : '0,0')
@@ -108,13 +114,18 @@ const LEPO = `() => {
   const l = window.matkakirja.ui.pallolauta;
   l.ladoHeti();
   const laput = l.nostot.lappuLaatikot();
-  const W = innerWidth; const H = innerHeight;
+  // Laatikot ovat kotelon pikseleinä: reuna on kotelon koko, ei ikkunan.
+  const W = l.kotelo.clientWidth; const H = l.kotelo.clientHeight;
   // Ykköstason pakkoasento (kaikki ehdokkaat reunan yli tai tukossa)
   // saa ylittää reunan: se ei häivy (sovittelu.js sääntö 4).
   const asennot = l.nostot.sovittelunAsennot();
   const pakko = (r) => asennot.get('nosto:' + r.id)?.syy === 'pakko' || [...asennot].some(([k, a]) => k.endsWith(':' + r.id) && a.syy === 'pakko');
-  const yli = laput.filter((r) => (r.x0 < -4 || r.y0 < -4 || r.x1 > W + 4 || r.y1 > H + 4) && !pakko(r)).map((r) => r.nimi);
-  const yliPakko = laput.filter((r) => (r.x0 < -4 || r.y0 < -4 || r.x1 > W + 4 || r.y1 > H + 4) && pakko(r)).map((r) => r.nimi);
+  // Liikevara (nostot.js LIIKEVARA, 22.9.2026): ruudun ulkopuolelle ladotut laput eivät ole
+  // reunaylityksiä — ylitys on lappu, joka on OSITTAIN ruudussa ja osittain sen yli.
+  const osittain = (r) => r.x1 > 0 && r.x0 < W && r.y1 > 0 && r.y0 < H;
+  const ylittaa = (r) => osittain(r) && (r.x0 < -4 || r.y0 < -4 || r.x1 > W + 4 || r.y1 > H + 4);
+  const yli = laput.filter((r) => ylittaa(r) && !pakko(r)).map((r) => r.nimi);
+  const yliPakko = laput.filter((r) => ylittaa(r) && pakko(r)).map((r) => r.nimi);
   const lim = (a, b) => a.x0 < b.x1 && b.x0 < a.x1 && a.y0 < b.y1 && b.y0 < a.y1;
   const parit = [];
   for (let i = 0; i < laput.length; i += 1) {
@@ -179,7 +190,7 @@ for (const ruutu of RUUDUT) {
   });
 
   const tunnus = ruutu.nimi;
-  await sivu.goto(`${osoite}?lauta=pallo&glnimiot=0`, { waitUntil: 'domcontentloaded', timeout: 60000 });
+  await sivu.goto(`${osoite}?lauta=pallo&glnimiot=0${process.env.LIIKEVARA === "0" ? "&liikevara=0" : ""}`, { waitUntil: 'domcontentloaded', timeout: 60000 });
   await sivu.waitForFunction(() => window.matkakirja?.ui?.svg, null, { timeout: 90000 });
   const auki = await sivu
     .waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null, { timeout: 60000 })

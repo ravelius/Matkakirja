@@ -2785,12 +2785,16 @@ export function ladoRuutunimet(ehdokkaat, {
    * ruudut läpi silmukassa.
    */
   if (ruutu?.w > 0 && ruutu?.h > 0) {
-    const { w: rw, h: rh } = ruutu;
+    // Liikevara (js/pallolauta/nimet.js lado `liikevara`): vyöt siirtyvät
+    // ulos saman verran, jotta ruudun ulkopuolelle ladotut nimet mahtuvat.
+    const v = ruutu.vara > 0 ? ruutu.vara : 0;
+    const rw = ruutu.w + v;
+    const rh = ruutu.h + v;
     const vyo = 400;
-    varaa({ x0: -vyo, y0: -vyo, x1: 0, y1: rh + vyo });
-    varaa({ x0: rw, y0: -vyo, x1: rw + vyo, y1: rh + vyo });
-    varaa({ x0: -vyo, y0: -vyo, x1: rw + vyo, y1: 0 });
-    varaa({ x0: -vyo, y0: rh, x1: rw + vyo, y1: rh + vyo });
+    varaa({ x0: -v - vyo, y0: -v - vyo, x1: -v, y1: rh + vyo });
+    varaa({ x0: rw, y0: -v - vyo, x1: rw + vyo, y1: rh + vyo });
+    varaa({ x0: -v - vyo, y0: -v - vyo, x1: rw + vyo, y1: -v });
+    varaa({ x0: -v - vyo, y0: rh, x1: rw + vyo, y1: rh + vyo });
   }
   const kelpo = (r) => Number.isFinite(r?.x0) && Number.isFinite(r?.y0)
     && Number.isFinite(r?.x1) && Number.isFinite(r?.y1) && r.x1 > r.x0 && r.y1 > r.y0;
