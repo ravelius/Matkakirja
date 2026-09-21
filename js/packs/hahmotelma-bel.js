@@ -87,6 +87,7 @@ export const HAHMOTELMA_BEL = [
     ],
     nimi: 'Hautes Fagnes',
     tyyppi: 'vuori',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Mikä Hautes Fagnesin kohta on koko Belgian korkein?',
@@ -399,6 +400,7 @@ export const HAHMOTELMA_BEL = [
     ],
     nimi: 'Waterloon leijonakumpu',
     tyyppi: 'historia',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Kuka määräsi Leijonakumpu rakennettavaksi?',
@@ -458,6 +460,7 @@ export const HAHMOTELMA_BEL = [
     ],
     nimi: 'Menin Gate',
     tyyppi: 'historia',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Keitä Menin Gate muistaa?',
@@ -834,6 +837,7 @@ export const HAHMOTELMA_BEL = [
     ],
     nimi: 'Chimay',
     tyyppi: 'ruoka',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Minkä joen lähde on Chimayssa?',
@@ -993,6 +997,7 @@ export const HAHMOTELMA_BEL = [
     ],
     nimi: 'Bruggen Belfry',
     tyyppi: 'kulttuuri',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Mitä Bruggen kellotornissa säilytettiin?',
@@ -1222,6 +1227,7 @@ export const HAHMOTELMA_BEL = [
     ],
     nimi: 'Canal du Centren laivanostimet',
     tyyppi: 'tekniikka',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Miksi Thieun ja Houdeng-Gœgnies\'n välillä ei voitu käyttää sulkuja?',
