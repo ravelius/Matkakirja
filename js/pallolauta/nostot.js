@@ -601,7 +601,7 @@ export function saapumisMitta(d) {
 }
 
 /**
- * MAAN LEHDEN OSUUS NÄKYMÄN LEVEYDESTÄ — kohdemerkkien portin oma luku.
+ * MAAN LEHDEN OSUUS NÄKYMÄSTÄ — kohdemerkkien portin oma luku.
  *
  * Merkit piirretään vasta kun maan lehti täyttää vähintään puolet
  * näkymästä (LEHDEN_VAHIN_OSUUS). Sama luku kertoo myös, milloin
@@ -609,12 +609,68 @@ export function saapumisMitta(d) {
  * (js/pallolauta/lauta.js kohdekaupunginMitat) — siksi se lasketaan
  * yhdessä paikassa ja luovutetaan sieltä molemmille.
  *
- * @returns {number} 0, jos lehteä ei ole; muuten bbox.w / nakyva.w
+ * ══ LEVEYS TAI KORKEUS, KUMPI ON SUUREMPI (omistajan tuotantokaappaus
+ * v2000, 21.9.2026: Ranska z6 työpöydällä, tallennettu peli Marseillessa)
+ * ══════════════════════════════════════════════════════════════════
+ * Osuus mitattiin vain LEVEYDESTÄ. Vaakaruudulla korkea maa (Ranska,
+ * Italia, Norja) täyttää näkymän korkeudesta lähes kokonaan ja
+ * leveydestä alle puolet heti, kun kamera on vähänkään maan
+ * uloszoomausrajan yläpuolella — ja sinne se pääsee laillisesti: ajon
+ * nostama katto (js/pallolauta/lauta.js AJON KATTO, PAATOKSET 47) jää
+ * voimaan perillä, ja sen sisällä rulla vie maan rajan yli. Silloin
+ * portti sulkeutui ja kaikki 69 nostoa putosivat pelkiksi pisteiksi
+ * ("nostot puuttuvat"), vaikka maa oli ruudulla kokonaisena ja
+ * merkeille oli tilaa enemmän kuin saapumisnäkymässä. Mitattu: omistajan
+ * kuvassa Ranska oli 40 % leveydestä ja 77 % korkeudesta. Nyt osuus on
+ * suurempi kahdesta, joten lehti "täyttää puolet näkymästä" kummassa
+ * suunnassa tahansa — pystyruudulla leveys ratkaisee kuten ennen,
+ * vaakaruudulla korkeus. Maailmankuvassa molemmat ovat pieniä ja portti
+ * pysyy kiinni kuten ennenkin.
+ *
+ * @returns {number} 0, jos lehteä ei ole; muuten max(bbox.w / nakyva.w,
+ *   bbox.h / nakyva.h) (korkeus vain, jos molemmilla on korkeus)
  */
 export function lehdenOsuus(pohja, nakyva, packId = null) {
   if (!(pohja?.bbox?.w > 0) || !(nakyva?.w > 0)) return 0;
   if (packId && pohja.lauta && pohja.lauta !== packId) return 0;
-  return pohja.bbox.w / nakyva.w;
+  const leveys = pohja.bbox.w / nakyva.w;
+  const korkeus = pohja.bbox.h > 0 && nakyva.h > 0 ? pohja.bbox.h / nakyva.h : 0;
+  return Math.max(leveys, korkeus);
+}
+/*
+ * ══ MAA KOKONAISENA RUUDULLA AVAA PORTIN (omistajan tuotantokaappaus
+ * v2000, 21.9.2026, jatkoa yllä) ═══════════════════════════════════
+ *
+ * Mitattu (Chromium 2000 × 1300, Marseille): Ranskan laatikko on laudan
+ * yksiköissä korkeampi kuin leveä, joten vaakaruudulla leveyden ja
+ * korkeuden osuudet ovat lähes samat (0,65 / 0,66 korkeudella 0,61) —
+ * suurempi kahdesta ei yksin riitä, kun kamera on ajon jättämän katon
+ * sisällä maan rajaa ylempänä (korkeus ~0,9: osuus 0,44). Omistajan
+ * kuvassa Ranska oli KOKONAAN ruudulla reunuksineen, ja juuri silloin
+ * kaikki 69 nostoa olivat pelkkiä pisteitä. Sääntö: kun maan lehti on
+ * kokonaan näkymän sisällä ja täyttää siitä vähintään
+ * LEHDEN_KOKONAISENA_OSUUS, merkit piirretään kuten lähikuvassa — tila
+ * riittää, koska koko maa on ruudulla eikä maailmankuva (osuus « 0,3)
+ * avaudu tästä. Puolen rajan alapuolella JA laatikon leikatessa reunaa
+ * pisteet riittävät kuten ennen (PAATOKSET 34 kohta 21).
+ */
+export const LEHDEN_KOKONAISENA_OSUUS = 0.3;
+/** Reunavara laudan yksiköissä suhteessa näkymän leveyteen (projektion likiarvo). */
+const LEHDEN_REUNAVARA = 0.04;
+export function lehtiKokonaanRuudulla(pohja, nakyva, packId = null) {
+  const b = pohja?.bbox;
+  if (!(b?.w > 0) || !(b?.h > 0) || !(nakyva?.w > 0) || !(nakyva?.h > 0)) return false;
+  if (packId && pohja.lauta && pohja.lauta !== packId) return false;
+  if (!Number.isFinite(b.x) || !Number.isFinite(b.y) || !Number.isFinite(nakyva.x) || !Number.isFinite(nakyva.y)) return false;
+  const vara = nakyva.w * LEHDEN_REUNAVARA;
+  return b.x >= nakyva.x - vara && b.x + b.w <= nakyva.x + nakyva.w + vara
+    && b.y >= nakyva.y - vara && b.y + b.h <= nakyva.y + nakyva.h + vara;
+}
+/** Portin ehto yhdessä paikassa: lähikuva TAI maa kokonaisena riittävän suurena. */
+export function lehtiNakyvissa(pohja, nakyva, packId = null) {
+  const osuus = lehdenOsuus(pohja, nakyva, packId);
+  if (osuus >= LEHDEN_VAHIN_OSUUS) return true;
+  return osuus >= LEHDEN_KOKONAISENA_OSUUS && lehtiKokonaanRuudulla(pohja, nakyva, packId);
 }
 /*
  * ══ PÄÄKARTAN MERKKIRAJA JA LÄHIZOOMIPORTTI (`nosto.lahi`) ════════
@@ -1711,7 +1767,8 @@ export function luoNostot({
     const iso = kohteidenNykyinenIso(ui);
     const pohja = iso ? FOKUS_POHJAT[iso] : null;
     const osuusNyt = lehdenOsuus(pohja, nakyva, pack.id);
-    const lehtiNakyy = osuusNyt >= LEHDEN_VAHIN_OSUUS;
+    // Lähikuva tai maa kokonaisena ruudulla (ks. MAA KOKONAISENA RUUDULLA AVAA PORTIN).
+    const lehtiNakyy = lehtiNakyvissa(pohja, nakyva, pack.id);
     /*
      * ══ PISTEET NÄKYVÄT AINA KOHDEMAASSA (omistaja 18.9.2026 klo
      * 19.08, Raamattu KARTTAUUDISTUKSEN PAATOKSET 34 kohta 21,
@@ -1722,7 +1779,8 @@ export function luoNostot({
      *
      * MITATTU JUURISYY (Chromium, Ranskan saapumisnäkymä, tämä haara
      * ennen korjausta): kerros on KOKONAAN kiinni, kun maan lehti ei
-     * täytä puolta näkymän leveydestä (LEHDEN_VAHIN_OSUUS = 0,5).
+     * täytä puolta näkymästä (LEHDEN_VAHIN_OSUUS = 0,5; leveys tai
+     * korkeus, ks. lehdenOsuus).
      * Portti on kirjoitettu MERKEILLE — nimiöineen, osuma-aloineen —
      * ja sen perustelu (js/fokuskohteet.js MERKIT SYTTYVÄT VASTA KUN
      * LEHTI ON LÄHIKUVASSA) on 44 pikselin osuma-alojen kasautuminen
