@@ -791,3 +791,7 @@ Omistaja 21.9.2026 klo 23.20 (linssikatalogin kaappaukset): 1) 'seuraava'-tilame
 ## CHE 26 KANTTONIA ON JO NIMIOTASOSSA g; VEDOS OMISTAJALLE, KOLME PAALLEKKAISYYTTA (21.9.2026 klo 23.13)
 
 Karttaseppä 21.9.2026 ilta: CHE:n 26 kanttonia ovat jo tuotannon nimiötasossa g (poltettu vedos 4:n nimistöllä); vedoskuvat sveitsi-z6/z7/z8 (karttaseppa-che-kanttonit, PR #2690 docs). Huomiot: Kapellbrücke-nosto LUZERN-nimen päällä z7, Stiftsbibliothek Appenzell Ausserrhodenin päällä z8, VALAIS Matterhornin ja Bernhardilaisen välissä — korjattavissa käsisiirroilla nimiöversioon h. laatat.purkuja-mittari on jo mainissa; zoomiennakko tuotannossa v2031. Karttaseppä odottaa ablaatiotikkaan laattatuloksia ja sulavuuskuittausta.
+
+## CHE-PAALLEKKAISYYDET KORJATAAN SEURAAVAAN NIMIOPOLTTOON (h), EI HETI (21.9.2026 klo 23.14)
+
+Omistaja 21.9.2026 klo 23.30 (kortti): Sveitsin kolme päällekkäisyyttä (Kapellbrücke/LUZERN z7, Stiftsbibliothek/Appenzell Ausserrhoden z8, VALAIS Matterhornin ja bernhardilaisen välissä) korjataan käsisiirroilla nimiöversioon h seuraavan nimiöpolton yhteydessä muiden korjausten kanssa (Intian valtameren ruusu pohjaan). Ei polttoa nyt.
