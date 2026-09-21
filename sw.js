@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-09-21.2019';
+const CACHE = 'matkakirja-2026-09-21.2025';
 const SHELL = [
   './',
   './index.html',
@@ -1277,7 +1277,13 @@ const SHELL = [
   './assets/kartat/miniatyyrit/amsterdam-kissalaiva.webp',
   './assets/kartat/miniatyyrit/amsterdam-maitotytto.webp',
   './assets/kartat/miniatyyrit/amsterdam-yovartio.webp',
+  './assets/kartat/miniatyyrit/ateena-akropolis-museo.webp',
+  './assets/kartat/miniatyyrit/ateena-diogeneen-astia.webp',
+  './assets/kartat/miniatyyrit/ateena-elginin-marmorit.webp',
+  './assets/kartat/miniatyyrit/ateena-iliou-melathron.webp',
   './assets/kartat/miniatyyrit/ateena-louis-1896.webp',
+  './assets/kartat/miniatyyrit/ateena-maratonhuijaus.webp',
+  './assets/kartat/miniatyyrit/ateena-niken-temppeli.webp',
   './assets/kartat/miniatyyrit/bergen-fredriksbergin-linnake.webp',
   './assets/kartat/miniatyyrit/bergen-kaupunginkirjasto.webp',
   './assets/kartat/miniatyyrit/bergen-korskirken.webp',
@@ -1368,6 +1374,7 @@ const SHELL = [
   './assets/kartat/miniatyyrit/wien-rattaan-kulmat.webp',
   './assets/kartat/miniatyyrit/wien-taikahuilu.webp',
   './assets/kartat/miniatyyrit/wien-tonava-kaunoinen.webp',
+  './assets/kartat/miniatyyrit/wien-vuoristovesijohto.webp',
   './assets/kartat/miniatyyrit/wien-yhdeksas-1824.webp',
   // Matkakirjan ihmeet: sama kohde loistoaikansa asussa NYKYMAAILMASSA
   // (Raamattu, osio "Matkakirjan ihmeet"; kohteiden `ihme`-kenttä

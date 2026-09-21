@@ -769,6 +769,32 @@ export const PAIKALLISAARTEET = {
         + 'Priamoksen.',
     },
   },
+  /*
+   * KYPROS (CYP), lisätty 21.9.2026 pelikaupunkitilauksen yhteydessä
+   * (Nikosia). Kuvaa ei ole vielä — maa on KUVAA_ODOTTAVAT-listalla
+   * (tests/paikallisaarteet.test.mjs), kuten Belgia, Slovenia ja
+   * Slovakia.
+   */
+  CYP: {
+    pieniAarre: {
+      name: 'Enkomin sarvijumala',
+      fakta: 'Enkomin raunioilta Famagustan liepeiltä kaivettiin 1963 esiin '
+        + 'pieni pronssinen patsas, jonka päässä on sarvet ja jalkana '
+        + 'tikapuun muotoinen jalusta. Se on 1200-luvulta eaa. ja seisoi '
+        + 'rakennuksessa, jossa sulatettiin kuparia — sarvijumalaa on '
+        + 'tulkittu kuparin ja karjan suojelijaksi. Patsas on nyt '
+        + 'Nikosiassa Kyproksen museon tunnetuimpia esineitä.',
+    },
+    isoAarre: {
+      name: 'Lambousan hopea-aarre',
+      fakta: 'Talonpojat löysivät 1902 Lambousan raunioilta Pohjois-Kyprokselta '
+        + 'yhdeksän hopeista lautasta, joihin on taottu kuningas Daavidin '
+        + 'elämän kohtauksia 600-luvulta. Aarre jaettiin löytäjien ja '
+        + 'siirtomaahallinnon kesken, ja lautaset ovat nykyään hajallaan '
+        + 'Kyproksen museossa, Lontoon British Museumissa ja New Yorkin '
+        + 'Metropolitan-museossa.',
+    },
+  },
 };
 
 /**
