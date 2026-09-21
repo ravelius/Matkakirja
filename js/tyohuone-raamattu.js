@@ -2095,7 +2095,8 @@ export const RAAMATTU = {
           + 'ankkurin ympäriltä kerran lepotilassa (8 ehdokasasentoa karttakoordinaateissa) ja '
           + 'pidetään; eleen aikana lappu vain seuraa ankkuria, reunan yli saa mennä. Törmäys '
           + 'ratkaistaan näkyvyydellä, ei siirrolla: heikompi häivytetään ja palaa kun tilaa on; '
-          + 'prioriteetti kiinteä (taso 1 > kaupunki > taso 2 > taso 3). Päätökset vasta eleen '
+          + 'prioriteetti kiinteä (kaupunki > taso 1 > taso 2 > taso 3; ykköstaso häipyy vain '
+          + 'kaupungin nimen tieltä, ikoni jää). Päätökset vasta eleen '
           + 'päätyttyä (~150 ms) ja zoomiportaittain, hystereesi estää vilkkumisen. Ykköstaso ei '
           + 'häivy eikä vaihda asentoa. Loki: paatokset-2026-09.md#OMISTAJA v1985 VAKAVUUS 1.',
         'NOSTOT KARTALLA JA NIIDEN SISÄLTÖ (15.–20.9.2026): kohdemaalle ei '
