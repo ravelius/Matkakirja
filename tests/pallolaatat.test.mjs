@@ -306,8 +306,8 @@ test('kerros pitää juuri nähdyt laatat jonossa ja lataa liikesuuntaan ennakol
   //    mittarit luetaan samalla kierroksella eikä uutta joukkoa varata.
   assert.match(laatat,
     /t\.jonossa = \(t\.nakyva \|\| t\.pito\) && t\.tila === 'ladataan' && !t\.aloitettu;\n\s*if \(t\.jonossa\) jono\.push\(t\);/);
-  // 2. Näkyvät ladataan silti ensin.
-  assert.match(laatat, /jono\.sort\(\(a, b\) => \(a\.nakyva \? 0 : 1\) - \(b\.nakyva \? 0 : 1\) \|\| a\.etaisyys - b\.etaisyys\);/);
+  // 2. Näkyvät ladataan silti ensin, sitten tuki (sulavuus E2), sitten ennakko.
+  assert.match(laatat, /const sija = \(t\) => \(t\.nakyva \? 0 : t\.tuki \? 1 : 2\);\n\s*jono\.sort\(\(a, b\) => sija\(a\) - sija\(b\) \|\| a\.etaisyys - b\.etaisyys\);/);
   // 3. Valmis laatta menee sceneen, jos se on yhä alueella (ei vain näkyvissä).
   // Vienti scenen puolelle: sama ehto kuin ennen, mutta lohkona — linssin
   // avauksen vaihemerkki (pyramidinLinssiketju) kulkee samassa haarassa.
@@ -337,7 +337,7 @@ test('kerros pitää juuri nähdyt laatat jonossa ja lataa liikesuuntaan ennakol
   assert.match(laatat, /varaLat = Math\.min\(alue\.lat1 - alue\.lat0, varaLat\);/);
   assert.match(laatat, /varaLon = Math\.min\(alue\.lon1 - alue\.lon0, varaLon\);/);
   // 7. Ennakon laattamäärä on katossa.
-  assert.match(laatat, /if \(ennakko\.size >= LAATTAKERROS_LAATTAKATTO_ENNAKKO\) break;/);
+  assert.match(laatat, /if \(ennakko\.size >= ennakkoKatto\) break;/);
 });
 
 test('laatanKartta: yksi laatta on oma karttansa, UV juoksee 0…1 sen sisällä', () => {
@@ -446,7 +446,7 @@ test('kytkentä: pohja naulataan tasoon 5 vain kerroksen ollessa päällä', () 
 test('kerros: laatan materiaali, verkko ja osoitteet ovat suunnitelman mukaiset', () => {
   const laatat = lue('../js/pallolaatat.js');
   // Materiaali ja syvyysjärjestys kuten lepokerroksella (ks. PIIRTOJÄRJESTYS).
-  assert.match(laatat, /map: tekstuuri, transparent: true, opacity: 0, depthWrite: true,\n\s*polygonOffset: true, polygonOffsetFactor: 0, polygonOffsetUnits: LAATTAKERROS_SYVYYSSIIRTO,/);
+  assert.match(laatat, /map: tekstuuri, transparent: true, opacity: 0, depthWrite: true,\n\s*polygonOffset: true, polygonOffsetFactor: 0,\n\s*polygonOffsetUnits: t\.tuki \? LAATTAKERROS_TUKI_SYVYYSSIIRTO : LAATTAKERROS_SYVYYSSIIRTO,/);
   assert.match(laatat, /verkko\.renderOrder = LAATTAKERROS_RENDER_ORDER_POHJA \+ t\.z;/);
   assert.match(laatat, /verkko\.raycast = \(\) => \{\};/, 'kerros ei ota napautuksia');
   assert.match(laatat, /verkko\.userData\.laattakerros = \{ z: t\.z, sarake: t\.sarake, rivi: t\.rivi \};/);
