@@ -346,6 +346,8 @@ const SHELL = [
   // Rannikon naulaus omana moduulina ja työsäikeenä (sulavuus E1, 21.9.2026).
   './js/pallovektorit-naulaus.js',
   './js/pallovektorit-tyo.js',
+  // GL-nimiökerros (runko, 21.9.2026; ?glnimiot=1).
+  './js/pallonimiot-gl.js',
   './js/linssit/rekisteri.js',
   './js/linssit/aarteet.js',
   './js/linssit/omistus.js',
