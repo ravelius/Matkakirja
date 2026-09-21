@@ -22,10 +22,11 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 
 import {
-  REAKTIO_AANET_TALLE, REAKTIO_ETULIITTEET, REAKTIO_JONO_TALLE, REAKTIO_SYMBOLIT,
+  REAKTIO_AANET_TALLE, REAKTIO_ETULIITTEET, REAKTIO_HUONO_MUU_AANI, REAKTIO_HUONO_SYMBOLIT,
+  REAKTIO_HYVA_AANI, REAKTIO_HYVA_SYMBOLIT, REAKTIO_JONO_TALLE, REAKTIO_SYMBOLIT,
   REAKTIO_TEKSTIN_KATTO, asetaOmaAani, haeReaktiolaskurit, jonotaReaktio, lahetaAani,
-  nollaaReaktiot, omaAani, otsikkoAvain, puraReaktiojono, reaktioSymboli, reaktioVersio,
-  reaktionKuorma, reaktiotKaytossa, tyhjatAanet, voittajaSymboli,
+  nollaaReaktiot, omaAani, otsikkoAvain, puraReaktiojono, reaktioRyhma, reaktioSymboli,
+  reaktioVersio, reaktionKuorma, reaktiotKaytossa, ryhmanAanet, tyhjatAanet, voittajaSymboli,
 } from '../js/reaktiot.js';
 
 /** Muistissa elävä localStorage — sama sopimus kuin selaimen. */
@@ -84,6 +85,55 @@ test('voittajasymboli on eniten ääniä saanut, tasapelissä listan ensimmäine
   // Mustetahra voittaa siinä missä muutkin — virhe on julkisesti
   // näkyvissä, kunnes omistaja merkitsee sen korjatuksi.
   assert.equal(voittajaSymboli({ ...tyhjatAanet(), hieno: 1, virhe: 5 }).id, 'virhe');
+});
+
+/* ------------------------------------------------------------------ *
+ * Kaksi nappia viiden vanhan symbolin päällä (21.9.2026)
+ * ------------------------------------------------------------------ */
+
+test('sydän ja peukku alas kokoavat oikeat vanhat symbolit', () => {
+  assert.deepEqual(REAKTIO_HYVA_SYMBOLIT, ['hieno', 'ihana', 'mielenkiintoinen']);
+  assert.deepEqual(REAKTIO_HUONO_SYMBOLIT, ['tylsa', 'virhe']);
+  // Uusi ääni kirjautuu näillä symboleilla — 'ihana' on jo sydämen
+  // ääriviiva, ja 'tylsa' kattaa sekä Tylsä- että Muu-vastauksen.
+  assert.equal(REAKTIO_HYVA_AANI, 'ihana');
+  assert.equal(REAKTIO_HUONO_MUU_AANI, 'tylsa');
+});
+
+test('reaktioRyhma tunnistaa vanhan symbolin oikean ryhmän', () => {
+  assert.equal(reaktioRyhma('hieno'), 'hyva');
+  assert.equal(reaktioRyhma('ihana'), 'hyva');
+  assert.equal(reaktioRyhma('mielenkiintoinen'), 'hyva');
+  assert.equal(reaktioRyhma('tylsa'), 'huono');
+  assert.equal(reaktioRyhma('virhe'), 'huono');
+  // Tyhjä ääni tai tuntematon symboli ei kuulu kumpaankaan näkyvään
+  // nappiin.
+  assert.equal(reaktioRyhma(''), '');
+  assert.equal(reaktioRyhma('peukku'), '');
+});
+
+test('ryhmanAanet laskee vanhan kolmikon ja kaksikon yhteen', () => {
+  const aanet = { ...tyhjatAanet(), hieno: 2, ihana: 5, mielenkiintoinen: 1, tylsa: 3, virhe: 4 };
+  // Vanha äänestäjäkolmikko kokoontuu sydämeksi: 2 + 5 + 1.
+  assert.equal(ryhmanAanet(aanet, 'hyva'), 8);
+  // Tylsä ja virhe kokoontuvat peukku alas -napiksi: 3 + 4.
+  assert.equal(ryhmanAanet(aanet, 'huono'), 7);
+  assert.equal(ryhmanAanet(tyhjatAanet(), 'hyva'), 0);
+  assert.equal(ryhmanAanet(null, 'huono'), 0);
+});
+
+test('vanha tallennettu ääni "ihana" näkyy sydän-ryhmässä valittuna', () => {
+  asennaVarasto();
+  asetaOmaAani('kohde:sofia', 'ihana');
+  assert.equal(reaktioRyhma(omaAani('kohde:sofia')), 'hyva');
+  // Vanha "hieno" ja "mielenkiintoinen" niin ikään.
+  asetaOmaAani('kohde:sofia', 'hieno');
+  assert.equal(reaktioRyhma(omaAani('kohde:sofia')), 'hyva');
+  asetaOmaAani('kohde:sofia', 'mielenkiintoinen');
+  assert.equal(reaktioRyhma(omaAani('kohde:sofia')), 'hyva');
+  // Vanha "tylsä" ja "virhe" näkyvät peukku alas -ryhmässä.
+  asetaOmaAani('kohde:sofia', 'tylsa');
+  assert.equal(reaktioRyhma(omaAani('kohde:sofia')), 'huono');
 });
 
 /* ------------------------------------------------------------------ *

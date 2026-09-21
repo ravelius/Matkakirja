@@ -46,7 +46,7 @@
  */
 
 import { el } from './mapart.js';
-import { VAKASIKONIN_POLUT } from './vakasikoni.js';
+import { HAMPURILAISEN_POLKU } from './vakasikoni.js';
 import { asetaLuentaKytkin, luentaKytkinPaalla } from './luenta.js';
 import { asetaMusiikkiPaalla, musiikkiPaalla } from './musiikkivalitsin.js';
 import { pysaytaLinssiluenta } from './linssipuhe.js';
@@ -66,18 +66,19 @@ function solmu(tag, luokka, teksti) {
 }
 
 /**
- * Kolme leveää v:tä samalla kynällä kuin Matkakirjan päävalikossa
- * (index.html #menu-btn) ja vaakapuhelimen yläpalkkinapissa — polut
- * tulevat yhteisestä js/vakasikoni.js:stä. Rakennetaan solmuina eikä
- * innerHTML:llä, jotta sama koodi kelpaa myös tynkäselaimen
- * testeissä.
+ * TAVALLINEN HAMPURILAINEN samalla kynällä kuin Matkakirjan
+ * päävalikossa (index.html #menu-btn) — polku tulee yhteisestä
+ * js/vakasikoni.js:stä (HAMPURILAISEN_POLKU). Linssin yläpalkki ON
+ * yläpalkki, joten sen kuvake on hampurilainen; kolme väkästä kuuluu
+ * vain kelluvalle napille, kun yläpalkkia ei ole (omistaja 21.9.2026,
+ * ks. vakasikoni.js). 13.–21.9.2026 tässä oli väkäsikoni. Rakennetaan
+ * solmuina eikä innerHTML:llä, jotta sama koodi kelpaa myös
+ * tynkäselaimen testeissä.
  */
 function viivaIkoni() {
   const kuori = solmu('span', 'viiva-ikoni');
   const svg = el('svg', { viewBox: '0 0 24 24' });
-  for (const d of VAKASIKONIN_POLUT) el('path', { d }, svg);
-  // Terävä kärki näyttäisi eri paksuiselta kuin viivan muu osa.
-  svg.setAttribute('stroke-linejoin', 'round');
+  el('path', { d: HAMPURILAISEN_POLKU }, svg);
   svg.setAttribute('aria-hidden', 'true');
   kuori.appendChild(svg);
   return kuori;

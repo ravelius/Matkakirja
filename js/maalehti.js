@@ -22,7 +22,7 @@ import { karttapiste } from './packs/maakartat.js';
 import { radioMaalle } from './packs/radiot.js';
 import { vanhaTallenne } from './packs/vanhat-aanet.js';
 import { aiheAvain, piirraPoimintapillerit } from './pollopoiminnat.js';
-import { piirraOtsikonReaktio, piirraReaktiot } from './reaktiot.js';
+import { otsikkoAvain, piirraOtsikonReaktio, piirraReaktiot } from './reaktiot.js';
 import { KIELET, MAATIEDOT } from './sisaltotaulut.js';
 import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
 import {
@@ -994,18 +994,15 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
     ui.lisaaNostonNapit(otsikkoRivi, nosto);
     // Ajankohta otsikkorivin oikeassa reunassa hahmottamisen tueksi
     // (omistajan toive 7.8.2026: "Historia sivulla vuosisadan voisi
-    // merkitä jotenkin otsikkorivillä") — kenttä on vapaaehtoinen
-    // ja toimii millä tahansa sivulla.
+    // merkitä jotenkin otsikkorivillä"; omalla laatikollaan 21.9.2026)
+    // — kenttä on vapaaehtoinen ja toimii millä tahansa sivulla.
     if (nosto.aika) otsikkoRivi.appendChild(html('span', 'nosto-aika', nosto.aika));
-    /*
-     * VÄLIOTSIKON REAKTIONAPPI (omistajan tilaus 27.8.2026:
-     * "reaktionappi jokaiseen popupiin ja lehtien jokaiseen
-     * väliotsikkoon"). Nappi on rivin PÄÄSSÄ eikä leipätekstin päällä:
-     * lepotilassa se on yksi himmeä merkki, ja vasta napautus levittää
-     * viisi symbolia. Ajankohta jää sen vasemmalle puolelle, koska
-     * ajankohta kuuluu otsikkoon ja nappi ei.
-     */
-    piirraOtsikonReaktio(otsikkoRivi, sivuAvain, nosto.otsikko);
+    // REAKTIONAPIT EIVÄT OLE ENÄÄ OTSIKKORIVILLÄ (omistajan päätös
+    // 21.9.2026, kaappaus Ranskan lehden Historia-osiosta): ne
+    // piirtyvät jutun leipätekstin loppuun "Lue lisää aiheesta"
+    // -linkin viereen, ks. alempana LOPPURIVI. Sama kohdeavain
+    // (otsikkoAvain) pitää vanhat äänet tallessa siitä huolimatta,
+    // että nappien paikka vaihtui.
     lohko.appendChild(otsikkoRivi);
     let kuva = null;
     /*
@@ -1137,14 +1134,23 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
       anfangi: ensimmainen && !kategoria.yksipalsta,
     });
     ensimmainen = false;
+    /*
+     * LOPPURIVI: "Lue lisää aiheesta" ja reaktionapit SAMALLA RIVILLÄ
+     * leipätekstin lopussa (omistajan päätös 21.9.2026 — pois
+     * otsikkoriviltä, ks. otsikkoRivi yllä). Kohdeavain on sama kuin
+     * väliotsikon reaktiolla ennen (otsikkoAvain), joten vanhat äänet
+     * pysyvät tallessa napin paikan vaihtuessa.
+     */
+    const loppurivi = html('div', 'leipa-loppurivi');
     if (nosto.wiki) {
       const nappi = html('button', 'wiki-btn', 'Lue lisää aiheesta');
       nappi.type = 'button';
       nappi.addEventListener('click', () => ui.openWikiArticle(nosto.wiki, nosto.otsikko));
-      // Heti leipätekstin loppuun, ei erilliseksi lohkoksi sivun
-      // pohjalle (omistajan toive 5.8.2026).
-      leipa.appendChild(nappi);
+      loppurivi.appendChild(nappi);
     }
+    const reaktioAvain = otsikkoAvain(sivuAvain, nosto.otsikko);
+    if (reaktioAvain) piirraReaktiot(loppurivi, reaktioAvain, { otsikko: nosto.otsikko });
+    if (loppurivi.childNodes.length) leipa.appendChild(loppurivi);
     /*
      * TOIMINTONAPIT — vain kehittäjälehdillä (js/lehti.js: Lukijoilta
      * ja sen pro-osio). Nosto voi kantaa napit, joilla omistaja tekee

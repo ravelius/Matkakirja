@@ -211,6 +211,17 @@ export const HAHMOTELMA_EST = [
       + 'kokonaan kielletty.',
     lahde: 'en-Wikipedia "Vilsandi National Park" ja et-Wikipedia "Vilsandi rahvuspark", '
       + 'johdanto-osat ja en-osio "Environment" (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Mikä on yleisin pesivä lintulaji Vilsandin kansallispuistossa?',
+      vaihtoehdot: [
+        'Merikotka',
+        'Haahka',
+        'Kurki',
+        'Joutsen',
+      ],
+      oikea: 1,
+      fakta: 'Vilsandin kansallispuistossa on havaittu yli 250 lintulajia, ja yleisin pesijä on haahka.',
+    },
   },
   {
     id: 'hahmotelma-endla',
