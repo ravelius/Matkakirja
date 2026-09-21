@@ -1167,7 +1167,8 @@ test('yhdyssana ei putoa yleissanan rungon mukana', () => {
 });
 
 test('pelkistä yleissanoista koostuva merkintä ei saa yhtään ankkuria', () => {
-  // Ankkuriton merkintä ei saa linkkiä lainkaan (js/pollo.js sidoLinkki):
+  // Ankkurisanat ovat haun laatua (js/pollo-haku.js); linkit itse
+  // luetellaan vastauksen loppuun (js/pollo.js liitaMatkakirjalinkit):
   // mieluummin ei linkkiä kuin outo linkki.
   const sanat = ankkuriSanat({ otsikko: 'Kaupungin historia', aiheNimi: 'Kaupunki' });
   assert.deepEqual(sanat, []);

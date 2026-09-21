@@ -22117,15 +22117,17 @@ button.pollo-ehdotus:disabled { opacity: 0.5; cursor: default; }
 }
 
 /*
- * ALLEVIIVATTU LINKKI KESKELLÄ VASTAUSTA (omistajan tilaus 12.8.2026).
+ * PELINSISÄINEN LINKKI (omistajan tilaus 12.8.2026; 21.9.2026 alkaen
+ * vastauksen lopun Matkakirja-rivillä, ei enää keskellä tekstiä).
  *
- * Kun paikallishaku löytää osuvan jutun, vastaustekstin oma maininta
- * siitä muuttuu linkiksi — erillistä nappia ei silloin tarvita.
+ * Kun paikallishaku löytää osuvan jutun, se luetellaan vastauksen
+ * loppuun — erillistä nappia ei tarvita.
  * Alleviivaus on katkoviiva samalla kynällä kuin varapolun napin
  * kehys, jotta pelinsisäinen linkki näyttää samalta kummassakin
  * muodossa.
  */
-a.pollo-tekstilinkki {
+a.pollo-tekstilinkki,
+a.pollo-matkakirjalinkki {
   color: var(--pollo-korostus);
   text-decoration: underline;
   text-decoration-style: solid;
@@ -22243,13 +22245,29 @@ body[data-mode] .actions .pollo-paneeli button.pollo-ehdota:hover {
  * myös ilman väriaistia. :focus-visible saa saman asun kuin hover.
  */
 a.pollo-tekstilinkki:hover,
-a.pollo-tekstilinkki:focus-visible {
+a.pollo-tekstilinkki:focus-visible,
+a.pollo-matkakirjalinkki:hover,
+a.pollo-matkakirjalinkki:focus-visible {
   color: #5a3d0d;
   background: rgba(122, 85, 20, 0.12);
   text-decoration-thickness: 2px;
 }
 
-a.pollo-tekstilinkki:active { color: var(--pollo-muste); }
+a.pollo-tekstilinkki:active,
+a.pollo-matkakirjalinkki:active { color: var(--pollo-muste); }
+
+/*
+ * MATKAKIRJA-RIVI VASTAUKSEN LOPUSSA (omistaja 14.8.2026, jatko
+ * 21.9.2026; js/pollo.js liitaMatkakirjalinkit): "Matkakirja: <linkki>",
+ * enintään kaksi, pienemmällä ja hieman himmeämmällä kuin puhe — se on
+ * viite, ei pöllön lause. Sama kynä linkeillä kuin tekstilinkillä.
+ */
+.pollo-matkakirja {
+  margin: 0.45rem 0 0;
+  font-size: 0.85em;
+  color: var(--pollo-muste);
+  opacity: 0.82;
+}
 
 /*
  * PÖLLÖLINKKI: [[avainkäsite]] keskellä vastausta (omistajan tilaus
