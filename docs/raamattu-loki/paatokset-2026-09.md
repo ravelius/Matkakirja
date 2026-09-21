@@ -691,3 +691,7 @@ Karttaseppä 21.9.2026 ilta: PR #2679 (karttaseppa-laattakatto 97298eb7) Julkais
 ## PELIKOODARIN WORKTREE SIIRRETAAN /Users/samireivinen/Matkakirja-pelikoodari SEURAAVASSA TAUOSSA (21.9.2026 klo 21.53)
 
 Omistaja 21.9.2026 klo 21.52: Pelikoodarin worktree oli /Users/koodaus/Matkakirja-opus, koska koodaus ei saa luoda kansioita omistajan kotiin (ACL vain luku). Omistaja loi sudolla /Users/samireivinen/Matkakirja-pelikoodari (omistaja koodaus). Fable siirtää worktreen sisällön sinne ja ajaa git worktree repair, kun Pelikoodari on vapaana (ei kesken savukkeen), ja antaa uuden polun aloitusviestissä; sessiolle Choose folder. Muut rooli-worktreet nimetään roolin mukaan samalla kaavalla seuraavassa nollauksessa (loki HAKEMISTOSIIVOUS).
+
+## MAAKUNTAVEDOS 4 (ITA/ESP/GBR/POL/AUT) OMISTAJAN KORTILLE; MUISTIMITTARI PR #2679:AAN (21.9.2026 klo 21.56)
+
+Karttaseppä 21.9.2026 ilta: maakuntavedos 4 (karttaseppa-maakuntavedos-4 97e14f3f, kuvat docs/raportit/kaappaukset/maakuntavedos-20260921/vedos4/, raportti maakuntavedos-20260921.md Vedos 4): sama sääntö kuin FRA/DEU, NE admin-1 PD; nimiä ITA 6 ja ESP 7 (muut alueet jo kulttuurinimiä → vain raja), POL 15, AUT 9, GBR 4; CHE 26 kanttonia datassa, ei kuvissa. Puolan voivodikunnat suomennoksina (Masovia, Suur-Puola, Vähä-Puola, Alakarpatia…) tai puolankielisinä — Sisältökirjuri päättää. Tuotantoon riittää nimiötason uusintapoltto g omistajan kortin jälkeen. Muistirajan mittari lisätty PR #2679:ään (bf57e141): laatat.purkuja/pyyntoja/taso/katto.
