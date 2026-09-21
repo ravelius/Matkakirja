@@ -24,11 +24,25 @@
  * maapisteessään — samalla kameralla ja samassa kehyksessä kuin laatat.
  * Horisontti: maapiste on näkyvä, kun kamera on sen tangenttitason
  * yläpuolella (dot(n, kamera − p) > 0); takapuolella peitto on 0.
+ * HORISONTIN HÄIVE (runko 3, 21.9.2026 ilta): reunalla nimi ei katkea
+ * kesken vaan häipyy — peitto kerrotaan smoothstepillä pinnan normaalin
+ * ja katsesuunnan kosinista (GLNIMIOT_HORISONTIN_HAIVE, ≈ 7° ennen
+ * reunaa). Kosini ei riipu kameran etäisyydestä, joten häive on yhtä
+ * leveä kaikilla zoomeilla.
  *
  * ATLAS: 2048 × 2048 -kankaita hyllypakkauksella (rivit rasterin
  * korkeuden mukaan); sivu täyttyy → uusi sivu. Sama avain = sama
  * rasteri = sama UV (välimuisti avaimella). Sivun tekstuuri viedään
  * näytönohjaimelle vain kun sivulle on kirjoitettu (needsUpdate).
+ * TIIVISTYS (runko 3): kun kaikki sivut ovat täynnä eikä uutta saa,
+ * sivu, jolla on eniten KUOLLEITA rastereita (avain ilman instanssia
+ * listalla), pakataan uudestaan: elävät rasterit kopioidaan sivun
+ * omasta kankaasta uuteen hyllyyn, kuolleet pudotetaan (uvt-tietue
+ * pois → sovitin varaa ne tarvittaessa uudestaan). Elävää avainta ei
+ * koskaan vapauteta (Pelikoodarin ehto: muuten sovitin varaisi joka
+ * jaossa uudestaan). Näin `varaa` ei palauta null-arvoa panoroinnissa
+ * eikä nimi putoa CSS2D:hen; null tulee vasta, kun elävät yksin
+ * täyttävät kaikki sivut.
  *
  * KUOREN KERROIN on uniform: nimiöiden koko zoomin mukaan (Pelikoodarin
  * E2, `kuorenKerroin()`) skaalaa kaikki spritet ankkurinsa ympäri
@@ -48,6 +62,8 @@ export const GLNIMIOT_VALI = 2;
 export const GLNIMIOT_SIVUJA_MAX = 4;
 /** Piirtojärjestys: laattojen (−10…), vektorien (−0,5) ja kalvojen jälkeen. */
 export const GLNIMIOT_RENDER_ORDER = 5;
+/** Horisontin häiveen leveys kosinina (0 = reuna; 0,12 ≈ 7° ennen reunaa). */
+export const GLNIMIOT_HORISONTIN_HAIVE = 0.12;
 /** Testinimiön fontti ja koko (vain runko; tuotannon rasterit Pelikoodarilta). */
 export const GLNIMIOT_TESTIFONTTI = '"Liberation Serif", "Times New Roman", serif';
 
@@ -169,13 +185,16 @@ attribute vec2 katto;      // koon kerroin = min(kerroin * a, b)
 uniform vec2 ruutu;        // ruutu laitepikseleinä
 uniform float kerroin;     // kuoren kerroin (nimiöiden koko zoomin mukaan)
 uniform float dpr;         // css-px → laitepikseli
+uniform float haive;       // horisontin häiveen leveys kosinina
 varying vec2 vUv;
 varying float vPeitto;
 void main() {
   vec4 maailma = modelMatrix * vec4(maapiste, 1.0);
   vec4 clip = projectionMatrix * viewMatrix * maailma;
   // Horisontti maailman koordinaateissa: pallon keskipiste on origossa.
-  float edessa = step(0.0, dot(normalize(maailma.xyz), cameraPosition - maailma.xyz));
+  // Kosini normaalin ja katsesuunnan välillä: 0 reunalla, häive sen yli.
+  float kosini = dot(normalize(maailma.xyz), normalize(cameraPosition - maailma.xyz));
+  float edessa = smoothstep(0.0, haive, kosini);
   float koko = min(kerroin * katto.x, katto.y);
   vec2 px = (siirto * kerroin + kulma * skaala * koko) * dpr;
   clip.xy += px * 2.0 / ruutu * clip.w;
@@ -245,6 +264,7 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
   const mittarit = {
     tila: L ? 'valmis' : 'ei-luokkia', instansseja: 0, sivuja: 0, rastereita: 0, drawcalls: 0,
     rakennuksia: 0, rakennusMs: 0, atlasTayttoaste: 0, kerroin: 1, kehyksia: 0,
+    tiivistyksia: 0, pudotettuja: 0, kuolleita: 0,
   };
   if (!L) {
     return {
@@ -287,6 +307,7 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
         ruutu: { value: { x: ruutu.x, y: ruutu.y, isVector2: true, set(a, b) { this.x = a; this.y = b; } } },
         kerroin: { value: 1 },
         dpr: { value: 1 },
+        haive: { value: GLNIMIOT_HORISONTIN_HAIVE },
       },
       vertexShader: VERTEX,
       fragmentShader: FRAGMENT,
@@ -310,6 +331,60 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
     return sivu;
   };
 
+  /** Elävät avaimet: joilla on instanssi listalla. */
+  const elavatAvaimet = () => {
+    const elavat = new Set();
+    for (const inst of instanssit.values()) elavat.add(inst.avain);
+    return elavat;
+  };
+  /**
+   * TIIVISTYS (ks. otsikko): pakkaa uudestaan sen sivun, jolla on eniten
+   * kuollutta alaa, ja pudottaa kuolleet rasterit. Palauttaa sivun, jos
+   * jotain vapautui, muuten null.
+   */
+  const tiivista = () => {
+    const elavat = elavatAvaimet();
+    let paras = null;
+    for (const sivu of sivut) {
+      let kuollut = 0;
+      let elava = 0;
+      for (const [avain, t] of uvt) {
+        if (t.sivu !== sivu) continue;
+        if (elavat.has(avain)) elava += t.w * t.h; else kuollut += t.w * t.h;
+      }
+      if (kuollut > 0 && (!paras || kuollut > paras.kuollut)) paras = { sivu, kuollut, elava };
+    }
+    if (!paras) return null;
+    const { sivu } = paras;
+    // Kopio sivun kankaasta: elävät rasterit luetaan siitä, ei lähteestä (sitä ei säilytetä).
+    const kopio = doc.createElement('canvas');
+    kopio.width = GLNIMIOT_ATLAS;
+    kopio.height = GLNIMIOT_ATLAS;
+    kopio.getContext('2d').drawImage(sivu.kangas, 0, 0);
+    sivu.pakkaus = new Hyllypakkaus();
+    sivu.ctx.clearRect(0, 0, GLNIMIOT_ATLAS, GLNIMIOT_ATLAS);
+    // Elävät korkeusjärjestyksessä (hyllyt täyttyvät tiiviimmin), kuolleet pois.
+    const siirrettavat = [];
+    for (const [avain, t] of uvt) {
+      if (t.sivu !== sivu) continue;
+      if (elavat.has(avain)) siirrettavat.push([avain, t]);
+      else { uvt.delete(avain); mittarit.pudotettuja += 1; }
+    }
+    siirrettavat.sort((a, b) => b[1].h - a[1].h || b[1].w - a[1].w);
+    for (const [avain, t] of siirrettavat) {
+      const paikka = sivu.pakkaus.varaa(t.w, t.h);
+      if (!paikka) { uvt.delete(avain); continue; } // ei mahdu enää: instanssi jää piirtämättä, sovitin varaa uudestaan
+      sivu.ctx.drawImage(kopio, t.u0 * GLNIMIOT_ATLAS, t.v0 * GLNIMIOT_ATLAS, t.w, t.h, paikka.x, paikka.y, t.w, t.h);
+      t.u0 = paikka.x / GLNIMIOT_ATLAS; t.v0 = paikka.y / GLNIMIOT_ATLAS;
+      t.u1 = (paikka.x + t.w) / GLNIMIOT_ATLAS; t.v1 = (paikka.y + t.h) / GLNIMIOT_ATLAS;
+    }
+    sivu.likainen = true;
+    likainen = true; // UV:t muuttuivat → geometriat uusiksi
+    mittarit.tiivistyksia += 1;
+    mittarit.rastereita = uvt.size;
+    return sivu;
+  };
+
   /** Rasteri atlakseen (tai välimuistista). Palauttaa UV-tietueen tai null. */
   const varaaRasteri = (avain, rasteri) => {
     const vanha = uvt.get(avain);
@@ -317,14 +392,21 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
     if (!rasteri?.kuva || !(rasteri.w > 0) || !(rasteri.h > 0)) return null;
     let sivu = null;
     let paikka = null;
-    for (const s of sivut) {
-      paikka = s.pakkaus.varaa(rasteri.w, rasteri.h);
-      if (paikka) { sivu = s; break; }
-    }
-    if (!paikka) {
+    const etsiPaikka = () => {
+      for (const s of sivut) {
+        paikka = s.pakkaus.varaa(rasteri.w, rasteri.h);
+        if (paikka) { sivu = s; return true; }
+      }
+      return false;
+    };
+    if (!etsiPaikka()) {
       sivu = uusiSivu();
-      if (!sivu) return null;
-      paikka = sivu.pakkaus.varaa(rasteri.w, rasteri.h);
+      if (sivu) paikka = sivu.pakkaus.varaa(rasteri.w, rasteri.h);
+      // Kaikki sivut täynnä: tiivistä kuolleet pois ja yritä uudestaan (enintään sivujen verran).
+      for (let i = 0; !paikka && i < GLNIMIOT_SIVUJA_MAX; i += 1) {
+        if (!tiivista()) break;
+        etsiPaikka();
+      }
       if (!paikka) return null;
     }
     sivu.ctx.clearRect(paikka.x, paikka.y, rasteri.w, rasteri.h);
@@ -487,6 +569,18 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
       }
       mittarit.kerroin = kerroinNyt;
       mittarit.atlasTayttoaste = sivut.length ? sivut[sivut.length - 1].pakkaus.tayttoaste : 0;
+      if (likainen === false && mittarit.kehyksia % 60 === 0) {
+        const elavat = elavatAvaimet();
+        let kuolleita = 0;
+        for (const avain of uvt.keys()) if (!elavat.has(avain)) kuolleita += 1;
+        mittarit.kuolleita = kuolleita;
+      }
+    },
+    /** Tiivistä atlas nyt (savukkeet): pudottaa kuolleet rasterit; palauttaa pudotettujen määrän. */
+    tiivista() {
+      const ennen = mittarit.pudotettuja;
+      while (tiivista()) { /* kunnes yhtään kuollutta ei ole */ }
+      return mittarit.pudotettuja - ennen;
     },
     /** Onko avaimelle jo rasteri atlaksessa. */
     onRasteri: (avain) => uvt.has(avain),
