@@ -827,3 +827,7 @@ Pelikoodari 21.9.2026 ilta (docs/raportit/sulavuus-ablaatio-20260921.md, pelikoo
 ## MAAKUNTALUONNEHDINNAT ERA 1 (97 ALUETTA) TARKASTETTU: 7 KORJAUSTA, SITTEN JULKAISUUN (21.9.2026 klo 23.40)
 
 Fable 21.9.2026 klo 23.55: Sisältökirjurin luonnehdinnat (sisalto-maakunnat-luonnehdinnat a31726805, js/packs/maakunnat-luonnehdinnat.js, 97 aluetta, rakenne lyhyt/pitka/kuva/pulu, guard-testi) tarkastettu: Livian ääni ja mitta oikein; korjaukset: DEU:n huutomerkit enintään kolmeen, Bayern Oktoberfest (ei pikkujoulu), Bremen (kontit Bremerhavenissa), Molise-vitsi, La Rioja kastellaan, Hauts-de-France rajat kadonneet, 'yhä' enintään kerran per maa. Korjausten jälkeen Julkaisijalle. Seuraava erä: nostotasot DEU/ITA/ESP/GBR/POL/AUT, lista Fablelle ennen dataa.
+
+## MAAKUNTAVEKTORIEN KOLMIOINTI (M0) VALMIS: PR #2697, 250 MAATA, 771 K KOLMIOTA (21.9.2026 klo 23.49)
+
+Karttaseppä 22.9.2026 klo 00.05: tools/tee-maakuntavektorit.mjs → per maa <ISO>.bin (MKV1: float32 lon/lat, uint16 alue kärkiattribuuttina) + <ISO>.json (alueet, väri ≤5, renkaat osumatestiin); korvanleikkaus reikineen, särmät ≤1,5°, ahne väritys; 250 maata, 4 127 aluetta, 771 k kolmiota, 15,9 Mt (CHE 38 kt, DEU 102 kt, RUS 1,8 Mt), ajo 4,6 s; testit 10/10; ohje pallon-vektoriviivat.md luku 11 (M1-kytkentä). Ei pelikoodia, ämpäriin vasta M1:ssä. Fable: kirjattu; ablaatiotulos laattapuolelta: porras 1–2 kunnossa panoroinnissa, zoomissa porras 2 p95 68 ms = laattapyynnöt (zoomiennakko v2031 auttaa) — Karttaseppä mittaa zoomiennakon vaikutuksen samalla lipulla ja ehdottaa jos vielä >40 ms.
