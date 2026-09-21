@@ -100,3 +100,101 @@ Kaappaukset `docs/raportit/kaappaukset/laitekierros-21-20260921/`.
 | DEU pistokoe | Ei havaittuja ongelmia (suppea tarkistus) |
 
 Ei vakavuus 1–2 -löydöksiä tällä kierroksella.
+
+---
+
+# Kierros 21b — samat, kesken jääneet kohdat (v1985)
+
+21.9.2026 n. klo 06.55–07.05, jatkoa yllä olevaan. Samat menetelmät ja
+sama kaappauskansio.
+
+## Kaupunkiliuska — VAHVISTETTU
+
+Marseillen nimen napauttaminen kartalla avaa kaupunkiliuskan
+("Marseille / Nähtävyydet / Turistiopas" + aihelistaus "Historia (1),
+Kulttuuri ja ruoka (1), Kauppa ja tekniikka (1)"). Toimii
+simulaattorilla oikeasti — tämä EI ole samaa "kuollutta nappia"
+-perhettä kuin Liiku/nuolet, koska kaupunkinimi on osa itse
+kartta-canvasta eikä erillinen DOM-nappi. Pariisin kaupunkiliuskaa en
+saanut auki erikseen (osui joka kerta johonkin viereiseen
+nosto-osumaan tai päiväkirjatekstiin sen sijaan) — en pidä tätä
+epäilyttävänä, koska Marseille toimi selvästi ja tiheä nostomerkkien
+joukko oli syypää osumavaikeuteen, ei kaupunkiliuska itse.
+
+## Nostotaso 3 — ei löytynyt uusia merkkejä
+
+Zoomasin uudelleen mahdollisimman syvälle Marseillen/Carcassonnen
+seudulla, mutta en nähnyt yhtään UUTTA nostomerkkiä ilmestymässä.
+Simulaattorin pinsettizoomi ei liiku pidemmälle tästä tasosta (sama
+raja kuin kierroksella 21). Edelleen vahvistamaton kumpaankaan
+suuntaan.
+
+## Suurennoksen selaus — juurisyy löytyi, osittain vahvistettu
+
+Aiempi "testivirhe" johtui väärästä CSS-valitsimesta skriptissäni
+(etsin `.kuvasarja img` jotain, oikea luokka on `.fokuskohde-kuva
+img`/`.nostosarja-kuva img`). Korjattuna suurennos AVAUTUU oikein:
+`suurennos-auki.png` näyttää täysikokoisen dialogin
+(`role="dialog" aria-label="Kuva suurennettuna"`), jossa on
+kuvateksti, **valokuvan tekijätieto** ("Valokuva: Benh LIEU SONG,
+Wikimedia Commons, CC BY-SA 2.0") ja kaksi tummaa väkäsnappia (‹ ›)
+sekä laskuri ("1 / 3"). Tämä tekijätietorivi on ERI asia kuin kierros
+20b:ssä poistettu artikkelin lähdeviite — kuvan tekijätieto on CC-lisenssin
+vaatima eikä pidä poistaa.
+
+Napautin "›"-nappia (`suurennos-nuoli-klikattu.png`), mutta laskuri ei
+näkynyt edenneen (jäi "1/3":ksi kaappauksessa) — jää auki, vaihtuiko
+kuva oikeasti taustalla ilman että laskurin päivitys ehti näkyä
+kaappaushetkellä, vai onko nuolen kosketuskäsittely sama "kuollut
+nappi" -perhe kuin Liiku. En saanut tätä täysin varmistettua.
+
+## Huntu pitkällä siirrolla (lento) — EI SAATU LUOTETTAVASTI TESTATTUA
+
+Yritin useita kertoja saada oikean animoidun lennon käyntiin (Madrid →
+Rooma) UI-polun kautta Playwrightilla. Este: tämän tallenteen
+saapumisnäkymä avaa peräkkäin useita satunnaisia sisältökortteja
+(vanha valokuva, "Livia"-pulun keskusteluikkuna, saapumistraileri),
+jotka peittävät Liiku-napin eivätkä sulkeudu luotettavasti
+ohjelmallisesti — yhden kortin sulkeminen paljasti aina seuraavan.
+Suora `game.actionFly('rooma')`-kutsu (ohittaen UI:n) TOIMI teknisesti
+mutta EI laukaissut oikeaa lento-animaatiota — näytti vain saman
+Madrid-kortin tummennettuna (`huntu-madrid-tumma.png`), mikä
+todennäköisesti ei ole oikea hunnun tila vaan jäänyt välitila (sama
+ilmiö kuin kierros 19b:n tuplasaapumis-jäljityksessä: `actionFly` ei
+korvaa oikeaa UI-lentosekvenssiä). **En siis pysty vahvistamaan tai
+kumoamaan huntua pitkällä siirrolla tällä kierroksella** — vaatisi joko
+oikean simulaattorin (kun lupa saadaan) tai huomattavasti enemmän aikaa
+saapumisnäkymän satunnaisten korttien kesyttämiseen.
+
+## ESP/DEU — saapumisnäkymä vahvistettu, zoomikaappaus epäonnistui
+
+`esp-saapuminen.png`, `deu-saapuminen.png`: molemmat saapumisnäytöt
+avautuvat siististi otsikkokuvineen ("MADRID — Ylätasangon kirkas
+pääkaupunki", "BERLIINI — Kaupunki, joka rakentaa itsensä uudelleen"),
+ei virheitä. **Zoomikaappaus epäonnistui**: `esp-zoomattu.png` ja
+`deu-zoomattu.png` näyttävät saman saapumiskortin kuin
+`*-saapuminen.png` — ohjelmallinen `wheel`-zoomausyritys ei
+läpäissyt saapumiskorttia, koska en löytänyt luotettavaa tapaa sulkea
+sitä ohjelmallisesti näissäkään tallenteissa (sama saapumistraileri-
+ongelma kuin huntu-testissä). Laattojen nostotaso ja meri jäivät siis
+tarkistamatta yhdellä zoomilla — vain saapumisnäkymä on vahvistettu.
+
+## Kierros 21b yhteenveto
+
+| Kohta | Tulos |
+| --- | --- |
+| Kaupunkiliuska (Marseille) | **OK** |
+| Kaupunkiliuska (Pariisi) | Ei saatu auki (todennäköisesti tiheä kartta, ei bugi) |
+| Nostotaso 3 | Edelleen vahvistamaton |
+| Suurennoksen avautuminen | **OK**, juurisyy (väärä valitsin) selvitetty |
+| Suurennoksen selaus (nuoli) | Epävarma — laskuri ei näyttänyt edenneen |
+| Huntu pitkällä siirrolla | **Ei saatu testattua** — saapumisnäkymän satunnaiset kortit estivät |
+| ESP saapumisnäkymä | OK |
+| DEU saapumisnäkymä | OK |
+| ESP/DEU yksi zoomi | Ei saatu — sama saapumiskortti-este |
+
+Ei uusia vakavuus 1–2 -löydöksiä. Suosittelen, että huntu pitkällä
+siirrolla ja ESP/DEU-zoomi testataan oikealla simulaattorilla heti kun
+laitelupa on kunnossa — Playwright-kierrätys törmää tässä tallenteessa
+liian moneen satunnaiseen sisältökorttiin kestääkseen luotettavaa
+automaatiota.
