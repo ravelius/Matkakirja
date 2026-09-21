@@ -53,11 +53,13 @@ test('kehysnopeus näytteistä', () => {
 test('E4b: ennustevirhe lasketaan vain näytteistä, joissa on ennustettu maapiste', async () => {
   const { ennustevirhe } = await import('../js/pallolauta/sulavuusmittari.js');
   assert.equal(ennustevirhe([nayte(0, 1, { a: { dx: 1, dy: 1, koko: 1 } })]), null, 'ilman ennustetta null');
+  // Sovittelun offset (edx 3, edy 4) ei ole virhe; sen MUUTOS on.
   const e = ennustevirhe([
     nayte(0, 1, { a: { dx: 10, dy: 0, koko: 1, edx: 3, edy: 4 }, b: { dx: 0, dy: 0, koko: 1, edx: 0, edy: 0 } }),
-    nayte(16, 1, { a: { dx: 10, dy: 0, koko: 1, edx: 0, edy: 1 } }),
+    nayte(16, 1, { a: { dx: 10, dy: 0, koko: 1, edx: 3, edy: 4 }, b: { dx: 0, dy: 0, koko: 1, edx: 3, edy: 4 } }),
+    nayte(32, 2, { a: { dx: 20, dy: 0, koko: 2, edx: 6, edy: 8 } }),
   ]);
-  assert.equal(e.n, 3);
-  assert.equal(e.mediaani, 1);
-  assert.equal(e.p95, 5);
+  assert.equal(e.n, 5);
+  assert.equal(e.mediaani, 0, 'a: sama offset ja koon mukana kasvava offset eivät ole virhettä');
+  assert.equal(e.p95, 5, 'b siirtyi 5 px');
 });

@@ -36,9 +36,11 @@
  *      ja asetteleNosto ajetaan, vanha nimiökuva jää häipymään
  *      (.nostosym-nimio-vanha), uusi tulee häivytyksellä ja vanha on
  *      poissa DOMista 400 ms:n kuluttua; ikoni ei liiku.
- * Ennustevirhe (E4b, Karttasepän kameran ennuste) tulostetaan tiedoksi
- * kun kehyksen mitoissa on ennuste. Vartiot 1–3 tuomitaan vain ≥ 20
- * fps:n mittauksesta (SAVUKE_IKKUNA=1,
+ * ENNUSTE (E4b, Karttasepän kameran ennuste): kun kehyksen mitoissa on
+ * ennuste, nimiö johtaa todellista kameraa yhden kehyksen verran
+ * tahallaan; vartiot 1–2 mittaavat silloin siirtymän ENNUSTETUSTA
+ * maapisteestä (ennustevirhe) ja johto kirjataan tiedoksi. Vartiot 1–3
+ * tuomitaan vain ≥ 20 fps:n mittauksesta (SAVUKE_IKKUNA=1,
  * ks. alla); headlessissä ne kirjataan tiedoksi. LÄHTÖTASO 21.9.2026
  * (ikkunallinen Chromium, Mac Studio): panorointi 0 px; zoomi 0,04 /
  * 0,31 px, koko muuttuu 77 %:ssa kehyksistä ja yhden kehyksen porras
@@ -221,9 +223,17 @@ for (const ruutu of RUUDUT) {
   const panSiirtyma = siirtymanMuutokset(pan);
   const panFps = kehysnopeus(pan);
   tieto(`${tunnus}: panorointi`, `${pan.length} kehystä (${panFps.toFixed(1)} fps), seurattavia ${seurattavia}; siirtymän muutos mediaani ${panSiirtyma.mediaani} px, p95 ${panSiirtyma.p95} px, pahin ${JSON.stringify(panSiirtyma.pahin)}`);
-  vaadi(`${tunnus}: 1. panoroinnissa nimiö pysyy maapisteessään (mediaani < 1 px, p95 < 2 px)`,
-    panFps < 20 || (pan.length >= 5 && panSiirtyma.n > 20 && panSiirtyma.mediaani < 1 && panSiirtyma.p95 < 2),
-    JSON.stringify(panSiirtyma));
+  /*
+   * ENNUSTEEN KANSSA (E4b) nimiö johtaa todellista kameraa yhden kehyksen
+   * verran tahallaan; silloin vartio mittaa siirtymän ENNUSTETUSTA
+   * maapisteestä (ennustevirhe) ja johto todellisesta kirjataan tiedoksi.
+   */
+  const panEnnusteMitta = ennustevirhe(pan);
+  const panMitta = panEnnusteMitta ?? panSiirtyma;
+  if (panEnnusteMitta) tieto(`${tunnus}: panorointi, ennuste`, `ennustevirhe ${JSON.stringify(panEnnusteMitta)}; johto todellisesta kamerasta mediaani ${panSiirtyma.mediaani} px, p95 ${panSiirtyma.p95} px`);
+  vaadi(`${tunnus}: 1. panoroinnissa nimiö pysyy maapisteessään (mediaani < 1 px, p95 < 2 px${panEnnusteMitta ? '; ennustetusta' : ''})`,
+    panFps < 20 || (pan.length >= 5 && panMitta.n > 20 && panMitta.mediaani < 1 && panMitta.p95 < 2),
+    JSON.stringify(panMitta));
   if (KUVAKANSIO) writeFileSync(join(KUVAKANSIO, `sulavat-${tunnus}-pan.png`), await sivu.screenshot());
   await odotaLepo();
 
@@ -262,9 +272,9 @@ for (const ruutu of RUUDUT) {
   const zoomSiirtyma = siirtymanMuutokset(zoom);
   const koko = koonLiukuvuus(zoom);
   const zoomEnnuste = ennustevirhe(zoom);
-  const panEnnuste = ennustevirhe(pan);
-  if (zoomEnnuste || panEnnuste) tieto(`${tunnus}: ennustevirhe (E4b)`, `panorointi ${JSON.stringify(panEnnuste)}, zoomi ${JSON.stringify(zoomEnnuste)}`);
-  else tieto(`${tunnus}: ennustevirhe (E4b)`, 'ei ennustetta kehyksen mitoissa (karttaseppa-ennuste ei mukana)');
+  const zoomMitta = zoomEnnuste ?? zoomSiirtyma;
+  if (zoomEnnuste) tieto(`${tunnus}: zoomi, ennuste`, `ennustevirhe ${JSON.stringify(zoomEnnuste)}; johto todellisesta kamerasta mediaani ${zoomSiirtyma.mediaani} px, p95 ${zoomSiirtyma.p95} px`);
+  else tieto(`${tunnus}: ennuste (E4b)`, 'ei ennustetta kehyksen mitoissa (karttaseppa-ennuste ei mukana)');
   const skaalat = zoom.map((n) => n.skaala);
   const fps = kehysnopeus(zoom);
   tieto(`${tunnus}: zoomi`, `${zoom.length} kehystä (${fps.toFixed(1)} fps), skaala ${skaalat[0]?.toFixed(4)} → ${skaalat.at(-1)?.toFixed(4)}; siirtymän muutos mediaani ${zoomSiirtyma.mediaani} px, p95 ${zoomSiirtyma.p95} px, pahin ${JSON.stringify(zoomSiirtyma.pahin)}; koko: kamera liikkui ${koko.liikkui} kehyksessä, koko muuttui niistä ${koko.liikkuiJaKokoMuuttui} (${koko.osuus}), kokoaskel levossa ${koko.lepoaskel}, liikkeessä ${koko.liikeaskel}`);
@@ -277,9 +287,9 @@ for (const ruutu of RUUDUT) {
    */
   const tuomari = fps >= 20;
   if (!tuomari) tieto(`${tunnus}: ohitus`, `${fps} fps — sulavuusvartiot 2–3 vain ikkunallisena (SAVUKE_IKKUNA=1)`);
-  vaadi(`${tunnus}: 2. zoomissa nimiö pysyy maapisteessään (mediaani < 1 px, p95 < 2 px)`,
-    !tuomari || (zoom.length >= 5 && zoomSiirtyma.n > 20 && zoomSiirtyma.mediaani < 1 && zoomSiirtyma.p95 < 2),
-    JSON.stringify(zoomSiirtyma));
+  vaadi(`${tunnus}: 2. zoomissa nimiö pysyy maapisteessään (mediaani < 1 px, p95 < 2 px${zoomEnnuste ? '; ennustetusta' : ''})`,
+    !tuomari || (zoom.length >= 5 && zoomMitta.n > 20 && zoomMitta.mediaani < 1 && zoomMitta.p95 < 2),
+    JSON.stringify(zoomMitta));
   vaadi(`${tunnus}: 3. zoomissa koko liukuu joka kehys: liikkeen kehyksistä ≥ 90 % muuttaa kokoa, yhden kehyksen porras < 5 %`,
     !tuomari || (koko.liikkui >= 3 && koko.lepoaskel < 0.05 && koko.liikeaskel < 0.05 && koko.osuus >= 0.9),
     JSON.stringify(koko));

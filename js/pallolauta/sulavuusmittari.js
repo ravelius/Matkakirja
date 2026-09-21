@@ -172,17 +172,25 @@ export function siirtymanMuutokset(naytteet) {
 }
 
 /**
- * Ennustevirhe (E4b): nimiön etäisyys ENNUSTETUSTA maapisteestä
- * kehyksittäin (mediaani ja p95, px) — sen pitää olla ~0, kun
- * Karttasepän jälkikehyskoukku siirtää merkit ennusteeseen. Null, jos
- * näytteissä ei ole ennustetta.
+ * Ennustevirhe (E4b): nimiön siirtymä ENNUSTETUSTA maapisteestä —
+ * sen muutos eleen ensimmäiseen kehykseen nähden (mediaani ja p95,
+ * px). Kun Karttasepän koukku siirtää merkit ennusteeseen, tämän pitää
+ * olla ~0 ja "siirtymä todellisesta" näyttää yhden kehyksen johdon.
+ * Null, jos näytteissä ei ole ennustetta.
  */
 export function ennustevirhe(naytteet) {
+  // Sama mitta kuin siirtymanMuutokset: nimiö istuu ikoninsa kyljessä,
+  // joten raaka etäisyys maapisteestä on sovittelun offset — mitataan
+  // sen MUUTOS ensimmäiseen kehykseen nähden, koolla normalisoituna.
+  const alku = naytteet.find((n) => Object.values(n.merkit).some((m) => Number.isFinite(m.edx)))?.merkit;
+  if (!alku) return null;
   const arvot = [];
   for (const n of naytteet) {
-    for (const m of Object.values(n.merkit)) {
-      if (!Number.isFinite(m.edx)) continue;
-      arvot.push(Math.hypot(m.edx, m.edy));
+    for (const [avain, m] of Object.entries(n.merkit)) {
+      const a = alku[avain];
+      if (!a || !Number.isFinite(m.edx) || !Number.isFinite(a.edx)) continue;
+      const k = a.koko && m.koko ? a.koko / m.koko : 1;
+      arvot.push(Math.hypot(m.edx * k - a.edx, m.edy * k - a.edy));
     }
   }
   if (!arvot.length) return null;

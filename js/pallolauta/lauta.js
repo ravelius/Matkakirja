@@ -118,7 +118,7 @@ import {
   PALLON_SALLITTU_VENYTYS, ULOSZOOMAUKSEN_KERROIN, kokoPallonKorkeus, laattojenVenytys,
   leveysKorkeudesta, luoPallokamera,
 } from './kamera.js';
-import * as palloApi from '../pallo.js';
+import * as laattaApi from '../pallolaatat.js';
 import { luoKameraloki } from './kameraloki.js';
 import { luoSulavuusmittari } from './sulavuusmittari.js';
 import {
@@ -5413,13 +5413,19 @@ export async function avaaPallolauta(ui) {
     viimeisinKehys: () => viimeisinKehys,
     /**
      * Pinnan piste ruudulle ENNUSTETULLA kameralla (Karttasepän
-     * pinnanRuutupiste, js/pallo.js, E4b). Nimiavaruustuonti, jotta
-     * lauta toimii myös ennen kuin apuri on olemassa: silloin null.
+     * pinnanRuutupiste, js/pallolaatat.js, E4b). Nimiavaruustuonti,
+     * jotta lauta toimii myös ilman apuria: silloin null.
      */
     ruutupisteEnnusteesta: (pov, lat, lng) => {
-      const f = palloApi.pinnanRuutupiste;
-      if (typeof f !== 'function' || !pov) return null;
-      try { return f(pov, lat, lng, linssiPaalla()) ?? null; } catch { return null; }
+      const f = laattaApi.pinnanRuutupiste;
+      const m = viimeisinKehys;
+      if (typeof f !== 'function' || !pov || !m) return null;
+      try {
+        // sx, sy ovat normalisoituja (−1…1, y ylös) → kotelon pikselit.
+        const r = f(pov, lat, lng, { fov: m.fov, kuvasuhde: m.kuvasuhde });
+        if (!r || !r.edessa) return null;
+        return { x: ((r.sx + 1) / 2) * m.W, y: ((1 - r.sy) / 2) * m.H };
+      } catch { return null; }
     },
     /**
      * Kyltin PIIRRETTY laatikko (savukkeet ja vartijat): se, jota
