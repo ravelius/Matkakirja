@@ -647,3 +647,7 @@ Julkaisija 21.9.2026 ilta: jono tyhjä; mainissa v2005–v2017 (gl-rasterit, rea
 ## CODEXILLE 7 PUUTTUVAA PIENOISMALLIA (ATEENA 6, WIEN 1), TILAUS 4 LISAYS (21.9.2026 klo 20.52)
 
 Fable 21.9.2026 ilta: Sisältökirjurin tarkistus (docs/raportit/pienoismallit-puuttuvat-7-20260921.md, sisalto-grc-kuvat 36ca0ff8): 43/50 kohdekarttapisteestä kunnossa; 7 vanhaa bare-id-viitettä (Ateena Akropolis-museo, Iliou Melathron, Maratonhuijaus, Elginin marmorit, Diogeneen astia, Niken temppeli; Wien Vuoristovesijohto) palauttaa 404 eikä kuvia ole repossa. Tilattu Codexilta postilaatikkoon (posti/fable-codexille-miniatyyrit-7-20260921.md) samalla tyylillä ja PR-toimituksella kuin 97-erä.
+
+## TUOTANTOVIKA v2018: GL-NAPPULA PIIRTYY MUSTANA (iPad); PELIKOODARI KORJAA KIIREELLISENA (21.9.2026 klo 21.02)
+
+Laitetestaaja 21.9.2026 ilta: GL-nappula (v2018, oletuksena) piirtyy mustana, ei pelaajan kullalla #c9a227; ?glnimiot=0 oikein; toistettu iPadilla kahdesti, ei transientti. Epäily: nimiorasterit.js rasteroiNappula lukee tyylit elementistä, joka ei ole CSS2D-kääreen alla, joten pelaajan väri-CSS-muuttuja ei periydy. Fable: Pelikoodari korjaa kiireellisenä pienenä haarana ja lisää nappulan värin vartion savukkeeseen; Laitetestaaja jatkaa laiteluvun loppuun.
