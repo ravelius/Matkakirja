@@ -442,6 +442,7 @@ export const MAASTOKOHTEET_NOR = [
     ],
     nimi: 'Nordkapp',
     tyyppi: 'merenkulku',
+    taso: 1,
     kysymykset: [
       'Onko Nordkapp todella Euroopan pohjoisin kohta?',
       'Mitkä kaksi merta kohtaavat niemellä?',
@@ -491,6 +492,7 @@ export const MAASTOKOHTEET_NOR = [
     ],
     nimi: 'Nidarosin tuomiokirkko',
     tyyppi: 'kulttuuri',
+    taso: 1,
     kysymykset: [
       'Kenen haudan päälle kirkko rakennettiin?',
       'Missä Norjan hallitsijat vihitään?',
