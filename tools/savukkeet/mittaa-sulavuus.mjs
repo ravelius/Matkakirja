@@ -95,7 +95,7 @@ await sivu.evaluate(() => {
 if (KURISTUS > 1) await cdp.send('Emulation.setCPUThrottlingRate', { rate: KURISTUS });
 const kotelo = await sivu.evaluate(() => { const r = document.querySelector('.pallo-kotelo, #board, .map-pane').getBoundingClientRect(); return { x: Math.round(r.left + r.width / 2), y: Math.round(r.top + r.height / 2), w: r.width, h: r.height }; });
 const kamera = (lat, lng, altitude) => sivu.evaluate((p) => { window.matkakirja.ui.pallolauta.heraa?.(); window.matkakirja.ui.pallonInstanssi.pointOfView(p, 0); }, { lat, lng, altitude });
-const aloita = () => sivu.evaluate(() => { const M = window.__M; M.kehykset = []; M.pitkat = []; M.tekstuureja = 0; M.mittaa = true; });
+const aloita = () => sivu.evaluate(() => { const M = window.__M; M.kehykset = []; M.pitkat = []; M.tekstuureja = 0; M.mittaa = true; const p = window.matkakirja.ui.pallonInstanssi; p.__ennusteMittarit = { kehyksia: 0, ennustettuja: 0, virheSumma: 0, virheMax: 0, liikeSumma: 0, siirtoja: 0 }; });
 const lopeta = (nimi) => sivu.evaluate((n) => {
   const M = window.__M; M.mittaa = false; const k = M.kehykset; const dt = k.map((r) => r[0]).sort((a, b) => a - b);
   const p = (q) => dt[Math.min(dt.length - 1, Math.floor(q * dt.length))];
@@ -111,7 +111,8 @@ const lopeta = (nimi) => sivu.evaluate((n) => {
   const liikkumatta = k.filter((r, i) => i > 0 && r[9] > 0 && Math.abs(r[7] - k[i - 1][7]) < 1e-4 && Math.abs(r[6] - k[i - 1][6]) < 1e-4).length;
   const summa = (j) => +k.reduce((s, r) => s + r[j], 0).toFixed(0);
   const km = window.__kerros?.mittarit?.() ?? {}; const vm = window.matkakirja.ui.pallolauta.vektorit?.()?.mittarit?.() ?? {};
-  return { vektorit: { korostusJanoja: vm.korostusJanoja, naulaussaie: vm.naulaussaie, naulauksia: vm.naulauksia, harvennus: vm.harvennus, lod: vm.lod }, kehykset: k, vaihe: n, kehyksia: k.length, peittamatta, eiTaysin, pohjaNakyy, peittoMin, tasot, tasonVaihtoja, zoomAskel: { n: za.length, p50: zp(0.5), p90: zp(0.9), max: za.at(-1) ?? 0, alkuAlt: altit[0], loppuAlt: altit.at(-1) }, sahaus, liikkumattaSyotteella: liikkumatta, mediaani: p(0.5), p95: p(0.95), max: dt.at(-1), yli20ms: yli, osuusYli: +(100 * yli / Math.max(1, k.length)).toFixed(1), summat: { laatat: summa(1), moottori: summa(2), tekstuurit: summa(3), piirto: summa(4) }, tekstuureja: M.tekstuureja, pitkat: M.pitkat.sort((a, b) => b - a).slice(0, 6), pahimmat, laatat: { taso: km.taso, laattoja: km.laattoja, valmisteluja: km.valmisteluja, valmisteluMs: km.valmisteluMs, valmisteluMax: km.valmisteluMax, purettuja: km.purettuja, pyyntoja: km.pyyntoja, jumissa: km.jumissa, tukia: km.tukia, ennakkoja: km.ennakkoja, scenessa: km.scenessa, kaytetytTavut: km.kaytetytTavut } };
+  const em = window.matkakirja.ui.pallonInstanssi.__ennusteMittarit ?? {}; const ennuste = { kehyksia: em.ennustettuja ?? 0, liikeKaPx: +((em.liikeSumma ?? 0) / Math.max(1, em.ennustettuja ?? 0)).toFixed(2), virheKaPx: +((em.virheSumma ?? 0) / Math.max(1, em.ennustettuja ?? 0)).toFixed(2), virheMaxPx: +(em.virheMax ?? 0).toFixed(1), siirtoja: em.siirtoja ?? 0 };
+  return { ennuste, vektorit: { korostusJanoja: vm.korostusJanoja, naulaussaie: vm.naulaussaie, naulauksia: vm.naulauksia, harvennus: vm.harvennus, lod: vm.lod }, kehykset: k, vaihe: n, kehyksia: k.length, peittamatta, eiTaysin, pohjaNakyy, peittoMin, tasot, tasonVaihtoja, zoomAskel: { n: za.length, p50: zp(0.5), p90: zp(0.9), max: za.at(-1) ?? 0, alkuAlt: altit[0], loppuAlt: altit.at(-1) }, sahaus, liikkumattaSyotteella: liikkumatta, mediaani: p(0.5), p95: p(0.95), max: dt.at(-1), yli20ms: yli, osuusYli: +(100 * yli / Math.max(1, k.length)).toFixed(1), summat: { laatat: summa(1), moottori: summa(2), tekstuurit: summa(3), piirto: summa(4) }, tekstuureja: M.tekstuureja, pitkat: M.pitkat.sort((a, b) => b - a).slice(0, 6), pahimmat, laatat: { taso: km.taso, laattoja: km.laattoja, valmisteluja: km.valmisteluja, valmisteluMs: km.valmisteluMs, valmisteluMax: km.valmisteluMax, purettuja: km.purettuja, pyyntoja: km.pyyntoja, jumissa: km.jumissa, tukia: km.tukia, ennakkoja: km.ennakkoja, scenessa: km.scenessa, kaytetytTavut: km.kaytetytTavut } };
 }, nimi);
 const tulokset = {};
 let profiili = null;
@@ -151,6 +152,10 @@ if (NAKYMAT[NAKYMA].hasTouch) {
   await cdp.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
   await sivu.waitForTimeout(1500); tulokset.loitonnus = await lopeta('loitonnus');
 }
+// LENTO: kirjaston oma kamera-ajo (pointOfView 1,5 s) — sileä liike joka kehys; ennusteen mitta
+await kamera(46.5, 2.5, KORKEUS); await sivu.waitForTimeout(2000); await aloita();
+await sivu.evaluate(() => window.matkakirja.ui.pallonInstanssi.pointOfView({ lat: 48.8, lng: 4.5, altitude: 0.1 }, 1500));
+await sivu.waitForTimeout(1900); tulokset.lento = await lopeta('lento');
 // HEITTO: nopea veto 0,4 s ja irrotus vauhdissa (liuku) — reuna ehtiikö laatoittua
 await kamera(46.5, 2.5, KORKEUS); await sivu.waitForTimeout(2500); await aloita();
 await sivu.mouse.move(kotelo.x + kotelo.w * 0.4, kotelo.y); await sivu.mouse.down();
@@ -159,7 +164,7 @@ await sivu.mouse.up(); await sivu.waitForTimeout(2500);
 tulokset.heitto = await lopeta('heitto');
 if (PROFIILI) { profiili = (await cdp.send('Profiler.stop')).profile; writeFileSync(`${ULOS}/profiili-${NAKYMA}-k${KURISTUS}.cpuprofile`, JSON.stringify(profiili)); }
 writeFileSync(`${ULOS}/tulos-${NAKYMA}-k${KURISTUS}.json`, JSON.stringify({ gpu, NAKYMA, KURISTUS, KORKEUS, tulokset, virheet }, null, 1));
-for (const t of Object.values(tulokset)) console.log(JSON.stringify({ ...t, kehykset: undefined, pahimmat: undefined, summat: undefined, laatat: { valmisteluja: t.laatat.valmisteluja, valmisteluMax: Math.round(t.laatat.valmisteluMax), valmisteluKa: +(t.laatat.valmisteluMs / Math.max(1, t.laatat.valmisteluja)).toFixed(1) } }));
+for (const t of Object.values(tulokset)) console.log(JSON.stringify({ ...t, kehykset: undefined, pahimmat: undefined, summat: undefined, vektorit: undefined, laatat: { valmisteluja: t.laatat.valmisteluja, valmisteluMax: Math.round(t.laatat.valmisteluMax), valmisteluKa: +(t.laatat.valmisteluMs / Math.max(1, t.laatat.valmisteluja)).toFixed(1) } }));
 for (const t of Object.values(tulokset)) if (process.env.PAHIMMAT && t.vaihe !== 'lepo') console.log(t.vaihe, 'pahimmat [i, dt, laatat, moottori, tekst, piirto, vekt, lat, lng, alt, syötteitä, z, näk, scen, täysin, x, peitto, peittoTaso, valmistelu]:', JSON.stringify(t.pahimmat));
 console.log('virheet', virheet.slice(0, 3));
 await selain.close(); palvelin.close();

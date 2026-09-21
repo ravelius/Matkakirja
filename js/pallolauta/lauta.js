@@ -65,6 +65,7 @@
 import {
   LAATU_LEPOVIIVE_MS, PALLO_LAATTATASO_MAX, PALLO_LAUTA, asennaPallonEleet, esilataaPallolaatat,
   kytkePallonKehys,
+  kytkePallonEnnuste,
   laatatSaatavilla, laattatasoMax, lataaPallokirjasto, pakotaPallonLaatu,
   laudanPisteenAvain, pallonKaupungit, pallonLepokerros, pallonNostoOnPoltettu,
   pallonOmatPisteet, pallonPiste, rakennaPallo, webglTuettu,
@@ -3705,6 +3706,8 @@ export async function avaaPallolauta(ui) {
     asetaPisteidenPaikat(p);
   };
   const kehyspurku = kytkePallonKehys(pallo, kotelo, pisteetKehyksessa);
+  // Kameran ennuste: CSS2D-nimiöt ja merkit seuraavan kehyksen paikkaan (E4b, ?ennuste=0 pois).
+  const ennustepurku = kytkePallonEnnuste(pallo, kotelo);
 
   const tahdistaPisteidenKoko = () => {
     const edellinen = asetettuSade;
@@ -5276,6 +5279,7 @@ export async function avaaPallolauta(ui) {
       ohjaimet.removeEventListener('change', pyydaLadonta);
       ohjaimet.removeEventListener('change', tahdistaPisteidenKoko);
       kehyspurku();
+      ennustepurku();
       kameraloki.pura();
       // Omat pallopisteet ovat tämän laudan tilaa (ks. pallonAsteet).
       if (omatPisteet === laudanOmatPisteet) omatPisteet = new Map();

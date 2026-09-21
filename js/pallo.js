@@ -1046,6 +1046,80 @@ export function lepokerroin(korkeusPx, teravyys = LAATU_TERAVYYS) {
 /** Pallon kehyskoukut: pallo → { kuuntelijat, kehys, scene, alkuperainen }. */
 const kehyskoukut = new WeakMap();
 
+/*
+ * ======== KAMERAN ENNUSTE (sulavuus E4b, 21.9.2026) ==================
+ *
+ * Omistaja 21.9.2026: nimiöt "pomppivat" liikkeessä. Kirjasto asettaa
+ * CSS2D-nimiöiden paikan samalla kameralla kuin WebGL-kuvan, mutta DOM ja
+ * kangas sommitellaan laitteella eri kerroksissa ja DOM-siirto ehtii
+ * ruudulle kehyksen (tai puolikkaan) kankaan jäljessä: nimiö laahaa
+ * pallon perässä ja nykii, kun kamera pysähtyy. Ennuste laskee
+ * SEURAAVAN kehyksen kameran viime kehysten liikkeestä (lineaarinen
+ * ekstrapolaatio, lat/lng kierretään lyhintä kautta, korkeus
+ * logaritmisena) ja tarjoaa sen kaikille kehyskoukun kuuntelijoille
+ * (`mitat.ennuste = { dtMs, pov, nopeus }`); CSS2D-elementit siirretään
+ * ennustettuun paikkaan (kytkePallonEnnuste) heti kirjaston asettaman
+ * paikan jälkeen kunkin CSS2DObjectin `onAfterRender`-koukusta — ei
+ * erillistä rAF:ia, joten järjestys kirjaston tickin kanssa on aina
+ * oikea. Levossa (nopeus alle kynnyksen) ennuste = nykyinen, jotta
+ * mikään ei värähtele. Kytkin `?ennuste=0`.
+ *
+ * MITTA (pallo.__ennusteMittarit): edellisen kehyksen ennusteen ja
+ * tämän kehyksen toteutuneen kameran ero pikseleinä (näkyvästä
+ * kaistasta). Ilman ennustetta "virhe" on koko kehyksen liike.
+ */
+/** Ennusteen aikaväli enintään (ms): pitkä tauko ei saa lennättää nimiöitä. */
+export const ENNUSTE_KEHYS_MAX_MS = 34;
+/** Liikekynnys (astetta/ms), jonka alla ennustetta ei tehdä. */
+export const ENNUSTE_KYNNYS = 2e-6;
+/** Ennusteen osuus kehysvälistä: 1 = koko kehys, 0,5 = puolikas. */
+export const ENNUSTE_OSUUS = 1;
+
+/** Onko ennuste käytössä (`?ennuste=0` sammuttaa). */
+export function pallonEnnusteKaytossa(win = globalThis) {
+  try {
+    const arvo = new URLSearchParams(win.location?.search ?? '').get('ennuste');
+    if (arvo != null) return !/^(0|off|false|pois)$/.test(arvo);
+  } catch { /* ei osoitetta */ }
+  return true;
+}
+
+/**
+ * Seuraavan kehyksen kamera edellisen ja nykyisen kehyksen liikkeestä.
+ * Puhdas: { dtMs, pov, nopeus } tai nykyinen pov nopeudella 0, kun
+ * liike on alle kynnyksen tai mittoja puuttuu.
+ */
+export function ennustaKamera(edellinen, nykyinen, {
+  osuus = ENNUSTE_OSUUS, kattoMs = ENNUSTE_KEHYS_MAX_MS, kynnys = ENNUSTE_KYNNYS,
+} = {}) {
+  const pov = nykyinen?.pov;
+  const lepo = { dtMs: 0, pov: pov ? { ...pov } : null, nopeus: { lat: 0, lng: 0, lnAlt: 0 } };
+  if (!pov || !edellinen?.pov || !Number.isFinite(nykyinen.aika) || !Number.isFinite(edellinen.aika)) return lepo;
+  const dt = nykyinen.aika - edellinen.aika;
+  if (!(dt > 0) || dt > 250) return lepo;
+  let dLng = pov.lng - edellinen.pov.lng;
+  if (dLng > 180) dLng -= 360; else if (dLng < -180) dLng += 360;
+  const nopeus = {
+    lat: (pov.lat - edellinen.pov.lat) / dt,
+    lng: dLng / dt,
+    lnAlt: (Math.log(Math.max(1e-6, pov.altitude)) - Math.log(Math.max(1e-6, edellinen.pov.altitude))) / dt,
+  };
+  if (![nopeus.lat, nopeus.lng, nopeus.lnAlt].every(Number.isFinite)) return lepo;
+  if (Math.hypot(nopeus.lat, nopeus.lng) < kynnys && Math.abs(nopeus.lnAlt) < kynnys) return lepo;
+  const dtMs = Math.min(kattoMs, dt) * osuus;
+  let lng = pov.lng + nopeus.lng * dtMs;
+  if (lng > 180) lng -= 360; else if (lng < -180) lng += 360;
+  return {
+    dtMs,
+    pov: {
+      lat: Math.max(-89.5, Math.min(89.5, pov.lat + nopeus.lat * dtMs)),
+      lng,
+      altitude: Math.exp(Math.log(Math.max(1e-6, pov.altitude)) + nopeus.lnAlt * dtMs),
+    },
+    nopeus,
+  };
+}
+
 /**
  * Kehysmitat yhdestä lähteestä yhdellä hetkellä. Ruudun koko luetaan
  * RENDERÖIJÄLTÄ (getSize = piirretty koko css-pikseleinä); kotelo on
@@ -1100,6 +1174,11 @@ export function kytkePallonKehys(pallo, kotelo, kuuntelija, ikkuna = globalThis)
       nyt.kehys += 1;
       const mitat = pallonKehysmitat(pallo, kotelo, kamera, ikkuna);
       mitat.kehys = nyt.kehys;
+      // Kameran ennuste seuraavalle kehykselle (E4b) ja sen virhemitta.
+      mitat.ennuste = ennustaKamera(nyt.edellinen, mitat);
+      kirjaaEnnustevirhe(pallo, nyt.edellinen, mitat);
+      nyt.edellinen = mitat;
+      pallo.__viimeisinKehys = mitat;
       for (const k of [...nyt.kuuntelijat]) {
         try { k(mitat); } catch { /* yksi kerros ei kaada piirtoa */ }
       }
@@ -1115,6 +1194,95 @@ export function kytkePallonKehys(pallo, kotelo, kuuntelija, ikkuna = globalThis)
     nyt.scene.onBeforeRender = nyt.alkuperainen;
     kehyskoukut.delete(pallo);
   };
+}
+
+/** Ennusteen virhe: edellisen kehyksen ennuste vastaan tämän kehyksen kamera (px). */
+function kirjaaEnnustevirhe(pallo, edellinen, mitat) {
+  const m = pallo.__ennusteMittarit ?? (pallo.__ennusteMittarit = {
+    kehyksia: 0, ennustettuja: 0, virheSumma: 0, virheMax: 0, liikeSumma: 0,
+  });
+  m.kehyksia += 1;
+  const e = edellinen?.ennuste;
+  const pov = mitat.pov;
+  if (!e?.pov || !pov || !(mitat.H > 0)) return;
+  const kaista = nakyvaKaista(pov.altitude, mitat.fov);
+  const pxAste = mitat.H / Math.max(1e-6, kaista);
+  const ero = (a, b) => {
+    let dl = a.lng - b.lng;
+    if (dl > 180) dl -= 360; else if (dl < -180) dl += 360;
+    return Math.hypot(a.lat - b.lat, dl * Math.cos((pov.lat * Math.PI) / 180)) * pxAste;
+  };
+  // Liike = mitä nimiö laahaisi ilman ennustetta; virhe = ennusteen jäännös.
+  // Hyppy yli puolen ruudun on kameran siirto (pointOfView), ei liikettä.
+  const liike = ero(pov, edellinen.pov);
+  if (!(liike > 0.05) || liike > mitat.H / 2) return;
+  m.ennustettuja += 1;
+  m.liikeSumma += liike;
+  const virhe = e.dtMs > 0 ? ero(pov, e.pov) : liike;
+  m.virheSumma += virhe;
+  if (virhe > m.virheMax) m.virheMax = virhe;
+}
+
+/**
+ * CSS2D-ELEMENTIT ENNUSTETTUUN PAIKKAAN (E4b). Kirjaston CSS2DRenderer
+ * asettaa elementin `transform`in ja kutsuu heti perään CSS2DObjectin
+ * `onAfterRender`-koukkua; siinä paikka kirjoitetaan uudestaan
+ * ennustetulla kameralla lasketusta projektiosta. Näkyvyys (display)
+ * jää kirjastolle. Ennustettu näkymämatriisi lasketaan kerran
+ * kehyksessä kehyskoukussa; koukku kiinnitetään jokaiseen scenen
+ * CSS2DObjectiin kerran (uudet elementit löytyvät seuraavalla
+ * kehyksellä). Palauttaa purkajan.
+ */
+export function kytkePallonEnnuste(pallo, kotelo, ikkuna = globalThis) {
+  if (!pallonEnnusteKaytossa(ikkuna)) return () => {};
+  const scene = pallo?.scene?.();
+  const kamera = pallo?.camera?.();
+  if (!scene || !kamera?.projectionMatrix) return () => {};
+  const Matrix4 = kamera.projectionMatrix.constructor;
+  const Vector3 = kamera.position.constructor;
+  const nakyma = new Matrix4();
+  const kaanteinen = new Matrix4();
+  const vp = new Matrix4();
+  const silma = new Vector3();
+  const keski = new Vector3(0, 0, 0);
+  const ylos = new Vector3(0, 1, 0);
+  const piste = new Vector3();
+  let aktiivinen = false;
+  let puoliW = 0;
+  let puoliH = 0;
+  const merkitty = new WeakSet();
+  const siirra = function ennusteSiirto() {
+    if (!aktiivinen || !this.element) return;
+    piste.setFromMatrixPosition(this.matrixWorld).applyMatrix4(vp);
+    if (!(piste.z >= -1 && piste.z <= 1)) return;
+    pallo.__ennusteMittarit.siirtoja = (pallo.__ennusteMittarit.siirtoja ?? 0) + 1;
+    const cx = this.center?.x ?? 0.5;
+    const cy = this.center?.y ?? 0.5;
+    this.element.style.transform = `translate(${-100 * cx}%,${-100 * cy}%)translate(${piste.x * puoliW + puoliW}px,${-piste.y * puoliH + puoliH}px)`;
+  };
+  const kehys = (mitat) => {
+    const e = mitat.ennuste;
+    aktiivinen = Boolean(e?.pov && e.dtMs > 0);
+    if (!aktiivinen) return;
+    pallo.__ennusteMittarit ??= { kehyksia: 0, ennustettuja: 0, virheSumma: 0, virheMax: 0, liikeSumma: 0 };
+    const R = mitat.sade;
+    const p = pallonPiste(e.pov.lat, e.pov.lng, R * (1 + e.pov.altitude));
+    silma.set(p.x, p.y, p.z);
+    nakyma.lookAt(silma, keski, ylos);
+    nakyma.setPosition(silma);
+    kaanteinen.copy(nakyma).invert();
+    vp.multiplyMatrices(mitat.kamera.projectionMatrix, kaanteinen);
+    // CSS2D-kerros on kotelon css-pikseleissä (CSS2DRenderer.setSize).
+    puoliW = (kotelo?.clientWidth ?? mitat.W) / 2;
+    puoliH = (kotelo?.clientHeight ?? mitat.H) / 2;
+    scene.traverse((o) => {
+      if (!o.isCSS2DObject || merkitty.has(o)) return;
+      merkitty.add(o);
+      o.onAfterRender = siirra;
+    });
+  };
+  const pura = kytkePallonKehys(pallo, kotelo, kehys, ikkuna);
+  return () => { aktiivinen = false; pura(); };
 }
 
 /*
