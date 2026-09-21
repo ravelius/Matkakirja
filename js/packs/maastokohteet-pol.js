@@ -76,6 +76,7 @@ export const MAASTOKOHTEET_POL = [
     id: 'rysy',
     nimi: 'Rysy',
     tyyppi: 'vuori',
+    taso: 1,
     kysymykset: [
       'Miksi Rysyllä on kolme huippua?',
       'Mikä on Puolan vuorten kruunu?',
@@ -338,6 +339,7 @@ export const MAASTOKOHTEET_POL = [
     id: 'malbork',
     nimi: 'Malborkin linna',
     tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Kuka rakensi Malborkin linnan?',
       'Miten linna päätyi Puolan kuninkaalle?',
@@ -409,6 +411,7 @@ export const MAASTOKOHTEET_POL = [
     ],
     nimi: 'Auschwitz-Birkenau',
     tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Mitä Auschwitzissa tapahtui?',
       'Miksi 27. tammikuuta on muistopäivä?',
@@ -627,6 +630,7 @@ export const MAASTOKOHTEET_POL = [
     ],
     nimi: 'Elblągin kanava',
     tyyppi: 'tekniikka',
+    taso: 1,
     kysymykset: [
       'Miten alukset nousevat sata metriä ylös?',
       'Kuka kanavan suunnitteli?',
