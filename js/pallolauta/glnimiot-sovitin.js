@@ -67,19 +67,25 @@ export function glInstanssinTunnus(d) {
  * (testit). `opacity` on 1: piilotus ja kylkivaihdon häivytys tulevat
  * vaiheessa 3 sovittelusta.
  */
-export function glNimenInstanssi(d, sprite) {
+export function glNimenInstanssi(d, sprite, kerroin = 1) {
   return {
     tunnus: glInstanssinTunnus(d),
     lat: d.lat,
     lng: d.lng,
     avain: sprite.avain,
     rasteri: sprite,
-    skaala: sprite.skaala,
+    skaala: sprite.skaala * (Number.isFinite(kerroin) && kerroin > 0 ? kerroin : 1),
     dx: Number(d.dx) || 0,
     dy: Number(d.dy) || 0,
     katto: sprite.katto ?? null,
     opacity: 1,
   };
+}
+
+/** Vanhan rasterin skaalauskerroin uuden datumin kokoon (porras vaihtui; ks. viimeSpritet). */
+export function vanhanKerroin(vanhaKoko, uusiKoko) {
+  const a = Number(vanhaKoko); const b = Number(uusiKoko);
+  return a > 0 && b > 0 ? b / a : 1;
 }
 
 /** Kylkivaihdon ja piilotuksen häivytys (ms) — sama kuin CSS2D:n E3-siirtymä. */
@@ -158,6 +164,23 @@ export function luoGlNimiosovitin({
   let peliInstanssit = [];
   /** tunnus → nimiön avain viime jaossa (kylkivaihdon tunnistus). */
   const nimiot = new Map();
+  /*
+   * PORTAAN VAIHTO ILMAN VÄLITILAA (omistajan tuntuma v2026, 21.9.2026
+   * ilta: *"MARSEILLE välkkyy zoomatessa"*; Karttaseppä mittasi WebKit
+   * 1400 × 900 dpr 2: nimi poissa yhden kehyksen joka kuoren portaan
+   * vaihdossa, tekstin peitto 55 ‰ → 21 ‰ → 56 ‰). Kun zoomi vaihtaa
+   * porrasta, uuden koon rasteri ei ole vielä valmis: nimi putosi
+   * CSS2D:hen (DOM piirtyy vasta seuraavassa kehyksessä) ja hyppäsi
+   * takaisin GL:ään rasterin valmistuttua — kaksi vaihtoa per porras.
+   * Nyt nimi, joka on jo rungolla, PYSYY rungolla vanhalla rasterilla
+   * (viimeSpritet: tunnus → sprite, jolla se viimeksi piirrettiin;
+   * vanha avain pysyy atlaksessa, koska sillä on instanssi) ja vaihtaa
+   * uuteen vasta kun se on valmis. Vanhan rasterin koko skaalataan
+   * uuden datumin kokoon (`d.koko / vanha.koko`), joten koko ei hyppää
+   * — kuva on hetken pehmeämpi tai terävämpi, ei koskaan poissa.
+   * Sama nostoille (jaaNostot): ikoni ja nimiö osittain (tunnus#osa).
+   */
+  const viimeSpritet = new Map();
   /** Häipyvät nimiöt: tunnus → { instanssi, alku, mista, mihin, poistu } */
   const haivytykset = new Map();
   const nyt = () => globalThis.performance?.now?.() ?? Date.now();
@@ -206,15 +229,27 @@ export function luoGlNimiosovitin({
     const gl = [];
     const css2d = [];
     let tayntyi = 0;
+    const nakyvatNimet = new Set();
     for (const d of datumit) {
+      const tunnus = glInstanssinTunnus(d);
       const sprite = lahde.haeNimi(d)[0];
       if (!sprite?.valmis || !varaa(k, sprite)) {
         if (sprite?.valmis) tayntyi += 1;
+        // Porras vaihtui kesken: vanha rasteri jää, kunnes uusi on valmis (ks. viimeSpritet).
+        const vanha = viimeSpritet.get(tunnus);
+        if (vanha && !sprite?.valmis && k.atlas?.hae?.(vanha.sprite.avain)) {
+          gl.push(glNimenInstanssi(d, vanha.sprite, vanhanKerroin(vanha.koko, d.koko)));
+          nakyvatNimet.add(tunnus);
+          continue;
+        }
         css2d.push(d);
         continue;
       }
       gl.push(glNimenInstanssi(d, sprite));
+      viimeSpritet.set(tunnus, { sprite, koko: Number(d.koko) || null });
+      nakyvatNimet.add(tunnus);
     }
+    for (const t of [...viimeSpritet.keys()]) if (!nakyvatNimet.has(t) && !t.includes('#')) viimeSpritet.delete(t);
     nimiInstanssit = gl;
     vieKaikki(k);
     luvut.gl = gl.length;
@@ -242,13 +277,20 @@ export function luoGlNimiosovitin({
     const nakyvat = new Set();
     for (const d of datumit) {
       if (!glNostoKelpaa(d)) { css2d.push(d); continue; }
-      const spritet = lahde.haeNosto(d);
+      const tunnus = glInstanssinTunnus(d);
+      const spritet = lahde.haeNosto(d).map((x) => {
+        // Portaan vaihto kesken: osa pysyy vanhalla rasterilla, kunnes uusi on valmis (ks. viimeSpritet).
+        if (x?.valmis || !x?.osa) return x;
+        const vanha = viimeSpritet.get(`${tunnus}#${x.osa}`);
+        if (!vanha || !k.atlas?.hae?.(vanha.sprite.avain)) return x;
+        return { ...vanha.sprite, osa: x.osa, skaala: x.skaala ?? vanha.sprite.skaala, katto: x.katto ?? vanha.sprite.katto, porras: x.porras ?? vanha.sprite.porras, vanhaRasteri: true };
+      });
       const ikoni = spritet.find((x) => x.osa === 'ikoni');
       const nimio = spritet.find((x) => x.osa === 'nimio') ?? null;
       const valmiit = spritet.every((x) => x?.valmis);
       if (!ikoni || !valmiit || !spritet.every((x) => varaa(k, x))) { css2d.push(d); continue; }
+      for (const x of spritet) if (!x.vanhaRasteri) viimeSpritet.set(`${tunnus}#${x.osa}`, { sprite: x, koko: null });
       const peitto = glNostonPeitto(d);
-      const tunnus = glInstanssinTunnus(d);
       nakyvat.add(tunnus);
       gl.push(glNostonInstanssi(d, ikoni, 'ikoni', peitto));
       if (nimio) {
@@ -272,6 +314,7 @@ export function luoGlNimiosovitin({
       }
     }
     for (const t of [...nimiot.keys()]) if (!nakyvat.has(t)) nimiot.delete(t);
+    for (const t of [...viimeSpritet.keys()]) { const i = t.indexOf('#'); if (i > 0 && !nakyvat.has(t.slice(0, i))) viimeSpritet.delete(t); }
     // Häivytys elää vain, kun sen nosto on yhä rungolla.
     for (const [t, h] of haivytykset) {
       const emo = t.replace(/#nimio(-vanha)?$/, '');

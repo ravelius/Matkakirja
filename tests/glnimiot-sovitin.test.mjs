@@ -311,3 +311,81 @@ test('kytkentä: merkit.js jakaa osan sovittimelle ja lauta sitoo pelin jaon ja 
   assert.match(lauta, /pelinJako = \(lista\) => glSovitin\.peli\(lista, peliUudestaan\)/);
   assert.match(lauta, /const pelinLaatikot = \[\.\.\.merkit\.laatikot\('peli'\), \.\.\.\(glSovitin\?\.pelinLaatikot\(\) \?\? \[\]\)\];/);
 });
+
+/*
+ * PORTAAN VAIHTO ILMAN VÄLITILAA (Karttaseppä 21.9.2026 ilta, omistajan
+ * "MARSEILLE välkkyy zoomatessa"): nimi, joka on jo rungolla, pysyy
+ * rungolla vanhalla rasterilla uuden koon rasterin valmistumiseen asti.
+ */
+function teePorraslahde() {
+  const tilaajat = new Set();
+  const valmiit = new Set();
+  const avain = (d) => `nimi|${d.teksti}|${d.koko}`;
+  return {
+    haeNimi: (d) => [{
+      osa: 'nimi', avain: avain(d), valmis: valmiit.has(avain(d)),
+      kuva: {}, w: 80, h: 24, ankkuriX: 4, ankkuriY: 12, skaala: 0.5, katto: null,
+    }],
+    tilaaRasterit: (f) => { tilaajat.add(f); return () => tilaajat.delete(f); },
+    kuorenKerroin: () => 1,
+    tila: () => ({ valmiita: valmiit.size, kesken: 0, fontitValmiit: true }),
+    pura: () => {},
+    valmistu(a) { valmiit.add(a); for (const f of tilaajat) f(a); },
+  };
+}
+
+test('portaan vaihto: nimi pysyy rungolla vanhalla rasterilla uuden kokoon skaalattuna, kunnes uusi on valmis', () => {
+  const lahde = teePorraslahde();
+  const kerros = teeKerros();
+  const s = luoGlNimiosovitin({ kerros: () => kerros, rasterilahde: lahde, ajasta: (f) => f() });
+  const pieni = [{ avain: 'nimi:marseille', laji: 'nimi', id: 'marseille', teksti: 'Marseille', lat: 43.3, lng: 5.4, dx: -8, dy: 0, ank: 'end', koko: 14 }];
+  lahde.valmistu('nimi|Marseille|14');
+  assert.deepEqual(s.nimet(pieni), [], 'porras 14 valmis → GL');
+  assert.equal(kerros.lista[0].avain, 'nimi|Marseille|14');
+  // Zoomi vaihtaa portaan: koko 16, rasteri kesken.
+  const iso = [{ ...pieni[0], koko: 16 }];
+  let uudestaan = 0;
+  const css2d = s.nimet(iso, () => { uudestaan += 1; s.nimet(iso); });
+  assert.deepEqual(css2d, [], 'EI CSS2D-välitilaa: nimi pysyy rungolla');
+  assert.equal(kerros.lista.length, 1);
+  assert.equal(kerros.lista[0].avain, 'nimi|Marseille|14', 'vanha rasteri');
+  assert.equal(Number(kerros.lista[0].skaala.toFixed(4)), Number((0.5 * 16 / 14).toFixed(4)), 'skaalattu uuteen kokoon');
+  assert.equal(s.tila().css2d, 0);
+  // Uusi rasteri valmistuu → vaihto uuteen avaimeen, skaala rasterin oma.
+  lahde.valmistu('nimi|Marseille|16');
+  assert.equal(uudestaan, 1);
+  assert.equal(kerros.lista[0].avain, 'nimi|Marseille|16');
+  assert.equal(kerros.lista[0].skaala, 0.5);
+  // Nimi, jota ei ole koskaan ollut rungolla, jää yhä CSS2D:hen kunnes rasteri valmis.
+  const uusi = [{ avain: 'nimi:lyon', laji: 'nimi', id: 'lyon', teksti: 'Lyon', lat: 45.7, lng: 4.8, dx: 0, dy: 0, ank: 'start', koko: 16 }];
+  assert.deepEqual(s.nimet([...iso, ...uusi]).map((d) => d.id), ['lyon']);
+  // Nimi poistuu näkyvistä → muisti unohtaa sen (ei kasva).
+  s.nimet(uusi);
+  assert.deepEqual(s.nimet(iso.map((d) => ({ ...d, koko: 18 }))).map((d) => d.id), ['marseille'], 'unohdettu → CSS2D kuten uusi');
+});
+
+test('portaan vaihto nostolla: ikoni ja nimiö pysyvät rungolla vanhalla rasterilla, kunnes uusi porras on valmis', () => {
+  const tilaajat = new Set();
+  let porras = 24;
+  const valmiit = new Set(['ikoni|24', 'nimio|24']);
+  const lahde = {
+    haeNimi: () => [],
+    haeNosto: (d) => [
+      { osa: 'ikoni', avain: `ikoni|${porras}`, valmis: valmiit.has(`ikoni|${porras}`), kuva: {}, w: 40, h: 40, ankkuriX: 20, ankkuriY: 20, skaala: d.mitta / porras, katto: { a: 1, b: 1.5 }, porras },
+      { osa: 'nimio', avain: `nimio|${porras}`, valmis: valmiit.has(`nimio|${porras}`), kuva: {}, w: 120, h: 30, ankkuriX: -4, ankkuriY: 15, skaala: d.mitta / porras, katto: { a: 1, b: 1.5 }, porras },
+    ],
+    tilaaRasterit: (f) => { tilaajat.add(f); return () => tilaajat.delete(f); },
+    kuorenKerroin: () => 1, tila: () => ({}), pura: () => {},
+  };
+  const kerros = teeKerros();
+  const s = luoGlNimiosovitin({ kerros: () => kerros, rasterilahde: lahde, ajasta: (f) => f() });
+  assert.deepEqual(s.nostot([NOSTO()]), []);
+  assert.deepEqual(kerros.lista.map((i) => i.avain), ['ikoni|24', 'nimio|24']);
+  porras = 32; // uusi porras, rasterit kesken
+  assert.deepEqual(s.nostot([NOSTO({ mitta: 0.8 })]), [], 'ei CSS2D-välitilaa');
+  assert.deepEqual(kerros.lista.map((i) => i.avain), ['ikoni|24', 'nimio|24'], 'vanhat rasterit');
+  assert.equal(Number(kerros.lista[0].skaala.toFixed(4)), Number((0.8 / 32).toFixed(4)), 'skaala uuden datumin mitasta ja portaasta');
+  valmiit.add('ikoni|32'); valmiit.add('nimio|32');
+  s.nostot([NOSTO({ mitta: 0.8 })]);
+  assert.deepEqual(kerros.lista.filter((i) => !i.tunnus.endsWith('-vanha')).map((i) => i.avain), ['ikoni|32', 'nimio|32']);
+});
