@@ -65,7 +65,7 @@
 import {
   LAATU_LEPOVIIVE_MS, PALLO_LAATTATASO_MAX, PALLO_LAUTA, asennaPallonEleet, esilataaPallolaatat,
   kytkePallonKehys,
-  kytkePallonEnnuste,
+  kytkePallonEnnuste, kolmiulotteinen as pallonKolmiulotteinen,
   laatatSaatavilla, laattatasoMax, lataaPallokirjasto, pakotaPallonLaatu,
   laudanPisteenAvain, pallonKaupungit, pallonLepokerros, pallonNostoOnPoltettu,
   pallonOmatPisteet, pallonPiste, rakennaPallo, webglTuettu,
@@ -136,6 +136,7 @@ import { laatikotLimittyvat } from './sovittelu.js';
 import { luoLinssikartta } from './linssikartta.js';
 import { luoMaapaneeli, paneelinLaatikko } from './maapaneeli.js';
 import { luoLinssit } from './linssit.js';
+import { glLuokat, glNimiotKaytossa, luoNimiokerrosGL, rasteroiTeksti } from '../pallonimiot-gl.js';
 import { luoNappulanKuljettaja } from './siirto.js';
 import { luoAloituslennonKohtaus } from './avaus.js';
 
@@ -3708,6 +3709,34 @@ export async function avaaPallolauta(ui) {
   const kehyspurku = kytkePallonKehys(pallo, kotelo, pisteetKehyksessa);
   // Kameran ennuste: CSS2D-nimiöt ja merkit seuraavan kehyksen paikkaan (E4b, ?ennuste=0 pois).
   const ennustepurku = kytkePallonEnnuste(pallo, kotelo);
+  /*
+   * GL-KERROS, VAIHE 1 (`?glnimiot=1`, docs/raportit/gl-kerros-suunnitelma-
+   * 20260921.md): kerros syntyy laiskasti, kun kirjaston luokat ovat
+   * scenessä (laattaverkko + ilmakehän varjostin), ja saa testinimiöiksi
+   * 40 kameraa lähintä kaupunkia rungon omalla rasterilla. Tuotannon
+   * rasterit (Pelikoodarin nimiorasterit.js), napautus ja sovittelu
+   * tulevat vaiheissa 2–4; siihen asti CSS2D-nimiöt pysyvät rinnalla.
+   */
+  let glKerros = null;
+  ui.pallolautaGL = () => glKerros;
+  const glKehys = (mitat) => {
+    if (!glKerros) {
+      const luokat = glLuokat(pallo);
+      if (!luokat) return;
+      glKerros = luoNimiokerrosGL({ pallo, kotelo, luokat, juuri: pallonKolmiulotteinen(pallo)?.juuri ?? null });
+      const pov = mitat.pov ?? pallo.pointOfView();
+      const dpr = mitat.suhde ?? 1;
+      const lahimmat = pallonKaupungit(pack)
+        .map((k) => ({ ...k, d: Math.hypot(k.lat - pov.lat, ((k.lon - pov.lng + 540) % 360 - 180) * Math.cos((pov.lat * Math.PI) / 180)) }))
+        .sort((a, b) => a.d - b.d).slice(0, 40);
+      for (const k of lahimmat) {
+        const rasteri = rasteroiTeksti(k.n, { px: 12, dpr, doc: kotelo.ownerDocument });
+        if (rasteri) glKerros.aseta(`kaupunki-${k.id}`, { lat: k.lat, lng: k.lon, avain: `testi|${k.n}|${dpr}`, rasteri });
+      }
+    }
+    glKerros.kehys(mitat);
+  };
+  const glpurku = glNimiotKaytossa() ? kytkePallonKehys(pallo, kotelo, glKehys) : () => {};
 
   const tahdistaPisteidenKoko = () => {
     const edellinen = asetettuSade;
@@ -5280,6 +5309,8 @@ export async function avaaPallolauta(ui) {
       ohjaimet.removeEventListener('change', tahdistaPisteidenKoko);
       kehyspurku();
       ennustepurku();
+      glpurku();
+      glKerros?.pura();
       kameraloki.pura();
       // Omat pallopisteet ovat tämän laudan tilaa (ks. pallonAsteet).
       if (omatPisteet === laudanOmatPisteet) omatPisteet = new Map();
