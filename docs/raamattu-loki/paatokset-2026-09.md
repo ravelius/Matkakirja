@@ -807,3 +807,7 @@ Fable 21.9.2026 klo 23.22: Julkaisijan luovutus docs/raportit/viesti-julkaisija-
 ## LINSSIKATALOGI JULKAISTAAN ILMAN KORTTIA KORJAUSTEN JALKEEN; MAAKUNTALUONNEHDINTA 1-2 VIRKETTA, PULU KERTOO LISAA (21.9.2026 klo 23.28)
 
 Omistaja 21.9.2026 klo 23.35: linssikatalogin saa julkaista yöllä ilman korttia, kun kolme korjausta (tilat tarkistettu, merkit yksinkertaiset, yö- ja päivätila) on tehty; Fable katsoo kaappaukset. Maakuntien luonnehdinnan mitta hyväksytty: 1–2 virkettä, enintään 160 merkkiä, Livian ääni. Lisäys: pulu voi kertoa maakunnasta lisää — karttatyökalun Maakunnat-tilassa luonnehdinnan vieressä pulun nappi, joka avaa pulun keskustelun alueesta (2–3 valmista kysymystä esikirjoitetuin vastauksin, kuten Ihmisen matkassa); Sisältökirjuri kirjoittaa luonnehdintojen jälkeen erillisenä eränä.
+
+## MAAKUNNAN LUONNEHDINTAAN TAPPA: PIDEMPI VERSIO KUVAN KANSSA (21.9.2026 klo 23.29)
+
+Omistaja 21.9.2026 klo 23.40: karttatyökalun Maakunnat-tilassa lyhyen luonnehdinnan vieressä täppä (nuoli/plus), josta avautuu pidempi versio kuvan kanssa: yksi Commons-kuva alueesta (PD/CC, kuvaputken mukaan, lähde ja lisenssi) ja 3–5 virkkeen teksti Livian äänellä (maisema, ihmiset, yksi tarina tai erikoisuus; 1873-kytkös jos on). Pulun kysymykset sen rinnalla. Sisältökirjuri: erä 1 lyhyet luonnehdinnat (nyt), erä 2 pitkät + kuvat, erä 3 pulun kysymykset; kaikki samaan datarakenteeseen (lyhyt, pitka, kuva, pulu). Pelikoodari: paneelin rivi laajenee täpästä samaan tapaan kuin nostokortin Lisää.
