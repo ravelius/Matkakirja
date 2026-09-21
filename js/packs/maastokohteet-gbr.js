@@ -86,6 +86,7 @@ export const MAASTOKOHTEET_GBR = [
     ],
     nimi: 'Ben Nevis',
     tyyppi: 'vuori',
+    taso: 1,
     kysymykset: [
       'Mikä on felsenmeer?',
       'Millainen on Ben Neviksen pohjoisseinämä talvella?',
@@ -315,6 +316,7 @@ export const MAASTOKOHTEET_GBR = [
     ],
     nimi: 'Stonehenge',
     tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Miten kivet pysyvät päällekkäin?',
       'Mihin suuntaan monumentti on suunnattu?',
@@ -486,6 +488,7 @@ export const MAASTOKOHTEET_GBR = [
     ],
     nimi: 'Ironbridge',
     tyyppi: 'tekniikka',
+    taso: 1,
     kysymykset: [
       'Miksi silta tehtiin raudasta?',
       'Kuka vastasi sillan rautatyöstä?',
@@ -543,6 +546,7 @@ export const MAASTOKOHTEET_GBR = [
     ],
     nimi: 'Bathin roomalaiset kylpylät',
     tyyppi: 'kulttuuri',
+    taso: 1,
     kysymykset: [
       'Mistä kylpylän vesi tulee?',
       'Miksi altaisiin ei saa mennä?',
