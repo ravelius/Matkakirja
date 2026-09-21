@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2001, teksti: 'Nimien liukuva koko (E2)' },
   { v: 2000, teksti: 'Laattatasojen z-tappelu korjattu' },
   { v: 1999, teksti: 'Loytamisen sumu oletuksena pois' },
   { v: 1998, teksti: 'Sulavuus E4b: laatan ennuste' },

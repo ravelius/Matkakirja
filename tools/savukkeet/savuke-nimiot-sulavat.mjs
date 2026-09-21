@@ -28,12 +28,19 @@
  *   3. Zoomi: koko liukuu joka kehys — liikkeen kehyksistä ≥ 90 %
  *      muuttaa kokoa, yhden kehyksen porras < 5 % (myös levossa).
  *   4. Ei sivuvirheitä.
+ *   5. Katto pätee myös liikkeessä (E2): noston nimiö ≤ 16 px joka
+ *      kehyksessä (NOSTOSYM_NIMIO_KATTO_PX, sallittu ylitys 0,5 %).
+ *   6. Levossa kuori on 1 (±0,3 %) ja liikkeen luokka
+ *      (.pallolauta-liikkuu) on poissa — siirtymät ovat taas käytössä.
  * Vartiot 1–3 tuomitaan vain ≥ 20 fps:n mittauksesta (SAVUKE_IKKUNA=1,
  * ks. alla); headlessissä ne kirjataan tiedoksi. LÄHTÖTASO 21.9.2026
  * (ikkunallinen Chromium, Mac Studio): panorointi 0 px; zoomi 0,04 /
  * 0,31 px, koko muuttuu 77 %:ssa kehyksistä ja yhden kehyksen porras
  * 16 % — ladonta kulkee 200 ms:n tahdissa (lauta.js LADONNAN_TAHTI_MS)
- * ja nimet vaihtavat kokoa vasta ladonnassa. E2 vie koon joka kehykseen.
+ * ja nimet vaihtavat kokoa vasta ladonnassa. E2 (21.9.2026, kuori
+ * liukuu joka kehys, js/pallolauta/nimet.js KOKO LIUKUU JOKA
+ * KEHYKSESSÄ): koko muuttuu 97 %:ssa kehyksistä, porras 0, zoomin
+ * pahin siirtymä 3,2 px → 0,7 px.
  *
  * Aja: PLAYWRIGHT_JS=… CHROMIUM=… node tools/savukkeet/savuke-nimiot-sulavat.mjs [kuvakansio]
  */
@@ -44,6 +51,7 @@ import { extname, join } from 'node:path';
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 import { kehysnopeus, koonLiukuvuus, siirtymanMuutokset } from '../../js/pallolauta/sulavuusmittari.js';
+import { NOSTOSYM_NIMIO_KATTO_PX, NOSTOSYM_NIMIO_KOKO } from '../../js/fokusnosto-symbolit.js';
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const paketti = await import('playwright')
@@ -267,6 +275,44 @@ for (const ruutu of RUUDUT) {
     JSON.stringify(koko));
   if (KUVAKANSIO) writeFileSync(join(KUVAKANSIO, `sulavat-${tunnus}-zoom.png`), await sivu.screenshot());
   vaadi(`${tunnus}: 4. ei sivuvirheitä`, virheet.length === 0, virheet.join(' | '));
+
+  /* ── 5. katto liikkeessä ────────────────────────────────────────── */
+  // Noston koko näytteissä on pohja × kuori (mitta); nimiö = mitta × NOSTOSYM_NIMIO_KOKO.
+  let suurinNimio = 0;
+  let nostonaytteita = 0;
+  for (const n of zoom) {
+    for (const [avain, m] of Object.entries(n.merkit)) {
+      if (avain.startsWith('kaupunki:')) continue;
+      nostonaytteita += 1;
+      suurinNimio = Math.max(suurinNimio, m.koko * NOSTOSYM_NIMIO_KOKO);
+    }
+  }
+  tieto(`${tunnus}: katto`, `nostonäytteitä ${nostonaytteita}, suurin nimiö ${suurinNimio.toFixed(2)} px (katto ${NOSTOSYM_NIMIO_KATTO_PX} px)`);
+  vaadi(`${tunnus}: 5. katto pätee liikkeessä: noston nimiö ≤ ${NOSTOSYM_NIMIO_KATTO_PX} px joka kehyksessä`,
+    nostonaytteita > 0 && suurinNimio <= NOSTOSYM_NIMIO_KATTO_PX * 1.005,
+    `suurin ${suurinNimio.toFixed(2)} px`);
+
+  /* ── 6. lepo: kuori 1, liikkeen luokka pois ─────────────────────── */
+  await odotaLepo();
+  const lepo = await sivu.evaluate(() => {
+    const l = window.matkakirja.ui.pallolauta;
+    const kuoret = [...document.querySelectorAll('.pallolauta-nosto > svg, .pallolauta-nimi > svg')]
+      .map((svg) => {
+        const m = /matrix\(([-\d.e]+),/.exec(getComputedStyle(svg).transform ?? '');
+        return m ? Math.abs(Number(m[1])) : 1;
+      });
+    return {
+      kuoria: kuoret.length,
+      min: Math.min(...kuoret),
+      max: Math.max(...kuoret),
+      kerroin: getComputedStyle(l.kotelo).getPropertyValue('--nimiokerroin').trim(),
+      liikkuu: l.kotelo.classList.contains('pallolauta-liikkuu'),
+    };
+  });
+  tieto(`${tunnus}: lepo`, JSON.stringify(lepo));
+  vaadi(`${tunnus}: 6. levossa kuori on 1 (±0,3 %) ja liikkeen luokka on poissa`,
+    lepo.kuoria > 0 && lepo.min > 0.997 && lepo.max < 1.003 && !lepo.liikkuu && lepo.kerroin !== '',
+    JSON.stringify(lepo));
   await ctx.close();
 }
 

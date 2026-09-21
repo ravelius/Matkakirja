@@ -26408,6 +26408,34 @@ svg.rough-annotation { pointer-events: none; }
 .pallolauta-nosto svg,
 .pallolauta-piste svg { display: block; overflow: visible; }
 .pallolauta-nimi-siirto { transition: transform 250ms ease-in-out; }
+/*
+ * KOKO LIUKUU JOKA KEHYKSESSÄ (js/pallolauta/nimet.js, erä E2): kotelon
+ * `--nimiokerroin` (kameran mittakaava / ladonnan mittakaava, pallon
+ * kehyskoukusta) skaalaa merkin SVG-KUOREN merkin omasta pisteestä;
+ * sisäryhmien style.transform ja font-size pysyvät ladonnan pohjana.
+ * Katto (PAATOKSET 31 kohta 2) tulee merkin omista muuttujista:
+ * näytetty mitta = pohja · min(kerroin · a, b) = min(raaka · kerroin, katto).
+ */
+.pallolauta-nimi > svg,
+.pallolauta-nosto > svg,
+.pallolauta-turisti-info > svg {
+  transform-origin: 0 0;
+  transform: scale(min(calc(var(--nimiokerroin, 1) * var(--nimio-a, 1)), var(--nimio-b, 1e9)));
+}
+/* Ruutuvakioiset nostot (?nostokoko=0) eivät liu'u; nimet liukuvat silti. */
+.pallolauta-nostot-ruutuvakio .pallolauta-nosto > svg,
+.pallolauta-nostot-ruutuvakio .pallolauta-turisti-info > svg { transform: none; }
+/*
+ * Siirtymät pois liikkeen ajaksi: ladonnan pohja ja kuori vaihtuvat
+ * samassa kehyksessä, eikä pohja saa liukua perässä (nimet.js
+ * SIIRTYMÄT POIS LIIKKEEN AJAKSI). Luonnoksen opacity/filter jäävät.
+ */
+.pallolauta-liikkuu .pallolauta-nimi-siirto,
+.pallolauta-liikkuu .pallolauta-aihemerkki-siirto,
+.pallolauta-liikkuu .pallolauta-turisti-info-siirto { transition: none; }
+.pallolauta-liikkuu .pallolauta-nosto .pallolauta-nosto-siirto {
+  transition: opacity 600ms ease-out, filter 600ms ease-out;
+}
 
 /*
  * LISTAN ALLE JÄÄNYT MUSTE PIILOUTUU LISTAN AJAKSI (Raamattu,
