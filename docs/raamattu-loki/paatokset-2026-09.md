@@ -547,3 +547,7 @@ Omistaja 21.9.2026 ilta (Julkaisija 84 %, Karttaseppä 97 %, Sisältökirjuri 84
 ## KONTEKSTIN VALVONTA POSTIVAHDILLE (10 MIN KIERROS), FABLE REAGOI (21.9.2026 klo 17.33)
 
 Omistaja 21.9.2026 ilta: kontekstin täyttöasteen valvonta siirretään Fablelta Postivahdille. Postivahdin kierros 10 min välein: 1) postilaatikkoskripti, 2) get_usage jokaiselle roolisessiolle; yli 70 % → yksi rivi Fablelle, uusi ilmoitus samasta vasta yli 85 %. Fable käskee luovutuksen ja omistaja nollaa session. Fablen oma tarkistus jää varmistukseksi erän valmistumisen yhteydessä.
+
+## NOSTOVIAN JUURISYY: KAMERA MAAN ZOOMIRAJAN ULKOPUOLELLA (SAFARIN ELE OHITTAA RAJAN); SAHKE-WORKER VANHENTUNUT (21.9.2026 klo 17.35)
+
+Pelikoodari 21.9.2026 ilta: nostot puuttuvat, koska kamera on maan uloszoomausrajan (maanZoomiraja, korkeus ~0,2) ulkopuolella: omistajan kaappauksessa Ranska on 40 % ruudun leveydestä, jolloin nostot.js:n pisteetVain-tila pudottaa nostot pisteiksi ja z5-laatoissa ei ole nimiötasoa (myös meren möhnä samasta näkymästä). Rajan sisällä nostot 69/69 kaikilla ruutuko'oilla. Konsolin 'korkeus hyppäsi' on sama: Safarin ele tai rulla (E3+E4, v1997) ohittaa rajan. Korjaus Karttasepän zoomikoodiin: raja pitää myös eleissä ja rullassa. Sähke-CORS 403: worker vanhentunut, SAHKE_ORIGINIT sai matkakirja.app:n 6.9. (#2092) mutta sahke-worker.yml:n ajo 6.9. epäonnistui; Julkaisija ajaa uudestaan ja selvittää kaatumisen. Korjattu konsolikomento omistajalle annettu (pov.altitude ratkaisee).
