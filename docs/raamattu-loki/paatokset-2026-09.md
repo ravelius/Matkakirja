@@ -371,3 +371,7 @@ Omistaja sanatarkasti: 'ipadissa ylapalkki on poissa myos pystyasennossa. sen vo
 ## NYKYAJAN MAAKUNNAT POHJAKARTALLE: OMISTAJA HALUAA ENSIN VEDOKSEN (21.9.2026 klo 10.40)
 
 Omistaja 21.9.2026 kortilla: 'nayta ensin vedos'. Vedos: Ranska ja Saksa - nykyajan ensimmaisen tason hallintoalueet (Ranskan 13 regionia, Saksan 16 osavaltiota) nimina harvennettuina kapiteeleina ja himmeina aluerajoina (Natural Earth admin-1, PD), suomalaiset sovinnaisnimet kun vakiintuneet. Sisaltokirjuri kokoaa aineiston (nimet + rajat) omaan tiedostoon, Karttaseppa polttaa koelaatat paikalliseen peliin sulavuusdiagnoosin jalkeen samalla kaavalla kuin poltto-koe-20260920 (z6-z8, kaappaukset 390 ja 1400), ei tuotantoon. Omistaja paattaa vedoksesta: nimet + rajat, vain nimet vai ei maakuntia.
+
+## TARKENNUS: PYSYVAT KULTTUURIALUEET SAAVAT JAADA POHJAKARTALLE (omistaja 21.9.2026) (21.9.2026 klo 10.41)
+
+Omistaja sanatarkasti: 'ne pysyvat kulttuurialueet varmasti voi olla myos kartalla kuten ehdotit'. Tarkentaa edellista paatosta: nimisto-1873.js:n pysyva-luokan alueet (Picardie, Normandia, Bretagne, Burgundi, Baijeri, Wurttemberg, Baden, Westfalen, Rheinland, Toscana, Lombardia, Katalonia ...) jaavat pohjakartalle; vain poliittiset 1873-nimet ovat linssissa. Fablen ehdotuksen mukaan neljä Saksan rajatapausta (Hannover, Oldenburg, Braunschweig, Anhalt) siirretaan luokkaan 1873. Nykyajan maakuntien vedos (FRA + DEU) tehdaan silti; omistaja paattaa vedoksesta, naytetaanko pohjakartalla lisaksi nykyajan hallintoalueet ja niiden rajat.
