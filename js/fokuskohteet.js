@@ -158,6 +158,7 @@ import { HAHMOTELMA_TUR } from './packs/hahmotelma-tur.js';
 import { HAHMOTELMA_GBR } from './packs/hahmotelma-gbr.js';
 import { HAHMOTELMA_NOR } from './packs/hahmotelma-nor.js';
 import { HAHMOTELMA_ISL } from './packs/hahmotelma-isl.js';
+import { HAHMOTELMA_RUS } from './packs/hahmotelma-rus.js';
 import { avaaLisakaupunginKortti } from './kaupunkinosto.js';
 import { FOKUSKOHTEET_GBR } from './packs/fokuskohteet-gbr.js';
 import { FOKUSKOHTEET_HUN } from './packs/fokuskohteet-hun.js';
@@ -626,6 +627,17 @@ KOHDE_MAAT.NOR = [...(KOHDE_MAAT.NOR ?? []), ...HAHMOTELMA_NOR];
  * Sama liitosreitti kuin muu Eurooppa -hahmotelmilla.
  */
 KOHDE_MAAT.ISL = [...(KOHDE_MAAT.ISL ?? []), ...HAHMOTELMA_ISL];
+
+/*
+ * VENÄJÄN HAHMOTELMANOSTOT (js/packs/hahmotelma-rus.js): 14
+ * täydentävää karttanostoa Venäjän eurooppalaisen osan olemassa
+ * olevien 16 nostoon (maastokohteet-rus.js) — Pietari (Peterhof),
+ * Kultaisen renkaan kaupungit, ruokaperinne, avaruustekniikan
+ * pioneeri Tsiolkovski, Laatokka. Sama liitosreitti kuin muu Eurooppa
+ * -hahmotelmilla: rivit lisätään olemassa olevan maastolistan
+ * PERÄÄN, sitä ei muuteta.
+ */
+KOHDE_MAAT.RUS = [...(KOHDE_MAAT.RUS ?? []), ...HAHMOTELMA_RUS];
 
 /*
  * KOHTEET SÄHKETEHTÄVÄN SISÄLTÖHAKEMISTOON (Raamattu, PÖLLÖN
