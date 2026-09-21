@@ -530,7 +530,7 @@
     },
     "savuke-liftaus-ajoitus.mjs": {
       "kuvakansio": true,
-      "huomautus": "Liftauksen nopanheitto ei zoomaa maailmakuvaan (omistaja v1983 20.9.2026): Bryssel 2000 x 1300, viisi ajoitusta (rauhassa, heti saapumisen jalkeen, kesken trailerin, kaksi heittoa, heitto kesken sovituksen); vaatii korkeuden < 1 ja nappulan ruudulla. Juurisyy lauta.js matkaZoomirajat + kattoPuristus. Ampari Noden kautta, ~2 min."
+      "huomautus": "Liftauksen nopanheitto ei zoomaa maailmakuvaan (omistaja v1983 20.9.2026): Bryssel 2000 x 1300, seitseman ajoitusta (rauhassa, heti saapumisen jalkeen, kesken trailerin, kaksi heittoa, heitto kesken sovituksen, kesken luennan, heti linssin sulkemisen jalkeen); vaatii korkeuden < 1 ja nappulan ruudulla. Juurisyy lauta.js matkaZoomirajat + kattoPuristus. Ampari Noden kautta, ~2 min."
     }
   }
 }
