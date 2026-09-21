@@ -1,5 +1,5 @@
 /*
- * SAVUKE: PIENI LIIKE KARTALLE (Fable 21.9.2026; js/pallolauta/liike.js).
+ * SAVUKE: PIENI LIIKE KARTALLE (Fable 21.9.2026; js/kartta-liike.js).
  *
  * Pulu lentää harvoin kartan yli, pilven varjo liukuu reliefin päällä ja
  * kellonaika sävyttää kartan kevyesti — kytkin hampurilaisen Kartta-
@@ -260,7 +260,7 @@ for (const ruutu of RUUDUT) {
     requestAnimationFrame(askel);
   }), ms);
   const kytke = (paalla) => sivu.evaluate(async (p) => {
-    const { asetaLiike } = await import('/js/pallolauta/liike.js');
+    const { asetaLiike } = await import('/js/kartta-liike.js');
     asetaLiike(p);
   }, paalla);
   const mediaani = (t) => { const s = [...t].sort((a, b) => a - b); return s[Math.floor(s.length / 2)]; };

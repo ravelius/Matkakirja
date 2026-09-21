@@ -121,7 +121,7 @@ import { luoKameraloki } from './kameraloki.js';
 import {
   SISASUMUN_PEITTO, SUMUN_RAJAKERROIN, merkitseLoydetyksi, sisasumunAukot, sumuPaalla,
 } from './sumu.js';
-import { luoKartanLiike } from './liike.js';
+import { luoKartanLiike } from '../kartta-liike.js';
 import { MERKIN_KORKEUS, luoMerkit, luoMerkkienNakyvyysTahdistus } from './merkit.js';
 import { luoNimet, nimibudjetti } from './nimet.js';
 import {
@@ -4471,7 +4471,7 @@ export async function avaaPallolauta(ui) {
    * Nimet ja nostot ladotaan perässä levossa (pyydaLadonta).
    */
   /*
-   * PIENI LIIKE KARTALLE (js/pallolauta/liike.js): pulu, pilven varjo
+   * PIENI LIIKE KARTALLE (js/kartta-liike.js): pulu, pilven varjo
    * ja kellonajan sävy DOM-kerroksena kankaan päällä; lepo luetaan
    * pallon tauosta, eleistä ja liuskasta. Kytkin hampurilaisessa.
    */
@@ -5155,7 +5155,7 @@ export async function avaaPallolauta(ui) {
     viimeinenNapautus: () => viimeinenNapautus,
     /** Kameran matriisit samaan tilaan ennen mittaa (savukkeet; ks. korttivahti). */
     tahdistaKameranMatriisit,
-    /** Pieni liike kartalle (js/pallolauta/liike.js): tila, lennätys (savukkeet). */
+    /** Pieni liike kartalle (js/kartta-liike.js): tila, lennätys (savukkeet). */
     liike: () => liike,
     /** Kameralokin merkinnät (js/pallolauta/kameraloki.js), uusin viimeisenä. */
     kameraloki: () => kameraloki.merkinnat(),
