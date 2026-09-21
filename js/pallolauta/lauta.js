@@ -144,6 +144,8 @@ import { luoMaapaneeli, paneelinLaatikko } from './maapaneeli.js';
 import { luoLinssit } from './linssit.js';
 import { glLuokat, glNimiotKaytossa, luoNimiokerrosGL, rasteroiTeksti } from '../pallonimiot-gl.js';
 import { luoGlNimiosovitin } from './glnimiot-sovitin.js';
+import { ablaatioPaalla, kerrosKaytossa, kerrostenBodyLuokat } from './kerrokset.js';
+import { sfx } from '../sound.js';
 import { luoNappulanKuljettaja } from './siirto.js';
 import { luoAloituslennonKohtaus } from './avaus.js';
 
@@ -2015,7 +2017,13 @@ export async function avaaPallolauta(ui) {
    * Line2-luokat reittikerroksen kautta, joten se on luotava vasta
    * reittien jälkeen. `?vektorit=0` jättää kerroksen pois.
    */
-  const vektorit = pallovektoritPaalla() ? luoPallovektorit({ pallo, kotelo, reitit }) : null;
+  // ABLAATIOTIKAS (js/pallolauta/kerrokset.js, `?kerrokset=`): kerros pois vain mittauksessa.
+  if (ablaatioPaalla()) {
+    document.body?.classList.add(...kerrostenBodyLuokat());
+    // Äänet pois ilman asetuksen tallennusta (sound.js enabled-portti).
+    if (!kerrosKaytossa('aanet')) sfx.enabled = false;
+  }
+  const vektorit = pallovektoritPaalla() && kerrosKaytossa('vektorit') ? luoPallovektorit({ pallo, kotelo, reitit }) : null;
   // GL-nimiöt (vaihe 2): ladonnan nimet rungolle sovittimen kautta (oletus päällä, `?glnimiot=0` pois).
   const glSovitin = glNimiotKaytossa() && !/[?&]glnimiot=testi\b/.test(globalThis.location?.search ?? '')
     ? luoGlNimiosovitin({ kotelo, kerros: () => ui.pallolautaGL(), ui, ruutupiste: (lat, lng) => ruudulla(lat, lng, 0) })
@@ -4459,6 +4467,8 @@ export async function avaaPallolauta(ui) {
        * omistaa — sama lista kuin nimiladonnan `pinot`.
        */
       esteet: pelinLaatikot,
+      // Ablaatiotikas (kerrokset.js): ilman nostokerrosta katot nollaan (viimeinen avain voittaa).
+      ...(kerrosKaytossa('nostot') ? {} : { katto: 0, pisteKatto: 0 }),
     });
     // Niukka nimijoukko: avauslennolla kaksi päätä, lähtövalinnassa
     // Lontoo (aalto 3A) — muulloin koko lauta budjetilla.
@@ -4504,6 +4514,8 @@ export async function avaaPallolauta(ui) {
       pinot: pelinLaatikot,
       katto,
       vain,
+      // Ablaatiotikas (kerrokset.js): ilman nimikerrosta ei yhtään ehdokasta (voittaa `vain`-rajauksen).
+      ...(kerrosKaytossa('nimet') ? {} : { vain: new Set() }),
       // Matkan kohteet (noppa, lento) voittavat budjetin (ks. matkanKohteet).
       etusija: matkanKohteet(),
       kokoKerroin: kaupunginMitat.nimiKerroin,
@@ -4706,6 +4718,8 @@ export async function avaaPallolauta(ui) {
     tauolla: () => tauolla,
     eleKaynnissa,
     korttiAuki: () => Boolean(nostot.liuskaAuki?.()),
+    // Ablaatiotikas (kerrokset.js): porras ilman pulua jättää pienen liikkeen pois.
+    rakenna: kerrosKaytossa('pulu'),
   });
   const paivita = () => {
     if (ui.dead) return;
@@ -4725,6 +4739,8 @@ export async function avaaPallolauta(ui) {
     // Avauslennolla lauta on niukka: ei kohteita, ei nappulaa, ja
     // reittikerros saa lennon oman valinnan (yksi kaari).
     const kohteet = lento || linssiPaalla() ? [] : kohdevalinta();
+    // Ablaatiotikas (kerrokset.js): kohteet omana portaanaan.
+    if (!kerrosKaytossa('kohteet')) kohteet.length = 0;
     /*
      * REITTI JA PELINAPPULA POIS LINSSIN AJAKSI (Raamattu,
      * TOPOGRAFIALINSSI: … PELIN ELEMENTIT POIS, omistaja 16.9.2026).
@@ -4810,7 +4826,9 @@ export async function avaaPallolauta(ui) {
     const nappulanKohta = !liikkuu && ui.siirtoKaynnissa
       ? (pallonKohta(ui.siirtoKaynnissa) ?? kohta)
       : kohta;
-    merkit.paivita({ nappula: liikkuu || lento || linssiPaalla() ? null : nappulanKohta, kohteet });
+    // Ablaatiotikas (kerrokset.js): nappula omana portaanaan (kohteet yllä).
+    if (!kerrosKaytossa('nappula')) merkit.paivita({ nappula: null, kohteet });
+    else merkit.paivita({ nappula: liikkuu || lento || linssiPaalla() ? null : nappulanKohta, kohteet });
     paivitaPisteet();
     pyydaLadonta();
     /*
