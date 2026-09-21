@@ -113,8 +113,12 @@ const LEPO = `() => {
   // saa ylittää reunan: se ei häivy (sovittelu.js sääntö 4).
   const asennot = l.nostot.sovittelunAsennot();
   const pakko = (r) => asennot.get('nosto:' + r.id)?.syy === 'pakko' || [...asennot].some(([k, a]) => k.endsWith(':' + r.id) && a.syy === 'pakko');
-  const yli = laput.filter((r) => (r.x0 < -4 || r.y0 < -4 || r.x1 > W + 4 || r.y1 > H + 4) && !pakko(r)).map((r) => r.nimi);
-  const yliPakko = laput.filter((r) => (r.x0 < -4 || r.y0 < -4 || r.x1 > W + 4 || r.y1 > H + 4) && pakko(r)).map((r) => r.nimi);
+  // Liikevara (nostot.js LIIKEVARA, 22.9.2026): ruudun ulkopuolelle ladotut laput eivät ole
+  // reunaylityksiä — ylitys on lappu, joka on OSITTAIN ruudussa ja osittain sen yli.
+  const osittain = (r) => r.x1 > 0 && r.x0 < W && r.y1 > 0 && r.y0 < H;
+  const ylittaa = (r) => osittain(r) && (r.x0 < -4 || r.y0 < -4 || r.x1 > W + 4 || r.y1 > H + 4);
+  const yli = laput.filter((r) => ylittaa(r) && !pakko(r)).map((r) => r.nimi);
+  const yliPakko = laput.filter((r) => ylittaa(r) && pakko(r)).map((r) => r.nimi);
   const lim = (a, b) => a.x0 < b.x1 && b.x0 < a.x1 && a.y0 < b.y1 && b.y0 < a.y1;
   const parit = [];
   for (let i = 0; i < laput.length; i += 1) {
@@ -179,7 +183,7 @@ for (const ruutu of RUUDUT) {
   });
 
   const tunnus = ruutu.nimi;
-  await sivu.goto(`${osoite}?lauta=pallo&glnimiot=0`, { waitUntil: 'domcontentloaded', timeout: 60000 });
+  await sivu.goto(`${osoite}?lauta=pallo&glnimiot=0${process.env.LIIKEVARA === "0" ? "&liikevara=0" : ""}`, { waitUntil: 'domcontentloaded', timeout: 60000 });
   await sivu.waitForFunction(() => window.matkakirja?.ui?.svg, null, { timeout: 90000 });
   const auki = await sivu
     .waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null, { timeout: 60000 })
