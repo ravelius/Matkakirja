@@ -243,3 +243,7 @@ Elavat nimiot (KOHDEMAAN_NIMIOT_ELAVINA + reunasaanto + nostotasot) latovat itse
 ## NIMIOIDEN VAKAUS: GOOGLE EARTHIN MALLI (Fable, omistajan kysymys) (21.9.2026 klo 06.57)
 
 Linjaus kirjattu Raamattuun Kaupungit-osioon (NIMIOIDEN VAKAUS): asento ankkurin ymparilta kerran lepotilassa, eleen aikana vain seuraa ankkuria; tormays ratkaistaan haivyttamalla prioriteetin mukaan, ei siirrolla; paatokset eleen jalkeen hystereesilla; ykkostaso ei haivy eika vaihda asentoa. Pelikoodari toteuttaa haarassa pelikoodari-nimiot-vakaat -> v1986.
+
+## KIERROS 21b (Laitetestaaja) (21.9.2026 klo 07.06)
+
+Ei vakavuus 1-2. Kaupunkiliuska Marseillessa toimii, suurennos avautuu oikein (aiempi testivirhe oli vaara CSS-valitsin). Kesken: huntu pitkalla lennolla ja ESP/DEU yksi zoomi - saapumisnakyman satunnaiset sisaltokortit estavat Playwright-automaation ja suora actionFly() ei laukaise lentoanimaatiota -> oikealle simulaattorille kun omistaja antaa laiteluvan. Laitetestaaja odottaa.
