@@ -531,3 +531,7 @@ Karttaseppä 21.9.2026 ilta: koelaatat isobaateilla ja kohina laudan yksiköiss�
 ## v2001-v2003 MAINISSA: NIMIOT E2+E3, ENNUSTE POIS OLETUKSENA; TUNTUMATESTI OMISTAJALLE (21.9.2026 klo 17.05)
 
 Julkaisija 21.9.2026 ilta: v2001 (nimiöiden liukuva koko E2), v2002 (nimien paikka lukittu liikkeen ajaksi E3) ja v2003 (kameran ennuste CSS2D:ssä pois oletuksena, korjaa v2000:n heilunnan) mainissa, testit 0 fail. Jono jatkuu: ennustekoukku, gl-rasterit, sitten Karttasepälle 2 h CI-tauko pohjapolttoon. Fable pyytää omistajalta tuntumatestin v2003:lla (heilunta, meren vilkkuminen zoomatessa, nostot selain/webappi).
+
+## MAC STUDIO KAYNNISTETAAN UUDELLEEN (ETAYHTEYS); TILA ENNEN TAUKOA (21.9.2026 klo 17.16)
+
+Omistaja 21.9.2026 n. klo 17.20: Mac Studio käynnistetään uudelleen etäyhteyden takia, omistaja lähtee kotiin ja jatkaa etänä. Kaikki roolisessiot kaatuvat; ne avataan uudelleen luovutusten pohjalta. Tila: v2003 mainissa; Julkaisijan jono ennustekoukku → gl-rasterit → Karttasepän 2 h CI-tauko pohjapoltolle (ei saa olla käynnissä uudelleenkäynnistyksen aikana; Karttaseppä tarkistaa ajon /Users/koodaus/pyramidi-poltto/ajo-20260922/ tilan ennen jatkoa). Pelikoodarilta odotetaan korjattu konsolikomento nostovikaan (tauolla puuttuu tuotannosta) sekä sähke-CORS 403 (matkakirja.app ei workerin sallittu origin) ja Pariisin fokuspuheen aikaleimat 404 -tutkinta. Codex ei ole lukenut 21.9. tilauksia (viimeinen toiminta 13.55); omistaja tarkistaa Codexin pollauksen.
