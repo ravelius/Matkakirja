@@ -413,6 +413,7 @@ const MODULES = [
   'js/passport.js',
   'js/linssit/rekisteri.js',
   'js/linssit/omistus.js',
+  'js/linssit/aarteet.js',
   'js/packs/valokuvat-paikalliset.js',
   'js/packs/valokuvat-flickr.js',
   'js/packs/liput-paikalliset.js',
