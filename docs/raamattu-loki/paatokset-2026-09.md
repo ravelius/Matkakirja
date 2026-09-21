@@ -787,3 +787,7 @@ Pelikoodari 21.9.2026 ilta: GL-nimiö pysyy rungolla vanhalla rasterilla kunnes 
 ## LINSSIKATALOGI: SEURAAVA-TAGIT TARKISTETTAVA, MERKIT YKSINKERTAISEMMIKSI, YO- JA PAIVATILA (21.9.2026 klo 23.12)
 
 Omistaja 21.9.2026 klo 23.20 (linssikatalogin kaappaukset): 1) 'seuraava'-tilamerkinnät eivät ehkä pidä paikkaansa — tila tarkistetaan Raamatun linssijonoa (rengas 1 = 22 linssiä, jono Kellot → Lippuarvaus → Tähtitaivas → Muuttolinnut → linssit-rengas1) ja lokin päätöksiä vasten; 'seuraava' vain sille, mikä on oikeasti työn alla tai jonossa, muut 'idea'; 2) tila- ja toteutustapamerkit visuaalisesti yksinkertaisemmiksi (yksi pieni sana tai piste, ei laatikoita); 3) sivulle yö- ja päivätila (taustaväri, muste, kuvien reunus) prefers-color-scheme + käsikytkin yläkulmassa, sama muille dokumenttisivuille (kohtaamiskuvat.html). Pelikoodari Sonnet-parvella samaan haaraan, uudet kaappaukset molemmista tiloista.
+
+## CHE 26 KANTTONIA ON JO NIMIOTASOSSA g; VEDOS OMISTAJALLE, KOLME PAALLEKKAISYYTTA (21.9.2026 klo 23.13)
+
+Karttaseppä 21.9.2026 ilta: CHE:n 26 kanttonia ovat jo tuotannon nimiötasossa g (poltettu vedos 4:n nimistöllä); vedoskuvat sveitsi-z6/z7/z8 (karttaseppa-che-kanttonit, PR #2690 docs). Huomiot: Kapellbrücke-nosto LUZERN-nimen päällä z7, Stiftsbibliothek Appenzell Ausserrhodenin päällä z8, VALAIS Matterhornin ja Bernhardilaisen välissä — korjattavissa käsisiirroilla nimiöversioon h. laatat.purkuja-mittari on jo mainissa; zoomiennakko tuotannossa v2031. Karttaseppä odottaa ablaatiotikkaan laattatuloksia ja sulavuuskuittausta.
