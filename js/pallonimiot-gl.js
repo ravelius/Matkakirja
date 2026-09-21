@@ -445,6 +445,8 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
       // ja liukulukuindeksit antoivat INVALID_ENUMin (piirto katosi hiljaa).
       const indeksit = new Array(n * 6);
       lista.forEach(([inst, uv], i) => {
+        // Peiton osapäivitys (peitto()): instanssin sivu ja neljän kulman alku.
+        inst.sivu = sivu; inst.kulmaAlku = i * 4;
         const [x, y, z] = inst.piste;
         // Kulmat: vasen ylä, oikea ylä, oikea ala, vasen ala — ruudun y alaspäin
         // rasterissa, ylös leikkausavaruudessa → siirron y käännetään.
@@ -540,12 +542,24 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
       return oli;
     },
     tyhjenna() { instanssit.clear(); likainen = true; },
-    /** Peitto (0…1) yhdelle instanssille — kylkivaihdon crossfade, piilotus. */
+    /**
+     * Peitto (0…1) yhdelle instanssille — kylkivaihdon crossfade, piilotus.
+     * OSAPÄIVITYS, EI RAKENNUSTA (sulavuus 22.9.2026, ablaatiotikas:
+     * häivytys kirjoitti joka kehyksessä `likainen` ja rakensi kaikki
+     * puskurit uusiksi — 134 instanssia × 7 attribuuttia × uusi GPU-
+     * puskuri joka kehys zoomin aikana). Nyt vain neljä lukua peitto-
+     * attribuuttiin ja needsUpdate; rakennus vain, jos instanssi ei ole
+     * vielä geometriassa.
+     */
     peitto(id, arvo) {
       const inst = instanssit.get(id);
       if (!inst) return;
       inst.peitto = Math.max(0, Math.min(1, arvo));
-      likainen = true;
+      const attr = !likainen && inst.sivu ? inst.sivu.geometria.getAttribute('peitto') : null;
+      if (!attr || !(inst.kulmaAlku >= 0) || inst.kulmaAlku + 3 >= attr.count) { likainen = true; return; }
+      for (let k = 0; k < 4; k += 1) attr.setX(inst.kulmaAlku + k, inst.peitto);
+      attr.needsUpdate = true;
+      mittarit.peittopaivityksia = (mittarit.peittopaivityksia ?? 0) + 1;
     },
     /** Kuoren kerroin (nimiöiden koko zoomin mukaan) — uniform, ei uutta rasteria. */
     kerroin(arvo) { if (Number.isFinite(arvo) && arvo > 0) kerroinNyt = arvo; },
