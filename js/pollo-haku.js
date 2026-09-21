@@ -618,7 +618,9 @@ export function haeKatkelmat(indeksi, kysymys, {
     ankkurit: ankkuriSanat(m),
     // Avausreitti pelin sisään. Linkit rakennetaan TÄSTÄ eikä mallin
     // tekstistä, joten pöllö ei voi keksiä rikkinäistä linkkiä.
-    reitti: m.reitti ? { ...m.reitti, leima: lahdeLeima(m, nimet) } : null,
+    // `nimi` on jutun oma otsikko Matkakirja-riville (js/pollo.js
+    // liitaMatkakirjalinkit); `leima` kertoo lähteen (lehti / aihe).
+    reitti: m.reitti ? { ...m.reitti, leima: lahdeLeima(m, nimet), nimi: m.otsikko || m.reitti.otsikko } : null,
   }));
   return { katkelmat, kesto: (globalThis.performance ?? Date).now() - alku };
 }
