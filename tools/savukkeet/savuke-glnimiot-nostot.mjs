@@ -127,9 +127,20 @@ const odotetut = await sivu.evaluate(() => {
   const ui = window.matkakirja.ui; const p = ui.pallonInstanssi; const pov = p.pointOfView();
   const r = p.renderer(); let W = 0; let H = 0; r.getSize({ set(a, b) { W = a; H = b; } });
   const kam = p.camera();
-  // Ikonien laatikot kotelon pikseleinä (nostot.laatikot(): kiinteä muste levossa).
+  // Rungon ikonit laatikoineen (sovitin.nostotRungolla: sama kaava kuin shaderissa),
+  // vain näkyvät (peitto > 0) ja KOKONAAN kotelon sisällä olevat: liikevara (nostot.js
+  // LIIKEVARA, v2056) latoo ikoneja myös ruudun ulkopuolelle, ja listan/liuskan alla
+  // oleva ikoni on peitolla 0 — kummassakaan laatikossa ei ole mustetta ruudulla.
   const koti = ui.pallolauta.kotelo.getBoundingClientRect();
-  const laatikot = ui.pallolauta.nostot.laatikot().map((b, i) => ({ id: String(i), x0: koti.left + b.x0, y0: koti.top + b.y0, x1: koti.left + b.x1, y1: koti.top + b.y1 }));
+  const laatikot = (ui.pallolauta.glSovitin?.()?.nostotRungolla?.() ?? [])
+    .filter((i) => i.tunnus.endsWith('#ikoni') && i.opacity > 0)
+    .map((i, n) => {
+      const q = p.getScreenCoords(i.lat, i.lng, 0);
+      if (!q) return null;
+      const x = q.x + i.dx - i.ankkuriX; const y = q.y + i.dy - i.ankkuriY;
+      if (x < 0 || y < 0 || x + i.leveys > koti.width || y + i.korkeus > koti.height) return null;
+      return { id: String(n), x0: koti.left + x, y0: koti.top + y, x1: koti.left + x + i.leveys, y1: koti.top + y + i.korkeus };
+    }).filter(Boolean);
   // Nappulan laatikko (sovitin, kotelon px) värinäytettä varten: keskikohta jalasta 12 px ylös.
   const nappula = ui.pallolauta.glSovitin?.()?.pelinLaatikot?.()[0] ?? null;
   const nappulanPiste = nappula ? { x: koti.left + (nappula.x0 + nappula.x1) / 2, y: koti.top + nappula.y1 - 12 } : null;
