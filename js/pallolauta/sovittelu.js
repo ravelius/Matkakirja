@@ -269,9 +269,18 @@ export function sovitteleLaput({
    * AIHENOSTOT (`este`) VIIMEISENÄ (ks. lohko yllä): ne väistävät
    * kaikkea, joten niiden on nähtävä muiden lopulliset paikat.
    */
+  /*
+   * YKKÖSTASO ENSIN (NOSTOJEN TASOT, js/pallolauta/nostot.js): lapun
+   * `taso` (1|2|3, oletus 2) järjestää jonon niin, että ykköstaso saa
+   * valita paikkansa ennen muita — se ei siis koskaan väistä
+   * kakkostasoa eikä piiloudu sen takia. Aihenosto (`este`) on yhä
+   * viimeisenä, ja saman tason sisällä ahtain ensin kuten ennen.
+   */
   const jono = laput
     .map((l) => ({ l, d: lahinEste(l.laatikko(l.kylki, 0, 0, true), kiinteat) }))
-    .sort((a, b) => (Number(Boolean(a.l.este)) - Number(Boolean(b.l.este))) || (a.d - b.d))
+    .sort((a, b) => (Number(Boolean(a.l.este)) - Number(Boolean(b.l.este)))
+      || ((a.l.taso ?? 2) - (b.l.taso ?? 2))
+      || (a.d - b.d))
     .map((rivi) => rivi.l);
   const siirretyt = []; // väistäneiden lappujen laatikot (uudet esteet)
   /*
@@ -396,6 +405,39 @@ export function sovitteleLaput({
       asennot.set(l.avain, {
         kylki: valittu.kylki, dx: valittu.dx, dy: valittu.dy, nimio: true, syy: valittu.syy,
       });
+      continue;
+    }
+    /*
+     * YKKÖSTASO EI PIILOUDU KOSKAAN (NOSTOJEN TASOT): jos yksikään
+     * asento ei ole vapaa, lappu jää omaan kylkeensä ilman siirtoa ja
+     * nimiö pysyy. Se on jonossa ensimmäisenä, joten myöhemmät laput
+     * väistävät sitä; jäljelle jäävä limitys on kiinteän musteen
+     * (kaupungin nimi, kehä) kanssa, ja se on pienempi paha kuin
+     * kadonnut Mont-Saint-Michel.
+     */
+    if (l.taso === 1 && omaKelpaa) {
+      // Ruudun sisään silti: ensimmäinen kylki (oma ensin), joka on
+      // reunan sisällä sellaisenaan tai reunasiirrolla; muuten oma kylki.
+      let pakko = { kylki: l.kylki, dx: 0, dy: 0 };
+      for (const k of [l.kylki, ...kyljet.filter((x) => x !== l.kylki)]) {
+        const r0 = l.laatikko(k, 0, 0, true);
+        if (!laatikkoKelpaa(r0)) continue;
+        if (laatikkoSisalla(r0, reuna)) { pakko = { kylki: k, dx: 0, dy: 0 }; break; }
+        if (!reuna) continue;
+        const siirto = reunaanSiirto(r0, reuna);
+        // Pieni ylimäärä siirtoon, ettei liukuluku jätä laatikkoa
+        // täsmälleen reunalle (5,999… < 6).
+        const dx = siirto.dx + Math.sign(siirto.dx) * 0.05;
+        const dy = siirto.dy + Math.sign(siirto.dy) * 0.05;
+        if ((dx || dy) && Math.abs(dx) <= reunasiirto && Math.abs(dy) <= reunasiirto
+          && laatikkoSisalla(l.laatikko(k, dx, dy, true), reuna)) {
+          pakko = { kylki: k, dx, dy };
+          break;
+        }
+      }
+      sijoitetut.push(l.laatikko(pakko.kylki, pakko.dx, pakko.dy, true));
+      if (pakko.dx || pakko.dy) reunalta += 1;
+      asennot.set(l.avain, { ...pakko, nimio: true, syy: 'pakko' });
       continue;
     }
     // 3. lappu piiloon: vain ikoni jää. Ikonille etsitään vielä vapaa

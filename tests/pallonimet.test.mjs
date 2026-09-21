@@ -276,7 +276,8 @@ test('poltetut nostot luetaan pallon omasta luettelosta, jonka laattatyökalu ki
   // Elävä nosto: sama merkki ja nimiö kuin kartalla, poltettu vain osuma.
   // Piirto asuu sisäasettelussa (asetteleNosto), koska sovittelu voi
   // vaihtaa kyljen ja piilottaa lapun kesken elinkaaren (luku 14).
-  assert.match(nostot, /piirraNostosymKartalle\(g, d\.kategoria, nimio, d\.symLaji, puoli\);/);
+  // Ykköstaso antaa lisäksi kuvamerkin ja ruudun kertoimen (NOSTOJEN TASOT).
+  assert.match(nostot, /piirraNostosymKartalle\(g, d\.kategoria, nimio, d\.symLaji, puoli, undefined, \{/);
   assert.match(nostot, /export function asetteleNosto\(el, d\)/);
   /*
    * Poltettu muste on osuma yhtä lailla kuin elävä merkki. Suodatin

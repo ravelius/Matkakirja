@@ -797,6 +797,9 @@ function nostoMerkinKentat(nosto, paikka) {
      * KOHDE_MAAT-riveillä suoraan, koska ne OVAT kohdeolioita.
      */
     ...(nosto.lahi ? { lahi: true } : {}),
+    // NOSTOJEN TASOT (js/pallolauta/nostot.js): taso kulkee datasta
+    // merkkiriville samaa reittiä kuin `lahi`.
+    ...(nosto.taso ? { taso: nosto.taso } : {}),
   };
 }
 

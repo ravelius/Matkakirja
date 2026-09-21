@@ -61,8 +61,9 @@ import { kaupunkikartanSiirretyt } from '../nahtavyydet.js';
 import { avaaFokuspiste, fokuspisteKuvio, fokuspisteenAsteet } from '../fokuspiste.js';
 import { fokusvirtaAarrepisteOhje, fokusvirtaKohtaamispiste } from '../fokusvirta.js';
 import {
+  NOSTOSYM_KUVAMERKIN_KERROIN,
   NOSTOSYM_MINI_RUUTU, NOSTOSYM_MITAN_KATTO, NOSTOSYM_NIMIO_KATTO_PX, NOSTOSYM_NIMIO_KOKO,
-  nostosymAsetaPorras, nostosymKatettuMitta, nostosymNimioAsemointi,
+  nostosymAsetaPorras, nostosymKatettuMitta, nostosymKuvamerkki, nostosymNimioAsemointi,
   nostosymNimioMitta, nostosymPaakategoria, nostosymVirkistaRasterit, piirraNostosymKartalle,
   piirraNostosymNimio,
 } from '../fokusnosto-symbolit.js';
@@ -412,7 +413,35 @@ export const KAUPUNKIMERKIN_KERROIN = KAUPUNKIMERKIN_NIMIO_PX / KARTTANIMI_KOOT.
  * @param {?object} d  merkin rivi tai datum (`kaupunki`, `poltettu`)
  */
 export function merkinKerroin(d) {
-  return d?.kaupunki && !d?.poltettu ? KAUPUNKIMERKIN_KERROIN : 1;
+  if (d?.kaupunki && !d?.poltettu) return KAUPUNKIMERKIN_KERROIN;
+  if (d?.taso === 1 && !d?.poltettu) return NOSTON_TASO1_KERROIN;
+  return 1;
+}
+
+/*
+ * ══ NOSTOJEN TASOT ELÄVISSÄ NIMIÖISSÄ (Fable 21.9.2026; data
+ * `taso: 1|2|3`, Sisältökirjuri docs/raportit/nostotasot-fra-20260920.md)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ *   taso 1 — isompi nimiö (NOSTON_TASO1_KERROIN, tummempi muste) ja
+ *            kuvamerkki tyyppikuvakkeen tilalla (js/fokusnosto-
+ *            symbolit.js NOSTOSYM_KUVAMERKIT, Codexin 11 merkkiä);
+ *            sovittelussa etusija (sovittelu.js `taso`), aina
+ *            näkyvissä saapumisnäkymässä;
+ *   taso 2 — nykyinen piste + nimiö (oletus, kenttä puuttuu);
+ *   taso 3 — ei ladota ennen lähizoomia (merkkiPortti, lahizoomiAuki:
+ *            osuus uloimmasta ≤ LAHIZOOMIN_OSUUS_ULOIMMASTA eli yksi
+ *            zoomiporras saapumisnäkymästä sisään).
+ *
+ * Kuvamerkin ruutu on tavallista suurempi (NOSTOSYM_KUVAMERKIN_KERROIN),
+ * ja sama kerroin kulkee laatikoihin (nostonLaatikko, nostonOsat), jotta
+ * sovittelu ja osuma näkevät saman musteen kuin ruutu.
+ */
+export const NOSTON_TASO1_KERROIN = 1.3;
+
+/** Merkin ruudun kerroin: kuvamerkillinen ykköstaso on isompi ruutu. */
+export function ruudunKerroin(d) {
+  return d?.kuvamerkki && !d?.poltettu ? NOSTOSYM_KUVAMERKIN_KERROIN : 1;
 }
 
 /*
@@ -887,6 +916,8 @@ export function merkkiPortti(
       || (a.i - b.i));
   for (const { m, i } of jarjestys) {
     if (!kohdemaa && kohdeHaku(m)?.lahi) continue;
+    // Kolmostaso odottaa lähizoomia myös kohdemaassa (NOSTOJEN TASOT).
+    if (kohdeHaku(m)?.taso === 3) continue;
     if (kuuluu.size >= katto) continue;
     kuuluu.add(i);
   }
@@ -1145,13 +1176,21 @@ export function asetteleNosto(el, d) {
   }
   const nimio = d.nimioNakyy && d.nimi ? d.nimi : '';
   const puoli = d.puoli ?? 'oikea';
-  const resepti = `${d.kategoria ?? ''}|${d.symLaji ?? ''}|${puoli}|${nimio}`;
+  // Ykköstaso: kuvamerkki ja tummempi muste (ks. NOSTOJEN TASOT).
+  const taso1 = d.taso === 1 && !d.poltettu;
+  const kuvamerkki = taso1 ? (d.kuvamerkki ?? null) : null;
+  const resepti = `${d.kategoria ?? ''}|${d.symLaji ?? ''}|${puoli}|${nimio}`
+    + (taso1 ? `|taso1|${kuvamerkki ?? ''}` : '');
   if (g.dataset.resepti !== resepti) {
     g.dataset.resepti = resepti;
     g.replaceChildren();
-    piirraNostosymKartalle(g, d.kategoria, nimio, d.symLaji, puoli);
+    piirraNostosymKartalle(g, d.kategoria, nimio, d.symLaji, puoli, undefined, {
+      kuvamerkki, ruutuKerroin: ruudunKerroin(d), tumma: taso1,
+    });
   }
   el.dataset.nimio = nimio;
+  el.dataset.taso = String(d.taso ?? 2);
+  el.classList.toggle('pallolauta-nosto-taso1', taso1);
   el.classList.toggle('lunastettu', Boolean(d.lunastettu));
   // Listan alle jäänyt merkki piiloutuu listan ajaksi (ks. LISTA EI
   // KOSKAAN TOISEN TEKSTIN PÄÄLLE); seuraava ladonta palauttaa sen.
@@ -1229,7 +1268,8 @@ export function nostonOsat(p, d, {
   kylki = null, dx = 0, dy = 0, nimio = null,
 } = {}) {
   const mitta = nostonMitta(merkinKerroin(d));
-  const r = NOSTOSYM_MINI_RUUTU * mitta;
+  const rk = ruudunKerroin(d);
+  const r = NOSTOSYM_MINI_RUUTU * rk * mitta;
   const x = p.x + dx;
   const y = p.y + dy;
   const ikoni = {
@@ -1238,7 +1278,7 @@ export function nostonOsat(p, d, {
   const nakyy = nimio === null ? Boolean(d.nimioNakyy) : Boolean(nimio);
   if (!nakyy || !d.nimi) return [ikoni];
   const { leveys } = nostosymNimioMitta(d.nimi, d.symLaji);
-  const a = nostosymNimioAsemointi(kylki ?? d.puoli ?? 'oikea', leveys);
+  const a = nostosymNimioAsemointi(kylki ?? d.puoli ?? 'oikea', leveys, rk);
   return [ikoni, {
     x0: x + Math.min(a.x1, a.x2) * mitta,
     y0: y + Math.min(a.y1, a.y2) * mitta,
@@ -1255,7 +1295,8 @@ export function nostonLaatikko(p, d, {
   // laatikon on oltava täsmälleen se, mikä ruudulle piirtyy.
   // Saapumiskehyksessä ladottaessa kutsuja antaa mitan (saapumisMitta).
   const mitta = annettuMitta ?? nostonMitta(merkinKerroin(d));
-  const r = NOSTOSYM_MINI_RUUTU * mitta;
+  const rk = ruudunKerroin(d);
+  const r = NOSTOSYM_MINI_RUUTU * rk * mitta;
   const x = p.x + dx;
   const y = p.y + dy;
   const laatikko = {
@@ -1264,7 +1305,7 @@ export function nostonLaatikko(p, d, {
   const nakyy = nimio === null ? Boolean(d.nimioNakyy) : Boolean(nimio);
   if (!nakyy || !d.nimi) return laatikko;
   const { leveys } = nostosymNimioMitta(d.nimi, d.symLaji);
-  const a = nostosymNimioAsemointi(kylki ?? d.puoli ?? 'oikea', leveys);
+  const a = nostosymNimioAsemointi(kylki ?? d.puoli ?? 'oikea', leveys, rk);
   return {
     x0: Math.min(laatikko.x0, x + a.x1 * mitta),
     y0: Math.min(laatikko.y0, y + a.y1 * mitta),
@@ -1689,6 +1730,10 @@ export function luoNostot({
           // MAASTOKOHDE EI SULAUDU AIHEMERKKIIN (ks. MAASTOKOHDE EI
           // SULAUDU AIHEMERKKIIN yllä ja aihemerkit.js ryhmitaNostot).
           maasto: onMaastokohde(kohde),
+          // NOSTOJEN TASOT (ks. lohko yllä): taso datasta, kuvamerkki
+          // tyypistä; sama kenttä kulkee datumiin ja laatikoihin.
+          taso: kohde.taso === 1 || kohde.taso === 3 ? kohde.taso : 2,
+          kuvamerkki: kohde.taso === 1 ? nostosymKuvamerkki(m.kategoria, m.laji) : null,
           /*
            * KAUPUNKIJÄSENYYS (PAATOKSET 27 TARKENNUS 2 kohta 7,
            * js/fokuskohteet.js nostonKaupunkiAvain): saman kaupungin
@@ -2787,6 +2832,8 @@ export function luoNostot({
       dy: 0,
       aihe: r.aihe ?? null,
       lunastettu: Boolean(r.lunastettu),
+      taso: r.taso ?? 2,
+      kuvamerkki: r.kuvamerkki ?? null,
       elementti: r.perhe === 'piste' ? pisteElementti : nostoElementti,
       asettele: r.perhe === 'piste' ? asetteleFokuspiste : asetteleNosto,
     }));
@@ -3652,6 +3699,8 @@ export function luoNostot({
         laatikko,
         // Meren nimiö väistää rantaviivaa (sovittelu.js `rantaviiva`).
         meri: r.symLaji === 'meri' || r.kategoria === 'meri',
+        // Ykköstaso sovitellaan ensin (sovittelu.js `taso`).
+        taso: datum.taso ?? 2,
         /*
          * AIHENOSTO VÄISTÄÄ KAIKKEA (js/pallolauta/sovittelu.js
          * AIHENOSTO SOVITELLAAN VIIMEISENÄ). Sen paikka ja nimi
@@ -4085,6 +4134,7 @@ export function luoNostot({
         // Perhe kertoo savukkeelle, mikä ovi lapun takaa aukeaa
         // (nosto = kohdekortti, elain = eläintäky, aihemerkki = viuhka).
         perhe: datum.perhe,
+        taso: datum.taso ?? 2,
         puoli: datum.puoli,
         dx: datum.dx,
         dy: datum.dy,
@@ -4105,6 +4155,7 @@ export function luoNostot({
         nimi: o.nimi,
         perhe: o.perhe,
         poltettu: Boolean(o.poltettu),
+        taso: o.taso ?? 2,
         puoli: o.datum?.puoli ?? o.puoli ?? 'oikea',
         ...r,
       } : null;
