@@ -11,7 +11,7 @@ import {
   LAATTAKERROS_RINNAKKAIN, LAATTAKERROS_SILMAT_MAX, LAATTAKERROS_SILMAT_MIN,
   LAATTAKERROS_SYVYYSSIIRTO, LAATTAKERROS_TEKSTUUREJA_PER_KEHYS, LAATTAKERROS_TERAVYYS,
   LAATTAKERROS_VARA_AST, LAATTAKERROS_VARA_OSUUS, POHJAN_TASO_MAX, POHJAN_VAPAUTUS_SYYT,
-  laatanKartta, laattakerroksenLRU, laattakerroksenNakyvissa, laattakerroksenOsuma,
+  laatanKartta, laattakerroksenLRU, laattakerroksenNakyvissa, laattakerroksenOsuma, pinnanRuutupiste,
   laattakerroksenPeitto, laattakerroksenSilmat, laattakerroksenTaso, lepokerroksenAlue,
   lepokerroksenLaatat, lepokerroksenUV, pinnanPiste,
 } from '../js/pallo.js';
@@ -306,8 +306,8 @@ test('kerros pitää juuri nähdyt laatat jonossa ja lataa liikesuuntaan ennakol
   //    mittarit luetaan samalla kierroksella eikä uutta joukkoa varata.
   assert.match(laatat,
     /t\.jonossa = \(t\.nakyva \|\| t\.pito\) && t\.tila === 'ladataan' && !t\.aloitettu;\n\s*if \(t\.jonossa\) jono\.push\(t\);/);
-  // 2. Näkyvät ladataan silti ensin.
-  assert.match(laatat, /jono\.sort\(\(a, b\) => \(a\.nakyva \? 0 : 1\) - \(b\.nakyva \? 0 : 1\) \|\| a\.etaisyys - b\.etaisyys\);/);
+  // 2. Näkyvät ladataan silti ensin, sitten tuki (sulavuus E2), sitten ennakko.
+  assert.match(laatat, /const sija = \(t\) => \(t\.nakyva \? 0 : t\.tuki \? 1 : 2\);\n\s*jono\.sort\(\(a, b\) => sija\(a\) - sija\(b\) \|\| a\.etaisyys - b\.etaisyys\);/);
   // 3. Valmis laatta menee sceneen, jos se on yhä alueella (ei vain näkyvissä).
   // Vienti scenen puolelle: sama ehto kuin ennen, mutta lohkona — linssin
   // avauksen vaihemerkki (pyramidinLinssiketju) kulkee samassa haarassa.
@@ -337,7 +337,7 @@ test('kerros pitää juuri nähdyt laatat jonossa ja lataa liikesuuntaan ennakol
   assert.match(laatat, /varaLat = Math\.min\(alue\.lat1 - alue\.lat0, varaLat\);/);
   assert.match(laatat, /varaLon = Math\.min\(alue\.lon1 - alue\.lon0, varaLon\);/);
   // 7. Ennakon laattamäärä on katossa.
-  assert.match(laatat, /if \(ennakko\.size >= LAATTAKERROS_LAATTAKATTO_ENNAKKO\) break;/);
+  assert.match(laatat, /if \(ennakko\.size >= ennakkoKatto\) break;/);
 });
 
 test('laatanKartta: yksi laatta on oma karttansa, UV juoksee 0…1 sen sisällä', () => {
@@ -446,7 +446,7 @@ test('kytkentä: pohja naulataan tasoon 5 vain kerroksen ollessa päällä', () 
 test('kerros: laatan materiaali, verkko ja osoitteet ovat suunnitelman mukaiset', () => {
   const laatat = lue('../js/pallolaatat.js');
   // Materiaali ja syvyysjärjestys kuten lepokerroksella (ks. PIIRTOJÄRJESTYS).
-  assert.match(laatat, /map: tekstuuri, transparent: true, opacity: 0, depthWrite: true,\n\s*polygonOffset: true, polygonOffsetFactor: 0, polygonOffsetUnits: LAATTAKERROS_SYVYYSSIIRTO,/);
+  assert.match(laatat, /map: tekstuuri, transparent: true, opacity: 0, depthWrite: true,\n\s*polygonOffset: true, polygonOffsetFactor: 0,\n\s*polygonOffsetUnits: t\.tuki \? LAATTAKERROS_TUKI_SYVYYSSIIRTO : LAATTAKERROS_SYVYYSSIIRTO,/);
   assert.match(laatat, /verkko\.renderOrder = LAATTAKERROS_RENDER_ORDER_POHJA \+ t\.z;/);
   assert.match(laatat, /verkko\.raycast = \(\) => \{\};/, 'kerros ei ota napautuksia');
   assert.match(laatat, /verkko\.userData\.laattakerros = \{ z: t\.z, sarake: t\.sarake, rivi: t\.rivi \};/);
@@ -659,4 +659,31 @@ test('vika v1664: pinnan lukema ei riipu kameran matriisin tuoreudesta', () => {
   assert.equal(pinnanPiste(kaukaa, 0, 0, 0, H, R), null);
   // Kamera pinnan sisällä ei ole näkymä lainkaan.
   assert.equal(pinnanPiste({ position: { x: 0, y: 0, z: 50 } }, W / 2, H / 2, W, H, R), null);
+});
+
+test('sulavuus E4: pinnanRuutupiste on laattakerroksenOsuman käänteinen', () => {
+  const linssi = { fov: 50, kuvasuhde: 390 / 844, sade: 100 };
+  const povit = [
+    { lat: 46.5, lng: 2.5, altitude: 0.2 }, { lat: -33, lng: 151, altitude: 1.5 },
+    { lat: 70, lng: -170, altitude: 0.05 }, { lat: 0, lng: 179.9, altitude: 0.3 },
+  ];
+  for (const pov of povit) {
+    for (const sx of [-0.9, -0.3, 0, 0.5, 0.95]) {
+      for (const sy of [-0.95, -0.2, 0, 0.6, 0.9]) {
+        const osuma = laattakerroksenOsuma(pov, sx, sy, linssi);
+        if (!osuma) continue;
+        const r = pinnanRuutupiste(pov, osuma.lat, osuma.lng, linssi);
+        assert.ok(r && r.edessa, `edessä ${JSON.stringify(pov)} ${sx},${sy}`);
+        assert.ok(Math.abs(r.sx - sx) < 1e-9 && Math.abs(r.sy - sy) < 1e-9, `ruutu ${sx},${sy} → ${r.sx},${r.sy}`);
+        assert.ok(r.syvyys > 0 && r.syvyys < linssi.sade * (1 + pov.altitude), 'syvyys kameran ja keskipisteen välissä');
+      }
+    }
+  }
+  // Pallon takapuoli: ei edessä, mutta ruutupaikka on silti luku (kameran edessä oleva puolipallo).
+  const taka = pinnanRuutupiste({ lat: 0, lng: 0, altitude: 0.2 }, 0, 100, linssi);
+  assert.ok(taka && !taka.edessa);
+  // Pallon pinnan piste on aina kameran edessä (kamera pallon ulkopuolella); vain roska on null.
+  assert.ok(pinnanRuutupiste({ lat: 0, lng: 0, altitude: 0.05 }, 0, 180, linssi).syvyys > 0);
+  assert.equal(pinnanRuutupiste({ lat: 0, lng: 0, altitude: 0.05 }, NaN, 0, linssi), null);
+  assert.equal(pinnanRuutupiste(null, 0, 0, linssi), null);
 });
