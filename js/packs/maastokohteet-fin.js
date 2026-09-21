@@ -93,6 +93,17 @@ export const MAASTOKOHTEET_FIN = [
       + 'rajapyykit lyötiin sinne minne oli kätevintä ja raja sovittiin kulkevaksi suoraan '
       + 'niiden välillä.',
     lahde: 'en-Wikipedia "Halti", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Minkä maiden 1734 rajasopimus selittää Haltin rajan mutkan?',
+      vaihtoehdot: [
+        'Ruotsin ja Tanskan',
+        'Norjan ja Venäjän',
+        'Suomen ja Venäjän',
+        'Norjan ja Tanskan',
+      ],
+      oikea: 0,
+      fakta: 'Rajapyykit lyötiin sinne, mihin oli kätevintä, ja raja vedettiin niiden väliin suoraan.',
+    },
   },
   {
     id: 'pohjanlahti',
@@ -129,6 +140,17 @@ export const MAASTOKOHTEET_FIN = [
       + 'Suomen puolen suurimmat satamat tonneissa mitattuna ovat Rauma, Kokkola ja Tornio.',
     lahde: 'en-Wikipedia "Gulf of Bothnia", johdanto-osa sekä osiot "Geography" ja "Economy" '
       + '(tarkistettu 1.9.2026).',
+    visa: {
+      kysymys: 'Kuinka paljon maa kohoaa Merenkurkussa vuodessa?',
+      vaihtoehdot: [
+        'Noin 10 senttiä',
+        'Melkein yhden sentin',
+        'Noin 80 senttiä',
+        'Noin puoli metriä',
+      ],
+      oikea: 1,
+      fakta: 'Koko Pohjanlahdella maa kohoaa 80 senttiä vuosisadassa, Merenkurkussa lähes sentin vuodessa.',
+    },
   },
   {
     id: 'suomenlahti',
@@ -323,6 +345,17 @@ export const MAASTOKOHTEET_FIN = [
       + 'seinillä on keskiaikaisia maalauksia.',
     lahde: 'en-Wikipedia "Old Rauma", koko artikkeli; koordinaatti en-Wikipedia "Rauma, '
       + 'Finland" (tarkistettu 6.9.2026).',
+    visa: {
+      kysymys: 'Minä vuonna Pyhän Ristin kirkko Vanhassa Raumassa vihittiin?',
+      vaihtoehdot: [
+        'Vuonna 1640',
+        'Vuonna 1512',
+        'Vuonna 1682',
+        'Vuonna 1991',
+      ],
+      oikea: 1,
+      fakta: 'Pyhän Ristin kirkko vihittiin vuonna 1512, ja sen seinillä on keskiaikaisia maalauksia.',
+    },
   },
   {
     id: 'verla',
@@ -607,6 +640,17 @@ export const MAASTOKOHTEET_FIN = [
       + 'saimaannorppa ja saimaanlohi.',
     lahde: 'en-Wikipedia "Saimaa", johdanto-osa sekä osiot "History", "Topography" ja '
       + '"Natural resources" (tarkistettu 11.9.2026).',
+    visa: {
+      kysymys: 'Mitä reittiä Saimaan vedet laskevat Laatokkaan?',
+      vaihtoehdot: [
+        'Kymijokea myöten',
+        'Kokemäenjokea myöten',
+        'Muonionjokea myöten',
+        'Vuoksea myöten',
+      ],
+      oikea: 3,
+      fakta: 'Saimaan vedet laskevat nykyään Vuoksea myöten Laatokkaan.',
+    },
   },
   {
     id: 'koli',
@@ -655,6 +699,17 @@ export const MAASTOKOHTEET_FIN = [
       + '34 metriä pitkä Pirunkirkko.',
     lahde: 'en-Wikipedia "Koli National Park", johdanto-osa ja osio "Attractions" '
       + '(tarkistettu 11.9.2026).',
+    visa: {
+      kysymys: 'Millä vuosisadalla maalarit löysivät Kolin maisemat?',
+      vaihtoehdot: [
+        '1800-luvulla',
+        '1600-luvulla',
+        '1900-luvulla',
+        '1700-luvulla',
+      ],
+      oikea: 0,
+      fakta: 'Maalarit löysivät Kolin 1800-luvulla, ja siitä tuli yksi Suomen komeimmista näkymistä.',
+    },
   },
   {
     id: 'saimaankanava',
@@ -785,6 +840,17 @@ export const MAASTOKOHTEET_FIN = [
       + 'runsaat kahdeksankymmentä vuotta, ja Kotkan edustan salmi oli yhä merenkulkijoiden '
       + 'muistissa.',
     lahde: 'en-Wikipedia "Battle of Svensksund", johdanto-osa (tarkistettu 11.9.2026).',
+    visa: {
+      kysymys: 'Minä vuosina käytiin sota, jonka toinen Ruotsinsalmi päätti?',
+      vaihtoehdot: [
+        '1808–1809',
+        '1741–1743',
+        '1788–1790',
+        '1700–1721',
+      ],
+      oikea: 2,
+      fakta: 'Taistelu oli niin musertava, että se lopetti vuosien 1788–1790 Ruotsin ja Venäjän sodan.',
+    },
   },
   {
     id: 'kultala',
