@@ -441,6 +441,33 @@ export const VERKON_HARVENNUS_AST = 0.01;
  * (savuke-reittiverkko V2). 14 846 janaa.
  */
 export const VERKON_JANAN_ENIMMAISPITUUS_AST = 0.3;
+/*
+ * HISTORIALLISET RAJAT — Isoisän linssi 1873 (Raamattu, Karttalinssit
+ * "ISOISÄN LINSSI — VUOSI 1873"; Karttaseppä 21.9.2026).
+ *
+ * Linssi antaa toisen aikakauden rajaviivaston valmiina
+ * (assets/data/rajat-1873.json, tools/tee-rajat-1873.mjs), ja kerros
+ * piirtää sen soluttomana lajina kuten himmeän reittiverkon: yksi
+ * LineSegments2 luokkaa kohti, ei ämpäristä, ei polttoa. Sillä aikaa
+ * NYKYISET rajat (solulaji `rajat`, poltetun viivatason vektoripari) ja
+ * löytämisen sumun rajat (`kaydyt`) ovat näkymättömiä: vuoden 1873
+ * kartalla ei ole vuoden 2026 rajoja. Piilotus tehdään jaetun
+ * materiaalin peitolla (0), jolloin solulogiikka, haut ja välimuisti
+ * pysyvät täsmälleen ennallaan ja paluu on yksi luku.
+ *
+ * Kaksi luokkaa (aineiston `l`): 1 = valtionraja, yhtenäinen ja
+ * nykyrajaa vahvempi muste (retro atlaksen raja on painettu, ei
+ * pisteytetty); 2 = vasalli tai autonominen alue (Romania, Serbia,
+ * Montenegro, Egypti 1873), sama katkoviiva kuin nykyrajoilla mutta
+ * ohuempi.
+ */
+export const VEKTORIT_HISTORIA_LEVEYS_CSS = [1.0, 1.7];
+export const VEKTORIT_HISTORIA2_LEVEYS_CSS = [0.75, 1.2];
+export const HISTORIA_PEITTO = 0.82;
+export const HISTORIA2_PEITTO = 0.6;
+/** Historiallisen rajan muste: tummempi ruskea kuin nykyrajan (painettu viiva). */
+export const HISTORIA_MUSTE = '#4a3320';
+
 /**
  * Lajin leveyspääte yhdessä taulussa: piirto, mittarit ja testit
  * lukevat saman rivin, joten uusi laji ei tarvitse yhtään ehtolausetta.
@@ -450,6 +477,8 @@ export const VEKTORIT_LEVEYDET = Object.freeze({
   rajat: VEKTORIT_RAJA_LEVEYS_CSS,
   korostus: VEKTORIT_KOROSTUS_LEVEYS_CSS,
   verkko: VEKTORIT_VERKKO_LEVEYS_CSS,
+  historia: VEKTORIT_HISTORIA_LEVEYS_CSS,
+  historia2: VEKTORIT_HISTORIA2_LEVEYS_CSS,
 });
 /**
  * Rajan pistekuvio maailmayksikköinä (piste, väli): poltettu raja on
@@ -1226,6 +1255,15 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
   const verkko = {
     laji: 'verkko', avain: null, viivat: null, olio: null, janoja: 0, nakyy: false,
   };
+  /*
+   * HISTORIALLISET RAJAT (Isoisän linssi): soluton laji, ks. vakioiden
+   * selostus (VEKTORIT_HISTORIA_LEVEYS_CSS). `oliot` luokittain 1 ja 2.
+   */
+  const historia = {
+    laji: 'historia', avain: null, viivat: null, oliot: [], janoja: 0, paalla: false,
+  };
+  /** Sumun kerroin nykyrajojen peittoon (asetaSumu); historia nollaa peiton. */
+  let sumunKerroin = 1;
   /** Häiveen ajaksi kloonatut materiaalit (ruutumitat päivitetään näihinkin). */
   const kloonit = new Set();
   let luettelo = null;
@@ -1327,7 +1365,8 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
     // Sama himmeälle verkolle: lauta on voinut antaa viivansa jo.
     if (verkko.viivat) rakennaVerkko();
     if (kaydyt.viivat) rakennaKaydyt();
-    if (kaydyt.paalla && materiaalit?.rajat) materiaalit.rajat.opacity = RAJA_PEITTO * 0.35;
+    if (historia.viivat) rakennaHistoria();
+    paivitaRajapeitto();
     /*
      * PÄIVITYS PIIRTOKOUKUSSA, EI TAPAHTUMASSA (vika v1649). Ennen tätä
      * kerros heräsi ohjainten `change`-tapahtumasta — eli pointermoven
@@ -1405,10 +1444,42 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
     kaydytMateriaali.dashScale = 1;
     pehmennaLineMaterial(kaydytMateriaali);
     kaydytMateriaali.linewidth = cssLeveys('rajat');
+    // Historialliset rajat (Isoisän linssi): yhtenäinen valtionraja ja
+    // katkoviivainen vasalliraja, oma tummempi muste.
+    const historiaMateriaali = new luokat.LineMaterial({
+      ...yhteiset, color: HISTORIA_MUSTE, opacity: HISTORIA_PEITTO,
+    });
+    pehmennaLineMaterial(historiaMateriaali, { paatypyorylat: true });
+    historiaMateriaali.linewidth = cssLeveys('historia');
+    const historia2Materiaali = new luokat.LineMaterial({
+      ...yhteiset, color: HISTORIA_MUSTE, opacity: HISTORIA2_PEITTO, dashed: true,
+    });
+    [historia2Materiaali.dashSize, historia2Materiaali.gapSize] = RAJA_KATKO_YKS;
+    historia2Materiaali.dashScale = 1;
+    pehmennaLineMaterial(historia2Materiaali);
+    historia2Materiaali.linewidth = cssLeveys('historia2');
     return {
       rannikko: ranta, rajat: raja, korostus: korostusMateriaali, verkko: verkkoMateriaali,
-      kaydyt: kaydytMateriaali,
+      kaydyt: kaydytMateriaali, historia: historiaMateriaali, historia2: historia2Materiaali,
     };
+  }
+
+  /**
+   * Nykyrajojen peitto yhdestä paikasta: sumu himmentää (kerroin),
+   * historialliset rajat sammuttavat (0). Sama sääntö käytyjen maiden
+   * rajoille, jotka ovat samaa nykyistä rajaviivastoa.
+   */
+  function paivitaRajapeitto() {
+    if (!materiaalit) return;
+    const nyk = historia.paalla ? 0 : RAJA_PEITTO * (kaydyt.paalla ? sumunKerroin : 1);
+    materiaalit.rajat.opacity = nyk;
+    materiaalit.rajat.needsUpdate = true;
+    materiaalit.kaydyt.opacity = historia.paalla ? 0 : RAJA_PEITTO;
+    materiaalit.kaydyt.needsUpdate = true;
+    for (const m of kloonit) {
+      const laji = m.userData?.pallovektoritLaji;
+      if (laji === 'rajat' && historia.paalla) m.opacity = 0;
+    }
   }
 
   /** Ruutumitat materiaaleihin: leveys laitepikseleinä, resoluutio css-pikseleinä. */
@@ -1566,6 +1637,47 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
   }
 
   /** Himmeän reittiverkon olio pois (lauta vaihtui tai purku). */
+  function vapautaHistoria() {
+    for (const olio of historia.oliot) {
+      olio.parent?.remove(olio);
+      olio.geometry?.dispose?.();
+    }
+    historia.oliot = [];
+    historia.janoja = 0;
+    mittarit.historiaJanoja = 0;
+  }
+
+  /**
+   * Historialliset rajat: luokat 1 ja 2 omiksi olioikseen (eri
+   * materiaali), pituudet katkoviivaa varten. Ei harvennusta zoomin
+   * mukaan: aineisto on jo 0,006°:n harvennuksella ja ~10 k pistettä.
+   */
+  function rakennaHistoria() {
+    if (purettu || !materiaalit || !luokat || !kolmi?.juuri) return;
+    vapautaHistoria();
+    if (!historia.paalla || !historia.viivat?.length) return;
+    let janojaYht = 0;
+    for (const lk of [1, 2]) {
+      const viivat = historia.viivat.filter((v) => (v.l ?? 1) === lk).map((v) => v.p);
+      if (!viivat.length) continue;
+      const { paikat, janoja } = vektorijanat(viivat, sade());
+      if (!janoja) continue;
+      janojaYht += janoja;
+      const geometria = new luokat.LineSegmentsGeometry();
+      geometria.setPositions(paikat);
+      const laji = lk === 2 ? 'historia2' : 'historia';
+      const olio = new luokat.LineSegments2(geometria, materiaalit[laji]);
+      if (lk === 2) olio.computeLineDistances?.();
+      olio.renderOrder = VEKTORIT_RENDER_ORDER;
+      olio.raycast = () => {};
+      olio.userData.pallovektorit = { laji, avain: historia.avain };
+      kolmi.juuri.add(olio);
+      historia.oliot.push(olio);
+    }
+    historia.janoja = janojaYht;
+    mittarit.historiaJanoja = janojaYht;
+  }
+
   function vapautaVerkko() {
     if (!verkko.olio) return;
     verkko.olio.parent?.remove(verkko.olio);
@@ -1967,10 +2079,8 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
       kaydyt.paalla = uusiPaalla;
       kaydyt.avain = avain;
       kaydyt.viivat = uudet;
-      if (materiaalit?.rajat) {
-        materiaalit.rajat.opacity = uusiPaalla ? RAJA_PEITTO * kerroin : RAJA_PEITTO;
-        materiaalit.rajat.needsUpdate = true;
-      }
+      sumunKerroin = kerroin;
+      paivitaRajapeitto();
       mittarit.sumu = uusiPaalla;
       rakennaKaydyt();
       return true;
@@ -1993,6 +2103,23 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
       return true;
     },
     /** Verkko näkyviin tai piiloon — pelkkä lippu, ei häivettä, ei rakennusta. */
+    /**
+     * Toisen aikakauden rajat (Isoisän linssi 1873): `{ avain, viivat:
+     * [{ l, p: [[lon, lat], …] }] }` tai null (pois). Kun päällä,
+     * nykyiset ja käytyjen maiden rajat ovat näkymättömiä.
+     */
+    asetaHistoriarajat(aineisto = null) {
+      const uudet = Array.isArray(aineisto?.viivat) && aineisto.viivat.length ? aineisto.viivat : null;
+      const avain = uudet ? (aineisto.avain ?? 'historia') : null;
+      if (avain === historia.avain && uudet === historia.viivat) return false;
+      historia.avain = avain;
+      historia.viivat = uudet;
+      historia.paalla = Boolean(uudet);
+      mittarit.historia = avain;
+      paivitaRajapeitto();
+      if (!uudet) vapautaHistoria(); else rakennaHistoria();
+      return true;
+    },
     naytaVerkko(nakyy) {
       const uusi = Boolean(nakyy) && reittiverkkoPaalla(ikkuna);
       if (uusi === verkko.nakyy) return false;
@@ -2016,6 +2143,9 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
       verkko.viivat = null;
       vapautaKaydyt();
       kaydyt.viivat = null;
+      vapautaHistoria();
+      historia.viivat = null;
+      historia.paalla = false;
       for (const s of solut.values()) vapauta(s);
       solut.clear();
       nakyvat = new Set();

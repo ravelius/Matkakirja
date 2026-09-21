@@ -27259,6 +27259,41 @@ button.maapaneeli-aihe:active:not(:disabled) {
 }
 
 /*
+ * ISOISÄN LINSSIN NIMET PALLOLLA (js/linssit/isoisa-1873.js, erä 1).
+ *
+ * Vanhan atlaksen tapaan: harvennetut kapiteelit atlasantiikvalla
+ * (sama --font-atlas kuin poltetuilla nimiöillä), muste rajan sävyä.
+ * Kolme kokoluokkaa (suuri valtakunta, keskikokoinen valtio, pieni)
+ * ja maakunta; vasalli kursiivilla, alusmaa vaaleammalla musteella.
+ * Näkyvyys kameran korkeuden mukaan luokalla `piilossa` (linssi
+ * asettaa sen datumeille; display: none, ei opacity — piilossa oleva
+ * nimi ei saa jäädä ruudulle mittaan eikä sormen alle).
+ */
+.pallolauta-isoisa-nimi {
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  font-family: var(--font-atlas);
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  color: rgba(58, 40, 24, 0.92);
+  text-shadow:
+    0 0 2px rgba(247, 241, 226, 0.95),
+    0 0 5px rgba(247, 241, 226, 0.8);
+}
+.pallolauta-isoisa-nimi--suuri { font-size: 15px; letter-spacing: 0.34em; }
+.pallolauta-isoisa-nimi--keski { font-size: 13px; letter-spacing: 0.26em; }
+.pallolauta-isoisa-nimi--pieni { font-size: 11px; letter-spacing: 0.18em; }
+.pallolauta-isoisa-nimi--maakunta {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: rgba(96, 72, 48, 0.85);
+}
+.pallolauta-isoisa-nimi--vasalli { font-style: italic; }
+.pallolauta-isoisa-nimi--alusmaa { color: rgba(96, 74, 52, 0.8); }
+.pallolauta-isoisa-nimi.piilossa { display: none; }
+
+/*
  * MAAN NIMI PALLOLLA (vertailutila, js/vertailu.js aalto 1C). Sama
  * käsiala ja muste kuin tasokartan .vertailu-maa-nimi, mutta koko on
  * ruutuvakio: CSS2D-elementti ei skaalaudu pallon mukana, joten

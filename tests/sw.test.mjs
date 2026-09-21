@@ -242,6 +242,10 @@ const NIPUTTAMATTOMAT = new Set([
   // Poltto-koe (20.9.2026): 1873-nimistön aineisto tools/generoi-laattapyramidi.mjs:lle
   // (Node-generaattori), ei minkään selainmoduulin tuoma.
   'js/packs/nimisto-1873.js',
+  // Isoisän linssi 1873 (21.9.2026): linssimoduuli ja sen nimipaketti ovat
+  // laiskan tuonnin takana kuten muutkin linssit.
+  'js/linssit/isoisa-1873.js',
+  'js/packs/valtiot-1873.js',
   // Linssien aineistopaketit: vain linssimoduulit (js/linssit/) tuovat
   // näitä, ja ne jäävät listalta pois yllä kerrotusta syystä.
   'js/packs/linssi-historia.js',

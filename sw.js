@@ -364,6 +364,10 @@ const SHELL = [
   './js/linssit/vertailu.js',
   './js/linssit/maatiedot.js',
   './js/linssit/vesistot.js',
+  // Isoisän linssi 1873 (erä 1, 21.9.2026): rajat ja nimet pallolla.
+  './js/linssit/isoisa-1873.js',
+  './js/packs/valtiot-1873.js',
+  './assets/data/rajat-1873.json',
   './js/packs/viritysaanet.js',
   './css/radio.css',
   './js/packs/valokuvat-paikalliset.js',
