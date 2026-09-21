@@ -87,6 +87,7 @@ export const MAASTOKOHTEET_CZE = [
     ],
     nimi: 'Sněžka',
     tyyppi: 'vuori',
+    taso: 1,
     kysymykset: [
       'Miksi vuorella on kaksi nimeä?',
       'Mitä huipulla on nykyään?',
@@ -185,6 +186,7 @@ export const MAASTOKOHTEET_CZE = [
     ],
     nimi: 'Vltava',
     tyyppi: 'joki',
+    taso: 1,
     kysymykset: [
       'Miksi Vltavaa sanotaan kansallisjoeksi?',
       'Mikä oli Pyhän Johanneksen koski?',
@@ -258,6 +260,7 @@ export const MAASTOKOHTEET_CZE = [
     ],
     nimi: 'Kutná Hora',
     tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Mistä kaupungin rikkaus tuli?',
       'Mitä nimi Kutná Hora tarkoittaa?',
@@ -319,6 +322,7 @@ export const MAASTOKOHTEET_CZE = [
     }],
     nimi: 'Český Krumlov',
     tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Mistä kaupungin nimi tulee?',
       'Miksi nimen eteen lisättiin sana Český?',
@@ -373,6 +377,7 @@ export const MAASTOKOHTEET_CZE = [
     nimi: 'Plzeňský Prazdroj',
     nimio: 'Prazdroj',
     tyyppi: 'ruoka',
+    taso: 1,
     kysymykset: [
       'Miksi kaksi kolmasosaa maailman oluesta on vaaleaa lageria?',
       'Mitä nimi Urquell tarkoittaa?',
