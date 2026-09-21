@@ -131,6 +131,18 @@ export const FOKUSKOHTEET_BGR = [
         + 'seitsemälle kukkulalle.',
       lahde: 'S kirkova, Wikimedia Commons (CC BY-SA 4.0)',
     },
+    visa: {
+      kysymys: 'Mistä lähtien Plovdivissa on asuttu yhtäjaksoisesti?',
+      vaihtoehdot: [
+        '6000-luvulta eaa.',
+        '1000-luvulta eaa.',
+        '300-luvulta eaa.',
+        '600-luvulta jaa.',
+      ],
+      oikea: 0,
+      fakta: 'Asutusta alueella on ollut yhtäjaksoisesti jo 6000-luvulta '
+        + 'eaa.',
+    },
   },
   {
     id: 'varna',
@@ -244,6 +256,19 @@ export const FOKUSKOHTEET_BGR = [
         + 'muovaamaa järveä.',
       lahde: 'Tsvetomira Zaharieva, Wikimedia Commons (CC BY-SA 4.0)',
     },
+    visa: {
+      kysymys: 'Minkä kahden meren vedenjakaja kulkee Rilan harjannetta '
+        + 'pitkin?',
+      vaihtoehdot: [
+        'Adrianmeri ja Egeanmeri',
+        'Mustameri ja Egeanmeri',
+        'Mustameri ja Adrianmeri',
+        'Egeanmeri ja Välimeri',
+      ],
+      oikea: 1,
+      fakta: 'Bulgarian vedenjakaja Mustanmeren ja Egeanmeren '
+        + 'valuma-alueiden välillä kulkee juuri Rilan harjannetta pitkin.',
+    },
   },
   {
     id: 'musala',
@@ -310,6 +335,18 @@ export const FOKUSKOHTEET_BGR = [
       selite: 'Rilan luostarin pihaa ja raidallisia kaariholveja Rilan '
         + 'vuoriston sydämessä.',
       lahde: 'Apostoloff, Wikimedia Commons (CC BY-SA 3.0)',
+    },
+    visa: {
+      kysymys: 'Missä korkeudessa Rilan luostari sijaitsee?',
+      vaihtoehdot: [
+        '2925 metrissä',
+        '600 metrissä',
+        '1147 metrissä',
+        '1800 metrissä',
+      ],
+      oikea: 2,
+      fakta: 'Luostari sijaitsee syvässä Rilan-joen laaksossa 1147 metrin '
+        + 'korkeudessa.',
     },
   },
   {
@@ -438,6 +475,17 @@ export const FOKUSKOHTEET_BGR = [
       tiedosto: 'Dunav VIdin.jpg',
       selite: 'Tonava Vidinin kohdalla Bulgarian pohjoisrajalla.',
       lahde: 'Aleksand.sl, Wikimedia Commons (CC BY 4.0)',
+    },
+    visa: {
+      kysymys: 'Minkä joen jälkeen Tonava on Euroopan toiseksi pisin?',
+      vaihtoehdot: [
+        'Reinin jälkeen',
+        'Ronen jälkeen',
+        'Elben jälkeen',
+        'Volgan jälkeen',
+      ],
+      oikea: 3,
+      fakta: 'Tonava on Euroopan toiseksi pisin joki Volgan jälkeen.',
     },
   },
   {
@@ -797,6 +845,18 @@ export const FOKUSKOHTEET_BGR = [
         lahde: 'Popov Jevgeni, Wikimedia Commons (CC BY-SA 4.0)',
       },
     ],
+    visa: {
+      kysymys: 'Mistä Srebarnan nimen uskotaan olevan peräisin?',
+      vaihtoehdot: [
+        'Täydenkuun hopeisesta kimalluksesta',
+        'Kalastajan tyttären nimestä',
+        'Rusen kaupungin murteesta',
+        'Joen hopeisesta pohjasta',
+      ],
+      oikea: 0,
+      fakta: 'Nimen uskotuimman selityksen mukaan sen antoi täydenkuun '
+        + 'hopeinen kimallus veden pinnassa.',
+    },
   },
   {
     id: 'pernik',

@@ -173,6 +173,19 @@ export const FOKUSKOHTEET_HRV = [
         + 'Zagrebin keskustassa.',
       lahde: 'Isiwal, Wikimedia Commons (CC BY-SA 3.0)',
     },
+    visa: {
+      kysymys: 'Miksi Zagrebin erästä katua kutsutaan yhä Veriseksi sillaksi?',
+      vaihtoehdot: [
+        'Ban Jelačić taisteli siellä sotaa',
+        'Silta rakennettiin raunioille',
+        'Gradec ja Kaptol tappelivat siellä',
+        'Kaptol poltti sillan sodassa',
+      ],
+      oikea: 2,
+      fakta: 'Gradecin ja Kaptolin väliin virtaavan puron ylittävä silta '
+        + 'oli niin usein tappelupaikka, että katu on yhä nimeltään '
+        + 'Krvavi most, Verinen silta.',
+    },
   },
   {
     id: 'split',
@@ -342,6 +355,18 @@ export const FOKUSKOHTEET_HRV = [
       tiedosto: 'Mountaineering at Dinara -Croatia- in 2010.jpg',
       selite: 'Retkeilijöitä nousemassa Dinaran huipulle.',
       lahde: 'Ponor, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    visa: {
+      kysymys: 'Minkä vuoriston nimen Dinara antoi koko rannikon vuorijonolle?',
+      vaihtoehdot: [
+        'Karpaatit',
+        'Dinaariset alpit',
+        'Balkanin vuoristo',
+        'Julian alpit',
+      ],
+      oikea: 1,
+      fakta: 'Koko Adrianmeren itärantaa Sloveniasta Albaniaan seuraava '
+        + 'vuoristo on Dinaariset alpit, nimetty Dinaran mukaan.',
     },
   },
   {
@@ -520,6 +545,18 @@ export const FOKUSKOHTEET_HRV = [
         + 'Adrianmerta.',
       lahde: 'Miroslav.vajdic, Wikimedia Commons (CC BY-SA 4.0)',
     },
+    visa: {
+      kysymys: 'Miksi Adrianmerellä on yli tuhat saarta?',
+      vaihtoehdot: [
+        'Rikkoutunut kalkkikivirannikko hukkui',
+        'Tulivuoret loivat saaria mereen',
+        'Rannikko on suoraa italialaista hiekkaa',
+        'Joet toivat mukanaan hiekkasärkkiä',
+      ],
+      oikea: 0,
+      fakta: 'Idän kroatialainen ranta on rikkoutunutta kalkkikiveä, '
+        + 'jonka laaksot vedenpinnan nousu on hukuttanut mereen.',
+    },
   },
   {
     id: 'sava',
@@ -560,6 +597,19 @@ export const FOKUSKOHTEET_HRV = [
       selite: 'Sava Slavonski Brodin kohdalla, jossa joki on Kroatian '
         + 'ja Bosnian raja.',
       lahde: 'Petar Milošević, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    visa: {
+      kysymys: 'Mihin jokeen Sava lopulta laskee?',
+      vaihtoehdot: [
+        'Tonavaan Belgradin kohdalla',
+        'Adrianmereen Splitin lähellä',
+        'Draviin Osijekin kohdalla',
+        'Mustaanmereen suoraan',
+      ],
+      oikea: 0,
+      fakta: 'Sava alkaa Slovenian Alpeilta ja laskee lopulta Tonavaan '
+        + 'Belgradin kohdalla, tuoden sille enemmän vettä kuin mikään '
+        + 'muu sivujoki.',
     },
   },
   {
@@ -753,6 +803,18 @@ export const FOKUSKOHTEET_HRV = [
       tiedosto: 'Plitvice lakes waterfalls from top.jpg',
       selite: 'Plitvicen järvien putouksia ylhäältä katsottuna.',
       lahde: 'Naval S, Wikimedia Commons (CC BY 2.0)',
+    },
+    visa: {
+      kysymys: 'Kuinka nopeasti Plitvicen järvien travertiinipadot kasvavat?',
+      vaihtoehdot: [
+        'Metrin vuodessa',
+        'Kymmenen senttiä kuussa',
+        'Puoli metriä vuosikymmenessä',
+        'Noin sentin vuodessa',
+      ],
+      oikea: 3,
+      fakta: 'Vesi tuo mukanaan kalkkia, joka saostuu sammalten ja levien '
+        + 'pinnalle travertiiniksi noin sentin vuodessa.',
     },
   },
   {
