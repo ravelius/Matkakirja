@@ -369,10 +369,18 @@ for (const ruutu of RUUDUT) {
   }
   /*
    * 4. NIMIKYLTTI ON KARTAN MITTA (omistajan päätös 14.9.2026
-   * klo 15.05 UTC). Kyltin ruutukoon suhde maapaneelin leipätekstiin
-   * — joka on jo karttaan sidottu (js/pallolauta/maapaneeli.js) — on
-   * sama kolmella zoomilla. Jos kyltti olisi yhä ruutuvakio, suhde
-   * muuttuisi zoomin mukana.
+   * klo 15.05 UTC). Kyltin ruutukoon suhde kameran karttaskaalaan
+   * (`kamera.nakyvaAlue().skaala`) on sama kaikilla zoomeilla. Jos
+   * kyltti olisi ruutuvakio, suhde muuttuisi zoomin mukana.
+   *
+   * VERTAILU VAIHDETTIIN 21.9.2026: alun perin suhde otettiin
+   * maapaneelin leipätekstiin, joka oli karttaan sidottu. Erä 20
+   * (maapaneeli.js "NURKAN MITTAKAAVA KUMOUTUI", PAATOKSET 28
+   * TARKENNUS 2, 16.9.2026) vei paneelin typografian ruutupikseleihin,
+   * joten vanha suhde hajosi 50 % vaikka kyltti seurasi karttaa
+   * täsmälleen (13,50 → 22,45 px kun skaala 2,249 → 3,749). Vartio oli
+   * tunnettu punainen (PAATOKSET 34 kohta 10 velka "vartiot 4 ja 6
+   * vanhentuneet"); nyt se vartioi taas omistajan päätöstä.
    */
   const zoomit = [];
   for (const osuus of [1, 0.85, 0.7, 0.6, 0.35]) {
@@ -579,14 +587,14 @@ for (const ruutu of RUUDUT) {
    * MITTAUSTULOS eikä tämän vartion asia (ks. raportti). Kyltin
    * olemassaolon vartioi vartio 3.
    */
-  const olemassa = zoomit.filter((z) => z.kyltti > 0 && z.paneeli > 0);
-  const suhteet = olemassa.map((z) => z.kyltti / z.paneeli);
+  const olemassa = zoomit.filter((z) => z.kyltti > 0 && z.karttaskaala > 0);
+  const suhteet = olemassa.map((z) => z.kyltti / z.karttaskaala);
   const keski = suhteet.reduce((a, b) => a + b, 0) / (suhteet.length || 1);
   const ero = suhteet.length >= 2
     ? (Math.max(...suhteet) - Math.min(...suhteet)) / keski : Infinity;
-  vaadi(`4. ${ruutu.nimi}: kyltti / maapaneelin teksti sama zoomista riippumatta `
+  vaadi(`4. ${ruutu.nimi}: kyltti / karttaskaala sama zoomista riippumatta `
     + `(${olemassa.length} tasoa, ±3 %)`,
-    ero <= 0.03, `hajonta ${p(100 * ero, 2)} %`);
+    ero <= 0.03, `hajonta ${p(100 * ero, 2)} %, kyltti/skaala ${p(keski, 2)} px`);
 
   /*
    * 5. SAAPUMISNÄKYMÄ EI MUUTU. Vertailu on kunkin laitteen oma
