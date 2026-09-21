@@ -3379,6 +3379,40 @@ export function luoLaattakerros({
       }
       if (t.pito && !t.nakyva) pidettyjaN += 1;
     }
+    /*
+     * PEITTO NÄYTEPISTEISTÄ (sulavuus E2, 21.9.2026): monessako
+     * näkyvän alueen 9 × 9 -näytepisteessä on scenessä TÄYSIN
+     * häivytetty laatta (mitä tahansa tasoa) — se on pelaajan
+     * "pohja näkyy" -mitta; `peittoTaso` sama vain nykyisellä tasolla.
+     * Vanhan tason laatta on peittoa (kuva on karkeampi, ei tyhjä).
+     */
+    let naytteitaPallolla = 0;
+    let peitetty = 0;
+    let peitettyTaso = 0;
+    const scenenLaatat = [];
+    for (const t of laatat.values()) {
+      if (t.scenessa && t.alue && t.materiaali && t.materiaali.opacity >= 0.98) scenenLaatat.push(t);
+    }
+    for (const n of naytteet) {
+      if (!n) continue;
+      naytteitaPallolla += 1;
+      let osui = false;
+      let osuiTaso = false;
+      for (const t of scenenLaatat) {
+        const a = t.alue;
+        if (n.lat < a.lat0 || n.lat > a.lat1) continue;
+        let dl = n.lng - a.lon0;
+        dl -= 360 * Math.floor((dl + 180) / 360);
+        const lev = a.lon1 - a.lon0;
+        if (dl < 0 || dl > lev) continue;
+        osui = true;
+        if (t.z === taso?.z) { osuiTaso = true; break; }
+      }
+      if (osui) peitetty += 1;
+      if (osuiTaso) peitettyTaso += 1;
+    }
+    mittarit.peittoOsuus = naytteitaPallolla ? +(peitetty / naytteitaPallolla).toFixed(3) : null;
+    mittarit.peittoTaso = naytteitaPallolla ? +(peitettyTaso / naytteitaPallolla).toFixed(3) : null;
     mittarit.jumissa = jumissa;
     mittarit.nakyvia = nakyvat.size;
     mittarit.nakyviaScenessa = nakyviaScenessa;

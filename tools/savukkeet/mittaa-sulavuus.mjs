@@ -73,7 +73,7 @@ await sivu.evaluate(() => {
   window.__M = M; const { ui } = window.matkakirja; const pallo = ui.pallonInstanssi; const lauta = ui.pallolauta;
   let edellinen = performance.now();
   const askel = (t) => {
-    if (M.mittaa) { const pov = pallo.pointOfView(); const km = window.__kerros?.mittarit?.() ?? {}; M.kehykset.push([+(t - edellinen).toFixed(2), +M.osat.laatat.toFixed(2), +M.osat.moottori.toFixed(2), +M.osat.tekstuurit.toFixed(2), +M.osat.piirto.toFixed(2), +M.osat.vektorit.toFixed(2), +pov.lat.toFixed(4), +pov.lng.toFixed(4), +pov.altitude.toFixed(5), M.syotteet, km.taso ?? -1, km.nakyvia ?? 0, km.nakyviaScenessa ?? 0, km.nakyviaTaysin ?? 0, M.osoitinX]); }
+    if (M.mittaa) { const pov = pallo.pointOfView(); const km = window.__kerros?.mittarit?.() ?? {}; M.kehykset.push([+(t - edellinen).toFixed(2), +M.osat.laatat.toFixed(2), +M.osat.moottori.toFixed(2), +M.osat.tekstuurit.toFixed(2), +M.osat.piirto.toFixed(2), +M.osat.vektorit.toFixed(2), +pov.lat.toFixed(4), +pov.lng.toFixed(4), +pov.altitude.toFixed(5), M.syotteet, km.taso ?? -1, km.nakyvia ?? 0, km.nakyviaScenessa ?? 0, km.nakyviaTaysin ?? 0, M.osoitinX, km.peittoOsuus ?? null, km.peittoTaso ?? null]); }
     M.osat = { laatat: 0, moottori: 0, tekstuurit: 0, piirto: 0, vektorit: 0 }; M.syotteet = 0; edellinen = t; requestAnimationFrame(askel);
   };
   requestAnimationFrame(askel);
@@ -97,7 +97,7 @@ const lopeta = (nimi) => sivu.evaluate((n) => {
   const p = (q) => dt[Math.min(dt.length - 1, Math.floor(q * dt.length))];
   const pahimmat = [...k].map((r, i) => [i, ...r]).sort((a, b) => b[1] - a[1]).slice(0, 8);
   const yli = k.filter((r) => r[0] > 20).length;
-  const peittamatta = k.filter((r) => r[11] > 0 && r[12] < r[11]).length; const eiTaysin = k.filter((r) => r[11] > 0 && r[13] < r[11]).length;
+  const peittamatta = k.filter((r) => r[11] > 0 && r[12] < r[11]).length; const pohjaNakyy = k.filter((r) => r[15] !== null && r[15] < 1).length; const peittoMin = Math.min(...k.map((r) => (r[15] === null ? 1 : r[15]))); const eiTaysin = k.filter((r) => r[11] > 0 && r[13] < r[11]).length;
   const tasot = [...new Set(k.map((r) => r[10]))]; let tasonVaihtoja = 0; for (let i = 1; i < k.length; i++) if (k[i][10] !== k[i - 1][10]) tasonVaihtoja++;
   const altit = k.map((r) => r[8]); const zoomAskeleet = []; for (let i = 1; i < altit.length; i++) if (altit[i] !== altit[i - 1]) zoomAskeleet.push(+Math.abs(Math.log(altit[i] / altit[i - 1])).toFixed(3));
   const za = zoomAskeleet.sort((a, b) => a - b); const zp = (q) => za[Math.min(za.length - 1, Math.floor(q * za.length))] ?? 0;
