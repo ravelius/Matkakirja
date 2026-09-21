@@ -1113,120 +1113,89 @@ button.skandaali-kuvanuoli:is(:hover, :active, :focus, :focus-visible) { backgro
 
 /* ===========================================================================
    13. NOSTOKORTIN KAKSIPALSTATAITTO ≥ 1100 PX (omistaja 21.9.2026,
-       Le Mans -kaappaus työpöydällä)
+       Le Mans -kaappaus työpöydällä; korjattu samana päivänä omistajan
+       hylkäyksen jälkeen — ks. TOINEN YRITYS alla)
    ---------------------------------------------------------------------------
    Leveällä ruudulla nostokortti (VAIN js/fokusnosto.js, ei kohdekortti,
    skandaali, eläintäky, hetki eikä syvennys — ne käyttävät samoja
    .fokusnosto-* luokkia mutta OMAA kuorielementtiään, ks. tiedoston
-   alkukommentti) saa kaksi palstaa: kuva vasemmalla n. 58 % kortin
-   leveydestä, oikealla kuvateksti, leipäteksti ja "Lukijan kysymys"
-   allekkain. Alle rajan kortti on entinen pino (kuva ylhäällä, teksti
-   alla) — js/nostokuva.js NOSTOKUVA_LEVEA_RAJA/NOSTOKUVA_KAPEA_KATTO
-   pitävät kortin leveyden silloin ~760 px:ssä kuvan koosta huolimatta.
+   alkukommentti) saa kaksi palstaa: kuva JA sen kuvateksti vasemmalla
+   (KUVAPALSTA, enintään 50 % kortista, pystykuvalla kapeampi), kaikki
+   muu oikealla (TEKSTIPALSTA: leipäteksti, mahdollinen kakkoskuva,
+   lähde, karttaliite, "Lukijan kysymys", kohdenappi, pöllökysymykset).
+   Alle rajan kortti on entinen pino (kuva ylhäällä, teksti alla) —
+   js/nostokuva.js NOSTOKUVA_LEVEA_RAJA/NOSTOKUVA_KAPEA_KATTO pitävät
+   kortin leveyden silloin ~760 px:ssä kuvan koosta huolimatta; rajan
+   yläpuolella NOSTOKUVA_LEVEA_KATTO pitää koko kortin ~1100 px:ssä.
 
-   TOTEUTUS ON GRIDIN `display: contents` -KIKKA. Kuvan kehys
-   (`.fokusnosto-kuva`, figure) EI itse ole ladottava laatikko leveällä
-   ruudulla: sen lapset (kuvanappi ja kuvateksti) nousevat suoraan
-   `.fokusnosto-sisalto`-gridin omiksi soluikseen, kuvanappi palstaan 1
-   ja kuvateksti palstaan 2 — käytännössä ainoa tapa irrottaa kuvateksti
-   kuvan ALTA kuvan VIEREEN ilman, että DOM-rakennetta pitäisi purkaa
-   kahdeksi eri haaraksi (js/fokusnosto.js piirtää saman rungon kaikilla
-   leveyksillä). Sama kikka toimii sellaisenaan myös galleriakuvalla
-   (js/kuvasarja.js): kehys on aina `.fokusnosto-kuva`, ja nuolet sekä
-   laskuri asuvat kuvanapin SISÄLLÄ, joten `display: contents` ei koske
-   niitä lainkaan.
+   TOINEN YRITYS: KAKSI OMAA KOTELOA, EI display: contents. Ensimmäinen
+   toteutus irrotti kuvatekstin kuvan ALTA suoraan tekstipalstaan
+   `display: contents` -kikalla (yksi grid, kuvan kehys purkautuna) —
+   mutta silloin GRIDIN RIVIKORKEUS periytyi kuvan riviltä myös
+   tekstipalstalle: kuvateksti jäi rivin YLÄLAITAAN, leipäteksti seuraavana
+   gridin rivinä alkoi vasta KUVAN ALAREUNAN tasalta, ja väliin jäi tyhjä
+   kaista (omistajan hylkäys, kaappaus nosto-1400.png 21.9.2026 —
+   "kuvan vieressä on aivan liikaa tyhjää tilaa"). Nyt js/fokusnosto.js
+   (piirraNostonSisus) rakentaa KAKSI ERILLISTÄ koteloa DOMiin —
+   .fokusnosto-kuvapalsta (kuva + kuvateksti, ENNALLAAN pareittain,
+   kuvateksti KUVAN ALLA kuten aina ennenkin) ja .fokusnosto-tekstipalsta
+   (kaikki muu) — kääre .fokusnosto-rivi ympärillä. Flexbox (ei grid):
+   `align-items: flex-start` pitää palstat TOISISTAAN RIIPPUMATTOMINA —
+   kumpikin alkaa samalta yläreunalta eikä kummankaan korkeus periydy
+   toisesta, joten leipäteksti alkaa AINA tekstipalstan yläreunasta eikä
+   putoa kuvan alareunan tasalle. Kortin korkeus seuraa sisältöä: rivin
+   korkeus on korkeamman palstan korkeus, ei mitään pakotettua vähintä.
 
-   OLETUS ON SPAN KAKSI PALSTAA, TOISIN SANOEN PINO EI KATOA. Kortin
-   ylärivi, otsikko (tai lööpin nimiö/päiväys/otsikko/ingressi) ja
-   mediarivi pysyvät leveinä otsikkoriveinä kuvan YLÄPUOLELLA — vain
-   kuvan JÄLKEEN tuleva sisältö (leipäteksti, kakkoskuva, lähde,
-   karttaliite, "Lukijan kysymys", kohdenappi, pöllökysymykset) siirtyy
-   nimenomaisesti palstaan 2. Grid-automaatti asettaa nämä samaan riviin
-   kuin kuvan silloin, kun tila riittää (kuvateksti kuvan vierelle), ja
-   jatkaa palstassa 2 alaspäin sen jälkeen — kuvan ALLE jäävä tila
-   palstassa 1 on tyhjä, kuten aidossa lehtitaitossa, jossa kuva ei aina
-   ole yhtä korkea kuin juttu.
+   ILMAN KUVAA EI KOTELOIDA LAINKAAN. js/fokusnosto.js jättää
+   .fokusnosto-rivi/-kuvapalsta väliin ja liittää tekstipalstan lapset
+   suoraan `.fokusnosto-sisalto`iin, kun kuvaa ei ole (sama DOM-muoto
+   kuin aina ennen tätä ominaisuutta, kaikilla ruuduilla).
 
-   PYSTYKUVA KAVENTAA KUVAPALSTAA (js/fokusnosto.js nostoSeuraaKuvanSuuntaa
-   lisää `.fokusnosto-pysty`-luokan kortille kuvan muotosuhteen mukaan —
-   CSS ei voi lukea <img>:n naturalWidth/Height-arvoja).
+   KUVAN KOKO TULEE JS:STÄ, EI TÄSTÄ TIEDOSTOSTA. js/nostokuva.js
+   NOSTOKUVA_KUVAPALSTA_OSUUS (50 %) / -PYSTY_OSUUS (pystykuvalla
+   kapeampi) laskevat kuvan pikselileveyden suoraan `<img>`:n inline-
+   tyyliin (samalla kaavalla kuin kortin oma leveys, NOSTOKUVA_LEVEA_
+   RAJA-kommentti nostokuva.js:ssä) — `.fokusnosto-kuvapalsta`in
+   `max-width` alla on vain VARMISTUS niille harvoille poluille, joissa
+   kuva EI ole JS:n mitoittama (css/fokusnosto.css .fokusnosto-kuva img,
+   kuvaton "kuva edellä" -reitti epäonnistui).
 
    VASTAUSVAIHTOEHDOT OVAT PALSTAN LEVYISIÄ ILMAN UUTTA SÄÄNTÖÄ:
-   `.minitehtava.fokusnosto-visa` saa `grid-column: 2` alla, ja Gridin
-   oletusarvo (`justify-items: stretch`) venyttää laatikon koko palstan
-   levyiseksi — samoin `.kulttuuri-vaihtoehdot button { width: 100% }`
-   (css/styles.css) venyttää napit laatikon levyisiksi.
+   `.minitehtava.fokusnosto-visa` on tekstipalstan tavallinen lohkolapsi
+   (width: auto → täyttää vanhemman leveyden), ja
+   `.kulttuuri-vaihtoehdot button { width: 100% }` (css/styles.css)
+   venyttää napit sen levyisiksi.
    =========================================================================== */
 @media (min-width: 1100px) {
-  .fokusnosto-kortti .fokusnosto-sisalto:has(> .fokusnosto-kuva) {
-    --nosto-kuvapalsta: 58%;
-    display: grid;
-    grid-template-columns: minmax(0, var(--nosto-kuvapalsta)) minmax(0, 1fr);
-    column-gap: 1.5rem;
-    align-items: start;
+  .fokusnosto-kortti .fokusnosto-rivi {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  /* Kuvapalsta on kuvan levyinen (JS mitoittaa), max-width on varmistus. */
+  .fokusnosto-kortti .fokusnosto-kuvapalsta {
+    flex: 0 0 auto;
+    min-width: 0;
+    max-width: 50%;
   }
 
   /* Pystykuva: kapeampi kuvapalsta, leveämpi tekstipalsta (vaatimus 1). */
-  .fokusnosto-kortti.fokusnosto-pysty .fokusnosto-sisalto:has(> .fokusnosto-kuva) {
-    --nosto-kuvapalsta: 38%;
+  .fokusnosto-kortti.fokusnosto-pysty .fokusnosto-kuvapalsta {
+    max-width: 34%;
   }
 
-  /* Oletus: kaikki gridin suorat lapset ovat leveitä otsikkorivejä. */
-  .fokusnosto-kortti .fokusnosto-sisalto:has(> .fokusnosto-kuva) > * {
-    grid-column: 1 / -1;
-  }
-
-  /* Kuvan kehys purkautuu: lapset nousevat gridin omiksi soluikseen. */
-  .fokusnosto-kortti .fokusnosto-sisalto:has(> .fokusnosto-kuva) > .fokusnosto-kuva {
-    display: contents;
-  }
-
-  /*
-   * KAKSI NAPPI/KUVATEKSTI-LUOKKAPARIA. "Kuva edellä" -avaus
-   * (js/nostokuva.js, kortin TAVALLINEN reitti — melkein jokaisella
-   * nostolla on `kuva`) rakentaa napin ja kuvatekstin OMILLA
-   * luokillaan (`nostokuva-nappi`, `nostokuva-selite`) ja siirtää SAMAN
-   * elementin kehykseen, jolle piirraNostonKuvat (js/fokusnosto.js)
-   * lisää vasta `fokusnosto-kuva`-luokan — nappi ja kuvateksti eivät
-   * saa `fokusnosto-kuvanappi`/`fokusnosto-kuvateksti`-luokkaa silloin.
-   * Kuvaton alkulataus (piirraNostonKuva, harvinainen: vain kun kuva
-   * jäi kokonaan lataamatta) käyttää fokusnosto.js:n omia luokkia.
-   * Kumpikin pari saa siis oman rivinsä; ilman jälkimmäistä paria
-   * asemointi olisi näennäisesti oikea vain gridin automaattisen
-   * järjestyksen sattumalta, ei tarkoituksella.
-   */
-  .fokusnosto-kortti .fokusnosto-sisalto:has(> .fokusnosto-kuva) > .fokusnosto-kuva > .fokusnosto-kuvanappi,
-  .fokusnosto-kortti .fokusnosto-sisalto:has(> .fokusnosto-kuva) > .fokusnosto-kuva > .nostokuva-nappi {
-    grid-column: 1;
-    grid-row: auto;
-  }
-
-  .fokusnosto-kortti .fokusnosto-sisalto:has(> .fokusnosto-kuva) > .fokusnosto-kuva > .fokusnosto-kuvateksti,
-  .fokusnosto-kortti .fokusnosto-sisalto:has(> .fokusnosto-kuva) > .fokusnosto-kuva > .nostokuva-selite {
-    grid-column: 2;
-    grid-row: auto;
-    margin-top: 0;
-    text-align: left;
-  }
-
-  /* Kuvan jälkeinen sisältö: kaikki palstaan 2, allekkain (vaatimus 1). */
-  .fokusnosto-kortti .fokusnosto-sisalto:has(> .fokusnosto-kuva) > .fokusnosto-teksti,
-  .fokusnosto-kortti .fokusnosto-sisalto:has(> .fokusnosto-kuva) > .fokusnosto-valokuva,
-  .fokusnosto-kortti .fokusnosto-sisalto:has(> .fokusnosto-kuva) > .fokusnosto-lahde,
-  .fokusnosto-kortti .fokusnosto-sisalto:has(> .fokusnosto-kuva) > .fokusnosto-liite,
-  .fokusnosto-kortti .fokusnosto-sisalto:has(> .fokusnosto-kuva) > .minitehtava.fokusnosto-visa,
-  .fokusnosto-kortti .fokusnosto-sisalto:has(> .fokusnosto-kuva) > .fokusnosto-kohdenappi,
-  .fokusnosto-kortti .fokusnosto-sisalto:has(> .fokusnosto-kuva) > .fokusnosto-kysy-otsikko,
-  .fokusnosto-kortti .fokusnosto-sisalto:has(> .fokusnosto-kuva) > .fokusnosto-kysymykset {
-    grid-column: 2;
+  .fokusnosto-kortti .fokusnosto-tekstipalsta {
+    flex: 1 1 0%;
+    min-width: 0;
   }
 
   /*
    * LÖÖPIN SISÄINEN KAKSIPALSTATEKSTI POIS (osio 9, .looppi-leipa
-   * column-count: 2): palsta 2 on tässä taitossa jo kapea, eikä
+   * column-count: 2): tekstipalsta on tässä taitossa jo kapea, eikä
    * leipätekstiä kannata jakaa vielä kahtia sen sisällä.
    */
-  .fokusnosto-kortti.fokusnosto-looppi .fokusnosto-sisalto:has(> .fokusnosto-kuva) .looppi-leipa {
+  .fokusnosto-kortti.fokusnosto-looppi .fokusnosto-tekstipalsta .looppi-leipa {
     column-count: 1;
   }
 }

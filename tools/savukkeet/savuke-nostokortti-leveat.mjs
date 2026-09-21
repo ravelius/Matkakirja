@@ -1,13 +1,19 @@
 /*
  * Savuke: NOSTOKORTIN KAKSIPALSTATAITTO LEVEILLÄ RUUDUILLA.
  *
- * Omistajan tilaus 21.9.2026 (kaappaus Le Mans -nostosta työpöydällä):
+ * Omistajan tilaus 21.9.2026 (kaappaus Le Mans -nostosta työpöydällä),
+ * TARKENNETTU SAMANA PÄIVÄNÄ omistajan hylkäyksen jälkeen (kaappaus
+ * nosto-1400.png: kuvan vieressä liikaa tyhjää — kuvateksti oikean
+ * palstan ylälaidassa, leipäteksti pohjassa kuvan alareunan tasalla).
  * fokusnosto-kortti (js/fokusnosto.js, css/fokusnosto.css osio 13) saa
- * yli ~1100 px leveillä ruuduilla kaksi palstaa — kuva vasemmalla
- * n. 58 % kortin leveydestä (pystykuvalla kapeampi), oikealla kuvateksti,
- * leipäteksti ja "Lukijan kysymys" allekkain, vastausvaihtoehdot palstan
- * levyisinä. Alle rajan kortti on entinen pino, mutta leveys enintään
- * ~760 px (js/nostokuva.js NOSTOKUVA_LEVEA_RAJA/NOSTOKUVA_KAPEA_KATTO).
+ * yli ~1100 px leveillä ruuduilla kaksi palstaa: KUVA JA KUVATEKSTI
+ * VASEMMALLA (pari koskemattomana, kuvateksti kuvan ALLA kuten ennen),
+ * enintään PUOLET kortin leveydestä (pystykuvalla kapeampi); LEIPÄTEKSTI
+ * JA "LUKIJAN KYSYMYS" OIKEALLA, alkaen palstan YLÄREUNASTA ilman
+ * pystykeskitystä, vastausvaihtoehdot palstan levyisinä. Kortti enintään
+ * ~1100 px leveä, korkeus seuraa sisältöä. Alle rajan kortti on entinen
+ * pino, mutta leveys enintään ~760 px (js/nostokuva.js
+ * NOSTOKUVA_LEVEA_RAJA/NOSTOKUVA_KAPEA_KATTO/NOSTOKUVA_LEVEA_KATTO).
  * Puhelin (390) pysyy täysin ennallaan. Galleria ja navigointiväkäset
  * (reunanuolet, pyyhkäisy, nuolinäppäimet) toimivat kuten ennen; kuva on
  * aina kokonaan näkyvissä (ei rajausta, contain).
@@ -94,6 +100,9 @@ const LUE = `(juuri) => {
   const visa = k.querySelector('.minitehtava.fokusnosto-visa');
   const visaNappi = k.querySelector('.minitehtava.fokusnosto-visa .kulttuuri-vaihtoehdot button');
   const img = k.querySelector('.nostokuva-img, .fokusnosto-kuva img');
+  const rivi = k.querySelector('.fokusnosto-rivi');
+  const kuvapalsta = k.querySelector('.fokusnosto-kuvapalsta');
+  const tekstipalsta = k.querySelector('.fokusnosto-tekstipalsta');
   return {
     kortti: rect(k),
     kuva: rect(kuvanappi),
@@ -101,10 +110,12 @@ const LUE = `(juuri) => {
     teksti: rect(teksti),
     visa: rect(visa),
     visaNappi: rect(visaNappi),
+    rivi: rect(rivi),
+    kuvapalsta: rect(kuvapalsta),
+    tekstipalsta: rect(tekstipalsta),
     laskuri: k.querySelector('.nostosarja-kuvalaskuri')?.textContent?.trim() ?? '',
     pysty: k.classList.contains('fokusnosto-pysty'),
     kuvaSuhde: img && img.naturalWidth && img.naturalHeight ? img.naturalHeight / img.naturalWidth : 0,
-    gridSarakkeet: getComputedStyle(k.querySelector('.fokusnosto-sisalto')).gridTemplateColumns,
   };
 }`;
 
@@ -165,26 +176,36 @@ for (const ruutu of RUUDUT) {
   tieto(`${ruutu.nimi} · kortti/kuva/teksti`, JSON.stringify({ kortti: vaaka.kortti, kuva: vaaka.kuva, teksti: vaaka.teksti, grid: vaaka.gridSarakkeet }));
 
   if (ruutu.width >= 1100) {
-    // (a) kuva ja tekstipalsta rinnakkain: kuva vasemmalla, teksti/kuvateksti oikealla, päällekkäin (sama korkeusalue).
-    const rinnakkain = Boolean(vaaka.kuva) && Boolean(vaaka.teksti)
-      && vaaka.kuva.x < vaaka.teksti.x
-      && vaaka.kuva.y <= vaaka.teksti.bottom && vaaka.teksti.y <= vaaka.kuva.bottom;
-    vaadi(`${ruutu.nimi} · a. kuva ja tekstipalsta ovat rinnakkain (kuva vasemmalla)`,
-      rinnakkain, JSON.stringify({ kuva: vaaka.kuva, teksti: vaaka.teksti }));
-    // Kuvateksti on tekstipalstan puolella, kuvan yläreunan tasalla.
-    vaadi(`${ruutu.nimi} · a2. kuvateksti on kuvan vierellä (ei kuvan alla)`,
-      Boolean(vaaka.kuvateksti) && vaaka.kuvateksti.x >= vaaka.kuva.right - 4,
-      JSON.stringify({ kuvateksti: vaaka.kuvateksti, kuva: vaaka.kuva }));
-    // Kuvapalstan leveys ≈ 58 % ± 5 % kortista (vaakakuva).
+    // (a) kuva- ja tekstipalsta rinnakkain: kuvapalsta vasemmalla, tekstipalsta oikealla, sama korkeusalue.
+    const rinnakkain = Boolean(vaaka.kuvapalsta) && Boolean(vaaka.tekstipalsta)
+      && vaaka.kuvapalsta.x < vaaka.tekstipalsta.x
+      && vaaka.kuvapalsta.y <= vaaka.tekstipalsta.bottom && vaaka.tekstipalsta.y <= vaaka.kuvapalsta.bottom;
+    vaadi(`${ruutu.nimi} · a. kuva- ja tekstipalsta ovat rinnakkain (kuvapalsta vasemmalla)`,
+      rinnakkain, JSON.stringify({ kuvapalsta: vaaka.kuvapalsta, tekstipalsta: vaaka.tekstipalsta }));
+    // (a2) Kuvateksti on KUVAN ALLA, samassa (vasemmassa) palstassa — EI kuvan vieressä oikealla
+    // (omistajan hylkäys 21.9.2026: kuvateksti oli irronnut kuvasta tekstipalstan ylälaitaan).
+    vaadi(`${ruutu.nimi} · a2. kuvateksti on kuvan ALLA vasemmassa palstassa (ei kuvan vierellä)`,
+      Boolean(vaaka.kuvateksti) && vaaka.kuvateksti.y >= vaaka.kuva.bottom - 2
+        && vaaka.kuvateksti.x < vaaka.tekstipalsta.x,
+      JSON.stringify({ kuvateksti: vaaka.kuvateksti, kuva: vaaka.kuva, tekstipalsta: vaaka.tekstipalsta }));
+    // (a3) Leipäteksti alkaa tekstipalstan YLÄREUNASTA, ei pystykeskitettynä eikä kuvan
+    // alareunan tasalla (sama hylkäys: leipäteksti oli valunut kuvan alareunaan asti).
+    vaadi(`${ruutu.nimi} · a3. leipäteksti alkaa tekstipalstan/kuvan yläreunasta (ei keskitetty, ei kuvan alareunassa)`,
+      Boolean(vaaka.teksti) && Math.abs(vaaka.teksti.y - vaaka.kuva.y) <= 4,
+      JSON.stringify({ tekstiY: vaaka.teksti?.y, kuvaY: vaaka.kuva?.y, kuvaBottom: vaaka.kuva?.bottom }));
+    // (a4) Kuvapalstan leveys enintään PUOLET kortista (ei 58 %, omistajan tarkennus 21.9.2026).
     const osuus = vaaka.kuva.w / vaaka.kortti.w;
     tieto(`${ruutu.nimi} · kuvapalstan osuus kortista (vaakakuva)`, osuus.toFixed(3));
-    vaadi(`${ruutu.nimi} · a3. kuvapalstan leveys ≈ 58 % ± 5 % kortista`,
-      osuus >= 0.53 && osuus <= 0.63, osuus.toFixed(3));
+    vaadi(`${ruutu.nimi} · a4. kuvapalstan leveys enintään 50 % kortista (vaakakuva)`,
+      osuus > 0.25 && osuus <= 0.52, osuus.toFixed(3));
     // (b) kuva kokonaan näkyvissä: kuvan laatikko kortin sisällä, ei leikkausta.
     vaadi(`${ruutu.nimi} · b. kuva kokonaan kortin sisällä (ei leikkausta)`,
       vaaka.kuva.x >= vaaka.kortti.x - 1 && vaaka.kuva.right <= vaaka.kortti.right + 1
         && vaaka.kuva.y >= vaaka.kortti.y - 1 && vaaka.kuva.bottom <= vaaka.kortti.bottom + 1,
       JSON.stringify({ kuva: vaaka.kuva, kortti: vaaka.kortti }));
+    // (g) kortti enintään ~1100 px leveä (omistajan tarkennus 21.9.2026).
+    vaadi(`${ruutu.nimi} · g. kortti enintään ~1100 px leveä`,
+      vaaka.kortti.w <= 1110, `kortti.w ${vaaka.kortti.w}`);
   } else {
     // (c) alle 1100 px: kortin leveys enintään ~760 px.
     vaadi(`${ruutu.nimi} · c. kortin leveys ≤ 760 px alle 1100 px:n ruudulla`,

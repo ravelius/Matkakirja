@@ -127,29 +127,33 @@ const NOSTOKUVA_OLETUSSUHDE = 3 / 2;
  *   1. ALLE NOSTOKUVA_LEVEA_RAJAn kortti pysyy nykyisessä pinossa (kuva
  *      ylhäällä, teksti alla), mutta leveys ei enää kasva kuvan ehdoilla
  *      lähes ruudun levyiseksi — katto on NOSTOKUVA_KAPEA_KATTO (~760 px).
- *   2. RAJAN YLÄPUOLELLA kortti pysyy YHTÄ LEVEÄNÄ kuin ennen tätä
- *      muutosta (sama luku kuin `nostokuvanVakioleveys` antoi
- *      rajattomana), mutta KUVA itse kapenee NOSTOKUVA_KUVAPALSTA_OSUUS-
- *      osuuteen siitä (pystykuvalla NOSTOKUVA_KUVAPALSTA_PYSTY_OSUUS,
- *      ks. js/fokusnosto.js nostoSeuraaKuvanSuuntaa) — vapautunut tila
- *      antaa css:n gridille (`--nosto-kuvapalsta`) oikean levyisen
- *      tekstipalstan kuvan viereen. LUVUT PYSYVÄT SAMOINA KUIN
- *      CSS:SSÄ (58 % / 38 %): jos jompaakumpaa muutetaan, toinenkin on
- *      päivitettävä, tai kuva joko jää liian kapeaksi tai ylittää
- *      palstansa.
+ *   2. RAJAN YLÄPUOLELLA koko kortti rajataan NOSTOKUVA_LEVEA_KATTOon
+ *      (~1100 px, omistajan tarkennus 21.9.2026: alkuperäinen "kortti
+ *      pysyy yhtä leveänä kuin ennen tätä muutosta" venytti kortin
+ *      1300+ px:iin isolla ruudulla eikä rajannut sitä mitenkään). KUVA
+ *      itse kapenee NOSTOKUVA_KUVAPALSTA_OSUUS-osuuteen TÄSTÄ katetusta
+ *      pohjasta (pystykuvalla NOSTOKUVA_KUVAPALSTA_PYSTY_OSUUS) —
+ *      vapautunut tila antaa css:n kuvapalsta/tekstipalsta-koteloille
+ *      (css/fokusnosto.css osio 13) oikean levyisen tekstipalstan kuvan
+ *      viereen. OSUUSLUVUT OVAT KATTOJA CSS:N PUOLELLA (`.fokusnosto-
+ *      kuvapalsta max-width`), EI ainoa totuus: kuva mitoitetaan
+ *      pikselilleen täällä, css varmistaa vain sen harvinaisen polun,
+ *      jossa JS ei ehdi mitoittaa kuvaa.
  */
 export const NOSTOKUVA_LEVEA_RAJA = 1100;
+export const NOSTOKUVA_LEVEA_KATTO = 1100;
 export const NOSTOKUVA_KAPEA_KATTO = 760;
-export const NOSTOKUVA_KUVAPALSTA_OSUUS = 0.58;
-export const NOSTOKUVA_KUVAPALSTA_PYSTY_OSUUS = 0.38;
+export const NOSTOKUVA_KUVAPALSTA_OSUUS = 0.5;
+export const NOSTOKUVA_KUVAPALSTA_PYSTY_OSUUS = 0.32;
 /**
  * Kortin oma tila (reunus, sisennys, mahdollinen vierityskaista) arviona
  * — `jaadytaLeveys` mittaa tarkan luvun vasta ladonnan jälkeen, mutta
  * kuvan oma leveyskatto on laskettava jo ennen sitä. Arvio on väljä
  * tarkoituksella: `jaadytaLeveys`in oma `enintaan`-katto on silti viime
- * kädessä se, joka takaa ~760 px:n rajan pitävän.
+ * kädessä se, joka takaa katon pitävän (kapealla ~760 px, leveällä
+ * ~1100 px).
  */
-const NOSTOKUVA_KAPEA_VARA = 48;
+const NOSTOKUVA_VARA_ARVIO = 48;
 
 /**
  * Ison kuvan mitat ruudulla.
@@ -433,10 +437,10 @@ export function nostokuvaAloita({
   /*
    * KORTIN OMA LEVEYSPOHJA (ks. NOSTOKUVA_LEVEA_RAJA-kommentti yllä).
    * Normaalisti sama kuin `vakioleveys` (kuvan oma laatikko), mutta
-   * kaksipalstataiton LEVEÄLLÄ puolella kortti pysyy niin leveänä kuin
-   * kuva OLISI ollut rajoittamattomana, vaikka kuva itse kapenee
-   * palstaansa — vapautunut tila menee gridissä tekstipalstalle
-   * (css/fokusnosto.css osio 13).
+   * kaksipalstataiton LEVEÄLLÄ puolella kortin pohja on rajoittamaton
+   * leveys KATETTUNA NOSTOKUVA_LEVEA_KATTOon (~1100 px) — kuva itse
+   * kapenee osuuteensa siitä, ja vapautunut tila menee tekstipalstalle
+   * (css/fokusnosto.css osio 13, .fokusnosto-tekstipalsta).
    */
   let korttiVakioleveys = 0;
   const mitoita = () => {
@@ -445,7 +449,7 @@ export function nostokuvaAloita({
     const kapea = kaksipalstaTaitto && ruutu.leveys < NOSTOKUVA_LEVEA_RAJA;
     const leveaKaksi = kaksipalstaTaitto && !kapea;
     let enintaanLeveys = Infinity;
-    let luonnollinenVakioleveys = 0;
+    let korttiPohja = 0;
     if (kapea) {
       /*
        * KAPEA KATTO KUVAN OMALLE LEVEYDELLE. Arvio VARAsta vähennettynä
@@ -453,17 +457,18 @@ export function nostokuvaAloita({
        * vierityskaista) mahtuu KAPEA_KATTOn alle — `jaadytaLeveys` alla
        * vartioi lopullisen luvun joka tapauksessa.
        */
-      enintaanLeveys = NOSTOKUVA_KAPEA_KATTO - NOSTOKUVA_KAPEA_VARA;
+      enintaanLeveys = NOSTOKUVA_KAPEA_KATTO - NOSTOKUVA_VARA_ARVIO;
     } else if (leveaKaksi) {
-      // Rajoittamaton pohja ensin (sama kuin ennen tätä ominaisuutta):
-      // se on kortin oma leveys, EI kuvan.
-      luonnollinenVakioleveys = nostokuvanVakioleveys({
+      // Rajoittamaton pohja ensin, sitten katettuna LEVEA_KATTOon: koko
+      // kortti — ei vain kuva — pysyy ~1100 px:n rajan sisällä.
+      const luonnollinenVakioleveys = nostokuvanVakioleveys({
         ruutuLeveys: ruutu.leveys, ruutuKorkeus: ruutu.korkeus,
       });
+      korttiPohja = Math.min(luonnollinenVakioleveys, NOSTOKUVA_LEVEA_KATTO - NOSTOKUVA_VARA_ARVIO);
       // Pystykuva saa OMAN, kapeamman osuutensa (sama tunnistus kuin
       // js/fokusnosto.js nostoSeuraaKuvanSuuntaa käyttää CSS-luokkaan).
       const pysty = img.naturalWidth > 0 && img.naturalHeight > img.naturalWidth;
-      enintaanLeveys = luonnollinenVakioleveys
+      enintaanLeveys = korttiPohja
         * (pysty ? NOSTOKUVA_KUVAPALSTA_PYSTY_OSUUS : NOSTOKUVA_KUVAPALSTA_OSUUS);
     }
     // Vakioleveys ja contain-sovitus (nostokuvanSovitus): kortti on aina
@@ -477,7 +482,7 @@ export function nostokuvaAloita({
     });
     if (!sovitus.leveys || !sovitus.korkeus) return;
     vakioleveys = sovitus.vakioleveys;
-    korttiVakioleveys = leveaKaksi ? luonnollinenVakioleveys : vakioleveys;
+    korttiVakioleveys = leveaKaksi ? korttiPohja : vakioleveys;
     img.style.width = `${Math.round(sovitus.leveys)}px`;
     img.style.height = `${Math.round(sovitus.korkeus)}px`;
   };
@@ -506,11 +511,14 @@ export function nostokuvaAloita({
   const jaadytaLeveys = () => {
     const ruutuLeveys = nostokuvaRuutu().leveys;
     let enintaan = Math.max(0, ruutuLeveys - 2 * NOSTOKUVA_MARGINAALI);
-    // KAPEA KATTO — VIIMEINEN VARTIO (kaksipalstaTaitto, ks. yllä): vaikka
+    // KATTO — VIIMEINEN VARTIO (kaksipalstaTaitto, ks. yllä): vaikka
     // kuvan oma leveys olisi arvioitu väärin, kortti ei silti ylitä
-    // KAPEA_KATTOa alle NOSTOKUVA_LEVEA_RAJAn.
+    // KAPEA_KATTOa alle NOSTOKUVA_LEVEA_RAJAn eikä LEVEA_KATTOa sen
+    // yläpuolella.
     if (kaksipalstaTaitto && ruutuLeveys < NOSTOKUVA_LEVEA_RAJA) {
       enintaan = Math.min(enintaan, NOSTOKUVA_KAPEA_KATTO);
+    } else if (kaksipalstaTaitto) {
+      enintaan = Math.min(enintaan, NOSTOKUVA_LEVEA_KATTO);
     }
     const kuvanLeveys = Number.parseFloat(img.style.width) || 0;
     /*
