@@ -32,6 +32,9 @@ Se ei ole.
 
 ## Kaksi ääntä
 
+*(Korjattu omistajan linjauksella 21.9.2026: pelin nykymuodossa nuori
+Fogg ei koskaan kommentoi eikä havainnoi mitään. Hän on pelaaja.)*
+
 Pelin tietoruudussa puhuu vuorotellen kaksi hahmoa. Tämä on tarinan
 rakenne, ei koriste:
 
@@ -39,13 +42,23 @@ rakenne, ei koriste:
   ovat yhä totta: joet, vuoret, monsuuni, keskiyön aurinko, basaarin
   tuoksut, satamien järjestys. Saa olla toivottoman vanhentunut nimissä,
   rajoissa, tekniikassa ja oletuksissa siitä, kuka maailmaa hallitsee.
-- **Nuoren Foggin havainto** — nykyaika. Faktat, lähteet ja kuiva
-  huvittuneisuus isoisän merkinnöistä. Nuori Fogg ei ole isoisäänsä
-  viisaampi ihmisenä; hän vain sattuu elämään sata viisikymmentä vuotta
-  myöhemmin ja tietää siksi enemmän.
+- **Livia, kirjekyyhky** — nykyaika. Kertoo kaupungin nykytilasta: miten
+  siellä eletään, mitä vanha paikka nykyään palvelee, mitä on muuttunut
+  ja mitä säilynyt; oikaisee isoisää kevyesti ja innostuu helposti
+  (persoona: docs/moduulit/horatio-livia-tuotanto.md). Livia ei ole
+  isoisää viisaampi; hän vain elää sata viisikymmentä vuotta myöhemmin
+  ja on nähnyt käytännössä kaiken.
 
-Vitsi syntyy näiden välistä. Joskus isoisä on oikeassa ja nuori Fogg
+Vitsi syntyy näiden välistä. Joskus isoisä on oikeassa ja Livia
 yllättyy siitä — se on tärkeää, jottei vanha ääni ole pelkkä narri.
+
+**Nuori Fogg on pelaaja, ei ääni.** Hänellä ei ole omia repliikkejä eikä
+havaintoja tietoruudussa. Kaupunkikuvaukset ovat pelin kertojan
+neutraalia tekstiä, eivät nuoren Foggin puhetta. Nuoren Foggin piirteet
+(isoisan-raamattu.md, "Nuori Fogg paperilla") saavat näkyä vain
+kertojan kuvaamana tekona tai Livian huomiona, eivät koskaan
+minä-muodossa. Kolmas ääni, Viisas Pöllö, kommentoi nostoja ja
+skandaaleja omalla äänellään (Raamattu: PÖLLÖN KARAKTÄÄRI).
 
 ## Aarni ja unohdetut aarteet
 

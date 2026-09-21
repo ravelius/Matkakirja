@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.2007';
+const CACHE = 'matkakirja-2026-08-09.2008';
 const SHELL = [
   './',
   './index.html',
@@ -464,6 +464,14 @@ const SHELL = [
   './js/packs/hahmotelma-est.js',
   './js/packs/hahmotelma-ltu.js',
   './js/packs/hahmotelma-lva.js',
+  './js/packs/hahmotelma-tur.js',
+  './js/packs/hahmotelma-gbr.js',
+  './js/packs/hahmotelma-che.js',
+  './js/packs/hahmotelma-isl.js',
+  './js/packs/hahmotelma-nor.js',
+  './js/packs/hahmotelma-rus.js',
+  './js/packs/hahmotelma-bih.js',
+  './js/packs/hahmotelma-ukr.js',
   './js/packs/maakartat.js',
   './js/packs/nahtavyysjutut.js',
   './js/packs/miniatyyrit.js',

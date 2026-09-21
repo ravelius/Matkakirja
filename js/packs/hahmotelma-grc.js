@@ -1714,4 +1714,114 @@ export const HAHMOTELMA_GRC = [
         + 'ohjeita.',
     },
   },
+  /*
+   * SAMOKSEN HERAION — MATKAKIRJAN IHME, "RAPPEUTUNUT" (kadonnut:
+   * false), tilaus docs/raportit/havainnekuvat-codexille-
+   * eurooppa-20260921.md (Fablen posti Codexille 21.9.2026, tilaus 5).
+   * Kuva on aito Commons-valokuva ainoasta pystyssä seisovasta
+   * pylväästä; `ihme.osoite` odottaa Codexin kulta-aikakuvaa (ei vielä
+   * toimitettu — osoite 404:ttää siihen asti).
+   */
+  {
+    id: 'hahmotelma-heraion',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/grc-nosto-heraion-d9af6116.jpg',
+      lyhyt: 'Samoksen Heraionin ainoa pystyssä seisova pylväs.',
+      selite: 'Yksi pylväs kohoaa laajalla raunioalueella — kaikki muu Herodotoksen '
+        + 'aikanaan suurimpana pitämästä temppelistä on hävinnyt.',
+      lahde: 'Valokuva: GrigorisKoulouriotis, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'GrigorisKoulouriotis',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:%CE%9D%CE%B1%CF%8C%CF%82_%CF%84%CE%B7%CF%82_%CE%9E%CF%81%CE%B1%CF%82_-_Heras_Temple.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Heraion',
+    tyyppi: 'historia',
+    lahi: true,
+    kysymykset: [
+      'Kuka piti temppeliä suurimpana näkemänään rakennuksena?',
+      'Miksi pylväät olivat kaksinkertaisessa rivissä?',
+    ],
+    korostukset: ['Herodotos|Herodotos', 'Polykrates|Polykrateen'],
+    nappi: 'Suurin temppeli, jonka Herodotos oli koskaan nähnyt',
+    // 26.8864 E / 37.6797 N — en-Wikipedia "Heraion of Samos"
+    laudat: {
+      maailmankartta: { x: 6729.5, y: 1893.2 },
+      europe: { x: 727.4, y: 902.6 },
+    },
+    teksti: 'Heran pyhäkkö sijaitsi matalalla rantatasangolla Samoksen kaupungin '
+      + 'lounaispuolella. 500-luvulla eaa. tyranni Polykrates laajennutti sinne yhden antiikin '
+      + 'Kreikan suurimmista temppeleistä — historioitsija Herodotos piti sitä suurimpana '
+      + 'näkemänään rakennuksena. Kaksinkertainen pylväsrivi käsitti alun perin yli sata '
+      + 'pylvästä. Maanjäristykset ja vuosisatojen kivenryöstö veivät temppelin lähes '
+      + 'kokonaan — jäljellä on nykyään vain yksi pystyssä seisova pylväs laajalla '
+      + 'perustusalueella.',
+    lahde: 'en-Wikipedia "Heraion of Samos", johdanto-osa ja osio "History" (tarkistettu '
+      + '21.9.2026).',
+    ihme: {
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-heraion-loistoaika.jpg',
+      kadonnut: false,
+      selite: 'Loistoaikanaan Heraionissa oli yli sata pylvästä kaksinkertaisessa rivissä — '
+        + 'Herodotoksen mukaan suurin rakennus, jonka hän oli koskaan nähnyt.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: '
+        + 'en-Wikipedia "Heraion of Samos", tarkistettu 21.9.2026.',
+      url: 'https://en.wikipedia.org/wiki/Heraion_of_Samos',
+    },
+  },
+  /*
+   * ANTIIKIN KORINTIN APOLLON TEMPPELI — MATKAKIRJAN IHME,
+   * "RAPPEUTUNUT" (kadonnut: false), tilaus docs/raportit/
+   * havainnekuvat-codexille-eurooppa-20260921.md (Fablen posti
+   * Codexille 21.9.2026, tilaus 5). Eri kohde kuin fokuskohteet-grc.js
+   * "korintin-kanava" (tekniikka, 1881–1893 kaivettu kanava, n. 9 km
+   * kauempana) — ei toisteta. Kuva on aito n. 1900-luvun alun
+   * valokuva Library of Congressin Matson-kokoelmasta; `ihme.osoite`
+   * odottaa Codexin kulta-aikakuvaa (ei vielä toimitettu — osoite
+   * 404:ttää siihen asti).
+   */
+  {
+    id: 'hahmotelma-korintin-apollon-temppeli',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/grc-nosto-korintin-apollon-temppeli-f536835f.jpg',
+      lyhyt: 'Antiikin Korintin Apollon temppelin seitsemän pylvästä 1900-luvun alussa.',
+      selite: 'Seitsemän alkuperäistä pylvästä seisoo Acrocorinth-vuorta vasten kukkaniityn '
+        + 'keskellä.',
+      lahde: 'Valokuva: Matson Photograph Collection, Library of Congress (public domain).',
+      tekija: 'Matson Photograph Collection',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Old_Corinth._Ruins_of_old_Corinth._The_Temple_of_Apollo._Agora_Corinth_in_background._Temples_on_distant_hilltop_LOC_matpc.00671.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0',
+    },
+    nimi: 'Korintin Apollon temppeli',
+    tyyppi: 'historia',
+    lahi: true,
+    kysymykset: [
+      'Mikä teki temppelin pylväistä poikkeuksellisia?',
+      'Kuka tuhosi antiikin Korintin?',
+    ],
+    korostukset: ['Lucius Mummius|Lucius Mummius', 'doorilainen|doorilainen'],
+    nappi: 'Seitsemän pylvästä 38:sta on yhä pystyssä',
+    // 22.8794 E / 37.9061 N — en-Wikipedia "Temple of Apollo, Corinth"
+    laudat: {
+      maailmankartta: { x: 6596.0, y: 1884.5 },
+      europe: { x: 650.5, y: 896.7 },
+    },
+    teksti: 'Doorilainen Apollon temppeli rakennettiin antiikin Korinttiin noin 540 eaa. — '
+      + 'sen 38 pylvästä olivat poikkeuksellisesti yhdestä kalkkikivilohkareesta veistettyjä, '
+      + 'ei kasattuja rumpuja niin kuin useimmissa temppeleissä. Roomalaiskenraali Lucius '
+      + 'Mummius tuhosi koko kaupungin vuonna 146 eaa., ja temppeli jäi raunioiksi. Kaupunki '
+      + 'perustettiin uudelleen roomalaissiirtokuntana 44 eaa. Nykyään pystyssä on enää '
+      + 'seitsemän alkuperäistä pylvästä, ja Acrocorinthin linnavuori kohoaa raunioiden '
+      + 'takana.',
+    lahde: 'en-Wikipedia "Temple of Apollo, Corinth", johdanto-osa (tarkistettu 21.9.2026).',
+    ihme: {
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-korintin-apollon-temppeli-loistoaika.jpg',
+      kadonnut: false,
+      selite: 'Loistoaikanaan temppelissä oli 38 pylvästä, kukin veistetty yhdestä ainoasta '
+        + 'kalkkikivilohkareesta — poikkeuksellinen tekninen saavutus 500-luvulla eaa.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: '
+        + 'en-Wikipedia "Temple of Apollo, Corinth", tarkistettu 21.9.2026.',
+      url: 'https://en.wikipedia.org/wiki/Temple_of_Apollo,_Corinth',
+    },
+  },
 ];

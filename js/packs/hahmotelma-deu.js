@@ -1772,4 +1772,55 @@ export const HAHMOTELMA_DEU = [
       + 'hänen muistomerkkinsä.',
     lahde: 'en-Wikipedia "Ansbach", johdanto-osa ja osio "Sights" (tarkistettu 19.9.2026).',
   },
+  /*
+   * HEIDELBERGIN LINNAN KRAUTTURM — MATKAKIRJAN IHME, "RAPPEUTUNUT"
+   * (kadonnut: false), tilaus docs/raportit/havainnekuvat-codexille-
+   * eurooppa-20260921.md (Fablen posti Codexille 21.9.2026, tilaus 5).
+   * Kuva on aito Commons-valokuva puoliksi räjäytetystä tornista;
+   * `ihme.osoite` odottaa Codexin kulta-aikakuvaa (ei vielä
+   * toimitettu — osoite 404:ttää siihen asti).
+   */
+  {
+    id: 'hahmotelma-krautturm',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/deu-nosto-krautturm-7c1c1300.jpg',
+      lyhyt: 'Heidelbergin linnan puoliksi räjäytetty Krautturm.',
+      selite: 'Tornin puolikas on sortunut vallihautaan; jäljellä oleva osa paljastaa '
+        + 'sisäkerrosten kaaret taivasta vasten.',
+      lahde: 'Valokuva: Heribert Pohl, Wikimedia Commons (CC BY-SA 2.0).',
+      tekija: 'Heribert Pohl',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Schloss_Heidelberg_-_Krautturm_(7568750942).jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+    },
+    nimi: 'Krautturm',
+    tyyppi: 'historia',
+    lahi: true,
+    kysymykset: [
+      'Miksi ranskalaiset räjäyttivät tornin?',
+      'Kuinka paljon ruutia räjäytykseen käytettiin?',
+    ],
+    korostukset: ['Pfalzin perimyssota|Pfalzin perimyssodassa', 'gesprengter Turm|"gesprengter Turm"'],
+    nappi: 'Räjäytetty torni, joka on seissyt puoliksi auki 180 vuotta',
+    // 8.7157 E / 49.4106 N — en-Wikipedia "Heidelberg Castle"
+    laudat: {
+      maailmankartta: { x: 6123.9, y: 1415.7 },
+      europe: { x: 378.5, y: 594.1 },
+    },
+    teksti: 'Heidelbergin linnan Krautturm eli "gesprengter Turm" (räjäytetty torni) oli osa '
+      + '1500-luvun puolustusvarustusta. Ranskan joukot polttivat linnan Pfalzin '
+      + 'perimyssodassa 1689 ja räjäyttivät tornin lopullisesti syyskuussa 1693 tehdäkseen '
+      + 'alueesta sotilaallisesti käyttökelvottoman. Puolet tornista sortui vallihautaan — '
+      + 'loppu on seissyt puoliksi auki siitä lähtien ja on nykyään linnan tunnetuin symboli.',
+    lahde: 'en-Wikipedia "Heidelberg Castle", osio "Krautturm" (tarkistettu 21.9.2026).',
+    ihme: {
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-krautturm-loistoaika.jpg',
+      kadonnut: false,
+      selite: 'Ennen räjäytystä 1693 torni oli ehjä, paksuseinäinen tykkitorni, joka '
+        + 'vartioi linnan läntistä puolustuslinjaa Neckar-joen laakson yllä.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: '
+        + 'en-Wikipedia "Heidelberg Castle", tarkistettu 21.9.2026.',
+      url: 'https://en.wikipedia.org/wiki/Heidelberg_Castle',
+    },
+  },
 ];
