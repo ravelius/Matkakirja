@@ -3728,7 +3728,8 @@ export async function avaaPallolauta(ui) {
     for (const k of lahimmat) {
       const avain = `testi|${k.n}|${dpr}`;
       const rasteri = glKerros.onRasteri(avain) ? null : rasteroiTeksti(k.n, { px: 12, dpr, doc: kotelo.ownerDocument });
-      glKerros.aseta(`kaupunki-${k.id}`, { lat: k.lat, lng: k.lon, avain, rasteri });
+      // Testirasteri on laitepikseleissä: skaala 1/dpr = css-px per rasterin px.
+      glKerros.aseta(`kaupunki-${k.id}`, { lat: k.lat, lng: k.lon, avain, rasteri, skaala: 1 / dpr });
     }
     glSiemen = { lat: pov.lat, lng: pov.lng };
   };

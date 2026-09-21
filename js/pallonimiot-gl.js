@@ -152,11 +152,15 @@ export function glLuokat(pallo) {
 
 const VERTEX = `
 attribute vec3 maapiste;
-attribute vec2 kulma;
+attribute vec2 kulma;      // kulman paikka rasterissa ankkurista, rasterin px
 attribute vec2 uvKoord;
 attribute float peitto;
-uniform vec2 ruutu;
-uniform float kerroin;
+attribute float skaala;    // css-px per rasterin px kertoimella 1
+attribute vec2 siirto;     // ladonnan siirto maapisteestä, css-px kertoimella 1
+attribute vec2 katto;      // koon kerroin = min(kerroin * a, b)
+uniform vec2 ruutu;        // ruutu laitepikseleinä
+uniform float kerroin;     // kuoren kerroin (nimiöiden koko zoomin mukaan)
+uniform float dpr;         // css-px → laitepikseli
 varying vec2 vUv;
 varying float vPeitto;
 void main() {
@@ -164,7 +168,9 @@ void main() {
   vec4 clip = projectionMatrix * viewMatrix * maailma;
   // Horisontti maailman koordinaateissa: pallon keskipiste on origossa.
   float edessa = step(0.0, dot(normalize(maailma.xyz), cameraPosition - maailma.xyz));
-  clip.xy += kulma * kerroin * 2.0 / ruutu * clip.w;
+  float koko = min(kerroin * katto.x, katto.y);
+  vec2 px = (siirto * kerroin + kulma * skaala * koko) * dpr;
+  clip.xy += px * 2.0 / ruutu * clip.w;
   gl_Position = clip;
   vUv = uvKoord;
   vPeitto = peitto * edessa;
@@ -272,6 +278,7 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
         atlas: { value: tekstuuri },
         ruutu: { value: { x: ruutu.x, y: ruutu.y, isVector2: true, set(a, b) { this.x = a; this.y = b; } } },
         kerroin: { value: 1 },
+        dpr: { value: 1 },
       },
       vertexShader: VERTEX,
       fragmentShader: FRAGMENT,
@@ -340,6 +347,9 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
       const kulma = new Float32Array(n * 4 * 2);
       const uvKoord = new Float32Array(n * 4 * 2);
       const peitto = new Float32Array(n * 4);
+      const skaala = new Float32Array(n * 4);
+      const siirto = new Float32Array(n * 4 * 2);
+      const katto = new Float32Array(n * 4 * 2);
       // Indeksit TAVALLISENA TAULUKKONA: setIndex valitsee itse Uint16/Uint32-
       // attribuutin. Scenestä luettu BufferAttribute on Float32-aliluokka,
       // ja liukulukuindeksit antoivat INVALID_ENUMin (piirto katosi hiljaa).
@@ -359,6 +369,9 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
           kulma[j * 2 + 1] = -(ky[k] - uv.ankkuriY);
           uvKoord[j * 2] = us[k]; uvKoord[j * 2 + 1] = vs[k];
           peitto[j] = inst.peitto;
+          skaala[j] = inst.skaala;
+          siirto[j * 2] = inst.dx; siirto[j * 2 + 1] = -inst.dy;
+          katto[j * 2] = inst.kattoA; katto[j * 2 + 1] = inst.kattoB;
         }
         const b = i * 4;
         indeksit[i * 6] = b; indeksit[i * 6 + 1] = b + 2; indeksit[i * 6 + 2] = b + 1;
@@ -369,6 +382,9 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
       g.setAttribute('kulma', new L.BufferAttribute(kulma, 2));
       g.setAttribute('uvKoord', new L.BufferAttribute(uvKoord, 2));
       g.setAttribute('peitto', new L.BufferAttribute(peitto, 1));
+      g.setAttribute('skaala', new L.BufferAttribute(skaala, 1));
+      g.setAttribute('siirto', new L.BufferAttribute(siirto, 2));
+      g.setAttribute('katto', new L.BufferAttribute(katto, 2));
       g.setIndex(indeksit);
       g.setDrawRange(0, n * 6);
       sivu.verkko.visible = n > 0;
@@ -386,13 +402,47 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
      * `avain` — sama avain käyttää samaa atlaspaikkaa. Palauttaa true, jos
      * paikka atlaksesta löytyi.
      */
-    aseta(id, { lat, lng, avain, rasteri = null, peitto = 1 }) {
+    aseta(id, {
+      lat, lng, avain, rasteri = null, peitto = 1, opacity = null,
+      skaala = 1, dx = 0, dy = 0, katto = null,
+    }) {
       if (purettu || !Number.isFinite(lat) || !Number.isFinite(lng) || !avain) return false;
       const uv = uvt.get(avain) ?? (rasteri ? varaaRasteri(avain, rasteri) : null);
       if (!uv) return false;
-      instanssit.set(id, { lat, lng, avain, peitto, piste: glMaapiste(lat, lng, sade) });
+      instanssit.set(id, {
+        lat, lng, avain, peitto: Number.isFinite(opacity) ? opacity : peitto,
+        skaala: Number.isFinite(skaala) && skaala > 0 ? skaala : 1,
+        dx: Number(dx) || 0, dy: Number(dy) || 0,
+        kattoA: Number.isFinite(katto?.a) ? katto.a : 1, kattoB: Number.isFinite(katto?.b) ? katto.b : 1e6,
+        piste: glMaapiste(lat, lng, sade),
+      });
       likainen = true;
       return true;
+    },
+    /**
+     * Koko instanssilista kerralla (Pelikoodarin ladonta): rivit
+     * { tunnus, lat, lng, avain, skaala, dx, dy, katto:{a,b}|null, opacity }.
+     * Rasteri on varattava ensin `atlas.varaa`lla; rivi ilman rasteria
+     * jätetään pois (jää CSS2D:hen). Palauttaa hyväksyttyjen määrän.
+     */
+    asetaKaikki(lista) {
+      instanssit.clear();
+      let n = 0;
+      for (const r of lista ?? []) {
+        if (this.aseta(r.tunnus ?? r.id, r)) n += 1;
+      }
+      likainen = true;
+      return n;
+    },
+    /** Atlas rasterilähteelle: varaa(avain, kuva, w, h, ankkuriX, ankkuriY) → UV-tietue | null (täynnä). */
+    atlas: {
+      varaa: (avain, kuva, w, h, ankkuriX = 0, ankkuriY = 0) => {
+        if (purettu) return null;
+        const uv = varaaRasteri(avain, { kuva, w, h, ankkuriX, ankkuriY });
+        return uv ? { u0: uv.u0, v0: uv.v0, u1: uv.u1, v1: uv.v1, w: uv.w, h: uv.h, ankkuriX: uv.ankkuriX, ankkuriY: uv.ankkuriY } : null;
+      },
+      hae: (avain) => uvt.get(avain) ?? null,
+      get versio() { return mittarit.rastereita; },
     },
     poista(id) {
       const oli = instanssit.delete(id);
@@ -424,6 +474,7 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
       for (const s of sivut) {
         s.materiaali.uniforms.ruutu.value.set(ruutu.x, ruutu.y);
         s.materiaali.uniforms.kerroin.value = kerroinNyt;
+        s.materiaali.uniforms.dpr.value = suhde;
         if (s.likainen) { s.tekstuuri.needsUpdate = true; s.likainen = false; }
       }
       mittarit.kerroin = kerroinNyt;

@@ -91,7 +91,8 @@ const odotetut = await gl.sivu.evaluate(() => {
   const ui = window.matkakirja.ui; const p = ui.pallonInstanssi; const pov = p.pointOfView();
   const r = p.renderer(); let W = 0; let H = 0; r.getSize({ set(a, b) { W = a; H = b; } });
   const kam = p.camera();
-  return { pov, W, H, fov: kam.fov, kuvasuhde: kam.aspect, sade: p.getGlobeRadius(), suhde: r.getPixelRatio() };
+  const kotelo = r.domElement.getBoundingClientRect();
+  return { pov, W, H, fov: kam.fov, kuvasuhde: kam.aspect, sade: p.getGlobeRadius(), suhde: r.getPixelRatio(), vasen: kotelo.left, yla: kotelo.top };
 });
 const kehysMs = await gl.sivu.evaluate(async () => {
   const p = window.matkakirja.ui.pallonInstanssi; const k = window.matkakirja.ui.pallolautaGL();
@@ -114,6 +115,13 @@ const kaappausGL2 = await gl.sivu.screenshot({ type: 'png' });
 await gl.sivu.evaluate(() => window.matkakirja.ui.pallolautaGL().nakyvyys(false));
 await gl.sivu.waitForTimeout(400);
 const kaappausIlman = await gl.sivu.screenshot({ type: 'png' });
+// CSS2D-elementtien laatikot (css-px) — ne elävät kaappausten välissä (Pelikoodarin
+// E3-ladonta), joten niiden alue ohitetaan vertailussa.
+const css2dLaatikot = await gl.sivu.evaluate(() => {
+  const kangas = document.querySelector('.pallo-kotelo canvas, #board canvas, .map-pane canvas');
+  const juuri = kangas?.parentElement ?? document.body;
+  return [...juuri.querySelectorAll('div[style*="translate"]')].map((el) => { const r = el.getBoundingClientRect(); return [r.left, r.top, r.right, r.bottom]; }).filter((r) => r[2] > r[0] && r[3] > r[1]);
+});
 writeFileSync(join(ULOS, `glnimiot-${NAKYMA}-ilman.png`), kaappausIlman);
 await gl.sivu.evaluate(() => window.matkakirja.ui.pallolautaGL().nakyvyys(true));
 await gl.ctx.close();
@@ -130,19 +138,34 @@ await gl.ctx.close();
   const laatikot = lahimmat.map((k) => {
     const r = pinnanRuutupiste(pov, k.lat, k.lon, linssi);
     if (!r?.edessa) return null;
-    const x = ((r.sx + 1) / 2) * W; const y = ((1 - r.sy) / 2) * H;
+    // Kankaan koordinaatit → sivun kaappauksen koordinaatit (kotelon paikka sivulla).
+    const kw = odotetut.W * odotetut.suhde; const kh = odotetut.H * odotetut.suhde;
+    const x = odotetut.vasen * odotetut.suhde + ((r.sx + 1) / 2) * kw; const y = odotetut.yla * odotetut.suhde + ((1 - r.sy) / 2) * kh;
     // Testinimiö: ankkuri tekstin vasemmassa keskikohdassa, 12 px × dpr korkea, ≤ 12 merkkiä.
     return { nimi: k.n, x, y, x0: x - 3, x1: x + 12 * odotetut.suhde * 9, y0: y - 12 * odotetut.suhde, y1: y + 12 * odotetut.suhde };
   }).filter(Boolean);
   let sisalla = 0; let ulkona = 0;
+  const s = odotetut.suhde; const marg = 6 * s;
+  const css2d = css2dLaatikot.map(([l, t, r, b2]) => [l * s - marg, t * s - marg, r * s + marg, b2 * s + marg]);
   for (let y = 0; y < H; y += 1) for (let x = 0; x < W; x += 1) {
     const i = (y * W + x) * 4;
     const d = Math.abs(a.data[i] - b.data[i]) + Math.abs(a.data[i + 1] - b.data[i + 1]) + Math.abs(a.data[i + 2] - b.data[i + 2]);
     if (d < 40) continue;
+    if (css2d.some((l) => x >= l[0] && x <= l[2] && y >= l[1] && y <= l[3])) continue;
     if (laatikot.some((l) => x >= l.x0 && x <= l.x1 && y >= l.y0 && y <= l.y1)) sisalla += 1; else ulkona += 1;
   }
   const osuus = sisalla / Math.max(1, sisalla + ulkona);
-  tulos.erot = { sisalla, ulkona, osuus: +osuus.toFixed(3), laatikoita: laatikot.length };
+  // Missä ulkopuoliset erot ovat (40 px:n ruudukko, suurimmat solut) — vianhaku.
+  const solut = new Map();
+  for (let y = 0; y < H; y += 1) for (let x = 0; x < W; x += 1) {
+    const i = (y * W + x) * 4;
+    const d = Math.abs(a.data[i] - b.data[i]) + Math.abs(a.data[i + 1] - b.data[i + 1]) + Math.abs(a.data[i + 2] - b.data[i + 2]);
+    if (d < 40) continue;
+    if (laatikot.some((l) => x >= l.x0 && x <= l.x1 && y >= l.y0 && y <= l.y1)) continue;
+    if (css2d.some((l) => x >= l[0] && x <= l[2] && y >= l[1] && y <= l[3])) continue;
+    const k = `${Math.floor(x / 40) * 40},${Math.floor(y / 40) * 40}`; solut.set(k, (solut.get(k) ?? 0) + 1);
+  }
+  tulos.erot = { sisalla, ulkona, osuus: +osuus.toFixed(3), laatikoita: laatikot.length, css2dLaatikoita: css2dLaatikot.length, ulkosolut: [...solut].sort((p, q) => q[1] - p[1]).slice(0, 8), odotetut: laatikot.slice(0, 6).map((l) => `${l.nimi} ${l.x.toFixed(0)},${l.y.toFixed(0)}`) };
   vartio('nimiöt maapisteissään (erot laatikoissa ≥ 85 %)', sisalla > 200 && osuus >= 0.85, `sisällä ${sisalla}, ulkona ${ulkona}, laatikoita ${laatikot.length}`);
 }
 tulos.virheet = virheet;
