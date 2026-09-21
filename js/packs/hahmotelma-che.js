@@ -224,6 +224,7 @@ export const HAHMOTELMA_CHE = [
     ],
     nimi: 'CERN',
     tyyppi: 'tekniikka',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Missä CERN sijaitsee?',
