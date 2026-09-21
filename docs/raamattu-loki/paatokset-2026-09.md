@@ -255,3 +255,7 @@ Google Earthin malli toteutettu: 8 ehdokasasentoa ankkurin ymparilta, valinta 26
 ## OMISTAJA v1985: KARTUSCHAN SISENNYS - IPHONELLA LIIKAA, TYOPOYDALLA LIIAN VAHAN (21.9.2026 klo 08.05)
 
 Kaappaus kartuscha-sisennys-iphone-v1985.png (iPhone 8.04): iso kartuscha on kaukana vasemmasta ja alareunasta; tyopoydalla taas lahes kiinni reunassa. SAANTO: kartuschan etaisyys kartan reunasta sama silmamaaraisesti kaikilla laitteilla: puhelin ~12 px + turva-alue, tyopoyta ~24 px. -> Pelikoodari, samaan versioon nimioiden vakauden kanssa jos ehtii.
+
+## OMISTAJA v1985: KARTUSCHAN LINKIN PAINALLUS VOI MENNA LAPI KARTALLE (21.9.2026 klo 08.06)
+
+Kartuschan aiherivin (HISTORIA, RUOKA...) painallus saattaa avata myos alla olevan karttanoston/kaupungin. SAANTO: kortin sisalla painallus ei koskaan vality kartalle (stopPropagation + pointer-events kortin sisalla; kortti itse on pointer-events:none, joten sisaelementit ja niiden marginaalit tarkistettava). -> Pelikoodari samaan kartuscha-sisennys-eraan, savukkeeseen vastakoe.
