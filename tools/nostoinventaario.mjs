@@ -123,9 +123,15 @@ function kuvaTiedot(o) {
    * merkitsi virheellisesti kuvattomaksi 17 FRA-korttia, joilla oli jo
    * aito Commons-kuva — löytyi kun yksittäistapaus (Roquefort)
    * tarkistettiin käsin suoraan JSON.stringify:llä.
+   *
+   * KORJATTU 21.9.2026 (Fable, CODEX-TILAUS 8 KADONNEESTA MONUMENTISTA
+   * PERUTTU -päätös): puuttui myös `o.ihme?.osoite` — fokuskohteet-*.js:n
+   * "kokonaan kadonnut" -kohteilla kuva asuu `ihme.osoite`-kentässä, ei
+   * missään yllä olevista. Ilman tätä työkalu näytti virheellisesti 8
+   * ihme-kohdetta kuvattomana vaikka niillä kaikilla oli jo kuva.
    */
   const onKuva = Boolean(o.tiedosto) || Boolean(o.kuva?.osoite) || Boolean(o.kuva?.tiedosto)
-    || Boolean(o.kuvat?.length) || Boolean(o.herokuva);
+    || Boolean(o.kuvat?.length) || Boolean(o.herokuva) || Boolean(o.ihme?.osoite);
   /*
    * HUOM: /karttanostot/-polku EI tarkoita tekoälykuvaa — se on vain
    * R2-säilytyspolku, jota käyttävät sekä aidot Commons-valokuvat
