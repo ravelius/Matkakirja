@@ -130,6 +130,7 @@ export const MAASTOKOHTEET_CHE = [
     ],
     nimi: 'Matterhorn',
     tyyppi: 'vuori',
+    taso: 1,
     kysymykset: [
       'Kuka nousi Matterhornille ensimmäisenä?',
       'Miksi Matterhorn on niin tarkan pyramidin muotoinen?',
@@ -314,6 +315,7 @@ export const MAASTOKOHTEET_CHE = [
     ],
     nimi: 'Kapellbrücke',
     tyyppi: 'kulttuuri',
+    taso: 1,
     kysymykset: [
       'Miksi sillan kolmiokehykset ovat ainutlaatuisia?',
       'Mihin Wasserturmia on käytetty?',
@@ -434,6 +436,7 @@ export const MAASTOKOHTEET_CHE = [
     nimi: 'Chillonin linna',
     nimio: 'Chillon',
     tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Miksi linna rakennettiin juuri tähän kohtaan?',
       'Mitä nimi Chillon tarkoittaa?',
@@ -729,6 +732,7 @@ export const MAASTOKOHTEET_CHE = [
     ],
     nimi: 'Gruyères',
     tyyppi: 'ruoka',
+    taso: 1,
     kysymykset: [
       'Mistä gruyère-juusto sai nimensä?',
       'Kuinka suuri osa pitäjän maasta on alppilaidunta?',
@@ -919,6 +923,7 @@ export const MAASTOKOHTEET_CHE = [
     nimi: 'Reininputous',
     nimio: 'Rheinfall',
     tyyppi: 'joki',
+    taso: 1,
     kysymykset: [
       'Kuinka paljon virtaama vaihtelee vuoden mittaan?',
       'Miksi putouksen keskellä oleva kallio ei kulu?',
