@@ -462,13 +462,19 @@ export function asetteleNimi(el, d) {
   const g = el.querySelector('.pallolauta-nimi-siirto');
   const teksti = el.querySelector('text');
   if (!g || !teksti) return;
-  g.style.transform = `translate(${d.dx.toFixed(2)}px, ${d.dy.toFixed(2)}px)`;
-  teksti.setAttribute('font-size', String(d.koko));
-  teksti.setAttribute('text-anchor', d.ank);
-  if (d.tyylitys) teksti.setAttribute('font-variant', d.tyylitys);
-  else teksti.removeAttribute('font-variant');
-  if (d.vali) teksti.setAttribute('letter-spacing', String(d.vali));
-  else teksti.removeAttribute('letter-spacing');
+  // Kirjoitus vain muuttuneelle (erä E3): ladonta kutsuu tätä joka
+  // merkille joka ladonnassa, eikä sama arvo saa likata tyyliä.
+  const muunnos = `translate(${d.dx.toFixed(2)}px, ${d.dy.toFixed(2)}px)`;
+  if (g.style.transform !== muunnos) g.style.transform = muunnos;
+  const maare = (nimi, arvo) => {
+    if (arvo === null || arvo === undefined || arvo === '' || arvo === 0) {
+      if (teksti.hasAttribute(nimi)) teksti.removeAttribute(nimi);
+    } else if (teksti.getAttribute(nimi) !== String(arvo)) teksti.setAttribute(nimi, String(arvo));
+  };
+  maare('font-size', d.koko);
+  maare('text-anchor', d.ank);
+  maare('font-variant', d.tyylitys);
+  maare('letter-spacing', d.vali);
   if (teksti.textContent !== d.teksti) teksti.textContent = d.teksti;
 }
 
