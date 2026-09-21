@@ -200,3 +200,16 @@ saavat liput ympäristöstä; luettelo saa kerrosliput (--eijoet); nimiöshardi
 on versiokohtainen (uusi nimiöversio ei mitätöi muita shardeja).
 Seuraava nimiötason uusintapoltto (DEU/ITA/ESP, LAZIO, ei KANTABRIAA) on
 oma pieni ajo: `--nimioversio <uusi> --nimiot <json>` samoilla muilla versioilla.
+
+### Nimiötason uusintapoltto 2026-09-21e (omistajan päätös: vain pysyvät nimet)
+
+Nimistö `js/packs/nimisto-1873.js` (Sisältökirjuri, haara sisalto-nimisto-aika
+7bd5f5e5 mergetty) suodatettuna `--nimiot-aika pysyva`: 94 pysyvää nimeä
+(FRA 24, DEU 15, ITA 14, ESP 12, meret 29) + 8 Codexin koristetta = 102 nimiötä;
+27 vuoden 1873 poliittista nimeä (Elsass-Lothringen, Preussin provinssit,
+Kastiliat, …) odottaa Vuosi 1873 -linssiä. Väistö z5: 3 pois, z6–z8: 0.
+Luettelo vientikansiossa (nimiotaso 2026-09-21e-nimiot), muut versiot ennallaan.
+Kaappaukset `{saksa,italia,espanja}-nimiot-20260921e.webp`. Huomiot
+Sisältökirjurille: SCHLESWIG-HOLSTEIN latoutuu rannikon päälle (keskipiste
+länteen/pohjoiseen merelle → siirrä n. 0,5° itään), WÜRTTEMBERG ja BADEN
+ahtaasti z5:llä (väistö hoiti, mutta pieni siirto auttaisi).
