@@ -89,6 +89,17 @@ export const MAASTOKOHTEET_EST = [
       + 'rajojen tuntumassa. Nimi tarkoittaa suomeksi suurta munamäkeä, ja ympäröivä Haanjan '
       + 'ylänkö on loivasti kumpuilevaa.',
     lahde: 'en-Wikipedia "Suur Munamägi", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Minkä kahden maan rajojen tuntumassa Suur Munamägi sijaitsee?',
+      vaihtoehdot: [
+        'Latvian ja Venäjän',
+        'Suomen ja Latvian',
+        'Liettuan ja Venäjän',
+        'Puolan ja Latvian',
+      ],
+      oikea: 0,
+      fakta: 'Suur Munamägi sijaitsee Haanjan kylän lähellä Võrumaalla, Viron kaakkoiskolkassa.',
+    },
   },
   {
     id: 'itameri',
@@ -127,6 +138,17 @@ export const MAASTOKOHTEET_EST = [
     lahde: 'en-Wikipedia "Baltic Sea", johdanto-osa sekä osiot "Storms and storm floods", '
       + '"Temperature and ice"; laivan osalta "Vasa (ship)", johdanto-osa (tarkistettu '
       + '1.9.2026).',
+    visa: {
+      kysymys: 'Kuinka pitkälle Vasa-sotalaiva purjehti ennen kaatumistaan?',
+      vaihtoehdot: [
+        'Noin sata metriä',
+        'Reilun kilometrin',
+        'Kymmenen kilometriä',
+        'Puolen tunnin matkan',
+      ],
+      oikea: 1,
+      fakta: 'Vasa kaatui neitsytmatkallaan 10. elokuuta 1628 purjehdittuaan vain reilun kilometrin.',
+    },
   },
   {
     id: 'suomenlahti',
@@ -356,6 +378,17 @@ export const MAASTOKOHTEET_EST = [
       + 'korjauksessa torniin louhittiin portaikko ja kaksi huonetta.',
     lahde: 'en-Wikipedia "Kõpu Lighthouse", johdanto-osa sekä osiot "Location and '
       + 'design" ja "Construction and history" (tarkistettu 2.9.2026).',
+    visa: {
+      kysymys: 'Minä vuosikymmenellä hansakauppiaat halusivat maamerkin Kõpun niemelle?',
+      vaihtoehdot: [
+        '1420-luvulla',
+        '1550-luvulla',
+        '1650-luvulla',
+        '1490-luvulla',
+      ],
+      oikea: 3,
+      fakta: 'Hansakauppiaat halusivat maamerkin Kõpun niemelle jo 1490-luvulla, ennen kuin torniin tuli valo.',
+    },
   },
   {
     id: 'kihnu',
@@ -450,6 +483,17 @@ export const MAASTOKOHTEET_EST = [
       + 'Liivinmaan kuvernementtiin vuoteen 1917.',
     lahde: 'en-Wikipedia "Pärnu", johdanto-osa ja osio "History" '
       + '(tarkistettu 2.9.2026).',
+    visa: {
+      kysymys: 'Kuka perusti alun perin Vanhan Pärnun noin vuonna 1251?',
+      vaihtoehdot: [
+        'Saksalainen ritarikunta',
+        'Ruotsin kuningas',
+        'Saare-Läänen piispa',
+        'Puola-Liettuan hallitsija',
+      ],
+      oikea: 2,
+      fakta: 'Vanhan Pärnun perusti Saare-Läänen piispa noin vuonna 1251, mutta kaupunki tuhoutui lopulta noin 1600.',
+    },
   },
   {
     id: 'matsalu',
@@ -504,6 +548,17 @@ export const MAASTOKOHTEET_EST = [
       + 'kosteista niityistä.',
     lahde: 'en-Wikipedia "Matsalu National Park", johdanto-osa ja osio '
       + '"Description" (tarkistettu 2.9.2026).',
+    visa: {
+      kysymys: 'Kuinka monta neliökilometriä on Matsalun kansallispuisto?',
+      vaihtoehdot: [
+        '486 neliökilometriä',
+        '220 neliökilometriä',
+        '750 neliökilometriä',
+        '1200 neliökilometriä',
+      ],
+      oikea: 0,
+      fakta: 'Matsalun kansallispuisto on 486 neliökilometrin suojelualue Länsi- ja Pärnunmaalla.',
+    },
   },
   {
     id: 'struven-kaari',
