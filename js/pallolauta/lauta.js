@@ -1989,8 +1989,11 @@ export async function avaaPallolauta(ui) {
    */
   const { pisteet: laudanOmatPisteet, siirtymat } = pallonOmatPisteet(pack);
   omatPisteet = laudanOmatPisteet;
+  // GL-kerroksen jako pelin merkeille (nappula rungolle); sidotaan sovittimen synnyttyä alempana.
+  let pelinJako = null;
   const merkit = luoMerkit({
     pallo, ui, siirtyma, asteet: pallonAsteet, kotelo,
+    jakaja: (osa, lista) => (osa === 'peli' && pelinJako ? pelinJako(lista) : lista),
     // Globe.gl:n nollakestoisen pointOfView-kutsun renderöijäpäivitys
     // valmistuu vasta seuraavalla framella. Merkit tarkistavat silloin
     // etu/taka-puolen tästä samasta geometriasta kuin osumatesti.
@@ -2015,8 +2018,11 @@ export async function avaaPallolauta(ui) {
   const vektorit = pallovektoritPaalla() ? luoPallovektorit({ pallo, kotelo, reitit }) : null;
   // GL-nimiöt (vaihe 2): ladonnan nimet rungolle sovittimen kautta (oletus päällä, `?glnimiot=0` pois).
   const glSovitin = glNimiotKaytossa() && !/[?&]glnimiot=testi\b/.test(globalThis.location?.search ?? '')
-    ? luoGlNimiosovitin({ kotelo, kerros: () => ui.pallolautaGL() })
+    ? luoGlNimiosovitin({ kotelo, kerros: () => ui.pallolautaGL(), ui, ruutupiste: (lat, lng) => ruudulla(lat, lng, 0) })
     : null;
+  // Nappula rungolle; kun rasteri valmistuu tai runko syntyy, sama lista asetetaan uudestaan (jako aseta-kutsussa).
+  const peliUudestaan = () => { const l = glSovitin?.viimeisetPeli(); if (l) merkit.aseta('peli', l, { haivyta: false }); };
+  if (glSovitin) pelinJako = (lista) => glSovitin.peli(lista, peliUudestaan);
   const nimet = luoNimet({
     ui, merkit, asteet: pallonAsteet, ruudulla, kotelo, pack, glSovitin,
   });
@@ -2110,7 +2116,7 @@ export async function avaaPallolauta(ui) {
      * kuin nimiladonnan `pinot`-varaus — nappula ja kohteet kotelon
      * pikseleinä.
      */
-    esteet: () => [...merkit.laatikot('peli'), ...ruudunKalusteet()],
+    esteet: () => [...merkit.laatikot('peli'), ...(glSovitin?.pelinLaatikot() ?? []), ...ruudunKalusteet()],
     /*
      * KAUPUNKIEN NIMILAATIKOT LIUSKAN LADONTAAN (Fablen tarkistus
      * 18.9.2026: avattu kategoria ladottiin kartalle piirretyn
@@ -3822,7 +3828,7 @@ export async function avaaPallolauta(ui) {
         if (!luokat) return;
         glKerros = luoNimiokerrosGL({ pallo, kotelo, luokat, juuri: pallonKolmiulotteinen(pallo)?.juuri ?? null });
         // Ladonnan nimet ja nostot rungolle heti, kun runko on olemassa (ei uutta ladontaa).
-        if (!glTesti) { nimet.jaaUudestaan?.(); nostot.jaaUudestaan?.(); }
+        if (!glTesti) { nimet.jaaUudestaan?.(); nostot.jaaUudestaan?.(); peliUudestaan(); }
       }
       // Testinimiöt kameran ympäriltä (vain ?glnimiot=testi); uudet, kun kamera on siirtynyt kauas.
       if (glTesti && (!glSiemen || Math.hypot(pov.lat - glSiemen.lat, ((pov.lng - glSiemen.lng + 540) % 360) - 180) > 10)) {
@@ -3835,7 +3841,7 @@ export async function avaaPallolauta(ui) {
       console.warn('[glnimiot] runko kaatui, CSS2D perääntymistie:', virhe?.message ?? virhe);
       try { glKerros?.pura(); } catch { /* purku ei kaada */ }
       glKerros = null;
-      if (!glTesti) { nimet.jaaUudestaan?.(); nostot.jaaUudestaan?.(); }
+      if (!glTesti) { nimet.jaaUudestaan?.(); nostot.jaaUudestaan?.(); peliUudestaan(); }
     }
   };
   const glpurku = glNimiotKaytossa() ? kytkePallonKehys(pallo, kotelo, glKehys) : () => {};
@@ -4412,7 +4418,7 @@ export async function avaaPallolauta(ui) {
      * uuden asettelun. Nappula ei muutu ladonnan aikana, joten yksi
      * luenta riittää kaikille kolmelle.
      */
-    const pelinLaatikot = merkit.laatikot('peli');
+    const pelinLaatikot = [...merkit.laatikot('peli'), ...(glSovitin?.pelinLaatikot() ?? [])];
     /*
      * KUOREN POHJA VAIHTUU NYT (nimet.js LADONTA JA KUORI VAIHTUVAT
      * SAMASSA KEHYKSESSÄ): ladonnan mitta talteen ja kerroin heti sen

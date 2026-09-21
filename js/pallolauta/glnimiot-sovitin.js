@@ -37,6 +37,15 @@
  * tulee häivytyksellä, ikoni ei liiku. CSS2D:hen jäävät ankkurit,
  * aihemerkit ja avatut viuhkat, luonnokset (löytämisen sumu) ja pisteet.
  *
+ * PELIN MERKIT (vaihe 4): `peli(datumit)` vie PELINAPPULAN rungolle
+ * (nimiorasterit.js rasteroiNappula: sama svg kuin CSS2D:llä, jalka
+ * pisteessä, koko ei seuraa zoomia) — juuri nappula oli se, jonka
+ * omistaja näki heiluvan. Kohteet (Aarnin luettelon merkit sykkivine
+ * haloineen) ja linssien merkit (vapaata HTML:ää) jäävät CSS2D:hen.
+ * Koska nappula on ladonnan kiinteä este (lauta.js merkit.laatikot
+ * 'peli' luki DOMista), `pelinLaatikot()` antaa GL-nappulan laatikon
+ * datumista ja laudan ruutupisteestä.
+ *
  * RUNGON RAJAPINTA (sovittu Karttasepän kanssa 21.9.2026):
  *   kerros.asetaKaikki(instanssit)          koko lista kerralla
  *   kerros.atlas.hae(avain) / varaa(avain, kuva, w, h, ankkuriX, ankkuriY)
@@ -107,6 +116,18 @@ export function glNostonInstanssi(d, sprite, osa, opacity) {
   };
 }
 
+/** Nappulan svg:n mitat CSS-pikseleinä (merkit.js nappulaElementti: width 32, height 36). */
+export const NAPPULAN_LEVEYS_PX = 32;
+export const NAPPULAN_KORKEUS_PX = 36;
+
+/** Nappulan laatikko kotelon pikseleinä, kun jalka on ruutupisteessä p. */
+export function glNappulanLaatikko(p) {
+  if (!p || !Number.isFinite(p.x) || !Number.isFinite(p.y)) return null;
+  return {
+    x0: p.x - NAPPULAN_LEVEYS_PX / 2, y0: p.y - NAPPULAN_KORKEUS_PX, x1: p.x + NAPPULAN_LEVEYS_PX / 2, y1: p.y,
+  };
+}
+
 /**
  * Sovitin yhdelle laudalle. `kerros()` antaa rungon tai null (runko
  * syntyy laiskasti, kun kirjaston luokat ovat scenessä); siihen asti
@@ -115,19 +136,25 @@ export function glNostonInstanssi(d, sprite, osa, opacity) {
 export function luoGlNimiosovitin({
   kotelo, kerros, rasterilahde = null, dpr = globalThis.devicePixelRatio || 1,
   ajasta = (f) => (globalThis.requestAnimationFrame ?? setTimeout)(f),
+  /** UI nappulan rasteria varten ja ruutupiste (lat, lng) → { x, y } kotelon px tai null. */
+  ui = null, ruutupiste = null,
 } = {}) {
-  const lahde = rasterilahde ?? luoRasterilahde({ kotelo, dpr });
+  const lahde = rasterilahde ?? luoRasterilahde({ kotelo, dpr, ui });
   const tunnukset = new Set(); // rungolla olevat instanssit
   let viimeiset = null; // viimeisimmän jaon datumit (nimet)
   let kunValmis = null;
   let viimeisetNostot = null; // viimeisimmän jaon datumit (nostot)
   let kunNostoValmis = null;
+  let viimeisetPeli = null; // viimeisimmän jaon datumit (pelin merkit)
+  let kunPeliValmis = null;
+  let nappula = null; // rungolla oleva nappulan datum
   let pyynto = false;
   let purettu = false;
   const luvut = { gl: 0, css2d: 0, tayntyi: 0, jakoja: 0, nostotGl: 0, nostotCss2d: 0, nostojakoja: 0 };
   /** Nimet ja nostot ovat yksi lista rungolle: kumpikin jako säilyttää toisen. */
   let nimiInstanssit = [];
   let nostoInstanssit = [];
+  let peliInstanssit = [];
   /** tunnus → nimiön avain viime jaossa (kylkivaihdon tunnistus). */
   const nimiot = new Map();
   /** Häipyvät nimiöt: tunnus → { instanssi, alku, mista, mihin, poistu } */
@@ -164,7 +191,7 @@ export function luoGlNimiosovitin({
   /** Koko lista (nimet + nostot + häipyvät) rungolle. */
   // Häipyvä vanha nimiö on oma instanssinsa; tuleva nimiö on jo nostoInstansseissa.
   const vieKaikki = (k) => vieRungolle(k, [
-    ...nimiInstanssit, ...nostoInstanssit,
+    ...nimiInstanssit, ...nostoInstanssit, ...peliInstanssit,
     ...[...haivytykset.values()].filter((h) => h.poistu && h.instanssi).map((h) => h.instanssi),
   ]);
   /** Jako: GL-instanssit rungolle, CSS2D:hen jäävät datumit takaisin. */
@@ -258,6 +285,28 @@ export function luoGlNimiosovitin({
     return css2d;
   };
 
+  /** Pelin merkkien jako: nappula rungolle, kohteet ja muut CSS2D:hen. */
+  const jaaPeli = (datumit) => {
+    const k = purettu ? null : kerros?.();
+    nappula = null;
+    if (!k) { peliInstanssit = []; return datumit; }
+    const css2d = [];
+    const gl = [];
+    for (const d of datumit) {
+      if (d.laji !== 'nappula') { css2d.push(d); continue; }
+      const sprite = lahde.haeNappula(d)[0];
+      if (!sprite?.valmis || !varaa(k, sprite)) { css2d.push(d); continue; }
+      gl.push({
+        tunnus: glInstanssinTunnus(d), lat: d.lat, lng: d.lng, avain: sprite.avain, rasteri: sprite,
+        skaala: sprite.skaala, dx: 0, dy: 0, katto: sprite.katto ?? { a: 1e6, b: 1 }, opacity: 1,
+      });
+      nappula = d;
+    }
+    peliInstanssit = gl;
+    vieKaikki(k);
+    return css2d;
+  };
+
   /** Häivytysten eteneminen (kehyskoukusta): peitto ajan mukaan, valmiit pois. */
   const etenaHaivytykset = (k) => {
     if (!haivytykset.size) return;
@@ -275,13 +324,14 @@ export function luoGlNimiosovitin({
 
   // Kesken ollut rasteri valmistui: sama jako uudestaan seuraavassa kehyksessä.
   const irrota = lahde.tilaaRasterit(() => {
-    if (purettu || (!viimeiset && !viimeisetNostot) || pyynto) return;
+    if (purettu || (!viimeiset && !viimeisetNostot && !viimeisetPeli) || pyynto) return;
     pyynto = true;
     ajasta(() => {
       pyynto = false;
       if (purettu) return;
       if (viimeiset) kunValmis?.();
       if (viimeisetNostot) kunNostoValmis?.();
+      if (viimeisetPeli) kunPeliValmis?.();
     });
   });
 
@@ -305,6 +355,18 @@ export function luoGlNimiosovitin({
       if (kutsuKunValmis) kunNostoValmis = kutsuKunValmis;
       return jaaNostot(datumit);
     },
+    /** Pelin merkit (nappula, kohteet) → CSS2D:hen jäävät (ks. PELIN MERKIT). */
+    peli(datumit, kutsuKunValmis = null) {
+      viimeisetPeli = datumit;
+      if (kutsuKunValmis) kunPeliValmis = kutsuKunValmis;
+      return jaaPeli(datumit);
+    },
+    /** GL-nappulan laatikko kotelon pikseleinä ladonnan esteeksi (tai tyhjä). */
+    pelinLaatikot() {
+      if (!nappula || typeof ruutupiste !== 'function') return [];
+      const laatikko = glNappulanLaatikko(ruutupiste(nappula.lat, nappula.lng));
+      return laatikko ? [laatikko] : [];
+    },
     /** Kehyskoukku: kuoren kerroin rungon uniformiin (E2 --nimiokerroin) ja häivytykset. */
     kehys() {
       const k = purettu ? null : kerros?.();
@@ -321,6 +383,7 @@ export function luoGlNimiosovitin({
     /** Viimeisimmän jaon datumit (savukkeet, osumatesti). */
     viimeiset: () => viimeiset ?? [],
     viimeisetNostot: () => viimeisetNostot ?? [],
+    viimeisetPeli: () => viimeisetPeli,
     tila: () => ({ ...luvut, rasterit: lahde.tila() }),
     pura() {
       purettu = true;
@@ -329,6 +392,10 @@ export function luoGlNimiosovitin({
       kunValmis = null;
       viimeisetNostot = null;
       kunNostoValmis = null;
+      viimeisetPeli = null;
+      kunPeliValmis = null;
+      nappula = null;
+      peliInstanssit = [];
       nimiInstanssit = [];
       nostoInstanssit = [];
       haivytykset.clear();

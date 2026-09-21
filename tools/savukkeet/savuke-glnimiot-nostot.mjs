@@ -14,7 +14,9 @@
  *      laatikossa (nostot.laatikot(), ruutupiste levossa) on mustetta;
  *   4. liike: panorointi rakentaa kerrosta enintään ladontojen tahdissa
  *      ja kehys pysyy alle 0,5 ms;
- *   5. ei sivuvirheitä.
+ *   5. pelinappula (vaihe 4): lepotilan nappula on rungolla, DOMissa ei
+ *      CSS2D-nappulaa ja sovitin antaa sen laatikon ladonnan esteeksi;
+ *   6. ei sivuvirheitä.
  *
  *   PLAYWRIGHT_JS=<playwright/index.js> node tools/savukkeet/savuke-glnimiot-nostot.mjs
  *       NAKYMA=puhelin|tyopoyta  ULOS=<kansio>
@@ -85,6 +87,10 @@ const lueTila = () => sivu.evaluate(() => {
     sovitin: t,
     ladottu: s?.viimeisetNostot?.().length ?? null,
     dom: [...document.querySelectorAll('.pallolauta-nosto')].filter((e) => !e.classList.contains('pallolauta-poistuu')).length,
+    // Vaihe 4: lepotilan nappula rungolla (CSS2D-nappulaa ei DOMissa), liikkuva nappula on pelin omaa DOMia.
+    nappulaDom: document.querySelectorAll('.pallolauta-nappula:not(.pallolauta-liikkuva)').length,
+    nappulaRungolla: Boolean(s?.onRungolla?.('nappula')),
+    nappulanLaatikoita: s?.pelinLaatikot?.().length ?? 0,
     fontit: document.fonts?.status ?? 'n/a',
   };
 });
@@ -103,6 +109,8 @@ tulos.tila = t1;
 vartio('runko syntyi ja sovitin jakoi nostot', t1.kerros?.tila === 'valmis' && t1.sovitin?.nostojakoja > 0, JSON.stringify({ kerros: t1.kerros?.tila, nostojakoja: t1.sovitin?.nostojakoja }));
 vartio('gl + css2d = ladotut nostot', t1.sovitin && t1.ladottu != null && t1.sovitin.nostotGl + t1.sovitin.nostotCss2d === t1.ladottu && t1.sovitin.nostotGl > 0,
   `gl ${t1.sovitin?.nostotGl}, css2d ${t1.sovitin?.nostotCss2d}, ladottu ${t1.ladottu}`);
+vartio('nappula rungolla, ei CSS2D-nappulaa, laatikko ladonnan esteeksi', t1.nappulaRungolla && t1.nappulaDom === 0 && t1.nappulanLaatikoita === 1,
+  `rungolla ${t1.nappulaRungolla}, DOM ${t1.nappulaDom}, laatikoita ${t1.nappulanLaatikoita}`);
 vartio('DOMissa vain CSS2D:hen jääneet; rungolla ikoni + nimiö', t1.dom === t1.sovitin?.nostotCss2d && t1.kerros?.instansseja >= 2 * t1.sovitin?.nostotGl,
   `DOM ${t1.dom}, css2d ${t1.sovitin?.nostotCss2d}, instansseja ${t1.kerros?.instansseja}, gl ${t1.sovitin?.nostotGl}, fontit ${t1.fontit}`);
 

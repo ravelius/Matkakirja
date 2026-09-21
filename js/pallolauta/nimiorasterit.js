@@ -46,6 +46,7 @@ import {
   nostosymMitanKatto, nostosymPorrasNyt, nostosymRasteri, nostosymRasterinAvain, nostosymReseptit,
 } from '../fokusnosto-symbolit.js';
 import { ruudunKerroin } from './nostot.js';
+import { nappulaElementti } from './merkit.js';
 
 /** Välimuistin katto (rastereita); yli menevät suljetaan vanhin ensin. */
 export const NIMIORASTERIEN_KATTO = 600;
@@ -171,6 +172,61 @@ export function rasteroiPiste({ sadePx, vari, reuna = null }, dpr, luoKangas = (
   return { kuva: kangas, w: koko, h: koko, ankkuriX: koko / 2, ankkuriY: koko / 2, skaala: 1 / dpr, katto: null };
 }
 
+/** Tyylit, jotka nappulan svg:stä kopioidaan inline ennen sarjallistusta. */
+const NAPPULAN_TYYLIT = [
+  'fill', 'fill-opacity', 'stroke', 'stroke-width', 'stroke-opacity', 'stroke-linejoin',
+  'stroke-linecap', 'stroke-dasharray', 'opacity', 'display', 'visibility',
+];
+
+/**
+ * PELINAPPULA RASTERIKSI (GL vaihe 4). Sama svg kuin CSS2D-merkillä
+ * (js/pallolauta/merkit.js nappulaElementti → js/ui.js pawnShape):
+ * elementti tuodaan hetkeksi koteloon, jotta tyylitiedoston säännöt
+ * (.pawn-shadow, .pawn-active-ring, liukuvärit) voidaan kopioida
+ * inline-tyyleiksi, sarjallistetaan ja piirretään kankaalle
+ * laitepikseleinä. Ankkuri on alareunan keskipiste — CSS2D:n
+ * `translate(-50%, -100%)` — eli jalka on pisteessä. Katto { a: 1e6,
+ * b: 1 } pitää koon kuoren kertoimesta riippumatta (nappula ei skaalaudu
+ * zoomin mukana). `lataa` annetaan testeille.
+ */
+export async function rasteroiNappula(ui, {
+  kotelo, dpr = 1, doc = globalThis.document, luokka = 'pallolauta-nappula', aktiivinen = true,
+  luoKangas = (w, h) => { const k = doc.createElement('canvas'); k.width = w; k.height = h; return k; },
+  lataa = null,
+} = {}) {
+  const el = nappulaElementti(ui, luokka, aktiivinen);
+  const svg = el.querySelector('svg');
+  if (!svg) return null;
+  const leveys = Number(svg.getAttribute('width')) || 32;
+  const korkeus = Number(svg.getAttribute('height')) || 36;
+  el.style.cssText = 'position:absolute;left:-9999px;top:0;visibility:hidden;pointer-events:none';
+  kotelo?.appendChild?.(el);
+  try {
+    if (globalThis.getComputedStyle && el.isConnected) {
+      for (const osa of [svg, ...svg.querySelectorAll('*')]) {
+        const cs = getComputedStyle(osa);
+        for (const nimi of NAPPULAN_TYYLIT) {
+          const arvo = cs.getPropertyValue(nimi);
+          if (arvo) osa.style.setProperty(nimi, arvo);
+        }
+      }
+    }
+  } finally {
+    el.remove();
+  }
+  svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+  svg.setAttribute('width', String(leveys * dpr));
+  svg.setAttribute('height', String(korkeus * dpr));
+  const xml = new XMLSerializer().serializeToString(svg);
+  const osoite = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(xml)}`;
+  const kuva = await (lataa ?? ((o) => lataaKuva(o, doc)))(osoite);
+  const w = Math.ceil(leveys * dpr);
+  const h = Math.ceil(korkeus * dpr);
+  const kangas = luoKangas(w, h);
+  kangas.getContext('2d').drawImage(kuva, 0, 0, w, h);
+  return { kuva: kangas, w, h, ankkuriX: w / 2, ankkuriY: h, skaala: 1 / dpr, katto: { a: 1e6, b: 1 } };
+}
+
 /**
  * Noston reseptit (ikoni ja nimiö erikseen) datumista — sama kaava kuin
  * js/pallolauta/nostot.js asetteleNosto → piirraNostosymKartalle
@@ -201,6 +257,8 @@ export function nostonKatto(d, katto) {
 export function luoRasterilahde({
   kotelo, dpr = globalThis.devicePixelRatio || 1, doc = globalThis.document, katto = nostosymMitanKatto(),
   luoKangas = null, bitmap = typeof createImageBitmap === 'function',
+  /** UI pelinappulan rasteria varten (js/ui.js pawnShape); ilman sitä nappula jää CSS2D:hen. */
+  ui = null,
 } = {}) {
   const valmiit = new Map(); // avain → sprite
   const kesken = new Map(); // avain → Promise
@@ -273,6 +331,14 @@ export function luoRasterilahde({
     if (nimio) ulos.push(haeNostonOsa(d, 'nimio', nimio));
     return ulos;
   };
+  /** Nappula: avain pelaajan väristä ja tilasta; ui annetaan lähteelle. */
+  const haeNappula = (d) => {
+    const pelaaja = ui?.game?.player;
+    const aktiivinen = d?.aktiivinen !== false;
+    const avain = `nappula|${pelaaja?.color ?? ''}|${aktiivinen ? 1 : 0}|${dpr}`;
+    if (!ui) return { osa: 'nappula', avain, valmis: false };
+    return { osa: 'nappula', ...tuotanto(avain, () => rasteroiNappula(ui, { kotelo, dpr, doc, aktiivinen, luoKangas: luoKangas ?? undefined })) };
+  };
   const haePiste = (d) => {
     const avain = `piste|${Number(d.sadePx).toFixed(2)}|${d.vari}|${d.reuna ?? ''}|${dpr}`;
     return { osa: 'piste', ...tuotanto(avain, async () => rasteroiPiste(d, dpr, luoKangas ?? undefined)) };
@@ -282,10 +348,12 @@ export function luoRasterilahde({
     /** Datumin spritet: laji datumista (nimi: teksti; nosto: kategoria; piste: sadePx). */
     hae: (d) => {
       if (d.laji === 'nimi' || d.teksti) return [haeNimi(d)];
+      if (d.laji === 'nappula') return [haeNappula(d)];
       if (d.laji === 'piste' || d.sadePx) return [haePiste(d)];
       return haeNosto(d);
     },
     haeNimi: (d) => [haeNimi(d)],
+    haeNappula: (d) => [haeNappula(d)],
     haeNosto,
     haePiste: (d) => [haePiste(d)],
     tilaaRasterit: (f) => { tilaajat.add(f); return () => tilaajat.delete(f); },

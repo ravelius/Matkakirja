@@ -134,12 +134,12 @@ test('kytkentä: nimet.js jakaa sovittimen kautta ja lauta antaa sen; sw.js list
   assert.match(nimet, /glSovitin \? glSovitin\.nimet\(nakyvatNimet, naytaNimet\) : nakyvatNimet/);
   assert.match(nimet, /jaaUudestaan: \(\) => naytaNimet\?\.\(\)/);
   const lauta = readFileSync(new URL('../js/pallolauta/lauta.js', import.meta.url), 'utf8');
-  assert.match(lauta, /luoGlNimiosovitin\(\{ kotelo, kerros: \(\) => ui\.pallolautaGL\(\) \}\)/);
+  assert.match(lauta, /luoGlNimiosovitin\(\{ kotelo, kerros: \(\) => ui\.pallolautaGL\(\), ui, ruutupiste: /);
   assert.match(lauta, /ui\.glKerros = \(\) => \(glVirhe \? null : glKerros\);/);
   const uiLahde = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
   assert.match(uiLahde, /pallolautaGL\(\) \{\s*return typeof this\.glKerros === 'function'/);
   assert.match(lauta, /glSovitin\?\.kehys\(\);/);
-  assert.match(lauta, /if \(!glTesti\) \{ nimet\.jaaUudestaan\?\.\(\); nostot\.jaaUudestaan\?\.\(\); \}/);
+  assert.match(lauta, /if \(!glTesti\) \{ nimet\.jaaUudestaan\?\.\(\); nostot\.jaaUudestaan\?\.\(\); peliUudestaan\(\); \}/);
   // Oletus päällä (omistaja 21.9.2026): vain ?glnimiot=0 pudottaa CSS2D:hen; runko kaatuessaan puretaan.
   assert.match(lauta, /catch \(virhe\) \{\s*glVirhe = virhe;/);
   const nostot = readFileSync(new URL('../js/pallolauta/nostot.js', import.meta.url), 'utf8');
@@ -272,4 +272,42 @@ test('nimet ja nostot ovat yksi lista rungolle: kumpikin jako säilyttää toise
   assert.equal(kerros.lista.length, 4);
   s.nimet([DATUMIT[0]]);
   assert.deepEqual(kerros.lista.map((i) => i.tunnus), ['nimi:pariisi', 'nosto:lascaux#ikoni', 'nosto:lascaux#nimio']);
+});
+
+/* ---- Pelin merkit (vaihe 4) ---------------------------------------- */
+import { glNappulanLaatikko } from '../js/pallolauta/glnimiot-sovitin.js';
+
+test('nappula rungolle kiinteällä koolla, kohteet CSS2D:hen; laatikko jalasta ylös', () => {
+  const kerros = teeKerros();
+  const lahde = {
+    ...teeNostolahde(),
+    haeNappula: () => [{ osa: 'nappula', avain: 'nappula|#c9a227|1|2', valmis: true, kuva: {}, w: 64, h: 72, ankkuriX: 32, ankkuriY: 72, skaala: 0.5, katto: { a: 1e6, b: 1 } }],
+  };
+  const s = luoGlNimiosovitin({
+    kerros: () => kerros, rasterilahde: lahde, ajasta: (f) => f(),
+    ruutupiste: (lat, lng) => ({ x: 100 + lat, y: 200 + lng }),
+  });
+  const datumit = [
+    { avain: 'kohde:x', laji: 'kohde', key: 'x', lat: 1, lng: 2 },
+    { avain: 'nappula', laji: 'nappula', lat: 10, lng: 20 },
+  ];
+  const css2d = s.peli(datumit);
+  assert.deepEqual(css2d.map((d) => d.avain), ['kohde:x']);
+  assert.deepEqual(kerros.lista.map((i) => i.tunnus), ['nappula']);
+  assert.deepEqual(kerros.lista[0].katto, { a: 1e6, b: 1 });
+  assert.equal(kerros.lista[0].dx, 0);
+  assert.deepEqual(s.pelinLaatikot(), [{ x0: 94, y0: 184, x1: 126, y1: 220 }]);
+  // Ilman nappulaa ei laatikkoa; pelkkä ruutupiste null → ei laatikkoa.
+  s.peli([datumit[0]]);
+  assert.deepEqual(s.pelinLaatikot(), []);
+  assert.equal(glNappulanLaatikko(null), null);
+});
+
+test('kytkentä: merkit.js jakaa osan sovittimelle ja lauta sitoo pelin jaon ja esteet', () => {
+  const merkit = readFileSync(new URL('../js/pallolauta/merkit.js', import.meta.url), 'utf8');
+  assert.match(merkit, /const uudet = typeof jakaja === 'function' \? \(jakaja\(osa, annetut\) \?\? annetut\) : annetut;/);
+  const lauta = readFileSync(new URL('../js/pallolauta/lauta.js', import.meta.url), 'utf8');
+  assert.match(lauta, /jakaja: \(osa, lista\) => \(osa === 'peli' && pelinJako \? pelinJako\(lista\) : lista\)/);
+  assert.match(lauta, /pelinJako = \(lista\) => glSovitin\.peli\(lista, peliUudestaan\)/);
+  assert.match(lauta, /const pelinLaatikot = \[\.\.\.merkit\.laatikot\('peli'\), \.\.\.\(glSovitin\?\.pelinLaatikot\(\) \?\? \[\]\)\];/);
 });
