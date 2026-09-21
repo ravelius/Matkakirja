@@ -29,6 +29,9 @@
  * tarkistettu hakemalla (HTTP 200, audio/aac, CORS *). BEL (19.9.2026) on
  * käsin lisätty: VRT Radio 1 -osoite tarkistettu hakemalla (302-uudelleen-
  * ohjaus quantumcast.vrtcdn.be:hen, content-type audio/mpeg, CORS *).
+ * LUX (21.9.2026) on käsin lisätty: radio 100,7 (ERSL, Luxemburgin
+ * julkinen yleisradio), osoite tarkistettu hakemalla (302-uudelleenohjaus
+ * radiohost.de-peiliin, content-type audio/mpeg, CORS *).
  * MLT (21.9.2026) on käsin lisätty: Calypso Radio 101.8 (calypsomalta.com),
  * osoite tarkistettu hakemalla (HTTP 200, audio/aac, icy-name "Calypso
  * Radio 101.8", CORS *). PBS:n (julkinen yleisradio) suoratoisto-osoitetta
@@ -95,6 +98,7 @@ export const RADIOT = {
   LBY: { url: 'https://stream.zeno.fm/z9wfrdpmgg0uv', asema: 'Radio Funun Tripoli (راديو فنون طرابلس)' },
   LKA: { url: 'https://stream-32.zeno.fm/xekhrn4zetzuv?zs=KXT1gTNYSemcxyslV6-vdA', asema: 'SLBC Tamil National Service', virallinen: true },
   LTU: { url: 'https://netradio.ziniur.lt/ziniur.mp3', asema: 'Žinių radijas' },
+  LUX: { url: 'https://stream.100komma7.lu/100komma7/live/mp3/128/stream.mp3', asema: 'radio 100,7 (ERSL)', virallinen: true },
   LVA: { url: 'https://live.radioswh.lv/plusmp3', asema: 'Radio SWH+' },
   MAR: { url: 'https://stream.zeno.fm/une3a02mb', asema: 'MA:-Hit Radio Maroc', virallinen: true },
   MDG: { url: 'https://direct.radiomadagasikara.com/listen/rnm/radio.mp3', asema: 'RNM', virallinen: true },

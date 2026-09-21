@@ -576,6 +576,52 @@ export const EUROPE_QUESTIONS = {
   ],
 
   /*
+   * LUXEMBURG (21.9.2026, omistajan päätös 21.9.2026: Kypros, Luxemburg
+   * ja Malta saavat pelikaupungin). Faktapohja
+   * EUROPE_ARTIKKELIT.'Luxemburg (kaupunki)' -artikkelista (en-Wikipedia
+   * "Luxembourg City" ja "History of Luxembourg", luettu 21.9.2026), ei
+   * uusia väitteitä.
+   */
+  luxemburg: [
+    {
+      q: 'Missä valtiomuodossa Luxemburg on isoisän matkan aikaan vuonna 1873?',
+      options: [
+        'itsenäinen suurherttuakunta henkilöunionissa Alankomaiden kanssa',
+        'Preussin maakunta',
+        'Ranskan protektoraatti',
+        'Belgian osavaltio',
+      ],
+      correct: 0,
+      level: 1,
+      fact: 'Luxemburg on suurherttuakunta, jota hallitsee Alankomaiden kuningas Vilhelm III henkilöunionissa; maa on ollut kansainvälisesti puolueeton Lontoon sopimuksesta 1867 lähtien.',
+      hint: 'Sama hallitsija istuu myös Alankomaiden valtaistuimella.',
+      source: 'https://en.wikipedia.org/wiki/History_of_Luxembourg',
+    },
+    {
+      q: 'Minkä lempinimen Luxemburgin kaupunki sai vahvan linnoituksensa vuoksi?',
+      options: ['Pohjoisen Gibraltar', 'Alppien Venetsia', 'Manner-Euroopan Malta', 'Reinin portti'],
+      correct: 0,
+      fact: 'Ranskalainen sotilasinsinööri Lazare Carnot kutsui Luxemburgin linnoitusta maailman parhaaksi Gibraltaria lukuun ottamatta, mistä syntyi lempinimi "Pohjoisen Gibraltar".',
+      hint: 'Nimi vertaa kaupunkia Espanjan eteläkärjen linnoitukseen.',
+      source: 'https://en.wikipedia.org/wiki/Luxembourg_City',
+    },
+    {
+      q: 'Mitä Luxemburgin kaupungin linnoitukselle tapahtuu isoisän matkan aikaan 1873?',
+      options: [
+        'sitä puretaan Lontoon sopimuksen vaatimuksesta',
+        'sitä vahvistetaan uusilla tykkitorneilla',
+        'se muutetaan kokonaan puistoksi kertaheitolla',
+        'Preussi ottaa sen pysyvään haltuunsa',
+      ],
+      correct: 0,
+      level: 3,
+      fact: 'Vuoden 1867 Lontoon sopimus julisti Luxemburgin puolueettomaksi ja määräsi linnoituksen purettavaksi; purkutyö kestää kuusitoista vuotta ja on vielä kesken vuonna 1873.',
+      hint: 'Sopimus tehtiin kuusi vuotta ennen isoisän matkaa.',
+      source: 'https://en.wikipedia.org/wiki/Luxembourg_City',
+    },
+  ],
+
+  /*
    * LJUBLJANA (20.9.2026, omistajan päätös 19.9.2026: Slovenia saa
    * pelikaupungin Ljubljana). Faktapohja EUROPE_ARTIKKELIT.Ljubljana-
    * artikkelista (en-Wikipedia Ljubljana ja Ljubljana Castle, luettu
@@ -2483,6 +2529,14 @@ export const EUROPE_FACTS = {
     'Galeries Royales Saint-Hubert avattiin vuonna 1847 lasikattoisena kauppakujana, ja se oli aikanaan yksi Euroopan ensimmäisistä katetuista ostoskaduista.',
     {
       text: 'Belgian suklaa on vielä tavallista kaakaolevyä: täytetty praliini keksitään täällä vasta neljänkymmenen vuoden päästä. Torilla myydään sen sijaan pitsiä, jota nyplätään sormin niin nopeasti, etten ehdi seurata.',
+      voice: 'isoisa',
+    },
+  ],
+  luxemburg: [
+    'Luxemburgin linnoituksen purkaminen kesti vuodesta 1867 vuoteen 1883 eli kuusitoista vuotta, ja työ tuhosi yli 24 kilometriä maanalaisia käytäviä ja maksoi 1,5 miljoonaa kultafrangia.',
+    'Kaupungin Bock-kallio sai varustuksensa vuonna 963, kun kreivi Siegfried rakensi sille Lucilinburhuc-linnansa — tapahtumaa pidetään koko Luxemburgin kaupungin syntyhetkenä.',
+    {
+      text: 'Rautatie on yhdistänyt kaupungin Ranskaan ja Preussiin jo vuosia, mutta täkäläinen suurherttua ei ole koskaan itse istunut siinä junassa — hän asuu Haagissa eikä ole käynyt omassa maassaan vuosikausiin.',
       voice: 'isoisa',
     },
   ],

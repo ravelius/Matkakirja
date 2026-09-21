@@ -207,6 +207,9 @@ const MODULES = [
   'js/packs/fokusvirta-ljubljana.js',
   // Košice (20.9.2026, omistajan päätös: Slovakian pelikaupunki).
   'js/packs/fokusvirta-kosice.js',
+  // Luxemburg (21.9.2026, omistajan päätös: Kypros, Luxemburg ja Malta
+  // saavat pelikaupungin).
+  'js/packs/fokusvirta-luxemburg.js',
   // Valletta (21.9.2026, omistajan päätös: Maltan pelikaupunki).
   'js/packs/fokusvirta-valletta.js',
   // Egyptillä ja Irakilla ei ole omaa fokusvirtaa: pelkät kohteet

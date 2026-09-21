@@ -160,6 +160,7 @@ export const ALUEEN_MAAT = {
   FRA: 'keski-eurooppa',
   NLD: 'keski-eurooppa',
   BEL: 'keski-eurooppa',
+  LUX: 'keski-eurooppa',
   DEU: 'keski-eurooppa',
   CZE: 'keski-eurooppa',
   AUT: 'keski-eurooppa',

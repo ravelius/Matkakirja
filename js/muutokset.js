@@ -13,6 +13,13 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2026, teksti: 'Malta/Valletta: kaupunki, kartat, radio' },
+  { v: 2025, teksti: 'Luxemburg: radio, aarrepari, musiikkialue' },
+  { v: 2024, teksti: 'Kypros/Nikosia: paikallisaarrepari' },
+  { v: 2023, teksti: 'Laattakatto nakyvista laatoista, sulavuusmittariin laatat' },
+  { v: 2022, teksti: 'Ateenaan ja Wieniin seitsemän puuttunutta miniatyyriä' },
+  { v: 2021, teksti: 'Savukekorjaukset: nimiot-sulavat, nostot-lukossa, kerma' },
+  { v: 2020, teksti: 'GL-nappula: liukuvari mustana WebKitissa korjattu' },
   { v: 2019, teksti: 'GL runko: horisontin haive ja atlaksen tiivistys' },
   { v: 2018, teksti: 'GL vaihe 3+4: nostot ja nappula rungolle oletuksena' },
   { v: 2017, teksti: '97 uutta Euroopan kohdekartan miniatyyria' },

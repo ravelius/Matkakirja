@@ -101,7 +101,7 @@ export function luoSulavuusmittari(lauta, doc = globalThis.document) {
         lat: d.lat, lng: d.lng, laji: el.dataset.nosto ? 'nosto' : 'nimi',
       };
     }).filter(Boolean);
-    tila = { naytteet: [], kaynnissa: true, seurattavia: seurattavat.length };
+    tila = { naytteet: [], kaynnissa: true, seurattavia: seurattavat.length, laatatAlussa: laattakerroksenTila(lauta) };
     const askel = () => {
       if (!tila.kaynnissa) return;
       const koti = lauta.kotelo.getBoundingClientRect();
@@ -136,10 +136,45 @@ export function luoSulavuusmittari(lauta, doc = globalThis.document) {
         // E4b: nimiö vs. ennustettu maapiste (null ilman ennustetta).
         ennustevirhe: ennustevirhe(naytteet),
         koko: koonLiukuvuus(naytteet),
+        // Laattakerros mittauksen aikana (Fable 21.9.2026 ilta, muistiraja puhelimella):
+        // LRU-purut, pyynnöt, tason vaihdot ja katon pudotukset eleen aikana.
+        laatat: laattakerroksenMuutos(tila?.laatatAlussa, laattakerroksenTila(lauta)),
       };
       globalThis.console?.log?.('sulavuus', JSON.stringify(ulos));
       return ulos;
     },
+  };
+}
+
+/**
+ * Laattakerroksen tila mittarille: LRU-purut (purettuja), pyynnöt, taso,
+ * näkyvät ja katon pudotus (kattoRajoitti, js/pallolaatat.js). Null,
+ * jos kerrosta ei ole (?laattakerros=0 tai purettu).
+ */
+export function laattakerroksenTila(lauta) {
+  const m = lauta?.lepokerros?.()?.mittarit?.() ?? null;
+  if (!m || m.tila === 'purettu') return null;
+  return {
+    purettuja: m.purettuja ?? 0, pyyntoja: m.pyyntoja ?? 0, taso: m.taso ?? null, nakyvia: m.nakyvia ?? 0,
+    nakyviaScenessa: m.nakyviaScenessa ?? 0, kaytetytTavut: m.kaytetytTavut ?? 0, kattoRajoitti: Boolean(m.kattoRajoitti),
+  };
+}
+
+/**
+ * Laattakerroksen muutos eleen aikana: purkuja ja pyyntöjä (erotus),
+ * taso alussa ja lopussa, katto. Puhelimella purkuja > 0 panoroinnissa
+ * tarkoittaa, että tavukatto (LAATTAKERROS_LAATTAKATTO_TAVUT) täyttyy —
+ * silloin tukitasoa harvennetaan (Fable 21.9.2026 ilta).
+ */
+export function laattakerroksenMuutos(alku, loppu) {
+  if (!alku || !loppu) return null;
+  return {
+    purkuja: Math.max(0, loppu.purettuja - alku.purettuja),
+    pyyntoja: Math.max(0, loppu.pyyntoja - alku.pyyntoja),
+    tasoAlussa: alku.taso, tasoLopussa: loppu.taso,
+    nakyvia: loppu.nakyvia, scenessa: loppu.nakyviaScenessa,
+    tavutMt: Number((loppu.kaytetytTavut / 1048576).toFixed(1)),
+    kattoRajoitti: loppu.kattoRajoitti,
   };
 }
 

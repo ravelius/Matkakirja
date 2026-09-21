@@ -288,6 +288,15 @@ for (const ruutu of RUUDUT) {
               canvas { visibility: visible !important; }`,
   });
   /*
+   * GL-NIMIÖT PIILOON (v2014: nimet, nostot ja nappula piirtyvät pallon
+   * kankaalle, eikä css-piilotus ulotu niihin). Mittauspiste 8,7 E 49,6 N
+   * on Mannheimin nimiön kohdalla — sen halo nosti Saksan sisäpisteen σ:n
+   * (1,84 > Ranska 1,79, main v2014) ja V5 punaiseksi. Kerros pois
+   * mittauksen ajaksi kuten kortitkin.
+   */
+  await sivu.evaluate(() => window.matkakirja.ui.pallolautaGL?.()?.nakyvyys?.(false));
+  await sivu.waitForTimeout(300);
+  /*
    * V6: PISTEIDEN PUOLI LUETAAN PELIN OMASTA SUOJASTA. Savukkeeseen
    * kirjoitettu laatikko vanhenisi ensimmäisessä aineistopäivityksessä
    * ja mittaisi sen jälkeen väärää reunaa.

@@ -28480,6 +28480,62 @@ export const KULTTUURI_KATEGORIAT = {
    */
   // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
   // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
+  /*
+   * LUXEMBURG (21.9.2026, omistajan päätös 21.9.2026: Kypros, Luxemburg
+   * ja Malta saavat pelikaupungin). KEVYT KANSISIVU (Fablen tilaus):
+   * vain aihe 'kaupunki', ei täyttä 6-aiheista lehteä — sama ratkaisu
+   * kuin muilla kevyillä pelikaupungeilla (KEVYET_FOKUSVIRRAT).
+   * Kansikuvat samat, joiden lisenssi on tarkistettu Commonsin
+   * imageinfo/extmetadata-rajapinnasta 21.9.2026 (maakartat.js
+   * KAUPUNKIKARTAT.luxemburg käyttää osaa samoista).
+   */
+  luxemburg: [
+    {
+      id: 'kaupunki',
+      nimi: 'Luxemburg',
+      johdanto: 'Kaupunki seisoo kalliolla, jonka Alzette- ja '
+        + 'Pétrusse-joet ovat kaivaneet syviksi rotkoiksi — niin '
+        + 'vahvalla linnoituksella, että sitä kutsuttiin Pohjoisen '
+        + 'Gibraltariksi.',
+      kansikuvat: [
+        {
+          tiedosto: 'Luxembourg City from the Bock Casements.jpg',
+          vuosi: '2024',
+          lahde: 'P. Hughes, Wikimedia Commons (CC BY-SA 4.0)',
+          lyhyt: 'Luxemburgin alakaupunki Bockin kasemattien kalliolta nähtynä.',
+          selite: 'Bock-kallio on kaupungin syntypaikka: kreivi '
+            + 'Siegfried rakensi tänne linnansa vuonna 963. Kalliolta '
+            + 'avautuu näkymä alas Alzette-joen mutkaan.',
+        },
+        {
+          tiedosto: 'Luxembourg Adolphe Bridge over Petrusse valley.jpg',
+          vuosi: '2009',
+          lahde: 'Cayambe, Wikimedia Commons (CC BY-SA 3.0)',
+          lyhyt: 'Adolphe-silta kaartuu Pétrussen laakson yli.',
+          selite: 'Adolphe-silta rakennettiin vuosina 1900–1903 '
+            + 'yhdistämään vanhakaupunki ja asema-alue Pétrussen syvän '
+            + 'laakson yli.',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Luxembourg City Square Guillaume II towards Notre-Dame Cathedral April 2011.jpg',
+          lahde: 'Cayambe, Wikimedia Commons (CC BY-SA 3.0)',
+          lyhyt: 'Guillaume II:n aukio raatihuoneineen, taustalla Notre-Damen katedraalin tornit.',
+          selite: 'Guillaume II:n aukio raatihuoneineen; taustalla '
+            + 'näkyvät Notre-Damen katedraalin tornit.',
+        },
+        kappale: 'Luxemburg on suurherttuakunnan pääkaupunki ja koko '
+          + 'maan ainoa suuri kaupunki. Vanhakaupunki on kallioisella '
+          + 'niemekkeellä jyrkkien jokilaaksojen välissä, ja sen alle '
+          + 'louhitut kasemattikäytävät tekivät siitä vuosisatojen ajan '
+          + 'yhden Euroopan vahvimmista linnoituksista. Lontoon '
+          + 'sopimus 1867 päätti suurvaltojen kilpailun kaupungista: '
+          + 'linnoitus puretaan, ja Luxemburgista tulee pysyvästi '
+          + 'puolueeton.',
+      },
+    },
+  ],
   nikosia: [
     {
       id: 'kaupunki',
