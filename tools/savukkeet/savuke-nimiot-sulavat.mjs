@@ -36,7 +36,9 @@
  *      ja asetteleNosto ajetaan, vanha nimiökuva jää häipymään
  *      (.nostosym-nimio-vanha), uusi tulee häivytyksellä ja vanha on
  *      poissa DOMista 400 ms:n kuluttua; ikoni ei liiku.
- * Vartiot 1–3 tuomitaan vain ≥ 20 fps:n mittauksesta (SAVUKE_IKKUNA=1,
+ * Ennustevirhe (E4b, Karttasepän kameran ennuste) tulostetaan tiedoksi
+ * kun kehyksen mitoissa on ennuste. Vartiot 1–3 tuomitaan vain ≥ 20
+ * fps:n mittauksesta (SAVUKE_IKKUNA=1,
  * ks. alla); headlessissä ne kirjataan tiedoksi. LÄHTÖTASO 21.9.2026
  * (ikkunallinen Chromium, Mac Studio): panorointi 0 px; zoomi 0,04 /
  * 0,31 px, koko muuttuu 77 %:ssa kehyksistä ja yhden kehyksen porras
@@ -54,7 +56,7 @@ import { extname, join } from 'node:path';
 
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
-import { kehysnopeus, koonLiukuvuus, siirtymanMuutokset } from '../../js/pallolauta/sulavuusmittari.js';
+import { ennustevirhe, kehysnopeus, koonLiukuvuus, siirtymanMuutokset } from '../../js/pallolauta/sulavuusmittari.js';
 import { NOSTOSYM_NIMIO_KATTO_PX, NOSTOSYM_NIMIO_KOKO } from '../../js/fokusnosto-symbolit.js';
 
 const JUURI = new URL('../..', import.meta.url).pathname;
@@ -259,6 +261,10 @@ for (const ruutu of RUUDUT) {
   const zoom = await sivu.evaluate(`(${PYSAYTA})()`);
   const zoomSiirtyma = siirtymanMuutokset(zoom);
   const koko = koonLiukuvuus(zoom);
+  const zoomEnnuste = ennustevirhe(zoom);
+  const panEnnuste = ennustevirhe(pan);
+  if (zoomEnnuste || panEnnuste) tieto(`${tunnus}: ennustevirhe (E4b)`, `panorointi ${JSON.stringify(panEnnuste)}, zoomi ${JSON.stringify(zoomEnnuste)}`);
+  else tieto(`${tunnus}: ennustevirhe (E4b)`, 'ei ennustetta kehyksen mitoissa (karttaseppa-ennuste ei mukana)');
   const skaalat = zoom.map((n) => n.skaala);
   const fps = kehysnopeus(zoom);
   tieto(`${tunnus}: zoomi`, `${zoom.length} kehystä (${fps.toFixed(1)} fps), skaala ${skaalat[0]?.toFixed(4)} → ${skaalat.at(-1)?.toFixed(4)}; siirtymän muutos mediaani ${zoomSiirtyma.mediaani} px, p95 ${zoomSiirtyma.p95} px, pahin ${JSON.stringify(zoomSiirtyma.pahin)}; koko: kamera liikkui ${koko.liikkui} kehyksessä, koko muuttui niistä ${koko.liikkuiJaKokoMuuttui} (${koko.osuus}), kokoaskel levossa ${koko.lepoaskel}, liikkeessä ${koko.liikeaskel}`);

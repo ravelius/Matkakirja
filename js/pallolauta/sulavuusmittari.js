@@ -44,10 +44,23 @@ function laskettuSkaala(el) {
   return m ? Math.abs(Number(m[1])) : 1;
 }
 
-/** Yhden merkin näyte: siirtymä maapisteestä (px) ja koko. */
+/**
+ * Ennustettu maapiste (Karttasepän E4b): kun kehyksen mitoissa on
+ * `ennuste.pov` ja lauta antaa `ruutupisteEnnusteesta(pov, lat, lng)`,
+ * nimiön paikkaa verrataan MYÖS siihen. Ilman ennustetta null.
+ */
+function ennustettuMaa(s, l) {
+  const ennuste = l.viimeisinKehys?.()?.ennuste ?? null;
+  if (!ennuste?.pov || typeof l.ruutupisteEnnusteesta !== 'function') return null;
+  const p = l.ruutupisteEnnusteesta(ennuste.pov, s.lat, s.lng);
+  return p && Number.isFinite(p.x) ? p : null;
+}
+
+/** Yhden merkin näyte: siirtymä maapisteestä (px), ennustevirhe ja koko. */
 function lueMerkki(s, l, koti) {
   const maa = l.pallo.getScreenCoords(s.lat, s.lng, 0);
   if (!maa) return null;
+  const ennuste = ennustettuMaa(s, l);
   const r = s.g.getBoundingClientRect();
   if (!r.width && !r.height) return null;
   // Kuori (svg) liukuu kehyksittäin; pohja on sisäryhmässä (E2).
@@ -59,9 +72,13 @@ function lueMerkki(s, l, koti) {
     koko = (Number(s.teksti?.getAttribute('font-size') ?? 0)
       || parseFloat(getComputedStyle(s.teksti ?? s.g).fontSize) || 0) * kuori;
   }
+  const x = r.left + r.width / 2 - koti.left;
+  const y = r.top + r.height / 2 - koti.top;
   return {
-    dx: (r.left + r.width / 2 - koti.left) - maa.x,
-    dy: (r.top + r.height / 2 - koti.top) - maa.y,
+    dx: x - maa.x,
+    dy: y - maa.y,
+    // Ennustevirhe: nimiö vs. ennustettu maapiste (E4b). Puuttuu ilman ennustetta.
+    ...(ennuste ? { edx: x - ennuste.x, edy: y - ennuste.y } : {}),
     koko,
   };
 }
@@ -116,6 +133,8 @@ export function luoSulavuusmittari(lauta, doc = globalThis.document) {
         kehyksia: naytteet.length,
         fps: kehysnopeus(naytteet),
         siirtyma: siirtymanMuutokset(naytteet),
+        // E4b: nimiö vs. ennustettu maapiste (null ilman ennustetta).
+        ennustevirhe: ennustevirhe(naytteet),
         koko: koonLiukuvuus(naytteet),
       };
       globalThis.console?.log?.('sulavuus', JSON.stringify(ulos));
@@ -150,6 +169,26 @@ export function siirtymanMuutokset(naytteet) {
   arvot.sort((x, y) => x - y);
   const q = (p) => arvot[Math.min(arvot.length - 1, Math.floor(arvot.length * p))] ?? 0;
   return { mediaani: Number(q(0.5).toFixed(2)), p95: Number(q(0.95).toFixed(2)), n: arvot.length, pahin };
+}
+
+/**
+ * Ennustevirhe (E4b): nimiön etäisyys ENNUSTETUSTA maapisteestä
+ * kehyksittäin (mediaani ja p95, px) — sen pitää olla ~0, kun
+ * Karttasepän jälkikehyskoukku siirtää merkit ennusteeseen. Null, jos
+ * näytteissä ei ole ennustetta.
+ */
+export function ennustevirhe(naytteet) {
+  const arvot = [];
+  for (const n of naytteet) {
+    for (const m of Object.values(n.merkit)) {
+      if (!Number.isFinite(m.edx)) continue;
+      arvot.push(Math.hypot(m.edx, m.edy));
+    }
+  }
+  if (!arvot.length) return null;
+  arvot.sort((x, y) => x - y);
+  const q = (p) => arvot[Math.min(arvot.length - 1, Math.floor(arvot.length * p))] ?? 0;
+  return { mediaani: Number(q(0.5).toFixed(2)), p95: Number(q(0.95).toFixed(2)), n: arvot.length };
 }
 
 /** Koon liukuvuus: osuus liikkeen kehyksistä, joissa koko muuttui, ja portaat. */

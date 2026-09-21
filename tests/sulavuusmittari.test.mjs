@@ -49,3 +49,15 @@ test('kehysnopeus näytteistä', () => {
   assert.equal(kehysnopeus([]), 0);
   assert.equal(kehysnopeus([nayte(0, 1, {}), nayte(500, 1, {}), nayte(1000, 1, {})]), 2);
 });
+
+test('E4b: ennustevirhe lasketaan vain näytteistä, joissa on ennustettu maapiste', async () => {
+  const { ennustevirhe } = await import('../js/pallolauta/sulavuusmittari.js');
+  assert.equal(ennustevirhe([nayte(0, 1, { a: { dx: 1, dy: 1, koko: 1 } })]), null, 'ilman ennustetta null');
+  const e = ennustevirhe([
+    nayte(0, 1, { a: { dx: 10, dy: 0, koko: 1, edx: 3, edy: 4 }, b: { dx: 0, dy: 0, koko: 1, edx: 0, edy: 0 } }),
+    nayte(16, 1, { a: { dx: 10, dy: 0, koko: 1, edx: 0, edy: 1 } }),
+  ]);
+  assert.equal(e.n, 3);
+  assert.equal(e.mediaani, 1);
+  assert.equal(e.p95, 5);
+});

@@ -117,6 +117,7 @@ import {
   PALLON_SALLITTU_VENYTYS, ULOSZOOMAUKSEN_KERROIN, kokoPallonKorkeus, laattojenVenytys,
   leveysKorkeudesta, luoPallokamera,
 } from './kamera.js';
+import * as palloApi from '../pallo.js';
 import { luoKameraloki } from './kameraloki.js';
 import { luoSulavuusmittari } from './sulavuusmittari.js';
 import {
@@ -3678,14 +3679,28 @@ export async function avaaPallolauta(ui) {
   };
   /** Piirrettyjä kehyksiä (diagnostiikka `tila`: nukkuuko pallo oikeasti). */
   let kehyksia = 0;
+  /**
+   * KAMERAN ENNUSTE (Karttasepän E4b, 21.9.2026, haara karttaseppa-
+   * ennuste): kehyskoukun mitat saavat kentän `ennuste = { dtMs, pov,
+   * nopeus }` — seuraavan kehyksen kamera — ja Karttasepän
+   * jälkikehyskoukku siirtää CSS2D-merkit ennustettuun paikkaan.
+   * Nimiöiden KOKO seuraa samaa ennustetta: kuoren kerroin lasketaan
+   * ennustetusta korkeudesta, jotta paikka ja koko ovat samasta
+   * kamerasta. Ilman kenttää kaikki on kuten E2:ssa. Viimeisin ennuste
+   * jää luettavaksi (`viimeisinKehys`) sulavuusmittarille.
+   */
+  let viimeisinKehys = null;
   /** Piirtokoukku: sama kamera, sama kehys kuin kuvalla. */
-  const pisteetKehyksessa = ({ kamera: kam, aika, sade, kuvasuhde }) => {
+  const pisteetKehyksessa = (mitat) => {
+    const { kamera: kam, aika, sade, kuvasuhde } = mitat;
     kehyksia += 1;
+    viimeisinKehys = mitat;
     const p = kam?.position ?? null;
     if (!p) return;
     const liikkui = p.x !== kehyksenKamera.x || p.y !== kehyksenKamera.y || p.z !== kehyksenKamera.z;
     if (liikkui) {
-      const korkeus = kameranKorkeus(kam, sade);
+      const ennustettu = mitat.ennuste?.pov?.altitude;
+      const korkeus = ennustettu > 0 ? ennustettu : kameranKorkeus(kam, sade);
       if (korkeus !== kuorenKorkeus) {
         kuorenKorkeus = korkeus;
         kirjoitaKuorenKerroin(korkeus, kuvasuhde);
@@ -5342,6 +5357,18 @@ export async function avaaPallolauta(ui) {
     }),
     /** Herätä nukkuva pallo (kehittäjän pikatie, savukkeet). */
     heraa,
+    /** Viimeisimmän piirretyn kehyksen mitat (kamera, pov, ennuste) — sulavuusmittari. */
+    viimeisinKehys: () => viimeisinKehys,
+    /**
+     * Pinnan piste ruudulle ENNUSTETULLA kameralla (Karttasepän
+     * pinnanRuutupiste, js/pallo.js, E4b). Nimiavaruustuonti, jotta
+     * lauta toimii myös ennen kuin apuri on olemassa: silloin null.
+     */
+    ruutupisteEnnusteesta: (pov, lat, lng) => {
+      const f = palloApi.pinnanRuutupiste;
+      if (typeof f !== 'function' || !pov) return null;
+      try { return f(pov, lat, lng, linssiPaalla()) ?? null; } catch { return null; }
+    },
     /**
      * Kyltin PIIRRETTY laatikko (savukkeet ja vartijat): se, jota
      * osumatesti käyttää, kun merkkikerroksen tween on kesken.
