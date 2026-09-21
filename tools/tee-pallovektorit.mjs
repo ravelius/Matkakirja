@@ -3,7 +3,7 @@
  *
  *   node tools/tee-pallovektorit.mjs --ne=<kansio> [--ulos=<kansio>]
  *        [--versio=2026-09-07a] [--lodit=0.1,0.03,0.008,0.004,0]
- *        [--solu=10] [--yksisolu=0.03] [--kuiva]
+ *        [--solu=10] [--yksisolu=0.03] [--harvennus=0.006] [--kuiva]
  *
  * OMISTAJAN LINJAUS (Raamattu, "PALLO LEVOSSA YHTA TERAVA KUIN
  * TASOKARTTA" › lisäys VEKTORIT SAMALLA, 6.9.2026 ilta: *"Tehdään se
@@ -62,7 +62,7 @@
  * julisteet/pallo/vektorit/<versio>/.
  */
 import { createHash } from 'node:crypto';
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { gzipSync } from 'node:zlib';
@@ -93,6 +93,18 @@ export const vektorienKansio = (versio) => `julisteet/pallo/vektorit/${versio}/`
  * @param {Array<[number, number]>} pisteet [lon, lat]
  * @param {number} tol toleranssi asteina; 0 = ei yksinkertaistusta
  */
+/** Viivan laatikon pidempi sivu asteina. */
+export function laajuus(pisteet) {
+  let lon0 = Infinity; let lon1 = -Infinity; let lat0 = Infinity; let lat1 = -Infinity;
+  for (const [lon, lat] of pisteet) {
+    if (lon < lon0) lon0 = lon;
+    if (lon > lon1) lon1 = lon;
+    if (lat < lat0) lat0 = lat;
+    if (lat > lat1) lat1 = lat;
+  }
+  return Math.max(lon1 - lon0, lat1 - lat0);
+}
+
 export function dp(pisteet, tol) {
   if (tol <= 0 || pisteet.length < 3) return pisteet;
   const pida = new Uint8Array(pisteet.length);
@@ -272,22 +284,37 @@ const laske = (viivat) => viivat.reduce((s, v) => s + v.length, 0);
  */
 export function teeVektorit({
   ne, ulos, versio, lodit, solu: SOLU, yksiSoluRaja, kuiva = false, kerro = () => {},
+  harvennus = HARVENNUS,
 }) {
   const t0 = Date.now();
-  const renkaat = meriRenkaat(ne, { harvennus: HARVENNUS });
+  /*
+   * HARVENNUS ON SAMA KUIN POLTOSSA (--rannikon-harvennus): GSHHG-
+   * rantaviivan (tools/gshhs-meri.mjs) kanssa molemmat ajetaan
+   * 0,004°:lla, Natural Earthin kanssa 0,006°:lla. Luettelo kirjaa
+   * arvon ja lähteen (lahde.json, jos kansiossa on), jotta laattojen
+   * ja vektorien yhteensopivuus on jälkikäteen todennettavissa.
+   */
+  const renkaat = meriRenkaat(ne, { harvennus });
   // Kehyksen (±180, navat) osuudet katkaisevat viivan: rannikko on polyviivoja.
   const rannikko = rannikotRenkaista(renkaat, { laatikko: { lat0: -90, lat1: 90 } });
   const rajat = lueRajaviivasto(RAJASETTI).viivat.map((v) => v.map(([lon, lat]) => [lon, lat]));
   const sha = createHash('sha256').update(readFileSync(join(ne, 'ne_10m_ocean.geojson'))).digest('hex');
   kerro(`lähteet ${((Date.now() - t0) / 1000).toFixed(1)} s: rannikko ${rannikko.length} viivaa / `
-    + `${laske(rannikko)} pistettä (${HARVENNUS}°-harvennus), `
+    + `${laske(rannikko)} pistettä (${harvennus}°-harvennus), `
     + `rajat ${rajat.length} viivaa / ${laske(rajat)} pistettä`);
   kerro(`ne_10m_ocean.geojson sha256 ${sha}`);
 
+  const lahdetiedot = existsSync(join(ne, 'lahde.json'))
+    ? JSON.parse(readFileSync(join(ne, 'lahde.json'), 'utf8')) : null;
   const luettelo = {
     versio,
-    lahteet: { ocean: { url: OCEAN_URL, sha256: sha }, rajat: RAJASETTI },
-    harvennus: HARVENNUS,
+    lahteet: {
+      ocean: lahdetiedot
+        ? { lahde: lahdetiedot.lahde, sha256: sha, gshhs_sha256: lahdetiedot.sha256 }
+        : { url: OCEAN_URL, sha256: sha },
+      rajat: RAJASETTI,
+    },
+    harvennus,
     lodit,
     solu: SOLU,
     yksiSoluRaja,
@@ -298,7 +325,17 @@ export function teeVektorit({
     const lahde = laji === 'rannikko' ? rannikko : rajat;
     luettelo.lajit[laji] = { tasot: [] };
     lodit.forEach((tol, k) => {
-      const harva = lahde.map((v) => dp(v, tol)).filter((v) => v.length > 1);
+      /*
+       * PIENET SAARET POIS KARKEILTA TASOILTA. Douglas–Peucker jättää
+       * jokaisesta renkaasta vähintään kolme pistettä, joten GSHHG:n
+       * 96 000 saarta olivat tasolla 0 (0,1°) 779 kt gzipattuna, kun
+       * Natural Earthin 6 000 rengasta olivat 127 kt. Viiva, jonka
+       * laatikko on toleranssia pienempi, on sillä tasolla alle
+       * pikselin (0,5 px/tol) — se jää pois. Tarkin taso (tol 0) pitää
+       * kaiken.
+       */
+      const harva = lahde.filter((v) => tol <= 0 || laajuus(v) >= tol)
+        .map((v) => dp(v, tol)).filter((v) => v.length > 1);
       const solu = tol >= yksiSoluRaja ? 360 : SOLU;
       const solut = soluihin(harva, solu);
       const kansio = join(ulos, laji, `l${k}`);
@@ -358,7 +395,9 @@ if (process.argv[1] === TAMA) {
   const LODIT = arg('lodit', '0.1,0.03,0.008,0.004,0').split(',').map(Number);
   const SOLU = Number(arg('solu', 10));
   const YKSI_SOLU_RAJA = Number(arg('yksisolu', 0.03));
+  const HARV = Number(arg('harvennus', HARVENNUS));
   const { taulukko } = teeVektorit({
+    harvennus: HARV,
     ne: NE,
     ulos: ULOS,
     versio: VERSIO,

@@ -139,6 +139,9 @@ const LUE = `async (kohde) => {
     janoja: janat.length,
     valimeri: vm ? { puoli: vm.puoli, dx: vm.dx, dy: vm.dy, leikkaa } : null,
     valimeriOsuma: Boolean(vmOsuma), valimeriNimio: Boolean(vmOsuma?.datum?.nimioNakyy),
+    // Onko Välimeri poltettu nimiötasoon (js/laattapyramidi.js
+    // pyramidinMerinimet): silloin elävää lappua EI kuulu olla.
+    valimeriPoltettu: (await import('/js/laattapyramidi.js')).pyramidinMerinimet().has('valimeri'),
     ladontaMs: ajat[15],
     W, H,
   };
@@ -224,10 +227,23 @@ for (const ruutu of RUUDUT) {
   vaadi(`${tunnus}: 2. nimiöllisiä eläviä nostoja ≥ ${nimioRaja} (prep ${ruutu.width >= 1000 ? 40 : 21}) ja kaupunkien nimiä yhä`,
     saapuminen.nimiollisia >= nimioRaja && saapuminen.nimia >= 1,
     JSON.stringify({ nimiollisia: saapuminen.nimiollisia, nimia: saapuminen.nimia }));
-  vaadi(`${tunnus}: 3. Välimeri on kartalla nimiöllisenä eikä leikkaa korostuskehää`,
-    saapuminen.valimeriOsuma && saapuminen.valimeriNimio && saapuminen.valimeri
-      && saapuminen.janoja > 50 && saapuminen.valimeri.leikkaa === 0,
-    JSON.stringify({ valimeri: saapuminen.valimeri, osuma: saapuminen.valimeriOsuma, nimio: saapuminen.valimeriNimio, janoja: saapuminen.janoja }));
+  /*
+   * KAKSI MAAILMAA (21.9.2026, v1985): kun ämpärin pyramidi.json:ssa on
+   * nimiötaso meri-avaimineen (Karttasepän poltto), VÄLIMERI on laatan
+   * mustetta eikä elävää lappua saa olla (MEREN NIMI EI TUPLAANNU).
+   * Ilman polttoa (vanha luettelo) elävä lappu on kartalla eikä leikkaa
+   * korostuskehää — sama vartio, tilan mukaan.
+   */
+  if (saapuminen.valimeriPoltettu) {
+    vaadi(`${tunnus}: 3. Välimeri on poltettu nimiötasoon eikä elävää meri-lappua ole (ei tuplausta)`,
+      !saapuminen.valimeriOsuma && !saapuminen.valimeri,
+      JSON.stringify({ valimeri: saapuminen.valimeri, osuma: saapuminen.valimeriOsuma }));
+  } else {
+    vaadi(`${tunnus}: 3. Välimeri on kartalla nimiöllisenä eikä leikkaa korostuskehää`,
+      saapuminen.valimeriOsuma && saapuminen.valimeriNimio && saapuminen.valimeri
+        && saapuminen.janoja > 50 && saapuminen.valimeri.leikkaa === 0,
+      JSON.stringify({ valimeri: saapuminen.valimeri, osuma: saapuminen.valimeriOsuma, nimio: saapuminen.valimeriNimio, janoja: saapuminen.janoja }));
+  }
   vaadi(`${tunnus}: 4a. saapumisnäkymässä yksikään elävä nimiö ei ylitä reunaa`,
     saapuminen.yli.length === 0, JSON.stringify(saapuminen.yli));
   vaadi(`${tunnus}: 5. ladonta pysyy nopeana (mediaani ≤ 12 ms)`,
@@ -259,19 +275,33 @@ for (const ruutu of RUUDUT) {
     const luettelo = await haePyramidinLuettelo();
     await l.saavu({ kesto: 0 }); await new Promise((v) => setTimeout(v, 500));
     const merta = (lista) => lista.filter((o) => ['valimeri', 'biskajanlahti'].includes(o.id)).map((o) => o.id).sort();
-    l.ladoHeti(); await new Promise((v) => setTimeout(v, 300));
-    const ennen = { meria: merta(l.nostot.osumat()), osumia: l.nostot.osumat().length };
+    /*
+     * KAKSI MAAILMAA (ks. vartio 3): poltetun nimiötason kanssa
+     * lähtötila on jo "avaimella" — silloin koe tehdään toisin päin:
+     * avaimet POIS → meri-laput palaavat, avaimet takaisin → katoavat.
+     */
     const vanha = luettelo.nimiotaso;
-    luettelo.nimiotaso = { versio: 'koe', tasot: [], laatastot: {}, nimiot: {
+    const poltettu = Boolean(Object.values(vanha?.nimiot ?? {}).some((n) => n?.meri));
+    if (poltettu) {
+      luettelo.nimiotaso = { ...vanha, nimiot: {} };
+      l.ladoHeti(); await new Promise((v) => setTimeout(v, 300));
+    }
+    l.ladoHeti(); await new Promise((v) => setTimeout(v, 300));
+    const ennen = { meria: merta(l.nostot.osumat()), osumia: l.nostot.osumat().length, poltettu };
+    luettelo.nimiotaso = poltettu ? vanha : { versio: 'koe', tasot: [], laatastot: {}, nimiot: {
       biskajanlahti: { luokka: 'meri', teksti: 'Biskajanlahti', meri: 'biskajanlahti', iso: null },
       valimeri: { luokka: 'meri', teksti: 'Välimeri', meri: 'valimeri', iso: null },
       provence: { luokka: 'maakunta', teksti: 'Provence', iso: 'FRA' },
     } };
     l.ladoHeti(); await new Promise((v) => setTimeout(v, 300));
     const avaimella = { meria: merta(l.nostot.osumat()), osumia: l.nostot.osumat().length };
-    luettelo.nimiotaso = vanha;
+    // Vastakoe: ilman avaimia laput palaavat (poltetulla luettelolla
+    // tyhjennetty nimiot-taulu, vanhalla luettelolla alkuperäinen).
+    luettelo.nimiotaso = poltettu ? { ...vanha, nimiot: {} } : vanha;
     l.ladoHeti(); await new Promise((v) => setTimeout(v, 300));
     const jalkeen = { meria: merta(l.nostot.osumat()), osumia: l.nostot.osumat().length };
+    luettelo.nimiotaso = vanha;
+    l.ladoHeti();
     return { ennen, avaimella, jalkeen };
   });
   tieto(`${tunnus}: merinimien tuplaus`, JSON.stringify(tuplaus));

@@ -507,6 +507,7 @@ export const HAHMOTELMA_FRA = [
     ],
     nimi: 'Étretat',
     tyyppi: 'meri',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Miksi maalarit tulivat juuri Étretat\'hen?',
