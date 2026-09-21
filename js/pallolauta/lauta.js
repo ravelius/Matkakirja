@@ -124,10 +124,13 @@ import {
 } from './sumu.js';
 import { luoKartanLiike } from '../kartta-liike.js';
 import { MERKIN_KORKEUS, luoMerkit, luoMerkkienNakyvyysTahdistus } from './merkit.js';
-import { luoNimet, nimibudjetti } from './nimet.js';
+import {
+  LIIKKUU_LUOKKA, NIMIOKERROIN_MUUTTUJA, ladonnanMitta, liukuvaNimiokerroin, luoNimet, nimibudjetti,
+} from './nimet.js';
+import { kartanMittaSallittu } from './nostoankkurit.js';
 import {
   KOHDEMERKIN_RUUTU_PX, NOSTOJEN_KATTO, PISTEIDEN_KATTO, VALON_KORKEUS, VALON_SADE,
-  luoNostot, nostonLaatikko, nostonMitta,
+  luoNostot, nostonLaatikko, nostonMitta, nostonRaakaMitta,
 } from './nostot.js';
 import {
   HELMEN_REUNAN_VARI, HELMEN_VARI, REITIN_VARIT, REITTIHELMEN_HALKAISIJA_PX,
@@ -3697,11 +3700,48 @@ export async function avaaPallolauta(ui) {
     }
     return n;
   };
+  /*
+   * NIMIÖIDEN KUORI LIUKUU SAMASTA KOUKUSTA (js/pallolauta/nimet.js KOKO
+   * LIUKUU JOKA KEHYKSESSÄ, erä E2): kotelon `--nimiokerroin` = kameran
+   * mittakaava nyt / ladonnan mittakaava, yksi tyylikirjoitus kehystä
+   * kohti ja vain kun luku muuttuu. Ladonta kirjaa oman mittansa
+   * (`kuorenLadonta`) ja palauttaa kertoimen heti, jotta pohja ja kuori
+   * vaihtuvat samassa kehyksessä myös silloin, kun pallo ei piirrä.
+   */
+  let kuorenLadonta = null;
+  let kuorenKerroin = '';
+  let kuorenKorkeus = NaN;
+  let liikkuuLuokka = false;
+  const kirjoitaKuorenKerroin = (korkeus, kuvasuhde) => {
+    const k = liukuvaNimiokerroin(kuorenLadonta, korkeus, kuvasuhde);
+    const teksti = k.toFixed(4);
+    if (teksti === kuorenKerroin) return;
+    kuorenKerroin = teksti;
+    kotelo.style.setProperty(NIMIOKERROIN_MUUTTUJA, teksti);
+  };
+  /** Kameran korkeus (altitude) kameran paikasta — sama kaava kuin kirjastolla. */
+  const kameranKorkeus = (kam, sade) => {
+    const p = kam?.position;
+    if (!p || !(sade > 0)) return NaN;
+    return (Math.hypot(p.x, p.y, p.z) - sade) / sade;
+  };
+  /** Piirrettyjä kehyksiä (diagnostiikka `tila`: nukkuuko pallo oikeasti). */
+  let kehyksia = 0;
   /** Piirtokoukku: sama kamera, sama kehys kuin kuvalla. */
-  const pisteetKehyksessa = ({ kamera: kam, aika }) => {
+  const pisteetKehyksessa = ({ kamera: kam, aika, sade, kuvasuhde }) => {
+    kehyksia += 1;
     const p = kam?.position ?? null;
     if (!p) return;
     const liikkui = p.x !== kehyksenKamera.x || p.y !== kehyksenKamera.y || p.z !== kehyksenKamera.z;
+    if (liikkui) {
+      const korkeus = kameranKorkeus(kam, sade);
+      if (korkeus !== kuorenKorkeus) {
+        kuorenKorkeus = korkeus;
+        kirjoitaKuorenKerroin(korkeus, kuvasuhde);
+      }
+      // Siirtymät pois liikkeen ajaksi (nimet.js SIIRTYMÄT POIS LIIKKEEN AJAKSI).
+      if (!liikkuuLuokka) { liikkuuLuokka = true; kotelo.classList.add(LIIKKUU_LUOKKA); }
+    }
     if (!liikkui && aika > siirtymaAsti) return;
     kehyksenKamera = { x: p.x, y: p.y, z: p.z };
     asetaPisteidenPaikat(p);
@@ -4162,6 +4202,7 @@ export async function avaaPallolauta(ui) {
        * ja lähizoomissa katon 16 px.
        */
       mitta: nostonMitta(),
+      mittaRaaka: nostonRaakaMitta(),
       elementti: turistiInfoElementti,
       asettele: asetteleTuristiInfo,
 
@@ -4270,6 +4311,17 @@ export async function avaaPallolauta(ui) {
     const nakyva = kamera.nakyvaAlue();
     const keskipiste = { x: kotelo.clientWidth / 2, y: kotelo.clientHeight / 2 };
     const pelia = merkit.maara('peli');
+    /*
+     * KUOREN POHJA VAIHTUU NYT (nimet.js LADONTA JA KUORI VAIHTUVAT
+     * SAMASSA KEHYKSESSÄ): ladonnan mitta talteen ja kerroin heti sen
+     * mukaiseksi. Korkeus luetaan samasta kaavasta kuin kehyskoukussa.
+     */
+    kuorenLadonta = ladonnanMitta(nakyva?.skaala ?? 0, saapumisenSkaala(),
+      kameranKorkeus(pallo.camera?.(), pallo.getGlobeRadius?.() ?? 100));
+    kuorenKorkeus = kuorenLadonta?.korkeus ?? NaN;
+    kirjoitaKuorenKerroin(kuorenKorkeus, kotelo.clientWidth / Math.max(1, kotelo.clientHeight));
+    // Ruutuvakioiset nostot (?nostokoko=0) eivät liu'u kuoren mukana.
+    kotelo.classList.toggle('pallolauta-nostot-ruutuvakio', !kartanMittaSallittu());
     const nostoTulos = nostot.paivita({
       nakyva,
       keskipiste,
@@ -4420,7 +4472,20 @@ export async function avaaPallolauta(ui) {
   /** Lepoladonta: ajetaan levossa, sovittelu saa ratkaista. */
   const ladoLevossaLevossa = () => {
     lepoladonta = true;
-    try { return ladoLevossa(); } finally { lepoladonta = false; }
+    try { return ladoLevossa(); } finally {
+      lepoladonta = false;
+      /*
+       * Liikkeen luokka pois vasta SEURAAVASSA kehyksessä: lepoladonnan
+       * oma pohja vaihtuu vielä ilman siirtymää, ja siirtymät ovat
+       * käytössä vasta levossa (nimet.js SIIRTYMÄT POIS LIIKKEEN AJAKSI).
+       */
+      if (liikkuuLuokka) {
+        liikkuuLuokka = false;
+        globalThis.requestAnimationFrame?.(() => {
+          if (!liikkuuLuokka) kotelo.classList.remove(LIIKKUU_LUOKKA);
+        });
+      }
+    }
   };
   const pyydaLadonta = () => {
     clearTimeout(lepoAjastin);
@@ -5211,6 +5276,45 @@ export async function avaaPallolauta(ui) {
     kameraloki: () => kameraloki.merkinnat(),
     /** Nimiöiden sulavuusmittari (js/pallolauta/sulavuusmittari.js): aloita/lopeta/yhteenveto. */
     sulavuus: null,
+    /**
+     * LAUDAN TILA YHDELLÄ LUENNALLA (Laitetestaaja 21.9.2026,
+     * docs/raportit/laitemittaus-sulavuus-20260921.md: esisiemennetty
+     * tallenne vei Marseilleen, mutta yhtään .pallolauta-nimi/-nosto-
+     * elementtiä ei syntynyt eikä syytä näkynyt). CSS2D-merkki syntyy
+     * vasta kirjaston seuraavassa kehyksessä, ja pallo NUKKUU (ks.
+     * RENDER-SILMUKKA LEPÄÄ) kun lehti on auki, kuori piilossa, sivu
+     * taustalla tai saapumiskortti auki — silloin ladonta antaa datumit
+     * mutta DOMiin ei tule mitään. Tämä kertoo, mikä näistä on päällä.
+     * Pelkkä luenta.
+     */
+    tila: () => ({
+      nukkuu: tauolla,
+      kehyksia,
+      lepoTarpeen: lepoTarpeen(),
+      kuoriPiilossa: Boolean(kuori.hidden),
+      sivuPiilossa: document.visibilityState === 'hidden',
+      saapumiskorttiAuki: Boolean(ui.arrivalDialog?.open),
+      dialogejaAuki: document.querySelectorAll('dialog[open]').length,
+      kotelo: { w: kotelo.clientWidth, h: kotelo.clientHeight },
+      kuollut: Boolean(ui.dead),
+      lento: Boolean(lento),
+      linssi: linssiPaalla(),
+      merkkeja: { nostot: merkit.maara('nostot'), nimet: merkit.maara('nimet'), peli: merkit.maara('peli') },
+      domissa: {
+        nimet: document.querySelectorAll('.pallolauta-nimi').length,
+        nostot: document.querySelectorAll('.pallolauta-nosto').length,
+      },
+      elementit: merkit.elementit(),
+      // CSS2D-kerroksen oma juuri (kirjaston .scene-container > div) ja sen lapset.
+      css2d: (() => {
+        const juuri = [...kotelo.querySelectorAll('.scene-container > div')]
+          .find((e) => e.style.position === 'absolute' && e.style.pointerEvents === 'none');
+        return juuri ? { loytyi: true, lapsia: juuri.childElementCount } : { loytyi: false, lapsia: 0 };
+      })(),
+      virheet: globalThis.__pallonVirheet?.slice(-3) ?? null,
+      korkeus: pallo.pointOfView()?.altitude ?? null,
+      versio: document.getElementById('app-version')?.textContent ?? null,
+    }),
     /**
      * Kyltin PIIRRETTY laatikko (savukkeet ja vartijat): se, jota
      * osumatesti käyttää, kun merkkikerroksen tween on kesken.

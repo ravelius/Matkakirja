@@ -19,7 +19,10 @@
  *   - maapisteen ruutukohta  = pallo.getScreenCoords(lat, lng)
  *   - nimiön ruutukohta      = sisäryhmän (.pallolauta-*-siirto)
  *                              getBoundingClientRect-keskipiste
- *   - koko                   = nostolla ryhmän scale(), nimellä font-size.
+ *   - koko                   = nostolla ryhmän scale(), nimellä font-size,
+ *                              kumpikin kerrottuna SVG-kuoren skaalalla
+ *                              (E2: kuori liukuu joka kehys, nimet.js
+ *                              KOKO LIUKUU JOKA KEHYKSESSÄ).
  *
  * SIIRTYMÄ NORMALISOIDAAN KOOLLA (siirtymanMuutokset): nimiö istuu
  * ikoninsa kyljessä koon verran sivussa, ja zoomissa etäisyys kasvaa
@@ -34,19 +37,27 @@
  * tuleva hyppy kun kamera ei liiku (lepoaskel).
  */
 
+/** Elementin laskettu skaala (matrix-muunnoksen a-alkio), 1 jos ei muunnosta. */
+function laskettuSkaala(el) {
+  if (!el) return 1;
+  const m = /matrix\(([-\d.e]+),/.exec(getComputedStyle(el).transform ?? '');
+  return m ? Math.abs(Number(m[1])) : 1;
+}
+
 /** Yhden merkin näyte: siirtymä maapisteestä (px) ja koko. */
 function lueMerkki(s, l, koti) {
   const maa = l.pallo.getScreenCoords(s.lat, s.lng, 0);
   if (!maa) return null;
   const r = s.g.getBoundingClientRect();
   if (!r.width && !r.height) return null;
+  // Kuori (svg) liukuu kehyksittäin; pohja on sisäryhmässä (E2).
+  const kuori = laskettuSkaala(s.g.closest('svg'));
   let koko = 0;
   if (s.laji === 'nosto') {
-    const m = /matrix\(([-\d.e]+),/.exec(getComputedStyle(s.g).transform ?? '');
-    koko = m ? Math.abs(Number(m[1])) : 1;
+    koko = laskettuSkaala(s.g) * kuori;
   } else {
-    koko = Number(s.teksti?.getAttribute('font-size') ?? 0)
-      || parseFloat(getComputedStyle(s.teksti ?? s.g).fontSize) || 0;
+    koko = (Number(s.teksti?.getAttribute('font-size') ?? 0)
+      || parseFloat(getComputedStyle(s.teksti ?? s.g).fontSize) || 0) * kuori;
   }
   return {
     dx: (r.left + r.width / 2 - koti.left) - maa.x,
