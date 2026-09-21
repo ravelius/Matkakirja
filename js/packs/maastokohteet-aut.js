@@ -85,6 +85,7 @@ export const MAASTOKOHTEET_AUT = [
     ],
     nimi: 'Großglockner',
     tyyppi: 'vuori',
+    taso: 1,
     kysymykset: [
       'Mikä Pasterze on?',
       'Miksi korkeus mitataan Adrianmerestä?',
@@ -188,6 +189,7 @@ export const MAASTOKOHTEET_AUT = [
     ],
     nimi: 'Tonava',
     tyyppi: 'joki',
+    taso: 1,
     kysymykset: [
       'Kuinka monen pääkaupungin läpi Tonava virtaa?',
       'Mikä Wachaun laakso on?',
@@ -298,6 +300,7 @@ export const MAASTOKOHTEET_AUT = [
     ],
     nimi: 'Hallstatt',
     tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Miksi kaivoksesta löytyy tuhansia vuosia vanhoja kenkiä?',
       'Mikä Hallstattin kulttuuri on?',
@@ -354,6 +357,7 @@ export const MAASTOKOHTEET_AUT = [
     ],
     nimi: 'Melkin luostari',
     tyyppi: 'kulttuuri',
+    taso: 1,
     kysymykset: [
       'Miksi Melk säästyi lakkauttamiselta?',
       'Kuka on Melkin Adso?',
@@ -412,6 +416,7 @@ export const MAASTOKOHTEET_AUT = [
     ],
     nimi: 'Hohensalzburgin linnoitus',
     tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Mikä Reisszug on?',
       'Milloin linnoitusta piiritettiin?',
@@ -469,6 +474,7 @@ export const MAASTOKOHTEET_AUT = [
     ],
     nimi: 'Semmeringin rata',
     tyyppi: 'tekniikka',
+    taso: 1,
     kysymykset: [
       'Miksi radalle piti kehittää oma veturityyppi?',
       'Kuinka paljon rata nousee?',
