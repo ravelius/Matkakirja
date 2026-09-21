@@ -87,7 +87,12 @@ export const RAAMATTU = {
           + 'omassa sarjassa (schedule, yksi työntekijä), PR-portissa vain toiminnalliset '
           + 'vartiot; simulaattorit kuormittavat CI-Macia -> Laitetestaaja ilmoittaa. H) '
           + 'SESSIOMÄÄRÄ: viisi vakituista + tilapäiset; tyhjäkäynti ei maksa, kaksi Opusta '
-          + 'on läpimenon raja. Kun Fablen konteksti kasvaa pitkäksi, omistaja pyytää '
+          + 'on läpimenon raja. KONTEKSTIN NOLLAUS (omistaja 21.9.2026): kun session '
+          + 'konteksti ylittää noin 70 % (Fable lukee sen get_usage-työkalulla), sessio '
+          + 'kirjoittaa luovutuksen docs/raportit/viesti-<rooli>-luovutus-<pvm>.md, '
+          + 'omistaja tyhjentää session /clear-komennolla (ei /compact, ei "Resume previous '
+          + 'session"), ja Fable lähettää aloitusviestin uudelleen luovutukseen viitaten. '
+          + 'Kun Fablen konteksti kasvaa pitkäksi, omistaja pyytää '
           + 'luovutuksen ja avaa uuden Fable-session; uusi sessio aloittaa CLAUDE.md:stä, '
           + 'tästä kohdasta ja luovutuksesta.',
         'CLAUDEN JA CHATGPT/CODEXIN AGENTTISÄÄNNÖT ERIKSEEN (omistaja 11.9.2026 '

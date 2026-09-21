@@ -303,3 +303,7 @@ nostoinventaario.mjs ei tarkistanut kuva.tiedosto-kenttaa (maa-kategoriat/maaleh
 ## UUSI PYRAMIDI TUOTANNOSSA (Karttaseppa, luettelo viety v1987:n jalkeen) (21.9.2026 klo 09.10)
 
 Pohja 2026-09-21 (GSHHG, joet, meriresepti), viivat, ranta, nostot 112 maata tasoineen, nimiot 2026-09-21e (pysyvat + koristeet), pallo 20260921a, vektorit 2026-09-21-gshhs; tarkistettu main-koodilla (saapuminen Ranskaan, Gironde z8). Edellinen luettelo ~/pyramidi-poltto/vienti-20260921/pyramidi-edellinen.json. Karttasepan luovutus 853fb80c; sessio suljettavissa; uusi Karttaseppa aloittaa atlaslehti-vedoksesta.
+
+## KONTEKSTIN NOLLAUKSEN KAAVA (omistaja 21.9.2026) (21.9.2026 klo 09.14)
+
+Sessio kirjoittaa luovutuksen tiedostoon, omistaja tekee /clear (ei /compact, ei Resume previous session), Fable lahettaa aloitusviestin uudelleen. Karttaseppa nollattu ensimmaisena (49 %), aloitusviesti lahetetty: atlaslehti-vedos. Kirjattu Raamatun TYOTAPA JA SESSIOT -kohtaan (H).
