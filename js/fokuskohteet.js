@@ -154,6 +154,14 @@ import { HAHMOTELMA_SVN } from './packs/hahmotelma-svn.js';
 import { HAHMOTELMA_EST } from './packs/hahmotelma-est.js';
 import { HAHMOTELMA_LTU } from './packs/hahmotelma-ltu.js';
 import { HAHMOTELMA_LVA } from './packs/hahmotelma-lva.js';
+import { HAHMOTELMA_TUR } from './packs/hahmotelma-tur.js';
+import { HAHMOTELMA_GBR } from './packs/hahmotelma-gbr.js';
+import { HAHMOTELMA_NOR } from './packs/hahmotelma-nor.js';
+import { HAHMOTELMA_ISL } from './packs/hahmotelma-isl.js';
+import { HAHMOTELMA_RUS } from './packs/hahmotelma-rus.js';
+import { HAHMOTELMA_UKR } from './packs/hahmotelma-ukr.js';
+import { HAHMOTELMA_CHE } from './packs/hahmotelma-che.js';
+import { HAHMOTELMA_BIH } from './packs/hahmotelma-bih.js';
 import { avaaLisakaupunginKortti } from './kaupunkinosto.js';
 import { FOKUSKOHTEET_GBR } from './packs/fokuskohteet-gbr.js';
 import { FOKUSKOHTEET_HUN } from './packs/fokuskohteet-hun.js';
@@ -578,6 +586,97 @@ KOHDE_MAAT.LTU = [...(KOHDE_MAAT.LTU ?? []), ...HAHMOTELMA_LTU];
  * kuin muilla EU-maiden hahmotelmilla.
  */
 KOHDE_MAAT.LVA = [...(KOHDE_MAAT.LVA ?? []), ...HAHMOTELMA_LVA];
+
+/*
+ * TURKIN HAHMOTELMANOSTOT (js/packs/hahmotelma-tur.js): kaksi
+ * täydentävää karttanostoa Turkin olemassa olevien 28 nostoon (kolme
+ * maastokohteet-tur.js:ssä, 25 fokuskohteet-tur.js:ssä) — Nemrut Dağı
+ * ja Safranbolu. Sama liitosreitti kuin EU-maiden hahmotelmilla, mutta
+ * Turkki ei ole EU-maa: tämä on ensimmäinen "muu Eurooppa"
+ * -hahmotelmapakka.
+ */
+KOHDE_MAAT.TUR = [...(KOHDE_MAAT.TUR ?? []), ...HAHMOTELMA_TUR];
+
+/*
+ * BRITANNIAN HAHMOTELMANOSTOT (js/packs/hahmotelma-gbr.js): 17
+ * täydentävää karttanostoa Britannian olemassa olevien 13 nostoon
+ * (10 maastokohteet-gbr.js:ssä, 3 fokuskohteet-gbr.js:ssä) — Pohjois-
+ * Irlanti, Lake District, Cornwall, teollisuushistoria (Quarry Bank
+ * Mill, Stockton ja Darlingtonin rautatie, Sohon manufaktuuri),
+ * Liverpool, Oxford, ruokaperinne (fish and chips, iltapäivätee,
+ * haggis), Skotlannin länsi (Skye, Loch Lomond, Edinburgh), Wales
+ * (Caernarfon), Dover ja York. Sama liitosreitti kuin muu Eurooppa
+ * -hahmotelmilla (Turkki yllä): rivit lisätään olemassa olevan
+ * kuratoidun ja maastolistan PERÄÄN, kumpaakaan alkuperäistä listaa
+ * ei muuteta.
+ */
+KOHDE_MAAT.GBR = [...(KOHDE_MAAT.GBR ?? []), ...HAHMOTELMA_GBR];
+
+/*
+ * NORJAN HAHMOTELMANOSTOT (js/packs/hahmotelma-nor.js): 18
+ * täydentävää karttanostoa Norjan olemassa olevien 12 nostoon
+ * (maastokohteet-nor.js) — vuonot, Lofootit, saamelaiskulttuuri,
+ * viikinkilaiva, öljyteollisuus, ruokaperinne. Sama liitosreitti kuin
+ * muu Eurooppa -hahmotelmilla: rivit lisätään olemassa olevan
+ * maastolistan PERÄÄN, sitä ei muuteta.
+ */
+KOHDE_MAAT.NOR = [...(KOHDE_MAAT.NOR ?? []), ...HAHMOTELMA_NOR];
+
+/*
+ * ISLANNIN HAHMOTELMANOSTOT (js/packs/hahmotelma-isl.js): 13
+ * täydentävää karttanostoa Islannin olemassa olevien 17 nostoon
+ * (maastokohteet-isl.js) — Reykjavík, Akureyri, Ísafjörður, Sinilóni,
+ * Seyðisfjörður, ruokaperinne (hákarl, skyr), tunnetut luontokohteet.
+ * Sama liitosreitti kuin muu Eurooppa -hahmotelmilla.
+ */
+KOHDE_MAAT.ISL = [...(KOHDE_MAAT.ISL ?? []), ...HAHMOTELMA_ISL];
+
+/*
+ * VENÄJÄN HAHMOTELMANOSTOT (js/packs/hahmotelma-rus.js): 14
+ * täydentävää karttanostoa Venäjän eurooppalaisen osan olemassa
+ * olevien 16 nostoon (maastokohteet-rus.js) — Pietari (Peterhof),
+ * Kultaisen renkaan kaupungit, ruokaperinne, avaruustekniikan
+ * pioneeri Tsiolkovski, Laatokka. Sama liitosreitti kuin muu Eurooppa
+ * -hahmotelmilla: rivit lisätään olemassa olevan maastolistan
+ * PERÄÄN, sitä ei muuteta.
+ */
+KOHDE_MAAT.RUS = [...(KOHDE_MAAT.RUS ?? []), ...HAHMOTELMA_RUS];
+
+/*
+ * UKRAINAN HAHMOTELMANOSTOT (js/packs/hahmotelma-ukr.js): 17
+ * täydentävää karttanostoa olemassa olevien 13 nostoon
+ * (maastokohteet-ukr.js) — Kiova (puuttui kokonaan) ja Odesa
+ * pääkaupunkeina/satamana, Krimi, Karpaattien hutsulikulttuuri,
+ * ruoka- ja tekniikkakohteita. Sama liitosreitti kuin muu Eurooppa
+ * -hahmotelmilla: rivit lisätään olemassa olevan maastolistan
+ * PERÄÄN, sitä ei muuteta.
+ */
+KOHDE_MAAT.UKR = [...(KOHDE_MAAT.UKR ?? []), ...HAHMOTELMA_UKR];
+
+/*
+ * SVEITSIN HAHMOTELMANOSTOT (js/packs/hahmotelma-che.js): 13
+ * täydentävää karttanostoa Sveitsin olemassa olevien 16 nostoon
+ * (maastokohteet-che.js) — Geneve, Zürich, Basel, Lugano/Ticino,
+ * Graubündenin vuoristokylät (St. Moritz, Scuol), CERN, Grande
+ * Dixence, sekä ruokaperinne (Lavaux, Vevey, Emmental). Tavoitteesta
+ * 30 jäätiin 29:ään (neljäs ruokakohde, Appenzell, pudotettiin
+ * kokonaan, ks. hahmotelma-che.js). Kytkentä oli blokattu (AUT/DEU/CHE
+ * -nimiörypäs), kunnes Karttaseppä siirsi DEU/Bodensee-nimiön (haara
+ * karttaseppa-bodensee, mergetty v1973-prepiin 21.9.2026).
+ */
+KOHDE_MAAT.CHE = [...(KOHDE_MAAT.CHE ?? []), ...HAHMOTELMA_CHE];
+
+/*
+ * BOSNIA JA HERTSEGOVINAN HAHMOTELMANOSTOT (js/packs/hahmotelma-bih.js):
+ * 14 täydentävää karttanostoa olemassa olevien 16 nostoon
+ * (4 maastokohteet-bih.js:ssä, 12 fokuskohteet-bih.js:ssä) — Sarajevo
+ * (puuttui kokonaan), talviolympiavuori Bjelašnica, Kravicen putoukset,
+ * ruoka- ja tekniikkakohteita. Ei mitään uutta Neumin rannikkokäytävään.
+ * Kytkentä oli blokattu (BIH/Neum + HRV/Ston -nimiörypäs), kunnes
+ * Karttaseppä siirsi BIH/Neum-nimiön puoli yksikköä pohjoiseen (sama
+ * haara karttaseppa-bodensee).
+ */
+KOHDE_MAAT.BIH = [...(KOHDE_MAAT.BIH ?? []), ...HAHMOTELMA_BIH];
 
 /*
  * KOHTEET SÄHKETEHTÄVÄN SISÄLTÖHAKEMISTOON (Raamattu, PÖLLÖN
