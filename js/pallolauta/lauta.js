@@ -1858,6 +1858,17 @@ export async function avaaPallolauta(ui) {
       if (!eleet.sormet.alhaalla) pallo.enablePointerInteraction?.(false);
     }, OSOITTIMEN_JALKIVIIVE_MS);
   };
+  /*
+   * Veto on alkanut, kun osoitin on siirtynyt laskeutumispaikasta yli
+   * VEDON_KYNNYS_PX. Kirjaston oma napautuskynnys on 1 px liikettä
+   * tapahtumaa kohti; tämä on sitä väljempi, joten raycast ei sammu
+   * napautuksen jitteristä ennen kuin kirjasto on lukenut osuman.
+   */
+  const VEDON_KYNNYS_PX = 4;
+  let laskeutuminen = null;
+  kotelo.addEventListener('pointerdown', (e) => { laskeutuminen = { x: e.clientX, y: e.clientY }; });
+  const vetoAlkoi = (e) => Boolean(laskeutuminen
+    && Math.hypot(e.clientX - laskeutuminen.x, e.clientY - laskeutuminen.y) > VEDON_KYNNYS_PX);
   if (kosketuslaite) {
     pallo.enablePointerInteraction?.(false);
     // Kaappausvaiheessa dokumentista: kirjaston oma pointerdown-kuuntelija
@@ -1865,6 +1876,44 @@ export async function avaaPallolauta(ui) {
     document.addEventListener('pointerdown', osoitinPaalle, true);
     kotelo.addEventListener('pointerup', osoitinPois);
     kotelo.addEventListener('pointercancel', osoitinPois);
+    /*
+     * ELEEN AJAKSI POIS MYÖS SORMEN OLLESSA ALHAALLA (sulavuus E3,
+     * 21.9.2026). Vedon ja nipistyksen aikana raycast kävi joka kehys
+     * (profiili 4×: intersectObjects 2,6 s / 31 s) eikä siitä ole
+     * hyötyä: vedosta ei synny klikkiä, ja napautuksen osuma on jo
+     * luettu laskeutumisessa. Pois heti, kun sormi on liikkunut
+     * napautuskynnyksen yli tai toinen sormi laskeutuu.
+     */
+    kotelo.addEventListener('pointermove', (e) => {
+      if (!eleet.sormet.alhaalla) return;
+      if (eleet.sormet.nipistys || vetoAlkoi(e)) pallo.enablePointerInteraction?.(false);
+    });
+  } else {
+    /*
+     * HIIRI: RAYCAST POIS VEDON JA RULLAN AJAKSI (sulavuus E3). Kirjasto
+     * raycastaa hiiren alta joka kehys hiirivihjettä varten; vedon ja
+     * zoomin aikana vihjettä ei tarvita, ja raycast on juuri se työ, joka
+     * kilpailee kehyksen kanssa. Takaisin päälle irrotuksessa (klikin
+     * osuma luetaan laskeutumisessa, kuten kosketuksella) ja
+     * OSOITTIMEN_JALKIVIIVE_MS rullan jälkeen.
+     */
+    let vedossa = false;
+    kotelo.addEventListener('pointerdown', () => { vedossa = true; });
+    kotelo.addEventListener('pointermove', (e) => {
+      if (vedossa && vetoAlkoi(e)) pallo.enablePointerInteraction?.(false);
+    });
+    const vetoLoppui = () => {
+      vedossa = false;
+      clearTimeout(osoitinAjastin);
+      osoitinAjastin = setTimeout(() => pallo.enablePointerInteraction?.(true), 0);
+    };
+    document.addEventListener('pointerup', vetoLoppui, true);
+    document.addEventListener('pointercancel', vetoLoppui, true);
+    kotelo.addEventListener('wheel', () => {
+      pallo.enablePointerInteraction?.(false);
+      clearTimeout(osoitinAjastin);
+      osoitinAjastin = setTimeout(() => { if (!vedossa) pallo.enablePointerInteraction?.(true); }, OSOITTIMEN_JALKIVIIVE_MS);
+    }, { passive: true, capture: true });
   }
 
   /* ---- laattojen esilataus ja vakaa istunto ------------------------- */
