@@ -114,6 +114,7 @@ export const HAHMOTELMA_NOR = [
     ],
     nimi: 'Geirangervuono',
     tyyppi: 'meri',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Miksi Åkernesetin epävakaa vuorenrinne on Geirangervuonon suurin uhka?',
@@ -217,6 +218,7 @@ export const HAHMOTELMA_NOR = [
     ],
     nimi: 'Lofootit',
     tyyppi: 'saari',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Miksi Lofoottien turska kuivataan telineillä ilman suolaa toisin kuin Kristiansundin klippfisk?',
@@ -633,6 +635,7 @@ export const HAHMOTELMA_NOR = [
     ],
     nimi: 'Trollstigen',
     tyyppi: 'tekniikka',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Kuka avasi Trollstigenin virallisesti, ja minä vuonna?',
@@ -735,6 +738,7 @@ export const HAHMOTELMA_NOR = [
     ],
     nimi: 'Preikestolen',
     tyyppi: 'vuori',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Mikä oli Preikestolenin vanha paikallinen nimi, ja mitä se tarkoittaa?',
