@@ -28480,6 +28480,62 @@ export const KULTTUURI_KATEGORIAT = {
    */
   // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
   // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
+  /*
+   * LUXEMBURG (21.9.2026, omistajan päätös 21.9.2026: Kypros, Luxemburg
+   * ja Malta saavat pelikaupungin). KEVYT KANSISIVU (Fablen tilaus):
+   * vain aihe 'kaupunki', ei täyttä 6-aiheista lehteä — sama ratkaisu
+   * kuin muilla kevyillä pelikaupungeilla (KEVYET_FOKUSVIRRAT).
+   * Kansikuvat samat, joiden lisenssi on tarkistettu Commonsin
+   * imageinfo/extmetadata-rajapinnasta 21.9.2026 (maakartat.js
+   * KAUPUNKIKARTAT.luxemburg käyttää osaa samoista).
+   */
+  luxemburg: [
+    {
+      id: 'kaupunki',
+      nimi: 'Luxemburg',
+      johdanto: 'Kaupunki seisoo kalliolla, jonka Alzette- ja '
+        + 'Pétrusse-joet ovat kaivaneet syviksi rotkoiksi — niin '
+        + 'vahvalla linnoituksella, että sitä kutsuttiin Pohjoisen '
+        + 'Gibraltariksi.',
+      kansikuvat: [
+        {
+          tiedosto: 'Luxembourg City from the Bock Casements.jpg',
+          vuosi: '2024',
+          lahde: 'P. Hughes, Wikimedia Commons (CC BY-SA 4.0)',
+          lyhyt: 'Luxemburgin alakaupunki Bockin kasemattien kalliolta nähtynä.',
+          selite: 'Bock-kallio on kaupungin syntypaikka: kreivi '
+            + 'Siegfried rakensi tänne linnansa vuonna 963. Kalliolta '
+            + 'avautuu näkymä alas Alzette-joen mutkaan.',
+        },
+        {
+          tiedosto: 'Luxembourg Adolphe Bridge over Petrusse valley.jpg',
+          vuosi: '2009',
+          lahde: 'Cayambe, Wikimedia Commons (CC BY-SA 3.0)',
+          lyhyt: 'Adolphe-silta kaartuu Pétrussen laakson yli.',
+          selite: 'Adolphe-silta rakennettiin vuosina 1900–1903 '
+            + 'yhdistämään vanhakaupunki ja asema-alue Pétrussen syvän '
+            + 'laakson yli.',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Luxembourg City Square Guillaume II towards Notre-Dame Cathedral April 2011.jpg',
+          lahde: 'Cayambe, Wikimedia Commons (CC BY-SA 3.0)',
+          lyhyt: 'Guillaume II:n aukio raatihuoneineen, taustalla Notre-Damen katedraalin tornit.',
+          selite: 'Guillaume II:n aukio raatihuoneineen; taustalla '
+            + 'näkyvät Notre-Damen katedraalin tornit.',
+        },
+        kappale: 'Luxemburg on suurherttuakunnan pääkaupunki ja koko '
+          + 'maan ainoa suuri kaupunki. Vanhakaupunki on kallioisella '
+          + 'niemekkeellä jyrkkien jokilaaksojen välissä, ja sen alle '
+          + 'louhitut kasemattikäytävät tekivät siitä vuosisatojen ajan '
+          + 'yhden Euroopan vahvimmista linnoituksista. Lontoon '
+          + 'sopimus 1867 päätti suurvaltojen kilpailun kaupungista: '
+          + 'linnoitus puretaan, ja Luxemburgista tulee pysyvästi '
+          + 'puolueeton.',
+      },
+    },
+  ],
   nikosia: [
     {
       id: 'kaupunki',
@@ -64772,6 +64828,53 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Cabbage soup',
         },
       ],
+    },
+  ],
+
+  /*
+   * VALLETTA (21.9.2026; omistajan päätös 19.9.2026: Maltan
+   * pelikaupunki Valletta). KEVYT KANSISIVU — vain aihe `kaupunki`,
+   * ei täyttä 6-aiheista lehteä (sama linjaus kuin muilla tuoreilla
+   * pelikaupungeilla ennen täyttä sisältöerää). Kuvat Commonsista,
+   * lisenssit ja tekijät luettu extmetadata-rajapinnasta 21.9.2026.
+   */
+  valletta: [
+    {
+      id: 'kaupunki',
+      nimi: 'Valletta',
+      johdanto: 'Kalkkikivestä veistetty linnoituskaupunki kahden '
+        + 'sataman välissä — koko vanhakaupunki on ruutukaavaa, jonka '
+        + 'ritarikunta piirsi suoraksi jo vuonna 1566.',
+      kansikuvat: [
+        {
+          tiedosto: 'Valletta old skyline.jpg',
+          lyhyt: 'Ilmakuva Vallettasta: Suurmestarin palatsi etualalla.',
+          selite: 'Ilmakuva Vallettan ruutukaavasta ja kalkkikivikattojen '
+            + 'merestä; etualalla kohoaa Suurmestarin palatsin katto.',
+          lahde: 'Airphotomalta, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Malta - Valletta - St. James Bastion - 360° Panorama 01.jpg',
+          lyhyt: 'St. James -bastionin paksut kalkkikivimuurit.',
+          selite: 'St. James -bastionin paksut kalkkikivimuurit, osa '
+            + 'ritarikunnan 1500-luvulla rakentamaa linnoitusrengasta '
+            + 'Vallettan ympärillä.',
+          lahde: 'Txllxt TxllxT, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Auberge de Castille, Valletta, Malta.jpg',
+          lyhyt: 'Auberge de Castillen barokkijulkisivu.',
+          selite: 'Auberge de Castillen koristeellinen barokkijulkisivu '
+            + '— yksi ritarikunnan komeimmista majataloista.',
+          lahde: 'Jaakko.kulta, Wikimedia Commons (CC BY 4.0)',
+        },
+        kappale: 'Valletta on vain 0,61 neliökilometrin kokoinen, joten '
+          + 'koko vanhakaupungin kiertää jalan muutamassa tunnissa. '
+          + 'Kadut nousevat ja laskevat jyrkästi niemen muodon mukaan, '
+          + 'ja monessa kohdassa portaat korvaavat ajoradan kokonaan.',
+      },
     },
   ],
 

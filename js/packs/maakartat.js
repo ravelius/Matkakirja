@@ -7449,6 +7449,207 @@ export const KAUPUNKIKARTAT = {
    * 20.9.2026), joten niillä on oma tiivis `teksti` en-Wikipedian
    * pohjalta.
    */
+  /*
+   * LUXEMBURG (21.9.2026, samalla kaavalla kuin Bryssel, Ljubljana ja
+   * Košice; omistajan päätös 21.9.2026: Kypros, Luxemburg ja Malta
+   * saavat pelikaupungin). Kohdekartta piirretty
+   * tools/piirra-kaupunkikartta.mjs luxemburg (paperi) ja --vari
+   * (värikartta), OpenStreetMapin aineistosta. Kuusi kohdetta,
+   * järjestys lännestä itään; koordinaatit en-Wikipediasta
+   * (tarkistettu 21.9.2026). Kaikilla kuudella on oma `teksti`, koska
+   * fi-Wikipediassa ei ole artikkelia yhdestäkään näistä kohteista
+   * erikseen (haku 21.9.2026) — sama ratkaisu kuin Košicella.
+   *
+   * Tämän kartan lisäys ratkaisee samalla nostoräikän: Bock-kalliolla
+   * on kolme lähizoomi-hahmotelmanostoa (hahmotelma-luxembourg,
+   * -mondorf, -altmunster; ks. js/packs/hahmotelma-lux.js), jotka
+   * olivat "kaupungin kohdalla" syyllä "kohdekarttaa ei ole" ennen
+   * tätä lisäystä — nyt kartta on olemassa, ja lahi:true-lippu vie ne
+   * takaisin lähizoomi-luokkaan (tools/tarkista-nostopaikat.mjs
+   * kaupunginKohdallaSyy tarkistaa kartan ennen lahi-lippua).
+   */
+  luxemburg: {
+    polku: 'assets/kartat/luxemburg-keskusta.png',
+    numeroympyrat: true,
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 49.6128, etela: 49.6065, lansi: 6.1245, ita: 6.139 },
+    piirtoRajat: { pohjoinen: 49.61469, etela: 49.60461, lansi: 6.12015, ita: 6.14335 },
+    varikartta: 'assets/kartat/luxemburg-varikartta.png',
+    esittely: 'Luxemburgin vanhakaupunki seisoo kalliolla, jonka Alzette- '
+      + 'ja Pétrusse-joet ovat kaivaneet syviksi rotkoiksi — juuri tämä '
+      + 'muoto teki siitä niin vahvan linnoituksen, että sitä kutsuttiin '
+      + 'Pohjoisen Gibraltariksi. Isoisän matkan aikaan linnoitusta '
+      + 'puretaan Lontoon sopimuksen vaatimuksesta: Bock-kallion '
+      + 'kasemattikäytäviä louhitaan auki, ja entiset muurinreunat ovat '
+      + 'juuri muuttumassa kävelyteiksi. Suurherttuallinen palatsi ja '
+      + 'Notre-Damen katedraali ovat kaupungin hallinnollinen ja '
+      + 'hengellinen keskus, ja Guillaume II:n aukio niiden välissä on '
+      + 'kaupungin sydän. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      {
+        nimi: 'Adolphe-silta', lat: 49.6083, lon: 6.1270,
+        aika: '1900–1903',
+        teksti: 'Adolphe-silta yhdistää vanhankaupungin ja asema-alueen '
+          + 'Pétrussen laakson yli. Isoisän matkan aikaan siltaa ei vielä '
+          + 'ole: laakson ylitti tuolloin vain kapeampi, vuosina '
+          + '1859–1861 rakennettu Passerelle. Insinöörit Paul Séjourné ja '
+          + 'Albert Rodange suunnittelivat Adolphe-sillan, joka '
+          + 'nimettiin suurherttua Adolphelle ja valmistui vuonna 1903; '
+          + 'valmistuessaan sen 84,65 metrin kivikaari oli maailman '
+          + 'suurin.'
+          + '\n\n'
+          + 'Sillasta tuli nopeasti Luxemburgin itsenäisyyden '
+          + 'tunnuskuva, ja paikalliset kutsuvat sitä yhä Uudeksi '
+          + 'sillaksi erotukseksi vanhasta Passerellesta. Ajoradan alle '
+          + 'rakennettiin vuonna 2018 toinen kansi pyöräilijöille, ja '
+          + 'vuodesta 2020 sillan yli on kulkenut myös raitiovaunu.',
+        kuvat: [
+          {
+            tiedosto: 'Luxembourg Adolphe Bridge over Petrusse valley.jpg',
+            lyhyt: 'Adolphe-sillan kivikaari kaartuu korkealla Pétrussen laakson yli.',
+            selite: 'Adolphe-sillan kivikaari kaartuu Pétrussen laakson '
+              + 'yli; valmistuessaan 1903 kaari oli maailman suurin.',
+            lahde: 'Cayambe, Wikimedia Commons (CC BY-SA 3.0)',
+          },
+        ],
+      },
+      {
+        nimi: 'Guillaume II:n aukio', lat: 49.6108, lon: 6.1303,
+        teksti: 'Guillaume II:n aukio eli kansanomaisesti Knuedler on '
+          + 'vanhankaupungin pääaukio. Paikalla seisoi keskiajalta asti '
+          + 'fransiskaaniluostari, jonka Ranskan vallankumoussotilaat '
+          + 'ottivat haltuunsa vuonna 1797; Napoleon lahjoitti tontin '
+          + 'kaupungille 1804. Nykyinen raatihuone rakennettiin '
+          + 'vuosina 1829–1838 belgialaisen arkkitehti Justin Remontin '
+          + 'piirustusten mukaan, ja suurherttua Vilhelm II paljasti '
+          + 'sekä raatihuoneen että oman ratsastajapatsaansa aukiolla '
+          + 'heinäkuussa 1844.'
+          + '\n\n'
+          + 'Aukio on isoisän matkan aikaan jo vakiintunut kaupungin '
+          + 'kokoontumispaikka, ja sen laidalla raatihuone edustaa '
+          + 'kaupungin omaa hallintoa suurherttuan hallinnon rinnalla.',
+        kuvat: [
+          {
+            tiedosto: 'Luxembourg City Square Guillaume II towards Notre-Dame Cathedral April 2011.jpg',
+            lyhyt: 'Guillaume II:n aukio ja ratsastajapatsas, taustalla Notre-Damen katedraalin tornit.',
+            selite: 'Guillaume II:n aukio raatihuoneineen ja '
+              + 'ratsastajapatsaineen; taustalla näkyvät Notre-Damen '
+              + 'katedraalin tornit.',
+            lahde: 'Cayambe, Wikimedia Commons (CC BY-SA 3.0)',
+          },
+        ],
+      },
+      {
+        nimi: 'Notre-Damen katedraali', lat: 49.6097, lon: 6.1316,
+        aika: '1613–',
+        teksti: 'Notre-Damen kirkon peruskivi muurattiin vuonna 1613 '
+          + 'jesuiittakirkoksi, ja rakennus yhdistää myöhäisgoottilaisia '
+          + 'muotoja renessanssin koristeisiin. Kirkossa säilytetään '
+          + 'Lohduttajan Neitsyt Marian kunnioitettua kuvaa, jolle paavi '
+          + 'Pius IX myönsi kruunaamisluvan vuonna 1866 — kruunajaiset '
+          + 'pidettiin seuraavana vuonna, aivan isoisän matkaa edeltävinä '
+          + 'vuosina. Kirkko korotettiin hiippakunnan '
+          + 'pääkirkoksi vasta 1870, joten isoisän matkan aikaan se on '
+          + 'tuoreeltaan katedraali.'
+          + '\n\n'
+          + 'Kirkon krypta on kaupungin hallitsijasuvun hautapaikka, ja '
+          + 'sinne on haudattu muun muassa kreivi Johan Sokea 1300-'
+          + 'luvulta. Nykyistä laajennettua muotoaan katedraali ei '
+          + 'vielä 1873 ole: sivulaivat ja kuori kasvavat vasta '
+          + '1930-luvulla.',
+        kuvat: [
+          {
+            tiedosto: 'Luxembourg Cathedrale Notre-Dame.jpg',
+            lyhyt: 'Notre-Damen katedraalin kaksi suippotornia ja pääjulkisivu.',
+            selite: 'Notre-Damen katedraalin pääjulkisivu ja kaksi '
+              + 'suippotornia; peruskivi muurattiin vuonna 1613.',
+            lahde: 'Wolfgang Staudt, Wikimedia Commons (CC BY 2.0)',
+          },
+        ],
+      },
+      {
+        nimi: 'Suurherttuallinen palatsi', lat: 49.6109, lon: 6.1328,
+        aika: '1572–',
+        teksti: 'Rakennus, joka tunnetaan nykyään Suurherttuallisena '
+          + 'palatsina, rakennettiin vuonna 1572 kaupungintaloksi ja '
+          + 'sitä laajennettiin useaan otteeseen. Isoisän matkan aikaan '
+          + 'se toimii suurherttuakunnan hallintorakennuksena '
+          + 'henkilöunionin ajan käytäntöjen mukaan: varsinainen '
+          + 'hallitsija, Alankomaiden kuningas Vilhelm III, asuu '
+          + 'Haagissa, ja paikan päällä maata edustaa kuvernööri.'
+          + '\n\n'
+          + 'Julkisivun maureilaisvaikutteinen koristelu ja kaiverretut '
+          + 'ikkunapielet ovat renessanssiajalta, ja rakennus on '
+          + 'vaihtanut käyttötarkoitustaan moneen kertaan vuosisatojen '
+          + 'varrella — se on ollut myös kaupungin oikeustalo. Vasta '
+          + 'vuodesta 1890, kun Luxemburgista tulee itsenäisen '
+          + 'suvun hallitsema, siitä tulee virallisesti hallitsijan oma '
+          + 'palatsi.',
+        kuvat: [
+          {
+            tiedosto: 'Luxembourg Grand Ducal Palace 01.jpg',
+            lyhyt: 'Suurherttuallisen palatsin renessanssijulkisivu kadulta nähtynä.',
+            selite: 'Suurherttuallisen palatsin renessanssijulkisivu; '
+              + 'rakennus on alun perin vuodelta 1572.',
+            lahde: 'Cayambe, Wikimedia Commons (CC BY-SA 3.0)',
+          },
+        ],
+      },
+      {
+        nimi: 'Chemin de la Corniche', lat: 49.6098, lon: 6.1345,
+        teksti: 'Chemin de la Corniche kulkee entisten muurien harjalla '
+          + 'Bock-kalliolta Pyhän Hengen linnoituksen suuntaan, ja siltä '
+          + 'avautuu näkymä alas Alzette-joen mutkaan, Grundin '
+          + 'alakaupunkiin ja Rhamin tasanteelle. Käytävä oli vielä '
+          + '1860-luvulla jyrkkine portaineen hankala kulkea, mutta '
+          + 'linnoituksen purku on juuri tasoittanut sen — muureista '
+          + 'irrotettuja ampuma-aukkoja ja harjannetta muutetaan '
+          + 'kävelytieksi samaa vauhtia kuin muutakin kaupunkia.'
+          + '\n\n'
+          + 'Myöhemmin, 1900-luvulla, kirjailija Batty Weber antaa '
+          + 'kulkutielle lempinimen "Euroopan kaunein parveke" — isoisän '
+          + 'matkan aikaan se on vielä tuore, äskettäin avattu näköalapaikka.',
+        kuvat: [
+          {
+            tiedosto: 'Chemin de la Corniche, Luxembourg City (5809014418).jpg',
+            lyhyt: 'Chemin de la Corniche seuraa entistä muurinharjaa Alzette-joen laakson yllä.',
+            selite: 'Chemin de la Corniche seuraa entistä muurinharjaa '
+              + 'korkealla Alzette-joen laakson yllä.',
+            lahde: 'yeowatzup, Wikimedia Commons (CC BY 2.0)',
+          },
+        ],
+      },
+      {
+        nimi: 'Bockin kasematit', lat: 49.6117, lon: 6.1369,
+        aika: '963',
+        teksti: 'Bock-kallio on koko Luxemburgin kaupungin syntypaikka: '
+          + 'kreivi Siegfried hankki paikan vuonna 963 ja rakensi '
+          + 'sille Lucilinburhuc-nimisen linnansa. Kallion sisään '
+          + 'louhittiin vuosisatojen kuluessa yli kaksikymmentä '
+          + 'kilometriä maanalaisia käytäviä, kasemattteja, joihin '
+          + 'mahtui tykkiasemia, varastoja ja jopa leipomoita — ne '
+          + 'tekivät linnoituksesta niin vahvan, että ranskalainen '
+          + 'sotilasinsinööri Lazare Carnot kutsui sitä maailman '
+          + 'parhaaksi heti Gibraltarin jälkeen.'
+          + '\n\n'
+          + 'Isoisän matkan aikaan käytäviä puretaan Lontoon sopimuksen '
+          + '1867 vaatimuksesta: purkutyö on kesken ja jatkuu vielä '
+          + 'vuosia. Kaikkea ei silti hävitetä — osa kasemateista '
+          + 'jätetään paikalleen kaupungin historian muistona.',
+        kuvat: [
+          {
+            tiedosto: 'Bock casemates, Luxembourg - panoramio.jpg',
+            lyhyt: 'Bock-kallion kasemattien louhittu käytävä ja ampuma-aukko.',
+            selite: 'Bock-kallion kasemattien louhittu käytävä; kallion '
+              + 'sisään on louhittu yli kaksikymmentä kilometriä '
+              + 'maanalaisia käytäviä.',
+            lahde: 'Николай Максимович, Wikimedia Commons (CC BY 3.0)',
+          },
+        ],
+      },
+    ],
+  },
   bryssel: {
     polku: 'assets/kartat/bryssel-keskusta.png',
     // Numeroidut ympyrät kartalla ilman miniatyyrejä (omistaja 20.9.2026).
@@ -7849,6 +8050,119 @@ export const KAUPUNKIKARTAT = {
             lahde: 'Ladislav Luppa, Wikimedia Commons (CC BY-SA 4.0)',
           },
         ],
+      },
+    ],
+  },
+  /*
+   * VALLETTA (21.9.2026; omistajan päätös 19.9.2026: Maltan pelikaupunki
+   * Valletta). Numeroidut ympyrät kartalla ilman miniatyyrejä (sama
+   * ratkaisu kuin Košicella 20.9.2026) — pienoismalleja ei ole vielä
+   * piirretty. Koordinaatit haettu en-Wikipedian ja Wikidatan
+   * rajapinnoista (action=query&prop=coordinates, wbgetentities P625)
+   * 21.9.2026. Piirityskello-muistomerkki on 1900-lukua eikä ollut
+   * olemassa isoisän matkan aikaan — teksti selittää tämän suoraan,
+   * samaan tapaan kuin Košicen Valtionteatterilla.
+   */
+  valletta: {
+    polku: 'assets/kartat/valletta-keskusta.png',
+    numeroympyrat: true,
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 35.9035, etela: 35.8925, lansi: 14.5085, ita: 14.5205 },
+    // Laajennus 1,6 samasta keskipisteestä (piirra-kaupunkikartta --vari).
+    piirtoRajat: { pohjoinen: 35.9068, etela: 35.8892, lansi: 14.5049, ita: 14.5241 },
+    varikartta: 'assets/kartat/valletta-varikartta.png',
+    esittely: 'Vallettan koko vanhakaupunki mahtuu kapealle niemelle Grand '
+      + 'Harbourin ja Marsamxett-sataman välissä. Ritarikunta rakensi '
+      + 'kaupungin ruutukaavaan suuren piirityksen 1565 jälkeen, ja '
+      + 'isoisän matkan aikaan vuonna 1873 kaupunki on brittiläisen '
+      + 'Maltan pääkaupunki: paksut kalkkikivimuurit, Suurmestarin '
+      + 'palatsi ja Pyhän Johanneksen konkatedraali ovat yhä samat, '
+      + 'mutta ritarikunnan majataloista on tullut sotilashallinnon '
+      + 'virastoja. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      {
+        nimi: 'Auberge de Castille', lat: 35.895833, lon: 14.511389,
+        aika: '1744',
+        teksti: 'Auberge de Castille on rakennettu vuonna 1744 arkkitehti '
+          + 'Andrea Bellin suunnitelmien mukaan Kastilian, Leónin ja '
+          + 'Portugalin ritarikieliryhmän majataloksi, ja sen '
+          + 'koristeellinen barokkijulkisivu on Vallettan komeimpia.'
+          + '\n\n'
+          + 'Ritarikunta lähti saarelta vuonna 1798 eikä palannut, ja '
+          + 'isoisän matkan aikaan rakennus toimii jo Britannian armeijan '
+          + 'Maltan-joukkojen päämajana. Sotilashallinto pitää siitä '
+          + 'kiinni pitkään: rakennus siirtyy vasta 1900-luvulla Maltan '
+          + 'omalle hallitukselle.',
+        kuvat: [
+          {
+            tiedosto: 'Auberge de Castille, Valletta, Malta.jpg',
+            lyhyt: 'Auberge de Castillen koristeellinen barokkijulkisivu Vallettassa.',
+            selite: 'Auberge de Castillen barokkijulkisivu, jonka Andrea '
+              + 'Belli suunnitteli 1744. Rakennus toimi 1800-luvulla '
+              + 'Britannian armeijan Maltan-joukkojen päämajana.',
+            lahde: 'Jaakko.kulta, Wikimedia Commons (CC BY 4.0)',
+          },
+        ],
+      },
+      {
+        nimi: 'Pyhän Johanneksen ko-katedraali', lat: 35.897778, lon: 14.512778,
+        wiki: "St John's Co-Cathedral",
+      },
+      {
+        nimi: 'Suurmestarin palatsi', lat: 35.898611, lon: 14.514167,
+        wiki: 'Suurmestarin palatsi (Valletta)',
+      },
+      {
+        nimi: 'Yläbarrakan puutarhat', lat: 35.894722, lon: 14.512222,
+        aika: '1661',
+        teksti: 'Yläbarrakan puutarha rakennettiin vuonna 1661 Italian '
+          + 'ritarikieliryhmän yksityiseksi puistoksi Grand Harbourin '
+          + 'yllä kohoavalle bastionille. Puisto avattiin yleisölle '
+          + 'vuonna 1824, joten isoisän matkan aikaan se on jo suosittu '
+          + 'kävelypaikka.'
+          + '\n\n'
+          + 'Puutarhan alapuolella, Alabarrakan tasanteella, on '
+          + 'tervehdyspatteri, josta ammutaan kunnialaukauksia laivojen '
+          + 'saapuessa satamaan — perinne, joka jatkuu vielä nykyäänkin '
+          + 'joka päivä keskipäivällä.',
+        kuvat: [
+          {
+            tiedosto: 'Malta - Valletta - Upper Barrakka Gardens 15 Terraced Arches 1661 - Saluting Battery.jpg',
+            lyhyt: 'Yläbarrakan puutarhan kaariholvit ja tervehdyspatteri Grand Harbourin yllä.',
+            selite: 'Yläbarrakan puutarhan vuoden 1661 kaariholvit ja '
+              + 'niiden alla oleva tervehdyspatteri Grand Harbourin yllä.',
+            lahde: 'Txllxt TxllxT, Wikimedia Commons (CC BY-SA 4.0)',
+          },
+        ],
+      },
+      {
+        nimi: 'Piirityskello-muistomerkki', lat: 35.897592, lon: 14.518283,
+        aika: '1992',
+        teksti: 'Piirityskello-muistomerkki ei ole vielä isoisän matkan '
+          + 'aikaan olemassa: pyöreä pylväikkö ja sen sisällä riippuva '
+          + 'pronssikello paljastettiin vasta 1992, ja ne muistavat '
+          + 'toista maailmansotaa, ei ritarikunnan aikoja. Vuosina '
+          + '1940–1942 Malta kesti raskaan ilmapiirityksen, josta koko '
+          + 'saari palkittiin Yrjön ristillä.'
+          + '\n\n'
+          + 'Kello soi joka päivä keskipäivällä muistoksi piirityksessä '
+          + 'kuolleista. Muistomerkki seisoo Alabarrakan puutarhan alla, '
+          + 'samalla kalliolla, josta ritarikunnan aikainen '
+          + 'tervehdyspatteri tähtää satamaan.',
+        kuvat: [
+          {
+            tiedosto: 'Siege Bell War Memorial, Valletta.jpg',
+            lyhyt: 'Piirityskello-muistomerkin pylväikkö Grand Harbourin yllä.',
+            selite: 'Piirityskello-muistomerkin pyöreä pylväikkö Grand '
+              + 'Harbourin yllä. Muistomerkki paljastettiin 1992 toisen '
+              + 'maailmansodan Maltan-piirityksen muistoksi.',
+            lahde: 'Kikku33, Wikimedia Commons (CC BY-SA 4.0)',
+          },
+        ],
+      },
+      {
+        nimi: 'Pyhän Elmon linnake', lat: 35.902, lon: 14.5188,
+        wiki: 'Fort Saint Elmo',
       },
     ],
   },
