@@ -1102,4 +1102,103 @@ export const HAHMOTELMA_NOR = [
         + 'Dovrefjellin kannasta on sittemmin vaeltanut myös Ruotsin puolelle.',
     },
   },
+  {
+    id: 'hahmotelma-steinvikholm',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/nor-nosto-steinvikholm-add11131.jpg',
+      lyhyt: 'Ilmakuva Steinvikholm linnan raunioista pienellä saarella Trondheimsfjordissa.',
+      selite: 'Kuvassa nähdään linnan muurien ja tornien rauniot ilmasta kuvattuna, ympärillä avautuu '
+        + 'vuonon vesi ja saaren vihreä ranta.',
+      lahde: 'Valokuva: MariusVa, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'MariusVa',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Steinvikholm_Slott_Fugleperspektiv.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Steinvikholm linna',
+    tyyppi: 'historia',
+    lahi: true,
+    kysymykset: [
+      'Kuka rakennutti Steinvikholm linnan ja miksi?',
+      'Mitä linnalle tapahtui, kun arkkipiispa pakeni uskonpuhdistuksen myötä?',
+    ],
+    korostukset: ['Olav Engelbrektsson|Olav Engelbrektsson', 'uskonpuhdistus|uskonpuhdistus'],
+    nappi: 'Arkkipiispan linnoitus, joka jätettiin rappeutumaan uskonpuhdistuksen jälkeen',
+    // 10.81306 E / 63.54361 N — en-Wikipedia "Steinvikholm Castle" (coord-malline)
+    laudat: {
+      maailmankartta: { x: 6193.8, y: 744.1 },
+      europe: { x: 418.8, y: 222.4 },
+    },
+    teksti: 'Norjan viimeinen katolinen arkkipiispa Olav Engelbrektsson rakennutti Steinvikholm linnan '
+      + 'vuosina 1525–1532 pienelle saarelle Trondheimsfjordissa lähellä Trondheimia. Linnasta tuli '
+      + 'keskiajan Norjan suurin linnoitus, ja se toimi arkkipiispan tukikohtana tämän vastustaessa '
+      + 'Tanskan kuninkaiden Fredrik I:n ja Kristian III:n valtaa. Huhtikuussa 1537 uskonpuhdistus '
+      + 'kukisti arkkipiispan vallan, ja Engelbrektsson pakeni maanpakoon Alankomaihin, jossa hän kuoli '
+      + 'seuraavana vuonna. Sen jälkeen linna jätettiin autioksi, ja 1600-luvulta 1800-luvulle sen '
+      + 'kivimuureja louhittiin ja myytiin rakennusaineeksi, kun Tanska-Norjan viranomaiset sallivat '
+      + 'katolisen vastarinnan symbolin hajoamisen. Nykyään rauniolinnan hoidosta vastaa '
+      + 'muinaismuistoyhdistys, ja saarella järjestetään joka elokuu ooppera arkkipiispan tarinasta.',
+    lahde: 'en-Wikipedia "Steinvikholm Castle", johdanto-osa ja osiot "History", "Present day" '
+      + '(tarkistettu 21.9.2026).',
+    ihme: {
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-steinvikholm-loistoaika.jpg',
+      kadonnut: false,
+      selite: 'Loistokaudellaan 1530-luvulla Steinvikholm oli arkkipiispa Olav Engelbrektssonin '
+        + 'linnoitettu residenssi, jonka muurien sisällä käytiin katolisen kirkon viimeistä '
+        + 'valtataistelua Norjassa.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: '
+        + 'en-Wikipedia "Steinvikholm Castle", tarkistettu 21.9.2026.',
+      url: 'https://en.wikipedia.org/wiki/Steinvikholm_Castle',
+    },
+  },
+  {
+    id: 'hahmotelma-selje',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/nor-nosto-selje-07b74766.jpg',
+      lyhyt: 'Seljan luostarin kivirauniot Seljan saarella Norjan länsirannikolla.',
+      selite: 'Kuvassa on luostarikirkon ja -rakennusten harmaakivimuurien rauniot ruohoisella '
+        + 'saarella, taustalla vuoria ja merta.',
+      lahde: 'Valokuva: Svein-Magne Tunli, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Svein-Magne Tunli',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Selje_kloster_Abbey_Selja.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Seljan luostari',
+    tyyppi: 'historia',
+    lahi: true,
+    kysymykset: [
+      'Kenen legendaan Seljan luostarisaari liittyy?',
+      'Mikä tapahtuma heikensi luostaria vuonna 1305?',
+    ],
+    korostukset: ['Sunniva|Sunniva', 'Finnboge|Finnboge'],
+    nappi: 'Pyhän Sunnivan luostarisaari, joka autioitui keskiajan lopulla',
+    // 5.29694 E / 62.05111 N — en-Wikipedia "Selja Abbey" (coord-malline)
+    laudat: {
+      maailmankartta: { x: 6009.9, y: 821.9 },
+      europe: { x: 312.9, y: 261.7 },
+    },
+    teksti: 'Seljan saarelle liittyy yksi Norjan vanhimmista kristillisistä legendoista: perimätiedon '
+      + 'mukaan irlantilainen kuninkaantytär Sunniva pakeni pakkoavioliittoa laivalla ja haaksirikkoutui '
+      + 'saarelle 900-luvulla, jossa hän kuoli piileskellessään luolassa vainoojiaan. Hänen '
+      + 'pyhäinjäännöstensä ympärille syntyi suosittu pyhiinvaelluskohde, ja benediktiiniluostari '
+      + 'perustettiin saarelle noin vuonna 1100, puoliväliin Bergenin ja Nidarosin merireittiä. Luostari '
+      + 'koki takaiskun tuhoisassa tulipalossa vuonna 1305, ja mahdollisesti musta surma vuonna 1349 '
+      + 'heikensi yhteisöä entisestään, vaikka luostarielämä saattoi jatkua vielä 1400-luvun puoliväliin '
+      + 'asti. Piispa Finnboge erotti viimeisen apotin virastaan 1460–1470-luvuilla ja siirsi luostarin '
+      + 'maaomaisuuden Bergenin hiippakunnalle, mikä lopetti luostaritoiminnan saarella. Koska saarelle '
+      + 'ei myöhemmin asetuttu asumaan, kivirauniot ovat säilyneet hyvin nykypäivään.',
+    lahde: 'en-Wikipedia "Selja Abbey", johdanto-osa ja osiot "History", "Legend of Saint Sunniva" '
+      + '(tarkistettu 21.9.2026).',
+    ihme: {
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-selje-loistoaika.jpg',
+      kadonnut: false,
+      selite: 'Kukoistuskaudellaan 1100–1200-luvuilla Seljan luostarisaari oli vilkas pyhiinvaelluskohde, '
+        + 'jonne matkalaiset saapuivat kunnioittamaan pyhän Sunnivan pyhäinjäännöksiä ennen niiden '
+        + 'siirtoa Bergeniin.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: '
+        + 'en-Wikipedia "Selja Abbey", tarkistettu 21.9.2026.',
+      url: 'https://en.wikipedia.org/wiki/Selja_Abbey',
+    },
+  },
 ];

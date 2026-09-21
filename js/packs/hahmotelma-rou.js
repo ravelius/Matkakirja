@@ -1960,4 +1960,128 @@ export const HAHMOTELMA_ROU = [
     lahde: 'en-Wikipedia "Băile Herculane" ja ro-Wikipedia "Băile Herculane", johdanto-osat '
       + 'ja osiot "History" ja "Istoric" (tarkistettu 19.9.2026).',
   },
+  /*
+   * CURTEA VECHE — MATKAKIRJAN IHME, "RAPPEUTUNUT" (kadonnut: false),
+   * tilaus docs/raportit/havainnekuvat-codexille-eurooppa-20260921.md
+   * (kohde 43). Kuva on aito Commons-valokuva nykyisistä kaivetuista
+   * raunioista; `ihme.osoite` odottaa Codexin kulta-aikakuvaa
+   * (n. 1690–1710, Brâncoveanun laajennus, ei vielä toimitettu —
+   * osoite 404:ttää siihen asti, sama käytäntö kuin Medina Azaharassa).
+   * HUOM: Curtea Veche seisoo Bukarestin kaupunkilaatan kohdalla —
+   * Bukarestin kaupunkikartalla (js/packs/maakartat.js, kohde "Vanha
+   * ruhtinaanhovi") on jo tämän kohteen piste, mutta sillä ei ole
+   * `nosto`-linkkiä tähän. Karttamerkin lopullinen sijoittelu
+   * (pääkartta vs. kaupunkikartta, js/fokuskohteet.js
+   * KAUPUNGIN_KOHDALLA_SADE) jää seuraavan Karttaseppä-erän ratkaistavaksi.
+   */
+  {
+    id: 'hahmotelma-curtea-veche',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/rou-nosto-curtea-veche-0f360eab.jpg',
+      lyhyt: 'Curtea Vechen kaivettuja kivimuureja Bukarestin vanhassakaupungissa.',
+      selite: 'Kuvassa on Curtea Vechen eli Vanhan ruhtinaanhovin arkeologisen alueen '
+        + 'kaivettuja kivimuurin jäänteitä keskellä Bukarestin vanhaakaupunkia.',
+      lahde: 'Valokuva: Stefan Jurca from Munich, Germany, Wikimedia Commons (CC BY-SA 2.0).',
+      tekija: 'Stefan Jurca from Munich, Germany',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Bucharest_Day_1_-_Curtea_Veche_(9330338582).jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
+    },
+    nimi: 'Curtea Veche',
+    tyyppi: 'historia',
+    lahi: true,
+    kysymykset: [
+      'Miksi Vlad Seivästäjän vuoden 1459 asiakirja on Bukarestille niin tärkeä?',
+      'Miksi vanha hovi lopulta hylättiin ja myytiin?',
+    ],
+    korostukset: ['Vlad III|Vlad III:n', 'Constantin Brâncoveanu|Constantin Brâncoveanu'],
+    nappi: 'Ruhtinaan hovi, josta koko Bukarest sai alkunsa',
+    // 26.10096389 E / 44.43014722 N — en-Wikipedia "Curtea Veche"
+    laudat: {
+      maailmankartta: { x: 6703.4, y: 1625.2 },
+      europe: { x: 712.3, y: 725.1 },
+    },
+    teksti: 'Curtea Veche eli Vanha ruhtinaanhovi on Bukarestin alkuperäinen hallitsijan '
+      + 'residenssi, jonka Vlad III Seivästäjä rakennutti Dâmbovița-joen rannalle 1459. '
+      + 'Hänen syyskuussa 1459 antamansa asiakirja, jossa hän mainitsee "linnoituksensa" '
+      + 'Bukarestissa, on kaupungin varhaisin tunnettu maininta, ja siksi vuotta 1459 '
+      + 'pidetään Bukarestin perustamisvuotena. Myöhemmät hallitsijat, muun muassa Mircea '
+      + 'Ciobanul ja Matei Basarab, korjasivat ja laajensivat hovia, ja Constantin '
+      + 'Brâncoveanu rakensi sen ympärille muun muassa marmoriportaikon. Hovi menetti '
+      + 'asemansa, kun Alexander Ypsilantis rakennutti uuden ruhtinaanhovin 1775, ja vanha '
+      + 'hovi huutokaupattiin 1798 ja rapistui vähitellen raunioiksi. Kaivaukset alkoivat '
+      + '1953, ja nykyään alueella toimii avoin museo Bukarestin vanhassakaupungissa.',
+    lahde: 'en-Wikipedia "Curtea Veche", johdanto-osa ja osio "Voivode\'s Palace" (tarkistettu '
+      + '21.9.2026).',
+    ihme: {
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-curtea-veche-loistoaika.jpg',
+      kadonnut: false,
+      selite: 'Constantin Brâncoveanun laajentamana 1690–1710 Curtea Veche oli komea '
+        + 'kivi- ja marmorilinna keskellä Bukarestia, ruhtinaan hovilaisten, kauppiaiden '
+        + 'ja käsityöläisten vilinän ympäröimänä.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: '
+        + 'en-Wikipedia "Curtea Veche", tarkistettu 21.9.2026.',
+      url: 'https://en.wikipedia.org/wiki/Curtea_Veche',
+    },
+  },
+  /*
+   * DEVAN LINNA — MATKAKIRJAN IHME, "RAPPEUTUNUT" (kadonnut: false),
+   * tilaus docs/raportit/havainnekuvat-codexille-eurooppa-20260921.md
+   * (kohde 44). Kuva on aito Commons-valokuva nykyisistä raunioista;
+   * `ihme.osoite` odottaa Codexin kulta-aikakuvaa (n. 1600–1621,
+   * Gabriel Bethlenin laajennus, ei vielä toimitettu — osoite 404:ttää
+   * siihen asti, sama käytäntö kuin Medina Azaharassa).
+   */
+  {
+    id: 'hahmotelma-deva',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/rou-nosto-deva-75971d18.jpg',
+      lyhyt: 'Devan linnan rauniot basalttikukkulalla auringonnousun valossa.',
+      selite: 'Kuvassa Devan keskiaikaisen linnan kivimuurien rauniot basalttikukkulan '
+        + 'laella Transilvaniassa, valaistuna auringonnousun valossa.',
+      lahde: 'Valokuva: Neighbor\'s goat, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Neighbor\'s goat',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Cetatea_medieval%C4%83_Deva,_%C3%AEn_lumina_r%C4%83s%C4%83ritului.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Devan linna',
+    tyyppi: 'historia',
+    lahi: true,
+    kysymykset: [
+      'Miksi linna rakennettiin juuri tulivuorimäen laelle?',
+      'Miksi ruutivarasto räjähti linnan omilla muureilla?',
+    ],
+    korostukset: ['Gabriel Bethlen|Gabriel Bethlen', '1849|1849'],
+    nappi: 'Transilvanian rajalinna, joka räjähtää raunioiksi 1849',
+    // 22.89722222 E / 45.88861111 N — en-Wikipedia "Fortress of Deva"
+    laudat: {
+      maailmankartta: { x: 6596.6, y: 1565 },
+      europe: { x: 650.8, y: 686.7 },
+    },
+    teksti: 'Devan linna kohoaa tulivuoren muovaaman basalttikukkulan laella Deva-kaupungin '
+      + 'yllä Läntisillä Karpaateilla, Poiana Ruscă -vuorten reunalla. Ensimmäinen kirjallinen '
+      + 'maininta linnasta on vuodelta 1269, kun Unkarin kuningas Stefan lahjoitti sen '
+      + 'kreivi Chylille. Linna oli 1400-luvulla Transilvanian voivodien ja myöhemmin '
+      + 'ruhtinaiden hallussa, ja Transilvanian ruhtinas Gabriel Bethlen laajensi sitä 1600-luvun '
+      + 'alussa, muun muassa rakentamalla juurelle renessanssityylisen Magna Curia -palatsin. '
+      + 'Vuoden 1848–1849 Unkarin vallankumouksen aikana linnaa hallussaan pitäneet '
+      + 'unkarilaiset vallankumoukselliset kokivat 13. elokuuta 1849 katastrofin, kun linnan '
+      + 'ruutivarasto räjähti ja tuhosi suuren osan sen itäisestä siivestä yhdessä '
+      + 'varusväen kanssa; viisi päivää myöhemmin kenraali Bem antautui täällä '
+      + 'Habsburgien joukoille. Rauniot on nykyään osittain kunnostettu, ja niihin nousee '
+      + 'köysirata.',
+    lahde: 'en-Wikipedia "Fortress of Deva" ja ro-Wikipedia "Cetatea Deva", johdanto-osat ja '
+      + 'osio "Istoric" (tarkistettu 21.9.2026).',
+    ihme: {
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-deva-loistoaika.jpg',
+      kadonnut: false,
+      selite: 'Gabriel Bethlenin laajentamana 1600-luvun alussa Devan linna oli mahtava '
+        + 'puolustuslinnoitus muureineen ja torneineen, jonka juurella kohosi ruhtinaan '
+        + 'uusi Magna Curia -palatsi.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: '
+        + 'en-Wikipedia "Fortress of Deva", tarkistettu 21.9.2026.',
+      url: 'https://en.wikipedia.org/wiki/Fortress_of_Deva',
+    },
+  },
 ];

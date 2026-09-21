@@ -1735,4 +1735,53 @@ export const HAHMOTELMA_EST = [
     lahde: 'en-Wikipedia "Kärdla" ja et-Wikipedia "Kärdla", johdanto-osat ja osio '
       + '"History"/"Ajalugu" (tarkistettu 19.9.2026).',
   },
+  {
+    id: 'hahmotelma-dominikaaniluostari',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/est-nosto-dominikaaniluostari-fe5c240c.jpg',
+      lyhyt: 'Katariina käik, ahdas keskiaikainen käytävä Tallinnan vanhassakaupungissa.',
+      selite: 'Kuvassa on Katariina käik, kapea kujakäytävä, jonka toisella seinustalla '
+        + 'näkyy dominikaaniluostarin kirkon keskiaikaisia muurinjäänteitä ja hautakiviä.',
+      lahde: 'Valokuva: Leif Jørgensen, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Leif Jørgensen',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Katariina_k%C3%A4ik_02.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Tallinnan dominikaaniluostari',
+    tyyppi: 'historia',
+    lahi: true,
+    kysymykset: [
+      'Mille vuosisadoille luostarin maine oppineisuuden keskuksena ajoittui?',
+      'Mikä kuvainraastona tunnettu tapahtuma tuhosi kirkon sisustuksen 1524?',
+    ],
+    korostukset: ['kuvainraastonta|kuvainraastonta', 'Katariina käik|Katariina käik'],
+    nappi: 'Keskiajan oppineisuuden keskus, jonka uskonpuhdistus tuhosi',
+    // 24.74778 E / 59.4375 N — en-Wikipedia "St. Catherine's Monastery, Tallinn"
+    laudat: {
+      maailmankartta: { x: 6658.3, y: 953.6 },
+      europe: { x: 686.4, y: 330.4 },
+    },
+    teksti: 'Dominikaaniveljien luostari toimi Tallinnan vanhassakaupungissa ainakin vuodesta '
+      + '1246 lähtien, ja koko keskiajan ajan se oli kaupungin tärkein oppineisuuden keskus. '
+      + 'Munkit harjoittivat myös kauppaa: he kävivät kalakauppaa ja pitivät panimoa, joka '
+      + 'valmisti useita oluttyyppejä. Uskonpuhdistuksen myllerryksessä vuonna 1524 '
+      + 'protestanttinen väkijoukko teki luostarin kirkkoon kuvainraastonta, ja tuho '
+      + 'levisi pian muihinkin luostarin osiin. Suuri osa alkuperäisistä rakennuksista on '
+      + 'kadonnut, mutta jäänteitä, kuten hienosti veistetty portaali, on säilynyt '
+      + 'näkyvissä Katariina käik -käytävällä, joka kulkee kirkon entisen eteläisen '
+      + 'sivulaivan muurin vierellä ja yhdistää kaksi vanhankaupungin katua.',
+    lahde: 'en-Wikipedia "St. Catherine\'s Monastery, Tallinn", johdanto-osa '
+      + '(tarkistettu 21.9.2026).',
+    ihme: {
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-dominikaaniluostari-loistoaika.jpg',
+      kadonnut: false,
+      selite: 'Keskiajalla dominikaaniluostari oli vilkas oppineisuuden ja kaupan keskus, '
+        + 'jonka kirkkosalissa munkit lauloivat hetkipalveluksiaan ja jonka panimo ja '
+        + 'kalakauppa elättivät veljeskuntaa.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: '
+        + 'en-Wikipedia "St. Catherine\'s Monastery, Tallinn", tarkistettu 21.9.2026.',
+      url: 'https://en.wikipedia.org/wiki/St._Catherine%27s_Monastery,_Tallinn',
+    },
+  },
 ];
