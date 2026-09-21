@@ -235,3 +235,7 @@ v1985: osoitin pallo 20260921a + pyramidi 2026-09-21-* (joet pohjassa, GSHHG-ran
 ## KIERROS 21 (Laitetestaaja, v1985 iPhone) (21.9.2026 klo 06.54)
 
 docs/raportit/laitekierros-21-20260921.md. Ei vakavuus 1-2. OK: joet levossa, meri (vyohykkeet, viivoitus, laivat, kompassi), maakunnat ja meret versaaleina, nostotaso 1 (iso nimio + kuvamerkki), nostokortti 2:n vakaset, huntu lyhyella liftauksella. Kesken: nostotaso 3 lahizoomilla, suurennoksen selaus, kaupunkiliuska, huntu kaukaisilla mailla, ESP/DEU tarkempi laatta- ja meritarkistus -> jatketaan kierroksella 21b.
+
+## OMISTAJA v1985 VAKAVUUS 1: RANSKAN NOSTOT POMPPIVAT PANOROIDESSA JA ZOOMATESSA (21.9.2026 klo 06.55)
+
+Elavat nimiot (KOHDEMAAN_NIMIOT_ELAVINA + reunasaanto + nostotasot) latovat itsensa uudelleen eleen aikana: nimiot vaihtavat kylkea ja hyppivat. SAANTO: nimio ei liiku eleen aikana - sovittelu lukitaan eleen ajaksi ja ratkaistaan vasta eleen paatyttya (debounce), vain rikkovat laput (reuna/limitys) siirtyvat, hystereesi estaa edestakaisen vaihdon; pehmea siirtyma jos lappu siirtyy. -> Pelikoodari heti.
