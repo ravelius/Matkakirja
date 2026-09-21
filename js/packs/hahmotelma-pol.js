@@ -83,6 +83,7 @@ export const HAHMOTELMA_POL = [
     ],
     nimi: 'Białowieżan metsä',
     tyyppi: 'kulttuuri',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Kuka rakennutti Białowieżan kylään valkoisen puisen metsästyskartanon?',
@@ -251,6 +252,7 @@ export const HAHMOTELMA_POL = [
     ],
     nimi: 'Słowińskin dyynit',
     tyyppi: 'meri',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Kuinka nopeasti Słowińskin liikkuvat dyynit etenevät vuodessa?',
