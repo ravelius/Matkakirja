@@ -6,11 +6,9 @@ luokittelu ja tasausehdotus. Lähteet: `js/linssit/rekisteri.js`
 ideaa, TARINALINSSIT), `docs/raportit/linssit-eurooppa-kartoitus-
 20260921.md` (Euroopan 38 tarinalinssin ankkurikaupunki-ehdotus),
 `js/pallolauta/linssit.js` ja `linssikartta.js` (moottori, ei
-sisältölistaa). **En löytänyt "MAAPALLON VOIMAT" -ideavarastoa mistään
-pushatusta haarasta tai lokitiedostosta** (paikallinen kopio
-`docs/raamattu-loki/paatokset-2026-09.md` päättyy klo 20.08 pelikaupunki-
-erä A:n kirjaukseen) — jos se on Fablen omassa vielä pushaamattomassa
-työtilassa, pyydän sen sisällön erikseen täydennystä varten.
+sisältölistaa), ja `docs/raamattu-loki/paatokset-2026-09.md` (haara
+origin/v1973-prep) "LINSSIPERHE MAAPALLON VOIMAT: IDEAVARASTO" (21.9.2026
+klo 22.15).
 
 ## Kaksi eri mekaniikkaa — älä sekoita
 
@@ -78,12 +76,58 @@ C1 Atlantti-Intian valtameri, S2 Atlantti-kolmiokauppa — on merkitty
 sille mantereelle, jonka pysäkkejä niissä on eniten, ja mainittu
 tekstissä jos jako on tasainen).
 
+## C) MAAPALLON VOIMAT -ideavarasto (uusi, 21.9.2026 klo 22.15/22.40)
+
+Ei vielä katalogissa — omistajan tuore idea, kaikki katselulinssejä
+(pallolle piirtyvä ilmiö + Livian selitys, ei vaadi 1873-kytköstä,
+rengas 2-3). El Niño ensimmäinen (ainoa jolla on jo 1873-kytkös:
+1876-78 nälänhätä kolme vuotta isoisän matkan jälkeen). Mekaniikaltaan
+lähempänä TYÖKALULINSSEJÄ (katselu, ei kaari/pysäkit) kuin
+tarinakatalogin aikajana/alue-linssejä — sijoitan ne siksi omaksi
+ryhmäkseen eikä osaksi B-taulukon 112:ta.
+
+| idea | ehdotettu manner (Fablen ohje 21.9. klo 23) |
+|---|---|
+| El Niño / La Niña (ENSO) | ripoteltava/global (1873-kytkös, ensimmäinen) |
+| Monsuuni | Aasia |
+| Humboldtin virta (guano) | Etelä-Amerikka |
+| Tulirengas | Oseania/Aasia |
+| Kuroshio | Oseania/Aasia |
+| Revontulet (Auringon 11 v. jakso) | **napa-alueet** |
+| Napapäivä ja kaamos | **napa-alueet** |
+| Pohjois-Atlantin oskillaatio | Eurooppa/Pohjois-Atlantti |
+| Pasaatit ja länsituulet | ripoteltava/global |
+| Golfvirta ja Pohjois-Atlantin virta | Eurooppa/Pohjois-Atlantti |
+| Suihkuvirtaukset | ripoteltava/global |
+| Hurrikaanit ja taifuunit | Amerikat/Aasia |
+| Laattatektoniikka, mannerten liike | ripoteltava/global |
+| Islannin repeämä | Eurooppa |
+| Etna/Vesuvius 1872 | Eurooppa |
+| Krakatau 1883 | Aasia/Oseania |
+| Maanjäristysvyöhykkeet | ripoteltava/global |
+| Vuorovesi (Mont-Saint-Michel, Fundy) | Eurooppa/Pohjois-Amerikka |
+| Maan akselin kallistus, vuodenajat | ripoteltava/global |
+| Saharan pöly Amazoniin | Afrikka/Etelä-Amerikka |
+| Valaiden vaellukset | ripoteltava/global |
+| Metsäpalokaudet | ripoteltava/global |
+| Magneettikenttä, kompassin eranto | ripoteltava/global |
+| Aikavyöhykkeet (Kellot-linssin sisar) | ripoteltava/global |
+| Jääkausien jäljet (Suomen harjut, fjordit) | Eurooppa (esimerkit), ripoteltava aiheena |
+
+**Tämä täyttää suoraan kaksi pahinta aukkoa:** napa-alueille tulee 2
+uutta ideaa (revontulet, napapäivä/kaamos) nykyisten kahden (C2, S5)
+päälle — ohuin ryhmä nousee 2:sta 4:ään — ja Oseanialle/Aasialle 2
+lisää (Tulirengas, Kuroshio, osin Krakatau/hurrikaanit).
+
 ## Pahimmat aukot
 
-1. **Napa-alueet/meret: 2 ideaa (C2, S5), 0 valmis.** Ohuin ryhmä
-   koko katalogissa.
-2. **Oseania: 4 ideaa (L1-L4), vain L2 "seuraava", 0 valmis, 0
-   rakenteilla.** Toiseksi ohuin, eikä yhtään tuotantovalmista.
+1. **Napa-alueet/meret: 2 valmiiksi luetteloitua ideaa (C2, S5) + 2
+   uutta MAAPALLON VOIMAT -ideaa (revontulet, napapäivä) = 4.** Silti
+   ohuin ryhmä, ja ainoa jolle omistaja/Fable ehdotti UUTTA ideointia
+   tarvittaessa.
+2. **Oseania: 4 tarinalinssiä (L1-L4) + 2-3 MAAPALLON VOIMAT -ideaa
+   (Tulirengas, Kuroshio, osin Krakatau) = 6-7.** Vain L2 "seuraava",
+   loput idea-tasolla, ei yhtään tuotantovalmista.
 3. **Saharan eteläpuolinen Afrikka: 6 ideaa, kaksi "seuraava" (J1
    Kultavaltakunnat, J4 Tutkimusmatkat) + O3 Afrikan jako.** Ohut mutta
    ei tyhjä.
