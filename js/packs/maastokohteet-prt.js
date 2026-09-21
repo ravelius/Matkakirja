@@ -89,6 +89,7 @@ export const MAASTOKOHTEET_PRT = [
     ],
     nimi: 'Torre',
     tyyppi: 'vuori',
+    taso: 1,
     kysymykset: [
       'Miksi Torre ei ole tavallinen huippu?',
       'Sataako Serra da Estrelalla lunta?',
@@ -221,6 +222,7 @@ export const MAASTOKOHTEET_PRT = [
     ],
     nimi: 'Douro',
     tyyppi: 'joki',
+    taso: 1,
     kysymykset: [
       'Miksi Douron laakso on kuuluisa viinistään?',
       'Mistä joki saa alkunsa?',
@@ -270,6 +272,7 @@ export const MAASTOKOHTEET_PRT = [
     },
     nimi: 'Sintra',
     tyyppi: 'kulttuuri',
+    taso: 1,
     kysymykset: [
       'Mikä Penan kansallispalatsi on?',
       'Mikä Sintran kaulus on?',
@@ -321,6 +324,7 @@ export const MAASTOKOHTEET_PRT = [
     },
     nimi: 'Batalhan luostari',
     tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Mikä Aljubarrotan taistelu oli?',
       'Kuinka kauan luostaria rakennettiin?',
@@ -485,6 +489,7 @@ export const MAASTOKOHTEET_PRT = [
     },
     nimi: 'São Vicenten niemi',
     tyyppi: 'merenkulku',
+    taso: 1,
     kysymykset: [
       'Miksi antiikin kirjoittajat pitivät niemeä pyhänä?',
       'Mistä niemi sai nimensä?',
@@ -547,6 +552,7 @@ export const MAASTOKOHTEET_PRT = [
     ],
     nimi: 'Elvas',
     tyyppi: 'tekniikka',
+    taso: 1,
     kysymykset: [
       'Mikä trace italienne on?',
       'Mikä Amoreiran akvedukti on?',
