@@ -847,3 +847,7 @@ Karttaseppä 22.9.2026 klo 00.25 (WebKit 390×844 dpr 3, Ranska z6, main v2035 +
 ## NOSTOTASOT: 8 ISOILLE MAILLE (FRA/DEU/ITA/ESP), 4-6 MUILLE; GBR/POL/AUT HYVAKSYTTY (AUT TONAVA→WACHAU) (21.9.2026 klo 23.56)
 
 Fable 22.9.2026 klo 00.30: Sisältökirjuri löysi, että DEU/ITA/ESP nostotasot on jo tehty toisessa erässä (docs/raportit/nimisto-taso-esp-ita-deu-20260921.md, haarat sisalto-nimisto-taso-deu/ita/esp mergeamatta, 8 per maa). Päätös: isot maat 8 kuten FRA, muut 4–6; 'yksi per tyyppi' on toive. GBR (Stonehenge, Edinburghin linna, Ben Nevis, Ironbridge, Doverin liiduvuoret, Bath), POL (Auschwitz-Birkenau, Malbork, Białowieża, Rysy, Słowińskin dyynit, Elblągin kanava), AUT (Hallstatt, Großglockner, Hohensalzburg, Melk, Semmeringin rata, Wachau Tonavan sijaan) hyväksytty (docs/raportit/nostotasot-gbr-pol-aut-ehdotus-20260921.md). Julkaisija rebasettaa deu/ita/esp-haarat ja tarkistaa vanhan pohjan. Seuraava: loput Euroopan maat 6 maan erissä.
+
+## LAATTAPYYNTOJEN TAHDITUS 2/KEHYS (PR #2699): LAATTAPORTAAN ZOOMI p95 22-28 ms (22.9.2026 klo 00.04)
+
+Karttaseppä 22.9.2026 klo 00.40: pallolaatat.js LAATTAKERROS_ALOITUKSIA_PER_KEHYS = 2 (6 fetchiä/kehys, loput seuraavaan rAF:iin; mittari laatat.tahditettuja). WebKit 390×844 dpr 3 Ranska z6 portaat 1–2 zoomi: p95 33–39 → 23–28 ms, porras 1 37 → 22–27, max 68 → 26–40, 0 kehystä > 50. Testit 98/0, raportti docs/raportit/zoomi-pyyntotahditus-20260922.md. Tukitason harvennus vain jos iPhonella p95 > 25 (Laitetestaaja mittaa lipulla kun PR mainissa).
