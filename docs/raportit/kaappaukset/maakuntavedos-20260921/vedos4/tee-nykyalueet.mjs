@@ -11,6 +11,8 @@
  *     <ne_10m_admin_1_states_provinces.geojson> <ulos-kansio> [ISO,ISO,…]
  * Tuottaa <ulos>/nykyalueet-<iso>.json ({ lahde, alueet, rajat }) ja
  * <ulos>/nimiot-vedos4.json (tuotannon nimistö + uudet nykyalueet + rajat).
+ * Sama ajo tuotti nimiöversion g nimistön (ajo-20260922/nimiot-poltto-4.json)
+ * ja CHE-siirtojen jälkeen version h nimistön (nimiot-poltto-5.json).
  *
  * RAJAT: polygonien särmät, joiden kahta puolta on ERI alue samassa maassa
  * (sama särmä kahdessa eri ryhmän piirteessä); rannat ja valtionrajat (särmä
@@ -82,6 +84,10 @@ const KASIN = {
   'Emilia-Romagna': [10.9, 44.55], 'Trentino-Alto Adige': [11.3, 46.4], 'Friuli-Venezia Giulia': [12.9, 46.2],
   'Masovia': [21.2, 52.6], 'Suur-Puola': [17.0, 52.3], 'Ala-Sleesia': [16.3, 51.2], 'Vähä-Puola': [20.3, 49.9],
   'Ala-Itävalta': [15.6, 48.3], 'Steiermark': [15.0, 47.2], 'Tiroli': [11.4, 47.25],
+  // CHE (nimiöversio h, omistaja 22.9.2026): pois Kapellbrücke-, Stiftsbibliothek- ja
+  // Matterhorn-nostojen päältä; Appenzellit ja St. Gallen erilleen toisistaan.
+  'Luzern': [8.05, 46.98], 'Valais': [8.0, 46.27], 'St. Gallen': [9.05, 47.17],
+  'Appenzell Ausserrhoden': [9.25, 47.31], 'Appenzell Innerrhoden': [9.36, 47.25],
 };
 
 const norm = (t) => String(t).toUpperCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
