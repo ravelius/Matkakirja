@@ -160,3 +160,33 @@ siihen asti polku pysyy.
 - Työpöytäsessioiden historia (uudet sessiot luovutuksista).
 - Keychainin kirjautumiset (Claude, gh) ja Playwrightin selaimet.
 - Vanhan käyttäjän LaunchAgentit (ajurit asennetaan uudelleen).
+
+## 9. Automaatio: siirtoprompti uuden käyttäjän ensimmäiselle sessiolle
+
+Vanhassa käyttäjässä jää käsin ajettavaksi kolme komentoa (kohdat 1–2:
+ajurien sammutus, avaintiedosto, ajurien ACL) — auto-moodin luokitin
+esti Fablea koskemasta ajuripalveluihin ja avaimiin. Sudo ei tarvita:
+tiedostot ovat omia.
+
+Uudessa käyttäjässä koodaus: kirjaudu Claude-työpöytäsovellukseen,
+avaa Code-välilehdellä kansio /Users/samireivinen/Matkakirja-fable,
+nimeä sessio "Fable (Fable 5.1)" ja liitä tämä prompti. Sessio tekee
+kohdat 3–6 itse, pysähtyy vain gh-kirjautumiseen ja Xcode-lisenssiin
+(kortti), ja jatkaa sen jälkeen Fablena luovutuksesta.
+
+```text
+Olet Fable, Matkakirjan päätoimittaja, ensimmäistä kertaa Macin käyttäjässä koodaus. Tee ensin ympäristön pystytys docs/raportit/siirto-toiseen-kayttajaan-20260921.md kohtien 3–6 mukaan, sitten jatka Fablena.
+
+Pystytys, tässä järjestyksessä, jokainen askel tarkistettuna:
+1. Shell: lisää ~/.zshrc-tiedostoon Homebrew shellenv ja `source /Users/samireivinen/.matkakirja-avaimet.zsh` (jos avaintiedostoa ei ole tai sitä ei voi lukea, pysähdy ja kerro: omistaja ajaa ohjeen kohdan 2 vanhassa käyttäjässä). Tarkista `node --version` ja että env-muuttuja AMPARI on asetettu (älä tulosta avainten arvoja).
+2. Git: `git config --global --add safe.directory '*'`, user.name "Sami Reivinen", user.email "samireivinen@SamiMacStudio2.localdomain". Tarkista `git status -sb` kaikissa seitsemässä hakemistossa (Matkakirja-fable, -sonnet3, -opus, -opus2, -nostot, -sonnet, -raamattu) ja `git worktree prune` päärepossa.
+3. gh: aja `gh auth status`; jos ei kirjautunut, käynnistä `gh auth login -h github.com -p https -w`, näytä koodi omistajalle AskUserQuestion-kortilla ja odota; sitten `gh auth refresh -s workflow`.
+4. Clauden muisti: kopioi /Users/Shared/Matkakirja-yhteinen/claude-muisti/memory kansioon ~/.claude/projects/-Users-samireivinen-Matkakirja-fable/ (luo kansio).
+5. Playwright: `npx playwright install chromium` päärepossa; tarkista `node --test` -ajo yhdellä nopealla testitiedostolla.
+6. Xcode: `xcodebuild -version`; jos lisenssi puuttuu, pyydä omistajaa kortilla ajamaan `sudo xcodebuild -license accept`.
+7. CI-ajurit: `./svc.sh install && ./svc.sh start && ./svc.sh status` kansioissa /Users/samireivinen/actions-runner ja actions-runner-2; tarkista `gh api repos/ravelius/Matkakirja/actions/runners --jq '.runners[] | "\(.name) \(.status)"'` — molempien pitää olla online. Jos install kaatuu oikeuksiin, pysähdy ja kerro.
+8. Tuotanto: tarkista, että https://matkakirja.app näyttää APP_VERSION 1989 (curl, cache-bust). Jos ei, kirjaa Julkaisijalle.
+9. Raportoi omistajalle yhdellä listalla, mikä onnistui ja mikä jäi.
+
+Sen jälkeen: lue CLAUDE.md, Raamatun Ydinajatus-osion kohta 2 "TYÖTAPA JA SESSIOT" ja docs/raportit/viesti-fable-luovutus-20260921-siirto.md. Jatka siitä; älä palauta edellistä keskustelua. Kun omistaja on avannut roolisessiot (Julkaisija ~/Matkakirja-sonnet3, Karttaseppä ~/Matkakirja-opus2, Pelikoodari ~/Matkakirja-opus, Sisältökirjuri ~/Matkakirja-nostot, Laitetestaaja ~/Matkakirja-sonnet), lähetä niille aloitusviestit niiden luovutuksiin viesti-<rooli>-luovutus-20260921-siirto.md viitaten (kaava ohjeen kohdassa 7). Kirjaa pystytys lokiin tools/raamattu-kirjaa.mjs:llä.
+```
