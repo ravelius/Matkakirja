@@ -98,6 +98,8 @@ export const NOSTOJEN_KATTO = KOHDEMAAN_NIMIOT_ELAVINA ? 120 : 40;
  * puhelimella (390 × 844) vaakasuunnassa yli ruudun leveyden.
  */
 export const NOSTOJEN_LIIKEVARA_OSUUS = 0.5;
+/** Sovittelun reunan reunavara (lauta.js NOSTOJEN_REUNAVARA_PX): sisäreuna = ruudun laatikko ilman varaa. */
+const SISAREUNAN_VARA_PX = 6;
 /** Reuna laajennettuna liikevaralla joka suuntaan (sovittelu ruudun ulkopuolisille lapuille). */
 export function laajennaReuna(reuna, vara) {
   if (!reuna || !(vara > 0)) return reuna;
@@ -3962,6 +3964,8 @@ export function luoNostot({
         laatikko,
         // Liikevarassa oleva lappu: laajennettu reuna (ks. LIIKEVARA).
         reuna: r.ulkona && reunaNyt ? laajennaReuna(reunaNyt, nostojenLiikevaraPx(ruutu?.())) : undefined,
+        // Ruudun laatikko ilman reunavaraa (sovittelu.js eiPuoliksi): liikevaran lappu ei jää puoliksi ruutuun.
+        sisareuna: r.ulkona && reunaNyt ? laajennaReuna(reunaNyt, SISAREUNAN_VARA_PX) : undefined,
         nimi: r.nimi ?? '',
         // Meren nimiö väistää rantaviivaa (sovittelu.js `rantaviiva`).
         meri: r.symLaji === 'meri' || r.kategoria === 'meri',

@@ -194,9 +194,16 @@ export function sovitteleLaput({
    * reunaansa vasten — ruudun reuna koskee vain ruudussa olevia.
    */
   const reunaLle = (l) => l?.reuna ?? reuna;
+  // Liikevaran lappu ei saa jäädä puoliksi ruutuun: laatikko on joko
+  // kokonaan ruudun sisällä tai kokonaan sen ulkopuolella (ei leikkaudu).
+  const eiPuoliksi = (r, l) => {
+    const sisa = l?.sisareuna ?? reuna;
+    return !l?.reuna || !sisa || laatikkoSisalla(r, sisa) || !laatikotLimittyvat(r, sisa);
+  };
   const vapaa = (r, l, vara = 0) => {
     const rr = laatikkoVaralla(r, vara);
     return laatikkoSisalla(r, reunaLle(l))
+      && eiPuoliksi(r, l)
       && !rannalla(r, l)
       && !estaa(rr, l)
       && !sijoitetut.some((e) => laatikotLimittyvat(rr, e));
@@ -255,7 +262,7 @@ export function sovitteleLaput({
       const kelpaa = (e, { sisalla, musteeton }) => {
         const r = l.laatikko(e, 0, 0, true);
         if (!laatikkoKelpaa(r)) return false;
-        if (sisalla && !laatikkoSisalla(r, reunaLle(l))) return false;
+        if (sisalla && (!laatikkoSisalla(r, reunaLle(l)) || !eiPuoliksi(r, l))) return false;
         return !musteeton || (!rannalla(r, l) && !estaa(r, l));
       };
       const k = ehdokkaat.find((e) => kelpaa(e, { sisalla: true, musteeton: true })) ?? null;
