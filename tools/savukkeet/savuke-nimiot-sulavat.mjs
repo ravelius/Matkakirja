@@ -32,6 +32,10 @@
  *      kehyksessä (NOSTOSYM_NIMIO_KATTO_PX, sallittu ylitys 0,5 %).
  *   6. Levossa kuori on 1 (±0,3 %) ja liikkeen luokka
  *      (.pallolauta-liikkuu) on poissa — siirtymät ovat taas käytössä.
+ *   7. Kylkivaihto häivyttää (E3): kun noston datumin kylki käännetään
+ *      ja asetteleNosto ajetaan, vanha nimiökuva jää häipymään
+ *      (.nostosym-nimio-vanha), uusi tulee häivytyksellä ja vanha on
+ *      poissa DOMista 400 ms:n kuluttua; ikoni ei liiku.
  * Vartiot 1–3 tuomitaan vain ≥ 20 fps:n mittauksesta (SAVUKE_IKKUNA=1,
  * ks. alla); headlessissä ne kirjataan tiedoksi. LÄHTÖTASO 21.9.2026
  * (ikkunallinen Chromium, Mac Studio): panorointi 0 px; zoomi 0,04 /
@@ -313,6 +317,50 @@ for (const ruutu of RUUDUT) {
   vaadi(`${tunnus}: 6. levossa kuori on 1 (±0,3 %) ja liikkeen luokka on poissa`,
     lepo.kuoria > 0 && lepo.min > 0.997 && lepo.max < 1.003 && !lepo.liikkuu && lepo.kerroin !== '',
     JSON.stringify(lepo));
+
+  /* ── 7. kylkivaihto häivyttää (E3) ──────────────────────────────── */
+  const kylki = await sivu.evaluate(async () => {
+    const { asetteleNosto } = await import('/js/pallolauta/nostot.js');
+    const l = window.matkakirja.ui.pallolauta;
+    const el = [...document.querySelectorAll('.pallolauta-nosto[data-nosto]')]
+      .find((e) => e.dataset.nimio && !e.querySelector('.nostosym-nimio-piilossa'));
+    if (!el) return { virhe: 'ei näkyvää nimiöllistä nostoa' };
+    const d = l.merkit.datum(el);
+    const g = el.querySelector('.pallolauta-nosto-siirto');
+    const ikoni = g.querySelector('.nostosym-rasteri:not(.nostosym-nimiokuva)');
+    const ennen = { lapsia: g.children.length, puoli: d.puoli, ikoniHref: ikoni?.getAttribute('href') ?? ikoni?.getAttribute('xlink:href') };
+    d.puoli = d.puoli === 'oikea' ? 'vasen' : 'oikea';
+    asetteleNosto(el, d);
+    const heti = {
+      vanha: g.querySelectorAll('.nostosym-nimio-vanha').length,
+      tulee: g.querySelectorAll('.nostosym-nimio-tulee').length,
+      lapsia: g.children.length,
+      ikoniSama: g.querySelector('.nostosym-rasteri:not(.nostosym-nimiokuva)') !== null,
+    };
+    await new Promise((r) => setTimeout(r, 60));
+    const kesken = {
+      tulee: g.querySelectorAll('.nostosym-nimio-tulee').length,
+      vanhaOpacity: getComputedStyle(g.querySelector('.nostosym-nimio-vanha') ?? g).opacity,
+    };
+    await new Promise((r) => setTimeout(r, 400));
+    const lopuksi = {
+      vanha: g.querySelectorAll('.nostosym-nimio-vanha').length,
+      nimioita: g.querySelectorAll('.nostosym-nimiokuva').length,
+      puoli: g.querySelector('.nostosym-nimiokuva')?.dataset.puoli ?? null,
+      opacity: getComputedStyle(g.querySelector('.nostosym-nimiokuva') ?? g).opacity,
+    };
+    // Palautus: datumin kylki takaisin, jotta lepoladonta ei jää ristiriitaan.
+    d.puoli = ennen.puoli;
+    asetteleNosto(el, d);
+    return { avain: el.dataset.nosto, ennen, heti, kesken, lopuksi };
+  });
+  tieto(`${tunnus}: kylkivaihto`, JSON.stringify(kylki));
+  vaadi(`${tunnus}: 7. kylkivaihto häivyttää: vanha nimiö häipyy, uusi tulee häivytyksellä, vanha poissa 400 ms:ssa`,
+    !kylki.virhe && kylki.heti.vanha === 1 && kylki.heti.tulee === 1 && kylki.heti.ikoniSama
+      && kylki.kesken.tulee === 0 && Number(kylki.kesken.vanhaOpacity) < 1
+      && kylki.lopuksi.vanha === 0 && kylki.lopuksi.nimioita === 1 && kylki.lopuksi.puoli !== kylki.ennen.puoli
+      && Number(kylki.lopuksi.opacity) === 1,
+    JSON.stringify(kylki));
   await ctx.close();
 }
 

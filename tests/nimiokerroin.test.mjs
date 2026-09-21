@@ -85,3 +85,20 @@ test('css: kuori skaalautuu kotelon muuttujasta ja siirtymät ovat pois liikkees
   assert.match(css, /\.pallolauta-liikkuu \.pallolauta-nosto \.pallolauta-nosto-siirto \{\n {2}transition: opacity 600ms ease-out, filter 600ms ease-out;\n\}/);
   assert.match(css, /\.pallolauta-nostot-ruutuvakio \.pallolauta-nosto > svg,\n\.pallolauta-nostot-ruutuvakio \.pallolauta-turisti-info > svg \{ transform: none; \}/);
 });
+
+test('E3: kylkivaihto häivyttää (css), kirjaston tween pois liikkeessä, pelimerkit kerran per ladonta', () => {
+  const css = lue('../css/styles.css');
+  assert.match(css, /\.nostosym-nimiokuva\.nostosym-nimio-vanha,\n\.nostosym-nimiokuva\.nostosym-nimio-tulee \{ opacity: 0; \}/);
+  const nostot = lue('../js/pallolauta/nostot.js');
+  assert.match(nostot, /export const KYLKIVAIHDON_HAIVYTYS_MS = 180;/);
+  assert.match(css, /\.nostosym-nimiokuva \{ transition: opacity 180ms ease-out; \}/);
+  assert.match(nostot, /vanhaNimio\.classList\.add\('nostosym-nimio-vanha'\);/);
+  assert.match(nostot, /uusi\.classList\.add\('nostosym-nimio-tulee'\);/);
+  const lauta = lue('../js/pallolauta/lauta.js');
+  assert.match(lauta, /merkit\.kirjastonSiirtyma\(false\);/);
+  assert.match(lauta, /merkit\.kirjastonSiirtyma\(true\);/);
+  assert.match(lauta, /const pelinLaatikot = merkit\.laatikot\('peli'\);/);
+  assert.equal((lauta.match(/merkit\.laatikot\('peli'\)/g) ?? []).length, 3, 'ladonnassa yksi luenta (+ liuskan esteet + kommentti)');
+  const merkit = lue('../js/pallolauta/merkit.js');
+  assert.match(merkit, /kirjastonSiirtyma: \(paalla\) => \{\n\s*pallo\.htmlTransitionDuration\?\.\(paalla \? siirtyma : 0\);/);
+});

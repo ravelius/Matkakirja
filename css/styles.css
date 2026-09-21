@@ -25350,6 +25350,15 @@ body.infotaulu-auki .toimintorivi .monitoimi-nappi {
  */
 .nostosym-nimiokuva { transition: opacity 180ms ease-out; }
 .nostosym-nimio-piilossa .nostosym-nimiokuva { opacity: 0; }
+/*
+ * KYLKI VAIHTUU HÄIVYTTÄMÄLLÄ (KARTAN SULAVUUS ENSIN, erä E3;
+ * js/pallolauta/nostot.js asetteleNosto): vanha kylki häipyy
+ * (.nostosym-nimio-vanha) ja uusi tulee (.nostosym-nimio-tulee →
+ * luokka pois seuraavassa kehyksessä → opacity 1 samalla 180 ms:n
+ * siirtymällä). Nimiö ei liu'u pisteen yli. Reduced motion: heti.
+ */
+.nostosym-nimiokuva.nostosym-nimio-vanha,
+.nostosym-nimiokuva.nostosym-nimio-tulee { opacity: 0; }
 @media (prefers-reduced-motion: reduce) {
   .nostosym-nimiokuva { transition: none; }
 }

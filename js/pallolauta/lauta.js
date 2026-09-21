@@ -3690,8 +3690,13 @@ export async function avaaPallolauta(ui) {
         kuorenKorkeus = korkeus;
         kirjoitaKuorenKerroin(korkeus, kuvasuhde);
       }
-      // Siirtymät pois liikkeen ajaksi (nimet.js SIIRTYMÄT POIS LIIKKEEN AJAKSI).
-      if (!liikkuuLuokka) { liikkuuLuokka = true; kotelo.classList.add(LIIKKUU_LUOKKA); }
+      // Siirtymät pois liikkeen ajaksi (nimet.js SIIRTYMÄT POIS LIIKKEEN
+      // AJAKSI) — myös kirjaston oma merkkitween (merkit.kirjastonSiirtyma).
+      if (!liikkuuLuokka) {
+        liikkuuLuokka = true;
+        kotelo.classList.add(LIIKKUU_LUOKKA);
+        merkit.kirjastonSiirtyma(false);
+      }
     }
     if (!liikkui && aika > siirtymaAsti) return;
     kehyksenKamera = { x: p.x, y: p.y, z: p.z };
@@ -4263,6 +4268,16 @@ export async function avaaPallolauta(ui) {
     const keskipiste = { x: kotelo.clientWidth / 2, y: kotelo.clientHeight / 2 };
     const pelia = merkit.maara('peli');
     /*
+     * PELIMERKKIEN LAATIKOT LUETAAN KERRAN (erä E3, Karttasepän iPad-
+     * profiili: ladonta levossa yhtenä 42–50 ms:n tehtävänä, josta
+     * suuri osa getBoundingClientRect-pakotettua asettelua). Sama lista
+     * meni ennen kolmesti — nostoille, nimille ja sovittelulle — ja
+     * jokainen luenta väliin osuneiden DOM-kirjoitusten jälkeen pakotti
+     * uuden asettelun. Nappula ei muutu ladonnan aikana, joten yksi
+     * luenta riittää kaikille kolmelle.
+     */
+    const pelinLaatikot = merkit.laatikot('peli');
+    /*
      * KUOREN POHJA VAIHTUU NYT (nimet.js LADONTA JA KUORI VAIHTUVAT
      * SAMASSA KEHYKSESSÄ): ladonnan mitta talteen ja kerroin heti sen
      * mukaiseksi. Korkeus luetaan samasta kaavasta kuin kehyskoukussa.
@@ -4301,7 +4316,7 @@ export async function avaaPallolauta(ui) {
        * kerroksen, joten laatikot annetaan sille kerrokselta, joka ne
        * omistaa — sama lista kuin nimiladonnan `pinot`.
        */
-      esteet: merkit.laatikot('peli'),
+      esteet: pelinLaatikot,
     });
     // Niukka nimijoukko: avauslennolla kaksi päätä, lähtövalinnassa
     // Lontoo (aalto 3A) — muulloin koko lauta budjetilla.
@@ -4344,7 +4359,7 @@ export async function avaaPallolauta(ui) {
     const infoTulos = paivitaTuristiInfo(nostot.omatIkonilaatikot(), nostot.omaMuste());
     const nimiTulos = nimet.lado({
       varaukset: [...nostoTulos.laatikot, ...infoTulos],
-      pinot: merkit.laatikot('peli'),
+      pinot: pelinLaatikot,
       katto,
       vain,
       // Matkan kohteet (noppa, lento) voittavat budjetin (ks. matkanKohteet).
@@ -4399,7 +4414,7 @@ export async function avaaPallolauta(ui) {
      */
     const sovittelu = nostot.sovittele({
       nimet: nimet.laatikot(),
-      kiinteat: [...infoTulos, ...merkit.laatikot('peli')],
+      kiinteat: [...infoTulos, ...pelinLaatikot],
       // Meren nimiöt väistävät kohdemaan korostuskehää (ks. rantaviivanLaatikot).
       rantaviiva: rantaviivanLaatikot,
       rantaviivaOn: pallonKorostusRenkaat(pallonKorostettuMaa()).length > 0,
@@ -4433,7 +4448,9 @@ export async function avaaPallolauta(ui) {
       if (liikkuuLuokka) {
         liikkuuLuokka = false;
         globalThis.requestAnimationFrame?.(() => {
-          if (!liikkuuLuokka) kotelo.classList.remove(LIIKKUU_LUOKKA);
+          if (liikkuuLuokka) return;
+          kotelo.classList.remove(LIIKKUU_LUOKKA);
+          merkit.kirjastonSiirtyma(true);
         });
       }
     }
@@ -5255,6 +5272,14 @@ export async function avaaPallolauta(ui) {
         nimet: document.querySelectorAll('.pallolauta-nimi').length,
         nostot: document.querySelectorAll('.pallolauta-nosto').length,
       },
+      elementit: merkit.elementit(),
+      // CSS2D-kerroksen oma juuri (kirjaston .scene-container > div) ja sen lapset.
+      css2d: (() => {
+        const juuri = [...kotelo.querySelectorAll('.scene-container > div')]
+          .find((e) => e.style.position === 'absolute' && e.style.pointerEvents === 'none');
+        return juuri ? { loytyi: true, lapsia: juuri.childElementCount } : { loytyi: false, lapsia: 0 };
+      })(),
+      virheet: globalThis.__pallonVirheet?.slice(-3) ?? null,
       korkeus: pallo.pointOfView()?.altitude ?? null,
       versio: document.getElementById('app-version')?.textContent ?? null,
     }),

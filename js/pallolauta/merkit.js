@@ -481,6 +481,35 @@ export function luoMerkit({ pallo, ui, siirtyma, asteet, kotelo = null, nakyviss
       }
       return ulos;
     },
+    /**
+     * KIRJASTON SIIRTYMÄ POIS ELEEN AJAKSI (KARTAN SULAVUUS ENSIN, erä
+     * E3). Globe.gl tweenaa olemassa olevan merkin uuteen paikkaan
+     * htmlTransitionDuration-ajassa; liikkeessä merkin paikan on oltava
+     * SAMASSA kehyksessä kuin kuvan (lukittu ankkuri, ei tweeniä), joten
+     * lauta sammuttaa tweenin liikkeen ajaksi ja palauttaa sen levossa.
+     * Kirjaston prop on triggerUpdate:false — halpa, ei ladontaa.
+     * Poistumisen häivytys (poista) lukee edelleen omaa `siirtyma`ansa.
+     */
+    /**
+     * ELEMENTTIEN TILA (diagnostiikka, Laitetestaaja 21.9.2026 iPad:
+     * merkkejä 65, DOMissa 0): montako datumia kirjasto on jo
+     * muuttanut elementiksi (htmlElement-tehdas ajettu) ja montako
+     * niistä on liitetty DOMiin (CSS2DRenderer.render liittää vasta
+     * piirrossa). Luotu ilman liitosta = CSS2D-piirto ei aja.
+     */
+    elementit: () => {
+      let luotu = 0;
+      let liitetty = 0;
+      for (const d of data.values()) {
+        if (!d.el) continue;
+        luotu += 1;
+        if (d.el.isConnected) liitetty += 1;
+      }
+      return { datumeja: data.size, luotu, liitetty };
+    },
+    kirjastonSiirtyma: (paalla) => {
+      pallo.htmlTransitionDuration?.(paalla ? siirtyma : 0);
+    },
     pura: () => {
       for (const t of poistuvat.values()) clearTimeout(t);
       poistuvat.clear();
