@@ -155,6 +155,7 @@ import { HAHMOTELMA_EST } from './packs/hahmotelma-est.js';
 import { HAHMOTELMA_LTU } from './packs/hahmotelma-ltu.js';
 import { HAHMOTELMA_LVA } from './packs/hahmotelma-lva.js';
 import { HAHMOTELMA_TUR } from './packs/hahmotelma-tur.js';
+import { HAHMOTELMA_GBR } from './packs/hahmotelma-gbr.js';
 import { avaaLisakaupunginKortti } from './kaupunkinosto.js';
 import { FOKUSKOHTEET_GBR } from './packs/fokuskohteet-gbr.js';
 import { FOKUSKOHTEET_HUN } from './packs/fokuskohteet-hun.js';
@@ -589,6 +590,21 @@ KOHDE_MAAT.LVA = [...(KOHDE_MAAT.LVA ?? []), ...HAHMOTELMA_LVA];
  * -hahmotelmapakka.
  */
 KOHDE_MAAT.TUR = [...(KOHDE_MAAT.TUR ?? []), ...HAHMOTELMA_TUR];
+
+/*
+ * BRITANNIAN HAHMOTELMANOSTOT (js/packs/hahmotelma-gbr.js): 17
+ * täydentävää karttanostoa Britannian olemassa olevien 13 nostoon
+ * (10 maastokohteet-gbr.js:ssä, 3 fokuskohteet-gbr.js:ssä) — Pohjois-
+ * Irlanti, Lake District, Cornwall, teollisuushistoria (Quarry Bank
+ * Mill, Stockton ja Darlingtonin rautatie, Sohon manufaktuuri),
+ * Liverpool, Oxford, ruokaperinne (fish and chips, iltapäivätee,
+ * haggis), Skotlannin länsi (Skye, Loch Lomond, Edinburgh), Wales
+ * (Caernarfon), Dover ja York. Sama liitosreitti kuin muu Eurooppa
+ * -hahmotelmilla (Turkki yllä): rivit lisätään olemassa olevan
+ * kuratoidun ja maastolistan PERÄÄN, kumpaakaan alkuperäistä listaa
+ * ei muuteta.
+ */
+KOHDE_MAAT.GBR = [...(KOHDE_MAAT.GBR ?? []), ...HAHMOTELMA_GBR];
 
 /*
  * KOHTEET SÄHKETEHTÄVÄN SISÄLTÖHAKEMISTOON (Raamattu, PÖLLÖN
