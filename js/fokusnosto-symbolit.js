@@ -1640,10 +1640,60 @@ export const NOSTOSYM_NIMIO_KOKO = 11;
  * merkki pysähtyy TÄSMÄLLEEN samaan pikselimäärään — kukin omalla
  * zoomillaan.
  */
-/** Nimiön suurin kirjasinkoko ruudulla (px), ks. yllä. */
+/** Nimiön suurin kirjasinkoko ruudulla (px) saapumisnäkymän puolella, ks. yllä. */
 export const NOSTOSYM_NIMIO_KATTO_PX = 16;
-/** Merkin mitan katto: nimiö ei kasva yli NOSTOSYM_NIMIO_KATTO_PX:n. */
+/** Merkin mitan katto saapumisnäkymän puolella: nimiö ei kasva yli NOSTOSYM_NIMIO_KATTO_PX:n. */
 export const NOSTOSYM_MITAN_KATTO = NOSTOSYM_NIMIO_KATTO_PX / NOSTOSYM_NIMIO_KOKO;
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * KATTO NOUSEE LÄHIZOOMISSA (omistaja 21.9.2026, iPhone v2021, Lorraine
+ * z9 ja Ranska z7: *"nostonimet pienenevät liikaa lähelle zoomattaessa
+ * — z9:llä ruutu lähes tyhjä ja nimet 12–13 px, tilaa isommalle on"*)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Katto on 16 px, kunnes kamera on yhden zoomiportaan saapumisnäkymän
+ * sisäpuolella (kartan kerroin 2), ja nousee siitä log2-asteikolla
+ * tasaisesti 22 px:iin kertoimessa 4 (kaksi porrasta saapumisesta);
+ * syvemmällä se pysyy 22 px:ssä. Puhelimen syvin sallittu zoomi on
+ * mitattu kertoimeen n. 4,3 (Camargue, maanZoomiraja), joten 22 px on
+ * se, mitä pelaaja lähimpänä näkee; kerroin 2,83 antaa 19 px. Käyrä on
+ * kameran korkeuden funktio EIKÄ riipu ladonnasta, tilasta tai muista
+ * nimistä (Fable 21.9.2026): sovittelu saa piilottaa tai siirtää, ei
+ * skaalata. Katto asetetaan ladonnassa (js/pallolauta/nostot.js
+ * paivita → nostosymAsetaNimionKatto) samasta kertoimesta, jolla
+ * merkkien mitta lasketaan; kehysten välissä E2:n kuori lukee saman
+ * katon `--nimio-b`:stä.
+ */
+/** Nimiön suurin kirjasinkoko lähizoomissa (px). */
+export const NOSTOSYM_NIMIO_LAHIKATTO_PX = 22;
+/** Kartan kerroin, josta katto alkaa nousta (yksi zoomiporras saapumisesta). */
+export const NOSTOSYM_KATON_NOUSU_ALKAA = 2;
+/** Kartan kerroin, jossa katto on täydessä lähizoomin mitassaan. */
+export const NOSTOSYM_KATON_NOUSU_PAATTYY = 4;
+/**
+ * Nimiön kirjasinkoon katto ruudulla (px) kartan kertoimella. Puhdas
+ * funktio: savukkeet ja testit lukevat odotuksensa tästä.
+ *
+ * @param {number} kerroin kameran mittakaava / saapumisnäkymän mittakaava
+ */
+export function nostosymNimionKattoPx(kerroin) {
+  const k = Number.isFinite(kerroin) && kerroin > 0 ? kerroin : 1;
+  const alku = Math.log2(NOSTOSYM_KATON_NOUSU_ALKAA);
+  const loppu = Math.log2(NOSTOSYM_KATON_NOUSU_PAATTYY);
+  const t = Math.min(1, Math.max(0, (Math.log2(k) - alku) / (loppu - alku)));
+  return NOSTOSYM_NIMIO_KATTO_PX + t * (NOSTOSYM_NIMIO_LAHIKATTO_PX - NOSTOSYM_NIMIO_KATTO_PX);
+}
+/** Voimassa oleva katto (px); ladonta asettaa sen kameran kertoimesta. */
+let nimionKattoPxNyt = NOSTOSYM_NIMIO_KATTO_PX;
+/** Asettaa voimassa olevan katon kartan kertoimesta; palauttaa katon (px). */
+export function nostosymAsetaNimionKatto(kerroin) {
+  nimionKattoPxNyt = nostosymNimionKattoPx(kerroin);
+  return nimionKattoPxNyt;
+}
+/** Voimassa oleva nimiön katto ruudulla (px). */
+export function nostosymNimionKattoPxNyt() {
+  return nimionKattoPxNyt;
+}
 /*
  * KATON VASTAKOE YHDELLÄ LIPULLA: `?nimiokatto=0` sammuttaa katon,
  * jolloin merkit kasvavat kuten ennen PAATOKSET 31:tä. Savuke mittaa
@@ -1676,14 +1726,14 @@ function nimiokattoKaytossa() {
  * kaavallaan ja päästää sen tästä läpi.
  *
  * @param {number} mitta merkin mitta (1 = nimiö NOSTOSYM_NIMIO_KOKO px)
- * @returns {number} sama mitta, enintään NOSTOSYM_MITAN_KATTO
+ * @returns {number} sama mitta, enintään voimassa oleva katto (nostosymMitanKatto)
  */
 export function nostosymKatettuMitta(mitta) {
-  return nimiokattoKaytossa() ? Math.min(NOSTOSYM_MITAN_KATTO, mitta) : mitta;
+  return nimiokattoKaytossa() ? Math.min(nimionKattoPxNyt / NOSTOSYM_NIMIO_KOKO, mitta) : mitta;
 }
-/** Voimassa oleva mitan katto: NOSTOSYM_MITAN_KATTO, tai Infinity kun katto on pois. */
+/** Voimassa oleva mitan katto (nimionKattoPxNyt / NOSTOSYM_NIMIO_KOKO), tai Infinity kun katto on pois. */
 export function nostosymMitanKatto() {
-  return nimiokattoKaytossa() ? NOSTOSYM_MITAN_KATTO : Infinity;
+  return nimiokattoKaytossa() ? nimionKattoPxNyt / NOSTOSYM_NIMIO_KOKO : Infinity;
 }
 
 /**

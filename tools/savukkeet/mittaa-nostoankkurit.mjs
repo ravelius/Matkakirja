@@ -28,6 +28,7 @@ import { extname, join } from 'node:path';
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 import { NOSTON_MITTA, NOSTON_MITAN_KATTO } from '../../js/pallolauta/nostot.js';
+import { NOSTOSYM_NIMIO_KOKO, nostosymNimionKattoPx } from '../../js/fokusnosto-symbolit.js';
 
 const paketti = await import('playwright')
   .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
@@ -323,7 +324,8 @@ for (const l of lukemat) {
  * `min(NOSTON_MITTA / osuus, katto)`, koska zoomin osuus on
  * saapumisnäkymän osuus näkyvästä leveydestä.
  */
-const odotettuMitta = (osuus) => Math.min(NOSTON_MITTA / osuus, NOSTON_MITAN_KATTO);
+// KATTO NOUSEE LÄHIZOOMISSA (21.9.2026): katto on kertoimen (1/osuus) funktio.
+const odotettuMitta = (osuus) => Math.min(NOSTON_MITTA / osuus, nostosymNimionKattoPx(1 / osuus) / NOSTOSYM_NIMIO_KOKO);
 for (const l of lukemat) {
   const mitat = l.merkit.filter((m) => nosto(m) && Number.isFinite(m.mitta)).map((m) => m.mitta);
   const odotus = odotettuMitta(l.zoomiOsuus);

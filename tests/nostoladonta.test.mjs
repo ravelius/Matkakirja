@@ -370,3 +370,19 @@ test('syvin tiheys on sama luku kuin laattageneraattorilla', () => {
     'tasojen oletusmäärä muuttui: tuotannon pyramidi ei ole enää z0–z7');
   assert.equal(NOSTOLADONTA_SYVIN_TIHEYS, 7.2);
 });
+
+test('nimiön katto nousee lähizoomissa kartan kertoimen mukaan (omistaja 21.9.2026): 16 px kertoimeen 2, 22 px kertoimesta 4', async () => {
+  const s = await import('../js/fokusnosto-symbolit.js');
+  assert.equal(s.nostosymNimionKattoPx(1), 16);
+  assert.equal(s.nostosymNimionKattoPx(2), 16);
+  assert.ok(Math.abs(s.nostosymNimionKattoPx(2 * Math.SQRT2) - 19) < 1e-9, `kerroin 2,83 → ${s.nostosymNimionKattoPx(2 * Math.SQRT2)}`);
+  assert.equal(s.nostosymNimionKattoPx(4), 22);
+  assert.equal(s.nostosymNimionKattoPx(16), 22);
+  assert.equal(s.nostosymNimionKattoPx(NaN), 16);
+  // Voimassa oleva katto seuraa asetusta, ja katettu mitta lukee sen.
+  assert.equal(s.nostosymAsetaNimionKatto(4), 22);
+  assert.ok(Math.abs(s.nostosymMitanKatto() - 22 / s.NOSTOSYM_NIMIO_KOKO) < 1e-12);
+  assert.ok(Math.abs(s.nostosymKatettuMitta(10) - 22 / s.NOSTOSYM_NIMIO_KOKO) < 1e-12);
+  assert.equal(s.nostosymAsetaNimionKatto(1), 16);
+  assert.equal(s.nostosymMitanKatto(), s.NOSTOSYM_MITAN_KATTO);
+});

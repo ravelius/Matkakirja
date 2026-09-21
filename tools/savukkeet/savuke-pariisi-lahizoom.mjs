@@ -169,7 +169,7 @@ import { extname, join } from 'node:path';
 
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
-import { NOSTOSYM_NIMIO_KOKO } from '../../js/fokusnosto-symbolit.js';
+import { NOSTOSYM_NIMIO_KOKO, nostosymNimionKattoPx } from '../../js/fokusnosto-symbolit.js';
 import { suorituskykyVaatija } from './suorituskyky.mjs';
 import {
   NOSTON_MITTA, NOSTON_NIMIO_KATTO_PX, KAUPUNKIMERKIN_KERROIN, KAUPUNKIMERKIN_NIMIO_PX,
@@ -259,8 +259,13 @@ console.log(`Lohkot: ${[...LOHKOT].join(', ')}`);
 const LAHIZOOMIN_TAVOITE = 0.34;
 /** Väliportaat saapumiskorkeuden osuuksina, viimeinen on tavoite. */
 const ZOOMIPORTAAT = [0.7, 0.5, LAHIZOOMIN_TAVOITE];
-/** Nimiön ruutupikselikatto (sama luku kuin kerroksella). */
-const NIMION_KATTO_PX = NOSTON_NIMIO_KATTO_PX;
+/**
+ * Nimiön ruutupikselikatto (sama luku kuin kerroksella). KATTO NOUSEE
+ * LÄHIZOOMISSA (21.9.2026, fokusnosto-symbolit.js): perus 16 px pätee
+ * kertoimeen 2 ja nousee 22 px:iin kertoimessa 4; vartio 1 mittaa
+ * lähizoomin (kerroin 1/LAHIZOOMIN_TAVOITE ≈ 2,94) katon eli n. 19,3 px.
+ */
+const NIMION_KATTO_PX = nostosymNimionKattoPx(1 / LAHIZOOMIN_TAVOITE);
 /** Mittausvara kattoon: pyöristys `toFixed(4)`-muunnoksessa. */
 const KATON_VARA_PX = 0.1;
 /**
@@ -279,7 +284,7 @@ const VASTAKOKEEN_RAJA_PX = 30;
  * (PAATOKSET 31 TARKENNUS 2 kohta 5). Ennen kohtaa 5 luvut olivat
  * 79,8 px (puhelin) ja 22,97 px (työpöytä).
  */
-const TURISTIN_VASTAKOKEEN_RAJA_PX = NOSTON_NIMIO_KATTO_PX * 1.25;
+const TURISTIN_VASTAKOKEEN_RAJA_PX = NIMION_KATTO_PX * 1.25;
 /**
  * KYLTIN NIMIÖ SAAPUMISNÄKYMÄSSÄ (PAATOKSET 31 TARKENNUS 2 kohta 5:
  * *"n. 11,5 px saapuessa, 16 px lähizoomissa, sama molemmilla
@@ -1355,7 +1360,7 @@ for (const ruutu of RUUDUT) {
   const suurin = koot.length ? Math.max(...koot) : 0;
   tieto(`${ruutu.nimi} · nimiön koko ruudulla lähizoomissa`,
     `${koot.length} nimiötä, suurin ${p(suurin)} px, pienin ${p(Math.min(...koot))} px`);
-  vaadi(`1. ${ruutu.nimi}: nimiö ≤ ${NIMION_KATTO_PX} px lähizoomissa`,
+  vaadi(`1. ${ruutu.nimi}: nimiö ≤ ${p(NIMION_KATTO_PX, 1)} px lähizoomissa (katto kertoimella ${p(1 / LAHIZOOMIN_TAVOITE, 2)})`,
     koot.length > 0 && suurin <= NIMION_KATTO_PX + KATON_VARA_PX,
     `suurin ${p(suurin)} px (${koot.length} nimiötä)`);
 
