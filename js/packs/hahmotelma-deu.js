@@ -57,7 +57,10 @@
  */
 
 /** Saksan hahmotelmanostot: sisällölliset kohteet kaupungin ulkopuolella. */
+import { EUROOPAN_KADONNEET } from './monumentit-eurooppa.js';
+
 export const HAHMOTELMA_DEU = [
+  ...EUROOPAN_KADONNEET.DEU,
   {
     id: 'hahmotelma-saechsische-schweiz',
     kuva: {

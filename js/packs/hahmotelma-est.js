@@ -70,7 +70,10 @@
  */
 
 /** Viron hahmotelmanostot: sisällölliset kohteet kaupungin (Tallinna) ulkopuolella. */
+import { EUROOPAN_KADONNEET } from './monumentit-eurooppa.js';
+
 export const HAHMOTELMA_EST = [
+  ...EUROOPAN_KADONNEET.EST,
   {
     id: 'hahmotelma-soomaa',
     kuva: {

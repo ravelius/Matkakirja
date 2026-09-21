@@ -58,7 +58,10 @@
  */
 
 /** Italian hahmotelmanostot: sisällölliset kohteet kaupunkien ulkopuolella. */
+import { EUROOPAN_KADONNEET } from './monumentit-eurooppa.js';
+
 export const HAHMOTELMA_ITA = [
+  ...EUROOPAN_KADONNEET.ITA,
   {
     id: 'hahmotelma-monviso',
     kuva: {

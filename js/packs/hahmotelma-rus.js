@@ -103,7 +103,10 @@
  */
 
 /** Venäjän hahmotelmanostot: sisällölliset kohteet. */
+import { EUROOPAN_KADONNEET } from './monumentit-eurooppa.js';
+
 export const HAHMOTELMA_RUS = [
+  ...EUROOPAN_KADONNEET.RUS,
   {
     id: 'hahmotelma-peterhof',
     kuva: {

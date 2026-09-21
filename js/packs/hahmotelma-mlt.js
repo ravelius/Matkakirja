@@ -62,7 +62,10 @@
  */
 
 /** Maltan hahmotelmanostot: valmis sisältö, ei rekisteröity (Malta ei ole vielä kartalla). */
+import { EUROOPAN_KADONNEET } from './monumentit-eurooppa.js';
+
 export const HAHMOTELMA_MLT = [
+  ...EUROOPAN_KADONNEET.MLT,
   {
     id: 'hahmotelma-valletta',
     kuva: {

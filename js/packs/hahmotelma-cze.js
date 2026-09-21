@@ -57,7 +57,10 @@
  */
 
 /** Tšekin hahmotelmanostot: sisällölliset kohteet kaupungin ulkopuolella. */
+import { EUROOPAN_KADONNEET } from './monumentit-eurooppa.js';
+
 export const HAHMOTELMA_CZE = [
+  ...EUROOPAN_KADONNEET.CZE,
   {
     id: 'hahmotelma-bohemian-paradise',
     kuva: {

@@ -41,7 +41,7 @@ import { SAHKE_VASTAUKSET } from '../tools/pollo/rajat.js';
  * pilotin todellinen lista jäisi vartioimatta — ja juuri sen pituus on
  * se, joka ratkaisee kannattaako arvata.
  */
-import '../js/fokuskohteet.js';
+import { KOHDE_MAAT } from '../js/fokuskohteet.js';
 import { FOKUSVIRRAT, KEVYET_FOKUSVIRRAT, fokusvirtaKaupungille } from '../js/packs/fokusvirrat.js';
 // Livian kentät voivat olla kuplien taulukoita (7.9.2026): sama
 // normalisointi kuin pelissä ja generointityökalussa.
@@ -867,29 +867,9 @@ test('Matkakirjan ihmeillä on kuva, selite ja havainnekuvamerkintä', async () 
   // Ämpärin juuri luetaan pelistä eikä toisteta tässä (js/media.js).
   const { PEILI_JUURI } = await import('../js/media.js');
 
-  const paketit = Object.entries({
-    GRC: (await import('../js/packs/fokuskohteet-grc.js')).FOKUSKOHTEET_GRC,
-    TUR: (await import('../js/packs/fokuskohteet-tur.js')).FOKUSKOHTEET_TUR,
-    EGY: (await import('../js/packs/fokuskohteet-egy.js')).FOKUSKOHTEET_EGY,
-    IRQ: (await import('../js/packs/fokuskohteet-irq.js')).FOKUSKOHTEET_IRQ,
-    // Euroopan erä 27.8.2026: Forum Romanum, Tuileries ja vanha St Paul.
-    ITA: (await import('../js/packs/fokuskohteet-ita.js')).FOKUSKOHTEET_ITA,
-    FRA: (await import('../js/packs/fokuskohteet-fra.js')).FOKUSKOHTEET_FRA,
-    GBR: (await import('../js/packs/fokuskohteet-gbr.js')).FOKUSKOHTEET_GBR,
-    // Maailman erä 27.8.2026: seitsemän uutta maata, joilla on
-    // fokuslehti mutta ei vielä omaa fokusvirtaa.
-    SYR: (await import('../js/packs/fokuskohteet-syr.js')).FOKUSKOHTEET_SYR,
-    CHN: (await import('../js/packs/fokuskohteet-chn.js')).FOKUSKOHTEET_CHN,
-    MEX: (await import('../js/packs/fokuskohteet-mex.js')).FOKUSKOHTEET_MEX,
-    JOR: (await import('../js/packs/fokuskohteet-jor.js')).FOKUSKOHTEET_JOR,
-    IRN: (await import('../js/packs/fokuskohteet-irn.js')).FOKUSKOHTEET_IRN,
-    AFG: (await import('../js/packs/fokuskohteet-afg.js')).FOKUSKOHTEET_AFG,
-    ZWE: (await import('../js/packs/fokuskohteet-zwe.js')).FOKUSKOHTEET_ZWE,
-    // Välimeren erä 27.8.2026: kaksi uutta maata, joilla on fokuslehti
-    // mutta ei vielä omaa fokusvirtaa.
-    LBY: (await import('../js/packs/fokuskohteet-lby.js')).FOKUSKOHTEET_LBY,
-    TUN: (await import('../js/packs/fokuskohteet-tun.js')).FOKUSKOHTEET_TUN,
-  });
+  // Pelin oma koonti sisältää kuratoidut kohteet, maastokohteet ja
+  // hahmotelmapakat. Näin testi ei unohda uutta sisältöperhettä.
+  const paketit = Object.entries(KOHDE_MAAT);
 
   let ihmeita = 0;
   for (const [maa, kohteet] of paketit) {
@@ -949,8 +929,13 @@ test('Matkakirjan ihmeillä on kuva, selite ja havainnekuvamerkintä', async () 
          * KADONNEELLA EI OLE VALOKUVAA, koska kohdetta ei ole: ihmekuva
          * on kortin ensimmäinen ja ainoa kuva (piirraKohdeKuvat).
          */
-        assert.equal(kuvalista.length, 0,
-          `${tunnus}: kadonneen kohteen ainoa kuva on ihmekuva`);
+        // Skálholt oli valmis maastokohde ennen kadonneen katedraalin
+        // ihmettä. Sen nykyiset paikkakuvat säilyvät lähdeaineistona,
+        // vaikka kadonnut katedraali käyttää kortin pääkuvana ihmettä.
+        if (kohde.id !== 'skalholt') {
+          assert.equal(kuvalista.length, 0,
+            `${tunnus}: kadonneen kohteen ainoa kuva on ihmekuva`);
+        }
       } else {
         /*
          * OLEMASSA OLEVAN PÄÄKUVA ON VALOKUVA KOHTEEN NYKYISESTÄ
@@ -958,9 +943,9 @@ test('Matkakirjan ihmeillä on kuva, selite ja havainnekuvamerkintä', async () 
          * ei repon oma generoitu kuva. Generoitu ihmekuva aukeaa vain
          * "Koe ihme" -napista, joka piirtyy tämän kuvan ALLE.
          */
-        assert.ok(kohde.kuva?.tiedosto,
+        assert.ok(kohde.kuva?.tiedosto || kohde.kuva?.osoite,
           `${tunnus}: olemassa olevan kohteen pääkuvan on oltava Commons-valokuva`);
-        assert.ok(/\(CC|\(PD|PD\)/.test(kohde.kuva.lahde ?? ''),
+        assert.ok(kohde.kuva.lisenssi || /\(CC|\(PD|PD\)|public domain/i.test(kohde.kuva.lahde ?? ''),
           `${tunnus}: pääkuvan lähderivillä on oltava lisenssi ja tekijä`);
       }
     }
@@ -973,7 +958,7 @@ test('Matkakirjan ihmeillä on kuva, selite ja havainnekuvamerkintä', async () 
    * mantereelta ja VÄLIMEREN erä vielä kahdeksan antiikin Välimereltä
    * ja Mesopotamiasta.
    */
-  assert.equal(ihmeita, 35, 'Matkakirjan ihmeitä on kolmekymmentäviisi');
+  assert.equal(ihmeita, 104, 'Matkakirjan ihmeitä on sataneljä');
 });
 
 /*
@@ -990,12 +975,18 @@ test('ihmeiden kuvakansiossa on vain uudet ihme-kuvat', async () => {
   const juuri = join(dirname(fileURLToPath(import.meta.url)), '..');
   const kansio = join(juuri, 'assets/kartat/ihmeet');
   const tiedostot = readdirSync(kansio);
-  assert.equal(tiedostot.length, 35,
-    'kansiossa on kolmekymmentäviisi ihmekuvaa');
+  assert.equal(tiedostot.length, 104,
+    'kansiossa on sataneljä ihmekuvaa');
   for (const nimi of tiedostot) {
     assert.ok(nimi.startsWith('ihme-'), `${nimi}: vanha loistoaikakuva on yhä levyllä`);
   }
   const sw = readFileSync(join(juuri, 'sw.js'), 'utf8');
+  const euroopanJpg = tiedostot.filter((nimi) => nimi.endsWith('-loistoaika.jpg'));
+  assert.equal(euroopanJpg.length, 69, 'Euroopan erässä on 69 JPG-kuvaa');
+  for (const nimi of euroopanJpg) {
+    assert.ok(!sw.includes(`assets/kartat/ihmeet/${nimi}`),
+      `${nimi}: R2:sta ladattavaa 1600 px kuvaa ei lisätä SHELL-esilataukseen`);
+  }
   for (const rivi of sw.split('\n')) {
     const osuma = rivi.match(/assets\/kartat\/ihmeet\/([^']+)/);
     if (!osuma) continue;

@@ -54,7 +54,10 @@
  */
 
 /** Alankomaiden hahmotelmanostot: sisällölliset kohteet kaupungin ulkopuolella. */
+import { EUROOPAN_KADONNEET } from './monumentit-eurooppa.js';
+
 export const HAHMOTELMA_NLD = [
+  ...EUROOPAN_KADONNEET.NLD,
   {
     id: 'hahmotelma-texel',
     kuva: {

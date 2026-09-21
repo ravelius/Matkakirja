@@ -93,7 +93,10 @@
  */
 
 /** Sveitsin hahmotelmanostot: sisällölliset kohteet. */
+import { EUROOPAN_KADONNEET } from './monumentit-eurooppa.js';
+
 export const HAHMOTELMA_CHE = [
+  ...EUROOPAN_KADONNEET.CHE,
   {
     id: 'hahmotelma-geneve',
     kuva: {
