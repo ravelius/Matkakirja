@@ -150,6 +150,25 @@ const MERI_PAIKALLINEN = new URL('../.nevalimuisti/ne_10m_ocean.geojson',
 /** Hilan solu ja tuntuma asteina — samat luvut kuin pallon naulauksessa. */
 const NAULAUS_RUUTU = 0.05;
 const NAULAUS_TOLERANSSI = 0.015;
+/*
+ * ═══ TARKKA RANTAVIIVA (`--meri=<geojson>`, omistaja 21.9.2026) ═══════
+ *
+ * Kun laatat ja pallon vektorit poltetaan GSHHG-rantaviivasta
+ * (tools/gshhs-meri.mjs), kehän rannan on tultava SAMASTA tiedostosta,
+ * tai kehä kulkee Natural Earthin 4–6 km:n janoina tarkan rannan
+ * vieressä — mitattu Girondella 21.9.2026 (docs/raportit/poltto-koe-
+ * 20260920.md, gironde-rantaviiva-ennen/jalkeen): 35 kehän omaa janaa,
+ * 227 km kaksoisviivaa. Naulaus tehdään silloin KAHDESSA VAIHEESSA:
+ * kärki luokitellaan rannalla olevaksi Natural Earthin merellä (sama
+ * 0,015°:n tuntuma kuin ennen — admin_0 ja ne_10m_ocean eroavat enintään
+ * 1,1 km, joten sisämaan rajat eivät liiku), ja rannalla oleva kärki
+ * SIIRRETÄÄN tarkan rantaviivan lähimmälle janalle, jota haetaan
+ * leveämmällä säteellä (TARKAN_TOLERANSSI: GSHHG ja admin_0 eroavat
+ * suistoissa ja laguuneissa kilometrejä). Ompelu kulkee sen jälkeen
+ * tarkan rannan renkailla, joten kehä SEURAA rantaa kärkien välissäkin.
+ */
+const TARKAN_TOLERANSSI = 0.06;
+const tarkkaMeriPolku = process.argv.find((a) => a.startsWith('--meri='))?.slice('--meri='.length) ?? null;
 const KOHDE = new URL('../assets/data/maapolygonit.json', import.meta.url);
 
 const LEVEYS = MAAILMANKARTTA.map.width;
@@ -280,27 +299,53 @@ function rannikkoHila(meri) {
  * Kehän kärjet rantaviivalle siellä, missä ranta on tuntumassa.
  * Palauttaa uuden renkaan ja siirrettyjen kärkien määrän.
  */
-function naulaaRengas(kehä, hila, meriRenkaat) {
-  let siirretty = 0;
-  const viitteet = [];
-  const ulos = kehä.map((p) => {
-    const gx = Math.round(p[0] / NAULAUS_RUUTU);
-    const gy = Math.round(p[1] / NAULAUS_RUUTU);
-    // Pituusasteen kutistuma leveyspiirillä (napojen lähellä aste on lyhyt).
-    const kerroin = Math.max(0.05, Math.cos(p[1] * Math.PI / 180));
-    let paras = null;
-    let parasEtaisyys = NAULAUS_TOLERANSSI;
-    for (let dx = -1; dx <= 1; dx += 1) {
-      for (let dy = -1; dy <= 1; dy += 1) {
-        for (const q of hila.get(`${gx + dx}|${gy + dy}`) ?? []) {
-          let dLon = p[0] - q[0];
-          if (dLon > 180) dLon -= 360; else if (dLon < -180) dLon += 360;
-          const d = Math.hypot(dLon * kerroin, p[1] - q[1]);
-          if (d < parasEtaisyys) { parasEtaisyys = d; paras = q; }
-        }
+/** Lähin rantakärki hilasta säteellä `toleranssi` (asteina) tai null. */
+function lahinKarki(p, hila, toleranssi) {
+  const gx = Math.round(p[0] / NAULAUS_RUUTU);
+  const gy = Math.round(p[1] / NAULAUS_RUUTU);
+  // Pituusasteen kutistuma leveyspiirillä (napojen lähellä aste on lyhyt).
+  const kerroin = Math.max(0.05, Math.cos(p[1] * Math.PI / 180));
+  const sade = Math.ceil(toleranssi / NAULAUS_RUUTU);
+  let paras = null;
+  let parasEtaisyys = toleranssi;
+  for (let dx = -sade; dx <= sade; dx += 1) {
+    for (let dy = -sade; dy <= sade; dy += 1) {
+      for (const q of hila.get(`${gx + dx}|${gy + dy}`) ?? []) {
+        let dLon = p[0] - q[0];
+        if (dLon > 180) dLon -= 360; else if (dLon < -180) dLon += 360;
+        const d = Math.hypot(dLon * kerroin, p[1] - q[1]);
+        if (d < parasEtaisyys) { parasEtaisyys = d; paras = q; }
       }
     }
+  }
+  return paras;
+}
+
+function naulaaRengas(kehä, hila, meriRenkaat, tarkka = null) {
+  let siirretty = 0;
+  let pudotetut = 0;
+  const viitteet = [];
+  const ulos = kehä.map((p) => {
+    const kerroin = Math.max(0.05, Math.cos(p[1] * Math.PI / 180));
+    let paras = lahinKarki(p, hila, NAULAUS_TOLERANSSI);
     if (!paras) { viitteet.push(null); return p; }
+    let renkaat = meriRenkaat;
+    if (tarkka) {
+      // Rannalla Natural Earthin mukaan → tarkan rannan lähimmälle janalle.
+      const tarkkaParas = lahinKarki(p, tarkka.hila, TARKAN_TOLERANSSI);
+      /*
+       * Natural Earthin mukaan vedessä, GSHHG:n mukaan maalla (esim.
+       * Gironden suiston pää: admin_0 ja ne_10m_ocean vievät veden
+       * Garonnea ja Dordognea ylös, GSHHG päättää suiston aiemmin).
+       * Kärki PUDOTETAAN: kehä kulkee viereisten rantakärkien välistä
+       * suoraan, ja joki on pohjalaatassa joka tapauksessa viivana.
+       * Mitattu Girondella 21.9.2026: ilman pudotusta 7 kehän omaa
+       * janaa (42 km) ohuena kiilana suiston pään yli.
+       */
+      if (!tarkkaParas) { pudotetut += 1; return null; }
+      paras = tarkkaParas;
+      renkaat = tarkka.renkaat;
+    }
     /*
      * SIIRTO JANALLE, EI KÄRKEEN (korjaus mittauksen jälkeen 20.9.2026).
      * Lähin rantaKÄRKI voi olla kauempana kuin rantaVIIVA: pitkän janan
@@ -308,7 +353,7 @@ function naulaaRengas(kehä, hila, meriRenkaat) {
      * SIIRSI kehän pois viivalta (Ranska: suurin ero 192 → 1 610 m).
      * Projektio lähimmälle janalle ei voi koskaan kasvattaa etäisyyttä.
      */
-    const rengas = meriRenkaat[paras[2]];
+    const rengas = renkaat[paras[2]];
     const i = paras[3];
     const n = rengas.length - 1;
     let osuma = [paras[0], paras[1]];
@@ -331,7 +376,18 @@ function naulaaRengas(kehä, hila, meriRenkaat) {
     viitteet.push([paras[2], paras[3]]);
     return osuma;
   });
-  return { rengas: ulos, siirretty, viitteet };
+  if (!pudotetut) return { rengas: ulos, siirretty, viitteet, pudotetut };
+  // Pudotetut kärjet pois renkaasta JA viitteistä samassa tahdissa.
+  const rengas = [];
+  const viitteetJaljelle = [];
+  let v = 0;
+  for (let k = 0; k < ulos.length; k += 1) {
+    if (ulos[k] === null) continue;
+    rengas.push(ulos[k]);
+    viitteetJaljelle.push(viitteet[v]);
+    v += 1;
+  }
+  return { rengas: rengas.length >= 4 ? rengas : kehä, siirretty, viitteet: rengas.length >= 4 ? viitteetJaljelle : kehä.map(() => null), pudotetut };
 }
 
 /*
@@ -551,7 +607,18 @@ const meri = await lueMeri();
 const { hila: rantaHila, renkaat: meriRenkaat } = rannikkoHila(meri);
 console.log(`Rantaviivan kärkiä hilassa: ${[...rantaHila.values()].reduce((a, v) => a + v.length, 0)}`
   + ` (${meriRenkaat.length} rantarengasta)`);
+let tarkka = null;
+let tarkanLahde = null;
+if (tarkkaMeriPolku) {
+  const tarkkaMeri = JSON.parse(readFileSync(tarkkaMeriPolku, 'utf8'));
+  tarkka = rannikkoHila(tarkkaMeri);
+  const lahdePolku = new URL('lahde.json', `file://${tarkkaMeriPolku}`);
+  tarkanLahde = existsSync(lahdePolku) ? JSON.parse(readFileSync(lahdePolku, 'utf8')) : { lahde: tarkkaMeriPolku };
+  console.log(`Tarkka rantaviiva: ${tarkkaMeriPolku} — ${tarkka.renkaat.length} rengasta, `
+    + `${[...tarkka.hila.values()].reduce((a, v) => a + v.length, 0)} kärkeä (${tarkanLahde.lahde ?? ''})`);
+}
 let naulattuja = 0;
+let pudotettujaKarkia = 0;
 let ommeltuja = 0;
 let ompeleenKarkia = 0;
 let hylattyjaOmpeleita = 0;
@@ -570,8 +637,9 @@ for (const iso of pelimaat) {
   const renkaat = [];
   for (const alkuperainen of ulkokehat(piirre.geometry)) {
     // Rannikko naulataan ASTEISSA ennen lautakäännöstä (ks. yllä).
-    const { rengas: naulattu, siirretty, viitteet } = naulaaRengas(alkuperainen, rantaHila, meriRenkaat);
+    const { rengas: naulattu, siirretty, viitteet, pudotetut } = naulaaRengas(alkuperainen, rantaHila, meriRenkaat, tarkka);
     naulattuja += siirretty;
+    pudotettujaKarkia += pudotetut ?? 0;
     /*
      * OMMEL EI SAA MUUTTAA RENKAAN LUONNETTA (mitattu 20.9.2026:
      * ilman tätä Liettuan ja Fidžin renkaat rappeutuivat nollapinta-
@@ -580,7 +648,7 @@ for (const iso of pelimaat) {
      * rengas kiertää toisin päin tai sen pinta-ala muuttuu yli
      * neljänneksen, ommel hylätään ja rengas jää naulatuksi.
      */
-    const ommelEhdokas = ompeleRengas(naulattu, viitteet, meriRenkaat);
+    const ommelEhdokas = ompeleRengas(naulattu, viitteet, tarkka ? tarkka.renkaat : meriRenkaat);
     const alaEnnen = pinta(naulattu);
     const alaJalkeen = pinta(ommelEhdokas.rengas);
     const kelpaa = Math.sign(alaJalkeen) === Math.sign(alaEnnen)
@@ -588,15 +656,28 @@ for (const iso of pelimaat) {
       && Math.abs(alaJalkeen) < Math.abs(alaEnnen) * 1.25;
     const ommel = kelpaa ? ommelEhdokas
       : { rengas: naulattu, ommeltuja: 0, lisatyt: 0 };
-    if (!kelpaa) hylattyjaOmpeleita += 1;
+    if (!kelpaa) {
+      hylattyjaOmpeleita += 1;
+      if (process.env.OMPELULOKI) console.log(`  hylätty ommel ${iso}: kärkiä ${alkuperainen.length}, ala ${alaEnnen.toExponential(2)} → ${alaJalkeen.toExponential(2)}`);
+    }
     ommeltuja += ommel.ommeltuja;
     ompeleenKarkia += ommel.lisatyt;
     const kehä = ommel.rengas;
     const laudalla = puraRengas(kehä, projektio);
     if (koko(laudalla) < MIN_KOKO) { pudonneet++; continue; }
-    const kevyt = yksinkertaista(laudalla, TOLERANSSI);
+    const kevyt = yksinkertaista(laudalla, TOLERANSSI)
+      // Talletustarkkuuteen JO TÄSSÄ: kiertosuunta ja pinta-ala
+      // katsotaan samoista luvuista, jotka tiedostoon menevät.
+      .map(([x, y]) => [Math.round(x * TARKKUUS) / TARKKUUS, Math.round(y * TARKKUUS) / TARKKUUS]);
     // Kolmiota pienempi jäännös ei ole muoto vaan viiva.
     if (kevyt.length < 4) { pudonneet++; continue; }
+    /*
+     * SÄLE EI OLE MUOTO: tarkalla rantaviivalla ommeltu pikkusaari voi
+     * jäädä talletustarkkuudessa alle neliöyksikön säleeksi, jonka
+     * kiertosuunta on pyöristyksen arpaa (mitattu 21.9.2026: USA, 6
+     * kärkeä, ala −0,09 yksikköä²). Se putoaa kuten sirpaleet.
+     */
+    if (Math.abs(pinta(kevyt)) < 1) { pudonneet++; continue; }
     renkaat.push(koodaa(suunnista(kevyt)));
     renkaita++;
     pisteita += kevyt.length;
@@ -611,7 +692,8 @@ const ulos = {
    */
   lahde: 'Natural Earth 10m admin-0 countries (public domain) — sama '
     + 'aineisto kuin laattoihin poltetulla rajaviivalla',
-  komento: 'node tools/generoi-maapolygonit.mjs',
+  komento: `node tools/generoi-maapolygonit.mjs${tarkkaMeriPolku ? ' --meri=<gshhs-data>/ne_10m_ocean.geojson' : ''}`,
+  ...(tarkanLahde ? { rantaviiva: { lahde: tarkanLahde.lahde, sha256: tarkanLahde.sha256 ?? null, toleranssi: TARKAN_TOLERANSSI } } : {}),
   projektio: PROJEKTIO,
   tarkkuus: TARKKUUS,
   lauta: { leveys: LEVEYS, korkeus: KORKEUS },
@@ -622,7 +704,7 @@ writeFileSync(KOHDE, JSON.stringify(ulos));
 const kt = Math.round(readFileSync(KOHDE).length / 1024);
 console.log(`Maita ${Object.keys(maat).length} / ${pelimaat.length}`
   + `, renkaita ${renkaita}, pisteitä ${pisteita}, pudotettuja sirpaleita ${pudonneet}`);
-console.log(`Rannikolle naulattuja kärkiä: ${naulattuja}`);
+console.log(`Rannikolle naulattuja kärkiä: ${naulattuja}${tarkka ? `, pudotettuja (NE vedessä, tarkka maalla): ${pudotettujaKarkia}` : ''}`);
 console.log(`Ommeltuja jänteitä: ${ommeltuja}, rantaviivalta lisättyjä kärkiä: ${ompeleenKarkia}`
   + `, hylättyjä ompeleita: ${hylattyjaOmpeleita}`);
 if (puuttuvat.length) console.log(`EI LÖYTYNYT: ${puuttuvat.join(' ')}`);

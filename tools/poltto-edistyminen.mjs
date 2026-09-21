@@ -275,6 +275,7 @@ export function odotetutPyramidista(luettelo) {
   }
   for (const [kentta, kerros] of [
     ['nostotaso', 'nostot'], ['viivataso', 'viivat'], ['rantataso', 'ranta'],
+    ['nimiotaso', 'nimiot'],
   ]) {
     const taso = luettelo[kentta];
     if (!taso?.laatastot) continue;

@@ -130,3 +130,73 @@ Codexin koristeet), `nostotasot-vedos.json` (lajin → Codexin tyyppimerkki).
   (220 px z7), kompassiruusu-8 Biskajalla, fregatti/kuunari/höyry/kalastusvene 6 kpl.
   Koe 3:n korjaukset: Kanaalin vene siirretty pois Picardien nimiön alta; Picardie
   väistää Amiensin nostoa (väistöaskelia 17).
+
+## Tarkka rantaviiva GSHHG full — koelaatta Gironde/Arcachon (21.9.2026)
+
+Omistajan kysymys: *valtionrajat ovat jo tarkkoja — onko toinen viiva meren
+raja, joka ei ole yhtä tarkka, ja tuleeko kaksoisviiva siitä?* Vastaus: **kyllä.**
+Pallolla kehä (maan korostus) tulee `assets/data/maapolygonit.json`ista
+(ne_10m_admin_0, kärjet naulattu ne_10m_oceaniin), rantaviiva vektorisoluista
+(ne_10m_ocean) ja meren täyttö laatoista (sama ne_10m_ocean). Kaksi aineistoa
+eroavat 0,1–4 km, ja ajonaikainen naulaus (pallovektorit.js, tuntuma 0,015°)
+peittää eron vain siellä, missä se on alle 1,7 km. Kun rantaviiva tarkentuu,
+ero kasvaa — ensimmäinen koekaappaus GSHHG-laatoilla ja -vektoreilla mutta
+vanhalla kehällä näytti 35 kehän omaa janaa (227 km) toisena viivana rannan
+vieressä.
+
+**Ratkaisu: yksi lähde kaikille kolmelle.** `tools/gshhs-meri.mjs` kirjoittaa
+GSHHG 2.3.7 full -rantaviivan (LGPL, 9,3 M pistettä; taso 1 maa, taso 6
+Etelämantereen pohjautumisviiva kuten NE:ssä, Kaspianmeri tasolta 2)
+`ne_10m_ocean.geojson`-muotoon omaan aineistokansioon (`~/pyramidi-poltto/
+gshhs-data`, `lahde.json` kertoo lähteen ja sha256:n). Parillisuusmaski 0,1°:n
+hilalla NE:tä vasten: ero 0,23 % soluista (kaikki rannoilla; jäähyllyillä
+tasolla 5 olisi ollut 1,15 %). Lukijoita ei muutettu: poltto (`--data`),
+vektorisolut (`tee-pallovektorit --harvennus`) ja kehä (`generoi-maapolygonit
+--meri=`) lukevat saman tiedoston. Harvennus MOLEMMISSA 0,004° (NE 0,006°).
+Kehä: kärki luokitellaan rannalla olevaksi NE:llä (0,015°) ja siirretään GSHHG:n
+lähimmälle janalle (haku 0,06°); ompelu kulkee GSHHG-renkailla; NE:n mukaan
+vedessä mutta GSHHG:n mukaan maalla oleva kärki (Gironden suiston pää) pudotetaan.
+maapolygonit.json 1,4 → 2,7 Mt (gz 498 → 889 kt), pisteitä 240 k → 497 k.
+Vektorisolut: tasolta 0 pudotetaan toleranssia pienemmät renkaat (779 → 130 kt gz).
+
+**Koelaatta** (pohja z7–z8 alue −1,7..−0,3 E, 44,3..45,9 N, koe3-resepti; 2000 ×
+1200, korkeus 0,03/0,02): `gironde-rantaviiva-{ennen,jalkeen}.webp`,
+`arcachon-rantaviiva-{ennen,jalkeen}.webp`. Luminanssiprofiili Médocin rannan
+poikki (rivi 780, ±4): ENNEN yksi tumma viiva (lum 79, 3 px), JÄLKEEN yksi tumma
+viiva (79, 4 px) — täytön reuna (meri 217 → maa 231) on molemmissa viivan alla,
+ei erillistä ohutta viivaa. Meren puolella jälkeen-kuvassa on koe3-reseptin
+tumma rantaviivoitus (6 viivaa, lum 183–206, 10 px välein) — se on hyväksytty
+ilme, ei virhe. Kehän omia janoja alueella 35 → 4 (18 km, Gironden suiston pää).
+
+**Polttoskripti** (`tools/polta-paikallisesti.sh`): `--data`, `--yhteisliput`,
+`--pohjaliput`, `--viivaliput`, `--rantaliput`, `--nostoliput`, `--nimioversio
+--nimiot` (nimiöshardi z4–z8, luettelon nimiotaso shardin pyramidi.jsonista),
+`--ilman-nostoja/--ilman-nimioita` (kaksivaiheinen ajo samalla tunnuksella);
+pallon sarja täydessä poltossa luetaan tämän ajon luettelosta ja levyn
+shardeista (ei ämpärin vanhasta luettelosta); luettelo viedään vasta pallon
+sarjan jälkeen ja `--ei-luettelovientia` toimii (lippu oli ennen kuollut).
+
+## Täysi poltto 21.9.2026 (omistajan hyväksymä vedos + GSHHG-rantaviiva)
+
+Versiot: pohja `2026-09-21-pohja` (joet pohjassa, koe3-meriresepti, ilman
+rantaviivaa, GSHHG 0,004°), viivat `2026-09-21-viivat` (--eipiirit --eijoet),
+ranta `2026-09-21-ranta`, nostot `2026-09-21-nostot` (maittain, 112 maata,
+tasot: Versailles'n peilisali, Étretat `--polta-hahmotelmat`, Mont Blanc ym.
+ykköstasolla; kuvamerkin alla paperinvaalea sädekehä), nimiöt
+`2026-09-21d-nimiot` (69 nimiötä + Codexin koristeet; Horation reitti pois;
+laivat vedessä; koristeetkin väistävät nimiä; z ≤ 5: joet eivät ole esteitä ja
+vain palavat nostot ovat; ilman vapaata paikkaa nimi jää pois tasolta —
+z5: 3 pois, z6–z8: 0), pallosarja `pallo/laatat/2026-09-21-pohja-20260921a/`
+(viivat mukana, ranta ja nostot eivät), vektorit `pallo/vektorit/2026-09-21-gshhs/`.
+Kesto: pohja+viivat+ranta 47 min (117 288 laattaa), nostot+nimiöt+pallo 53 min
+(209 850 laattaa yhteensä), kaikki laatat ämpärissä. Luettelo (eheys täsmää)
+vientikansiossa `~/pyramidi-poltto/vienti-20260921/pyramidi.json` — EI ämpärissä
+ennen kuin osoitin on mainissa. Osoittimet haarassa karttaseppa-gshhs-rantaviiva:
+js/pallo.js PALLO_LAATTAVERSIO/PALLO_LAATTATUNNISTE, js/pallovektorit.js
+PALLOVEKTORIT_VERSIO, assets/data/maapolygonit.json (GSHHG-kehä).
+Kaappaukset `*-poltto-20260921.webp` (saapuminen, Biskaja, Gironde, Alpit) —
+peli, ämpärin laatat, paikallinen luettelo. Polttoskriptin opit: lapsishardit
+saavat liput ympäristöstä; luettelo saa kerrosliput (--eijoet); nimiöshardi
+on versiokohtainen (uusi nimiöversio ei mitätöi muita shardeja).
+Seuraava nimiötason uusintapoltto (DEU/ITA/ESP, LAZIO, ei KANTABRIAA) on
+oma pieni ajo: `--nimioversio <uusi> --nimiot <json>` samoilla muilla versioilla.
