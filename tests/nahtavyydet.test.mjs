@@ -95,9 +95,9 @@ test('numeroympyrat-lippu pitää kohteet kartalla eikä siirrä niitä liuskaan
     assert.equal(KAUPUNKIKARTAT[id].numeroympyrat, true, `${id}: lippu puuttuu`);
     assert.deepEqual(kaupunkikartanSiirretyt(null, id), [], `${id}: kohteet eivät saa siirtyä liuskan "Muut"-riville`);
   }
-  // Muut kartat ennallaan: Pariisin miniatyyrittömät siirtyvät edelleen liuskaan.
-  assert.ok(!KAUPUNKIKARTAT.pariisi.numeroympyrat);
-  assert.ok(kaupunkikartanSiirretyt(null, 'pariisi').length > 0, 'Pariisin siirretyt katosivat');
+  // Muut kartat ennallaan: Dunedinin miniatyyrittömät siirtyvät edelleen liuskaan.
+  assert.ok(!KAUPUNKIKARTAT.dunedin.numeroympyrat);
+  assert.ok(kaupunkikartanSiirretyt(null, 'dunedin').length > 0, 'Dunedinin siirretyt katosivat');
 });
 
 test('numeroympyrä syntyy vain miniatyyrittömälle kohteelle lipun kartalla, numero sisällä', () => {
