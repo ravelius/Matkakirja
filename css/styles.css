@@ -25300,6 +25300,22 @@ body.infotaulu-auki .toimintorivi .monitoimi-nappi {
 .nostosym-rasteri { pointer-events: none; }
 
 /*
+ * LÖYTÄMISEN SUMU — LUONNOS (js/pallolauta/sumu.js, prototyyppi
+ * kehittäjälipun takana): löytämätön nosto on haalea lyijykynäluonnos,
+ * ja löytyessään se mustuu pehmeästi.
+ */
+.pallolauta-nosto-luonnos .pallolauta-nosto-siirto {
+  opacity: 0.45;
+  filter: grayscale(1) contrast(0.8);
+}
+.pallolauta-nosto .pallolauta-nosto-siirto {
+  transition: transform 200ms ease-in-out, opacity 600ms ease-out, filter 600ms ease-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .pallolauta-nosto .pallolauta-nosto-siirto { transition: none; }
+}
+
+/*
  * NIMIÖ HÄIVYTETÄÄN, EI POISTETA (Fable 21.9.2026, nimiöt vakaat,
  * js/pallolauta/nostot.js asetteleNosto): elävän noston nimiö on oma
  * rasterinsa ikonin rinnalla, ja sovittelun piilotus on ryhmän luokka.

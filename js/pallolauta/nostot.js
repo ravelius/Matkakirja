@@ -81,6 +81,9 @@ import { KOHDEMAAN_NIMIOT_ELAVINA, pyramidinMerinimet } from '../pallo.js';
 import { PALLOLAUDAN_LEVEYS } from './kamera.js';
 import { nimenKarttakerroin } from './nimet.js';
 import { sovitteleLaput, laatikkoSisalla } from './sovittelu.js';
+import {
+  kaydytKaupungit, loytosateella, merkitseLoydetyksi, nostoLoydetty, sumuPaalla,
+} from './sumu.js';
 
 /** Reunan hystereesi: oma kylki palaa vasta, kun se on näin syvällä sisällä (px). */
 export const REUNAN_HYSTEREESI_PX = 24;
@@ -1200,6 +1203,8 @@ export function asetteleNosto(el, d) {
   el.dataset.nimio = nakyy ? nimio : '';
   el.dataset.taso = String(d.taso ?? 2);
   el.classList.toggle('pallolauta-nosto-taso1', taso1);
+  // Löytämisen sumu: luonnos harmaana ja haaleana (css), mustaus siirtymällä.
+  el.classList.toggle('pallolauta-nosto-luonnos', Boolean(d.luonnos));
   el.classList.toggle('lunastettu', Boolean(d.lunastettu));
   // Listan alle jäänyt merkki piiloutuu listan ajaksi (ks. LISTA EI
   // KOSKAAN TOISEN TEKSTIN PÄÄLLE); seuraava ladonta palauttaa sen.
@@ -1576,6 +1581,20 @@ export function luoNostot({
     const pack = game?.pack;
     const rivit = [];
     /*
+     * LÖYTÄMISEN SUMU (js/pallolauta/sumu.js, prototyyppi): käydyt
+     * kaupungit asteina kerran ladontaa kohti; nosto löytösäteen sisällä
+     * mustataan (merkitseLoydetyksi), muut kohdemaan nostot ovat
+     * luonnoksia (`luonnos`), ykköstaso aina musteena.
+     */
+    const sumu = sumuPaalla();
+    const kaydyt = sumu ? kaydytKaupungit(ui, asteet) : [];
+    const luonnos = (id, taso, lat, lng) => {
+      if (!sumu || taso === 1) return false;
+      if (nostoLoydetty(id)) return false;
+      if (loytosateella({ lat, lon: lng }, kaydyt)) { merkitseLoydetyksi(id); return false; }
+      return true;
+    };
+    /*
      * LADONNAN JÄRJESTYSNUMERO (`ladontaNro`) — aihenoston nimiön
      * ankkuri (PAATOKSET 27 TARKENNUS 2 kohta 8, ks. AIHENOSTON NIMIÖ
      * alempana). Rivit syntyvät DATAN järjestyksessä, joka ei muutu
@@ -1743,6 +1762,8 @@ export function luoNostot({
           // tyypistä; sama kenttä kulkee datumiin ja laatikoihin.
           taso: kohde.taso === 1 || kohde.taso === 3 ? kohde.taso : 2,
           kuvamerkki: kohde.taso === 1 ? nostosymKuvamerkki(m.kategoria, m.laji) : null,
+          // Löytämisen sumu: luonnos, kunnes löydetty (ks. keraa).
+          luonnos: luonnos(m.id, kohde.taso === 1 ? 1 : 2, a.lat, a.lon),
           /*
            * KAUPUNKIJÄSENYYS (PAATOKSET 27 TARKENNUS 2 kohta 7,
            * js/fokuskohteet.js nostonKaupunkiAvain): saman kaupungin
@@ -2886,6 +2907,7 @@ export function luoNostot({
       lunastettu: Boolean(r.lunastettu),
       taso: r.taso ?? 2,
       kuvamerkki: r.kuvamerkki ?? null,
+      luonnos: Boolean(r.luonnos),
       elementti: r.perhe === 'piste' ? pisteElementti : nostoElementti,
       asettele: r.perhe === 'piste' ? asetteleFokuspiste : asetteleNosto,
     }));

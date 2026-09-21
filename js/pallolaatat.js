@@ -1686,6 +1686,84 @@ function maalaaKermaMaamaskilla(ctx, {
   return true;
 }
 
+/*
+ * LÖYTÄMISEN SUMU — MAAN SISÄINEN SUMU (js/pallolauta/sumu.js,
+ * prototyyppi kehittäjälipun takana). Kohdemaan renkaiden SISÄLLÄ
+ * maalataan kevyt kerma (`tasoitus.sumu.peitto`, 0,35) kaikkialle paitsi
+ * käytyjen kaupunkien ympärille: jokainen aukko on ellipsi laudan
+ * yksiköissä (`aukot`: x, y, rx, ry), jonka reuna pehmenee
+ * säteittäisellä liukuvärillä. Maski rakennetaan tilapäiskankaalle:
+ * renkaat valkoisella, aukot destination-out-liukuvärillä; maskin alfa
+ * kertoo kerman peiton. Meri jää pohjan omaan väriin samalla maa/meri-
+ * erottelulla kuin hunnussa (TASOITUS_MERI_ERO).
+ */
+export function maalaaSisasumu(ctx, {
+  tasoitus, kartta, ppu, arkki,
+}) {
+  const sumu = tasoitus?.sumu;
+  if (!ctx || !sumu?.aukot || !tasoitus?.renkaat?.length || !arkki || !(ppu > 0)) return false;
+  if (!(kartta?.leveys > 0) || !(kartta.korkeus > 0)) return false;
+  const W = kartta.leveys;
+  const H = kartta.korkeus;
+  const kx = (bx) => (bx - arkki.x) * ppu - kartta.kansX0;
+  const ky = (by) => (by - arkki.y) * ppu - kartta.kansY0;
+  if (!renkaatOsuvat({
+    renkaat: tasoitus.renkaat, W, H, kx, ky,
+  })) return false;
+  const kangas = tilapainenKangas(W, H);
+  let apu = null;
+  try { apu = kangas?.getContext?.('2d', { willReadFrequently: true }); } catch { apu = null; }
+  if (!apu || typeof apu.getImageData !== 'function') return false;
+  apu.clearRect(0, 0, W, H);
+  if (!renkaidenPolku(apu, {
+    renkaat: tasoitus.renkaat, W, H, kx, ky,
+  })) return false;
+  apu.fillStyle = '#fff';
+  apu.fill();
+  apu.globalCompositeOperation = 'destination-out';
+  for (const a of sumu.aukot) {
+    const cx = kx(a.x);
+    const cy = ky(a.y);
+    const rx = a.rx * ppu;
+    const ry = a.ry * ppu;
+    if (!(rx > 0) || !(ry > 0)) continue;
+    if (cx + rx < 0 || cy + ry < 0 || cx - rx > W || cy - ry > H) continue;
+    // Pehmeä reuna: täysi aukko 70 %:iin säteestä, häipyy reunaan.
+    apu.save();
+    apu.translate(cx, cy);
+    apu.scale(1, ry / rx);
+    const g = apu.createRadialGradient(0, 0, rx * 0.7, 0, 0, rx);
+    g.addColorStop(0, 'rgba(0,0,0,1)');
+    g.addColorStop(1, 'rgba(0,0,0,0)');
+    apu.fillStyle = g;
+    apu.beginPath();
+    apu.arc(0, 0, rx, 0, Math.PI * 2);
+    apu.fill();
+    apu.restore();
+  }
+  let maski = null;
+  try { maski = apu.getImageData(0, 0, W, H).data; } catch { return false; }
+  const [r, g, b] = [1, 3, 5].map((i) => parseInt(tasoitus.kerma.slice(i, i + 2), 16));
+  let data = null;
+  try { data = ctx.getImageData(0, 0, W, H); } catch { return false; }
+  const d = data.data;
+  const vali = TASOITUS_MAA_ERO - TASOITUS_MERI_ERO;
+  for (let i = 0; i < d.length; i += 4) {
+    const sisalla = maski[i + 3] / 255;
+    if (!(sisalla > 0)) continue;
+    const ero = d[i] - d[i + 2];
+    if (ero <= TASOITUS_MERI_ERO) continue;
+    let t = ero >= TASOITUS_MAA_ERO ? 1 : (ero - TASOITUS_MERI_ERO) / vali;
+    t = t * t * (3 - 2 * t);
+    const a = sumu.peitto * t * sisalla;
+    d[i] += (r - d[i]) * a;
+    d[i + 1] += (g - d[i + 1]) * a;
+    d[i + 2] += (b - d[i + 2]) * a;
+  }
+  ctx.putImageData(data, 0, 0);
+  return true;
+}
+
 export function maalaaTasoitus(ctx, {
   tasoitus, kartta, ppu, arkki, kuva = null, maamaski = false,
 }) {
@@ -2464,6 +2542,12 @@ export function luoLaattakerros({
         kuva,
         maamaski: MERET_NAKYVIIN,
       });
+      // Löytämisen sumu: maan sisäinen kevyt kerma käymättömien seuduille.
+      if (tasoitus.sumu) {
+        maalaaSisasumu(ctx, {
+          tasoitus, kartta, ppu: tasoOlio.pikseliaPerYksikko, arkki: pyramidi.arkki,
+        });
+      }
     };
     for (let i = 0; i < kuvat.length; i += 1) {
       const kuva = kuvat[i];
