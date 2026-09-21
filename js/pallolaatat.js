@@ -2423,7 +2423,17 @@ export function luoLaattakerros({
       if (purettu || laatat.get(t.avain) !== t) { for (const k of kuvat) k?.close?.(); return; }
       const valmisteluAlkoi = aika();
       const kangas = luoKangas(kartta.leveys, kartta.korkeus);
-      const ctx = kangas?.getContext?.('2d');
+      /*
+       * LUETAAN USEIN (sulavuus E1b, 21.9.2026): kerma ja sumu lukevat
+       * kankaan pikselit takaisin (getImageData), ja kiihdytetyltä
+       * kankaalta se on näytönohjaimen synkroninen luku — profiilissa
+       * getImageData oli valmistelun suurin yksittäinen erä (388 ms /
+       * 34 s, enemmän kuin itse pikselisilmukat). `willReadFrequently`
+       * pitää kankaan muistissa, jolloin luku on kopio eikä odotus.
+       */
+      let ctx = null;
+      try { ctx = kangas?.getContext?.('2d', { willReadFrequently: true }); } catch { ctx = null; }
+      if (!ctx) ctx = kangas?.getContext?.('2d');
       if (!ctx) { for (const k of kuvat) k?.close?.(); t.tila = 'virhe'; return; }
       /*
        * TASOITUS ULOTTUU LAATASTON ULKOPUOLELLE (kaistat, 13.9.2026).
