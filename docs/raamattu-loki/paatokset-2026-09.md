@@ -431,3 +431,7 @@ Omistaja 21.9.2026 (kortti, Karttasepän vedos docs/raportit/maakuntavedos-20260
 ## LINSSI-IKONIT REPOSSA WEBP 192 PX, ALKUPERAISET TOIMITUSKANSIOSSA (21.9.2026 klo 13.56)
 
 Fable 21.9.2026 (Pelikoodarin huomio: Codexin 512 px PNG-ikonit ~400 kt/kpl, 9,4 Mt repossa 44 px:n ruutuun): repoon tallennetaan linssi-ikoneista vain webp-versio, enintään 192 px (96 px kortti @2), laatu ~85; 512 px PNG-alkuperäiset jäävät Codexin toimituskansioon /Users/samireivinen/Documents/Codex/<pvm>/ eikä niitä committoida. Sama sääntö tuleville ikoni- ja merkkitoimituksille: Julkaisija muuntaa noudon yhteydessä. Pelikoodarin linssisarja (pelikoodari-linssisarja e5d13891): 46 hiomassa-riviä rekisterissä, tietäjäpistekynnys ja mantereen laatta eivät myönnä hiomassa-linssejä, ne ovat aarreluettelon palkkioita. iPad-mittauksen juurisyy: lokaalista originista WebKit hylkää ämpärin WebGL-tekstuurit; testaukseen tools/laitepalvelin.mjs, tuotanto ei kärsi.
+
+## KAKSI AANTA: ISOISA JA LIVIA, NUORI FOGG ON PELAAJA (21.9.2026 klo 13.57)
+
+Omistaja 21.9.2026 (korjaus apurahakuvauksen yhteydessä): pelin nykymuodossa nuori Fogg ei koskaan kommentoi eikä havainnoi mitään; Livia-kirjekyyhky on ainoa, joka kommentoi. Pelin kaksi ääntä ovat siis isoisä Horatio 1873 ja Livia nyt; nuori Fogg on pelaaja ilman omia repliikkejä, kaupunkikuvaukset ovat kertojan neutraalia tekstiä, ja nuoren Foggin piirteet näkyvät vain kertojan kuvaamana tekona tai Livian huomiona. Pöllö on kolmas, nostojen ääni. Päivitetty docs/tarina.md (Kaksi ääntä) ja Raamatun kohta KAKSI ÄÄNTÄ.

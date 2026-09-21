@@ -384,9 +384,12 @@ export const RAAMATTU = {
           + 'hevosia, ei myrskyjä, kohtelias kaikille (tarkennettu '
           + '13.9.2026: ks. kohta HORATION INHIMILLINEN EPATAYDELLISYYS). '
           + 'Persoona välittyy merkinnöistä.',
-        'KAKSI ÄÄNTÄ: isoisä 1873, nuori Fogg nyt. Huumori syntyy '
-          + 'välistä. Isoisä on joskus yhä oikeassa — ei narri. Ivaa '
-          + 'paikallisille ei koskaan; piikki isoisään ja tämän '
+        'KAKSI ÄÄNTÄ (omistaja 21.9.2026): isoisä 1873 ja Livia-kirjekyyhky '
+          + 'nyt. Nuori Fogg on pelaaja: ei koskaan kommentoi eikä havainnoi, '
+          + 'ei omia repliikkejä; kaupunkikuvaukset ovat kertojan neutraalia '
+          + 'tekstiä. Pöllö on kolmas, nostojen ääni. Huumori syntyy '
+          + 'isoisän ja Livian välistä. Isoisä on joskus yhä oikeassa — ei '
+          + 'narri. Ivaa paikallisille ei koskaan; piikki isoisään ja tämän '
           + 'aikalaisherroihin.',
         'VASTUSTAJAT: isoisällä Ezekiel Grimshaw (mahtipontinen, aina '
           + 'myöhässä, ei koskaan vaarallinen). Nuorella Foggilla NÄKYMÄTÖN '
