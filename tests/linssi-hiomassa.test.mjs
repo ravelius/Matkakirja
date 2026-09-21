@@ -20,7 +20,7 @@ import { LINSSIT } from '../js/linssit/rekisteri.js';
 import { LINSSIAARTEET, linssiAarteesta } from '../js/linssit/aarteet.js';
 import {
   HYVITYS_ETULIITE, LEIMA_ETULIITE, NAHTY_ETULIITE, OPTIKON_HYVITYS,
-  hiomassa, hiomassaNimi, hiomassaOlevat, hyvitaHiomassa, merkitseNahdyksi, omistetut, valmistuneet,
+  hiomassa, hiomassaNimi, hiomassaOlevat, hyvitaHiomassa, merkitseLinssiNahdyksi, omistetut, valmistuneet,
 } from '../js/linssit/omistus.js';
 import { STAMP_KEY } from '../js/passport.js';
 import { ISO_AARRE_ARVO } from '../js/tokens.js';
@@ -107,7 +107,7 @@ test('rekisterin rivin valmistuminen herättää linssin: omistus säilyy, valmi
   assert.ok(omistetut(game).has('testilinssi'), 'omistus ei kadonnut');
   assert.deepEqual(hiomassaOlevat(game), []);
   assert.deepEqual(valmistuneet(game), ['testilinssi'], 'valmistui-merkki kerran');
-  merkitseNahdyksi('testilinssi');
+  merkitseLinssiNahdyksi('testilinssi');
   assert.ok(leimat()[`${NAHTY_ETULIITE}testilinssi`]);
   assert.deepEqual(valmistuneet(game), [], 'merkki kuitattu');
 });

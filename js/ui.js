@@ -19083,7 +19083,7 @@ export class UI {
     // Valmistuneen linssin merkki kuitataan ensimmäisellä napautuksella.
     const omistus = this.linssiTuki?.omistus;
     if (tunnus && omistus?.valmistuneet?.(this.game, this.game.player).includes(tunnus)) {
-      omistus.merkitseNahdyksi?.(tunnus);
+      omistus.merkitseLinssiNahdyksi?.(tunnus);
       this.linssiValikko?.querySelector(`.linssi-liuskat button[data-linssi="${tunnus}"]`)?.classList.remove('valmistui');
     }
     this.paivitaLinssiTiedot();

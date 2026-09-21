@@ -197,7 +197,7 @@ export function hiomassaOlevat(game, player = game?.player) {
 /**
  * VALMISTUNEET: linssi, josta on maksettu hyvitys ja joka on nyt
  * rekisterissä valmis, mutta jota ei ole vielä nähty laukussa. Laukku
- * näyttää kerran "valmistui"-merkin ja kuittaa sen merkitseNahdyksi.
+ * näyttää kerran "valmistui"-merkin ja kuittaa sen merkitseLinssiNahdyksi.
  */
 export function valmistuneet(game, player = game?.player) {
   const leimat = readStamps();
@@ -206,7 +206,7 @@ export function valmistuneet(game, player = game?.player) {
     && !leimat[`${NAHTY_ETULIITE}${tunnus}`]);
 }
 
-export function merkitseNahdyksi(tunnus) {
+export function merkitseLinssiNahdyksi(tunnus) {
   return stampBoard(`${NAHTY_ETULIITE}${tunnus}`, `Linssi nähty: ${tunnus}`);
 }
 
