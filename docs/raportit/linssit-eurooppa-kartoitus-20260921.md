@@ -131,3 +131,66 @@ F1, F4, A3 myöhemmin.
 Kun päätökset on tehty: Fable kirjaa linjauksen Raamattuun ja lokiin,
 Pelikoodari toteuttaa hiomassa-tilan ja hyvityksen, Sisältökirjuri liittää
 linssit aarreluetteloon kaupungeittain, Codex piirtää ikonit.
+
+## Linssien paino: kevyt vai raskas (omistajan kysymys 21.9.2026)
+
+Omistaja: avaruuslinssi on kevyempi ja hauskempi (ei alkuanimaatiota,
+heti tutkittavissa, visuaalinen), Ihmisen matka raskaampi (pitkä
+alkuanimaatio). Jos raskaita on paljon, tarvitaan myös linssejä, jotka
+ovat vain hauskoja ja pelillisiä, jotta into löytää lisää pysyy korkeana.
+Peli ei saa muuttua tietoähkyksi eikä tehtäväkoneeksi. Maailmanradio on
+kevyt: ei kysymyksiä, ei pakkoa oppia.
+
+### Nykyiset linssit painon mukaan
+
+| paino | linssi | miksi |
+|---|---|---|
+| kevyt (leikki, katselu) | Maailmanradio, Astronautin kamera, Karttapallo, Topografia, Vesistöt | ei kaarta, ei kysymyksiä, heti käsissä; oppi tulee sivutuotteena |
+| keskiraskas (selaus) | Maiden tiedot, Vertailu | lukemista, mutta pelaaja valitsee itse mitä ja kuinka kauan |
+| raskas (kaari) | Keksinnöt Euroopassa, Ihmisen matka | kello, pysäkit, alkuanimaatio, luenta; katsotaan alusta loppuun |
+
+Katalogin 112 ideaa ovat lähes kaikki raskaita: aikajana-, alue- ja
+virtalinssit ovat kaaria. Ilman vastapainoa suhde olisi 2 kevyttä : 20
+raskasta jo Euroopan renkaassa 1.
+
+### Fablen ehdotus: kolme painoluokkaa ja suhde 1 : 1 : 1
+
+1. **Leikkilinssit** (ei kaarta, ei kysymyksiä, ei luentaa): maailma
+   muuttuu heti sormen alla. Löytö palkitsee itsessään.
+2. **Katselulinssit** (kevyt kaari tai vapaa selaus, enintään 1–2
+   pulun kysymystä, luenta valinnaisena).
+3. **Tarinalinssit** (nykyiset kaaret: kello, pysäkit, luenta, kortit).
+
+Jokaisen tarinalinssin rinnalle tulee yksi leikki- ja yksi katselulinssi,
+ja aarreluettelossa ne vuorottelevat, jotta kaksi raskasta ei tule
+peräkkäin. Raskaan linssin alkuanimaatio saa aina ohituksen (Ihmisen
+matkaan ensimmäisenä).
+
+### Leikkilinssi-ideoita (uusia, ei katalogissa)
+
+| linssi | mitä tapahtuu | huomio |
+|---|---|---|
+| Yökartta | maapallo yöllä, kaupunkien valot; sormella voi sammuttaa maan | rekisterissä jo tynkä `yokartta` |
+| Tuulet ja pilvet | elävä tuulikartta, pilvet liukuvat, sormi pyörittää myrskyä | tynkä `tuulet`; data avoimista lähteistä |
+| Tähtitaivas | isoisän yön taivas kaupungin yllä, tähdistöt syttyvät kosketuksesta | tynkä `tahdet` |
+| Muuttolinnut | kurjet ja pääskyt lentävät kartalla vuodenkierron mukaan, pelaaja nopeuttaa vuotta | F2/U3 katalogissa, tehdään leikkinä |
+| Isoisän kamera | kartta ja kortit vanhan valokuvan asussa, pelaaja "ottaa kuvia" laukkuun | vain visuaalinen suodatin, halpa |
+| Äänikartta | jokaisella kaupungilla oma ääni (satama, tori, kellot); sormi liikkuu, äänet sekoittuvat | radion sisar, sama äänivarasto |
+| Kellot | aikavyöhykkeet: mikä kello missäkin nyt ja isoisän aikaan ilman vyöhykkeitä | pieni, hauska, lukema muuttuu heti |
+| Lippuarvaus | lippu nousee kartalle, pelaaja napauttaa maata; sarjat ja ennätys | pelillinen, ei opetusta suoraan |
+| Laivat ja junat nyt | elävä liikenne (AIS/avoin data) pallolla | kevyt jos data saatavilla; muuten simuloitu |
+| Vuodenajat | lumi ja vihreys vaeltavat pallolla, sormella kuukausi | satelliittikuvasarjat, ei kysymyksiä |
+
+### Katselulinssi-ideoita
+
+Maailman ruoat kartalla (G3 kevyenä: kuva ja yksi lause), Maailman
+musiikki (radion jatke, soittolista kaupungeittain), Maailman eläimet
+(F2 ilman kaarta), Suurimmat kaupungit vuosi vuodelta (pallot kasvavat),
+Kielten kartta (tynkä `kielet`).
+
+### Suositus
+
+Renkaan 1 kahdentoista tarinalinssin rinnalle valitaan 6 leikkilinssiä
+ja 4 katselulinssiä, jolloin ensimmäisessä sarjassa on 22 linssiä ja
+raskaita alle puolet. Ikonitilaus Codexille lähtee vasta, kun tämä
+kokonaisuus ja tyyli on päätetty (omistaja 21.9.2026).
