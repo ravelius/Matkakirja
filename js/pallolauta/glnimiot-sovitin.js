@@ -416,8 +416,12 @@ export function luoGlNimiosovitin({
   };
 
   // Kesken ollut rasteri valmistui: sama jako uudestaan seuraavassa kehyksessä.
+  // LIIKKEESSÄ EI (sulavuus 22.9.2026): valmistunut rasteri odottaa seuraavaa
+  // ladontaa — vanha rasteri tai CSS2D on ruudulla siihen asti, eikä jokainen
+  // valmistuminen rakenna runkoa liikkeen kehyksessä.
   const irrota = lahde.tilaaRasterit(() => {
     if (purettu || (!viimeiset && !viimeisetNostot && !viimeisetPeli) || pyynto) return;
+    if (liikkeessa()) { luvut.lykattyja = (luvut.lykattyja ?? 0) + 1; return; }
     pyynto = true;
     ajasta(() => {
       pyynto = false;
