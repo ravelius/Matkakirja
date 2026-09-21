@@ -103,6 +103,7 @@ const MODULES = [
   'js/packs/hahmotelma-bih.js',
   'js/packs/hahmotelma-ukr.js',
   'js/packs/maakartat.js',
+  'js/packs/maakunnat-luonnehdinnat.js',
   'js/packs/nahtavyysjutut.js',
   'js/packs/miniatyyrit.js',
   'js/packs/julisteet.js',
