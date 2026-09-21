@@ -115,7 +115,7 @@ import {
   arvonimenPaikkaMaalle, nielaiseSulkevaNapautus, polloNimilappu, RAAHAUKSEN_KYNNYS,
   suurennoksenMitat,
 } from './ui-apurit.js';
-import { nostokuvaAloita, nostokuvaKortissa } from './nostokuva.js';
+import { nostokuvaAloita, nostokuvaKortissa, nostokuvaTurvaAlue } from './nostokuva.js';
 import { piirraReaktiot } from './reaktiot.js';
 import { lisaaLukijanappi } from './lukija.js';
 import { valokuvaSuurennos, valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
@@ -4759,11 +4759,16 @@ function asetaKohteenPaikka(ui) {
     KOHDE_LAITAVARA_ENINTAAN,
     Math.max(KOHDE_MARGINAALI, Math.round(pane.height * KOHDE_LAITAVARA_OSUUS)),
   );
+  // TURVA-ALUE (omistaja 21.9.2026, iPhone v2021: kortit tilarivin ja
+  // loven alla): rajat alkavat insetin sisäpuolelta — kartan pane
+  // ulottuu viewport-fit=coverissa niiden alle (js/nostokuva.js
+  // nostokuvaTurvaAlue lukee :root --turva-*).
+  const turva = nostokuvaTurvaAlue();
   // Alanapit: vuorolaatikko kelluu kapealla ruudulla kartan päällä.
-  let alaraja = pane.bottom - laitavara;
-  const ylaraja = pane.top + laitavara;
-  let oikeaRaja = pane.right - KOHDE_MARGINAALI;
-  const vasenRaja = pane.left + KOHDE_MARGINAALI;
+  let alaraja = pane.bottom - Math.max(laitavara, turva.ala + KOHDE_MARGINAALI);
+  const ylaraja = pane.top + Math.max(laitavara, turva.yla + KOHDE_MARGINAALI);
+  let oikeaRaja = pane.right - KOHDE_MARGINAALI - turva.oikea;
+  const vasenRaja = pane.left + KOHDE_MARGINAALI + turva.vasen;
   const napit = document.querySelector('.turn-card')?.getBoundingClientRect();
   if (napit && napit.height > 0 && napit.right > pane.left && napit.left < pane.right
     && napit.top > pane.top) {
