@@ -448,6 +448,8 @@ export function luoMerkit({ pallo, ui, siirtyma, asteet, kotelo = null, nakyviss
     maara: (osa) => (osat.get(osa) ?? []).length,
     /** Näkyvät kohteet osumatestiä varten ({ key, lat, lng, city }). */
     kohteet: () => kohteet,
+    /** Elementin datum (lat, lng, avain) — mittarit ja savukkeet (sulavuus). */
+    datum: (el) => elementinDatum.get(el) ?? null,
     /**
      * NAPAUTETTAVAT LINSSIMERKIT (aalto 2A). Linssin merkki
      * (js/pallolauta/linssit.js merkit, laji `linssi`) saa datumiinsa
