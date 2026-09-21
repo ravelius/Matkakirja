@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2039, teksti: 'Nostojen tyyppimerkit lähizoomissa' },
   { v: 2037, teksti: 'Nykymaakuntien luonnehdinnat: 97 aluetta, 7 maata' },
   { v: 2036, teksti: 'Kartuscha ISL: yksi aihe' },
   { v: 2035, teksti: 'Kartuscha RUS: kaksi aihetta' },
