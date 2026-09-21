@@ -128,6 +128,20 @@ const EU_CITIES = [
   { id: 'firenze', name: 'Firenze', wiki: 'Firenze', ambience: 'kaupunki', x: 412, y: 746, la: 'start', lx: 16, ly: 5 },
   { id: 'rooma', name: 'Rooma', wiki: 'Rooma', ambience: 'kaupunki', x: 451, y: 792, airport: true, la: 'end', lx: -16, ly: 5 },
   { id: 'sisilia', name: 'Sisilia', wiki: 'Sisilia', ambience: 'meri', x: 468, y: 891, la: 'end', lx: -16, ly: 5 },
+  /*
+   * VALLETTA ON TODELLISELLA PAIKALLAAN (35,8989 N / 14,5146 E). Laudan
+   * kaava x = (lon + 11) x 19,2 ja y = (72 - lat) x 26,3 antaa
+   * (489,9, 949,5), ja se on tässä pyöristettynä kokonaisluvuiksi (piste
+   * on lähellä vanhan 1000 x 1000 -laudan alareunaa, mutta ei sen
+   * ulkopuolella). Erillislautaa ei enää ole (Raamattu 30.8.2026), joten
+   * tätä pakkaa ei tarkisteta minCityDistance-portilla. Pelilauta on
+   * maailmankartta, jossa sama piste on (6317,2, 1961,4) ja lähimpään
+   * kaupunkiin, Sisiliaan, on 93,4 yksikköä (Tripoliin 121,3) — yli
+   * vaaditun 60:n. Piste on siis mitattu oikeaksi juuri siellä missä peli
+   * sitä lukee, eikä sitä tarvitse siirtää. Malta on saari (islands),
+   * eikä sen tarvitse osua kartan maa-alueeseen.
+   */
+  { id: 'valletta', name: 'Valletta', wiki: 'Valletta', ambience: 'meri', x: 490, y: 949, la: 'end', lx: -16, ly: 5 },
   {
     id: 'ateena', name: 'Ateena', wiki: 'Ateena', ambience: 'kaupunki', x: 667, y: 895, start: true, airport: true, la: 'end', lx: -16, ly: 5,
   },
@@ -349,6 +363,10 @@ const EU_EDGES = [
   { a: 'sisilia', b: 'ateena', steps: 4, type: 'sea' },
   { a: 'ateena', b: 'kreeta', steps: 2, type: 'sea' },
   { a: 'kreeta', b: 'sisilia', steps: 5, type: 'sea', via: [[620, 950], [540, 930]] },
+  // Valletta: meritie Sisiliaan (93,4 yksikköä maailmankartalla, sama
+  // luokka kuin Sarajevo-Dubrovnik). Tripolin (Afrikka) reitti on vain
+  // maailmankartta.js:ssä, koska europe.js ei tunne Afrikan kaupunkeja.
+  { a: 'sisilia', b: 'valletta', steps: 2, type: 'sea' },
   { a: 'istanbul', b: 'odessa', steps: 4, type: 'sea' },
   { a: 'dubrovnik', b: 'rooma', steps: 3, type: 'sea' },
   { a: 'tukholma', b: 'helsinki', steps: 2, type: 'sea' },
@@ -429,11 +447,11 @@ export const EUROPE = {
           + 'asti, ja kirkkaimpiin paloihin on jäänyt hyönteisiä kiinni.',
       },
     }),
-    // Laattoja on oltava tasan yhtä monta kuin kaupunkeja (48). Uusi
+    // Laattoja on oltava tasan yhtä monta kuin kaupunkeja (49). Uusi
     // kaupunki lisätään paikallisaarteisiin samassa suhteessa kuin
     // muutkin (noin kolmasosa isoja) — pääaarre ja mantereen aarre ovat
     // aina yksi kumpikin, eikä ryöstäjien määrä muutu kaupunkien mukana.
-    counts: { star: 1, mannerAarre: 1, isoAarre: 14, pieniAarre: 32 },
+    counts: { star: 1, mannerAarre: 1, isoAarre: 14, pieniAarre: 33 },
   },
 
   questions: EUROPE_QUESTIONS,
