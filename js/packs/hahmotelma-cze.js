@@ -926,6 +926,7 @@ export const HAHMOTELMA_CZE = [
     ],
     nimi: 'Karlovy Vary',
     tyyppi: 'kulttuuri',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Kuka keisari perusti Karlovy Varyn?',
