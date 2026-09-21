@@ -499,3 +499,7 @@ Karttaseppä 21.9.2026: maakuntien nimiötaso poltettu ja viety tuotantoon (vers
 ## LOYTAMISEN SUMU POIS; POSTIVAHTI SONNETILLE (21.9.2026 klo 16.15)
 
 Omistaja 21.9.2026 (tuotantokaappaus v1997): löytämisen sumu (aamun kokeilu: kohdemaan löytämättömät nostot haaleina luonnoksina) otetaan pois; nostot näkyvät aina ikonilla ja nimiöllä kuten ennen kokeilua. Kokeilu näkyi tuotannossa pelkkinä ympyröinä ilman ikonia ja nimeä. Pelikoodari palauttaa nostot heti. Karttaseppä tarkistaa, miksi 1873-kulttuurinimet näkyvät katkonaisina z6:lla nimiöversion f jälkeen. Postivahti: Haiku ei noudattanut skriptipohjaista ohjetta vaan keksi yhdistelmäkomentoja, jotka vaativat luvan joka kierroksella, ja /loop-työ jäi elämään /clearin yli; Postivahti avataan uutena sessiona Sonnetilla (tyhjäkäynti yhtä halpaa: yksi komento per kierros), kierros ajaa vain bash .postivahti.sh worktreessä /Users/koodaus/Matkakirja-posti.
+
+## LOYTAMISEN SUMU POIS OLETUKSENA (Pelikoodari 0c00d12c) (21.9.2026 klo 16.24)
+
+Pelikoodari 21.9.2026: sumu-pois-erä valmis (pelikoodari-sumu-pois 0c00d12c): nostot aina näkyvissä ikonilla ja nimiöllä, ei sumua eikä luonnosrenkaita; sumu vain lipulla ?loytosumu=1. Syy vuotoon: aamun kokeilu oli julkaistu oletuksena päällä (sumu.js: 'julkaisussa kaikille'), ei kehittäjälipun takana; tuotannon tyhjät ympyrät olivat luonnosnostoja. Julkaisija mergeää tämän jonon kärkeen.
