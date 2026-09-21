@@ -23,7 +23,8 @@
  *      lapulle ei löydy vapaita asentoja, heikompi häivytetään (nostot.js
  *      pitää ikonin ja häivyttää vain nimiön, css ≤ 200 ms) ja palaa,
  *      kun tilaa taas on. Prioriteetti on kiinteä: taso 1 > kaupunki >
- *      taso 2 > taso 3, sitten lyhyempi nimi ensin (sovittelunPainoarvo).
+ *      taso 2 > taso 3 — TÄSMENNYS 21.9.2026: kaupunki > taso 1 > taso 2
+ *      > taso 3 — sitten lyhyempi nimi ensin (sovittelunPainoarvo).
  *
  *   3. HYSTEREESI. Lukittu asento pidetään, jos se on yhä kelvollinen —
  *      lappu ei palaa "omaan" kylkeensä vain siksi, että tilaa vapautui.
@@ -31,8 +32,9 @@
  *      SOVITTELUN_HYSTEREESI_PX:n marginaalilla, jottei rajatapaus vilku.
  *
  *   4. YKKÖSTASO EI HÄIVY EIKÄ VAIHDA ASENTOA, ellei se osu toiseen
- *      ykköstasoon tai ruudun reunaan. Muut väistävät sitä, koska se
- *      sijoitetaan ensimmäisenä.
+ *      ykköstasoon tai ruudun reunaan. Muut laput väistävät sitä.
+ *      Ainoa, mikä sen häivyttää, on kaupungin nimi (kiinteä muste):
+ *      silloin ikoni jää ja nimiö häipyy (Fable 21.9.2026).
  *
  * Meren lappu (`meri: true`) pitää rantaviivan esteenä samoin kuin
  * ennen: sen ehdokas ei saa leikata kohdemaan korostuskehää. Aihenosto
@@ -55,8 +57,14 @@ export const SOVITTELUN_KYLJET = Object.freeze([...NOSTOSYM_NIMIO_ASENNOT]);
 /** Häivytetyn lapun paluun marginaali (px): ehdokas on vapaa tällä varalla. */
 export const SOVITTELUN_HYSTEREESI_PX = 6;
 /** Prioriteettiluokat (pienempi ensin). */
+/*
+ * KAUPUNGIN NIMI VOITTAA YKKÖSTASON (Fable 21.9.2026, päätös avoimeen
+ * kohtaan): järjestys on kaupunki > taso 1 > taso 2 > taso 3, ja
+ * ykköstaso saa häipyä vain kaupungin nimen (kiinteän musteen) tieltä —
+ * ikoni jää — ei muiden lappujen.
+ */
 export const SOVITTELUN_LUOKAT = Object.freeze({
-  taso1: 0, kaupunki: 1, taso2: 2, taso3: 3,
+  kaupunki: 0, taso1: 1, taso2: 2, taso3: 3,
 });
 
 /** Kelpaako ruutulaatikko ({ x0, y0, x1, y1 }) törmäystestiin. */
@@ -111,8 +119,8 @@ export function lahinEste(r, esteet) {
  */
 export function sovittelunPainoarvo(l) {
   let luokka = SOVITTELUN_LUOKAT.taso2;
-  if (l?.taso === 1) luokka = SOVITTELUN_LUOKAT.taso1;
-  else if (l?.kaupunki) luokka = SOVITTELUN_LUOKAT.kaupunki;
+  if (l?.kaupunki) luokka = SOVITTELUN_LUOKAT.kaupunki;
+  else if (l?.taso === 1) luokka = SOVITTELUN_LUOKAT.taso1;
   else if (l?.taso === 3) luokka = SOVITTELUN_LUOKAT.taso3;
   const pituus = Math.min(999, String(l?.nimi ?? '').length);
   return luokka * 1000 + pituus;
@@ -203,18 +211,14 @@ export function sovitteleLaput({
     }
     if (!valittu && l.taso === 1) {
       /*
-       * YKKÖSTASO EI HÄIVY (sääntö 4): jos yksikään ehdokas ei ole
-       * vapaa, se pitää lähtöasentonsa reunan sisällä — ensimmäinen
-       * ehdokas, joka mahtuu reunaan; muuten lähtöasento sellaisenaan.
-       * Muut laput (sijoitettu myöhemmin) väistävät sitä.
+       * YKKÖSTASO EI HÄIVY MUIDEN LAPPUJEN TIELTÄ (sääntö 4): jos
+       * yksikään ehdokas ei ole vapaa, se pitää asentonsa reunan
+       * sisällä kiinteästä musteesta vapaana (osuu vain toisiin
+       * lappuihin, jotka väistävät sitä). VAIN KAUPUNGIN NIMI JA REUNA
+       * VOITTAVAT (Fable 21.9.2026): jos jokainen reunan sisällä oleva
+       * ehdokas osuu kiinteään musteeseen — tai yksikään ei mahdu
+       * reunan sisään — nimiö häivytetään ja ikoni jää.
        */
-      // Kaupungin nimi on yhä ensisijainen (Raamattu): ensin ehdokas,
-      // joka on reunan sisällä eikä osu kiinteään musteeseen (vain
-      // toisiin lappuihin); sitten reunan sisällä oleva (levossa ei
-      // reunaylityksiä); sitten kiinteästä musteesta vapaa reunan yli;
-      // viimeisenä lähtö. Avoin kohta (21.9.2026): Versailles Pariisin
-      // nimen vieressä puhelimen vasemmassa laidassa päätyy nimen
-      // päälle — ratkaisu on datan (kylki tai paikka), ei sovittelun.
       const ehdokkaat = sovittelunEhdokkaat(l, lahto, kyljet);
       const kelpaa = (e, { sisalla, musteeton }) => {
         const r = l.laatikko(e, 0, 0, true);
@@ -222,11 +226,8 @@ export function sovitteleLaput({
         if (sisalla && !laatikkoSisalla(r, reuna)) return false;
         return !musteeton || (!rannalla(r, l) && !kiinteat.some((x) => laatikotLimittyvat(r, x)));
       };
-      const k = ehdokkaat.find((e) => kelpaa(e, { sisalla: true, musteeton: true }))
-        ?? ehdokkaat.find((e) => kelpaa(e, { sisalla: true, musteeton: false }))
-        ?? ehdokkaat.find((e) => kelpaa(e, { sisalla: false, musteeton: true }))
-        ?? lahto;
-      const r = l.laatikko(k, 0, 0, true);
+      const k = ehdokkaat.find((e) => kelpaa(e, { sisalla: true, musteeton: true })) ?? null;
+      const r = k ? l.laatikko(k, 0, 0, true) : null;
       if (laatikkoKelpaa(r)) valittu = { kylki: k, r, pakko: true };
     }
     if (valittu) {

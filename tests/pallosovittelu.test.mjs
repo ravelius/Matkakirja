@@ -107,9 +107,9 @@ test('kaksi lappua eivät jää limittäin: heikompi vaihtaa asentoa tai häivyt
   else assert.equal(t.piilotettu, 1);
 });
 
-test('prioriteetti: taso 1 > kaupunki > taso 2 > taso 3, sitten lyhyempi nimi', () => {
-  assert.ok(sovittelunPainoarvo({ taso: 1, nimi: 'Pitkä nimi tässä' }) < sovittelunPainoarvo({ kaupunki: true, nimi: 'A' }));
-  assert.ok(sovittelunPainoarvo({ kaupunki: true, nimi: 'Lyon' }) < sovittelunPainoarvo({ taso: 2, nimi: 'A' }));
+test('prioriteetti: kaupunki > taso 1 > taso 2 > taso 3, sitten lyhyempi nimi', () => {
+  assert.ok(sovittelunPainoarvo({ kaupunki: true, nimi: 'Pitkä nimi tässä' }) < sovittelunPainoarvo({ taso: 1, nimi: 'A' }));
+  assert.ok(sovittelunPainoarvo({ taso: 1, nimi: 'Lyon' }) < sovittelunPainoarvo({ taso: 2, nimi: 'A' }));
   assert.ok(sovittelunPainoarvo({ taso: 2, nimi: 'Ab' }) < sovittelunPainoarvo({ taso: 3, nimi: 'A' }));
   assert.ok(sovittelunPainoarvo({ taso: 2, nimi: 'Ab' }) < sovittelunPainoarvo({ taso: 2, nimi: 'Abc' }));
   // Vahvempi valitsee ensin: heikko (vasemmalla, nimiö oikealle) osuisi
@@ -130,13 +130,28 @@ test('prioriteetti: taso 1 > kaupunki > taso 2 > taso 3, sitten lyhyempi nimi', 
   assert.equal(asento(t2, 'heikko').nimio, false);
 });
 
-test('ykköstaso ei häivy eikä vaihda asentoa, vaikka kaikki ehdokkaat olisivat tukossa', () => {
+test('ykköstaso ei häivy muiden lappujen tieltä: kaikki ehdokkaat toisten lappujen alla → pakko, nimiö jää', () => {
+  // Kaikkialla toisten lappujen mustetta (sijoitettu ensin kaupunkina),
+  // ei kiinteää: ykköstaso pitää oman kylkensä ja muut väistävät.
+  const t = sovitteleLaput({
+    laput: [
+      koelappu('a', 100, 100, 'vasen', { taso: 1 }),
+      koelappu('iso', 100, 100, 'oikea', { kaupunki: true, nimi: 'x' }),
+    ],
+    esteet: [],
+  });
+  assert.equal(asento(t, 'a').nimio, true);
+  assert.equal(asento(t, 'a').syy, 'pakko');
+  assert.equal(asento(t, 'a').dx, 0);
+});
+
+test('vain kaupungin nimi häivyttää ykköstason: kiinteä muste joka ehdokkaalla → nimiö pois, ikoni jää', () => {
   const kaikkialla = { x0: 0, y0: 0, x1: 300, y1: 300 };
   const t = sovitteleLaput({ laput: [koelappu('a', 100, 100, 'vasen', { taso: 1 })], esteet: [kaikkialla] });
   assert.deepEqual(asento(t, 'a'), {
-    kylki: 'vasen', dx: 0, dy: 0, nimio: true, syy: 'pakko',
+    kylki: 'vasen', dx: 0, dy: 0, nimio: false, syy: 'piilossa',
   });
-  assert.equal(t.piilotettu, 0);
+  assert.equal(t.piilotettu, 1);
 });
 
 test('ykköstaso väistää toista ykköstasoa (ja vain sitä)', () => {
