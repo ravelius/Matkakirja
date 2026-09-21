@@ -27,8 +27,10 @@ import {
   PANOROINNIN_HERKKYYS, PANOROINNIN_KOHTISUORA_RAJA, PANOROINNIN_LEVEYSRAJA, RULLAN_LIUKU_MS,
   RULLAN_RIVI_PX, RULLAN_SIVU_PX, RULLAN_SUORA_RAJA, VAUHDIN_KATTO_MS, VEDON_KATTO_RUUTUA,
   nakyvaKaista, rajaaVauhti, rullanAskel, vedonSiirto,
+  ZOOMIN_ASKELKATTO, ZOOMIN_HERKKYYS, ZOOMIN_LIUKU_MS, kohdistaAnkkuri, zoominAskel,
 } from '../js/pallo.js';
 import { OSOITTIMEN_JALKIVIIVE_MS, pisteEdessa } from '../js/pallolauta/lauta.js';
+import { laattakerroksenOsuma } from '../js/pallolaatat.js';
 import {
   PALLON_TURVATILAN_RAJA, PALLON_TURVATILAN_UNOHDUS_MS, nollaaPallonKaatumiset, palloKaatui,
   palloTurvatilassa, pallonKaatumiset,
@@ -725,11 +727,13 @@ test('rulla: kaappausvaiheessa, cmd/ctrl zoomaa, muuten panorointi ja pehmeä li
   // lapsessa, joten kotelon kaappaus ehtii ensin. passive: false, muuten
   // preventDefault ei tehoa.
   assert.match(kasittelija, /\{ capture: true, passive: false \}/);
-  // Cmd (mac) tai ctrl (Windows, nipistys) → kirjasto zoomaa kuten ennen.
-  assert.match(kasittelija, /if \(e\.metaKey \|\| e\.ctrlKey\) return;/);
-  const zoomKohta = kasittelija.indexOf('e.metaKey');
-  const estoKohta = kasittelija.indexOf('e.preventDefault()');
-  assert.ok(zoomKohta >= 0 && estoKohta > zoomKohta, 'zoom päästetään läpi ennen estoa');
+  // Cmd (mac) tai ctrl (Windows, nipistys) → zoom itse kohti osoitinta,
+  // liukuen (sulavuus E3): kirjaston dolly on pois (enableZoom false).
+  assert.match(kasittelija, /if \(e\.metaKey \|\| e\.ctrlKey\) \{/);
+  assert.match(ele, /ohjaimet\.enableZoom = false;/);
+  assert.match(kasittelija, /zoomi\.kohde \+ zoominAskel\(e\.deltaY, e\.deltaMode\)/);
+  assert.match(kasittelija, /requestAnimationFrame\(zoominLiuku\)/);
+  assert.match(ele, /kohdistaAnkkuri\(pov, ankkuri, sx, sy, alt, linssi\(\)\)/);
   // Muuten: selaimen oma vieritys/zoom pois ja kirjasto ohitetaan.
   assert.match(kasittelija, /e\.preventDefault\(\);\s*\n\s*e\.stopPropagation\(\);/);
   assert.match(kasittelija, /rullanAskel\(e\.deltaX, e\.deltaY, pov\.altitude/);
@@ -1066,4 +1070,40 @@ test('pallopisteitä on vain asutuksille, ja jokainen on laudan lähellä', () =
      */
     assert.ok(km < (id === 'sansibar' ? 560 : 500), `${id} siirtyisi ${km.toFixed(0)} km`);
   }
+});
+
+test('sulavuus E3: rullan pykälä ln-korkeutena, katto ja deltaMode', () => {
+  assert.equal(zoominAskel(100), 100 * ZOOMIN_HERKKYYS);
+  assert.ok(zoominAskel(100) > 0.1 && zoominAskel(100) < 0.25, 'sata pikseliä on noin kuudesosa');
+  assert.equal(zoominAskel(-100), -zoominAskel(100));
+  assert.equal(zoominAskel(3, 1), zoominAskel(3 * RULLAN_RIVI_PX));
+  assert.equal(zoominAskel(1, 2), ZOOMIN_ASKELKATTO, 'sivun pykälä leikkautuu kattoon');
+  assert.equal(zoominAskel(NaN), 0);
+  assert.ok(ZOOMIN_LIUKU_MS > 0 && ZOOMIN_LIUKU_MS <= 200, 'liuku on lyhyt');
+});
+
+test('sulavuus E3: ankkuri pysyy ruudun kohdassa zoomissa (Google Earth)', () => {
+  const linssi = { fov: 50, kuvasuhde: 390 / 844, sade: 100 };
+  const pov = { lat: 46.5, lng: 2.5, altitude: 0.2 };
+  // Ankkuri ruudun oikeassa yläneljänneksessä.
+  const sx = 0.6;
+  const sy = 0.5;
+  const ankkuri = laattakerroksenOsuma(pov, sx, sy, linssi);
+  assert.ok(ankkuri, 'ankkuri osuu palloon');
+  for (const alt of [0.1, 0.05, 0.4]) {
+    const uusi = kohdistaAnkkuri(pov, ankkuri, sx, sy, alt, linssi);
+    assert.equal(uusi.altitude, alt);
+    const osuma = laattakerroksenOsuma(uusi, sx, sy, linssi);
+    assert.ok(Math.abs(osuma.lat - ankkuri.lat) < 1e-3, `lat ${alt}: ${osuma.lat} vs ${ankkuri.lat}`);
+    assert.ok(Math.abs(osuma.lng - ankkuri.lng) < 1e-3, `lng ${alt}: ${osuma.lng} vs ${ankkuri.lng}`);
+    // Kamera siirtyi kohti ankkuria lähennettäessä ja siitä pois loitonnettaessa.
+    const lahemmas = alt < pov.altitude;
+    assert.equal(uusi.lng > pov.lng, lahemmas, `suunta ${alt}`);
+  }
+  // Ilman ankkuria (osoitin pallon ohi) vain korkeus vaihtuu.
+  assert.deepEqual(kohdistaAnkkuri(pov, null, sx, sy, 0.1, linssi), { lat: 46.5, lng: 2.5, altitude: 0.1 });
+  // Keskellä ruutua kamera ei liiku.
+  const keski = laattakerroksenOsuma(pov, 0, 0, linssi);
+  const paikallaan = kohdistaAnkkuri(pov, keski, 0, 0, 0.05, linssi);
+  assert.ok(Math.abs(paikallaan.lat - 46.5) < 1e-6 && Math.abs(paikallaan.lng - 2.5) < 1e-6);
 });

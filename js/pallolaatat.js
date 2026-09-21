@@ -835,6 +835,8 @@ export const LAATTAKERROS_LAATTAKATTO_ENNAKKO = 96;
  * kattoon, otetaan karkeampi taso.
  */
 export const LAATTAKERROS_TUKI_ASKEL = 2;
+/** Nopeassa loitonnuksessa (korkeus kasvoi yli tämän osuuden päivitysten välillä) askel + 1. */
+export const LAATTAKERROS_TUKI_LOITONNUSRAJA = 0.04;
 export const LAATTAKERROS_TUKI_VARA = 0.35;
 export const LAATTAKERROS_LAATTAKATTO_TUKI = 16;
 /*
@@ -855,6 +857,15 @@ export const LAATTAKERROS_LAATTAKATTO_NAKYVA = 48;
 export const LAATTAKERROS_LAATTAKATTO_MUISTI = 24;
 /** Tekstuurimuistin kiintiö: LRU purkaa, kunnes alitetaan (96 Mt). */
 export const LAATTAKERROS_LAATTAKATTO_TAVUT = 96 * 1048576;
+/*
+ * OSOITINLAITTEELLA KIINTIÖ ON KAKSINKERTAINEN (sulavuus E3, 21.9.2026).
+ * 96 Mt on 68 laattaa, ja työpöydän ruutu (1400 × 900 dpr 2) tarvitsee
+ * z6:lla 45 näkyvää: zoomi z7:ään ja takaisin purki koko z6-sarjan
+ * (mitattu: 24 näkyvästä 0 scenessä loitonnuksessa, 295 purkua yhdessä
+ * zoomissa) ja haki sen uudestaan. Kosketuslaitteet (iPad, puhelin)
+ * pysyvät 96 Mt:ssa — muisti on siellä kova raja.
+ */
+export const LAATTAKERROS_TAVUKERROIN_OSOITIN = 2;
 /** Rinnakkaisia laattalatauksia enintään. */
 export const LAATTAKERROS_RINNAKKAIN = 6;
 /*
@@ -2054,6 +2065,9 @@ export function luoLaattakerros({
   const doc = kotelo?.ownerDocument ?? ikkuna?.document ?? null;
   const aika = () => ikkuna.performance?.now?.() ?? Date.now();
   const reduced = () => Boolean(ikkuna.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches);
+  /** Tekstuurimuistin kiintiö laitteelle (ks. LAATTAKERROS_TAVUKERROIN_OSOITIN). */
+  const kosketuslaite = () => Boolean(ikkuna.matchMedia?.('(hover: none)')?.matches);
+  const tavukatto = () => LAATTAKERROS_LAATTAKATTO_TAVUT * (kosketuslaite() ? 1 : LAATTAKERROS_TAVUKERROIN_OSOITIN);
   const mittarit = {
     tila: 'ei', taso: null, laattoja: 0, valmiita: 0, hapyvia: 0, pyyntoja: 0, pyydettyja: 0,
     syy: '', kaytetytTavut: 0, jonossa: 0, scenessa: 0, purettuja: 0, paivityksia: 0,
@@ -2332,6 +2346,29 @@ export function luoLaattakerros({
   };
 
   /* ---------------- tietueen purku ---------------- */
+
+  /*
+   * PEITON ALTA POIS SCENESTÄ, EI MUISTISTA (sulavuus E3, 21.9.2026).
+   * Hienomman tason kokonaan peittämä laatta purettiin ennen heti
+   * (`poista`), ja loitonnus haki saman laatan uudestaan — mitattu
+   * työpöydän zoomissa z6 → z7 → z6: 295 purkua ja koko z6-sarja
+   * uudestaan verkosta. Nyt laatta otetaan vain pois scenestä; tietue
+   * jää valmiina muistiin, LRU purkaa sen tavukaton ja pidon mukaan, ja
+   * loitonnus lisää sen sceneen heti (`lisaaSceneen` näkyvien
+   * silmukassa) ilman hakua ja valmistelua.
+   */
+  const piilota = (t) => {
+    if (!t?.scenessa) return;
+    if (t.materiaali) {
+      t.materiaali.__haive = null;
+      t.materiaali.__kohde = 0;
+      t.materiaali.opacity = 0;
+      if (!t.materiaali.transparent) { t.materiaali.transparent = true; t.materiaali.needsUpdate = true; }
+    }
+    t.verkko?.parent?.remove(t.verkko);
+    t.scenessa = false;
+    t.haipyy = false;
+  };
 
   const poista = (t) => {
     if (!t) return;
@@ -3376,7 +3413,13 @@ export function luoLaattakerros({
         lat0: Math.max(latMin, alue.lat0 - tukiVaraLat), lat1: Math.min(latMax, alue.lat1 + tukiVaraLat),
         lon0: alue.lon0 - tukiVaraLon, lon1: alue.lon1 + tukiVaraLon,
       };
-      for (let z = valittu.z - LAATTAKERROS_TUKI_ASKEL; z >= 0; z -= 1) {
+      // Nopea loitonnus: näkymä laajenee tukialueen yli ennen seuraavaa
+      // päivitystä, joten tuki otetaan tasoa karkeampana (nelinkertainen ala).
+      const edellinenKorkeus = povHistoria[povHistoria.length - 1]?.altitude;
+      const loitonnus = Number.isFinite(edellinenKorkeus)
+        && pov.altitude > edellinenKorkeus * (1 + LAATTAKERROS_TUKI_LOITONNUSRAJA);
+      const tukiaskel = LAATTAKERROS_TUKI_ASKEL + (loitonnus ? 1 : 0);
+      for (let z = valittu.z - tukiaskel; z >= 0; z -= 1) {
         const tukitaso = tasoZ(z);
         if (!tukitaso || !(tukitaso.leveys > 0)) continue;
         const tukikartta = lepokerroksenLaatat({
@@ -3448,7 +3491,7 @@ export function luoLaattakerros({
         varaLon = Math.max(varaLon, lonEro(pov.lng, h.lng));
       }
     }
-    povHistoria.push({ lat: pov.lat, lng: pov.lng, hetki: nyt });
+    povHistoria.push({ lat: pov.lat, lng: pov.lng, altitude: pov.altitude, hetki: nyt });
     varaLat = Math.min(alue.lat1 - alue.lat0, varaLat);
     varaLon = Math.min(alue.lon1 - alue.lon0, varaLon);
     if (varaLat > 0 || varaLon > 0) {
@@ -3481,7 +3524,7 @@ export function luoLaattakerros({
        * ja tukien jälkeen; loput ennakosta on pelkkää kirjanpitoa.
        */
       const tavuaPerLaatta = koko * koko * 4 * (renderer?.capabilities?.isWebGL2 ? 4 / 3 : 1);
-      const mahtuu = Math.floor(LAATTAKERROS_LAATTAKATTO_TAVUT / tavuaPerLaatta);
+      const mahtuu = Math.floor(tavukatto() / tavuaPerLaatta);
       const ennakkoKatto = Math.max(0, Math.min(LAATTAKERROS_LAATTAKATTO_ENNAKKO,
         mahtuu - nakyvat.size - tuet.size - LAATTAKERROS_ENNAKKO_MUISTIVARA));
       for (const l of ennakkoKartta?.laatat ?? []) {
@@ -3523,7 +3566,7 @@ export function luoLaattakerros({
       if (t.nakyva || t.tuki || !t.scenessa || t.haipyy) continue;
       if (t.z < valittu.z && laattakerroksenPeitto(t, valmiit, pyramidi.tasot, {
         laattaKoko: koko, kohdeZ: valittu.z,
-      })) { poista(t); continue; }
+      })) { piilota(t); continue; }
       if (!karkeampiValmis(t, valittu, valmiit)) continue;
       t.haipyy = true;
       haivyta(t.materiaali, 0, reduced() ? 0 : LAATTAKERROS_HAIVE_MS, () => poista(t));
@@ -3538,7 +3581,9 @@ export function luoLaattakerros({
     for (const t of [...laatat.values()]) {
       if (!t.nakyva && !t.pito && t.tila === 'ladataan' && !t.aloitettu) poista(t);
     }
-    for (const avain of laattakerroksenLRU([...laatat.values()])) {
+    // Määräkatto samassa suhteessa kuin tavukatto (osoitinlaite 2×).
+    const maarakatto = LAATTAKERROS_LAATTAKATTO_MUISTI * (kosketuslaite() ? 1 : LAATTAKERROS_TAVUKERROIN_OSOITIN);
+    for (const avain of laattakerroksenLRU([...laatat.values()], maarakatto, tavukatto())) {
       const t = laatat.get(avain);
       if (t && !t.haipyy) poista(t);
     }
