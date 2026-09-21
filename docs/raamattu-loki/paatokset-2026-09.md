@@ -687,3 +687,7 @@ Omistaja 21.9.2026 klo 21.41 (iPhone natiivi, Lorraine z9 ja Ranska z7): karttan
 ## LAATTAKATTO KORJATTU (PR #2679, 97298eb7): z8 PYSYY PANOROINNISSA; MUISTIRAJA LAHELLA (21.9.2026 klo 21.49)
 
 Karttaseppä 21.9.2026 ilta: PR #2679 (karttaseppa-laattakatto 97298eb7) Julkaisijalla kiireellisenä. Ennen: WebKit 390×844 dpr 3 Ranska korkeus 0,1: levossa z8/45 laattaa, panoroinnissa 45→54 ylitti katon 48 → z7 kesken liikkeen ja levossakin. Jälkeen: z8 pysyy koko panoroinnin, ei purkuja; katto vertaa aidosti näkyvää, vara ladataan yhä, katon pudottama taso palaa heti kun mahtuu. Vain js/pallolaatat.js, testit 3836/3836, mittari kattoRajoitti. Huomio: 54 näkyvää + 12 tukilaattaa ≈ 66 on lähellä 96 Mt:n tavukattoa (68); jos LRU purkaa puhelimella, seuraava askel tukitason harventaminen. Viiva on 1 laattapikseli joka tasolla; paksuus poistuu kun taso ei putoa. Karttaseppä palaa maakuntavedokseen.
+
+## PELIKOODARIN WORKTREE SIIRRETAAN /Users/samireivinen/Matkakirja-pelikoodari SEURAAVASSA TAUOSSA (21.9.2026 klo 21.53)
+
+Omistaja 21.9.2026 klo 21.52: Pelikoodarin worktree oli /Users/koodaus/Matkakirja-opus, koska koodaus ei saa luoda kansioita omistajan kotiin (ACL vain luku). Omistaja loi sudolla /Users/samireivinen/Matkakirja-pelikoodari (omistaja koodaus). Fable siirtää worktreen sisällön sinne ja ajaa git worktree repair, kun Pelikoodari on vapaana (ei kesken savukkeen), ja antaa uuden polun aloitusviestissä; sessiolle Choose folder. Muut rooli-worktreet nimetään roolin mukaan samalla kaavalla seuraavassa nollauksessa (loki HAKEMISTOSIIVOUS).
