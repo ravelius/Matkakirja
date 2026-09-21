@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2057, teksti: 'FIN: 6 ykköstason nostoa' },
   { v: 2056, teksti: 'Nostojen liikevara: laajempi ladonta-alue' },
   { v: 2055, teksti: 'DNK: 6 ykköstason nostoa' },
   { v: 2054, teksti: 'NOR: 6 ykköstason nostoa' },
