@@ -927,6 +927,21 @@ export const LAATTAKERROS_TAVUKERROIN_OSOITIN = 2;
 /** Rinnakkaisia laattalatauksia enintään. */
 export const LAATTAKERROS_RINNAKKAIN = 6;
 /*
+ * LATAUKSIA ALOITETAAN ENINTÄÄN KAKSI KEHYSTÄ KOHTI (ablaatiotikas,
+ * 22.9.2026). Kuusi latauspaikkaa vapautuu zoomissa usein samaan
+ * aikaan (samankokoiset laatat samasta ämpäristä valmistuvat yhdessä),
+ * ja `kaynnista` täytti ne kaikki heti: 6 laattaa × 3 kerrosta = 18
+ * fetch + createImageBitmap -aloitusta yhdessä kehyksessä. Mitattu
+ * (tools/savukkeet/mittaa-ablaatio.mjs, WebKit 390 × 844 dpr 3, Ranska
+ * z6, portaat 1–2, main v2035): zoomin jokaisessa yli 35 ms:n kehyksessä
+ * oli 15–18 pyynnön aloitus ja yksi tekstuurin vienti; p95 35–42 ms.
+ * Aloitukset tahditetaan kahteen laattaan kehystä kohti: loput jonosta
+ * lähtevät seuraavissa kehyksissä (requestAnimationFrame), joten
+ * verkko pysyy lähes yhtä täynnä (12 aloitusta 100 ms:ssa) mutta yksi
+ * kehys ei maksa koko erää. Ilman rAF:ia (yksikkötestit) ei tahditeta.
+ */
+export const LAATTAKERROS_ALOITUKSIA_PER_KEHYS = 2;
+/*
  * TEKSTUUREJA YKSI KEHYSTÄ KOHTI, EI KAHTA (mitattu 7.9.2026,
  * savuke-pallo-kehystahti). Yksi `renderer.initTexture` maksoi
  * mittausympäristössä 3,0 ms (p50) ja 6,7 ms (max) — kaksi peräkkäin
@@ -2188,6 +2203,8 @@ export function luoLaattakerros({
      * kun jo ladattua aluetta panoroidaan edestakaisin.
      */
     nakyvia: 0, nakyviaScenessa: 0, nakyviaTaysin: 0, ladattavia: 0, ennakkoja: 0, pidettyja: 0, tukia: 0, kattoRajoitti: false, zoomiennakkoja: 0,
+    /** Kertoja, jolloin jonossa oli laattoja mutta kehyksen aloituskatto tuli vastaan. */
+    tahditettuja: 0,
     /*
      * JUMISSA on tämän erän tarkin mitta: tietue, joka on tilassa
      * "ladataan", jota ei ole aloitettu eikä ole jonossa — laatta,
@@ -2250,6 +2267,9 @@ export function luoLaattakerros({
   const jono = [];
   const vientijono = [];
   let ladattavia = 0;
+  /** Tässä kehyksessä aloitetut lataukset ja kehyksen vaihtava rAF (tahditus). */
+  let aloituksia = 0;
+  let aloitusRaf = 0;
   let vientiRaf = 0;
   let taso = null;
   /** Edellinen taso oli laattakaton (ei tarpeen) pudottama: ei hystereesiä seuraavassa valinnassa. */
@@ -3148,15 +3168,28 @@ export function luoLaattakerros({
     // Näkyvät ensin, sitten tuki, sitten ennakko ja pidetyt — kaikki ruudun keskeltä.
     const sija = (t) => (t.nakyva ? 0 : t.tuki ? 1 : 2);
     jono.sort((a, b) => sija(a) - sija(b) || a.etaisyys - b.etaisyys);
-    while (ladattavia < LAATTAKERROS_RINNAKKAIN && jono.length) {
+    // Tahditus (LAATTAKERROS_ALOITUKSIA_PER_KEHYS): vain jos kehyksiä on.
+    const tahditettu = typeof ikkuna.requestAnimationFrame === 'function';
+    const katto = tahditettu ? LAATTAKERROS_ALOITUKSIA_PER_KEHYS : Infinity;
+    while (ladattavia < LAATTAKERROS_RINNAKKAIN && aloituksia < katto && jono.length) {
       const t = jono.shift();
       t.jonossa = false;
       if (laatat.get(t.avain) !== t || t.tila !== 'ladataan' || t.aloitettu) continue;
       t.aloitettu = true;
       ladattavia += 1;
+      aloituksia += 1;
       lataa(t)
         .catch((syy) => { t.tila = 'virhe'; mittarit.syy = String(syy?.message ?? syy); })
         .then(() => { ladattavia -= 1; kaynnista(); });
+    }
+    if (tahditettu && aloituksia > 0 && !aloitusRaf) {
+      // Laskuri nollautuu kehyksen vaihtuessa; jonon loput lähtevät silloin.
+      if (jono.length && ladattavia < LAATTAKERROS_RINNAKKAIN) mittarit.tahditettuja += 1;
+      aloitusRaf = ikkuna.requestAnimationFrame(() => {
+        aloitusRaf = 0;
+        aloituksia = 0;
+        if (!purettu && jono.length) kaynnista();
+      });
     }
     mittarit.jonossa = jono.length;
     mittarit.ladattavia = ladattavia;
@@ -3982,6 +4015,8 @@ export function luoLaattakerros({
       sukupolvi += 1;
       if (vientiRaf) ikkuna.cancelAnimationFrame?.(vientiRaf);
       vientiRaf = 0;
+      if (aloitusRaf) ikkuna.cancelAnimationFrame?.(aloitusRaf);
+      aloitusRaf = 0;
       vientijono.length = 0;
       tyhjennaValmistelujono();
       jono.length = 0;
