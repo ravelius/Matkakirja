@@ -463,6 +463,7 @@ const SHELL = [
   './js/packs/hahmotelma-isl.js',
   './js/packs/hahmotelma-nor.js',
   './js/packs/hahmotelma-rus.js',
+  './js/packs/hahmotelma-bih.js',
   './js/packs/maakartat.js',
   './js/packs/nahtavyysjutut.js',
   './js/packs/miniatyyrit.js',

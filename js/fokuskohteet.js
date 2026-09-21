@@ -640,6 +640,21 @@ KOHDE_MAAT.ISL = [...(KOHDE_MAAT.ISL ?? []), ...HAHMOTELMA_ISL];
 KOHDE_MAAT.RUS = [...(KOHDE_MAAT.RUS ?? []), ...HAHMOTELMA_RUS];
 
 /*
+ * BOSNIA JA HERTSEGOVINA: js/packs/hahmotelma-bih.js ON KIRJOITETTU
+ * (14 nostoa) MUTTA EI VIELÄ LIITETTY — sama tilanne kuin
+ * js/packs/hahmotelma-che.js:llä äskettäin. KOHDE_MAAT.BIH:n
+ * liittäminen kaataa tools/tarkista-nimiolimitys.mjs:n rivillä
+ * "BIH/neum + HRV/stonin-muurit" (tämä pari on ennestään "tiedoksi"-
+ * listalla lähes limittäin naapurin symbolien kanssa — sama ladonnan
+ * yksisuuntaisuuskaskadi kuin AUT/CHE/DEU:ssä, ei minkään uuden
+ * hahmotelma-bih.js-rivin sijainnista kiinni: kaikki 14 uutta pysyvät
+ * tarkoituksella kaukana Neumista). Peruste tarkemmin hahmotelma-
+ * bih.js:n omassa kommentissa. RATKAISU: sama kuin Karttasepän
+ * CHE-korjaus (docs/raamattu-loki, haara karttaseppa-bodensee) —
+ * Neumin tai Stonin muurien nimiön siirto — Karttasepän päätös.
+ */
+
+/*
  * KOHTEET SÄHKETEHTÄVÄN SISÄLTÖHAKEMISTOON (Raamattu, PÖLLÖN
  * SÄHKETEHTÄVÄ).
  *
