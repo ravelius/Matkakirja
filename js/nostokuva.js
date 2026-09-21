@@ -117,6 +117,44 @@ export const NOSTOKUVA_PYSTYVARA = 150;
 /** Kuvasuhteen oletus, kun kuva ei ole vielä latautunut (3:2 havainnekuva). */
 const NOSTOKUVA_OLETUSSUHDE = 3 / 2;
 
+/*
+ * NOSTOKORTIN KAKSIPALSTATAITTO (omistaja 21.9.2026, Le Mans -kaappaus
+ * työpöydällä; css/fokusnosto.css osio 13). Kaksi sääntöä samalla
+ * lipulla (`kaksipalstaTaitto: true`, vain js/fokusnosto.js pyytää sen —
+ * kohdekortti, skandaali, eläintäky, hetki ja syvennys eivät, joten
+ * niiden leveys ei muutu):
+ *
+ *   1. ALLE NOSTOKUVA_LEVEA_RAJAn kortti pysyy nykyisessä pinossa (kuva
+ *      ylhäällä, teksti alla), mutta leveys ei enää kasva kuvan ehdoilla
+ *      lähes ruudun levyiseksi — katto on NOSTOKUVA_KAPEA_KATTO (~760 px).
+ *   2. RAJAN YLÄPUOLELLA koko kortti rajataan NOSTOKUVA_LEVEA_KATTOon
+ *      (~1100 px, omistajan tarkennus 21.9.2026: alkuperäinen "kortti
+ *      pysyy yhtä leveänä kuin ennen tätä muutosta" venytti kortin
+ *      1300+ px:iin isolla ruudulla eikä rajannut sitä mitenkään). KUVA
+ *      itse kapenee NOSTOKUVA_KUVAPALSTA_OSUUS-osuuteen TÄSTÄ katetusta
+ *      pohjasta (pystykuvalla NOSTOKUVA_KUVAPALSTA_PYSTY_OSUUS) —
+ *      vapautunut tila antaa css:n kuvapalsta/tekstipalsta-koteloille
+ *      (css/fokusnosto.css osio 13) oikean levyisen tekstipalstan kuvan
+ *      viereen. OSUUSLUVUT OVAT KATTOJA CSS:N PUOLELLA (`.fokusnosto-
+ *      kuvapalsta max-width`), EI ainoa totuus: kuva mitoitetaan
+ *      pikselilleen täällä, css varmistaa vain sen harvinaisen polun,
+ *      jossa JS ei ehdi mitoittaa kuvaa.
+ */
+export const NOSTOKUVA_LEVEA_RAJA = 1100;
+export const NOSTOKUVA_LEVEA_KATTO = 1100;
+export const NOSTOKUVA_KAPEA_KATTO = 760;
+export const NOSTOKUVA_KUVAPALSTA_OSUUS = 0.5;
+export const NOSTOKUVA_KUVAPALSTA_PYSTY_OSUUS = 0.32;
+/**
+ * Kortin oma tila (reunus, sisennys, mahdollinen vierityskaista) arviona
+ * — `jaadytaLeveys` mittaa tarkan luvun vasta ladonnan jälkeen, mutta
+ * kuvan oma leveyskatto on laskettava jo ennen sitä. Arvio on väljä
+ * tarkoituksella: `jaadytaLeveys`in oma `enintaan`-katto on silti viime
+ * kädessä se, joka takaa katon pitävän (kapealla ~760 px, leveällä
+ * ~1100 px).
+ */
+const NOSTOKUVA_VARA_ARVIO = 48;
+
 /**
  * Ison kuvan mitat ruudulla.
  *
@@ -126,7 +164,7 @@ const NOSTOKUVA_OLETUSSUHDE = 3 / 2;
  * Tässä varataan sen lisäksi kortin oma paperitila.
  */
 export function nostokuvanMitat({
-  kuvaLeveys, kuvaKorkeus, ruutuLeveys, ruutuKorkeus,
+  kuvaLeveys, kuvaKorkeus, ruutuLeveys, ruutuKorkeus, enintaanLeveys = Infinity,
 } = {}) {
   const kelpo = Number.isFinite(kuvaLeveys) && kuvaLeveys > 0
     && Number.isFinite(kuvaKorkeus) && kuvaKorkeus > 0;
@@ -137,6 +175,7 @@ export function nostokuvanMitat({
     ruutuKorkeus,
     vaakaVara: NOSTOKUVA_VAAKAVARA,
     pystyVara: NOSTOKUVA_PYSTYVARA,
+    enintaanLeveys,
   });
   return { leveys, korkeus };
 }
@@ -149,12 +188,12 @@ export function nostokuvanMitat({
  * täyttää kortin" -mitta — ja pystykuva sovitetaan siihen sisään
  * (`nostokuvanSovitus`) eikä kavenna korttia.
  *
- * @param {{ruutuLeveys:number, ruutuKorkeus:number}} p
+ * @param {{ruutuLeveys:number, ruutuKorkeus:number, enintaanLeveys?:number}} p
  * @returns {number} kuva-alan vakioleveys pikseleinä (0 = ei ruutua)
  */
-export function nostokuvanVakioleveys({ ruutuLeveys, ruutuKorkeus } = {}) {
+export function nostokuvanVakioleveys({ ruutuLeveys, ruutuKorkeus, enintaanLeveys = Infinity } = {}) {
   return nostokuvanMitat({
-    kuvaLeveys: 3000, kuvaKorkeus: 3000 / NOSTOKUVA_OLETUSSUHDE, ruutuLeveys, ruutuKorkeus,
+    kuvaLeveys: 3000, kuvaKorkeus: 3000 / NOSTOKUVA_OLETUSSUHDE, ruutuLeveys, ruutuKorkeus, enintaanLeveys,
   }).leveys;
 }
 
@@ -165,15 +204,15 @@ export function nostokuvanVakioleveys({ ruutuLeveys, ruutuKorkeus } = {}) {
  * mahtuu aina kokonaan ruudulle, ja pystykuva jää kapeammaksi keskelle.
  *
  * @param {{kuvaLeveys:number, kuvaKorkeus:number, ruutuLeveys:number,
- *   ruutuKorkeus:number}} p
+ *   ruutuKorkeus:number, enintaanLeveys?:number}} p
  * @returns {{leveys:number, korkeus:number, vakioleveys:number}}
  */
 export function nostokuvanSovitus({
-  kuvaLeveys, kuvaKorkeus, ruutuLeveys, ruutuKorkeus,
+  kuvaLeveys, kuvaKorkeus, ruutuLeveys, ruutuKorkeus, enintaanLeveys = Infinity,
 } = {}) {
-  const vakioleveys = nostokuvanVakioleveys({ ruutuLeveys, ruutuKorkeus });
+  const vakioleveys = nostokuvanVakioleveys({ ruutuLeveys, ruutuKorkeus, enintaanLeveys });
   const oma = nostokuvanMitat({
-    kuvaLeveys, kuvaKorkeus, ruutuLeveys, ruutuKorkeus,
+    kuvaLeveys, kuvaKorkeus, ruutuLeveys, ruutuKorkeus, enintaanLeveys,
   });
   if (!vakioleveys || !oma.leveys || !oma.korkeus) return { leveys: 0, korkeus: 0, vakioleveys };
   const kelpo = Number.isFinite(kuvaLeveys) && kuvaLeveys > 0
@@ -304,11 +343,16 @@ function nostokuvaRuutu() {
  *   oma lisä kuvan päälle (kartan tietoruudun ihmenauha)
  * @param {() => void} [p.onKuvatta] kutsutaan, kun kuvaesittely on peruttu
  *   (kuva jäi lataamatta); kortti on silloin jo ladottu tekstikorttina.
+ * @param {boolean} [p.kaksipalstaTaitto] nostokortin kaksipalstataiton
+ *   leveyssäännöt (ks. NOSTOKUVA_LEVEA_RAJA yllä): kapea katto alle rajan,
+ *   kuva kapenee palstaan sen yläpuolella; muut kutsujat (kohdekortti,
+ *   skandaali, eläintäky, hetki, syvennys) eivät pyydä tätä, joten niiden
+ *   leveys ei muutu.
  * @returns {{ kehys:Element, vaihe:() => string, lisaa:() => void } | null}
  */
 export function nostokuvaAloita({
   kortti, sisalto, kuva, aseta, latoNosto,
-  avaaSuurennos = null, onKuvatta = null, koristele = null,
+  avaaSuurennos = null, onKuvatta = null, koristele = null, kaksipalstaTaitto = false,
 }) {
   if (typeof document === 'undefined' || !kortti || !sisalto || !kuva) return null;
   nostokuvaLataaTyyli();
@@ -390,9 +434,43 @@ export function nostokuvaAloita({
    * jälkeen mittaan ei kosketa: kuvan laatikko on silloin lukossa.
    */
   let vakioleveys = 0;
+  /*
+   * KORTIN OMA LEVEYSPOHJA (ks. NOSTOKUVA_LEVEA_RAJA-kommentti yllä).
+   * Normaalisti sama kuin `vakioleveys` (kuvan oma laatikko), mutta
+   * kaksipalstataiton LEVEÄLLÄ puolella kortin pohja on rajoittamaton
+   * leveys KATETTUNA NOSTOKUVA_LEVEA_KATTOon (~1100 px) — kuva itse
+   * kapenee osuuteensa siitä, ja vapautunut tila menee tekstipalstalle
+   * (css/fokusnosto.css osio 13, .fokusnosto-tekstipalsta).
+   */
+  let korttiVakioleveys = 0;
   const mitoita = () => {
     const ruutu = nostokuvaRuutu();
     if (!ruutu.leveys || !ruutu.korkeus) return;
+    const kapea = kaksipalstaTaitto && ruutu.leveys < NOSTOKUVA_LEVEA_RAJA;
+    const leveaKaksi = kaksipalstaTaitto && !kapea;
+    let enintaanLeveys = Infinity;
+    let korttiPohja = 0;
+    if (kapea) {
+      /*
+       * KAPEA KATTO KUVAN OMALLE LEVEYDELLE. Arvio VARAsta vähennettynä
+       * KAPEA_KATTOsta, jotta kuva + kortin oma tila (reunus, sisennys,
+       * vierityskaista) mahtuu KAPEA_KATTOn alle — `jaadytaLeveys` alla
+       * vartioi lopullisen luvun joka tapauksessa.
+       */
+      enintaanLeveys = NOSTOKUVA_KAPEA_KATTO - NOSTOKUVA_VARA_ARVIO;
+    } else if (leveaKaksi) {
+      // Rajoittamaton pohja ensin, sitten katettuna LEVEA_KATTOon: koko
+      // kortti — ei vain kuva — pysyy ~1100 px:n rajan sisällä.
+      const luonnollinenVakioleveys = nostokuvanVakioleveys({
+        ruutuLeveys: ruutu.leveys, ruutuKorkeus: ruutu.korkeus,
+      });
+      korttiPohja = Math.min(luonnollinenVakioleveys, NOSTOKUVA_LEVEA_KATTO - NOSTOKUVA_VARA_ARVIO);
+      // Pystykuva saa OMAN, kapeamman osuutensa (sama tunnistus kuin
+      // js/fokusnosto.js nostoSeuraaKuvanSuuntaa käyttää CSS-luokkaan).
+      const pysty = img.naturalWidth > 0 && img.naturalHeight > img.naturalWidth;
+      enintaanLeveys = korttiPohja
+        * (pysty ? NOSTOKUVA_KUVAPALSTA_PYSTY_OSUUS : NOSTOKUVA_KUVAPALSTA_OSUUS);
+    }
     // Vakioleveys ja contain-sovitus (nostokuvanSovitus): kortti on aina
     // vaakakuvan levyinen, pystykuva kapeampana keskellä.
     const sovitus = nostokuvanSovitus({
@@ -400,9 +478,11 @@ export function nostokuvaAloita({
       kuvaKorkeus: img.naturalHeight,
       ruutuLeveys: ruutu.leveys,
       ruutuKorkeus: ruutu.korkeus,
+      enintaanLeveys,
     });
     if (!sovitus.leveys || !sovitus.korkeus) return;
     vakioleveys = sovitus.vakioleveys;
+    korttiVakioleveys = leveaKaksi ? korttiPohja : vakioleveys;
     img.style.width = `${Math.round(sovitus.leveys)}px`;
     img.style.height = `${Math.round(sovitus.korkeus)}px`;
   };
@@ -429,7 +509,17 @@ export function nostokuvaAloita({
    * sellaisenaan (omistajan tilaus 11.9.2026).
    */
   const jaadytaLeveys = () => {
-    const enintaan = Math.max(0, nostokuvaRuutu().leveys - 2 * NOSTOKUVA_MARGINAALI);
+    const ruutuLeveys = nostokuvaRuutu().leveys;
+    let enintaan = Math.max(0, ruutuLeveys - 2 * NOSTOKUVA_MARGINAALI);
+    // KATTO — VIIMEINEN VARTIO (kaksipalstaTaitto, ks. yllä): vaikka
+    // kuvan oma leveys olisi arvioitu väärin, kortti ei silti ylitä
+    // KAPEA_KATTOa alle NOSTOKUVA_LEVEA_RAJAn eikä LEVEA_KATTOa sen
+    // yläpuolella.
+    if (kaksipalstaTaitto && ruutuLeveys < NOSTOKUVA_LEVEA_RAJA) {
+      enintaan = Math.min(enintaan, NOSTOKUVA_KAPEA_KATTO);
+    } else if (kaksipalstaTaitto) {
+      enintaan = Math.min(enintaan, NOSTOKUVA_LEVEA_KATTO);
+    }
     const kuvanLeveys = Number.parseFloat(img.style.width) || 0;
     /*
      * VIERITYSPALKIN KAISTA MUKAAN. Vaiheessa 2 sisältö vierittyy, ja
@@ -442,8 +532,10 @@ export function nostokuvaAloita({
     const vara = reunat(kortti) + reunat(sisalto) + kaista;
     kortti.style.maxWidth = `${enintaan}px`;
     // KORTIN LEVEYS ON VAKIO (nostokuvanVakioleveys), ei kuvan leveys:
-    // pystykuva ei kavenna korttia (omistaja 20.9.2026).
-    kortti.style.width = `${Math.round(Math.min((vakioleveys || kuvanLeveys) + vara, enintaan))}px`;
+    // pystykuva ei kavenna korttia (omistaja 20.9.2026). Kaksipalstataiton
+    // leveällä puolella pohja on `korttiVakioleveys` (rajoittamaton), EI
+    // `vakioleveys` (joka on siellä kapeampi, kuvan oma palstaosuus).
+    kortti.style.width = `${Math.round(Math.min((korttiVakioleveys || vakioleveys || kuvanLeveys) + vara, enintaan))}px`;
   };
 
   /**

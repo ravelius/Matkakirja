@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1989';
+const CACHE = 'matkakirja-2026-08-09.2012';
 const SHELL = [
   './',
   './index.html',
@@ -245,6 +245,7 @@ const SHELL = [
   './js/pallolauta/kamera.js',
   './js/pallolauta/kameraloki.js',
   './js/kartta-liike.js',
+  './js/kehittaja-pikatie.js',
   './js/pallolauta/linssikartta.js',
   './js/pallolauta/linssit.js',
   './js/pallolauta/merkit.js',
@@ -272,6 +273,8 @@ const SHELL = [
   './js/pallolauta/reitit.js',
   './js/pallolauta/siirto.js',
   './js/pallolauta/sovittelu.js',
+  './js/pallolauta/sulavuusmittari.js',
+  './js/pallolauta/nimiorasterit.js',
   './js/pallolauta/sumu.js',
   './css/aikajana.css',
   // Linssien yhteinen kehysliuku (16.9.2026): index.html lataa tämän
@@ -341,7 +344,11 @@ const SHELL = [
   './js/aikajana-virrat-laskenta.js',
   // Laskenta Workerissa (hionta 6.9.2026): pääsäie ei jäädy avauksessa.
   './js/aikajana-virrat-tyo.js',
+  // Rannikon naulaus omana moduulina ja työsäikeenä (sulavuus E1, 21.9.2026).
+  './js/pallovektorit-naulaus.js',
+  './js/pallovektorit-tyo.js',
   './js/linssit/rekisteri.js',
+  './js/linssit/aarteet.js',
   './js/linssit/omistus.js',
   './js/linssit/pallo.js',
   './js/linssit/pistenaytto.js',
@@ -807,6 +814,7 @@ const SHELL = [
   './assets/varusteet/varuste-topografia.jpg',
   './assets/varusteet/varuste-vesistot.jpg',
   './assets/varusteet/varuste-vertailu.jpg',
+  './assets/linssit/hiomassa.svg',
   './assets/varusteet/varuste-maatiedot.jpg',
   './assets/varusteet/varuste-radio.jpg',
   // Keksinnöt ja Ihmisen matka saivat omat kuvakkeensa 7.9.2026; ilman

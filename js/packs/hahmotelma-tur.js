@@ -178,5 +178,18 @@ export const HAHMOTELMA_TUR = [
       + 'maailmanperintöluetteloonsa vuonna 1994 sen hyvin säilyneiden osmanikautisten talojen '
       + 'ja arkkitehtuurin ansiosta.',
     lahde: 'en-Wikipedia "Safranbolu", johdanto-osa (tarkistettu 21.9.2026).',
+    visa: {
+      kysymys: 'Minä vuonna Safranbolun vanhakaupunki liitettiin Unescon '
+        + 'maailmanperintöluetteloon?',
+      vaihtoehdot: [
+        '1873',
+        '1929',
+        '1994',
+        '1956',
+      ],
+      oikea: 2,
+      fakta: 'Vanhakaupunki on rakennettu syvään rotkolaaksoon Karabükin maakunnassa, '
+        + 'noin 200 kilometriä Ankarasta pohjoiseen.',
+    },
   },
 ];

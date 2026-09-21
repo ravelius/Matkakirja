@@ -1477,4 +1477,218 @@ export const HAHMOTELMA_BEL = [
       fakta: 'Turnhoutin mukaan on nimetty kaksi taistelua, vuosilta 1597 ja 1789.',
     },
   },
+  {
+    id: 'hahmotelma-antwerpen-beurs',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/bel-nosto-antwerpen-beurs-53c32423.jpg',
+      lyhyt: 'Antwerpenin pörssitalon uusgoottilainen päätyjulkisivu, jonka harjalla lukee ANNO 1872.',
+      selite: 'Pörssitalon kapean sisäänkäyntipihan perällä kohoaa koristeellinen kalkkikivijulkisivu kahden suuren ikkunarivin ja kaksoisoven yllä. Päädyssä on rakennusvuosi ANNO 1872.',
+      lahde: 'Valokuva: Ricardalovesmonuments, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Ricardalovesmonuments',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Handelsbeurs_Antwerpen_1.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260921/bel-nosto-antwerpen-beurs-6b439e31.jpg',
+        lyhyt: 'Pörssitalon sisäpihan pylväskäytävä holvikattoineen ja koristeveistoksin koristelluin pilarein.',
+        selite: 'Sisäpihaa reunustava katettu käytävä lepää tummien, koristeveistoksin peitettyjen pilarien varassa, ja niiden yllä kaartuu tiilinen ristiholvikatto.',
+        lahde: 'Valokuva: Msemmett, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Msemmett',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Handelsbeurs_Building_-_cloister.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
+    nimi: 'Antwerpenin pörssitalo',
+    tyyppi: 'kauppa',
+    lahi: true,
+    kysymykset: [
+      'Minä vuonna Antwerpenin ensimmäinen pörssitalo valmistui?',
+      'Kuka arkkitehti suunnitteli nykyisen pörssitalon uudisrakennuksen?',
+    ],
+    korostukset: ['pörssitalo|pörssitalon'],
+    nappi: 'Kaupungin uusi pörssitalo on juuri valmistunut edellisvuonna tulipalon tuhoaman edeltäjän paikalle',
+    // 4.406111 E / 51.219306 N — en-Wikipedia "Stock Exchange, Antwerp"
+    laudat: {
+      maailmankartta: { x: 5980.2, y: 1336.7 },
+      europe: { x: 295.8, y: 546.5 },
+    },
+    teksti: 'Antwerpenin pörssitalo eli Handelsbeurs on maailman ensimmäinen tätä tarkoitusta '
+      + 'varten rakennettu kauppapörssi: alkuperäinen rakennus valmistui vuonna 1531 katettujen '
+      + 'pylväskäytävien ympäröimäksi sisäpihaksi, ja sen mallia kopioitiin muun muassa Lontoon '
+      + 'myöhempään Royal Exchangeen. Antwerpenin kauppa hiipui Espanjan vallan ja Amsterdamin '
+      + 'nousun myötä 1500-luvun lopulla, ja rakennus toimi sen jälkeen vuosisatoja muun muassa '
+      + 'piirustusakatemiana. Elokuun 2. päivänä 1858 tulipalo tuhosi koko rakennuksen, minkä '
+      + 'jälkeen kaupunki järjesti arkkitehtikilpailun uudisrakennuksesta; voittajaksi valittu '
+      + 'Joseph Schadde sai työn valmiiksi vuonna 1872. Uusi, uusgoottilainen pörssitalo '
+      + 'hyödynsi rohkeasti rautarakenteita sisäpihan kattamisessa, ja se palveli kauppiaita ja '
+      + 'pörssinvälittäjiä aina vuoteen 1997 asti, jolloin Antwerpenin pörssi sulautui '
+      + 'Brysselin pörssiin.',
+    lahde: 'en-Wikipedia "Stock Exchange, Antwerp", johdanto-osa ja osio "History" (tarkistettu '
+      + '21.9.2026).',
+  },
+  {
+    id: 'hahmotelma-hasselt-jenever',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/bel-nosto-hasselt-jenever-7a2edf61.jpg',
+      lyhyt: 'Borrelmanneke-pronssipatsas Hasseltin torilla: sikaa ratsastava mies nostaa jeneverikannua.',
+      selite: 'Suihkulähteen pronssiveistos esittää sialla ratsastavaa, hymyilevää miestä, joka pitelee kädessään korkealle nostettua kaatonokkaista jeneverikannua.',
+      lahde: 'Valokuva: Marlinde Dwarswaard, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Marlinde Dwarswaard',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Borrelmanneke_Hasselt.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260921/bel-nosto-hasselt-jenever-13db9907.jpg',
+        lyhyt: 'Mustavalkoinen valokuva Fryns-jeneveritislaamon tiilijulkisivusta, jonka katolla lukee yhtiön nimi.',
+        selite: 'Tislaamorakennuksen kaksikerroksinen tiilijulkisivu kaarevine ikkunoineen ja katolle kiinnitetty FRYNS-kyltti; rakennus purettiin myöhemmin.',
+        lahde: 'Valokuva: Patrick Viaene, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Patrick Viaene',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Jeneverstokerij-Fryns-in-Hasselt_2023_INDUS_F10694-021.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
+    nimi: 'Hasselt',
+    tyyppi: 'ruoka',
+    lahi: true,
+    kysymykset: [
+      'Minkä vuosikymmenen kiellon Hasselt vältti jenever-viinan valmistukselta ja myynniltä?',
+      'Minkä maan sotilaat toivat 1670-luvulla makuja hasseltilaiseen jeneveriin?',
+    ],
+    korostukset: ['jenever|jeneveriin'],
+    nappi: 'Belgian jeneverin pääkaupunki; kaupungin vanhin tislaamo on toiminut jo seitsemänkymmentä vuotta',
+    // 5.3375 E / 50.93 N — en-Wikipedia "Hasselt"
+    laudat: {
+      maailmankartta: { x: 6011.3, y: 1349.5 },
+      europe: { x: 313.7, y: 554.1 },
+    },
+    teksti: 'Hasselt on Belgian Limburgin maakunnan pääkaupunki, ja se on profiloitunut '
+      + 'jenever-viinan tislauksen keskukseksi vuosisatojen ajan; kaupunki vältti vuoden 1601 '
+      + 'valmistus- ja myyntikiellon, ja 1670-luvulla siellä majailleet hollantilaissotilaat '
+      + 'toivat mukanaan makuja, joiden vuoksi hasseltilaiseen jeneveriin lisätään yhä muita '
+      + 'belgialaisia enemmän yrttejä ja marjoja. Teollistumisen myötä halpa, '
+      + 'sokerijuurikasmelassista tislattu jenever levisi työväestön keskuuteen, ja 1800-luvun '
+      + 'lopulla belgialainen kulutti keskimäärin 9,5 litraa 50-prosenttista jeneveriä '
+      + 'vuodessa. Kaupungin vanhin säilynyt tislaamo perustettiin entiselle nunnaluostarin '
+      + 'maatilalle vuonna 1803, ja omistajaperhe Stellingwerff antoi rakennukselle '
+      + 'uusklassisen julkisivun vuonna 1850. Nykyisin rakennuksessa toimii jenevermuseo.',
+    lahde: 'en-Wikipedia "Hasselt" ja "Stellingwerff/Theunissen", johdanto-osat ja osiot '
+      + '"History" (tarkistettu 21.9.2026).',
+  },
+  {
+    id: 'hahmotelma-oostende',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/bel-nosto-oostende-151d26c9.jpg',
+      lyhyt: 'Väritetty vanha valokuva Oostenden rantahiekasta täynnä hienostoväkeä ja taustalla komea Kursaal-rakennus.',
+      selite: 'Photochrom-tekniikalla väritetty 1890–1900-luvun taitteen valokuva näyttää hiekkarannan täynnä hienosti pukeutuneita kylpylävieraita ja taustalla kupolikattoisen Kursaalin, Oostenden kasinorakennuksen.',
+      lahde: 'Valokuva: Photochrom Print Collection (Detroit Publishing Co.), Library of Congress / Wikimedia Commons (Public domain).',
+      tekija: 'Photochrom Print Collection',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:The_beach_and_the_Kursaal,_(i.e.,_Cursaal),_Ostend,_Belgium-LCCN2001697958.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+    },
+    nimi: 'Oostende',
+    tyyppi: 'merenkulku',
+    lahi: true,
+    kysymykset: [
+      'Minä vuonna lauttayhteys Oostendesta Doveriin avattiin?',
+      'Ketkä kaksi Belgian kuningasta suosivat Oostendea lomapaikkanaan?',
+    ],
+    korostukset: ['kuningatar|kuningattareksi'],
+    nappi: 'Kuninkaiden suosima merikylpylä ja satama; rautatie ja Doverin lautta ovat jo auki, mutta suurin laajennus on vielä edessä',
+    // 2.91944444 E / 51.22583333 N — en-Wikipedia "Ostend"
+    laudat: {
+      maailmankartta: { x: 5930.6, y: 1336.5 },
+      europe: { x: 267.3, y: 546.4 },
+    },
+    teksti: 'Oostende on Belgian rannikon suurin kaupunki ja tärkeä satama Pohjanmerellä; sen '
+      + 'asukasluku on nykyisin noin 72 000. Kaupunki oli alun perin vaatimaton kalastajakylä, '
+      + 'joka sai markkinaoikeudet 1200-luvulla, mutta sen merkitys kasvoi 1700-luvulla, kun '
+      + 'Hollanti sulki Antwerpenin meriyhteyden ja Oostendesta tuli Belgian tärkein '
+      + 'vaihtoehtoinen satama. Rautatie Brysseliin valmistui vuonna 1838 ja lauttayhteys '
+      + 'Doveriin avattiin vuonna 1846, mikä teki kaupungista Englannin-liikenteen '
+      + 'kauttakulkusataman. Kuningas Leopold I ja hänen poikansa Leopold II viettivät '
+      + 'mielellään lomiaan Oostendessa, ja heidän suosionsa houkutteli aatelistoa '
+      + 'rakentamaan kaupunkiin muun muassa Wellingtonin raviradan ja Kuninkaalliset '
+      + 'galleriat, minkä ansiosta Oostendea alettiin kutsua Belgian merikylpylöiden '
+      + 'kuningattareksi.',
+    lahde: 'en-Wikipedia "Ostend", johdanto-osa ja osio "History" (tarkistettu 21.9.2026).',
+  },
+  {
+    id: 'hahmotelma-geraardsbergen',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/bel-nosto-geraardsbergen-f1a7a897.jpg',
+      lyhyt: 'Geraardsbergenin goottilainen raatihuone torneineen ja ulkoportaineen kirkkaassa auringonpaisteessa.',
+      selite: 'Punatiilinen ja kalkkikivikoristeinen raatihuone kohoaa kolmine sarvitorneineen torin laidalla; rakennuksen alakerrassa toimii Krakelingen- ja Tonnekensbrand-juhlan museo.',
+      lahde: 'Valokuva: Jean-Pol GRANDMONT, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Jean-Pol GRANDMONT',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:0_Grammont_-_H%C3%B4tel_de_ville_et_mus%C3%A9e.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260921/bel-nosto-geraardsbergen-b2f51ea8.jpg',
+        lyhyt: 'Väkijoukko kiipeää Oudenberg-kukkulalle Krakelingen-juhlassa, taustalla kappelin kupoli.',
+        selite: 'Satoja ihmisiä on kokoontunut Oudenberg-kukkulan rinteelle ja huipulle lippuineen; oikealla erottuu kukkulan pyhäkkökappelin kupoli.',
+        lahde: 'Valokuva: Jan Coppens, Wikimedia Commons (CC BY-SA 1.0).',
+        tekija: 'Jan Coppens',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Krakelingenworp1.jpg',
+        lisenssi: 'CC BY-SA 1.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/1.0',
+      },
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260921/bel-nosto-geraardsbergen-41045648.jpg',
+        lyhyt: 'Kori täynnä rinkilänmuotoisia krakelinki-leipiä, yksi nauhalla koristeltu.',
+        selite: 'Vaaleista vehnärinkilöistä koostuva kasa täyttää korin; keskellä on tummempi, kiiltäväpintainen ja punakeltaisella nauhalla koristeltu erikoisleipä.',
+        lahde: 'Valokuva: Jan Coppens, Wikimedia Commons (CC BY-SA 1.0).',
+        tekija: 'Jan Coppens',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Mastellen.jpg',
+        lisenssi: 'CC BY-SA 1.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/1.0',
+      },
+    ],
+    nimi: 'Geraardsbergen',
+    tyyppi: 'kulttuuri',
+    lahi: true,
+    kysymykset: [
+      'Miltä vuodelta on peräisin vanhin säilynyt maininta Tonnekensbrand-juhlan menoista?',
+      'Mistä esineestä dekaani, pormestari ja valtuutetut juovat viiniä elävän kalan kanssa?',
+    ],
+    korostukset: ['krakelinki|krakelinkia'],
+    nappi: 'Krakelingen- ja Tonnekensbrand-juhlaa on vietetty jo lähes viisisataa vuotta, ja se jatkuu yhä joka kevät ennen paastonaikaa',
+    // 4.16666667 E / 50.4 N — en-Wikipedia "Geraardsbergen"
+    laudat: {
+      maailmankartta: { x: 5972.2, y: 1372.7 },
+      europe: { x: 291.2, y: 568.1 },
+    },
+    teksti: 'Geraardsbergen on yksi Belgian vanhimmista kaupungeista: se sai kaupunkioikeudet '
+      + 'jo vuonna 1068, mikä on yksi Länsi-Euroopan varhaisimmista. Kaupungin '
+      + 'Oudenberg-kukkulalla on juhlittu Krakelingen- ja Tonnekensbrand-juhlaa ainakin '
+      + 'vuodesta 1393, jolloin vanhin säilynyt kaupungin tilikirja mainitsee jo '
+      + 'Tonnekensbrandin kulut; perinne yhdistää esikristillisiä aineksia, kuten tulen, '
+      + 'leivän ja kalan, kristillisiin. Juhlassa dekaani, pormestari ja '
+      + 'kaupunginvaltuutetut juovat siemauksen viiniä elävän kalan kanssa nelisataa '
+      + 'vuotta vanhasta hopeamaljasta, ja kukkulan huipulta heitetään yleisölle noin '
+      + '10 000 rinkilänmuotoista krakelinkia. Illalla poltetaan olkinukke karkottamaan '
+      + 'talvea, ja tuli kannetaan soihtuina alas kaupungin torille.',
+    lahde: 'en-Wikipedia "Geraardsbergen" ja "Krakelingen and Tonnekensbrand", johdanto-osat '
+      + 'ja osiot "History" (tarkistettu 21.9.2026).',
+    visa: {
+      kysymys: 'Mitä hopeamaljasta juodaan viinin lisäksi Krakelingen-juhlassa?',
+      vaihtoehdot: [
+        'Elävä kala',
+        'Kultahippu',
+        'Suolaa',
+        'Ruusunlehtiä',
+      ],
+      oikea: 0,
+      fakta: 'Perinne on ollut Unescon aineettoman kulttuuriperinnön listalla vuodesta 2010.',
+    },
+  },
 ];

@@ -49,7 +49,7 @@
  * pop-upin päällä.
  */
 
-import { piirraNostosymKartalle } from './fokusnosto-symbolit.js';
+import { nostosymAsetaKuorenKatto, nostosymMitanKatto, piirraNostosymKartalle } from './fokusnosto-symbolit.js';
 import { kuvatekstiLyhyt } from './kuvatekstit.js';
 import {
   avaaTiivisLehtiarkki, kaupunginKansi, latoKaupunginEsittely, latoLehtiKuvat,
@@ -333,6 +333,9 @@ export function asetteleTuristiInfo(el, d) {
   if (!g) return;
   const mitta = d.mitta ?? KAUPUNKIMERKIN_MITTA;
   g.style.transform = `scale(${mitta.toFixed(4)})`;
+  // Kuori liukuu kehyksittäin kattoon asti (js/pallolauta/nimet.js KOKO
+  // LIUKUU JOKA KEHYKSESSÄ); raaka mitta tulee laudalta datumissa.
+  nostosymAsetaKuorenKatto(el, { mitta, mittaRaaka: d.mittaRaaka, katto: nostosymMitanKatto() });
   const resepti = `${TURISTI_INFO_SYMBOLI}|${TURISTI_INFO_NIMIO}`;
   if (g.dataset.resepti !== resepti) {
     g.dataset.resepti = resepti;

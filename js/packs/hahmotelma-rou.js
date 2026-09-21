@@ -536,6 +536,17 @@ export const HAHMOTELMA_ROU = [
       + 'tiedetä. Järvi madaltuu jatkuvasti: vuonna 1867 sen syvyys oli 12 metriä, nykyään '
       + 'alle seitsemän.',
     lahde: 'en-Wikipedia "Lake Sfânta Ana", johdanto-osa (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Kuinka syvä Pyhän Annan järvi oli vielä vuonna 1867?',
+      vaihtoehdot: [
+        '12 metriä',
+        '7 metriä',
+        '20 metriä',
+        '3 metriä',
+      ],
+      oikea: 0,
+      fakta: 'Vuonna 1867 järven syvyys oli 12 metriä; nykyään se on alle seitsemän.',
+    },
   },
   {
     id: 'hahmotelma-bigar',

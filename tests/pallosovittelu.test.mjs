@@ -260,7 +260,10 @@ test('lauta sovittelee nimien JÄLKEEN, ja nimi väistää vain liikkumatonta mu
    * esteistössä oli ennen vain nimet ja kyltti — nimiö *"Tuileriain
    * rauniot…"* käännettiin siksi lähizoomissa nappulan puolelle.
    */
-  assert.match(lauta, /kiinteat: \[\.\.\.infoTulos, \.\.\.merkit\.laatikot\('peli'\)\],/);
+  // Pelimerkkien laatikot luetaan kerran per ladonta (erä E3) ja annetaan
+  // nostoille, nimille ja sovittelulle samana listana.
+  assert.match(lauta, /const pelinLaatikot = merkit\.laatikot\('peli'\);/);
+  assert.match(lauta, /kiinteat: \[\.\.\.infoTulos, \.\.\.pelinLaatikot\],/);
   const nostot = lue('../js/pallolauta/nostot.js');
   // Elävän noston LAPPU ei ole nimen varaus, ikoni on.
   assert.match(nostot, /nostonLaatikko\(r\.p, r, \{\s*dx: datum\.dx, dy: datum\.dy, nimio: false,\s*\}\)/);
