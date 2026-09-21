@@ -15656,6 +15656,139 @@ export const MAA_KATEGORIAT = {
       },
     },
     {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Islannin historia on täynnä ratkaisuja jotka tehtiin nopeasti '
+        + 'ja pysyivät: uskonto vaihtui yhdessä yössä, piispa hävisi hengellään, '
+        + 'kuningas toi perustuslain isoisän matkan jälkimainingeissa, ja '
+        + 'pieni saari voitti kaksi suurvaltaa ilman yhtään laukausta.',
+      nostot: [
+        {
+          otsikko: 'Yksi mies ratkaisi koko maan uskonnon yhdessä yössä',
+          aika: '1000',
+          tiedosto: 'Þingvallakirkja 01.jpg',
+          teksti: 'Vuonna 1000 Alþingillä uhkasi puhjeta sisällissota, kun '
+            + 'kristityt ja vanhauskoiset eivät suostuneet enää elämään '
+            + 'samojen lakien alla. Ratkaisu jätettiin lainlausuja Þorgeir '
+            + 'Ljósvetningagoðille, joka oli itse vanhauskoinen mutta '
+            + 'tunnettu puolueettomuudestaan. Hän veti turkin päänsä yli ja '
+            + 'makasi hiljaa vuorokauden, ja seuraavana päivänä hän julisti '
+            + 'koko maan kristityksi — mutta kompromississa sai yhä uhrata '
+            + 'vanhoille jumalille kotona salaa, syödä hevosenlihaa ja '
+            + 'jättää vastasyntyneen lapsen heitteille, kuten ennenkin. '
+            + 'Verta ei vuodatettu kertaakaan.',
+          lyhyt: 'Alþingi julisti Islannin kristityksi vuonna 1000 kompromississa, joka esti sisällissodan.',
+          selite: 'Þingvallakirkja seisoo samalla tasangolla, jossa Alþingi '
+            + 'kokoontui satoja vuosia. Saagojen mukaan paikalla oli kirkko '
+            + 'jo vuonna 1017, ja nykyinen rakennus vihittiin 1859.',
+          lahde: 'Syrio, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Piispa joka taisteli uskontoaan vastaan ja hävisi',
+          aika: '1550',
+          tiedosto: 'Jón Arason.jpg',
+          teksti: 'Tanska määräsi Islannin luterilaiseksi 1500-luvulla, mutta '
+            + 'Hólarin piispa Jón Arason kieltäytyi luopumasta katolisesta '
+            + 'uskosta. Hän kokosi miehiä, otti vangiksi kilpailevan '
+            + 'luterilaisen piispan ja hallitsi hetken käytännössä koko '
+            + 'Pohjois-Islantia. Vuonna 1550 hänet ja hänen kaksi poikaansa '
+            + 'vangittiin taistelun jälkeen, ja marraskuun 7. päivänä heidät '
+            + 'mestattiin Skálholtissa ilman oikeudenkäyntiä — päätöksen '
+            + 'teki kuninkaan kirjuri, koska pelättiin, ettei rauhaa muuten '
+            + 'koskaan tulisi. Arasonin kuolema päätti katolisen kirkon '
+            + 'vallan Islannissa.',
+          lyhyt: 'Jón Arason oli Islannin viimeinen katolinen piispa, ja hänet mestattiin Skálholtissa 1550.',
+          selite: 'Patsas kuvaa Jón Arasonia, Islannin viimeistä katolista '
+            + 'piispaa, joka mestattiin poikineen vuonna 1550. Patsaan on '
+            + 'veistänyt Guðmundur Einarsson, ja se seisoo Munkaþverássa.',
+          lahde: 'Pietro, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Jón Arason',
+        },
+        {
+          otsikko: 'Kuningas toi perustuslain vuosi isoisän jälkeen',
+          aika: '1874',
+          tiedosto: 'Islændernes adresse overrækkes Christian 9 på Thingvalla 7. august 1874.jpg',
+          teksti: 'Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja '
+            + 'juhlaan saapui ensimmäistä kertaa historiassa hallitseva '
+            + 'Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa '
+            + 'heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden '
+            + 'perustuslain, joka antoi Islannille oman lainsäädäntövallan '
+            + 'sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — '
+            + 'vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä '
+            + 'islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää '
+            + 'itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut '
+            + 'vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.',
+          lyhyt: 'Kristian IX toi Islannille perustuslain 2. elokuuta 1874, vuosi isoisän vierailun jälkeen.',
+          selite: 'Piirros kuvaa hetkeä, jolloin islantilaiset ojensivat '
+            + 'vetoomuksensa kuningas Kristian IX:lle Þingvellirillä 7. '
+            + 'elokuuta 1874, viisi päivää perustuslain allekirjoituksen '
+            + 'jälkeen.',
+          lahde: 'Carl Frederik Sørensen, Wikimedia Commons (public domain)',
+          wiki: 'Kristian IX',
+        },
+        {
+          otsikko: 'Sota jota käytiin verkonleikkureilla, ei ammuksilla',
+          aika: '1958–1976',
+          tiedosto: 'ICGV Óðinn in the Víkin museum.jpg',
+          teksti: 'Kun Islanti laajensi kalastusrajaansa 1958, 1972 ja 1975 '
+            + 'aina kauemmas rannikolta, Britannian troolarit eivät '
+            + 'suostuneet väistymään — eikä Britannian laivasto liioin. '
+            + 'Kolmessa niin sanotussa turskasodassa Islannin '
+            + 'rannikkovartioston pienet alukset, kuten Óðinn, ajoivat '
+            + 'troolareiden perässä ja leikkasivat niiden verkkoketjut irti '
+            + 'erityisillä leikkureilla; brittilaivat puolestaan yrittivät '
+            + 'väistellä ja jopa törmäillä vastaan. Ainuttakaan ammusta ei '
+            + 'ammuttu vihaisessa mielessä, mutta aluksia vaurioitui '
+            + 'kymmeniä. Lopulta Islanti voitti: vuonna 1976 Britannia '
+            + 'hyväksyi 200 meripeninkulman rajan, ja se levisi pian koko '
+            + 'maailmaan.',
+          lyhyt: 'Islanti ja Britannia kiistelivät kalastusrajoista kolmessa turskasodassa 1958–1976.',
+          selite: 'Óðinn oli Islannin rannikkovartioston alus, joka '
+            + 'osallistui toiseen ja kolmanteen turskasotaan ja törmäsi '
+            + 'useita kertoja brittiläisiin sota-aluksiin. Se on nykyään '
+            + 'museolaiva Reykjavíkin Víkin-merimuseossa.',
+          lahde: 'Szilas, Wikimedia Commons (public domain)',
+          wiki: 'Turskasota',
+        },
+        {
+          otsikko: 'Kansa kolisteli pankit pois vallasta kattiloilla',
+          aika: '2008–2009',
+          tiedosto: 'Demonstration utanfor althingi i Reykjavik 2009-01-26.jpg',
+          teksti: 'Lokakuussa 2008 Islannin kolme suurta pankkia kaatuivat '
+            + 'muutamassa päivässä, ja koko maan talous romahti — suhteessa '
+            + 'väkilukuun suurin pankkikriisi minkään maan historiassa. '
+            + 'Ihmiset alkoivat kokoontua joka lauantai Alþingin eteen, ja '
+            + 'tammikuussa 2009 mielenosoitus kasvoi tuhansiin: ihmiset '
+            + 'toivat mukanaan kattiloita, pannuja ja kauhoja ja hakkasivat '
+            + 'niitä yhdessä niin kovaa, että parlamentin istuntoa oli '
+            + 'vaikea jatkaa. Meteli sai lempinimen kattilakumous. Hallitus '
+            + 'erosi parin viikon sisällä, ja myöhemmin lähes '
+            + 'kolmekymmentä pankkiireja ja johtajia tuomittiin vankilaan '
+            + '— Islanti on ainoa maa, joka vangitsi näin monta oman '
+            + 'kriisinsä syyllistä.',
+          lyhyt: 'Kattilakumous pakotti Islannin hallituksen eroamaan pankkikriisin jälkeen tammikuussa 2009.',
+          selite: 'Mielenosoittajat kokoontuivat Alþingin edustalle '
+            + 'Reykjavíkissa tammikuussa 2009 hakkaamaan kattiloita ja '
+            + 'pannuja protestiksi pankkikriisin hoidolle.',
+          lahde: 'Johannes Jansson/norden.org, Wikimedia Commons (CC BY 2.5 DK)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miten Islannin rannikkovartiosto sai brittiläisten '
+          + 'troolareiden verkot irti turskasodissa?',
+        vaihtoehdot: [
+          'Ampumalla verkkoja rikki',
+          'Leikkaamalla verkkoketjut erityisillä leikkureilla',
+          'Pyytämällä kalastajia luopumaan vapaaehtoisesti',
+          'Sulkemalla satamat',
+        ],
+        oikea: 1,
+        fakta: 'Kolmessa turskasodassa ei ammuttu ainuttakaan laukausta '
+          + 'vihamielisessä mielessä, mutta verkkoja leikattiin irti '
+          + 'kymmeniä.',
+      },
+    },
+    {
       id: 'menovinkit',
       nimi: 'Menovinkit',
       johdanto: 'Islanti on pieni maa, joka on avannut verkkoon paljon: melkein '
