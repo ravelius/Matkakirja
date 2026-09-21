@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2055, teksti: 'DNK: 6 ykköstason nostoa' },
   { v: 2054, teksti: 'NOR: 6 ykköstason nostoa' },
   { v: 2053, teksti: 'SWE: 5 ykköstason nostoa' },
   { v: 2052, teksti: 'HUN: 6 ykköstason nostoa' },
