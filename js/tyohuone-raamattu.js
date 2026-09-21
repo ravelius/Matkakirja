@@ -1857,7 +1857,8 @@ export const RAAMATTU = {
           + 'Macilla CI:n ulkopuolella; 4) Chromium-osasarjan siirto GitHub-matriisiin vain, '
           + 'jos kuorma toistuu (WebKit- ja aikamittaukset pysyvat aina Macilla); 5) LUVAT JA '
           + 'PAATOKSET OMISTAJALTA AINA AskUserQuestion-KORTTINA, ei tekstikysymyksena. '
-          + 'Tila: 1-2 Opus local -eralla 19.9.2026, 3 ja 5 voimassa heti.',
+          + 'Tila: 1-2 Opus local -eralla 19.9.2026, 3 ja 5 voimassa heti.'
+          + ' AVAINSAANTO (Fable 21.9.2026, omistaja: avaimia ei kierrateta): avaintiedostoja (~/.zshrc ym.) ei koskaan tulosteta - ei cat/head/less/echo $AVAIN; vain nimet: grep -o "^export [A-Z_]*" ~/.zshrc, arvot luetaan source-komennolla hiljaa. Rikkomus kirjataan lokiin ja omistajalle.',
         'VAIKEAT NYKYAIHEET (omistaja 20.8.2026): Pöllö vastaa '
           + 'asiallisesti suoriin kysymyksiin vaikeista nykyaiheista '
           + '(esim. "miksi Mosul on tuhoutunut", "onko siellä elämää '
