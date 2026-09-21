@@ -815,3 +815,7 @@ Omistaja 21.9.2026 klo 23.40: karttatyökalun Maakunnat-tilassa lyhyen luonnehdi
 ## CHE-SIIRROT KIRJATTU NIMIOVERSIOON h (PR #2690); KARTTASEPAN WORKTREE LUOTIIN UUDELLEEN (21.9.2026 klo 23.29)
 
 Karttaseppä 21.9.2026 klo 23.40: CHE:n viisi käsisiirtoa (Luzern, Valais, St. Gallen, Appenzell AR ja AI) kirjattu KASIN-taulukkoon ja nimistöön nimiot-poltto-5.json, ajo-ohje RESEPTI.md:ssä, ei polttoa (PR #2690, 5fdca5ecf). Worktree /Users/samireivinen/Matkakirja-karttaseppa oli poistunut kesken vuoron (syy epäselvä, todennäköisesti session oma worktree-siivous); Fable loi sen uudelleen haaralla karttaseppa-maakuntavektorit origin/mainista. Sääntö: rooli-worktreetä ei poisteta; väliaikaiset worktreet vain /Users/koodaus/-polkuihin.
+
+## TYYPPIMERKIT LAHIZOOMISSA TEHDAAN YOLLA JA JULKAISTAAN ILMAN KORTTIA (21.9.2026 klo 23.31)
+
+Omistaja 21.9.2026 klo 23.45: nostojen tyyppimerkit lähizoomissa toteutetaan yön aikana ja julkaistaan ilman omistajan korttia (Fable katsoo kaappaukset). Pelikoodarin järjestys: ablaatiotikas → tyyppimerkit → liikevara → hehkupiste.
