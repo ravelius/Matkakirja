@@ -96,6 +96,9 @@ function passissa(avain) {
  */
 function ensimmainenOmistamaton(omat, ehto) {
   for (const r of LINSSIT) {
+    // Hiomassa-linssi on kaupungin aarrepalkkio (aarteet.js LINSSIAARTEET),
+    // ei tietäjäpistekynnyksen tai mantereen linssi.
+    if (r.tila === 'hiomassa') continue;
     if (ehto(r) && !omat.has(r.tunnus)) return r.tunnus;
   }
   return null;
