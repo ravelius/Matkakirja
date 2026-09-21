@@ -346,6 +346,7 @@ const SHELL = [
   './js/pallovektorit-naulaus.js',
   './js/pallovektorit-tyo.js',
   './js/linssit/rekisteri.js',
+  './js/linssit/aarteet.js',
   './js/linssit/omistus.js',
   './js/linssit/pallo.js',
   './js/linssit/pistenaytto.js',
@@ -803,6 +804,7 @@ const SHELL = [
   './assets/varusteet/varuste-topografia.jpg',
   './assets/varusteet/varuste-vesistot.jpg',
   './assets/varusteet/varuste-vertailu.jpg',
+  './assets/linssit/hiomassa.svg',
   './assets/varusteet/varuste-maatiedot.jpg',
   './assets/varusteet/varuste-radio.jpg',
   // Keksinnöt ja Ihmisen matka saivat omat kuvakkeensa 7.9.2026; ilman
