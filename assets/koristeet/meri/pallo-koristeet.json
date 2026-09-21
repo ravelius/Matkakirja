@@ -1,0 +1,362 @@
+[
+ {
+  "luokka": "kuva",
+  "kuva": "assets/koristeet/meri/kompassiruusu-32.png",
+  "lon": -44,
+  "lat": 40,
+  "koko": 900,
+  "kierto": 0,
+  "tasot": [
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "luokka": "kuva",
+  "kuva": "assets/koristeet/meri/kompassiruusu-8.png",
+  "lon": -30,
+  "lat": -46,
+  "koko": 720,
+  "kierto": 0,
+  "tasot": [
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "luokka": "kuva",
+  "kuva": "assets/koristeet/meri/kompassiruusu-32.png",
+  "lon": 93,
+  "lat": -17,
+  "koko": 900,
+  "kierto": 0,
+  "tasot": [
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "luokka": "kuva",
+  "kuva": "assets/koristeet/meri/kompassiruusu-32.png",
+  "lon": -152,
+  "lat": 24,
+  "koko": 900,
+  "kierto": 0,
+  "tasot": [
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "luokka": "kuva",
+  "kuva": "assets/koristeet/meri/laiva-fregatti.png",
+  "lon": -30,
+  "lat": 53,
+  "koko": 460,
+  "kierto": -6,
+  "tasot": [
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "luokka": "kuva",
+  "kuva": "assets/koristeet/meri/laiva-hoyry.png",
+  "lon": -26,
+  "lat": 16,
+  "koko": 440,
+  "kierto": 4,
+  "tasot": [
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "luokka": "kuva",
+  "kuva": "assets/koristeet/meri/laiva-kuunari.png",
+  "lon": -60,
+  "lat": 24,
+  "koko": 400,
+  "kierto": -4,
+  "tasot": [
+   2,
+   3
+  ]
+ },
+ {
+  "luokka": "kuva",
+  "kuva": "assets/koristeet/meri/laiva-kalastusvene.png",
+  "lon": -8,
+  "lat": 67,
+  "koko": 300,
+  "kierto": 0,
+  "tasot": [
+   2,
+   3
+  ]
+ },
+ {
+  "luokka": "kuva",
+  "kuva": "assets/koristeet/meri/laiva-fregatti.png",
+  "lon": -12,
+  "lat": 74,
+  "koko": 440,
+  "kierto": 5,
+  "tasot": [
+   2,
+   3
+  ]
+ },
+ {
+  "luokka": "kuva",
+  "kuva": "assets/koristeet/meri/laiva-kalastusvene.png",
+  "lon": -76,
+  "lat": 15,
+  "koko": 300,
+  "kierto": 0,
+  "tasot": [
+   2,
+   3
+  ]
+ },
+ {
+  "luokka": "kuva",
+  "kuva": "assets/koristeet/meri/laiva-kuunari.png",
+  "lon": -27,
+  "lat": -12,
+  "koko": 400,
+  "kierto": 6,
+  "tasot": [
+   2,
+   3
+  ]
+ },
+ {
+  "luokka": "kuva",
+  "kuva": "assets/koristeet/meri/laiva-fregatti.png",
+  "lon": -4,
+  "lat": -42,
+  "koko": 460,
+  "kierto": -5,
+  "tasot": [
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "luokka": "kuva",
+  "kuva": "assets/koristeet/meri/laiva-kalastusvene.png",
+  "lon": 3,
+  "lat": -1,
+  "koko": 300,
+  "kierto": 0,
+  "tasot": [
+   2,
+   3
+  ]
+ },
+ {
+  "luokka": "kuva",
+  "kuva": "assets/koristeet/meri/laiva-hoyry.png",
+  "lon": 62,
+  "lat": -6,
+  "koko": 440,
+  "kierto": 3,
+  "tasot": [
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "luokka": "kuva",
+  "kuva": "assets/koristeet/meri/laiva-kuunari.png",
+  "lon": 62,
+  "lat": 12,
+  "koko": 400,
+  "kierto": -3,
+  "tasot": [
+   2,
+   3
+  ]
+ },
+ {
+  "luokka": "kuva",
+  "kuva": "assets/koristeet/meri/laiva-kalastusvene.png",
+  "lon": 88,
+  "lat": 12,
+  "koko": 300,
+  "kierto": 0,
+  "tasot": [
+   2,
+   3
+  ]
+ },
+ {
+  "luokka": "kuva",
+  "kuva": "assets/koristeet/meri/laiva-kalastusvene.png",
+  "lon": 41,
+  "lat": -20,
+  "koko": 300,
+  "kierto": 0,
+  "tasot": [
+   2,
+   3
+  ]
+ },
+ {
+  "luokka": "kuva",
+  "kuva": "assets/koristeet/meri/laiva-fregatti.png",
+  "lon": 82,
+  "lat": -40,
+  "koko": 460,
+  "kierto": 4,
+  "tasot": [
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "luokka": "kuva",
+  "kuva": "assets/koristeet/meri/laiva-kuunari.png",
+  "lon": 114,
+  "lat": 14,
+  "koko": 400,
+  "kierto": -5,
+  "tasot": [
+   2,
+   3
+  ]
+ },
+ {
+  "luokka": "kuva",
+  "kuva": "assets/koristeet/meri/laiva-hoyry.png",
+  "lon": 152,
+  "lat": -18,
+  "koko": 440,
+  "kierto": 0,
+  "tasot": [
+   2,
+   3
+  ]
+ },
+ {
+  "luokka": "kuva",
+  "kuva": "assets/koristeet/meri/laiva-kalastusvene.png",
+  "lon": 160,
+  "lat": -32,
+  "koko": 300,
+  "kierto": 0,
+  "tasot": [
+   2,
+   3
+  ]
+ },
+ {
+  "luokka": "kuva",
+  "kuva": "assets/koristeet/meri/laiva-fregatti.png",
+  "lon": 172,
+  "lat": 36,
+  "koko": 460,
+  "kierto": -4,
+  "tasot": [
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "luokka": "kuva",
+  "kuva": "assets/koristeet/meri/laiva-hoyry.png",
+  "lon": -130,
+  "lat": 42,
+  "koko": 440,
+  "kierto": 5,
+  "tasot": [
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "luokka": "kuva",
+  "kuva": "assets/koristeet/meri/laiva-kuunari.png",
+  "lon": -160,
+  "lat": 8,
+  "koko": 400,
+  "kierto": 0,
+  "tasot": [
+   2,
+   3
+  ]
+ },
+ {
+  "luokka": "kuva",
+  "kuva": "assets/koristeet/meri/laiva-hoyry.png",
+  "lon": -175,
+  "lat": 47,
+  "koko": 440,
+  "kierto": -3,
+  "tasot": [
+   2,
+   3
+  ]
+ },
+ {
+  "luokka": "kuva",
+  "kuva": "assets/koristeet/meri/laiva-fregatti.png",
+  "lon": -100,
+  "lat": -44,
+  "koko": 460,
+  "kierto": 6,
+  "tasot": [
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "luokka": "kuva",
+  "kuva": "assets/koristeet/meri/laiva-kuunari.png",
+  "lon": -110,
+  "lat": -14,
+  "koko": 400,
+  "kierto": -6,
+  "tasot": [
+   2,
+   3
+  ]
+ },
+ {
+  "luokka": "kuva",
+  "kuva": "assets/koristeet/meri/laiva-fregatti.png",
+  "lon": 30,
+  "lat": -52,
+  "koko": 440,
+  "kierto": 0,
+  "tasot": [
+   2,
+   3
+  ]
+ },
+ {
+  "luokka": "kuva",
+  "kuva": "assets/koristeet/meri/laiva-kalastusvene.png",
+  "lon": -84,
+  "lat": 58,
+  "koko": 300,
+  "kierto": 0,
+  "tasot": [
+   2,
+   3
+  ]
+ }
+]

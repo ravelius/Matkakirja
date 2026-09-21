@@ -224,6 +224,10 @@ Käyttö: tools/polta-paikallisesti.sh [valitsimet]
   --pallo-ilman-nostoja      sama kuin oletus; jätetty yhteensopivuuden
                              vuoksi (nostot maittain
                              lepokerroksesta; PAATOKSET 34 kohta 17 d)
+  --pallon-nimiot            yhdistä pallon sarjaan nimiötaso yleiskuvan
+                             tasoilla (tee-pallolaatat --nimiot: pyramidin
+                             z ≤ 3, merikoristeet); syvemmät tasot piirtää
+                             lepokerros, joten ne eivät tuplaannu
   --pallo-osia N             pallon sarjan shardeja (oletus: ytimet × 3;
                              yksi osa on kielletty monen ytimen koneella)
   --pallo-tasot 0-8          pallon Mercator-tasot (oletus 0-8)
@@ -277,6 +281,11 @@ Käyttö: tools/polta-paikallisesti.sh [valitsimet]
   --nimioversio V            polta MYÖS nimiötaso (z4–z8, yksi shardi) tähän
                              versioon; --nimiot <json> antaa nimistön
   --nimiot <json>            nimiötason nimistö (oletus js/packs/nimisto-1873.js)
+  --koristeet <json>         lisäkoristeet nimistön perään (valtamerten laivat
+                             ja kompassit pallon yleiskuvaan, rivit tasot [2,3];
+                             assets/koristeet/meri/pallo-koristeet.json)
+  --nimiotasot A-B           nimiöshardin tasot (oletus 4-8; koristeet
+                             pallolle: 2-8)
   --ilman-nostoja            jätä nostoshardit pois tästä ajosta
   --ilman-nimioita           jätä nimiöshardi pois tästä ajosta
                              (kaksivaiheinen ajo: pohja ensin, nostot ja
@@ -323,6 +332,7 @@ PALLON_RANTA=0; VAIN_PALLO=0; PALLO_OSIA=""; PALLO_TASOT="0-8"; NOUTOVALI=""
 # kahdesti, poltettuna laatassa ja elavana lepokerroksesta. Nostojen
 # poltto vaatii nyt lipun --pallon-nostot.
 PALLON_NOSTOT=""
+PALLON_NIMIOT=""
 # YKSI AJO ILMAN VÄLITILAA (omistaja 18.9.2026, ks. polta_nostot_ja_pallo).
 YKSI_AJO=0; PALLO_LUETTELO=""; PALLON_LAHDE=""; EI_LAHDETTA=0
 # Ylikirjoitussuoja pallon sarjalle (ks. polta_pallo).
@@ -346,7 +356,7 @@ TILAVALI="${POLTTO_TILAVALI:-15}"
 VAHTI_PID=""; RAPORTOI=0; EDISTYMISVAROITUS=0
 # Meriresepti ja tarkka rantaviiva (ks. ohje).
 DATA=""; YHTEISLIPUT=""; POHJALIPUT=""; VIIVALIPUT=""; RANTALIPUT=""; NOSTOLIPUT=""; NIMIOLIPUT=""
-NIMIOVERSIO=""; NIMIOT=""; ILMAN_NOSTOJA=0; ILMAN_NIMIOITA=0
+NIMIOVERSIO=""; NIMIOT=""; KORISTEET=""; NIMIOTASOT="4-8"; ILMAN_NOSTOJA=0; ILMAN_NIMIOITA=0
 
 while [ $# -gt 0 ]; do
   case "$1" in
@@ -374,6 +384,7 @@ while [ $# -gt 0 ]; do
     --pallo-osia) PALLO_OSIA="$2"; shift 2 ;;
     --pallo-ilman-nostoja) PALLON_NOSTOT=""; shift ;;
     --pallon-nostot) PALLON_NOSTOT="--nostot"; shift ;;
+    --pallon-nimiot) PALLON_NIMIOT="--nimiot"; shift ;;
     --pallo-tasot) PALLO_TASOT="$2"; shift 2 ;;
     --nostot-ja-pallo) YKSI_AJO=1; shift ;;
     --pallon-lahde) PALLON_LAHDE="$2"; shift 2 ;;
@@ -398,6 +409,8 @@ while [ $# -gt 0 ]; do
     --nimioliput) NIMIOLIPUT="$2"; shift 2 ;;
     --nimioversio) NIMIOVERSIO="$2"; shift 2 ;;
     --nimiot) NIMIOT="$2"; shift 2 ;;
+    --koristeet) KORISTEET="$2"; shift 2 ;;
+    --nimiotasot) NIMIOTASOT="$2"; shift 2 ;;
     --ilman-nostoja) ILMAN_NOSTOJA=1; shift ;;
     --ilman-nimioita) ILMAN_NIMIOITA=1; shift ;;
     --lapsi) LAPSI=1; shift ;;
@@ -432,6 +445,9 @@ if [ "$LAPSI" -eq 1 ]; then
   [ -n "$NIMIOLIPUT" ] || NIMIOLIPUT="${POLTTO_NIMIOLIPUT:-}"
   [ -n "$NIMIOVERSIO" ] || NIMIOVERSIO="${POLTTO_NIMIOVERSIO:-}"
   [ -n "$NIMIOT" ] || NIMIOT="${POLTTO_NIMIOT:-}"
+  [ -n "$KORISTEET" ] || KORISTEET="${POLTTO_KORISTEET:-}"
+  [ "$NIMIOTASOT" != "4-8" ] || NIMIOTASOT="${POLTTO_NIMIOTASOT:-4-8}"
+  [ -n "$PALLON_NIMIOT" ] || PALLON_NIMIOT="${POLTTO_PALLON_NIMIOT:-}"
   [ -n "$PALLOTUNNISTE" ] || PALLOTUNNISTE="${POLTTO_PALLOTUNNISTE:-}"
   [ "$HAHMOTELMAT" -eq 1 ] || HAHMOTELMAT="${POLTTO_HAHMOTELMAT:-0}"
   [ "$ILMAN_NOSTOJA" -eq 1 ] || ILMAN_NOSTOJA="${POLTTO_ILMAN_NOSTOJA:-0}"
@@ -441,6 +457,7 @@ vie_lapsille () {
   export POLTTO_DATA="$DATA" POLTTO_YHTEISLIPUT="$YHTEISLIPUT" POLTTO_POHJALIPUT="$POHJALIPUT"
   export POLTTO_VIIVALIPUT="$VIIVALIPUT" POLTTO_RANTALIPUT="$RANTALIPUT" POLTTO_NOSTOLIPUT="$NOSTOLIPUT" POLTTO_NIMIOLIPUT="$NIMIOLIPUT"
   export POLTTO_NIMIOVERSIO="$NIMIOVERSIO" POLTTO_NIMIOT="$NIMIOT" POLTTO_PALLOTUNNISTE="$PALLOTUNNISTE"
+  export POLTTO_KORISTEET="$KORISTEET" POLTTO_NIMIOTASOT="$NIMIOTASOT" POLTTO_PALLON_NIMIOT="$PALLON_NIMIOT"
   export POLTTO_HAHMOTELMAT="$HAHMOTELMAT" POLTTO_ILMAN_NOSTOJA="$ILMAN_NOSTOJA" POLTTO_ILMAN_NIMIOITA="$ILMAN_NIMIOITA"
 }
 # Aineistokansio absoluuttiseksi; oletus on ULOS/ne-data (hae_aineisto).
@@ -796,8 +813,9 @@ shardit () {
       if [ -n "$NIMIOVERSIO" ] && [ "$ILMAN_NIMIOITA" -eq 0 ]; then
         local nimioarg="--nimiotaso --nimioversio $NIMIOVERSIO"
         [ -n "$NIMIOT" ] && nimioarg="$nimioarg --nimiot $NIMIOT"
+        [ -n "$KORISTEET" ] && nimioarg="$nimioarg --koristeet $KORISTEET"
         [ -n "$NIMIOLIPUT" ] && nimioarg="$nimioarg $NIMIOLIPUT"
-        echo "nimio-$NIMIOVERSIO|--tasoja 9 --tasot 4-8 $nimioarg"
+        echo "nimio-$NIMIOVERSIO|--tasoja 9 --tasot $NIMIOTASOT $nimioarg"
       fi
       ;;
   esac
@@ -1027,10 +1045,10 @@ ajon_tunnus () {
   # Nimiöversio EI ole tunnuksessa: nimiöshardin nimi on versiokohtainen
   # (nimio-<versio>), joten uusi nimiöversio ajaa vain oman shardinsa
   # eikä mitätöi pohjaa, viivoja, rantaa, nostoja tai pallon sarjaa.
-  printf '%s/%s/%s/%s/r%s/h%s/p%s/n%s' \
+  printf '%s/%s/%s/%s/r%s/h%s/p%s/n%s%s' \
     "${VERSIO:-}" "${VIIVAVERSIO:-}" "${NOSTOVERSIO:-}" "${RANTAVERSIO:-}" \
     "${ILMAN_RANTAVIIVAA:-0}" "${HAHMOTELMAT:-0}" \
-    "${PALLOTUNNISTE:-}" "${PALLON_NOSTOT:-}"
+    "${PALLOTUNNISTE:-}" "${PALLON_NOSTOT:-}" "${PALLON_NIMIOT:-}"
 }
 
 # Onko shardin valmis-merkki tästä samasta ajosta?
@@ -1430,7 +1448,7 @@ pallon_yritys () {
   local koodi=0
   # shellcheck disable=SC2086
   (cd "$JUURI" && node tools/tee-pallolaatat.mjs \
-      --min "$PALLO_MIN" --max "$PALLO_MAX" $PALLON_NOSTOT $rantalippu \
+      --min "$PALLO_MIN" --max "$PALLO_MAX" $PALLON_NOSTOT $PALLON_NIMIOT $rantalippu \
       --tunniste "$PALLOTUNNISTE" --osa "$i/$PALLO_OSIA" \
       $( [ -n "$PALLO_LUETTELO" ] && echo --luettelo "$PALLO_LUETTELO" ) \
       $( [ -n "$PALLON_LAHDE" ] && echo --lahde "$PALLON_LAHDE" ) \
@@ -1532,7 +1550,7 @@ polta_pallo () {
   mkdir -p "$luettelokansio"
   # shellcheck disable=SC2086
   (cd "$JUURI" && node tools/tee-pallolaatat.mjs --vain-luettelo \
-    --min "$PALLO_MIN" --max "$PALLO_MAX" $PALLON_NOSTOT $rantalippu \
+    --min "$PALLO_MIN" --max "$PALLO_MAX" $PALLON_NOSTOT $PALLON_NIMIOT $rantalippu \
     $( [ -n "$PALLO_LUETTELO" ] && echo --luettelo "$PALLO_LUETTELO" ) \
     --tunniste "$PALLOTUNNISTE" --ulos "$luettelokansio")
   local kansio
@@ -1602,6 +1620,7 @@ polta_pallo () {
     $( [ -n "$PALLO_LUETTELO" ] && echo --pallo-luettelo "$PALLO_LUETTELO" ) \
     $( [ -n "$PALLON_LAHDE" ] && echo --pallon-lahde "$PALLON_LAHDE" ) \
     $( [ -z "$PALLON_NOSTOT" ] && echo --pallo-ilman-nostoja ) \
+    $( [ -n "$PALLON_NIMIOT" ] && echo --pallon-nimiot ) \
     $( [ "$VIE" -eq 1 ] || echo --ei-vie ) \
     $( [ "$SIIVOA" -eq 1 ] && echo --siivoa ) \
     < "$lista" || virhe=1

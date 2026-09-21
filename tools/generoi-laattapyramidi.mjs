@@ -307,7 +307,7 @@ if (!kohdekansio || kohdekansio.startsWith('--')) {
     + '[--kaariminuutit 1|3] [--korkeuspalat <kansio>] [--vain-palat [tiedosto]] '
     + '[--vain-lista] [--paikkaus <lähdeversio>] '
     + '[--nostotaso --nostoversio <v> [--nostomaa <ISO>] [--ilman-hahmotelmia [--polta-hahmotelmat t,t]] [--nostotasot <json>]] '
-    + '[--nimiotaso --nimioversio <v> [--nimiot <json>] [--nimiot-aika pysyva]] '
+    + '[--nimiotaso --nimioversio <v> [--nimiot <json>] [--koristeet <json>] [--nimiot-aika pysyva]] '
     + '[--viivataso --viivaversio <v> [--eipiirit] [--eireitit] [--eirajat] [--eijoet]] '
     + '[--vesiviivoitus tihea|harva] [--syvyysportaat m,m,…] [--resepti-json <json>] [--joet-pohjaan] '
     + '[--rantataso --rantaversio <v>] [--ilman-rantaviivaa] '
@@ -2027,10 +2027,24 @@ let nimiotLista = null;
  * rivit ilman kenttää pysyvät mukana — ne eivät ole poliittisia nimiä.
  */
 const NIMIOT_AIKA = valitsin('nimiot-aika', null);
+/*
+ * LISÄKORISTEET (`--koristeet <json>`, Karttaseppä 21.9.2026 ilta):
+ * nimistön perään liitettävä rivilista, esim. valtamerten laivat ja
+ * kompassiruusut pallon yleiskuvaan (assets/koristeet/meri/
+ * pallo-koristeet.json, rivit `tasot: [2, 3]`). Kuvapolut ovat repon
+ * juuresta; erillinen tiedosto, jotta Sisältökirjurin nimistö ja
+ * Karttasepän koristeet eivät kirjoita samaan listaan.
+ */
+const KORISTEET_LAHDE = valitsin('koristeet', null);
 function nimiotasonNimiot() {
   if (nimiotLista) return nimiotLista;
   if (NIMIOT_LAHDE) nimiotLista = JSON.parse(readFileSync(NIMIOT_LAHDE, 'utf8'));
   else nimiotLista = NIMISTO_1873;
+  if (KORISTEET_LAHDE) {
+    const lisa = JSON.parse(readFileSync(KORISTEET_LAHDE, 'utf8'));
+    nimiotLista = [...nimiotLista, ...lisa];
+    console.log(`  koristeet       ${KORISTEET_LAHDE}: ${lisa.length} riviä`);
+  }
   if (NIMIOT_AIKA) {
     const ennen = nimiotLista.length;
     nimiotLista = nimiotLista.filter((n) => !n.aika || n.aika === NIMIOT_AIKA

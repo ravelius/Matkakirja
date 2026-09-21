@@ -4168,6 +4168,7 @@ export const NIMION_VARIT = Object.freeze({
  * @returns {null|{x, y, korkeus, leveys, kulma, laatikko:[x0,y0,x1,y1]}} kuvapikseleinä arkin origosta
  */
 export function nimiotasonLadonta(nimio, z, kaava, px, mittaa) {
+  if (!nimioTasolla(nimio, z)) return null;
   // Reittiviiva (esim. Horation reitti 1873): pisteet [lon, lat], teksti
   // reitin keskikohdan viereen; laatikko koko polun ympäri.
   if (nimio.luokka === 'reitti') {
@@ -4255,7 +4256,21 @@ export function nimiotasonLadonta(nimio, z, kaava, px, mittaa) {
  * drawImage keskipisteen ympäri kierrettynä. Metadataan kirjataan
  * luokka 'kuva' ja tiedosto, jotta Pelikoodari tunnistaa koristeen.
  */
-export const KUVAN_KOKOKERROIN = Object.freeze({ 4: 0.3, 5: 0.42, 6: 0.65, 7: 1, 8: 1.45 });
+export const KUVAN_KOKOKERROIN = Object.freeze({ 1: 0.08, 2: 0.15, 3: 0.21, 4: 0.3, 5: 0.42, 6: 0.65, 7: 1, 8: 1.45 });
+/*
+ * KORISTEEN OMAT TASOT (Karttaseppä 21.9.2026 ilta, merikoristeet
+ * pallolle): rivin kenttä `tasot: [z, …]` rajaa, millä pyramidin
+ * tasoilla koriste ladotaan. Ilman kenttää koriste ladotaan tasoilta
+ * KUVAKORISTEEN_OLETUSTASOT (z4–z8, kuten tähän asti) — maailmankuvan
+ * (pallon yleiskuva, z1–z3) valtamerilaivat ja -kompassit ovat omia
+ * rivejään omilla koolla, eivät Ranskan rannikon koristeet
+ * pienennettyinä. Sama sääntö pätee kaikkiin nimiöluokkiin: ilman
+ * kenttää z1–z3 jää tyhjäksi (nimiötaso alkoi z4:stä).
+ */
+export const KUVAKORISTEEN_OLETUSTASOT = Object.freeze([4, 5, 6, 7, 8]);
+export function nimioTasolla(nimio, z) {
+  return Array.isArray(nimio?.tasot) ? nimio.tasot.includes(z) : z >= 4;
+}
 
 export const KORISTEEN_KOOT = Object.freeze({
   kompassi: { 4: 28, 5: 40, 6: 56, 7: 80, 8: 110 },
