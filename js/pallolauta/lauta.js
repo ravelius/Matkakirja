@@ -5279,7 +5279,18 @@ export async function avaaPallolauta(ui) {
           .find((e) => e.style.position === 'absolute' && e.style.pointerEvents === 'none');
         return juuri ? { loytyi: true, lapsia: juuri.childElementCount } : { loytyi: false, lapsia: 0 };
       })(),
-      virheet: globalThis.__pallonVirheet?.slice(-3) ?? null,
+      virheet: globalThis.__pallonVirheet?.slice(-5) ?? null,
+      /*
+       * PALLON JUURI (three-globe): `visible` on false kunnes pallon
+       * pintakerros ilmoittaa olevansa valmis (waitForGlobeReady) —
+       * ensimmäinen laatta/tekstuuri ladattu. Sitä ennen WebGL ei piirrä
+       * palloa eikä CSS2DRenderer liitä yhtään merkkiä (esi-isä
+       * näkymätön). Laitetestaaja 21.9.2026 iPad: ketjuNakyva[2] false.
+       */
+      pallonJuuri: (() => {
+        const juuri = pallo.scene?.()?.children?.find?.((o) => o.children?.some?.((c) => c.__globeObjType || c.children?.some?.((cc) => cc.__globeObjType))) ?? null;
+        return juuri ? { nakyva: juuri.visible, lapsia: juuri.children.length, skaala: Number(juuri.scale?.x?.toFixed?.(3)) } : null;
+      })(),
       /*
        * CSS2D-NÄYTE (Laitetestaaja 21.9.2026 iPad: luotu 68, liitetty
        * 0). CSS2DRenderer liittää elementin vain, jos olio on
@@ -5298,12 +5309,17 @@ export async function avaaPallolauta(ui) {
           const m = kam.projectionMatrix.clone().multiply(kam.matrixWorldInverse);
           const v = kam.position.clone().setFromMatrixPosition(olio.matrixWorld).applyMatrix4(m);
           const ketju = [];
-          for (let o = olio; o; o = o.parent) ketju.push(o.visible);
+          const ketjunNimet = [];
+          for (let o = olio; o; o = o.parent) {
+            ketju.push(o.visible);
+            ketjunNimet.push(`${o.type ?? o.constructor?.name ?? '?'}${o.__globeObjType ? `:${o.__globeObjType}` : ''}${o.name ? `#${o.name}` : ''}(${o.children?.length ?? 0})`);
+          }
           const inv = kam.matrixWorldInverse.elements;
           return {
             avain: d.avain ?? null,
             nakyva: olio.visible,
             ketjuNakyva: ketju,
+            ketju: ketjunNimet,
             kerros: olio.layers.test(kam.layers),
             z: Number(v.z.toFixed(4)),
             x: Number(v.x.toFixed(3)),
