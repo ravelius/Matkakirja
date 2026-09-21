@@ -3264,8 +3264,32 @@ export async function avaaPallolauta(ui) {
    */
   let napautuskohta = null;
   const NAPAUTUSKOHDAN_IKA_MS = 1500;
+  /*
+   * KAMERAN MATRIISIT TAHDISTETAAN NAPAUTUKSESSA (CI 21.9.2026, PR #2636,
+   * ajot 35547605770 ja 35549388298: Pariisin napautus osui pikselilleen
+   * kaupungin projisoituun pisteeseen — klik 187,212 = kaupunkiPiste
+   * 187,212 — mutta pinnan säteenjäljitys antoi 48,620 N / 2,677 E, eli
+   * ~15 px kaakkoon; sama vakio-offset joka punaisessa ajossa, ei
+   * yhdessäkään vihreässä eikä paikallisesti).
+   *
+   * Three.js päivittää kameran `matrixWorldInverse`n vain renderissä,
+   * `matrixWorld`in myös kutsusta. Kun kamera on liikkunut viimeisen
+   * renderin jälkeen (ajon viimeinen askel, ohjainten vaimennus,
+   * herätystä odottava silmukka), projisointi (`getScreenCoords`,
+   * matrixWorldInverse) ja säteenjäljitys (`Raycaster.setFromCamera`,
+   * matrixWorld) lukevat ERI kameraa — juuri vakio-offset. Ennen
+   * kirjaston omia click-käsittelijöitä molemmat matriisit ajetaan
+   * samaan tilaan, ja seuraava render piirtää saman kuvan.
+   */
+  const tahdistaKameranMatriisit = () => {
+    const kam = pallo.camera?.();
+    if (!kam?.updateMatrixWorld || !kam.matrixWorldInverse?.copy) return;
+    kam.updateMatrixWorld(true);
+    kam.matrixWorldInverse.copy(kam.matrixWorld).invert();
+  };
   const korttivahti = (e) => {
     if (!kotelo.contains(e.target)) return;
+    tahdistaKameranMatriisit();
     const r = kotelo.getBoundingClientRect();
     napautuskohta = {
       x: e.clientX - r.left,
@@ -3744,8 +3768,27 @@ export async function avaaPallolauta(ui) {
       // Linssin aikana pallon pisteetkin kulkevat pinnan portin kautta,
       // joka päästää läpi vain linssin oman merkin (ks. napautaPintaan).
       if (linssiPaalla()) { napautaPintaan(d.lat, d.lon); return; }
-      // Askelhelmi ja valo ovat koristeita: napautus niistä menee pinnalle.
-      if (d.laji === 'helmi' || d.laji === 'valo') napautaPintaan(d.lat, d.lon);
+      /*
+       * ASKELHELMI JA VALO OVAT KORISTEITA: napautus niistä menee
+       * pinnalle — SORMEN OMASTA PISTEESTÄ, ei koristeen keskeltä (CI
+       * 21.9.2026, PR #2636 run 35546141308: Pariisin napautus osui
+       * aihevalon täplään, jonka keskus oli 48,506 N / 2,848 E eli 15–20
+       * px kaupungin kaakkoispuolella; pinnan osumatesti lähti täplän
+       * keskeltä ja voitti Versaillesin noston, ei kaupunkia). Valon
+       * säde on kymmeniä pikseleitä, joten sen keskus ei ole sormen
+       * kohta. Sormen ruutupiste muunnetaan pallon pinnalle
+       * (toGlobeCoords); ilman tuoretta pistettä pudotaan koristeen
+       * omaan paikkaan kuten ennen.
+       */
+      if (d.laji === 'helmi' || d.laji === 'valo') {
+        const kohta = tuoreNapautuskohta();
+        const pinta = kohta ? pallo.toGlobeCoords?.(kohta.x, kohta.y) : null;
+        if (pinta && Number.isFinite(pinta.lat) && Number.isFinite(pinta.lng)) {
+          napautaPintaan(pinta.lat, pinta.lng);
+        } else {
+          napautaPintaan(d.lat, d.lon);
+        }
+      }
       else if (korttiOliAuki) korttiOliAuki = false;
       // Linssin merkki kaupungin päällä (aikajanan lamppu) saa napautuksen
       // sen sijaan: sama sääntö kuin pinnan napautuksessa.
@@ -4825,6 +4868,17 @@ export async function avaaPallolauta(ui) {
     if (matkallaVapaana) {
       matkasyrjaytysTalteen = zoomirajaSyrjaytys;
       zoomirajaSyrjaytys = null;
+      /*
+       * KATON MUISTI NOLLATAAN MYÖS TÄSSÄ (v1984, liftauszoomi). Mitattu
+       * tools/savukkeet/savuke-liftaus-ajoitus.mjs:llä (Bryssel, 2000 ×
+       * 1300, 20.9.2026): kun siirto alkaa `sovitaSiirtokohteet` →
+       * `matkaZoomivapaus(true)` ENNEN kuin `paivita` ehtii nähdä
+       * korostusmaan katoavan, katto nousee tässä 0,205 → 2,5 ja
+       * `kattoPuristus` palautti kameran koko pallolle (`pointOfView`
+       * altitude 2,5, ms 0) — sama vika kuin `paivita`n haarassa,
+       * eri ovi. Matkan vapautus on tahallinen, ei mittauspiikki.
+       */
+      kattoPuristus = null;
     } else {
       zoomirajaSyrjaytys = matkasyrjaytysTalteen;
       matkasyrjaytysTalteen = null;
@@ -5002,6 +5056,8 @@ export async function avaaPallolauta(ui) {
      * voivat erota — tämä on ainoa paikka, josta sen näkee.
      */
     viimeinenNapautus: () => viimeinenNapautus,
+    /** Kameran matriisit samaan tilaan ennen mittaa (savukkeet; ks. korttivahti). */
+    tahdistaKameranMatriisit,
     /**
      * Kyltin PIIRRETTY laatikko (savukkeet ja vartijat): se, jota
      * osumatesti käyttää, kun merkkikerroksen tween on kesken.

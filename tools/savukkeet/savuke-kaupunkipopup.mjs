@@ -58,6 +58,7 @@
  *
  * Aja: NODE_USE_ENV_PROXY=1 PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers \
  *      node tools/savukkeet/savuke-kaupunkipopup.mjs [kuvakansio]
+ *      SAVUKE_HIDAS=6 toistaa CI:n kuorman (liuskan asettuminen, ks. alla).
  */
 import http from 'node:http';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
@@ -209,6 +210,26 @@ for (const ruutu of RUUDUT) {
       } catch { /* yksityinen tila */ }
     }, tallenne);
     const sivu = await ctx.newPage();
+    // Napautuksen jäljitys diagnoosiin: mihin clientX/Y selain toi sormen.
+    await sivu.addInitScript(() => {
+      document.addEventListener('pointerdown', (e) => {
+        window.__klik = { x: e.clientX, y: e.clientY, px: e.pageX, py: e.pageY, kohde: `${e.target?.tagName}.${String(e.target?.className?.baseVal ?? e.target?.className ?? '').split(' ')[0]}`, hetki: Date.now() };
+      }, true);
+    });
+    /*
+     * HIDASTETTU CHROMIUM (21.9.2026, CI v1984: Pariisi ja Marseille 390
+     * px "liuska ei auennut"). Vika ei toistunut nopealla koneella: liuska
+     * aukesi ja sulkeutui heti, kun kuormitettu renderkamera jäi ajosta
+     * jälkeen (js/pallolauta/nostot.js LIUSKA ASETTUU ENSIN). SAVUKE_HIDAS=6
+     * hidastaa suorittimen CDP:llä samaan luokkaan kuin CI:n rinnakkaisajo;
+     * ilman lippua savuke on entinen.
+     */
+    const hidas = Number(process.env.SAVUKE_HIDAS ?? 0);
+    if (hidas > 1) {
+      const cdp = await ctx.newCDPSession(sivu);
+      await cdp.send('Emulation.setCPUThrottlingRate', { rate: hidas });
+      tieto('hidastettu Chromium', `CPU ${hidas}×`);
+    }
     const virheet = [];
     sivu.on('pageerror', (e) => virheet.push(String(e.message ?? e)));
     await sivu.route('**samireivinen.workers.dev/**', (r) => r.abort());
@@ -307,6 +328,9 @@ for (const ruutu of RUUDUT) {
      */
     const kaupunkiPiste = () => sivu.evaluate((id) => {
       const l = window.matkakirja.ui.pallolauta;
+      // Projisointi samasta kamerasta kuin napautuksen säteenjäljitys
+      // (js/pallolauta/lauta.js KAMERAN MATRIISIT TAHDISTETAAN).
+      l.tahdistaKameranMatriisit?.();
       const k = l.kaupunki(id);
       if (!k) return null;
       const p = l.pallo.getScreenCoords(k.lat, k.lon, 0);
@@ -395,6 +419,33 @@ for (const ruutu of RUUDUT) {
       ).then(() => true).catch(() => false);
       tieto(`${tunnus}: saapumistrailerin odotus`,
         `${Date.now() - traileriAlku} ms, ${traileriPois ? 'poissa' : 'yhä ruudulla'}`);
+      /*
+       * KAMERA LEVOSSA ENNEN NAPAUTUSTA (CI 21.9.2026, PR #2636, run
+       * 35545232135 diagnoosi): Pariisin napautus pisteessä 195,273 osui
+       * pintaan 48,506 N / 2,848 E — noin 15–20 px kaupungin
+       * kaakkoispuolelle — ja lähin osuma oli Versaillesin nosto (15 px),
+       * jonka kortti aukesi liuskan sijaan. Piste luettiin
+       * getScreenCoordsista, mutta kuormitetulla koneella saapumisajo
+       * oli yhä matkalla: renderkamera ja pisteen projektio olivat eri
+       * kehyksestä. Odotetaan, että ajo on ohi ja pisteen ruutupaikka
+       * pysyy paikallaan kahden mitan välillä — sama syy ja sama lääke
+       * kuin liuskan asettumisella (js/pallolauta/nostot.js LIUSKA
+       * ASETTUU ENSIN).
+       */
+      const lepoAlku = Date.now();
+      const lepo = await sivu.waitForFunction((id) => {
+        const l = window.matkakirja.ui.pallolauta;
+        if (l.kamera?.kameraAjossa?.()) { window.__lepoEdellinen = null; return false; }
+        l.tahdistaKameranMatriisit?.();
+        const k = l.kaupunki(id);
+        const p = k ? l.pallo.getScreenCoords(k.lat, k.lon, 0) : null;
+        if (!p) return false;
+        const ed = window.__lepoEdellinen;
+        window.__lepoEdellinen = { x: p.x, y: p.y, hetki: performance.now() };
+        return Boolean(ed) && Math.hypot(p.x - ed.x, p.y - ed.y) < 0.5
+          && performance.now() - ed.hetki >= 250;
+      }, kaupunki.id, { timeout: 15000, polling: 300 }).then(() => true).catch(() => false);
+      tieto(`${tunnus}: kameran lepo ennen napautusta`, `${Date.now() - lepoAlku} ms, ${lepo ? 'levossa' : 'yhä ajossa'}`);
       for (let yritys = 0; yritys < 2; yritys += 1) {
         /* eslint-disable no-await-in-loop */
         /*
@@ -446,6 +497,49 @@ for (const ruutu of RUUDUT) {
         tieto(`${tunnus}: kaupunkimerkin napautus ${yritys + 1}`,
           `piste ${Math.round(piste.x)},${Math.round(piste.y)} (tuore ${tuore ? `${Math.round(tuore.x)},${Math.round(tuore.y)}` : '-'}), `
           + `alla ${alla}, liuska ${auki ?? '-'} ${Date.now() - alku} ms`);
+        if (!auki || process.env.SAVUKE_DIAGNOOSI) {
+          /*
+           * DIAGNOOSI CI:N KUORMAAN (21.9.2026, PR #2636): kun liuska ei
+           * auennut, kerrotaan MIKÄ aukesi — kortin otsikko, laudan oma
+           * napautuskirjaus ja kaupungin lähimmät osumat — ja otetaan
+           * kuva. Paikallisesti vika ei toistu, joten loki on ainoa
+           * silminnäkijä.
+           */
+          const diagnoosi = await sivu.evaluate(({ x, y, kaupunkiId }) => {
+            const l = window.matkakirja.ui.pallolauta;
+            const koti = l.kotelo.getBoundingClientRect();
+            const kx = x - koti.left;
+            const ky = y - koti.top;
+            const osumat = (l.nostot?.osumaLaatikot?.() ?? [])
+              .map((o) => ({ ...o, d: Math.hypot((o.x0 + o.x1) / 2 - kx, (o.y0 + o.y1) / 2 - ky) }))
+              .filter((o) => o.d < 60)
+              .sort((a, b) => a.d - b.d)
+              .slice(0, 4)
+              .map((o) => `${o.nimi ?? o.id}(${o.perhe}) ${Math.round(o.d)} px`);
+            const kangas = l.kotelo.querySelector('canvas');
+            const kr = kangas?.getBoundingClientRect();
+            const vv = window.visualViewport;
+            return {
+              // Mihin selain toi napautuksen ja missä kangas on: CI:n
+              // vakio-offsetin (~15 px kaakkoon) jäljitys.
+              klik: window.__klik ?? null,
+              vieritys: { x: window.scrollX, y: window.scrollY, vvX: vv?.offsetLeft ?? null, vvY: vv?.offsetTop ?? null, vvScale: vv?.scale ?? null, innerW: window.innerWidth, innerH: window.innerHeight, dpr: window.devicePixelRatio },
+              kotelo: { x: Math.round(koti.left), y: Math.round(koti.top), w: Math.round(koti.width), h: Math.round(koti.height) },
+              kangas: kr ? { x: Math.round(kr.left), y: Math.round(kr.top), w: Math.round(kr.width), h: Math.round(kr.height), bw: kangas.width, bh: kangas.height, tyyli: kangas.style.cssText.slice(0, 120) } : null,
+              kaupunkiPiste: (() => { const k = l.kaupunki?.(kaupunkiId); const p = k ? l.pallo.getScreenCoords(k.lat, k.lon, 0) : null; return p ? { x: Math.round(p.x), y: Math.round(p.y) } : null; })(),
+              kortti: document.querySelector('.fokusnosto-kortti-otsikko, .fokuskohde-otsikko, .elaintaky-kerros h3, .skandaali-kerros h3')?.textContent?.trim() ?? null,
+              kerrokset: [...document.querySelectorAll('.fokusnosto-kerros, .fokuskohde-popup, .elaintaky-kerros, .skandaali-kerros, .hetki-kerros, .fokusvirta-kortti')].map((e) => e.className.split(' ')[0]),
+              pinta: l.viimeinenNapautus?.() ?? null,
+              nyt: Date.now(),
+              liuskaAuki: l.nostot?.liuskaAuki?.() ?? null,
+              osumat,
+            };
+          }, { ...piste, kaupunkiId: kaupunki.id });
+          tieto(`${tunnus}: napautuksen ${yritys + 1} diagnoosi`, JSON.stringify(diagnoosi));
+          if (KUVAKANSIO && !auki) {
+            await sivu.screenshot({ path: join(KUVAKANSIO, `napautus-${kaupunki.id}-${ruutu.width}-${yritys + 1}.png`) });
+          }
+        }
         /* eslint-enable no-await-in-loop */
         if (auki) break;
       }
@@ -1396,11 +1490,28 @@ for (const ruutu of RUUDUT) {
       });
       tieto('vastakoe 1: datassa poiston jälkeen',
         `${poisto.kansikuvat} kansikuvaa, ${poisto.avauskuvat} avauskuvaa`);
-      const uusi = await kaupunkiPiste();
-      if (uusi) {
+      let liuskaKuvattomana = null;
+      // Sama ele ja sama kaksi yritystä kuin vartiossa 1 (juuri suljetun
+      // kortin jälkeen portti nielaisee ensimmäisen napautuksen; osoitin
+      // liikkuu ennen napautusta; piste luetaan tuoreena).
+      for (let yritys = 0; yritys < 2 && !liuskaKuvattomana; yritys += 1) {
+        // Kamera levossa ennen napautusta (ks. KAMERA LEVOSSA ENNEN NAPAUTUSTA).
+        await sivu.waitForFunction(() => !window.matkakirja.ui.pallolauta.kamera?.kameraAjossa?.(),
+          null, { timeout: 10000, polling: 200 }).catch(() => {});
+        await sivu.waitForTimeout(400);
+        const uusi = await kaupunkiPiste();
+        if (!uusi) break;
+        await sivu.mouse.move(uusi.x + 24, uusi.y + 24);
+        await sivu.mouse.move(uusi.x, uusi.y, { steps: 3 });
         await sivu.mouse.click(uusi.x, uusi.y);
-        await sivu.waitForTimeout(900);
+        for (let i = 0; i < 60 && !liuskaKuvattomana; i += 1) {
+          liuskaKuvattomana = await sivu.evaluate(
+            () => window.matkakirja.ui.pallolauta.nostot.liuskaAuki?.() ?? null,
+          );
+          if (!liuskaKuvattomana) await sivu.waitForTimeout(50);
+        }
       }
+      await sivu.waitForTimeout(900);
       const tila = await sivu.evaluate(() => {
         const ui = window.matkakirja.ui;
         return {
@@ -1423,8 +1534,18 @@ for (const ruutu of RUUDUT) {
           kartta: Boolean(p.querySelector('.kaupunkipopup-kartta .kartta-kehys')),
         };
       });
-      vaadi('vastakoe 1: kuvaton kaupunki avaa pop-upin silti', Boolean(kuvaton),
-        virheet.join(' | '));
+      /*
+       * KAUPUNKIMERKKI AVAA LIUSKAN MYÖS KUVATTOMANA (PAATOKSET 34 kohta
+       * 1; vartio päivitetty 21.9.2026). Vanha väite odotti isoa
+       * pop-upia, jota kaupunkimerkki ei enää avaa — se oli punainen
+       * jokaisessa CI-ajossa v1983:sta alkaen. Nyt mitataan sama asia
+       * kuin vartiossa 1: liuska aukeaa, vaikka herokuvia ei ole.
+       */
+      vaadi('vastakoe 1: kuvaton kaupunki avaa liuskan silti',
+        Boolean(liuskaKuvattomana) && tila.kortteja === 0,
+        `liuska ${liuskaKuvattomana ?? '-'}, kortteja ${tila.kortteja}; ${virheet.join(' | ')}`);
+      tieto('vastakoe 1: VANHENTUNUT VARTIO (kuvaton kaupunki avaa pop-upin silti)',
+        'kaupunkimerkki avaa liuskan, ei isoa pop-upia (PAATOKSET 34 kohta 1)');
       if (kuvaton) {
         tieto('vastakoe 1: hero-lohkon korkeus', `${kuvaton.hero} px (hidden=${kuvaton.piilossa})`);
         vaadi('vastakoe 1: hero-lohko ei jätä tyhjää tilaa',

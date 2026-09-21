@@ -99,3 +99,87 @@ Astropulun vastaus ankkuroituu ja kortti 62 vh, lentonakyma ilman liftauskaaria 
 ## V1981 TUOTANNOSSA 20.56 (20.9.2026 klo 20.59)
 
 Julkaisija vahvisti APP_VERSION 1981 matkakirja.app:ssa.
+
+## NIMISTO 1873 RANSKA + EUROOPAN MERET (Sisaltokirjuri 776bb560, Fable tarkasti) (20.9.2026 klo 21.07)
+
+js/packs/nimisto-1873.js + docs/sisalto/nimisto-1873.md: 32 Ranskan historiallista maakuntaa vuoden 1873 tilanteessa (Elsass-Lothringen DEU 1871-1918; Savoie ja Nizza FRA 1860) ja 27 merta/lahtea/salmea. Fablen korjaukset: suomalaiset vakiintuneet nimet (Korsika, Burgundi, Flanderi, Normandia, Savoiji, Nizzan kreivikunta), Vienanmeri, lisataan Skagerrak ja Marmaranmeri, maakunnille kokoluokka (suuret z5-z6, pienet z7+). Koordinaatit arvioita - Karttaseppa saataa koelaatalla.
+
+## KIERROS 19b (Laitetestaaja, WebKit-Playwright iPad-viewport, ei iPadOS-simulaattori) (20.9.2026 klo 21.08)
+
+docs/raportit/laitekierros-19b-20260920.md: tuplasaapuminen lennon jalkeen ei toistunut (neljas ei-toistuminen: Chromium, aito UI-polku, iPhone-sim, WebKit); Ihmisen matkan kuvat latautuivat oikein myos hitaalla verkolla. Molemmat iPad-epailyt jaavat toistamattomiksi; seuraava askel vain jos omistaja nakee ne uudestaan: kaappaus + tarkka polku, ja oikea iPad-simulaattori (vaatii omistajan luvan MCP-tyokalulle).
+
+## V1982 TUOTANNOSSA 21.50; NIMIOT ELAVIKSI TEHTY; POLTTOKOE KATSOTTU (20.9.2026 klo 22.16)
+
+v1982 (PR #2634): nimiot ruudun reunassa, nostokortti (karuselli, kuvakoko, lahderivi pois, Havainnekuva, pyyhkaisy/nuolet); CI-korjaukset: PYYHKAISY_PX-nimitormays -> KUVASARJA_PYYHKAISY_PX, js/kuvasarja.js build-standalonen MODULES-listaan (OPPI: uusi moduuli -> MODULES), savuke-nostokortti 5b kaatui saapumisvirran kuvakorttiin CI-ajoituksella (savuke sulkee virran, 30/30). NIMIOT ELAVIKSI (Pelikoodari ba6a0e7e, raportti viesti-fable-nimiot-elavat-20260920.md): kytkin KOHDEMAAN_NIMIOT_ELAVINA - kohdemaan kaikki nostot elavina sovittelun lapi (pallon sarja on jo ilman nostoja, ei laattamuutosta), katot 40->120/60->180, merilapuille korostuskehan janat esteena + tyonto merelle <= 72 px; FRA poltettuja 0, nimiollisia 390 px 40 (ennen 21), 1400 px 69 (40), mittari 0/0, ladonta 2,5 ms, CSS2D 56 vs 27 -> laitteen fps avoin; savuke-nimiot-elavat 22/22 julkaisusarjaan, testit 3772/0. POLTTOKOE (Karttaseppa e3e6ceff, docs/raportit/poltto-koe-20260920.md, polttosuunnitelma 13 ydintuntia / 1 h 15 min + vienti 20 min, 3,1 Gt): joet pohjassa toimivat levossa, 1873-nimiot kapiteelein toimivat; havainnot Loire/Orleanais- ja Auvergne-tormaykset, Biskajanlahden tuplaus, Marseille/Provence ja Ile-de-France/Pariisi paallekkain. OMISTAJA: viivoitus ja vyohykkeet molemmissa hyvaa mutta 'tarvitaan viela jotain lisaa'; haluaa muutoksia ennen polttoa - poltto odottaa. HIMMEAT KAARET: simulaattorin synteettinen tappi ei avaa Liiku-nappia (tyokalun vika) -> PAATOS (Fable): julkaistaan Chromiumin +12 % perusteella kerroskytkimen kanssa, omistaja ja Laitetestaaja katsovat tuotannosta; sama nimioille.
+
+## OMISTAJA v1982: RAJOISSA KAHDENLAISTA VIIVAA (Gironde lahizoomi) (20.9.2026 klo 22.18)
+
+Rannikolla paksu korostuskeha ja rinnalla ohuempi viiva samaa muotoa; keha lahizoomilla kulmikas (harvennus nakyy). -> Karttaseppa mittaa elementeista ja ratkaisee (kehan LOD zoomin mukaan tai poltettu rantaviiva ohuemmaksi kehan alla); kirjataan polttosuunnitelmaan jos rantataso muuttuu.
+
+## TYYPPITUNNUS EI TOTEUTETA; KIERROS 20; v1983 CI; GIRONDE-MITTAUS (20.9.2026 klo 22.38)
+
+Omistaja kortilla: nostotyypin tunnusta korttiin ei toteuteta (ehdotukset A/B docs/raportit/kaappaukset/tyyppitunnus-20260920/). KIERROS 20 (Laitetestaaja, v1982): nimiot Marseille/Bordeaux eivat leikkaudu, karuselli ja kuvakoko oikein, Gironde yksi viiva; vakavuus 2: tekstin lahderivi (en-Wikipedia ... tarkistettu) nakyy yha LISAA-tilan lopussa maastokohteissa -> Pelikoodari poistaa kaikista poluista. V1983 PR #2635 punainen: savuke-reittiverkko V6 40 328 janaa (harvennus ei toimi CI:ssa) -> Karttaseppa; savuke-nimikyltti limittyvia pareja 13/9 (raja 4) katon noston 40->120 takia -> Pelikoodari. GIRONDE-MITTAUS (Karttaseppa): kulmikkuus on ne_10m-aineiston omaa (janat 4-6 km), keha kattaa 100 % rannasta; sileampi ranta vaatii GSHHS full/OSM-rantaviivan soluihin ja polttoon (polttosuunnitelmaan, omistaja paattaa); ohut toinen viiva todennakoisesti tayton reuna; kehan kokoaminen vain nakyvista soluista ja jana-mittaus korjattu (karttaseppa-kehan-lod b2894cea, v1983:een).
+
+## v1983 KORJAUS: NIMIKYLTIT EIVAT LIMITY, TEKSTILAHDERIVI POIS KOHDEKORTILTA (Pelikoodari 16b55d74) (20.9.2026 klo 22.51)
+
+Sovittelun keskinainen-vaihe: limittyvat parit 13/9 -> 0/0, nimioita nakyvissa 49/68; kohdekortin tekstilahderivi (en-Wikipedia ... tarkistettu) pois kaikista poluista (Pic du Midi tarkistettu). Odottaa Karttasepan reittiverkko-korjausta samaan PR:aan. MERIKOE 2 (Karttaseppa 3445b0b6): yhdistelma 4 rannikkoviivaa + vaalea syvyysvyohyke + koristeet nimiotasolla (kompassiruusu, purjelaivat, aaltomerkki), tormaysvaisto maakuntanimille; Biskajanlahden tuplaus on pelin elava maastonimi -> Pelikoodari piilottaa pyramidinNimiot()-taulun meri-avaimella. Omistaja: ei viela polttoa, 'odota, palaan kohta'.
+
+## MERINIMION TUPLAUKSEN ESTO TEHTY (Pelikoodari 7bbd2c37) (20.9.2026 klo 22.58)
+
+laattapyramidi.js pyramidinNimiot()/pyramidinMerinimet() lukevat luettelon nimiotaso.nimiot-taulun meri-avaimet (tyhja ennen polttoa); nostot.js jattaa kohdemaan meri-noston ladonnasta pois kun id tai nimen slug osuu avaimeen (kortti aukeaa liuskasta). Savuke 26/26, testit 3784/0. Menee v1983:een; vaikuttaa vasta polton jalkeen.
+
+## v1983 REITTIVERKKO-KORJAUS; MERIKOE 2 VIIMEISTELYT; POLTTOSUUNNITELMA KOHTA 6 (Karttaseppa) (20.9.2026 klo 22.59)
+
+Reittiverkon 40 328 janaa johtui Gironden 0,1 asteen janajaosta; verkolle oma 0,3 asteen jako -> 14 848 janaa, savuke 11/11 (karttaseppa-v1983-reittiverkko 0cfd7f0c, sis. kehan LOD). Merikoe 2 viimeistelyt (346dc6a2): purjelaivat 1,6x isommat ja tummemmat, kompassiruusu Lioninlahdella saapumisnakyman sisalla, nostot maakuntanimien esteiksi. Polttosuunnitelma kohta 6: tarkempi rantaviiva-aineisto (GSHHS full / OSM) vektoreihin ja polttoon - omistajan paatos. Poltto odottaa omistajan tarkennusta merestä.
+
+## OMISTAJA 20.09.2026 klo 23.01: NOSTOKORTTI 2 JA MERI (Codex-koristeet), EI POLTTOA VIELA (20.9.2026 klo 23.01)
+
+NOSTOKORTTI: navigointivakaset hyvin pienet reunoilla (iPhonen tapaan) kaikissa ruuduissa; noston leveys aina sama kuvan muodosta riippumatta, kuva mahtuu aina kokonaan ruudulle (pystykuva kapeampana kortin sisalla); kokoruudussa kuva niin isona kuin mahtuu ja selattavissa; noston ylaosa jaa hitusen piiloon -> korjaus. -> Pelikoodari (pelikoodari-nostokortti-2). MERI: yhdistetaan syvyysvyohykkeet ja rannikkoviivoitus (viivoitus tummempana kuin vanhoissa kartoissa) + veneita useampaan paikkaan; veneet ja kompassiruusut Codexilta aidosti kasin piirretyn nakoisina (Codexilla 5 % tokeneita, riittaa pieniin) - Fable tilaa; kartta on nykyajan kartta, ilme isoisan ajan karttojen mukaan. Karttaseppa tekee merikoe 3:n havainnekuvana, ei polttoa viela. Kaappauskansiot kopioitu Fablen checkoutiin (docs/raportit/kaappaukset/poltto-koe-, tyyppitunnus-, nostotyypit-20260920), koska omistaja ei loytanyt niita haaroista.
+
+## OMISTAJA: RANSKAN KARTAN VEDOS KAIKILLA EHDOTUKSILLA; CODEXILTA MYOS 11 TYYPPIMERKKIA (20.9.2026 klo 23.14)
+
+Omistaja hyvaksyi merikoe 3:n pohjaksi ja tilasi vedoksen Ranskan kartasta kaikilla Fablen ehdotuksilla: 1) nostot kolmeen tasoon (ykkostaso 5-8 per maa: isompi nimio + kuvamerkki; kakkostaso nykyinen; kolmostaso vasta lahizoomilla) - Sisaltokirjuri luokittelee FRA:n (kentta taso), Pelikoodari elavien nimioiden tyylit, Karttaseppa poltetut; 2) 11 tyyppikohtaista karttamerkkia Codexilta (posti/fable-codexille-nostotyyppimerkit-20260920.md) ykkostason nostoille; 3) Horation reitti 1873 katkoviivana nimiotasolla - Fablen paatos vedokseen: Calais - Pariisi - Dijon - Lyon - Marseille (PLM-rata 1873; kaanonissa Pariisi ja Marseille, valietapit historiallinen rata, EI viela kaanonia); 4) meri merikoe 3:n mukaan + Codexin koristeet (posti/fable-codexille-merikoristeet-20260920.md). Omistaja ilmoittaa kun Codexin kuvat ovat valmiit. Ei polttoa ennen vedoksen hyvaksyntaa. Korjattavaa koe 3:sta: vene Picardie-nimion alla, Amiens peittaa Picardie-tekstia.
+
+## RANSKAN NOSTOTEKSTIEN MITTAUS (Sisaltokirjuri 9bff35e5) (20.9.2026 klo 23.16)
+
+docs/raportit/nostotekstit-fra-20260920.md: 64 nostoa, mediaani 524 merkkia (Q1 448, Q3 611), 0 alle 250, 11 yli 900 (hahmotelma-tyypin isot kohteet: Avignon, Chambord, Millau ym., 3-4 kappaletta, tarkoituksellisen laajoja). Loydos: 18 nostoa lainaa tekstin MAA_KATEGORIAT.FRA:lta lunastus-kentalla ilman omaa teksti-kenttaa - huomioitava FRA-siivouksessa. Fablen arvio: maarat ovat hyvat, haarukka 400-700 sopii tavoitteeksi; pitkat sallitaan ykkostason kohteille.
+
+## V1983 TUOTANNOSSA 23.14 (20.9.2026 klo 23.16)
+
+Kohdemaan nimiot elavina (ei limityksia), himmea reittiverkko liftatessa (kerroskytkin), kehan LOD, tekstilahderivi pois kohdekortilta, merinimion tuplauksen esto. Laitetestaaja: kierros 20b; omistaja katsoo iPadilla sujuvuuden (kaaret, nimiot).
+
+## RANSKAN NOSTOTASOT (Sisaltokirjuri e161176c) (20.9.2026 klo 23.23)
+
+docs/raportit/nostotasot-fra-20260920.md, kentta nosto.taso (oletus 2). Ykkostaso 8: Mont-Saint-Michel, Versailles, Lascaux, Mont Blanc, Pont du Gard, Chambord, Carcassonne, Etretat (Dune du Pilat tasolle 2). Lista Karttasepalle (vedos) ja kentan nimi Pelikoodarille (elavat nimiot). Sisaltokirjuri jatkaa kartuschan vajaisiin maihin.
+
+## OMISTAJA: ASTRONAUTIN KAMERAN KUVISTA VALKOISET PALKIT POIS (20.9.2026 klo 23.24)
+
+Osassa ISS-valokuvia on alareunassa valkoinen palkki tunnuksella (esim. Etna, ISS013E62714; kaappaus astro-etna-valkoinen-palkki.webp). -> Sisaltokirjuri rajaa palkit pois koneellisesti (kaikki astro-valokuvat), vie ampariin, HEAD 200; kuvateksti/lahde ennallaan.
+
+## OMISTAJA v1983 VAKAVUUS 1: LIFTATESSA NOPAN JALKEEN KAMERA ZOOMASI KOKO PALLOLLE (20.9.2026 klo 23.26)
+
+Kaappaus liftaus-zoomasi-pallolle-v1983.webp: Pariisista liftatessa nopan heiton (3) jalkeen nakyma on koko Eurooppa avaruudesta, kantaman kaaret (Lontoo, Bryssel, Alpit) pieninä. Epailty syy: himmea reittiverkko (411 kaarta) tai kantaman kaarten sovitus kameran rajaukseen. -> Karttaseppa heti; jos ei loydy nopeasti, verkko pois kerroskytkimella hotfix-versiona.
+
+## KIERROS 20b (Laitetestaaja, v1983) (20.9.2026 klo 23.26)
+
+docs/raportit/laitekierros-20b-20260920.md. Vakavuus 2: 'Camarguen hevoset' ja 'Camarguenvarsa' limittyvat suoraan paallekkain (simulaattori + Playwright) -> Pelikoodari (sovittelun keskinainen-vaihe ei erota samaan pisteeseen ankkuroituja nostoja?). OK: lahderivi pois, himmea reittiverkko toimii ja nayttaa hyvalta, nimiot elavina toimivat, Valimeri rajatapaus hyvaksyttava. Liftauksen sujuvuutta ei voitu mitata (kosketustyokalu).
+
+## NOSTOKORTTI 2 TEHTY (Pelikoodari f68c39ea) (20.9.2026 klo 23.32)
+
+Vakaset pienet chevronit kuvan reunoilla joka ruudulla (css/kuvasarja.css, jonka kuvasarja.js lataa; kohdekortti ei ladannut fokusnosto.css:aa -> tyopoydalla oletusnapit), kortin leveys vakio ruudulla, kuva contain-sovituksella aina kokonaan ruudulla, suurennos contain 0,97 + sarjan selaus (vakaset, laskuri, pyyhkaisy, nuolet), otsikko ja tyyppirivi aina nakyvissa LISAA-tilassa. Testit 3773/0, savuke-nostokortti 78/78 (390, 1400, iPad 820x1180). v1984:aan liftauszoomi-korjauksen kanssa. Pelikoodari: Camargue-limitys -> nostotasot.
+
+## LIFTAUSZOOMI (vakavuus 1) EI TOISTU; HOTFIX VERKKO OLETUKSENA POIS (Karttaseppa 6b911201) (20.9.2026 klo 23.38)
+
+Toisto Playwrightilla (Pariisi, Liiku -> Liftaus -> noppa 3, 2000x1300, prep ja tuotanto v1983): kamera 0,205 -> 0,217 (sovitus kantamaan), ei maailmakuvaa; sovituskoodi ui.js sovitaSiirtokohteet ei muuttunut v1983:ssa eika verkko koske kameraan. Hotfix: himmea reittiverkko OLETUKSENA POIS (kytkin matkakirja-reittiverkko tai ?reittiverkko=1) ja piilossa kun korkeus > 1,2; savuke V7 12/12, testit 3797/0. Jos toistuu v1984:ssa, syy muualla: sovitus ei zoomaa SISAAN jos kohteet jo mahtuvat -> kysytaan omistajalta, oliko nakyma zoomattu ulos ennen noppaa. Vedos jatkuu tasoilla ja Codexin kuvilla.
+
+## OMISTAJA: HUNTU PYSYY NAPPULAN LIIKKEEN AJAN, LAHTO- JA KOHDEMAA VAPAINA (20.9.2026 klo 23.39)
+
+Nopan heiton jalkeen nappulan liikkuessa kartan huntu (kerman peitto 80 %) katoaa kokonaan. SAANTO: huntu pysyy paalla myos nappulan etenemisen ajan, mutta liikkeen ajaksi seka lahtomaa etta kohdemaa ovat hunnun ulkopuolella (kaksi aukkoa); perilla vain kohdemaa. -> Pelikoodari.
+
+## LIFTAUSZOOMI: OMISTAJA EI OLLUT ZOOMANNUT, VIKA SATUNNAINEN - SEURANTAAN (20.9.2026 klo 23.40)
+
+Omistaja: ei ollut zoomannut oleellisesti ennen noppaa; kartta hyppasi yhtakkia aarimmaisen kauas; ei toistu joka kerta, jokin laukaisee. PAATOS: seurantaan - Pelikoodari lisaa kameran etaisyyden tallennuksen diagnostiikkalokiin (edellinen ja uusi korkeus, laukaisija: sovitus/ele/verkko/linssi) kehittajatilan lokiin, jotta seuraava toisto kertoo syyn; Karttaseppa lisaa savukkeeseen toiston satunnaisella ajoituksella (noppa heti saapumisen jalkeen, kesken trailerin, kesken luennan).
+
+## VEDOS HYVAKSYTTY, POLTTO ALKAA (omistaja 20.09.2026 klo 23.54) (20.9.2026 klo 23.54)
+
+Ranskan vedos (karttaseppa-poltto-koe d9e0fab6, kaappaukset *-vedos.webp): omistaja hyvaksyi polttoon kolmella muutoksella: laivat eivat istu veteen (vesiraja rungon alle), HORATION REITTIA EI POLTETA (muiden maiden reittia ei mietitty - sekoittava; koodi sailyy kerroksena), Versailles ja Etretat ykkostasolle, Mont Blancin merkki reliefin paalle. Rantaviiva GSHHS full/OSM samaan polttoon jos Karttaseppa arvioi alle 2 h lisaa. Poltto = koko pyramidi koko maailma + pallosarja; nimiotaso erikseen uudelleenpoltettava muiden maiden 1873-nimistolle. Omistaja: valmistele muutama muu maa samalla tavalla (Fable valitsi ESP, ITA, DEU: nimisto 1873 + nosto.taso), ei enempaa; jatketaan huomenna. V1984 PR #2636 KIINNI: savuke-kaupunkipopup 3->9, kaupunkimerkin napautus ei avaa liuskaa Pariisissa/Marseillessa 390 px (epailty nostokortti-2) -> Pelikoodari kiireellisena. ASTRO-PALKIT (Sisaltokirjuri, docs/raportit/astro-palkit-20260920.md): kuvat eivat ole omassa amparissa vaan NASAn CDN:ssa (satelliitti-data.js generoitu tools/hae-satelliittihavainnot.mjs:lla); 12 havaintoa / 24 tiedostoa palkillisia, rajatut valmiina -> PAATOS: Sisaltokirjuri vie omaan ampariin uusiin polkuihin, muuttaa datan 12 rivia ja lisaa generaattoriin poikkeuslistan.

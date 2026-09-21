@@ -80,6 +80,10 @@ test('vektorikerros: verkko on neljäs laji samassa materiaalitaulussa, himmeäm
   const lahde = lue('../js/pallovektorit.js');
   assert.match(lahde, /asetaVerkko\(avain, viivat\) \{/);
   assert.match(lahde, /naytaVerkko\(nakyy\) \{/);
+  // v1984 hotfix: verkko on oletuksena pois (kytkin) ja piilossa maailmakuvassa (korkeuskatto).
+  assert.match(lahde, /const uusi = Boolean\(nakyy\) && reittiverkkoPaalla\(ikkuna\);/);
+  assert.match(lahde, /export const REITTIVERKKO_OLETUS = false;/);
+  assert.match(lahde, /verkonKorkeusportti\(kehys\?\.pov \?\? pallo\.pointOfView\?\.\(\)\);/);
   // Kerran per lauta: sama avain ja samat viivat eivät rakenna uudestaan.
   assert.match(lahde, /if \(uusiAvain === verkko\.avain && uudet === verkko\.viivat\) return false;/);
   // Näkyvyys on lippu, ei häive eikä rakennus.
