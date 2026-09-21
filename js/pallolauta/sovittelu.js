@@ -1,154 +1,63 @@
 /*
- * PALLOLAUDAN SOVITTELU — KAUPUNGIN NIMI ON ENSISIJAINEN, NOSTOJEN
- * LAPUT VÄISTÄVÄT (docs/moduulit/karttapallo.md luku 14).
+ * NIMIÖLAPPUJEN SOVITTELU — GOOGLE EARTHIN MALLI (Fable 21.9.2026,
+ * omistaja v1985: *"Ranskan karttanostot pomppivat kun panoroi tai
+ * zoomaa, todella häiritsevää"*). Aiempi historia: docs/moduulit/
+ * karttapallo.md luku 14 (kaupungin nimi on ensisijainen, laput
+ * väistävät) — se sääntö on yhä voimassa, vain väistön TAPA muuttui.
  *
- * OMISTAJA 7.9.2026 (kuvakaappaus Bukarestista, sanatarkasti):
- * *"kaupungin nimi menee nostojen päälle"*. Kuvassa kaupunkipiste on
- * keskellä, nimi BUKAREST harvennettuna sen alla ja nostot molemmin
- * puolin — ja oikean noston lappu makasi nimen päällä.
+ * Vanha malli ratkaisi asennot uudestaan jokaisessa ladonnassa myös
+ * eleen aikana (reunasääntö, keskinäinen väistö, pienet siirrot), ja
+ * kun lappujoukko tai reunan ylittäjät vaihtuivat kehyksittäin, kyljet
+ * ja siirrot vaihtuivat niiden mukana — nimiöt hyppivät sormen alla.
  *
- * FABLEN LINJAUS (Raamattu, KAUPUNGIN NIMI NOSTOJEN PAALLA): pallolla
- * kaupungin nimi ja nostojen nimilaput eivät saa mennä päällekkäin.
- * KAUPUNGIN NIMI ON ENSISIJAINEN; nostojen laput väistävät —
- * ensin vaihtoehtoinen ankkuri (toinen kylki), sitten pieni siirto,
- * viimeisenä lappu piilotetaan ja vain ikoni jää, kunnes zoomi riittää.
+ * UUSI SÄÄNTÖ (tekninen toteutus Fablen linjaukselle):
+ *
+ *   1. ASENTO VALITAAN ANKKURIN YMPÄRILTÄ KERRAN JA PIDETÄÄN. Lapulla
+ *      on kahdeksan ehdokasasentoa (NOSTOSYM_NIMIO_ASENNOT: neljä kylkeä
+ *      ja neljä kulmaa) ilman vapaata siirtoa. Valinta tehdään vain
+ *      LEVOSSA (js/pallolauta/nostot.js `sovittele({ lepo })`);
+ *      eleen aikana lappu seuraa ankkuria samassa asennossa, ja ruudun
+ *      reunan yli saa mennä. Levossa reunasääntö vaihtaa ehdokasta.
+ *
+ *   2. TÖRMÄYS RATKAISTAAN NÄKYVYYDELLÄ, EI SIIRROLLA. Kun kahdelle
+ *      lapulle ei löydy vapaita asentoja, heikompi häivytetään (nostot.js
+ *      pitää ikonin ja häivyttää vain nimiön, css ≤ 200 ms) ja palaa,
+ *      kun tilaa taas on. Prioriteetti on kiinteä: taso 1 > kaupunki >
+ *      taso 2 > taso 3, sitten lyhyempi nimi ensin (sovittelunPainoarvo).
+ *
+ *   3. HYSTEREESI. Lukittu asento pidetään, jos se on yhä kelvollinen —
+ *      lappu ei palaa "omaan" kylkeensä vain siksi, että tilaa vapautui.
+ *      Häivytetty lappu palaa vasta, kun jokin ehdokas on vapaa
+ *      SOVITTELUN_HYSTEREESI_PX:n marginaalilla, jottei rajatapaus vilku.
+ *
+ *   4. YKKÖSTASO EI HÄIVY EIKÄ VAIHDA ASENTOA, ellei se osu toiseen
+ *      ykköstasoon tai ruudun reunaan. Muut väistävät sitä, koska se
+ *      sijoitetaan ensimmäisenä.
+ *
+ * Meren lappu (`meri: true`) pitää rantaviivan esteenä samoin kuin
+ * ennen: sen ehdokas ei saa leikata kohdemaan korostuskehää. Aihenosto
+ * (`este: true`) sovitellaan viimeisenä kuten ennen.
  *
  * ── MIKSI SOVITTELU ON OMASSA TIEDOSTOSSAAN ────────────────────────
  *
  * Sama päätössarja koskee kahta kerrosta, jotka eivät saa tuntea
  * toisiaan: nimikerros (js/pallolauta/nimet.js) latoo nimet ja on
- * tämän jälkeen KIINTEÄ, nostokerros (js/pallolauta/nostot.js) siirtää
- * omat lappunsa sen ympäriltä. Jos päätös asuisi kummassakin, kaksi
- * ladontaa eriytyisi ensimmäisessä hienosäädössä — sama syy, jolla
- * nimiön asemointi on yhdessä paikassa (js/fokusnosto-symbolit.js
- * nostosymNimioAsemointi).
- *
- * ── PÄÄTÖSJÄRJESTYS (NELJÄ KYLKEÄ, 12 SIIRTOA, SITTEN PIILOTUS) ────
- *
- *   0. OMA KYLKI ILMAN SIIRTOA. Laatta on ladottu käsin (laudan tynkä,
- *      js/fokuskohteet.js ladoMaanTynka), joten oma kylki kunnioitetaan
- *      aina kun se ei törmää — sama sääntö kuin kaupungin nimen omalla
- *      asettelulla (js/karttanimet.js sijoitaKaupunginNimi).
- *   1. KOLME MUUTA KYLKEÄ (NOSTOSYM_NIMIO_KYLJET: oikea, vasen, ylä,
- *      ala). Kylki on kirjaston oma käsite: rasteri paistetaan
- *      kyljittäin ja välimuisti on kylkikohtainen, joten kyljen vaihto
- *      ei maksa uutta mittausta.
- *   2. SAMAT NELJÄ KYLKEÄ PIENELLÄ SIIRROLLA (SOVITTELUN_SIIRTO_PX,
- *      6 px) — kolme suuntaa kylkeä kohti, siis 12 asentoa. Suunnat
- *      ovat kohtisuoraan kylkeä vastaan molemmin puolin ja merkistä
- *      POISPÄIN kyljen omaan suuntaan.
- *      Kohtisuora on se, joka oikeasti auttaa vaakalapun ja vaakanimen
- *      törmäyksessä — pitkän nimikaistan sisällä lapun työntäminen
- *      kaistan suuntaan ei irrota sitä mistään. Siirto
- *      liikuttaa KOKO merkkiä (ikoni + lappu), koska ikoni ja nimiö
- *      ovat yhtä rasteria (js/fokusnosto-symbolit.js
- *      piirraNostosymKartalle) eikä lappua voi irrottaa ikonistaan.
- *      Kuusi pikseliä on kaukana napautuksen 44 px:n säteestä
- *      (js/pallolauta/lauta.js napautaPintaan), joten OSUMA EI SIIRRY:
- *      siirto on vain kuvassa, lat/lng pysyy. Sama myönnytys kuin
- *      kohtaamispisteellä (js/fokuspiste.js fokuspisteenSiirto).
- *   3. LAPPU PIILOON, IKONI JÄÄ. Nosto ei katoa kartalta — se menettää
- *      nimensä siksi aikaa, kun nimi ja lappu eivät mahdu samaan
- *      kohtaan. Ladonta ajetaan uudelleen joka levossa, joten lappu
- *      palaa heti kun zoomi tai panorointi tekee tilaa.
- *
- * ── JÄRJESTYS: LÄHIN KAUPUNKIA ENSIN ───────────────────────────────
- *
- * Laput sovitellaan siinä järjestyksessä, jossa ne ovat lähimpänä
- * jotakin kiinteää nimeä: ahtain paikka saa ensimmäisenä valita, ja
- * väljemmällä on jäljellä enemmän kelvollisia asentoja. Sama peruste
- * kuin nimiladonnan tärkeysjärjestyksellä (tärkein saa ensin valita).
- *
- * ── MIKÄ ON ESTE JA MIKÄ EI ────────────────────────────────────────
- *
- * Este on kiinteä muste: kaupungin nimen laatikko. SIIRRETTY LAPPU
- * lisätään esteisiin, jotta väistö ei työnnä kahta lappua päällekkäin;
- * PAIKALLAAN PYSYNYT lappu ei ole este, koska laattaladonta on jo
- * ratkaissut lappujen keskinäisen järjestyksen (tools/
- * tarkista-nimiolimitys.mjs vartioi sitä) — muuten sovittelu alkaisi
- * sekoittaa käsin hiottua ladontaa ilman että kukaan on sitä pyytänyt.
- *
- * ── AIHENOSTO SOVITELLAAN VIIMEISENÄ JA VÄISTÄÄ KAIKKEA (`este`) ───
- *
- * YLLÄ OLEVA PERUSTELU EI KOSKE AIHENOSTOA. Aihenosto (Raamattu,
- * KARTTAUUDISTUKSEN PAATOKSET 27 TARKENNUS 2; js/pallolauta/
- * aihemerkit.js) syntyy vasta ajossa: sen paikka on ryhmän jäsenten
- * keskipiste ja sen nimiö on ryhmän tärkeimmän noston nimi. Kukaan ei
- * ole latonut sitä käsin, eikä mikään laattaladonta ole ratkaissut sen
- * suhdetta naapureihinsa — päinvastoin, kaupungin rykelmän aihenostot
- * syntyvät kaikki saman kaupungin päälle.
- *
- * MITATTU (Chromium 390 × 844 dpr 2, Pariisi 16.9.2026): ilman tätä
- * sääntöä Pariisin viidestä aihenostosta kaksi paria latoi nimiönsä
- * päällekkäin saapumisnäkymässä ja yksi pari lähizoomissa — ryhmitys
- * olisi siis vain siirtänyt rykelmän ongelman merkkitasolle.
- *
- * SÄÄNTÖ ON SIKSI KAKSIOSAINEN. `este: true` -lappu (1) sovitellaan
- * VIIMEISENÄ, jotta se näkee kaikkien muiden lopulliset paikat, ja
- * (2) väistää KAIKKEA jo sijoitettua eikä vain siirtyneitä lappuja.
- * Käsin ladottujen lappujen käytös ei muutu millään tavalla: ne eivät
- * väistä aihenostoa eivätkä toisiaan.
+ * tämän jälkeen KIINTEÄ, nostokerros (js/pallolauta/nostot.js) asettaa
+ * omat lappunsa sen ympärille. Kaikki tässä on puhdasta laskentaa
+ * ruutulaatikoilla (tests/pallosovittelu.test.mjs); ruudun mitat,
+ * ankkurit ja esteet antaa kutsuja, joka myös kantaa lukon ladonnasta
+ * toiseen.
  */
+import { NOSTOSYM_NIMIO_ASENNOT } from '../fokusnosto-symbolit.js';
 
-/*
- * ── RUUDUN REUNA ON ESTE (omistaja 20.9.2026, Biskajanlahti ja Dune du
- * Pilat maalehden reunassa; Sisältökirjurin mittaus docs/raportit/
- * nimiot-reunassa-20260920.md: 68 elävää nimiötä 30 maassa yli reunan)
- *
- * Sovittelu väisti vain mustetta — ruudun reunaa ei koskaan, joten
- * reunalla nimiö leikkautui. Nyt kutsuja antaa `reuna`n (ruudun
- * laatikko turva-alueineen, js/pallolauta/lauta.js nostojenReuna), ja
- * asento kelpaa vain, jos lapun laatikko on kokonaan sen sisällä:
- *   - oma kylki ja muut kyljet kokeillaan kuten ennen, reunan sisällä;
- *   - pienet siirrot samoin;
- *   - UUSI PORRAS `reuna`: kylki kerrallaan lasketaan pienin siirto,
- *     joka tuo laatikon reunan sisään, ja se hyväksytään, jos se on
- *     enintään SOVITTELUN_REUNASIIRTO_PX ja vapaa. Siirto liikuttaa
- *     koko merkkiä (ikoni + lappu ovat yhtä rasteria), mutta 24 px on
- *     yhä alle napautussäteen (44 px), joten osuma ei siirry — sama
- *     myönnytys kuin pienellä siirrolla.
- *   - jos mikään ei riitä (ikoni itse on reunan takana), lappu
- *     piilotetaan kuten ennenkin: ikoni jää, nimi palaa kun tilaa on.
- * Sisältökirjurin ankkurinsiirto (tools/korjaa-nimio-reuna.mjs) ei
- * toiminut juuri siksi, että tämä kerros laskee asennon uudestaan —
- * siksi sääntö on täällä eikä koordinaateissa.
- */
-
-/** Nimiön kyljet kokeilujärjestyksessä (js/fokusnosto-symbolit.js). */
-export const SOVITTELUN_KYLJET = Object.freeze(['oikea', 'vasen', 'yla', 'ala']);
-/** Pienen siirron mitta ruudulla (px) — reilusti alle napautussäteen. */
-export const SOVITTELUN_SIIRTO_PX = 6;
-/** Suurin siirto, jolla lappu vedetään ruudun reunan sisään (px). */
-export const SOVITTELUN_REUNASIIRTO_PX = 24;
-/** Suurin siirto, jolla meren lappu työnnetään rannasta merelle (px). */
-export const SOVITTELUN_MERISIIRTO_PX = 72;
-/** Kahdeksan suuntaa merelle työntämiseen (yksikkövektorit). */
-const MERISUUNNAT = Object.freeze([
-  [0, 1], [0, -1], [1, 0], [-1, 0],
-  [0.7071, 0.7071], [-0.7071, 0.7071], [0.7071, -0.7071], [-0.7071, -0.7071],
-]);
-/** Kyljen oma suunta: merkistä poispäin. */
-export const SOVITTELUN_SUUNNAT = Object.freeze({
-  oikea: { dx: 1, dy: 0 },
-  vasen: { dx: -1, dy: 0 },
-  yla: { dx: 0, dy: -1 },
-  ala: { dx: 0, dy: 1 },
+/** Ehdokasasennot kokeilujärjestyksessä (kyljet ensin, kulmat perässä). */
+export const SOVITTELUN_KYLJET = Object.freeze([...NOSTOSYM_NIMIO_ASENNOT]);
+/** Häivytetyn lapun paluun marginaali (px): ehdokas on vapaa tällä varalla. */
+export const SOVITTELUN_HYSTEREESI_PX = 6;
+/** Prioriteettiluokat (pienempi ensin). */
+export const SOVITTELUN_LUOKAT = Object.freeze({
+  taso1: 0, kaupunki: 1, taso2: 2, taso3: 3,
 });
-
-/**
- * Yhden kyljen siirtoehdokkaat: ulos kyljen suuntaan ja kohtisuoraan
- * molempiin suuntiin. Kohtisuora ensin — vaakalappu irtoaa vaakanimen
- * kaistasta pystysuunnassa, ei kaistan suuntaan työntämällä.
- */
-export function sovittelunSiirrot(kylki, siirto = SOVITTELUN_SIIRTO_PX) {
-  const s = SOVITTELUN_SUUNNAT[kylki] ?? SOVITTELUN_SUUNNAT.oikea;
-  const kohti = { dx: -s.dy, dy: s.dx };
-  return [
-    { dx: kohti.dx * siirto, dy: kohti.dy * siirto },
-    { dx: -kohti.dx * siirto, dy: -kohti.dy * siirto },
-    { dx: s.dx * siirto, dy: s.dy * siirto },
-  ];
-}
 
 /** Kelpaako ruutulaatikko ({ x0, y0, x1, y1 }) törmäystestiin. */
 export const laatikkoKelpaa = (r) => Boolean(r)
@@ -164,13 +73,18 @@ export const laatikotLimittyvat = (a, b) => laatikkoKelpaa(a) && laatikkoKelpaa(
 export const laatikkoSisalla = (r, reuna) => !reuna || !laatikkoKelpaa(r)
   || (r.x0 >= reuna.x0 && r.y0 >= reuna.y0 && r.x1 <= reuna.x1 && r.y1 <= reuna.y1);
 
-/** Pienin siirto, joka tuo laatikon reunan sisään ({ dx, dy }). */
+/** Pienin siirto, joka toisi laatikon reunan sisään ({ dx, dy }) — mittari. */
 export function reunaanSiirto(r, reuna) {
   if (!reuna || !laatikkoKelpaa(r)) return { dx: 0, dy: 0 };
   const dx = r.x0 < reuna.x0 ? reuna.x0 - r.x0 : (r.x1 > reuna.x1 ? reuna.x1 - r.x1 : 0);
   const dy = r.y0 < reuna.y0 ? reuna.y0 - r.y0 : (r.y1 > reuna.y1 ? reuna.y1 - r.y1 : 0);
   return { dx, dy };
 }
+
+/** Laatikko kasvatettuna joka suuntaan `vara` pikseliä. */
+export const laatikkoVaralla = (r, vara) => (laatikkoKelpaa(r) && vara ? {
+  x0: r.x0 - vara, y0: r.y0 - vara, x1: r.x1 + vara, y1: r.y1 + vara,
+} : r);
 
 /** Laatikon keskipiste. */
 const keski = (r) => ({ x: (r.x0 + r.x1) / 2, y: (r.y0 + r.y1) / 2 });
@@ -188,288 +102,157 @@ export function lahinEste(r, esteet) {
 }
 
 /**
- * SOVITTELE LAPUT KIINTEIDEN ESTEIDEN YMPÄRILLE.
+ * Lapun painoarvo jonossa: pienempi ensin. Luokka ensin (taso 1,
+ * kaupunki, taso 2, taso 3), sitten lyhyempi nimi — lyhyt lappu mahtuu
+ * useammin ja peittää vähemmän.
+ *
+ * @param {{ taso?: number, kaupunki?: boolean, nimi?: string }} l
+ * @returns {number}
+ */
+export function sovittelunPainoarvo(l) {
+  let luokka = SOVITTELUN_LUOKAT.taso2;
+  if (l?.taso === 1) luokka = SOVITTELUN_LUOKAT.taso1;
+  else if (l?.kaupunki) luokka = SOVITTELUN_LUOKAT.kaupunki;
+  else if (l?.taso === 3) luokka = SOVITTELUN_LUOKAT.taso3;
+  const pituus = Math.min(999, String(l?.nimi ?? '').length);
+  return luokka * 1000 + pituus;
+}
+
+/**
+ * Ehdokasasennot lapulle kokeilujärjestyksessä: lukittu asento (jos on),
+ * oma kylki, sitten muut kyljet ja kulmat vakiojärjestyksessä.
+ */
+export function sovittelunEhdokkaat(l, lukittu = null, kyljet = SOVITTELUN_KYLJET) {
+  const ulos = [];
+  const lisaa = (k) => { if (k && kyljet.includes(k) && !ulos.includes(k)) ulos.push(k); };
+  lisaa(lukittu);
+  lisaa(l.kylki);
+  for (const k of kyljet) lisaa(k);
+  return ulos;
+}
+
+/**
+ * SOVITTELE LAPUT — ks. tiedoston alku.
  *
  * @param {object} p
  * @param {Array} p.laput  [{ avain, kylki, laatikko(kylki, dx, dy, nimio),
- *   este }]
+ *   taso?, kaupunki?, nimi?, meri?, este? }]
  *   `laatikko` palauttaa lapun ruutulaatikon annetussa asennossa tai
- *   null; `nimio` false tarkoittaa pelkkää ikonia. `este: true` on
- *   lappu, jolla EI ole käsin hiottua ladontaa (ks. AIHENOSTO
- *   SOVITELLAAN VIIMEISENÄ alla): se sovitellaan viimeisenä ja väistää
- *   kaikkea jo sijoitettua, ja siitä itsestään tulee este.
- * @param {Array} p.esteet kiinteät ruutulaatikot (kaupunkien nimet)
- * @param {number} [p.siirto] pienen siirron mitta px
- * @param {Array}  [p.kyljet] kokeiltavat kyljet
- * @param {?{x0:number,y0:number,x1:number,y1:number}} [p.reuna] ruudun
- *   laatikko turva-alueineen; lappu ei saa ylittää sitä (ks. RUUDUN
- *   REUNA ON ESTE). null = ei rajaa (vanha käytös).
- * @param {number} [p.reunasiirto] suurin reunaan vetävä siirto px
- * @param {Array} [p.rantaviiva] rantaviivan (korostuskehän) ruutulaatikot;
- *   este VAIN lapuille, joilla on `meri: true` (ks. MEREN NIMIÖ EI JÄÄ
- *   RANTAVIIVAN ALLE)
- * @returns {{ asennot: Map, siirretty: number, kylkiVaihtui: number,
- *   piilotettu: number, jaljella: number, kokeiltuja: number }}
- *   `asennot` on avain → { kylki, dx, dy, nimio, syy }; `jaljella` on
- *   niiden lappujen määrä, joiden IKONI jää yhä nimen päälle (ikonia ei
- *   voi piilottaa — nosto katoaisi kartalta).
- */
-/*
- * ── MEREN NIMIÖ EI JÄÄ RANTAVIIVAN ALLE (Fable 20.9.2026, omistajan
- * kaappaus marseille-nimiot-reunassa-v1980.webp: VÄLIMERI jäi
- * korostuskehän ja Pétanque-nimiön alle lukukelvottomaksi) ─────────
- *
- * Kohdemaan korostuskehä on paksu 3D-viiva laatan päällä, ja meren
- * nimiö istuu määritelmänsä mukaan rannan tuntumassa. Kehän
- * ruutulaatikot (lauta.js rantaviivanLaatikot: rengasjanojen laatikot
- * viivan paksuudella) ovat este VAIN meren lapuille (`meri: true`):
- * maalla oleva nimiö saa ylittää rannan kuten ennenkin. Porras on sama
- * kuin muilla esteillä — kylki, pieni siirto, reunasiirto — ja koska
- * kyljet kokeillaan järjestyksessä, meren lappu päätyy sille kyljelle,
- * joka on rannasta poispäin eli merelle.
- */
-/*
- * ── LAPUT EIVÄT LIMITY KESKENÄÄN (`keskinainen`, 20.9.2026, v1983 PR
- * #2635: savuke-nimikyltti 9b — limittyviä nimiöpareja 13 puhelimella
- * ja 9 työpöydällä, raja 4) ────────────────────────────────────────
- *
- * Sääntö "paikallaan pysynyt lappu ei ole este" (ks. MIKÄ ON ESTE JA
- * MIKÄ EI) nojasi siihen, että laattaladonta oli jo ratkaissut lappujen
- * keskinäisen järjestyksen. Kun kohdemaan kaikki nimiöt ovat eläviä
- * (js/laattapyramidi.js KOHDEMAAN_NIMIOT_ELAVINA), ruudulla on 40–70
- * elävää lappua eikä yhtään laattaan poltettua, ja niiden datakyljet
- * risteävät keskenään. `keskinainen: true` tekee jokaisesta jo
- * sijoitetusta lapusta esteen seuraaville (sama mekanismi kuin
- * aihenoston `este`-lipulla): lappu vaihtaa kylkeä tai siirtyy, ja jos
- * mikään asento ei ole vapaa, se piiloutuu (ikoni jää) — limitystä ei
- * synny koskaan. Järjestys on entinen (ahtain ensin), joten tiheimmät
- * kohdat ratkaistaan ennen väljiä.
+ *   null; `nimio` false tarkoittaa pelkkää ikonia.
+ * @param {Array} p.esteet  kiinteän musteen laatikot (nimet, kyltit)
+ * @param {Map} [p.lukot]  edellisen sovittelun asennot avaimittain
+ *   ({ kylki, nimio }); lukittu kelvollinen asento pidetään (hystereesi)
+ * @param {object|null} [p.reuna]  ruudun reuna { x0, y0, x1, y1 } tai null
+ * @param {Array} [p.rantaviiva]  kehän laatikot, joita meren lappu väistää
+ * @param {Array} [p.kyljet]
+ * @param {number} [p.hystereesi]  häivytetyn paluun marginaali (px)
+ * @returns {{ asennot: Map, piilotettu: number, kylkiVaihtui: number,
+ *   siirretty: number, jaljella: number, reunalta: number, kokeiltuja: number }}
+ *   `siirretty` on aina 0 (ei vapaata siirtoa); kenttä jää mittareille.
  */
 export function sovitteleLaput({
-  laput = [], esteet = [], siirto = SOVITTELUN_SIIRTO_PX, kyljet = SOVITTELUN_KYLJET,
-  reuna = null, reunasiirto = SOVITTELUN_REUNASIIRTO_PX, rantaviiva = [],
-  keskinainen = false,
+  laput = [], esteet = [], lukot = null, reuna = null, rantaviiva = [],
+  kyljet = SOVITTELUN_KYLJET, hystereesi = SOVITTELUN_HYSTEREESI_PX,
 } = {}) {
   const kiinteat = esteet.filter(laatikkoKelpaa);
   const ranta = rantaviiva.filter(laatikkoKelpaa);
-  const rannalla = (r, l) => Boolean(l?.meri) && ranta.some((e) => laatikotLimittyvat(r, e));
   const asennot = new Map();
-  let siirretty = 0;
+  const sijoitetut = []; // jo asetettujen lappujen laatikot (näkyvät nimiöt)
   let kylkiVaihtui = 0;
   let piilotettu = 0;
-  let jaljella = 0;
-  let kokeiltuja = 0;
   let reunalta = 0;
-  const vapaa = (r, muut, l = null) => laatikkoSisalla(r, reuna)
-    && !rannalla(r, l)
-    && !kiinteat.some((e) => laatikotLimittyvat(r, e))
-    && !muut.some((e) => laatikotLimittyvat(r, e));
+  let kokeiltuja = 0;
+
+  const rannalla = (r, l) => Boolean(l?.meri) && ranta.some((e) => laatikotLimittyvat(r, e));
+  const vapaa = (r, l, vara = 0) => {
+    const rr = laatikkoVaralla(r, vara);
+    return laatikkoSisalla(r, reuna)
+      && !rannalla(r, l)
+      && !kiinteat.some((e) => laatikotLimittyvat(rr, e))
+      && !sijoitetut.some((e) => laatikotLimittyvat(rr, e));
+  };
+
   /*
-   * Ahtain ensin: lähin kiinteää nimeä saa valita ensimmäisenä.
-   * AIHENOSTOT (`este`) VIIMEISENÄ (ks. lohko yllä): ne väistävät
-   * kaikkea, joten niiden on nähtävä muiden lopulliset paikat.
-   */
-  /*
-   * YKKÖSTASO ENSIN (NOSTOJEN TASOT, js/pallolauta/nostot.js): lapun
-   * `taso` (1|2|3, oletus 2) järjestää jonon niin, että ykköstaso saa
-   * valita paikkansa ennen muita — se ei siis koskaan väistä
-   * kakkostasoa eikä piiloudu sen takia. Aihenosto (`este`) on yhä
-   * viimeisenä, ja saman tason sisällä ahtain ensin kuten ennen.
+   * JONO: `este`-laput (aihenostot) viimeisenä kuten ennen; muut
+   * painoarvon mukaan (taso 1, kaupunki, taso 2, taso 3; lyhyt nimi
+   * ensin) ja tasapelissä lähinnä kiinteää mustetta oleva ensin.
    */
   const jono = laput
-    .map((l) => ({ l, d: lahinEste(l.laatikko(l.kylki, 0, 0, true), kiinteat) }))
+    .map((l) => ({
+      l,
+      paino: sovittelunPainoarvo(l),
+      d: lahinEste(l.laatikko(l.kylki, 0, 0, true), kiinteat),
+    }))
     .sort((a, b) => (Number(Boolean(a.l.este)) - Number(Boolean(b.l.este)))
-      || ((a.l.taso ?? 2) - (b.l.taso ?? 2))
-      || (a.d - b.d))
+      || (a.paino - b.paino) || (a.d - b.d))
     .map((rivi) => rivi.l);
-  const siirretyt = []; // väistäneiden lappujen laatikot (uudet esteet)
-  /*
-   * KAIKKIEN jo käsiteltyjen lappujen lopulliset laatikot. Vain
-   * `este`-lappu lukee tätä (ks. AIHENOSTO SOVITELLAAN VIIMEISENÄ) —
-   * käsin ladottu lappu näkee yhä pelkän kiinteän musteen ja
-   * väistäneet naapurinsa, kuten ennen.
-   */
-  const sijoitetut = [];
+
   for (const l of jono) {
-    const oma = l.laatikko(l.kylki, 0, 0, true);
-    kokeiltuja += 1;
-    // `este`-lappu katsoo myös jo sijoitettuja lappuja; muille
-    // este on vain kiinteä muste, kuten ennenkin.
-    const muut = (l.este || keskinainen) ? sijoitetut : [];
-    const omaKelpaa = laatikkoKelpaa(oma);
-    if (!omaKelpaa
-      || (laatikkoSisalla(oma, reuna) && !rannalla(oma, l)
-        && (!kiinteat.length || !kiinteat.some((e) => laatikotLimittyvat(oma, e)))
-        && !muut.some((e) => laatikotLimittyvat(oma, e)))) {
-      asennot.set(l.avain, {
-        kylki: l.kylki, dx: 0, dy: 0, nimio: true, syy: 'oma',
-      });
-      if (omaKelpaa) sijoitetut.push(oma);
-      continue;
+    const lukko = lukot?.get(l.avain) ?? null;
+    const oliPiilossa = Boolean(lukko) && lukko.nimio === false;
+    const lahto = lukko?.kylki ?? l.kylki;
+    // Häivytetty palaa vain marginaalilla (hystereesi); näkyvä pitää
+    // asentonsa ilman marginaalia, jottei se ala väistää turhaan.
+    const vara = oliPiilossa ? hystereesi : 0;
+    let valittu = null;
+    for (const k of sovittelunEhdokkaat(l, oliPiilossa ? null : (lukko?.kylki ?? null), kyljet)) {
+      const r = l.laatikko(k, 0, 0, true);
+      kokeiltuja += 1;
+      if (!laatikkoKelpaa(r)) continue;
+      if (vapaa(r, l, vara)) { valittu = { kylki: k, r }; break; }
     }
-    /** Kokeile kyljet ja siirrot annettuja esteitä vastaan. */
-    const etsi = (vastaan) => {
-      // 1. vaihtoehtoinen ankkuri: kolme muuta kylkeä ilman siirtoa.
-      for (const k of kyljet) {
-        if (k === l.kylki) continue;
-        const r = l.laatikko(k, 0, 0, true);
-        kokeiltuja += 1;
-        if (laatikkoKelpaa(r) && vapaa(r, vastaan, l)) {
-          return { kylki: k, dx: 0, dy: 0, nimio: true, syy: 'kylki', r };
-        }
-      }
-      // 2. pieni siirto, kylki kerrallaan (oma kylki ensin).
-      for (const k of [l.kylki, ...kyljet.filter((x) => x !== l.kylki)]) {
-        for (const { dx, dy } of sovittelunSiirrot(k, siirto)) {
-          const r = l.laatikko(k, dx, dy, true);
-          kokeiltuja += 1;
-          if (laatikkoKelpaa(r) && vapaa(r, vastaan, l)) {
-            return {
-              kylki: k, dx, dy, nimio: true, syy: 'siirto', r,
-            };
-          }
-        }
-      }
-      // 3. reunaan vetävä siirto (ks. RUUDUN REUNA ON ESTE): kylki
-      //    kerrallaan pienin siirto, joka tuo laatikon reunan sisään.
-      if (reuna) {
-        for (const k of [l.kylki, ...kyljet.filter((x) => x !== l.kylki)]) {
-          const r0 = l.laatikko(k, 0, 0, true);
-          if (!laatikkoKelpaa(r0)) continue;
-          const { dx, dy } = reunaanSiirto(r0, reuna);
-          if (!dx && !dy) continue;
-          if (Math.abs(dx) > reunasiirto || Math.abs(dy) > reunasiirto) continue;
-          const r = l.laatikko(k, dx, dy, true);
-          kokeiltuja += 1;
-          if (laatikkoKelpaa(r) && vapaa(r, vastaan, l)) {
-            return {
-              kylki: k, dx, dy, nimio: true, syy: 'reuna', r,
-            };
-          }
-        }
-      }
-      // 4. MEREN LAPPU SIIRTYY MERELLE PÄIN (ks. MEREN NIMIÖ EI JÄÄ
-      //    RANTAVIIVAN ALLE): rannan tuntumassa mikään kylki ei ole
-      //    vapaa, joten lappua työnnetään kasvavin askelin kahdeksaan
-      //    suuntaan, kunnes se on rannasta irti. Ensimmäinen vapaa
-      //    suunta on se, jossa ranta ei ole — eli meri. Katto
-      //    SOVITTELUN_MERISIIRTO_PX pitää lapun merkkinsä lähellä.
-      if (reuna !== undefined && l.meri && ranta.length) {
-        for (let askel = siirto * 2; askel <= SOVITTELUN_MERISIIRTO_PX; askel += siirto * 2) {
-          for (const [sx, sy] of MERISUUNNAT) {
-            for (const k of [l.kylki, ...kyljet.filter((x) => x !== l.kylki)]) {
-              const r = l.laatikko(k, sx * askel, sy * askel, true);
-              kokeiltuja += 1;
-              if (laatikkoKelpaa(r) && vapaa(r, vastaan, l)) {
-                return {
-                  kylki: k, dx: sx * askel, dy: sy * askel, nimio: true, syy: 'meri', r,
-                };
-              }
-            }
-          }
-        }
-      }
-      return null;
-    };
-    let valittu = etsi([...siirretyt, ...muut]);
-    /*
-     * AIHENOSTON NIMI EI KATOA NAAPURIN TAKIA (PAATOKSET 27 TARKENNUS
-     * 2 kohta 8: aihenoston nimiö ON se, mitä omistaja tilasi).
-     *
-     * `este` on tiukennus, joka saa siirtää aihenostoa — mutta se ei
-     * saa MAKSAA nimeä. Jos yksikään asento ei ole vapaa toisten
-     * lappujen suhteen, kokeillaan vielä pelkkiä kiinteitä esteitä eli
-     * täsmälleen sitä sääntöä, jolla kartta latoi ennen tätä
-     * tiukennusta: mieluummin naapurin nimen viereen kuin ilman nimeä.
-     * Kaupungin nimi (kiinteä muste) pysyy silti ensisijaisena.
-     *
-     * MITATTU (Pariisi 390 × 844, 16.9.2026): ilman tätä porrasta
-     * *Kyyhkyposti…* menetti nimensä lähizoomissa — juuri se vika,
-     * jonka korjaamiseksi koko tarkennus kirjoitettiin.
-     */
-    if (!valittu && l.este) {
-      const omaVapaa = laatikkoSisalla(oma, reuna) && !rannalla(oma, l)
-        && !kiinteat.some((e) => laatikotLimittyvat(oma, e));
-      valittu = omaVapaa
-        ? { kylki: l.kylki, dx: 0, dy: 0, nimio: true, syy: 'oma', r: oma }
-        : etsi(siirretyt);
+    if (!valittu && l.taso === 1) {
+      /*
+       * YKKÖSTASO EI HÄIVY (sääntö 4): jos yksikään ehdokas ei ole
+       * vapaa, se pitää lähtöasentonsa reunan sisällä — ensimmäinen
+       * ehdokas, joka mahtuu reunaan; muuten lähtöasento sellaisenaan.
+       * Muut laput (sijoitettu myöhemmin) väistävät sitä.
+       */
+      // Kaupungin nimi on yhä ensisijainen (Raamattu): ensin ehdokas,
+      // joka on reunan sisällä eikä osu kiinteään musteeseen (vain
+      // toisiin lappuihin); sitten reunan sisällä oleva (levossa ei
+      // reunaylityksiä); sitten kiinteästä musteesta vapaa reunan yli;
+      // viimeisenä lähtö. Avoin kohta (21.9.2026): Versailles Pariisin
+      // nimen vieressä puhelimen vasemmassa laidassa päätyy nimen
+      // päälle — ratkaisu on datan (kylki tai paikka), ei sovittelun.
+      const ehdokkaat = sovittelunEhdokkaat(l, lahto, kyljet);
+      const kelpaa = (e, { sisalla, musteeton }) => {
+        const r = l.laatikko(e, 0, 0, true);
+        if (!laatikkoKelpaa(r)) return false;
+        if (sisalla && !laatikkoSisalla(r, reuna)) return false;
+        return !musteeton || (!rannalla(r, l) && !kiinteat.some((x) => laatikotLimittyvat(r, x)));
+      };
+      const k = ehdokkaat.find((e) => kelpaa(e, { sisalla: true, musteeton: true }))
+        ?? ehdokkaat.find((e) => kelpaa(e, { sisalla: true, musteeton: false }))
+        ?? ehdokkaat.find((e) => kelpaa(e, { sisalla: false, musteeton: true }))
+        ?? lahto;
+      const r = l.laatikko(k, 0, 0, true);
+      if (laatikkoKelpaa(r)) valittu = { kylki: k, r, pakko: true };
     }
     if (valittu) {
-      if (valittu.syy !== 'oma') {
-        siirretty += 1;
-        if (valittu.syy === 'kylki') kylkiVaihtui += 1;
-        if (valittu.syy === 'reuna' || valittu.syy === 'meri') reunalta += 1;
-        siirretyt.push(valittu.r);
+      const vaihtui = valittu.kylki !== lahto;
+      if (vaihtui) {
+        kylkiVaihtui += 1;
+        if (!laatikkoSisalla(l.laatikko(lahto, 0, 0, true), reuna)) reunalta += 1;
       }
       sijoitetut.push(valittu.r);
       asennot.set(l.avain, {
-        kylki: valittu.kylki, dx: valittu.dx, dy: valittu.dy, nimio: true, syy: valittu.syy,
+        kylki: valittu.kylki,
+        dx: 0,
+        dy: 0,
+        nimio: true,
+        syy: valittu.pakko ? 'pakko' : (vaihtui ? 'kylki' : (lukko ? 'lukko' : 'oma')),
       });
       continue;
     }
-    /*
-     * YKKÖSTASO EI PIILOUDU KOSKAAN (NOSTOJEN TASOT): jos yksikään
-     * asento ei ole vapaa, lappu jää omaan kylkeensä ilman siirtoa ja
-     * nimiö pysyy. Se on jonossa ensimmäisenä, joten myöhemmät laput
-     * väistävät sitä; jäljelle jäävä limitys on kiinteän musteen
-     * (kaupungin nimi, kehä) kanssa, ja se on pienempi paha kuin
-     * kadonnut Mont-Saint-Michel.
-     */
-    if (l.taso === 1 && omaKelpaa) {
-      // Ruudun sisään silti: ensimmäinen kylki (oma ensin), joka on
-      // reunan sisällä sellaisenaan tai reunasiirrolla; muuten oma kylki.
-      let pakko = { kylki: l.kylki, dx: 0, dy: 0 };
-      for (const k of [l.kylki, ...kyljet.filter((x) => x !== l.kylki)]) {
-        const r0 = l.laatikko(k, 0, 0, true);
-        if (!laatikkoKelpaa(r0)) continue;
-        if (laatikkoSisalla(r0, reuna)) { pakko = { kylki: k, dx: 0, dy: 0 }; break; }
-        if (!reuna) continue;
-        const siirto = reunaanSiirto(r0, reuna);
-        // Pieni ylimäärä siirtoon, ettei liukuluku jätä laatikkoa
-        // täsmälleen reunalle (5,999… < 6).
-        const dx = siirto.dx + Math.sign(siirto.dx) * 0.05;
-        const dy = siirto.dy + Math.sign(siirto.dy) * 0.05;
-        if ((dx || dy) && Math.abs(dx) <= reunasiirto && Math.abs(dy) <= reunasiirto
-          && laatikkoSisalla(l.laatikko(k, dx, dy, true), reuna)) {
-          pakko = { kylki: k, dx, dy };
-          break;
-        }
-      }
-      sijoitetut.push(l.laatikko(pakko.kylki, pakko.dx, pakko.dy, true));
-      if (pakko.dx || pakko.dy) reunalta += 1;
-      asennot.set(l.avain, { ...pakko, nimio: true, syy: 'pakko' });
-      continue;
-    }
-    // 3. lappu piiloon: vain ikoni jää. Ikonille etsitään vielä vapaa
-    // asento, mutta sitä ei voi piilottaa — nosto katoaisi kartalta.
+    // Häivytys: nimiö pois, ikoni jää samaan asentoon. Ikoni ei ole
+    // este muille — se on pieni ja kiinni omassa pisteessään.
     piilotettu += 1;
-    let ikoni = { dx: 0, dy: 0, r: l.laatikko(l.kylki, 0, 0, false) };
-    // `este`-lappu siirtää ikoninsa myös naapurin NIMIÖN alta: sen
-    // paikka on laskettu eikä ladottu (ks. AIHENOSTO SOVITELLAAN
-    // VIIMEISENÄ), joten mikään ei puolusta sitä siellä.
-    const ikoniTiella = (r) => kiinteat.some((e) => laatikotLimittyvat(r, e))
-      || muut.some((e) => laatikotLimittyvat(r, e));
-    if (laatikkoKelpaa(ikoni.r) && ikoniTiella(ikoni.r)) {
-      for (const k of kyljet) {
-        const s = SOVITTELUN_SUUNNAT[k];
-        const r = l.laatikko(l.kylki, s.dx * siirto, s.dy * siirto, false);
-        kokeiltuja += 1;
-        if (laatikkoKelpaa(r) && vapaa(r, [...siirretyt, ...muut])) {
-          ikoni = { dx: s.dx * siirto, dy: s.dy * siirto, r };
-          break;
-        }
-      }
-    }
-
-    if (laatikkoKelpaa(ikoni.r) && kiinteat.some((e) => laatikotLimittyvat(ikoni.r, e))) {
-      jaljella += 1;
-    }
-    if (laatikkoKelpaa(ikoni.r)) sijoitetut.push(ikoni.r);
     asennot.set(l.avain, {
-      kylki: l.kylki, dx: ikoni.dx, dy: ikoni.dy, nimio: false, syy: 'piilo',
+      kylki: lahto, dx: 0, dy: 0, nimio: false, syy: 'piilossa',
     });
   }
   return {
-    asennot, siirretty, kylkiVaihtui, piilotettu, jaljella, kokeiltuja, reunalta,
+    asennot, piilotettu, kylkiVaihtui, siirretty: 0, jaljella: 0, reunalta, kokeiltuja,
   };
 }

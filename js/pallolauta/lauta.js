@@ -4194,6 +4194,16 @@ export async function avaaPallolauta(ui) {
     return ulos;
   };
 
+  /*
+   * LEPO VAI ELE (Fable 21.9.2026, nimiöt vakaat): sovittelu ratkaistaan
+   * vain levossa — sormi ylhäällä, ei nipistystä, ei kamera-ajoa, ja
+   * ladonta tulee lepoajastimesta (LADONNAN_LEPOVIIVE_MS viimeisestä
+   * kameran muutoksesta) eikä liikkeen tahdista. Eleen ladonnat pitävät
+   * nimiöt lukossa (js/pallolauta/nostot.js sovittele `lepo`).
+   */
+  let lepoladonta = false;
+  const eleKaynnissa = () => Boolean(eleet.sormet.alhaalla || eleet.sormet.nipistys
+    || kamera.kameraAjossa?.());
   const ladoLevossa = () => {
     lepoAjastin = 0;
     // Kurituksen kello käy myös ohitetuista ajoista: piilossa oleva
@@ -4333,6 +4343,7 @@ export async function avaaPallolauta(ui) {
       // Meren nimiöt väistävät kohdemaan korostuskehää (ks. rantaviivanLaatikot).
       rantaviiva: rantaviivanLaatikot,
       rantaviivaOn: pallonKorostusRenkaat(pallonKorostettuMaa()).length > 0,
+      lepo: lepoladonta && !eleKaynnissa(),
     });
     paivitaPisteet();
     // Ladonta ajetaan levossa, siirtymän jo mentyä: viimeinen sana
@@ -4349,14 +4360,20 @@ export async function avaaPallolauta(ui) {
    * LADONTA KULKEE MUKANA, EI ODOTA LIIKKEEN LOPPUA). Peräkanttiin
    * tuleva jono ei siis kerry yhdeksi nykäykseksi liikkeen loppuun.
    */
+  /** Lepoladonta: ajetaan levossa, sovittelu saa ratkaista. */
+  const ladoLevossaLevossa = () => {
+    lepoladonta = true;
+    try { return ladoLevossa(); } finally { lepoladonta = false; }
+  };
   const pyydaLadonta = () => {
     clearTimeout(lepoAjastin);
     const nyt = globalThis.performance?.now?.() ?? Date.now();
     const { heti, viiveMs } = ladonnanAjoitus(nyt - ladottuHetki);
+    // Liikkeen tahdissa nimiöt pysyvät lukossa (lepo = false).
     if (heti) ladoLevossa();
     // Perälauta: liikkeen VIIMEINEN muutos saa vielä oman ajonsa, jottei
-    // se jää kuritusikkunan sisään.
-    lepoAjastin = setTimeout(ladoLevossa, viiveMs);
+    // se jää kuritusikkunan sisään — ja se on lepoladonta.
+    lepoAjastin = setTimeout(ladoLevossaLevossa, viiveMs);
   };
   const paivitaFokuspistePallolla = () => {
     if (ui.dead || kuori.hidden || linssiPaalla()) return null;
@@ -4365,6 +4382,10 @@ export async function avaaPallolauta(ui) {
   };
   const ohjaimet = pallo.controls();
   ohjaimet.addEventListener('change', pyydaLadonta);
+  // Sormen nousu ilman kameran muutosta (paikallaan pidetty sormi) on
+  // myös eleen loppu: lepoladonta sen jälkeen.
+  kotelo.addEventListener('pointerup', pyydaLadonta);
+  kotelo.addEventListener('pointercancel', pyydaLadonta);
   // Zoomi muuttaa kaupunkipisteen säteen heti, ei vasta levossa.
   ohjaimet.addEventListener('change', tahdistaPisteidenKoko);
   /*
@@ -5031,7 +5052,8 @@ export async function avaaPallolauta(ui) {
       tahdistaZoomirajat();
     },
     /** Ladonta heti ilman lepoviivettä (savukkeet ja vartijat). */
-    ladoHeti: () => { clearTimeout(lepoAjastin); return ladoLevossa(); },
+    // Savukkeiden ja vartijoiden lepoladonta: sovittelu saa ratkaista.
+    ladoHeti: () => { clearTimeout(lepoAjastin); return ladoLevossaLevossa(); },
     /**
      * TURISTI-INFON KYLTIN RUUTULAATIKKO (savukkeet ja vartijat): sama
      * laatikko, jonka ladonta varaa ja jonka päältä napautus avaa

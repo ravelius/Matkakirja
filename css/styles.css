@@ -25299,6 +25299,18 @@ body.infotaulu-auki .toimintorivi .monitoimi-nappi {
  */
 .nostosym-rasteri { pointer-events: none; }
 
+/*
+ * NIMIÖ HÄIVYTETÄÄN, EI POISTETA (Fable 21.9.2026, nimiöt vakaat,
+ * js/pallolauta/nostot.js asetteleNosto): elävän noston nimiö on oma
+ * rasterinsa ikonin rinnalla, ja sovittelun piilotus on ryhmän luokka.
+ * Häivytys ≤ 200 ms; reduced motion vaihtaa heti.
+ */
+.nostosym-nimiokuva { transition: opacity 180ms ease-out; }
+.nostosym-nimio-piilossa .nostosym-nimiokuva { opacity: 0; }
+@media (prefers-reduced-motion: reduce) {
+  .nostosym-nimiokuva { transition: none; }
+}
+
 .nostosym-kaupunki {
   fill: var(--sym-kaupunki);
   stroke: var(--sym-muste);
