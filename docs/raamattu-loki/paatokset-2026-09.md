@@ -291,3 +291,7 @@ Vain aika=pysyva: FRA 24, DEU 15, ITA 14, ESP 12, meret 29 = 94 nimiota + 8 Code
 ## OMISTAJAN KORTIT 21.09.2026 klo 09.07: SUMU JULKAISUUN, GPL-DATA, ATLASLEHTI-VEDOS, ISOISAN LINSSI (21.9.2026 klo 09.07)
 
 1) Sumu: sisasumu 50 %, luonnoksille kynaraita, merentakaiset pois laskusta, julkaisuun kaikille -> Pelikoodari (v1988). 2) Vuosi 1873 -linssin raja-aineisto: GPL-3.0 historical-basemaps kay. 3) Atlaslehti-linssi: omistaja haluaa vedoksen ensin (Stieler 1875 Ranska pallon paalle) -> uuden Karttasepan ensimmainen era. 4) Aikajanalinssia ei nyt: isoisan linssi on vain vuosi 1873, retro, isoisan valokuvat/aanet/media; maailmansodat ym. omina linsseina nykykartan paalla - kirjattu Raamatun Karttalinssit-osioon (ISOISAN LINSSI). Karttaseppa: luovutus valmis (viesti-karttaseppa-luovutus-20260921.md), ajoitusvartiot 14/14 (1c802159); omistaja avaa uuden Karttaseppa-session.
+
+## V1987 TUOTANNOSSA 09.06 (21.9.2026 klo 09.08)
+
+Kartuschan sisennys 12/24 px, painallus ei lavitse, nimiston aika-kentta. Osoitin 2026-09-21e-nimiot odottaa viela (v1988 tai Karttasepan luettelovienti).
