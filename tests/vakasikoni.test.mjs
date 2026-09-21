@@ -10,20 +10,24 @@
  * voi vaihtaa alkuperaiseen mutta jata nykyinen iPhonen vaaka tilaa
  * varten kayttoon silloin kun Ylapalkki on piilossa"*.
  *
- * Väkäsikoni jäi siis KAHTEEN paikkaan, ja molemmat tuovat polut
- * js/vakasikoni.js:stä: vaakapuhelimen yläpalkkinappi
- * (js/ylapalkki-vaaka.js, näkyy media-kyselyllä max-height 520px, eli
- * täsmälleen silloin kun yläpalkki on piilossa) ja linssien oma valikko
- * (js/aikajana-valikko.js). Pelin oma päävalikon nappi (index.html
- * #menu-btn) palasi alkuperäiseen kolmeen suoraan viivaan — se ASUU
- * yläpalkissa, joten se ei koskaan näy silloin kun palkki on piilossa,
- * eikä ehtoa tarvita.
+ * TÄSMENNYS 21.9.2026 (Raamatun loki "BUGI: IPADIN YLAPALKKI POISSA
+ * MYOS PYSTYASENNOSSA; HAMPURILAINEN VS VAKASET"): *"aina kun on
+ * ylapalkki, niin silloin siina on normaali hampurilainen ja vain kun
+ * ylapalkkia ei ole, niin silloin ylakulmassa kelluva hampurilainen
+ * muuttuu kolmeksi v-kirjainta muistuttavaksi vakaseksi."*
+ *
+ * Väkäsikoni on siis YHDESSÄ paikassa: kelluva yläpalkkinappi
+ * (js/ylapalkki-vaaka.js), joka näkyy media-kyselyllä täsmälleen
+ * silloin kun yläpalkki on piilossa (vaaka-asento). Linssien oma
+ * valikko (js/aikajana-valikko.js) asuu linssin yläpalkissa, joten sen
+ * kuvake on tavallinen hampurilainen (HAMPURILAISEN_POLKU) — sama polku
+ * kuin pelin päävalikon napissa (index.html #menu-btn).
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 
-import { VAKASIKONIN_POLUT, vakasikoninSvg } from '../js/vakasikoni.js';
+import { HAMPURILAISEN_POLKU, VAKASIKONIN_POLUT, vakasikoninSvg } from '../js/vakasikoni.js';
 
 const lue = (polku) => readFileSync(new URL(polku, import.meta.url), 'utf8');
 const HTML = lue('../index.html');
@@ -58,12 +62,17 @@ test('terävä kärki on pyöristetty', () => {
   // Ilman linejoinia v:n kärki piirtyy piikiksi, joka näyttää eri
   // paksuiselta kuin viivan muu osa.
   assert.match(vakasikoninSvg(), /stroke-linejoin="round"/);
-  assert.match(LINSSI, /stroke-linejoin', 'round'/);
 });
 
-test('molemmat väkäspaikat tuovat polut samasta moduulista', () => {
+test('väkäset vain kelluvassa napissa; linssin yläpalkissa hampurilainen (omistaja 21.9.2026)', () => {
   assert.match(VAAKA, /from '\.\/vakasikoni\.js'/);
-  assert.match(LINSSI, /from '\.\/vakasikoni\.js'/);
+  assert.match(VAAKA, /vakasikoninSvg\(\)/);
+  assert.match(LINSSI, /HAMPURILAISEN_POLKU/);
+  assert.equal(LINSSI.includes('VAKASIKONIN_POLUT'), false, 'linssin yläpalkissa on yhä väkäset');
+});
+
+test('hampurilaisen polku on sama kuin päävalikon napissa', () => {
+  assert.ok(HTML.includes(`d="${HAMPURILAISEN_POLKU}"`), 'index.html #menu-btn ei käytä samaa polkua');
 });
 
 test('väkäsiä ei ole päävalikon napissa', () => {
@@ -92,16 +101,17 @@ test('väkäsnappi näkyy vain kun yläpalkki on piilossa', () => {
   assert.match(CSS, /\.ylapalkki-nappi \{ display: none; \}/);
   /*
    * Samalla otsikolla on useampi kysely (mm. .intro-tyopoyta): otetaan
-   * se, jossa väkäsnappi asuu. Ehtolista alkaa matalasta ruudusta ja
-   * jatkuu iPadin kosketusehdolla (Raamattu, KARTTAUUDISTUKSEN
-   * PAATOKSET 43 kohta 9), joten otsikko luetaan pilkkuun asti.
+   * se, jossa väkäsnappi asuu. Molemmat ehdot ovat VAAKASUUNNAN
+   * (omistaja 21.9.2026): matala vaakaruutu ja vaaka-iPad kosketuksella.
    */
-  const kysely = [...CSS.matchAll(/@media \(max-height: 520px\)[^{]*\{[\s\S]*?\n\}/g)]
+  const kysely = [...CSS.matchAll(/@media \(orientation: landscape\) and \(max-height: 520px\)[^{]*\{[\s\S]*?\n\}/g)]
     .map((o) => o[0]).find((o) => o.includes('.ylapalkki-nappi'));
   assert.ok(kysely, 'väkäsnapin media-kyselyä ei löytynyt');
-  // iPad kulkee samassa lohkossa: yksi sääntö, kaksi ehtoa.
+  // iPad kulkee samassa lohkossa: yksi sääntö, kaksi ehtoa — kumpikin vaaka.
   assert.match(kysely,
-    /\(pointer: coarse\) and \(min-width: 700px\) and \(max-width: 1366px\)/);
+    /\(orientation: landscape\) and \(pointer: coarse\) and \(max-width: 1366px\)/);
+  assert.equal(/\(pointer: coarse\) and \(min-width: 700px\)/.test(kysely), false,
+    'pysty-iPadin ehto on yhä lohkossa');
   assert.match(kysely, /\.ylapalkki-nappi \{\s+display: grid;/);
   assert.match(kysely, /\.topbar \{[\s\S]*?transform: translateY\(-100%\);/);
 });

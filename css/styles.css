@@ -27577,52 +27577,52 @@ body.aikajana-paalla .pollo-nappi.pollo-kelluu.livia-kasvot-valmis { width:48px;
  * ruudulle, pitää kartta selite nappia siirtää hieman vasemmalle.
  * Uusi nappi saisi olla saman korkuinen kuin kartta selite."*
  *
- * RAJA ON KORKEUS EIKÄ ORIENTAATIO. `orientation: landscape` on tosi
- * myös leveällä työpöydällä, jossa palkille on tilaa yllin kyllin —
- * ongelma on matala ruutu. 520 px on pelin oma vaakapuhelinraja
- * (sama kuin .intro-tyopoyta yllä), joten uusi sääntö ei tuo peliin
- * uutta taitekohtaa.
+ * RAJA ON ORIENTAATIO (omistaja 21.9.2026, Raamatun loki "BUGI: IPADIN
+ * YLAPALKKI POISSA MYOS PYSTYASENNOSSA"): yläpalkki piilotetaan VAIN
+ * VAAKA-ASENNOSSA iPhonella ja iPadilla; pystyasennossa palkki on aina
+ * näkyvissä. Kun palkki näkyy, valikon kuvake on tavallinen
+ * hampurilainen; vain kun palkkia ei ole, kartalla kelluu kolmen
+ * väkäsen nappi. Tämä korvaa 18.9.2026 säännön (Raamattu,
+ * KARTTAUUDISTUKSEN PAATOKSET 43 kohta 9: *"Ylapalkin voisi piilottaa
+ * myos ipadilla niin kuin iphonella on"*), joka toteutettiin ehdolla
+ * `(pointer: coarse) and (min-width: 700px) and (max-width: 1366px)`
+ * — se osui iPadiin MOLEMMISSA suunnissa, ja siksi iPad pysty
+ * (834 × 1194) oli ilman palkkia. Tässä lohkossa luki aiemmin "raja on
+ * korkeus eikä orientaatio"; se ei enää päde.
  *
- * Nappi on olemassa DOM:ssa aina (js/ylapalkki-vaaka.js), mutta
- * näkyy vain tässä. Niin moduulin ei tarvitse mitata ruutua eikä
- * kuunnella koon muutoksia: sama raja on yhdessä paikassa.
+ * KAKSI EHTOA, MOLEMMAT VAAKASUUNNAN:
  *
- * ── SAMA KÄYTÖS IPADILLA, MOLEMMISSA SUUNNISSA ────────────────────
- * (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 43 kohta 9; omistaja
- * 18.9.2026 sanatarkasti: *"Ylapalkin voisi piilottaa myos ipadilla
- * niin kuin iphonella on."*)
+ *   (orientation: landscape) and (max-height: 520px)
+ *       vaakapuhelin (844 × 390) ja matala vaakaikkuna — 520 px on
+ *       pelin oma vaakapuhelinraja (sama kuin .intro-tyopoyta yllä).
+ *   (orientation: landscape) and (pointer: coarse) and (max-width: 1366px)
+ *       vaaka-iPad kosketuksella (1133 × 744 … 1366 × 1024). Työpöytä
+ *       (hiiri, `pointer: fine`) ei osu kumpaankaan missään
+ *       ikkunakoossa, joten se jää täsmälleen ennalleen. Pysty-iPad
+ *       (744 × 1133 … 1024 × 1366) ja pystypuhelin ovat `portrait`
+ *       eivätkä osu: palkki näkyy, väkäsnappi ei.
  *
- * IPADIN KUMPIKAAN SUUNTA EI OLE MATALA RUUTU: 1024 × 1366 ja
- * 1366 × 1024 ovat molemmat yli 520 px korkeita, joten pelkkä
- * korkeusraja ei tavoita niitä. Toinen ehto on siksi LAITELAATU JA
- * LEVEYS, ei orientaatio:
- *
- *   pointer: coarse   — sormi, ei hiiri. Työpöytä (1400 × 900 hiiri)
- *                       on `pointer: fine` eikä osu tähän missään
- *                       ikkunakoossa, joten se jää täsmälleen
- *                       ennalleen.
- *   min-width: 700px  — pelin oma puhelinraja on `max-width: 699px`
- *                       (ks. PUHELIN: ISOISÄN JA PULUN TEKSTIT
- *                       PIILOON alla). Pystypuhelin jää siis
- *                       ennalleen: siellä palkki mahtuu ja omistaja
- *                       pyysi muutosta vaakaan ja iPadiin, ei
- *                       pystypuhelimeen. Vaakapuhelin (844 × 390)
- *                       osuu yhä ylempään korkeusehtoon.
- *   max-width: 1366px — iPad Pro 12,9" on vaakasuunnassa laajin
- *                       iPad (1366 px). Sitä leveämpi kosketusnäyttö
- *                       on jo työpöytäluokan ruutu, jossa palkille
- *                       on tilaa.
- *
- * Mitatut laitteet rajan sisällä: iPad mini 744 × 1133 / 1133 × 744,
- * iPad 10,9" 820 × 1180 / 1180 × 820, iPad Pro 12,9" 1024 × 1366 /
- * 1366 × 1024. Nappi, sen paikka, karttaselitteen väistö ja
- * sulkusääntö ovat samat kaikissa — sääntölohko on yksi eikä kahta
- * taitekohtaa synny.
+ * Nappi on olemassa DOM:ssa aina (js/ylapalkki-vaaka.js), mutta näkyy
+ * vain tässä lohkossa — sama lohko piilottaa palkin ja näyttää napin,
+ * joten "palkki näkyvissä väkäsillä" ei voi syntyä: kumpikin seuraa
+ * yhtä ja samaa media-kyselyä. Moduulin ei tarvitse mitata ruutua
+ * eikä kuunnella koon muutoksia: raja on yhdessä paikassa.
  */
 .ylapalkki-nappi { display: none; }
+/*
+ * LINSSIN OMA YLÄPALKKI ON YLÄPALKKI (omistaja 21.9.2026): kun
+ * aikajanalinssi (keksinnöt, Ihmisen matka) korvaa Matkakirjan
+ * yläpalkin omallaan (css/aikajana.css body.aikajana-palkki-auki
+ * .topbar), ruudulla ON palkki ja sen valikko on hampurilainen
+ * (js/aikajana-valikko.js) — kelluvaa väkäsnappia ei silloin ole
+ * missään asennossa. Ennen tätä vaaka-asennossa näkyi linssin palkki
+ * JA sen alla väkäsnappi, joka avasi näkymättömäksi kutistetun pelin
+ * palkin: juuri se "yläpalkki, jossa on väkäset".
+ */
+body.aikajana-palkki-auki .ylapalkki-nappi { display: none; }
 
-@media (max-height: 520px),
-  (pointer: coarse) and (min-width: 700px) and (max-width: 1366px) {
+@media (orientation: landscape) and (max-height: 520px),
+  (orientation: landscape) and (pointer: coarse) and (max-width: 1366px) {
   /*
    * Palkki pois asettelusta, ei vain näkyvistä: `.app` on grid, jonka
    * ensimmäinen rivi on palkki. Pelkkä visibility jättäisi rivin

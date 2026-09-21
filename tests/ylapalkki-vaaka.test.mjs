@@ -66,15 +66,16 @@ test('raja on yhdessä paikassa: CSS:ssä, ei moduulissa', () => {
    * taitekohta laskettuna sekä JS:ssä että CSS:ssä eriytyi ajan
    * myötä. Moduuli ei saa mitata ruutua lainkaan.
    */
-  assert.match(TYYLIT, /@media \(max-height: 520px\)/,
+  assert.match(TYYLIT, /@media \(orientation: landscape\) and \(max-height: 520px\)/,
     'vaakapuhelimen raja puuttuu tyyleistä');
   /*
-   * IPAD MOLEMMISSA SUUNNISSA (Raamattu, KARTTAUUDISTUKSEN PAATOKSET
-   * 43 kohta 9): sama sääntölohko, toinen ehto. Kosketus + iPadin
-   * levyinen ruutu — työpöytä on `pointer: fine` eikä osu.
+   * IPAD VAIN VAAKASUUNNASSA (omistaja 21.9.2026, Raamatun loki "BUGI:
+   * IPADIN YLAPALKKI POISSA MYOS PYSTYASENNOSSA"): sama sääntölohko,
+   * toinen ehto. Kosketus + vaaka-asento — pysty-iPad ja työpöytä
+   * (`pointer: fine`) eivät osu.
    */
-  assert.match(TYYLIT, /\(pointer: coarse\) and \(min-width: 700px\) and \(max-width: 1366px\)/,
-    'iPadin raja puuttuu tyyleistä');
+  assert.match(TYYLIT, /\(orientation: landscape\) and \(pointer: coarse\) and \(max-width: 1366px\)/,
+    'vaaka-iPadin raja puuttuu tyyleistä');
   for (const kielletty of ['matchMedia', 'innerHeight', 'innerWidth', '520', '1366']) {
     assert.equal(MODUULI.includes(kielletty), false,
       `moduuli mittaa ruutua itse (${kielletty}) — raja eriytyisi CSS:stä`);
@@ -84,7 +85,7 @@ test('raja on yhdessä paikassa: CSS:ssä, ei moduulissa', () => {
 test('karttaselite väistyy vasemmalle vain vaaka- ja iPad-näkymässä', () => {
   // Sama yksi sääntölohko hoitaa molemmat rajat: lohko alkaa siitä,
   // mistä vaakapuhelimen ehtokin, ja jatkuu iPadin ehdolla.
-  const alku = TYYLIT.indexOf('@media (max-height: 520px),');
+  const alku = TYYLIT.indexOf('@media (orientation: landscape) and (max-height: 520px),');
   assert.ok(alku > 0, 'sääntölohkoa ei löytynyt tyyleistä');
   const lohko = TYYLIT.slice(alku);
   assert.match(lohko, /\.karttaselite \{ right: 2\.95rem; \}/,
