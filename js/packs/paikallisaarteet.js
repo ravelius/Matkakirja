@@ -411,6 +411,29 @@ export const PAIKALLISAARTEET = {
         + 'kutsutaan maailman ensimmäiseksi teknilliseksi yliopistoksi.',
     },
   },
+  /*
+   * LUXEMBURG (21.9.2026, omistajan päätös 21.9.2026: Kypros, Luxemburg
+   * ja Malta saavat pelikaupungin). Faktat ovat Luxemburgin
+   * karttanostojen (js/packs/hahmotelma-lux.js Remich, Esch)
+   * en-Wikipedia-pohjaisia tekstejä. Ei kuvaa vielä
+   * (KUVAA_ODOTTAVAT-lista, tests/paikallisaarteet.test.mjs).
+   */
+  LUX: {
+    pieniAarre: {
+      name: 'Moselin rieslingpullo',
+      fakta: 'Moselin jokivarren rinteet Remichin ja Grevenmacherin '
+        + 'ympärillä ovat Luxemburgin ainoa viinialue. Ensimmäinen '
+        + 'silta Remichin kohdalla joen yli valmistui vasta 1866, '
+        + 'joten viini kulki aiemmin markkinoille lautoilla ja veneillä.',
+    },
+    isoAarre: {
+      name: 'Minette-rautamalmin lohkare',
+      fakta: 'Maan eteläosasta, Eschin seudulta, löytyi 1850-luvulla '
+        + 'punertavaa "minette"-rautamalmia. Löytö muutti pienen '
+        + 'maatalouskylän muutamassa vuosikymmenessä yhdeksi Euroopan '
+        + 'tärkeimmistä teräksentuottajista.',
+    },
+  },
   SVN: {
     pieniAarre: {
       name: 'Lipicanhevosen kavioraudan jäljennös',
