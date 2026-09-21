@@ -3718,21 +3718,30 @@ export async function avaaPallolauta(ui) {
    * tulevat vaiheissa 2–4; siihen asti CSS2D-nimiöt pysyvät rinnalla.
    */
   let glKerros = null;
+  let glSiemen = null; // pov, jonka ympäriltä testinimiöt valittiin
   ui.pallolautaGL = () => glKerros;
+  const glTestinimiot = (pov, dpr) => {
+    glKerros.tyhjenna();
+    const lahimmat = pallonKaupungit(pack)
+      .map((k) => ({ ...k, d: Math.hypot(k.lat - pov.lat, ((k.lon - pov.lng + 540) % 360 - 180) * Math.cos((pov.lat * Math.PI) / 180)) }))
+      .sort((a, b) => a.d - b.d).slice(0, 40);
+    for (const k of lahimmat) {
+      const avain = `testi|${k.n}|${dpr}`;
+      const rasteri = glKerros.onRasteri(avain) ? null : rasteroiTeksti(k.n, { px: 12, dpr, doc: kotelo.ownerDocument });
+      glKerros.aseta(`kaupunki-${k.id}`, { lat: k.lat, lng: k.lon, avain, rasteri });
+    }
+    glSiemen = { lat: pov.lat, lng: pov.lng };
+  };
   const glKehys = (mitat) => {
+    const pov = mitat.pov ?? pallo.pointOfView();
     if (!glKerros) {
       const luokat = glLuokat(pallo);
       if (!luokat) return;
       glKerros = luoNimiokerrosGL({ pallo, kotelo, luokat, juuri: pallonKolmiulotteinen(pallo)?.juuri ?? null });
-      const pov = mitat.pov ?? pallo.pointOfView();
-      const dpr = mitat.suhde ?? 1;
-      const lahimmat = pallonKaupungit(pack)
-        .map((k) => ({ ...k, d: Math.hypot(k.lat - pov.lat, ((k.lon - pov.lng + 540) % 360 - 180) * Math.cos((pov.lat * Math.PI) / 180)) }))
-        .sort((a, b) => a.d - b.d).slice(0, 40);
-      for (const k of lahimmat) {
-        const rasteri = rasteroiTeksti(k.n, { px: 12, dpr, doc: kotelo.ownerDocument });
-        if (rasteri) glKerros.aseta(`kaupunki-${k.id}`, { lat: k.lat, lng: k.lon, avain: `testi|${k.n}|${dpr}`, rasteri });
-      }
+    }
+    // Testinimiöt kameran ympäriltä; uudet, kun kamera on siirtynyt kauas.
+    if (!glSiemen || Math.hypot(pov.lat - glSiemen.lat, ((pov.lng - glSiemen.lng + 540) % 360) - 180) > 10) {
+      glTestinimiot(pov, mitat.suhde ?? 1);
     }
     glKerros.kehys(mitat);
   };

@@ -58,6 +58,7 @@ const avaa = async (glnimiot) => {
   await ctx.addInitScript((d) => { localStorage.setItem('matkakirja-save-v1', d); localStorage.removeItem('matkakirja-lauta'); }, JSON.stringify(peli.toJSON()));
   const sivu = await ctx.newPage();
   sivu.on('pageerror', (e) => virheet.push(String(e.message)));
+  sivu.on('console', (m) => { const t = m.text(); if (m.type() === 'error' && /THREE|shader|WebGL|glnimiot/i.test(t)) virheet.push(t.slice(0, 600)); });
   await sivu.route(/media\.matkakirja\.app|r2\.dev\//, async (r) => { const v = await ampari(r.request().url()); if (!v) { r.abort(); return; } r.fulfill({ status: 200, contentType: v.tyyppi ?? 'application/octet-stream', body: v.body, headers: { 'access-control-allow-origin': '*' } }); });
   await sivu.route('**samireivinen.workers.dev/**', (r) => r.abort());
   await sivu.route(/wikimedia\.org/, (r) => r.abort());
@@ -92,11 +93,6 @@ const odotetut = await gl.sivu.evaluate(() => {
   const kam = p.camera();
   return { pov, W, H, fov: kam.fov, kuvasuhde: kam.aspect, sade: p.getGlobeRadius(), suhde: r.getPixelRatio() };
 });
-const kaupungit = await gl.sivu.evaluate(() => {
-  const k = window.matkakirja.ui.pallolautaGL?.();
-  return k ? null : null;
-});
-void kaupungit;
 const kehysMs = await gl.sivu.evaluate(async () => {
   const p = window.matkakirja.ui.pallonInstanssi; const k = window.matkakirja.ui.pallolautaGL();
   const alku = k.mittarit();
@@ -109,21 +105,20 @@ const kehysMs = await gl.sivu.evaluate(async () => {
 });
 vartio('kehys alle 0,5 ms liikkeessä', kehysMs.ka < 0.5, `${kehysMs.ka.toFixed(3)} ms × ${kehysMs.n}`);
 vartio('ei uusia rakennuksia liikkeessä', kehysMs.loppu.rakennuksia === kehysMs.alku.rakennuksia, `${kehysMs.alku.rakennuksia} → ${kehysMs.loppu.rakennuksia}`);
-await gl.ctx.close();
-
-// 2. Vertailu ilman kerrosta: erot keskittyvät nimiöiden kohdille
-const ilman = await avaa(false);
-const kaappausIlman = await ilman.sivu.screenshot({ type: 'png' });
+// 2. Vertailu SAMASTA sivusta kerros piilossa: erot ovat vain GL-nimiöitä,
+//    ja niiden on osuttava maapisteiden viereen (ei uutta sivulatausta,
+//    jotta CSS2D-ladonnan satunnaisuus ei sotke).
+await gl.sivu.evaluate((p) => { window.matkakirja.ui.pallonInstanssi.pointOfView(p, 0); }, { lat: 46.5, lng: 2.5, altitude: 0.2 });
+await gl.sivu.waitForTimeout(2500);
+const kaappausGL2 = await gl.sivu.screenshot({ type: 'png' });
+await gl.sivu.evaluate(() => window.matkakirja.ui.pallolautaGL().nakyvyys(false));
+await gl.sivu.waitForTimeout(400);
+const kaappausIlman = await gl.sivu.screenshot({ type: 'png' });
 writeFileSync(join(ULOS, `glnimiot-${NAKYMA}-ilman.png`), kaappausIlman);
-const nimet = await ilman.sivu.evaluate(() => {
-  const ui = window.matkakirja.ui; const pov = ui.pallonInstanssi.pointOfView();
-  const { pallonKaupungit } = window.__pallo ?? {};
-  return { pov, kaupungit: window.__kaupungit ?? null };
-});
-void nimet;
-await ilman.ctx.close();
+await gl.sivu.evaluate(() => window.matkakirja.ui.pallolautaGL().nakyvyys(true));
+await gl.ctx.close();
 {
-  const a = decodePng(kaappausGL); const b = decodePng(kaappausIlman);
+  const a = decodePng(kaappausGL2); const b = decodePng(kaappausIlman);
   const W = a.width; const H = a.height;
   const { pack } = peli;
   const { pallonKaupungit } = await import(`${JUURI}/js/pallo.js`);
@@ -136,7 +131,8 @@ await ilman.ctx.close();
     const r = pinnanRuutupiste(pov, k.lat, k.lon, linssi);
     if (!r?.edessa) return null;
     const x = ((r.sx + 1) / 2) * W; const y = ((1 - r.sy) / 2) * H;
-    return { nimi: k.n, x, y, x0: x - 4, x1: x + 24 * odotetut.suhde * 8, y0: y - 14 * odotetut.suhde, y1: y + 14 * odotetut.suhde };
+    // Testinimiö: ankkuri tekstin vasemmassa keskikohdassa, 12 px × dpr korkea, ≤ 12 merkkiä.
+    return { nimi: k.n, x, y, x0: x - 3, x1: x + 12 * odotetut.suhde * 9, y0: y - 12 * odotetut.suhde, y1: y + 12 * odotetut.suhde };
   }).filter(Boolean);
   let sisalla = 0; let ulkona = 0;
   for (let y = 0; y < H; y += 1) for (let x = 0; x < W; x += 1) {

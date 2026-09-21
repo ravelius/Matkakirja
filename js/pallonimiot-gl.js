@@ -128,12 +128,24 @@ export function glLuokat(pallo) {
   if (!verkko || !shader) return null;
   const BufferGeometry = Object.getPrototypeOf(verkko.geometry.constructor.prototype)?.constructor
     ?? verkko.geometry.constructor;
+  /*
+   * PERUS-ShaderMaterial, EI ALILUOKKA: scenen ensimmäinen varjostin-
+   * materiaali voi olla LineMaterial (fat line), jonka rakentaja
+   * kirjoittaa omat varjostimensa ja uniforminsa. Kuljetaan
+   * prototyyppiketjua ylös, kunnes isä ei enää ole varjostinmateriaali.
+   */
+  let ShaderMaterial = shader.constructor;
+  for (;;) {
+    const isa = Object.getPrototypeOf(ShaderMaterial.prototype)?.constructor;
+    if (!isa || !isa.prototype?.isShaderMaterial) break;
+    ShaderMaterial = isa;
+  }
   return {
     Mesh: verkko.constructor,
     BufferGeometry,
     BufferAttribute: verkko.geometry.attributes.position.constructor,
     Texture: verkko.material.map.constructor,
-    ShaderMaterial: shader.constructor,
+    ShaderMaterial,
     tekstuurimalli: verkko.material.map,
   };
 }
@@ -328,7 +340,10 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
       const kulma = new Float32Array(n * 4 * 2);
       const uvKoord = new Float32Array(n * 4 * 2);
       const peitto = new Float32Array(n * 4);
-      const indeksit = new (n * 4 > 65535 ? Uint32Array : Uint16Array)(n * 6);
+      // Indeksit TAVALLISENA TAULUKKONA: setIndex valitsee itse Uint16/Uint32-
+      // attribuutin. Scenestä luettu BufferAttribute on Float32-aliluokka,
+      // ja liukulukuindeksit antoivat INVALID_ENUMin (piirto katosi hiljaa).
+      const indeksit = new Array(n * 6);
       lista.forEach(([inst, uv], i) => {
         const [x, y, z] = inst.piste;
         // Kulmat: vasen ylä, oikea ylä, oikea ala, vasen ala — ruudun y alaspäin
@@ -346,14 +361,15 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
           peitto[j] = inst.peitto;
         }
         const b = i * 4;
-        indeksit.set([b, b + 2, b + 1, b, b + 3, b + 2], i * 6);
+        indeksit[i * 6] = b; indeksit[i * 6 + 1] = b + 2; indeksit[i * 6 + 2] = b + 1;
+        indeksit[i * 6 + 3] = b; indeksit[i * 6 + 4] = b + 3; indeksit[i * 6 + 5] = b + 2;
       });
       const g = sivu.geometria;
       g.setAttribute('maapiste', new L.BufferAttribute(maapiste, 3));
       g.setAttribute('kulma', new L.BufferAttribute(kulma, 2));
       g.setAttribute('uvKoord', new L.BufferAttribute(uvKoord, 2));
       g.setAttribute('peitto', new L.BufferAttribute(peitto, 1));
-      g.setIndex(new L.BufferAttribute(indeksit, 1));
+      g.setIndex(indeksit);
       g.setDrawRange(0, n * 6);
       sivu.verkko.visible = n > 0;
     }
@@ -415,6 +431,8 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
     },
     /** Onko avaimelle jo rasteri atlaksessa. */
     onRasteri: (avain) => uvt.has(avain),
+    /** Koko kerros näkyviin/piiloon (savukkeet, kuvavertailu). */
+    nakyvyys(paalla) { for (const s of sivut) s.verkko.visible = Boolean(paalla) && s.geometria.drawRange.count > 0; },
     mittarit: () => ({ ...mittarit }),
     pura() {
       purettu = true;
