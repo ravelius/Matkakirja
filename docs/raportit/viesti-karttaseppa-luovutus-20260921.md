@@ -29,10 +29,16 @@
    Odottavat siirrot: SCHLESWIG-HOLSTEIN itään, WÜRTTEMBERG/BADEN erilleen.
 3. Kohdemaan nostot ovat pelissä eläviä (KOHDEMAAN_NIMIOT_ELAVINA): tasot ja kuvamerkit elävään kerrokseen = Pelikoodari.
 
-## Jono (Fablen sanalla)
-- Vuosi 1873 -linssi (aineistopäätösten jälkeen): runko historical-basemaps 1878→1873, NE-nykyrajat
-  muuttumattomille, vektorikerros pallovektorit-moottorilla, nimet aika='1873'.
-- Rantaviivan lisäpaikkaus (OHM) vain jos omistaja näkee virheitä.
+## Jono (omistajan päätökset 21.9.2026, Fable)
+1. **UUDEN KARTTASEPÄN ENSIMMÄINEN ERÄ — ATLASLEHTI-VEDOS**: yksi Stieler's Hand-Atlas 1875 -lehti
+   (Ranska; Commons, PD, ~15 700 × 12 900 px, ~38 Mt) georeferoituna pallon päälle linssinä (rasteri:
+   4–8 kontrollipistettä → warp Miller/Mercator-laatoiksi z3–z6 Euroopan alueelle, oma
+   `pallo/laatat/…`-tyyppinen sarja tai linssin oma laattakerros), 3 kaappausta omistajalle. Vain vedos.
+2. Vuosi 1873 -linssin raja-aineisto: PÄÄTETTY historical-basemaps (GPL-3.0) world_1878 → 1873 käsin,
+   tarkennus NE-nykyrajoilla muuttumattomille osuuksille; muutokset dokumentoidaan, johdettu aineisto
+   jaetaan samalla lisenssillä. EI vielä toteutukseen — vain aineiston valmistelu, kun Fable sanoo.
+   Runko: docs/raportit/linssi-1873-aineisto-20260921.md, luku 3.
+3. Rantaviivan lisäpaikkaus (OHM, CC0) vain jos omistaja näkee virheitä.
 
 ## Työkalut ja polut
 - Worktree `/Users/samireivinen/Matkakirja-opus2`, haarat `karttaseppa-<aihe>` origin/v1973-prep:stä.
