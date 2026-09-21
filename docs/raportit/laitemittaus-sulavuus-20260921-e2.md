@@ -96,3 +96,28 @@ koodilukua vaativa jatkoselvitys.
   `<script>`-rivi `index.html`:ään) poistettu työhakemistosta,
   EI committoitu — helppo rakentaa uudelleen tästä raportista jos
   Pelikoodari haluaa toistaa saman mittauksen.
+
+## Kierros 3 — Pelikoodarin liitosdiagnoosi (n. klo 13.36)
+
+Haara `pelikoodari-nimiot-sulavat-e3` (commit `2fcb4440`) lisäsi
+`tila()`-luvut `elementit {datumeja, luotu, liitetty}` ja `css2d
+{loytyi, lapsia}` sekä `window error`/`unhandledrejection`-talteenoton.
+Kaksi peräkkäistä lukemaa (n. 1,5 s välein, sama sivulataus, ei
+kosketuksia):
+
+```json
+{"elementit":{"datumeja":68,"luotu":68,"liitetty":0},
+ "css2d":{"loytyi":true,"lapsia":0},
+ "virheet":[],
+ "domissa":{"nimet":0,"nostot":0},
+ "merkkeja":{"nostot":65,"nimet":2,"peli":1}}
+```
+
+Silmukan `kehyksia`-laskuri kasvoi 364 → 454 kahden luvun välillä, eli
+render-silmukka pyörii koko ajan eikä ole jumissa. **Elementtitehdas
+ajaa onnistuneesti kaikki 68/68 luotua elementtiä, CSS2D-juuri löytyy
+sivulta, mutta sillä on pysyvästi 0 lasta eikä yhtään JS-virhettä
+kirjaudu** — liitos (`CSS2DObject`/`appendChild` CSS2D-juureen) ei
+koskaan tapahdu WebKitissä tässä ketjussa, tai se osuu eri solmuun
+kuin `css2d.loytyi` tarkistaa. Luvut lähetetty suoraan Pelikoodarille
+(ei vielä korjausta tässä raportissa).
