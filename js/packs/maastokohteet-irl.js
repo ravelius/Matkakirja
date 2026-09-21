@@ -221,6 +221,7 @@ export const MAASTOKOHTEET_IRL = [
     },
     nimi: 'Newgrange',
     tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Mitä talvipäivänseisauksena tapahtuu?',
       'Kumpi on vanhempi, Newgrange vai Stonehenge?',
@@ -421,6 +422,7 @@ export const MAASTOKOHTEET_IRL = [
     ],
     nimi: 'Skellig Michael',
     tyyppi: 'kulttuuri',
+    taso: 1,
     kysymykset: [
       'Mitä sana sceilig tarkoittaa?',
       'Miksi saarelle pääsee vain kesällä?',
@@ -521,6 +523,7 @@ export const MAASTOKOHTEET_IRL = [
     ],
     nimi: 'Moherin kalliot',
     tyyppi: 'vuori',
+    taso: 1,
     kysymykset: [
       'Mistä kallioiden nimi tulee?',
       'Miksi vanha linnoitus purettiin?',
