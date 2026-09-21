@@ -603,3 +603,7 @@ Sisältökirjuri 21.9.2026 ilta: visat erä 4 (sisalto-visat-4 4295c210): 45 vis
 ## GL OLETUKSEKSI TEHTY (6aac029d); VANHAT DOM-SAVUKKEET AJAVAT PERAANTYMISTIETA SIIRTYMAAJAN (21.9.2026 klo 18.41)
 
 Pelikoodari 21.9.2026 ilta: GL oletukseksi (pelikoodari-gl-nimiot 6aac029d), Julkaisijalle. ?glnimiot=0 = CSS2D-perääntymistie; ilman WebGL-tekstuuria runkoa ei synny ja kaikki jää CSS2D:hen; rungon kaatuessa se puretaan ja nimet palaavat CSS2D:hen samassa kehyksessä. GL-savukkeet mittaavat oletustilan; 25 vanhaa DOM-savuketta ajavat toistaiseksi perääntymistietä (&glnimiot=0) ja siirretään GL-mittareihin vaiheiden valmistuessa. Vaihe 3 (nostot ikoni+nimiö rungolle, kylkivaihdon crossfade) koodattu, odottaa savuketta, tulee omana eränä oletukseksi heti.
+
+## CODEX TYOSTAA 21.9. TILAUKSIA, ENSIMMAISET KUVAT TULOSSA (21.9.2026 klo 19.22)
+
+Omistaja 21.9.2026 ilta: Codex on lukenut tilaukset ja on vain hidas; ensimmäiset pienoismalli- ja monumenttikuvat ovat tulossa pian. Ei uusintatilausta. Postivahti ilmoittaa Fablelle toimituksista; Julkaisija hakee, Sisältökirjuri kytkee.
