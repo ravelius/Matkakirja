@@ -95,6 +95,7 @@ export const HAHMOTELMA_IRL = [
     ],
     nimi: 'Killarney',
     tyyppi: 'jarvi',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Mikä on Killarneyn järvistä suurin?',
@@ -641,6 +642,7 @@ export const HAHMOTELMA_IRL = [
     ],
     nimi: 'Cobh (Queenstown)',
     tyyppi: 'merenkulku',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Millä nimellä Cobhia kutsuttiin vuosina 1849–1920?',
@@ -751,6 +753,7 @@ export const HAHMOTELMA_IRL = [
     ],
     nimi: 'Blarney',
     tyyppi: 'historia',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Kuka suku rakennutti Blarneyn nykyisen tornin?',
