@@ -74,14 +74,61 @@ epäonnistunut HTTP/2-pyyntö ei kaada koko palvelinta.
   `<script>`-rivi `index.html`:ään) poistettu työhakemistosta, EI
   committoitu.
 
+## Päivitys — zoomi mitattu (n. klo 14.05), kaatumisbugi korjattu
+
+Pelikoodari korjasi laitepalvelimen (commit `32837f8d`: ämpärin
+virran virhe ei enää kaada koko prosessia, vain sen pyynnön) ja
+ehdotti kahta jatkoa: (a) kamera-ajolla mitattu zoomi, sama menetelmä
+kuin `savuke-nimiot-sulavat.mjs`, ja (b) tarkennettu kaksisormiveto
+(sormet ≥ 40 px erillään, symmetrinen liike kotelon keskipisteen
+ympäri, 1,5 s, 8 pistettä) sen selvittämiseksi, onko aiempi
+nollatulos simulaattorin injektio-ongelma vai pelin oma
+eletunnistus.
+
+### Zoomi kamera-ajolla — TOIMII, luvut lähellä Macia
+
+```json
+{"kehyksia":67,"fps":37,
+ "siirtyma":{"mediaani":0.13,"p95":0.33,"n":2435,
+   "pahin":{"avain":"hahmotelma-beaune","ero":34.73,"t":1784}},
+ "koko":{"liikkui":59,"liikkuiJaKokoMuuttui":51,"osuus":0.86,
+   "lepoaskel":0,"liikeaskel":0}}
+```
+
+Pelikoodarin Mac-vertailuluvut olivat mediaani 0,1–0,2 px, p95
+0,33 px, koon osuus 0,97, liikeaskel 0. **iPadin p95 (0,33 px) osuu
+täsmälleen Macin lukuun**, mediaani (0,13 px) on samaa
+suuruusluokkaa, ja liikeaskel on 0 molemmilla — ainoa selvä ero on
+koon osuus (0,86 vs. 0,97), eli iPadilla n. 86 % liikkeen kehyksistä
+muutti nimiön kokoa portaattomasti Macin 97 %:iin verrattuna. fps
+(37) on matalampi kuin panorointi (52–56), koska kamera-ajo pitää
+GPU:n kiireisenä koko 1,5 s:n ajan. Yksi poikkeava piikki
+(`hahmotelma-beaune`, 34,73 px, t=1784 ms — ajon lopussa) nostaa
+"pahin"-lukua, mutta ei vaikuta mediaaniin/p95:een.
+
+### Kaksisormiveto tarkennetulla parametrilla — EDELLEEN 0
+
+`koko.liikkui: 0` jälleen, vaikka sormet erosivat 60 px:stä 300
+px:iin symmetrisesti 8 pisteellä 1,5 s:n aikana. **Vahvistaa
+Pelikoodarin epäilyn: simulaattorin kaksisormi-injektio ei tuota
+OrbitControlsin odottamia samanaikaisia touch-tapahtumia** — kyse ei
+ole pelin koodista. Oikea nipistys jää siis testaamattomaksi tällä
+työkalulla; kamera-ajo on ainoa toimiva tapa mitata zoomin
+sulavuutta simulaattorilla.
+
+### Ympäristö (päivitys)
+
+- Laitepalvelin päivitetty korjattuun versioon (`32837f8d`) ennen
+  tätä kierrosta, ei kaatunut.
+- Tilapäinen apuskripti `js/laitetestaaja-harness5.js` (+ yksi
+  `<script>`-rivi) poistettu, EI committoitu.
+
 ## Seuraavaksi
 
-1. Pelikoodari: korjaa laitepalvelimen kaatumisbugi (fetch-virheen
-   käsittely).
-2. Selvitä miksi kaksisormiveto ei rekisteröidy zoomiksi — kokeile
-   ehkä pidempää/eri tahtista pistejoukkoa, tai vahvista onko kyse
-   simulaattorin tunnetusta kosketusrajoitteesta.
-3. iPhone-vertailu samalla menetelmällä, kun zoomi saadaan
-   mitattua molemmilla.
-4. Sen jälkeen kierros 22 loppuun (löytämisen sumu, kartuschan
+1. iPhone-vertailu samalla menetelmällä (panorointi sormivedolla,
+   zoomi kamera-ajolla) — molemmat mittarit ovat nyt toimivia.
+2. Kaksisormi-injektion rajoite kannattaa kirjata Raamattuun/
+   opetuksiin (sama perhe kuin aiemmat "kuollut nappi" -löydökset),
+   jottei sitä selvitetä uudelleen.
+3. Sen jälkeen kierros 22 loppuun (löytämisen sumu, kartuschan
    tap-through, uusi pyramidi).
