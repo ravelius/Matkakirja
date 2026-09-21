@@ -443,9 +443,31 @@ export function merkinKerroin(d) {
  */
 export const NOSTON_TASO1_KERROIN = 1.3;
 
-/** Merkin ruudun kerroin: kuvamerkillinen ykköstaso on isompi ruutu. */
+/*
+ * ══ TYYPPIMERKIT LÄHIZOOMISSA (omistajan päätös 21.9.2026 klo 23.05,
+ * Fable: *"nostojen karttamerkit takaisin"*) ═══════════════════════
+ *
+ * z8:sta lähemmäs (kartan kerroin ≥ NOSTOJEN_TYYPPIMERKIN_KERROIN, sama
+ * kerroin kuin nimiön katolla: kaksi zoomiporrasta saapumisnäkymästä)
+ * JOKAINEN nosto saa tyyppinsä Codexin kuvamerkin (js/fokusnosto-
+ * symbolit.js NOSTOSYM_KUVAMERKIT, 11 tyyppiä) pisteen tilalle
+ * tavallisessa merkkikoossa (ruudun kerroin 1); kauempana piste kuten
+ * ennen. Ykköstaso pysyy 1,6-kertaisena kaikilla zoomeilla. Tyypille,
+ * jolla ei ole merkkiä, jää piste. Siirtymä piste → merkki on rasterin
+ * vaihto, jonka GL-sovitin häivyttää ristiin kuten nimiön kylkivaihdon
+ * (glnimiot-sovitin.js `#ikoni-vanha`). Sovittelun laatikot lukevat
+ * saman ruudun kertoimen (ruudunKerroin), joten ykköstason merkki varaa
+ * isomman tilan ja tavallinen merkki pisteen tilan.
+ */
+export const NOSTOJEN_TYYPPIMERKIN_KERROIN = 4;
+/** Ovatko tyyppimerkit käytössä kartan kertoimella (z8 ja lähempänä). */
+export function tyyppimerkitKaytossa(kerroin) {
+  return Number.isFinite(kerroin) && kerroin >= NOSTOJEN_TYYPPIMERKIN_KERROIN;
+}
+
+/** Merkin ruudun kerroin: kuvamerkillinen YKKÖSTASO on isompi ruutu; muu kuvamerkki pisteen ruudussa. */
 export function ruudunKerroin(d) {
-  return d?.kuvamerkki && !d?.poltettu ? NOSTOSYM_KUVAMERKIN_KERROIN : 1;
+  return d?.kuvamerkki && d?.taso === 1 && !d?.poltettu ? NOSTOSYM_KUVAMERKIN_KERROIN : 1;
 }
 
 /*
@@ -1280,9 +1302,10 @@ export function asetteleNosto(el, d) {
   const puoli = d.puoli ?? 'oikea';
   // Ykköstaso: kuvamerkki ja tummempi muste (ks. NOSTOJEN TASOT).
   const taso1 = d.taso === 1 && !d.poltettu;
-  const kuvamerkki = taso1 ? (d.kuvamerkki ?? null) : null;
+  // Kuvamerkki: ykköstaso aina, muut lähizoomissa (TYYPPIMERKIT LÄHIZOOMISSA).
+  const kuvamerkki = !d.poltettu ? (d.kuvamerkki ?? null) : null;
   const resepti = `${d.kategoria ?? ''}|${d.symLaji ?? ''}|${puoli}|${nimio}`
-    + (taso1 ? `|taso1|${kuvamerkki ?? ''}` : '');
+    + (taso1 || kuvamerkki ? `|${taso1 ? 'taso1' : ''}|${kuvamerkki ?? ''}` : '');
   if (g.dataset.resepti !== resepti) {
     /*
      * KYLKI VAIHTUU HÄIVYTTÄMÄLLÄ, EI HYPPÄÄMÄLLÄ (KARTAN SULAVUUS ENSIN,
@@ -1901,7 +1924,9 @@ export function luoNostot({
           // NOSTOJEN TASOT (ks. lohko yllä): taso datasta, kuvamerkki
           // tyypistä; sama kenttä kulkee datumiin ja laatikoihin.
           taso: kohde.taso === 1 || kohde.taso === 3 ? kohde.taso : 2,
-          kuvamerkki: kohde.taso === 1 ? nostosymKuvamerkki(m.kategoria, m.laji) : null,
+          // Tyyppimerkit lähizoomissa (ks. TYYPPIMERKIT LÄHIZOOMISSA): kaikille.
+          kuvamerkki: kohde.taso === 1 || tyyppimerkitKaytossa(nostonKarttakerroin)
+            ? nostosymKuvamerkki(m.kategoria, m.laji) : null,
           // Löytämisen sumu: luonnos, kunnes löydetty (ks. keraa).
           luonnos: luonnos(m.id, kohde.taso === 1 ? 1 : 2, a.lat, a.lon),
           /*
@@ -3887,6 +3912,8 @@ export function luoNostot({
         kaupunki: Boolean(datum.kaupunki),
         este: r.perhe === 'aihemerkki',
       })),
+      // Muiden nostojen ikonit ovat esteitä (sovittelu.js IKONIT OVAT
+      // ESTEITÄ): sovittelu lukee ne lapun omasta laatikosta (nimio: false).
       esteet: kiinteat.length ? [...nimet, ...kiinteat] : nimet,
       lukot: sovitellutAsennot,
       reuna: reunaNyt,
@@ -4260,6 +4287,8 @@ export function luoNostot({
     portti: () => (portti ? { ...portti, uloinOsuus: viimeisinUloinOsuus } : null),
     /** Kiinteän musteen laatikot nimiladonnan varauksiksi (ks. paivita). */
     laatikot: () => laatikot,
+    /** Kartan kerroin viime ladonnassa (savukkeet: tyyppimerkit, katto). */
+    karttakerroin: () => nostonKarttakerroin,
     /**
      * Ikonien laatikot MERKKIEN OMISSA paikoissa, ilman sovittelun
      * siirtoja (ks. omatLaatikot yllä). Turisti-infon kyltin asento

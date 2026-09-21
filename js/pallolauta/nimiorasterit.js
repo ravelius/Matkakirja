@@ -255,7 +255,8 @@ export async function rasteroiNappula(ui, {
  */
 export function nostonReseptit(d) {
   const taso1 = d.taso === 1 && !d.poltettu;
-  const kuvamerkki = taso1 ? (d.kuvamerkki ?? null) : null;
+  // Kuvamerkki: ykköstaso aina, muut lähizoomissa (nostot.js TYYPPIMERKIT LÄHIZOOMISSA).
+  const kuvamerkki = !d.poltettu ? (d.kuvamerkki ?? null) : null;
   return nostosymReseptit(d.kategoria, d.nimi ?? '', d.symLaji, d.puoli ?? 'oikea', {
     kuvamerkki, ruutuKerroin: ruudunKerroin(d), tumma: taso1,
   });
