@@ -64,7 +64,7 @@ import {
   NOSTOSYM_KUVAMERKIN_KERROIN,
   NOSTOSYM_MINI_R, NOSTOSYM_MINI_RUUTU, NOSTOSYM_MITAN_KATTO, NOSTOSYM_NIMIO_KATTO_PX,
   NOSTOSYM_NIMIO_KOKO,
-  nostosymAsetaPorras, nostosymKatettuMitta, nostosymKuvamerkki, nostosymNimioAsemointi,
+  nostosymAsetaPorras, nostosymKatettuMitta, nostosymKuvamerkki, nostosymMitanKatto, nostosymNimioAsemointi,
   nostosymNimioMitta, nostosymPaakategoria, nostosymVirkistaRasterit, piirraNostosymKartalle,
   piirraNostosymNimio,
 } from '../fokusnosto-symbolit.js';
@@ -80,7 +80,7 @@ import { pallonNostoOnPoltettu } from '../pallo.js';
 // nostokerros kysyy vain pallon luetteloa (tests/pallonimet.test.mjs).
 import { KOHDEMAAN_NIMIOT_ELAVINA, pyramidinMerinimet } from '../pallo.js';
 import { PALLOLAUDAN_LEVEYS } from './kamera.js';
-import { nimenKarttakerroin } from './nimet.js';
+import { asetaKuorenKatto, nimenKarttakerroin } from './nimet.js';
 import { sovitteleLaput, laatikkoSisalla } from './sovittelu.js';
 import {
   kaydytKaupungit, loytosateella, merkitseLoydetyksi, nostoLoydetty, sumuPaalla,
@@ -559,6 +559,14 @@ export const NOSTON_MITAN_KATTO = NOSTOSYM_MITAN_KATTO;
  */
 export function nostonMitta(omaKerroin = 1) {
   return nostosymKatettuMitta(NOSTON_MITTA * nostonKarttakerroin * omaKerroin);
+}
+/**
+ * Sama mitta ILMAN kattoa — kuoren liukuvaa kerrointa varten
+ * (js/pallolauta/nimet.js asetaKuorenKatto: katto lasketaan kehys
+ * kerrallaan min(raaka · kerroin, katto)).
+ */
+export function nostonRaakaMitta(omaKerroin = 1) {
+  return NOSTON_MITTA * nostonKarttakerroin * omaKerroin;
 }
 
 /*
@@ -1185,6 +1193,9 @@ export function asetteleNosto(el, d) {
   const dy = d.dy ?? 0;
   const mitta = d.mitta ?? nostonMitta();
   g.style.transform = `translate(${dx.toFixed(2)}px, ${dy.toFixed(2)}px) scale(${mitta.toFixed(4)})`;
+  // Kuori liukuu kehyksittäin kattoon asti (nimet.js KOKO LIUKUU JOKA
+  // KEHYKSESSÄ); raaka mitta tulee datumista, muuten pohja = raaka.
+  asetaKuorenKatto(el, { mitta, mittaRaaka: d.mittaRaaka, katto: nostosymMitanKatto() });
   /*
    * LIUSKAN ANKKURI EI PIIRRA MERKKIA (PAATOKSET 34, kerrosraja).
    * Kaupungin oma merkki ja nimi tulevat laudalta; ankkuri on pelkka
@@ -2867,6 +2878,7 @@ export function luoNostot({
     datumit = naytetaan.map((r) => (r.perhe === 'aihemerkki' ? {
       avain: r.avain,
       mitta: mittaNyt,
+      mittaRaaka: nostonRaakaMitta(),
       laji: 'nosto',
       id: r.id,
       perhe: r.perhe,
@@ -2908,6 +2920,7 @@ export function luoNostot({
       // ruutupikselikatto katkaisee molemmat samaan 16 px:iin
       // (ks. NIMIÖLLÄ ON RUUTUPIKSELIKATTO).
       mitta: nostonMitta(merkinKerroin(r)),
+      mittaRaaka: nostonRaakaMitta(merkinKerroin(r)),
       kaupunki: Boolean(r.kaupunki),
       poltettu: Boolean(r.poltettu),
       laji: r.perhe === 'piste' ? 'piste' : 'nosto',

@@ -1681,6 +1681,10 @@ function nimiokattoKaytossa() {
 export function nostosymKatettuMitta(mitta) {
   return nimiokattoKaytossa() ? Math.min(NOSTOSYM_MITAN_KATTO, mitta) : mitta;
 }
+/** Voimassa oleva mitan katto: NOSTOSYM_MITAN_KATTO, tai Infinity kun katto on pois. */
+export function nostosymMitanKatto() {
+  return nimiokattoKaytossa() ? NOSTOSYM_MITAN_KATTO : Infinity;
+}
 
 /**
  * NIMIÖN ASUT — samat kaksi kuin lehteen poltetuilla nimillä.
