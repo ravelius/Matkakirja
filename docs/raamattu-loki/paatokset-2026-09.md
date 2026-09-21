@@ -803,3 +803,7 @@ Sisältökirjuri 21.9.2026 ilta (docs/raportit/kartuscha-era-b-yhteenveto-202609
 ## JULKAISIJA NOLLATAAN (72 %); WORKTREE Matkakirja-julkaisija; PR #2687:N CI EI KAYNNISTY (21.9.2026 klo 23.22)
 
 Fable 21.9.2026 klo 23.22: Julkaisijan luovutus docs/raportit/viesti-julkaisija-luovutus-20260921-ilta.md (haarassa sisalto-kartuscha-bih). Worktree siirretty /Users/samireivinen/Matkakirja-julkaisija (vanha Matkakirja-sonnet3 symlinkki). Julkaisija nollataan Fablen kaavalla. Avoin: PR #2687:n CI ei käynnistynyt kolmella pushilla — uusi Julkaisija selvittää (workflow-polkurajaus? pull_request-laukaisu? haara docs-only?).
+
+## LINSSIKATALOGI JULKAISTAAN ILMAN KORTTIA KORJAUSTEN JALKEEN; MAAKUNTALUONNEHDINTA 1-2 VIRKETTA, PULU KERTOO LISAA (21.9.2026 klo 23.28)
+
+Omistaja 21.9.2026 klo 23.35: linssikatalogin saa julkaista yöllä ilman korttia, kun kolme korjausta (tilat tarkistettu, merkit yksinkertaiset, yö- ja päivätila) on tehty; Fable katsoo kaappaukset. Maakuntien luonnehdinnan mitta hyväksytty: 1–2 virkettä, enintään 160 merkkiä, Livian ääni. Lisäys: pulu voi kertoa maakunnasta lisää — karttatyökalun Maakunnat-tilassa luonnehdinnan vieressä pulun nappi, joka avaa pulun keskustelun alueesta (2–3 valmista kysymystä esikirjoitetuin vastauksin, kuten Ihmisen matkassa); Sisältökirjuri kirjoittaa luonnehdintojen jälkeen erillisenä eränä.
