@@ -53,8 +53,8 @@ const NIMI_FI = {
   },
   GBR: { England: 'Englanti', Scotland: 'Skotlanti', Wales: 'Wales', 'Northern Ireland': 'Pohjois-Irlanti' },
   POL: {
-    'Silesian': 'Sleesia', 'Lesser Poland': 'Vähä-Puola', 'Subcarpathian': 'Alakarpatia', 'Lower Silesian': 'Ala-Sleesia',
-    'Opole': 'Opole', 'Podlachian': 'Podlasia', 'Warmian-Masurian': 'Varmia-Masuria', 'Lubusz': 'Lubusz',
+    'Silesian': 'Sleesia', 'Lesser Poland': 'Vähä-Puola', 'Subcarpathian': 'Podkarpackie', 'Lower Silesian': 'Ala-Sleesia',
+    'Opole': 'Opole', 'Podlachian': 'Podlasia', 'Warmian-Masurian': 'Varmia-Masuria', 'Lubusz': 'Lubuskie',
     'West Pomeranian': 'Länsi-Pommeri', 'Lublin': 'Lublin', 'Pomeranian': 'Pommeri', 'Masovian': 'Masovia', 'Łódź': 'Łódź',
     'Kuyavian-Pomeranian': 'Kujavia-Pommeri', 'Greater Poland': 'Suur-Puola', 'Świętokrzyskie': 'Świętokrzyskie',
   },

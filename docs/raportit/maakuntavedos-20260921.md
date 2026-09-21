@@ -135,7 +135,7 @@ Valencia, Baskimaa), POL 1 (Pommeri). Abruzzo ja Molise jäävät, vaikka 1873-n
 - **ITA** (6): Emilia-Romagna, Trentino-Alto Adige, Abruzzo, Friuli-Venezia Giulia, Molise (pieni), Aostanlaakso (pieni)
 - **ESP** (7): Kastilia ja León, Kastilia-La Mancha, Madrid (pieni), Kantabria, La Rioja, Ceuta (pieni), Melilla (pieni)
 - **GBR** (4): Englanti, Skotlanti, Wales, Pohjois-Irlanti
-- **POL** (15): Masovia, Suur-Puola, Varmia-Masuria, Länsi-Pommeri, Lublin, Podlasia, Ala-Sleesia, Łódź, Kujavia-Pommeri, Alakarpatia, Vähä-Puola, Lubusz, Sleesia, Świętokrzyskie, Opole
+- **POL** (15): Masovia, Suur-Puola, Varmia-Masuria, Länsi-Pommeri, Lublin, Podlasia, Ala-Sleesia, Łódź, Kujavia-Pommeri, Podkarpackie, Vähä-Puola, Lubuskie, Sleesia, Świętokrzyskie, Opole
 - **AUT** (9): Ala-Itävalta, Steiermark, Tiroli, Ylä-Itävalta, Kärnten, Salzburg, Burgenland, Vorarlberg, Wien (pieni)
 - **CHE** (26): Graubünden, Bern, Valais, Vaud, Ticino, St. Gallen, Zürich, Fribourg, Luzern, Aargau, Uri (pieni), Thurgau, Schwyz (pieni), Jura, Neuchâtel, Solothurn, Glarus (pieni), Basel-Landschaft, Obwalden (pieni), Schaffhausen (pieni), Geneve (pieni), Nidwalden (pieni), Zug (pieni), Appenzell Ausserrhoden (pieni), Appenzell Innerrhoden (pieni), Basel-Stadt (pieni)
 
@@ -153,9 +153,10 @@ korvattu koeversiolla `vedos4-nykyalueet`, nimiölaatat reititetty koekansiosta.
    ruostenimiä tulee vain 6–7; rajat piirtyvät kaikille. Kuva näyttää siis
    ensisijaisesti RAJAT kulttuurinimien alla.
 2. GBR: kaksi rajaa (Englanti–Skotlanti, Englanti–Wales), neljä nimeä.
-3. Puola ja Itävalta saavat täyden sarjan (15 + 9 nimeä); Puolan voivodikuntien
-   nimet ovat suomennoksia (Masovia, Suur-Puola, Vähä-Puola, Alakarpatia …) — vaihtoehto
-   puolankieliset (Mazowieckie …), Sisältökirjuri päättää.
+3. Puola ja Itävalta saavat täyden sarjan (15 + 9 nimeä). Sisältökirjuri tarkisti
+   nimet 21.9. ilta: ITA/ESP/GBR/AUT OK; Abruzzo ja Molise pidetään erillisinä
+   (nykymaakuntataso, ei 1873-erikoiskohtelua); Puolassa kaksi puolankieliseksi, koska
+   suomennos ei ole vakiintunut: Alakarpatia → Podkarpackie, Lubusz → Lubuskie.
 4. Käsin säädetyt paikat (KASIN) 24 nimelle; loput keskipisteessä.
 
 EI polttoa ennen omistajan korttia. Tuotantoon: nimiötason uusintapoltto
