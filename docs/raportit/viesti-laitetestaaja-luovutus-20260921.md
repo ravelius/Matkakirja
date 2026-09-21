@@ -1,195 +1,172 @@
 # Laitetestaaja → seuraava Laitetestaaja-sessio: luovutus
 
-21.9.2026 n. klo 07.10 Suomen aikaa. Edellinen luovutus:
-`docs/raportit/viesti-fable-luovutus-20260920.md` (osio
-"Laitetarkistukset", Sonnet 1:lle). Tämä sessio ("Laitetestaaja",
-UUSI SESSIOSETTI 20.9.2026 klo 18.01, ks. Raamattu-loki) ajoi
-kierrokset 19, 19b, 20, 20b, 21 ja 21b.
+21.9.2026 n. klo 19.50 Suomen aikaa. Fablen pyynnöstä (konteksti 70 %),
+omistaja nollaa session tämän jälkeen. Uusi sessio jatkaa tästä. Tämä
+raportti KORVAA saman nimen aiemman version (07.10, ennen tämän
+istunnon työtä).
 
-## Lue ensin
+## Mitä ehdittiin tässä istunnossa (kronologisesti)
 
-1. `CLAUDE.md`, `docs/roolitus.md`
-2. `docs/raamattu-loki/paatokset-2026-09-13--09-20.md` — hae
-   "UUSI SESSIOSETTI" (roolit ja worktreet), "TUPLASAAPUMINEN"
-   (Berliini↔Rooma-luentavika, ei toistunut millään menetelmällä
-   tähän mennessä).
-3. Tämä raportti kokonaan ennen työn aloitusta.
+1. **Sulavuusmittaus (iPad)**: pitkä juurisyyselvitys — nimiöt/nostot
+   eivät syntyneet DOM:iin esisiemennetyllä tallenteella, sitten
+   CORS-este (tekstuurilla ei `access-control-allow-origin`-otsaketta),
+   lopulta Pelikoodarin `tools/laitepalvelin.mjs`-proxy korjasi sen.
+   Tulos: panorointi 0 px mediaani/p95, zoomi (kamera-ajolla)
+   p95 0,33 px — täsmäsi Macin vertailulukuun. Raportit:
+   `docs/raportit/laitemittaus-sulavuus-20260921.md`,
+   `-e2.md`, `-tulos.md` (kaikki haarassa `laitetestaaja`).
+2. **iPhone-vertailu + kierros 22 v2004** (Mac-uudelleenkäynnistyksen
+   jälkeen): heilunta panoroidessa — ei havaittu millään laitteella.
+   Meren vilkkuminen zoomatessa — löysin todennäköisen syyn: koon
+   liukuvuus (`koko.osuus`) putoaa 0,80:stä 0:aan syvässä
+   zoomausvaiheessa, toistuen identtisesti iPhonella JA työpöydällä.
+   Nostojen näkyvyys z6: hyvä työpöydällä (kuvin vahvistettu), iPhonella
+   epävarma (kuvakaappaukset näyttivät samalta zoomivaiheiden välillä —
+   ei ehditty varmistaa onko kyse aidosta piirto-ongelmasta).
+   Raportti: `docs/raportit/laitekierros-v2004-iphone-vertailu.md`.
+3. **GL-nimiöt vs CSS2D (v2014, `?glnimiot=0` vs oletus)** — KESKEN,
+   ks. alla.
 
-## Tila
+## GL-nimiöt-vertailu: tila kesken
 
-- Tuotanto: **v1985** (`bd024453`, "GSHHG-rantaviiva, nostotasot,
-  huntu liikkeen ajan").
-- Tässä vuorossa julkaistut versiot (Julkaisijan tekemät, en itse
-  julkaissut mitään):
+Omistajan päätös 21.9.2026 ilta: GL-nimiöt (WebGL-piirto CSS2D:n
+sijaan, `js/pallonimiot-gl.js`) tuli tuotantoon OLETUKSENA v2014:ssä
+(PR #2667). Julkaisija ilmoitti "glnimiot tuotannossa" ja Fable pyysi
+vertailun: kaupunkinimien terävyys/paikka, CSS2D-siirtymän näkyvyys
+ilmestyessä, kehysaika pan/zoom, muisti — iPadilla, iPhonella JA
+Chromium-työpöydällä, samasta kohdasta (Ranska z6, Marseille z8),
+oletustila vs. `?glnimiot=0`.
 
-  | Versio | Sisältö |
-  | --- | --- |
-  | v1980–v1983 | joet, nimiöt, nostokortti-karuselli, kohdemaan nimiöt elävinä, himmeä reittiverkko, lähderivin poisto |
-  | v1985 | GSHHG-rantaviiva, nostotasot, huntu liikkeen ajan |
+**Menetelmä**: Pelikoodarin `tools/laitepalvelin.mjs` lainattu
+paikallisesti (EI committoitu — ei minun tiedostoni, ei vielä
+mainissa). Tilapäinen apuskripti `js/laitetestaaja-harness7.js`
+(EI committoitu): `?lauta=pallo&dev=marseille[&glnimiot=0]`,
+`pointOfView` Ranska (46.5, 2.5, alt 0.035) ja Marseille (43.30, 5.37,
+alt 0.012), `ui.pallolauta.sulavuus` + uusi `tila().kerros`/`sovitin`
+(Pelikoodarin GL-diagnostiikka) + `performance.memory` (vain Chromium).
 
-## Pushatut raportit (haara `laitetestaaja`, origin/v1973-prep pohjalta)
+### iPad Pro 11" (M5) — VALMIS
 
-Kaikki committoitu ja pushattu, ei avoimia PR:iä (en tee mergejä):
+| | GL (oletus) | CSS2D (`glnimiot=0`) |
+| --- | --- | --- |
+| Ranska z6 fps | 56,9 | 60,3 |
+| Marseille z8 fps | 58,7 | 60 |
+| nimia (Ranska/Marseille) | 0 / 1 | 0 / 1 |
+| virheet | [] | [] |
 
-- `docs/raportit/laitekierros-19-20260920.md` — hitchhike-kaaret,
-  saapumisen piilot OK; joet-löydös oli jo tiedossa
-- `docs/raportit/laitekierros-19-nostotyypit-20260920.md` — 11/11
-  nostotyyppiä kontaktiarkkina
-- `docs/raportit/laitekierros-19b-20260920.md` — WebKit-korvike
-  (iPad-lupa jumissa), tuplasaapuminen ei toistunut, Ihmisen matkan
-  kuvat latautuivat
-- `docs/raportit/laitekierros-20-20260920.md` — v1982: nimiöt OK,
-  karuselli OK, Gironde OK, **lähderivi EI poistunut** (silloin)
-- `docs/raportit/laitekierros-20b-20260920.md` — v1983: **Camarguen
-  hevoset/Camarguenvarsa-nimiöt limittyvät** (vahvistettu kahdesti),
-  lähderivi korjattu, himmeä reittiverkko OK
-- `docs/raportit/laitekierros-21-20260921.md` (+ kierros 21b samassa
-  tiedostossa) — v1985: joet/meri/nimiöt/nostotaso-1 OK, kaupunkiliuska
-  OK, suurennos avautuu oikein; huntu pitkällä siirrolla ja
-  ESP/DEU-zoomi jäivät kesken (ks. alla)
+Kuvakaappaukset Marseillesta (`/tmp/ipad-gl-marseille.png`,
+`/tmp/ipad-css2d-marseille.png` — EI kansiossa, laitteen omassa
+`/tmp`:ssä, hukkuvat jos ei siirretä) olivat **pikselintarkasti
+samat** — ei havaittua terävyys- tai paikkaeroa. fps hieman matalampi
+GL:llä (n. 2–3 kehystä/s), ei käytännön merkitystä.
 
-## Kesken — tee nämä ensin
+### iPhone 18 Pro — VALMIS
 
-1. **Huntu pitkällä siirrolla (lento).** Ei saatu testattua
-   Playwrightilla: saapumisnäkymän satunnaiset sisältökortit (vanha
-   valokuva, Livia-keskusteluikkuna, saapumistraileri) peittävät
-   Liiku-napin eivätkä sulkeudu luotettavasti ohjelmallisesti. Suora
-   `game.actionFly()` ei laukaise oikeaa lento-animaatiota (sama kuin
-   kierros 19b:n tuplasaapumis-jäljitys). **Jatka mieluiten oikealla
-   simulaattorilla**, ei Playwrightilla — jos iPad-lupa on nyt
-   kunnossa (ks. Odottaa omistajan päätöstä), kokeile ensin sitä.
-2. **ESP/DEU yksi zoomitaso + laattojen nostotaso/meri.** Sama este
-   kuin yllä (saapumiskortti ei sulkeutunut ohjelmallisesti). Vain
-   saapumisnäkymä vahvistettu kummastakin maasta.
-3. **Karttasepän himmeät kaaret -fps-mittaus** (haara
-   `karttaseppa-himmeat-kaaret`, ei vielä julkaistu). Siirretty
-   Pelikoodarille: "Liiku"-nappi ei reagoi simulaattorin
-   synteettiseen kosketukseen tällä haaralla, VAIKKA Playwrightin
-   oikea kosketussimulaatio läpäisee saman napin samalla
-   koordinaatilla ja tallenteella — johtopäätös oli, että vika on
-   simulaattorityökalun kosketusinjektiossa, ei pelin koodissa.
-   Odota Pelikoodarin/Karttasepän vastausta ennen jatkoa.
-4. **Nostotaso 3** (näkyy vasta lähizoomilla) — en löytänyt yhtään
-   esimerkkiä millään laitteella tähän mennessä. Voi olla, ettei
-   pinsettizoomi tällä työkalulla yllä riittävän lähelle, tai
-   ettei testatuilla alueilla (Marseille, Carcassonne) ole
-   kolmostason nostoja lainkaan. Kokeile toista aluetta.
-5. **Suurennoksen selausnuoli** (‹/› suurennetun kuvan sisällä) —
-   napautus rekisteröityi mutta laskuri ("1/3") ei näyttänyt
-   edenneen kaappauksessa. Epäselvää, oliko kyse kuvan vaihdon
-   ajoituksesta vai samasta "kuollut nappi" -ilmiöstä.
-6. **Pariisin kaupunkiliuska** — Marseillella toimii varmasti
-   (kartta-canvasin kaupunkinimen napautus, ei DOM-nappi), Pariisissa
-   en saanut sitä auki (osui aina viereiseen nostoon tai
-   päiväkirjatekstiin, koska kartta on tiheä siellä). Ei syytä
-   epäillä bugia, mutta ei myöskään suoraan vahvistettu.
+| | GL (oletus) | CSS2D (`glnimiot=0`) |
+| --- | --- | --- |
+| Ranska z6 fps | 60,1 | 60,1 |
+| Marseille z8 fps | 60 | 60 |
+| nimia (Ranska/Marseille) | 0 / 0 | 0 / 0 |
+| virheet | [] | [] |
 
-## Odottaa omistajan päätöstä / tarkistettavaa
+Täysi 60 fps molemmissa tiloissa, ei eroa. `nimia: 0` molemmilla
+paikoilla — puhelimen kapeampi kotelo (386 px) laskee nimibudjetin
+tässä tarkassa pisteessä nollaan (sama ilmiö molemmilla
+renderöintitavoilla, ei GL-spesifinen).
 
-- **iPad-simulaattorin lupa.** Session aikana iPad Pro 11" (M5)
-  ilmestyi käynnistettynä ilman että minä käynnistin sitä — mahdollisesti
-  omistaja myönsi "Let Claude use it" -luvan tämän kierroksen aikana.
-  En vahvistanut tätä erikseen. **Tarkista ensimmäiseksi**: kokeile
-  `attach` iPadille ilman lupavirhettä. Jos toimii, aja kierros 19b
-  uudelleen oikealla iPadOS-Safarilla (ei WebKit-korvikkeella) ja
-  vahvista tuplasaapuminen + Ihmisen matkan kuvat siellä — Fable
-  pyysi tätä alunperin.
+### Chromium-työpöytä — KESKEN, tärkeä opetus seuraavalle
 
-## Voimassa olevat työtavat (viittaukset, ei kopioita)
+**Ensimmäinen yritys epäonnistui**: Browser-paneelin välilehti ei
+ollut edustalla (`tabs_select` puuttui), ja Chromium pysäyttää
+`requestAnimationFrame`-silmukan TAUSTAVÄLILEHDELLÄ — sulavuusmittari
+sai `kehyksia: 0, fps: 0` molemmista kohdista, vaikka `tila()`-luku
+onnistui. **Opetus: fronttaa välilehti (`tabs_select`) ENNEN
+navigointia ja pidä se edustalla koko mittauksen ajan.**
 
-- `docs/roolitus.md`: rooli "Sonnet — tarkastaja: QA ja mekaaniset
-  työt", viestintäsäännöt (raportti tiedostoon + polku viestinä,
-  ei AskUserQuestionia, ei mergejä).
-- **Tässä vuorossa vakiintunut, EI vielä Raamatussa** (harkitse
-  kirjaamista, jos toistuu jatkossakin): simulaattorin tap/swipe/
-  touch_path-toiminnot eivät luotettavasti aktivoi TIETTYJÄ pieniä
-  DOM-nappeja (monitoimi-nappi "Liiku", kuvasarjan väkäset) — sama
-  koordinaatti toimii Playwrightin oikealla kosketussimulaatiolla
-  mutta ei simulaattorin omalla injektiolla. Muu kosketus (kartan
-  nostomerkit, asetusrattaat, kaupunkinimet) toimii moitteetta
-  molemmilla. Ei koodivika, vahvistettu kahteen kertaan.
+Sain kuitenkin GL-tilan muistilukeman ennen keskeytystä:
+`performance.memory` (Chromium-spesifinen, ei toimi Safarissa/
+WebKitissä lainkaan — iPadin ja iPhonen `muisti` oli aina `null`,
+odotetusti): **usedMB 199, totalMB 251** (Marseille, GL-tila,
+ensimmäinen — mahdollisesti epäluotettava koska sivu ei ollut
+edustalla; toista mittaus puhtaalta pöydältä).
 
-## Ympäristö ja infra
+**Toinen yritys aloitettu** (`tabs_select` + uusi navigointi,
+`&r=2`) mutta KESKEYTYI Fablen luovutuspyyntöön ennen tuloksen
+lukemista. Selaimen välilehti `tab-2` (serverId
+`preview-local_094eb3ef-bf16-4f26-a723-bb162ec63ec3`) saattaa olla
+yhä auki Browser-paneelissa osoitteessa
+`http://127.0.0.1:8791/index.html?lauta=pallo&dev=marseille&r=2` —
+lokaali palvelin (laitepalvelin.mjs) on kuitenkin jo pysäytetty tässä
+istunnossa, joten sivu ei enää lataudu ilman palvelimen uudelleenkäynnistystä.
 
-- Kone: Mac Studio, työkansio `/Users/samireivinen/Matkakirja-sonnet`
-  (worktree, haara `laitetestaaja` ← `origin/v1973-prep`). **Fablen
-  checkoutiin `/Users/samireivinen/Matkakirja-fable` ei kosketa.**
-- Simulaattorit: iPhone 18 Pro (UDID `283EDDD1-56DB-4B84-
-  A148-5E842645957D`, ainoa jota itse käynnistin/sammutin tässä
-  vuorossa). iPad Pro 11" M5 (UDID `6E6B5A9B-9281-4F88-8C10-
-  B60D0D524642`) ilmestyi käynnistettynä kesken session — en
-  sammuttanut, koska en itse käynnistänyt.
-- **Yksi simulaattori kerrallaan, sammuta kierroksen jälkeen** — muistuta
-  Julkaisijaa "simulaattori päällä/pois" -viesteillä joka kerta
-  (perf-savukkeet flakkaavat kuormasta samalla koneella).
-- **Uusi tekniikka, kannattaa säilyttää**: real-simulaattorin
-  localStorage voi kirjoittaa suoraan `sqlite3`:lla (Python)
-  tiedostoon `~/Library/Developer/CoreSimulator/Devices/<UDID>/data/
-  Containers/Data/Application/<container>/Library/WebKit/
-  com.apple.mobilesafari/WebsiteData/Default/<origin-hash>/<origin-
-  hash>/LocalStorage/localstorage.sqlite3` (avain `matkakirja-save-
-  v1`, arvo UTF-16LE-koodattu JSON, `PRAGMA wal_checkpoint(TRUNCATE)`
-  ennen ja jälkeen). Löytää oikean origin-hashin uusimman
-  muokkausajan/sisällön perusteella. Nopeuttaa pelin siirtämistä
-  tiettyyn kaupunkiin huomattavasti verrattuna UI-navigointiin.
-- En koskenut avaimiin (R2, GitHub Actions secrets) — en tarvinnut
-  niitä lukevaan/mekaaniseen työhön.
+### Seuraavalle sessiolle: GL-vertailun loppuunsaattaminen
 
-## Avoimet velat ja opetukset
+1. Lainaa `tools/laitepalvelin.mjs` uudelleen Pelikoodarin haarasta
+   `pelikoodari-laitepalvelin` (tarkista onko mergetty mainiin siihen
+   mennessä — jos on, käytä suoraan).
+2. Rakenna sama apuskripti kuin tässä raportissa kuvattu
+   (`js/laitetestaaja-harness7.js` — sisältö kuvattu yllä, ei
+   tallessa tiedostona, kirjoita uudelleen samalla logiikalla: pikatie
+   → pointOfView Ranska/Marseille → `sulavuus.aloita/yhteenveto` +
+   `tila()` + `performance.memory`, molemmilla `?glnimiot`-arvoilla).
+3. **Chromiumissa: `tabs_select` ennen navigointia, pidä välilehti
+   edustalla koko ajan** (opetus yllä) — muuten `kehyksia: 0`.
+4. Kirjoita raportti `docs/raportit/laitekierros-glnimiot-<pvm>.md`
+   (Fablen pyytämä nimi), sisällytä iPad+iPhone-taulukot tästä
+   raportista + uusi työpöytämittaus, ja kuvakaappaukset (siirrä
+   `/tmp`:stä `docs/raportit/kaappaukset/`-alle ennen committia, jos
+   halutaan säilyttää — laitteen oma `/tmp` ei ole pysyvä).
+5. Ilmoita Fablelle vain polku + kolme riviä (Fablen alkuperäinen
+   ohje).
 
-**Velat:**
-1. Huntu pitkällä siirrolla — ei testattu (ks. Kesken 1).
-2. ESP/DEU yksi zoomitaso + laatat/meri — ei testattu (ks. Kesken 2).
-3. Nostotaso 3 — ei vahvistettu kumpaankaan suuntaan (ks. Kesken 4).
-4. Suurennoksen selausnuoli — epävarma tulos (ks. Kesken 5).
+## Ääni
 
-**Opetukset:**
-1. **Simulaattorin tap-koordinaatit ovat laitepisteinä, eivät
-   kuvapikseleinä** — kaappaus on n. 2,289–3× suurempi (laitteesta
-   riippuen). Jaa luetut pikselit tällä kertoimella ennen tap-kutsua.
-2. **Simulaattorin "oletuskohdelaite" voi vaihtua hiljaa**, jos toinen
-   sessio/omistaja käynnistää toisen laitteen samaan aikaan. Käytä
-   AINA eksplisiittistä `device`-parametria tap/open_url/screenshot-
-   kutsuissa, älä luota siihen että "viimeksi attachattu" pysyy.
-3. **`actionFly()` tai muu suora pelilogiikkakutsu EI korvaa oikeaa
-   UI-animaatiota** (lento, tuplasaapuminen) — testaa nämä aina
-   oikean kosketuspolun kautta (Playwrightin `locator().tap()` tai
-   oikea simulaattori), ei ohittamalla.
-4. **Kun jokin kosketus ei toimi simulaattorilla mutta koodi vaikuttaa
-   oikealta**, testaa SAMA kosketus Playwright/WebKitillä (oikealla
-   `touchscreen.tap()`/`locator().tap()`-hit-testillä, ei pelkällä
-   `.click()`-ohituksella) ennen kuin epäilet koodivikaa — usein kyse
-   on nimenomaan simulaattorityökalun rajoitteesta (ks. "Liiku"-vika
-   yllä).
-5. Saapumisnäkymän satunnaiset sisältökortit (vanhat valokuvat,
-   Livia-keskustelu, saapumistraileri) tekevät tuoreen tallenteen
-   ohjelmallisesta automatisoinnista hauraan — laske aikaa niiden
-   kesyttämiseen tai käytä valmiiksi pidemmälle edennyttä tallennetta.
+Mac Studion kaiuttimet olivat käytössä koko GL-mittauksen ajan
+(`SwitchAudioSource -s "Mac Studio-kaiuttimet"`), **palautettu
+Scarlett Solo USB:hen** tämän luovutuksen kirjoitushetkellä — ei
+tarvetta palauttaa uudelleen seuraavassa sessiossa ellei uutta
+kierrosta aloiteta.
+
+## Simulaattorien ja ympäristön tila
+
+- iPad Pro 11" (M5) ja iPhone 18 Pro: **sammutettu**, Julkaisijalle
+  ilmoitettu joka kerta.
+- `laitepalvelin.mjs`-prosessi: **pysäytetty**.
+- Työkansio `/Users/samireivinen/Matkakirja-sonnet` (worktree, haara
+  `laitetestaaja`), puhdas (`git status` tyhjä tämän committin
+  jälkeen).
+- Ei kosketa avaimiin.
+
+## Kierros 22: vanhat kesken-kohdat (ennallaan, ei uutta tietoa)
+
+Ks. `docs/raportit/laitekierros-22-20260921.md` "Kesken"-osio:
+löytämisen sumu, kartuschan tap-through (satunnaiskortit peittävät
+napautuksia), uusi pyramidi tarkemmin — ei ehditty tässä istunnossa.
 
 ## Aloitusviesti seuraavalle Laitetestaaja-sessiolle
 
 ```
 Olet Laitetestaaja (Sonnet) — Matkakirjan iOS-simulaattori ja
 laitekierrokset. Repo: ravelius/Matkakirja. Työkansio:
-/Users/samireivinen/Matkakirja-sonnet (ÄLÄ koske
-/Users/samireivinen/Matkakirja-fable:hen).
+/Users/samireivinen/Matkakirja-sonnet.
 
 git fetch origin && git checkout -B laitetestaaja origin/laitetestaaja
 
-Lue: CLAUDE.md, docs/roolitus.md,
-docs/raportit/viesti-laitetestaaja-luovutus-20260921.md (tämä
-raportti kokonaan), docs/raamattu-loki/paatokset-2026-09-13--09-20.md
-(hae "UUSI SESSIOSETTI", "TUPLASAAPUMINEN").
+Lue: CLAUDE.md, docs/roolitus.md, TÄMÄ raportti kokonaan
+(docs/raportit/viesti-laitetestaaja-luovutus-20260921.md).
 
-Sitovat säännöt: agentteina vain Opus/Sonnet; raportoi Fablelle vain
-gitillä (tiedosto + polku viestinä, ei AskUserQuestionia); ilmoita
-Julkaisijalle "simulaattori päällä"/"pois" aina kun käynnistät tai
-sammutat; yksi simulaattori kerrallaan; älä mergee äläkä nosta
-versiota itse. Vastaa suomeksi, tiiviisti.
+Sitovat säännöt: agentteina vain Opus/Sonnet; ilmoita Julkaisijalle
+"simulaattori päällä"/"pois" aina; yksi simulaattori kerrallaan; älä
+mergee äläkä nosta versiota itse; Mac Studion kaiuttimet käyttöön
+ennen jokaista simulaattorikierrosta (SwitchAudioSource -s "Mac
+Studio-kaiuttimet"), palauta aiempi laite kierroksen lopuksi. Vastaa
+suomeksi, tiiviisti.
 
-Ensimmäinen tehtävä: tarkista onko iPad-simulaattorin lupa nyt
-kunnossa (ks. luovutuksen "Odottaa omistajan päätöstä"). Jos on, aja
-kierros 19b uudelleen oikealla iPadOS-Safarilla (tuplasaapuminen +
-Ihmisen matkan kuvat). Jos ei, jatka luovutuksen "Kesken"-listalta
-tärkeysjärjestyksessä (huntu pitkällä siirrolla, ESP/DEU-zoomi).
+ENSIMMÄINEN TEHTÄVÄ: saata loppuun GL-nimiöt-vertailu (ks. raportin
+"GL-nimiöt-vertailu: tila kesken" -osio) — iPad ja iPhone ovat
+valmiit, työpöytä/Chromium kesken. TÄRKEÄ OPETUS: fronttaa Browser-
+paneelin välilehti (tabs_select) ENNEN navigointia, muuten
+requestAnimationFrame pysähtyy taustavälilehdellä ja mittari antaa
+0 kehystä. Raportti docs/raportit/laitekierros-glnimiot-<pvm>.md,
+Fablelle vain polku + kolme riviä.
 ```
