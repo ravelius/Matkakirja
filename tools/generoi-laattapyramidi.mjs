@@ -2167,7 +2167,8 @@ function nimiotasonLadonnat(mitat) {
       const laatikko = [x - w / 2, y - h / 2, x + w / 2, y + h / 2];
       if (reitti || laatikkoVapaa(laatikko, esteet, ladotut)) { valittu = { x, y, laatikko }; if (sx || sy) siirrettyja += 1; break; }
     }
-    if (!valittu && (koriste || mitat.z <= NIMION_PUDOTUS_Z)) { pudotettuja += 1; continue; }
+    // Nykyalue z7:llä vain jos mahtuu (omistaja 21.9.2026); z8:sta aina.
+    if (!valittu && (koriste || mitat.z <= NIMION_PUDOTUS_Z || (nimio.luokka === 'nykyalue' && mitat.z < 8))) { pudotettuja += 1; continue; }
     valittu ??= { x: l.x, y: l.y, laatikko: l.laatikko };
     const ladonta = { ...l, x: valittu.x, y: valittu.y, laatikko: valittu.laatikko };
     // Alueraja ei ole este: sen laatikko on koko maan kokoinen.

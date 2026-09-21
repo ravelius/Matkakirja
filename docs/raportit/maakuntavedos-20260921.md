@@ -59,3 +59,38 @@ Pelaaja Marseillessa (Ranska kohdemaana) ja Berliinissä (Saksa).
    RHEINLAND-PFALZ): tuotannossa joko toinen tai linssin mukaan.
 4. Tuotantopoltto vaatii vain nimiötason uusintapolton (uusi
    `--nimioversio`), ei pohjaa, viivoja eikä pallosarjaa.
+
+## Vedos 2 (omistaja valitsi a:n; Fable 21.9. iltapäivä)
+
+Kansio `kaappaukset/maakuntavedos-20260921/vedos2/`:
+`<muste>-<alue>-<näkymä>-<lat>_<lng>_<korkeus>.webp`, muste **ruoste** (vaimea
+ruosteenpunainen "toinen muste") tai **sepia** (vaaleampi sepia). Kohdat:
+Pariisi 48.85,2.35 ja 49.7,2.7 (Hauts-de-France/Île-de-France) korkeus 0,05
+(puhelin z8, työpöytä z7), Berliini 52.52,13.4 ja 51.95,12.3 (Saksi-Anhalt/
+Brandenburg); lisäksi 0,2 (z7/z6) näyttämään, että nykyalueet EIVÄT näy
+kaukaa.
+
+Toteutus (samassa haarassa):
+- Kulttuurinimet (1873-nimistön `maakunta`, keskisävy) ennallaan kaikilla
+  tasoilla; nykyalueet uutena luokkana **`nykyalue`**: koot z7 16 / z8 22 px
+  (pieni: z8 18), z7:llä vain jos mahtuu (generaattori pudottaa ilman
+  vapaata paikkaa), z8:sta aina. Harvennetut pienkapiteelit (sanan
+  alkukirjain täysi, muut 0,78; `pienkapiteelienOsat`).
+- Musteet (`NIMION_VARIT`, `RAJAN_VARIT`, rivin `muste`): ruoste
+  rgba(146,66,38) nimet 0,60 / rajat 0,42; sepia rgba(70,48,29) nimet 0,36 /
+  rajat 0,45 (rajat yhtä himmeät kuin vedoksessa 1). Hierarkia: nostot ja
+  kaupungit tummin (elävä kerros), kulttuurinimet 0,58, nykyalueet vaalein.
+- Käsin säädetyt sijainnit 19 nimelle (`vedos2/tee-nimiot2.mjs`, taulukko
+  `kasin`): Hauts-de-France pois Amiensin päältä, Saksi-Anhalt pois
+  Quedlinburgista, Saksi pois Dresdenistä/Meissenistä, Grand Est pois
+  Nancystä, Centre-Val de Loire pois Chambordista jne. Ladonta: 0 pudotettua
+  z6–z8, 14–23 väistöä.
+- Nykyalue, jonka nimi on jo kulttuurinimenä (Bretagne, Normandia,
+  Île-de-France, Korsika, Brandenburg, Schleswig-Holstein, Baijeri, Hessen,
+  Hampuri, Bremen), jätetään pois — sama nimi kahdella musteella olisi
+  virhe; kulttuurinimi kantaa sen. Raja piirtyy silti.
+
+Huomiot: z8:lla rajat ovat 2,2 px ja himmeät, ruoste erottuu paremmin
+kuin sepia maastovärin päällä; nykyalueiden nimet ovat kapiteeleja
+pienempiä ja väistyvät hyvin. Tuotantoon tarvitaan Sisältökirjurin
+nimitarkistus ja nimiötason uusintapoltto (vain `--nimioversio`).

@@ -4148,14 +4148,36 @@ export const NIMION_KOOT = Object.freeze({
   meri: { 4: 14, 5: 18, 6: 24, 7: 34, 8: 46 },
   maakunta: { 5: 13, 6: 17, 7: 24, 8: 32 },
   'maakunta-pieni': { 7: 18, 8: 26 },
+  /*
+   * NYKYALUEET (maakuntavedos 2, omistaja 21.9.2026): nykyiset
+   * hallintoalueet (FRA regionit, DEU osavaltiot) näkyvät vasta z8:sta,
+   * z7:llä vain jos mahtuvat (generaattori pudottaa ilman vapaata
+   * paikkaa). Harvennetut pienkapiteelit: ensimmäinen kirjain täydessä
+   * koossa, loput NIMION_PIENKAPITEELI-osuudessa. Muste on "toinen muste"
+   * — vaimea ruosteenpunainen atlasperinteen tapaan tai vaaleampi sepia
+   * (rivin `muste`: 'ruoste' | 'sepia'); hierarkia: nostot ja kaupungit
+   * tummin, kulttuurinimet keskisävy, nykyalueet vaalein.
+   */
+  nykyalue: { 7: 16, 8: 22 },
+  'nykyalue-pieni': { 8: 18 },
 });
+export const NIMION_PIENKAPITEELI = 0.78;
 /** Harvennus em-yksikköinä (kirjainkorkeudesta). */
 export const NIMION_HARVENNUS_EM = 0.32;
 export const NIMION_FONTTI = '"Liberation Serif", "FreeSerif", serif';
 export const NIMION_VARIT = Object.freeze({
   meri: 'rgba(58, 66, 84, 0.62)',
   maakunta: 'rgba(70, 48, 29, 0.58)',
+  'nykyalue-ruoste': 'rgba(146, 66, 38, 0.60)',
+  'nykyalue-sepia': 'rgba(70, 48, 29, 0.36)',
 });
+/** Aluerajan muste nimien mukaan (rivin `muste`). */
+export const RAJAN_VARIT = Object.freeze({
+  ruoste: 'rgba(146, 66, 38, 0.42)',
+  sepia: 'rgba(70, 48, 29, 0.45)',
+});
+/** Nykyalueen/rajan muste rivistä: 'ruoste' tai 'sepia' (oletus). */
+export const nimionMuste = (nimio) => (nimio?.muste === 'ruoste' ? 'ruoste' : 'sepia');
 
 /**
  * Yhden nimiön ladonta tasolla z.
@@ -4176,6 +4198,18 @@ export const NIMION_VARIT = Object.freeze({
  */
 export const RAJAN_LEVEYDET = Object.freeze({ 6: 1.0, 7: 1.5, 8: 2.2 });
 export const RAJAN_VARI = 'rgba(70, 48, 29, 0.45)';
+
+/** Pienkapiteelien osat: [{ teksti, kerroin }] — sanan alkukirjain 1, muut NIMION_PIENKAPITEELI. */
+export function pienkapiteelienOsat(teksti) {
+  const osat = [];
+  let sananAlku = true;
+  for (const m of [...String(teksti).toUpperCase()]) {
+    const kerroin = sananAlku && /\p{L}/u.test(m) ? 1 : NIMION_PIENKAPITEELI;
+    osat.push({ teksti: m, kerroin });
+    sananAlku = /[\s\-'’]/.test(m);
+  }
+  return osat;
+}
 
 export function nimiotasonLadonta(nimio, z, kaava, px, mittaa) {
   if (nimio.luokka === 'raja') {
@@ -4229,14 +4263,19 @@ export function nimiotasonLadonta(nimio, z, kaava, px, mittaa) {
       laatikko: [x - puoli, y - puoli, x + puoli, y + puoli],
     };
   }
+  const nykyalue = nimio.luokka === 'nykyalue';
   const luokka = nimio.luokka === 'meri' ? 'meri'
-    : (nimio.koko === 'pieni' ? 'maakunta-pieni' : 'maakunta');
+    : nykyalue ? (nimio.koko === 'pieni' ? 'nykyalue-pieni' : 'nykyalue')
+      : (nimio.koko === 'pieni' ? 'maakunta-pieni' : 'maakunta');
   const korkeus = NIMION_KOOT[luokka]?.[z];
   if (!korkeus) return null;
   const teksti = String(nimio.teksti ?? '').toUpperCase();
   if (!teksti) return null;
   const merkit = [...teksti];
-  const leveys = mittaa(teksti, `${korkeus}px ${NIMION_FONTTI}`)
+  // Pienkapiteelit: sanan ensimmäinen kirjain täydessä koossa, loput pienempinä.
+  const leveys = (nykyalue
+    ? pienkapiteelienOsat(teksti).reduce((s, o) => s + mittaa(o.teksti, `${korkeus * o.kerroin}px ${NIMION_FONTTI}`), 0)
+    : mittaa(teksti, `${korkeus}px ${NIMION_FONTTI}`))
     + NIMION_HARVENNUS_EM * korkeus * (merkit.length - 1);
   const kulma = Number(nimio.kulma) || 0;
   // Laatikko kulman kanssa: kierretyn suorakaiteen rajat; merellä
@@ -4488,11 +4527,12 @@ export function piirraNimiotaso(canvas, asetukset) {
     if (projektio?.leveys) siirrot.push(-projektio.leveys * px, projektio.leveys * px);
     for (const d of siirrot) {
       if (x1 + d < GX || x0 + d > GX + W || y1 < GY || y0 > GY + H) continue;
-      const vari = NIMION_VARIT[nimio.luokka === 'maakunta' ? 'maakunta' : 'meri'];
+      const vari = NIMION_VARIT[nimio.luokka === 'maakunta' ? 'maakunta'
+        : nimio.luokka === 'nykyalue' ? `nykyalue-${nimionMuste(nimio)}` : 'meri'];
       if (nimio.luokka === 'raja') {
         ctx.save();
         ctx.translate(d - GX, -GY);
-        ctx.strokeStyle = RAJAN_VARI;
+        ctx.strokeStyle = RAJAN_VARIT[nimionMuste(nimio)] ?? RAJAN_VARI;
         ctx.lineWidth = l.korkeus;
         ctx.lineJoin = 'round';
         ctx.lineCap = 'round';
@@ -4561,11 +4601,19 @@ export function piirraNimiotaso(canvas, asetukset) {
       ctx.textBaseline = 'middle';
       ctx.textAlign = 'left';
       ctx.fillStyle = vari;
-      const merkit = [...String(nimio.teksti).toUpperCase()];
       let t = -l.leveys / 2;
-      for (const m of merkit) {
-        ctx.fillText(m, t, 0);
-        t += ctx.measureText(m).width + NIMION_HARVENNUS_EM * l.korkeus;
+      if (nimio.luokka === 'nykyalue') {
+        for (const o of pienkapiteelienOsat(nimio.teksti)) {
+          ctx.font = `${l.korkeus * o.kerroin}px ${NIMION_FONTTI}`;
+          ctx.fillText(o.teksti, t, 0);
+          t += ctx.measureText(o.teksti).width + NIMION_HARVENNUS_EM * l.korkeus;
+        }
+      } else {
+        const merkit = [...String(nimio.teksti).toUpperCase()];
+        for (const m of merkit) {
+          ctx.fillText(m, t, 0);
+          t += ctx.measureText(m).width + NIMION_HARVENNUS_EM * l.korkeus;
+        }
       }
       // Meren nimen alla kevyt aaltomerkki (omistaja 20.9.2026).
       if (nimio.luokka === 'meri') piirraAaltomerkki(ctx, 0, l.korkeus * 0.95, l.leveys, vari);
