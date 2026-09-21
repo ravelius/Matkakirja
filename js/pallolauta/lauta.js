@@ -1090,6 +1090,8 @@ export const LADONNAN_LIIKEVARAOSUUS = 0.5;
 export const LADONNAN_SIIRTYMAKYNNYS_PX = 120;
 /** Liikkeessä ladonta uudestaan, kun mittakaava on muuttunut tämän verran (kuori kantaa siihen asti). */
 export const LADONNAN_ZOOMIKYNNYS = 1.35;
+/** Kamera on "liikkeessä" (rasterijono, sovittimen lykkäys) tämän ajan viimeisestä muutoksesta. */
+export const LIIKKEEN_IKKUNA_MS = 120;
 /**
  * Ladonnan ajoitus yhdestä kameran muutoksesta: ajetaanko heti ja
  * milloin seuraava perälauta-ajo (ks. LADONTA KULKEE MUKANA).
@@ -4412,7 +4414,15 @@ export async function avaaPallolauta(ui) {
   let lepoladonta = false;
   const eleKaynnissa = () => Boolean(eleet.sormet.alhaalla || eleet.sormet.nipistys
     || kamera.kameraAjossa?.());
-  liikkeessaNyt = eleKaynnissa;
+  /*
+   * LIIKE RASTERIJONOLLE JA SOVITTIMELLE: ele TAI kameran tuore muutos
+   * (kirjaston oma pointOfView-ajo ei näy eleistä eikä kameraAjossa-
+   * lipusta; controls 'change' näkyy joka kehys). Ikkuna on lyhyt, jotta
+   * lepo alkaa heti liikkeen loputtua.
+   */
+  let kameraMuuttuiHetki = -Infinity;
+  liikkeessaNyt = () => eleKaynnissa()
+    || ((globalThis.performance?.now?.() ?? Date.now()) - kameraMuuttuiHetki) < LIIKKEEN_IKKUNA_MS;
   /*
    * ══ LIIKKEESSÄ EI TÄYTTÄ LADONTAA (sulavuus 22.9.2026, ablaatiotikas
    * docs/raportit/sulavuus-ablaatio-20260921.md; Fablen päätös) ═════
@@ -4669,6 +4679,7 @@ export async function avaaPallolauta(ui) {
     return ladoLevossa();
   };
   const ohjaimet = pallo.controls();
+  ohjaimet.addEventListener('change', () => { kameraMuuttuiHetki = globalThis.performance?.now?.() ?? Date.now(); });
   ohjaimet.addEventListener('change', pyydaLadonta);
   // Sormen nousu ilman kameran muutosta (paikallaan pidetty sormi) on
   // myös eleen loppu: lepoladonta sen jälkeen.
