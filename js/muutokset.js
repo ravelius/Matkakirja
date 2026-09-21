@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1994, teksti: 'Sulavuus E2: tukitaso, muistikatto, kerma+sumu' },
   { v: 1993, teksti: 'Ylapalkki piiloon vain vaaka-asennossa' },
   { v: 1992, teksti: 'Hiomassa-linssi ja optikon hyvitys' },
   { v: 1991, teksti: 'Nimioiden sulavuusmittari E1' },
