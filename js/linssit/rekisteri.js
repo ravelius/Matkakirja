@@ -99,10 +99,9 @@ export const HIOMASSA_B = [
   hiomassa('rautatiet', 'Rautatieverkon kasvu'),
   hiomassa('kirjapaino', 'Kirjapainon leviäminen'),
 ];
-/** C. Leikkilinssit (Codexin erä C, 6; Kellot ja Lippuarvaus valmistuivat → tavalliset rivit yllä). */
+/** C. Leikkilinssit (Codexin erä C, 6; Kellot, Lippuarvaus ja Tähtitaivas valmistuivat → tavalliset rivit yllä). */
 export const HIOMASSA_C = [
   hiomassa('yokartta', 'Yökartta'),
-  hiomassa('tahdet', 'Tähtitaivas'),
   hiomassa('muuttolinnut', 'Muuttolinnut'),
   hiomassa('vuodenajat', 'Vuodenajat'),
 ];
@@ -113,7 +112,7 @@ export const HIOMASSA_D = [
   hiomassa('elaimet', 'Maailman eläimet'),
   hiomassa('suurimmat-kaupungit', 'Suurimmat kaupungit'),
 ];
-/** Koko hiomassa-sarja rekisteriin (44 riviä; keksinnöt, kellot ja lippuarvaus ovat valmiita). */
+/** Koko hiomassa-sarja rekisteriin (43 riviä; keksinnöt, kellot, lippuarvaus ja tähdet ovat valmiita). */
 export const HIOMASSA_SARJA = [...HIOMASSA_A, ...HIOMASSA_B, ...HIOMASSA_C, ...HIOMASSA_D];
 
 export const LINSSIT = [
@@ -127,13 +126,14 @@ export const LINSSIT = [
   { tunnus: 'kellot',       manner: null,            ikoni: 'assets/linssit/ikonit/linssi-kellot.webp', tuo: () => import('./kellot.js') },
   // Lippuarvaus: toinen leikkilinssi (21.9.2026).
   { tunnus: 'lippuarvaus',  manner: null,            ikoni: 'assets/linssit/ikonit/linssi-lippuarvaus.webp', tuo: () => import('./lippuarvaus.js') },
+  // Tähtitaivas: kolmas leikkilinssi (21.9.2026); tunnus 'tahdet' on Codexin ikonin nimi.
+  { tunnus: 'tahdet',       manner: null,            ikoni: 'assets/linssit/ikonit/linssi-tahdet.webp', tuo: () => import('./tahtitaivas.js') },
   { tunnus: 'pallo',        manner: null,            tuo: () => import('./pallo.js') },
   // { tunnus: 'leviaminen',   manner: 'africa',        tuo: () => import('./leviaminen.js') },
   // { tunnus: 'maaluvut',     manner: null,            tuo: () => import('./maaluvut.js') },
   // { tunnus: 'muuttoliike',  manner: null,            tuo: () => import('./muuttoliike.js') },
   { tunnus: 'radio',        manner: null,            tuo: () => import('./radio.js') },
   { tunnus: 'satelliitti',  manner: null,            tuo: () => import('./satelliitti.js') },
-  // { tunnus: 'tahdet',       manner: null,            tuo: () => import('./tahdet.js') }, // hiomassa-rivi alla (C)
   { tunnus: 'topografia',   manner: 'southamerica',  tuo: () => import('./topografia.js') },
   // { tunnus: 'tuulet',       manner: 'asia',          tuo: () => import('./tuulet.js') },
   { tunnus: 'vertailu',     manner: null,            tuo: () => import('./vertailu.js') },
@@ -153,8 +153,8 @@ export const LINSSIT = [
    * @2; Codexin 512 px:n PNG-alkuperäiset jäävät toimituskansioon
    * ~/Documents/Codex/<pvm>/linssi-ikonit/, eivät repoon; yhteinen
    * messinkikehys linssi-kehys.webp).
-   * Keksinnöt (B1), Kellot ja Lippuarvaus (C) ovat valmiita linssejä
-   * (rivit yllä) eivätkä toistu tässä.
+   * Keksinnöt (B1) sekä Kellot, Lippuarvaus ja Tähtitaivas (C) ovat
+   * valmiita linssejä (rivit yllä) eivätkä toistu tässä.
    * Kaupunki → tunnus -kytkentä on aarreluettelossa (Sisältökirjuri,
    * js/linssit/aarteet.js LINSSIAARTEET), ei tässä.
    */

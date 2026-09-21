@@ -16,17 +16,19 @@ import { Game } from '../js/game.js';
 import { packById } from '../js/pack.js';
 import { hiomassa, hiomassaNimi, omistetut, tarkistaKynnys } from '../js/linssit/omistus.js';
 
-test('sarja: 19 + 17 + 4 + 4 = 44 hiomassa-riviä, tunnukset yksilöllisiä, valmiit linssit eivät toistu', () => {
+test('sarja: 19 + 17 + 3 + 4 = 43 hiomassa-riviä, tunnukset yksilöllisiä, valmiit linssit eivät toistu', () => {
   assert.equal(HIOMASSA_A.length, 19);
   assert.equal(HIOMASSA_B.length, 17);
-  assert.equal(HIOMASSA_C.length, 4);
+  assert.equal(HIOMASSA_C.length, 3);
   assert.equal(HIOMASSA_D.length, 4);
-  assert.equal(HIOMASSA_SARJA.length, 44);
+  assert.equal(HIOMASSA_SARJA.length, 43);
   const tunnukset = LINSSIT.map((r) => r.tunnus);
   assert.equal(new Set(tunnukset).size, tunnukset.length, 'tunnus toistuu');
   assert.ok(!HIOMASSA_SARJA.some((r) => r.tunnus === 'keksinnot'));
   assert.ok(!HIOMASSA_SARJA.some((r) => r.tunnus === 'kellot'), 'kellot on valmis linssi');
   assert.ok(!HIOMASSA_SARJA.some((r) => r.tunnus === 'lippuarvaus'), 'lippuarvaus on valmis linssi');
+  assert.ok(!HIOMASSA_SARJA.some((r) => r.tunnus === 'tahdet'), 'tahdet on valmis linssi');
+  assert.equal(typeof LINSSIT.find((r) => r.tunnus === 'tahdet')?.tuo, 'function');
   const lippu = LINSSIT.find((r) => r.tunnus === 'lippuarvaus');
   assert.equal(typeof lippu?.tuo, 'function');
   assert.equal(lippu?.ikoni, 'assets/linssit/ikonit/linssi-lippuarvaus.webp');

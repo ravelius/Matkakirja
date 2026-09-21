@@ -295,6 +295,8 @@ const SHELL = [
   './js/linssit/kellot-aika.js',
   './js/linssit/lippuarvaus.js',
   './js/linssit/lippuarvaus-peli.js',
+  './js/linssit/tahtitaivas.js',
+  './js/linssit/tahtitaivas-laskenta.js',
   './js/linssit/ihmisen-matka.js',
   './js/linssit/ihmisen-matka-data.js',
   // Livia-pulun valmiit kysymykset ja vastaukset jokaiselle pääjaksolle

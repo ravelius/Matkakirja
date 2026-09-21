@@ -158,6 +158,7 @@ export const XP_STAR = 100;
 export const XP_PUZZLE = 25; // isoisän luonnoskirjan pulma ratkaistu
 export const XP_KELLOT = 20; // Kellot-linssin arvaus oikein (Livian kysymys)
 export const XP_LIPPUARVAUS = 20; // Lippuarvaus-linssin arvaus oikein (Livian kysymys)
+export const XP_TAHTITAIVAS = 20; // Tähtitaivas-linssin tähdistö oikein (Livian kysymys)
 export const XP_EXPLORE = 15; // kaupungin tutkiminen ilman laattaa
 export const EXPLORE_REWARD = 50; // löytöpalkkio oikeasta tutkimisvastauksesta
 export const KAARI_YRITYKSET = 2; // kohtaamista saa yrittää näin monta kertaa
@@ -1213,6 +1214,24 @@ export class Game {
       icon: 'suurennuslasi', sub: maa, tilanne: 'peli.lippuarvaus.oikein',
     });
     return XP_LIPPUARVAUS;
+  }
+
+  /**
+   * TÄHTITAIVAS (Fable 21.9.2026, kolmas leikkilinssi): Livia sytyttää
+   * tähdistön, pelaaja nimeää sen neljästä; oikea tuo XP_TAHTITAIVAS tp.
+   */
+  vastaaTahtitaivaaseen(player, oikein, { tahdisto = '' } = {}) {
+    if (!player || this.phase === 'over') return 0;
+    if (!oikein) {
+      this.say(player.id, `${player.name} arvasi tähdistön väärin (${tahdisto}).`);
+      return 0;
+    }
+    this.awardXp(player, XP_TAHTITAIVAS);
+    this.say(player.id, `${player.name} tunnisti tähdistön (${tahdisto}): +${XP_TAHTITAIVAS} tp.`);
+    this.emit('aid', `Tähdistö tunnistettu: +${XP_TAHTITAIVAS} tp`, {
+      icon: 'suurennuslasi', sub: tahdisto, tilanne: 'peli.tahtitaivas.oikein',
+    });
+    return XP_TAHTITAIVAS;
   }
 
   /**
