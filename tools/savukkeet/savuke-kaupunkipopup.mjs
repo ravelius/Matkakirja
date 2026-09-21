@@ -328,6 +328,9 @@ for (const ruutu of RUUDUT) {
      */
     const kaupunkiPiste = () => sivu.evaluate((id) => {
       const l = window.matkakirja.ui.pallolauta;
+      // Projisointi samasta kamerasta kuin napautuksen säteenjäljitys
+      // (js/pallolauta/lauta.js KAMERAN MATRIISIT TAHDISTETAAN).
+      l.tahdistaKameranMatriisit?.();
       const k = l.kaupunki(id);
       if (!k) return null;
       const p = l.pallo.getScreenCoords(k.lat, k.lon, 0);
@@ -433,6 +436,7 @@ for (const ruutu of RUUDUT) {
       const lepo = await sivu.waitForFunction((id) => {
         const l = window.matkakirja.ui.pallolauta;
         if (l.kamera?.kameraAjossa?.()) { window.__lepoEdellinen = null; return false; }
+        l.tahdistaKameranMatriisit?.();
         const k = l.kaupunki(id);
         const p = k ? l.pallo.getScreenCoords(k.lat, k.lon, 0) : null;
         if (!p) return false;
