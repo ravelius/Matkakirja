@@ -63,10 +63,10 @@ tarve ruudulla on 178 px/aste, joten 8192-kuva riittää Pariisin
 lähizoomiin (kaappaus), 4096 on siinä pehmeä. Chromiumin
 MAX_TEXTURE_SIZE = 8192, joten 8192 on yhden kuvan katto.
 
-**Kuvat eivät ole vielä ämpärissä**: `aws s3 cp` linssit-kansioon estyi
-(auto mode -luokitin, "Production Deploy"); pyydetty omistajalta kortilla.
-Kaappaukset tehtiin paikallisella reitityksellä (media.matkakirja.app →
-levy). Kohdepolku: `matkakirja/linssit/atlaslehti-stieler33-ranska-{8192,4096}-20260921.webp`.
+Kuvat ovat ämpärissä (omistajan lupa kortilla 21.9.2026):
+`matkakirja/linssit/atlaslehti-stieler33-ranska-{8192,4096}-20260921.webp`,
+mitattu lataus 8192-kuvalle 0,52 s, 4096-kuvalle 0,28 s. Kaappaukset
+tehtiin ennen vientiä paikallisella reitityksellä (sama tiedosto).
 
 ## Kaappaukset (docs/raportit/kaappaukset/atlas-vedos-20260921/)
 
