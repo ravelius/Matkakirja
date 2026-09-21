@@ -78,6 +78,11 @@ export async function avaaPikatie(ui, { suljeFokusvirta, ohitaSaapumisluenta } =
   const virheet = [];
   globalThis.__pallonVirheet = virheet;
   globalThis.addEventListener?.('error', (e) => virheet.push(String(e.message ?? e)));
+  // Resurssivirheet (kuva, laatta, skripti) eivät kupli: kaappausvaihe ottaa ne.
+  globalThis.addEventListener?.('error', (e) => {
+    const src = e.target?.src ?? e.target?.href ?? null;
+    if (src && e.target !== globalThis) virheet.push(`resurssi: ${src}`);
+  }, true);
   globalThis.addEventListener?.('unhandledrejection', (e) => virheet.push(String(e.reason?.message ?? e.reason)));
   const onLauta = await odota(() => Boolean(ui.pallolauta));
   if (!onLauta) return { virhe: 'pallolauta ei auennut 90 s:ssa' };
