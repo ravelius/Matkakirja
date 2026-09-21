@@ -223,7 +223,7 @@ export const MINIATYYRIT = {
     Schönbrunn: 'assets/kartat/miniatyyrit/wien-schonbrunn.webp',
     // Karttanostot kohdekartalle (M1/M2, 2.9.2026): kuva on tilattu
     // kuvaputkelta ja ilmestyy ämpäriin — siihen asti merkki on täplä.
-    Vuoristovesijohto: 'wien-vuoristovesijohto',
+    Vuoristovesijohto: 'assets/kartat/miniatyyrit/wien-vuoristovesijohto.webp',
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
@@ -512,12 +512,12 @@ export const MINIATYYRIT = {
     Kallimarmaro: 'assets/kartat/miniatyyrit/ateena-kallimarmaro.webp',
     // Karttanostot kohdekartalle (M1/M2, 2.9.2026): kuva on tilattu
     // kuvaputkelta ja ilmestyy ämpäriin — siihen asti merkki on täplä.
-    'Akropolis-museo': 'ateena-akropolis-museo',
-    'Iliou Melathron': 'ateena-iliou-melathron',
-    Maratonhuijaus: 'ateena-maratonhuijaus',
-    'Elginin marmorit': 'ateena-elginin-marmorit',
-    'Diogeneen astia': 'ateena-diogeneen-astia',
-    'Niken temppeli': 'ateena-niken-temppeli',
+    'Akropolis-museo': 'assets/kartat/miniatyyrit/ateena-akropolis-museo.webp',
+    'Iliou Melathron': 'assets/kartat/miniatyyrit/ateena-iliou-melathron.webp',
+    Maratonhuijaus: 'assets/kartat/miniatyyrit/ateena-maratonhuijaus.webp',
+    'Elginin marmorit': 'assets/kartat/miniatyyrit/ateena-elginin-marmorit.webp',
+    'Diogeneen astia': 'assets/kartat/miniatyyrit/ateena-diogeneen-astia.webp',
+    'Niken temppeli': 'assets/kartat/miniatyyrit/ateena-niken-temppeli.webp',
     'Louis 1896': 'assets/kartat/miniatyyrit/ateena-louis-1896.webp',
   },
   sofia: {

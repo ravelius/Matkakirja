@@ -1708,6 +1708,132 @@ export const EUROPE_ARTIKKELIT = {
   },
 
   /*
+   * VALLETTA (21.9.2026, omistajan päätös 19.9.2026: Malta saa
+   * pelikaupungin Valletta). Teksti on kirjoitettu omin sanoin
+   * en-Wikipedian artikkeleista "Valletta", "History of Malta" ja
+   * "Great Siege of Malta" (luettu 21.9.2026), 1873-näkökulmasta:
+   * brittiläinen kruununsiirtomaa vuodesta 1800/1814, laivastotukikohta
+   * Grand Harbourissa, Krimin sodan sairaalakausi 1854–56, ritarikunnan
+   * perustama linnoituskaupunki 1566 suuren piirityksen 1565 jälkeen,
+   * Pyhän Johanneksen konkatedraali ja Auberge de Castille. Maltan
+   * itsenäisyyttä (1964), tasavaltaa (1974) ja EU-jäsenyyttä (2004) EI
+   * mainita nykyhetken asioina — ne tulevat vasta isoisän matkan
+   * jälkeen.
+   */
+  Valletta: {
+    intro: 'Valletta on brittiläisen Maltan pääkaupunki kapealla '
+      + 'kalkkikiviniemellä Grand Harbourin ja Marsamxett-sataman '
+      + 'välissä. Britit ottivat saaren haltuunsa 1800, ja Pariisin '
+      + 'rauha 1814 vahvisti Maltan **kruununsiirtomaaksi**; kaupunki '
+      + 'on nyt tärkeä laivastotukikohta, josta kuningatar Victorian '
+      + 'laivasto valvoo koko Välimerta.'
+      + '\n\n'
+      + 'Kaupungin perusti 1566 Johanniittaritarikunnan suurmestari '
+      + '**Jean Parisot de Valette**, joka vuotta aiemmin oli '
+      + 'johtanut ritarikunnan puolustusta osmanien nelikuukautista '
+      + '**suurta piiritystä** vastaan. Uusi kaupunki nousi ennen '
+      + 'lähes asumattomalle Sciberrasin niemelle säännölliseen '
+      + 'ruutukaavaan, ja se ympäröitiin niin paksuilla muureilla, '
+      + 'että niiden purkamista on ehdotettu useaan otteeseen '
+      + 'turhaan.'
+      + '\n\n'
+      + 'Kaduilla kohtaavat maltan kieli, italia ja englanti. '
+      + 'Keskustaa hallitsee **Pyhän Johanneksen konkatedraali**, '
+      + 'jonka koruton hiekkakivijulkisivu kätkee ylellisen '
+      + 'sisustuksen, ja ritarikunnan kieliryhmien majataloista '
+      + 'komein, **Auberge de Castille**, toimii nyt sotilashallinnon '
+      + 'rakennuksena.',
+    teksti: 'Ennen ritarikuntaa Vallettan niemi tunnettiin nimellä '
+      + 'Sciberras — kalliokieleke, jolla ei ollut juuri asutusta. '
+      + 'Kun Johanniittaritarikunta oli 1565 torjunut Osmanien '
+      + 'valtavan hyökkäysjoukon nelikuukautisessa suuressa '
+      + 'piirityksessä, suurmestari Jean Parisot de Valette päätti '
+      + 'rakentaa niemelle täysin uuden, paremmin puolustettavan '
+      + 'pääkaupungin entisen Birgun tilalle. Peruskivi laskettiin '
+      + '28. maaliskuuta 1566, ja kaupunki sai suurmestarin mukaan '
+      + 'nimen Valletta.'
+      + '\n\nRitarikunta rakennutti kaupungin säännölliseen '
+      + 'ruutukaavaan ja täytti sen palatseilla, kirkoilla ja '
+      + 'kieliryhmiensä majataloilla eli aubergeilla. Komein niistä, '
+      + 'Auberge de Castille, edustaa Espanjan ja Portugalin '
+      + 'ritareita. Vuonna 1577 valmistui Pyhän Johanneksen '
+      + 'konkatedraali: ulkoa vaatimaton linnoituskirkko, jonka '
+      + 'sisustus on sittemmin katettu kullalla ja marmorilla. '
+      + 'Ritarikunnan valtakausi päättyi, kun Napoleon valtasi '
+      + 'saaren 1798 matkallaan Egyptiin.'
+      + '\n\nMaltalaiset kapinoivat ranskalaisia vastaan ja pyysivät '
+      + 'apua Britannialta, joka otti saaren haltuunsa syyskuussa '
+      + '1800. Pariisin rauha 1814 vahvisti Maltan brittiläiseksi '
+      + 'kruununsiirtomaaksi, ja Vallettasta tuli kuninkaallisen '
+      + 'laivaston tärkeä tukikohta Grand Harbourissa. Krimin sodan '
+      + 'aikana 1854–56 saarelle perustettiin sotilassairaaloita '
+      + 'haavoittuneille, ja Maltaa alettiin kutsua Välimeren '
+      + 'sairaanhoitajaksi. Linnoitusten purkamista on esitetty '
+      + 'useita kertoja 1800-luvulla kaupungin ahtauden '
+      + 'helpottamiseksi, mutta muurit ovat toistaiseksi säilyneet '
+      + 'ehjinä.',
+    lahde: 'Wikipedia (CC BY-SA)',
+  },
+
+  /*
+   * LUXEMBURG (KAUPUNKI) (21.9.2026, omistajan päätös 21.9.2026: Kypros,
+   * Luxemburg ja Malta saavat pelikaupungin). Avain on 'Luxemburg
+   * (kaupunki)', koska 'Luxemburg' on jo maan wiki-avain (COUNTRY_SHAPES
+   * ja MAA_KATEGORIAT.LUX) — sama ratkaisu kuin Pietarilla, Soulilla,
+   * Petralla ja Kuwaitilla. Teksti on kirjoitettu omin sanoin
+   * en-Wikipedian artikkeleista "Luxembourg City", "History of
+   * Luxembourg" ja "Bock (Luxembourg)" (luettu 21.9.2026), 1873-
+   * näkökulmasta: suurherttuakunta henkilöunionissa Alankomaiden
+   * kuningas Vilhelm III:n kanssa, Lontoon sopimus 1867 ja linnoituksen
+   * purku (kesken, kestää 16 vuotta), Bock-kallion perustamistarina
+   * (963), rautateollisuus alkamassa Eschissä. Adolphe-silta (1900–1903)
+   * ja Notre-Damen katedraalin tuomiokirkkoasema (1870, mainitaan vain
+   * ohimennen) EIVÄT ole isoisän matkan aikaan vielä nähtävissä samassa
+   * muodossa kuin nykyään — sama ratkaisu kuin Brysselin Mont des
+   * Artsilla.
+   */
+  'Luxemburg (kaupunki)': {
+    intro: 'Luxemburg on suurherttuakunta, jonka pääkaupunki seisoo '
+      + 'Alzette- ja Pétrusse-jokien kaivamalla kalliolinnakkeella. Maata '
+      + 'hallitsee suurherttuana Alankomaiden kuningas **Vilhelm III** '
+      + 'henkilöunionissa, ja Lontoon sopimus vuodesta 1867 on julistanut '
+      + 'suurherttuakunnan ainaiseksi puolueettomaksi. Kaupunki on '
+      + 'vuosisatoja ollut niin vahva linnoitus, että ranskalainen '
+      + 'sotilasinsinööri Lazare Carnot kutsui sitä maailman parhaaksi '
+      + 'heti Gibraltarin jälkeen — siitä juontuu lempinimi **Pohjoisen '
+      + 'Gibraltar**. Nyt sopimus vaatii koko puolustusjärjestelmän '
+      + 'purkamista, ja työ on ollut käynnissä jo kuusi vuotta.',
+    teksti: 'Luxemburgin kaupunki syntyi Bock-kalliolle, kun kreivi '
+      + 'Siegfried hankki paikan vuonna 963 ja rakensi sille '
+      + 'Lucilinburhuc-nimisen linnan; nimestä juontuu koko maan nimi. '
+      + 'Kallion luonnollinen suoja Alzette-joen mutkassa teki paikasta '
+      + 'halutun, ja vuosisatojen kuluessa Luxemburgista kasvoi yksi '
+      + 'Euroopan vahvimmista linnoituksista — sitä laajensivat '
+      + 'vuorotellen burgundilaiset, Habsburgit, espanjalaiset, '
+      + 'ranskalaiset ja itävaltalaiset, jotka kaikki halusivat hallita '
+      + 'tätä solmukohtaa.'
+      + '\n\nSuurvaltojen kilpailu päättyi, kun Preussin ja Ranskan '
+      + 'välinen jännite Luxemburgista laukesi kansainväliseksi '
+      + 'kriisiksi ja ratkesi Lontoon sopimuksella vuonna 1867: '
+      + 'suurherttuakunta julistettiin puolueettomaksi, ja Preussin '
+      + 'varuskunta joutui vetäytymään. Sopimus määräsi myös koko '
+      + 'linnoituksen purettavaksi. Purkutyö on käynnissä isoisän matkan '
+      + 'aikaan — se on kestänyt jo kuusi vuotta ja jatkuu vielä '
+      + 'kymmenen, ja lopulta se hävittää yli 24 kilometriä maanalaisia '
+      + 'käytäviä.'
+      + '\n\nMaata hallitsee suurherttuana Alankomaiden kuningas '
+      + 'Vilhelm III, joka istuu Haagissa eikä ole vieraillut maassaan '
+      + 'vuosikausiin — henkilöunioni pitää kaksi valtaistuinta yhden '
+      + 'hallitsijan käsissä, mutta arki niissä on erillistä. Kaupungin '
+      + 'katujen alla virtaavat Alzette ja Pétrusse ovat kaivaneet '
+      + 'syviä rotkoja, joiden yli kuljetaan silloilla ja portailla; '
+      + 'rautatie on yhdistänyt kaupungin Ranskaan ja Preussiin jo '
+      + 'vuosia, ja Eschin seudulla alkanut rautamalmin louhinta '
+      + 'ennustaa maalle uutta, teollista tulevaisuutta.',
+    lahde: 'Wikipedia (CC BY-SA)',
+  },
+
+  /*
    * TEKSTIREMONTTI 20.8.2026, erä E1: intro on nyt etusivun leipäteksti
    * kappaleineen ja lihavointeineen (ks. Rooman lohkokommentti yllä).
    * Muuri ja kaupungin jako kerrotaan neutraalina historiana ilman

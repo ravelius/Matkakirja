@@ -50,7 +50,7 @@ import { extname, join } from 'node:path';
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 import { MAAILMANKARTTA } from '../../js/packs/maailmankartta.js';
-import { NOSTOSYM_NIMIO_KOKO } from '../../js/fokusnosto-symbolit.js';
+import { NOSTOSYM_NIMIO_KOKO, nostosymNimionKattoPx } from '../../js/fokusnosto-symbolit.js';
 import {
   NOSTON_MITAN_KATTO, NOSTON_NIMIO_KATTO_PX, PAAKARTAN_MERKKIKATTO, merkkiPortti,
 } from '../../js/pallolauta/nostot.js';
@@ -681,14 +681,18 @@ for (const ruutu of RUUDUT) {
    * muuten pelkkä saapumisnäkymän 11,5 px läpäisisi vartion
    * mittaamatta kattoa lainkaan.
    */
+  // KATTO NOUSEE LÄHIZOOMISSA (21.9.2026, fokusnosto-symbolit.js): katto on
+  // kartan kertoimen funktio, 16 px kertoimeen 2 ja 22 px kertoimesta 4.
+  // Odotus luetaan samasta funktiosta kuin peli, tason omalla kertoimella.
   const elavatTasot = zoomit.filter((z) => z.elavaMitta > 0);
   const sisinTaso = elavatTasot.at(-1) ?? null;
   const sisinNimio = (sisinTaso?.elavaMitta ?? 0) * NOSTOSYM_NIMIO_KOKO;
+  const sisinKatto = nostosymNimionKattoPx(sisinTaso?.nimenKerroin ?? 1);
   tieto(`${ruutu.nimi} · elävän merkin nimiö sisimmällä zoomilla, jolla merkkejä on`,
-    `${p(sisinNimio)} px (katto ${p(NOSTON_NIMIO_KATTO_PX)} px), `
+    `${p(sisinNimio)} px (katto ${p(sisinKatto)} px kertoimella ${p(sisinTaso?.nimenKerroin ?? 0, 3)}; perus ${NOSTON_NIMIO_KATTO_PX} px), `
     + `eläviä merkkejä zoomeittain ${zoomit.map((z) => z.elavia).join('/')}`);
-  vaadi(`6b. ${ruutu.nimi}: noston nimiö ei ylitä ${NOSTON_NIMIO_KATTO_PX} px:n kattoa`,
-    sisinNimio > 0 && Math.abs(sisinNimio - NOSTON_NIMIO_KATTO_PX) <= 0.1,
+  vaadi(`6b. ${ruutu.nimi}: noston nimiö on täsmälleen kertoimen katossa (${p(sisinKatto, 1)} px)`,
+    sisinNimio > 0 && Math.abs(sisinNimio - sisinKatto) <= 0.1,
     `${p(sisinNimio)} px, eläviä merkkejä ${sisinTaso?.elavia ?? 0}`);
 
   /*

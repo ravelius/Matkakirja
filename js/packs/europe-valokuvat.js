@@ -1475,6 +1475,34 @@ export const EUROPE_VALOKUVAT = {
   },
 
   /*
+   * LUXEMBURG (21.9.2026, Sonnet-sisältösessio; omistajan päätös
+   * 21.9.2026: Kypros, Luxemburg ja Malta saavat pelikaupungin).
+   * Kuvat Bock-kalliolta ja Adolphe-sillalta; lisenssit ja tekijät
+   * luettu Commonsin imageinfo/extmetadata-rajapinnasta 21.9.2026.
+   */
+  luxemburg: {
+    lisat: [
+      {
+        tiedosto: 'Luxembourg Adolphe Bridge over Petrusse valley.jpg',
+        vuosi: '2009',
+        lahde: 'Cayambe, Commons (CC BY-SA 3.0)',
+        lyhyt: 'Adolphe-silta kaartuu Pétrussen laakson yli.',
+        selite: 'Adolphe-silta rakennettiin vuosina 1900–1903 yhdistämään '
+          + 'vanhakaupunki ja asema-alue Pétrussen syvän laakson yli. '
+          + 'Isoisän matkan aikaan siltaa ei vielä ole — laakson ylitti '
+          + 'silloin vain kapeampi Passerelle vuodelta 1861.',
+      },
+    ],
+    tiedosto: 'Luxembourg City from the Bock Casements.jpg',
+    vuosi: '2024',
+    lahde: 'P. Hughes, Commons (CC BY-SA 4.0)',
+    lyhyt: 'Luxemburgin alakaupunki Bockin kasemattien kalliolta nähtynä.',
+    selite: 'Bock-kallio on kaupungin syntypaikka: kreivi Siegfried '
+      + 'rakensi tänne linnansa vuonna 963. Kalliolta avautuu näkymä '
+      + 'alas Alzette-joen mutkaan ja alakaupungin kattojen ylitse.',
+  },
+
+  /*
    * LJUBLJANA (20.9.2026, Sonnet-sisältösessio). Kaksi Commons-kuvaa
    * Ljubljanica-joesta ja Linnavuoresta; lisenssit ja tekijät luettu
    * Commonsin imageinfo/extmetadata-rajapinnasta 20.9.2026 (CC BY 4.0
@@ -1535,6 +1563,35 @@ export const EUROPE_VALOKUVAT = {
     selite: 'Ljubljanica-joen rantamuuri ja Ilmestyksen fransiskaanikirkko '
       + 'Prešerenin aukiolla. Kirkko rakennettiin vuosina 1646–1660, joten '
       + 'se seisoi jo isoisän matkan aikaan.',
+  },
+
+  /*
+   * VALLETTA (21.9.2026, Sonnet-sisältösessio; omistajan päätös
+   * 19.9.2026: Malta saa pelikaupungin Valletta). Kaksi Commons-kuvaa,
+   * samat kuin hahmotelma-mlt.js:n Valletta-nostolla käyttää: lisenssit
+   * ja tekijät luettu Commonsin extmetadata-rajapinnasta 19.9.2026
+   * (CC BY-SA 3.0 ja CC BY-SA 4.0, ei tunnistettavia yksityishenkilöitä).
+   */
+  valletta: {
+    lisat: [
+      {
+        tiedosto: 'Concatedral de San Juan, La Valeta, isla de Malta, Malta, 2021-08-25, DD 196.jpg',
+        vuosi: '2021',
+        lahde: 'Diego Delso, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Pyhän Johanneksen konkatedraalin julkisivu Vallettassa.',
+        selite: 'Pyhän Johanneksen konkatedraalin hiekkakivinen julkisivu '
+          + 'kahden kellotornin välissä. Johanniittaritarikunta rakennutti '
+          + 'kirkon 1570-luvulla; ankaran yksinkertaisen ulkokuoren takana '
+          + 'sisustus on ylellinen barokkia.',
+      },
+    ],
+    tiedosto: 'Malta - Valletta (seen from The Spur) 02 ies.jpg',
+    vuosi: '2013',
+    lahde: 'Frank Vincentz, Commons (CC BY-SA 3.0)',
+    lyhyt: 'Näkymä Grand Harbourin yli Vallettaan.',
+    selite: 'Näkymä Senglean Spur-niemeltä Grand Harbourin yli Vallettaan. '
+      + 'Kalkkikivimuurien päällä näkyy Upper Barrakka -puutarhan '
+      + 'kaarigalleria, josta laivastoa on tähystetty vuosisatoja.',
   },
 
   berliini: {
