@@ -262,7 +262,7 @@ test('lauta sovittelee nimien JÄLKEEN, ja nimi väistää vain liikkumatonta mu
    */
   // Pelimerkkien laatikot luetaan kerran per ladonta (erä E3) ja annetaan
   // nostoille, nimille ja sovittelulle samana listana.
-  assert.match(lauta, /const pelinLaatikot = merkit\.laatikot\('peli'\);/);
+  assert.match(lauta, /const pelinLaatikot = \[\.\.\.merkit\.laatikot\('peli'\), \.\.\.\(glSovitin\?\.pelinLaatikot\(\) \?\? \[\]\)\];/);
   assert.match(lauta, /kiinteat: \[\.\.\.infoTulos, \.\.\.pelinLaatikot\],/);
   const nostot = lue('../js/pallolauta/nostot.js');
   // Elävän noston LAPPU ei ole nimen varaus, ikoni on.

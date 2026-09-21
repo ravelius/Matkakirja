@@ -22,6 +22,7 @@
     "savuke-nostot-nakyviin.mjs",
     "savuke-glnimiot.mjs",
     "savuke-glnimiot-nimet.mjs",
+    "savuke-glnimiot-nostot.mjs",
     "savuke-kartan-liike.mjs",
     "savuke-nimiot-sulavat.mjs",
     "savuke-hiomassa-linssi.mjs",
@@ -561,6 +562,12 @@
         "NAKYMA": "puhelin"
       },
       "huomautus": "Ladonnan nimet GL-kerroksessa (Pelikoodari 21.9.2026, oletus paalla; ?glnimiot=0 = CSS2D): sovitin vie kaupunkien nimet rungolle — gl + css2d = ladotut, fonttien jalkeen DOMissa 0 nimea, jokainen nimi omassa ladonnan laatikossaan (kaappausvertailu), rakennuksia liikkeessa enintaan ladontojen verran, kehys < 0,5 ms. NAKYMA=puhelin|tyopoyta. Ampari Noden kautta. ~70 s."
+    },
+    "savuke-glnimiot-nostot.mjs": {
+      "env": {
+        "NAKYMA": "puhelin"
+      },
+      "huomautus": "Ladonnan nostot GL-kerroksessa (Pelikoodari 21.9.2026, vaihe 3, oletus paalla): sovitin vie nostot ikoneineen ja nimioineen rungolle — gl + css2d = ladotut, DOMissa vain CSS2D:hen jaaneet (ankkurit, liuskat, luonnokset, pisteet), rungolla ikoni + nimio, ikonit omissa laatikoissaan (kaappausvertailu), rakennuksia liikkeessa enintaan ladontojen verran, kehys < 0,5 ms. NAKYMA=puhelin|tyopoyta. Ampari Noden kautta. ~70 s."
     },
     "savuke-nostot-nakyviin.mjs": {
       "kuvakansio": true,

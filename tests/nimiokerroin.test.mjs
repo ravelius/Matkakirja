@@ -97,7 +97,7 @@ test('E3: kylkivaihto häivyttää (css), kirjaston tween pois liikkeessä, peli
   const lauta = lue('../js/pallolauta/lauta.js');
   assert.match(lauta, /merkit\.kirjastonSiirtyma\(false\);/);
   assert.match(lauta, /merkit\.kirjastonSiirtyma\(true\);/);
-  assert.match(lauta, /const pelinLaatikot = merkit\.laatikot\('peli'\);/);
+  assert.match(lauta, /const pelinLaatikot = \[\.\.\.merkit\.laatikot\('peli'\), \.\.\.\(glSovitin\?\.pelinLaatikot\(\) \?\? \[\]\)\];/);
   assert.equal((lauta.match(/merkit\.laatikot\('peli'\)/g) ?? []).length, 3, 'ladonnassa yksi luenta (+ liuskan esteet + kommentti)');
   const merkit = lue('../js/pallolauta/merkit.js');
   assert.match(merkit, /kirjastonSiirtyma: \(paalla\) => \{\n\s*pallo\.htmlTransitionDuration\?\.\(paalla \? siirtyma : 0\);/);

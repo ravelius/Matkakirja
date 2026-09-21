@@ -262,7 +262,11 @@ export function kohdeElementti(kohde) {
  * lista)`, `maara(osa)`, `laatikot(osa)` ja kohteiden luettelon
  * osumatestiä varten.
  */
-export function luoMerkit({ pallo, ui, siirtyma, asteet, kotelo = null, nakyvissa = null }) {
+export function luoMerkit({
+  pallo, ui, siirtyma, asteet, kotelo = null, nakyvissa = null,
+  /** Osan jako ennen asetusta (GL-kerros): (osa, lista) → CSS2D:hen jäävät; null = kaikki. */
+  jakaja = null,
+}) {
   const data = new Map(); // avain → pysyvä datum
   const osat = new Map(); // osan nimi → datumit
   const poistuvat = new Map(); // avain → ajastin
@@ -344,9 +348,11 @@ export function luoMerkit({ pallo, ui, siirtyma, asteet, kotelo = null, nakyviss
    * mahdollinen `asettele(el, d)` (sisäasettelu, kun sama datum saa
    * uudet mitat). Sama datum säilyy, kun avain säilyy.
    */
-  const aseta = (osa, uudet, { haivyta = true } = {}) => {
+  const aseta = (osa, annetut, { haivyta = true } = {}) => {
     const ennen = osat.get(osa) ?? [];
     const lista = [];
+    // GL-kerros voi ottaa osan riveistä itselleen (js/pallolauta/glnimiot-sovitin.js).
+    const uudet = typeof jakaja === 'function' ? (jakaja(osa, annetut) ?? annetut) : annetut;
     for (const tiedot of uudet) {
       let d = data.get(tiedot.avain);
       if (d) {
