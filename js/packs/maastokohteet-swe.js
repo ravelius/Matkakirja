@@ -101,6 +101,17 @@ export const MAASTOKOHTEET_SWE = [
       + '096,8 metrissä. Vuori on Ruotsin Lapissa noin 150 kilometriä napapiiristä pohjoiseen, '
       + 'Kirunasta länteen Kungsledenin vaellusreitin varrella.',
     lahde: 'en-Wikipedia "Kebnekaise", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Kumpi Kebnekaisen huipuista on nyt korkein, koska toinen on kutistunut?',
+      vaihtoehdot: [
+        'Pohjoinen huippu',
+        'Eteläinen huippu',
+        'Keskihuippu',
+        'Läntinen huippu',
+      ],
+      oikea: 0,
+      fakta: 'Eteläinen huippu on jäätikön peittämä ja kutistunut 24 metriä viidessäkymmenessä vuodessa.',
+    },
   },
   {
     id: 'itameri',
@@ -151,6 +162,17 @@ export const MAASTOKOHTEET_SWE = [
       + 'varhaiskeskiajalta asti rautaa ja hopeaa.',
     lahde: 'en-Wikipedia "Baltic Sea", johdanto-osa sekä osiot "Storms and storm floods", '
       + '"Middle Ages"; laivan osalta "Vasa (ship)", johdanto-osa (tarkistettu 1.9.2026).',
+    visa: {
+      kysymys: 'Kuinka monta vuotta sotalaiva Vasan uppoamisesta kului, kun se nostettiin pohjasta?',
+      vaihtoehdot: [
+        '133 vuotta',
+        '333 vuotta',
+        '233 vuotta',
+        '433 vuotta',
+      ],
+      oikea: 1,
+      fakta: 'Sotalaiva Vasa kaatui neitsytmatkallaan vuonna 1628 ja nostettiin pohjasta 333 vuotta myöhemmin lähes ehjänä.',
+    },
   },
   {
     id: 'pohjanlahti',
@@ -247,6 +269,17 @@ export const MAASTOKOHTEET_SWE = [
       + 'Kesäisin padon tulvaluukut avataan muutamaksi minuutiksi päivässä, ja väki kerääntyy '
       + 'katsomaan, kun vesi ryöppyää alas.',
     lahde: 'en-Wikipedia "Göta älv", johdanto-osa (tarkistettu 1.9.2026).',
+    visa: {
+      kysymys: 'Kuinka pitkiä rahtialuksia Trollhättanin sulut päästävät jokea ylös?',
+      vaihtoehdot: [
+        'Jopa 38 metriä pitkiä',
+        'Jopa 58 metriä pitkiä',
+        'Jopa 88 metriä pitkiä',
+        'Jopa 118 metriä pitkiä',
+      ],
+      oikea: 2,
+      fakta: 'Trollhättanin sulkujen ansiosta jokea pääsee nousemaan jopa 88 metriä pitkillä rahtialuksilla.',
+    },
   },
   /* ================================================================
    * K2-ERÄ 2, 6.9.2026 — KAHDEKSAN KOHDETTA. Perustelut tiedoston alussa.
@@ -293,6 +326,17 @@ export const MAASTOKOHTEET_SWE = [
       + 'kirkkoraunioita on keskustassa useita.',
     lahde: 'en-Wikipedia "Visby", johdanto-osa sekä osiot "Etymology" ja "History" '
       + '(tarkistettu 6.9.2026).',
+    visa: {
+      kysymys: 'Kuinka pitkä on Visbyn keskiaikainen kaupunginmuuri?',
+      vaihtoehdot: [
+        '1,4 kilometriä',
+        '2,4 kilometriä',
+        '5,4 kilometriä',
+        '3,4 kilometriä',
+      ],
+      oikea: 3,
+      fakta: 'Visbyn kaupunginmuuri on 3,4 kilometriä pitkä ja kiertää lähes ehjänä vanhan kaupungin ympäri.',
+    },
   },
   {
     id: 'gamla-uppsala',
@@ -379,6 +423,17 @@ export const MAASTOKOHTEET_SWE = [
       + 'pyhä Ansgar teki sen vuonna 831. Yhdessä naapurisaaren Hovgårdenin kanssa Birka '
       + 'on ollut maailmanperintökohde vuodesta 1993.',
     lahde: 'en-Wikipedia "Birka", johdanto-osa ja osio "History" (tarkistettu 6.9.2026).',
+    visa: {
+      kysymys: 'Minä vuonna pyhä Ansgar perusti Birkaan Ruotsin ensimmäisen seurakunnan?',
+      vaihtoehdot: [
+        'vuonna 793',
+        'vuonna 831',
+        'vuonna 975',
+        'vuonna 1050',
+      ],
+      oikea: 1,
+      fakta: 'Birkassa pyhä Ansgar perusti Ruotsin ensimmäisen tunnetun kristillisen seurakunnan vuonna 831.',
+    },
   },
   {
     id: 'falunin-kaivos',
@@ -788,6 +843,17 @@ export const MAASTOKOHTEET_SWE = [
       + 'maan pisin puurakennus.',
     lahde: 'en-Wikipedia "Karlskrona Naval Base", johdanto-osa ja osio "History" (tarkistettu '
       + '11.9.2026).',
+    visa: {
+      kysymys: 'Miksi Kaarle XI valitsi Karlskronan laivaston uudeksi tukikohdaksi?',
+      vaihtoehdot: [
+        'Se on talvella jäätön',
+        'Se on lähempänä Norjaa',
+        'Siellä oli jo suuri kaupunki',
+        'Siellä oli halpaa puuta',
+      ],
+      oikea: 0,
+      fakta: 'Karlskrona on talvella jäätön, toisin kuin aiempi päätukikohta Tukholma.',
+    },
   },
   {
     id: 'lundintuomiokirkko',
