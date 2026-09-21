@@ -1054,6 +1054,29 @@ function piirraNostonSisus(ui, sisalto, nosto, valmisKuva) {
   piirraNostonKysymykset(ui, sisalto, nosto);
 }
 
+/*
+ * PYSTYKUVASSA KUVAPALSTA KAPEAMPI (omistaja 21.9.2026, nostokortin
+ * kaksipalstataitto ≥ 1100 px, css/fokusnosto.css): CSS ei tiedä kuvan
+ * omaa muotosuhdetta, joten se pieni tieto tuodaan luokkana. `.fokusnosto-
+ * pysty` kortilla kaventaa kuvapalstaa (ks. tyylitiedosto); kortti ilman
+ * luokkaa saa oletuksen (vaakakuva, ~58 %).
+ *
+ * SEURAA KUVAA KOKO SEN ELINKAAREN (myös galleria): sama <img> vaihtaa
+ * src:ää selauksessa (js/kuvasarja.js), ja jokainen vaihto laukaisee
+ * uuden 'load'-tapahtuman — luokka päivittyy siis kuvan mukana, jos
+ * sarjassa on sekä pysty- että vaakakuvia.
+ */
+function nostoSeuraaKuvanSuuntaa(kortti, kehys) {
+  const img = kehys?.querySelector?.('img') ?? null;
+  if (!img) return;
+  const paivita = () => {
+    if (!img.naturalWidth || !img.naturalHeight) return;
+    kortti.classList.toggle('fokusnosto-pysty', img.naturalHeight > img.naturalWidth);
+  };
+  if (img.complete) paivita();
+  img.addEventListener('load', paivita);
+}
+
 function avaaNostonKortti(ui, nosto) {
   // Sama portti kuin avaaNostossa: kortin voi avata muualtakin
   // (kohdekortin nappi), eikä linssin päälle nouse mitään.
@@ -1113,9 +1136,16 @@ function avaaNostonKortti(ui, nosto) {
       kuvakehysRef?.nostokuvaSarja?.(),
     ),
     latoNosto,
+    // KAKSIPALSTATAITTO ≥ 1100 px (css/fokusnosto.css osio 13): alle
+    // rajan kortti ei saa levetä kuvan ehdoilla ~760 px:ä leveämmäksi, ja
+    // rajan yläpuolella kuva kapenee palstaansa (omistaja 21.9.2026, ks.
+    // js/nostokuva.js NOSTOKUVA_LEVEA_RAJA).
+    kaksipalstaTaitto: true,
+    onKuvatta: () => kortti.classList.remove('fokusnosto-pysty'),
   }) : null;
   kuvakehysRef = kaksivaihe?.kehys ?? null;
   if (!kaksivaihe) latoNosto(sisalto, undefined);
+  nostoSeuraaKuvanSuuntaa(kortti, kaksivaihe?.kehys ?? null);
   // Kaiutin kortin otsikkoriville (js/lukija.js lisaaLukijanappi).
   lisaaLukijanappi(kortti, { otsikko: 'Kuuntele kortti' });
 
@@ -1368,8 +1398,22 @@ function piirraNostonKuvat(ui, sisalto, nosto, valmisKuva) {
   const kuvat = valmisKuva === null ? kaikki.slice(1) : kaikki;
   if (!kuvat.length) return;
   if (kuvat.length === 1) {
-    if (valmisKuva) sisalto.appendChild(valmisKuva);
-    else piirraNostonKuva(ui, sisalto, kuvat[0]);
+    if (valmisKuva) {
+      /*
+       * KAKSIPALSTATAITTO TUNNISTAA KUVAN LUOKASTA (css/fokusnosto.css
+       * osio 13: `.fokusnosto-sisalto:has(> .fokusnosto-kuva)`). Yhden
+       * kuvan "kuva edellä" -kehys (js/nostokuva.js) kantaa vain
+       * `nostokuva-kehys`-luokkaa, koska sama kehys palvelee kaikkia
+       * kuva edellä -kortteja (kohdekortti, skandaali, eläintäky, hetki,
+       * syvennys) — `fokusnosto-kuva` lisätään vasta täällä, VAIN
+       * nostokortilla, jottei rajaus koske muita korttiperheitä. Sama
+       * yhdistelmäluokka `.nostokuva-kehys.fokusnosto-kuva` saa jo
+       * galleriakuvan kuvan koon lukituksen (css/nostokuva.css), joten
+       * lisäys ei muuta mitään kapealla ruudulla.
+       */
+      valmisKuva.classList.add('fokusnosto-kuva');
+      sisalto.appendChild(valmisKuva);
+    } else piirraNostonKuva(ui, sisalto, kuvat[0]);
     return;
   }
   piirraNostonKuvasarja(ui, sisalto, kuvat, {
