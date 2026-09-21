@@ -11,7 +11,7 @@ import {
   LAATTAKERROS_RINNAKKAIN, LAATTAKERROS_SILMAT_MAX, LAATTAKERROS_SILMAT_MIN,
   LAATTAKERROS_SYVYYSSIIRTO, LAATTAKERROS_TEKSTUUREJA_PER_KEHYS, LAATTAKERROS_TERAVYYS,
   LAATTAKERROS_VARA_AST, LAATTAKERROS_VARA_OSUUS, POHJAN_TASO_MAX, POHJAN_VAPAUTUS_SYYT,
-  laatanKartta, laattakerroksenLRU, laattakerroksenNakyvissa, laattakerroksenOsuma,
+  laatanKartta, laattakerroksenLRU, laattakerroksenNakyvissa, laattakerroksenOsuma, pinnanRuutupiste,
   laattakerroksenPeitto, laattakerroksenSilmat, laattakerroksenTaso, lepokerroksenAlue,
   lepokerroksenLaatat, lepokerroksenUV, pinnanPiste,
 } from '../js/pallo.js';
@@ -659,4 +659,31 @@ test('vika v1664: pinnan lukema ei riipu kameran matriisin tuoreudesta', () => {
   assert.equal(pinnanPiste(kaukaa, 0, 0, 0, H, R), null);
   // Kamera pinnan sisällä ei ole näkymä lainkaan.
   assert.equal(pinnanPiste({ position: { x: 0, y: 0, z: 50 } }, W / 2, H / 2, W, H, R), null);
+});
+
+test('sulavuus E4: pinnanRuutupiste on laattakerroksenOsuman käänteinen', () => {
+  const linssi = { fov: 50, kuvasuhde: 390 / 844, sade: 100 };
+  const povit = [
+    { lat: 46.5, lng: 2.5, altitude: 0.2 }, { lat: -33, lng: 151, altitude: 1.5 },
+    { lat: 70, lng: -170, altitude: 0.05 }, { lat: 0, lng: 179.9, altitude: 0.3 },
+  ];
+  for (const pov of povit) {
+    for (const sx of [-0.9, -0.3, 0, 0.5, 0.95]) {
+      for (const sy of [-0.95, -0.2, 0, 0.6, 0.9]) {
+        const osuma = laattakerroksenOsuma(pov, sx, sy, linssi);
+        if (!osuma) continue;
+        const r = pinnanRuutupiste(pov, osuma.lat, osuma.lng, linssi);
+        assert.ok(r && r.edessa, `edessä ${JSON.stringify(pov)} ${sx},${sy}`);
+        assert.ok(Math.abs(r.sx - sx) < 1e-9 && Math.abs(r.sy - sy) < 1e-9, `ruutu ${sx},${sy} → ${r.sx},${r.sy}`);
+        assert.ok(r.syvyys > 0 && r.syvyys < linssi.sade * (1 + pov.altitude), 'syvyys kameran ja keskipisteen välissä');
+      }
+    }
+  }
+  // Pallon takapuoli: ei edessä, mutta ruutupaikka on silti luku (kameran edessä oleva puolipallo).
+  const taka = pinnanRuutupiste({ lat: 0, lng: 0, altitude: 0.2 }, 0, 100, linssi);
+  assert.ok(taka && !taka.edessa);
+  // Pallon pinnan piste on aina kameran edessä (kamera pallon ulkopuolella); vain roska on null.
+  assert.ok(pinnanRuutupiste({ lat: 0, lng: 0, altitude: 0.05 }, 0, 180, linssi).syvyys > 0);
+  assert.equal(pinnanRuutupiste({ lat: 0, lng: 0, altitude: 0.05 }, NaN, 0, linssi), null);
+  assert.equal(pinnanRuutupiste(null, 0, 0, linssi), null);
 });

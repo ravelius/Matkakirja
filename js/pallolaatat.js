@@ -1081,6 +1081,56 @@ export function laattakerroksenOsuma(pov, sx, sy, { fov = 50, kuvasuhde = 1, sad
 }
 
 /**
+ * KÄÄNTEINEN: pinnan piste ruudulle (sulavuus E4, 21.9.2026). Sama
+ * kameran kehys kuin laattakerroksenOsumassa (kamera säteellä ilman
+ * kallistusta, ylös = +Y), joten piste, jonka osuma antaa ruudun
+ * kohdasta (sx, sy), palaa tässä täsmälleen samaan kohtaan. Nimiöiden
+ * ja pisteiden asettelu liikkeen aikana saa ruutupaikan ilman kirjaston
+ * Vector3-projektiota ja matriisilukuja — pelkkää trigonometriaa,
+ * noin puoli mikrosekuntia pisteeltä.
+ *
+ * @returns {{sx: number, sy: number, edessa: boolean, syvyys: number}|null}
+ *   sx, sy normalisoituina (−1…1, y ylös; ruudun ulkopuolella |sx| > 1),
+ *   `edessa` = piste pallon näkyvällä puolella (horisontin sisällä),
+ *   `syvyys` = etäisyys kamerasta kameran suunnassa (maailman
+ *   yksiköissä). Null vain roskasyötteellä: pallon ulkopuolelta pinnan
+ *   jokainen piste on kameran edessä.
+ */
+export function pinnanRuutupiste(pov, lat, lng, { fov = 50, kuvasuhde = 1, sade = 100 } = {}) {
+  if (!Number.isFinite(pov?.lat) || !Number.isFinite(pov?.lng) || !Number.isFinite(pov?.altitude)) return null;
+  if (!Number.isFinite(lat) || !Number.isFinite(lng)) return null;
+  const n = pallonPiste(pov.lat, pov.lng, 1);
+  let rx = n.z;
+  let rz = -n.x;
+  const rl = Math.hypot(rx, rz);
+  if (rl < 1e-9) { rx = 1; rz = 0; } else { rx /= rl; rz /= rl; }
+  const ux = n.y * rz;
+  const uy = n.z * rx - n.x * rz;
+  const uz = -n.y * rx;
+  const etaisyys = 1 + pov.altitude;
+  const p = pallonPiste(lat, lng, 1);
+  // Vektori kamerasta pisteeseen pallon säteinä.
+  const vx = p.x - n.x * etaisyys;
+  const vy = p.y - n.y * etaisyys;
+  const vz = p.z - n.z * etaisyys;
+  // Kameran eteenpäin on −n; syvyys on projektio sille.
+  const syvyys = -(vx * n.x + vy * n.y + vz * n.z);
+  if (!(syvyys > 1e-9)) return null;
+  const tanY = Math.tan((fov / 2) * RAD);
+  const tanX = tanY * kuvasuhde;
+  const oikea = vx * rx + vz * rz;
+  const ylos = vx * ux + vy * uy + vz * uz;
+  // Horisontti: pinnan normaalin ja kameran suunnan pistetulo ≥ 1/d.
+  const edessa = (p.x * n.x + p.y * n.y + p.z * n.z) >= 1 / etaisyys;
+  return {
+    sx: oikea / (syvyys * tanX),
+    sy: ylos / (syvyys * tanY),
+    edessa,
+    syvyys: syvyys * sade,
+  };
+}
+
+/**
  * Onko laatta pallon NÄKYVÄLLÄ puolella? Näkyvä alue on kalotti, jonka
  * reunalla pinnan normaalin ja kameran suunnan pistetulo on R/d =
  * 1/(1 + korkeus). Testi on kalottien leikkaus: laatan keskipisteen

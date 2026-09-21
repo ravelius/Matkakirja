@@ -79,7 +79,7 @@ export {
   LAATTAKERROS_SYVYYSSIIRTO, LAATTAKERROS_TERAVYYS, LAATTAKERROS_TEKSTUUREJA_PER_KEHYS,
   LAATTAKERROS_VARA_AST, LAATTAKERROS_VARA_OSUUS, laatanKartta, laatanPalloAlue, laattakerroksenLRU,
   laattakerroksenNakyvissa, laattakerroksenOsuma, laattakerroksenPeitto, laattakerroksenSilmat,
-  laattakerroksenTaso, luoLaattakerros,
+  laattakerroksenTaso, luoLaattakerros, pinnanRuutupiste,
 } from './pallolaatat.js';
 
 export {
