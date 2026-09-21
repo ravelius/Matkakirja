@@ -1075,13 +1075,25 @@ export const ENNUSTE_KYNNYS = 2e-6;
 /** Ennusteen osuus kehysvälistä: 1 = koko kehys, 0,5 = puolikas. */
 export const ENNUSTE_OSUUS = 1;
 
-/** Onko ennuste käytössä (`?ennuste=0` sammuttaa). */
-export function pallonEnnusteKaytossa(win = globalThis) {
+/*
+ * ENNUSTE OLETUKSENA POIS (omistajan tuntuma v2000, 21.9.2026 ilta):
+ * työpöydällä Marseille-nimiö, nappula ja nostot "heiluivat
+ * panoroitaessa ja palasivat paikalleen liikkeen loputtua". Ennuste
+ * johtaa aina yhden kehyksen verran; kun DOM ei laahaa kankaan perässä
+ * (Macin Chrome/Safari), johto näkyy nimiön heilumisena ja liikkeen
+ * lopussa yhden kehyksen palautumisena. Kunnes GL-kerros on oletus
+ * (nimiöt samassa renderissä, ennustetta ei tarvita), ennuste on
+ * `?ennuste=1`-kokeilu; mitat.ennuste lasketaan silti kuuntelijoille.
+ */
+export const ENNUSTE_OLETUS = false;
+
+/** Onko ennusteen CSS2D-siirto käytössä (`?ennuste=1` kytkee, `?ennuste=0` sammuttaa). */
+export function pallonEnnusteKaytossa(win = globalThis, oletus = ENNUSTE_OLETUS) {
   try {
     const arvo = new URLSearchParams(win.location?.search ?? '').get('ennuste');
     if (arvo != null) return !/^(0|off|false|pois)$/.test(arvo);
   } catch { /* ei osoitetta */ }
-  return true;
+  return oletus;
 }
 
 /**
