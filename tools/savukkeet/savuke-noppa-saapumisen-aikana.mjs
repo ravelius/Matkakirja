@@ -198,8 +198,15 @@ const LUE = `() => {
       ruudulla: ruudulla(r) && !e.classList.contains('pallolauta-takana'),
     };
   });
+  // Lepotilan nappula on v2017:stä lähtien GL-rungolla (vaihe 4): laatikko
+  // sovittimelta kotelon pikseleinä; liikkuva nappula on yhä DOMissa.
   const n = document.querySelector('.pallolauta-nappula');
-  const nr = n ? n.getBoundingClientRect() : null;
+  let nr = n ? n.getBoundingClientRect() : null;
+  if (!nr) {
+    const b = ui.pallolauta?.glSovitin?.()?.pelinLaatikot?.()[0] ?? null;
+    const koti = ui.pallolauta?.kotelo?.getBoundingClientRect?.();
+    if (b && koti) nr = { x: koti.left + b.x0, y: koti.top + b.y0, left: koti.left + b.x0, top: koti.top + b.y0, right: koti.left + b.x1, bottom: koti.top + b.y1, width: b.x1 - b.x0, height: b.y1 - b.y0 };
+  }
   const p = game.player.pos;
   return {
     vaihe: game.phase,
