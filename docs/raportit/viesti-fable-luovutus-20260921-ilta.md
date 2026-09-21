@@ -79,7 +79,7 @@ muutettiin kohdassa KAKSI ÄÄNTÄ.
   tulevat Fablelle → omistajalle.
 
 ## Odottaa Fablea / omistajaa
-- Omistajan ?ennuste=0-tulos; Karttasepän syy meren vilkkumiseen; Pelikoodarin
+- ?ennuste=0 auttoi → ennuste pois oletuksena (Karttaseppä tekee); nostot puuttuvat eri tavoin selain/webappi (Pelikoodari tutkii SW-välimuistia ja tilaa); Karttasepän syy meren vilkkumiseen; Pelikoodarin
   nostojen palautus (kiireellinen); GL-kokeiluversio tänä iltana.
 - Laitetestaaja: iPhone-vertailu, kierros 22; ilmoittaa vain valmiina.
 - Postivahti ilmoittaa Codexin toimituksista (pienoismallit erä A odotettavissa).

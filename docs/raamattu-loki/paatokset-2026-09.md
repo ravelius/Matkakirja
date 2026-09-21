@@ -515,3 +515,7 @@ Omistaja 21.9.2026 (Le Mans -nosto työpöydällä: kuva iso, tekstipalsta liian
 ## LEHDEN VUOSILUKU OIKEAAN REUNAAN; REAKTIOT KAHTEEN: SYDAN JA PEUKKU ALAS (21.9.2026 klo 16.44)
 
 Omistaja 21.9.2026 (Ranskan lehden Historia-osio työpöydällä): 1) jutun vuosiluku siirretään otsikkorivin oikeaan reunaan; 2) reaktiot siirretään otsikkoriviltä leipätekstin loppuun Lue lisää -linkin viereen; 3) viiden symbolin reaktionivaska (27.8.2026: laakeri, sydän, suurennuslasi, tiimalasi, mustetahra) korvataan kahdella suoraan näkyvällä napilla: sydän (hyvä) ja peukku alas (huono); peukku alas avaa tarkentavan kysymyksen (tylsä / virhe tiedoissa tekstikentällä / muu). Vanhat äänet lasketaan: hieno, ihana, mielenkiintoinen → sydän; tylsä, virhe → peukku alas. Koskee lehtiä, kohdekortteja ja nähtävyysjuttuja. Pelikoodari tekee Sonnet-parvella GL-työn rinnalla.
+
+## ENNUSTE POIS OLETUKSENA GL:AAN ASTI; NOSTOT PUUTTUVAT ERI TAVOIN WEBAPISSA (21.9.2026 klo 16.52)
+
+Omistaja 21.9.2026 ilta: ?ennuste=0 pitää nimet paremmin paikallaan → kameran ennuste (E4b) sammutetaan oletuksena kunnes GL-kerros on oletus (Karttaseppä, pieni PR). Nostojen näkyvyys vaihtelee: selaimessa enemmän, ?ennuste=0:lla vähemmän, asennetussa webapissa ei lainkaan; Pelikoodari ei saanut toistumaan uudella pelillä → epäily service workerin välimuistista, ennustekoukun ja merkkien piirron riippuvuudesta tai tallennetun pelin tilasta (päivä 4, Marseille). Kaappaukset docs/raportit/kaappaukset/omistaja-20260921/. Fable-sessio nollataan; luovutus viesti-fable-luovutus-20260921-ilta.md.
