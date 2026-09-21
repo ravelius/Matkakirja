@@ -235,6 +235,18 @@ export const FOKUSKOHTEET_BIH = [
       + '("According to local legends"), ja teksti sanoo sen ääneen. '
       + 'Muoto "Una-joki" on aineiston ohje: fi-Wikipedian "Una" on '
       + 'moniselitesivu.',
+    visa: {
+      kysymys: 'Mikä on Unan suurin putous?',
+      vaihtoehdot: [
+        'Kravice',
+        'Štrbački buk',
+        'Plitvice',
+        'Skradinski buk',
+      ],
+      oikea: 1,
+      fakta: '212 kilometrin mittainen Una on täynnä koskia ja putouksia, ja sen varren '
+        + 'tärkein kaupunki on Bihać.',
+    },
     // Commons 25.8.2026: 4899×3266, CC BY-SA 3.0, Julian Nyča, 8.9.2018,
     // kuvaus "Wasserfall Štrbački buk an der Una südlich von Bihać" —
     // juuri se putous, jonka teksti nimeää. Category:Štrbački buk.
