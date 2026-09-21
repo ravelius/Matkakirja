@@ -5239,6 +5239,17 @@ export class UI {
   }
 
   /**
+   * Pallon GL-nimiökerros (js/pallonimiot-gl.js) tai null. Lauta antaa
+   * kerroksen kahvan kenttään `glKerros` (js/pallolauta/lauta.js), koska
+   * kerros syntyy laiskasti ja puretaan laudan mukana; savukkeet ja
+   * vartijat lukevat sen tästä metodista (tools/tarkista-savukkeet.mjs
+   * hyväksyy kutsun vain UI-luokan metodille).
+   */
+  pallolautaGL() {
+    return typeof this.glKerros === 'function' ? (this.glKerros() ?? null) : null;
+  }
+
+  /**
    * Näkyvä alue laudan koordinaatteina.
    *
    * Luvut luetaan ruudulta eikä zoomimuuttujista: this.zoomSkaala on

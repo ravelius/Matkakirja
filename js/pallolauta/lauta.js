@@ -2015,7 +2015,7 @@ export async function avaaPallolauta(ui) {
   const vektorit = pallovektoritPaalla() ? luoPallovektorit({ pallo, kotelo, reitit }) : null;
   // GL-nimiöt (vaihe 2): ladonnan nimet rungolle sovittimen kautta (oletus päällä, `?glnimiot=0` pois).
   const glSovitin = glNimiotKaytossa() && !/[?&]glnimiot=testi\b/.test(globalThis.location?.search ?? '')
-    ? luoGlNimiosovitin({ kotelo, kerros: () => ui.pallolautaGL?.() ?? null })
+    ? luoGlNimiosovitin({ kotelo, kerros: () => ui.pallolautaGL() })
     : null;
   const nimet = luoNimet({
     ui, merkit, asteet: pallonAsteet, ruudulla, kotelo, pack, glSovitin,
@@ -3789,7 +3789,8 @@ export async function avaaPallolauta(ui) {
   let glKerros = null;
   let glSiemen = null; // pov, jonka ympäriltä testinimiöt valittiin (vain ?glnimiot=testi)
   const glTesti = glNimiotKaytossa() && /[?&]glnimiot=testi\b/.test(globalThis.location?.search ?? '');
-  ui.pallolautaGL = () => (glVirhe ? null : glKerros);
+  // Kahva UI:n pallolautaGL()-metodille (js/ui.js): kerros tai null.
+  ui.glKerros = () => (glVirhe ? null : glKerros);
   const glTestinimiot = (pov, dpr) => {
     glKerros.tyhjenna();
     const lahimmat = pallonKaupungit(pack)
