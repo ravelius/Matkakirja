@@ -29,6 +29,10 @@
  * MITATTU 21.9.2026 ENNEN E1:tä (puhelin, 4×): zoomissa 383 ms:n ja
  * nipistyksessä 352 ms:n tehtävä (naulaus + laattojen valmistelu samassa
  * kehyksessä); E1:n jälkeen pisin kehys 49 ms, pitkiä tehtäviä 0.
+ * E2 lisäsi vaiheet loitonnus (nipistys auki z8 → z7) ja heitto (nopea
+ * veto + liuku) sekä mitat `pohjaNakyy`/`peittoMin` (näytepisteet ilman
+ * täysin häivytettyä laattaa = pohja z5 näkyy); E3:n jälkeen zoomAskel
+ * on liu'un askel (rulla) tai sormien suhde (nipistys), ei kirjaston dolly.
  */
 import http from 'node:http';
 import { readFileSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
