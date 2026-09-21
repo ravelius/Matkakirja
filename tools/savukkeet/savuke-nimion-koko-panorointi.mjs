@@ -15,7 +15,7 @@
  * Camargueen (z8–9), odottaa ladonnan ja rasterit, lukee rungon jokaisen
  * nimiön ruutukorkeuden sovittimen `nostotRungolla()`-listasta (sama
  * kaava kuin shaderissa), panoroi 200 px ja lukee uudestaan. Vartiot:
- *   1. Camarguen nostoja rungolla ≥ 3 ja nimiöitä ≥ 8;
+ *   1. nimiöitä rungolla ≥ 5 (syvimmällä ≥ 3);
  *   2. samalla zoomilla kaikkien nimiöiden korkeus / luokan kerroin on
  *      sama (hajonta ≤ 3 %) — koko ei riipu ladonnasta;
  *   3. panoroinnin (200 px) jälkeen jokaisen ruudulle jääneen nimiön
@@ -153,7 +153,8 @@ const kierros = async (alt, tunniste, panPx = PANOROINTI_PX, vahintaan = 5) => {
   await sivu.screenshot({ path: join(ULOS, `nimion-koko-${MOOTTORI}-${NAKYMA}-${tunniste}-ennen.png`) });
   const camargue = ennen.nimiot.filter((n) => /camargue/iu.test(n.nimi));
   console.log(`INFO  ${MOOTTORI} ${tunniste}: ennen: alt ${p(ennen.pov.altitude, 4)}, kuori ${p(ennen.kuori, 3)}, katto ${p(ennen.katto, 1)} px, nimiöitä ${ennen.nimiot.length}: ${kuvaa(ennen.nimiot)}`);
-  vartio(`${tunniste} 1. Camarguen nostoja rungolla ≥ 1 ja nimiöitä ≥ ${vahintaan}`, camargue.length >= 1 && ennen.nimiot.length >= vahintaan,
+  // Camarguen nimiöt voivat olla sovittelun piilottamia (ikonit ovat esteitä 22.9.2026): vain määrä vaaditaan.
+  vartio(`${tunniste} 1. nimiöitä rungolla ≥ ${vahintaan}`, ennen.nimiot.length >= vahintaan,
     `Camargue ${camargue.length} (${camargue.map((n) => n.nimi).join(', ')}), nimiöitä ${ennen.nimiot.length}`);
   const h1 = hajonta(ennen.nimiot, ennen.katto);
   vartio(`${tunniste} 2. samalla zoomilla nimiön perusmitta sama kaikilla luokasta riippumatta (≤ 3 %)`, h1.ero <= 0.03 && !h1.katossaVaarin.length, hajontaTeksti(h1));
@@ -181,7 +182,7 @@ const kierros = async (alt, tunniste, panPx = PANOROINTI_PX, vahintaan = 5) => {
 };
 // Kolme korkeutta: saapumisnäkymä (kerroin 1, katon alla), z7 (kerroin 2, katto 16 px) ja z9 (syvin sallittu, kerroin n. 4,3, katto 22 px; omistajan kuvat).
 // Syvimmällä nimiöitä on vähän ja ruutu on kapea: lyhyempi veto, jotta osa jää vertailuun.
-tulos.kierrokset = [await kierros(0.2, 'z6'), await kierros(0.1, 'z7'), await kierros(0.025, 'z9', 50, 4)];
+tulos.kierrokset = [await kierros(0.2, 'z6'), await kierros(0.1, 'z7'), await kierros(0.025, 'z9', 50, 3)];
 tulos.virheet = virheet;
 vartio('5. ei sivuvirheitä', virheet.length === 0, virheet.slice(0, 2).join(' | '));
 writeFileSync(join(ULOS, `nimion-koko-${MOOTTORI}-${NAKYMA}.json`), JSON.stringify(tulos, null, 1));

@@ -162,7 +162,17 @@ export function sovitteleLaput({
   laput = [], esteet = [], lukot = null, reuna = null, rantaviiva = [],
   kyljet = SOVITTELUN_KYLJET, hystereesi = SOVITTELUN_HYSTEREESI_PX,
 } = {}) {
-  const kiinteat = esteet.filter(laatikkoKelpaa);
+  /*
+   * IKONIT OVAT ESTEITÄ (nostot.js TYYPPIMERKIT LÄHIZOOMISSA, Fable
+   * 21.9.2026: *"merkit eivät osu nimiöiden päälle"*). Ikoni ei väistä
+   * ketään — se on kiinni pisteessään — joten nimiön on väistettävä
+   * muiden nostojen ikoneja. Laatikko on lapun oma ilman nimiötä
+   * (`laatikko(kylki, 0, 0, false)`); oma ikoni ei estä omaa nimiötä
+   * (`avain`, ks. estaa).
+   */
+  const ikonit = laput.map((l) => (typeof l.laatikko === 'function'
+    ? { ...l.laatikko(l.kylki, 0, 0, false), avain: l.avain } : null)).filter(laatikkoKelpaa);
+  const kiinteat = [...esteet, ...ikonit].filter(laatikkoKelpaa);
   const ranta = rantaviiva.filter(laatikkoKelpaa);
   const asennot = new Map();
   const sijoitetut = []; // jo asetettujen lappujen laatikot (näkyvät nimiöt)
@@ -172,11 +182,16 @@ export function sovitteleLaput({
   let kokeiltuja = 0;
 
   const rannalla = (r, l) => Boolean(l?.meri) && ranta.some((e) => laatikotLimittyvat(r, e));
+  // Ikoni (este, jolla on avain) ei estä lappua itseään eikä kaupunkia
+  // tai ykköstasoa: ne väistävät vain nimiä, kiinteää mustetta ja
+  // toisiaan (sääntö 4 alla), muut laput väistävät niitä — myös ikonia.
+  const vahva = (l) => Boolean(l?.kaupunki) || l?.taso === 1;
+  const estaa = (rr, l) => kiinteat.some((e) => (!e.avain || (!vahva(l) && e.avain !== l?.avain)) && laatikotLimittyvat(rr, e));
   const vapaa = (r, l, vara = 0) => {
     const rr = laatikkoVaralla(r, vara);
     return laatikkoSisalla(r, reuna)
       && !rannalla(r, l)
-      && !kiinteat.some((e) => laatikotLimittyvat(rr, e))
+      && !estaa(rr, l)
       && !sijoitetut.some((e) => laatikotLimittyvat(rr, e));
   };
 
@@ -224,7 +239,7 @@ export function sovitteleLaput({
         const r = l.laatikko(e, 0, 0, true);
         if (!laatikkoKelpaa(r)) return false;
         if (sisalla && !laatikkoSisalla(r, reuna)) return false;
-        return !musteeton || (!rannalla(r, l) && !kiinteat.some((x) => laatikotLimittyvat(r, x)));
+        return !musteeton || (!rannalla(r, l) && !estaa(r, l));
       };
       const k = ehdokkaat.find((e) => kelpaa(e, { sisalla: true, musteeton: true })) ?? null;
       const r = k ? l.laatikko(k, 0, 0, true) : null;

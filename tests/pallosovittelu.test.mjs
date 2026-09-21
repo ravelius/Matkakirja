@@ -410,3 +410,20 @@ test('nimiötason meri-avaimet luetaan luettelosta; ilman kenttää joukko on ty
   assert.match(nostot, /const poltetutMerinimet = pyramidinMerinimet\(\);/);
   assert.match(nostot, /kohde\.tyyppi === 'meri'\n\s*&& merenTunnusPoltettu\(poltetutMerinimet, m\.id, m\.nimi \?\? kohde\.nimi\)\) continue;/);
 });
+
+test('ikonit ovat esteitä (tyyppimerkit 21.9.2026): kakkostaso väistää toisen noston ikonia, ei omaansa; kaupunki ja ykköstaso eivät väistä ikonia', () => {
+  // b:n oikea nimiö (65–105) osuisi a:n ikoniin (95–105) → b vaihtaa vasemmalle.
+  const t = sovitteleLaput({
+    laput: [koelappu('a', 100, 100, 'oikea', { taso: 2 }), koelappu('b', 60, 100, 'oikea', { taso: 2, nimi: 'bb' })],
+    esteet: [],
+  });
+  assert.equal(asento(t, 'a').kylki, 'oikea', 'oma ikoni ei estä omaa nimiötä');
+  assert.equal(asento(t, 'b').kylki, 'vasen');
+  // Ykköstaso samassa asetelmassa pitää oikean kyljen kakkostason ikonin päältä.
+  const t2 = sovitteleLaput({
+    laput: [koelappu('a', 100, 100, 'oikea', { taso: 2 }), koelappu('ykkonen', 60, 100, 'oikea', { taso: 1 })],
+    esteet: [],
+  });
+  assert.equal(asento(t2, 'ykkonen').kylki, 'oikea');
+  assert.equal(asento(t2, 'ykkonen').nimio, true);
+});
