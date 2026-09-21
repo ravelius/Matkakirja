@@ -418,26 +418,14 @@ export function liukuvaNimiokerroin(ladonta, korkeus, kuvasuhde) {
   if (!(nyt > 0) || !(silloin > 0)) return 1;
   return (silloin / nyt) * (ladonta.korjaus > 0 ? ladonta.korjaus : 1);
 }
-/**
- * Katon muuttujat merkin kuorelle (ks. KOKO LIUKUU JOKA KEHYKSESSÄ):
- * a = raaka / katettu, b = katto / katettu. Ilman kattoa (raaka ≤ katto
- * tai katto pois) muuttujat poistetaan, jolloin kuori on pelkkä kerroin.
- *
- * @param {HTMLElement} el merkin kuori (div)
- * @param {{mitta: number, mittaRaaka?: number, katto?: number}} d
+/*
+ * Katon muuttujat merkin kuorelle asuvat js/fokusnosto-symbolit.js:ssä
+ * (nostosymAsetaKuorenKatto): turisti-infon kyltti (js/kaupunkinosto.js)
+ * on yhden tiedoston version moduuli, eikä se saa tuoda pallolauta-
+ * kansiosta (perustuslaki: PALLOLAUTA EI KUULU YHDEN TIEDOSTON
+ * VERSIOON, tools/build-standalone.mjs). Tämä nimi jää rinnalle.
  */
-export function asetaKuorenKatto(el, { mitta, mittaRaaka = null, katto = Infinity }) {
-  const tyyli = el?.style;
-  if (!tyyli) return;
-  const raaka = mittaRaaka > 0 ? mittaRaaka : mitta;
-  if (!(mitta > 0) || !(katto > 0) || !Number.isFinite(katto)) {
-    tyyli.removeProperty('--nimio-a');
-    tyyli.removeProperty('--nimio-b');
-    return;
-  }
-  tyyli.setProperty('--nimio-a', (raaka / mitta).toFixed(4));
-  tyyli.setProperty('--nimio-b', (katto / mitta).toFixed(4));
-}
+export { nostosymAsetaKuorenKatto as asetaKuorenKatto } from '../fokusnosto-symbolit.js';
 
 const SVG = 'http://www.w3.org/2000/svg';
 
