@@ -5,8 +5,8 @@
  * MITÄ PELAAJA NÄKEE. Pallon kaupunkien viereen nousee pieni
  * taskukello, joka näyttää sen kaupungin kellonajan JUURI NYT
  * (vyöhykeaika, kesäaika mukana), ja pallon pinnalla ovat aikavyöhykkeet
- * 24 kaistana pituusasteista. Vipu "1873" vie isoisän aikaan: kaistat
- * katoavat ja jokainen kello näyttää paikallisen aurinkoajan —
+ * 24 kaistana pituusasteista (rajat pituuspiireinä). Vipu "1873" vie
+ * isoisän aikaan: rajat katoavat ja jokainen kello näyttää paikallisen aurinkoajan —
  * pituusaste × 4 minuuttia Greenwichistä. Ennen vuoden 1884
  * meridiaanikonferenssia jokaisella kaupungilla oli oma aikansa;
  * rautatiet pakottivat yhtenäisen ajan (Britannia 1847, Ruotsi 1879,
@@ -23,8 +23,8 @@
  * MITEN SE ON RAKENNETTU. Linssi on oma näkymä pallolla (Raamattu MUUT
  * LINSSIT): pelin lappuset pois portilla `aikajana-paalla`, oma kelluva
  * ✕ ja alapalkki (sama malli kuin Astronautin kameralla,
- * js/linssit/satelliitti.js rakennaLinssikehys). Kaistat ovat
- * linssimoottorin polygoneja, kellot sen merkkejä (CSS2D,
+ * js/linssit/satelliitti.js rakennaLinssikehys). Vyöhykerajat ovat
+ * linssimoottorin polkuja, kellot sen merkkejä (CSS2D,
  * js/pallolauta/linssit.js). Laskenta on puhtaasti
  * js/linssit/kellot-aika.js:ssä. Kellot päivittyvät puolen minuutin
  * välein (viisarit liikkuvat vain, kun minuutti vaihtuu).
@@ -40,7 +40,7 @@ import { pallonKaupungit } from '../pallo.js';
 import { ilmoitaLivianKasvopuhe } from '../livia-puhetila.js';
 import {
   ARVAUKSEN_TP, LIVIAN_KYSYMYKSET, arvausOsuu, aurinkoaika, jasennaKellonaika, kellonaikaTeksti,
-  kysymyksenTeksti, oikeaVastaus, siirtymaTeksti, valitseKysymyspari, vyohykeaika, vyohykekaistat,
+  kysymyksenTeksti, oikeaVastaus, siirtymaTeksti, valitseKysymyspari, vyohykeaika, vyohykerajat,
 } from './kellot-aika.js';
 
 /** Osien nimet linssimoottorissa. */
@@ -61,7 +61,7 @@ const TYYLIN_TUNNUS = 'kellot-tyyli';
 export const KELLOKAUPUNGIT = new Set([
   'islanti', 'nuuk', 'stjohns', 'halifax', 'newyork', 'montreal', 'chicago', 'houston', 'denver',
   'losangeles', 'sanfrancisco', 'vancouver', 'anchorage', 'nome', 'hawaii', 'mexico', 'havanna',
-  'bogota', 'lima', 'caracas', 'manaus', 'rio', 'buenosaires', 'santiago', 'puntaarenas',
+  'bogota', 'lima', 'caracas', 'manaus', 'rio', 'buenosaires', 'valparaiso', 'puntaarenas',
   'dakar', 'lagos', 'kairo', 'nairobi', 'kapkaupunki', 'addisabeba', 'madagaskar',
   'teheran', 'dubai', 'karachi', 'delhi', 'kolkata', 'kathmandu', 'yangon', 'bangkok', 'jakarta',
   'singapore', 'hongkong', 'peking', 'shanghai', 'tokio', 'soul', 'manila', 'vladivostok',
@@ -148,9 +148,8 @@ body.kellot-1873 .kellot-kello .kellot-taulu { fill: #efe2c3; }
   display: flex; align-items: center; justify-content: center; padding: 0;
 }
 .kellot-tila-nimi {
-  position: fixed; top: max(0.75rem, env(safe-area-inset-top)); left: 0.85rem; z-index: 42;
-  font: 700 0.95rem/1 "Special Elite", "Courier New", monospace; color: #f0e2c2;
-  background: rgba(38, 28, 16, 0.78); padding: 0.45rem 0.7rem; border-radius: 999px;
+  font: 700 0.85rem/1 "Special Elite", "Courier New", monospace; color: #f0e2c2;
+  background: rgba(38, 28, 16, 0.78); padding: 0.4rem 0.7rem; border-radius: 999px;
   border: 1px solid rgba(201, 162, 39, 0.55);
 }
 @media (max-width: 480px) { .kellot-kortti { font-size: 0.88rem; } }
@@ -264,27 +263,43 @@ function avaa(lauta, tila, ui) {
   // Datumit pysyvät samoina olioina, jotta merkkikerros ei luo elementtejä uudestaan.
   const datumit = kaupungit.map((k) => ({
     avain: `kello:${k.id}`, id: k.id, n: k.n, lat: k.lat, lng: k.lon, lon: k.lon, maa: k.maa,
-    aika: null, pari: null, elementti: kelloElementti, asettele: asetteleKello,
+    aika: null, pari: null, vastaus: null, elementti: kelloElementti, asettele: asetteleKello,
   }));
+  /*
+   * MERKKIKERROS OMISTAA ELEMENTIT. linssit.merkit kopioi datumit
+   * pysyviksi (js/pallolauta/merkit.js aseta: Object.assign + asettele),
+   * joten omat datumit eivät koskaan saa `el`iä — jokainen muutos
+   * (aika, pari, vastaus) työnnetään kerroksen läpi uudestaan. Kutsu on
+   * halpa: samat avaimet, samat elementit, vain asettele ajetaan.
+   */
+  const tyonnaKellot = () => { if (!suljettu) lauta.linssit.merkit(KELLOT_OSA, datumit); };
   const paivitaAjat = () => {
     const nyt = hetki();
-    for (const d of datumit) {
-      d.aika = kaupunginAika(d, aikatila, nyt);
-      if (d.el) asetteleKello(d.el, d);
-    }
+    for (const d of datumit) d.aika = d.vastaus ?? kaupunginAika(d, aikatila, nyt);
+    tyonnaKellot();
   };
   paivitaAjat();
-  lauta.linssit.merkit(KELLOT_OSA, datumit);
-  let kaistat = lauta.linssit.polygonit(KAISTAT_OSA, vyohykekaistat());
+  let kaistat = lauta.linssit.polut(KAISTAT_OSA, vyohykerajat());
 
+  let horatioNaytetty = false;
   const asetaTila = (uusi) => {
     if (uusi === aikatila) return;
     aikatila = uusi;
     doc.body.classList.toggle('kellot-1873', uusi === '1873');
-    if (uusi === '1873') { kaistat?.pura?.(); kaistat = null; } else if (!kaistat) kaistat = lauta.linssit.polygonit(KAISTAT_OSA, vyohykekaistat());
+    if (uusi === '1873') { kaistat?.pura?.(); kaistat = null; } else if (!kaistat) kaistat = lauta.linssit.polut(KAISTAT_OSA, vyohykerajat());
     paivitaAjat();
     for (const nappi of vivut.querySelectorAll('[data-tila]')) nappi.setAttribute('aria-pressed', String(nappi.dataset.tila === uusi));
     tilaNimi.textContent = uusi === '1873' ? 'Kellot · 1873, jokaisella torilla oma aika' : 'Kellot · aikavyöhykkeet tänään';
+    // Horation päiväkirjan merkintä kerran, kun 1873 avataan ensimmäistä kertaa (Fablen kortin teksti).
+    if (uusi === '1873' && !horatioNaytetty && !kysymys) {
+      horatioNaytetty = true;
+      const sulje = doc.createElement('button');
+      sulje.type = 'button';
+      sulje.className = 'kellot-sulje-kortti';
+      sulje.textContent = 'Selvä';
+      sulje.addEventListener('click', suljeKortti);
+      naytaKortti('Horatio, Marseille 1873', LINSSI.kortti, sulje);
+    }
   };
 
   /* ── kehys: ✕, tilan nimi, vivut, Livian kortti ─────────────────── */
@@ -298,6 +313,7 @@ function avaa(lauta, tila, ui) {
   const tilaNimi = doc.createElement('div');
   tilaNimi.className = 'kellot-tila-nimi';
   tilaNimi.textContent = 'Kellot · aikavyöhykkeet tänään';
+  tilaNimi.setAttribute('aria-live', 'polite');
 
   const kehikko = doc.createElement('div');
   kehikko.className = 'kellot-kehikko';
@@ -325,15 +341,16 @@ function avaa(lauta, tila, ui) {
   kysy.className = 'kellot-kysy';
   kysy.textContent = 'Livia kysyy';
   vivut.appendChild(kysy);
-  kehikko.append(kortti, vivut);
-  doc.body.append(sulku, tilaNimi, kehikko);
+  kehikko.append(kortti, tilaNimi, vivut);
+  doc.body.append(sulku, kehikko);
 
   /* ── Livian kysymys ─────────────────────────────────────────────── */
   const merkitsePari = (a, b) => {
     for (const d of datumit) {
       d.pari = d.id === a?.id ? 'a' : (d.id === b?.id ? 'b' : null);
-      if (d.el) asetteleKello(d.el, d);
+      if (!d.pari) d.vastaus = null;
     }
+    paivitaAjat();
   };
   const suljeKortti = () => {
     kortti.hidden = true;
@@ -359,7 +376,10 @@ function avaa(lauta, tila, ui) {
     // Kysymys vuorotellen; pari arvotaan näkyvistä kellokaupungeista.
     const jarjestys = LIVIAN_KYSYMYKSET.filter((k) => k.tila === aikatila);
     const q = jarjestys[Math.floor(Math.random() * jarjestys.length)] ?? LIVIAN_KYSYMYKSET[0];
-    const pari = valitseKysymyspari(kaupungit, q, nyt);
+    // Pari RUUDULLA olevista kelloista, jotta pelaaja näkee molemmat;
+    // jos niistä ei löydy paria, koko kellokaupunkijoukosta.
+    const ruudulla = kaupungit.filter((k) => lauta.ruudulla?.(k.lat, k.lon, -24));
+    const pari = valitseKysymyspari(ruudulla, q, nyt) ?? valitseKysymyspari(kaupungit, q, nyt);
     if (!pari) return;
     const [a, b] = pari;
     const oikea = oikeaVastaus(q, a, b, nyt);
@@ -422,9 +442,13 @@ function avaa(lauta, tila, ui) {
     sulje.textContent = 'Selvä';
     sulje.addEventListener('click', suljeKortti);
     kortti.append(palaute, selite, sulje);
-    // Vastaus näytetään B:n viisareilla: kello kääntyy oikeaan aikaan.
+    // Vastaus näytetään B:n viisareilla: kello kääntyy oikeaan aikaan
+    // (A:ssa on tasan 12), kunnes kortti suljetaan.
+    const ad = datumit.find((d) => d.id === a.id);
     const bd = datumit.find((d) => d.id === b.id);
-    if (bd?.el) asetteleKello(bd.el, { ...bd, aika: { ...bd.aika, minuutit: oikea.minuutit } });
+    if (ad) ad.vastaus = { ...ad.aika, minuutit: 12 * 60, selite: 'tasan 12' };
+    if (bd) bd.vastaus = { ...bd.aika, minuutit: oikea.minuutit, selite: kysymys.kysymys.tila === '1873' ? 'aurinkoaika' : 'vyöhykeaika' };
+    paivitaAjat();
     kysymys = { ...kysymys, vastattu: true };
   };
   kysy.addEventListener('click', kysyLivia);

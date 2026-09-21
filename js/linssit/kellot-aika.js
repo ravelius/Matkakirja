@@ -39,14 +39,15 @@ const VYOHYKKEET = {
   SVK: 'Europe/Bratislava', HUN: 'Europe/Budapest', SVN: 'Europe/Ljubljana', HRV: 'Europe/Zagreb',
   BIH: 'Europe/Sarajevo', ROU: 'Europe/Bucharest', BGR: 'Europe/Sofia', GRC: 'Europe/Athens',
   CYP: 'Asia/Nicosia', TUR: 'Europe/Istanbul', UKR: 'Europe/Kyiv',
-  RUS: (lon) => {
-    if (lon < 40) return 'Europe/Kaliningrad';
+  RUS: (lon, lat) => {
+    if (lon < 25) return 'Europe/Kaliningrad';
     if (lon < 52) return 'Europe/Moscow';
     if (lon < 68) return 'Asia/Yekaterinburg';
     if (lon < 80) return 'Asia/Omsk';
     if (lon < 95) return 'Asia/Novosibirsk';
     if (lon < 110) return 'Asia/Irkutsk';
-    if (lon < 135) return 'Asia/Yakutsk';
+    // Jakutsk (129,7°, +9) ja Vladivostok (131,9°, +10) erotetaan leveysasteesta.
+    if (lon < 135) return lat < 50 ? 'Asia/Vladivostok' : 'Asia/Yakutsk';
     if (lon < 142) return 'Asia/Vladivostok';
     if (lon < 155) return 'Asia/Magadan';
     return 'Asia/Kamchatka';
@@ -279,26 +280,19 @@ export function valitseKysymyspari(kaupungit, kysymys, hetkiMs, arpa = Math.rand
 }
 
 /**
- * Aikavyöhykekaistat pallolle: 24 GeoJSON-polygonia 15° leveinä
- * (vyöhyke n kattaa 15n ± 7,5°), vuorotellen kahdella sävyllä. Kaistat
- * ovat NIMELLISIÄ (auringon vyöhykkeet); todelliset rajat mutkittelevat
- * valtioiden mukaan, ja sen kertoo kello, ei kaista.
+ * Aikavyöhykkeiden rajat pallolle: 24 pituuspiiriä (15n + 7,5°) ohuina
+ * katkoviivoina navalta navalle (polkukerros; polygoni ei kelpaa —
+ * globe.gl kolmioi 170° korkean nelikulmion pallolle vinoina laattoina,
+ * mitattu 21.9.2026). Rajat ovat NIMELLISIÄ (auringon vyöhykkeet);
+ * todelliset rajat mutkittelevat valtioiden mukaan, ja sen kertoo kello.
  */
-export function vyohykekaistat({ vari = 'rgba(70, 51, 31, 0.10)', vari2 = 'rgba(70, 51, 31, 0.03)', lat = 84 } = {}) {
+export function vyohykerajat({ vari = 'rgba(70, 51, 31, 0.55)', paksuus = 0.9, katko = 0.35, lat = 80, askel = 10 } = {}) {
   const ulos = [];
   for (let n = -12; n <= 11; n += 1) {
-    const x0 = n * 15 - 7.5;
-    const x1 = n * 15 + 7.5;
-    ulos.push({
-      avain: `vyohyke:${n}`,
-      vyohyke: n,
-      geometry: {
-        type: 'Polygon',
-        coordinates: [[[x0, -lat], [x1, -lat], [x1, lat], [x0, lat], [x0, -lat]]],
-      },
-      vari: (n % 2 === 0) ? vari : vari2,
-      reuna: false,
-    });
+    const lng = n * 15 + 7.5;
+    const pisteet = [];
+    for (let l = -lat; l <= lat; l += askel) pisteet.push([l, lng]);
+    ulos.push({ avain: `vyohykeraja:${n}`, vyohyke: n, pisteet, vari, paksuus, katko });
   }
   return ulos;
 }

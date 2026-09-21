@@ -21,6 +21,7 @@
     "savuke-sumu.mjs",
     "savuke-kartan-liike.mjs",
     "savuke-hiomassa-linssi.mjs",
+    "savuke-kellot.mjs",
     "savuke-nimikyltti.mjs",
     "savuke-kerma-reuna.mjs",
     "savuke-ranskan-nostot-lukossa.mjs",
@@ -528,6 +529,10 @@
     "savuke-kartan-liike.mjs": {
       "kuvakansio": true,
       "huomautus": "Pieni liike kartalle (Fable 21.9.2026, js/pallolauta/liike.js): FRA/Pariisi 390 ja 1400 px — kerros laudalla ja levossa, illan savy vain illassa, pulu lentaa levossa ja lento paattyy, kortti auki pysayttaa pilven ja estaa pulun, kytkin pois pyyhkii kaiken, 390: kehysvali liikkeen kanssa <= 105 % ilman (kolme vuorottelevaa ikkunaa). Ampari Noden kautta. ~90 s."
+    },
+    "savuke-kellot.mjs": {
+      "kuvakansio": true,
+      "huomautus": "Kellot-linssi (Fable 21.9.2026, ensimmainen leikkilinssi; js/linssit/kellot.js): Marseille 390 ja 1400 px — linssi pallolle (portti, kellot, 24 vyohykerajaa), vipu 1873 (aurinkoaika, Pariisi-Marseille 12 min, Horation kortti), Livian kysymys (Fablen lause, pari korostuu, vaara 0 tp, oikea +20 tp), sulku siivoaa, laukku nayttaa Codexin webp-ikonin. Ampari Noden kautta. ~70 s."
     },
     "savuke-hiomassa-linssi.mjs": {
       "kuvakansio": true,

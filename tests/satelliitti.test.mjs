@@ -1098,7 +1098,8 @@ test('matkalaukun linssivalikko: oma varustekuva ja oma varasolu, ei jaettua tai
   assert.match(ui, /onSatelliitti \? 'linssi-satelliitti' : 'linssi'/);
   // Varustekuva on linssin oma; hiomassa-linssi (21.9.2026) saa rekisterin
   // ikonipaikan tai yhteisen hiomassa-kuvan (js/ui.js linssiLiuska).
-  assert.match(ui, /: `assets\/varusteet\/varuste-\$\{tunnus\}\.jpg`;\s*const tiedot = \{ kuva, name: nimi \};/);
+  // Rekisterin oma ikoni (Codexin linssisarja) voittaa; muuten varustekuva (21.9.2026).
+  assert.match(ui, /: `assets\/varusteet\/varuste-\$\{tunnus\}\.jpg`\);\s*const tiedot = \{ kuva, name: nimi \};/);
   assert.ok(existsSync(new URL('../assets/varusteet/varuste-satelliitti.jpg', import.meta.url)),
     'varuste-satelliitti.jpg puuttuu');
 
