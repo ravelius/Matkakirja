@@ -7,7 +7,10 @@ import { TOKEN_TYPES, arvoAarteenArvo, createTokenPile } from './tokens.js';
 import { packById, sourceList } from './pack.js';
 import { paikallisaarre } from './packs/paikallisaarteet.js';
 import { TARINAKAARI, KAARI_LAUDAT } from './packs/tarinakaari.js';
-import { tarkistaKynnys } from './linssit/omistus.js';
+import {
+  hiomassa, hiomassaNimi, hyvitaHiomassa, myonna, tarkistaKynnys,
+} from './linssit/omistus.js';
+import { LINSSIAARTEET, linssiAarteesta } from './linssit/aarteet.js';
 import { tietajatasonNousut } from './tietajatasot.js';
 
 export const START_MONEY = 300;
@@ -1189,6 +1192,53 @@ export class Game {
         tilanne: 'peli.linssi.avautui',
       });
     }
+  }
+
+  /**
+   * LINSSI ISON AARTEEN KYLKIÄISENÄ (omistaja 21.9.2026, Raamatun loki
+   * "HIOMASSA-LINSSI JA OPTIKON HYVITYS: MEKANIIKKA HYVAKSYTTY").
+   *
+   * Aarteen raha on jo maksettu — keskeneräisyys ei saa rangaista.
+   * Jos kaupungin isoon aarteeseen kuuluu linssi (js/linssit/aarteet.js;
+   * testit antavat oman taulun `this.linssiAarteet`), se myönnetään.
+   * Hiomassa oleva linssi tuo optikon hyvityksen kerran (omistus.js
+   * hyvitaHiomassa) ja jää laukkuun harmaana; valmis linssi on heti
+   * käytössä. Toisella pelikerralla linssi on jo passissa eikä uusi:
+   * silloin ei kuplaa eikä hyvitystä.
+   *
+   * Tapahtumalaji on 'aid' kuten kynnyslinssillä: aarrelaji nähdään jo
+   * laatan paljastuksessa, ja tämä on sen jälkeinen lisä.
+   */
+  linssiAarteenKylkiaisena(player, cityId, type) {
+    const tunnus = linssiAarteesta(cityId, type, this.linssiAarteet ?? LINSSIAARTEET);
+    if (!tunnus) return null;
+    const { uusi } = myonna(this, player, tunnus);
+    if (!uusi) return null;
+    if (hiomassa(tunnus)) {
+      const hyvitys = hyvitaHiomassa(this, player, tunnus);
+      const nimi = hiomassaNimi(tunnus);
+      this.say(player.id, `${player.name} löysi aarteen kyljestä linssin (${nimi}), mutta optikko hioo sitä vielä`
+        + (hyvitys ? ` — hän maksoi odotuksesta ${hyvitys} puntaa hyvitystä.` : '.'));
+      this.emit('aid', 'Linssi hiomassa', {
+        icon: 'suurennuslasi',
+        linssi: tunnus,
+        hiomassa: true,
+        hyvitys,
+        sub: hyvitys
+          ? `Optikko hioo vielä tätä linssiä — hän maksoi odotuksesta ${hyvitys} puntaa hyvitystä. Linssi tulee laukkuun, kun se on valmis.`
+          : 'Optikko hioo vielä tätä linssiä. Linssi tulee laukkuun, kun se on valmis.',
+        tilanne: 'peli.linssi.hiomassa',
+      });
+      return { tunnus, hiomassa: true, hyvitys };
+    }
+    this.say(player.id, `${player.name} löysi aarteen kyljestä linssin.`);
+    this.emit('aid', 'Uusi linssi', {
+      icon: 'suurennuslasi',
+      linssi: tunnus,
+      sub: 'Aarteen kyljessä oli linssi — uusi katselutapa laukkuun',
+      tilanne: 'peli.linssi.avautui',
+    });
+    return { tunnus, hiomassa: false, hyvitys: 0 };
   }
 
   /**
@@ -3167,6 +3217,7 @@ export class Game {
         p.money += arvo;
         this.say(p.id, `${token.symbol} ${p.name} löysi kätköstä: ${token.name} (${arvo} puntaa).`);
         this.emit('treasure', token.name, { token: type, city: cityId, sub: `+${arvo} puntaa` });
+        this.linssiAarteenKylkiaisena(p, cityId, type);
     }
 
     this.checkWin();
