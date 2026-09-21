@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-09-21.2024';
+const CACHE = 'matkakirja-2026-09-21.2025';
 const SHELL = [
   './',
   './index.html',
@@ -601,6 +601,9 @@ const SHELL = [
   './js/packs/fokusvirta-ljubljana.js',
   // Košice (20.9.2026, omistajan päätös: Slovakian pelikaupunki).
   './js/packs/fokusvirta-kosice.js',
+  // Luxemburg (21.9.2026, omistajan päätös: Kypros, Luxemburg ja Malta
+  // saavat pelikaupungin).
+  './js/packs/fokusvirta-luxemburg.js',
   // Maat ilman omaa fokusvirtaa: kadonneiden ihmeiden erä 26.8.2026
   // ja Matkakirjan ihmeiden Euroopan erä 27.8.2026.
   './js/packs/fokuskohteet-egy.js',
@@ -1671,6 +1674,8 @@ const SHELL = [
   './assets/kartat/amsterdam-varikartta.png',
   './assets/kartat/kobenhavn-varikartta.png',
   './assets/kartat/firenze-varikartta.png',
+  './assets/kartat/luxemburg-keskusta.png',
+  './assets/kartat/luxemburg-varikartta.png',
   './assets/kartat/bryssel-keskusta.png',
   './assets/kartat/bryssel-varikartta.png',
   './assets/kartat/ljubljana-keskusta.png',

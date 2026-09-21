@@ -621,6 +621,23 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: 50.851, etela: 50.8335, lansi: 4.342, ita: 4.376 },
     laajennus: 1.6,
   },
+  luxemburg: {
+    /*
+     * Luxemburgin vanhakaupunki (21.9.2026; omistajan päätös
+     * 21.9.2026: Kypros, Luxemburg ja Malta saavat pelikaupungin):
+     * Bock-kallio ja kasematit koillisessa, Suurherttuallinen palatsi
+     * ja Notre-Damen katedraali keskellä, Guillaume II:n aukio niiden
+     * välissä ja Adolphe-silta lounaassa Pétrussen laakson yli.
+     * Noin 1,1 × 0,7 km: kaikki kuusi kohdetta mahtuvat tiukkaan
+     * rajaukseen, ja koska vanhakaupunki on kallion päällä pieni
+     * niemeke, laajempi rajaus toisi mukaan vain tyhjää laaksoa.
+     * Alzette- ja Pétrusse-joet jäävät kuvan reunoille syvinä
+     * rotkoina; se on tarkoituksellista, koska juuri rotkot ovat syy
+     * siihen, miksi kaupunki oli niin vahva linnoitus.
+     */
+    rajat: { pohjoinen: 49.6128, etela: 49.6065, lansi: 6.1245, ita: 6.1390 },
+    laajennus: 1.6,
+  },
   kosice: {
     /*
      * Košicen vanhakaupunki (20.9.2026; omistajan päätös: Slovakian

@@ -1475,6 +1475,34 @@ export const EUROPE_VALOKUVAT = {
   },
 
   /*
+   * LUXEMBURG (21.9.2026, Sonnet-sisältösessio; omistajan päätös
+   * 21.9.2026: Kypros, Luxemburg ja Malta saavat pelikaupungin).
+   * Kuvat Bock-kalliolta ja Adolphe-sillalta; lisenssit ja tekijät
+   * luettu Commonsin imageinfo/extmetadata-rajapinnasta 21.9.2026.
+   */
+  luxemburg: {
+    lisat: [
+      {
+        tiedosto: 'Luxembourg Adolphe Bridge over Petrusse valley.jpg',
+        vuosi: '2009',
+        lahde: 'Cayambe, Commons (CC BY-SA 3.0)',
+        lyhyt: 'Adolphe-silta kaartuu Pétrussen laakson yli.',
+        selite: 'Adolphe-silta rakennettiin vuosina 1900–1903 yhdistämään '
+          + 'vanhakaupunki ja asema-alue Pétrussen syvän laakson yli. '
+          + 'Isoisän matkan aikaan siltaa ei vielä ole — laakson ylitti '
+          + 'silloin vain kapeampi Passerelle vuodelta 1861.',
+      },
+    ],
+    tiedosto: 'Luxembourg City from the Bock Casements.jpg',
+    vuosi: '2024',
+    lahde: 'P. Hughes, Commons (CC BY-SA 4.0)',
+    lyhyt: 'Luxemburgin alakaupunki Bockin kasemattien kalliolta nähtynä.',
+    selite: 'Bock-kallio on kaupungin syntypaikka: kreivi Siegfried '
+      + 'rakensi tänne linnansa vuonna 963. Kalliolta avautuu näkymä '
+      + 'alas Alzette-joen mutkaan ja alakaupungin kattojen ylitse.',
+  },
+
+  /*
    * LJUBLJANA (20.9.2026, Sonnet-sisältösessio). Kaksi Commons-kuvaa
    * Ljubljanica-joesta ja Linnavuoresta; lisenssit ja tekijät luettu
    * Commonsin imageinfo/extmetadata-rajapinnasta 20.9.2026 (CC BY 4.0
