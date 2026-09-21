@@ -67,6 +67,7 @@ export const NOSTOANKKURIT_FRA = {
   'nosto:hahmotelma-canal-du-midi': { lat: 43.350159, lng: 1.820000 },
   'nosto:hahmotelma-canigou': { lat: 42.517930, lng: 2.456000 },
   'nosto:hahmotelma-chenonceau': { lat: 47.325453, lng: 1.070000 },
+  'nosto:hahmotelma-cluny': { lat: 46.435375, lng: 4.658000 },
   'nosto:hahmotelma-cognac': { lat: 45.700833, lng: -0.331000 },
   'nosto:hahmotelma-etretat': { lat: 49.574894, lng: 0.216325 },
   'nosto:hahmotelma-le-puy-en-velay': { lat: 45.045607, lng: 3.884000 },

@@ -35,7 +35,8 @@
  *   7. Kylkivaihto häivyttää (E3): kun noston datumin kylki käännetään
  *      ja asetteleNosto ajetaan, vanha nimiökuva jää häipymään
  *      (.nostosym-nimio-vanha), uusi tulee häivytyksellä ja vanha on
- *      poissa DOMista 400 ms:n kuluttua; ikoni ei liiku.
+ *      poissa DOMista 400 ms:n kuluttua; ikoni ei liiku. Häipyminen
+ *      itse tuomitaan vain ≥ 15 fps:n piirrolla (kehyksiä ≥ 6 / 400 ms).
  * ENNUSTE (E4b, Karttasepän kameran ennuste): kun kehyksen mitoissa on
  * ennuste, nimiö johtaa todellista kameraa yhden kehyksen verran
  * tahallaan; vartiot 1–2 mittaavat silloin siirtymän ENNUSTETUSTA
@@ -353,12 +354,29 @@ for (const ruutu of RUUDUT) {
       lapsia: g.children.length,
       ikoniSama: g.querySelector('.nostosym-rasteri:not(.nostosym-nimiokuva)') !== null,
     };
-    await new Promise((r) => setTimeout(r, 60));
+    /*
+     * SIIRTYMÄ ALKAA VASTA KEHYKSESSÄ. Kuormitetussa tai ohjelmistopiirtävässä
+     * Chromiumissa pallon kehys voi kestää 200 ms, ja 60 ms:n kohdalla vanhan
+     * opacity on yhä 1 (CI main v2014 polton aikana 21.9.2026). Siksi
+     * häipymistä seurataan kehyksittäin 400 ms: riittää, että vanha on jossain
+     * kehyksessä välillä 0 < opacity < 1 TAI se poistui häivytyksen jälkeen.
+     */
+    const alku = performance.now();
+    let pienin = 1;
+    let kehyksia = 0;
+    while (performance.now() - alku < 400) {
+      await new Promise((r) => requestAnimationFrame(r));
+      kehyksia += 1;
+      const v = g.querySelector('.nostosym-nimio-vanha');
+      if (!v) break;
+      pienin = Math.min(pienin, Number(getComputedStyle(v).opacity));
+    }
     const kesken = {
       tulee: g.querySelectorAll('.nostosym-nimio-tulee').length,
-      vanhaOpacity: getComputedStyle(g.querySelector('.nostosym-nimio-vanha') ?? g).opacity,
+      vanhaOpacity: String(pienin),
+      kehyksia,
     };
-    await new Promise((r) => setTimeout(r, 400));
+    await new Promise((r) => setTimeout(r, Math.max(0, 460 - (performance.now() - alku))));
     const lopuksi = {
       vanha: g.querySelectorAll('.nostosym-nimio-vanha').length,
       nimioita: g.querySelectorAll('.nostosym-nimiokuva').length,
@@ -373,7 +391,9 @@ for (const ruutu of RUUDUT) {
   tieto(`${tunnus}: kylkivaihto`, JSON.stringify(kylki));
   vaadi(`${tunnus}: 7. kylkivaihto häivyttää: vanha nimiö häipyy, uusi tulee häivytyksellä, vanha poissa 400 ms:ssa`,
     !kylki.virhe && kylki.heti.vanha === 1 && kylki.heti.tulee === 1 && kylki.heti.ikoniSama
-      && kylki.kesken.tulee === 0 && Number(kylki.kesken.vanhaOpacity) < 1
+      // Häipyminen tuomitaan vain, kun kehyksiä tuli ≥ 6 400 ms:ssa (≥ 15 fps);
+      // hitaammalla piirrolla poisto (260 ms) ehtii ennen siirtymän kehystä.
+      && kylki.kesken.tulee === 0 && (Number(kylki.kesken.vanhaOpacity) < 1 || kylki.kesken.kehyksia < 6)
       && kylki.lopuksi.vanha === 0 && kylki.lopuksi.nimioita === 1 && kylki.lopuksi.puoli !== kylki.ennen.puoli
       && Number(kylki.lopuksi.opacity) === 1,
     JSON.stringify(kylki));
