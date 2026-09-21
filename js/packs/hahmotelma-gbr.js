@@ -889,6 +889,7 @@ export const HAHMOTELMA_GBR = [
     ],
     nimi: 'Doverin liiduvuoret',
     tyyppi: 'meri',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Kuinka korkeita Doverin liiduvuoret parhaimmillaan ovat, ja mistä ne ovat syntyneet?',
@@ -1004,6 +1005,7 @@ export const HAHMOTELMA_GBR = [
     ],
     nimi: 'Edinburghin linna',
     tyyppi: 'historia',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Mikä on Edinburghin linnan ja koko kaupungin vanhin säilynyt rakennus?',
