@@ -381,6 +381,16 @@
               <p class="valikko-otsikko">Äänet</p>
               <div id="kertoja-valikko" class="kertoja-valikko"></div>
             </div>
+            <!-- KARTTA: PIENI LIIKE (Fable 21.9.2026): pulu lentää harvoin
+                 kartan yli, pilven varjo liukuu reliefin päällä ja kellonaika
+                 sävyttää kartan kevyesti (js/pallolauta/liike.js). Pelaajan
+                 laiteasetus samassa riviasussa kuin äänikytkimet; rivi
+                 rakennetaan js/main.js:ssä. prefers-reduced-motion sammuttaa
+                 liikkeen kytkimestä riippumatta. -->
+            <div class="kertoja-kotelo kartta-kotelo">
+              <p class="valikko-otsikko">Kartta</p>
+              <div id="kartta-valikko" class="kertoja-valikko"></div>
+            </div>
             <!--
               PELILAUTA: KARTTAPALLO VAI VANHA KARTTA (omistaja
               5.9.2026, sanatarkasti: *"pelissä periaatteessa voisi olla

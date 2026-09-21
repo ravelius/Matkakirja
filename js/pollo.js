@@ -71,7 +71,7 @@ import {
   jaaKappaleiksi, linssiEstaa, linssiEstaaChatin, nielaiseSulkevaNapautus, polloNimilappu, sanamaara,
   vapautaKosketus,
 } from './ui-apurit.js';
-import { POLLON_LINKKIKATTO, etsiAnkkuri, haeKatkelmat, rakennaIndeksi } from './pollo-haku.js';
+import { POLLON_LINKKIKATTO, haeKatkelmat, rakennaIndeksi } from './pollo-haku.js';
 import {
   nykyinenPoimintaAvain, paivitaPillerit, poimintaKehittaja, tallennaPoiminta,
 } from './pollopoiminnat.js';
@@ -727,7 +727,8 @@ function avoinKohdetietoruutu(ui) {
  * PÖLLÖLINKIT (omistajan tilaus 13.8.2026).
  *
  * Vastauksissa on kahdenlaisia linkkejä. Artikkelilinkki vie pelin omaan
- * juttuun ja se rakennetaan paikallisen haun tuloksista (korostaLinkit).
+ * juttuun, rakennetaan paikallisen haun tuloksista ja luetellaan
+ * vastauksen loppuun Matkakirja-rivinä (liitaMatkakirjalinkit).
  * Pöllölinkki on toinen laji: pöllö merkitsee vastaukseensa 1–3
  * avainkäsitettä, ja niitä napauttamalla se kertoo lisää samasta
  * asiasta. Merkintä tulee mallilta muodossa [[käsite]], ja se on
@@ -5445,61 +5446,46 @@ export class Pollo {
   }
 
   /**
-   * ALLEVIIVATTU LINKKI KESKELLE VASTAUSTA (omistajan tilaus 12.8.2026).
+   * MATKAKIRJA-LINKIT VASTAUKSEN LOPPUUN (omistaja 14.8.2026, jatko
+   * hyväksytty 21.9.2026; docs/roolitus.md Avoimet asiat 1).
    *
-   * Erillisen "Lue: …" -napin sijaan vastauksesta etsitään kohta, joka
-   * puhuu samasta asiasta, ja SE muutetaan linkiksi. Ankkurisanat
-   * tulevat pelin omasta indeksistä (js/pollo-haku.js ankkuriSanat),
-   * eivät koskaan mallin tekstistä, joten linkki ei voi osoittaa
-   * mihinkään keksittyyn.
+   * Pelin omat jutut eivät enää sido itseään vastaustekstin sanoihin
+   * (12.–13.8.2026 alleviivattu ankkuri keskellä vastausta: omistaja
+   * *"Alleviivaukset outoja"*), vaan ne luetellaan vastauksen LOPPUUN
+   * omana rivinään muodossa "Matkakirja: <linkki>" — enintään
+   * POLLON_LINKKIKATTO kappaletta. Tekstin sisään jäävät VAIN pöllön
+   * omat kysymyslinkit (taytaVastaus, .pollo-kasitelinkki). Linkin
+   * nimi on jutun leima tai otsikko pelin indeksistä (js/pollo-haku.js),
+   * ei koskaan mallin tekstiä.
    *
-   * TURVALLISUUS: mallin tekstiä ei koskaan tulkita HTML:nä. Solmut
-   * rakennetaan käsin ja teksti asetetaan tekstisisältönä, joten
-   * vastaus ei voi injektoida merkkausta paneeliin.
+   * TURVALLISUUS: solmut rakennetaan käsin ja nimet asetetaan
+   * tekstisisältönä; vastaus ei voi injektoida merkkausta paneeliin.
+   * Rivi on käyttöliittymää, ei pöllön puhetta — luenta ei lue sitä.
    *
-   * @returns {Array} ne linkit, joille ei löytynyt ankkuria tekstistä
+   * @returns {number} liitettyjen linkkien määrä
    */
-  korostaLinkit(viesti, linkit) {
-    const jaljelle = [];
-    for (const linkki of linkit) {
-      if (!this.sidoLinkki(viesti, linkki)) jaljelle.push(linkki);
-    }
-    return jaljelle;
-  }
-
-  /** Yksi linkki tekstiin. Palauttaa tosi, jos ankkuri löytyi. */
-  sidoLinkki(viesti, { reitti, ankkurit }) {
-    // Vain koskemattomat tekstisolmut kelpaavat: jo linkitetyn kohdan
-    // sisään ei rakenneta toista linkkiä.
-    for (const solmu of [...viesti.childNodes]) {
-      if (solmu.nodeType !== 3) continue;
-      const osuma = etsiAnkkuri(solmu.data, ankkurit);
-      if (!osuma) continue;
-      const teksti = solmu.data;
-      const linkki = polloElementti('a', 'pollo-tekstilinkki', teksti.slice(osuma.alku, osuma.loppu));
+  liitaMatkakirjalinkit(viesti, linkit) {
+    const lista = (Array.isArray(linkit) ? linkit : []).slice(0, POLLON_LINKKIKATTO);
+    if (!lista.length) return 0;
+    const rivi = polloElementti('p', 'pollo-matkakirja');
+    rivi.appendChild(viesti.ownerDocument.createTextNode('Matkakirja: '));
+    lista.forEach(({ reitti }, i) => {
+      if (i) rivi.appendChild(viesti.ownerDocument.createTextNode(' · '));
+      // Linkin teksti on jutun oma otsikko; lähde (lehti / aihe) on
+      // title-vihjeessä, jotta rivi pysyy lyhyenä puhelimella.
+      const nimi = reitti.nimi ?? reitti.otsikko ?? reitti.leima ?? 'lue';
+      const linkki = polloElementti('a', 'pollo-matkakirjalinkki', nimi);
       linkki.href = '#';
-      linkki.title = `Lue: ${reitti.leima ?? reitti.otsikko}`;
+      linkki.title = `Lue: ${reitti.leima ?? nimi}`;
       linkki.addEventListener('click', (e) => {
         e.preventDefault();
         this.avaaLinkki(reitti);
       });
-      const jalki = viesti.ownerDocument.createTextNode(teksti.slice(osuma.loppu));
-      solmu.data = teksti.slice(0, osuma.alku);
-      solmu.parentNode.insertBefore(jalki, solmu.nextSibling);
-      solmu.parentNode.insertBefore(linkki, jalki);
-      return true;
-    }
-    return false;
+      rivi.appendChild(linkki);
+    });
+    viesti.appendChild(rivi);
+    return lista.length;
   }
-
-  /*
-   * Erillisiä "Lue:"-nappeja ei enää ole (omistajan päätös 13.8.2026):
-   * linkki näytetään VAIN, jos se istuu vastaustekstiin alleviivattuna
-   * ankkurina. Jos ankkuria ei löydy, linkki jää kokonaan pois —
-   * irrallinen nappilista vastauksen alla tarjosi liian usein
-   * epäolennaista. korostaLinkit palauttaa yhä ankkurittomat linkit,
-   * mutta niille ei tehdä mitään.
-   */
 
   /**
    * Jatkokysymykset vastauksen alle.
@@ -6490,7 +6476,7 @@ export class Pollo {
        * LOPULLINEN SISÄLTÖ RAKENNETAAN KERRALLA JA PAIKALLAAN.
        *
        * Järjestys: ensin vastausteksti pöllölinkkeineen, sitten
-       * artikkelilinkit tekstin sisään, viimeisenä jatkokysymykset.
+       * Matkakirja-rivi vastauksen loppuun, viimeisenä jatkokysymykset.
        * Luenta saa VAIN vastaustekstin — linkit ja jatkot ovat
        * käyttöliittymää.
        *
@@ -6509,7 +6495,7 @@ export class Pollo {
       this.sailytaVieritys(() => {
         if (linkitetaan) {
           this.taytaVastaus(viesti, teksti);
-          this.korostaLinkit(viesti, this.poimiLinkit(this.viimeisetKatkelmat));
+          this.liitaMatkakirjalinkit(viesti, this.poimiLinkit(this.viimeisetKatkelmat));
         } else {
           viesti.textContent = poistaKasiteMerkinnat(teksti);
         }

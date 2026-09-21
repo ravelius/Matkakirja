@@ -4,6 +4,7 @@ import { MUUTOKSET } from './muutokset.js';
 import { asetaKehittajanKerroin, kehittajanKerroin } from './kehittajan-voimat.js';
 import { Game } from './game.js';
 import { UI } from './ui.js';
+import { asetaLiike, liikePaalla } from './kartta-liike.js';
 import {
   VANHA_KARTTA_KAYTOSSA,
   asennaValikonSulkuvartija,
@@ -138,7 +139,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.1988';
+const APP_VERSION = '2026-08-09.1989';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -657,6 +658,35 @@ const kaannaAani = (avain) => {
   else kaannaTausta(paalle);
   naytaKertoja();
 };
+
+/*
+ * KARTTA → PIENI LIIKE (Fable 21.9.2026): sama riviasu kuin äänikytkimillä.
+ * Tila asuu js/kartta-liike.js:ssä (matkakirja-kartan-liike, oletus
+ * päällä); lauta kuuntelee muutoksen tapahtumana, joten kytkin toimii
+ * ilman uutta latausta.
+ */
+const karttaValikko = document.getElementById('kartta-valikko');
+if (karttaValikko) {
+  const rivi = document.createElement('button');
+  rivi.type = 'button';
+  rivi.className = 'aanikytkin';
+  rivi.dataset.kytkin = 'liike';
+  rivi.setAttribute('role', 'switch');
+  rivi.title = 'Pulu, pilven varjo ja kellonajan sävy kartalla';
+  rivi.setAttribute('aria-label', 'Pieni liike — pulu, pilven varjo ja kellonajan sävy kartalla');
+  rivi.innerHTML = `<span class="viiva-ikoni">${svg('<path d="M4 15.5c2.5-2.5 5-2.5 7.5 0s5 2.5 7.5 0"/><path d="M4 10.5c2.5-2.5 5-2.5 7.5 0s5 2.5 7.5 0"/>')}</span>`
+    + '<span class="aanikytkin-nimi">Pieni liike</span>'
+    + '<span class="aanikytkin-tila"></span>';
+  const nayta = () => {
+    const paalla = liikePaalla();
+    rivi.classList.toggle('valittu', paalla);
+    rivi.setAttribute('aria-checked', paalla ? 'true' : 'false');
+    rivi.querySelector('.aanikytkin-tila').textContent = paalla ? 'päällä' : 'pois';
+  };
+  rivi.addEventListener('click', () => { asetaLiike(!liikePaalla()); nayta(); });
+  nayta();
+  karttaValikko.appendChild(rivi);
+}
 
 for (const tiedot of AANIKYTKIMET) {
   const rivi = document.createElement('button');

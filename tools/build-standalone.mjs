@@ -1022,6 +1022,7 @@ const MODULES = [
    * (kytkePulunPaikannus).
    */
   'js/pulu-paikka.js',
+  'js/kartta-liike.js',
   'js/main.js',
 ];
 
