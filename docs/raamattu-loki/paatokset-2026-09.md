@@ -263,3 +263,7 @@ Kartuschan aiherivin (HISTORIA, RUOKA...) painallus saattaa avata myos alla olev
 ## V1986 TUOTANNOSSA 08.18 (21.9.2026 klo 08.18)
 
 Nimioiden vakaus (Google Earthin malli: kiintea asento, haivytys, hystereesi, kaupunki > taso 1). Kartuschan sisennys ja klikkauksen lapimeno todennakoisesti seuraavassa.
+
+## NIMISTON JAKO: PYSYVAT POHJALLE, 1873-POLIITTISET LINSSIIN (omistaja 21.09.2026 klo 08.21) (21.9.2026 klo 08.21)
+
+Omistajan huoli: 1873-nimisto sekoittaa nykymaailmassa liikkuvaa pelaajaa. Paatos kortilla: pohjakartalle vain pysyvat nimet (meret, lahdet, kulttuurialueet), 1873-poliittiset nimet ja rajat omaan Vuosi 1873 -linssiin; myohemmin aikajanalinssi rajojen elamiselle. Kirjattu Raamattuun (Kaupungit: KARTAN NIMISTO) ja linssi-idea. Toimet: Sisaltokirjuri luokittelee nimisto-1873.js rivit (luokka pysyva/1873) FRA/ESP/ITA/DEU; Karttaseppa polttaa nimiotason uudelleen ilman 1873-luokkaa ja selvittaa historiallisen raja-aineiston linssia varten.
