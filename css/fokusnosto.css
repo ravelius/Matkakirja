@@ -53,12 +53,41 @@
    * TILAPALKKI EI LEIKKAA KORTTIA (omistajan laitekuva 19.9.2026 klo
    * 17.44: kello 17.44 kortin yläreunan päällä). Sivu on
    * viewport-fit=cover, joten kotinäytön sovelluksessa ruutu alkaa
-   * tilapalkin alta; yläreunan vara on safe-area + 1rem.
+   * tilapalkin alta; yläreunan vara on safe-area + 1rem. Sama sääntö
+   * kaikille korttikerroksille alempana (KORTTIKERROS JA TURVA-ALUE).
    */
   padding-top: calc(1rem + env(safe-area-inset-top, 0px));
   padding-bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
   background: rgba(18, 12, 4, 0);
   transition: background 220ms ease-out;
+}
+
+/*
+ * KORTTIKERROS JA TURVA-ALUE (omistajan iPhone-kaappaus 21.9.2026,
+ * v2021, skandaalikortti "Kuningattaren kaulanauhajuttu": kortti alkoi
+ * tilarivin alta, kellonaika peitti otsikkorivin SKANDAALIT ja
+ * sulkunappi oli akkukuvakkeen päällä). Jokainen koko ruudun
+ * korttikerros (nosto, eläintäky, syvennys, skandaali, hetki,
+ * tiedeliite css/aikajana.css) pitää turva-alueen tyhjänä joka
+ * reunalta: ylhäällä tilarivi, alhaalla kotipalkki, vaaka-asennossa
+ * lovi vasemmalla tai oikealla. Reunus on 1rem + inset, ei max(): kortti
+ * ei saa koskaan alkaa turva-alueen sisältä. Insetit luetaan :root-
+ * muuttujista --turva-* (css/styles.css, env(safe-area-inset-*)), ei
+ * env():stä suoraan: kuva edellä -kortti (js/nostokuva.js, position:
+ * fixed) lukee samat muuttujat omaan asemointiinsa, ja savuke
+ * (tools/savukkeet/savuke-kortti-turva-alue.mjs) pakottaa ne
+ * headlessissä, jossa env() on aina 0.
+ */
+.fokusnosto-kerros,
+.elaintaky-kerros,
+.syvennys-kerros,
+.skandaali-kerros,
+.hetki-kerros,
+.tiedeliite-kerros {
+  padding-top: calc(1rem + var(--turva-yla, 0px));
+  padding-right: calc(1rem + var(--turva-oikea, 0px));
+  padding-bottom: calc(1rem + var(--turva-ala, 0px));
+  padding-left: calc(1rem + var(--turva-vasen, 0px));
 }
 
 .fokusnosto-kortti-auki { background: rgba(18, 12, 4, 0.3); }

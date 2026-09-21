@@ -315,11 +315,41 @@ function nostokuvaLataaTyyli() {
   document.head.appendChild(linkki);
 }
 
-/** Ruudun mitat; testattavuuden takia yhdessä paikassa. */
+/**
+ * TURVA-ALUE (omistajan iPhone-kaappaus 21.9.2026, v2021, skandaali
+ * "Kuningattaren kaulanauhajuttu": kortti alkoi tilarivin alta,
+ * kellonaika peitti otsikkorivin ja sulkunappi oli akkukuvakkeen
+ * päällä). Sivu on viewport-fit=cover, joten `innerHeight` ulottuu
+ * tilarivin ja kotipalkin alle. Insetit luetaan :root-muuttujista
+ * `--turva-*` (css/styles.css, env(safe-area-inset-*)), jotka selain
+ * antaa pikseleinä; ilman dokumenttia tai muuttujaa inset on 0.
+ * Savuke voi pakottaa arvot samoihin muuttujiin (tools/savukkeet/
+ * savuke-kortti-turva-alue.mjs). Puhdas lukija, ei tilaa.
+ */
+export function nostokuvaTurvaAlue(doc = globalThis.document) {
+  const juuri = doc?.documentElement;
+  if (!juuri || typeof getComputedStyle !== 'function') return { yla: 0, ala: 0, vasen: 0, oikea: 0 };
+  const tyyli = getComputedStyle(juuri);
+  const lue = (nimi) => {
+    const v = Number.parseFloat(tyyli.getPropertyValue(nimi));
+    return Number.isFinite(v) && v > 0 ? v : 0;
+  };
+  return { yla: lue('--turva-yla'), ala: lue('--turva-ala'), vasen: lue('--turva-vasen'), oikea: lue('--turva-oikea') };
+}
+
+/**
+ * Ruudun mitat; testattavuuden takia yhdessä paikassa. `leveys` ja
+ * `korkeus` ovat TURVA-ALUEEN SISÄPUOLINEN ruutu, ja `vasen`/`yla`
+ * sen alkupiste: kaikki kortin `left`/`top`-arvot lasketaan tässä
+ * ruudussa ja kirjoitetaan siirrettyinä (asetaKortinYlin/lueKortinYlin).
+ */
 function nostokuvaRuutu() {
+  const turva = nostokuvaTurvaAlue();
   return {
-    leveys: globalThis.innerWidth || 0,
-    korkeus: globalThis.innerHeight || 0,
+    leveys: Math.max(0, (globalThis.innerWidth || 0) - turva.vasen - turva.oikea),
+    korkeus: Math.max(0, (globalThis.innerHeight || 0) - turva.yla - turva.ala),
+    vasen: turva.vasen,
+    yla: turva.yla,
   };
 }
 
@@ -443,6 +473,9 @@ export function nostokuvaAloita({
    * (css/fokusnosto.css osio 13, .fokusnosto-tekstipalsta).
    */
   let korttiVakioleveys = 0;
+  /** Kortin `top` turva-alueen ruudussa ↔ ruudun koordinaatit (nostokuvaRuutu). */
+  const asetaKortinYlin = (ylin) => { kortti.style.top = `${nostokuvaRuutu().yla + ylin}px`; };
+  const lueKortinYlin = () => (Number.parseFloat(kortti.style.top) || 0) - nostokuvaRuutu().yla;
   const mitoita = () => {
     const ruutu = nostokuvaRuutu();
     if (!ruutu.leveys || !ruutu.korkeus) return;
@@ -547,10 +580,10 @@ export function nostokuvaAloita({
     const ruutu = nostokuvaRuutu();
     const laatikko = kortti.getBoundingClientRect();
     const vasen = Math.max(NOSTOKUVA_MARGINAALI, Math.round((ruutu.leveys - laatikko.width) / 2));
-    kortti.style.left = `${vasen}px`;
-    kortti.style.top = `${nostokuvanYlin({
+    kortti.style.left = `${ruutu.vasen + vasen}px`;
+    asetaKortinYlin(nostokuvanYlin({
       korkeus: laatikko.height, ruutuKorkeus: ruutu.korkeus,
-    })}px`;
+    }));
   };
 
   const asemoi = () => {
@@ -636,7 +669,7 @@ export function nostokuvaAloita({
     // 3) MITTA JÄLKEEN JA KORJAUS.
     const jalkeen = img.getBoundingClientRect();
     const korjaus = nostokuvanKorjaus({
-      ylin: Number.parseFloat(kortti.style.top) || 0,
+      ylin: lueKortinYlin(),
       delta: jalkeen.top - ennen.top,
       korkeus: kortti.getBoundingClientRect().height,
       ruutuKorkeus: nostokuvaRuutu().korkeus,
@@ -654,7 +687,7 @@ export function nostokuvaAloita({
      * korkeuskatto (nostokuvanSovitus) pitävät kuvan ruudulla.
      */
     sisalto.scrollTop = 0;
-    kortti.style.top = `${Math.max(NOSTOKUVA_MARGINAALI, korjaus.ylin)}px`;
+    asetaKortinYlin(Math.max(NOSTOKUVA_MARGINAALI, korjaus.ylin));
     /*
      * KORTIN ALALAITA RUUDUN SISÄÄN. Kuva pysyy paikallaan siksi, että
      * kortti saa liukua alaspäin — mutta silloin sen alaosa jäisi
@@ -678,9 +711,9 @@ export function nostokuvaAloita({
     // Jäännös korjataan vain, jos kortti ei jo lepää yläreunassa:
     // otsikon näkyvyys voittaa kuvan paikallaanpysymisen (ks. yllä).
     const jaannos = img.getBoundingClientRect().top - ennen.top;
-    const yla = Number.parseFloat(kortti.style.top) || 0;
+    const yla = lueKortinYlin();
     if (jaannos && yla - jaannos >= NOSTOKUVA_MARGINAALI) {
-      kortti.style.top = `${yla - jaannos}px`;
+      asetaKortinYlin(yla - jaannos);
     }
   };
 

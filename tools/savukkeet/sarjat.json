@@ -45,6 +45,7 @@
     "savuke-nostokuva-suhde.mjs",
     "savuke-pulu-kartuscha.mjs",
     "savuke-kortti-sulku.mjs",
+    "savuke-kortti-turva-alue.mjs",
     "savuke-tekstivalinta.mjs",
     "savuke-saapumisblur.mjs",
     "savuke-kuvalahteet.mjs"
@@ -605,6 +606,10 @@
     "savuke-reaktiot-sydan.mjs": {
       "kuvakansio": true,
       "huomautus": "Reaktiot sydämeksi (omistaja 21.9.2026, kaappaus Ranskan lehden Historia-osiosta): viisi symbolia ja lepotila korvattiin kahdella suoraan näkyvälla napilla (sydän, peukku alas), lehden jutun vuosiluku siirtyi otsikkorivin oikeaan reunaan omaan laatikkoonsa. Maalehti GBR, Historia-osio, Magna Carta -juttu ('Kuningas pakotettiin lain alle', naytaTutkiSivu-indeksi = tutkiSivut-indeksi + 1, mitattu käytännössä). Ruudut 390x844 ja 1400x900, ~1 min."
+    },
+    "savuke-kortti-turva-alue.mjs": {
+      "kuvakansio": true,
+      "huomautus": "Koko ruudun kortti pysyy turva-alueen sisalla (omistajan iPhone-kaappaus 21.9.2026 v2021: skandaalikortti alkoi tilarivin alta, kello peitti otsikkorivin ja sulkunappi oli akun paalla). Insetit pakotetaan :root --turva-*-muuttujiin (pysty 47/34, vaaka 0/21/47/47); korttikerrokset (css/fokusnosto.css KORTTIKERROS JA TURVA-ALUE) ja kuva edella -kortti (js/nostokuva.js nostokuvaTurvaAlue) seka ankkuroitu kohdekortti (js/fokuskohteet.js asemoi) lukevat samat muuttujat. Skandaali ja Chartres, kuva + Lisaa, pysty ja vaaka: 40/40; vanhalla koodilla 33/40."
     }
   }
 }
