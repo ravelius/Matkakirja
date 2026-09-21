@@ -145,3 +145,43 @@ kaksi hypoteesia (kameran matrixWorldInverse tai olion matriisi) eivät
 siis täsmää suoraan. Poikkeava havainto: **`ketjuNakyva[2]` on
 `false`, vaikka koko-olion `nakyva`-lippu on `true`** — esi-isäketjun
 kolmas jäsen on näkymätön. Lähetetty Pelikoodarille jatkoselvitykseen.
+
+## Kierros 5 — vahvistettu: pallo ei näy laisinkaan (n. klo 13.49)
+
+Pelikoodari tunnisti ketjun indeksin 2:ksi three-globen juuriryhmän
+(`Group(15)`, ketju `Object3D:html → Group(68) → Group(15) → Scene`)
+ja epäili, että kirjasto pitää sen `visible=false`, kunnes pintakerros
+ilmoittaa olevansa valmis (`waitForGlobeReady`) — eli ennen sitä
+WebGL ei piirrä palloa lainkaan. Haara `pelikoodari-nimiot-sulavat-e3`
+(commit `0e0b2c53`) lisäsi `tila().pallonJuuri` ja resurssivirheiden
+talteenoton, ja pyysi tarkistamaan **näkyykö ruudulla ylipäätään
+karttapallo**.
+
+**Vahvistettu suoralla `simctl io screenshot`illa (ei vain
+lukemilla): EI näy. Ruudulla on pelkkä tumma/kermatausta ja
+tekstikortit — ei mitään palloa, laattaa tai maanosien ääriviivaa.**
+
+```json
+"pallonJuuri": {"nakyva": false, "lapsia": 15, "skaala": 1}
+```
+
+sama molemmilla n. 1 s välein otetuilla luvuilla. `virheet:[]` ja
+`virheetSivulta:[]` — ei yhtään `window.error`- eikä
+`unhandledrejection`-tapahtumaa.
+
+**Lisätarkistus (curl Macilta, ei laitteelta):** pallon tekstuuri-URL
+(`js/pallo.js` `PALLO_TEKSTUURI`) on
+`https://media.matkakirja.app/julisteet/pallo/2026-09-03a/
+tekstuuri-z4.jpg`. Vastaus on `200 OK`, mutta **EI
+`access-control-allow-origin`-otsaketta lainkaan** — testattu
+sekä `Origin: https://matkakirja.app` (tuotanto) että `Origin:
+http://localhost:8795` (tämä testi), molemmat identtiset. CORS
+puuttuu siis myös tuotanto-originilta, ei ole lokaalin
+originin erikoistapaus. Jos globe.gl/three.js asettaa
+`crossOrigin='anonymous'` tekstuurikuvaan jossain polussa, WebKit
+saattaa hylätä tekstuurin "tainted canvas" -sääntönä hiljaa (ei
+virhetapahtumaa) tiukemmin kuin Chromium, jolloin
+`waitForGlobeReady` ei koskaan laukea. Tämä ei ole varmistettu
+juurisyy, vain lisähavainto Pelikoodarille — hän ehdotti seuraavaksi
+proxy-palvelinta (`tools/laitepalvelin.mjs`, sama malli kuin
+savukkeissa) laitteille.
