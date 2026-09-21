@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2009, teksti: 'Visat: 25 uutta BIH/DEU/GBR/GRC/NOR/RUS/TUR-nostoihin' },
   { v: 2008, teksti: 'Visat: BIH/CHE/GBR/ISL/NOR/RUS/TUR/UKR yli 1/3' },
   { v: 2007, teksti: 'Nostot näkyviin: kohdemerkkien portti korjattu' },
   { v: 2006, teksti: 'Reaktiot sydämeksi: viisi symbolia -> sydän ja peukku alas' },
