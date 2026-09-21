@@ -746,11 +746,33 @@ if (auki) {
         requestAnimationFrame(() => requestAnimationFrame(ok));
       }));
       await sivu.waitForTimeout(120);
+      /*
+       * KÄÄRE UUDESTAAN JUURI ENNEN NAPAUTUSTA (v1985, 21.9.2026):
+       * osumarivit rakennetaan joka ladonnassa uusiksi, ja GSHHG-
+       * rantaviivan (nostot maakuntanimien esteiksi) myötä ladonta
+       * ehti ajaa sormen liikkeen ja napautuksen välissä — kääre jäi
+       * vanhoille riveille ja kortti aukesi "ei mitään" -kirjauksella.
+       * Varana luetaan avoin kohdekortti (ui.fokuskohdeAuki.id).
+       */
+      // eslint-disable-next-line no-await-in-loop
+      await sivu.evaluate(() => {
+        for (const o of window.matkakirja.ui.pallolauta.nostot.osumat()) {
+          if (o.__mittari) continue;
+          const alkuperainen = o.avaa;
+          o.__mittari = true;
+          o.avaa = (ankkuri) => { window.__avattu.push(o.id); return alkuperainen(ankkuri); };
+        }
+      });
       await sivu.mouse.click(kohde.x, kohde.y);
       // eslint-disable-next-line no-await-in-loop
       await sivu.waitForTimeout(500);
       // eslint-disable-next-line no-await-in-loop
-      const avattu = await sivu.evaluate(() => window.__avattu ?? []);
+      const avattu = await sivu.evaluate(() => {
+        const a = window.__avattu ?? [];
+        if (a.length) return a;
+        const auki = window.matkakirja.ui.fokuskohdeAuki?.id;
+        return auki ? [auki] : [];
+      });
       const oikein = avattu.length === 1 && avattu[0] === kohde.id;
       if (oikein && kohde.sormella) sormiOsui += 1;
       else if (oikein) lappuOsui += 1;

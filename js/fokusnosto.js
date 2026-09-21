@@ -1100,14 +1100,21 @@ function avaaNostonKortti(ui, nosto) {
    * varsinaisen noston SAMAN kuvan ympärille. Kuvaton nosto aukeaa
    * suoraan tekstikorttina kuten ennenkin.
    */
+  let kuvakehysRef = null;
   const kaksivaihe = nosto.kuva ? nostokuvaAloita({
     kortti,
     sisalto,
     kuva: nosto.kuva,
     aseta: (img, leveys, onVirhe) => asetaNostonKuva(img, nosto.kuva, leveys, onVirhe),
-    avaaSuurennos: (nappi) => avaaKohdeSuurennos(ui, nosto.kuva, () => nappi, 'fokusnostoZoom'),
+    // Suurennos näyttää sen kuvan, joka on kohdalla, ja selaa koko
+    // sarjaa (js/kuvasarja.js kirjoittaa valintansa kuvakehykseen).
+    avaaSuurennos: (nappi) => avaaKohdeSuurennos(
+      ui, kuvakehysRef?.nostokuvaKuva ?? nosto.kuva, () => nappi, 'fokusnostoZoom',
+      kuvakehysRef?.nostokuvaSarja?.(),
+    ),
     latoNosto,
   }) : null;
+  kuvakehysRef = kaksivaihe?.kehys ?? null;
   if (!kaksivaihe) latoNosto(sisalto, undefined);
   // Kaiutin kortin otsikkoriville (js/lukija.js lisaaLukijanappi).
   lisaaLukijanappi(kortti, { otsikko: 'Kuuntele kortti' });
@@ -1339,7 +1346,7 @@ export function piirraNostonKuvasarja(ui, sailio, kuvat, { zoomAvain, ...asetuks
   return piirraKuvasarja(ui, sailio, kuvat, {
     ...asetukset,
     lataa: asetaNostonKuva,
-    avaaSuurennos: (u, kuva, ankkuri) => avaaKohdeSuurennos(u, kuva, ankkuri, zoomAvain),
+    avaaSuurennos: (u, kuva, ankkuri, sarja) => avaaKohdeSuurennos(u, kuva, ankkuri, zoomAvain, sarja),
   });
 }
 

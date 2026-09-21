@@ -84,9 +84,14 @@ const selain = await chromium.launch({
   executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium',
 });
 
-const RUUDUT = (process.env.SAVUKE_RUUTU ? [process.env.SAVUKE_RUUTU] : ['390', '1400']).map((w) => (
-  w === '390' ? { nimi: '390', width: 390, height: 844 } : { nimi: '1400', width: 1400, height: 900 }
-));
+// iPad-pysty (820×1180) tuli nostokortti 2:n myötä (omistaja 20.9.2026):
+// omistajan kaappaus pystykuvasta ja leikkautuneesta otsikosta oli juuri
+// tältä ruudulta.
+const RUUDUT = (process.env.SAVUKE_RUUTU ? [process.env.SAVUKE_RUUTU] : ['390', '1400', 'ipad']).map((w) => ({
+  390: { nimi: '390', width: 390, height: 844 },
+  1400: { nimi: '1400', width: 1400, height: 900 },
+  ipad: { nimi: 'ipad', width: 820, height: 1180 },
+}[w]));
 
 /** Kortin yleismitat: lähderivi, kuvalähde, laskuri, havainne, kuva. */
 const LUE = `(juuri) => {
@@ -104,6 +109,36 @@ const LUE = `(juuri) => {
     kuvaLeveys: img ? Math.round(img.getBoundingClientRect().width) : 0,
     nappi: (() => { const n = k.querySelector('.nostokuva-nappi, .fokusnosto-kuvanappi, .fokuskohde-kuvanappi'); const r = n?.getBoundingClientRect(); return r ? { x: r.left + r.width / 2, y: r.top + r.height / 2, w: r.width } : null; })(),
     teksti: k.textContent.length,
+    // Nostokortti 2: kortin ja kuvan laatikot ruudulla, otsikon näkyvyys.
+    kortti: (() => { const r = k.getBoundingClientRect(); return { x: Math.round(r.left), w: Math.round(r.width), top: Math.round(r.top), bottom: Math.round(r.bottom) }; })(),
+    kuva: img ? (() => { const r = img.getBoundingClientRect(); return { x: Math.round(r.left), w: Math.round(r.width), top: Math.round(r.top), bottom: Math.round(r.bottom) }; })() : null,
+    // Sisältökotelon sisäala ilman vierityspalkin kaistaa (scrollbar-gutter): kuva keskittyy tähän.
+    sisus: (() => { const s = k.querySelector('.nostokuva-sisalto, .fokusnosto-sisalto, .fokuskohde-sisalto'); if (!s) return null; const r = s.getBoundingClientRect(); return { x: Math.round(r.left + s.clientLeft), w: s.clientWidth }; })(),
+    otsikko: (() => {
+      const o = k.querySelector('.fokusnosto-kortti-otsikko, .fokuskohde-otsikko, h3');
+      if (!o) return null;
+      const r = o.getBoundingClientRect();
+      // Tyyppirivi (kohdekortin ylärivi) kuuluu samaan "otsikko näkyy" -vaatimukseen.
+      const y = k.querySelector('.fokuskohde-ylarivi')?.getBoundingClientRect();
+      const s = k.querySelector('.nostokuva-sisalto, .fokusnosto-sisalto, .fokuskohde-sisalto') ?? k;
+      return { top: Math.round(Math.min(r.top, y?.top ?? r.top)), bottom: Math.round(r.bottom), h: Math.round(r.height), vieritys: Math.round(s.scrollTop ?? 0), teksti: o.textContent.trim().slice(0, 40), tyyppirivi: y ? Math.round(y.top) : null };
+    })(),
+    nuolet: [...k.querySelectorAll('.nostosarja-kuvanuoli')].map((n) => { const r = n.getBoundingClientRect(); const cs = getComputedStyle(n); return { w: Math.round(r.width), h: Math.round(r.height), fontPx: parseFloat(cs.fontSize), bg: cs.backgroundColor, x: Math.round(r.left), top: Math.round(r.top) }; }),
+  };
+}`;
+
+/** Suurennoksen mitat: kuva, väkäset, laskuri. */
+const LUE_ZOOM = `() => {
+  const z = document.querySelector('.fokuskohde-zoom');
+  if (!z) return null;
+  const img = z.querySelector('.fokuskohde-zoomkuva');
+  const r = img?.getBoundingClientRect();
+  return {
+    kuva: r ? { x: Math.round(r.left), w: Math.round(r.width), top: Math.round(r.top), bottom: Math.round(r.bottom), h: Math.round(r.height) } : null,
+    src: img?.currentSrc || img?.src || '',
+    laskuri: z.querySelector('.fokuskohde-zoomlaskuri')?.textContent?.trim() ?? '',
+    nuolet: [...z.querySelectorAll('.fokuskohde-zoomnuoli')].map((n) => { const b = n.getBoundingClientRect(); return { w: Math.round(b.width), h: Math.round(b.height), fontPx: parseFloat(getComputedStyle(n).fontSize) }; }),
+    auki: z.classList.contains('fokuskohde-zoom-auki'),
   };
 }`;
 
@@ -239,6 +274,90 @@ for (const ruutu of RUUDUT) {
     Boolean(kohde) && /^1\s*\/\s*2$/.test(kohde.laskuri) && kohde.kuvia === 1, JSON.stringify(kohde));
   vaadi(`${ruutu.nimi} · 1c. kohdekortissa ei työpolkulähderiviä, kuvalähde säilyy`,
     Boolean(kohde) && kohde.lahderivi.length === 0 && kohde.kuvalahde.length > 0, JSON.stringify(kohde?.lahderivi));
+
+  /* ── 6: nostokortti 2 (omistaja 20.9.2026) ───────────────────────── */
+  // 6a: väkäset ovat hyvin pienet ja kuvan reunoilla, ei tumma nappi.
+  vaadi(`${ruutu.nimi} · 6a. karusellin väkäset ovat pienet chevronit kuvan reunoilla (ei taustaa, ≤ 20 px kirjasin)`,
+    lisaa.nuolet.length === 2 && lisaa.nuolet.every((n) => n.fontPx <= 20 && /rgba\(0, 0, 0, 0\)|transparent/.test(n.bg)
+      && n.top >= lisaa.kuva.top - 2 && n.h <= lisaa.kuva.bottom - lisaa.kuva.top + 4),
+    JSON.stringify({ nuolet: lisaa.nuolet, kuva: lisaa.kuva }));
+  // 6b: vaakakuvan kortti (Avignon) vs. pystykuvan kortti (Rouen):
+  // sama leveys, kuva kokonaan ruudulla, otsikko näkyvissä LISÄÄ-tilassa.
+  await siivoa();
+  // Rouen (hahmotelma-fra) on KOHDEkortti, jonka pääkuva on pystykuva —
+  // omistajan kaappauksen kortti; vertailukohta on Avignon (vaakakuva).
+  const rouen = await sivu.evaluate(async (lue) => {
+    const { KOHDE_MAAT, avaaFokuskohde } = await import('/js/fokuskohteet.js');
+    const k = (KOHDE_MAAT.FRA ?? []).find((x) => x.id === 'hahmotelma-rouen');
+    if (!k) return null;
+    avaaFokuskohde(window.matkakirja.ui, k);
+    await new Promise((v) => setTimeout(v, 1200));
+    const pieni = (eval(lue))('.fokuskohde-popup');
+    document.querySelector('.fokuskohde-popup .nostokuva-lisaa')?.click();
+    await new Promise((v) => setTimeout(v, 700));
+    return { loytyi: true, pieni, lisaa: (eval(lue))('.fokuskohde-popup') };
+  }, LUE);
+  if (KUVAKANSIO) await sivu.screenshot({ path: join(KUVAKANSIO, `nosto-rouen-${ruutu.nimi}.png`) });
+  const rk = rouen?.pieni?.kuva;
+  vaadi(`${ruutu.nimi} · 6b. pystykuvan nosto aukesi ja kuva on pystymuotoinen`,
+    Boolean(rouen?.loytyi) && rk && rk.w > 0 && (rk.bottom - rk.top) > rk.w, JSON.stringify(rk));
+  vaadi(`${ruutu.nimi} · 6c. kortin leveys on sama pysty- ja vaakakuvalla (±2 px)`,
+    Boolean(rk) && Boolean(kohde) && Math.abs(rouen.pieni.kortti.w - kohde.kortti.w) <= 2,
+    `rouen ${rouen?.pieni?.kortti?.w} vs avignon ${kohde?.kortti?.w}`);
+  vaadi(`${ruutu.nimi} · 6d. pystykuva on kokonaan ruudulla ja keskellä korttia`,
+    Boolean(rk) && rk.top >= 0 && rk.bottom <= ruutu.height && rk.x >= 0 && rk.x + rk.w <= ruutu.width
+      && Math.abs((rk.x + rk.w / 2) - ((rouen.pieni.sisus ?? rouen.pieni.kortti).x + (rouen.pieni.sisus ?? rouen.pieni.kortti).w / 2)) <= 3,
+    JSON.stringify({ kuva: rk, sisus: rouen?.pieni?.sisus, kortti: rouen?.pieni?.kortti, ruutu: [ruutu.width, ruutu.height] }));
+  const ro = rouen?.lisaa?.otsikko;
+  vaadi(`${ruutu.nimi} · 6e. LISÄÄ-tilassa otsikko on näkyvissä (kortin sisällä, ei vieritetty piiloon)`,
+    Boolean(ro) && ro.top >= rouen.lisaa.kortti.top - 1 && ro.bottom <= rouen.lisaa.kortti.bottom && ro.top >= 0 && ro.vieritys === 0 && ro.tyyppirivi !== null,
+    JSON.stringify({ otsikko: ro, kortti: rouen?.lisaa?.kortti }));
+  vaadi(`${ruutu.nimi} · 6f. LISÄÄ-tilassa kuva on yhä kokonaan ruudulla`,
+    Boolean(rouen?.lisaa?.kuva) && rouen.lisaa.kuva.top >= 0 && rouen.lisaa.kuva.bottom <= ruutu.height,
+    JSON.stringify(rouen?.lisaa?.kuva));
+  // 6g: suurennos (contain) ja selaus suurennoksessa.
+  const zoom = await sivu.evaluate(async (lueZ) => {
+    document.querySelector('.fokuskohde-popup .nostokuva-nappi')?.click();
+    await new Promise((v) => setTimeout(v, 900));
+    const eka = (eval(lueZ))();
+    document.querySelector('.fokuskohde-zoomnuoli.seuraava')?.click();
+    await new Promise((v) => setTimeout(v, 900));
+    const toka = (eval(lueZ))();
+    document.dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowLeft', bubbles: true, cancelable: true }));
+    await new Promise((v) => setTimeout(v, 900));
+    const kolmas = (eval(lueZ))();
+    return { eka, toka, kolmas };
+  }, LUE_ZOOM);
+  if (KUVAKANSIO) await sivu.screenshot({ path: join(KUVAKANSIO, `zoom-rouen-${ruutu.nimi}.png`) });
+  const zk = zoom?.eka?.kuva;
+  const zTaytto = zk ? Math.max(zk.w / ruutu.width, zk.h / ruutu.height) : 0;
+  tieto(`${ruutu.nimi} · suurennoksen täyttö`, `${zk?.w}×${zk?.h} / ${ruutu.width}×${ruutu.height} (${zTaytto.toFixed(2)})`);
+  vaadi(`${ruutu.nimi} · 6g. suurennos täyttää ruudun contain-periaatteella (≥ 0,85 lyhyempään suuntaan) ja pysyy ruudulla`,
+    Boolean(zk) && zTaytto >= 0.85 && zk.top >= 0 && zk.bottom <= ruutu.height && zk.x >= 0 && zk.x + zk.w <= ruutu.width,
+    JSON.stringify(zk));
+  vaadi(`${ruutu.nimi} · 6h. suurennoksessa on pienet väkäset ja laskuri 1 / 2`,
+    Boolean(zoom?.eka) && zoom.eka.nuolet.length === 2 && zoom.eka.nuolet.every((n) => n.fontPx <= 20) && /^1\s*\/\s*2$/.test(zoom.eka.laskuri),
+    JSON.stringify({ nuolet: zoom?.eka?.nuolet, laskuri: zoom?.eka?.laskuri }));
+  vaadi(`${ruutu.nimi} · 6i. väkänen vaihtaa suurennoksen kuvan (2 / 2, eri src) ja ← palaa (1 / 2)`,
+    Boolean(zoom?.toka) && /^2\s*\/\s*2$/.test(zoom.toka.laskuri) && zoom.toka.src !== zoom.eka.src
+      && /^1\s*\/\s*2$/.test(zoom.kolmas?.laskuri ?? '') && zoom.kolmas.src === zoom.eka.src,
+    JSON.stringify({ eka: zoom?.eka?.laskuri, toka: zoom?.toka?.laskuri, kolmas: zoom?.kolmas?.laskuri }));
+  // 6j: pyyhkäisy suurennoksessa (vasemmalle = seuraava), ei sulje.
+  await sivu.mouse.move(ruutu.width / 2, ruutu.height / 2);
+  await sivu.mouse.down();
+  await sivu.mouse.move(ruutu.width / 2 - 90, ruutu.height / 2 + 4, { steps: 8 });
+  await sivu.mouse.up();
+  await sivu.waitForTimeout(700);
+  const zPyyh = await sivu.evaluate((lueZ) => (eval(lueZ))(), LUE_ZOOM);
+  vaadi(`${ruutu.nimi} · 6j. pyyhkäisy suurennoksessa vaihtaa kuvan (2 / 2) eikä sulje suurennosta`,
+    Boolean(zPyyh) && /^2\s*\/\s*2$/.test(zPyyh.laskuri), JSON.stringify(zPyyh && { laskuri: zPyyh.laskuri }));
+  const zSulku = await sivu.evaluate(async (lue) => {
+    document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true, cancelable: true }));
+    await new Promise((v) => setTimeout(v, 900));
+    return { auki: Boolean(document.querySelector('.fokuskohde-zoom')), kortti: (eval(lue))('.fokuskohde-popup') };
+  }, LUE);
+  vaadi(`${ruutu.nimi} · 6k. Esc sulkee suurennoksen ja kortti näyttää saman kuvan (2 / 2)`,
+    !zSulku.auki && /^2\s*\/\s*2$/.test(zSulku.kortti?.laskuri ?? ''), JSON.stringify({ auki: zSulku.auki, laskuri: zSulku.kortti?.laskuri }));
 
   /* ── 1d + 3: eläintäky (BIH: generoitu havainnekuva) ─────────────── */
   await siivoa();

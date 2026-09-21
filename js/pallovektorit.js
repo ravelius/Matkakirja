@@ -485,6 +485,34 @@ export function pallovektoritPaalla(ikkuna = globalThis) {
   return PALLOVEKTORIT_OLETUS;
 }
 
+/*
+ * HIMMEÄN REITTIVERKON KYTKIN (v1984 hotfix, omistajan havainto v1983
+ * työpöydällä: Pariisista liftatessa nopan jälkeen näkymä zoomasi koko
+ * pallolle, kaappaus liftaus-zoomasi-pallolle-v1983.webp). Vikaa ei
+ * saatu toistettua Playwrightilla (paikallinen ja tuotanto, 2000 px,
+ * noppa 3: kamera 0,205 → 0,217), joten syytä ei tiedetä; verkko on
+ * ainoa uusi kerros samassa hetkessä, joten se on OLETUKSENA POIS
+ * kunnes vika on ymmärretty (Fablen sääntö 30 min). `?reittiverkko=1`
+ * tai localStorage-avain '1' kytkee päälle; savukkeet käyttävät avainta.
+ */
+export const REITTIVERKKO_AVAIN = 'matkakirja-reittiverkko';
+export const REITTIVERKKO_OLETUS = false;
+/** Verkko näkyy vain laudan mittakaavassa: korkeuden yläpuolella (maailmakuva) se on turha viivasto. */
+export const REITTIVERKON_KORKEUSKATTO = 1.2;
+export function reittiverkkoPaalla(ikkuna = globalThis) {
+  try {
+    const param = new URLSearchParams(ikkuna.location?.search ?? '').get('reittiverkko');
+    if (param === '0') return false;
+    if (param === '1') return true;
+  } catch { /* ei osoitetta */ }
+  try {
+    const muistettu = ikkuna.localStorage?.getItem(REITTIVERKKO_AVAIN);
+    if (muistettu === '0') return false;
+    if (muistettu === '1') return true;
+  } catch { /* yksityinen selaus */ }
+  return REITTIVERKKO_OLETUS;
+}
+
 /**
  * Yksinkertaistustaso: matalin taso, jonka toleranssi on ruudulla
  * korkeintaan `teravyys` laitepikseliä. Jos mikään ei riitä, syvin —
@@ -1766,7 +1794,15 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
    * jotta materiaalien ruutumitat ja näkyvä alue tulevat aina siitä
    * kehyksestä, jonka kanssa laattakerros laski omansa.
    */
+  /** Verkko piiloon maailmakuvassa (REITTIVERKON_KORKEUSKATTO), näkyviin laudan mittakaavassa. */
+  function verkonKorkeusportti(pov) {
+    if (!verkko.olio || !verkko.nakyy) return;
+    const sallittu = !(pov?.altitude > REITTIVERKON_KORKEUSKATTO);
+    if (verkko.olio.visible !== sallittu) verkko.olio.visible = sallittu;
+  }
+
   function kehyksessa(kehys) {
+    verkonKorkeusportti(kehys?.pov ?? pallo.pointOfView?.());
     if (purettu) return;
     kehysmitat = kehys;
     if (kehys.aika - viimeAjo < VEKTORIT_JARRU_MS) return;
@@ -1887,7 +1923,7 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
     },
     /** Verkko näkyviin tai piiloon — pelkkä lippu, ei häivettä, ei rakennusta. */
     naytaVerkko(nakyy) {
-      const uusi = Boolean(nakyy);
+      const uusi = Boolean(nakyy) && reittiverkkoPaalla(ikkuna);
       if (uusi === verkko.nakyy) return false;
       verkko.nakyy = uusi;
       mittarit.verkkoNakyy = uusi;

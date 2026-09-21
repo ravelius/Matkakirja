@@ -16,6 +16,8 @@
     "savuke-ihmisen-esitys.mjs",
     "savuke-pallo-nostolaput.mjs",
     "savuke-nimiot-elavat.mjs",
+    "savuke-nimiot-vakaat.mjs",
+    "savuke-nostotasot.mjs",
     "savuke-nimikyltti.mjs",
     "savuke-kerma-reuna.mjs",
     "savuke-ranskan-nostot-lukossa.mjs",
@@ -39,6 +41,7 @@
     "savuke-kuvalahteet.mjs"
   ],
   "harva": [
+    "savuke-huntu-liike.mjs",
     "savuke-luentakuvat.mjs",
     "savuke-kaupunkipopup.mjs#390",
     "savuke-kaupunkipopup.mjs#1400",
@@ -52,7 +55,8 @@
     "savuke-korostus-janne.mjs",
     "savuke-kartuscha-2.mjs",
     "savuke-kartuscha-3.mjs",
-    "savuke-reittiverkko.mjs"
+    "savuke-reittiverkko.mjs",
+    "savuke-liftaus-ajoitus.mjs"
   ],
   "suorituskyky": [
     "savuke-pariisi-lahizoom.mjs#390-suorituskyky",
@@ -74,6 +78,13 @@
       ".github/workflows/savukkeet.yml",
       "index.html",
       "sw.js"
+    ],
+    "savuke-huntu-liike.mjs": [
+      "js/laattapyramidi.js",
+      "js/pallolaatat.js",
+      "js/pallolauta/lauta.js",
+      "js/ui.js",
+      "js/siirtokoreografia.js"
     ],
     "savuke-luentakuvat.mjs": [
       "js/luenta*.js",
@@ -189,6 +200,11 @@
       "js/pallolauta/reitit.js",
       "js/pallolauta/lauta.js",
       "js/pallovektorit.js"
+    ],
+    "savuke-liftaus-ajoitus.mjs": [
+      "js/pallolauta/lauta.js",
+      "js/pallolauta/kamera.js",
+      "js/ui.js"
     ]
   },
   "asetukset": {
@@ -357,7 +373,10 @@
         "SAVUKE_LOHKOT": "liuska"
       },
       "kuvakansio": true,
-      "huomautus": "Jaettu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19 seka TARKENNUS 11 kohta 24 a): PR-portin seinakello on niin pitka kuin sarjan PISIN rivi. Rajaus tulee TAMAN rivin env-lohkosta, ei savukkeen muutoksesta, ja tunnetut punaiset on kohdistettu sille puolikkaalle, jolla vaite oikeasti ajetaan. LIUSKA-LOHKO: kaupunkiliuskan vartiot 8a-8n. Lohko siirrettiin savukkeessa omaan silmukkaansa MUUTTAMATTA yhtaan vaitetta; se avaa oman sivun ja oman zoomin (oma 44 s saapuminen on jaon hinta). Ruutu 390 px. Tunnettuja punaisia ei ole: 18.9.2026 mitattu 390 px:lla 17/17 vihreaa yksin ajettuna."
+      "huomautus": "Jaettu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19 seka TARKENNUS 11 kohta 24 a): PR-portin seinakello on niin pitka kuin sarjan PISIN rivi. Rajaus tulee TAMAN rivin env-lohkosta, ei savukkeen muutoksesta, ja tunnetut punaiset on kohdistettu sille puolikkaalle, jolla vaite oikeasti ajetaan. LIUSKA-LOHKO: kaupunkiliuskan vartiot 8a-8n. Lohko siirrettiin savukkeessa omaan silmukkaansa MUUTTAMATTA yhtaan vaitetta; se avaa oman sivun ja oman zoomin (oma 44 s saapuminen on jaon hinta). Ruutu 390 px. TUNNETTU PUNAINEN (Pelikoodari/Julkaisija 21.9.2026, v1984): 8l4 puhelin — liuska x nimio (Skandaalit). Sovittelun lukko luettiin ennen merkit.aseta-kutsua, jolloin ruutu nayttaa datan kyljen eika lasketun asennon (14/68 lappua eri asennossa mitattu 1400 px); piilotustesti ei silloin osu oikeaan nimioon. Korjaus (pelikoodari-camargue) mergetty, mutta rivi on yha punainen CI:n kuormassa 21.9.2026 aamuyolla - seurataan.",
+      "tunnetutPunaisetMac": [
+        "8l4\\. puhelin: liuska on ruudussa eikä leikkaa"
+      ]
     },
     "savuke-pariisi-lahizoom.mjs#1400-perus": {
       "env": {
@@ -490,8 +509,17 @@
     "savuke-kartuscha-3.mjs": {
       "huomautus": "Harva (Fable 20.9.2026): kartuscha 3 - pienessa ei lippua, lippu versaalin korkuinen, iso pienenee karttaa koskettaessa (napautus/veto/rulla), vastakoe kortin sisalle. ~70 s."
     },
+    "savuke-huntu-liike.mjs": {
+      "huomautus": "Huntu liikkeen ajan (omistaja 21.9.2026): kerman peitto kuvakaappauksesta ennen noppaa, liikkeessa ja perilla — lahto- ja kohdemaa paljaina liikkeessa, muu maailma 80 %. Ateena → Sofia, 390 ja 1400 px, ampari Noden kautta. ~90 s."
+    },
     "savuke-nostokortti.mjs": {
       "huomautus": "Nostokortti (omistaja 20.9.2026): lahderivi pois kaikista nostotyypeista, kohdekortin karuselli, Havainnekuva-merkki, kuvan koko LISAA-tilassa (>= 0,8), pyyhkaisy ja nuolinappaimet. 390 ja 1400 px, ampari Noden kautta. ~60 s."
+    },
+    "savuke-nostotasot.mjs": {
+      "huomautus": "Nostojen tasot elavissa nimioissa (Fable 21.9.2026): FRA/Marseille 390 ja 1400 px: ykkostaso nimiollisena kuvamerkilla ja 1,3x nimiolla (>= 4 / >= 6 ruudulla), ei piilotettuja ykkostasoja, kolmostaso piilossa saapumisessa ja nakyvissa lahizoomilla, ei reunaylityksia. Ampari Noden kautta. ~70 s."
+    },
+    "savuke-nimiot-vakaat.mjs": {
+      "huomautus": "Nimiot vakaat (Fable 21.9.2026, Google Earthin malli): FRA/Marseille 390 ja 1400 px — panoroinnin 2 s ja kolmen zoomiportaan aikana yhdenkaan lapun kylki, siirto tai nakyvyys ei muutu (DOM-asennot naytteittain); levossa ei reunaylityksia (ykkostason pakkoasento sallitaan) eika nakyvien nimioiden limityksia; haivytys <= 200 ms. Ampari Noden kautta. ~90 s."
     },
     "savuke-nimiot-elavat.mjs": {
       "huomautus": "Kohdemaan nimiot elavina (Fable 20.9.2026, KOHDEMAAN_NIMIOT_ELAVINA): FRA/Marseille 390 ja 1400 px: ei poltettuja, nimiollisia >= 32/55, Valimeri irti korostuskehasta, ei reunaylityksia saapumisessa ja Marseillen zoomeissa, ladonta <= 12 ms. Ampari Noden kautta. ~70 s."
@@ -499,6 +527,10 @@
     "savuke-reittiverkko.mjs": {
       "kuvakansio": true,
       "huomautus": "Himmea reittiverkko liftatessa (omistaja 20.9.2026 klo 13.50): kaikki laudan kaaret himmeina kantaman kaarten alla vain matkasession ajan, kerran per lauta (js/pallovektorit.js laji verkko). Bryssel 1400 x 900 dpr 2, kamera pakotettu Lansi-Eurooppaan; mittaa Kelttienmeren tummentuneet pikselit, kerran-per-lauta-olion ja kehysajan (Chromiumin ohjelmistopiirto, suhteellinen raja 60 %; laitteen fps Laitetestaajalta)."
+    },
+    "savuke-liftaus-ajoitus.mjs": {
+      "kuvakansio": true,
+      "huomautus": "Liftauksen nopanheitto ei zoomaa maailmakuvaan (omistaja v1983 20.9.2026): Bryssel 2000 x 1300, viisi ajoitusta (rauhassa, heti saapumisen jalkeen, kesken trailerin, kaksi heittoa, heitto kesken sovituksen); vaatii korkeuden < 1 ja nappulan ruudulla. Juurisyy lauta.js matkaZoomirajat + kattoPuristus. Ampari Noden kautta, ~2 min."
     }
   }
 }

@@ -61,8 +61,9 @@ import { kaupunkikartanSiirretyt } from '../nahtavyydet.js';
 import { avaaFokuspiste, fokuspisteKuvio, fokuspisteenAsteet } from '../fokuspiste.js';
 import { fokusvirtaAarrepisteOhje, fokusvirtaKohtaamispiste } from '../fokusvirta.js';
 import {
+  NOSTOSYM_KUVAMERKIN_KERROIN,
   NOSTOSYM_MINI_RUUTU, NOSTOSYM_MITAN_KATTO, NOSTOSYM_NIMIO_KATTO_PX, NOSTOSYM_NIMIO_KOKO,
-  nostosymAsetaPorras, nostosymKatettuMitta, nostosymNimioAsemointi,
+  nostosymAsetaPorras, nostosymKatettuMitta, nostosymKuvamerkki, nostosymNimioAsemointi,
   nostosymNimioMitta, nostosymPaakategoria, nostosymVirkistaRasterit, piirraNostosymKartalle,
   piirraNostosymNimio,
 } from '../fokusnosto-symbolit.js';
@@ -412,7 +413,35 @@ export const KAUPUNKIMERKIN_KERROIN = KAUPUNKIMERKIN_NIMIO_PX / KARTTANIMI_KOOT.
  * @param {?object} d  merkin rivi tai datum (`kaupunki`, `poltettu`)
  */
 export function merkinKerroin(d) {
-  return d?.kaupunki && !d?.poltettu ? KAUPUNKIMERKIN_KERROIN : 1;
+  if (d?.kaupunki && !d?.poltettu) return KAUPUNKIMERKIN_KERROIN;
+  if (d?.taso === 1 && !d?.poltettu) return NOSTON_TASO1_KERROIN;
+  return 1;
+}
+
+/*
+ * ══ NOSTOJEN TASOT ELÄVISSÄ NIMIÖISSÄ (Fable 21.9.2026; data
+ * `taso: 1|2|3`, Sisältökirjuri docs/raportit/nostotasot-fra-20260920.md)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ *   taso 1 — isompi nimiö (NOSTON_TASO1_KERROIN, tummempi muste) ja
+ *            kuvamerkki tyyppikuvakkeen tilalla (js/fokusnosto-
+ *            symbolit.js NOSTOSYM_KUVAMERKIT, Codexin 11 merkkiä);
+ *            sovittelussa etusija (sovittelu.js `taso`), aina
+ *            näkyvissä saapumisnäkymässä;
+ *   taso 2 — nykyinen piste + nimiö (oletus, kenttä puuttuu);
+ *   taso 3 — ei ladota ennen lähizoomia (merkkiPortti, lahizoomiAuki:
+ *            osuus uloimmasta ≤ LAHIZOOMIN_OSUUS_ULOIMMASTA eli yksi
+ *            zoomiporras saapumisnäkymästä sisään).
+ *
+ * Kuvamerkin ruutu on tavallista suurempi (NOSTOSYM_KUVAMERKIN_KERROIN),
+ * ja sama kerroin kulkee laatikoihin (nostonLaatikko, nostonOsat), jotta
+ * sovittelu ja osuma näkevät saman musteen kuin ruutu.
+ */
+export const NOSTON_TASO1_KERROIN = 1.3;
+
+/** Merkin ruudun kerroin: kuvamerkillinen ykköstaso on isompi ruutu. */
+export function ruudunKerroin(d) {
+  return d?.kuvamerkki && !d?.poltettu ? NOSTOSYM_KUVAMERKIN_KERROIN : 1;
 }
 
 /*
@@ -887,6 +916,8 @@ export function merkkiPortti(
       || (a.i - b.i));
   for (const { m, i } of jarjestys) {
     if (!kohdemaa && kohdeHaku(m)?.lahi) continue;
+    // Kolmostaso odottaa lähizoomia myös kohdemaassa (NOSTOJEN TASOT).
+    if (kohdeHaku(m)?.taso === 3) continue;
     if (kuuluu.size >= katto) continue;
     kuuluu.add(i);
   }
@@ -1143,15 +1174,32 @@ export function asetteleNosto(el, d) {
     el.classList.add('pallolauta-nosto-ankkuri');
     return;
   }
-  const nimio = d.nimioNakyy && d.nimi ? d.nimi : '';
+  /*
+   * NIMIÖ HÄIVYTETÄÄN, EI POISTETA (Fable 21.9.2026, nimiöt vakaat):
+   * nimiö on oma rasterinsa ikonin rinnalla (piirraNostosymKartalle
+   * `erillinenNimio`), ja sovittelun piilotus on luokka, jonka css
+   * häivyttää ≤ 200 ms:ssa (.nostosym-nimio). Resepti kantaa nimen
+   * silloinkin, kun se on piilossa — rasteri on valmiina paluuta varten.
+   */
+  const nimio = d.nimi ?? '';
+  const nakyy = Boolean(d.nimioNakyy && d.nimi);
   const puoli = d.puoli ?? 'oikea';
-  const resepti = `${d.kategoria ?? ''}|${d.symLaji ?? ''}|${puoli}|${nimio}`;
+  // Ykköstaso: kuvamerkki ja tummempi muste (ks. NOSTOJEN TASOT).
+  const taso1 = d.taso === 1 && !d.poltettu;
+  const kuvamerkki = taso1 ? (d.kuvamerkki ?? null) : null;
+  const resepti = `${d.kategoria ?? ''}|${d.symLaji ?? ''}|${puoli}|${nimio}`
+    + (taso1 ? `|taso1|${kuvamerkki ?? ''}` : '');
   if (g.dataset.resepti !== resepti) {
     g.dataset.resepti = resepti;
     g.replaceChildren();
-    piirraNostosymKartalle(g, d.kategoria, nimio, d.symLaji, puoli);
+    piirraNostosymKartalle(g, d.kategoria, nimio, d.symLaji, puoli, undefined, {
+      kuvamerkki, ruutuKerroin: ruudunKerroin(d), tumma: taso1, erillinenNimio: true,
+    });
   }
-  el.dataset.nimio = nimio;
+  g.classList.toggle('nostosym-nimio-piilossa', !nakyy);
+  el.dataset.nimio = nakyy ? nimio : '';
+  el.dataset.taso = String(d.taso ?? 2);
+  el.classList.toggle('pallolauta-nosto-taso1', taso1);
   el.classList.toggle('lunastettu', Boolean(d.lunastettu));
   // Listan alle jäänyt merkki piiloutuu listan ajaksi (ks. LISTA EI
   // KOSKAAN TOISEN TEKSTIN PÄÄLLE); seuraava ladonta palauttaa sen.
@@ -1229,7 +1277,8 @@ export function nostonOsat(p, d, {
   kylki = null, dx = 0, dy = 0, nimio = null,
 } = {}) {
   const mitta = nostonMitta(merkinKerroin(d));
-  const r = NOSTOSYM_MINI_RUUTU * mitta;
+  const rk = ruudunKerroin(d);
+  const r = NOSTOSYM_MINI_RUUTU * rk * mitta;
   const x = p.x + dx;
   const y = p.y + dy;
   const ikoni = {
@@ -1238,7 +1287,7 @@ export function nostonOsat(p, d, {
   const nakyy = nimio === null ? Boolean(d.nimioNakyy) : Boolean(nimio);
   if (!nakyy || !d.nimi) return [ikoni];
   const { leveys } = nostosymNimioMitta(d.nimi, d.symLaji);
-  const a = nostosymNimioAsemointi(kylki ?? d.puoli ?? 'oikea', leveys);
+  const a = nostosymNimioAsemointi(kylki ?? d.puoli ?? 'oikea', leveys, rk);
   return [ikoni, {
     x0: x + Math.min(a.x1, a.x2) * mitta,
     y0: y + Math.min(a.y1, a.y2) * mitta,
@@ -1255,7 +1304,8 @@ export function nostonLaatikko(p, d, {
   // laatikon on oltava täsmälleen se, mikä ruudulle piirtyy.
   // Saapumiskehyksessä ladottaessa kutsuja antaa mitan (saapumisMitta).
   const mitta = annettuMitta ?? nostonMitta(merkinKerroin(d));
-  const r = NOSTOSYM_MINI_RUUTU * mitta;
+  const rk = ruudunKerroin(d);
+  const r = NOSTOSYM_MINI_RUUTU * rk * mitta;
   const x = p.x + dx;
   const y = p.y + dy;
   const laatikko = {
@@ -1264,7 +1314,7 @@ export function nostonLaatikko(p, d, {
   const nakyy = nimio === null ? Boolean(d.nimioNakyy) : Boolean(nimio);
   if (!nakyy || !d.nimi) return laatikko;
   const { leveys } = nostosymNimioMitta(d.nimi, d.symLaji);
-  const a = nostosymNimioAsemointi(kylki ?? d.puoli ?? 'oikea', leveys);
+  const a = nostosymNimioAsemointi(kylki ?? d.puoli ?? 'oikea', leveys, rk);
   return {
     x0: Math.min(laatikko.x0, x + a.x1 * mitta),
     y0: Math.min(laatikko.y0, y + a.y1 * mitta),
@@ -1689,6 +1739,10 @@ export function luoNostot({
           // MAASTOKOHDE EI SULAUDU AIHEMERKKIIN (ks. MAASTOKOHDE EI
           // SULAUDU AIHEMERKKIIN yllä ja aihemerkit.js ryhmitaNostot).
           maasto: onMaastokohde(kohde),
+          // NOSTOJEN TASOT (ks. lohko yllä): taso datasta, kuvamerkki
+          // tyypistä; sama kenttä kulkee datumiin ja laatikoihin.
+          taso: kohde.taso === 1 || kohde.taso === 3 ? kohde.taso : 2,
+          kuvamerkki: kohde.taso === 1 ? nostosymKuvamerkki(m.kategoria, m.laji) : null,
           /*
            * KAUPUNKIJÄSENYYS (PAATOKSET 27 TARKENNUS 2 kohta 7,
            * js/fokuskohteet.js nostonKaupunkiAvain): saman kaupungin
@@ -1851,6 +1905,33 @@ export function luoNostot({
    */
   const VIUHKAN_LEPO_PX = 12;
   const VIUHKAN_ZOOMIVARA = 0.01;
+  /*
+   * LIUSKA ASETTUU ENSIN, LEPOTESTI ALKAA VASTA SITTEN (21.9.2026, CI
+   * v1984 savuke-kaupunkipopup: Pariisi ja Marseille 390 px, liuska
+   * "ei auennut"). Mitattu hidastetulla Chromiumilla (CPU 6×): liuska
+   * AUKESI ja sulkeutui 425 ms myöhemmin, koska merkki oli siirtynyt
+   * 42 px — kamera-ajon lupaus (kamera.ajaKamera) täyttyi ennen kuin
+   * kirjaston renderkamera oli perillä, ja avaushetken `p` luettiin
+   * vielä matkalla olevasta kamerasta. Nopealla koneella ero on
+   * pikseleitä, kuormitetulla kymmeniä. Siksi liuska SEURAA merkkiä
+   * asettumisajan (LIUSKAN_ASETTUMISAIKA_MS) avauksesta lukien; vasta
+   * sen jälkeen pelaajan panorointi tai zoomi sulkee sen kuten ennen.
+   *
+   * AIKA, EI LEPO: ensimmäinen ladonta avauksen jälkeen näki merkin
+   * vielä VANHASSA paikassa (renderkamera ei ollut liikahtanut), joten
+   * "piste ei liikkunut kahden ladonnan välillä" olisi julistanut levon
+   * liian aikaisin — mitattu: hyppy 44 px tuli vasta sen jälkeen.
+   * Siksi asettuminen päättyy vasta, kun VÄHIMMÄISAIKA on kulunut JA
+   * piste on pysynyt paikallaan kahden ladonnan välillä — raskaasti
+   * kuormitetulla koneella (mitattu polton aikana: liuska aukesi vasta
+   * 10 s napautuksesta) kamera saapuu paljon myöhemmin kuin lupaus
+   * täyttyy. Aikakatto pitää huolen, ettei liuska seuraa loputtomiin.
+   * Pelaajan sormi ei ehdi panoroida vähimmäisajan sisällä
+   * tarkoituksella.
+   */
+  const LIUSKAN_ASETTUMISAIKA_MS = 1500;
+  const LIUSKAN_ASETTUMISKATTO_MS = 8000;
+  const LIUSKAN_ASETTUMISVARA_PX = 1;
 
   /** Avaa viuhkan aihemerkistä; toinen viuhka sulkeutuu samalla. */
   const avaaViuhka = (rivi) => {
@@ -1914,6 +1995,10 @@ export function luoNostot({
       p: { x: rivi.p.x, y: rivi.p.y },
       uloinOsuus: viimeisinUloinOsuus,
       avattuKategoria: null,
+      // Asettumisvaihe (ks. LIUSKA ASETTUU ENSIN): seuraa merkkiä,
+      // kunnes vähimmäisaika on kulunut ja piste on levossa.
+      avattu: Date.now(),
+      asettuu: true,
       // Sisäisen kelauksen tila (PAATOKSET 34 kohta 5, ks. paivita).
       kelaus: 0,
       kelausIkkuna: 0,
@@ -2699,12 +2784,24 @@ export function luoNostot({
     const elavatJaAnkkurit = [...elavat, ...ankkuriRivit];
     if (liuska) {
       const rivi = elavatJaAnkkurit.find((r) => r.avain === liuska.avain);
-      const siirtyi = rivi
-        ? Math.hypot(rivi.p.x - liuska.p.x, rivi.p.y - liuska.p.y) > VIUHKAN_LEPO_PX
-        : true;
-      const zoomasi = Math.abs(uloinOsuus - liuska.uloinOsuus)
-        > VIUHKAN_ZOOMIVARA * Math.max(uloinOsuus, liuska.uloinOsuus, 1e-6);
-      if (!rivi || siirtyi || zoomasi) liuska = null;
+      const matka = rivi ? Math.hypot(rivi.p.x - liuska.p.x, rivi.p.y - liuska.p.y) : Infinity;
+      if (rivi && liuska.asettuu) {
+        // Asettumisvaihe (ks. LIUSKA ASETTUU ENSIN): kirjaa uusi piste
+        // ja kameran osuus; lepotesti alkaa vasta, kun vähimmäisaika on
+        // kulunut ja piste pysyi paikallaan — tai aikakatto täyttyi.
+        const ika = Date.now() - liuska.avattu;
+        if ((ika >= LIUSKAN_ASETTUMISAIKA_MS && matka <= LIUSKAN_ASETTUMISVARA_PX)
+          || ika >= LIUSKAN_ASETTUMISKATTO_MS) {
+          liuska.asettuu = false;
+        }
+        liuska.p = { x: rivi.p.x, y: rivi.p.y };
+        liuska.uloinOsuus = uloinOsuus;
+      } else {
+        const siirtyi = matka > VIUHKAN_LEPO_PX;
+        const zoomasi = Math.abs(uloinOsuus - liuska.uloinOsuus)
+          > VIUHKAN_ZOOMIVARA * Math.max(uloinOsuus, liuska.uloinOsuus, 1e-6);
+        if (!rivi || siirtyi || zoomasi) liuska = null;
+      }
     }
     const piirrettavat = [...elavat.filter((r) => !ryhmassa.has(r.avain)), ...aiherivit]
       .sort(jarjestys);
@@ -2787,6 +2884,8 @@ export function luoNostot({
       dy: 0,
       aihe: r.aihe ?? null,
       lunastettu: Boolean(r.lunastettu),
+      taso: r.taso ?? 2,
+      kuvamerkki: r.kuvamerkki ?? null,
       elementti: r.perhe === 'piste' ? pisteElementti : nostoElementti,
       asettele: r.perhe === 'piste' ? asetteleFokuspiste : asetteleNosto,
     }));
@@ -3322,6 +3421,34 @@ export function luoNostot({
         }
       }
     }
+    /*
+     * EDELLINEN SOVITTELU KANNETAAN ETEENPÄIN (ks. NIMIÖN KYLKI
+     * LUKITAAN, KUN ANKKURI VALITAAN `sovittele`n yllä). Datumit
+     * rakennetaan joka ladonnassa datasta, joten ilman tätä nimiön
+     * kylki putoaisi takaisin merkin omaan kylkeen joka ladonnalla ja
+     * sovittelun olisi pakko ratkaista se uudestaan — juuri se, minkä
+     * kohta 13 c kieltää. Asento luetaan lukosta jo TÄSSÄ, jotta myös
+     * nimiladonnan varaukset ja osumapinnat kuvaavat sitä, mikä
+     * ruudulla on.
+     *
+     * JA ENNEN `merkit.aseta`A (20.9.2026, laitetestaaja kierros 20b:
+     * "Camarguen hevoset" ja "Camarguenvarsa" suoraan päällekkäin).
+     * Lukko luettiin ennen VASTA merkkien asettamisen jälkeen, ja
+     * merkit.aseta KOPIOI datumin kentät pysyvään datumiin — lukon
+     * asento ei siis koskaan päässyt ruudulle, ellei `sovittele`
+     * sattunut muuttamaan tulosta samalla ladonnalla. Kartalla näkyi
+     * datan kylki ja piilotettu nimiö, kun sovittelu uskoi lappujen
+     * väistäneen (mitattu 1400 px: 14 lappua 68:sta eri asennossa
+     * kuin sovittelun lukko, 2 piilotettua nimiötä näkyvissä).
+     */
+    for (const d of datumit) {
+      const a = sovitellutAsennot.get(d.avain);
+      if (!a) continue;
+      d.puoli = a.kylki;
+      d.dx = a.dx;
+      d.dy = a.dy;
+      if (d.nimi) d.nimioNakyy = d.nimioNakyy && a.nimio;
+    }
     merkit.aseta('nostot', datumit);
     tahdistaRasteriporras();
     /*
@@ -3427,24 +3554,6 @@ export function luoNostot({
         lappuja.push({ r, datum: datumit[i], laatikko: lapunLaatikko(r, datumit[i]) });
       }
     });
-    /*
-     * EDELLINEN SOVITTELU KANNETAAN ETEENPÄIN (ks. NIMIÖN KYLKI
-     * LUKITAAN, KUN ANKKURI VALITAAN `sovittele`n yllä). Datumit
-     * rakennetaan joka ladonnassa datasta, joten ilman tätä nimiön
-     * kylki putoaisi takaisin merkin omaan kylkeen joka ladonnalla ja
-     * sovittelun olisi pakko ratkaista se uudestaan — juuri se, minkä
-     * kohta 13 c kieltää. Asento luetaan lukosta jo TÄSSÄ, jotta myös
-     * nimiladonnan varaukset ja osumapinnat kuvaavat sitä, mikä
-     * ruudulla on.
-     */
-    for (const d of datumit) {
-      const a = sovitellutAsennot.get(d.avain);
-      if (!a) continue;
-      d.puoli = a.kylki;
-      d.dx = a.dx;
-      d.dy = a.dy;
-      if (d.nimi) d.nimioNakyy = d.nimioNakyy && a.nimio;
-    }
     const ikonilaatikko = ({ r, datum }) => (r.perhe === 'aihemerkki'
       ? aihemerkinLaatikko(r.p, datum, { dx: datum.dx, dy: datum.dy, nimio: false })
       : nostonLaatikko(r.p, r, {
@@ -3564,8 +3673,22 @@ export function luoNostot({
    * ladonnassa — vain kun sovittelu oikeasti ajetaan. Avaimeen menee
    * pelkkä tieto siitä, onko kehä jo saatavilla (`rantaviivaOn`).
    */
+  /*
+   * ══ NIMIÖ EI LIIKU ELEEN AIKANA (Fable 21.9.2026, omistaja v1985) ══
+   *
+   * Sovittelu (js/pallolauta/sovittelu.js, Google Earthin malli) ajetaan
+   * vain LEVOSSA: `lepo` on tosi, kun lauta kutsuu lepoladonnan
+   * (js/pallolauta/lauta.js: sormi ylhäällä, kamera-ajo ohi, viimeisestä
+   * kameran muutoksesta LADONNAN_LEPOVIIVE_MS). Eleen aikana lukko
+   * pidetään sellaisenaan ja uudet laput saavat lukkoon oman kylkensä
+   * näkyvänä — ne sovitellaan vasta levossa. Kylki ja näkyvyys eivät
+   * siis voi vaihtua sormen alla; siirtoa ei ole lainkaan (dx = dy = 0).
+   *
+   * Levossa ratkaisu on idempotentti: lukittu kelvollinen asento
+   * pidetään (hystereesi), joten toistuva lepoladonta ei muuta mitään.
+   */
   const sovittele = ({
-    nimet = [], kiinteat = [], rantaviiva = null, rantaviivaOn = false,
+    nimet = [], kiinteat = [], rantaviiva = null, rantaviivaOn = false, lepo = true,
   } = {}) => {
     viimeisimmatNimet = nimet ?? [];
     if (!lappuja.length) {
@@ -3573,103 +3696,37 @@ export function luoNostot({
       sovitellutAsennot = new Map();
       return sovittelu;
     }
-    const ruutuNyt = ruutu?.() ?? { leveys: 0, korkeus: 0 };
-    /*
-     * AVAIN LUETAAN RIVILTÄ, EI DATUMISTA. Sovittelu kirjoittaa
-     * tuloksensa datumiin (`nimioNakyy` piilotuksessa), ja jos avain
-     * lukisi sen, jokainen piilotus muuttaisi avainta ja pakottaisi
-     * uuden sovittelun — sama ansa kuin `omatLaatikot`issa (ks. ASENTO
-     * LUETAAN RIVILTÄ, EI DATUMILTA). Rivi rakennetaan datasta.
-     */
-    const reunaNyt = reuna?.() ?? null;
-    /*
-     * REUNAN YLITYS ON OSA AVAINTA (RUUDUN REUNA ON ESTE). Lukko pitää
-     * kyljen vedon yli, mutta vedossa lappu voi kulkea ruudun reunan
-     * yli — juuri se, mitä omistaja ei halua. Siksi avaimeen kirjataan
-     * ne laput, joiden LUKITTU asento ylittää reunan juuri nyt: kun
-     * joukko muuttuu, sovittelu ajetaan uudestaan ja lappu vaihtaa
-     * kylkeä tai siirtyy sisään. Muulloin lukko pitää kuten ennen —
-     * sisäänpäin tullessaan lappu ei palaa omaan kylkeensä itsestään
-     * (ei edestakaista hyppyä reunan tuntumassa).
-     */
-    const reunalla = reunaNyt
-      ? lappuja.filter(({ datum, laatikko }) => datum.nimioNakyy
-        && !laatikkoSisalla(laatikko(datum.puoli, datum.dx, datum.dy, true), reunaNyt))
-        .map(({ datum }) => datum.avain).join(',')
-      : '';
-    /*
-     * PALUU OMAAN KYLKEEN, KUN TILAA TAAS ON. Lukko syntyy usein kesken
-     * kameran ajon (saapumisajo alkaa kaukaa), ja silloin reunan takia
-     * käännetty tai siirretty lappu jäisi käännetyksi, vaikka perillä
-     * sen oma kylki mahtuisi hyvin. Siksi avaimeen kirjataan myös ne
-     * laput, jotka EIVÄT ole omassa asennossaan mutta joiden oma
-     * asento on nyt reunan sisällä HYSTEREESIN verran: ne saavat
-     * sovittelun uudestaan, ja se palauttaa oman kyljen, jos se on
-     * vapaa. Hystereesi (REUNAN_HYSTEREESI_PX) estää edestakaisen
-     * hypyn juuri reunan tuntumassa.
-     */
-    const sisareuna = reunaNyt ? {
-      x0: reunaNyt.x0 + REUNAN_HYSTEREESI_PX, y0: reunaNyt.y0 + REUNAN_HYSTEREESI_PX,
-      x1: reunaNyt.x1 - REUNAN_HYSTEREESI_PX, y1: reunaNyt.y1 - REUNAN_HYSTEREESI_PX,
-    } : null;
-    const palaavat = new Set(sisareuna
-      ? lappuja.filter(({ r, datum, laatikko }) => (datum.puoli !== (r.puoli ?? 'oikea')
-        || datum.dx || datum.dy || !datum.nimioNakyy)
-        && laatikkoSisalla(laatikko(r.puoli ?? 'oikea', 0, 0, true), sisareuna))
-        .map(({ datum }) => datum.avain)
-      : []);
-    const palaisi = [...palaavat].join(',');
-    /*
-     * RANTAVIIVA ON OSA AVAINTA VAIN MÄÄRÄNÄ (MEREN NIMIÖ EI JÄÄ
-     * RANTAVIIVAN ALLE, js/pallolauta/sovittelu.js): kehän laatikot
-     * saapuvat aineiston latauduttua eri hetkellä kuin ensimmäinen
-     * ladonta, ja silloin meren lappu on sovitteltava uudestaan. Määrä
-     * riittää erottamaan "ei vielä" ja "nyt on"; itse laatikot
-     * liikkuvat vedossa kuten kaikki muukin, eikä lukko avaudu siitä.
-     */
-    const avain = `${Math.round(ruutuNyt.leveys)}x${Math.round(ruutuNyt.korkeus)}#`
-      + lappuja.map(({ r, datum }) => `${datum.avain}:${r.nimioNakyy && r.nimi ? 1 : 0}`
-        + `:${r.perhe === 'aihemerkki' ? 'a' : 'n'}`).join(';')
-      + `#reuna:${reunalla}#palaa:${palaisi}#ranta:${rantaviivaOn ? 1 : 0}`;
-    // Sama lappujoukko samalla ruudulla: kylki on jo ratkaistu (ks.
-    // NIMIÖN KYLKI LUKITAAN). Veto ja zoomi eivät koeta sitä uudestaan.
-    if (avain === sovittelunAvain) {
-      sovittelu = { ...viimeisinSovittelu, lappuja: lappuja.length };
+    if (!lepo) {
+      for (const { r, datum } of lappuja) {
+        if (sovitellutAsennot.has(datum.avain)) continue;
+        sovitellutAsennot.set(datum.avain, {
+          kylki: r.puoli ?? 'oikea', dx: 0, dy: 0, nimio: true, syy: 'ele',
+        });
+      }
+      sovittelunAvain = '';
+      sovittelu = { ...viimeisinSovittelu, lappuja: lappuja.length, lukossa: true };
       return sovittelu;
     }
-    sovittelunAvain = avain;
+    const reunaNyt = reuna?.() ?? null;
     const tulos = sovitteleLaput({
       laput: lappuja.map(({ r, datum, laatikko }) => ({
         avain: datum.avain,
-        /*
-         * LUKITTU KYLKI ON LÄHTÖKOHTA, PAITSI PALAAVALLA (ks. PALUU
-         * OMAAN KYLKEEN): sovittelun "oma" on se kylki, josta haku
-         * alkaa. Lukko kannetaan eteenpäin, jotta uusi lappu ei
-         * käännä naapureitaan; reunan takia käännetty lappu saa
-         * lähtökohdakseen DATAN kyljen, jotta se voi palata.
-         */
-        kylki: palaavat.has(datum.avain) ? (r.puoli ?? 'oikea') : datum.puoli,
+        kylki: r.puoli ?? 'oikea',
         laatikko,
+        nimi: r.nimi ?? '',
         // Meren nimiö väistää rantaviivaa (sovittelu.js `rantaviiva`).
         meri: r.symLaji === 'meri' || r.kategoria === 'meri',
-        /*
-         * AIHENOSTO VÄISTÄÄ KAIKKEA (js/pallolauta/sovittelu.js
-         * AIHENOSTO SOVITELLAAN VIIMEISENÄ). Sen paikka ja nimi
-         * syntyvät vasta ajossa ryhmän jäsenistä, joten sillä ei ole
-         * sitä käsin hiottua ladontaa, jonka nojalla muut laput
-         * saavat jäädä paikoilleen — ja kaupungin rykelmän
-         * aihenostot syntyvät kaikki saman kaupungin päälle.
-         */
+        taso: datum.taso ?? 2,
+        kaupunki: Boolean(datum.kaupunki),
         este: r.perhe === 'aihemerkki',
       })),
       esteet: kiinteat.length ? [...nimet, ...kiinteat] : nimet,
+      lukot: sovitellutAsennot,
       reuna: reunaNyt,
-      rantaviiva: typeof rantaviiva === 'function' ? rantaviiva() : (rantaviiva ?? []),
-      // Elävät laput eivät limity keskenään (sovittelu.js `keskinainen`).
-      keskinainen: KOHDEMAAN_NIMIOT_ELAVINA,
+      rantaviiva: rantaviivaOn && typeof rantaviiva === 'function' ? rantaviiva() : (rantaviivaOn ? (rantaviiva ?? []) : []),
     });
     let muuttui = false;
-    for (const { r, datum } of lappuja) {
+    for (const { datum } of lappuja) {
       const a = tulos.asennot.get(datum.avain);
       if (!a) continue;
       if (datum.puoli === a.kylki && datum.dx === a.dx && datum.dy === a.dy
@@ -3680,12 +3737,13 @@ export function luoNostot({
       datum.nimioNakyy = a.nimio;
       muuttui = true;
     }
-    // Siirtynyt ikoni on myös siirtynyt varaus (js/pallolauta/lauta.js
+    // Vaihtunut kylki on myös vaihtunut varaus (js/pallolauta/lauta.js
     // lukee laatikot myös sovittelun jälkeen).
     if (muuttui) { laskeLaatikot(); merkit.aseta('nostot', datumit); }
     // Lukko talteen: seuraavat ladonnat kantavat tämän eteenpäin
     // (ks. EDELLINEN SOVITTELU KANNETAAN ETEENPÄIN).
     sovitellutAsennot = new Map(tulos.asennot);
+    sovittelunAvain = 'levossa';
     viimeisinSovittelu = {
       siirretty: tulos.siirretty,
       kylkiVaihtui: tulos.kylkiVaihtui,
@@ -3693,7 +3751,7 @@ export function luoNostot({
       jaljella: tulos.jaljella,
       reunalta: tulos.reunalta,
     };
-    sovittelu = { ...viimeisinSovittelu, lappuja: lappuja.length };
+    sovittelu = { ...viimeisinSovittelu, lappuja: lappuja.length, lukossa: false };
     return sovittelu;
   };
 
@@ -4070,6 +4128,8 @@ export function luoNostot({
     },
     /** Viimeisimmän sovittelun luvut (savukkeet ja vartijat). */
     sovittelunTulos: () => sovittelu,
+    /** Sovittelun lukko avaimittain ({ kylki, dx, dy, nimio, syy }) — savukkeet. */
+    sovittelunAsennot: () => new Map(sovitellutAsennot),
     /**
      * Elävien nostojen NIMILAPPUJEN laatikot sovittelun jälkeen —
      * mitat kaavasta, samasta kuin sovittelu käytti (savukkeet ja
@@ -4085,6 +4145,7 @@ export function luoNostot({
         // Perhe kertoo savukkeelle, mikä ovi lapun takaa aukeaa
         // (nosto = kohdekortti, elain = eläintäky, aihemerkki = viuhka).
         perhe: datum.perhe,
+        taso: datum.taso ?? 2,
         puoli: datum.puoli,
         dx: datum.dx,
         dy: datum.dy,
@@ -4105,6 +4166,7 @@ export function luoNostot({
         nimi: o.nimi,
         perhe: o.perhe,
         poltettu: Boolean(o.poltettu),
+        taso: o.taso ?? 2,
         puoli: o.datum?.puoli ?? o.puoli ?? 'oikea',
         ...r,
       } : null;

@@ -11755,6 +11755,187 @@ export const MAA_KATEGORIAT = {
       },
     },
     {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Puolan historia yhdistää tähtitiedettä, suolaa, musiikkia ja tarua: mies '
+        + 'joka siirsi Maan pois maailmankaikkeuden keskeltä, kaivos joka on oma '
+        + 'maanalainen kaupunkinsa, säveltäjän sydän ja lohikäärme joka yhä henkäisee '
+        + 'tulta.',
+      nostot: [
+        {
+          otsikko: 'Mies joka pysäytti Auringon ja liikutti Maata',
+          aika: '1543',
+          tiedosto: 'Nikolaus Kopernikus.jpg',
+          teksti: 'Nikolaus Kopernikus opiskeli Krakovan yliopistossa ja työskenteli '
+            + 'myöhemmin katolisena kirkonmiehenä Fromborkissa, mutta hänen elämäntyönsä '
+            + 'oli tähtitiede. Vuonna 1543, juuri ennen kuolemaansa, hän julkaisi teoksen '
+            + 'De revolutionibus orbium coelestium, jossa hän esitti Auringon eikä Maan '
+            + 'olevan aurinkokunnan keskipiste. Ajatus ei ollut aivan uusi — antiikin '
+            + 'kreikkalainen Aristarkhos Samoslainen oli esittänyt samankaltaisen mallin '
+            + 'jo lähes kaksi vuosituhatta aiemmin — mutta Kopernikuksen teos käynnisti '
+            + 'tieteellisen vallankumouksen, joka muutti lopullisesti käsityksen ihmisen '
+            + 'paikasta maailmankaikkeudessa.',
+          lyhyt: 'Kopernikus esitti vuonna 1543, että Aurinko eikä Maa on aurinkokunnan '
+            + 'keskipiste.',
+          selite: 'Nikolaus Kopernikuksen muotokuva; hän julkaisi heliosentrisen mallinsa '
+            + 'juuri ennen kuolemaansa.',
+          lahde: 'Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Suolakaivos jossa on kirkko maan alla',
+          aika: '13. vuosisata',
+          tiedosto: 'Poland-01583 - St. Kinga\'s Chapel (31547044100).jpg',
+          teksti: 'Wieliczkan suolakaivos Krakovan lähellä on kaivettu 1200-luvulta lähtien, '
+            + 'ja suolaa louhittiin siellä yhtäjaksoisesti aina vuoteen 1996 asti — yksi '
+            + 'maailman vanhimmista toimivista kaivoksista. Kaivos ulottuu 327 metrin '
+            + 'syvyyteen ja yli 287 kilometrin käytäväverkostoon. Vuosisatojen aikana '
+            + 'kaivosmiehet veistivät suolasta patsaita, kappeleita ja jopa kokonaisia '
+            + 'kirkkosaleja kattokruunuineen — kaikki, myös valaisimet, on veistetty tai '
+            + 'puhallettu suolasta. Nykyään kaivos on Unescon maailmanperintökohde ja '
+            + 'yksi Puolan suosituimmista nähtävyyksistä.',
+          lyhyt: 'Wieliczkan suolakaivoksessa kaivosmiehet veistivät kokonaisia kirkkosaleja '
+            + 'suolasta.',
+          selite: 'Pyhän Kingan kappeli Wieliczkan suolakaivoksessa; jopa kattokruunut on '
+            + 'veistetty suolasta.',
+          lahde: 'Dennis G. Jarvis, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Sydän joka jäi kotiin',
+          aika: '1849',
+          tiedosto: 'Warszawa, ul. Krakowskie Przedmieście 3 20170516 003.jpg',
+          teksti: 'Fryderyk Chopin kuoli Pariisissa 17. lokakuuta 1849 vain 39-vuotiaana, '
+            + 'kaukana kotimaastaan. Hänen oma toiveensa oli, että hänen sydämensä '
+            + 'palautettaisiin Puolaan, vaikka ruumis haudattiinkin Père Lachaisen '
+            + 'hautausmaalle Pariisiin. Ruumiinavauksen tehnyt lääkäri otti sydämen '
+            + 'talteen, ja Chopinin sisar Ludwika kuljetti sen alkoholiin säilöttynä '
+            + 'Varsovaan. Sydän muurattiin Pyhän Ristin kirkon pilariin, jossa se lepää '
+            + 'yhä tänään — säveltäjä jäi ruumiiltaan Ranskaan mutta sydämeltään kotiin '
+            + 'Puolaan.',
+          lyhyt: 'Chopinin sydän on säilötty Varsovan Pyhän Ristin kirkon pilariin vuodesta '
+            + '1849.',
+          selite: 'Pyhän Ristin kirkko Varsovassa; Chopinin sydän on muurattu erääseen kirkon '
+            + 'pilareista.',
+          lahde: 'Tilman2007, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Lohikäärme joka syttyy tuleen',
+          aika: 'nykyään',
+          tiedosto: 'SmokWawelski-Rzeźba-POL, Kraków.jpg',
+          teksti: 'Wawelin kukkulan luolassa Krakovassa asui tarun mukaan lohikäärme, joka '
+            + 'vaati kaupungilta uhrilampaita ja lopulta neitoja, kunnes köyhä '
+            + 'suutarinoppipoika täytti lampaan rikillä ja piellä — lohikäärme söi sen, '
+            + 'janosi hillittömästi ja lopulta räjähti juotuaan joesta niin paljon vettä. '
+            + 'Tarina on niin rakastettu, että Wawelin kukkulan juurelle pystytettiin '
+            + '1972 pronssinen lohikäärmepatsas, joka oikeasti henkäisee tulta muutaman '
+            + 'minuutin välein kaasuputken ansiosta — lasten suosikkinähtävyys '
+            + 'nykyaikaisen tekniikan ja vanhan tarun yhdistelmänä.',
+          lyhyt: 'Wawelin lohikäärmepatsas Krakovassa henkäisee oikeasti tulta muutaman '
+            + 'minuutin välein.',
+          selite: 'Pronssinen lohikäärmepatsas Wawelin kukkulan juurella Krakovassa.',
+          lahde: 'Mach240390, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miten Wawelin lohikäärme tarun mukaan lopulta kuoli?',
+        vaihtoehdot: [
+          'Se räjähti juotuaan liikaa vettä',
+          'Ritari surmasi sen miekalla',
+          'Se lensi vuorelta pois',
+          'Kuningas karkotti sen loitsulla',
+        ],
+        oikea: 0,
+        fakta: 'Suutarinoppipoika täytti lampaan rikillä ja piellä lohikäärmeen '
+          + 'syötäväksi.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Puolan ruokakulttuuri kasvaa metsästä ja niityiltä: taikinataskut joita '
+        + 'täytetään millä tahansa, hidas metsästäjän pata, viina jossa kelluu '
+        + 'heinänkorsi ja tulisavustettu vuoristojuusto.',
+      nostot: [
+        {
+          otsikko: 'Taskut jotka täytetään millä tahansa',
+          aika: 'nykyään',
+          tiedosto: 'Pierogi ruskie Słupsk.jpg',
+          teksti: 'Pierogit ovat taikinataskuja, jotka suljetaan täytteen ympärille ja '
+            + 'keitetään vedessä. Täyte voi olla melkein mitä tahansa: perunaa ja '
+            + 'raejuustoa, hapankaalia, jauhelihaa, sieniä tai marjoja. Suolaiset '
+            + 'pierogit tarjoillaan usein voissa paistettujen sipulien tai smetanan kera, '
+            + 'ja makeat versiot ovat jälkiruokaa. Jokaisella alueella ja perheellä on '
+            + 'omat suosikkitäytteensä, ja pierogien tekeminen yhdessä on monissa '
+            + 'perheissä juhlapyhien vakiintunut perinne — erityisesti joulunaattona.',
+          lyhyt: 'Pierogit ovat taikinataskuja, joiden täyte vaihtelee perunasta marjoihin.',
+          selite: 'Pierogi ruskie -taskuja lautasella; täytteenä perunaa ja raejuustoa.',
+          lahde: 'MOs810, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Metsästäjän pata joka paranee odottaessa',
+          aika: 'nykyään',
+          tiedosto: 'Bigos (1).jpg',
+          teksti: 'Bigos eli metsästäjän pata on hidas muhennos, jossa erilaiset lihat '
+            + 'haudutetaan yhdessä hapankaalin ja tuoreen kaalin kanssa. Ruokaan lisätään '
+            + 'usein makkaraa, sieniä, luumuja ja viiniä, ja mausteet vaihtelevat '
+            + 'perheittäin. Bigosin erikoisuus on, että se paranee uudelleenlämmittäessä: '
+            + 'monet väittävät parhaan bigosin olevan se, joka on saanut seistä ja '
+            + 'maustua useita päiviä, jopa viikon. Ruoka levisi alkuperäisestä Puolasta '
+            + 'laajalle koko Puolan–Liettuan unionin alueelle.',
+          lyhyt: 'Bigos-muhennoksen sanotaan maistuvan parhaalta vasta useiden päivien '
+            + 'jälkeen.',
+          selite: 'Lautasellinen bigosta eli metsästäjän patamuhennosta persiljalla '
+            + 'koristeltuna.',
+          lahde: 'Dr. Bernd Gross, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Viina jossa on heinänkorsi pullossa',
+          aika: 'nykyään',
+          tiedosto: 'Żubrówka Bison Grass.JPG',
+          teksti: 'Żubrówka on maustettu vodka, jonka jokaiseen pulloon lisätään yksi puhdas '
+            + 'heinänkorsi — biisoninheinää, joka kerätään käsin Białowieżan metsästä '
+            + 'Puolan itärajalta Valko-Venäjän vastaisella rajaseudulla. Sama metsä on '
+            + 'Euroopan alkuperäisten metsäbiisonien viimeinen laaja elinalue, ja heinä '
+            + 'saa nimensä juuri niiden laidunmaista. Kuivattu heinä antaa viinalle '
+            + 'vienon, hieman vaniljaisen ja tuoreen heinän tuoksun, joka erottaa sen '
+            + 'selvästi tavallisesta vodkasta — pullon pohjalle jäävä korsi on samalla '
+            + 'merkki aitoudesta.',
+          lyhyt: 'Żubrówka-vodkan jokaisessa pullossa on käsin kerätty biisoninheinän korsi.',
+          selite: 'Pullo Żubrówka-biisoninheinävodkaa; etiketissä on Białowieżan '
+            + 'metsäbiisoni.',
+          lahde: 'Bachelot Pierre J-P, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Juusto jonka muoto on suojattu lailla',
+          aika: 'nykyään',
+          tiedosto: 'Sery góralskie.jpg',
+          teksti: 'Oscypek on savustettu lampaanmaitojuusto, jota valmistetaan vain '
+            + 'Tatra-vuorten alueella Etelä-Puolassa, perinteisesti bacaksi kutsutun '
+            + 'mestaripaimenen käsin. Juuston muoto — kapeneva sukkulan malli '
+            + 'koristeellisine kuvioineen — on niin tunnusomainen, että se on suojattu '
+            + 'Euroopan unionin alkuperänimityksellä: vain tietyllä alueella tehty juusto '
+            + 'saa käyttää nimeä oscypek. Sitä syödään usein paistettuna ja tarjoillaan '
+            + 'puolukkahillon kanssa.',
+          lyhyt: 'Oscypek-juuston sukkulanmuotoinen kuviointi on suojattu EU:n '
+            + 'alkuperänimityksellä.',
+          selite: 'Perinteisiä sukkulanmuotoisia oscypek-juustoja myytävänä Puolan '
+            + 'vuoristossa.',
+          lahde: 'Pawel Swiegoda (Paberu), Wikimedia Commons (CC BY-SA 2.5)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mistä Żubrówka-vodkan heinänkorsi kerätään?',
+        vaihtoehdot: [
+          'Białowieżan metsästä',
+          'Tatra-vuorilta',
+          'Wieliczkan kaivoksesta',
+          'Masurian järviltä',
+        ],
+        oikea: 0,
+        fakta: 'Sama metsä on Euroopan alkuperäisten metsäbiisonien viimeinen laaja '
+          + 'elinalue.',
+      },
+    },
+    {
       id: 'menovinkit',
       nimi: 'Menovinkit',
       johdanto: 'Puola on avannut kokoelmansa verkkoon isolla kädellä: '
@@ -12933,6 +13114,102 @@ export const MAA_KATEGORIAT = {
       },
     },
     {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Tanskan luonto on tasainen mutta yllättävä: liitukallio joka syöksyy '
+        + 'mereen, meri joka häviää ja palaa joka päivä, ja hiekkakumpu joka kävelee '
+        + 'koilliseen.',
+      nostot: [
+        {
+          otsikko: 'Liitukallio joka syöksyy mereen',
+          aika: '2025',
+          tiedosto: 'Møns Klint chalk cliffs 1.jpg',
+          teksti: 'Mönin saaren itärannikolla kohoaa kuuden kilometrin pituinen '
+            + 'liitukallioiden vyö, joka syöksyy jyrkästi mereen — korkein kohta, '
+            + 'Dronningestolen, on 128 metriä. Valkoinen kallio koostuu miljardeista '
+            + 'pikkuruisista merieliöiden kuorista, jotka kertyivät merenpohjaan '
+            + 'liitukaudella miljoonia vuosia sitten. Meri kuluttaa kalliota jatkuvasti, '
+            + 'ja lohkeamiset paljastavat uusia fossiileja — merisiilejä ja simpukoita — '
+            + 'jotka huuhtoutuvat rantaan etsittäviksi. Alueella kulkee poluilla '
+            + 'vuosittain noin 250 000 kävijää, ja heinäkuussa 2025 Unesco lisäsi Mönin '
+            + 'liitukalliot maailmanperintöluetteloon.',
+          lyhyt: 'Mönin liitukalliot kohoavat 128 metriin ja syöksyvät jyrkästi Itämereen.',
+          selite: 'Mönin saaren liitukalliot Tanskan itärannikolla; korkein kohta '
+            + 'Dronningestolen on 128 metriä merenpinnasta.',
+          lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Meri joka häviää joka päivä',
+          aika: '2014',
+          tiedosto: 'Nationalpark Vadehavet Wadden Sea walking Denmark (2026-08-10).jpg',
+          teksti: 'Vadehavi on Pohjanmeren matala rannikkovyöhyke, jonka vuorovesi paljastaa '
+            + 'ja peittää kahdesti vuorokaudessa: nousuveden aikaan kaikki on merta, '
+            + 'laskuveden aikaan silmänkantamattomiin avautuu lietettä ja hiekkasärkkiä. '
+            + 'Oppaat vievät kävijöitä avojaloin lietteen yli sinne, missä äsken kulki '
+            + 'vene. Alue on yksi maailman tärkeimmistä lintualueista: miljoonat muutto- '
+            + 'ja pesimälinnut käyttävät sitä matkalla tai kotina. Hollannin ja Saksan '
+            + 'vadehavi liitettiin Unescon maailmanperintöluetteloon 2009, ja Tanskan '
+            + 'osuus seurasi kesäkuussa 2014 — nyt koko rannikkokaistale Esbjergistä '
+            + 'Saksan rajalle on yhtä suojeltua merenpohjaa.',
+          lyhyt: 'Vadehavin vuorovesi paljastaa ja peittää valtavan lietealueen kahdesti '
+            + 'vuorokaudessa.',
+          selite: 'Kävelijöitä Tanskan vadehavin paljastuneella merenpohjalla laskuveden '
+            + 'aikaan.',
+          lahde: 'Olgierd Rudak, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Puu joka värjää koko maan vihreäksi',
+          aika: 'nykyään',
+          tiedosto: 'Lovely spring in the beech wood (4568212332).jpg',
+          teksti: 'Pyökki eli bøg on Tanskan kansallispuu, ja toukokuussa metsät käyvät läpi '
+            + 'bøgespringiksi kutsutun muutoksen: lehdet puhkeavat lähes koko maassa '
+            + 'saman viikon aikana, ja ruskea talvimetsä muuttuu muutamassa päivässä '
+            + 'kirkkaan vihreäksi. Juuri ennen lehtien puhkeamista metsän pohja peittyy '
+            + 'valkoisista vuokoista, jotka ehtivät kukkia ainoana hetkenä, jolloin '
+            + 'auringonvalo pääsee vielä paljaiden oksien läpi maahan asti. Ilmiö '
+            + 'houkuttelee joka kevät tuhansia retkeilijöitä metsiin, ja monet perheet '
+            + 'tekevät siitä vuotuisen perinteen. Pyökkimetsiä on eniten Sjællannin ja '
+            + 'Itä-Jyllannin alueilla, missä maaperä ja ilmasto sopivat puulle parhaiten.',
+          lyhyt: 'Pyökki on Tanskan kansallispuu, ja sen lehdet puhkeavat toukokuussa lähes '
+            + 'yhtä aikaa.',
+          selite: 'Vastapuhjenneet pyökinlehdet ja valkoiset vuokot tanskalaisessa '
+            + 'bøgeskovissa toukokuussa.',
+          lahde: 'Martin Nikolaj Christensen, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Hiekkasärkkä joka kävelee',
+          aika: 'noin 1700',
+          tiedosto: 'Råbjerg Mile (44).jpg',
+          teksti: 'Råbjerg Mile on Pohjois-Euroopan suurin liikkuva hiekkasärkkä: se on noin '
+            + 'kaksi neliökilometriä laaja ja jopa 40 metriä korkea, ja siinä on arviolta '
+            + 'neljä miljoonaa kuutiometriä hiekkaa. Tuuli työntää koko kummun koillista '
+            + 'kohti jopa 18 metriä vuodessa, ja hiekan takana paljastuu matala, kostea '
+            + 'vyöhyke, josta erottaa, mistä särkkä on kulkenut. Alkujaan hiekka nousi '
+            + 'Länsi-Jyllannin rannikolta yli 300 vuotta sitten, ja se on ainoa laaja '
+            + 'liikkuvien dyynien alue koko Tanskassa. Skagenin ja Frederikshavnin '
+            + 'välissä liikkuvaa hiekkavuorta katsoo vuosittain noin 250 000 kävijää, '
+            + 'jotka kiipeävät sen laelle katsomaan merta molempiin suuntiin.',
+          lyhyt: 'Råbjerg Mile on Pohjois-Euroopan suurin liikkuva hiekkasärkkä, ja se '
+            + 'siirtyy koilliseen.',
+          selite: 'Råbjerg Mile Pohjois-Jyllannissa; tuuli siirtää hiekkasärkkää koilliseen '
+            + 'jopa 18 metriä vuodessa.',
+          lahde: 'Ragnar1904, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mihin suuntaan Råbjerg Mile liikkuu?',
+        vaihtoehdot: [
+          'Etelään',
+          'Koilliseen',
+          'Länteen',
+          'Pohjoiseen',
+        ],
+        oikea: 1,
+        fakta: 'Se siirtyy jopa 18 metriä vuodessa ja on Pohjois-Euroopan suurin liikkuva '
+          + 'hiekkasärkkä.',
+      },
+    },
+    {
       id: 'menovinkit',
       nimi: 'Menovinkit',
       johdanto: 'Tanska on siirtänyt itsensä ruudulle: kansallisgallerian teokset '
@@ -13737,6 +14014,200 @@ export const MAA_KATEGORIAT = {
         ],
         oikea: 1,
         fakta: 'Kielet tulivat kertomuksen mukaan hevosen jouhista.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Suomen luonto elää vuodenaikojen ääripäissä: revontulet syttyvät pimeinä '
+        + 'talviöinä, tunturit palavat ruskan väreissä syyskuussa, ja Saaristomeri '
+        + 'pilkkoutuu kymmeniksituhansiksi saariksi.',
+      nostot: [
+        {
+          otsikko: 'Vaara jolle uhrattiin ja jolla laidunnetaan yhä',
+          aika: '1991',
+          tiedosto: 'Koli National Park, North Karelia, Finland - Scenery from Ukkokoli.jpeg',
+          teksti: 'Kolin vaarat kohoavat Pielisjärven länsirannalla, ja Ukko-Kolin huipulta '
+            + 'avautuu näkymä kymmenien saarten ja selkien yli — yksi Suomen '
+            + 'tunnetuimmista maisemista. Paikka oli aikoinaan pyhä uhripaikka, ja '
+            + 'myöhemmin sen rinteillä harjoitettiin kaskiviljelyä, joka poltti metsän '
+            + 'tuhkalannoitteeksi pelloille. Kansallispuisto perustettiin vuonna 1991 '
+            + 'juuri tämän perinnemaiseman suojelemiseksi: 30 neliökilometrin alueella '
+            + 'niityt niitetään yhä käsin ja perinteiset suomalaiset lehmä- ja '
+            + 'lammasrodut laiduntavat avoimilla kedoilla, jotta harvinainen '
+            + 'niittykasvillisuus säilyy. Ilman jatkuvaa laidunnusta avoimet vaaranlaet '
+            + 'metsittyisivät muutamassa vuosikymmenessä.',
+          lyhyt: 'Ukko-Kolin huipulta avautuu yksi Suomen tunnetuimmista järvimaisemista.',
+          selite: 'Näkymä Ukko-Kolin huipulta Pielisjärvelle ja sen saarille syksyisenä '
+            + 'päivänä.',
+          lahde: 'Pentti Rautio, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Taivas joka syttyy vihreäksi',
+          aika: 'nykyään',
+          tiedosto: 'Aurora borealis over Saana fell.jpg',
+          teksti: 'Revontulet syntyvät, kun Auringosta virtaavat varatut hiukkaset törmäävät '
+            + 'ilmakehän happi- ja typpiatomeihin ja saavat ne hehkumaan — happi loistaa '
+            + 'vihreänä ja punaisena, typpi sinisenä ja violettina. Suomen Lappi '
+            + 'sijaitsee juuri sillä leveysasteella, jolla revontulet näkyvät useimmin, '
+            + 'koska maapallon magneettikenttä ohjaa hiukkaset kehämäiselle vyöhykkeelle '
+            + 'napojen ympärille. Pilvettöminä, pimeinä talvi-iltoina valot voivat '
+            + 'leimahtaa taivaalle verhoina, säteinä tai kiemuroina, jotka muuttavat '
+            + 'muotoaan minuuteissa. Ilmiö tunnetaan nimellä aurora borealis, ja Lapin '
+            + 'talvimatkailu ajoittuu pitkälti pimeän vuodenajan ympärille juuri '
+            + 'revontulten vuoksi.',
+          lyhyt: 'Revontulet näkyvät useimmin juuri Lapin leveysasteilla napojen ympärillä.',
+          selite: 'Vihreät revontulet leimuavat Saana-tunturin yllä Käsivarren Lapissa.',
+          lahde: 'WikiLucas00, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Meri jossa on 50 000 saarta',
+          aika: 'nykyään',
+          tiedosto: 'Kaarnitta and Vepsä and Satava, Archipelago Sea, Naantali and Turku, Finland.jpg',
+          teksti: 'Saaristomeri Turun ja Ahvenanmaan välissä on joidenkin määritelmien mukaan '
+            + 'maailman saarirunsain saaristo: sillä on arviolta 50 000 saarta, joskin '
+            + 'suuri osa niistä on aivan pieniä ja tiiviisti toistensa lähellä. Suurimmat '
+            + 'saaret ovat asuttuja ja niille pääsee lautoilla ja silloilla, kun taas '
+            + 'ulompi saaristo koostuu enimmäkseen asumattomista luodoista ja karikoista. '
+            + 'Ahvenanmaa, alueen suurin saariryhmä, on Suomen itsehallinnollinen, '
+            + 'ruotsinkielinen maakunta. Saaristomeri on suosittu purjehdus- ja '
+            + 'veneilykohde kesäisin, ja sen rikas saaristolintukanta ja poikkeuksellinen '
+            + 'kasvillisuus tekevät siitä myös merkittävän luontokohteen.',
+          lyhyt: 'Saaristomerellä on arviolta 50 000 saarta, joista suurin osa on hyvin '
+            + 'pieniä.',
+          selite: 'Pieniä metsäisiä saaria Saaristomerellä Turun ja Naantalin edustalla.',
+          lahde: 'Grzegorz Jereczek, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Kaksi viikkoa jolloin tunturi syttyy tuleen',
+          aika: 'syyskuu',
+          tiedosto: 'Vatikuru nature trail in Pallas-Yllastunturi National Park, Muonio, Lapland, Finland, 2021 September.jpg',
+          teksti: 'Ruska on lyhyt, muutaman viikon mittainen ajanjakso syyskuun alussa, '
+            + 'jolloin Lapin tunturikoivikot ja -kanervikot värjäytyvät nopeasti '
+            + 'keltaisiksi, oransseiksi ja tulipunaisiksi ennen lehtien putoamista. Ilmiö '
+            + 'johtuu siitä, että öiset pakkaset pysäyttävät lehtivihreän tuotannon, '
+            + 'jolloin lehdissä koko kasvukauden piilleet keltaiset ja punaiset '
+            + 'väripigmentit pääsevät näkyviin. Tunturien paljailla laella väri leviää '
+            + 'poikkeuksellisen laajana ja yhtenäisenä, toisin kuin metsäisemmällä '
+            + 'Etelä-Suomella. Ruska houkuttelee syksyisin retkeilijöitä '
+            + 'Pallas-Yllästunturin ja Urho Kekkosen kansallispuistoihin, ja ajankohta '
+            + 'vaihtelee vuosittain sään mukaan.',
+          lyhyt: 'Ruska värjää Lapin tunturit keltaisiksi ja punaisiksi muutamaksi '
+            + 'syysviikoksi.',
+          selite: 'Ruskan värittämä polku Pallas-Yllästunturin kansallispuistossa syyskuussa.',
+          lahde: 'Ximonic (Simo Räsänen), Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi öiset pakkaset saavat tunturikoivut muuttumaan väriltään ruskan aikaan?',
+        vaihtoehdot: [
+          'Ne pysäyttävät lehtivihreän tuotannon',
+          'Ne jäädyttävät lehtien nesteen',
+          'Ne houkuttelevat hyönteisiä syömään lehtiä',
+          'Ne lisäävät auringonvaloa',
+        ],
+        oikea: 0,
+        fakta: 'Lehdissä piilleet keltaiset ja punaiset pigmentit ovat olleet siellä koko '
+          + 'kesän.',
+      },
+    },
+    {
+      id: 'tiede',
+      nimi: 'Tiede',
+      johdanto: 'Suomi on tehnyt suuria asioita tietotekniikassa ja terveystutkimuksessa: '
+        + 'käyttöjärjestelmä joka pyörittää suurinta osaa maailman palvelimista, '
+        + 'ensimmäinen matkapuhelinverkko ja sauna jota tutkitaan '
+        + 'sydänlääketieteessä.',
+      nostot: [
+        {
+          otsikko: 'Käyttöjärjestelmä joka syntyi opiskelijan huoneessa',
+          aika: '1991',
+          tiedosto: 'LinuxCon Europe Linus Torvalds 01.jpg',
+          teksti: 'Linus Torvalds oli Helsingin yliopiston tietojenkäsittelytieteen '
+            + 'opiskelija, kun hän julkaisi 17. syyskuuta 1991 postituslistalla '
+            + 'harrastusprojektinsa lähdekoodin ja kirjoitti vaatimattomasti, ettei se '
+            + 'tule olemaan mitään ammattimaista GNU:n kaltaista. Projekti sai nimen '
+            + 'Linux, ja siitä kasvoi ilmainen, avoimen lähdekoodin käyttöjärjestelmän '
+            + 'ydin, jota kuka tahansa sai muokata ja jakaa edelleen. Nykyään Linux-ydin '
+            + 'pyörittää suurinta osaa maailman verkkopalvelimista ja supertietokoneista, '
+            + 'ja se on myös miljardien Android-puhelinten sydämessä. Torvalds asuu '
+            + 'nykyään Yhdysvalloissa mutta on säilyttänyt Suomen kansalaisuutensa.',
+          lyhyt: 'Linus Torvalds julkaisi Linux-käyttöjärjestelmän ytimen opiskelijana '
+            + 'vuonna 1991.',
+          selite: 'Linus Torvalds (oikealla) haastattelussa LinuxCon-konferenssissa.',
+          lahde: 'Krd, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Puhelu joka aloitti matkapuhelinajan',
+          aika: '1991',
+          tiedosto: 'Harri-Holkeri-1981.jpg',
+          teksti: '1. heinäkuuta 1991 pääministeri Harri Holkeri soitti Tampereen '
+            + 'apulaispormestari Kaarina Suoniolle Nokian ja Siemensin rakentamalla, '
+            + 'Radiolinjan operoimalla verkolla — puhelua on vuosikymmenet pidetty '
+            + 'maailman ensimmäisenä GSM-puheluna. Vuonna 2021 entinen Nokia-insinööri '
+            + 'Pekka Lonka paljasti Helsingin Sanomille soittaneensa testipuhelun pari '
+            + 'tuntia aiemmin samana päivänä Saloon: Maailman ensimmäisen GSM-puhelun '
+            + 'soitin minä. GSM kehitettiin yhteiseurooppalaisena hankkeena, ja Suomi oli '
+            + 'sen ensimmäisten kaupallisten verkkojen joukossa. Siitä kasvoi maailman '
+            + 'käytetyin matkapuhelinteknologia, josta 3G, 4G ja 5G ovat myöhempiä '
+            + 'kehitysaskeleita.',
+          lyhyt: 'Pääministeri Harri Holkeri soitti perinteisesti maailman ensimmäiseksi '
+            + 'tiedetyn GSM-puhelun 1991.',
+          selite: 'Pääministeri Harri Holkeri muotokuvassa vuodelta 1981, vuosikymmen ennen '
+            + 'kuuluisaa GSM-puhelua.',
+          lahde: 'Kuvasiskot, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Lauteet joita lääketiede tutkii',
+          aika: 'nykyään',
+          tiedosto: 'Wood stove of smoke sauna of Kuusijärvi, Kuninkaanmäki, Vantaa, Finland, 2023 April.jpg',
+          teksti: 'Sauna on niin keskeinen osa suomalaista arkea, että sana on lainattu '
+            + 'sellaisenaan lähes kaikkiin maailman kieliin. Perinteinen savusauna '
+            + 'lämmitetään kiukaalla ilman hormia, jolloin savu täyttää tilan ennen '
+            + 'löylyjä ja seinät mustuvat noesta. Ilmiö kiinnostaa myös lääketiedettä: '
+            + 'pitkäaikaisilla, säännöllisillä saunojilla on tutkimuksissa havaittu '
+            + 'pienempi riski äkilliseen sydänperäiseen kuolemaan, ja riski pienenee sitä '
+            + 'enemmän, mitä useammin saunotaan. Näyttöä on myös verenpaineen laskusta ja '
+            + 'valtimoiden joustavuuden paranemisesta, ja neljä kertaa viikossa '
+            + 'saunovilla on havaittu harvinaisempia muistisairauksia kuin kerran '
+            + 'viikossa saunovilla.',
+          lyhyt: 'Säännöllinen saunominen on tutkimuksissa yhdistetty pienempään '
+            + 'sydänriskiin.',
+          selite: 'Savusaunan kiuas hehkuu Kuusijärvellä Vantaalla; savusauna lämmitetään '
+            + 'ilman hormia.',
+          lahde: 'Ximonic (Simo Räsänen), Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Puhelin jota myytiin 250 miljoonaa kappaletta',
+          aika: '2003',
+          tiedosto: 'Nokia 1100.JPG',
+          teksti: 'Nokia 1100 esiteltiin elokuussa 2003 halpana ja kestävänä peruspuhelimena, '
+            + 'jossa ei ollut kameraa eikä väriruutua — vain soitto, tekstiviestit ja '
+            + 'pölynkestävä kotelo kehitysmaiden vaativiin oloihin. Puhelimesta tuli '
+            + 'silti kaikkien aikojen myydyin matkapuhelinmalli: sitä on myyty yli 250 '
+            + 'miljoonaa kappaletta, mikä tekee siitä myös maailman myydyimmän '
+            + 'yksittäisen kulutuselektroniikkatuotteen ilmestymisaikanaan. Malli oli '
+            + 'viimeinen Nokian puhelin, jossa soi vain yksiäänisiä soittoääniä — '
+            + 'poikkeuksena ylellinen 8910i, joka jatkoi markkinoilla vuoteen 2007 asti. '
+            + 'Nokia lopetti 1100:n valmistuksen vuonna 2010.',
+          lyhyt: 'Nokia 1100 on kaikkien aikojen myydyin matkapuhelinmalli, yli 250 '
+            + 'miljoonaa kappaletta.',
+          selite: 'Nokia 1100, vuonna 2003 esitelty peruspuhelin, josta tuli kaikkien aikojen '
+            + 'myydyin puhelinmalli.',
+          lahde: 'Georgy90, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuka paljasti soittaneensa maailman ensimmäisen GSM-puhelun, ei Harri Holkeri?',
+        vaihtoehdot: [
+          'Pekka Lonka',
+          'Linus Torvalds',
+          'Kaarina Suonio',
+          'Jorma Ollila',
+        ],
+        oikea: 0,
+        fakta: 'Hän paljasti asian vasta vuonna 2021, kolmekymmentä vuotta puhelun '
+          + 'jälkeen.',
       },
     },
     {
@@ -15344,6 +15815,329 @@ export const MAA_KATEGORIAT = {
           + 'lainkaan — se vatkataan piimään ja päälle pannaan marjoja.',
       },
     },
+  {
+    id: 'historia',
+    nimi: 'Historia',
+    johdanto: 'Viron historia näkyy kivessä: keskiajan kauppiaiden killan talo '
+      + 'Tallinnassa, Pohjois-Euroopan vanhin raatihuone, akatemia jonka '
+      + 'kuningas perusti sotien keskellä, ja luostari jonka venäläisjoukot '
+      + 'polttivat.',
+    nostot: [
+      {
+        otsikko: 'Raatihuone, joka on Pohjois-Euroopan vanhin',
+        aika: '1404',
+        tiedosto: 'Tallinn Town Hall.jpg',
+        teksti: 'Tallinnan raatihuone sai nykyisen muotonsa vuosina 1401–1404, '
+          + 'mutta rakennuksesta on mainintoja jo 1300-luvulta. Se on '
+          + 'Pohjois-Euroopan ainoa säilynyt goottilaistyylinen raatihuone ja '
+          + 'seisoo yhä keskiajan Raatihuoneentorin laidalla. Torninhuippua '
+          + 'koristaa Vanha Toomas, vartijaa esittävä tuuliviiri, josta on '
+          + 'tullut koko kaupungin tunnus. Toisessa maailmansodassa pommitus '
+          + 'tuhosi tornin maaliskuussa 1944, ja se rakennettiin uudelleen '
+          + 'vasta 1952. Raatihuoneen kellarissa toimi keskiajalla '
+          + 'viinikellari, ja rakennus oli vuosisatoja kaupunginhallinnon '
+          + 'keskus.',
+        lyhyt: 'Tallinnan raatihuone valmistui 1404 ja on Pohjois-Euroopan ainoa säilynyt goottilainen raatihuone.',
+        selite: 'Tallinnan raatihuone valmistui nykyiseen muotoonsa 1404, ja '
+          + 'sen torninhuippua koristaa Vanha Toomas -tuuliviiri.',
+        lahde: 'Medvedev, Wikimedia Commons (CC BY-SA 3.0)',
+        wiki: 'Tallinnan raatihuone',
+      },
+      {
+        otsikko: 'Nuorten kauppiaiden oma killanhuone',
+        aika: '1400',
+        tiedosto: 'House of the Brotherhood of Blackheads in Tallinn3.JPG',
+        teksti: 'Mustpeade vennaskunta oli tallinnalaisten nuorten, '
+          + 'naimattomien kauppiaiden ja laivanpäälliköiden killaksi vuonna '
+          + '1400 perustettu yhdistys — vanhimmat maininnat ovat jo vuodelta '
+          + '1399. Suurkillan jäseneksi pääsivät vain naimisissa olevat '
+          + 'kauppiaat, joten nuoremmat perustivat omansa. Killan '
+          + 'suojeluspyhimys oli Pyhä Mauritius, jota kuvattiin '
+          + 'tummaihoisena sotilaana, ja hänen kasvonsa näkyvät yhä killan '
+          + 'vaakunassa. Rauhan aikana veljeskunta juhli ja teki kauppaa, '
+          + 'mutta tarpeen tullen sen jäsenet toimivat kaupungin '
+          + 'puolustajina ja harjoittelivat aseiden käyttöä muurien '
+          + 'suojaksi.',
+        lyhyt: 'Mustpeade vennaskunta oli Tallinnan nuorten naimattomien kauppiaiden killaksi perustettu 1400.',
+        selite: 'Mustpeade vennaskunnan talo Pikk-kadulla oli tallinnalaisten '
+          + 'nuorten, naimattomien kauppiaiden ja laivanpäälliköiden killan '
+          + 'kokoontumispaikka.',
+        lahde: 'Alma Pater, Wikimedia Commons (CC BY-SA 3.0)',
+        wiki: 'Mustapäiden talo (Tallinna)',
+      },
+      {
+        otsikko: 'Akatemia, jonka kuningas perusti sodan keskellä',
+        aika: '1632',
+        tiedosto: 'Tartu Ülikooli peahoone 2014-12.JPG',
+        teksti: 'Ruotsin kuningas Kustaa II Aadolf allekirjoitti Tarton '
+          + 'yliopiston perustamiskirjan kesäkuussa 1632, '
+          + 'kolmikymmenvuotisen sodan riehuessa. Ensimmäiset opiskelijat '
+          + 'kirjoitettiin sisään huhtikuussa, ja avajaisia vietettiin '
+          + 'lokakuussa neljän tiedekunnan voimin: filosofian, '
+          + 'oikeustieteen, teologian ja lääketieteen. Sota Venäjää vastaan '
+          + 'pakotti yliopiston siirtymään välillä Tallinnaan, ja toiminta '
+          + 'pysähtyi kokonaan vuosiksi. Nykyinen, pylväikköinen '
+          + 'päärakennus valmistui vasta 1809 arkkitehti Johann Wilhelm '
+          + 'Krausen piirustuksin, ja yliopisto on yhä Viron vanhin ja '
+          + 'arvostetuin.',
+        lyhyt: 'Tarton yliopisto on Viron vanhin, ja kuningas Kustaa II Aadolf perusti sen vuonna 1632.',
+        selite: 'Tarton yliopiston pylväikköinen päärakennus valmistui 1809 '
+          + 'arkkitehti Johann Wilhelm Krausen piirustuksin.',
+        lahde: 'Metsavend, Wikimedia Commons (CC BY-SA 4.0)',
+        wiki: 'Tarton yliopisto',
+      },
+      {
+        otsikko: 'Luostari, jonka Iivana Julma poltti',
+        aika: '1436–1577',
+        tiedosto: 'Tallinn Klosterruine Pirita 1.JPG',
+        teksti: 'Pirita luostari rakennettiin Tallinnan kauppiaiden rahoilla '
+          + '1400-luvun alussa, ja sen kirkko vihittiin käyttöön 1436. '
+          + 'Birgittalaisluostarissa asuivat sekä munkit että nunnat saman '
+          + 'katon alla, miesten ja naisten puolet erotettuina kahdella '
+          + 'pihalla — poikkeuksellinen järjestely keskiajan Euroopassa. '
+          + 'Luostarista tuli Liivinmaan suurin, kunnes Iivana Julman '
+          + 'joukot polttivat ja ryöstivät sen Liivinmaan sodassa vuonna '
+          + '1577. Kiviset holvikaaret ja päätykolmio ovat seisoneet '
+          + 'raunioina siitä lähtien, ja nykyään niiden keskellä '
+          + 'järjestetään kesäisin konsertteja ja luostaripäivän juhlia.',
+        lyhyt: 'Pirita luostari valmistui 1436 ja poltettiin Liivinmaan sodassa 1577; rauniot seisovat yhä.',
+        selite: 'Pirita luostarin kiviset holvikaaret ovat seisoneet '
+          + 'raunioina siitä lähtien, kun Iivana Julman joukot polttivat '
+          + 'luostarin 1577.',
+        lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        wiki: 'Piritan luostari',
+      },
+    ],
+    tehtava: {
+      kysymys: 'Kuka perusti Tarton yliopiston vuonna 1632?',
+      vaihtoehdot: [
+        'Iivana Julma',
+        'Kustaa II Aadolf',
+        'Pietari Suuri',
+        'Kuningatar Kristiina',
+      ],
+      oikea: 1,
+      fakta: 'Ruotsin kuningas Kustaa II Aadolf allekirjoitti perustamiskirjan '
+        + 'kolmikymmenvuotisen sodan keskellä, ja yliopisto on yhä Viron '
+        + 'vanhin.',
+    },
+  },
+  {
+    id: 'ruoka',
+    nimi: 'Ruoka',
+    johdanto: 'Virolainen ruokapöytä on tumma ja suolainen: hapan ruisleipä '
+      + 'joka on jokaisen aterian pohja, makea marsipaani jonka synnystä '
+      + 'kiistellään Lyypekin kanssa, kansalliskala pienessä leivässä ja '
+      + 'joulun verinen makkara.',
+    nostot: [
+      {
+        otsikko: 'Ruisleipä, joka ei koskaan lopu pöydästä',
+        aika: 'Joka ateria',
+        tiedosto: 'Kala&Leib täistera rukkileib.jpg',
+        teksti: 'Musta ruisleipä eli must leib kuuluu virolaisilla lähes '
+          + 'jokaiseen ateriaan, aamiaisesta illalliseen. Se leivotaan '
+          + 'täysjyvärukiista hapanjuurella, ja taikinan annetaan kohota '
+          + 'vuorokausia ennen paistamista — siksi leipä on tiivis, tumma ja '
+          + 'hieman hapan. Neuvostoaikana leipää ei saanut heittää pois, ja '
+          + 'monissa perheissä tapa on säilynyt: vanhasta leivästä '
+          + 'paistetaan korppuja tai tehdään kylmää leipäkeittoa '
+          + 'kermavaahdolla. Ravintoloissa leipää tarjoillaan nykyään myös '
+          + 'paistettuina tikkuina valkosipulin kanssa, oluen kylkiäisenä. '
+          + 'Yksi leipä painaa perinteisesti 800 tai 400 grammaa, ja paino '
+          + 'on painettu jo pakkaukseen.',
+        lyhyt: 'Must leib on täysjyvärukiista hapanjuurella leivottu tumma leipä lähes joka ateriaan.',
+        selite: 'Must leib on täysjyvärukiista hapanjuurella leivottu tumma, '
+          + 'tiivis ruisleipä, jota myydään muun muassa 800 ja 400 gramman '
+          + 'leipinä.',
+        lahde: 'Kala&Leib, Wikimedia Commons (CC BY-SA 4.0)',
+      },
+      {
+        otsikko: 'Makeisen syntytarina, josta kiistellään',
+        aika: '1422',
+        tiedosto: 'Tallinn 0356 (28323773509).jpg',
+        teksti: 'Legendan mukaan marsipaani keksittiin Tallinnan raatihuoneen '
+          + 'apteekissa vuonna 1422, kun apteekkarin oppipoika Mart jauhoi '
+          + 'mantelia ja sokeria sairaalle raatimiehelle lääkkeen sijaan — '
+          + 'tuloksena syntyi makeus, jota alettiin kutsua nimellä '
+          + 'maiasmokk, makea suu. Saksalainen Lyypekki väittää keksineensä '
+          + 'saman herkun, eikä kiistaa ole koskaan ratkaistu. Vuonna 1864 '
+          + 'Tallinnaan avattu kahvila Maiasmokk jatkaa perinnettä yhä '
+          + 'samassa talossa Pikk-kadulla, ja sen marsipaanihuoneessa on '
+          + 'esillä yli kaksisataa vuosikymmenten takaisilla muoteilla '
+          + 'tehtyä marsipaanihahmoa.',
+        lyhyt: 'Legenda sijoittaa marsipaanin synnyn Tallinnan raatihuoneen apteekkiin vuonna 1422.',
+        selite: 'Kahvila Maiasmokin marsipaanihuoneessa Tallinnassa on '
+          + 'esillä yli kaksisataa vuosikymmenten takaisilla muoteilla '
+          + 'tehtyä marsipaanihahmoa.',
+        lahde: 'János Korom Dr., Wikimedia Commons (CC BY-SA 2.0)',
+        wiki: 'Marsipaani',
+      },
+      {
+        otsikko: 'Kansalliskala, joka mahtuu leivän päälle',
+        aika: '2007',
+        tiedosto: 'Räim.JPG',
+        teksti: 'Räim eli itämeren silakka valittiin Viron kansalliskalaksi '
+          + 'vuonna 2007 kansanäänestyksellä, joka herätti keskustelua '
+          + 'jopa parlamentissa. Kyseessä on tavallista silakkaa pienempi '
+          + 'Itämeren alalaji, jota on syöty rannikolla vuosisatoja: '
+          + 'suolattuna, savustettuna, marinoituna ja etenkin kiluna eli '
+          + 'mausteliemessä säilöttynä pikkukalana. Kiluvõileib eli '
+          + 'kilulla ja munalla katettu ruisleipäviipale on yksi maan '
+          + 'tunnetuimmista väliaterioista, ja sitä myydään kojuilta '
+          + 'toreilla ympäri vuoden. Räimeä juhlitaan omalla päivällään, '
+          + 'jolloin rannikkokaupungeissa järjestetään markkinoita ja '
+          + 'kalastuskilpailuja.',
+        lyhyt: 'Räim eli itämeren silakka valittiin Viron kansalliskalaksi kansanäänestyksellä 2007.',
+        selite: 'Räim eli Itämeren alalajin silakka on Viron '
+          + 'kansanäänestyksellä 2007 valittu kansalliskala.',
+        lahde: 'Olev Mihkelmaa, Wikimedia Commons (CC BY-SA 3.0)',
+        wiki: 'Silakka',
+      },
+      {
+        otsikko: 'Joulun tumma makkara',
+        aika: 'Jouluaattona',
+        tiedosto: 'Verivorstid.jpg',
+        teksti: 'Verivorst on jouluaaton pääruoka, jota ilman harva '
+          + 'virolaisperhe kuvittelee joulua. Makkara tehdään sianverestä, '
+          + 'ohrasuurimoista, läskistä ja mausteista, täytetään suoleen ja '
+          + 'keitetään ennen paistamista rapeaksi. Perinne juontaa juurensa '
+          + 'aikaan, jolloin jokainen maatila teurasti oman joulusikansa '
+          + 'marras-joulukuussa, ja veri, rasva ja sisäelimet piti käyttää '
+          + 'saman viikon aikana — mikään ei mennyt hukkaan. Pöydässä '
+          + 'verivorstin kylkeen kuuluvat hapankaali, paistetut perunat ja '
+          + 'lusikallinen puolukkahilloa lautasen reunalla. Monet perheet '
+          + 'tekevät makkaransa yhä itse suvun reseptillä, sukupolvesta '
+          + 'toiseen.',
+        lyhyt: 'Verivorst on virolaisen jouluaaton pääruoka: sianverestä ja ohrasuurimoista tehty makkara.',
+        selite: 'Verivorst on sianverestä, ohrasuurimoista, läskistä ja '
+          + 'mausteista tehty makkara, joka on virolaisen jouluaaton '
+          + 'pääruoka.',
+        lahde: 'Pikk de Päkk, Wikimedia Commons (CC BY-SA 3.0)',
+      },
+    ],
+    tehtava: {
+      kysymys: 'Missä marsipaani legendan mukaan keksittiin?',
+      vaihtoehdot: [
+        'Lyypekin kirkossa',
+        'Tallinnan raatihuoneen apteekissa',
+        'Tarton yliopistossa',
+        'Pirita luostarissa',
+      ],
+      oikea: 1,
+      fakta: 'Legenda kertoo apteekin oppipojasta Martista, joka jauhoi '
+        + 'mantelia ja sokeria — Lyypekki väittää kuitenkin keksineensä '
+        + 'saman herkun.',
+    },
+  },
+  {
+    id: 'kulttuuri',
+    nimi: 'Kulttuuri',
+    johdanto: 'Virolainen kulttuuri elää yhteislaulussa ja käsityössä: '
+      + 'laulujuhlat jotka alkoivat 1869, kirjava rahvaspuku joka kertoo '
+      + 'pitäjän, kanteleen sukulaissoitin ja kansalliseepos jonka sankari '
+      + 'on jättiläinen.',
+    nostot: [
+      {
+        otsikko: 'Kuoro, joka lauloi maan vapaaksi',
+        aika: '1869',
+        tiedosto: 'Tallinna laululava 1928.jpg',
+        teksti: 'Ensimmäiset yleiset laulujuhlat pidettiin Tartossa '
+          + 'kesäkuussa 1869 kustantaja Johann Voldemar Jannsenin '
+          + 'aloitteesta, ja lavalla lauloi lähes 900 miestä. Juhla oli '
+          + 'osa kansallista heräämistä Venäjän vallan alla, ja siitä tuli '
+          + 'nopeasti koko kansan yhteinen tapahtuma: vuodesta 1896 juhlat '
+          + 'on pidetty Tallinnassa joka viides vuosi. Neuvostoaikana '
+          + 'laulujuhlat muuttuivat hiljaiseksi vastarinnaksi, ja '
+          + '1988–1991 kymmenettuhannet lauloivat yhdessä kiellettyjä '
+          + 'isänmaallisia lauluja niin sanotussa laulavassa '
+          + 'vallankumouksessa, joka johti lopulta itsenäisyyteen. Unesco '
+          + 'lisäsi juhlat ihmiskunnan aineettoman kulttuuriperinnön '
+          + 'luetteloon.',
+        lyhyt: 'Viron laulujuhlia on pidetty vuodesta 1869, ja ne siirtyivät Tallinnaan vuonna 1896.',
+        selite: 'Tallinnan laululava vuonna 1928, jolloin laulujuhlia oli '
+          + 'jo pidetty kolme vuosikymmentä ensimmäisestä juhlasta '
+          + 'Tartossa 1869.',
+        lahde: 'Tuntematon valokuvaaja, Wikimedia Commons (public domain)',
+        wiki: 'Tallinnan laulujuhlat',
+      },
+      {
+        otsikko: 'Puku, josta näkee kotipitäjän',
+        aika: '1800-luku',
+        tiedosto: 'Eesti rahvarõivad-EE 1.jpg',
+        teksti: 'Virolaisessa kansanpuvussa jokainen pitäjä erottuu omalla '
+          + 'raidoituksellaan, väriyhdistelmällään ja koruillaan — '
+          + 'tunteva silmä näkee heti kuvasta, oliko kantaja kotoisin '
+          + 'Setumaalta, Muhusta vai Pärnun seudulta. Puvut ommeltiin '
+          + 'käsin kotikutoisesta villakankaasta, ja niiden yksityiskohdat '
+          + 'periytyivät äidiltä tyttärelle sukupolvien ajan. Kihnun '
+          + 'saarella perinne on yhä elossa arjessa, ei vain juhlissa: '
+          + 'naiset kutovat itse raidalliset hameensa ja neulovat '
+          + 'värikkäät lapasensa samoilla kuvioilla kuin esiäitinsä. '
+          + 'Unesco liitti Kihnun kulttuuriperinteen ihmiskunnan '
+          + 'aineettoman kulttuuriperinnön listalle vuonna 2003.',
+        lyhyt: 'Jokaisella pitäjällä on oma kansanpukunsa, ja Kihnussa pukua käytetään yhä arjessa.',
+        selite: 'Neljä Viron pitäjien kansanpukua kuvitettuna: kunkin '
+          + 'raidoitus ja korut kertovat kantajan kotiseudun.',
+        lahde: 'Tuntematon kuvittaja, Wikimedia Commons (public domain)',
+      },
+      {
+        otsikko: 'Soitin, joka soi tuhat vuotta',
+        aika: 'Yli 1000 vuotta',
+        tiedosto: 'Kromaatiline klaverivabriku kannel.jpg',
+        teksti: 'Kannel on virolainen kielisoitin, jonka sukulaisia ovat '
+          + 'suomalainen kantele ja latvialainen kokle — kaikki kuuluvat '
+          + 'itämerensuomalais-balttilaiseen sitrasoitinten perheeseen, '
+          + 'jonka juuret ulottuvat ainakin 1200-luvulle. Kansanrunouden '
+          + 'kerääjä Jakob Hurt nimesi kokoamansa laajan '
+          + 'kansanlaulujulkaisunsa Vana Kannel eli Vanha kannel vuosina '
+          + '1875–1876, ja nimi kuvasti soittimen asemaa kansallisena '
+          + 'tunnuksena. 1900-luvun alussa soitin oli lähes unohtua, mutta '
+          + 'neuvostoaikana kehitettiin suurempi, kromaattinen kannel, '
+          + 'jolla voi soittaa kaikki sävellajit. Perinteinen pienempi '
+          + 'kannel on sittemmin palannut suosioon, ja sitä opetetaan taas '
+          + 'musiikkikouluissa.',
+        lyhyt: 'Kannel on virolainen sitrasoitin, jonka juuret ulottuvat ainakin 1200-luvulle.',
+        selite: 'Kromaattinen kannel on 1900-luvulla kehitetty suurempi '
+          + 'versio perinteisestä virolaisesta sitrasoittimesta.',
+        lahde: 'Adeliine, Wikimedia Commons (CC BY-SA 3.0)',
+        wiki: 'Kannel',
+      },
+      {
+        otsikko: 'Eepos, jonka sankari on jättiläinen',
+        aika: '1857–1861',
+        tiedosto: 'Aleksander Mülber - Kalevipoeg (1915).jpg',
+        teksti: 'Kalevipoeg on Viron kansalliseepos, jonka lääkäri ja '
+          + 'kansanrunouden kerääjä Friedrich Reinhold Kreutzwald kokosi '
+          + 'kansantarinoista ja julkaisi jaksoina vuosina 1857–1861. Yli '
+          + '19 000 säkeen mittainen runoelma kertoo jättiläiskuningas '
+          + 'Kalevipojasta, joka kyntää, taistelee ja lopulta joutuu '
+          + 'manalan portille kätensä juuttuessa kiveen. Teos syntyi '
+          + 'samaan aikaan kuin Suomen Kalevala ja samasta kansallisen '
+          + 'heräämisen hengestä, ja siitä tuli nopeasti koko kansan '
+          + 'yhteinen tarina koulukirjoista taidemaalauksiin. Kalevipojan '
+          + 'hahmo elää yhä: hänen nimeään kantavat niin jäätä murtava '
+          + 'jäänmurtaja kuin lukuisat patsaat ja kadunnimet ympäri '
+          + 'Viroa.',
+        lyhyt: 'Kalevipoeg on Kreutzwaldin kansantarinoista kokoama Viron kansalliseepos vuosilta 1857–1861.',
+        selite: 'Aleksander Mülberin vuonna 1915 maalaama kohtaus kuvaa '
+          + 'Kalevipoeg-eepoksen jättiläissankaria taistelussa.',
+        lahde: 'Aleksander Mülber, Wikimedia Commons (public domain)',
+        wiki: 'Kalevipoeg',
+      },
+    ],
+    tehtava: {
+      kysymys: 'Missä ensimmäiset yleiset laulujuhlat pidettiin vuonna 1869?',
+      vaihtoehdot: [
+        'Tallinnassa',
+        'Tartossa',
+        'Pärnussa',
+        'Narvassa',
+      ],
+      oikea: 1,
+      fakta: 'Laulujuhlat siirtyivät Tallinnaan vasta vuodesta 1896 alkaen, '
+        + 'ja niitä on sen jälkeen pidetty siellä joka viides vuosi.',
+    },
+  },
     {
       id: 'menovinkit',
       nimi: 'Menovinkit',
@@ -15620,6 +16414,211 @@ export const MAA_KATEGORIAT = {
       },
     },
     {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Riian historia on kerroksellista: piispa perusti kaupungin '
+        + 'ristiretken varjolla, kauppiaat rakensivat komeat talonsa ja '
+        + 'vapaustaistelijoita muistetaan patsaalla, joka on selvinnyt '
+        + 'miehityksistä.',
+      nostot: [
+        {
+          otsikko: 'Piispa perusti kaupungin joen suulle',
+          aika: '1201',
+          tiedosto: 'Rīgas Doms (74).JPG',
+          teksti: 'Saksalainen piispa Albert von Buxhoeveden perusti Riian '
+            + 'vuonna 1201 Väinäjoen suulle osana ristiretkeä, jolla alueen '
+            + 'balttilaiset ja liiviläiset heimot käännytettiin '
+            + 'kristinuskoon. Albert perusti myös Miekkaveljien ritarikunnan '
+            + 'suojelemaan uutta valtaansa. Kymmenen vuotta kaupungin '
+            + 'perustamisen jälkeen, vuonna 1211, alettiin rakentaa Riian '
+            + 'tuomiokirkkoa piispan vallan symboliksi, ja siitä kasvoi '
+            + 'Baltian suurin keskiaikainen kirkkorakennus. Kirkkoa on '
+            + 'laajennettu vuosisatojen kuluessa, joten sen sisätiloissa '
+            + 'näkyy sekä varhaista goottia että myöhempiä tyylikausia.',
+          lyhyt: 'Piispa Albert von Buxhoeveden perusti Riian vuonna 1201 ristiretken yhteydessä.',
+          selite: 'Riian tuomiokirkon sisätila. Rakentaminen aloitettiin '
+            + 'vuonna 1211, kymmenen vuotta kaupungin perustamisen jälkeen.',
+          lahde: 'Īriss Sviklis, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Riian tuomiokirkko',
+        },
+        {
+          otsikko: 'Talo joka räjäytettiin ja rakennettiin uudelleen',
+          aika: '1334',
+          tiedosto: 'House of the Blackheads (23335064149).jpg',
+          teksti: 'Mustapäiden talo rakennettiin vuonna 1334 Riian kauppiaiden '
+            + 'kokous- ja juhlapaikaksi, ja 1400-luvulta lähtien siellä '
+            + 'kokoontui mustapäiksi kutsuttu naimattomien ulkomaisten '
+            + 'kauppiaiden veljeskunta. Vuosisatojen aikana julkisivuun '
+            + 'lisättiin koristeellisia renessanssiyksityiskohtia, ja talosta '
+            + 'tuli yksi Riian komeimmista rakennuksista. Kesäkuussa 1941 '
+            + 'sotatoimet vaurioittivat taloa pahoin, ja vuonna 1948 '
+            + 'neuvostoviranomaiset räjäyttivät rauniot kokonaan — '
+            + 'menneisyyttä ei haluttu muistaa. Itsenäistymisen jälkeen talo '
+            + 'rakennettiin vanhojen piirustusten pohjalta uudelleen, ja se '
+            + 'vihittiin käyttöön vuonna 1999, kaupungin 800-vuotisjuhliin.',
+          lyhyt: 'Mustapäiden talo rakennettiin 1334, tuhottiin 1948 ja avattiin uudelleen 1999.',
+          selite: 'Mustapäiden talo Riian Ratuskintorilla. Alkuperäinen '
+            + 'rakennus tuhoutui, ja nykyinen on 1990-luvun jälleenrakennus.',
+          lahde: 'Jorge Láscar, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Mustapäiden talo (Riika)',
+        },
+        {
+          otsikko: 'Kolme taloa, kolme eri vuosisataa',
+          aika: '1490',
+          tiedosto: 'Riga - The three brothers - trīs brāļi - panoramio.jpg',
+          teksti: 'Mazā Pils -kadulla seisoo kolmen talon rivi, jota kutsutaan '
+            + 'kolmeksi veljeksi. Vanhin, numero 17, rakennettiin noin vuonna '
+            + '1490 kauppa- ja työtilaksi, ja sen porrasmaisessa päädyssä '
+            + 'näkyy myöhäisgotiikkaa. Keskimmäinen talo sai nykyisen '
+            + 'ulkoasunsa vuonna 1646, ja kapea, nuorin talo valmistui vasta '
+            + '1600-luvun lopulla — niin rivissä seisoo kolme eri '
+            + 'vuosisataa vierekkäin. Hansaliiton aikaan Riiassa maksettiin '
+            + 'veroa kadunpuoleisen julkisivun leveyden mukaan, minkä vuoksi '
+            + 'kauppiastalot rakennettiin kapeiksi ja syviksi. Nykyään '
+            + 'taloissa toimii Latvian arkkitehtuurimuseo.',
+          lyhyt: 'Kolme veljeä ovat Riian vanhimmat asuinrakennukset, peräisin 1400–1600-luvuilta.',
+          selite: 'Kolme veljeä Mazā Pils -kadulla. Talot edustavat kolmea '
+            + 'eri vuosisataa ja rakennustyyliä vierekkäin.',
+          lahde: 'giggel, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          otsikko: 'Nainen joka nostaa kolme tähteä',
+          aika: '1935',
+          tiedosto: 'Freedom Monument Latvia 04.jpg',
+          teksti: 'Riian vapaudenpatsas paljastettiin vuonna 1935 muistoksi '
+            + 'vuosien 1918–1920 itsenäisyyssodassa kaatuneille, ja se '
+            + 'rahoitettiin kokonaan kansalaisten lahjoituksilla. Patsaan '
+            + 'huipulla seisova naishahmo, jota kutsutaan lempinimellä '
+            + 'Milda, kohottaa käsissään kolme kultaista tähteä — ne '
+            + 'kuvaavat Latvian kolmea historiallista aluetta, Kuurinmaata, '
+            + 'Liivinmaata ja Latgalea. Neuvostomiehityksen aikana patsasta '
+            + 'ei purettu, mutta sen juurelle kukkien vieminen oli '
+            + 'vaarallista ja saattoi johtaa kuulusteluihin. Jalustan '
+            + 'reliefeissä on kolmetoista hahmoa, jotka kuvaavat työtä, '
+            + 'perhettä ja vapaustaistelua.',
+          lyhyt: 'Vapaudenpatsas paljastettiin 1935 muistoksi itsenäisyyssodan 1918–1920 kaatuneille.',
+          selite: 'Patsaan huipulla seisova Milda kohottaa kolme tähteä, '
+            + 'jotka kuvaavat Latvian kolmea historiallista aluetta.',
+          lahde: 'Scotch Mist, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi Mustapäiden talo jouduttiin rakentamaan lähes kokonaan uudelleen?',
+        vaihtoehdot: [
+          'Tulipalo tuhosi sen 1800-luvulla',
+          'Se tuhottiin sodassa ja neuvostoviranomaiset räjäyttivät rauniot',
+          'Se purettiin tieltä pois 1970-luvulla',
+          'Maanjäristys kaatoi sen',
+        ],
+        oikea: 1,
+        fakta: 'Talo vaurioitui pahoin 1941, ja 1948 neuvostoviranomaiset räjäyttivät '
+          + 'rauniot kokonaan; nykyinen rakennus on 1990-luvun jälleenrakennus.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Latvian ruokapöydässä on omat sääntönsä: musta yrttijuoma joka '
+        + 'kerran paransi keisarinnan, porkkanapiirakka jonka ulkonäöstä '
+        + 'kiistellään, ja herneet jotka pitää syödä joulun ja uuden vuoden '
+        + 'aikaan.',
+      nostot: [
+        {
+          otsikko: 'Musta juoma joka pelasti keisarinnan',
+          aika: '1752',
+          tiedosto: 'Rīgas Melnais balzams (Upeņu, klasiskais un Element).jpg',
+          teksti: 'Riianmustabalsami on tumma yrttilikööri, jonka resepti '
+            + 'syntyi vuonna 1752, kun apteekkari Abraham Kunze sekoitti '
+            + 'kaupungissaan parikymmentä yrttiä, juurta ja maustetta '
+            + 'korkeaprosenttiseen alkoholiin. Juomaa myytiin aluksi '
+            + 'lääkkeenä vatsavaivoihin, ja tunnetun tarinan mukaan se '
+            + 'paransi Venäjän keisarinna Katariina Suuren, kun tämä '
+            + 'sairastui vieraillessaan Riiassa. Balsami pullotetaan yhä '
+            + 'perinteisesti tummaan, kivimäiseen pulloon, ja sen tarkan '
+            + 'reseptin tuntee vain harva mestari ja hänen oppilaansa. '
+            + 'Nykyään sitä juodaan usein kahvin tai mustikkamehun kanssa, '
+            + 'ja sitä viedään yli kolmeenkymmeneen maahan.',
+          lyhyt: 'Riianmustabalsamin resepti syntyi 1752, ja legenda kertoo sen parantaneen keisarinnan.',
+          selite: 'Riianmustabalsamia pulloissa. Resepti syntyi vuonna 1752, '
+            + 'ja juoma tunnetaan yhä Latvian kansallisjuomana.',
+          lahde: 'Turaids, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Piirakka jota kutsuttiin maailman rumimmaksi',
+          aika: '1600-luku',
+          tiedosto: 'Sklandrausis pannil (15579200761).jpg',
+          teksti: 'Sklandrausis on liiviläisperäinen piirakka Kuurinmaalta: '
+            + 'ohut ruistaikinapohja taivutetaan matalaksi vuoaksi, '
+            + 'täytetään ohuella perunasoseella ja päälle levitetään paksu '
+            + 'kerros makeaa, kanelilla maustettua porkkanasosetta. Piirakka '
+            + 'syntyi 1600–1700-luvuilla, ja sitä ovat perinteisesti '
+            + 'leiponeet suitit, pieni katolinen kansanryhmä muutoin '
+            + 'luterilaisessa Kuurinmaassa. Euroopan unioni myönsi '
+            + 'sklandrausiselle aidon perinteisen tuotteen suojan vuonna '
+            + '2013. Erikoisen ulkonäkönsä vuoksi piirakka on saanut myös '
+            + 'huonoa mainetta: vuonna 2023 se listattiin yhdeksi maailman '
+            + 'huonoiten arvostelluista ruoista, vaikka suitit itse ovat '
+            + 'siitä edelleen ylpeitä.',
+          lyhyt: 'Sklandrausis on kuurinmaalainen porkkanapiirakka, joka sai EU-suojan 2013.',
+          selite: 'Tuoreita sklandrausis-piirakoita pellillä. Ruistaikinapohja '
+            + 'täytetään peruna- ja porkkanasoseella.',
+          lahde: 'Aivar Ruukel, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Herneet jotka pitää maistaa joulun aikaan',
+          aika: 'Joulu',
+          tiedosto: 'Grey peas at restaurant Milda in Riga.jpg',
+          teksti: 'Harmaat herneet silavan kanssa kuuluvat Latvian '
+            + 'jouluaterialle lähes pakollisena: kuivatut, isot ja '
+            + 'harmaansävyiset herneet liotetaan ja keitetään, minkä '
+            + 'jälkeen ne sekoitetaan paistettuun silavaan ja sipuliin. '
+            + 'Perinteen mukaan jokaisen pöydässä istuvan tulee maistaa '
+            + 'edes kourallinen, sillä pyöreiden herneiden uskotaan vievän '
+            + 'mukanaan tulevan vuoden kyyneleet. Ruoalla on pitkä historia: '
+            + 'herneet, ohra ja pavut olivat maaseudun perusruokaa satoja '
+            + 'vuosia ennen kuin peruna yleistyi 1800-luvulla. Nykyään '
+            + 'harmaita herneitä tarjoillaan myös ravintoloissa '
+            + 'hienostuneempina versioina, pekonin ja retiisin kanssa.',
+          lyhyt: 'Harmaat herneet silavan kanssa on Latvian perinteinen jouluajan ruoka.',
+          selite: 'Harmaita herneitä pekonin ja retiisin kanssa tarjoiltuna. '
+            + 'Ruoka on osa Latvian jouluperinnettä.',
+          lahde: 'JIP, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Juusto joka muistuttaa aurinkoa',
+          aika: 'Juhannus',
+          tiedosto: 'Mājās siets Jāņu siers.jpg',
+          teksti: 'Jāņu siers on hapanmaitojuusto, jota Latviassa valmistetaan '
+            + 'juhannukseksi eli Jāņi-juhlaksi. Se tehdään kuumentamalla '
+            + 'piimää tai rahkaa yhdessä voin, kananmunien ja kuminan '
+            + 'kanssa, kunnes seos hyytyy kiinteäksi, pyöreäksi kakuksi. '
+            + 'Pyöreä muoto ja keltainen sävy vertautuvat aurinkoon, jota '
+            + 'juhannuksena juhlitaan päivän valoisimpana aikana. '
+            + 'Perinnettä on vaalittu jo yli tuhat vuotta, ja vuonna 2015 '
+            + 'Jāņu siers sai Euroopan unionin aidon perinteisen tuotteen '
+            + 'suojan. Juustoa tarjotaan juhannusyönä oluen kanssa, ja '
+            + 'monet perheet valmistavat sen yhä itse kotikeittiössä '
+            + 'isoäidin ohjeella.',
+          lyhyt: 'Jāņu siers on juhannukseksi valmistettava kuminajuusto, jolla on EU-suoja.',
+          selite: 'Kotitekoinen Jāņu siers -juusto. Sen pyöreä muoto '
+            + 'vertautuu juhannuksen aurinkoon.',
+          lahde: 'Turaids, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minkä vuoksi Latviassa uskotaan, että joulun harmaita herneitä pitää syödä edes kourallinen?',
+        vaihtoehdot: [
+          'Ne tuovat rahaa tulevaan vuoteen',
+          'Pyöreiden herneiden uskotaan vievän mukanaan tulevan vuoden kyyneleet',
+          'Ne suojaavat kylmältä talvelta',
+          'Ne takaavat hyvän sadon',
+        ],
+        oikea: 1,
+        fakta: 'Latvialaisen perinteen mukaan pyöreät herneet vievät mukanaan tulevan '
+          + 'vuoden kyyneleet, joten niitä pitää maistaa edes hiukan.',
+      },
+    },
+    {
       id: 'menovinkit',
       nimi: 'Menovinkit',
       johdanto: 'Latvia on pannut verkkoon yllättävän paljon: kaksi miljoonaa '
@@ -15891,6 +16890,214 @@ export const MAA_KATEGORIAT = {
         ],
         oikea: 1,
         fakta: 'Joka kerta ristit tuotiin takaisin öisin.',
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Liettuan historia kertoo vallasta ja sitkeydestä: valtakunta joka '
+        + 'ulottui mereltä toiselle, kaupunki jonka rautasusi ennusti unessa, '
+        + 'paperi joka julisti itsenäisyyden, ja ketju käsiä joka ulottui yli '
+        + 'kolmen maan rajan.',
+      nostot: [
+        {
+          otsikko: 'Valtakunta ulottui mereltä merelle',
+          aika: '1430',
+          tiedosto: 'Map of the Grand Duchy of Lithuania (pink) and the Crown of the Kingdom of Poland (red) and its neighborhood in 1386 – 1434 (English version).png',
+          teksti: 'Liettuan suuriruhtinaskunta oli 1400-luvun alussa Euroopan '
+            + 'suurin valtio. Suuriruhtinas Vytautas Suuri hallitsi aluetta, '
+            + 'joka ulottui Itämereltä lähelle Mustaamerta ja kattoi nykyisen '
+            + 'Valko-Venäjän, suuren osan Ukrainaa sekä palasia Puolaa, Latviaa '
+            + 'ja Venäjää. Vuonna 1386 suuriruhtinas Jogaila meni naimisiin '
+            + 'Puolan kuningattaren kanssa ja otti kasteen, ja maat liittyivät '
+            + 'henkilöunioniin, joka näkyy tässä kartassa vierekkäisinä '
+            + 'valtakuntina. Liettuasta tuli näin viimeinen pakanallinen '
+            + 'valtio, joka kääntyi kristinuskoon Euroopassa.',
+          lyhyt: 'Liettuan suuriruhtinaskunta oli 1400-luvun alussa Euroopan pinta-alaltaan suurin valtio.',
+          selite: 'Liettuan suuriruhtinaskunta ulottui 1400-luvun alussa '
+            + 'Itämereltä lähelle Mustaamerta ja oli aikansa laajin '
+            + 'eurooppalainen valtio.',
+          lahde: 'Poznaniak ja Spiridon Ion Cepleanu, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Liettuan suuriruhtinaskunta',
+        },
+        {
+          otsikko: 'Rautasusi näytti unessa kaupungin paikan',
+          aika: '1323',
+          tiedosto: 'Gediminas statue at the cathedral square.jpg',
+          teksti: 'Tarinan mukaan suuriruhtinas Gediminas nukahti '
+            + 'metsästysretken jälkeen Vilnian ja Neriksen jokien '
+            + 'yhtymäkohdassa ja näki unta rautaisesta sudesta, joka ulvoi '
+            + 'kukkulalla sadan suden äänellä. Ylipappi Lizdeika tulkitsi '
+            + 'unen: kukkulalle nousisi pääkaupunki, jonka maine kaikuisi '
+            + 'yhtä kauas kuin suden ulvonta. Gediminas perusti kaupungin '
+            + 'paikalle perinteisesti vuonna 1323 ja kutsui sinne kauppiaita '
+            + 'ja käsityöläisiä ympäri Eurooppaa. Tuomiokirkkoaukiolla seisova '
+            + 'patsas muistuttaa perustajasta, ja rautasudesta on tullut yksi '
+            + 'Liettuan tunnetuimmista tunnuksista.',
+          lyhyt: 'Gediminas näki unessa rautaisen suden ja perusti perinteen mukaan Vilnan vuonna 1323.',
+          selite: 'Tuomiokirkkoaukion patsas muistuttaa suuriruhtinas '
+            + 'Gediminaksesta, joka perinteen mukaan perusti Vilnan unessa '
+            + 'nähdyn rautasuden ohjaamana.',
+          lahde: 'Ypsilon from Finland, Wikimedia Commons (CC0)',
+          wiki: 'Gediminas',
+        },
+        {
+          otsikko: 'Kaksikymmentä nimeä vapautti maan',
+          aika: '1918',
+          tiedosto: 'Vilnius, Signatarų namai.jpg',
+          teksti: 'Ensimmäisen maailmansodan lopulla, Venäjän ja Saksan '
+            + 'miehitysten välissä, Liettuan neuvosto kokoontui Vilnan '
+            + 'Pilies-kadun talossa ja allekirjoitti 16. helmikuuta 1918 '
+            + 'itsenäisyysjulistuksen. Sen allekirjoitti kaksikymmentä '
+            + 'jäsentä, puheenjohtajanaan lääkäri Jonas Basanavičius, ja se '
+            + 'julisti demokraattisen Liettuan valtion, jonka pääkaupunki '
+            + 'olisi Vilna. Talo tunnetaan nykyään Signatarų-talona. '
+            + 'Alkuperäinen asiakirja katosi Kaunasista neuvostomiehityksen '
+            + 'alla 1940 ja löytyi vasta 2017 Saksan ulkoministeriön '
+            + 'arkistosta Berliinistä.',
+          lyhyt: 'Liettuan itsenäisyysjulistus allekirjoitettiin Vilnassa 16. helmikuuta 1918.',
+          selite: 'Vilnan Pilies-kadun talossa allekirjoitettiin 16. '
+            + 'helmikuuta 1918 Liettuan itsenäisyysjulistus, ja talo tunnetaan '
+            + 'nykyään Signatarų-talona.',
+          lahde: 'Terminator216, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Liettuan itsenäisyysjulistus',
+        },
+        {
+          otsikko: 'Kaksi miljoonaa kättä yli kolmen maan',
+          aika: '1989',
+          tiedosto: 'A segment of the Baltic Way at the Green Bridge in Vilnius.jpg',
+          teksti: 'Elokuun 23. päivänä 1989 noin kaksi miljoonaa ihmistä '
+            + 'tarttui toisiaan käsistä ja muodosti yhtenäisen ketjun '
+            + 'Tallinnasta Riian kautta Vilnaan — matkaa kertyi yli '
+            + 'kuusisataa kilometriä. Baltian ketju järjestettiin '
+            + 'täsmälleen viisikymmentä vuotta sen jälkeen, kun '
+            + 'Neuvostoliitto ja natsi-Saksa olivat salaisessa sopimuksessa '
+            + 'jakaneet Baltian maat keskenään. Rauhanomainen mielenilmaus '
+            + 'vaati Viron, Latvian ja Liettuan miehitysten päättämistä, ja '
+            + 'tapahtuma näkyi television välityksellä kaikkialla '
+            + 'maailmassa. Kaksi vuotta myöhemmin kaikki kolme maata olivat '
+            + 'jälleen itsenäisiä.',
+          lyhyt: 'Baltian ketju yhdisti kaksi miljoonaa ihmistä yli 600 kilometrin matkalla vuonna 1989.',
+          selite: 'Elokuussa 1989 kaksi miljoonaa ihmistä muodosti käsi '
+            + 'kädessä ketjun Tallinnasta Vilnaan vaatien Baltian maiden '
+            + 'itsenäisyyttä.',
+          lahde: 'Jonas Kernagis, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Baltian ketju',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä suuriruhtinas Gediminas näki tarinan mukaan unessaan?',
+        vaihtoehdot: [
+          'Rautaisen suden',
+          'Kultaisen kotkan',
+          'Valkoisen hirven',
+          'Mustan käärmeen',
+        ],
+        oikea: 0,
+        fakta: 'Ylipappi Lizdeika tulkitsi unen tarkoittavan kaupunkia, jonka '
+          + 'maine kaikuisi kauas.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Liettuan ruoka kertoo niukkuudesta ja juhlasta: peruna joka '
+        + 'muutti nimensä ilmalaivan mukaan, keitto joka väriytyy pinkiksi, '
+        + 'leipä jota ei koskaan heitetä pois, ja makkara joka kypsyy '
+        + 'kuukausia savussa.',
+      nostot: [
+        {
+          otsikko: 'Peruna sai nimen ilmalaivasta',
+          aika: '1920-luku',
+          tiedosto: 'Cepelinai 1, Vilnius, Lithuania - Diliff.jpg',
+          teksti: 'Cepelinai on Liettuan tunnetuin ruokalaji: raastetusta ja '
+            + 'keitetystä perunataikinasta muotoillut, jauhelihalla, '
+            + 'raejuustolla tai sienillä täytetyt pallot, joita tarjoillaan '
+            + 'silava- tai smetanakastikkeen kanssa. Ruokalaji tunnettiin jo '
+            + '1800-luvulla nimellä didžkukuliai, mutta nykyinen nimi ja '
+            + 'soikea muoto vakiintuivat 1920- ja 1930-luvuilla, kun kreivi '
+            + 'Ferdinand von Zeppelinin ilmalaivat olivat lehtiotsikoissa ja '
+            + 'pallojen muoto muistutti niitä. Samalla cepelinaista tuli '
+            + 'tuoreen itsenäisen Liettuan uudistetun maatalouden symboli.',
+          lyhyt: 'Cepelinai on peruna-taikinasta tehty täytetty pallo, joka on nimetty ilmalaivojen mukaan.',
+          selite: 'Cepelinai on perunataikinasta muotoiltu, lihalla tai '
+            + 'raejuustolla täytetty pallo, joka on nimetty ilmalaivojen '
+            + 'mukaan 1920-luvulla.',
+          lahde: 'Diliff, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Cepelinai',
+        },
+        {
+          otsikko: 'Keitto joka väriytyy pinkiksi',
+          aika: 'Kesällä',
+          tiedosto: 'Šaltibarščiai, Pirmas blynas, Vilnius, June 2026.jpg',
+          teksti: 'Šaltibarščiai on kylmä, kirkkaanpinkki keitto, joka '
+            + 'tehdään keitetystä punajuuresta ja hapanmaitotuotteesta, '
+            + 'useimmiten kefiiristä tai piimästä. Sitä tarjoillaan kesällä '
+            + 'kylmänä, usein keitetyn munan, tillin ja lämpimien perunoiden '
+            + 'kanssa. Keiton juuret ulottuvat Liettuan suuriruhtinaskunnan '
+            + 'aikaan, jolloin ylimystön pöydässä kylmiin keittoihin '
+            + 'lisättiin ylellisiä aineksia kuten rapua tai riistaa isännän '
+            + 'varallisuuden osoitukseksi. Ajan myötä yksinkertaisempi '
+            + 'versio levisi tavallisiin koteihin, ja siitä tuli koko maan '
+            + 'rakastama kesäruoka.',
+          lyhyt: 'Šaltibarščiai on punajuuresta ja kefiiristä tehty kylmä, pinkki kesäkeitto.',
+          selite: 'Šaltibarščiai on punajuuresta ja kefiiristä tehty '
+            + 'kirkkaanpinkki kylmä keitto, jota tarjoillaan kesällä munan '
+            + 'ja perunoiden kanssa.',
+          lahde: 'Bdx, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Leipä jota ei koskaan heitetä pois',
+          aika: 'Joka aterialla',
+          tiedosto: 'Ruginė duona.jpg',
+          teksti: 'Tumma ruisleipä, ruginė duona, on liettualaisen '
+            + 'ruokapöydän perusta, ja se leivotaan yleensä hapanjuurella '
+            + 'pitkän vaivaamisen ja kypsytyksen jälkeen. Leipää on '
+            + 'arvostettu niin paljon, ettei sitä perinteisesti heitetä pois '
+            + 'eikä aseteta ylösalaisin pöydälle, ja jos pala putoaa '
+            + 'lattialle, se saatetaan nostaa ja suudella ennen syömistä. '
+            + 'Tapa juontaa juurensa ajoilta, jolloin leipä oli niukkaa ja '
+            + 'sen tuhlaaminen nähtiin sekä välinpitämättömyytenä että '
+            + 'kiittämättömyytenä ruoalle. Perinne elää yhä monissa '
+            + 'liettualaisissa kodeissa.',
+          lyhyt: 'Ruisleipää arvostetaan Liettuassa niin paljon, että pudonnut pala saatetaan suudella.',
+          selite: 'Tumma hapanjuuriruisleipä eli ruginė duona on '
+            + 'liettualaisen ruokapöydän perusta, jota kohdellaan '
+            + 'kunnioittaen.',
+          lahde: 'Bearas, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Makkara joka kypsyy kuukausia savussa',
+          aika: '1500-luvulta',
+          tiedosto: 'Lietuviškas skilandis.JPG',
+          teksti: 'Skilandis on liettualainen kylmäsavustettu makkara, joka '
+            + 'täytetään karkeaksi jauhetulla sianlihalla, suolalla, '
+            + 'pippurilla ja valkosipulilla ja jonka kuorena käytetään '
+            + 'perinteisesti sian mahalaukkua tai virtsarakkoa. Se kypsyy '
+            + 'savussa ja kuivuu useita kuukausia, jolloin siitä tulee '
+            + 'tiivis ja voimakkaan makuinen. Reseptejä tunnetaan jo '
+            + '1500-luvulta, ja erityisesti Suvalkijan alue on tunnettu '
+            + 'skilandiksestaan. Euroopan unioni myönsi liettualaiselle '
+            + 'skilandikselle suojatun maantieteellisen merkinnän 2009 ja '
+            + 'erillisen aidon perinteisen tuotteen aseman 2016.',
+          lyhyt: 'Skilandis on kylmäsavustettu, sian mahaan täytetty makkara, joka kypsyy kuukausia.',
+          selite: 'Skilandis on kylmäsavustettu, karkeaksi jauhetusta '
+            + 'sianlihasta tehty makkara, joka kypsyy kuukausia sian '
+            + 'mahalaukun sisällä.',
+          lahde: 'Vilensija, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minkä mukaan cepelinai on nimetty?',
+        vaihtoehdot: [
+          'Ilmalaivojen',
+          'Kalastusveneiden',
+          'Sotilasmerkkien',
+          'Höyryjunien',
+        ],
+        oikea: 0,
+        fakta: 'Ruokalaji nimettiin ja muotoiltiin ilmalaivojen mukaan '
+          + '1920- ja 1930-luvuilla.',
       },
     },
     {
@@ -17950,6 +19157,299 @@ export const MAA_KATEGORIAT = {
       },
     },
     {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Romanian keskiaikaiset kaupungit ja legendat kietoutuvat todelliseen '
+        + 'historiaan: linnavuori jonka tarina venyi kauhutarinaksi, luostari jonka '
+        + 'rakentamisesta kerrotaan synkkä satu, ja äänestys joka loi uuden valtion.',
+      nostot: [
+        {
+          otsikko: 'Kellotorni, joka vartioi linnamäkeä',
+          aika: '1200-luku',
+          tiedosto: 'RO MS Sighisoara clock tower hdr 1.jpg',
+          teksti: 'Sighișoaran vanha kaupunki kohoaa kukkulalle Transilvaniassa, ja sen '
+            + 'ylle nousee kellotorni, jonka rakentaminen alkoi 1200-luvun lopulla '
+            + 'porttitorniksi. Nykyisin tornissa toimii kaupunginmuseo. Kivikaduilla '
+            + 'seisoo talo, jossa kerrotaan asuneen Vlad-nimisen pojan, josta tuli '
+            + 'myöhemmin tunnettu nimellä Vlad Seivästäjä — hän syntyi kaupungissa '
+            + 'vuonna 1431. Muurin yhdeksän jäljellä olevaa tornia rakensivat ja '
+            + 'puolustivat keskiajalla eri ammattikunnat, kukin oma tornistaan '
+            + 'vastuussa. Unesco otti koko vanhan kaupungin maailmanperintöluetteloon '
+            + 'vuonna 1999.',
+          lyhyt: 'Sighișoaran kellotorni valmistui 1200-luvun lopulla, ja kaupunki on Unescon perintökohde.',
+          selite: 'Sighișoaran kellotorni kohoaa Transilvanian vanhan kaupungin '
+            + 'ylle, ja siinä toimii nykyisin kaupunginmuseo.',
+          lahde: 'Andrei Stroe, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Sighișoara',
+        },
+        {
+          otsikko: 'Linna, jonka Vlad rakensi uudelleen',
+          aika: '1462',
+          tiedosto: 'Cetatea Poenari din distanta.jpg',
+          teksti: 'Poenarin linnavuori kohoaa 850 metrin korkeuteen jyrkän '
+            + 'kalliorinteen päällä, ja huipulle kiipeää nykyään 1480 betoniporrasta. '
+            + 'Linna oli rauniona, kunnes Vlad III eli Vlad Seivästäjä vahvisti sen '
+            + '1450-luvulla toiseksi turvapaikakseen: hän korotti muureja ja '
+            + 'rakennutti kymmeniä metrejä pitkän kivimuurin tornin ympärille. '
+            + 'Tarinan mukaan työhön määrättiin rangaistukseksi ruhtinasta vastaan '
+            + 'juonineita bojaareja. Vuonna 1462 osmanijoukot piirittivät linnan, '
+            + 'mutta Vlad pakeni salaista käytävää pitkin vuorten yli Transilvaniaan '
+            + 'ennen kuin linnoitus antautui.',
+          lyhyt: 'Poenarin linnavuoren vahvisti 1450-luvulla Vlad III eli Vlad Seivästäjä.',
+          selite: 'Poenarin linnavuoren rauniot kohoavat 850 metrin '
+            + 'korkeudessa, ja huipulle vie 1480 porrasta.',
+          lahde: 'Kvmgz, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Vlad III',
+        },
+        {
+          otsikko: 'Yksi mies, kaksi valtaistuinta',
+          aika: '1859',
+          tiedosto: 'Al I Cuza.jpg',
+          teksti: 'Tammikuussa 1859 Moldova ja Valakia olivat yhä erillisiä '
+            + 'ruhtinaskuntia, joilla Pariisin rauhansopimuksen mukaan piti olla '
+            + 'omat hallitsijansa. Unionistit keksivät kiertotien: molemmat maat '
+            + 'valitsisivat saman miehen ruhtinaakseen. Moldovan edustajat '
+            + 'valitsivat eversti Alexandru Ioan Cuzan 5. tammikuuta, ja Valakian '
+            + 'edustajat seurasivat perässä 24. tammikuuta. Osmanien hovi vastusti '
+            + 'aluksi kaksoisvaalia, mutta hyväksyi lopulta tosiasian. Cuza yhdisti '
+            + 'maiden hallinnon, rahan ja armeijan vuoteen 1862 mennessä, jolloin '
+            + 'syntyi Romanian ruhtinaskunta.',
+          lyhyt: 'Alexandru Ioan Cuza valittiin molempien ruhtinaskuntien hallitsijaksi tammikuussa 1859.',
+          selite: 'Alexandru Ioan Cuza (1820–1873) valittiin Moldovan ja '
+            + 'Valakian yhteiseksi ruhtinaaksi tammikuussa 1859.',
+          lahde: 'Carol Szathmari, Wikimedia Commons (PD)',
+          wiki: 'Alexandru Ioan Cuza',
+        },
+        {
+          otsikko: 'Luostari, joka vaati uhrin',
+          aika: '1517',
+          tiedosto: 'Church of the Dormition, Argeș monastery (by Pudelek) 01.jpg',
+          teksti: 'Curtea de Argeșin luostarikirkko rakennettiin ruhtinas Neagoe '
+            + 'Basarabin määräyksestä vuosina 1512–1517, ja sen kierteiset kupolit '
+            + 'ja koristeellinen kivijulkisivu tekevät siitä yhden Romanian '
+            + 'omaperäisimmistä rakennuksista. Kansanrunossa kerrotaan mestari '
+            + 'Manolesta, jonka rakennelma sortui joka yö, kunnes hän näki unessa, '
+            + 'että se pysyisi pystyssä vain, jos joku rakas muurattaisiin sen '
+            + 'seinään. Tarina päättyy synkästi, ja se tunnetaan Romaniassa laajasti '
+            + 'kansanperinteenä. Todellisuudessa kirkosta tuli 1880-luvulla kuningas '
+            + 'Carol I:n aikana kuninkaallinen hautaluostari, jonne on haudattu '
+            + 'useita Romanian hallitsijoita.',
+          lyhyt: 'Curtea de Argeșin luostarikirkko valmistui 1517 ja siitä tuli kuninkaallinen hautaluostari.',
+          selite: 'Curtea de Argeșin luostarikirkko valmistui vuonna 1517, ja '
+            + 'siitä tuli 1880-luvulla Romanian kuningashuoneen hautaluostari.',
+          lahde: 'Pudelek (Marcin Szala), Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Missä kaupungissa Vlad Seivästäjä syntyi vuonna 1431?',
+        vaihtoehdot: [
+          'Sighișoarassa',
+          'Bukarestissa',
+          'Brașovissa',
+          'Târgoviștessä',
+        ],
+        oikea: 0,
+        fakta: 'Vlad Seivästäjä syntyi Sighișoaran linnamäellä vuonna 1431.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Karpaattien vuoret ja Tonavan suisto tekevät Romaniasta Euroopan '
+        + 'luonnon aarrearkun: Euroopan suurin säilynyt kosteikko, ensimmäinen '
+        + 'kansallispuisto ja vuosituhansia vanha suolakaivos ovat kaikki saman maan '
+        + 'sisällä.',
+      nostot: [
+        {
+          otsikko: 'Suisto, jossa asuu 5500 lajia',
+          aika: '1991',
+          tiedosto: 'Pelicans at the Danube Delta, Romania.jpg',
+          teksti: 'Tonavan suisto on Euroopan suurin säilynyt kosteikko, ja se '
+            + 'levittäytyy yli 4100 neliökilometrille Romanian ja Ukrainan '
+            + 'rajalla. Alueella elää yli 5500 kasvi- ja eläinlajia — enemmän kuin '
+            + 'missään muualla Euroopassa — ja monimuotoisuudessa sen ohittavat '
+            + 'maailmassa vain Australian Suuri valliriutta ja Galapagossaaret. '
+            + 'Suistossa pesii yli 300 lintulajia, muun muassa suurin osa Euroopan '
+            + 'pelikaaneista ja punakaulahanhista, ja vesissä ui lähes 90 '
+            + 'kalalajia, joukossa sampia. Unesco otti suiston '
+            + 'maailmanperintöluetteloon vuonna 1991, vuosi sen jälkeen kun siitä '
+            + 'oli tehty biosfäärialue.',
+          lyhyt: 'Tonavan suisto on Euroopan suurin kosteikko, jossa elää yli 5500 eliölajia.',
+          selite: 'Tonavan suistossa elää yli 5500 kasvi- ja eläinlajia, ja se '
+            + 'on Unescon maailmanperintökohde vuodesta 1991.',
+          lahde: 'Thepinkfluffy1211, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Tonavan suisto',
+        },
+        {
+          otsikko: 'Vuoristo, josta tuli ensimmäinen',
+          aika: '1935',
+          tiedosto: 'Retezat near camp Bucura.JPG',
+          teksti: 'Retezatin kansallispuisto Hunedoaran alueella oli Romanian '
+            + 'ensimmäinen kansallispuisto: hallitus perusti sen vuonna 1935 '
+            + 'tiedemiesten Emil Racovițăn ja Alexandru Borzan aloitteesta, ja '
+            + 'aluksi suojeltiin sata neliökilometriä vuoristoa. Puistossa on '
+            + 'kymmeniä jäätikköjärviä, joista suurin, Bucuran järvi, on koko '
+            + 'Romanian suurin luonnonjärvi. Jyrkin huippu, Peleaga, kohoaa yli '
+            + '2500 metriin, ja rinteillä laiduntaa gemssejä eli piikkivuohia, joita '
+            + 'puisto perustettiin alun perin suojelemaan. Retezatista tuli '
+            + 'myöhemmin myös Unescon biosfäärialue, ja sen lainsäädäntö loi '
+            + 'mallin kaikille Romanian myöhemmille suojelualueille.',
+          lyhyt: 'Retezatin kansallispuisto perustettiin 1935 Romanian ensimmäiseksi kansallispuistoksi.',
+          selite: 'Retezatin kansallispuisto perustettiin vuonna 1935, ja '
+            + 'sen Bucuran järvi on Romanian suurin luonnonjärvi.',
+          lahde: 'Igor.skokan, Wikimedia Commons (PD)',
+          wiki: 'Retezatin kansallispuisto',
+        },
+        {
+          otsikko: 'Suolakaivos, josta tuli huvipuisto',
+          aika: '1992',
+          tiedosto: 'Salina Turda, Mina Terezia.JPG',
+          teksti: 'Turdan suolakaivoksessa on louhittu suolaa yli 2000 vuoden '
+            + 'ajan: työ alkoi maan pinnalla jo antiikin aikana ja siirtyi maan '
+            + 'alle roomalaisten valloitettua Daakian. Kaivostyöläiset louhivat '
+            + 'suolaa käsin hakuilla ja kiiloilla ja saivat palkakseen leipää, '
+            + 'olutta ja floriinia. Kaivos suljettiin vuonna 1932, mutta se '
+            + 'toimi sittemmin muun muassa väestönsuojana ja jopa juuston '
+            + 'varastona. Vuonna 1992 louhos avattiin yleisölle, ja vuosien '
+            + '2008–2010 peruskorjaus muutti 120 metrin syvyydessä olevan '
+            + 'Terezia-kaivoksen valoisaksi huvipuistoksi, jossa on tivolipyörä, '
+            + 'minigolfia ja soutuvene maanalaisella järvellä.',
+          lyhyt: 'Turdan suolakaivos on toiminut yli 2000 vuotta, ja vuodesta 1992 se on ollut huvipuisto.',
+          selite: 'Turdan suolakaivoksen Terezia-osa muutettiin '
+            + 'peruskorjauksessa 2008–2010 valoisaksi maanalaiseksi huvipuistoksi.',
+          lahde: 'Gabriel Tocu, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kivi, joka näyttää kasvoilta',
+          aika: '1936',
+          tiedosto: 'Bucegi Sphinx - Romania - July 2009.jpg',
+          teksti: 'Bucegin vuoristossa, 2216 metrin korkeudessa, seisoo kahdeksan '
+            + 'metriä korkea ja 12 metriä leveä hiekkakivipaasi, jonka tuuli ja '
+            + 'sade ovat muovanneet vuosituhansien aikana. Oikeasta kulmasta '
+            + 'katsottuna kivi muistuttaa ihmiskasvoja, ja siksi sille annettiin '
+            + 'vuonna 1936 nimi Sfinksi Egyptin suuren sfinksin mukaan. Lähellä '
+            + 'sijaitsee toinen kuuluisa kivikko, Babele eli Vanhat naiset: '
+            + 'sienenmuotoiset kalliot, jotka ovat syntyneet samalla eroosiolla '
+            + 'mutta eri kivikerroksista. Molempiin pääsee köysiradalla tai '
+            + 'vaeltaen, ja ne ovat Bucegin ylängön suosituimmat nähtävyydet.',
+          lyhyt: 'Bucegin Sfinksi on tuulen ja sateen 2216 metrin korkeuteen muovaama kivimuodostuma.',
+          selite: 'Bucegin Sfinksi sai nykyisen nimensä vuonna 1936 sen '
+            + 'muistuttaessa tietystä kulmasta ihmiskasvoja.',
+          lahde: 'Radu Privantu, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minä vuonna Retezatista tuli Romanian ensimmäinen kansallispuisto?',
+        vaihtoehdot: [
+          '1920',
+          '1935',
+          '1948',
+          '1990',
+        ],
+        oikea: 1,
+        fakta: 'Retezatin kansallispuisto perustettiin vuonna 1935.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Romanialainen arkiruoka syntyi rajaseudulla, jossa Osmanien, '
+        + 'slaavien ja paikallisten paimenten perinteet sekoittuivat: maissipuuro, '
+        + 'kaalikääryleet ja luumuista poltettu viina kuuluvat yhä joka pöytään.',
+      nostot: [
+        {
+          otsikko: 'Puuro, joka tuli laivalla',
+          aika: '1700-luku',
+          tiedosto: 'Mamaliga Moldova.jpg',
+          teksti: 'Mämäligä on maissijauhosta keitetty puuro, joka korvasi '
+            + 'Romaniassa vanhemmat hirssipuurot vähitellen: maissi levisi '
+            + 'Amerikasta Tonavan varren maihin 1600-luvulla, ja ensimmäiset '
+            + 'maininnat maissipuurosta ovat Transilvaniasta vuodelta 1718 ja '
+            + 'Valakiasta vuodelta 1723. Tonavan laakso sopi maissille '
+            + 'erinomaisesti, ja puurosta tuli 1700-luvulla maaseudun '
+            + 'perusruokaa: se oli halpaa, täyttävää ja pysyi syötävänä myös '
+            + 'huonoina satovuosina. Mämäligä keitetään paksuksi massaksi ja '
+            + 'käännetään lautaselle kuin kakku, ja perinteisesti kyljestä '
+            + 'leikataan siivuja langalla. Sitä syödään juuston ja smetanan '
+            + 'kanssa tai lisäkkeenä lihalle ja kaalikääryleille.',
+          lyhyt: 'Mämäligä on maissipuuro, joka yleistyi Romaniassa vasta maissin saavuttua 1600-luvulla.',
+          selite: 'Mämäligä on paksuksi keitetty maissipuuro, joka '
+            + 'käännetään lautaselle ja leikataan langalla.',
+          lahde: 'Unknown author, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Kääryle, joka tuli Osmanien mukana',
+          aika: '1500-luku',
+          tiedosto: 'Sarmale with mamaligă.jpg',
+          teksti: 'Kaalikääryleet eli sarmale tulivat Romaniaan Osmanien '
+            + 'valtakunnan mukana: turkin sana sarmak tarkoittaa kääriä, ja '
+            + 'samantapaisia täytettyjä kääryleitä syötiin Osmanien keittiössä '
+            + 'jo 1500-luvun alussa. Lähi-idässä kääre tehdään usein '
+            + 'viinilehteen, mutta Romaniassa käytettiin hapankaalin lehteä, '
+            + 'koska se kesti kylmää ilmastoa ja säilyi talven yli '
+            + 'suolavedessä. Täytteenä on jauhelihaa, riisiä ja sipulia, ja '
+            + 'kääröt haudutetaan tuntikausia tomaattikastikkeessa mämäligän ja '
+            + 'smetanan kanssa tarjoiltaviksi. Vaikka ruoka ei ole alun perin '
+            + 'romanialainen keksintö, mikään muu kansa ei ole omineet sitä '
+            + 'yhtä vahvasti osaksi kansallista ruokakulttuuriaan.',
+          lyhyt: 'Sarmale eli kaalikääryleet tulivat Romaniaan Osmanien valtakunnan mukana 1500-luvulla.',
+          selite: 'Sarmale eli hapankaalinlehteen käärityt jauhelihakääryleet '
+            + 'tarjoillaan Romaniassa mämäligän ja smetanan kanssa.',
+          lahde: 'Nicubunu (Nicu Buculei), Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Viina, joka poltetaan syksyisin',
+          aika: 'Loka–joulukuu',
+          tiedosto: 'A shot of Țuică for Orthodox Easter in Sighetu Marmației, Maramureș.jpg',
+          teksti: 'Țuică on luumuista poltettu paloviina, jota pidetään Romanian '
+            + 'kansallisjuomana. Perinne ulottuu keskiajalle asti, ja poltto '
+            + 'ajoittuu yhä samaan aikaan kuin ennen: luumut korjataan syksyllä, '
+            + 'ja mäski käy 6–8 viikkoa suurissa tynnyreissä ennen tislausta '
+            + 'loka–joulukuussa. Romania on maailman neljänneksi suurin '
+            + 'luumuntuottaja, ja noin kolme neljäsosaa sadosta päätyy juuri '
+            + 'țuican valmistukseen. Monella maaseutuperheellä on oma reseptinsä '
+            + 'ja usein oma tislauslaitteensakin, ja juomaa tarjotaan vieraille '
+            + 'heti kynnyksellä, häissä, kasteissa ja pääsiäisenä — pieni lasi '
+            + 'kirkasta juomaa on Romaniassa vieraanvaraisuuden merkki.',
+          lyhyt: 'Țuică on luumuista poltettu paloviina, joka valmistetaan Romaniassa syksyisin.',
+          selite: 'Țuică poltetaan syksyllä korjatuista luumuista, ja sitä '
+            + 'tarjotaan vieraille perinteisenä tervehdyksenä.',
+          lahde: 'Chainwit., Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kellari, jossa viini kypsyy vuosia',
+          aika: '1899',
+          tiedosto: 'RO IL Crama Hagianoff 29.jpg',
+          teksti: 'Romanian viininviljely on peräisin jo geto-daakialaiselta '
+            + 'ajalta: kuningas Burebistan hallitessa vuosina 82–44 eaa. viiniä '
+            + 'juotiin juhlamenoissa ja säilytettiin häränsarvista tehdyissä '
+            + 'astioissa. Roomalaiset toivat valloitettuun Daakiaan omat '
+            + 'viinilajikkeensa 100-luvun alussa, ja viininviljely on jatkunut '
+            + 'alueella siitä lähtien katkeamatta. Manasian kylässä Ialomițan '
+            + 'alueella seisoo Hagianoffin kartano viinitarhoineen, joka '
+            + 'rakennettiin vuonna 1899 — samaan aikaan kun useat muutkin '
+            + 'suurtilat rakensivat kivisiä viinikellareitaan. Kellarin '
+            + 'holvikäytävillä lepää yhä suuria tammitynnyreitä, joissa viini '
+            + 'kypsyy vuosia ennen pullotusta.',
+          lyhyt: 'Romanian viininviljely juontuu geto-daakialaiselta ajalta yli 2000 vuoden takaa.',
+          selite: 'Hagianoffin kartanon viinikellari Manasiassa rakennettiin '
+            + 'vuonna 1899 osana Romanian pitkää viininviljelyn perinnettä.',
+          lahde: 'Nicubunu (Nicu Buculei), Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mistä sana sarmale on peräisin?',
+        vaihtoehdot: [
+          'Turkin sanasta, joka tarkoittaa kääriä',
+          'Latinan sanasta, joka tarkoittaa täyttää',
+          'Unkarin sanasta, joka tarkoittaa kaalia',
+          'Kreikan sanasta, joka tarkoittaa lehteä',
+        ],
+        oikea: 0,
+        fakta: 'Sana sarmale tulee turkin sanasta sarmak, joka tarkoittaa kääriä.',
+      },
+    },
+    {
       id: 'menovinkit',
       nimi: 'Menovinkit',
       johdanto: 'Romaniassa aarteet ovat verkossa yllättävän hyvin esillä: '
@@ -18169,6 +19669,315 @@ export const MAA_KATEGORIAT = {
         fakta: 'Elokuussa 1895 kolmesataa sofialaista nousi yhtenä joukkona '
           + 'Tšerni Vrahin huipulle, ja siitä päivästä lasketaan '
           + 'bulgarialaisen retkeilyn alku.',
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Kalliot ja kruunut',
+      johdanto: 'Bulgarian historia näkyy kalliossa ja kummulla: tuhat vuotta '
+        + 'vanha ratsastajakuva, tsaarien poltettu linna, traakialaisten '
+        + 'kuningashauta mäen sisällä ja katedraali, joka nousi vasta '
+        + 'vapauden jälkeen.',
+      nostot: [
+        {
+          otsikko: 'Kukkula, joka paloi kerran',
+          aika: '1393',
+          tiedosto: 'Tsarevets Fortress, Veliko Tarnovo - 3 March 2021, rk.aerial.jpg',
+          teksti: 'Veliko Tarnovon Tsarevets-kukkula oli toisen Bulgarian '
+            + 'valtakunnan pääkaupunki ja linnoitus vuosina 1185–1393. '
+            + 'Huipulla sijaitsivat sekä tsaarin palatsi että patriarkan '
+            + 'kirkko, joten kukkulalle mahtui koko vallan ydin: maallinen '
+            + 'ja hengellinen johto vierekkäin muurien sisällä. Vuonna 1393 '
+            + 'osmanit piirittivät linnoitusta kolme kuukautta ja polttivat '
+            + 'sen lopulta heinäkuussa, mikä päätti keskiaikaisen Bulgarian '
+            + 'itsenäisyyden vuosisadoiksi. Rauniot seisoivat pitkään '
+            + 'autioina, kunnes kukkula kunnostettiin vuosina 1930–1981 '
+            + 'Bulgarian valtion 1300-vuotisjuhlaan.',
+          lyhyt: 'Tsarevets oli Bulgarian keskiaikaisen valtakunnan pääkaupunki, jonka osmanit polttivat 1393.',
+          selite: 'Veliko Tarnovon Tsarevets-kukkulalla sijaitsivat tsaarin '
+            + 'palatsi ja patriarkan kirkko toisen Bulgarian valtakunnan '
+            + 'aikana.',
+          lahde: 'RKold, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Ratsastaja jyrkänteellä',
+          aika: '700-luku',
+          tiedosto: 'Madara Rider.jpg',
+          teksti: 'Madaran ylängöllä koillis-Bulgariassa kohoaa sata metriä '
+            + 'korkea kalliojyrkänne, johon on veistetty 700-luvulla '
+            + 'ratsastajan kuva 23 metrin korkeuteen maasta. Hevosen selässä '
+            + 'istuva mies survaisee keihäällä leijonaa, ja hevosen jaloissa '
+            + 'juoksee koira. Kuvan ympärille on myöhempinä vuosikymmeninä '
+            + 'hakattu kreikankielisiä kirjoituksia, jotka kertovat '
+            + 'ensimmäisen Bulgarian valtakunnan hallitsijoiden teoista ja '
+            + 'ovat yksi tärkeimmistä lähteistä ajan historiaan. Ratsastaja '
+            + 'on ainoa laatuaan koko Euroopassa, ja se liitettiin Unescon '
+            + 'maailmanperintöluetteloon 1979.',
+          lyhyt: 'Madaran ratsastaja on 700-luvulla kallioon veistetty kuva, ainoa laatuaan Euroopassa.',
+          selite: 'Madaran kalliojyrkänteeseen veistetty ratsastajankuva on '
+            + '700-luvulta ja ainoa laatuaan Euroopassa.',
+          lahde: 'Feradz, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          otsikko: 'Katedraali kiitokseksi vapauttajille',
+          aika: '1912',
+          tiedosto: 'Alexander Nevsky Cathedral in Sofia, Bulgaria.jpg',
+          teksti: 'Sofian keskustaa hallitseva Aleksanteri Nevskin katedraali '
+            + 'rakennettiin vuosina 1882–1912 ja vihittiin lopulta käyttöön '
+            + '1924. Se on muistomerkki venäläisille sotilaille, jotka '
+            + 'kaatuivat vuosien 1877–1878 Venäjän–Turkin sodassa — sodassa, '
+            + 'joka päätti lähes viisisataa vuotta kestäneen osmanivallan ja '
+            + 'teki Bulgariasta jälleen itsenäisen. Venäläisen arkkitehdin '
+            + 'Aleksandr Pomerantsevin suunnittelema uusbysanttilainen kirkko '
+            + 'mahtuu kymmeneentuhanteen ihmiseen, ja sen kultaiset kupolit '
+            + 'näkyvät Sofian ylle kauas ympäristöön.',
+          lyhyt: 'Katedraali muistaa venäläissotilaita, jotka kaatuivat Bulgarian vapaussodassa 1877–1878.',
+          selite: 'Katedraali rakennettiin 1882–1912 muistoksi Venäjän–Turkin '
+            + 'sodassa 1877–1878 kaatuneille venäläissotilaille.',
+          lahde: 'Elena.laps, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kuningashauta mäen uumenissa',
+          aika: '300-luku eaa.',
+          tiedosto: 'Thomb-Sveshtari-2.jpg',
+          teksti: 'Koillis-Bulgariassa Sveshtarin kylän lähellä avattiin 1982 '
+            + 'kummun sisältä traakialaisten kuningashauta 300-luvulta ennen '
+            + 'ajanlaskun alkua. Hautakammion seiniä kannattaa kymmenen '
+            + 'naishahmoista veistettyä pylvästä, joiden kädet on nostettu '
+            + 'ylös ikään kuin kantamaan kattoa — kuvien uskotaan esittävän '
+            + 'jumalattaria. Seinillä on myös alkuperäisiä maalauksia, ja '
+            + 'koko rakennelma on säilynyt poikkeuksellisen hyvin kummun '
+            + 'suojassa vuosituhansien ajan. Hauta liitettiin Unescon '
+            + 'maailmanperintöluetteloon 1985 ainutlaatuisen arkkitehtuurinsa '
+            + 'ansiosta.',
+          lyhyt: 'Sveshtarin traakialaishauta on 300-luvulta eaa., kammiota kannattaa kymmenen pylvästä.',
+          selite: 'Sveshtarin kuningashaudan kammiota kannattelee kymmenen '
+            + 'naishahmoiseksi veistettyä pylvästä 300-luvulta eaa.',
+          lahde: 'Interact-Bulgaria, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi Aleksanteri Nevskin katedraali rakennettiin Sofiaan?',
+        vaihtoehdot: [
+          'Muistoksi maanjäristyksen uhreille',
+          'Kiitokseksi venäläisille sotilaille, jotka kaatuivat Bulgarian vapaussodassa',
+          'Sulttaanin lahjaksi kaupungille',
+          'Ensimmäisen tsaarin hautakirkoksi',
+        ],
+        oikea: 1,
+        fakta: 'Aleksanteri Nevskin katedraali on muistomerkki venäläisille '
+          + 'sotilaille, jotka kaatuivat Venäjän–Turkin sodassa 1877–1878 ja '
+          + 'auttoivat vapauttamaan Bulgarian osmanivallasta.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Pöydän perinteet',
+      johdanto: 'Bulgarian ruokapöydässä yhdistyvät tiede ja tapa: jogurtin '
+        + 'bakteeri sai maan nimen, salaatti värjättiin lipun väreillä, '
+        + 'piirakkaan leivotaan onnenlappuja ja jokaisen vieraan eteen '
+        + 'kaadetaan lasillinen kotitekoista viinaa.',
+      nostot: [
+        {
+          otsikko: 'Bakteeri, joka sai maan nimen',
+          aika: '1905',
+          tiedosto: 'Traditional Bulgarian yogurt dish.jpg',
+          teksti: 'Hapanmaitoa on valmistettu Bulgarian kylissä sukupolvelta '
+            + 'toiselle jo ennen kuin kukaan tiesi miksi maito hapantuu. '
+            + 'Vuonna 1905 nuori bulgarialainen lääketieteen opiskelija '
+            + 'Stamen Grigorov tutki Geneven yliopistossa professori Léon '
+            + 'Massolin laboratoriossa kotikylästään tuomiaan '
+            + 'jogurttinäytteitä mikroskoopilla. Hän löysi sauvamaisen '
+            + 'bakteerin, joka sai maidon happanemaan ja paksuuntumaan, ja '
+            + 'kuvaili sen tarkasti tiedejulkaisussa. Tiedeyhteisö nimesi '
+            + 'bakteerin Grigorovin kotimaan mukaan Lactobacillus '
+            + 'bulgaricukseksi, ja se on yhä tänä päivänä yksi maailman '
+            + 'jogurttituotannon tärkeimmistä hapatteista.',
+          lyhyt: 'Stamen Grigorov löysi 1905 jogurtin hapattavan bakteerin, joka nimettiin Bulgarian mukaan.',
+          selite: 'Stamen Grigorov löysi Geneven yliopistossa 1905 bakteerin, '
+            + 'joka nimettiin Lactobacillus bulgaricukseksi.',
+          lahde: 'Savannah Rivka Powell, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Piirakka täynnä ennustuksia',
+          aika: 'Uudenvuoden aatto',
+          tiedosto: 'Баница с късмети-1.jpg',
+          teksti: 'Banitsa on kerroksittain taiteltua filotaikinaa, jonka '
+            + 'väliin levitetään munaa, jogurttia ja suolaista valkoista '
+            + 'juustoa. Arkena se on aamiaispala, mutta uudenvuoden aattona '
+            + 'siitä tulee ennustuskone: taikinaan kääritään pieniä '
+            + 'paperilappuja tai esineitä, joista jokainen lupaa jotain — '
+            + 'terveyttä, rakkautta, rahaa tai matkan. Piirakka leikataan '
+            + 'niin, että jokainen ruokailija saa oman palansa, ja se, jonka '
+            + 'viipaleesta löytyy lappu, kantaa lupausta koko tulevan '
+            + 'vuoden. Banitsan perinne ulottuu bulgarialaisessa '
+            + 'ruokakulttuurissa vuosisatojen taakse ja liittyy myös '
+            + 'jouluun ja pääsiäiseen.',
+          lyhyt: 'Uudenvuoden banitsaan leivotaan onnenlappuja, jotka ennustavat syöjälleen tulevaa vuotta.',
+          selite: 'Uudenvuoden banitsaan kääritään pieniä lappuja tai '
+            + 'esineitä, jotka ennustavat löytäjälleen tulevaa vuotta.',
+          lahde: 'Eugene Zelenko, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Salaatti lipun väreissä',
+          aika: '1956',
+          tiedosto: 'Shopska salad bg.JPG',
+          teksti: 'Shopska-salaatti syntyi 1950-luvulla, kun valtion '
+            + 'matkailuyhtiö Balkantourist kehitti Mustanmeren rannikon '
+            + 'Družban lomakylän ravintolassa uuden annoksen ulkomaisille '
+            + 'turisteille. Kokit valitsivat ainekset tarkoituksella niin, '
+            + 'että lautanen näyttää Bulgarian lipulta: valkoinen raastettu '
+            + 'sirene-juusto, vihreä kurkku ja paprika, ja punainen '
+            + 'tomaatti. Salaatti sai nimensä läntisen Bulgarian shop-alueen '
+            + 'asukkaista, vaikka resepti keksittiin rantahotellissa eikä '
+            + 'vuorikylässä. Monista samaan aikaan luoduista matkailuruoista '
+            + 'shopska on ainoa, joka jäi elämään — siitä tuli koko maan '
+            + 'tunnetuin ruokalaji.',
+          lyhyt: 'Shopska-salaatti keksittiin 1950-luvulla, ja sen värit mukailevat Bulgarian lippua.',
+          selite: 'Shopska-salaatin värit — valkoinen, vihreä ja punainen — '
+            + 'mukailevat tarkoituksella Bulgarian lippua.',
+          lahde: 'Biso, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          otsikko: 'Pihapiirin oma viina',
+          aika: 'Syyskuu',
+          tiedosto: 'Bottles of \'rakiya\'.jpg',
+          teksti: 'Rakia on hedelmistä tislattu viina, ja lähes jokaisella '
+            + 'bulgarialaisella maaseutuperheellä on oma reseptinsä. '
+            + 'Yleisimmin sitä valmistetaan luumuista tai rypäleistä: '
+            + 'syksyllä hedelmät murskataan ja niiden annetaan käydä '
+            + 'tynnyrissä viikkoja, minkä jälkeen mäski tislataan '
+            + 'kuparisessa keittimessä, jota naapurit usein lainaavat '
+            + 'vuorotellen toisilleen. Kotitekoisen rakian vahvuus voi '
+            + 'nousta yli viidenkymmenen prosentin, kun kaupan pulloissa se '
+            + 'on tavallisesti neljäkymmentä. Kuuluisinta luumurakiaa '
+            + 'tehdään Troyanin seudulla, ja lasillinen tarjotaan lähes aina '
+            + 'ensimmäisenä tervetulomaljana vieraalle.',
+          lyhyt: 'Rakia on kotitekoinen hedelmäviina, jota tislataan syksyisin luumuista tai rypäleistä.',
+          selite: 'Rakia tislataan kuparisessa keittimessä luumuista tai '
+            + 'rypäleistä, ja Troyanin seutu on kuuluisinta luumurakiaa.',
+          lahde: 'Hakuna.Matata, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi shopska-salaatin ainekset valittiin juuri sellaisiksi?',
+        vaihtoehdot: [
+          'Ne olivat halvimmat raaka-aineet',
+          'Niiden värit mukailevat Bulgarian lippua',
+          'Ne kestivät parhaiten laivakuljetusta',
+          'Kuningas vaati juuri niitä lautaselleen',
+        ],
+        oikea: 1,
+        fakta: 'Shopska-salaatin valkoinen juusto, vihreä kurkku ja paprika '
+          + 'sekä punainen tomaatti valittiin 1950-luvulla mukailemaan '
+          + 'Bulgarian lipun värejä.',
+      },
+    },
+    {
+      id: 'kulttuuri',
+      nimi: 'Naamiot ja narut',
+      johdanto: 'Bulgarialainen kansanperinne näkyy yhä arjessa: maaliskuussa '
+        + 'ranteessa on punavalkoinen naru, tammikuussa kylässä kulkee '
+        + 'kellokas hirviö, vuoristokylässä kudotaan mattoja äidiltä '
+        + 'tyttärelle.',
+      nostot: [
+        {
+          otsikko: 'Naru joka odottaa haikaraa',
+          aika: '1. maaliskuuta',
+          tiedosto: 'Martenitsa-hand-made.jpg',
+          teksti: 'Baba Martan eli maaliskuun mummon päivänä 1. maaliskuuta '
+            + 'bulgarialaiset antavat toisilleen martenitsoja: punaisesta ja '
+            + 'valkoisesta langasta kierrettyjä rannenauhoja tai tupsuja. '
+            + 'Punainen kuvaa verta ja voimaa, valkoinen puhtautta ja onnea, '
+            + 'ja koru puetaan ranteeseen tai vaatteeseen suojaksi '
+            + 'arvaamatonta kevätsäätä vastaan. Martenitsaa kannetaan niin '
+            + 'kauan, kunnes näkee ensimmäisen muuttolinnun, useimmiten '
+            + 'haikaran, tai kukkivan puun — silloin naru riisutaan ja '
+            + 'sidotaan puun oksaan. Perinteen juuret ulottuvat kauas '
+            + 'kristinuskoa varhaisempaan aikaan, ja maaliskuun alussa lähes '
+            + 'jokaisen bulgarialaisen ranteessa näkyy oma punavalkoinen '
+            + 'solmu.',
+          lyhyt: 'Martenitsa on punavalkoinen naru, jota kannetaan ensimmäiseen haikaraan asti.',
+          selite: 'Martenitsa sidotaan ranteeseen 1. maaliskuuta ja riisutaan '
+            + 'vasta, kun näkee ensimmäisen haikaran tai kukkivan puun.',
+          lahde: 'Petko Yotov, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Hirviö joka karkottaa talven',
+          aika: 'Tammikuu',
+          tiedosto: 'Burgas-Ethnographic-museum-kukeri-mask.jpg',
+          teksti: 'Talven pimeimpänä aikana bulgarialaisten kylien läpi '
+            + 'kulkee kukeri-naamioituja miehiä: raskaissa turkiksissa ja '
+            + 'puisissa tai nahkaisissa naamioissa, vyötäröllä painavat '
+            + 'pronssikellot, joita kolistellaan niin kovaa kuin jaksaa. '
+            + 'Äänen ja pelottavan ulkonäön uskottiin karkottavan pahat '
+            + 'henget ja takaavan kylälle hyvän sadon ja terveyden — '
+            + 'perinteen juuret ovat esikristillisissä riiteissä. Vuodesta '
+            + '1966 asti Pernikin kaupunkiin on kokoontunut tammikuussa '
+            + 'satoja kukeri-ryhmiä ympäri maata kansainväliseen '
+            + 'Surva-naamiofestivaaliin, joka liitettiin Unescon aineettoman '
+            + 'kulttuuriperinnön luetteloon 2015.',
+          lyhyt: 'Kukeri-naamioituja miehiä kulkee kylien läpi talvella karkottamassa pahoja henkiä.',
+          selite: 'Kukeri-naamiot ja pronssikellot kuuluvat esikristilliseen '
+            + 'riittiin, jolla karkotettiin talven pahat henget.',
+          lahde: 'Vassia Atanassova - Spiritia, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Kylä joka kutoo vieläkin',
+          aika: '1600-luku',
+          tiedosto: 'Chiprovtsi 002.jpg',
+          teksti: 'Luoteis-Bulgarian vuoristokylä Chiprovtsi eli aiemmin '
+            + 'hopeakaivoksista, mutta kun kaivostoiminta hiipui 1600-luvun '
+            + 'lopulla, kylän naiset alkoivat kutoa villamattoja '
+            + 'pystysuoralla kangaspuulla. Tekniikka on pysynyt samana '
+            + 'sukupolvesta toiseen: kutoja pujottaa kudelangan loimen läpi '
+            + 'käsin ja tiivistää sen pienellä lyömäkammalla niin, että '
+            + 'maton molemmat puolet näyttävät samalta. Kuvioita — '
+            + 'geometrisia ristikoita, tähtiä ja puun oksia — tunnetaan yhä '
+            + 'yli kaksikymmentä erilaista, ja taito kulkee äidiltä '
+            + 'tyttärelle. Vuonna 2014 Chiprovtsin mattojen kudonta '
+            + 'liitettiin Unescon aineettoman kulttuuriperinnön '
+            + 'luetteloon.',
+          lyhyt: 'Chiprovtsin naiset kutovat villamattoja samalla tekniikalla kuin 1600-luvulla.',
+          selite: 'Chiprovtsin kaksipuoliset villamatot kudotaan '
+            + 'pystysuoralla kangaspuulla, ja taito periytyy äidiltä '
+            + 'tyttärelle.',
+          lahde: 'Vislupus, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Piiritanssi jonka italialainen piirsi',
+          aika: '1810',
+          tiedosto: 'Dance of Bulgarian peasants - Mayer Luigi - 1810.jpg',
+          teksti: 'Horo on Bulgarian yleisin kansantanssi: tanssijat pitävät '
+            + 'toisiaan käsistä tai vöistä kiinni ja liikkuvat piirissä tai '
+            + 'mutkittelevassa jonossa askelkuvion mukaan. Tahtilaji on '
+            + 'usein epätasainen, esimerkiksi 7/8 tai 9/8, mikä kuulostaa '
+            + 'länsimaiseen korvaan kompastelevalta, vaikka tanssijalle '
+            + 'rytmi on itsestäänselvä nopeiden ja hitaiden askelten '
+            + 'vuorotteluna. Italialainen Luigi Mayer luonnosteli '
+            + 'bulgarialaisten piiritanssia 1780-luvulla, ja luonnokset '
+            + 'julkaistiin kaiverruksina kirjassa vasta 1810, vuosia '
+            + 'taiteilijan kuoleman jälkeen. Horoa tanssitaan yhä häissä ja '
+            + 'kyläjuhlissa, ja jokainen osaa ainakin muutaman '
+            + 'perusaskeleen.',
+          lyhyt: 'Horo on Bulgarian yleisin kansantanssi, jota tanssitaan piirissä epätasaisessa tahtilajissa.',
+          selite: 'Italialainen Luigi Mayer luonnosteli bulgarialaisten '
+            + 'piiritanssia horoa 1780-luvulla; kaiverrus julkaistiin '
+            + 'kirjassa 1810.',
+          lahde: 'Luigi Mayer, Wikimedia Commons (public domain)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Milloin martenitsa riisutaan ja sidotaan puuhun?',
+        vaihtoehdot: [
+          'Kun ensimmäinen lumi sataa',
+          'Kun näkee ensimmäisen haikaran tai kukkivan puun',
+          'Tasan kuukauden kuluttua maaliskuun alusta',
+          'Kun Surva-festivaali alkaa Pernikissä',
+        ],
+        oikea: 1,
+        fakta: 'Martenitsa riisutaan ja sidotaan puun oksaan, kun näkee '
+          + 'keväällä ensimmäisen haikaran tai kukkivan puun.',
       },
     },
     {
@@ -18482,6 +20291,182 @@ export const MAA_KATEGORIAT = {
         oikea: 0,
         fakta: 'Tyynellä säällä ääni on hiljainen huokaus, myrskyllä kokonainen '
           + 'soinnutus.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Kroatian ruokakulttuuri kasvaa tuulesta ja kalliosta: valkotryffeli metsän '
+        + 'alla, lampaanjuusto saarella jossa tuuli suolaa laitumet, viini '
+        + 'pystysuoralta rinteeltä ja osterit suojaisasta lahdesta.',
+      nostot: [
+        {
+          otsikko: 'Tuoksuva timantti Motovunin metsästä',
+          aika: '1999',
+          tiedosto: 'Tuber Magnatum Pico.jpg',
+          teksti: 'Istrian metsissä Mirna-joen varrella kasvaa valkotryffeliä, samaa lajia '
+            + 'kuin Italian kuuluisassa Alban tryffelissä. Vuonna 1999 paikallinen '
+            + 'tryffelinmetsästäjä Giancarlo Zigante löysi koiransa Dianan avulla '
+            + 'Motovunin metsästä lähes 1,3 kilon painoisen valkotryffelin — sen ajan '
+            + 'suurimman koskaan löydetyn. Löytö teki pienestä kukkulakaupungista '
+            + 'Motovunista maailmankuulun, ja siitä lähtien siellä on joka syksy '
+            + 'järjestetty kansainvälinen tryffelifestivaali. Tryffeliä etsitään yhä '
+            + 'samalla tavalla kuin sata vuotta sitten: koulutetulla koiralla, joka '
+            + 'haistaa maan alla kasvavan sienen tuoksun.',
+          lyhyt: 'Vuonna 1999 Motovunin metsästä löytyi lähes 1,3 kilon valkotryffeli.',
+          selite: 'Valkotryffeleitä (Tuber magnatum) esillä torilla; samaa lajia kasvaa '
+            + 'Istrian metsissä.',
+          lahde: 'Lucarelli, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Juusto joka maistuu tuulelta',
+          aika: 'nykyään',
+          tiedosto: '20140507 Paški sir cheese from Pag.jpg',
+          teksti: 'Pagin saarella lampaat laiduntavat tuulisilla, suolaisen meriveden '
+            + 'huuhtomilla niityillä, joilla kasvaa villiä salviaa ja muita aromikkaita '
+            + 'yrttejä. Voimakas bura-tuuli kuljettaa suolaa ilmassa kauas rannasta ja '
+            + 'peittää laitumen ohuella suolakerroksella. Lampaiden maito saa tästä '
+            + 'ruokavaliosta ainutlaatuisen, hieman suolaisen ja yrttisen maun, joka '
+            + 'siirtyy juustoon: Paški sir on kova, pitkään kypsytetty juusto, jota '
+            + 'pidetään yhtenä Kroatian arvostetuimmista.',
+          lyhyt: 'Pagin saaren tuulinen, suolainen laidun antaa Paški sir -juustolle oman '
+            + 'makunsa.',
+          selite: 'Paški sir -juustokiekkoja kypsymässä hyllyillä Pagin saarella.',
+          lahde: 'Isiwal, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Viini joka kasvaa pystysuoralla rinteellä',
+          aika: 'nykyään',
+          tiedosto: 'Dingač i Postup.JPG',
+          teksti: 'Pelješacin niemimaan lounaisrinteillä, Zabrada-vuorten jyrkillä töyräillä '
+            + 'Trstenikin ja Podobučen kylien välissä, kasvaa Dingačin viinialue. Rypäle '
+            + 'on plavac mali, tumma ja pienimarjainen lajike, joka syntyi '
+            + 'kalifornialaisen zinfandelin kantalajikkeen crljenak kaštelanskin ja '
+            + 'dobričić-rypäleen risteytyksenä. Jyrkkä, aurinkoinen rinne ja meren '
+            + 'heijastama valo kypsyttävät rypäleet täyteläisiksi ja tanniinisiksi, ja '
+            + 'Dingač oli ensimmäinen kroatialainen viinialue, joka sai oman suojatun '
+            + 'alkuperänimityksensä.',
+          lyhyt: 'Dingačin plavac mali -viini kasvaa Pelješacin niemimaan jyrkillä '
+            + 'rinteillä.',
+          selite: 'Dingač- ja Postup-viinipulloja kaupan hyllyllä; molemmat ovat Pelješacin '
+            + 'plavac mali -viinejä.',
+          lahde: 'Silverije, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Lahti joka kasvattaa ostereita ja suolaa',
+          aika: 'nykyään',
+          tiedosto: 'MALI STON, CROATIA.jpg',
+          teksti: 'Pelješacin niemimaan tyvessä Mali Stonin lahti on niin suojaisa ja '
+            + 'ravinteikas, että siellä on kasvatettu ostereita ja simpukoita jo '
+            + 'vuosisatoja. Makean veden purot laimentavat lahden suolapitoisuutta juuri '
+            + 'sopivasti, ja tyyni vesi antaa ostereille aikaa kasvaa hitaasti ja '
+            + 'täyteläisiksi. Lahden reunalla kohoavat Euroopan toiseksi pisimmät '
+            + 'säilyneet kaupunginmuurit, jotka Dubrovnikin tasavalta rakensi suojaamaan '
+            + 'Stonin arvokkaita suolalammikoita — sama tasavalta, joka rikastui sekä '
+            + 'suolasta että lahden ostereista.',
+          lyhyt: 'Mali Stonin suojaisa lahti on kasvattanut ostereita vuosisatojen ajan.',
+          selite: 'Stonin kaupunginmuurit ja Mali Stonin lahti taustalla; muurit suojasivat '
+            + 'kaupungin suolalammikoita.',
+          lahde: 'Jerrye ja Roy Klotz MD, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä rypäle kasvaa Dingačin viinialueella Pelješacin niemimaalla?',
+        vaihtoehdot: [
+          'Plavac mali',
+          'Zinfandel',
+          'Malvasia',
+          'Graševina',
+        ],
+        oikea: 0,
+        fakta: 'Se on kalifornialaisen zinfandelin kantalajikkeen ja dobričić-rypäleen '
+          + 'risteytys.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Kroatian luonto rakentaa itse omat ihmeensä: järvet jotka patoavat itsensä '
+        + 'kalkkikivestä, saaristo joka on Välimeren tiheimpiä, ja vuori joka halkeaa '
+        + 'kahtia syväksi rotkoksi.',
+      nostot: [
+        {
+          otsikko: 'Järvet jotka rakentavat itse patonsa',
+          aika: '1979',
+          tiedosto: 'Plitvice Lakes1.jpg',
+          teksti: 'Plitvicen 16 järveä on kytketty toisiinsa vesiputouksilla ja '
+            + 'luonnollisilla travertiinipadoilla — kalkkikivipitoisesta vedestä '
+            + 'sakkautuvasta kivestä, jota sammal ja levät sitovat vuosisatojen kuluessa '
+            + 'yhä paksummaksi kerrokseksi. Padot kasvavat ja muuttavat muotoaan koko '
+            + 'ajan, joten järvien reitti ei ole koskaan täysin sama kahtena '
+            + 'vuosikymmenenä. Vesi vaihtaa väriään turkoosista vihreään sen mukaan, '
+            + 'kuinka paljon mineraaleja, planktonia ja auringonvaloa siihen osuu. '
+            + 'Plitvice on Kroatian vanhin ja suurin kansallispuisto, ja Unesco otti sen '
+            + 'maailmanperintöluetteloon jo vuonna 1979.',
+          lyhyt: 'Plitvicen järviä erottavat travertiinipadot, jotka kasvavat ja muuttuvat '
+            + 'yhä.',
+          selite: 'Vesiputouksia ja turkoosia järvivettä Plitvicen kansallispuistossa.',
+          lahde: 'Tesla Delacroix, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kosket jotka kohisevat kivikynnyksillä',
+          aika: '1985',
+          tiedosto: 'Skradinski buk Krka National Park 1.jpg',
+          teksti: 'Krkan kansallispuiston tunnetuin näky, Skradinski buk, syntyy samasta '
+            + 'travertiinin kerrostumisilmiöstä kuin Plitvicen padot: joki putoaa sarjana '
+            + 'pieniä ja suuria putouksia sammaleisten kivikynnysten yli. Puisto suojelee '
+            + 'Krka-joen keski- ja alajuoksua lähellä Šibenikin kaupunkia, ja siitä tuli '
+            + 'Kroatian seitsemäs kansallispuisto vuonna 1985. Putousten juurella syntyvä '
+            + 'vesisumu ja jatkuva kohina saavat kynnykset tuntumaan enemmän eläviltä '
+            + 'kuin kiviltä.',
+          lyhyt: 'Skradinski buk on Krkan kansallispuiston tunnetuin travertiiniputoussarja.',
+          selite: 'Vesi kuohuu sammaleisten travertiinikynnysten yli Krkan '
+            + 'kansallispuistossa.',
+          lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Meri jossa on 89 saarta',
+          aika: 'nykyään',
+          tiedosto: 'South part of Kornat island and nearby islands.jpg',
+          teksti: 'Kornatin saaristo Pohjois-Dalmatiassa koostuu 89 saaresta noin 320 '
+            + 'neliökilometrin merialueella ja tunnetaan koko Välimeren tiheimpänä '
+            + 'saaristona. Saaret ovat enimmäkseen paljasta, kasvitonta kalkkikiveä, '
+            + 'jonka jyrkät valkoiset kalliot nousevat suoraan sinisestä merestä. '
+            + 'Saariston nimi tulee sen suurimmasta saaresta, Kornatista. Tuulien ja '
+            + 'aaltojen kuluttama maisema näyttää ilmasta kuvattuna kartalta revityiltä '
+            + 'palasilta, ja se on suosittu purjehtijoiden ja sukeltajien kohde.',
+          lyhyt: 'Kornatin 89 saarta muodostavat Välimeren tiheimmän saariston.',
+          selite: 'Kornatin saariston paljaita kalkkikkikallioita ilmasta kuvattuna.',
+          lahde: 'Bogdan Giușcă, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Vuori joka halkeaa kahtia',
+          aika: 'nykyään',
+          tiedosto: 'CRO Paklenica NP.jpg',
+          teksti: 'Velebit-vuoriston eteläisillä rinteillä Paklenica halkeaa kahdeksi '
+            + 'jyrkkäseinäiseksi kalkkikivirotkoksi, Velika ja Mala Paklenicaksi. '
+            + 'Vuosituhansien aikana virtaava vesi on syövyttänyt vuoreen kapean, satoja '
+            + 'metrejä syvän kanjonin, jonka pystysuorat seinämät houkuttelevat '
+            + 'kalliokiipeilijöitä ympäri Eurooppaa. Rotkon pohjalla kulkeva polku on '
+            + 'varjoisa ja viileä silloinkin, kun Dalmatian rannikolla paahtaa kesähelle. '
+            + 'Paklenica on yksi Kroatian vanhimmista kansallispuistoista ja sijaitsee '
+            + 'lähellä Starigradin kaupunkia.',
+          lyhyt: 'Paklenica on Velebit-vuoristoon syöpynyt jyrkkäseinäinen kalkkikivirotko.',
+          selite: 'Paklenican kansallispuiston kalkkikivistä vuoristomaisemaa Velebitillä.',
+          lahde: 'Tadam, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mistä kivilajista Plitvicen järviä erottavat padot muodostuvat?',
+        vaihtoehdot: [
+          'Travertiinista',
+          'Graniitista',
+          'Liuskeesta',
+          'Marmorista',
+        ],
+        oikea: 0,
+        fakta: 'Sammal ja levät sitovat kalkkikivipitoisesta vedestä sakkautuvan kiven yhä '
+          + 'paksummaksi.',
       },
     },
     {

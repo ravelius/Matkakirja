@@ -1871,6 +1871,8 @@ let variMaaNyt = null;
  */
 export function asetaVaritasonMaa(iso) {
   const uusi = iso || null;
+  // Liikkeessä lähtömaa pysyy (ks. HUNTU PYSYY LIIKKEEN AJAN).
+  if (!uusi && variLiike && variMaaNyt) return false;
   if (uusi === variMaaNyt) return false;
   variMaaNyt = uusi;
   // Johdettu tasolista on maakohtainen: se on laskettava uudestaan.
@@ -2019,16 +2021,58 @@ export function tasoituksenMaailma() {
  */
 let variLiike = false;
 
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * HUNTU PYSYY LIIKKEEN AJAN — LÄHTÖ- JA KOHDEMAA AUKKOINA (omistaja
+ * 21.9.2026, Fablen erä "huntu liikkeen ajan")
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Aiempi sääntö (16.9.) otti hunnun kaikkialta pois liikkeen ajaksi.
+ * Omistaja: huntu pysyy päällä myös nappulan etenemisen ajan, mutta
+ * liikkeen ajaksi SEKÄ lähtömaa ETTÄ kohdemaa ovat hunnun ulkopuolella
+ * (kaksi aukkoa maapolygonien mukaan); perillä aukko on vain
+ * kohdemaassa kuten ennenkin. Koskee liftausta, bussia, laivaa ja
+ * lentoa.
+ *
+ * MIKSI SE ON NYT HALPA, VAIKKA 16.9. EI OLLUT: kerma maalataan
+ * pelin omalla maamaskilla koko laatalle ja kohdemaan renkaat ovat
+ * REIKÄ (PAATOKSET 37 TARKENNUS, js/pallolaatat.js maalaaTasoitus) —
+ * värilaatan kuvaa ei piirretä lainkaan, joten laattaan poltettu peite
+ * ei ole enää tiellä. Kaksi reikää on sama maski kahdella rengasjoukolla,
+ * ja kohdemaan renkaat tulevat samasta aineistosta
+ * (maanAluevesiRenkaat) kuin lähtömaan.
+ *
+ * LÄHTÖMAA PYSYY VÄRITASON MAANA LIIKKEEN AJAN. Liikkeessä pelaajalla
+ * ei ole kaupunkia (cityOf on null), joten lauta pyytäisi maaksi
+ * nullin ja koko tasoitus katoaisi — juuri se "huntu katoaa kokonaan",
+ * jonka omistaja näki. Nollapyyntö jätetään liikkeen ajaksi huomiotta
+ * (asetaVaritasonMaa); perillä lauta antaa kohdemaan, ja se vaihtuu
+ * normaalisti.
+ *
+ * ILMAN RENKAITA EI TOISTA AUKKOA: jos maa-aineisto on vielä haussa,
+ * kohdemaan aukko jää pois ja huntu on kuten perillä lähtömaan
+ * ympärillä — kartta ei ole koskaan väärä kuva.
+ */
+let variLiikeKohde = null;
+
 /**
- * Kerma pois matkan ajaksi (true) ja takaisin perillä (false).
+ * Liikkeen huntu päälle (true, `kohdeIso` = matkan kohdemaa) ja pois
+ * perillä (false).
  *
  * @returns {boolean} true, jos tila vaihtui
  */
-export function asetaTasoituksenLiike(paalla) {
+export function asetaTasoituksenLiike(paalla, kohdeIso = null) {
   const uusi = Boolean(paalla);
-  if (uusi === variLiike) return false;
+  const kohde = uusi ? (kohdeIso || null) : null;
+  if (uusi === variLiike && kohde === variLiikeKohde) return false;
   variLiike = uusi;
+  variLiikeKohde = kohde;
   return true;
+}
+
+/** Liikkeen kohdemaa (ISO A3) tai null (savukkeet, testit). */
+export function tasoituksenLiikkeenKohde() {
+  return variLiikeKohde;
 }
 
 /** Onko matkan kermattomuus pyydetty (savukkeet, testit). */
@@ -2045,6 +2089,18 @@ export function tasoituksenLiike() {
 function variMaanRenkaat() {
   if (!variSuojaPolygonit || !variMaaNyt) return null;
   const renkaat = maanAluevesiRenkaat(variSuojaPolygonit, variMaaNyt, 0);
+  return renkaat?.length ? renkaat : null;
+}
+
+/**
+ * Liikkeen kohdemaan renkaat (toinen aukko), tai null jos liikettä ei
+ * ole, kohde on sama maa tai aineisto puuttuu. Sama välimuisti kuin
+ * lähtömaalla (maanAluevesiRenkaat).
+ */
+function variLiikkeenKohteenRenkaat() {
+  if (!variLiike || !variLiikeKohde || variLiikeKohde === variMaaNyt) return null;
+  if (!variSuojaPolygonit) return null;
+  const renkaat = maanAluevesiRenkaat(variSuojaPolygonit, variLiikeKohde, 0);
   return renkaat?.length ? renkaat : null;
 }
 
@@ -2159,18 +2215,23 @@ export function pyramidinTasoitus() {
    * Renkaat tulevat samasta aineistosta kuin suoja, joten ne ovat
    * valmiina täsmälleen silloin kun suoja on tarkka.
    */
-  const renkaat = variMaanRenkaat();
-  // Ilman renkaita matkan kermattomuus jää pois (ks. ILMAN RENKAITA);
-  // maailmanäkymä on kehittäjän oma näkymä ja saa jäädä ennalleen.
-  const kermatta = variMaailma || (variLiike && Boolean(renkaat));
-  const tila = variMaailma ? 'M' : (kermatta ? 'L' : 'K');
+  const omat = variMaanRenkaat();
+  /*
+   * LIIKKEESSÄ KAKSI AUKKOA (ks. HUNTU PYSYY LIIKKEEN AJAN): lähtömaan
+   * ja kohdemaan renkaat samaan reikälistaan. Huntu itse pysyy —
+   * `maailma` on tosi vain kehittäjän maailmanäkymässä.
+   */
+  const kohteen = omat ? variLiikkeenKohteenRenkaat() : null;
+  const renkaat = kohteen ? [...omat, ...kohteen] : omat;
+  const tila = variMaailma ? 'M' : (variLiike ? 'L' : 'K');
   return {
     kerma: vt.kerma || '#faf4d6',
     peitto,
     suoja: s,
-    maailma: kermatta,
+    maailma: variMaailma,
     renkaat,
-    avain: `${variMaaNyt}|${tila}|${renkaat ? renkaat.length : 0}`
+    liikkeenKohde: kohteen ? variLiikeKohde : null,
+    avain: `${variMaaNyt}|${tila}|${kohteen ? variLiikeKohde : '-'}|${renkaat ? renkaat.length : 0}`
       + `|${s.tarkka ? 'T' : 'L'}|${Math.round(s.x)}|${Math.round(s.y)}`
       + `|${Math.round(s.w)}|${Math.round(s.h)}`,
   };

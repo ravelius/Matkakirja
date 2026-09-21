@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1983';
+const CACHE = 'matkakirja-2026-08-09.1986';
 const SHELL = [
   './',
   './index.html',
@@ -15,6 +15,7 @@ const SHELL = [
   './css/fokusnosto.css',
   // Nosto aukeaa kuva edellä (js/nostokuva.js lataa tyylinsä itse).
   './css/nostokuva.css',
+  './css/kuvasarja.css',
   // Kaupungin iso pop-up ja turisti-info (js/kaupunkinosto.js lataa
   // tyylinsä itse; merkin oma tyyli on css/styles.css:ssä).
   './css/kaupunkinosto.css',
@@ -242,6 +243,7 @@ const SHELL = [
   './js/pallolauta/lauta.js',
   './js/pallolauta/avaus.js',
   './js/pallolauta/kamera.js',
+  './js/pallolauta/kameraloki.js',
   './js/pallolauta/linssikartta.js',
   './js/pallolauta/linssit.js',
   './js/pallolauta/merkit.js',
@@ -456,6 +458,18 @@ const SHELL = [
   './js/packs/maakartat.js',
   './js/packs/nahtavyysjutut.js',
   './js/packs/miniatyyrit.js',
+  // Ykköstason nostojen kuvamerkit (js/fokusnosto-symbolit.js NOSTOSYM_KUVAMERKIT).
+  './assets/nostotyypit/merkki-vuori.png',
+  './assets/nostotyypit/merkki-saari.png',
+  './assets/nostotyypit/merkki-jarvi.png',
+  './assets/nostotyypit/merkki-joki.png',
+  './assets/nostotyypit/merkki-meri.png',
+  './assets/nostotyypit/merkki-historia.png',
+  './assets/nostotyypit/merkki-kulttuuri.png',
+  './assets/nostotyypit/merkki-ruoka.png',
+  './assets/nostotyypit/merkki-kauppa.png',
+  './assets/nostotyypit/merkki-tekniikka.png',
+  './assets/nostotyypit/merkki-merenkulku.png',
   './assets/kartat/symbolit/sym-elain.webp',
   './assets/kartat/symbolit/sym-historia.webp',
   './assets/kartat/symbolit/sym-huuto.webp',

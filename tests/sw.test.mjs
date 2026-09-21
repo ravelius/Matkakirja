@@ -239,6 +239,9 @@ test('linssimoduuleissa ei ole SVG-suodattimia', () => {
 const NIPUTTAMATTOMAT = new Set([
   // Vanha PNG-B-sovitin säilyy vertailuun; pelissä käytetään pikselikasvoa.
   'js/livia-kasvot.js',
+  // Poltto-koe (20.9.2026): 1873-nimistön aineisto tools/generoi-laattapyramidi.mjs:lle
+  // (Node-generaattori), ei minkään selainmoduulin tuoma.
+  'js/packs/nimisto-1873.js',
   // Linssien aineistopaketit: vain linssimoduulit (js/linssit/) tuovat
   // näitä, ja ne jäävät listalta pois yllä kerrotusta syystä.
   'js/packs/linssi-historia.js',

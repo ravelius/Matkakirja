@@ -450,6 +450,35 @@ for (const ruutu of RUUDUT) {
       for (let i = 0; i < laput.length; i += 1) {
         for (let j = i + 1; j < laput.length; j += 1) if (limittyy(laput[i], laput[j])) pareja += 1;
       }
+      /*
+       * RUUTU NÄYTTÄÄ SEN, MINKÄ SOVITTELU PÄÄTTI (20.9.2026,
+       * laitetestaaja kierros 20b: Camarguen hevoset ja Camarguenvarsa
+       * päällekkäin). Lukko luettiin ennen vasta merkkien asettamisen
+       * jälkeen, joten DOM näytti datan kyljen ja piilotetun nimiön,
+       * vaikka `lappuLaatikot` (sovittelun usko) sanoi muuta — ja 9b
+       * mittasi vain uskoa. Nyt verrataan jokaisen lapun DOM-asento
+       * (rasterin resepti + siirto) sovittelun lappuun, ja lasketaan,
+       * että nimiöllisiä rastereita on täsmälleen lappujen verran
+       * (piilotettu nimiö ei piirry).
+       */
+      const domErot = [];
+      for (const lappu of laput) {
+        const el = document.querySelector(`.pallolauta-nosto[data-nosto="${lappu.id}"]`);
+        const g = el?.querySelector('.pallolauta-nosto-siirto');
+        if (!g) continue;
+        const domPuoli = g.dataset.resepti?.split('|')[2];
+        const [, tx = '0', ty = '0'] = g.style.transform.match(/translate\(([-\d.]+)px, ([-\d.]+)px\)/u) ?? [];
+        if (domPuoli !== lappu.puoli || Math.abs(Number(tx) - lappu.dx) > 0.5 || Math.abs(Number(ty) - lappu.dy) > 0.5) {
+          domErot.push(`${lappu.nimi}: sovittelu ${lappu.puoli} ${lappu.dx},${lappu.dy} / ruutu ${domPuoli} ${tx},${ty}`);
+        }
+      }
+      // Häivytetty nimiö on yhä DOMissa (nimiöt vakaat, 21.9.2026):
+      // vain näkyvät nimiörasterit lasketaan.
+      const domNimiollisia = [...document.querySelectorAll('.pallolauta-nosto:not(.pallolauta-poistuu) .pallolauta-nosto-siirto:not(.nostosym-nimio-piilossa) .nostosym-rasteri')]
+        .filter((i) => i.dataset.nimio).length;
+      const camargue = [...document.querySelectorAll('.pallolauta-nosto:not(.pallolauta-poistuu) .pallolauta-nosto-siirto:not(.nostosym-nimio-piilossa) .nostosym-rasteri[data-nimio*="Camargue"]')]
+        .map((i) => { const r = i.getBoundingClientRect(); return { n: i.dataset.nimio, x0: r.left, y0: r.top, x1: r.right, y1: r.bottom }; });
+      const camargueLimittyy = camargue.length === 2 && limittyy(camargue[0], camargue[1]);
       let viuhka = null;
       if (kerroin === 1 && aihemerkit.length) {
         const suurin = [...aihemerkit].sort((a, b) => b.maara - a.maara)[0];
@@ -530,6 +559,10 @@ for (const ruutu of RUUDUT) {
         aiheryhmissa: aihemerkit.reduce((a, r) => a + r.maara, 0),
         lappuja: laput.length,
         limitysPareja: pareja,
+        domErot,
+        domNimiollisia,
+        camargue: camargue.map((c) => c.n),
+        camargueLimittyy,
         viuhka,
       };
     }, [osuus, alkuPov]);
@@ -743,6 +776,11 @@ for (const ruutu of RUUDUT) {
     `${saapuen.aihemerkkeja} merkkiä, ${saapuen.aiheryhmissa} nostoa`);
   vaadi(`9b. ${ruutu.nimi}: limittyviä nimiöpareja enintään ${LIMITYSPARIEN_KATTO}`,
     saapuen.limitysPareja <= LIMITYSPARIEN_KATTO, `${saapuen.limitysPareja} paria`);
+  vaadi(`9g. ${ruutu.nimi}: ruudun laput ovat sovittelun asennossa ja piilotettu nimiö ei piirry`,
+    saapuen.domErot.length === 0 && saapuen.domNimiollisia === saapuen.lappuja,
+    `${saapuen.domErot.length} eroa (${saapuen.domErot.slice(0, 3).join(' | ')}); nimiöllisiä rastereita ${saapuen.domNimiollisia}, lappuja ${saapuen.lappuja}`);
+  vaadi(`9h. ${ruutu.nimi}: Camarguen hevoset ja Camarguenvarsa eivät limity ruudulla`,
+    !saapuen.camargueLimittyy, `ruudulla: ${saapuen.camargue.join(', ')}`);
   /*
    * 9c ja 9d VANHENTUNEET VARTIOINA 18.9.2026 (PAATOKSET 34 kohta 3 ja
    * kohta 17 b). Ne mittasivat aihemerkin viuhkan avautumista,

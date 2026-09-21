@@ -98,6 +98,12 @@ export const FOKUSKOHTEET_DEU = [
   {
     id: 'zugspitze',
     nimi: 'Zugspitze',
+    /*
+     * NOSTOTASOT (Fablen tilaus 20.9.2026, samaan tapaan kuin FRA:n
+     * docs/raportit/nostotasot-fra-20260920.md): ykköstaso = tunnetuin
+     * ja pelillisesti tärkein, isompi nimiö + kuvamerkki kartalla.
+     */
+    taso: 1,
     tyyppi: 'vuori',
     kysymykset: [
       'Miten vuorelle noustiin ennen hammasratasrataa?',
@@ -371,6 +377,12 @@ export const FOKUSKOHTEET_DEU = [
   {
     id: 'rein',
     nimi: 'Rein',
+    /*
+     * NOSTOTASOT (Fablen tilaus 20.9.2026, samaan tapaan kuin FRA:n
+     * docs/raportit/nostotasot-fra-20260920.md): ykköstaso = tunnetuin
+     * ja pelillisesti tärkein, isompi nimiö + kuvamerkki kartalla.
+     */
+    taso: 1,
     tyyppi: 'joki',
     kysymykset: [
       'Mikä Loreleyn tarina on?',
@@ -545,6 +557,12 @@ export const FOKUSKOHTEET_DEU = [
   {
     id: 'brandenburgin-portti',
     nimi: 'Brandenburgin portti',
+    /*
+     * NOSTOTASOT (Fablen tilaus 20.9.2026, samaan tapaan kuin FRA:n
+     * docs/raportit/nostotasot-fra-20260920.md): ykköstaso = tunnetuin
+     * ja pelillisesti tärkein, isompi nimiö + kuvamerkki kartalla.
+     */
+    taso: 1,
     // Kartalla lyhyt asu - koko nimi katkeaisi nimiossa (fokusnimet-vartio).
     nimio: 'Brandenburg',
     tyyppi: 'historia',
@@ -583,6 +601,12 @@ export const FOKUSKOHTEET_DEU = [
   {
     id: 'sanssouci',
     nimi: 'Sanssouci',
+    /*
+     * NOSTOTASOT (Fablen tilaus 20.9.2026, samaan tapaan kuin FRA:n
+     * docs/raportit/nostotasot-fra-20260920.md): ykköstaso = tunnetuin
+     * ja pelillisesti tärkein, isompi nimiö + kuvamerkki kartalla.
+     */
+    taso: 1,
     tyyppi: 'kulttuuri',
     symboli: 'kulttuuri',
     kysymykset: [
@@ -653,6 +677,12 @@ export const FOKUSKOHTEET_DEU = [
   {
     id: 'kolnin-tuomiokirkko',
     nimi: 'Kölnin tuomiokirkko',
+    /*
+     * NOSTOTASOT (Fablen tilaus 20.9.2026, samaan tapaan kuin FRA:n
+     * docs/raportit/nostotasot-fra-20260920.md): ykköstaso = tunnetuin
+     * ja pelillisesti tärkein, isompi nimiö + kuvamerkki kartalla.
+     */
+    taso: 1,
     // Kartalla lyhyt asu - koko nimi katkeaisi nimiossa (fokusnimet-vartio).
     nimio: 'Tuomiokirkko',
     tyyppi: 'historia',
@@ -757,6 +787,12 @@ export const FOKUSKOHTEET_DEU = [
   {
     id: 'wartburg',
     nimi: 'Wartburg',
+    /*
+     * NOSTOTASOT (Fablen tilaus 20.9.2026, samaan tapaan kuin FRA:n
+     * docs/raportit/nostotasot-fra-20260920.md): ykköstaso = tunnetuin
+     * ja pelillisesti tärkein, isompi nimiö + kuvamerkki kartalla.
+     */
+    taso: 1,
     tyyppi: 'historia',
     symboli: 'sana',
     kysymykset: [

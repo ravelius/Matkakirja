@@ -142,6 +142,53 @@ export function nostokuvanMitat({
 }
 
 /**
+ * KORTIN VAKIOLEVEYS RUUDULLA — sama kuvan muodosta riippumatta (omistaja
+ * 20.9.2026, nostokortti 2 kohta 2: *"noston leveys aina sama … pystykuva
+ * kapeampana kortin sisällä keskellä"*). Leveys on se, jonka vaakakuva
+ * (oletussuhde 3:2) saisi tällä ruudulla — eli entinen "iso vaakakuva
+ * täyttää kortin" -mitta — ja pystykuva sovitetaan siihen sisään
+ * (`nostokuvanSovitus`) eikä kavenna korttia.
+ *
+ * @param {{ruutuLeveys:number, ruutuKorkeus:number}} p
+ * @returns {number} kuva-alan vakioleveys pikseleinä (0 = ei ruutua)
+ */
+export function nostokuvanVakioleveys({ ruutuLeveys, ruutuKorkeus } = {}) {
+  return nostokuvanMitat({
+    kuvaLeveys: 3000, kuvaKorkeus: 3000 / NOSTOKUVA_OLETUSSUHDE, ruutuLeveys, ruutuKorkeus,
+  }).leveys;
+}
+
+/**
+ * KUVAN SOVITUS VAKIOLEVYISEEN KUVA-ALAAN (contain): leveys enintään
+ * vakioleveys, korkeus enintään kuvan oman muodon korkeuskatto
+ * (nostokuvanMitat, ruudun korkeus miinus kuvateksti ja reunus) — kuva
+ * mahtuu aina kokonaan ruudulle, ja pystykuva jää kapeammaksi keskelle.
+ *
+ * @param {{kuvaLeveys:number, kuvaKorkeus:number, ruutuLeveys:number,
+ *   ruutuKorkeus:number}} p
+ * @returns {{leveys:number, korkeus:number, vakioleveys:number}}
+ */
+export function nostokuvanSovitus({
+  kuvaLeveys, kuvaKorkeus, ruutuLeveys, ruutuKorkeus,
+} = {}) {
+  const vakioleveys = nostokuvanVakioleveys({ ruutuLeveys, ruutuKorkeus });
+  const oma = nostokuvanMitat({
+    kuvaLeveys, kuvaKorkeus, ruutuLeveys, ruutuKorkeus,
+  });
+  if (!vakioleveys || !oma.leveys || !oma.korkeus) return { leveys: 0, korkeus: 0, vakioleveys };
+  const kelpo = Number.isFinite(kuvaLeveys) && kuvaLeveys > 0
+    && Number.isFinite(kuvaKorkeus) && kuvaKorkeus > 0;
+  const suhde = kelpo ? kuvaLeveys / kuvaKorkeus : NOSTOKUVA_OLETUSSUHDE;
+  let leveys = Math.min(oma.leveys, vakioleveys);
+  let korkeus = leveys / suhde;
+  if (korkeus > oma.korkeus) {
+    korkeus = oma.korkeus;
+    leveys = korkeus * suhde;
+  }
+  return { leveys, korkeus, vakioleveys };
+}
+
+/**
  * LUKITUN LAATIKON KORKEUS kuvan omasta suhteesta (vaihe 2).
  *
  * Leveys on jo lukittu (kortti on sen levyinen), joten korjattavaa on
@@ -342,18 +389,22 @@ export function nostokuvaAloita({
    * oikea kuva on latautunut JA ollaan yhä vaiheessa 1. Vaiheen 2
    * jälkeen mittaan ei kosketa: kuvan laatikko on silloin lukossa.
    */
+  let vakioleveys = 0;
   const mitoita = () => {
     const ruutu = nostokuvaRuutu();
     if (!ruutu.leveys || !ruutu.korkeus) return;
-    const { leveys, korkeus } = nostokuvanMitat({
+    // Vakioleveys ja contain-sovitus (nostokuvanSovitus): kortti on aina
+    // vaakakuvan levyinen, pystykuva kapeampana keskellä.
+    const sovitus = nostokuvanSovitus({
       kuvaLeveys: img.naturalWidth,
       kuvaKorkeus: img.naturalHeight,
       ruutuLeveys: ruutu.leveys,
       ruutuKorkeus: ruutu.korkeus,
     });
-    if (!leveys || !korkeus) return;
-    img.style.width = `${Math.round(leveys)}px`;
-    img.style.height = `${Math.round(korkeus)}px`;
+    if (!sovitus.leveys || !sovitus.korkeus) return;
+    vakioleveys = sovitus.vakioleveys;
+    img.style.width = `${Math.round(sovitus.leveys)}px`;
+    img.style.height = `${Math.round(sovitus.korkeus)}px`;
   };
 
   /** Elementin vaakasuora oma tila (reunus + sisennys + marginaali). */
@@ -390,7 +441,9 @@ export function nostokuvaAloita({
     const kaista = Math.max(0, sisalto.offsetWidth - sisalto.clientWidth);
     const vara = reunat(kortti) + reunat(sisalto) + kaista;
     kortti.style.maxWidth = `${enintaan}px`;
-    kortti.style.width = `${Math.round(Math.min(kuvanLeveys + vara, enintaan))}px`;
+    // KORTIN LEVEYS ON VAKIO (nostokuvanVakioleveys), ei kuvan leveys:
+    // pystykuva ei kavenna korttia (omistaja 20.9.2026).
+    kortti.style.width = `${Math.round(Math.min((vakioleveys || kuvanLeveys) + vara, enintaan))}px`;
   };
 
   /**
@@ -497,8 +550,19 @@ export function nostokuvaAloita({
       ruutuKorkeus: nostokuvaRuutu().korkeus,
       vierityskatto: Math.max(0, sisalto.scrollHeight - sisalto.clientHeight),
     });
-    sisalto.scrollTop = korjaus.vieritys;
-    kortti.style.top = `${korjaus.ylin}px`;
+    /*
+     * OTSIKKO JA TYYPPIRIVI NÄKYVÄT AINA (omistaja 20.9.2026, nostokortti 2
+     * kohta 4, kaappaus nosto-pystykuva-ylaosa-piilossa-v1982.webp:
+     * pystykuvan kortissa otsikko leikkautui yläreunaan). Ennen sisältö
+     * vieritettiin `korjaus.vieritys` verran, jotta KUVA pysyi
+     * pikselilleen paikallaan — ja juuri se vieritys vei otsikon
+     * yläreunan taakse. Nyt vieritys on nolla ja kortti alkaa
+     * marginaalista: kuva saa siirtyä alaspäin otsikon verran, mikä on
+     * pienempi paha kuin piilossa oleva otsikko. Vakioleveys ja
+     * korkeuskatto (nostokuvanSovitus) pitävät kuvan ruudulla.
+     */
+    sisalto.scrollTop = 0;
+    kortti.style.top = `${Math.max(NOSTOKUVA_MARGINAALI, korjaus.ylin)}px`;
     /*
      * KORTIN ALALAITA RUUDUN SISÄÄN. Kuva pysyy paikallaan siksi, että
      * kortti saa liukua alaspäin — mutta silloin sen alaosa jäisi
@@ -519,9 +583,12 @@ export function nostokuvaAloita({
      * siirretään kortin `top`-arvoon, joka on murto-osatarkka: mittari
      * (tools/mittaa-nostokuva.mjs) vaatii täsmälleen nollan.
      */
+    // Jäännös korjataan vain, jos kortti ei jo lepää yläreunassa:
+    // otsikon näkyvyys voittaa kuvan paikallaanpysymisen (ks. yllä).
     const jaannos = img.getBoundingClientRect().top - ennen.top;
-    if (jaannos) {
-      kortti.style.top = `${(Number.parseFloat(kortti.style.top) || 0) - jaannos}px`;
+    const yla = Number.parseFloat(kortti.style.top) || 0;
+    if (jaannos && yla - jaannos >= NOSTOKUVA_MARGINAALI) {
+      kortti.style.top = `${yla - jaannos}px`;
     }
   };
 

@@ -22751,8 +22751,40 @@ export class UI {
    * (perustelu js/laattapyramidi.js, KERMA POIS MATKAN AJAKSI).
    * Tasokartalla kermaa ei ole, joten kutsu on siellä tyhjä sana.
    */
-  matkanKermattomuus(pois) {
-    if (this.pallolautaPaalla()) this.pallolauta?.matkanKerma?.(Boolean(pois));
+  /*
+   * TÄSMENNYS 21.9.2026 (omistaja, Fablen erä "huntu liikkeen ajan"):
+   * huntu PYSYY liikkeen ajan, mutta lähtö- JA kohdemaa ovat sen
+   * ulkopuolella — `kohdeIso` kertoo laudalle toisen aukon
+   * (js/laattapyramidi.js HUNTU PYSYY LIIKKEEN AJAN). Perillä aukko
+   * on vain kohdemaassa kuten ennen.
+   */
+  matkanKermattomuus(pois, kohdeIso = null) {
+    if (this.pallolautaPaalla()) this.pallolauta?.matkanKerma?.(Boolean(pois), kohdeIso);
+  }
+
+  /**
+   * MATKAN KOHDEMAA (ISO A3) polusta: viimeinen kaupunki, tai jos polku
+   * päättyy reitin varteen (liftaus pysähtyy askelpisteeseen), se
+   * reitin pää, jota kohti kuljetaan. Null, jos maata ei voi päätellä —
+   * silloin huntuun jää vain lähtömaan aukko.
+   */
+  matkanKohdemaa(from, path) {
+    const cityCountry = this.game?.pack?.map?.cityCountry;
+    if (!cityCountry || !Array.isArray(path) || !path.length) return null;
+    const viimeinen = path[path.length - 1];
+    if (viimeinen?.type === 'city') return cityCountry[viimeinen.city] ?? null;
+    if (viimeinen?.type !== 'edge') return null;
+    const e = this.game?.board?.edgeById?.get(viimeinen.edge);
+    if (!e) return null;
+    // Suunta: edellinen polun piste (tai lähtö) kertoo, kumpaa päätä
+    // kohti idx kasvaa — a→b kun idx nousee, b→a kun laskee.
+    const edellinen = path.length > 1 ? path[path.length - 2] : from;
+    let kohti = null;
+    if (edellinen?.type === 'city') kohti = e.a === edellinen.city ? e.b : e.a;
+    else if (edellinen?.type === 'edge' && edellinen.edge === viimeinen.edge) {
+      kohti = viimeinen.idx > edellinen.idx ? e.b : e.a;
+    }
+    return kohti ? (cityCountry[kohti] ?? null) : null;
   }
 
   /**
@@ -23180,7 +23212,7 @@ export class UI {
      * liikkeelle, kartta on jo kermaton. Palautus on tämän funktion
      * lopussa ja kuolleen pelin haarassa, jottei huntu jää pois.
      */
-    this.matkanKermattomuus(true);
+    this.matkanKermattomuus(true, this.matkanKohdemaa(from, path));
 
     /*
      * === 1. ENNAKKOZOOMI, JA VASTA SITTEN NAPPULA ==================

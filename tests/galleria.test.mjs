@@ -116,7 +116,10 @@ test('nuolialueet lukevat muuttujaa eivätkä omaa prosenttilukuaan', () => {
     // Kortin kolmas selailunuoli on täkynoston oma kuvasarja
     // (js/fokusnosto.js piirraNostonKuvasarja, 14.9.2026): sama sääntö,
     // sama muuttuja, joten se kuuluu samaan valitsinryhmään.
-    ['css/fokusnosto.css', '.hetki-kuvanuoli,\n.skandaali-kuvanuoli,\n.nostosarja-kuvanuoli'],
+    ['css/fokusnosto.css', '.hetki-kuvanuoli,\n.skandaali-kuvanuoli'],
+    // Kortin karuselli muutti omaan tiedostoonsa (css/kuvasarja.css,
+    // 20.9.2026), jonka js/kuvasarja.js lataa itse — sama sääntö.
+    ['css/kuvasarja.css', '.nostosarja-kuvanuoli'],
   ];
   for (const [tiedosto, valitsin] of kohteet) {
     const css = lue(tiedosto);

@@ -44,6 +44,26 @@ import { kortinKuvalahde } from './tekijakortti.js';
 import { lisaaHavainnekuvaMerkki } from './havainnekuva.js';
 import { sfx } from './sound.js';
 
+/** Tyylitiedoston linkin tunnus (css/kuvasarja.css, ladataan kerran). */
+const KUVASARJA_TYYLIN_TUNNUS = 'kuvasarja-tyyli';
+
+/**
+ * Karusellin oma tyylitiedosto sivulle, jos sitä ei vielä ole (sama
+ * tapa kuin js/nostokuva.js). Yhden tiedoston versiossa tyylit ovat jo
+ * <style>-lohkossa eikä peruslinkkiä ole.
+ */
+function kuvasarjaLataaTyyli() {
+  if (typeof document === 'undefined') return;
+  if (document.getElementById(KUVASARJA_TYYLIN_TUNNUS)) return;
+  const peruslinkki = document.querySelector('link[rel="stylesheet"][href*="styles.css"]');
+  if (!peruslinkki) return;
+  const linkki = document.createElement('link');
+  linkki.id = KUVASARJA_TYYLIN_TUNNUS;
+  linkki.rel = 'stylesheet';
+  linkki.href = new URL('kuvasarja.css', peruslinkki.href).href;
+  document.head.appendChild(linkki);
+}
+
 /** Pyyhkäisyn vähimmäismatka vaakasuunnassa (px). */
 export const KUVASARJA_PYYHKAISY_PX = 30;
 
@@ -59,7 +79,8 @@ export const KUVASARJA_PYYHKAISY_PX = 30;
  * @param {string} asetukset.laskuriLuokka laskurin luokka
  * @param {number} asetukset.leveys kuvan pyydetty leveys pikseleinä
  * @param {(img, kuva, leveys, onVirhe) => void} asetukset.lataa kuvan lataaja
- * @param {(ui, kuva, ankkuri: () => Element) => void} asetukset.avaaSuurennos
+ * @param {(ui, kuva, ankkuri: () => Element, sarja: object) => void} asetukset.avaaSuurennos
+ *   `sarja` = { kuvat, kohdalla, valitse(i) } — suurennos selaa samaa listaa
  * @param {(nappi: Element, kuva: object) => void} [asetukset.koristele]
  *   kuvakohtainen koriste napin sisään (esim. ihmenauha); kutsutaan
  *   joka näytöllä, edellinen koriste (`.kuvasarja-koriste`) poistetaan
@@ -75,6 +96,7 @@ export function piirraKuvasarja(ui, sailio, kuvat, {
   kuvatekstiLuokka = 'fokusnosto-kuvaselite', lahdeLuokka = 'fokusnosto-kuvalahde',
   kuvatekstiKaare = 'fokusnosto-kuvateksti', nappiLuokka = 'fokusnosto-kuvanappi',
 }) {
+  kuvasarjaLataaTyyli();
   const jaljella = [...kuvat];
   const kehys = valmisKehys ?? html('figure', kehysLuokka);
   const nappi = valmisKehys
@@ -141,6 +163,11 @@ export function piirraKuvasarja(ui, sailio, kuvat, {
     // Suurennos näyttää sen kuvan, joka on kohdalla — myös silloin kun
     // napin avaa js/nostokuva.js.
     kehys.nostokuvaKuva = kuva;
+    // …ja saa koko sarjan selattavakseen (nostokortti 2 kohta 3,
+    // js/fokuskohteet.js avaaKohdeSuurennos `sarja`): suurennoksessa
+    // vaihdettu kuva vaihtuu myös kortille, jotta sulkeminen laskeutuu
+    // oikeaan pikkukuvaan.
+    kehys.nostokuvaSarja = sarja;
     if (koristele) {
       nappi.querySelector('.kuvasarja-koriste')?.remove();
       koristele(nappi, kuva);
@@ -154,14 +181,19 @@ export function piirraKuvasarja(ui, sailio, kuvat, {
       nayta();
     });
   };
-  nayta(!valmisKehys);
-
   const siirry = (suunta) => {
     if (jaljella.length < 2) return;
     kohdalla += suunta;
     sfx.play('paper');
     nayta();
   };
+  /** Suurennoksen selauskuvaus: sama lista, sama kohta, äänetön valinta. */
+  const sarja = () => ({
+    kuvat: jaljella,
+    kohdalla,
+    valitse: (i) => { if (i !== kohdalla) { kohdalla = i; nayta(); } },
+  });
+  nayta(!valmisKehys);
 
   // Pyyhkäisyn päättävä click ei saa avata suurennosta.
   let pyyhkaisty = 0;
@@ -178,7 +210,7 @@ export function piirraKuvasarja(ui, sailio, kuvat, {
     nappi.addEventListener('click', (tapahtuma) => {
       tapahtuma.stopPropagation();
       if (!jaljella.length) return;
-      avaaSuurennos(ui, jaljella[kohdalla], () => nappi);
+      avaaSuurennos(ui, jaljella[kohdalla], () => nappi, sarja());
     });
   }
 
