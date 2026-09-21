@@ -403,3 +403,7 @@ Codex 21.9.2026 klo 11.15: ACL ryhmalle localaccounts (luku, muokkaus, luonti, u
 ## v1989 MAINISSA (PR #2641); LAITETESTAAJAN LUOVUTUS fc3df934 (21.9.2026 klo 11.22)
 
 v1989: kartan pieni liike ja pollon Matkakirja-linkit mergetty mainiin (87262d5d), v1973-prep nollattu. Laitetestaaja luovutti siirtoon (haara laitetestaaja fc3df934). Kaikki viisi roolisessiota ovat pysahtyneet luovutuksiin; Julkaisijan luovutus tulossa.
+
+## MAC-SIIRTO: YMPARISTO PYSTYTETTY KAYTTAJASSA koodaus (21.9.2026 klo 12.05)
+
+Fable ajoi siirto-ohjeen (docs/raportit/siirto-toiseen-kayttajaan-20260921.md) kohdat 3-6 uudessa Mac-käyttäjässä koodaus. Tehty ja tarkistettu: zshrc (Homebrew shellenv + avaintiedoston source; AMPARI asetettu, node v22 avaintiedoston PATH:sta), git (safe.directory *, identiteetti ennallaan, seitsemän worktreetä puhtaita, worktree prune poisti neljä kuollutta wt-*-viitettä), gh (ravelius, scopet repo+workflow), Clauden muisti kopioitu yhteiskansiosta (14 tiedostoa), Playwright chromium, node --test ok, Xcode 27.0 lisenssi kunnossa, CI-ajurit SamiMacStudio2 ja SamiMacStudio2-testit asennettu LaunchAgenteiksi ja online, tuotanto APP_VERSION 1989. Ei jäänyt tekemättä. Matkakirja-opus-2-worktree (pelikoodari-v1982-savukkeet) jätettiin paikalleen.
