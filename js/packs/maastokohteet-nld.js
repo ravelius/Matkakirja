@@ -342,6 +342,7 @@ export const MAASTOKOHTEET_NLD = [
     ],
     nimi: 'Vredespaleis',
     tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Mikä pysyvä välitystuomioistuin on?',
       'Kuka maksoi rauhanpalatsin?',
@@ -476,6 +477,7 @@ export const MAASTOKOHTEET_NLD = [
     ],
     nimi: 'Giethoorn',
     tyyppi: 'kulttuuri',
+    taso: 1,
     kysymykset: [
       'Miksi kylässä ei ollut katuja?',
       'Mistä kylän järvet syntyivät?',
@@ -607,6 +609,7 @@ export const MAASTOKOHTEET_NLD = [
     },
     nimi: 'Afsluitdijk',
     tyyppi: 'tekniikka',
+    taso: 1,
     kysymykset: [
       'Mikä Zuiderzee oli?',
       'Miksi pato rakennettiin vasta 1900-luvulla?',
