@@ -223,3 +223,7 @@ Taso 1: nimio 1,3x tummemmalla, Codexin kuvamerkki (assets/nostotyypit/merkki-<t
 ## V1984 TUOTANNOSSA 04.47 (21.9.2026 klo 04.49)
 
 Nostokortti 2, kaupunkiliuskan lepotesti ja CI-napautus, liftauszoomin juurisyy (matkaZoomirajat), Camargue, astro-palkit, kartuscha 9 maata, huntu liikkeen ajan + kameraloki (jos ehti). Seuraavaksi v1985: osoitin 20260921a + luettelo + nostotasot.
+
+## AVAINTEN TULOSTUS JULKAISIJAN TRANSKRIPTIIN (Julkaisija ilmoitti, ei kiireellinen) (21.9.2026 klo 05.41)
+
+Julkaisija ajoi vahingossa head ~/.zshrc etsiessaan AMPARI/PAATE-muuttujia: avainten selvakieliset arvot tulostuivat sen oman session tyokalulokiin (ei repoon, ei viesteihin). Sessio on Remote Control -yhteydessa, joten transkripti voi olla claude.ai:ssa. Raamatun MAC STUDIO -kohtaan lisatty AVAINSAANTO: avaintiedostoja ei tulosteta, vain nimet grepilla. Omistaja paattaa kierratetaanko avaimet (GitHub Actions secrets, amparin avaimet, gh-token).
