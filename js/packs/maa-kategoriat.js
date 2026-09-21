@@ -18927,6 +18927,233 @@ export const MAA_KATEGORIAT = {
       },
     },
     {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Viisi käännekohtaa, joissa kasakkahetmani valitsi liittolaisensa, '
+        + 'nuori tasavalta ehti elää neljä vuotta, ja valtio yritti vaientaa oman '
+        + 'nälänhätänsä.',
+      nostot: [
+        {
+          otsikko: 'Hetmani valitsi tsaarin liittolaisekseen',
+          aika: '1654',
+          tiedosto: '2019-07-21 Monument to Bohdan Khmelnytsky in Kyiv by Mikhail Mikeshin.jpg',
+          teksti: 'Hetmani Bohdan Hmelnytskyi nousi 1648 kapinaan Puolan–Liettuan '
+            + 'valtakuntaa vastaan, ja vuoteen 1654 mennessä kasakkahetmanaatti '
+            + 'tarvitsi vahvan suojelijan. Tammikuussa 1654 kasakat vannoivat '
+            + 'Perejaslavin kaupungissa uskollisuudenvalan Venäjän tsaari '
+            + 'Aleksille, ja Moskovasta saapunut lähettiläs Vasili Buturlin '
+            + 'vahvisti sopimuksen. Vastineeksi sotilaallisesta avusta '
+            + 'hetmanaatti sai laajan itsehallinnon niin sanotuissa maaliskuun '
+            + 'artikloissa. Sopimus sytytti Venäjän ja Puolan välisen sodan, ja '
+            + 'sen todellisesta luonteesta – liitosta vai alistumisesta – '
+            + 'kiistellään historioitsijoiden kesken yhä.',
+          lyhyt: 'Hetmani Bohdan Hmelnytskyi vannoi kasakoiden puolesta uskollisuutta Venäjän tsaarille 1654.',
+          selite: 'Hmelnytskyin ratsastajapatsas Kiovassa, taustalla Pyhän '
+            + 'Mikaelin luostarin kupolit. Patsas paljastettiin vuonna 1888.',
+          lahde: 'Maksym Kozlenko, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Bohdan H’melnytskyi',
+        },
+        {
+          otsikko: 'Nuorisoseurasta syntyi armeijan siemen',
+          aika: '1914',
+          tiedosto: 'Ukrainian Sich Riflemen Monument on Lychakiv Cemetery 04.jpg',
+          teksti: 'Galitsian ukrainalaiset olivat 1900-luvun alussa perustaneet '
+            + 'satoja Sitš-nimisiä liikunta- ja palokuntaseuroja, jotka hakivat '
+            + 'innoituksensa kasakoiden Zaporižžjan Sitšistä. Elokuussa 1914 '
+            + 'näistä seuroista koottiin Itävalta-Unkarin armeijaan noin 5 000 '
+            + 'miehen vapaaehtoislegioona, Ukrainalaiset sitšiläisampujat, joka '
+            + 'taisteli Venäjää vastaan Karpaateilla ja Galitsiassa. Sodan '
+            + 'päätyttyä legioonan sotilaat muodostivat Länsi-Ukrainan '
+            + 'kansantasavallan armeijan ytimen ja taistelivat vielä Puolaa '
+            + 'vastaan, kunnes yksikkö hajotettiin toukokuussa 1920. Lvivin '
+            + 'Lytšakivin hautausmaalle pystytettiin heille muistomerkki.',
+          lyhyt: 'Ukrainalaiset sitšiläisampujat oli 1914 perustettu galitsialainen vapaaehtoislegioona.',
+          selite: 'Lvivin Lytšakivin hautausmaan muistomerkki ukrainalaisille '
+            + 'sitšiläisampujille, siivekäs hahmo pylvään huipulla.',
+          lahde: 'Dmytro Petishkin, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Tasavalta eli neljä vuotta ennen kuin se hävisi',
+          aika: '1918',
+          tiedosto: 'Standard of the President of Ukraian People\'s Republic 1918.png',
+          teksti: 'Historioitsija Mychailo Hruševskyin johtama Keskusrada '
+            + 'julisti Ukrainan autonomiaksi kesäkuussa 1917 ja täysin '
+            + 'itsenäiseksi kansantasavallaksi 22. tammikuuta 1918, kun '
+            + 'Venäjällä riehui vallankumous. Nuori tasavalta ehti saada oman '
+            + 'lipun, vaakunan – kultaisen kolmikärjen eli tryzubin – ja '
+            + 'kansallislaulun, joka on Ukrainan hymni yhä tänään. Se kuitenkin '
+            + 'joutui heti sotaan bolševikkeja vastaan, ja vuoteen 1921 '
+            + 'mennessä Puna-armeija oli vallannut sen alueet. Hallitus jatkoi '
+            + 'maanpaossa aina vuoteen 1992, jolloin se luovutti valtuutensa '
+            + 'itsenäistyneelle Ukrainalle.',
+          lyhyt: 'Ukrainan kansantasavalta julistautui itsenäiseksi 1918 mutta hävisi sodassa bolševikeille.',
+          selite: 'Ukrainan kansantasavallan presidentin lippu vuodelta 1918, '
+            + 'keskellä kultainen tryzub-vaakuna.',
+          lahde: 'Evostoryarchive, Wikimedia Commons (julkinen, Ukrainan '
+            + 'tekijänoikeuslain nojalla)',
+          wiki: 'Ukrainan kansantasavalta',
+        },
+        {
+          otsikko: 'Nälänhätä jota valtio yritti salata',
+          aika: '1932–1933',
+          tiedosto: 'Holodomor victims Memorial.jpg',
+          teksti: 'Neuvostojohtaja Josif Stalinin vuonna 1929 käynnistämä '
+            + 'maatalouden pakkokollektivisointi ajoi ukrainalaiset '
+            + 'talonpojat luopumaan maastaan ja omaisuudestaan, ja '
+            + 'vastarintaa yritettiin murtaa kiristämällä viljan pakko-otot '
+            + 'äärimmilleen. Elokuussa 1932 Stalin kirjoitti, että "jos emme '
+            + 'nyt toimi, voimme menettää Ukrainan" – ja syksyllä tehdyt '
+            + 'päätökset syvensivät nälänhätää nimenomaan Ukrainassa. Arviot '
+            + 'uhrien määrästä vaihtelevat muutamasta miljoonasta yli '
+            + 'kymmeneen miljoonaan, eikä yksimielisyyttä ole saavutettu, '
+            + 'mutta parikymmentä valtiota on tunnustanut tapahtuman '
+            + 'kansanmurhaksi. Neuvostoliitossa nälänhädästä vaiettiin aina '
+            + 'perestroikaan asti.',
+          lyhyt: 'Pakkokollektivisointi ja viljan pakko-otot aiheuttivat Ukrainassa joukkokuoleman 1932–1933.',
+          selite: 'Holodomorin uhrien muistomerkki Kiovassa, taustalla '
+            + 'Petšerskin luostarin kultaiset kupolit.',
+          lahde: 'Francisco Anzola, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Holodomor',
+        },
+        {
+          otsikko: 'Yöllä kirjoitettu teksti päätti imperiumin',
+          aika: '1991',
+          tiedosto: 'Kiev-VerkhovnaRadaBuilding 03.jpg',
+          teksti: 'Kun Moskovassa yritettiin elokuun 19. päivä 1991 '
+            + 'vallankaappausta, Ukrainan korkein neuvosto kokoontui '
+            + 'hätäistuntoon ja hyväksyi kahden yön kiireisen valmistelun '
+            + 'jälkeen itsenäisyysjulistuksen 24. elokuuta äänin 321–2. '
+            + 'Kansanäänestys vahvisti päätöksen 1. joulukuuta yli 90 '
+            + 'prosentin kannatuksella, ja Neuvostoliitto lakkasi olemasta '
+            + 'joulukuun 26. päivänä. Samana päivänä kun julistus '
+            + 'hyväksyttiin, Kiovan kaupunginhallitus päätti nimetä lokakuun '
+            + 'vallankumouksen aukion uudelleen: siitä tuli Itsenäisyyden '
+            + 'aukio. Julistuksen teksti on kiinnitetty pronssilaattaan '
+            + 'parlamenttitalon seinään.',
+          lyhyt: 'Korkein neuvosto hyväksyi Ukrainan itsenäisyysjulistuksen 24. elokuuta 1991 äänin 321–2.',
+          selite: 'Ukrainan itsenäisyysjulistuksen teksti pronssilaatassa '
+            + 'Verhovna Radan eli parlamenttitalon seinällä Kiovassa.',
+          lahde: 'Vincent de Groot, Wikimedia Commons (CC BY-SA)',
+          wiki: 'Ukrainan itsenäisyysjulistus',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Millä äänimäärällä Ukrainan korkein neuvosto hyväksyi itsenäisyysjulistuksen 24. elokuuta 1991?',
+        vaihtoehdot: [
+          '321 puolesta, 2 vastaan',
+          'Yksimielisesti, ilman vastaäänin',
+          '180–170',
+          'Julistus hylättiin ensimmäisellä äänestyskierroksella',
+        ],
+        oikea: 0,
+        fakta: 'Julistus hyväksyttiin ylivoimaisella enemmistöllä, 321 äänellä '
+          + 'puolesta ja vain 2 vastaan, 360 läsnäolijasta.',
+      },
+    },
+    {
+      id: 'kulttuuri',
+      nimi: 'Kulttuuri',
+      johdanto: 'Kasvoton nukke, sokea laulaja ja paita joka paljasti '
+        + 'kotiseudun – Ukrainan kansanperinne piilotti viestejä, joita vain '
+        + 'tuntija osasi lukea.',
+      nostot: [
+        {
+          otsikko: 'Kuvio kertoi kotiseudun',
+          aika: '1800-luku',
+          tiedosto: 'Ivan Honchar museum vyshyvanka 12.JPG',
+          teksti: 'Kirjottu paita eli vyšyvanka on osa ukrainalaista '
+            + 'kansallispukua, ja kirjonnan juuret ulottuvat skyyttalaiseen '
+            + 'taiteeseen 400-luvulle eaa. asti. Perinteisiä värejä ovat '
+            + 'punainen, musta ja valkoinen, ja jokaisella seudulla oli omat '
+            + 'kuvionsa ja ompelutekniikkansa: tuntija saattoi katsoa '
+            + 'paidasta, mistä kylästä sen käyttäjä oli kotoisin. Langat '
+            + 'värjättiin ennen kasvien kuorella, lehdillä ja marjoilla. '
+            + 'Vuonna 2006 opiskelija Lesia Voroniuk perusti Tšernivtsin '
+            + 'yliopistossa Vyšyvanka-päivän, josta on kasvanut toukokuun '
+            + 'kolmantena torstaina vietettävä kansainvälinen juhla, jolloin '
+            + 'ukrainalaiset ympäri maailmaa pukevat ylleen kirjontapaidan.',
+          lyhyt: 'Vyšyvanka-paidan kuviot kertoivat perinteisesti käyttäjänsä kotiseudun.',
+          selite: 'Käsin kirjottu naisten paita 1900-luvun alusta, Ivan '
+            + 'Hončarin museon kokoelmasta Kiovasta.',
+          lahde: 'Riwnodennyk, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Vyšyvanka',
+        },
+        {
+          otsikko: 'Sokea laulaja kantoi kansan muistia',
+          aika: '1441',
+          tiedosto: '02022 0881 Anonymus, Cossack the Bandura Player, 1832.jpg',
+          teksti: 'Puolalaisessa kronikassa mainitaan jo vuonna 1441 hovissa '
+            + 'soittanut bandura, luuttumainen kielisoitin, jossa oli aluksi '
+            + 'vain 5–12 kieltä. Soitinta soittivat usein sokeat kiertelevät '
+            + 'muusikot, kobzarit, jotka lauloivat dumeiksi kutsuttuja '
+            + 'kertovia balladeja kasakoiden taisteluista ja sankareista – he '
+            + 'olivat kansan elävä historiankirja aikana, jolloin harva osasi '
+            + 'lukea. Neuvostovalta lopetti kiertelevän kobzariperinteen '
+            + '1930-luvulla vangitsemalla ja karkottamalla soittajia '
+            + 'Siperiaan. Bandurassa on nykyisin 56–68 kieltä, ja soitin näkyy '
+            + 'usein "kasakka Mamai" -kansantaiteessa, jossa kasakka istuu '
+            + 'hevosensa vierellä bandura sylissään.',
+          lyhyt: 'Sokeat kobzarit kiersivät maata soittaen banduraa ja laulaen kasakoiden tarinoita.',
+          selite: '"Kasakka Mamai" -maalaus vuodelta 1832: kasakka istuu '
+            + 'banduransa kanssa hevosensa vieressä.',
+          lahde: 'Silar, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Bandura',
+        },
+        {
+          otsikko: 'Sotatanssista tuli kansallistanssi',
+          aika: '1500-luku',
+          tiedosto: 'Split jump in Hopak dance performed by the Kalyna Performing Art Ensemble.jpg',
+          teksti: 'Hopakin nimi tulee sanasta hopaty, hypätä, ja huudahduksesta '
+            + '"hop!". Tanssi syntyi 1500-luvulla Zaporižžjan kasakoiden '
+            + 'juhlana: kun sotaretkeltä palattiin voittajina, miehet '
+            + 'tanssivat improvisoiden akrobaattisia hyppyjä ja lavastivat '
+            + 'taisteluliikkeitä oikeilla miekoilla. Alun perin vain miehet '
+            + 'tanssivat hopakia, mutta myöhemmin siitä tuli pari- ja '
+            + 'ryhmätanssi. 1900-luvulla koreografit, muun muassa Pavlo '
+            + 'Virskyin nimeä kantava kansantanssiyhtye, muokkasivat siitä '
+            + 'näyttämölle sovitetun esitystanssin, jota ukrainalaisyhteisöt '
+            + 'esittävät nykyään ympäri maailmaa – myös maastamuuttajien '
+            + 'juhlissa Kanadassa ja Yhdysvalloissa.',
+          lyhyt: 'Hopak syntyi 1500-luvulla kasakoiden voitontanssina ja on nykyään Ukrainan kansallistanssi.',
+          selite: 'Hopak-tanssija ilmahypyssä Kalyna-tanssiryhmän esityksessä.',
+          lahde: 'Mykola Swarnyk, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Hopak',
+        },
+        {
+          otsikko: 'Nukelle ei saanut ommella kasvoja',
+          aika: 'perinne',
+          tiedosto: 'Майстриня ляльок.jpg',
+          teksti: 'Motanka-nukke tehdään kietomalla kangassuikaleita ja '
+            + 'lankaa ilman neulaa tai muuta terävää – uskomuksen mukaan '
+            + 'pistäminen olisi "pistänyt kohtaloa". Nuken kasvot jätettiin '
+            + 'tyhjiksi tai niiden paikalle solmittiin risti, sillä kasvot '
+            + 'olisivat voineet houkutella nukkeen pahan hengen. Jokainen '
+            + 'nukke tehtiin tiettyä toivomusta varten – perheen suojaksi, '
+            + 'onnellista avioliittoa tai hyvää satoa varten – ja se '
+            + 'annettiin usein lapselle tai ripustettiin kotiin. Perinne on '
+            + 'yhteinen Ukrainalle, Puolalle ja Valko-Venäjälle, ja se on '
+            + '2000-luvulla noussut uudelleen suosioon käsityöläisten '
+            + 'keskuudessa.',
+          lyhyt: 'Motanka on kasvoton, kietomalla tehty suojelunukke, jota ei koskaan ommeltu neulalla.',
+          selite: 'Käsin tehty motanka-nukke perinteisessä asussa Ukrainan '
+            + 'kansanperinnejuhlassa.',
+          lahde: 'Vitali Popkov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi motanka-nuken kasvot jätettiin usein tyhjiksi tai niiden tilalle tehtiin risti?',
+        vaihtoehdot: [
+          'Kasvot olisivat voineet houkutella nukkeen pahan hengen',
+          'Kangasta ei riittänyt kasvoihin',
+          'Kasvojen tekeminen oli lailla kiellettyä',
+          'Perinne unohtui ajan myötä',
+        ],
+        oikea: 0,
+        fakta: 'Uskomuksen mukaan kasvoton nukke ei voinut houkutella pahaa '
+          + 'henkeä sisäänsä, siksi motankaan ei koskaan ommeltu kasvoja.',
+      },
+    },
+    {
       id: 'menovinkit',
       nimi: 'Menovinkit',
       johdanto: 'Ukrainan museot, arkistot ja kansallispuistot ovat vieneet '
