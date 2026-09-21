@@ -204,11 +204,31 @@ export async function rasteroiNappula(ui, {
   kotelo?.appendChild?.(el);
   try {
     if (globalThis.getComputedStyle && el.isConnected) {
+      /*
+       * MAALIT (url(#id)) TULEVAT SVG:N MUKAAN. Puisen nappulan täyte on
+       * liukuväri `#nappula-puu`, joka on määritelty tasokartan
+       * nappulakerroksessa (js/ui.js puuliuku), ei tässä svg:ssä. Data-
+       * osoitteeksi sarjallistettu svg ei näe dokumentin defs-osaa:
+       * Chromium piirsi css:n varavärin (`fill: url(#…) #c49a63`), WebKit
+       * MUSTAA (Laitetestaaja iPad v2018). Viitattu elementti kloonataan
+       * svg:n omaan <defs>-osaan ja arvoon jätetään varaväri.
+       */
+      let defs = null;
+      const tuoMaali = (arvo) => {
+        const m = /url\(["']?#([^"')]+)["']?\)/.exec(arvo ?? '');
+        if (!m) return;
+        const lahde = doc.getElementById(m[1]);
+        if (!lahde || svg.querySelector(`#${CSS.escape(m[1])}`)) return;
+        defs ??= svg.insertBefore(doc.createElementNS('http://www.w3.org/2000/svg', 'defs'), svg.firstChild);
+        defs.appendChild(lahde.cloneNode(true));
+      };
       for (const osa of [svg, ...svg.querySelectorAll('*')]) {
         const cs = getComputedStyle(osa);
         for (const nimi of NAPPULAN_TYYLIT) {
           const arvo = cs.getPropertyValue(nimi);
-          if (arvo) osa.style.setProperty(nimi, arvo);
+          if (!arvo) continue;
+          if (nimi === 'fill' || nimi === 'stroke') tuoMaali(arvo);
+          osa.style.setProperty(nimi, arvo);
         }
       }
     }
