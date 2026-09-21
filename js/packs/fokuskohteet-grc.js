@@ -1063,6 +1063,7 @@ export const FOKUSKOHTEET_GRC = [
     id: 'santorini',
     nimi: 'Santoríni',
     tyyppi: 'saari',
+    taso: 1,
     kysymykset: [
       'Kuinka laajalle purkauksen tuhka levisi?',
       'Miksi Atlantis-tarua yhdistetään Santoriniin?',
@@ -1101,6 +1102,7 @@ export const FOKUSKOHTEET_GRC = [
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'historia',
     tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Miksi oraakkelin vastaukset olivat niin moniselitteisiä?',
       'Kuka sai tulla kysymään neuvoa Delfoista?',
@@ -1182,6 +1184,7 @@ export const FOKUSKOHTEET_GRC = [
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'historia',
     tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Miksi Parthenon rakennettiin juuri kalliolle?',
       'Mitä Akropoliilla tehtiin ennen temppeleitä?',
@@ -1336,6 +1339,7 @@ export const FOKUSKOHTEET_GRC = [
     id: 'olympia',
     nimi: 'Olympia',
     tyyppi: 'urheilu',
+    taso: 1,
     symboli: 'urheilu',
     kysymykset: [
       'Mitä lajeja antiikin kisoissa kilpailtiin?',
@@ -1865,6 +1869,7 @@ export const FOKUSKOHTEET_GRC = [
     nimi: 'Knossoksen palatsi',
     tyyppi: 'historia',
     symboli: 'historia',
+    taso: 1,
     kysymykset: [
       'Mihin palatsin valtavia saviruukkuja käytettiin?',
       'Miksi palatsi tuhoutui?',
