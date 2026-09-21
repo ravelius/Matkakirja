@@ -5,7 +5,7 @@ käyttäjälle. Tapa: hakemistoja EI siirretä, vaan uusi käyttäjä saa
 ACL-oikeuden nykyisiin kansioihin. Kaikki polut (Raamattu, roolitus,
 muisti, worktreet) pysyvät ennallaan. Codex jää vanhaan käyttäjään.
 
-Alla `UUSI` = uuden käyttäjän lyhyt nimi. Vaiheet 1–2 ajetaan vanhassa
+Uusi käyttäjä on `koodaus`. Vaiheet 1–2 ajetaan vanhassa
 käyttäjässä (samireivinen), vaiheet 3–8 uudessa.
 
 ## 1. Vanhassa käyttäjässä: sammuta CI-ajurit
@@ -26,26 +26,26 @@ tarvita.
 
 ## 2. Vanhassa käyttäjässä: avaimet ja oikeudet
 
+Codex avasi 21.9. klo 11.15 ACL:llä kaikille paikallisille käyttäjille
+(ryhmä localaccounts) repot, kaikki Matkakirja-työpuut, Codex-
+toimituskansion ja kuvatuotannon työtilan, periytyvästi, sekä kotihakemiston
+läpikulun. Yhteiskansio /Users/Shared/Matkakirja-yhteinen/ sisältää linkit
+näihin. Fable kopioi sinne myös Clauden muistin (claude-muisti/memory).
+TEHTY, ei ajeta uudelleen.
+
+Jäljellä vanhassa käyttäjässä (sudo kysyy salasanan):
+
 Avaimet ovat `~/.zshrc`-tiedoston export-riveinä. Kopioi ne omaan
-tiedostoon, jonka uusi käyttäjä lukee (Fable ei koske avaintiedostoihin,
-Raamatun avainsääntö):
+tiedostoon, jonka uusi käyttäjä lukee (Fable ei koske avaintiedostoihin):
 
 ```bash
-grep '^export ' ~/.zshrc > ~/.matkakirja-avaimet.zsh && chmod 600 ~/.matkakirja-avaimet.zsh
+grep '^export ' ~/.zshrc > ~/.matkakirja-avaimet.zsh && chmod 600 ~/.matkakirja-avaimet.zsh && sudo chmod +a "koodaus allow read,readattr,readextattr,readsecurity" ~/.matkakirja-avaimet.zsh
 ```
 
-Läpikulku kotihakemistoon ja ACL kansioihin (sudo kysyy salasanan):
+CI-ajurien hakemistot eivät ole Codexin ACL:n piirissä:
 
 ```bash
-sudo chmod +a "UUSI allow search" /Users/samireivinen /Users/samireivinen/Documents /Users/samireivinen/Library /Users/samireivinen/Library/Caches
-```
-
-```bash
-sudo chmod -R +a "UUSI allow list,add_file,search,delete,add_subdirectory,delete_child,readattr,writeattr,readextattr,writeextattr,readsecurity,file_inherit,directory_inherit" /Users/samireivinen/Matkakirja-fable /Users/samireivinen/Matkakirja-sonnet3 /Users/samireivinen/Matkakirja-opus /Users/samireivinen/Matkakirja-opus2 /Users/samireivinen/Matkakirja-nostot /Users/samireivinen/Matkakirja-sonnet /Users/samireivinen/Matkakirja-raamattu /Users/samireivinen/actions-runner /Users/samireivinen/actions-runner-2 /Users/samireivinen/Documents/Codex
-```
-
-```bash
-sudo chmod +a "UUSI allow read,readattr,readextattr,readsecurity" /Users/samireivinen/.matkakirja-avaimet.zsh
+sudo chmod -R +a "koodaus allow list,add_file,search,delete,add_subdirectory,delete_child,readattr,writeattr,readextattr,writeextattr,readsecurity,file_inherit,directory_inherit" /Users/samireivinen/actions-runner /Users/samireivinen/actions-runner-2
 ```
 
 Vanhat, tarpeettomat worktreet (Matkakirja-opus-2 ja scratchpadin
@@ -80,11 +80,11 @@ gh auth login -h github.com -p https -w && gh auth refresh -s workflow
 ```
 
 Claude-työpöytäsovellus: kirjaudu tällä (kehitys)tilillä. Kopioi Fablen
-muisti uuden käyttäjän Claude-hakemistoon (projektiavain pysyy samana,
-koska polku ei muutu):
+muisti yhteiskansiosta uuden käyttäjän Claude-hakemistoon (projektiavain
+pysyy samana, koska polku ei muutu):
 
 ```bash
-mkdir -p ~/.claude/projects/-Users-samireivinen-Matkakirja-fable && cp -R /Users/samireivinen/.claude/projects/-Users-samireivinen-Matkakirja-fable/memory ~/.claude/projects/-Users-samireivinen-Matkakirja-fable/
+mkdir -p ~/.claude/projects/-Users-samireivinen-Matkakirja-fable && cp -R /Users/Shared/Matkakirja-yhteinen/claude-muisti/memory ~/.claude/projects/-Users-samireivinen-Matkakirja-fable/
 ```
 
 ## 5. Uudessa käyttäjässä: Playwright ja Xcode
