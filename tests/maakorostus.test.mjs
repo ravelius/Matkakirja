@@ -324,6 +324,10 @@ test('korostus piirtyy rantaviivan ALLE mutta samassa kerroksessa', () => {
   // Pikkurenkaat karsitaan ennen naulausta (kaukokuvan möykky, 20.9.2026).
   assert.match(lahde, /const nakyvatRenkaat = renkaat\.filter\(\(r\) => rengasNakyy\(r\)\);/);
   assert.match(lahde, /naulaaKorostus\(nakyvatRenkaat, rannikot\)/);
+  // Sulavuus E1 (21.9.2026): sama naulaus työsäikeessä; vanha korostus
+  // pysyy ruudulla kunnes vastaus tulee, ja myöhästynyt vastaus hylätään.
+  assert.match(lahde, /tyyppi: 'naulaa', pyynto, renkaat: nakyvatRenkaat, solut: rannikkoSoluIdt\(\)/);
+  assert.match(lahde, /v\.pyynto !== korostus\.odottaa\?\.pyynto\) return;/);
   // Korostus harvennetaan samalla säännöllä kuin rannikkosolu, muuten
   // naulattu rannikko erkanee rantaviivasta harvennuksessa (20.9.2026).
   assert.match(lahde, /const porras = harvennus > lodTol \? harvennus : 0;/);

@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1989';
+const CACHE = 'matkakirja-2026-08-09.1990';
 const SHELL = [
   './',
   './index.html',
@@ -341,6 +341,9 @@ const SHELL = [
   './js/aikajana-virrat-laskenta.js',
   // Laskenta Workerissa (hionta 6.9.2026): pääsäie ei jäädy avauksessa.
   './js/aikajana-virrat-tyo.js',
+  // Rannikon naulaus omana moduulina ja työsäikeenä (sulavuus E1, 21.9.2026).
+  './js/pallovektorit-naulaus.js',
+  './js/pallovektorit-tyo.js',
   './js/linssit/rekisteri.js',
   './js/linssit/omistus.js',
   './js/linssit/pallo.js',
