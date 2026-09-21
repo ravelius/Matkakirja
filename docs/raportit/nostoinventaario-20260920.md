@@ -75,11 +75,11 @@ ulkopuolella.
 
 - Maita: 43
 - Nostoja yhteensä: 1198
-- Visoja yhteensä: 254 (21.2% kaikista)
+- Visoja yhteensä: 260 (21.7% kaikista)
 - Ihme (kadonnut kohde): 8, rappeutunut (pari): 11, olemassa: 1179
 - Kuvallisia: 1198, joista havainnekuvaksi tulkittuja: 0
 - Ilman kuvaa: 0
-- Maita joissa visaosuus alle 1/3: 29
+- Maita joissa visaosuus alle 1/3: 28
 
 ### Maat joissa visaosuus alle 1/3
 
@@ -109,7 +109,6 @@ ulkopuolella.
 - HUN Unkari: 10/42 (23.8%)
 - NLD Alankomaat: 10/42 (23.8%)
 - PRT Portugali: 10/42 (23.8%)
-- FRA Ranska: 16/64 (25%)
 - POL Puola: 10/40 (25%)
 - IRL Irlanti: 10/39 (25.6%)
 
@@ -135,7 +134,7 @@ järjestys: ihme / rappeutunut / olemassa.
 | ESP | Espanja | 43 | 7 / 0 / 1 / 2 / 2 / 14 / 6 / 4 / 1 / 6 / 0 / 0 | 10 (23.3%) | 0 / 0 / 43 | 0 | 43 | 0 | 8 |
 | EST | Viro | 42 | 2 / 2 / 3 / 3 / 3 / 12 / 7 / 0 / 1 / 5 / 1 / 3 | 8 (19%) | 0 / 0 / 42 | 0 | 42 | 0 | 5 |
 | FIN | Suomi | 46 | 5 / 1 / 1 / 4 / 3 / 13 / 8 / 0 / 2 / 6 / 2 / 1 | 10 (21.7%) | 0 / 0 / 46 | 0 | 46 | 0 | 5 |
-| FRA | Ranska | 64 | 7 / 0 / 0 / 3 / 7 / 18 / 14 / 4 / 2 / 7 / 2 / 0 | 16 (25%) | 2 / 0 / 62 | 0 | 64 | 0 | 8 |
+| FRA | Ranska | 64 | 7 / 0 / 0 / 3 / 7 / 18 / 14 / 4 / 2 / 7 / 2 / 0 | 22 (34.4%) | 2 / 0 / 62 | 0 | 64 | 0 | 8 |
 | GBR | Britannia | 13 | 2 / 0 / 0 / 1 / 2 / 4 / 1 / 0 / 0 / 3 / 0 / 0 | 0 (0%) | 2 / 1 / 10 | 0 | 13 | 0 | 15 |
 | GRC | Kreikka | 64 | 9 / 4 / 2 / 3 / 4 / 17 / 14 / 2 / 2 / 4 / 0 / 3 | 10 (15.6%) | 1 / 6 / 57 | 0 | 64 | 0 | 6 |
 | HRV | Kroatia | 45 | 5 / 8 / 3 / 4 / 1 / 12 / 10 / 0 / 0 / 0 / 2 / 0 | 10 (22.2%) | 0 / 0 / 45 | 0 | 45 | 0 | 5 |
