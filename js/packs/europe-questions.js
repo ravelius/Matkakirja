@@ -576,6 +576,52 @@ export const EUROPE_QUESTIONS = {
   ],
 
   /*
+   * LUXEMBURG (21.9.2026, omistajan päätös 21.9.2026: Kypros, Luxemburg
+   * ja Malta saavat pelikaupungin). Faktapohja
+   * EUROPE_ARTIKKELIT.'Luxemburg (kaupunki)' -artikkelista (en-Wikipedia
+   * "Luxembourg City" ja "History of Luxembourg", luettu 21.9.2026), ei
+   * uusia väitteitä.
+   */
+  luxemburg: [
+    {
+      q: 'Missä valtiomuodossa Luxemburg on isoisän matkan aikaan vuonna 1873?',
+      options: [
+        'itsenäinen suurherttuakunta henkilöunionissa Alankomaiden kanssa',
+        'Preussin maakunta',
+        'Ranskan protektoraatti',
+        'Belgian osavaltio',
+      ],
+      correct: 0,
+      level: 1,
+      fact: 'Luxemburg on suurherttuakunta, jota hallitsee Alankomaiden kuningas Vilhelm III henkilöunionissa; maa on ollut kansainvälisesti puolueeton Lontoon sopimuksesta 1867 lähtien.',
+      hint: 'Sama hallitsija istuu myös Alankomaiden valtaistuimella.',
+      source: 'https://en.wikipedia.org/wiki/History_of_Luxembourg',
+    },
+    {
+      q: 'Minkä lempinimen Luxemburgin kaupunki sai vahvan linnoituksensa vuoksi?',
+      options: ['Pohjoisen Gibraltar', 'Alppien Venetsia', 'Manner-Euroopan Malta', 'Reinin portti'],
+      correct: 0,
+      fact: 'Ranskalainen sotilasinsinööri Lazare Carnot kutsui Luxemburgin linnoitusta maailman parhaaksi Gibraltaria lukuun ottamatta, mistä syntyi lempinimi "Pohjoisen Gibraltar".',
+      hint: 'Nimi vertaa kaupunkia Espanjan eteläkärjen linnoitukseen.',
+      source: 'https://en.wikipedia.org/wiki/Luxembourg_City',
+    },
+    {
+      q: 'Mitä Luxemburgin kaupungin linnoitukselle tapahtuu isoisän matkan aikaan 1873?',
+      options: [
+        'sitä puretaan Lontoon sopimuksen vaatimuksesta',
+        'sitä vahvistetaan uusilla tykkitorneilla',
+        'se muutetaan kokonaan puistoksi kertaheitolla',
+        'Preussi ottaa sen pysyvään haltuunsa',
+      ],
+      correct: 0,
+      level: 3,
+      fact: 'Vuoden 1867 Lontoon sopimus julisti Luxemburgin puolueettomaksi ja määräsi linnoituksen purettavaksi; purkutyö kestää kuusitoista vuotta ja on vielä kesken vuonna 1873.',
+      hint: 'Sopimus tehtiin kuusi vuotta ennen isoisän matkaa.',
+      source: 'https://en.wikipedia.org/wiki/Luxembourg_City',
+    },
+  ],
+
+  /*
    * LJUBLJANA (20.9.2026, omistajan päätös 19.9.2026: Slovenia saa
    * pelikaupungin Ljubljana). Faktapohja EUROPE_ARTIKKELIT.Ljubljana-
    * artikkelista (en-Wikipedia Ljubljana ja Ljubljana Castle, luettu
@@ -705,6 +751,42 @@ export const EUROPE_QUESTIONS = {
       fact: 'Rautatie Wienistä ulottui Ljubljanaan vuonna 1849 ja jatkui Triesteen 1857. Juna kuljetti kaupunkiin sekä matkustajia että uusia aikoja.',
       hint: 'Vuosi on vain hieman vuoden 1848 jälkeen.',
       source: 'https://en.wikipedia.org/wiki/Ljubljana',
+    },
+  ],
+
+  /*
+   * VALLETTA (21.9.2026, omistajan päätös 19.9.2026: Malta saa
+   * pelikaupungin Valletta). Faktapohja en-Wikipedian artikkeleista
+   * Valletta ja Great Siege of Malta (luettu 21.9.2026), sama pohja
+   * kuin hahmotelma-mlt.js:n Valletta-nostolla.
+   */
+  valletta: [
+    {
+      q: 'Kenen ritarikunnan suurmestari perusti Vallettan vuonna 1566?',
+      options: ['Templariritarikunnan', 'Johanniittaritarikunnan', 'Saksalaisen ritarikunnan', 'Calatravan ritarikunnan'],
+      correct: 1,
+      level: 1,
+      fact: 'Suurmestari Jean Parisot de Valette voitti osmaneja vastaan käydyn suuren piirityksen 1565 ja perusti seuraavana vuonna uuden linnoituskaupungin, joka nimettiin hänen mukaansa.',
+      hint: 'Ritarikuntaa kutsutaan myös Maltan ritareiksi.',
+      source: 'https://en.wikipedia.org/wiki/Valletta',
+    },
+    {
+      q: 'Minkä maan hallinnassa Malta oli isoisän matkan aikaan 1873?',
+      options: ['Ranskan', 'Osmanien valtakunnan', 'Britannian', 'Espanjan'],
+      correct: 2,
+      level: 2,
+      fact: 'Britit ottivat Vallettan haltuunsa syyskuussa 1800, ja Malta vahvistettiin brittiläiseksi kruununsiirtomaaksi Pariisin rauhassa 1814. Kaupunki toimi Britannian Välimeren-laivaston tukikohtana.',
+      hint: 'Sama maa, jonka lippu liehuu tuolloin myös Intiassa.',
+      source: 'https://en.wikipedia.org/wiki/Valletta',
+    },
+    {
+      q: 'Minä vuonna Unesco hyväksyi Vallettan maailmanperintökohteeksi?',
+      options: ['1960', '1980', '1995', '2004'],
+      correct: 1,
+      level: 3,
+      fact: 'Unesco hyväksyi Vallettan maailmanperintökohteeksi vuonna 1980. Kaupungin 320 muistomerkkiä mahtuvat vain 0,55 neliökilometrin alueelle.',
+      hint: 'Vuosikymmen on sama kuin monella muullakin 1500–1600-luvun linnoituskaupungilla.',
+      source: 'https://en.wikipedia.org/wiki/Valletta',
     },
   ],
 
@@ -2450,6 +2532,14 @@ export const EUROPE_FACTS = {
       voice: 'isoisa',
     },
   ],
+  luxemburg: [
+    'Luxemburgin linnoituksen purkaminen kesti vuodesta 1867 vuoteen 1883 eli kuusitoista vuotta, ja työ tuhosi yli 24 kilometriä maanalaisia käytäviä ja maksoi 1,5 miljoonaa kultafrangia.',
+    'Kaupungin Bock-kallio sai varustuksensa vuonna 963, kun kreivi Siegfried rakensi sille Lucilinburhuc-linnansa — tapahtumaa pidetään koko Luxemburgin kaupungin syntyhetkenä.',
+    {
+      text: 'Rautatie on yhdistänyt kaupungin Ranskaan ja Preussiin jo vuosia, mutta täkäläinen suurherttua ei ole koskaan itse istunut siinä junassa — hän asuu Haagissa eikä ole käynyt omassa maassaan vuosikausiin.',
+      voice: 'isoisa',
+    },
+  ],
   kosice: [
     'Košicen keskustan muodostaa pitkä, linssinmuotoinen Hlavná-katu: sen ympärille yhdistyivät Ala- ja Ylä-Kassa 1200-luvulla.',
     'Košicessa oli 1657 perustettu jesuiittojen yliopisto (Universitas Cassoviensis), josta tuli 1777 kuninkaallinen akatemia ja myöhemmin oikeusakatemia.',
@@ -2463,6 +2553,14 @@ export const EUROPE_FACTS = {
     'Ljubljanan Tivoli-puisto on suunniteltu vuonna 1813 ranskalaisen insinöörin johdolla, ja sen nimi tulee Pariisin Tivolista.',
     {
       text: 'Laibach oli Napoleonin Illyrian maakuntien pääkaupunki neljä vuotta, 1809–1813. Ranskalaisten insinööri ehti jättää kaupunkiin puiston, jossa minäkin kävelin tänään.',
+      voice: 'isoisa',
+    },
+  ],
+  valletta: [
+    'Vallettan 320 muistomerkkiä ja kirkkoa mahtuvat vain 0,55 neliökilometrin alueelle, ja Unesco hyväksyi koko kaupungin maailmanperintökohteeksi vuonna 1980.',
+    'Ennen ritarikunnan tuloa niemi tunnettiin nimellä Sciberras — lähes asumaton kalliokieleke Grand Harbourin ja Marsamxett-sataman välissä.',
+    {
+      text: 'Linnoitusten purkamista on ehdotettu täälläkin pari kertaa viime vuosikymmeninä, mutta muurit seisovat yhä — veikkaan, että ne haudataan vasta viimeisenä koko saarelta.',
       voice: 'isoisa',
     },
   ],

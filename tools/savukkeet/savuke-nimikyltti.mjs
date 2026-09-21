@@ -50,7 +50,7 @@ import { extname, join } from 'node:path';
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 import { MAAILMANKARTTA } from '../../js/packs/maailmankartta.js';
-import { NOSTOSYM_NIMIO_KOKO } from '../../js/fokusnosto-symbolit.js';
+import { NOSTOSYM_NIMIO_KOKO, nostosymNimionKattoPx } from '../../js/fokusnosto-symbolit.js';
 import {
   NOSTON_MITAN_KATTO, NOSTON_NIMIO_KATTO_PX, PAAKARTAN_MERKKIKATTO, merkkiPortti,
 } from '../../js/pallolauta/nostot.js';
@@ -369,10 +369,18 @@ for (const ruutu of RUUDUT) {
   }
   /*
    * 4. NIMIKYLTTI ON KARTAN MITTA (omistajan päätös 14.9.2026
-   * klo 15.05 UTC). Kyltin ruutukoon suhde maapaneelin leipätekstiin
-   * — joka on jo karttaan sidottu (js/pallolauta/maapaneeli.js) — on
-   * sama kolmella zoomilla. Jos kyltti olisi yhä ruutuvakio, suhde
-   * muuttuisi zoomin mukana.
+   * klo 15.05 UTC). Kyltin ruutukoon suhde kameran karttaskaalaan
+   * (`kamera.nakyvaAlue().skaala`) on sama kaikilla zoomeilla. Jos
+   * kyltti olisi ruutuvakio, suhde muuttuisi zoomin mukana.
+   *
+   * VERTAILU VAIHDETTIIN 21.9.2026: alun perin suhde otettiin
+   * maapaneelin leipätekstiin, joka oli karttaan sidottu. Erä 20
+   * (maapaneeli.js "NURKAN MITTAKAAVA KUMOUTUI", PAATOKSET 28
+   * TARKENNUS 2, 16.9.2026) vei paneelin typografian ruutupikseleihin,
+   * joten vanha suhde hajosi 50 % vaikka kyltti seurasi karttaa
+   * täsmälleen (13,50 → 22,45 px kun skaala 2,249 → 3,749). Vartio oli
+   * tunnettu punainen (PAATOKSET 34 kohta 10 velka "vartiot 4 ja 6
+   * vanhentuneet"); nyt se vartioi taas omistajan päätöstä.
    */
   const zoomit = [];
   for (const osuus of [1, 0.85, 0.7, 0.6, 0.35]) {
@@ -579,14 +587,14 @@ for (const ruutu of RUUDUT) {
    * MITTAUSTULOS eikä tämän vartion asia (ks. raportti). Kyltin
    * olemassaolon vartioi vartio 3.
    */
-  const olemassa = zoomit.filter((z) => z.kyltti > 0 && z.paneeli > 0);
-  const suhteet = olemassa.map((z) => z.kyltti / z.paneeli);
+  const olemassa = zoomit.filter((z) => z.kyltti > 0 && z.karttaskaala > 0);
+  const suhteet = olemassa.map((z) => z.kyltti / z.karttaskaala);
   const keski = suhteet.reduce((a, b) => a + b, 0) / (suhteet.length || 1);
   const ero = suhteet.length >= 2
     ? (Math.max(...suhteet) - Math.min(...suhteet)) / keski : Infinity;
-  vaadi(`4. ${ruutu.nimi}: kyltti / maapaneelin teksti sama zoomista riippumatta `
+  vaadi(`4. ${ruutu.nimi}: kyltti / karttaskaala sama zoomista riippumatta `
     + `(${olemassa.length} tasoa, ±3 %)`,
-    ero <= 0.03, `hajonta ${p(100 * ero, 2)} %`);
+    ero <= 0.03, `hajonta ${p(100 * ero, 2)} %, kyltti/skaala ${p(keski, 2)} px`);
 
   /*
    * 5. SAAPUMISNÄKYMÄ EI MUUTU. Vertailu on kunkin laitteen oma
@@ -673,14 +681,18 @@ for (const ruutu of RUUDUT) {
    * muuten pelkkä saapumisnäkymän 11,5 px läpäisisi vartion
    * mittaamatta kattoa lainkaan.
    */
+  // KATTO NOUSEE LÄHIZOOMISSA (21.9.2026, fokusnosto-symbolit.js): katto on
+  // kartan kertoimen funktio, 16 px kertoimeen 2 ja 22 px kertoimesta 4.
+  // Odotus luetaan samasta funktiosta kuin peli, tason omalla kertoimella.
   const elavatTasot = zoomit.filter((z) => z.elavaMitta > 0);
   const sisinTaso = elavatTasot.at(-1) ?? null;
   const sisinNimio = (sisinTaso?.elavaMitta ?? 0) * NOSTOSYM_NIMIO_KOKO;
+  const sisinKatto = nostosymNimionKattoPx(sisinTaso?.nimenKerroin ?? 1);
   tieto(`${ruutu.nimi} · elävän merkin nimiö sisimmällä zoomilla, jolla merkkejä on`,
-    `${p(sisinNimio)} px (katto ${p(NOSTON_NIMIO_KATTO_PX)} px), `
+    `${p(sisinNimio)} px (katto ${p(sisinKatto)} px kertoimella ${p(sisinTaso?.nimenKerroin ?? 0, 3)}; perus ${NOSTON_NIMIO_KATTO_PX} px), `
     + `eläviä merkkejä zoomeittain ${zoomit.map((z) => z.elavia).join('/')}`);
-  vaadi(`6b. ${ruutu.nimi}: noston nimiö ei ylitä ${NOSTON_NIMIO_KATTO_PX} px:n kattoa`,
-    sisinNimio > 0 && Math.abs(sisinNimio - NOSTON_NIMIO_KATTO_PX) <= 0.1,
+  vaadi(`6b. ${ruutu.nimi}: noston nimiö on täsmälleen kertoimen katossa (${p(sisinKatto, 1)} px)`,
+    sisinNimio > 0 && Math.abs(sisinNimio - sisinKatto) <= 0.1,
     `${p(sisinNimio)} px, eläviä merkkejä ${sisinTaso?.elavia ?? 0}`);
 
   /*

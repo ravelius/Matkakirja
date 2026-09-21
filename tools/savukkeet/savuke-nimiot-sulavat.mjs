@@ -60,7 +60,7 @@ import { extname, join } from 'node:path';
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 import { ennustevirhe, kehysnopeus, koonLiukuvuus, siirtymanMuutokset } from '../../js/pallolauta/sulavuusmittari.js';
-import { NOSTOSYM_NIMIO_KATTO_PX, NOSTOSYM_NIMIO_KOKO } from '../../js/fokusnosto-symbolit.js';
+import { NOSTOSYM_NIMIO_KATTO_PX, NOSTOSYM_NIMIO_KOKO, nostosymNimionKattoPx } from '../../js/fokusnosto-symbolit.js';
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const paketti = await import('playwright')
@@ -308,9 +308,13 @@ for (const ruutu of RUUDUT) {
       suurinNimio = Math.max(suurinNimio, m.koko * NOSTOSYM_NIMIO_KOKO);
     }
   }
-  tieto(`${tunnus}: katto`, `nostonäytteitä ${nostonaytteita}, suurin nimiö ${suurinNimio.toFixed(2)} px (katto ${NOSTOSYM_NIMIO_KATTO_PX} px)`);
-  vaadi(`${tunnus}: 5. katto pätee liikkeessä: noston nimiö ≤ ${NOSTOSYM_NIMIO_KATTO_PX} px joka kehyksessä`,
-    nostonaytteita > 0 && suurinNimio <= NOSTOSYM_NIMIO_KATTO_PX * 1.005,
+  // KATTO NOUSEE LÄHIZOOMISSA (21.9.2026): zoomi vie kertoimen enintään
+  // 2,5-kertaiseksi saapumisesta, joten liikkeen katto on sen kertoimen katto
+  // (perus NOSTOSYM_NIMIO_KATTO_PX pätee kertoimeen 2 asti).
+  const liikkeenKatto = nostosymNimionKattoPx(2.5);
+  tieto(`${tunnus}: katto`, `nostonäytteitä ${nostonaytteita}, suurin nimiö ${suurinNimio.toFixed(2)} px (katto ${liikkeenKatto.toFixed(1)} px kertoimella 2,5; perus ${NOSTOSYM_NIMIO_KATTO_PX} px)`);
+  vaadi(`${tunnus}: 5. katto pätee liikkeessä: noston nimiö ≤ ${liikkeenKatto.toFixed(1)} px joka kehyksessä`,
+    nostonaytteita > 0 && suurinNimio <= liikkeenKatto * 1.005,
     `suurin ${suurinNimio.toFixed(2)} px`);
 
   /* ── 6. lepo: kuori 1, liikkeen luokka pois ─────────────────────── */
