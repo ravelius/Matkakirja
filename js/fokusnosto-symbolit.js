@@ -1687,6 +1687,32 @@ export function nostosymMitanKatto() {
 }
 
 /**
+ * KUOREN KATON MUUTTUJAT (js/pallolauta/nimet.js KOKO LIIKUU JOKA
+ * KEHYKSESSÄ, erä E2): merkin kuori skaalautuu kotelon `--nimiokerroin`-
+ * muuttujalla, ja katto pätee kehys kerrallaan: a = raaka / katettu,
+ * b = katto / katettu → css laskee kuoren skaalaksi min(kerroin · a, b)
+ * eli näytetyn mitan min(raaka · kerroin, katto). Ilman kattoa
+ * muuttujat poistetaan. Asuu täällä (ei pallolauta-kansiossa), koska
+ * turisti-infon kyltti js/kaupunkinosto.js on yhden tiedoston version
+ * moduuli eikä saa tuoda pallolaudasta (tools/build-standalone.mjs).
+ *
+ * @param {HTMLElement} el merkin kuori (div)
+ * @param {{mitta: number, mittaRaaka?: number, katto?: number}} d
+ */
+export function nostosymAsetaKuorenKatto(el, { mitta, mittaRaaka = null, katto = Infinity }) {
+  const tyyli = el?.style;
+  if (!tyyli) return;
+  const raaka = mittaRaaka > 0 ? mittaRaaka : mitta;
+  if (!(mitta > 0) || !(katto > 0) || !Number.isFinite(katto)) {
+    tyyli.removeProperty('--nimio-a');
+    tyyli.removeProperty('--nimio-b');
+    return;
+  }
+  tyyli.setProperty('--nimio-a', (raaka / mitta).toFixed(4));
+  tyyli.setProperty('--nimio-b', (katto / mitta).toFixed(4));
+}
+
+/**
  * NIMIÖN ASUT — samat kaksi kuin lehteen poltetuilla nimillä.
  *
  * `vali` on kirjainväli kirjaston yksikköinä (piirto.js `teksti`:n
