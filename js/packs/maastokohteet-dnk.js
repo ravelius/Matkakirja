@@ -265,6 +265,7 @@ export const MAASTOKOHTEET_DNK = [
     },
     nimi: 'Kronborg',
     tyyppi: 'sana',
+    taso: 1,
     kysymykset: [
       'Millä nimellä Shakespeare kutsui linnaa?',
       'Mikä Juutinrauman tulli oli?',
@@ -319,6 +320,7 @@ export const MAASTOKOHTEET_DNK = [
     ],
     nimi: 'Jellingin kivet',
     tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Miksi kiviä sanotaan Tanskan kastetodistukseksi?',
       'Mistä langattoman Bluetoothin nimi tulee?',
@@ -441,6 +443,7 @@ export const MAASTOKOHTEET_DNK = [
     ],
     nimi: 'Skagen',
     tyyppi: 'kulttuuri',
+    taso: 1,
     kysymykset: [
       'Mikä hautasi vanhan kirkon?',
       'Keitä Skagenin maalarit olivat?',
@@ -733,6 +736,7 @@ export const MAASTOKOHTEET_DNK = [
     ],
     nimi: 'Møns Klint',
     tyyppi: 'vuori',
+    taso: 1,
     kysymykset: [
       'Kuinka korkealle jyrkänne nousee merestä?',
       'Milloin kalliot pääsivät maailmanperintöluetteloon?',
@@ -838,6 +842,7 @@ export const MAASTOKOHTEET_DNK = [
     },
     nimi: 'Billund',
     tyyppi: 'kauppa',
+    taso: 1,
     kysymykset: [
       'Mistä sanasta nimi Lego tulee?',
       'Miksi pikkukylään rakennettiin lentokenttä?',

@@ -1266,6 +1266,7 @@ export const HAHMOTELMA_DNK = [
     ],
     nimi: 'Odense',
     tyyppi: 'kulttuuri',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Mitä Odensen nimi alun perin tarkoitti, ja minkä muinaisen jumalan mukaan kaupunki on nimetty?',
