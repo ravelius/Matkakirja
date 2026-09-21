@@ -114,8 +114,8 @@ function onNosto(o) {
 }
 
 function kuvaTiedot(o) {
-  const onKuva = Boolean(o.tiedosto) || Boolean(o.kuva?.osoite) || Boolean(o.kuvat?.length)
-    || Boolean(o.herokuva);
+  const onKuva = Boolean(o.tiedosto) || Boolean(o.kuva?.osoite) || Boolean(o.kuva?.tiedosto)
+    || Boolean(o.kuvat?.length) || Boolean(o.herokuva);
   /*
    * HUOM: /karttanostot/-polku EI tarkoita tekoälykuvaa — se on vain
    * R2-säilytyspolku, jota käyttävät sekä aidot Commons-valokuvat

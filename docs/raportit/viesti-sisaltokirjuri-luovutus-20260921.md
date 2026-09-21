@@ -53,77 +53,50 @@ ilmoittaa Codex-toimituksesta, tarkista postilaatikko/manifesti ja kytke
 samalla periaatteella kuin muutkin generoidut kuvat (ei tarkempaa ohjetta
 saatavilla vielä, koska toimitusta ei ole nähty).
 
-## 3. 198 kuvatonta nostoa — KÄYNNISSÄ (aloitettu, ei valmis)
+## 3. 198 kuvatonta nostoa — VIRHEELLINEN LÄHTÖLUKU, TODELLISUUDESSA VALMIS
 
-Inventaarion "Ilman kuvaa" -sarake, huonoimmat maat ensin (koko 198,
-summa täsmää):
+**TÄRKEÄ KORJAUS 21.9.2026 ilta, ennen luovutusta:** GRC-erän agentti löysi,
+että `tools/nostoinventaario.mjs`:n kuvantunnistus (`kuvaTiedot()`, rivi ~117)
+tarkisti vain `o.tiedosto`, `o.kuva?.osoite`, `o.kuvat?.length` ja
+`o.herokuva` — EI `o.kuva?.tiedosto`, joka on `js/fokuskohteet.js`:n
+(`valokuvaUrl(kuva.tiedosto, ...)`, rivit 5173/5266/5271/5760/5881/5890)
+AKTIIVISESTI KÄYTTÄMÄ, täysin kelvollinen kuvakenttä (suora
+Commons-tiedostoviite, ei R2-osoite — eri konventio kuin `kuva.osoite`,
+mutta yhtä toimiva). Tool laski siis satoja aidosti kuvallisia nostoja
+"kuvattomiksi". **Korjasin rivin 117 (lisäsin `Boolean(o.kuva?.tiedosto)`)
+ja regeneroin inventaarion** (commit tässä haarassa, ks. alla).
 
-| Maa | Kuvattomia |
-| --- | --- |
-| GRC | 35 |
-| TUR | 24 |
-| DEU | 21 |
-| FRA | 20 |
-| HRV | 19 |
-| HUN | 17 |
-| BGR | 17 |
-| ITA | 16 |
-| ROU | 13 |
-| BIH | 12 |
-| GBR | 3 |
-| POL | 1 |
+**Todellinen kuvaton-luku koko Euroopassa fixin jälkeen: 8, ei 198.**
+Kaikki 8 tarkistettu yksitellen (`ihme.kadonnut === true` jokaisella) —
+kyseessä ovat KAIKKI täysin kadonneita antiikin/historian kohteita, joilla
+on jo TARKOITUKSELLA vain generoitu `ihme`-havainnekuva eikä aitoa
+valokuvaa (sama dokumentoitu linjaus 26.-27.8.2026 jonka GRC-agentti löysi
+Rodoksen kolossin kommentista):
 
-**GRC-erä (35 kohdetta, kaikki tiedostossa js/packs/fokuskohteet-grc.js)
-KÄYNNISSÄ TAUSTALLA** taskina `a36b77698932a95fa`, haara `sisalto-grc-kuvat`
-(luotu origin/v1973-prepistä). **TÄRKEÄÄ: tämä on TÄMÄN session subagentti —**
-**session-nollauksen jälkeen se saattaa jäädä orvoksi eikä uusi sessio näe sitä**
-**automaattisesti.** Uuden session ensitoimet:
-1. Tarkista `git -C /Users/samireivenen/Matkakirja-nostot branch --show-current`
-   (todennäköisesti `sisalto-grc-kuvat`, koska agentit jakavat tämän
-   worktreen — EI worktree-eristystä, paitsi Curtea Veche -korjaus joka
-   käytti `isolation: worktree`).
-2. Tarkista `git -C ... status` ja `git -C ... log --oneline -3` nähdäksesi
-   onko GRC-agentti ehtinyt committoida (todennäköisesti EI, koska ohje ei
-   pyytänyt committia agentin sisällä — TARKISTA ja committoi/pushaa itse
-   jos työ on valmis mutta committoimatta).
-3. Jos agentti näyttää yhä olevan kesken (osa 35:stä kuva-kentästä
-   puuttuu), joko odota sen luontaista valmistumista (jos se yhä elää) tai
-   jatka työtä itse samalla menetelmällä (ks. alla).
+| Maa | Tiedosto | id | Nimi |
+| --- | --- | --- | --- |
+| TUR | fokuskohteet-tur.js | halikarnassos | Halikarnassoksen mausoleumi |
+| TUR | fokuskohteet-tur.js | hippodromi | Konstantinopolin hippodromi |
+| TUR | fokuskohteet-tur.js | pergamonin-alttari | Pergamonin alttari |
+| GBR | fokuskohteet-gbr.js | crystal-palace | Crystal Palace |
+| GBR | fokuskohteet-gbr.js | vanha-london-bridge | Vanha London Bridge |
+| FRA | fokuskohteet-fra.js | tuileries | Tuileries'n palatsi |
+| FRA | fokuskohteet-fra.js | bastilji | Bastilji |
+| GRC | fokuskohteet-grc.js | rodoksen-kolossi | Rodoksen kolossi |
 
-**Menetelmä muille maille (TUR, DEU, FRA, HRV, HUN, BGR, ITA, ROU, BIH, GBR, POL)**:
-1. Uudelleenluo listausskripti scratchpadiin (ei säilynyt repossa):
-   ```js
-   // listaa <ISO>-maan kuvattomat nostot: onKuva = tiedosto || kuva.osoite || kuvat.length || herokuva
-   // rakenne: lue js/packs/{maastokohteet,hahmotelma,maalehtinostot,fokuskohteet}-<iso>.js,
-   // kerää syvyyshaulla leaf-nostot (onNosto: on nimi-kenttä, ei nostot-arraytä),
-   // tulosta id+tyyppi+nimi niille joilla ei kuvaa.
-   ```
-   (täysi versio oli `/tmp/lista-kuvattomat.mjs` tässä sessiossa, scratchpad-polku
-   session-kohtainen — kirjoita uudelleen tai kopioi tämän dokumentin viereen jos
-   löytyy vanhasta scratchpadista).
-2. Yksi maa = yksi haara = yksi agentti (JOS koko maan kuvattomat ovat SAMASSA
-   tiedostossa, kuten GRC — käytä YHTÄ agenttia koko tiedostolle rinnakkaisten
-   agenttien sijaan, koska useampi agentti EI SAA kirjoittaa samaan tiedostoon
-   yhtä aikaa ilman worktree-eristystä — konfliktiriski). Jos maan kuvattomat
-   jakautuvat useaan eri tiedostoon (esim. maastokohteet-X.js JA hahmotelma-X.js),
-   näitä VOI ajaa rinnakkain koska ne ovat eri tiedostoja.
-3. Agentin ohje: `node tools/hae-commons.mjs haku "<hakusana>" 15` kuvan
-   etsintään, `tools/hae-commons.mjs tiedot "File:..."` lisenssin
-   vahvistukseen, lataa TÄYDESSÄ RESOLUUTIOSSA (`curl -sSL -A
-   "Matkakirja/1.0 (...)" ".../Special:FilePath/<enkoodattu>"`, vähintään
-   1200 px), vie R2:een `karttanostot/<pvm>/<iso>-nosto-<tunnus>-<hash>.jpg`
-   (`zsh -c 'source ~/.zshrc; aws s3 cp ... --endpoint-url "$PAATE" ...'`,
-   AWS-avaimet ~/.zshrc:ssä), tarkista `curl -I` HTTP 200 ennen koodiin
-   kirjoitusta, lisää `kuva`-kenttä TÄSMÄLLEEN vierekkäisten jo-kuvallisten
-   nostojen kaavan mukaan (skeema vaihtelee tiedostotyypeittäin — TARKISTA
-   AINA 2-3 esimerkkiä samasta tiedostosta ennen kirjoitusta, älä oleta).
-   Eläinkohteille (elain-tyyppi): kuvassa itse eläin lähikuvassa.
-4. Tarkistus per erä: `node --check`, `node tools/nostoinventaario.mjs`
-   ("Ilman kuvaa" laskee), `node --test tests/*.test.mjs` 0 fail,
-   `node tools/tarkista-kaksoisavaimet.mjs`.
-5. Erän koko 30-40 kuvaa (Fablen ohje) — yksittäinen maa jos lähellä tuota
-   kokoa (GRC 35 sopii yhtenä eränä), muuten yhdistä 2+ pienempää maata
-   samaan erään/haaraan.
+**JOHTOPÄÄTÖS: "198 kuvatonta nostoa" -tehtävä on jo käytännössä VALMIS —**
+**ei vaadi lisätyötä**, koska jäljellä olevat 8 ovat kaikki tarkoituksella
+kuvattomia (kadonnut-ihme-kohteita). GRC-erän agentti EI lisännyt yhtään
+riviä koodiin (33/34 kohteesta oli jo kuva, 34. eli Rodoksen kolossi on
+tarkoituksella ilman). Haara `sisalto-grc-kuvat` sisältää siis vain: tämän
+luovutusdokumentin + `tools/nostoinventaario.mjs`-korjauksen + regeneroidun
+raportin. EI mitään agenttierää tarvitse enää dispatchata tähän — jos
+omistaja/Fable haluaa silti aidon kuvan noihin 8:aan (linjauksen kumoten),
+se on pieni, ~8 kohteen erä, ei 198:n.
+
+**Ennen tätä korjausta lähetetty visio "GRC 35, TUR 24, DEU 21..." oli**
+**siis kokonaan virheellinen datan (inventaariotyökalun bugin) takia.**
+Ilmoitettu Fablelle erikseen kriittisenä korjauksena.
 
 ## Muuta avointa
 
