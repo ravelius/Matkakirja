@@ -283,7 +283,12 @@ export function luoGlNimiosovitin({
         if (x?.valmis || !x?.osa) return x;
         const vanha = viimeSpritet.get(`${tunnus}#${x.osa}`);
         if (!vanha || !k.atlas?.hae?.(vanha.sprite.avain)) return x;
-        return { ...vanha.sprite, osa: x.osa, skaala: x.skaala ?? vanha.sprite.skaala, katto: x.katto ?? vanha.sprite.katto, porras: x.porras ?? vanha.sprite.porras, vanhaRasteri: true };
+        // Skaala on CSS-px per RASTERIN pikseli: uuden datumin mitta jaettuna VANHAN
+        // rasterin portaalla (x.skaala = mitta / uusi porras), muuten koko hyppäisi
+        // portaiden suhteessa. Katto on datumin (per haku), porras vanhan rasterin.
+        const vp = vanha.sprite.porras;
+        const skaala = x.porras > 0 && vp > 0 && Number.isFinite(x.skaala) ? (x.skaala * x.porras) / vp : vanha.sprite.skaala;
+        return { ...vanha.sprite, osa: x.osa, skaala, katto: x.katto ?? vanha.sprite.katto, porras: vp ?? x.porras ?? null, vanhaRasteri: true };
       });
       const ikoni = spritet.find((x) => x.osa === 'ikoni');
       const nimio = spritet.find((x) => x.osa === 'nimio') ?? null;
@@ -439,6 +444,10 @@ export function luoGlNimiosovitin({
         tunnus: i.tunnus, lat: i.lat, lng: i.lng, opacity: i.opacity,
         leveys: (i.rasteri?.w ?? 0) * i.skaala * koko,
         korkeus: (i.rasteri?.h ?? 0) * i.skaala * koko,
+        // Laatikko ruudulla: maapiste + (dx, dy) − ankkuri (savukkeiden kuvavertailut).
+        dx: i.dx, dy: i.dy,
+        ankkuriX: (i.rasteri?.ankkuriX ?? 0) * i.skaala * koko,
+        ankkuriY: (i.rasteri?.ankkuriY ?? 0) * i.skaala * koko,
         // Kirjaston yksikön ruutumitta (nostot.js `mitta` kuoren kanssa):
         // nimiön fontti ruudulla = NOSTOSYM_NIMIO_KOKO × mitta.
         mitta: i.porras > 0 ? i.skaala * koko * i.porras : null,

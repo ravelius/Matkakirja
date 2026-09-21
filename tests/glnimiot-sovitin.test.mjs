@@ -384,7 +384,10 @@ test('portaan vaihto nostolla: ikoni ja nimiö pysyvät rungolla vanhalla raster
   porras = 32; // uusi porras, rasterit kesken
   assert.deepEqual(s.nostot([NOSTO({ mitta: 0.8 })]), [], 'ei CSS2D-välitilaa');
   assert.deepEqual(kerros.lista.map((i) => i.avain), ['ikoni|24', 'nimio|24'], 'vanhat rasterit');
-  assert.equal(Number(kerros.lista[0].skaala.toFixed(4)), Number((0.8 / 32).toFixed(4)), 'skaala uuden datumin mitasta ja portaasta');
+  // Skaala on CSS-px per rasterin pikseli: uuden datumin mitta / VANHAN rasterin porras (24),
+  // koska kuva on yhä porras-24-rasteri — muuten koko hyppäisi 24/32-suhteessa.
+  assert.equal(Number(kerros.lista[0].skaala.toFixed(4)), Number((0.8 / 24).toFixed(4)), 'skaala uuden datumin mitasta ja vanhan rasterin portaasta');
+  assert.equal(kerros.lista[0].porras, 24, 'porras on vanhan rasterin');
   valmiit.add('ikoni|32'); valmiit.add('nimio|32');
   s.nostot([NOSTO({ mitta: 0.8 })]);
   assert.deepEqual(kerros.lista.filter((i) => !i.tunnus.endsWith('-vanha')).map((i) => i.avain), ['ikoni|32', 'nimio|32']);
