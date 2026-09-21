@@ -118,6 +118,17 @@ export const FOKUSKOHTEET_HUN = [
         + 'kirkko, kaupungin päätorin laidalla.',
       lahde: 'Pudelek (Marcin Szala), Wikimedia Commons (CC BY-SA 3.0)',
     },
+    visa: {
+      kysymys: 'Miksi Debreceniä alettiin kutsua "kalvinismin Roomaksi"?',
+      vaihtoehdot: [
+        'Koko kaupunki oli protestanttinen',
+        'Siellä asui paavi maanpaossa',
+        'Kaupunki oli rakennettu Rooman malliin',
+        'Siellä oli maan suurin katedraali',
+      ],
+      oikea: 0,
+      fakta: 'Debrecenin Suuri kirkko on yhä Unkarin suurin protestanttinen kirkko.',
+    },
   },
   {
     id: 'szeged',
@@ -382,6 +393,17 @@ export const FOKUSKOHTEET_HUN = [
         + 'vuorten pakottamana etelään.',
       lahde: 'Bjoertvedt, Wikimedia Commons (CC BY-SA 4.0)',
     },
+    visa: {
+      kysymys: 'Mikä silta yhdisti Budan ja Pestin ensimmäistä kertaa pysyvästi?',
+      vaihtoehdot: [
+        'Erzsébet-silta',
+        'Ketjusilta',
+        'Vapaudensilta',
+        'Margitin silta',
+      ],
+      oikea: 1,
+      fakta: 'Vuonna 1849 valmistunut Ketjusilta oli ensimmäinen pysyvä silta Budan ja Pestin välillä.',
+    },
   },
   {
     id: 'tisza',
@@ -478,6 +500,17 @@ export const FOKUSKOHTEET_HUN = [
       selite: 'Balaton Tihanyn niemeltä katsottuna; järvi on laaja mutta '
         + 'vain muutaman metrin syvyinen.',
       lahde: 'Takkk, Wikimedia Commons (CC BY-SA 3.0)',
+    },
+    visa: {
+      kysymys: 'Mikä tekee Tihanyn luostarin perustamiskirjasta poikkeuksellisen?',
+      vaihtoehdot: [
+        'Se on kirjoitettu kokonaan unkariksi',
+        'Se katosi ja löytyi vasta äskettäin',
+        'Vanhimmat unkarinkieliset sanat',
+        'Se on kirjoitettu kreikaksi',
+      ],
+      oikea: 2,
+      fakta: 'Tihanyn luostarin vuoden 1055 perustamiskirja on vanhin säilynyt asiakirja, jossa on unkarinkielisiä sanoja latinan seassa.',
     },
   },
 
@@ -582,6 +615,17 @@ export const FOKUSKOHTEET_HUN = [
       selite: 'Pannonhalman arkkiluostari kukkulallaan; paikalla on ollut '
         + 'benediktiiniläisyhteisö vuodesta 996.',
       lahde: 'Pudelek (Marcin Szala), Wikimedia Commons (CC BY-SA 3.0)',
+    },
+    visa: {
+      kysymys: 'Mitä munkit toivat Pannonhalmaan kristinuskon lisäksi?',
+      vaihtoehdot: [
+        'Rautatekniikan ja asetekniikan',
+        'Merenkulun ja kaupankäynnin',
+        'Musiikin ja näyttelemisen',
+        'Kirjoitustaidon ja viininviljelyn',
+      ],
+      oikea: 3,
+      fakta: 'Pannonhalman munkit toivat maahan kristinuskon lisäksi kirjoitustaidon, viininviljelyn ja koulun.',
     },
   },
   {

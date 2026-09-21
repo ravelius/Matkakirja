@@ -130,6 +130,17 @@ export const MAASTOKOHTEET_FRA = [
       + 'nousu oli jo vakiintunut urheilulaji: alppikiipeily oli syntynyt Chamonix\'n laaksossa '
       + 'vuoren juurella.',
     lahde: 'en-Wikipedia "Mont Blanc", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Missä Mont Blancin huippu sijaitsee tarkalleen?',
+      vaihtoehdot: [
+        'Ranskan ja Italian rajalla',
+        'Sveitsin ja Italian rajalla',
+        'Ranskan ja Sveitsin rajalla',
+        'Kokonaan Ranskan alueella',
+      ],
+      oikea: 0,
+      fakta: 'Mont Blancin huippu on täsmälleen Ranskan ja Italian välisellä valtakunnanrajalla.',
+    },
   },
   {
     id: 'vignemale',
@@ -212,6 +223,17 @@ export const MAASTOKOHTEET_FRA = [
       + 'Idässä Bosporinsalmi vie Mustallemerelle ja kaakossa Suezin kanava Punaisellemerelle — '
       + 'jälkimmäinen oli isoisän matkan aikaan aivan uusi, avattu 1869.',
     lahde: 'en-Wikipedia "Mediterranean Sea", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Minä vuonna Suezin kanava avattiin?',
+      vaihtoehdot: [
+        '1859',
+        '1867',
+        '1869',
+        '1873',
+      ],
+      oikea: 2,
+      fakta: 'Suezin kanava Punaiselle merelle avattiin vuonna 1869, isoisän matkan aikaan aivan uutena.',
+    },
   },
   {
     id: 'biskajanlahti',
@@ -293,6 +315,17 @@ export const MAASTOKOHTEET_FRA = [
       + 'kaartaa Keskiylängöltä pohjoiseen Orléansiin asti ja kääntyy siellä länteen kohti '
       + 'Atlanttia.',
     lahde: 'en-Wikipedia "Loire", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Miten Loiren virtaama vertautuu Rhôneen?',
+      vaihtoehdot: [
+        'Kaksinkertainen Rhôneen verrattuna',
+        'Puolet Rhônen virtaamasta',
+        'Sama kuin Rhônella',
+        'Kolmasosa Rhônen virtaamasta',
+      ],
+      oikea: 1,
+      fakta: 'Loiren virtaama on vain puolet Rhônen virtaamasta, vaikka valuma-alue on viidennes Ranskasta.',
+    },
   },
   {
     id: 'rhone',
@@ -401,6 +434,17 @@ export const MAASTOKOHTEET_FRA = [
       + 'ulkopuolisen Ranskan käydyimmän nähtävyyden; yli kuusikymmentä kunnan '
       + 'rakennusta on suojeltu historiallisina monumentteina.',
     lahde: 'en-Wikipedia "Mont-Saint-Michel", johdanto-osa (tarkistettu 6.9.2026).',
+    visa: {
+      kysymys: 'Minä vuonna Mont-Saint-Michel otettiin maailmanperintöluetteloon?',
+      vaihtoehdot: [
+        '1944',
+        '1963',
+        '1971',
+        '1979',
+      ],
+      oikea: 3,
+      fakta: 'Mont-Saint-Michel ja sitä ympäröivä lahti otettiin maailmanperintöluetteloon vuonna 1979.',
+    },
   },
   {
     id: 'carcassonnen-linnoituskaupunki',
@@ -455,6 +499,17 @@ export const MAASTOKOHTEET_FRA = [
       + 'ja kaavoituksesta.',
     lahde: 'en-Wikipedia "Cité de Carcassonne", johdanto-osa sekä osiot "Early '
       + 'history" ja "Middle Ages" (tarkistettu 6.9.2026).',
+    visa: {
+      kysymys: 'Montako tornia Carcassonnen kaksoismuuria rytmittää?',
+      vaihtoehdot: [
+        '52 tornia',
+        '34 tornia',
+        '18 tornia',
+        '60 tornia',
+      ],
+      oikea: 0,
+      fakta: 'Carcassonnen kolme kilometriä pitkää kaksoismuuria rytmittää 52 tornia.',
+    },
   },
   {
     id: 'lascaux',
@@ -623,6 +678,17 @@ export const MAASTOKOHTEET_FRA = [
       + 'vierailukeskus ja liikenne siirrettiin pois sillalta.',
     lahde: 'en-Wikipedia "Pont du Gard", johdanto-osa ja osio "Description" '
       + '(tarkistettu 6.9.2026).',
+    visa: {
+      kysymys: 'Kuinka korkea Pont du Gard on?',
+      vaihtoehdot: [
+        '35,2 metriä',
+        '48,8 metriä',
+        '62,5 metriä',
+        '25,7 metriä',
+      ],
+      oikea: 1,
+      fakta: 'Pont du Gard on kolmikerroksinen roomalainen akveduktisilta, joka on 48,8 metriä korkea.',
+    },
   },
   {
     id: 'carnacin-kivirivit',

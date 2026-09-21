@@ -505,7 +505,7 @@ async function avaaSivu(ruutu, { ryhmitys = true } = {}) {
     });
   });
   const lippu = ryhmitys ? '' : '&aihemerkit=0';
-  await sivu.goto(`${osoite}?lauta=pallo${lippu}`, { waitUntil: 'domcontentloaded', timeout: 60000 });
+  await sivu.goto(`${osoite}?lauta=pallo&glnimiot=0${lippu}`, { waitUntil: 'domcontentloaded', timeout: 60000 });
   await sivu.waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null, { timeout: 90000 });
   /*
    * SAAPUMINEN AJETAAN LOPPUUN ENNEN MITTAUSTA — sama syy kuin

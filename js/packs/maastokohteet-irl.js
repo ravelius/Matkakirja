@@ -144,6 +144,17 @@ export const MAASTOKOHTEET_IRL = [
       + 'pohjoisessa Skotlannin länsipuolisiin sisämeriin Pohjoiskanaalin kautta. Sen suurin '
       + 'saari on Anglesey Pohjois-Walesissa ja toiseksi suurin Mansaari.',
     lahde: 'en-Wikipedia "Irish Sea", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Minkä kanaalin kautta Irlanninmeri yhtyy Kelttienmereen etelässä?',
+      vaihtoehdot: [
+        'Yrjönkanaali',
+        'Pohjoiskanaali',
+        'Tanskan salmi',
+        'Englannin kanaali',
+      ],
+      oikea: 0,
+      fakta: 'Etelässä Irlanninmeri yhtyy Kelttienmereen Yrjönkanaalin kautta.',
+    },
   },
   {
     id: 'shannon',
@@ -582,6 +593,17 @@ export const MAASTOKOHTEET_IRL = [
       + 'avoinna.',
     lahde: 'en-Wikipedia "Kilkenny Castle", johdanto-osa sekä osiot "Early history" ja '
       + '"Butlers of Ormonde" (tarkistettu 6.9.2026).',
+    visa: {
+      kysymys: 'Kuka rakennutti Kilkennyyn ensimmäisen, luultavasti puisen linnan?',
+      vaihtoehdot: [
+        'Arthur Butler, Ormonden markiisi',
+        'Richard de Clare eli Strongbow',
+        'Osraigen Mac Giolla Phádraig',
+        'Irlannin rakennusvirasto',
+      ],
+      oikea: 1,
+      fakta: 'Richard de Clare eli Strongbow rakennutti Kilkennyyn ensimmäisen linnan 1100-luvulla.',
+    },
   },
   /* ================================================================
    * K2-ERÄ 3, 11.9.2026 — KOLME KOHDETTA LISÄÄ.

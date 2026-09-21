@@ -53,7 +53,7 @@ const palvelin = http.createServer((req, res) => {
   res.end(readFileSync(tiedosto));
 });
 await new Promise((ok) => palvelin.listen(0, ok));
-const osoite = `http://localhost:${palvelin.address().port}/?lauta=pallo`;
+const osoite = `http://localhost:${palvelin.address().port}/?lauta=pallo&glnimiot=0`;
 
 let lapi = 0;
 let kaikki = 0;

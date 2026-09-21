@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.2011';
+const CACHE = 'matkakirja-2026-08-09.2014';
 const SHELL = [
   './',
   './index.html',
@@ -275,6 +275,7 @@ const SHELL = [
   './js/pallolauta/sovittelu.js',
   './js/pallolauta/sulavuusmittari.js',
   './js/pallolauta/nimiorasterit.js',
+  './js/pallolauta/glnimiot-sovitin.js',
   './js/pallolauta/sumu.js',
   './css/aikajana.css',
   // Linssien yhteinen kehysliuku (16.9.2026): index.html lataa tämän
@@ -347,6 +348,8 @@ const SHELL = [
   // Rannikon naulaus omana moduulina ja työsäikeenä (sulavuus E1, 21.9.2026).
   './js/pallovektorit-naulaus.js',
   './js/pallovektorit-tyo.js',
+  // GL-nimiökerros (runko, 21.9.2026; ?glnimiot=1).
+  './js/pallonimiot-gl.js',
   './js/linssit/rekisteri.js',
   './js/linssit/aarteet.js',
   './js/linssit/omistus.js',

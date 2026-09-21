@@ -116,7 +116,7 @@ await sivu.route(/media\.matkakirja\.app|r2\.dev\//, async (route) => {
     headers: { 'access-control-allow-origin': '*' },
   });
 });
-await sivu.goto(`${osoite}?lauta=pallo`, { waitUntil: 'domcontentloaded', timeout: 60000 });
+await sivu.goto(`${osoite}?lauta=pallo&glnimiot=0`, { waitUntil: 'domcontentloaded', timeout: 60000 });
 await sivu.waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null, { timeout: 90000 });
 // Saapuminen loppuun (isoisän kuvasarja ja pulu ruudun poikki) — sama
 // odotus kuin savuke-pariisi-lahizoom.mjs:ssä.

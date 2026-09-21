@@ -13,6 +13,9 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2014, teksti: 'GL vaihe 2: kaupunkinimet WebGL-kerroksessa oletuksena' },
+  { v: 2013, teksti: 'Visat era 4: 45 uutta nostoihin' },
+  { v: 2012, teksti: 'Zoomiraja pitaa rullalla, nipistyksella ja eleilla' },
   { v: 2011, teksti: 'Visat era 3: 43 uutta nostoihin' },
   { v: 2010, teksti: 'Nostokortti: kaksi palstaa leveilla ruuduilla' },
   { v: 2009, teksti: 'Visat: 25 uutta BIH/DEU/GBR/GRC/NOR/RUS/TUR-nostoihin' },

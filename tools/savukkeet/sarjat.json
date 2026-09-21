@@ -20,6 +20,8 @@
     "savuke-nostotasot.mjs",
     "savuke-sumu.mjs",
     "savuke-nostot-nakyviin.mjs",
+    "savuke-glnimiot.mjs",
+    "savuke-glnimiot-nimet.mjs",
     "savuke-kartan-liike.mjs",
     "savuke-nimiot-sulavat.mjs",
     "savuke-hiomassa-linssi.mjs",
@@ -63,6 +65,7 @@
     "savuke-kartuscha-3.mjs",
     "savuke-reittiverkko.mjs",
     "savuke-liftaus-ajoitus.mjs",
+    "savuke-zoomiraja.mjs",
     "savuke-reaktiot-sydan.mjs"
   ],
   "suorituskyky": [
@@ -212,6 +215,11 @@
       "js/pallolauta/lauta.js",
       "js/pallolauta/kamera.js",
       "js/ui.js"
+    ],
+    "savuke-zoomiraja.mjs": [
+      "js/pallolauta/lauta.js",
+      "js/pallolauta/kamera.js",
+      "js/pallo.js"
     ],
     "savuke-reaktiot-sydan.mjs": [
       "js/reaktiot.js",
@@ -542,6 +550,18 @@
       "kuvakansio": true,
       "huomautus": "Loytamisen sumu (omistaja 21.9.2026 julkaisuun): FRA/Pariisi 390 ja 1400 px — sisasumu 50 % kaymattomien kaupunkien seuduilla (aukko pariisi, Marseille sumussa), luonnosnostot katkoviivarenkaassa, kaymattomien maiden rajat vaaleampina; Marseillen jalkeen sumu pois (merentakaiset Cayenne ja Noumea eivat laske). Ampari Noden kautta. ~60 s."
     },
+    "savuke-glnimiot.mjs": {
+      "env": {
+        "NAKYMA": "puhelin"
+      },
+      "huomautus": "GL-nimiokerroksen runko (Karttaseppa 21.9.2026, ?glnimiot=testi): 40 testinimiota yhtena drawcallina, nimiot maapisteissaan (kaappausvertailu kerros nakyvissa/piilossa), kehys < 0,5 ms liikkeessa. NAKYMA=puhelin|tyopoyta. Ampari Noden kautta. ~60 s."
+    },
+    "savuke-glnimiot-nimet.mjs": {
+      "env": {
+        "NAKYMA": "puhelin"
+      },
+      "huomautus": "Ladonnan nimet GL-kerroksessa (Pelikoodari 21.9.2026, oletus paalla; ?glnimiot=0 = CSS2D): sovitin vie kaupunkien nimet rungolle — gl + css2d = ladotut, fonttien jalkeen DOMissa 0 nimea, jokainen nimi omassa ladonnan laatikossaan (kaappausvertailu), rakennuksia liikkeessa enintaan ladontojen verran, kehys < 0,5 ms. NAKYMA=puhelin|tyopoyta. Ampari Noden kautta. ~70 s."
+    },
     "savuke-nostot-nakyviin.mjs": {
       "kuvakansio": true,
       "huomautus": "Nostot nakyviin maan rajan ylapuolella (omistajan kaappaus v2000, 21.9.2026): FRA/Marseille tallennettu peli 2000x1300 dpr 2 ja 390 — saapumisnakyma 68 nostoa ikoneineen; katto nostettuna ajon tapaan korkeuteen x4,5 (Ranska kokonaan ruudulla, osuus 0,44) portti auki (lehtiNakyvissa), nostot ikoneineen ja nimioineen, ei pisteetVain; puhelin ennallaan. Ampari Noden kautta. ~80 s."
@@ -570,6 +590,10 @@
     "savuke-liftaus-ajoitus.mjs": {
       "kuvakansio": true,
       "huomautus": "Liftauksen nopanheitto ei zoomaa maailmakuvaan (omistaja v1983 20.9.2026): Bryssel 2000 x 1300, seitseman ajoitusta (rauhassa, heti saapumisen jalkeen, kesken trailerin, kaksi heittoa, heitto kesken sovituksen, kesken luennan, heti linssin sulkemisen jalkeen); vaatii korkeuden < 1 ja nappulan ruudulla. Juurisyy lauta.js matkaZoomirajat + kattoPuristus. Ampari Noden kautta, ~2 min."
+    },
+    "savuke-zoomiraja.mjs": {
+      "kuvakansio": true,
+      "huomautus": "Maan uloszoomausraja pitaa rullalla (ctrl/cmd), nipistyksella, WebKitin gesture-eleilla ja suoralla pointOfView-kirjoituksella (Fable 21.9.2026 ilta, omistajan Safari-havainto 'nostot puuttuvat'): WebKit + Chromium 1000 x 650 dpr 2, Marseille paiva 4; korkeus == OrbitControlsin maxDistance ja nostot pysyvat kuvamerkkeina. Mitattu 21.9.2026: kaikki polut 0,2049, nostot 70/70 — vika ei synny zoomipoluista. Ampari Noden kautta, ~2 min."
     },
     "savuke-reaktiot-sydan.mjs": {
       "kuvakansio": true,

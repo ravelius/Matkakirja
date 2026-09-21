@@ -485,12 +485,15 @@ export function asetteleNimi(el, d) {
  */
 export function luoNimet({
   ui, merkit, asteet, ruudulla, kotelo, pack = null,
+  /** GL-nimiöiden sovitin (js/pallolauta/glnimiot-sovitin.js) tai null. */
+  glSovitin = null,
 }) {
   let kaupungit = null; // [{ c, lat, lng }] laudan ladontatietue + asteet
   let nimetyt = new Set();
   let laatikot = [];
   let osumat = [];
   let tulos = { nimia: 0, pudotettu: 0, ehdokkaita: 0 };
+  let naytaNimet = null; // viimeisimmän ladonnan nimet merkkirekisteriin (GL-jako uudestaan)
   /*
    * LUKITUT SIJOITUKSET (ks. NIMIKYLTTI ON KIINNI KAUPUNGISSA):
    * id → { dx, dy, ank, koko, tyylitys, vali, kerroin, sade, rs },
@@ -885,7 +888,14 @@ export function luoNimet({
       .map((d) => ({
         id: d.id, lat: d.lat, lng: d.lng, laatikko: d.osuma,
       }));
-    merkit.aseta('nimet', nakyvatNimet);
+    /*
+     * GL-KERROS (vaihe 2, `?glnimiot=1`): sovitin vie valmiiksi
+     * rasteroidut nimet rungolle ja palauttaa CSS2D:hen jäävät (rasteri
+     * kesken, atlas täynnä, ei runkoa). Kun kesken ollut rasteri
+     * valmistuu, sama jako ajetaan uudestaan ilman uutta ladontaa.
+     */
+    naytaNimet = () => merkit.aseta('nimet', glSovitin ? glSovitin.nimet(nakyvatNimet, naytaNimet) : nakyvatNimet);
+    naytaNimet();
     tulos = {
       nimia: nakyvatNimet.length, pudotettu: ladottu.pudotettu, ehdokkaita: ehdokkaat.length,
     };
@@ -916,6 +926,8 @@ export function luoNimet({
     nimetty: (id) => nimetyt.has(id),
     /** Viimeisimmän ladonnan luvut (savukkeet). */
     tulos: () => tulos,
+    /** GL-jako uudestaan viimeisimmän ladonnan nimillä (runko syntyi, rasteri valmistui). */
+    jaaUudestaan: () => naytaNimet?.(),
     unohda: () => { kaupungit = null; lukitut = new Map(); },
   };
 }
