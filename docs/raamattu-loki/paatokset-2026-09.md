@@ -663,3 +663,7 @@ Laitetestaaja 21.9.2026 ilta (docs/raportit/laitekierros-glnimiot-20260921.md, l
 ## v2020 TUOTANNOSSA: GL-NAPPULAN VARI KORJATTU (#2676) (21.9.2026 klo 21.10)
 
 Julkaisija 21.9.2026 ilta: nappulan mustan värin korjaus tuotannossa v2020 (PR #2676). Jatkaa pelikoodari-savukkeet-punaiset-erällä ja GL-runko 3:lla.
+
+## OMISTAJAN TUNTUMATESTI v2021 (iPhone, NATIIVI): NIMIOIDEN KOKO VAIHTELEE PANOROIDESSA, RANTAVIIVAT VAREILEVAT; YKKOSPRIORITEETTI (21.9.2026 klo 21.33)
+
+Omistaja 21.9.2026 klo 21.31 (iPhone natiiviappi, v2021, Ranska Camargue z8-9): nostonimiöt (Camarguenvarsa, Camarguen hevoset, Millaun silta ym.) muuttavat kokoa pelkästään panoroidessa samalla zoomilla — samassa näkymässä Camarguenvarsa pienenä ja Camarguen hevoset kolminkertaisena, toisessa Camarguenvarsa isona; nimet hyppivät. Meren rannan syvyysviivat väreilevät zoomatessa ja panoroidessa, vähemmän kuin ennen. Omistaja: nimien hyppely ja koon vaihtelu on todella häiritsevä. Fable: YKKÖSPRIORITEETTI Pelikoodarille ohi savukkeiden ja GL-vaiheen 5: nimiön koko saa riippua vain korkeudesta ja nostoluokasta, ei ladonnasta eikä panoroinnista (sovittelun koko/luokkavalinta ei saa vaihtua kehysten välillä; hystereesi ja lukitus liikkeen ajaksi E3:n tapaan myös koolle). Karttasepälle: syvyysviivojen väreily (laattojen uudelleennäytteistys panoroinnissa/zoomissa; tutki mipmap/anisotropia/nearest vs linear ja viivan paksuus laudan yksiköissä). Kaappaukset omistajalta Fablen keskustelussa (2 kpl).
