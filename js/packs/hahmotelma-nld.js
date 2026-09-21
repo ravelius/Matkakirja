@@ -928,6 +928,7 @@ export const HAHMOTELMA_NLD = [
     ],
     nimi: 'Keukenhof',
     tyyppi: 'kulttuuri',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Mitä Keukenhof-nimi tarkoittaa?',
@@ -1001,6 +1002,7 @@ export const HAHMOTELMA_NLD = [
     ],
     nimi: 'Gouda',
     tyyppi: 'ruoka',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Missä Goudan juusto valmistetaan?',
@@ -1550,6 +1552,7 @@ export const HAHMOTELMA_NLD = [
     nimi: 'Kinderdijkin myllyt',
     nimio: 'Kinderdijk',
     tyyppi: 'tekniikka',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Mitä varten Kinderdijkin myllyt rakennettiin?',
