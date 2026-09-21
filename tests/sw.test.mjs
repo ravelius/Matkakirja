@@ -268,6 +268,9 @@ const NIPUTTAMATTOMAT = new Set([
   // Ranskan nostojen lukitut ankkurit: ainoa tuoja on
   // js/pallolauta/nostoankkurit.js, ja pallolauta on niputuksen
   // ulkopuolella (sama peruste kuin yllä). SHELLissä paketti on.
+  // Atlaslehti-vedos (`?atlas=1`, 21.9.2026): ainoa tuoja on
+  // js/pallolauta/lauta.js, ja pallolauta on niputuksen ulkopuolella.
+  'js/atlaslehti.js',
   'js/packs/nostoankkurit-fra.js',
   'js/packs/nostoankkurit-esp.js',
   'js/packs/nostoankkurit-ita.js',

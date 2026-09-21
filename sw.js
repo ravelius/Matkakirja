@@ -228,6 +228,7 @@ const SHELL = [
   // ne staattisesti, joten ne kulkevat samaa polkua offline-käyttöön.
   './js/pallolaatat.js',
   './js/reliefipyramidi.js',
+  './js/atlaslehti.js',
   // Vektoriviivat laattojen päälle (erä V1, 6.9.2026, Raamattu
   // VEKTORIT SAMALLA): pallolauta tuo kerroksen, joten se kulkee samaa
   // polkua offline-käyttöön. Vektoriaineisto itse on HTTP-välimuistissa

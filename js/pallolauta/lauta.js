@@ -131,6 +131,7 @@ import { laatikotLimittyvat } from './sovittelu.js';
 import { luoLinssikartta } from './linssikartta.js';
 import { luoMaapaneeli, paneelinLaatikko } from './maapaneeli.js';
 import { luoLinssit } from './linssit.js';
+import { asetaAtlaslehti } from '../atlaslehti.js';
 import { luoNappulanKuljettaja } from './siirto.js';
 import { luoAloituslennonKohtaus } from './avaus.js';
 
@@ -5233,6 +5234,12 @@ export async function avaaPallolauta(ui) {
   lauta.linssit = luoLinssit({
     pallo, ui, lauta, merkit, reitit, siirtyma, kotelo,
   });
+  /*
+   * ATLASLEHTI-VEDOS (`?atlas=1`, omistajan tilaus 21.9.2026): isoisän
+   * aikainen Stieler-lehti pallon päälle kalvona. Ei tee mitään ilman
+   * kytkintä (js/atlaslehti.js).
+   */
+  asetaAtlaslehti(lauta);
   // Instanssi talteen mittausta ja savukkeita varten (sama kenttä kuin
   // valikkopallolla).
   ui.pallonInstanssi = pallo;
