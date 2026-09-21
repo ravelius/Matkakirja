@@ -156,6 +156,7 @@ export const XP_NEW_BOARD = 50;
 export const XP_HARD_ANSWER = 25;
 export const XP_STAR = 100;
 export const XP_PUZZLE = 25; // isoisän luonnoskirjan pulma ratkaistu
+export const XP_KELLOT = 20; // Kellot-linssin arvaus oikein (Livian kysymys)
 export const XP_EXPLORE = 15; // kaupungin tutkiminen ilman laattaa
 export const EXPLORE_REWARD = 50; // löytöpalkkio oikeasta tutkimisvastauksesta
 export const KAARI_YRITYKSET = 2; // kohtaamista saa yrittää näin monta kertaa
@@ -1170,6 +1171,28 @@ export class Game {
     this.tarkistaLinssikynnys(player, ennen, player.xp);
     this.tarkistaTietajataso(player, ennen, player.xp);
     return amount;
+  }
+
+  /**
+   * KELLOT-LINSSIN ARVAUS (Fable 21.9.2026, ensimmäinen leikkilinssi):
+   * Livia kysyy toisen kaupungin kellonaikaa, ja oikea arvaus (±5 min)
+   * tuo tietäjäpisteitä — samasta taskusta kuin vaikea kysymys, mutta
+   * pienemmän, koska linssin voi avata milloin vain. Väärästä ei
+   * rangaista; sama pari ei tuo pisteitä kahdesti (js/linssit/kellot.js
+   * arpoo uuden parin joka kysymykseen).
+   */
+  vastaaKellokysymykseen(player, oikein, { kaupungit = '' } = {}) {
+    if (!player || this.phase === 'over') return 0;
+    if (!oikein) {
+      this.say(player.id, `${player.name} arvasi kellonajan väärin (${kaupungit}).`);
+      return 0;
+    }
+    this.awardXp(player, XP_KELLOT);
+    this.say(player.id, `${player.name} arvasi kellonajan oikein (${kaupungit}): +${XP_KELLOT} tp.`);
+    this.emit('aid', `Kello käy oikein: +${XP_KELLOT} tp`, {
+      icon: 'suurennuslasi', sub: kaupungit, tilanne: 'peli.kellot.oikein',
+    });
+    return XP_KELLOT;
   }
 
   /**

@@ -99,12 +99,11 @@ export const HIOMASSA_B = [
   hiomassa('rautatiet', 'Rautatieverkon kasvu'),
   hiomassa('kirjapaino', 'Kirjapainon leviäminen'),
 ];
-/** C. Leikkilinssit (Codexin erä C, 6). */
+/** C. Leikkilinssit (Codexin erä C, 6; Kellot valmistui ensimmäisenä → tavallinen rivi alla). */
 export const HIOMASSA_C = [
   hiomassa('yokartta', 'Yökartta'),
   hiomassa('tahdet', 'Tähtitaivas'),
   hiomassa('muuttolinnut', 'Muuttolinnut'),
-  hiomassa('kellot', 'Kellot'),
   hiomassa('lippuarvaus', 'Lippuarvaus'),
   hiomassa('vuodenajat', 'Vuodenajat'),
 ];
@@ -115,7 +114,7 @@ export const HIOMASSA_D = [
   hiomassa('elaimet', 'Maailman eläimet'),
   hiomassa('suurimmat-kaupungit', 'Suurimmat kaupungit'),
 ];
-/** Koko hiomassa-sarja rekisteriin (46 riviä; keksinnöt on jo valmis). */
+/** Koko hiomassa-sarja rekisteriin (45 riviä; keksinnöt ja kellot ovat valmiita). */
 export const HIOMASSA_SARJA = [...HIOMASSA_A, ...HIOMASSA_B, ...HIOMASSA_C, ...HIOMASSA_D];
 
 export const LINSSIT = [
@@ -124,6 +123,9 @@ export const LINSSIT = [
   // { tunnus: 'ilmasto',      manner: 'oceania',       tuo: () => import('./ilmasto.js') },
   // { tunnus: 'kielet',       manner: 'europe',        tuo: () => import('./kielet.js') },
   { tunnus: 'keksinnot',    manner: null,            tuo: () => import('./keksinnot.js') },
+  // Kellot: linssisarjan ensimmäinen valmistunut leikkilinssi (21.9.2026).
+  // `ikoni` jää riville, jotta laukku näyttää Codexin kuvan (js/ui.js linssiLiuska).
+  { tunnus: 'kellot',       manner: null,            ikoni: 'assets/linssit/ikonit/linssi-kellot.webp', tuo: () => import('./kellot.js') },
   { tunnus: 'pallo',        manner: null,            tuo: () => import('./pallo.js') },
   // { tunnus: 'leviaminen',   manner: 'africa',        tuo: () => import('./leviaminen.js') },
   // { tunnus: 'maaluvut',     manner: null,            tuo: () => import('./maaluvut.js') },
@@ -150,7 +152,8 @@ export const LINSSIT = [
    * @2; Codexin 512 px:n PNG-alkuperäiset jäävät toimituskansioon
    * ~/Documents/Codex/<pvm>/linssi-ikonit/, eivät repoon; yhteinen
    * messinkikehys linssi-kehys.webp).
-   * Keksinnöt (B1) on jo valmis linssi (rivi yllä) eikä toistu tässä.
+   * Keksinnöt (B1) ja Kellot (C) ovat valmiita linssejä (rivit yllä)
+   * eivätkä toistu tässä.
    * Kaupunki → tunnus -kytkentä on aarreluettelossa (Sisältökirjuri,
    * js/linssit/aarteet.js LINSSIAARTEET), ei tässä.
    */

@@ -16,15 +16,19 @@ import { Game } from '../js/game.js';
 import { packById } from '../js/pack.js';
 import { hiomassa, hiomassaNimi, omistetut, tarkistaKynnys } from '../js/linssit/omistus.js';
 
-test('sarja: 19 + 17 + 6 + 4 = 46 hiomassa-riviä, tunnukset yksilöllisiä, keksinnöt ei toistu', () => {
+test('sarja: 19 + 17 + 5 + 4 = 45 hiomassa-riviä, tunnukset yksilöllisiä, keksinnöt ja kellot eivät toistu', () => {
   assert.equal(HIOMASSA_A.length, 19);
   assert.equal(HIOMASSA_B.length, 17);
-  assert.equal(HIOMASSA_C.length, 6);
+  assert.equal(HIOMASSA_C.length, 5);
   assert.equal(HIOMASSA_D.length, 4);
-  assert.equal(HIOMASSA_SARJA.length, 46);
+  assert.equal(HIOMASSA_SARJA.length, 45);
   const tunnukset = LINSSIT.map((r) => r.tunnus);
   assert.equal(new Set(tunnukset).size, tunnukset.length, 'tunnus toistuu');
   assert.ok(!HIOMASSA_SARJA.some((r) => r.tunnus === 'keksinnot'));
+  assert.ok(!HIOMASSA_SARJA.some((r) => r.tunnus === 'kellot'), 'kellot on valmis linssi');
+  const kellot = LINSSIT.find((r) => r.tunnus === 'kellot');
+  assert.equal(typeof kellot?.tuo, 'function');
+  assert.equal(kellot?.ikoni, 'assets/linssit/ikonit/linssi-kellot.webp');
   for (const r of HIOMASSA_SARJA) {
     assert.equal(r.tila, 'hiomassa');
     assert.equal(r.manner, null);

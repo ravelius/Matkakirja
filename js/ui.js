@@ -19047,10 +19047,11 @@ export class UI {
        * 'linssi-satelliitti'), ei muiden linssien jaettu taikalasi.
        */
       const onSatelliitti = tunnus === 'satelliitti';
-      // Hiomassa: rekisterin ikonipaikka tai yhteinen hiomassa-kuva.
-      const kuva = hiomassa
-        ? (LINSSIT.find((r) => r.tunnus === tunnus)?.ikoni ?? LINSSI_HIOMASSA_KUVA)
-        : `assets/varusteet/varuste-${tunnus}.jpg`;
+      // Rekisterin ikoni (Codexin linssisarja) voittaa; hiomassa ilman
+      // omaa kuvaa saa yhteisen hiomassa-kuvan, vanhat linssit varustekuvan.
+      const rekisterinIkoni = LINSSIT.find((r) => r.tunnus === tunnus)?.ikoni ?? null;
+      const kuva = rekisterinIkoni
+        ?? (hiomassa ? LINSSI_HIOMASSA_KUVA : `assets/varusteet/varuste-${tunnus}.jpg`);
       const tiedot = { kuva, name: nimi };
       nappi.appendChild(aarreIkoni(tiedot, onSatelliitti ? 'linssi-satelliitti' : 'linssi', 64));
     } else {
