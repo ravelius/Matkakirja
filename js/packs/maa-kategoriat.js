@@ -18641,6 +18641,232 @@ export const MAA_KATEGORIAT = {
       },
     },
     {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Ruhtinas heitti jumalansa jokeen, tsaari harppoi tuulisella '
+        + 'hiekkarannalla perustamassa uutta pääkaupunkia, ja isoisän '
+        + 'aikaan miljoonat ihmiset lakkasivat yhtäkkiä olemasta toisen '
+        + 'omaisuutta.',
+      nostot: [
+        {
+          otsikko: 'Ruhtinas heitti jumalankuvan jokeen',
+          aika: '988',
+          tiedosto: 'Lebedev baptism.jpg',
+          teksti: 'Ruhtinas Vladimir Suuri oli vuonna 987 luvannut Bysantin '
+            + 'keisari Basileios II:lle sotilasavun kapinallista vastaan, jos '
+            + 'saisi vastineeksi naida keisarin sisaren Annan ja valtakuntansa '
+            + 'kääntyisi kristityksi. Ehtona oli myös Krimin Khersonesoksen '
+            + 'valtaus, ja Vladimir kastettiin siellä ennen häitä. Palattuaan '
+            + 'Kiovaan hän käski kaataa kahdeksan vuotta aiemmin pystyttämänsä '
+            + 'slaavilaisjumalien patsaat: ylijumala Perunin kuva sidottiin '
+            + 'hevosen häntään, raahattiin mäkeä alas ja upotettiin Dneprjoen '
+            + 'aaltoihin. Kiovan asukkaat kastettiin joukolla joen vedessä '
+            + 'vuonna 988, ja tapahtumaa pidetään Venäjän, Ukrainan ja '
+            + 'Valko-Venäjän yhteisen kristillisen kulttuurin syntyhetkenä.',
+          lyhyt: 'Ruhtinas Vladimir Suuri kastatti Kiovan asukkaat Dneprjoessa vuonna 988.',
+          selite: 'Klavdi Lebedevin maalaus kuvaa Kiovan asukkaiden '
+            + 'joukkokastetta Dneprjoessa papiston johdolla vuonna 988.',
+          lahde: 'Klavdi Lebedev, Wikimedia Commons (PD)',
+          wiki: 'Kiovan rusien kaste',
+        },
+        {
+          otsikko: 'Kaksi armeijaa tuijotti toisiaan yli joen',
+          aika: '1480',
+          tiedosto: 'Facial Chronicle - b.16, p. 461 - Great standing on the Ugra.jpg',
+          teksti: 'Moskovan suuriruhtinas Iivana III lakkasi 1470-luvulla '
+            + 'maksamasta veroa Kultaisen ordan perijälle, Suurelle ordalle, '
+            + 'ja lokakuussa 1480 sen kaani Ahmat marssi joukkoineen Ugra-joen '
+            + 'toiselle rannalle Moskovan armeijaa vastapäätä. Kuukauden ajan '
+            + 'armeijat vain tuijottivat toisiaan joen yli: yksi kaanin '
+            + 'ylityskokeilu torjuttiin venäläisten tuliaseilla, mutta '
+            + 'suurempaa taistelua ei koskaan syttynyt. Ahmat odotti turhaan '
+            + 'liettualaista apujoukkoa, ja kun pakkanen ja muonapula '
+            + 'painoivat päälle, hän perääntyi 8. marraskuuta. Venäläinen '
+            + 'historiankirjoitus on sen jälkeen pitänyt Ugran seisontaa '
+            + 'kahden ja puolen vuosisadan mongolivallan päätepisteenä: enää '
+            + 'yksikään ruhtinas ei tarvinnut kaanin lupaa hallita.',
+          lyhyt: 'Ugra-joen seisonta lokakuussa 1480 päätti mongolivallan ilman suurta taistelua.',
+          selite: 'Venäläisen 1560-luvun aikakirjan kuvitus näyttää Moskovan '
+            + 'ja Suuren ordan armeijat vastakkain Ugra-joen kummallakin '
+            + 'rannalla.',
+          lahde: 'Tuntematon venäläinen kuvittaja (1560-luku), Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Tsaari perusti pääkaupungin suolle',
+          aika: '1703',
+          tiedosto: 'Serov — Peter the Great.jpg',
+          teksti: 'Suuressa Pohjan sodassa Ruotsia vastaan Pietari Suuri '
+            + 'valtasi Nevajoen suistoalueen ja käski 27. toukokuuta 1703 '
+            + 'perustaa linnoituksen pienelle Jänissaarelle suojaamaan '
+            + 'uutta aluetta. Rakennustyöhön komennettiin kymmeniätuhansia '
+            + 'talonpoikia ja sotavankeja kaivamaan maata paljain käsin '
+            + 'suoperäisellä rannalla, ja moni heistä kuoli raskaissa '
+            + 'oloissa. Linnoituksen ympärille nousi kaupunki, josta tuli '
+            + 'vuonna 1712 Venäjän uusi pääkaupunki ja jota Pietari kutsui '
+            + 'itse "ikkunaksi Eurooppaan". Pietari valvoi rakennustöitä '
+            + 'usein itse paikan päällä eurooppalaiseen tapaan pukeutuneena, '
+            + 'mikä hämmensi hoviväkeä tottuneempaa tsaarin perinteiseen '
+            + 'asuun ja etäisyyteen.',
+          lyhyt: 'Pietari Suuri perusti Pietari-Paavalin linnoituksen Nevan suistoon 27.5.1703.',
+          selite: 'Valentin Serovin maalauksessa Pietari Suuri harppoo '
+            + 'tuulisella rantatyömaalla seuralaistensa kanssa, taustalla '
+            + 'purjelaivoja.',
+          lahde: 'Valentin Serov, Wikimedia Commons (PD)',
+          wiki: 'Pietari-Paavalin linnoitus',
+        },
+        {
+          otsikko: '23 miljoonaa ihmistä lakkasi olemasta omaisuutta',
+          aika: '1861',
+          tiedosto: 'Reading of the Manifest (Liberation of peasants) - Kustodiev, 1907.jpg',
+          teksti: 'Tsaari Aleksanteri II allekirjoitti 3. maaliskuuta 1861 '
+            + 'manifestin, joka vapautti noin 23 miljoonaa maaorjaa eli '
+            + 'reilut kolmasosan koko valtakunnan väestöstä. Aleksanteri '
+            + 'perusteli uudistusta sanomalla, että on parempi lakkauttaa '
+            + 'maaorjuus ylhäältä käsin kuin odottaa hetkeä, jolloin se '
+            + 'alkaa purkautua alhaalta. Vapaus ei tullut ilmaiseksi: '
+            + 'entisten maaorjien piti maksaa maastaan lunastusmaksuja '
+            + 'valtiolle lähes viisikymmentä vuotta, ja moni jäi silti '
+            + 'entistä isäntäänsä köyhemmäksi. Isoisän matkapäiväkirja on '
+            + 'kirjoitettu vain kaksitoista vuotta uudistuksen jälkeen, '
+            + 'jolloin sen seuraukset näkyivät venäläisillä maaseuduilla '
+            + 'yhä kaikkialla.',
+          lyhyt: 'Aleksanteri II vapautti maaorjat manifestilla 3.3.1861.',
+          selite: 'Boris Kustodijevin maalauksessa kartanon väki kokoontuu '
+            + 'kuulemaan vapautusmanifestin lukemista pakkasaamuna.',
+          lahde: 'Boris Kustodijev, Wikimedia Commons (PD)',
+          wiki: 'Maaorjuus Venäjällä',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi kaani Ahmat lopulta perääntyi Ugra-joelta lokakuussa '
+          + '1480 ilman suurta taistelua?',
+        vaihtoehdot: [
+          'Moskovan armeija hyökkäsi yllättäen ja voitti',
+          'Odotettu liettualainen apujoukko ei koskaan tullut, ja pakkanen '
+            + 'sekä muonapula painoivat päälle',
+          'Kaani sai tiedon, että Moskova oli jo antautunut',
+          'Joki tulvi yli ja hukutti leirit',
+        ],
+        oikea: 1,
+        fakta: 'Ahmat odotti turhaan Liettuan kuninkaan apujoukkoja, ja kun '
+          + 'talvi ja muonapula lähestyivät, hän perääntyi 8. marraskuuta '
+          + '1480 taistelematta.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Kadulla myytiin tynnyristä hapanjuomaa, hienoin ravintola '
+        + 'kätki reseptinsä, kakku huijasi muka keisarinnaa, ja vanha '
+        + 'sananlasku lupaa maan, jossa joet virtaavat makeaa keittoa.',
+      nostot: [
+        {
+          otsikko: 'Juoma joka kulki tynnyrissä kadulla',
+          aika: '1800-luku',
+          tiedosto: 'Бочка кваса Белгород.jpg',
+          teksti: 'Kvassia eli hapatettua ruisleipäjuomaa on juotu '
+            + 'itäslaavilaisilla alueilla ainakin 900-luvulta asti: vanhin '
+            + 'kirjallinen maininta kertoo, että sitä jaettiin kansalle '
+            + 'ruhtinas Vladimirin kastejuhlissa vuonna 988. Juoma tehtiin '
+            + 'liottamalla kuivattua ruisleipää tai -jauhoa kuumassa '
+            + 'vedessä mallastaen, ja käyminen jätti siihen vain '
+            + 'puolesta prosentista pariin prosenttiin alkoholia — riittävän '
+            + 'vähän, että sitä pidettiin lasten ja aikuisten juomana. '
+            + '1800-luvulla kvassista tuli katukuvan vakioilmestys: sitä '
+            + 'myytiin väkijoukoille suoraan puu- tai metallitynnyreistä '
+            + 'kaupunkien toreilla, ja makuja oli kirjattu ylös yli sata '
+            + 'viisikymmentä erilaista.',
+          lyhyt: 'Kvassia on juotu 900-luvulta asti, ja 1800-luvulla sitä myytiin tynnyreistä kaduilla.',
+          selite: 'Perinteiseen tapaan koristeltu kvassitynnyri toimii yhä '
+            + 'katukioskina, josta juomaa myydään ohikulkijoille.',
+          lahde: 'Lobatšev Vladimir, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Kvassi',
+        },
+        {
+          otsikko: 'Kokin resepti syntyi Moskovan hienoimmassa ravintolassa',
+          aika: '1860-luku',
+          tiedosto: 'Olivier Russian salad made to the Hermitage restaurant recipe.jpg',
+          teksti: 'Ranskalais-belgialainen kokki Lucien Olivier loi '
+            + '1860-luvulla Moskovan Hermitage-ravintolan tunnusruoan: '
+            + 'majoneesilla sidotun salaatin, jossa oli pyytä, rapujen '
+            + 'pyrstöjä, kaviaaria, kapriksia ja oliiveja. Olivier piti '
+            + 'tarkan reseptin salassa eikä paljastanut sitä edes '
+            + 'keittiöhenkilökunnalleen, ja vasta hänen kuolemansa jälkeen '
+            + 'vuonna 1894 julkaistiin versio ohjeesta. Vallankumouksen '
+            + 'jälkeen kalliit ja harvinaiset aineet vaihtuivat halvempiin: '
+            + 'pyystä tuli kanaa tai keittomakkaraa, rapujen pyrstöistä '
+            + 'keitettyjä kananmunia ja oliiveista suolakurkkua ja '
+            + 'herneitä. Tästä yksinkertaistetusta versiosta tuli '
+            + 'neuvostoajan uudenvuodenpöydän vakioruoka, jota ilman juhla '
+            + 'ei ollut täydellinen.',
+          lyhyt: 'Lucien Olivier loi salaatin Moskovan Hermitagessa 1860-luvulla; resepti julkaistiin 1894.',
+          selite: 'Nykyaikaan sovitettu versio Olivierin alkuperäisestä '
+            + 'reseptistä: liha, kananmuna, kurkku ja vihannekset '
+            + 'majoneesissa.',
+          lahde: 'HOBOPOCC, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Olivier-salaatti',
+        },
+        {
+          otsikko: 'Kakku jonka väitetään huijanneen keisarinnaa',
+          aika: '1900-luku',
+          tiedosto: 'Gâteau feuilleté russe au miel.jpg',
+          teksti: 'Tarinan mukaan nuori hovikondiittori keksi 1800-luvun '
+            + 'alussa ohuista kakkulevyistä ja hapankermatäytteestä '
+            + 'kakun miellyttääkseen keisari Aleksanteri I:n puolisoa '
+            + 'Elizaveta Aleksejevnaa, joka ei muka sietänyt hunajaa — '
+            + 'ja keisarinnan kerrotaan rakastuneen kakkuun tietämättä, '
+            + 'että se oli täynnä juuri sitä. Tarina on kaunis, mutta '
+            + 'mistään 1800-luvun keittokirjasta medovikia ei löydy: '
+            + 'kakku yleistyi todellisuudessa vasta neuvostoaikana. '
+            + 'Ohuet levyt paistetaan koviksi ja pinotaan päällekkäin '
+            + 'hunajaisen täytteen kanssa, minkä jälkeen kakun annetaan '
+            + 'seistä päiväkausia — täyte pehmentää levyt vasta '
+            + 'varastoinnin aikana, ja pinta koristellaan usein '
+            + 'murustetuilla leikkuutähteillä.',
+          lyhyt: 'Medovik-kakun keisarinnalegenda on kaunis tarina, mutta kakki yleistyi vasta neuvostoaikana.',
+          selite: 'Kotitekoinen medovik-kakku pöydällä; ohuet kakkulevyt ja '
+            + 'hunajainen täyte erottuvat leikkauspinnasta.',
+          lahde: 'Ji-Elle, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Maa jossa joet virtaavat makeaa keittoa',
+          aika: '1800-luku',
+          tiedosto: 'Kissel (16166850513).jpg',
+          teksti: 'Kisseli on hapatetusta tai tärkkelyksellä sakeutetusta '
+            + 'marjasta, hedelmästä tai viljasta keitetty jälkiruoka, jonka '
+            + 'nimi juontuu vanhasta slaavilaisesta hapan-sanasta. '
+            + 'Alkuperäiset kisselit tehtiin kaurasta tai rukiista ilman '
+            + 'perunatärkkelystä, ja makea marjaversio yleistyi vasta '
+            + '1800-luvulla, kun halpaa perunatärkkelystä alkoi olla '
+            + 'kaikkien saatavilla. Venäläisissä saduissa ihannemaata '
+            + 'kuvataan sanonnalla "maidonjoet, kisselirannat", ja '
+            + 'kaukaista sukulaista sanotaan leikillään "seitsemänneksi '
+            + 'vedeksi kisselin jälkeen" — niin ohuena serkkuus siinä '
+            + 'näyttäytyy. Karpalosta keitetty kisseli on yksi '
+            + 'suosituimmista versioista, ja sen paksu, kiiltävä pinta '
+            + 'muistuttaa enemmän hyytelöä kuin juomaa.',
+          lyhyt: 'Kisseli-jälkiruoka sai makean marjamuotonsa 1800-luvulla halvan perunatärkkelyksen myötä.',
+          selite: 'Kiehuva karpalokisseli kattilassa; paksu, kiiltävä pinta '
+            + 'on tyypillinen tälle vanhalle jälkiruoalle.',
+          lahde: 'Dmitri Grigorjev, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä Olivier-salaatin alkuperäisessä 1800-luvun reseptissä '
+          + 'oli tilalla nykyisin käytettyä kanaa tai keittomakkaraa?',
+        vaihtoehdot: [
+          'Pyytä eli metsäkanalintua',
+          'Naudanlihaa',
+          'Kalaa',
+          'Salaatti oli alun perin kokonaan lihaton',
+        ],
+        oikea: 0,
+        fakta: 'Lucien Olivierin alkuperäisessä reseptissä oli pyytä ja '
+          + 'rapujen pyrstöjä; vasta vallankumouksen jälkeen ne korvattiin '
+          + 'halvemmalla kanalla tai makkaralla.',
+      },
+    },
+    {
       id: 'menovinkit',
       nimi: 'Menovinkit',
       johdanto: 'Venäjän suuret museot ja kirjastot ovat vieneet kokoelmansa '
