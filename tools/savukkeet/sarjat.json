@@ -37,6 +37,7 @@
     "savuke-noppa-saapumisen-aikana.mjs",
     "savuke-ihmisen-pulukysymykset.mjs",
     "savuke-nostokortti.mjs",
+    "savuke-nostokortti-leveat.mjs",
     "savuke-nostokuva-karuselli.mjs",
     "savuke-nostokuva-suhde.mjs",
     "savuke-pulu-kartuscha.mjs",
@@ -529,6 +530,10 @@
     },
     "savuke-nostokortti.mjs": {
       "huomautus": "Nostokortti (omistaja 20.9.2026): lahderivi pois kaikista nostotyypeista, kohdekortin karuselli, Havainnekuva-merkki, kuvan koko LISAA-tilassa (>= 0,8), pyyhkaisy ja nuolinappaimet. 390 ja 1400 px, ampari Noden kautta. ~60 s."
+    },
+    "savuke-nostokortti-leveat.mjs": {
+      "kuvakansio": true,
+      "huomautus": "Nostokortin kaksipalstataitto (omistaja 21.9.2026, Le Mans -kaappaus tyopoydalla; korjattu samana paivana omistajan hylkayksen jalkeen, ks. css/fokusnosto.css osio 13 TOINEN YRITYS): >= 1100 px kuva JA kuvateksti vasemmalla (pari koskemattomana, kuvateksti kuvan ALLA), enintaan 50 % kortista (pystykuva kapeampi); oikealla leipateksti ja Lukijan kysymys alkaen palstan ylareunasta ilman pystykeskitysta, vastausvaihtoehdot palstan levyisina; kortti enintaan ~1100 px leveä, korkeus seuraa sisaltoa; alle 1100 px pino sailyy mutta kortti enintaan ~760 px (js/nostokuva.js NOSTOKUVA_LEVEA_RAJA/KAPEA_KATTO/LEVEA_KATTO); puhelin (390) ennallaan; galleria ja vakaset (reunanuolet, pyyhkaisy, nuolinappaimet) toimivat; kuva aina kokonaan nakyvissa. 390/1400/1920 px, ampari Noden kautta. ~70 s."
     },
     "savuke-nostotasot.mjs": {
       "huomautus": "Nostojen tasot elavissa nimioissa (Fable 21.9.2026): FRA/Marseille 390 ja 1400 px: ykkostaso nimiollisena kuvamerkilla ja 1,3x nimiolla (>= 4 / >= 6 ruudulla), ei piilotettuja ykkostasoja, kolmostaso piilossa saapumisessa ja nakyvissa lahizoomilla, ei reunaylityksia. Ampari Noden kautta. ~70 s."
