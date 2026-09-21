@@ -159,6 +159,7 @@ import { HAHMOTELMA_GBR } from './packs/hahmotelma-gbr.js';
 import { HAHMOTELMA_NOR } from './packs/hahmotelma-nor.js';
 import { HAHMOTELMA_ISL } from './packs/hahmotelma-isl.js';
 import { HAHMOTELMA_RUS } from './packs/hahmotelma-rus.js';
+import { HAHMOTELMA_UKR } from './packs/hahmotelma-ukr.js';
 import { avaaLisakaupunginKortti } from './kaupunkinosto.js';
 import { FOKUSKOHTEET_GBR } from './packs/fokuskohteet-gbr.js';
 import { FOKUSKOHTEET_HUN } from './packs/fokuskohteet-hun.js';
@@ -638,6 +639,17 @@ KOHDE_MAAT.ISL = [...(KOHDE_MAAT.ISL ?? []), ...HAHMOTELMA_ISL];
  * PERÄÄN, sitä ei muuteta.
  */
 KOHDE_MAAT.RUS = [...(KOHDE_MAAT.RUS ?? []), ...HAHMOTELMA_RUS];
+
+/*
+ * UKRAINAN HAHMOTELMANOSTOT (js/packs/hahmotelma-ukr.js): 17
+ * täydentävää karttanostoa olemassa olevien 13 nostoon
+ * (maastokohteet-ukr.js) — Kiova (puuttui kokonaan) ja Odesa
+ * pääkaupunkeina/satamana, Krimi, Karpaattien hutsulikulttuuri,
+ * ruoka- ja tekniikkakohteita. Sama liitosreitti kuin muu Eurooppa
+ * -hahmotelmilla: rivit lisätään olemassa olevan maastolistan
+ * PERÄÄN, sitä ei muuteta.
+ */
+KOHDE_MAAT.UKR = [...(KOHDE_MAAT.UKR ?? []), ...HAHMOTELMA_UKR];
 
 /*
  * BOSNIA JA HERTSEGOVINA: js/packs/hahmotelma-bih.js ON KIRJOITETTU
