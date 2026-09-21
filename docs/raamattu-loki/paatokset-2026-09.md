@@ -391,3 +391,7 @@ Omistajan on pakko siirtaa kehitystyo Macin toiselle kayttajalle. Vaihtoehdot: s
 ## SULAVUUS E1 VALMIS: PITKAT TEHTAVAT POIS (Karttaseppa f909d2fd) (21.9.2026 klo 11.08)
 
 Laatan valmistelu piirtokoukun jonoon aikabudjetilla, rannikon naulaus Web Workeriin (js/pallovektorit-naulaus.js + -tyo.js, varapolku paasaikeessa), laatan kangas willReadFrequently. Mittari (390 dpr3, CPU 4x, Metal): pisin kehys zoom 363 -> 36 ms, nipistys 380 -> 43 ms, panorointi 42 ms; pitkat tehtavat 0. Raportti docs/raportit/sulavuus-e1-20260921.md. Jaljella 40-50 ms kehykset ovat nimioiden ladontaa ja nostojen kehystyota (Pelikoodarin puoli). Julkaisijalle seuraavaan versioon.
+
+## YLAPALKKIBUGI KORJATTU (Pelikoodari 6cabce66) + LUOVUTUKSET SIIRTOON (21.9.2026 klo 11.09)
+
+pelikoodari-ylapalkki 6cabce66: ylapalkki piiloon vain vaaka-asennossa, pystyssa aina; hampurilainen kun palkki on, vakaset vain ilman palkkia; savuke 60/60 (iPad ja iPhone, pysty ja vaaka, kortti ja linssi auki). Julkaisijalle seuraavaan versioon. Luovutukset siirtoon: Karttaseppa 4e4ae8cc, Sisaltokirjuri 6df9f127 (sisalto-vajaat-maat-30), Pelikoodari 606103ac (pelikoodari-luovutus-siirto).
