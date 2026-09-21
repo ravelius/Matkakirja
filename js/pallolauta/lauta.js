@@ -3744,8 +3744,27 @@ export async function avaaPallolauta(ui) {
       // Linssin aikana pallon pisteetkin kulkevat pinnan portin kautta,
       // joka päästää läpi vain linssin oman merkin (ks. napautaPintaan).
       if (linssiPaalla()) { napautaPintaan(d.lat, d.lon); return; }
-      // Askelhelmi ja valo ovat koristeita: napautus niistä menee pinnalle.
-      if (d.laji === 'helmi' || d.laji === 'valo') napautaPintaan(d.lat, d.lon);
+      /*
+       * ASKELHELMI JA VALO OVAT KORISTEITA: napautus niistä menee
+       * pinnalle — SORMEN OMASTA PISTEESTÄ, ei koristeen keskeltä (CI
+       * 21.9.2026, PR #2636 run 35546141308: Pariisin napautus osui
+       * aihevalon täplään, jonka keskus oli 48,506 N / 2,848 E eli 15–20
+       * px kaupungin kaakkoispuolella; pinnan osumatesti lähti täplän
+       * keskeltä ja voitti Versaillesin noston, ei kaupunkia). Valon
+       * säde on kymmeniä pikseleitä, joten sen keskus ei ole sormen
+       * kohta. Sormen ruutupiste muunnetaan pallon pinnalle
+       * (toGlobeCoords); ilman tuoretta pistettä pudotaan koristeen
+       * omaan paikkaan kuten ennen.
+       */
+      if (d.laji === 'helmi' || d.laji === 'valo') {
+        const kohta = tuoreNapautuskohta();
+        const pinta = kohta ? pallo.toGlobeCoords?.(kohta.x, kohta.y) : null;
+        if (pinta && Number.isFinite(pinta.lat) && Number.isFinite(pinta.lng)) {
+          napautaPintaan(pinta.lat, pinta.lng);
+        } else {
+          napautaPintaan(d.lat, d.lon);
+        }
+      }
       else if (korttiOliAuki) korttiOliAuki = false;
       // Linssin merkki kaupungin päällä (aikajanan lamppu) saa napautuksen
       // sen sijaan: sama sääntö kuin pinnan napautuksessa.

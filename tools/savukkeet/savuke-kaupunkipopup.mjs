@@ -487,7 +487,7 @@ for (const ruutu of RUUDUT) {
         tieto(`${tunnus}: kaupunkimerkin napautus ${yritys + 1}`,
           `piste ${Math.round(piste.x)},${Math.round(piste.y)} (tuore ${tuore ? `${Math.round(tuore.x)},${Math.round(tuore.y)}` : '-'}), `
           + `alla ${alla}, liuska ${auki ?? '-'} ${Date.now() - alku} ms`);
-        if (!auki) {
+        if (!auki || process.env.SAVUKE_DIAGNOOSI) {
           /*
            * DIAGNOOSI CI:N KUORMAAN (21.9.2026, PR #2636): kun liuska ei
            * auennut, kerrotaan MIKÄ aukesi — kortin otsikko, laudan oma
@@ -516,7 +516,7 @@ for (const ruutu of RUUDUT) {
             };
           }, piste);
           tieto(`${tunnus}: napautuksen ${yritys + 1} diagnoosi`, JSON.stringify(diagnoosi));
-          if (KUVAKANSIO) {
+          if (KUVAKANSIO && !auki) {
             await sivu.screenshot({ path: join(KUVAKANSIO, `napautus-${kaupunki.id}-${ruutu.width}-${yritys + 1}.png`) });
           }
         }
