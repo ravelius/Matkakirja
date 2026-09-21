@@ -675,3 +675,7 @@ Omistaja 21.9.2026 klo 21.36 (iPhone natiivi, v2021, Ranska z6, kaksi kaappausta
 ## OMISTAJA v2021 iPhone: LISALEHTIKORTIN YLAREUNA MENEE TILARIVIN ALLE (SAFE AREA) (21.9.2026 klo 21.41)
 
 Omistaja 21.9.2026 klo 21.40 (iPhone natiivi): koko ruudun lisälehtikortti (Skandaalit: Kuningattaren kaulanauhajuttu) alkaa iOS:n tilarivin alta: kellonaika peittää otsikon SKANDAALIT ja sulkunappi menee akkukuvakkeen päälle. Fable: Pelikoodarille pieni korjaus nimiöiden koon jälkeen: kaikkiin koko ruudun kortteihin ja lehtiin yläreunan safe-area-inset-top (env()) ja sulkunappi sen alle; tarkista sama alareunasta (home-palkki) ja vaaka-asennosta. Savuke iPhone-koossa notch-emuloinnilla.
+
+## KARKEAN TASON VALAHDYS PANOROIDESSA: SYY LAATTAKATTO + LIIKEVARA PUDOTTAA TASON z8→z7; KORJAUS karttaseppa-laattakatto (21.9.2026 klo 21.43)
+
+Karttaseppä 21.9.2026 ilta (WebKit 390×844 dpr 3, Ranska korkeus 0,1): levossa z8 45 näkyvää laattaa (katto 48); panoroinnissa liikevara lasketaan tason valintaan → katto ylittyy → taso putoaa z7:ään kesken liikkeen (z8 puretaan, tukitaso z5/z6 näkyy paksuine viivoineen, nimiöt poissa), hystereesi pitää z7:n levossakin kunnes zoom muuttuu; ei häivettä. Korjaus (karttaseppa-laattakatto): katto lasketaan vain aidosti näkyvistä laatoista (liikevara ennakoi omalla katollaan); katon pudottama taso ei saa hystereesiä; viivaleveydet z6/z7/z8 tarkistetaan erikseen pohjan reseptissä. Fable: hyväksytty, kiireellinen Julkaisijalle mittauksen kanssa.
