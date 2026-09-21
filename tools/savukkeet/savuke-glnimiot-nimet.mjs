@@ -1,7 +1,8 @@
 /*
  * SAVUKE: LADONNAN NIMET GL-KERROKSESSA (vaihe 2, Pelikoodari 21.9.2026).
  *
- * Avaa pallolaudan `?lauta=pallo&glnimiot=1`, saapuu Marseilleen ja
+ * Avaa pallolaudan `?lauta=pallo` (GL on oletus; `?glnimiot=0` = CSS2D),
+ * saapuu Marseilleen ja
  * odottaa ladontaa. Sovitin (js/pallolauta/glnimiot-sovitin.js) vie
  * ladonnan nimet rungolle ja jättää CSS2D:hen vain ne, joiden rasteri
  * on kesken tai jotka eivät mahdu atlakseen. Vartiot:
@@ -62,7 +63,7 @@ sivu.on('console', (m) => { const t = m.text(); if (m.type() === 'error' && /THR
 await sivu.route(/media\.matkakirja\.app|r2\.dev\//, async (r) => { const v = await ampari(r.request().url()); if (!v) { r.abort(); return; } r.fulfill({ status: 200, contentType: v.tyyppi ?? 'application/octet-stream', body: v.body, headers: { 'access-control-allow-origin': '*' } }); });
 await sivu.route('**samireivinen.workers.dev/**', (r) => r.abort());
 await sivu.route(/wikimedia\.org/, (r) => r.abort());
-await sivu.goto(`${osoite}?lauta=pallo&glnimiot=1`, { waitUntil: 'domcontentloaded', timeout: 90000 });
+await sivu.goto(`${osoite}?lauta=pallo`, { waitUntil: 'domcontentloaded', timeout: 90000 });
 await sivu.waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null, { timeout: 90000 });
 await sivu.waitForTimeout(2500);
 await sivu.evaluate(() => { setInterval(() => { const ui = window.matkakirja?.ui; const n = ui?.ohitaNappi?.isConnected ? ui.ohitaNappi : document.querySelector('.fokusvirta-ohitanappi'); if (n) n.click(); }, 150); });

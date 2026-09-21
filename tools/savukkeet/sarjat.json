@@ -549,7 +549,7 @@
       "env": {
         "NAKYMA": "puhelin"
       },
-      "huomautus": "Ladonnan nimet GL-kerroksessa (Pelikoodari 21.9.2026, ?glnimiot=1): sovitin vie kaupunkien nimet rungolle — gl + css2d = ladotut, fonttien jalkeen DOMissa 0 nimea, jokainen nimi omassa ladonnan laatikossaan (kaappausvertailu), rakennuksia liikkeessa enintaan ladontojen verran, kehys < 0,5 ms. NAKYMA=puhelin|tyopoyta. Ampari Noden kautta. ~70 s."
+      "huomautus": "Ladonnan nimet GL-kerroksessa (Pelikoodari 21.9.2026, oletus paalla; ?glnimiot=0 = CSS2D): sovitin vie kaupunkien nimet rungolle — gl + css2d = ladotut, fonttien jalkeen DOMissa 0 nimea, jokainen nimi omassa ladonnan laatikossaan (kaappausvertailu), rakennuksia liikkeessa enintaan ladontojen verran, kehys < 0,5 ms. NAKYMA=puhelin|tyopoyta. Ampari Noden kautta. ~70 s."
     },
     "savuke-nostot-nakyviin.mjs": {
       "kuvakansio": true,

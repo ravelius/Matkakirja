@@ -249,7 +249,7 @@ async function avaaSivu({
       headers: { 'access-control-allow-origin': '*' },
     });
   });
-  await sivu.goto(`${osoite}?lauta=${lauta}`, { waitUntil: 'domcontentloaded', timeout: 60000 });
+  await sivu.goto(`${osoite}?lauta=${lauta}&glnimiot=0`, { waitUntil: 'domcontentloaded', timeout: 60000 });
   await sivu.waitForFunction(() => window.matkakirja?.ui?.svg, null, { timeout: 60000 });
   return { ctx, sivu, pyynnot };
 }

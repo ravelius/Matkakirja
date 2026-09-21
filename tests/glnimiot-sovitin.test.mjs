@@ -136,8 +136,21 @@ test('kytkentä: nimet.js jakaa sovittimen kautta ja lauta antaa sen; sw.js list
   const lauta = readFileSync(new URL('../js/pallolauta/lauta.js', import.meta.url), 'utf8');
   assert.match(lauta, /luoGlNimiosovitin\(\{ kotelo, kerros: \(\) => ui\.pallolautaGL\?\.\(\) \?\? null \}\)/);
   assert.match(lauta, /glSovitin\?\.kehys\(\);/);
-  assert.match(lauta, /if \(!glTesti\) nimet\.jaaUudestaan\?\.\(\);/);
+  assert.match(lauta, /if \(!glTesti\) \{ nimet\.jaaUudestaan\?\.\(\); nostot\.jaaUudestaan\?\.\(\); \}/);
+  // Oletus päällä (omistaja 21.9.2026): vain ?glnimiot=0 pudottaa CSS2D:hen; runko kaatuessaan puretaan.
+  assert.match(lauta, /catch \(virhe\) \{\s*glVirhe = virhe;/);
   const sw = readFileSync(new URL('../sw.js', import.meta.url), 'utf8');
   assert.ok(sw.includes("'./js/pallolauta/glnimiot-sovitin.js'"));
   assert.ok(sw.includes("'./js/pallonimiot-gl.js'"));
+});
+
+test('GL on oletus; ?glnimiot=0 pudottaa CSS2D:hen, testi-tila kelpaa', async () => {
+  const { glNimiotKaytossa } = await import('../js/pallonimiot-gl.js');
+  const win = (search) => ({ location: { search } });
+  assert.equal(glNimiotKaytossa(win('')), true);
+  assert.equal(glNimiotKaytossa(win('?lauta=pallo')), true);
+  assert.equal(glNimiotKaytossa(win('?glnimiot=1')), true);
+  assert.equal(glNimiotKaytossa(win('?glnimiot=testi')), true);
+  assert.equal(glNimiotKaytossa(win('?glnimiot=0')), false);
+  assert.equal(glNimiotKaytossa(win('?lauta=pallo&glnimiot=off')), false);
 });

@@ -34,8 +34,8 @@
  * E2, `kuorenKerroin()`) skaalaa kaikki spritet ankkurinsa ympäri
  * ilman uutta rasteria; rasteri uusitaan vain kun porras vaihtuu.
  *
- * Kytkin `?glnimiot=1` (oletus pois vaiheissa 1–4; CSS2D jää
- * perääntymistieksi). Kirjaston luokat (Mesh, BufferGeometry,
+ * Kytkin: oletus PÄÄLLÄ (omistaja 21.9.2026), `?glnimiot=0` CSS2D:hen;
+ * CSS2D on myös automaattinen perääntymistie ilman WebGL-tekstuuria. Kirjaston luokat (Mesh, BufferGeometry,
  * ShaderMaterial, Texture) luetaan elävästä scenestä kuten laatta- ja
  * vektorikerroksessa — uutta kirjastoa ei ladata.
  */
@@ -51,12 +51,20 @@ export const GLNIMIOT_RENDER_ORDER = 5;
 /** Testinimiön fontti ja koko (vain runko; tuotannon rasterit Pelikoodarilta). */
 export const GLNIMIOT_TESTIFONTTI = '"Liberation Serif", "Times New Roman", serif';
 
-/** Onko GL-kerros käytössä (`?glnimiot=1`). */
+/**
+ * Onko GL-kerros käytössä. OLETUS PÄÄLLÄ (omistaja 21.9.2026 illalla:
+ * *"GL-kerros suoraan oletukseksi ilman kokeilulippua"* — omistaja testaa
+ * natiivilla iOS-apilla, jossa URL-lippuja ei voi käyttää). `?glnimiot=0`
+ * on kehittäjän perääntymistie CSS2D:hen; `?glnimiot=testi` rungon
+ * testinimiöt. Ilman WebGL-tekstuuria (kirjaston luokat eivät ilmesty
+ * sceneen tai runko kaatuu) lauta putoaa CSS2D:hen automaattisesti
+ * (js/pallolauta/lauta.js glKehys).
+ */
 export function glNimiotKaytossa(win = globalThis) {
   try {
     const arvo = new URLSearchParams(win.location?.search ?? '').get('glnimiot');
-    return arvo != null && !/^(0|off|false|pois)$/.test(arvo);
-  } catch { return false; }
+    return arvo == null || !/^(0|off|false|pois)$/.test(arvo);
+  } catch { return true; }
 }
 
 /**

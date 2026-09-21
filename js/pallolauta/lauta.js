@@ -2013,7 +2013,7 @@ export async function avaaPallolauta(ui) {
    * reittien jälkeen. `?vektorit=0` jättää kerroksen pois.
    */
   const vektorit = pallovektoritPaalla() ? luoPallovektorit({ pallo, kotelo, reitit }) : null;
-  // GL-nimiöt (vaihe 2): ladonnan nimet rungolle sovittimen kautta, kun `?glnimiot=1`.
+  // GL-nimiöt (vaihe 2): ladonnan nimet rungolle sovittimen kautta (oletus päällä, `?glnimiot=0` pois).
   const glSovitin = glNimiotKaytossa() && !/[?&]glnimiot=testi\b/.test(globalThis.location?.search ?? '')
     ? luoGlNimiosovitin({ kotelo, kerros: () => ui.pallolautaGL?.() ?? null })
     : null;
@@ -3777,20 +3777,19 @@ export async function avaaPallolauta(ui) {
   // Kameran ennuste: CSS2D-nimiöt ja merkit seuraavan kehyksen paikkaan (E4b, ?ennuste=0 pois).
   const ennustepurku = kytkePallonEnnuste(pallo, kotelo);
   /*
-   * GL-KERROS (`?glnimiot=1`, docs/raportit/gl-kerros-suunnitelma-
-   * 20260921.md): kerros syntyy laiskasti, kun kirjaston luokat ovat
-   * scenessä (laattaverkko + ilmakehän varjostin). VAIHE 2: ladonnan
-   * nimet tulevat rungolle sovittimen kautta (glSovitin,
+   * GL-KERROS (oletus päällä, `?glnimiot=0` CSS2D:hen; docs/raportit/
+   * gl-kerros-suunnitelma-20260921.md): kerros syntyy laiskasti, kun
+   * kirjaston luokat ovat scenessä (laattaverkko + ilmakehän varjostin).
+   * VAIHE 2: ladonnan nimet tulevat rungolle sovittimen kautta (glSovitin,
    * js/pallolauta/glnimiot-sovitin.js; rasterit nimiorasterit.js);
    * rungon omat 40 testinimiötä ovat vain `?glnimiot=testi`-tilassa
-   * (savuke-glnimiot.mjs). Napautus ja sovittelu tulevat vaiheissa
-   * 3–4; siihen asti CSS2D on perääntymistie (rasteri kesken, atlas
-   * täynnä, ei runkoa).
+   * (savuke-glnimiot.mjs). Nostot vaiheessa 3, napautus datumeista;
+   * CSS2D on perääntymistie (rasteri kesken, atlas täynnä, ei runkoa).
    */
   let glKerros = null;
   let glSiemen = null; // pov, jonka ympäriltä testinimiöt valittiin (vain ?glnimiot=testi)
   const glTesti = glNimiotKaytossa() && /[?&]glnimiot=testi\b/.test(globalThis.location?.search ?? '');
-  ui.pallolautaGL = () => glKerros;
+  ui.pallolautaGL = () => (glVirhe ? null : glKerros);
   const glTestinimiot = (pov, dpr) => {
     glKerros.tyhjenna();
     const lahimmat = pallonKaupungit(pack)
@@ -3804,21 +3803,38 @@ export async function avaaPallolauta(ui) {
     }
     glSiemen = { lat: pov.lat, lng: pov.lng };
   };
+  /*
+   * PERÄÄNTYMISTIE CSS2D:HEN ILMAN LIPPUA (omistaja 21.9.2026: GL on
+   * oletus). Jos kirjaston luokat eivät koskaan ilmesty sceneen (ei
+   * WebGL-tekstuuria) runkoa ei synny ja sovitin jättää kaiken CSS2D:hen.
+   * Jos runko kaatuu kehyksessä, se puretaan ja sama jako ajetaan
+   * uudestaan ilman runkoa — nimet ja nostot palaavat CSS2D:hen.
+   */
+  let glVirhe = null;
   const glKehys = (mitat) => {
-    const pov = mitat.pov ?? pallo.pointOfView();
-    if (!glKerros) {
-      const luokat = glLuokat(pallo);
-      if (!luokat) return;
-      glKerros = luoNimiokerrosGL({ pallo, kotelo, luokat, juuri: pallonKolmiulotteinen(pallo)?.juuri ?? null });
-      // Ladonnan nimet rungolle heti, kun runko on olemassa (ei uutta ladontaa).
-      if (!glTesti) nimet.jaaUudestaan?.();
+    if (glVirhe) return;
+    try {
+      const pov = mitat.pov ?? pallo.pointOfView();
+      if (!glKerros) {
+        const luokat = glLuokat(pallo);
+        if (!luokat) return;
+        glKerros = luoNimiokerrosGL({ pallo, kotelo, luokat, juuri: pallonKolmiulotteinen(pallo)?.juuri ?? null });
+        // Ladonnan nimet ja nostot rungolle heti, kun runko on olemassa (ei uutta ladontaa).
+        if (!glTesti) { nimet.jaaUudestaan?.(); nostot.jaaUudestaan?.(); }
+      }
+      // Testinimiöt kameran ympäriltä (vain ?glnimiot=testi); uudet, kun kamera on siirtynyt kauas.
+      if (glTesti && (!glSiemen || Math.hypot(pov.lat - glSiemen.lat, ((pov.lng - glSiemen.lng + 540) % 360) - 180) > 10)) {
+        glTestinimiot(pov, mitat.suhde ?? 1);
+      }
+      glSovitin?.kehys();
+      glKerros.kehys(mitat);
+    } catch (virhe) {
+      glVirhe = virhe;
+      console.warn('[glnimiot] runko kaatui, CSS2D perääntymistie:', virhe?.message ?? virhe);
+      try { glKerros?.pura(); } catch { /* purku ei kaada */ }
+      glKerros = null;
+      if (!glTesti) { nimet.jaaUudestaan?.(); nostot.jaaUudestaan?.(); }
     }
-    // Testinimiöt kameran ympäriltä (vain ?glnimiot=testi); uudet, kun kamera on siirtynyt kauas.
-    if (glTesti && (!glSiemen || Math.hypot(pov.lat - glSiemen.lat, ((pov.lng - glSiemen.lng + 540) % 360) - 180) > 10)) {
-      glTestinimiot(pov, mitat.suhde ?? 1);
-    }
-    glSovitin?.kehys();
-    glKerros.kehys(mitat);
   };
   const glpurku = glNimiotKaytossa() ? kytkePallonKehys(pallo, kotelo, glKehys) : () => {};
 

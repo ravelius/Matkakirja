@@ -171,7 +171,7 @@ for (const ruutu of RUUDUT) {
   });
 
   const tunnus = ruutu.nimi;
-  await sivu.goto(`${osoite}?lauta=pallo`, { waitUntil: 'domcontentloaded', timeout: 60000 });
+  await sivu.goto(`${osoite}?lauta=pallo&glnimiot=0`, { waitUntil: 'domcontentloaded', timeout: 60000 });
   const auki = await sivu
     .waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null, { timeout: 90000 })
     .then(() => true).catch(() => false);

@@ -178,7 +178,7 @@ const cdp = await ctx.newCDPSession(sivu);
  */
 const hidasta = (paalla) => cdp.send('Emulation.setCPUThrottlingRate', { rate: paalla && THROTTLE > 1 ? THROTTLE : 1 });
 
-const haku = [`lauta=${LAUTA}`, LAATU ? `laatu=${LAATU}` : null].filter(Boolean).join('&');
+const haku = [`lauta=${LAUTA}`, 'glnimiot=0', LAATU ? `laatu=${LAATU}` : null].filter(Boolean).join('&');
 await sivu.goto(`${osoite}?${haku}`, { waitUntil: 'domcontentloaded', timeout: 90000 });
 if (LAUTA === 'pallo') {
   await sivu.waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null, { timeout: 90000 });
