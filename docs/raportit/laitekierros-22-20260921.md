@@ -74,3 +74,42 @@ Omistajan päätös 21.9.2026 n. klo 09.35: koko kehitystyö siirtyy
 pyyntö, Pelikoodarin mittari `matkakirja.ui.pallolauta.sulavuus`)
 ei ehditty aloittaa lainkaan ennen keskeytystä. Ks. luovutus
 `docs/raportit/viesti-laitetestaaja-luovutus-20260921-siirto.md`.
+
+## Työkalueste uudessa käyttäjässä (21.9.2026 n. klo 12.40–12.42)
+
+Uusi Mac-käyttäjätili (`koodaus`). Yritin jatkaa kierrosta 22:ta
+tuotannossa (v1991) iPad Pro 11" (M5) -simulaattorilla
+(`503000D1-34AC-4C42-BDF8-7E36753A87CD`). Simulaattorityökalun
+(MCP `control`) `screenshot`-toiminto alkoi antaa pelkkää
+`captureFailed`-virhettä — myös `detach`+`attach`-kierroksen jälkeen.
+Fablen ohjeen mukainen toipumisyritys:
+
+1. `xcrun simctl shutdown all` + Simulator-sovelluksen sulkeminen
+   kokonaan (`osascript -e 'quit app "Simulator"'`) — ei bootattuja
+   laitteita ja Simulator.app-prosessi todennetusti poissa.
+2. `xcrun simctl boot <UDID>` uudelleen, ~20 s odotus, MCP `attach`
+   uudelleen — ei laitelupakysymystä (lupa säilyi), mutta
+   `screenshot` antoi yhä `captureFailed`.
+3. Vaihdoin suoraan `xcrun simctl io <UDID> screenshot <polku>`
+   -komentoon kuvien ottamiseksi (TOIMII: sivu lataantui normaalisti,
+   `matkakirja.app` näkyi kaappauksissa). Kokeilin yhtä kosketusta
+   MCP `tap`-toiminnolla "Aloita seikkailu" -nappiin (piste 345, 554 —
+   laskettu suoraan kuvakaappauksen pikseleistä laitepisteiksi
+   1668×2420 → 834×1210). **Kosketus meni osittain läpi** (Safarin
+   äänikuvake muuttui siniseksi/aktiiviseksi, eli sivu vastaanotti
+   tapahtuman ja ääni-lukitus aukesi), mutta itse nappi ei reagoinut:
+   ruutu jäi "Aloita seikkailu" -aloitusnäytölle kahdessa peräkkäisessä
+   suoralla `simctl io screenshot`illa otetussa kaappauksessa napautuksen
+   jälkeenkin.
+
+Tämä toistaa TÄSMÄLLEEN saman kuvion kuin ensimmäinen yritykseni tässä
+istunnossa ennen tätä korjausyritystä (ks. istunnon toinen raportti
+`docs/raportit/laitemittaus-sulavuus-20260921.md`): MCP:n oma
+`screenshot` rikki, suora `simctl`-kuvakaappaus toimii, ja kosketus
+näyttää osittain vaikuttavan (ääni-ikonin muutos) muttei laukaise
+kohdenappia. En osaa sanoa, onko kyse (a) MCP-simulaattorityökalun
+kosketusinjektiosta uudessa käyttäjätilissä, vai (b) täsmälleen samasta
+"kuollut nappi" -ilmiöstä, joka on jo aiemmin vahvistettu tälle
+tallenteelle ("Liiku"-nappi yllä) — nyt vain laajempana (myös isot CTA-
+napit). Lopetin Fablen ohjeen mukaisesti tähän ja jäin valmiuteen.
+Simulaattori sammutettu, Julkaisijalle ilmoitettu.
