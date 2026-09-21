@@ -231,9 +231,58 @@ visuaalisesti koelaatalla ja siirtää tarvittaessa.
   halutessaan lisätä ne `koko: 'pieni'` -tasolla, jos Karttaseppä
   arvioi tilan riittävän.
 
+## d) Italian hallinnolliset alueet 1873 (16 riviä)
+
+Italia yhdistymisen jälkeen: kuningaskunta julistettiin 17.3.1861
+Sardinian kuningaskunnasta (Piemonte, Liguria, Lombardia — liittynyt jo
+1859 — Toscana, Emilia, Umbria, Marche, Napolin ja Sisilian
+kuningaskunnat). Veneto liitettiin 1866 kolmannen Italian
+itsenäisyyssodan jälkeen (Preussi voitti Itävallan, ja Venetsia siirtyi
+rauhanteossa Italialle). Rooma vallattiin paavilta 20.9.1870, Lazio
+liitettiin samalla, ja Roomasta tuli Italian pääkaupunki 1871. Vuonna
+1873 Italian alue vastaa siis riviä Piemonte–Sisilia–Sardinia tässä
+taulukossa — **Trentino, Etelä-Tiroli (Alto Adige/Südtirol), Triest ja
+Friuli olivat yhä Itävalta-Unkuria** eivätkä kuulu tähän erään
+(siirtyivät Italialle vasta 1918–1920 ensimmäisen maailmansodan
+jälkeen); sama rajaustapa kuin Elsass-Lothringenille Ranska-erässä,
+paitsi että aluetta ei ole edes merkitty tähän — Itävalta-Unkari
+käydään läpi kokonaisuudessaan omana myöhempänä eränään.
+
+| Maakunta | Iso | Koko | Huomio |
+| --- | --- | --- | --- |
+| Piemonte | ITA | suuri | Yhdistymisen ydinalue, Torino |
+| Liguria | ITA | pieni | Kapea rannikkokaistale, Genova |
+| Lombardia | ITA | suuri | Liittyi jo 1859, Milano |
+| Veneto | ITA | suuri | Liitetty 1866, Venetsia |
+| Emilia | ITA | suuri | 1873-nimi; "Emilia-Romagna" on 1900-luvun nimitys |
+| Toscana | ITA | suuri | Firenze, entinen suurherttuakunta |
+| Umbria | ITA | pieni | Sisämaa, ei rannikkoa |
+| Marche | ITA | pieni | |
+| Latium | ITA | suuri | Liitetty 1870, Rooma pääkaupunki 1871 |
+| Abruzzi e Molise | ITA | pieni | Yksi compartimento 1873; Molise erotettiin omaksi vasta 1963 |
+| Campania | ITA | suuri | Napoli, Vesuvius, Pompeji |
+| Apulia | ITA | suuri | Italian "koron" alue |
+| Basilicata | ITA | pieni | Vuoristoinen, harvaan asuttu |
+| Calabria | ITA | pieni | Italian "kärki" |
+| Sisilia | ITA | suuri | Välimeren suurin saari |
+| Sardinia | ITA | suuri | Välimeren toiseksi suurin saari |
+
+Lähde: en-Wikipedia "Unification of Italy", "Kingdom of Italy" ja
+"Regions of Italy" (yhdistymisen aikajana 1861/1866/1870–71 ja
+compartimenti-jaon periaate); fi-Wikipedian omat artikkelit kustakin
+alueesta nimimuodon vakiintuneisuuden tarkistamiseksi — Sisilia,
+Sardinia, Latium (Lazio-artikkeli on pelkkä täsmennyssivu, itse alueen
+artikkeli on "Latium") ja Apulia (Puglia-artikkelin otsikko on
+latinapohjainen "Apulia") ovat fi-Wikipedian vakiintuneita
+suomalaisia/latinalaisia nimiä; Piemonte, Liguria, Lombardia, Veneto,
+Toscana, Umbria, Marche, Campania, Calabria ja Basilicata jäävät
+italiankielisiksi, koska fi-Wikipedia käyttää niitä sellaisenaan ilman
+erillistä suomennosta. Tarkistettu 21.9.2026.
+
 ## Seuraava vaihe
 
 Muu Eurooppa maa kerrallaan (sama kaanontarkkuus: 1873-rajat ja
 -nimet — Itävalta-Unkari, Osmanien Balkan jne., ei nykyisiä rajoja),
-samalla schemalla. Espanja ja Italia seuraavat samassa erässä (DEU:n
-kanssa rinnakkain), loput Fablen antaman järjestyksen mukaisesti.
+samalla schemalla. Espanja seuraa samassa erässä (DEU:n ja ITA:n
+kanssa rinnakkain, kukin omalla haarallaan), loput Fablen antaman
+järjestyksen mukaisesti.
