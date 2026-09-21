@@ -455,3 +455,7 @@ Pelikoodari 21.9.2026 (pelikoodari-lippuarvaus abaea062): toinen leikkilinssi Li
 ## TARKENNUS: ISOISAN LINSSI ON LAHJA, EI AARRE; RENGAS 1 = 21 AARRETTA + 1 LAHJA (21.9.2026 klo 14.59)
 
 Fable 21.9.2026 (Sisältökirjurin kysymys): renkaan 1 kahdestakymmenestäkahdesta linssistä Isoisän linssi 1873 (Q1) ei ole aarrepalkkio vaan tarinan lahja isoisän matkakirjan mukana (kartoituksen poikkeus pätee). LINSSIAARTEET-tauluun tulee 21 kaupunki→linssi-mappausta; isoisän linssin jakelu (avautuu pelin alussa tai ensimmäisessä kaupungissa) on Pelikoodarin erillinen erä, kun linssi valmistuu Karttasepältä.
+
+## TAHTITAIVAS-LINSSI VALMIS; CI:N CHROMIUM-POLKU KOODAUS-KAYTTAJAAN (21.9.2026 klo 15.02)
+
+Pelikoodari 21.9.2026 (pelikoodari-tahtitaivas d9a9438a): kolmas leikkilinssi Tähtitaivas valmis. Kaupungin yön taivas kupuna (Yale Bright Star, tähtiaika hetkestä ja kaupungista), vaakaveto kääntää taivasta; Nyt = valosaaste (suurkaupunki mag 2,5, muut 3,5), 1873 = kaikki 4,5:een ja Horation kortti; napautus sytyttää tähdistön; Livia kysyy, oikeasta 20 tietäjäpistettä (XP_TAHTITAIVAS). Presessiota ei lasketa (~2°/150 v, mainittu pakan otsikossa). Attribuutio näkyvissä lähde-kentässä (BSC/CDS, ConstellationLines CC BY 4.0, IAU CC BY). Renkaan 1 leikkilinsseistä valmiina Kellot, Lippuarvaus ja Tähtitaivas. CI: savukkeet-mac-rivin kolmas ja viimeinen siirtojäänne oli .github/workflows/savukkeet.yml:n CHROMIUM-polku vanhan käyttäjän Playwright-cacheen; Julkaisija vaihtaa sen koodaus-käyttäjän cacheen (/Users/koodaus/Library/Caches/ms-playwright/chromium-1234/...).
