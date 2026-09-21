@@ -483,3 +483,7 @@ Omistaja 21.9.2026: testit (simulaattorikierrokset ja savukkeet-mac) käyttävä
 ## SULAVUUS E4B KAMERAN ENNUSTE VALMIS; GL-KERROKSEN SUUNNITELMA (21.9.2026 klo 15.39)
 
 Karttaseppä 21.9.2026 (karttaseppa-ennuste 3f30ae90, Pelikoodarin pelikoodari-ennustekoukku 8e8f4993): kehyskoukku antaa kameran ennusteen seuraavalle kehykselle ja CSS2D-nimiöt ja merkit siirretään ennustettuun paikkaan onAfterRender-vaiheessa; kytkin ?ennuste=0. Mittaus: sileässä liikkeessä nimiön laahaus 3,5 → 1,1 px/kehys, zoomin liuku 0,41 → 0,16; Playwrightin hiirisyötteellä ei hyötyä (syöte joka toinen kehys), laitteella kosketus tulee näytön tahdissa. Raportti docs/raportit/sulavuus-e4b-20260921.md. GL-kerroksen suunnitelma docs/raportit/gl-kerros-suunnitelma-20260921.md (runko, 3 päivän vaiheet); Pelikoodari täydentää ulkoasun, napautuksen ja sovittelun. GL-kerros alkaa omistajan tuntumatestin jälkeen.
+
+## MERGE ILMAN OHITUSTA JA ILMAN KORTTIA: MAIN EI OLE SUOJATTU (21.9.2026 klo 15.47)
+
+Fable 21.9.2026 (omistajan pyyntö: merge-kysymykset loppuvat): GitHubissa main-haaralla ei ole suojaussääntöjä eikä pakollisia tarkistuksia, joten ohitusta ei tarvita koskaan. Julkaisija mergeää PR:n tavallisesti heti kun Testit-portti on vihreä, ilman erikoislippuja ja ilman korttia omistajalle; savukkeet-mac raportoidaan jälkikäteen Fablelle. Kortti omistajalle vain, jos Testit on punainen ja merge halutaan silti. Prosessikysymykset Fablelle SendMessagella.
