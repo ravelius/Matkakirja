@@ -651,3 +651,7 @@ Fable 21.9.2026 ilta: Sisältökirjurin tarkistus (docs/raportit/pienoismallit-p
 ## TUOTANTOVIKA v2018: GL-NAPPULA PIIRTYY MUSTANA (iPad); PELIKOODARI KORJAA KIIREELLISENA (21.9.2026 klo 21.02)
 
 Laitetestaaja 21.9.2026 ilta: GL-nappula (v2018, oletuksena) piirtyy mustana, ei pelaajan kullalla #c9a227; ?glnimiot=0 oikein; toistettu iPadilla kahdesti, ei transientti. Epäily: nimiorasterit.js rasteroiNappula lukee tyylit elementistä, joka ei ole CSS2D-kääreen alla, joten pelaajan väri-CSS-muuttuja ei periydy. Fable: Pelikoodari korjaa kiireellisenä pienenä haarana ja lisää nappulan värin vartion savukkeeseen; Laitetestaaja jatkaa laiteluvun loppuun.
+
+## GL-NAPPULAN VARI KORJATTU (4509674a, WEBKIT-LIUKUVARI); 3/8 PUNAISTA KORJATTU; PELIKOODARI NOLLATAAN (21.9.2026 klo 21.06)
+
+Pelikoodari 21.9.2026 ilta: nappulan musta väri johtui WebKitistä: liukuväri #nappula-puu ei ollut rasteroitavassa svg:ssä; korjaus kloonaa defs-osan (mitattu WebKit+Chromium 196,154,99), savuke sai värivartion 9/9; haara pelikoodari-gl-nappulan-vari 4509674a Julkaisijalla kiireellisenä. Mainin 8 punaisesta korjattu 3 (nimiot-sulavat kuormaflake → kehysseuranta; ranskan-nostot-lukossa cluny-ankkuri; kerma-reuna V5 GL-kerros piiloon mittauksessa) haarassa pelikoodari-savukkeet-punaiset 9062d9a8; laivamatka-tanger, 3 WebKit-kaatumista ja nimikyltti vartio 4 seuraavalle sessiolle. Luovutus docs/raportit/viesti-pelikoodari-luovutus-20260921-ilta.md (a60d0e8a), muisti päivitetty; sessio nollataan.
