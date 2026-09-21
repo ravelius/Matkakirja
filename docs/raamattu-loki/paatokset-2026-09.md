@@ -527,3 +527,7 @@ Karttaseppä 21.9.2026 ilta: nimiöiden, nappulan ja nostojen heilunta johtui E4
 ## MEREN VILKKUMISEN SYY VAHVISTETTU KOELAATOILLA; POHJAPOLTTO 2026-09-22-POHJA LAHTEE YOLLA (21.9.2026 klo 16.59)
 
 Karttaseppä 21.9.2026 ilta: koelaatat isobaateilla ja kohina laudan yksiköissä (Biskaja z6+z7, kuvavertailu ja pelin zoom 596 kehystä): meri tasainen, ohuet syvyyskäyrät, ei laikkuja eikä kuvion vaihtumista tason vaihdossa. Vilkkuminen oli syvyysporrastuksen laikkujen häive; käyrillä sitä ei synny. Resepti valmis (--syvyyskayrat 200,1000,3000 --syvyyskohina lauta, versio 2026-09-22-pohja, pallotunniste 20260922a; koodi karttaseppa-maakuntavedos 0455f4ef). Julkaisija antaa 2 h CI-ikkunan yöksi, osoitin-PR polton jälkeen; luettelo vaihdetaan vasta kun osoitin on mainissa, Karttaseppä ilmoittaa Fablelle. Ennuste-pois (163bdee8) Julkaisijan jonon kärjessä. Fable: lupa pysyy voimassa, ei lisäehtoja.
+
+## v2001-v2003 MAINISSA: NIMIOT E2+E3, ENNUSTE POIS OLETUKSENA; TUNTUMATESTI OMISTAJALLE (21.9.2026 klo 17.05)
+
+Julkaisija 21.9.2026 ilta: v2001 (nimiöiden liukuva koko E2), v2002 (nimien paikka lukittu liikkeen ajaksi E3) ja v2003 (kameran ennuste CSS2D:ssä pois oletuksena, korjaa v2000:n heilunnan) mainissa, testit 0 fail. Jono jatkuu: ennustekoukku, gl-rasterit, sitten Karttasepälle 2 h CI-tauko pohjapolttoon. Fable pyytää omistajalta tuntumatestin v2003:lla (heilunta, meren vilkkuminen zoomatessa, nostot selain/webappi).
