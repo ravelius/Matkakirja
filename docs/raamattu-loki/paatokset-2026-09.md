@@ -279,3 +279,7 @@ Sisennys kartan kotelon reunasta: puhelin 12 px + turva-alue (max, ei summa), >=
 ## NIMISTON AIKA-KENTTA TEHTY (Sisaltokirjuri 7bd5f5e5) (21.9.2026 klo 08.48)
 
 121 rivia FRA/DEU/ITA/ESP + meret: 94 pysyva, 27 1873; Lazio, Kantabria pois; sw.js:n kaksoisrekisterointi korjattu. Karttaseppa polttaa nimiotason uudelleen pysyvilla nimilla (--nimiot-aika pysyva).
+
+## SUMU-PROTOTYYPPI VALMIS (Pelikoodari 4479df4b, lippu ?sumu=1) (21.9.2026 klo 08.54)
+
+js/pallolauta/sumu.js: nostot luonnoksina (peitto 0,45, mustaus 600 ms; loyto 150 km kaydysta kaupungista, avaus mustaa, taso 1 aina musteena, loydot localStorageen; laattaan poltetut nimet eivat voi olla luonnoksia), kaymattomien maiden rajat x 0,35, sisasumu 35 % kermaa 200 km:n pehmeilla aukoilla (hunnun maski). Huomiot: 35 % hienovarainen (SISASUMUN_PEITTO vakio); Ranskan merentakaiset (Cayenne, Noumea) pitavat sumun Manner-Ranskassa -> suodatin tarvittaessa. Savuke-sumu 10/10, testit 3780/0. Kaappaukset docs/raportit/kaappaukset/sumu-20260921/. Omistaja katsoo. KONTEKSTIT klo 06: Fable 61 %, Karttaseppa 49 %, Pelikoodari 11 % (pakkautunut), viikkokiintio 17 % (Fable 10 %). ISO AJO kaynnistetty Sisaltokirjurille (7 vaihetta, parvi sallittu), Karttasepalle liftauszoomin ajoitusvartiot (1873-linssi ei viela), Pelikoodarille pieni liike + pollon Matkakirja-linkit sumun jalkeen.
