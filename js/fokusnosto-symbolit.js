@@ -2350,6 +2350,17 @@ const NOSTOSYM_NIMIO_ALAOSA = 0.25;
  */
 export const NOSTOSYM_KUVAMERKIN_KERROIN = 1.6;
 export const NOSTOSYM_TASO1_MUSTE = 'rgba(46,30,14,0.98)';
+/*
+ * KUVAMERKIN HALO (Fable 21.9.2026): tumman reliefin päällä (Mont Blanc
+ * Alppien rinteellä) vaalea kuvamerkki hukkui taustaan. Sama
+ * paperinvaalea sädekehä kuin Karttasepän poltetuilla nimiöillä
+ * (js/pallolaatat.js NIMION_HALO): varjo kuvan omasta muodosta, neljä
+ * vetoa, ja päälle merkki terävänä. Säde on merkin yksiköissä ja
+ * kerrotaan portaalla rasterissa.
+ */
+export const NOSTOSYM_KUVAMERKIN_HALO = 'rgb(252, 249, 242)';
+export const NOSTOSYM_KUVAMERKIN_HALO_SADE = 1.2;
+export const NOSTOSYM_KUVAMERKIN_HALO_VETOJA = 4;
 /** Tyyppi (kategoria tai luonnon laji) → kuvamerkin tiedosto. */
 export const NOSTOSYM_KUVAMERKIT = {
   vuori: 'merkki-vuori', saari: 'merkki-saari', jarvi: 'merkki-jarvi', joki: 'merkki-joki',
@@ -2536,8 +2547,16 @@ async function nostosymRasteroi(tunnus, nimio, svg, porras, nimionLaji, puoli = 
   ctx.save();
   ctx.translate(origoX * porras, origoY * porras);
   if (merkkikuva) {
-    // Kuvamerkki koko ruutuun (2 × sade), keskitettynä origoon.
+    // Kuvamerkki koko ruutuun (2 × sade), keskitettynä origoon —
+    // ensin paperinvaalea halo (ks. KUVAMERKIN HALO), sitten merkki.
     const koko = 2 * sade * porras;
+    ctx.save();
+    ctx.shadowColor = NOSTOSYM_KUVAMERKIN_HALO;
+    ctx.shadowBlur = NOSTOSYM_KUVAMERKIN_HALO_SADE * porras;
+    for (let veto = 0; veto < NOSTOSYM_KUVAMERKIN_HALO_VETOJA; veto += 1) {
+      ctx.drawImage(merkkikuva, -koko / 2, -koko / 2, koko, koko);
+    }
+    ctx.restore();
     ctx.drawImage(merkkikuva, -koko / 2, -koko / 2, koko, koko);
   } else {
     piirraNostosymMiniCanvas(ctx, tunnus, muste, porras);
