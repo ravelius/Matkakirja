@@ -172,6 +172,7 @@ export const ALUEEN_MAAT = {
   PRT: 'valimeri',
   ITA: 'valimeri',
   GRC: 'valimeri',
+  MLT: 'valimeri',
   HRV: 'balkan',
   BIH: 'balkan',
   BGR: 'balkan',

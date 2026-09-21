@@ -601,6 +601,8 @@ const SHELL = [
   './js/packs/fokusvirta-ljubljana.js',
   // Košice (20.9.2026, omistajan päätös: Slovakian pelikaupunki).
   './js/packs/fokusvirta-kosice.js',
+  // Valletta (21.9.2026, omistajan päätös: Maltan pelikaupunki).
+  './js/packs/fokusvirta-valletta.js',
   // Maat ilman omaa fokusvirtaa: kadonneiden ihmeiden erä 26.8.2026
   // ja Matkakirjan ihmeiden Euroopan erä 27.8.2026.
   './js/packs/fokuskohteet-egy.js',
@@ -1670,6 +1672,8 @@ const SHELL = [
   './assets/kartat/ljubljana-varikartta.png',
   './assets/kartat/kosice-keskusta.png',
   './assets/kartat/kosice-varikartta.png',
+  './assets/kartat/valletta-keskusta.png',
+  './assets/kartat/valletta-varikartta.png',
   './assets/kartat/tampere-varikartta.png',
   './assets/kartat/bagdad-varikartta.png',
   './assets/kartat/teheran-varikartta.png',

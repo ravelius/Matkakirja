@@ -416,6 +416,19 @@ export const POLLO_VALMISKYSYMYKSET = {
     ],
   },
 
+  /*
+   * VALLETTA (21.9.2026, omistajan päätös 19.9.2026: Maltan
+   * pelikaupunki). Vain saapuminen kirjoitettu — kevyt pakki
+   * (js/packs/fokusvirrat.js KEVYET_FOKUSVIRRAT), laatta ja lehti jäävät
+   * täyden pinon sisältöerään.
+   */
+  valletta: {
+    saapuminen: [
+      'Kenen mukaan Valletta on saanut nimensä?',
+      'Minkä kahden sataman välissä Valletta sijaitsee?',
+    ],
+  },
+
   berliini: {
     saapuminen: [
       'Minkä sotien tykeistä voitonpylvään putket otettiin?',
