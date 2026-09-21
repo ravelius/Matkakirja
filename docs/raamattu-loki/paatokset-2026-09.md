@@ -447,3 +447,7 @@ Omistaja 21.9.2026 (kortti, Karttasepän syvyyskoe docs/raportit/syvyyskoe-20260
 ## KELLOT-LINSSI VALMIS: XP 20, TOLERANSSI 5 MIN, MALLIPOHJAISET REPLIIKIT ILMAN AANTA (21.9.2026 klo 14.35)
 
 Pelikoodari 21.9.2026 (pelikoodari-kellot 594fb6f3): ensimmäinen leikkilinssi Kellot valmis. Taskukellot ~118 kaupungille (Eurooppa + yksi per aikavyöhyke); Nyt = vyöhykeaika IANA/Intl kesäaikoineen ja 24 vyöhykerajaa pituuspiireinä; 1873 = paikallinen aurinkoaika (pituusaste × 4 min) ja Horation kortti ensimmäisellä avauksella. Livia kysyy Fablen kolme kysymystä ruudulla näkyvistä kellopareista; vastaus 12.12-muodossa, toleranssi ±5 min, oikeasta 20 tietäjäpistettä (XP_KELLOT). Kellot on rekisterissä tavallinen rivi, hiomassa-sarjassa 45. Sääntö: mallipohjaiset repliikit, joissa on muuttuvia nimiä ({A}, {B}), jäävät tekstiksi ilman luentaa.
+
+## LIPPUARVAUS-LINSSI VALMIS: XP 20, EUROOPPA-RAJAUS (21.9.2026 klo 14.48)
+
+Pelikoodari 21.9.2026 (pelikoodari-lippuarvaus abaea062): toinen leikkilinssi Lippuarvaus valmis. Euroopan 42 lippua pallolle (vipu Maailma 135), oma maa korostettu, napautus näyttää maan nimen; Livia kysyy Fablen kolmella lauseella ilman nimeä, neljä vaihtoehtoa = oikea + kolme lähintä naapuria, oikeasta 20 tietäjäpistettä (XP_LIPPUARVAUS). Eurooppa-rajaus: lon −25…45 ja lat > 34 sekä Venäjä, ilman Syyriaa ja Georgiaa. Jatkoerään: napautusmuoto (maapolygonit) sekä sarjat ja ennätys. Seuraava leikkilinssi: Tähtitaivas (Pelikoodari ehdottaa).
