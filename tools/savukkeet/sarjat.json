@@ -278,10 +278,7 @@
     },
     "savuke-nimikyltti.mjs": {
       "kuvakansio": true,
-      "tunnetutPunaiset": [
-        "^4\\. "
-      ],
-      "huomautus": "18.9.2026 (v1942): 7a, 7b ja 9b vihreitä aihemerkkivartioiden päivityksen jälkeen, listalta pois; 4 jää (Raamattu PAATOKSET 34 kohta 13: vartiot 4 ja 6 vanhentuneet). Aiemmin: sama nelikko v1925:sta v1927:ään (mainin oma, ei tämän haaran aiheuttama). Vartio 9b:n FAIL-rivien MÄÄRÄ on kasvanut aihenostojen nimiöiden myötä (v1927 luku 5.1) mutta itse vartio pysyy tunnettuna punaisena."
+      "huomautus": "21.9.2026: vartio 4 (kyltti kartan mitta) vertaa nyt kyltin kokoa kameran karttaskaalaan eika maapaneelin tekstiin, joka era 20:sta (16.9.) lahtien on ruutupikseleissa; tunnettu punainen ^4 poistettu, 48/48 tyopoyta+puhelin. 18.9.2026 (v1942): 7a, 7b ja 9b vihreitä aihemerkkivartioiden päivityksen jälkeen, listalta pois; 4 jää (Raamattu PAATOKSET 34 kohta 13: vartiot 4 ja 6 vanhentuneet). Aiemmin: sama nelikko v1925:sta v1927:ään (mainin oma, ei tämän haaran aiheuttama). Vartio 9b:n FAIL-rivien MÄÄRÄ on kasvanut aihenostojen nimiöiden myötä (v1927 luku 5.1) mutta itse vartio pysyy tunnettuna punaisena."
     },
     "savuke-astro-valokuva.mjs": {
       "tunnetutPunaisetMac": [
@@ -372,7 +369,8 @@
         "SAVUKE_MOOTTORI": "webkit"
       },
       "kuvakansio": true,
-      "huomautus": "Omistajan loydos 19.9.2026 klo 14.58 Suomen aikaa (iPhone, v1954): panoroidessa Keski-Ranskaan ilmestyi yhden laatan kokoinen TAYSIN MUSTA suorakaide, joka havisi liikkeen loputtua. Vartio kysyy koko kartan alalta, onko kehyksessa yhtenainen musta suorakaide >= 40 x 40 CSS px. WEBKIT ON ENSISIJAINEN RIVI: loydos on iOS Safarista. Laattapyynnot viivytetaan route-valityksella 300-800 ms, jotta liikkeen aikainen tila nakyy. Jos tama nousee punaiseksi, kartan alla on taas musta pinta."
+      "huomautus": "Omistajan loydos 19.9.2026 klo 14.58 Suomen aikaa (iPhone, v1954): panoroidessa Keski-Ranskaan ilmestyi yhden laatan kokoinen TAYSIN MUSTA suorakaide, joka havisi liikkeen loputtua. Vartio kysyy koko kartan alalta, onko kehyksessa yhtenainen musta suorakaide >= 40 x 40 CSS px. WEBKIT ON ENSISIJAINEN RIVI: loydos on iOS Safarista. Laattapyynnot viivytetaan route-valityksella 300-800 ms, jotta liikkeen aikainen tila nakyy. Jos tama nousee punaiseksi, kartan alla on taas musta pinta.",
+      "huomautusMac": "KUORMAPUNAINEN 21.9.2026 klo 19.53-20.15 (savukkeet-mac 9f973a43 pohjapolton aikana, load 540): WebKit-kaynnistys aikakatkaistiin 180 s ja Chromium kaatui SEGV:iin ennen vaitteita; ei koodivika. Yksin ajettuna 21.9. klo 21.15 vihrea. Jos toistuu ilman polttoa, tutki."
     },
     "savuke-musta-laatta.mjs#chromium": {
       "env": {
@@ -446,7 +444,8 @@
       "huomautus": "PAATOKSET 42 (18.9.2026): nopanheiton kohteen napautus valitsee siirron, liuska muille; 14/14 Fablen mergessa. Lisatty julkaisusarjaan v1947."
     },
     "savuke-astro-sumu.mjs": {
-      "huomautus": "PAATOKSET 43 kohta 7 (18.9.2026): pilvikerros + avaruussumu; 8/8. Lisatty julkaisusarjaan v1947."
+      "huomautus": "PAATOKSET 43 kohta 7 (18.9.2026): pilvikerros + avaruussumu; 8/8. Lisatty julkaisusarjaan v1947.",
+      "huomautusMac": "KUORMAPUNAINEN 21.9.2026 klo 19.53-20.15 (savukkeet-mac 9f973a43 pohjapolton aikana, load 540): WebKit-kaynnistys aikakatkaistiin 180 s ja Chromium kaatui SEGV:iin ennen vaitteita; ei koodivika. Yksin ajettuna 21.9. klo 21.15 vihrea. Jos toistuu ilman polttoa, tutki."
     },
     "savuke-kerma-reuna.mjs": {
       "tunnetutPunaiset": [
@@ -461,7 +460,8 @@
       "huomautus": "AANI SAMASSA PROSESSISSA (Fable 19.9.2026 klo 08.45 Suomen aikaa, v1947 rerun 35423483607): headless Chromiumin ERILLINEN aanipalvelu (AudioServiceOutOfProcess) antoi Macilla AudioContext-kellolle vain n. 1/7 reaaliajasta (mitattu about:blank: currentTime +0,29 s / 2,0 s; lipulla +1,96 s), joten 2 s:n gain-feidi oli 2,7 s:n naytteella yha 0,007 ja vaitteet 1 ja 3 kaatuivat myos YKSIN ajettuna (20/24, deterministinen, ei kuorma). Oletusaanilaite oli oikea (Mac Studio-kaiuttimet, Raamattu MAC STUDIO C) - tama on eri vika kuin Scarlett-jumi. Lippu ajaa aanen selainprosessissa: 24/24 yksin. Muut aanivartiot (pariisi-lahizoom 8c, topografialinssi) eivat mittaa kellon nopeutta, joten lippu on rajattu talle riville."
     },
     "savuke-laivamatka-tanger.mjs": {
-      "huomautus": "Laivamatkan noppa liu'ussa (Sonnet-simulaattoritesti 19.9.2026, Opus-era laivamatka-tanger): noppanappi piirtyi suljettuun .toimintorivi-liukuun (opacity 0, pointer-events none) vaiheessa roll. WebKit 7/7, Chromium 7/7, ~1 min. Lisatty julkaisusarjaan v1950."
+      "huomautus": "Laivamatkan noppa liu'ussa (Sonnet-simulaattoritesti 19.9.2026, Opus-era laivamatka-tanger): noppanappi piirtyi suljettuun .toimintorivi-liukuun (opacity 0, pointer-events none) vaiheessa roll. WebKit 7/7, Chromium 7/7, ~1 min. Lisatty julkaisusarjaan v1950.",
+      "huomautusMac": "KUORMAPUNAINEN 21.9.2026 klo 19.53-20.15 (savukkeet-mac 9f973a43 pohjapolton aikana, load 540): WebKit-kaynnistys aikakatkaistiin 180 s ja Chromium kaatui SEGV:iin ennen vaitteita; ei koodivika. Yksin ajettuna 21.9. klo 21.15 vihrea. Jos toistuu ilman polttoa, tutki."
     },
     "savuke-noppa-saapumisen-aikana.mjs": {
       "huomautus": "Nopanheiton kohteet jaavat ruudulle (Sonnetin puhelintesti v1952, Opus-era noppa-saapuminen 19.9.2026): sovitaSiirtokohteet zoomasi kameran ulos kohdemaan uloszoomauskaton yli, OrbitControlsin maxDistance kuristi korkeuden takaisin heti kun ajo lakkasi kirjoittamasta JA jatti panoroidun keskipisteen paikalleen - lahikuva tyhjaa maata, nappula ja kohteet ruudun ulkopuolella, vaihe jumissa 'move'issa myos tallennuksen yli. Chromium 5/5, WebKit 5/5, ~2 min; vastakoe ilman korjausta 2/5."
@@ -606,6 +606,9 @@
     "savuke-reaktiot-sydan.mjs": {
       "kuvakansio": true,
       "huomautus": "Reaktiot sydämeksi (omistaja 21.9.2026, kaappaus Ranskan lehden Historia-osiosta): viisi symbolia ja lepotila korvattiin kahdella suoraan näkyvälla napilla (sydän, peukku alas), lehden jutun vuosiluku siirtyi otsikkorivin oikeaan reunaan omaan laatikkoonsa. Maalehti GBR, Historia-osio, Magna Carta -juttu ('Kuningas pakotettiin lain alle', naytaTutkiSivu-indeksi = tutkiSivut-indeksi + 1, mitattu käytännössä). Ruudut 390x844 ja 1400x900, ~1 min."
+    },
+    "savuke-nostokuva-karuselli.mjs": {
+      "huomautusMac": "KUORMAPUNAINEN 21.9.2026 klo 19.53-20.15 (savukkeet-mac 9f973a43 pohjapolton aikana, load 540): WebKit-kaynnistys aikakatkaistiin 180 s ja Chromium kaatui SEGV:iin ennen vaitteita; ei koodivika. Yksin ajettuna 21.9. klo 21.15 vihrea. Jos toistuu ilman polttoa, tutki."
     },
     "savuke-nimion-koko-panorointi.mjs": {
       "env": {

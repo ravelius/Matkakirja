@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2028, teksti: 'Savukevakaus: WebKit-kaatumiset ja aikakatkaisut' },
   { v: 2027, teksti: 'Malta/Valletta: kaupunki, kartat, radio' },
   { v: 2026, teksti: 'Nimioiden koon vaihtelu panoroidessa korjattu' },
   { v: 2025, teksti: 'Luxemburg: radio, aarrepari, musiikkialue' },
