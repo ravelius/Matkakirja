@@ -178,6 +178,7 @@ export const HAHMOTELMA_FIN = [
     ],
     nimi: 'Merenkurkun saaristo',
     tyyppi: 'saari',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Miksi maa nousee Merenkurkussa yhä edelleen ylös vedestä?',

@@ -75,6 +75,7 @@ export const MAASTOKOHTEET_FIN = [
     },
     nimi: 'Halti',
     tyyppi: 'vuori',
+    taso: 1,
     kysymykset: [
       'Miksi Suomen korkein kohta ei ole huippu?',
       'Mikä on korkein kokonaan Suomessa oleva tunturi?',
@@ -249,6 +250,7 @@ export const MAASTOKOHTEET_FIN = [
     },
     nimi: 'Olavinlinna',
     tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Mikä Pähkinäsaaren rauha oli?',
       'Miksi linna rakennettiin keskelle salmea?',
@@ -287,6 +289,7 @@ export const MAASTOKOHTEET_FIN = [
     },
     nimi: 'Turun linna',
     tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Mikä Österland oli?',
       'Kuka oli Juhana-herttua?',
@@ -371,6 +374,7 @@ export const MAASTOKOHTEET_FIN = [
     },
     nimi: 'Verla',
     tyyppi: 'tekniikka',
+    taso: 1,
     kysymykset: [
       'Mitä puuhiomo tekee?',
       'Milloin tehdas lopetti?',
@@ -614,6 +618,7 @@ export const MAASTOKOHTEET_FIN = [
     }],
     nimi: 'Saimaa',
     tyyppi: 'meri',
+    taso: 1,
     kysymykset: [
       'Miksi saimaannorppa elää vain täällä?',
       'Mihin Saimaan vedet laskevat?',
