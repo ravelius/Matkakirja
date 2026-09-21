@@ -9,8 +9,10 @@
  * omistettu (passi + player.linssit) ja herää itsestään. Kehittäjätila
  * ei myönnä hiomassa-linssejä.
  *
- * LINSSIAARTEET on tuotannossa tyhjä (Fablen rajaus); testi antaa oman
- * taulun `game.linssiAarteet` ja lisää rekisteriin testilinssin.
+ * LINSSIAARTEET-tuotantotaulun sisältö (rengas 1, 21 riviä) on
+ * vartioitu erikseen (tests/linssiaarteet.test.mjs); tämä testi antaa
+ * mekaniikalle oman taulunsa `game.linssiAarteet` ja lisää rekisteriin
+ * testilinssin.
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -52,8 +54,8 @@ function peli() {
 test.beforeEach(() => { if (!LINSSIT.includes(TESTIRIVI)) LINSSIT.push(TESTIRIVI); TESTIRIVI.tila = 'hiomassa'; });
 test.after(() => { const i = LINSSIT.indexOf(TESTIRIVI); if (i >= 0) LINSSIT.splice(i, 1); });
 
-test('LINSSIAARTEET on tuotannossa tyhjä ja vain iso aarre antaa linssin', () => {
-  assert.deepEqual(LINSSIAARTEET, {});
+test('linssiAarteesta: vain iso aarre antaa linssin, annettu taulu ohittaa tuotantotaulun', () => {
+  assert.ok(!('timbuktu' in LINSSIAARTEET), 'testikaupunki ei ole tuotantotaulussa');
   assert.equal(linssiAarteesta('timbuktu', 'isoAarre', TAULU), 'testilinssi');
   assert.equal(linssiAarteesta('timbuktu', 'pieniAarre', TAULU), null);
   assert.equal(linssiAarteesta('timbuktu', 'mannerAarre', TAULU), null);
