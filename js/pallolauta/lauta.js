@@ -3740,8 +3740,13 @@ export async function avaaPallolauta(ui) {
         kuorenKorkeus = korkeus;
         kirjoitaKuorenKerroin(korkeus, kuvasuhde);
       }
-      // Siirtymät pois liikkeen ajaksi (nimet.js SIIRTYMÄT POIS LIIKKEEN AJAKSI).
-      if (!liikkuuLuokka) { liikkuuLuokka = true; kotelo.classList.add(LIIKKUU_LUOKKA); }
+      // Siirtymät pois liikkeen ajaksi (nimet.js SIIRTYMÄT POIS LIIKKEEN
+      // AJAKSI) — myös kirjaston oma merkkitween (merkit.kirjastonSiirtyma).
+      if (!liikkuuLuokka) {
+        liikkuuLuokka = true;
+        kotelo.classList.add(LIIKKUU_LUOKKA);
+        merkit.kirjastonSiirtyma(false);
+      }
     }
     if (!liikkui && aika > siirtymaAsti) return;
     kehyksenKamera = { x: p.x, y: p.y, z: p.z };
@@ -4315,6 +4320,16 @@ export async function avaaPallolauta(ui) {
     const keskipiste = { x: kotelo.clientWidth / 2, y: kotelo.clientHeight / 2 };
     const pelia = merkit.maara('peli');
     /*
+     * PELIMERKKIEN LAATIKOT LUETAAN KERRAN (erä E3, Karttasepän iPad-
+     * profiili: ladonta levossa yhtenä 42–50 ms:n tehtävänä, josta
+     * suuri osa getBoundingClientRect-pakotettua asettelua). Sama lista
+     * meni ennen kolmesti — nostoille, nimille ja sovittelulle — ja
+     * jokainen luenta väliin osuneiden DOM-kirjoitusten jälkeen pakotti
+     * uuden asettelun. Nappula ei muutu ladonnan aikana, joten yksi
+     * luenta riittää kaikille kolmelle.
+     */
+    const pelinLaatikot = merkit.laatikot('peli');
+    /*
      * KUOREN POHJA VAIHTUU NYT (nimet.js LADONTA JA KUORI VAIHTUVAT
      * SAMASSA KEHYKSESSÄ): ladonnan mitta talteen ja kerroin heti sen
      * mukaiseksi. Korkeus luetaan samasta kaavasta kuin kehyskoukussa.
@@ -4353,7 +4368,7 @@ export async function avaaPallolauta(ui) {
        * kerroksen, joten laatikot annetaan sille kerrokselta, joka ne
        * omistaa — sama lista kuin nimiladonnan `pinot`.
        */
-      esteet: merkit.laatikot('peli'),
+      esteet: pelinLaatikot,
     });
     // Niukka nimijoukko: avauslennolla kaksi päätä, lähtövalinnassa
     // Lontoo (aalto 3A) — muulloin koko lauta budjetilla.
@@ -4396,7 +4411,7 @@ export async function avaaPallolauta(ui) {
     const infoTulos = paivitaTuristiInfo(nostot.omatIkonilaatikot(), nostot.omaMuste());
     const nimiTulos = nimet.lado({
       varaukset: [...nostoTulos.laatikot, ...infoTulos],
-      pinot: merkit.laatikot('peli'),
+      pinot: pelinLaatikot,
       katto,
       vain,
       // Matkan kohteet (noppa, lento) voittavat budjetin (ks. matkanKohteet).
@@ -4451,7 +4466,7 @@ export async function avaaPallolauta(ui) {
      */
     const sovittelu = nostot.sovittele({
       nimet: nimet.laatikot(),
-      kiinteat: [...infoTulos, ...merkit.laatikot('peli')],
+      kiinteat: [...infoTulos, ...pelinLaatikot],
       // Meren nimiöt väistävät kohdemaan korostuskehää (ks. rantaviivanLaatikot).
       rantaviiva: rantaviivanLaatikot,
       rantaviivaOn: pallonKorostusRenkaat(pallonKorostettuMaa()).length > 0,
@@ -4485,7 +4500,9 @@ export async function avaaPallolauta(ui) {
       if (liikkuuLuokka) {
         liikkuuLuokka = false;
         globalThis.requestAnimationFrame?.(() => {
-          if (!liikkuuLuokka) kotelo.classList.remove(LIIKKUU_LUOKKA);
+          if (liikkuuLuokka) return;
+          kotelo.classList.remove(LIIKKUU_LUOKKA);
+          merkit.kirjastonSiirtyma(true);
         });
       }
     }
@@ -5314,7 +5331,64 @@ export async function avaaPallolauta(ui) {
           .find((e) => e.style.position === 'absolute' && e.style.pointerEvents === 'none');
         return juuri ? { loytyi: true, lapsia: juuri.childElementCount } : { loytyi: false, lapsia: 0 };
       })(),
-      virheet: globalThis.__pallonVirheet?.slice(-3) ?? null,
+      virheet: globalThis.__pallonVirheet?.slice(-5) ?? null,
+      /*
+       * PALLON JUURI (three-globe): `visible` on false kunnes pallon
+       * pintakerros ilmoittaa olevansa valmis (waitForGlobeReady) —
+       * ensimmäinen laatta/tekstuuri ladattu. Sitä ennen WebGL ei piirrä
+       * palloa eikä CSS2DRenderer liitä yhtään merkkiä (esi-isä
+       * näkymätön). Laitetestaaja 21.9.2026 iPad: ketjuNakyva[2] false.
+       */
+      pallonJuuri: (() => {
+        const juuri = pallo.scene?.()?.children?.find?.((o) => o.children?.some?.((c) => c.__globeObjType || c.children?.some?.((cc) => cc.__globeObjType))) ?? null;
+        return juuri ? { nakyva: juuri.visible, lapsia: juuri.children.length, skaala: Number(juuri.scale?.x?.toFixed?.(3)) } : null;
+      })(),
+      /*
+       * CSS2D-NÄYTE (Laitetestaaja 21.9.2026 iPad: luotu 68, liitetty
+       * 0). CSS2DRenderer liittää elementin vain, jos olio on
+       * näkyvä, sen leikkaussyvyys z on [-1, 1] ja kerrostesti läpäisee
+       * — sama lasku tässä yhdelle merkille kameran omilla matriiseilla,
+       * jotta nähdään, mikä kolmesta ehdosta kaatuu. Identiteetti-
+       * matrixWorldInverse (kamera origossa katsomassa -z:aa) panisi
+       * KOKO Ranskan (lng ≈ 0 → +z) kameran taakse: z < -1.
+       */
+      css2dNayte: (() => {
+        try {
+          const kam = pallo.camera?.();
+          const d = merkit.naytedatum();
+          const olio = d?.__threeObjHtml ?? null;
+          if (!kam || !olio) return { olio: false };
+          const m = kam.projectionMatrix.clone().multiply(kam.matrixWorldInverse);
+          const v = kam.position.clone().setFromMatrixPosition(olio.matrixWorld).applyMatrix4(m);
+          const ketju = [];
+          const ketjunNimet = [];
+          for (let o = olio; o; o = o.parent) {
+            ketju.push(o.visible);
+            ketjunNimet.push(`${o.type ?? o.constructor?.name ?? '?'}${o.__globeObjType ? `:${o.__globeObjType}` : ''}${o.name ? `#${o.name}` : ''}(${o.children?.length ?? 0})`);
+          }
+          const inv = kam.matrixWorldInverse.elements;
+          return {
+            avain: d.avain ?? null,
+            nakyva: olio.visible,
+            ketjuNakyva: ketju,
+            ketju: ketjunNimet,
+            kerros: olio.layers.test(kam.layers),
+            z: Number(v.z.toFixed(4)),
+            x: Number(v.x.toFixed(3)),
+            y: Number(v.y.toFixed(3)),
+            paikka: { x: olio.position.x.toFixed(1), y: olio.position.y.toFixed(1), z: olio.position.z.toFixed(1) },
+            maailma: olio.matrixWorld.elements.slice(12, 15).map((e) => Number(e.toFixed(1))),
+            kameraOrigossa: [0, 5, 10, 15].every((i) => Math.abs(inv[i] - 1) < 1e-9)
+              && [12, 13, 14].every((i) => Math.abs(inv[i]) < 1e-9),
+            kameranVanhempi: Boolean(kam.parent),
+            kameraAuto: kam.matrixWorldAutoUpdate,
+            olioAuto: olio.matrixWorldAutoUpdate,
+            kameraPaikka: { x: kam.position.x.toFixed(1), y: kam.position.y.toFixed(1), z: kam.position.z.toFixed(1) },
+          };
+        } catch (e) {
+          return { virhe: String(e?.message ?? e) };
+        }
+      })(),
       korkeus: pallo.pointOfView()?.altitude ?? null,
       versio: document.getElementById('app-version')?.textContent ?? null,
     }),
