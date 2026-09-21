@@ -160,6 +160,8 @@ import { HAHMOTELMA_NOR } from './packs/hahmotelma-nor.js';
 import { HAHMOTELMA_ISL } from './packs/hahmotelma-isl.js';
 import { HAHMOTELMA_RUS } from './packs/hahmotelma-rus.js';
 import { HAHMOTELMA_UKR } from './packs/hahmotelma-ukr.js';
+import { HAHMOTELMA_CHE } from './packs/hahmotelma-che.js';
+import { HAHMOTELMA_BIH } from './packs/hahmotelma-bih.js';
 import { avaaLisakaupunginKortti } from './kaupunkinosto.js';
 import { FOKUSKOHTEET_GBR } from './packs/fokuskohteet-gbr.js';
 import { FOKUSKOHTEET_HUN } from './packs/fokuskohteet-hun.js';
@@ -652,19 +654,29 @@ KOHDE_MAAT.RUS = [...(KOHDE_MAAT.RUS ?? []), ...HAHMOTELMA_RUS];
 KOHDE_MAAT.UKR = [...(KOHDE_MAAT.UKR ?? []), ...HAHMOTELMA_UKR];
 
 /*
- * BOSNIA JA HERTSEGOVINA: js/packs/hahmotelma-bih.js ON KIRJOITETTU
- * (14 nostoa) MUTTA EI VIELÄ LIITETTY — sama tilanne kuin
- * js/packs/hahmotelma-che.js:llä äskettäin. KOHDE_MAAT.BIH:n
- * liittäminen kaataa tools/tarkista-nimiolimitys.mjs:n rivillä
- * "BIH/neum + HRV/stonin-muurit" (tämä pari on ennestään "tiedoksi"-
- * listalla lähes limittäin naapurin symbolien kanssa — sama ladonnan
- * yksisuuntaisuuskaskadi kuin AUT/CHE/DEU:ssä, ei minkään uuden
- * hahmotelma-bih.js-rivin sijainnista kiinni: kaikki 14 uutta pysyvät
- * tarkoituksella kaukana Neumista). Peruste tarkemmin hahmotelma-
- * bih.js:n omassa kommentissa. RATKAISU: sama kuin Karttasepän
- * CHE-korjaus (docs/raamattu-loki, haara karttaseppa-bodensee) —
- * Neumin tai Stonin muurien nimiön siirto — Karttasepän päätös.
+ * SVEITSIN HAHMOTELMANOSTOT (js/packs/hahmotelma-che.js): 13
+ * täydentävää karttanostoa Sveitsin olemassa olevien 16 nostoon
+ * (maastokohteet-che.js) — Geneve, Zürich, Basel, Lugano/Ticino,
+ * Graubündenin vuoristokylät (St. Moritz, Scuol), CERN, Grande
+ * Dixence, sekä ruokaperinne (Lavaux, Vevey, Emmental). Tavoitteesta
+ * 30 jäätiin 29:ään (neljäs ruokakohde, Appenzell, pudotettiin
+ * kokonaan, ks. hahmotelma-che.js). Kytkentä oli blokattu (AUT/DEU/CHE
+ * -nimiörypäs), kunnes Karttaseppä siirsi DEU/Bodensee-nimiön (haara
+ * karttaseppa-bodensee, mergetty v1973-prepiin 21.9.2026).
  */
+KOHDE_MAAT.CHE = [...(KOHDE_MAAT.CHE ?? []), ...HAHMOTELMA_CHE];
+
+/*
+ * BOSNIA JA HERTSEGOVINAN HAHMOTELMANOSTOT (js/packs/hahmotelma-bih.js):
+ * 14 täydentävää karttanostoa olemassa olevien 16 nostoon
+ * (4 maastokohteet-bih.js:ssä, 12 fokuskohteet-bih.js:ssä) — Sarajevo
+ * (puuttui kokonaan), talviolympiavuori Bjelašnica, Kravicen putoukset,
+ * ruoka- ja tekniikkakohteita. Ei mitään uutta Neumin rannikkokäytävään.
+ * Kytkentä oli blokattu (BIH/Neum + HRV/Ston -nimiörypäs), kunnes
+ * Karttaseppä siirsi BIH/Neum-nimiön puoli yksikköä pohjoiseen (sama
+ * haara karttaseppa-bodensee).
+ */
+KOHDE_MAAT.BIH = [...(KOHDE_MAAT.BIH ?? []), ...HAHMOTELMA_BIH];
 
 /*
  * KOHTEET SÄHKETEHTÄVÄN SISÄLTÖHAKEMISTOON (Raamattu, PÖLLÖN

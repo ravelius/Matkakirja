@@ -30,27 +30,11 @@
  * Yksikään uusi id, nimi tai sijainti ei toista 16 vanhan nostoin
  * joukkoa (tools/tarkista-nimiolimitys.mjs ajettu, ei limityksiä).
  *
- * EI VIELÄ LIITETTY KOHDE_MAAT.CHE:HEN (21.9.2026) — TÄMÄ TIEDOSTO ON
- * VALMIS SISÄLTÖ, MUTTA KYTKENTÄ ON BLOKATTU. AUT/bregenzin-jarvinayttamo
- * ja DEU/bodensee ovat ennestään lähes limittäin (8,6 lautayksikköä,
- * "europe"-lauta) ja CHE/stiftsbibliothek (Sankt Gallen,
- * maastokohteet-che.js) vielä lähempänä bodenseeta (4,9 yksikköä) —
- * kolmion kulma on siis jo ennestään ladonnan äärirajoilla ilman
- * yhtäkään tämän tiedoston nostoa. Kun `KOHDE_MAAT.CHE` liitetään
- * (rivi js/fokuskohteet.js:ään, kuten muilla muu-Eurooppa-hahmotelmilla),
- * `tools/tarkista-nimiolimitys.mjs` alkaa raportoida nimiö-nimiö-
- * limityksen AUT/bregenzin-jarvinayttamo + DEU/bodensee (ja välillä myös
- * CHE/stiftsbibliothek + DEU/bodensee) — KOKEILTU JA VAHVISTETTU: sekä
- * neljännen ruokakohteen (Appenzell, poistettu tästä tiedostosta
- * kokonaan, ks. alempaa) siirto kantoninsa sisällä ETTÄ koko sen
- * poistaminen EIVÄT riittäneet, koska limitys syntyy ladontajärjestyksen
- * (ei minkään yksittäisen uuden nimiön sijainnin) kautta — lisäys
- * TÄHÄN maahan tässä tiedostossa muuttaa naapurimaiden ladontaa. Tämä on
- * siis kartan ladonta-algoritmin (Karttaseppä) tai AUT/DEU-sisällön
- * ongelma, ei tämän Sveitsi-erän sisällön. RATKAISU VAATII PÄÄTÖKSEN:
- * joko a) AUT:n "Bregenz" tai DEU:n "Bodenjärvi" -nimiö lyhennetään tai
- * siirretään, tai b) ladonta-algoritmiin tehdään korjaus. Kunnes joku
- * näistä on tehty, tämä tiedosto on olemassa mutta pelaamattomissa.
+ * KYTKENTÄ OLI BLOKATTU 21.9.2026 (AUT/bregenzin-jarvinayttamo +
+ * DEU/bodensee -nimiörypäs, ks. Raamatun loki) — Karttaseppä siirsi
+ * DEU/Bodensee-nimiön (haara karttaseppa-bodensee, mergetty
+ * v1973-prepiin 21.9.2026), ja `KOHDE_MAAT.CHE` on nyt liitetty
+ * js/fokuskohteet.js:ään.
  *
  * Neljäs ruokakohde, Appenzell (9.41 E / 47.33 N), kirjoitettiin ja
  * kuvitettiin alunperin mutta poistettiin tästä tiedostosta kokonaan

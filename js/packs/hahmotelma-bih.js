@@ -47,19 +47,12 @@
  * liittäminen 1908 — sama huomio kuin fokuskohteet-bih.js:ssä, ja
  * jokaisen noston `nappi` katsoo tästä näkökulmasta.
  *
- * EI VIELÄ LIITETTY KOHDE_MAAT.BIH:HEN (21.9.2026) — SAMA TILANNE KUIN
- * hahmotelma-che.js:llä äskettäin. Kaikki 14 uutta noston sijaintia
- * pysyvät tarkoituksella kaukana Neumin rannikkokäytävästä, mutta
- * KOHDE_MAAT.BIH:n liittäminen (import + rivi js/fokuskohteet.js:ään)
- * kaatoi silti tools/tarkista-nimiolimitys.mjs:n rivillä "BIH/neum +
- * HRV/stonin-muurit" — sama ladonnan yksisuuntaisuuskaskadi kuin AUT/
- * CHE/DEU:ssä (ks. hahmotelma-che.js:n oma kommentti), ei minkään
- * uuden rivin sijainnista kiinni. Neum-Ston-pari oli jo ennestään
- * "tiedoksi"-listalla lähes limittäin naapurin symbolien kanssa, joten
- * mikä tahansa lisäys tähän maahan olisi todennäköisesti tehnyt saman.
- * RATKAISU: sama kuin Karttasepän CHE-korjaus (haara karttaseppa-
- * bodensee, DEU/bodensee siirretty) — Neumin tai Stonin muurien nimiön
- * siirto, Karttasepän päätös. Kytke KOHDE_MAAT.BIH kun se on tehty.
+ * KYTKENTÄ OLI BLOKATTU 21.9.2026 (BIH/neum + HRV/stonin-muurit
+ * -nimiörypäs, sama ladonnan yksisuuntaisuuskaskadi kuin AUT/CHE/DEU:ssä,
+ * ks. Raamatun loki) — Karttaseppä siirsi BIH/Neum-nimiön puoli
+ * yksikköä pohjoiseen (haara karttaseppa-bodensee, mergetty
+ * v1973-prepiin 21.9.2026), ja `KOHDE_MAAT.BIH` on nyt liitetty
+ * js/fokuskohteet.js:ään.
  *
  * ── RANNIKKOVAROITUS (omistajan ohje 21.9.2026) ────────────────────
  *
