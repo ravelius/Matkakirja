@@ -118,6 +118,7 @@ import {
   leveysKorkeudesta, luoPallokamera,
 } from './kamera.js';
 import { luoKameraloki } from './kameraloki.js';
+import { luoSulavuusmittari } from './sulavuusmittari.js';
 import {
   SISASUMUN_PEITTO, SUMUN_RAJAKERROIN, merkitseLoydetyksi, sisasumunAukot, sumuPaalla,
 } from './sumu.js';
@@ -5159,6 +5160,8 @@ export async function avaaPallolauta(ui) {
     liike: () => liike,
     /** Kameralokin merkinnät (js/pallolauta/kameraloki.js), uusin viimeisenä. */
     kameraloki: () => kameraloki.merkinnat(),
+    /** Nimiöiden sulavuusmittari (js/pallolauta/sulavuusmittari.js): aloita/lopeta/yhteenveto. */
+    sulavuus: null,
     /**
      * Kyltin PIIRRETTY laatikko (savukkeet ja vartijat): se, jota
      * osumatesti käyttää, kun merkkikerroksen tween on kesken.
@@ -5284,6 +5287,8 @@ export async function avaaPallolauta(ui) {
    * delegoivat tänne; kuori tuntee pallon kameran ja tämän kuoren.
    */
   lauta.linssikartta = luoLinssikartta({ ui, lauta });
+  // Sulavuusmittari tarvitsee valmiin laudan (merkit.datum, kamera).
+  lauta.sulavuus = luoSulavuusmittari(lauta);
   /*
    * LINSSIT PALLOLLE (karttapallo.md luku 10, aalto 1A; omistaja
    * 5.9.2026: *"Käännä kaikki pallolle, niin voidaan sulkea vanha kartta
