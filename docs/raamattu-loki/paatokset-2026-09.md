@@ -843,3 +843,7 @@ Julkaisija 22.9.2026 klo 00.15: glnimiot-vanha-rasteri mainissa #2691 (v2032); P
 ## ZOOMIENNAKKO PUOLITTI LAATTAPORTAAN p95:N (68→35 ms); LAATTAPYYNTOJEN TAHDITUS 2/KEHYS HYVAKSYTTY (21.9.2026 klo 23.54)
 
 Karttaseppä 22.9.2026 klo 00.25 (WebKit 390×844 dpr 3, Ranska z6, main v2035 + kerrokset-lippu): porras 2 zoomi p95 68 → 35–37 ms, porras 1 31–42; pitkien kehysten syy: 15–18 fetch-aloitusta samassa kehyksessä (6 latauspaikkaa vapautuu kerralla) + tekstuurin vienti. Fable hyväksyi: laattapyyntöjen aloituksen tahditus enintään 2 laattaa (6 fetchiä) per kehys pallolaatat.js:n jonoon, savuke portailla 1–2; tukitason harvennus jos p95 jää yli 25 ms.
+
+## NOSTOTASOT: 8 ISOILLE MAILLE (FRA/DEU/ITA/ESP), 4-6 MUILLE; GBR/POL/AUT HYVAKSYTTY (AUT TONAVA→WACHAU) (21.9.2026 klo 23.56)
+
+Fable 22.9.2026 klo 00.30: Sisältökirjuri löysi, että DEU/ITA/ESP nostotasot on jo tehty toisessa erässä (docs/raportit/nimisto-taso-esp-ita-deu-20260921.md, haarat sisalto-nimisto-taso-deu/ita/esp mergeamatta, 8 per maa). Päätös: isot maat 8 kuten FRA, muut 4–6; 'yksi per tyyppi' on toive. GBR (Stonehenge, Edinburghin linna, Ben Nevis, Ironbridge, Doverin liiduvuoret, Bath), POL (Auschwitz-Birkenau, Malbork, Białowieża, Rysy, Słowińskin dyynit, Elblągin kanava), AUT (Hallstatt, Großglockner, Hohensalzburg, Melk, Semmeringin rata, Wachau Tonavan sijaan) hyväksytty (docs/raportit/nostotasot-gbr-pol-aut-ehdotus-20260921.md). Julkaisija rebasettaa deu/ita/esp-haarat ja tarkistaa vanhan pohjan. Seuraava: loput Euroopan maat 6 maan erissä.
