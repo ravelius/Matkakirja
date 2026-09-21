@@ -543,3 +543,7 @@ Fable 21.9.2026 ilta: Mac Studio käynnistetty uudelleen, kaikki roolisessiot ka
 ## SESSIOIDEN KONTEKSTIN VALVONTA FABLELLE: 70 % = LUOVUTUS JA NOLLAUS (21.9.2026 klo 17.32)
 
 Omistaja 21.9.2026 ilta (Julkaisija 84 %, Karttaseppä 97 %, Sisältökirjuri 84 % uudelleenkäynnistyksen jälkeen; kukaan ei valvonut): Fable valvoo roolisessioiden kontekstin täyttöastetta get_usage-työkalulla aina kun sessio ilmoittaa erän valmiiksi ja vähintään kerran illassa. Kun sessio ylittää 70 %, Fable käskee sen kirjoittaa luovutuksen docs/raportit/viesti-<rooli>-luovutus-<pvm>.md ja pushata; omistaja nollaa session /clear-komennolla ja Fablen aloitusviestillä. Sessiot eivät odota automaattista tiivistystä (97 %). Nollattu 21.9. illalla: Julkaisija, Karttaseppä, Sisältökirjuri; Pelikoodari 36 % ja Laitetestaaja 60 % jatkavat.
+
+## KONTEKSTIN VALVONTA POSTIVAHDILLE (10 MIN KIERROS), FABLE REAGOI (21.9.2026 klo 17.33)
+
+Omistaja 21.9.2026 ilta: kontekstin täyttöasteen valvonta siirretään Fablelta Postivahdille. Postivahdin kierros 10 min välein: 1) postilaatikkoskripti, 2) get_usage jokaiselle roolisessiolle; yli 70 % → yksi rivi Fablelle, uusi ilmoitus samasta vasta yli 85 %. Fable käskee luovutuksen ja omistaja nollaa session. Fablen oma tarkistus jää varmistukseksi erän valmistumisen yhteydessä.
