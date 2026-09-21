@@ -631,3 +631,7 @@ Karttaseppä 21.9.2026 ilta: pohjapoltto 2026-09-22-pohja tuotannossa: osoitin #
 ## KUVATTOMIA NOSTOJA ON 8, EI 198 (INVENTAARIOTYOKALU KORJATTU 18dff33e) (21.9.2026 klo 20.17)
 
 Sisältökirjuri 21.9.2026 ilta: tools/nostoinventaario.mjs ei tunnistanut kuva.tiedosto-kenttää (vain kuva.osoite), vaikka fokuskohteet.js käyttää sitä; korjattu ja regeneroitu: kuvattomia nostoja koko Euroopassa 8, ei 198, ja kaikki 8 ovat tarkoituksella kuvattomia kadonneita ihmeitä (Halikarnassos, Konstantinopolin hippodromi, Pergamonin alttari, Crystal Palace, Vanha London Bridge, Tuileries, Bastilji, Rodoksen kolossi; linjaus 26.–27.8.). Commit 18dff33e haarassa sisalto-grc-kuvat, testit 0 fail; Julkaisijan jonoon. Kuvatehtävä on valmis; 20.9. inventaarion luku 198 oli työkaluvirhe.
+
+## GL-RUNKO 3 VALMIS (72d2468e): HORISONTIN HAIVE JA ATLAKSEN TIIVISTYS; KERMA-REUNA V5 SAVUKEVIKA (21.9.2026 klo 20.27)
+
+Karttaseppä 21.9.2026 ilta: GL-runko 3 (karttaseppa-gl-runko-3 72d2468e, pelikoodari-gl-nostot e862f8a3:n päällä, Julkaisijan jonoon sen perään): horisontin häive (smoothstep ~7° ennen reunaa, sama kaikilla zoomeilla), atlaksen tiivistys (kuolleet rasterit pois, nimi ei putoa CSS2D:hen panoroinnissa); fonttien odotus jää CSS2D-perääntymiseksi. 152 instanssia, 1 drawcall, testit 18/18. Kerma-reuna V5: ei pohjan eikä rungon vika, Pelikoodari korjaa savukkeeseen (mittaus GL-kerros piilossa). Karttasepän seuraava tehtävä Fablelta.
