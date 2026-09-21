@@ -563,3 +563,7 @@ Omistaja 21.9.2026 ilta: nostokortin kaksipalstainen taitto (pelikoodari-nostoko
 ## SAHKELINJAN CLOUDFLARE-TOKEN UUSITAAN MYOHEMMIN; EI KIIREELLINEN (21.9.2026 klo 18.02)
 
 Omistaja 21.9.2026 ilta: sähkelinja (moninpelin retkikunta, sähkeet, kaveriapu; worker matkakirja-sahke + D1) on ollut tuotannossa poikki 6.9. lähtien (CLOUDFLARE_API_TOKEN ei kelpaa, julkaisu kaatui). Yksinpeli ei tarvitse sitä. Omistaja uusii tokenin ja GitHub-secretin myöhemmin; Julkaisija ei odota sitä, ajaa sahke-worker.yml:n vasta kun Fable ilmoittaa.
+
+## MERIKORISTEET PALLOLLE HYVAKSYTTY; OMISTAJA KYSYY VEDOKSEN TASOKARTASTA (21.9.2026 klo 18.05)
+
+Omistaja 21.9.2026 ilta: Karttasepän merikoristevedos (karttaseppa-merikoristeet 7b55bc78: 29 Codexin koristetta valtamerillä, 4 kompassiruusua ja 25 laivaa, z1–z3, data assets/koristeet/meri/pallo-koristeet.json) hyväksytty poltettavaksi tuotantoon omana eränä (nimiöversio g + pallon sarja b + osoitin-PR) pohjapolton yhteydessä. Omistajan kysymys: vedoskuvat ovat tasokarttaa (Mercator-arkki kehyksineen, 'Painettu Matkakirjan kustantamossa MDCCCLXXIII'), ei pallokarttaa; Karttaseppä selvittää, onko kyse vain vedostyökalun tasoesityksestä vai näkyykö vanha tasokartta pelissä, ja toimittaa kaappauksen pallolta pelistä.
