@@ -267,6 +267,17 @@ const KEHYS = {
  * on tällöin 207 px tasolla z2 ja 104 px tasolla z1.
  */
 const KOMPASSI = { lon: -132, lat: -38, sade: 198 };
+/*
+ * VALTAMERTEN KORISTEET POHJAAN (`--koristeet <json>`, Karttaseppä
+ * 21.9.2026 ilta; maailmapiirto.js piirraMaailma osio 9): Codexin
+ * laivat ja kompassiruusut arkin kalusteina merten nimien ja ruusun
+ * rinnalla. Rivi { kuva, lon, lat, kokoPx, kierto?, tasot? }; kuvapolku
+ * repon juuresta. Oletustiedosto assets/koristeet/meri/pallo-koristeet.json.
+ * Karsinta (umpimeriSavy kohta 5) säästää laatat, joihin koriste osuu.
+ */
+const KORISTEET_LAHDE = valitsin('koristeet', null);
+const KORISTEET = KORISTEET_LAHDE ? JSON.parse(readFileSync(KORISTEET_LAHDE, 'utf8')) : [];
+const KORISTEIDEN_OLETUSTASOT = [1, 2, 3, 4, 5, 6];
 const MERET = [
   { nimi: 'TYYNIMERI', lon: -142, lat: 4, koko: 49 },
   { nimi: 'TYYNIMERI', lon: 163, lat: 18, koko: 49 },
@@ -301,13 +312,13 @@ const TASO0 = (12000 * TIHEYS) / 2 ** SYVIN_VIITE;
 
 if (!kohdekansio || kohdekansio.startsWith('--')) {
   console.error('Käyttö: node tools/generoi-laattapyramidi.mjs <kohdekansio> '
-    + '[--data <kansio>] [--tasot 0-4] [--alue lon0,lat0,lon1,lat1] '
+    + '[--data <kansio>] [--tasot 0-4] [--alue lon0,lat0,lon1,lat1] [--koristeet <json>] '
     + '[--laatta 512] [--laatu 0.9] [--muoto webp] [--kuiva] '
     + '[--tasoja 8|9] '
     + '[--kaariminuutit 1|3] [--korkeuspalat <kansio>] [--vain-palat [tiedosto]] '
     + '[--vain-lista] [--paikkaus <lähdeversio>] '
     + '[--nostotaso --nostoversio <v> [--nostomaa <ISO>] [--ilman-hahmotelmia [--polta-hahmotelmat t,t]] [--nostotasot <json>]] '
-    + '[--nimiotaso --nimioversio <v> [--nimiot <json>] [--koristeet <json>] [--nimiot-aika pysyva]] '
+    + '[--nimiotaso --nimioversio <v> [--nimiot <json>] [--nimiot-aika pysyva]] '
     + '[--viivataso --viivaversio <v> [--eipiirit] [--eireitit] [--eirajat] [--eijoet]] '
     + '[--vesiviivoitus tihea|harva] [--syvyysportaat m,m,…] [--resepti-json <json>] [--joet-pohjaan] '
     + '[--rantataso --rantaversio <v>] [--ilman-rantaviivaa] '
@@ -2027,24 +2038,10 @@ let nimiotLista = null;
  * rivit ilman kenttää pysyvät mukana — ne eivät ole poliittisia nimiä.
  */
 const NIMIOT_AIKA = valitsin('nimiot-aika', null);
-/*
- * LISÄKORISTEET (`--koristeet <json>`, Karttaseppä 21.9.2026 ilta):
- * nimistön perään liitettävä rivilista, esim. valtamerten laivat ja
- * kompassiruusut pallon yleiskuvaan (assets/koristeet/meri/
- * pallo-koristeet.json, rivit `tasot: [2, 3]`). Kuvapolut ovat repon
- * juuresta; erillinen tiedosto, jotta Sisältökirjurin nimistö ja
- * Karttasepän koristeet eivät kirjoita samaan listaan.
- */
-const KORISTEET_LAHDE = valitsin('koristeet', null);
 function nimiotasonNimiot() {
   if (nimiotLista) return nimiotLista;
   if (NIMIOT_LAHDE) nimiotLista = JSON.parse(readFileSync(NIMIOT_LAHDE, 'utf8'));
   else nimiotLista = NIMISTO_1873;
-  if (KORISTEET_LAHDE) {
-    const lisa = JSON.parse(readFileSync(KORISTEET_LAHDE, 'utf8'));
-    nimiotLista = [...nimiotLista, ...lisa];
-    console.log(`  koristeet       ${KORISTEET_LAHDE}: ${lisa.length} riviä`);
-  }
   if (NIMIOT_AIKA) {
     const ennen = nimiotLista.length;
     nimiotLista = nimiotLista.filter((n) => !n.aika || n.aika === NIMIOT_AIKA
@@ -2725,6 +2722,18 @@ function umpimeriSavy(mitat, sarake, rivi, syyt = null) {
     if (KOMPASSI.lon > lonL - kompassiAst && KOMPASSI.lon < lonO + kompassiAst
       && KOMPASSI.lat > latE - kompassiAst && KOMPASSI.lat < latP + kompassiAst) return ei('kompassi');
   }
+  /*
+   * 5. VALTAMERTEN KORISTEET (--koristeet): koko on laatan pikseleitä
+   * (kokoPx), joten asteina se on kokoPx / (px · ASTE); kierto ja
+   * laivan varjo mahtuvat kertoimeen 0,8 (puolikas 0,5 · 1,6).
+   */
+  for (const k of KORISTEET) {
+    const tasot = Array.isArray(k.tasot) ? k.tasot : KORISTEIDEN_OLETUSTASOT;
+    if (!tasot.includes(mitat.z) || !(k.kokoPx > 0)) continue;
+    const puoli = (k.kokoPx * 0.8) / (mitat.px * ASTE);
+    if (k.lon > lonL - puoli && k.lon < lonO + puoli
+      && k.lat > latE - puoli && k.lat < latP + puoli) return ei('koriste');
+  }
 
   // 1b. järvet
   for (const j of JARVIEN_LAATIKOT) {
@@ -2989,6 +2998,8 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
    */
   const RANTATASO = ${RANTATASO};
   const NIMIOTASO = ${NIMIOTASO};
+  // Pohjan valtamerikoristeiden kuvapolut (ks. KORISTEET): esiladataan kuten nimiötason kuvat.
+  const KORISTEKUVAT = ${JSON.stringify([...new Set(KORISTEET.filter((k) => k.kuva).map((k) => k.kuva))])};
   /*
    * VÄRITASOAJO POLTTAA LEIKKURIN LAATTAAN (erä 1b): kohdemaa ja sen
    * aluevedet täydellä peitolla, muu laatikko feidattuna paperina,
@@ -3058,19 +3069,20 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
   }
   let nimiotaso = null;
   const koristekuvat = {};
+  // Kuvakoristeet esiladataan kerran: polku → Image (maailmapiirto.js KUVAKORISTEET);
+  // pohjan valtamerikoristeet (KORISTEKUVAT) samaan tauluun.
+  const polut = new Set(KORISTEKUVAT);
   if (NIMIOTASO) {
     // Esiladotut nimiöt tasoittain (ks. TÖRMÄYSTEN VÄISTÖ): { z: [ {nimio, x, y, …} ] }.
     nimiotaso = (await (await fetch('./nimiot.json')).json())?.tasot ?? {};
-    // Kuvakoristeet esiladataan kerran: polku → Image (maailmapiirto.js KUVAKORISTEET).
-    const polut = new Set();
     for (const lista of Object.values(nimiotaso)) for (const l of lista) if (l.nimio?.luokka === 'kuva' && l.nimio.kuva) polut.add(l.nimio.kuva);
-    await Promise.all([...polut].map((polku) => new Promise((ok) => {
-      const img = new Image();
-      img.onload = () => { koristekuvat[polku] = img; ok(); };
-      img.onerror = () => ok();
-      img.src = './koristeet/' + polku.split('/').pop();
-    })));
   }
+  await Promise.all([...polut].map((polku) => new Promise((ok) => {
+    const img = new Image();
+    img.onload = () => { koristekuvat[polku] = img; ok(); };
+    img.onerror = () => ok();
+    img.src = './koristeet/' + polku.split('/').pop();
+  })));
   if (!TASOITUS && !NOSTOTASO && !VIIVATASO && !RANTATASO && !NIMIOTASO) {
     aineisto = await (await fetch('./aineisto.json')).json();
     aineisto.korkeus.grid = new Int16Array(await (await fetch('./korkeus.bin')).arrayBuffer());
@@ -3129,7 +3141,7 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
       piirraNimiotaso(kangas, { ...yhteiset, __z: saumaZ, ladonnat: nimiotaso[String(saumaZ)] ?? [], kuvat: koristekuvat });
     } else {
       piirraMaailma(kangas, aineisto, {
-        ...yhteiset, nostot: nostotTasolla(saumaZ), piirraNosto: piirraNostoTasoineen,
+        ...yhteiset, nostot: nostotTasolla(saumaZ), piirraNosto: piirraNostoTasoineen, kuvat: koristekuvat,
       });
     }
     const kctx = kangas.getContext('2d', { willReadFrequently: true });
@@ -3285,7 +3297,7 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
         piirraNimiotaso(kangas, { ...yhteiset, __z: perus.__z ?? 7, ladonnat: nimiotaso[String(perus.__z ?? 7)] ?? [], kuvat: koristekuvat });
       } else {
         piirraMaailma(kangas, aineisto, {
-          ...yhteiset, nostot: nostotTasolla(perus.__z ?? 7), piirraNosto: piirraNostoTasoineen,
+          ...yhteiset, nostot: nostotTasolla(perus.__z ?? 7), piirraNosto: piirraNostoTasoineen, kuvat: koristekuvat,
         });
       }
       const kctx = kangas.getContext('2d', { willReadFrequently: true });
@@ -3377,7 +3389,7 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
       piirraNimiotaso(kangas, { ...asetukset, ladonnat: nimiotaso[String(asetukset.__z)] ?? [], kuvat: koristekuvat });
     } else {
       piirraMaailma(kangas, aineisto, {
-        ...asetukset, sisalto, nostot: nostotTasolla(asetukset.__z), piirraNosto: piirraNostoTasoineen,
+        ...asetukset, sisalto, nostot: nostotTasolla(asetukset.__z), piirraNosto: piirraNostoTasoineen, kuvat: koristekuvat,
       });
     }
     /*
@@ -3460,6 +3472,8 @@ const palvelin = createServer((req, res) => {
     ...Object.fromEntries([
       ...(NIMIOTASO ? nimiotasonNimiot() : []).filter((n) => n.luokka === 'kuva' && n.kuva),
       ...(NOSTOTASO ? poltettavatMerkit : []).filter((m) => m.kuva),
+      // Pohjan valtamerikoristeet (ks. KORISTEET).
+      ...KORISTEET.filter((k) => k.kuva),
     ].map((n) => [`/koristeet/${basename(n.kuva)}`, resolve(n.kuva)])),
     // Väritason leikkuri: kohdemaan aluevesirenkaat (ks. vari.json).
     '/vari.json': join(tyokansio, 'vari.json'),
@@ -3571,7 +3585,7 @@ console.log(`  sivu pystyssä   ${((Date.now() - sivuAlkoi) / 1000).toFixed(1)} 
  * molemmissa, kartalla olisi kaksinkertainen viiva.
  */
 const TYYLI = {
-  meret: MERET, kehys: KEHYS, kompassi: KOMPASSI, asteverkko: false,
+  meret: MERET, kehys: KEHYS, kompassi: KOMPASSI, koristeet: KORISTEET, asteverkko: false,
   ...(ILMAN_RANTAVIIVAA ? { rantaviiva: false } : {}),
 };
 

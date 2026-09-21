@@ -2,7 +2,7 @@
  * KARTTAPALLON LAATAT — juliste Millerista Web Mercator -laatoiksi.
  *
  *   node tools/tee-pallolaatat.mjs [--kuiva] [--min 0] [--max 7] [--nostot]
- *        [--ilman-rantaa] [--nimiot]
+ *        [--ilman-rantaa]
  *        [--ulos pallolaatat-ulos] [--alue lon0,lat0,lon1,lat1] [--tunniste b]
  *        [--osa i/n] [--noutovali ms]
  *        [--luettelo <paikallinen pyramidi.json>] [--lahde <kansio>]
@@ -90,15 +90,6 @@
  * pallonNostoOnPoltettu) ja piirtää vain muut elävinä
  * (js/pallolauta/nostot.js) — pyramidin oma luettelo ei kelpaa, koska
  * pallon sarja poltetaan eri hetkellä ja voi olla eri versiota.
- * NIMIÖTASO YLEISKUVAAN (`--nimiot`, Karttaseppä 21.9.2026 ilta,
- * merikoristeet pallolle): nimiötason laatat (<nimioversio>/nimiot/z…)
- * yhdistetään sarjaan VAIN pyramidin tasoilla z ≤ NIMIOT_PALLOON_Z eli
- * pallon yleiskuvaan, jota lepokerros ei kokoa (js/pallolaatat.js
- * LEPOKERROS_KORKEUSRAJA). Syvemmillä tasoilla lepokerros piirtää
- * nimiötason itse, joten sinne poltettuna se tuplaantuisi. Sisältö on
- * valtamerten laivat ja kompassiruusut (rivit `tasot: [2, 3]`);
- * laatat.json saa kentän `nimiot` (versio) ja `nimiotaso.tasot`.
- *
  * Pohjasarjassa (ilman --nostot) kenttää ei ole: silloin laatoissa ei
  * ole yhtään nostoa ja pallo piirtää kaikki elävinä.
  *
@@ -243,11 +234,6 @@ export function nostaReuna(ulos, o, meri, osuus) {
 
 /** Mercator-tason Z lähdetaso pyramidissa. */
 export const lahdetaso = (Z) => Math.max(0, Z - 1);
-/** Syvin pyramidin taso, jolle nimiötaso yhdistetään pallon sarjaan (--nimiot). */
-export const NIMIOT_PALLOON_Z = 3;
-/** Pyramidin tasot, joilla nimiötaso on sarjassa (--nimiot). */
-export const nimiotPallonTasot = (luettelo) => (luettelo?.nimiotaso?.versio
-  ? (luettelo.nimiotaso.tasot ?? []).filter((z) => z <= NIMIOT_PALLOON_Z) : []);
 
 /** Web Mercator -laatan (Z, X, Y) reunat asteina: { lansi, ita, pohjoinen, etela }. */
 export function laatanReunat(Z, X, Y) {
@@ -377,10 +363,9 @@ async function noudaPyramidi(polku) {
  * tarvittavan kerroksen ja tason kansio tarkistetaan ennen ensimmäistä
  * laattaa. Puute on virhe, ei varoitus.
  */
-export function varmistaLahde(luettelo, min, max, { nostot = false, ranta = true, nimiot = false } = {}) {
+export function varmistaLahde(luettelo, min, max, { nostot = false, ranta = true } = {}) {
   if (!lahdeKansio) return;
   const nostotasot = new Set(luettelo.nostotaso?.tasot ?? []);
-  const nimiotasot = new Set(nimiot ? nimiotPallonTasot(luettelo) : []);
   const puuttuu = [];
   for (let Z = min; Z <= max; Z += 1) {
     const z = lahdetaso(Z);
@@ -390,7 +375,6 @@ export function varmistaLahde(luettelo, min, max, { nostot = false, ranta = true
     if (nostot && luettelo.nostotaso?.versio && nostotasot.has(z)) {
       vaaditut.push(`${luettelo.nostotaso.versio}/nostot/z${z}`);
     }
-    if (nimiotasot.has(z)) vaaditut.push(`${luettelo.nimiotaso.versio}/nimiot/z${z}`);
     for (const p of vaaditut) {
       if (!existsSync(join(lahdeKansio, ...p.split('/'))) && !puuttuu.includes(p)) puuttuu.push(p);
     }
@@ -407,7 +391,7 @@ export function varmistaLahde(luettelo, min, max, { nostot = false, ranta = true
  * Pohja ja viivataso yhdistetään laattaa noudettaessa; puuttuva
  * pohjalaatta on merta.
  */
-function teeLukija(luettelo, sharp, { nostot = false, ranta = true, nimiot = false } = {}) {
+function teeLukija(luettelo, sharp, { nostot = false, ranta = true } = {}) {
   const L = luettelo.laatta ?? 512;
   const viivaversio = luettelo.viivataso?.versio ?? null;
   /*
@@ -425,9 +409,6 @@ function teeLukija(luettelo, sharp, { nostot = false, ranta = true, nimiot = fal
   // Nostotaso (nimet, karttanostot) on vain tasoilla nostotaso.tasot (z5–z7).
   const nostoversio = nostot ? (luettelo.nostotaso?.versio ?? null) : null;
   const nostotasot = new Set(luettelo.nostotaso?.tasot ?? []);
-  // Nimiötaso vain yleiskuvaan (ks. NIMIÖTASO YLEISKUVAAN tiedoston alussa).
-  const nimioversio = nimiot ? (luettelo.nimiotaso?.versio ?? null) : null;
-  const nimiotasot = new Set(nimiot ? nimiotPallonTasot(luettelo) : []);
   const muisti = new Map();
   let meri = null;
   const tilasto = { noudettu: 0, puuttui: 0 };
@@ -449,12 +430,11 @@ function teeLukija(luettelo, sharp, { nostot = false, ranta = true, nimiot = fal
         /*
          * KERROSTEN JÄRJESTYS ON PIIRTOJÄRJESTYS ja sama kuin
          * tasokartalla (js/laattapyramidi.js varmistaKerrokset):
-         * pohja → ranta → viiva → nimiö → nosto.
+         * pohja → ranta → viiva → nosto.
          */
         const kerrokset = [];
         if (rantaversio) kerrokset.push(`${rantaversio}/ranta/z${z}/${tx}/${ty}.webp`);
         if (viivaversio) kerrokset.push(`${viivaversio}/viivat/z${z}/${tx}/${ty}.webp`);
-        if (nimioversio && nimiotasot.has(z)) kerrokset.push(`${nimioversio}/nimiot/z${z}/${tx}/${ty}.webp`);
         if (nostoversio && nostotasot.has(z)) kerrokset.push(`${nostoversio}/nostot/z${z}/${tx}/${ty}.webp`);
         for (const polku of kerrokset) {
           const kerros = await noudaPyramidi(polku); // eslint-disable-line no-await-in-loop
@@ -793,7 +773,6 @@ async function paa() {
    * kuin tasokartan laatta.
    */
   const ranta = !argv.includes('--ilman-rantaa');
-  const nimiot = argv.includes('--nimiot');
   const tunniste = lippu('--tunniste') ?? '';
   if (!/^[a-z0-9]*$/.test(tunniste)) throw new Error(`--tunniste: vain a–z ja 0–9 (${tunniste})`);
   const osa = lueOsa(lippu('--osa'));
@@ -824,7 +803,6 @@ async function paa() {
   console.log(`pyramidi ${luettelo.versio}, viivat ${luettelo.viivataso?.versio ?? '-'}, `
     + `ranta ${ranta ? (luettelo.rantataso?.versio ?? '-') : 'ei'}, `
     + `nostot ${nostot ? (luettelo.nostotaso?.versio ?? '-') : 'ei'}, `
-    + `nimiöt ${nimiot ? `${luettelo.nimiotaso?.versio ?? '-'} z${nimiotPallonTasot(luettelo).join(',') || '-'}` : 'ei'}, `
     + `Mercator-tasot ${min}–${max} (lähteet z${lahdetaso(min)}–z${lahdetaso(max)}), `
     + `${yhteensa} laattaa → ${kansio}`);
   console.log(`luettelo ${luettelopolku ?? LUETTELO}, lähteet ${lahde ? `paikallisesti ${lahde}` : 'ämpäristä'}`);
@@ -837,7 +815,7 @@ async function paa() {
     console.log(`osa ${osa.i}/${osa.n}: sarakekaistat ${kaistat.join(', ') || '(tyhjä)'}, `
       + `noutovali ${noutovali} ms`);
   }
-  varmistaLahde(luettelo, min, max, { nostot, ranta, nimiot });
+  varmistaLahde(luettelo, min, max, { nostot, ranta });
   if (kuiva) { console.log('Kuiva ajo: ei nouda laattoja eikä kirjoita.'); return; }
 
   /*
@@ -850,14 +828,14 @@ async function paa() {
   if (vainLuettelo) {
     mkdirSync(ulos, { recursive: true });
     kirjoitaLuettelo(ulos, luettelo, {
-      min, max, nostot, ranta, nimiot, tunniste, kansio,
+      min, max, nostot, ranta, tunniste, kansio,
     });
     console.log(`kirjoitettu vain luettelo kansioon ${ulos}; ämpärin kansio: ${kansio}`);
     return;
   }
 
   const sharp = (await import('sharp')).default;
-  const lukija = teeLukija(luettelo, sharp, { nostot, ranta, nimiot });
+  const lukija = teeLukija(luettelo, sharp, { nostot, ranta });
   mkdirSync(ulos, { recursive: true });
   let tehty = 0;
   const alkuAika = Date.now();
@@ -881,7 +859,7 @@ async function paa() {
    */
   if (!osa) {
     kirjoitaLuettelo(ulos, luettelo, {
-      min, max, nostot, ranta, nimiot, tunniste, kansio,
+      min, max, nostot, ranta, tunniste, kansio,
     });
   }
   console.log(`kirjoitettu ${tehty} laattaa kansioon ${ulos}${osa ? ` (osa ${osa.i}/${osa.n}, ei luetteloa)` : ''}; ämpärin kansio: ${kansio}`);
@@ -889,7 +867,7 @@ async function paa() {
 
 /** Kansion luettelo (laatat.json) ja kansio.txt työnkulun vientiä varten. */
 export function kirjoitaLuettelo(ulos, luettelo, {
-  min, max, nostot, ranta = true, nimiot = false, tunniste, kansio,
+  min, max, nostot, ranta = true, tunniste, kansio,
 }) {
   writeFileSync(join(ulos, 'laatat.json'), `${JSON.stringify({
     versio: luettelo.versio,
@@ -903,10 +881,6 @@ export function kirjoitaLuettelo(ulos, luettelo, {
      */
     ranta: ranta ? (luettelo.rantataso?.versio ?? null) : null,
     nostot: nostot ? (luettelo.nostotaso?.versio ?? null) : null,
-    // Nimiötaso yleiskuvassa (ks. NIMIÖTASO YLEISKUVAAN): versio ja pallon tasot.
-    nimiot: nimiot ? (luettelo.nimiotaso?.versio ?? null) : null,
-    ...(nimiot && luettelo.nimiotaso?.versio
-      ? { nimiotaso: { versio: luettelo.nimiotaso.versio, tasot: nimiotPallonTasot(luettelo).map((z) => z + 1) } } : {}),
     ...(tunniste ? { tunniste } : {}),
     tasot: { min, max },
     laatta: LAATTA,
