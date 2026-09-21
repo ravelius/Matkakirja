@@ -28,6 +28,7 @@ import {
   RULLAN_RIVI_PX, RULLAN_SIVU_PX, RULLAN_SUORA_RAJA, VAUHDIN_KATTO_MS, VEDON_KATTO_RUUTUA,
   nakyvaKaista, rajaaVauhti, rullanAskel, vedonSiirto,
   ZOOMIN_ASKELKATTO, ZOOMIN_HERKKYYS, ZOOMIN_LIUKU_MS, kohdistaAnkkuri, zoominAskel,
+  ENNUSTE_KEHYS_MAX_MS, ennustaKamera, pallonEnnusteKaytossa,
 } from '../js/pallo.js';
 import { OSOITTIMEN_JALKIVIIVE_MS, pisteEdessa } from '../js/pallolauta/lauta.js';
 import { laattakerroksenOsuma } from '../js/pallolaatat.js';
@@ -1106,4 +1107,28 @@ test('sulavuus E3: ankkuri pysyy ruudun kohdassa zoomissa (Google Earth)', () =>
   const keski = laattakerroksenOsuma(pov, 0, 0, linssi);
   const paikallaan = kohdistaAnkkuri(pov, keski, 0, 0, 0.05, linssi);
   assert.ok(Math.abs(paikallaan.lat - 46.5) < 1e-6 && Math.abs(paikallaan.lng - 2.5) < 1e-6);
+});
+
+test('sulavuus E4b: kameran ennuste ekstrapoloi liikkeen, lepää levossa ja kiertää sauman', () => {
+  const a = { aika: 1000, pov: { lat: 46.5, lng: 2.5, altitude: 0.2 } };
+  const b = { aika: 1016, pov: { lat: 46.6, lng: 2.7, altitude: 0.19 } };
+  const e = ennustaKamera(a, b);
+  assert.equal(e.dtMs, 16);
+  assert.ok(Math.abs(e.pov.lat - 46.7) < 1e-9 && Math.abs(e.pov.lng - 2.9) < 1e-9, `${e.pov.lat},${e.pov.lng}`);
+  assert.ok(Math.abs(e.pov.altitude - 0.19 * 0.19 / 0.2) < 1e-9, 'korkeus logaritmisesti');
+  // Levossa ei ennustetta.
+  const lepo = ennustaKamera(a, { aika: 1016, pov: { ...a.pov } });
+  assert.equal(lepo.dtMs, 0);
+  assert.deepEqual(lepo.pov, a.pov);
+  // Pitkä tauko (yli 250 ms) ei ennusta; kehysväli katkaistaan kattoon.
+  assert.equal(ennustaKamera(a, { aika: 1400, pov: b.pov }).dtMs, 0);
+  assert.equal(ennustaKamera(a, { aika: 1100, pov: b.pov }).dtMs, ENNUSTE_KEHYS_MAX_MS);
+  // Sauma: 179,9 → −179,9 on 0,2° itään, ei 359,8° länteen.
+  const s = ennustaKamera({ aika: 0, pov: { lat: 0, lng: 179.9, altitude: 0.2 } },
+    { aika: 16, pov: { lat: 0, lng: -179.9, altitude: 0.2 } });
+  assert.ok(Math.abs(s.pov.lng - (-179.7)) < 1e-9, `sauma ${s.pov.lng}`);
+  assert.deepEqual(ennustaKamera(null, b).pov, b.pov);
+  // Kytkin: ?ennuste=0 sammuttaa.
+  assert.equal(pallonEnnusteKaytossa({ location: { search: '?ennuste=0' } }), false);
+  assert.equal(pallonEnnusteKaytossa({ location: { search: '' } }), true);
 });
