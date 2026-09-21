@@ -538,7 +538,7 @@
     },
     "savuke-lippuarvaus.mjs": {
       "kuvakansio": true,
-      "huomautus": "Lippuarvaus-linssi (Fable 21.9.2026, toinen leikkilinssi; js/linssit/lippuarvaus.js): Marseille 390 ja 1400 px — Euroopan 42 lippua pallolle repon kuvista (oma maa korostettu), vipu Maailma 135, napautus nayttaa nimen, Livian kysymys (Fablen lause ilman nimea, 4 naapurivaihtoehtoa, vaara 0 tp, oikea +20 tp, lippu valahtaa), sulku siivoaa, laukku nayttaa Codexin webp-ikonin. Ampari Noden kautta. ~70 s."
+      "huomautus": "Lippuarvaus-linssi (Fable 21.9.2026, toinen leikkilinssi + jatkoera; js/linssit/lippuarvaus.js): Marseille 390 ja 1400 px — Euroopan 42 lippua pallolle repon kuvista (oma maa korostettu), vipu Maailma 135, napautus nayttaa nimen, Livian kysymys (Fablen lause ilman nimea, 4 naapurivaihtoehtoa, vaara 0 tp, oikea +20 tp, lippu valahtaa), kartta-muoto (maat polygoneina, liput piilossa kysymyksen ajan, napautus vastaa, oikea vihrea / vaara punainen, sarja ja ennatys localStorageen), sulku siivoaa, laukku nayttaa Codexin webp-ikonin. Ampari Noden kautta. ~80 s."
     },
     "savuke-kellot.mjs": {
       "kuvakansio": true,

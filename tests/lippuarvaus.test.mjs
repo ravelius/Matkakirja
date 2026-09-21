@@ -97,3 +97,32 @@ test('linssisopimus ja rekisteri: lippuarvaus on tavallinen pallolinssi Codexin 
   assert.match(sw, /'\.\/js\/linssit\/lippuarvaus\.js'/);
   assert.match(sw, /'\.\/js\/linssit\/lippuarvaus-peli\.js'/);
 });
+
+test('jatkoerä: sarja ja ennätys, kartta-muodon kysymykset ilman vaihtoehtoja ja ilman "vaihtoehtoina"-vihjettä', async () => {
+  const { NAPAUTUSKYSYMYKSET, NAPAUTUSOHJE, lueEnnatys, paivitaSarja, tallennaEnnatys, ENNATYS_AVAIN } = await import('../js/linssit/lippuarvaus-peli.js');
+  let s = { sarja: 0, ennatys: 0 };
+  s = paivitaSarja(s, true);
+  assert.deepEqual(s, { sarja: 1, ennatys: 1, uusiEnnatys: true });
+  s = paivitaSarja(s, true);
+  assert.deepEqual(s, { sarja: 2, ennatys: 2, uusiEnnatys: true });
+  s = paivitaSarja(s, false);
+  assert.deepEqual(s, { sarja: 0, ennatys: 2, uusiEnnatys: false });
+  s = paivitaSarja(s, true);
+  assert.equal(s.uusiEnnatys, false, 'sarja 1 ei ylitä ennätystä 2');
+  const varasto = new Map();
+  const api = { getItem: (k) => varasto.get(k) ?? null, setItem: (k, v) => varasto.set(k, v) };
+  assert.equal(lueEnnatys(api), 0);
+  tallennaEnnatys(5, api);
+  assert.equal(varasto.get(ENNATYS_AVAIN), '5');
+  assert.equal(lueEnnatys(api), 5);
+  assert.equal(lueEnnatys({ getItem: () => { throw new Error('yksityinen'); } }), 0);
+  assert.equal(NAPAUTUSKYSYMYKSET.length, 2);
+  assert.ok(NAPAUTUSKYSYMYKSET.every((k) => !/vaihtoehto/.test(k.teksti)));
+  assert.equal(NAPAUTUSOHJE, 'Napauta maata pallolla.');
+  const q = arvoKysymys(eurooppa, [by('FIN')], { muoto: 'kartta', jarjestys: 0 });
+  assert.equal(q.muoto, 'kartta');
+  assert.deepEqual(q.vaihtoehdot, []);
+  assert.equal(q.kysymys, NAPAUTUSKYSYMYKSET[0]);
+  const q2 = arvoKysymys(eurooppa, [by('FIN')], { muoto: 'nimet', jarjestys: 0 });
+  assert.equal(q2.vaihtoehdot.length, 4);
+});

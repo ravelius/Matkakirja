@@ -24,17 +24,35 @@
  * `el`iä), napautus datumin `napautus`-kentästä (lauta.js
  * lahinLinssimerkki: linssin merkki voittaa aina).
  *
- * JATKOERÄÄN (Fable): "napauta maata pallolla" -muoto (polygonit
- * Maiden tiedot -linssin tapaan) sekä sarjat ja ennätys.
+ * NAPAUTUSMUOTO JA SARJAT (Fablen jatkoerä 21.9.2026). Vipu "Nimet /
+ * Kartta": kartta-muodossa Livia näyttää lipun ja pelaaja napauttaa
+ * MAATA pallolla — maat ovat linssimoottorin polygoneja (sama
+ * maapolygonitPallolle kuin Maiden tiedot -linssillä, js/vertailu.js),
+ * ja liput ovat kysymyksen ajan piilossa, koska ne kertoisivat
+ * vastauksen. Oikea maa värjäytyy vihreäksi, väärin napautettu
+ * punaiseksi. Peräkkäiset oikeat ovat SARJA ja pisin sarja laitteen
+ * ENNÄTYS (localStorage, lippuarvaus-peli.js paivitaSarja); molemmat
+ * näkyvät tilarivillä.
  */
 
 import { ilmoitaLivianKasvopuhe } from '../livia-puhetila.js';
 import { lippuUrl } from '../packs/africa-valokuvat.js';
 import {
-  ARVAUKSEN_TP, LIVIAN_KYSYMYKSET, arvoKysymys, euroopassa, lippumaat, palaute,
+  ARVAUKSEN_TP, LIVIAN_KYSYMYKSET, NAPAUTUSOHJE, arvoKysymys, euroopassa, lippumaat, lueEnnatys, paivitaSarja,
+  palaute, tallennaEnnatys,
 } from './lippuarvaus-peli.js';
+import { maapolygonitPallolle } from '../vertailu.js';
 
 const LIPUT_OSA = 'lippuarvaus';
+const MAAT_OSA = 'lippuarvaus-maat';
+/** Maapolygonin sävyt napautusmuodossa (sama muste kuin Maiden tiedot -linssillä). */
+export const MAIDEN_SAVYT = {
+  tavallinen: { vari: 'rgba(140, 110, 70, 0.06)', reuna: 'rgba(70, 51, 31, 0.55)' },
+  oikea: { vari: 'rgba(46, 107, 46, 0.35)', reuna: 'rgba(30, 90, 30, 0.95)' },
+  vaara: { vari: 'rgba(176, 34, 34, 0.35)', reuna: 'rgba(140, 30, 30, 0.95)' },
+};
+/** Maapolygonit lasketaan kerran pakkaa kohti (26 000 pistettä). */
+const polygoniMuisti = new WeakMap();
 const LINSSIPORTTI = 'aikajana-paalla';
 const PALKKI_PIILOON = 'aikajana-palkki-auki';
 const TYYLIN_TUNNUS = 'lippuarvaus-tyyli';
@@ -172,7 +190,11 @@ function avaa(lauta, tila, ui) {
   const omaMaa = omaKaupunki ? (game?.pack?.map?.cityCountry?.[omaKaupunki] ?? null) : null;
   const kaikki = lippumaat(game?.pack ?? null);
   let rajaus = 'eurooppa';
-  let kysymys = null; // { maa, vaihtoehdot, kysymys, vastattu }
+  let muoto = 'nimet'; // 'nimet' | 'kartta'
+  let sarjatila = { sarja: 0, ennatys: lueEnnatys() };
+  let maaPolygonit = null; // Map iso → { geometry, nimi } (kartta-muoto)
+  let maaVarit = new Map(); // iso → 'oikea' | 'vaara' (vastauksen jälkeen)
+  let kysymys = null; // { maa, vaihtoehdot, kysymys, muoto, vastattu }
   const kysytyt = new Set();
   let kysymyksia = 0;
   let suljettu = false;
@@ -195,7 +217,37 @@ function avaa(lauta, tila, ui) {
   }]));
   const tyonnaLiput = () => {
     if (suljettu) return;
-    lauta.linssit.merkit(LIPUT_OSA, joukko().map((m) => datumit.get(m.iso)));
+    // Kartta-muodon kysymyksen ajan liput ovat piilossa: ne kertoisivat vastauksen.
+    const piilossa = muoto === 'kartta' && kysymys && !kysymys.vastattu;
+    lauta.linssit.merkit(LIPUT_OSA, piilossa ? [] : joukko().map((m) => datumit.get(m.iso)));
+  };
+  /** Maapolygonit pallolle kartta-muodossa; nimet-muodossa pois. */
+  const tyonnaMaat = () => {
+    if (suljettu) return;
+    if (muoto !== 'kartta') { lauta.linssit.pura?.(MAAT_OSA); return; }
+    if (!maaPolygonit) {
+      const map = game?.pack?.map ?? null;
+      maaPolygonit = (map && polygoniMuisti.get(map)) ?? null;
+      if (!maaPolygonit) {
+        maaPolygonit = maapolygonitPallolle(map, lauta.asteet);
+        if (map && maaPolygonit.size) polygoniMuisti.set(map, maaPolygonit);
+      }
+    }
+    const lista = [];
+    for (const m of joukko()) {
+      const p = maaPolygonit.get(m.iso);
+      if (!p) continue;
+      const savy = MAIDEN_SAVYT[maaVarit.get(m.iso) ?? 'tavallinen'];
+      lista.push({
+        avain: `maa:${m.iso}`, geometry: p.geometry, vari: savy.vari, reuna: savy.reuna, korkeus: 0.004,
+        napautus: () => napautaMaata(m.iso),
+      });
+    }
+    lauta.linssit.polygonit(MAAT_OSA, lista);
+  };
+  const napautaMaata = (iso) => {
+    if (kysymys && !kysymys.vastattu) { vastaa(iso); return; }
+    naytaNimi(iso);
   };
   const naytaNimi = (iso) => {
     const d = datumit.get(iso);
@@ -226,13 +278,24 @@ function avaa(lauta, tila, ui) {
   vivut.className = 'lippuarvaus-vivut';
   vivut.setAttribute('aria-label', 'Lippuarvaus');
   const paivitaTilaNimi = () => {
-    tilaNimi.textContent = `Lippuarvaus · ${rajaus === 'eurooppa' ? 'Euroopan' : 'maailman'} liput (${joukko().length})`;
+    const sarja = sarjatila.sarja || sarjatila.ennatys ? ` · sarja ${sarjatila.sarja} · ennätys ${sarjatila.ennatys}` : '';
+    tilaNimi.textContent = `Lippuarvaus · ${rajaus === 'eurooppa' ? 'Euroopan' : 'maailman'} liput (${joukko().length})${sarja}`;
+  };
+  const asetaMuoto = (uusi) => {
+    if (uusi === muoto) return;
+    muoto = uusi;
+    for (const nappi of vivut.querySelectorAll('[data-muoto]')) nappi.setAttribute('aria-pressed', String(nappi.dataset.muoto === uusi));
+    suljeKortti();
+    tyonnaMaat();
+    tyonnaLiput();
   };
   const asetaRajaus = (uusi) => {
     if (uusi === rajaus) return;
     rajaus = uusi;
     for (const nappi of vivut.querySelectorAll('[data-rajaus]')) nappi.setAttribute('aria-pressed', String(nappi.dataset.rajaus === uusi));
     paivitaTilaNimi();
+    maaVarit = new Map();
+    tyonnaMaat();
     tyonnaLiput();
   };
   const vipu = (teksti, arvo) => {
@@ -247,6 +310,18 @@ function avaa(lauta, tila, ui) {
   };
   vipu('Eurooppa', 'eurooppa');
   vipu('Maailma', 'maailma');
+  const muotovipu = (teksti, arvo) => {
+    const b = doc.createElement('button');
+    b.type = 'button';
+    b.textContent = teksti;
+    b.dataset.muoto = arvo;
+    b.setAttribute('aria-pressed', String(arvo === muoto));
+    b.addEventListener('click', () => asetaMuoto(arvo));
+    vivut.appendChild(b);
+    return b;
+  };
+  muotovipu('Nimet', 'nimet');
+  muotovipu('Kartta', 'kartta');
   const kysy = doc.createElement('button');
   kysy.type = 'button';
   kysy.className = 'lippuarvaus-kysy';
@@ -262,14 +337,19 @@ function avaa(lauta, tila, ui) {
     kortti.replaceChildren();
     ilmoitaLivianKasvopuhe('lippuarvaus', false);
     kysymys = null;
+    if (maaVarit.size) { maaVarit = new Map(); tyonnaMaat(); }
+    tyonnaLiput();
   };
   const kysyLivia = () => {
     const ruudulla = joukko().filter((m) => lauta.ruudulla?.(m.lat, m.lon, -24));
-    const q = arvoKysymys(joukko(), ruudulla, { kysytyt, jarjestys: kysymyksia });
+    const q = arvoKysymys(joukko(), ruudulla, { kysytyt, jarjestys: kysymyksia, muoto });
     if (!q) return;
     kysymyksia += 1;
     kysytyt.add(q.maa.iso);
     kysymys = { ...q, vastattu: false };
+    maaVarit = new Map();
+    tyonnaMaat();
+    tyonnaLiput();
     ilmoitaLivianKasvopuhe('lippuarvaus', true, q.kysymys.teksti);
     kortti.replaceChildren();
     const puhuja = doc.createElement('div');
@@ -277,7 +357,7 @@ function avaa(lauta, tila, ui) {
     puhuja.textContent = 'Livia';
     const teksti = doc.createElement('p');
     teksti.className = 'lippuarvaus-kysymys';
-    teksti.textContent = q.kysymys.teksti;
+    teksti.textContent = muoto === 'kartta' ? `${q.kysymys.teksti} ${NAPAUTUSOHJE}` : q.kysymys.teksti;
     const iso = doc.createElement('div');
     iso.className = 'lippuarvaus-iso';
     const kuva = doc.createElement('img');
@@ -297,7 +377,12 @@ function avaa(lauta, tila, ui) {
       b.addEventListener('click', () => vastaa(m.iso));
       valinnat.appendChild(b);
     }
-    kortti.append(puhuja, teksti, iso, valinnat);
+    const peru = doc.createElement('button');
+    peru.type = 'button';
+    peru.className = 'lippuarvaus-sulje-kortti';
+    peru.textContent = 'Ei nyt';
+    peru.addEventListener('click', suljeKortti);
+    kortti.append(puhuja, teksti, iso, muoto === 'kartta' ? peru : valinnat);
     kortti.hidden = false;
   };
   const vastaa = (iso) => {
@@ -308,6 +393,14 @@ function avaa(lauta, tila, ui) {
     const tp = game?.vastaaLippuarvaukseen?.(game.player, oikein, { maa: maa.nimi }) ?? 0;
     if (oikein) ui?.onChange?.(game);
     ilmoitaLivianKasvopuhe('lippuarvaus', false);
+    sarjatila = paivitaSarja(sarjatila, oikein);
+    if (sarjatila.uusiEnnatys) tallennaEnnatys(sarjatila.ennatys);
+    paivitaTilaNimi();
+    if (kysymys.muoto === 'kartta') {
+      maaVarit = new Map([[maa.iso, 'oikea'], ...(oikein ? [] : [[iso, 'vaara']])]);
+      tyonnaMaat();
+      tyonnaLiput();
+    }
     for (const b of kortti.querySelectorAll('.lippuarvaus-valinnat button')) {
       b.disabled = true;
       if (b.dataset.maa === maa.iso) b.classList.add('lippuarvaus-oikea');
@@ -315,7 +408,8 @@ function avaa(lauta, tila, ui) {
     }
     const p = doc.createElement('p');
     p.className = `lippuarvaus-palaute ${oikein ? 'oikein' : 'vaarin'}`;
-    p.textContent = `${palaute(oikein, maa)}${oikein && tp ? ` (+${tp} tp)` : ''}`;
+    p.textContent = `${palaute(oikein, maa)}${oikein && tp ? ` (+${tp} tp)` : ''}`
+      + (sarjatila.uusiEnnatys && sarjatila.sarja > 1 ? ` Uusi ennätys: ${sarjatila.sarja} peräkkäin!` : (oikein && sarjatila.sarja > 1 ? ` Sarja ${sarjatila.sarja}.` : ''));
     const sulje = doc.createElement('button');
     sulje.type = 'button';
     sulje.className = 'lippuarvaus-sulje-kortti';
@@ -336,6 +430,10 @@ function avaa(lauta, tila, ui) {
     /** Savukkeet ja vartijat. */
     rajaus: () => rajaus,
     asetaRajaus,
+    muoto: () => muoto,
+    asetaMuoto,
+    sarja: () => ({ ...sarjatila }),
+    napautaMaata,
     maat: () => joukko(),
     kysy: kysyLivia,
     kysymys: () => kysymys,
@@ -348,6 +446,7 @@ function avaa(lauta, tila, ui) {
       ajastimet.clear();
       ilmoitaLivianKasvopuhe('lippuarvaus', false);
       lauta.linssit.pura?.(LIPUT_OSA);
+      lauta.linssit.pura?.(MAAT_OSA);
       sulku.remove();
       kehikko.remove();
       doc.body.classList.remove(PALKKI_PIILOON, LINSSIPORTTI);

@@ -108,6 +108,35 @@ export function palaute(oikein, maa) {
   return (oikein ? PALAUTE_OIKEIN : PALAUTE_VAARIN).split('{MAA}').join(maa.nimi);
 }
 
+/*
+ * SARJA JA ENNÄTYS (Fable 21.9.2026, jatkoerä): peräkkäiset oikeat
+ * vastaukset ovat sarja; pisin sarja on laitteen ennätys (localStorage
+ * ENNATYS_AVAIN). Väärä vastaus katkaisee sarjan, ei ennätystä.
+ */
+export const ENNATYS_AVAIN = 'matkakirja-lippuarvaus-ennatys';
+
+/** Sarjan ja ennätyksen seuraava tila vastauksesta. */
+export function paivitaSarja({ sarja = 0, ennatys = 0 } = {}, oikein) {
+  const uusi = oikein ? sarja + 1 : 0;
+  return { sarja: uusi, ennatys: Math.max(ennatys, uusi), uusiEnnatys: oikein && uusi > ennatys };
+}
+
+/** Ennätys talteen / esiin (yksityinen tila ei kaada). */
+export function lueEnnatys(varasto = globalThis.localStorage) {
+  try { return Math.max(0, Number(varasto?.getItem?.(ENNATYS_AVAIN)) || 0); } catch { return 0; }
+}
+export function tallennaEnnatys(arvo, varasto = globalThis.localStorage) {
+  try { varasto?.setItem?.(ENNATYS_AVAIN, String(arvo)); } catch { /* yksityinen tila */ }
+}
+
+/**
+ * Kysymykset napautusmuotoon: vain ne Livian lauseet, jotka eivät
+ * puhu vaihtoehdoista (kysymys 1 lupaa naapurit napeiksi).
+ */
+export const NAPAUTUSKYSYMYKSET = LIVIAN_KYSYMYKSET.filter((k) => k.tunnus !== 'lentoreitti');
+/** Livian ohje napautusmuodossa kysymyksen perään. */
+export const NAPAUTUSOHJE = 'Napauta maata pallolla.';
+
 /**
  * Arvo kysymys: maa `ehdokkaista` (mieluiten ruudulla näkyvistä), jota
  * ei ole juuri kysytty, vaihtoehdot koko `joukosta` (sama rajaus:
@@ -117,16 +146,19 @@ export function palaute(oikein, maa) {
  * @param {Array} ehdokkaat  maat, joista oikea arvotaan (ruudulla)
  * @param {Set<string>} kysytyt  jo kysytyt iso-tunnukset (vältetään)
  * @param {number} jarjestys  monesko kysymys (tekstin vuorottelu)
+ * @param {'nimet'|'kartta'} muoto  napit vai napautus pallolla
  */
-export function arvoKysymys(joukko, ehdokkaat, { kysytyt = new Set(), jarjestys = 0, arpa = Math.random } = {}) {
+export function arvoKysymys(joukko, ehdokkaat, { kysytyt = new Set(), jarjestys = 0, arpa = Math.random, muoto = 'nimet' } = {}) {
   const pohja = (ehdokkaat?.length ? ehdokkaat : joukko).filter((m) => joukko.some((j) => j.iso === m.iso));
   if (!pohja.length || joukko.length < 2) return null;
   const tuoreet = pohja.filter((m) => !kysytyt.has(m.iso));
   const lahde = tuoreet.length ? tuoreet : pohja;
   const maa = lahde[Math.min(lahde.length - 1, Math.floor(arpa() * lahde.length))];
+  const lauseet = muoto === 'kartta' ? NAPAUTUSKYSYMYKSET : LIVIAN_KYSYMYKSET;
   return {
     maa,
-    vaihtoehdot: vaihtoehdot(joukko, maa, arpa),
-    kysymys: LIVIAN_KYSYMYKSET[jarjestys % LIVIAN_KYSYMYKSET.length],
+    muoto,
+    vaihtoehdot: muoto === 'kartta' ? [] : vaihtoehdot(joukko, maa, arpa),
+    kysymys: lauseet[jarjestys % lauseet.length],
   };
 }

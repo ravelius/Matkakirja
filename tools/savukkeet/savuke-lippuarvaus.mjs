@@ -17,9 +17,15 @@
  *      naapuria, kaikki Euroopasta); väärä vastaus: Fablen väärin-palaute
  *      maan nimellä, 0 tp; oikea (uusi kysymys): oikein-palaute,
  *      +XP_LIPPUARVAUS tp, aid-kupla, lippu välähtää pallolla.
- *   5. Sulku ✕: liput, kehikko ja luokat pois.
- *   6. Laukku: lippuarvaus valmiiden rivillä Codexin webp-ikonilla.
- *   7. Ei sivuvirheitä.
+ *   5. Kartta-muoto (jatkoerä): vipu Kartta tuo Euroopan maat
+ *      polygoneina; kysymyksen ajan liput ovat piilossa ja kortissa on
+ *      Livian lause + "Napauta maata pallolla." ilman nappeja; väärä
+ *      napautus värjää väärän punaiseksi ja oikean vihreäksi (sarja 0),
+ *      kaksi oikeaa peräkkäin → sarja 2, ennätys 2 tilarivillä ja
+ *      localStoragessa, liput takaisin kortin sulkuun.
+ *   6. Sulku ✕: liput, maat, kehikko ja luokat pois.
+ *   7. Laukku: lippuarvaus valmiiden rivillä Codexin webp-ikonilla.
+ *   8. Ei sivuvirheitä.
  *
  * Aja: PLAYWRIGHT_JS=… CHROMIUM=… node tools/savukkeet/savuke-lippuarvaus.mjs [kuvakansio]
  */
@@ -170,7 +176,7 @@ for (const ruutu of RUUDUT) {
   tieto(`${t}: avaus`, JSON.stringify(avaus));
   vaadi(`${t}: 1. linssi aukeaa pallolle: portti, ✕, vivut, Euroopan liput repon kuvista, oma maa korostettu`,
     avaus.linssi === 'lippuarvaus' && avaus.rajaus === 'eurooppa' && avaus.portti && avaus.sulku
-      && avaus.vivut.join('|') === 'Eurooppa|Maailma|Livia kysyy' && avaus.lippuja === avaus.maita && avaus.maita >= 40 && avaus.maita <= 45
+      && avaus.vivut.join('|') === 'Eurooppa|Maailma|Nimet|Kartta|Livia kysyy' && avaus.lippuja === avaus.maita && avaus.maita >= 40 && avaus.maita <= 45
       && avaus.ranska && avaus.oma && /^assets\/liput\/france\.png$/.test(avaus.kuvaSrc ?? '') && avaus.kuvaLatautui
       && /Euroopan liput/.test(avaus.tilaNimi),
     JSON.stringify(avaus));
@@ -182,11 +188,11 @@ for (const ruutu of RUUDUT) {
     const k = ui.pallolinssi.kahva;
     k.asetaRajaus('maailma');
     await new Promise((r) => setTimeout(r, 900));
-    const a = { rajaus: k.rajaus(), maita: k.maat().length, lippuja: document.querySelectorAll('.lippuarvaus-lippu').length,
+    const a = { rajaus: k.rajaus(), maita: k.maat().length, lippuja: document.querySelectorAll('.lippuarvaus-lippu:not(.pallolauta-poistuu)').length,
       nappi: document.querySelector('.lippuarvaus-vivut [data-rajaus="maailma"]')?.getAttribute('aria-pressed') };
     k.asetaRajaus('eurooppa');
     await new Promise((r) => setTimeout(r, 900));
-    return { ...a, takaisin: k.maat().length, lippujaTakaisin: document.querySelectorAll('.lippuarvaus-lippu').length };
+    return { ...a, takaisin: k.maat().length, lippujaTakaisin: document.querySelectorAll('.lippuarvaus-lippu:not(.pallolauta-poistuu)').length };
   });
   tieto(`${t}: maailma`, JSON.stringify(maailma));
   vaadi(`${t}: 2. vipu Maailma: 135 maan liput, takaisin Eurooppaan`,
@@ -269,7 +275,72 @@ for (const ruutu of RUUDUT) {
     JSON.stringify(kysymys));
   if (KUVAKANSIO) writeFileSync(join(KUVAKANSIO, `lippuarvaus-livia-${t}.png`), await sivu.screenshot());
 
-  /* ── 5. sulku ───────────────────────────────────────────────────── */
+  /* ── 5. kartta-muoto, sarja ja ennätys ──────────────────────────── */
+  const kartta = await sivu.evaluate(async () => {
+    const { ui, game } = window.matkakirja;
+    const k = ui.pallolinssi.kahva;
+    const pallo = ui.pallolauta.pallo;
+    const maat = () => pallo.polygonsData().filter((d) => String(d.avain ?? '').startsWith('maa:'));
+    // Häipyvät (pallolauta-poistuu) eivät ole näkyviä: kirjasto poistaa ne siirtymän jälkeen omassa kehyksessään.
+    const liput = () => document.querySelectorAll('.lippuarvaus-lippu:not(.pallolauta-poistuu)').length;
+    localStorage.removeItem('matkakirja-lippuarvaus-ennatys');
+    k.asetaMuoto('kartta');
+    await new Promise((r) => setTimeout(r, 900));
+    const polygoneja = maat().length;
+    const lippujaEnnen = liput();
+    const nappi = document.querySelector('.lippuarvaus-vivut [data-muoto="kartta"]')?.getAttribute('aria-pressed');
+    // Väärä napautus.
+    k.kysy();
+    await new Promise((r) => setTimeout(r, 400));
+    const q1 = k.kysymys();
+    const teksti = document.querySelector('.lippuarvaus-kortti .lippuarvaus-kysymys')?.textContent ?? '';
+    const nappeja = document.querySelectorAll('.lippuarvaus-kortti .lippuarvaus-valinnat button').length;
+    const lippujaKysymyksessa = liput();
+    const vaara = k.maat().find((m) => m.iso !== q1.maa.iso).iso;
+    k.napautaMaata(vaara);
+    await new Promise((r) => setTimeout(r, 400));
+    const varit = Object.fromEntries(maat().filter((d) => [`maa:${q1.maa.iso}`, `maa:${vaara}`].includes(d.avain)).map((d) => [d.avain.slice(4), d.vari]));
+    const palauteVaarin = document.querySelector('.lippuarvaus-palaute')?.textContent ?? '';
+    const sarja0 = k.sarja();
+    document.querySelector('.lippuarvaus-sulje-kortti')?.click();
+    await new Promise((r) => setTimeout(r, 400));
+    const lippujaJalkeen = liput();
+    const variPalautui = maat().every((d) => d.vari === 'rgba(140, 110, 70, 0.06)');
+    // Kaksi oikeaa peräkkäin.
+    const xp0 = game.player.xp ?? 0;
+    for (let i = 0; i < 2; i += 1) {
+      k.kysy();
+      await new Promise((r) => setTimeout(r, 300));
+      k.napautaMaata(k.kysymys().maa.iso);
+      await new Promise((r) => setTimeout(r, 300));
+      document.querySelector('.lippuarvaus-sulje-kortti')?.click();
+      await new Promise((r) => setTimeout(r, 200));
+    }
+    const sarja2 = k.sarja();
+    const tilaNimi = document.querySelector('.lippuarvaus-tila-nimi')?.textContent ?? '';
+    const tallennettu = localStorage.getItem('matkakirja-lippuarvaus-ennatys');
+    k.asetaMuoto('nimet');
+    await new Promise((r) => setTimeout(r, 500));
+    return {
+      polygoneja, lippujaEnnen, nappi, teksti, nappeja, lippujaKysymyksessa, oikea: q1.maa.iso, vaara, varit, palauteVaarin,
+      sarja0, lippujaJalkeen, variPalautui, sarja2, xpEro: (game.player.xp ?? 0) - xp0, tilaNimi, tallennettu,
+      maitaNimetMuodossa: maat().length,
+    };
+  });
+  tieto(`${t}: kartta`, JSON.stringify(kartta));
+  vaadi(`${t}: 5. kartta-muoto: maat polygoneina, liput piilossa kysymyksen ajan, napautus vastaa, sarja ja ennätys`,
+    kartta.polygoneja >= 40 && kartta.lippujaEnnen >= 40 && kartta.nappi === 'true'
+      && /Napauta maata pallolla\.$/.test(kartta.teksti) && !/lentoreittini/.test(kartta.teksti) && kartta.nappeja === 0
+      && kartta.lippujaKysymyksessa === 0
+      && kartta.varit[kartta.oikea] === 'rgba(46, 107, 46, 0.35)' && kartta.varit[kartta.vaara] === 'rgba(176, 34, 34, 0.35)'
+      && /^Läheltä liippasi/.test(kartta.palauteVaarin) && kartta.sarja0.sarja === 0
+      && kartta.lippujaJalkeen >= 40 && kartta.variPalautui
+      && kartta.sarja2.sarja === 2 && kartta.sarja2.ennatys === 2 && kartta.xpEro === 2 * XP_LIPPUARVAUS
+      && /sarja 2 · ennätys 2/.test(kartta.tilaNimi) && kartta.tallennettu === '2' && kartta.maitaNimetMuodossa === 0,
+    JSON.stringify(kartta));
+  if (KUVAKANSIO) writeFileSync(join(KUVAKANSIO, `lippuarvaus-kartta-${t}.png`), await sivu.screenshot());
+
+  /* ── 6. sulku ───────────────────────────────────────────────────── */
   const sulku = await sivu.evaluate(async () => {
     const { ui } = window.matkakirja;
     document.querySelector('.lippuarvaus-linssisulku')?.click();
@@ -280,14 +351,15 @@ for (const ruutu of RUUDUT) {
       kehikko: Boolean(document.querySelector('.lippuarvaus-kehikko, .lippuarvaus-linssisulku')),
       luokat: ['aikajana-paalla', 'aikajana-palkki-auki'].filter((l) => document.body.classList.contains(l)),
       napautettavia: ui.pallolauta.merkit.napautettavat().filter((d) => String(d.avain).startsWith('lippu:')).length,
+      maita: ui.pallolauta.pallo.polygonsData().filter((d) => String(d.avain ?? '').startsWith('maa:')).length,
     };
   });
   tieto(`${t}: sulku`, JSON.stringify(sulku));
-  vaadi(`${t}: 5. sulku ✕: liput, kehikko ja luokat pois`,
-    sulku.linssi === null && !sulku.valittu && sulku.lippuja === 0 && !sulku.kehikko && sulku.luokat.length === 0 && sulku.napautettavia === 0,
+  vaadi(`${t}: 6. sulku ✕: liput, maat, kehikko ja luokat pois`,
+    sulku.linssi === null && !sulku.valittu && sulku.lippuja === 0 && !sulku.kehikko && sulku.luokat.length === 0 && sulku.napautettavia === 0 && sulku.maita === 0,
     JSON.stringify(sulku));
 
-  /* ── 6. laukku ──────────────────────────────────────────────────── */
+  /* ── 7. laukku ──────────────────────────────────────────────────── */
   const laukku = await sivu.evaluate(async () => {
     const { ui } = window.matkakirja;
     ui.openPassport();
@@ -296,12 +368,12 @@ for (const ruutu of RUUDUT) {
     return { loytyy: Boolean(nappi), hiomassa: Boolean(nappi?.closest('.linssi-liuskat-hiomassa')), kuva: nappi?.querySelector('img')?.getAttribute('src') ?? null };
   });
   tieto(`${t}: laukku`, JSON.stringify(laukku));
-  vaadi(`${t}: 6. laukku: lippuarvaus valmiiden rivillä Codexin webp-ikonilla`,
+  vaadi(`${t}: 7. laukku: lippuarvaus valmiiden rivillä Codexin webp-ikonilla`,
     laukku.loytyy && !laukku.hiomassa && laukku.kuva === 'assets/linssit/ikonit/linssi-lippuarvaus.webp',
     JSON.stringify(laukku));
   if (KUVAKANSIO) writeFileSync(join(KUVAKANSIO, `lippuarvaus-laukku-${t}.png`), await sivu.screenshot());
 
-  vaadi(`${t}: 7. ei sivuvirheitä`, virheet.length === 0, virheet.join(' | '));
+  vaadi(`${t}: 8. ei sivuvirheitä`, virheet.length === 0, virheet.join(' | '));
   await ctx.close();
 }
 
