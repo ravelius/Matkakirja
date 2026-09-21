@@ -16,7 +16,9 @@
  *      ja kehys pysyy alle 0,5 ms;
  *   5. pelinappula (vaihe 4): lepotilan nappula on rungolla, DOMissa ei
  *      CSS2D-nappulaa ja sovitin antaa sen laatikon ladonnan esteeksi;
- *   6. ei sivuvirheitä.
+ *   6. nappulan väri: näyte nappulan rungosta ei ole musta (WebKit-vika
+ *      v2018: liukuväri puuttui svg:stä);
+ *   7. ei sivuvirheitä.
  *
  *   PLAYWRIGHT_JS=<playwright/index.js> node tools/savukkeet/savuke-glnimiot-nostot.mjs
  *       NAKYMA=puhelin|tyopoyta  ULOS=<kansio>
@@ -128,7 +130,10 @@ const odotetut = await sivu.evaluate(() => {
   // Ikonien laatikot kotelon pikseleinä (nostot.laatikot(): kiinteä muste levossa).
   const koti = ui.pallolauta.kotelo.getBoundingClientRect();
   const laatikot = ui.pallolauta.nostot.laatikot().map((b, i) => ({ id: String(i), x0: koti.left + b.x0, y0: koti.top + b.y0, x1: koti.left + b.x1, y1: koti.top + b.y1 }));
-  return { pov, W, H, fov: kam.fov, kuvasuhde: kam.aspect, sade: p.getGlobeRadius(), suhde: r.getPixelRatio(), laatikot };
+  // Nappulan laatikko (sovitin, kotelon px) värinäytettä varten: keskikohta jalasta 12 px ylös.
+  const nappula = ui.pallolauta.glSovitin?.()?.pelinLaatikot?.()[0] ?? null;
+  const nappulanPiste = nappula ? { x: koti.left + (nappula.x0 + nappula.x1) / 2, y: koti.top + nappula.y1 - 12 } : null;
+  return { pov, W, H, fov: kam.fov, kuvasuhde: kam.aspect, sade: p.getGlobeRadius(), suhde: r.getPixelRatio(), laatikot, nappulanPiste };
 });
 // Kelluvat kortit ja kirjoittuva teksti pois vertailusta (kuten savuke-glnimiot.mjs).
 await sivu.addStyleTag({ content: '.fokusvirta-kortti, .fokusvirta-isokuva, .fokusvirta-kupla, .fokusvirta-lentokerros, .saapumistraileri, .fokusnosto-kerros, .fokuskohde-popup, .pollo, .pulu, .kartuutsi { visibility: hidden !important; }' });
@@ -171,6 +176,25 @@ const kaappausGL3 = await sivu.screenshot({ type: 'png' });
   const osuudet = laatikot.map((l, j) => +(peitto[j] / Math.max(1, (l.x1 - l.x0) * (l.y1 - l.y0))).toFixed(3));
   const osuvat = osuudet.filter((o) => o >= 0.02).length;
   tulos.erot = { sisalla, ulkona, osuus: +osuus.toFixed(3), laatikoita: laatikot.length, osuudet };
+  /*
+   * NAPPULAN VÄRI (Laitetestaaja iPad v2018: GL-nappula piirtyi mustana,
+   * koska liukuväri #nappula-puu ei ollut svg:n mukana). Näyte nappulan
+   * rungosta: ei musta, ja punainen kanava hallitsee (puinen #c49a63).
+   */
+  if (odotetut.nappulanPiste) {
+    const nx = Math.round(odotetut.nappulanPiste.x * s); const ny = Math.round(odotetut.nappulanPiste.y * s);
+    let paras = null;
+    for (let dy = -3; dy <= 3; dy += 1) for (let dx = -3; dx <= 3; dx += 1) {
+      const i = ((ny + dy) * W + (nx + dx)) * 4;
+      const v = { r: a.data[i], g: a.data[i + 1], b: a.data[i + 2] };
+      if (!paras || v.r > paras.r) paras = v;
+    }
+    tulos.nappulanVari = paras;
+    vartio('nappula piirtyy puun värillä, ei mustana', paras && paras.r > 120 && paras.r > paras.b + 20 && (paras.r + paras.g + paras.b) > 200,
+      `näyte ${JSON.stringify(paras)} kohdassa ${nx},${ny}`);
+  } else {
+    vartio('nappula piirtyy puun värillä, ei mustana', false, 'nappulan laatikkoa ei ollut');
+  }
   vartio('ikonit omissa laatikoissaan (≥ 90 % laatikoista)', laatikot.length >= 10 && osuvat >= 0.9 * laatikot.length,
     `${osuvat}/${laatikot.length} laatikossa mustetta; sisällä ${sisalla}, ulkona ${ulkona}`);
 }
