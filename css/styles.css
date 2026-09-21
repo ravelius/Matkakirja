@@ -28318,3 +28318,65 @@ body[data-mode] .fact-card.pieni > button#fact-kuuntele.fact-kuuntele.ghost {
   stroke-width: 0.6;
   opacity: 0.35;
 }
+
+/*
+ * PIENI LIIKE KARTALLE (js/pallolauta/liike.js): kerros kankaan päällä,
+ * ei osumia. Pilvi ja pulu liikkuvat vain `.paalla.levossa`; sävy
+ * vaihtuu pehmeästi. Kaikki transform/opacity — komposiittorin työtä.
+ */
+.pallo-kotelo > .pallolauta-liike {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+.pallolauta-liike-savy {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  mix-blend-mode: multiply;
+  transition: opacity 2000ms ease, background 2000ms ease;
+}
+.pallolauta-liike-pilvi {
+  position: absolute;
+  top: -20%;
+  left: 0;
+  width: 55%;
+  height: 140%;
+  opacity: 0;
+  mix-blend-mode: multiply;
+  background: radial-gradient(ellipse 50% 45% at 50% 50%, rgba(30, 30, 40, 1) 0%, rgba(30, 30, 40, 0.5) 45%, rgba(30, 30, 40, 0) 70%);
+  transform: translateX(-100%);
+  will-change: transform;
+  animation: pallolauta-pilvi-liuku var(--pilven-matka-ms, 40000ms) linear infinite;
+  animation-play-state: paused;
+}
+.pallolauta-liike.paalla.levossa .pallolauta-liike-pilvi {
+  opacity: var(--pilven-peitto, 0.08);
+  animation-play-state: running;
+}
+@keyframes pallolauta-pilvi-liuku {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(200%); }
+}
+.pallolauta-liike-pulu {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  will-change: transform;
+  transition: transform var(--pulun-lento-ms, 2000ms) linear;
+}
+.pallolauta-liike-pulu.lennossa { opacity: 0.72; }
+.pallolauta-liike-pulu svg { display: block; overflow: visible; fill: #2a241c; }
+.pallolauta-liike-pulu .pallolauta-pulu-siipi { animation: pallolauta-pulu-siipi 260ms ease-in-out infinite alternate; animation-play-state: paused; }
+.pallolauta-liike-pulu.lennossa .pallolauta-pulu-siipi { animation-play-state: running; }
+@keyframes pallolauta-pulu-siipi {
+  from { transform: scaleY(1); }
+  to { transform: scaleY(0.25); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pallolauta-liike-pilvi, .pallolauta-liike-pulu, .pallolauta-liike-pulu .pallolauta-pulu-siipi { animation: none; transition: none; }
+  .pallolauta-liike-pulu { display: none; }
+}
