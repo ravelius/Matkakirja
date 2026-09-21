@@ -1708,6 +1708,64 @@ export const EUROPE_ARTIKKELIT = {
   },
 
   /*
+   * LUXEMBURG (KAUPUNKI) (21.9.2026, omistajan päätös 21.9.2026: Kypros,
+   * Luxemburg ja Malta saavat pelikaupungin). Avain on 'Luxemburg
+   * (kaupunki)', koska 'Luxemburg' on jo maan wiki-avain (COUNTRY_SHAPES
+   * ja MAA_KATEGORIAT.LUX) — sama ratkaisu kuin Pietarilla, Soulilla,
+   * Petralla ja Kuwaitilla. Teksti on kirjoitettu omin sanoin
+   * en-Wikipedian artikkeleista "Luxembourg City", "History of
+   * Luxembourg" ja "Bock (Luxembourg)" (luettu 21.9.2026), 1873-
+   * näkökulmasta: suurherttuakunta henkilöunionissa Alankomaiden
+   * kuningas Vilhelm III:n kanssa, Lontoon sopimus 1867 ja linnoituksen
+   * purku (kesken, kestää 16 vuotta), Bock-kallion perustamistarina
+   * (963), rautateollisuus alkamassa Eschissä. Adolphe-silta (1900–1903)
+   * ja Notre-Damen katedraalin tuomiokirkkoasema (1870, mainitaan vain
+   * ohimennen) EIVÄT ole isoisän matkan aikaan vielä nähtävissä samassa
+   * muodossa kuin nykyään — sama ratkaisu kuin Brysselin Mont des
+   * Artsilla.
+   */
+  'Luxemburg (kaupunki)': {
+    intro: 'Luxemburg on suurherttuakunta, jonka pääkaupunki seisoo '
+      + 'Alzette- ja Pétrusse-jokien kaivamalla kalliolinnakkeella. Maata '
+      + 'hallitsee suurherttuana Alankomaiden kuningas **Vilhelm III** '
+      + 'henkilöunionissa, ja Lontoon sopimus vuodesta 1867 on julistanut '
+      + 'suurherttuakunnan ainaiseksi puolueettomaksi. Kaupunki on '
+      + 'vuosisatoja ollut niin vahva linnoitus, että ranskalainen '
+      + 'sotilasinsinööri Lazare Carnot kutsui sitä maailman parhaaksi '
+      + 'heti Gibraltarin jälkeen — siitä juontuu lempinimi **Pohjoisen '
+      + 'Gibraltar**. Nyt sopimus vaatii koko puolustusjärjestelmän '
+      + 'purkamista, ja työ on ollut käynnissä jo kuusi vuotta.',
+    teksti: 'Luxemburgin kaupunki syntyi Bock-kalliolle, kun kreivi '
+      + 'Siegfried hankki paikan vuonna 963 ja rakensi sille '
+      + 'Lucilinburhuc-nimisen linnan; nimestä juontuu koko maan nimi. '
+      + 'Kallion luonnollinen suoja Alzette-joen mutkassa teki paikasta '
+      + 'halutun, ja vuosisatojen kuluessa Luxemburgista kasvoi yksi '
+      + 'Euroopan vahvimmista linnoituksista — sitä laajensivat '
+      + 'vuorotellen burgundilaiset, Habsburgit, espanjalaiset, '
+      + 'ranskalaiset ja itävaltalaiset, jotka kaikki halusivat hallita '
+      + 'tätä solmukohtaa.'
+      + '\n\nSuurvaltojen kilpailu päättyi, kun Preussin ja Ranskan '
+      + 'välinen jännite Luxemburgista laukesi kansainväliseksi '
+      + 'kriisiksi ja ratkesi Lontoon sopimuksella vuonna 1867: '
+      + 'suurherttuakunta julistettiin puolueettomaksi, ja Preussin '
+      + 'varuskunta joutui vetäytymään. Sopimus määräsi myös koko '
+      + 'linnoituksen purettavaksi. Purkutyö on käynnissä isoisän matkan '
+      + 'aikaan — se on kestänyt jo kuusi vuotta ja jatkuu vielä '
+      + 'kymmenen, ja lopulta se hävittää yli 24 kilometriä maanalaisia '
+      + 'käytäviä.'
+      + '\n\nMaata hallitsee suurherttuana Alankomaiden kuningas '
+      + 'Vilhelm III, joka istuu Haagissa eikä ole vieraillut maassaan '
+      + 'vuosikausiin — henkilöunioni pitää kaksi valtaistuinta yhden '
+      + 'hallitsijan käsissä, mutta arki niissä on erillistä. Kaupungin '
+      + 'katujen alla virtaavat Alzette ja Pétrusse ovat kaivaneet '
+      + 'syviä rotkoja, joiden yli kuljetaan silloilla ja portailla; '
+      + 'rautatie on yhdistänyt kaupungin Ranskaan ja Preussiin jo '
+      + 'vuosia, ja Eschin seudulla alkanut rautamalmin louhinta '
+      + 'ennustaa maalle uutta, teollista tulevaisuutta.',
+    lahde: 'Wikipedia (CC BY-SA)',
+  },
+
+  /*
    * TEKSTIREMONTTI 20.8.2026, erä E1: intro on nyt etusivun leipäteksti
    * kappaleineen ja lihavointeineen (ks. Rooman lohkokommentti yllä).
    * Muuri ja kaupungin jako kerrotaan neutraalina historiana ilman
