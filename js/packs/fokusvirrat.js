@@ -40,6 +40,7 @@ import { FOKUSVIRTA_BRYSSEL } from './fokusvirta-bryssel.js';
 import { FOKUSVIRTA_LJUBLJANA } from './fokusvirta-ljubljana.js';
 import { FOKUSVIRTA_KOSICE } from './fokusvirta-kosice.js';
 import { FOKUSVIRTA_LUXEMBURG } from './fokusvirta-luxemburg.js';
+import { FOKUSVIRTA_VALLETTA } from './fokusvirta-valletta.js';
 import { FOKUSVIRTA_AMSTERDAM } from './fokusvirta-amsterdam.js';
 import { FOKUSVIRTA_DUBLIN } from './fokusvirta-dublin.js';
 import { FOKUSVIRTA_EDINBURGH } from './fokusvirta-edinburgh.js';
@@ -93,7 +94,7 @@ import { FOKUSVIRTA_TROMSSA } from './fokusvirta-tromssa.js';
  */
 export const KEVYET_FOKUSVIRRAT = new Set([
   'alpit', 'islanti', 'kreeta', 'lappi', 'sisilia', 'tromssa', 'bryssel',
-  'ljubljana', 'kosice', 'luxemburg',
+  'ljubljana', 'kosice', 'luxemburg', 'valletta',
 ]);
 
 export const FOKUSVIRRAT = {
@@ -289,6 +290,13 @@ export const FOKUSVIRRAT = {
    * kuplan heti, täysi pino on oma sisältöerä.
    */
   luxemburg: FOKUSVIRTA_LUXEMBURG,
+  /*
+   * VALLETTA (21.9.2026, omistajan päätös 19.9.2026: Malta saa
+   * pelikaupungin Valletta). Kevyt pakki samasta syystä kuin Bryssel,
+   * Ljubljana ja Košice: peli tarvitsee matkakirjan ja pulun kuplan
+   * heti, täysi pino on oma sisältöerä.
+   */
+  valletta: FOKUSVIRTA_VALLETTA,
 };
 
 /** Kaupungin fokusvirta tai null, jos kaupungille ei ole sisältöä. */

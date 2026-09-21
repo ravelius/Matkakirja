@@ -41,6 +41,7 @@ export const EUROPE_CITY_COUNTRY = {
   tampere: 'FIN',
   tromssa: 'NOR',
   tukholma: 'SWE',
+  valletta: 'MLT',
   varsova: 'POL',
   vilna: 'LTU',
   wien: 'AUT',

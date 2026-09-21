@@ -754,6 +754,42 @@ export const EUROPE_QUESTIONS = {
     },
   ],
 
+  /*
+   * VALLETTA (21.9.2026, omistajan päätös 19.9.2026: Malta saa
+   * pelikaupungin Valletta). Faktapohja en-Wikipedian artikkeleista
+   * Valletta ja Great Siege of Malta (luettu 21.9.2026), sama pohja
+   * kuin hahmotelma-mlt.js:n Valletta-nostolla.
+   */
+  valletta: [
+    {
+      q: 'Kenen ritarikunnan suurmestari perusti Vallettan vuonna 1566?',
+      options: ['Templariritarikunnan', 'Johanniittaritarikunnan', 'Saksalaisen ritarikunnan', 'Calatravan ritarikunnan'],
+      correct: 1,
+      level: 1,
+      fact: 'Suurmestari Jean Parisot de Valette voitti osmaneja vastaan käydyn suuren piirityksen 1565 ja perusti seuraavana vuonna uuden linnoituskaupungin, joka nimettiin hänen mukaansa.',
+      hint: 'Ritarikuntaa kutsutaan myös Maltan ritareiksi.',
+      source: 'https://en.wikipedia.org/wiki/Valletta',
+    },
+    {
+      q: 'Minkä maan hallinnassa Malta oli isoisän matkan aikaan 1873?',
+      options: ['Ranskan', 'Osmanien valtakunnan', 'Britannian', 'Espanjan'],
+      correct: 2,
+      level: 2,
+      fact: 'Britit ottivat Vallettan haltuunsa syyskuussa 1800, ja Malta vahvistettiin brittiläiseksi kruununsiirtomaaksi Pariisin rauhassa 1814. Kaupunki toimi Britannian Välimeren-laivaston tukikohtana.',
+      hint: 'Sama maa, jonka lippu liehuu tuolloin myös Intiassa.',
+      source: 'https://en.wikipedia.org/wiki/Valletta',
+    },
+    {
+      q: 'Minä vuonna Unesco hyväksyi Vallettan maailmanperintökohteeksi?',
+      options: ['1960', '1980', '1995', '2004'],
+      correct: 1,
+      level: 3,
+      fact: 'Unesco hyväksyi Vallettan maailmanperintökohteeksi vuonna 1980. Kaupungin 320 muistomerkkiä mahtuvat vain 0,55 neliökilometrin alueelle.',
+      hint: 'Vuosikymmen on sama kuin monella muullakin 1500–1600-luvun linnoituskaupungilla.',
+      source: 'https://en.wikipedia.org/wiki/Valletta',
+    },
+  ],
+
   berliini: [
     {
       q: 'Minkä maan pääkaupunki Berliini on?',
@@ -2517,6 +2553,14 @@ export const EUROPE_FACTS = {
     'Ljubljanan Tivoli-puisto on suunniteltu vuonna 1813 ranskalaisen insinöörin johdolla, ja sen nimi tulee Pariisin Tivolista.',
     {
       text: 'Laibach oli Napoleonin Illyrian maakuntien pääkaupunki neljä vuotta, 1809–1813. Ranskalaisten insinööri ehti jättää kaupunkiin puiston, jossa minäkin kävelin tänään.',
+      voice: 'isoisa',
+    },
+  ],
+  valletta: [
+    'Vallettan 320 muistomerkkiä ja kirkkoa mahtuvat vain 0,55 neliökilometrin alueelle, ja Unesco hyväksyi koko kaupungin maailmanperintökohteeksi vuonna 1980.',
+    'Ennen ritarikunnan tuloa niemi tunnettiin nimellä Sciberras — lähes asumaton kalliokieleke Grand Harbourin ja Marsamxett-sataman välissä.',
+    {
+      text: 'Linnoitusten purkamista on ehdotettu täälläkin pari kertaa viime vuosikymmeninä, mutta muurit seisovat yhä — veikkaan, että ne haudataan vasta viimeisenä koko saarelta.',
       voice: 'isoisa',
     },
   ],

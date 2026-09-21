@@ -8053,6 +8053,119 @@ export const KAUPUNKIKARTAT = {
       },
     ],
   },
+  /*
+   * VALLETTA (21.9.2026; omistajan päätös 19.9.2026: Maltan pelikaupunki
+   * Valletta). Numeroidut ympyrät kartalla ilman miniatyyrejä (sama
+   * ratkaisu kuin Košicella 20.9.2026) — pienoismalleja ei ole vielä
+   * piirretty. Koordinaatit haettu en-Wikipedian ja Wikidatan
+   * rajapinnoista (action=query&prop=coordinates, wbgetentities P625)
+   * 21.9.2026. Piirityskello-muistomerkki on 1900-lukua eikä ollut
+   * olemassa isoisän matkan aikaan — teksti selittää tämän suoraan,
+   * samaan tapaan kuin Košicen Valtionteatterilla.
+   */
+  valletta: {
+    polku: 'assets/kartat/valletta-keskusta.png',
+    numeroympyrat: true,
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 35.9035, etela: 35.8925, lansi: 14.5085, ita: 14.5205 },
+    // Laajennus 1,6 samasta keskipisteestä (piirra-kaupunkikartta --vari).
+    piirtoRajat: { pohjoinen: 35.9068, etela: 35.8892, lansi: 14.5049, ita: 14.5241 },
+    varikartta: 'assets/kartat/valletta-varikartta.png',
+    esittely: 'Vallettan koko vanhakaupunki mahtuu kapealle niemelle Grand '
+      + 'Harbourin ja Marsamxett-sataman välissä. Ritarikunta rakensi '
+      + 'kaupungin ruutukaavaan suuren piirityksen 1565 jälkeen, ja '
+      + 'isoisän matkan aikaan vuonna 1873 kaupunki on brittiläisen '
+      + 'Maltan pääkaupunki: paksut kalkkikivimuurit, Suurmestarin '
+      + 'palatsi ja Pyhän Johanneksen konkatedraali ovat yhä samat, '
+      + 'mutta ritarikunnan majataloista on tullut sotilashallinnon '
+      + 'virastoja. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      {
+        nimi: 'Auberge de Castille', lat: 35.895833, lon: 14.511389,
+        aika: '1744',
+        teksti: 'Auberge de Castille on rakennettu vuonna 1744 arkkitehti '
+          + 'Andrea Bellin suunnitelmien mukaan Kastilian, Leónin ja '
+          + 'Portugalin ritarikieliryhmän majataloksi, ja sen '
+          + 'koristeellinen barokkijulkisivu on Vallettan komeimpia.'
+          + '\n\n'
+          + 'Ritarikunta lähti saarelta vuonna 1798 eikä palannut, ja '
+          + 'isoisän matkan aikaan rakennus toimii jo Britannian armeijan '
+          + 'Maltan-joukkojen päämajana. Sotilashallinto pitää siitä '
+          + 'kiinni pitkään: rakennus siirtyy vasta 1900-luvulla Maltan '
+          + 'omalle hallitukselle.',
+        kuvat: [
+          {
+            tiedosto: 'Auberge de Castille, Valletta, Malta.jpg',
+            lyhyt: 'Auberge de Castillen koristeellinen barokkijulkisivu Vallettassa.',
+            selite: 'Auberge de Castillen barokkijulkisivu, jonka Andrea '
+              + 'Belli suunnitteli 1744. Rakennus toimi 1800-luvulla '
+              + 'Britannian armeijan Maltan-joukkojen päämajana.',
+            lahde: 'Jaakko.kulta, Wikimedia Commons (CC BY 4.0)',
+          },
+        ],
+      },
+      {
+        nimi: 'Pyhän Johanneksen ko-katedraali', lat: 35.897778, lon: 14.512778,
+        wiki: "St John's Co-Cathedral",
+      },
+      {
+        nimi: 'Suurmestarin palatsi', lat: 35.898611, lon: 14.514167,
+        wiki: 'Suurmestarin palatsi (Valletta)',
+      },
+      {
+        nimi: 'Yläbarrakan puutarhat', lat: 35.894722, lon: 14.512222,
+        aika: '1661',
+        teksti: 'Yläbarrakan puutarha rakennettiin vuonna 1661 Italian '
+          + 'ritarikieliryhmän yksityiseksi puistoksi Grand Harbourin '
+          + 'yllä kohoavalle bastionille. Puisto avattiin yleisölle '
+          + 'vuonna 1824, joten isoisän matkan aikaan se on jo suosittu '
+          + 'kävelypaikka.'
+          + '\n\n'
+          + 'Puutarhan alapuolella, Alabarrakan tasanteella, on '
+          + 'tervehdyspatteri, josta ammutaan kunnialaukauksia laivojen '
+          + 'saapuessa satamaan — perinne, joka jatkuu vielä nykyäänkin '
+          + 'joka päivä keskipäivällä.',
+        kuvat: [
+          {
+            tiedosto: 'Malta - Valletta - Upper Barrakka Gardens 15 Terraced Arches 1661 - Saluting Battery.jpg',
+            lyhyt: 'Yläbarrakan puutarhan kaariholvit ja tervehdyspatteri Grand Harbourin yllä.',
+            selite: 'Yläbarrakan puutarhan vuoden 1661 kaariholvit ja '
+              + 'niiden alla oleva tervehdyspatteri Grand Harbourin yllä.',
+            lahde: 'Txllxt TxllxT, Wikimedia Commons (CC BY-SA 4.0)',
+          },
+        ],
+      },
+      {
+        nimi: 'Piirityskello-muistomerkki', lat: 35.897592, lon: 14.518283,
+        aika: '1992',
+        teksti: 'Piirityskello-muistomerkki ei ole vielä isoisän matkan '
+          + 'aikaan olemassa: pyöreä pylväikkö ja sen sisällä riippuva '
+          + 'pronssikello paljastettiin vasta 1992, ja ne muistavat '
+          + 'toista maailmansotaa, ei ritarikunnan aikoja. Vuosina '
+          + '1940–1942 Malta kesti raskaan ilmapiirityksen, josta koko '
+          + 'saari palkittiin Yrjön ristillä.'
+          + '\n\n'
+          + 'Kello soi joka päivä keskipäivällä muistoksi piirityksessä '
+          + 'kuolleista. Muistomerkki seisoo Alabarrakan puutarhan alla, '
+          + 'samalla kalliolla, josta ritarikunnan aikainen '
+          + 'tervehdyspatteri tähtää satamaan.',
+        kuvat: [
+          {
+            tiedosto: 'Siege Bell War Memorial, Valletta.jpg',
+            lyhyt: 'Piirityskello-muistomerkin pylväikkö Grand Harbourin yllä.',
+            selite: 'Piirityskello-muistomerkin pyöreä pylväikkö Grand '
+              + 'Harbourin yllä. Muistomerkki paljastettiin 1992 toisen '
+              + 'maailmansodan Maltan-piirityksen muistoksi.',
+            lahde: 'Kikku33, Wikimedia Commons (CC BY-SA 4.0)',
+          },
+        ],
+      },
+      {
+        nimi: 'Pyhän Elmon linnake', lat: 35.902, lon: 14.5188,
+        wiki: 'Fort Saint Elmo',
+      },
+    ],
+  },
   firenze: {
     polku: 'assets/kartat/firenze-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
