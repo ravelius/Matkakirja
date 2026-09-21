@@ -210,6 +210,12 @@ for (const ruutu of RUUDUT) {
       } catch { /* yksityinen tila */ }
     }, tallenne);
     const sivu = await ctx.newPage();
+    // Napautuksen jäljitys diagnoosiin: mihin clientX/Y selain toi sormen.
+    await sivu.addInitScript(() => {
+      document.addEventListener('pointerdown', (e) => {
+        window.__klik = { x: e.clientX, y: e.clientY, px: e.pageX, py: e.pageY, kohde: `${e.target?.tagName}.${String(e.target?.className?.baseVal ?? e.target?.className ?? '').split(' ')[0]}`, hetki: Date.now() };
+      }, true);
+    });
     /*
      * HIDASTETTU CHROMIUM (21.9.2026, CI v1984: Pariisi ja Marseille 390
      * px "liuska ei auennut"). Vika ei toistunut nopealla koneella: liuska
@@ -495,7 +501,7 @@ for (const ruutu of RUUDUT) {
            * kuva. Paikallisesti vika ei toistu, joten loki on ainoa
            * silminnäkijä.
            */
-          const diagnoosi = await sivu.evaluate(({ x, y }) => {
+          const diagnoosi = await sivu.evaluate(({ x, y, kaupunkiId }) => {
             const l = window.matkakirja.ui.pallolauta;
             const koti = l.kotelo.getBoundingClientRect();
             const kx = x - koti.left;
@@ -506,7 +512,17 @@ for (const ruutu of RUUDUT) {
               .sort((a, b) => a.d - b.d)
               .slice(0, 4)
               .map((o) => `${o.nimi ?? o.id}(${o.perhe}) ${Math.round(o.d)} px`);
+            const kangas = l.kotelo.querySelector('canvas');
+            const kr = kangas?.getBoundingClientRect();
+            const vv = window.visualViewport;
             return {
+              // Mihin selain toi napautuksen ja missä kangas on: CI:n
+              // vakio-offsetin (~15 px kaakkoon) jäljitys.
+              klik: window.__klik ?? null,
+              vieritys: { x: window.scrollX, y: window.scrollY, vvX: vv?.offsetLeft ?? null, vvY: vv?.offsetTop ?? null, vvScale: vv?.scale ?? null, innerW: window.innerWidth, innerH: window.innerHeight, dpr: window.devicePixelRatio },
+              kotelo: { x: Math.round(koti.left), y: Math.round(koti.top), w: Math.round(koti.width), h: Math.round(koti.height) },
+              kangas: kr ? { x: Math.round(kr.left), y: Math.round(kr.top), w: Math.round(kr.width), h: Math.round(kr.height), bw: kangas.width, bh: kangas.height, tyyli: kangas.style.cssText.slice(0, 120) } : null,
+              kaupunkiPiste: (() => { const k = l.kaupunki?.(kaupunkiId); const p = k ? l.pallo.getScreenCoords(k.lat, k.lon, 0) : null; return p ? { x: Math.round(p.x), y: Math.round(p.y) } : null; })(),
               kortti: document.querySelector('.fokusnosto-kortti-otsikko, .fokuskohde-otsikko, .elaintaky-kerros h3, .skandaali-kerros h3')?.textContent?.trim() ?? null,
               kerrokset: [...document.querySelectorAll('.fokusnosto-kerros, .fokuskohde-popup, .elaintaky-kerros, .skandaali-kerros, .hetki-kerros, .fokusvirta-kortti')].map((e) => e.className.split(' ')[0]),
               pinta: l.viimeinenNapautus?.() ?? null,
@@ -514,7 +530,7 @@ for (const ruutu of RUUDUT) {
               liuskaAuki: l.nostot?.liuskaAuki?.() ?? null,
               osumat,
             };
-          }, piste);
+          }, { ...piste, kaupunkiId: kaupunki.id });
           tieto(`${tunnus}: napautuksen ${yritys + 1} diagnoosi`, JSON.stringify(diagnoosi));
           if (KUVAKANSIO && !auki) {
             await sivu.screenshot({ path: join(KUVAKANSIO, `napautus-${kaupunki.id}-${ruutu.width}-${yritys + 1}.png`) });
