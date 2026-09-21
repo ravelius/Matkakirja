@@ -116,6 +116,7 @@ import {
   PALLON_SALLITTU_VENYTYS, ULOSZOOMAUKSEN_KERROIN, kokoPallonKorkeus, laattojenVenytys,
   leveysKorkeudesta, luoPallokamera,
 } from './kamera.js';
+import { luoKameraloki } from './kameraloki.js';
 import { MERKIN_KORKEUS, luoMerkit, luoMerkkienNakyvyysTahdistus } from './merkit.js';
 import { luoNimet, nimibudjetti } from './nimet.js';
 import {
@@ -1484,6 +1485,15 @@ export async function avaaPallolauta(ui) {
     pallo, kotelo, ui, lauta: PALLO_LAUTA, heraa, laattataso,
     // Ks. AJON KATTO alempana; määritelty myöhemmin, kutsutaan vasta ajossa.
     ajonKatto: (korkeus) => asetaAjonKatto(korkeus),
+  });
+  /*
+   * KAMERALOKI (Fable 21.9.2026): korkeuden hypyt (> 3× yhdellä
+   * kehyksellä) laukaisijoineen kehittäjätilan konsoliin ja
+   * localStorage-rengaspuskuriin — omistajan satunnaisen
+   * liftauszoomivian silminnäkijä. Ks. js/pallolauta/kameraloki.js.
+   */
+  const kameraloki = luoKameraloki({
+    pallo, kamera, ui, kotelo, kytkeKehys: kytkePallonKehys,
   });
   /*
    * SAMA RAJA MYÖS SORMELLE: kamera-ajot kulkevat kameran kautta, mutta
@@ -4905,10 +4915,16 @@ export async function avaaPallolauta(ui) {
    * savukkeet/savuke-nappula-liike.mjs) lukee sen, ja css saa
    * tarvittaessa tarttua siihen.
    */
-  const matkanKerma = (pois) => {
+  /*
+   * HUNTU PYSYY LIIKKEEN AJAN, KAKSI AUKKOA (omistaja 21.9.2026):
+   * `kohdeIso` on matkan kohdemaa, joka saa lähtömaan rinnalle oman
+   * reiän huntuun (js/laattapyramidi.js HUNTU PYSYY LIIKKEEN AJAN).
+   * Runkoluokan nimi on entinen: se tarkoittaa nyt "liikkeen huntu".
+   */
+  const matkanKerma = (pois, kohdeIso = null) => {
     const paalla = Boolean(pois);
     document.body.classList.toggle('kerma-pois-liikkeessa', paalla);
-    if (!asetaTasoituksenLiike(paalla)) return;
+    if (!asetaTasoituksenLiike(paalla, kohdeIso)) return;
     heraa();
     paivita();
   };
@@ -5058,6 +5074,8 @@ export async function avaaPallolauta(ui) {
     viimeinenNapautus: () => viimeinenNapautus,
     /** Kameran matriisit samaan tilaan ennen mittaa (savukkeet; ks. korttivahti). */
     tahdistaKameranMatriisit,
+    /** Kameralokin merkinnät (js/pallolauta/kameraloki.js), uusin viimeisenä. */
+    kameraloki: () => kameraloki.merkinnat(),
     /**
      * Kyltin PIIRRETTY laatikko (savukkeet ja vartijat): se, jota
      * osumatesti käyttää, kun merkkikerroksen tween on kesken.
@@ -5142,6 +5160,7 @@ export async function avaaPallolauta(ui) {
       ohjaimet.removeEventListener('change', pyydaLadonta);
       ohjaimet.removeEventListener('change', tahdistaPisteidenKoko);
       kehyspurku();
+      kameraloki.pura();
       // Omat pallopisteet ovat tämän laudan tilaa (ks. pallonAsteet).
       if (omatPisteet === laudanOmatPisteet) omatPisteet = new Map();
       valovahti.disconnect();

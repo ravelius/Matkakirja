@@ -40,6 +40,7 @@
     "savuke-kuvalahteet.mjs"
   ],
   "harva": [
+    "savuke-huntu-liike.mjs",
     "savuke-luentakuvat.mjs",
     "savuke-kaupunkipopup.mjs#390",
     "savuke-kaupunkipopup.mjs#1400",
@@ -76,6 +77,13 @@
       ".github/workflows/savukkeet.yml",
       "index.html",
       "sw.js"
+    ],
+    "savuke-huntu-liike.mjs": [
+      "js/laattapyramidi.js",
+      "js/pallolaatat.js",
+      "js/pallolauta/lauta.js",
+      "js/ui.js",
+      "js/siirtokoreografia.js"
     ],
     "savuke-luentakuvat.mjs": [
       "js/luenta*.js",
@@ -499,6 +507,9 @@
     },
     "savuke-kartuscha-3.mjs": {
       "huomautus": "Harva (Fable 20.9.2026): kartuscha 3 - pienessa ei lippua, lippu versaalin korkuinen, iso pienenee karttaa koskettaessa (napautus/veto/rulla), vastakoe kortin sisalle. ~70 s."
+    },
+    "savuke-huntu-liike.mjs": {
+      "huomautus": "Huntu liikkeen ajan (omistaja 21.9.2026): kerman peitto kuvakaappauksesta ennen noppaa, liikkeessa ja perilla — lahto- ja kohdemaa paljaina liikkeessa, muu maailma 80 %. Ateena → Sofia, 390 ja 1400 px, ampari Noden kautta. ~90 s."
     },
     "savuke-nostokortti.mjs": {
       "huomautus": "Nostokortti (omistaja 20.9.2026): lahderivi pois kaikista nostotyypeista, kohdekortin karuselli, Havainnekuva-merkki, kuvan koko LISAA-tilassa (>= 0,8), pyyhkaisy ja nuolinappaimet. 390 ja 1400 px, ampari Noden kautta. ~60 s."

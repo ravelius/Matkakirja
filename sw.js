@@ -243,6 +243,7 @@ const SHELL = [
   './js/pallolauta/lauta.js',
   './js/pallolauta/avaus.js',
   './js/pallolauta/kamera.js',
+  './js/pallolauta/kameraloki.js',
   './js/pallolauta/linssikartta.js',
   './js/pallolauta/linssit.js',
   './js/pallolauta/merkit.js',
