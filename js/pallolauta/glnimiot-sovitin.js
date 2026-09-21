@@ -164,6 +164,8 @@ export function luoGlNimiosovitin({
   let peliInstanssit = [];
   /** tunnus → nimiön avain viime jaossa (kylkivaihdon tunnistus). */
   const nimiot = new Map();
+  /** tunnus → ikonin avain ja instanssi viime jaossa (piste ↔ tyyppimerkki -vaihdon häivytys). */
+  const ikonit = new Map();
   /*
    * PORTAAN VAIHTO ILMAN VÄLITILAA (omistajan tuntuma v2026, 21.9.2026
    * ilta: *"MARSEILLE välkkyy zoomatessa"*; Karttaseppä mittasi WebKit
@@ -297,7 +299,31 @@ export function luoGlNimiosovitin({
       for (const x of spritet) if (!x.vanhaRasteri) viimeSpritet.set(`${tunnus}#${x.osa}`, { sprite: x, koko: null });
       const peitto = glNostonPeitto(d);
       nakyvat.add(tunnus);
-      gl.push(glNostonInstanssi(d, ikoni, 'ikoni', peitto));
+      /*
+       * IKONI VAIHTUU HÄIVYTTÄMÄLLÄ (nostot.js TYYPPIMERKIT LÄHIZOOMISSA):
+       * kun rasterin avain vaihtuu — piste → kuvamerkki lähizoomissa tai
+       * takaisin — vanha ikoni jää häipymään paikalleen (`#ikoni-vanha`)
+       * ja uusi tulee häivytyksellä, sama 180 ms kuin nimiön kylkivaihdossa.
+       * Portaan vaihto (vanhaRasteri) ei ole avaimen vaihto tässä
+       * mielessä: silloin vanha rasteri on yhä käytössä eikä häivytystä tule.
+       */
+      {
+        const edellinen = ikonit.get(tunnus);
+        const vaihtui = edellinen && edellinen.avain !== ikoni.avain && !ikoni.vanhaRasteri;
+        if (vaihtui) {
+          haivytykset.set(`${tunnus}#ikoni-vanha`, {
+            instanssi: { ...edellinen.instanssi, tunnus: `${tunnus}#ikoni-vanha`, opacity: edellinen.instanssi.opacity },
+            alku: hetki, mista: edellinen.instanssi.opacity, mihin: 0, poistu: true,
+          });
+          haivytykset.set(`${tunnus}#ikoni`, { alku: hetki, mista: 0, mihin: peitto, poistu: false });
+        }
+        const haivytys = haivytykset.get(`${tunnus}#ikoni`);
+        const ikoninPeitto = haivytys && !haivytys.poistu ? haivytys.mista : peitto;
+        const instanssi = glNostonInstanssi(d, ikoni, 'ikoni', ikoninPeitto);
+        if (haivytys && !haivytys.poistu) haivytys.instanssi = instanssi;
+        gl.push(instanssi);
+        if (!ikoni.vanhaRasteri) ikonit.set(tunnus, { avain: ikoni.avain, instanssi });
+      }
       if (nimio) {
         const nimioNakyy = Boolean(d.nimioNakyy && d.nimi);
         const edellinen = nimiot.get(tunnus);
@@ -319,10 +345,11 @@ export function luoGlNimiosovitin({
       }
     }
     for (const t of [...nimiot.keys()]) if (!nakyvat.has(t)) nimiot.delete(t);
+    for (const t of [...ikonit.keys()]) if (!nakyvat.has(t)) ikonit.delete(t);
     for (const t of [...viimeSpritet.keys()]) { const i = t.indexOf('#'); if (i > 0 && !nakyvat.has(t.slice(0, i))) viimeSpritet.delete(t); }
     // Häivytys elää vain, kun sen nosto on yhä rungolla.
     for (const [t, h] of haivytykset) {
-      const emo = t.replace(/#nimio(-vanha)?$/, '');
+      const emo = t.replace(/#(nimio|ikoni)(-vanha)?$/, '');
       if (!nakyvat.has(emo)) haivytykset.delete(t);
       else if (!h.poistu && !gl.some((i) => i.tunnus === t)) haivytykset.delete(t);
     }
@@ -469,6 +496,7 @@ export function luoGlNimiosovitin({
       nostoInstanssit = [];
       haivytykset.clear();
       nimiot.clear();
+      ikonit.clear();
       const k = kerros?.();
       if (k && typeof k.asetaKaikki === 'function') k.asetaKaikki([]);
       else for (const t of tunnukset) k?.poista?.(t);
