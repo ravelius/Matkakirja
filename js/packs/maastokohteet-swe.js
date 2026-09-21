@@ -84,6 +84,7 @@ export const MAASTOKOHTEET_SWE = [
     }],
     nimi: 'Kebnekaise',
     tyyppi: 'vuori',
+    taso: 1,
     kysymykset: [
       'Miksi eteläinen huippu on kutistunut?',
       'Mitä nimi Giebmegáisi tarkoittaa?',
@@ -298,6 +299,7 @@ export const MAASTOKOHTEET_SWE = [
     },
     nimi: 'Visby',
     tyyppi: 'kaupunki',
+    taso: 1,
     kysymykset: [
       'Mistä nimi Visby tulee?',
       'Miksi keskiaikaiset kivitalot säilyivät?',
@@ -394,6 +396,7 @@ export const MAASTOKOHTEET_SWE = [
     },
     nimi: 'Birka',
     tyyppi: 'kauppa',
+    taso: 1,
     kysymykset: [
       'Mihin asti Birkan kauppareitti ulottui?',
       'Milloin Birka hylättiin?',
@@ -616,6 +619,7 @@ export const MAASTOKOHTEET_SWE = [
     },
     nimi: 'Kiruna',
     tyyppi: 'tekniikka',
+    taso: 1,
     kysymykset: [
       'Miksi malmi jäi pitkään louhimatta?',
       'Mikä Esrange on?',
@@ -733,6 +737,7 @@ export const MAASTOKOHTEET_SWE = [
     ],
     nimi: 'Vänern',
     tyyppi: 'meri',
+    taso: 1,
     kysymykset: [
       'Miksi järvessä elää merieläimiä?',
       'Mihin Vänernin vedet laskevat?',
