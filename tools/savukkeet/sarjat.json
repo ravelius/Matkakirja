@@ -22,6 +22,7 @@
     "savuke-nostot-nakyviin.mjs",
     "savuke-glnimiot.mjs",
     "savuke-glnimiot-nimet.mjs",
+    "savuke-marseille-valkkyy.mjs",
     "savuke-glnimiot-nostot.mjs",
     "savuke-nimion-koko-panorointi.mjs",
     "savuke-kartan-liike.mjs",
@@ -562,7 +563,7 @@
       "env": {
         "NAKYMA": "puhelin"
       },
-      "huomautus": "Ladonnan nimet GL-kerroksessa (Pelikoodari 21.9.2026, oletus paalla; ?glnimiot=0 = CSS2D): sovitin vie kaupunkien nimet rungolle — gl + css2d = ladotut, fonttien jalkeen DOMissa 0 nimea, jokainen nimi omassa ladonnan laatikossaan (kaappausvertailu), rakennuksia liikkeessa enintaan ladontojen verran, kehys < 0,5 ms. NAKYMA=puhelin|tyopoyta. Ampari Noden kautta. ~70 s."
+      "huomautus": "Ladonnan nimet GL-kerroksessa (Pelikoodari 21.9.2026, oletus paalla; ?glnimiot=0 = CSS2D): sovitin vie kaupunkien nimet rungolle — gl + css2d = ladotut, fonttien jalkeen DOMissa 0 nimea, jokainen nimi omassa ladonnan laatikossaan (kaappausvertailu), rakennuksia liikkeessa enintaan ladontojen verran, kehys < 0,5 ms. NAKYMA=puhelin|tyopoyta. Ampari Noden kautta. ~70 s. 21.9.2026 yo: vartiot paivitetty v2017:n rungolle (nostot ja nappula samalla rungolla): instansseja >= nimet, ja nostojen/nappulan laatikot eivat ole 'ulkona'."
     },
     "savuke-glnimiot-nostot.mjs": {
       "env": {
@@ -617,6 +618,13 @@
       },
       "kuvakansio": true,
       "huomautus": "Nostonimion koko ei riipu ladonnasta eika panoroinnista (omistaja 21.9.2026, iPhone v2021, Camargue: Camarguenvarsa 14 px ja Camarguen hevoset 40 px samassa kuvassa, koko vaihtui panoroidessa). Juurisyy: nimiorasterit.js talletti skaalan ja katon rasterin valimuistiin ensimmaisen datumin mitasta. WebKit puhelin, Camargue kolmella korkeudella (saapuminen 8,7 px, z7 16 px, syvin 22 px): kaikilla nimioilla sama perusmitta luokasta riippumatta ja sama fontti panoroinnin jalkeen. Samassa erassa KATTO NOUSEE LAHIZOOMISSA (16 px kertoimeen 2, 22 px kertoimesta 4). 13/13."
+    },
+    "savuke-marseille-valkkyy.mjs": {
+      "env": {
+        "SAVUKE_MOOTTORI": "webkit"
+      },
+      "kuvakansio": true,
+      "huomautus": "Kaupungin nimi ei valky zoomissa (omistaja v2026 21.9.2026: MARSEILLE valkkyy; Karttasepan mittaus: nimi poissa yhden kehyksen joka kuoren portaan vaihdossa, koska sovitin pudotti nimen CSS2D:hen kun uuden portaan rasteri oli kesken). Korjaus glnimiot-sovitin.js viimeSpritet: rungolla oleva nimi pysyy rungolla vanhalla rasterilla kunnes uusi on valmis; sama nostoille osittain. WebKit 1400x900 dpr 2, zoom 0,14 -> 0,05 40 askelta: nimi joka askeleella rungolla, GL<->CSS2D-vaihtoja 0, tumman musteen osuus nimen laatikossa ei putoa alle 80 % edellisesta. 4/4; vanhalla sovittimella 3/4 (41 -> 29 promillea)."
     }
   }
 }

@@ -97,7 +97,8 @@ await sivu.waitForTimeout(600);
 const t1 = await lueTila();
 tulos.tila = t1;
 vartio('runko syntyi ja sovitin jakoi', t1.kerros?.tila === 'valmis' && t1.sovitin?.jakoja > 0, JSON.stringify({ kerros: t1.kerros?.tila, jakoja: t1.sovitin?.jakoja }));
-vartio('gl + css2d = ladonnan nimet', t1.sovitin && t1.nimia != null && t1.sovitin.gl + t1.sovitin.css2d === t1.nimia && t1.kerros?.instansseja === t1.sovitin.gl,
+// Rungolla ovat v2017:stä lähtien myös nostot ja nappula (vaiheet 3–4), joten instansseja ≥ nimet.
+vartio('gl + css2d = ladonnan nimet', t1.sovitin && t1.nimia != null && t1.sovitin.gl + t1.sovitin.css2d === t1.nimia && t1.kerros?.instansseja >= t1.sovitin.gl,
   `gl ${t1.sovitin?.gl}, css2d ${t1.sovitin?.css2d}, ladottu ${t1.nimia}, instansseja ${t1.kerros?.instansseja}`);
 vartio('kaikki nimet rungolla, DOMissa 0', t1.sovitin?.css2d === 0 && t1.dom === 0 && t1.sovitin?.gl > 0, `css2d ${t1.sovitin?.css2d}, DOM ${t1.dom}, fontit ${t1.fontit}, täyttyi ${t1.sovitin?.tayntyi}`);
 
@@ -119,7 +120,19 @@ const odotetut = await sivu.evaluate(() => {
     const koti = ui.pallolauta.kotelo.getBoundingClientRect();
     return { id: o.id, lat: o.lat, lng: o.lng, x: r ? koti.left + r.x : null, y: r ? koti.top + r.y : null, dx0: l.x0, dy0: l.y0, dx1: l.x1, dy1: l.y1 };
   });
-  return { pov, W, H, fov: kam.fov, kuvasuhde: kam.aspect, sade: p.getGlobeRadius(), suhde: r.getPixelRatio(), laatikot };
+  // Nostot ja nappula ovat samalla rungolla (vaiheet 3–4): niiden muste ei ole "ulkona".
+  const koti = ui.pallolauta.kotelo.getBoundingClientRect();
+  const sov = ui.pallolauta.glSovitin?.();
+  const rungolla = (sov?.nostotRungolla?.() ?? []).map((i) => {
+    const q = p.getScreenCoords(i.lat, i.lng, 0);
+    if (!q) return null;
+    const x = koti.left + q.x + i.dx - i.ankkuriX; const y = koti.top + q.y + i.dy - i.ankkuriY;
+    return { x0: x, y0: y, x1: x + i.leveys, y1: y + i.korkeus };
+  }).filter(Boolean);
+  const muut = [...ui.pallolauta.nostot.laatikot(), ...(sov?.pelinLaatikot?.() ?? [])]
+    .map((b) => ({ x0: koti.left + b.x0, y0: koti.top + b.y0, x1: koti.left + b.x1, y1: koti.top + b.y1 }))
+    .concat(rungolla);
+  return { pov, W, H, fov: kam.fov, kuvasuhde: kam.aspect, sade: p.getGlobeRadius(), suhde: r.getPixelRatio(), laatikot, muut };
 });
 // Kelluvat kortit ja kirjoittuva teksti pois vertailusta (kuten savuke-glnimiot.mjs).
 await sivu.addStyleTag({ content: '.fokusvirta-kortti, .fokusvirta-isokuva, .fokusvirta-kupla, .fokusvirta-lentokerros, .saapumistraileri, .fokusnosto-kerros, .fokuskohde-popup, .pollo, .pulu, .kartuutsi { visibility: hidden !important; }' });
@@ -149,6 +162,9 @@ const kaappausGL3 = await sivu.screenshot({ type: 'png' });
     r.x0 = Math.max(0, r.x0); r.y0 = Math.max(0, r.y0); r.x1 = Math.min(W - 1, r.x1); r.y1 = Math.min(H - 1, r.y1);
     return r.x1 - r.x0 > 4 * s && r.y1 - r.y0 > 4 * s ? r : null;
   }).filter(Boolean);
+  // Nostojen ja nappulan laatikot (rungon muut instanssit) jätetään laskematta.
+  const vara2 = 6 * s;
+  const muut = odotetut.muut.map((b) => ({ x0: b.x0 * s - vara2, y0: b.y0 * s - vara2, x1: b.x1 * s + vara2, y1: b.y1 * s + vara2 }));
   let sisalla = 0; let ulkona = 0;
   const peitto = laatikot.map(() => 0);
   for (let y = 0; y < H; y += 1) for (let x = 0; x < W; x += 1) {
@@ -158,7 +174,7 @@ const kaappausGL3 = await sivu.screenshot({ type: 'png' });
     const vakaa = Math.abs(a.data[i] - c.data[i]) + Math.abs(a.data[i + 1] - c.data[i + 1]) + Math.abs(a.data[i + 2] - c.data[i + 2]) < 40;
     if (!vakaa) continue;
     const j = laatikot.findIndex((l) => x >= l.x0 && x <= l.x1 && y >= l.y0 && y <= l.y1);
-    if (j >= 0) { sisalla += 1; peitto[j] += 1; } else ulkona += 1;
+    if (j >= 0) { sisalla += 1; peitto[j] += 1; } else if (!muut.some((l) => x >= l.x0 && x <= l.x1 && y >= l.y0 && y <= l.y1)) ulkona += 1;
   }
   const osuus = sisalla / Math.max(1, sisalla + ulkona);
   // Jokaisen nimen laatikossa on mustetta (≥ 4 % laatikon alasta: ohut teksti) ja
