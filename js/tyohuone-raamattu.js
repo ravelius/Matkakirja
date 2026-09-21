@@ -2090,6 +2090,14 @@ export const RAAMATTU = {
           + 'LIUSKAA, #KARTTAUUDISTUKSEN PAATOKSET 27: SAMAN AIHEEN NOSTOT YHDEKSI '
           + 'MERKIKSI, VIUHKA KLIKATTAESSA, #MAAT ILMAN PELIKAUPUNKIA SAAVAT '
           + 'PELIKAUPUNGIN.',
+        'NIMIÖIDEN VAKAUS — GOOGLE EARTHIN MALLI (Fable 21.9.2026, omistajan havainto v1985: '
+          + 'nostot pomppivat panoroidessa): nimiö ei liiku eleen aikana. Asento valitaan '
+          + 'ankkurin ympäriltä kerran lepotilassa (8 ehdokasasentoa karttakoordinaateissa) ja '
+          + 'pidetään; eleen aikana lappu vain seuraa ankkuria, reunan yli saa mennä. Törmäys '
+          + 'ratkaistaan näkyvyydellä, ei siirrolla: heikompi häivytetään ja palaa kun tilaa on; '
+          + 'prioriteetti kiinteä (taso 1 > kaupunki > taso 2 > taso 3). Päätökset vasta eleen '
+          + 'päätyttyä (~150 ms) ja zoomiportaittain, hystereesi estää vilkkumisen. Ykköstaso ei '
+          + 'häivy eikä vaihda asentoa. Loki: paatokset-2026-09.md#OMISTAJA v1985 VAKAVUUS 1.',
         'NOSTOT KARTALLA JA NIIDEN SISÄLTÖ (15.–20.9.2026): kohdemaalle ei '
           + 'merkkikattoa — kaikki nostot ja kaupungit piirtyvät heti saapuessa, '
           + 'muiden maiden merkit katon (21) alla; lisäkaupunkien nimiö n. 11–12 px '
