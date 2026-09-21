@@ -851,3 +851,7 @@ Fable 22.9.2026 klo 00.30: Sisältökirjuri löysi, että DEU/ITA/ESP nostotasot
 ## LAATTAPYYNTOJEN TAHDITUS 2/KEHYS (PR #2699): LAATTAPORTAAN ZOOMI p95 22-28 ms (22.9.2026 klo 00.04)
 
 Karttaseppä 22.9.2026 klo 00.40: pallolaatat.js LAATTAKERROS_ALOITUKSIA_PER_KEHYS = 2 (6 fetchiä/kehys, loput seuraavaan rAF:iin; mittari laatat.tahditettuja). WebKit 390×844 dpr 3 Ranska z6 portaat 1–2 zoomi: p95 33–39 → 23–28 ms, porras 1 37 → 22–27, max 68 → 26–40, 0 kehystä > 50. Testit 98/0, raportti docs/raportit/zoomi-pyyntotahditus-20260922.md. Tukitason harvennus vain jos iPhonella p95 > 25 (Laitetestaaja mittaa lipulla kun PR mainissa).
+
+## NOSTOTASOT GBR/POL/AUT VALMIIT; DEU/ITA/ESP-HAARAT VANHALTA POHJALTA, CHERRY-PICK (22.9.2026 klo 00.04)
+
+Sisältökirjuri 22.9.2026 klo 00.45: sisalto-nostotaso-gbr 560a120e6, -pol 5cc8226c4, -aut 2ff5ae303 (6 kukin, AUT Tonava pidetty, ei Wachau-nostoa), testit 0 fail. DEU/ITA/ESP-nostotasohaarat ovat vanhalta pohjalta (614 committia jäljessä) → Julkaisija cherry-pickaa kuten kartuschoissa. Seuraava erä NLD/BEL/CHE/PRT/GRC/CZE.
