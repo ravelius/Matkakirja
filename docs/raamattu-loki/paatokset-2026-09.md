@@ -799,3 +799,7 @@ Omistaja 21.9.2026 klo 23.30 (kortti): Sveitsin kolme päällekkäisyyttä (Kape
 ## KARTUSCHAT ERA B VALMIS: BIH/UKR/RUS/ISL VIITEEN AIHEESEEN (21.9.2026 klo 23.20)
 
 Sisältökirjuri 21.9.2026 ilta (docs/raportit/kartuscha-era-b-yhteenveto-20260921.md, sisalto-grc-kuvat b2c2c039f): BIH 1ae02cb3 (historia/ruoka/kulttuuri), UKR a6dcba7c (historia/kulttuuri), RUS cd43ea4b5 (historia/ruoka), ISL 32a4456f8 (historia); kaikilla 4 sisältöaihetta + menovinkit = 5, testit 0 fail; eri avaimet, ei counts-konflikteja. Julkaisijan jonoon nollauksen jälkeen. Sisältökirjuri siirtyy maakuntien luonnehdintoihin.
+
+## JULKAISIJA NOLLATAAN (72 %); WORKTREE Matkakirja-julkaisija; PR #2687:N CI EI KAYNNISTY (21.9.2026 klo 23.22)
+
+Fable 21.9.2026 klo 23.22: Julkaisijan luovutus docs/raportit/viesti-julkaisija-luovutus-20260921-ilta.md (haarassa sisalto-kartuscha-bih). Worktree siirretty /Users/samireivinen/Matkakirja-julkaisija (vanha Matkakirja-sonnet3 symlinkki). Julkaisija nollataan Fablen kaavalla. Avoin: PR #2687:n CI ei käynnistynyt kolmella pushilla — uusi Julkaisija selvittää (workflow-polkurajaus? pull_request-laukaisu? haara docs-only?).
