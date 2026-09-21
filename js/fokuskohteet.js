@@ -154,6 +154,7 @@ import { HAHMOTELMA_SVN } from './packs/hahmotelma-svn.js';
 import { HAHMOTELMA_EST } from './packs/hahmotelma-est.js';
 import { HAHMOTELMA_LTU } from './packs/hahmotelma-ltu.js';
 import { HAHMOTELMA_LVA } from './packs/hahmotelma-lva.js';
+import { HAHMOTELMA_TUR } from './packs/hahmotelma-tur.js';
 import { avaaLisakaupunginKortti } from './kaupunkinosto.js';
 import { FOKUSKOHTEET_GBR } from './packs/fokuskohteet-gbr.js';
 import { FOKUSKOHTEET_HUN } from './packs/fokuskohteet-hun.js';
@@ -578,6 +579,16 @@ KOHDE_MAAT.LTU = [...(KOHDE_MAAT.LTU ?? []), ...HAHMOTELMA_LTU];
  * kuin muilla EU-maiden hahmotelmilla.
  */
 KOHDE_MAAT.LVA = [...(KOHDE_MAAT.LVA ?? []), ...HAHMOTELMA_LVA];
+
+/*
+ * TURKIN HAHMOTELMANOSTOT (js/packs/hahmotelma-tur.js): kaksi
+ * täydentävää karttanostoa Turkin olemassa olevien 28 nostoon (kolme
+ * maastokohteet-tur.js:ssä, 25 fokuskohteet-tur.js:ssä) — Nemrut Dağı
+ * ja Safranbolu. Sama liitosreitti kuin EU-maiden hahmotelmilla, mutta
+ * Turkki ei ole EU-maa: tämä on ensimmäinen "muu Eurooppa"
+ * -hahmotelmapakka.
+ */
+KOHDE_MAAT.TUR = [...(KOHDE_MAAT.TUR ?? []), ...HAHMOTELMA_TUR];
 
 /*
  * KOHTEET SÄHKETEHTÄVÄN SISÄLTÖHAKEMISTOON (Raamattu, PÖLLÖN
