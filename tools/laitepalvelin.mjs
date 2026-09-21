@@ -87,7 +87,18 @@ async function valitaAmpariin(req, res, polku) {
   }
   res.writeHead(vastaus.status, ulos);
   if (!vastaus.body || req.method === 'HEAD') { res.end(); return; }
-  Readable.fromWeb(vastaus.body).pipe(res);
+  /*
+   * VIRTA EI SAA KAATAA PALVELINTA (Laitetestaaja 21.9.2026: ämpärin
+   * HTTP/2-virran katkeaminen — ERR_HTTP2_STREAM_ERROR — nousi
+   * käsittelemättömänä 'error'-tapahtumana ja tappoi prosessin kesken
+   * mittauksen). Virran ja vastauksen virheet katkaisevat vain tämän
+   * pyynnön; laite pyytää tiedoston uudestaan.
+   */
+  const virta = Readable.fromWeb(vastaus.body);
+  virta.on('error', (syy) => { console.warn(`ämpärin virta katkesi: ${polku} — ${syy?.code ?? syy?.message ?? syy}`); res.destroy(); });
+  res.on('error', () => virta.destroy());
+  res.on('close', () => { if (!res.writableFinished) virta.destroy(); });
+  virta.pipe(res);
 }
 
 function palveleTiedosto(req, res, polku, origin) {
@@ -114,6 +125,10 @@ function palveleTiedosto(req, res, polku, origin) {
   if (req.method === 'HEAD') { res.end(); return; }
   createReadStream(tiedosto).pipe(res);
 }
+
+// Viimeinen vartija: yksi karannut virhe ei saa tappaa palvelinta kesken laitemittauksen.
+process.on('uncaughtException', (syy) => console.warn(`laitepalvelin: karannut virhe — ${syy?.code ?? syy?.message ?? syy}`));
+process.on('unhandledRejection', (syy) => console.warn(`laitepalvelin: karannut lupaus — ${syy?.code ?? syy?.message ?? syy}`));
 
 const palvelin = http.createServer((req, res) => {
   const origin = `http://${req.headers.host ?? `localhost:${PORTTI}`}`;
