@@ -73,6 +73,18 @@ export const MAASTOKOHTEET_TUR = [
       + 'neliökilometriä ja mittoja noin 280 kertaa 80 kilometriä, joten sitä pidetään maailman '
       + 'pienimpänä merenä; syvimmillään se on 1 370 metriä.',
     lahde: 'en-Wikipedia "Sea of Marmara", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Kuinka syvä Marmaranmeri on syvimmillään?',
+      vaihtoehdot: [
+        '1 370 metriä',
+        '80 metriä',
+        '11 350 metriä',
+        '280 metriä',
+      ],
+      oikea: 0,
+      fakta: 'Marmaranmeren pinta-ala on 11 350 neliökilometriä, ja se erottaa Turkin '
+        + 'Euroopan- ja Aasian-puoleiset osat toisistaan.',
+    },
   },
   {
     id: 'valimeri',
@@ -160,6 +172,17 @@ export const MAASTOKOHTEET_TUR = [
       + 'saa alkunsa Turkista ja virtaa Syyrian ja Irakin halki, kunnes yhtyy Tigrikseen Shatt '
       + 'al-Arabissa ja laskee siitä Persianlahteen.',
     lahde: 'en-Wikipedia "Euphrates", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Minkä joen kanssa Fırat yhtyy Shatt al-Arabissa?',
+      vaihtoehdot: [
+        'Niili',
+        'Tigris',
+        'Jordan',
+        'Orontes',
+      ],
+      oikea: 1,
+      fakta: 'Fırat on Länsi-Aasian pisin joki ja saa alkunsa Turkista.',
+    },
   },
 ];
 

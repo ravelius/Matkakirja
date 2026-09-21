@@ -104,6 +104,17 @@ export const MAASTOKOHTEET_NOR = [
       + 'Jotunheimenin kansallispuiston sisällä. Ympärillä kohoaa tiheä joukko muita huippuja — '
       + 'Keilhaus topp, Store Styggehøe, Storjuvtinden ja Skardstinden muiden muassa.',
     lahde: 'en-Wikipedia "Galdhøpiggen", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Missä Norjan maakunnassa Galdhøpiggen ja sitä ympäröivä kansallispuisto sijaitsevat?',
+      vaihtoehdot: [
+        'Innlandetissa',
+        'Rogalandissa',
+        'Trøndelagissa',
+        'Vestlandissa',
+      ],
+      oikea: 0,
+      fakta: 'Galdhøpiggen sijaitsee Lomin kunnassa Jotunheimenin kansallispuiston sisällä.',
+    },
   },
   {
     id: 'norjanmeri',
@@ -146,6 +157,17 @@ export const MAASTOKOHTEET_NOR = [
       + 'ja Färsaarten välinen vedenalainen harjanne, pohjoisessa Jan Mayenin harjanne erottaa '
       + 'sen Grönlanninmerestä. Meri luetaan joko Atlanttiin tai Jäämereen kuuluvaksi.',
     lahde: 'en-Wikipedia "Norwegian Sea", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Mikä harjanne erottaa Norjanmeren Grönlanninmerestä pohjoisessa?',
+      vaihtoehdot: [
+        'Islannin ja Färsaarten harjanne',
+        'Jan Mayenin harjanne',
+        'Huippuvuorten harjanne',
+        'Barentsin harjanne',
+      ],
+      oikea: 1,
+      fakta: 'Islannin ja Färsaarten välinen vedenalainen harjanne taas erottaa meren Atlantista lounaassa.',
+    },
   },
   {
     id: 'barentsinmeri',
@@ -241,6 +263,17 @@ export const MAASTOKOHTEET_NOR = [
       + 'joen nimi oli Raumelfr, jyrisevä virta.',
     lahde: 'en-Wikipedia "Glomma", johdanto-osa sekä osiot "Geography" ja "Name" (tarkistettu '
       + '1.9.2026).',
+    visa: {
+      kysymys: 'Mikä oli Glomman nimi muinaisskandinaaviksi, ja mitä se tarkoitti?',
+      vaihtoehdot: [
+        'Nidelva, musta joki',
+        'Trollelva, peikkovirta',
+        'Raumelfr, jyrisevä virta',
+        'Glomelfr, leveä virta',
+      ],
+      oikea: 2,
+      fakta: 'Glomma on Norjan pisin ja vesirikkain joki, 621 kilometriä pitkä.',
+    },
   },
   /* ================================================================
    * K2-ERÄ 3 6.9.2026 — KAHDEKSAN KOHDETTA. Perustelut tiedoston alussa.

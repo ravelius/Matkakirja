@@ -93,10 +93,11 @@
 
 import {
   NOSTOSYM_MINI_RUUTU, NOSTOSYM_NIMIO_KOKO, NOSTOSYM_PISTE_R,
-  nostosymLyhennaNimio, nostosymNimioAsemointi, nostosymNimioMitta,
+  nostosymLyhennaNimio, nostosymMitanKatto, nostosymNimioAsemointi, nostosymNimioMitta,
   piirraNostosymNimio,
 } from '../fokusnosto-symbolit.js';
 import { KARTTAVALO_AIHEET, karttavaloVari } from '../karttavalot.js';
+import { asetaKuorenKatto } from './nimet.js';
 
 const SVG = 'http://www.w3.org/2000/svg';
 
@@ -743,6 +744,8 @@ export function asetteleAihemerkki(kuori, d) {
   const dx = d.dx ?? 0;
   const dy = d.dy ?? 0;
   g.style.transform = `translate(${dx.toFixed(2)}px, ${dy.toFixed(2)}px) scale(${mitta.toFixed(4)})`;
+  // Kuori liukuu kehyksittäin kattoon asti (nimet.js KOKO LIUKUU JOKA KEHYKSESSÄ).
+  asetaKuorenKatto(kuori, { mitta, mittaRaaka: d.mittaRaaka, katto: nostosymMitanKatto() });
   kuori.classList.toggle('pallolauta-aihemerkki-auki', Boolean(d.avattu));
   // Listan alle jäänyt merkki piiloutuu listan ajaksi (js/pallolauta/
   // nostot.js LISTA EI KOSKAAN TOISEN TEKSTIN PÄÄLLE).

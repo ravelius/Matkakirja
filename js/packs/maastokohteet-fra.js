@@ -966,7 +966,7 @@ export const MAASTOKOHTEET_FRA = [
     }],
     nimi: 'Bayeux\'n seinävaate',
     nimio: 'Bayeux',
-    tyyppi: 'sana',
+    tyyppi: 'historia',
     kysymykset: [
       'Miksi teos ei ole oikeasti kuvakudos?',
       'Kuka sen luultavasti tilasi ja miksi?',
