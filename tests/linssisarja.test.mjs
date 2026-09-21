@@ -7,7 +7,7 @@
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { existsSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 
 import {
   HIOMASSA_A, HIOMASSA_B, HIOMASSA_C, HIOMASSA_D, HIOMASSA_SARJA, LINSSIT,
@@ -36,13 +36,24 @@ test('sarja: 19 + 17 + 6 + 4 = 46 hiomassa-riviä, tunnukset yksilöllisiä, kek
   }
 });
 
-test('ikoni: erien A ja C kuva on assets/linssit/ikonit/linssi-<tunnus>.png ja tiedosto on olemassa', () => {
-  for (const r of [...HIOMASSA_A, ...HIOMASSA_C]) {
-    assert.equal(r.ikoni, `assets/linssit/ikonit/linssi-${r.tunnus}.png`);
+test('ikoni: jokaisen rivin kuva on assets/linssit/ikonit/linssi-<tunnus>.webp ≤ 192 px ja tiedosto on olemassa', () => {
+  for (const r of HIOMASSA_SARJA) {
+    assert.equal(r.ikoni, `assets/linssit/ikonit/linssi-${r.tunnus}.webp`);
     assert.ok(existsSync(new URL(`../${r.ikoni}`, import.meta.url)), `${r.ikoni} puuttuu`);
   }
-  // B ja D: ei ikonia ennen Codexin erää → laukku käyttää yhteistä hiomassa-kuvaa.
-  for (const r of [...HIOMASSA_B, ...HIOMASSA_D]) assert.equal(r.ikoni, undefined, r.tunnus);
+  // Fablen päätös 21.9.2026: repoon vain webp; 512 px:n PNG:t jäävät Codexin kansioon.
+  const kansio = new URL('../assets/linssit/ikonit/', import.meta.url);
+  const tiedostot = readdirSync(kansio);
+  assert.ok(!tiedostot.some((f) => f.endsWith('.png')), 'png repossa');
+  for (const f of tiedostot.filter((t) => t.endsWith('.webp'))) {
+    const tavut = readFileSync(new URL(f, kansio));
+    // WebP VP8X: leveys ja korkeus 24-bittisinä tavuissa 24–29 (arvo − 1).
+    assert.equal(tavut.toString('ascii', 0, 4), 'RIFF', f);
+    assert.equal(tavut.toString('ascii', 8, 12), 'WEBP', f);
+    const w = tavut.toString('ascii', 12, 16) === 'VP8X' ? 1 + tavut.readUIntLE(24, 3) : null;
+    if (w !== null) assert.ok(w <= 192, `${f}: ${w} px`);
+    assert.ok(tavut.length < 60000, `${f}: ${tavut.length} tavua`);
+  }
 });
 
 test('tietäjäpistekynnys ei myönnä hiomassa-linssiä', () => {

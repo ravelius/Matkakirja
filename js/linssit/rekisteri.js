@@ -55,7 +55,7 @@ const IKONIKANSIO = 'assets/linssit/ikonit';
 /** Hiomassa-rivi: tunnus, nimi ja ikoni (jos Codexin kuva on jo kansiossa). */
 const hiomassa = (tunnus, nimi, ikoni = true) => ({
   tunnus, manner: null, tila: 'hiomassa', nimi,
-  ...(ikoni ? { ikoni: `${IKONIKANSIO}/linssi-${tunnus}.png` } : {}),
+  ...(ikoni ? { ikoni: `${IKONIKANSIO}/linssi-${tunnus}.webp` } : {}),
 });
 /** A. Tarinalinssit, aikajana (Codexin erä A, 20 − keksinnöt = 19). */
 export const HIOMASSA_A = [
@@ -79,25 +79,25 @@ export const HIOMASSA_A = [
   hiomassa('posti', 'Posti ja sähkösanoma'),
   hiomassa('luostarit', 'Luostarit ja kirjat'),
 ];
-/** B. Tarinalinssit, alueet (Codexin erä B, 17) — ikonit saapuvat erikseen. */
+/** B. Tarinalinssit, alueet (Codexin erä B, 17). */
 export const HIOMASSA_B = [
-  hiomassa('isoisan-linssi', 'Isoisän linssi 1873', false),
-  hiomassa('atlaslehti', 'Atlaslehti (Stieler 1875)', false),
-  hiomassa('napoleon', 'Napoleonin Eurooppa', false),
-  hiomassa('ensimmainen-maailmansota', 'Ensimmäinen maailmansota', false),
-  hiomassa('rooma', 'Rooman nousu ja tuho', false),
-  hiomassa('toinen-maailmansota', 'Toinen maailmansota', false),
-  hiomassa('kartta-uusiksi', 'Euroopan kartta uusiksi 1815–1923', false),
-  hiomassa('bysantti', 'Bysantti', false),
-  hiomassa('reconquista', 'Reconquista', false),
-  hiomassa('viikingit', 'Viikinkien maailma', false),
-  hiomassa('ruotsin-suurvalta', 'Ruotsin suurvalta ja Suomi', false),
-  hiomassa('balkanin-sodat', 'Balkanin sodat', false),
-  hiomassa('krimin-sota', 'Krimin sota', false),
-  hiomassa('kolmikymmenvuotinen-sota', 'Kolmikymmenvuotinen sota', false),
-  hiomassa('musta-surma', 'Musta surma', false),
-  hiomassa('rautatiet', 'Rautatieverkon kasvu', false),
-  hiomassa('kirjapaino', 'Kirjapainon leviäminen', false),
+  hiomassa('isoisan-linssi', 'Isoisän linssi 1873'),
+  hiomassa('atlaslehti', 'Atlaslehti (Stieler 1875)'),
+  hiomassa('napoleon', 'Napoleonin Eurooppa'),
+  hiomassa('ensimmainen-maailmansota', 'Ensimmäinen maailmansota'),
+  hiomassa('rooma', 'Rooman nousu ja tuho'),
+  hiomassa('toinen-maailmansota', 'Toinen maailmansota'),
+  hiomassa('kartta-uusiksi', 'Euroopan kartta uusiksi 1815–1923'),
+  hiomassa('bysantti', 'Bysantti'),
+  hiomassa('reconquista', 'Reconquista'),
+  hiomassa('viikingit', 'Viikinkien maailma'),
+  hiomassa('ruotsin-suurvalta', 'Ruotsin suurvalta ja Suomi'),
+  hiomassa('balkanin-sodat', 'Balkanin sodat'),
+  hiomassa('krimin-sota', 'Krimin sota'),
+  hiomassa('kolmikymmenvuotinen-sota', 'Kolmikymmenvuotinen sota'),
+  hiomassa('musta-surma', 'Musta surma'),
+  hiomassa('rautatiet', 'Rautatieverkon kasvu'),
+  hiomassa('kirjapaino', 'Kirjapainon leviäminen'),
 ];
 /** C. Leikkilinssit (Codexin erä C, 6). */
 export const HIOMASSA_C = [
@@ -108,12 +108,12 @@ export const HIOMASSA_C = [
   hiomassa('lippuarvaus', 'Lippuarvaus'),
   hiomassa('vuodenajat', 'Vuodenajat'),
 ];
-/** D. Katselulinssit (Codexin erä D, 4) — ikonit saapuvat erikseen. */
+/** D. Katselulinssit (Codexin erä D, 4). */
 export const HIOMASSA_D = [
-  hiomassa('ruoat', 'Maailman ruoat', false),
-  hiomassa('musiikki', 'Maailman musiikki', false),
-  hiomassa('elaimet', 'Maailman eläimet', false),
-  hiomassa('suurimmat-kaupungit', 'Suurimmat kaupungit', false),
+  hiomassa('ruoat', 'Maailman ruoat'),
+  hiomassa('musiikki', 'Maailman musiikki'),
+  hiomassa('elaimet', 'Maailman eläimet'),
+  hiomassa('suurimmat-kaupungit', 'Suurimmat kaupungit'),
 ];
 /** Koko hiomassa-sarja rekisteriin (46 riviä; keksinnöt on jo valmis). */
 export const HIOMASSA_SARJA = [...HIOMASSA_A, ...HIOMASSA_B, ...HIOMASSA_C, ...HIOMASSA_D];
@@ -145,9 +145,11 @@ export const LINSSIT = [
    * laukku näyttää ne harmaana hiomassa-ikonina (css grayscale), löytäjä
    * saa optikon hyvityksen, ja linssi herää kun rivi vaihdetaan
    * tavalliseksi. Tunnus = Codexin tiedostonimi ilman linssi-etuliitettä;
-   * ikoni assets/linssit/ikonit/linssi-<tunnus>.png (512 × 512 RGBA,
-   * yhteinen messinkikehys). Rivit, joilla ei vielä ole `ikoni`a,
-   * käyttävät yhteistä hiomassa-kuvaa kunnes Codexin erä B/D saapuu.
+   * ikoni assets/linssit/ikonit/linssi-<tunnus>.webp (Fablen päätös
+   * 21.9.2026: repoon vain webp ≤ 192 px, laatu 85 — 96 px:n kortti
+   * @2; Codexin 512 px:n PNG-alkuperäiset jäävät toimituskansioon
+   * ~/Documents/Codex/<pvm>/linssi-ikonit/, eivät repoon; yhteinen
+   * messinkikehys linssi-kehys.webp).
    * Keksinnöt (B1) on jo valmis linssi (rivi yllä) eikä toistu tässä.
    * Kaupunki → tunnus -kytkentä on aarreluettelossa (Sisältökirjuri,
    * js/linssit/aarteet.js LINSSIAARTEET), ei tässä.
