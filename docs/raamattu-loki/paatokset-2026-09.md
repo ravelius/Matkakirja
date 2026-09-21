@@ -443,3 +443,7 @@ Omistaja 21.9.2026 (korjaus apurahakuvauksen yhteydessä): pelin nykymuodossa nu
 ## SYVYYSVIIVAT: ISOBAATIT ATLAKSEN TAPAAN SEURAAVAAN POHJAPOLTTOON (21.9.2026 klo 14.29)
 
 Omistaja 21.9.2026 (kortti, Karttasepän syvyyskoe docs/raportit/syvyyskoe-20260921.md): meren syvyysporrastus korvataan atlaslehden isobaateilla, ohuina syvyyskäyrinä 200/1000/3000 m ja jatkuvalla meren sävyllä (--syvyyskayrat, ei --syvyysportaat). Muutos vaatii koko pohjatason uusintapolton (~1,5–2 h + vienti), ja se ajetaan vasta kun omistaja on tehnyt tuntumatestin sulavuuserille E2–E3 tuotannossa; Fable antaa luvan. Syvyysviivojen hidas päivitys ruudulla on laattojen latausta ja tason vaihtoa, jonka E2–E3 korjaavat, ei syvyysviivojen vika.
+
+## KELLOT-LINSSI VALMIS: XP 20, TOLERANSSI 5 MIN, MALLIPOHJAISET REPLIIKIT ILMAN AANTA (21.9.2026 klo 14.35)
+
+Pelikoodari 21.9.2026 (pelikoodari-kellot 594fb6f3): ensimmäinen leikkilinssi Kellot valmis. Taskukellot ~118 kaupungille (Eurooppa + yksi per aikavyöhyke); Nyt = vyöhykeaika IANA/Intl kesäaikoineen ja 24 vyöhykerajaa pituuspiireinä; 1873 = paikallinen aurinkoaika (pituusaste × 4 min) ja Horation kortti ensimmäisellä avauksella. Livia kysyy Fablen kolme kysymystä ruudulla näkyvistä kellopareista; vastaus 12.12-muodossa, toleranssi ±5 min, oikeasta 20 tietäjäpistettä (XP_KELLOT). Kellot on rekisterissä tavallinen rivi, hiomassa-sarjassa 45. Sääntö: mallipohjaiset repliikit, joissa on muuttuvia nimiä ({A}, {B}), jäävät tekstiksi ilman luentaa.
