@@ -3264,8 +3264,32 @@ export async function avaaPallolauta(ui) {
    */
   let napautuskohta = null;
   const NAPAUTUSKOHDAN_IKA_MS = 1500;
+  /*
+   * KAMERAN MATRIISIT TAHDISTETAAN NAPAUTUKSESSA (CI 21.9.2026, PR #2636,
+   * ajot 35547605770 ja 35549388298: Pariisin napautus osui pikselilleen
+   * kaupungin projisoituun pisteeseen — klik 187,212 = kaupunkiPiste
+   * 187,212 — mutta pinnan säteenjäljitys antoi 48,620 N / 2,677 E, eli
+   * ~15 px kaakkoon; sama vakio-offset joka punaisessa ajossa, ei
+   * yhdessäkään vihreässä eikä paikallisesti).
+   *
+   * Three.js päivittää kameran `matrixWorldInverse`n vain renderissä,
+   * `matrixWorld`in myös kutsusta. Kun kamera on liikkunut viimeisen
+   * renderin jälkeen (ajon viimeinen askel, ohjainten vaimennus,
+   * herätystä odottava silmukka), projisointi (`getScreenCoords`,
+   * matrixWorldInverse) ja säteenjäljitys (`Raycaster.setFromCamera`,
+   * matrixWorld) lukevat ERI kameraa — juuri vakio-offset. Ennen
+   * kirjaston omia click-käsittelijöitä molemmat matriisit ajetaan
+   * samaan tilaan, ja seuraava render piirtää saman kuvan.
+   */
+  const tahdistaKameranMatriisit = () => {
+    const kam = pallo.camera?.();
+    if (!kam?.updateMatrixWorld || !kam.matrixWorldInverse?.copy) return;
+    kam.updateMatrixWorld(true);
+    kam.matrixWorldInverse.copy(kam.matrixWorld).invert();
+  };
   const korttivahti = (e) => {
     if (!kotelo.contains(e.target)) return;
+    tahdistaKameranMatriisit();
     const r = kotelo.getBoundingClientRect();
     napautuskohta = {
       x: e.clientX - r.left,
@@ -5032,6 +5056,8 @@ export async function avaaPallolauta(ui) {
      * voivat erota — tämä on ainoa paikka, josta sen näkee.
      */
     viimeinenNapautus: () => viimeinenNapautus,
+    /** Kameran matriisit samaan tilaan ennen mittaa (savukkeet; ks. korttivahti). */
+    tahdistaKameranMatriisit,
     /**
      * Kyltin PIIRRETTY laatikko (savukkeet ja vartijat): se, jota
      * osumatesti käyttää, kun merkkikerroksen tween on kesken.
