@@ -7,10 +7,14 @@ docs/raportit/siirto-toiseen-kayttajaan-20260921.md); työpöytäsessiot
 eivät siirry, joten kaikki kuusi jatkavat luovutuksistaan.
 
 ## Tila
-- Tuotannossa **v1988** (sumu + liftaussavuke). v1989 (liike + pöllön
-  linkit + Sisältökirjurin FRA-erä) oli Julkaisijalla työn alla; katso
-  sen luovutuksesta, mergettiinkö. Työhaara origin/v1973-prep = Fablen
-  haara claude/bold-ride-vow4ki (Fable pushaa molempiin).
+- Mainissa **v1989** (PR #2641: kartan pieni liike, pöllön Matkakirja-
+  linkit; 87262d5d). Tarkista tuotannon APP_VERSION uudessa käyttäjässä.
+  Työhaara origin/v1973-prep nollattu mainiin ja = Fablen haara
+  claude/bold-ride-vow4ki (Fable pushaa molempiin).
+- Luovutukset siirtoon: Karttaseppä 4e4ae8cc, Sisältökirjuri 6df9f127,
+  Pelikoodari 606103ac, Laitetestaaja fc3df934 (haara laitetestaaja),
+  Julkaisija: katso docs/raportit/viesti-julkaisija-luovutus-20260921-siirto.md
+  (v1973-prep tai haara julkaisija).
 - Fablen haaran kärki: tämä luovutus. Loki docs/raamattu-loki/
   paatokset-2026-09.md sisältää kaikki tämän session päätökset (otsikot
   alla).
@@ -52,9 +56,9 @@ eivät siirry, joten kaikki kuusi jatkavat luovutuksistaan.
   (laitelupa pyydettävä uudelleen uudessa käyttäjässä), sitten kierros 22.
 
 ## Jonot
-- Julkaisija: v1989 (liike efc2b926, pöllön linkit ac85b446,
-  iso-ajo-fra-kuvat-1 e9b9712c); seuraava versio: hiomassa 6e3eb5af,
-  sulavuus-E1 ×2. Codex-haku ~/Documents/Codex/<pvm>/ jatkuu (ACL).
+- Julkaisija: seuraava versio: iso-ajo-fra-kuvat-1 e9b9712c (jos ei
+  v1989:ssä), yläpalkki 6cabce66, hiomassa 6e3eb5af, sulavuus-E1
+  karttaseppa-sulavuus f909d2fd ja pelikoodari-nimiot-sulavat c1d7b379. Codex-haku ~/Documents/Codex/<pvm>/ jatkuu (ACL).
 - Sisältökirjuri: iso ajo kohta 3 (BEL/SVK/SVN/CYP/MLT) → erä
   sisalto-nykyalueet (4 riviä 1873-luokkaan + vedosaineisto FRA/DEU) →
   muu Eurooppa 30 → visat 1/3 → taso 3 + nimistö → kadonneet monumentit.

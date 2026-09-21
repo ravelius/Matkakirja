@@ -399,3 +399,7 @@ pelikoodari-ylapalkki 6cabce66: ylapalkki piiloon vain vaaka-asennossa, pystyssa
 ## CODEX AVASI OIKEUDET KAIKILLE PAIKALLISILLE KAYTTAJILLE; UUSI KAYTTAJA koodaus (21.9.2026 klo 11.22)
 
 Codex 21.9.2026 klo 11.15: ACL ryhmalle localaccounts (luku, muokkaus, luonti, uudelleennimeaminen, poisto, periytyva) repoihin Matkakirja ja Matkakirja-fable, kaikkiin Matkakirja-tyopuihin, kuvatuotannon tyotilaan ja Codex-toimituskansioihin; kotihakemiston lapikulku. Yhteiskansio /Users/Shared/Matkakirja-yhteinen/ (linkit + Fablen kopioima Clauden muisti claude-muisti/memory). Uusi kayttaja on koodaus. Jaljella vanhassa kayttajassa: avaintiedosto ~/.matkakirja-avaimet.zsh (omistaja ajaa) ja ACL ajurihakemistoihin actions-runner ja actions-runner-2; uudessa kayttajassa ohjeen vaiheet 3-7. Ohje paivitetty: docs/raportit/siirto-toiseen-kayttajaan-20260921.md.
+
+## v1989 MAINISSA (PR #2641); LAITETESTAAJAN LUOVUTUS fc3df934 (21.9.2026 klo 11.22)
+
+v1989: kartan pieni liike ja pollon Matkakirja-linkit mergetty mainiin (87262d5d), v1973-prep nollattu. Laitetestaaja luovutti siirtoon (haara laitetestaaja fc3df934). Kaikki viisi roolisessiota ovat pysahtyneet luovutuksiin; Julkaisijan luovutus tulossa.
