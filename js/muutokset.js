@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2042, teksti: 'AUT: 6 ykköstason nostoa' },
   { v: 2041, teksti: 'Kortin turva-alue: koko ruudun kortit iPhonella' },
   { v: 2040, teksti: 'POL: 6 ykköstason nostoa' },
   { v: 2039, teksti: 'Nostojen tyyppimerkit lähizoomissa' },
