@@ -710,3 +710,192 @@ silmin tarkistettu, vähintään n. 1200 px PD/CC-kandidaatti — kolmella
 löytynyt aitoa ennen-tuhoa-otettua valokuvaa vaan jälkikäteinen
 taiteilijan tulkinta/piirros, merkitty erikseen kunkin kohdalla.
 Yhtään ei toisteta olemassa olevan sisällön kanssa.
+
+---
+
+# Erä 4: IRL, LUX, NOR, DNK, ISL, RUS, UKR, CYP, MLT, BIH (2026-09-21)
+
+Viimeinen erä — kattaa loput Euroopan pelissä olevat maat. Kaikki 17
+kohdetta tarvitsevat Codex-tilauksen. Yhtään ei toisteta olemassa
+olevan sisällön kanssa (tarkistettu myös muu-Eurooppa-30-haaran uusia
+hahmotelma-tiedostoja NOR/ISL/RUS/UKR:lle, joita ei ole vielä tässä
+worktreessa mutta tarkistettiin sisällöltään commiteista).
+
+## IRL — Irlanti
+
+### 65. Dublinin linnan keskiaikainen linnoitus (IRL)
+
+- **Luokka:** ihme, parikuva — nykyinen Dublinin linna on 1680–1760-luvun georgiaaninen kompleksi, arkkitehtuuriltaan täysin erilainen; vain Record Tower on säilynyt keskiaikaista
+- **Kuvan aika:** n. 1600–1680
+- **Henkilöt:** sallittu — varusväkeä, virkamiehiä linnanpihalla
+- **Kuvaus:** Kuningas Juhana Maattoman käskystä rakennettu 1204–1230, Englannin/Britannian vallan keskus Irlannissa lähes 700 vuotta. Tulipalo huhtikuussa 1684 tuhosi suuren osan keskiaikaisista rakennuksista; jälleenrakennus georgiaaniseksi kompleksiksi kesti 1760-luvulle.
+- **Aikalaiskuva-kandidaatti:** `Dublin in 1610 - reprint of 1896.jpg` — John Speedin 1610 kartta, PD, 2676×2288 px. Tarkistettu silmin.
+
+### 66. Mellifontin luostari (IRL)
+
+- **Luokka:** rappeutunut, parikuva — Codex-tilaus tarpeen
+- **Kuvan aika (Codex-kuvalle):** n. 1150–1350
+- **Henkilöt:** sallittu — sistersiläismunkkeja
+- **Kuvaus:** Ensimmäinen sistersiläisluostari Irlannissa, perustettu 1142. Henrik VIII:n luostarien lakkautus hajotti sen 1539; kiviä käytettiin myöhemmän Tudor-kartanon rakentamiseen. Kahdeksankulmainen lavabo ja osa kaariholveista säilynyt.
+- **Aito kuva-kandidaatti:** `Mellifont Abbey Lavabo and Cloister Arcades 2013 09 27.jpg` — Andreas F. Borchert, CC BY-SA 4.0, 3248×2162 px. Tarkistettu silmin.
+
+## LUX — Luxemburg
+
+### 67. Luxemburgin linnoituksen bastionimuurit (LUX)
+
+- **Luokka:** ihme, parikuva — **HUOM FABLELLE: harkittava päällekkäisyyttä** — linnoituksen 1867-purkuteema on jo pelissä kahdesti (maa-kategoriat.js: Bock-kasemaatit ja Lontoon sopimus -kortti); tämä ehdotus visualisoisi nimenomaan yläpuoliset kalliobastionit, joita kumpikaan olemassa oleva kortti ei näytä, mutta teema toistuu. Harkitse tarpeellisuutta tai korvaa kolmannella, täysin erillisellä kohteella.
+- **Kuvan aika:** n. 1839 (purku käynnissä 1873 pelin ajankohtana)
+- **Henkilöt:** sallittu — varusväkeä muurilla
+- **Kuvaus:** Vaubanin 1680-luvulla vahvistama "Pohjoisen Gibraltar". Lontoon sopimus 1867 määräsi linnoituksen purettavaksi puolueettomuuden takeeksi; purku kesti 1867–1883, käynnissä isoisän 1873 matkan aikaan.
+- **Aikalaiskuva-kandidaatti:** `Turner St Esprit Luxembourg.jpg` — J. M. W. Turner, n. 1839, PD, 1536×1127 px. Tarkistettu silmin.
+
+### 68. Altmünsterin luostari (LUX)
+
+- **Luokka:** rappeutunut, parikuva — Codex-tilaus tarpeen; kokonaan uusi teema, ei liity linnoitukseen
+- **Kuvan aika (Codex-kuvalle):** n. 1083–1543
+- **Henkilöt:** sallittu — benediktiinimunkkeja
+- **Kuvaus:** Luxemburgin kaupungin ensimmäinen luostari, perustettu 1083. Ranskan kuninkaan joukot tuhosivat sen tarkoituksella 1543 sotatoimena. Vain pyöreä kivitorni jäljellä keskellä nykykaupunkia.
+- **Aito kuva-kandidaatti:** `Tour Altmünster Luxembourg.JPG` — Philippe Henri Blasen, CC BY-SA 3.0, 3056×4592 px. Tarkistettu silmin.
+
+## NOR — Norja
+
+### 69. Steinvikholm slott (NOR)
+
+- **Luokka:** rappeutunut, parikuva — Codex-tilaus tarpeen
+- **Kuvan aika (Codex-kuvalle):** n. 1525–1537
+- **Henkilöt:** sallittu — arkkipiispan hovi, sotilaita
+- **Kuvaus:** Norjan viimeisen katolisen arkkipiispan Olav Engelbrektssonin rakennuttama, keskiajan suurin linna Norjassa. Arkkipiispa pakeni maanpakoon 1537; linna jätettiin rapistumaan.
+- **Aito kuva-kandidaatti:** `Steinvikholm Slott Fugleperspektiv.jpg` — MariusVa, CC BY-SA 4.0, 3840×2160 px. Tarkistettu silmin.
+
+### 70. Selje kloster, Selja Abbey (NOR)
+
+- **Luokka:** rappeutunut, parikuva — Codex-tilaus tarpeen
+- **Kuvan aika (Codex-kuvalle):** n. 1150–1300
+- **Henkilöt:** sallittu — benediktiinimunkkeja
+- **Kuvaus:** Norjan ensimmäinen luostari, perustettu n. 1090-luvulla pyhän Sunnivan legendan ympärille. Tulipalo 1305 iski kukoistukseen; uskonpuhdistus lakkautti luostarin 1536.
+- **Aito kuva-kandidaatti:** `Selje kloster Abbey Selja.jpg` — Svein-Magne Tunli, CC BY-SA 4.0, 2048×1365 px. Tarkistettu silmin.
+
+## DNK — Tanska
+
+### 71. Christiansborgin slottet, ensimmäinen ja toinen (DNK)
+
+- **Luokka:** ihme, parikuva — nykyinen (kolmas) Christiansborg 1907–1928 on täysin myöhempi, eri rakennus
+- **Kuvan aika:** n. 1837
+- **Henkilöt:** sallittu — hovilaisia, vaunuja linnan edustalla
+- **Kuvaus:** Ensimmäinen Christiansborg (1740-luku) tuhoutui tulipalossa 1794 (70–80 kuollutta). Toinen (1828) paloi taas 1884. Rauniot seisoivat 23 vuotta ennen nykyistä kolmatta linnaa.
+- **Aikalaiskuva-kandidaatti:** `Christiansborg Holm 1837.jpg` — H.G.F. Holm, PD, 1849×1187 px. Tarkistettu silmin.
+
+### 72. Vesterport, Kööpenhaminan länsiportti (DNK)
+
+- **Luokka:** ihme, parikuva — nykyään Rådhuspladsenin liikenneympyrä
+- **Kuvan aika:** 1859 (juuri ennen purkua)
+- **Henkilöt:** sallittu — kauppiaita, vaunuja portilla
+- **Kuvaus:** Kööpenhaminan vilkkain kaupunginportti, uudistettu 1722. Purettiin 1857–1859 linnoitusten purun yhteydessä — vain 14 vuotta ennen isoisän matkaa.
+- **Aikalaiskuva-kandidaatti:** `Heinrich Hansen - Parti af Vesterport under Nedbrydningen - 1859.png` — Heinrich Hansen, PD, 4038×2693 px. Tarkistettu silmin.
+
+## ISL — Islanti
+
+### 73. Skálholtin keskiaikainen puukatedraali, Brynjólfskirkja (ISL)
+
+- **Luokka:** ihme — HUOM: lisäys OLEMASSA OLEVAAN `skalholt`-nostoon (maastokohteet-isl.js) uutena ihme-kenttänä, ei uusi kohde; olemassa oleva `kuva` toimii jo parikuvan aidon nykykuvan puolena
+- **Kuvan aika:** n. 1650–1780
+- **Henkilöt:** sallittu — pappeja, koululaisia piispantalon pihalla
+- **Kuvaus:** Skálholt oli 1056–1785 Islannin eteläinen piispanistuin. Piispa Brynjólfur Sveinsson rakennutti suuren puukatedraalin 1639–1674; vuoden 1784 maanjäristys kaatoi muut rakennukset, piispanistuin siirtyi Reykjavíkiin, ja rapistunut katedraali purettiin 1802–1804.
+- **Kuva-kandidaatti:** EI LÖYTYNYT erillistä kuvatiedostoa (vain skannattuja 1700-luvun matkakirjoja) — Codex-tilaus nojaa tekstikuvaukseen.
+
+## RUS — Venäjä (eurooppalainen osa)
+
+### 74. Vanha Rjazan, Staraja Rjazan (RUS)
+
+- **Luokka:** rappeutunut, parikuva — Codex-tilaus tarpeen
+- **Kuvan aika (Codex-kuvalle):** n. 1200–1237
+- **Henkilöt:** sallittu — kauppiaita, ruhtinas Juri Igorevitš muureilla
+- **Kuvaus:** Rjazanin ruhtinaskunnan pääkaupunki. Batu-kaanin mongolit piirittivät ja tuhosivat sen 16.–21.12.1237, tappoivat ruhtinaan ja lähes koko väestön. Pääkaupunki siirtyi pysyvästi n. 65 km päähän.
+- **Aito kuva-kandidaatti:** `Городище Старая Рязань. Вид со стороны Оки.jpg` — Mikhey77777, CC BY-SA 4.0, 3242×1965 px. Tarkistettu silmin.
+
+### 75. Moskovan valkokivinen Kreml, Dmitri Donskoin muurit (RUS)
+
+- **Luokka:** ihme (kadonnut: true) — täysin korvattu nykyisillä tiilimuureilla
+- **Kuvan aika:** n. 1367–1485
+- **Henkilöt:** sallittu — muurintekijöitä, vahteja torneissa
+- **Kuvaus:** Dmitri Donskoi rakensi vahvan valkokivimuurin 1366–1368 samoille perustuksille kuin nykyinen Kreml. Ivan III purki sen kokonaan ja rakennutti italialaisten arkkitehtien johdolla nykyiset tiilimuurit 1485–1495.
+- **Kuva-kandidaatti (jälkikäteinen tulkinta, ei aikalaisdokumentti):** `Moscow Kremlin under Dmitry Donskoj.jpg` — Apollinari Vasnetsov, 1922, PD, 1882×1200 px. Arkeologisesti perusteltu rekonstruktioakvarelli. Tarkistettu silmin.
+
+## UKR — Ukraina
+
+### 76. Desjatinnaja-kirkko, Kymmenyskirkko (UKR)
+
+- **Luokka:** ihme, parikuva — perustukset kaivettu esiin ja merkitty maahan
+- **Kuvan aika:** n. 989–1015
+- **Henkilöt:** sallittu — ruhtinas Vladimir Suuri, papistoa
+- **Kuvaus:** Vladimir Suuren rakennuttama, Kiovan Venäjän ensimmäinen kivikirkko 989–996, ruhtinaiden hautamausoleumi. Romahti tulipalossa Batu-kaanin piirityksessä joulukuussa 1240, kun asukkaat pakenivat sinne viimeiseksi turvapaikaksi.
+- **Aito kuva-kandidaatti:** `Десятинна церква, фундамент, Київ.jpg` — Світлана Фалілєєва, CC BY-SA 4.0, 3264×2448 px. Tarkistettu silmin.
+
+### 77. Kiovan Kultainen portti, Zoloti vorota (UKR)
+
+- **Luokka:** rappeutunut, parikuva — Codex-tilaus tarpeen
+- **Kuvan aika (Codex-kuvalle):** n. 1017–1024
+- **Henkilöt:** sallittu — ruhtinas Jaroslav, kauppiaita
+- **Kuvaus:** Jaroslav Viisaan rakentama pääpuolustusportti ja voitonportti. Batu-kaanin joukot vaurioittivat sitä pahoin 1240. Kaksi muurinpätkää jäljellä 1982 rakennetun paviljongin sisällä.
+- **Aito kuva-kandidaatti:** `Руїни Золотих воріт у Києві 02.jpg` — Vi Ko, CC BY-SA 4.0, 2827×3505 px. Tarkistettu silmin.
+
+## CYP — Kypros
+
+### 78. Antiikin Salamis (CYP)
+
+- **Luokka:** ihme, parikuva — kaupunkina kokonaan kadonnut, nykyään autio arkeologinen puisto Famagustan pohjoispuolella
+- **Kuvan aika (Codex-kuvalle):** n. 100–300 jaa.
+- **Henkilöt:** sallittu — kauppiaita, togapukuisia kaupunkilaisia
+- **Kuvaus:** Antiikin Kyproksen suurin ja vaurain kaupunki. Maanjäristykset 332 ja 342 jaa. tasoittivat sen lähes maan tasalle; arabien merirosvoretket 600-luvulla johtivat lopulliseen hylkäämiseen.
+- **Aito kuva-kandidaatti:** `Ruins of Salamis, Cyprus (27409306078).jpg` — Mike McBey, CC BY 2.0, 6000×4000 px. Tarkistettu silmin.
+
+### 79. Antiikin Kition (CYP)
+
+- **Luokka:** ihme, parikuva — lähes kokonaan kadonnut nykyisen Larnakan alle
+- **Kuvan aika (Codex-kuvalle):** n. 850–700 eaa.
+- **Henkilöt:** sallittu — foinikialaisia pappittaria, kauppiaita
+- **Kuvaus:** Foinikialainen satamakaupunki ja Astarte-jumalattaren palvontakeskus n. 850 eaa. alkaen. Maanjäristykset 322/342 jaa. ja vuosisatojen kivenryöstö veivät kaupungin vähitellen nykyisen Larnakan alle.
+- **Aito kuva-kandidaatti:** `Excavations of Kition, Larnaca.jpg` — Josef Moser, CC BY-SA 4.0, 4128×2322 px. Tarkistettu silmin.
+
+## MLT — Malta
+
+### 80. Mdinan vanha normannikatedraali (MLT)
+
+- **Luokka:** ihme, parikuva — nykyinen barokkikatedraali samalla paikalla on suurelta osin täysin uusi rakennus
+- **Kuvan aika (Codex-kuvalle):** n. 1680–1690
+- **Henkilöt:** sallittu — piispa, kirkonmiehiä
+- **Kuvaus:** 1200-luvun normanniaikainen katedraali perimätiedon mukaan apostoli Paavalin haaksirikon paikalla. Sisilian suuri maanjäristys 1693 vaurioitti sitä niin pahoin, että se purettiin ja rakennettiin uudelleen barokkityyliin 1696–1705 — vain kuoro ja sakasti säilyivät.
+- **Nykykuva-kandidaatti (parikuvan aito puoli, nykyinen uusi rakennus):** `St Paul's Cathedral Mdina.jpg` — Plamen Agov, CC BY-SA 3.0, 1668×2160 px. Tarkistettu silmin.
+
+## BIH — Bosnia ja Hertsegovina
+
+### 81. Milen kruunajais- ja hautauskirkko, Arnautovići (BIH)
+
+- **Luokka:** ihme, parikuva — kaukana Neumin rannikkokäytävästä (Keski-Bosnia, Visokon lähellä)
+- **Kuvan aika (Codex-kuvalle):** n. 1377 (Tvrtko I:n kruunajaiset)
+- **Henkilöt:** sallittu — kuningas Tvrtko I:n kruunajaiset, piispoja
+- **Kuvaus:** Bosnian kuninkaiden kruunajais- ja hautauskirkko, rakennettu 1340. Tvrtko I Kotromanić kruunattiin siellä Bosnian ensimmäiseksi kuninkaaksi 1377. Tuhoutumisajankohta epävarma lähteissä — raunioitui Bosnian kuningaskunnan kaaduttua osmaneille 1463 jälkeen.
+- **Aito kuva-kandidaatti:** `Krunidbeno mjesto bosanskih kraljeva 2.jpg` — Zavičajac, CC BY-SA 4.0, 3264×2448 px. Tarkistettu silmin.
+
+## Yhteenveto, erä 4
+
+**Kaikki 17 kohdetta tarvitsevat Codex-tilauksen.** Yksi (LUX/
+bastionimuurit) on merkitty harkinnanvaraiseksi mahdollisen
+teemapäällekkäisyyden vuoksi — Fable päättää. Yksi (Skálholt ISL) on
+lisäys olemassa olevaan nostoon, ei uusi kohde. Kahdelle (Moskovan
+valkokivimuuri RUS, osin Mile BIH) ei löytynyt aitoa aikalaiskuvaa,
+vain jälkikäteinen tulkinta tai epävarma ajoitus — merkitty erikseen.
+
+---
+
+# YHTEENVETO KAIKISTA NELJÄSTÄ ERÄSTÄ
+
+81 kohdetta tutkittu 43 Euroopan maan joukosta (33 maalla oli
+pelisisältöä tarkasteluhetkellä; ALB/AND/BLR/MDA/MKD/MNE/SRB/XKX
+ilman yhtään nostoa jäivät tämän ajon ulkopuolelle — eri initiatiivi).
+GBR ja TUR olivat jo täysin katettuja. Kaikki muut 31 maata saivat
+1–3 uutta ehdotusta. Käytännössä jokainen erän 2–4 kohde tarvitsee
+Codex-tilauksen (Raamatun tarkennus 21.9.2026: myös "rappeutunut"
+saa kulta-aikaparin) — vain erän 1 neljä alkuperäistä "rappeutunut"-
+kohdetta (Cluny, Krautturm, Heraion, Korintin Apollon temppeli)
+ratkesivat pelkällä Commons-kuvalla ja on jo KYTKETTY peliin.
