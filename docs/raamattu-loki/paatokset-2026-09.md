@@ -511,3 +511,7 @@ Karttaseppä 21.9.2026: omistajan havaitsema laikukas meri Biskajalla ja haaleat
 ## NOSTOKORTTI TYOPOYDALLA: KAKSI PALSTAA LEVEALLA, PINO KAPEALLA; v1998-v2000 MAINISSA (21.9.2026 klo 16.39)
 
 Omistaja 21.9.2026 (Le Mans -nosto työpöydällä: kuva iso, tekstipalsta liian leveä): nostokortti taitetaan yli ~1 100 px ruuduilla kahdelle palstalle (kuva vasemmalla ~58 %, pystykuvassa kapeampi; oikealla kuvateksti, teksti ja Lukijan kysymys), alle ~1 100 px pinona enintään ~760 px leveänä, puhelin ennallaan. Tekstiä ei lisätä: nostot pysyvät lyhyinä. Pelikoodari tekee Sonnet-parvella GL-työn rinnalla. Julkaisija: v1998 (kameran ennuste E4b), v1999 (löytämisen sumu pois), v2000 (laattatasojen z-tappelu korjattu) mainissa; jonossa nimiöt E2 (PR #2652), E3, ennustekoukku, gl-rasterit.
+
+## LEHDEN VUOSILUKU OIKEAAN REUNAAN; REAKTIOT KAHTEEN: SYDAN JA PEUKKU ALAS (21.9.2026 klo 16.44)
+
+Omistaja 21.9.2026 (Ranskan lehden Historia-osio työpöydällä): 1) jutun vuosiluku siirretään otsikkorivin oikeaan reunaan; 2) reaktiot siirretään otsikkoriviltä leipätekstin loppuun Lue lisää -linkin viereen; 3) viiden symbolin reaktionivaska (27.8.2026: laakeri, sydän, suurennuslasi, tiimalasi, mustetahra) korvataan kahdella suoraan näkyvällä napilla: sydän (hyvä) ja peukku alas (huono); peukku alas avaa tarkentavan kysymyksen (tylsä / virhe tiedoissa tekstikentällä / muu). Vanhat äänet lasketaan: hieno, ihana, mielenkiintoinen → sydän; tylsä, virhe → peukku alas. Koskee lehtiä, kohdekortteja ja nähtävyysjuttuja. Pelikoodari tekee Sonnet-parvella GL-työn rinnalla.
