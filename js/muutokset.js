@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2007, teksti: 'Nostot näkyviin: kohdemerkkien portti korjattu' },
   { v: 2006, teksti: 'Reaktiot sydämeksi: viisi symbolia -> sydän ja peukku alas' },
   { v: 2005, teksti: 'Nimiöt GL-kerrokseen (kokeilu)' },
   { v: 2004, teksti: 'Kamera-nimiöt-rajapinta E4' },
