@@ -186,7 +186,7 @@ import {
 // ui.js tarvitsee tästä kuvasuurennoksen napin ja litteiden
 // kulttuurinostojen väliotsikkonapit; lehden ja jutun omat napit
 // piirretään niiden omissa moduuleissa.
-import { piirraOtsikonReaktio, piirraReaktiot } from './reaktiot.js';
+import { otsikkoAvain, piirraOtsikonReaktio, piirraReaktiot } from './reaktiot.js';
 /*
  * SÄHKEPINTA (Raamattu, osio SÄHKEJÄRJESTELMÄ): retkikunta, sähkeet ja
  * kaveriapu asuvat omassa moduulissaan (js/sahke.js). ui.js kutsuu
@@ -15149,13 +15149,10 @@ export class UI {
       // Ääninäyte, Apple Music ja ilmainen musiikkinäyte — yhteinen
       // toteutus kategorianostojen kanssa (lisaaNostonNapit).
       this.lisaaNostonNapit(otsikkoRivi, nosto);
-      /*
-       * VÄLIOTSIKON REAKTIONAPPI (js/reaktiot.js) rivin päähän, sama
-       * kuin kategorianostoilla (js/maalehti.js). Sivuavain tulee
-       * kutsujalta: Tutki-ikkunan liuska tietää, mikä sivu on auki,
-       * eikä sitä voi päätellä täältä ilman lehtitilan kaivamista.
-       */
-      piirraOtsikonReaktio(otsikkoRivi, sivuAvain, nosto.otsikko);
+      // REAKTIONAPIT EIVÄT OLE ENÄÄ OTSIKKORIVILLÄ (omistajan päätös
+      // 21.9.2026): ne piirtyvät "Lue lisää aiheesta" -linkin viereen
+      // jutun lopussa, ks. LOPPURIVI alempana. Sama kohdeavain
+      // (otsikkoAvain) pitää vanhat äänet tallessa.
       lohko.appendChild(otsikkoRivi);
       if (nosto.tyyppi === 'kuva' && nosto.tiedosto) {
         const kuva = document.createElement('img');
@@ -15172,12 +15169,21 @@ export class UI {
         lohko.appendChild(kuva);
       }
       lohko.appendChild(html('p', 'arrival-intro', nosto.teksti));
+      /*
+       * LOPPURIVI: "Lue lisää aiheesta" ja reaktionapit SAMALLA
+       * RIVILLÄ (omistajan päätös 21.9.2026), sama malli kuin
+       * js/maalehti.js piirraKategoria.
+       */
+      const loppurivi = html('div', 'leipa-loppurivi');
       if (nosto.wiki) {
         const nappi = html('button', 'wiki-btn', 'Lue lisää aiheesta');
         nappi.type = 'button';
         nappi.addEventListener('click', () => this.openWikiArticle(nosto.wiki, nosto.otsikko));
-        lohko.appendChild(nappi);
+        loppurivi.appendChild(nappi);
       }
+      const reaktioAvain = otsikkoAvain(sivuAvain, nosto.otsikko);
+      if (reaktioAvain) piirraReaktiot(loppurivi, reaktioAvain, { otsikko: nosto.otsikko });
+      if (loppurivi.childNodes.length) lohko.appendChild(loppurivi);
       this.lisaaNostonLinkki(lohko, nosto);
       const lahteet = [lahdemerkinta(nosto.lahde), nosto.aaniLahde]
         .filter(Boolean).join(' · ');

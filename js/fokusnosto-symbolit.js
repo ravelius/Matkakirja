@@ -2892,25 +2892,66 @@ export function piirraNostosymKartalle(g, symboli, nimio, laji, kylki = 'oikea',
  * jätä kerrokseen tyhjää merkkiä — sama koko, vain karkeampi kuva,
  * kunnes tarkempi saapuu (js/fokuskohteet.js PORTAAN_LEPO_MS).
  */
-function asetaRasteri(kuva, g) {
-  const resepti = kuva.__nostosym;
-  if (!resepti) return;
+/**
+ * NOSTON RASTERIRESEPTIT ILMAN ELEMENTTIÄ (GL-kerros, 21.9.2026): sama
+ * tunnus, nimiölaji, lyhennetty teksti ja kylki kuin
+ * piirraNostosymKartalle laskee — ikoni ilman tekstiä ja nimiö ilman
+ * ikonia (erillinenNimio). Palauttaa { ikoni, nimio | null }.
+ */
+export function nostosymReseptit(symboli, nimio, laji, kylki = 'oikea', {
+  kuvamerkki = null, ruutuKerroin = 1, tumma = false,
+} = {}) {
+  const tunnus = nostosymMiniTunnus(symboli, laji);
+  const nimionLaji = nostosymNimionLaji(laji);
+  const teksti = nostosymNimioTeksti(nimio, NOSTOSYM_NIMIO_ASUT[nimionLaji], NOSTOSYM_NIMIO_MERKKEJA);
+  const puoli = teksti ? nostosymNimioPuoli(kylki) : 'oikea';
+  const perus = { tunnus, nimionLaji, puoli, elavana: () => {}, kuvamerkki, ruutuKerroin, tumma };
+  return {
+    ikoni: { ...perus, teksti: '', ilmanIkonia: false },
+    nimio: teksti ? { ...perus, teksti, ilmanIkonia: true } : null,
+  };
+}
+
+/** Rasterin välimuistiavain reseptistä ja portaasta (sama SVG:lle ja GL-kerrokselle). */
+export function nostosymRasterinAvain(resepti, porras = NOSTOSYM_PORRAS) {
   const {
-    tunnus, teksti, nimionLaji, puoli, elavana, kuvamerkki = null, ruutuKerroin = 1, tumma = false,
-    ilmanIkonia = false,
+    tunnus, teksti, nimionLaji, puoli, kuvamerkki = null, ruutuKerroin = 1, tumma = false, ilmanIkonia = false,
   } = resepti;
-  const porras = NOSTOSYM_PORRAS;
-  kuva.__nostosymPorras = porras;
-  const avain = `${porras}|${tunnus}|${nimionLaji}|${puoli}|${teksti}`
+  return `${porras}|${tunnus}|${nimionLaji}|${puoli}|${teksti}`
     + (kuvamerkki || ruutuKerroin !== 1 || tumma ? `|${kuvamerkki ?? ''}|${ruutuKerroin}|${tumma ? 'T' : ''}` : '')
     + (ilmanIkonia ? '|N' : '');
+}
+
+/**
+ * RASTERI RESEPTISTÄ, JAETTU VÄLIMUISTI (GL-kerros, 21.9.2026): sama
+ * lupaus, jonka SVG-kuva saa `asetaRasteri`ssa — { osoite (blob-URL),
+ * leveys, korkeus, origoX, origoY } kirjaston yksiköissä — mutta ilman
+ * elementtiä. `tyyliLahde` on SVG-solmu (tai mikä tahansa elementti),
+ * josta asu ja muste luetaan CSS:stä; GL-kerros antaa kotelon.
+ */
+export function nostosymRasteri(resepti, tyyliLahde = null, porras = NOSTOSYM_PORRAS) {
+  const {
+    tunnus, teksti, nimionLaji, puoli, kuvamerkki = null, ruutuKerroin = 1, tumma = false, ilmanIkonia = false,
+  } = resepti;
+  const avain = nostosymRasterinAvain(resepti, porras);
   let valmis = NOSTOSYM_RASTERIT.get(avain);
   if (!valmis) {
-    valmis = nostosymRasteroi(tunnus, teksti, g.ownerSVGElement, porras, nimionLaji, puoli, {
+    valmis = nostosymRasteroi(tunnus, teksti, tyyliLahde, porras, nimionLaji, puoli, {
       kuvamerkki, ruutuKerroin, tumma, ilmanIkonia,
     });
     NOSTOSYM_RASTERIT.set(avain, valmis);
+    valmis.catch(() => NOSTOSYM_RASTERIT.delete(avain));
   }
+  return { avain, porras, valmis };
+}
+
+function asetaRasteri(kuva, g) {
+  const resepti = kuva.__nostosym;
+  if (!resepti) return;
+  const { elavana } = resepti;
+  const porras = NOSTOSYM_PORRAS;
+  kuva.__nostosymPorras = porras;
+  const { avain, valmis } = nostosymRasteri(resepti, g.ownerSVGElement, porras);
   valmis.then((r) => {
     if (!kuva.isConnected) return;
     // Väliin ehti uudempi porras: sen kirjoitus voittaa, eikä tämä
