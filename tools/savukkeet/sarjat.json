@@ -26,6 +26,7 @@
     "savuke-glnimiot-nostot.mjs",
     "savuke-nostojen-tyyppimerkit.mjs",
     "savuke-nostojen-liikevara.mjs",
+    "savuke-hehkupiste.mjs",
     "savuke-nimion-koko-panorointi.mjs",
     "savuke-kartan-liike.mjs",
     "savuke-nimiot-sulavat.mjs",
@@ -643,6 +644,13 @@
     "savuke-nostojen-liikevara.mjs": {
       "kuvakansio": true,
       "huomautus": "Nostot valmiina ruudun ulkopuolella (omistaja 21.9.2026 tyopoyta v2026: nostot tupsahtavat panoroitaessa jalkikateen). nostot.js LIIKEVARA: ladonta 0,5 x ruudun suurempi sivu joka suuntaan, sovittelu laajennettua reunaa vasten ruudun ulkopuolisille, katto (1+2*0,5)^2; nimet samoin (nimet.js lado liikevara). Chromium tyopoyta 1400 + puhelin 390, Ranska z7, veto 400 px (puhelin 234): jokainen vedon jalkeen ruudussa oleva nosto oli rungolla jo ennen, koko ja paikka samat ruudussa pysyneilla (reunavyo pois), eleen aikana instanssi ei katoa. 10/10; vastakoe LIIKEVARA=0 5/10."
+    },
+    "savuke-hehkupiste.mjs": {
+      "env": {
+        "SAVUKE_MOOTTORI": "webkit"
+      },
+      "kuvakansio": true,
+      "huomautus": "Hehkupiste (omistaja 21.9.2026 klo 22.00: eloton yksi varipallo). Kategorian varikiekko: sateittainen haive aiheen musteella (NOSTOSYM_HEHKUN_SADE 2,1 x piste, alfa 0,45 -> 0), sisus vaaleampi (NOSTOSYM_HEHKUN_SISUS), hidas sykahdys +-7 % / 2,4 s levossa, ei liikkeessa (runko uniform syke; CSS2D keyframe .nostosym-rasteri-piste, pysahtyy .pallolauta-liikkuu). WebKit puhelin Ranska z6: rasterin naytteet, syke levossa/liikkeessa, CSS2D-luokka ja animaatio. 6/6."
     }
   }
 }

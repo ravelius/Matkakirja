@@ -135,6 +135,8 @@ const odotetut = await sivu.evaluate(() => {
   const nappulanPiste = nappula ? { x: koti.left + (nappula.x0 + nappula.x1) / 2, y: koti.top + nappula.y1 - 12 } : null;
   return { pov, W, H, fov: kam.fov, kuvasuhde: kam.aspect, sade: p.getGlobeRadius(), suhde: r.getPixelRatio(), laatikot, nappulanPiste };
 });
+// Hehkupisteen sykähdys pois kuvavertailun ajaksi (rasterin koko ei saa muuttua kaappausten välillä).
+await sivu.evaluate(() => window.matkakirja.ui.pallolauta.glSovitin?.()?.syke?.(false));
 // Kelluvat kortit ja kirjoittuva teksti pois vertailusta (kuten savuke-glnimiot.mjs).
 await sivu.addStyleTag({ content: '.fokusvirta-kortti, .fokusvirta-isokuva, .fokusvirta-kupla, .fokusvirta-lentokerros, .saapumistraileri, .fokusnosto-kerros, .fokuskohde-popup, .pollo, .pulu, .kartuutsi { visibility: hidden !important; }' });
 await sivu.waitForTimeout(300);

@@ -182,6 +182,8 @@ attribute float peitto;
 attribute float skaala;    // css-px per rasterin px kertoimella 1
 attribute vec2 siirto;     // ladonnan siirto maapisteestä, css-px kertoimella 1
 attribute vec2 katto;      // koon kerroin = min(kerroin * a, b)
+attribute float syke;      // 1 = hehkupiste sykkii levossa (uniform sykeKerroin), 0 = ei
+uniform float sykeKerroin; // pisteen koon kerroin juuri nyt (1 = lepo/liike ilman sykettä)
 uniform vec2 ruutu;        // ruutu laitepikseleinä
 uniform float kerroin;     // kuoren kerroin (nimiöiden koko zoomin mukaan)
 uniform float dpr;         // css-px → laitepikseli
@@ -195,7 +197,7 @@ void main() {
   // Kosini normaalin ja katsesuunnan välillä: 0 reunalla, häive sen yli.
   float kosini = dot(normalize(maailma.xyz), normalize(cameraPosition - maailma.xyz));
   float edessa = smoothstep(0.0, haive, kosini);
-  float koko = min(kerroin * katto.x, katto.y);
+  float koko = min(kerroin * katto.x, katto.y) * mix(1.0, sykeKerroin, syke);
   vec2 px = (siirto * kerroin + kulma * skaala * koko) * dpr;
   clip.xy += px * 2.0 / ruutu * clip.w;
   gl_Position = clip;
@@ -283,6 +285,7 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
   const instanssit = new Map();
   let likainen = true;
   let kerroinNyt = 1;
+  let sykeNyt = 1;
   const ruutu = { x: 1, y: 1 };
   let purettu = false;
 
@@ -308,6 +311,7 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
         kerroin: { value: 1 },
         dpr: { value: 1 },
         haive: { value: GLNIMIOT_HORISONTIN_HAIVE },
+        sykeKerroin: { value: 1 },
       },
       vertexShader: VERTEX,
       fragmentShader: FRAGMENT,
@@ -440,6 +444,7 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
       const skaala = new Float32Array(n * 4);
       const siirto = new Float32Array(n * 4 * 2);
       const katto = new Float32Array(n * 4 * 2);
+      const syke = new Float32Array(n * 4);
       // Indeksit TAVALLISENA TAULUKKONA: setIndex valitsee itse Uint16/Uint32-
       // attribuutin. Scenestä luettu BufferAttribute on Float32-aliluokka,
       // ja liukulukuindeksit antoivat INVALID_ENUMin (piirto katosi hiljaa).
@@ -464,6 +469,7 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
           skaala[j] = inst.skaala;
           siirto[j * 2] = inst.dx; siirto[j * 2 + 1] = -inst.dy;
           katto[j * 2] = inst.kattoA; katto[j * 2 + 1] = inst.kattoB;
+          syke[j] = inst.syke ? 1 : 0;
         }
         const b = i * 4;
         indeksit[i * 6] = b; indeksit[i * 6 + 1] = b + 2; indeksit[i * 6 + 2] = b + 1;
@@ -477,6 +483,7 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
       g.setAttribute('skaala', new L.BufferAttribute(skaala, 1));
       g.setAttribute('siirto', new L.BufferAttribute(siirto, 2));
       g.setAttribute('katto', new L.BufferAttribute(katto, 2));
+      g.setAttribute('syke', new L.BufferAttribute(syke, 1));
       g.setIndex(indeksit);
       g.setDrawRange(0, n * 6);
       sivu.verkko.visible = n > 0;
@@ -496,7 +503,7 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
      */
     aseta(id, {
       lat, lng, avain, rasteri = null, peitto = 1, opacity = null,
-      skaala = 1, dx = 0, dy = 0, katto = null,
+      skaala = 1, dx = 0, dy = 0, katto = null, syke = false,
     }) {
       if (purettu || !Number.isFinite(lat) || !Number.isFinite(lng) || !avain) return false;
       const uv = uvt.get(avain) ?? (rasteri ? varaaRasteri(avain, rasteri) : null);
@@ -506,6 +513,7 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
         skaala: Number.isFinite(skaala) && skaala > 0 ? skaala : 1,
         dx: Number(dx) || 0, dy: Number(dy) || 0,
         kattoA: Number.isFinite(katto?.a) ? katto.a : 1, kattoB: Number.isFinite(katto?.b) ? katto.b : 1e6,
+        syke: Boolean(syke),
         piste: glMaapiste(lat, lng, sade),
       });
       likainen = true;
@@ -563,6 +571,8 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
     },
     /** Kuoren kerroin (nimiöiden koko zoomin mukaan) — uniform, ei uutta rasteria. */
     kerroin(arvo) { if (Number.isFinite(arvo) && arvo > 0) kerroinNyt = arvo; },
+    /** Hehkupisteen sykähdys: koon kerroin (1 = ei sykettä) — uniform, vain syke-instansseille. */
+    syke(arvo) { if (Number.isFinite(arvo) && arvo > 0) sykeNyt = arvo; },
     /**
      * Kehyskoukku (kytkePallonKehys): ruudun mitat laitepikseleinä
      * uniformeihin, likaiset geometriat ja tekstuurit uusiksi. Halpa,
@@ -578,10 +588,12 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
       for (const s of sivut) {
         s.materiaali.uniforms.ruutu.value.set(ruutu.x, ruutu.y);
         s.materiaali.uniforms.kerroin.value = kerroinNyt;
+        s.materiaali.uniforms.sykeKerroin.value = sykeNyt;
         s.materiaali.uniforms.dpr.value = suhde;
         if (s.likainen) { s.tekstuuri.needsUpdate = true; s.likainen = false; }
       }
       mittarit.kerroin = kerroinNyt;
+      mittarit.syke = sykeNyt;
       mittarit.atlasTayttoaste = sivut.length ? sivut[sivut.length - 1].pakkaus.tayttoaste : 0;
       if (likainen === false && mittarit.kehyksia % 60 === 0) {
         const elavat = elavatAvaimet();
