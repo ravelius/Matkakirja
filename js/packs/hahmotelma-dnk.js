@@ -66,7 +66,10 @@
  */
 
 /** Tanskan hahmotelmanostot: sisällölliset kohteet kaupungin (Kööpenhamina) ulkopuolella. */
+import { EUROOPAN_KADONNEET } from './monumentit-eurooppa.js';
+
 export const HAHMOTELMA_DNK = [
+  ...EUROOPAN_KADONNEET.DNK,
   {
     id: 'hahmotelma-rubjerg-knude',
     kuva: {

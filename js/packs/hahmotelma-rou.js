@@ -65,7 +65,10 @@
  */
 
 /** Romanian hahmotelmanostot: sisällölliset kohteet kaupungin (Bukarest) ulkopuolella. */
+import { EUROOPAN_KADONNEET } from './monumentit-eurooppa.js';
+
 export const HAHMOTELMA_ROU = [
+  ...EUROOPAN_KADONNEET.ROU,
   {
     id: 'hahmotelma-retezat',
     kuva: {

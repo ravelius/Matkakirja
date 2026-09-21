@@ -64832,6 +64832,53 @@ export const KULTTUURI_KATEGORIAT = {
   ],
 
   /*
+   * VALLETTA (21.9.2026; omistajan päätös 19.9.2026: Maltan
+   * pelikaupunki Valletta). KEVYT KANSISIVU — vain aihe `kaupunki`,
+   * ei täyttä 6-aiheista lehteä (sama linjaus kuin muilla tuoreilla
+   * pelikaupungeilla ennen täyttä sisältöerää). Kuvat Commonsista,
+   * lisenssit ja tekijät luettu extmetadata-rajapinnasta 21.9.2026.
+   */
+  valletta: [
+    {
+      id: 'kaupunki',
+      nimi: 'Valletta',
+      johdanto: 'Kalkkikivestä veistetty linnoituskaupunki kahden '
+        + 'sataman välissä — koko vanhakaupunki on ruutukaavaa, jonka '
+        + 'ritarikunta piirsi suoraksi jo vuonna 1566.',
+      kansikuvat: [
+        {
+          tiedosto: 'Valletta old skyline.jpg',
+          lyhyt: 'Ilmakuva Vallettasta: Suurmestarin palatsi etualalla.',
+          selite: 'Ilmakuva Vallettan ruutukaavasta ja kalkkikivikattojen '
+            + 'merestä; etualalla kohoaa Suurmestarin palatsin katto.',
+          lahde: 'Airphotomalta, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Malta - Valletta - St. James Bastion - 360° Panorama 01.jpg',
+          lyhyt: 'St. James -bastionin paksut kalkkikivimuurit.',
+          selite: 'St. James -bastionin paksut kalkkikivimuurit, osa '
+            + 'ritarikunnan 1500-luvulla rakentamaa linnoitusrengasta '
+            + 'Vallettan ympärillä.',
+          lahde: 'Txllxt TxllxT, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Auberge de Castille, Valletta, Malta.jpg',
+          lyhyt: 'Auberge de Castillen barokkijulkisivu.',
+          selite: 'Auberge de Castillen koristeellinen barokkijulkisivu '
+            + '— yksi ritarikunnan komeimmista majataloista.',
+          lahde: 'Jaakko.kulta, Wikimedia Commons (CC BY 4.0)',
+        },
+        kappale: 'Valletta on vain 0,61 neliökilometrin kokoinen, joten '
+          + 'koko vanhakaupungin kiertää jalan muutamassa tunnissa. '
+          + 'Kadut nousevat ja laskevat jyrkästi niemen muodon mukaan, '
+          + 'ja monessa kohdassa portaat korvaavat ajoradan kokonaan.',
+      },
+    },
+  ],
+
+  /*
    * BERGEN on Euroopan laudan uusi kaupunkilehti (23.8.2026).
    * Aineisto: docs/mantereet-tyoaineisto/faktapohja-bergen.md ja sen
    * riippumaton tarkistus tarkistus-bergen.md — TARKISTUKSEN KORJAUKSET

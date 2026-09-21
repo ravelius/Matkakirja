@@ -110,3 +110,55 @@ sävyllä ei vielä erottunut — pienkapiteelit ovat ohuita ja pergamentti
 tummentaa; siksi lähes täysi peitto. Poltetut nimiöt piirtyvät kerman ja
 sumun päälle (kerrosjärjestys pohja → väri/kerma → ranta → viivat →
 nimiöt), joten löytämisen sumu ei haalista niitä.
+
+## Vedos 4: ITA, ESP, GBR, POL, AUT (+ CHE valmiina) — Karttaseppä 21.9.2026 ilta
+
+Fablen tilaus 21.9. ilta: samat säännöt kuin FRA/DEU (loki NYKYMAAKUNNAT POHJAKARTALLE
+21.9. klo 13.43; muste ruoste-vahva, nimet z7–z8, rajat z6:sta). Aineisto Natural Earth
+10m admin-1 (public domain): ITA 20 regionia (provinsseista `region`-kentällä), ESP 17
+itsehallintoaluetta + Ceuta ja Melilla (`region`), GBR 4 maata (`geonunit`, ei
+kreivikuntia), POL 16 voivodikuntaa, AUT 9 osavaltiota, CHE 26 kanttonia (valmiina
+datassa, ei vedoksessa). Työkalu `vedos4/tee-nykyalueet.mjs` (rajat = eri alueiden
+yhteiset särmät, Douglas–Peucker 0,004°; nimen paikka pinta-alapainotettu keskipiste,
+käsin säädetyt paikat taulukossa KASIN); data `vedos4/nykyalueet-<iso>.json`,
+nimistö `vedos4/nimiot-vedos4.json` (tuotannon 149 riviä + 67 nimeä + 6 rajariviä).
+
+Sama nimi kulttuurinimenä → nykyalueen nimi pois, raja piirtyy (vedos 2:n sääntö).
+Ohitettu: ITA 14 (Piemonte, Lombardia, Veneto, Liguria, Toscana, Umbria, Marche, Lazio,
+Campania, Apulia, Basilicata, Calabria, Sisilia, Sardinia), ESP 12 (Andalusia, Aragonia,
+Asturia, Baleaarit, Kanariansaaret, Katalonia, Extremadura, Galicia, Murcia, Navarra,
+Valencia, Baskimaa), POL 1 (Pommeri). Abruzzo ja Molise jäävät, vaikka 1873-nimi
+"ABRUZZI E MOLISE" on eri nimi — Sisältökirjurin päätettäväksi.
+
+### Suomenkieliset nimet (Sisältökirjurin tarkistukseen)
+
+- **ITA** (6): Emilia-Romagna, Trentino-Alto Adige, Abruzzo, Friuli-Venezia Giulia, Molise (pieni), Aostanlaakso (pieni)
+- **ESP** (7): Kastilia ja León, Kastilia-La Mancha, Madrid (pieni), Kantabria, La Rioja, Ceuta (pieni), Melilla (pieni)
+- **GBR** (4): Englanti, Skotlanti, Wales, Pohjois-Irlanti
+- **POL** (15): Masovia, Suur-Puola, Varmia-Masuria, Länsi-Pommeri, Lublin, Podlasia, Ala-Sleesia, Łódź, Kujavia-Pommeri, Podkarpackie, Vähä-Puola, Lubuskie, Sleesia, Świętokrzyskie, Opole
+- **AUT** (9): Ala-Itävalta, Steiermark, Tiroli, Ylä-Itävalta, Kärnten, Salzburg, Burgenland, Vorarlberg, Wien (pieni)
+- **CHE** (26): Graubünden, Bern, Valais, Vaud, Ticino, St. Gallen, Zürich, Fribourg, Luzern, Aargau, Uri (pieni), Thurgau, Schwyz (pieni), Jura, Neuchâtel, Solothurn, Glarus (pieni), Basel-Landschaft, Obwalden (pieni), Schaffhausen (pieni), Geneve (pieni), Nidwalden (pieni), Zug (pieni), Appenzell Ausserrhoden (pieni), Appenzell Innerrhoden (pieni), Basel-Stadt (pieni)
+
+### Kuvat
+
+`vedos4/<maa>-z6|z7|z8.jpg`, työpöytä 1400 × 900 @2, pelaaja pääkaupungissa
+(Rooma 44,3/11,0; Madrid 40,5/−3,5; Lontoo 53,5/−2,5; Varsova 51,8/19,5; Wien 47,6/14,5),
+korkeudet 0,2 / 0,1 / 0,05. Ladonta z6 80 nimiötä (0 pudotettu), z7 175 (1 pudotettu),
+z8 195 (0 pudotettu). Kaappaus main-koodilla (v2017), tuotannon luettelo jonka nimiotaso
+korvattu koeversiolla `vedos4-nykyalueet`, nimiölaatat reititetty koekansiosta.
+
+### Havainnot
+
+1. Italiassa ja Espanjassa lähes kaikki alueet ovat jo kulttuurinimiä, joten uusia
+   ruostenimiä tulee vain 6–7; rajat piirtyvät kaikille. Kuva näyttää siis
+   ensisijaisesti RAJAT kulttuurinimien alla.
+2. GBR: kaksi rajaa (Englanti–Skotlanti, Englanti–Wales), neljä nimeä.
+3. Puola ja Itävalta saavat täyden sarjan (15 + 9 nimeä). Sisältökirjuri tarkisti
+   nimet 21.9. ilta: ITA/ESP/GBR/AUT OK; Abruzzo ja Molise pidetään erillisinä
+   (nykymaakuntataso, ei 1873-erikoiskohtelua); Puolassa kaksi puolankieliseksi, koska
+   suomennos ei ole vakiintunut: Alakarpatia → Podkarpackie, Lubusz → Lubuskie.
+4. Käsin säädetyt paikat (KASIN) 24 nimelle; loput keskipisteessä.
+
+EI polttoa ennen omistajan korttia. Tuotantoon: nimiötason uusintapoltto
+(`--nimioversio 2026-09-22g-nimiot`, nimistö = tuotannon lista + `nykyalueet-uudet.json`
++ rajat), ei pohjaa eikä pallosarjaa.

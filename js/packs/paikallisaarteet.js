@@ -451,6 +451,31 @@ export const PAIKALLISAARTEET = {
         + 'vuodesta 2012.',
     },
   },
+  /*
+   * MALTA (21.9.2026, omistajan päätös 19.9.2026: Maltan pelikaupunki
+   * Valletta). Faktat en-Wikipedian artikkeleista "Megalithic Temples
+   * of Malta" ja "Cross of the Order of Saint John" (luettu
+   * 21.9.2026). Ei kuvaa vielä (KUVAA_ODOTTAVAT-lista,
+   * tests/paikallisaarteet.test.mjs) — samat kuvat generoidaan
+   * myöhemmin kuin muillekin maille.
+   */
+  MLT: {
+    pieniAarre: {
+      name: 'Maltan ristin jäljennös',
+      fakta: 'Kahdeksankärkinen Maltan risti on Johanniittaritarikunnan '
+        + 'tunnus jo 1100-luvulta. Kärkien kerrotaan symboloivan '
+        + 'ritarin kahdeksaa hyvettä, ja risti koristaa yhä saaren '
+        + 'lippua ja Auberge de Castillen julkisivua Vallettassa.',
+    },
+    isoAarre: {
+      name: 'Ħaġar Qimin temppelin kivilohkare',
+      fakta: 'Ħaġar Qimin kalkkikivitemppeli rakennettiin noin '
+        + '3600–3200 eaa., mikä tekee siitä yhden maailman vanhimmista '
+        + 'vapaasti seisovista rakennuksista — vanhempi kuin Egyptin '
+        + 'pyramidit tai Stonehenge. Se kuuluu Maltan megaliittitemppelien '
+        + 'joukkoon Unescon maailmanperintölistalla.',
+    },
+  },
   GBR: {
     pieniAarre: {
       name: 'Purkki marmeladia',

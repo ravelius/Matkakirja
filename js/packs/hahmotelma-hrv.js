@@ -63,7 +63,10 @@
  */
 
 /** Kroatian hahmotelmanostot: sisällölliset kohteet kaupungin ulkopuolella. */
+import { EUROOPAN_KADONNEET } from './monumentit-eurooppa.js';
+
 export const HAHMOTELMA_HRV = [
+  ...EUROOPAN_KADONNEET.HRV,
   {
     id: 'hahmotelma-krka',
     kuva: {

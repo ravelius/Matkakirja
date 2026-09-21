@@ -13,6 +13,12 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2032, teksti: 'Marseille-nimen valkkyminen korjattu (vanha rasteri)' },
+  { v: 2031, teksti: 'Laattakerros: seuraavan tason keskilaatat ennakkoon' },
+  { v: 2030, teksti: 'Nikosian, Luxemburgin ja Vallettan miniatyyrit' },
+  { v: 2029, teksti: '69 Euroopan kadonnutta monumenttia loistoaikansa asussa' },
+  { v: 2028, teksti: 'Savukevakaus: WebKit-kaatumiset ja aikakatkaisut' },
+  { v: 2027, teksti: 'Malta/Valletta: kaupunki, kartat, radio' },
   { v: 2026, teksti: 'Nimioiden koon vaihtelu panoroidessa korjattu' },
   { v: 2025, teksti: 'Luxemburg: radio, aarrepari, musiikkialue' },
   { v: 2024, teksti: 'Kypros/Nikosia: paikallisaarrepari' },

@@ -65,7 +65,10 @@
  */
 
 /** Irlannin hahmotelmanostot: sisällölliset kohteet kaupungin ulkopuolella. */
+import { EUROOPAN_KADONNEET } from './monumentit-eurooppa.js';
+
 export const HAHMOTELMA_IRL = [
+  ...EUROOPAN_KADONNEET.IRL,
   {
     id: 'hahmotelma-killarney',
     kuva: {

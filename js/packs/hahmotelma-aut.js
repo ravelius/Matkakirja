@@ -52,7 +52,10 @@
  */
 
 /** Itävallan hahmotelmanostot: sisällölliset kohteet kaupungin ulkopuolella. */
+import { EUROOPAN_KADONNEET } from './monumentit-eurooppa.js';
+
 export const HAHMOTELMA_AUT = [
+  ...EUROOPAN_KADONNEET.AUT,
   {
     id: 'hahmotelma-neusiedl',
     kuva: {

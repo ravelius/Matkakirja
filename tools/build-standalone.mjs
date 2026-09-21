@@ -66,6 +66,7 @@ const MODULES = [
   // fokusvirta-pariisi.js:ää, joka lukee tätä.
   'js/packs/maalehtinostot-fra.js',
   'js/packs/nakyvat-kaupungit-fra.js',
+  'js/packs/monumentit-eurooppa.js',
   'js/packs/hahmotelma-fra.js',
   'js/packs/hahmotelma-bel.js',
   'js/packs/hahmotelma-deu.js',
@@ -210,6 +211,8 @@ const MODULES = [
   // Luxemburg (21.9.2026, omistajan päätös: Kypros, Luxemburg ja Malta
   // saavat pelikaupungin).
   'js/packs/fokusvirta-luxemburg.js',
+  // Valletta (21.9.2026, omistajan päätös: Maltan pelikaupunki).
+  'js/packs/fokusvirta-valletta.js',
   // Egyptillä ja Irakilla ei ole omaa fokusvirtaa: pelkät kohteet
   // (kadonneiden ihmeiden erä 26.8.2026), joten paririviä ei ole.
   // Sama koskee Ranskaa ja Britanniaa (Matkakirjan ihmeiden Euroopan

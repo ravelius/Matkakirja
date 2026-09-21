@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-09-21.2026';
+const CACHE = 'matkakirja-2026-09-21.2032';
 const SHELL = [
   './',
   './index.html',
@@ -440,6 +440,7 @@ const SHELL = [
   './js/packs/nostoankkurit-dnk.js',
   './js/packs/nostoankkurit-hun.js',
   './js/packs/nostoankkurit-swe.js',
+  './js/packs/monumentit-eurooppa.js',
   './js/packs/hahmotelma-fra.js',
   './js/packs/hahmotelma-bel.js',
   './js/packs/hahmotelma-deu.js',
@@ -604,6 +605,8 @@ const SHELL = [
   // Luxemburg (21.9.2026, omistajan päätös: Kypros, Luxemburg ja Malta
   // saavat pelikaupungin).
   './js/packs/fokusvirta-luxemburg.js',
+  // Valletta (21.9.2026, omistajan päätös: Maltan pelikaupunki).
+  './js/packs/fokusvirta-valletta.js',
   // Maat ilman omaa fokusvirtaa: kadonneiden ihmeiden erä 26.8.2026
   // ja Matkakirjan ihmeiden Euroopan erä 27.8.2026.
   './js/packs/fokuskohteet-egy.js',
@@ -1323,6 +1326,12 @@ const SHELL = [
   './assets/kartat/miniatyyrit/ljubljana-pre-ernin-aukio.webp',
   './assets/kartat/miniatyyrit/ljubljana-tivoli-puisto.webp',
   './assets/kartat/miniatyyrit/ljubljana-tromostovje.webp',
+  './assets/kartat/miniatyyrit/luxemburg-adolphe-silta.webp',
+  './assets/kartat/miniatyyrit/luxemburg-bockin-kasematit.webp',
+  './assets/kartat/miniatyyrit/luxemburg-chemin-de-la-corniche.webp',
+  './assets/kartat/miniatyyrit/luxemburg-guillaume-ii-aukio.webp',
+  './assets/kartat/miniatyyrit/luxemburg-notre-damen-katedraali.webp',
+  './assets/kartat/miniatyyrit/luxemburg-suurherttuallinen-palatsi.webp',
   './assets/kartat/miniatyyrit/lontoo-abbey-roadin-suojatie.webp',
   './assets/kartat/miniatyyrit/lontoo-canaletto-lontoossa.webp',
   './assets/kartat/miniatyyrit/lontoo-dickensin-pubi.webp',
@@ -1343,6 +1352,12 @@ const SHELL = [
   './assets/kartat/miniatyyrit/madrid-kaksi-joukkuetta.webp',
   './assets/kartat/miniatyyrit/madrid-palamaton-linna.webp',
   './assets/kartat/miniatyyrit/madrid-tapaskierros.webp',
+  './assets/kartat/miniatyyrit/nikosia-buyuk-han.webp',
+  './assets/kartat/miniatyyrit/nikosia-faneromenin-kirkko.webp',
+  './assets/kartat/miniatyyrit/nikosia-kyproksen-museo.webp',
+  './assets/kartat/miniatyyrit/nikosia-leventis-museo.webp',
+  './assets/kartat/miniatyyrit/nikosia-omeryen-hamam.webp',
+  './assets/kartat/miniatyyrit/nikosia-selimiyen-moskeija.webp',
   './assets/kartat/miniatyyrit/pariisi-72-nimea.webp',
   './assets/kartat/miniatyyrit/pariisi-bastilji-1789.webp',
   './assets/kartat/miniatyyrit/pariisi-carmenin-ensi-ilta.webp',
@@ -1369,6 +1384,12 @@ const SHELL = [
   './assets/kartat/miniatyyrit/rooma-nasone.webp',
   './assets/kartat/miniatyyrit/rooma-norsu-ja-obeliski.webp',
   './assets/kartat/miniatyyrit/rooma-sikstus-1510.webp',
+  './assets/kartat/miniatyyrit/valletta-auberge-de-castille.webp',
+  './assets/kartat/miniatyyrit/valletta-piirityskello-muistomerkki.webp',
+  './assets/kartat/miniatyyrit/valletta-pyhan-elmon-linnake.webp',
+  './assets/kartat/miniatyyrit/valletta-pyhan-johanneksen-ko-katedraali.webp',
+  './assets/kartat/miniatyyrit/valletta-suurmestarin-palatsi.webp',
+  './assets/kartat/miniatyyrit/valletta-ylabarrakka-puutarhat.webp',
   './assets/kartat/miniatyyrit/wien-figaro-1786.webp',
   './assets/kartat/miniatyyrit/wien-lipizzanit.webp',
   './assets/kartat/miniatyyrit/wien-rattaan-kulmat.webp',
@@ -1682,6 +1703,8 @@ const SHELL = [
   './assets/kartat/ljubljana-varikartta.png',
   './assets/kartat/kosice-keskusta.png',
   './assets/kartat/kosice-varikartta.png',
+  './assets/kartat/valletta-keskusta.png',
+  './assets/kartat/valletta-varikartta.png',
   './assets/kartat/tampere-varikartta.png',
   './assets/kartat/bagdad-varikartta.png',
   './assets/kartat/teheran-varikartta.png',

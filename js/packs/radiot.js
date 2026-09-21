@@ -32,6 +32,11 @@
  * LUX (21.9.2026) on käsin lisätty: radio 100,7 (ERSL, Luxemburgin
  * julkinen yleisradio), osoite tarkistettu hakemalla (302-uudelleenohjaus
  * radiohost.de-peiliin, content-type audio/mpeg, CORS *).
+ * MLT (21.9.2026) on käsin lisätty: Calypso Radio 101.8 (calypsomalta.com),
+ * osoite tarkistettu hakemalla (HTTP 200, audio/aac, icy-name "Calypso
+ * Radio 101.8", CORS *). PBS:n (julkinen yleisradio) suoratoisto-osoitetta
+ * ei löytynyt Radio Browserista eikä sen omalta sivustolta ilman
+ * selaimen JS-soitinta, joten maalla ei ole `virallinen`-lippua.
  *
  * Avaimena ISO-3-maatunnus, sama jota map.cityCountry käyttää.
  */
@@ -99,6 +104,7 @@ export const RADIOT = {
   MDG: { url: 'https://direct.radiomadagasikara.com/listen/rnm/radio.mp3', asema: 'RNM', virallinen: true },
   MEX: { url: 'https://playerservices.streamtheworld.com/api/livestream-redirect/W_RADIOAAC.aac', asema: 'W Radio Ciudad de México - 96.9 FM / 900 AM -', virallinen: true },
   MLI: { url: 'https://stream-157.zeno.fm/yerp85sughwtv?zs=bzqHawb1Rha3gGg97iW8xg', asema: 'Radio Malijet', virallinen: true },
+  MLT: { url: 'https://s4.radio.co/sf3aa4c25a/listen', asema: 'Calypso Radio 101.8 (Malta)' },
   MMR: { url: 'https://listen.radioking.com/radio/681745/stream/746185', asema: 'Shwe FM (valtakunnallinen FM-verkko, Yangon)' },
   MNG: { url: 'https://c2.radioboss.fm/stream/394', asema: 'Гэр бүлийн радио 104.5 (Family Radio, Ulaanbaatar)' },
   MOZ: { url: 'https://stream.zeno.fm/tskpv4vscv8uv', asema: 'Rádio Moçambique', virallinen: true },

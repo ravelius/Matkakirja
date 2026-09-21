@@ -621,6 +621,23 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: 50.851, etela: 50.8335, lansi: 4.342, ita: 4.376 },
     laajennus: 1.6,
   },
+  valletta: {
+    /*
+     * Vallettan koko ydinniemi (21.9.2026; omistajan päätös
+     * 19.9.2026: Maltan pelikaupunki Valletta). Valletta on pieni,
+     * kapea niemi Grand Harbourin ja Marsamxett-sataman välissä —
+     * noin 1,1 × 1,2 km, koko historiallinen kaupunki mahtuu
+     * rajaukseen: Suurmestarin palatsi ja Pyhän Johanneksen
+     * konkatedraali keskellä, Auberge de Castille lounaassa
+     * (kaupunginportin lähellä), Yläbarrakka-puutarhat etelässä
+     * Grand Harbourin yllä, Pyhän Elmon linnake ja Piirityskello-
+     * muistomerkki niemen kärjessä koillisessa. Rajausta ei ole
+     * kavennettu enempää, koska kohteet levittäytyvät koko niemen
+     * pituudelle kärjestä kannalle.
+     */
+    rajat: { pohjoinen: 35.9035, etela: 35.8925, lansi: 14.5085, ita: 14.5205 },
+    laajennus: 1.6,
+  },
   luxemburg: {
     /*
      * Luxemburgin vanhakaupunki (21.9.2026; omistajan päätös
