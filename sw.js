@@ -193,6 +193,7 @@ const SHELL = [
   './js/packs/linssi-ilmasto.js',
   './js/packs/linssi-kielet.js',
   './js/packs/linssi-tahdet.js',
+  './js/packs/linssi-muuttolinnut.js',
   './js/packs/linssi-tuulet.js',
   './js/packs/maailma.js',
   './js/packs/maailma-questions.js',
@@ -297,6 +298,8 @@ const SHELL = [
   './js/linssit/lippuarvaus-peli.js',
   './js/linssit/tahtitaivas.js',
   './js/linssit/tahtitaivas-laskenta.js',
+  './js/linssit/muuttolinnut.js',
+  './js/linssit/muuttolinnut-laskenta.js',
   './js/linssit/ihmisen-matka.js',
   './js/linssit/ihmisen-matka-data.js',
   // Livia-pulun valmiit kysymykset ja vastaukset jokaiselle pääjaksolle

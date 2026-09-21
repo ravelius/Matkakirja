@@ -99,10 +99,9 @@ export const HIOMASSA_B = [
   hiomassa('rautatiet', 'Rautatieverkon kasvu'),
   hiomassa('kirjapaino', 'Kirjapainon leviäminen'),
 ];
-/** C. Leikkilinssit (Codexin erä C, 6; Kellot, Lippuarvaus ja Tähtitaivas valmistuivat → tavalliset rivit yllä). */
+/** C. Leikkilinssit (Codexin erä C, 6; Kellot, Lippuarvaus, Tähtitaivas ja Muuttolinnut valmistuivat → tavalliset rivit yllä). */
 export const HIOMASSA_C = [
   hiomassa('yokartta', 'Yökartta'),
-  hiomassa('muuttolinnut', 'Muuttolinnut'),
   hiomassa('vuodenajat', 'Vuodenajat'),
 ];
 /** D. Katselulinssit (Codexin erä D, 4). */
@@ -112,7 +111,7 @@ export const HIOMASSA_D = [
   hiomassa('elaimet', 'Maailman eläimet'),
   hiomassa('suurimmat-kaupungit', 'Suurimmat kaupungit'),
 ];
-/** Koko hiomassa-sarja rekisteriin (43 riviä; keksinnöt, kellot, lippuarvaus ja tähdet ovat valmiita). */
+/** Koko hiomassa-sarja rekisteriin (42 riviä; keksinnöt ja neljä leikkilinssiä ovat valmiita). */
 export const HIOMASSA_SARJA = [...HIOMASSA_A, ...HIOMASSA_B, ...HIOMASSA_C, ...HIOMASSA_D];
 
 export const LINSSIT = [
@@ -128,6 +127,8 @@ export const LINSSIT = [
   { tunnus: 'lippuarvaus',  manner: null,            ikoni: 'assets/linssit/ikonit/linssi-lippuarvaus.webp', tuo: () => import('./lippuarvaus.js') },
   // Tähtitaivas: kolmas leikkilinssi (21.9.2026); tunnus 'tahdet' on Codexin ikonin nimi.
   { tunnus: 'tahdet',       manner: null,            ikoni: 'assets/linssit/ikonit/linssi-tahdet.webp', tuo: () => import('./tahtitaivas.js') },
+  // Muuttolinnut: neljäs leikkilinssi (21.9.2026).
+  { tunnus: 'muuttolinnut', manner: null,            ikoni: 'assets/linssit/ikonit/linssi-muuttolinnut.webp', tuo: () => import('./muuttolinnut.js') },
   { tunnus: 'pallo',        manner: null,            tuo: () => import('./pallo.js') },
   // { tunnus: 'leviaminen',   manner: 'africa',        tuo: () => import('./leviaminen.js') },
   // { tunnus: 'maaluvut',     manner: null,            tuo: () => import('./maaluvut.js') },
@@ -153,8 +154,8 @@ export const LINSSIT = [
    * @2; Codexin 512 px:n PNG-alkuperäiset jäävät toimituskansioon
    * ~/Documents/Codex/<pvm>/linssi-ikonit/, eivät repoon; yhteinen
    * messinkikehys linssi-kehys.webp).
-   * Keksinnöt (B1) sekä Kellot, Lippuarvaus ja Tähtitaivas (C) ovat
-   * valmiita linssejä (rivit yllä) eivätkä toistu tässä.
+   * Keksinnöt (B1) sekä Kellot, Lippuarvaus, Tähtitaivas ja Muuttolinnut
+   * (C) ovat valmiita linssejä (rivit yllä) eivätkä toistu tässä.
    * Kaupunki → tunnus -kytkentä on aarreluettelossa (Sisältökirjuri,
    * js/linssit/aarteet.js LINSSIAARTEET), ei tässä.
    */

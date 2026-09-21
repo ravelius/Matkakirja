@@ -250,6 +250,7 @@ const NIPUTTAMATTOMAT = new Set([
   'js/packs/linssi-leviaminen.js',
   'js/packs/linssi-maaluvut.js',
   'js/packs/linssi-muuttoliike.js',
+  'js/packs/linssi-muuttolinnut.js',
   'js/packs/linssi-tahdet.js',
   'js/packs/linssi-topografia-kuva.js',
   'js/packs/linssi-topografia.js',

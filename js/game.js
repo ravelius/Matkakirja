@@ -159,6 +159,7 @@ export const XP_PUZZLE = 25; // isoisän luonnoskirjan pulma ratkaistu
 export const XP_KELLOT = 20; // Kellot-linssin arvaus oikein (Livian kysymys)
 export const XP_LIPPUARVAUS = 20; // Lippuarvaus-linssin arvaus oikein (Livian kysymys)
 export const XP_TAHTITAIVAS = 20; // Tähtitaivas-linssin tähdistö oikein (Livian kysymys)
+export const XP_MUUTTOLINNUT = 20; // Muuttolinnut-linssin maa oikein (Livian kysymys)
 export const XP_EXPLORE = 15; // kaupungin tutkiminen ilman laattaa
 export const EXPLORE_REWARD = 50; // löytöpalkkio oikeasta tutkimisvastauksesta
 export const KAARI_YRITYKSET = 2; // kohtaamista saa yrittää näin monta kertaa
@@ -1232,6 +1233,25 @@ export class Game {
       icon: 'suurennuslasi', sub: tahdisto, tilanne: 'peli.tahtitaivas.oikein',
     });
     return XP_TAHTITAIVAS;
+  }
+
+  /**
+   * MUUTTOLINNUT (Fable 21.9.2026, neljäs leikkilinssi): Livia kysyy,
+   * missä maassa parvi on tiettynä kuukautena; oikea napautus tuo
+   * XP_MUUTTOLINNUT tp.
+   */
+  vastaaMuuttolintuihin(player, oikein, { laji = '', maa = '' } = {}) {
+    if (!player || this.phase === 'over') return 0;
+    if (!oikein) {
+      this.say(player.id, `${player.name} arvasi muuttolinnun maan väärin (${laji}: ${maa}).`);
+      return 0;
+    }
+    this.awardXp(player, XP_MUUTTOLINNUT);
+    this.say(player.id, `${player.name} tiesi, missä ${laji} on (${maa}): +${XP_MUUTTOLINNUT} tp.`);
+    this.emit('aid', `Parvi löytyi: +${XP_MUUTTOLINNUT} tp`, {
+      icon: 'suurennuslasi', sub: `${laji} · ${maa}`, tilanne: 'peli.muuttolinnut.oikein',
+    });
+    return XP_MUUTTOLINNUT;
   }
 
   /**
