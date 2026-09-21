@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1998, teksti: 'Nimien liukuva koko (E2)' },
   { v: 1997, teksti: 'Sulavuus E3+E4: zoom sormien kohtaan, liukuva rulla' },
   { v: 1996, teksti: 'Sulavuus E2: tukitaso, muistikatto, kerma+sumu' },
   { v: 1995, teksti: 'BEL/CYP/MLT/SVK/SVN hahmotelmat' },
