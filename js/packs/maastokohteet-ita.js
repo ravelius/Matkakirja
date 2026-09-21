@@ -60,6 +60,17 @@ export const MAASTOKOHTEET_ITA = [
       + 'sillä on kuudella maalla: Albanialla, Bosnia ja Hertsegovinalla, Kroatialla, '
       + 'Italialla, Montenegrolla ja Slovenialla.',
     lahde: 'en-Wikipedia "Adriatic Sea", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Mistä salmesta Adrianmeri ulottuu Pon laaksoon asti?',
+      vaihtoehdot: [
+        'Otranton salmesta',
+        'Gibraltarin salmesta',
+        'Messinan salmesta',
+        'Bosporin salmesta',
+      ],
+      oikea: 0,
+      fakta: 'Adrianmeri ulottuu Otranton salmesta luoteeseen Pon laaksoon asti.',
+    },
   },
   {
     id: 'tyrrhenanmeri',

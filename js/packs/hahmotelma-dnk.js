@@ -129,6 +129,17 @@ export const HAHMOTELMA_DNK = [
       + 'Siirron ansiosta torni säilyy odotusten mukaan ainakin noin vuoteen 2060.',
     lahde: 'en-Wikipedia "Rubjerg Knude Lighthouse", johdanto-osa ja osio "Description and '
       + 'history" (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Kuinka paljon rantaviiva syöpyy keskimäärin vuodessa Rubjerg Knudella?',
+      vaihtoehdot: [
+        '1,5 metriä',
+        '0,5 metriä',
+        '3 metriä',
+        '5 metriä',
+      ],
+      oikea: 0,
+      fakta: 'Rantaviiva syöpyy Rubjerg Knudella keskimäärin 1,5 metriä vuodessa.',
+    },
   },
   {
     id: 'hahmotelma-raabjerg-mile',

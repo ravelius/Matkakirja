@@ -34,7 +34,17 @@
  * Bledin tekstissä. Kranjska Gora, Sečovlje, Radovljica ja Kropa jäivät pois
  * (liian lähellä toisia).
  *
- * === KUVAT ===========================================================
+ * LAAJENNUS 21.9.2026 (Sonnet-sisältösessio): kuusi uutta nostoa täydentää
+ * listan 30:een uusilla aihepiireillä ja seuduilla, joita 24 kohteen listalla
+ * ei vielä ollut: Koper (kauppa, ainoa satamakaupunki), Ljubljana (historia,
+ * pääkaupunki puuttui listalta kokonaan), Kočevje (kulttuuri, saksankielinen
+ * gottschee-kielisaari), Vipava (ruoka, viinilaakso lännessä), Metlika
+ * (kulttuuri, Bela Krajinan kansanperinne Kolpa-joen varrella) ja Pohorje
+ * (vuori, Slovenian ainoa piikivilajitteinen vuoristo). Kaikki kuusi ovat
+ * riittävän kaukana toisistaan ja aiemmista 24 kohteesta.
+ *
+ * === KUVAT ====================================================  },
+  {
  *
  * Kuvat ovat JPEG-tiedostoja (1800 px tai alkuperäinen, jos se on
  * pienempi), nimeltään `svn-nosto-<id>-<8 hex sha256>.jpg`, ja osoite on
@@ -45,14 +55,16 @@
  * sarjasta. Tiedostot ovat kansiossa
  * /Users/samireivinen/Matkakirja-nostot-kuvat/svn/.
  *
- * === MIKSI TÄMÄ REITTI (KOHDE_MAAT) ==================================
+ * === MIKSI TÄMÄ REITTI (KOHDE_MAAT) ===========================  },
+  {
  *
  * Sama reitti kuin muidenkin EU-maiden hahmotelmilla (js/fokuskohteet.js
  * liittää rivit KOHDE_MAAT.SVN:ään). `lahi: true` on sama lähizoomiportti
  * kuin Ranskan hahmotelmalla (js/pallolauta/nostot.js
  * PAAKARTAN_MERKKIKATTO).
  *
- * === KOORDINAATIT ====================================================
+ * === KOORDINAATIT =============================================  },
+  {
  *
  * Jokaisen asteet on haettu en-Wikipedian rajapinnasta
  * (`action=query&prop=coordinates`, haettu 19.9.2026) ja artikkelin nimi
@@ -1790,5 +1802,406 @@ export const HAHMOTELMA_SVN = [
         + 'en-Wikipedia "Žiče Charterhouse", tarkistettu 21.9.2026.',
       url: 'https://en.wikipedia.org/wiki/%C5%BDi%C4%8De_Charterhouse',
     },
+  },
+  {
+    id: 'hahmotelma-koper',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/svn-nosto-koper-4d753277.jpg',
+      lyhyt: 'Koperin Pretorska palača eli pretorin palatsi kaupungin päätorilla.',
+      selite: 'Valkoinen, hammastettuine harjoineen ja kaarikäytävineen koristeltu palatsi '
+        + 'hallitsee Koperin päätoria. Rakennus toimi kaupungin hallintorakennuksena jo '
+        + 'Venetsian tasavallan aikana.',
+      lahde: 'Valokuva: Fred Romero from Paris, France, Wikimedia Commons (CC BY 4.0).',
+      tekija: 'Fred Romero from Paris, France',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Koper_-_Pretorska_pala%C4%8Da_(53634284886).jpg',
+      lisenssi: 'CC BY 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260921/svn-nosto-koper-8d7d2ecf.jpg',
+        lyhyt: 'Koper eli Capodistria noin vuonna 1900, vielä lähes saarena lahden takana.',
+        selite: 'Vanhassa photochrom-kuvassa kaupunki erottuu kapealla niemellä meren '
+          + 'ympäröimänä, ja pitkä penger yhdistää sen mantereeseen. Etualalla on '
+          + 'uimalaituri ja pieniä purjeveneitä.',
+        lahde: 'Valokuva: Tuntematon tekijä, Wikimedia Commons (Public domain).',
+        tekija: 'Tuntematon tekijä',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Capodistria_1900.jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0',
+      },
+    ],
+    nimi: 'Koper',
+    tyyppi: 'kauppa',
+    lahi: true,
+    kysymykset: [
+      'Miksi Koper sai roomalaisajan jälkeen nimen Justinopolis?',
+      'Miten Triesten vapaasatama-asema vuonna 1719 vaikutti Koperin kauppaan?',
+    ],
+    korostukset: ['Justinopolis|Justinopolikseksi', 'Capodistria|Capodistria'],
+    nappi: 'Kauppa siirtyi Triesteen jo 1719; Koperin oma rautatie sisämaahan valmistuu vasta '
+      + 'vuonna 1967',
+    // 13.7333 E / 45.55 N — en-Wikipedia "Koper"
+    laudat: {
+      maailmankartta: { x: 6291.1, y: 1579.1 },
+      europe: { x: 474.9, y: 695.6 },
+    },
+    teksti: 'Koper syntyi roomalaisajan saarikaupunkina, jota kutsuttiin ensin Aegidaksi ja '
+      + 'sittemmin, kun trieteläiset pakenivat sinne langobardien hyökkäystä vuonna 568, '
+      + 'Justinopolikseksi keisari Justinianus II:n mukaan. Kaupunki liittyi Venetsian '
+      + 'tasavaltaan vuonna 1278 ja kasvoi koko Venetsian Istrian pääkaupungiksi nimellä '
+      + 'Caput Histriae, josta tuli myöhemmin italiaksi Capodistria; parhaimmillaan '
+      + 'asukkaita oli yli 10 000, ennen kuin 1500-luvun ruttoaallot verottivat väestöä '
+      + 'rajusti. Kaupunki oli tunnettu jo 1100-luvulta lähtien suolapadoistaan, joilla '
+      + 'merivettä haihdutettiin altaissa. Kun Trieste julistettiin vapaasatamaksi vuonna '
+      + '1719, Koper menetti kauppamonopolinsa eikä koskaan saanut asemaansa takaisin. '
+      + 'Napoleonin sotien jälkeen kaupunki siirtyi Itävallan haltuun vuonna 1813 ja kuului '
+      + 'Itävallan Primorskaan aina vuoteen 1918 asti.',
+    lahde: 'en-Wikipedia "Koper", johdanto-osa ja osio "History" (tarkistettu 21.9.2026).',
+    visa: {
+      kysymys: 'Minä vuonna Trieste julistettiin vapaasatamaksi ja Koper menetti '
+        + 'kauppansa monopoliaseman?',
+      vaihtoehdot: [
+        '1817',
+        '1719',
+        '1873',
+        '1967',
+      ],
+      oikea: 1,
+      fakta: 'Koper sai oman rautatieyhteytensä sisämaahan vasta vuonna 1967 - lähes 250 '
+        + 'vuotta Triesten vapaasatamajulistuksen jälkeen ja peräti 94 vuotta myöhemmin '
+        + 'kuin Fiumeen (Rijeka) vuonna 1873 valmistunut rata, joka vei Unkarin kauppaa '
+        + 'pois Triestestä.',
+    },
+  },
+  {
+    id: 'hahmotelma-ljubljana',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/svn-nosto-ljubljana-f5494fc1.jpg',
+      lyhyt: 'Ljubljanan linna kohoaa metsäisellä kukkulalla vanhankaupungin talojen '
+        + 'yläpuolella.',
+      selite: 'Keskiaikainen linna näkyy kukkulan laella kaupungin kattojen ja puiden '
+        + 'takaa. Sen korkea torni liehuvine lippuineen erottuu selvästi taivasta vasten.',
+      lahde: 'Valokuva: Antimuonium, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Antimuonium',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ljubljanski_grad_from_Kongresni_trg,_Ljubljana,_2025.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260921/svn-nosto-ljubljana-035995a3.jpg',
+        lyhyt: 'Lohikäärmesilta ylhäältä kuvattuna: patsaat vartioivat sillan kaiteiden '
+          + 'päitä.',
+        selite: 'Ilmakuva näyttää sillan neljä pronssista lohikäärmepatsasta siipineen '
+          + 'levällään sillan kulmissa. Silta ylittää Ljubljanicajoen keskellä '
+          + 'vanhaakaupunkia.',
+        lahde: 'Valokuva: George M. Groutas from Limassol, Cyprus, Wikimedia Commons '
+          + '(CC BY 2.0).',
+        tekija: 'George M. Groutas from Limassol, Cyprus',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ljubljana_Castle_(52931125417).jpg',
+        lisenssi: 'CC BY 2.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+      },
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260921/svn-nosto-ljubljana-34cb4406.jpg',
+        lyhyt: 'Vanha postikortti vuodelta 1904: silta ja sen takana Ljubljanan linna '
+          + 'kukkulalla.',
+        selite: 'Mustavalkoisessa postikortissa kaareva kivisilta ylittää joen, ja '
+          + 'taustalla kohoaa linna kukkulan päällä. Kortin teksti on saksaksi "Franz '
+          + 'Josefsbrücke und Burg", sillan alkuperäinen juhlanimi keisari Frans Joosefin '
+          + 'mukaan.',
+        lahde: 'Valokuva: Stengel & Co., Wikimedia Commons (Public domain).',
+        tekija: 'Stengel & Co.',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Dragon_bridge,_Ljubljana,_in_1904.jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0',
+      },
+    ],
+    nimi: 'Ljubljana',
+    tyyppi: 'historia',
+    lahi: true,
+    kysymykset: [
+      'Kuka tarun mukaan surmasi lohikäärmeen Ljubljanican lähteellä, ja miksi hän oli '
+        + 'sinne matkalla?',
+      'Mitä Ljubljanalle tapahtui huhtikuussa 1895, ja miten se näkyy kaupungin '
+        + 'arkkitehtuurissa vieläkin?',
+    ],
+    korostukset: ['Iason|Iason', 'Lohikäärmesilta|Lohikäärmesillan'],
+    nappi: 'Kaupunki on 22 vuotta ennen suurta maanjäristystä; nykyinen Lohikäärmesilta '
+      + 'valmistuu vasta 1901',
+    // 14.5061 E / 46.0514 N — en-Wikipedia "Ljubljana"
+    laudat: {
+      maailmankartta: { x: 6316.9, y: 1558.2 },
+      europe: { x: 489.7, y: 682.4 },
+    },
+    teksti: 'Ljubljana on Kranin herttuakunnan ja nykyisen Slovenian pääkaupunki '
+      + 'Ljubljanicajoen rannalla, ja sen juuret ulottuvat roomalaiseen Emona-nimiseen '
+      + 'leiriin, jonka legioonat perustivat noin 50 eaa. Vanhan tarun mukaan kaupungin '
+      + 'perusti kreikkalainen sankari Iason, joka matkalla kultaisen taljan kanssa kotiin '
+      + 'surmasi joen lähteellä lymynneen lohikäärmeen; lohikäärmeestä tuli kaupungin '
+      + 'vaakunaeläin ja myöhemmin Lohikäärmesillan koriste-eläin. Ljubljanan linna kohoaa '
+      + 'kaupungin yllä kukkulalla, ja kaupungista tuli Kranin pääkaupunki Habsburgien '
+      + 'alaisuudessa vuonna 1335. Voimakas maanjäristys tuhosi suuren osan '
+      + 'vanhastakaupungista jo vuonna 1511, mutta vielä tuhoisampi järistys iski '
+      + 'huhtikuussa 1895, jolloin 31 000 asukkaan kaupungista tuhoutui noin kymmenesosa '
+      + '1 400 rakennuksesta ja 21 ihmistä kuoli. Jälleenrakennus toi kaupunkiin runsaasti '
+      + 'wieniläistä secession-tyylin arkkitehtuuria.',
+    lahde: 'en-Wikipedia "Ljubljana", johdanto-osa ja osiot "History", "Earthquakes" '
+      + '(tarkistettu 21.9.2026).',
+    visa: {
+      kysymys: 'Minä vuonna Ljubljanaa kohtasi suuri maanjäristys, joka muutti kaupungin '
+        + 'ilmettä pysyvästi?',
+      vaihtoehdot: [
+        '1511',
+        '1873',
+        '1895',
+        '1918',
+      ],
+      oikea: 2,
+      fakta: 'Nykyinen Lohikäärmesilta rakennettiin vasta vuonna 1901, ja sen virallinen '
+        + 'nimi oli aluksi keisari Franz Joosef I:n juhlasilta; sillan lohikäärmepatsaat '
+        + 'viittaavat kaupungin perustamistaruun.',
+    },
+  },
+  {
+    id: 'hahmotelma-kocevje',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/svn-nosto-kocevje-53f65d06.jpg',
+      lyhyt: 'Rinža-joki lumpeenlehtien peittämänä ja Pyhän Bartolomeuksen kirkon tornit '
+        + 'taustalla.',
+      selite: 'Joen tyyni vesi on lähes kokonaan vihreiden lumpeenlehtien peitossa. '
+        + 'Kaukana kohoavat kirkon kaksi terävähuippuista tornia heijastuen veteen.',
+      lahde: 'Valokuva: Mihael Grmek, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Mihael Grmek',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ko%C4%8Devje_01.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260921/svn-nosto-kocevje-e9949c87.jpg',
+        lyhyt: 'Kočevjen pääkatu vuonna 1930, sama kirkko taustalla.',
+        selite: 'Vanhassa mustavalkoisessa valokuvassa kaupunkilaiset kävelevät kadulla, '
+          + 'ja katua reunustavat kaksikerroksiset talot. Kadun päässä kohoavat samat '
+          + 'kirkontornit kuin joen varrella otetussa kuvassa.',
+        lahde: 'Valokuva: Ilustracija, Wikimedia Commons (Public domain).',
+        tekija: 'Ilustracija',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ko%C4%8Devje_1930.jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0',
+      },
+    ],
+    nimi: 'Kočevje',
+    tyyppi: 'kulttuuri',
+    lahi: true,
+    kysymykset: [
+      'Mistä gottscheelaisten esi-isät tulivat Kočevjen seudulle 1300-luvulla, ja kuka '
+        + 'heidät kutsui?',
+      'Mitä kielisaarelle tapahtui, kun Itävalta-Unkari hajosi vuonna 1918?',
+    ],
+    korostukset: ['gottscheelaiset|gottscheelaisista', 'Ortenburgin kreivit|Ortenburgin kreiveille'],
+    nappi: 'Vuonna 1873 Kočevje on yhä vankka saksankielinen kielisaari Krainin metsissä; '
+      + 'yhteisön loppu on vasta 1940-luvulla',
+    // 14.8594 E / 45.643 N — en-Wikipedia "Kočevje"
+    laudat: {
+      maailmankartta: { x: 6328.6, y: 1575.2 },
+      europe: { x: 496.5, y: 693.2 },
+    },
+    teksti: 'Kočevje sijaitsee Etelä-Sloveniassa Rinža-joen varrella keskellä laajaa '
+      + 'metsäaluetta, jonka Akvileian patriarkka luovutti 1300-luvulla Ortenburgin '
+      + 'kreiveille. Kreivit kutsuivat alueelle saksankielisiä uudisraivaajia Tirolista ja '
+      + 'Kärntenistä noin vuodesta 1330 lähtien, ja heistä tuli tunnettuja nimellä '
+      + 'gottscheelaiset (slovenian kielellä Kočevarji): he raivasivat metsää ja '
+      + 'perustivat kymmeniä kyliä omalla, muusta saksasta eristyneellä murteellaan. '
+      + 'Kočevje sai markkinaoikeudet vuonna 1377 ja kaupunkioikeudet vuonna 1471, ja se '
+      + 'kuului satojen vuosien ajan Itävallan Krainiin. Kielisaari säilyi lähes 600 '
+      + 'vuotta, kunnes Itävalta-Unkarin hajoaminen vuonna 1918 teki gottscheelaisista '
+      + 'yhtäkkiä vähemmistön uudessa slaavilaisvaltiossa, ja toisen maailmansodan '
+      + 'myllerryksissä lähes koko yhteisö siirrettiin pois alueelta 1940-luvun alussa.',
+    lahde: 'en-Wikipedia "Kočevje", johdanto-osa ja osio "History" (tarkistettu '
+      + '21.9.2026).',
+  },
+  {
+    id: 'hahmotelma-vipava',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/svn-nosto-vipava-5f8367d2.jpg',
+      lyhyt: 'Vipavan vanhankaupungin talot joen rannalla, taustalla kalliomuodostuma.',
+      selite: 'Vaaleat ja punakattoiset talot rivissä Vipava-joen rannalla, jonka vesi '
+        + 'virtaa vihreänä ohi. Taustalla kohoaa metsäinen vuori ja terävä kalliohuippu.',
+      lahde: 'Valokuva: Vid Pogacnik, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Vid Pogacnik',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vipava_town.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260921/svn-nosto-vipava-d383bb45.jpg',
+        lyhyt: 'Vipavan lähteet ja vanha Baumkircherin torni kivisillan luona.',
+        selite: 'Kivinen kaarisilta ylittää turkoosinvihreän lähdeveden, ja rannalla '
+          + 'seisoo pyöreä, historiallinen Baumkircherin torni. Vipavan kaupungin '
+          + 'ympärillä pulppuaa lukuisia lähteitä.',
+        lahde: 'Valokuva: Vid Pogacnik, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Vid Pogacnik',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vipava_sources.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
+    nimi: 'Vipava',
+    tyyppi: 'ruoka',
+    lahi: true,
+    kysymykset: [
+      'Mistä sanasta Vipavan nimen uskotaan juontuvan, ja mitä se tarkoittaa?',
+      'Mikä on burja, ja miten se vaikuttaa Vipavanlaakson maisemaan?',
+    ],
+    korostukset: ['vip|vip', 'burja|burja-tuuli'],
+    nappi: 'Laakso kuuluu Kraniniin Itävallan puolella; viinitilat ovat jo vuosisatoja '
+      + 'vanhoja, sähkövaloa ei vielä ole',
+    // 13.9624 E / 45.8476 N — en-Wikipedia "Vipava, Slovenia"
+    laudat: {
+      maailmankartta: { x: 6298.7, y: 1566.7 },
+      europe: { x: 479.3, y: 687.8 },
+    },
+    teksti: 'Vipava on pieni kaupunki Länsi-Sloveniassa, Vipava-joen lukuisten lähteiden '
+      + 'äärellä ylä-Vipavanlaaksossa. Nimi juontuu kelttiläisestä sanasta vip, joka '
+      + 'tarkoittaa jokea, ja seutu on ollut asuttu jo esiroomalaisella ajalla illyyrien ja '
+      + 'kelttien toimesta. Laakso tunnetaan lauhkeasta, lähes Välimeren ilmastostaan, '
+      + 'johon vaikuttavat sekä lämmin lounaistuuli että ajoittain jopa 200 kilometriä '
+      + 'tunnissa puhaltava koillinen burja-tuuli. Suotuisa ilmasto tekee laaksosta '
+      + 'Slovenian merkittävän viinialueen, jossa kasvatetaan erityisesti '
+      + 'valkoviinirypäleitä kuten chardonnayta ja sauvignon blancia sekä paikallisia '
+      + 'lajikkeita, ja lisäksi laaksossa viljellään persikoita, aprikooseja, '
+      + 'persimoneja ja viikunoita. Vipavan kaupunki itse mainitaan asiakirjoissa ensi '
+      + 'kerran vuonna 1367, ja se siirtyi Habsburgien haltuun vuonna 1501 sekä liitettiin '
+      + 'Kraniniin vuonna 1535.',
+    lahde: 'en-Wikipedia "Vipava, Slovenia" ja "Vipava Valley", johdanto-osat '
+      + '(tarkistettu 21.9.2026).',
+  },
+  {
+    id: 'hahmotelma-metlika',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/svn-nosto-metlika-051a6839.jpg',
+      lyhyt: 'Metlikan linna vanhoine muureineen ja punaisine kattoineen.',
+      selite: 'Vaaleaseinäinen, punakattoinen linna avoimine kaarikäytävineen seisoo '
+        + 'pienen tien varrella. Linna on jälleenrakennettu barokkiasuun 1700-luvun '
+        + 'suurpalon jälkeen.',
+      lahde: 'Valokuva: Ajznponar, Wikimedia Commons (CC0).',
+      tekija: 'Ajznponar',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Metlika_Castle_01.jpg',
+      lisenssi: 'CC0',
+      lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260921/svn-nosto-metlika-548d8baf.jpg',
+        lyhyt: 'Valvasorin 1600-luvun kaiverrus Metlikan linnasta ja kaupungista.',
+        selite: 'Vanhassa kaiverruksessa linna ja kaupunki kohoavat kukkulalla peltojen '
+          + 'ja vuorten keskellä. Johann Weikhard von Valvasor kuvasi Metlikan '
+          + 'samaan tapaan kuin monet muutkin Krainin linnat 1600-luvun lopulla.',
+        lahde: 'Valokuva: Johann Weikhard von Valvasor, Wikimedia Commons (Public '
+          + 'domain).',
+        tekija: 'Johann Weikhard von Valvasor',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Valvasor_-_Grad_in_mesto_Metlika.jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0',
+      },
+    ],
+    nimi: 'Metlika',
+    tyyppi: 'kulttuuri',
+    lahi: true,
+    kysymykset: [
+      'Mitä Metlikalle tapahtui suuressa tulipalossa vuonna 1705?',
+      'Kuka on Zeleni Jurij eli Vihreä Yrjö, ja mitä hänen saapumisensa juhlii?',
+    ],
+    korostukset: ['Zeleni Jurij|Zeleni Jurij', 'tamburica|tamburica-soittimin'],
+    nappi: 'Ottomaanien uhka on jo historiaa; kansanpukujen ja Zeleni Jurijin oma juhla '
+      + 'syntyy vasta 1930-luvulla',
+    // 15.32 E / 45.6517 N — en-Wikipedia "Metlika"
+    laudat: {
+      maailmankartta: { x: 6344, y: 1574.8 },
+      europe: { x: 505.3, y: 693 },
+    },
+    teksti: 'Metlika on Etelä-Slovenian Bela Krajinan eli Valko-Krainin pääkaupunki '
+      + 'Kolpa-joen rannalla, aivan Kroatian rajalla. Kaupunki mainitaan asiakirjoissa '
+      + 'ensi kerran vuonna 1228 nimellä Metlica, ja se sai kaupunkioikeudet vuonna 1335 '
+      + 'kuuluttuaan jo aiemmin Kranin merkkikreivikuntaan. Ottomaanien ratsujoukot '
+      + 'tekivät alueelle toistuvia hävitysretkiä 1400- ja 1500-luvuilla, ja vuoden 1705 '
+      + 'suurpalo tuhosi koko kaupungin, minkä jälkeen sekä Metlikan linna että Pyhän '
+      + 'Nikolauksen kirkko rakennettiin uudelleen barokkityyliin. Bela Krajina tunnetaan '
+      + 'omaleimaisesta kansankulttuuristaan: alueen tamburica-soittimin säestetyt '
+      + 'kansantanssit ja puvut sekä satoja vuosia vanha Zeleni Jurij eli Vihreä Yrjö '
+      + '-kevätperinne elävät yhä joka kesä järjestettävässä Jurjevanje-juhlassa.',
+    lahde: 'en-Wikipedia "Metlika" ja "Jurjevanje", johdanto-osat (tarkistettu '
+      + '21.9.2026).',
+  },
+  {
+    id: 'hahmotelma-pohorje',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/svn-nosto-pohorje-0586c0b3.jpg',
+      lyhyt: 'Pohorjen metsäinen vuoristomaisema laajana panoraamana.',
+      selite: 'Vihreät metsäiset kukkulat ja niittyaukeamat levittäytyvät silmänkantamattomiin. '
+        + 'Kaukaisuudessa erottuu vielä lisää metsäisiä vuoria.',
+      lahde: 'Valokuva: Andrej Jakobčič, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Andrej Jakobčič',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Mariborsko_pohorje_panorama.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260921/svn-nosto-pohorje-741bf771.jpg',
+        lyhyt: 'Šumikin puron vesi solisee sammaleisten kivien välissä.',
+        selite: 'Pieni koski putoaa sammalen peittämien lohkareiden välistä metsän '
+          + 'suojassa. Kosteat kivet hohtavat kirkkaan vihreinä.',
+        lahde: 'Valokuva: Jernej Borovinšek, Wikimedia Commons (CC BY-SA 2.5 si).',
+        tekija: 'Jernej Borovinšek',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:%C5%A0umik_waterfall_(2).jpg',
+        lisenssi: 'CC BY-SA 2.5 si',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.5/si',
+      },
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260921/svn-nosto-pohorje-71814c40.jpg',
+        lyhyt: 'Šumikin vesiputous vuonna 1913, vanha mustavalkoinen valokuva.',
+        selite: 'Vesiputous syöksyy kapean kalliokourun läpi mustavalkoisessa, yli sata '
+          + 'vuotta vanhassa valokuvassa. Kuva on otettu samasta putouksesta kuin '
+          + 'nykyaikainen lähikuva.',
+        lahde: 'Valokuva: Tuntematon tekijä, Wikimedia Commons (Public domain).',
+        tekija: 'Tuntematon tekijä',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Slap_%C5%A0umik_(Lobnica_na_Pohorju)_1913.jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0',
+      },
+    ],
+    nimi: 'Pohorje',
+    tyyppi: 'vuori',
+    lahi: true,
+    kysymykset: [
+      'Mikä teki Pohorjesta 1600-luvulta lähtien lasinvalmistuksen keskuksen?',
+      'Minne Pohorjen lasitehtaiden tuotteita vietiin parhaimmillaan?',
+    ],
+    korostukset: ['Stara glažuta|Stara glažuta', 'Črni vrh|Črni vrh'],
+    nappi: 'Vuoren vanhat lasitehtaat ovat jo sammuneet; ensimmäinen hiihtokeskus Rogla '
+      + 'avataan vasta 1970-luvulla',
+    // 15.4667 E / 46.5333 N — en-Wikipedia "Pohorje"
+    laudat: {
+      maailmankartta: { x: 6348.9, y: 1538.1 },
+      europe: { x: 508.2, y: 669.8 },
+    },
+    teksti: 'Pohorje on laaja, enimmäkseen metsäinen keskikorkea vuoristo '
+      + 'Koillis-Sloveniassa Draava-joen eteläpuolella, Maribor’in, Dravogradin ja '
+      + 'Slovenske Konjicen väliin jäävällä alueella. Sen korkein kohta on Musta huippu '
+      + 'eli Črni vrh, 1 543 metriä merenpinnan yläpuolella, ja Pohorje on Slovenian '
+      + 'ainoa vuoristo, joka koostuu kokonaan piikivilajitteisesta kivestä, '
+      + 'keskiosiltaan graniitin sukuisesta syväkivestä. Yli 70 prosenttia alueesta on '
+      + 'metsän peitossa, ja puun, veden ja hiekan yhdistelmä teki Ruusen Pohorjesta '
+      + '1600-luvulta lähtien lasinvalmistuksen keskuksen: parhaimmillaan vuorilla toimi '
+      + 'viisi lasitehdasta, joiden tuotteita vietiin aina Wienin hoviin, Saksaan, '
+      + 'Böömiin, Egyptiin ja itämaille asti. Vanhin tunnettu tehdas, niin kutsuttu Stara '
+      + 'glažuta, toimi Lobnican laaksossa Šumikin yläpuolella vuosina 1692–1793, kauan '
+      + 'ennen kuin alueesta tuli 1900-luvulla hiihtomatkailun keskus.',
+    lahde: 'en-Wikipedia "Pohorje", johdanto-osa (tarkistettu 21.9.2026); lisätietona '
+      + 'lasitehtaista Doživi Ruše -paikallishistoriasivusto (tarkistettu 21.9.2026).',
   },
 ];

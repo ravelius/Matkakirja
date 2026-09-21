@@ -240,6 +240,17 @@ export const HAHMOTELMA_NOR = [
       + 'tarkoittavan ilveksen jalkaa tai liittyvän revontuliin, sillä saaristo on nykyään myös talvisen '
       + 'revontulimatkailun kohde.',
     lahde: 'en-Wikipedia "Lofoten", johdanto-osa ja osiot "Etymology", "History" (tarkistettu 21.9.2026).',
+    visa: {
+      kysymys: 'Mihin kahteen asiaan Lofoten-nimen alkuperän on arveltu liittyvän?',
+      vaihtoehdot: [
+        'Karhun tassuun tai revontuliin',
+        'Susien ulvontaan tai merenkäyntiin',
+        'Ilveksen jalkaan tai vuorenhuippuihin',
+        'Ilveksen jalkaan tai revontuliin',
+      ],
+      oikea: 3,
+      fakta: 'Lofoottien nimen alkuperä on kiistanalainen; saaristo on nykyään myös talvisen revontulimatkailun kohde.',
+    },
   },
   {
     id: 'hahmotelma-saamelaiset',

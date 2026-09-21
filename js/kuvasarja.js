@@ -239,9 +239,19 @@ export function piirraKuvasarja(ui, sailio, kuvat, {
     if (e.defaultPrevented || e.altKey || e.ctrlKey || e.metaKey) return;
     const kohde = e.target;
     if (kohde instanceof Element && kohde.closest('input, textarea, select, [contenteditable="true"]')) return;
-    // Piilotettu kehys (esim. peittävä suurennos tai toinen kortti
-    // päällä) ei vastaa näppäimiin.
-    if (kehys.hidden || !(kehys.getClientRects?.().length)) return;
+    /*
+     * Piilotettu kehys (esim. peittävä suurennos tai toinen kortti
+     * päällä) ei vastaa näppäimiin. Näkyvyys luetaan NAPISTA eikä
+     * kehyksestä (Sonnet 1, 21.9.2026, nostokortin kaksipalstataitto):
+     * leveällä ruudulla kehys (`figure.fokusnosto-kuva`) saa
+     * `display: contents`, jotta sen lapset nousevat suoraan gridin
+     * soluiksi (css/fokusnosto.css osio 13) — ja `display: contents`
+     * -elementin `getClientRects()` on AINA tyhjä, vaikka se olisi
+     * täysin näkyvissä. Nappi (kuvanapin varsinainen laatikko) ei
+     * koskaan saa `display: contents`ia, joten sen laatikko kertoo
+     * näkyvyyden oikein kummassakin taitossa.
+     */
+    if (kehys.hidden || !(nappi.getClientRects?.().length)) return;
     e.preventDefault();
     siirry(e.key === 'ArrowRight' ? 1 : -1);
   };

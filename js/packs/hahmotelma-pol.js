@@ -330,6 +330,17 @@ export const HAHMOTELMA_POL = [
       + 'eläimistö, ja sen nähtävyyksiin kuuluvat Gosańin ja Kawczan Góran '
       + 'merenrantajyrkänteet sekä visenttien suojelualue.',
     lahde: 'en-Wikipedia "Wolin National Park", koko artikkeli (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Mitkä merenrantajyrkänteet kuuluvat Wolinin puiston nähtävyyksiin?',
+      vaihtoehdot: [
+        'Międzyzdroje ja Świnoujście',
+        'Sopot ja Gdynia',
+        'Gosań ja Kawcza Góra',
+        'Rowokol ja Słowiński',
+      ],
+      oikea: 2,
+      fakta: 'Puiston nähtävyyksiin kuuluvat Gosańin ja Kawczan Góran merenrantajyrkänteet.',
+    },
   },
   {
     id: 'hahmotelma-tarnica',
