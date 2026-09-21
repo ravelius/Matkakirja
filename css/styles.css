@@ -17211,9 +17211,21 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
  */
 .vinkkisivu .vinkki-selitys { max-width: 46em; }
 
-/* Ajankohta noston otsikkorivillä: pieni konekirjoitusleima. */
+/*
+ * Ajankohta noston otsikkorivillä: pieni konekirjoitusleima omassa
+ * laatikossaan (omistajan lisäys 21.9.2026 reaktiouudistuksen
+ * yhteydessä — kaappaus Ranskan lehden Historia-osiosta: "vuosiluku
+ * otsikkorivin oikeassa reunassa OMASSA PIENESSÄ LAATIKOSSA tai
+ * värillisellä taustalla"). Haalea ruostesävy ja ohut kaiverrusreunus
+ * nostavat leiman hieman irti otsikosta ilman somen tagin näköä —
+ * sama muste kuin muualla lehdessä, ei uutta väriä.
+ */
 .nosto-aika {
   margin-left: auto;
+  padding: 0.12rem 0.45rem;
+  border: 1px solid rgba(122, 85, 20, 0.4);
+  border-radius: 4px;
+  background: rgba(156, 107, 23, 0.12);
 }
 
 /*
@@ -23604,14 +23616,14 @@ dialog.minipopup:focus-visible { outline: none; }
 }
 
 /* ------------------------------------------------------------------ *
- * REAKTIOT — viisi kaiverrettua symbolia sisällön alalaidassa ja
- * lehden väliotsikoiden päässä (js/reaktiot.js).
+ * REAKTIOT — sydän ja peukku alas sisällön alalaidassa ja lehden
+ * väliotsikoiden päässä (js/reaktiot.js; UUDISTETTU 21.9.2026: viisi
+ * symbolia ja lepotila korvattiin kahdella suoraan näkyvällä napilla).
  *
- * LEPOTILASSA YKSI NAPPI: voittajasymboli ja äänimäärä lähderivin
- * kokoisena, samaa mustetta kuin krediitti, ilman taustaa ja ilman
- * kehystä ennen kuin siihen koskee. Napautus levittää viisi symbolia
- * äänimäärineen samalle riville. Väri kirkastuu vasta osoitettaessa —
- * silloin nappi kertoo olevansa nappi.
+ * KAKSI NAPPIA, AINA NÄKYVISSÄ. Ei enää lepotilaa eikä avattavaa
+ * valikkoa: sydän ja peukku alas ovat samaa mustetta kuin krediitti,
+ * ilman taustaa ja ilman kehystä ennen kuin niihin koskee. Väri
+ * kirkastuu vasta osoitettaessa — silloin nappi kertoo olevansa nappi.
  *
  * Rivi kelluu kuvien alapuolelle (clear) kuten lähderivi ja
  * pöllöpoiminnat, jottei se päädy kainalokuvan viereen.
@@ -23624,6 +23636,27 @@ dialog.minipopup:focus-visible { outline: none; }
   align-items: center;
   gap: 0.35rem 0.5rem;
   margin: 0.55rem 0 0;
+}
+
+/*
+ * LOPPURIVI: "Lue lisää aiheesta" ja reaktionapit SAMALLA RIVILLÄ
+ * (omistajan päätös 21.9.2026, js/maalehti.js piirraKategoria). Linkki
+ * vasemmalla, reaktiorivi työntyy oikeaan reunaan auto-marginaalilla
+ * eikä enää kellu omana lohkonaan.
+ */
+.leipa-loppurivi {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.3rem 0.8rem;
+  margin-top: 0.4rem;
+}
+
+.leipa-loppurivi .wiki-btn { margin-top: 0; }
+
+.leipa-loppurivi .reaktiorivi {
+  clear: none;
+  margin: 0 0 0 auto;
 }
 
 .reaktio-napit {
@@ -23665,8 +23698,7 @@ button.reaktionappi:disabled {
   cursor: default;
 }
 
-.reaktio-ikoni,
-.reaktio-lepoikoni {
+.reaktio-ikoni {
   display: inline-flex;
   pointer-events: none;
 }
@@ -23685,54 +23717,20 @@ button.reaktionappi:disabled {
 .reaktio-luku:empty { display: none; }
 
 /*
- * LEPOTILAN NAPPI. Ilman ääniä se on haalea seppele ilman lukua —
- * kutsu eikä ilmoitus. Oma ääni tummentaa sen, jotta pelaaja näkee
- * yhdellä silmäyksellä äänestäneensä jo.
+ * OMA ÄÄNI kummassa tahansa napissa: tummempi muste ja kevyt kehä —
+ * ei täytettyä nappia, sama kevyt korostus kuin muualla lehdessä.
  */
-button.reaktio-lepo.tyhja { opacity: 0.42; }
-
-button.reaktio-lepo.oma {
-  color: rgba(70, 51, 31, 0.92);
-  border-color: rgba(70, 51, 31, 0.3);
-}
-
-/*
- * AVATTU RIVI: viisi symbolia lukuineen. Kevyt pergamenttikapseli
- * erottaa valikon leipätekstistä ilman että se muuttuu valikkolaatikoksi.
- */
-.reaktio-valikko {
-  display: flex;
-  align-items: center;
-  gap: 0.05rem;
-  padding: 0.1rem 0.25rem;
-  border: 1px solid rgba(70, 51, 31, 0.22);
-  border-radius: 999px;
-  background: rgba(255, 252, 244, 0.6);
-}
-
-.reaktio-valikko[hidden] { display: none; }
-
-button.reaktio-symboli {
-  min-width: 28px;
-  padding: 0.18rem 0.2rem;
-}
-
-/* Oma ääni: tummempi muste ja kevyt kehä — ei täytettyä nappia. */
-button.reaktio-symboli.oma {
+button.reaktionappi.oma {
   color: #7a5514;
   border-color: rgba(122, 85, 20, 0.45);
   background: rgba(156, 107, 23, 0.1);
 }
 
-/* Jo ilmoitettu virhe: tahran saa yhä äänestää, mutta kenttä ei aukea
-   uudestaan — himmennys kertoo sen ilman erillistä tekstiä. */
-button.reaktio-symboli.ilmoitettu:not(.oma) { opacity: 0.55; }
-
 /*
- * VÄLIOTSIKON NAPPI (js/reaktiot.js piirraOtsikonReaktio). Rivin
- * PÄÄSSÄ eikä leipätekstin päällä: margin-left: auto työntää sen
- * otsikkorivin oikeaan reunaan, ja pienempi kuvake pitää sen otsikon
- * mittasuhteissa. Ei clearia — otsikkorivi ei kellu.
+ * VÄLIOTSIKON NAPIT (js/reaktiot.js piirraOtsikonReaktio). Rivin
+ * PÄÄSSÄ eikä leipätekstin päällä: margin-left: auto työntää sydämen
+ * ja peukun otsikkorivin oikeaan reunaan, ja pienempi kuvake pitää ne
+ * otsikon mittasuhteissa. Ei clearia — otsikkorivi ei kellu.
  */
 .reaktiorivi.reaktiot-otsikko {
   clear: none;
@@ -23748,18 +23746,13 @@ button.reaktio-symboli.ilmoitettu:not(.oma) { opacity: 0.55; }
 }
 
 /* Pienemmässä koossa hiusviiva katoaa pergamenttiin: kuvake kutistuu
-   mutta muste vahvistuu, jotta seppeleen lehdet erottuvat vielä
-   16 pikselissä. CSS voittaa SVG:n oman stroke-width-attribuutin. */
-.reaktiot-otsikko .reaktio-ikoni svg,
-.reaktiot-otsikko .reaktio-lepoikoni svg {
+   mutta muste vahvistuu, jotta ääriviiva erottuu vielä 16 pikselissä.
+   CSS voittaa SVG:n oman stroke-width-attribuutin. */
+.reaktiot-otsikko .reaktio-ikoni svg {
   width: 16px;
   height: 16px;
   stroke-width: 1.75;
 }
-
-/* Väliotsikon lepotila saa hiukan enemmän mustetta kuin leipätekstin:
-   otsikkorivi on tiheämpi, ja 0.42 hukkui siihen kokonaan. */
-.reaktiot-otsikko button.reaktio-lepo.tyhja { opacity: 0.5; }
 
 /* Otsikkorivin kuittaus veisi tilaa otsikolta: ääni riittää kuvitukseksi. */
 .reaktiot-otsikko .reaktio-kuittaus { display: none; }
@@ -23858,6 +23851,48 @@ textarea.reaktio-teksti {
 
 /* Virheikkuna on kapea: se on yksi kenttä ja kaksi nappia, ei näkymä. */
 .minipopup-kortti.minipopup-reaktio { max-width: 30rem; }
+
+/*
+ * "MIKÄ OLI VIALLA?" — peukku alas avaa tämän ennen äänen kirjaamista
+ * (js/reaktiot.js avaaKysymys). Kolme vaihtoehtoa samalla napin
+ * tyylillä kuin virheikkunan lomakenapit, pystyrivissä koska tekstit
+ * ovat pitempiä kuin Lähetä/Peru.
+ */
+.reaktio-kysymys {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.reaktio-kysymys-ohje {
+  margin: 0;
+  font-size: 0.84rem;
+  line-height: 1.4;
+  color: rgba(50, 36, 22, 0.9);
+}
+
+.reaktio-kysymys-napit {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.reaktio-kysymys-nappi {
+  padding: 0.4rem 0.7rem;
+  min-height: 0;
+  border: 1px solid rgba(70, 51, 31, 0.35);
+  border-radius: 6px;
+  background: rgba(255, 252, 244, 0.7);
+  color: rgba(50, 36, 22, 0.92);
+  font-family: inherit;
+  font-size: 0.82rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.reaktio-kysymys-nappi:hover { border-color: rgba(70, 51, 31, 0.7); }
+
+.minipopup-kortti.minipopup-reaktio-kysymys { max-width: 22rem; }
 
 /*
  * KUVASUURENNOS. Postikortin ja kartan suurennoksen paperi on tummempi
@@ -25376,6 +25411,15 @@ body.infotaulu-auki .toimintorivi .monitoimi-nappi {
  */
 .nostosym-nimiokuva { transition: opacity 180ms ease-out; }
 .nostosym-nimio-piilossa .nostosym-nimiokuva { opacity: 0; }
+/*
+ * KYLKI VAIHTUU HÄIVYTTÄMÄLLÄ (KARTAN SULAVUUS ENSIN, erä E3;
+ * js/pallolauta/nostot.js asetteleNosto): vanha kylki häipyy
+ * (.nostosym-nimio-vanha) ja uusi tulee (.nostosym-nimio-tulee →
+ * luokka pois seuraavassa kehyksessä → opacity 1 samalla 180 ms:n
+ * siirtymällä). Nimiö ei liu'u pisteen yli. Reduced motion: heti.
+ */
+.nostosym-nimiokuva.nostosym-nimio-vanha,
+.nostosym-nimiokuva.nostosym-nimio-tulee { opacity: 0; }
 @media (prefers-reduced-motion: reduce) {
   .nostosym-nimiokuva { transition: none; }
 }
@@ -26408,6 +26452,34 @@ svg.rough-annotation { pointer-events: none; }
 .pallolauta-nosto svg,
 .pallolauta-piste svg { display: block; overflow: visible; }
 .pallolauta-nimi-siirto { transition: transform 250ms ease-in-out; }
+/*
+ * KOKO LIUKUU JOKA KEHYKSESSÄ (js/pallolauta/nimet.js, erä E2): kotelon
+ * `--nimiokerroin` (kameran mittakaava / ladonnan mittakaava, pallon
+ * kehyskoukusta) skaalaa merkin SVG-KUOREN merkin omasta pisteestä;
+ * sisäryhmien style.transform ja font-size pysyvät ladonnan pohjana.
+ * Katto (PAATOKSET 31 kohta 2) tulee merkin omista muuttujista:
+ * näytetty mitta = pohja · min(kerroin · a, b) = min(raaka · kerroin, katto).
+ */
+.pallolauta-nimi > svg,
+.pallolauta-nosto > svg,
+.pallolauta-turisti-info > svg {
+  transform-origin: 0 0;
+  transform: scale(min(calc(var(--nimiokerroin, 1) * var(--nimio-a, 1)), var(--nimio-b, 1e9)));
+}
+/* Ruutuvakioiset nostot (?nostokoko=0) eivät liu'u; nimet liukuvat silti. */
+.pallolauta-nostot-ruutuvakio .pallolauta-nosto > svg,
+.pallolauta-nostot-ruutuvakio .pallolauta-turisti-info > svg { transform: none; }
+/*
+ * Siirtymät pois liikkeen ajaksi: ladonnan pohja ja kuori vaihtuvat
+ * samassa kehyksessä, eikä pohja saa liukua perässä (nimet.js
+ * SIIRTYMÄT POIS LIIKKEEN AJAKSI). Luonnoksen opacity/filter jäävät.
+ */
+.pallolauta-liikkuu .pallolauta-nimi-siirto,
+.pallolauta-liikkuu .pallolauta-aihemerkki-siirto,
+.pallolauta-liikkuu .pallolauta-turisti-info-siirto { transition: none; }
+.pallolauta-liikkuu .pallolauta-nosto .pallolauta-nosto-siirto {
+  transition: opacity 600ms ease-out, filter 600ms ease-out;
+}
 
 /*
  * LISTAN ALLE JÄÄNYT MUSTE PIILOUTUU LISTAN AJAKSI (Raamattu,

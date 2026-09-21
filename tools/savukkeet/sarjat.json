@@ -19,6 +19,7 @@
     "savuke-nimiot-vakaat.mjs",
     "savuke-nostotasot.mjs",
     "savuke-sumu.mjs",
+    "savuke-nostot-nakyviin.mjs",
     "savuke-kartan-liike.mjs",
     "savuke-nimiot-sulavat.mjs",
     "savuke-hiomassa-linssi.mjs",
@@ -61,7 +62,8 @@
     "savuke-kartuscha-2.mjs",
     "savuke-kartuscha-3.mjs",
     "savuke-reittiverkko.mjs",
-    "savuke-liftaus-ajoitus.mjs"
+    "savuke-liftaus-ajoitus.mjs",
+    "savuke-reaktiot-sydan.mjs"
   ],
   "suorituskyky": [
     "savuke-pariisi-lahizoom.mjs#390-suorituskyky",
@@ -210,6 +212,15 @@
       "js/pallolauta/lauta.js",
       "js/pallolauta/kamera.js",
       "js/ui.js"
+    ],
+    "savuke-reaktiot-sydan.mjs": [
+      "js/reaktiot.js",
+      "js/maalehti.js",
+      "js/ui.js",
+      "js/fokuskohteet.js",
+      "js/nahtavyydet.js",
+      "js/packs/maa-kategoriat.js",
+      "css/styles.css"
     ]
   },
   "asetukset": {
@@ -531,12 +542,16 @@
       "kuvakansio": true,
       "huomautus": "Loytamisen sumu (omistaja 21.9.2026 julkaisuun): FRA/Pariisi 390 ja 1400 px — sisasumu 50 % kaymattomien kaupunkien seuduilla (aukko pariisi, Marseille sumussa), luonnosnostot katkoviivarenkaassa, kaymattomien maiden rajat vaaleampina; Marseillen jalkeen sumu pois (merentakaiset Cayenne ja Noumea eivat laske). Ampari Noden kautta. ~60 s."
     },
+    "savuke-nostot-nakyviin.mjs": {
+      "kuvakansio": true,
+      "huomautus": "Nostot nakyviin maan rajan ylapuolella (omistajan kaappaus v2000, 21.9.2026): FRA/Marseille tallennettu peli 2000x1300 dpr 2 ja 390 — saapumisnakyma 68 nostoa ikoneineen; katto nostettuna ajon tapaan korkeuteen x4,5 (Ranska kokonaan ruudulla, osuus 0,44) portti auki (lehtiNakyvissa), nostot ikoneineen ja nimioineen, ei pisteetVain; puhelin ennallaan. Ampari Noden kautta. ~80 s."
+    },
     "savuke-kartan-liike.mjs": {
       "kuvakansio": true,
       "huomautus": "Pieni liike kartalle (Fable 21.9.2026, js/pallolauta/liike.js): FRA/Pariisi 390 ja 1400 px — kerros laudalla ja levossa, illan savy vain illassa, pulu lentaa levossa ja lento paattyy, kortti auki pysayttaa pilven ja estaa pulun, kytkin pois pyyhkii kaiken, 390: kehysvali liikkeen kanssa <= 105 % ilman (kolme vuorottelevaa ikkunaa). Ampari Noden kautta. ~90 s."
     },
     "savuke-nimiot-sulavat.mjs": {
-      "huomautus": "Nimioiden sulavuus (omistaja 21.9.2026 KARTAN SULAVUUS ENSIN, era E1): FRA/Marseille 390 dpr 2 ja 1400 — joka kehyksessa nimion siirtyma maapisteesta (koolla normalisoituna) panoroinnissa ja kamera-ajozoomissa seka koon liukuvuus (js/pallolauta/sulavuusmittari.js). Headlessissa (2-6 fps) vartiot 1-3 kirjataan tiedoksi; tuomio ikkunallisena SAVUKE_IKKUNA=1 (Mac 60 fps) ja laitteella (ui.pallolauta.sulavuus). Ampari Noden kautta. ~90 s."
+      "huomautus": "Nimioiden sulavuus (omistaja 21.9.2026 KARTAN SULAVUUS ENSIN, erat E1 mittari ja E2 liukuva koko): FRA/Marseille 390 dpr 2 ja 1400 — joka kehyksessa nimion siirtyma maapisteesta (koolla normalisoituna) panoroinnissa ja kamera-ajozoomissa seka koon liukuvuus (js/pallolauta/sulavuusmittari.js); E2: katto patee liikkeessa (noston nimio <= 16 px) ja levossa kuori on 1 eika liikkeen luokkaa ole. Headlessissa (2-6 fps) vartiot 1-3 kirjataan tiedoksi; tuomio ikkunallisena SAVUKE_IKKUNA=1 (Mac 60 fps: koko muuttuu 97 % kehyksista, porras 0) ja laitteella (ui.pallolauta.sulavuus). Ampari Noden kautta. ~100 s."
     },
     "savuke-hiomassa-linssi.mjs": {
       "kuvakansio": true,
@@ -555,6 +570,10 @@
     "savuke-liftaus-ajoitus.mjs": {
       "kuvakansio": true,
       "huomautus": "Liftauksen nopanheitto ei zoomaa maailmakuvaan (omistaja v1983 20.9.2026): Bryssel 2000 x 1300, seitseman ajoitusta (rauhassa, heti saapumisen jalkeen, kesken trailerin, kaksi heittoa, heitto kesken sovituksen, kesken luennan, heti linssin sulkemisen jalkeen); vaatii korkeuden < 1 ja nappulan ruudulla. Juurisyy lauta.js matkaZoomirajat + kattoPuristus. Ampari Noden kautta, ~2 min."
+    },
+    "savuke-reaktiot-sydan.mjs": {
+      "kuvakansio": true,
+      "huomautus": "Reaktiot sydämeksi (omistaja 21.9.2026, kaappaus Ranskan lehden Historia-osiosta): viisi symbolia ja lepotila korvattiin kahdella suoraan näkyvälla napilla (sydän, peukku alas), lehden jutun vuosiluku siirtyi otsikkorivin oikeaan reunaan omaan laatikkoonsa. Maalehti GBR, Historia-osio, Magna Carta -juttu ('Kuningas pakotettiin lain alle', naytaTutkiSivu-indeksi = tutkiSivut-indeksi + 1, mitattu käytännössä). Ruudut 390x844 ja 1400x900, ~1 min."
     }
   }
 }

@@ -235,6 +235,18 @@ export const FOKUSKOHTEET_BIH = [
       + '("According to local legends"), ja teksti sanoo sen ääneen. '
       + 'Muoto "Una-joki" on aineiston ohje: fi-Wikipedian "Una" on '
       + 'moniselitesivu.',
+    visa: {
+      kysymys: 'Mikä on Unan suurin putous?',
+      vaihtoehdot: [
+        'Kravice',
+        'Štrbački buk',
+        'Plitvice',
+        'Skradinski buk',
+      ],
+      oikea: 1,
+      fakta: '212 kilometrin mittainen Una on täynnä koskia ja putouksia, ja sen varren '
+        + 'tärkein kaupunki on Bihać.',
+    },
     // Commons 25.8.2026: 4899×3266, CC BY-SA 3.0, Julian Nyča, 8.9.2018,
     // kuvaus "Wasserfall Štrbački buk an der Una südlich von Bihać" —
     // juuri se putous, jonka teksti nimeää. Category:Štrbački buk.
@@ -451,10 +463,19 @@ export const FOKUSKOHTEET_BIH = [
     korostukset: ['Ragusan tasavalta', 'puskurivyöhyke|puskurivyöhykettä'],
     /* Valintakuplan painike. Lupaus on mitta, joka näkyy kartalta. */
     nappi: 'Kahdenkymmenen kilometrin rannikko',
-    // 42,925 N / 17,61667 E — en-Wikipedia "Neum".
+    /*
+     * 42,94 N / 17,615 E — kaupungin pohjoislaita (en-Wikipedia "Neum"
+     * 42,925 N / 17,61667 E). Puoli yksikköä pohjoiseen 21.9.2026
+     * (Karttaseppä): Neum, Stonin muurit, Mljet ja Neretvan suisto ovat
+     * kymmenen yksikön ryppäässä, ja kun Bosnian 14 uutta nostoa
+     * (js/packs/hahmotelma-bih.js) kytkettiin, BIH:n ladonta pudotti
+     * Neumin nimiön alas täsmälleen Stonin muurien nimiön päälle
+     * (limitys 0,1 yksikköä; maiden välinen väistö on yksisuuntainen
+     * BIH → HRV). Portti 0 limitystä ilman BIH-erää ja sen kanssa.
+     */
     laudat: {
-      maailmankartta: { x: 6420.6, y: 1686.4 },
-      europe: { x: 549.4, y: 764.7 },
+      maailmankartta: { x: 6420.5, y: 1685.8 },
+      europe: { x: 549.4, y: 764.3 },
     },
     teksti: 'Bosnia ja Hertsegovinalla on merenrantaa 20 kilometriä, ja '
       + 'Neum on sen ainoa kaupunki — koko maan ainoa yhteys '

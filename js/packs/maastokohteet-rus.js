@@ -105,6 +105,17 @@ export const MAASTOKOHTEET_RUS = [
       + 'kymmenenneksi hallitsevin huippu. Se sijaitsee Kabardi-Balkarian tasavallassa '
       + 'Etelä-Venäjällä ja on Kaukasuksen vuoriston korkein huippu.',
     lahde: 'en-Wikipedia "Mount Elbrus", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Missä tasavallassa Elbrus sijaitsee?',
+      vaihtoehdot: [
+        'Kabardi-Balkariassa',
+        'Dagestanissa',
+        'Tšetšeniassa',
+        'Pohjois-Ossetiassa',
+      ],
+      oikea: 0,
+      fakta: 'Elbrus on Kaukasuksen vuoriston korkein huippu, 5 642 metriä korkea sammunut kerrostulivuori.',
+    },
   },
   {
     id: 'narodnaja',
@@ -204,6 +215,17 @@ export const MAASTOKOHTEET_RUS = [
       + 'Petšoran suistossa on oma nimensä: Petšoranmeri.',
     lahde: 'en-Wikipedia "Barents Sea", johdanto-osa sekä osiot "Extent", "Name" ja "Fishing" '
       + '(tarkistettu 1.9.2026).',
+    visa: {
+      kysymys: 'Mikä on Barentsinmeren itäkulman, Petšoran suiston, oma nimi?',
+      vaihtoehdot: [
+        'Murmanskinmeri',
+        'Petšoranmeri',
+        'Karanmeri',
+        'Kominmeri',
+      ],
+      oikea: 1,
+      fakta: 'Barentsinmeren itäkulmalla Petšoran suistossa on oma nimi, Petšoranmeri.',
+    },
   },
   {
     id: 'jaameri',
@@ -361,6 +383,17 @@ export const MAASTOKOHTEET_RUS = [
       + 'Venäjän kansallisjokena, ja sen varrelle syntyi noin vuonna 830 varhainen '
       + 'valtiomuodostelma Rusin kaganaatti.',
     lahde: 'en-Wikipedia "Volga", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Minä vuonna Volgan varrelle syntyi Rusin kaganaatti?',
+      vaihtoehdot: [
+        'Noin vuonna 530',
+        'Noin vuonna 730',
+        'Noin vuonna 830',
+        'Noin vuonna 1030',
+      ],
+      oikea: 2,
+      fakta: 'Volgan varrelle syntyi noin vuonna 830 varhainen valtiomuodostelma nimeltä Rusin kaganaatti.',
+    },
   },
   {
     id: 'ob',
@@ -455,6 +488,17 @@ export const MAASTOKOHTEET_RUS = [
       + 'korkeimmista puurakennuksista.',
     lahde: 'en-Wikipedia "Kizhi Pogost", johdanto-osa sekä osiot "General '
       + 'information" ja "The Church of the Transfiguration" (tarkistettu 6.9.2026).',
+    visa: {
+      kysymys: 'Mitä pääkirvesmies teki tarun mukaan, kun Kirkastuksen kirkko valmistui?',
+      vaihtoehdot: [
+        'Poltti kirveensä tulessa',
+        'Lahjoitti kirveen kirkolle',
+        'Vei kirveen mantereelle',
+        'Heitti kirveen järveen',
+      ],
+      oikea: 3,
+      fakta: 'Tarun mukaan pääkirvesmies käytti koko kirkon rakentamiseen vain yhtä kirvestä.',
+    },
   },
   {
     id: 'solovetskin-luostari',

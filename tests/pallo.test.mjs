@@ -1130,5 +1130,7 @@ test('sulavuus E4b: kameran ennuste ekstrapoloi liikkeen, lepää levossa ja kie
   assert.deepEqual(ennustaKamera(null, b).pov, b.pov);
   // Kytkin: ?ennuste=0 sammuttaa.
   assert.equal(pallonEnnusteKaytossa({ location: { search: '?ennuste=0' } }), false);
-  assert.equal(pallonEnnusteKaytossa({ location: { search: '' } }), true);
+  assert.equal(pallonEnnusteKaytossa({ location: { search: '?ennuste=1' } }), true);
+  // Oletuksena pois (omistajan tuntuma 21.9.2026: nimiöt heiluivat työpöydällä).
+  assert.equal(pallonEnnusteKaytossa({ location: { search: '' } }), false);
 });

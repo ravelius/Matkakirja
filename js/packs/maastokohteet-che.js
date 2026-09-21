@@ -231,6 +231,12 @@ export const MAASTOKOHTEET_CHE = [
       + 'rajasta. Sieltä se jatkaa Ranskan ja Saksan rajaa, kääntyy pohjoiseen Saksan halki ja '
       + 'laskee lopulta Alankomaissa Pohjanmereen.',
     lahde: 'en-Wikipedia "Rhine", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Minkä maan rajaksi Rein muuttuu vasta Bodenjärven jälkeen?',
+      vaihtoehdot: ['Saksa', 'Itävalta', 'Ranska', 'Belgia'],
+      oikea: 0,
+      fakta: 'Bodenjärvestä alaspäin Rein muodostaa osan Sveitsin ja Saksan rajasta, ennen kuin se jatkaa Ranskan ja Saksan rajana.',
+    },
   },
   {
     id: 'rhone',
@@ -339,6 +345,12 @@ export const MAASTOKOHTEET_CHE = [
       + '14. huhtikuuta 1994.',
     lahde: 'en-Wikipedia "Kapellbrücke", johdanto-osa sekä osiot "History" ja '
       + '"Paintings" (tarkistettu 2.9.2026).',
+    visa: {
+      kysymys: 'Minä vuonna Kapellbrücke avattiin uudelleen elokuun 1993 tulipalon jälkeen?',
+      vaihtoehdot: ['1992', '1993', '1994', '1995'],
+      oikea: 2,
+      fakta: 'Elokuun 18. päivänä 1993 silta paloi lähes kokonaan, ja se avattiin uudelleen 14. huhtikuuta 1994.',
+    },
   },
   {
     id: 'stiftsbibliothek',
@@ -451,6 +463,13 @@ export const MAASTOKOHTEET_CHE = [
       + 'kantonille.',
     lahde: 'en-Wikipedia "Chillon Castle", johdanto-osa sekä osiot "Etymology", '
       + '"Introduction" ja "History/Savoy period" (tarkistettu 2.9.2026).',
+    visa: {
+      kysymys: 'Mitä Chillonin linnan varuskunta peri matkustajilta Italiaan johtavalla '
+        + 'tiellä?',
+      vaihtoehdot: ['Veroa', 'Tullia', 'Lunnaita', 'Palkkiota'],
+      oikea: 1,
+      fakta: 'Linna vartioi kulkua Vaud’n rivieran ja Rhônen laakson välillä, nopealla tiellä Italiaan, ja peri tullia ohikulkijoilta.',
+    },
   },
   {
     id: 'gotthardin-tunneli',
@@ -677,6 +696,12 @@ export const MAASTOKOHTEET_CHE = [
       + 'sen sisarkaupunki Le Locle otettiin yhdessä maailmanperintöluetteloon.',
     lahde: 'en-Wikipedia "La Chaux-de-Fonds", johdanto-osa ja osio "UNESCO World '
       + 'Heritage Sites" (tarkistettu 2.9.2026).',
+    visa: {
+      kysymys: 'Kuka näistä syntyi La Chaux-de-Fondsissa?',
+      vaihtoehdot: ['Le Corbusier', 'Albert Einstein', 'Auguste Piccard', 'Henri Dunant'],
+      oikea: 0,
+      fakta: 'Kaupungissa syntyivät muun muassa arkkitehti Le Corbusier, kirjailija Blaise Cendrars ja autonrakentaja Louis Chevrolet.',
+    },
   },
   {
     id: 'gruyeres',
@@ -726,6 +751,12 @@ export const MAASTOKOHTEET_CHE = [
       + 'perustuu.',
     lahde: 'en-Wikipedia "Gruyères", johdanto-osa ja osio "Geography" '
       + '(tarkistettu 2.9.2026).',
+    visa: {
+      kysymys: 'Kuinka suuri osa Gruyèresin pitäjän maatalousmaasta on alppilaidunta?',
+      vaihtoehdot: ['4,6 prosenttia', '12,9 prosenttia', '40,5 prosenttia', '22,9 prosenttia'],
+      oikea: 3,
+      fakta: 'Pitäjän maatalousmaasta 4,6 prosenttia on peltoa, 12,9 prosenttia laidunta ja 22,9 prosenttia alppilaidunta.',
+    },
   },
   /* ================================================================
    * K2-ERÄ 3, 11.9.2026 — KOLME KOHDETTA LISÄÄ. Omistaja 11.9.2026:

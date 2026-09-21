@@ -212,7 +212,20 @@ export function asennaLivianKasvot(pollo) {
  function jatkaPitkiaOdotuksia(){for(const[tunnus,tila]of pitkatOdotukset){if(tila.valmis)yritaPitkaaOdotusta();else ajastaPitkaOdotus(tunnus,tila.jaljella??LIVIAN_PITKAN_ODOTUKSEN_VIIVE);}}
  function peruLoppu(){if(luennanLoppu)luennanLoppu.sallittu=false;}
  const lepo=()=>livianSvgAsento('blink',0);
- const nappiNakyy=()=>!doc.hidden&&nappi.isConnected&&!nappi.classList?.contains?.(PULU_PANEELIN_ALLA_PIILOSSA)&&(ensiliito||((!nappi.getClientRects||nappi.getClientRects().length>0)&&!nappi.hidden&&getComputedStyle(nappi).display!=='none'&&getComputedStyle(nappi).visibility!=='hidden'));
+ /*
+  * NAPIN ASETTELUMITAT KURITETAAN (KARTAN SULAVUUS ENSIN, era E3;
+  * Karttasepan profiili 21.9.2026: askel → nakyy() getClientRects +
+  * getComputedStyle JOKA KEHYS 2,3 s / 31 s — jokainen luenta pakotti
+  * asettelun CSS2D-merkkien siirron jalkeen). Halvat ehdot (hidden,
+  * isConnected, luokka) luetaan aina; asettelua vaativat (getClientRects,
+  * display, visibility) enintaan kerran NAPIN_MITTOJEN_TAHTI_MS:ssa —
+  * napin nakyvyys ei vaihdu kehyksittain, ja 200 ms:n viive sen
+  * huomaamisessa on pulun eleelle merkityksetön.
+  */
+ const NAPIN_MITTOJEN_TAHTI_MS=200;
+ let napinMitat={t:-Infinity,arvo:false};
+ const nappiAsettelussaNakyy=()=>{const nyt=performance.now();if(nyt-napinMitat.t<NAPIN_MITTOJEN_TAHTI_MS)return napinMitat.arvo;const arvo=(!nappi.getClientRects||nappi.getClientRects().length>0)&&getComputedStyle(nappi).display!=='none'&&getComputedStyle(nappi).visibility!=='hidden';napinMitat={t:nyt,arvo};return arvo;};
+ const nappiNakyy=()=>!doc.hidden&&nappi.isConnected&&!nappi.classList?.contains?.(PULU_PANEELIN_ALLA_PIILOSSA)&&(ensiliito||(!nappi.hidden&&nappiAsettelussaNakyy()));
  const nakyy=()=>nappiNakyy()&&livianDialogiSalliiReaktion(doc,nappi,Boolean(pollo.auki));
  function sijoita(){
   if(kuollut)return;const tavallinen=nappi.getBoundingClientRect?.()||{right:152,bottom:304};
@@ -576,6 +589,8 @@ export function asennaLivianKasvot(pollo) {
  function saapuminen(){if(!ensisaapuminen){ensisaapuminen=true;toista('handoff');}else toista(++paluuVuoro%7===0?'glassCrash':'clumsyLand');}
  const nappiVahti=new MutationObserver(()=>{
   chatTila?.paivita();nostoTila?.paivita();
+  // Napin oma muutos (hidden, luokka, tyyli) mitataan heti, ei tahdin päästä.
+  napinMitat={t:-Infinity,arvo:false};
   const n=nappiNakyy();if(!nakyy()){peruLoppu();ensiliito=false;katkaise();piirra(lepo());}else{paikkaMuuttui();if(!oliNakyva&&!kohtausPiilossa())saapuminen();}oliNakyva=n;
   if(Boolean(pollo.auki)!==auki){auki=Boolean(pollo.auki);odotusrivi=null;odotusteksti='';
    if(auki){peruLoppu();if(['reaction','speechCue'].includes(nykyinen?.omistaja)){katkaise();lepoTila=null;piirraNyt(performance.now());}}

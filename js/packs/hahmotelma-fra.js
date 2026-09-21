@@ -1485,4 +1485,59 @@ export const HAHMOTELMA_FRA = [
       + 'pyhiinvaellusreitistä.',
     lahde: 'en- ja fr-Wikipedia "Le Puy-en-Velay", johdanto-osa (tarkistettu 18.9.2026).',
   },
+  /*
+   * CLUNYN LUOSTARIKIRKKO — MATKAKIRJAN IHME, "RAPPEUTUNUT" (kadonnut:
+   * false), tilaus docs/raportit/havainnekuvat-codexille-
+   * eurooppa-20260921.md (Fablen posti Codexille 21.9.2026, tilaus 5).
+   * Kuva on aito Commons-valokuva säilyneestä kellotornista (ei löytynyt
+   * kelvollista aikalaiskuvaa ehjästä kirkosta); `ihme.osoite` odottaa
+   * Codexin kulta-aikakuvaa (loistoaika-parikuva, ei vielä toimitettu —
+   * osoite 404:ttää siihen asti, sama käytäntö kuin Bastilji/Tuileries).
+   */
+  {
+    id: 'hahmotelma-cluny',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/fra-nosto-cluny-b5342429.jpg',
+      lyhyt: 'Clunyn luostarikirkon eteläisen poikkilaivan kellotorni.',
+      selite: 'Ainoa merkittävä pystyssä seisova osa Clunyn kolmatta luostarikirkkoa kohoaa '
+        + 'Burgundin maaseudun ylle.',
+      lahde: 'Valokuva: LeZibou, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'LeZibou',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Cluny_abbey_main_transept_south_01.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    nimi: 'Cluny',
+    tyyppi: 'historia',
+    lahi: true,
+    kysymykset: [
+      'Kuinka suuri osa alkuperäisestä kirkosta on jäljellä?',
+      'Miksi kirkko purettiin?',
+    ],
+    korostukset: ['Cluny III|Cluny III', 'benediktiini|benediktiinimunkkien'],
+    nappi: 'Kristikunnan suurin kirkko ennen uutta Pietarinkirkkoa',
+    // 4.6592 E / 46.4342 N — en-Wikipedia "Cluny Abbey"
+    laudat: {
+      maailmankartta: { x: 5988.6, y: 1542.2 },
+      europe: { x: 300.7, y: 672.4 },
+    },
+    teksti: 'Cluny III oli benediktiiniluostarin 1088–1130 rakentama valtava romaaninen '
+      + 'basilika, kristikunnan suurin kirkko ennen uutta Pietarinkirkkoa Roomassa. Ranskan '
+      + 'vallankumous lakkautti luostarin 1790, ja kaupunki myi rakennuksen kivilouhokseksi — '
+      + 'pääosa purettiin 1810–1823 rakennuskiveksi. Vain n. kymmenesosa alkuperäisestä on '
+      + 'jäljellä: eteläinen poikkilaiva kellotorneineen sekä läntisen julkisivun tornien '
+      + 'alaosat.',
+    lahde: 'en-Wikipedia "Cluny Abbey", osiot "History" ja "Destruction" (tarkistettu '
+      + '21.9.2026).',
+    ihme: {
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-cluny-loistoaika.jpg',
+      kadonnut: false,
+      selite: 'Cluny III oli 1000-luvun lopulla rakennettu viiden tornin ja kahden '
+        + 'poikkilaivaparin basilika, jonka pituus ylitti 187 metriä — suurempi kuin mikään '
+        + 'kirkko ennen uutta Pietarinkirkkoa.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: '
+        + 'en-Wikipedia "Cluny Abbey", tarkistettu 21.9.2026.',
+      url: 'https://en.wikipedia.org/wiki/Cluny_Abbey',
+    },
+  },
 ];
