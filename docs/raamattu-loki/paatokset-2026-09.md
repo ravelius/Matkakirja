@@ -307,3 +307,7 @@ Pohja 2026-09-21 (GSHHG, joet, meriresepti), viivat, ranta, nostot 112 maata tas
 ## KONTEKSTIN NOLLAUKSEN KAAVA (omistaja 21.9.2026) (21.9.2026 klo 09.14)
 
 Sessio kirjoittaa luovutuksen tiedostoon, omistaja tekee /clear (ei /compact, ei Resume previous session), Fable lahettaa aloitusviestin uudelleen. Karttaseppa nollattu ensimmaisena (49 %), aloitusviesti lahetetty: atlaslehti-vedos. Kirjattu Raamatun TYOTAPA JA SESSIOT -kohtaan (H).
+
+## SUMU JULKAISUKUNTOON (Pelikoodari 8c7d896e) -> v1988 (21.9.2026 klo 09.16)
+
+SISASUMUN_PEITTO 0,5 (Marseille 31-34 vs 69-71), luonnoksille katkoviivarengas (peitto 0,55), merentakaiset pois (yli 1 500 km muista kaupungeista JA mannerrenkaan ulkopuolella: Cayenne, Noumea, Bermuda, Falkland, Hawaii, Norfolk), lippu pois (?sumu=0 sammuttaa), savuke-sumu julkaisusarjaan 10/10, testit 3780/0. Sisasumu tarvitsee maan renkaat (laiska aineisto), lasketaan uudestaan niiden saavuttua. Linjaus kirjattu Raamattuun (LOYTAMISEN SUMU). Pelikoodari: pieni liike (pelikoodari-liike) -> pollon linkit.
