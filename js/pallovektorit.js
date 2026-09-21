@@ -1214,6 +1214,15 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
    * (js/pallolauta/reitit.js verkonViivat), olio rakennetaan kerran
    * laudan avaimella ja näkyvyys on pelkkä lippu.
    */
+  /*
+   * LÖYTÄMISEN SUMU (js/pallolauta/sumu.js, prototyyppi): käymättömien
+   * maiden rajat vaaleammalla (rajamateriaalin peitto × kerroin) ja
+   * käytyjen maiden renkaat normaalilla rajapeitolla omana
+   * viivajoukkonaan (`kaydyt`, sama katkoviiva kuin rajoilla).
+   */
+  const kaydyt = {
+    laji: 'kaydyt', avain: null, viivat: null, olio: null, janoja: 0, paalla: false,
+  };
   const verkko = {
     laji: 'verkko', avain: null, viivat: null, olio: null, janoja: 0, nakyy: false,
   };
@@ -1317,6 +1326,8 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
     if (korostus.renkaat) rakennaKorostus(true);
     // Sama himmeälle verkolle: lauta on voinut antaa viivansa jo.
     if (verkko.viivat) rakennaVerkko();
+    if (kaydyt.viivat) rakennaKaydyt();
+    if (kaydyt.paalla && materiaalit?.rajat) materiaalit.rajat.opacity = RAJA_PEITTO * 0.35;
     /*
      * PÄIVITYS PIIRTOKOUKUSSA, EI TAPAHTUMASSA (vika v1649). Ennen tätä
      * kerros heräsi ohjainten `change`-tapahtumasta — eli pointermoven
@@ -1386,8 +1397,17 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
     raja.linewidth = cssLeveys('rajat');
     korostusMateriaali.linewidth = cssLeveys('korostus');
     verkkoMateriaali.linewidth = cssLeveys('verkko');
+    // Käytyjen maiden rajat (löytämisen sumu): sama katkoviiva kuin rajoilla.
+    const kaydytMateriaali = new luokat.LineMaterial({
+      ...yhteiset, color: rajanMuste(), opacity: RAJA_PEITTO, dashed: true,
+    });
+    [kaydytMateriaali.dashSize, kaydytMateriaali.gapSize] = RAJA_KATKO_YKS;
+    kaydytMateriaali.dashScale = 1;
+    pehmennaLineMaterial(kaydytMateriaali);
+    kaydytMateriaali.linewidth = cssLeveys('rajat');
     return {
       rannikko: ranta, rajat: raja, korostus: korostusMateriaali, verkko: verkkoMateriaali,
+      kaydyt: kaydytMateriaali,
     };
   }
 
@@ -1513,6 +1533,36 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
     korostus.olio = null;
     korostus.janoja = 0;
     korostus.harvennus = -1;
+  }
+
+  /** Käytyjen maiden rajaviivat pois. */
+  function vapautaKaydyt() {
+    if (!kaydyt.olio) return;
+    kaydyt.olio.parent?.remove(kaydyt.olio);
+    kaydyt.olio.geometry?.dispose?.();
+    kaydyt.olio = null;
+    kaydyt.janoja = 0;
+  }
+
+  /** Käytyjen maiden renkaat viivoiksi (löytämisen sumu). */
+  function rakennaKaydyt() {
+    if (purettu || !materiaalit || !luokat || !kolmi?.juuri) return;
+    vapautaKaydyt();
+    if (!kaydyt.paalla || !kaydyt.viivat?.length) return;
+    const viivat = harvennaViivat(kaydyt.viivat, VERKON_HARVENNUS_AST);
+    const { paikat, janoja } = vektorijanat(viivat, sade(), VERKON_JANAN_ENIMMAISPITUUS_AST);
+    kaydyt.janoja = janoja;
+    mittarit.kaydytJanoja = janoja;
+    if (!janoja) return;
+    const geometria = new luokat.LineSegmentsGeometry();
+    geometria.setPositions(paikat);
+    const olio = new luokat.LineSegments2(geometria, materiaalit.kaydyt);
+    olio.computeLineDistances?.();
+    olio.renderOrder = VEKTORIT_RENDER_ORDER;
+    olio.raycast = () => {};
+    olio.userData.pallovektorit = { laji: 'kaydyt', avain: kaydyt.avain };
+    kolmi.juuri.add(olio);
+    kaydyt.olio = olio;
   }
 
   /** Himmeän reittiverkon olio pois (lauta vaihtui tai purku). */
@@ -1905,6 +1955,27 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
       return true;
     },
     /**
+     * LÖYTÄMISEN SUMU: `paalla` vaalentaa kaikki rajat (× kerroin) ja
+     * `viivat` (käytyjen maiden renkaat asteina) piirretään normaalilla
+     * rajapeitolla päälle. Palauttaa true, jos jokin muuttui.
+     */
+    asetaSumu({ paalla = false, avain = null, viivat = null, kerroin = 0.35 } = {}) {
+      const uusiPaalla = Boolean(paalla);
+      const uudet = Array.isArray(viivat) && viivat.length ? viivat : null;
+      const sama = uusiPaalla === kaydyt.paalla && avain === kaydyt.avain && uudet === kaydyt.viivat;
+      if (sama) return false;
+      kaydyt.paalla = uusiPaalla;
+      kaydyt.avain = avain;
+      kaydyt.viivat = uudet;
+      if (materiaalit?.rajat) {
+        materiaalit.rajat.opacity = uusiPaalla ? RAJA_PEITTO * kerroin : RAJA_PEITTO;
+        materiaalit.rajat.needsUpdate = true;
+      }
+      mittarit.sumu = uusiPaalla;
+      rakennaKaydyt();
+      return true;
+    },
+    /**
      * HIMMEÄ REITTIVERKKO (ks. tiedoston alku). `avain` on lauta (pack.id):
      * sama avain ei rakenna mitään uudestaan; uusi avain vaihtaa
      * geometrian. `viivat` on lista viivoja, viiva on lista [lon, lat]
@@ -1943,6 +2014,8 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
       vapautaVerkko();
       verkko.avain = null;
       verkko.viivat = null;
+      vapautaKaydyt();
+      kaydyt.viivat = null;
       for (const s of solut.values()) vapauta(s);
       solut.clear();
       nakyvat = new Set();

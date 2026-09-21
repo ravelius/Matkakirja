@@ -62,7 +62,8 @@ import { avaaFokuspiste, fokuspisteKuvio, fokuspisteenAsteet } from '../fokuspis
 import { fokusvirtaAarrepisteOhje, fokusvirtaKohtaamispiste } from '../fokusvirta.js';
 import {
   NOSTOSYM_KUVAMERKIN_KERROIN,
-  NOSTOSYM_MINI_RUUTU, NOSTOSYM_MITAN_KATTO, NOSTOSYM_NIMIO_KATTO_PX, NOSTOSYM_NIMIO_KOKO,
+  NOSTOSYM_MINI_R, NOSTOSYM_MINI_RUUTU, NOSTOSYM_MITAN_KATTO, NOSTOSYM_NIMIO_KATTO_PX,
+  NOSTOSYM_NIMIO_KOKO,
   nostosymAsetaPorras, nostosymKatettuMitta, nostosymKuvamerkki, nostosymNimioAsemointi,
   nostosymNimioMitta, nostosymPaakategoria, nostosymVirkistaRasterit, piirraNostosymKartalle,
   piirraNostosymNimio,
@@ -81,6 +82,9 @@ import { KOHDEMAAN_NIMIOT_ELAVINA, pyramidinMerinimet } from '../pallo.js';
 import { PALLOLAUDAN_LEVEYS } from './kamera.js';
 import { nimenKarttakerroin } from './nimet.js';
 import { sovitteleLaput, laatikkoSisalla } from './sovittelu.js';
+import {
+  kaydytKaupungit, loytosateella, merkitseLoydetyksi, nostoLoydetty, sumuPaalla,
+} from './sumu.js';
 
 /** Reunan hystereesi: oma kylki palaa vasta, kun se on näin syvällä sisällä (px). */
 export const REUNAN_HYSTEREESI_PX = 24;
@@ -1096,6 +1100,25 @@ function piirraLiuskanRivi(g, r, kylki, suunta, teksti = null, { leveysYksikkoin
   if (nimi) piirraNostosymNimio(sisus, nimi, null, kylki, Infinity);
 }
 
+/**
+ * LUONNOKSEN LYIJYKYNÄRAITA (omistaja 21.9.2026, sumu julkaisuun):
+ * katkoviivarengas ikonin ympärillä, jotta luonnos erottuu musteesta
+ * myös työpöydällä, jossa haalennus yksin on hienovarainen. Rengas on
+ * merkin omissa yksiköissä (ikoni on NOSTOSYM_MINI_R:n ympyrä origossa),
+ * joten se ei odota rasteria. Sama ryhmä kuin ikoni: replaceChildren
+ * pyyhkii sen reseptin vaihtuessa, ja tämä piirtää sen uudestaan.
+ */
+export const LUONNOSRAIDAN_R = NOSTOSYM_MINI_R + 2.6;
+function asetaLuonnosraita(g, luonnos) {
+  let raita = g.querySelector('.pallolauta-luonnosraita');
+  if (!luonnos) { raita?.remove(); return; }
+  if (raita) return;
+  raita = document.createElementNS(SVG, 'circle');
+  raita.setAttribute('class', 'pallolauta-luonnosraita');
+  raita.setAttribute('r', LUONNOSRAIDAN_R.toFixed(1));
+  g.prepend(raita);
+}
+
 /** Elävän noston elementti: viivamerkki + nimiö samaan pieneen svg:hen. */
 export function nostoElementti(d) {
   const el = document.createElement('div');
@@ -1200,6 +1223,9 @@ export function asetteleNosto(el, d) {
   el.dataset.nimio = nakyy ? nimio : '';
   el.dataset.taso = String(d.taso ?? 2);
   el.classList.toggle('pallolauta-nosto-taso1', taso1);
+  // Löytämisen sumu: luonnos harmaana ja haaleana (css), mustaus siirtymällä.
+  el.classList.toggle('pallolauta-nosto-luonnos', Boolean(d.luonnos));
+  asetaLuonnosraita(g, Boolean(d.luonnos));
   el.classList.toggle('lunastettu', Boolean(d.lunastettu));
   // Listan alle jäänyt merkki piiloutuu listan ajaksi (ks. LISTA EI
   // KOSKAAN TOISEN TEKSTIN PÄÄLLE); seuraava ladonta palauttaa sen.
@@ -1576,6 +1602,20 @@ export function luoNostot({
     const pack = game?.pack;
     const rivit = [];
     /*
+     * LÖYTÄMISEN SUMU (js/pallolauta/sumu.js, prototyyppi): käydyt
+     * kaupungit asteina kerran ladontaa kohti; nosto löytösäteen sisällä
+     * mustataan (merkitseLoydetyksi), muut kohdemaan nostot ovat
+     * luonnoksia (`luonnos`), ykköstaso aina musteena.
+     */
+    const sumu = sumuPaalla();
+    const kaydyt = sumu ? kaydytKaupungit(ui, asteet) : [];
+    const luonnos = (id, taso, lat, lng) => {
+      if (!sumu || taso === 1) return false;
+      if (nostoLoydetty(id)) return false;
+      if (loytosateella({ lat, lon: lng }, kaydyt)) { merkitseLoydetyksi(id); return false; }
+      return true;
+    };
+    /*
      * LADONNAN JÄRJESTYSNUMERO (`ladontaNro`) — aihenoston nimiön
      * ankkuri (PAATOKSET 27 TARKENNUS 2 kohta 8, ks. AIHENOSTON NIMIÖ
      * alempana). Rivit syntyvät DATAN järjestyksessä, joka ei muutu
@@ -1743,6 +1783,8 @@ export function luoNostot({
           // tyypistä; sama kenttä kulkee datumiin ja laatikoihin.
           taso: kohde.taso === 1 || kohde.taso === 3 ? kohde.taso : 2,
           kuvamerkki: kohde.taso === 1 ? nostosymKuvamerkki(m.kategoria, m.laji) : null,
+          // Löytämisen sumu: luonnos, kunnes löydetty (ks. keraa).
+          luonnos: luonnos(m.id, kohde.taso === 1 ? 1 : 2, a.lat, a.lon),
           /*
            * KAUPUNKIJÄSENYYS (PAATOKSET 27 TARKENNUS 2 kohta 7,
            * js/fokuskohteet.js nostonKaupunkiAvain): saman kaupungin
@@ -2886,6 +2928,7 @@ export function luoNostot({
       lunastettu: Boolean(r.lunastettu),
       taso: r.taso ?? 2,
       kuvamerkki: r.kuvamerkki ?? null,
+      luonnos: Boolean(r.luonnos),
       elementti: r.perhe === 'piste' ? pisteElementti : nostoElementti,
       asettele: r.perhe === 'piste' ? asetteleFokuspiste : asetteleNosto,
     }));
