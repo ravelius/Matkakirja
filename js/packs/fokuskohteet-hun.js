@@ -197,6 +197,7 @@ export const FOKUSKOHTEET_HUN = [
     id: 'eger',
     nimi: 'Eger',
     tyyppi: 'kaupunki',
+    taso: 1,
     nappi: 'Linna, joka piti puolensa',
     kysymykset: [
       'Miten pieni varuskunta kesti niin pitkän piirityksen?',
@@ -266,6 +267,7 @@ export const FOKUSKOHTEET_HUN = [
     id: 'kekes',
     nimi: 'Kékes',
     tyyppi: 'vuori',
+    taso: 1,
     nappi: 'Unkarin katto — 1014 metriä',
     kysymykset: [
       'Miten Mátran vuoret syntyivät?',
@@ -474,6 +476,7 @@ export const FOKUSKOHTEET_HUN = [
     id: 'balaton',
     nimi: 'Balaton',
     tyyppi: 'jarvi',
+    taso: 1,
     symboli: 'luonto',
     nappi: 'Keski-Euroopan suurin järvi',
     kysymykset: [
@@ -524,6 +527,7 @@ export const FOKUSKOHTEET_HUN = [
     id: 'hortobagy',
     nimi: 'Hortobágy',
     tyyppi: 'vuori',
+    taso: 1,
     symboli: 'luonto',
     nappi: 'Aro, jonka yllä ei ole aitaa',
     kysymykset: [
@@ -558,6 +562,7 @@ export const FOKUSKOHTEET_HUN = [
     id: 'tokaj',
     nimi: 'Tokaj',
     tyyppi: 'ruoka',
+    taso: 1,
     symboli: 'ruoka',
     nappi: 'Kuninkaiden viini',
     kysymykset: [
@@ -590,6 +595,7 @@ export const FOKUSKOHTEET_HUN = [
     id: 'pannonhalma',
     nimi: 'Pannonhalma',
     tyyppi: 'historia',
+    taso: 1,
     symboli: 'historia',
     nappi: 'Luostari, joka on ollut paikallaan tuhat vuotta',
     kysymykset: [
