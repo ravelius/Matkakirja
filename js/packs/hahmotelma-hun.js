@@ -1453,4 +1453,66 @@ export const HAHMOTELMA_HUN = [
       fakta: 'Herendin kuvioita on nimetty ensimmäisten asiakkaiden mukaan, muun muassa kuningatar Viktorian, Esterházyn ja Rothschildin.',
     },
   },
+  /*
+   * VISEGRÁDIN KUNINKAALLINEN PALATSI — MATKAKIRJAN IHME, "RAPPEUTUNUT"
+   * (kadonnut: false), tilaus docs/raportit/havainnekuvat-codexille-
+   * eurooppa-20260921.md (kohde 29). Kuva on aito Commons-valokuva
+   * kaivetuista raunioista; `ihme.osoite` odottaa Codexin kulta-
+   * aikakuvaa (loistoaika-parikuva, ei vielä toimitettu — osoite
+   * 404:ttää siihen asti, sama käytäntö kuin Medina Azaharassa).
+   * Koordinaatti: en-Wikipedian "Visegrád, Hungary" -artikkelilla ei ole
+   * omaa pistettä palatsille (vain kaupungin piste), joten piste on
+   * Wikidatan "royal palace of Visegrád" (Q19703654) -kohteen tarkka
+   * koordinaatti 47.792194 N / 18.974111 E, joka täsmää myös Commons-
+   * kuvan omaan GMP-koordinaattiin (47.791130, 18.977130).
+   */
+  {
+    id: 'hahmotelma-visegrad-palota',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/hun-nosto-visegrad-bccd3fec.jpg',
+      lyhyt: 'Visegrádin kuninkaallisen palatsin kaivettuja kiviraunioita metsäisen mäenrinteen edessä.',
+      selite: 'Vuonna 1986 otettu kuva Visegrádin kuninkaallisen palatsin kaivausalueelta: nurmikentän reunalla on matalia kivimuurin jäänteitä ja goottilainen kaariaukko, ja taustalla kohoaa metsäinen mäenrinne. Soratiellä kävelee kävijöitä.',
+      lahde: 'Valokuva: Jörg Blobelt, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Jörg Blobelt',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:19860831360NR_Visegr%C3%A1d_(Ungarn)_K%C3%B6nigspalast.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Visegrádin kuninkaallinen palatsi',
+    tyyppi: 'historia',
+    lahi: true,
+    kysymykset: [
+      'Mikä tyylisuunta näkyi Visegrádissa ensimmäistä kertaa Italian ulkopuolella?',
+      'Miksi palatsi hautautui maan alle vuosisadoiksi?',
+    ],
+    korostukset: ['Mátyás Corvinus|Mátyás Corvinus', 'raunioiksi|raunioiksi'],
+    nappi: 'Mátyás Corvinuksen renessanssipalatsi, joka unohtui maan alle',
+    // 18.974111 E / 47.792194 N — Wikidata Q19703654 (en-Wikipedialla ei omaa pistettä palatsille)
+    laudat: {
+      maailmankartta: { x: 6465.8, y: 1485 },
+      europe: { x: 575.5, y: 636.7 },
+    },
+    teksti: 'Visegrádin kuninkaallinen palatsi sai alkunsa, kun kuningas Kaarle Robert rakennutti '
+      + 'ensimmäisen kuninkaanasunnon Tonavan rannalle vuoden 1325 jälkeen; hänen poikansa '
+      + 'Ludvig I laajensi sen palatsiksi, ja Ludvigin ja Sigismundin aikana suurin osa '
+      + 'vanhoista rakennuksista purettiin uuden, 123 x 123 metrin neliöpohjaisen '
+      + 'palatsikompleksin tieltä. Vuosina 1477–1484 Mátyás Corvinus rakennutti palatsin '
+      + 'uudelleen myöhäisgoottilaiseen tyyliin ja koristeli sen italialaisella '
+      + 'renessanssityylillä — ensimmäistä kertaa tämä tyylisuunta näkyi Italian ulkopuolella '
+      + 'Euroopassa. Ottomaanien piiritys vuonna 1544 jätti palatsin raunioiksi, ja '
+      + '1700-luvulle tultaessa se oli kokonaan maan peitossa ja unohdettu. Kaivaukset '
+      + 'alkoivat 1934 ja jatkuvat yhä, ja osa palatsin goottilaisista suihkulähteistä on '
+      + 'sittemmin rekonstruoitu.',
+    lahde: 'en-Wikipedia "Visegrád, Hungary", osio "Royal Palace" (tarkistettu 21.9.2026).',
+    ihme: {
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-visegrad-palota-loistoaika.jpg',
+      kadonnut: false,
+      selite: 'Loistokaudellaan 1480-luvulla Mátyás Corvinuksen palatsi oli Italian ulkopuolisen '
+        + 'Euroopan ensimmäisiä renessanssirakennuksia: goottilaiset salit sekoittuivat '
+        + 'italialaisiin koristeaiheisiin ja pihalla solisivat kuninkaan suihkulähteet.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: '
+        + 'en-Wikipedia "Visegrád, Hungary", tarkistettu 21.9.2026.',
+      url: 'https://en.wikipedia.org/wiki/Visegr%C3%A1d,_Hungary',
+    },
+  },
 ];

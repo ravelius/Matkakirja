@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2016, teksti: 'Kadonneet monumentit: 26 rappeutunutta nykykuvin' },
   { v: 2015, teksti: 'Pohjapoltto: isobaatit ja merikoristeet' },
   { v: 2014, teksti: 'GL vaihe 2: kaupunkinimet WebGL-kerroksessa oletuksena' },
   { v: 2013, teksti: 'Visat era 4: 45 uutta nostoihin' },

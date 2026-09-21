@@ -1531,4 +1531,54 @@ export const HAHMOTELMA_BGR = [
       + 'kaupungin suosituimmat nähtävyydet.',
     lahde: 'en-Wikipedia "Balchik", johdanto-osa ja osio "History" (tarkistettu 19.9.2026).',
   },
+  {
+    id: 'hahmotelma-cherven',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/bgr-nosto-cherven-8438ba6a.jpg',
+      lyhyt: 'Chervenin keskiaikaisen linnoituksen kivirakenteita kalliokukkulalla.',
+      selite: 'Kuvassa on Chervenin linnoituksen kaivettuja kivimuureja ja rakennusten jäänteitä '
+        + 'kalliokukkulalla Cherni Lom -joen mutkassa.',
+      lahde: 'Valokuva: Vislupus, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Vislupus',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Cherven_fortress_016.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Chervenin linnoitus',
+    tyyppi: 'historia',
+    lahi: true,
+    kysymykset: [
+      'Miksi Chervenistä tuli niin tärkeä kaupunki?',
+      'Mitä kaupungille tapahtui osmanien vallattua sen?',
+    ],
+    korostukset: ['piispanistuin|piispanistuimeksi'],
+    nappi: 'Toisen Bulgarian valtakunnan linnoituskaupunki, jota osmaanit eivät vielä uhkaa',
+    // 26.01764167 E / 43.62073056 N — en-Wikipedia "Cherven (fortress)"
+    laudat: {
+      maailmankartta: { x: 6700.6, y: 1658.2 },
+      europe: { x: 710.7, y: 746.4 },
+    },
+    teksti: 'Chervenin linnoitus on keskiaikaisen kaupungin rauniot Cherni Lom -joen mutkassa '
+      + 'kalliokukkulalla, noin 30 kilometriä Rusesta etelään Koillis-Bulgariassa. Kaupunki '
+      + 'oli 1100-luvulta 1300-luvulle yksi Toisen Bulgarian valtakunnan tärkeimmistä '
+      + 'sotilas-, hallinto- ja talouskeskuksista, ja siitä tuli vuonna 1235 bulgarialaisen '
+      + 'ortodoksisen piispan istuimeksi. Kaivauksissa on paljastunut linnoitettu '
+      + 'palatsialue, kaksi maanalaista vedenjohtokäytävää, kolmetoista kirkkoa sekä '
+      + 'hallinto- ja asuinrakennuksia ja työpajoja. Osmanit valtasivat kaupungin vuonna '
+      + '1388, ja vaikka se säilytti aluksi hallinnollisen asemansa, se autioitui vähitellen '
+      + 'eikä sitä koskaan asutettu uudelleen. Kalliolle louhitut vedenjohdot ja alueen '
+      + 'kalliokirkot ovat yhä nähtävissä kaivausalueella.',
+    lahde: 'en-Wikipedia "Cherven (fortress)", johdanto-osa ja osiot "History" ja '
+      + '"Archaeological site" (tarkistettu 21.9.2026).',
+    ihme: {
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-cherven-loistoaika.jpg',
+      kadonnut: false,
+      selite: 'Loistokaudellaan 1300-luvulla Cherven oli täyteen rakennettu linnoituskaupunki '
+        + 'kalliokukkulallaan: torneineen, kirkkoineen ja työpajoineen se oli Toisen '
+        + 'Bulgarian valtakunnan vilkas hallinto- ja kauppakeskus.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: '
+        + 'en-Wikipedia "Cherven (fortress)", tarkistettu 21.9.2026.',
+      url: 'https://en.wikipedia.org/wiki/Cherven_(fortress)',
+    },
+  },
 ];

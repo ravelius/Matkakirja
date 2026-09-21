@@ -1550,4 +1550,58 @@ export const HAHMOTELMA_CZE = [
       fakta: 'Kaupungin tunnetuin maamerkki on Panská skála -basalttikallio.',
     },
   },
+  {
+    id: 'hahmotelma-rabi',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/cze-nosto-rabi-561a248b.jpg',
+      lyhyt: 'Rabín linnan rauniot kohoavat kukkulalla Etelä-Böömissä.',
+      selite: 'Kuvassa on Rabín linnan kivisiä muurinjäänteitä ja torneja kukkulan laella, '
+        + 'ympärillä Otavan laakson maisemaa.',
+      lahde: 'Valokuva: Chmee2, myöhemmin muokannut Ximonic (Simo Räsänen), Wikimedia Commons '
+        + '(CC BY 3.0).',
+      tekija: 'Chmee2, myöhemmin muokannut Ximonic (Simo Räsänen)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:View_of_the_Rab%C3%AD_Castle_(2).JPG',
+      lisenssi: 'CC BY 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0',
+    },
+    nimi: 'Rabín linna',
+    tyyppi: 'historia',
+    lahi: true,
+    kysymykset: [
+      'Miten Jan Žižka menetti näkönsä kokonaan?',
+      'Mikä teki Rabín linnasta Tšekin suurimman linnaraunion?',
+    ],
+    korostukset: ['Jan Žižka|Jan Žižkan', 'tulipalo|tulipalo'],
+    nappi: 'Tšekin suurin linnarauniona, jonka tulipalo jätti korjaamatta',
+    // 13.61811944 E / 49.27942778 N — en-Wikipedia "Rabí Castle"
+    laudat: {
+      maailmankartta: { x: 6287.3, y: 1421.4 },
+      europe: { x: 472.7, y: 597.6 },
+    },
+    teksti: 'Rabín linna kohoaa Otava-joen yläpuolella Etelä-Böömissä, ja siitä tuli '
+      + 'pinta-alaltaan Tšekin suurin linnarauniona säilynyt linna. Ensimmäinen maininta '
+      + 'linnasta on vuodelta 1380, ja Velhartican suvun uskotaan perustaneen sen '
+      + '1300-luvulla vartioimaan kauppareittejä ja kultaesiintymiä. Husiittisodissa Jan '
+      + 'Žižkan joukot valtasivat linnan kahdesti vuosina 1420–1421, ja legendan mukaan '
+      + 'nuolen irrottama päärynäpuun sirpale osui hänen jäljellä olevaan silmäänsä toisen '
+      + 'piirityksen aikana. Půta Švihovský z Rýžmberka osti tilan 1479 ja tilasi '
+      + 'mestarirakentaja Benedikt Riedin laajentamaan linnaa muun muassa jopa kuuden '
+      + 'metrin paksuisilla muureilla, mutta hanke tyhjensi suvun varat eikä valmistunut '
+      + 'koskaan kokonaan. Kolmikymmenvuotisen sodan tuho ja vuoden 1720 tulipalo jättivät '
+      + 'linnan raunioiksi, minkä jälkeen Lambergin suku siirsi asuinpaikkansa Žichoviceen '
+      + 'eikä linnaa enää korjattu. Rabí julistettiin kansalliseksi kulttuurimuistomerkiksi '
+      + 'vuonna 1978.',
+    lahde: 'en-Wikipedia "Rabí Castle", johdanto-osa ja osio "History" (tarkistettu '
+      + '21.9.2026).',
+    ihme: {
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-rabi-loistoaika.jpg',
+      kadonnut: false,
+      selite: 'Loistokaudellaan 1400-luvun lopulla, Půta Švihovskýn laajennusten jälkeen, '
+        + 'Rabín linna oli mahtava myöhäisgoottilainen linnoitus, jonka paksut muurit ja '
+        + 'tornit hallitsivat Otavan laakson maisemaa.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: '
+        + 'en-Wikipedia "Rabí Castle", tarkistettu 21.9.2026.',
+      url: 'https://en.wikipedia.org/wiki/Rab%C3%AD_Castle',
+    },
+  },
 ];
