@@ -2,6 +2,10 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import {
+  LAATTAKERROS_SYVYYSSIIRTO_HIENOMPI, LAATTAKERROS_SYVYYSSIIRTO_KARKEAMPI,
+  LAATTAKERROS_TUKI_SYVYYSSIIRTO, laatanSyvyyssiirto,
+} from '../js/pallolaatat.js';
+import {
   LAATTAKERROS_HAIVE_MS, LAATTAKERROS_HYSTEREESI_ALAS, LAATTAKERROS_LAATTAKATTO_ENNAKKO,
   LAATTAKERROS_LAATTAKATTO_MUISTI,
   LAATTAKERROS_LAATTAKATTO_NAKYVA, LAATTAKERROS_LAATTAKATTO_TAVUT,
@@ -446,7 +450,7 @@ test('kytkentä: pohja naulataan tasoon 5 vain kerroksen ollessa päällä', () 
 test('kerros: laatan materiaali, verkko ja osoitteet ovat suunnitelman mukaiset', () => {
   const laatat = lue('../js/pallolaatat.js');
   // Materiaali ja syvyysjärjestys kuten lepokerroksella (ks. PIIRTOJÄRJESTYS).
-  assert.match(laatat, /map: tekstuuri, transparent: true, opacity: 0, depthWrite: true,\n\s*polygonOffset: true, polygonOffsetFactor: 0,\n\s*polygonOffsetUnits: t\.tuki \? LAATTAKERROS_TUKI_SYVYYSSIIRTO : LAATTAKERROS_SYVYYSSIIRTO,/);
+  assert.match(laatat, /map: tekstuuri, transparent: true, opacity: 0, depthWrite: true,\n\s*polygonOffset: true, polygonOffsetFactor: 0,\n\s*polygonOffsetUnits: laatanSyvyyssiirto\(t, taso\?\.z\),/);
   assert.match(laatat, /verkko\.renderOrder = LAATTAKERROS_RENDER_ORDER_POHJA \+ t\.z;/);
   assert.match(laatat, /verkko\.raycast = \(\) => \{\};/, 'kerros ei ota napautuksia');
   assert.match(laatat, /verkko\.userData\.laattakerros = \{ z: t\.z, sarake: t\.sarake, rivi: t\.rivi \};/);
@@ -686,4 +690,21 @@ test('sulavuus E4: pinnanRuutupiste on laattakerroksenOsuman käänteinen', () =
   assert.ok(pinnanRuutupiste({ lat: 0, lng: 0, altitude: 0.05 }, 0, 180, linssi).syvyys > 0);
   assert.equal(pinnanRuutupiste({ lat: 0, lng: 0, altitude: 0.05 }, NaN, 0, linssi), null);
   assert.equal(pinnanRuutupiste(null, 0, 0, linssi), null);
+});
+
+test('laatan syvyyssiirto aseman mukaan: hienompi edessä, karkeampi ja tuki takana, kaikki vektorien takana', () => {
+  assert.equal(laatanSyvyyssiirto({ z: 7 }, 7), LAATTAKERROS_SYVYYSSIIRTO);
+  assert.equal(laatanSyvyyssiirto({ z: 8 }, 7), LAATTAKERROS_SYVYYSSIIRTO_HIENOMPI);
+  assert.equal(laatanSyvyyssiirto({ z: 5 }, 7), LAATTAKERROS_SYVYYSSIIRTO_KARKEAMPI);
+  assert.equal(laatanSyvyyssiirto({ z: 5, tuki: true }, 7), LAATTAKERROS_TUKI_SYVYYSSIIRTO);
+  assert.equal(laatanSyvyyssiirto({ z: 5 }, null), LAATTAKERROS_SYVYYSSIIRTO);
+  // Järjestys: hienompi < nykyinen < karkeampi < tuki < 0 (pohja), ja hienompi > −12 (vektorit, kalvot).
+  assert.ok(LAATTAKERROS_SYVYYSSIIRTO_HIENOMPI < LAATTAKERROS_SYVYYSSIIRTO);
+  assert.ok(LAATTAKERROS_SYVYYSSIIRTO < LAATTAKERROS_SYVYYSSIIRTO_KARKEAMPI);
+  assert.ok(LAATTAKERROS_SYVYYSSIIRTO_KARKEAMPI < LAATTAKERROS_TUKI_SYVYYSSIIRTO && LAATTAKERROS_TUKI_SYVYYSSIIRTO < 0);
+  assert.ok(LAATTAKERROS_SYVYYSSIIRTO_HIENOMPI > -12);
+  // Kokonaiset yksiköt: ero ei jää jänteen painuman varaan.
+  for (const v of [LAATTAKERROS_SYVYYSSIIRTO_HIENOMPI, LAATTAKERROS_SYVYYSSIIRTO_KARKEAMPI, LAATTAKERROS_TUKI_SYVYYSSIIRTO]) {
+    assert.ok(Math.abs(v - LAATTAKERROS_SYVYYSSIIRTO) >= 2, `${v}`);
+  }
 });

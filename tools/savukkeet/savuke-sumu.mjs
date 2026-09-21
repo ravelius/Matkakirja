@@ -49,7 +49,8 @@ const palvelin = http.createServer((req, res) => {
   res.end(readFileSync(polku));
 });
 await new Promise((ok) => palvelin.listen(0, ok));
-const osoite = `http://localhost:${palvelin.address().port}/?lauta=pallo`;
+// Sumu on oletuksena POIS (omistaja 21.9.2026 illalla); savuke kytkee kokeilun päälle.
+const osoite = `http://localhost:${palvelin.address().port}/?lauta=pallo&loytosumu=1`;
 
 let lapi = 0;
 let kaikki = 0;
