@@ -820,6 +820,25 @@ export const LAATTAKERROS_LIIKEVARA_PYYHKAISY = true;
 /** Ennakkoalueen laattoja enintään (fling ei saa tilata satoja). */
 export const LAATTAKERROS_LAATTAKATTO_ENNAKKO = 96;
 /*
+ * ZOOMIENNAKKO (omistajan tuntuma v2026, 21.9.2026 ilta: *"merialueille
+ * tulee zoomatessa hetkellisesti karkeampien viivojen muhjua"*).
+ * Mitattu Chromium 1400 × 900 dpr 2, Marseille, zoom 0,3 → 0,025:
+ * taso vaihtuu heti kynnyksellä (z6 → z7 → z8), ja uuden tason laatat
+ * tulevat sceneen vasta 4–6 päivityksen (300–500 ms) kuluessa — sillä
+ * välin vanha taso näkyy 2× venytettynä (paksut rantaviivat ja
+ * syvyyskäyrät). Kun kamera LASKEE ja tarve on ZOOMIENNAKKO_OSUUS:n
+ * päässä seuraavan tason kynnyksestä, seuraavan tason laatat tilataan
+ * jo näkymän KESKIALUEELTA (se osa, joka on ruudulla myös lähempää:
+ * laatikko kutistettuna ZOOMIENNAKKO_KESKIOSUUS:lla) ennakkona —
+ * ladataan ja viedään näytönohjaimelle, mutta EI sceneen ennen tason
+ * vaihtoa. Vaihdon hetkellä uusi taso on jo muistissa ja peittää
+ * vanhan heti. Enintään LAATTAKATTO_ZOOMIENNAKKO laattaa, samasta
+ * muistibudjetista kuin liikevaran ennakko.
+ */
+export const LAATTAKERROS_ZOOMIENNAKKO_OSUUS = 0.35;
+export const LAATTAKERROS_ZOOMIENNAKKO_KESKIOSUUS = 0.6;
+export const LAATTAKERROS_LAATTAKATTO_ZOOMIENNAKKO = 16;
+/*
  * TUKITASO (sulavuus E2, 21.9.2026): näkyvän alueen alla pidetään aina
  * KARKEAMMAN tason laatat — oletuksena kaksi tasoa karkeammat, eli yksi
  * tukilaatta kattaa 16 näkyvää — ja alue on näkyvää laajempi (vara
@@ -2168,7 +2187,7 @@ export function luoLaattakerros({
      * nakyviaScenessa / nakyvia on se luku, jonka on pysyttävä 100 %:ssa,
      * kun jo ladattua aluetta panoroidaan edestakaisin.
      */
-    nakyvia: 0, nakyviaScenessa: 0, nakyviaTaysin: 0, ladattavia: 0, ennakkoja: 0, pidettyja: 0, tukia: 0, kattoRajoitti: false,
+    nakyvia: 0, nakyviaScenessa: 0, nakyviaTaysin: 0, ladattavia: 0, ennakkoja: 0, pidettyja: 0, tukia: 0, kattoRajoitti: false, zoomiennakkoja: 0,
     /*
      * JUMISSA on tämän erän tarkin mitta: tietue, joka on tilassa
      * "ladataan", jota ei ole aloitettu eikä ole jonossa — laatta,
@@ -3644,6 +3663,76 @@ export function luoLaattakerros({
         if (t.tila === 'valmis' && t.viety && !t.scenessa) lisaaSceneen(t);
       }
     }
+    /*
+     * 1d. ZOOMIENNAKKO (ks. LAATTAKERROS_ZOOMIENNAKKO_OSUUS): kamera
+     * laskee ja seuraava taso on lähellä → sen laatat keskialueelta
+     * muistiin ennen vaihtoa. Ei kertomuslukossa (taso on lukittu).
+     */
+    let zoomiennakkoja = 0;
+    const laskee = Number.isFinite(edellinenPov?.altitude) && pov.altitude < edellinenPov.altitude * 0.999;
+    if (laskee && !kertomuslukko) {
+      const seuraava = tasoZ(valittu.z + 1);
+      /*
+       * Vaihto on lähellä kahdella tavalla: tarve ylittää kynnyksen
+       * ZOOMIENNAKKO_OSUUS:n sisällä, TAI taso on jo laattakaton
+       * rajoittama (tarve on hienompi kuin valittu) — silloin vaihto
+       * tulee heti, kun näkyvä joukko mahtuu kattoon zoomin edetessä.
+       */
+      const tarveKohta = lepokerroksenTaso(pyramidi.tasot, tarvePxAste * (1 + LAATTAKERROS_ZOOMIENNAKKO_OSUUS), LAATTAKERROS_TERAVYYS);
+      const reliefinKattoZ = kerrokset.reliefi ? pyramidinReliefinSyvinTaso() : null;
+      if (seuraava && tarveKohta && (tarveKohta.z >= seuraava.z || kattoRajoitti)
+        && !(Number.isFinite(reliefinKattoZ) && seuraava.z > reliefinKattoZ)) {
+        const kw = (raaka.lon1 - raaka.lon0) * LAATTAKERROS_ZOOMIENNAKKO_KESKIOSUUS / 2;
+        const kh = (raaka.lat1 - raaka.lat0) * LAATTAKERROS_ZOOMIENNAKKO_KESKIOSUUS / 2;
+        const kx = (raaka.lon0 + raaka.lon1) / 2;
+        const ky = (raaka.lat0 + raaka.lat1) / 2;
+        const keskialue = { lon0: kx - kw, lon1: kx + kw, lat0: Math.max(latMin, ky - kh), lat1: Math.min(latMax, ky + kh) };
+        const zoomiKartta = lepokerroksenLaatat({
+          taso: seuraava, laatta: koko, arkki: pyramidi.arkki, projektio: pyramidi.projektio, alue: keskialue, laudanY,
+        });
+        const tavuaPerLaatta = koko * koko * 4 * (renderer?.capabilities?.isWebGL2 ? 4 / 3 : 1);
+        const mahtuu = Math.floor(tavukatto() / tavuaPerLaatta);
+        const katto = Math.max(0, Math.min(LAATTAKERROS_LAATTAKATTO_ZOOMIENNAKKO,
+          mahtuu - nakyvat.size - tuet.size - ennakko.size - LAATTAKERROS_ENNAKKO_MUISTIVARA));
+        const seurPpu = seuraava.pikseliaPerYksikko;
+        const seurKeskiX = keskiX * (seurPpu / ppu);
+        const seurKeskiY = keskiY * (seurPpu / ppu);
+        const ehdokkaat = (zoomiKartta?.laatat ?? [])
+          .filter((l) => laattakerroksenNakyvissa(laatanAlue(seuraava, l.sarake, l.rivi), pov))
+          .map((l) => {
+            let dx = (l.sarake + 0.5) * koko - seurKeskiX;
+            while (dx > seuraava.leveys / 2) dx -= seuraava.leveys;
+            while (dx < -seuraava.leveys / 2) dx += seuraava.leveys;
+            return { l, d: Math.abs(dx) };
+          })
+          .sort((a, b) => a.d - b.d);
+        for (const { l } of ehdokkaat) {
+          if (zoomiennakkoja >= katto) break;
+          const avain = `${seuraava.z}/${l.sarake}/${l.rivi}`;
+          let t = laatat.get(avain);
+          if (!t) {
+            t = {
+              avain, z: seuraava.z, sarake: l.sarake, rivi: l.rivi, alue: null, tila: 'ladataan',
+              verkko: null, materiaali: null, tekstuuri: null, kaytetty: nyt, tavut: 0,
+              nakyva: false, scenessa: false, viety: false, aloitettu: false, haipyy: false, jonossa: false,
+              varillinen: false, kermatta: false, tuki: false,
+              katkaisin: null, etaisyys: 0, sukupolvi, pito: true, ennakko: true,
+            };
+            laatat.set(avain, t);
+          }
+          // Jonon järjestys: keskeltä ulospäin, valitun tason mitassa (kuten liikevaralla).
+          let dx = (l.sarake + 0.5) * koko - seurKeskiX;
+          while (dx > seuraava.leveys / 2) dx -= seuraava.leveys;
+          while (dx < -seuraava.leveys / 2) dx += seuraava.leveys;
+          t.etaisyys = Math.hypot(dx, (l.rivi + 0.5) * koko - seurKeskiY) * (valittu.leveys / seuraava.leveys);
+          t.kaytetty = nyt;
+          t.pito = true;
+          if (!t.nakyva && !t.tuki) t.ennakko = true;
+          zoomiennakkoja += 1;
+        }
+      }
+    }
+    mittarit.zoomiennakkoja = zoomiennakkoja;
     /*
      * PITO: laatta, joka on ollut näkyvissä tai ennakossa viimeisen
      * LAATTAKERROS_PITO_MS:n aikana, ei putoa jonosta eikä LRU:n
