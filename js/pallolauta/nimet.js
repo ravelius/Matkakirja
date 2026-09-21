@@ -143,6 +143,7 @@
 import {
   KARTTANIMI_FONTTI, karttanimienKaupungit, ladoRuutunimet,
 } from '../karttanimet.js';
+import { PALLOLAUDAN_LEVEYS, leveysKorkeudesta } from './kamera.js';
 
 /** Nimiä pallolla enintään kerrallaan (karttapallo.md luku 6). */
 export const NIMIEN_KATTO = 40;
@@ -321,6 +322,111 @@ export function nimenKarttakerroin(skaala, vertailu = NIMEN_VERTAILUSKAALA) {
     ** Math.round(Math.log(raaka) / Math.log(NIMEN_KERTOIMEN_PORRAS));
 }
 
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * KOKO LIUKUU JOKA KEHYKSESSÄ, LADONTA KIRJOITTAA VAIN POHJAN (omistaja
+ * 21.9.2026 "KARTAN SULAVUUS ENSIN", Fablen erä E2; mittari
+ * js/pallolauta/sulavuusmittari.js, savuke savuke-nimiot-sulavat.mjs)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * MITATTU (E1, ikkunallinen Chromium 60 fps, Marseille, kamera-ajozoomi
+ * 2,5×): nimiön KOKO muuttui vain 77–79 %:ssa liikkeen kehyksistä ja
+ * yhden kehyksen porras oli 15–17 %. Syy on ladonnan tahti: nimen
+ * font-size ja noston scale() kirjoitetaan vain ladonnassa, ja ladonta
+ * kulkee liikkeessä 200 ms:n välein (js/pallolauta/lauta.js
+ * LADONNAN_TAHTI_MS) — viisi porrasta sekunnissa, ei liuku.
+ *
+ * RATKAISU ON YKSI TYYLIKIRJOITUS KEHYSTÄ KOHTI, NOLLA MERKKIÄ KOHTI.
+ * Kotelo saa CSS-muuttujan `--nimiokerroin` = (kameran mittakaava
+ * nyt) / (mittakaava, jolla pohja ladottiin); se kirjoitetaan pallon
+ * kehyskoukusta (js/pallo.js kytkePallonKehys, sama koukku kuin
+ * kaupunkipisteiden paikalla) ja css/styles.css skaalaa jokaisen nimen
+ * ja noston SVG-KUOREN sillä (`.pallolauta-nimi > svg`,
+ * `.pallolauta-nosto > svg`, transform-origin merkin oma piste).
+ * Kuoren skaala kertoo kaiken sisällä olevan — kirjasinkoon, kirjain-
+ * välin ja lukon siirron dx/dy — täsmälleen samalla kertoimella, jolla
+ * ladonta ne itse skaalaisi (skaalattuLukko: kaikki × s). Sisäryhmien
+ * omat tyylit (`.pallolauta-nimi-siirto`, `.pallolauta-nosto-siirto`)
+ * pysyvät ennallaan, joten mittarit ja savukkeet, jotka lukevat
+ * `style.transform`ista scale(mitta)- ja translate-lukuja, lukevat yhä
+ * ladonnan pohjan.
+ *
+ * LADONTA JA KUORI VAIHTUVAT SAMASSA KEHYKSESSÄ. Kun ladonta kirjoittaa
+ * uuden pohjan (kerroin k₁ vanhan k₀:n tilalle), kotelon muuttuja
+ * palautuu samassa kehyksessä kohtaan 1 · korjaus, ja tulo pohja ×
+ * kuori on ennen ja jälkeen sama luku — ei hyppyä. `korjaus` on
+ * ladonnan porrastetun kertoimen (nimenKarttakerroin, 0,5 %:n
+ * portaat lukon vertailua varten) ja porrastamattoman suhde: kuori
+ * näyttää aina PORRASTAMATTOMAN koon, joten ladonnan porras ei näy
+ * edes 0,5 %:n hyppynä.
+ *
+ * KEHYKSESSÄ EI MITATA MITÄÄN. Kerroin lasketaan kameran korkeudesta
+ * (`leveysKorkeudesta`, sama kaava kuin kamera.nakyvaAlue().skaala) —
+ * ruudun leveys supistuu jakolaskussa pois, joten kehyksessä ei lueta
+ * clientWidthiä eikä yhtään laatikkoa.
+ *
+ * NIMIÖN RUUTUPIKSELIKATTO (PAATOKSET 31 kohta 2) pätee myös kuoressa:
+ * nosto asettaa itselleen `--nimio-a` (raaka mitta / katettu mitta)
+ * ja `--nimio-b` (katto / katettu mitta), ja css/styles.css laskee
+ * kuoren skaalaksi min(kerroin · a, b) — eli näytetty mitta on
+ * min(raaka · kerroin, katto), sama sääntö kuin nostosymKatettuMitta
+ * kehys kerrallaan. Kaupunkien nimillä ei ole kattoa (a = 1, b = ∞).
+ *
+ * SIIRTYMÄT POIS LIIKKEEN AJAKSI: kotelo saa luokan
+ * `pallolauta-liikkuu` kun kamera liikkuu, ja se sammuttaa sisäryhmien
+ * CSS-siirtymät. Ilman sitä ladonnan pohjan vaihto liukuisi 200–250 ms
+ * ja kuoren palautus tulisi heti — nimiö huojuisi joka ladonnassa.
+ * Luokka poistuu lepoladonnan JÄLKEISESSÄ kehyksessä
+ * (js/pallolauta/lauta.js), jotta lepoladonnan omakin pohja vaihtuu
+ * ilman liukua ja siirtymät ovat käytössä vasta levossa.
+ */
+/** Kotelon CSS-muuttuja: kameran mittakaava / ladonnan mittakaava. */
+export const NIMIOKERROIN_MUUTTUJA = '--nimiokerroin';
+/** Kotelon luokka liikkeen ajan (sisäryhmien siirtymät pois). */
+export const LIIKKUU_LUOKKA = 'pallolauta-liikkuu';
+/**
+ * Ladonnan mitta kuoren kerrointa varten: kameran korkeus ladonnan
+ * hetkellä ja korjaus = porrastamaton kerroin / porrastettu kerroin.
+ *
+ * @param {number} skaala   `kamera.nakyvaAlue().skaala` ladonnassa
+ * @param {number} vertailu saapumisnäkymän skaala (nimenKarttakerroin)
+ * @param {number} korkeus  kameran korkeus (altitude) ladonnassa
+ * @returns {{korkeus: number, kerroin: number, korjaus: number}|null}
+ */
+export function ladonnanMitta(skaala, vertailu, korkeus) {
+  if (!(skaala > 0) || !(korkeus > 0)) return null;
+  const perus = vertailu > 0 ? vertailu : NIMEN_VERTAILUSKAALA;
+  const kerroin = nimenKarttakerroin(skaala, perus);
+  const raaka = Math.min(NIMEN_KARTTAKERROIN_MAX,
+    Math.max(NIMEN_KARTTAKERROIN_MIN, skaala / perus));
+  return { korkeus, kerroin, korjaus: kerroin > 0 ? raaka / kerroin : 1 };
+}
+/**
+ * Kuoren kerroin kehyksessä: ladonnan korkeuden näkyvä leveys / nykyisen
+ * korkeuden näkyvä leveys, kerrottuna ladonnan korjauksella. Ruudun
+ * leveys supistuu pois, joten tässä ei lueta yhtään mittaa.
+ *
+ * @param {{korkeus: number, korjaus: number}|null} ladonta ladonnanMitta
+ * @param {number} korkeus kameran korkeus nyt
+ * @param {number} kuvasuhde ruudun leveys / korkeus
+ */
+export function liukuvaNimiokerroin(ladonta, korkeus, kuvasuhde) {
+  if (!ladonta || !(korkeus > 0)) return 1;
+  const asetukset = { laudanLeveys: PALLOLAUDAN_LEVEYS, kuvasuhde: kuvasuhde > 0 ? kuvasuhde : 1 };
+  const nyt = leveysKorkeudesta(korkeus, asetukset);
+  const silloin = leveysKorkeudesta(ladonta.korkeus, asetukset);
+  if (!(nyt > 0) || !(silloin > 0)) return 1;
+  return (silloin / nyt) * (ladonta.korjaus > 0 ? ladonta.korjaus : 1);
+}
+/*
+ * Katon muuttujat merkin kuorelle asuvat js/fokusnosto-symbolit.js:ssä
+ * (nostosymAsetaKuorenKatto): turisti-infon kyltti (js/kaupunkinosto.js)
+ * on yhden tiedoston version moduuli, eikä se saa tuoda pallolauta-
+ * kansiosta (perustuslaki: PALLOLAUTA EI KUULU YHDEN TIEDOSTON
+ * VERSIOON, tools/build-standalone.mjs). Tämä nimi jää rinnalle.
+ */
+export { nostosymAsetaKuorenKatto as asetaKuorenKatto } from '../fokusnosto-symbolit.js';
+
 const SVG = 'http://www.w3.org/2000/svg';
 
 /**
@@ -356,13 +462,19 @@ export function asetteleNimi(el, d) {
   const g = el.querySelector('.pallolauta-nimi-siirto');
   const teksti = el.querySelector('text');
   if (!g || !teksti) return;
-  g.style.transform = `translate(${d.dx.toFixed(2)}px, ${d.dy.toFixed(2)}px)`;
-  teksti.setAttribute('font-size', String(d.koko));
-  teksti.setAttribute('text-anchor', d.ank);
-  if (d.tyylitys) teksti.setAttribute('font-variant', d.tyylitys);
-  else teksti.removeAttribute('font-variant');
-  if (d.vali) teksti.setAttribute('letter-spacing', String(d.vali));
-  else teksti.removeAttribute('letter-spacing');
+  // Kirjoitus vain muuttuneelle (erä E3): ladonta kutsuu tätä joka
+  // merkille joka ladonnassa, eikä sama arvo saa likata tyyliä.
+  const muunnos = `translate(${d.dx.toFixed(2)}px, ${d.dy.toFixed(2)}px)`;
+  if (g.style.transform !== muunnos) g.style.transform = muunnos;
+  const maare = (nimi, arvo) => {
+    if (arvo === null || arvo === undefined || arvo === '' || arvo === 0) {
+      if (teksti.hasAttribute(nimi)) teksti.removeAttribute(nimi);
+    } else if (teksti.getAttribute(nimi) !== String(arvo)) teksti.setAttribute(nimi, String(arvo));
+  };
+  maare('font-size', d.koko);
+  maare('text-anchor', d.ank);
+  maare('font-variant', d.tyylitys);
+  maare('letter-spacing', d.vali);
   if (teksti.textContent !== d.teksti) teksti.textContent = d.teksti;
 }
 
