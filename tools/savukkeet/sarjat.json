@@ -506,7 +506,7 @@
       ]
     },
     "savuke-kartuscha-3.mjs": {
-      "huomautus": "Harva (Fable 20.9.2026): kartuscha 3 - pienessa ei lippua, lippu versaalin korkuinen, iso pienenee karttaa koskettaessa (napautus/veto/rulla), vastakoe kortin sisalle. ~70 s."
+      "huomautus": "Harva (Fable 20.9.2026): kartuscha 3 - pienessa ei lippua, lippu versaalin korkuinen, iso pienenee karttaa koskettaessa (napautus/veto/rulla), vastakoe kortin sisalle. 21.9.2026: ruudut 390/820/1400, sisennys kartan reunasta 12/24 px (6a/6b), aiherivin napautus ei valitse kankaalle (7). ~120 s."
     },
     "savuke-huntu-liike.mjs": {
       "huomautus": "Huntu liikkeen ajan (omistaja 21.9.2026): kerman peitto kuvakaappauksesta ennen noppaa, liikkeessa ja perilla — lahto- ja kohdemaa paljaina liikkeessa, muu maailma 80 %. Ateena → Sofia, 390 ja 1400 px, ampari Noden kautta. ~90 s."
