@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2035, teksti: 'Kartuscha RUS: kaksi aihetta' },
   { v: 2034, teksti: 'Kartuscha UKR: kaksi aihetta' },
   { v: 2033, teksti: 'Kartuscha BIH: kolme aihetta' },
   { v: 2032, teksti: 'Marseille-nimen valkkyminen korjattu (vanha rasteri)' },
