@@ -94,3 +94,19 @@ Huomiot: z8:lla rajat ovat 2,2 px ja himmeät, ruoste erottuu paremmin
 kuin sepia maastovärin päällä; nykyalueiden nimet ovat kapiteeleja
 pienempiä ja väistyvät hyvin. Tuotantoon tarvitaan Sisältökirjurin
 nimitarkistus ja nimiötason uusintapoltto (vain `--nimioversio`).
+
+## Vedos 3 (omistaja: ruoste ei erottunut sepiasta; Fable 21.9.)
+
+Kansio `kaappaukset/maakuntavedos-20260921/vedos3/`: `ruoste-vahva-pariisi-puhelin-*.webp`
+(49.7,2.7; 49.35,2.6 = Hauts-de-France/Île-de-France-raja; 48.85,2.35; z8) ja
+**vertailukuva `vertailu-ruoste-vedos2-vs-vedos3-200pros.png`**: sama rajaus
+(Artois–Hauts-de-France–Amiens–Picardie–raja–Île-de-France, puhelin z8)
+rinnakkain 200 %:ssa, vasemmalla vedos 2:n ruoste, oikealla vedos 3:n.
+
+Muste `ruoste-vahva` (`NIMION_VARIT`/`RAJAN_VARIT`): syvempi sävy
+rgb(128,44,20), nimet peitto 0,95 (oli 0,60 ja rgb 146,66,38), rajat 0,75
+(oli 0,42); leveydet ennallaan. Ensimmäinen yritys 0,85/0,60 samalla
+sävyllä ei vielä erottunut — pienkapiteelit ovat ohuita ja pergamentti
+tummentaa; siksi lähes täysi peitto. Poltetut nimiöt piirtyvät kerman ja
+sumun päälle (kerrosjärjestys pohja → väri/kerma → ranta → viivat →
+nimiöt), joten löytämisen sumu ei haalista niitä.

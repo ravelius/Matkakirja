@@ -4170,14 +4170,19 @@ export const NIMION_VARIT = Object.freeze({
   maakunta: 'rgba(70, 48, 29, 0.58)',
   'nykyalue-ruoste': 'rgba(146, 66, 38, 0.60)',
   'nykyalue-sepia': 'rgba(70, 48, 29, 0.36)',
+  // Vedos 3 (omistaja 21.9.: ruoste ei erottunut sepiasta): syvempi sävy
+  // ja lähes täysi peitto; pienkapiteelit ovat ohuita, joten 0,60 jäi
+  // pergamentilla ruskeaksi.
+  'nykyalue-ruoste-vahva': 'rgba(128, 44, 20, 0.95)',
 });
 /** Aluerajan muste nimien mukaan (rivin `muste`). */
 export const RAJAN_VARIT = Object.freeze({
   ruoste: 'rgba(146, 66, 38, 0.42)',
   sepia: 'rgba(70, 48, 29, 0.45)',
+  'ruoste-vahva': 'rgba(128, 44, 20, 0.75)',
 });
 /** Nykyalueen/rajan muste rivistä: 'ruoste' tai 'sepia' (oletus). */
-export const nimionMuste = (nimio) => (nimio?.muste === 'ruoste' ? 'ruoste' : 'sepia');
+export const nimionMuste = (nimio) => (['ruoste', 'ruoste-vahva'].includes(nimio?.muste) ? nimio.muste : 'sepia');
 
 /**
  * Yhden nimiön ladonta tasolla z.
