@@ -739,3 +739,7 @@ Julkaisija 21.9.2026 ilta (PR #2683 Malta): kun kaksi haaraa samasta pohjasta ka
 ## KARTUSCHA BIH VALMIS (1ae02cb3): 3 UUTTA AIHETTA (21.9.2026 klo 22.24)
 
 Sisältökirjuri 21.9.2026 ilta: BIH kartuscha (sisalto-kartuscha-bih 1ae02cb3): historia 5, ruoka 4, kulttuuri 4 nostoa; BIH nyt 4 sisältöaihetta + menovinkit, sama taso kuin täysillä mailla; testit 0 fail. Haara pohjautuu mainiin (agentti ei luottanut kesken työn välitettyyn ohjeeseen) — kelpaa, Julkaisija rebasettaa tarvittaessa. UKR/RUS/ISL jatkuvat ketjuna.
+
+## NOSTOJEN KARTTAMERKIT TAKAISIN: TYYPPIMERKKI KAIKILLE LAHIZOOMISSA + NOSTOTASOT MUIHIN MAIHIN (21.9.2026 klo 22.27)
+
+Omistaja 21.9.2026 klo 23.05 (kortti): 1) Pelikoodari: jokainen nosto saa lähizoomissa (z8 ja lähempänä) Codexin tyyppimerkin (11 tyyppiä, assets/nostotyypit) tavallisessa koossa pisteen tilalle; kauempana piste (hehkuva, erä tulossa); ykköstaso pysyy 1,6-kertaisena kaikilla zoomeilla kuten nyt; siirtymä pisteestä merkkiin häiveellä, GL-runkoon (nostot ovat jo rungolla), savuke puhelinkoossa z6/z8/z9. Erä sulavuusmittauksen ja hehkupisteen kanssa samaan jonoon (hehkupiste ensin, koska kaukana piste näkyy eniten). 2) Sisältökirjuri: nostotasot (taso 1 = maan tähtikohteet, ~4–6 per maa) kaikkiin Euroopan maihin Ranskan mallilla (docs/raportit/nostotasot-fra-20260920.md), maittain 5–6 maan erissä linssilajittelun ja maakuntaluonnehdintojen jälkeen; Fable tarkastaa valinnat.
