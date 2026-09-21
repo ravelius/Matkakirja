@@ -795,3 +795,7 @@ Karttaseppä 21.9.2026 ilta: CHE:n 26 kanttonia ovat jo tuotannon nimiötasossa 
 ## CHE-PAALLEKKAISYYDET KORJATAAN SEURAAVAAN NIMIOPOLTTOON (h), EI HETI (21.9.2026 klo 23.14)
 
 Omistaja 21.9.2026 klo 23.30 (kortti): Sveitsin kolme päällekkäisyyttä (Kapellbrücke/LUZERN z7, Stiftsbibliothek/Appenzell Ausserrhoden z8, VALAIS Matterhornin ja bernhardilaisen välissä) korjataan käsisiirroilla nimiöversioon h seuraavan nimiöpolton yhteydessä muiden korjausten kanssa (Intian valtameren ruusu pohjaan). Ei polttoa nyt.
+
+## KARTUSCHAT ERA B VALMIS: BIH/UKR/RUS/ISL VIITEEN AIHEESEEN (21.9.2026 klo 23.20)
+
+Sisältökirjuri 21.9.2026 ilta (docs/raportit/kartuscha-era-b-yhteenveto-20260921.md, sisalto-grc-kuvat b2c2c039f): BIH 1ae02cb3 (historia/ruoka/kulttuuri), UKR a6dcba7c (historia/kulttuuri), RUS cd43ea4b5 (historia/ruoka), ISL 32a4456f8 (historia); kaikilla 4 sisältöaihetta + menovinkit = 5, testit 0 fail; eri avaimet, ei counts-konflikteja. Julkaisijan jonoon nollauksen jälkeen. Sisältökirjuri siirtyy maakuntien luonnehdintoihin.
