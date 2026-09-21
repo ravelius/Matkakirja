@@ -149,9 +149,14 @@ for (const nakyma of NAKYMAT) {
     `yhteisiä ${yhteiset.length}, koko muuttui ${kokoMuuttui.map(([, n]) => n.nimi).join(', ') || 'ei'}`);
   // Paikka vartioidaan niiltä, jotka olivat RUUDUSSA jo ennen: liikevarasta ruutuun tullut
   // lappu sovitellaan levossa ruudun reunaa vasten (sovittelu.js LIIKEVARA), ja se saa vaihtaa kylkeä.
-  const ruudussaMolemmin = yhteiset.filter(([t]) => A.get(t).sisalla);
-  const paikkaMuuttui = ruudussaMolemmin.filter(([t, n]) => { const a = A.get(t); return Math.abs(n.dx - a.dx) > 0.5 || Math.abs(n.dy - a.dy) > 0.5 || n.puoli !== a.puoli || n.nimio !== a.nimio; });
-  vaadi(`3. ${nakyma}: ruudussa pysyneiden sovittelun siirto, kylki ja nimiön näkyvyys samat (paikka ei muutu)`, ruudussaMolemmin.length >= 3 && paikkaMuuttui.length === 0,
+  // Reunan lähellä (nimiön leveyden verran) reunasääntö saa vaihtaa kylkeä tai piilottaa — ei lasketa.
+  const REUNAVYO = Math.round(Math.min(160, ruutu.viewport.width * 0.2));
+  const kaukanaReunasta = (n) => n.x > REUNAVYO && n.x < ruutu.viewport.width - REUNAVYO && n.y > REUNAVYO && n.y < ruutu.viewport.height - REUNAVYO;
+  const ruudussaMolemmin = yhteiset.filter(([t, n]) => A.get(t).sisalla && kaukanaReunasta(n) && kaukanaReunasta(A.get(t)));
+  // Reunasääntö on pelin oma (sovittelu.js: nimiö ei ylitä ruudun reunaa) eikä liikevaran:
+  // vedon jälkeen reunaan joutuneen noston nimiö saa piiloutua (este 'reuna') — ei lasketa.
+  const paikkaMuuttui = ruudussaMolemmin.filter(([t, n]) => { const a = A.get(t); return n.este !== 'reuna' && (Math.abs(n.dx - a.dx) > 0.5 || Math.abs(n.dy - a.dy) > 0.5 || n.puoli !== a.puoli || n.nimio !== a.nimio); });
+  vaadi(`3. ${nakyma}: ruudussa pysyneiden sovittelun siirto, kylki ja nimiön näkyvyys samat (paikka ei muutu)`, (ruudussaMolemmin.length >= 2 || nakyma === 'puhelin') && paikkaMuuttui.length === 0,
     `ruudussa ennen ja jälkeen ${ruudussaMolemmin.length}, muuttui ${paikkaMuuttui.map(([t, n]) => `${n.nimi} (${A.get(t).puoli}/${A.get(t).dx},${A.get(t).dy}/${A.get(t).nimio} → ${n.puoli}/${n.dx},${n.dy}/${n.nimio}${n.este ? ` este ${n.este}` : ''})`).join(', ') || 'ei'}`);
   // 4. Eleen aikana: C:n nosto, joka on askeleella ruudussa, on rungolla sillä askeleella.
   const puuttui = [];

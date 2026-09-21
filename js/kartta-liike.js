@@ -102,7 +102,14 @@ function pulunSvg() {
 export function luoKartanLiike({
   ui, kotelo, tauolla = () => false, eleKaynnissa = () => false, korttiAuki = () => false,
   satunnainen = Math.random,
+  /** Ablaatiotikas (js/pallolauta/kerrokset.js): false = kerrosta ei rakenneta lainkaan. */
+  rakenna = true,
 } = {}) {
+  if (!rakenna) {
+    return {
+      kerros: null, paivita() {}, lennata() {}, levossa: () => false, tila: () => ({ pois: true }), pura() {},
+    };
+  }
   const doc = kotelo.ownerDocument;
   const kerros = doc.createElement('div');
   kerros.className = 'pallolauta-liike';

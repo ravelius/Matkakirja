@@ -28496,3 +28496,22 @@ body[data-mode] .fact-card.pieni > button#fact-kuuntele.fact-kuuntele.ghost {
   .pallolauta-liike-pilvi, .pallolauta-liike-pulu, .pallolauta-liike-pulu .pallolauta-pulu-siipi { animation: none; transition: none; }
   .pallolauta-liike-pulu { display: none; }
 }
+
+/* ===========================================================================
+   ABLAATIOTIKAS (js/pallolauta/kerrokset.js, `?kerrokset=`; vain
+   mittaukseen). Laudan ulkopuolinen käyttöliittymä kytketään pois
+   body-luokilla `kerros-pois-<nimi>`: pulu ja pöllö (nappi, paneeli,
+   kuplat), ui (yläpalkki, vuorokortti ja toimintorivi, maapaneeli,
+   kartuutsi, yläpalkin nappi). `display: none` on ablaatiossa oikein —
+   piilotettu elementti ei maksa ladontaa eikä maalausta.
+   =========================================================================== */
+body.kerros-pois-pulu .pollo-nappi,
+body.kerros-pois-pulu .pollo-paneeli,
+body.kerros-pois-pulu .pollo-kuplapino-kehys,
+body.kerros-pois-pulu .pallolauta-liike,
+body.kerros-pois-ui .topbar,
+body.kerros-pois-ui .turn-card,
+body.kerros-pois-ui .ylapalkki-nappi,
+body.kerros-pois-ui .pallolauta-maapaneeli,
+body.kerros-pois-ui .kartuutsi,
+body.kerros-pois-ui .pallolauta-kartuutsi { display: none !important; }
