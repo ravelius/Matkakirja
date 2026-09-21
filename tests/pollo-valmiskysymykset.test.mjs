@@ -30,8 +30,9 @@ const FOKUSVIRTAKAUPUNGIT = readdirSync(new URL('../js/packs/', import.meta.url)
 test('fokusvirtakaupunkeja löytyy odotettu määrä', () => {
   // 45 → 46 (19.9.2026): Bryssel liittyi pelikaupungiksi (omistajan
   // päätös, Belgian pilotti); 46 → 47 (20.9.2026): Ljubljana (Slovenia);
-  // 47 → 48 (20.9.2026): Košice (Slovakia).
-  assert.equal(FOKUSVIRTAKAUPUNGIT.length, 48);
+  // 47 → 48 (20.9.2026): Košice (Slovakia); 48 → 49 (21.9.2026):
+  // Luxemburg (Kypros, Luxemburg ja Malta saavat pelikaupungin).
+  assert.equal(FOKUSVIRTAKAUPUNGIT.length, 49);
 });
 
 test('jokaisella fokusvirtakaupungilla on tasan kaksi saapumiskysymystä', () => {
