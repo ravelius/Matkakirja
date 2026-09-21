@@ -156,6 +156,8 @@ import { HAHMOTELMA_LTU } from './packs/hahmotelma-ltu.js';
 import { HAHMOTELMA_LVA } from './packs/hahmotelma-lva.js';
 import { HAHMOTELMA_TUR } from './packs/hahmotelma-tur.js';
 import { HAHMOTELMA_GBR } from './packs/hahmotelma-gbr.js';
+import { HAHMOTELMA_NOR } from './packs/hahmotelma-nor.js';
+import { HAHMOTELMA_ISL } from './packs/hahmotelma-isl.js';
 import { avaaLisakaupunginKortti } from './kaupunkinosto.js';
 import { FOKUSKOHTEET_GBR } from './packs/fokuskohteet-gbr.js';
 import { FOKUSKOHTEET_HUN } from './packs/fokuskohteet-hun.js';
@@ -605,6 +607,25 @@ KOHDE_MAAT.TUR = [...(KOHDE_MAAT.TUR ?? []), ...HAHMOTELMA_TUR];
  * ei muuteta.
  */
 KOHDE_MAAT.GBR = [...(KOHDE_MAAT.GBR ?? []), ...HAHMOTELMA_GBR];
+
+/*
+ * NORJAN HAHMOTELMANOSTOT (js/packs/hahmotelma-nor.js): 18
+ * täydentävää karttanostoa Norjan olemassa olevien 12 nostoon
+ * (maastokohteet-nor.js) — vuonot, Lofootit, saamelaiskulttuuri,
+ * viikinkilaiva, öljyteollisuus, ruokaperinne. Sama liitosreitti kuin
+ * muu Eurooppa -hahmotelmilla: rivit lisätään olemassa olevan
+ * maastolistan PERÄÄN, sitä ei muuteta.
+ */
+KOHDE_MAAT.NOR = [...(KOHDE_MAAT.NOR ?? []), ...HAHMOTELMA_NOR];
+
+/*
+ * ISLANNIN HAHMOTELMANOSTOT (js/packs/hahmotelma-isl.js): 13
+ * täydentävää karttanostoa Islannin olemassa olevien 17 nostoon
+ * (maastokohteet-isl.js) — Reykjavík, Akureyri, Ísafjörður, Sinilóni,
+ * Seyðisfjörður, ruokaperinne (hákarl, skyr), tunnetut luontokohteet.
+ * Sama liitosreitti kuin muu Eurooppa -hahmotelmilla.
+ */
+KOHDE_MAAT.ISL = [...(KOHDE_MAAT.ISL ?? []), ...HAHMOTELMA_ISL];
 
 /*
  * KOHTEET SÄHKETEHTÄVÄN SISÄLTÖHAKEMISTOON (Raamattu, PÖLLÖN

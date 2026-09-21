@@ -97,6 +97,7 @@ const MODULES = [
   'js/packs/hahmotelma-gbr.js',
   'js/packs/hahmotelma-che.js',
   'js/packs/hahmotelma-isl.js',
+  'js/packs/hahmotelma-nor.js',
   'js/packs/maakartat.js',
   'js/packs/nahtavyysjutut.js',
   'js/packs/miniatyyrit.js',
