@@ -74,6 +74,11 @@ const odota = (ehto, kattoMs = 90000, valiMs = 100) => new Promise((ok) => {
  * @param {{suljeFokusvirta: Function, ohitaSaapumisluenta: Function}} fokusvirta js/fokusvirta.js
  */
 export async function avaaPikatie(ui, { suljeFokusvirta, ohitaSaapumisluenta } = {}) {
+  // Virheet talteen tila()-luentaa varten (rAF-silmukan virhe ei näy muualla).
+  const virheet = [];
+  globalThis.__pallonVirheet = virheet;
+  globalThis.addEventListener?.('error', (e) => virheet.push(String(e.message ?? e)));
+  globalThis.addEventListener?.('unhandledrejection', (e) => virheet.push(String(e.reason?.message ?? e.reason)));
   const onLauta = await odota(() => Boolean(ui.pallolauta));
   if (!onLauta) return { virhe: 'pallolauta ei auennut 90 s:ssa' };
   const lauta = ui.pallolauta;

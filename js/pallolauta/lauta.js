@@ -5190,6 +5190,14 @@ export async function avaaPallolauta(ui) {
         nimet: document.querySelectorAll('.pallolauta-nimi').length,
         nostot: document.querySelectorAll('.pallolauta-nosto').length,
       },
+      elementit: merkit.elementit(),
+      // CSS2D-kerroksen oma juuri (kirjaston .scene-container > div) ja sen lapset.
+      css2d: (() => {
+        const juuri = [...kotelo.querySelectorAll('.scene-container > div')]
+          .find((e) => e.style.position === 'absolute' && e.style.pointerEvents === 'none');
+        return juuri ? { loytyi: true, lapsia: juuri.childElementCount } : { loytyi: false, lapsia: 0 };
+      })(),
+      virheet: globalThis.__pallonVirheet?.slice(-3) ?? null,
       korkeus: pallo.pointOfView()?.altitude ?? null,
       versio: document.getElementById('app-version')?.textContent ?? null,
     }),
