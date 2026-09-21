@@ -1020,6 +1020,7 @@ export const HAHMOTELMA_GRC = [
     ],
     nimi: 'Meteora',
     tyyppi: 'kulttuuri',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Miten luostarit rakennettiin kalliopylväiden päälle?',
