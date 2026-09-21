@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="css/kohtaamiskuvat.css">
 </head>
 <body>
+  <button type="button" class="teemakytkin" id="teemakytkin"></button>
+
   <header class="ylapalkki">
     <a class="takaisin" href="./" aria-label="Takaisin Matkakirjaan">← Matkakirja</a>
     <div class="otsikkoryhma">
@@ -72,5 +74,31 @@
   </template>
 
   <script type="module" src="js/kohtaamiskuvat.js"></script>
+  <script>
+    (function () {
+      const AVAIN = 'matkakirja-teema';
+      const kytkin = document.getElementById('teemakytkin');
+      function nykyinen() {
+        return document.documentElement.dataset.theme
+          || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      }
+      function aseta(teema, tallenna) {
+        if (teema === 'dark' || teema === 'light') document.documentElement.dataset.theme = teema;
+        else delete document.documentElement.dataset.theme;
+        if (tallenna) {
+          try { localStorage.setItem(AVAIN, teema); } catch (e) {}
+        }
+        kytkin.textContent = nykyinen() === 'dark' ? 'Päivätila' : 'Yötila';
+      }
+      try {
+        const tallennettu = localStorage.getItem(AVAIN);
+        if (tallennettu === 'dark' || tallennettu === 'light') aseta(tallennettu, false);
+        else aseta(null, false);
+      } catch (e) {
+        aseta(null, false);
+      }
+      kytkin.addEventListener('click', () => aseta(nykyinen() === 'dark' ? 'light' : 'dark', true));
+    })();
+  </script>
 </body>
 </html>

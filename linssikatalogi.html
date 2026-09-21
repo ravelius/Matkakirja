@@ -20,10 +20,6 @@
     --kulta: #b8892f;
     --vihrea: #5f6b4a;
     --viiva: #c9bb9c;
-    --leima-valmis: #5f6b4a;
-    --leima-seuraava: #b8892f;
-    --leima-rakenteilla: #8a5a2b;
-    --leima-idea: #8b8172;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
@@ -36,10 +32,6 @@
       --kulta: #d9b25a;
       --vihrea: #a4b087;
       --viiva: #4a4034;
-      --leima-valmis: #a4b087;
-      --leima-seuraava: #d9b25a;
-      --leima-rakenteilla: #d2a06a;
-      --leima-idea: #8b8172;
     }
   }
   :root[data-theme="dark"] {
@@ -52,10 +44,6 @@
     --kulta: #d9b25a;
     --vihrea: #a4b087;
     --viiva: #4a4034;
-    --leima-valmis: #a4b087;
-    --leima-seuraava: #d9b25a;
-    --leima-rakenteilla: #d2a06a;
-    --leima-idea: #8b8172;
   }
   body {
     margin: 0;
@@ -79,33 +67,33 @@
   section.ryhma[hidden] { display: none; }
   section.ryhma > h2 { display: flex; align-items: baseline; gap: 10px; margin: 0 0 6px; font-size: 26px; font-weight: 600; }
   section.ryhma > h2 .maara { font-family: "Special Elite", monospace; font-size: 14px; letter-spacing: .06em; color: var(--muste-haalea); font-weight: 400; }
-  .rivi { display: grid; grid-template-columns: 52px 1fr 130px; gap: 6px 16px; padding: 14px 0; border-top: 1px solid var(--viiva); align-items: start; }
+  .rivi { display: grid; grid-template-columns: 52px 1fr 90px; gap: 6px 16px; padding: 14px 0; border-top: 1px solid var(--viiva); align-items: start; }
   .rivi:last-child { border-bottom: 1px solid var(--viiva); }
   .rivi[hidden] { display: none; }
   .koodi { font-family: "Special Elite", monospace; font-size: 14px; color: var(--seepia); padding-top: 4px; }
-  .nimi { font-size: 19px; font-weight: 600; margin: 0; line-height: 1.25; display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; }
-  .tyyppi { font-family: "Special Elite", monospace; font-size: 10.5px; letter-spacing: .07em; text-transform: uppercase; color: var(--sininen); border: 1px solid currentColor; border-radius: 3px; padding: 2px 6px 1px; font-weight: 400; white-space: nowrap; }
+  .nimi { font-size: 19px; font-weight: 600; margin: 0; line-height: 1.25; }
   .meta { font-size: 14px; color: var(--muste-haalea); margin: 2px 0 6px; font-variant-numeric: tabular-nums; }
   .meta span + span::before { content: " · "; }
   .pysakit { margin: 0; font-size: 15.5px; color: var(--muste); }
   .huom { margin: 6px 0 0; font-size: 14px; color: var(--sininen); }
-  .leima { justify-self: end; font: 12px "Special Elite", monospace; letter-spacing: .1em; text-transform: uppercase; border: 1.5px solid currentColor; border-radius: 4px; padding: 5px 8px 4px; transform: rotate(-2deg); white-space: nowrap; margin-top: 4px; }
-  .leima.valmis { color: var(--leima-valmis); }
-  .leima.seuraava { color: var(--leima-seuraava); }
-  .leima.rakenteilla { color: var(--leima-rakenteilla); }
-  .leima.idea { color: var(--leima-idea); border-style: dashed; }
+  .tila { justify-self: end; font: 12px "Special Elite", monospace; letter-spacing: .08em; text-transform: uppercase; color: var(--muste-haalea); white-space: nowrap; padding-top: 4px; }
   .jarjestys { margin-top: 48px; padding-top: 20px; border-top: 2px solid var(--muste); }
   .jarjestys h2 { font-size: 24px; margin: 0 0 8px; }
   .jarjestys ol { margin: 0; padding-left: 22px; max-width: 70ch; }
   .jarjestys li { margin: 6px 0; }
   footer { margin-top: 40px; font-family: "Special Elite", monospace; font-size: 12.5px; letter-spacing: .06em; color: var(--muste-haalea); }
+  .teemakytkin { position: fixed; top: 14px; right: 14px; z-index: 3; font: 12px "Special Elite", monospace; letter-spacing: .07em; text-transform: uppercase; color: var(--muste-haalea); background: var(--paperi-tumma); border: 1px solid var(--viiva); border-radius: 999px; padding: 6px 12px; cursor: pointer; }
+  .teemakytkin:focus-visible { outline: 2px solid var(--kulta); outline-offset: 2px; }
   @media (max-width: 640px) {
     .rivi { grid-template-columns: 40px 1fr; }
-    .leima { grid-column: 2; justify-self: start; }
+    .tila { grid-column: 2; justify-self: start; }
     body { font-size: 16px; }
+    .teemakytkin { top: 8px; right: 8px; padding: 5px 10px; }
   }
   @media (prefers-reduced-motion: no-preference) { nav.suodatin button { transition: background .15s, color .15s; } }
 </style>
+
+<button type="button" class="teemakytkin" id="teemakytkin"></button>
 
 <div class="sivu">
   <header class="otsake">
@@ -136,9 +124,9 @@
 
 <script>
 const LINSSIT = [
-  { id: "A1", nimi: "Suuret uskonnot syntyvät", alue: "Lähi-itä, Intia, Kiina", kaari: "1500 eaa – 632", pysakit: "Veda-hymnit Punjab · Buddhan ensimmäinen saarna Sarnath · Kungfutse Qufu · Toinen temppeli Jerusalem · Jeesus Galilea ja Jerusalem · Muhammad Mekka ja Medina", tila: "seuraava", huom: "Kuvat H4-tilauksena.", tyyppi: "aikajana", manner: "Aasia" },
+  { id: "A1", nimi: "Suuret uskonnot syntyvät", alue: "Lähi-itä, Intia, Kiina", kaari: "1500 eaa – 632", pysakit: "Veda-hymnit Punjab · Buddhan ensimmäinen saarna Sarnath · Kungfutse Qufu · Toinen temppeli Jerusalem · Jeesus Galilea ja Jerusalem · Muhammad Mekka ja Medina", tila: "idea", huom: "Kuvat H4-tilauksena.", tyyppi: "aikajana", manner: "Aasia" },
   { id: "A2", nimi: "Kristinusko leviää Eurooppaan", alue: "Eurooppa", kaari: "30 – 1000", pysakit: "Paavali Ateena · Nikaian kirkolliskokous 325 · Iona 563 · Canterbury 597 · Kiovan kaste 988 · Uppsala", tila: "seuraava", tyyppi: "aikajana", manner: "Eurooppa" },
-  { id: "A3", nimi: "Islamin kultakausi", alue: "Bagdad – Córdoba", kaari: "750 – 1258", pysakit: "Bait al-hikma Bagdad · Córdoban suuri moskeija · al-Azhar Kairo · Samarkandin observatorio · Isfahan · Bagdadin tuho 1258", tila: "seuraava", tyyppi: "aikajana", manner: "Aasia" },
+  { id: "A3", nimi: "Islamin kultakausi", alue: "Bagdad – Córdoba", kaari: "750 – 1258", pysakit: "Bait al-hikma Bagdad · Córdoban suuri moskeija · al-Azhar Kairo · Samarkandin observatorio · Isfahan · Bagdadin tuho 1258", tila: "idea", tyyppi: "aikajana", manner: "Aasia" },
   { id: "A4", nimi: "Uskonpuhdistus", alue: "Keski-Eurooppa", kaari: "1517 – 1648", pysakit: "Wittenberg 1517 · Zürich · Geneve · Trenton kokous · Pyhän Bartolomeuksen yö Pariisi · Westfalenin rauha", tila: "seuraava", huom: "Kuvat H4-tilauksena.", tyyppi: "aikajana", manner: "Eurooppa" },
   { id: "A5", nimi: "Buddhalaisuuden tie Aasian halki", alue: "Intia – Japani", kaari: "250 eaa – 800", pysakit: "Sanchi · Dunhuangin luolat · Nara · Borobudur · Lhasa", tila: "idea", tyyppi: "aikajana", manner: "Aasia" },
   { id: "A6", nimi: "Pyhiinvaellusreitit", alue: "maailma", kaari: "jatkuva", pysakit: "Santiago de Compostela · Mekan hajj · Varanasi · Shikokun 88 temppeliä · Jerusalem", tila: "idea", huom: "Reittilinssi: valo kulkee reittiä.", tyyppi: "aikajana", manner: "Yleiset" },
@@ -150,11 +138,11 @@ const LINSSIT = [
   { id: "B5", nimi: "Kartografia ja mittaaminen", alue: "Eurooppa", kaari: "1569 – 1884", pysakit: "Mercator Duisburg · Cassini Pariisi · Struven ketju Hammerfest – Izmail · Greenwichin nollameridiaani 1884", tila: "idea", tyyppi: "aikajana", manner: "Eurooppa" },
   { id: "B6", nimi: "Tähtitieteen observatoriot", alue: "maailma", kaari: "1576 – 1900", pysakit: "Uraniborg · Greenwich · Pulkova · Lick · Ulugh Beg Samarkand", tila: "idea", tyyppi: "aikajana", manner: "Yleiset" },
   { id: "B7", nimi: "Vanhin maailmankuva pallolla", alue: "Afrikka ja muut mantereet", kaari: "1507 – 1873", pysakit: "Waldseemüller 1507 · Ortelius 1570 · Blaeu 1662 · d'Anville 1749 · Stanleyn Kongo 1877 — vanha kartta verhottuna karttapallon pinnalle, liukusäädin vanha → 1873 → nyt", tila: "idea (vaatii pallolaudan)", tyyppi: "aikajana", manner: "Afrikka" },
-  { id: "C1", nimi: "Suuret löytöretket", alue: "Atlantti – Intian valtameri", kaari: "1415 – 1522", pysakit: "Sagres · Dias 1488 · Kolumbus 1492 · da Gama 1497 · Magalhães 1519", tila: "seuraava", huom: "H1/H2-hetket valmiina.", tyyppi: "aikajana", manner: "Yleiset" },
-  { id: "C2", nimi: "Napa-alueiden valloitus", alue: "Arktis, Antarktis", kaari: "1845 – 1912", pysakit: "Franklin · Nordenskiöld Koillisväylä 1878 · Nansen Fram 1893 · Amundsen 1911 · Scott 1912", tila: "seuraava", tyyppi: "aikajana", manner: "Napa-alueet" },
+  { id: "C1", nimi: "Suuret löytöretket", alue: "Atlantti – Intian valtameri", kaari: "1415 – 1522", pysakit: "Sagres · Dias 1488 · Kolumbus 1492 · da Gama 1497 · Magalhães 1519", tila: "idea", huom: "H1/H2-hetket valmiina.", tyyppi: "aikajana", manner: "Yleiset" },
+  { id: "C2", nimi: "Napa-alueiden valloitus", alue: "Arktis, Antarktis", kaari: "1845 – 1912", pysakit: "Franklin · Nordenskiöld Koillisväylä 1878 · Nansen Fram 1893 · Amundsen 1911 · Scott 1912", tila: "idea", tyyppi: "aikajana", manner: "Napa-alueet" },
   { id: "C3", nimi: "Rautatiet valloittavat maanosat", alue: "maailma", kaari: "1825 – 1916", pysakit: "Stockton – Darlington · Liverpool – Manchester · Pacific Railroad 1869 · Siperian rata · Orient Express · Berliini – Bagdad", tila: "idea", tyyppi: "aikajana", manner: "Yleiset" },
   { id: "C4", nimi: "Höyrylaivat ja kanavat", alue: "maailma", kaari: "1807 – 1914", pysakit: "Clermont · Great Eastern · Suez 1869 · Kielin kanava · Panama 1914 · Titanic", tila: "idea", tyyppi: "aikajana", manner: "Yleiset" },
-  { id: "C5", nimi: "Maapallon ympäri 80 päivässä", alue: "maailma", kaari: "1872", pysakit: "Lontoo · Suez · Bombay · Kalkutta · Hongkong · Yokohama · San Francisco · New York · Lontoo", tila: "seuraava", huom: "Pelin oma tarina: Foggin reitti isoisän 1873 matkan rinnalla.", tyyppi: "aikajana", manner: "Yleiset" },
+  { id: "C5", nimi: "Maapallon ympäri 80 päivässä", alue: "maailma", kaari: "1872", pysakit: "Lontoo · Suez · Bombay · Kalkutta · Hongkong · Yokohama · San Francisco · New York · Lontoo", tila: "idea", huom: "Pelin oma tarina: Foggin reitti isoisän 1873 matkan rinnalla.", tyyppi: "aikajana", manner: "Yleiset" },
   { id: "C7", nimi: "Ihmisen matka", alue: "maailma", kaari: "300 000 vuotta sitten – n. 1300 jaa.", pysakit: "Omo Kibish · Jebel Irhoud · Beringia · Sahul · Lapita · Aotearoa 1250", tila: "rakenteilla", huom: "Omistajan päätös 5.9.2026; moottori 5.9.2026 (vuotta sitten -kello, reittiviiva, hyppykamera), aineisto työn alla.", tyyppi: "aikajana", manner: "Yleiset" },
   { id: "C6", nimi: "Ilmailun synty", alue: "Eurooppa – USA", kaari: "1783 – 1927", pysakit: "Montgolfier Annonay · Lilienthal Berliini · Wrightit Kitty Hawk · Blériot kanaali 1909 · Lindbergh 1927", tila: "idea", tyyppi: "aikajana", manner: "Eurooppa" },
   { id: "D1", nimi: "Antiikin kaupungit", alue: "Välimeri, Lähi-itä", kaari: "3500 eaa – 476", pysakit: "Uruk · Memfis · Babylon · Ateena · Aleksandria · Rooma · Konstantinopoli", tila: "idea", tyyppi: "aikajana", manner: "Eurooppa" },
@@ -179,38 +167,38 @@ const LINSSIT = [
   { id: "G4", nimi: "Urheilun synty", alue: "Eurooppa", kaari: "1857 – 1903", pysakit: "Sheffield FC 1857 · Wimbledon 1877 · Ateena 1896 · Tour de France 1903", tila: "idea", tyyppi: "aikajana", manner: "Eurooppa" },
   { id: "G5", nimi: "Naisten oikeudet", alue: "maailma", kaari: "1791 – 1918", pysakit: "Olympe de Gouges · Seneca Falls · Uusi-Seelanti 1893 · Suomi 1906 · Britannia 1918", tila: "idea", tyyppi: "aikajana", manner: "Yleiset" },
   { id: "G6", nimi: "Posti ja sähkösanoma", alue: "Eurooppa", kaari: "1840 – 1901", pysakit: "Penny Black · Morse Washington 1844 · Reuters Aachen · Atlantin kaapeli · Marconi", tila: "idea", huom: "Sopii pelin sähkeisiin.", tyyppi: "aikajana", manner: "Eurooppa" },
-  { id: "H1", nimi: "Kiinan keksinnöt", alue: "Kiina", kaari: "105 – 1450", pysakit: "paperi Luoyang 105 · kompassi · ruuti · kirjapaino Kaifeng · Suuri kanava · Zheng Hen laivasto Nanjing 1405", tila: "seuraava", tyyppi: "aikajana", manner: "Aasia" },
+  { id: "H1", nimi: "Kiinan keksinnöt", alue: "Kiina", kaari: "105 – 1450", pysakit: "paperi Luoyang 105 · kompassi · ruuti · kirjapaino Kaifeng · Suuri kanava · Zheng Hen laivasto Nanjing 1405", tila: "idea", tyyppi: "aikajana", manner: "Aasia" },
   { id: "H2", nimi: "Intian valtakunnat ja tiede", alue: "Intia", kaari: "2600 eaa – 1653", pysakit: "Mohenjo-daro · Ashoka Pataliputra · Nalandan yliopisto · Aryabhata · Taj Mahal Agra 1653", tila: "idea", tyyppi: "aikajana", manner: "Aasia" },
-  { id: "H3", nimi: "Japanin aikakaudet", alue: "Japani", kaari: "710 – 1868", pysakit: "Nara · Heian-Kioto · Kamakura · Edo · Meiji 1868", tila: "seuraava", huom: "Yokohama on isoisän reitillä.", tyyppi: "aikajana", manner: "Aasia" },
+  { id: "H3", nimi: "Japanin aikakaudet", alue: "Japani", kaari: "710 – 1868", pysakit: "Nara · Heian-Kioto · Kamakura · Edo · Meiji 1868", tila: "idea", huom: "Yokohama on isoisän reitillä.", tyyppi: "aikajana", manner: "Aasia" },
   { id: "H4", nimi: "Mongolien maailma", alue: "Aasia", kaari: "1206 – 1405", pysakit: "Karakorum · Peking Kublai · Bagdad 1258 · Samarkand Timur", tila: "idea", tyyppi: "aikajana", manner: "Aasia" },
   { id: "H5", nimi: "Kaakkois-Aasian temppelit", alue: "Kaakkois-Aasia", kaari: "800 – 1431", pysakit: "Borobudur · Bagan · Angkor · Ayutthaya", tila: "idea", tyyppi: "aikajana", manner: "Aasia" },
   { id: "H6", nimi: "Maustereitit", alue: "Intian valtameri", kaari: "1000 – 1700", pysakit: "Malabar · Malakka · Molukit · Batavia · Lissabon", tila: "idea", huom: "Reittilinssi.", tyyppi: "aikajana", manner: "Aasia" },
   { id: "I1", nimi: "Sivilisaation synty", alue: "Mesopotamia, Persia", kaari: "3500 eaa – 330 eaa", pysakit: "Uruk · Ur · Babylon · Niniven kirjasto · Persepolis", tila: "idea", tyyppi: "aikajana", manner: "Aasia" },
   { id: "I2", nimi: "Egyptin dynastiat", alue: "Egypti", kaari: "2650 eaa – 30 eaa", pysakit: "Sakkara · Giza · Theba ja Luxor · Amarna · Aleksandria", tila: "idea", tyyppi: "aikajana", manner: "Afrikka" },
-  { id: "I3", nimi: "Osmanien valtakunta", alue: "Turkki, Balkan, Levantti", kaari: "1299 – 1923", pysakit: "Bursa · Konstantinopoli 1453 · Wienin piiritys 1683 · Kairo · Suez 1869 · Ankara 1923", tila: "seuraava", huom: "Bulgaria 1878 on jo pelissä.", tyyppi: "aikajana", manner: "Aasia" },
+  { id: "I3", nimi: "Osmanien valtakunta", alue: "Turkki, Balkan, Levantti", kaari: "1299 – 1923", pysakit: "Bursa · Konstantinopoli 1453 · Wienin piiritys 1683 · Kairo · Suez 1869 · Ankara 1923", tila: "idea", huom: "Bulgaria 1878 on jo pelissä.", tyyppi: "aikajana", manner: "Aasia" },
   { id: "I4", nimi: "Persian puutarhat ja kaupungit", alue: "Iran", kaari: "550 eaa – 1722", pysakit: "Pasargadae · Persepolis · Isfahan · Shiraz", tila: "idea", tyyppi: "aikajana", manner: "Aasia" },
-  { id: "J1", nimi: "Kultavaltakunnat", alue: "Länsi-Afrikka", kaari: "700 – 1591", pysakit: "Ghana · Timbuktu · Mansa Musan hajj 1324 · Djenné · Songhai · Kano", tila: "seuraava", tyyppi: "aikajana", manner: "Afrikka" },
+  { id: "J1", nimi: "Kultavaltakunnat", alue: "Länsi-Afrikka", kaari: "700 – 1591", pysakit: "Ghana · Timbuktu · Mansa Musan hajj 1324 · Djenné · Songhai · Kano", tila: "idea", tyyppi: "aikajana", manner: "Afrikka" },
   { id: "J2", nimi: "Swahilirannikko ja Suuri Zimbabwe", alue: "Itä- ja Etelä-Afrikka", kaari: "1000 – 1500", pysakit: "Kilwa · Sansibar · Mombasa · Suuri Zimbabwe · Sofala", tila: "idea", tyyppi: "aikajana", manner: "Afrikka" },
   { id: "J3", nimi: "Etiopia", alue: "Etiopia", kaari: "100 – 1700", pysakit: "Aksum · Lalibela · Gondar", tila: "idea", tyyppi: "aikajana", manner: "Afrikka" },
-  { id: "J4", nimi: "Tutkimusmatkat Afrikassa", alue: "Afrikka", kaari: "1795 – 1877", pysakit: "Mungo Park Niger · Livingstone Victorian putoukset 1855 · Burton ja Speke · Stanley ja Livingstone Ujiji 1871 · Stanley Kongo 1877", tila: "seuraava", tyyppi: "aikajana", manner: "Afrikka" },
+  { id: "J4", nimi: "Tutkimusmatkat Afrikassa", alue: "Afrikka", kaari: "1795 – 1877", pysakit: "Mungo Park Niger · Livingstone Victorian putoukset 1855 · Burton ja Speke · Stanley ja Livingstone Ujiji 1871 · Stanley Kongo 1877", tila: "idea", tyyppi: "aikajana", manner: "Afrikka" },
   { id: "J5", nimi: "Siirtomaajako ja rautatiet", alue: "Afrikka", kaari: "1869 – 1914", pysakit: "Suez · Berliinin konferenssi 1884 · Kap–Kairo-hanke · Uganda-rata", tila: "idea", tyyppi: "aikajana", manner: "Afrikka" },
-  { id: "K1", nimi: "Mesoamerikka ja Andit", alue: "Meksiko, Peru", kaari: "200 – 1532", pysakit: "Teotihuacán · Tikal · Chichén Itzá · Tenochtitlán · Cusco · Machu Picchu", tila: "seuraava", tyyppi: "aikajana", manner: "Pohjois-Amerikka" },
+  { id: "K1", nimi: "Mesoamerikka ja Andit", alue: "Meksiko, Peru", kaari: "200 – 1532", pysakit: "Teotihuacán · Tikal · Chichén Itzá · Tenochtitlán · Cusco · Machu Picchu", tila: "idea", tyyppi: "aikajana", manner: "Pohjois-Amerikka" },
   { id: "K2", nimi: "Valloitus ja hopea", alue: "Latinalainen Amerikka", kaari: "1492 – 1600", pysakit: "Hispaniola · Tenochtitlán 1521 · Cajamarca 1532 · Potosí · Lima", tila: "idea", tyyppi: "aikajana", manner: "Etelä-Amerikka" },
-  { id: "K3", nimi: "Yhdysvaltain synty ja länsi", alue: "USA", kaari: "1776 – 1869", pysakit: "Philadelphia 1776 · Lewis ja Clark · Oregon Trail · kultaryntäys 1849 · Pacific Railroad 1869", tila: "seuraava", huom: "Foggin reitti kulkee tästä.", tyyppi: "aikajana", manner: "Pohjois-Amerikka" },
+  { id: "K3", nimi: "Yhdysvaltain synty ja länsi", alue: "USA", kaari: "1776 – 1869", pysakit: "Philadelphia 1776 · Lewis ja Clark · Oregon Trail · kultaryntäys 1849 · Pacific Railroad 1869", tila: "idea", huom: "Foggin reitti kulkee tästä.", tyyppi: "aikajana", manner: "Pohjois-Amerikka" },
   { id: "K4", nimi: "Latinalaisen Amerikan itsenäistyminen", alue: "Etelä-Amerikka", kaari: "1810 – 1825", pysakit: "Caracas Bolívar · Buenos Aires San Martín · Chacabuco · Ayacucho 1824", tila: "idea", tyyppi: "aikajana", manner: "Etelä-Amerikka" },
   { id: "K5", nimi: "Amerikan keksinnöt", alue: "USA", kaari: "1793 – 1903", pysakit: "Whitney · Morse 1844 · Bell 1876 · Edison Menlo Park · Wrightit 1903", tila: "idea", huom: "Keksinnöt Euroopassa -linssin sisar.", tyyppi: "aikajana", manner: "Pohjois-Amerikka" },
   { id: "K6", nimi: "Pohjoinen: viikingeistä rautatiehen", alue: "Grönlanti, Kanada", kaari: "1000 – 1885", pysakit: "L’Anse aux Meadows · Hudsonin lahti · Luoteisväylä · Kanadan rata 1885", tila: "idea", tyyppi: "aikajana", manner: "Pohjois-Amerikka" },
   { id: "L1", nimi: "Polynesialaisten merenkulku", alue: "Tyynimeri", kaari: "1000 eaa – 1250", pysakit: "Samoa · Tahiti · Havaiji · Rapa Nui · Aotearoa noin 1250", tila: "idea", huom: "Reittilinssi.", tyyppi: "aikajana", manner: "Oseania" },
-  { id: "L2", nimi: "Cook ja Tyynimeri", alue: "Tyynimeri", kaari: "1768 – 1779", pysakit: "Plymouth 1768 · Tahiti · Uusi-Seelanti · Botany Bay · Havaiji 1779", tila: "seuraava", huom: "Plymouth on jo Historian hetki.", tyyppi: "aikajana", manner: "Oseania" },
+  { id: "L2", nimi: "Cook ja Tyynimeri", alue: "Tyynimeri", kaari: "1768 – 1779", pysakit: "Plymouth 1768 · Tahiti · Uusi-Seelanti · Botany Bay · Havaiji 1779", tila: "idea", huom: "Plymouth on jo Historian hetki.", tyyppi: "aikajana", manner: "Oseania" },
   { id: "L3", nimi: "Australia", alue: "Australia", kaari: "1788 – 1901", pysakit: "Sydney 1788 · Ballaratin kultaryntäys 1851 · Burke ja Wills 1860 · liitto 1901", tila: "idea", tyyppi: "aikajana", manner: "Oseania" },
   { id: "L4", nimi: "Evoluution saaret", alue: "Galápagos, Malaijisaaristo", kaari: "1835 – 1862", pysakit: "Darwin Galápagos 1835 · Wallace Ternate 1858 · Wallacen linja", tila: "idea", huom: "Galápagos on jo Historian hetki.", tyyppi: "aikajana", manner: "Oseania" },
-  { id: "M1", nimi: "Kiinan dynastiat", alue: "Kiina", kaari: "221 eaa – 1912", pysakit: "Qin · Han · Kolme kuningaskuntaa · Tang · Song · Yuan · Ming · Qing · tasavalta 1912", tila: "seuraava", huom: "1. aluelinssi (omistajan esimerkki).", tyyppi: "alue", manner: "Aasia" },
+  { id: "M1", nimi: "Kiinan dynastiat", alue: "Kiina", kaari: "221 eaa – 1912", pysakit: "Qin · Han · Kolme kuningaskuntaa · Tang · Song · Yuan · Ming · Qing · tasavalta 1912", tila: "idea", huom: "1. aluelinssi (omistajan esimerkki).", tyyppi: "alue", manner: "Aasia" },
   { id: "M2", nimi: "Rooman nousu ja tuho", alue: "Välimeri", kaari: "509 eaa – 476", pysakit: "tasavalta · puunilaissodat · Caesar Gallia · Augustus · Trajanus 117 · jako 395 · 476", tila: "seuraava", huom: "4. aluelinssi.", tyyppi: "alue", manner: "Eurooppa" },
   { id: "M3", nimi: "Aleksanteri Suuri", alue: "Kreikka – Intia", kaari: "336 eaa – 301 eaa", pysakit: "Makedonia · Issos · Egypti · Gaugamela · Persepolis · Hydaspes · diadokit", tila: "idea", tyyppi: "alue", manner: "Aasia" },
   { id: "M4", nimi: "Islamin leviäminen", alue: "Lähi-itä – Espanja", kaari: "622 – 750", pysakit: "Medina · Jerusalem 638 · Persia · Pohjois-Afrikka · Iberia 711 · Poitiers 732", tila: "idea", tyyppi: "alue", manner: "Aasia" },
   { id: "M5", nimi: "Mongolien imperiumi", alue: "Aasia – Eurooppa", kaari: "1206 – 1368", pysakit: "Tšingis-kaani · Kiova 1240 · Bagdad 1258 · Kublai · jako kaanikuntiin · Yuan kaatuu", tila: "idea", tyyppi: "alue", manner: "Aasia" },
   { id: "M6", nimi: "Bysantti", alue: "Itäinen Välimeri", kaari: "395 – 1453", pysakit: "Justinianus 555 · arabit · Basileios II · 1204 · 1453", tila: "idea", tyyppi: "alue", manner: "Eurooppa" },
-  { id: "M7", nimi: "Osmanien nousu ja lasku", alue: "Turkki, Balkan, Lähi-itä", kaari: "1299 – 1923", pysakit: "Bursa · 1453 · Suleiman 1566 · Wien 1683 · Bulgaria 1878 · 1923", tila: "seuraava", huom: "Bulgaria 1878 on pelissä.", tyyppi: "alue", manner: "Aasia" },
+  { id: "M7", nimi: "Osmanien nousu ja lasku", alue: "Turkki, Balkan, Lähi-itä", kaari: "1299 – 1923", pysakit: "Bursa · 1453 · Suleiman 1566 · Wien 1683 · Bulgaria 1878 · 1923", tila: "idea", huom: "Bulgaria 1878 on pelissä.", tyyppi: "alue", manner: "Aasia" },
   { id: "M8", nimi: "Reconquista", alue: "Iberia", kaari: "711 – 1492", pysakit: "Covadonga · Toledo 1085 · Las Navas 1212 · Granada 1492", tila: "idea", tyyppi: "alue", manner: "Eurooppa" },
   { id: "M9", nimi: "Viikinkien maailma", alue: "Pohjois-Eurooppa – Atlantti", kaari: "793 – 1066", pysakit: "Lindisfarne · Danelaw · Normandia 911 · Islanti · Grönlanti · Vinland · Stamford Bridge 1066", tila: "idea", tyyppi: "alue", manner: "Eurooppa" },
   { id: "M10", nimi: "Ruotsin suurvalta ja Suomi", alue: "Itämeri", kaari: "1561 – 1809", pysakit: "Tallinna 1561 · Kustaa II Aadolf · Westfalen 1648 · Poltava 1709 · Uusikaupunki 1721 · Hamina 1809", tila: "idea", huom: "Suomen rajat 1323–1947 omana jatkona.", tyyppi: "alue", manner: "Eurooppa" },
@@ -224,33 +212,31 @@ const LINSSIT = [
   { id: "N7", nimi: "Balkanin sodat", alue: "Balkan", kaari: "1877 – 1913", pysakit: "Pleven 1877 · San Stefano · Berliini 1878 · 1912 · 1913", tila: "idea", huom: "Bulgarian lauta.", tyyppi: "alue", manner: "Eurooppa" },
   { id: "O1", nimi: "Espanja ja Portugali maailmalla", alue: "maailma", kaari: "1494 – 1825", pysakit: "Tordesillas 1494 · Filippiinit · Brasilia · itsenäistymiset 1810–1825", tila: "idea", tyyppi: "alue", manner: "Yleiset" },
   { id: "O2", nimi: "Britannian imperiumi", alue: "maailma", kaari: "1600 – 1922", pysakit: "Itä-Intian kauppakomppania · Plassey 1757 · Kanada · Australia · Intia 1858 · Egypti 1882 · 1922", tila: "idea", tyyppi: "alue", manner: "Yleiset" },
-  { id: "O3", nimi: "Afrikan jako", alue: "Afrikka", kaari: "1870 – 1914", pysakit: "Suez · Berliini 1884 · Kongo · Fashoda 1898 · buurisota · 1914", tila: "seuraava", tyyppi: "alue", manner: "Afrikka" },
+  { id: "O3", nimi: "Afrikan jako", alue: "Afrikka", kaari: "1870 – 1914", pysakit: "Suez · Berliini 1884 · Kongo · Fashoda 1898 · buurisota · 1914", tila: "idea", tyyppi: "alue", manner: "Afrikka" },
   { id: "O4", nimi: "Venäjä laajenee Siperiaan", alue: "Venäjä – Tyynimeri", kaari: "1582 – 1867", pysakit: "Jermak 1582 · Jakutsk 1632 · Ohotsk · Kamtšatka · Alaska myydään 1867", tila: "idea", huom: "Siperian laudat ovat pelissä.", tyyppi: "alue", manner: "Aasia" },
   { id: "O5", nimi: "Yhdysvallat laajenee", alue: "Pohjois-Amerikka", kaari: "1783 – 1912", pysakit: "1783 · Louisiana 1803 · Texas 1845 · Oregon · Meksiko 1848 · Alaska 1867 · 1912", tila: "idea", tyyppi: "alue", manner: "Pohjois-Amerikka" },
   { id: "O6", nimi: "Euroopan kartta uusiksi", alue: "Eurooppa", kaari: "1815 – 1923", pysakit: "Wien 1815 · Italia 1861 · Saksa 1871 · Berliini 1878 · Versailles 1919 · Lausanne 1923", tila: "seuraava", huom: "Isoisän Eurooppa 1873 keskellä.", tyyppi: "alue", manner: "Eurooppa" },
-  { id: "P1", nimi: "Uskontojen levinneisyys", alue: "maailma", kaari: "500 eaa – 1900", pysakit: "buddhalaisuus · kristinusko · islam · uskonpuhdistus · lähetystyö", tila: "seuraava", huom: "Uskontojen aikajanalinssien pari.", tyyppi: "alue", manner: "Yleiset" },
+  { id: "P1", nimi: "Uskontojen levinneisyys", alue: "maailma", kaari: "500 eaa – 1900", pysakit: "buddhalaisuus · kristinusko · islam · uskonpuhdistus · lähetystyö", tila: "idea", huom: "Uskontojen aikajanalinssien pari.", tyyppi: "alue", manner: "Yleiset" },
   { id: "P2", nimi: "Musta surma", alue: "Eurooppa", kaari: "1347 – 1353", pysakit: "Kaffa · Messina 1347 · Marseille · Pariisi 1348 · Lontoo · Bergen 1349 · Moskova 1353", tila: "idea", tyyppi: "alue", manner: "Eurooppa" },
   { id: "P3", nimi: "Indoeurooppalaiset kielet", alue: "Euraasia", kaari: "3500 eaa – 1500", pysakit: "arot · Anatolia · Kreikka · Italia · germaanit · slaavit · Intia", tila: "idea", tyyppi: "alue", manner: "Eurooppa" },
   { id: "P4", nimi: "Rautatieverkon kasvu", alue: "Eurooppa", kaari: "1825 – 1900", pysakit: "Britannia · Belgia 1835 · Saksa · Ranska · Venäjä · Suomi 1862", tila: "idea", huom: "Verkko piirtyy vuosi vuodelta.", tyyppi: "alue", manner: "Eurooppa" },
   { id: "P5", nimi: "Kirjapainon leviäminen", alue: "Eurooppa", kaari: "1450 – 1500", pysakit: "Mainz · Venetsia · Pariisi · Lontoo 1476 · Tukholma 1483", tila: "idea", tyyppi: "alue", manner: "Eurooppa" },
-  { id: "S1", nimi: "Siirtomaat", alue: "maailma", kaari: "1415 – 1960", pysakit: "Ceuta 1415 · Goa 1510 · Hispaniola · Batavia 1619 · Kalkutta · Kap 1652 · Sydney 1788 · Algeria 1830 · Kongo 1885 · Intia 1947 · Afrikka 1960", tila: "seuraava", huom: "Omistajan esimerkki: salama emämaasta alueelle, sitten lastilaivat vuosien mukaan.", tyyppi: "virta", manner: "Yleiset" },
-  { id: "S2", nimi: "Kolmiokauppa", alue: "Atlantti", kaari: "1500 – 1867", pysakit: "Elmina · Liverpool · Nantes · Karibia · Bahia · Charleston · kielto 1807 · viimeinen laiva 1867", tila: "seuraava", huom: "Orjat kuulutetaan kuten muu lasti, koska niin heihin silloin suhtauduttiin; orjalaivat vetävät mustaa viivaa, Pulu selittää, merelle projisoidaan aikalaiskuvia (13+, totuudellisesti).", tyyppi: "virta", manner: "Afrikka" },
-  { id: "S6", nimi: "Luonnonvarat valuvat", alue: "maailma", kaari: "1850 – 2000", pysakit: "guano Chincha 1840 · kumi Kongo ja Amazon · kupari Chile · timantit Kimberley 1867 · öljy Baku ja Pennsylvania 1859, Persia 1908 · harvinaiset maametallit", tila: "seuraava", huom: "Louhintamaa värilänttinä, joka valuu eri puolille maailmaa; jokainen raaka-aine omalla värillään.", tyyppi: "virta", manner: "Yleiset" },
-  { id: "S7", nimi: "Lähi-itä ja musta kulta", alue: "Lähi-itä", kaari: "1908 – 1973", pysakit: "Masjed Soleyman 1908 · Sykes–Picot 1916 · mandaatit 1920 · Kirkuk 1927 · Bahrain 1932 · Dammam 1938 · Iran 1951 · Suez 1956 · OPEC 1960 · 1973", tila: "seuraava", huom: "Omistaja 2.9.2026: Lähi-itäkin oli aluksi siirtomaa ja alistettu. Ensin salama ja mandaatin väri, sitten öljy valuu ulos; Pulu kertoo, kenelle tuotto meni.", tyyppi: "virta", manner: "Aasia" },
+  { id: "S1", nimi: "Siirtomaat", alue: "maailma", kaari: "1415 – 1960", pysakit: "Ceuta 1415 · Goa 1510 · Hispaniola · Batavia 1619 · Kalkutta · Kap 1652 · Sydney 1788 · Algeria 1830 · Kongo 1885 · Intia 1947 · Afrikka 1960", tila: "idea", huom: "Omistajan esimerkki: salama emämaasta alueelle, sitten lastilaivat vuosien mukaan.", tyyppi: "virta", manner: "Yleiset" },
+  { id: "S2", nimi: "Kolmiokauppa", alue: "Atlantti", kaari: "1500 – 1867", pysakit: "Elmina · Liverpool · Nantes · Karibia · Bahia · Charleston · kielto 1807 · viimeinen laiva 1867", tila: "idea", huom: "Orjat kuulutetaan kuten muu lasti, koska niin heihin silloin suhtauduttiin; orjalaivat vetävät mustaa viivaa, Pulu selittää, merelle projisoidaan aikalaiskuvia (13+, totuudellisesti).", tyyppi: "virta", manner: "Afrikka" },
+  { id: "S6", nimi: "Luonnonvarat valuvat", alue: "maailma", kaari: "1850 – 2000", pysakit: "guano Chincha 1840 · kumi Kongo ja Amazon · kupari Chile · timantit Kimberley 1867 · öljy Baku ja Pennsylvania 1859, Persia 1908 · harvinaiset maametallit", tila: "idea", huom: "Louhintamaa värilänttinä, joka valuu eri puolille maailmaa; jokainen raaka-aine omalla värillään.", tyyppi: "virta", manner: "Yleiset" },
+  { id: "S7", nimi: "Lähi-itä ja musta kulta", alue: "Lähi-itä", kaari: "1908 – 1973", pysakit: "Masjed Soleyman 1908 · Sykes–Picot 1916 · mandaatit 1920 · Kirkuk 1927 · Bahrain 1932 · Dammam 1938 · Iran 1951 · Suez 1956 · OPEC 1960 · 1973", tila: "idea", huom: "Omistaja 2.9.2026: Lähi-itäkin oli aluksi siirtomaa ja alistettu. Ensin salama ja mandaatin väri, sitten öljy valuu ulos; Pulu kertoo, kenelle tuotto meni.", tyyppi: "virta", manner: "Aasia" },
   { id: "S3", nimi: "Maustereitit ja teekauppa", alue: "Intian valtameri – Eurooppa", kaari: "1500 – 1900", pysakit: "Molukit · Malakka · Kanton · Kalkutta · Suez 1869 · teekilpalaivat 1866", tila: "idea", tyyppi: "virta", manner: "Yleiset" },
   { id: "S4", nimi: "Hopea ja kulta", alue: "Amerikat – Eurooppa – Aasia", kaari: "1545 – 1900", pysakit: "Potosí 1545 · Manilan galeonit · Sevilla · kultaryntäykset 1849, 1851, 1886", tila: "idea", tyyppi: "virta", manner: "Yleiset" },
   { id: "S5", nimi: "Turkikset ja valaat", alue: "Pohjoinen", kaari: "1600 – 1900", pysakit: "Hudsonin lahti · Siperia · Huippuvuoret · Nantucket · Beringinmeri", tila: "idea", tyyppi: "virta", manner: "Napa-alueet" },
-  { id: "T1", nimi: "Siirtolaisuus Amerikkaan", alue: "Eurooppa – Amerikat", kaari: "1840 – 1914", pysakit: "Irlannin nälänhätä 1845 · Bremen · Liverpool · Ellis Island 1892 · Hanko–New York", tila: "seuraava", huom: "Suomalaiset siirtolaiset mukana.", tyyppi: "virta", manner: "Eurooppa" },
+  { id: "T1", nimi: "Siirtolaisuus Amerikkaan", alue: "Eurooppa – Amerikat", kaari: "1840 – 1914", pysakit: "Irlannin nälänhätä 1845 · Bremen · Liverpool · Ellis Island 1892 · Hanko–New York", tila: "idea", huom: "Suomalaiset siirtolaiset mukana.", tyyppi: "virta", manner: "Eurooppa" },
   { id: "T2", nimi: "Pyhiinvaellukset", alue: "maailma", kaari: "vuodenkierto", pysakit: "Santiago · Mekka · Varanasi · Jerusalem", tila: "idea", huom: "Aikajanalinssin A6 virtaversio.", tyyppi: "virta", manner: "Yleiset" },
   { id: "T3", nimi: "Siperian karkotukset ja asutus", alue: "Venäjä", kaari: "1590 – 1917", pysakit: "Tobolsk · Irkutsk · Sahalin · rata 1891", tila: "idea", tyyppi: "virta", manner: "Aasia" },
-  { id: "U1", nimi: "Sähkösanomakaapelit", alue: "maailma", kaari: "1851 – 1902", pysakit: "Dover–Calais 1851 · Atlantti 1866 · Intia 1870 · Australia 1872 · Tyynimeri 1902", tila: "seuraava", huom: "Pelin sähkeet kulkevat näitä; 1873 keskellä.", tyyppi: "virta", manner: "Yleiset" },
+  { id: "U1", nimi: "Sähkösanomakaapelit", alue: "maailma", kaari: "1851 – 1902", pysakit: "Dover–Calais 1851 · Atlantti 1866 · Intia 1870 · Australia 1872 · Tyynimeri 1902", tila: "idea", huom: "Pelin sähkeet kulkevat näitä; 1873 keskellä.", tyyppi: "virta", manner: "Yleiset" },
   { id: "U2", nimi: "Postireitit ja höyrylinjat", alue: "maailma", kaari: "1840 – 1914", pysakit: "P&O · Cunard · Suez · Fogg 1872", tila: "idea", tyyppi: "virta", manner: "Yleiset" },
   { id: "U3", nimi: "Muuttolinnut", alue: "maailma", kaari: "vuodenkierto", pysakit: "kurjet · haarapääskyt · valaat", tila: "idea", huom: "Sama moottori kuin F2.", tyyppi: "virta", manner: "Yleiset" },
 ];
 
 const MANTEREET = ['Eurooppa', 'Aasia', 'Afrikka', 'Pohjois-Amerikka', 'Etelä-Amerikka', 'Oseania', 'Napa-alueet', 'Yleiset'];
-const TILAT = { valmis: 'valmis', rakenteilla: 'rakenteilla', seuraava: 'seuraava', idea: 'idea' };
-function tilaluokka(tila) { return tila.split(' ')[0]; }
 
 const juuri = document.getElementById('ryhmat');
 for (const manner of MANTEREET) {
@@ -265,8 +251,8 @@ for (const manner of MANTEREET) {
     d.className = 'rivi';
     d.dataset.manner = manner;
     d.innerHTML = `<div class="koodi">${l.id}</div>
-      <div><p class="nimi">${l.nimi}<span class="tyyppi">${l.tyyppi}</span></p><p class="meta"><span>${l.alue}</span><span>${l.kaari}</span></p><p class="pysakit">${l.pysakit}</p>${l.huom ? `<p class="huom">${l.huom}</p>` : ''}</div>
-      <div class="leima ${tilaluokka(l.tila)}">${l.tila}</div>`;
+      <div><p class="nimi">${l.nimi}</p><p class="meta"><span>${l.alue}</span><span>${l.kaari}</span><span>${l.tyyppi}</span></p><p class="pysakit">${l.pysakit}</p>${l.huom ? `<p class="huom">${l.huom}</p>` : ''}</div>
+      <div class="tila">${l.tila}</div>`;
     s.appendChild(d);
   }
   juuri.appendChild(s);
@@ -295,6 +281,31 @@ suodatin.addEventListener('click', (ev) => {
   document.querySelectorAll('section.ryhma').forEach((s) => {
     s.hidden = valittu !== null && s.dataset.manner !== valittu;
   });
+});
+
+const TEEMA_AVAIN = 'matkakirja-teema';
+function nykyinenTeema() {
+  return document.documentElement.dataset.theme
+    || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+}
+function asetaTeema(teema, tallenna) {
+  if (teema === 'dark' || teema === 'light') document.documentElement.dataset.theme = teema;
+  else delete document.documentElement.dataset.theme;
+  if (tallenna) {
+    try { localStorage.setItem(TEEMA_AVAIN, teema); } catch {}
+  }
+  const kytkin = document.getElementById('teemakytkin');
+  kytkin.textContent = nykyinenTeema() === 'dark' ? 'Päivätila' : 'Yötila';
+}
+try {
+  const tallennettu = localStorage.getItem(TEEMA_AVAIN);
+  if (tallennettu === 'dark' || tallennettu === 'light') asetaTeema(tallennettu, false);
+  else asetaTeema(null, false);
+} catch {
+  asetaTeema(null, false);
+}
+document.getElementById('teemakytkin').addEventListener('click', () => {
+  asetaTeema(nykyinenTeema() === 'dark' ? 'light' : 'dark', true);
 });
 </script>
 </body>
