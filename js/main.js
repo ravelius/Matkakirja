@@ -18,6 +18,8 @@ import { asetaMittari, mittariPaalla } from './karttamittari.js';
 import { esilataaIlme } from './ilme.js';
 import { sfx } from './sound.js';
 import { packById } from './pack.js';
+import { avaaPikatie, pikatienKaupunki, rakennaPikatiePeli } from './kehittaja-pikatie.js';
+import { ohitaSaapumisluenta, suljeFokusvirta } from './fokusvirta.js';
 import {
   kaynnistaPohjaMusiikki, startQuizMusic, stopPlaceStream, stopPohjaMusiikki, stopQuizMusic,
 } from './ambience-stream.js';
@@ -139,7 +141,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.2000';
+const APP_VERSION = '2026-08-09.2005';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -1430,7 +1432,25 @@ function nollaaValitila(game) {
 }
 
 // Kesken jäänyt peli jatkuu automaattisesti, muuten kysytään pelaajat.
-if (katseluPack) {
+const pikatienKaupunkiId = pikatienKaupunki();
+const pikatiePeli = pikatienKaupunkiId
+  ? rakennaPikatiePeli(Game, packById('maailmankartta'), pikatienKaupunkiId) : null;
+if (pikatiePeli) {
+  /*
+   * KEHITTÄJÄN PIKATIE (js/kehittaja-pikatie.js): ?lauta=pallo&dev=<kaupunki>
+   * avaa pallolaudan suoraan toimintavaiheeseen ilman saapumis-
+   * sekvenssiä. Ei tallenna levylle (onChange tyhjä) — laitteen oma
+   * peli säilyy; kehittäjätila vain tälle lataukselle.
+   */
+  try { localStorage.setItem('matkakirja-kehittaja', '1'); } catch { /* yksityinen tila */ }
+  if (ui) ui.destroy();
+  nollaaSahke();
+  ui = new UI(pikatiePeli, { onNewGame: startGame, onChange: () => {} });
+  ui.mount();
+  window.matkakirja = { game: pikatiePeli, ui, sfx };
+  window.afrikanTahti = window.matkakirja;
+  window.matkakirja.pikatie = avaaPikatie(ui, { suljeFokusvirta, ohitaSaapumisluenta });
+} else if (katseluPack) {
   avaaKatselu(katseluPack);
 } else {
   const saved = loadGame();

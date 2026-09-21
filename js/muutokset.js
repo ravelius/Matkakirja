@@ -13,6 +13,11 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2005, teksti: 'Nimiöt GL-kerrokseen (kokeilu)' },
+  { v: 2004, teksti: 'Kamera-nimiöt-rajapinta E4' },
+  { v: 2003, teksti: 'Kameran ennusteen CSS2D-siirto oletuksena pois' },
+  { v: 2002, teksti: 'Nimien paikka lukittu liikkeen ajaksi (E3)' },
+  { v: 2001, teksti: 'Nimien liukuva koko (E2)' },
   { v: 2000, teksti: 'Laattatasojen z-tappelu korjattu' },
   { v: 1999, teksti: 'Loytamisen sumu oletuksena pois' },
   { v: 1998, teksti: 'Sulavuus E4b: laatan ennuste' },

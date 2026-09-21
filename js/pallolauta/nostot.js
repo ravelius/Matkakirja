@@ -64,7 +64,7 @@ import {
   NOSTOSYM_KUVAMERKIN_KERROIN,
   NOSTOSYM_MINI_R, NOSTOSYM_MINI_RUUTU, NOSTOSYM_MITAN_KATTO, NOSTOSYM_NIMIO_KATTO_PX,
   NOSTOSYM_NIMIO_KOKO,
-  nostosymAsetaPorras, nostosymKatettuMitta, nostosymKuvamerkki, nostosymNimioAsemointi,
+  nostosymAsetaPorras, nostosymKatettuMitta, nostosymKuvamerkki, nostosymMitanKatto, nostosymNimioAsemointi,
   nostosymNimioMitta, nostosymPaakategoria, nostosymVirkistaRasterit, piirraNostosymKartalle,
   piirraNostosymNimio,
 } from '../fokusnosto-symbolit.js';
@@ -80,7 +80,7 @@ import { pallonNostoOnPoltettu } from '../pallo.js';
 // nostokerros kysyy vain pallon luetteloa (tests/pallonimet.test.mjs).
 import { KOHDEMAAN_NIMIOT_ELAVINA, pyramidinMerinimet } from '../pallo.js';
 import { PALLOLAUDAN_LEVEYS } from './kamera.js';
-import { nimenKarttakerroin } from './nimet.js';
+import { asetaKuorenKatto, nimenKarttakerroin } from './nimet.js';
 import { sovitteleLaput, laatikkoSisalla } from './sovittelu.js';
 import {
   kaydytKaupungit, loytosateella, merkitseLoydetyksi, nostoLoydetty, sumuPaalla,
@@ -560,6 +560,16 @@ export const NOSTON_MITAN_KATTO = NOSTOSYM_MITAN_KATTO;
 export function nostonMitta(omaKerroin = 1) {
   return nostosymKatettuMitta(NOSTON_MITTA * nostonKarttakerroin * omaKerroin);
 }
+/**
+ * Sama mitta ILMAN kattoa — kuoren liukuvaa kerrointa varten
+ * (js/pallolauta/nimet.js asetaKuorenKatto: katto lasketaan kehys
+ * kerrallaan min(raaka · kerroin, katto)).
+ */
+export function nostonRaakaMitta(omaKerroin = 1) {
+  return NOSTON_MITTA * nostonKarttakerroin * omaKerroin;
+}
+/** Kylkivaihdon häivytys (ms) — sama kuin css .nostosym-nimiokuva opacity-siirtymä. */
+export const KYLKIVAIHDON_HAIVYTYS_MS = 180;
 
 /*
  * ══════════════════════════════════════════════════════════════════
@@ -1184,7 +1194,12 @@ export function asetteleNosto(el, d) {
   const dx = d.dx ?? 0;
   const dy = d.dy ?? 0;
   const mitta = d.mitta ?? nostonMitta();
-  g.style.transform = `translate(${dx.toFixed(2)}px, ${dy.toFixed(2)}px) scale(${mitta.toFixed(4)})`;
+  // Kirjoitus vain muuttuneelle (erä E3): sama merkkijono ei likaa tyyliä.
+  const muunnos = `translate(${dx.toFixed(2)}px, ${dy.toFixed(2)}px) scale(${mitta.toFixed(4)})`;
+  if (g.style.transform !== muunnos) g.style.transform = muunnos;
+  // Kuori liukuu kehyksittäin kattoon asti (nimet.js KOKO LIUKUU JOKA
+  // KEHYKSESSÄ); raaka mitta tulee datumista, muuten pohja = raaka.
+  asetaKuorenKatto(el, { mitta, mittaRaaka: d.mittaRaaka, katto: nostosymMitanKatto() });
   /*
    * LIUSKAN ANKKURI EI PIIRRA MERKKIA (PAATOKSET 34, kerrosraja).
    * Kaupungin oma merkki ja nimi tulevat laudalta; ankkuri on pelkka
@@ -1213,15 +1228,50 @@ export function asetteleNosto(el, d) {
   const resepti = `${d.kategoria ?? ''}|${d.symLaji ?? ''}|${puoli}|${nimio}`
     + (taso1 ? `|taso1|${kuvamerkki ?? ''}` : '');
   if (g.dataset.resepti !== resepti) {
+    /*
+     * KYLKI VAIHTUU HÄIVYTTÄMÄLLÄ, EI HYPPÄÄMÄLLÄ (KARTAN SULAVUUS ENSIN,
+     * Fablen erä E3; mitattu E1:ssä: lepoladonnan kylkivaihdot olivat
+     * 20–60 px:n hyppyjä, suurimmat yksittäiset liikkeet koko eleessä).
+     * Kun resepti eroaa VAIN kyljen osalta ja vanha nimiö on näkyvissä,
+     * vanha nimiökuva jää häipymään (.nostosym-nimio-vanha, opacity → 0
+     * samalla 180 ms:n siirtymällä kuin sovittelun piilotus) ja uusi
+     * kylki tulee tilalle häivytyksellä (.nostosym-nimio-tulee →
+     * seuraavassa kehyksessä pois). Ikoni on oma rasterinsa pisteessä
+     * eikä liiku. Muu reseptin muutos (nimi, kategoria, taso) vaihtaa
+     * kuvat heti kuten ennen.
+     */
+    const vanhaResepti = g.dataset.resepti ?? '';
+    const vainKylki = vanhaResepti.split('|').length === resepti.split('|').length
+      && vanhaResepti.split('|').every((osa, i) => i === 2 || osa === resepti.split('|')[i]);
+    const vanhaNimio = vainKylki && !g.classList.contains('nostosym-nimio-piilossa')
+      ? g.querySelector('.nostosym-nimiokuva:not(.nostosym-nimio-vanha)') : null;
     g.dataset.resepti = resepti;
-    g.replaceChildren();
+    if (vanhaNimio) {
+      for (const lapsi of [...g.children]) if (lapsi !== vanhaNimio) lapsi.remove();
+      vanhaNimio.classList.add('nostosym-nimio-vanha');
+      const poista = () => { if (vanhaNimio.isConnected) vanhaNimio.remove(); };
+      vanhaNimio.addEventListener('transitionend', poista, { once: true });
+      globalThis.setTimeout?.(poista, KYLKIVAIHDON_HAIVYTYS_MS + 80);
+    } else {
+      g.replaceChildren();
+    }
     piirraNostosymKartalle(g, d.kategoria, nimio, d.symLaji, puoli, undefined, {
       kuvamerkki, ruutuKerroin: ruudunKerroin(d), tumma: taso1, erillinenNimio: true,
     });
+    if (vanhaNimio) {
+      const uusi = g.querySelector('.nostosym-nimiokuva:not(.nostosym-nimio-vanha)');
+      if (uusi) {
+        uusi.classList.add('nostosym-nimio-tulee');
+        // Kaksi kehystä: ensimmäinen maalaa opacity 0:n, toinen aloittaa siirtymän.
+        globalThis.requestAnimationFrame?.(() => globalThis.requestAnimationFrame?.(
+          () => uusi.classList.remove('nostosym-nimio-tulee'),
+        ));
+      }
+    }
   }
   g.classList.toggle('nostosym-nimio-piilossa', !nakyy);
-  el.dataset.nimio = nakyy ? nimio : '';
-  el.dataset.taso = String(d.taso ?? 2);
+  if (el.dataset.nimio !== (nakyy ? nimio : '')) el.dataset.nimio = nakyy ? nimio : '';
+  if (el.dataset.taso !== String(d.taso ?? 2)) el.dataset.taso = String(d.taso ?? 2);
   el.classList.toggle('pallolauta-nosto-taso1', taso1);
   // Löytämisen sumu: luonnos harmaana ja haaleana (css), mustaus siirtymällä.
   el.classList.toggle('pallolauta-nosto-luonnos', Boolean(d.luonnos));
@@ -2867,6 +2917,7 @@ export function luoNostot({
     datumit = naytetaan.map((r) => (r.perhe === 'aihemerkki' ? {
       avain: r.avain,
       mitta: mittaNyt,
+      mittaRaaka: nostonRaakaMitta(),
       laji: 'nosto',
       id: r.id,
       perhe: r.perhe,
@@ -2908,6 +2959,7 @@ export function luoNostot({
       // ruutupikselikatto katkaisee molemmat samaan 16 px:iin
       // (ks. NIMIÖLLÄ ON RUUTUPIKSELIKATTO).
       mitta: nostonMitta(merkinKerroin(r)),
+      mittaRaaka: nostonRaakaMitta(merkinKerroin(r)),
       kaupunki: Boolean(r.kaupunki),
       poltettu: Boolean(r.poltettu),
       laji: r.perhe === 'piste' ? 'piste' : 'nosto',
