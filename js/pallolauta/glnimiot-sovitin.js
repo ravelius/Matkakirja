@@ -112,6 +112,7 @@ export function glNostonInstanssi(d, sprite, osa, opacity) {
     dx: Number(d.dx) || 0,
     dy: Number(d.dy) || 0,
     katto: sprite.katto ?? null,
+    porras: sprite.porras ?? null,
     opacity,
   };
 }
@@ -384,6 +385,22 @@ export function luoGlNimiosovitin({
     viimeiset: () => viimeiset ?? [],
     viimeisetNostot: () => viimeisetNostot ?? [],
     viimeisetPeli: () => viimeisetPeli,
+    /**
+     * Rungolla olevien nostojen osat ruutumittoineen (savukkeet):
+     * leveys ja korkeus CSS-pikseleinä kuoren kertoimella k, kuten
+     * shader ne piirtää (w · skaala · min(k · a, b)).
+     */
+    nostotRungolla: (k = lahde.kuorenKerroin()) => nostoInstanssit.map((i) => {
+      const koko = Math.min(k * (i.katto?.a ?? 1), i.katto?.b ?? 1e6);
+      return {
+        tunnus: i.tunnus, lat: i.lat, lng: i.lng, opacity: i.opacity,
+        leveys: (i.rasteri?.w ?? 0) * i.skaala * koko,
+        korkeus: (i.rasteri?.h ?? 0) * i.skaala * koko,
+        // Kirjaston yksikön ruutumitta (nostot.js `mitta` kuoren kanssa):
+        // nimiön fontti ruudulla = NOSTOSYM_NIMIO_KOKO × mitta.
+        mitta: i.porras > 0 ? i.skaala * koko * i.porras : null,
+      };
+    }),
     tila: () => ({ ...luvut, rasterit: lahde.tila() }),
     pura() {
       purettu = true;

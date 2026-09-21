@@ -276,7 +276,8 @@ export function nostonKatto(d, katto) {
  * `--nimiokerroin`-muuttujan (E2, sama lähde kuin CSS).
  */
 export function luoRasterilahde({
-  kotelo, dpr = globalThis.devicePixelRatio || 1, doc = globalThis.document, katto = nostosymMitanKatto(),
+  // Katto luetaan joka haulla: se nousee lähizoomissa (nostosymAsetaNimionKatto); testit antavat vakion.
+  kotelo, dpr = globalThis.devicePixelRatio || 1, doc = globalThis.document, katto = null,
   luoKangas = null, bitmap = typeof createImageBitmap === 'function',
   /** UI pelinappulan rasteria varten (js/ui.js pawnShape); ilman sitä nappula jää CSS2D:hen. */
   ui = null,
@@ -326,10 +327,23 @@ export function luoRasterilahde({
       return rasteroiNimi(d, asu, dpr, luoKangas ?? undefined);
     }) };
   };
+  /*
+   * MITTA JA KATTO OVAT DATUMIN, EIVÄT RASTERIN (omistajan löydös
+   * 21.9.2026 v2021 iPhone: Camarguessa nimiöt eri kokoisia ja koko
+   * vaihtui pelkästään panoroidessa). Rasterin avain on resepti +
+   * porras, joten sama kuva palvelee kaikkia saman kategorian ikoneja
+   * ja samaa nostoa joka zoomilla. Kun `skaala` ja `katto` tallettuivat
+   * välimuistiin ENSIMMÄISEN datumin mitasta, jokainen myöhempi
+   * lukija (toinen nosto, toinen zoomi) sai ruudulle sen vanhan koon:
+   * saapumiszoomilla tehty rasteri piirtyi pienenä syvälläkin, ja
+   * panoroinnissa ruutuun tullut uusi nosto sai tuoreen, isomman
+   * mitan. Nyt kuva on välimuistissa, mutta koko luetaan joka haulla
+   * datumista — sama nosto, sama zoomi → sama koko, ladonnasta
+   * riippumatta.
+   */
   const haeNostonOsa = (d, osa, resepti) => {
     const porras = nostosymPorrasNyt();
     const avain = `nosto|${nostosymRasterinAvain(resepti, porras)}|${dpr}`;
-    const katot = nostonKatto(d, katto);
     return {
       osa,
       ...tuotanto(avain, async () => {
@@ -339,11 +353,12 @@ export function luoRasterilahde({
         return {
           kuva, w: kuva.width ?? kuva.naturalWidth, h: kuva.height ?? kuva.naturalHeight,
           ankkuriX: r.origoX * porras, ankkuriY: r.origoY * porras,
-          // Kirjaston yksikkö → CSS px: mitta (scale) / porras (px per yksikkö).
-          skaala: (d.mitta > 0 ? d.mitta : 1) / porras,
-          katto: katot,
         };
       }),
+      // Kirjaston yksikkö → CSS px: mitta (scale) / porras (px per yksikkö).
+      skaala: (d.mitta > 0 ? d.mitta : 1) / porras,
+      katto: nostonKatto(d, katto ?? nostosymMitanKatto()),
+      porras,
     };
   };
   const haeNosto = (d) => {
