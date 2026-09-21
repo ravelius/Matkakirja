@@ -659,3 +659,7 @@ Pelikoodari 21.9.2026 ilta: nappulan musta väri johtui WebKitistä: liukuväri 
 ## GL-LAITELUKU v2018: NIMIOT JA NOSTOT PIKSELINTARKASTI SAMAT GL/CSS2D; NAPPULA MUSTA (KORJAUS JONOSSA) (21.9.2026 klo 21.09)
 
 Laitetestaaja 21.9.2026 ilta (docs/raportit/laitekierros-glnimiot-20260921.md, laitetestaaja 7df9265a): iPad ja iPhone oletustilassa (GL) vs ?glnimiot=0: nimiöt ja nostot pikselintarkasti samat; nappula musta GL:ssä (korjaus 4509674a Julkaisijalla). Ei uusia fps/muistilukuja (sulavuusmittari ei lue GL-instansseja; aiemmat iPad pan 0 px, zoom p95 0,33 px, iPhone 60 fps molemmissa). Chromium-työpöytämittaus jäi kesken (selainpaneeli piilossa). Fable: Pelikoodarin uusi sessio lisää sulavuusmittariin GL-instanssien luvun (jo tehtävälistalla), Laitetestaaja toistaa fps/muisti-luvun sen jälkeen.
+
+## v2020 TUOTANNOSSA: GL-NAPPULAN VARI KORJATTU (#2676) (21.9.2026 klo 21.10)
+
+Julkaisija 21.9.2026 ilta: nappulan mustan värin korjaus tuotannossa v2020 (PR #2676). Jatkaa pelikoodari-savukkeet-punaiset-erällä ja GL-runko 3:lla.
