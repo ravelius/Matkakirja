@@ -5280,6 +5280,47 @@ export async function avaaPallolauta(ui) {
         return juuri ? { loytyi: true, lapsia: juuri.childElementCount } : { loytyi: false, lapsia: 0 };
       })(),
       virheet: globalThis.__pallonVirheet?.slice(-3) ?? null,
+      /*
+       * CSS2D-NÄYTE (Laitetestaaja 21.9.2026 iPad: luotu 68, liitetty
+       * 0). CSS2DRenderer liittää elementin vain, jos olio on
+       * näkyvä, sen leikkaussyvyys z on [-1, 1] ja kerrostesti läpäisee
+       * — sama lasku tässä yhdelle merkille kameran omilla matriiseilla,
+       * jotta nähdään, mikä kolmesta ehdosta kaatuu. Identiteetti-
+       * matrixWorldInverse (kamera origossa katsomassa -z:aa) panisi
+       * KOKO Ranskan (lng ≈ 0 → +z) kameran taakse: z < -1.
+       */
+      css2dNayte: (() => {
+        try {
+          const kam = pallo.camera?.();
+          const d = merkit.naytedatum();
+          const olio = d?.__threeObjHtml ?? null;
+          if (!kam || !olio) return { olio: false };
+          const m = kam.projectionMatrix.clone().multiply(kam.matrixWorldInverse);
+          const v = kam.position.clone().setFromMatrixPosition(olio.matrixWorld).applyMatrix4(m);
+          const ketju = [];
+          for (let o = olio; o; o = o.parent) ketju.push(o.visible);
+          const inv = kam.matrixWorldInverse.elements;
+          return {
+            avain: d.avain ?? null,
+            nakyva: olio.visible,
+            ketjuNakyva: ketju,
+            kerros: olio.layers.test(kam.layers),
+            z: Number(v.z.toFixed(4)),
+            x: Number(v.x.toFixed(3)),
+            y: Number(v.y.toFixed(3)),
+            paikka: { x: olio.position.x.toFixed(1), y: olio.position.y.toFixed(1), z: olio.position.z.toFixed(1) },
+            maailma: olio.matrixWorld.elements.slice(12, 15).map((e) => Number(e.toFixed(1))),
+            kameraOrigossa: [0, 5, 10, 15].every((i) => Math.abs(inv[i] - 1) < 1e-9)
+              && [12, 13, 14].every((i) => Math.abs(inv[i]) < 1e-9),
+            kameranVanhempi: Boolean(kam.parent),
+            kameraAuto: kam.matrixWorldAutoUpdate,
+            olioAuto: olio.matrixWorldAutoUpdate,
+            kameraPaikka: { x: kam.position.x.toFixed(1), y: kam.position.y.toFixed(1), z: kam.position.z.toFixed(1) },
+          };
+        } catch (e) {
+          return { virhe: String(e?.message ?? e) };
+        }
+      })(),
       korkeus: pallo.pointOfView()?.altitude ?? null,
       versio: document.getElementById('app-version')?.textContent ?? null,
     }),

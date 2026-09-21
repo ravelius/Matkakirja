@@ -497,6 +497,8 @@ export function luoMerkit({ pallo, ui, siirtyma, asteet, kotelo = null, nakyviss
      * niistä on liitetty DOMiin (CSS2DRenderer.render liittää vasta
      * piirrossa). Luotu ilman liitosta = CSS2D-piirto ei aja.
      */
+    /** Ensimmäinen nosto- tai nimidatum (diagnostiikka, ks. lauta.tila css2dNayte). */
+    naytedatum: () => [...data.values()].find((d) => d.el && (d.laji === 'nosto' || d.laji === 'nimi')) ?? null,
     elementit: () => {
       let luotu = 0;
       let liitetty = 0;
