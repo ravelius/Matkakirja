@@ -66,6 +66,7 @@ const MODULES = [
   // fokusvirta-pariisi.js:ää, joka lukee tätä.
   'js/packs/maalehtinostot-fra.js',
   'js/packs/nakyvat-kaupungit-fra.js',
+  'js/packs/monumentit-eurooppa.js',
   'js/packs/hahmotelma-fra.js',
   'js/packs/hahmotelma-bel.js',
   'js/packs/hahmotelma-deu.js',

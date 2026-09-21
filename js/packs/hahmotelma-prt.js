@@ -62,7 +62,10 @@
  */
 
 /** Portugalin hahmotelmanostot: sisällölliset kohteet kaupungin ulkopuolella. */
+import { EUROOPAN_KADONNEET } from './monumentit-eurooppa.js';
+
 export const HAHMOTELMA_PRT = [
+  ...EUROOPAN_KADONNEET.PRT,
   {
     id: 'hahmotelma-peneda-geres',
     kuva: {

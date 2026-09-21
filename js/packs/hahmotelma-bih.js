@@ -93,7 +93,10 @@
  */
 
 /** Bosnia ja Hertsegovinan hahmotelmanostot: sisällölliset kohteet. */
+import { EUROOPAN_KADONNEET } from './monumentit-eurooppa.js';
+
 export const HAHMOTELMA_BIH = [
+  ...EUROOPAN_KADONNEET.BIH,
   {
     id: 'hahmotelma-sarajevo',
     kuva: {

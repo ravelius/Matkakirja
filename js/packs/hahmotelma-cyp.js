@@ -86,7 +86,10 @@
  */
 
 /** Kyproksen hahmotelmanostot: sisällölliset kohteet kaupungin ja nykyisten nostojen ulkopuolella. */
+import { EUROOPAN_KADONNEET } from './monumentit-eurooppa.js';
+
 export const HAHMOTELMA_CYP = [
+  ...EUROOPAN_KADONNEET.CYP,
   {
     id: 'hahmotelma-kormakitis',
     kuva: {

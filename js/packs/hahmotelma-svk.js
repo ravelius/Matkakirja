@@ -73,7 +73,10 @@
  */
 
 /** Slovakian hahmotelmanostot: sisällölliset kohteet, ei pelikaupunkia. */
+import { EUROOPAN_KADONNEET } from './monumentit-eurooppa.js';
+
 export const HAHMOTELMA_SVK = [
+  ...EUROOPAN_KADONNEET.SVK,
   {
     id: 'hahmotelma-tatranska-lomnica',
     kuva: {
