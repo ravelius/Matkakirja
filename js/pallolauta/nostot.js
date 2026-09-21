@@ -1174,7 +1174,15 @@ export function asetteleNosto(el, d) {
     el.classList.add('pallolauta-nosto-ankkuri');
     return;
   }
-  const nimio = d.nimioNakyy && d.nimi ? d.nimi : '';
+  /*
+   * NIMIÖ HÄIVYTETÄÄN, EI POISTETA (Fable 21.9.2026, nimiöt vakaat):
+   * nimiö on oma rasterinsa ikonin rinnalla (piirraNostosymKartalle
+   * `erillinenNimio`), ja sovittelun piilotus on luokka, jonka css
+   * häivyttää ≤ 200 ms:ssa (.nostosym-nimio). Resepti kantaa nimen
+   * silloinkin, kun se on piilossa — rasteri on valmiina paluuta varten.
+   */
+  const nimio = d.nimi ?? '';
+  const nakyy = Boolean(d.nimioNakyy && d.nimi);
   const puoli = d.puoli ?? 'oikea';
   // Ykköstaso: kuvamerkki ja tummempi muste (ks. NOSTOJEN TASOT).
   const taso1 = d.taso === 1 && !d.poltettu;
@@ -1185,10 +1193,11 @@ export function asetteleNosto(el, d) {
     g.dataset.resepti = resepti;
     g.replaceChildren();
     piirraNostosymKartalle(g, d.kategoria, nimio, d.symLaji, puoli, undefined, {
-      kuvamerkki, ruutuKerroin: ruudunKerroin(d), tumma: taso1,
+      kuvamerkki, ruutuKerroin: ruudunKerroin(d), tumma: taso1, erillinenNimio: true,
     });
   }
-  el.dataset.nimio = nimio;
+  g.classList.toggle('nostosym-nimio-piilossa', !nakyy);
+  el.dataset.nimio = nakyy ? nimio : '';
   el.dataset.taso = String(d.taso ?? 2);
   el.classList.toggle('pallolauta-nosto-taso1', taso1);
   el.classList.toggle('lunastettu', Boolean(d.lunastettu));
@@ -3664,8 +3673,22 @@ export function luoNostot({
    * ladonnassa — vain kun sovittelu oikeasti ajetaan. Avaimeen menee
    * pelkkä tieto siitä, onko kehä jo saatavilla (`rantaviivaOn`).
    */
+  /*
+   * ══ NIMIÖ EI LIIKU ELEEN AIKANA (Fable 21.9.2026, omistaja v1985) ══
+   *
+   * Sovittelu (js/pallolauta/sovittelu.js, Google Earthin malli) ajetaan
+   * vain LEVOSSA: `lepo` on tosi, kun lauta kutsuu lepoladonnan
+   * (js/pallolauta/lauta.js: sormi ylhäällä, kamera-ajo ohi, viimeisestä
+   * kameran muutoksesta LADONNAN_LEPOVIIVE_MS). Eleen aikana lukko
+   * pidetään sellaisenaan ja uudet laput saavat lukkoon oman kylkensä
+   * näkyvänä — ne sovitellaan vasta levossa. Kylki ja näkyvyys eivät
+   * siis voi vaihtua sormen alla; siirtoa ei ole lainkaan (dx = dy = 0).
+   *
+   * Levossa ratkaisu on idempotentti: lukittu kelvollinen asento
+   * pidetään (hystereesi), joten toistuva lepoladonta ei muuta mitään.
+   */
   const sovittele = ({
-    nimet = [], kiinteat = [], rantaviiva = null, rantaviivaOn = false,
+    nimet = [], kiinteat = [], rantaviiva = null, rantaviivaOn = false, lepo = true,
   } = {}) => {
     viimeisimmatNimet = nimet ?? [];
     if (!lappuja.length) {
@@ -3673,105 +3696,37 @@ export function luoNostot({
       sovitellutAsennot = new Map();
       return sovittelu;
     }
-    const ruutuNyt = ruutu?.() ?? { leveys: 0, korkeus: 0 };
-    /*
-     * AVAIN LUETAAN RIVILTÄ, EI DATUMISTA. Sovittelu kirjoittaa
-     * tuloksensa datumiin (`nimioNakyy` piilotuksessa), ja jos avain
-     * lukisi sen, jokainen piilotus muuttaisi avainta ja pakottaisi
-     * uuden sovittelun — sama ansa kuin `omatLaatikot`issa (ks. ASENTO
-     * LUETAAN RIVILTÄ, EI DATUMILTA). Rivi rakennetaan datasta.
-     */
-    const reunaNyt = reuna?.() ?? null;
-    /*
-     * REUNAN YLITYS ON OSA AVAINTA (RUUDUN REUNA ON ESTE). Lukko pitää
-     * kyljen vedon yli, mutta vedossa lappu voi kulkea ruudun reunan
-     * yli — juuri se, mitä omistaja ei halua. Siksi avaimeen kirjataan
-     * ne laput, joiden LUKITTU asento ylittää reunan juuri nyt: kun
-     * joukko muuttuu, sovittelu ajetaan uudestaan ja lappu vaihtaa
-     * kylkeä tai siirtyy sisään. Muulloin lukko pitää kuten ennen —
-     * sisäänpäin tullessaan lappu ei palaa omaan kylkeensä itsestään
-     * (ei edestakaista hyppyä reunan tuntumassa).
-     */
-    const reunalla = reunaNyt
-      ? lappuja.filter(({ datum, laatikko }) => datum.nimioNakyy
-        && !laatikkoSisalla(laatikko(datum.puoli, datum.dx, datum.dy, true), reunaNyt))
-        .map(({ datum }) => datum.avain).join(',')
-      : '';
-    /*
-     * PALUU OMAAN KYLKEEN, KUN TILAA TAAS ON. Lukko syntyy usein kesken
-     * kameran ajon (saapumisajo alkaa kaukaa), ja silloin reunan takia
-     * käännetty tai siirretty lappu jäisi käännetyksi, vaikka perillä
-     * sen oma kylki mahtuisi hyvin. Siksi avaimeen kirjataan myös ne
-     * laput, jotka EIVÄT ole omassa asennossaan mutta joiden oma
-     * asento on nyt reunan sisällä HYSTEREESIN verran: ne saavat
-     * sovittelun uudestaan, ja se palauttaa oman kyljen, jos se on
-     * vapaa. Hystereesi (REUNAN_HYSTEREESI_PX) estää edestakaisen
-     * hypyn juuri reunan tuntumassa.
-     */
-    const sisareuna = reunaNyt ? {
-      x0: reunaNyt.x0 + REUNAN_HYSTEREESI_PX, y0: reunaNyt.y0 + REUNAN_HYSTEREESI_PX,
-      x1: reunaNyt.x1 - REUNAN_HYSTEREESI_PX, y1: reunaNyt.y1 - REUNAN_HYSTEREESI_PX,
-    } : null;
-    const palaavat = new Set(sisareuna
-      ? lappuja.filter(({ r, datum, laatikko }) => (datum.puoli !== (r.puoli ?? 'oikea')
-        || datum.dx || datum.dy || !datum.nimioNakyy)
-        && laatikkoSisalla(laatikko(r.puoli ?? 'oikea', 0, 0, true), sisareuna))
-        .map(({ datum }) => datum.avain)
-      : []);
-    const palaisi = [...palaavat].join(',');
-    /*
-     * RANTAVIIVA ON OSA AVAINTA VAIN MÄÄRÄNÄ (MEREN NIMIÖ EI JÄÄ
-     * RANTAVIIVAN ALLE, js/pallolauta/sovittelu.js): kehän laatikot
-     * saapuvat aineiston latauduttua eri hetkellä kuin ensimmäinen
-     * ladonta, ja silloin meren lappu on sovitteltava uudestaan. Määrä
-     * riittää erottamaan "ei vielä" ja "nyt on"; itse laatikot
-     * liikkuvat vedossa kuten kaikki muukin, eikä lukko avaudu siitä.
-     */
-    const avain = `${Math.round(ruutuNyt.leveys)}x${Math.round(ruutuNyt.korkeus)}#`
-      + lappuja.map(({ r, datum }) => `${datum.avain}:${r.nimioNakyy && r.nimi ? 1 : 0}`
-        + `:${r.perhe === 'aihemerkki' ? 'a' : 'n'}`).join(';')
-      + `#reuna:${reunalla}#palaa:${palaisi}#ranta:${rantaviivaOn ? 1 : 0}`;
-    // Sama lappujoukko samalla ruudulla: kylki on jo ratkaistu (ks.
-    // NIMIÖN KYLKI LUKITAAN). Veto ja zoomi eivät koeta sitä uudestaan.
-    if (avain === sovittelunAvain) {
-      sovittelu = { ...viimeisinSovittelu, lappuja: lappuja.length };
+    if (!lepo) {
+      for (const { r, datum } of lappuja) {
+        if (sovitellutAsennot.has(datum.avain)) continue;
+        sovitellutAsennot.set(datum.avain, {
+          kylki: r.puoli ?? 'oikea', dx: 0, dy: 0, nimio: true, syy: 'ele',
+        });
+      }
+      sovittelunAvain = '';
+      sovittelu = { ...viimeisinSovittelu, lappuja: lappuja.length, lukossa: true };
       return sovittelu;
     }
-    sovittelunAvain = avain;
+    const reunaNyt = reuna?.() ?? null;
     const tulos = sovitteleLaput({
       laput: lappuja.map(({ r, datum, laatikko }) => ({
         avain: datum.avain,
-        /*
-         * LUKITTU KYLKI ON LÄHTÖKOHTA, PAITSI PALAAVALLA (ks. PALUU
-         * OMAAN KYLKEEN): sovittelun "oma" on se kylki, josta haku
-         * alkaa. Lukko kannetaan eteenpäin, jotta uusi lappu ei
-         * käännä naapureitaan; reunan takia käännetty lappu saa
-         * lähtökohdakseen DATAN kyljen, jotta se voi palata.
-         */
-        kylki: palaavat.has(datum.avain) ? (r.puoli ?? 'oikea') : datum.puoli,
+        kylki: r.puoli ?? 'oikea',
         laatikko,
+        nimi: r.nimi ?? '',
         // Meren nimiö väistää rantaviivaa (sovittelu.js `rantaviiva`).
         meri: r.symLaji === 'meri' || r.kategoria === 'meri',
-        // Ykköstaso sovitellaan ensin (sovittelu.js `taso`).
         taso: datum.taso ?? 2,
-        /*
-         * AIHENOSTO VÄISTÄÄ KAIKKEA (js/pallolauta/sovittelu.js
-         * AIHENOSTO SOVITELLAAN VIIMEISENÄ). Sen paikka ja nimi
-         * syntyvät vasta ajossa ryhmän jäsenistä, joten sillä ei ole
-         * sitä käsin hiottua ladontaa, jonka nojalla muut laput
-         * saavat jäädä paikoilleen — ja kaupungin rykelmän
-         * aihenostot syntyvät kaikki saman kaupungin päälle.
-         */
+        kaupunki: Boolean(datum.kaupunki),
         este: r.perhe === 'aihemerkki',
       })),
       esteet: kiinteat.length ? [...nimet, ...kiinteat] : nimet,
+      lukot: sovitellutAsennot,
       reuna: reunaNyt,
-      rantaviiva: typeof rantaviiva === 'function' ? rantaviiva() : (rantaviiva ?? []),
-      // Elävät laput eivät limity keskenään (sovittelu.js `keskinainen`).
-      keskinainen: KOHDEMAAN_NIMIOT_ELAVINA,
+      rantaviiva: rantaviivaOn && typeof rantaviiva === 'function' ? rantaviiva() : (rantaviivaOn ? (rantaviiva ?? []) : []),
     });
     let muuttui = false;
-    for (const { r, datum } of lappuja) {
+    for (const { datum } of lappuja) {
       const a = tulos.asennot.get(datum.avain);
       if (!a) continue;
       if (datum.puoli === a.kylki && datum.dx === a.dx && datum.dy === a.dy
@@ -3782,12 +3737,13 @@ export function luoNostot({
       datum.nimioNakyy = a.nimio;
       muuttui = true;
     }
-    // Siirtynyt ikoni on myös siirtynyt varaus (js/pallolauta/lauta.js
+    // Vaihtunut kylki on myös vaihtunut varaus (js/pallolauta/lauta.js
     // lukee laatikot myös sovittelun jälkeen).
     if (muuttui) { laskeLaatikot(); merkit.aseta('nostot', datumit); }
     // Lukko talteen: seuraavat ladonnat kantavat tämän eteenpäin
     // (ks. EDELLINEN SOVITTELU KANNETAAN ETEENPÄIN).
     sovitellutAsennot = new Map(tulos.asennot);
+    sovittelunAvain = 'levossa';
     viimeisinSovittelu = {
       siirretty: tulos.siirretty,
       kylkiVaihtui: tulos.kylkiVaihtui,
@@ -3795,7 +3751,7 @@ export function luoNostot({
       jaljella: tulos.jaljella,
       reunalta: tulos.reunalta,
     };
-    sovittelu = { ...viimeisinSovittelu, lappuja: lappuja.length };
+    sovittelu = { ...viimeisinSovittelu, lappuja: lappuja.length, lukossa: false };
     return sovittelu;
   };
 
@@ -4172,6 +4128,8 @@ export function luoNostot({
     },
     /** Viimeisimmän sovittelun luvut (savukkeet ja vartijat). */
     sovittelunTulos: () => sovittelu,
+    /** Sovittelun lukko avaimittain ({ kylki, dx, dy, nimio, syy }) — savukkeet. */
+    sovittelunAsennot: () => new Map(sovitellutAsennot),
     /**
      * Elävien nostojen NIMILAPPUJEN laatikot sovittelun jälkeen —
      * mitat kaavasta, samasta kuin sovittelu käytti (savukkeet ja
