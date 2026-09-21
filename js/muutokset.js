@@ -13,6 +13,12 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2013, teksti: 'Visat era 4: 45 uutta nostoihin' },
+  { v: 2012, teksti: 'Zoomiraja pitaa rullalla, nipistyksella ja eleilla' },
+  { v: 2011, teksti: 'Visat era 3: 43 uutta nostoihin' },
+  { v: 2010, teksti: 'Nostokortti: kaksi palstaa leveilla ruuduilla' },
+  { v: 2009, teksti: 'Visat: 25 uutta BIH/DEU/GBR/GRC/NOR/RUS/TUR-nostoihin' },
+  { v: 2008, teksti: 'Visat: BIH/CHE/GBR/ISL/NOR/RUS/TUR/UKR yli 1/3' },
   { v: 2007, teksti: 'Nostot näkyviin: kohdemerkkien portti korjattu' },
   { v: 2006, teksti: 'Reaktiot sydämeksi: viisi symbolia -> sydän ja peukku alas' },
   { v: 2005, teksti: 'Nimiöt GL-kerrokseen (kokeilu)' },

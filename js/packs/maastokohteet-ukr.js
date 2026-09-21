@@ -80,6 +80,17 @@ export const MAASTOKOHTEET_UKR = [
       + 'pyökki- ja kuusimetsät, joiden yläpuolelle jää subalpiinisten niittyjen vyöhyke, jota '
       + 'ukrainaksi kutsutaan nimellä polonyna. Prut-joen päälähde on vuoren itärinteellä.',
     lahde: 'en-Wikipedia "Hoverla", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Millä nimellä ukrainaksi kutsutaan Hoverlan yläosan subalpiinisia niittyjä?',
+      vaihtoehdot: [
+        'polonyna',
+        'preeria',
+        'savanni',
+        'tundra',
+      ],
+      oikea: 0,
+      fakta: 'Niityt sijaitsevat pyökki- ja kuusimetsien yläpuolella Tšornohoran alueella.',
+    },
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260912/ukr-maasto-hoverla-dfd136ce749c.jpg',
       lyhyt: 'Hoverlan kesäistä polonyna-rinnettä peittävät niityt ja matalat pensaat.',
@@ -121,6 +132,17 @@ export const MAASTOKOHTEET_UKR = [
       + 'Georgia, Romania, Venäjä, Turkki ja Ukraina — mutta valuma-alue ulottuu 24 Euroopan '
       + 'maahan, koska meren suurimmat tulojoet ovat Tonava, Dnepr ja Dnestr.',
     lahde: 'en-Wikipedia "Black Sea", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Mitkä kolme jokea ovat syynä siihen, että Mustameren valuma-alue ulottuu 24 maahan?',
+      vaihtoehdot: [
+        'Reini, Rhône ja Po',
+        'Tonava, Dnepr ja Dnestr',
+        'Volga, Uralijoki ja Terek',
+        'Visla, Oder ja Elbe',
+      ],
+      oikea: 1,
+      fakta: 'Meren rannoilla on kuusi maata, mutta valuma-alue ulottuu 24 Euroopan maahan.',
+    },
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260912/ukr-maasto-mustameri-d9d62ef8f8bd.jpg',
       lyhyt: 'Odesan työskentelevä satama Mustanmeren äärellä.',
@@ -204,6 +226,17 @@ export const MAASTOKOHTEET_UKR = [
       + 'neliökilometriä, joten se on sekä Ukrainan että Valko-Venäjän pisin joki ja Euroopan '
       + 'neljänneksi pisin Volgan, Tonavan ja Uralin jälkeen.',
     lahde: 'en-Wikipedia "Dnieper", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Kuinka mones Euroopan pisimmistä joista Dnepr on?',
+      vaihtoehdot: [
+        'Toiseksi pisin',
+        'Kolmanneksi pisin',
+        'Neljänneksi pisin',
+        'Viidenneksi pisin',
+      ],
+      oikea: 2,
+      fakta: 'Se on Euroopan neljänneksi pisin joki Volgan, Tonavan ja Uralin jälkeen, noin 2 200 kilometriä pitkä.',
+    },
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260912/ukr-maasto-dnepr-f2350376bd1c.jpg',
       lyhyt: 'Dnepr ja Kiovan Podilin rantakaupunginosa ylhäältä nähtyinä.',
@@ -631,6 +664,17 @@ export const MAASTOKOHTEET_UKR = [
       + 'pieni planeetta numero 2259 nimettiin puiston mukaan.',
     lahde: 'en-Wikipedia "Sofiyivka Park", johdanto-osa ja osio "History" '
       + '(tarkistettu 6.9.2026).',
+    visa: {
+      kysymys: 'Mitä Sofijivkan puiston mukaan nimettiin vuonna 1985?',
+      vaihtoehdot: [
+        'Kasvitieteellinen suku',
+        'Ukrainalainen kunta',
+        'Sotalaiva',
+        'Pieni planeetta',
+      ],
+      oikea: 3,
+      fakta: 'Vuonna 1985 pieni planeetta numero 2259 nimettiin Sofijivkan puiston mukaan.',
+    },
   },
   {
     id: 'derzhprom',

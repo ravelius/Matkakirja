@@ -183,6 +183,17 @@ export const MAASTOKOHTEET_PRT = [
       + 'oli Portugalin siirtomaavallan keskus kolmella mantereella.',
     lahde: 'en-Wikipedia "Tagus", osiot "Estuary", "Geology" ja "Historical importance" '
       + '(tarkistettu 1.9.2026).',
+    visa: {
+      kysymys: 'Miksi Tejon suisto on poikkeuksellinen?',
+      vaihtoehdot: [
+        'Se levenee sisämaassa ja kapenee mereen',
+        'Se kuivuu kokonaan joka kesä',
+        'Se on maailman pisin suisto',
+        'Siinä ei ole lainkaan vuorovettä',
+      ],
+      oikea: 0,
+      fakta: 'Tejon suisto on leveä sisämaan päässä ja kapenee ulos merta kohti.',
+    },
   },
   {
     id: 'douro',
@@ -225,6 +236,17 @@ export const MAASTOKOHTEET_PRT = [
       + 'jatkaa Pohjois-Portugaliin, missä se laskee Atlanttiin Portossa, maan toiseksi '
       + 'suurimmassa kaupungissa. Sen suurin sivujoki on oikealta tuleva Esla.',
     lahde: 'en-Wikipedia "Douro", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Mistä Douro-joki saa alkunsa?',
+      vaihtoehdot: [
+        'Alpeilta Sveitsissä',
+        'Kantabrian vuoristosta',
+        'Pico de Urbiónilta Espanjassa',
+        'Serra da Estrelan huipulta',
+      ],
+      oikea: 2,
+      fakta: 'Douro nousee Pico de Urbiónilta Espanjan Sorian maakunnassa.',
+    },
   },
   /* ================================================================
    * K2-ERÄ 3 6.9.2026 — KAHDEKSAN KOHDETTA. Perustelut tiedoston alussa.
@@ -273,6 +295,17 @@ export const MAASTOKOHTEET_PRT = [
       + 'Museumin kokoelmissa.',
     lahde: 'en-Wikipedia "Sintra", johdanto-osa ja osio "Prehistory to Moorish era" '
       + '(tarkistettu 6.9.2026).',
+    visa: {
+      kysymys: 'Missä museossa Sintran kaulus on ollut vuodesta 1900?',
+      vaihtoehdot: [
+        'Louvre-museo Pariisissa',
+        'Prado-museo Madridissa',
+        'Eremitaaši Pietarissa',
+        'British Museum Lontoossa',
+      ],
+      oikea: 3,
+      fakta: 'Sintran kaulus on keskipronssikautinen kultainen kaularengas, joka löytyi kaupungin läheltä.',
+    },
   },
   {
     id: 'batalha',
@@ -476,6 +509,17 @@ export const MAASTOKOHTEET_PRT = [
       + 'Lissabonin vaakunassa.',
     lahde: 'en-Wikipedia "Cape St. Vincent", johdanto-osa ja osio "History" '
       + '(tarkistettu 6.9.2026).',
+    visa: {
+      kysymys: 'Miksi korpit näkyvät yhä Lissabonin vaakunassa?',
+      vaihtoehdot: [
+        'Ne söivät kalifin armeijan muonan',
+        'Ne saattoivat pyhän ruumiin Lissaboniin',
+        'Ne veivät kaulakorun temppeliin',
+        'Ne puolustivat majakkaa myrskyltä',
+      ],
+      oikea: 1,
+      fakta: 'Legendan mukaan korpit saattoivat pyhän Vincentin ruumista laivalla Lissaboniin.',
+    },
   },
   {
     id: 'elvas',

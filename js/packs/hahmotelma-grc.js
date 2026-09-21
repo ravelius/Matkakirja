@@ -107,6 +107,18 @@ export const HAHMOTELMA_GRC = [
       + 'sanasta vikos eli korvallinen astia tai albaniasta ja sanasta silta.',
     lahde: 'en-Wikipedia "Vikos Gorge", johdanto-osa ja osio "Etymology" (tarkistettu '
       + '19.9.2026).',
+    visa: {
+      kysymys: 'Minkälaiseksi ennätykseksi Vikosin rotko on kirjattu Guinnessiin?',
+      vaihtoehdot: [
+        'Syvin suhteessa leveyteen',
+        'Pisin rotko Euroopassa',
+        'Korkein vesiputous alueella',
+        'Suurin järvien alue',
+      ],
+      oikea: 0,
+      fakta: 'Vikosin rotko on Pindoksen vuoristossa Tymphe-vuoren '
+        + 'eteläisillä rinteillä, noin 32 kilometriä pitkä.',
+    },
   },
   {
     id: 'hahmotelma-samaria',
@@ -284,6 +296,18 @@ export const HAHMOTELMA_GRC = [
       + 'liitettiin UNESCOn biosfäärialueiden verkostoon.',
     lahde: 'en-Wikipedia "Lake Prespa", johdanto-osa ja osio "Geography" (tarkistettu '
       + '19.9.2026).',
+    visa: {
+      kysymys: 'Kuinka korkealla merenpinnasta Prespajärvet sijaitsevat?',
+      vaihtoehdot: [
+        '421 metrissä',
+        '853 metrissä',
+        '1 204 metrissä',
+        '612 metrissä',
+      ],
+      oikea: 1,
+      fakta: 'Prespajärvet ovat Balkanin korkeimmalla sijaitsevat '
+        + 'tektoniset järvet, 853 metrin korkeudessa.',
+    },
   },
   {
     id: 'hahmotelma-kerkini',
@@ -415,6 +439,18 @@ export const HAHMOTELMA_GRC = [
       + 'kalkkikivisoran seassa.',
     lahde: 'en-Wikipedia "Navagio Beach", johdanto-osa ja osio "History and namesake" '
       + '(tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Mikä oli Navagion poukaman alkuperäinen nimi?',
+      vaihtoehdot: [
+        'Agia Marina',
+        'Agios Nikolaos',
+        'Agios Georgios',
+        'Agia Paraskevi',
+      ],
+      oikea: 2,
+      fakta: 'Rahtialus Panagiotis ajoi myrskyssä karille Navagion '
+        + 'rannalle 5. lokakuuta 1980.',
+    },
   },
   {
     id: 'hahmotelma-milos',
@@ -596,6 +632,17 @@ export const HAHMOTELMA_GRC = [
       + 'Kassandroksen ja Antigonos II:n aikana. Roomalaiset ryöstivät sen kolmannessa '
       + 'Makedonian sodassa, ja sen merkityksen ohitti lähellä oleva Thessalonike.',
     lahde: 'en-Wikipedia "Pella", johdanto-osa (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Mikä kaupunki oli Makedonian kuninkaiden hautapaikka Pellan sijaan?',
+      vaihtoehdot: [
+        'Aigai',
+        'Thessalonike',
+        'Korintti',
+        'Argos',
+      ],
+      oikea: 0,
+      fakta: 'Aigai pysyi kuninkaiden ja kuningasperheen hautapaikkana, vaikka Pella oli pääkaupunki.',
+    },
   },
   {
     id: 'hahmotelma-philippi',
@@ -656,6 +703,17 @@ export const HAHMOTELMA_GRC = [
       + 'Filippoissa käytiin myös vuonna 42 eaa. Filippoin taistelu, ja Uuden testamentin '
       + 'mukaan apostoli Paavali vieraili kaupungissa toisella lähetysmatkallaan.',
     lahde: 'en-Wikipedia "Philippi", johdanto-osa ja osio "History" (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Mikä oli Filippoin alkuperäinen nimi ennen Filippos II:ta?',
+      vaihtoehdot: [
+        'Amphipolis',
+        'Krenides',
+        'Pydna',
+        'Dion',
+      ],
+      oikea: 1,
+      fakta: 'Filippoin alkuperäinen nimi oli Krenides eli lähteet, ennen kuin Filippos II nimesi sen uudelleen.',
+    },
   },
   {
     id: 'hahmotelma-bassae',
@@ -765,6 +823,17 @@ export const HAHMOTELMA_GRC = [
       + 'arkeologisessa museossa ja Ateenan kansallisessa arkeologisessa museossa, ja UNESCO '
       + 'merkitsi saaren maailmanperintöluetteloon vuonna 1990.',
     lahde: 'en-Wikipedia "Delos", johdanto-osa (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Minä vuonna Delos merkittiin Unescon maailmanperintöluetteloon?',
+      vaihtoehdot: [
+        '1987',
+        '1988',
+        '1990',
+        '1993',
+      ],
+      oikea: 2,
+      fakta: 'UNESCO merkitsi Deloksen saaren maailmanperintöluetteloon vuonna 1990.',
+    },
   },
   {
     id: 'hahmotelma-monemvasia',
@@ -815,6 +884,17 @@ export const HAHMOTELMA_GRC = [
       + 'moni, yksi, ja emvasis, sisäänpääsy, ja sen italialainen muoto Malvasia antoi nimen '
       + 'malvasiaviinille; Monemvasiaa on kutsuttu idän Gibraltariksi.',
     lahde: 'en-Wikipedia "Monemvasia", johdanto-osa ja osio "Etymology" (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Mistä kahdesta sanasta Monemvasian nimi on peräisin?',
+      vaihtoehdot: [
+        'Malvasia ja viini',
+        'Idän ja Gibraltarin',
+        'Meri ja kallio',
+        'Moni ja emvasis',
+      ],
+      oikea: 3,
+      fakta: 'Nimi tulee sanoista moni, yksi, ja emvasis, sisäänpääsy.',
+    },
   },
   {
     id: 'hahmotelma-sounion',
@@ -1033,6 +1113,17 @@ export const HAHMOTELMA_GRC = [
       + 'maailmanperintöluetteloon vuonna 1988 luostareiden hyvin säilyneen arkkitehtuurin ja '
       + 'niemimaan luonnon säilymisen vuoksi.',
     lahde: 'en-Wikipedia "Mount Athos", johdanto-osa (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Minkä kirkollisen johtajan alaisuuteen Athoksen munkkiyhteisö kuuluu?',
+      vaihtoehdot: [
+        'Rooman katolinen paavi',
+        'Konstantinopolin patriarkka',
+        'Kreikan arkkipiispa',
+        'Jerusalemin patriarkka',
+      ],
+      oikea: 1,
+      fakta: 'Athoksen munkkiyhteisö kuuluu kirkollisesti suoraan Konstantinopolin ekumeenisen patriarkan alaisuuteen.',
+    },
   },
   {
     id: 'hahmotelma-metsovo',
@@ -1152,6 +1243,17 @@ export const HAHMOTELMA_GRC = [
       + 'Vuonna 2007 saaren vanhakaupunki lisättiin UNESCOn maailmanperintöluetteloon, ja '
       + 'Korfu on suosittu matkailukohde.',
     lahde: 'en-Wikipedia "Corfu", johdanto-osa ja osio "History" (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Minä vuonna Korfun vanhakaupunki lisättiin Unescon maailmanperintöluetteloon?',
+      vaihtoehdot: [
+        '1999',
+        '2004',
+        '2007',
+        '2011',
+      ],
+      oikea: 2,
+      fakta: 'Korfun vanhakaupunki lisättiin Unescon maailmanperintöluetteloon vuonna 2007.',
+    },
   },
   {
     id: 'hahmotelma-kastoria',
@@ -1262,6 +1364,18 @@ export const HAHMOTELMA_GRC = [
       + 'että koulutustoimintaan.',
     lahde: 'en-Wikipedia "Naousa, Imathia", johdanto-osa ja osio "History" (tarkistettu '
       + '19.9.2026).',
+    visa: {
+      kysymys: 'Minä vuonna Naoussa nimettiin kuninkaallisella asetuksella sankarikaupungiksi?',
+      vaihtoehdot: [
+        '1912',
+        '1922',
+        '1940',
+        '1955',
+      ],
+      oikea: 3,
+      fakta: 'Vuonna 1955 kuninkaallinen asetus nimesi Naousan sankarikaupungiksi kunnioittamaan '
+        + 'vapaussodan taistelua.',
+    },
   },
   {
     id: 'hahmotelma-lavrio',
@@ -1440,6 +1554,18 @@ export const HAHMOTELMA_GRC = [
       + 'eteläinen alue on Mastichochória. Saari kuului Ottomaanien valtakuntaan vuoteen 1912 '
       + 'asti. Vapaussodan aikana vuonna 1822 saari koki Chioksen verilöylyn.',
     lahde: 'en-Wikipedia "Chios", johdanto-osa (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Minä vuonna Chios koki verilöylyn Kreikan vapaussodan aikana?',
+      vaihtoehdot: [
+        'Vuonna 1770',
+        'Vuonna 1797',
+        'Vuonna 1912',
+        'Vuonna 1822',
+      ],
+      oikea: 3,
+      fakta: 'Chios kuului Ottomaanien valtakuntaan vuoteen 1912 asti, ja '
+        + 'vuonna 1822 saari koki Chioksen verilöylyn.',
+    },
   },
   {
     id: 'hahmotelma-zagori',
@@ -1650,6 +1776,17 @@ export const HAHMOTELMA_GRC = [
       + 'kaupunkilaisten teurastuksen vuoksi Mesolongi sai kunnianimen Hiera Polis eli Pyhä '
       + 'kaupunki, joka on ainutlaatuinen Kreikan kaupunkien joukossa.',
     lahde: 'en-Wikipedia "Missolonghi", johdanto-osa (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Minkä kunnianimen Mesolongi sai sankarillisen piirityksen jälkeen?',
+      vaihtoehdot: [
+        'Hiera Polis, Pyhä kaupunki',
+        'Akropolis, Yläkaupunki',
+        'Nea Smyrni, Uusi Smyrna',
+        'Palaia Poli, Vanha kaupunki',
+      ],
+      oikea: 0,
+      fakta: 'Mesolongi sai kunnianimen Hiera Polis eli Pyhä kaupunki asukkaiden sankarillisen vastarinnan vuoksi.',
+    },
   },
   {
     id: 'hahmotelma-navarino',
@@ -1712,6 +1849,116 @@ export const HAHMOTELMA_GRC = [
       fakta: 'Taistelu syntyi pikemminkin vahingossa kuin suunnitelmallisesti, kun amiraali '
         + 'Codrington yritti pakottaa ottomaanien komentajan noudattamaan liittoutuneiden '
         + 'ohjeita.',
+    },
+  },
+  /*
+   * SAMOKSEN HERAION — MATKAKIRJAN IHME, "RAPPEUTUNUT" (kadonnut:
+   * false), tilaus docs/raportit/havainnekuvat-codexille-
+   * eurooppa-20260921.md (Fablen posti Codexille 21.9.2026, tilaus 5).
+   * Kuva on aito Commons-valokuva ainoasta pystyssä seisovasta
+   * pylväästä; `ihme.osoite` odottaa Codexin kulta-aikakuvaa (ei vielä
+   * toimitettu — osoite 404:ttää siihen asti).
+   */
+  {
+    id: 'hahmotelma-heraion',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/grc-nosto-heraion-d9af6116.jpg',
+      lyhyt: 'Samoksen Heraionin ainoa pystyssä seisova pylväs.',
+      selite: 'Yksi pylväs kohoaa laajalla raunioalueella — kaikki muu Herodotoksen '
+        + 'aikanaan suurimpana pitämästä temppelistä on hävinnyt.',
+      lahde: 'Valokuva: GrigorisKoulouriotis, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'GrigorisKoulouriotis',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:%CE%9D%CE%B1%CF%8C%CF%82_%CF%84%CE%B7%CF%82_%CE%9E%CF%81%CE%B1%CF%82_-_Heras_Temple.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Heraion',
+    tyyppi: 'historia',
+    lahi: true,
+    kysymykset: [
+      'Kuka piti temppeliä suurimpana näkemänään rakennuksena?',
+      'Miksi pylväät olivat kaksinkertaisessa rivissä?',
+    ],
+    korostukset: ['Herodotos|Herodotos', 'Polykrates|Polykrateen'],
+    nappi: 'Suurin temppeli, jonka Herodotos oli koskaan nähnyt',
+    // 26.8864 E / 37.6797 N — en-Wikipedia "Heraion of Samos"
+    laudat: {
+      maailmankartta: { x: 6729.5, y: 1893.2 },
+      europe: { x: 727.4, y: 902.6 },
+    },
+    teksti: 'Heran pyhäkkö sijaitsi matalalla rantatasangolla Samoksen kaupungin '
+      + 'lounaispuolella. 500-luvulla eaa. tyranni Polykrates laajennutti sinne yhden antiikin '
+      + 'Kreikan suurimmista temppeleistä — historioitsija Herodotos piti sitä suurimpana '
+      + 'näkemänään rakennuksena. Kaksinkertainen pylväsrivi käsitti alun perin yli sata '
+      + 'pylvästä. Maanjäristykset ja vuosisatojen kivenryöstö veivät temppelin lähes '
+      + 'kokonaan — jäljellä on nykyään vain yksi pystyssä seisova pylväs laajalla '
+      + 'perustusalueella.',
+    lahde: 'en-Wikipedia "Heraion of Samos", johdanto-osa ja osio "History" (tarkistettu '
+      + '21.9.2026).',
+    ihme: {
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-heraion-loistoaika.jpg',
+      kadonnut: false,
+      selite: 'Loistoaikanaan Heraionissa oli yli sata pylvästä kaksinkertaisessa rivissä — '
+        + 'Herodotoksen mukaan suurin rakennus, jonka hän oli koskaan nähnyt.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: '
+        + 'en-Wikipedia "Heraion of Samos", tarkistettu 21.9.2026.',
+      url: 'https://en.wikipedia.org/wiki/Heraion_of_Samos',
+    },
+  },
+  /*
+   * ANTIIKIN KORINTIN APOLLON TEMPPELI — MATKAKIRJAN IHME,
+   * "RAPPEUTUNUT" (kadonnut: false), tilaus docs/raportit/
+   * havainnekuvat-codexille-eurooppa-20260921.md (Fablen posti
+   * Codexille 21.9.2026, tilaus 5). Eri kohde kuin fokuskohteet-grc.js
+   * "korintin-kanava" (tekniikka, 1881–1893 kaivettu kanava, n. 9 km
+   * kauempana) — ei toisteta. Kuva on aito n. 1900-luvun alun
+   * valokuva Library of Congressin Matson-kokoelmasta; `ihme.osoite`
+   * odottaa Codexin kulta-aikakuvaa (ei vielä toimitettu — osoite
+   * 404:ttää siihen asti).
+   */
+  {
+    id: 'hahmotelma-korintin-apollon-temppeli',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/grc-nosto-korintin-apollon-temppeli-f536835f.jpg',
+      lyhyt: 'Antiikin Korintin Apollon temppelin seitsemän pylvästä 1900-luvun alussa.',
+      selite: 'Seitsemän alkuperäistä pylvästä seisoo Acrocorinth-vuorta vasten kukkaniityn '
+        + 'keskellä.',
+      lahde: 'Valokuva: Matson Photograph Collection, Library of Congress (public domain).',
+      tekija: 'Matson Photograph Collection',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Old_Corinth._Ruins_of_old_Corinth._The_Temple_of_Apollo._Agora_Corinth_in_background._Temples_on_distant_hilltop_LOC_matpc.00671.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0',
+    },
+    nimi: 'Korintin Apollon temppeli',
+    tyyppi: 'historia',
+    lahi: true,
+    kysymykset: [
+      'Mikä teki temppelin pylväistä poikkeuksellisia?',
+      'Kuka tuhosi antiikin Korintin?',
+    ],
+    korostukset: ['Lucius Mummius|Lucius Mummius', 'doorilainen|doorilainen'],
+    nappi: 'Seitsemän pylvästä 38:sta on yhä pystyssä',
+    // 22.8794 E / 37.9061 N — en-Wikipedia "Temple of Apollo, Corinth"
+    laudat: {
+      maailmankartta: { x: 6596.0, y: 1884.5 },
+      europe: { x: 650.5, y: 896.7 },
+    },
+    teksti: 'Doorilainen Apollon temppeli rakennettiin antiikin Korinttiin noin 540 eaa. — '
+      + 'sen 38 pylvästä olivat poikkeuksellisesti yhdestä kalkkikivilohkareesta veistettyjä, '
+      + 'ei kasattuja rumpuja niin kuin useimmissa temppeleissä. Roomalaiskenraali Lucius '
+      + 'Mummius tuhosi koko kaupungin vuonna 146 eaa., ja temppeli jäi raunioiksi. Kaupunki '
+      + 'perustettiin uudelleen roomalaissiirtokuntana 44 eaa. Nykyään pystyssä on enää '
+      + 'seitsemän alkuperäistä pylvästä, ja Acrocorinthin linnavuori kohoaa raunioiden '
+      + 'takana.',
+    lahde: 'en-Wikipedia "Temple of Apollo, Corinth", johdanto-osa (tarkistettu 21.9.2026).',
+    ihme: {
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-korintin-apollon-temppeli-loistoaika.jpg',
+      kadonnut: false,
+      selite: 'Loistoaikanaan temppelissä oli 38 pylvästä, kukin veistetty yhdestä ainoasta '
+        + 'kalkkikivilohkareesta — poikkeuksellinen tekninen saavutus 500-luvulla eaa.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: '
+        + 'en-Wikipedia "Temple of Apollo, Corinth", tarkistettu 21.9.2026.',
+      url: 'https://en.wikipedia.org/wiki/Temple_of_Apollo,_Corinth',
     },
   },
 ];

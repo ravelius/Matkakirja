@@ -119,6 +119,17 @@ export const MAASTOKOHTEET_DNK = [
       + 'kanaalin kautta ja pohjoisessa Norjanmereen. Tanska on ainoa maa, jonka rannat ovat '
       + 'sekä tällä merellä että Itämerellä.',
     lahde: 'en-Wikipedia "North Sea", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Minkä kautta Pohjanmeri yhtyy Atlanttiin etelässä?',
+      vaihtoehdot: [
+        'Englannin kanaalin kautta',
+        'Norjanmeren kautta',
+        'Tanskan salmien kautta',
+        'Kielin kanavan kautta',
+      ],
+      oikea: 0,
+      fakta: 'Etelässä Pohjanmeri yhtyy Atlanttiin Englannin kanaalin kautta.',
+    },
   },
   {
     id: 'itameri',
@@ -170,6 +181,18 @@ export const MAASTOKOHTEET_DNK = [
     lahde: 'en-Wikipedia "Baltic Sea", johdanto-osa sekä osiot "Storms and storm floods", '
       + '"Definitions" ja "Subdivisions"; laivan osalta "Vasa (ship)", johdanto-osa '
       + '(tarkistettu 1.9.2026).',
+    visa: {
+      kysymys: 'Mikä on Itämeren ainoa yhteys Pohjanmerelle?',
+      vaihtoehdot: [
+        'Juutinrauma ja beltit',
+        'Kielin kanava yksin',
+        'Öresundin silta yksin',
+        'Skagerrak ja Kattegat',
+      ],
+      oikea: 0,
+      fakta: 'Juutinrauman, Iso-Beltin ja Vähä-Beltin matalat kynnykset päästävät suolavettä '
+        + 'sisään vain harvakseltaan, ja siksi ne ovat aina olleet Itämeren avain.',
+    },
   },
   /* ================================================================
    * K2-ERÄ 2, 6.9.2026 — KAHDEKSAN KOHDETTA. Perustelut tiedoston alussa.
@@ -380,6 +403,17 @@ export const MAASTOKOHTEET_DNK = [
       + 'toistuvasti. Tuhoisin oli Burchardin tulva vuonna 1634; sen jäljet näkyvät yhä '
       + 'katedraalin seinissä, ja korkeus on merkitty kaupungin tulvapatsaaseen.',
     lahde: 'en-Wikipedia "Ribe", johdanto-osa ja osio "History" (tarkistettu 6.9.2026).',
+    visa: {
+      kysymys: 'Minä vuonna Burchardin tulva tuhosi Ribeä pahiten?',
+      vaihtoehdot: [
+        'Vuonna 720',
+        'Vuonna 1634',
+        'Vuonna 860',
+        'Vuonna 948',
+      ],
+      oikea: 1,
+      fakta: 'Tuhoisin tulva oli Burchardin tulva vuonna 1634, ja sen jäljet näkyvät yhä katedraalin seinissä.',
+    },
   },
   {
     id: 'skagen',
@@ -431,6 +465,17 @@ export const MAASTOKOHTEET_DNK = [
       + 'Matkailu alkoi kasvaa, kun kapearaiteinen rautatie avattiin 1890 ja nykyinen satama '
       + '20. marraskuuta 1907. Skagenin asema on Tanskan pohjoisin rautatieasema.',
     lahde: 'en-Wikipedia "Skagen", johdanto-osa (tarkistettu 6.9.2026).',
+    visa: {
+      kysymys: 'Minä vuonna Skagenin nykyinen satama avattiin?',
+      vaihtoehdot: [
+        'Vuonna 1841',
+        'Vuonna 1890',
+        'Vuonna 1900',
+        'Vuonna 1907',
+      ],
+      oikea: 3,
+      fakta: 'Skagenin nykyinen satama avattiin 20. marraskuuta 1907.',
+    },
   },
   {
     id: 'frederiksborgin-linna',

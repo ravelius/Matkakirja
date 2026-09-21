@@ -133,6 +133,18 @@ export const FOKUSKOHTEET_DEU = [
       selite: 'Zugspitzen huippu kesällä. Läntisen huipun poikki kulkee Itävallan raja.',
       lahde: 'Treeem, Wikimedia Commons (CC BY-SA 4.0)',
     },
+    visa: {
+      kysymys: 'Kuka mainitaan ensimmäisenä Zugspitzen vuoden 1820 huipulle nousijoista?',
+      vaihtoehdot: [
+        'Anton Feldner',
+        'Johann Tauschl',
+        'Ludwig II',
+        'Josef Naus',
+      ],
+      oikea: 3,
+      fakta: 'Zugspitzen ensimmäisellä huipulle nousulla 27. elokuuta 1820 olivat mukana '
+        + 'Josef Naus, mittausapulainen Maier ja opas Johann Georg Tauschl.',
+    },
   },
   {
     id: 'watzmann',
@@ -300,6 +312,18 @@ export const FOKUSKOHTEET_DEU = [
       selite: 'Pohjanmeren vuorovesitasankoa Pohjois-Friisinmaalla Saksan rannikolla.',
       lahde: 'Ralf Roletschek, Wikimedia Commons (CC BY-SA 3.0)',
     },
+    visa: {
+      kysymys: 'Mikä maa EI ole niiden joukossa, joita Pohjanmeri rajaa?',
+      vaihtoehdot: [
+        'Ruotsi',
+        'Tanska',
+        'Norja',
+        'Belgia',
+      ],
+      oikea: 0,
+      fakta: 'Pohjanmeri sijaitsee Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, '
+        + 'Belgian ja Ranskan välissä.',
+    },
   },
   {
     id: 'itameri',
@@ -345,14 +369,24 @@ export const FOKUSKOHTEET_DEU = [
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Järvi, jota kolme maata ei ole jakanut',
     /*
-     * 9,35 E / 47,6 N — järven likimääräinen keskipiste Obersee-altaan
-     * puolivälissä. Kohde on tyypiltään `meri`, koska pelin
-     * symbolitaksonomiassa vuoret, meret, saaret ja joet ovat yhtä
-     * luontokategoriaa eikä järvelle ole omaa tyyppiä.
+     * 9,25 E / 47,78 N — Obersee-altaan POHJOISRANTA (Meersburg–Überlingen,
+     * Saksan puoli). Oli 9,35 E / 47,6 N (altaan keskipiste), mutta
+     * siinä merkki istui kolmen maan nimiöryppäässä: CHE/stiftsbibliothek
+     * (St. Gallen) 4,9 ja AUT/bregenzin-jarvinayttamo 8,6 yksikön päässä.
+     * Kun Sveitsin 13 uutta nostoa (js/packs/hahmotelma-che.js) kytkettiin,
+     * CHE:n ladonta vaihtoi Stiftsbibliothekin kyljen ylös, ja DEU:n
+     * Bodenjärvelle ei jäänyt vapaata kylkeä — nimiö nimiön päällä
+     * (tools/tarkista-nimiolimitys.mjs, Karttaseppä 21.9.2026). Maiden
+     * välinen väistö on yksisuuntainen (AUT → CHE → DEU), joten ratkaisu
+     * on sisällön: järvi on 63 km pitkä, ja pohjoisranta on yhtä lailla
+     * Bodenjärvi. Portti 0 limitystä sekä ilman CHE:tä että sen kanssa.
+     * Kohde on tyypiltään `meri`, koska pelin symbolitaksonomiassa
+     * vuoret, meret, saaret ja joet ovat yhtä luontokategoriaa eikä
+     * järvelle ole omaa tyyppiä.
      */
     laudat: {
-      maailmankartta: { x: 6145.0, y: 1493.2 },
-      europe: { x: 390.7, y: 641.7 },
+      maailmankartta: { x: 6141.7, y: 1485.6 },
+      europe: { x: 388.8, y: 637 },
     },
     teksti: 'Bodenjärvi eli Bodensee on oikeastaan kolme vesistöä Reinin '
       + 'varrella Alppien pohjoisjuurella: iso Obersee, pieni Untersee ja '
@@ -414,6 +448,18 @@ export const FOKUSKOHTEET_DEU = [
       selite: 'Loreleyn kallio Keski-Reinin laaksossa, siinä kohdassa jossa uoma '
         + 'kapenee ja kääntyy jyrkästi.',
       lahde: 'Guido Radig, Wikimedia Commons (CC BY-SA 3.0)',
+    },
+    visa: {
+      kysymys: 'Mikä joki on pidempi kuin Rein Keski- ja Länsi-Euroopassa?',
+      vaihtoehdot: [
+        'Rein',
+        'Tonava',
+        'Elbe',
+        'Loire',
+      ],
+      oikea: 1,
+      fakta: 'Rein on noin 1 230 kilometriä pitkä ja Keski- ja Länsi-Euroopan toiseksi '
+        + 'pisin joki Tonavan jälkeen.',
     },
   },
   {
@@ -672,6 +718,17 @@ export const FOKUSKOHTEET_DEU = [
       selite: 'Speicherstadtin varastokortteleita Hampurin satamassa. Tiilivarastot '
         + 'nousivat kanavien varsille pian isoisän matkan jälkeen.',
       lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    visa: {
+      kysymys: 'Mihin vuoteen asti Hampuria johti perinnöllinen suurporvarisääty?',
+      vaihtoehdot: [
+        '1871',
+        '1842',
+        '1919',
+        '1900',
+      ],
+      oikea: 2,
+      fakta: 'Hampuria johti perinnöllinen suurporvarisääty aina vuoteen 1919 asti.',
     },
   },
   {
