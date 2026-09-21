@@ -25,6 +25,7 @@
     "savuke-marseille-valkkyy.mjs",
     "savuke-glnimiot-nostot.mjs",
     "savuke-nostojen-tyyppimerkit.mjs",
+    "savuke-nostojen-liikevara.mjs",
     "savuke-nimion-koko-panorointi.mjs",
     "savuke-kartan-liike.mjs",
     "savuke-nimiot-sulavat.mjs",
@@ -638,6 +639,10 @@
     "savuke-kortti-turva-alue.mjs": {
       "kuvakansio": true,
       "huomautus": "Koko ruudun kortti pysyy turva-alueen sisalla (omistajan iPhone-kaappaus 21.9.2026 v2021: skandaalikortti alkoi tilarivin alta, kello peitti otsikkorivin ja sulkunappi oli akun paalla). Insetit pakotetaan :root --turva-*-muuttujiin (pysty 47/34, vaaka 0/21/47/47); korttikerrokset (css/fokusnosto.css KORTTIKERROS JA TURVA-ALUE) ja kuva edella -kortti (js/nostokuva.js nostokuvaTurvaAlue) seka ankkuroitu kohdekortti (js/fokuskohteet.js asemoi) lukevat samat muuttujat. Skandaali ja Chartres, kuva + Lisaa, pysty ja vaaka: 40/40; vanhalla koodilla 33/40."
+    },
+    "savuke-nostojen-liikevara.mjs": {
+      "kuvakansio": true,
+      "huomautus": "Nostot valmiina ruudun ulkopuolella (omistaja 21.9.2026 tyopoyta v2026: nostot tupsahtavat panoroitaessa jalkikateen). nostot.js LIIKEVARA: ladonta 0,5 x ruudun suurempi sivu joka suuntaan, sovittelu laajennettua reunaa vasten ruudun ulkopuolisille, katto (1+2*0,5)^2; nimet samoin (nimet.js lado liikevara). Chromium tyopoyta 1400 + puhelin 390, Ranska z7, veto 400 px (puhelin 234): jokainen vedon jalkeen ruudussa oleva nosto oli rungolla jo ennen, koko ja paikka samat ruudussa pysyneilla (reunavyo pois), eleen aikana instanssi ei katoa. 10/10; vastakoe LIIKEVARA=0 5/10."
     }
   }
 }

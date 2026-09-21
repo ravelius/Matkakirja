@@ -145,8 +145,10 @@ export function luoGlNimiosovitin({
   ajasta = (f) => (globalThis.requestAnimationFrame ?? setTimeout)(f),
   /** UI nappulan rasteria varten ja ruutupiste (lat, lng) → { x, y } kotelon px tai null. */
   ui = null, ruutupiste = null,
+  /** Liikkeen tunnistus rasterijonolle (nimiorasterit.js RASTEROINNIT JONOON LIIKKEESSÄ). */
+  liikkeessa = () => false,
 } = {}) {
-  const lahde = rasterilahde ?? luoRasterilahde({ kotelo, dpr, ui });
+  const lahde = rasterilahde ?? luoRasterilahde({ kotelo, dpr, ui, liikkeessa });
   const tunnukset = new Set(); // rungolla olevat instanssit
   let viimeiset = null; // viimeisimmän jaon datumit (nimet)
   let kunValmis = null;
@@ -214,12 +216,27 @@ export function luoGlNimiosovitin({
       if (ok !== false) tunnukset.add(i.tunnus);
     }
   };
+  /*
+   * RUNGON RAKENNUS KERRAN PER LADONTA (sulavuus 22.9.2026, ablaatio-
+   * tikas: kolme jakoa — nimet, nostot, peli — veivät listan rungolle
+   * kolmesti ja runko rakensi puskurit kolmesti samassa kehyksessä).
+   * Lauta kehystää ladontansa `alkuLadonta()`/`loppuLadonta()`-kutsuilla:
+   * niiden välissä jaot vain merkitsevät listan likaiseksi, ja loppu
+   * vie sen kerran. Kehyksen ulkopuoliset jaot (rasteri valmistui,
+   * häivytys päättyi) vievät heti kuten ennen.
+   */
+  let koossa = false;
+  let vietava = false;
   /** Koko lista (nimet + nostot + häipyvät) rungolle. */
   // Häipyvä vanha nimiö on oma instanssinsa; tuleva nimiö on jo nostoInstansseissa.
-  const vieKaikki = (k) => vieRungolle(k, [
+  const vieNyt = (k) => vieRungolle(k, [
     ...nimiInstanssit, ...nostoInstanssit, ...peliInstanssit,
     ...[...haivytykset.values()].filter((h) => h.poistu && h.instanssi).map((h) => h.instanssi),
   ]);
+  const vieKaikki = (k) => {
+    if (koossa) { vietava = true; return; }
+    vieNyt(k);
+  };
   /** Jako: GL-instanssit rungolle, CSS2D:hen jäävät datumit takaisin. */
   const jaa = (datumit) => {
     const k = purettu ? null : kerros?.();
@@ -399,8 +416,12 @@ export function luoGlNimiosovitin({
   };
 
   // Kesken ollut rasteri valmistui: sama jako uudestaan seuraavassa kehyksessä.
+  // LIIKKEESSÄ EI (sulavuus 22.9.2026): valmistunut rasteri odottaa seuraavaa
+  // ladontaa — vanha rasteri tai CSS2D on ruudulla siihen asti, eikä jokainen
+  // valmistuminen rakenna runkoa liikkeen kehyksessä.
   const irrota = lahde.tilaaRasterit(() => {
     if (purettu || (!viimeiset && !viimeisetNostot && !viimeisetPeli) || pyynto) return;
+    if (liikkeessa()) { luvut.lykattyja = (luvut.lykattyja ?? 0) + 1; return; }
     pyynto = true;
     ajasta(() => {
       pyynto = false;
@@ -449,6 +470,15 @@ export function luoGlNimiosovitin({
       if (!k) return;
       k.kerroin?.(lahde.kuorenKerroin());
       etenaHaivytykset(k);
+    },
+    /** Ladonnan kehys: jaot viedään rungolle kerran lopussa (ks. RUNGON RAKENNUS KERRAN PER LADONTA). */
+    alkuLadonta() { koossa = true; vietava = false; },
+    loppuLadonta() {
+      koossa = false;
+      if (!vietava) return;
+      vietava = false;
+      const k = purettu ? null : kerros?.();
+      if (k) vieNyt(k);
     },
     /** Käynnissä olevat häivytykset (savukkeet). */
     haivytykset: () => new Map(haivytykset),
