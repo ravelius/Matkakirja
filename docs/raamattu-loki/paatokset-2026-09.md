@@ -607,3 +607,7 @@ Pelikoodari 21.9.2026 ilta: GL oletukseksi (pelikoodari-gl-nimiot 6aac029d), Jul
 ## CODEX TYOSTAA 21.9. TILAUKSIA, ENSIMMAISET KUVAT TULOSSA (21.9.2026 klo 19.22)
 
 Omistaja 21.9.2026 ilta: Codex on lukenut tilaukset ja on vain hidas; ensimmäiset pienoismalli- ja monumenttikuvat ovat tulossa pian. Ei uusintatilausta. Postivahti ilmoittaa Fablelle toimituksista; Julkaisija hakee, Sisältökirjuri kytkee.
+
+## GL VAIHE 2 VARTIJAVIKA KORJATTU (827850f1); VAIHE 3 NOSTOT RUNGOLLE KOODATTU (b7db847f), SAVUKE ODOTTAA POLTON JALKEEN (21.9.2026 klo 19.26)
+
+Pelikoodari 21.9.2026 ilta: #2667:n Savukevartija-vika korjattu (pelikoodari-gl-nimiot 827850f1: ui.pallolautaGL() UI-metodi, lauta antaa ui.glKerros-kahvan). GL vaihe 3 koodattu (pelikoodari-gl-nostot b7db847f): nostot ikoni+nimiö rungolle, sovittelun siirto ja katto, piilotukset peittoina, kylkivaihdon crossfade 180 ms; CSS2D:hen jäävät ankkurit, liuskat, luonnokset ja pisteet; 61 nostoa rungolla, 8 CSS2D:ssä, 107 instanssia yhdellä drawcallilla; yksikkötestit 12/0. Ei vielä julkaistavaksi: savuke ja kaappaus ajamatta, kone jumissa polton takia (load 540). Fable: odotetaan polton loppu (~20.15), sitten savuke ja Julkaisijalle; Laitetestaajan laiteluku vasta v2014:n jälkeen tuotannosta, ei haarasta polton aikana.
