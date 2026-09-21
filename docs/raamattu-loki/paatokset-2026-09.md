@@ -275,3 +275,7 @@ Vaihe 1 kokeiluna (havainnekuva ennen paatosta): 1) kohdemaan loytamattomat nost
 ## KARTUSCHAN SISENNYS JA KLIKKAUKSEN LAPIMENO TEHTY (Pelikoodari 085ea1cf) (21.9.2026 klo 08.31)
 
 Sisennys kartan kotelon reunasta: puhelin 12 px + turva-alue (max, ei summa), >= 768 px 24 px; mitattu 390/820/1400 -> 12/24/24. Lapimeno: Globe.gl:n osumatesti kulkee pointerdown/up-parilla, click-pysaytys ei riita -> painallus ja vapautus pysaytetaan capture-vaiheessa kortin napautettavilla osilla. Savuke-kartuscha-3 51/51, testit 3789/0. v1987:aan.
+
+## NIMISTON AIKA-KENTTA TEHTY (Sisaltokirjuri 7bd5f5e5) (21.9.2026 klo 08.48)
+
+121 rivia FRA/DEU/ITA/ESP + meret: 94 pysyva, 27 1873; Lazio, Kantabria pois; sw.js:n kaksoisrekisterointi korjattu. Karttaseppa polttaa nimiotason uudelleen pysyvilla nimilla (--nimiot-aika pysyva).
