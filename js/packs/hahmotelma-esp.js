@@ -97,6 +97,12 @@ export const HAHMOTELMA_ESP = [
       },
     ],
     nimi: 'Picos de Europa',
+    /*
+     * NOSTOTASOT (Fablen tilaus 20.9.2026, samaan tapaan kuin FRA:n
+     * docs/raportit/nostotasot-fra-20260920.md): ykköstaso = tunnetuin
+     * ja pelillisesti tärkein, isompi nimiö + kuvamerkki kartalla.
+     */
+    taso: 1,
     tyyppi: 'vuori',
     lahi: true,
     kysymykset: [
@@ -740,6 +746,12 @@ export const HAHMOTELMA_ESP = [
       },
     ],
     nimi: 'El Escorial',
+    /*
+     * NOSTOTASOT (Fablen tilaus 20.9.2026, samaan tapaan kuin FRA:n
+     * docs/raportit/nostotasot-fra-20260920.md): ykköstaso = tunnetuin
+     * ja pelillisesti tärkein, isompi nimiö + kuvamerkki kartalla.
+     */
+    taso: 1,
     tyyppi: 'historia',
     lahi: true,
     kysymykset: [
@@ -1163,6 +1175,12 @@ export const HAHMOTELMA_ESP = [
       },
     ],
     nimi: 'Ronda',
+    /*
+     * NOSTOTASOT (Fablen tilaus 20.9.2026, samaan tapaan kuin FRA:n
+     * docs/raportit/nostotasot-fra-20260920.md): ykköstaso = tunnetuin
+     * ja pelillisesti tärkein, isompi nimiö + kuvamerkki kartalla.
+     */
+    taso: 1,
     tyyppi: 'kulttuuri',
     lahi: true,
     kysymykset: [
