@@ -385,6 +385,103 @@ export const NIMISTO_1873 = [
   {
     teksti: 'SARDINIA', luokka: 'maakunta', lon: 9.05, lat: 40.1, iso: 'ITA', koko: 'suuri',
   },
+  // ── ESPANJAN HISTORIALLISET MAAKUNNAT/KUNINGASKUNNAT 1873 ──────────
+  //
+  // LUONNOS (ei vielä liitetty NIMISTO_1873-taulukkoon) — liitetään
+  // Ranskan lohkon jälkeen samalla schemalla: { teksti, luokka, lon,
+  // lat, iso, koko }.
+  //
+  // LÄHDE JA KAANONTARKKUUS: 1800-luvun historialliset alue-/
+  // kuningaskuntanimet (ei vuoden 1833 Javier de Burgosin 49
+  // provinssia, ei nykyisiä 17 itsehallintoaluetta). en-Wikipedia
+  // "Old Castile", "New Castile", "Kingdom of León", "Kingdom of
+  // Asturias", "Basque Provinces" ja "Provinces of Spain" (johdanto-
+  // osat); Finnish-nimet tarkistettu fi-Wikipediasta (Vanha-Kastilia,
+  // Kantabria, Baleaarit, Asturia, Baskimaa) 21.9.2026.
+  //
+  // KOLME HARKINNANVARAISTA PÄÄTÖSTÄ (Karttaseppä/Fable, tarkistakaa):
+  // 1) BASKIMAA on yksi nimiö kolmen baskimaakunnan (Vizcaya,
+  //    Guipúzcoa, Álava — "Provincias Vascongadas") sijaan, samaan
+  //    tapaan kuin Ranskan erässä isommat kulttuurialueet saivat yhden
+  //    nimiön pienempien seutujen sijaan. Jos Karttaseppä haluaa kolme
+  //    erillistä pientä nimiötä, ne on helppo pilkkoa tästä.
+  // 2) KANTABRIA (Santander) on ERILLINEN nimiö Vanha-Kastiliasta,
+  //    vaikka vuoden 1833 hallinnollinen jako laski Santanderin
+  //    maakunnan osaksi Vanha-Kastiliaa (näin myös fi-Wikipedian
+  //    "Vanha-Kastilia"-artikkeli). Perustelu: Kantabria oli omana
+  //    rantaviivan seutunaan ("La Montaña") kulttuurisesti erottuva jo
+  //    ennen 1833-jakoa, ja atlastyylisessä nimistössä rannikkokaistale
+  //    ansaitsee oman nimiönsä kuten Ranskan Bretagne/Normandia. TÄMÄ
+  //    ON TULKINTA — vaihtoehto olisi jättää Kantabria pois ja laajentaa
+  //    Vanha-Kastilian aluetta rannikolle asti.
+  // 3) LEÓN on ERILLINEN nimiö Vanha-Kastiliasta (oma kuningaskunta
+  //    ennen v. 1230 liittoa Kastiliaan, ja seutu tunnettiin omana
+  //    kulttuurialueenaan yhä 1800-luvulla) — ei sulautettu Vanha-
+  //    Kastiliaan.
+  //
+  // KOKOLUOKKA (koko): suuret (Galicia, Aragonia, Katalonia, Valencia,
+  // Vanha-Kastilia, Uusi-Kastilia, León, Extremadura, Andalusia) ovat
+  // pinta-alaltaan selvästi suurempia kuin pienet (Asturia, Kantabria,
+  // Baskimaa, Navarra, Murcia, Baleaarit, Kanariansaaret) — arvio tämän
+  // kirjoittajan, ei koneellisesti mitattu, samaan tapaan kuin Ranskan
+  // erässä.
+  //
+  // KOORDINAATIT ovat karkeita painopisteitä (ei aluerajausta), samalla
+  // tarkkuudella kuin Ranskan erässä — Karttaseppä siirtää tarvittaessa
+  // koelaatan perusteella.
+
+    {
+      teksti: 'GALICIA', luokka: 'maakunta', lon: -8.0, lat: 42.8, iso: 'ESP', koko: 'suuri',
+    },
+    {
+      teksti: 'ASTURIA', luokka: 'maakunta', lon: -6.0, lat: 43.2, iso: 'ESP', koko: 'pieni',
+    },
+    {
+      teksti: 'KANTABRIA', luokka: 'maakunta', lon: -4.0, lat: 43.2, iso: 'ESP', koko: 'pieni',
+    },
+    /*
+     * BASKIMAA = "Provincias Vascongadas" (Vizcaya, Guipúzcoa, Álava)
+     * yhtenä nimiönä — ks. tiedoston yläreunan perustelu (1).
+     */
+    {
+      teksti: 'BASKIMAA', luokka: 'maakunta', lon: -2.6, lat: 43.0, iso: 'ESP', koko: 'pieni',
+    },
+    {
+      teksti: 'NAVARRA', luokka: 'maakunta', lon: -1.6, lat: 42.7, iso: 'ESP', koko: 'pieni',
+    },
+    {
+      teksti: 'ARAGONIA', luokka: 'maakunta', lon: -0.5, lat: 41.5, iso: 'ESP', koko: 'suuri',
+    },
+    {
+      teksti: 'KATALONIA', luokka: 'maakunta', lon: 1.5, lat: 41.8, iso: 'ESP', koko: 'suuri',
+    },
+    {
+      teksti: 'VALENCIA', luokka: 'maakunta', lon: -0.4, lat: 39.5, iso: 'ESP', koko: 'suuri',
+    },
+    {
+      teksti: 'MURCIA', luokka: 'maakunta', lon: -1.5, lat: 38.0, iso: 'ESP', koko: 'pieni',
+    },
+    {
+      teksti: 'VANHA-KASTILIA', luokka: 'maakunta', lon: -4.0, lat: 41.8, iso: 'ESP', koko: 'suuri',
+    },
+    {
+      teksti: 'UUSI-KASTILIA', luokka: 'maakunta', lon: -3.5, lat: 39.8, iso: 'ESP', koko: 'suuri',
+    },
+    {
+      teksti: 'LEÓN', luokka: 'maakunta', lon: -5.8, lat: 41.8, iso: 'ESP', koko: 'suuri',
+    },
+    {
+      teksti: 'EXTREMADURA', luokka: 'maakunta', lon: -6.2, lat: 39.2, iso: 'ESP', koko: 'suuri',
+    },
+    {
+      teksti: 'ANDALUSIA', luokka: 'maakunta', lon: -4.5, lat: 37.5, iso: 'ESP', koko: 'suuri',
+    },
+    {
+      teksti: 'BALEAARIT', luokka: 'maakunta', lon: 2.9, lat: 39.5, iso: 'ESP', koko: 'pieni',
+    },
+    {
+      teksti: 'KANARIANSAARET', luokka: 'maakunta', lon: -15.6, lat: 28.3, iso: 'ESP', koko: 'pieni',
+    },
 
   // ── EUROOPAN MERET, LAHDET JA SALMET ─────────────────────────────
   { teksti: 'VÄLIMERI', luokka: 'meri', lon: 15.0, lat: 38.0, iso: null },
