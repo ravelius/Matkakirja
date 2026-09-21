@@ -540,6 +540,14 @@ export function luoNimet({
    */
   const lado = ({
     varaukset = [], pinot = [], katto = NIMIEN_KATTO, vain = null,
+    /**
+     * LIIKEVARA (sulavuus 22.9.2026, sama sääntö kuin nostoilla, nostot.js
+     * LIIKEVARA): nimet ladotaan ruutua suuremmalle alueelle, jotta
+     * liikkeessä ei tarvita ladontaa (lauta.js LIIKKEESSÄ EI TÄYTTÄ
+     * LADONTAA) eikä nimi tupsahda reunalla. Pikseleinä joka suuntaan;
+     * ruudun reunavyöt siirtyvät saman verran ulos (karttanimet.js).
+     */
+    liikevara = 0,
     /** Kaupungit, jotka ladotaan ennen muita (ks. KOHTEEN_TARKEYS). */
     etusija = null,
     kokoKerroin: kaupunginKerroin = 1, pisteSade = 0,
@@ -576,7 +584,7 @@ export function luoNimet({
     const ehdokkaat = [];
     for (const k of aineisto()) {
       if (vain && !vain.has(k.c.id)) continue;
-      const p = ruudulla(k.lat, k.lng, NIMEN_REUNAVARA_PX);
+      const p = ruudulla(k.lat, k.lng, NIMEN_REUNAVARA_PX + (liikevara > 0 ? liikevara : 0));
       if (!p) continue;
       ehdokkaat.push({
         c: k.c,
@@ -630,7 +638,9 @@ export function luoNimet({
       y1: r.y1 + PELIMERKIN_VARA_PX,
     }));
     const ladottu = ladoRuutunimet(ehdokkaat, {
-      varaukset, pinot: pinotVaralla, katto, kokoKerroin, pisteSade, ruutu: { w, h },
+      varaukset, pinot: pinotVaralla, kokoKerroin, pisteSade, ruutu: { w, h, vara: liikevara > 0 ? liikevara : 0 },
+      // Liikevaran ala on (1 + 2·osuus)²-kertainen: budjetti samassa suhteessa (nostot.js liikevaranKatto).
+      katto: liikevara > 0 ? Math.round(katto * (1 + (2 * liikevara) / Math.max(w, h)) ** 2) : katto,
     });
     /*
      * REUNASTA LEIKKAUTUVA NIMI PUDOTETAAN (ks. NIMI EI SAA LEIKKAUTUA

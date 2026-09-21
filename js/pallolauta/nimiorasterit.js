@@ -282,7 +282,30 @@ export function luoRasterilahde({
   luoKangas = null, bitmap = typeof createImageBitmap === 'function',
   /** UI pelinappulan rasteria varten (js/ui.js pawnShape); ilman sitä nappula jää CSS2D:hen. */
   ui = null,
+  /**
+   * RASTEROINNIT JONOON LIIKKEESSÄ (sulavuus 22.9.2026, ablaatiotikas):
+   * kun `liikkeessa()` on tosi, uusia rastereita aloitetaan enintään
+   * yksi kehystä kohti (rAF), loput odottavat jonossa; levossa kaikki
+   * heti. Rasterin teko (svg → kuva → ImageBitmap) osui liikkeessä
+   * samaan kehykseen ladonnan ja laattapyyntöjen kanssa.
+   */
+  liikkeessa = () => false,
+  ajasta = (f) => (globalThis.requestAnimationFrame ? globalThis.requestAnimationFrame(f) : setTimeout(f, 16)),
 } = {}) {
+  const jono = []; // odottavat rasterityöt liikkeen aikana
+  let jonoAjastettu = false;
+  const puraJonoa = () => {
+    jonoAjastettu = false;
+    if (!jono.length) return;
+    const nyt = liikkeessa() ? 1 : jono.length;
+    for (let i = 0; i < nyt && jono.length; i += 1) jono.shift()();
+    if (jono.length) { jonoAjastettu = true; ajasta(puraJonoa); }
+  };
+  const kaynnista = (tyo) => {
+    if (!liikkeessa()) { tyo(); return; }
+    jono.push(tyo);
+    if (!jonoAjastettu) { jonoAjastettu = true; ajasta(puraJonoa); }
+  };
   const valmiit = new Map(); // avain → sprite
   const kesken = new Map(); // avain → Promise
   const tilaajat = new Set();
@@ -309,12 +332,15 @@ export function luoRasterilahde({
     const oleva = valmiit.get(avain);
     if (oleva) { valmiit.delete(avain); valmiit.set(avain, oleva); return { ...oleva, avain, valmis: true }; }
     if (!kesken.has(avain)) {
-      const lupaus = (async () => {
-        const s = await tee();
-        s.kuva = await bitmapiksi(s.kuva);
-        talleta(avain, s);
-        kesken.delete(avain);
-      })().catch(() => { kesken.delete(avain); });
+      const lupaus = new Promise((valmis) => {
+        kaynnista(() => {
+          (async () => {
+            const s = await tee();
+            s.kuva = await bitmapiksi(s.kuva);
+            talleta(avain, s);
+          })().catch(() => {}).finally(() => { kesken.delete(avain); valmis(); });
+        });
+      });
       kesken.set(avain, lupaus);
     }
     return { avain, valmis: false };
@@ -400,7 +426,7 @@ export function luoRasterilahde({
       return v > 0 ? v : 1;
     },
     /** Välimuistin tila (mittarit). */
-    tila: () => ({ valmiita: valmiit.size, kesken: kesken.size, fontitValmiit }),
+    tila: () => ({ valmiita: valmiit.size, kesken: kesken.size, jonossa: jono.length, fontitValmiit }),
     pura: () => {
       for (const s of valmiit.values()) s.kuva?.close?.();
       valmiit.clear();

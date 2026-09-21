@@ -91,6 +91,39 @@ export const REUNAN_HYSTEREESI_PX = 24;
 
 /** Eläviä nostoja pallolla enintään kerrallaan (karttapallo.md luku 6). */
 export const NOSTOJEN_KATTO = KOHDEMAAN_NIMIOT_ELAVINA ? 120 : 40;
+/**
+ * LIIKEVARA ruudun suuremman sivun osuutena joka suuntaan (ks. paivita,
+ * LIIKEVARA: NOSTOT VALMIINA RUUDUN ULKOPUOLELLA). 0,5 = ladottu alue
+ * on kummassakin suunnassa kaksi kertaa ruudun suurempi sivu leveämpi;
+ * puhelimella (390 × 844) vaakasuunnassa yli ruudun leveyden.
+ */
+export const NOSTOJEN_LIIKEVARA_OSUUS = 0.5;
+/** Sovittelun reunan reunavara (lauta.js NOSTOJEN_REUNAVARA_PX): sisäreuna = ruudun laatikko ilman varaa. */
+const SISAREUNAN_VARA_PX = 6;
+/** Reuna laajennettuna liikevaralla joka suuntaan (sovittelu ruudun ulkopuolisille lapuille). */
+export function laajennaReuna(reuna, vara) {
+  if (!reuna || !(vara > 0)) return reuna;
+  return { x0: reuna.x0 - vara, y0: reuna.y0 - vara, x1: reuna.x1 + vara, y1: reuna.y1 + vara };
+}
+/** Vastakoe `?liikevara=0`: ladonta vain ruudun alalle kuten ennen (savuke-nostojen-liikevara). */
+function liikevaraSallittu() {
+  try { return !/[?&]liikevara=0\b/.test(globalThis.location?.search ?? ''); } catch { return true; }
+}
+/** Liikevara pikseleinä ruudun koosta ({ leveys, korkeus }); 0 ilman ruutua tai vastakokeessa. */
+export function nostojenLiikevaraPx(ruutu) {
+  if (!liikevaraSallittu()) return 0;
+  const suurin = Math.max(Number(ruutu?.leveys) || 0, Number(ruutu?.korkeus) || 0);
+  return suurin > 0 ? Math.round(NOSTOJEN_LIIKEVARA_OSUUS * suurin) : 0;
+}
+/**
+ * Katto liikevaran kanssa: ladottu ala on (1 + 2 × osuus)² -kertainen
+ * ruutuun nähden, ja katto kasvaa samassa suhteessa, jotta liikevaran
+ * nostot eivät putoa budjetista ja ilmesty vasta ruudun reunalla.
+ */
+export function liikevaranKatto(katto, ruutu) {
+  if (!(katto > 0) || !(nostojenLiikevaraPx(ruutu) > 0)) return katto;
+  return Math.round(katto * (1 + 2 * NOSTOJEN_LIIKEVARA_OSUUS) ** 2);
+}
 /*
  * KATTO 120 ELÄVILLÄ NIMIÖILLÄ (js/laattapyramidi.js
  * KOHDEMAAN_NIMIOT_ELAVINA, 20.9.2026): kun kohdemaan poltetutkin
@@ -2531,18 +2564,38 @@ export function luoNostot({
      * jonka piirto ja osuma saavat joka tapauksessa.
      */
     const lukitutKaytossa = lukitutAnkkuritSallittu();
+    /*
+     * ══ LIIKEVARA: NOSTOT VALMIINA RUUDUN ULKOPUOLELLA (omistaja
+     * 21.9.2026, työpöytä v2026: *"panoroitaessa uudelle alueelle
+     * nostot tupsahtavat näytölle jälkikäteen"*; Fablen erä) ═════════
+     *
+     * Ladonta kattaa ruutua suuremman alueen: NOSTOJEN_LIIKEVARA_OSUUS
+     * × ruudun suurempi sivu joka suuntaan (kuten laatoilla), joten
+     * reunaan panoroitaessa nosto on jo ladottu, soviteltu ja
+     * rasteroitu — se ei ilmesty jälkikäteen. Ruudussa olevat pysyvät
+     * ennallaan: etäisyysjärjestys pitää ne budjetin kärjessä, ja
+     * sovittelu ajetaan vain levossa (NIMIÖ EI LIIKU ELEEN AIKANA), joten
+     * eleen aikana liikevarasta ruutuun tulevat laput ovat jo lukossa.
+     * Ruudun ulkopuolinen lappu (`ulkona`) sovitellaan laajennettua
+     * reunaa vasten (sovittelu.js `l.reuna`), ei ruudun reunaa.
+     */
+    const ruutuKoko = ruutu?.() ?? { leveys: 0, korkeus: 0 };
+    const liikevara = nostojenLiikevaraPx(ruutuKoko);
     const nakyvat = [];
     for (const r of rivit) {
       const lukko = lukitutKaytossa ? lukittuAnkkuri(r.avain, r.iso ?? null) : null;
       const lat = lukko ? lukko.lat : r.lat;
       const lng = lukko ? lukko.lng : r.lng;
-      const p = ruudulla(lat, lng);
+      const p = ruudulla(lat, lng, liikevara);
       if (!p) continue;
+      const ulkona = liikevara > 0 && ruutuKoko.leveys > 0
+        && (p.x < 0 || p.y < 0 || p.x > ruutuKoko.leveys || p.y > ruutuKoko.korkeus);
       nakyvat.push({
         ...r,
         lat,
         lng,
         p,
+        ulkona,
         etaisyys: keskipiste ? Math.hypot(p.x - keskipiste.x, p.y - keskipiste.y) : 0,
       });
     }
@@ -3006,9 +3059,13 @@ export function luoNostot({
      * `katto`; loput piirtyvät nimiöttöminä `pisteKatto`on asti.
      * Poltettu rivi ei tarvitse tätä — sen muste on laatassa.
      */
-    const nimiollisetRivit = piirrettavat.slice(0, Math.max(0, katto));
+    // Liikevaran katto (ks. liikevaranKatto): ruudun ulkopuolisetkin mahtuvat budjettiin.
+    // Pisteet (CSS2D-DOM) rajataan ruutuun: ne ovat halpaa mustetta eivätkä tupsahda.
+    const kattoNyt = liikevaranKatto(katto, ruutuKoko);
+    const nimiollisetRivit = piirrettavat.slice(0, Math.max(0, kattoNyt));
     const pisteRivit = piirrettavat
-      .slice(Math.max(0, katto), Math.max(0, pisteKatto))
+      .slice(Math.max(0, kattoNyt), Math.max(0, kattoNyt + Math.max(0, pisteKatto - katto)))
+      .filter((r) => !r.ulkona)
       .map((r) => ({ ...r, nimioNakyy: false, vainPiste: true }));
     const naytetaan = [...nimiollisetRivit, ...pisteRivit, ...ankkuriRivit];
     datumit = naytetaan.map((r) => (r.perhe === 'aihemerkki' ? {
@@ -3905,6 +3962,10 @@ export function luoNostot({
         avain: datum.avain,
         kylki: r.puoli ?? 'oikea',
         laatikko,
+        // Liikevarassa oleva lappu: laajennettu reuna (ks. LIIKEVARA).
+        reuna: r.ulkona && reunaNyt ? laajennaReuna(reunaNyt, nostojenLiikevaraPx(ruutu?.())) : undefined,
+        // Ruudun laatikko ilman reunavaraa (sovittelu.js eiPuoliksi): liikevaran lappu ei jää puoliksi ruutuun.
+        sisareuna: r.ulkona && reunaNyt ? laajennaReuna(reunaNyt, SISAREUNAN_VARA_PX) : undefined,
         nimi: r.nimi ?? '',
         // Meren nimiö väistää rantaviivaa (sovittelu.js `rantaviiva`).
         meri: r.symLaji === 'meri' || r.kategoria === 'meri',
@@ -4289,6 +4350,8 @@ export function luoNostot({
     laatikot: () => laatikot,
     /** Kartan kerroin viime ladonnassa (savukkeet: tyyppimerkit, katto). */
     karttakerroin: () => nostonKarttakerroin,
+    /** Liikevara pikseleinä nyt (savukkeet; ks. LIIKEVARA). */
+    liikevaraPx: () => nostojenLiikevaraPx(ruutu?.() ?? null),
     /**
      * Ikonien laatikot MERKKIEN OMISSA paikoissa, ilman sovittelun
      * siirtoja (ks. omatLaatikot yllä). Turisti-infon kyltin asento
