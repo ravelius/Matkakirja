@@ -863,3 +863,7 @@ Pelikoodari 22.9.2026 klo 00.50: kartan kerroin ≥ 4 (z8) → jokainen nosto sa
 ## NOSTOTASOT NLD/BEL/CHE/PRT/GRC/CZE HYVAKSYTTY; DEU/ITA/ESP OLI JO MAINISSA (22.9.2026 klo 00.12)
 
 Sisältökirjuri 22.9.2026 klo 01.00: DEU/ITA/ESP-nostotasot olivat jo mainissa toista kautta (cherry-pick tyhjä), tarpeettomat haarat poistettu. Uusi erä hyväksytty (docs/raportit/nostotasot-nld-bel-che-prt-grc-cze-ehdotus-20260921.md): NLD Kinderdijk, Keukenhof, Giethoorn, Vredespaleis, Gouda, Vaalserberg (→ Afsluitdijk jos nosto on); BEL Waterloo, Bruggen Belfry, Menin Gate, Chimay, Canal du Centre, Hautes Fagnes; CHE Matterhorn, Reininputous, Kapellbrücke, Chillon, Gruyères, CERN; PRT Sintra, Douro, São Vicenten niemi, Batalha, Torre, Elvas; GRC Akropolis, Santorini, Meteora, Delfoi, Olympia, Knossos; CZE Český Krumlov, Kutná Hora, Sněžka, Vltava, Karlovy Vary, Plzeňský Prazdroj. Seuraava erä HUN/SWE/NOR/DNK/FIN/IRL, sitten loput 4 kukin.
+
+## NOSTOTASOT HUN/SWE/NOR/DNK/FIN/IRL HYVAKSYTTY (22.9.2026 klo 00.33)
+
+Fable 22.9.2026 klo 01.10: hyväksytty (docs/raportit/nostotasot-hun-swe-nor-dnk-fin-irl-ehdotus-20260921.md): HUN Balaton, Hortobágy, Tokaj, Eger, Pannonhalma, Kékes; SWE Kiruna, Birka, Visby, Kebnekaise, Vänern (5); NOR Geiranger, Preikestolen, Nordkapp, Lofootit, Trollstigen, Nidaros; DNK Kronborg, Billund, Jelling, Odense, Møns Klint, Skagen; FIN Saimaa, Halti, Turun linna, Olavinlinna, Verla, Merenkurkku; IRL Moher, Newgrange, Blarney, Skellig Michael, Killarney, Cobh. Viimeinen erä (17 maata, 4 kukin) uudelle Sisältökirjuri-sessiolle.
