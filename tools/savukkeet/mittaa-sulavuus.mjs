@@ -69,11 +69,11 @@ const gpu = await sivu.evaluate(() => { const gl = window.matkakirja.ui.pallonIn
 console.log('GPU:', gpu, '| näkymä', NAKYMA, '| kuristus', KURISTUS);
 // Koukut
 await sivu.evaluate(() => {
-  const M = { mittaa: false, kehykset: [], osat: { laatat: 0, moottori: 0, tekstuurit: 0, piirto: 0, vektorit: 0 }, pitkat: [], tekstuureja: 0, syotteet: 0, kamera: [] };
+  const M = { mittaa: false, valmisteluEdellinen: 0, kehykset: [], osat: { laatat: 0, moottori: 0, tekstuurit: 0, piirto: 0, vektorit: 0 }, pitkat: [], tekstuureja: 0, syotteet: 0, kamera: [] };
   window.__M = M; const { ui } = window.matkakirja; const pallo = ui.pallonInstanssi; const lauta = ui.pallolauta;
   let edellinen = performance.now();
   const askel = (t) => {
-    if (M.mittaa) { const pov = pallo.pointOfView(); const km = window.__kerros?.mittarit?.() ?? {}; M.kehykset.push([+(t - edellinen).toFixed(2), +M.osat.laatat.toFixed(2), +M.osat.moottori.toFixed(2), +M.osat.tekstuurit.toFixed(2), +M.osat.piirto.toFixed(2), +M.osat.vektorit.toFixed(2), +pov.lat.toFixed(4), +pov.lng.toFixed(4), +pov.altitude.toFixed(5), M.syotteet, km.taso ?? -1, km.nakyvia ?? 0, km.nakyviaScenessa ?? 0, km.nakyviaTaysin ?? 0, M.osoitinX, km.peittoOsuus ?? null, km.peittoTaso ?? null]); }
+    if (M.mittaa) { const pov = pallo.pointOfView(); const km = window.__kerros?.mittarit?.() ?? {}; M.kehykset.push([+(t - edellinen).toFixed(2), +M.osat.laatat.toFixed(2), +M.osat.moottori.toFixed(2), +M.osat.tekstuurit.toFixed(2), +M.osat.piirto.toFixed(2), +M.osat.vektorit.toFixed(2), +pov.lat.toFixed(4), +pov.lng.toFixed(4), +pov.altitude.toFixed(5), M.syotteet, km.taso ?? -1, km.nakyvia ?? 0, km.nakyviaScenessa ?? 0, km.nakyviaTaysin ?? 0, M.osoitinX, km.peittoOsuus ?? null, km.peittoTaso ?? null, +((km.valmisteluMs ?? 0) - M.valmisteluEdellinen).toFixed(1)]); M.valmisteluEdellinen = km.valmisteluMs ?? 0; }
     M.osat = { laatat: 0, moottori: 0, tekstuurit: 0, piirto: 0, vektorit: 0 }; M.syotteet = 0; edellinen = t; requestAnimationFrame(askel);
   };
   requestAnimationFrame(askel);
@@ -107,7 +107,7 @@ const lopeta = (nimi) => sivu.evaluate((n) => {
   const liikkumatta = k.filter((r, i) => i > 0 && r[9] > 0 && Math.abs(r[7] - k[i - 1][7]) < 1e-4 && Math.abs(r[6] - k[i - 1][6]) < 1e-4).length;
   const summa = (j) => +k.reduce((s, r) => s + r[j], 0).toFixed(0);
   const km = window.__kerros?.mittarit?.() ?? {}; const vm = window.matkakirja.ui.pallolauta.vektorit?.()?.mittarit?.() ?? {};
-  return { vektorit: { korostusJanoja: vm.korostusJanoja, naulaussaie: vm.naulaussaie, naulauksia: vm.naulauksia, harvennus: vm.harvennus, lod: vm.lod }, kehykset: k, vaihe: n, kehyksia: k.length, peittamatta, eiTaysin, tasot, tasonVaihtoja, zoomAskel: { n: za.length, p50: zp(0.5), p90: zp(0.9), max: za.at(-1) ?? 0, alkuAlt: altit[0], loppuAlt: altit.at(-1) }, sahaus, liikkumattaSyotteella: liikkumatta, mediaani: p(0.5), p95: p(0.95), max: dt.at(-1), yli20ms: yli, osuusYli: +(100 * yli / Math.max(1, k.length)).toFixed(1), summat: { laatat: summa(1), moottori: summa(2), tekstuurit: summa(3), piirto: summa(4) }, tekstuureja: M.tekstuureja, pitkat: M.pitkat.sort((a, b) => b - a).slice(0, 6), pahimmat, laatat: { taso: km.taso, laattoja: km.laattoja, valmisteluja: km.valmisteluja, valmisteluMs: km.valmisteluMs, valmisteluMax: km.valmisteluMax, purettuja: km.purettuja, pyyntoja: km.pyyntoja, jumissa: km.jumissa } };
+  return { vektorit: { korostusJanoja: vm.korostusJanoja, naulaussaie: vm.naulaussaie, naulauksia: vm.naulauksia, harvennus: vm.harvennus, lod: vm.lod }, kehykset: k, vaihe: n, kehyksia: k.length, peittamatta, eiTaysin, pohjaNakyy, peittoMin, tasot, tasonVaihtoja, zoomAskel: { n: za.length, p50: zp(0.5), p90: zp(0.9), max: za.at(-1) ?? 0, alkuAlt: altit[0], loppuAlt: altit.at(-1) }, sahaus, liikkumattaSyotteella: liikkumatta, mediaani: p(0.5), p95: p(0.95), max: dt.at(-1), yli20ms: yli, osuusYli: +(100 * yli / Math.max(1, k.length)).toFixed(1), summat: { laatat: summa(1), moottori: summa(2), tekstuurit: summa(3), piirto: summa(4) }, tekstuureja: M.tekstuureja, pitkat: M.pitkat.sort((a, b) => b - a).slice(0, 6), pahimmat, laatat: { taso: km.taso, laattoja: km.laattoja, valmisteluja: km.valmisteluja, valmisteluMs: km.valmisteluMs, valmisteluMax: km.valmisteluMax, purettuja: km.purettuja, pyyntoja: km.pyyntoja, jumissa: km.jumissa, tukia: km.tukia, ennakkoja: km.ennakkoja, scenessa: km.scenessa, kaytetytTavut: km.kaytetytTavut } };
 }, nimi);
 const tulokset = {};
 let profiili = null;
@@ -140,10 +140,22 @@ if (NAKYMAT[NAKYMA].hasTouch) {
   for (let i = 1; i <= 120; i++) { const d = 30 + i * 1.2; await cdp.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: tp(kotelo.x - d, kotelo.x + d) }); await new Promise((r) => setTimeout(r, 8)); }
   await cdp.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
   await sivu.waitForTimeout(1500); tulokset.nipistys = await lopeta('nipistys');
+  // LOITONNUS: sormet yhteen läheltä (z8) kauas — näkymä laajenee vanhojen laattojen yli
+  await kamera(46.5, 2.5, KORKEUS / 4); await sivu.waitForTimeout(2500); await aloita();
+  await cdp.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: tp(kotelo.x - 170, kotelo.x + 170) });
+  for (let i = 1; i <= 120; i++) { const d = 170 - i * 1.2; await cdp.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: tp(kotelo.x - d, kotelo.x + d) }); await new Promise((r) => setTimeout(r, 8)); }
+  await cdp.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
+  await sivu.waitForTimeout(1500); tulokset.loitonnus = await lopeta('loitonnus');
 }
+// HEITTO: nopea veto 0,4 s ja irrotus vauhdissa (liuku) — reuna ehtiikö laatoittua
+await kamera(46.5, 2.5, KORKEUS); await sivu.waitForTimeout(2500); await aloita();
+await sivu.mouse.move(kotelo.x + kotelo.w * 0.4, kotelo.y); await sivu.mouse.down();
+for (let i = 1; i <= 40; i++) { await sivu.mouse.move(kotelo.x + kotelo.w * 0.4 - (kotelo.w * 0.8) * i / 40, kotelo.y); await new Promise((r) => setTimeout(r, 8)); }
+await sivu.mouse.up(); await sivu.waitForTimeout(2500);
+tulokset.heitto = await lopeta('heitto');
 if (PROFIILI) { profiili = (await cdp.send('Profiler.stop')).profile; writeFileSync(`${ULOS}/profiili-${NAKYMA}-k${KURISTUS}.cpuprofile`, JSON.stringify(profiili)); }
 writeFileSync(`${ULOS}/tulos-${NAKYMA}-k${KURISTUS}.json`, JSON.stringify({ gpu, NAKYMA, KURISTUS, KORKEUS, tulokset, virheet }, null, 1));
 for (const t of Object.values(tulokset)) console.log(JSON.stringify({ ...t, kehykset: undefined, pahimmat: undefined, summat: undefined, laatat: { valmisteluja: t.laatat.valmisteluja, valmisteluMax: Math.round(t.laatat.valmisteluMax), valmisteluKa: +(t.laatat.valmisteluMs / Math.max(1, t.laatat.valmisteluja)).toFixed(1) } }));
-for (const t of Object.values(tulokset)) if (process.env.PAHIMMAT && t.vaihe !== 'lepo') console.log(t.vaihe, 'pahimmat [i, dt, laatat, moottori, tekst, piirto, vekt, lat, lng, alt, syötteitä]:', JSON.stringify(t.pahimmat));
+for (const t of Object.values(tulokset)) if (process.env.PAHIMMAT && t.vaihe !== 'lepo') console.log(t.vaihe, 'pahimmat [i, dt, laatat, moottori, tekst, piirto, vekt, lat, lng, alt, syötteitä, z, näk, scen, täysin, x, peitto, peittoTaso, valmistelu]:', JSON.stringify(t.pahimmat));
 console.log('virheet', virheet.slice(0, 3));
 await selain.close(); palvelin.close();
