@@ -63,3 +63,16 @@ test('E4b: ennustevirhe lasketaan vain näytteistä, joissa on ennustettu maapis
   assert.equal(e.mediaani, 0, 'a: sama offset ja koon mukana kasvava offset eivät ole virhettä');
   assert.equal(e.p95, 5, 'b siirtyi 5 px');
 });
+
+test('laattakerroksen muutos eleen aikana: purkuja ja pyyntöjä erotuksena, taso alussa/lopussa', async () => {
+  const { laattakerroksenTila, laattakerroksenMuutos } = await import('../js/pallolauta/sulavuusmittari.js');
+  const m = { tila: 'nakyy', purettuja: 10, pyyntoja: 100, taso: 8, nakyvia: 45, nakyviaScenessa: 45, kaytetytTavut: 60 * 1048576, kattoRajoitti: false };
+  const lauta = { lepokerros: () => ({ mittarit: () => m }) };
+  const alku = laattakerroksenTila(lauta);
+  assert.equal(alku.purettuja, 10);
+  m.purettuja = 17; m.pyyntoja = 130; m.taso = 7; m.kattoRajoitti = true;
+  const muutos = laattakerroksenMuutos(alku, laattakerroksenTila(lauta));
+  assert.deepEqual(muutos, { purkuja: 7, pyyntoja: 30, tasoAlussa: 8, tasoLopussa: 7, nakyvia: 45, scenessa: 45, tavutMt: 60, kattoRajoitti: true });
+  assert.equal(laattakerroksenTila({ lepokerros: () => null }), null, 'ilman kerrosta null');
+  assert.equal(laattakerroksenMuutos(null, alku), null);
+});
