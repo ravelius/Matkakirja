@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2019, teksti: 'GL runko: horisontin haive ja atlaksen tiivistys' },
   { v: 2018, teksti: 'GL vaihe 3+4: nostot ja nappula rungolle oletuksena' },
   { v: 2017, teksti: '97 uutta Euroopan kohdekartan miniatyyria' },
   { v: 2016, teksti: 'Kadonneet monumentit: 26 rappeutunutta nykykuvin' },
