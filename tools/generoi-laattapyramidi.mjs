@@ -2139,7 +2139,7 @@ function nimiotasonLadonnat(mitat) {
   const ulos = [];
   // Meret ja koristeet ensin (isot, harvat), sitten maakunnat väistävät niitä.
   const jarjestys = [...nimiotasonNimiot()].sort((a, b) => {
-    const arvo = (n) => (n.luokka === 'meri' ? 0 : (['kompassi', 'laiva', 'kuva', 'reitti'].includes(n.luokka) ? 1 : 2));
+    const arvo = (n) => (n.luokka === 'meri' ? 0 : (['kompassi', 'laiva', 'kuva', 'reitti', 'raja'].includes(n.luokka) ? 1 : 2));
     return arvo(a) - arvo(b);
   });
   let siirrettyja = 0;
@@ -2157,7 +2157,7 @@ function nimiotasonLadonnat(mitat) {
      * PUDOTETAAN tältä tasolta: päällekkäinen nimi on huonompi kuin
      * puuttuva, ja seuraavalla tasolla sille on tilaa.
      */
-    const reitti = nimio.luokka === 'reitti';
+    const reitti = nimio.luokka === 'reitti' || nimio.luokka === 'raja';
     const koriste = ['kompassi', 'laiva', 'kuva'].includes(nimio.luokka);
     const w = l.laatikko[2] - l.laatikko[0]; const h = l.laatikko[3] - l.laatikko[1];
     let valittu = null;
@@ -2170,7 +2170,8 @@ function nimiotasonLadonnat(mitat) {
     if (!valittu && (koriste || mitat.z <= NIMION_PUDOTUS_Z)) { pudotettuja += 1; continue; }
     valittu ??= { x: l.x, y: l.y, laatikko: l.laatikko };
     const ladonta = { ...l, x: valittu.x, y: valittu.y, laatikko: valittu.laatikko };
-    ladotut.push(ladonta.laatikko);
+    // Alueraja ei ole este: sen laatikko on koko maan kokoinen.
+    if (nimio.luokka !== 'raja') ladotut.push(ladonta.laatikko);
     ulos.push({ nimio, ladonta });
   }
   if (siirrettyja || pudotettuja) console.log(`  nimiötaso z${mitat.z}: ${ulos.length} nimiötä, ${siirrettyja} väisti kaupunkia/jokea/nimiötä, ${pudotettuja} pudotettu (ei vapaata paikkaa)`);
@@ -4023,7 +4024,7 @@ function teeLuettelo() {
     const laatastot = {};
     for (const m of tasot) laatastot[m.z] = nostotasoBase64(m, nimiotasonPeite(m));
     const nimiot = {};
-    const tunnus = (n) => (['kompassi', 'laiva', 'kuva'].includes(n.luokka) ? `${n.luokka}-${n.lon}-${n.lat}` : String(n.teksti)).toLowerCase()
+    const tunnus = (n) => (['kompassi', 'laiva', 'kuva'].includes(n.luokka) ? `${n.luokka}-${n.lon}-${n.lat}` : (n.luokka === 'raja' ? `raja-${n.iso ?? 'x'}` : String(n.teksti))).toLowerCase()
       .replace(/ä/g, 'a').replace(/ö/g, 'o').replace(/å/g, 'a').replace(/é/g, 'e').replace(/î/g, 'i')
       .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
     const asteiksi = (x, y) => {

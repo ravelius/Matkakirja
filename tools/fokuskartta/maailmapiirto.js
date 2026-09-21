@@ -4167,7 +4167,29 @@ export const NIMION_VARIT = Object.freeze({
  * @param {Function} mittaa (teksti, fontti) → leveys pikseleinä (ilman harvennusta)
  * @returns {null|{x, y, korkeus, leveys, kulma, laatikko:[x0,y0,x1,y1]}} kuvapikseleinä arkin origosta
  */
+/*
+ * ALUERAJAT (maakuntavedos 21.9.2026, Fable): luokka 'raja' on joukko
+ * polylineja `viivat: [[[lon, lat], …], …]` — nykyisten hallintoalueiden
+ * (FRA regionit, DEU osavaltiot; Natural Earth admin-1) sisäiset rajat.
+ * Ohut, himmeä yhtenäinen viiva rajamusteen sävyssä, ei tekstiä, ei
+ * väistöä eikä estettä muille nimiöille; vasta z6:sta.
+ */
+export const RAJAN_LEVEYDET = Object.freeze({ 6: 1.0, 7: 1.5, 8: 2.2 });
+export const RAJAN_VARI = 'rgba(70, 48, 29, 0.45)';
+
 export function nimiotasonLadonta(nimio, z, kaava, px, mittaa) {
+  if (nimio.luokka === 'raja') {
+    const leveys = RAJAN_LEVEYDET[z];
+    const viivat = Array.isArray(nimio.viivat) ? nimio.viivat.filter((v) => Array.isArray(v) && v.length > 1) : [];
+    if (!leveys || !viivat.length) return null;
+    const polut = viivat.map((v) => v.map((p) => [kaava.lautaX(p[0]) * px, kaava.lautaY(p[1]) * px]));
+    let x0 = Infinity; let y0 = Infinity; let x1 = -Infinity; let y1 = -Infinity;
+    for (const polku of polut) for (const [x, y] of polku) { if (x < x0) x0 = x; if (y < y0) y0 = y; if (x > x1) x1 = x; if (y > y1) y1 = y; }
+    return {
+      x: (x0 + x1) / 2, y: (y0 + y1) / 2, korkeus: leveys, leveys: 0, kulma: 0, luokka: 'raja',
+      polut, laatikko: [x0 - leveys, y0 - leveys, x1 + leveys, y1 + leveys],
+    };
+  }
   // Reittiviiva (esim. Horation reitti 1873): pisteet [lon, lat], teksti
   // reitin keskikohdan viereen; laatikko koko polun ympäri.
   if (nimio.luokka === 'reitti') {
@@ -4467,6 +4489,20 @@ export function piirraNimiotaso(canvas, asetukset) {
     for (const d of siirrot) {
       if (x1 + d < GX || x0 + d > GX + W || y1 < GY || y0 > GY + H) continue;
       const vari = NIMION_VARIT[nimio.luokka === 'maakunta' ? 'maakunta' : 'meri'];
+      if (nimio.luokka === 'raja') {
+        ctx.save();
+        ctx.translate(d - GX, -GY);
+        ctx.strokeStyle = RAJAN_VARI;
+        ctx.lineWidth = l.korkeus;
+        ctx.lineJoin = 'round';
+        ctx.lineCap = 'round';
+        ctx.beginPath();
+        for (const polku of l.polut) polku.forEach(([x, y], i) => (i ? ctx.lineTo(x, y) : ctx.moveTo(x, y)));
+        ctx.stroke();
+        ctx.restore();
+        piirretty += 1;
+        continue;
+      }
       if (nimio.luokka === 'reitti') {
         // Katkoviiva ohuella musteella + pieni teksti keskijanan viereen.
         ctx.save();
