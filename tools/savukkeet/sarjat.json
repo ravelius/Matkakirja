@@ -60,7 +60,8 @@
     "savuke-kartuscha-2.mjs",
     "savuke-kartuscha-3.mjs",
     "savuke-reittiverkko.mjs",
-    "savuke-liftaus-ajoitus.mjs"
+    "savuke-liftaus-ajoitus.mjs",
+    "savuke-reaktiot-sydan.mjs"
   ],
   "suorituskyky": [
     "savuke-pariisi-lahizoom.mjs#390-suorituskyky",
@@ -209,6 +210,15 @@
       "js/pallolauta/lauta.js",
       "js/pallolauta/kamera.js",
       "js/ui.js"
+    ],
+    "savuke-reaktiot-sydan.mjs": [
+      "js/reaktiot.js",
+      "js/maalehti.js",
+      "js/ui.js",
+      "js/fokuskohteet.js",
+      "js/nahtavyydet.js",
+      "js/packs/maa-kategoriat.js",
+      "css/styles.css"
     ]
   },
   "asetukset": {
@@ -550,6 +560,10 @@
     "savuke-liftaus-ajoitus.mjs": {
       "kuvakansio": true,
       "huomautus": "Liftauksen nopanheitto ei zoomaa maailmakuvaan (omistaja v1983 20.9.2026): Bryssel 2000 x 1300, seitseman ajoitusta (rauhassa, heti saapumisen jalkeen, kesken trailerin, kaksi heittoa, heitto kesken sovituksen, kesken luennan, heti linssin sulkemisen jalkeen); vaatii korkeuden < 1 ja nappulan ruudulla. Juurisyy lauta.js matkaZoomirajat + kattoPuristus. Ampari Noden kautta, ~2 min."
+    },
+    "savuke-reaktiot-sydan.mjs": {
+      "kuvakansio": true,
+      "huomautus": "Reaktiot sydämeksi (omistaja 21.9.2026, kaappaus Ranskan lehden Historia-osiosta): viisi symbolia ja lepotila korvattiin kahdella suoraan näkyvälla napilla (sydän, peukku alas), lehden jutun vuosiluku siirtyi otsikkorivin oikeaan reunaan omaan laatikkoonsa. Maalehti GBR, Historia-osio, Magna Carta -juttu ('Kuningas pakotettiin lain alle', naytaTutkiSivu-indeksi = tutkiSivut-indeksi + 1, mitattu käytännössä). Ruudut 390x844 ja 1400x900, ~1 min."
     }
   }
 }
