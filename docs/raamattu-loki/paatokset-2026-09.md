@@ -311,3 +311,7 @@ Sessio kirjoittaa luovutuksen tiedostoon, omistaja tekee /clear (ei /compact, ei
 ## SUMU JULKAISUKUNTOON (Pelikoodari 8c7d896e) -> v1988 (21.9.2026 klo 09.16)
 
 SISASUMUN_PEITTO 0,5 (Marseille 31-34 vs 69-71), luonnoksille katkoviivarengas (peitto 0,55), merentakaiset pois (yli 1 500 km muista kaupungeista JA mannerrenkaan ulkopuolella: Cayenne, Noumea, Bermuda, Falkland, Hawaii, Norfolk), lippu pois (?sumu=0 sammuttaa), savuke-sumu julkaisusarjaan 10/10, testit 3780/0. Sisasumu tarvitsee maan renkaat (laiska aineisto), lasketaan uudestaan niiden saavuttua. Linjaus kirjattu Raamattuun (LOYTAMISEN SUMU). Pelikoodari: pieni liike (pelikoodari-liike) -> pollon linkit.
+
+## KONTEKSTIVAHTI JULKAISIJALLE; FABLE NOLLATAAN VIIMEISTAAN 70 % (omistaja) (21.9.2026 klo 09.17)
+
+Julkaisija lukee tunneittain kaikkien roolisessioiden kontekstin get_usage-tyokalulla ja huomauttaa 65 %:ssa; Fable nollataan viimeistaan 70 %:ssa. Fablelta seuranta poistuu.
