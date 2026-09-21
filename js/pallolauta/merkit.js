@@ -479,6 +479,23 @@ export function luoMerkit({ pallo, ui, siirtyma, asteet, kotelo = null, nakyviss
       }
       return ulos;
     },
+    /**
+     * ELEMENTTIEN TILA (diagnostiikka, Laitetestaaja 21.9.2026 iPad:
+     * merkkejä 65, DOMissa 0): montako datumia kirjasto on jo
+     * muuttanut elementiksi (htmlElement-tehdas ajettu) ja montako
+     * niistä on liitetty DOMiin (CSS2DRenderer.render liittää vasta
+     * piirrossa). Luotu ilman liitosta = CSS2D-piirto ei aja.
+     */
+    elementit: () => {
+      let luotu = 0;
+      let liitetty = 0;
+      for (const d of data.values()) {
+        if (!d.el) continue;
+        luotu += 1;
+        if (d.el.isConnected) liitetty += 1;
+      }
+      return { datumeja: data.size, luotu, liitetty };
+    },
     pura: () => {
       for (const t of poistuvat.values()) clearTimeout(t);
       poistuvat.clear();

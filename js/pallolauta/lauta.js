@@ -3647,8 +3647,11 @@ export async function avaaPallolauta(ui) {
     }
     return n;
   };
+  /** Piirrettyjä kehyksiä (diagnostiikka `tila`: nukkuuko pallo oikeasti). */
+  let kehyksia = 0;
   /** Piirtokoukku: sama kamera, sama kehys kuin kuvalla. */
   const pisteetKehyksessa = ({ kamera: kam, aika }) => {
+    kehyksia += 1;
     const p = kam?.position ?? null;
     if (!p) return;
     const liikkui = p.x !== kehyksenKamera.x || p.y !== kehyksenKamera.y || p.z !== kehyksenKamera.z;
@@ -5159,6 +5162,47 @@ export async function avaaPallolauta(ui) {
     liike: () => liike,
     /** Kameralokin merkinnät (js/pallolauta/kameraloki.js), uusin viimeisenä. */
     kameraloki: () => kameraloki.merkinnat(),
+    /**
+     * LAUDAN TILA YHDELLÄ LUENNALLA (Laitetestaaja 21.9.2026,
+     * docs/raportit/laitemittaus-sulavuus-20260921.md: esisiemennetty
+     * tallenne vei Marseilleen, mutta yhtään .pallolauta-nimi/-nosto-
+     * elementtiä ei syntynyt eikä syytä näkynyt). CSS2D-merkki syntyy
+     * vasta kirjaston seuraavassa kehyksessä, ja pallo NUKKUU (ks.
+     * RENDER-SILMUKKA LEPÄÄ) kun lehti on auki, kuori piilossa, sivu
+     * taustalla tai saapumiskortti auki — silloin ladonta antaa datumit
+     * mutta DOMiin ei tule mitään. Tämä kertoo, mikä näistä on päällä.
+     * Pelkkä luenta.
+     */
+    tila: () => ({
+      nukkuu: tauolla,
+      kehyksia,
+      lepoTarpeen: lepoTarpeen(),
+      kuoriPiilossa: Boolean(kuori.hidden),
+      sivuPiilossa: document.visibilityState === 'hidden',
+      saapumiskorttiAuki: Boolean(ui.arrivalDialog?.open),
+      dialogejaAuki: document.querySelectorAll('dialog[open]').length,
+      kotelo: { w: kotelo.clientWidth, h: kotelo.clientHeight },
+      kuollut: Boolean(ui.dead),
+      lento: Boolean(lento),
+      linssi: linssiPaalla(),
+      merkkeja: { nostot: merkit.maara('nostot'), nimet: merkit.maara('nimet'), peli: merkit.maara('peli') },
+      domissa: {
+        nimet: document.querySelectorAll('.pallolauta-nimi').length,
+        nostot: document.querySelectorAll('.pallolauta-nosto').length,
+      },
+      elementit: merkit.elementit(),
+      // CSS2D-kerroksen oma juuri (kirjaston .scene-container > div) ja sen lapset.
+      css2d: (() => {
+        const juuri = [...kotelo.querySelectorAll('.scene-container > div')]
+          .find((e) => e.style.position === 'absolute' && e.style.pointerEvents === 'none');
+        return juuri ? { loytyi: true, lapsia: juuri.childElementCount } : { loytyi: false, lapsia: 0 };
+      })(),
+      virheet: globalThis.__pallonVirheet?.slice(-3) ?? null,
+      korkeus: pallo.pointOfView()?.altitude ?? null,
+      versio: document.getElementById('app-version')?.textContent ?? null,
+    }),
+    /** Herätä nukkuva pallo (kehittäjän pikatie, savukkeet). */
+    heraa,
     /**
      * Kyltin PIIRRETTY laatikko (savukkeet ja vartijat): se, jota
      * osumatesti käyttää, kun merkkikerroksen tween on kesken.
