@@ -65,7 +65,7 @@
 import {
   LAATU_LEPOVIIVE_MS, PALLO_LAATTATASO_MAX, PALLO_LAUTA, asennaPallonEleet, esilataaPallolaatat,
   kytkePallonKehys,
-  kytkePallonEnnuste,
+  kytkePallonEnnuste, kolmiulotteinen as pallonKolmiulotteinen,
   laatatSaatavilla, laattatasoMax, lataaPallokirjasto, pakotaPallonLaatu,
   laudanPisteenAvain, pallonKaupungit, pallonLepokerros, pallonNostoOnPoltettu,
   pallonOmatPisteet, pallonPiste, rakennaPallo, webglTuettu,
@@ -142,6 +142,8 @@ import { laatikotLimittyvat } from './sovittelu.js';
 import { luoLinssikartta } from './linssikartta.js';
 import { luoMaapaneeli, paneelinLaatikko } from './maapaneeli.js';
 import { luoLinssit } from './linssit.js';
+import { glLuokat, glNimiotKaytossa, luoNimiokerrosGL, rasteroiTeksti } from '../pallonimiot-gl.js';
+import { luoGlNimiosovitin } from './glnimiot-sovitin.js';
 import { luoNappulanKuljettaja } from './siirto.js';
 import { luoAloituslennonKohtaus } from './avaus.js';
 
@@ -2011,8 +2013,12 @@ export async function avaaPallolauta(ui) {
    * reittien jälkeen. `?vektorit=0` jättää kerroksen pois.
    */
   const vektorit = pallovektoritPaalla() ? luoPallovektorit({ pallo, kotelo, reitit }) : null;
+  // GL-nimiöt (vaihe 2): ladonnan nimet rungolle sovittimen kautta (oletus päällä, `?glnimiot=0` pois).
+  const glSovitin = glNimiotKaytossa() && !/[?&]glnimiot=testi\b/.test(globalThis.location?.search ?? '')
+    ? luoGlNimiosovitin({ kotelo, kerros: () => ui.pallolautaGL() })
+    : null;
   const nimet = luoNimet({
-    ui, merkit, asteet: pallonAsteet, ruudulla, kotelo, pack,
+    ui, merkit, asteet: pallonAsteet, ruudulla, kotelo, pack, glSovitin,
   });
   /*
    * ══ RUUDUN KALUSTEET OVAT LISTAN KOVIA ESTEITÄ ══════════════════
@@ -3770,6 +3776,68 @@ export async function avaaPallolauta(ui) {
   const kehyspurku = kytkePallonKehys(pallo, kotelo, pisteetKehyksessa);
   // Kameran ennuste: CSS2D-nimiöt ja merkit seuraavan kehyksen paikkaan (E4b, ?ennuste=0 pois).
   const ennustepurku = kytkePallonEnnuste(pallo, kotelo);
+  /*
+   * GL-KERROS (oletus päällä, `?glnimiot=0` CSS2D:hen; docs/raportit/
+   * gl-kerros-suunnitelma-20260921.md): kerros syntyy laiskasti, kun
+   * kirjaston luokat ovat scenessä (laattaverkko + ilmakehän varjostin).
+   * VAIHE 2: ladonnan nimet tulevat rungolle sovittimen kautta (glSovitin,
+   * js/pallolauta/glnimiot-sovitin.js; rasterit nimiorasterit.js);
+   * rungon omat 40 testinimiötä ovat vain `?glnimiot=testi`-tilassa
+   * (savuke-glnimiot.mjs). Nostot vaiheessa 3, napautus datumeista;
+   * CSS2D on perääntymistie (rasteri kesken, atlas täynnä, ei runkoa).
+   */
+  let glKerros = null;
+  let glSiemen = null; // pov, jonka ympäriltä testinimiöt valittiin (vain ?glnimiot=testi)
+  const glTesti = glNimiotKaytossa() && /[?&]glnimiot=testi\b/.test(globalThis.location?.search ?? '');
+  // Kahva UI:n pallolautaGL()-metodille (js/ui.js): kerros tai null.
+  ui.glKerros = () => (glVirhe ? null : glKerros);
+  const glTestinimiot = (pov, dpr) => {
+    glKerros.tyhjenna();
+    const lahimmat = pallonKaupungit(pack)
+      .map((k) => ({ ...k, d: Math.hypot(k.lat - pov.lat, ((k.lon - pov.lng + 540) % 360 - 180) * Math.cos((pov.lat * Math.PI) / 180)) }))
+      .sort((a, b) => a.d - b.d).slice(0, 40);
+    for (const k of lahimmat) {
+      const avain = `testi|${k.n}|${dpr}`;
+      const rasteri = glKerros.onRasteri(avain) ? null : rasteroiTeksti(k.n, { px: 12, dpr, doc: kotelo.ownerDocument });
+      // Testirasteri on laitepikseleissä: skaala 1/dpr = css-px per rasterin px.
+      glKerros.aseta(`kaupunki-${k.id}`, { lat: k.lat, lng: k.lon, avain, rasteri, skaala: 1 / dpr });
+    }
+    glSiemen = { lat: pov.lat, lng: pov.lng };
+  };
+  /*
+   * PERÄÄNTYMISTIE CSS2D:HEN ILMAN LIPPUA (omistaja 21.9.2026: GL on
+   * oletus). Jos kirjaston luokat eivät koskaan ilmesty sceneen (ei
+   * WebGL-tekstuuria) runkoa ei synny ja sovitin jättää kaiken CSS2D:hen.
+   * Jos runko kaatuu kehyksessä, se puretaan ja sama jako ajetaan
+   * uudestaan ilman runkoa — nimet ja nostot palaavat CSS2D:hen.
+   */
+  let glVirhe = null;
+  const glKehys = (mitat) => {
+    if (glVirhe) return;
+    try {
+      const pov = mitat.pov ?? pallo.pointOfView();
+      if (!glKerros) {
+        const luokat = glLuokat(pallo);
+        if (!luokat) return;
+        glKerros = luoNimiokerrosGL({ pallo, kotelo, luokat, juuri: pallonKolmiulotteinen(pallo)?.juuri ?? null });
+        // Ladonnan nimet ja nostot rungolle heti, kun runko on olemassa (ei uutta ladontaa).
+        if (!glTesti) { nimet.jaaUudestaan?.(); nostot.jaaUudestaan?.(); }
+      }
+      // Testinimiöt kameran ympäriltä (vain ?glnimiot=testi); uudet, kun kamera on siirtynyt kauas.
+      if (glTesti && (!glSiemen || Math.hypot(pov.lat - glSiemen.lat, ((pov.lng - glSiemen.lng + 540) % 360) - 180) > 10)) {
+        glTestinimiot(pov, mitat.suhde ?? 1);
+      }
+      glSovitin?.kehys();
+      glKerros.kehys(mitat);
+    } catch (virhe) {
+      glVirhe = virhe;
+      console.warn('[glnimiot] runko kaatui, CSS2D perääntymistie:', virhe?.message ?? virhe);
+      try { glKerros?.pura(); } catch { /* purku ei kaada */ }
+      glKerros = null;
+      if (!glTesti) { nimet.jaaUudestaan?.(); nostot.jaaUudestaan?.(); }
+    }
+  };
+  const glpurku = glNimiotKaytossa() ? kytkePallonKehys(pallo, kotelo, glKehys) : () => {};
 
   const tahdistaPisteidenKoko = () => {
     const edellinen = asetettuSade;
@@ -5309,6 +5377,8 @@ export async function avaaPallolauta(ui) {
     liike: () => liike,
     /** Kameralokin merkinnät (js/pallolauta/kameraloki.js), uusin viimeisenä. */
     kameraloki: () => kameraloki.merkinnat(),
+    /** GL-nimiöiden sovitin (js/pallolauta/glnimiot-sovitin.js) tai null (savukkeet). */
+    glSovitin: () => glSovitin,
     /** Nimiöiden sulavuusmittari (js/pallolauta/sulavuusmittari.js): aloita/lopeta/yhteenveto. */
     sulavuus: null,
     /**
@@ -5510,6 +5580,9 @@ export async function avaaPallolauta(ui) {
       ohjaimet.removeEventListener('change', tahdistaPisteidenKoko);
       kehyspurku();
       ennustepurku();
+      glpurku();
+      glSovitin?.pura();
+      glKerros?.pura();
       kameraloki.pura();
       liike.pura();
       // Omat pallopisteet ovat tämän laudan tilaa (ks. pallonAsteet).

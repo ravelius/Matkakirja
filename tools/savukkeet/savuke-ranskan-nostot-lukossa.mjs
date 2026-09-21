@@ -266,7 +266,7 @@ async function avaaSivu(ruutu) {
       headers: { 'access-control-allow-origin': '*' },
     });
   });
-  await sivu.goto(`${osoite}?lauta=pallo`, { waitUntil: 'domcontentloaded', timeout: 60000 });
+  await sivu.goto(`${osoite}?lauta=pallo&glnimiot=0`, { waitUntil: 'domcontentloaded', timeout: 60000 });
   await sivu.waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null, { timeout: 90000 });
   // Saapuminen ajetaan loppuun (isoisän kuvasarja ja pulu, ~40 s).
   await sivu.waitForTimeout(44000);
