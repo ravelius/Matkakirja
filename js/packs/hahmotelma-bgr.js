@@ -64,7 +64,10 @@
  */
 
 /** Bulgarian hahmotelmanostot: sisällölliset kohteet kaupungin ulkopuolella. */
+import { EUROOPAN_KADONNEET } from './monumentit-eurooppa.js';
+
 export const HAHMOTELMA_BGR = [
+  ...EUROOPAN_KADONNEET.BGR,
   {
     id: 'hahmotelma-bansko',
     kuva: {

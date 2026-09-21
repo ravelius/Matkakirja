@@ -66,7 +66,10 @@
  */
 
 /** Latvian hahmotelmanostot: sisällölliset kohteet kaupungin (Riika) ulkopuolella. */
+import { EUROOPAN_KADONNEET } from './monumentit-eurooppa.js';
+
 export const HAHMOTELMA_LVA = [
+  ...EUROOPAN_KADONNEET.LVA,
   {
     id: 'hahmotelma-ventspils',
     kuva: {

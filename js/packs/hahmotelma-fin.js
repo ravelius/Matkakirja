@@ -69,7 +69,10 @@
  */
 
 /** Suomen hahmotelmanostot: sisällölliset kohteet kaupunkien (Helsinki, Tampere, Lappi) ulkopuolella. */
+import { EUROOPAN_KADONNEET } from './monumentit-eurooppa.js';
+
 export const HAHMOTELMA_FIN = [
+  ...EUROOPAN_KADONNEET.FIN,
   {
     id: 'hahmotelma-punkaharju',
     kuva: {

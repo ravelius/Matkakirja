@@ -970,5 +970,14 @@ export const MAASTOKOHTEET_ISL = [
       + 'teloitettiin Skálholtissa kahden poikansa kanssa, ja samana vuonna hävitettiin myös '
       + 'pyhän Þorlákurin reliikkiarkku.',
     lahde: 'en-Wikipedia "Skálholt", osio "History" (tarkistettu 11.9.2026).',
+    ihme: {
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-skalholt-loistoaika.jpg',
+      kadonnut: true,
+      selite: 'Skálholtin Brynjólfskirkja oli 1600-luvulla suuri puukatedraali, jonka '
+        + 'ympärillä toimivat piispantalo, koulu ja laaja kirkollinen yhteisö.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: '
+        + 'en-Wikipedia "Skálholt", tarkistettu 21.9.2026.',
+      url: 'https://en.wikipedia.org/wiki/Sk%C3%A1lholt',
+    },
   },
 ];

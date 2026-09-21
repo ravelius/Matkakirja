@@ -65,7 +65,10 @@
  */
 
 /** Liettuan hahmotelmanostot: sisällölliset kohteet kaupungin (Vilna) ulkopuolella. */
+import { EUROOPAN_KADONNEET } from './monumentit-eurooppa.js';
+
 export const HAHMOTELMA_LTU = [
+  ...EUROOPAN_KADONNEET.LTU,
   {
     id: 'hahmotelma-kedainiai',
     kuva: {

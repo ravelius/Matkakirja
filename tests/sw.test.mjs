@@ -8,8 +8,9 @@ import assert from 'node:assert/strict';
 import vm from 'node:vm';
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const JUURI = new URL('..', import.meta.url).pathname;
+const JUURI = fileURLToPath(new URL('..', import.meta.url));
 const sw = readFileSync(join(JUURI, 'sw.js'), 'utf8');
 const SHELL = [...sw.matchAll(/'\.\/([^']+)'/g)].map((m) => m[1]);
 

@@ -933,15 +933,28 @@ export const MINIATYYRIT = {
     'Sadu House': 'kuwait-sadu-house',
   },
   nikosia: {
-    // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
-    // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
-    // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Selimiyen moskeija': 'nikosia-selimiyen-moskeija',
-    'Büyük Han': 'nikosia-buyuk-han',
-    'Faneromenin kirkko': 'nikosia-faneromenin-kirkko',
-    'Omeryen hamam': 'nikosia-omeryen-hamam',
-    'Kyproksen museo': 'nikosia-kyproksen-museo',
-    'Leventis-museo': 'nikosia-leventis-museo',
+    'Selimiyen moskeija': 'assets/kartat/miniatyyrit/nikosia-selimiyen-moskeija.webp',
+    'Büyük Han': 'assets/kartat/miniatyyrit/nikosia-buyuk-han.webp',
+    'Faneromenin kirkko': 'assets/kartat/miniatyyrit/nikosia-faneromenin-kirkko.webp',
+    'Omeryen hamam': 'assets/kartat/miniatyyrit/nikosia-omeryen-hamam.webp',
+    'Kyproksen museo': 'assets/kartat/miniatyyrit/nikosia-kyproksen-museo.webp',
+    'Leventis-museo': 'assets/kartat/miniatyyrit/nikosia-leventis-museo.webp',
+  },
+  luxemburg: {
+    'Adolphe-silta': 'assets/kartat/miniatyyrit/luxemburg-adolphe-silta.webp',
+    'Guillaume II:n aukio': 'assets/kartat/miniatyyrit/luxemburg-guillaume-ii-aukio.webp',
+    'Notre-Damen katedraali': 'assets/kartat/miniatyyrit/luxemburg-notre-damen-katedraali.webp',
+    'Suurherttuallinen palatsi': 'assets/kartat/miniatyyrit/luxemburg-suurherttuallinen-palatsi.webp',
+    'Chemin de la Corniche': 'assets/kartat/miniatyyrit/luxemburg-chemin-de-la-corniche.webp',
+    'Bockin kasematit': 'assets/kartat/miniatyyrit/luxemburg-bockin-kasematit.webp',
+  },
+  valletta: {
+    'Auberge de Castille': 'assets/kartat/miniatyyrit/valletta-auberge-de-castille.webp',
+    'Pyhän Johanneksen ko-katedraali': 'assets/kartat/miniatyyrit/valletta-pyhan-johanneksen-ko-katedraali.webp',
+    'Suurmestarin palatsi': 'assets/kartat/miniatyyrit/valletta-suurmestarin-palatsi.webp',
+    'Yläbarrakan puutarhat': 'assets/kartat/miniatyyrit/valletta-ylabarrakka-puutarhat.webp',
+    'Piirityskello-muistomerkki': 'assets/kartat/miniatyyrit/valletta-piirityskello-muistomerkki.webp',
+    'Pyhän Elmon linnake': 'assets/kartat/miniatyyrit/valletta-pyhan-elmon-linnake.webp',
   },
   doha: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki

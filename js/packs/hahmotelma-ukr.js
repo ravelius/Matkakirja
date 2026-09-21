@@ -120,7 +120,10 @@
  */
 
 /** Ukrainan hahmotelmanostot: sisällölliset kohteet. */
+import { EUROOPAN_KADONNEET } from './monumentit-eurooppa.js';
+
 export const HAHMOTELMA_UKR = [
+  ...EUROOPAN_KADONNEET.UKR,
   {
     id: 'hahmotelma-kiova',
     kuva: {

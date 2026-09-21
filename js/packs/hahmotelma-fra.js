@@ -89,7 +89,10 @@ const koordinaatinLahde = (artikkeli, haettu = '17.9.2026') => `en-Wikipedia "${
   + 'toistaiseksi vain otsikko ja alaotsikko.';
 
 /** Ranskan hahmotelmapisteet — otsikko-pop-up, ei sisältöä. */
+import { EUROOPAN_KADONNEET } from './monumentit-eurooppa.js';
+
 export const HAHMOTELMA_FRA = [
+  ...EUROOPAN_KADONNEET.FRA,
   {
     id: 'hahmotelma-pic-du-midi',
     kuva: {

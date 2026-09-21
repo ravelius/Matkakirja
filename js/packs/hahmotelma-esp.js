@@ -61,7 +61,10 @@
  */
 
 /** Espanjan hahmotelmanostot: sisällölliset kohteet kaupunkien ulkopuolella. */
+import { EUROOPAN_KADONNEET } from './monumentit-eurooppa.js';
+
 export const HAHMOTELMA_ESP = [
+  ...EUROOPAN_KADONNEET.ESP,
   {
     id: 'hahmotelma-picos-de-europa',
     kuva: {

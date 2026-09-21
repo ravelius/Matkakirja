@@ -70,7 +70,10 @@
  */
 
 /** Ruotsin hahmotelmanostot: sisällölliset kohteet kaupungin (Tukholma) ulkopuolella. */
+import { EUROOPAN_KADONNEET } from './monumentit-eurooppa.js';
+
 export const HAHMOTELMA_SWE = [
+  ...EUROOPAN_KADONNEET.SWE,
   {
     id: 'hahmotelma-sarek',
     kuva: {

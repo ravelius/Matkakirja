@@ -348,9 +348,10 @@ export const MAASTOKOHTEET_NLD = [
     ],
     korostukset: ['välitystuomioistuin|välitystuomioistuimelle'],
     nappi: 'Talo, joka rakennettiin sotien lopettamiseksi',
-    // 4.2955 E / 52.0866 N — en-Wikipedia "Peace Palace"
+    // 4.2955 E / 52.0866 N — en-Wikipedia "Peace Palace". Kartta-ankkuri on siirretty
+    // 3 yksikköä länteen, jotta Vredespaleisin ja Naundorffin nimiöt eivät leikkaa.
     laudat: {
-      maailmankartta: { x: 5976.5, y: 1298.2 },
+      maailmankartta: { x: 5973.5, y: 1298.2 },
     },
     teksti: 'Vredespaleis eli Rauhanpalatsi on kansainvälinen oikeustalo Haagissa. Se avattiin '
       + '28. elokuuta 1913 taloksi pysyvälle välitystuomioistuimelle, joka oli perustettu '
