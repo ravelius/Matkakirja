@@ -226,6 +226,10 @@ export function avaaHetki(ui, iso, hetki) {
       kuvakehysRef?.nostokuvaSarja?.(),
     ),
     latoNosto: latoHetki,
+    // Kaksi palstaa leveällä kuten nostokortilla (omistaja 22.9.2026 klo
+    // 23.06, js/nostokuva.js nostoPalstoiksi): iso kuva ensin, sitten
+    // kuva pienenee vasemmalle ja teksti tulee oikealle.
+    kaksipalstaTaitto: true,
   }) : null;
   kuvakehysRef = kaksivaihe?.kehys ?? null;
   if (!kaksivaihe) latoHetki(sisalto, undefined);
