@@ -1651,3 +1651,7 @@ Klo 00.34. #2874 jäi suljetuksi (GitHub ei avaa force-pushin jälkeen). Pohjal�
 ## v2139 (#2876, LIIKKEEN TASAISUUSMITTARI p5) JA v2140 (#2878, KOE ?koe=vientibudjetti) MAINISSA; JULKAISIJA LOPETTI YOKSI; OMISTAJAN AAMUKIERROS v2140:LLA (OLETUS / syotetouch / syotekello / MOLEMMAT) (23.9.2026 klo 00.43)
 
 Julkaisija klo 00.40: pieni sarjat.json-konflikti ratkaistu, testit vihreitä, head-tarkistukset ok.
+
+## OMISTAJA iPADILLA: ?koe=vientibudjetti EI AUTTANUT NYKIMISEEN → LAATTAVIENTIEN SUUNTA SULJETTU KOKONAAN (eivienti, vientibudjetti); JALJELLA SYOTEPUTKI (AAMUN KIERROS v2140) (23.9.2026 klo 02.18)
+
+Klo 00.50. Poissuljettu tähän mennessä: kehysaika, tekstuurilataukset (eivienti, vientibudjetti), puskurikirjoitukset, häivytys, pikselisuhde, alfakanava, 60/120 Hz. Ainoa myönteinen: syotetouch.
