@@ -107,3 +107,38 @@ kirjan nosto rinnan lähelle, kaksi epäsymmetristä kiertoa ja lyhyt
 otteenvaihto niiden väliin. Kirja kallistuu syvyyssuunnassa, ja siipi,
 sulat sekä vartalo seuraavat omilla viiveillään. Tämä muuttaa vain
 kiireisen kirjahaun suljetun kirjan käsittelyä; rauhallinen selaus säilyy.
+
+## Toinen erä: neljä suuta käyttävää nykyistä elettä
+
+Omistaja pyysi jatkamaan nykyisten eleiden elävöittämistä ja suukokeiluja.
+Uudet versiot -ryhmän neljä ensimmäistä painiketta ovat nyt:
+
+- Hiljainen naurunpyrskähdys (3,6 s): pidätys, kaksi erikokoista pyrskähdystä,
+  sisään- ja uloshengityksen rintaliike, pään jäljessä tuleva siipi suupieleen.
+- Valtava haukotus (4,7 s, vanhan yawn-eleen versio): hitaasti kasvava suu,
+  raskaat luomet, koko vartalon venytys, pidetty huippu ja pehmeä huokaus.
+- Leveä virne (3,2 s): katse ja silmät aloittavat; suu leviää sivulle,
+  pää ja rinta kallistuvat taakse, virne viipyy ja palautuu hillitysti.
+- Et ole tosissasi (3,8 s, vanhan disbelief-eleen versio): havaintopito,
+  nopea nokan loksahdus, pidetty avoin suu, epätasainen siipien kohautus,
+  sivusilmäys ja hidas sulkeminen.
+
+Suu ei käy samaa puhetta muistuttavaa sykettä jokaisessa eleessä.
+Haukotuksen aukko venyy alaspäin ja virne sivulle. Nokan ja posken maskin
+muodot muuttuvat yhdessä. Kieli näkyy kaikissa neljässä, ei hampaita tai
+ihmishuulia. Siivet eivät peitä silmiä; naurun siiven asentoa laskettiin
+kuvallisen tarkistuksen perusteella. Jalat pysyvät ankkureissaan.
+
+Katselussa on nyt 9 ehdotusta ja 70 alkuperäistä elettä (79 eri valintaa).
+Aiemmat viisi ehdotusta säilyivät tavulleen: 505/505 SVG-asentoa vastaa
+committia 8782757eb0f1. Pelin js/, ääni, cue, ajoitus ja julkaisu eivät muutu.
+Kuvaputkelle ei tule tilauksia. Muutokset ovat yhdessä katselumoduulissa,
+kahdessa testitiedostossa ja tässä raportissa.
+
+Varmennus: kohdetestit 9/9, koko sarja 3934 testiä / 3921 PASS / 13 SKIP /
+0 FAIL. Kaksoisavaimet, niputus, savukevartio, nimiöt ja diff-check PASS.
+24 kuvan asentosarja katsottu. Paikallisessa selaimessa jokaisen uuden
+suun kielen näkyvyys tarkistettu osumatestillä; 70 % kohdalta jatko,
+390 px ilman vaakaylivuotoa ja selainvirheet PASS.
+Itsenäisen sivun julkaisu ja sen jälkitarkistus kirjataan erilliseen
+julkaisukuittiin; tämä lähderaportti ei yksin ole kuitti live-julkaisusta.
