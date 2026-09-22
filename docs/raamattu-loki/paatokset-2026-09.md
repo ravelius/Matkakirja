@@ -1199,3 +1199,7 @@ Omistaja 22.9.2026 klo 15.50: 'se virhe ei ole vain niiden meriviivojen kohdalla
 ## LEPOPIIRTO OLETUKSENA TUOTANNOSSA v2109 (22.9.2026 klo 15.40)
 
 Julkaisija 22.9.2026 klo 15.45: #2805 → v2109 (main 10673e7fc), testit 3913/0. Kartta piirretään levossa vain muutoksista (syke 4 fps, hehkupiste 15 fps); paluulippu ?koe=levovanha. Omistaja todensi laitteella ennen käännöstä.
+
+## MEREN LIKAKUVIOIDEN JUURISYY ON POLTOSSA: PATINAN HIENO KUVIO SIDOTTU LAATAN RUUDUKKOON (KORRELAATIO z5/z6 0,14 VS SAVY 0,96); KORJAUS VESIVIIVAT LAUDAN YKSIKOIHIN; PAPERIRAKEEN RATKAISU OMISTAJAN PAATOS (22.9.2026 klo 15.45)
+
+Karttaseppä 22.9.2026 klo 15.55 (PR #2803): sama maa-ala z5 vs z6: meren sävy korreloi 0,96 mutta hieno kuvio (paperin rae, kuitu, vesiviivat) vain 0,14 (ilman patinaa 0,49) → tasojen crossfade sekoittaa kaksi korreloimatonta rakeisuuskenttää = lika koko merellä. Syy: pyramidi antaa paperiS 1 (painojälki saman levyinen joka tasolla), mikä sitoo kuvion paikan laatan ruudukkoon; meren vyöhykekohina korjattiin 21.9. laudan yksiköihin ja korreloi 0,96. Korjaus: vesiviivojen väli, kasvu ja huojunta laudan yksiköihin, paksuus ja voima paperipikseleihin, alle ~3 px välillä vain joka toinen viiva. Omistajan päätös paperin rakeesta: (a) rae laudan yksiköihin (täsmää, karkenee syvässä zoomissa), (b) hieno rae pois poltosta ja ruutuavaruuden kerroksena peliin (Pelikoodari) — suositus hienolle rakeelle, (a) isoille laikuille, (c) nykyinen. Fablen omat CGEvent-hiirivedot eivät liikuta karttaa Safarissa (klikkaus toimii) → vedot pyydetään omistajalta.
