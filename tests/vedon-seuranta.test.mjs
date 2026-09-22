@@ -223,11 +223,14 @@ test('kosketuskuuntelija kytketään kerran ja valinta vaihtaa vain lähteen', (
   } finally { ikkuna.pura(); }
 });
 
-test('moduuli pysyy palvelutyöntekijässä ja käännöksessä (valikkorivit poistettu 22.9.2026)', () => {
+test('moduuli pysyy palvelutyöntekijässä (valikkorivit poistettu 22.9.2026)', () => {
   // Valikon rivit poistettu omistajan pyynnöstä; pallo.js käyttää moduulia yhä ?koe=-lippujen kautta.
-  // Palvelutyöntekijä ja yhden tiedoston käännös tuntevat moduulin.
+  // Palvelutyöntekijä tuntee moduulin yhä, mutta se ei enää ole yhden tiedoston käännöksen
+  // MODULES-listalla: js/main.js oli ainoa tuoja, ja se hävisi valikon mukana. Ainoat jäljellä
+  // olevat tuojat (js/pallo.js, js/pallolauta/lauta.js) ovat itse niputuksen ulkopuolella, joten
+  // moduuli siirtyi tests/sw.test.mjs:n NIPUTTAMATTOMAT-listalle (tools/tarkista-niputus.mjs).
   assert.match(readFileSync(new URL('../sw.js', import.meta.url), 'utf8'), /'\.\/js\/vedon-seuranta\.js'/);
-  assert.match(
+  assert.doesNotMatch(
     readFileSync(new URL('../tools/build-standalone.mjs', import.meta.url), 'utf8'),
     /'js\/vedon-seuranta\.js'/,
   );
