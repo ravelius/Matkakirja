@@ -10,7 +10,7 @@ Friuli-Venezia Giulia, Liguria, Molise, Valle d'Aosta.
 
 ### Calabria
 
-**pitka:** "Vuoret peittävät lähes koko Kalabrian: Pollino, Sila ja Aspromonte kohoavat suoraan kahden meren, Joonianmeren ja Tyrrhenanmeren, väliin. Vuoristokylissä kuulee yhä kreikkaa ja albaniaa – Bovesian grecanicit ja arbëreshe-yhteisöt periytyvät vuosisatojen takaisista pakolaisista Bysantista ja Balkanilta. Isoisän matka-aikaan Kalabria oli vasta reilut kymmenen vuotta irtautunut Bourbonien Kahden Sisilian kuningaskunnasta, ja uusi Italia toi alueelle enemmän rosvojoukkoja ja köyhyyttä kuin vaurautta. Silkkiäistoukkien kasvatus ja mulperipuut olivat tuolloin monelle perheelle tärkein elinkeino, aivan kuten Bysantin ajoista lähtien."
+**pitka:** "Vuoret peittävät lähes koko Kalabrian: Pollino, Sila ja Aspromonte kohoavat suoraan kahden meren, Joonianmeren ja Tyrrhenanmeren, väliin. Vuoristokylissä kuulee yhä kreikkaa ja albaniaa – Bovesian grecanicit ja arbëreshe-yhteisöt periytyvät vuosisatojen takaisista pakolaisista Bysantista ja Balkanilta. Reggio Calabrian ympäristön kapealla rannikkokaistaleella kasvatetaan lähes koko maailman bergamotti, sitrushedelmä, jonka tuoksuöljyä käytetään sekä Earl Grey -teessä että hienoimmissa hajuvesissä. Silkkiäistoukkien kasvatus ja mulperipuut olivat pitkään monelle vuoristoperheelle tärkein elinkeino, aivan kuten Bysantin ajoista lähtien."
 
 **kuva:**
 ```
@@ -26,7 +26,7 @@ Friuli-Venezia Giulia, Liguria, Molise, Valle d'Aosta.
 
 ### Campania
 
-**pitka:** "Rooman aikaan Campania felix tarkoitti hedelmällistä maata, ja se pitää yhä paikkansa: alue on Italian ykkönen tomaatin- ja pähkinäntuotannossa, ja rannikolla kimaltavat Capri, Ischia ja Procida. Napoli oli isoisän matka-aikaan jo rautatiekaupunki – ensimmäinen rautatie koko Italian niemimaalla avattiin sinne vuonna 1839, joten vuoden 1873 matkustaja pääsi kaupunkiin junalla, ei enää pelkällä laivalla tai kärryillä. Napolin seutu oli vasta vähän aikaa sitten liittynyt uuteen kuningaskuntaan Bourbonien Kahden Sisilian kukistuttua 1861. Kreikkalaisten, roomalaisten, espanjalaisten ja ranskalaisten kerrostumat näkyvät yhä kaupunkikuvassa ja tekevät Campaniasta yhden Italian kirjavimmista risteysasemista."
+**pitka:** "Rooman aikaan Campania felix tarkoitti hedelmällistä maata, ja se pitää yhä paikkansa: alue on Italian ykkönen tomaatin- ja pähkinäntuotannossa, ja rannikolla kimaltavat Capri, Ischia ja Procida. Napoli oli vuonna 1873 jo rautatiekaupunki – ensimmäinen rautatie koko Italian niemimaalla avattiin sinne jo 1839, joten isoisän aikalainen matkustaja pääsi kaupunkiin junalla, ei enää pelkällä laivalla tai kärryillä. Napolin seutu oli tuolloin vasta vähän aikaa liittynyt uuteen kuningaskuntaan Bourbonien Kahden Sisilian kukistuttua 1861. Kreikkalaisten, roomalaisten, espanjalaisten ja ranskalaisten kerrostumat näkyvät yhä kaupunkikuvassa ja tekevät Campaniasta yhden Italian kirjavimmista risteysasemista."
 
 **kuva:**
 ```
@@ -42,7 +42,7 @@ Friuli-Venezia Giulia, Liguria, Molise, Valle d'Aosta.
 
 ### Abruzzo
 
-**pitka:** "Abruzzon maisema vaihtuu nopeasti: Gran Sasson 2912-metriset huiput kohoavat sisämaassa, ja rannikolla on sekä hiekka- että kivikkorantoja Adrianmerta vasten. Alueen tunnuslause 'forte e gentile', vahva ja lempeä, kuvaa hyvin keskiaikaisissa kukkulakylissä eläviä ihmisiä. Isoisän matka-aikaan Abruzzo oli vasta hiljattain irtautunut Bourbonien vallasta, ja juuri vuonna 1870 alkanut köyhyyden aalto oli ajamassa yhä useampia siirtolaisiksi ulkomaille – suunta oli jo nähtävissä 1873 matkustajalle. Monet vuoristokylät seisoivat tuolloin lähes tyhjillään talvisin, kun miehet lähtivät kausityöhön Rooman seudun maatiloille ja palasivat vasta kevääksi."
+**pitka:** "Abruzzon maisema vaihtuu nopeasti: Gran Sasson 2912-metriset huiput kohoavat sisämaassa, ja rannikolla on sekä hiekka- että kivikkorantoja Adrianmerta vasten. Alueen tunnuslause 'forte e gentile', vahva ja lempeä, kuvaa hyvin keskiaikaisissa kukkulakylissä eläviä ihmisiä. Noin kolmannes Abruzzon pinta-alasta on suojeltua luontoa, ja Apenniinien rinteillä elää vielä muutama kymmenen marsikankarhua, alalajia jota ei tavata missään muualla maailmassa. Karhujen ja kylien rinnakkaiselo näkyy arjessa yhä: paimenet ja karhut ovat jakaneet samat vuoristopolut sukupolvien ajan."
 
 **kuva:**
 ```
@@ -58,7 +58,7 @@ Friuli-Venezia Giulia, Liguria, Molise, Valle d'Aosta.
 
 ### Basilicata
 
-**pitka:** "Basilicata on Italian saappaan kaarre – vuoret peittävät lähes puolet alueesta, ja maaperä on niin altista sortumille, että kylät on usein rakennettu jyrkkien rinteiden suojaan. Asukkaita kutsutaan lukanialaisiksi, ja perinteinen arpa viggianese -harppu soi yhä paikallisissa juhlissa. Isoisän matka-aikaan alue oli vasta toipumassa verisestä jälkiselkkauksesta: vuoden 1861 jälkeen Basilicatassa käytiin todellista sissisotaa, kun Carmine Croccon johtamat rosvojoukot vastustivat asein uutta Italian valtiota ja kirkko sekä syrjäytetyt Bourbonit lietsoivat talonpoikien vastarintaa. Materan luolakaupunki oli tuolloin vielä tavallinen, köyhä asuinalue – ei matkailunähtävyys, joksi siitä tuli vasta vuosikymmeniä myöhemmin."
+**pitka:** "Basilicata on Italian saappaan kaarre – vuoret peittävät lähes puolet alueesta, ja maaperä on niin altista sortumille, että kylät on usein rakennettu jyrkkien rinteiden suojaan. Asukkaita kutsutaan lukanialaisiksi, ja perinteinen arpa viggianese -harppu soi yhä paikallisissa juhlissa. Vielä 1870-luvun alussa alue oli toipumassa verisestä jälkiselkkauksesta: vuoden 1861 jälkeen Basilicatassa käytiin todellista sissisotaa, kun Carmine Croccon johtamat rosvojoukot vastustivat asein uutta Italian valtiota ja kirkko sekä syrjäytetyt Bourbonit lietsoivat talonpoikien vastarintaa. Materan luolakaupunki oli vuonna 1873 vielä tavallinen, köyhä asuinalue – ei matkailunähtävyys, joksi siitä tuli vasta vuosikymmeniä myöhemmin."
 
 **kuva:**
 ```
@@ -74,7 +74,7 @@ Friuli-Venezia Giulia, Liguria, Molise, Valle d'Aosta.
 
 ### Marche
 
-**pitka:** "Marchen kukkulat kohoavat rannikolta sisämaahan, ja seudulta ovat kotoisin niin Raffael Urbinosta, säveltäjä Gioachino Rossini kuin kasvatusajattelija Maria Montessorikin. Ancona, Pesaro ja Urbino olivat keskiajalla ja renessanssissa vilkkaita kauppa- ja taidekeskuksia, ja tuo perintö näkyy yhä kaupunkien kaduilla. Isoisän matka-aikaan Marche oli Italian osana vasta reilun vuosikymmenen ikäinen: alue kuului Kirkkovaltioon aina vuoteen 1860 asti, jolloin kansanäänestys liitti sen uuteen kuningaskuntaan paavin vastustuksesta huolimatta. Moni marchelainen kaupunki kantoi vielä 1870-luvulla muistoa kirkollisesta hallinnosta, vaikka poliittinen valta oli jo vaihtunut."
+**pitka:** "Marchen kukkulat kohoavat rannikolta sisämaahan, ja seudulta ovat kotoisin niin Raffael Urbinosta, säveltäjä Gioachino Rossini kuin kasvatusajattelija Maria Montessorikin. Ancona, Pesaro ja Urbino olivat keskiajalla ja renessanssissa vilkkaita kauppa- ja taidekeskuksia, ja tuo perintö näkyy yhä kaupunkien kaduilla. Fabrianon kaupunki on valmistanut vesileimattua paperia 1200-luvulta lähtien, ja sen paperitehtaat toimittavat yhä arvopapereihin ja seteleihinkin käytettyä paperia ympäri maailman. Ascoli Picenon täytetyt oliivit, olive all'ascolana, ovat puolestaan Marchen tunnetuin ruokaperinne, ja niitä paistetaan yhä samalla reseptillä toreilla ja ravintoloissa."
 
 **kuva:**
 ```
@@ -90,7 +90,7 @@ Friuli-Venezia Giulia, Liguria, Molise, Valle d'Aosta.
 
 ### Umbria
 
-**pitka:** "Umbrian vihreitä laaksoja halkoo Tiber-joki aina Trasimeno-järveltä Marmore-putouksille asti, ja siksi seutua kutsutaan Italian vihreäksi sydämeksi. Perugia, Orvieto, Spoleto ja Gubbio ovat säilyttäneet keskiaikaisen ilmeensä lähes koskemattomana kukkuloillaan. Isoisän matka-aikaan Umbria oli vasta pari vuosikymmentä ollut osa Italiaa: alue irtautui Kirkkovaltiosta vuonna 1860, ja perugialaiset purkivat samana vuonna symbolisesti Rocca Paolinan linnoituksen, joka oli muistuttanut heitä vuosikymmenten paavillisesta sorrosta. Rauniot seisovat yhä keskellä kaupunkia muistutuksena siitä, miten tuoretta Umbrian vapaus vielä 1870-luvulla oli."
+**pitka:** "Umbrian vihreitä laaksoja halkoo Tiber-joki aina Trasimeno-järveltä Marmore-putouksille asti, ja siksi seutua kutsutaan Italian vihreäksi sydämeksi. Perugia, Orvieto, Spoleto ja Gubbio ovat säilyttäneet keskiaikaisen ilmeensä lähes koskemattomana kukkuloillaan. Gubbion kukkuloilta löydettiin 1400-luvulla seitsemän pronssitaulua, Eugubine-taulut, joihin on kaiverrettu pisin säilynyt teksti muinaisella umbrialla – ne ovat yhä kaupungin museon pääaarre. Norcian kaupunki puolestaan on antanut koko Italian kielelle sanan norcino, sianlihan käsittelyn mestari, sillä seudun makkarat ja tryffelit tunnetaan koko maassa."
 
 **kuva:**
 ```
@@ -106,7 +106,7 @@ Friuli-Venezia Giulia, Liguria, Molise, Valle d'Aosta.
 
 ### Friuli-Venezia Giulia
 
-**pitka:** "Alppien ja Adrianmeren välissä kuullaan yhä neljää kieltä: friulia, venetoa, sloveenia ja saksaa, ja jokainen kertoo omaa versiotaan seudun historiasta. Isoisän matka-aikaan alue oli vielä kahtia jaettu: Udinen seutu Friulissa oli liittynyt Italiaan vasta 1866, mutta Triest ja Gorizia kuuluivat yhä Itävalta-Unkarin keisarikuntaan eivätkä liittyneet Italiaan ennen vuotta 1918. Isoisän olisi siis pitänyt ylittää oikea valtakunnanraja matkustaessaan Udinesta Triestiin, vaikka nykykartalla molemmat ovat samaa Italiaa. Triest oli tuolloin Habsburgien tärkein satama, ja sen kautta virtasi Keski-Eurooppaan enemmän tavaraa kuin mistään muualta."
+**pitka:** "Alppien ja Adrianmeren välissä kuullaan yhä neljää kieltä: friulia, venetoa, sloveenia ja saksaa, ja jokainen kertoo omaa versiotaan seudun historiasta. Vuonna 1873 alue oli vielä kahtia jaettu: Udinen seutu Friulissa oli liittynyt Italiaan vasta 1866, mutta Triest ja Gorizia kuuluivat yhä Itävalta-Unkarin keisarikuntaan eivätkä liittyneet Italiaan ennen vuotta 1918. Matkustaessaan Udinesta Triestiin isoisä olisi siis joutunut ylittämään oikean valtakunnanrajan, vaikka nykykartalla molemmat ovat samaa Italiaa. Triest oli tuolloin Habsburgien tärkein satama, ja sen kautta virtasi Keski-Eurooppaan enemmän tavaraa kuin mistään muualta."
 
 **kuva:**
 ```
@@ -122,7 +122,7 @@ Friuli-Venezia Giulia, Liguria, Molise, Valle d'Aosta.
 
 ### Liguria
 
-**pitka:** "Liguria on kapea rantakaistale vuorten ja meren välissä, ja koko alueen elämä on aina kietoutunut merenkulkuun. Isoisän matka-aikaan Genova oli vielä tuoreessa muistissa Italian yhdistymisen näyttämönä: Giuseppe Garibaldi lähti Tuhannen retkelleen Quarton kalliolta Genovan liepeiltä toukokuussa 1860, ja ligurialaiset Giuseppe Mazzini ja Goffredo Mameli olivat molemmat keskeisiä kansallisen herätyksen hahmoja. Vuoteen 1873 mennessä Genovan satama oli jo kasvamassa Pohjois-Italian teollistumisen tärkeimmäksi tuontiväyläksi. Rannikon kalastajakylät elivät tuolloin yhä vaatimattomasti merestä, kaukana siitä turistikohteesta, joksi Cinque Terre myöhemmin muuttui."
+**pitka:** "Liguria on kapea rantakaistale vuorten ja meren välissä, ja koko alueen elämä on aina kietoutunut merenkulkuun. Genova oli 1870-luvun alussa vielä tuoreessa muistissa Italian yhdistymisen näyttämönä: Giuseppe Garibaldi lähti Tuhannen retkelleen Quarton kalliolta Genovan liepeiltä toukokuussa 1860, ja ligurialaiset Giuseppe Mazzini ja Goffredo Mameli olivat molemmat keskeisiä kansallisen herätyksen hahmoja. Satama oli tuohon aikaan jo kasvamassa Pohjois-Italian teollistumisen tärkeimmäksi tuontiväyläksi, ja juuri sellaisena isoisä sen matkallaan näki. Rannikon kalastajakylät elivät samaan aikaan yhä vaatimattomasti merestä, kaukana siitä turistikohteesta, joksi Cinque Terre myöhemmin muuttui."
 
 **kuva:**
 ```
@@ -138,7 +138,7 @@ Friuli-Venezia Giulia, Liguria, Molise, Valle d'Aosta.
 
 ### Molise
 
-**pitka:** "Molise on vuoristoista seutua, jossa 55 prosenttia maasta on vuorten peitossa ja rannikkoa on vain reilut 30 kilometriä. Agnonen kaupungissa jouluaattona kuljetettava tulisoihtukulkue, 'Ndocciata, juontaa esikristillisiin perinteisiin, ja seudulla asuu yhä pieni kroaatteja puhuva vähemmistö, jonka juuret ovat 1400-luvun pakolaisissa Balkanilta. Isoisän matka-aikaan seutu oli vasta reilut kymmenen vuotta ollut osa yhdistynyttä Italiaa, ja paimentolaisuus – lampaiden vuotuinen siirto vuorilta rannikon laitumille ja takaisin – oli yhä tärkein elinkeino köyhillä kylillä. Samat vuoristopolut, joita paimenet kulkivat jo tuolloin, ovat monin paikoin käytössä yhä nykyään."
+**pitka:** "Molise on vuoristoista seutua, jossa 55 prosenttia maasta on vuorten peitossa ja rannikkoa on vain reilut 30 kilometriä. Agnonen kaupungissa jouluaattona kuljetettava tulisoihtukulkue, 'Ndocciata, juontaa esikristillisiin perinteisiin, ja seudulla asuu yhä pieni kroaatteja puhuva vähemmistö, jonka juuret ovat 1400-luvun pakolaisissa Balkanilta. Samassa Agnonessa toimii Marinellin kellovalimo, joka on valanut kirkonkelloja jo yli tuhat vuotta ja jolle paavi on myöntänyt oikeuden käyttää Vatikaanin vaakunaa. Paimentolaisuus – lampaiden vuotuinen siirto vuorilta rannikon laitumille ja takaisin – oli pitkään köyhien vuoristokylien tärkein elinkeino, ja samoja polkuja käytetään monin paikoin yhä nykyään."
 
 **kuva:**
 ```
@@ -154,7 +154,7 @@ Friuli-Venezia Giulia, Liguria, Molise, Valle d'Aosta.
 
 ### Valle d'Aosta
 
-**pitka:** "Mont Blanc kohoaa Valle d'Aostan rajalla Euroopan unionin korkeimpana huippuna, ja laakson pohjalla asuu kaksikielinen väestö, joka puhuu italian ja ranskan lisäksi omaa frankoprovensaalista murrettaan. Isoisän matka-aikaan alppikiipeily oli aivan uutta intoa täynnä: vain kahdeksan vuotta ennen vuotta 1873 englantilainen Edward Whymper oli tehnyt ensimmäisen nousun Matterhornille, joka kohoaa laakson länsirajalla – juuri sellaisiin huippuihin viktoriaanisen ajan seikkailijat alkoivat suunnata. Valle d'Aosta oli liittynyt Sardinian kuningaskuntaan jo kauan ennen varsinaista Italian yhdistymistä, joten alue oli isoisän matka-aikaan yksi valtakunnan vanhimmista osista. Vuoristokylät elivät tuolloin karjanhoidosta ja kausittaisesta muuttoliikkeestä laaksoon ja pois, aivan toisenlaista elämää kuin nykypäivän matkailuvilske."
+**pitka:** "Mont Blanc kohoaa Valle d'Aostan rajalla Euroopan unionin korkeimpana huippuna, ja laakson pohjalla asuu kaksikielinen väestö, joka puhuu italian ja ranskan lisäksi omaa frankoprovensaalista murrettaan. Alppikiipeily oli vuonna 1873 aivan uutta intoa täynnä: vain kahdeksan vuotta aiemmin englantilainen Edward Whymper oli tehnyt ensimmäisen nousun Matterhornille, joka kohoaa laakson länsirajalla – juuri sellaisiin huippuihin viktoriaanisen ajan seikkailijat, isoisä mukaan lukien, alkoivat suunnata. Valle d'Aosta oli liittynyt Sardinian kuningaskuntaan jo kauan ennen varsinaista Italian yhdistymistä, joten se oli tuolloin yksi valtakunnan vanhimmista osista. Vuoristokylät elivät siihen aikaan karjanhoidosta ja kausittaisesta muuttoliikkeestä laaksoon ja pois, aivan toisenlaista elämää kuin nykypäivän matkailuvilske."
 
 **kuva:**
 ```

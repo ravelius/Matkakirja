@@ -14,7 +14,7 @@ leveydellä 1800 px. Kaikki lisenssit CC BY-SA (3.0 tai 4.0), tarkistettu
 
 ### Foral de Navarra
 
-**pitka:** "Navarra kätkee sisäänsä kaksi täysin erilaista maisemaa: pohjoisessa vihreät Pyreneiden rinteet ja etelässä Bardenas Realesin kuiva, tuulen kuluttama aavikko, jonka savikukkulat muistuttavat kuunpintaa. Nykyisin aluetta kuvataan usein ilmasta käsin – Bardenasin autiomaa toimi kuvauspaikkana muun muassa Game of Thrones -sarjassa. Isoisän matkavuonna 1873 Navarra oli aivan toisenlaisessa myrskyssä: kun Espanja julistautui tasavallaksi, kuningasmieliset karlistit nostivat kapinan, ja elokuussa 1873 he tekivät Navarran Estellasta oman "pääkaupunkinsa" – sota riehui juuri näillä main vuosia. Nykyään rauha on palannut, ja maaseudun kylät elävät viinistä, lampaanjuustosta ja vaelluksista Pyreneiden poluilla."
+**pitka:** "Navarra kätkee sisäänsä kaksi täysin erilaista maisemaa: pohjoisessa vihreät Pyreneiden rinteet ja etelässä Bardenas Realesin kuiva, tuulen kuluttama aavikko, jonka savikukkulat muistuttavat kuunpintaa. Nykyisin aluetta kuvataan usein ilmasta käsin – Bardenasin autiomaa toimi kuvauspaikkana muun muassa Game of Thrones -sarjassa. Vuonna 1873 Navarra oli aivan toisenlaisessa myrskyssä: kun Espanja julistautui tasavallaksi, kuningasmieliset karlistit nostivat kapinan ja tekivät Estellasta saman vuoden elokuussa oman "pääkaupunkinsa" – sota riehui juuri näillä main vuosia. Nykyään rauha on palannut, ja maaseudun kylät elävät viinistä, lampaanjuustosta ja vaelluksista Pyreneiden poluilla."
 
 **kuva:**
 ```
@@ -30,7 +30,7 @@ leveydellä 1800 px. Kaikki lisenssit CC BY-SA (3.0 tai 4.0), tarkistettu
 
 ### Madrid
 
-**pitka:** "Madrid on Espanjan maantieteellinen ja hallinnollinen sydän: Puerta del Solin aukiolla on pieni laatta, "Kilometri 0", josta kaikki maan valtatiet lasketaan alkavaksi. Aukio ja sen tuntumassa oleva parlamentin talo, Cortes, ovat nähneet vuosisatojen käänteet, ja kaupunki elää myöhään – Pradon museon Velázquezit ja Goyat vetävät miljoonia kävijöitä Retiro-puiston kupeeseen. Isoisän matkavuonna 1873 juuri tuossa Cortesin salissa tapahtui mullistus: 11. helmikuuta espanjalaiset kansanedustajat julistivat maan tasavallaksi kuningas Amadeon luovuttua kruunusta, ja lyhytikäinen Ensimmäinen tasavalta kesti vajaat kaksi vuotta ennen kuin monarkia palasi. Nykyään madridilaiset kokoontuvat samalle aukiolle joka uudenvuodenyö syömään kaksitoista onnenrypälettä kellon lyödessä keskiyötä."
+**pitka:** "Madrid on Espanjan maantieteellinen ja hallinnollinen sydän: Puerta del Solin aukiolla on pieni laatta, "Kilometri 0", josta kaikki maan valtatiet lasketaan alkavaksi. Aukio ja sen tuntumassa oleva parlamentin talo, Cortes, ovat nähneet vuosisatojen käänteet, ja kaupunki elää myöhään – Pradon museon Velázquezit ja Goyat vetävät miljoonia kävijöitä Retiro-puiston kupeeseen. Juuri silloin, 11. helmikuuta 1873, tuossa Cortesin salissa tapahtui mullistus: espanjalaiset kansanedustajat julistivat maan tasavallaksi kuningas Amadeon luovuttua kruunusta, ja lyhytikäinen Ensimmäinen tasavalta kesti vajaat kaksi vuotta ennen kuin monarkia palasi. Nykyään madridilaiset kokoontuvat samalle aukiolle joka uudenvuodenyö syömään kaksitoista onnenrypälettä kellon lyödessä keskiyötä."
 
 **kuva:**
 ```
@@ -46,7 +46,7 @@ leveydellä 1800 px. Kaikki lisenssit CC BY-SA (3.0 tai 4.0), tarkistettu
 
 ### País Vasco
 
-**pitka:** "Baskimaan rannikkokaupunki San Sebastián eli Donostia tunnetaan pintxos-baareistaan, joissa tiskit notkuvat pieniä suupaloja ja paikalliset kiertävät illalla baarista toiseen kuin ruokareitillä. Baskin kieli, euskera, on Euroopan vanhimpia yhä puhuttuja kieliä eikä sitä ole voitu yhdistää mihinkään muuhun tunnettuun kielikuntaan – se on säilynyt vuoristoisten laaksojen suojassa vuosituhansien ajan. Isoisän matkavuonna 1873 Baskimaa oli sodan keskellä: karlistikapinalliset saartoivat Bilbaon joulukuusta 1873 toukokuuhun 1874, ja kaupunki kesti raskaan pommituksen antautumatta ennen kuin piiritys lopulta murrettiin. Nykyään rauha on palannut, ja vihreät, lammaslaitumien pilkkomat kukkulat laskeutuvat suoraan Biskajanlahden kalastajasatamiin, joissa yhä lastataan tonnikalaa ja sardiinia."
+**pitka:** "Baskimaan rannikkokaupunki San Sebastián eli Donostia tunnetaan pintxos-baareistaan, joissa tiskit notkuvat pieniä suupaloja ja paikalliset kiertävät illalla baarista toiseen kuin ruokareitillä. Baskin kieli, euskera, on Euroopan vanhimpia yhä puhuttuja kieliä eikä sitä ole voitu yhdistää mihinkään muuhun tunnettuun kielikuntaan – se on säilynyt vuoristoisten laaksojen suojassa vuosituhansien ajan. Kolmas karlistisota toi Baskimaahan verisen piirityksen: kapinalliset saartoivat Bilbaon joulukuusta 1873 toukokuuhun 1874, ja kaupunki kesti raskaan pommituksen antautumatta ennen kuin piiritys lopulta murrettiin. Nykyään rauha on palannut, ja vihreät, lammaslaitumien pilkkomat kukkulat laskeutuvat suoraan Biskajanlahden kalastajasatamiin, joissa yhä lastataan tonnikalaa ja sardiinia."
 
 **kuva:**
 ```
@@ -62,7 +62,7 @@ leveydellä 1800 px. Kaikki lisenssit CC BY-SA (3.0 tai 4.0), tarkistettu
 
 ### Canary Is.
 
-**pitka:** "Kanariansaaret ovat tulivuorisaaristo, joka sijaitsee lähempänä Länsi-Saharan rannikkoa kuin Manner-Espanjaa – vain reilun sadan kilometrin päässä Afrikasta. Teneriffan Teide kohoaa 3 715 metriin ja on paitsi Espanjan korkein huippu, myös maailman kolmanneksi korkein tulivuori mitattuna valtameren pohjasta lukien, sillä suurin osa sen massasta piileskelee veden alla. Ikivihreä subtrooppinen ilmasto sallii banaanien ja viinin viljelyn ympäri vuoden, ja maisema vaihtuu mustista laavarannoista sumuisiin laurisilva-metsiin muutaman kilometrin matkalla. Isoisän aikaan saaret toimivat ennen kaikkea laivojen välietappina Eurooppaa ja Amerikkaa yhdistävillä reiteillä; nykyään samat satamat palvelevat risteilyaluksia, jotka tuovat saarille miljoonia kävijöitä joka vuosi."
+**pitka:** "Kanariansaaret ovat tulivuorisaaristo, joka sijaitsee lähempänä Länsi-Saharan rannikkoa kuin Manner-Espanjaa – vain reilun sadan kilometrin päässä Afrikasta. Teneriffan Teide kohoaa 3 715 metriin ja on paitsi Espanjan korkein huippu, myös maailman kolmanneksi korkein tulivuori mitattuna valtameren pohjasta lukien, sillä suurin osa sen massasta piileskelee veden alla. Ikivihreä subtrooppinen ilmasto sallii banaanien ja viinin viljelyn ympäri vuoden, ja maisema vaihtuu mustista laavarannoista sumuisiin laurisilva-metsiin muutaman kilometrin matkalla. Saarilla kasvaa myös harvinainen lohikäärmepuu, drago, jonka kuuluisin yksilö Icod de los Vinosin kaupungissa Tenerifellä on paikallisten mukaan lähes tuhat vuotta vanha ja yhä täydessä lehdessä; nykyään samoihin satamiin saapuu risteilyaluksia, jotka tuovat saarille miljoonia kävijöitä joka vuosi."
 
 **kuva:**
 ```
@@ -94,7 +94,7 @@ leveydellä 1800 px. Kaikki lisenssit CC BY-SA (3.0 tai 4.0), tarkistettu
 
 ### La Rioja
 
-**pitka:** "La Rioja on Espanjan tunnetuin viinialue: Ebro-joen laakson rinteillä kasvaa tempranillo-rypälettä lähes yhtenäisenä mattona, ja sadonkorjuun aikaan syyskuussa koko maakunta tuoksuu käyvälle rypälemehulle. Isoisän matkan aikoihin, 1860–1870-luvuilla, Ranskan viinitarhat tuhoutuivat filloksera-kirvan tuhoisasta iskusta, ja ranskalaiset viinikauppiaat siirtyivät ostamaan ja tuottamaan viiniä Riojasta – he toivat mukanaan tammitynnyrit ja pitkän kypsytyksen tavat, jotka muokkasivat koko alueen viininvalmistusta pysyvästi. Haron rautatieaseman ympärille noussut Barrio de la Estación on yhä täynnä satavuotiaita viinitiloja, jotka ranskalaiset tuolloin perustivat. Nykyään Rioja Alta, Rioja Alavesa ja Rioja Oriental muodostavat yhdessä alueen, jonka viinit tunnetaan ympäri maailmaa laadukkaasta tammileimastaan."
+**pitka:** "La Rioja on Espanjan tunnetuin viinialue: Ebro-joen laakson rinteillä kasvaa tempranillo-rypälettä lähes yhtenäisenä mattona, ja sadonkorjuun aikaan syyskuussa koko maakunta tuoksuu käyvälle rypälemehulle. 1870-luvun alussa, samoihin aikoihin kun isoisän matka vei häntä halki Espanjan, Ranskan viinitarhat tuhoutuivat filloksera-kirvan tuhoisasta iskusta, ja ranskalaiset viinikauppiaat siirtyivät ostamaan ja tuottamaan viiniä Riojasta – he toivat mukanaan tammitynnyrit ja pitkän kypsytyksen tavat, jotka muokkasivat koko alueen viininvalmistusta pysyvästi. Haron rautatieaseman ympärille noussut Barrio de la Estación on yhä täynnä satavuotiaita viinitiloja, jotka ranskalaiset tuolloin perustivat. Nykyään Rioja Alta, Rioja Alavesa ja Rioja Oriental muodostavat yhdessä alueen, jonka viinit tunnetaan ympäri maailmaa laadukkaasta tammileimastaan."
 
 **kuva:**
 ```
@@ -110,7 +110,7 @@ leveydellä 1800 px. Kaikki lisenssit CC BY-SA (3.0 tai 4.0), tarkistettu
 
 ### Islas Baleares
 
-**pitka:** "Baleaarit koostuvat neljästä hyvin erilaisesta saaresta: vilkas Mallorca, rauhallisempi Menorca, juhliva Ibiza ja pieni Formentera. Menorcalla on yli tuhat esihistoriallista talayot-kivirakennelmaa – pylväitä, torneja ja hautakammioita pronssikaudelta – ja koko saari on nimetty Unescon maailmanperintökohteeksi niiden ansiosta. Rannikko koostuu sadoista pienistä calas-poukamista, joiden turkoosi vesi ja valkoinen hiekka ovat tehneet saarista yhden Euroopan suosituimmista kesäkohteista aina 1950-luvun matkailubuumista lähtien. Isoisän aikaan saaret olivat vielä syrjäinen maatalous- ja kalastusseutu, kaukana siitä miljoonien turistien virrasta, joka niitä nykyään joka kesä täyttää."
+**pitka:** "Baleaarit koostuvat neljästä hyvin erilaisesta saaresta: vilkas Mallorca, rauhallisempi Menorca, juhliva Ibiza ja pieni Formentera. Menorcalla on yli tuhat esihistoriallista talayot-kivirakennelmaa – pylväitä, torneja ja hautakammioita pronssikaudelta – ja koko saari on nimetty Unescon maailmanperintökohteeksi niiden ansiosta. Rannikko koostuu sadoista pienistä calas-poukamista, joiden turkoosi vesi ja valkoinen hiekka ovat tehneet saarista yhden Euroopan suosituimmista kesäkohteista aina 1950-luvun matkailubuumista lähtien. Ibizan ja Formenteran välistä merta peittävät laajat posidonia-merikasvustot, jotka pitävät veden poikkeuksellisen kirkkaana ja on itsessään nimetty Unescon maailmanperintökohteeksi; nykyään saaret täyttyvät joka kesä miljoonista turisteista, jotka hakevat juuri tätä kirkasta vettä ja valkoista hiekkaa."
 
 **kuva:**
 ```

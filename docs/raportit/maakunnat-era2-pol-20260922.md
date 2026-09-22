@@ -11,7 +11,7 @@ Galitsia.
 
 ### Masovian
 
-**pitka:** "Varsovan vanhakaupunki näyttää satoja vuosia vanhalta, mutta suurin osa siitä on rakennettu uudelleen tiiliä myöten toisen maailmansodan raunioista - yksi Euroopan kunnianhimoisimmista jälleenrakennusprojekteista, ja Unesco listasi sen juuri siksi maailmanperintöön. Kaupungin läpi virtaava Veikselinjoki on yhä hiekkarantoineen villi ja säännöstelemätön, mitä varsovalaiset kesäisin arvostavat uimapaikkoina keskellä miljoonakaupunkia. Isoisän matkavuonna 1873 Varsova ei ollut minkään itsenäisen valtion pääkaupunki, vaan Venäjän keisarikunnan Puolan kuvernementtien keskus, jossa puolan kielen käyttöä kouluissa ja virastoissa kavennettiin systemaattisesti Tammikuun kansannousun jälkeisinä vuosikymmeninä. Nykyään kaupungissa asuu myös kymmeniätuhansia Ukrainasta paenneita, ja Varsova on jälleen risteysasema idän ja lännen välillä - aivan kuten isoisän päiväkirjankin aikana, vain eri syistä."
+**pitka:** "Varsovan vanhakaupunki näyttää satoja vuosia vanhalta, mutta suurin osa siitä on rakennettu uudelleen tiiliä myöten toisen maailmansodan raunioista - yksi Euroopan kunnianhimoisimmista jälleenrakennusprojekteista, ja Unesco listasi sen juuri siksi maailmanperintöön. Kaupungin läpi virtaava Veikselinjoki on yhä hiekkarantoineen villi ja säännöstelemätön, mitä varsovalaiset kesäisin arvostavat uimapaikkoina keskellä miljoonakaupunkia. Keskustan pilvenpiirtäjien joukossa kohoaa yhä Kulttuurin ja tieteen palatsi, Neuvostoliiton 1950-luvulla lahjoittama jättirakennus, jota moni varsovalainen vieroksuu mutta jonka näköalatasanteelta näkee koko kaupungin kerralla. Nykyään kaupungissa asuu myös kymmeniätuhansia Ukrainasta paenneita, ja Varsova on jälleen risteysasema idän ja lännen välillä, aivan kuten se on ollut vuosisatojen ajan Euroopan itä- ja länsiosien rajamailla."
 
 **kuva:**
 ```
@@ -27,7 +27,7 @@ Galitsia.
 
 ### Greater Poland
 
-**pitka:** "Poznańin raatihuoneen kellotapulissa kaksi mekaanista vuohta mättää sarvet yhteen joka päivä tasan kello kaksitoista - legendan mukaan ne palkittiin kaupungin juhlapadan pelastamisesta 1500-luvulla, ja turistit kerääntyvät torille joka ikinen keskipäivä katsomaan esitystä. Ostrów Tumskin saarella seisoo katedraali, jonka kryptassa lepäävät Puolan ensimmäiset hallitsijat - paikka, josta koko valtio sai alkunsa yli tuhat vuotta sitten. Isoisän matkavuonna 1873 mistään tästä ei saanut muistuttaa ääneen: Poznań kuului Preussille, ja juuri silloin Bismarckin niin sanotut toukokuun lait kavensivat katolisen kirkon ja puolan kielen asemaa kouluissa kaikkialla Preussin Puolassa. Nykyään kaupunki puhuu puolaa yhtä äänekkäästi kuin vuohet raatihuoneen kellossa."
+**pitka:** "Poznańin raatihuoneen kellotapulissa kaksi mekaanista vuohta mättää sarvet yhteen joka päivä tasan kello kaksitoista - legendan mukaan ne palkittiin kaupungin juhlapadan pelastamisesta 1500-luvulla, ja turistit kerääntyvät torille joka ikinen keskipäivä katsomaan esitystä. Ostrów Tumskin saarella seisoo katedraali, jonka kryptassa lepäävät Puolan ensimmäiset hallitsijat - paikka, josta koko valtio sai alkunsa yli tuhat vuotta sitten. Vuonna 1873 mistään tästä ei saanut muistuttaa ääneen: Poznań kuului Preussille, ja juuri silloin Bismarckin niin sanotut toukokuun lait kavensivat katolisen kirkon ja puolan kielen asemaa kouluissa kaikkialla Preussin Puolassa. Nykyään kaupunki puhuu puolaa yhtä äänekkäästi kuin vuohet raatihuoneen kellossa."
 
 **kuva:**
 ```
@@ -43,7 +43,7 @@ Galitsia.
 
 ### Warmian-Masurian
 
-**pitka:** "Mazurian tuhannen järven maiseman lisäksi alueella on jotain vielä oudompaa: Elblągin kanava, jossa laivat eivät kulje vain vettä pitkin vaan myös kuivaa maata - kiskoille asetetut vaunut vetävät aluksen viiden nousun yli, kun korkeusero järvien välillä on liian jyrkkä sulkuporteille. Kanavaa rakennettiin vuosikymmenten ajan 1800-luvun puolivälistä lähtien, ja isoisän matkavuoteen 1873 mennessä suurin osa nykyisin käytössä olevasta reitistä oli jo valmis - siihen aikaan alue kuului Preussin Itä-Preussiin, ei mihinkään Puolaan. Nykyään kanavalla risteilee enää turistiveneitä, mutta tekniikka toimii yhä samoilla periaatteilla kuin isoisän aikaan. Rannoilla asuu edelleen sekä katolisia varmialaisia että protestanttisia masuureja, kaksi eri väestöä samalla järviseudulla."
+**pitka:** "Mazurian tuhannen järven maiseman lisäksi alueella on jotain vielä oudompaa: Elblągin kanava, jossa laivat eivät kulje vain vettä pitkin vaan myös kuivaa maata - kiskoille asetetut vaunut vetävät aluksen viiden nousun yli, kun korkeusero järvien välillä on liian jyrkkä sulkuporteille. Kanavaa rakennettiin vuosikymmenten ajan 1800-luvun puolivälistä lähtien, ja se kuului rakennusaikanaan Preussin Itä-Preussiin, kaukana mistään Puolan alueesta. Nykyään kanavalla risteilee enää turistiveneitä, mutta tekniikka toimii yhä samoilla periaatteilla kuin sen rakentajat aikoinaan suunnittelivat. Rannoilla asuu edelleen sekä katolisia varmialaisia että protestanttisia masuureja, kaksi eri väestöä samalla järviseudulla."
 
 **kuva:**
 ```
@@ -59,7 +59,7 @@ Galitsia.
 
 ### West Pomeranian
 
-**pitka:** "Szczecinin telakoilla rakennettiin isoisän matkavuonna 1873 sota-aluksia keisarilliselle Saksan laivastolle - kaupungin Vulcan-telakka oli tuolloin yksi koko Preussin suurimmista, eikä ajoitus ole sattumaa: Saksa oli juuri yhdistynyt, ja rautavaltiaiden rahat virtasivat uusiin telakoihin ja rautateihin. Nykyisin telakka-alueet ovat suurelta osin hiljentyneet, mutta Odran suistoon rakennetut kanavat ja sillat tekevät Szczecinistä yhä veden pilkkoman kaupungin, jota paikalliset kutsuvat leikillään Puolan Venetsiaksi. Jasne Błonian laaja niitty kaupungin keskustassa täyttyy kesäisin lenkkeilijöistä ja markkinoista, aivan toisenlaisesta elämästä kuin telakoiden meluisa arki. Alueen väestö vaihtui lähes kokonaan toisen maailmansodan jälkeen, kun saksalaiset asukkaat lähtivät ja tilalle muutti puolalaisia idästä - Szczecin on siis nuorempi puolalaiskaupunki kuin miltä se maisemaltaan näyttää."
+**pitka:** "Samana vuonna kun isoisä matkasi Euroopan halki, 1873, Szczecinin telakoilla rakennettiin sota-aluksia keisarilliselle Saksan laivastolle - kaupungin Vulcan-telakka oli tuolloin yksi koko Preussin suurimmista, eikä ajoitus ole sattumaa: Saksa oli juuri yhdistynyt, ja rautavaltiaiden rahat virtasivat uusiin telakoihin ja rautateihin. Nykyisin telakka-alueet ovat suurelta osin hiljentyneet, mutta Odran suistoon rakennetut kanavat ja sillat tekevät Szczecinistä yhä veden pilkkoman kaupungin, jota paikalliset kutsuvat leikillään Puolan Venetsiaksi. Jasne Błonian laaja niitty kaupungin keskustassa täyttyy kesäisin lenkkeilijöistä ja markkinoista, aivan toisenlaisesta elämästä kuin telakoiden meluisa arki. Alueen väestö vaihtui lähes kokonaan toisen maailmansodan jälkeen, kun saksalaiset asukkaat lähtivät ja tilalle muutti puolalaisia idästä - Szczecin on siis nuorempi puolalaiskaupunki kuin miltä se maisemaltaan näyttää."
 
 **kuva:**
 ```
@@ -75,7 +75,7 @@ Galitsia.
 
 ### Lublin
 
-**pitka:** "Lublinin linna kohoaa vanhankaupungin yllä kukkulalla, ja sen historia on synkempi kuin uusromanttinen ulkoasu antaa ymmärtää: 1800-luvulla se toimi Venäjän vankilana, ja isoisän matkavuonna 1873 sinne oli yhä teljetty miehiä kymmenen vuotta aiemmin kukistetusta Tammikuun kansannoususta. Linnan kappelissa säilyneet keskiaikaiset freskot ovat harvinainen näyte bysanttilaisesta maalaustaiteesta näin kaukana idässä. Nykyään linnassa on museo, ja Lublinin vanhakaupunki on täynnä kahviloita ja opiskelijoita - kaupungissa toimii useita yliopistoja, jotka tekevät siitä nuorekkaan vastapainon ympäröiville peltoaukeille. Puolan ja Ukrainan raja on lähellä, ja sen huomaa kaupungin kaduilla kuultavasta kielten kirjosta."
+**pitka:** "Lublinin linna kohoaa vanhankaupungin yllä kukkulalla, ja sen historia on synkempi kuin uusromanttinen ulkoasu antaa ymmärtää: 1800-luvulla se toimi Venäjän vankilana, jonne teljettiin muun muassa Tammikuun kansannousun osallistujia sen kukistamisen jälkeen. Linnan kappelissa säilyneet keskiaikaiset freskot ovat harvinainen näyte bysanttilaisesta maalaustaiteesta näin kaukana idässä. Nykyään linnassa on museo, ja Lublinin vanhakaupunki on täynnä kahviloita ja opiskelijoita - kaupungissa toimii useita yliopistoja, jotka tekevät siitä nuorekkaan vastapainon ympäröiville peltoaukeille. Puolan ja Ukrainan raja on lähellä, ja sen huomaa kaupungin kaduilla kuultavasta kielten kirjosta."
 
 **kuva:**
 ```
@@ -91,7 +91,7 @@ Galitsia.
 
 ### Podlachian
 
-**pitka:** "Białowieżan visentit eivät ole aina olleet luonnonsuojelun ylpeys - Venäjän tsaarit pitivät metsää yksityisenä metsästysmaanaan, ja isoisän matka-aikaan 1873 alue kuului tsaarin henkilökohtaisiin metsästystiloihin, joissa hoviväki ampui visenttejä huvikseen samalla kun laji ajautui hitaasti sukupuuttoa kohti. Vasta 1900-luvulla, kun villit visentit oli jo metsästetty loppuun, laji palautettiin metsään eläintarhoista säilyneistä yksilöistä - nykyiset laumat polveutuvat kourallisesta selviytyjistä. Podlasien tasangolla asuu yhä myös Puolan suurin tataarivähemmistö, jonka esi-isät asettuivat seudulle jo 1600-luvulla ja joiden puiset moskeijat erottuvat kylämaisemasta. Metsän reunakylissä elanto tulee yhä pääosin maataloudesta ja matkailusta, jonka ainoa suuri vetonaula on juuri se sama eläin, jota täällä kerran melkein hävitettiin."
+**pitka:** "Białowieżan visentit eivät ole aina olleet luonnonsuojelun ylpeys - Venäjän tsaarit pitivät metsää yksityisenä metsästysmaanaan, ja alue kuului vuosikymmenten ajan tsaarin henkilökohtaisiin metsästystiloihin, joissa hoviväki ampui visenttejä huvikseen samalla kun laji ajautui hitaasti sukupuuttoa kohti. Vasta 1900-luvulla, kun villit visentit oli jo metsästetty loppuun, laji palautettiin metsään eläintarhoista säilyneistä yksilöistä - nykyiset laumat polveutuvat kourallisesta selviytyjistä. Podlasien tasangolla asuu yhä myös Puolan suurin tataarivähemmistö, jonka esi-isät asettuivat seudulle jo 1600-luvulla ja joiden puiset moskeijat erottuvat kylämaisemasta. Metsän reunakylissä elanto tulee yhä pääosin maataloudesta ja matkailusta, jonka ainoa suuri vetonaula on juuri se sama eläin, jota täällä kerran melkein hävitettiin."
 
 **kuva:**
 ```
@@ -107,7 +107,7 @@ Galitsia.
 
 ### Pomeranian
 
-**pitka:** "Gdańskin telakkahistoria ei ala Solidaarisuudesta, vaan paljon aiemmin: kaupunkiin perustettiin 1871 Saksan keisarillinen laivastotelakka, ja isoisän matkavuonna 1873 se oli vasta parin vuoden ikäinen, kiireinen rakennustyömaa keskellä muuten vanhaa hansakaupunkia. Motławan rantakadulla kohoavat porttikraanat ja kauppiastalot muistuttavat siitä, että Gdańsk eli meripuolen kaupasta jo kauan ennen mitään telakoita. Nykyään entiset telakka-alueet ovat täynnä museoita ja tapahtumia, ja juuri siellä, missä 1980-luvulla syntyi ammattiyhdistysliike joka lopulta mursi kommunistisen Puolan, käy nyt turisteja ottamassa valokuvia. Kaupungin saksankielinen nimi Danzig hävisi kartoilta vasta toisen maailmansodan jälkeen, kun koko asukaskunta vaihtui."
+**pitka:** "Gdańskin telakkahistoria ei ala Solidaarisuudesta, vaan paljon aiemmin: kaupunkiin perustettiin 1871 Saksan keisarillinen laivastotelakka, ja kaksi vuotta myöhemmin, 1873, se oli yhä vasta nuori, kiireinen rakennustyömaa keskellä muuten vanhaa hansakaupunkia. Motławan rantakadulla kohoavat porttikraanat ja kauppiastalot muistuttavat siitä, että Gdańsk eli meripuolen kaupasta jo kauan ennen mitään telakoita. Nykyään entiset telakka-alueet ovat täynnä museoita ja tapahtumia, ja juuri siellä, missä 1980-luvulla syntyi ammattiyhdistysliike joka lopulta mursi kommunistisen Puolan, käy nyt turisteja ottamassa valokuvia. Kaupungin saksankielinen nimi Danzig hävisi kartoilta vasta toisen maailmansodan jälkeen, kun koko asukaskunta vaihtui."
 
 **kuva:**
 ```
@@ -123,7 +123,7 @@ Galitsia.
 
 ### Lower Silesian
 
-**pitka:** "Wrocławin sydän ei ole tori vaan Ostrów Tumski, Oderjoen saarelle rakennettu tuomiokirkkokortteli, jonka kaasulyhdyt sytytetään yhä käsin joka ilta - yksi harvoista paikoista Euroopassa, jossa katuvalaistus on jätetty tarkoituksella vanhanaikaiseksi. Isoisän matkavuonna 1873 kaupunki tunnettiin nimellä Breslau ja oli Preussin Sleesian pääkaupunki, saksankielinen ja protestanttisenemmistöinen suurkaupunki. Toisen maailmansodan jälkeen lähes koko väestö vaihtui, kun saksalaiset karkotettiin ja tilalle muutti puolalaisia, monet menetetyiltä itäisiltä alueilta - Wrocław on siis kaupunki, joka rakennettiin uudelleen paitsi kivistä myös ihmisistä. Oderjoki kuljettaa yhä rahtia kaupungin läpi, aivan kuten isoisän aikaan, jolloin joki oli Sleesian tärkein kauppaväylä."
+**pitka:** "Wrocławin sydän ei ole tori vaan Ostrów Tumski, Oderjoen saarelle rakennettu tuomiokirkkokortteli, jonka kaasulyhdyt sytytetään yhä käsin joka ilta - yksi harvoista paikoista Euroopassa, jossa katuvalaistus on jätetty tarkoituksella vanhanaikaiseksi. 1873 kaupunki tunnettiin nimellä Breslau ja oli Preussin Sleesian pääkaupunki, saksankielinen ja protestanttisenemmistöinen suurkaupunki. Toisen maailmansodan jälkeen lähes koko väestö vaihtui, kun saksalaiset karkotettiin ja tilalle muutti puolalaisia, monet menetetyiltä itäisiltä alueilta - Wrocław on siis kaupunki, joka rakennettiin uudelleen paitsi kivistä myös ihmisistä. Oderjoki kuljettaa yhä rahtia kaupungin läpi, aivan kuten isoisän aikaan, jolloin joki oli Sleesian tärkein kauppaväylä."
 
 **kuva:**
 ```
@@ -139,7 +139,7 @@ Galitsia.
 
 ### Łódź
 
-**pitka:** "Isoisän matkavuonna 1873 Łódź oli Euroopan nopeimmin kasvava kaupunki - vielä vuosisadan alussa parin tuhannen asukkaan kylä oli parissa vuosikymmenessä paisunut kymmeniksituhansiksi, kun puuvillatehtaat imivät työväkeä ympäri Venäjän keisarikuntaa. Puolalaiset, juutalaiset, saksalaiset ja venäläiset elivät ja kilpailivat samassa kaupungissa, ja juuri tästä sekamelskasta syntyi myöhemmin Władysław Reymontin romaani "Luvattu maa", joka kuvaa kaupungin raakaa rahanhimoa. Tehtailijoiden Karol Scheiblerin ja Izrael Poznańskin palatsit seisovat yhä keskustassa muistutuksena siitä, kuinka suunnattomia omaisuuksia puuvillasta kerättiin samalla kun tehtaiden työläiset asuivat ahtaissa korttelitaloissa. Nykyään kaupunki hakee uutta identiteettiä muotoilun ja kulttuurin kautta, mutta sen kadunkulmat kertovat yhä tarinaa siitä äkkirikastumisen ja kurjuuden kaupungista, jonka isoisä olisi nähnyt."
+**pitka:** "Juuri tuolloin, 1873, Łódź oli Euroopan nopeimmin kasvava kaupunki - vielä vuosisadan alussa parin tuhannen asukkaan kylä oli parissa vuosikymmenessä paisunut kymmeniksituhansiksi, kun puuvillatehtaat imivät työväkeä ympäri Venäjän keisarikuntaa. Puolalaiset, juutalaiset, saksalaiset ja venäläiset elivät ja kilpailivat samassa kaupungissa, ja juuri tästä sekamelskasta syntyi myöhemmin Władysław Reymontin romaani "Luvattu maa", joka kuvaa kaupungin raakaa rahanhimoa. Tehtailijoiden Karol Scheiblerin ja Izrael Poznańskin palatsit seisovat yhä keskustassa muistutuksena siitä, kuinka suunnattomia omaisuuksia puuvillasta kerättiin samalla kun tehtaiden työläiset asuivat ahtaissa korttelitaloissa. Nykyään kaupunki hakee uutta identiteettiä muotoilun ja kulttuurin kautta, mutta sen kadunkulmat kertovat yhä tarinaa siitä äkkirikastumisen ja kurjuuden kaupungista, jonka isoisä olisi nähnyt."
 
 **kuva:**
 ```
@@ -155,7 +155,7 @@ Galitsia.
 
 ### Kuyavian-Pomeranian
 
-**pitka:** "Isoisän matkavuonna 1873 Toruń juhli jotain hyvin täsmällistä: kaupungin kuuluisimman pojan, Mikołaj Kopernikuksen, syntymästä tuli kuluneeksi tasan 400 vuotta, ja juhlallisuudet keräsivät tiedemiehiä ja juhlijoita ympäri Eurooppaa keskiaikaiseen tiilikaupunkiin. Toruń kuului tuolloin Preussin Länsi-Preussiin, mutta kaupungin goottilaiset tiilikirkot ja porvaristalot olivat pystyssä jo silloin lähes muuttumattomina - toisin kuin monet muut alueen kaupungit, Toruń selvisi molemmista maailmansodista suhteellisen ehjänä. Veikselin rantaa pitkin kulkivat vielä 1870-luvulla viljalastit satamiin, ja joki oli kaupungin elinehto kauan ennen rautateitä. Nykyään opiskelijakaupunki elää yliopistostaan ja tiedehistoriastaan, mutta juuri se pyöreä vuosiluku 1873 muistuttaa, kuinka tarkkaan isoisän matka-ajan ihmiset osasivat laskea juhlavuosiaan."
+**pitka:** "Vuonna 1873 Toruń juhli jotain hyvin täsmällistä: kaupungin kuuluisimman pojan, Mikołaj Kopernikuksen, syntymästä tuli kuluneeksi tasan 400 vuotta, ja juhlallisuudet keräsivät tiedemiehiä ja juhlijoita ympäri Eurooppaa keskiaikaiseen tiilikaupunkiin. Toruń kuului tuolloin Preussin Länsi-Preussiin, mutta kaupungin goottilaiset tiilikirkot ja porvaristalot olivat pystyssä jo silloin lähes muuttumattomina - toisin kuin monet muut alueen kaupungit, Toruń selvisi molemmista maailmansodista suhteellisen ehjänä. Veikselin rantaa pitkin kulkivat vielä 1870-luvulla viljalastit satamiin, ja joki oli kaupungin elinehto kauan ennen rautateitä. Nykyään opiskelijakaupunki elää yliopistostaan ja tiedehistoriastaan, mutta juuri se pyöreä vuosiluku 1873 muistuttaa, kuinka tarkkaan isoisän matka-ajan ihmiset osasivat laskea juhlavuosiaan."
 
 **kuva:**
 ```
@@ -171,7 +171,7 @@ Galitsia.
 
 ### Subcarpathian
 
-**pitka:** "Isoisän matkavuonna 1873 tämä seutu ei kuulunut Preussille eikä Venäjälle vaan Itävalta-Unkarille, Galitsian maakuntana - ja se teki ihmisten arjesta yllättävän erilaista kuin muualla jaetussa Puolassa. Wienin hallitsijat sallivat puolan kielen kouluissa ja virastoissa, ja Galitsialla oli oma maapäivä Lwówissa, kun taas Venäjän ja Preussin puolella puolan kieltä ajettiin systemaattisesti alas. Toisaalta Galitsia oli Euroopan köyhimpiä maakuntia, ja moni Rzeszówin seudun talonpoika lähti juuri noihin aikoihin siirtolaiseksi Amerikkaan nälän ja tilattomuuden vuoksi. Nykyään sama seutu tunnetaan päinvastaisesta: lentokoneiden moottoreita ja siipiä valmistavista tehtaista, jotka työllistävät insinöörejä ympäri Puolaa - köyhästä maakunnasta on tullut yksi maan teknologisimmista."
+**pitka:** "Tämä seutu ei 1800-luvun jaetussa Puolassa kuulunut Preussille eikä Venäjälle vaan Itävalta-Unkarille, Galitsian maakuntana - ja se teki ihmisten arjesta yllättävän erilaista kuin muualla jaetussa Puolassa. Wienin hallitsijat sallivat puolan kielen kouluissa ja virastoissa, ja Galitsialla oli oma maapäivä Lwówissa, kun taas Venäjän ja Preussin puolella puolan kieltä ajettiin systemaattisesti alas. Toisaalta Galitsia oli Euroopan köyhimpiä maakuntia, ja moni Rzeszówin seudun talonpoika lähti juuri noihin aikoihin siirtolaiseksi Amerikkaan nälän ja tilattomuuden vuoksi. Nykyään sama seutu tunnetaan päinvastaisesta: lentokoneiden moottoreita ja siipiä valmistavista tehtaista, jotka työllistävät insinöörejä ympäri Puolaa - köyhästä maakunnasta on tullut yksi maan teknologisimmista."
 
 **kuva:**
 ```
@@ -187,7 +187,7 @@ Galitsia.
 
 ### Lesser Poland
 
-**pitka:** "Isoisän matkavuonna 1873 Wawelin linnamäki ei ollut mikään kansallispyhäkkö, vaan Itävallan armeijan varuskunta: linnan saleissa majaili sotilaita ja osa rakennuksista toimi sairaalana, eikä kukaan vielä puhunut sen palauttamisesta puolalaisille. Vasta 1900-luvun alussa Wawel vapautettiin sotilaskäytöstä ja aloitettiin sen hidas muuttaminen siksi kansalliseksi symboliksi, jollaisena se nykyään tunnetaan. Kraków oli kuitenkin jo isoisän aikaan Galitsian merkittävin kulttuurikaupunki, koska Itävallan valtaa lievempi sensuuri salli Jagellonian yliopiston opettaa puolaksi silloinkin, kun se oli muualla Puolassa lähes mahdotonta. Nykyään linnanmäelle nousee vuosittain miljoonia kävijöitä, jotka harvoin arvaavat, että isoisän aikaan sama paikka haisi enemmän hevoselta ja asehuoltamolta kuin historialta."
+**pitka:** "1800-luvun jälkipuoliskolla Wawelin linnamäki ei ollut mikään kansallispyhäkkö, vaan Itävallan armeijan varuskunta: linnan saleissa majaili sotilaita ja osa rakennuksista toimi sairaalana, eikä kukaan vielä puhunut sen palauttamisesta puolalaisille. Vasta 1900-luvun alussa Wawel vapautettiin sotilaskäytöstä ja aloitettiin sen hidas muuttaminen siksi kansalliseksi symboliksi, jollaisena se nykyään tunnetaan. Kraków oli silti jo tuolloin Galitsian merkittävin kulttuurikaupunki, koska Itävallan valtaa lievempi sensuuri salli Jagellonian yliopiston opettaa puolaksi silloinkin, kun se oli muualla Puolassa lähes mahdotonta. Nykyään linnanmäelle nousee vuosittain miljoonia kävijöitä, jotka harvoin arvaavat, että sama paikka haisi aikoinaan enemmän hevoselta ja asehuoltamolta kuin historialta."
 
 **kuva:**
 ```
@@ -203,7 +203,7 @@ Galitsia.
 
 ### Lubusz
 
-**pitka:** "Zielona Górassa on juhlittu viininkorjuuta Winobranie-nimisillä juhlilla jo isoisän aikaan: perinne juontaa 1800-luvun puoliväliin, ja isoisän matkavuonna 1873 kaupunki - silloiselta saksankieliseltä nimeltään Grünberg - oli jo tunnettu koko Preussin pohjoisimmasta viinialueestaan. Seutu kuului tuolloin kokonaan Saksaan, eikä siellä juuri asunut puolankielistä väestöä; nykyinen puolalaisuus tuli vasta toisen maailmansodan jälkeen rajojen siirryttyä. Viinitarhat kärsivät 1900-luvulla sodista ja tuholaisista lähes sukupuuttoon, mutta harrastajat elvyttivät viininviljelyn uudelleen vuosikymmeniä sitten. Nykyään syyskuinen Winobranie on yhä kaupungin suurin juhla, ja se yhdistää saksalaisen viinikaupungin perinteen puolalaiseen nykyasukkaaseen tavalla, joka olisi isoisän aikaan tuntunut mahdottomalta."
+**pitka:** "Zielona Górassa on juhlittu viininkorjuuta Winobranie-nimisillä juhlilla jo 1800-luvun puolivälistä lähtien: kaupunki - silloiselta saksankieliseltä nimeltään Grünberg - tunnettiin jo tuolloin koko Preussin pohjoisimpana viinialueena. Seutu kuului tuolloin kokonaan Saksaan, eikä siellä juuri asunut puolankielistä väestöä; nykyinen puolalaisuus tuli vasta toisen maailmansodan jälkeen rajojen siirryttyä. Viinitarhat kärsivät 1900-luvulla sodista ja tuholaisista lähes sukupuuttoon, mutta harrastajat elvyttivät viininviljelyn uudelleen vuosikymmeniä sitten. Nykyään syyskuinen Winobranie on yhä kaupungin suurin juhla, ja se yhdistää saksalaisen viinikaupungin perinteen puolalaiseen nykyasukkaaseen tavalla, joka olisi 1800-luvulla tuntunut täysin mahdottomalta."
 
 **kuva:**
 ```
@@ -219,7 +219,7 @@ Galitsia.
 
 ### Silesian
 
-**pitka:** "Isoisän matkavuonna 1873 koko Euroopan talous horjui: Wienin pörssiromahdus keväällä 1873 päätti Saksan ja Itävallan yhdistymisen jälkeisen villin sijoitusbuumin, ja se tuntui rajusti myös Yläsleesian hiili- ja terästeollisuudessa, jonka tehtaisiin oli juuri kaadettu valtavia summia lainarahaa. Katowicen ympäristö oli tuolloin nopeasti kasvava teollisuusseutu, jonka työväestö tuli kylistä kaivoksiin ja masuuneihin - aivan toisenlaista elämää kuin nykyisen kaupungin toimistotornit ja konserttitalot. NOSPR-konserttitalon vieressä sijaitsee yhä vanha kaivostorni, jonka ympärille on rakennettu Sleesian museo maan alle louhittuihin tiloihin. Nykyään alueen hiilikaivoksia suljetaan yksi kerrallaan, ja Katowice yrittää tehdä samaa siirtymää kohti uutta taloutta, jota koko Eurooppa yritti epätoivoisesti löytää isoisän matkavuonna."
+**pitka:** "Keväällä 1873 koko Euroopan talous horjui, kun Wienin pörssiromahdus päätti Saksan ja Itävallan yhdistymisen jälkeisen villin sijoitusbuumin, ja se tuntui rajusti myös Yläsleesian hiili- ja terästeollisuudessa, jonka tehtaisiin oli juuri kaadettu valtavia summia lainarahaa. Katowicen ympäristö oli tuolloin nopeasti kasvava teollisuusseutu, jonka työväestö tuli kylistä kaivoksiin ja masuuneihin - aivan toisenlaista elämää kuin nykyisen kaupungin toimistotornit ja konserttitalot. NOSPR-konserttitalon vieressä sijaitsee yhä vanha kaivostorni, jonka ympärille on rakennettu Sleesian museo maan alle louhittuihin tiloihin. Nykyään alueen hiilikaivoksia suljetaan yksi kerrallaan, ja Katowice yrittää tehdä samaa siirtymää kohti uutta taloutta, jota koko Eurooppa yritti epätoivoisesti löytää samana keväänä 1873."
 
 **kuva:**
 ```
@@ -235,7 +235,7 @@ Galitsia.
 
 ### Świętokrzyskie
 
-**pitka:** "Pyhänristinvuorten juurella, Nowa Słupian kylän liepeillä, on löydetty satoja muinaisia rautasulattouuneja, joissa jo roomalaisajalla poltettiin suoperäistä rautamalmia - alue oli antiikin Euroopan yksi suurimmista raudantuotantokeskuksista kauan ennen Puolan syntyä. Sama rautaperinne jatkui vuosisatoja, ja 1800-luvun alussa seutua kutsuttiin Vanhaksi Puolan teollisuusalueeksi, kun sinne rakennettiin valtion tuella masuuneja ja rautatehtaita. Isoisän matkavuoteen 1873 mennessä tämä vanha teollisuusalue oli kuitenkin jo taantumassa, koska uudet, tehokkaammat hiili- ja terästehtaat Yläsleesiassa veivät investoinnit ja työvoiman - alue kuului Venäjän Puolaan, jossa teollistuminen keskittyi nyt muualle. Nykyään entiset sulatot ovat museoita, ja vuoret houkuttelevat vaeltajia enemmän kuin kaivosmiehiä."
+**pitka:** "Pyhänristinvuorten juurella, Nowa Słupian kylän liepeillä, on löydetty satoja muinaisia rautasulattouuneja, joissa jo roomalaisajalla poltettiin suoperäistä rautamalmia - alue oli antiikin Euroopan yksi suurimmista raudantuotantokeskuksista kauan ennen Puolan syntyä. Sama rautaperinne jatkui vuosisatoja, ja 1800-luvun alussa seutua kutsuttiin Vanhaksi Puolan teollisuusalueeksi, kun sinne rakennettiin valtion tuella masuuneja ja rautatehtaita. Vuosisadan jälkipuoliskolla tämä vanha teollisuusalue oli kuitenkin jo taantumassa, koska uudet, tehokkaammat hiili- ja terästehtaat Yläsleesiassa veivät investoinnit ja työvoiman - alue kuului Venäjän Puolaan, jossa teollistuminen keskittyi nyt muualle. Nykyään entiset sulatot ovat museoita, ja vuoret houkuttelevat vaeltajia enemmän kuin kaivosmiehiä."
 
 **kuva:**
 ```
@@ -251,7 +251,7 @@ Galitsia.
 
 ### Opole
 
-**pitka:** "Isoisän matkavuonna 1873 Opolen maaseudulla kyläkoulujen opetuskieli vaihdettiin väkisin saksaksi, kun Preussin niin sanotut toukokuun lait ulottuivat myös tänne - samat lait, jotka isoisä olisi kohdannut Poznańin seudullakin, mutta täällä ne iskivät köyhään maalaisväestöön, joka puhui kotonaan sleesian murretta, ei aivan puolaa eikä aivan saksaa. Kaupunkilaiselämä oli tuolloin vaatimatonta verrattuna Poznańin messuvilinään; Opole eli enemmän ympäröivän maaseudun tahdissa kuin suurkaupunkina. Tuo kaksikielinen menneisyys näkyy yhä osassa kyliä, joissa kadunnimet on kirjoitettu kahdella kielellä. Nykyisin hiljaisuutta rikkoo kesäisin Puolan suurin iskelmäfestivaali, joka on kokoontunut Opoleen jo vuosikymmenten ajan ja tuo kaupunkiin enemmän väkeä kuin koskaan isoisän aikaan."
+**pitka:** "Samat toukokuun lait, jotka isoisä olisi kohdannut Poznańin seudullakin, ulottuivat vuonna 1873 myös Opolen maaseudulle, missä kyläkoulujen opetuskieli vaihdettiin väkisin saksaksi - täällä ne kuitenkin iskivät köyhään maalaisväestöön, joka puhui kotonaan sleesian murretta, ei aivan puolaa eikä aivan saksaa. Kaupunkilaiselämä oli tuolloin vaatimatonta verrattuna Poznańin messuvilinään; Opole eli enemmän ympäröivän maaseudun tahdissa kuin suurkaupunkina. Tuo kaksikielinen menneisyys näkyy yhä osassa kyliä, joissa kadunnimet on kirjoitettu kahdella kielellä. Nykyisin hiljaisuutta rikkoo kesäisin Puolan suurin iskelmäfestivaali, joka on kokoontunut Opoleen jo vuosikymmenten ajan ja tuo kaupunkiin enemmän väkeä kuin koskaan isoisän aikaan."
 
 **kuva:**
 ```

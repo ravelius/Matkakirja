@@ -13,7 +13,7 @@ Kuvat ladattu 1800 px leveydellä kansioon
 
 ### Sachsen
 
-**pitka:** "Dresden kylpee Elben rannalla barokkihuviloiden keskellä, ja kaupunkia kutsuttiin jo isoisän aikaan "Elbin Firenzeksi" upean arkkitehtuurinsa ansiosta. Vuonna 1873 Sachsen oli yhä oma kuningaskuntansa uuden Saksan keisarikunnan sisällä, ja kuningas Johann hallitsi juuri tästä kaupungista. Toisen maailmansodan pommitukset polttivat Frauenkirchen kirkon raunioiksi vuonna 1945, ja mustuneet kivet lojuivat kasassa lähes viisikymmentä vuotta ennen kuin kirkko rakennettiin uudelleen samoista kivistä 2005. Tumman ja vaalean kiven kuvio seinässä näkyy yhä matkailijoille todisteena siitä, mikä selvisi ja mikä rakennettiin uudestaan."
+**pitka:** "Dresden kylpee Elben rannalla barokkihuviloiden keskellä, ja kaupunkia kutsuttiin sen upean arkkitehtuurin ansiosta jo 1800-luvulla "Elbin Firenzeksi". Vuonna 1873 Sachsen oli yhä oma kuningaskuntansa uuden Saksan keisarikunnan sisällä, ja kuningas Johann hallitsi juuri tästä kaupungista. Toisen maailmansodan pommitukset polttivat Frauenkirchen kirkon raunioiksi vuonna 1945, ja mustuneet kivet lojuivat kasassa lähes viisikymmentä vuotta ennen kuin kirkko rakennettiin uudelleen samoista kivistä 2005. Tumman ja vaalean kiven kuvio seinässä näkyy yhä matkailijoille todisteena siitä, mikä selvisi ja mikä rakennettiin uudestaan."
 
 **kuva:**
 ```
@@ -31,7 +31,7 @@ Kuvat ladattu 1800 px leveydellä kansioon
 
 ### Bayern
 
-**pitka:** "Etelässä Alpit kohoavat Baijerin taustalla, ja juuri isoisän matkan aikaan kuningas Ludvig II rakennutti satulinnaansa Neuschwansteinia vuoresta toiseen. Portin rakennus valmistui juuri vuonna 1873, ja kuningas asui siellä jo ennen kuin koko linna oli valmis. Nykyään linna on Saksan suosituin nähtävyys, ja sen tornit ovat innoittaneet muun muassa Disneyn satulinnojen ulkonäköä. Baijerilaisuus näkyy yhä ylpeänä omana identiteettinä – murre, oluttarhat ja valkosinivalkoinen lippu erottavat sen selvästi muusta Saksasta."
+**pitka:** "Etelässä Alpit kohoavat Baijerin taustalla, ja kuningas Ludvig II rakennutti satulinnaansa Neuschwansteinia vuoresta toiseen 1870-luvulla. Juuri silloin, kun isoisä kulki Baijerissa, linnan portti valmistui, ja kuningas asui siellä jo ennen kuin koko linna oli valmis. Nykyään linna on Saksan suosituin nähtävyys, ja sen tornit ovat innoittaneet muun muassa Disneyn satulinnojen ulkonäköä. Baijerilaisuus näkyy yhä ylpeänä omana identiteettinä – murre, oluttarhat ja valkosinivalkoinen lippu erottavat sen selvästi muusta Saksasta."
 
 **kuva:**
 ```
@@ -49,7 +49,7 @@ Kuvat ladattu 1800 px leveydellä kansioon
 
 ### Rheinland-Pfalz
 
-**pitka:** "Trier on Saksan vanhin kaupunki, ja sen mustunut roomalainen kaupunginportti Porta Nigra on seissyt paikallaan lähes kaksituhatta vuotta. Kaupungissa syntyi myös Karl Marx vuonna 1818, ja hänen lapsuudenkotinsa on nykyään museo, jossa joka kolmas kävijä saapuu Kiinasta. Vuonna 2018 Kiina lahjoitti kaupungille yli viisi metriä korkean pronssipatsaan Marxista syntymän 200-vuotispäivän kunniaksi – lahja herätti kaupungissa kiivasta väittelyä. Isoisän matkan aikaan 1870-luvulla koko nykyinen Rheinland-Pfalz oli vielä pilkottu kolmen eri hallitsijan, Preussin, Baijerin ja Hessenin, kesken, eikä osavaltiota ollut olemassa."
+**pitka:** "Trier on Saksan vanhin kaupunki, ja sen mustunut roomalainen kaupunginportti Porta Nigra on seissyt paikallaan lähes kaksituhatta vuotta. Kaupungissa syntyi myös Karl Marx vuonna 1818, ja hänen lapsuudenkotinsa on nykyään museo, jossa joka kolmas kävijä saapuu Kiinasta. Vuonna 2018 Kiina lahjoitti kaupungille yli viisi metriä korkean pronssipatsaan Marxista syntymän 200-vuotispäivän kunniaksi – lahja herätti kaupungissa kiivasta väittelyä. Mosel-joki mutkittelee Trieristä pohjoiseen niin jyrkkien viinirinteiden välissä, että osa tarhoista joudutaan yhä hoitamaan pienillä raiteilla kulkevilla junilla, koska rinne on liian jyrkkä traktorille."
 
 **kuva:**
 ```
@@ -67,7 +67,7 @@ Kuvat ladattu 1800 px leveydellä kansioon
 
 ### Saarland
 
-**pitka:** "Saarin joki kiemurtelee jyrkän silmukan Mettlachin kohdalla – Saarschleife on alueen tunnetuin näköalapaikka ja vetää nykyään patikoijia joka puolelta Saksaa. Isoisän aikaan 1873 aluetta ei ollut olemassa yhtenäisenä: se oli pilkottu Preussin ja Baijerin kesken jo vuodesta 1815, ja hiili sekä teräs toivat seudulle nopeaa vaurautta ja väkeä naapurialueilta. Saarland liittyi nykyisessä muodossaan Saksaan vasta 1957, kansanäänestyksen jälkeen – ennen sitä alue oli sekä Kansainliiton hallinnassa että osa Ranskan talousaluetta. Siksi Saarbrückenissä tuntuu yhä ranskalaiselta, vaikka raja on nykyään vain viivalla kartalla."
+**pitka:** "Saarin joki kiemurtelee jyrkän silmukan Mettlachin kohdalla – Saarschleife on alueen tunnetuin näköalapaikka ja vetää nykyään patikoijia joka puolelta Saksaa. Alue on pinta-alaltaan Saksan pienimpiä osavaltioita, mutta hiili ja teräs tekivät siitä 1900-luvulla yllättävän vauraan teollisuusseudun, jonka kaivoskuilut ulottuivat kilometrikaupalla Ranskan rajan alle. Saarland liittyi nykyisessä muodossaan Saksaan vasta 1957, kansanäänestyksen jälkeen – ennen sitä alue oli sekä Kansainliiton hallinnassa että osa Ranskan talousaluetta. Siksi Saarbrückenissä tuntuu yhä ranskalaiselta, vaikka raja on nykyään vain viivalla kartalla."
 
 **kuva:**
 ```
@@ -103,7 +103,7 @@ Kuvat ladattu 1800 px leveydellä kansioon
 
 ### Niedersachsen
 
-**pitka:** "Lüneburgin nummi on laaja kanervikko, jolla harmaat nummilammaslaumat laiduntavat yhä syksyisin kanervan kukkiessa violettina silmänkantamattomiin. Hannover oli isoisän matkan aikaan vasta äskettäin liitetty Preussiin – kuningas Yrjö V menetti valtaistuimensa 1866 eikä koskaan hyväksynyt tappiotaan, vaan eli loppuelämänsä maanpaossa väittäen yhä olevansa Hannoverin laillinen hallitsija. Preussi takavarikoi kuninkaan omaisuuden niin sanottuun Welfenfondsiin, josta rahoitettiin salaa vastavakoilua Euroopassa vuosikymmeniä. Nykyään Hannover on messukaupunki ja Niedersachsenin pääkaupunki, ja nummen rauha ja tehtaiden humina elävät maakunnassa rinnakkain."
+**pitka:** "Lüneburgin nummi on laaja kanervikko, jolla harmaat nummilammaslaumat laiduntavat yhä syksyisin kanervan kukkiessa violettina silmänkantamattomiin. Kun isoisä kulki näillä main, Hannover oli vasta äskettäin liitetty Preussiin – kuningas Yrjö V menetti valtaistuimensa 1866 eikä koskaan hyväksynyt tappiotaan, vaan eli loppuelämänsä maanpaossa väittäen yhä olevansa Hannoverin laillinen hallitsija. Preussi takavarikoi kuninkaan omaisuuden niin sanottuun Welfenfondsiin, josta rahoitettiin salaa vastavakoilua Euroopassa vuosikymmeniä. Nykyään Hannover on messukaupunki ja Niedersachsenin pääkaupunki, ja nummen rauha ja tehtaiden humina elävät maakunnassa rinnakkain."
 
 **kuva:**
 ```
@@ -121,7 +121,7 @@ Kuvat ladattu 1800 px leveydellä kansioon
 
 ### Nordrhein-Westfalen
 
-**pitka:** "Kölnin tuomiokirkkoa rakennettiin isoisän matkan aikaan kesken – työt olivat olleet pysähdyksissä vuosisatoja, kunnes ne käynnistettiin uudelleen 1842 ja jatkuivat läpi koko 1870-luvun. Kirkko valmistui lopulta vasta 1880, yhteensä 632 vuoden rakennustyön jälkeen, ja siitä tuli hetkeksi maailman korkein rakennus. Nykyään kaksitorninen jättiläinen hallitsee yhä Kölnin siluettia, ja sen edustalla junat pysähtyvät suoraan päärautatieasemalle keskelle kaupunkia. Ruhrin alueella teollisuushistoria ja tuomiokirkon keskiaikainen kunnianhimo elävät rinnakkain saman osavaltion sisällä."
+**pitka:** "Kölnin tuomiokirkko oli yhä rakenteilla 1870-luvulla – työt olivat olleet pysähdyksissä vuosisatoja, kunnes ne käynnistettiin uudelleen 1842 ja jatkuivat läpi koko vuosikymmenen. Kirkko valmistui lopulta vasta 1880, yhteensä 632 vuoden rakennustyön jälkeen, ja siitä tuli hetkeksi maailman korkein rakennus. Nykyään kaksitorninen jättiläinen hallitsee yhä Kölnin siluettia, ja sen edustalla junat pysähtyvät suoraan päärautatieasemalle keskelle kaupunkia. Ruhrin alueella teollisuushistoria ja tuomiokirkon keskiaikainen kunnianhimo elävät rinnakkain saman osavaltion sisällä."
 
 **kuva:**
 ```
@@ -139,7 +139,7 @@ Kuvat ladattu 1800 px leveydellä kansioon
 
 ### Baden-Württemberg
 
-**pitka:** "Mustametsä eli Schwarzwald peittää osavaltion lounaiskulman, ja sen kylistä ovat lähtöisin sekä käkikellot että Schwarzwälder Kirschtorte -kakku, joka tunnetaan maailmalla nimellä Black Forest -kakku. Isoisän aikaan 1873 aluetta hallitsi kaksi eri valtiota, Württembergin kuningaskunta ja Badenin suurherttuakunta – nykyinen Baden-Württemberg syntyi vasta 1952, kun asukkaat äänestivät kansanäänestyksellä yhdistymisen puolesta ainoana osavaltiona koko Saksassa. Bodenjärvi rajaa osavaltiota etelässä, ja sen rannoilla Sveitsi, Itävalta ja Saksa kohtaavat saman veden äärellä. Autoteollisuuden rinnalla osavaltio on nykyään myös yksi Saksan suurimmista viinintuottajista."
+**pitka:** "Mustametsä eli Schwarzwald peittää osavaltion lounaiskulman, ja sen kylistä ovat lähtöisin sekä käkikellot että Schwarzwälder Kirschtorte -kakku, joka tunnetaan maailmalla nimellä Black Forest -kakku. Heidelbergissä sijaitsee Saksan vanhin yliopisto vuodelta 1386, ja kaupungin yllä kohoava linnaraunio on yksi maan romanttisimmista näkymistä – amerikkalainen kirjailija Mark Twain ihastui kaupunkiin niin, että omisti sille kokonaisen luvun matkakertomuksessaan. Bodenjärvi rajaa osavaltiota etelässä, ja sen rannoilla Sveitsi, Itävalta ja Saksa kohtaavat saman veden äärellä. Autoteollisuuden rinnalla osavaltio on nykyään myös yksi Saksan suurimmista viinintuottajista."
 
 **kuva:**
 ```
@@ -193,7 +193,7 @@ Kuvat ladattu 1800 px leveydellä kansioon
 
 ### Bremen
 
-**pitka:** "Bremenin satamakaupunki Bremerhaven oli 1800-luvulla Euroopan vilkkaimpia lähtöportteja Amerikkaan – yhteensä noin seitsemän miljoonaa ihmistä nousi täältä laivaan matkalla uuteen elämään vuosien 1830 ja 1971 välillä. Juuri isoisän matkan aikoihin 1870-luvulla lähtijöiden määrä oli suurimmillaan, kun Saksasta pakeni sekä köyhyyttä että sotien jälkiä. Nykyään entisen odotussalin paikalla toimii Saksan siirtolaismuseo, jossa voi hakea tietoja Amerikkaan lähteneistä sukulaisista tietokannoista. Bremenin ja Bremerhavenin satamat elävät yhä ulkomaankaupasta, vaikka matkustajat ovat vaihtuneet konteiksi."
+**pitka:** "Bremenin satamakaupunki Bremerhaven oli 1800-luvulla Euroopan vilkkaimpia lähtöportteja Amerikkaan – yhteensä noin seitsemän miljoonaa ihmistä nousi täältä laivaan matkalla uuteen elämään vuosien 1830 ja 1971 välillä. Lähtijöiden määrä oli suurimmillaan juuri 1870-luvulla, kun Saksasta pakeni sekä köyhyyttä että sotien jälkiä. Nykyään entisen odotussalin paikalla toimii Saksan siirtolaismuseo, jossa voi hakea tietoja Amerikkaan lähteneistä sukulaisista tietokannoista. Bremenin ja Bremerhavenin satamat elävät yhä ulkomaankaupasta, vaikka matkustajat ovat vaihtuneet konteiksi."
 
 **kuva:**
 ```
@@ -229,7 +229,7 @@ Kuvat ladattu 1800 px leveydellä kansioon
 
 ### Hessen
 
-**pitka:** "Frankfurt oli vielä vuoteen 1866 asti oma itsenäinen vapaakaupunkinsa, kunnes Preussi valtasi sen sotilaallisesti Saksan sisäisen sodan jälkeen – kaupungin vapaa lehdistö oli ärsyttänyt Preussia, ja tilaisuus tuli käyttöön. Isoisän matkan aikaan 1873 muisto menetetystä itsenäisyydestä oli vielä tuore, ja moni frankfurtilainen katsoi preussilaisia hallitsijoita nihkeästi. Satuja keränneet Grimmin veljekset kasvoivat Hessenissä, ja heidän kirjaamansa kansansadut – muun muassa Punahilkka ja Tuhkimo – tunnetaan nykyään ympäri maailmaa. Nykyisin Frankfurtin pilvenpiirtäjien varjossa Hessenin pienemmät kaupungit, kuten kylpyläkaupunki Wiesbaden, elävät rauhallisempaa elämää viinitarhojen keskellä."
+**pitka:** "Frankfurt oli vielä vuoteen 1866 asti oma itsenäinen vapaakaupunkinsa, kunnes Preussi valtasi sen sotilaallisesti Saksan sisäisen sodan jälkeen – kaupungin vapaa lehdistö oli ärsyttänyt Preussia, ja tilaisuus tuli käyttöön. Frankfurtilaiset ovat juoneet omenaviiniä eli Apfelweinia niin uskollisesti, että perinteisiä kapakoita kutsutaan yhä nimellä Apfelwein-Wirtschaft, ja juomaa tarjoillaan harmaista kivikannuista. Satuja keränneet Grimmin veljekset kasvoivat Hessenissä, ja heidän kirjaamansa kansansadut – muun muassa Punahilkka ja Tuhkimo – tunnetaan nykyään ympäri maailmaa. Nykyisin Frankfurtin pilvenpiirtäjien varjossa Hessenin pienemmät kaupungit, kuten kylpyläkaupunki Wiesbaden, elävät rauhallisempaa elämää viinitarhojen keskellä."
 
 **kuva:**
 ```
@@ -247,7 +247,7 @@ Kuvat ladattu 1800 px leveydellä kansioon
 
 ### Thüringen
 
-**pitka:** "Wartburgin linnassa Martti Luther käänsi Uuden testamentin saksaksi piileskellessään siellä 1500-luvulla, ja linna kohoaa yhä metsäisen mäen laella Eisenachin yllä. Weimarissa puolestaan Goethe ja Schiller loivat saksalaisen klassismin kulta-ajan, ja kaupungin pieni koko tekee sen kirjallisesta perinnöstä entistäkin vaikuttavamman. Isoisän aikaan koko Thüringeniä ei ollut olemassa yhtenä alueena – seutu oli pilkottu moneen pieneen herttuakuntaan, joista yksi, Sachsen-Coburg-Gotha, oli sukua Britannian kuningashuoneelle prinssi Albertin kautta. Nykyinen osavaltio syntyi vasta 1920, kun nämä pienet ruhtinaskunnat yhdistyivät yhdeksi Thüringeniksi."
+**pitka:** "Wartburgin linnassa Martti Luther käänsi Uuden testamentin saksaksi piileskellessään siellä 1500-luvulla, ja linna kohoaa yhä metsäisen mäen laella Eisenachin yllä. Weimarissa puolestaan Goethe ja Schiller loivat saksalaisen klassismin kulta-ajan, ja kaupungin pieni koko tekee sen kirjallisesta perinnöstä entistäkin vaikuttavamman. Thüringenin oma erikoisuus, Thüringer Rostbratwurst, on niin arvostettu, että sen valmistusohje mainitaan paikallisissa asiakirjoissa jo 1400-luvulta lähtien, ja EU myönsi makkaralle suojatun alkuperänimityksen vuonna 2003. Nykyinen osavaltio syntyi vasta 1920, kun alueen pienet ruhtinaskunnat yhdistyivät yhdeksi Thüringeniksi."
 
 **kuva:**
 ```
@@ -283,7 +283,7 @@ Kuvat ladattu 1800 px leveydellä kansioon
 
 ### Berlin
 
-**pitka:** "Berliinistä tuli 1871 tuoreen Saksan keisarikunnan pääkaupunki, ja seuraavat pari vuotta kaupunki eli railakasta rakennus- ja pörssibuumia, jota kutsutaan nimellä Gründerzeit – rahaa virtasi kaupunkiin Ranskalta saaduista sotakorvauksista. Juuri isoisän matkan vuonna 1873 buumi romahti pörssikriisiin, jota kutsutaan Gründerkrachiksi: toukokuussa osakekurssit vaipuivat joka puolella Eurooppaa, ja moni äkkirikastunut menetti omaisuutensa yhtä nopeasti kuin oli sen saanut. Nykyään entisistä tehdaskortteleista on tullut klubeja ja galleria-alueita, ja kaupungin yöelämä elää edelleen samasta rajattomasta energiasta. Berliini on ainoa osavaltio, joka on samalla myös kokonainen kaupunki – ja koko Saksan pääkaupunki jo toista kertaa historiassa."
+**pitka:** "Berliinistä tuli 1871 tuoreen Saksan keisarikunnan pääkaupunki, ja seuraavat pari vuotta kaupunki eli railakasta rakennus- ja pörssibuumia, jota kutsutaan nimellä Gründerzeit – rahaa virtasi kaupunkiin Ranskalta saaduista sotakorvauksista. Samana vuonna kun isoisä matkusti Eurooppaan, buumi romahti pörssikriisiin, jota kutsutaan Gründerkrachiksi: toukokuussa 1873 osakekurssit vaipuivat joka puolella Eurooppaa, ja moni äkkirikastunut menetti omaisuutensa yhtä nopeasti kuin oli sen saanut. Nykyään entisistä tehdaskortteleista on tullut klubeja ja galleria-alueita, ja kaupungin yöelämä elää edelleen samasta rajattomasta energiasta. Berliini on ainoa osavaltio, joka on samalla myös kokonainen kaupunki – ja koko Saksan pääkaupunki jo toista kertaa historiassa."
 
 **kuva:**
 ```

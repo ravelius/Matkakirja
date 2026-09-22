@@ -10,7 +10,7 @@ hyväksytyt tekstit ja kuvaobjektit sinne itse.
 
 ### Piemonte
 
-**pitka:** "Torino ei ole enää Italian pääkaupunki, mutta kaupunki ei ole koskaan lakannut rakentamasta itseään uudelleen: entiset tehdasalueet ovat nyt gallerioita, ja alppimaisema ympäröi katuja joka suunnasta. Isoisän matka-aikana 1870-luvun alussa Torino oli vasta pari vuotta aiemmin menettänyt pääkaupungin aseman Firenzelle, ja keskustassa kohosi yhä keskeneräisenä Mole Antonelliana – aiottu synagoga, jonka torni venyi vuosi vuodelta korkeammaksi kuin kukaan oli alun perin suunnitellut. Nykyään sama torni on kaupungin tunnusmerkki ja elokuvamuseo, ja sen huipulta näkee koko Alppien kaaren. Piemontelaisilla on säilynyt sama itsepäinen tarkkuus, jolla Cavour aikoinaan rakensi yhtenäistä Italiaa."
+**pitka:** "Torino ei ole enää Italian pääkaupunki, mutta kaupunki ei ole koskaan lakannut rakentamasta itseään uudelleen: entiset tehdasalueet ovat nyt gallerioita, ja alppimaisema ympäröi katuja joka suunnasta. Keskustassa kohosi vuosikymmenten ajan keskeneräisenä Mole Antonelliana – aiottu synagoga, jonka torni venyi vuosi vuodelta korkeammaksi kuin kukaan oli alun perin suunnitellut, ja rakennustyöt jatkuivat aina vuoteen 1889 asti. Nykyään sama torni on kaupungin tunnusmerkki ja elokuvamuseo, ja sen huipulta näkee koko Alppien kaaren. Piemontelaisilla on säilynyt sama itsepäinen tarkkuus, jolla Cavour aikoinaan rakensi yhtenäistä Italiaa."
 
 **kuva:**
 ```
@@ -34,7 +34,7 @@ jälkeen pääkaupunki siirtyi Firenzeen (en-Wikipedia "Turin").
 
 ### Lombardia
 
-**pitka:** "Milanon tuomiokirkko on ollut rakennustyömaa jo yli 600 vuotta, ja isoisän vieraillessa 1870-luvulla työt olivat yhä kesken – Napoleonin aikanaan tilaama julkisivu oli valmistunut jo vuosikymmeniä aiemmin, mutta tornit ja huiput nousivat vielä hitaasti, ja viimeiset yksityiskohdat valmistuivat vasta 1960-luvulla. Como-järven rannoilla kehrätään yhä silkkiä, perinne joka teki Lombardiasta 1800-luvulla Euroopan silkkiteollisuuden sydämen. Po-joen tasangolla kasvatetaan nykyään valtaosa Italian riisistä, ja moni tuttu risotto lähtee liikkeelle juuri näiltä pelloilta. Lombardialaisilla on maine sitkeästä työn kunnioituksesta, joka näkyy yhtä lailla tehtaissa kuin viljelysmailla."
+**pitka:** "Milanon tuomiokirkko on ollut rakennustyömaa jo yli 600 vuotta: Napoleonin aikanaan tilaama julkisivu valmistui jo 1800-luvun alussa, mutta tornit ja huiput nousivat vielä hitaasti vuosikymmenten ajan, ja viimeiset yksityiskohdat valmistuivat vasta 1960-luvulla. Como-järven rannoilla kehrätään yhä silkkiä, perinne joka teki Lombardiasta 1800-luvulla Euroopan silkkiteollisuuden sydämen. Po-joen tasangolla kasvatetaan nykyään valtaosa Italian riisistä, ja moni tuttu risotto lähtee liikkeelle juuri näiltä pelloilta. Lombardialaisilla on maine sitkeästä työn kunnioituksesta, joka näkyy yhtä lailla tehtaissa kuin viljelysmailla."
 
 **kuva:**
 ```
@@ -57,7 +57,7 @@ ovat vakiintuneita, laajasti dokumentoituja Lombardian elinkeinoja.
 
 ### Sicily
 
-**pitka:** "Sisilia liittyi Italian kuningaskuntaan vasta 1860, ja isoisän matka-aikaan haava oli yhä tuore: kuusi vuotta aiemmin Palermossa oli puhjennut viikon mittainen kapina uutta hallintoa vastaan, sillä moni sisilialainen koki Roomasta johdetun Italian yhtä vieraaksi kuin aiemman kuningaskunnan. Nykyään saarella eletään toisin: Agrigenton kreikkalaistemppelit ja Taorminan antiikin teatteri, jonka näyttämön takaa Etna kohoaa kuin kulissi, vetävät miljoonia matkailijoita vuosittain. Etnan juurella asuvat ihmiset ovat tottuneet elämään tulivuoren armoilla – kylät on rakennettu uudelleen useaan kertaan laavavirtojen jäljiltä, mutta kukaan ei haluaisi muuttaa pois. Saaren oma kieli ja ruokakulttuuri, arabivaikutteinen kuskus mukaan lukien, muistuttavat siitä, että Sisilia on aina katsonut yhtä paljon merelle kuin manner-Italiaan."
+**pitka:** "Sisilia liittyi Italian kuningaskuntaan vasta 1860, ja kun isoisä kulki saarella, haava oli yhä tuore: kuusi vuotta aiemmin Palermossa oli puhjennut viikon mittainen kapina uutta hallintoa vastaan, sillä moni sisilialainen koki Roomasta johdetun Italian yhtä vieraaksi kuin aiemman kuningaskunnan. Nykyään saarella eletään toisin: Agrigenton kreikkalaistemppelit ja Taorminan antiikin teatteri, jonka näyttämön takaa Etna kohoaa kuin kulissi, vetävät miljoonia matkailijoita vuosittain. Etnan juurella asuvat ihmiset ovat tottuneet elämään tulivuoren armoilla – kylät on rakennettu uudelleen useaan kertaan laavavirtojen jäljiltä, mutta kukaan ei haluaisi muuttaa pois. Saaren oma kieli ja ruokakulttuuri, arabivaikutteinen kuskus mukaan lukien, muistuttavat siitä, että Sisilia on aina katsonut yhtä paljon merelle kuin manner-Italiaan."
 
 **kuva:**
 ```
@@ -129,7 +129,7 @@ yliopistoteemaan.
 
 ### Sardegna
 
-**pitka:** "Sardiniaa hallitsevat maisemassa yli kolmetuhatta nuraghea, ainutlaatuisia pronssikautisia kivitorneja, joita ei löydy mistään muualta maailmasta – parhaiten säilynyt kokonaisuus on Baruminissa, UNESCON maailmanperintökohteessa. Isoisän matka-aikaan saaren lounaisosassa, Iglesiasin seudulla, oli käynnissä toisenlainen mullistus: 1860-luvulta lähtien kasvanut sinkin ja lyijyn kysyntä Euroopassa käynnisti kaivosbuumin, joka toi tuhansia työläisiä aiemmin syrjäisille vuorille. Nykyään vanhat kaivosalueet on muutettu geologis-historialliseksi puistoksi, jossa kävellään samoja tunneleita kuin 1800-luvun kaivosmiehet. Saarella puhutaan yhä omaa sardin kieltä, joka eroaa mantereen italiasta niin paljon, että moni pitää sitä pikemminkin latinan omana sisarkielenä kuin murteena."
+**pitka:** "Sardiniaa hallitsevat maisemassa yli kolmetuhatta nuraghea, ainutlaatuisia pronssikautisia kivitorneja, joita ei löydy mistään muualta maailmasta – parhaiten säilynyt kokonaisuus on Baruminissa, UNESCON maailmanperintökohteessa. Saaren lounaisosassa, Iglesiasin seudulla, oli 1800-luvun jälkipuoliskolla käynnissä toisenlainen mullistus: kasvanut sinkin ja lyijyn kysyntä Euroopassa käynnisti kaivosbuumin, joka toi tuhansia työläisiä aiemmin syrjäisille vuorille. Nykyään vanhat kaivosalueet on muutettu geologis-historialliseksi puistoksi, jossa kävellään samoja tunneleita kuin 1800-luvun kaivosmiehet. Saarella puhutaan yhä omaa sardin kieltä, joka eroaa mantereen italiasta niin paljon, että moni pitää sitä pikemminkin latinan omana sisarkielenä kuin murteena."
 
 **kuva:**
 ```
@@ -153,7 +153,7 @@ eurooppalaisen kysynnän myötä (camminominerariodisantabarbara.org
 
 ### Veneto
 
-**pitka:** "Veneto oli itävaltalaista aluetta vielä 1866, jolloin se liitettiin osaksi uutta Italian kuningaskuntaa kansanäänestyksellä – isoisän matka-aikaan siirtymä oli vain muutaman vuoden takainen tapahtuma. Yksi jäänne siitä ajasta elää yhä joka baaripöydässä: tapa lisätä paikalliseen viiniin roiske soodavettä syntyi 1800-luvulla, kun alueella liikkuneet itävaltalaiset upseerit pitivät venetolaisia viinejä liian raskaina – tästä kehittyi vuosikymmenten saatossa nykyinen spritz. Verona vetää nykyään rakastavaisia Julian parvekkeelle Shakespearen näytelmän innoittamana, vaikka tarina on täysin kuvitteellinen. Padovan ja Vicenzan ympäristössä seisoo yhä satoja Palladion suunnittelemia huviloita, jotka ovat innoittaneet arkkitehtuuria ympäri maailmaa aina Yhdysvaltain Valkoiseen taloon asti."
+**pitka:** "Veneto oli itävaltalaista aluetta vielä 1866, jolloin se liitettiin osaksi uutta Italian kuningaskuntaa kansanäänestyksellä; isoisän saapuessa alueelle siirtymästä oli kulunut vasta muutama vuosi. Yksi jäänne siitä ajasta elää yhä joka baaripöydässä: tapa lisätä paikalliseen viiniin roiske soodavettä syntyi 1800-luvulla, kun alueella liikkuneet itävaltalaiset upseerit pitivät venetolaisia viinejä liian raskaina – tästä kehittyi vuosikymmenten saatossa nykyinen spritz. Verona vetää nykyään rakastavaisia Julian parvekkeelle Shakespearen näytelmän innoittamana, vaikka tarina on täysin kuvitteellinen. Padovan ja Vicenzan ympäristössä seisoo yhä satoja Palladion suunnittelemia huviloita, jotka ovat innoittaneet arkkitehtuuria ympäri maailmaa aina Yhdysvaltain Valkoiseen taloon asti."
 
 **kuva:**
 ```
@@ -203,7 +203,7 @@ ohjeen mukaisesti).
 
 ### Lazio
 
-**pitka:** "Rooma oli isoisän matka-aikaan vielä tuore pääkaupunki: kaupunki liitettiin Italian kuningaskuntaan vasta 1870, kun Porta Pian muurinsärkijät avasivat tien paavin valtion viimeiseen linnakkeeseen, ja pääkaupunki siirtyi Firenzestä Roomaan vasta 1871 – pari vuotta ennen isoisän vierailua. Vatikaani jäi silti paavin omaksi alueeksi, eikä paavi tunnustanut uutta Italian valtiota vuosikymmeniin. Rooman ulkopuolella Lazion maaseutu, Tuscia, kätkee muun muassa Bolsena-järven ja hiljaisia kyliä, jotka elävät viinistä ja hasselpähkinöistä kaukana turistivirroista. Nykyään suurin osa Lazion asukkaista asuu pääkaupunkiseudulla, mutta maaseudun rauhallisempi tahti on säilynyt lähes koskemattomana."
+**pitka:** "Kun isoisä saapui Roomaan, kaupunki oli ollut Italian pääkaupunki vasta pari vuotta: se liitettiin kuningaskuntaan 1870, kun Porta Pian muurinsärkijät avasivat tien paavin valtion viimeiseen linnakkeeseen, ja pääkaupunki siirtyi Firenzestä Roomaan 1871. Vatikaani jäi silti paavin omaksi alueeksi, eikä paavi tunnustanut uutta Italian valtiota vuosikymmeniin. Rooman ulkopuolella Lazion maaseutu, Tuscia, kätkee muun muassa Bolsena-järven ja hiljaisia kyliä, jotka elävät viinistä ja hasselpähkinöistä kaukana turistivirroista. Nykyään suurin osa Lazion asukkaista asuu pääkaupunkiseudulla, mutta maaseudun rauhallisempi tahti on säilynyt lähes koskemattomana."
 
 **kuva:**
 ```
@@ -225,7 +225,7 @@ murron jälkeen 20.9.1870, ja pääkaupunki siirtyi Firenzestä Roomaan 1871
 
 ### Trentino-Alto Adige
 
-**pitka:** "Isoisän matka-aikaan koko tämä alue kuului Itävalta-Unkariin, ei Italiaan – raja kulki tuolloin aivan toisin, ja Trentino sekä Etelä-Tiroli liitettiin Italiaan vasta ensimmäisen maailmansodan jälkeen, Saint-Germainin rauhansopimuksella 1919. Se selittää, miksi saksa on täällä yhä arkikieli eikä vain matkailujuttu. Vuonna 1991 jäätiköltä löytyi Ötzi, yli 5300 vuotta vanha muumioitunut mies, joka oli maannut jäässä juuri nykyisen Italian ja Itävallan rajan tuntumassa – hänet on nähtävissä Bolzanon arkeologisessa museossa. Dolomiittien hammastetut huiput ovat UNESCOn maailmanperintökohde, ja alueen erillinen historia näkyy yhä kylissä, joiden nimet vaihtuvat saksasta italiaksi kunnasta toiseen."
+**pitka:** "Kun isoisä kulki näillä main, koko alue kuului vielä Itävalta-Unkariin, ei Italiaan – raja kulki tuolloin aivan toisin, ja Trentino sekä Etelä-Tiroli liitettiin Italiaan vasta ensimmäisen maailmansodan jälkeen, Saint-Germainin rauhansopimuksella 1919. Se selittää, miksi saksa on täällä yhä arkikieli eikä vain matkailujuttu. Vuonna 1991 jäätiköltä löytyi Ötzi, yli 5300 vuotta vanha muumioitunut mies, joka oli maannut jäässä juuri nykyisen Italian ja Itävallan rajan tuntumassa – hänet on nähtävissä Bolzanon arkeologisessa museossa. Dolomiittien hammastetut huiput ovat UNESCOn maailmanperintökohde, ja alueen erillinen historia näkyy yhä kylissä, joiden nimet vaihtuvat saksasta italiaksi kunnasta toiseen."
 
 **kuva:**
 ```
@@ -250,10 +250,17 @@ on esillä Bolzanon arkeologisessa museossa (yleisesti dokumentoitu).
 ## Yhteenveto
 
 10/10 aluetta valmiina: pitka-teksti (Livian äänellä, 4 virkettä per
-alue, ei toistoa lyhyt-kentän kanssa, 1873-kytkös mukana kun aito
-löytyi — Piemonte, Lombardia, Sicily, Toscana, Sardegna, Veneto, Lazio ja
-Trentino-Alto Adige; Emilia-Romagna ja Apulia ilman keksittyä kytköstä)
-ja kuva (osoite, lahde, tekija, lahdeUrl, lisenssi, lisenssiUrl) kaikille.
+alue, ei toistoa lyhyt-kentän kanssa). Fablen laatutarkastuksen
+(22.9.2026) jälkeen 1873/isoisä-kytkös on jätetty enintään puoleen
+alueista ja muotoiltu vaihtelevasti, ettei "isoisän matkavuonna 1873"
+-kaava toistu identtisenä: kytkös säilyy Toscanassa, Sicilyssä,
+Venetossa, Laziossa ja Trentino-Alto Adigessa (vahvimmat, konkreettiset
+tapahtumat — Firenzen pääkaupunkikausi 1865–71, Rooman liittäminen
+1870/pääkaupungiksi 1871, Trentino oli vielä Itävaltaa). Piemonte,
+Lombardia ja Sardegna kirjoitettiin kokonaan uusiksi ilman kytköstä
+(sama pituus, toinen konkreettinen yksityiskohta tilalla); Emilia-Romagna
+ja Apulia olivat jo ennestään ilman keksittyä kytköstä.
+Kuva (osoite, lahde, tekija, lahdeUrl, lisenssi, lisenssiUrl) kaikille.
 Kaikki kuvat ladattu 1800 px leveydellä kansioon
 `/Users/samireivinen/Matkakirja-nostot-kuvat/maakunnat/ITA/kuvat/`, ja
 osoitteet on muodostettu ladatun tiedoston sha256-tiivisteen 8

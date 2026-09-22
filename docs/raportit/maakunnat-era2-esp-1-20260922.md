@@ -92,7 +92,7 @@ HUOM Fablelle: tämä on raportti, ei suoraan koodiin viety muutos.
 
 ### Cataluña
 
-**pitka:** "Barcelonan kaupunkikuvaa hallitsee Antoni Gaudín keskeneräinen Sagrada Família -basilika, jota on rakennettu jo yli 140 vuotta ja jonka on määrä valmistua vasta 2020-luvulla. Katalonian kieli ja kulttuuri elävät vahvoina koulussa, kadulla ja mediassa, ja alueen identiteetti on aina ollut vahvasti omaehtoinen. Isoisän matkavuonna 1873 tuo omaehtoisuus nousi Espanjan huipulle asti: barcelonalainen Francesc Pi i Margall toimi lyhytaikaisen ensimmäisen tasavallan presidenttinä ja ajoi koko maalle liittovaltiomallia, jossa Katalonia olisi saanut laajan itsehallinnon. Hänen hallituksensa kaatui vielä samana vuonna, mutta ajatus elää yhä katalonialaisessa politiikassa."
+**pitka:** "Barcelonan kaupunkikuvaa hallitsee Antoni Gaudín keskeneräinen Sagrada Família -basilika, jota on rakennettu jo yli 140 vuotta ja jonka on määrä valmistua vasta 2020-luvulla. Katalonian kieli ja kulttuuri elävät vahvoina koulussa, kadulla ja mediassa, ja alueen identiteetti on aina ollut vahvasti omaehtoinen. Vuonna 1873 – samana vuonna kun isoisä matkasi maassa – tuo omaehtoisuus nousi Espanjan huipulle asti: barcelonalainen Francesc Pi i Margall toimi lyhytaikaisen ensimmäisen tasavallan presidenttinä ja ajoi koko maalle liittovaltiomallia, jossa Katalonia olisi saanut laajan itsehallinnon. Hänen hallituksensa kaatui vielä saman vuoden aikana, mutta ajatus elää yhä katalonialaisessa politiikassa."
 
 **kuva:**
 ```
@@ -156,7 +156,7 @@ HUOM Fablelle: tämä on raportti, ei suoraan koodiin viety muutos.
 
 ### Murcia
 
-**pitka:** "Murcian rannikolla makaa Mar Menor, Euroopan suurin rannikkolaguuni, jonka lämmin ja suolainen vesi houkuttelee sekä lomailijoita että flamingoja. Alueen kaivoskaupunki Cartagena kaivoi vuosisatojen ajan hopeaa, lyijyä ja sinkkiä, ja raskas työ synnytti oman musiikkilajinsa, cante de las minas -kaivoslaulun. Isoisän matkavuonna 1873 juuri Cartagena nousi koko Espanjan tasavallan vastarinnan symboliksi: kaupunki julistautui omaksi itsenäiseksi 'kantonikseen' ja kesti hallituksen joukkojen piirityksen puoli vuotta, kunnes antautui vasta tammikuussa 1874 – pisimpään kestänyt kapinapesäke koko maassa."
+**pitka:** "Murcian rannikolla makaa Mar Menor, Euroopan suurin rannikkolaguuni, jonka lämmin ja suolainen vesi houkuttelee sekä lomailijoita että flamingoja. Alueen kaivoskaupunki Cartagena kaivoi vuosisatojen ajan hopeaa, lyijyä ja sinkkiä, ja raskas työ synnytti oman musiikkilajinsa, cante de las minas -kaivoslaulun. Vuonna 1873 juuri Cartagena nousi koko Espanjan tasavallan vastarinnan symboliksi: kaupunki julistautui omaksi itsenäiseksi 'kantonikseen' ja kesti hallituksen joukkojen piirityksen puoli vuotta, kunnes antautui vasta tammikuussa 1874 – pisimpään kestänyt kapinapesäke koko maassa."
 
 **kuva:**
 ```

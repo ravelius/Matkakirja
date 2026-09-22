@@ -27,7 +27,7 @@ Kaikki kuvat läpäisivät työkalun lisenssitarkistuksen (OK: PD/CC0/CC-BY/CC-B
 
 ### Grand Est
 
-**pitka:** "Alsace on kahden kulttuurin risteyskohta: ristikkoseinäiset talot, viinitiet ja saksankin kaikuva murre elävät rinta rinnan ranskan kanssa. Vuonna 1871 alue irrotettiin Ranskasta osaksi Saksan keisarikuntaa, ja kun isoisä matkusti Eurooppaan 1873, Strasbourg ei ollut enää Ranskaa – kaupunki palasi takaisin vasta ensimmäisen maailmansodan jälkeen 1918. Katedraalin juurelta alkavat kanavat kiertävät Petite Francen ristikkotaloja, joiden alakerroissa toimi ennen parkitsijoita ja mylläreitä. Nykyään alueen viinitie kulkee kylästä toiseen Vogeesien juurella, ja moni kylä pitää kylttiinsä yhä sekä ranskan- että saksankielisen nimen."
+**pitka:** "Alsace on kahden kulttuurin risteyskohta: ristikkoseinäiset talot, viinitiet ja saksankin kaikuva murre elävät rinta rinnan ranskan kanssa. Vuonna 1871 alue irrotettiin Ranskasta osaksi Saksan keisarikuntaa, ja kaksi vuotta myöhemmin, isoisän kulkiessa halki Euroopan, Strasbourg oli yhä osa Saksaa – kaupunki palasi Ranskalle vasta ensimmäisen maailmansodan jälkeen 1918. Katedraalin juurelta alkavat kanavat kiertävät Petite Francen ristikkotaloja, joiden alakerroissa toimi ennen parkitsijoita ja mylläreitä. Nykyään alueen viinitie kulkee kylästä toiseen Vogeesien juurella, ja moni kylä pitää kylttiinsä yhä sekä ranskan- että saksankielisen nimen."
 
 **kuva:**
 ```
@@ -43,7 +43,7 @@ Kaikki kuvat läpäisivät työkalun lisenssitarkistuksen (OK: PD/CC0/CC-BY/CC-B
 
 ### Provence-Alpes-Côte d'Azur
 
-**pitka:** "Alppien rinteet syöksyvät täällä suoraan Välimereen, ja rannikon kaupungeissa Marseillesta Cannesiin eletään edelleen meren tuomasta vilkkaudesta ja matkailusta. Brittiläinen yläluokka löysi Nizzan talvikohteeksi jo 1800-luvun alussa, ja isoisän matkan aikaan, 1870-luvulla, kaupunki oli jo vakiinnuttanut asemansa englantilaisten suosikkina pakona kotisaaren kylmyydeltä. Sisämaassa laventelipellot maalaavat kesällä kokonaisia laaksoja violetiksi, ja kalliokylät kuten Gordes kiipeävät yhä vuorenrinteille keskiajalta asti lähes muuttumattomina. Meri ja vuoret asuvat täällä niin lähekkäin, että aamulla voi hiihtää Alpeilla ja iltapäivällä uida Välimeressä."
+**pitka:** "Alppien rinteet syöksyvät täällä suoraan Välimereen, ja rannikon kaupungeissa Marseillesta Cannesiin eletään edelleen meren tuomasta vilkkaudesta ja matkailusta. Brittiläinen yläluokka löysi Nizzan talvikohteeksi jo 1800-luvun alussa, ja se rahoitti kaupunkiin rantabulevardin, Promenade des Anglais'n, joka kantaa yhä heidän nimeään. Sisämaassa laventelipellot maalaavat kesällä kokonaisia laaksoja violetiksi, ja kalliokylät kuten Gordes kiipeävät yhä vuorenrinteille keskiajalta asti lähes muuttumattomina. Meri ja vuoret asuvat täällä niin lähekkäin, että aamulla voi hiihtää Alpeilla ja iltapäivällä uida Välimeressä."
 
 **kuva:**
 ```
@@ -75,7 +75,7 @@ Kaikki kuvat läpäisivät työkalun lisenssitarkistuksen (OK: PD/CC0/CC-BY/CC-B
 
 ### Nouvelle-Aquitaine
 
-**pitka:** "Bordeaux'n ympärillä leviävät maailman kuuluisimmat viinitilat, kuten Haut-Brion, ja Atlantin rannikolla kohoaa Euroopan korkein hiekkadyyni, Dune du Pilat, lähes 110 metrin korkeuteen. Isoisän matkan aikoihin, 1870-luvulla, alueen viinitarhoja koetteli vakava kriisi: Amerikasta levinnyt lehtitäi phylloxera tuhosi köynnöksiä juurista asti, ja koko Bordeaux'n viininviljely oli vaarassa kadota kokonaan, ennen kuin pelastus löytyi amerikkalaisiin juurakkoihin varttamisesta. Etelämpänä Baskimaan vuoret laskeutuvat suoraan surffirannoille, ja Biarritzin aallot vetävät nykyään lautailijoita ympäri maailmaa. Ostereita kasvatetaan Arcachonin lahdella samaan tapaan kuin sata vuotta sitten, vain veneet ovat vaihtuneet moottorikäyttöisiksi."
+**pitka:** "Bordeaux'n ympärillä leviävät maailman kuuluisimmat viinitilat, kuten Haut-Brion, ja Atlantin rannikolla kohoaa Euroopan korkein hiekkadyyni, Dune du Pilat, lähes 110 metrin korkeuteen. Juuri silloin, 1870-luvulla, alueen viinitarhoja koetteli vakava kriisi: Amerikasta levinnyt lehtitäi phylloxera tuhosi köynnöksiä juurista asti, ja koko Bordeaux'n viininviljely oli vaarassa kadota kokonaan, ennen kuin pelastus löytyi amerikkalaisiin juurakkoihin varttamisesta. Etelämpänä Baskimaan vuoret laskeutuvat suoraan surffirannoille, ja Biarritzin aallot vetävät nykyään lautailijoita ympäri maailmaa. Ostereita kasvatetaan Arcachonin lahdella samaan tapaan kuin sata vuotta sitten, vain veneet ovat vaihtuneet moottorikäyttöisiksi."
 
 **kuva:**
 ```
@@ -91,7 +91,7 @@ Kaikki kuvat läpäisivät työkalun lisenssitarkistuksen (OK: PD/CC0/CC-BY/CC-B
 
 ### Occitanie
 
-**pitka:** "Toulousen vaaleanpunaiset tiilitalot antoivat kaupungille lempinimen ville rose, ja pohjoisessa alkaa Ranskan vanha kanavaverkosto, Canal du Midi, joka yhdisti Atlantin ja Välimeren jo 1600-luvulla. Etelässä keskiaikainen Carcassonnen linnoituskaupunki oli isoisän aikaan juuri kokemassa suuren muodonmuutoksen: arkkitehti Viollet-le-Duc oli 1850-luvulta lähtien restauroinut rappeutuneita muureja ja torneja, ja työt jatkuivat vielä 1870-luvulla – ilman niitä koko linnoitus olisi saattanut jäädä raunioksi. Nykyään Carcassonnen kaksinkertaiset muurit ja 52 tornia näkyvät kauas Aude-joen laaksoon, ja illalla valaistu linnoitus näyttää suoraan satukirjasta pudonneelta. Pyreneiden rinteillä ja Välimeren rannalla eletään yhä leppoisaa eteläistä elämänmenoa, jossa oksitaanin kieli kuuluu yhä toreilla ranskan rinnalla."
+**pitka:** "Toulousen vaaleanpunaiset tiilitalot antoivat kaupungille lempinimen ville rose, ja pohjoisessa alkaa Ranskan vanha kanavaverkosto, Canal du Midi, joka yhdisti Atlantin ja Välimeren jo 1600-luvulla. Etelässä keskiaikainen Carcassonnen linnoituskaupunki kantaa nimensä vanhasta legendasta: piiritetty Dame Carcas soitti tarun mukaan voitonkelloja antautumisen sijaan, ja ilmauksen 'Carcas sonne' – Carcas soittaa kelloa – kerrotaan jääneen elämään kaupungin nimessä. Nykyään Carcassonnen kaksinkertaiset muurit ja 52 tornia näkyvät kauas Aude-joen laaksoon, ja illalla valaistu linnoitus näyttää suoraan satukirjasta pudonneelta. Pyreneiden rinteillä ja Välimeren rannalla eletään yhä leppoisaa eteläistä elämänmenoa, jossa oksitaanin kieli kuuluu yhä toreilla ranskan rinnalla."
 
 **kuva:**
 ```
@@ -107,7 +107,7 @@ Kaikki kuvat läpäisivät työkalun lisenssitarkistuksen (OK: PD/CC0/CC-BY/CC-B
 
 ### Bourgogne-Franche-Comté
 
-**pitka:** "Bourgognen kukkuloilla kasvaa maailman arvostetuimpia viinitarhoja, ja idempänä Jura-vuorten metsäiset ylängöt ruokkivat karjaa, jonka maidosta seudun juustomestarit valmistavat kuuluisia juustojaan. Besançonin kaupunkia suojaa jokikäänteeseen rakennettu Vaubanin linnoitus, ja isoisän matkan kynnyksellä, tammikuussa 1871, juuri tältä seudulta kulki Ranskan itäisen armeijan katkera vetäytyminen: kenraali Bourbakin nälkiintyneet joukot pakenivat lopulta Sveitsiin, saksalaisjoukkojen ajamina pakkasessa. Kaupungin toinen maine liittyy tarkkuuteen: Besançon on ollut 1700-luvulta asti Ranskan kellosepäntaidon keskus, ja perinne elää yhä pienissä verstaissa. Maaseudulla lehmät laiduntavat samoilla niityillä, jotka ovat ruokkineet juustomestareita sukupolvien ajan."
+**pitka:** "Bourgognen kukkuloilla kasvaa maailman arvostetuimpia viinitarhoja, ja idempänä Jura-vuorten metsäiset ylängöt ruokkivat karjaa, jonka maidosta seudun juustomestarit valmistavat kuuluisia juustojaan. Besançonin kaupunkia suojaa jokikäänteeseen rakennettu Vaubanin linnoitus, ja tammikuussa 1871, pari vuotta ennen kuin isoisä itse saapui seudulle, juuri täältä kulki Ranskan itäisen armeijan katkera vetäytyminen: kenraali Bourbakin nälkiintyneet joukot pakenivat lopulta Sveitsiin, saksalaisjoukkojen ajamina pakkasessa. Kaupungin toinen maine liittyy tarkkuuteen: Besançon on ollut 1700-luvulta asti Ranskan kellosepäntaidon keskus, ja perinne elää yhä pienissä verstaissa. Maaseudulla lehmät laiduntavat samoilla niityillä, jotka ovat ruokkineet juustomestareita sukupolvien ajan."
 
 **kuva:**
 ```
@@ -139,7 +139,7 @@ Kaikki kuvat läpäisivät työkalun lisenssitarkistuksen (OK: PD/CC0/CC-BY/CC-B
 
 ### Bretagne
 
-**pitka:** "Rannikko on täynnä graniittikallioita ja pieniä satamakyliä, joissa kalastajaveneet tuovat yhä päivittäin saaliin suoraan torille. Carnacin lähellä seisoo yli kolmetuhatta esihistoriallista seisovaa kiveä riveissä, joiden tarkoitusta ei tiedetä varmasti vieläkään – ne olivat paikoillaan jo tuhansia vuosia ennen isoisän syntymää. 1870-luvulla Bretagnen etelärannikon sardiiniteollisuus oli jo vahvassa kasvussa, kun Douarnenezin kaltaisissa kaupungeissa säilyketehtaat pakkasivat saaliin tölkkeihin ja työllistivät tuhansia rannikon naisia. Nykyään Bretagnen oma kieli ja musiikki elävät vahvana, ja galettien lisäksi alueen ylpeys on sen ranskasta erillinen kelttiläinen identiteetti."
+**pitka:** "Rannikko on täynnä graniittikallioita ja pieniä satamakyliä, joissa kalastajaveneet tuovat yhä päivittäin saaliin suoraan torille. Carnacin lähellä seisoo yli kolmetuhatta esihistoriallista seisovaa kiveä riveissä, joiden tarkoitusta ei tiedetä varmasti vieläkään – osa kivistä painaa yli kolmekymmentä tonnia, ja niiden pystyttämiseen tarvittu työmäärä hämmästyttää arkeologeja yhä. Bretagnen rannikolla on enemmän majakoita kuin missään muualla Ranskassa, ja aallokon runtelemalla Finistèren kärjellä ne opastavat yhä laivoja kivikkoisten saarten ja karien välistä. Nykyään Bretagnen oma kieli ja musiikki elävät vahvana, ja galettien lisäksi alueen ylpeys on sen ranskasta erillinen kelttiläinen identiteetti."
 
 **kuva:**
 ```
@@ -171,7 +171,7 @@ Kaikki kuvat läpäisivät työkalun lisenssitarkistuksen (OK: PD/CC0/CC-BY/CC-B
 
 ### Corse
 
-**pitka:** "Saaren sisäosissa tuoksuva pensaikko, maquis, peittää kesäisin rinteet niin vahvana, että tuoksu kantautuu merelle asti – Napoleonin kerrotaan tunnistaneen kotisaarensa hajusta jo ennen kuin sitä näki. Bonifacion vanha kaupunki on rakennettu kalkkikivijyrkänteen reunalle niin tarkasti, että osa taloista näyttää roikkuvan tyhjän päällä; kaupungin alle louhitut Aragonian kuninkaan portaat johtivat aikoinaan makean veden lähteelle asti. Korsika on Napoleon-suvun alkukoti, ja isoisän matkan aikaan suvun viimeinen hallitsija, keisari Napoleon III, oli kaatunut vasta kolme vuotta aiemmin, 1870 – saaren bonapartistinen ylpeys eli silti pitkään sen jälkeenkin. Vuoristokylissä paimentolaisperinne ja kastanjaviljely muovaavat yhä arkea, vaikka rannikon lomakaupungit täyttyvät kesäisin purjeveneistä."
+**pitka:** "Saaren sisäosissa tuoksuva pensaikko, maquis, peittää kesäisin rinteet niin vahvana, että tuoksu kantautuu merelle asti – Napoleonin kerrotaan tunnistaneen kotisaarensa hajusta jo ennen kuin sitä näki. Bonifacion vanha kaupunki on rakennettu kalkkikivijyrkänteen reunalle niin tarkasti, että osa taloista näyttää roikkuvan tyhjän päällä; kaupungin alle louhitut Aragonian kuninkaan portaat johtivat aikoinaan makean veden lähteelle asti. Korsika on Napoleon-suvun alkukoti, ja suvun viimeinen hallitsija, keisari Napoleon III, oli kaatunut vallasta vuonna 1870 – vain kolme vuotta ennen isoisän omaa matkaa – ja saaren bonapartistinen ylpeys eli silti pitkään sen jälkeenkin. Vuoristokylissä paimentolaisperinne ja kastanjaviljely muovaavat yhä arkea, vaikka rannikon lomakaupungit täyttyvät kesäisin purjeveneistä."
 
 **kuva:**
 ```
@@ -203,7 +203,7 @@ Kaikki kuvat läpäisivät työkalun lisenssitarkistuksen (OK: PD/CC0/CC-BY/CC-B
 
 ### Île-de-France
 
-**pitka:** "Pariisi oli isoisän matkan aikaan vasta toipumassa: kaupunki oli juuri kestänyt preussilaisten piirityksen ja Pariisin kommuunin verisen kukistamisen 1871, ja vuonna 1873, kun isoisä matkusti, tasavallan ensimmäinen presidentti Adolphe Thiers oli juuri eronnut ja valtaa piti marsalkka MacMahon – nuori tasavalta oli yhä hauras. Keskustan leveät bulevardit ovat edelleen paroni Haussmannin 1850–60-luvuilla suunnittelemia, ja niiden kahviloissa istutaan yhä samaan tyyliin kuin silloin. Versailles'n palatsi seisoo muutaman junapysäkin päässä pääkaupungista, ja sen peilisali muistuttaa ajasta, jolloin kuninkaat hallitsivat koko Eurooppaa täältä käsin. Pariisin ympärille kasvanut esikaupunkien rengas on nykyään yksi Euroopan moninaisimmista alueista, täynnä kieliä ja keittiöitä ympäri maailmaa."
+**pitka:** "Vuonna 1873 Pariisi oli vasta toipumassa: kaupunki oli juuri kestänyt preussilaisten piirityksen ja Pariisin kommuunin verisen kukistamisen 1871, tasavallan ensimmäinen presidentti Adolphe Thiers oli juuri eronnut ja valtaa piti marsalkka MacMahon – nuori tasavalta oli yhä hauras. Keskustan leveät bulevardit ovat edelleen paroni Haussmannin 1850–60-luvuilla suunnittelemia, ja niiden kahviloissa istutaan yhä samaan tyyliin kuin silloin. Versailles'n palatsi seisoo muutaman junapysäkin päässä pääkaupungista, ja sen peilisali muistuttaa ajasta, jolloin kuninkaat hallitsivat koko Eurooppaa täältä käsin. Pariisin ympärille kasvanut esikaupunkien rengas on nykyään yksi Euroopan moninaisimmista alueista, täynnä kieliä ja keittiöitä ympäri maailmaa."
 
 **kuva:**
 ```

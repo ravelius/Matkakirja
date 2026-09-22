@@ -17,7 +17,7 @@ sha256 laskettu ladatuista tiedostoista.
 
 ### England
 
-**pitka:** "Englannin etelärannikolla kohoaa yhä kymmeniä viktoriaanisia huvilaitureita, ja Eastbournen 1000 metrin laituri valmistui lopullisesti vuonna 1872 – juuri kun isoisä pakkasi omaa matkalaukkuaan. Cotswoldsin kaltaisissa maaseutukylissä hunajanväriset kivitalot ja lammaslaitumet näyttävät samoilta kuin postikorteissa sata vuotta sitten, vaikka kylän pubi tarjoilee nykyään yhtä hyvin intialaista currya kuin perinteistä paistia. Pohjois-Englannin entiset tehdaskaupungit, kuten Manchester ja Leeds, ovat muuttaneet savupiippunsa konserttisaleiksi ja gallerioiksi, mutta rautatieasemien kellotornit muistuttavat yhä höyryn ajasta. Kesäisin rantakaupunkien laitureilla soi karuselli ja tuoksuu friteerattu kala – huvi, jonka isoisän sukupolvi keksi ja josta nykyinenkään ei ole kyllästynyt."
+**pitka:** "Englannin etelärannikolla kohoaa yhä kymmeniä viktoriaanisia huvilaitureita, kuten Eastbournen lähes tuhatmetrinen laituri, joka houkuttelee kävijöitä ympäri vuoden. Cotswoldsin kaltaisissa maaseutukylissä hunajanväriset kivitalot ja lammaslaitumet näyttävät samoilta kuin postikorteissa sata vuotta sitten, vaikka kylän pubi tarjoilee nykyään yhtä hyvin intialaista currya kuin perinteistä paistia. Pohjois-Englannin entiset tehdaskaupungit, kuten Manchester ja Leeds, ovat muuttaneet savupiippunsa konserttisaleiksi ja gallerioiksi, mutta rautatieasemien kellotornit muistuttavat yhä höyryn ajasta. Kesäisin rantakaupunkien laitureilla soi karuselli ja tuoksuu friteerattu kala – huvi, joka on pysynyt suosittuna sukupolvesta toiseen."
 
 **kuva:**
 ```
@@ -79,7 +79,7 @@ Kuva: Snowdonian (Yr Wyddfa) jäätikön muovaama vuoristomaisema
 
 ### Northern Ireland
 
-**pitka:** "Antrimin rannikolla kohoaa Pohjois-Irlannin ainoa Unescon maailmanperintökohde, Giant's Causeway eli Pirunpengertie, jonka noin 40 000 kuusikulmaista basalttipylvästä vetivät matkailijoita puoleensa jo isoisän aikaan – Causeway-hotelli oli avannut ovensa jo 1836, ja paikalliset oppaat kilpailivat vierailijoista vuosikymmeniä ennen vuotta 1873. Nykyään rannikkotietä kutsutaan Causeway Coastal Routeksi, ja sen mutkittelevat tiet houkuttelevat pyöräilijöitä ja moottoripyöräilijöitä ympäri vuoden. Moni tunnistaa alueen metsät ja lahdet myös suosituista tv-sarjoista, sillä Pohjois-Irlannin rannikko on toiminut kuvauspaikkana useille kansainvälisille tuotannoille. Pienissä satamakylissä paikalliset oppaat kertovat yhä tarinaa jättiläinen Finn MacCoolista, joka legendan mukaan rakensi pengertien päästäkseen Skotlantiin asti."
+**pitka:** "Antrimin rannikolla kohoaa Pohjois-Irlannin ainoa Unescon maailmanperintökohde, Giant's Causeway eli Pirunpengertie, jonka noin 40 000 kuusikulmaista basalttipylvästä on vetänyt matkailijoita puoleensa jo viktoriaaniselta ajalta lähtien – ensimmäinen Causeway-hotelli avasi ovensa jo vuonna 1836. Nykyään rannikkotietä kutsutaan Causeway Coastal Routeksi, ja sen mutkittelevat tiet houkuttelevat pyöräilijöitä ja moottoripyöräilijöitä ympäri vuoden. Moni tunnistaa alueen metsät ja lahdet myös suosituista tv-sarjoista, sillä Pohjois-Irlannin rannikko on toiminut kuvauspaikkana useille kansainvälisille tuotannoille. Pienissä satamakylissä paikalliset oppaat kertovat yhä tarinaa jättiläinen Finn MacCoolista, joka legendan mukaan rakensi pengertien päästäkseen Skotlantiin asti."
 
 **kuva:**
 ```
