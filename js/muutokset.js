@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2105, teksti: 'Korjaus: lepopiirto oletuksena pois' },
   { v: 2104, teksti: 'Korjaus: esikaannon sivuvirhe puretulla laatalla' },
   { v: 2103, teksti: 'Pulun karttapaikka' },
   { v: 2102, teksti: 'Sulavuus 11-12: yksi haivytysjono, atlas' },
