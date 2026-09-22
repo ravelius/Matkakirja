@@ -1355,3 +1355,7 @@ Pelikoodari (uusi sessio) 22.9.2026 klo 18.30: #2821:n viimeinen commit (viisi t
 ## LOYDOS 2: 'TARKKUUS LIIKKEESSA' -ASETUS EI OLE TUOTANNOSSA (COMMIT c60f4cec1 JAI #2785:N REBASESTA POIS); PALAUTUS OMANA PR:NA; JULKAISIJALLE SAANTO: PR:N HEAD == REBASATTU TIP ENNEN MERGEA (22.9.2026 klo 18.29)
 
 Pelikoodari 22.9.2026 klo 18.35: js/tarkkuus-asetus.js ja avain matkakirja-tarkkuus-liikkeessa eivät ole mainissa — sama rebase-kilpailu kuin #2821:ssä; muut suljetut pelikoodari-haarat ovat mainissa. Fable: Pelikoodari palauttaa asetuksen omana PR:nä #2825:n päälle; Julkaisijalle sääntö: juuri ennen mergeä fetch + vertaa PR:n headRefOid rebasattuun tippiin, muuten rebasaa uudestaan. Omistajalle: v2099:n 'Tarkkuus liikkeessä' -asetus ei siis ollut pelissä; tulee nyt.
+
+## PR #2827 PALAUTTAA 'TARKKUUS LIIKKEESSA' (#2825:N PAALLE); ALKUPERAINEN COMMIT OLISI KAATANUT PAGES-KAANNOKSEN (MODULES-LISTA) — KORJATTU; VALIKON JARJESTYS KARTTA → PIENI LIIKE → TARKKUUS LIIKKEESSA → VEDON SEURANTA (22.9.2026 klo 18.34)
+
+Pelikoodari 22.9.2026 klo 18.40: #2827 pinottu #2825:n päälle; js/tarkkuus-asetus.js lisätty build-standalonen MODULES-listaan (checkModuleList olisi heittänyt), otsikkoluokka ja rivileveys siistitty; 3956 testiä 0 punaista. Jono: #2826 (laattaosoitin 22c) → #2825 → #2827. Pelikoodari siirtyy kohtaan C.
