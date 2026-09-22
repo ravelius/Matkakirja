@@ -695,4 +695,267 @@ export const KOHTAAMISET = {
     tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
     tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
   },
+  /*
+   * Erä C4 (22.9.2026, docs/raportit/kohtaamiset-era-c4-20260922.md).
+   * Tallinnan kaari (KAARI_PAKETIT, 'tallinna') nimeää opas Leenan
+   * (raatihuoneen torni, vanhankaupungin päivät) — varattu kaaren omaan
+   * kohtaamiseen, ei kuvaa kummallekaan Tallinna-hahmolle vielä. 1873-
+   * fakta: ensimmäinen kaasulyhty Tallinnassa 17.12.1865, ~8 vuotta
+   * vanha uutuus isoisän matkan aikaan.
+   */
+  tallinna: {
+    hahmo: 'lyhdynsytyttäjä Miina',
+    nappi: 'Tapaa Miina',
+    frame: 'Miina nostaa tikapuut lyhdyn juurelle ja kysyy',
+    tervehdys: 'Miina nojaa tikapuihin ja sytyttää kaasulyhdyn liekin: '
+      + '"Isoisäsi aikaan nämä paloivat vasta kahdeksatta vuotta — '
+      + 'ennen sitä täällä oli vain öljyä ja pimeää. Näytä että tunnet '
+      + 'maailmaa kuten piirtäjä — niin kerron, montako lyhtyä minä '
+      + 'sytytän joka ilta."',
+    tervehdysLuenta: [
+      { rooli: 'kertoja', teksti: 'Miina nojaa tikapuihin ja sytyttää '
+        + 'kaasulyhdyn liekin:' },
+      { rooli: 'hahmo', teksti: '[curious] "Isoisäsi aikaan nämä '
+        + 'paloivat vasta kahdeksatta vuotta — ennen sitä täällä oli '
+        + 'vain öljyä ja pimeää. [warmly] Näytä että tunnet maailmaa '
+        + 'kuten piirtäjä — niin kerron, montako lyhtyä minä sytytän '
+        + 'joka ilta."' },
+    ],
+    loyto: 'Miina nostaa rasian lyhdyn juuresta valon kajossa: "Tämä '
+      + 'on maannut pimeässä kauemmin kuin yksikään lyhtyni on '
+      + 'palanut."',
+    loytoLuenta: [
+      { rooli: 'kertoja', teksti: 'Miina nostaa rasian lyhdyn '
+        + 'juuresta valon kajossa:' },
+      { rooli: 'hahmo', teksti: '[surprised] "Tämä on maannut '
+        + 'pimeässä kauemmin kuin yksikään lyhtyni on palanut."' },
+    ],
+    tyhja: 'Miina valaisee kolon lyhdyllään: "Tyhjä. Tätä katua on '
+      + 'siivottu niin monta kertaa, ettei mikään pysy kivien '
+      + 'välissä."',
+    vaarin: 'Miina jatkaa tikkailla seuraavaan lyhtyyn: "Ei vielä. '
+      + 'Minä ehdin kadun päähän ennen kuin sinä löydät oikean '
+      + 'vastauksen."',
+    tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
+    tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
+    tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
+  },
+  /*
+   * Erä C4 (22.9.2026). Vilnan kaari (KAARI_PAKETIT, 'vilna') nimeää
+   * yövartija Rasan (rautainen susi, Gediminasin torni, yö), ja hänen
+   * kuvansa (vilna-rasa-myrskytorni) on varattu kaaren omaan
+   * kohtaamiseen. Tämä rivi siirtyy päiväsaikaan. 1873-fakta: samana
+   * vuonna kiristetty Liettuan lehdistökielto (myös gootilainen
+   * kirjasin kiellettiin).
+   */
+  vilna: {
+    hahmo: 'kirjansitoja Aldona',
+    nappi: 'Tapaa Aldona',
+    frame: 'Aldona laskee sidontaveitsen pöydälle ja kysyy',
+    tervehdys: 'Aldona kääntää tuoretta kirjankantta valoon: "Tämän '
+      + 'alla on toinen kirja — vain minä tiedän, mikä. Juuri isoisäsi '
+      + 'matkan vuonna kiellettiin tuomasta tänne gootilaisinkin '
+      + 'kirjaimin painettuja. Näytä että tunnet maailmaa kuten '
+      + 'piirtäjä — niin näytän, mitä kannen alla oikeasti on."',
+    tervehdysLuenta: [
+      { rooli: 'kertoja', teksti: 'Aldona kääntää tuoretta '
+        + 'kirjankantta valoon:' },
+      { rooli: 'hahmo', teksti: '[curious] "Tämän alla on toinen '
+        + 'kirja — vain minä tiedän, mikä. Juuri isoisäsi matkan '
+        + 'vuonna kiellettiin tuomasta tänne gootilaisinkin kirjaimin '
+        + 'painettuja. [warmly] Näytä että tunnet maailmaa kuten '
+        + 'piirtäjä — niin näytän, mitä kannen alla oikeasti on."' },
+    ],
+    loyto: 'Aldona nostaa rasian kirjapinon alta: "Tämä ei ole '
+      + 'yhtään kirjaa, jonka olen sitonut — mutta joku on halunnut '
+      + 'piilottaa senkin."',
+    loytoLuenta: [
+      { rooli: 'kertoja', teksti: 'Aldona nostaa rasian kirjapinon '
+        + 'alta:' },
+      { rooli: 'hahmo', teksti: '[surprised] "Tämä ei ole yhtään '
+        + 'kirjaa, jonka olen sitonut — mutta joku on halunnut '
+        + 'piilottaa senkin."' },
+    ],
+    tyhja: 'Aldona pyyhkäisee kädellä hyllyn taakse: "Tyhjä. Täällä '
+      + 'on käyty ennen sinua — kannen alla ei ole muuta kuin '
+      + 'pölyä."',
+    vaarin: 'Aldona laskee sidontaveitsen kädestään: "Ei vielä. '
+      + 'Luetaan selkämys uudestaan — kiire ei auta sidontatyössä."',
+    tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
+    tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
+    tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
+  },
+  /*
+   * Erä C4 (22.9.2026). Barcelonan kaari (KAARI_PAKETIT, 'barcelona')
+   * nimeää kirjansitoja Mercèn (Sant Jordi, ruusut), ja hänen kuvansa
+   * (barcelona-merce-konfetti) on varattu kaaren omaan kohtaamiseen.
+   * 1873-fakta: katedraalin nykyinen uusgoottilainen julkisivu
+   * valmistui vasta 1913, isoisä näki paljaan kiven.
+   */
+  barcelona: {
+    hahmo: 'kivenveistäjä Pau',
+    nappi: 'Tapaa Pau',
+    frame: 'Pau puhaltaa kivipölyn pois piirustukselta ja kysyy',
+    tervehdys: 'Pau puhaltaa kivipölyn pois vanhasta piirustuksesta: '
+      + '"Tämä julkisivu on piirretty jo 1408, mutta isoisäsi näki '
+      + 'vielä paljaan kiven. Näytä että tunnet maailmaa kuten '
+      + 'piirtäjä — niin näytän kiven, jota hän ei koskaan nähnyt '
+      + 'valmiina."',
+    tervehdysLuenta: [
+      { rooli: 'kertoja', teksti: 'Pau puhaltaa kivipölyn pois '
+        + 'vanhasta piirustuksesta:' },
+      { rooli: 'hahmo', teksti: '[curious] "Tämä julkisivu on '
+        + 'piirretty jo 1408, mutta isoisäsi näki vielä paljaan '
+        + 'kiven. [warmly] Näytä että tunnet maailmaa kuten piirtäjä '
+        + '— niin näytän kiven, jota hän ei koskaan nähnyt '
+        + 'valmiina."' },
+    ],
+    loyto: 'Pau nostaa rasian irtokivien joukosta: "Viisisataa '
+      + 'vuotta piirustusta odottaneena — tämä ehti perille ensin."',
+    loytoLuenta: [
+      { rooli: 'kertoja', teksti: 'Pau nostaa rasian irtokivien '
+        + 'joukosta:' },
+      { rooli: 'hahmo', teksti: '[surprised] "Viisisataa vuotta '
+        + 'piirustusta odottaneena — tämä ehti perille ensin."' },
+    ],
+    tyhja: 'Pau koputtaa uutta kiveä: "Tyhjä. Telineet vaihtavat '
+      + 'paikkaa täällä useammin kuin luulisi."',
+    vaarin: 'Pau puhaltaa pölyä piirustukselta katsomatta ylös: '
+      + '"Ei vielä. Kivikin odottaa satoja vuosia — ehdit sinäkin."',
+    tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
+    tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
+    tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
+  },
+  /*
+   * Erä C4 (22.9.2026). Prahan kaari (KAARI_PAKETIT, 'praha') nimeää
+   * lyhdynsytyttäjä Tomášin (kynttilät, museon kehys), ja MOLEMMAT
+   * olemassa olevat kuvaversiot ovat varattuja kaarelle. 1873-fakta:
+   * Orlojin apostolit/kukko/kalenterikiekko olivat vasta ~7-vuotiaita
+   * (1865–66 korjaus).
+   */
+  praha: {
+    hahmo: 'kellonvartija Věra',
+    nappi: 'Tapaa Věra',
+    frame: 'Věra pysäyttää käyntipyörän ja kysyy',
+    tervehdys: 'Věra pysäyttää käyntipyörän ja katsoo kirjaasi '
+      + 'tornin ikkunasta: "Apostolit tuolla ylhäällä ovat vasta '
+      + 'seitsemän vuotta vanhoja — näin jokaisen paikoilleen. Näytä '
+      + 'että tunnet maailmaa kuten piirtäjä — niin päästän sinut '
+      + 'katsomaan koneistoa sisältä."',
+    tervehdysLuenta: [
+      { rooli: 'kertoja', teksti: 'Věra pysäyttää käyntipyörän ja '
+        + 'katsoo kirjaasi tornin ikkunasta:' },
+      { rooli: 'hahmo', teksti: '[curious] "Apostolit tuolla '
+        + 'ylhäällä ovat vasta seitsemän vuotta vanhoja — näin '
+        + 'jokaisen paikoilleen. [warmly] Näytä että tunnet maailmaa '
+        + 'kuten piirtäjä — niin päästän sinut katsomaan koneistoa '
+        + 'sisältä."' },
+    ],
+    loyto: 'Věra nostaa rasian hammasrattaiden välistä: "Tämä on '
+      + 'piiloutunut koneistoon kauemmin kuin olen sitä huoltanut."',
+    loytoLuenta: [
+      { rooli: 'kertoja', teksti: 'Věra nostaa rasian '
+        + 'hammasrattaiden välistä:' },
+      { rooli: 'hahmo', teksti: '[softly] "Tämä on piiloutunut '
+        + 'koneistoon kauemmin kuin olen sitä huoltanut."' },
+    ],
+    tyhja: 'Věra sulkee tornin luukun: "Tyhjä. Koneistoa on '
+      + 'korjattu niin monesti, ettei mikään pysy paikallaan."',
+    vaarin: 'Věra pysäyttää käden vipuun tarttumasta: "Ei vielä. '
+      + 'Kello käy huomennakin — ehdit yrittää uudelleen."',
+    tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
+    tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
+    tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
+  },
+  /*
+   * Erä C4 (22.9.2026). Moskovan kaari (KAARI_PAKETIT, 'moskova')
+   * nimeää kellonvalajan jälkeläisen Veran (Tsaarinkello, Kreml), ja
+   * hänen kuvansa (moskova-vera-tsaarinkello) on varattu kaaren omaan
+   * kohtaamiseen. 1873-fakta: nykyinen GUM-rakennus valmistui vasta
+   * 1893, isoisä näki Bovén 1815 rivistön.
+   */
+  moskova: {
+    hahmo: 'lukkoseppä Stepan',
+    nappi: 'Tapaa Stepan',
+    frame: 'Stepan nostaa katseensa vanhasta lukosta ja kysyy',
+    tervehdys: 'Stepan kääntää vanhaa lukkoa valoon puotinsa '
+      + 'nykyisissä seinissä: "Isoisäsi näki tässä Bovén rakentaman '
+      + 'rivistön vuodelta 1815 — tämä uusi avattiin vasta 1893. '
+      + 'Näytä että tunnet maailmaa kuten piirtäjä — niin avaan '
+      + 'sinulle lukon, joka on vanhempi kuin talo ympärilläni."',
+    tervehdysLuenta: [
+      { rooli: 'kertoja', teksti: 'Stepan kääntää vanhaa lukkoa '
+        + 'valoon puotinsa nykyisissä seinissä:' },
+      { rooli: 'hahmo', teksti: '[curious] "Isoisäsi näki tässä '
+        + 'Bovén rakentaman rivistön vuodelta 1815 — tämä uusi '
+        + 'avattiin vasta 1893. [warmly] Näytä että tunnet maailmaa '
+        + 'kuten piirtäjä — niin avaan sinulle lukon, joka on '
+        + 'vanhempi kuin talo ympärilläni."' },
+    ],
+    loyto: 'Stepan kaivaa rasian puodin lattian alta vanhalla '
+      + 'avaimella: "Tämä lukko oli minulle tuttu — isäni teki sen '
+      + 'aikoinaan."',
+    loytoLuenta: [
+      { rooli: 'kertoja', teksti: 'Stepan kaivaa rasian puodin '
+        + 'lattian alta vanhalla avaimella:' },
+      { rooli: 'hahmo', teksti: '[softly] "Tämä lukko oli minulle '
+        + 'tuttu — isäni teki sen aikoinaan."' },
+    ],
+    tyhja: 'Stepan koputtaa tyhjää koloa: "Tyhjä. Puotia on '
+      + 'siivottu niin monta kertaa, ettei mikään pysy paikallaan."',
+    vaarin: 'Stepan asettaa avaimen takaisin naulaan: "Ei vielä. '
+      + 'Lukko avautuu vain oikealla vastauksella — yritä '
+      + 'uudestaan."',
+    tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
+    tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
+    tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
+  },
+  /*
+   * Erä C4 (22.9.2026). Ljubljanalla ei ole tarinakaarta eikä
+   * aiempaa kuvakonseptia — puhdas uusi kaupunki. 1873-fakta:
+   * Kolmisilta oli vielä yksiosainen, Plečnikin kaksi lisäsiltaa
+   * tulivat vasta 1931–32.
+   */
+  ljubljana: {
+    hahmo: 'kukkakauppias Vesna',
+    nappi: 'Tapaa Vesna',
+    frame: 'Vesna nostaa katseensa kukkakimpuista ja kysyy',
+    tervehdys: 'Vesna sitoo kukkakimppua sillan kupeessa ja '
+      + 'vilkaisee kirjaasi: "Isoisäsi aikaan tässä oli vain yksi '
+      + 'silta, ei kolmea — kaksi vierussiltaa tulivat vasta '
+      + 'vuosikymmeniä myöhemmin. Näytä että tunnet maailmaa kuten '
+      + 'piirtäjä — niin kerron, mistä ne kaksi oikein ilmestyivät."',
+    tervehdysLuenta: [
+      { rooli: 'kertoja', teksti: 'Vesna sitoo kukkakimppua sillan '
+        + 'kupeessa ja vilkaisee kirjaasi:' },
+      { rooli: 'hahmo', teksti: '[curious] "Isoisäsi aikaan tässä '
+        + 'oli vain yksi silta, ei kolmea — kaksi vierussiltaa '
+        + 'tulivat vasta vuosikymmeniä myöhemmin. [warmly] Näytä '
+        + 'että tunnet maailmaa kuten piirtäjä — niin kerron, mistä '
+        + 'ne kaksi oikein ilmestyivät."' },
+    ],
+    loyto: 'Vesna nostaa rasian ämpärin alta ja pyyhkii kädet '
+      + 'esiliinaan: "Tämä on maannut täällä kauemmin kuin yksikään '
+      + 'kukka tiskilläni."',
+    loytoLuenta: [
+      { rooli: 'kertoja', teksti: 'Vesna nostaa rasian ämpärin '
+        + 'alta ja pyyhkii kädet esiliinaan:' },
+      { rooli: 'hahmo', teksti: '[softly] "Tämä on maannut täällä '
+        + 'kauemmin kuin yksikään kukka tiskilläni."' },
+    ],
+    tyhja: 'Vesna tyhjentää ämpärin pohjaa katsomatta: "Tyhjä. '
+      + 'Tämä tori vaihtaa käsiä joka aamu — joku ehti jo ennen '
+      + 'sinua."',
+    vaarin: 'Vesna sitoo uutta kimppua kuuntelematta tarkkaan: '
+      + '"Ei vielä. Kukatkin erehtyvät väristä ennen aukeamista."',
+    tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
+    tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
+    tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
+  },
 };
