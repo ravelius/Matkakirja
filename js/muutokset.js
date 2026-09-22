@@ -13,6 +13,8 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2100, teksti: 'kytke C4-C7-kohtaamiskuvat 20 kaupunkiin' },
+  { v: 2099, teksti: 'Sulavuus 7,17: shaderit, ramppi, pollovahti' },
   { v: 2098, teksti: 'Sulavuus 1-3: ilmakeha ja kerma ilman pow' },
   { v: 2097, teksti: 'Sulavuus 13-15: syote kehyksessa, kameraloki' },
   { v: 2096, teksti: 'kytke 97 maakunnan vuoden 1873 havainnekuvat' },

@@ -3649,6 +3649,70 @@ export function luoLaattakerros({
     };
   };
 
+  /*
+   * SHADERIT ESIKÄÄNNETÄÄN ENNEN ENSIMMÄISTÄ LAATTAA (sulavuuskatsaus
+   * 22.9.2026 kohta 7). Laattamateriaalilla on variantteja — kerma/ei,
+   * läpinäkyvä (häive) / opaakki (häiveen jälkeen), astronautin laastari
+   * (alphaTest + esikerrottu alfa + sävy) — ja three kääntää kunkin
+   * ohjelman sillä kehyksellä, jolla ensimmäinen sellainen laatta sattuu
+   * valmistumaan: kesken liikkeen, kymmeniä millisekunteja. Tässä
+   * jokaisesta variantista tehdään pieni näytemesh pallon ryhmään (säde
+   * 0,001 pallon keskellä, ei näy) ja `renderer.compileAsync` kääntää
+   * ohjelmat rinnakkain (KHR_parallel_shader_compile) heti, kun kerros
+   * tietää mitä variantteja se tekee (ensimmäinen `suorita`). Näyte-
+   * meshit poistetaan scenestä käännöksen jälkeen, mutta MATERIAALEJA EI
+   * PURETA: three vapauttaa ohjelman, kun sen viimeinen materiaali
+   * puretaan, ja esikäännös menisi hukkaan. Ohjelma-avain sisältää
+   * `transparent`-lipun, siksi molemmat. `?koe=eiesikaannos` ohittaa.
+   */
+  let esikaannetty = '';
+  let esikaannoksenNaytteet = null; // pidetään elossa (ks. yllä)
+  const esikaannaOhjelmat = (luokat) => {
+    if (kokeet.has('eiesikaannos') || typeof renderer?.compileAsync !== 'function') return;
+    const avain = `${kermaShader ? 'kerma' : 'kangas'}/${kerrokset?.astronautti ? 'astro' : 'perus'}`;
+    if (esikaannetty === avain) return;
+    const scene = pallo.scene?.(); const kamera = pallo.camera?.();
+    const juuri = luokat?.juuri;
+    if (!scene || !kamera || !juuri || !luokat.Texture || !luokat.SphereGeometry || !luokat.LaattaMateriaali) return;
+    esikaannetty = avain;
+    const kangas = luoKangas(2, 2);
+    const tekstuuri = new luokat.Texture(kangas);
+    tekstuuri.needsUpdate = true;
+    const geometria = new luokat.SphereGeometry(1e-3, 4, 2);
+    const savy = kerrokset?.astronautti ? pyramidinReliefinSavy() : null;
+    const naytteet = [];
+    for (const kerma of (kermaShader ? [true, false] : [false])) {
+      for (const transparent of [true, false]) {
+        const materiaali = new luokat.LaattaMateriaali({
+          map: tekstuuri, transparent, opacity: transparent ? 0.5 : 1, depthWrite: true,
+          polygonOffset: true, polygonOffsetFactor: 0, polygonOffsetUnits: 0,
+          ...(kerrokset?.astronautti ? { alphaTest: 0.004, premultipliedAlpha: true } : {}),
+          ...(savy === null ? {} : { color: savy }),
+        });
+        if (kerma) {
+          asennaKermaShader(materiaali, {
+            jaettu: kermanJaetut, tarkka: kokeet.has('kermapow'),
+            laatta: { alue: { x0: 0, y0: 0, w: 1, h: 1 }, paalla: true },
+          });
+        }
+        const mesh = new luokat.Mesh(geometria, materiaali);
+        mesh.renderOrder = -1000;
+        mesh.frustumCulled = false;
+        naytteet.push(mesh);
+        juuri.add(mesh);
+      }
+    }
+    esikaannoksenNaytteet = naytteet;
+    mittarit.esikaannos = 'kesken';
+    const alku = aika();
+    renderer.compileAsync(scene, kamera).catch(() => {}).then(() => {
+      for (const n of naytteet) juuri.remove(n);
+      mittarit.esikaannos = 'valmis';
+      mittarit.esikaannosMs = Math.round(aika() - alku);
+      mittarit.esikaannoksia = naytteet.length;
+    });
+  };
+
   function suorita(kehys) {
     if (purettu) return false;
     const luokat = kolmi();
@@ -3668,6 +3732,7 @@ export function luoLaattakerros({
     const variMaa = pyramidinVaritasonMaa();
     kerrokset = lepokerroksenKerrokset(pallonSarja(), pyramidi, variMaa);
     if (!kerrokset) return luovuta('pallon sarja ja pyramidi eri versiota');
+    esikaannaOhjelmat(luokat);
     /*
      * MAANVAIHTO MITÄTÖI LAATAT. Väri on kankaassa, joten vanhan maan
      * laatta on väärä kuva eikä vanhentunut kuva — se on purettava ja
@@ -4367,6 +4432,8 @@ export function luoLaattakerros({
     pura: () => {
       purettu = true;
       sukupolvi += 1;
+      for (const n of esikaannoksenNaytteet ?? []) n.parent?.remove(n);
+      esikaannoksenNaytteet = null;
       if (vientiRaf) ikkuna.cancelAnimationFrame?.(vientiRaf);
       vientiRaf = 0;
       if (aloitusRaf) ikkuna.cancelAnimationFrame?.(aloitusRaf);
