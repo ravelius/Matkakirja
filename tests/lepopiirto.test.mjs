@@ -136,7 +136,10 @@ test('kytkennät: lauta asentaa, häiveet ja nimiöt ilmoittavat, savuke pakotta
 test('atlaksen osittainen päivitys (sulavuus kohta 8): viedyn sivun rasteri texSubImage2D:llä, ei koko kangasta', () => {
   const gl = lue('../js/pallonimiot-gl.js');
   assert.match(gl, /if \(sivu\.viety && !atlasKoko && typeof renderer\?\.copyTextureToTexture === 'function'\)/);
-  assert.match(gl, /else renderer\.copyTextureToTexture\(lahde, sivu\.tekstuuri, alue, kohta\);/);
+  assert.match(gl, /renderer\.copyTextureToTexture\(lahde, sivu\.tekstuuri, alue, kohta\);/);
+  // Vanha allekirjoitus ei ota aluetta: silloin EI osapäivitystä, vaan koko sivun vienti.
+  assert.match(gl, /if \(renderer\.copyTextureToTexture\.length >= 3\) \{\n\s*sivu\.likainen = true;/);
+  assert.doesNotMatch(gl, /copyTextureToTexture\(kohta, lahde, sivu\.tekstuuri\)/, 'aluetonta kopiota ei saa tehdä: lähde on koko atlas');
   /*
    * LÄHDE ON ATLASKANGAS, EI RASTERIN OMA KUVA (22.9.2026). Kun lähde
    * oli rasterin kangas, osittain päivitetty läpinäkyvä pikseli piirtyi

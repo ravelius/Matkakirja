@@ -515,10 +515,29 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
           max: { x: paikka.x + rasteri.w, y: paikka.y + rasteri.h },
         };
         const kohta = { x: paikka.x, y: paikka.y, z: 0 };
-        // three ≥ r165: (src, dst, srcRegion, dstPosition); vanhempi: (position, src, dst).
-        if (renderer.copyTextureToTexture.length >= 3) renderer.copyTextureToTexture(kohta, lahde, sivu.tekstuuri);
-        else renderer.copyTextureToTexture(lahde, sivu.tekstuuri, alue, kohta);
-        mittarit.atlasOsapaivityksia = (mittarit.atlasOsapaivityksia ?? 0) + 1;
+        /*
+         * ALUE ON PAKOLLINEN, KOSKA LÄHDE ON KOKO ATLASKANGAS
+         * (Karttasepän katselmushuomio 22.9.2026, voimaan jäänyt kohta).
+         * three laskee kopioitavan koon srcRegionista; jos alue on
+         * null, koko on lähteen koko eli KOKO ATLAS, ja se kopioituisi
+         * siirtymään. Vanha allekirjoitus (position, src, dst) ei ota
+         * aluetta lainkaan, joten sillä ei voi tehdä rajattua kopiota
+         * nyt kun lähde on kangas eikä yksittäinen rasteri.
+         *
+         * Siksi vanhalla allekirjoituksella EI tehdä osapäivitystä
+         * lainkaan, vaan jäädään koko sivun vientiin: hitaampi mutta
+         * oikea. Nidotulla kirjastolla (globe.gl 2.46.2) haara on
+         * kuollut — `copyTextureToTexture.length === 2`, koska
+         * oletusarvolliset parametrit eivät lasketa mukaan — mutta
+         * kirjaston vaihtuessa tämä ei hiljaa turmele atlasta.
+         */
+        if (renderer.copyTextureToTexture.length >= 3) {
+          sivu.likainen = true;
+          mittarit.atlasVanhaAllekirjoitus = (mittarit.atlasVanhaAllekirjoitus ?? 0) + 1;
+        } else {
+          renderer.copyTextureToTexture(lahde, sivu.tekstuuri, alue, kohta);
+          mittarit.atlasOsapaivityksia = (mittarit.atlasOsapaivityksia ?? 0) + 1;
+        }
         pallo?.__piirto?.tarvitaan();
       } catch (virhe) {
         sivu.likainen = true;
