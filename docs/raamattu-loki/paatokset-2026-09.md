@@ -1631,3 +1631,7 @@ Julkaisija klo 00.12, testit 4029/0. Julkaisija ei mergeä enempää tänä yön
 ## PR #2874 (PELIKOODARI, VIENTIBUDJETTI OLETUKSENA: ≤ 1 NAKYVA LAATTA/KEHYS VEDOSSA, ENNAKKO ≤ 20/s; WebKit 37–43 vs 196–199 VIENTIA) → EI OLETUKSEKSI (OMISTAJA PERUI SUUNNAN 23.45), KAANNETAAN LIPUKSI ?koe=vientibudjetti; LOYDOS: VANHALLA TAHDILLA KIRJASTON POHJA (~400 dc) PIIRTYY 52–82 %:SSA VETOKEHYKSISTA KOSKA HAIPYVAT LAATAT EIVAT PEITA (dc 431) → MAHDOLLINEN OMA KORJAUS (23.9.2026 klo 00.15)
 
 Pelikoodari aloitti erän ennen perumisviestiä. Muut: eivienti/eihaive-kaappausten 30–38 vientiä välimuistiherkkiä (1/4 otettiin tyhjällä GPU-muistilla); savuke-eihaive-veto korjattu arvioimaan vain liikkeen kehykset; savuke-kerma-heti V2 punainen myös mainilla (Ranska σ 0,7 vs Saksa 10), ei tämän erän vika. Päätyö: liikkeen tasaisuusmittarit ja interp vs touch.
+
+## PELIKOODARIN SUUNNITELMA: LIIKKEEN TASAISUUSMITTARI (KARTAN SIIRTYMA RUUDULLA KA/CV, NOLLA- JA TUPLASIIRTYMAT, SYOTETAPAHTUMIA/KEHYS, VIIVE SYOTTEESTA PIIRTOON, LIIKEVIRHE = KARTTA − SORMI); HYPOTEESI: interp LASKEE KOHTA-AJAN JA SORMEN NAYTTEET ERI KELLOISTA JA iOS TOIMITTAA SYOTTEEN EPATASAISESTI rAF:IIN NAHDEN → VUOROIN LYHYITA JA PITKIA ASKELIA; #2874 SULJETTU MERGEAMATTA (23.9.2026 klo 00.16)
+
+Klo 00.18. Mittaus interp/touch/interpvanha WebKitissä epätasaisella synteettisellä syötteellä, PR yöllä; oletusmuutos vasta omistajan aamun kokeilun jälkeen.
