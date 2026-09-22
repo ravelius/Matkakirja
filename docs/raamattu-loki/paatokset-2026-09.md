@@ -1471,3 +1471,7 @@ Pelikoodari: globe.gl antaa kontekstin läpi (Object.assign({antialias, alpha}, 
 ## TAUKO: OMISTAJA PAIVITTAA CLAUDE-TYOPOYTASOVELLUKSEN (UUDEMMAT OPUS-MALLIT AGENTEIKSI); KAIKKI SESSIOT PYSAYTETTY, EI MERGEJA EIKA PUSHEJA (22.9.2026 klo 20.46)
 
 Tila tauolla: v2126 tuotannossa; Julkaisijalla odottaa #2849 (alpha0 aidoksi, v2127) ja #2846 (aikajanaohje, v2128); Laitetestaajan Mac-Safari-Piirtokoe-mittaus keskeytetty, aloitetaan alusta tauon jälkeen (ilman profiili-lippua, CI:n ollessa hiljaa); Pelikoodarilla kesken profiili-singletonin korjaus (ei pushattu); Postivahti tauolla. Omistajan iPhone-kaappaukset odottavat. Jatko: Fable lähettää jatkoviestit kaikille tauon jälkeen (Laitetestaaja 'mittaa' ensin, sitten Julkaisija mergeää).
+
+## TAUKO OHI: CLAUDE-SOVELLUS PAIVITETTY, PELIKOODARI JA KARTTASEPPA NYT OPUS 5.5; SESSIOT JATKAVAT (LAITETESTAAJA MITTAA ENSIN, JULKAISIJA JA PELIKOODARI ODOTTAVAT LUPAA), REMOTE CONTROL PAALLE KAIKILLE (22.9.2026 klo 20.56)
+
+Omistaja klo 20.55: 'claude päivitetty, opus on nyt 5.5, vaihdoin kahteen sessioon'. Session id:t ennallaan. Pelikoodarin profiili-jakaa-korjaus (mittaus jää auki, lukijat ottavat viipaleita, vartija 3 s ruutunäyttö + 10 s otos) valmis paikallisesti, push vasta mittauksen jälkeen. CI: #2849:n Savukkeet vielä ajossa (74d3fdb9) ja 11e6d768 jonossa → Laitetestaaja odottaa niiden loppua ennen vetoja.
