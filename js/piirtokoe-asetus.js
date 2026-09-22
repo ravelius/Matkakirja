@@ -141,3 +141,30 @@ export function tallennetutKokeet() {
   if (kehysprofiiliPaalla()) joukko.add('profiili');
   return joukko;
 }
+
+/*
+ * VALIKOSTA POISTETUT VIVUT (omistaja 22.9.2026 klo 22.30: "Poista kaikki
+ * ylimääräiset vivut valikosta niin löydän testattavat vaihtoehdot
+ * paremmin."). Vedon seuranta ja Tarkkuus liikkeessä olivat laitteelle
+ * tallentuvia valintoja; ilman valikkoriviä niitä ei voisi enää nähdä eikä
+ * vaihtaa, joten tallennettu arvo poistetaan käynnistyksessä ja peli
+ * palaa oletukseen (veto interp, tarkkuus terävä). Liput toimivat yhä
+ * osoitteessa (`?koe=`, `?tarkkuus=`). Avaimet ovat samat kuin
+ * js/vedon-seuranta.js ja js/tarkkuus-asetus.js (testi valvoo), mutta
+ * tämä moduuli pysyy lehtenä eikä tuo niitä.
+ */
+export const POISTETUT_VALINTA_AVAIMET = Object.freeze([
+  'matkakirja-vedon-seuranta',
+  'matkakirja-tarkkuus-liikkeessa',
+]);
+
+/** Poista valikosta poistettujen vipujen tallennukset. Palauttaa poistettujen määrän. */
+export function unohdaPoistetutValinnat(varasto = (() => { try { return globalThis.localStorage; } catch { return null; } })()) {
+  let n = 0;
+  for (const avain of POISTETUT_VALINTA_AVAIMET) {
+    try {
+      if (varasto?.getItem(avain) != null) { varasto.removeItem(avain); n += 1; }
+    } catch { /* ei muistia */ }
+  }
+  return n;
+}
