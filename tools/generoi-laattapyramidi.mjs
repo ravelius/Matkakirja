@@ -320,7 +320,7 @@ if (!kohdekansio || kohdekansio.startsWith('--')) {
     + '[--nostotaso --nostoversio <v> [--nostomaa <ISO>] [--ilman-hahmotelmia [--polta-hahmotelmat t,t]] [--nostotasot <json>]] '
     + '[--nimiotaso --nimioversio <v> [--nimiot <json>] [--nimiot-aika pysyva]] '
     + '[--viivataso --viivaversio <v> [--eipiirit] [--eireitit] [--eirajat] [--eijoet]] '
-    + '[--vesiviivoitus tihea|harva] [--syvyysportaat m,m,…] [--syvyyskayrat m,m,… [--syvyyskayrapeitto 0.55]] [--syvyyskohina lauta] [--resepti-json <json>] [--joet-pohjaan] '
+    + '[--vesiviivoitus tihea|harva] [--syvyysportaat m,m,…] [--syvyyskayrat m,m,… [--syvyyskayrapeitto 0.55]] [--syvyyskohina lauta] [--paperirae ruutu] [--resepti-json <json>] [--joet-pohjaan] '
     + '[--rantataso --rantaversio <v>] [--ilman-rantaviivaa] '
     + '[--vari <ISO> --variversio <v> [--aluevesi <yksikköä>] '
     + '[--paletti murrettu|taysvari|tasoitus] [--vesi <0..1>] [--feidaus <0..1>] '
@@ -1012,6 +1012,8 @@ const SYVYYSKAYRAT = valitsin('syvyyskayrat', null)
 const SYVYYSKAYRAPEITTO = Number(valitsin('syvyyskayrapeitto', 0.55));
 /** `--syvyyskohina lauta` — vyöhykerajan kohina laudan yksiköissä (sama kuvio joka tasolla). */
 const SYVYYSKOHINA_LAUDALLA = valitsin('syvyyskohina', 'pikselit') === 'lauta';
+/** `--paperirae ruutu` — kuitu ja rae POIS laatasta (peli piirtää ne ruutuavaruudessa; ks. maailmapiirto.js paperiRaeRuudulla). */
+const PAPERIRAE_RUUDULLA = valitsin('paperirae', 'poltto') === 'ruutu';
 const VESIVIIVOITUS_VALINTA = valitsin('vesiviivoitus', null);
 const RESEPTI_JSON = valitsin('resepti-json', null);
 if (VESIVIIVOITUS_VALINTA && !VESIVIIVOITUKSET[VESIVIIVOITUS_VALINTA]) {
@@ -1029,6 +1031,21 @@ const yhdistaResepti = (pohja, muutos) => {
 };
 const PATINA_MUUTOS = {
   ...(VESIVIIVOITUS_VALINTA ? { vesiviivoitus: VESIVIIVOITUKSET[VESIVIIVOITUS_VALINTA] } : {}),
+  /*
+   * `--paperirae ruutu` SAMMUTTAA PAPERIN HIENON RAKEEN MYÖS PATINASTA
+   * (omistaja 22.9.2026, vaihtoehto b). Rae, nyppy, kuitu, ristikuitu
+   * ja kuitukimppujen katkonta ovat kaikki paperipikselin mittaisia,
+   * eli juuri sitä kuviota, joka on joka tasolla eri kohdassa maailmaa
+   * ja joka sekoittuu tasonvaihdon häivytyksessä liaksi. Peli piirtää
+   * ne ruutuavaruudessa (js, Pelikoodari), jolloin paperintuntu on
+   * vakio eikä välky. Ikääntymisen laikku EI ole tässä: se on jo
+   * sidottu laudalle (`maailmaX/maailmaY`) ja saa jäädä laattaan.
+   */
+  ...(PAPERIRAE_RUUDULLA ? {
+    paperi: {
+      rae: 0, raeKarkea: 0, kuitu: 0, kuituRisti: 0, klimppi: 0,
+    },
+  } : {}),
   ...(RESEPTI_JSON ? JSON.parse(RESEPTI_JSON) : {}),
 };
 const PATINA = PATINA_POHJA && Object.keys(PATINA_MUUTOS).length
@@ -3775,6 +3792,7 @@ for (const { mitat, bx, by } of lohkot.values()) {
     syvyysKayrat: SYVYYSKAYRAT,
     syvyysKayraPeitto: SYVYYSKAYRAPEITTO,
     syvyysKohinaLaudalla: SYVYYSKOHINA_LAUDALLA,
+    paperiRaeRuudulla: PAPERIRAE_RUUDULLA,
   };
   /*
    * Patinan `maailma` on kankaan bbox LAUDAN koordinaateissa: siitä
@@ -3897,6 +3915,7 @@ function teeLuettelo() {
   ...(SYVYYSPORTAAT ? { syvyysPortaat: SYVYYSPORTAAT } : {}),
   ...(SYVYYSKAYRAT ? { syvyysKayrat: SYVYYSKAYRAT, syvyysKayraPeitto: SYVYYSKAYRAPEITTO } : {}),
   ...(SYVYYSKOHINA_LAUDALLA ? { syvyysKohina: 'lauta' } : {}),
+  ...(PAPERIRAE_RUUDULLA ? { paperirae: 'ruutu' } : {}),
   ...(Object.keys(PATINA_MUUTOS).length ? {
     patinaMuutos: {
       ...(VESIVIIVOITUS_VALINTA ? { vesiviivoitus: VESIVIIVOITUS_VALINTA } : {}),
