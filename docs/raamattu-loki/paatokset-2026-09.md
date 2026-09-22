@@ -1123,3 +1123,7 @@ Pelikoodari 22.9.2026 klo 13.55: v2102 sisältää kohdat 11 (__pinta, Map suora
 ## ESIKAANNOSKORJAUS #2794 TUOTANNOSSA v2104; TUNTUMATESTIN VERSIO v2104 (22.9.2026 klo 13.56)
 
 Julkaisija 22.9.2026 klo 14.00: #2794 → v2104 (main f69ff7ace), testit 3912/0. Jono tyhjä. Omistajan tuntumatesti tehdään v2104:llä (kaikki katsauksen erät + korjaukset mukana).
+
+## OMISTAJA: v2104 KARTTA VALKKYY KUIN STROBOVALO iPHONELLA — SYY LEPOPIIRTO; FABLEN KORJAUS #2797 (OLETUS POIS) KIIREELLISENA; PELIKOODARI NOLLAUKSESSA (22.9.2026 klo 14.06)
+
+Omistaja 22.9.2026 klo 14.05 tuntumatestissä v2104: kartta välkkyy kuin strobovalo. Fable: syy erän 3 lepopiirto (js/pallolauta/lepopiirto.js kääri renderer.renderin ja ohittaa piirron levossa) — WebKit esittää ohitetun kehyksen tyhjänä, sama ilmiö kuin Playwrightin tyhjä kaappaus, jonka Pelikoodari ohitti automaatiossa webdriver-ehdolla; vartija ei siis mitannut oikeaa laitetta. Korjaus PR #2797: lepopiirtoKaytossa palauttaa false ilman ?koe=lepopiirto-lippua (testit 3912/0), Julkaisijalle kiireellisenä. Opetus: piirron ohitus pitää ratkaista kirjaston tickin tasolla tai preserveDrawingBufferilla, ja se pitää todentaa oikealla iPhonella ennen tuotantoa. Pelikoodari nollataan (70 %, luovutus #2796).
