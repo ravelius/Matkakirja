@@ -1351,3 +1351,7 @@ Karttaseppä 22.9.2026 klo 18.25: PR #2824 PALLO_LAATTAVERSIO → 2026-09-22c-po
 ## v2115:STA PUUTTUIVAT ENNAKKO, JOUSI JA TOUCH (REBASE EHTI ENNEN VIIMEISTA COMMITIA); PR #2825 TUO NE JA RATASVALIKON 'VEDON SEURANTA' (22.9.2026 klo 18.26)
 
 Pelikoodari (uusi sessio) 22.9.2026 klo 18.30: #2821:n viimeinen commit (viisi tapaa, 18.08) syntyi Julkaisijan rebasen (18.03) jälkeen → v2115:ssä vain interpolointi + interpvanha + syoteloki. PR #2825: cherry-pick puuttuvat kolme tapaa + ratasvalikko → Kartta → Vedon seuranta (5 riviä, localStorage, vaikutus heti, ?koe-lippu voittaa ja valikko kertoo sen, kosketusrivi vain kosketuslaitteella); 3952 testiä 0 punaista. Oppi Julkaisijalle: tarkista PR:n head-commit juuri ennen rebasea.
+
+## LOYDOS 2: 'TARKKUUS LIIKKEESSA' -ASETUS EI OLE TUOTANNOSSA (COMMIT c60f4cec1 JAI #2785:N REBASESTA POIS); PALAUTUS OMANA PR:NA; JULKAISIJALLE SAANTO: PR:N HEAD == REBASATTU TIP ENNEN MERGEA (22.9.2026 klo 18.29)
+
+Pelikoodari 22.9.2026 klo 18.35: js/tarkkuus-asetus.js ja avain matkakirja-tarkkuus-liikkeessa eivät ole mainissa — sama rebase-kilpailu kuin #2821:ssä; muut suljetut pelikoodari-haarat ovat mainissa. Fable: Pelikoodari palauttaa asetuksen omana PR:nä #2825:n päälle; Julkaisijalle sääntö: juuri ennen mergeä fetch + vertaa PR:n headRefOid rebasattuun tippiin, muuten rebasaa uudestaan. Omistajalle: v2099:n 'Tarkkuus liikkeessä' -asetus ei siis ollut pelissä; tulee nyt.
