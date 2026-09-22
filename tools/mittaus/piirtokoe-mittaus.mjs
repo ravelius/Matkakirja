@@ -80,14 +80,30 @@ const HARNESSI = `
         const dts = kehykset.map((k) => k.dt).filter(Number.isFinite).sort((a, b) => a - b);
         const pct = (arr, q) => arr.length ? arr[Math.min(arr.length - 1, Math.floor(q * (arr.length - 1)))] : null;
         const ka = (sel) => { const xs = kehykset.map(sel).filter((x) => x != null && Number.isFinite(x)); return xs.length ? xs.reduce((a, b) => a + b, 0) / xs.length : null; };
+        /*
+         * KASVU JAKSON YLI, EI RAAKA KESKIARVO (Pelikoodari 22.9.2026):
+         * puskurikirjoitukset/uniformit/glViennit/jaot ovat LATAUKSESTA
+         * ASTI kumulatiivisia laskureita (js/pallolauta/kehysprofiili.js
+         * lue(), sama lähde kuin profiilinaytto.js:n profiiliTahti() —
+         * ks. sen kasvu()). Näiden RAAKA-arvon ka() summaisi kasvavia
+         * lukemia, ei mittaisi mitään todellista — sama virhe kuin
+         * aiempi 'profiili'-lippu-anomalia, mutta laskennassa eikä
+         * mittauksessa. Oikea luku on jakson kasvu jaettuna kehyksillä.
+         */
+        const kasvu = (sel) => {
+          const eka = kehykset.find((k) => Number.isFinite(sel(k)));
+          const vika = [...kehykset].reverse().find((k) => Number.isFinite(sel(k)));
+          return eka && vika ? sel(vika) - sel(eka) : null;
+        };
+        const kasvuPerKehys = (sel) => { const k = kasvu(sel); return k != null && kehykset.length ? k / kehykset.length : null; };
         const yli20 = dts.filter((d) => d > 20).length;
         const tulos = {
           koe, moottori: navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrome') ? 'WebKit/Safari' : navigator.userAgent,
           dtP50: pct(dts, 0.5), dtP95: pct(dts, 0.95), dtMax: dts.length ? Math.max(...dts) : null,
           yli20msOsuus: dts.length ? yli20 / dts.length : null, kehyksia: dts.length,
           jsKa: ka((k) => k.js), renderKa: ka((k) => k.render), varattuKa: ka((k) => k.varattu),
-          puskurikirjoituksiaKa: ka((k) => k.puskurikirjoituksia), uniformejaKa: ka((k) => k.uniformeja),
-          glVientejaKa: ka((k) => k.glVienteja), jakojaKa: ka((k) => k.jakoja),
+          puskurikirjoituksiaKa: kasvuPerKehys((k) => k.puskurikirjoituksia), uniformejaKa: kasvuPerKehys((k) => k.uniformeja),
+          glVienteja: kasvu((k) => k.glVienteja), jakojaKa: kasvuPerKehys((k) => k.jakoja),
           tasaisuus: v.tasaisuus,
         };
         kirjoita('valmis:\\n' + JSON.stringify(tulos, null, 1));

@@ -54,6 +54,29 @@ eivät voi olla päällä yhtä aikaa ilman että jompikumpi mittaus vääristyy
 Google Earth -tasainen liike = pieni luku; "pysähdyksiä" = kehyksiä,
 joissa siirtymä < 0,25 px vaikka sormi liikkui.)
 
+**KORJAUS (Pelikoodari 22.9.2026, Fablen välittämä): "puskuri/uniform/
+glVienti/jakoja ka" -sarake yllä on VIRHEELLINEN, älä käytä.**
+Puskurikirjoitukset (ja samasta lähteestä luetut uniformit/glVienti/
+jakoja, `js/pallolauta/kehysprofiili.js` `lue()`) ovat LATAUKSESTA
+ASTI kumulatiivisia laskureita, ei per-kehys-arvoja. Työkalun `ka()`
+laski näiden RAAKOJEN (kasvavien) lukemien keskiarvon koko 10 s:n
+otoksesta — sama luokan virhe kuin `profiili`-lipun singleton-
+anomalia yllä, mutta laskennassa mittauksen sijaan. Oikea tapa (kuten
+`js/pallolauta/profiilinaytto.js`:n `profiiliTahti()` `kasvu()`) on
+jakson KASVU (viimeinen − ensimmäinen), puskurikirjoituksille ja
+uniformeille lisäksi jaettuna kehysmäärällä. Pelikoodarin arvio oikeasta
+suuruusluokasta WebKitissä: normaali ~0,07 puskurikirjoitusta/kehys,
+eipuskuri 0. **Yllä oleva taulukko EI siis tue alla olevaa "eipuskuri EI
+vähennä" -päätelmää** — se perustui virheelliseen laskuun.
+
+Työkalu korjattu (`kasvu`/`kasvuPerKehys`, korvaa `ka()`:n näille
+neljälle kentälle; `glVientejaKa` nimetty `glVienteja`ksi, koska
+Pelikoodarin/profiilinaytto.js:n käytäntö on jättää se jakamatta
+kehysmäärällä — harvinainen tapahtuma, ei jatkuva nopeus). Neljää koetta
+EI ajettu vielä uudestaan korjatulla laskennalla (ei kiireellistä);
+tässä raportissa olevat puskuri/uniform/glVienti/jakoja-luvut ovat
+vanhentuneita eikä niitä pidä siteerata.
+
 ## Tulkinta ja varaukset
 
 - **Median-dt on 17 ms (~59 Hz) kaikissa neljässä** — Mac Studion GPU:lla
@@ -69,13 +92,10 @@ joissa siirtymä < 0,25 px vaikka sormi liikkui.)
   kustannus (esim. tekstuuripäivitys ilman normaalia vientireittiä)
   eikä jatkuva ongelma — n=1 piikki 589 kehyksestä, ei riitä johtopäätökseen
   yksin, mutta poikkeaa muista selvästi.
-- **eipuskuri EI vähennä puskurikirjoituksia** (87,0 vs. normaalin 68,8 —
-  suunta on päinvastainen kuin nimestä odottaisi, ja edellisen, viallisen
-  ajon 53→7-lukema oli itse asiassa ruutunäytön ~3 s:n otoksesta eikä
-  kelpaa vertailuun). `puskurikirjoituksiaKa` vaihtelee muutenkin
-  ajojen välillä (61,5–68,7 "jakojaKa"), koska laattojen/nimiöiden
-  saapumis- ja häivytysrytmi 10 s:n otoksessa ei ole deterministinen —
-  yhden ajon luku per koe on kohinainen, ei tilastollisesti luotettava.
+- ~~eipuskuri EI vähennä puskurikirjoituksia~~ **VEDETTY POIS**: tämä
+  päätelmä perustui yllä kuvattuun laskuvirheeseen (raaka keskiarvo
+  kumulatiivisesta laskurista). Oikea vertailu vaatii uuden ajon
+  korjatulla työkalulla.
 - **dpr15 on lievästi tasaisin** (vaihtelu 11,4 %, matalin dtMax 31 ms),
   mutta ero muihin on pieni eikä yksittäisen ajon perusteella varma.
 - Yksi mittaus (`dpr15`, ensimmäinen yritys) jäi jumiin eikä koskaan
