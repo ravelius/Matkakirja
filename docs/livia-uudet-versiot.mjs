@@ -8,6 +8,9 @@ import {livianSvgPaa} from '../js/livia-svg-paa.js';
 import {sarjakuvapulunKuva} from './livia-sarjakuvakokeilu.mjs';
 
 export const LIVIAN_UUDET_VERSIOT=Object.freeze([
+  {id:'uusi-hymy-levea',baseId:'welcome',label:'Leveä iloinen hymy',duration:4400,group:'Uudet versiot',kuvaus:'Uusi nokkakokeilu: suu leviää posken suuntaan ja suupieli nousee. Poski sekä alaluomi hymyilevät mukana. Nokka avautuu tervehdyksessä vain vähän.'},
+  {id:'uusi-hymy-pieni',baseId:'smile',label:'Pieni suljettu hymy',duration:4400,group:'Uudet versiot',kuvaus:'Uusi nokkakokeilu: pieni lämmin hymy ilman suun avaamista. Suupieli, poski ja alaluomi kohoavat yhdessä; nokankärki säilyttää muotonsa.'},
+  {id:'uusi-hymy-nauru',baseId:'chuckle',label:'Avoin iloinen nauru',duration:4400,group:'Uudet versiot',kuvaus:'Uusi nokkakokeilu: leveä hymy aukeaa kahteen iloiseen naurahdukseen. Kieli näkyy, posket nousevat ja silmät siristyvät; lopuksi suu palautuu hymyyn.'},
   {id:'uusi-livia-ilahtuu',baseId:'welcome',label:'Ihana nähdä!',duration:4400,group:'Uudet versiot',kuvaus:'Uuden sarjakuvahahmon oma ele: katse tunnistaa pelaajan, iloinen nokka aukeaa ja siipi painuu hetkeksi rinnalle. Lämmin päänkallistus ja pieni tervehdys; huivi ja siivenkärjet asettuvat hieman jäljessä.'},
   {id:'uusi-sarjakuvapulu',baseId:'welcome',label:'Sarjakuvapulu — tyylikokeilu',duration:2900,group:'Uudet versiot',kuvaus:'Nuori Livia omana sarjakuvahahmonaan: kapeammat kasvot, lyhyt kyyhkyn nokka ja katseessa pilkettä sekä särmää. Koralliroosa huivi heilahtaa mukana. Erillinen tyylikokeilu — ei korvaa nykyistä Pulua.'},
   {id:'uusi-chuckle',baseId:'chuckle',label:'Hiljainen naurunpyrskähdys',duration:3600,group:'Uudet versiot',kuvaus:'Uusi erä: nauru yrittää pysyä sisällä, mutta karkaa kahdessa erikokoisessa pyrskähdyksessä. Siipi peittää suupieltä; hartiat ja pää seuraavat eri aikaan.'},
@@ -178,10 +181,33 @@ const RADAT={
   },
 };
 
+// Sama tervehdys antaa suun kolmelle versiolle rauhallisen kehyksen.
+// Vanhaa Ihana nähdä! -elettä tai sen ratoja ei muuteta.
+const HYMYRADAT={
+  'uusi-hymy-pieni':{
+    hymy:[[0,0],[.15,0],[.30,.62],[.63,.62],[.78,.40],[.96,0],[1,0]],
+    poski:[[0,0],[.17,0],[.33,.48],[.65,.48],[.98,0],[1,0]],
+    suu:[[0,0],[1,0]],
+  },
+  'uusi-hymy-levea':{
+    hymy:[[0,0],[.14,0],[.275,1],[.68,1],[.80,.65],[.97,0],[1,0]],
+    poski:[[0,0],[.17,0],[.31,.9],[.69,.9],[.97,0],[1,0]],
+    suu:[[0,0],[.20,0],[.275,.24],[.36,.10],[.51,.10],[.60,.22],[.72,.08],[.84,0],[1,0]],
+  },
+  'uusi-hymy-nauru':{
+    hymy:[[0,0],[.13,0],[.245,.85],[.32,1],[.65,1],[.80,.6],[.96,0],[1,0]],
+    poski:[[0,0],[.16,0],[.27,.7],[.34,1],[.43,.7],[.55,1],[.67,.75],[.97,0],[1,0]],
+    suu:[[0,0],[.20,0],[.27,.35],[.335,.9],[.43,.20],[.48,.20],[.55,.72],[.65,.16],[.79,0],[1,0]],
+    paaKulma:[[0,0],[.12,4],[.24,5],[.335,-9],[.43,3],[.48,3],[.56,-6],[.66,1],[.77,-3],[.96,0],[1,0]],
+    paaY:[[0,0],[.15,2],[.25,-5],[.35,2],[.43,-2],[.49,-2],[.57,1],[.70,0],[1,0]],
+    hengitys:[[0,0],[.15,-.2],[.26,.7],[.35,-.3],[.44,.3],[.50,.3],[.58,-.2],[.75,0],[1,0]],
+  },
+};
+
 export function uudenEleenAsento(id,p,{voimakkuus=.5}={}){
-  const radat=RADAT[id==='uusi-sarjakuvapulu'?'uusi-welcome':id];
+  const radat=HYMYRADAT[id]?{...RADAT['uusi-livia-ilahtuu'],...HYMYRADAT[id]}:RADAT[id==='uusi-sarjakuvapulu'?'uusi-welcome':id];
   if(!radat)throw new RangeError('Tuntematon katseluele: '+id);
-  const s={id,p:rajaa(p),paaKulma:0,paaX:0,paaY:0,rinta:0,siipi:0,takasiipi:0,sulat:0,katse:0,ilme:0,suu:0,rapaytys:0,sivu:0,paperi:0,havahdus:0,kirjaKulma:0,kirjaKiinni:0,kirjaX:0,kirjaY:0,kirjaKallistus:0,vihellys:0,ryhti:0,kyyry:0,lasikorjaus:0,hengitys:0,suusiipi:0,rintasiipi:0,huiviliike:0};
+  const s={id,p:rajaa(p),paaKulma:0,paaX:0,paaY:0,rinta:0,siipi:0,takasiipi:0,sulat:0,katse:0,ilme:0,suu:0,rapaytys:0,sivu:0,paperi:0,havahdus:0,kirjaKulma:0,kirjaKiinni:0,kirjaX:0,kirjaY:0,kirjaKallistus:0,vihellys:0,ryhti:0,kyyry:0,lasikorjaus:0,hengitys:0,suusiipi:0,rintasiipi:0,huiviliike:0,hymy:0,poski:0};
   for(const [avain,rata]of Object.entries(radat))s[avain]=liikearvo(s.p,rata);
   const voima=.55+.9*rajaa(voimakkuus);
   for(const avain of ['paaKulma','paaX','paaY','rinta'])s[avain]*=voima;
@@ -285,7 +311,7 @@ function kommellus(s){
 }
 export function uudenEleenKuva(s,{prefix='uusi',right=44}={}){
   prefix=prefix.replace(/[^a-zA-Z0-9_-]/g,'');
-  if(s.id==='uusi-sarjakuvapulu'||s.id==='uusi-livia-ilahtuu')return sarjakuvapulunKuva(s,{prefix,right});
+  if(s.id==='uusi-sarjakuvapulu'||s.id==='uusi-livia-ilahtuu'||HYMYRADAT[s.id])return sarjakuvapulunKuva(s,{prefix,right});
   const jalka=x=>`<path d="M${x} 177l-1 8m0 0l-7 2m7-2l5 3m-5-3l1 3" fill="none" stroke="#ac7b74" stroke-width="2.1" stroke-linecap="round"/>`;
   const vartalo=s.id==='uusi-bookPanic'?`translate(109 177) rotate(${pyorista(s.rinta)}) scale(${pyorista(1+s.kyyry*.12)} ${pyorista(1-s.kyyry*.3+s.ryhti*.16)}) translate(-109 -177)`:s.hengitys?`translate(109 177) rotate(${pyorista(s.rinta)}) scale(${pyorista(1-s.hengitys*.07)} ${pyorista(1+s.hengitys*.16)}) translate(-109 -177)`:`rotate(${pyorista(s.rinta)} 109 177)`;
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${152+right} 304" width="${152+right}" height="304" aria-hidden="true" data-uusi-versio="${s.id}"><defs><radialGradient id="${prefix}ground"><stop stop-color="#635b4e" stop-opacity=".58"/><stop offset=".55" stop-color="#635b4e" stop-opacity=".32"/><stop offset="1" stop-color="#635b4e" stop-opacity="0"/></radialGradient></defs><ellipse cx="128" cy="301" rx="19" ry="2.8" fill="url(#${prefix}ground)"/><g data-part="whole-bird" transform="translate(128 302) scale(.56) translate(-108 -188)"><g data-part="feet">${jalka(99)}${jalka(118)}</g>${siipi(s,true)}<g data-part="body" transform="${vartalo}">${VARTALO}</g><g data-part="approach" transform="translate(${pyorista(s.paaX)} ${pyorista(s.paaY)}) rotate(${pyorista(s.paaKulma)} 105 146)"><g transform="translate(44 61) scale(1 .87)">${paa(s,prefix)}</g></g>${siipi(s)}${katselukirja(s)}${kommellus(s)}</g></svg>`;

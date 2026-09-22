@@ -250,3 +250,37 @@ Peli, audio, cue, päähaara ja kuvaputki eivät muutu; ei kuvatilauksia.
 
 Lopullinen koko testisarja: 3936 = 3923 PASS, 13 SKIP, 0 FAIL.
 Kohdesarjan kaikki 11 testiä PASS, mukana siluetin ja silmien uudet vartijat.
+
+### Kolme erillistä hymyn ja naurun versiota
+
+Omistaja pyysi katseltavia versioita leveämmästä hymystä. Uudet versiot
+-ryhmän kolme ensimmäistä painiketta ovat Leveä iloinen hymy, Pieni suljettu
+hymy ja Avoin iloinen nauru. Kaikki kestävät 4,4 sekuntia. Ne käyttävät
+olemassa olevaa sarjakuvahahmoa ja tervehdyksen liikkeen kehystä; nauru
+saa kaksi erikokoista pään ja hengityksen painotusta.
+
+Sivulle leviävä hymy ja pystysuuntainen suun avaus ovat eri kanavat.
+Suupieli siirtyy posken suuntaan ja ylös, poski sekä alaluomi kohoavat.
+Pieni hymy pysyy kokonaan suljettuna. Leveä hymy on hetkittäin raollaan.
+Naurussa suu avautuu selvästi, kieli näkyy ja poski ei täytä nokkaväliä.
+Nokan etuosan terävä kyyhkymuoto säilyy samana kaikissa vaiheissa.
+Ensimmäisen luonnoksen liian leveä yläleuka hylättiin kuvallisessa
+tarkistuksessa; lopullinen levitys tapahtuu alkuperäisen kärjen takana.
+
+Nykyinen Ihana nähdä! ja kaikki muut aiemmat versiot säilyvät. Koneellinen
+vertailu committiin `06d62ad2ca02`: 1111/1111 vanhaa SVG-asentoa tavulleen
+ennallaan. Ei A/B-näkymää eikä vanhojen eleiden ylikirjoitusta. Kelaus,
+tauotus ja toisto käyttävät samaa determinististä asentomoottoria.
+
+Kohdesarja 12/12 PASS. Kolmen hymyn 12 kuvan asentosarja katsottu.
+Uudet testit vartioivat suljettua suuta, suun avauksen ja hymyn eroa,
+nokankärjen säilymistä, poski-/alaluomiliikettä, jatkuvuutta ja lepoa.
+Ei muutoksia peliin, audioon, cueihin tai Fable-päähaaraan. Ei kuvatilauksia.
+
+Lopullinen koko sarja 3937 = 3924 PASS, 13 SKIP, 0 FAIL; neljä repon
+porttia ja diff-check PASS. Paikallinen selain: 84 valintaa, 14 ehdotusta
+ajallisena sarjana ja 0 selainvirhettä. Hymyn leveys kasvaa 36 yksiköstä
+pienessä hymyssä 44,06:een ja leveässä hymyssä sekä naurussa 49:ään.
+Nokankärjen polku pysyy täsmälleen samana. Kielen näkyvyys osumatestillä
+ja taustan näkyminen nokkavälistä PASS. Vanhojen suiden/kirjojen tarkistus,
+kelaus/tauko, 390 px ja reduced motion PASS. Live-julkaisun kuitti erikseen.

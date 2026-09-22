@@ -32,7 +32,7 @@ test('sarjakuvakokeilu käyttää omaa piirrosta, huivia ja jatkuvaa silmänräp
   assert.match(kuva(.22),/fill="#d98a98"/);
   const huivi=p=>kuva(p).match(/data-part="scarf-tails" transform="([^"]+)"/)[1];
   assert.notEqual(huivi(.2),huivi(.3),'huivin päät seuraavat tervehdyksen jälkiliikettä');
-  for(const e of LIVIAN_UUDET_VERSIOT.filter(e=>!['uusi-sarjakuvapulu','uusi-livia-ilahtuu'].includes(e.id))){
+  for(const e of LIVIAN_UUDET_VERSIOT.filter(e=>!['uusi-sarjakuvapulu','uusi-livia-ilahtuu'].includes(e.id)&&!e.id.startsWith('uusi-hymy-'))){
     assert.doesNotMatch(uudenEleenKuva(uudenEleenAsento(e.id,.4)),/cartoon-eye|data-part="scarf"/,'ei uutta hahmopiirrosta tai huivia muihin eleisiin');
   }
   for(let i=0;i<=100;i++){
@@ -64,6 +64,38 @@ test('Livian oma tervehdys erottaa tunnistamisen, rintasiiven ja vilkutuksen',()
   }
 });
 
+test('kolme hymykokeilua erottavat sivulle leviämisen, posken ja suun avauksen',()=>{
+  const a=(id,p)=>uudenEleenAsento('uusi-hymy-'+id,p),kuva=(id,p)=>uudenEleenKuva(a(id,p));
+  assert.equal(a('pieni',.335).suu,0,'pieni hymy ei avaa suuta');
+  assert.ok(a('levea',.335).hymy>a('pieni',.335).hymy+.3,'leveä hymy venyy enemmän sivulle');
+  assert.ok(a('levea',.275).suu<.25,'hymyssä suu on vain raollaan');
+  assert.equal(a('nauru',.335).suu,.9);
+  assert.ok(a('nauru',.335).suu>a('nauru',.55).suu,'kaksi erikokoista naurahdusta');
+  assert.equal(a('nauru',.43).suu,.2,'naurahdusten välissä suu sulkeutuu osittain');
+  for(const id of ['pieni','levea','nauru']){
+    const svg=kuva(id,.335);
+    assert.match(svg,/data-beak-shape="pigeon-smile"/);
+    assert.equal((svg.match(/data-part="smile-line"/g)||[]).length,1);
+    assert.equal((svg.match(/data-part="lower-lid-smile"/g)||[]).length,2);
+    assert.match(svg,/data-part="soft-cheek" transform="translate/);
+    assert.match(svg,/data-part="mouth-space"/);
+    const karki=p=>kuva(id,p).match(/data-part="upper-beak" d="([^"]+)"/)[1];
+    for(const p of [0,.275,.335,.6,.83,1])assert.equal(karki(p),karki(0),'kärki ei veny lapioksi');
+    assert.equal(kuva(id,0),kuva(id,1),'paluu samaan lepoasentoon');
+    let edellinen=a(id,0);
+    for(let i=1;i<=1000;i++){
+      const s=a(id,i/1000);
+      for(const k of ['hymy','poski','suu']){
+        assert.ok(s[k]>=0&&s[k]<=1);
+        assert.ok(Math.abs(s[k]-edellinen[k])<.03,id+' '+k+' vaihtuu jatkuvasti');
+      }
+      edellinen=s;
+    }
+  }
+  assert.match(kuva('pieni',.335),/data-part="tongue"[^>]+opacity="0"/);
+  assert.match(kuva('nauru',.335),/data-part="tongue"[^>]+opacity="1"/);
+});
+
 test('katseluehdotukset pysyvät erillään pelieleistä ja kestävät kelauksen',()=>{
   const perus=LIVIA_SVG_ELEET.map(e=>e.id);
   for(const e of LIVIAN_UUDET_VERSIOT){
@@ -78,7 +110,7 @@ test('katseluehdotukset pysyvät erillään pelieleistä ja kestävät kelauksen
       for(const m of kuva.matchAll(/url\(#([^)]+)\)/g))assert.ok(ids.includes(m[1]),m[1]);
       assert.ok(ids.every(id=>id.startsWith('koe')));
     }
-    if(e.id!=='uusi-bookPanic')for(const k of ['paaKulma','paaY','paaX','rinta','siipi','takasiipi','rapaytys','ilme','suu','suusiipi','hengitys','rintasiipi','huiviliike'])assert.equal(asento(0)[k],asento(1)[k],e.id+' '+k);
+    if(e.id!=='uusi-bookPanic')for(const k of ['paaKulma','paaY','paaX','rinta','siipi','takasiipi','rapaytys','ilme','suu','suusiipi','hengitys','rintasiipi','huiviliike','hymy','poski'])assert.equal(asento(0)[k],asento(1)[k],e.id+' '+k);
     const jalat=p=>uudenEleenKuva(asento(p)).match(/<g data-part="feet">.*?<\/g>/)[0];
     assert.equal(jalat(0),jalat(.45),'jalkojen ankkurit pysyvät maassa');
   }
