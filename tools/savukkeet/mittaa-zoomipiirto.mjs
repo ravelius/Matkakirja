@@ -167,7 +167,7 @@ for (const koe of KOKEET) for (const porras of PORTAAT) {
     await sivu.waitForTimeout(1700);
     await sivu.evaluate((pov) => window.matkakirja.ui.pallonInstanssi.pointOfView(pov, 1500), KOHTEET[nakyma]);
     await sivu.waitForTimeout(1700);
-    const zoomi = await sivu.evaluate(() => window.__kehysprofiili.lopeta());
+    const zoomi = await sivu.evaluate(() => { const t = window.__kehysprofiili.lopeta(); return { ...t, teksti: window.__kehysprofiili.teksti(t) }; });
     let profiili = null;
     if (cdp) { profiili = (await cdp.send('Profiler.stop')).profile; await cdp.send('Profiler.disable'); }
     const kehykset = zoomi.kehykset;
@@ -192,6 +192,7 @@ for (const koe of KOKEET) for (const porras of PORTAAT) {
     };
     tulokset.push(rivi);
     console.log(`${koe} porras ${porras} ${nakyma} ${MOOTTORI}${CPU > 1 ? ` cpu×${CPU}` : ''}: zoomi med ${p(rivi.mediaani)} p95 ${p(rivi.p95)} max ${p(rivi.max)} ms, >50: ${rivi.yli50}, >25: ${rivi.yli25}/${rivi.kehyksia} | varattu med ${p(rivi.varattuMed)} p95 ${p(rivi.varattuP95)} | pitkien varattu-osuus ${rivi.pitkatVarattuOsuus == null ? '—' : Math.round(rivi.pitkatVarattuOsuus * 100) + ' %'} | drawcalls ≤ ${rivi.drawcallsMax}, laattoja scenessä ≤ ${rivi.scenessaMax}, häipyviä ≤ ${rivi.hapyviaMax} | gpu ${gpu.renderer}`);
+    console.log(`   ${zoomi.teksti.split('\n')[0].split(' | ').slice(-1)[0]} | ${zoomi.teksti.split('\n')[1]}`);
     for (const k of rivi.pisimmat.slice(0, 6)) console.log(`   t ${k.t} dt ${k.dt} varattu ${k.varattu} | dc ${k.drawcalls} tri ${k.kolmiot} scenessä ${k.scenessa} häipyy ${k.hapyvia} näkyviä ${k.nakyvia} taso ${k.taso} päiv ${k.paivityksia} pyynt ${k.pyyntoja} rast ${k.rasterit} jak ${k.jakoja}`);
     if (koonti) {
       console.log(`   profiili pitkissä kehyksissä (${koonti.pitkia} kpl, ${p(koonti.pitkat.yhteensa)} ms näytteitä):`);

@@ -2292,6 +2292,7 @@ export function luoLaattakerros({
   let aloituksia = 0;
   let aloitusRaf = 0;
   let vientiRaf = 0;
+  const vientiKehys = { kehys: 0, perakkain: 0 };
   let liikkeessaViimeksi = false;
   let taso = null;
   /** Edellinen taso oli laattakaton (ei tarpeen) pudottama: ei hystereesiä seuraavassa valinnassa. */
@@ -3123,11 +3124,50 @@ export function luoLaattakerros({
     valmisteluRaf = 0;
     mittarit.valmisteluJonossa = 0;
   };
+  /*
+   * VALMISTELU VÄISTÄÄ PITKÄÄ KEHYSTÄ LIIKKEESSÄ (Ranska z6 zoomi,
+   * 22.9.2026). Kehysprofiili (js/pallolauta/kehysprofiili.js, WebKit
+   * 390 × 844 dpr 3, porras 6): zoomin pitkissä kehyksissä pääsäikeen
+   * rAF-työstä 5–6 ms/kehys oli tätä jonoa (kangas, kerma, getImageData,
+   * verkko) — kolme kertaa three.js:n render ja suurin yksittäinen erä.
+   * Oikealla iPhonella pitkien kehysten ajasta 54–73 % oli pääsäikeen työtä.
+   * Yksi laatta kestää budjettia (4 ms) kauemmin, joten "aina vähintään
+   * yksi" osui joka kehykseen. Nyt liikkeessä valmistelu jättää kehyksen
+   * väliin, jos a) edellinen kehys oli pitkä (> VALMISTELU_PITKA_KEHYS_MS,
+   * kone on jo jäljessä) tai b) tähän kutsuun tullessa kehyksestä on jo
+   * kulunut yli VALMISTELU_KEHYSVARA_MS (muut rAF-kutsut veivät
+   * budjetin). Levossa jono puretaan kuten ennen. Koe `valmisteluvanha`
+   * palauttaa vanhan tahdin vertailuksi.
+   */
+  const VALMISTELU_PITKA_KEHYS_MS = 24;
+  const VALMISTELU_KEHYSVARA_MS = 8;
+  /** Peräkkäisiä väistöjä enintään: hitaalla laitteella joka kehys on pitkä, ja jono etenee silti neljäsosatahtia. */
+  const VALMISTELU_VAISTOJA_PERAKKAIN = 3;
+  /**
+   * Väistääkö raskas jonotyö tämän kehyksen (liikkeessä: edellinen kehys
+   * pitkä tai kehyksestä jo kulunut yli varan). `muisti` pitää jonon oman
+   * edellisen kehysajan ja peräkkäiset väistöt. Sama sääntö valmistelulle
+   * ja tekstuurin viennille.
+   */
+  const kehysVaisto = (kehysAlku, muisti, laskuri) => {
+    const alku = aika();
+    const edellinen = muisti.kehys;
+    muisti.kehys = Number.isFinite(kehysAlku) ? kehysAlku : alku;
+    if (!liikkeessaViimeksi || kokeet.has('valmisteluvanha') || !Number.isFinite(kehysAlku)) { muisti.perakkain = 0; return false; }
+    const pitkaKehys = edellinen > 0 && kehysAlku - edellinen > VALMISTELU_PITKA_KEHYS_MS;
+    const myohassa = alku - kehysAlku > VALMISTELU_KEHYSVARA_MS;
+    if (!(pitkaKehys || myohassa) || (muisti.perakkain ?? 0) >= VALMISTELU_VAISTOJA_PERAKKAIN) { muisti.perakkain = 0; return false; }
+    muisti.perakkain = (muisti.perakkain ?? 0) + 1;
+    mittarit[laskuri] = (mittarit[laskuri] ?? 0) + 1;
+    return true;
+  };
+  const valmisteluKehys = { kehys: 0, perakkain: 0 };
   const ajaValmistelu = () => {
     if (purettu || valmisteluRaf || !valmistelujono.length) return;
-    valmisteluRaf = ikkuna.requestAnimationFrame(() => {
+    valmisteluRaf = ikkuna.requestAnimationFrame((kehysAlku) => {
       valmisteluRaf = 0;
       if (purettu) return;
+      if (kehysVaisto(kehysAlku, valmisteluKehys, 'valmisteluVaistoja')) { ajaValmistelu(); return; }
       const alku = aika();
       let n = 0;
       // Näkyvät ensin, sitten tuki, sitten ennakko — sama järjestys kuin latausjonossa.
@@ -3291,8 +3331,10 @@ export function luoLaattakerros({
     if (purettu || lukittu || vientiRaf || !vientijono.length) return;
     // Koe `vientilepo`: liikkeessä vienti odottaa seuraavaa lepopäivitystä.
     if (kokeet.has('vientilepo') && liikkeessaViimeksi) return;
-    vientiRaf = ikkuna.requestAnimationFrame(() => {
+    vientiRaf = ikkuna.requestAnimationFrame((kehysAlku) => {
       vientiRaf = 0;
+      // Vienti (initTexture 3–7 ms) väistää pitkää kehystä liikkeessä kuten valmistelu.
+      if (kehysVaisto(kehysAlku, vientiKehys, 'vientiVaistoja')) { ajaVienti(); return; }
       let n = 0;
       while (vientijono.length && n < LAATTAKERROS_TEKSTUUREJA_PER_KEHYS) {
         const t = vientijono.shift();
