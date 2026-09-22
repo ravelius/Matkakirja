@@ -1371,3 +1371,7 @@ Julkaisija/Pelikoodari 22.9.2026 klo 18.50: #2826 → v2116, #2828 → v2117 (Ve
 ## OMISTAJA iPHONELLA v2117: VIIDEN SYOTETAVAN VALILLA EI HAVAITTAVAA EROA → iPHONEN NYKIMINEN EI OLE SYOTTEEN TAHDISTUSTA; SEURAAVA KOE TARKKUUS LIIKKEESSA 'TASAINEN' (v2118) (22.9.2026 klo 18.56)
 
 Omistaja 22.9.2026 klo 18.55: kokeili v2117:llä kaikki syötetavat ratasvalikosta, ei nähnyt eroa; kysyi pitääkö sovellus sulkea välissä — ei tarvitse (valinta heti). Fable: tulos itsessään kertoo, että iPhonen jäljellä oleva nykiminen ei ole syöteputkea (Safari-työpöydän ero Chromeen voi silti olla); seuraava koe Tarkkuus liikkeessä → Tasainen (dpr 2 liikkeessä) v2118:lla; jos ei eroa, iPhonen kehysprofiili (vaatii puhelimen kytkennän). Pelikoodarille tiedoksi ennen lisää syötetyötä.
+
+## E VALMIS (#2835: HARMAA PISTE OLETUS, VARI VIVUN VALOTAPLASTA, ?koe=symbolitkaukana); ?koe=profiili TILATTU (KEHYSPROFIILIN OVERLAY + POST) iPHONE-MITTAUKSEEN ILMAN WEB INSPECTORIA (22.9.2026 klo 19.00)
+
+Pelikoodari 22.9.2026 klo 19.00: #2835 — --sym-piste-harmaa, selitevalikon merkki pitää värinsä (väriavain), väri tulee valotäplästä; poltetun laatan piste värillinen kunnes Karttaseppä polttaa nostotason; 3959/0. ?koe=profiili: kehysprofiili.js:n koneisto on (varattu/vapaa, rAF-kutsut, render, pisimmät 12); lisätään overlay (pisin kehys + syy + asetukset) ja POST /tulos mittauspalvelimelle → Fable tilasi. Julkaisijan jono: #2831 → #2833 → #2835.
