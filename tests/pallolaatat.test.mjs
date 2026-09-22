@@ -531,7 +531,8 @@ test('vika v1649: sormen tartuntapiste lasketaan, ei säteenjäljitetä', () => 
   assert.match(laatat, /export function pinnanPiste\(kamera, x, y, W, H, R\) \{/);
   assert.match(pallo, /lepokerroksenVerkko, luoLepokerroksenAjoitus, pallonPiste, pinnanPiste,/);
   // Sormiveto lukee pinnan siitä, ei kirjaston säteenjäljityksestä.
-  assert.match(pallo, /const sormenKohta = \(e\) => \{\n\s*const r = kotelo\.getBoundingClientRect\(\);\n\s*return pinnanPiste\(pallo\.camera\(\), e\.clientX - r\.left, e\.clientY - r\.top,\n\s*kotelo\.clientWidth, kotelo\.clientHeight, pallo\.getGlobeRadius\(\)\);\n\s*\};/);
+  // Kotelon mitat tulevat muistista (luetaan eleen alussa, sulavuus kohta 15).
+  assert.match(pallo, /const sormenKohta = \(x, y\) => \{\n\s*const m = mitat\(\);\n\s*return pinnanPiste\(pallo\.camera\(\), x - m\.left, y - m\.top, m\.W, m\.H, pallo\.getGlobeRadius\(\)\);\n\s*\};/);
   assert.ok(!/return pallo\.toGlobeCoords\(e\.clientX/.test(pallo),
     'tartuntapiste ei saa tulla säteenjäljityksestä (jänne painuu 1,4–3,2 px)');
   // Vektorikerros ei enää pidä omaa kappalettaan samasta kaavasta.
