@@ -96,3 +96,49 @@ export function kerrostenBodyLuokat(haku) {
   if (!joukko) return [];
   return KERROKSET.filter((k) => !joukko.has(k)).map((k) => `kerros-pois-${k}`);
 }
+
+/*
+ * PIIRTOKOKEET (`?koe=a,b`, Pelikoodari 22.9.2026, VAIN MITTAUKSEEN):
+ * DOM-kerrokset pallon päällä yksi kerrallaan pois, jotta zoomin
+ * "piirto"-kehysten (ei laskurimuutosta) lähde löytyy laitteella.
+ * Laattojen omat kokeet (aniso1, eimip, silmat40, eihaive, vientilepo)
+ * lukee js/pallolaatat.js laattakerroksenKokeet samasta lipusta.
+ *   eiliike   .pallolauta-liike pois (sävy, ylilentävä pulu)
+ *   eiblend   sävyn mix-blend-mode: normal
+ *   eikasvot  Pulun kasvot (SVG) pois, nappi jää
+ *   eipollo   Pulun nappi ja kasvot pois
+ *   eicss2d   CSS2D-kerros (kohteet, linssimerkit, ankkurit) pois
+ */
+export const PIIRTOKOKEIDEN_TYYLIT = {
+  eiliike: '.pallolauta-liike{display:none!important}',
+  eiblend: '.pallolauta-liike-savy{mix-blend-mode:normal!important}',
+  eikasvot: '.livia-kasvot-pinta{display:none!important}',
+  eipollo: '.pollo-nappi,.livia-kasvot-pinta{display:none!important}',
+  eicss2d: '.pallo-kotelo .scene-container > div{display:none!important}',
+};
+
+/** Lipun `koe`-arvot joukkona (myös laattojen kokeet). Ilman lippua tyhjä. */
+export function piirtokokeet(haku) {
+  const h = haku ?? (() => { try { return globalThis.location?.search ?? ''; } catch { return ''; } })();
+  let arvo = '';
+  try { arvo = new URLSearchParams(h).get('koe') ?? ''; } catch { return new Set(); }
+  return new Set(arvo.split(',').map((k) => k.trim()).filter(Boolean));
+}
+
+/** Lisää kokeiden tyylit dokumenttiin (kerran). Palauttaa lisätyt nimet. */
+export function asennaPiirtokokeet(doc = globalThis.document, haku) {
+  const kokeet = piirtokokeet(haku);
+  const lisatyt = [];
+  if (!doc?.createElement || !kokeet.size) return lisatyt;
+  for (const nimi of kokeet) {
+    const css = PIIRTOKOKEIDEN_TYYLIT[nimi];
+    if (!css || doc.getElementById(`piirtokoe-${nimi}`)) continue;
+    const el = doc.createElement('style');
+    el.id = `piirtokoe-${nimi}`;
+    el.textContent = css;
+    doc.head?.append(el);
+    lisatyt.push(nimi);
+  }
+  if (lisatyt.length) doc.body?.classList.add(...lisatyt.map((n) => `piirtokoe-${n}`));
+  return lisatyt;
+}

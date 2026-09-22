@@ -299,7 +299,7 @@ test('pohja vapautetaan omaan syvimpään tasoonsa, jos kerros ei piirrä', () =
   assert.match(pallo, /pallo\.globeTileEngineMaxLevel\(syvin\);/);
   // v1645:n laatutilat palaavat: asetaTila kulkee läpi vasta kun kerros on pois.
   assert.match(pallo, /if \(kerrosKaytossa\) return;/);
-  assert.match(pallo, /if \(!kerrosKaytossa\) return;\n\s*kerros\.paivita\(kehys, true\);\n\s*vapautaPohja\(\);/,
+  assert.match(pallo, /if \(!kerrosKaytossa\) return;\n\s*kerros\.paivita\(kehys, true, \{ liike: Boolean\(lepoAjastin\) \}\);\n\s*vapautaPohja\(\);/,
     'vapautus ajetaan piirtokoukusta, samasta kehyksestä kuin päivitys');
 });
 
@@ -388,9 +388,11 @@ test('vakiot: renderOrder karkeista hienoihin, syvyyssiirto laattojen edelle, ki
    * `renderer.initTexture` 3,0 ms (p50) / 6,7 ms (max): kaksi peräkkäin
    * samassa kehyksessä on pahimmillaan 13 ms 16,7 ms:n budjetista.
    * Yksi vienti kehyksessä on 60 Hz:llä yhä 60 laattaa sekunnissa eli
-   * enemmän kuin LAATTAKERROS_RINNAKKAIN ehtii ladata.
+   * enemmän kuin LAATTAKERROS_RINNAKKAIN ehtii ladata — mutta zoomissa
+   * se oli karkean tason näkymisajan lattia (22.9.2026, ks.
+   * LAATTAKERROS_TEKSTUUREJA_PER_KEHYS): kaksi vientiä, p95 ennallaan.
    */
-  assert.equal(LAATTAKERROS_TEKSTUUREJA_PER_KEHYS, 1);
+  assert.equal(LAATTAKERROS_TEKSTUUREJA_PER_KEHYS, 2);
   assert.ok(LAATTAKERROS_TEKSTUUREJA_PER_KEHYS * 60 > LAATTAKERROS_RINNAKKAIN,
     'vienti ei saa jäädä latauksen pullonkaulaksi');
   assert.equal(LAATTAKERROS_NAYTTEITA, 9);
@@ -438,7 +440,8 @@ test('kytkentä: pohja naulataan tasoon 5 vain kerroksen ollessa päällä', () 
    * piirrä (ks. testi "pohja vapautetaan…").
    */
   assert.ok(!/kerros\.paivita\(kam, true\)/.test(pallo), 'kerros ei saa päivittyä updatePovista');
-  assert.match(pallo, /const kehyspurku = kerros\n\s*\? kytkePallonKehys\(pallo, kotelo, \(kehys\) => \{\n\s*if \(!kerrosKaytossa\) return;\n\s*kerros\.paivita\(kehys, true\);\n\s*vapautaPohja\(\);\n\s*\}, ikkuna\)\n\s*: \(\) => \{\};/);
+  // Kolmas argumentti kertoo kerrokselle kameran liikkeen (lepoajastin käy): koe `vientilepo` lukee sen.
+  assert.match(pallo, /const kehyspurku = kerros\n\s*\? kytkePallonKehys\(pallo, kotelo, \(kehys\) => \{\n\s*if \(!kerrosKaytossa\) return;\n\s*kerros\.paivita\(kehys, true, \{ liike: Boolean\(lepoAjastin\) \}\);\n\s*vapautaPohja\(\);\n\s*\}, ikkuna\)\n\s*: \(\) => \{\};/);
   assert.match(pallo, /if \(kerrosKaytossa\) \{\n\s*kerros\.paivita\(pallonKehysmitat\(pallo, kotelo, kamera, ikkuna\), false\);\n\s*vapautaPohja\(\);\n\s*\} else lepokerros\?\.levossa\(\);/);
   assert.match(pallo, /laatuKuuntelijat\.delete\(pakotus\);\n\s*kehyspurku\(\);/, 'koukku puretaan');
   // Kahva on sama accessorille ja savukkeille; purku purkaa kerroksen.

@@ -204,6 +204,7 @@ export const HAHMOTELMA_LUX = [
     ],
     nimi: 'Viandenin linna',
     tyyppi: 'historia',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Kuka myi Viandenin linnan vuonna 1820?',
@@ -277,6 +278,7 @@ export const HAHMOTELMA_LUX = [
     ],
     nimi: 'Echternach',
     tyyppi: 'historia',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Minä vuonna Pyhä Willibrord perusti Echternachin luostarin?',
@@ -472,6 +474,7 @@ export const HAHMOTELMA_LUX = [
     ],
     nimi: 'Luxembourgin kaupunki',
     tyyppi: 'historia',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Kuka hankki Lucilinburhucin linnakkeen vuonna 963?',
@@ -878,6 +881,7 @@ export const HAHMOTELMA_LUX = [
     ],
     nimi: 'Esch-sur-Alzette',
     tyyppi: 'tekniikka',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Milloin alueelta löytyi runsaasti rautamalmia?',

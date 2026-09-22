@@ -71,6 +71,7 @@ import {
   pallonOmatPisteet, pallonPiste, rakennaPallo, webglTuettu,
 } from '../pallo.js';
 import { luoPallovektorit, pallovektoritPaalla } from '../pallovektorit.js';
+import { luoPallomaakunnat, pallomaakunnatPaalla } from '../pallomaakunnat.js';
 /*
  * VÄRITASON KOHDEMAA (karttauudistus, erä 1b). Lauta kertoo sen
  * laattapyramidille SAMASSA HETKESSÄ kuin punaisen kehän — kerros ei
@@ -144,7 +145,8 @@ import { luoMaapaneeli, paneelinLaatikko } from './maapaneeli.js';
 import { luoLinssit } from './linssit.js';
 import { glLuokat, glNimiotKaytossa, luoNimiokerrosGL, rasteroiTeksti } from '../pallonimiot-gl.js';
 import { luoGlNimiosovitin } from './glnimiot-sovitin.js';
-import { ablaatioPaalla, kerrosKaytossa, kerrostenBodyLuokat } from './kerrokset.js';
+import { ablaatioPaalla, kerrosKaytossa, kerrostenBodyLuokat, asennaPiirtokokeet, piirtokokeet } from './kerrokset.js';
+import { asennaKehysprofiili } from './kehysprofiili.js';
 import { sfx } from '../sound.js';
 import { luoNappulanKuljettaja } from './siirto.js';
 import { luoAloituslennonKohtaus } from './avaus.js';
@@ -2031,7 +2033,17 @@ export async function avaaPallolauta(ui) {
     // Äänet pois ilman asetuksen tallennusta (sound.js enabled-portti).
     if (!kerrosKaytossa('aanet')) sfx.enabled = false;
   }
+  // PIIRTOKOKEET (`?koe=`, kerrokset.js): DOM-kerros pois vain mittauksessa;
+  // kehysprofiili (pääsäie/GPU-jako) samoilla lipuilla laitteen konsoliin.
+  asennaPiirtokokeet();
+  if (ablaatioPaalla() || piirtokokeet().size) asennaKehysprofiili(() => globalThis.matkakirja?.ui);
   const vektorit = pallovektoritPaalla() && kerrosKaytossa('vektorit') ? luoPallovektorit({ pallo, kotelo, reitit }) : null;
+  /*
+   * Maakuntavektorit (js/pallomaakunnat.js, erä M1): admin-1-alueet
+   * täyttöinä laattojen päällä, viivojen alla. OLETUKSENA POIS
+   * (`?maakunnat=1`); maa seuraa pelaajan maan korostusta alempana.
+   */
+  const maakunnat = pallomaakunnatPaalla() ? luoPallomaakunnat({ pallo }) : null;
   let liikkeessaNyt = () => false;
   // GL-nimiöt (vaihe 2): ladonnan nimet rungolle sovittimen kautta (oletus päällä, `?glnimiot=0` pois).
   const glSovitin = glNimiotKaytossa() && !/[?&]glnimiot=testi\b/.test(globalThis.location?.search ?? '')
@@ -4934,6 +4946,8 @@ export async function avaaPallolauta(ui) {
       asteet: pallonAsteet,
       lataa: lataaMaapolygonit,
     });
+    // Maakuntatäytöt samasta maasta ja samalla hetkellä kuin korostuskehä.
+    maakunnat?.asetaMaa(linssiPaalla() ? null : korostusIso);
     /*
      * MAAILMANÄKYMÄ LUETAAN SAMASTA HETKESTÄ KUIN MAA (omistaja
      * 15.9.2026, Raamattu: KARTTAUUDISTUKSEN PAATOKSET 23). Kun
@@ -5608,6 +5622,8 @@ export async function avaaPallolauta(ui) {
      * savukkeille ja vartijalle kuten lepokerros.
      */
     vektorit: () => vektorit,
+    /** Maakuntavektorien kahva (js/pallomaakunnat.js) tai null (`?maakunnat=1` kytkee). */
+    maakunnat: () => maakunnat,
     /** Siirron kuljettaja (ui.nappulanKuljettaja → js/pallolauta/siirto.js). */
     nappulanKuljettaja: (player, valinnat) => luoNappulanKuljettaja({
       ui, lauta, player, ...valinnat,
@@ -5699,6 +5715,7 @@ export async function avaaPallolauta(ui) {
       noppaTakaisin();
       lauta.linssit?.pura();
       vektorit?.pura();
+      maakunnat?.pura();
       // Maakorostuksen muisti on moduulitasolla (yksi pallo
       // kerrallaan): seuraava lauta latoo korostuksen alusta.
       nollaaPallonMaakorostus();

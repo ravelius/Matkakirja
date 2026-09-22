@@ -53,8 +53,8 @@ import { MAASTOKOHTEET_ARK } from '../packs/maastokohteet-ark.js';
 import { MAASTOKOHTEET_ATA } from '../packs/maastokohteet-ata.js';
 import {
   LEHDEN_VAHIN_OSUUS, avaaFokuskohde, kohdekartanNostopaikat, kohdeMerkinLadonta,
-  kohteidenNykyinenIso, maanKohdemerkit, maanKohdetiedot, naapurienPoltetutMerkit,
-  suljeFokuskohde,
+  kohteenKategoria, kohteidenNykyinenIso, maanKadonneetIhmeet, maanKohdemerkit,
+  maanKohdetiedot, naapurienPoltetutMerkit, suljeFokuskohde,
 } from '../fokuskohteet.js';
 import { avaaElaintaky, elaintakyLaudalla } from '../elaintaky.js';
 import { kaupunkikartanSiirretyt } from '../nahtavyydet.js';
@@ -2792,10 +2792,19 @@ export function luoNostot({
        * piirtämättä (js/nahtavyydet.js kaupunkikartanSiirretyt).
        *
        * AIHE TULEE NOSTON OMASTA DATASTA, ei kartan pisteestä: kohteen
-       * `nosto`-tunnus osoittaa maan kohdetietoihin, joiden `symboli`
-       * on sama kenttä, josta kartan merkkikin ottaa kategoriansa.
-       * Aiheeton — ja tunnukseton — kohde menee "Muut"-kasaan (kohta
-       * 11), joten yksikään siirretty ei katoa listasta.
+       * `nosto`-tunnus osoittaa maan kohdetietoihin, joiden KATEGORIA
+       * (kohteenKategoria, js/fokuskohteet.js) on sama tieto, josta
+       * kartan merkkikin ottaa aiheensa. Aiheeton — ja tunnukseton —
+       * kohde menee "Muut"-kasaan (kohta 11), joten yksikään siirretty
+       * ei katoa listasta.
+       *
+       * KATEGORIA EIKÄ PELKKÄ SYMBOLI (korjattu 22.9.2026, Ranskan
+       * "Kadonneet ihmeet" -bugi): `kohde.symboli ?? kohde.tyyppi`
+       * ohitti `kohde.ihme`-lipun, joten kaupunkikartalle siirretty
+       * kadonnut ihme (Tuileries, Bastilji) luokittui historiaksi eikä
+       * ihmeeksi. `kohteenKategoria` on kartan merkin AINOA lähde
+       * (ks. sen oma kommentti), ja tämä rivi kysyy nyt samaa
+       * funktiota sen sijaan, että toistaisi sen ehdon.
        *
        * EI POLTTOON EIKÄ KARTAN SIIVOUKSEEN: nämä rivit eivät ole
        * `sisaisetAvaimet`-joukossa, koska niillä ei ole pääkartan
@@ -2804,12 +2813,12 @@ export function luoNostot({
        */
       const siirretyt = kaupunkikartanSiirretyt(ui, city.id).map((k) => {
         const kohde = kohdetiedot.get(k.id) ?? null;
-        const symboli = kohde?.symboli ?? kohde?.tyyppi ?? null;
+        const kategoria = kohde ? kohteenKategoria(kohde) : null;
         return {
           ...k,
           perhe: 'nosto',
           kartalta: true,
-          aihe: symboli ? nostosymPaakategoria(symboli) : '',
+          aihe: kategoria ? nostosymPaakategoria(kategoria) : '',
           ladontaNro: Number.MAX_SAFE_INTEGER,
         };
       });
@@ -3843,6 +3852,34 @@ export function luoNostot({
     // Aihemerkki on monta nostoa: selite laskee kappaleet, ei merkkejä.
     for (const o of osumat) {
       if (o.aihe) laskurit.set(o.aihe, (laskurit.get(o.aihe) ?? 0) + (o.maara ?? 1));
+    }
+    /*
+     * POIKKEUS: KADONNEET IHMEET LASKETAAN KOKO MAASTA, EIVÄT VAIN
+     * OSUMISTA (omistaja 22.9.2026, Ranskan "Kadonneet ihmeet" -bugi).
+     *
+     * Yllä oleva silmukka laskee vain ruudulla NYT olevat osumat, ja
+     * `karsiKaupunkikartanNostot` (js/fokuskohteet.js) pudottaa
+     * kaupunkilehden kohdekartalle siirretyt kohteet pääkartan
+     * riveiltä kokonaan — Ranskassa Tuileries ja Bastilji eivät siis
+     * KOSKAAN ole `osumat`-joukossa saapumisnäkymässä. Molemmat ovat
+     * silti MAASSA, joten selitteen luku oli 0, vaikka maassa on kolme
+     * kadonnutta ihmettä (kolmas, Saint-Cloud, on lisäksi `lahi: true`
+     * -portin takana eikä näy ennen lähizoomia). js/karttavalot.js
+     * karttavalotLaskurit -kommentti ("luku lupaa täsmälleen niin
+     * monta täplää kuin kartalta löytyy") ei siis päde tälle riville:
+     * omistajan päätös on, että kadonneiden ihmeiden rivi näyttää maan
+     * KOKO ihmemäärän eikä vain ruudulla piirtyvää osajoukkoa.
+     *
+     * TUPLAUS ESTETÄÄN AVAIMELLA: `osumienAvaimet` on kohde.id (sama
+     * kenttä kuin osumat-riveillä ja maanKohdetiedot-taulussa), joten
+     * jo osumissa oleva — tai liuskan "siirretyt"-rivinä laskettu,
+     * ks. yllä — ihme ei lisäänny toiseen kertaan.
+     */
+    const osumienAvaimet = new Set(osumat.map((o) => o.id));
+    const maanIhmeetNyt = maanKadonneetIhmeet(maanKohdetiedot(ui, kohteidenNykyinenIso(ui)))
+      .filter((kohde) => !osumienAvaimet.has(kohde.id));
+    if (maanIhmeetNyt.length) {
+      laskurit.set('ihmeet', (laskurit.get('ihmeet') ?? 0) + maanIhmeetNyt.length);
     }
     paivitaValot();
     // Auki oleva kortti, jonka merkki ei ole enää ruudulla, sulkeutuu

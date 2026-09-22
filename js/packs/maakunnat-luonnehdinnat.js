@@ -54,7 +54,16 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
         lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
       },
     },
-    "Provence-Alpes-Côte d'Azur": {
+    /*
+     * AVAIN KORJATTU 22.9.2026 (Karttatyökalun Maakunnat-runko): tunnus
+     * on Natural Earthin `region`-kentän kirjainkanta TÄSMÄLLEEN
+     * (avaimet.md + docs/raportit/…/nykyalueet-fra-deu.json), eli
+     * väliviiva myös d'Azurin edellä — nimiFi (kartan teksti) sen sijaan
+     * käyttää välilyöntiä. Avain oli aiemmin nimiFi-muodossa, jolloin
+     * karttatyökalun tuleva vektoritaso ei olisi löytänyt luonnehdintaa
+     * lainkaan tälle alueelle.
+     */
+    "Provence-Alpes-Côte-d'Azur": {
       lyhyt: "Nizzan rantabulevardilla kävelee kesällä koko Eurooppa, ja Cannesin punainen matto rullataan joka toukokuu.",
       pitka: "Alppien rinteet syöksyvät täällä suoraan Välimereen, ja rannikon kaupungeissa Marseillesta Cannesiin eletään edelleen meren tuomasta vilkkaudesta ja matkailusta. Brittiläinen yläluokka löysi Nizzan talvikohteeksi jo 1800-luvun alussa, ja se rahoitti kaupunkiin rantabulevardin, Promenade des Anglais'n, joka kantaa yhä heidän nimeään. Sisämaassa laventelipellot maalaavat kesällä kokonaisia laaksoja violetiksi, ja kalliokylät kuten Gordes kiipeävät yhä vuorenrinteille keskiajalta asti lähes muuttumattomina. Meri ja vuoret asuvat täällä niin lähekkäin, että aamulla voi hiihtää Alpeilla ja iltapäivällä uida Välimeressä.",
       kuva: {

@@ -23,7 +23,7 @@ export const MAAKUNTIEN_PULU = {
       { q: "Kuinka monesti Alsace vaihtoi omistajaa noin 70 vuoden aikana?", a: "Alue siirtyi Ranskalta Saksalle 1871, takaisin Ranskalle 1918, uudelleen Saksalle natsimiehityksessä 1940 ja lopulta Ranskalle 1945. Neljä omistajanvaihdosta yhden ihmiselämän aikana selittää, miksi moni kylä käyttää yhä sekä ranskan- että saksankielistä nimeään." },
       { q: "Kuinka vanhoja Strasbourgin joulumarkkinat oikein ovat?", a: "Christkindelsmärik-markkinat on järjestetty jo vuodesta 1570 lähtien, joten ne ovat yksi Euroopan vanhimmista joulumarkkinoista. Perinne on säilynyt käytännössä keskeytyksettä yli 450 vuotta." },
     ],
-    "Provence-Alpes-Côte d'Azur": [
+    "Provence-Alpes-Côte-d'Azur": [
       { q: "Miksi Cannesissa alettiin järjestää elokuvafestivaalia?", a: "Festivaali perustettiin 1946 vastapainoksi Venetsian festivaalille, jota fasistinen Italia oli alkanut käyttää propagandaan. Se oli tarkoitettu riippumattomaksi, kansainväliseksi elokuvajuhlaksi, ja punainen matto on kuulunut siihen alusta asti." },
       { q: "Miksi laventelia viljellään juuri täällä?", a: "Provencen kuiva kalkkikivimaaperä ja korkeat ylängöt Vaucluse'ssa sopivat laventelille erinomaisesti. Sato korjataan heinäkuussa, ja suuri osa siitä päätyy läheisen Grassen hajuvesiteollisuuden raaka-aineeksi." },
       { q: "Mikä tekee Grassesta erityisen kaupungin?", a: "Grasse on tunnettu maailman hajuvesipääkaupunkina jo 1500-luvulta lähtien, jolloin nahanparkitsijat alkoivat valmistaa myös tuoksuöljyjä. Kaupungissa toimii yhä useita maailman johtavia hajuvesitaloja." },

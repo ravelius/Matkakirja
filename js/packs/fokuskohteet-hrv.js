@@ -656,6 +656,7 @@ export const FOKUSKOHTEET_HRV = [
     id: 'hvar',
     nimi: 'Hvar',
     tyyppi: 'saari',
+    taso: 1,
     kysymykset: [
       'Keitä olivat Paroksen siirtolaiset?',
       'Miksi pellot jaettiin suorakaiteisiin?',
@@ -771,6 +772,7 @@ export const FOKUSKOHTEET_HRV = [
     id: 'plitvicen-jarvet',
     nimi: 'Plitvicen järvet',
     tyyppi: 'jarvi',
+    taso: 1,
     /*
      * Symboli kuratoitu: tyyppi `muu` jättäisi merkin ilman kategoriaa
      * ja siten ilman nimiötä (js/fokuskohteet.js kohteenSymboli), ja
@@ -821,6 +823,7 @@ export const FOKUSKOHTEET_HRV = [
     id: 'pulan-areena',
     nimi: 'Pulan areena',
     tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Miten amfiteatteri rakennettiin?',
       'Miksi Venetsia halusi purkaa sen?',
@@ -855,6 +858,7 @@ export const FOKUSKOHTEET_HRV = [
     id: 'stonin-muurit',
     nimi: 'Stonin muurit',
     tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Miksi suola oli niin arvokasta?',
       'Mikä oli Ragusan tasavalta?',
