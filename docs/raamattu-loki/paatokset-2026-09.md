@@ -1455,3 +1455,7 @@ Laitetestaajan mittaus: CGEvent-vedot (myös hidas mouseMoved-esisarja) tuottiva
 ## v2125 MAINISSA (#2845, 470031e6): PIIRTOKOE-VALIKKO (NORMAALI / EI PUSKURIKIRJOITUKSIA / PIKSELISUHDE 1,5 / EI TEKSTUURIVIENTEJA) JA KEHYSPROFIILIN KYTKIN RATASVALIKOSSA; OMISTAJA TESTAA iPHONELLA, LAITETESTAAJA MITTAA MAC-SAFARILLA (22.9.2026 klo 20.23)
 
 Julkaisija: testit 3966/0, head-tarkistus ok. Julkaisijan oppi: head tarkistetaan vain ennen mergeä, joten haaraan mergen jälkeen tuleva commit (kuten Piirtokoe #2843:n suljettuun haaraan) jää huomaamatta ilman erillistä ilmoitusta → jatkossa Pelikoodari avaa uuden haaran per erä (sääntö annettu klo 20.16). Pages-vienti käynnissä klo 20.23. Ohje omistajalle: ⚙ → Kartta → Piirtokoe, valitse tila, kytke Näytä kehysprofiili, vedä karttaa 10 s, kaappaus overlaysta; yksi kaappaus per tila.
+
+## PR #2847: PIIRTOKOKEESEEN alpha0 JA vahemmandc; HAVAINTO: alpha:false EI MENE LAPI (three r185 LUO KONTEKSTIN AINA alpha:true, getContextAttributes().alpha TOSI) → alpha0 VAIKUTTAA VAIN LAPINAKYMATTOMANA TAUSTAVARINA; vahemmandc WebKit Camargue z8: 22 → 18 PIIRTOKUTSUA (22.9.2026 klo 20.30)
+
+Pelikoodari, haara pelikoodari-alpha-dc, 3982 testiä 0 punaista. Seuraus: jos alpha0-mittauksessa ei näy eroa, syy on tämä eikä alfakanava. Seuraava Pelikoodarille: luo WebGL-konteksti itse alpha:false-lipulla ja anna se rendererille (canvas+context), jotta lippu mittaa mitä väittää. Julkaisija mergeää #2847 v2126:ksi; omistajan neljän tilan testi ei muutu.
