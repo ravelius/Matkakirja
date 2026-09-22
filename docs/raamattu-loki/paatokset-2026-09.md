@@ -1567,3 +1567,7 @@ Seuraava koe #2866:n jälkeen: sama paikka, 10 s veto, kaksi kaappausta per tila
 ## #2866 SISALTAA MYOS PIIRTOKOEN 4 TILAA (1 NORMAALI, 2 EI PUSKURIKIRJOITUKSIA, 3 EI TEKSTUURIVIENTEJA, 4 EI HAIVYTYSTA VEDOSSA; OVERLAY 'koe 3/4'); dpr15/alpha0/vahemmandc VAIN OSOITTEESSA, TALLENNETTU VALINTA PALAUTUU NORMAALIIN (22.9.2026 klo 23.19)
 
 Pelikoodari: testit 4006/0, savukkeet profiilitila ja koevaihto-lataus 5/5 Chromium+WebKit. Omistajan kierros v2135:llä: 1/4, 3/4, 2/4, kaksi kaappausta kustakin samassa paikassa; valinta lataa sivun itse.
+
+## PR #2868 (KARTTASEPPA): KAKSI PALSTAA KAIKKIIN NOSTOIHIN — nostoPalstoiksi js/nostokuva.js:SSA, KUUSI KUTSUJAA, css/nostokuva.css .nostokuva-kortti; VAIHE 1 ISO KUVA MYOS LEVEALLA, VAIHE 2 KUVA PIENENEE PALSTAANSA (FLIP 260 ms, SAMA img); ALLE 1100 px ENNALLAAN; iPad VAAKA (1194) SAA PALSTAT; 11.9. 'KUVA EI LIIKU' PATEE NYT VAIN ALLE 1100 px (22.9.2026 klo 23.23)
+
+Vartijat tests/nostokuva-kortit (jokainen tyyppi 1194/1400/1920, pino 834), tools/mittaa-nostopalstat.mjs WebKit 52/52, npm test 4010/0. Kaappaukset docs/raportit/kaappaukset/nostopalstat-elain-fra-1400-vaihe{1,2}.jpg lähetetty omistajalle. Jono: #2866 (v2135) → #2868 (v2136). Omistaja klo 23.22: Codexilta tulee pulupäivityksiä peliin; Julkaisija käsittelee ne normaalikaavalla.
