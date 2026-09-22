@@ -875,13 +875,18 @@ export function nostosymMiniMerkki(symboli, laji) {
  * rasteria varten (nostosymMustelajit), joten kumpikin piirtotapa
  * jäljittää yhtä lähdettä.
  */
-export function piirraNostosymMini(g, symboli, laji) {
+export function piirraNostosymMini(g, symboli, laji, { harmaa = false } = {}) {
   const merkki = nostosymMiniMerkki(symboli, laji);
   // Kiekko ensin ja mustereuna sen päälle: reunan on peitettävä värin
   // laita, tai kiekosta jää musteen ulkopuolelle värillinen kehä.
+  //
+  // `harmaa` on KARTAN piste (ks. KARTAN PISTE ON HARMAA): kartalla
+  // kiekko on neutraali ja värin kertoo vivun sytyttämä valotäplä.
+  // Selitevalikon oma merkki (js/karttaselite.js) on sen sijaan
+  // VÄRIAVAIN, joten se pitää kategoriavärinsä.
   if (merkki.taytto) {
     el('path', {
-      class: `nostosym-mini-taytto nostosym-mini-${merkki.vari}`,
+      class: `nostosym-mini-taytto nostosym-mini-${harmaa ? 'harmaa' : merkki.vari}`,
       d: merkki.taytto,
     }, g);
   }
@@ -920,7 +925,9 @@ function piirraNostosymMiniCanvas(ctx, tunnus, muste, porras) {
      * rasteri itse on paikallaan. Väri pysyy aiheen musteella.
      */
     const alfa = ctx.globalAlpha;
-    const vari = muste.varit?.[merkki.vari] ?? NOSTOSYM_PISTE_VARIT[merkki.vari];
+    // Kartan kiekko on harmaa (ks. KARTAN PISTE ON HARMAA); hehkukin
+    // on siis neutraali, ja aiheen väri tulee vivun valotäplästä.
+    const vari = muste.harmaa ?? NOSTOSYM_PISTE_HARMAA;
     const r = NOSTOSYM_PISTE_R;
     const hehku = ctx.createRadialGradient(0, 0, r * 0.7, 0, 0, r * NOSTOSYM_HEHKUN_SADE);
     hehku.addColorStop(0, nostosymVariAlfalla(vari, NOSTOSYM_HEHKUN_ALFA));
@@ -2187,6 +2194,30 @@ export const NOSTOSYM_PISTE_VARIT = {
  */
 export const NOSTOSYM_PISTE_HIMMEYS = 0.86;
 
+/*
+ * KARTAN PISTE ON HARMAA, VÄRI TULEE VIVUSTA (omistaja 22.9.2026,
+ * sanatarkasti: *"...tai sitten muuttaa piste pelkäksi harmaaksi
+ * pisteeksi jossa itsessään ei ole väriä vaan väri tulisi vasta kun
+ * nostoväri on laitettu vivusta päälle."*).
+ *
+ * Yksitoista kategoriaa jakoi saman kiekon ja erosi vain väristä, joten
+ * kartta oli täynnä värejä, joista yksikään ei ollut vastaus mihinkään
+ * kysymykseen. Nyt kiekko on kartalla neutraali — ja kun karttaselitteen
+ * vipu sytyttää aiheen, sen merkkien alle piirtyy aiheen VÄRINEN
+ * valotäplä (js/pallolauta/nostot.js paivitaValot, js/karttavalot.js).
+ * Väri on siis vastaus vipuun eikä merkin pysyvä ominaisuus.
+ *
+ * VÄRIT EIVÄT KADONNEET: NOSTOSYM_PISTE_VARIT elää yhä selitevalikon
+ * väripallossa ja valotäplässä (karttavaloVari) — vain kartan oma
+ * kiekko on harmaa.
+ *
+ * POLTETTU LAATTA ON VIELÄ VÄRILLINEN: Karttasepän nostolaatoissa on
+ * kiekon väri poltettuna, joten lähizoomissa näkyy toistaiseksi vanha
+ * värillinen piste, kunnes laatat poltetaan uudelleen. Elävä kerros ja
+ * tämä vakio ovat sen poltonkin lähde.
+ */
+export const NOSTOSYM_PISTE_HARMAA = '#6f6a61';
+
 /** Mittanauha tekstin leveydelle; yksi konteksti koko kirjastolle. */
 let NOSTOSYM_MITTA = null;
 
@@ -2295,6 +2326,7 @@ function nostosymMustelajit(svg) {
     return NOSTOSYM_MUSTE ?? {
       ...NOSTOSYM_MUSTE_VARA,
       varit: NOSTOSYM_PISTE_VARIT,
+      harmaa: NOSTOSYM_PISTE_HARMAA,
       pisteHimmeys: NOSTOSYM_PISTE_HIMMEYS,
     };
   }
@@ -2324,6 +2356,8 @@ function nostosymMustelajit(svg) {
   NOSTOSYM_MUSTE = {
     vahva: lue('nostosym-mini', NOSTOSYM_MUSTE_VARA.vahva),
     ohut: lue('nostosym-mini-ohut', NOSTOSYM_MUSTE_VARA.ohut),
+    // Kartan kiekon harmaa samasta tyylitiedostosta kuin muutkin sävyt.
+    harmaa: lue('nostosym-mini-taytto nostosym-mini-harmaa', NOSTOSYM_PISTE_HARMAA),
     varit,
     pisteHimmeys: Number.isFinite(peitto) ? peitto : NOSTOSYM_PISTE_HIMMEYS,
   };
@@ -2933,7 +2967,7 @@ export function piirraNostosymKartalle(g, symboli, nimio, laji, kylki = 'oikea',
   const puoli = teksti ? nostosymNimioPuoli(kylki) : 'oikea';
   const elavana = () => {
     g.replaceChildren();
-    piirraNostosymMini(g, symboli, laji);
+    piirraNostosymMini(g, symboli, laji, { harmaa: true });
     // Teksti on jo ladottu mittaansa yllä; toinen lyhennys katkaisisi
     // yhdistetyn merkin pilkkulistan uudestaan (Infinity = älä koske).
     if (teksti) piirraNostosymNimio(g, teksti, laji, puoli, Infinity);

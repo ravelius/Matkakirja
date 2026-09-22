@@ -25229,6 +25229,15 @@ body.infotaulu-auki .toimintorivi .monitoimi-nappi {
    */
   --sym-hetki: #6e4a63;
   --sym-hetki-hiekka: #c9a86a; /* hiekan kellertävä kasa lasin pohjalla */
+  /*
+   * KARTAN PISTEEN HARMAA (omistaja 22.9.2026: *"muuttaa piste pelkäksi
+   * harmaaksi pisteeksi jossa itsessään ei ole väriä vaan väri tulisi
+   * vasta kun nostoväri on laitettu vivusta päälle"*). Kartalla kiekko
+   * on neutraali; kategoriaväri elää selitevalikon pallossa ja vivun
+   * sytyttämässä valotäplässä. Sävy on seepian ja pergamentin väliltä,
+   * ei puhdas harmaa — puhdas harmaa olisi tällä paperilla sininen.
+   */
+  --sym-piste-harmaa: #6f6a61;
 }
 
 /* TÄHTI — Matkakirjan ihme, kohde jota ei enää ole (Raamattu, osio
@@ -25374,6 +25383,9 @@ body.infotaulu-auki .toimintorivi .monitoimi-nappi {
   opacity: 0.86;
 }
 
+/* Kartan neutraali kiekko (ks. --sym-piste-harmaa). Selitevalikon oma
+   merkki on väriavain ja pitää kategoriavärinsä. */
+.nostosym-mini-harmaa { fill: var(--sym-piste-harmaa); }
 .nostosym-mini-silma { fill: var(--sym-silma); }
 .nostosym-mini-historia { fill: var(--sym-historia); }
 .nostosym-mini-ruoka { fill: var(--sym-ruoka); }
