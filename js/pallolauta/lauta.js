@@ -149,7 +149,7 @@ import { glLuokat, glNimiotKaytossa, luoNimiokerrosGL, rasteroiTeksti } from '..
 import { luoGlNimiosovitin } from './glnimiot-sovitin.js';
 import { ablaatioPaalla, kerrosKaytossa, kerrostenBodyLuokat, asennaPiirtokokeet, piirtokokeet } from './kerrokset.js';
 import { asennaKehysprofiili } from './kehysprofiili.js';
-import { luoProfiilinaytto } from './profiilinaytto.js';
+import { luoProfiilinaytto, koetilanNimi } from './profiilinaytto.js';
 import { vedonSeuranta } from '../vedon-seuranta.js';
 import { tarkkuusLiikkeessa } from '../tarkkuus-asetus.js';
 import { sfx } from '../sound.js';
@@ -2113,12 +2113,19 @@ export async function avaaPallolauta(ui) {
    * voimassa olevat asetukset, jolloin omistajan kuvakaappaus kertoo
    * itsessään, missä tilassa peli oli (js/pallolauta/profiilinaytto.js).
    */
+  // Koetila luetaan nyt, samaan aikaan kuin kerrokset lukevat lippunsa; valikon myöhempi valinta näkyy "seuraavana".
+  const koeAlussa = koetilanNimi(piirtokokeet());
+  const sovellusversio = (() => {
+    const t = document.getElementById('app-version')?.textContent ?? '';
+    return t ? `v${t.split('.').pop()}` : '';
+  })();
   const puraProfiilinaytto = piirtokokeet().has('profiili')
     ? luoProfiilinaytto({
       profiili: globalThis.__kehysprofiili,
       kotelo,
       asetukset: () => ({ veto: vedonSeuranta(), tarkkuus: tarkkuusLiikkeessa() }),
       lepo: () => pallo.__piirto?.tila?.() ?? null,
+      tila: () => ({ koe: koeAlussa, seuraava: koetilanNimi(piirtokokeet()), versio: sovellusversio }),
     })
     : () => {};
   const vektorit = pallovektoritPaalla() && kerrosKaytossa('vektorit') ? luoPallovektorit({ pallo, kotelo, reitit }) : null;

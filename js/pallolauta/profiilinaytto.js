@@ -28,10 +28,52 @@
  * savukkeet käyttävät, ja se ajetaan kerran jaksossa (oletus 3 s).
  */
 
+import { PIIRTOKOKEIDEN_VAIHTOEHDOT } from '../piirtokoe-asetus.js';
+
 /** Rollaavan ikkunan pituus (ms). */
 export const PROFIILIN_JAKSO_MS = 3000;
 /** Polku, johon yhteenveto lähetetään (sama origin). */
 export const PROFIILIN_POLKU = '/__profiili';
+/**
+ * Kehysprofiilin (mittarin) versio overlayn ylimmälle riville. NOSTA
+ * aina, kun jonkin luvun merkitys muuttuu (v2124: rollaava ikkuna,
+ * v2126: valmistumisviive, 22.9.2026 ilta: koetila riville) — muuten
+ * eri päivien kaappauksia verrataan kuin ne mittaisivat samaa.
+ */
+export const PROFIILIN_VERSIO = 3;
+
+/**
+ * Koeliput overlayn nimeksi: `profiili` (itse näyttö) pois, loput
+ * aakkosjärjestyksessä; ei yhtään = `normaali` (sama kuin valikon oletus).
+ */
+export function koetilanNimi(kokeet) {
+  const nimet = [...(kokeet ?? [])].filter((k) => k && k !== 'profiili').sort();
+  return nimet.length ? nimet.join(',') : 'normaali';
+}
+
+/**
+ * YLIN RIVI: missä tilassa peli oli (omistajan kaappaukset Fablen kautta
+ * 22.9.2026: ilman tätä kaappausta ei voinut kohdistaa kokeeseen).
+ * `koe` on latauksessa voimaan tullut tila — kokeet luetaan kerrosten
+ * luonnissa — ja `seuraava` valikon nykyinen valinta, jos se eroaa.
+ */
+export function koetilarivi({ koe, seuraava = null, versio = '' } = {}) {
+  const nyt = koe || 'normaali';
+  const vaihto = seuraava && seuraava !== nyt ? ` (seuraavassa latauksessa: ${koetilanOtsikko(seuraava)})` : '';
+  return `${koetilanOtsikko(nyt)}${vaihto} · profiili p${PROFIILIN_VERSIO}${versio ? ` · ${versio}` : ''}`;
+}
+
+/**
+ * NUMERO JA NIMI VALIKON JÄRJESTYKSESSÄ (omistajan tarkennus Fablen
+ * kautta 22.9.2026): "koe 3/6 Pikselisuhde 1,5" — kaappauksen voi
+ * kohdistaa katsomalla valikkoa, ilman lippujen muistamista. Osoitteen
+ * lippu, jota valikossa ei ole (tai useampi yhtä aikaa), näkyy raakana.
+ */
+export function koetilanOtsikko(koe) {
+  const i = PIIRTOKOKEIDEN_VAIHTOEHDOT.findIndex((k) => (k.lippu ?? 'normaali') === koe);
+  if (i < 0) return `koe: ${koe}`;
+  return `koe ${i + 1}/${PIIRTOKOKEIDEN_VAIHTOEHDOT.length} ${PIIRTOKOKEIDEN_VAIHTOEHDOT[i].nimi}`;
+}
 
 const p = (x, n = 0) => (Number.isFinite(x) ? x.toFixed(n) : '—');
 
@@ -152,17 +194,18 @@ export function profiiliTahti(tulos, lepoDelta = null) {
  * @param {object} p0.tiiviste  __kehysprofiili.tiivista(tulos)
  * @param {object} [p0.asetukset] { veto, tarkkuus } valikkojen valinnat
  * @param {object} [p0.lepo]     lepopiirron tila()
+ * @param {object} [p0.tila]     { koe, seuraava, versio } ks. koetilarivi
  * @returns {string[]} rivit ylhäältä alas
  */
 export function profiilirivit({
-  tiiviste, asetukset = {}, lepo = null, tahti = null,
+  tiiviste, asetukset = {}, lepo = null, tahti = null, tila: koetila = {},
 } = {}) {
-  if (!tiiviste || !tiiviste.kehyksia) return ['profiili: ei kehyksiä'];
+  const rivit = [koetilarivi(koetila ?? {})];
+  if (!tiiviste || !tiiviste.kehyksia) return [...rivit, 'profiili: ei kehyksiä'];
   const pisin = tiiviste.pisimmat?.[0] ?? null;
-  const rivit = [];
   if (tahti) {
     /*
-     * TÄRKEIN RIVI YLIMMÄKSI: näytön tahti ja se, piirretäänkö JOKA
+     * TÄRKEIN MITTAUSRIVI HETI TILAN JÄLKEEN: näytön tahti ja se, piirretäänkö JOKA
      * rAF-kehys. Jos rAF on 120 Hz ja piirto-osuus on noin puolet,
      * nykiminen on tahdin eikä kuorman vika.
      */
@@ -215,12 +258,16 @@ export function profiilirivit({
  * jokaista jaksoa kohti.
  */
 export function profiilitiiviste({
-  tiiviste, asetukset = {}, lepo = null, ua = '', tahti = null,
+  tiiviste, asetukset = {}, lepo = null, ua = '', tahti = null, tila: koetila = {},
 } = {}) {
   const pisin = tiiviste?.pisimmat?.[0] ?? null;
   return {
     t: Date.now(),
     ua,
+    koe: koetila?.koe || 'normaali',
+    koeSeuraava: koetila?.seuraava ?? null,
+    profiiliVersio: PROFIILIN_VERSIO,
+    versio: koetila?.versio ?? '',
     tahti: tahti ? {
       hz: tahti.hz, dtP50: tahti.dtP50, dtP95: tahti.dtP95, dtMax: tahti.dtMax, yli20: tahti.yli20,
       jsKa: tahti.jsKa, renderKa: tahti.renderKa,
@@ -259,10 +306,11 @@ export function profiilitiiviste({
  * @param {Element} p0.kotelo    pallon kotelo (overlay lisätään tähän)
  * @param {() => object} [p0.asetukset] valikkojen valinnat riville
  * @param {() => ?object} [p0.lepo]     lepopiirron tila()
+ * @param {() => ?object} [p0.tila]     { koe, seuraava, versio } ylimmälle riville
  * @param {(data: object) => void} [p0.laheta] oma lähetin (testit)
  */
 export function luoProfiilinaytto({
-  profiili, kotelo, asetukset = () => ({}), lepo = () => null,
+  profiili, kotelo, asetukset = () => ({}), lepo = () => null, tila = () => null,
   jaksoMs = PROFIILIN_JAKSO_MS, laheta = null, ikkuna = globalThis,
 } = {}) {
   const doc = kotelo?.ownerDocument ?? ikkuna.document;
@@ -337,9 +385,10 @@ export function luoProfiilinaytto({
     } catch { tiiviste = null; }
     edellinenLepo = nykyLepo;
     const nykyAsetukset = (() => { try { return asetukset() ?? {}; } catch { return {}; } })();
+    const nykyTila = (() => { try { return tila() ?? {}; } catch { return {}; } })();
     kerros.textContent = '';
     for (const rivi of profiilirivit({
-      tiiviste, asetukset: nykyAsetukset, lepo: nykyLepo, tahti,
+      tiiviste, asetukset: nykyAsetukset, lepo: nykyLepo, tahti, tila: nykyTila,
     })) {
       const r = doc.createElement('div');
       r.textContent = rivi;
@@ -347,7 +396,7 @@ export function luoProfiilinaytto({
     }
     if (tiiviste?.kehyksia) {
       lahetin(profiilitiiviste({
-        tiiviste, asetukset: nykyAsetukset, lepo: nykyLepo, tahti, ua: ikkuna.navigator?.userAgent ?? '',
+        tiiviste, asetukset: nykyAsetukset, lepo: nykyLepo, tahti, tila: nykyTila, ua: ikkuna.navigator?.userAgent ?? '',
       }));
     }
     varmistaMittaus();
