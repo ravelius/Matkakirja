@@ -876,3 +876,35 @@ joten savuke kaatuu, jos viiva palaa mustaksi tai kovareunaiseksi.
 
 - `tools/savukkeet/savuke-pallo-rantaviivat.mjs` — vartija (luku 10.3).
 - Ennen/jälkeen-kuvat: scratchpad, eivät repossa.
+
+## 11. M0 TOTEUTETTU: maakuntavektorien kolmiointi offline (Karttaseppä 22.9.2026)
+
+Omistajan maakuntalinssi-toive (luovutus 21.9.2026 ilta, kohta 4): nykyiset
+maakunnat pallolle VEKTORITASONA — admin-1-polygonit kolmioituna, väri
+kärkiattribuuttina, yksi piirtokutsu per maa, napautus = piste polygonissa
+CPU:lla. Fablen ohje 22.9.: datan kolmiointi tehdään OFFLINE-työkaluna ilman
+pelikoodin kytkentää, jotta se on valmis kun sulavuus on kuitattu.
+
+- **Työkalu:** `tools/tee-maakuntavektorit.mjs` (otsikko kertoo kaiken:
+  ryhmittely = nimiötason nykyalueet, korvanleikkaus reikien silloituksella,
+  särmien puolitus Rivaran pisimmän särmän säännöllä `--maxsarma 1.5`, ahne
+  väritys naapuruudesta, tiedostomuoto MKV1). Testit
+  `tests/maakuntavektorit.test.mjs` (10: reiät, koverat, käännetyt renkaat,
+  puolituksen T-liitokset jaetulla rajalla, väritys, MKV1-purku).
+- **Mitattu (NE 10m admin-1, harvennus 0,004°, maxsarma 1,5°):** 250 maata
+  (ATA ohitetaan), 4 127 aluetta, 698 k kärkeä, 771 k kolmiota, yhteensä
+  15,9 Mt (gz 6,7 Mt), koko maailman ajo 4,6 s. Maittain: CHE 26 aluetta
+  38 kt, DEU 102 kt, FRA 231 kt, ITA 180 kt, USA 879 kt, RUS 1 757 kt (86
+  aluetta, 88 k kolmiota). Kolmioiden ala vs. renkaiden ala: suurin ero
+  3e-8 (rusetit korjataan harventamalla rengas uudelleen). Värejä enintään 5.
+  `luettelo.json` 50 kt, `<ISO>.json` (alueet + renkaat) CHE 4 kt, RUS 17 kt.
+- **Pelikytkentä (M1, vasta sulavuuden jälkeen):** lataa `<ISO>.bin` +
+  `<ISO>.json` näkyvälle maalle, kärjet pallolle `pallonPiste`-kaavalla
+  (sama kuin pallovektorit), väri `alue`-attribuutista paletilla `vari`
+  (≤ 5 väriä), yksi BufferGeometry per maa läpinäkyvien jonoon laattojen
+  päälle (syvyyssiirto kuten pallovektoreilla); osuma: pisteAlueessa
+  (`<ISO>.json` renkaat + .bin-kärjet; `saumassa`-alueille pituusaste
+  kierretään auki). Kopio `puraMaa`/`pisteAlueessa`-funktioista peliin
+  samalla vartiolla kuin `puraDelta` (tests/pallovektorit-aineisto).
+- **Ämpäri:** `julisteet/pallo/maakunnat/<versio>/` — ei vielä viety;
+  vienti vasta kun M1 on olemassa.
