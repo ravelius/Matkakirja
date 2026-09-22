@@ -73,6 +73,7 @@ export const MAASTOKOHTEET_EST = [
     },
     nimi: 'Suur Munamägi',
     tyyppi: 'vuori',
+    taso: 1,
     kysymykset: [
       'Mitä nimi Suur Munamägi tarkoittaa?',
       'Millainen on Haanjan ylänkö?',
@@ -304,6 +305,7 @@ export const MAASTOKOHTEET_EST = [
     nimi: 'Kuressaaren linna',
     nimio: 'Kuressaare',
     tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Miksi linna rakennettiin juuri Saarenmaalle?',
       'Mihin linnaa käytettiin 1800-luvulla?',
@@ -404,6 +406,7 @@ export const MAASTOKOHTEET_EST = [
     },
     nimi: 'Kihnu',
     tyyppi: 'kulttuuri',
+    taso: 1,
     kysymykset: [
       'Miksi saaren perinteet ovat naisten hallussa?',
       'Mikä on kört?',
@@ -638,6 +641,7 @@ export const MAASTOKOHTEET_EST = [
     },
     nimi: 'Peipsijärvi',
     tyyppi: 'meri',
+    taso: 1,
     kysymykset: [
       'Mitä järven jäällä tapahtui vuonna 1242?',
       'Mihin Peipsin vedet lopulta laskevat?',
