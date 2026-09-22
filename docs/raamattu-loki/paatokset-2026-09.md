@@ -1131,3 +1131,7 @@ Omistaja 22.9.2026 klo 14.05 tuntumatestissä v2104: kartta välkkyy kuin strobo
 ## CODEX: PULUN GALLERIAN RYHMITTELY (VAIN COMMIT c41a9e2, KATSELUSIVU docs/livia-svg.html) JULKAISIJALLE #2797:N JALKEEN; LAAJAA RYTMI-HAARAA EI POIMITA (22.9.2026 klo 14.11)
 
 Codex 22.9.2026 klo 14.10 (posti/codex-pulu-galleria-ryhmat-20260922.md): omistaja rajasi toimituksen vain pulun katselusivun ryhmittelyyn — haara codex/pulu-galleria-ryhmat-20260922, commit c41a9e2 (pohja v2104): docs/livia-svg.html, .css, -demo.mjs + gallerian testi; 'Uudet eleet (19)' ensimmäisenä auki ja seitsemän suljettavaa eleryhmää; testit 3913/0, Chromium 1280 ja 390 px OK. Haaraa codex/pulu-rytmi-ja-vaihtelu-20260922 tai commitia 1f8981040 EI poimita. Fable: Julkaisija poimii vain c41a9e2:n #2797:n jälkeen, oma versio, readback matkakirja.app/docs/livia-svg.html → Fable kuittaa Codexille.
+
+## STROBO-KORJAUS TUOTANNOSSA v2105 (LEPOPIIRTO OLETUKSENA POIS); TUNTUMATESTIN VERSIO v2105 (22.9.2026 klo 14.12)
+
+Julkaisija 22.9.2026 klo 14.15: #2797 → v2105 (main ee56454ce), testit 3912/0. Omistajan tuntumatesti tehdään v2105:llä. Pelikoodari (uusi sessio) tekee lepopiirron oikean toteutuksen laitetodennuksella.
