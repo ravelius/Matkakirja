@@ -884,6 +884,40 @@ export const POHJAN_VAPAUTUS_SYYT = new Set([
  * sen varapolku ovat yhdet.
  */
 /**
+ * ALFATON WEBGL2-KONTEKSTI ITSE LUOTUNA (`?koe=alpha0`, Fable 22.9.2026).
+ *
+ * MIKSI ITSE. three.js r185 luo kontekstin aina `alpha: true` -lipulla:
+ * sen oma parametritaulu on kovakoodattu, eikä rendererConfigin `alpha`
+ * mene sen läpi (mitattu 22.9.2026 WebKitissä). Kolmonen KUITENKIN
+ * käyttää valmista kontekstia, jos sellainen annetaan
+ * (`parameters.context`), ja globe.gl välittää rendererConfigin
+ * sellaisenaan (`Object.assign({antialias:!0,alpha:!0}, config)`), joten
+ * kangas ja konteksti voidaan luoda tässä ja antaa niille.
+ *
+ * Määreet ovat samat kuin kolmosen omat, paitsi `alpha: false`: muuten
+ * kokeesta mitattaisiin kahta eroa yhden sijaan. `antialias` tulee
+ * pelaajan asetuksesta kuten ennenkin.
+ *
+ * @returns {?{kangas: HTMLCanvasElement, gl: WebGL2RenderingContext}}
+ *   null, jos kontekstia ei saada — silloin peli jatkaa tavallisella
+ *   polulla eikä koe vain pure.
+ */
+export function luoAlfatonKonteksti(kotelo, antialias, doc = kotelo?.ownerDocument) {
+  try {
+    const kangas = doc?.createElement?.('canvas');
+    const gl = kangas?.getContext?.('webgl2', {
+      alpha: false,
+      antialias: Boolean(antialias),
+      depth: true,
+      stencil: false,
+      preserveDrawingBuffer: false,
+      failIfMajorPerformanceCaveat: false,
+    });
+    return gl ? { kangas, gl } : null;
+  } catch { return null; }
+}
+
+/**
  * Kankaan taustaväri, kun alfakanavaa ei ole (`?koe=alpha0`): lähin
  * läpinäkymätön tausta kotelon esivanhemmista, jotta koe ei näytä
  * rikkinäiseltä. Vara on pelin oma tumma pergamenttipohja.
@@ -916,23 +950,29 @@ export function rakennaPallo(Globe, kotelo, laatat) {
    * kangas pakottaa komposiittorin sekoittamaan sen sivun kanssa joka
    * kehyksessä; läpinäkymättömän kerroksen se voi näyttää sellaisenaan.
    *
-   * MITATTU RAJOITUS (22.9.2026, WebKit): `alpha: false` EI mene läpi
-   * asti. globe.gl välittää rendererConfigin oikein
-   * (`Object.assign({antialias:!0,alpha:!0}, config)`), mutta three.js
-   * r185 luo kontekstin aina `alpha: true` -lipulla — kokeessa
-   * `getContextAttributes().alpha` on yhä tosi. Lippu jätetään mukaan,
-   * koska se on oikea pyyntö ja tulee voimaan jos three vaihtuu; TODELLA
-   * vaikuttava osa on läpinäkymätön taustaväri, jolloin kankaalla ei ole
-   * yhtään läpinäkyvää pikseliä.
+   * MITATTU RAJOITUS JA SEN KIERTO (22.9.2026, WebKit): pelkkä
+   * `alpha: false` rendererConfigissa EI mene läpi asti — globe.gl
+   * välittää konfiguraation oikein, mutta three.js r185 luo kontekstin
+   * aina `alpha: true` -lipulla. Siksi kangas ja WebGL2-konteksti
+   * luodaan tässä itse (`luoAlfatonKonteksti`) ja annetaan kolmoselle
+   * valmiina; se käyttää annettua kontekstia sellaisenaan. Ilman
+   * kiertoa kokeen ainoa vaikutus olisi läpinäkymätön taustaväri.
+   *
+   * Taustaväri asetetaan silti: alfattomalla kankaalla tausta EI voi
+   * olla läpinäkyvä, ja sivun oma tausta ei enää paista läpi.
    *
    * Koe on mittausta varten: tausta peittää kaiken, mitä kankaan alla
    * oli, joten oletukseksi sitä ei oteta ilman omistajan päätöstä.
    */
   const eiAlfaa = laattakerroksenKokeet().has('alpha0');
+  const alfaton = eiAlfaa ? luoAlfatonKonteksti(kotelo, antialiasTarkkuudella(tarkkuusLiikkeessa())) : null;
   const pallo = Globe({
     rendererConfig: {
       antialias: antialiasTarkkuudella(tarkkuusLiikkeessa()),
-      ...(eiAlfaa ? { alpha: false } : {}),
+      // Valmis kangas ja konteksti: vain näin alfa saadaan oikeasti pois
+      // (ks. ALFATON WEBGL2-KONTEKSTI ITSE LUOTUNA). `alpha: false` jää
+      // mukaan, jotta pyyntö näkyy myös silloin, kun kolmonen luo itse.
+      ...(alfaton ? { canvas: alfaton.kangas, context: alfaton.gl, alpha: false } : {}),
     },
   })(kotelo)
     .width(kotelo.clientWidth).height(kotelo.clientHeight)

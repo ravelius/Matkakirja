@@ -12,6 +12,7 @@
     "savuke-laattaohjelmat.mjs#chromium",
     "savuke-lepopiirto.mjs#webkit",
     "savuke-lepopiirto.mjs#chromium",
+    "savuke-piirtokokeet.mjs#webkit",
     "savuke-astro-pallo.mjs#vartija-c",
     "savuke-astro-pallo.mjs#tyopoyta",
     "savuke-astro-pallo.mjs#puhelin",
@@ -392,6 +393,12 @@
         "SAVUKE_MOOTTORI": "chromium"
       },
       "huomautus": "Sama vartio Chromiumilla. Ks. #webkit."
+    },
+    "savuke-piirtokokeet.mjs#webkit": {
+      "env": {
+        "SAVUKE_MOOTTORI": "webkit"
+      },
+      "huomautus": "Ratasvalikon Piirtokoe-listan kokeet (js/piirtokoe-asetus.js). P1 ?koe=alpha0 antaa kankaan ilman alfaa (getContextAttributes().alpha === false) ja ilman lippua alfa on tosi - three.js r185 luo kontekstin aina alfalla, joten peli luo kankaan ja WebGL2-kontekstin itse ja antaa ne rendererConfigissa; jos kolmonen ottaa luonnin takaisin, P1 punertuu. P2 alfattomalla kankaalla on lapinakymaton tausta. P3 ?koe=vahemmandc piilottaa tuki- ja ennakkolaatat taydella peitolla ja piirtokutsuja on vahemman kuin ilman lippua (mitattu 22.9.2026 WebKit Camargue z8: 22 -> 18). P4 kuva ei havia: peitto on yha taysi eika nakyvia laattoja ole piilotettu. WebKit on ensisijainen, koska kokeet ovat Safarin GPU-prosessia varten."
     },
     "savuke-laattaohjelmat.mjs#webkit": {
       "env": {
