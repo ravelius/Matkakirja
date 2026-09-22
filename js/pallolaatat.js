@@ -4063,6 +4063,7 @@ export function luoLaattakerros({
       if (osui) peitetty += 1;
       if (osuiTaso) peitettyTaso += 1;
     }
+    mittarit.naytteitaPallolla = naytteitaPallolla;
     mittarit.peittoOsuus = naytteitaPallolla ? +(peitetty / naytteitaPallolla).toFixed(3) : null;
     mittarit.peittoTaso = naytteitaPallolla ? +(peitettyTaso / naytteitaPallolla).toFixed(3) : null;
     mittarit.jumissa = jumissa;
@@ -4172,6 +4173,17 @@ export function luoLaattakerros({
     valmistelu: () => [mittarit.valmisteluMs, mittarit.valmisteluja, mittarit.valmisteluMax],
     /** Peittääkö kerros koko näkyvän alueen juuri nyt (pohjan tarve)? */
     peittaa: () => mittarit.nakyvia > 0 && mittarit.nakyviaScenessa >= mittarit.nakyvia,
+    /**
+     * Peittääkö kerros KOKO RUUDUN täysin häivytetyillä laatoilla: jokainen
+     * 9 × 9 -näytepiste on pallolla (reuna ei näy) ja jokaisen alla on
+     * scenessä täysin häivytetty laatta (mitä tahansa tasoa). Vain silloin
+     * kirjaston pohja (pohjapallo + z5) voidaan jättää piirtämättä
+     * (js/pallo.js POHJA PIILOON). Lukossa tai purettuna ei koskaan.
+     */
+    peittaaKokonaan: () => !purettu && !lukittu && mittarit.tila === 'nakyy'
+      && mittarit.nakyvia > 0 && mittarit.nakyviaScenessa >= mittarit.nakyvia
+      && mittarit.naytteitaPallolla === LAATTAKERROS_NAYTTEITA * LAATTAKERROS_NAYTTEITA
+      && mittarit.peittoOsuus === 1,
     mittarit: () => ({ ...mittarit, pyydetyt: [...pyydetyt], nakyvissa: mittarit.scenessa > 0 }),
     pura: () => {
       purettu = true;

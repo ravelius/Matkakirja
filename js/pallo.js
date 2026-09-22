@@ -877,6 +877,7 @@ export function rakennaPallo(Globe, kotelo, laatat) {
     .width(kotelo.clientWidth).height(kotelo.clientHeight)
     .backgroundColor('rgba(0,0,0,0)')
     .showAtmosphere(true).atmosphereColor('#d9a13b').atmosphereAltitude(0.18);
+  asennaIlmakehanVahti(pallo, kotelo);
   if (laatat && pallo.globeTileEngineUrl) {
     const syvin = laattatasoMax(laatat);
     pallo.globeTileEngineUrl(pallonLaatta).globeTileEngineMaxLevel(
@@ -889,6 +890,58 @@ export function rakennaPallo(Globe, kotelo, laatat) {
     pallo.globeImageUrl(PALLO_TEKSTUURI);
   }
   return pallo;
+}
+
+/*
+ * ======== ILMAKEHÄ POIS, KUN SEN REUNA EI OLE RUUDULLA ==============
+ *
+ * Sulavuuskatsaus 22.9.2026 kohta 1: ilmakehäkuori on r = (1 + h) R
+ * (h = atmosphereAltitude), BackSide + additiivinen fresnel. Lähikuvassa
+ * kamera on kuoren sisällä tai sen reuna on kaukana ruudun ulkopuolella,
+ * ja kuori piirretään silti KOKO RUUDUN kokoisena läpinäkyvänä passina,
+ * joka ei näy kartalla — dpr 3:lla noin 3 Mpx varjostusta kehystä kohti
+ * turhaan. Hehku näkyy vain pallon reunan ympärillä; reunan kulmasäde
+ * kamerasta on asin((1 + h) / (1 + korkeus)), ja ruudun kulma näkyy
+ * puolidiagonaalin avauskulmaan asti. Kuori sammutetaan, kun hehkun
+ * uloin reuna on ruudun kulmankin ulkopuolella (+ marginaali), ja
+ * sytytetään heti, kun se palaa. Puhelimella pystyssä raja on
+ * korkeudessa ~1,6, työpöydällä ~0,8 — pelin lähikuvat (0,05–0,6) ovat
+ * aina sen alla. Kirjaston `showAtmosphere` kirjoittaa vain
+ * `visible`-lipun (triggerUpdate: false), joten vaihto on ilmainen.
+ * Mittauslippu `?koe=ilmakehavanha` pitää kuoren aina päällä.
+ */
+/** Marginaali (astetta) ruudun kulman avauskulmaan ennen sammutusta. */
+export const ILMAKEHAN_REUNAVARA_AST = 3;
+
+/** Näkyykö ilmakehän hehku ruudulla (puhdas funktio, testattava). */
+export function ilmakehaNakyy({ altitude, fov, kuvasuhde, kuoriKorkeus }) {
+  if (!Number.isFinite(altitude) || !(altitude >= 0)) return true;
+  const h = Number.isFinite(kuoriKorkeus) && kuoriKorkeus > 0 ? kuoriKorkeus : 0.18;
+  const suhde = (1 + h) / (1 + altitude);
+  if (suhde >= 1) return false; // kameran sisällä kuoresta: hehku ei näy
+  const aste = Math.PI / 180;
+  const reuna = Math.asin(suhde) / aste;
+  const f = Number.isFinite(fov) && fov > 0 ? fov : PALLON_FOV;
+  const a = Number.isFinite(kuvasuhde) && kuvasuhde > 0 ? kuvasuhde : 1;
+  const puoliDiag = Math.atan(Math.tan((f / 2) * aste) * Math.hypot(1, a)) / aste;
+  return reuna < puoliDiag + ILMAKEHAN_REUNAVARA_AST;
+}
+
+export function asennaIlmakehanVahti(pallo, kotelo, ikkuna = globalThis) {
+  if (typeof pallo?.showAtmosphere !== 'function') return () => {};
+  if (laattakerroksenKokeet().has('ilmakehavanha')) return () => {};
+  let paalla = true;
+  const kehys = (mitat) => {
+    const nakyy = ilmakehaNakyy({
+      altitude: mitat?.pov?.altitude, fov: mitat?.fov, kuvasuhde: mitat?.kuvasuhde,
+      kuoriKorkeus: pallo.atmosphereAltitude?.(),
+    });
+    if (nakyy === paalla) return;
+    paalla = nakyy;
+    pallo.showAtmosphere(nakyy);
+    pallo.__ilmakehaPaalla = nakyy; // mittausta varten (savukkeet)
+  };
+  return kytkePallonKehys(pallo, kotelo, kehys, ikkuna);
 }
 
 /*
@@ -1480,11 +1533,34 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
    * piirretään. Harvennus (LAATTAKERROS_PAIVITYSVALI_LIIKE_MS) on
    * ennallaan kerroksen sisällä.
    */
+  /*
+   * POHJA PIILOON, KUN KERROS PEITTÄÄ KOKO RUUDUN (sulavuuskatsaus
+   * 22.9.2026 kohta 2). Kirjaston moottori (pohjapallo + z5-laatat) on
+   * kerroksen alla aina, myös silloin, kun kerroksen laatat peittävät
+   * jokaisen ruudun näytepisteen täysin häivytettynä — silloin se on
+   * yksi tai kaksi täyttökerrosta, jotka eivät näy. Moottorin ryhmä
+   * piilotetaan (`visible = false`: three ei projisoi eikä piirrä sen
+   * lapsia) heti, kun `kerros.peittaaKokonaan()` on tosi, ja
+   * palautetaan heti, kun ei ole (reunan uusi laatta puuttuu, häive
+   * kesken, korkeus yli kerroksen rajan, kerros vapautettu). Moottori
+   * jatkaa laattojensa hakua piilossakin (updatePov ei katso
+   * näkyvyyttä), joten paluu on välitön. `?koe=pohjavanha` pitää
+   * pohjan aina piirrossa.
+   */
+  const pohjanPiilotus = Boolean(kerros) && !laattakerroksenKokeet().has('pohjavanha');
+  moottori.pohjaPiilossa = false;
+  const tahdistaPohjanNakyvyys = () => {
+    const piiloon = pohjanPiilotus && kerrosKaytossa && kerros.peittaaKokonaan();
+    if (piiloon === moottori.pohjaPiilossa) return;
+    moottori.pohjaPiilossa = piiloon;
+    moottori.visible = !piiloon;
+  };
   const kehyspurku = kerros
     ? kytkePallonKehys(pallo, kotelo, (kehys) => {
-      if (!kerrosKaytossa) return;
+      if (!kerrosKaytossa) { tahdistaPohjanNakyvyys(); return; }
       kerros.paivita(kehys, true, { liike: Boolean(lepoAjastin) });
       vapautaPohja();
+      tahdistaPohjanNakyvyys();
     }, ikkuna)
     : () => {};
   const lepokerros = kerros ? null : luoLepokerros({
