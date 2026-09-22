@@ -170,3 +170,28 @@ Kaksoisavaimet, niputus, savukevartio, nimiöt ja diff-check PASS.
 Kahdeksan asennon kuvasarja katsottu, huivi ja suljetut silmät mukaan lukien.
 Itsenäinen katselujulkaisu sisältää uuden moduulin nimetyssä tiedostolistassa;
 julkaisun jälkitarkistus ja commitit kirjataan ulkoiseen toimituskuittiin.
+
+### Tyylikokeilun toinen piirros: oma kyyhkyhahmo
+
+Omistajan tarkennus: tarkoitti Pulua yhtenä Aku Ankka -sarjakuvan omana
+hahmona, ei Aku Ankkaa muistuttavaa Pulua. Hahmo saisi olla suloisempi
+ja viehättävämpi nuori tyttöpulu. Selkeä piirrosjälki oli oikea suunta.
+
+Lyhennettiin leveä nokka terävämmäksi kyyhkyn nokaksi ja pienennettiin
+vahanahkaa. Pehmennettiin poskien siluettia ja takaraivon varjoa.
+Laskettiin silmien hämmästynyttä vaikutelmaa isommilla iiriksillä,
+lempeämmillä luomilla ja kevyemmillä kulmilla. Lisättiin pienet ripset
+ja hienovarainen poskisävy. Ei ihmishuulia tai hampaita. Huivi, käden
+tavoin moikkaava siipi ja tervehdysrata säilyvät ennallaan.
+
+Sama tyylikokeilupainike päivittyy; ei uutta vertailunäkymää. Edellinen
+piirros jää muuttumattomaan julkaisuversioon `cc2bf7a24c35-571733d1`.
+Muut yhdeksän ehdotusta: 909/909 SVG-asentoa tavulleen ennallaan.
+Kohdesarja 10/10 PASS; rakenteellinen nokka-/ripsivartio sekä selaimessa
+mitattu nokan leveys täydentävät kuvallista tarkistusta. Pelin hahmoon,
+ääniin tai cueihin ei tehdä muutoksia. Kuvaputkitilauksia ei tarvita.
+
+Lopullinen koko sarja 3935 = 3922 PASS, 13 SKIP, 0 FAIL. Kaikki neljä
+repon porttia ja diff-check PASS. Paikallinen selain: 80 valintaa ja
+kaikki 10 ehdotusta ajallisena sarjana; nokka, ripset, huivi, kielet,
+kirjat, 390 px ja reduced motion PASS, 0 selainvirhettä.

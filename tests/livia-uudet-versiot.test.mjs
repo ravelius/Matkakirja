@@ -16,6 +16,9 @@ test('sarjakuvakokeilu käyttää omaa piirrosta, huivia ja jatkuvaa silmänräp
   assert.match(kuva(.22),/data-style="sarjakuvakokeilu"/);
   assert.equal((kuva(.22).match(/data-part="cartoon-eye"/g)||[]).length,2);
   assert.match(kuva(.22),/data-part="cartoon-beak" data-opening="1"/);
+  assert.match(kuva(.22),/data-beak-shape="pigeon"/,'oma kyyhkyn nokka, ei pitkä ankan nokka');
+  assert.equal((kuva(.22).match(/data-part="eyelashes"/g)||[]).length,2);
+  assert.match(kuva(.22),/data-part="soft-cheek"/);
   assert.match(kuva(.22),/data-part="mouth-space"/);
   assert.match(kuva(.22),/data-part="tongue"/);
   assert.match(kuva(.1),/data-part="cartoon-lid" transform="[^"]*scale\(1 0.04\)/);
