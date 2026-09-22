@@ -1319,3 +1319,7 @@ Omistaja 22.9.2026 klo 17.45 kysyi, löytyisikö syy netistä. Fable: Nolan Laws
 ## OMISTAJA: SYOTEPUTKEN VAIHTOEHDOT TESTATAAN RINNAKKAIN KOELIPPUINA, PAATOS MITTAUKSELLA — 5 VAIHTOEHTOA (VIIMEISIN NAYTE, INTERPOLOINTI, ENNAKOINTI, JOUSI, TOUCHMOVE iOS) (22.9.2026 klo 17.57)
 
 Omistaja 22.9.2026 klo 17.50: Opus testatkoon kaikki vaihtoehdot yhtä aikaa, koska mielipiteet eroavat. Fable → Pelikoodari: samaan haaraan koelippuina 1) interpvanha (viimeisin näyte kerran kehyksessä), 2) oletus aikaleimainterpolointi 1 kehys viive, 3) syoteennakko (ekstrapolointi ilman viivettä), 4) syotejousi (kriittisesti vaimennettu jousi, aikavakio ~1 kehys, dt-pohjainen), 5) syotetouch (iOS: touchmove-näytteet, rAF-tahdistettu); parvi sallittu; mittaus ensin itse, sitten Laitetestaajan korjatulla harnessilla polton jälkeen, finalistit (≤ 3) omistajan vedoilla Safari + Chrome; raportti taulukkona, Fable päättää oletuksen.
+
+## OMISTAJA: TODENNAKOISIN SYOTEKORJAUS (INTERPOLOINTI) TUOTANTOON HETI, MUUT VAIHTOEHDOT KOELIPPUINA, OMISTAJA TESTAA iPHONELLA; POIKKEUS CI-TAUKOON (SAVUKKEET-MAC PERUTAAN) (22.9.2026 klo 17.58)
+
+Omistaja 22.9.2026 klo 18.00: peliin voi laittaa todennäköisimmän version heti ja hän testaa itse iPhonella; nykimisen voi testata nykyisellä kartalla, polttoa ei tarvitse odottaa. Fable: Pelikoodari tekee PR:n heti (oletus aikaleimainterpolointi, ?koe=interpvanha paluu, ?koe=syotetouch iOS-kosketusnäytteet; ennakko ja jousi toisessa PR:ssä jos eivät ehdi); Julkaisija mergeää Testit vihreänä ja peruu Mac-savukeajon polton takia.
