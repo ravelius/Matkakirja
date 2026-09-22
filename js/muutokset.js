@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2090, teksti: 'Laattojen esilataus levossa' },
   { v: 2089, teksti: 'Maakuntien pitka+kuva+pulu: 97 aluetta' },
   { v: 2088, teksti: 'Karttaselite: valilehdet ja Maakunnat-tila' },
   { v: 2087, teksti: 'Pilven varjo pois kartan liikkeesta' },
