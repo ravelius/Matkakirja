@@ -42,7 +42,15 @@ export function luoKehysprofiili(uiTaiHaku, ikkuna = globalThis) {
     const st = l?.glSovitin?.()?.tila?.() ?? {};
     const k = ui?.pallolautaGL?.()?.mittarit?.() ?? {};
     const info = ui?.pallonInstanssi?.renderer?.()?.info ?? {};
+    /*
+     * PIIRRETTIINKÖ TÄMÄ KEHYS (Fablen kysymys 22.9.2026: ovatko pitkät
+     * kehykset juuri lepopiirron ohittamia?). Lepopiirron laskuri on
+     * kumulatiivinen, joten kehyksen oma vastaus on kahden peräkkäisen
+     * lukeman erotus — se lasketaan tiivistyksessä, tässä vain luetaan.
+     */
+    const lepo = ui?.pallonInstanssi?.__piirto?.tila?.() ?? null;
     return {
+      piirtolaskuri: lepo?.piirtoja ?? null, ohituslaskuri: lepo?.ohitettuja ?? null,
       pyyntoja: laatat.pyyntoja ?? 0, purettuja: laatat.purettuja ?? 0, paivityksia: laatat.paivityksia ?? 0,
       scenessa: laatat.scenessa ?? 0, hapyvia: laatat.hapyvia ?? 0, nakyvia: laatat.nakyvia ?? 0, taso: laatat.taso ?? null,
       valmisteluja: laatat.valmisteluja ?? 0, vaistoja: laatat.valmisteluVaistoja ?? 0,
