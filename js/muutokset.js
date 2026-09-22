@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2109, teksti: 'Lepopiirto oletukseksi' },
   { v: 2108, teksti: 'Tiivista Pulun gallerian valinta' },
   { v: 2107, teksti: 'Lepopiirto tickin tasolle, WebKit' },
   { v: 2106, teksti: 'Ryhmittele Pulun eleet katselusivulla' },
