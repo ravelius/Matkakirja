@@ -86,10 +86,11 @@ if (argv.includes('--tarkista')) {
   for (const d of rivit) {
     const ua = d.ua ?? '';
     const moottori = ua.includes('Chrome') ? 'Chromium' : (ua.includes('Safari') ? 'WebKit' : ua);
-    const s = d.seuranta ?? {};
+    const lahde = d.seuranta ? 'syöteloki' : 'vertailu';
+    const s = d.seuranta ?? d.seurantaVertailu ?? {};
     const ok = (s.suhdeP10 ?? -1) > p10Raja && (s.suhdeP90 ?? Infinity) < p90Raja;
     if (!ok) virheita += 1;
-    console.log(`${ok ? 'PASS' : 'FAIL'} ${moottori} kierros ${d.kierros}: p10 ${p(s.suhdeP10)} (> ${p10Raja}?) p90 ${p(s.suhdeP90)} (< ${p90Raja}?)`);
+    console.log(`${ok ? 'PASS' : 'FAIL'} ${moottori} kierros ${d.kierros} [${lahde}]: p10 ${p(s.suhdeP10)} (> ${p10Raja}?) p90 ${p(s.suhdeP90)} (< ${p90Raja}?)`);
   }
   console.log(virheita === 0 ? `\nKAIKKI ${rivit.length} KIERROSTA HYVÄKSYTTY (p10 > ${p10Raja}, p90 < ${p90Raja}).` : `\n${virheita}/${rivit.length} kierrosta EI täytä hyväksymisrajaa.`);
   process.exit(virheita === 0 ? 0 : 1);
@@ -103,7 +104,7 @@ const LAT = arg('lat', '46.5');
 const LNG = arg('lng', '2.5');
 const ALT = arg('alt', '0.2');
 const DEV = arg('dev', 'marseille');
-const KOE = arg('koe', 'mittaus');
+const KOE = arg('koe', 'mittaus,syoteloki');
 const TIEDOSTO = arg('tiedosto', `seuraamisvirhe-${new Date().toISOString().slice(0, 10)}.jsonl`);
 const DATAKANSIO = join(JUURI, 'docs', 'raportit', 'data');
 const DATAPOLKU = join(DATAKANSIO, TIEDOSTO);
@@ -153,29 +154,81 @@ const HARNESSI = `
       }
       return rivit;
     };
+    /*
+     * ENSISIJAINEN LÄHDE (Pelikoodari 22.9.2026, ?koe=syoteloki):
+     * ui.pallonSyote.loki kirjaa rivin JOKAISESTA kehyksestä, jolla syöte
+     * käsiteltiin — {t,x,y,lat,lng,alt,ohitus}, x/y = käytetty osoittimen
+     * paikka, lat/lng/alt = kamera HETI sen jälkeen, ohitus = 0 kirjoitettiin
+     * / 1 ei tartuntaa / 2 ei pintapistettä / 3 vedon katto hylkäsi. Peräkkäiset
+     * rivit antavat kameran ja osoittimen siirtymän SAMALTA väliltä suoraan —
+     * lukuhetki ei voi mennä väärin, koska kirjaus tapahtuu kirjoituskohdassa
+     * itsessään. lat/lng muunnetaan ruutupikseleiksi getScreenCoordsilla
+     * (pätevä puhtaassa panoroinnissa, jossa altitude ei muutu kesken kierroksen).
+     */
+    const seurantaLoki = (loki, pallo) => {
+      if (!loki || loki.length < 2) return null;
+      const rivit = [];
+      for (let i = 1; i < loki.length; i += 1) {
+        const a = loki[i - 1]; const b = loki[i];
+        const ptrD = Math.hypot(b.x - a.x, b.y - a.y);
+        const pa = pallo.getScreenCoords(a.lat, a.lng);
+        const pb = pallo.getScreenCoords(b.lat, b.lng);
+        const camD = (pa && pb) ? Math.hypot(pb.x - pa.x, pb.y - pa.y) : NaN;
+        rivit.push({ t: Math.round(b.t), ohitus: b.ohitus, camD: Number.isFinite(camD) ? +camD.toFixed(2) : null, ptrD: +ptrD.toFixed(2), suhde: (ptrD > 0.5 && Number.isFinite(camD)) ? +(camD / ptrD).toFixed(2) : null, pysahdys: b.ohitus !== 0 || (ptrD > 2 && camD < 0.25) });
+      }
+      return rivit;
+    };
+    const tiivistaRivit = (rivit) => {
+      const suhteet = rivit.map((r) => r.suhde).filter((v) => v != null).sort((a, b) => a - b);
+      const pct = (arr, q) => arr.length ? arr[Math.min(arr.length - 1, Math.floor(q * (arr.length - 1)))] : null;
+      const pysahdyksia = rivit.filter((r) => r.pysahdys).length;
+      const alkuIndeksi = rivit.findIndex((r) => r.ohitus === 0 ?? true);
+      const alku10 = alkuIndeksi >= 0 ? rivit.slice(alkuIndeksi, alkuIndeksi + 10) : rivit.slice(0, 10);
+      return { suhdeMed: pct(suhteet, 0.5), suhdeP10: pct(suhteet, 0.1), suhdeP90: pct(suhteet, 0.9), pysahdyksia, rivitaKpl: rivit.length, alku10 };
+    };
     const ajaKierros = () => new Promise((valmis) => {
       const pallo = window.matkakirja.ui.pallonInstanssi;
+      const syote = window.matkakirja.ui.pallonSyote;
+      if (syote?.loki) syote.loki.length = 0;
       const kamera = []; osoitin = []; pointerdownT = null;
       const kp = window.__kehysprofiili;
+      /*
+       * KAMERA LUETAAN scene.onBeforeRenderissä (Fable 22.9.2026, sama
+       * koukku kuin js/pallo.js kytkePallonKehys): erillinen oma rAF olisi
+       * kilpajuoksu kirjaston omaa piirtosilmukkaa vastaan, ja saattaisi
+       * lukea edellisen kehyksen kameran satunnaisesti (0/2x-kuvio). Tämä
+       * hook ajetaan SYNKRONISESTI juuri ennen piirtoa, joten getScreenCoords
+       * heijastaa aina tämän kehyksen sovelletun syötteen.
+       */
+      const scene = pallo.scene();
+      const alkuperainenOBR = scene.onBeforeRender;
+      let kaynnissa = true;
+      scene.onBeforeRender = function (...args) {
+        if (typeof alkuperainenOBR === 'function') alkuperainenOBR.apply(this, args);
+        if (!kaynnissa) return;
+        const nyt = pallo.getScreenCoords(VIITE.lat, VIITE.lng);
+        kamera.push({ t: performance.now(), x: nyt ? nyt.x : null, y: nyt ? nyt.y : null });
+      };
       kp.aloita();
       const alku = performance.now();
       const askel = () => {
-        const nyt = pallo.getScreenCoords(VIITE.lat, VIITE.lng);
-        kamera.push({ t: performance.now(), x: nyt ? nyt.x : null, y: nyt ? nyt.y : null });
         if (performance.now() - alku < KESTO) requestAnimationFrame(askel); else loppu();
       };
       const loppu = () => {
+        kaynnissa = false;
+        scene.onBeforeRender = alkuperainenOBR;
         const tulos = kp.lopeta();
-        const rivit = seurantaVirhe(kamera) ?? [];
-        const kehykset = tulos.kehykset.map((k, i) => ({ ...k, siirtyma: kamera[i + 1] && kamera[i] && kamera[i + 1].x != null && kamera[i].x != null ? Math.hypot(kamera[i + 1].x - kamera[i].x, kamera[i + 1].y - kamera[i].y) : NaN }));
-        const tas = kp.tasaisuus({ kehykset });
+        const tas = kp.tasaisuus({ kehykset: tulos.kehykset });
         const prof = kp.tiivista(tulos);
-        const suhteet = rivit.map((r) => r.suhde).filter((v) => v != null).sort((a, b) => a - b);
-        const pct = (arr, q) => arr.length ? arr[Math.min(arr.length - 1, Math.floor(q * (arr.length - 1)))] : null;
-        const pysahdyksiaSeuranta = rivit.filter((r) => r.pysahdys).length;
-        const alkuIndeksi = pointerdownT != null ? rivit.findIndex((r) => r.t >= pointerdownT) : -1;
-        const alku10 = alkuIndeksi >= 0 ? rivit.slice(alkuIndeksi, alkuIndeksi + 10) : rivit.slice(0, 10);
-        valmis({ tas, prof, seuranta: { suhdeMed: pct(suhteet, 0.5), suhdeP10: pct(suhteet, 0.1), suhdeP90: pct(suhteet, 0.9), pysahdyksiaSeuranta, rivitaKpl: rivit.length, alku10, osoitinKpl: osoitin.length } });
+        // Vertailu (vanha menetelmä): passiivinen pointer-kuuntelu + onBeforeRender-kamera.
+        const rivitVertailu = seurantaVirhe(kamera) ?? [];
+        const seurantaVertailu = { ...tiivistaRivit(rivitVertailu), osoitinKpl: osoitin.length };
+        // Ensisijainen (Pelikoodarin syöteloki): kamera ja osoitin samasta kirjoituksesta.
+        const loki = (syote?.loki ?? []).slice();
+        const rivitLoki = seurantaLoki(loki, pallo) ?? [];
+        const seuranta = loki.length ? tiivistaRivit(rivitLoki) : null;
+        const laskurit = syote ? { interpolointeja: syote.interpolointeja, ekstrapolointeja: syote.ekstrapolointeja, viiveMs: syote.viiveMs, sovelluksia: syote.sovelluksia, interpVanha: syote.interpVanha, lokiKpl: loki.length } : null;
+        valmis({ tas, prof, seuranta, seurantaVertailu, laskurit });
       };
       requestAnimationFrame(askel);
     });
@@ -185,13 +238,15 @@ const HARNESSI = `
       for (let i = 0; i < KIERROKSIA; i += 1) {
         poistaVerho();
         kirjoita(\`\${moottori}: tallennetaan kierros \${i + 1}/\${KIERROKSIA}...\`);
-        const { tas, prof, seuranta } = await ajaKierros();
-        const teksti = \`\${moottori} kierros \${i + 1}/\${KIERROKSIA}\n\`
-          + \`px/ms-vaihtelu \${tas ? Math.round((tas.nopeusVaihtelu ?? 0) * 100) : '—'} %, pysähdyksiä \${tas?.pysahdyksia ?? '—'}/\${tas?.kehyksia ?? '—'}, dt p95 \${tas?.dtP95?.toFixed(1) ?? '—'}\n\`
+        const { tas, prof, seuranta, seurantaVertailu, laskurit } = await ajaKierros();
+        const s = seuranta ?? seurantaVertailu;
+        const teksti = \`\${moottori} kierros \${i + 1}/\${KIERROKSIA} (lähde: \${seuranta ? 'syöteloki' : 'vertailu (ei lokia)'})\n\`
           + \`kehys med \${prof.mediaani?.toFixed(1)} p95 \${prof.p95?.toFixed(1)} max \${prof.max?.toFixed(1)} ms, >25ms: \${prof.yli25}/\${prof.kehyksia}\n\`
-          + \`seuranta: suhde med \${seuranta.suhdeMed ?? '—'} (p10 \${seuranta.suhdeP10 ?? '—'}, p90 \${seuranta.suhdeP90 ?? '—'}), pysähdyksiä \${seuranta.pysahdyksiaSeuranta}/\${seuranta.rivitaKpl}\`;
+          + \`suhde med \${s?.suhdeMed ?? '—'} (p10 \${s?.suhdeP10 ?? '—'}, p90 \${s?.suhdeP90 ?? '—'}), pysähdyksiä \${s?.pysahdyksia ?? '—'}/\${s?.rivitaKpl ?? '—'}\n\`
+          + \`vertailu (onBeforeRender): suhde med \${seurantaVertailu.suhdeMed ?? '—'} p10 \${seurantaVertailu.suhdeP10 ?? '—'} p90 \${seurantaVertailu.suhdeP90 ?? '—'}\n\`
+          + \`laskurit: interp \${laskurit?.interpolointeja ?? '—'} ekstrap \${laskurit?.ekstrapolointeja ?? '—'} viiveMs \${laskurit?.viiveMs ?? '—'} sovelluksia \${laskurit?.sovelluksia ?? '—'} interpVanha \${laskurit?.interpVanha ?? '—'}\`;
         kirjoita(teksti);
-        laheta({ aika: new Date().toISOString(), ua: navigator.userAgent, kierros: i + 1, tasaisuus: tas, profiili: prof, seuranta });
+        laheta({ aika: new Date().toISOString(), ua: navigator.userAgent, kierros: i + 1, tasaisuus: tas, profiili: prof, seuranta, seurantaVertailu, laskurit });
         await new Promise((r) => setTimeout(r, 400));
       }
       kirjoita(\`\${moottori}: KAIKKI \${KIERROKSIA} KIERROSTA VALMIIT.\`);
