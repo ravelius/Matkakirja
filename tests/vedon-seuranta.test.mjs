@@ -223,17 +223,14 @@ test('kosketuskuuntelija kytketään kerran ja valinta vaihtaa vain lähteen', (
   } finally { ikkuna.pura(); }
 });
 
-test('valikko: rivit, radiogroup ja kosketusrajaus ovat kytkettyinä', () => {
-  const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
-  assert.match(html, /<p class="valikko-alaotsikko" id="vedon-seuranta-otsikko">Vedon seuranta<\/p>/);
-  assert.match(html, /id="vedon-seuranta-valikko"[\s\S]{0,120}role="radiogroup"/);
-  const main = readFileSync(new URL('../js/main.js', import.meta.url), 'utf8');
-  assert.match(main, /if \(tapa\.kosketus && !kosketuslaite\(\)\) continue;/, 'kosketusrivi vain kosketuslaitteella');
-  assert.match(main, /asetaVedonSeuranta\(tapa\.avain\)/);
-  assert.match(main, /mittauslippuPaalla\(\)/, 'vihje kertoo, kun lippu ohittaa valinnan');
-  // Palvelutyöntekijä ja yhden tiedoston käännös tuntevat moduulin.
+test('moduuli pysyy palvelutyöntekijässä (valikkorivit poistettu 22.9.2026)', () => {
+  // Valikon rivit poistettu omistajan pyynnöstä; pallo.js käyttää moduulia yhä ?koe=-lippujen kautta.
+  // Palvelutyöntekijä tuntee moduulin yhä, mutta se ei enää ole yhden tiedoston käännöksen
+  // MODULES-listalla: js/main.js oli ainoa tuoja, ja se hävisi valikon mukana. Ainoat jäljellä
+  // olevat tuojat (js/pallo.js, js/pallolauta/lauta.js) ovat itse niputuksen ulkopuolella, joten
+  // moduuli siirtyi tests/sw.test.mjs:n NIPUTTAMATTOMAT-listalle (tools/tarkista-niputus.mjs).
   assert.match(readFileSync(new URL('../sw.js', import.meta.url), 'utf8'), /'\.\/js\/vedon-seuranta\.js'/);
-  assert.match(
+  assert.doesNotMatch(
     readFileSync(new URL('../tools/build-standalone.mjs', import.meta.url), 'utf8'),
     /'js\/vedon-seuranta\.js'/,
   );

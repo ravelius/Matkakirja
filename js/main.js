@@ -6,15 +6,10 @@ import { Game } from './game.js';
 import { UI } from './ui.js';
 import { asetaLiike, liikePaalla } from './kartta-liike.js';
 import {
-  VEDON_SEURANNAN_TAVAT, asetaVedonSeuranta, kosketuslaite, mittauslippuPaalla, vedonSeuranta,
-} from './vedon-seuranta.js';
-import {
   PIIRTOKOKEIDEN_VAIHTOEHDOT, asetaKehysprofiili, asetaPiirtokoe,
-  kehysprofiiliPaalla, piirtokoeValinta, piirtokoeVaatiiLatauksen,
+  kehysprofiiliPaalla, piirtokoeValinta, piirtokoeVaatiiLatauksen, unohdaPoistetutValinnat,
 } from './piirtokoe-asetus.js';
-import {
-  TARKKUUDET, TARKKUUKSIEN_NIMET, asetaTarkkuusLiikkeessa, tarkkuusLiikkeessa,
-} from './tarkkuus-asetus.js';
+import { unohdaTarkkuus } from './tarkkuus-asetus.js';
 import {
   VANHA_KARTTA_KAYTOSSA,
   asennaValikonSulkuvartija,
@@ -86,6 +81,13 @@ import { kytkeHistorianHetket } from './historian-hetket.js';
  */
 import { kytkePulunPaikannus } from './pulu-paikka.js';
 
+/*
+ * Valikosta poistettujen mittausvipujen (Vedon seuranta, Tarkkuus
+ * liikkeessä; omistaja 22.9.2026) tallennettu valinta ei saa enää
+ * vaikuttaa: nollataan ennen kuin pallo lukee asetukset.
+ */
+if (unohdaPoistetutValinnat()) unohdaTarkkuus();
+
 kytkeFokusnosto();
 kytkeSyvennys();
 kytkeSkandaalit();
@@ -151,7 +153,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-09-21.2132';
+const APP_VERSION = '2026-09-21.2133';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -698,128 +700,6 @@ if (karttaValikko) {
   rivi.addEventListener('click', () => { asetaLiike(!liikePaalla()); nayta(); });
   nayta();
   karttaValikko.appendChild(rivi);
-  /*
-   * TARKKUUS LIIKKEESSÄ (omistaja 22.9.2026 Fablen kautta, sulavuus-
-   * katsauksen kohta 5; js/tarkkuus-asetus.js): kolme radioriviä samassa
-   * riviasussa. terävä = dpr 3 + MSAA (oletus), tasainen = dpr 2
-   * liikkeessä ja 3 levossa (vaikuttaa heti), kokeellinen = dpr 3 ilman
-   * MSAA:ta — antialias on kontekstin luontiparametri, joten vihjerivi
-   * kertoo "tulee voimaan seuraavassa latauksessa".
-   */
-  /*
-   * RIVIT OSASTON TASOLLE, EIVÄT KYTKINLISTAN SISÄÄN. Sisäkkäinen
-   * .kertoja-valikko peri listan oman sisennyksen, ja tarkkuusrivit
-   * jäivät 15 px muita kapeammiksi — samassa valikossa kahta leveyttä
-   * ei ole. Lisäys menee siis Kartta-kotelon lapseksi heti kytkinlistan
-   * jälkeen, Vedon seurannan (index.html) eteen.
-   */
-  const koteloKartta = karttaValikko.parentElement ?? karttaValikko;
-  let edellinen = karttaValikko;
-  const lisaaOsastoon = (solmu) => {
-    koteloKartta.insertBefore(solmu, edellinen.nextSibling);
-    edellinen = solmu;
-  };
-  const otsikko = document.createElement('p');
-  otsikko.className = 'valikko-alaotsikko';
-  otsikko.textContent = 'Tarkkuus liikkeessä';
-  lisaaOsastoon(otsikko);
-  const ryhma = document.createElement('div');
-  ryhma.className = 'kertoja-valikko tarkkuus-valikko';
-  ryhma.setAttribute('role', 'radiogroup');
-  ryhma.setAttribute('aria-label', 'Tarkkuus liikkeessä');
-  const vihje = document.createElement('p');
-  vihje.className = 'lauta-vihje tarkkuus-vihje';
-  vihje.hidden = true;
-  const IKONIT = {
-    terava: '<circle cx="12" cy="12" r="7"/><path d="M12 5v14M5 12h14"/>',
-    tasainen: '<path d="M4 15.5c2.5-2.5 5-2.5 7.5 0s5 2.5 7.5 0"/><circle cx="12" cy="8" r="3"/>',
-    kokeellinen: '<path d="M9 4h6M10 4v6l-5 8a1 1 0 0 0 .9 1.5h12.2A1 1 0 0 0 19 18l-5-8V4"/>',
-  };
-  const naytaTarkkuus = () => {
-    const nyt = tarkkuusLiikkeessa();
-    for (const r of ryhma.querySelectorAll('button')) {
-      const valittu = r.dataset.tarkkuus === nyt;
-      r.classList.toggle('valittu', valittu);
-      r.setAttribute('aria-checked', valittu ? 'true' : 'false');
-      r.querySelector('.aanikytkin-tila').textContent = valittu ? 'valittu' : 'vaihda';
-    }
-  };
-  for (const avain of TARKKUUDET) {
-    const tiedot = TARKKUUKSIEN_NIMET[avain];
-    const r = document.createElement('button');
-    r.type = 'button';
-    r.className = 'aanikytkin';
-    r.dataset.tarkkuus = avain;
-    r.setAttribute('role', 'radio');
-    r.title = tiedot.seloste;
-    r.setAttribute('aria-label', `${tiedot.nimi} — ${tiedot.seloste}`);
-    r.innerHTML = `<span class="viiva-ikoni">${svg(IKONIT[avain])}</span>`
-      + `<span class="aanikytkin-nimi">${tiedot.nimi}</span>`
-      + '<span class="aanikytkin-tila"></span>';
-    r.addEventListener('click', () => {
-      if (tarkkuusLiikkeessa() === avain) return;
-      const lataus = asetaTarkkuusLiikkeessa(avain);
-      naytaTarkkuus();
-      vihje.textContent = lataus ? 'Reunanpehmennys vaihtuu seuraavassa latauksessa.' : '';
-      vihje.hidden = !lataus;
-    });
-    ryhma.appendChild(r);
-  }
-  naytaTarkkuus();
-  lisaaOsastoon(ryhma);
-  lisaaOsastoon(vihje);
-}
-
-/*
- * KARTTA → VEDON SEURANTA (omistaja 22.9.2026 klo 18.05): viisi tapaa,
- * joilla kamera seuraa sormea pallolaudalla. Sama riviasu kuin
- * pelilaudan valinnalla (role="radio", tasan yksi voimassa); tavat,
- * tallennus ja ilmoitus laudalle ovat js/vedon-seuranta.js:ssä.
- *
- * VAIHTO PUREE HETI: js/pallo.js kuuntelee tapahtumaa eikä sivua
- * tarvitse ladata. Siksi tässä ei ole "tulee voimaan seuraavassa
- * latauksessa" -vihjettä — vihjerivi kertoo vain sen tilanteen, jossa
- * osoitteen mittauslippu ohittaa valinnan.
- *
- * KOSKETUSNÄYTTEET VAIN KOSKETUSLAITTEELLA: hiirellä touchmovea ei
- * tule, joten rivi jäisi valinnaksi joka ei tee mitään.
- */
-const seurantaValikko = document.getElementById('vedon-seuranta-valikko');
-const seurantaVihje = document.getElementById('vedon-seuranta-vihje');
-
-const naytaSeuranta = () => {
-  if (!seurantaValikko) return;
-  const nyt = vedonSeuranta();
-  for (const rivi of seurantaValikko.querySelectorAll('button')) {
-    const valittu = rivi.dataset.seuranta === nyt;
-    rivi.classList.toggle('valittu', valittu);
-    rivi.setAttribute('aria-checked', valittu ? 'true' : 'false');
-    const tila = rivi.querySelector('.aanikytkin-tila');
-    if (tila) tila.textContent = valittu ? 'valittu' : 'vaihda';
-  }
-};
-
-if (seurantaValikko) {
-  for (const tapa of VEDON_SEURANNAN_TAVAT) {
-    if (tapa.kosketus && !kosketuslaite()) continue;
-    const rivi = document.createElement('button');
-    rivi.type = 'button';
-    rivi.className = 'aanikytkin';
-    rivi.dataset.seuranta = tapa.avain;
-    rivi.setAttribute('role', 'radio');
-    rivi.title = tapa.seloste;
-    rivi.setAttribute('aria-label', `${tapa.nimi} — ${tapa.seloste}`);
-    rivi.innerHTML = `<span class="viiva-ikoni">${svg(tapa.ikoni)}</span>`
-      + `<span class="aanikytkin-nimi">${tapa.nimi}</span>`
-      + '<span class="aanikytkin-tila"></span>';
-    rivi.addEventListener('click', () => { asetaVedonSeuranta(tapa.avain); naytaSeuranta(); });
-    seurantaValikko.appendChild(rivi);
-  }
-  if (seurantaVihje && mittauslippuPaalla()) {
-    seurantaVihje.textContent = 'Osoitteen ?koe-lippu ohittaa valinnan.';
-    seurantaVihje.hidden = false;
-  }
-  naytaSeuranta();
 }
 
 /*

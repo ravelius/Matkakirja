@@ -72,7 +72,7 @@ test('pallo lukee asetuksen: antialias renderer-luonnissa, pikselisuhde kerrokse
   assert.match(pallo, /lepoSuhde: Math\.min\(ikkuna\.devicePixelRatio \|\| 1, LAATU_PIKSELISUHDE_LEPO\),/);
   const laatat = lue('../js/pallolaatat.js');
   assert.match(laatat, /const suhde = lepoSuhde \?\? mitat\.suhde;/);
+  // Valikkorivit poistettu (omistaja 22.9.2026 klo 22.30); ks. tests/valikko-siivous.test.mjs.
   const main = lue('../js/main.js');
-  assert.match(main, /Tarkkuus liikkeessä/);
-  assert.match(main, /Reunanpehmennys vaihtuu seuraavassa latauksessa\./);
+  assert.doesNotMatch(main, /asetaTarkkuusLiikkeessa/);
 });
