@@ -1493,8 +1493,29 @@ export function asennaLaatunosto(pallo, kotelo, ikkuna = globalThis) {
   return () => purkaja();
 }
 
+/*
+ * KOELIPPU `?koe=dpr15` (Fable 22.9.2026): pikselisuhde lukitaan 1,5:een
+ * karkeaksi TÄYTTÖKOKEEKSI. Safarissa ei ole
+ * EXT_disjoint_timer_query_webgl2:ta, joten GPU-aikaa ei voi mitata
+ * suoraan; jos pitkät kehykset katoavat puolittamalla täytettävien
+ * pikselien määrä (3 → 1,5 = neljäsosa pikseleistä), syy on täytössä tai
+ * komposiittorissa. Jos eivät katoa, syy on muualla (laattojen vienti
+ * GPU:lle, mipmapit, lämpökellotus).
+ *
+ * Lippu ohittaa sekä Tarkkuus liikkeessä -asetuksen että kerroksen omat
+ * kynnykset, koska se on mittaus eikä ulkoasu.
+ */
+export const KOE_DPR = { dpr15: 1.5, dpr2: 2 };
+
+/** Koelipun lukitsema pikselisuhde, tai null. */
+export function kokeenPikselisuhde(kokeet = laattakerroksenKokeet()) {
+  for (const [lippu, suhde] of Object.entries(KOE_DPR)) if (kokeet.has(lippu)) return suhde;
+  return null;
+}
+
 function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
-  const dpr = ikkuna.devicePixelRatio || 1;
+  const koeSuhde = kokeenPikselisuhde();
+  const dpr = koeSuhde ?? (ikkuna.devicePixelRatio || 1);
   /*
    * KOKEILUVIPU (omistaja 5.9.2026: "kokeile pyörisikö vieritys sillä
    * korkeammalla tarkkuudella joka kytkeytyy nyt päälle vasta kun liike
@@ -1618,7 +1639,8 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
   const lepoSuhde = () => Math.min(dpr, LAATU_PIKSELISUHDE_LEPO);
   const tahdistaPikselisuhde = (lepoon) => {
     if (!renderer) return;
-    const suhde = pikselisuhdeTarkkuudella(tarkkuusLiikkeessa(ikkuna), dpr, lepoon || aina());
+    // Koelippu lukitsee suhteen: mittaus ei saa vaihdella asetuksen mukana.
+    const suhde = koeSuhde ?? pikselisuhdeTarkkuudella(tarkkuusLiikkeessa(ikkuna), dpr, lepoon || aina());
     if (renderer.getPixelRatio?.() !== suhde) renderer.setPixelRatio(suhde);
   };
   const asetaTila = (lepoon) => {
@@ -1633,7 +1655,7 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
     kynnysTeravyys = teravyys;
     const kerroin = (lepoon ? lepokerroin(piirtokorkeus(), teravyys) : 1) * napakerroin(kynnysLat);
     moottori.thresholds = laattakynnykset(kerroin);
-    const suhde = Math.min(dpr, lepoon ? LAATU_PIKSELISUHDE_LEPO : LAATU_PIKSELISUHDE_LIIKE);
+    const suhde = koeSuhde ?? Math.min(dpr, lepoon ? LAATU_PIKSELISUHDE_LEPO : LAATU_PIKSELISUHDE_LIIKE);
     if (renderer && renderer.getPixelRatio?.() !== suhde) renderer.setPixelRatio(suhde);
   };
   /** Laattojen tekstuureille anisotrooppinen suodatus (kerran per laatta). */

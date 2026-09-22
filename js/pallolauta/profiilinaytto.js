@@ -72,6 +72,18 @@ export function profiiliTahti(tulos, lepoDelta = null) {
    */
   let pitkatPiirretty = 0;
   let pitkatOhitettu = 0;
+  /*
+   * SILMUKOIDEN MÄÄRÄ JA LAATTAVIENNIT (Fable 22.9.2026). Käärityt
+   * rAF-takaisinkutsut kehyksessä = elossa olevat silmukat (kirjaston
+   * tick, lepopiirron kello, kartan liike, mittaus itse); laattaviennit
+   * = `paivityksia`-laskurin kasvu jakson yli, eli montako laattaa
+   * vietiin GPU:lle mitattuna aikana.
+   */
+  const kutsuja = kehykset.map((k) => k.rafKutsuja ?? 0).filter((n) => n > 0);
+  const ketjuja = kutsuja.length ? kutsuja.reduce((a, b) => a + b, 0) / kutsuja.length : null;
+  const ekaPaiv = kehykset.find((k) => Number.isFinite(k.paivityksia))?.paivityksia ?? null;
+  const vikaPaiv = [...kehykset].reverse().find((k) => Number.isFinite(k.paivityksia))?.paivityksia ?? null;
+  const vienteja = Number.isFinite(ekaPaiv) && Number.isFinite(vikaPaiv) ? vikaPaiv - ekaPaiv : null;
   for (let i = 1; i < kehykset.length; i += 1) {
     const k = kehykset[i];
     if (!(k.dt > 25)) continue;
@@ -96,6 +108,18 @@ export function profiiliTahti(tulos, lepoDelta = null) {
     piirtoOsuus: yhteensa ? piirtoja / yhteensa : null,
     pitkatPiirretty,
     pitkatOhitettu,
+    ketjuja,
+    vienteja,
+    /*
+     * KEHYKSEN VALMISTUMISVIIVE (Fable 22.9.2026): rAF-väli miinus se
+     * aika, jonka pääsäie oli mitattavasti töissä. Safarissa ei ole
+     * EXT_disjoint_timer_query_webgl2:ta, joten tämä on paras saatava
+     * arvio GPU:n ja komposiittorin osuudesta: jos js ja render ovat
+     * ~0 mutta dt on 50 ms, aika kuluu kehyksen valmistumiseen.
+     */
+    viiveKa: kehykset.length
+      ? kehykset.reduce((a, k) => a + Math.max(0, (k.dt ?? 0) - (k.js ?? 0) - (k.render ?? 0)), 0) / kehykset.length
+      : NaN,
   };
 }
 
@@ -132,6 +156,8 @@ export function profiilirivit({
     if (tahti.pitkatPiirretty + tahti.pitkatOhitettu > 0) {
       rivit.push(`pitkät (>25 ms): piirretty ${tahti.pitkatPiirretty} · ohitettu ${tahti.pitkatOhitettu}`);
     }
+    rivit.push(`silmukoita ${p(tahti.ketjuja, 1)} · laattavientejä ${tahti.vienteja ?? '—'}`
+      + ` · valmistumisviive ${p(tahti.viiveKa, 1)} ms`);
   }
   if (pisin) {
     /*
@@ -177,6 +203,7 @@ export function profiilitiiviste({
       jsKa: tahti.jsKa, renderKa: tahti.renderKa,
       piirtoja: tahti.piirtoja, ohitettuja: tahti.ohitettuja, piirtoOsuus: tahti.piirtoOsuus,
       pitkatPiirretty: tahti.pitkatPiirretty, pitkatOhitettu: tahti.pitkatOhitettu,
+      ketjuja: tahti.ketjuja, vienteja: tahti.vienteja, viiveKa: tahti.viiveKa,
     } : null,
     kehyksia: tiiviste?.kehyksia ?? 0,
     mediaani: tiiviste?.mediaani ?? null,
