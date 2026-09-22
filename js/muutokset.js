@@ -13,7 +13,8 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 2084, teksti: 'Kerma laatan shaderissa' },
+  { v: 2085, teksti: 'Kerma laatan shaderissa' },
+  { v: 2084, teksti: 'C2-kohtaamiset: Iason, Ilaria ja Sofie' },
   { v: 2083, teksti: 'Kohtaamiset C2+C3: 12 kaupunkia' },
   { v: 2082, teksti: 'TUR: 4 ykköstason nostoa' },
   { v: 2081, teksti: 'RUS: 4 ykköstason nostoa' },
