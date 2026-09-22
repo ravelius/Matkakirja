@@ -13,6 +13,8 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2103, teksti: 'Pulun karttapaikka' },
+  { v: 2102, teksti: 'Sulavuus 11-12: yksi haivytysjono, atlas' },
   { v: 2101, teksti: 'Sulavuus 18: lepopiirto sykkeella' },
   { v: 2100, teksti: 'kytke C4-C7-kohtaamiskuvat 20 kaupunkiin' },
   { v: 2099, teksti: 'Sulavuus 7,17: shaderit, ramppi, pollovahti' },

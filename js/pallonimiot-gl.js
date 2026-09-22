@@ -263,6 +263,7 @@ export function rasteroiTeksti(teksti, { px = 14, dpr = 1, doc = globalThis.docu
 export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = null, juuri = null }) {
   const doc = kotelo?.ownerDocument ?? ikkuna.document;
   const L = luokat ?? glLuokat(pallo);
+  const atlasKoko = (() => { try { return (new URLSearchParams(ikkuna.location?.search ?? '').get('koe') ?? '').split(',').includes('atlaskoko'); } catch { return false; } })();
   const mittarit = {
     tila: L ? 'valmis' : 'ei-luokkia', instansseja: 0, sivuja: 0, rastereita: 0, drawcalls: 0,
     rakennuksia: 0, rakennusMs: 0, atlasTayttoaste: 0, kerroin: 1, kehyksia: 0,
@@ -330,6 +331,8 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
     verkko.userData.glnimiot = true;
     const sivu = {
       kangas, ctx, pakkaus: new Hyllypakkaus(), tekstuuri, materiaali, geometria, verkko, likainen: false,
+      /** Onko sivu kertaalleen viety näytönohjaimelle (sen jälkeen osittaiset päivitykset riittävät, ks. ATLAKSEN OSITTAINEN PÄIVITYS). */
+      viety: false,
     };
     sivut.push(sivu);
     ryhma.add(verkko);
@@ -417,7 +420,37 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
     }
     sivu.ctx.clearRect(paikka.x, paikka.y, rasteri.w, rasteri.h);
     sivu.ctx.drawImage(rasteri.kuva, paikka.x, paikka.y, rasteri.w, rasteri.h);
-    sivu.likainen = true;
+    /*
+     * ATLAKSEN OSITTAINEN PÄIVITYS (sulavuuskatsaus 22.9.2026 kohta 8).
+     * `needsUpdate = true` vie koko 2048²-kankaan (16 Mt) näytönohjaimelle
+     * joka kerta, kun yksikin rasteri lisätään — yksittäinen 20–40 ms:n
+     * kehys zoomissa portaan vaihtuessa. Kun sivu on kerran viety, uusi
+     * rasteri viedään texSubImage2D:llä vain omaan suorakaiteeseensa
+     * (three: renderer.copyTextureToTexture, lähde = rasterin oma kuva
+     * kääreessä). Kangas päivitetään yhä (tiivistys kopioi siitä).
+     * Vienti tehdään HETI, koska rasterilähde ei säilytä kuvaa. Koko
+     * sivun vienti jää ensimmäiseen kertaan ja tiivistykseen.
+     * Koelippu `?koe=atlaskoko` palauttaa koko kankaan viennin.
+     */
+    const renderer = pallo?.renderer?.();
+    if (sivu.viety && !atlasKoko && typeof renderer?.copyTextureToTexture === 'function') {
+      try {
+        const lahde = new L.Texture(rasteri.kuva);
+        lahde.flipY = false;
+        const kohta = { x: paikka.x, y: paikka.y, z: 0 };
+        // three ≥ r165: (src, dst, srcRegion, dstPosition); vanhempi: (position, src, dst).
+        if (renderer.copyTextureToTexture.length >= 3) renderer.copyTextureToTexture(kohta, lahde, sivu.tekstuuri);
+        else renderer.copyTextureToTexture(lahde, sivu.tekstuuri, null, kohta);
+        mittarit.atlasOsapaivityksia = (mittarit.atlasOsapaivityksia ?? 0) + 1;
+        pallo?.__piirto?.tarvitaan();
+      } catch (virhe) {
+        sivu.likainen = true;
+        mittarit.atlasOsavirhe = String(virhe?.message ?? virhe).slice(0, 120);
+      }
+    } else {
+      sivu.likainen = true;
+      if (!sivu.viety) mittarit.atlasEiViety = (mittarit.atlasEiViety ?? 0) + 1;
+    }
     const tietue = {
       sivu, w: rasteri.w, h: rasteri.h, ankkuriX: rasteri.ankkuriX ?? 0, ankkuriY: rasteri.ankkuriY ?? 0,
       u0: paikka.x / GLNIMIOT_ATLAS, v0: paikka.y / GLNIMIOT_ATLAS,
@@ -595,7 +628,10 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
         s.materiaali.uniforms.kerroin.value = kerroinNyt;
         s.materiaali.uniforms.sykeKerroin.value = sykeNyt;
         s.materiaali.uniforms.dpr.value = suhde;
-        if (s.likainen) { s.tekstuuri.needsUpdate = true; s.likainen = false; }
+        if (s.likainen) {
+          s.tekstuuri.needsUpdate = true; s.likainen = false; s.viety = true;
+          mittarit.atlasKokopaivityksia = (mittarit.atlasKokopaivityksia ?? 0) + 1;
+        }
       }
       mittarit.kerroin = kerroinNyt;
       mittarit.syke = sykeNyt;
