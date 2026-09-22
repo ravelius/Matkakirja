@@ -1555,3 +1555,7 @@ Omistaja klo 23.06 sanatarkasti: 'Kaikkiin nostoihin kaksi palstaa. Ja niin ett�
 ## OMISTAJA (KORTTI): PIIRTOKOE-VALIKKOON JAA 4 TILAA — NORMAALI, EI PUSKURIKIRJOITUKSIA, EI TEKSTUURIVIENTEJA, EI HAIVYTYSTA VEDOSSA; POIS PIKSELISUHDE 1,5 (MITATTU, EI VAIKUTUSTA), ILMAN ALFAKANAVAA JA VAHEMMAN PIIRTOKUTSUJA (LIPUT SAILYVAT ?koe=-OSOITTEESSA) (22.9.2026 klo 23.08)
 
 Omistaja klo 23.07 kaappauksen kera: 'Poista tuolta samalla ylimääräiset'. Pelikoodari tekee samaan erään automaattilatauksen kanssa; numerointi 1–4, tallennetut poistetut valinnat nollataan Normaaliin.
+
+## CI-AJURIN UUDELLEENKAYNNISTYS (22.42) EI AUTTANUT: WebKit-launch-AIKAKATKAISU JATKUU (12/78 AJOSSA 35776510683) → VIKA YLEMPANA (GUI-SESSIO/WindowServer TAI WEBKIT-KOPION TILA); KONEEN REBOOT HUOMENNA AAMULLA, SIIHEN ASTI MERGET OMISTAJAN SAANNOLLA (22.9.2026 klo 23.13)
+
+Laitetestaaja kirjoittaa muistion docs/raportit/ci-webkit-launch-20260922.md (oireet, aikaraja 19.44, poissuljetut, järjestys huomiselle: reboot → webkit-2336 uudelleenasennus → runner-ympäristön env-dump).
