@@ -61,3 +61,60 @@ JUURI=<repo> PLAYWRIGHT_JS=… ULOS=<kansio> [KOE='&koe=kangasaina'] \
 ```
 Kaappaukset `<kansio>/{rannikko,avomeri}-{A,B,C}-*.png` ja lukemat
 `tasonvaihto-<moottori>.json`.
+
+---
+
+# Toisto poltolla 2026-09-22c (22.9.2026 klo 18.38)
+
+Sama mittaus uusilla laatoilla (vesiviivat laudan yksiköissä, laikut
+maailmaan). Osoitin mainissa v2116, luettelo viety ämpäriin.
+
+| ajo | näkymä | A (z7) | B (z8) | A − B | C − (A+B)/2 |
+| --- | --- | --- | --- | --- | --- |
+| ennen (22a) | rannikko | 8,10 | 8,40 | **5,68** | 0,60 |
+| **jälkeen (22c)** | rannikko | 8,15 | 8,68 | **5,95** | 1,53 |
+| ennen (22a) | avomeri | 4,00 | 3,98 | **2,24** | 0,82 |
+| **jälkeen (22c)** | avomeri | 4,01 | 4,00 | **2,24** | 0,97 |
+
+## Tulos suoraan sanottuna: A − B ei parantunut
+
+Korjaus ei pienentänyt tasojen välistä eroa tällä mittarilla lainkaan
+(rannikko 5,68 → 5,95, avomeri 2,24 → 2,24). Kaksi asiaa on syytä erottaa:
+
+1. **Korjaus tekee sen, mihin se on suunniteltu.** Vedoksissa
+   (`poltto-22c-rannikko-z5-z8.jpg`) sama viiva on samassa
+   maantieteellisessä kohdassa joka tasolla — vanhassa viivasto
+   levittäytyi joka tasolla eri kauas merelle. Tämä on silmällä selvä.
+2. **Mutta viivat ovat pieni osa ruudun hienorakennetta.** Sama havainto
+   kuin erä 2:ssa (poltettu rae ~3 % laatan energiasta): A − B:tä
+   hallitsevat rantaviivan ja maaston tarkentuminen, paperin rae (yhä
+   paperivakiona) ja laatan häviöllinen pakkaus. Ne eroavat tasojen
+   välillä väistämättä, koska z+1 NÄYTTÄÄ ENEMMÄN.
+
+Huom. `C − (A+B)/2` ei ole vertailukelpoinen ajojen välillä: kaappaus
+osui häiveessä eri kohtaan (peitto 50 % vs 35 % rannikolla, 20 % vs 35 %
+avomerellä), ja jäännös riippuu siitä. Kumpikin luku on silti pieni
+suhteessa siihen, mitä häive sekoittaa — johtopäätös "sekoitus on
+uskollinen" pätee yhä.
+
+## Mitä tämä mittaus EI kata
+
+Mittaus vaihtaa tason z7 → z8. Juuri siinä välissä vesiviivojen
+**harvennus ei tee mitään**: laskettu viivaväli on z7:llä 5,1 px ja
+z8:lla 10,1 px, eli molemmilla yli kolmen pikselin rajan ja kaikki
+viivat piirtyvät. Harvennus puree vasta karkeammalla:
+
+| taso | viivaväli (sisin → uloin, px) | harvennusaskel |
+| --- | --- | --- |
+| z5 | 1,3 … 4,4 | 4, 2, 2, 1, 1, 1 |
+| z6 | 2,5 … 8,7 | 2, 1, 1, 1, 1, 1 |
+| z7 | 5,1 … 17,4 | 1 (ei harvennusta) |
+| z8 | 10,1 … 34,9 | 1 (ei harvennusta) |
+
+Eli z6 → z7 -vaihdossa uusia viivoja ilmestyy sisimpään vyöhykkeeseen, ja
+z5 → z6:ssa vielä enemmän. Se on omistajan tilaama käytös ("karkealla
+tasolla harvempi eikä tummempi"), mutta se tarkoittaa myös, että juuri
+niissä vaihdoissa ruudulle tulee jotain uutta. Jos tuntumatestissä lika
+näkyy nimenomaan karkeilla tasoilla, seuraava mittaus on z6 → z7 ja
+z5 → z6 — ja korjaus olisi silloin häivyttää harvennetut viivat esiin
+vaimeina eikä jättää niitä kokonaan pois.
