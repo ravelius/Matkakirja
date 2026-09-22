@@ -146,7 +146,78 @@ export function luoKehysprofiili(uiTaiHaku, ikkuna = globalThis) {
     for (const k of r.pisimmat.slice(0, 6)) rivit.push(`t ${k.t} dt ${k.dt} varattu ${k.varattu} js ${k.js} render ${k.render} | dc ${k.drawcalls} tri ${k.kolmiot} sc ${k.scenessa} häipyy ${k.hapyvia} näk ${k.nakyvia} taso ${k.taso} päiv ${k.paivityksia} pyynt ${k.pyyntoja} rast ${k.rasterit} jak ${k.jakoja}`);
     return rivit.join('\n');
   };
-  return { aloita, lopeta, tiivista, teksti, lue };
+  /*
+   * TASAISUUSMITTARI (Fable 22.9.2026: "kehysajan p95 ei tavoita
+   * panoroinnin nykimistä"). Synteettinen kosketusveto vakionopeudella
+   * sivun sisältä (PointerEvent kankaalle joka kehyksellä, ei Node-
+   * kierroksia): joka kehyksestä kirjataan kameran siirtymä ruudulla
+   * (kiinteän maapisteen ruutukoordinaatti getScreenCoordsilla) ja
+   * kehyksen kesto. Google Earth -taso = sama siirtymä joka kehyksessä:
+   * mittarit ovat siirtymän keskiarvo ja hajonta/keskiarvo, pysähdykset
+   * (siirtymä < 0,25 px vaikka sormi liikkui) ja pisin pysähdys ms.
+   */
+  const veto = async ({ kesto = 3000, nopeusPx = 80, suunta = [1, 0.3], pointerType = 'touch' } = {}) => {
+    const ui = haeUi();
+    const pallo = ui?.pallonInstanssi;
+    const kohde = pallo?.renderer?.()?.domElement ?? ui?.pallolauta?.kotelo;
+    if (!pallo?.getScreenCoords || !kohde?.dispatchEvent) return null;
+    const r = kohde.getBoundingClientRect();
+    let x = r.left + r.width * 0.3; let y = r.top + r.height * 0.55;
+    const pov = pallo.pointOfView();
+    const viite = { lat: pov.lat, lng: pov.lng };
+    const pituus = Math.hypot(suunta[0], suunta[1]) || 1;
+    const dx = suunta[0] / pituus; const dy = suunta[1] / pituus;
+    const tapahtuma = (tyyppi, lisa = {}) => kohde.dispatchEvent(new ikkuna.PointerEvent(tyyppi, {
+      bubbles: true, cancelable: true, composed: true, pointerId: 7, pointerType, isPrimary: true,
+      clientX: x, clientY: y, buttons: tyyppi === 'pointerup' ? 0 : 1, button: 0, ...lisa,
+    }));
+    const ruutu = () => { const p = pallo.getScreenCoords(viite.lat, viite.lng); return p ? { x: p.x, y: p.y } : null; };
+    aloita();
+    tapahtuma('pointerdown');
+    const alku = nyt();
+    let edellinenRuutu = ruutu();
+    let edellinenT = alku;
+    await new Promise((valmis) => {
+      const askel = () => {
+        const t = nyt(); const dt = t - edellinenT; edellinenT = t;
+        x += dx * nopeusPx * dt / 1000; y += dy * nopeusPx * dt / 1000;
+        tapahtuma('pointermove');
+        const nykyinen = ruutu();
+        const kehys = tila?.kehykset.at(-1);
+        if (kehys && nykyinen && edellinenRuutu) kehys.siirtyma = Math.hypot(nykyinen.x - edellinenRuutu.x, nykyinen.y - edellinenRuutu.y);
+        edellinenRuutu = nykyinen;
+        if (t - alku < kesto) alkuperainenRaf.call(ikkuna, askel); else valmis();
+      };
+      alkuperainenRaf.call(ikkuna, askel);
+    });
+    tapahtuma('pointerup');
+    const tulos = lopeta();
+    return { ...tulos, tasaisuus: tasaisuus(tulos), nopeusPx, pointerType };
+  };
+  const tasaisuus = (tulos) => {
+    const k = (tulos?.kehykset ?? []).filter((f) => Number.isFinite(f.siirtyma)).slice(2);
+    if (!k.length) return null;
+    const s = k.map((f) => f.siirtyma);
+    const ka = s.reduce((a, b) => a + b, 0) / s.length;
+    const hajonta = Math.sqrt(s.reduce((a, b) => a + (b - ka) ** 2, 0) / s.length);
+    const pysahdykset = k.filter((f) => f.siirtyma < 0.25);
+    let pisin = 0; let jakso = 0;
+    for (const f of k) { if (f.siirtyma < 0.25) { jakso += f.dt; pisin = Math.max(pisin, jakso); } else jakso = 0; }
+    // Siirtymä kehyksen kestoon suhteutettuna: tasainen liike = vakio px/ms.
+    const nopeudet = k.map((f) => f.siirtyma / Math.max(1, f.dt));
+    const nka = nopeudet.reduce((a, b) => a + b, 0) / nopeudet.length;
+    const nhajonta = Math.sqrt(nopeudet.reduce((a, b) => a + (b - nka) ** 2, 0) / nopeudet.length);
+    return {
+      kehyksia: k.length, siirtymaKa: ka, siirtymaHajonta: hajonta, vaihtelu: ka ? hajonta / ka : null,
+      nopeusVaihtelu: nka ? nhajonta / nka : null, pysahdyksia: pysahdykset.length, pisinPysahdysMs: pisin,
+      dtP95: prosenttipiste(k.map((f) => f.dt), 0.95),
+    };
+  };
+  const vetoTeksti = (v) => {
+    const t = v?.tasaisuus; if (!t) return 'ei vetoa';
+    return `veto ${v.nopeusPx} px/s (${v.pointerType}): siirtymä/kehys ka ${p(t.siirtymaKa, 2)} px, hajonta/ka ${p((t.vaihtelu ?? 0) * 100, 0)} % (px/ms-vaihtelu ${p((t.nopeusVaihtelu ?? 0) * 100, 0)} %), pysähdyksiä ${t.pysahdyksia}/${t.kehyksia}, pisin ${p(t.pisinPysahdysMs, 0)} ms, dt p95 ${p(t.dtP95)}`;
+  };
+  return { aloita, lopeta, tiivista, teksti, lue, veto, tasaisuus, vetoTeksti };
 }
 
 /** Asenna `globalThis.__kehysprofiili` (kerran). */

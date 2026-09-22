@@ -47,6 +47,8 @@ const PORTAAT = process.env.KERROKSET ? process.env.KERROKSET.split(';') : (proc
 const NAKYMAT = (process.env.NAKYMAT ?? 'ranska').split(',');
 const KOKEET = (process.env.KOKEET ?? 'perus').split(',');
 const CPU = Number(process.env.CPU) || 0;
+/** VETO=<px/s>: ennen zoomia synteettinen vakionopeusveto 3 s (kehysprofiili.veto), tasaisuusmittari. */
+const VETO = Number(process.env.VETO) || 0;
 const ULOS = process.env.ULOS ?? '/tmp/matkakirja-kaappaukset/zoomipiirto';
 mkdirSync(ULOS, { recursive: true });
 const DPR = Number(process.env.DPR) || 3;
@@ -159,6 +161,14 @@ for (const koe of KOKEET) for (const porras of PORTAAT) {
     await sivu.waitForTimeout(4000);
     await sivu.waitForFunction(async () => { const m = await import('/js/laattapyramidi.js'); return Boolean(m.pyramidinTasoitus()?.suoja?.tarkka); }, null, { timeout: 30000 }).catch(() => {});
     await sivu.waitForTimeout(1500);
+    // ── VETO: synteettinen vakionopeusveto sivun sisällä (tasaisuusmittari) ──
+    let vetoTulos = null;
+    if (VETO) {
+      vetoTulos = await sivu.evaluate(async (n) => { const v = await window.__kehysprofiili.veto({ kesto: 3000, nopeusPx: n }); return v ? { tasaisuus: v.tasaisuus, teksti: window.__kehysprofiili.vetoTeksti(v), yhteenveto: window.__kehysprofiili.teksti(v).split('\n')[0] } : null; }, VETO);
+      if (vetoTulos) console.log(`${koe} porras ${porras} ${nakyma} ${MOOTTORI}: ${vetoTulos.teksti} | ${vetoTulos.yhteenveto}`);
+      await sivu.evaluate((pov) => window.matkakirja.ui.pallonInstanssi.pointOfView(pov, 0), KOHTEET[nakyma]);
+      await sivu.waitForTimeout(1500);
+    }
     // ── ZOOMI: sisään kolmasosaan ja takaisin, kirjaston tween; profiloija päällä ──
     let profiloijanAlku = 0;
     if (cdp) { await cdp.send('Profiler.enable'); await cdp.send('Profiler.setSamplingInterval', { interval: 250 }); await cdp.send('Profiler.start'); profiloijanAlku = await sivu.evaluate(() => performance.now()); }
@@ -177,7 +187,7 @@ for (const koe of KOKEET) for (const porras of PORTAAT) {
     const aikaSiirto = profiili ? profiili.startTime / 1000 - profiloijanAlku : 0;
     const koonti = kokoaProfiili(profiili, kehykset.map((k) => ({ ...k, t: k.t + zoomi.alku })), aikaSiirto, 25);
     const rivi = {
-      koe, porras, nakyma, moottori: MOOTTORI, cpu: CPU, gpu, virheet: [...virheet],
+      koe, porras, nakyma, moottori: MOOTTORI, cpu: CPU, gpu, virheet: [...virheet], veto: vetoTulos,
       kehyksia: dts.length, mediaani: prosenttipiste(dts, 0.5), p95: prosenttipiste(dts, 0.95), max: Math.max(...dts),
       yli50: dts.filter((d) => d > 50).length, yli25: pitkat.length,
       varattuMed: prosenttipiste(kehykset.map((k) => k.varattu ?? 0), 0.5),

@@ -856,8 +856,18 @@ export const LAATTAKERROS_LAATTAKATTO_ZOOMIENNAKKO = 16;
 export const LAATTAKERROS_TUKI_ASKEL = 2;
 /** Nopeassa loitonnuksessa (korkeus kasvoi yli tämän osuuden päivitysten välillä) askel + 1. */
 export const LAATTAKERROS_TUKI_LOITONNUSRAJA = 0.04;
-export const LAATTAKERROS_TUKI_VARA = 0.35;
-export const LAATTAKERROS_LAATTAKATTO_TUKI = 16;
+/*
+ * TUKIVARA 0,35 → 0,75 (omistaja 22.9.2026: panoroinnissa pohja näkyi
+ * ilman huntua ennen laattaa). Tukilaatta on ainoa kermallinen pinta,
+ * joka ehtii nopean panoroinnin edelle; 0,35 ruudun laidan yli ei
+ * riittänyt sormen vauhdilla. Tukitaso on kaksi tasoa karkeampi, joten
+ * laajempi alue maksaa vain muutaman laatan (katto alla).
+ */
+export const LAATTAKERROS_TUKI_VARA = 0.75;
+export const LAATTAKERROS_LAATTAKATTO_TUKI = 24;
+/** Kerman odotus, kun tarkka suoja ei ole vielä saapunut (ks. valmistele). */
+export const KERMAN_ODOTUS_MS = 200;
+export const KERMAN_ODOTUS_KERTOJA = 25;
 /*
  * TUKILAATAN SYVYYSSIIRTO. Tasojen välinen syvyysero on muuten vain
  * jänteen painuma (ks. PIIRTOJÄRJESTYS), ja z5:n ja z7:n verkoilla se
@@ -2842,6 +2852,29 @@ export function luoLaattakerros({
         }
       }
       const tasoitus = kerrokset.vari ? pyramidinTasoitus() : null;
+      /*
+       * LAATTA EI NÄY ENNEN KERMAA (omistaja 22.9.2026 aamu, iPhone v2076:
+       * *"muiden maiden laatat näkyvät hetken ilman huntua, kerma tulee
+       * jälkikäteen"*). Ennen maapolygoneja suoja on koko laatikko
+       * (`tarkka` epätosi) ja piirraKerma palasi ilman kermaa — laatta
+       * asennettiin raakana ja vaihtui vasta mitätöinnin jälkeen. Nyt
+       * valmistelu odottaa tarkkaa suojaa: laatta palaa jonoon
+       * KERMAN_ODOTUS_MS:n päästä, enintään KERMAN_ODOTUS_KERTOJA (maa,
+       * jolle polygoneja ei ole, ei saa jäädä ikuisesti piirtämättä).
+       */
+      if (tasoitus && !tasoitus.maailma && !tasoitus.suoja?.tarkka && (t.kermanOdotus ?? 0) < KERMAN_ODOTUS_KERTOJA) {
+        t.kermanOdotus = (t.kermanOdotus ?? 0) + 1;
+        mittarit.kermaaOdottaa = (mittarit.kermaaOdottaa ?? 0) + 1;
+        kangas.width = 0; kangas.height = 0;
+        ikkuna.setTimeout(() => {
+          if (purettu || laatat.get(t.avain) !== t) { for (const k of kuvat) k?.close?.(); return; }
+          t.valmistelu = valmistele;
+          t.suljeKuvat = () => { for (const k of kuvat) k?.close?.(); };
+          valmistelujono.push(t);
+          ajaValmistelu();
+        }, KERMAN_ODOTUS_MS);
+        return;
+      }
       /*
        * ══════════════════════════════════════════════════════════════
        * KERMA EI ODOTA VÄRILAATTAA (omistaja 18.9.2026, Raamattu
