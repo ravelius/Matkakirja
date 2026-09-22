@@ -106,6 +106,46 @@ const kehysMs = await gl.sivu.evaluate(async () => {
   return { n, ka: ms / Math.max(1, n), max: 0, kesto: performance.now() - t0, loppu: k.mittarit(), alku };
 });
 vartio('kehys alle 0,5 ms liikkeessä', kehysMs.ka < 0.5, `${kehysMs.ka.toFixed(3)} ms × ${kehysMs.n}`);
+/*
+ * VÄRIKETJU ON IDENTITEETTI (Pelikoodari 22.9.2026). Atlas piirretään
+ * 2D-kankaalle CSS-väreillä, ja oma varjostin kirjoittaa näytteen
+ * sellaisenaan — ruudulle on siis tultava TÄSMÄLLEEN sama väri. Ennen
+ * korjausta atlas peri pallon pinnan sRGB-väriavaruuden, jolloin GPU
+ * purki sen lineaariseksi eikä kukaan koodannut takaisin: kirjoitettu
+ * rgb(246,210,122) luettiin rgb(235,164,50) (mitattu). Läpinäkymätön
+ * testilaatta keskelle näkymää ja readPixels heti piirron jälkeen.
+ */
+const varikierto = await gl.sivu.evaluate(async () => {
+  const p = window.matkakirja.ui.pallonInstanssi;
+  const k = window.matkakirja.ui.pallolautaGL?.();
+  if (!k) return { virhe: 'ei kerrosta' };
+  const pov = p.pointOfView();
+  const VARI = [246, 210, 122];
+  const kangas = document.createElement('canvas');
+  kangas.width = 64; kangas.height = 64;
+  const c = kangas.getContext('2d');
+  c.fillStyle = `rgb(${VARI[0]},${VARI[1]},${VARI[2]})`;
+  c.fillRect(0, 0, 64, 64);
+  const ok = k.aseta('varikierto', {
+    lat: pov.lat, lng: pov.lng, avain: `varikierto|${VARI.join(',')}`,
+    rasteri: { kuva: kangas, w: 64, h: 64, ankkuriX: 32, ankkuriY: 32 },
+    skaala: 0.5, katto: { a: 1e6, b: 1 }, peitto: 1,
+  });
+  if (!ok) return { virhe: 'atlas ei ottanut' };
+  await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
+  const r = p.renderer();
+  p.__piirto?.pakota?.();
+  r.render(p.scene(), p.camera());
+  const g = r.getContext();
+  const px = new Uint8Array(4);
+  g.readPixels(Math.floor(g.drawingBufferWidth / 2), Math.floor(g.drawingBufferHeight / 2), 1, 1, g.RGBA, g.UNSIGNED_BYTE, px);
+  k.poista('varikierto');
+  return { kirjoitettu: VARI, luettu: [px[0], px[1], px[2]] };
+});
+const variEro = varikierto.luettu
+  ? Math.max(...varikierto.luettu.map((v, i) => Math.abs(v - varikierto.kirjoitettu[i])))
+  : 999;
+vartio('väriketju on identiteetti (ei sRGB-purkua ilman koodausta)', variEro <= 2, JSON.stringify(varikierto));
 vartio('ei uusia rakennuksia liikkeessä', kehysMs.loppu.rakennuksia === kehysMs.alku.rakennuksia, `${kehysMs.alku.rakennuksia} → ${kehysMs.loppu.rakennuksia}`);
 // 2. Vertailu SAMASTA sivusta kerros piilossa: erot ovat vain GL-nimiöitä,
 //    ja niiden on osuttava maapisteiden viereen (ei uutta sivulatausta,

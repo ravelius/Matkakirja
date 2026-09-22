@@ -1,8 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 
 import {
-  Hyllypakkaus, luoNimiokerrosGL, GLNIMIOT_ATLAS, GLNIMIOT_SIVUJA_MAX, GLNIMIOT_HORISONTIN_HAIVE,
+  GLNIMIOT_ATLAS, GLNIMIOT_HORISONTIN_HAIVE, GLNIMIOT_SIVUJA_MAX, GLNIMIOT_VARIAVARUUS, Hyllypakkaus, luoNimiokerrosGL,
 } from '../js/pallonimiot-gl.js';
 
 /*
@@ -112,4 +113,19 @@ test('horisontin häive: uniform materiaalissa ja varjostimessa smoothstep', () 
   assert.match(vs, /smoothstep\(0\.0, haive, kosini\)/);
   assert.match(vs, /normalize\(cameraPosition - maailma\.xyz\)/, 'kosini katsesuunnasta, ei etäisyydestä');
   assert.doesNotMatch(vs, /step\(0\.0, dot/, 'kova leikkaus pois');
+});
+
+/*
+ * VÄRIAVARUUS: atlas ei ole värihallittu tekstuuri (Pelikoodari
+ * 22.9.2026). Oma varjostin kirjoittaa näytteen sellaisenaan, joten
+ * sRGB-purkua ei saa tehdä — muuten kulta muuttuu oranssiksi ja
+ * punamulta tummanpuhuvaksi (mitattu: rgb(246,210,122) → rgb(235,164,50)).
+ */
+test('atlaksen väriavaruus on NoColorSpace, ei pallon pinnan sRGB', () => {
+  assert.equal(GLNIMIOT_VARIAVARUUS, '');
+  const lahde = readFileSync(new URL('../js/pallonimiot-gl.js', import.meta.url), 'utf8');
+  assert.match(lahde, /tekstuuri\.colorSpace = GLNIMIOT_VARIAVARUUS;/);
+  assert.doesNotMatch(lahde, /tekstuuri\.colorSpace = malli\.colorSpace/, 'pinnan väriavaruutta ei kopioida atlakseen');
+  // Varjostin kirjoittaa näytteen sellaisenaan: jos tämä muuttuu, väriavaruus on mietittävä uudestaan.
+  assert.match(lahde, /gl_FragColor = v;/);
 });
