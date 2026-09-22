@@ -1383,3 +1383,7 @@ Omistaja 22.9.2026 klo 19.05: Tasainen tökki yhtä lailla (sovellus käynnistet
 ## OMISTAJA KYSYI HTML-ELEMENTEISTA KARTAN PAALLA: MERKIT OVAT GL:SSA (0 CSS2D-MERKKIA), JALJELLA HUOMIORENGAS, LINSSIMERKIT JA KIINTEAT PANEELIT; ILLAN SAVY (mix-blend-mode multiply, KATSAUKSEN KOHTA 4) ON YHA DOM-KERROS → OMISTAJA TESTAA ?koe=eiblend iPHONELLA (22.9.2026 klo 19.08)
 
 Fable 22.9.2026 klo 19.12: v2114:n jälkeen nimet, nostot, nappula ja kohteet GL:ssä; CSS2D:ssä vain lähtövalinnan huomiorengas ja linssimerkit. Illan sävy on koko kartan multiply-DOM-kerros (aina paitsi keskipäivällä; omistajan kuvassa 'Päivä 4, ilta'), iOS:n komposiittorille raskas joka kehys — katsauksen kohta 4, ei vielä tehty. Omistaja testaa ?koe=eiblend; jos auttaa, sävy laattashaderin uniformiksi (Pelikoodari).
+
+## OMISTAJA iPHONELLA: ?koe=eiblend (ILLAN SAVYN MULTIPLY POIS) EI VAIKUTA NYKIMISEEN → DOM-SEKOITUSKERROS POISSULJETTU; SEURAAVAKSI KEHYSPROFIILIN OVERLAY (#2837) PUHELIMESTA (22.9.2026 klo 19.13)
+
+Omistaja 22.9.2026 klo 19.15: eiblend ei vaikuta. Poissuljettu tähän mennessä iPhonella: syötetapa (5), dpr 2 liikkeessä, laattojen saapuminen (nykii myös näytetyllä alueella), DOM-multiply-kerros. Jäljellä: kehystahti (120 Hz rAF vs piirto) tai pääsäikeen kehyskohtainen työ (ladonta, roska, kerroksen päivitys) — overlay #2837 kertoo.
