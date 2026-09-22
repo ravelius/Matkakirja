@@ -1627,3 +1627,7 @@ Postilaatikossa ei uutta Codex-viestiä 16.19 jälkeen. Fable kuittaa Codexille 
 ## v2138 MAINISSA (#2873): PULUN 70 UUTTA ELETTA (CODEX); KUITTAUS CODEXILLE POSTILAATIKKOON (posti/fable-codex-pulun-eleet-julkaistu-20260923.md, 1286a23db); LIVEPELI-QA LAITETESTAAJALLE AAMULLA (23.9.2026 klo 00.13)
 
 Julkaisija klo 00.12, testit 4029/0. Julkaisija ei mergeä enempää tänä yönä ilman Fablen viestiä.
+
+## PR #2874 (PELIKOODARI, VIENTIBUDJETTI OLETUKSENA: ≤ 1 NAKYVA LAATTA/KEHYS VEDOSSA, ENNAKKO ≤ 20/s; WebKit 37–43 vs 196–199 VIENTIA) → EI OLETUKSEKSI (OMISTAJA PERUI SUUNNAN 23.45), KAANNETAAN LIPUKSI ?koe=vientibudjetti; LOYDOS: VANHALLA TAHDILLA KIRJASTON POHJA (~400 dc) PIIRTYY 52–82 %:SSA VETOKEHYKSISTA KOSKA HAIPYVAT LAATAT EIVAT PEITA (dc 431) → MAHDOLLINEN OMA KORJAUS (23.9.2026 klo 00.15)
+
+Pelikoodari aloitti erän ennen perumisviestiä. Muut: eivienti/eihaive-kaappausten 30–38 vientiä välimuistiherkkiä (1/4 otettiin tyhjällä GPU-muistilla); savuke-eihaive-veto korjattu arvioimaan vain liikkeen kehykset; savuke-kerma-heti V2 punainen myös mainilla (Ranska σ 0,7 vs Saksa 10), ei tämän erän vika. Päätyö: liikkeen tasaisuusmittarit ja interp vs touch.
