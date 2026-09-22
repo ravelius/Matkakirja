@@ -1,0 +1,157 @@
+/*
+ * KEHYSPROFIILI — PÄÄSÄIE VAI GPU? (Pelikoodari 22.9.2026, VAIN
+ * MITTAUKSEEN: asennetaan, kun `?kerrokset=` tai `?koe=` on osoitteessa.)
+ *
+ * Ablaatiotikas nimeää pitkän kehyksen syyksi "piirto", kun mikään
+ * kerroslaskuri ei muuttunut. Tämä profiili jakaa jokaisen kehyksen
+ * kahtia, jotta laitteella nähdään, onko pitkä kehys pääsäikeen työtä
+ * vai odotusta:
+ *
+ *   varattu  rAF-takaisinkutsun alusta siihen, kun pääsäie vapautuu
+ *            (MessageChannel-viesti ajetaan vasta rAF-jonon, tyylin,
+ *            asettelun ja maalauksen jälkeen) — pääsäikeen työ
+ *   vapaa    dt − varattu — odotus GPU:lta / vsync
+ *
+ * Joka kehyksestä myös absoluuttiset laskurit: drawcalls, kolmiot,
+ * laattoja scenessä, häipyviä (kaksi kerrosta päällekkäin), näkyviä,
+ * taso, päivityksiä, pyyntöjä, rasterit, jakoja.
+ *
+ * Käyttö (konsoli tai laiteharness, tools/savukkeet/mittaa-zoomipiirto.mjs):
+ *   __kehysprofiili.aloita(); … liike … ; const t = __kehysprofiili.lopeta();
+ *   __kehysprofiili.tiivista(t)  → { mediaani, p95, max, yli50, yli25,
+ *     varattuMed, varattuP95, pitkatVarattuOsuus, pisimmat[12] }
+ *   __kehysprofiili.teksti(t)    → sama yhtenä rivistönä (näytölle)
+ */
+
+const prosenttipiste = (arvot, q) => {
+  if (!arvot.length) return NaN;
+  const s = [...arvot].sort((a, b) => a - b);
+  return s[Math.min(s.length - 1, Math.floor(q * (s.length - 1)))];
+};
+
+/**
+ * @param {object|Function} uiTaiHaku window.matkakirja.ui (pallolauta, pallonInstanssi, pallolautaGL) tai sen hakija
+ * @param {object} [ikkuna] globalThis (testit)
+ */
+export function luoKehysprofiili(uiTaiHaku, ikkuna = globalThis) {
+  const haeUi = typeof uiTaiHaku === 'function' ? uiTaiHaku : () => uiTaiHaku;
+  const lue = () => {
+    const ui = haeUi();
+    const l = ui?.pallolauta;
+    const laatat = l?.lepokerros?.()?.mittarit?.() ?? {};
+    const st = l?.glSovitin?.()?.tila?.() ?? {};
+    const k = ui?.pallolautaGL?.()?.mittarit?.() ?? {};
+    const info = ui?.pallonInstanssi?.renderer?.()?.info ?? {};
+    return {
+      pyyntoja: laatat.pyyntoja ?? 0, purettuja: laatat.purettuja ?? 0, paivityksia: laatat.paivityksia ?? 0,
+      scenessa: laatat.scenessa ?? 0, hapyvia: laatat.hapyvia ?? 0, nakyvia: laatat.nakyvia ?? 0, taso: laatat.taso ?? null,
+      valmisteluja: laatat.valmisteluja ?? 0, vaistoja: laatat.valmisteluVaistoja ?? 0,
+      jakoja: (st.jakoja ?? 0) + (st.nostojakoja ?? 0), rasterit: st.rasterit?.valmiita ?? 0,
+      rakennuksia: k.rakennuksia ?? 0, tekstuurit: info.memory?.textures ?? 0,
+      drawcalls: info.render?.calls ?? 0, kolmiot: info.render?.triangles ?? 0,
+    };
+  };
+  const kanava = typeof ikkuna.MessageChannel === 'function' ? new ikkuna.MessageChannel() : null;
+  let tila = null;
+  let odottaa = null;
+  /*
+   * PÄÄSÄIKEEN TYÖ NIMETÄÄN ILMAN PROFILOIJAA (Safari): mittauksen ajaksi
+   * requestAnimationFrame kääritään niin, että jokaisen takaisinkutsun
+   * kesto kirjataan kehykseen nimellä (funktion nimi tai lähteen alku),
+   * ja three.js:n `renderer.render` erikseen. Kehyksen `varattu` −
+   * (rAF-kutsut + render) = tyyli, asettelu ja maalaus + muut tehtävät.
+   */
+  const alkuperainenRaf = ikkuna.requestAnimationFrame;
+  const nimi = (fn) => fn?.name || String(fn).replace(/\s+/g, ' ').slice(0, 48);
+  let kehysNyt = null;
+  const kirjaa = (avain, ms) => {
+    if (!kehysNyt) return;
+    kehysNyt.js = (kehysNyt.js ?? 0) + ms;
+    kehysNyt.kutsut ??= {};
+    kehysNyt.kutsut[avain] = (kehysNyt.kutsut[avain] ?? 0) + ms;
+  };
+  const kaariRaf = () => {
+    ikkuna.requestAnimationFrame = (fn) => alkuperainenRaf.call(ikkuna, (t) => {
+      const a = nyt(); try { return fn(t); } finally { kirjaa(nimi(fn), nyt() - a); }
+    });
+  };
+  const puraRaf = () => { ikkuna.requestAnimationFrame = alkuperainenRaf; };
+  let renderPurku = null;
+  const kaariRender = () => {
+    const r = haeUi()?.pallonInstanssi?.renderer?.();
+    if (!r?.render || r.__kehysprofiili) return;
+    const alkuperainen = r.render;
+    r.render = function render(...args) { const a = nyt(); try { return alkuperainen.apply(this, args); } finally { kirjaa('three.render', nyt() - a); if (kehysNyt) kehysNyt.render = (kehysNyt.render ?? 0) + (nyt() - a); } };
+    r.__kehysprofiili = true;
+    renderPurku = () => { r.render = alkuperainen; delete r.__kehysprofiili; };
+  };
+  if (kanava) kanava.port1.onmessage = () => { if (odottaa) { odottaa.kehys.varattu = ikkuna.performance.now() - odottaa.alku; odottaa = null; } };
+  const nyt = () => ikkuna.performance.now();
+  const aloita = () => {
+    tila = { kehykset: [], kaynnissa: true, t: nyt(), alku: nyt() };
+    kaariRaf(); kaariRender();
+    const askel = () => {
+      if (!tila?.kaynnissa) return;
+      const t = nyt(); const dt = t - tila.t; tila.t = t;
+      const kehys = { t: t - tila.alku, dt, varattu: null, js: 0, render: 0, ...lue() };
+      tila.kehykset.push(kehys);
+      kehysNyt = kehys;
+      if (kanava) { odottaa = { alku: t, kehys }; kanava.port2.postMessage(0); }
+      // Oma askel ensimmäisenä rAF-jonossa: muut saman kehyksen kutsut kirjautuvat tähän kehykseen.
+      alkuperainenRaf.call(ikkuna, askel);
+    };
+    alkuperainenRaf.call(ikkuna, askel);
+  };
+  const lopeta = () => {
+    if (!tila) return null;
+    tila.kaynnissa = false;
+    puraRaf(); renderPurku?.(); renderPurku = null; kehysNyt = null;
+    // Ensimmäinen kehys sisältää aloituksen viiveen: pois.
+    const tulos = { alku: tila.alku, kehykset: tila.kehykset.slice(1) };
+    tila = null;
+    return tulos;
+  };
+  const tiivista = (tulos) => {
+    const kehykset = tulos?.kehykset ?? [];
+    const dts = kehykset.map((k) => k.dt);
+    const pitkat = kehykset.filter((k) => k.dt > 25);
+    return {
+      kehyksia: dts.length, mediaani: prosenttipiste(dts, 0.5), p95: prosenttipiste(dts, 0.95), max: dts.length ? Math.max(...dts) : NaN,
+      yli50: dts.filter((d) => d > 50).length, yli25: pitkat.length,
+      varattuMed: prosenttipiste(kehykset.map((k) => k.varattu ?? 0), 0.5),
+      varattuP95: prosenttipiste(kehykset.map((k) => k.varattu ?? 0), 0.95),
+      // Pitkien kehysten jako: kuinka suuri osa dt:stä oli pääsäikeen työtä.
+      pitkatVarattuOsuus: pitkat.length ? pitkat.reduce((a, k) => a + (k.varattu ?? 0), 0) / pitkat.reduce((a, k) => a + k.dt, 0) : null,
+      // Pääsäikeen jako pitkissä kehyksissä: rAF-kutsut (js), joista three.render, ja loppu = tyyli/asettelu/maalaus + muut tehtävät.
+      pitkatJs: pitkat.length ? pitkat.reduce((a, k) => a + (k.js ?? 0), 0) / pitkat.length : null,
+      pitkatRender: pitkat.length ? pitkat.reduce((a, k) => a + (k.render ?? 0), 0) / pitkat.length : null,
+      pitkatMuu: pitkat.length ? pitkat.reduce((a, k) => a + Math.max(0, (k.varattu ?? 0) - (k.js ?? 0)), 0) / pitkat.length : null,
+      kutsut: (() => { const s = {}; for (const k of pitkat) for (const [n, ms] of Object.entries(k.kutsut ?? {})) s[n] = (s[n] ?? 0) + ms; return Object.entries(s).sort((a, b) => b[1] - a[1]).slice(0, 8).map(([n, ms]) => ({ n, ms: Math.round(ms) })); })(),
+      pisimmat: [...kehykset].sort((a, b) => b.dt - a.dt).slice(0, 12).map((k) => ({
+        t: Math.round(k.t), dt: Math.round(k.dt), varattu: Math.round(k.varattu ?? -1), js: Math.round(k.js ?? 0), render: Math.round(k.render ?? 0), drawcalls: k.drawcalls, kolmiot: k.kolmiot,
+        scenessa: k.scenessa, hapyvia: k.hapyvia, nakyvia: k.nakyvia, taso: k.taso, paivityksia: k.paivityksia, pyyntoja: k.pyyntoja, rasterit: k.rasterit, jakoja: k.jakoja,
+      })),
+      drawcallsMax: kehykset.length ? Math.max(...kehykset.map((k) => k.drawcalls)) : 0,
+      scenessaMax: kehykset.length ? Math.max(...kehykset.map((k) => k.scenessa)) : 0,
+      hapyviaMax: kehykset.length ? Math.max(...kehykset.map((k) => k.hapyvia)) : 0,
+      valmisteluja: kehykset.length ? kehykset.at(-1).valmisteluja - kehykset[0].valmisteluja : 0,
+      vaistoja: kehykset.length ? kehykset.at(-1).vaistoja - kehykset[0].vaistoja : 0,
+    };
+  };
+  const p = (x, n = 1) => (Number.isFinite(x) ? x.toFixed(n) : '—');
+  const teksti = (tulos) => {
+    const r = tiivista(tulos);
+    const rivit = [`med ${p(r.mediaani)} p95 ${p(r.p95)} max ${p(r.max)} ms, >50: ${r.yli50}, >25: ${r.yli25}/${r.kehyksia} | varattu med ${p(r.varattuMed)} p95 ${p(r.varattuP95)} | pitkien varattu-osuus ${r.pitkatVarattuOsuus == null ? '—' : `${Math.round(r.pitkatVarattuOsuus * 100)} %`} | dc ≤ ${r.drawcallsMax} scenessä ≤ ${r.scenessaMax} häipyviä ≤ ${r.hapyviaMax} | valmisteluja ${r.valmisteluja}, väistöjä ${r.vaistoja}`];
+    rivit.push(`pitkien kehysten pääsäie/kehys: rAF-kutsut ${p(r.pitkatJs)} ms (three.render ${p(r.pitkatRender)}) + tyyli/asettelu/maalaus ym. ${p(r.pitkatMuu)} ms | kutsut: ${r.kutsut.map((k) => `${k.n} ${k.ms}`).join(', ')}`);
+    for (const k of r.pisimmat.slice(0, 6)) rivit.push(`t ${k.t} dt ${k.dt} varattu ${k.varattu} js ${k.js} render ${k.render} | dc ${k.drawcalls} tri ${k.kolmiot} sc ${k.scenessa} häipyy ${k.hapyvia} näk ${k.nakyvia} taso ${k.taso} päiv ${k.paivityksia} pyynt ${k.pyyntoja} rast ${k.rasterit} jak ${k.jakoja}`);
+    return rivit.join('\n');
+  };
+  return { aloita, lopeta, tiivista, teksti, lue };
+}
+
+/** Asenna `globalThis.__kehysprofiili` (kerran). */
+export function asennaKehysprofiili(ui, ikkuna = globalThis) {
+  if (ikkuna.__kehysprofiili) return ikkuna.__kehysprofiili;
+  ikkuna.__kehysprofiili = luoKehysprofiili(ui, ikkuna);
+  return ikkuna.__kehysprofiili;
+}

@@ -1482,7 +1482,7 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
   const kehyspurku = kerros
     ? kytkePallonKehys(pallo, kotelo, (kehys) => {
       if (!kerrosKaytossa) return;
-      kerros.paivita(kehys, true);
+      kerros.paivita(kehys, true, { liike: Boolean(lepoAjastin) });
       vapautaPohja();
     }, ikkuna)
     : () => {};
