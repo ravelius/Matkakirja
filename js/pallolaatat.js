@@ -965,7 +965,22 @@ export const LAATTAKERROS_ALOITUKSIA_PER_KEHYS = 2;
  * ruudulla yhä 60 laattaa sekunnissa, eli enemmän kuin
  * LAATTAKERROS_RINNAKKAIN (6) ehtii ladata: jono ei kasva tästä.
  */
-export const LAATTAKERROS_TEKSTUUREJA_PER_KEHYS = 1;
+/*
+ * KAKSI VIENTIÄ KEHYSTÄ KOHTI (22.9.2026, omistajan aamutesti: merellä
+ * zoomatessa karkea taso näkyy hetken paksuine syvyyskäyrineen).
+ * Mitattu tools/savukkeet/mittaa-zoomiennakko-meri.mjs (WebKit 390 × 844
+ * dpr 3, Välimeri 40,5 N 6 E ja Ranska, z7 → z8, kuorma 9–13): verkko ei
+ * ole pullonkaula (z8-laatta 16–52 kt, TTFB 21–56 ms, 10 rinnakkain
+ * 67 ms), vaan tämä katto ja valmistelun budjetti: 32 uutta laattaa vie
+ * yhdellä viennillä vähintään 32 kehystä. Kahdella viennillä ja 6–8 ms:n
+ * valmistelubudjetilla karkean tason näkymisaika putosi merellä 536–895
+ * → 347–433 ms ja maalla 751–1052 → 546–711 ms (6 ms:n budjetilla 354–477
+ * / 560–664), eikä zoomin tai panoroinnin p95 muuttunut (mittaa-ablaatio
+ * porras 2: zoomi 25–28, panorointi 18–22 ms). 7.9.2026 mitattu
+ * 3,0 ms/vienti → kaksi on 6 ms, joka mahtuu budjettiin, kun ladonta on
+ * pois liikkeen ajalta (v2062 liikevara).
+ */
+export const LAATTAKERROS_TEKSTUUREJA_PER_KEHYS = 2;
 /*
  * ZOOMIN PIIRTOKOKEET (kehittäjälippu `?koe=a,b`, Pelikoodari 22.9.2026).
  * Ranska z6 zoomin pisimmät kehykset olivat oikealla iPhonella
@@ -3217,8 +3232,8 @@ export function luoLaattakerros({
 
   /* ---------------- valmistelujono ---------------- */
 
-  /** Laatan valmistelun aikabudjetti kehystä kohti (ms, pääsäie). */
-  const VALMISTELU_BUDJETTI_MS = 4;
+  /** Laatan valmistelun aikabudjetti kehystä kohti (ms, pääsäie); 4 → 6 ms 22.9.2026, ks. LAATTAKERROS_TEKSTUUREJA_PER_KEHYS. */
+  const VALMISTELU_BUDJETTI_MS = 6;
   const valmistelujono = [];
   let valmisteluRaf = 0;
   /** Jono tyhjäksi: valmistelemattomien laattojen kuvat vapautetaan. */
