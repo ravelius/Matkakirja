@@ -197,7 +197,8 @@ test('kaupunkipisteiden paikka kirjoitetaan piirtokoukussa, ei change-tapahtumas
   // 2. Katsesäteen laskenta on koukun käyttämässä funktiossa.
   const aseta = lauta.match(/const asetaPisteidenPaikat = \(kameranPaikka\) => \{[\s\S]*?\n {2}\};/);
   assert.ok(aseta, 'asetaPisteidenPaikat puuttuu');
-  assert.match(aseta[0], /katsesateenPaikka\(/);
+  // Kohta 11: katsesäteen kaava suoraan paikkaan (ks. kohdekaupunki.test.mjs).
+  assert.match(aseta[0], /dx \/ matka - pinta\.x \/ pallonSade/);
   assert.match(aseta[0], /o\.position\.set\(/);
   // 3. Tapahtumavetoinen tahdistaPisteidenKoko EI enää kirjoita paikkaa:
   //    se on kokojen (scale) asia, ja koko saa maksaa tapahtuman verran.

@@ -10,6 +10,8 @@
     "savuke-musta-laatta.mjs#chromium",
     "savuke-laattaohjelmat.mjs#webkit",
     "savuke-laattaohjelmat.mjs#chromium",
+    "savuke-lepopiirto.mjs#webkit",
+    "savuke-lepopiirto.mjs#chromium",
     "savuke-astro-pallo.mjs#vartija-c",
     "savuke-astro-pallo.mjs#tyopoyta",
     "savuke-astro-pallo.mjs#puhelin",
@@ -378,6 +380,18 @@
       "kuvakansio": true,
       "huomautus": "Omistajan loydos 19.9.2026 klo 14.58 Suomen aikaa (iPhone, v1954): panoroidessa Keski-Ranskaan ilmestyi yhden laatan kokoinen TAYSIN MUSTA suorakaide, joka havisi liikkeen loputtua. Vartio kysyy koko kartan alalta, onko kehyksessa yhtenainen musta suorakaide >= 40 x 40 CSS px. WEBKIT ON ENSISIJAINEN RIVI: loydos on iOS Safarista. Laattapyynnot viivytetaan route-valityksella 300-800 ms, jotta liikkeen aikainen tila nakyy. Jos tama nousee punaiseksi, kartan alla on taas musta pinta.",
       "huomautusMac": "KUORMAPUNAINEN 21.9.2026 klo 19.53-20.15 (savukkeet-mac 9f973a43 pohjapolton aikana, load 540): WebKit-kaynnistys aikakatkaistiin 180 s ja Chromium kaatui SEGV:iin ennen vaitteita; ei koodivika. Yksin ajettuna 21.9. klo 21.15 vihrea. Jos toistuu ilman polttoa, tutki."
+    },
+    "savuke-lepopiirto.mjs#webkit": {
+      "env": {
+        "SAVUKE_MOOTTORI": "webkit"
+      },
+      "huomautus": "Lepopiirto (sulavuus kohta 18, js/pallolauta/lepopiirto.js): automaatiossa pois (navigator.webdriver, kaappaukset saisivat tyhjan kankaan), savuke pyytaa sen ?koe=lepopiirto-lipulla ja mittaa renderer.info.render.frame-laskurista. V1 levossa <= 20 fps ilman kamera-syita, V2 vedossa pysahdyksia <= 2, V3 laattojen saapuminen piirretaan ilmoituksesta ja syke piirtaa laatan (readPixels kirjaston oman piirron jalkeen), V4 ilman lippua joka kehys. Chromium ANGLE Metal -lipuilla (SwiftShaderin rAF ~4 fps). Mac 22.9.2026: ~35 s."
+    },
+    "savuke-lepopiirto.mjs#chromium": {
+      "env": {
+        "SAVUKE_MOOTTORI": "chromium"
+      },
+      "huomautus": "Sama vartio Chromiumilla. Ks. #webkit."
     },
     "savuke-laattaohjelmat.mjs#webkit": {
       "env": {

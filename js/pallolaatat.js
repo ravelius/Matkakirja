@@ -2534,6 +2534,35 @@ export function luoLaattakerros({
 
   /* ---------------- häive ---------------- */
 
+  /*
+   * YKSI HÄIVYTYSJONO, EI rAF-KETJUA PER MATERIAALI (sulavuuskatsaus
+   * 22.9.2026 kohta 12). Tason vaihdossa kymmenet laatat häipyivät
+   * yhtä aikaa, kukin omassa requestAnimationFrame-ketjussaan: kymmeniä
+   * takaisinkutsuja kehystä kohti ja kymmeniä lepopiirron ilmoituksia.
+   * Nyt häiveet ovat yhdessä taulussa (materiaali → tietue), ja yksi
+   * rAF-askel etenee ne kaikki: yksi kutsu, yksi ilmoitus kehystä kohti.
+   * `materiaali.__haive` on tietue (peruutus = poisto taulusta), kuten
+   * ennen askel-funktio.
+   */
+  const haiveet = new Map();
+  let haiveRaf = 0;
+  const haiveAskel = () => {
+    haiveRaf = 0;
+    if (!haiveet.size) return;
+    const nyt = aika();
+    for (const [materiaali, h] of haiveet) {
+      if (materiaali.__haive !== h) { haiveet.delete(materiaali); continue; }
+      const t = Math.min(1, (nyt - h.t0) / h.kesto);
+      const e = 1 - (1 - t) ** 3;
+      materiaali.opacity = h.alku + (h.kohde - h.alku) * e;
+      if (t < 1) continue;
+      haiveet.delete(materiaali);
+      materiaali.__haive = null;
+      h.paata();
+    }
+    pallo.__piirto?.tarvitaan(); // lepopiirto: häiveen askel näkyviin (kerran kaikille)
+    if (haiveet.size) haiveRaf = ikkuna.requestAnimationFrame(haiveAskel);
+  };
   const haivyta = (materiaali, kohde, kesto, valmis = null) => {
     const alku = materiaali.opacity;
     materiaali.__kohde = kohde;
@@ -2546,19 +2575,11 @@ export function luoLaattakerros({
       if (kohde >= 1 && materiaali.transparent) { materiaali.transparent = false; materiaali.needsUpdate = true; }
       valmis?.();
     };
-    if (!(kesto > 0) || alku === kohde) { paata(); return; }
-    const t0 = aika();
-    const askel = () => {
-      if (materiaali.__haive !== askel) return;
-      const t = Math.min(1, (aika() - t0) / kesto);
-      const e = 1 - (1 - t) ** 3;
-      materiaali.opacity = alku + (kohde - alku) * e;
-      if (t < 1) { ikkuna.requestAnimationFrame(askel); return; }
-      materiaali.__haive = null;
-      paata();
-    };
-    materiaali.__haive = askel;
-    ikkuna.requestAnimationFrame(askel);
+    if (!(kesto > 0) || alku === kohde) { haiveet.delete(materiaali); materiaali.__haive = null; paata(); pallo.__piirto?.tarvitaan(); return; }
+    const h = { alku, kohde, kesto, t0: aika(), paata };
+    materiaali.__haive = h;
+    haiveet.set(materiaali, h);
+    if (!haiveRaf) haiveRaf = ikkuna.requestAnimationFrame(haiveAskel);
   };
 
   /* ---------------- tietueen purku ---------------- */
@@ -2834,6 +2855,45 @@ export function luoLaattakerros({
     const valmistele = () => {
       if (purettu || laatat.get(t.avain) !== t) { for (const k of kuvat) k?.close?.(); return; }
       const valmisteluAlkoi = aika();
+      /*
+       * SUORA BITTIKARTTA — NOLLAKOPIO (sulavuuskatsaus 22.9.2026 kohta 10).
+       * 7.9.2026 kokeilu hylkäsi bittikartan tekstuurilähteenä, koska
+       * three:n oletus flipY = true käänsi kuvan pikseli pikseliltä
+       * keskusmuistissa (initTexture 3,0 → 5,1 ms). Tunnettu tapa (three:n
+       * ImageBitmapLoader-ohje) on flipY = false: bittikartta menee
+       * näytönohjaimelle sellaisenaan, ja käännös tehdään UV:ssä —
+       * tekstuurin repeat.y = −1 / offset.y = 1 (kirjaston Lambert lukee
+       * mapTransformin) ja kerma-shaderissa uniformilla kermaKaanto.
+       * Kangasta ja drawImagea ei tarvita. Vain yhden kuvan laatoille:
+       * pohja + shaderin kerma (väritaso), ei taustaväriä, varaa, halo-
+       * nimiötä, astronautin laastaria eikä kankaan kermaa (tasot ilman
+       * väritasoa). Koelippu `?koe=kangasaina` palauttaa kangaspolun.
+       */
+      const tasoitusEnnakko = kerrokset.vari ? pyramidinTasoitus() : null;
+      const shaderKermaEnnakko = kermaShader && tasoitusEnnakko && !tasoitusEnnakko.maailma;
+      const variTasollaEnnakko = kerrostasot.some((k) => k?.vari);
+      const kuvaKohdat = [];
+      for (let i = 0; i < kuvat.length; i += 1) if (kuvat[i] && !kerrostasot[i]?.vari) kuvaKohdat.push(i);
+      const suoraKohta = kuvaKohdat.length === 1 ? kuvaKohdat[0] : -1;
+      const suora = suoraKohta >= 0 && !kokeet.has('kangasaina') && !kerrokset.astronautti && !tausta && !vara
+        && !kerrokset.suodatin && !(kerrokset.reliefi && kerrostasot[suoraKohta]?.nosto)
+        && (!tasoitusEnnakko || (shaderKermaEnnakko && variTasollaEnnakko))
+        && typeof ikkuna.ImageBitmap === 'function' && kuvat[suoraKohta] instanceof ikkuna.ImageBitmap;
+      if (suora) {
+        const kuva = kuvat[suoraKohta];
+        for (let i = 0; i < kuvat.length; i += 1) if (i !== suoraKohta) kuvat[i]?.close?.();
+        let variTasoOliSuora = false;
+        if (shaderKermaEnnakko && tasoitusEnnakko) {
+          variTasoOliSuora = true;
+          t.kermaPois = Boolean(kertomuslukko && tasoituksenUlkopuolella({
+            tasoitus: tasoitusEnnakko, kartta, ppu: tasoOlio.pikseliaPerYksikko, arkki: pyramidi.arkki,
+          }));
+          if (t.kermaPois && !t.kermatta) { mittarit.kermattomia += 1; t.kermatta = true; }
+        }
+        mittarit.suoria = (mittarit.suoria ?? 0) + 1;
+        valmistaLaatta({ lahde: kuva, suora: true, shaderKerma: shaderKermaEnnakko, variTasoOli: variTasoOliSuora, valmisteluAlkoi });
+        return;
+      }
       const kangas = luoKangas(kartta.leveys, kartta.korkeus);
       /*
        * LUETAAN USEIN (sulavuus E1b, 21.9.2026): kerma ja sumu lukevat
@@ -3145,10 +3205,16 @@ export function luoLaattakerros({
         aukkoMaski.width = 0;
         aukkoMaski.height = 0;
       }
+      mittarit.kankaita = (mittarit.kankaita ?? 0) + 1;
+      valmistaLaatta({ lahde: kangas, suora: false, shaderKerma, variTasoOli, valmisteluAlkoi });
+    };
+    /** Verkko, tekstuuri ja materiaali lähteestä (kangas tai suora bittikartta). */
+    const valmistaLaatta = ({ lahde, suora, shaderKerma, variTasoOli, valmisteluAlkoi }) => {
       // Verkko: laatan oma lat/lon-suorakaide, UV laatan omalla kankaalla.
       const alue = laatanAlue(tasoOlio, t.sarake, t.rivi);
       if (!Number.isFinite(alue.lat0) || !Number.isFinite(alue.lat1) || !(alue.lat1 > alue.lat0)) {
         t.tila = 'virhe';
+        if (suora) lahde?.close?.();
         return;
       }
       const silmakatto = kokeet.has('silmat40') ? 40 : LAATTAKERROS_SILMAT_MAX;
@@ -3161,7 +3227,14 @@ export function luoLaattakerros({
       geometria.setAttribute('normal', new luokat.BufferAttribute(puskurit.normaalit, 3));
       geometria.setAttribute('uv', new luokat.BufferAttribute(puskurit.uvt, 2));
       geometria.setIndex(puskurit.indeksit);
-      const tekstuuri = new luokat.Texture(kangas);
+      const tekstuuri = new luokat.Texture(lahde);
+      if (suora) {
+        // Nollakopio: ei pystykääntöä keskusmuistissa; käännös UV:ssä (ks. SUORA BITTIKARTTA).
+        tekstuuri.flipY = false;
+        tekstuuri.repeat.y = -1;
+        tekstuuri.offset.y = 1;
+        t.suoraKuva = true;
+      }
       const malli = luokat.tekstuurimalli;
       // Sama väriavaruus kuin laatoilla — muuten sävy hyppäisi kerroksen alla.
       if (malli && 'colorSpace' in malli) tekstuuri.colorSpace = malli.colorSpace;
@@ -3209,6 +3282,7 @@ export function luoLaattakerros({
         asennaKermaShader(materiaali, {
           jaettu: kermanJaetut,
           tarkka: kokeet.has('kermapow'),
+          kaanto: Boolean(suora),
           laatta: {
             alue: { x0: pyramidi.arkki.x + kartta.kansX0 / ppuL, y0: pyramidi.arkki.y + kartta.kansY0 / ppuL, w: kartta.leveys / ppuL, h: kartta.korkeus / ppuL },
             paalla: !t.kermaPois,
@@ -3501,7 +3575,19 @@ export function luoLaattakerros({
           continue;
         }
         if (!t.tekstuuri) continue;
+        const vientiAlkoi = aika();
         renderer?.initTexture?.(t.tekstuuri);
+        const vientiKesti = aika() - vientiAlkoi;
+        mittarit.vientiMs = (mittarit.vientiMs ?? 0) + vientiKesti;
+        mittarit.vienteja = (mittarit.vienteja ?? 0) + 1;
+        if (vientiKesti > (mittarit.vientiMax ?? 0)) mittarit.vientiMax = vientiKesti;
+        // Suoran bittikartan viennit erikseen (kohta 10: mittaus kangas vs nollakopio).
+        if (t.suoraKuva) {
+          mittarit.vientiMsSuora = (mittarit.vientiMsSuora ?? 0) + vientiKesti;
+          mittarit.vientejaSuora = (mittarit.vientejaSuora ?? 0) + 1;
+        }
+        // Suora bittikartta on nyt näytönohjaimella: keskusmuistin kopio kiinni.
+        if (t.suoraKuva) { try { t.tekstuuri.image?.close?.(); } catch { /* jo kiinni */ } }
         t.viety = true;
         n += 1;
         /*
@@ -4110,7 +4196,9 @@ export function luoLaattakerros({
     for (const t of laatat.values()) {
       if (t.tila === 'valmis' && t.scenessa && t.materiaali && t.materiaali.opacity >= 1) valmiit.add(t.avain);
     }
-    for (const t of [...laatat.values()]) {
+    // Suoraan Mapista ilman kopiota (kohta 11: ei taulukoita kehyspolussa); nykyisen
+    // alkion poisto kesken Map-iteroinnin on turvallista.
+    for (const t of laatat.values()) {
       if (t.nakyva || t.tuki || !t.scenessa || t.haipyy) continue;
       if (t.z < valittu.z && laattakerroksenPeitto(t, valmiit, pyramidi.tasot, {
         laattaKoko: koko, kohdeZ: valittu.z,
@@ -4126,12 +4214,12 @@ export function luoLaattakerros({
      * ne ovat pelkkää kirjanpitoa (jono kootaan näkyvistä ja pidetyistä),
      * ja laatta luodaan tarvittaessa uudestaan samalla avaimella.
      */
-    for (const t of [...laatat.values()]) {
+    for (const t of laatat.values()) {
       if (!t.nakyva && !t.pito && t.tila === 'ladataan' && !t.aloitettu) poista(t);
     }
     // Määräkatto samassa suhteessa kuin tavukatto (osoitinlaite 2×).
     const maarakatto = LAATTAKERROS_LAATTAKATTO_MUISTI * (kosketuslaite() ? 1 : LAATTAKERROS_TAVUKERROIN_OSOITIN);
-    for (const avain of laattakerroksenLRU([...laatat.values()], maarakatto, tavukatto())) {
+    for (const avain of laattakerroksenLRU(laatat.values(), maarakatto, tavukatto())) {
       const t = laatat.get(avain);
       if (t && !t.haipyy) poista(t);
     }
@@ -4349,6 +4437,8 @@ export function luoLaattakerros({
     syy: () => mittarit.syy,
     /** Valmistelun hinta (ms, kpl, pisin) savukkeelle — ei varausta. */
     valmistelu: () => [mittarit.valmisteluMs, mittarit.valmisteluja, mittarit.valmisteluMax],
+    /** Käynnissä olevia häiveitä (yksi jono, ks. YKSI HÄIVYTYSJONO). */
+    haiveita: () => haiveet.size,
     /** Peittääkö kerros koko näkyvän alueen juuri nyt (pohjan tarve)? */
     peittaa: () => mittarit.nakyvia > 0 && mittarit.nakyviaScenessa >= mittarit.nakyvia,
     /**
@@ -4370,6 +4460,9 @@ export function luoLaattakerros({
       esikaannoksenNaytteet = null;
       if (vientiRaf) ikkuna.cancelAnimationFrame?.(vientiRaf);
       vientiRaf = 0;
+      if (haiveRaf) ikkuna.cancelAnimationFrame?.(haiveRaf);
+      haiveRaf = 0;
+      haiveet.clear();
       if (aloitusRaf) ikkuna.cancelAnimationFrame?.(aloitusRaf);
       aloitusRaf = 0;
       if (katkoAjastin) ikkuna.clearTimeout?.(katkoAjastin);

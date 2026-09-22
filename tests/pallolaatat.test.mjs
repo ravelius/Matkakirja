@@ -478,8 +478,11 @@ test('kerros: laatan materiaali, verkko ja osoitteet ovat suunnitelman mukaiset'
    * three.js:n `flipY` kääntää bittikartan keskusmuistissa mutta
    * kankaan yhdellä GPU-kopiolla.
    */
-  assert.match(laatat, /const tekstuuri = new luokat\.Texture\(kangas\);/);
-  assert.ok(!/new luokat\.Texture\(lahde\)/.test(laatat), 'bittikarttaa ei viedä suoraan tekstuuriksi');
+  // Sulavuus kohta 10 (22.9.2026): lähde on kangas TAI suora bittikartta flipY = false
+  // + UV-käännöksellä (nollakopio); pelkkä bittikartta flipY = true ei palaa.
+  assert.match(laatat, /const tekstuuri = new luokat\.Texture\(lahde\);\n\s*if \(suora\) \{\n(?:\s*\/\/[^\n]*\n)*\s*tekstuuri\.flipY = false;\n\s*tekstuuri\.repeat\.y = -1;\n\s*tekstuuri\.offset\.y = 1;/);
+  assert.match(laatat, /kaanto: Boolean\(suora\),/, 'kerma lukee kuvan v-käännettynä');
+  assert.match(laatat, /kokeet\.has\('kangasaina'\)/, 'koelippu palauttaa kangaspolun');
   // Tekstuuri viedään näytönohjaimelle jonosta, enintään LAATTAKERROS_TEKSTUUREJA_PER_KEHYS.
   assert.match(laatat, /while \(vientijono\.length && n < LAATTAKERROS_TEKSTUUREJA_PER_KEHYS\)/);
   assert.match(laatat, /renderer\?\.initTexture\?\.\(t\.tekstuuri\);/);
