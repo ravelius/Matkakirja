@@ -895,3 +895,7 @@ Sisältökirjuri 22.9.2026 klo 02.40: viimeinen erä dataan (HRV Split → Stoni
 ## MAAKUNTIEN ERA 2 (PITKA TEKSTI + KUVA, 97 ALUETTA) TARKASTETTU: HYVAKSYTTY, 1873-TOISTO HARVEMMAKSI (22.9.2026 klo 07.46)
 
 Fable 22.9.2026 klo 03.00: Sisältökirjurin erä 2 (haara sisalto-maakunnat-era2, raportit docs/raportit/maakunnat-era2-*-20260922.md; kuvat Commonsista tools/hae-commons.mjs:llä, sha256 + R2-osoite) tarkastettu: FRA kokonaan, POL:n 1873-faktat pistokokeena (toukokuun lait 1873, Danzigin keisarillinen telakka 1871, Vulcan Stettin, Breslau) pitävät; Monet 1872, Verne 1873, Thiers/MacMahon 1873, Alsace 1871 oikein. Korjaus: 'isoisän matkavuonna 1873' toistuu lähes joka alueella → enintään puolessa alueista per maa ja vaihtelevin muodoin; pituus 3–6 virkettä. Sitten dataan ja Julkaisijalle; erä 3 pulun kysymykset.
+
+## MAAKUNTIEN ERA 2 DATAAN (053ce36b2); KUVAT R2:EEN ENNEN MERGEA (22.9.2026 klo 08.01)
+
+Sisältökirjuri 22.9.2026 klo 03.15: erä 2 kirjoitettu js/packs/maakunnat-luonnehdinnat.js:ään (97 aluetta pitka + kuva), 1873-kytkös 42/97 vaihtelevin muodoin, testit 0 fail. Kuvat paikallisessa kansiossa, R2-osoitteet datassa. Fable: Julkaisija vie 97 kuvaa ämpäriin kuvaputken tavalla ja tarkistaa otoksen ennen mergeä (lupa annettu). Sisältökirjuri aloittaa erän 3 (pulu).
