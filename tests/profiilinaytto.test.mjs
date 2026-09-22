@@ -17,6 +17,7 @@ import { readFileSync } from 'node:fs';
 
 import {
   PROFIILIN_POLKU, profiiliTahti, profiilirivit, profiilitiiviste, luoProfiilinaytto,
+  PROFIILIN_VERSIO, koetilanNimi, koetilarivi,
 } from '../js/pallolauta/profiilinaytto.js';
 
 const TIIVISTE = {
@@ -53,8 +54,8 @@ test('rivit: pisin kehys, jakauma, syy ja asetukset', () => {
 });
 
 test('rivit: tyhjä mittaus ei kaadu eikä valehtele', () => {
-  assert.deepEqual(profiilirivit({ tiiviste: null }), ['profiili: ei kehyksiä']);
-  assert.deepEqual(profiilirivit({ tiiviste: { kehyksia: 0 } }), ['profiili: ei kehyksiä']);
+  assert.deepEqual(profiilirivit({ tiiviste: null }).slice(1), ['profiili: ei kehyksiä']);
+  assert.deepEqual(profiilirivit({ tiiviste: { kehyksia: 0 } }).slice(1), ['profiili: ei kehyksiä']);
 });
 
 test('tiiviste lähetykseen on litteä eikä sisällä kehyslistaa', () => {
@@ -111,6 +112,7 @@ test('jakso: sulkee ja avaa profiilin, kirjoittaa kerroksen, lähettää ja purk
     asetukset: () => ({ veto: 'vanha', tarkkuus: 'terava' }),
     lepo: () => ({ paalla: false, unessa: false, ohitettuja: 0, piirtoja: 9 }),
     laheta: (d) => lahetykset.push(d),
+    tila: () => ({ koe: 'dpr15', seuraava: 'dpr15', versio: 'v2127' }),
     ikkuna,
   });
   assert.deepEqual(tapahtumat, ['aloita'], 'mittaus alkaa heti');
@@ -123,6 +125,8 @@ test('jakso: sulkee ja avaa profiilin, kirjoittaa kerroksen, lähettää ja purk
   assert.match(kerros.rivit.join('\n'), /veto vanha · tarkkuus terava/);
   assert.equal(lahetykset.length, 1);
   assert.equal(lahetykset[0].ua, 'iPhone');
+  assert.match(kerros.rivit[0], /^koe: dpr15 · profiili p\d+ · v2127$/, 'tila ylimpänä');
+  assert.equal(lahetykset[0].koe, 'dpr15');
 
   // Toinen jakso ei kasvata kerrosta: rivit korvataan, eivät kerry.
   const riveja = kerros.children.length;
@@ -193,4 +197,32 @@ test('tahti kulkee myös lähetykseen', () => {
   const r = profiilitiiviste({ tiiviste: TIIVISTE, tahti: t });
   assert.equal(r.tahti.hz, 120);
   assert.equal(r.tahti.piirtoOsuus, 0.5);
+});
+
+test('ylin rivi kertoo koetilan ja mittarin version (omistajan kaappaukset 22.9.2026)', () => {
+  const rivit = profiilirivit({ tiiviste: TIIVISTE, tila: { koe: 'dpr15', versio: 'v2127' } });
+  assert.equal(rivit[0], `koe: dpr15 · profiili p${PROFIILIN_VERSIO} · v2127`);
+  assert.match(profiilirivit({ tiiviste: TIIVISTE })[0], /^koe: normaali · profiili p\d+$/, 'oletus on normaali');
+  assert.match(profiilirivit({ tiiviste: null })[0], /^koe: normaali/, 'myös ilman kehyksiä');
+});
+
+test('koetila: profiili ei ole koe, useampi lippu aakkosjärjestyksessä', () => {
+  assert.equal(koetilanNimi(new Set(['profiili'])), 'normaali');
+  assert.equal(koetilanNimi(new Set(['profiili', 'vahemmandc', 'alpha0'])), 'alpha0,vahemmandc');
+  assert.equal(koetilanNimi(null), 'normaali');
+});
+
+test('koetila: valikon uusi valinta näkyy seuraavana, ei voimassa olevana', () => {
+  assert.equal(koetilarivi({ koe: 'normaali', seuraava: 'dpr15' }),
+    `koe: normaali (seuraavassa latauksessa: dpr15) · profiili p${PROFIILIN_VERSIO}`);
+  assert.equal(koetilarivi({ koe: 'dpr15', seuraava: 'dpr15' }), `koe: dpr15 · profiili p${PROFIILIN_VERSIO}`);
+});
+
+test('tiiviste lähetykseen kantaa koetilan ja version', () => {
+  const r = profiilitiiviste({ tiiviste: TIIVISTE, tila: { koe: 'eipuskuri', seuraava: 'normaali', versio: 'v2127' } });
+  assert.equal(r.koe, 'eipuskuri');
+  assert.equal(r.koeSeuraava, 'normaali');
+  assert.equal(r.profiiliVersio, PROFIILIN_VERSIO);
+  assert.equal(r.versio, 'v2127');
+  assert.equal(profiilitiiviste({ tiiviste: TIIVISTE }).koe, 'normaali');
 });

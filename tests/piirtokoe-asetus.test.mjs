@@ -158,3 +158,35 @@ test('luoAlfatonKonteksti: pyytää webgl2:ta ilman alfaa, epäonnistuminen pala
   assert.equal(luoAlfatonKonteksti({ ownerDocument: tyhja }, false, tyhja), null);
   assert.equal(luoAlfatonKonteksti(null, false, null), null, 'ilman DOMia ei kaadu');
 });
+
+test('jokainen valikon koelipun lukija yhdistää myös tallennetun valinnan', async () => {
+  /*
+   * VIKA 22.9.2026: js/pallonimiot-gl.js luki eipuskuri/eivienti-lipun
+   * vain osoitteesta, joten ratasvalikon koe ei koskenut nimiörunkoon —
+   * overlay olisi näyttänyt kokeen, jota peli ei ajanut. Moduuli, joka
+   * lukee `koe`-parametria itse ja hakee sieltä valikon lippua, käyttää
+   * myös tallennetutKokeet()-apuria (suoraan tai jonkin kokoajan kautta).
+   */
+  const { readdirSync, readFileSync: lue } = await import('node:fs');
+  const { join } = await import('node:path');
+  const juuri = new URL('../js/', import.meta.url).pathname;
+  const liput = PIIRTOKOKEIDEN_VAIHTOEHDOT.map((k) => k.lippu).filter(Boolean);
+  const tiedostot = [];
+  const kay = (kansio) => {
+    for (const e of readdirSync(kansio, { withFileTypes: true })) {
+      const polku = join(kansio, e.name);
+      if (e.isDirectory()) kay(polku);
+      else if (e.name.endsWith('.js')) tiedostot.push(polku);
+    }
+  };
+  kay(juuri);
+  const rikkojat = [];
+  for (const polku of tiedostot) {
+    const s = lue(polku, 'utf8');
+    if (!/get\('koe'\)/.test(s)) continue;
+    const luettu = liput.filter((l) => s.includes(`'${l}'`));
+    if (!luettu.length || /tallennetutKokeet/.test(s)) continue;
+    rikkojat.push(`${polku.slice(juuri.length)}: ${luettu.join(', ')}`);
+  }
+  assert.deepEqual(rikkojat, []);
+});
