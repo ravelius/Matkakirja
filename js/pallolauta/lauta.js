@@ -144,7 +144,8 @@ import { luoMaapaneeli, paneelinLaatikko } from './maapaneeli.js';
 import { luoLinssit } from './linssit.js';
 import { glLuokat, glNimiotKaytossa, luoNimiokerrosGL, rasteroiTeksti } from '../pallonimiot-gl.js';
 import { luoGlNimiosovitin } from './glnimiot-sovitin.js';
-import { ablaatioPaalla, kerrosKaytossa, kerrostenBodyLuokat } from './kerrokset.js';
+import { ablaatioPaalla, kerrosKaytossa, kerrostenBodyLuokat, asennaPiirtokokeet, piirtokokeet } from './kerrokset.js';
+import { asennaKehysprofiili } from './kehysprofiili.js';
 import { sfx } from '../sound.js';
 import { luoNappulanKuljettaja } from './siirto.js';
 import { luoAloituslennonKohtaus } from './avaus.js';
@@ -2031,6 +2032,10 @@ export async function avaaPallolauta(ui) {
     // Äänet pois ilman asetuksen tallennusta (sound.js enabled-portti).
     if (!kerrosKaytossa('aanet')) sfx.enabled = false;
   }
+  // PIIRTOKOKEET (`?koe=`, kerrokset.js): DOM-kerros pois vain mittauksessa;
+  // kehysprofiili (pääsäie/GPU-jako) samoilla lipuilla laitteen konsoliin.
+  asennaPiirtokokeet();
+  if (ablaatioPaalla() || piirtokokeet().size) asennaKehysprofiili(() => globalThis.matkakirja?.ui);
   const vektorit = pallovektoritPaalla() && kerrosKaytossa('vektorit') ? luoPallovektorit({ pallo, kotelo, reitit }) : null;
   let liikkeessaNyt = () => false;
   // GL-nimiöt (vaihe 2): ladonnan nimet rungolle sovittimen kautta (oletus päällä, `?glnimiot=0` pois).

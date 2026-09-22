@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-09-21.2077';
+const CACHE = 'matkakirja-2026-09-21.2078';
 const SHELL = [
   './',
   './index.html',
@@ -277,6 +277,7 @@ const SHELL = [
   './js/pallolauta/nimiorasterit.js',
   './js/pallolauta/glnimiot-sovitin.js',
   './js/pallolauta/kerrokset.js',
+  './js/pallolauta/kehysprofiili.js',
   './js/pallolauta/sumu.js',
   './css/aikajana.css',
   // Linssien yhteinen kehysliuku (16.9.2026): index.html lataa tämän
