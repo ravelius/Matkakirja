@@ -96,7 +96,7 @@ päälle komposiittorin alpha-kangas ja multiply-kerros.
 
 ### B. Laattaputki (pääsäie)
 
-9. **2–7 kuvaa per laatta.** `js/laattapyramidi.js:3006–3020` kokoaa
+9. **2–7 kuvaa per laatta.** *(Karttasepän tarkennus 22.9. klo 15.20: pallolla laatta on pohja + ranta vain rannikkolaatoilla (10 %) + nimiöt (0,5 %) + kohdemaan nostot; viiva- ja väritasot ovat tasokartan. Yhdistäminen toisi pallolle vain −10…−25 % pyynnöistä rannikolla ja peruisi 6.9. päätöksen rannan erottamisesta → kohtaa 9 EI tehdä pallolla. Alkuperäinen arvio alla koskee tasokarttaa.)* `js/laattapyramidi.js:3006–3020` kokoaa
    pohja + väri + ranta + viiva/joki + nimiö + nosto; `js/pallolaatat.js:2676`
    hakee ja dekoodaa ne kaikki (`Promise.all`) ja yhdistää kankaalla
    pääsäikeessä. 45 näkyvää z8-laattaa = jopa 300 pyyntöä ja dekoodausta
@@ -229,8 +229,7 @@ DOM-komposiittorilla; ei URL- eikä localStorage-kirjoituksia liikkeessä
   mittaus ennen/jälkeen (tasaisuusmittari + kehysprofiili), sitten
   omistajan tuntumatesti.
 - **Erä 2 — Karttaseppä:** 19 SW-polku ja esilataus pyramidille, 20
-  preconnect, 9 laattojen esikomposointi polttoputkessa (staattiset tasot
-  yhdeksi kuvaksi), 21 katkaisija.
+  preconnect, 21 katkaisija (9 esikomposointi ei pallolle, ks. tarkennus).
 - **Erä 3 — Pelikoodari:** 10 nollakopio-bittikartta, 6 opaakit laatat,
   11–12 roska ja häive, 8 atlas, 16 ladonta jos mittari osoittaa, 18
   lepopiirto sykkeellä (omistajan periaatepäätös).
