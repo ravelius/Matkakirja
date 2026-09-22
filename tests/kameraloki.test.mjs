@@ -25,6 +25,8 @@ test('laukaisija tunnistetaan kutsupinosta', () => {
 
 test('hyppy > 3× kirjataan laukaisijoineen, pienempi ei; puskuri pysyy mitassa', () => {
   muisti.clear();
+  // Kutsupino luetaan vain kehittäjätilassa (sulavuus, kohta 14).
+  muisti.set('matkakirja-kehittaja', '1');
   let kuuntelija = null;
   const pallo = { pointOfView: (...a) => (a.length ? pallo : { altitude: 1 }) };
   const kamera = { ajaKamera: () => Promise.resolve(true) };
@@ -60,4 +62,24 @@ test('hyppy > 3× kirjataan laukaisijoineen, pienempi ei; puskuri pysyy mitassa'
   assert.equal(kuuntelija, null);
   // pointOfView-luku toimii kääreen purkamisen jälkeen kuten ennen.
   assert.equal(pallo.pointOfView().altitude, 1);
+});
+
+test('tuotannossa (ei kehittäjätilaa) kutsupinoa ei oteta, kirjoitus kirjataan silti', async () => {
+  const { unohdaKehittajaKytkimet } = await import('../js/ui-apurit.js');
+  muisti.clear();
+  unohdaKehittajaKytkimet();
+  let kuuntelija = null;
+  const pallo = { pointOfView: (...a) => (a.length ? pallo : { altitude: 1 }) };
+  const loki = luoKameraloki({
+    pallo, kytkeKehys: (_p, _k, k) => { kuuntelija = k; return () => { kuuntelija = null; }; },
+  });
+  kuuntelija({ pov: { altitude: 0.2 } });
+  (function sovitaSiirtokohteet() { pallo.pointOfView({ lat: 0, lng: 0, altitude: 2.5 }, 0); }());
+  kuuntelija({ pov: { altitude: 2.5 } });
+  const m = loki.merkinnat();
+  assert.equal(m.length, 1);
+  assert.match(m[0].laukaisija, /pino vain kehittäjätilassa/);
+  assert.equal(m[0].pino, '');
+  loki.pura();
+  unohdaKehittajaKytkimet();
 });

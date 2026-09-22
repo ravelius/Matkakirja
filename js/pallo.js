@@ -65,6 +65,7 @@ import {
   THREE_LINEAR_MIPMAP_LINEAR, lepokerroksenAlue, lepokerroksenKerrokset, lepokerroksenLaattakatto,
   lepokerroksenSilmat, lepokerroksenSuunnitelma, lepokerroksenTasoRiittaa, lepokerroksenVerkko,
   laattakerroksenOsuma,
+  laattakerroksenKokeet,
   luoLaattakerros, luoLepokerroksenAjoitus, pallonPiste, pinnanPiste, pyramidinKarttaAla,
 } from './pallolaatat.js';
 
@@ -3061,13 +3062,57 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
    * pinnanPiste (js/pallolaatat.js) on tarkka säde–pallo-leikkaus, sama
    * jota vektorikerros käyttää — yksi pinnanlukija koko pallolle.
    */
-  const sormenKohta = (e) => {
+  /*
+   * SYÖTE KERRAN KEHYKSESSÄ (sulavuuskatsaus 22.9.2026 kohta 13).
+   * Aiemmin jokainen pointermove teki heti pintaratkaisun ja
+   * kamerakirjoituksen: kaksi tapahtumaa yhdessä kehyksessä = kaksi
+   * täyttä kierrosta, joista piirto näytti vain viimeisen; nolla
+   * tapahtumaa = kamera seisoi. Simulaattorin px/ms-vaihtelu 112 % ja
+   * headlessin 37 % tulivat tästä. Nyt tapahtuma tallentaa vain sormen
+   * paikan ja aikaleiman (`event.timeStamp`); ratkaisu ja kamera-
+   * kirjoitus tehdään kerran kehyksessä OrbitControlsin `update`-
+   * kutsun alussa (kirjaston tick: controls.update → render), eli aina
+   * ennen piirtoa ja ennen kirjaston lookAtia. Liu'un nopeus lasketaan
+   * tapahtumien aikaleimoista, ei sovellushetkestä. Sama nipistykselle:
+   * yksi ankkurointi kehyksessä kahden sijaan.
+   *
+   * KOTELON MITAT KERRAN ELEEN ALUSSA (kohta 15): getBoundingClientRect
+   * ja clientWidth/Height joka tapahtumassa heti CSS2D-kirjoitusten
+   * jälkeen pakottivat asettelun eleen tahdissa. Mitat luetaan
+   * pointerdownissa, rullassa ja kotelon koon muuttuessa
+   * (ResizeObserver), ja siitä välistä käytetään muistia.
+   *
+   * Mittauslippu `?koe=syotevanha` palauttaa tapahtumakohtaisen polun
+   * (myös mitat joka tapahtumassa), jotta ero voidaan mitata samalla
+   * rakennuksella (tasaisuusmittari, __kehysprofiili.veto).
+   */
+  const syote = { veto: null, nipistys: false, vanha: laattakerroksenKokeet().has('syotevanha'), sovelluksia: 0 };
+  ui.pallonSyote = syote; // mittausta varten (savukkeet)
+  let kotelonMitat = null; // { left, top, W, H }
+  const lueKotelonMitat = () => {
     const r = kotelo.getBoundingClientRect();
-    return pinnanPiste(pallo.camera(), e.clientX - r.left, e.clientY - r.top,
-      kotelo.clientWidth, kotelo.clientHeight, pallo.getGlobeRadius());
+    kotelonMitat = {
+      left: r.left, top: r.top, W: Math.max(1, kotelo.clientWidth), H: Math.max(1, kotelo.clientHeight),
+    };
+    return kotelonMitat;
+  };
+  const mitat = () => ((syote.vanha || !kotelonMitat) ? lueKotelonMitat() : kotelonMitat);
+  const kokovahti = typeof ResizeObserver === 'function' ? new ResizeObserver(() => { kotelonMitat = null; }) : null;
+  kokovahti?.observe(kotelo);
+  /** Aikaleima tapahtumasta performance.now():n asteikolla (vara: nyt). */
+  const leima = (e) => {
+    const t = e?.timeStamp;
+    const nyt = performance.now();
+    return Number.isFinite(t) && t > 0 && Math.abs(t - nyt) < 60_000 ? t : nyt;
+  };
+  const sormenKohta = (x, y) => {
+    const m = mitat();
+    return pinnanPiste(pallo.camera(), x - m.left, y - m.top, m.W, m.H, pallo.getGlobeRadius());
   };
   kotelo.addEventListener('pointerdown', (e) => {
-    tartunta = sormet.alhaalla === 1 ? sormenKohta(e) : null;
+    lueKotelonMitat();
+    syote.veto = null;
+    tartunta = sormet.alhaalla === 1 ? sormenKohta(e.clientX, e.clientY) : null;
   });
   /*
    * LIIKE JATKUU SORMEN IRROTTUA (omistaja 5.9.2026: "Pallossa saisi olla
@@ -3134,9 +3179,10 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
     else vauhti.raf = 0;
   };
   kotelo.addEventListener('pointerdown', () => { pysaytaLiuku(); vauhti.lat = 0; vauhti.lng = 0; });
-  kotelo.addEventListener('pointermove', (e) => {
+  /** Vedon sovellus: sormi kohdassa (x, y) hetkellä aika → kamera. */
+  const sovellaVeto = (x, y, aika) => {
     if (!tartunta || sormet.alhaalla !== 1) return;
-    const nyt = sormenKohta(e);
+    const nyt = sormenKohta(x, y);
     if (!nyt) return;
     const pov = pallo.pointOfView();
     // KARTTA EI HYPPÄÄ ILMAN PELAAJAN ELETTÄ (vika v1664): yksi
@@ -3149,8 +3195,8 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
       pov.lng - dLng,
     );
     pallo.pointOfView({ lat: kohta.lat, lng: kohta.lng, altitude: pov.altitude }, 0);
+    syote.sovelluksia += 1;
     // Nopeus: liukuva keskiarvo, jotta yksittäinen nykäys ei määrää liukua.
-    const aika = performance.now();
     const dt = Math.max(1, aika - (vauhti.aika || aika));
     if (vauhti.aika) {
       const rajattu = rajaaVauhti(
@@ -3169,7 +3215,32 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
     if (kohta.latRajattu) vauhti.lat = 0;
     if (kohta.lngRajattu) vauhti.lng = 0;
     vauhti.aika = aika;
+  };
+  kotelo.addEventListener('pointermove', (e) => {
+    if (!tartunta || sormet.alhaalla !== 1) return;
+    if (syote.vanha) { sovellaVeto(e.clientX, e.clientY, leima(e)); return; }
+    // Vain viimeisin paikka: kehys sovittaa kameran siihen.
+    syote.veto = { x: e.clientX, y: e.clientY, aika: leima(e) };
   });
+  /*
+   * KEHYKSEN ALUSSA: odottava veto ja nipistys sovelletaan kameraan
+   * ennen kirjaston ohjainpäivitystä ja piirtoa. Kääre puretaan
+   * `pura`ssa.
+   */
+  const sovellaSyote = () => {
+    const v = syote.veto;
+    if (v) { syote.veto = null; sovellaVeto(v.x, v.y, v.aika); }
+    if (syote.nipistys) { syote.nipistys = false; sovellaNipistys(); }
+  };
+  const alkuperainenUpdate = ohjaimet.update;
+  ohjaimet.update = function pallonSyoteUpdate(...args) {
+    sovellaSyote();
+    return alkuperainenUpdate.apply(this, args);
+  };
+  const puraSyote = () => {
+    if (ohjaimet.update?.name === 'pallonSyoteUpdate') ohjaimet.update = alkuperainenUpdate;
+    kokovahti?.disconnect();
+  };
   /*
    * IRROTUS LUETAAN DOKUMENTISTA (roikkuva kosketus, v1671): kotelosta
    * luettuna liuku jäi lähtemättä aina, kun sormi nousi kotelon
@@ -3178,6 +3249,7 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
    * ei ole heitto).
    */
   const paasta = () => {
+    syote.veto = null; // irrotuksen jälkeen ei enää sovelleta
     tartunta = null;
     if (sormet.alhaalla > 0) return;
     const seisahtunut = performance.now() - vauhti.aika > 150; // sormi pysähtyi ennen irrotusta
@@ -3242,11 +3314,9 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
   };
   /** Ruudun kohta (clientX/Y) normalisoituna ja sen alla oleva pinnan piste. */
   const ruudunKohta = (clientX, clientY) => {
-    const r = kotelo.getBoundingClientRect();
-    const W = Math.max(1, kotelo.clientWidth);
-    const H = Math.max(1, kotelo.clientHeight);
-    const x = clientX - r.left;
-    const y = clientY - r.top;
+    const { left, top, W, H } = mitat();
+    const x = clientX - left;
+    const y = clientY - top;
     return {
       sx: (2 * x) / W - 1,
       sy: 1 - (2 * y) / H,
@@ -3299,19 +3369,20 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
     if (!k) { nipistys.idt = null; return; }
     pysaytaZoomi(); pysaytaLiuku(); pysaytaRulla();
     vauhti.lat = 0; vauhti.lng = 0;
+    syote.veto = null; syote.nipistys = false;
+    lueKotelonMitat();
     nipistys.etaisyys = Math.max(1, k.etaisyys);
     nipistys.ankkuri = ruudunKohta(k.x, k.y).piste;
   };
-  const lopetaNipistys = () => { nipistys.idt = null; nipistys.ankkuri = null; };
+  const lopetaNipistys = () => { nipistys.idt = null; nipistys.ankkuri = null; syote.nipistys = false; };
   kuuntele(doc, 'pointerdown', (e) => {
     if (!kotelo.contains(e.target)) return;
     paikat.set(e.pointerId, { x: e.clientX, y: e.clientY });
     if (paikat.size === 2 && !nipistys.idt) aloitaNipistys();
   }, true);
-  kuuntele(doc, 'pointermove', (e) => {
-    if (!paikat.has(e.pointerId)) return;
-    paikat.set(e.pointerId, { x: e.clientX, y: e.clientY });
-    if (!nipistys.idt || !nipistys.idt.includes(e.pointerId)) return;
+  /** Nipistyksen sovellus sormien nykyisistä paikoista (kerran kehyksessä). */
+  const sovellaNipistys = () => {
+    if (!nipistys.idt) return;
     const k = keskipiste();
     if (!k || !(k.etaisyys > 1)) return;
     const pov = pallo.pointOfView();
@@ -3320,6 +3391,14 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
     // sormet 2× kauemmas toisistaan = korkeus puoleen.
     asetaZoomi(pov.altitude * (nipistys.etaisyys / k.etaisyys), nipistys.ankkuri, kohta.sx, kohta.sy);
     nipistys.etaisyys = k.etaisyys;
+    syote.sovelluksia += 1;
+  };
+  kuuntele(doc, 'pointermove', (e) => {
+    if (!paikat.has(e.pointerId)) return;
+    paikat.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    if (!nipistys.idt || !nipistys.idt.includes(e.pointerId)) return;
+    if (syote.vanha) sovellaNipistys();
+    else syote.nipistys = true;
   }, true);
   const sormiPois = (e) => {
     if (!paikat.delete(e.pointerId)) return;
@@ -3331,6 +3410,8 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
   kuuntele(ikkuna, 'blur', () => { paikat.clear(); lopetaNipistys(); });
 
   kotelo.addEventListener('wheel', (e) => {
+    // Rulla on eleen alku: kotelon mitat tuoreiksi (ks. KOTELON MITAT).
+    if (!kotelonMitat) lueKotelonMitat();
     // Cmd (mac) tai ctrl (Windows ja trackpadin nipistys) = zoom (E3).
     if (e.metaKey || e.ctrlKey) {
       e.preventDefault();
@@ -3380,7 +3461,7 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
       rulla.raf = requestAnimationFrame(rullanLiuku);
     }
   }, { capture: true, passive: false });
-  return { sormet, pura: () => { pysaytaLiuku(); pysaytaRulla(); pysaytaZoomi(); puraSormivahti(); } };
+  return { sormet, pura: () => { pysaytaLiuku(); pysaytaRulla(); pysaytaZoomi(); puraSormivahti(); puraSyote(); } };
 }
 
 /** Sulkee pallon, jos se on auki. */
