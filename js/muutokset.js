@@ -13,6 +13,16 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2086, teksti: 'Zoomin karkea taso lyhyemmaksi' },
+  { v: 2085, teksti: 'Kerma laatan shaderissa' },
+  { v: 2084, teksti: 'C2-kohtaamiset: Iason, Ilaria ja Sofie' },
+  { v: 2083, teksti: 'Kohtaamiset C2+C3: 12 kaupunkia' },
+  { v: 2082, teksti: 'TUR: 4 ykköstason nostoa' },
+  { v: 2081, teksti: 'RUS: 4 ykköstason nostoa' },
+  { v: 2080, teksti: 'Tasaisuus: laatta odottaa suojaa' },
+  { v: 2079, teksti: 'UKR: 4 ykköstason nostoa' },
+  { v: 2078, teksti: 'Zoomi-piirto: laattojen valmistelu väistää kehystä' },
+  { v: 2077, teksti: 'C1-kohtaamiset: Fabrizio, Saana ja Kemal' },
   { v: 2076, teksti: 'CYP: 4 ykköstason nostoa' },
   { v: 2075, teksti: 'MLT: 4 ykköstason nostoa' },
   { v: 2074, teksti: 'LUX: 4 ykköstason nostoa' },

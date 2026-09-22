@@ -37,6 +37,7 @@ import {
   pyramidinTasoitus, pyramidinVaritasonMaa,
 } from './laattapyramidi.js';
 import { laudaltaAsteiksi, projisoiLaudalle } from './fokusmitat.js';
+import { asennaKermaShader, luoKermanJaetut, paivitaKermanJaetut } from './laattakerma-shader.js';
 
 /** Kuinka kauan kameran on oltava paikallaan ennen lepolaatua (ms). */
 export const LAATU_LEPOVIIVE_MS = 260;
@@ -856,8 +857,18 @@ export const LAATTAKERROS_LAATTAKATTO_ZOOMIENNAKKO = 16;
 export const LAATTAKERROS_TUKI_ASKEL = 2;
 /** Nopeassa loitonnuksessa (korkeus kasvoi yli tämän osuuden päivitysten välillä) askel + 1. */
 export const LAATTAKERROS_TUKI_LOITONNUSRAJA = 0.04;
-export const LAATTAKERROS_TUKI_VARA = 0.35;
-export const LAATTAKERROS_LAATTAKATTO_TUKI = 16;
+/*
+ * TUKIVARA 0,35 → 0,75 (omistaja 22.9.2026: panoroinnissa pohja näkyi
+ * ilman huntua ennen laattaa). Tukilaatta on ainoa kermallinen pinta,
+ * joka ehtii nopean panoroinnin edelle; 0,35 ruudun laidan yli ei
+ * riittänyt sormen vauhdilla. Tukitaso on kaksi tasoa karkeampi, joten
+ * laajempi alue maksaa vain muutaman laatan (katto alla).
+ */
+export const LAATTAKERROS_TUKI_VARA = 0.75;
+export const LAATTAKERROS_LAATTAKATTO_TUKI = 24;
+/** Kerman odotus, kun tarkka suoja ei ole vielä saapunut (ks. valmistele). */
+export const KERMAN_ODOTUS_MS = 200;
+export const KERMAN_ODOTUS_KERTOJA = 25;
 /*
  * TUKILAATAN SYVYYSSIIRTO. Tasojen välinen syvyysero on muuten vain
  * jänteen painuma (ks. PIIRTOJÄRJESTYS), ja z5:n ja z7:n verkoilla se
@@ -950,7 +961,40 @@ export const LAATTAKERROS_ALOITUKSIA_PER_KEHYS = 2;
  * ruudulla yhä 60 laattaa sekunnissa, eli enemmän kuin
  * LAATTAKERROS_RINNAKKAIN (6) ehtii ladata: jono ei kasva tästä.
  */
-export const LAATTAKERROS_TEKSTUUREJA_PER_KEHYS = 1;
+/*
+ * KAKSI VIENTIÄ KEHYSTÄ KOHTI (22.9.2026, omistajan aamutesti: merellä
+ * zoomatessa karkea taso näkyy hetken paksuine syvyyskäyrineen).
+ * Mitattu tools/savukkeet/mittaa-zoomiennakko-meri.mjs (WebKit 390 × 844
+ * dpr 3, Välimeri 40,5 N 6 E ja Ranska, z7 → z8, kuorma 9–13): verkko ei
+ * ole pullonkaula (z8-laatta 16–52 kt, TTFB 21–56 ms, 10 rinnakkain
+ * 67 ms), vaan tämä katto ja valmistelun budjetti: 32 uutta laattaa vie
+ * yhdellä viennillä vähintään 32 kehystä. Kahdella viennillä ja 6–8 ms:n
+ * valmistelubudjetilla karkean tason näkymisaika putosi merellä 536–895
+ * → 347–433 ms ja maalla 751–1052 → 546–711 ms (6 ms:n budjetilla 354–477
+ * / 560–664), eikä zoomin tai panoroinnin p95 muuttunut (mittaa-ablaatio
+ * porras 2: zoomi 25–28, panorointi 18–22 ms). 7.9.2026 mitattu
+ * 3,0 ms/vienti → kaksi on 6 ms, joka mahtuu budjettiin, kun ladonta on
+ * pois liikkeen ajalta (v2062 liikevara).
+ */
+export const LAATTAKERROS_TEKSTUUREJA_PER_KEHYS = 2;
+/*
+ * ZOOMIN PIIRTOKOKEET (kehittäjälippu `?koe=a,b`, Pelikoodari 22.9.2026).
+ * Ranska z6 zoomin pisimmät kehykset olivat oikealla iPhonella
+ * "piirtoa" — ei ladontaa, ei laskurimuutosta (docs/raportit/
+ * sulavuus-liikevara-iphone-20260922.md). Lippu vaihtaa yhden laattojen
+ * GPU-kustannuksen kerrallaan, jotta Laitetestaaja voi mitata laitteella
+ * (tools/savukkeet/mittaa-zoomipiirto.mjs KOKEET=…):
+ *   aniso1     laatan tekstuurin anisotropia 1 (oletus laitteen maksimi)
+ *   eimip      ei mipmappeja, minFilter LINEAR
+ *   silmat40   laatan verkko enintään 40 × 40 silmää (oletus 160)
+ *   eihaive    ei häivettä: uusi laatta heti täysi, vanha pois heti
+ *   vientilepo tekstuurien vienti vain levossa (liikkeessä jono odottaa)
+ * Ei vaikuta ilman lippua; yksikkötestit eivät anna lippua.
+ */
+export function laattakerroksenKokeet(haku = globalThis.location?.search ?? '') {
+  const arvo = (() => { try { return new URLSearchParams(haku).get('koe') ?? ''; } catch { return ''; } })();
+  return new Set(String(arvo).split(',').map((k) => k.trim()).filter(Boolean));
+}
 /** Häive sisään ja ulos (ms). Reduced motion: 0. */
 export const LAATTAKERROS_HAIVE_MS = 260;
 /** Kerros päivittyy liikkeessä enintään 10 kertaa sekunnissa. */
@@ -2266,11 +2310,26 @@ export function luoLaattakerros({
   const laatat = new Map();
   const jono = [];
   const vientijono = [];
+  const kokeet = laattakerroksenKokeet();
+  /*
+   * KERMA SHADERISSA (js/laattakerma-shader.js, 22.9.2026): kerma, sumu ja
+   * kohdemaan reikä lasketaan laatan materiaalissa yhdestä maskista, ei
+   * laatan kankaalle. `?koe=kermakangas` palauttaa vanhan kangaspolun
+   * vertailuksi (kerma-reuna-savuke). Maski päivitetään `suorita`ssa,
+   * kun tasoituksen avain vaihtuu — laattoja ei silloin pureta.
+   */
+  const kermaShader = !kokeet.has('kermakangas');
+  const kermanJaetut = luoKermanJaetut();
+  let kermanMaskiAvain = '';
+  const haiveMs = () => (reduced() || kokeet.has('eihaive') ? 0 : LAATTAKERROS_HAIVE_MS);
+  if (kokeet.size) mittarit.kokeet = [...kokeet];
   let ladattavia = 0;
   /** Tässä kehyksessä aloitetut lataukset ja kehyksen vaihtava rAF (tahditus). */
   let aloituksia = 0;
   let aloitusRaf = 0;
   let vientiRaf = 0;
+  const vientiKehys = { kehys: 0, perakkain: 0 };
+  let liikkeessaViimeksi = false;
   let taso = null;
   /** Edellinen taso oli laattakaton (ei tarpeen) pudottama: ei hystereesiä seuraavassa valinnassa. */
   let kattoRajoitti = false;
@@ -2820,6 +2879,33 @@ export function luoLaattakerros({
       }
       const tasoitus = kerrokset.vari ? pyramidinTasoitus() : null;
       /*
+       * LAATTA EI NÄY ENNEN KERMAA (omistaja 22.9.2026 aamu, iPhone v2076:
+       * *"muiden maiden laatat näkyvät hetken ilman huntua, kerma tulee
+       * jälkikäteen"*). Ennen maapolygoneja suoja on koko laatikko
+       * (`tarkka` epätosi) ja piirraKerma palasi ilman kermaa — laatta
+       * asennettiin raakana ja vaihtui vasta mitätöinnin jälkeen. Nyt
+       * valmistelu odottaa tarkkaa suojaa: laatta palaa jonoon
+       * KERMAN_ODOTUS_MS:n päästä, enintään KERMAN_ODOTUS_KERTOJA (maa,
+       * jolle polygoneja ei ole, ei saa jäädä ikuisesti piirtämättä).
+       */
+      // Shaderilla kerma on materiaalissa: laatta saa maskin heti kun se saapuu, odotusta ei tarvita.
+      const shaderKerma = kermaShader && tasoitus && !tasoitus.maailma;
+      // Sama portti kuin kankaalla: kerma vain laatalle, jolla on väritaso (kerrostasot[i].vari).
+      let variTasoOli = false;
+      if (!shaderKerma && tasoitus && !tasoitus.maailma && !tasoitus.suoja?.tarkka && (t.kermanOdotus ?? 0) < KERMAN_ODOTUS_KERTOJA) {
+        t.kermanOdotus = (t.kermanOdotus ?? 0) + 1;
+        mittarit.kermaaOdottaa = (mittarit.kermaaOdottaa ?? 0) + 1;
+        kangas.width = 0; kangas.height = 0;
+        ikkuna.setTimeout(() => {
+          if (purettu || laatat.get(t.avain) !== t) { for (const k of kuvat) k?.close?.(); return; }
+          t.valmistelu = valmistele;
+          t.suljeKuvat = () => { for (const k of kuvat) k?.close?.(); };
+          valmistelujono.push(t);
+          ajaValmistelu();
+        }, KERMAN_ODOTUS_MS);
+        return;
+      }
+      /*
        * ══════════════════════════════════════════════════════════════
        * KERMA EI ODOTA VÄRILAATTAA (omistaja 18.9.2026, Raamattu
        * KARTTAUUDISTUKSEN PAATOKSET 37 kohta 1)
@@ -2925,7 +3011,14 @@ export function luoLaattakerros({
            * (aineisto vielä haussa) värilaatta jätetään kokonaan pois,
            * jolloin kartta on se pohjakartta, joka se muutenkin on.
            */
-          piirraKerma(kuva);
+          if (shaderKerma) {
+            // Kerma tulee shaderista; linssin tyhjä arkki (tasoituksenUlkopuolella) sammuttaa sen laatalta.
+            variTasoOli = true;
+            t.kermaPois = Boolean(kertomuslukko && tasoituksenUlkopuolella({
+              tasoitus, kartta, ppu: tasoOlio.pikseliaPerYksikko, arkki: pyramidi.arkki,
+            }));
+            if (t.kermaPois && !t.kermatta) { mittarit.kermattomia += 1; t.kermatta = true; }
+          } else piirraKerma(kuva);
           kuva?.close?.();
           continue;
         }
@@ -3009,8 +3102,9 @@ export function luoLaattakerros({
         t.tila = 'virhe';
         return;
       }
-      const nx = laattakerroksenSilmat(alue.lon1 - alue.lon0);
-      const ny = laattakerroksenSilmat(alue.lat1 - alue.lat0);
+      const silmakatto = kokeet.has('silmat40') ? 40 : LAATTAKERROS_SILMAT_MAX;
+      const nx = Math.min(silmakatto, laattakerroksenSilmat(alue.lon1 - alue.lon0));
+      const ny = Math.min(silmakatto, laattakerroksenSilmat(alue.lat1 - alue.lat0));
       const sade = pallo.getGlobeRadius() * LEPOKERROS_KOROTUS;
       const puskurit = lepokerroksenVerkko({ alue, kartta, sade, nx, ny });
       const geometria = new luokat.BufferGeometry();
@@ -3023,7 +3117,7 @@ export function luoLaattakerros({
       // Sama väriavaruus kuin laatoilla — muuten sävy hyppäisi kerroksen alla.
       if (malli && 'colorSpace' in malli) tekstuuri.colorSpace = malli.colorSpace;
       else if (malli && 'encoding' in malli) tekstuuri.encoding = malli.encoding;
-      const webgl2 = Boolean(renderer?.capabilities?.isWebGL2);
+      const webgl2 = Boolean(renderer?.capabilities?.isWebGL2) && !kokeet.has('eimip');
       tekstuuri.generateMipmaps = webgl2;
       tekstuuri.minFilter = webgl2 ? THREE_LINEAR_MIPMAP_LINEAR : THREE_LINEAR;
       tekstuuri.magFilter = THREE_LINEAR;
@@ -3037,7 +3131,7 @@ export function luoLaattakerros({
       if (kerrokset.astronautti) tekstuuri.premultiplyAlpha = true;
       tekstuuri.wrapS = THREE_CLAMP;
       tekstuuri.wrapT = THREE_CLAMP;
-      tekstuuri.anisotropy = renderer?.capabilities?.getMaxAnisotropy?.() ?? 1;
+      tekstuuri.anisotropy = kokeet.has('aniso1') ? 1 : (renderer?.capabilities?.getMaxAnisotropy?.() ?? 1);
       tekstuuri.needsUpdate = true;
       /*
        * LAASTARIN SÄVY ON PALLON SÄVY (PAATOKSET 41 kohta 4). Linssin oma
@@ -3061,6 +3155,16 @@ export function luoLaattakerros({
         ...(kerrokset.astronautti ? { alphaTest: 0.004, premultipliedAlpha: true } : {}),
         ...(savy === null ? {} : { color: savy }),
       });
+      if (shaderKerma && variTasoOli) {
+        const ppuL = tasoOlio.pikseliaPerYksikko;
+        asennaKermaShader(materiaali, {
+          jaettu: kermanJaetut,
+          laatta: {
+            alue: { x0: pyramidi.arkki.x + kartta.kansX0 / ppuL, y0: pyramidi.arkki.y + kartta.kansY0 / ppuL, w: kartta.leveys / ppuL, h: kartta.korkeus / ppuL },
+            paalla: !t.kermaPois,
+          },
+        });
+      }
       const verkko = new luokat.Mesh(geometria, materiaali);
       verkko.renderOrder = LAATTAKERROS_RENDER_ORDER_POHJA + t.z;
       // Kerros ei ota napautuksia: pelin merkit ja onGlobeClick kuten ennen.
@@ -3089,8 +3193,8 @@ export function luoLaattakerros({
 
   /* ---------------- valmistelujono ---------------- */
 
-  /** Laatan valmistelun aikabudjetti kehystä kohti (ms, pääsäie). */
-  const VALMISTELU_BUDJETTI_MS = 4;
+  /** Laatan valmistelun aikabudjetti kehystä kohti (ms, pääsäie); 4 → 6 ms 22.9.2026, ks. LAATTAKERROS_TEKSTUUREJA_PER_KEHYS. */
+  const VALMISTELU_BUDJETTI_MS = 6;
   const valmistelujono = [];
   let valmisteluRaf = 0;
   /** Jono tyhjäksi: valmistelemattomien laattojen kuvat vapautetaan. */
@@ -3100,11 +3204,50 @@ export function luoLaattakerros({
     valmisteluRaf = 0;
     mittarit.valmisteluJonossa = 0;
   };
+  /*
+   * VALMISTELU VÄISTÄÄ PITKÄÄ KEHYSTÄ LIIKKEESSÄ (Ranska z6 zoomi,
+   * 22.9.2026). Kehysprofiili (js/pallolauta/kehysprofiili.js, WebKit
+   * 390 × 844 dpr 3, porras 6): zoomin pitkissä kehyksissä pääsäikeen
+   * rAF-työstä 5–6 ms/kehys oli tätä jonoa (kangas, kerma, getImageData,
+   * verkko) — kolme kertaa three.js:n render ja suurin yksittäinen erä.
+   * Oikealla iPhonella pitkien kehysten ajasta 54–73 % oli pääsäikeen työtä.
+   * Yksi laatta kestää budjettia (4 ms) kauemmin, joten "aina vähintään
+   * yksi" osui joka kehykseen. Nyt liikkeessä valmistelu jättää kehyksen
+   * väliin, jos a) edellinen kehys oli pitkä (> VALMISTELU_PITKA_KEHYS_MS,
+   * kone on jo jäljessä) tai b) tähän kutsuun tullessa kehyksestä on jo
+   * kulunut yli VALMISTELU_KEHYSVARA_MS (muut rAF-kutsut veivät
+   * budjetin). Levossa jono puretaan kuten ennen. Koe `valmisteluvanha`
+   * palauttaa vanhan tahdin vertailuksi.
+   */
+  const VALMISTELU_PITKA_KEHYS_MS = 24;
+  const VALMISTELU_KEHYSVARA_MS = 8;
+  /** Peräkkäisiä väistöjä enintään: hitaalla laitteella joka kehys on pitkä, ja jono etenee silti neljäsosatahtia. */
+  const VALMISTELU_VAISTOJA_PERAKKAIN = 3;
+  /**
+   * Väistääkö raskas jonotyö tämän kehyksen (liikkeessä: edellinen kehys
+   * pitkä tai kehyksestä jo kulunut yli varan). `muisti` pitää jonon oman
+   * edellisen kehysajan ja peräkkäiset väistöt. Sama sääntö valmistelulle
+   * ja tekstuurin viennille.
+   */
+  const kehysVaisto = (kehysAlku, muisti, laskuri) => {
+    const alku = aika();
+    const edellinen = muisti.kehys;
+    muisti.kehys = Number.isFinite(kehysAlku) ? kehysAlku : alku;
+    if (!liikkeessaViimeksi || kokeet.has('valmisteluvanha') || !Number.isFinite(kehysAlku)) { muisti.perakkain = 0; return false; }
+    const pitkaKehys = edellinen > 0 && kehysAlku - edellinen > VALMISTELU_PITKA_KEHYS_MS;
+    const myohassa = alku - kehysAlku > VALMISTELU_KEHYSVARA_MS;
+    if (!(pitkaKehys || myohassa) || (muisti.perakkain ?? 0) >= VALMISTELU_VAISTOJA_PERAKKAIN) { muisti.perakkain = 0; return false; }
+    muisti.perakkain = (muisti.perakkain ?? 0) + 1;
+    mittarit[laskuri] = (mittarit[laskuri] ?? 0) + 1;
+    return true;
+  };
+  const valmisteluKehys = { kehys: 0, perakkain: 0 };
   const ajaValmistelu = () => {
     if (purettu || valmisteluRaf || !valmistelujono.length) return;
-    valmisteluRaf = ikkuna.requestAnimationFrame(() => {
+    valmisteluRaf = ikkuna.requestAnimationFrame((kehysAlku) => {
       valmisteluRaf = 0;
       if (purettu) return;
+      if (kehysVaisto(kehysAlku, valmisteluKehys, 'valmisteluVaistoja')) { ajaValmistelu(); return; }
       const alku = aika();
       let n = 0;
       // Näkyvät ensin, sitten tuki, sitten ennakko — sama järjestys kuin latausjonossa.
@@ -3266,8 +3409,12 @@ export function luoLaattakerros({
      * ajaVientiä uudestaan) — mitään ei siis hukata.
      */
     if (purettu || lukittu || vientiRaf || !vientijono.length) return;
-    vientiRaf = ikkuna.requestAnimationFrame(() => {
+    // Koe `vientilepo`: liikkeessä vienti odottaa seuraavaa lepopäivitystä.
+    if (kokeet.has('vientilepo') && liikkeessaViimeksi) return;
+    vientiRaf = ikkuna.requestAnimationFrame((kehysAlku) => {
       vientiRaf = 0;
+      // Vienti (initTexture 3–7 ms) väistää pitkää kehystä liikkeessä kuten valmistelu.
+      if (kehysVaisto(kehysAlku, vientiKehys, 'vientiVaistoja')) { ajaVienti(); return; }
       let n = 0;
       while (vientijono.length && n < LAATTAKERROS_TEKSTUUREJA_PER_KEHYS) {
         const t = vientijono.shift();
@@ -3316,7 +3463,7 @@ export function luoLaattakerros({
     if (!juuri) return;
     juuri.add(t.verkko);
     t.scenessa = true;
-    haivyta(t.materiaali, 1, reduced() ? 0 : LAATTAKERROS_HAIVE_MS);
+    haivyta(t.materiaali, 1, haiveMs());
   };
 
   /**
@@ -3396,8 +3543,16 @@ export function luoLaattakerros({
      * haettava uudestaan. Sukupolvi kasvaa, jotta kesken oleva vienti
      * ei asenna purettua laattaa takaisin.
      */
-    const tasoitusAvain = kerrokset.vari ? (pyramidinTasoitus()?.avain ?? '') : '';
-    if (variMaa !== variMaaEdellinen || tasoitusAvain !== tasoitusAvainEdellinen
+    const tasoitusNyt = kerrokset.vari ? pyramidinTasoitus() : null;
+    const tasoitusAvain = tasoitusNyt?.avain ?? '';
+    // Shaderilla tasoituksen muutos (tarkka suoja, liikkeen kohde, sumu) on
+    // pelkkä maskin päivitys; laatat pysyvät. Maanvaihto puretaan yhä.
+    if (kermaShader && tasoitusAvain !== kermanMaskiAvain) {
+      kermanMaskiAvain = tasoitusAvain;
+      paivitaKermanJaetut(kermanJaetut, tasoitusNyt, { luoKangas, Texture: luokat.Texture, THREE_LINEAR, THREE_CLAMP });
+      mittarit.kermamaskeja = (mittarit.kermamaskeja ?? 0) + 1;
+    }
+    if (variMaa !== variMaaEdellinen || (!kermaShader && tasoitusAvain !== tasoitusAvainEdellinen)
       || kerrokset.reliefi !== reliefiEdellinen) {
       variMaaEdellinen = variMaa;
       tasoitusAvainEdellinen = tasoitusAvain;
@@ -3545,7 +3700,7 @@ export function luoLaattakerros({
       // takaisin. Sisään häipyvään ei kosketa — uudelleenaloitus joka
       // päivityksellä (10 kertaa sekunnissa) ei koskaan päättyisi.
       if (t.materiaali && t.materiaali.__kohde === 0) {
-        haivyta(t.materiaali, 1, reduced() ? 0 : LAATTAKERROS_HAIVE_MS);
+        haivyta(t.materiaali, 1, haiveMs());
       }
       if (t.tila === 'valmis' && t.viety && !t.scenessa) lisaaSceneen(t);
     }
@@ -3617,7 +3772,7 @@ export function luoLaattakerros({
           tuet.add(avain);
           // Tuki ei häivy ulos: käännetään häive takaisin, jos se oli alkanut.
           if (t.materiaali && t.materiaali.__kohde === 0) {
-            haivyta(t.materiaali, 1, reduced() ? 0 : LAATTAKERROS_HAIVE_MS);
+            haivyta(t.materiaali, 1, haiveMs());
           }
           t.haipyy = false;
           if (t.tila === 'valmis' && t.viety && !t.scenessa) lisaaSceneen(t);
@@ -3798,7 +3953,7 @@ export function luoLaattakerros({
       })) { piilota(t); continue; }
       if (!karkeampiValmis(t, valittu, valmiit)) continue;
       t.haipyy = true;
-      haivyta(t.materiaali, 0, reduced() ? 0 : LAATTAKERROS_HAIVE_MS, () => poista(t));
+      haivyta(t.materiaali, 0, haiveMs(), () => poista(t));
     }
 
     /*
@@ -3945,9 +4100,17 @@ export function luoLaattakerros({
    * kytkePallonKehys) tai null/vanha pov-argumentti: silloin mitat
    * luetaan kuten ennen. Kutsuja EI enää ole tapahtumakäsittelijä.
    */
-  const paivita = (kehys, liikkeessa = false) => {
+  const paivita = (kehys, liikkeessa = false, { liike = null } = {}) => {
     if (purettu || lukittu) return false;
     const nyt = kehys?.aika ?? aika();
+    /*
+     * `liike` on kutsujan tieto kameran liikkeestä (pallo.js: lepoajastin
+     * käy); `liikkeessa` on vain harvennuksen lippu, joka piirtokoukusta
+     * on aina tosi. Koe `vientilepo` lukee tätä.
+     */
+    const liikkuu = liike == null ? Boolean(liikkeessa) : Boolean(liike);
+    if (liikkeessaViimeksi && !liikkuu) { liikkeessaViimeksi = false; ajaVienti(); }
+    liikkeessaViimeksi = liikkuu;
     if (liikkeessa && nyt - viimePaivitys < LAATTAKERROS_PAIVITYSVALI_LIIKE_MS) return false;
     viimePaivitys = nyt;
     return suorita(kehys);

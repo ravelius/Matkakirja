@@ -16,7 +16,9 @@ import {
   EXPLORE_REWARD, FIFTY_FIFTY_PRICE, HARD_BONUS,
   HINT_PRICE, QUIZ_SECONDS,
 } from './game.js';
-import { kohtaamiskuvaKohteelle } from './kohtaamiskuvat-data.js';
+import {
+  kohtaamiskuvaKohteelle, kohtaamiskuvaTavalliselleKohtaamiselle,
+} from './kohtaamiskuvat-data.js';
 import { lueKertojana, playDiaryVoice } from './luenta.js';
 import { asetaKuva } from './media.js';
 import { natiiviVastaus } from './natiivi.js';
@@ -310,14 +312,16 @@ export function renderQuiz(ui) {
      * 10.8.2026: Ateena ja Sofia).
      *
      * Kuva haetaan kahdesta lähteestä, uusin ensin:
-     *   1. tarkistettu kohtaamiskuva R2:ssa (js/kohtaamiskuvat-data.js)
-     *      — valokuva, jolla on oma kuvateksti ja alt-teksti;
+     *   1. tarkistettu kohtaamiskuva R2:ssa (js/kohtaamiskuvat-data.js).
+     *      Tarinakaarella ja myöhemmän tavallisen visan KOHTAAMISET-
+     *      hahmolla voi olla eri henkilö ja siksi eri valokuva;
      *   2. kaaridatan `kuva` (assets/kohtaamiset/…) — vanha
      *      pergamenttipiirros ilman kuvatekstiä.
      * Kummankin puuttuessa kortti piirtyy kuvattomana kuten ennen.
      */
-    const kuvaTiedot = tervehdys && kaariTarina
-      ? kohtaamiskuvaKohteelle(quiz.cityId) : null;
+    const kuvaTiedot = !tervehdys ? null : kaariTarina
+      ? kohtaamiskuvaKohteelle(quiz.cityId)
+      : kohtaaminen ? kohtaamiskuvaTavalliselleKohtaamiselle(quiz.cityId) : null;
     if (kuvaTiedot) {
       ui.naytaKohtaamiskuva({
         osoite: kuvaTiedot.osoite,

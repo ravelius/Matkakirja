@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-09-21.2076';
+const CACHE = 'matkakirja-2026-09-21.2086';
 const SHELL = [
   './',
   './index.html',
@@ -229,12 +229,14 @@ const SHELL = [
   // Laattakerroksen puhtaat apurit (erä E0, 6.9.2026): js/pallo.js tuo
   // ne staattisesti, joten ne kulkevat samaa polkua offline-käyttöön.
   './js/pallolaatat.js',
+  './js/laattakerma-shader.js',
   './js/reliefipyramidi.js',
   // Vektoriviivat laattojen päälle (erä V1, 6.9.2026, Raamattu
   // VEKTORIT SAMALLA): pallolauta tuo kerroksen, joten se kulkee samaa
   // polkua offline-käyttöön. Vektoriaineisto itse on HTTP-välimuistissa
   // (immutable, versio polussa) eikä palvelutyöntekijän korissa.
   './js/pallovektorit.js',
+  './js/pallomaakunnat.js',
   // Pallolauta (karttapallo pelin lautana, 5.9.2026): tuodaan
   // dynaamisesti kuten pallo.js, mutta kuuluu SHELLiin offline-käyttöä
   // varten. Ei niputeta yhden tiedoston versioon (tests/sw.test.mjs).
@@ -279,6 +281,7 @@ const SHELL = [
   './js/pallolauta/nimiorasterit.js',
   './js/pallolauta/glnimiot-sovitin.js',
   './js/pallolauta/kerrokset.js',
+  './js/pallolauta/kehysprofiili.js',
   './js/pallolauta/sumu.js',
   './css/aikajana.css',
   // Linssien yhteinen kehysliuku (16.9.2026): index.html lataa tämän

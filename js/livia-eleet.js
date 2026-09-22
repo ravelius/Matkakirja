@@ -114,7 +114,7 @@ export function asennaLivianKasvot(pollo) {
  let alkulento=null;
  let traileri=null;
  let chatOdotus=null;
- let karttavahti=null,leijuTavoite=false,leijuKorkeus=0,leijuAika=0;
+ let karttavahti=null,leijuTavoite=false,leijuKorkeus=0,leijuAika=0,viimePiirretty=null;
  const odotukset=new Set();
  const pitkatOdotukset=new Map();
  const luennat=new Map();
@@ -245,7 +245,10 @@ export function asennaLivianKasvot(pollo) {
   pinta.style.zIndex=ensiliito?'47':'';
   pinta.hidden=!nappiNakyy()||Boolean(ylin&&nappi.closest?.('dialog[open]')!==ylin);
  }
- const piirra=s=>{if(!kuollut){viimeAsento=s;sijoita();
+ const piirra=s=>{if(!kuollut){viimeAsento=s;
+  // Leijunnan vaihe paikataan paikalleen: ei asettelumittoja, ei rakennusta (ks. luoLivianSvg).
+  if(s.mapHover?.height>=1&&!kohtausPiilossa()&&kasvot.paikkaa?.({...s,compactExplain:viimePiirretty?.compactExplain,astronautti:viimePiirretty?.astronautti,...(lehtiPaalla?{glasses:viimePiirretty?.glasses}:{})}))return;
+  sijoita();
   // Kohtaus omistaa myös suorat piirrot: puhe, napin näkyvyys ja
   // taustalta paluu eivät saa palauttaa levossa olevaa lintua sen alle.
   // Vain jo alkanut trailerin väistö saa näkyä matkallaan pois.
@@ -255,7 +258,8 @@ export function asennaLivianKasvot(pollo) {
   const compactExplain=(doc.documentElement?.clientWidth||doc.defaultView?.innerWidth||0)<=600;
   pinta.classList.toggle(LIVIAN_ASTRONAUTTI_PUHE_LUOKKA,puhe);
   const piirrettava={...s,compactExplain,astronautti:doc.body.classList.contains(LIVIAN_ASTRONAUTTI_LUOKKA)};
-  kasvot.paint(lehtiPaalla?{...piirrettava,glasses:lasit}:piirrettava);
+  viimePiirretty=lehtiPaalla?{...piirrettava,glasses:lasit}:piirrettava;
+  kasvot.paint(viimePiirretty);
  }};
  function vaienna(){for(const stop of aaniPois)stop?.();aaniPois=[];}
  function iskut(){

@@ -103,8 +103,14 @@ test('pohjan harvennus: kolme ohitusehtoa ja laskuri savukkeelle', () => {
  * peräkkäin samassa kehyksessä on siis pahimmillaan 13 ms 16,7 ms:n
  * budjetista.
  */
-test('tekstuureja yksi kehystä kohti — ja vienti ei jää pullonkaulaksi', () => {
-  assert.equal(LAATTAKERROS_TEKSTUUREJA_PER_KEHYS, 1);
+test('tekstuureja kaksi kehystä kohti (22.9.2026) — ja vienti ei jää pullonkaulaksi', () => {
+  /*
+   * 22.9.2026: yksi vienti kehyksessä oli zoomin karkean tason
+   * näkymisajan lattia (32 laattaa = 32 kehystä). Kaksi vientiä + 6 ms:n
+   * valmistelubudjetti: aika 536–895 → 347–433 ms merellä, zoomin p95
+   * ennallaan (mittaa-zoomiennakko-meri.mjs, mittaa-ablaatio).
+   */
+  assert.equal(LAATTAKERROS_TEKSTUUREJA_PER_KEHYS, 2);
   assert.ok(LAATTAKERROS_TEKSTUUREJA_PER_KEHYS * 60 > LAATTAKERROS_RINNAKKAIN,
     '60 Hz:llä yksi vienti kehyksessä on 60 laattaa sekunnissa');
 });
