@@ -1275,3 +1275,7 @@ Karttaseppä 22.9.2026 klo 17.05: PR #2817 — laikut laudan yksiköihin, hieno 
 ## MITTAUS PELISTA: MEREN LIKA ON LAATASSA (KAKSI TASOA PIIRTAA ERI KUVION), EI HAIVEESSA EIKA KERMASSA (PR #2819); RAKEKERROS JAIHIN; SEURAAVA ASKEL POLTTO KORJATULLA RESEPTILLA JA MITTAUS UUDELLEEN (22.9.2026 klo 16.58)
 
 Karttaseppä 22.9.2026 klo 17.10: kertomuslukko pitää kameran paikallaan ja vaihtaa vain tason; hf-rms merialueelta, WebKit 390×844 dpr 3, tuotannon laatat. Rannikko: A(z7) 8,10, B(z8) 8,40, A−B 5,68, häive C−(A+B)/2 vain 0,60; avomeri A 4,00, B 3,98, A−B 2,24, C-poikkeama 0,82; ?koe=kangasaina ei muuta (kerma ja mipmapit eivät syy). Ristihäivytys on uskollinen lineaarinen sekoitus; tasot piirtävät eri kuvion samaan paikkaan; erotuskuvassa näkyy vanha rannikon vesiviivasto. Varaus: tuotannon laatoissa ei vielä #2808:n korjausta → mittaus toistettava polton jälkeen. Suositus: rakekerros jäihin, poltto korjatulla reseptillä + mittaus uudelleen. #2817 odottaa omistajaa.
+
+## OMISTAJA: POLTTO KORJATULLA RESEPTILLA NOIN KLO 17.30, LAHTOLUPA ERIKSEEN; HIENO RAE ENNALLAAN POLTOSSA (YKSI MUUTTUJA), MITTAUS TOISTETAAN POLTON JALKEEN (22.9.2026 klo 16.59)
+
+Omistaja 22.9.2026 klo 17.00 (kortti): poltto noin puolen tunnin päästä, sanoo vielä erikseen. Resepti 2026-09-22c: vesiviivat laudan yksiköihin (#2808) + laikut maailmaan (#2817), hieno rae ennallaan, isobaattipeitto 0,55, nimiöt g ennallaan. Karttaseppä valmistelee, CI-tauko Julkaisijan kanssa, polton jälkeen tasonvaihtomittaus (#2819) ja vedokset. Rakekerros jäihin.
