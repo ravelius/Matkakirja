@@ -1039,3 +1039,7 @@ Karttaseppä 22.9.2026 klo 15.05: katsauksen kohdat 20 ja 21 tehty (PR #2761 pre
 ## KOHTA 9 (ESIKOMPOSOIDUT LAATAT) EI TEHDA PALLOLLE: PALLON LAATTA ON JO POHJA + RANTA (10 %) + NIMIOT + NOSTOT; ERA 2 VALMIS KUN #2760–#2762 MAINISSA (22.9.2026 klo 11.18)
 
 Karttaseppä 22.9.2026 klo 15.20: pallo ei käytä viiva- eikä väritasoa (lepokerroksenKerrokset viiva: false); katsauksen '2–7 kuvaa/laatta' koskee tasokarttaa. Pallolla yhdistäminen kääriisi vain rannan pohjaan (rannikkolaatat 10 %) → −10…−25 % pyynnöistä rannikolla, ja peruisi omistajan 6.9. päätöksen rannan erottamisesta (V4 vektoriviivat). Fable: vaihtoehto A, kohtaa 9 ei tehdä pallolla; ämpäriin ei lisätä 2,9 Gt; katsaus korjattu. Erä 2 = #2760 esilataus, #2761 preconnect, #2762 katkaisija.
+
+## KARTTASEPPA NOLLATTU (70 %, LUOVUTUS #2765); #2753 JA #2760 TUOTANNOSSA (v2086, v2090); SISALTOKIRJURIN LUOVUTUS PYYDETTY (73 %) (22.9.2026 klo 11.28)
+
+Fable 22.9.2026 klo 15.40: Karttasepän luovutus 0baccaeed (PR #2765) kuitattu, nollauskaava ajettu (RC pois → clear self → aloitusviesti → RC päälle), worktree Matkakirja-karttaseppa haarassa karttaseppa-tyo-20260922. Tuotannossa v2090: laattaputken lattia #2753 (v2086) ja esilataus #2760; #2761 preconnect ja #2762 katkaisija Julkaisijalla. Uuden Karttasepän tehtävät: #2761/#2762 mergeen, pohjan piilotuksen tarkistus merellä Pelikoodarin erän 1 jälkeen, esilatauksen laiteohje Laitetestaajalle; isobaatit odottavat omistajaa. Sisältökirjuri 73 % → luovutus pyydetty (viesti-sisaltokirjuri-luovutus-20260922-ilta.md).
