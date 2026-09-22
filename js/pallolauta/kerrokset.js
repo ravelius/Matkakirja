@@ -103,15 +103,15 @@ export function kerrostenBodyLuokat(haku) {
  * "piirto"-kehysten (ei laskurimuutosta) lähde löytyy laitteella.
  * Laattojen omat kokeet (aniso1, eimip, silmat40, eihaive, vientilepo)
  * lukee js/pallolaatat.js laattakerroksenKokeet samasta lipusta.
- *   eiliike   .pallolauta-liike pois (sävy, pilven varjo, ylilentävä pulu)
- *   eiblend   sävyn ja pilven mix-blend-mode: normal
+ *   eiliike   .pallolauta-liike pois (sävy, ylilentävä pulu)
+ *   eiblend   sävyn mix-blend-mode: normal
  *   eikasvot  Pulun kasvot (SVG) pois, nappi jää
  *   eipollo   Pulun nappi ja kasvot pois
  *   eicss2d   CSS2D-kerros (kohteet, linssimerkit, ankkurit) pois
  */
 export const PIIRTOKOKEIDEN_TYYLIT = {
   eiliike: '.pallolauta-liike{display:none!important}',
-  eiblend: '.pallolauta-liike-savy,.pallolauta-liike-pilvi{mix-blend-mode:normal!important}',
+  eiblend: '.pallolauta-liike-savy{mix-blend-mode:normal!important}',
   eikasvot: '.livia-kasvot-pinta{display:none!important}',
   eipollo: '.pollo-nappi,.livia-kasvot-pinta{display:none!important}',
   eicss2d: '.pallo-kotelo .scene-container > div{display:none!important}',

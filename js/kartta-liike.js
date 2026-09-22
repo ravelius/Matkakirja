@@ -13,10 +13,12 @@
  *      siivet läpättäen (css @keyframes pallolauta-pulu-siipi), ei kun
  *      kortti tai linssi on auki. Siluetti on pieni ja tumma — pulu
  *      nähdään kaukaa ylhäältä, ei kasvoja.
- *   b) PILVEN VARJO liukuu reliefin päällä hitaasti: yksi pehmeä varjo
- *      (radiaaligradientti, multiply, peitto PILVEN_PEITTO ≤ 0,08),
- *      matka kotelon yli PILVEN_MATKA_MS. Varjo pysähtyy (animation-
- *      play-state: paused), kun lauta ei ole levossa.
+ *   b) PILVEN VARJO POISTETTU (omistaja 22.9.2026, iPhone: *"pulun
+ *      kohdalle piirtyy todella pitkä, himmeä varjo koko kartan yli"* —
+ *      pystysuuntainen 140 %:n korkuinen multiply-liukuväri, joka lähti
+ *      liikkeelle levossa panoroinnin jälkeen). Se oli myös
+ *      komposiittorin sekoituskerros WebGL-kankaan päällä. Jäljellä
+ *      ovat pulu ja illan sävy.
  *   c) ILLAN SÄVY KELLONAJAN MUKAAN: pelin vuorokaudenaika
  *      (game.timeOfDay: aamu, keskipäivä, ilta, yö) värjää kartan hyvin
  *      kevyesti — aamu viileä, ilta lämmin, yö sinertävä, keskipäivä
@@ -34,8 +36,6 @@ export const PULUN_VALI_MIN_MS = 60000;
 export const PULUN_VALI_MAX_MS = 120000;
 export const PULUN_LENTO_MS = 2000;
 export const PULUN_KOKO_PX = 26;
-export const PILVEN_MATKA_MS = 40000;
-export const PILVEN_PEITTO = 0.08;
 export const LEPOVAHDIN_MS = 1000;
 
 /** Vuorokaudenajan sävy: [väri, peitto]. Keskipäivällä ei sävyä. */
@@ -116,13 +116,9 @@ export function luoKartanLiike({
   kerros.setAttribute('aria-hidden', 'true');
   kerros.innerHTML = `
     <div class="pallolauta-liike-savy"></div>
-    <div class="pallolauta-liike-pilvi"></div>
     <div class="pallolauta-liike-pulu">${pulunSvg()}</div>`;
   const savy = kerros.querySelector('.pallolauta-liike-savy');
-  const pilvi = kerros.querySelector('.pallolauta-liike-pilvi');
   const pulu = kerros.querySelector('.pallolauta-liike-pulu');
-  pilvi.style.setProperty('--pilven-matka-ms', `${PILVEN_MATKA_MS}ms`);
-  pilvi.style.setProperty('--pilven-peitto', String(PILVEN_PEITTO));
   pulu.style.setProperty('--pulun-lento-ms', `${PULUN_LENTO_MS}ms`);
   // Kerros heti pallon kankaan päälle, merkkikerrosten alle DOM-järjestyksessä.
   const kangas = kotelo.firstElementChild;
@@ -210,7 +206,7 @@ export function luoKartanLiike({
     savy.dataset.aika = aika ?? '';
   };
 
-  /** Lepovahti: pilvi liikkuu vain levossa; pulu keskeytyy, jos kortti aukeaa. */
+  /** Lepovahti: pulu lentää vain levossa ja keskeytyy, jos kortti aukeaa. */
   const vahdi = () => {
     const nyt = paalla && levossa();
     if (nyt !== levossaNyt) {
