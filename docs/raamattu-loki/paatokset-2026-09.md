@@ -1391,3 +1391,7 @@ Omistaja 22.9.2026 klo 19.15: eiblend ei vaikuta. Poissuljettu tähän mennessä
 ## C, D, E TUOTANNOSSA (v2119–v2121); KAAPPAUKSET NAYTETTY OMISTAJALLE (HARMAAT PISTEET, symbolitkaukana 6 → 41 MERKKIA, HALO POIS); NOSTOTASON POLTTO HARMAALLA PISTEELLA ODOTTAA OMISTAJAA (22.9.2026 klo 19.18)
 
 Pelikoodari 22.9.2026 klo 19.18: kaappaukset docs/raportit/kaappaukset/nostopiste-20260922/ (haara pelikoodari-harmaapiste) ja nostohalo-20260922/ (pelikoodari-nostohalo), WebKit 390×844 dpr 2, savuke 10/10; ?koe=symbolitkaukana nostaa kuvamerkit z6:ssa 6 → 41; Avignonin kaariportti ennen/jälkeen. C (v2119) ei kuvattu (tuotannossa). Poltetun laatan piste yhä värillinen kunnes nostotaso poltetaan.
+
+## KEHYSPROFIILIN OVERLAY TUOTANNOSSA v2122 (?koe=profiili); OMISTAJA KUVAA iPHONEN RUUDUN VEDON AIKANA (22.9.2026 klo 19.23)
+
+Julkaisija 22.9.2026 klo 19.20: v2119–v2121 (C, D, E) ja v2122 (#2839 koe=profiili, rAF-Hz-lisäys mukana head-tarkistuksen ansiosta) mainissa; #2840 kaappaukset ilman versiota. Omistajan mittaus: https://matkakirja.app/?koe=profiili → veto 10 s → kuvakaappaus overlaysta (rAF Hz, piirto-osuus, dt p95/max, >20 ms, js/render, pisin kehys ja syy, asetukset).
