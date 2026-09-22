@@ -8,7 +8,7 @@ import {livianSvgPaa} from '../js/livia-svg-paa.js';
 import {sarjakuvapulunKuva} from './livia-sarjakuvakokeilu.mjs';
 
 export const LIVIAN_UUDET_VERSIOT=Object.freeze([
-  {id:'uusi-sarjakuvapulu',baseId:'welcome',label:'Sarjakuvapulu — tyylikokeilu',duration:2900,group:'Uudet versiot',kuvaus:'Nuori Livia: utelias, reipas ja omanarvontuntoinen. Koralliroosa kaulahuivi, suurempi pää, ilmeikkäät silmät ja joustava nokka. Erillinen piirrostyylikokeilu — ei korvaa nykyistä Pulua.'},
+  {id:'uusi-sarjakuvapulu',baseId:'welcome',label:'Sarjakuvapulu — tyylikokeilu',duration:2900,group:'Uudet versiot',kuvaus:'Nuori Livia omana sarjakuvahahmonaan: lyhyt kyyhkyn nokka, pehmeät posket, lämmin katse ja pienet silmäripset. Koralliroosa huivi heilahtaa mukana. Erillinen tyylikokeilu — ei korvaa nykyistä Pulua.'},
   {id:'uusi-chuckle',baseId:'chuckle',label:'Hiljainen naurunpyrskähdys',duration:3600,group:'Uudet versiot',kuvaus:'Uusi erä: nauru yrittää pysyä sisällä, mutta karkaa kahdessa erikokoisessa pyrskähdyksessä. Siipi peittää suupieltä; hartiat ja pää seuraavat eri aikaan.'},
   {id:'uusi-yawn',baseId:'yawn',label:'Valtava haukotus',duration:4700,group:'Uudet versiot',kuvaus:'Uusi erä: raskaat luomet, sisäänhengitys ja suuri linnunhaukotus. Kieli näkyy, siipi nousee suun eteen ja venytys sulaa rauhalliseksi huokaukseksi.'},
   {id:'uusi-grin',baseId:'grin',label:'Leveä virne',duration:3200,group:'Uudet versiot',kuvaus:'Uusi erä: ensin silmät tietävät jotain, sitten nokkaan leviää leveä virne. Pieni ylpeä takakeno ja lopuksi hillitty paluu pokerinaamaan.'},
