@@ -37,3 +37,24 @@ lähikuva on suurempi. Sivulla kerrotaan, etteivät uudet versiot ole vielä pel
 Julkaisun kohde on vain `docs/livia-svg.html` ja sen katselumoduulit.
 Kuvaputken tilauksia ei tarvita. Omistajan taiteellinen katselmus seuraa tästä
 valmiista neljän ehdotuksen erästä; hyväksyntää ei väitetä etukäteen.
+
+## Suukokeilu ja kirjan suunta, jatkopalaute 22.9.2026
+
+Omistaja piti liikkeitä parempina ja pyysi Hauska nähdä -eleeseen suukokeilun
+sekä kirjan kääntämisen lukijaa eli Pulua kohti. Tervehdyksessä nokka avautuu
+nyt suuremmaksi linnunsuuksi: ylänokka säilyy, alaleuka laskee, pieni kieli
+näkyy ja suu sulkeutuu omalla sulavalla liikeradallaan. Muut eleet eivät
+saa suuta. Kirjasta näkyvät katsojalle ulkokannet ja selkä; sivunkääntö
+piirretään kansien taakse ja sen yläkaari näkyy.
+
+Omistaja antoi luvan päivittää myöhemmin kaikki vanhatkin eleet samaan
+liikepohjaan, mutta haluaa ensin katsoa suun ja sen soveltuvuuden muihin
+ilmeisiin. Tämä erä säilyy neljän eleen katseluna, ei pelin muutoksena.
+
+- Kohdetestit 7/7 PASS, mukaan lukien suun jatkuvuus ja nokan korvautuminen
+  sekä sivun ja kansien oikea piirtojärjestys.
+- Koko sarja 3932 testiä: 3919 PASS, 13 SKIP, 0 FAIL.
+- Kaksoisavaimet, niputus, savukevartio ja nimiöpäällekkäisyydet PASS.
+- Päivitetty 24 asennon kuvasarja katsottu: suu näkyy ja kirjan kansi on ulospäin.
+- Itsenäinen katselujulkaisu valmistellaan erilliseen `ravelius/pulun-eleet`
+  -repoon. Lähdehaara ja pelin julkaisu pysyvät erillisinä.

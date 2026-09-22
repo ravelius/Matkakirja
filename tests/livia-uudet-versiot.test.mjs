@@ -25,9 +25,37 @@ test('neljä katseluehdotusta pysyvät erillään pelieleistä ja kestävät kel
       for(const m of kuva.matchAll(/url\(#([^)]+)\)/g))assert.ok(ids.includes(m[1]),m[1]);
       assert.ok(ids.every(id=>id.startsWith('koe')));
     }
-    for(const k of ['paaKulma','paaY','paaX','rinta','siipi','takasiipi','rapaytys','ilme'])assert.equal(asento(0)[k],asento(1)[k],e.id+' '+k);
+    for(const k of ['paaKulma','paaY','paaX','rinta','siipi','takasiipi','rapaytys','ilme','suu'])assert.equal(asento(0)[k],asento(1)[k],e.id+' '+k);
     const jalat=p=>uudenEleenKuva(asento(p)).match(/<g data-part="feet">.*?<\/g>/)[0];
     assert.equal(jalat(0),jalat(.45),'jalkojen ankkurit pysyvät maassa');
+  }
+});
+
+test('tervehdyksen linnunsuu avautuu yhtenä eleenä eikä peitä toista nokkaa',()=>{
+  const asento=p=>uudenEleenAsento('uusi-welcome',p);
+  assert.equal(asento(0).suu,0);
+  assert.equal(asento(.22).suu,1);
+  assert.equal(asento(1).suu,0);
+  let edellinen=0;
+  for(let i=0;i<=1000;i++){
+    const s=asento(i/1000),svg=uudenEleenKuva(s);
+    assert.ok(s.suu>=0&&s.suu<=1);
+    assert.ok(Math.abs(s.suu-edellinen)<.02,'nokka aukeaa ja sulkeutuu ilman hyppäyksiä');
+    edellinen=s.suu;
+    assert.equal((svg.match(/data-part="friendly-beak"/g)||[]).length,1);
+    assert.doesNotMatch(svg,/fill="#2e4756"/,'vanha suljettu nokka ei jää uuden päälle');
+    assert.match(svg,/data-part="tongue"/);
+  }
+  for(const e of LIVIAN_UUDET_VERSIOT.filter(e=>e.baseId!=='welcome'))assert.doesNotMatch(uudenEleenKuva(uudenEleenAsento(e.id,.3)),/friendly-beak/);
+});
+
+test('kirjan ulkokannet ovat katsojaan päin ja peittävät sivun alareunan',()=>{
+  for(const p of [0,.45,.52,.57,.65,1]){
+    const svg=uudenEleenKuva(uudenEleenAsento('uusi-bookStudy',p));
+    assert.match(svg,/data-part="book" data-facing="pulu"/);
+    assert.ok(svg.indexOf('data-part="page"')<svg.indexOf('data-part="book-covers"'),'kannet piirretään sivun eteen');
+    assert.match(svg,/data-part="page-edges"/);
+    assert.doesNotMatch(svg,/m-17-20l12 2/,'vanhat katsojaan päin näkyvät tekstirivit poistettu');
   }
 });
 
