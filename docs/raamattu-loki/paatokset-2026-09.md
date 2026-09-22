@@ -1167,3 +1167,7 @@ Karttaseppä 22.9.2026 klo 14.50 (PR #2803 selvitys): hyppivä meriviivanippu on
 ## KOMPAKTI PULU-GALLERIA TUOTANNOSSA v2108, READBACK OK, KUITATTU CODEXILLE (22.9.2026 klo 15.05)
 
 Julkaisija 22.9.2026 klo 15.05: 11a4f5aa9 poimittu, v2108 (main 3b8f402d2), Pages OK, readback gesture-categories 2 / gesture-options 2 / demo.mjs 200, testit 3913/0. Fable kuittasi Codexille.
+
+## POLTTO 2026-09-22b VALMISTELTU (VAIN VESIVIIVOITUS POIS, ISOBAATTIPEITTO 0,55, NIMIOT g ENNALLAAN), KAYNNISTYY KLO 17.00; ISOBAATIT TULEVAT ENSI KERTAA NAKYVIIN (22.9.2026 klo 15.12)
+
+Karttaseppä 22.9.2026 klo 15.10: /Users/koodaus/pyramidi-poltto/ajo-20260922b/{aja-1,aja-2}.sh; versiot pohja 2026-09-22b-pohja, viivat 2026-09-22b-viivat, ranta 2026-09-21-ranta, nostot 2026-09-22b-nostot, nimiöt 2026-09-22g-nimiot ennallaan, pallotunniste 20260922b; luetteloa ei viedä. Vedokset (PR #2803): rannikolla nippu katoaa, jäljelle yksi ohut mannerjalustan käyrä; peitto 0,55 ja 0,70 lähes samat → 0,55. Lisähavainto: vesiviivoituspassi peitti isobaattien musteen kokonaan; ilman sitä isobaatit näkyvät ensi kertaa. Fable: nimiöversio h jää pois (yksi muuttuja), poltto klo 17.00, CI-tauko 17–19, vedokset z5–z8 polton jälkeen omistajan arvioon.
