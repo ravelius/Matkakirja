@@ -46,7 +46,10 @@ import {
   nostosymMitanKatto, nostosymPorrasNyt, nostosymRasteri, nostosymRasterinAvain, nostosymReseptit,
 } from '../fokusnosto-symbolit.js';
 import { ruudunKerroin } from './nostot.js';
-import { nappulaElementti } from './merkit.js';
+import {
+  KOHDEMERKIN_HALO_KESKI, KOHDEMERKIN_HALO_LAAJIN, KOHDEMERKIN_NIMI_PX,
+  KOHDEMERKIN_NIMI_RAKO_PX, KOHDEMERKIN_PISTE_PX, KOHDEMERKIN_PX, nappulaElementti,
+} from './merkit.js';
 
 /** Välimuistin katto (rastereita); yli menevät suljetaan vanhin ensin. */
 export const NIMIORASTERIEN_KATTO = 600;
@@ -170,6 +173,211 @@ export function rasteroiPiste({ sadePx, vari, reuna = null }, dpr, luoKangas = (
     ctx.stroke();
   }
   return { kuva: kangas, w: koko, h: koko, ankkuriX: koko / 2, ankkuriY: koko / 2, skaala: 1 / dpr, katto: null };
+}
+
+/*
+ * ======== KOHDEMERKKI GL-KERROKSEEN (A, 22.9.2026) =================
+ *
+ * Omistajan tuntumatesti v2106: *"tekstit ja pisteet pysyvät
+ * paikoillaan PAITSI kohdekaupunkien pallot liikkuvat vielä"*. Syy on
+ * rakenteellinen: nimet, nostot ja nappula ovat GL-kerroksessa (samassa
+ * kankaassa kuin kartta), mutta KOHTEET olivat yhä CSS2D:nä. DOM-kerros
+ * ja kangas sommitellaan laitteella erikseen, joten DOM-merkki ehtii
+ * ruudulle kehyksen kankaan jäljessä ja laahaa panoroidessa. Ennuste
+ * (pallo.js E4b) kompensoi sitä, mutta se on oletuksena pois, koska se
+ * sai nimiöt heilumaan; kun merkki piirretään SAMAAN kankaaseen kuin
+ * kartta, se ei voi laahata rakenteellisesti.
+ *
+ * KOLME OSAA, KUTEN CSS2D:SSÄ (merkit.js kohdeElementti): halokehä
+ * (hengittää), kultalevy katkoviivarenkaineen ja nimi. Asu luetaan
+ * CSS:stä samalla koettimella kuin nimen asu (.target-halo.fokus,
+ * .target-piste, .target-nimi), jottei värejä ja viivoja kirjoiteta
+ * kahteen paikkaan.
+ *
+ * ANIMOITUJA ARVOJA EI LUETA KOETTIMESTA. getComputedStyle antaa
+ * animoituvalle elementille sen HETKEN arvon, joten halon peitto ja
+ * skaala tulevat merkit.js:n vakioista (KOHDEMERKIN_HALO_*), eivät
+ * koettimesta. Vain värit ja viivanleveydet luetaan.
+ *
+ * NON-SCALING-STROKE: CSS:ssä halon viiva pysyy 3,4 px:nä skaalauksesta
+ * riippumatta. GL-kerroksessa syke skaalaa koko spriten, joten viiva
+ * hengittää mukana ±7 %. Ero on silmälle olematon ja se on hinta siitä,
+ * että hengitys tulee valmiista uniformista eikä uudesta rasterista
+ * joka kehys.
+ */
+
+/** Kohdemerkin rasterin pehmuste (px): halon viiva ja sykkeen varaa. */
+export const KOHTEEN_PEHMUSTE_PX = 4;
+
+/**
+ * Kohdemerkin asu CSS:stä. `far` = askelpiste ilman kaupunkia
+ * (.target-halo.fokus.far, .target-piste.far). Vara-arvot ovat samat
+ * kuin css/styles.css:ssä.
+ */
+export function lueKohteenAsu(kotelo, doc = globalThis.document, far = false) {
+  const vara = {
+    haloVari: 'rgba(234, 184, 78, 1)',
+    haloLeveys: far ? 2.4 : 3.4,
+    levy: far ? 'rgba(246, 210, 122, 0.55)' : 'rgba(246, 210, 122, 0.72)',
+    viiva: 'rgba(150, 62, 48, 0.95)',
+    viivaLeveys: far ? 2.2 : 3,
+    katko: far ? [4, 3] : [6, 4],
+  };
+  if (!doc?.createElementNS || !kotelo?.appendChild) return vara;
+  try {
+    const NS = 'http://www.w3.org/2000/svg';
+    const svg = doc.createElementNS(NS, 'svg');
+    svg.setAttribute('aria-hidden', 'true');
+    svg.style.cssText = 'position:absolute;width:1px;height:1px;opacity:0;pointer-events:none';
+    const keha = doc.createElementNS(NS, 'circle');
+    keha.setAttribute('class', far ? 'target-halo fokus far' : 'target-halo fokus');
+    const levy = doc.createElementNS(NS, 'circle');
+    levy.setAttribute('class', far ? 'target-piste far' : 'target-piste');
+    svg.append(keha, levy);
+    kotelo.appendChild(svg);
+    const ck = getComputedStyle(keha);
+    const cl = getComputedStyle(levy);
+    const katko = (cl.strokeDasharray || '').split(/[\s,]+/).map((n) => parseFloat(n)).filter((n) => n > 0);
+    const ulos = {
+      // Peitto ja skaala EIVÄT tule tästä: ne ovat animoituja (ks. yllä).
+      haloVari: ck.stroke && ck.stroke !== 'none' ? ck.stroke : vara.haloVari,
+      haloLeveys: parseFloat(ck.strokeWidth) || vara.haloLeveys,
+      levy: cl.fill && cl.fill !== 'none' ? cl.fill : vara.levy,
+      viiva: cl.stroke && cl.stroke !== 'none' ? cl.stroke : vara.viiva,
+      viivaLeveys: parseFloat(cl.strokeWidth) || vara.viivaLeveys,
+      katko: katko.length ? katko : vara.katko,
+    };
+    svg.remove();
+    return ulos;
+  } catch {
+    return vara;
+  }
+}
+
+/** Kohteen nimen asu CSS:stä (.target-nimi) — sama koetin kuin lueNimenAsu. */
+export function lueKohteenNimenAsu(kotelo, doc = globalThis.document) {
+  const vara = {
+    kirjasin: '"Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif',
+    muste: 'rgba(60, 48, 38, 1)', halo: 'rgba(247, 237, 216, 0.92)', haloLeveys: 3, tyyli: 'normal',
+  };
+  if (!doc?.createElementNS || !kotelo?.appendChild) return vara;
+  try {
+    const NS = 'http://www.w3.org/2000/svg';
+    const svg = doc.createElementNS(NS, 'svg');
+    svg.setAttribute('aria-hidden', 'true');
+    svg.style.cssText = 'position:absolute;width:1px;height:1px;opacity:0;pointer-events:none';
+    const teksti = doc.createElementNS(NS, 'text');
+    teksti.setAttribute('class', 'target-nimi');
+    teksti.textContent = 'x';
+    svg.appendChild(teksti);
+    kotelo.appendChild(svg);
+    const cs = getComputedStyle(teksti);
+    const stroke = cs.stroke && cs.stroke !== 'none' ? cs.stroke : null;
+    const ulos = {
+      kirjasin: cs.fontFamily || vara.kirjasin,
+      muste: cs.fill || vara.muste,
+      halo: stroke,
+      haloLeveys: stroke ? parseFloat(cs.strokeWidth) || 0 : 0,
+      tyyli: cs.fontStyle || 'normal',
+    };
+    svg.remove();
+    return ulos;
+  } catch {
+    return vara;
+  }
+}
+
+/** Yhteinen kangas ympyrälle: säde CSS-px, pehmuste viivalle. */
+const kohteenKangas = (sadePx, viiva, dpr, luoKangas) => {
+  const r = Math.max(0.5, sadePx) * dpr;
+  const koko = Math.ceil(2 * (r + viiva * dpr + KOHTEEN_PEHMUSTE_PX * dpr));
+  return { r, koko, kangas: luoKangas(koko, koko) };
+};
+
+/**
+ * Halokehä KESKIASTEESEEN piirrettynä (KOHDEMERKIN_HALO_KESKI): rungon
+ * syke-uniform heiluttaa sitä kapeamman ja laajemman välillä ja peitto
+ * hengittää vastavaiheessa (glnimiot-sovitin.js).
+ */
+export function rasteroiKohdeHalo({ sadePx, asu, keskiaste = 1.28 }, dpr, luoKangas = (w, h) => {
+  const k = document.createElement('canvas');
+  k.width = w;
+  k.height = h;
+  return k;
+}) {
+  const { r, koko, kangas } = kohteenKangas(sadePx * keskiaste, asu.haloLeveys, dpr, luoKangas);
+  const ctx = kangas.getContext('2d');
+  ctx.beginPath();
+  ctx.arc(koko / 2, koko / 2, r, 0, Math.PI * 2);
+  ctx.strokeStyle = asu.haloVari;
+  ctx.lineWidth = Math.max(1, asu.haloLeveys * dpr);
+  ctx.stroke();
+  return { kuva: kangas, w: koko, h: koko, ankkuriX: koko / 2, ankkuriY: koko / 2, skaala: 1 / dpr, katto: null };
+}
+
+/*
+ * LEVY JA NIMI SAMAAN RASTERIIN, EI SIIRTOA. Rungon verteksivarjostin
+ * kertoo siirron kuoren kertoimella (`siirto * kerroin`), joten
+ * ruutuvakiona pysyvää nimen etäisyyttä ei voi antaa siirtona: nimi
+ * liikkuisi zoomissa. Siksi levy ja nimi piirretään SAMAAN kankaaseen
+ * kuten CSS2D:n svg:ssä (merkit.js kohdeElementti), ja molemmat
+ * spritet istuvat maapisteessä ilman siirtoa. Halo on oma spritensä,
+ * koska vain se hengittää.
+ */
+
+/** Kultalevy, punamullan katkoviiva ja (kaupungilla) nimi sen yläpuolella. */
+export function rasteroiKohdeMerkki({
+  sadePx, asu, nimi = '', nimenAsu = null, nimenKoko = 13, nimenSade = 0, nimenRako = 8,
+}, dpr, luoKangas = (w, h) => {
+  const k = document.createElement('canvas');
+  k.width = w;
+  k.height = h;
+  return k;
+}) {
+  const r = Math.max(0.5, sadePx) * dpr;
+  const pehmuste = (asu.viivaLeveys + KOHTEEN_PEHMUSTE_PX) * dpr;
+  const mitta = luoKangas(1, 1).getContext('2d');
+  const kirjasin = nimi && nimenAsu
+    ? `${nimenAsu.tyyli === 'italic' ? 'italic ' : ''}${nimenKoko * dpr}px ${nimenAsu.kirjasin}`
+    : '';
+  let nimenLeveys = 0;
+  if (kirjasin) { mitta.font = kirjasin; nimenLeveys = mitta.measureText(nimi).width; }
+  const nimenHalo = (nimenAsu?.haloLeveys || 0) * dpr;
+  // Nimen keskilinja merkin keskipisteen YLÄPUOLELLA (CSS: y = -(nimenSade + rako),
+  // alphabetic-peruslinja; keskilinja on siitä ~0,32 em ylempänä).
+  const nimenY = nimi ? (nimenSade + nimenRako) * dpr + 0.32 * nimenKoko * dpr : 0;
+  const ylos = Math.max(r + pehmuste, nimenY + nimenKoko * dpr * 0.7 + nimenHalo);
+  const alas = r + pehmuste;
+  const leveys = Math.max(2 * (r + pehmuste), nimenLeveys + 2 * nimenHalo + 2 * dpr);
+  const w = Math.max(1, Math.ceil(leveys));
+  const h = Math.max(1, Math.ceil(ylos + alas));
+  const kangas = luoKangas(w, h);
+  const ctx = kangas.getContext('2d');
+  const kx = w / 2;
+  const ky = ylos; // merkin keskipiste kankaalla
+  ctx.beginPath();
+  ctx.arc(kx, ky, r, 0, Math.PI * 2);
+  ctx.fillStyle = asu.levy;
+  ctx.fill();
+  ctx.strokeStyle = asu.viiva;
+  ctx.lineWidth = Math.max(1, asu.viivaLeveys * dpr);
+  if (ctx.setLineDash) ctx.setLineDash(asu.katko.map((n) => n * dpr));
+  ctx.stroke();
+  if (ctx.setLineDash) ctx.setLineDash([]);
+  if (kirjasin) {
+    ctx.font = kirjasin;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.lineJoin = 'round';
+    if (nimenAsu.halo && nimenHalo > 0) {
+      ctx.strokeStyle = nimenAsu.halo;
+      ctx.lineWidth = nimenHalo;
+      ctx.strokeText(nimi, kx, ky - nimenY);
+    }
+    ctx.fillStyle = nimenAsu.muste;
+    ctx.fillText(nimi, kx, ky - nimenY);
+  }
+  return { kuva: kangas, w, h, ankkuriX: kx, ankkuriY: ky, skaala: 1 / dpr, katto: null };
 }
 
 /** Tyylit, jotka nappulan svg:stä kopioidaan inline ennen sarjallistusta. */
@@ -406,6 +614,46 @@ export function luoRasterilahde({
     const avain = `piste|${Number(d.sadePx).toFixed(2)}|${d.vari}|${d.reuna ?? ''}|${dpr}`;
     return { osa: 'piste', ...tuotanto(avain, async () => rasteroiPiste(d, dpr, luoKangas ?? undefined)) };
   };
+  /*
+   * KOHDEMERKKI: halo, levy ja nimi (ks. KOHDEMERKKI GL-KERROKSEEN).
+   * Asut luetaan kerran per far-laji ja pidetään muistissa — koetin
+   * koskee DOMia, eikä sitä haluta joka merkille.
+   */
+  const kohteenAsut = new Map();
+  const kohteenAsu = (far) => {
+    const avain = far ? 'far' : 'lahi';
+    let asu = kohteenAsut.get(avain);
+    if (!asu) { asu = lueKohteenAsu(kotelo, doc, far); kohteenAsut.set(avain, asu); }
+    return asu;
+  };
+  let kohteenNimenAsu = null;
+  const haeKohteenOsa = (d, osa) => {
+    const far = !d.city;
+    const sadePx = (far ? KOHDEMERKIN_PISTE_PX : KOHDEMERKIN_PX) / 2;
+    const asu = kohteenAsu(far);
+    if (osa === 'halo') {
+      const avain = `kohdehalo|${far ? 1 : 0}|${sadePx.toFixed(2)}|${dpr}`;
+      return { osa, ...tuotanto(avain, async () => rasteroiKohdeHalo(
+        { sadePx, asu, keskiaste: KOHDEMERKIN_HALO_KESKI }, dpr, luoKangas ?? undefined,
+      )) };
+    }
+    // Merkki = levy + nimi samassa rasterissa. Nimi vaatii fontit.
+    const nimi = d.city?.name ?? '';
+    const avain = `kohdemerkki|${far ? 1 : 0}|${sadePx.toFixed(2)}|${nimi}|${dpr}`;
+    if (nimi && !fontitValmiit) return { osa, avain, valmis: false };
+    if (nimi && !kohteenNimenAsu) kohteenNimenAsu = lueKohteenNimenAsu(kotelo, doc);
+    return { osa, ...tuotanto(avain, async () => rasteroiKohdeMerkki({
+      sadePx,
+      asu,
+      nimi,
+      nimenAsu: nimi ? kohteenNimenAsu : null,
+      nimenKoko: KOHDEMERKIN_NIMI_PX,
+      nimenSade: sadePx * KOHDEMERKIN_HALO_LAAJIN,
+      nimenRako: KOHDEMERKIN_NIMI_RAKO_PX,
+    }, dpr, luoKangas ?? undefined)) };
+  };
+  /** Kohteen spritet: hengittävä halo ja merkki (levy + nimi). */
+  const haeKohde = (d) => [haeKohteenOsa(d, 'halo'), haeKohteenOsa(d, 'merkki')];
 
   return {
     /** Datumin spritet: laji datumista (nimi: teksti; nosto: kategoria; piste: sadePx). */
@@ -413,12 +661,14 @@ export function luoRasterilahde({
       if (d.laji === 'nimi' || d.teksti) return [haeNimi(d)];
       if (d.laji === 'nappula') return [haeNappula(d)];
       if (d.laji === 'piste' || d.sadePx) return [haePiste(d)];
+      if (d.laji === 'kohde') return haeKohde(d);
       return haeNosto(d);
     },
     haeNimi: (d) => [haeNimi(d)],
     haeNappula: (d) => [haeNappula(d)],
     haeNosto,
     haePiste: (d) => [haePiste(d)],
+    haeKohde,
     tilaaRasterit: (f) => { tilaajat.add(f); return () => tilaajat.delete(f); },
     /** Kuoren kerroin (E2): kotelon --nimiokerroin, halpa luku. */
     kuorenKerroin: () => {
