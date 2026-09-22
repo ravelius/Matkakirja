@@ -80,7 +80,7 @@ Livia nokkii taustalla murua ja huomaa kameran vasta kesken nokkaisun.
 | Lontoo | Taksikuski Ned kääntyy pysäytetyn mustan taksin ratista takapenkille | Sumuinen lasi ja vanha katulamppu; selitystä ei näytetä | Tyylikoe valmis |
 | Amsterdam | Willem pysähtyy nykyajan kaupunkipyörällä kanaalisillalle | Vanhat kattokoukut taustassa; käyttötapaa ei näytetä | Tyylikoe valmis |
 | Venetsia | Lucia keskeyttää naamioiden lastauksen sähköiseen kuljetusveneeseen | Suljettu pitkänokkainen naamio; nokan sisältöä ei näytetä | Tyylikoe valmis |
-| Budapest | Márta ja aikuinen tytär Réka juovat smoothieita modernissa lasiatriumissa | Kolme erillistä kaupunkimerkkiä; yhdistävää vastausta ei näytetä | Tyylikoe valmis |
+| Budapest | Márta nojaa Széchenyin kylpylän porttiin sinisessä iltavalossa | Kolme erillistä kaupunkimerkkiä; yhdistävää vastausta ei näytetä | Tyylikoe valmis (korjattu 22.9.2026 — "Réka"-tytär oli dokumentaatiovirhe kahden eri kuvakonseptin sekoittumisesta; äiti-tytär/smoothie-konsepti on aktiivinen:false eikä käytössä) |
 | Istanbul | 52-vuotias konservointi-insinööri Emine roikkuu turvallisesti pää alaspäin vesisäiliössä | Pylväät ja vesi; Medusan asentoa ei näytetä | Tyylikoe valmis |
 | Wien | 64-vuotias Anton jatkaa juoksuaskelta ja kääntää vain päänsä pelaajaan | Vanha pörssirakennus bokehissa; päivämäärää ei näytetä | Tyylikoe valmis |
 | Pariisi | Colette avaa bouquiniste-kojua Maëlle-tyttärensä kanssa; Pulu jää vahingossa kuvaan | Vanha nimetön kirja ja vihreä koju; etymologiaa ei näytetä | Tyylikoe valmis |
