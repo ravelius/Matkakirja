@@ -696,6 +696,591 @@ export const KOHTAAMISET = {
     tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
   },
   /*
+   * Erä C2 (22.9.2026). Ateena ON tarinakaaren (KAARI_PAKETIT id
+   * 'ateena') kaupunki, jonka kaaren kohtaaminen on eri hahmo,
+   * marmorikonservaattori Dafni Akropoliin restaurointityömaalla
+   * (js/packs/fokusvirta-ateena.js) — tämän rivin tervehdys on
+   * kaupungin MYÖHEMPIEN visojen avaus, sama rakenne kuin Roomassa
+   * (Enzo/Fabrizio). Vanha kilpaileva kuvakonsepti "Nikos" on
+   * kanonisesti korvattu Dafnilla eikä kelpaa tähän riviin. 1873-
+   * fakta: nykyinen marmorinen Panathinaikoksen stadion (Kallimarmaro)
+   * valmistui vasta 1895-96 — isoisän aikaan 1873 paikalla oli vasta
+   * Zillerin 1869-70 maastokaivaus (en-Wikipedia "Panathenaic
+   * Stadium", "Zappas Olympics", tarkistettu 22.9.2026).
+   */
+  ateena: {
+    hahmo: 'juoksuvalmentaja Iason',
+    nappi: 'Tapaa Iason',
+    frame: 'Iason pysäyttää sekuntikellon ja kysyy',
+    tervehdys: 'Iason pysäyttää sekuntikellonsa portailla: "Isoisäsi '
+      + 'aikaan täällä ei ollut edes marmoria, saati maalilinjaa. '
+      + 'Näytä että tunnet maailmaa kuten piirtäjä — niin kerron, mitä '
+      + 'hän ei vielä nähnyt."',
+    tervehdysLuenta: [
+      { rooli: 'kertoja', teksti: 'Iason pysäyttää sekuntikellonsa '
+        + 'portailla:' },
+      { rooli: 'hahmo', teksti: '[curious] "Isoisäsi aikaan täällä ei '
+        + 'ollut edes marmoria, saati maalilinjaa. [warmly] Näytä '
+        + 'että tunnet maailmaa kuten piirtäjä — niin kerron, mitä '
+        + 'hän ei vielä nähnyt."' },
+    ],
+    loyto: 'Iason nostaa rasian portaan raosta pysäyttämättä kelloa: '
+      + '"Tämä on ollut täällä pidempään kuin ratani. Löytö voittaa '
+      + 'hyvän ajan."',
+    loytoLuenta: [
+      { rooli: 'kertoja', teksti: 'Iason nostaa rasian portaan raosta '
+        + 'pysäyttämättä kelloa:' },
+      { rooli: 'hahmo', teksti: '[curious] "Tämä on ollut täällä '
+        + 'pidempään kuin ratani. [excited] Löytö voittaa hyvän '
+        + 'ajan."' },
+    ],
+    tyhja: 'Iason koputtaa porrasta kengällään: "Tyhjä. Nämä kivet on '
+      + 'nostettu ja siirretty niin monesti, ettei mikään pysy '
+      + 'paikoillaan."',
+    vaarin: 'Iason katsoo kelloaan: "Ei vielä. Kierrä radan verran ja '
+      + 'mieti uudestaan."',
+    /*
+     * Tunnetagit (docs/pulu-reaktiot.md E2). Kaikki neljä rekisterin
+     * oletukset — Iason kiinnostuu vanhasta kirjasta kesken
+     * harjoituksen, ei vielä lämmin.
+     */
+    tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
+    tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
+    tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
+  },
+  /*
+   * Erä C2 (22.9.2026). Kuva jo hyväksytty (js/kohtaamiskuvat-data.js
+   * budapest-marta-kylpyla-a, tila 'tarkistettu', ei aktiivinen:false)
+   * — toinen Budapest-rivi (aiti-tytar-smoothie) on aktiivinen:false
+   * eikä käytössä. docs/kuvatuotanto-kohtaamiset.md:n taulukon "Márta
+   * ja tytär Réka" on dokumentaatiovirhe (sekoittaa kaksi eri
+   * konseptia) — korjattava. 1873-fakta: Budapest syntyi virallisesti
+   * 17.11.1873 kun Buda, Pest ja Óbuda yhdistyivät — täsmälleen
+   * isoisän matkavuosi (en-Wikipedia "Budapest", "History of
+   * Budapest").
+   */
+  budapest: {
+    hahmo: 'kylpylänvartija Márta',
+    nappi: 'Tapaa Márta',
+    frame: 'Márta nojaa kylpylän porttiin ja kysyy',
+    tervehdys: 'Márta nojaa Széchenyin kylpylän porttiin '
+      + 'sulkemisaikaan, kädet puuskassa: "Isoisäsi kirja puhuu '
+      + 'varmaan Budasta ja Pestistä kahtena eri kaupunkina. Näytä '
+      + 'että tunnet maailmaa kuten piirtäjä — niin kerron, milloin '
+      + 'niistä tuli yksi."',
+    tervehdysLuenta: [
+      { rooli: 'kertoja', teksti: 'Márta nojaa Széchenyin kylpylän '
+        + 'porttiin sulkemisaikaan, kädet puuskassa:' },
+      { rooli: 'hahmo', teksti: '[curious] "Isoisäsi kirja puhuu '
+        + 'varmaan Budasta ja Pestistä kahtena eri kaupunkina. '
+        + '[warmly] Näytä että tunnet maailmaa kuten piirtäjä — niin '
+        + 'kerron, milloin niistä tuli yksi."' },
+    ],
+    loyto: 'Márta ojentaa rasian höyryn läpi: "Tämä lojui kylpylän '
+      + 'kellarissa vuosikymmeniä. Kolme kaupunkia, yksi rasia — '
+      + 'sopivaa, eikö?"',
+    loytoLuenta: [
+      { rooli: 'kertoja', teksti: 'Márta ojentaa rasian höyryn läpi:' },
+      { rooli: 'hahmo', teksti: '[warmly] "Tämä lojui kylpylän '
+        + 'kellarissa vuosikymmeniä. [excited] Kolme kaupunkia, yksi '
+        + 'rasia — sopivaa, eikö?"' },
+    ],
+    tyhja: 'Márta pudistaa päätään altaan reunalla: "Tyhjä. Kylpylää '
+      + 'on remontoitu niin monesti, ettei mikään pysy paikallaan."',
+    vaarin: 'Márta virnistää ja ravistaa vettä käsistään: "Ei vielä. '
+      + 'Höyry hämärtää näön — kokeile toista kulmaa."',
+    /*
+     * Tunnetagit (docs/pulu-reaktiot.md E2). Tervehdys: Márta testaa
+     * tulijaa kädet puuskassa ja virnistäen — sama uteliaan haastava
+     * rekisterin poikkeus kuin Leilalla/Colettella. Muut kolme
+     * rekisterin oletukset.
+     */
+    tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.55 },
+    tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
+    tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
+  },
+  /*
+   * Erä C2 (22.9.2026). Ei aiempaa kuvamateriaalia — kokonaan uusi
+   * hahmo, uusi Codex-tilaus. 1873-fakta: Firenze oli Italian
+   * kuningaskunnan väliaikainen pääkaupunki 1865-1871 (Torinon
+   * jälkeen), asema siirtyi Roomaan heinäkuussa 1871 kun Rooma oli
+   * liitetty Italiaan syyskuussa 1870 — isoisän 1873-matka osui vain
+   * kaksi vuotta muutoksen jälkeen (yleisesti tunnettu Italian
+   * yhdistymishistorian fakta). Fablen korjaus 22.9.2026: tervehdys
+   * ei väitä kaupunkia yhä pääkaupungiksi (väärin — se oli JO
+   * menettänyt asemansa) ja käyttää vakiokaavaa "kuten piirtäjä".
+   */
+  firenze: {
+    hahmo: 'kultaseppä Ilaria',
+    nappi: 'Tapaa Ilaria',
+    frame: 'Ilaria nostaa katseensa suurennuslasin takaa ja kysyy',
+    tervehdys: 'Ilaria nostaa katseensa suurennuslasin takaa: '
+      + '"Isoisäsi näki kaupungin, joka oli juuri menettänyt '
+      + 'pääkaupungin arvonsa Roomalle — puoli kaupunkia oli vielä '
+      + 'muutosta poissa tolaltaan. Näytä että tunnet maailmaa kuten '
+      + 'piirtäjä — niin kerron, mikä ikkunan takana ei ole muuttunut."',
+    tervehdysLuenta: [
+      { rooli: 'kertoja', teksti: 'Ilaria nostaa katseensa '
+        + 'suurennuslasin takaa:' },
+      { rooli: 'hahmo', teksti: '[curious] "Isoisäsi näki kaupungin, '
+        + 'joka oli juuri menettänyt pääkaupungin arvonsa Roomalle — '
+        + 'puoli kaupunkia oli vielä muutosta poissa tolaltaan. '
+        + '[warmly] Näytä että tunnet maailmaa kuten piirtäjä — niin '
+        + 'kerron, mikä ikkunan takana ei ole muuttunut."' },
+    ],
+    loyto: 'Ilaria pyyhkii rasian liinalla ennen kuin ojentaa sen: '
+      + '"Tämä on ollut lukossa kauemmin kuin minä olen elänyt. Nyt '
+      + 'se aukeaa!"',
+    loytoLuenta: [
+      { rooli: 'kertoja', teksti: 'Ilaria pyyhkii rasian liinalla '
+        + 'ennen kuin ojentaa sen:' },
+      { rooli: 'hahmo', teksti: '[softly] "Tämä on ollut lukossa '
+        + 'kauemmin kuin minä olen elänyt. [excited] Nyt se aukeaa!"' },
+    ],
+    tyhja: 'Ilaria kääntää vanhan laatikon ylösalaisin: "Tyhjä. Tässä '
+      + 'työpajassa on siivottu satakunta kertaa isoisäni jälkeen."',
+    vaarin: 'Ilaria laskee suurennuslasin pöydälle: "Ei vielä. Kulta '
+      + 'ei paljasta itseään kiireessä, eikä tämäkään."',
+    /*
+     * Tunnetagit (docs/pulu-reaktiot.md E2). Kaikki neljä rekisterin
+     * oletukset — Ilaria on kiinnostunut kirjasta ja sen
+     * vanhentuneesta tiedosta, ei vielä lämmin eikä varautunut.
+     */
+    tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
+    tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
+    tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
+  },
+  /*
+   * Erä C2 (22.9.2026). Kuva jo hyväksytty (js/kohtaamiskuvat-data.js
+   * lissabon-ines-round2-r20260905-v1, tila 'tarkistettu' — vanhempi
+   * lissabon-ines-laattapaja on aktiivinen:false). 1873-fakta:
+   * Lissabonin ensimmäinen hevosraitiolinja (Carris) avattiin
+   * 17.11.1873; pelin kaanon (fokusvirta-lissabon.js) sijoittaa
+   * isoisän käynnin lokakuuhun 1873 eli ennen linjan avaamista
+   * (en-Wikipedia "Trams in Lisbon", tarkistettu 22.9.2026).
+   */
+  lissabon: {
+    hahmo: 'laattamaalari Inês',
+    nappi: 'Tapaa Inês',
+    frame: 'Inês nostaa laatan kuivaustelineeltä ja kysyy',
+    tervehdys: 'Inês nostaa laatan kuivaustelineeltä ja vilkaisee '
+      + 'kirjaasi. "Isoisäsi aikaan täällä kuljettiin vielä jalan — '
+      + 'hevosraitiovaunu avattiin vasta saman syksyn marraskuussa. '
+      + 'Näytä että tunnet maailmaa kuten piirtäjä, niin kerron mistä '
+      + 'laatta löytyy."',
+    tervehdysLuenta: [
+      { rooli: 'kertoja', teksti: 'Inês nostaa laatan '
+        + 'kuivaustelineeltä ja vilkaisee kirjaasi:' },
+      { rooli: 'hahmo', teksti: '[curious] "Isoisäsi aikaan täällä '
+        + 'kuljettiin vielä jalan — hevosraitiovaunu avattiin vasta '
+        + 'saman syksyn marraskuussa. [warmly] Näytä että tunnet '
+        + 'maailmaa kuten piirtäjä, niin kerron mistä laatta löytyy."' },
+    ],
+    loyto: 'Inês nostaa rasian uunin vierestä: "Tämä oli laatan alla '
+      + 'vuosia. Kukaan ei koskaan kysynyt, miksi se kuvio oli vino."',
+    loytoLuenta: [
+      { rooli: 'kertoja', teksti: 'Inês nostaa rasian uunin vierestä:' },
+      { rooli: 'hahmo', teksti: '[softly] "Tämä oli laatan alla '
+        + 'vuosia. [amused] Kukaan ei koskaan kysynyt, miksi se kuvio '
+        + 'oli vino."' },
+    ],
+    tyhja: 'Inês pyyhkii hyllyn tyhjäksi: "Ei mitään. Pajaa on '
+      + 'siirretty kahdesti tulipalon jälkeen."',
+    vaarin: 'Inês kääntää laatan takaisin telineelle: "Ei vielä. Savi '
+      + 'kuivuu hitaasti, ja niin kuivuu tietokin."',
+    /*
+     * Tunnetagit (docs/pulu-reaktiot.md E2). Kaikki neljä rekisterin
+     * oletukset — Inês toteaa historiallisen faktan ja esittää
+     * käytännön pyynnön mitattoman rauhallisesti.
+     */
+    tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
+    tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
+    tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
+  },
+  /*
+   * Erä C2 (22.9.2026). Sofia ON tarinakaaren (KAARI_PAKETIT id
+   * 'sofia') kaupunki, jonka kaaren hahmo on jo lähteenvartija Nadia
+   * mineraalilähteellä (kuva sofia-nadia-mineraalilahde-v2.jpg, tila
+   * 'tarkistettu') — koodikommentti js/kohtaamiskuvat-data.js:ssä
+   * vahvistaa suoraan "pelin kohtaamiskortille menee Sofiassa Nadia".
+   * Tämä rivi on siis SAMA hahmo (poikkeaa Rooma/Ateena-mallista,
+   * koska kaupungilla ei ole erillistä toista kuvakonseptia) — kaupungin
+   * MYÖHEMPIEN visojen avaus. 1873-fakta: Sofia oli 1873 yhä osaa
+   * Osmanien valtakuntaa; kaupungin kuumat mineraalilähteet olivat jo
+   * tuolloin arkikäytössä osmanien hamamissa (en-Wikipedia "Banya
+   * Bashi Mosque", "Sofia Central Mineral Baths", tarkistettu
+   * 22.9.2026) — neutraali, ei osmanikauden sortohuomautuksia.
+   */
+  sofia: {
+    hahmo: 'lähteenvartija Nadia',
+    nappi: 'Tapaa Nadia',
+    frame: 'Nadia kääntyy lähteeltä kauhaa käsissään ja kysyy',
+    tervehdys: 'Nadia laskee kauhansa altaan reunalle ja vilkaisee '
+      + 'vanhaa vihkoasi. "Tämä vesi kupli täällä jo isoisäsi aikaan, '
+      + 'kun kaupunki kuului vielä toiselle valtakunnalle. Näytä että '
+      + 'tunnet maailmaa kuten piirtäjä — niin kerron, mitä lähde '
+      + 'muistaa."',
+    tervehdysLuenta: [
+      { rooli: 'kertoja', teksti: 'Nadia laskee kauhansa altaan '
+        + 'reunalle ja vilkaisee vihkoasi:' },
+      { rooli: 'hahmo', teksti: '[curious] "Tämä vesi kupli täällä jo '
+        + 'isoisäsi aikaan, kun kaupunki kuului vielä toiselle '
+        + 'valtakunnalle. [warmly] Näytä että tunnet maailmaa kuten '
+        + 'piirtäjä — niin kerron, mitä lähde muistaa."' },
+    ],
+    loyto: 'Nadia nostaa rasian kauhan vierestä: "Tämä on täyttynyt '
+      + 'höyryssä vuosia. Kukaan ei tullut hakemaan sitä."',
+    loytoLuenta: [
+      { rooli: 'kertoja', teksti: 'Nadia nostaa rasian kauhan '
+        + 'vierestä:' },
+      { rooli: 'hahmo', teksti: '[softly] "Tämä on täyttynyt höyryssä '
+        + 'vuosia. [surprised] Kukaan ei tullut hakemaan sitä."' },
+    ],
+    tyhja: 'Nadia kääntää tyhjän kauhan ylösalaisin: "Ei mitään. '
+      + 'Höyry vie täältä yhtä paljon kuin vesi tuo."',
+    vaarin: 'Nadia täyttää kannun uudelleen: "Ei vielä. Lähde ei '
+      + 'ehdy — voit tulla kysymään huomennakin."',
+    /*
+     * Tunnetagit (docs/pulu-reaktiot.md E2). Tervehdys: Nadia on
+     * lämmin heti alusta, sama linja kuin kaaren omassa
+     * tunneKohtaaminen-arvossa (jatkuvuus hahmon äänessä). Muut kolme
+     * rekisterin oletukset.
+     */
+    tunneTervehdys: { tunne: 'lammin', voimakkuus: 0.5 },
+    tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
+    tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
+  },
+  /*
+   * Erä C2 (22.9.2026). Ainoa olemassa oleva Kööpenhamina-kuva (Freja,
+   * Tivolin karuselli) on jo hyväksytty kaupungin KAARI-kohtaamiseen
+   * (js/packs/fokusvirta-kobenhavn.js) — tämä rivi on siis kokonaan
+   * uusi hahmo ja paikka, ei Tivoli, uusi Codex-tilaus tarvitaan.
+   * 1873-fakta: polkupyörä oli 1870-luvulla Euroopassa vielä
+   * harvinainen, kallis muotivempain varakkaille nuorille miehille —
+   * arkinen käyttö ja Kööpenhaminan maine pyöräilykaupunkina tulivat
+   * vasta vuosikymmeniä myöhemmin (Cycling Embassy of Denmark
+   * "Danish cycling history", tarkistettu 22.9.2026; ei löytynyt
+   * tarkkaa vuotta polkupyörän saapumiselle kaupunkiin, joten fakta
+   * on rajattu yleiseen 1870-luvun ilmiöön).
+   */
+  kobenhavn: {
+    hahmo: 'pyörämekaanikko Sofie',
+    nappi: 'Tapaa Sofie',
+    frame: 'Sofie kääntää lastipyörän kyljelleen ja kysyy',
+    tervehdys: 'Sofie pyyhkii rasvaiset kädet farkkuihin ja vilkaisee '
+      + 'kirjaasi: "Isoisäsi aikaan tuollainen kahden pyörän härveli '
+      + 'oli kallis muotileikki harvoille herroille. Nyt koko '
+      + 'kaupunki kulkee näillä. Näytä että tunnet maailmaa kuten '
+      + 'piirtäjä — niin katson mitä rungosta löytyy."',
+    tervehdysLuenta: [
+      { rooli: 'kertoja', teksti: 'Sofie pyyhkii rasvaiset kädet '
+        + 'farkkuihin ja vilkaisee kirjaasi:' },
+      { rooli: 'hahmo', teksti: '[amused] "Isoisäsi aikaan tuollainen '
+        + 'kahden pyörän härveli oli kallis muotileikki harvoille '
+        + 'herroille. [warmly] Nyt koko kaupunki kulkee näillä. '
+        + '[curious] Näytä että tunnet maailmaa kuten piirtäjä — niin '
+        + 'katson mitä rungosta löytyy."' },
+    ],
+    loyto: 'Sofie kaivaa rasian satulatuesta ja hymyilee: "Tämä on '
+      + 'odottanut täällä kauemmin kuin yksikään rengas kestää."',
+    loytoLuenta: [
+      { rooli: 'kertoja', teksti: 'Sofie kaivaa rasian satulatuesta '
+        + 'ja hymyilee:' },
+      { rooli: 'hahmo', teksti: '[surprised] "Tämä on odottanut '
+        + 'täällä kauemmin kuin yksikään rengas kestää."' },
+    ],
+    tyhja: 'Sofie koputtaa runkoa ja pudistaa päätään: "Tyhjä. Tätä '
+      + 'pyörää on korjattu ja osista koottu niin monesti."',
+    vaarin: 'Sofie kiristää pultin uudelleen: "Ei ihan. Minäkin '
+      + 'arvasin väärin, ennen kuin opin katsomaan runkonumerosta."',
+    /*
+     * Tunnetagit (docs/pulu-reaktiot.md E2). Tervehdys: Sofie ei ole
+     * vain utelias kirjasta vaan lämpimän huvittunut vanhan ja
+     * nykyisen kontrastista — poikkeaa rekisterin oletuksesta samalla
+     * tavalla kuin Kemal/Otto. Muut kolme rekisterin oletukset.
+     */
+    tunneTervehdys: { tunne: 'lammin', voimakkuus: 0.55 },
+    tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
+    tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
+  },
+  /*
+   * Erä C3 (22.9.2026, docs/raportit/kohtaamiset-era-c3-20260922.md).
+   * Bukarestin kaari (KAARI_PAKETIT, 'bukarest') nimeää kellonsoittaja
+   * Anan, ja js/kohtaamiskuvat-data.js:n Ana-kuva (freskokonservointi)
+   * on kuvatuotannossa tarkentunut versio SAMASTA kaaren Anasta
+   * (tests/kohtaamiskuvat.test.mjs sitoo kuvan kaaren henkilo-kenttään)
+   * — varattu kaaren omaan kohtaamiseen. Tämä rivi on siis kokonaan eri
+   * hahmo, ei kirkkoa eikä kelloa. Ei kuvaa vielä, uusi tilaus tehty.
+   */
+  bukarest: {
+    hahmo: 'katusoittaja Radu',
+    nappi: 'Tapaa Radu',
+    frame: 'Radu laskee viulun sylistään ja kysyy',
+    tervehdys: 'Radu laskee viulun sylistään, kun Ateneumin ovet '
+      + 'sammuvat viimeisen kerran illaksi: "Isoisäsi aikaan tätä '
+      + 'taloa ei ollut edes suunniteltu — keräsivät leun kerrallaan. '
+      + 'Näytä että tunnet maailmaa kuten piirtäjä — niin soitan '
+      + 'kappaleen, jota he eivät vielä osanneet toivoa."',
+    tervehdysLuenta: [
+      { rooli: 'kertoja', teksti: 'Radu laskee viulun sylistään, kun '
+        + 'Ateneumin ovet sammuvat viimeisen kerran illaksi:' },
+      { rooli: 'hahmo', teksti: '[curious] "Isoisäsi aikaan tätä taloa '
+        + 'ei ollut edes suunniteltu — keräsivät leun kerrallaan. '
+        + '[warmly] Näytä että tunnet maailmaa kuten piirtäjä — niin '
+        + 'soitan kappaleen, jota he eivät vielä osanneet toivoa."' },
+    ],
+    loyto: 'Radu avaa rasian viulunkotelon päällä koskematta kieliin: '
+      + '"Löysit sen ennen minua. Tämän kadun kolot kaikuvat isoisäsi '
+      + 'askelia."',
+    loytoLuenta: [
+      { rooli: 'kertoja', teksti: 'Radu avaa rasian viulunkotelon '
+        + 'päällä koskematta kieliin:' },
+      { rooli: 'hahmo', teksti: '[softly] "Löysit sen ennen minua. '
+        + '[warmly] Tämän kadun kolot kaikuvat isoisäsi askelia."' },
+    ],
+    tyhja: 'Radu koputtaa penkin alle katsomatta: "Tyhjä. Täällä käy '
+      + 'iltaisin enemmän väkeä kuin luulisi — joku ehti ensin."',
+    vaarin: 'Radu virittää kieltä kuuntelematta vastausta: "Ei vielä. '
+      + 'Sävelkin löytyy vasta kolmannella yrityksellä."',
+    tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
+    tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
+    tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
+  },
+  /*
+   * Erä C3 (22.9.2026). Oslon kaari (KAARI_PAKETIT, 'oslo') nimeää
+   * maisemakuvaaja Livin (pellot, harjut, Gjellestadin laiva), ja
+   * hänen kuvansa (oslo-liv-992a171d5df6) on varattu kaaren omaan
+   * kohtaamiseen. Tämä rivi on kaupungissa (ei pellolla), eri hahmo.
+   * 1873-fakta: kaupunki kirjoitettiin vielä "Christiania" — K-muoto
+   * "Kristiania" tuli vasta 1877, "Oslo" vasta 1925.
+   */
+  oslo: {
+    hahmo: 'kirjapainaja Halvor',
+    nappi: 'Tapaa Halvor',
+    frame: 'Halvor nostaa katseensa vanhasta ladontakoneesta ja kysyy',
+    tervehdys: 'Halvor pyörittää lyijykirjainta sormissaan: "Tämä '
+      + 'laatikko on ladottu vielä C:llä — Christiania. Kukaan ei '
+      + 'enää käytä sitä nimeä painossa. Näytä että tunnet maailmaa '
+      + 'kuten piirtäjä — niin kerron, mistä laatikko oikein tuli."',
+    tervehdysLuenta: [
+      { rooli: 'kertoja', teksti: 'Halvor pyörittää lyijykirjainta '
+        + 'sormissaan:' },
+      { rooli: 'hahmo', teksti: '[curious] "Tämä laatikko on ladottu '
+        + 'vielä C:llä — Christiania. Kukaan ei enää käytä sitä '
+        + 'nimeä painossa. [warmly] Näytä että tunnet maailmaa kuten '
+        + 'piirtäjä — niin kerron, mistä laatikko oikein tuli."' },
+    ],
+    loyto: 'Halvor nostaa rasian pöydän alta, sormet mustina '
+      + 'musteesta: "Tämä on maannut täällä kauemmin kuin olen '
+      + 'ladonnut yhtään lehteä."',
+    loytoLuenta: [
+      { rooli: 'kertoja', teksti: 'Halvor nostaa rasian pöydän alta, '
+        + 'sormet mustina musteesta:' },
+      { rooli: 'hahmo', teksti: '[softly] "Tämä on maannut täällä '
+        + 'kauemmin kuin olen ladonnut yhtään lehteä."' },
+    ],
+    tyhja: 'Halvor pyyhkii kätensä rätillä: "Tyhjä. Painoa on '
+      + 'siivottu niin monta kertaa, ettei mikään pysy hyllyssä '
+      + 'vuosikymmentä."',
+    vaarin: 'Halvor asettaa kirjaimen takaisin laatikkoon: "Ei vielä. '
+      + 'Latojakin erehtyy täällä joka päivä — kokeile toista '
+      + 'riviä."',
+    tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
+    tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
+    tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
+  },
+  /*
+   * Erä C3 (22.9.2026). Tampereella ei ole tarinakaarta eikä
+   * aiempaa kuvakonseptia — puhdas uusi kaupunki. 1873-fakta: rata
+   * Tampereelle avattiin vasta 1876, kolme vuotta isoisän matkan
+   * jälkeen, joten hänen olisi pitänyt matkustaa maa- tai vesiteitse.
+   */
+  tampere: {
+    hahmo: 'junailija Aatu',
+    nappi: 'Tapaa Aatu',
+    frame: 'Aatu pitää kättä junan ovella ja kysyy',
+    tervehdys: 'Aatu pitää kättä junan ovella ja vilkaisee kirjaasi: '
+      + '"Isoisäsi matkan aikaan tätä asemaa ei ollut olemassakaan — '
+      + 'rata avattiin vasta kolme vuotta myöhemmin. Näytä että '
+      + 'tunnet maailmaa kuten piirtäjä — niin kerron, mistä hän '
+      + 'oikeasti pääsi tänne."',
+    tervehdysLuenta: [
+      { rooli: 'kertoja', teksti: 'Aatu pitää kättä junan ovella ja '
+        + 'vilkaisee kirjaasi:' },
+      { rooli: 'hahmo', teksti: '[curious] "Isoisäsi matkan aikaan '
+        + 'tätä asemaa ei ollut olemassakaan — rata avattiin vasta '
+        + 'kolme vuotta myöhemmin. [warmly] Näytä että tunnet '
+        + 'maailmaa kuten piirtäjä — niin kerron, mistä hän oikeasti '
+        + 'pääsi tänne."' },
+    ],
+    loyto: 'Aatu kaivaa rasian aseman vanhasta kaapista: "Tämä on '
+      + 'lojunut täällä kauemmin kuin rautatie itse. Nyt se löysi '
+      + 'omistajan."',
+    loytoLuenta: [
+      { rooli: 'kertoja', teksti: 'Aatu kaivaa rasian aseman '
+        + 'vanhasta kaapista:' },
+      { rooli: 'hahmo', teksti: '[curious] "Tämä on lojunut täällä '
+        + 'kauemmin kuin rautatie itse. [excited] Nyt se löysi '
+        + 'omistajan."' },
+    ],
+    tyhja: 'Aatu avaa tyhjän kaapin: "Tyhjä. Asemaa on remontoitu '
+      + 'niin monesti, ettei mikään pysy paikallaan."',
+    vaarin: 'Aatu vilkaisee kelloa: "Ei vielä. Juna ei lähde ilman '
+      + 'minua — sinulla on aikaa."',
+    tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
+    tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
+    tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
+  },
+  /*
+   * Erä C3 (22.9.2026). Dublinin kaari (KAARI_PAKETIT, 'dublin')
+   * nimeää sillanvartija Mollyn (Ha'penny Bridge, lantit), ja
+   * MOLEMMAT olemassa olevat Molly-kuvat (dublin-molly-kassa,
+   * arkistoitu; dublin-molly-hapenny, aktiivinen) ovat varattuja
+   * kaarelle. Tämä rivi vaihtaa myös aiheen (vesijohto, ei
+   * raitiovaunu) ettei toista Lissabonin (erä C2) samaa kuviota.
+   * 1873-fakta: Vartry-vesijärjestelmä (Wicklow'n vuoret) korvasi
+   * likaisen kanavaveden 1860-luvulla.
+   */
+  dublin: {
+    hahmo: 'putkiasentaja Niamh',
+    nappi: 'Tapaa Niamh',
+    frame: 'Niamh nousee kaivannosta ja kysyy',
+    tervehdys: 'Niamh nousee avonaisesta kaivannosta ja pyyhkii '
+      + 'kädet housuihinsa: "Isoisäsi aikaan putki oli uusi — '
+      + 'kanavavesi vaihtui Wicklow’n vuorten veteen 1860-luvulla. '
+      + 'Näytä että tunnet maailmaa kuten piirtäjä — niin kerron, '
+      + 'mistä se tulee."',
+    tervehdysLuenta: [
+      { rooli: 'kertoja', teksti: 'Niamh nousee avonaisesta '
+        + 'kaivannosta ja pyyhkii kädet housuihinsa:' },
+      { rooli: 'hahmo', teksti: '[curious] "Isoisäsi aikaan putki '
+        + 'oli uusi — kanavavesi vaihtui Wicklow’n vuorten veteen '
+        + '1860-luvulla. [warmly] Näytä että tunnet maailmaa kuten '
+        + 'piirtäjä — niin kerron, mistä se tulee."' },
+    ],
+    loyto: 'Niamh nostaa rasian putkikaivannon reunalta: "Tämä on '
+      + 'maannut syvemmällä kuin yksikään putki, jota olen '
+      + 'vaihtanut."',
+    loytoLuenta: [
+      { rooli: 'kertoja', teksti: 'Niamh nostaa rasian '
+        + 'putkikaivannon reunalta:' },
+      { rooli: 'hahmo', teksti: '[surprised] "Tämä on maannut '
+        + 'syvemmällä kuin yksikään putki, jota olen vaihtanut."' },
+    ],
+    tyhja: 'Niamh kolauttaa kaivannon seinää lapiolla: "Tyhjä. Tätä '
+      + 'katua on kaivettu auki niin monesti, ettei mikään pysy '
+      + 'paikallaan."',
+    vaarin: 'Niamh nojaa lapioon ja pyyhkii otsaansa: "Ei vielä. '
+      + 'Kaivanto odottaa huomennakin — putket eivät ole minnekään '
+      + 'menossa."',
+    tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
+    tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
+    tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
+  },
+  /*
+   * Erä C3 (22.9.2026). Granadan kaari (KAARI_PAKETIT, 'granada')
+   * nimeää puutarhuri Inésin (Generalife, kastelukourut), ja hänen
+   * kuvansa (granada-ines-e4ab59a7e815) on varattu kaaren omaan
+   * kohtaamiseen. Tämä rivi siirtyy Sacromonten luolakylään, eri
+   * hahmo ja eri fakta (Alhambran nimen etymologia on jo kaaren
+   * oma kysymys). 1873-fakta: Espanjan ensimmäinen tasavalta
+   * (11.2.1873–29.12.1874).
+   */
+  granada: {
+    hahmo: 'flamencoemäntä Pastora',
+    nappi: 'Tapaa Pastora',
+    frame: 'Pastora pysäyttää harjan kesken lakaisun ja kysyy',
+    tervehdys: 'Pastora lakaisee luolan kynnystä ja pysäyttää '
+      + 'harjan: "Isoisäsi vuonna Espanjassa oli tasavalta alle '
+      + 'kaksi vuotta — mutta zambra soi täällä joka ilta '
+      + 'silloinkin. Näytä että tunnet maailmaa kuten piirtäjä — '
+      + 'niin päästän sinut kuulemaan, mitä hän ei osannut '
+      + 'kirjoittaa."',
+    tervehdysLuenta: [
+      { rooli: 'kertoja', teksti: 'Pastora lakaisee luolan kynnystä '
+        + 'ja pysäyttää harjan:' },
+      { rooli: 'hahmo', teksti: '[curious] "Isoisäsi vuonna '
+        + 'Espanjassa oli tasavalta alle kaksi vuotta — mutta '
+        + 'zambra soi täällä joka ilta silloinkin. [warmly] Näytä '
+        + 'että tunnet maailmaa kuten piirtäjä — niin päästän sinut '
+        + 'kuulemaan, mitä hän ei osannut kirjoittaa."' },
+    ],
+    loyto: 'Pastora nostaa rasian kitarakotelon alta: "Tämä on '
+      + 'täällä pidempään kuin zambrani. Isoäitini olisi tanssinut '
+      + 'tälle illalle."',
+    loytoLuenta: [
+      { rooli: 'kertoja', teksti: 'Pastora nostaa rasian '
+        + 'kitarakotelon alta:' },
+      { rooli: 'hahmo', teksti: '[softly] "Tämä on täällä pidempään '
+        + 'kuin zambrani. [warmly] Isoäitini olisi tanssinut tälle '
+        + 'illalle."' },
+    ],
+    tyhja: 'Pastora koputtaa kalkittua seinää: "Tyhjä. Nämä seinät '
+      + 'on maalattu niin monesti, ettei mikään pysy piilossa."',
+    vaarin: 'Pastora pudistaa päätään hymyillen: "Ei vielä. '
+      + 'Kuuntele kitaraa vielä hetki ja mieti uudestaan."',
+    tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
+    tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
+    tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
+  },
+  /*
+   * Erä C3 (22.9.2026). Pietarin kaari (KAARI_PAKETIT, 'pietari')
+   * nimeää sellisti Polinan (Vitebskin asema, yö, Nevan sillat), ja
+   * hänen kuvansa (pietari-polina-6188e4c488db) on varattu kaaren
+   * omaan kohtaamiseen. Tämä rivi siirtyy päiväsaikaan Nevski
+   * prospektin varrelle. 1873-fakta: Katariina II:n patsas
+   * paljastettiin Aleksandrinskan aukiolla 24.11.1873.
+   */
+  pietari: {
+    hahmo: 'puutarhuri Larisa',
+    nappi: 'Tapaa Larisa',
+    frame: 'Larisa nousee ruusupenkereeltä patsaan juurella ja kysyy',
+    tervehdys: 'Larisa nousee ruusupenkereeltä patsaan juurella ja '
+      + 'pyyhkii mullan käsistään: "Keisarinna sai jalustansa vasta '
+      + 'tänä syksynä — koko puisto ympärillä on yhtä tuore kuin '
+      + 'pensaani. Näytä että tunnet maailmaa kuten piirtäjä — niin '
+      + 'kerron, mikä ruusuista ei kestä ensi pakkasta."',
+    tervehdysLuenta: [
+      { rooli: 'kertoja', teksti: 'Larisa nousee ruusupenkereeltä '
+        + 'patsaan juurella ja pyyhkii mullan käsistään:' },
+      { rooli: 'hahmo', teksti: '[curious] "Keisarinna sai '
+        + 'jalustansa vasta tänä syksynä — koko puisto ympärillä on '
+        + 'yhtä tuore kuin pensaani. [warmly] Näytä että tunnet '
+        + 'maailmaa kuten piirtäjä — niin kerron, mikä ruusuista ei '
+        + 'kestä ensi pakkasta."' },
+    ],
+    loyto: 'Larisa kaivaa rasian penkereen juuresta: "Arvasin, ettei '
+      + 'pensas kasvanut vinoon ilman syytä. Hyvä, etten repinyt '
+      + 'sitä pois."',
+    loytoLuenta: [
+      { rooli: 'kertoja', teksti: 'Larisa kaivaa rasian penkereen '
+        + 'juuresta:' },
+      { rooli: 'hahmo', teksti: '[softly] "Arvasin, ettei pensas '
+        + 'kasvanut vinoon ilman syytä. [amused] Hyvä, etten '
+        + 'repinyt sitä pois."' },
+    ],
+    tyhja: 'Larisa pudistaa multaa penkereeltä: "Tyhjä. Puutarha '
+      + 'kaivetaan täällä joka kevät uusiksi — mikään ei pysy '
+      + 'paikoillaan pitkään."',
+    vaarin: 'Larisa nojaa lapioon: "Ei vielä. Ruusut eivät kerro '
+      + 'salaisuuksiaan kiireiselle — palaa huomenna."',
+    tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
+    tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
+    tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
+  },
+  /*
    * Erä C4 (22.9.2026, docs/raportit/kohtaamiset-era-c4-20260922.md).
    * Tallinnan kaari (KAARI_PAKETIT, 'tallinna') nimeää opas Leenan
    * (raatihuoneen torni, vanhankaupungin päivät) — varattu kaaren omaan
