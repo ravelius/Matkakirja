@@ -1291,3 +1291,7 @@ Pelikoodari 22.9.2026 klo 17.20: v2113/v2114 ok (vartijat vihreinä mainia vaste
 ## INTERPOLOINNIN AIDOT VEDOT: SEKA UUSI (A) ETTA VANHA (B) FAIL (p10 ≈ 0,1, p90 4–9, PYSAHDYS 6–11 %); A LIEVASTI PAREMPI; FABLE EPAILEE HARNESSIN KAMERAN LUKUHETKEA (ENNEN TICKIA) — TARKISTUS ENNEN PALAUTUSTA (22.9.2026 klo 17.15)
 
 Laitetestaaja 22.9.2026 klo 17.30 (docs/raportit/seuraamisvirhe-interpolointi-20260922.md, data haarassa laitetestaaja a14fc1a21): Safari A p10 0,13 / p50 0,83 / p90 4,08 / pysähdys 6 %; Safari B (interpvanha) 0,06 / 0,75 / 4,69 / 11 %; Chrome A 0,17 / 0,96 / 8,19 / 9 %; Chrome B 0,15 / 1,14 / 8,95 / 10 %; 32/32 FAIL rajaa p10 > 0,7, p90 < 1,4 vasten; alku10: ensimmäinen kehys pointerdownista lähes aina pysähdys molemmissa. Fable: p90 4–21 on fysikaalisesti epäuskottava interpoloidulle kameralle → epäily harnessin lukuhetkestä (pointOfView luetaan omassa rAF:ssa ennen kirjaston tickiä → edellisen kehyksen kamera → 0/2× mittarin artefakti). Tarkistus: kamera luetaan onAfterRenderissä (kytkePallonKehys / __viimeisinKehys), syötelaskurit dataan; jos lukuhetki oli oikea, Pelikoodari palauttaa muutoksen kuten lupasi.
+
+## OMISTAJA: POLTTO 2026-09-22c KAYNNISTETAAN NYT (22.9.2026 klo 17.17)
+
+Omistaja 22.9.2026 klo 17.20: polton voi aloittaa. Karttaseppä ajaa ajo-20260922c (vesiviivat laudan yksiköihin, laikut maailmaan, hieno rae ennallaan, isobaatit 0,55, nimiöt g); CI-tauko ~2 h; polton jälkeen vedokset ja tasonvaihtomittaus. Julkaisija nollataan samaan aikaan (luovutus #2820).
