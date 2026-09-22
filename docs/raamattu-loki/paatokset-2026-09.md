@@ -1327,3 +1327,7 @@ Omistaja 22.9.2026 klo 18.00: peliin voi laittaa todennäköisimmän version het
 ## OMISTAJA: SYOTEPUTKEN VAIHTOEHDOT RATASVALIKKOON (⚙ → KARTTA → VEDON SEURANTA), EI VAIN URL-LIPPUINA (22.9.2026 klo 17.59)
 
 Omistaja 22.9.2026 klo 18.05: liput valittaviksi ratasvalikon taakse, jotta testaus on nopeampaa. Fable → Pelikoodari: asetus 'Vedon seuranta' (Interpolointi oletus, Vanha, Ennakointi, Jousi, Kosketusnäytteet kosketuslaitteella), localStorage, vaikutus heti jos mahdollista, valinta syötelokiin; URL-liput jäävät mittaukseen; samaan PR:ään tai heti perään omana.
+
+## SYOTEPUTKEN 5 TAPAA PR #2821 (OLETUS INTERPOLOINTI; LIPUT interpvanha, syoteennakko, syotejousi, syotetouch, syoteloki); PELIKOODARI NOLLATAAN (70 %, LUOVUTUS #2823); RATASVALIKKO UUDEN SESSION ENSIMMAINEN TYO (22.9.2026 klo 18.09)
+
+Pelikoodari 22.9.2026 klo 18.10: #2821 (51cff63be) sisältää kaikki viisi tapaa; jousi suljetussa muodossa (eksplisiittinen integrointi räjähti dt = 2 kehystä), vakaa millä tahansa dt:llä; oletus ei ole mittaamalla valittu — Laitetestaajan korjattu harness ja omistajan vedot ratkaisevat, interpolointi palautetaan jos ero ei ole todellinen. Testit 3942/0. Luovutus c66ee9fea (#2823). Fable: Julkaisija mergeää #2821 heti Testit vihreänä (Mac-savuke perutaan), Pelikoodari nollataan; uusi sessio tekee ratasvalikon 'Vedon seuranta' ensin.
