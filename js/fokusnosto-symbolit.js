@@ -2492,16 +2492,24 @@ const NOSTOSYM_NIMIO_ALAOSA = 0.25;
 export const NOSTOSYM_KUVAMERKIN_KERROIN = 1.6;
 export const NOSTOSYM_TASO1_MUSTE = 'rgba(46,30,14,0.98)';
 /*
- * KUVAMERKIN HALO (Fable 21.9.2026): tumman reliefin päällä (Mont Blanc
- * Alppien rinteellä) vaalea kuvamerkki hukkui taustaan. Sama
- * paperinvaalea sädekehä kuin Karttasepän poltetuilla nimiöillä
- * (js/pallolaatat.js NIMION_HALO): varjo kuvan omasta muodosta, neljä
- * vetoa, ja päälle merkki terävänä. Säde on merkin yksiköissä ja
- * kerrotaan portaalla rasterissa.
+ * KUVAMERKIN HALO POISTETTU (omistaja 22.9.2026, kuva Carcassonnesta,
+ * sanatarkasti: *"Nostoihin jää valkoinen reunus, joka kyllä poistuu,
+ * kun zoomaa tarpeeksi lähelle, mutta maailma tilan ollessa päällä
+ * valkoinen reunus jää. Se saisi olla aina poissa."*).
+ *
+ * Halo oli paperinvaalea sädekehä (rgb(252,249,242), neljä vetoa)
+ * kuvamerkin ympärillä — Fablen lisäys 21.9.2026 siihen, että vaalea
+ * kuvamerkki hukkui tumman reliefin päälle (Mont Blanc Alppien
+ * rinteellä). Lähizoomissa merkki tulee Karttasepän poltetusta
+ * laatasta, jossa haloa ei ole, joten reunus katosi zoomatessa ja jäi
+ * näkyviin siellä, missä elävä rasteri piirtää merkin — muun muassa
+ * maailmanäkymässä. Kahdesta eri ulkoasusta samalle merkille omistaja
+ * valitsi sen, jossa reunusta ei ole.
+ *
+ * JOS LUETTAVUUS PETTÄÄ tumman reliefin päällä, ratkaisu on merkin oma
+ * muste (tummempi veto tai ohut musteääriviiva), ei vaalea kehä: se ei
+ * saa palata, koska poltettu laatta ei voi sitä toistaa.
  */
-export const NOSTOSYM_KUVAMERKIN_HALO = 'rgb(252, 249, 242)';
-export const NOSTOSYM_KUVAMERKIN_HALO_SADE = 1.2;
-export const NOSTOSYM_KUVAMERKIN_HALO_VETOJA = 4;
 /** Tyyppi (kategoria tai luonnon laji) → kuvamerkin tiedosto. */
 export const NOSTOSYM_KUVAMERKIT = {
   vuori: 'merkki-vuori', saari: 'merkki-saari', jarvi: 'merkki-jarvi', joki: 'merkki-joki',
@@ -2712,16 +2720,10 @@ async function nostosymRasteroi(tunnus, nimio, svg, porras, nimionLaji, puoli = 
     // Pelkkä nimiö samaan laatikkoon (erillinen nimiökuva, ks.
     // piirraNostosymKartalle `erillinenNimio`): ikonin ruutu jää tyhjäksi.
   } else if (merkkikuva) {
-    // Kuvamerkki koko ruutuun (2 × sade), keskitettynä origoon —
-    // ensin paperinvaalea halo (ks. KUVAMERKIN HALO), sitten merkki.
+    // Kuvamerkki koko ruutuun (2 × sade), keskitettynä origoon. Ei
+    // vaaleaa kehää (ks. KUVAMERKIN HALO POISTETTU): elävän rasterin on
+    // näytettävä samalta kuin poltetun laatan.
     const koko = 2 * sade * porras;
-    ctx.save();
-    ctx.shadowColor = NOSTOSYM_KUVAMERKIN_HALO;
-    ctx.shadowBlur = NOSTOSYM_KUVAMERKIN_HALO_SADE * porras;
-    for (let veto = 0; veto < NOSTOSYM_KUVAMERKIN_HALO_VETOJA; veto += 1) {
-      ctx.drawImage(merkkikuva, -koko / 2, -koko / 2, koko, koko);
-    }
-    ctx.restore();
     ctx.drawImage(merkkikuva, -koko / 2, -koko / 2, koko, koko);
   } else {
     piirraNostosymMiniCanvas(ctx, tunnus, muste, porras);
