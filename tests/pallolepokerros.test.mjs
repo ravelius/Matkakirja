@@ -466,8 +466,8 @@ test('E0: laattakerroksen apurit ovat js/pallolaatat.js:ssä, pallo.js vie ne ed
   assert.ok(!/from '\.\/pallo\.js'/.test(laatat), 'js/pallolaatat.js ei saa tuoda js/pallo.js:ää');
   const tuonnit = [...laatat.matchAll(/^import [\s\S]*?from '([^']+)';$/gm)].map((m) => m[1]);
   // 22.9.2026: kerma laatan shaderissa (js/laattakerma-shader.js, ei tuo palloa eikä laattoja);
-  // esilataus levossa (js/laattaesilataus.js, ei tuonteja).
-  assert.deepEqual(tuonnit.sort(), ['./fokusmitat.js', './laattaesilataus.js', './laattakerma-shader.js', './laattapyramidi.js']);
+  // esilataus levossa (js/laattaesilataus.js, ei tuonteja); katkaisija (js/media.js, ei tuo kumpaakaan).
+  assert.deepEqual(tuonnit.sort(), ['./fokusmitat.js', './laattaesilataus.js', './laattakerma-shader.js', './laattapyramidi.js', './media.js']);
 });
 
 /*

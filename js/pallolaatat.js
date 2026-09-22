@@ -41,6 +41,7 @@ import {
   ESILATAUS_LEPO_MS, ESILATAUS_LIIKEVARA, ESILATAUS_MAATASOT, esilatausPaalla, laajennaLaatikko,
   laattojenOsoitteet, luoEsilatausjono,
 } from './laattaesilataus.js';
+import { peiliKaytossa, peiliPetti, peilinKatkoJaljella } from './media.js';
 import { asennaKermaShader, luoKermanJaetut, paivitaKermanJaetut } from './laattakerma-shader.js';
 
 /** Kuinka kauan kameran on oltava paikallaan ennen lepolaatua (ms). */
@@ -2266,6 +2267,8 @@ export function luoLaattakerros({
     nakyvia: 0, nakyviaScenessa: 0, nakyviaTaysin: 0, ladattavia: 0, ennakkoja: 0, pidettyja: 0, tukia: 0, kattoRajoitti: false, zoomiennakkoja: 0,
     /** Kertoja, jolloin jonossa oli laattoja mutta kehyksen aloituskatto tuli vastaan. */
     tahditettuja: 0,
+    /** Onko katkaisija (js/media.js 'laatat') juuri nyt auki eli lataukset seis. */
+    katkaistu: false,
     /*
      * JUMISSA on tämän erän tarkin mitta: tietue, joka on tilassa
      * "ladataan", jota ei ole aloitettu eikä ole jonossa — laatta,
@@ -2344,6 +2347,8 @@ export function luoLaattakerros({
   /** Tässä kehyksessä aloitetut lataukset ja kehyksen vaihtava rAF (tahditus). */
   let aloituksia = 0;
   let aloitusRaf = 0;
+  /** Katkaisijan jatkoajastin (kaynnista uudestaan, kun katko päättyy). */
+  let katkoAjastin = 0;
   let vientiRaf = 0;
   const vientiKehys = { kehys: 0, perakkain: 0 };
   let liikkeessaViimeksi = false;
@@ -2442,6 +2447,8 @@ export function luoLaattakerros({
     if (ikkuna.createImageBitmap && ikkuna.fetch) {
       try {
         const vastaus = await ikkuna.fetch(url, { mode: 'cors', credentials: 'omit', signal: merkki ?? undefined });
+        // Katkaisija (js/media.js 'laatat'): 429 ja 5xx ovat ämpärin vikoja, 404 ei.
+        if (vastaus.status === 429 || vastaus.status >= 500) peiliPetti('laatat');
         if (!vastaus.ok) return null;
         const blob = await vastaus.blob();
         try {
@@ -2453,7 +2460,10 @@ export function luoLaattakerros({
           void syy;
         }
         return await ikkuna.createImageBitmap(blob);
-      } catch { /* vara alla */ }
+      } catch {
+        // Verkkovirhe (ei keskeytys) laskee katkaisijaa; vara alla.
+        if (!merkki?.aborted) peiliPetti('laatat');
+      }
     }
     // Katkaistu lataus (laatta purettiin kesken haun) ei mene varapolulle:
     // se ottaisi latauspaikan takaisin siltä laatalta, jota katsotaan.
@@ -3347,6 +3357,21 @@ export function luoLaattakerros({
       }
       return;
     }
+    /*
+     * KATKAISIJA (js/media.js laji 'laatat', sulavuuskatsaus kohta 21):
+     * kolmen verkkovirheen tai 429/5xx:n jälkeen uusia latauksia ei
+     * aloiteta 20 sekuntiin. Jono säilyy; jatko ajastetaan katkon
+     * päättymiseen. Kesken olevat haut saavat valmistua.
+     */
+    if (!peiliKaytossa('laatat')) {
+      mittarit.katkaistu = true;
+      if (!katkoAjastin && jono.length) {
+        katkoAjastin = ikkuna.setTimeout?.(() => { katkoAjastin = 0; if (!purettu) kaynnista(); }, peilinKatkoJaljella('laatat') + 50) ?? 0;
+      }
+      mittarit.jonossa = jono.length;
+      return;
+    }
+    mittarit.katkaistu = false;
     // Näkyvät ensin, sitten tuki, sitten ennakko ja pidetyt — kaikki ruudun keskeltä.
     const sija = (t) => (t.nakyva ? 0 : t.tuki ? 1 : 2);
     jono.sort((a, b) => sija(a) - sija(b) || a.etaisyys - b.etaisyys);
@@ -4267,6 +4292,8 @@ export function luoLaattakerros({
       vientiRaf = 0;
       if (aloitusRaf) ikkuna.cancelAnimationFrame?.(aloitusRaf);
       aloitusRaf = 0;
+      if (katkoAjastin) ikkuna.clearTimeout?.(katkoAjastin);
+      katkoAjastin = 0;
       vientijono.length = 0;
       tyhjennaValmistelujono();
       jono.length = 0;
