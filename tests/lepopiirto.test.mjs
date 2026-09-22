@@ -136,7 +136,17 @@ test('kytkennät: lauta asentaa, häiveet ja nimiöt ilmoittavat, savuke pakotta
 test('atlaksen osittainen päivitys (sulavuus kohta 8): viedyn sivun rasteri texSubImage2D:llä, ei koko kangasta', () => {
   const gl = lue('../js/pallonimiot-gl.js');
   assert.match(gl, /if \(sivu\.viety && !atlasKoko && typeof renderer\?\.copyTextureToTexture === 'function'\)/);
-  assert.match(gl, /if \(renderer\.copyTextureToTexture\.length >= 3\) renderer\.copyTextureToTexture\(kohta, lahde, sivu\.tekstuuri\);\n\s*else renderer\.copyTextureToTexture\(lahde, sivu\.tekstuuri, null, kohta\);/);
+  assert.match(gl, /else renderer\.copyTextureToTexture\(lahde, sivu\.tekstuuri, alue, kohta\);/);
+  /*
+   * LÄHDE ON ATLASKANGAS, EI RASTERIN OMA KUVA (22.9.2026). Kun lähde
+   * oli rasterin kangas, osittain päivitetty läpinäkyvä pikseli piirtyi
+   * liian kirkkaana (kultalevy 0,72-alfalla: (246,237,148) eikä
+   * (212,182,117)) — koko kankaan vienti teki saman oikein. Sama
+   * kangas molemmille poluille on se, mikä takaa saman tuloksen.
+   */
+  assert.match(gl, /sivu\.lahdetekstuuri = new L\.Texture\(sivu\.kangas\);/);
+  assert.match(gl, /sivu\.lahdetekstuuri\.premultiplyAlpha = true;/);
+  assert.doesNotMatch(gl, /const lahde = new L\.Texture\(rasteri\.kuva\);/, 'rasterin oma kangas ei kelpaa lähteeksi');
   assert.match(gl, /s\.tekstuuri\.needsUpdate = true; s\.likainen = false; s\.viety = true;/);
   assert.match(gl, /includes\('atlaskoko'\)/, 'koelippu palauttaa koko kankaan viennin');
 });
