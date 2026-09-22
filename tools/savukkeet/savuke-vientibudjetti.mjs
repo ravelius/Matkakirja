@@ -7,7 +7,8 @@
  *   (vain kehykset, joissa kamera liikkui viimeisen 240 ms:n aikana)
  *   B0 esiehto: vastakokeessa laattoja vietiin (≥ 10) — muuten ympäristö ei
  *      ladannut laattoja, eikä mittaus kerro mitään
- *   B1 vastakoe ?koe=vientivanha: vedossa kaksi vientiä samassa kehyksessä
+ *   B1 vastakoe oletus (ilman lippua): vedossa kaksi vientiä samassa kehyksessä
+ *   Budjetti on koe ?koe=vientibudjetti (omistaja 22.9.2026 klo 23.45).
  *   B2 budjetti: yhdessäkään liikkeen kehyksessä ei yli yhtä vientiä
  *   B3 budjetti: ennakkovientejä (ei-näkyvä laatta) ≤ 21/s kerroksen omasta
  *      laskurista (vedonEnnakkoja); vientien kokonaismäärä vain tietona
@@ -112,15 +113,15 @@ const lepoonTaysi = (sivu) => sivu.waitForFunction(() => {
 }));
 
 try {
-  const vanha = await avaa('&koe=vientivanha');
+  const vanha = await avaa('&koe=tuntematon');
   const v = await vedot(vanha.sivu);
-  tieto('B1 vientivanha', JSON.stringify(v));
+  tieto('B1 oletus', JSON.stringify(v));
   const summa = (x) => x.reduce((a, t) => a + t.vienteja, 0);
   vaadi('B0 esiehto: vastakokeessa laattoja vietiin', summa(v) >= 10, `vanha ${summa(v)}`);
   vaadi('B1 vastakoe: vanha tahti vie kaksi samassa kehyksessä', v.some((t) => t.maxKehys > 1), JSON.stringify(v));
   await vanha.ctx.close();
 
-  const b = await avaa('&koe=tuntematon');
+  const b = await avaa('&koe=vientibudjetti');
   const r = await vedot(b.sivu);
   tieto('B2–B4 budjetti', JSON.stringify(r));
   vaadi('B2 yhdessäkään kehyksessä ei yli yhtä vientiä', r.every((t) => t.maxKehys <= 1), JSON.stringify(r));
