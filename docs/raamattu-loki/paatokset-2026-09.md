@@ -1539,3 +1539,7 @@ Pelikoodari: vartija tests/valikko-siivous.test.mjs, testit 3997/0, WebKit 5/5. 
 ## KOKO JONO MAINISSA: v2127 alpha0 AITO, v2128 PROFIILI JAKAA, v2129 eivienti LAATTOIHIN, v2130 TILARIVI, v2131 MITTARI p4, v2132 PIIRTOKOE 7, v2133 VALIKON SIIVOUS; KAIKKI savukkeet-mac-PUNAISET OLIVAT WebKit-launch-AIKAKATKAISUJA; JULKAISIJA KORJASI #2863:N ORVON js/vedon-seuranta.js:N NIPUTUSLISTALLA (NIPUTTAMATTOMAT); #2859 VIELA AUKI → v2134 (22.9.2026 klo 22.55)
 
 Julkaisija klo 22.54; useita pinottujen PR:ien rebase-konflikteja ratkaistu, testimäärät täsmäsivät. Omistajan kierros alkaa v2133:sta (Pages-vienti käynnissä klo 22.55, tuotannossa vielä v2132). Ajuri käynnistetty uudelleen klo 22.38 (omistaja itse); Laitetestaaja todentaa seuraavasta savukeajosta.
+
+## v2134 MAINISSA (#2865): ORVOT globe.gl-TICKERIT POIS; OMISTAJAN KYSYMYS NOSTOISTA: MAALEHDEN NOSTON KAKSIPALSTATAITTO (21.9.) EI OLE VANHA KAAVA VAAN VAIHE 2; ELAINTAKY JAA PINOKSI 21.9. RAJAUKSEN MUKAAN; OMISTAJAN EHDOTUS 'KUVA ENSIN ISONA, LISAA → KAHDEN PALSTAN MUOTO' = NYKYINEN fokusnosto-KAYTOS; SELVITETTAVANA AVAUTUIKO KORTTI SUORAAN VAIHEESEEN 2 (22.9.2026 klo 23.02)
+
+Julkaisija klo 23.05: testit 3990/0, #2859 suljettu korvattuna. Omistajan kaappaukset: eläintäky 'Valkoinen hevonen syntyy tummana' (js/packs/elaintakyt.js) ja maalehden nosto 'Hevonen vaihtaa väriä kasvaessaan' (maa-kategoriat, kuvasarja 1/2, kaksipalsta). Tarjottu: palstataiton laajennus eläintäkyihin ja muihin karttakortteihin; odottaa omistajan vastausta.
