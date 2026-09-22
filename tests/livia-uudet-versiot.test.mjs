@@ -45,6 +45,10 @@ test('kiireinen kirjanhaku erottaa sähläyksen, havahtumisen, peittelyn ja ryhd
   assert.equal(a(.80).kirjaKiinni,0);
   assert.equal(a(.43).kirjaKulma,180);
   assert.equal(a(.69).kirjaKulma,360);
+  assert.ok(a(.449).kirjaKulma<180,'ranteen pieni vastaliike ennen kääntöä');
+  assert.equal(a(.531).kirjaKulma,a(.544).kirjaKulma,'lyhyt otteenvaihto pysäyttää kierron');
+  assert.ok(a(.54).kirjaX>15&&a(.54).kirjaY<0&&a(.54).kirjaKallistus>.85,'kirja nousee rinnan luo ja kääntyy myös syvyyssuunnassa');
+  assert.ok(a(.50).siipi>a(.546).siipi+.2,'siipi päästää otetta vaihdon ajaksi');
   assert.ok(a(.54).vihellys>.9&&a(.54).katse>.9,'katsoo sivuun ja viheltää käännön aikana');
   assert.match(svg(.155),/data-part="sweat"/);
   assert.doesNotMatch(svg(.45),/data-part="sweat"/);
