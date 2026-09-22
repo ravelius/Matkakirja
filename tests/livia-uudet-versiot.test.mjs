@@ -11,89 +11,40 @@ test('kasvopohjien polut vastaavat toisiaan myös tuotantopään muuttuessa',()=
   for(const ilme of ['glance','down','shock','blink','smile','smug','grin','disbelief','yawn'])assert.deepEqual(topologia(ilme),topologia('rest'),ilme);
 });
 
-test('sarjakuvakokeilu käyttää omaa piirrosta, huivia ja jatkuvaa silmänräpäytystä',()=>{
-  const a=p=>uudenEleenAsento('uusi-sarjakuvapulu',p),kuva=p=>uudenEleenKuva(a(p));
-  assert.match(kuva(.22),/data-style="sarjakuvakokeilu"/);
-  assert.match(kuva(.22),/data-face-shape="slender"/,'poskien siluetti kapenee kohti leukaa');
-  assert.match(kuva(.22),/data-part="face-outline"/);
-  assert.equal((kuva(.22).match(/data-part="cartoon-eye"/g)||[]).length,2);
-  assert.equal((kuva(.22).match(/data-eye-shape="almond"/g)||[]).length,2);
-  assert.equal((kuva(.22).match(/<path data-part="eye-white"/g)||[]).length,2,'silmän muoto ei ole pelkkä pyöreä ellipsi');
-  assert.equal((kuva(.22).match(/data-part="upper-lid"/g)||[]).length,2);
-  assert.match(kuva(.22),/data-part="cartoon-beak" data-opening="1"/);
-  assert.match(kuva(.22),/data-beak-shape="pigeon"/,'oma kyyhkyn nokka, ei pitkä ankan nokka');
-  assert.equal((kuva(.22).match(/data-part="eyelashes"/g)||[]).length,2);
-  assert.match(kuva(.22),/data-part="soft-cheek"/);
-  assert.match(kuva(.22),/data-part="mouth-space"/);
-  assert.match(kuva(.22),/data-part="tongue"/);
-  assert.match(kuva(.1),/data-part="cartoon-lid" transform="[^"]*scale\(1 0.04\)/);
-  assert.match(kuva(.85),/data-part="folded-wing-layer"/,'suljettu siipi ei katoa väliruuduissa');
-  assert.match(kuva(.22),/data-part="scarf"/);
-  assert.match(kuva(.22),/fill="#d98a98"/);
-  const huivi=p=>kuva(p).match(/data-part="scarf-tails" transform="([^"]+)"/)[1];
-  assert.notEqual(huivi(.2),huivi(.3),'huivin päät seuraavat tervehdyksen jälkiliikettä');
-  for(const e of LIVIAN_UUDET_VERSIOT.filter(e=>!['uusi-sarjakuvapulu','uusi-livia-ilahtuu'].includes(e.id)&&!e.id.startsWith('uusi-hymy-'))){
-    assert.doesNotMatch(uudenEleenKuva(uudenEleenAsento(e.id,.4)),/cartoon-eye|data-part="scarf"/,'ei uutta hahmopiirrosta tai huivia muihin eleisiin');
+test('katselun kaikki ehdotukset käyttävät vanhan Pulun piirrosta',()=>{
+  assert.equal(LIVIAN_UUDET_VERSIOT.length,10);
+  assert.equal(LIVIAN_UUDET_VERSIOT[0].id,'uusi-ilahtuu');
+  for(const e of LIVIAN_UUDET_VERSIOT){
+    const kuva=uudenEleenKuva(uudenEleenAsento(e.id,.4));
+    assert.doesNotMatch(kuva,/data-style="sarjakuvakokeilu"|cartoon-eye|data-part="scarf"/);
+    assert.match(kuva,/data-part="whole-bird"/);
+    assert.match(kuva,/fill="#2e4756"/,'vanhan Pulun nokka');
   }
-  for(let i=0;i<=100;i++){
-    const s=a(i/100),perus=uudenEleenAsento('uusi-welcome',i/100);
-    for(const k of ['paaKulma','siipi','sulat','suu','rapaytys'])assert.equal(s[k],perus[k],'piirrostyylin koe säilyttää tutun tervehdyksen liikeavaimet');
+  for(const id of ['uusi-hymy-levea','uusi-hymy-pieni','uusi-hymy-nauru','uusi-livia-ilahtuu','uusi-sarjakuvapulu']){
+    assert.ok(!LIVIAN_UUDET_VERSIOT.some(e=>e.id===id));
+    assert.throws(()=>uudenEleenAsento(id,.4),RangeError);
   }
 });
 
-test('Livian oma tervehdys erottaa tunnistamisen, rintasiiven ja vilkutuksen',()=>{
-  const a=p=>uudenEleenAsento('uusi-livia-ilahtuu',p),kuva=p=>uudenEleenKuva(a(p));
-  assert.ok(a(.055).katse<-.8&&a(.055).siipi===0,'katse ehtii ennen siipeä');
-  assert.equal(a(.155).suu,0,'lyhyt ennakointi ennen ilahtumista');
-  assert.ok(a(.235).suu>.79&&a(.235).hengitys>.7,'nokka ja rinta aukeavat ilahtumiseen');
-  assert.equal(a(.325).rintasiipi,1);assert.equal(a(.45).rintasiipi,1,'siipi lepää rinnalla noin puoli sekuntia');
-  assert.match(kuva(.4),/data-part="chest-elbow"/);
-  assert.ok(a(.4).paaKulma<-9&&a(.415).rapaytys>.8,'lempeä kallistus ja silmien sulkeminen kontaktin aikana');
-  assert.equal(a(.535).rintasiipi,0,'siipi irtoaa rinnalta ennen ylös tervehtimistä');
-  assert.ok(a(.615).siipi>.9&&a(.615).takasiipi<.25,'vain toinen siipi tervehtii korkealla');
+test('vanhan Pulun ilahtumisessa katse, rintasiipi ja tervehdys seuraavat eri rytmeissä',()=>{
+  const a=p=>uudenEleenAsento('uusi-ilahtuu',p),kuva=p=>uudenEleenKuva(a(p));
+  assert.ok(a(.055).katse<-.8&&a(.055).siipi===0);
+  assert.equal(a(.155).rintasiipi,0);
+  assert.equal(a(.325).rintasiipi,1);
+  assert.equal(a(.45).rintasiipi,1);
+  assert.match(kuva(.325),/data-part="chest-wing" opacity="1"/);
+  assert.doesNotMatch(kuva(.325),/data-part="friendly-beak"|data-part="tongue"/);
+  assert.ok(a(.4).paaKulma<-9&&a(.415).rapaytys>.8);
+  assert.equal(a(.535).rintasiipi,0);
+  assert.ok(a(.615).siipi>.9&&a(.615).takasiipi<.25);
   assert.ok(a(.615).sulat<a(.615).siipi,'siivenkärjet seuraavat jäljessä');
-  assert.notEqual(a(.64).huiviliike,a(.74).huiviliike,'huivi heilahtaa takaisin');
-  assert.match(kuva(.23),/data-part="breath"/);
-  assert.match(kuva(.055),/data-part="gaze"/);
-  assert.equal(kuva(0),kuva(1),'myös piirros palaa täsmälleen lepoon');
+  assert.equal(kuva(0),kuva(1),'vanha Pulu palautuu lepoon');
   let edellinen=a(0);
   for(let i=1;i<=1000;i++){
     const s=a(i/1000);
-    for(const k of ['rintasiipi','siipi','suu','hengitys'])assert.ok(Math.abs(s[k]-edellinen[k])<.035,k+' vaihtuu jatkuvasti');
+    for(const k of ['rintasiipi','siipi','hengitys'])assert.ok(Math.abs(s[k]-edellinen[k])<.035,k+' vaihtuu jatkuvasti');
     edellinen=s;
   }
-});
-
-test('kolme hymykokeilua erottavat sivulle leviämisen, posken ja suun avauksen',()=>{
-  const a=(id,p)=>uudenEleenAsento('uusi-hymy-'+id,p),kuva=(id,p)=>uudenEleenKuva(a(id,p));
-  assert.equal(a('pieni',.335).suu,0,'pieni hymy ei avaa suuta');
-  assert.ok(a('levea',.335).hymy>a('pieni',.335).hymy+.3,'leveä hymy venyy enemmän sivulle');
-  assert.ok(a('levea',.275).suu<.25,'hymyssä suu on vain raollaan');
-  assert.equal(a('nauru',.335).suu,.9);
-  assert.ok(a('nauru',.335).suu>a('nauru',.55).suu,'kaksi erikokoista naurahdusta');
-  assert.equal(a('nauru',.43).suu,.2,'naurahdusten välissä suu sulkeutuu osittain');
-  for(const id of ['pieni','levea','nauru']){
-    const svg=kuva(id,.335);
-    assert.match(svg,/data-beak-shape="pigeon-smile"/);
-    assert.equal((svg.match(/data-part="smile-line"/g)||[]).length,1);
-    assert.equal((svg.match(/data-part="lower-lid-smile"/g)||[]).length,2);
-    assert.match(svg,/data-part="soft-cheek" transform="translate/);
-    assert.match(svg,/data-part="mouth-space"/);
-    const karki=p=>kuva(id,p).match(/data-part="upper-beak" d="([^"]+)"/)[1];
-    for(const p of [0,.275,.335,.6,.83,1])assert.equal(karki(p),karki(0),'kärki ei veny lapioksi');
-    assert.equal(kuva(id,0),kuva(id,1),'paluu samaan lepoasentoon');
-    let edellinen=a(id,0);
-    for(let i=1;i<=1000;i++){
-      const s=a(id,i/1000);
-      for(const k of ['hymy','poski','suu']){
-        assert.ok(s[k]>=0&&s[k]<=1);
-        assert.ok(Math.abs(s[k]-edellinen[k])<.03,id+' '+k+' vaihtuu jatkuvasti');
-      }
-      edellinen=s;
-    }
-  }
-  assert.match(kuva('pieni',.335),/data-part="tongue"[^>]+opacity="0"/);
-  assert.match(kuva('nauru',.335),/data-part="tongue"[^>]+opacity="1"/);
 });
 
 test('katseluehdotukset pysyvät erillään pelieleistä ja kestävät kelauksen',()=>{
@@ -110,7 +61,7 @@ test('katseluehdotukset pysyvät erillään pelieleistä ja kestävät kelauksen
       for(const m of kuva.matchAll(/url\(#([^)]+)\)/g))assert.ok(ids.includes(m[1]),m[1]);
       assert.ok(ids.every(id=>id.startsWith('koe')));
     }
-    if(e.id!=='uusi-bookPanic')for(const k of ['paaKulma','paaY','paaX','rinta','siipi','takasiipi','rapaytys','ilme','suu','suusiipi','hengitys','rintasiipi','huiviliike','hymy','poski'])assert.equal(asento(0)[k],asento(1)[k],e.id+' '+k);
+    if(e.id!=='uusi-bookPanic')for(const k of ['paaKulma','paaY','paaX','rinta','siipi','takasiipi','rapaytys','ilme','suusiipi','hengitys','rintasiipi'])assert.equal(asento(0)[k],asento(1)[k],e.id+' '+k);
     const jalat=p=>uudenEleenKuva(asento(p)).match(/<g data-part="feet">.*?<\/g>/)[0];
     assert.equal(jalat(0),jalat(.45),'jalkojen ankkurit pysyvät maassa');
   }
@@ -151,53 +102,33 @@ test('kiireinen kirjanhaku erottaa sähläyksen, havahtumisen, peittelyn ja ryhd
   for(let i=1;i<=1000;i++)assert.ok(Math.abs(a(i/1000).kirjaKulma-a((i-1)/1000).kirjaKulma)<4,'kirja kääntyy jatkuvasti eikä hyppää');
 });
 
-test('tervehdyksen linnunsuu avautuu yhtenä eleenä eikä peitä toista nokkaa',()=>{
-  const asento=p=>uudenEleenAsento('uusi-welcome',p);
-  assert.equal(asento(0).suu,0);
-  assert.equal(asento(.22).suu,1);
-  assert.equal(asento(1).suu,0);
-  let edellinen=0;
-  for(let i=0;i<=1000;i++){
-    const s=asento(i/1000),svg=uudenEleenKuva(s);
-    assert.ok(s.suu>=0&&s.suu<=1);
-    assert.ok(Math.abs(s.suu-edellinen)<.02,'nokka aukeaa ja sulkeutuu ilman hyppäyksiä');
-    edellinen=s.suu;
-    assert.equal((svg.match(/data-part="friendly-beak"/g)||[]).length,1);
-    assert.doesNotMatch(svg,/fill="#2e4756"/,'vanha suljettu nokka ei jää uuden päälle');
-    assert.match(svg,/data-part="tongue"/);
-    assert.match(svg,/data-part="mouth-space"/,'poski leikataan pois nokan aukosta');
+test('vanha nokka säilyy myös tervehdyksessä, naurussa ja haukotuksessa',()=>{
+  for(const e of LIVIAN_UUDET_VERSIOT){
+    for(const p of [0,.22,.4,.61,1]){
+      const svg=uudenEleenKuva(uudenEleenAsento(e.id,p));
+      assert.match(svg,/fill="#2e4756"/,e.id+' alkuperäinen nokka');
+      assert.doesNotMatch(svg,/friendly-beak|mouth-space|data-part="tongue"|cartoon-beak/,e.id+' ei suukokeiluja');
+    }
   }
-  for(const id of ['uusi-nod','uusi-doubleTake','uusi-bookStudy','uusi-bookPanic'])assert.doesNotMatch(uudenEleenKuva(uudenEleenAsento(id,.3)),/friendly-beak/);
 });
 
-test('uuden erän suu, silmät, hengitys ja siivet näyttelevät neljää eri reaktiota',()=>{
+test('vanhan Pulun pään, hengityksen ja siipien liike pysyy eriytettynä',()=>{
   const a=(id,p)=>uudenEleenAsento('uusi-'+id,p);
-  assert.equal(a('chuckle',.25).suu,0,'nauru pidätetään ennen pyrskähdystä');
-  assert.ok(a('chuckle',.32).suu>a('chuckle',.53).suu+.2,'kaksi erikokoista pyrskähdystä');
-  assert.ok(a('chuckle',.40).suu<.1,'pyrskähdysten välissä hengähdetään');
-  assert.ok(a('chuckle',.20).hengitys>0&&a('chuckle',.35).hengitys<0,'sisäänhengitys vaihtuu vatsan painotukseen');
-  assert.ok(a('chuckle',.32).paaKulma<-15&&a('chuckle',.32).rinta<a('chuckle',.36).rinta,'pää johtaa, rinta seuraa');
-  assert.equal(a('yawn',.48).suu,1);assert.equal(a('yawn',.61).suu,1);
-  assert.ok(a('yawn',.29).suu<.2&&a('yawn',.53).hengitys===1,'haukotus kasvaa hitaasti venytykseen');
-  assert.ok(a('yawn',.78).hengitys<0&&a('yawn',.78).paaY>4,'huokaus laskee koko asentoa');
-  assert.ok(a('grin',.17).ilme>0&&a('grin',.23).suu===0,'silmät aloittavat virneen');
-  assert.ok(a('grin',.37).suu>.5&&a('grin',.69).suu>.4,'leveä hymy pysyy hetken');
-  assert.equal(a('disbelief',.13).paaKulma,a('disbelief',.26).paaKulma,'ensin täysin paikallaan oleva havainto');
-  assert.equal(a('disbelief',.33).suu,a('disbelief',.51).suu,'nokka jää auki, ei puhetta muistuttavaa sykettä');
-  assert.ok(a('disbelief',.46).siipi>a('disbelief',.46).takasiipi*2,'kohautus on epäsymmetrinen');
-  assert.ok(a('disbelief',.66).katse>.9&&a('disbelief',.72).suu===0);
+  assert.ok(a('chuckle',.20).hengitys>0&&a('chuckle',.35).hengitys<0);
+  assert.ok(a('chuckle',.32).paaKulma<-15&&a('chuckle',.32).rinta<a('chuckle',.36).rinta);
+  assert.ok(a('yawn',.53).hengitys===1&&a('yawn',.78).hengitys<0);
+  assert.ok(a('yawn',.78).paaY>4);
+  assert.ok(a('grin',.17).ilme>0&&a('grin',.23).paaKulma<0);
+  assert.equal(a('disbelief',.13).paaKulma,a('disbelief',.26).paaKulma);
+  assert.ok(a('disbelief',.46).siipi>a('disbelief',.46).takasiipi*2);
+  assert.ok(a('disbelief',.66).katse>.9);
   for(const id of ['chuckle','yawn','grin','disbelief']){
     let edellinen=a(id,0);
-    for(let i=0;i<=1000;i++){
+    for(let i=1;i<=1000;i++){
       const s=a(id,i/1000);
-      for(const k of ['suu','suusiipi','hengitys'])assert.ok(Math.abs(s[k]-edellinen[k])<.035,id+' '+k+' ei hypähdä');
-      assert.ok(s.suu>=0&&s.suu<=1);
+      for(const k of ['paaKulma','rinta','siipi','suusiipi','hengitys'])assert.ok(Math.abs(s[k]-edellinen[k])<.6,id+' '+k+' ei hypähdä');
       edellinen=s;
     }
-    const svg=uudenEleenKuva(a(id,.48));
-    assert.equal((svg.match(/data-part="friendly-beak"/g)||[]).length,1);
-    assert.match(svg,/data-part="mouth-space"/);assert.match(svg,/data-part="tongue"/);
-    assert.doesNotMatch(svg,/fill="#2e4756"/);
   }
 });
 

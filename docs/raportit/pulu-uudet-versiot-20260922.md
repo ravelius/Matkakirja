@@ -284,3 +284,27 @@ pienessä hymyssä 44,06:een ja leveässä hymyssä sekä naurussa 49:ään.
 Nokankärjen polku pysyy täsmälleen samana. Kielen näkyvyys osumatestillä
 ja taustan näkyminen nokkavälistä PASS. Vanhojen suiden/kirjojen tarkistus,
 kelaus/tauko, 390 px ja reduced motion PASS. Live-julkaisun kuitti erikseen.
+
+### Alkuperäinen Pulu takaisin
+
+Omistajan uusin palaute syrjäyttää yllä kuvattujen sarjakuvahahmon ja
+suurennetun suun kokeilujen hyväksynnän nykyisessä katselussa. Viisi
+sarjakuvapiirroksen ehdotusta on poistettu valikoimasta ja piirrosmoduuli
+lähdekoodista. Kaikki kymmenen nykyistä ehdotusta käyttävät alkuperäistä
+tuotannon SVG-päätä, nokkaa ja vartaloa. Myös neljän vanhan Pulun
+suukokeilun sekä Hauska nähdä -tervehdyksen suurennettu suu on poistettu
+piirroksesta; niiden toimivat liikeradat, siipieleet ja hengitys säilyvät.
+
+Uusi **Ihana nähdä! — vanha Pulu** siirtää tunnistamisen, siiven rinnalle
+viennin ja korkean vilkutuksen sulavan aikajanan vanhalle hahmolle.
+Rintasiipi piirtyy vanhan vartalon päälle, nousee vasta irrotuksen jälkeen,
+ja siivenkärjet seuraavat jäljessä. Kuva tarkistettiin erikseen rinnalla
+ja ylhäällä. Kiireisen kirjanhakueleen hikipisarat, kirjan suunta ja
+käsieleet säilyvät. Peliin, audioon tai cueihin ei kosketa.
+
+Nykyinen katselu sisältää 70 pelielettä ja 10 erillistä ehdotusta.
+Varhaiset piirroskokeilut jäävät versionoidun katselun historiaan,
+eivät nykyisen sivun valintoihin. Koko testisarja muutoksen jälkeen:
+3936 yhteensä, 3923 PASS, 13 SKIP, 0 FAIL. Kohdetestit 11/11 PASS.
+Kaksoisavaimet, niputus, savukevartio, nimiöt ja diff-check PASS.
+Julkaisukuitti kirjataan erikseen. Ei kuvatilauksia.
