@@ -173,19 +173,21 @@ const tulos = await sivu.evaluate(() => {
   for (const y of [-0.6, 0, 0.6]) for (const x of [-0.6, 0, 0.6]) kohdat.push({ x, y });
   const W = gl.drawingBufferWidth; const H = gl.drawingBufferHeight;
   const lue = (p) => { const px = new Uint8Array(4); gl.readPixels(Math.round((p.x + 1) / 2 * (W - 1)), Math.round((p.y + 1) / 2 * (H - 1)), 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, px); return [...px]; };
+  // Lepopiirto (js/pallolauta/lepopiirto.js) ohittaisi muuttumattoman kehyksen: pakotetaan joka piirto.
+  const piirra = () => { pallo.__piirto?.pakota?.(); r.render(scene, kam); };
   const nakyvyys = moottori?.visible ?? null;
   if (moottori) moottori.visible = false;
-  r.render(scene, kam);
+  piirra();
   const ilmanPohjaa = kohdat.map(lue);
   if (moottori) moottori.visible = true;
   /* V4: pohja näkyvissä, kerros piiloon → ruudukon pikselit muuttuvat. */
-  r.render(scene, kam); const kerroksella = kohdat.map(lue);
+  piirra(); const kerroksella = kohdat.map(lue);
   const nakyvat = laatat.filter((t) => t.visible);
   for (const t of nakyvat) t.visible = false;
-  r.render(scene, kam); const ilmanKerrosta = kohdat.map(lue);
+  piirra(); const ilmanKerrosta = kohdat.map(lue);
   for (const t of nakyvat) t.visible = true;
   if (moottori) moottori.visible = nakyvyys;
-  r.render(scene, kam);
+  piirra();
   return { ohjelmat, laattoja: laatat.length, kohtia: kohdat.length, ilmanPohjaa, kerroksella, ilmanKerrosta, W, H };
 });
 

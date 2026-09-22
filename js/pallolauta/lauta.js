@@ -126,7 +126,8 @@ import { luoSulavuusmittari } from './sulavuusmittari.js';
 import {
   SISASUMUN_PEITTO, SUMUN_RAJAKERROIN, merkitseLoydetyksi, sisasumunAukot, sumuPaalla,
 } from './sumu.js';
-import { luoKartanLiike } from '../kartta-liike.js';
+import { LEVON_ESTEET, luoKartanLiike } from '../kartta-liike.js';
+import { asennaLepopiirto, lepopiirtoKaytossa } from './lepopiirto.js';
 import { MERKIN_KORKEUS, luoMerkit, luoMerkkienNakyvyysTahdistus } from './merkit.js';
 import {
   LIIKKUU_LUOKKA, NIMIOKERROIN_MUUTTUJA, ladonnanMitta, liukuvaNimiokerroin, luoNimet, nimibudjetti,
@@ -1424,6 +1425,36 @@ export async function avaaPallolauta(ui) {
     return null;
   }
   const eleet = asennaPallonEleet(pallo, kotelo, ui);
+  /*
+   * LEPOPIIRTO (js/pallolauta/lepopiirto.js, sulavuus kohta 18): piirto
+   * vain kun jokin muuttui + syke 4 fps. Esteet = tilat, joiden omat
+   * animaatiot eivät ilmoita muutoksistaan (linssit, lennot, isot
+   * animaatiot — kartta-liike.js LEVON_ESTEET bodyssä tai kuoressa):
+   * niissä piirretään joka kehys kuten ennen. Hidas animaatio =
+   * hehkupisteen syke levossa (glSovitin.sykkii, sidotaan alempana).
+   * Scenen ryhmien add/remove (laatat, vektorit, kirjaston pohja)
+   * ilmoittavat itse: ks. ryhmienVahti.
+   */
+  let sykkiiNyt = () => false;
+  const puraLepopiirto = lepopiirtoKaytossa() ? asennaLepopiirto(pallo, {
+    esteet: () => LEVON_ESTEET.some((l) => document.body.classList.contains(l) || kuori.classList.contains(l)),
+    hitaat: () => sykkiiNyt(),
+  }) : () => {};
+  /* Ryhmien add/remove → piirto: kirjaston pohjan laatat, kerroksen laatat, vektorit. */
+  const ryhmienVahti = (() => {
+    const puretut = [];
+    const kolmi = pallonKolmiulotteinen(pallo);
+    for (const ryhma of [kolmi?.juuri, kolmi?.moottori]) {
+      if (!ryhma || !pallo.__piirto) continue;
+      for (const nimi of ['add', 'remove']) {
+        const alkuperainen = ryhma[nimi];
+        if (typeof alkuperainen !== 'function') continue;
+        ryhma[nimi] = function ryhmanMuutos(...a) { pallo.__piirto?.tarvitaan(); return alkuperainen.apply(this, a); };
+        puretut.push(() => { if (ryhma[nimi]?.name === 'ryhmanMuutos') ryhma[nimi] = alkuperainen; });
+      }
+    }
+    return () => { for (const p of puretut) p(); };
+  })();
   // Lauta ei pyöri itsekseen: se on pelilauta, ei näyteikkuna.
   pallo.controls().autoRotate = false;
   const siirtyma = ui.reducedMotion ? 0 : MERKKIEN_SIIRTYMA_MS;
@@ -2057,6 +2088,7 @@ export async function avaaPallolauta(ui) {
       liikkeessa: () => liikkeessaNyt(),
     })
     : null;
+  sykkiiNyt = () => Boolean(glSovitin?.sykkii?.());
   // Nappula rungolle; kun rasteri valmistuu tai runko syntyy, sama lista asetetaan uudestaan (jako aseta-kutsussa).
   const peliUudestaan = () => { const l = glSovitin?.viimeisetPeli(); if (l) merkit.aseta('peli', l, { haivyta: false }); };
   if (glSovitin) pelinJako = (lista) => glSovitin.peli(lista, peliUudestaan);
@@ -5734,6 +5766,8 @@ export async function avaaPallolauta(ui) {
       document.removeEventListener('visibilitychange', tahdistaLepo);
       kamera.pysaytaKameraAjo();
       eleet.pura();
+      ryhmienVahti();
+      puraLepopiirto();
       litistaja.pura();
       // Panoroinnin raja on tämän laudan sääntö: se ei saa jäädä
       // voimaan, kun lauta puretaan (ks. PANOROINNIN RAJA yllä).

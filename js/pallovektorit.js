@@ -1239,6 +1239,7 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
       const t = Math.min(1, (nyt() - t0) / kesto);
       // Ease-out: sisääntulo pehmeällä jarrutuksella (Raamattu).
       oma.opacity = jaettu.opacity * (1 - (1 - t) ** 3);
+      pallo.__piirto?.tarvitaan(); // lepopiirto: häiveen askel näkyviin
       if (t < 1) { ikkuna.requestAnimationFrame(askel); return; }
       paata();
     };
