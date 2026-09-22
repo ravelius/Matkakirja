@@ -78,6 +78,13 @@ export function luoKehysprofiili(uiTaiHaku, ikkuna = globalThis) {
   let kehysNyt = null;
   /** Elossa olevat mittausketjut (ks. YKSI KETJU PER MITTAUS). */
   let ketjuja = 0;
+  /*
+   * KEHYSTEN KATTO. Ruutunäyttö (js/pallolauta/profiilinaytto.js) pitää
+   * mittausta auki niin kauan kuin peli on auki, joten taulukolla on
+   * oltava yläraja. 4000 kehystä on yli minuutti 60 Hz:llä — pidempää
+   * otosta ei lue kukaan.
+   */
+  const KEHYSKATTO = 4000;
   const kirjaa = (avain, ms) => {
     if (!kehysNyt) return;
     kehysNyt.js = (kehysNyt.js ?? 0) + ms;
@@ -133,6 +140,8 @@ export function luoKehysprofiili(uiTaiHaku, ikkuna = globalThis) {
       const t = nyt(); const dt = t - oma.t; oma.t = t;
       const kehys = { t: t - oma.alku, dt, varattu: null, js: 0, render: 0, ...lue() };
       oma.kehykset.push(kehys);
+      // Ruutunäyttö pitää mittausta auki pitkään; katto estää taulukkoa kasvamasta rajatta.
+      if (oma.kehykset.length > KEHYSKATTO) oma.kehykset.splice(0, oma.kehykset.length - KEHYSKATTO);
       kehysNyt = kehys;
       if (kanava) { odottaa = { alku: t, kehys }; kanava.port2.postMessage(0); }
       // Oma askel ensimmäisenä rAF-jonossa: muut saman kehyksen kutsut kirjautuvat tähän kehykseen.
@@ -255,7 +264,44 @@ export function luoKehysprofiili(uiTaiHaku, ikkuna = globalThis) {
     const t = v?.tasaisuus; if (!t) return 'ei vetoa';
     return `veto ${v.nopeusPx} px/s (${v.pointerType}): siirtymä/kehys ka ${p(t.siirtymaKa, 2)} px, hajonta/ka ${p((t.vaihtelu ?? 0) * 100, 0)} % (px/ms-vaihtelu ${p((t.nopeusVaihtelu ?? 0) * 100, 0)} %), pysähdyksiä ${t.pysahdyksia}/${t.kehyksia}, pisin ${p(t.pisinPysahdysMs, 0)} ms, dt p95 ${p(t.dtP95)}`;
   };
-  return { aloita, lopeta, tiivista, teksti, lue, veto, tasaisuus, vetoTeksti, ketjuja: () => ketjuja };
+  /*
+   * ══ OTOS EI KATKAISE MITTAUSTA (Laitetestaajan löydös 22.9.2026) ══
+   *
+   * Ruutunäyttö sulki ja avasi mittauksen kolmen sekunnin välein, ja
+   * koska profiili on SINGLETON, se katkaisi samalla mittauspalvelimen
+   * otoksen: neljä eri koetta sai kukin saman ~47 kehyksen pätkän,
+   * vaikka harness pyysi kymmenen sekuntia.
+   *
+   * Nyt mittaus jää auki ja lukijat ottavat siitä VIIPALEITA: `otos(ms)`
+   * palauttaa viimeiset ms millisekuntia samassa muodossa kuin
+   * `lopeta()`, koskematta mittaukseen. Kumpikin lukija näkee siis oman
+   * ikkunansa, eikä harnessin `lopeta()` jää ruutunäytön jalkoihin.
+   */
+  return {
+    aloita,
+    lopeta,
+    tiivista,
+    teksti,
+    lue,
+    veto,
+    tasaisuus,
+    vetoTeksti,
+    ketjuja: () => ketjuja,
+    /** Onko mittaus käynnissä (ruutunäyttö ei käynnistä päälle). */
+    kaynnissa: () => Boolean(tila?.kaynnissa),
+    /**
+     * Viimeisten `ms` millisekuntien kehykset ilman, että mittaus
+     * pysähtyy. Sama muoto kuin `lopeta()`, joten `tiivista` kelpaa.
+     */
+    otos: (ms) => {
+      if (!tila) return null;
+      const kehykset = tila.kehykset;
+      const loppu = kehykset.length ? kehykset[kehykset.length - 1].t : 0;
+      const raja = loppu - Math.max(0, Number(ms) || 0);
+      const alku = kehykset.findIndex((k) => k.t >= raja);
+      return { alku: tila.alku, kehykset: alku < 0 ? [] : kehykset.slice(alku) };
+    },
+  };
 }
 
 /** Asenna `globalThis.__kehysprofiili` (kerran). */
