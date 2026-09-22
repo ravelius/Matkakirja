@@ -963,3 +963,7 @@ Karttaseppä 22.9.2026 klo 10.40: M1 js/pallomaakunnat.js (yksi Mesh per maa MKV
 ## KOHTAAMISET C3 HYVAKSYTTY (BUKAREST, OSLO, TAMPERE, DUBLIN, GRANADA, PIETARI) (22.9.2026 klo 09.45)
 
 Fable 22.9.2026 klo 10.50: C3 (docs/raportit/kohtaamiset-era-c3-20260922.md, sisalto-kohtaamiset-c3 7cf0e6b23): Bukarest katusoittaja Radu, Oslo kirjapainaja Halvor (Christiania 1873), Tampere junailija Aatu (rata Tampereelle vasta 1876), Dublin putkiasentaja Niamh (Vartry-vesi 1860-luku), Granada flamencoemäntä Pastora, Pietari Larisa; kaikki uusia hahmoja, kaaren varaukset tarkistettu. Hyväksytty; kuusi kuvaa tilataan Codexilta (tilaus 11) raportin valmistuttua. C4 alkaa.
+
+## KOHTAAMISET RAJATTU EUROOPPAAN KUNNES MUUT LAUDAT VALMISTUVAT (22.9.2026 klo 09.53)
+
+Fable 22.9.2026 klo 11.00: kohtaamisten erät C4–C7 vain Euroopan kaupungeille (inventaarion 41); New York, Tokio, Dubai ym. vasta kun mantereen lauta on valmis.
