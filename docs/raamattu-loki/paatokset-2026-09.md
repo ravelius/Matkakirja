@@ -1523,3 +1523,7 @@ Pelikoodari: testit 3989/0 (uusia 3/3), savukkeet lepopiirto 12/12, glnimiot-nim
 ## PR #2861: PIIRTOKOE 7 'EI HAIVYTYSTA VEDOSSA' (?koe=eihaivevedossa: LAATAT VAIHTUVAT SUORAAN VEDON AIKANA, KESKEN OLEVAT HAIVYTYKSET PAATTYVAT VEDON ALKAESSA; LEVOSSA ENNALLAAN); VARTIJA WebKit HAIPYVIA 21–57 → 0 (22.9.2026 klo 22.26)
 
 Pelikoodari: pinottu #2857:n päälle (valikko 6 → 7 kohtaa, testien 'koe 3/6' -muoto). Testit 3994/0, savuke 4/4. Merge-järjestys #2854 → #2857 → #2861 → #2859. Omistajan kierros kun pino on tuotannossa: kokeet 1, 3, 2, 6, 7. Pelikoodari odottaa tuloksia.
+
+## OMISTAJA: 'POISTA KAIKKI YLIMAARAISET VIVUT VALIKOSTA NIIN LOYDAN TESTATTAVAT VAIHTOEHDOT PAREMMIN' → KARTTA-OSIOON JAA PIENI LIIKE, PIIRTOKOE (7) JA NAYTA KEHYSPROFIILI; VEDON SEURANTA JA TARKKUUS LIIKKEESSA POIS VALIKOSTA (LIPUT SAILYVAT ?koe=-OSOITTEESSA) (22.9.2026 klo 22.28)
+
+Omistaja klo 22.30. Pelikoodari tekee PR:n #2861:n päälle; tallennettu valikkovalinta ei saa enää vaikuttaa; oletukset veto interp ja nykyinen tarkkuusoletus; overlay näyttää arvot yhä. Jono: #2854 (mainissa v2130) → #2857 (v2131) → #2861 → valikkosiivous → #2859.
