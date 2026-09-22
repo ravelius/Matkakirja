@@ -13,7 +13,8 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 2095, teksti: 'kytke 97 maakunnan vuoden 1873 havainnekuvat' },
+  { v: 2096, teksti: 'kytke 97 maakunnan vuoden 1873 havainnekuvat' },
+  { v: 2095, teksti: 'kytke C3-kohtaamiskuvat tavallisiin visoihin' },
   { v: 2094, teksti: 'Korjaus: kerma-shaderin laatat eivat piirtyneet' },
   { v: 2093, teksti: 'Kohtaamiset C4-C7: 20 kaupunkia' },
   { v: 2092, teksti: 'Laattapyynnoille katkaisija' },
