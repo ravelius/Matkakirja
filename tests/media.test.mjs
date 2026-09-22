@@ -712,3 +712,20 @@ test('peilaus- ja hakutyökalu ohittavat Flickr-nimet', () => {
   assert.match(haku, /VALOKUVAT_FLICKR/,
     'kuvahakutyökalun pitää ohittaa Flickr-nimet');
 });
+
+test('laattojen katkaisija: oma laji, kolme virhettä sulkee 20 sekunniksi, jäljellä oleva aika luettavissa', async () => {
+  const { peilinKatkoJaljella } = await import('../js/media.js');
+  nollaaPeili();
+  assert.equal(peiliKaytossa('laatat'), true);
+  peiliPetti('laatat'); peiliPetti('laatat');
+  assert.equal(peiliKaytossa('laatat'), true, 'kaksi virhettä ei vielä katkaise');
+  assert.equal(peilinKatkoJaljella('laatat'), 0);
+  peiliPetti('laatat');
+  assert.equal(peiliKaytossa('laatat'), false);
+  const jaljella = peilinKatkoJaljella('laatat');
+  assert.ok(jaljella > 15000 && jaljella <= 20000, `laattojen katko on 20 s, ei 5 min: ${jaljella}`);
+  // Kuvien laji ei kärsi laattojen katkosta.
+  assert.equal(peiliKaytossa('kuvat'), true);
+  nollaaPeili();
+  assert.equal(peiliKaytossa('laatat'), true);
+});
