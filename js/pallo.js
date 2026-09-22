@@ -3831,8 +3831,25 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
   };
   globalThis.addEventListener?.(VEDON_SEURANTA_TAPAHTUMA, seurantaVaihtui);
 
+  /*
+   * KEHYSKELLO (`?koe=syotekello`, Pelikoodari 23.9.2026, VERTAILUKOE):
+   * kohta-aika luetaan kehyksen yhteisestä kellosta (document.timeline:
+   * sama arvo kaikille saman kehyksen rAF-kutsuille, vsync-tahdissa)
+   * eikä performance.now():sta tickin sisällä. Tickin alkuhetki vaihtelee
+   * sen mukaan, paljonko työtä kehyksessä ajettiin ennen sitä; silloin
+   * sormen paikka luetaan eri kohdasta kuin kehys esitetään, ja kartan
+   * askel vaihtelee, vaikka sormi liikkuu tasaisesti.
+   */
+  const kehyskello = laattakerroksenKokeet().has('syotekello');
+  const kehyksenHetki = () => {
+    if (kehyskello) {
+      const t = globalThis.document?.timeline?.currentTime;
+      if (Number.isFinite(t) && t > 0) return t;
+    }
+    return performance.now();
+  };
   const sovellaSyote = () => {
-    const nyt = performance.now();
+    const nyt = kehyksenHetki();
     paivitaKehysvali(nyt);
     if (syote.tapa === 'vanha') {
       // (1) v2097: viimeisin näyte sellaisenaan, kerran kehyksessä.

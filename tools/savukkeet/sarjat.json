@@ -35,6 +35,7 @@
     "savuke-profiilitila.mjs",
     "savuke-koevaihto-lataus.mjs",
     "savuke-eihaive-veto.mjs",
+    "savuke-liikemittari.mjs",
     "savuke-nimion-koko-panorointi.mjs",
     "savuke-kartan-liike.mjs",
     "savuke-nimiot-sulavat.mjs",
@@ -707,6 +708,12 @@
         "SAVUKE_MOOTTORI": "chromium"
       },
       "huomautus": "Piirtokokeen valinta lataa sivun (omistaja 22.9.2026 klo 23.05: v2133-kierroksen 3/5 kaappausta mittasi vanhaa koetta, koska sivua ei ladattu). L1 valikosta eivienti -> vihje 'Ladataan…', L2 sivu latautuu itse 600 ms:n jalkeen, L3 latauksen jalkeen overlay 'koe 3/4 Ei tekstuurivientejä' (valikossa 4 tilaa, omistaja 23.08) ilman 'seuraavassa latauksessa', L4 valinta ja paluu viiveen aikana ei lataa, L5 ei sivuvirheita. Chromium ja WebKit 5/5; vanhalla main.js:lla L1-L3 kaatuvat."
+    },
+    "savuke-liikemittari.mjs": {
+      "env": {
+        "SAVUKE_MOOTTORI": "webkit"
+      },
+      "huomautus": "Kehysprofiili p5: liikkeen tasaisuus (omistaja ja Fable 23.9.2026: kehysaika ei mittaa nahtya nykimista). Tartuntapisteen ruutupaikka renderin jalkeen vs sormi. Synteettinen veto edestakaisin 6 x 0,7 s 400 px/s (pysyy panorointirajan sisalla). M1 tahdistettu syote: >= 60 liikekehysta, nollat 0, virhe ka < 10 px; M2 vastakoe interpvanha + iOS-tyylinen syote (pointermove omalla 17,4 ms ajastimella, 0-6 ms kuorma): nollat > 10 (mitattu 37-44); M3 interp ei nollia; M4 syotekello ei nollia; M5 ei sivuvirheita. WebKit 5/5. CV-luvut (interp 17-23 %, syotekello 12-20 %, interpvanha 46-54 %) vain tietona."
     }
   }
 }
