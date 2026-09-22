@@ -1295,3 +1295,7 @@ Laitetestaaja 22.9.2026 klo 17.30 (docs/raportit/seuraamisvirhe-interpolointi-20
 ## OMISTAJA: POLTTO 2026-09-22c KAYNNISTETAAN NYT (22.9.2026 klo 17.17)
 
 Omistaja 22.9.2026 klo 17.20: polton voi aloittaa. Karttaseppä ajaa ajo-20260922c (vesiviivat laudan yksiköihin, laikut maailmaan, hieno rae ennallaan, isobaatit 0,55, nimiöt g); CI-tauko ~2 h; polton jälkeen vedokset ja tasonvaihtomittaus. Julkaisija nollataan samaan aikaan (luovutus #2820).
+
+## JULKAISIJA NOLLATTU (69 %, LUOVUTUS #2820) POLTON AJAKSI; CI-TAUKO POLTON LOPPUUN (22.9.2026 klo 17.18)
+
+Fable 22.9.2026 klo 17.25: Julkaisijan luovutus 99c15c641 (#2820) kuitattu, nollauskaava ajettu, worktree Matkakirja-julkaisija. Uusi sessio: CI-tauko polton ajan (ei savukkeita, dispatcheja, pushauksia), polton jälkeen Karttasepän laattaversio omana versiona, sitten Pelikoodarin C–E.
