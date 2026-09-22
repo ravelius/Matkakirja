@@ -2874,6 +2874,97 @@ export const VEDON_KATTO_RUUTUA = 1;
 /** Liuku enintään yksi näkyvä kaista tässä ajassa (ms). */
 export const VAUHDIN_KATTO_MS = 250;
 
+/*
+ * ======== OSOITIN KEHYKSEN HETKELLÄ (sulavuus kohta 13) =============
+ *
+ * MITATTU VIKA (Laitetestaaja 22.9.2026, aidot hiirivedot, 16 kierrosta
+ * Safarilla ja Chromella): seuraamisvirheen suhde (kameran siirtymä /
+ * osoittimen siirtymä) on p10 = 0 JOKAISESSA kierroksessa — eli
+ * vähintään joka kymmenes kehys on täysi pysähdys, vaikka osoitin
+ * liikkuu — ja pysähdystä seuraa ylikorjaava piikki (p90 3–14).
+ * Selvin yksittäinen tapaus: kaksi kehystä (36 ms) kamera ei liikkunut
+ * lainkaan, vaikka osoitin oli liikkunut 130 px, ja sitten yksi kehys
+ * korjasi 104 px kerralla. Sama molemmilla moottoreilla, eikä
+ * kehysajoissa ollut pitkiä kehyksiä — vika on syöteputkessa, ei
+ * piirrossa.
+ *
+ * SYY. v2097 sovelsi VIIMEISIMMÄN näytteen sellaisenaan kerran
+ * kehyksessä. Selain ei kuitenkaan toimita tapahtumia tasatahtia rAF:n
+ * kanssa: kehykseen osuu nolla, yksi tai kaksi tapahtumaa. Nollan
+ * kehyksen kamera ei liiku (pysähdys) ja seuraavan kehyksen näyte on
+ * kahden kehyksen matkan päässä (piikki). Kamera siis toistaa
+ * tapahtumajonon rytmin eikä sormen liikettä.
+ *
+ * KORJAUS. Näytteet kerätään aikaleimoineen (myös getCoalescedEvents,
+ * jolloin selaimen yhdistämät välinäytteet saadaan talteen), ja
+ * kehyksen alussa osoittimen paikka lasketaan HALUTULLE HETKELLE
+ * lineaarisella interpoloinnilla kahden näytteen välistä. Hetki on
+ * kehyksen aika miinus VAKIOVIIVE, joka on enintään yksi kehys — sen
+ * verran, että kahden näytteen väliin osutaan, mutta ei enempää, koska
+ * viive pehmentäisi tuntumaa.
+ *
+ * ALKU ILMAAN VIIVETTÄ (ei ease-inia): jos haluttu hetki on ennen
+ * ensimmäistä näytettä, käytetään ensimmäistä näytettä sellaisenaan.
+ * Kartta lähtee siis heti sormen mukana eikä kiihdy viiveen läpi.
+ *
+ * EKSTRAPOLOINTI ENINTÄÄN YKSI KEHYS: jos uutta näytettä ei ole
+ * ehtinyt, jatketaan viimeisellä nopeudella korkeintaan yhden kehyksen
+ * verran. Ilman sitä näytteetön kehys olisi taas pysähdys; rajan yli
+ * mentäessä arvaus karkaisi.
+ *
+ * Paluulippu `?koe=interpvanha` palauttaa v2097:n käytöksen
+ * (viimeisin näyte sellaisenaan), jotta ero voidaan mitata samalla
+ * rakennuksella.
+ */
+/** Näytteitä puskurissa: kaksi kehystä 125 Hz:n hiirellä on ~8. */
+export const OSOITTIMEN_NAYTTEITA = 12;
+/** Vakioviive enintään yksi kehys (ms); Fablen rajaus 22.9.2026. */
+export const OSOITTIMEN_VIIVE_MAX_MS = 17;
+/** Ekstrapolointi enintään yksi kehys (ms). */
+export const OSOITTIMEN_EKSTRAPOLOINTI_MAX_MS = 17;
+
+/**
+ * Osoittimen paikka hetkellä `tavoite` näytteistä `naytteet`
+ * (aikajärjestyksessä, { x, y, t }). Puhdas funktio.
+ *
+ * - ennen ensimmäistä näytettä → ensimmäinen näyte (ei ease-inia)
+ * - kahden näytteen välissä → lineaarinen interpolointi
+ * - viimeisen jälkeen → viimeinen nopeus, enintään `ekstraMax` ms
+ *
+ * @returns {{x:number,y:number,t:number}|null}
+ */
+export function osoittimenKohta(naytteet, tavoite, {
+  ekstraMax = OSOITTIMEN_EKSTRAPOLOINTI_MAX_MS,
+} = {}) {
+  if (!Array.isArray(naytteet) || naytteet.length === 0) return null;
+  const n = naytteet.length;
+  if (n === 1 || !Number.isFinite(tavoite)) {
+    const v = naytteet[n - 1];
+    return { x: v.x, y: v.y, t: v.t };
+  }
+  const eka = naytteet[0];
+  if (tavoite <= eka.t) return { x: eka.x, y: eka.y, t: eka.t };
+  const vika = naytteet[n - 1];
+  if (tavoite >= vika.t) {
+    const edel = naytteet[n - 2];
+    const dt = vika.t - edel.t;
+    const yli = Math.min(tavoite - vika.t, Math.max(0, ekstraMax));
+    if (!(dt > 0) || yli <= 0) return { x: vika.x, y: vika.y, t: vika.t };
+    const k = yli / dt;
+    return { x: vika.x + (vika.x - edel.x) * k, y: vika.y + (vika.y - edel.y) * k, t: vika.t + yli };
+  }
+  for (let i = n - 1; i > 0; i -= 1) {
+    const b = naytteet[i];
+    const a = naytteet[i - 1];
+    if (tavoite >= a.t && tavoite <= b.t) {
+      const dt = b.t - a.t;
+      const k = dt > 0 ? (tavoite - a.t) / dt : 1;
+      return { x: a.x + (b.x - a.x) * k, y: a.y + (b.y - a.y) * k, t: tavoite };
+    }
+  }
+  return { x: vika.x, y: vika.y, t: vika.t };
+}
+
 /** Näkyvä kaista asteina korkeudella `korkeus` (fov on pystykulma). */
 export function nakyvaKaista(korkeus, fov = PALLON_FOV) {
   return Math.max(1e-4, Number(korkeus) || 0) * 2 * Math.tan((fov / 2) * (Math.PI / 180)) * (180 / Math.PI);
@@ -3162,7 +3253,13 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
    * (myös mitat joka tapahtumassa), jotta ero voidaan mitata samalla
    * rakennuksella (tasaisuusmittari, __kehysprofiili.veto).
    */
-  const syote = { veto: null, nipistys: false, vanha: laattakerroksenKokeet().has('syotevanha'), sovelluksia: 0 };
+  const syote = {
+    veto: null, nipistys: false, vanha: laattakerroksenKokeet().has('syotevanha'), sovelluksia: 0,
+    /* Osoittimen näytteet aikaleimoineen (kohta 13, ks. OSOITIN KEHYKSEN HETKELLÄ). */
+    naytteet: [],
+    interpVanha: laattakerroksenKokeet().has('interpvanha'),
+    viiveMs: 0, ekstrapolointeja: 0, interpolointeja: 0,
+  };
   ui.pallonSyote = syote; // mittausta varten (savukkeet)
   let kotelonMitat = null; // { left, top, W, H }
   const lueKotelonMitat = () => {
@@ -3188,6 +3285,7 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
   kotelo.addEventListener('pointerdown', (e) => {
     lueKotelonMitat();
     syote.veto = null;
+    syote.naytteet.length = 0;
     tartunta = sormet.alhaalla === 1 ? sormenKohta(e.clientX, e.clientY) : null;
   });
   /*
@@ -3314,17 +3412,70 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
     if (!tartunta || sormet.alhaalla !== 1) return;
     ilmoitaSyote();
     if (syote.vanha) { sovellaVeto(e.clientX, e.clientY, leima(e)); return; }
-    // Vain viimeisin paikka: kehys sovittaa kameran siihen.
+    // Viimeisin paikka vanhaa polkua varten (?koe=interpvanha).
     syote.veto = { x: e.clientX, y: e.clientY, aika: leima(e) };
+    /*
+     * NÄYTTEET AIKALEIMOINEEN. `getCoalescedEvents` antaa ne
+     * välinäytteet, jotka selain niputti yhteen tapahtumaan — juuri ne
+     * puuttuivat, kun kamera toisti tapahtumajonon rytmiä.
+     */
+    const osat = typeof e.getCoalescedEvents === 'function' ? e.getCoalescedEvents() : null;
+    const lisaa = (p) => {
+      const t = leima(p);
+      const n = syote.naytteet;
+      if (n.length && t < n[n.length - 1].t) return; // ei taaksepäin
+      n.push({ x: p.clientX, y: p.clientY, t });
+      if (n.length > OSOITTIMEN_NAYTTEITA) n.shift();
+    };
+    if (osat && osat.length) for (const p of osat) lisaa(p);
+    else lisaa(e);
   });
   /*
    * KEHYKSEN ALUSSA: odottava veto ja nipistys sovelletaan kameraan
    * ennen kirjaston ohjainpäivitystä ja piirtoa. Kääre puretaan
    * `pura`ssa.
    */
+  /*
+   * KEHYSVÄLI MITATAAN, EI OLETETA. Viive ja ekstrapoloinnin katto ovat
+   * "yksi kehys", ja se on 120 Hz:n näytöllä eri luku kuin 60 Hz:n.
+   * Liukuva keskiarvo tasaa yksittäisen pitkän kehyksen.
+   */
+  let kehysvali = 16.7;
+  let edellinenKehys = 0;
+  const paivitaKehysvali = (nyt) => {
+    if (edellinenKehys > 0) {
+      const dt = nyt - edellinenKehys;
+      if (dt > 4 && dt < 60) kehysvali = kehysvali * 0.8 + dt * 0.2;
+    }
+    edellinenKehys = nyt;
+  };
   const sovellaSyote = () => {
-    const v = syote.veto;
-    if (v) { syote.veto = null; sovellaVeto(v.x, v.y, v.aika); }
+    const nyt = performance.now();
+    paivitaKehysvali(nyt);
+    if (syote.interpVanha) {
+      // Paluulippu: v2097:n käytös, viimeisin näyte sellaisenaan.
+      const v = syote.veto;
+      if (v) { syote.veto = null; sovellaVeto(v.x, v.y, v.aika); }
+    } else if (syote.naytteet.length) {
+      /*
+       * Osoittimen paikka KEHYKSEN HETKELLÄ: kehyksen aika miinus
+       * vakioviive (enintään yksi kehys). Näin kamera seuraa sormen
+       * liikettä eikä tapahtumajonon rytmiä: kehys ilman uutta
+       * näytettä ei ole enää pysähdys eikä seuraava ole piikki.
+       */
+      const viive = Math.min(kehysvali, OSOITTIMEN_VIIVE_MAX_MS);
+      syote.viiveMs = viive;
+      const kohta = osoittimenKohta(syote.naytteet, nyt - viive, {
+        ekstraMax: Math.min(kehysvali, OSOITTIMEN_EKSTRAPOLOINTI_MAX_MS),
+      });
+      if (kohta) {
+        const viimeinen = syote.naytteet[syote.naytteet.length - 1];
+        if (kohta.t > viimeinen.t) syote.ekstrapolointeja += 1;
+        else syote.interpolointeja += 1;
+        syote.veto = null;
+        sovellaVeto(kohta.x, kohta.y, kohta.t);
+      }
+    }
     if (syote.nipistys) { syote.nipistys = false; sovellaNipistys(); }
   };
   const alkuperainenUpdate = ohjaimet.update;
