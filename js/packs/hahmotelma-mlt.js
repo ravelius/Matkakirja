@@ -163,6 +163,7 @@ export const HAHMOTELMA_MLT = [
     ],
     nimi: 'Mdina',
     tyyppi: 'historia',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Mikä on Mdinan lempinimi?',
@@ -214,6 +215,7 @@ export const HAHMOTELMA_MLT = [
     ],
     nimi: 'Ħaġar Qim',
     tyyppi: 'historia',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Mitä Ħaġar Qim tarkoittaa?',
@@ -399,6 +401,7 @@ export const HAHMOTELMA_MLT = [
     ],
     nimi: 'Comino',
     tyyppi: 'saari',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Mistä Comino on saanut nimensä?',
@@ -1073,6 +1076,7 @@ export const HAHMOTELMA_MLT = [
     ],
     nimi: 'Sininen luola',
     tyyppi: 'vuori',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Minkä kylän alueeseen luolat kuuluvat?',
