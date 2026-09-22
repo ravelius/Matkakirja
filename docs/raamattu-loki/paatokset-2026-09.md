@@ -1263,3 +1263,7 @@ Laitetestaaja 22.9.2026 klo 16.55: palvelin injektoi harnessin vastaukseen (inde
 ## A VALMIS: KOHDEKAUPUNKIEN MERKIT GL-KERROKSEEN (PR #2815, ERO 1 CSS2D-VERTAILUUN; KAKSI OMAA VIKAA KORJATTU); MERGE 2807 → 2809 → 2815; HUOMIOKOHDE JAA CSS2D:HEN; INTERPOLOINTI ALKAA (22.9.2026 klo 16.49)
 
 Pelikoodari 22.9.2026 klo 17.00: kaikki säilyi kaatumisessa (probet /tmp:stä kirjoitettu uudestaan repoon savukkeiksi). #2815: kohdemerkit GL-kerrokseen — Edinburgh readPixels: GL-merkki (219,184,111) vs odotus (218,183,111); osumatesti 2 kohdetta, CSS2D-merkkejä 0; korjattu merkit.kohteet() (luki jakajan jälkeistä listaa) ja GL-kohteet ladonnan esteiksi CSS2D-merkin mitoilla. Riippuu #2807 ja #2809 (Karttaseppä hyväksyi; aluetonta copyTextureToTexture-kopiota ei tehdä, testi vahtii). Lähtövalinnan huomiokohde (rengas 2,6 s) jää CSS2D:hen (toinen syke-kanava vaatisi Karttasepän päätöksen) — Fable: jää. Seuraavaksi aikaleimainterpolointi (näytteet + getCoalescedEvents, lineaarinen interpolointi yhden kehyksen vakioviiveellä, ekstrapolointi enintään kehys, ei ease-iniä, koelippu), todennus Laitetestaajan mittarilla aidoilla vedoilla (p10 > 0,7, p90 < 1,4).
+
+## PULUN NELJA KATSELUELETTA TUOTANNOSSA v2112, READBACK OK, KUITATTU CODEXILLE (22.9.2026 klo 16.51)
+
+Julkaisija 22.9.2026 klo 16.51: 9119fd795 poimittu, v2112 (main 017a0d9c8), Pages OK, readback livia-uudet-versiot.mjs 200 ja 'Uudet versiot' sivulla, testit 3918/0. Fable kuittasi Codexille. Omistajan taiteellinen palaute eleistä sivulta matkakirja.app/docs/livia-svg.html.
