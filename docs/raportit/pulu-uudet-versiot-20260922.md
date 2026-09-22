@@ -142,3 +142,31 @@ suun kielen näkyvyys tarkistettu osumatestillä; 70 % kohdalta jatko,
 390 px ilman vaakaylivuotoa ja selainvirheet PASS.
 Itsenäisen sivun julkaisu ja sen jälkitarkistus kirjataan erilliseen
 julkaisukuittiin; tämä lähderaportti ei yksin ole kuitti live-julkaisusta.
+
+## Erillinen sarjakuvatyylin kokeilu
+
+Omistaja pyysi ensin sanallisen kuvauksen Aku Ankka -henkisestä versiosta,
+sitten kokeilupiirroksen. Suunnaksi kuvattiin suurempi pää, suuret ja
+joustavat silmät, venyvä nokka, käsien tavoin näyttelevät siivet ja selkeä
+musteääriviiva. Omistajan tarkennukset: Livia on naaras, vielä nuori,
+ja saa olla viehättävä; tyttömäistä väriä voi tuoda huivilla.
+
+`uusi-sarjakuvapulu` on erillinen 2,9 sekunnin tervehdyskokeilu gallerian
+ensimmäisenä painikkeena. Se käyttää omaa `docs/livia-sarjakuvakokeilu.mjs`
+-SVG-piirrosta ja tutun tervehdyksen ajoitusta. Koralliroosan kaulahuivin
+solmu pysyy kaulalla, vapaat päät seuraavat siiven jälkiliikettä.
+Kyyhkyn harmaansininen väritys, vihreä kaula, vahanahka ja jalat säilyvät.
+Suussa on näkyvä kieli ja läpinäkyvä nokkaväli, ei ihmishuulia tai hampaita.
+Silmänräpäytys sulkee valkuaiset ja jättää näkyvän luomikaaren; siipi
+palautuu suljettuun asentoon ilman katoavaa väliruutua.
+
+Tämä ei ole hahmon vaihtaminen peliin. Vanha Pulu ja aiemmat yhdeksän
+katseluehdotusta säilyvät: 909/909 SVG-asentoa täsmää tavulleen committiin
+f5d6220999. Ääniä, cueita ja pelin runtimea ei muuteta. Kuvaputkelle ei
+tule tilauksia; kokeilu on koodilla piirretty vektori, ei bitmap-kuva.
+
+Kohdetestit 10/10 PASS. Koko testisarja 3935 = 3922 PASS, 13 SKIP, 0 FAIL.
+Kaksoisavaimet, niputus, savukevartio, nimiöt ja diff-check PASS.
+Kahdeksan asennon kuvasarja katsottu, huivi ja suljetut silmät mukaan lukien.
+Itsenäinen katselujulkaisu sisältää uuden moduulin nimetyssä tiedostolistassa;
+julkaisun jälkitarkistus ja commitit kirjataan ulkoiseen toimituskuittiin.
