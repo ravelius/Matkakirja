@@ -2895,6 +2895,22 @@ export const VAUHDIN_KATTO_MS = 250;
  * kahden kehyksen matkan päässä (piikki). Kamera siis toistaa
  * tapahtumajonon rytmin eikä sormen liikettä.
  *
+ * MIKSI JUURI SAFARISSA (dokumentoitu, Fable 22.9.2026; Nolan Lawson,
+ * "Browsers, input events, and frame throttling",
+ * nolanlawson.com/2019/08/14/): Chrome TAHDISTAA pointermoven,
+ * mousemoven ja wheelin rAF:iin, macOS:n Safari EI tahdista niistä
+ * yhtäkään, ja iOS:n Safari tahdistaa touchmoven mutta EI pointermovea.
+ * Pallolauta kuuntelee vain pointer-tapahtumia, joten sekä Macin
+ * Safarissa että iPhonessa syöte tulee kehyksistä riippumatta — juuri
+ * se kuvio, jonka omistaja tunsi tökkimisenä. Chromessa sama ilmiö on
+ * lievempi, koska selain tekee tahdistuksen puolestamme.
+ *
+ * Suorempi vaihtoehto iOS:lle olisi lukea vedon näytteet
+ * touchmove-tapahtumista (rAF-tahdistettu) ja käyttää pointeria vain
+ * hiirelle. Se on mitattava erikseen eikä sitä tehdä tässä: tämä
+ * korjaus on moottorista riippumaton, ja kahden syötepolun ylläpito on
+ * oma päätöksensä.
+ *
  * KORJAUS. Näytteet kerätään aikaleimoineen (myös getCoalescedEvents,
  * jolloin selaimen yhdistämät välinäytteet saadaan talteen), ja
  * kehyksen alussa osoittimen paikka lasketaan HALUTULLE HETKELLE
@@ -3437,19 +3453,30 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
     syote.veto = { x: e.clientX, y: e.clientY, aika: leima(e) };
     /*
      * NÄYTTEET AIKALEIMOINEEN. `getCoalescedEvents` antaa ne
-     * välinäytteet, jotka selain niputti yhteen tapahtumaan — juuri ne
-     * puuttuivat, kun kamera toisti tapahtumajonon rytmiä.
+     * välinäytteet, jotka selain niputti yhteen tapahtumaan.
+     *
+     * EI SAA NOJATA SIIHEN. Safari tukee sitä vasta iOS 18.2:sta ja
+     * vajaana (kentät kuten pointerId ja target puuttuvat), eikä
+     * `pointerrawupdate`a ole Safarissa lainkaan. Tässä käytetään vain
+     * clientX/clientY ja aikaleima, ja jokainen näyte kelpuutetaan
+     * erikseen — kelvoton lista johtaa varapolkuun (itse tapahtuma),
+     * ei rikkinäisiin näytteisiin.
      */
     const osat = typeof e.getCoalescedEvents === 'function' ? e.getCoalescedEvents() : null;
     const lisaa = (p) => {
+      const x = p?.clientX;
+      const y = p?.clientY;
+      if (!Number.isFinite(x) || !Number.isFinite(y)) return false;
       const t = leima(p);
       const n = syote.naytteet;
-      if (n.length && t < n[n.length - 1].t) return; // ei taaksepäin
-      n.push({ x: p.clientX, y: p.clientY, t });
+      if (n.length && t < n[n.length - 1].t) return false; // ei taaksepäin
+      n.push({ x, y, t });
       if (n.length > OSOITTIMEN_NAYTTEITA) n.shift();
+      return true;
     };
-    if (osat && osat.length) for (const p of osat) lisaa(p);
-    else lisaa(e);
+    let lisatty = 0;
+    if (osat && osat.length) for (const p of osat) { if (lisaa(p)) lisatty += 1; }
+    if (!lisatty) lisaa(e);
   });
   /*
    * KEHYKSEN ALUSSA: odottava veto ja nipistys sovelletaan kameraan
