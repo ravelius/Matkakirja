@@ -1551,3 +1551,7 @@ Laattavientejä 95–207 per 10 s vedossa (terävä), dc 54–111, häipyy 0 (7/
 ## OMISTAJAN LINJAUS: KAIKKIIN NOSTOIHIN KAKSI PALSTAA — ENSIN KUVA AUKEAA ISONA, KLIKKAUKSESTA KUVA PIENENEE JA TEKSTIPALSTA TULEE OIKEALLE (KORVAA 21.9. RAJAUKSEN, JOSSA VAIN fokusnosto SAI PALSTAT) (22.9.2026 klo 23.05)
 
 Omistaja klo 23.06 sanatarkasti: 'Kaikkiin nostoihin kaksi palstaa. Ja niin että ensin Kuva avautuu isona ja kun klikkaa niin sitten kuva pienenee ja tulee teksti palsta mukaan oikealle.' Koskee kohdekorttia, skandaalia, eläintäkyä, hetkeä, syvennystä ja maalehden nostoa (js/nostokuva.js kaksipalstaTaitto kaikille kutsujille). Oletus: leveysraja säilyy (≥ 1100 px palstat, kapeammalla pino kuva ylhäällä) — puhelimella kaksi palstaa ei mahdu. Kuva ei saa välähtää eikä liikkua vaiheenvaihdossa (11.9. sääntö). Toteuttaja: Karttaseppä (Opus 5.5, vapaana), koska Pelikoodari hoitaa sulavuusjonoa.
+
+## OMISTAJA (KORTTI): PIIRTOKOE-VALIKKOON JAA 4 TILAA — NORMAALI, EI PUSKURIKIRJOITUKSIA, EI TEKSTUURIVIENTEJA, EI HAIVYTYSTA VEDOSSA; POIS PIKSELISUHDE 1,5 (MITATTU, EI VAIKUTUSTA), ILMAN ALFAKANAVAA JA VAHEMMAN PIIRTOKUTSUJA (LIPUT SAILYVAT ?koe=-OSOITTEESSA) (22.9.2026 klo 23.08)
+
+Omistaja klo 23.07 kaappauksen kera: 'Poista tuolta samalla ylimääräiset'. Pelikoodari tekee samaan erään automaattilatauksen kanssa; numerointi 1–4, tallennetut poistetut valinnat nollataan Normaaliin.
