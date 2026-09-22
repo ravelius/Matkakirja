@@ -25795,7 +25795,8 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
   display: flex;
   flex-direction: column;
   width: max-content;
-  max-width: min(78vw, 20rem);
+  /* Mahdollisimman kapea (omistaja 22.9.2026): nimet lyhyinä, yksi merkkisarake. */
+  max-width: min(78vw, 15rem);
   max-height: min(60vh, 26rem);
   overflow-y: auto;
   padding: 0.35rem;
@@ -25918,11 +25919,12 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
   padding-top: 0.2rem;
 }
 
-/* Neljä saraketta: pallo, tyyppimerkki, selite, luku. Selite venyy,
-   joten luku asettuu joka rivillä samaan kohtaan oikeaan laitaan. */
+/* Kolme saraketta: tyyppimerkki, selite, luku (värirenkaat poistuivat
+   22.9.2026). Selite venyy, joten luku asettuu joka rivillä samaan
+   kohtaan oikeaan laitaan. */
 .karttaselite-rivi {
   display: grid;
-  grid-template-columns: auto auto 1fr auto;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 0.45rem;
   min-height: 0;
@@ -25942,41 +25944,7 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
   color: rgba(70, 51, 31, 0.92);
 }
 
-/*
- * VÄRIPALLO ON KYTKIN JA TILANÄYTTÖ (omistajan täsmennys 29.8.2026:
- * *"päälle kytketyn aiheen väripallo syttyy myös valikon
- * seliterivillä — valikko näyttää aina mitkä valot ovat päällä"*).
- *
- * Sammuneena pallo on pelkkä ääriviiva aiheen omassa värissä; syttyneenä
- * se on täytetty ja saa ympärilleen saman himmeän kehän kuin kartan
- * valotäplä.
- *
- * KEHÄ ON PSEUDOELEMENTTI EIKÄ color-mix-varjo: läpinäkyvyys pitäisi
- * silloin laskea CSS:n omalla funktiolla, jota vanhempi WebKit ei
- * tunne — ja peliä pelataan iOS:n kotivalikkosovelluksessa. Sama väri
- * `opacity`lla on sama jälki ilman uutta funktiota.
- */
-.karttaselite-pallo {
-  position: relative;
-  width: 0.85rem;
-  height: 0.85rem;
-  border: 2px solid var(--valo, #8a6d4a);
-  border-radius: 50%;
-  background: transparent;
-}
-
-.karttaselite-rivi[aria-pressed='true'] .karttaselite-pallo {
-  background: var(--valo, #8a6d4a);
-}
-
-.karttaselite-rivi[aria-pressed='true'] .karttaselite-pallo::after {
-  content: '';
-  position: absolute;
-  inset: -0.3rem;
-  border-radius: 50%;
-  background: var(--valo, #8a6d4a);
-  opacity: 0.24;
-}
+/* Värirenkaat (.karttaselite-pallo) poistettiin 22.9.2026 omistajan päätöksellä. */
 
 .karttaselite-rivi[aria-pressed='true'],
 .karttaselite-rivi[aria-pressed='true']:hover:not(:disabled) {
@@ -26027,12 +25995,6 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
    kartan selite eikä sisällysluettelo. */
 .karttaselite-tyhja { opacity: 0.45; }
 
-.karttaselite-vihje {
-  margin: 0.35rem 0.4rem 0.1rem;
-  color: rgba(70, 51, 31, 0.62);
-  font-size: 0.7rem;
-  line-height: 1.35;
-}
 
 /*
  * PEUKALOLEVY (js/karttaselite-levy.js) — pystysuuntainen liukukahva,
@@ -26049,12 +26011,13 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
 .karttaselite-peukalolevy {
   position: absolute;
   top: 0;
-  right: 0.2rem;
-  width: 2.6rem;
-  border: 1px solid rgba(70, 51, 31, 0.45);
+  right: 0.1rem;
+  width: 2.2rem;
+  /* Läpinäkyvä vedin (omistaja 22.9.2026): vain ohut reunus ja linssi keskellä. */
+  border: 1px solid rgba(70, 51, 31, 0.3);
   border-radius: 7px;
-  background: rgba(245, 240, 225, 0.55);
-  box-shadow: 0 1px 2px rgba(20, 14, 6, 0.2);
+  background: transparent;
+  box-shadow: none;
   cursor: grab;
   touch-action: none;
   transition: transform 120ms ease;
@@ -26066,15 +26029,33 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
 /* Raahauksen ajaksi siirtymä pois, jotta levy ei jää jälkeen sormesta. */
 .karttaselite-peukalolevy.ei-siirtyma { transition: none; }
 
-/* Ohut "urite" keskelle — kaksi vaakaviivaa, mekaanisen näköinen kahva. */
-.karttaselite-peukalolevy-urite {
+/*
+ * LINSSI vetimen keskellä: pyöreä lasi, jossa rivin luku näkyy hieman
+ * suurennettuna. Pallopyöristymä (linssivirhe) tehdään kahdella
+ * liukuvärillä — kiilto vasemmalla ylhäällä, tummuva reuna — ja sisäisellä
+ * varjolla; numero on lasin sisällä 1,25-kertaisena.
+ */
+.karttaselite-peukalolevy-linssi {
   position: absolute;
   inset: 0;
   margin: auto;
-  width: 1.1rem;
-  height: 0;
-  border-top: 2px solid rgba(70, 51, 31, 0.5);
-  box-shadow: 0 5px 0 rgba(70, 51, 31, 0.5);
+  width: 1.55rem;
+  height: 1.55rem;
+  border-radius: 50%;
+  border: 1px solid rgba(70, 51, 31, 0.55);
+  background:
+    radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.75) 0, rgba(255, 255, 255, 0.25) 28%, rgba(255, 255, 255, 0) 55%),
+    radial-gradient(circle at 50% 50%, rgba(245, 240, 225, 0.35) 55%, rgba(70, 51, 31, 0.18) 100%);
+  box-shadow: inset 0 0 3px rgba(70, 51, 31, 0.35), 0 1px 2px rgba(20, 14, 6, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: rgba(70, 51, 31, 0.95);
+  transform: scale(1.25);
+  pointer-events: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -26177,7 +26158,14 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
   font-weight: 600;
 }
 
-.maakunnat-rivi-nimi { line-height: 1.25; }
+.maakunnat-rivi-nimi {
+  line-height: 1.25;
+  /* Pitkä nimi kolmella pisteellä (omistaja 22.9.2026); koko nimi rivin title-attribuutissa. */
+  max-width: 9.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 /* Tyhjä lukupaikka: ei tekstiä tässä erässä, mutta sarake on olemassa
    niin että peukalolevy löytää saman kohdan kuin Nostot-välilehdellä. */

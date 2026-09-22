@@ -83,7 +83,7 @@ import { karheaKehys } from './ilme.js';
 import { el } from './mapart.js';
 import { piirraNostosymMini, nostosymKuvamerkki } from './fokusnosto-symbolit.js';
 import {
-  KARTTAVALO_AIHEET, KARTTAVALO_TYYPIT, karttavaloVari,
+  KARTTAVALO_AIHEET, KARTTAVALO_TYYPIT,
   karttavalotLaskurit, karttavalotSovita, karttavaloValitse, karttavaloValinta,
 } from './karttavalot.js';
 import { luoPeukalolevy } from './karttaselite-levy.js';
@@ -118,7 +118,18 @@ const KARTTASELITE_AIHEJARJESTYS = KARTTASELITE_JARJESTYS
 /** Rivin suomenkielinen nimi: aiheet KARTTAVALO_AIHEET-taulusta, kaksi lisää tässä. */
 const KARTTASELITE_NIMET = {
   ...Object.fromEntries(KARTTAVALO_AIHEET.map((r) => [r.aihe, r.nimi])),
+  // Pitkät nimet lyhyinä (omistaja 22.9.2026: paneeli mahdollisimman kapea);
+  // koko nimi on rivin title-attribuutissa (KARTTASELITE_KOKONIMET).
+  ihmeet: 'Ihmeet',
+  hetket: 'Hetket',
+  kulttuuri: 'Kulttuuri…',
+  kauppa: 'Kauppa…',
   kaikki: 'Kaikki',
+  ei: 'Ei mitään',
+};
+export const KARTTASELITE_KOKONIMET = {
+  ...Object.fromEntries(KARTTAVALO_AIHEET.map((r) => [r.aihe, r.nimi])),
+  kaikki: 'Kaikki aiheet',
   ei: 'Ei mitään',
 };
 
@@ -129,10 +140,13 @@ const KARTTASELITE_RUUTU = '-8 -8 16 16';
  * kuin kartalla (js/fokusnosto-symbolit.js NOSTOSYM_KUVAMERKIT), paitsi
  * neljällä rivillä, joille ei ole kuvaa — ne saavat kartan oman
  * minimerkin (piirraNostosymMini). Kaupungit-rivi EI ole tässä
- * taulussa: se pitää pelkän pisteen (karttaselite-pallo), koska
+ * taulussa erikseen: kaupunki on kartalla pelkkä piste, joten rivi saa
+ * saman minimerkin (renkaat poistuivat 22.9.2026).
  * kartallakin kaupunki on vain piste eikä oma merkkinsä.
  */
 const KARTTASELITE_MERKIT = {
+  // Kaupunki on kartalla piste: rivillä sama minimerkki (renkaat poistuivat 22.9.2026).
+  kaupungit: { mini: 'kaupunki' },
   historia: { kuvat: ['historia'] },
   luonto: { kuvat: ['vuori', 'meri'] },
   kulttuuri: { kuvat: ['kulttuuri', 'ruoka'] },
@@ -142,20 +156,6 @@ const KARTTASELITE_MERKIT = {
   hetket: { mini: 'hetki' },
   skandaalit: { mini: 'huuto' },
 };
-
-/**
- * Rivin väriympyrä. Aihe-rivit käyttävät kartan omaa mustetta
- * (karttavaloVari, sama kuin ennen); "Kaikki" ja "Ei mitään" eivät ole
- * aiheita eikä niillä ole omaa mustetta kartalla, joten ne saavat
- * neutraalin — täytetyn musteen "Kaikki"-rivillä, himmeän ääriviivan
- * "Ei mitään" -rivillä. Täyttö tulee samasta CSS-säännöstä kuin muilla
- * riveillä (`[aria-pressed='true']`), joten tänne riittää pelkkä väri.
- */
-function karttaseliteVari(id) {
-  if (id === 'kaikki') return 'var(--map-ink, #3a2a17)';
-  if (id === 'ei') return 'rgba(70, 51, 31, 0.35)';
-  return karttavaloVari(id);
-}
 
 /** Yhden rivin tyyppimerkki: kuvamerkki(t), kartan oma minimerkki, tai ei mitään. */
 function karttaseliteMerkki(id) {
@@ -190,9 +190,11 @@ function karttaseliteRivi(id, vaihda) {
   // data-aihe säilyy aihe-riveillä yhteensopivuuden vuoksi (savukkeet,
   // js/pallolauta savuke-pallolauta.mjs lukevat sitä rivin tunnuksena).
   if (KARTTAVALO_TYYPIT.has(id)) nappi.dataset.aihe = id;
-  const pallo = html('span', 'karttaselite-pallo');
-  pallo.style.setProperty('--valo', karttaseliteVari(id));
-  nappi.append(pallo, karttaseliteMerkki(id), html('span', 'karttaselite-nimi', KARTTASELITE_NIMET[id]));
+  // Värirenkaat pois (omistaja 22.9.2026): rivillä on vain tyyppimerkki ja nimi.
+  const nimi = html('span', 'karttaselite-nimi', KARTTASELITE_NIMET[id]);
+  nimi.title = KARTTASELITE_KOKONIMET[id] ?? KARTTASELITE_NIMET[id];
+  nappi.title = nimi.title;
+  nappi.append(karttaseliteMerkki(id), nimi);
   nappi.appendChild(html('span', 'karttaselite-luku', ''));
   nappi.addEventListener('click', (tapahtuma) => {
     tapahtuma.stopPropagation();
@@ -294,8 +296,7 @@ export function kaynnistaKarttaselite(ui) {
    * kartan päällä (omistajan linjaus 13.8.2026 kartan ohjeteksteistä
    * koskee KARTTAA — tämä on valikon sisällä).
    */
-  paneeliNostot.appendChild(html('p', 'karttaselite-vihje',
-    'Yksi rivi kerrallaan sytyttää valot sen aiheen kohteisiin. Valo jää päälle.'));
+  // Seliteteksti pois (omistaja 22.9.2026): levy on jo itsessään selite.
 
   /*
    * TYHJÄ TABPANEL MAAKUNNILLE — vain kytkentäpiste. Sisällön rakentaa

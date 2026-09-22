@@ -236,12 +236,12 @@ const valikko = () => sivu.evaluate(() => {
     nimi: r.querySelector('.karttaselite-nimi')?.textContent ?? '',
     luku: r.querySelector('.karttaselite-luku')?.textContent ?? '',
     paalla: r.getAttribute('aria-pressed') === 'true',
+    pallo: Boolean(r.querySelector('.karttaselite-pallo')),
     // Symboli on joko kirjaston kaiverruskuva tai koodilla piirretyt
     // muodot — kumpi tahansa kelpaa, tyhjä ruutu ei.
     // Symboli on minimerkki (svg) tai Codexin kuvamerkki (img) — Kaikki/Ei mitään -riveillä ei kumpaakaan.
     symboleita: r.querySelectorAll('.karttaselite-symboli image, .karttaselite-symboli path, '
       + '.karttaselite-symboli circle, img.karttaselite-kuvamerkki').length,
-    pallonVari: getComputedStyle(r.querySelector('.karttaselite-pallo')).backgroundColor,
     // Rivin oma tausta ja teksti: sormen alla oleva rivi ei saa maalautua
     // pelin yleisellä button:hover-mustella tummaksi (teksti katoaisi).
     tausta: getComputedStyle(r).backgroundColor,
@@ -327,16 +327,19 @@ const auki = await valikko();
 vaadi('napin painallus avaa valikon',
   auki.auki && auki.nakyvyys === 'visible' && auki.laajennettu === 'true',
   `auki=${auki.auki} nakyvyys=${auki.nakyvyys}`);
-vaadi(`selitelistalla on kaikki ${KARTTAVALO_AIHEET.length} aihetta`,
-  auki.rivit.length === KARTTAVALO_AIHEET.length
-  && auki.rivit.every((r, i) => r.aihe === KARTTAVALO_AIHEET[i].aihe),
-  `${auki.rivit.length} riviä`);
-vaadi('jokaisella rivillä on symboli ja suomenkielinen selite',
-  auki.rivit.every((r) => r.symboleita > 0 && r.nimi.length > 3),
-  JSON.stringify(auki.rivit.filter((r) => !r.symboleita || r.nimi.length <= 3)));
-vaadi('sammuneen rivin pallo on väritön ääriviiva',
-  auki.rivit.every((r) => /rgba\(0, 0, 0, 0\)|transparent/.test(r.pallonVari)),
-  JSON.stringify(auki.rivit.slice(0, 3).map((r) => r.pallonVari)));
+// Järjestys on omistajan (22.9.2026): Kaikki, Kaupungit, Historia, Ihmeet, Hetket,
+// Skandaalit, Luonto, Eläimet, Kulttuuri, Kauppa, Ei mitään.
+const ODOTETTU = ['kaikki', 'kaupungit', 'historia', 'ihmeet', 'hetket', 'skandaalit', 'luonto', 'elaimet', 'kulttuuri', 'kauppa', 'ei'];
+vaadi(`selitelistalla on kaikki ${KARTTAVALO_AIHEET.length} aihetta sekä Kaikki ja Ei mitään omistajan järjestyksessä`,
+  auki.rivit.map((r) => r.valinta).join() === ODOTETTU.join()
+  && auki.rivit.filter((r) => r.aihe).length === KARTTAVALO_AIHEET.length,
+  auki.rivit.map((r) => r.valinta).join());
+vaadi('jokaisella aiherivillä on tyyppimerkki ja suomenkielinen selite',
+  auki.rivit.filter((r) => r.aihe).every((r) => r.symboleita > 0 && r.nimi.length > 3),
+  JSON.stringify(auki.rivit.filter((r) => r.aihe && (!r.symboleita || r.nimi.length <= 3))));
+// Värirenkaat poistuivat 22.9.2026 (omistaja): rivin tila näkyy vain aria-pressed-taustana.
+vaadi('riveillä ei ole värirengasta',
+  auki.rivit.every((r) => !r.pallo), JSON.stringify(auki.rivit.filter((r) => r.pallo).map((r) => r.aihe)));
 
 /* --- 2: kappalemäärä vastaa kartalle piirrettyjä merkkejä --- */
 
@@ -486,11 +489,8 @@ const painettu = sytytettyValikko.rivit.find((r) => r.aihe === koeaihe);
 vaadi('sytytetty rivi pysyy vaaleana ja luettavana myös osoittimen alla',
   vaalea(painettu?.tausta) && !vaalea(painettu?.tekstinVari),
   `tausta=${painettu?.tausta} teksti=${painettu?.tekstinVari}`);
-vaadi('syttynyt pallo saa aiheen oman värin',
-  !/rgba\(0, 0, 0, 0\)/.test(
-    sytytettyValikko.rivit.find((r) => r.aihe === koeaihe)?.pallonVari ?? '',
-  ),
-  sytytettyValikko.rivit.find((r) => r.aihe === koeaihe)?.pallonVari);
+vaadi('syttynyt rivi on painettuna (aria-pressed)',
+  painettu?.paalla === true, JSON.stringify(painettu));
 
 await sivu.screenshot({ path: join(KAAPPAUKSET, 'selitevalikko-valot-paalla.png') });
 

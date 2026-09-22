@@ -94,7 +94,16 @@ export function luoPeukalolevy({
   levy.setAttribute('tabindex', '0');
   levy.setAttribute('aria-valuemin', '0');
   levy.setAttribute('aria-valuemax', String(Math.max(0, jarjestys.length - 1)));
-  levy.appendChild(html('span', 'karttaselite-peukalolevy-urite'));
+  /*
+   * LINSSI (omistaja 22.9.2026): vedin on läpinäkyvä, ja sen keskellä on
+   * pieni pyöreä linssi, jossa valitun rivin luku näkyy hieman
+   * suurennettuna pallopyöristymällä (CSS: säteittäinen kiilto ja
+   * reunan varjo — ei kuvaa). Luku kopioidaan rivin lukusolusta, koska
+   * oikea suurennus vaatisi kankaan; kopio linssin sisällä riittää.
+   */
+  const linssi = html('span', 'karttaselite-peukalolevy-linssi');
+  linssi.setAttribute('aria-hidden', 'true');
+  levy.appendChild(linssi);
   lista.appendChild(levy);
 
   let nykyinen = valittu;
@@ -121,6 +130,7 @@ export function luoPeukalolevy({
     levy.setAttribute('aria-valuenow', String(Math.max(0, jarjestys.indexOf(nykyinen))));
     const nimi = rivi.querySelector('.karttaselite-nimi')?.textContent ?? rivi.textContent ?? '';
     levy.setAttribute('aria-valuetext', nimi.trim());
+    linssi.textContent = (rivi.querySelector('.karttaselite-luku, .maakunnat-luku')?.textContent ?? '').trim();
   }
   sijoita(false);
 
