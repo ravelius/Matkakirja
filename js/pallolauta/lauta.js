@@ -1439,8 +1439,34 @@ export async function avaaPallolauta(ui) {
    * ilmoittavat itse: ks. ryhmienVahti.
    */
   let sykkiiNyt = () => false;
+  /*
+   * ══ ELEEN AIKANA EI OHITETA YHTÄKÄÄN KEHYSTÄ (omistajan iPhone-
+   * mittaus 22.9.2026, v2122:n kehysprofiili) ══════════════════════
+   *
+   * Omistajan kolme kaappausta vedon aikana: rAF 59–63 Hz (ei siis
+   * ProMotion-tahtivika), mutta PIIRTO 51–86 % rAF-kehyksistä ja
+   * ohitettuja 133–234. Vedon aikana jäi siis joka toinen tai joka
+   * kuudes kehys piirtämättä.
+   *
+   * KEHÄ. iOS:n Safari ei tahdista pointermovea rAF:iin, joten osaan
+   * kehyksistä ei osu yhtään tapahtumaa. Lepopiirto näki sellaisen
+   * kehyksen levollisena (kamera ei ole vielä muuttunut) ja pysäytti
+   * kirjaston tickin — mutta KAIKKI syötetavat (interpolointi, ennakko,
+   * jousi) ajetaan `ohjaimet.update`in sisällä eli juuri siinä tickissä.
+   * Tauolla ollut tick ei voi soveltaa odottavaa vetoa, joten kamera ei
+   * muutu, joten seuraavakin kehys näyttää levolliselta. Siitä syntyy
+   * se 0/2-kuvio, jonka omistaja tuntee nykimisenä — ja se selittää,
+   * miksi syötetavan tai dpr:n vaihtaminen ei muuttanut mitään.
+   *
+   * v2110 ilmoitti lepopiirrolle vedon ALUSTA (yksi kehys); tämä on sen
+   * puuttunut puolisko: koko eleen ja sen jälkeisen liu'un ajan piirto
+   * on este, eli jokainen rAF-kehys piirretään. Syke ja ohitukset
+   * palaavat vasta levossa.
+   */
+  let vetoNyt = () => false; // sidotaan alempana (eleKaynnissa + liuku)
   const puraLepopiirto = lepopiirtoKaytossa() ? asennaLepopiirto(pallo, {
-    esteet: () => LEVON_ESTEET.some((l) => document.body.classList.contains(l) || kuori.classList.contains(l)),
+    esteet: () => vetoNyt()
+      || LEVON_ESTEET.some((l) => document.body.classList.contains(l) || kuori.classList.contains(l)),
     hitaat: () => sykkiiNyt(),
   }) : () => {};
   /* Ryhmien add/remove → piirto: kirjaston pohjan laatat, kerroksen laatat, vektorit. */
@@ -4526,6 +4552,14 @@ export async function avaaPallolauta(ui) {
   let kameraMuuttuiHetki = -Infinity;
   liikkeessaNyt = () => eleKaynnissa()
     || ((globalThis.performance?.now?.() ?? Date.now()) - kameraMuuttuiHetki) < LIIKKEEN_IKKUNA_MS;
+  /*
+   * Lepopiirron este (ks. ELEEN AIKANA EI OHITETA YHTÄKÄÄN KEHYSTÄ):
+   * sormi alhaalla, nipistys, kamera-ajo TAI irrotuksen jälkeinen liuku
+   * (`ui.pallonVauhti.raf`, js/pallo.js). Liuku kirjoittaa kameraa itse,
+   * mutta este on silti oikea paikka: sen pysähdykset näkyisivät samana
+   * nykimisenä vedon lopussa.
+   */
+  vetoNyt = () => eleKaynnissa() || Boolean(ui.pallonVauhti?.raf);
   /*
    * ══ LIIKKEESSÄ EI TÄYTTÄ LADONTAA (sulavuus 22.9.2026, ablaatiotikas
    * docs/raportit/sulavuus-ablaatio-20260921.md; Fablen päätös) ═════

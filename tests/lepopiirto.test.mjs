@@ -162,3 +162,34 @@ test('atlaksen osittainen päivitys (sulavuus kohta 8): viedyn sivun rasteri tex
   assert.match(gl, /s\.tekstuuri\.needsUpdate = true; s\.likainen = false; s\.viety = true;/);
   assert.match(gl, /includes\('atlaskoko'\)/, 'koelippu palauttaa koko kankaan viennin');
 });
+
+/*
+ * ELEEN AIKANA EI OHITETA YHTÄKÄÄN KEHYSTÄ (omistajan iPhone-mittaus
+ * 22.9.2026, v2122:n kehysprofiili: rAF 59–63 Hz mutta piirto vain
+ * 51–86 % ja ohitettuja 133–234 vedon aikana).
+ *
+ * KEHÄ: iOS ei tahdista pointermovea rAF:iin, joten osaan kehyksistä ei
+ * osu tapahtumaa. Lepopiirto näki sellaisen kehyksen levollisena ja
+ * pysäytti kirjaston tickin — mutta kaikki syötetavat ajetaan
+ * `ohjaimet.update`issa eli juuri siinä tickissä, joten odottava veto
+ * ei voinut edetä eikä kamera muuttua. Siitä syntyy 0/2-kuvio, jota
+ * mikään syötetapa tai dpr ei voi korjata.
+ *
+ * Sopimus on lähteessä, koska ele ja lepopiirto kohtaavat vasta
+ * selaimessa; savuke-lepopiirto V7 mittaa saman ajossa.
+ */
+test('lepopiirto: ele ja liuku ovat este, eli vedon aikana piirretään joka kehys', () => {
+  const lauta = lue('../js/pallolauta/lauta.js');
+  assert.match(lauta, /esteet: \(\) => vetoNyt\(\)/, 'ele ohittaa lepopiirron ohitukset');
+  assert.match(lauta, /vetoNyt = \(\) => eleKaynnissa\(\) \|\| Boolean\(ui\.pallonVauhti\?\.raf\);/,
+    'sormi, nipistys, kamera-ajo ja irrotuksen jälkeinen liuku');
+  assert.match(lauta, /ELEEN AIKANA EI OHITETA YHTÄKÄÄN KEHYSTÄ/, 'perustelu jää lähteeseen');
+  const savuke = lue('../tools/savukkeet/savuke-lepopiirto.mjs');
+  assert.match(savuke, /vedon aikana piirto joka rAF-kehyksessä, myös ilman tapahtumaa/, 'vartija ajossa');
+  /*
+   * Vartijan on ANNETTAVA kehyksiä ilman tapahtumaa: tasaisuusmittarin
+   * oma veto lähettää pointermoven joka kehyksellä, eikä se paljasta
+   * tätä vikaa lainkaan (todettu: korjaamattomalla puulla 0 ohitusta).
+   */
+  assert.match(savuke, /if \(kehyksia % 2 === 0\) \{ x \+= 1\.4; tapahtuma\('pointermove'\); \}/);
+});

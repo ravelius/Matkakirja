@@ -19,6 +19,9 @@
  *       hehkupisteen syke 15 fps), ja yhtään 'kamera'-syytä ei kerry
  *       (kameran vertailu ei värähtele).
  *   V2  LIIKKEESSÄ JOKA KEHYS: tasaisuusmittarin veto — pysähdyksiä ≤ 2
+ *   V7  VEDON AIKANA EI OHITUKSIA, vaikka tapahtuma osuisi vain joka
+ *       toiseen kehykseen (iOS ei tahdista pointermovea rAF:iin);
+ *       ohitettu kehys pysäyttää tickin, jossa syöte sovelletaan
  *       (headless WebKit pysähtyy 1–2 kehystä ilman lepopiirtoakin).
  *   V3  MUUTOS NÄKYY HETI: kamera uuteen paikkaan → laattojen saapuminen
  *       kirjaa 'pakko'/'tarve'-piirtoja (ryhmän add ilmoittaa), ja
@@ -235,6 +238,57 @@ const veto = await sivu.evaluate(async () => {
 tieto(`V2 ${MOOTTORI} veto`, veto.teksti);
 // Headless WebKit pysähtyy 1–2 kehystä myös ilman lepopiirtoa (mitattu 22.9.2026: 63 % / 2 vs 65 % / 1); raja 2.
 vaadi(`V2 ${MOOTTORI}: liikkeessä joka kehys (pysähdyksiä ≤ 2)`, veto.t && veto.t.pysahdyksia <= 2 && veto.t.kehyksia > 30, JSON.stringify(veto.t));
+/*
+ * V7: VEDON AIKANA EI OHITETA YHTÄKÄÄN KEHYSTÄ (omistajan iPhone-
+ * mittaus 22.9.2026, v2122:n kehysprofiili: piirto 51–86 % ja
+ * ohitettuja 133–234 vedon aikana). Ohitettu kehys pysäyttää kirjaston
+ * tickin, ja kaikki syötetavat ajetaan juuri siinä tickissä — siitä
+ * syntyy 0/2-kuvio, jota mikään syötetapa ei voi korjata. Mitataan
+ * lepopiirron omista laskureista saman vedon yli: ohituksia 0.
+ */
+const vetoPiirto = await sivu.evaluate(async () => {
+  /*
+   * TAPAHTUMA JOKA TOISEEN KEHYKSEEN — juuri se, mitä iOS tekee.
+   * Tasaisuusmittarin oma veto lähettää pointermoven JOKA kehyksellä,
+   * jolloin kamera muuttuu joka kehys eikä ohituksia synny edes
+   * korjaamattomalla lepopiirrolla: se ei siis mittaa tätä vikaa
+   * lainkaan. Kehys ilman tapahtumaa on se tilanne, jossa vanha
+   * lepopiirto pysäytti tickin ja odottava veto jäi soveltamatta.
+   */
+  const ui = window.matkakirja.ui;
+  const kotelo = ui.pallonInstanssi.renderer().domElement;
+  const r = kotelo.getBoundingClientRect();
+  let x = r.left + r.width * 0.3;
+  const y = r.top + r.height * 0.55;
+  const tapahtuma = (tyyppi) => kotelo.dispatchEvent(new PointerEvent(tyyppi, {
+    bubbles: true, cancelable: true, composed: true, pointerId: 9, pointerType: 'touch',
+    isPrimary: true, clientX: x, clientY: y, buttons: tyyppi === 'pointerup' ? 0 : 1, button: 0,
+  }));
+  const lepo = () => ui.pallonInstanssi.__piirto.tila();
+  tapahtuma('pointerdown');
+  await new Promise((valmis) => { requestAnimationFrame(() => requestAnimationFrame(valmis)); });
+  const a = lepo();
+  let kehyksia = 0;
+  await new Promise((valmis) => {
+    const askel = () => {
+      kehyksia += 1;
+      if (kehyksia % 2 === 0) { x += 1.4; tapahtuma('pointermove'); }
+      if (kehyksia < 90) requestAnimationFrame(askel); else valmis();
+    };
+    requestAnimationFrame(askel);
+  });
+  const b = lepo();
+  tapahtuma('pointerup');
+  return {
+    kehyksia,
+    piirtoja: b.piirtoja - a.piirtoja,
+    ohitettuja: b.ohitettuja - a.ohitettuja,
+  };
+});
+tieto(`V7 ${MOOTTORI} vedon piirto`, `${vetoPiirto.kehyksia} kehystä, joka toisessa tapahtuma: piirtoja ${vetoPiirto.piirtoja}, ohitettuja ${vetoPiirto.ohitettuja}`);
+vaadi(`V7 ${MOOTTORI}: vedon aikana piirto joka rAF-kehyksessä, myös ilman tapahtumaa (ohituksia 0)`,
+  vetoPiirto.piirtoja > 30 && vetoPiirto.ohitettuja === 0, JSON.stringify(vetoPiirto));
+
 await sivu.waitForTimeout(800);
 /* V3: uusi paikka → laatat saapuvat → piirtoja ilman kameran liikettä; sitten pikseli ilman pakotusta. */
 await sivu.evaluate(() => { window.matkakirja.ui.pallolauta.heraa?.(); window.matkakirja.ui.pallonInstanssi.pointOfView({ lat: 43.5, lng: 4.5, altitude: 0.05 }, 0); });

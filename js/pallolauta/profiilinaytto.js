@@ -64,6 +64,21 @@ export function profiiliTahti(tulos, lepoDelta = null) {
   const kehykset = tulos?.kehykset ?? [];
   const dts = kehykset.map((k) => k.dt).filter((d) => Number.isFinite(d) && d > 0);
   const dtP50 = prosenttipiste(dts, 0.5);
+  /*
+   * PITKÄT KEHYKSET: PIIRRETTY VAI OHITETTU (Fablen kysymys 22.9.2026).
+   * Lepopiirron laskurit ovat kumulatiivisia, joten kehyksen oma vastaus
+   * on edelliseen kehykseen verrattu erotus. Jos pitkät kehykset ovat
+   * ohitettuja, vika on tickin tauossa; jos piirrettyjä, se on työssä.
+   */
+  let pitkatPiirretty = 0;
+  let pitkatOhitettu = 0;
+  for (let i = 1; i < kehykset.length; i += 1) {
+    const k = kehykset[i];
+    if (!(k.dt > 25)) continue;
+    const edel = kehykset[i - 1];
+    if (!Number.isFinite(k.piirtolaskuri) || !Number.isFinite(edel?.piirtolaskuri)) continue;
+    if (k.piirtolaskuri > edel.piirtolaskuri) pitkatPiirretty += 1; else pitkatOhitettu += 1;
+  }
   const piirtoja = lepoDelta?.piirtoja ?? null;
   const ohitettuja = lepoDelta?.ohitettuja ?? null;
   const yhteensa = Number.isFinite(piirtoja) && Number.isFinite(ohitettuja) ? piirtoja + ohitettuja : null;
@@ -79,6 +94,8 @@ export function profiiliTahti(tulos, lepoDelta = null) {
     piirtoja,
     ohitettuja,
     piirtoOsuus: yhteensa ? piirtoja / yhteensa : null,
+    pitkatPiirretty,
+    pitkatOhitettu,
   };
 }
 
@@ -112,6 +129,9 @@ export function profiilirivit({
     rivit.push(`rAF ${tahti.hz ?? '—'} Hz (dt p50 ${p(tahti.dtP50, 1)}) · ${piirto}`);
     rivit.push(`dt p95 ${p(tahti.dtP95, 1)} · max ${p(tahti.dtMax)} · >20 ms: ${tahti.yli20}/${tahti.kehyksia}`
       + ` · js ka ${p(tahti.jsKa, 1)} · render ka ${p(tahti.renderKa, 1)}`);
+    if (tahti.pitkatPiirretty + tahti.pitkatOhitettu > 0) {
+      rivit.push(`pitkät (>25 ms): piirretty ${tahti.pitkatPiirretty} · ohitettu ${tahti.pitkatOhitettu}`);
+    }
   }
   if (pisin) {
     /*
@@ -156,6 +176,7 @@ export function profiilitiiviste({
       hz: tahti.hz, dtP50: tahti.dtP50, dtP95: tahti.dtP95, dtMax: tahti.dtMax, yli20: tahti.yli20,
       jsKa: tahti.jsKa, renderKa: tahti.renderKa,
       piirtoja: tahti.piirtoja, ohitettuja: tahti.ohitettuja, piirtoOsuus: tahti.piirtoOsuus,
+      pitkatPiirretty: tahti.pitkatPiirretty, pitkatOhitettu: tahti.pitkatOhitettu,
     } : null,
     kehyksia: tiiviste?.kehyksia ?? 0,
     mediaani: tiiviste?.mediaani ?? null,
