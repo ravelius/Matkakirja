@@ -298,7 +298,7 @@ test('pohja vapautetaan omaan syvimpään tasoonsa, jos kerros ei piirrä', () =
   assert.match(pallo, /const syvin = laattatasoMax\(laattaluettelo\);/);
   assert.match(pallo, /pallo\.globeTileEngineMaxLevel\(syvin\);/);
   // v1645:n laatutilat palaavat: asetaTila kulkee läpi vasta kun kerros on pois.
-  assert.match(pallo, /if \(kerrosKaytossa\) return;/);
+  assert.match(pallo, /if \(kerrosKaytossa\) \{ tahdistaPikselisuhde\(lepoon\); return; \}/);
   assert.match(pallo, /if \(!kerrosKaytossa\) \{ tahdistaPohjanNakyvyys\(\); return; \}\n\s*kerros\.paivita\(kehys, true, \{ liike: Boolean\(lepoAjastin\) \}\);\n\s*vapautaPohja\(\);/,
     'vapautus ajetaan piirtokoukusta, samasta kehyksestä kuin päivitys');
 });
@@ -425,9 +425,9 @@ test('kytkentä: pohja naulataan tasoon 5 vain kerroksen ollessa päällä', () 
   // ilman kerrosta katto on luettelon oma syvin taso kuten v1645:ssä.
   assert.match(pallo, /globeTileEngineMaxLevel\(\n\s*laattakerrosPaalla\(globalThis, LAATTAKERROS_OLETUS\) \? Math\.min\(syvin, POHJAN_TASO_MAX\) : syvin,\n\s*\)/);
   // asetaTila ei kosketa kynnyksiin eikä pikselisuhteeseen kerroksen kanssa.
-  assert.match(pallo, /const asetaTila = \(lepoon\) => \{\n\s*lepo = lepoon;\n(?:\s*\/\/[^\n]*\n)*\s*if \(kerrosKaytossa\) return;/);
-  assert.match(pallo, /const suhde = Math\.min\(dpr, LAATU_PIKSELISUHDE_LEPO\);\n\s*if \(renderer\.getPixelRatio\?\.\(\) !== suhde\) renderer\.setPixelRatio\(suhde\);/,
-    'pikselisuhde kerran asennuksessa');
+  assert.match(pallo, /const asetaTila = \(lepoon\) => \{\n\s*lepo = lepoon;\n(?:\s*\/\/[^\n]*\n)*\s*if \(kerrosKaytossa\) \{ tahdistaPikselisuhde\(lepoon\); return; \}/);
+  assert.match(pallo, /if \(kerros && renderer\) tahdistaPikselisuhde\(true\);/,
+    'pikselisuhde asennuksessa levon arvoon (asetus voi pudottaa sen liikkeessä)');
   // Lepokerrosta ei luoda kerroksen kanssa (vanha polku vain ?laattakerros=0).
   assert.match(pallo, /const lepokerros = kerros \? null : luoLepokerros\(\{/);
   /*

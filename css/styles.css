@@ -706,6 +706,20 @@ button, .brand, .turn-pill, .fact-card h2 {
 .lauta-vihje[hidden] { display: none; }
 
 /*
+ * TARKKUUS LIIKKEESSÄ (js/main.js, js/tarkkuus-asetus.js): aliotsikko
+ * Kartta-ryhmän sisällä ja kolme radioriviä samassa riviasussa kuin
+ * äänikytkimet. Vihjerivi käyttää laudan vihjeen tyyliä.
+ */
+.valikko-aliotsikko {
+  margin: 0.55rem 0 0.2rem;
+  font-family: var(--font-type);
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/*
  * ── VALIKON KOMENNOT: KAKSI LEVEÄÄ TEKSTINAPPIA ──────────────────────
  *
  * Omistajan päätös 18.8.2026: "uusi peli" ja sen alla "ehdota
