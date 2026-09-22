@@ -284,6 +284,8 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
   /** id → { lat, lng, avain, peitto, piste:[x,y,z] } */
   const instanssit = new Map();
   let likainen = true;
+  /** Rakennus seuraavassa kehyksessä — ja lepopiirrolle tieto, että kehys on piirrettävä. */
+  const likaa = () => { likainen = true; pallo?.__piirto?.tarvitaan(); };
   let kerroinNyt = 1;
   let sykeNyt = 1;
   const ruutu = { x: 1, y: 1 };
@@ -383,7 +385,7 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
       t.u1 = (paikka.x + t.w) / GLNIMIOT_ATLAS; t.v1 = (paikka.y + t.h) / GLNIMIOT_ATLAS;
     }
     sivu.likainen = true;
-    likainen = true; // UV:t muuttuivat → geometriat uusiksi
+    likaa(); // UV:t muuttuivat → geometriat uusiksi
     mittarit.tiivistyksia += 1;
     mittarit.rastereita = uvt.size;
     return sivu;
@@ -516,7 +518,7 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
         syke: Boolean(syke),
         piste: glMaapiste(lat, lng, sade),
       });
-      likainen = true;
+      likaa();
       return true;
     },
     /**
@@ -531,7 +533,7 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
       for (const r of lista ?? []) {
         if (this.aseta(r.tunnus ?? r.id, r)) n += 1;
       }
-      likainen = true;
+      likaa();
       return n;
     },
     /** Atlas rasterilähteelle: varaa(avain, kuva, w, h, ankkuriX, ankkuriY) → UV-tietue | null (täynnä). */
@@ -546,10 +548,10 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
     },
     poista(id) {
       const oli = instanssit.delete(id);
-      if (oli) likainen = true;
+      if (oli) likaa();
       return oli;
     },
-    tyhjenna() { instanssit.clear(); likainen = true; },
+    tyhjenna() { instanssit.clear(); likaa(); },
     /**
      * Peitto (0…1) yhdelle instanssille — kylkivaihdon crossfade, piilotus.
      * OSAPÄIVITYS, EI RAKENNUSTA (sulavuus 22.9.2026, ablaatiotikas:
@@ -564,15 +566,18 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
       if (!inst) return;
       inst.peitto = Math.max(0, Math.min(1, arvo));
       const attr = !likainen && inst.sivu ? inst.sivu.geometria.getAttribute('peitto') : null;
-      if (!attr || !(inst.kulmaAlku >= 0) || inst.kulmaAlku + 3 >= attr.count) { likainen = true; return; }
+      if (!attr || !(inst.kulmaAlku >= 0) || inst.kulmaAlku + 3 >= attr.count) { likaa(); return; }
       for (let k = 0; k < 4; k += 1) attr.setX(inst.kulmaAlku + k, inst.peitto);
       attr.needsUpdate = true;
+      pallo?.__piirto?.tarvitaan();
       mittarit.peittopaivityksia = (mittarit.peittopaivityksia ?? 0) + 1;
     },
     /** Kuoren kerroin (nimiöiden koko zoomin mukaan) — uniform, ei uutta rasteria. */
     kerroin(arvo) { if (Number.isFinite(arvo) && arvo > 0) kerroinNyt = arvo; },
     /** Hehkupisteen sykähdys: koon kerroin (1 = ei sykettä) — uniform, vain syke-instansseille. */
     syke(arvo) { if (Number.isFinite(arvo) && arvo > 0) sykeNyt = arvo; },
+    /** Montako rungon instanssia sykkii (lepopiirto). */
+    sykkivia() { let n = 0; for (const inst of instanssit.values()) if (inst.syke && inst.peitto > 0) n += 1; return n; },
     /**
      * Kehyskoukku (kytkePallonKehys): ruudun mitat laitepikseleinä
      * uniformeihin, likaiset geometriat ja tekstuurit uusiksi. Halpa,

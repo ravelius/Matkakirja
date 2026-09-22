@@ -209,6 +209,8 @@ export function luoGlNimiosovitin({
   let sykeKaytossa = true;
   /** Häipyvät nimiöt: tunnus → { instanssi, alku, mista, mihin, poistu } */
   const haivytykset = new Map();
+  /** Lepopiirto: häivytyksen ajan joka kehys piirretään (kehys() etenee vain piirrettäessä). */
+  const ilmoitaHaivytys = () => ui?.pallonInstanssi?.__piirto?.tarvitaan?.(NOSTON_HAIVYTYS_MS + 50);
   const nyt = () => globalThis.performance?.now?.() ?? Date.now();
 
   /** Rasteri atlakseen rungon rajapinnalla; false = ei tilaa. */
@@ -353,8 +355,8 @@ export function luoGlNimiosovitin({
           haivytykset.set(`${tunnus}#ikoni-vanha`, {
             instanssi: { ...edellinen.instanssi, tunnus: `${tunnus}#ikoni-vanha`, opacity: edellinen.instanssi.opacity },
             alku: hetki, mista: edellinen.instanssi.opacity, mihin: 0, poistu: true,
-          });
-          haivytykset.set(`${tunnus}#ikoni`, { alku: hetki, mista: 0, mihin: peitto, poistu: false });
+          }); ilmoitaHaivytys();
+          haivytykset.set(`${tunnus}#ikoni`, { alku: hetki, mista: 0, mihin: peitto, poistu: false }); ilmoitaHaivytys();
         }
         const haivytys = haivytykset.get(`${tunnus}#ikoni`);
         const ikoninPeitto = haivytys && !haivytys.poistu ? haivytys.mista : peitto;
@@ -372,8 +374,8 @@ export function luoGlNimiosovitin({
           haivytykset.set(`${tunnus}#nimio-vanha`, {
             instanssi: { ...edellinen.instanssi, tunnus: `${tunnus}#nimio-vanha`, opacity: edellinen.instanssi.opacity },
             alku: hetki, mista: edellinen.instanssi.opacity, mihin: 0, poistu: true,
-          });
-          haivytykset.set(`${tunnus}#nimio`, { alku: hetki, mista: 0, mihin: peitto, poistu: false });
+          }); ilmoitaHaivytys();
+          haivytykset.set(`${tunnus}#nimio`, { alku: hetki, mista: 0, mihin: peitto, poistu: false }); ilmoitaHaivytys();
         }
         const haivytys = haivytykset.get(`${tunnus}#nimio`);
         const nimioPeitto = nimioNakyy ? (haivytys && !haivytys.poistu ? haivytys.mista : peitto) : 0;
@@ -509,6 +511,12 @@ export function luoGlNimiosovitin({
     },
     /** Hehkupisteen sykähdys päälle/pois (savukkeiden kuvavertailu; oletus päällä). */
     syke(paalla) { sykeKaytossa = Boolean(paalla); },
+    /** Sykkiikö hehkupiste juuri nyt (lepopiirto: hidas animaatio, 15 fps riittää). */
+    sykkii() {
+      if (purettu || !sykeKaytossa || levonAlku == null) return false;
+      const k = kerros?.();
+      return Boolean(k?.sykkivia?.());
+    },
     /** Käynnissä olevat häivytykset (savukkeet). */
     haivytykset: () => new Map(haivytykset),
     /** Rungolla olevat instanssitunnukset (savukkeet, osumatesti). */

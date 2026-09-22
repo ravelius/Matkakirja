@@ -2546,13 +2546,14 @@ export function luoLaattakerros({
       if (kohde >= 1 && materiaali.transparent) { materiaali.transparent = false; materiaali.needsUpdate = true; }
       valmis?.();
     };
-    if (!(kesto > 0) || alku === kohde) { paata(); return; }
+    if (!(kesto > 0) || alku === kohde) { paata(); pallo.__piirto?.tarvitaan(); return; }
     const t0 = aika();
     const askel = () => {
       if (materiaali.__haive !== askel) return;
       const t = Math.min(1, (aika() - t0) / kesto);
       const e = 1 - (1 - t) ** 3;
       materiaali.opacity = alku + (kohde - alku) * e;
+      pallo.__piirto?.tarvitaan(); // lepopiirto: häiveen askel näkyviin
       if (t < 1) { ikkuna.requestAnimationFrame(askel); return; }
       materiaali.__haive = null;
       paata();
