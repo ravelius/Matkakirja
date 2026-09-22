@@ -935,3 +935,7 @@ Omistaja 22.9.2026 klo 09.20: kartta nykii yhä natiivilla iPhonella v2076. Tila
 ## LAATTOJEN VALMISTELU SIIRRETAAN WEB WORKERIIN (KERMA RIIPPUU PELITILASTA, EI POLTETTAVISSA) (22.9.2026 klo 09.17)
 
 Pelikoodari 22.9.2026 klo 09.30: kerma riippuu pelitilasta (käydyt maat, kohdemaan suojarengas), joten sitä ei voi polttaa laattoihin; laattojen valmistelu siirretään Web Workeriin (OffscreenCanvas + createImageBitmap, polygonit ja kuvat transferable-puskureina, kangaslähde säilyy viennissä; Karttasepän kerma-koodi workeriin sellaisenaan). 'Muu' 16–26 ms on skriptin jälkeistä renderöintiä (tyyli/asettelu/maalaus ja WebGL-kankaan luovutus komposiittorille) → xctrace-profiili. Fable hyväksyi Worker-siirron seuraavaksi eräksi; karttaselite-parvi (3 Sonnetia) alkoi haarassa pelikoodari-karttaselite.
+
+## KOHTAAMISET C2 DATAAN (07aed5e72); KUVATILAUS 9 CODEXILLE (ATEENA, FIRENZE, KOBENHAVN) (22.9.2026 klo 09.19)
+
+Sisältökirjuri 22.9.2026 klo 09.40: C2 kuusi riviä dataan, Firenze korjattu, Réka → Márta; kolmen luonnoksen tervehdysLuenta korjattu täsmäämään tervehdystä (agentit jättivät osan lauseesta pois — tarkistus jatkossa: luenta = tervehdys sanasta sanaan). Testit 0 fail, Julkaisijalle. Fable tilasi Codexilta kolme kasvokuvaa (posti/fable-codexille-kohtaamiskuvat-c2-20260922.md). C3 alkaa; Sisältökirjuri nollataan (72 %) luovutuksen jälkeen.
