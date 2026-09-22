@@ -108,6 +108,15 @@ const KOE = arg('koe', 'mittaus,syoteloki');
 const TIEDOSTO = arg('tiedosto', `seuraamisvirhe-${new Date().toISOString().slice(0, 10)}.jsonl`);
 const DATAKANSIO = join(JUURI, 'docs', 'raportit', 'data');
 const DATAPOLKU = join(DATAKANSIO, TIEDOSTO);
+/*
+ * KEHYSPROFIILI PUHELIMESTA (`?koe=profiili`, js/pallolauta/profiilinaytto.js;
+ * omistajan tilaus Fablen kautta 22.9.2026). Sama palvelin ottaa vastaan
+ * myös profiilijaksot: puhelin on jo tämän palvelimen asiakas (ämpäri
+ * välitetään tämän kautta, joten CORS ei ole tiellä), eikä toista
+ * palvelinta kannata pystyttää yhtä POST-polkua varten. Oma tiedosto,
+ * koska rivin muoto on eri kuin seuraamisvirheellä.
+ */
+const PROFIILIPOLKU = join(DATAKANSIO, arg('profiilitiedosto', `profiili-${new Date().toISOString().slice(0, 10)}.jsonl`));
 mkdirSync(DATAKANSIO, { recursive: true });
 
 const TYYPIT = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp', '.jpg': 'image/jpeg', '.geojson': 'application/json' };
@@ -355,6 +364,25 @@ const palvelin = http.createServer((req, res) => {
     });
     return;
   }
+  if (polku === '/__profiili' && req.method === 'POST') {
+    let data = '';
+    req.on('data', (c) => { data += c; });
+    req.on('end', () => {
+      // Yksi rivi per jakso; pisin kehys ja sen syy näkyvät suoraan lokissa.
+      let tiivis = data.slice(0, 200);
+      try {
+        const r = JSON.parse(data);
+        tiivis = `pisin ${Math.round(r?.pisin?.dt ?? 0)} ms (js ${Math.round(r?.pisin?.js ?? 0)}, `
+          + `render ${Math.round(r?.pisin?.render ?? 0)}) p95 ${Math.round(r?.p95 ?? 0)} `
+          + `| ${(r?.kutsut ?? []).slice(0, 3).map((k) => `${k.n} ${k.ms}`).join(', ')}`;
+      } catch { /* rikkinäinen rivi kirjataan silti raakana */ }
+      console.log('PROFIILI:', tiivis);
+      appendFileSync(PROFIILIPOLKU, data + '\n');
+      res.writeHead(200, { 'content-type': 'text/plain', 'access-control-allow-origin': '*' });
+      res.end('ok');
+    });
+    return;
+  }
   if (polku.startsWith(AMPARIPOLKU)) { void valitaAmpariin(req, res, polku.slice(AMPARIPOLKU.length)); return; }
   palveleTiedosto(req, res, polku, origin);
 });
@@ -368,6 +396,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
       console.log(`  http://${ip}:${PORTTI}/?lauta=pallo&dev=${DEV}&koe=${KOE}&luonnollinen=1`);
     }
     console.log(`Tulokset: ${DATAPOLKU}`);
+    console.log(`  Kehysprofiili (?koe=profiili): ${PROFIILIPOLKU}`);
     console.log(`Tarkistus: node tools/mittaus/seuraamisvirhe-palvelin.mjs --tarkista ${DATAPOLKU}`);
     console.log('Ämpäri välitetään polusta /ampari/ (media.matkakirja.app). Ctrl-C lopettaa.');
   });

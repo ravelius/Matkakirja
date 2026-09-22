@@ -26096,6 +26096,32 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
 }
 
 /*
+ * KEHYSPROFIILIN NÄYTTÖ (`?koe=profiili`, js/pallolauta/profiilinaytto.js).
+ * VAIN MITTAUKSEEN: kerros syntyy kartalle vain lipun kanssa, joten
+ * pelaaja ei näe sitä koskaan. Puhelin ensin: pieni tasalevyinen
+ * kirjasin, tumma pohja ja kapea rivinväli, jotta neljä riviä mahtuu
+ * 390 px:n leveydelle kuvakaappaukseen luettavana.
+ */
+.profiilinaytto {
+  position: absolute;
+  left: 0.4rem;
+  bottom: 0.4rem;
+  z-index: 6;
+  max-width: calc(100% - 0.8rem);
+  padding: 0.3rem 0.45rem;
+  border-radius: 6px;
+  background: rgba(18, 14, 8, 0.78);
+  color: #f2e7cf;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.62rem;
+  line-height: 1.35;
+  white-space: pre-wrap;
+  pointer-events: none;
+  /* Mittauskerros ei saa vaikuttaa mittaukseen: ei varjoja, ei suotimia. */
+  text-shadow: none;
+}
+
+/*
  * RIVIN OMA LUKU PIILOON LINSSIN ALTA (omistaja 22.9.2026: *"Suurennos-
  * lasin alta paistaa myös se pienempi numero."*). Linssi näyttää saman
  * luvun suurennettuna, joten rivin oma luku näkyi sen takaa kahtena.
