@@ -195,3 +195,31 @@ Lopullinen koko sarja 3935 = 3922 PASS, 13 SKIP, 0 FAIL. Kaikki neljä
 repon porttia ja diff-check PASS. Paikallinen selain: 80 valintaa ja
 kaikki 10 ehdotusta ajallisena sarjana; nokka, ripset, huivi, kielet,
 kirjat, 390 px ja reduced motion PASS, 0 selainvirhettä.
+
+### Hyväksytyn hahmon oma ele: Ihana nähdä!
+
+Omistaja hyväksyi nuoren kyyhkyhahmon ja pyysi sille animoidun eleen.
+`uusi-livia-ilahtuu` (4,4 s) on Uudet versiot -ryhmän ensimmäinen painike.
+Katse tunnistaa pelaajan ennen muuta liikettä. Lyhyt valmistelu vaihtuu
+nopeaan ilahtumiseen: nokka aukeaa ja vartalo hengittää. Siipi painuu
+noin puoleksi sekunniksi rinnalle, pää kallistuu lempeästi ja silmät
+sulkeutuvat hetkeksi. Sitten siipi irtoaa rinnalta ja nousee tervehtimään.
+Toinen siipi pysyy rauhassa. Huivi ja sormisulat seuraavat viiveellä.
+
+Liike käyttää samaa jatkuvaa Hermite-interpolointia: nopeudet säilyvät
+saman suuntaisilla avaimilla, valmistelu ja kontaktipito ovat tarkoituksella
+eri tahtisia. Rintasiiven kyynärpää ja lyhyempi sulkaviuhka pitävät käden
+rinnalla silmien alapuolella. Irrotus kulkee alas ennen ylös nostoa.
+Jalat pysyvät maassa; hengitys joustaa vain niiden yläpuolella.
+Eleen viimeinen SVG vastaa täsmälleen sen ensimmäistä asentoa.
+
+Hyväksytty piirros ja aiemmat kymmenen ehdotusta säilyvät: 1010/1010
+SVG-asentoa tavulleen ennallaan verrattuna committiin `0228e45468b3`.
+Kohdetestit 11/11 PASS. Koko sarja 3936 = 3923 PASS, 13 SKIP, 0 FAIL.
+Kaksoisavaimet, niputus, savukevartio, nimiöt ja diff-check PASS.
+Kuvallinen kahdeksan vaiheen tarkistus ja paikallinen selain: 81 valintaa,
+11 ehdotusta ajallisena sarjana, siipi ei peitä silmiä, mobiili 390 px,
+vähennetty liike ja 0 selainvirhettä. Julkaisun kuitti kirjataan erikseen.
+
+Ei muutoksia pelin hahmoon, ohjaimeen, audioon, cueihin tai julkaisuun.
+Kuvaputkelle ei tilauksia. Tämä on vain itsenäisen katselusivun uusi ele.

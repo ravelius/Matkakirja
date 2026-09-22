@@ -25,11 +25,11 @@ test('katselusivu näyttää kategoriat ja vain valitun kategorian eleet',async 
  assert.equal(kategoriat.length,ryhmat.length+2);
  assert.equal(kategoriat[0].textContent,`Uudet versiot (${LIVIAN_UUDET_VERSIOT.length})`);assert.equal(kategoriat[0].attrs['aria-pressed'],'true');
  assert.deepEqual(elements['gesture-options'].children.map(n=>n.dataset.gesture),LIVIAN_UUDET_VERSIOT.map(e=>e.id));
- assert.match(elements.actual.innerHTML,/data-uusi-versio="uusi-sarjakuvapulu"/);
+ assert.match(elements.actual.innerHTML,/data-uusi-versio="uusi-livia-ilahtuu"/);
  assert.match(elements.zoom.innerHTML,/viewBox="65 207 115 99"/);
  assert.equal(elements['preview-note'].hidden,false);
  elements.all.onclick();
- assert.match(elements.actual.innerHTML,/data-uusi-versio="uusi-sarjakuvapulu"/,'sarja alkaa oman ryhmän ensimmäisestä');
+ assert.match(elements.actual.innerHTML,/data-uusi-versio="uusi-livia-ilahtuu"/,'sarja alkaa oman ryhmän ensimmäisestä');
  const ryhmitellyt=[];
  for(const ryhma of ryhmat){
   elements['gesture-categories'].children.find(nappi=>nappi.dataset.category===ryhma).onclick();
@@ -45,6 +45,6 @@ test('katselusivu näyttää kategoriat ja vain valitun kategorian eleet',async 
  assert.equal(elements['gesture-categories'].children[0],kategoriat[0],'kategoriapainikkeita ei tuhota ja fokus säilyy');
  kategoriat[0].onclick();
  reduced.matches=true;reduced.dispatchEvent(new Event('change'));assert.equal(raf.size,0);
- assert.match(elements.actual.innerHTML,/data-uusi-versio="uusi-sarjakuvapulu"/);
+ assert.match(elements.actual.innerHTML,/data-uusi-versio="uusi-livia-ilahtuu"/);
  elements.play.onclick();assert.equal(raf.size,0,'vähennetty liike ei käynnistä uutta esikatselua');
 });

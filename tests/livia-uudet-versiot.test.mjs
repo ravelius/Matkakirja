@@ -27,12 +27,35 @@ test('sarjakuvakokeilu käyttää omaa piirrosta, huivia ja jatkuvaa silmänräp
   assert.match(kuva(.22),/fill="#d98a98"/);
   const huivi=p=>kuva(p).match(/data-part="scarf-tails" transform="([^"]+)"/)[1];
   assert.notEqual(huivi(.2),huivi(.3),'huivin päät seuraavat tervehdyksen jälkiliikettä');
-  for(const e of LIVIAN_UUDET_VERSIOT.filter(e=>e.id!=='uusi-sarjakuvapulu')){
+  for(const e of LIVIAN_UUDET_VERSIOT.filter(e=>!['uusi-sarjakuvapulu','uusi-livia-ilahtuu'].includes(e.id))){
     assert.doesNotMatch(uudenEleenKuva(uudenEleenAsento(e.id,.4)),/cartoon-eye|data-part="scarf"/,'ei uutta hahmopiirrosta tai huivia muihin eleisiin');
   }
   for(let i=0;i<=100;i++){
     const s=a(i/100),perus=uudenEleenAsento('uusi-welcome',i/100);
     for(const k of ['paaKulma','siipi','sulat','suu','rapaytys'])assert.equal(s[k],perus[k],'piirrostyylin koe säilyttää tutun tervehdyksen liikeavaimet');
+  }
+});
+
+test('Livian oma tervehdys erottaa tunnistamisen, rintasiiven ja vilkutuksen',()=>{
+  const a=p=>uudenEleenAsento('uusi-livia-ilahtuu',p),kuva=p=>uudenEleenKuva(a(p));
+  assert.ok(a(.055).katse<-.8&&a(.055).siipi===0,'katse ehtii ennen siipeä');
+  assert.equal(a(.155).suu,0,'lyhyt ennakointi ennen ilahtumista');
+  assert.ok(a(.235).suu>.79&&a(.235).hengitys>.7,'nokka ja rinta aukeavat ilahtumiseen');
+  assert.equal(a(.325).rintasiipi,1);assert.equal(a(.45).rintasiipi,1,'siipi lepää rinnalla noin puoli sekuntia');
+  assert.match(kuva(.4),/data-part="chest-elbow"/);
+  assert.ok(a(.4).paaKulma<-9&&a(.415).rapaytys>.8,'lempeä kallistus ja silmien sulkeminen kontaktin aikana');
+  assert.equal(a(.535).rintasiipi,0,'siipi irtoaa rinnalta ennen ylös tervehtimistä');
+  assert.ok(a(.615).siipi>.9&&a(.615).takasiipi<.25,'vain toinen siipi tervehtii korkealla');
+  assert.ok(a(.615).sulat<a(.615).siipi,'siivenkärjet seuraavat jäljessä');
+  assert.notEqual(a(.64).huiviliike,a(.74).huiviliike,'huivi heilahtaa takaisin');
+  assert.match(kuva(.23),/data-part="breath"/);
+  assert.match(kuva(.055),/data-part="gaze"/);
+  assert.equal(kuva(0),kuva(1),'myös piirros palaa täsmälleen lepoon');
+  let edellinen=a(0);
+  for(let i=1;i<=1000;i++){
+    const s=a(i/1000);
+    for(const k of ['rintasiipi','siipi','suu','hengitys'])assert.ok(Math.abs(s[k]-edellinen[k])<.035,k+' vaihtuu jatkuvasti');
+    edellinen=s;
   }
 });
 
@@ -50,7 +73,7 @@ test('katseluehdotukset pysyvät erillään pelieleistä ja kestävät kelauksen
       for(const m of kuva.matchAll(/url\(#([^)]+)\)/g))assert.ok(ids.includes(m[1]),m[1]);
       assert.ok(ids.every(id=>id.startsWith('koe')));
     }
-    if(e.id!=='uusi-bookPanic')for(const k of ['paaKulma','paaY','paaX','rinta','siipi','takasiipi','rapaytys','ilme','suu','suusiipi','hengitys'])assert.equal(asento(0)[k],asento(1)[k],e.id+' '+k);
+    if(e.id!=='uusi-bookPanic')for(const k of ['paaKulma','paaY','paaX','rinta','siipi','takasiipi','rapaytys','ilme','suu','suusiipi','hengitys','rintasiipi','huiviliike'])assert.equal(asento(0)[k],asento(1)[k],e.id+' '+k);
     const jalat=p=>uudenEleenKuva(asento(p)).match(/<g data-part="feet">.*?<\/g>/)[0];
     assert.equal(jalat(0),jalat(.45),'jalkojen ankkurit pysyvät maassa');
   }
