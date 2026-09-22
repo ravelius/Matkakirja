@@ -1091,3 +1091,7 @@ Julkaisija 22.9.2026 klo 17.55: #2783 → v2099 (main fc651208a); sulavuuserä 1
 ## OMISTAJA TYOSTAA PULUA CODEXIN KANSSA; POSTILAATIKKOA SEURATAAN; PUUTTUVAT CODEX-KUVAT (MONUMENTIT 81, PIENOISMALLIT 25) OMISTAJA SELVITTAA (22.9.2026 klo 12.57)
 
 Omistaja 22.9.2026 klo 18.10: työstää seuraavaksi pulua Codexin kanssa; tietoja tulee Fablelle postilaatikon (claude/postilaatikko, posti/) kautta — Postivahti lukee. Omistaja selvittää itse, miksi Codex ei ole toimittanut monumenttien 81 havainnekuvaa (tilaukset 5–7) eikä 25 pienoismallia. Codexin kuvatila: C1–C3 pelissä (v2084, v2093), maakuntien 97 havainnekuvaa v2096, C4–C7 tilattu tänään (12–15).
+
+## POSTIVAHDIN KIERROS 5 MIN KAHDEKSI TUNNIKSI (OMISTAJA) (22.9.2026 klo 13.21)
+
+Omistaja 22.9.2026 klo 18.15: posteja tulee tiheämmin (pulutyö Codexin kanssa) → Postivahdin kierros 10 → 5 minuuttia seuraavat kaksi tuntia (noin klo 20.15 asti), sitten takaisin 10 minuuttiin.
