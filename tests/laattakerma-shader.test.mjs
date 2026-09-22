@@ -26,7 +26,11 @@ test('shader ujutetaan map_fragmentin tilalle ja uniformit jaetaan', () => {
   const jaettu = luoKermanJaetut();
   const materiaali = {};
   const omat = asennaKermaShader(materiaali, { jaettu, laatta: { alue: { x0: 1, y0: 2, w: 3, h: 4 }, paalla: true } });
-  const shader = { uniforms: {}, fragmentShader: '#include <common>\nvoid main(){\n#include <map_fragment>\n}' };
+  const shader = {
+    uniforms: {},
+    vertexShader: '#include <common>\nvoid main(){\n#include <uv_vertex>\n}',
+    fragmentShader: '#include <common>\nvoid main(){\n#include <map_fragment>\n}',
+  };
   materiaali.onBeforeCompile(shader);
   assert.equal(shader.uniforms.kermaMaski, jaettu.kermaMaski, 'maski on jaettu olio');
   assert.deepEqual(shader.uniforms.kermaLaattaAlue.value, [1, 2, 3, 4]);
@@ -34,7 +38,12 @@ test('shader ujutetaan map_fragmentin tilalle ja uniformit jaetaan', () => {
   assert.match(shader.fragmentShader, /uniform sampler2D kermaMaski/);
   assert.match(shader.fragmentShader, /smoothstep\(36\.0, 52\.0, kermaEro\)/);
   assert.doesNotMatch(shader.fragmentShader, /#include <map_fragment>/);
-  assert.match(shader.fragmentShader, /texture2D\( map, vUv \)/);
+  // Oma varying, ei kirjaston nimeä (vika v2084: vUv ei ole r155:ssä → ei käänny).
+  assert.match(shader.fragmentShader, /texture2D\( map, vKermaUv \)/);
+  assert.doesNotMatch(shader.fragmentShader, /\bvUv\b|\bvMapUv\b/);
+  assert.match(shader.vertexShader, /varying vec2 vKermaUv;/);
+  assert.match(shader.vertexShader, /#include <uv_vertex>\nvKermaUv = uv;/);
+  assert.match(shader.fragmentShader, /varying vec2 vKermaUv;/);
   assert.equal(materiaali.customProgramCacheKey(), 'laattakerma-1');
 });
 
