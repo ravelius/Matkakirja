@@ -3159,6 +3159,7 @@ export function luoLaattakerros({
         const ppuL = tasoOlio.pikseliaPerYksikko;
         asennaKermaShader(materiaali, {
           jaettu: kermanJaetut,
+          tarkka: kokeet.has('kermapow'),
           laatta: {
             alue: { x0: pyramidi.arkki.x + kartta.kansX0 / ppuL, y0: pyramidi.arkki.y + kartta.kansY0 / ppuL, w: kartta.leveys / ppuL, h: kartta.korkeus / ppuL },
             paalla: !t.kermaPois,
