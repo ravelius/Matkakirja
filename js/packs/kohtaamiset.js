@@ -1280,4 +1280,275 @@ export const KOHTAAMISET = {
     tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
     tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
   },
+  /*
+   * Erä C6 (22.9.2026, docs/raportit/kohtaamiset-era-c6-20260922.md).
+   * Sevilla on puhdas kaupunki. 1873-fakta: Pickmanin keramiikkatehtaan
+   * omistaja aateloitiin 11.2.1873 — sama päivä kuin Espanjan
+   * tasavallan julistus (Granada, C3), mutta eri tapahtuma, ei
+   * mainittu tekstissä.
+   */
+  sevilla: {
+    hahmo: 'keramiikkamaalari Remedios',
+    nappi: 'Tapaa Remedios',
+    frame: 'Remedios nostaa siveltimensä lautasen yllä ja kysyy',
+    tervehdys: 'Remedios katsoo kirjaasi savenvärisin sormin '
+      + 'siveltimen yllä: "Pomomme — se englantilainen, joka osti '
+      + 'luostarin saviastioiksi — sai juuri markiisin arvonimen '
+      + 'kuninkaalta. Näytä että tunnet maailmaa kuten piirtäjä — '
+      + 'niin maalaan sinulle kuvion, jota kukaan muu ei saa."',
+    tervehdysLuenta: [
+      { rooli: 'kertoja', teksti: 'Remedios katsoo kirjaasi '
+        + 'savenvärisin sormin siveltimen yllä:' },
+      { rooli: 'hahmo', teksti: '[curious] "Pomomme — se '
+        + 'englantilainen, joka osti luostarin saviastioiksi — sai '
+        + 'juuri markiisin arvonimen kuninkaalta. [warmly] Näytä '
+        + 'että tunnet maailmaa kuten piirtäjä — niin maalaan '
+        + 'sinulle kuvion, jota kukaan muu ei saa."' },
+    ],
+    loyto: 'Remedios löytää rasian glaseerisäkkien takaa: "Tämä ei '
+      + 'ole savea eikä lasitetta — jätän sen tähän muiden '
+      + 'aarteiden joukkoon."',
+    loytoLuenta: [
+      { rooli: 'kertoja', teksti: 'Remedios löytää rasian '
+        + 'glaseerisäkkien takaa:' },
+      { rooli: 'hahmo', teksti: '[surprised] "Tämä ei ole savea '
+        + 'eikä lasitetta — jätän sen tähän muiden aarteiden '
+        + 'joukkoon."' },
+    ],
+    tyhja: 'Remedios pyyhkii hyllyn tyhjäksi: "Tyhjä. Työpaja '
+      + 'siivotaan joka ilta ennen uunien sammuttamista."',
+    vaarin: 'Remedios kääntää lautasen takaisin pöydälle: "Ei '
+      + 'vielä. Kuvio vaatii monta kertaa ennen kuin se on oikein."',
+    tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
+    tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
+    tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
+  },
+  /*
+   * Erä C6 (22.9.2026). Bryssel on puhdas kaupunki. 1873-fakta:
+   * pörssitalo (La Bourse) oli isoisän kesäkuun 1873 käynnin aikaan
+   * yhä telineiden takana, avattiin vasta 27.12.1873.
+   */
+  bryssel: {
+    hahmo: 'kivenveistäjä Aline',
+    nappi: 'Tapaa Aline',
+    frame: 'Aline laskee taltan hetkeksi kädestään ja kysyy',
+    tervehdys: 'Aline pyyhkii kivipölyn hihaansa ja vilkaisee '
+      + 'kirjaasi: "Isoisäsi näki tämän vielä telineiden takana — '
+      + 'sali avataan juhlallisesti vasta joulun alla, puoli vuotta '
+      + 'hänen käyntinsä jälkeen. Näytä että tunnet maailmaa kuten '
+      + 'piirtäjä — niin näytän, mikä kuvista on minun käsialaani."',
+    tervehdysLuenta: [
+      { rooli: 'kertoja', teksti: 'Aline pyyhkii kivipölyn '
+        + 'hihaansa ja vilkaisee kirjaasi:' },
+      { rooli: 'hahmo', teksti: '[curious] "Isoisäsi näki tämän '
+        + 'vielä telineiden takana — sali avataan juhlallisesti '
+        + 'vasta joulun alla, puoli vuotta hänen käyntinsä '
+        + 'jälkeen. [warmly] Näytä että tunnet maailmaa kuten '
+        + 'piirtäjä — niin näytän, mikä kuvista on minun '
+        + 'käsialaani."' },
+    ],
+    loyto: 'Aline nostaa rasian kivilastujen alta: "Tämä ei ole '
+      + 'minun taltallani tehty — mutta kivipölyn alle mahtuu moni '
+      + 'salaisuus."',
+    loytoLuenta: [
+      { rooli: 'kertoja', teksti: 'Aline nostaa rasian '
+        + 'kivilastujen alta:' },
+      { rooli: 'hahmo', teksti: '[surprised] "Tämä ei ole minun '
+        + 'taltallani tehty — mutta kivipölyn alle mahtuu moni '
+        + 'salaisuus."' },
+    ],
+    tyhja: 'Aline koputtaa tyhjää koloa telineen takana: "Tyhjä. '
+      + 'Työmaalla kulkee liikaa käsiä joka päivä — joku ehti '
+      + 'ensin."',
+    vaarin: 'Aline pyyhkii pölyn taltaltaan: "Ei vielä. Kivi ei '
+      + 'anna periksi ensimmäisellä iskulla — yritä uudestaan."',
+    tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
+    tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
+    tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
+  },
+  /*
+   * Erä C6 (22.9.2026). Marseillen kaari (KAARI_PAKETIT, 'marseille')
+   * nimeää soutaja Baptisten (satama, Ifin saari/Monte Cristo), ja
+   * hänen dokumentoitu tyylikoekuvansa on varattu kaaren omaan
+   * kohtaamiseen. 1873-fakta: Foire aux santons -messut perustettiin
+   * 1803, jo 70 vuotta vanha perinne 1873.
+   */
+  marseille: {
+    hahmo: 'santontekijä Rosine',
+    nappi: 'Tapaa Rosine',
+    frame: 'Rosine nostaa pienen siveltimen ja kysyy',
+    tervehdys: 'Rosine maalaa hiuksenohuella siveltimellä '
+      + 'savihahmon kasvoja pöydällä täynnä muita keskeneräisiä: '
+      + '"Marraskuun torille tarvitaan vielä satoja näitä, ennen '
+      + 'kuin yksikään myydään. Näytä että tunnet maailmaa kuten '
+      + 'piirtäjä — niin annan sinulle yhden, jota kukaan muu ei '
+      + 'saa."',
+    tervehdysLuenta: [
+      { rooli: 'kertoja', teksti: 'Rosine maalaa hiuksenohuella '
+        + 'siveltimellä savihahmon kasvoja pöydällä täynnä muita '
+        + 'keskeneräisiä:' },
+      { rooli: 'hahmo', teksti: '[curious] "Marraskuun torille '
+        + 'tarvitaan vielä satoja näitä, ennen kuin yksikään '
+        + 'myydään. [warmly] Näytä että tunnet maailmaa kuten '
+        + 'piirtäjä — niin annan sinulle yhden, jota kukaan muu ei '
+        + 'saa."' },
+    ],
+    loyto: 'Rosine löytää rasian keskeneräisten hahmojen joukosta: '
+      + '"Tämä ei ole savea eikä maalia — tämä on jonkun toisen '
+      + 'käsialaa."',
+    loytoLuenta: [
+      { rooli: 'kertoja', teksti: 'Rosine löytää rasian '
+        + 'keskeneräisten hahmojen joukosta:' },
+      { rooli: 'hahmo', teksti: '[surprised] "Tämä ei ole savea '
+        + 'eikä maalia — tämä on jonkun toisen käsialaa."' },
+    ],
+    tyhja: 'Rosine pyyhkii pölyn tyhjältä hyllyltä: "Tyhjä. Tätä '
+      + 'verstasta siivotaan ennen jokaista syksyn toria."',
+    vaarin: 'Rosine jatkaa maalaamista katsomatta ylös: "Ei vielä. '
+      + 'Yksikään hahmo ei synny ensimmäisellä siveltimenvedolla."',
+    tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
+    tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
+    tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
+  },
+  /*
+   * Erä C6 (22.9.2026). Kiovan kaari (KAARI_PAKETIT, 'kiova') nimeää
+   * näyttelymestari Danylon (Kultainen portti), joka on varattu
+   * kaaren omaan kohtaamiseen. 1873-fakta pidetty tiukasti
+   * insinööritiedossa (Nikolain ketjusilta, 1853), ei viittausta
+   * myöhempään historiaan tai nykypolitiikkaan.
+   */
+  kiova: {
+    hahmo: 'sillanvartija Oksana',
+    nappi: 'Tapaa Oksana',
+    frame: 'Oksana nostaa katseensa vartijakirjasta ja kysyy',
+    tervehdys: 'Oksana laskee ketjun renkaita vasten '
+      + 'vartijakirjaa Dneprin sillalla: "Isoisäsi aikaan tämä oli '
+      + 'koko Euroopan suurin riippusilta — hän kulki juuri näiden '
+      + 'ketjujen alla kaupunkiin. Näytä että tunnet maailmaa '
+      + 'kuten piirtäjä — niin lasken sinullekin, monesko rengas '
+      + 'pettää ensin."',
+    tervehdysLuenta: [
+      { rooli: 'kertoja', teksti: 'Oksana laskee ketjun renkaita '
+        + 'vasten vartijakirjaa Dneprin sillalla:' },
+      { rooli: 'hahmo', teksti: '[curious] "Isoisäsi aikaan tämä '
+        + 'oli koko Euroopan suurin riippusilta — hän kulki juuri '
+        + 'näiden ketjujen alla kaupunkiin. [warmly] Näytä että '
+        + 'tunnet maailmaa kuten piirtäjä — niin lasken sinullekin, '
+        + 'monesko rengas pettää ensin."' },
+    ],
+    loyto: 'Oksana nostaa rasian ketjupylvään juurelta: "Tämä ei '
+      + 'ole minun laskukirjani väliin pudonnut — mutta merkitsen '
+      + 'senkin ylös."',
+    loytoLuenta: [
+      { rooli: 'kertoja', teksti: 'Oksana nostaa rasian '
+        + 'ketjupylvään juurelta:' },
+      { rooli: 'hahmo', teksti: '[surprised] "Tämä ei ole minun '
+        + 'laskukirjani väliin pudonnut — mutta merkitsen senkin '
+        + 'ylös."' },
+    ],
+    tyhja: 'Oksana koputtaa tyhjää pylvästä: "Tyhjä. Silta '
+      + 'tärisee satojen askelten alla joka päivä — jokin siirtyy '
+      + 'täällä aina."',
+    vaarin: 'Oksana katsoo listaansa uudelleen: "Ei vielä. '
+      + 'Ketjukin lasketaan kolmesti ennen kuin luku kirjataan '
+      + 'oikein."',
+    tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
+    tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
+    tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
+  },
+  /*
+   * Erä C6 (22.9.2026). Luxemburg on puhdas kaupunki. 1873-fakta:
+   * 1867 Lontoon sopimuksen määräämä linnoituksen purku
+   * (1867–1883) oli 1873 tarkalleen puolivälissä.
+   */
+  luxemburg: {
+    hahmo: 'kivenhakkaaja Nic',
+    nappi: 'Tapaa Nic',
+    frame: 'Nic pysäyttää talttansa kesken lyönnin ja kysyy',
+    tervehdys: 'Nic pysäyttää talttansa ja osoittaa '
+      + 'muurinrippeitä ympärillään: "Nämä vallit purettiin kuusi '
+      + 'vuotta sitten — kymmenen jää vielä, ennen kuin koko '
+      + 'linnoitus on poissa. Näytä että tunnet maailmaa kuten '
+      + 'piirtäjä — niin annan sinulle kiven, joka piti sitä '
+      + 'pystyssä vuosisatoja."',
+    tervehdysLuenta: [
+      { rooli: 'kertoja', teksti: 'Nic pysäyttää talttansa ja '
+        + 'osoittaa muurinrippeitä ympärillään:' },
+      { rooli: 'hahmo', teksti: '[curious] "Nämä vallit purettiin '
+        + 'kuusi vuotta sitten — kymmenen jää vielä, ennen kuin '
+        + 'koko linnoitus on poissa. [warmly] Näytä että tunnet '
+        + 'maailmaa kuten piirtäjä — niin annan sinulle kiven, joka '
+        + 'piti sitä pystyssä vuosisatoja."' },
+    ],
+    loyto: 'Nic nostaa rasian irtokiven takaa: "Tämä ei ole '
+      + 'purkujätettä — joku on kätkenyt tämän tänne ennen minua."',
+    loytoLuenta: [
+      { rooli: 'kertoja', teksti: 'Nic nostaa rasian irtokiven '
+        + 'takaa:' },
+      { rooli: 'hahmo', teksti: '[surprised] "Tämä ei ole '
+        + 'purkujätettä — joku on kätkenyt tämän tänne ennen '
+        + 'minua."' },
+    ],
+    tyhja: 'Nic potkaisee soraa syrjään: "Tyhjä. Täältä on '
+      + 'kannettu kiveä pois joka päivä kuusi vuotta."',
+    vaarin: 'Nic jatkaa talttausta katsomatta ylös: "Ei vielä. '
+      + 'Kivi ei liiku, ennen kuin isku osuu oikeaan kohtaan."',
+    tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
+    tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
+    tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
+  },
+  /*
+   * Erä C6 (22.9.2026). Riian kaari (KAARI_PAKETIT, 'riika') nimeää
+   * kultaaja Ilzen (tornikukot, kultaus), ja hänen kuvansa on
+   * varattu kaaren omaan kohtaamiseen; fokusvirrassa on lisäksi
+   * TOINEN, eri "apteekkari Ilze" -hahmo, joten nimeä ei käytetä
+   * kolmatta kertaa. KORJATTU 22.9.2026 Fablen pyynnöstä: tarkkaa
+   * avauspäivää (1.1.1873) ei tueta kahdesta riippumattomasta
+   * lähteestä — silta rakennettiin 1871–1872, tervehdyksessä
+   * "äskettäin" ilman kuukautta.
+   */
+  riika: {
+    hahmo: 'sillanrahastaja Valdis',
+    nappi: 'Tapaa Valdis',
+    frame: 'Valdis pysäyttää rahastuslaatikkonsa kannen ja kysyy',
+    tervehdys: 'Valdis pysäyttää rahastuslaatikkonsa kannen: '
+      + '"Tuo rautasilta kantoi ensimmäisen junansa vasta '
+      + 'äskettäin — minun siltani on kannattanut kärryjä jo '
+      + 'isäni isän ajoista. Näytä että tunnet maailmaa kuten '
+      + 'piirtäjä — niin näytän, mikä laudan alle on jäänyt '
+      + 'vuosikausiksi."',
+    tervehdysLuenta: [
+      { rooli: 'kertoja', teksti: 'Valdis pysäyttää '
+        + 'rahastuslaatikkonsa kannen:' },
+      { rooli: 'hahmo', teksti: '[curious] "Tuo rautasilta kantoi '
+        + 'ensimmäisen junansa vasta äskettäin — minun siltani on '
+        + 'kannattanut kärryjä jo isäni isän ajoista. [warmly] '
+        + 'Näytä että tunnet maailmaa kuten piirtäjä — niin '
+        + 'näytän, mikä laudan alle on jäänyt vuosikausiksi."' },
+    ],
+    loyto: 'Valdis nostaa rasian sillan lautojen raosta: "Tämä ei '
+      + 'ole tullimaksu eikä hukkunut nappi — tämä on jäänyt '
+      + 'tänne tahallaan."',
+    loytoLuenta: [
+      { rooli: 'kertoja', teksti: 'Valdis nostaa rasian sillan '
+        + 'lautojen raosta:' },
+      { rooli: 'hahmo', teksti: '[surprised] "Tämä ei ole '
+        + 'tullimaksu eikä hukkunut nappi — tämä on jäänyt tänne '
+        + 'tahallaan."' },
+    ],
+    tyhja: 'Valdis koputtaa tyhjää lautarakoa: "Tyhjä. Silta '
+      + 'puretaan joka syksy jäiden tieltä — kaikki irtonainen '
+      + 'katoaa silloin."',
+    vaarin: 'Valdis laskee kolikot takaisin laatikkoon: "Ei '
+      + 'vielä. Silta kestää vain, kun luku on laskettu oikein."',
+    tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
+    tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
+    tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
+  },
 };
