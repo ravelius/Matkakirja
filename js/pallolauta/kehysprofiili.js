@@ -56,6 +56,10 @@ export function luoKehysprofiili(uiTaiHaku, ikkuna = globalThis) {
       valmisteluja: laatat.valmisteluja ?? 0, vaistoja: laatat.valmisteluVaistoja ?? 0,
       jakoja: (st.jakoja ?? 0) + (st.nostojakoja ?? 0), rasterit: st.rasterit?.valmiita ?? 0,
       rakennuksia: k.rakennuksia ?? 0, tekstuurit: info.memory?.textures ?? 0,
+      /* GL-rungon kirjoitukset (Safarin GPU-prosessi: bufferSubData on kallis). */
+      puskurikirjoituksia: k.puskurikirjoituksia ?? null,
+      uniformeja: k.uniformeja ?? null,
+      glVienteja: k.vienteja ?? null,
       drawcalls: info.render?.calls ?? 0, kolmiot: info.render?.triangles ?? 0,
     };
   };

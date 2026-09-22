@@ -1052,6 +1052,7 @@ const MODULES = [
    */
   'js/pulu-paikka.js',
   'js/kartta-liike.js',
+  'js/piirtokoe-asetus.js',
   'js/vedon-seuranta.js',
   'js/tarkkuus-asetus.js',
   // Kehittäjän pikatie (?lauta=pallo&dev=<kaupunki>): main.js tuo sen staattisesti;

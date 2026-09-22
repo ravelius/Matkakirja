@@ -81,9 +81,17 @@ export function profiiliTahti(tulos, lepoDelta = null) {
    */
   const kutsuja = kehykset.map((k) => k.rafKutsuja ?? 0).filter((n) => n > 0);
   const ketjuja = kutsuja.length ? kutsuja.reduce((a, b) => a + b, 0) / kutsuja.length : null;
-  const ekaPaiv = kehykset.find((k) => Number.isFinite(k.paivityksia))?.paivityksia ?? null;
-  const vikaPaiv = [...kehykset].reverse().find((k) => Number.isFinite(k.paivityksia))?.paivityksia ?? null;
-  const vienteja = Number.isFinite(ekaPaiv) && Number.isFinite(vikaPaiv) ? vikaPaiv - ekaPaiv : null;
+  /** Kumulatiivisen laskurin kasvu jakson yli (null, jos laskuria ei ole). */
+  const kasvu = (kentta) => {
+    const eka = kehykset.find((k) => Number.isFinite(k[kentta]))?.[kentta] ?? null;
+    const vika = [...kehykset].reverse().find((k) => Number.isFinite(k[kentta]))?.[kentta] ?? null;
+    return Number.isFinite(eka) && Number.isFinite(vika) ? vika - eka : null;
+  };
+  const vienteja = kasvu('paivityksia');
+  const kehyksiaN = Math.max(1, kehykset.length);
+  const puskuriKehys = kasvu('puskurikirjoituksia') != null ? kasvu('puskurikirjoituksia') / kehyksiaN : null;
+  const uniformiKehys = kasvu('uniformeja') != null ? kasvu('uniformeja') / kehyksiaN : null;
+  const glVienteja = kasvu('glVienteja');
   for (let i = 1; i < kehykset.length; i += 1) {
     const k = kehykset[i];
     if (!(k.dt > 25)) continue;
@@ -110,6 +118,9 @@ export function profiiliTahti(tulos, lepoDelta = null) {
     pitkatOhitettu,
     ketjuja,
     vienteja,
+    puskuriKehys,
+    uniformiKehys,
+    glVienteja,
     /*
      * KEHYKSEN VALMISTUMISVIIVE (Fable 22.9.2026): rAF-väli miinus se
      * aika, jonka pääsäie oli mitattavasti töissä. Safarissa ei ole
@@ -158,6 +169,10 @@ export function profiilirivit({
     }
     rivit.push(`silmukoita ${p(tahti.ketjuja, 1)} · laattavientejä ${tahti.vienteja ?? '—'}`
       + ` · valmistumisviive ${p(tahti.viiveKa, 1)} ms`);
+    if (tahti.puskuriKehys != null || tahti.uniformiKehys != null) {
+      rivit.push(`puskurikirj./kehys ${p(tahti.puskuriKehys, 2)} · uniformeja/kehys ${p(tahti.uniformiKehys, 1)}`
+        + ` · GL-vientejä ${tahti.glVienteja ?? '—'}`);
+    }
   }
   if (pisin) {
     /*
@@ -204,6 +219,7 @@ export function profiilitiiviste({
       piirtoja: tahti.piirtoja, ohitettuja: tahti.ohitettuja, piirtoOsuus: tahti.piirtoOsuus,
       pitkatPiirretty: tahti.pitkatPiirretty, pitkatOhitettu: tahti.pitkatOhitettu,
       ketjuja: tahti.ketjuja, vienteja: tahti.vienteja, viiveKa: tahti.viiveKa,
+      puskuriKehys: tahti.puskuriKehys, uniformiKehys: tahti.uniformiKehys, glVienteja: tahti.glVienteja,
     } : null,
     kehyksia: tiiviste?.kehyksia ?? 0,
     mediaani: tiiviste?.mediaani ?? null,
