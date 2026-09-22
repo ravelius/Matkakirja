@@ -262,6 +262,7 @@ export const MAASTOKOHTEET_LTU = [
     ],
     nimi: 'Trakain saarilinna',
     tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Kuka kuoli linnassa vuonna 1430?',
       'Miksi linnan kunnostus oli vaikeaa?',
@@ -373,6 +374,7 @@ export const MAASTOKOHTEET_LTU = [
     },
     nimi: 'Ristien kukkula',
     tyyppi: 'kulttuuri',
+    taso: 1,
     kysymykset: [
       'Miksi ensimmäiset ristit pystytettiin?',
       'Kuinka monta ristiä kukkulalla arvioidaan olevan?',
@@ -415,6 +417,7 @@ export const MAASTOKOHTEET_LTU = [
     },
     nimi: 'Kuurinkynnäs',
     tyyppi: 'vuori',
+    taso: 1,
     kysymykset: [
       'Mikä pitää kynnäksen olemassa?',
       'Ketkä jakavat maailmanperintökohteen?',
@@ -565,6 +568,7 @@ export const MAASTOKOHTEET_LTU = [
     ],
     nimi: 'Grūtasin puisto',
     tyyppi: 'kulttuuri',
+    taso: 1,
     kysymykset: [
       'Mistä patsaat tulivat puistoon?',
       'Minkä palkinnon puisto sai?',
