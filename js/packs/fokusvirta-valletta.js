@@ -59,4 +59,42 @@ export const FOKUSVIRTA_VALLETTA = {
       lahde: 'Trajcinema, Commons (CC BY 4.0)',
     },
   },
+
+  /*
+   * ---------- KEVYT KULKU ----------
+   * Samat kaksi kenttää kuin täysissä pakeissa (esim. fokusvirta-
+   * tampere.js). Fable vahvisti 22.9.2026, ettei kevyt pakki estä
+   * kohtaamisen kirjoittamista: vihreä piste avaa kohtaamisen suoraan
+   * laattakysymyksenä (js/fokusvirta.js avaaFokusKohtaaminen). Ei
+   * vihjeOsiota — Vallettalla ei ole kaupunkilehden osioita (kevyt
+   * pakki). Kohtaamiskortin todellinen sisältö (js/packs/
+   * kohtaamiset.js, avain 'valletta') on teatterin lipunmyyjä Rita,
+   * kirjoitettu erässä C6/C7 (docs/raportit/kohtaamiset-era-c7-
+   * 20260922.md).
+   */
+  kohtaaminen: {
+    hahmo: 'Teatterin lipunmyyjä Rita',
+    nappi: 'Tapaa lipunmyyjä',
+    varmistus: 'Haluatko varmasti tavata Ritan juuri nyt?',
+    teksti: 'Rita nojaa lippukoppiin vanhan kuninkaallisen oopperatalon '
+      + 'paikalla. Isoisän käyntivuonna talo oli juuri palanut sisältä '
+      + 'tyhjäksi — se pysyi kiinni lähes viisi vuotta, eikä hän olisi '
+      + 'voinut nähdä yhtään esitystä siellä syyskuussa 1873. Rita '
+      + 'haluaa tietää, tunteeko tulija maailman muutenkin kuin '
+      + 'julisteista, ennen kuin kertoo mistä liekit silloin lähtivät.',
+  },
+
+  /*
+   * KOHTAAMISPAIKKA: PJAZZA TEATRU RJAL (Ritan lippukoppi). Koordinaatit
+   * ovat kaupungin oma laattapaikka (sama perusteltu poikkeus kuin
+   * Riiassa): js/packs/europe.js 490/949, js/packs/maailmankartta.js
+   * 6317.2/1961.4.
+   */
+  kohtaamispiste: {
+    nimi: 'Pjazza Teatru Rjal',
+    laudat: {
+      maailmankartta: { x: 6317.2, y: 1961.4 },
+      europe: { x: 490, y: 949 },
+    },
+  },
 };

@@ -129,4 +129,45 @@ export const FOKUSVIRTA_TROMSSA = {
       lahde: 'Matkakirjan havainnekuva',
     },
   },
+
+  /*
+   * ---------- KEVYT KULKU ----------
+   * Samat kaksi kenttää kuin täysissä pakeissa (esim. fokusvirta-
+   * tampere.js). Fable vahvisti 22.9.2026, ettei kevyt pakki estä
+   * kohtaamisen kirjoittamista: vihreä piste avaa kohtaamisen suoraan
+   * laattakysymyksenä (js/fokusvirta.js avaaFokusKohtaaminen). Ei
+   * vihjeOsiota — Tromssalla ei ole kaupunkilehden osioita (kevyt
+   * pakki). HUOM: Tromssalla on lisäksi ERI, vanhemman järjestelmän
+   * tarinakaari (js/tyohuone-kehitys-data.js KAARI_PAKETIT id
+   * 'tromssa', hahmo venemekaanikko Sigrid, satama) — se on eri
+   * kokonaisuus eikä liity tähän kenttään. Kohtaamiskortin todellinen
+   * sisältö (js/packs/kohtaamiset.js, avain 'tromssa') on kirkon
+   * urkuri Kirsten, kokonaan eri hahmo ja paikka kuin Sigrid.
+   */
+  kohtaaminen: {
+    hahmo: 'Kirkon urkuri Kirsten',
+    nappi: 'Tapaa urkuri',
+    varmistus: 'Haluatko varmasti tavata Kirstenin juuri nyt?',
+    teksti: 'Kirsten kääntyy urkujen luota Tromssan puukirkon '
+      + 'urkuparvella. Nämä pillit ovat soineet vasta kymmenen vuotta '
+      + '— kirkko vihittiin 1861 mutta urut asennettiin vasta 1863 — '
+      + 'ja hän on soittanut niitä koko sen ajan. Keskiyön aurinko '
+      + 'siivilöityy ikkunoista pehmeänä valona. Kirsten haluaa tietää, '
+      + 'tunteeko tulija maailman muutenkin kuin kartalta, ennen kuin '
+      + 'soittaa sävelen jota kukaan muu ei kuule tänä vuonna.',
+  },
+
+  /*
+   * KOHTAAMISPAIKKA: TROMSSAN PUUKIRKKO (Kirstenin urkuparvi).
+   * Koordinaatit ovat kaupungin oma laattapaikka (sama perusteltu
+   * poikkeus kuin Riiassa): js/packs/europe.js 577/66, js/packs/
+   * maailmankartta.js 6468.4/412.6.
+   */
+  kohtaamispiste: {
+    nimi: 'Tromssan puukirkko',
+    laudat: {
+      maailmankartta: { x: 6468.4, y: 412.6 },
+      europe: { x: 577, y: 66 },
+    },
+  },
 };
