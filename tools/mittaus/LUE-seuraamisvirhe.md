@@ -67,3 +67,33 @@ tulostaa PASS/FAIL rivin per kierros ja yhteenvedon.
 
 Omat rajat: `--p10 0.7 --p90 1.4` (samat oletuksena, muutettavissa jos
 hyväksymisraja tarkentuu).
+
+## Kehysprofiili puhelimesta (`?koe=profiili`)
+
+Sama palvelin ottaa vastaan myös kehysprofiilin jaksot, joten puhelinta
+ei tarvitse kytkeä Web Inspectoriin nähdäkseen, MIKÄ pitkän kehyksen
+aiheutti (Pelikoodari 22.9.2026, omistajan tilaus Fablen kautta).
+
+```bash
+node tools/mittaus/seuraamisvirhe-palvelin.mjs
+```
+
+Avaa puhelimella tulostettu osoite ja lisää `koe=profiili` (yhdistettävissä
+muihin kokeisiin pilkulla, esim. `?lauta=pallo&koe=profiili`). Kartan
+vasempaan alakulmaan ilmestyy pieni musta laatikko, joka päivittyy noin
+kolmen sekunnin välein:
+
+- **pisin kehys** ja sen jakauma: `varattu` = pääsäikeen työ, siitä
+  `js` = rAF-kutsut, `render` = three.js, `muu` = tyyli, asettelu ja
+  maalaus. Loppu (`dt − varattu`) on odotusta GPU:lta tai vsynciltä.
+- **syy**: kolme eniten aikaa vienyttä rAF-kutsua nimeltä.
+- **med / p95 / >25 ms** koko jaksolta.
+- **voimassa olevat asetukset** (vedon seuranta, tarkkuus liikkeessä) ja
+  lepopiirron tila — kuvakaappaus kertoo siis itsessään, missä tilassa
+  peli oli.
+
+Jokainen jakso lähtee myös POSTina polkuun `/__profiili`, ja palvelin
+kirjoittaa sen tiedostoon `docs/raportit/data/profiili-<pvm>.jsonl`
+(yksi rivi per jakso, ei koko kehyslistaa). Konsoliin tulostuu sama
+tiivistettynä. Tuotanto-osoitteessa polkua ei ole, ja lähetys
+epäonnistuu hiljaa — overlay toimii silti.
