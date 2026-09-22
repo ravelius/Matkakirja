@@ -8,10 +8,10 @@ test('kasvopohjien polut vastaavat toisiaan myös tuotantopään muuttuessa',()=
   const topologia=frame=>[...livianSvgPaa({frame},{prefix:'koe'}).replace(/<path data-part="smile"[^>]*\/>/,'')
     .matchAll(/\b(d|transform|cx|cy|rx|ry|x|y)="([^"]*)"/g)]
     .map(m=>[m[1],m[2].replace(/-?\d*\.?\d+(?:e[-+]?\d+)?/gi,'#')]);
-  for(const ilme of ['glance','down','shock','blink','smile'])assert.deepEqual(topologia(ilme),topologia('rest'),ilme);
+  for(const ilme of ['glance','down','shock','blink','smile','smug'])assert.deepEqual(topologia(ilme),topologia('rest'),ilme);
 });
 
-test('neljä katseluehdotusta pysyvät erillään pelieleistä ja kestävät kelauksen',()=>{
+test('katseluehdotukset pysyvät erillään pelieleistä ja kestävät kelauksen',()=>{
   const perus=LIVIA_SVG_ELEET.map(e=>e.id);
   for(const e of LIVIAN_UUDET_VERSIOT){
     assert.ok(!perus.includes(e.id)&&perus.includes(e.baseId));
@@ -25,10 +25,41 @@ test('neljä katseluehdotusta pysyvät erillään pelieleistä ja kestävät kel
       for(const m of kuva.matchAll(/url\(#([^)]+)\)/g))assert.ok(ids.includes(m[1]),m[1]);
       assert.ok(ids.every(id=>id.startsWith('koe')));
     }
-    for(const k of ['paaKulma','paaY','paaX','rinta','siipi','takasiipi','rapaytys','ilme','suu'])assert.equal(asento(0)[k],asento(1)[k],e.id+' '+k);
+    if(e.id!=='uusi-bookPanic')for(const k of ['paaKulma','paaY','paaX','rinta','siipi','takasiipi','rapaytys','ilme','suu'])assert.equal(asento(0)[k],asento(1)[k],e.id+' '+k);
     const jalat=p=>uudenEleenKuva(asento(p)).match(/<g data-part="feet">.*?<\/g>/)[0];
     assert.equal(jalat(0),jalat(.45),'jalkojen ankkurit pysyvät maassa');
   }
+});
+
+test('kiireinen kirjanhaku erottaa sähläyksen, havahtumisen, peittelyn ja ryhdin',()=>{
+  const a=p=>uudenEleenAsento('uusi-bookPanic',p),svg=p=>uudenEleenKuva(a(p));
+  assert.equal(a(0).kirjaKulma,180);
+  assert.equal(a(.246).sivu,7,'seitsemän nopeaa sivunkääntöä alle 2,8 sekunnissa');
+  assert.ok(a(.15).kyyry>.95&&a(.15).paaY>20,'alussa pää ja koko vartalo painuvat kyyryyn');
+  assert.ok(a(.40).paaY<-14&&a(.40).kyyry===0,'kirjan sulkemisen jälkeen Pulu suoristuu pitkäksi');
+  assert.equal(a(.25).sivu,a(.80).sivu,'havahtumisessa ja kirjan käännössä ei plärätä');
+  assert.ok(a(.28).havahdus>.8&&a(.32).havahdus===0);
+  assert.equal(a(.286).kirjaKiinni,0);
+  assert.equal(a(.304).kirjaKiinni,1,'läimäys kestää alle 200 ms');
+  assert.equal(a(.728).kirjaKiinni,1,'kirja pysyy kiinni koko hitaan käännön');
+  assert.equal(a(.80).kirjaKiinni,0);
+  assert.equal(a(.43).kirjaKulma,180);
+  assert.equal(a(.69).kirjaKulma,360);
+  assert.ok(a(.54).vihellys>.9&&a(.54).katse>.9,'katsoo sivuun ja viheltää käännön aikana');
+  assert.match(svg(.155),/data-part="sweat"/);
+  assert.doesNotMatch(svg(.45),/data-part="sweat"/);
+  assert.match(svg(.56),/data-part="whistle"/);
+  assert.match(svg(.31),/data-part="book-closed" opacity="1"/);
+  assert.match(svg(.31),/data-part="book-slap"/);
+  assert.equal(a(.80).lasikorjaus,0,'lasit oikaistaan vasta avatun kirjan jälkeen');
+  assert.equal(a(.855).lasikorjaus,1);
+  assert.match(svg(.855),/data-part="glasses-adjust" transform="translate\(0 -4\)/);
+  assert.equal(a(1).lasikorjaus,0);
+  assert.ok(a(1).ryhti>.7&&a(1).paaKulma>0&&a(1).paaY<0,'leuka nousee lopuksi arvokkaasti');
+  assert.equal(a(1).siipi,0);assert.equal(a(1).vihellys,0);
+  assert.doesNotMatch(svg(1),/data-part="sweat"|data-part="whistle"/);
+  assert.match(svg(.1),/>ATLAS<\/text>/,'kannen epäsymmetrinen otsikko kertoo kirjan suunnan');
+  for(let i=1;i<=1000;i++)assert.ok(Math.abs(a(i/1000).kirjaKulma-a((i-1)/1000).kirjaKulma)<4,'kirja kääntyy jatkuvasti eikä hyppää');
 });
 
 test('tervehdyksen linnunsuu avautuu yhtenä eleenä eikä peitä toista nokkaa',()=>{
@@ -45,6 +76,7 @@ test('tervehdyksen linnunsuu avautuu yhtenä eleenä eikä peitä toista nokkaa'
     assert.equal((svg.match(/data-part="friendly-beak"/g)||[]).length,1);
     assert.doesNotMatch(svg,/fill="#2e4756"/,'vanha suljettu nokka ei jää uuden päälle');
     assert.match(svg,/data-part="tongue"/);
+    assert.match(svg,/data-part="mouth-space"/,'poski leikataan pois nokan aukosta');
   }
   for(const e of LIVIAN_UUDET_VERSIOT.filter(e=>e.baseId!=='welcome'))assert.doesNotMatch(uudenEleenKuva(uudenEleenAsento(e.id,.3)),/friendly-beak/);
 });

@@ -63,3 +63,40 @@ Omistajan jatkopalaute: **kirja on hyvä**, eli tämä kirjan versio hyväksytti
 Suuta pyydettiin vaaleammaksi ja kieltä näkyviin. Sisäosa on nyt lämmin
 roosanruskea, kieli vaaleampi ja alaleuka vain sen alapuolinen reunus:
 ensimmäisen kokeilun alaleuka peitti kielen. Kirjaan ei tehty jatkomuutoksia.
+
+## Viides ehdotus: kiireinen kirjanhaku
+
+Omistajan erillisestä pyynnöstä lisättiin `uusi-bookPanic`, 9,8 s:
+neljä nopeaa sivunkääntöä kirja ylösalaisin ja kuusi lentävää hikipisaraa;
+pysähdys ja havahtuminen; katse sivulle, pieni viheltävä suu ja nuotit;
+kirjan kääntö oikeinpäin; yksi harkittu sivunkääntö ja arvokas loppuasento.
+Vihellys on tässä vaiheessa visuaalinen, katselusivu on äänetön.
+Kannen ATLAS-teksti tekee kirjan suunnan näkyväksi.
+
+Ele on erillinen viides painike Uudet versiot -ryhmässä. Sen lopussa
+Pulu jää ryhdikkääksi. Se ei ole satunnainen tai jatkuva idle-ele eikä
+sitä vielä kytketä peliin. Hyväksytty rauhallinen kirja säilyy.
+Neljä aiempaa versiota verrattiin ennen lisäystä tallennettuun committiin
+98307d72e: 404 SVG-asentoa (101 per ele) täsmäsivät tavulleen.
+Uusi regression tarkistaa tarinan vaiheiden järjestyksen, näkyvät pisarat
+ja nuotit, sivunkääntöjen tauon peittelyn aikana sekä kirjan jatkuvan käännön.
+
+### Liioiteltu toinen kierros
+
+Omistajan tarkennus korvasi ensimmäisen sähläyskoreografian: seitsemän nopeaa
+sivunkääntöä syvässä kyyryssä, alle 200 ms läimäys kiinni, suoristautuminen
+hyvin pitkäksi, noin 2,9 sekunnin hidas kirjan kääntö vihellellen, kirjan
+avaaminen ja vasta sitten siivellä silmälasien oikaisu. Kesto nyt 11 s.
+Kansi pysyy suljettuna koko käännön. Painotus on klassisen piirretyn
+ihmismäisessä näyttelemisessä, ei realistisessa lintuanatomiassa.
+
+Tervehdyksen toinen siipi nousee nyt pään yli. Nokan aukko leikkaa takana
+olevan posken pois, joten suusta näkyy taustaa läpi; kieli ja lämmin kurkku
+jäävät takaosaan. Ei ihmishuulia eikä hampaita.
+Hyväksytty rauhallinen kirja, nyökkäys ja havahtuminen tarkistettiin taas:
+303 SVG-asentoa täsmää edelleen tavulleen committiin 98307d72e.
+
+Viimeisen kierroksen testit: 3933 yhteensä, 3920 PASS, 13 SKIP, 0 FAIL.
+Kohdesarja 8/8 PASS; kaksoisavaimet, niputus, savukevartio, nimiöt ja
+diff-check PASS. Kyyry, suljettu kirja ja vihellys, lasien oikaisu sekä
+tervehdyksen suu ja ylös nostettu siipi tarkistettu lähikuvista.
