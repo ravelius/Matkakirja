@@ -1407,3 +1407,7 @@ Pelikoodari 22.9.2026 klo 19.40: sormi alhaalla, nipistys, kamera-ajo tai liuku 
 ## v2123 TUOTANNOSSA: VEDON AIKANA EI OHITETA YHTAKAAN KEHYSTA (VARTIJA V7); OMISTAJA MITTAA iPHONELLA (22.9.2026 klo 19.51)
 
 Julkaisija 22.9.2026 klo 19.50: #2841 → #2842 → v2123 (main bd0d55fc), testit 3960/0. Omistajan mittaus: ?koe=profiili, kaappaus vedon aikana (≥ 5 s yhtäjaksoinen veto) ja levossa (10 s).
+
+## v2123 iPHONELLA: VEDOSSA PIIRTO 100 %, MUTTA 17 PITKAA PIIRRETTYA KEHYSTA (dt p95 52 ms, max 103) JS 0,7 / RENDER 0,2 ms → AIKA GPU:SSA/KOMPOSIITTORISSA; OMISTAJA: NYKII ENEMMAN (KUORMA EI ENAA PIILOUDU OHITUKSIIN); LEVOSSA 25 % JA EI PITKIA; UUSI TASAINEN/KOKEELLINEN-KOE (22.9.2026 klo 19.59)
+
+Omistaja 22.9.2026 klo 19.57 (kaappaukset): veto rAF 63 Hz, piirto 151/151, dt p95 52, max 103, >20 ms 19/176, pitkät piirretty 17 / ohitettu 0, js ka 0,7, render ka 0,2, dc 45, scenessä 0, taso 8; lepo rAF 83 Hz, piirto 45/180 (25 %), dt p95 17, >25 ms 0/2519. Fable: lepopiirron ohitus korjattu; pitkät kehykset ovat piirrettyjä kehyksiä ilman CPU-aikaa → GPU/komposiittori (dpr 3 + MSAA, 45 dc) = katsauksen 16–26 ms renderöinti; edellinen Tasainen-koe ei voinut näyttää eroa ohitusvian takia → omistaja testaa Tasainen ja Kokeellinen uudestaan v2123:lla. Pelikoodari: 'scenessä 0' selvitys, valmistumisviive-mittari overlayhin, GPU-kevennysten lista.
