@@ -32,7 +32,16 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   FRA: {
     "Hauts-de-France": { lyhyt: "Lillestä pääsee junalla alle tunnissa Brysseliin ja reilussa tunnissa Lontooseen – rajat tuntuvat kadonneen." },
     "Grand Est": { lyhyt: "Strasbourgissa istuu Euroopan parlamentti, ja kaupungin joulumarkkinat vetävät väkeä joka puolelta Eurooppaa." },
-    "Provence-Alpes-Côte d'Azur": { lyhyt: "Nizzan rantabulevardilla kävelee kesällä koko Eurooppa, ja Cannesin punainen matto rullataan joka toukokuu." },
+    /*
+     * AVAIN KORJATTU 22.9.2026 (Karttatyökalun Maakunnat-runko): tunnus
+     * on Natural Earthin `region`-kentän kirjainkanta TÄSMÄLLEEN
+     * (avaimet.md + docs/raportit/…/nykyalueet-fra-deu.json), eli
+     * väliviiva myös d'Azurin edellä — nimiFi (kartan teksti) sen sijaan
+     * käyttää välilyöntiä. Avain oli aiemmin nimiFi-muodossa, jolloin
+     * karttatyökalun tuleva vektoritaso ei olisi löytänyt luonnehdintaa
+     * lainkaan tälle alueelle.
+     */
+    "Provence-Alpes-Côte-d'Azur": { lyhyt: "Nizzan rantabulevardilla kävelee kesällä koko Eurooppa, ja Cannesin punainen matto rullataan joka toukokuu." },
     "Auvergne-Rhône-Alpes": { lyhyt: "Lyon tunnetaan Ranskan gastronomian pääkaupunkina – täältä ei lähdetä nälkäisenä minnekään!" },
     "Nouvelle-Aquitaine": { lyhyt: "Bordeaux on viinin maailmanpääkaupunki, ja kaupungin raitiovaunut kulkevat kaduilla ilman näkyviä ilmajohtoja." },
     "Occitanie": { lyhyt: "Toulousessa kootaan jättiläismäisiä Airbus-matkustajakoneita – tehtaan vierestä näkee yhden nousevan taivaalle." },

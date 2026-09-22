@@ -108,6 +108,7 @@ const SHELL = [
   './js/fokusnosto-symbolit.js',
   './js/karttavalot.js',
   './js/karttaselite.js',
+  './js/karttatyokalu-maakunnat.js',
   './js/vakasikoni.js',
   './js/ylapalkki-vaaka.js',
   './js/fokusnosto.js',
@@ -479,6 +480,7 @@ const SHELL = [
   './js/packs/hahmotelma-ukr.js',
   './js/packs/maakartat.js',
   './js/packs/maakunnat-luonnehdinnat.js',
+  './js/packs/maakunnat-pulu.js',
   './js/packs/nahtavyysjutut.js',
   './js/packs/miniatyyrit.js',
   // Ykköstason nostojen kuvamerkit (js/fokusnosto-symbolit.js NOSTOSYM_KUVAMERKIT).
