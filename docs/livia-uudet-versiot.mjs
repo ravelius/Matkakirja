@@ -8,8 +8,8 @@ import {livianSvgPaa} from '../js/livia-svg-paa.js';
 export const LIVIAN_UUDET_VERSIOT=Object.freeze([
   {id:'uusi-nod',baseId:'nod',label:'Kyllä kyllä',duration:2100,group:'Uudet versiot',kuvaus:'Pieni valmistelu, napakka nyökkäys ja pienempi vahvistus. Pää palaa rauhassa paikalleen.'},
   {id:'uusi-doubleTake',baseId:'doubleTake',label:'Hetkinen!',duration:2750,group:'Uudet versiot',kuvaus:'Sivusilmäys, havahtuminen ja nopea toinen vilkaisu. Vartalo seuraa päätä hieman jäljessä.'},
-  {id:'uusi-welcome',baseId:'welcome',label:'Hauska nähdä',duration:2900,group:'Uudet versiot',kuvaus:'Katse huomaa tulijan, siivet avautuvat eri aikaan ja tervehdys jää hetkeksi elämään.'},
-  {id:'uusi-bookStudy',baseId:'bookStudy',label:'Kirjan selaus',duration:4400,group:'Uudet versiot',kuvaus:'Katse seuraa riviä. Siipi hakee sivun, kääntää sen nopeasti ja antaa paperin asettua.'},
+  {id:'uusi-welcome',baseId:'welcome',label:'Hauska nähdä',duration:2900,group:'Uudet versiot',kuvaus:'Iloinen linnunsuu avautuu tervehdykseen. Siivet seuraavat eri aikaan, ja hymy sulkeutuu rauhassa.'},
+  {id:'uusi-bookStudy',baseId:'bookStudy',label:'Kirjan selaus',duration:4400,group:'Uudet versiot',kuvaus:'Kirjan sivut ovat Pulua kohti, kannet katsojaan päin. Katse seuraa riviä; siipi kääntää sivun ja paperi asettuu.'},
 ].map(Object.freeze));
 
 const rajaa=n=>Math.max(0,Math.min(1,Number.isFinite(n)?n:0));
@@ -60,6 +60,7 @@ const RADAT={
     takasiipi:[[0,0],[.15,0],[.28,.74],[.38,.62],[.64,.62],[.94,0],[1,0]],
     sulat:[[0,0],[.15,0],[.28,1],[.34,.82],[.54,1],[.69,.84],[.95,0],[1,0]],
     ilme:[[0,0],[.09,.2],[.22,1],[.70,1],[.96,0],[1,0]],
+    suu:[[0,0],[.11,0],[.22,1],[.32,.83],[.57,.83],[.70,.5],[.88,0],[1,0]],
     rapaytys:[[0,0],[.07,0],[.10,1],[.14,0],[.75,0],[.78,.9],[.82,0],[1,0]],
   },
   'uusi-bookStudy':{
@@ -80,7 +81,7 @@ const RADAT={
 export function uudenEleenAsento(id,p,{voimakkuus=.5}={}){
   const radat=RADAT[id];
   if(!radat)throw new RangeError('Tuntematon katseluele: '+id);
-  const s={id,p:rajaa(p),paaKulma:0,paaX:0,paaY:0,rinta:0,siipi:0,takasiipi:0,sulat:0,katse:0,ilme:0,rapaytys:0,sivu:0,paperi:0};
+  const s={id,p:rajaa(p),paaKulma:0,paaX:0,paaY:0,rinta:0,siipi:0,takasiipi:0,sulat:0,katse:0,ilme:0,suu:0,rapaytys:0,sivu:0,paperi:0};
   for(const [avain,rata]of Object.entries(radat))s[avain]=liikearvo(s.p,rata);
   const voima=.55+.9*rajaa(voimakkuus);
   for(const avain of ['paaKulma','paaX','paaY','rinta'])s[avain]*=voima;
@@ -97,16 +98,23 @@ const POHJAT=Object.fromEntries(ILMEET.map(frame=>{
   const svg=livianSvgPaa({frame},{prefix:'katselupaa'}).replace(/<path data-part="smile"[^>]*\/>/,'');
   return [frame,{svg,luvut:[...svg.matchAll(GEOMETRIA)].flatMap(m=>[...m[2].matchAll(NUMERO)].map(n=>Number(n[0])))}];
 }));
+// Vain tämä katseluele kokeilee suurempaa linnunsuuta. Ylänokka ja vahanahka
+// säilyvät tunnistettavina; avautuminen tulee alaleuasta, ei ihmishuulista.
+const VANHA_NOKKA=/<path d="M30 60L44 61[^"]*" fill="#2e4756"\/>(?:<path[^>]*\/>){4}/;
+function iloinenNokka(avaus){
+  const a=rajaa(avaus),n=pyorista;
+  return `<g data-part="friendly-beak" data-opening="${n(a)}"><path data-part="mouth-inside" d="M20 67Q34 ${n(66-2*a)} 47 62Q51 ${n(67+3*a)} 40 ${n(69+13*a)}Q29 ${n(72+13*a)} 21 ${n(68+11*a)}Z" fill="#493b43"/><path data-part="tongue" d="M28 ${n(70+9*a)}Q33 ${n(66+11*a)} 39 ${n(68+9*a)}Q37 ${n(73+10*a)} 29 ${n(72+9*a)}Z" fill="#b67f85" opacity="${n(a)}"/><path data-part="lower-beak" d="M21 ${n(68+11*a)}Q32 ${n(70+15*a)} 41 ${n(65+12*a)}L46 64Q39 ${n(68+9*a)} 21 ${n(68+11*a)}Z" fill="#6c8490"/><g transform="rotate(${n(a*8)} 43 63)"><path d="M32 57Q37 55 42 59L46 63Q38 66 19 68Q22 64 26 61Z" fill="#526b79"/><path d="M31 59Q35 57 40 60Q30 65 21 67L27 63Z" fill="#9baaae"/><path d="M27 59Q28 54 33 55Q36 51 39 55Q42 56 41 60Q35 59 32 62Z" fill="#e3e2d6"/></g><path d="M44 66Q49 65 50 62" fill="none" stroke="#334e5b" stroke-width="1.4" stroke-linecap="round" opacity="${n(a)}"/></g>`;
+}
 function paa(s,prefix){
   const lepo=POHJAT.rest.luvut,ilme=POHJAT[s.id==='uusi-doubleTake'?'shock':s.id==='uusi-welcome'?'smile':s.id==='uusi-bookStudy'?'down':'rest'].luvut;
   let i=0;
-  const kuva=POHJAT.rest.svg.replaceAll('katselupaa',prefix).replace(GEOMETRIA,(_,nimi,arvo)=>`${nimi}="${arvo.replace(NUMERO,()=>{
+  let kuva=POHJAT.rest.svg.replaceAll('katselupaa',prefix).replace(GEOMETRIA,(_,nimi,arvo)=>`${nimi}="${arvo.replace(NUMERO,()=>{
     const n=i++,avoin=lepo[n]+(ilme[n]-lepo[n])*s.ilme+(POHJAT.glance.luvut[n]-lepo[n])*s.katse;
     return pyorista(avoin+(POHJAT.blink.luvut[n]-avoin)*s.rapaytys);
   })}"`);
-  const hymy=s.id==='uusi-welcome'?`<path d="M24 67Q38 71 46 62" fill="none" stroke="#334e5b" stroke-width="1.7" stroke-linecap="round" opacity="${pyorista(s.ilme)}"/>`:'';
+  if(s.id==='uusi-welcome')kuva=kuva.replace(VANHA_NOKKA,iloinenNokka(s.suu));
   const lasit=s.id==='uusi-bookStudy'?'<g fill="none" stroke="#655a48" stroke-width="2.2"><ellipse cx="37" cy="45.5" rx="8.5" ry="9"/><ellipse cx="61" cy="42.75" rx="13" ry="12"/><path d="M45.5 43.5Q47 37 48 40.75m26-1l8-5m-53.5 9l-4-3"/><path d="M55 36.75l4-2" stroke="#eee9d9" stroke-width="1.5"/></g>':'';
-  return kuva.replace(/<\/g>\s*$/,`${hymy}${lasit}</g>`);
+  return kuva.replace(/<\/g>\s*$/,`${lasit}</g>`);
 }
 
 const VARTALO='<path d="M122 156L139 171L131 172L137 175L122 174L113 163Z" fill="#546b7a"/><path d="M87 137Q97 127 115 133Q131 137 132 152Q134 170 117 175Q100 178 89 165Q82 154 87 137Z" fill="#97a5ac"/><path d="M89 141Q98 134 105 137Q96 147 96 158Q97 170 109 175Q96 171 89 162Q84 152 89 141Z" fill="#b1bcc0"/><path d="M117 135Q132 140 132 154Q134 171 117 175L110 172Q119 161 117 135Z" fill="#738895"/>';
@@ -121,7 +129,9 @@ function siipi(s,taka=false){
 function kirja(s){
   if(s.id!=='uusi-bookStudy')return '';
   const t=s.sivu,karki=22+21*Math.cos(t*Math.PI),kaari=-18*Math.sin(t*Math.PI)-s.paperi*2;
-  return `<g data-part="book" transform="translate(48 148) rotate(${pyorista(-10+s.paperi*1.7)})"><path d="M0 0L22 3L43-1L45 24L22 27L2 22Z" fill="#96876c"/><path d="M1-2Q13-4 22 1Q33-4 42-3L43 20Q32 20 22 25Q11 19 2 19Z" fill="#e9dfc5"/><path d="M22 1v24m-17-20l12 2m-12 4l12 2m-12 4l11 2m10-13l12-3m-12 9l12-3m-12 9l12-3" stroke="#9a8c73" fill="none" stroke-width="1.1"/><path data-part="page" d="M22 1Q${pyorista((22+karki)/2)} ${pyorista(kaari)} ${pyorista(karki)} -3L${pyorista(karki+1)} 20Q${pyorista((22+karki)/2)} ${pyorista(19+kaari*.2)} 22 25Z" fill="#f3ead5" stroke="#b6a88d" stroke-width=".8" opacity="${t>0&&t<1?1:0}"/></g>`;
+  // Katsoja näkee ulkokannet ja selän. Sivun alapää jää kansien taakse:
+  // vain yläreuna ja käännön kaari näkyvät Pulua kohti avautuvasta kirjasta.
+  return `<g data-part="book" data-facing="pulu" transform="translate(48 148) rotate(${pyorista(-10+s.paperi*1.7)})"><path data-part="page-edges" d="M1-3Q12-5 22 1Q33-5 42-4L43 2Q32 1 22 7Q11 2 1 2Z" fill="#e9dfc5" stroke="#b6a88d" stroke-width=".8"/><path data-part="page" d="M22 3Q${pyorista((22+karki)/2)} ${pyorista(kaari)} ${pyorista(karki)} -3L${pyorista(karki+1)} 20Q${pyorista((22+karki)/2)} ${pyorista(19+kaari*.2)} 22 27Z" fill="#f3ead5" stroke="#b6a88d" stroke-width=".8" opacity="${t>0&&t<1?1:0}"/><g data-part="book-covers"><path d="M0 0Q12 0 22 6L23 30Q12 24 2 23Z" fill="#829080" stroke="#52685e" stroke-width="1"/><path d="M22 6Q33 0 44-2L46 22Q33 23 23 30Z" fill="#60766b" stroke="#415d51" stroke-width="1"/><path d="M22 6L23 30" stroke="#b1b6a0" stroke-width="1.8"/><path d="M4 5Q11 5 18 9L19 24Q11 20 5 20Z M27 9Q34 5 40 4L42 18Q34 19 28 23Z" fill="none" stroke="#b0b29b" stroke-width=".65"/><path d="M34 10l3 3-2 4-3-3Z" fill="#b6b58c"/></g></g>`;
 }
 export function uudenEleenKuva(s,{prefix='uusi',right=44}={}){
   prefix=prefix.replace(/[^a-zA-Z0-9_-]/g,'');
