@@ -109,6 +109,25 @@ export function luoPeukalolevy({
   let nykyinen = valittu;
   let raahataan = false;
 
+  /*
+   * RIVIN OMA LUKU PIILOON LINSSIN ALTA (omistaja 22.9.2026,
+   * sanatarkasti: *"Suurennoslasin alta paistaa myös se pienempi
+   * numero."*). Linssissä on sama luku suurennettuna, joten rivin oma
+   * luku näkyi sen takaa kahtena. Piilotus on `visibility`, ei
+   * `display`: rivin ladelma ei saa hypätä, kun levy liukuu sen yli.
+   *
+   * Luokka menee RIVILLE eikä lukusolulle, jotta sama sääntö kelpaa
+   * molemmille välilehdille (.karttaselite-luku ja .maakunnat-luku).
+   * Nimi on `luku-linssin-alla`, koska `.linssin-alla` on jo varattu
+   * pallokuoren omaksi tilaksi (css/styles.css .pallo-kuori).
+   */
+  const LINSSIN_ALLA = 'luku-linssin-alla';
+  function merkitseLinssinAlla(valinta) {
+    for (const [tunnus, rivi] of rivit) {
+      rivi.classList.toggle(LINSSIN_ALLA, !levy.hidden && tunnus === valinta);
+    }
+  }
+
   /** Rivien pystykeskikohdat `lista`-elementin omassa koordinaatistossa. */
   function rivienYt() {
     // Piilossa oleva rivi (suljettu maaryhmä, offsetHeight 0) ei ole ehdokas.
@@ -123,14 +142,27 @@ export function luoPeukalolevy({
     const rivi = rivit.get(nykyinen);
     // Ei valintaa tai valittu rivi piilossa (suljettu ryhmä): levy pois näkyvistä.
     levy.hidden = !rivi || !(rivi.offsetHeight > 0);
-    if (levy.hidden) return;
+    if (levy.hidden) {
+      // Levy pois: yksikään rivi ei ole linssin alla, joten luvut takaisin.
+      merkitseLinssinAlla(null);
+      return;
+    }
     levy.classList.toggle('ei-siirtyma', !animoi);
     levy.style.height = `${rivi.offsetHeight}px`;
     levy.style.transform = `translateY(${rivi.offsetTop}px)`;
-    levy.setAttribute('aria-valuenow', String(Math.max(0, jarjestys.indexOf(nykyinen))));
+    paivitaLinssi();
+  }
+
+  /** Linssin luku, aria-teksti ja rivin oman luvun piilotus. */
+  function paivitaLinssi() {
+    const rivi = rivit.get(nykyinen);
+    if (!rivi) return;
     const nimi = rivi.querySelector('.karttaselite-nimi')?.textContent ?? rivi.textContent ?? '';
     levy.setAttribute('aria-valuetext', nimi.trim());
+    levy.setAttribute('aria-valuenow', String(Math.max(0, jarjestys.indexOf(nykyinen))));
+    // Luku luetaan RIVILTÄ ennen piilotusta: visibility ei tyhjennä tekstiä.
     linssi.textContent = (rivi.querySelector('.karttaselite-luku, .maakunnat-luku')?.textContent ?? '').trim();
+    merkitseLinssinAlla(nykyinen);
   }
   sijoita(false);
 
@@ -145,6 +177,17 @@ export function luoPeukalolevy({
     const katto = Math.max(0, lista.scrollHeight - levy.offsetHeight);
     const y = tapahtuma.clientY - laatikko.top - (levy.offsetHeight / 2);
     levy.style.transform = `translateY(${Math.min(Math.max(0, y), katto)}px)`;
+    /*
+     * VALINTA VAIHTUU JO RAAHATESSA (omistaja 22.9.2026, sanatarkasti:
+     * *"vipu liikkuisi sormen mukana, jos siitä ottaa kiinni
+     * reaaliajassa, ja kartalla vaihtuisi myös tiedot reaaliajassa"*).
+     * Ennen valinta vaihtui vasta irrotuksessa, joten kartta oli koko
+     * raahauksen ajan väärässä tilassa. Kutsu lähtee VAIN rivin
+     * vaihtuessa — valojen koneisto käy läpi kartan merkit, eikä sitä
+     * saa ajaa joka pointermovella.
+     */
+    const uusi = lahinRivi(tapahtuma.clientY - laatikko.top, rivienYt());
+    if (uusi && uusi !== nykyinen) valitse(uusi);
   });
   const lopetaRaahaus = (tapahtuma) => {
     if (!raahataan) return;
@@ -170,10 +213,19 @@ export function luoPeukalolevy({
     /** Kutsuja ilmoittaa uuden valinnan — levy napsahtaa sen kohdalle. */
     paivita(uusiValittu) {
       nykyinen = uusiValittu;
+      /*
+       * KESKEN RAAHAUKSEN LEVY SEURAA SORMEA, EI VALINTAA. Reaaliaikainen
+       * valinta kutsuu tätä kesken vedon, ja `sijoita` nykäisisi levyn
+       * rivin kohdalle sormen alta — juuri se tökkiminen, jonka
+       * raahauksen piti poistaa. Linssin luku ja piilotus päivittyvät
+       * silti heti.
+       */
+      if (raahataan) { paivitaLinssi(); return; }
       sijoita(true);
     },
     /** Levy pois DOM:sta (välilehden/valikon purkaminen). */
     pura() {
+      for (const rivi of rivit.values()) rivi.classList.remove(LINSSIN_ALLA);
       levy.remove();
     },
   };

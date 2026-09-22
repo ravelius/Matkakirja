@@ -26062,6 +26062,20 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
   .karttaselite-peukalolevy { transition: none; }
 }
 
+/*
+ * RIVIN OMA LUKU PIILOON LINSSIN ALTA (omistaja 22.9.2026: *"Suurennos-
+ * lasin alta paistaa myös se pienempi numero."*). Linssi näyttää saman
+ * luvun suurennettuna, joten rivin oma luku näkyi sen takaa kahtena.
+ * `visibility`, ei `display`: rivin ladelma ei saa hypätä, kun levy
+ * liukuu sen yli. Luokan (.luku-linssin-alla — ei .linssin-alla, joka on
+ * pallokuoren oma tila) asettaa js/karttaselite-levy.js sille riville,
+ * joka on levyn alla — myös kesken raahauksen.
+ */
+.karttaselite-rivi.luku-linssin-alla .karttaselite-luku,
+.maakunnat-rivi.luku-linssin-alla .maakunnat-luku {
+  visibility: hidden;
+}
+
 /* ===========================================================================
    KARTTATYÖKALUN MAAKUNNAT-VÄLILEHTI (js/karttatyokalu-maakunnat.js)
    ---------------------------------------------------------------------------
