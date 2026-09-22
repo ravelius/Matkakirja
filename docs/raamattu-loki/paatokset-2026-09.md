@@ -875,3 +875,7 @@ Julkaisija 22.9.2026 klo 01.30: mainissa v2058: kartuschat v2033–36, maakuntal
 ## v2059 (SAVUKEKORJAUS); PELIKOODARI NOLLATAAN, WORKTREE Matkakirja-pelikoodari; LINSSIKATALOGIN KORJAUKSET VALMIIT (22.9.2026 klo 06.48)
 
 Pelikoodari 22.9.2026 klo 01.45: glnimiot-nostot-savuke korjattu (v2059, #2721); hehkupiste Julkaisijalla; luovutus docs/raportit/viesti-pelikoodari-luovutus-20260922.md (pelikoodari-luovutus-20260922 a15ee2054); linssikatalogi-parvi valmis (3306ab160, kaappaukset päivä/yö) Fablen tarkastukseen. Fable siirsi worktreen /Users/samireivinen/Matkakirja-pelikoodari (symlinkit Matkakirja-opus molemmissa kodeissa) ja nollaa session.
+
+## NOSTOTASOT VIIMEINEN ERA (16 MAATA, 4 KUKIN) HYVAKSYTTY; SAANTO: TAHTIKOHDE EI OLE KAUPUNKI, JOLLA ON KAUPUNKIPISTE (22.9.2026 klo 06.52)
+
+Fable 22.9.2026 klo 02.05: Sisältökirjurin ehdotukset HRV/SVN/SVK/ROU/BGR, BIH/LTU/LVA/EST/ISL/LUX, MLT/CYP/UKR/RUS/TUR (docs/raportit/nostotasot-*-ehdotus-20260922.md) hyväksytty; SRB ei nosto-dataa (Raamatun poikkeuslista). Sääntö nostotasoihin: ykköstason tähtikohde ei saa olla pelikaupunki eikä kaupunki, jolla on jo poltettu kaupunkipiste ja nimi pallolla (merkki osuisi nimen päälle); kaupunkinostot vaihdetaan muuhun (Split, Bratislava, Kiova, Valletta) tai maa saa 3 tähteä.
