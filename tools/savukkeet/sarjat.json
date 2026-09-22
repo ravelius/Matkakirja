@@ -692,7 +692,7 @@
       "env": {
         "SAVUKE_MOOTTORI": "chromium"
       },
-      "huomautus": "Kehysprofiilin ylin rivi kertoo koetilan (omistajan iPhone-kaappaukset 22.9.2026 eivat kertoneet Piirtokoe-valintaa). T1 ?koe=profiili,dpr15 -> 'koe 3/6 Pikselisuhde 1,5 · profiili p3 · vNNNN' (numero ja nimi valikon jarjestyksessa); T2 valikon tallennus eipuskuri + kytkin ilman lippua; T3 valinta vaihdetaan kesken istunnon -> '(seuraavassa latauksessa: koe 1/6 Normaali)', koska kokeet luetaan kerrosten luonnissa; T4 ei sivuvirheita. Chromium ja WebKit 5/5."
+      "huomautus": "Kehysprofiilin ylin rivi kertoo koetilan (omistajan iPhone-kaappaukset 22.9.2026 eivat kertoneet Piirtokoe-valintaa). T1 ?koe=profiili,dpr15 -> 'koe 3/6 Pikselisuhde 1,5 · profiili pN · vNNNN' (numero ja nimi valikon jarjestyksessa); T2 valikon tallennus eipuskuri + kytkin ilman lippua; T3 valinta vaihdetaan kesken istunnon -> '(seuraavassa latauksessa: koe 1/6 Normaali)', koska kokeet luetaan kerrosten luonnissa; T4 ei sivuvirheita. Chromium ja WebKit 5/5."
     }
   }
 }
