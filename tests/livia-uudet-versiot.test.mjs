@@ -8,7 +8,7 @@ test('kasvopohjien polut vastaavat toisiaan myös tuotantopään muuttuessa',()=
   const topologia=frame=>[...livianSvgPaa({frame},{prefix:'koe'}).replace(/<path data-part="smile"[^>]*\/>/,'')
     .matchAll(/\b(d|transform|cx|cy|rx|ry|x|y)="([^"]*)"/g)]
     .map(m=>[m[1],m[2].replace(/-?\d*\.?\d+(?:e[-+]?\d+)?/gi,'#')]);
-  for(const ilme of ['glance','down','shock','blink','smile','smug'])assert.deepEqual(topologia(ilme),topologia('rest'),ilme);
+  for(const ilme of ['glance','down','shock','blink','smile','smug','grin','disbelief','yawn'])assert.deepEqual(topologia(ilme),topologia('rest'),ilme);
 });
 
 test('katseluehdotukset pysyvät erillään pelieleistä ja kestävät kelauksen',()=>{
@@ -25,7 +25,7 @@ test('katseluehdotukset pysyvät erillään pelieleistä ja kestävät kelauksen
       for(const m of kuva.matchAll(/url\(#([^)]+)\)/g))assert.ok(ids.includes(m[1]),m[1]);
       assert.ok(ids.every(id=>id.startsWith('koe')));
     }
-    if(e.id!=='uusi-bookPanic')for(const k of ['paaKulma','paaY','paaX','rinta','siipi','takasiipi','rapaytys','ilme','suu'])assert.equal(asento(0)[k],asento(1)[k],e.id+' '+k);
+    if(e.id!=='uusi-bookPanic')for(const k of ['paaKulma','paaY','paaX','rinta','siipi','takasiipi','rapaytys','ilme','suu','suusiipi','hengitys'])assert.equal(asento(0)[k],asento(1)[k],e.id+' '+k);
     const jalat=p=>uudenEleenKuva(asento(p)).match(/<g data-part="feet">.*?<\/g>/)[0];
     assert.equal(jalat(0),jalat(.45),'jalkojen ankkurit pysyvät maassa');
   }
@@ -82,7 +82,38 @@ test('tervehdyksen linnunsuu avautuu yhtenä eleenä eikä peitä toista nokkaa'
     assert.match(svg,/data-part="tongue"/);
     assert.match(svg,/data-part="mouth-space"/,'poski leikataan pois nokan aukosta');
   }
-  for(const e of LIVIAN_UUDET_VERSIOT.filter(e=>e.baseId!=='welcome'))assert.doesNotMatch(uudenEleenKuva(uudenEleenAsento(e.id,.3)),/friendly-beak/);
+  for(const id of ['uusi-nod','uusi-doubleTake','uusi-bookStudy','uusi-bookPanic'])assert.doesNotMatch(uudenEleenKuva(uudenEleenAsento(id,.3)),/friendly-beak/);
+});
+
+test('uuden erän suu, silmät, hengitys ja siivet näyttelevät neljää eri reaktiota',()=>{
+  const a=(id,p)=>uudenEleenAsento('uusi-'+id,p);
+  assert.equal(a('chuckle',.25).suu,0,'nauru pidätetään ennen pyrskähdystä');
+  assert.ok(a('chuckle',.32).suu>a('chuckle',.53).suu+.2,'kaksi erikokoista pyrskähdystä');
+  assert.ok(a('chuckle',.40).suu<.1,'pyrskähdysten välissä hengähdetään');
+  assert.ok(a('chuckle',.20).hengitys>0&&a('chuckle',.35).hengitys<0,'sisäänhengitys vaihtuu vatsan painotukseen');
+  assert.ok(a('chuckle',.32).paaKulma<-15&&a('chuckle',.32).rinta<a('chuckle',.36).rinta,'pää johtaa, rinta seuraa');
+  assert.equal(a('yawn',.48).suu,1);assert.equal(a('yawn',.61).suu,1);
+  assert.ok(a('yawn',.29).suu<.2&&a('yawn',.53).hengitys===1,'haukotus kasvaa hitaasti venytykseen');
+  assert.ok(a('yawn',.78).hengitys<0&&a('yawn',.78).paaY>4,'huokaus laskee koko asentoa');
+  assert.ok(a('grin',.17).ilme>0&&a('grin',.23).suu===0,'silmät aloittavat virneen');
+  assert.ok(a('grin',.37).suu>.5&&a('grin',.69).suu>.4,'leveä hymy pysyy hetken');
+  assert.equal(a('disbelief',.13).paaKulma,a('disbelief',.26).paaKulma,'ensin täysin paikallaan oleva havainto');
+  assert.equal(a('disbelief',.33).suu,a('disbelief',.51).suu,'nokka jää auki, ei puhetta muistuttavaa sykettä');
+  assert.ok(a('disbelief',.46).siipi>a('disbelief',.46).takasiipi*2,'kohautus on epäsymmetrinen');
+  assert.ok(a('disbelief',.66).katse>.9&&a('disbelief',.72).suu===0);
+  for(const id of ['chuckle','yawn','grin','disbelief']){
+    let edellinen=a(id,0);
+    for(let i=0;i<=1000;i++){
+      const s=a(id,i/1000);
+      for(const k of ['suu','suusiipi','hengitys'])assert.ok(Math.abs(s[k]-edellinen[k])<.035,id+' '+k+' ei hypähdä');
+      assert.ok(s.suu>=0&&s.suu<=1);
+      edellinen=s;
+    }
+    const svg=uudenEleenKuva(a(id,.48));
+    assert.equal((svg.match(/data-part="friendly-beak"/g)||[]).length,1);
+    assert.match(svg,/data-part="mouth-space"/);assert.match(svg,/data-part="tongue"/);
+    assert.doesNotMatch(svg,/fill="#2e4756"/);
+  }
 });
 
 test('kirjan ulkokannet ovat katsojaan päin ja peittävät sivun alareunan',()=>{

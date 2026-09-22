@@ -6,6 +6,10 @@
 import {livianSvgPaa} from '../js/livia-svg-paa.js';
 
 export const LIVIAN_UUDET_VERSIOT=Object.freeze([
+  {id:'uusi-chuckle',baseId:'chuckle',label:'Hiljainen naurunpyrskähdys',duration:3600,group:'Uudet versiot',kuvaus:'Uusi erä: nauru yrittää pysyä sisällä, mutta karkaa kahdessa erikokoisessa pyrskähdyksessä. Siipi peittää suupieltä; hartiat ja pää seuraavat eri aikaan.'},
+  {id:'uusi-yawn',baseId:'yawn',label:'Valtava haukotus',duration:4700,group:'Uudet versiot',kuvaus:'Uusi erä: raskaat luomet, sisäänhengitys ja suuri linnunhaukotus. Kieli näkyy, siipi nousee suun eteen ja venytys sulaa rauhalliseksi huokaukseksi.'},
+  {id:'uusi-grin',baseId:'grin',label:'Leveä virne',duration:3200,group:'Uudet versiot',kuvaus:'Uusi erä: ensin silmät tietävät jotain, sitten nokkaan leviää leveä virne. Pieni ylpeä takakeno ja lopuksi hillitty paluu pokerinaamaan.'},
+  {id:'uusi-disbelief',baseId:'disbelief',label:'Et ole tosissasi',duration:3800,group:'Uudet versiot',kuvaus:'Uusi erä: katse pysähtyy, toinen kulma nousee ja nokka loksahtaa raolleen. Epätasainen siipien kohautus, sivusilmäys ja harkittu suun sulkeminen.'},
   {id:'uusi-nod',baseId:'nod',label:'Kyllä kyllä',duration:2100,group:'Uudet versiot',kuvaus:'Pieni valmistelu, napakka nyökkäys ja pienempi vahvistus. Pää palaa rauhassa paikalleen.'},
   {id:'uusi-doubleTake',baseId:'doubleTake',label:'Hetkinen!',duration:2750,group:'Uudet versiot',kuvaus:'Sivusilmäys, havahtuminen ja nopea toinen vilkaisu. Vartalo seuraa päätä hieman jäljessä.'},
   {id:'uusi-welcome',baseId:'welcome',label:'Hauska nähdä',duration:2900,group:'Uudet versiot',kuvaus:'Iloinen linnunsuu avautuu tervehdykseen. Siivet seuraavat eri aikaan, ja hymy sulkeutuu rauhassa.'},
@@ -38,6 +42,55 @@ export function liikearvo(p,avaimet){
 }
 
 const RADAT={
+  'uusi-chuckle':{
+    paaKulma:[[0,0],[.12,5],[.24,5],[.32,-16],[.40,5],[.46,5],[.53,-10],[.62,3],[.73,-2],[.94,0],[1,0]],
+    paaY:[[0,0],[.19,-4],[.26,-4],[.34,7],[.43,-2],[.48,-2],[.55,4],[.66,0],[1,0]],
+    rinta:[[0,0],[.24,-3],[.36,5],[.45,-1],[.57,3],[.70,0],[1,0]],
+    hengitys:[[0,0],[.20,.7],[.27,.7],[.35,-.55],[.45,.35],[.48,.35],[.57,-.35],[.73,0],[1,0]],
+    ilme:[[0,0],[.15,.6],[.27,.9],[.34,1],[.62,1],[.78,.6],[.96,0],[1,0]],
+    suu:[[0,0],[.25,0],[.32,.9],[.40,.08],[.47,.08],[.53,.63],[.63,.1],[.78,0],[1,0]],
+    siipi:[[0,0],[.20,0],[.30,.75],[.38,.85],[.64,.85],[.85,0],[1,0]],
+    suusiipi:[[0,0],[.23,0],[.34,1],[.63,1],[.85,0],[1,0]],
+    sulat:[[0,0],[.24,0],[.36,.85],[.67,.85],[.89,0],[1,0]],
+    rapaytys:[[0,0],[.84,0],[.88,1],[.92,0],[1,0]],
+  },
+  'uusi-yawn':{
+    paaKulma:[[0,0],[.12,-8],[.21,-8],[.37,17],[.50,20],[.60,20],[.72,4],[.81,-7],[.96,0],[1,0]],
+    paaY:[[0,0],[.14,4],[.21,4],[.38,-10],[.52,-13],[.61,-13],[.78,5],[.94,0],[1,0]],
+    rinta:[[0,0],[.19,2],[.43,-5],[.62,-5],[.79,3],[.97,0],[1,0]],
+    hengitys:[[0,0],[.18,-.25],[.38,.8],[.53,1],[.62,1],[.78,-.4],[.98,0],[1,0]],
+    ilme:[[0,0],[.13,.7],[.25,1],[.68,1],[.87,.7],[1,0]],
+    suu:[[0,0],[.20,0],[.29,.18],[.40,.82],[.48,1],[.61,1],[.68,.65],[.77,.1],[.84,0],[1,0]],
+    siipi:[[0,0],[.24,0],[.40,.8],[.64,.8],[.79,.3],[.93,0],[1,0]],
+    suusiipi:[[0,0],[.28,0],[.45,1],[.65,1],[.89,0],[1,0]],
+    takasiipi:[[0,0],[.30,0],[.49,.42],[.63,.42],[.88,0],[1,0]],
+    sulat:[[0,0],[.29,0],[.47,.8],[.67,.8],[.95,0],[1,0]],
+    rapaytys:[[0,0],[.25,0],[.38,.88],[.65,.88],[.79,.3],[.88,0],[1,0]],
+  },
+  'uusi-grin':{
+    paaKulma:[[0,0],[.13,-4],[.24,-4],[.39,10],[.49,7],[.69,7],[.83,2],[1,0]],
+    paaX:[[0,0],[.24,0],[.42,3],[.69,3],[.96,0],[1,0]],
+    paaY:[[0,0],[.20,2],[.40,-5],[.51,-3],[.72,-3],[1,0]],
+    rinta:[[0,0],[.25,1],[.46,-3],[.72,-3],[.97,0],[1,0]],
+    hengitys:[[0,0],[.25,-.1],[.46,.45],[.71,.45],[.98,0],[1,0]],
+    katse:[[0,0],[.12,.75],[.27,.75],[.40,0],[1,0]],
+    ilme:[[0,0],[.17,.5],[.37,1],[.69,1],[.91,0],[1,0]],
+    suu:[[0,0],[.23,0],[.37,.6],[.48,.5],[.69,.5],[.84,0],[1,0]],
+    rapaytys:[[0,0],[.90,0],[.935,.7],[.97,0],[1,0]],
+  },
+  'uusi-disbelief':{
+    paaKulma:[[0,0],[.13,4],[.26,4],[.32,-5],[.42,-3],[.57,-3],[.68,7],[.79,7],[.98,0],[1,0]],
+    paaX:[[0,0],[.13,-2],[.27,-2],[.37,5],[.58,5],[.70,7],[.81,7],[1,0]],
+    paaY:[[0,0],[.27,0],[.34,3],[.59,3],[.72,-1],[1,0]],
+    rinta:[[0,0],[.31,0],[.42,-3],[.64,-3],[.84,0],[1,0]],
+    ilme:[[0,0],[.14,.7],[.28,.7],[.37,1],[.75,1],[.96,0],[1,0]],
+    suu:[[0,0],[.27,0],[.33,.55],[.51,.55],[.63,.18],[.72,0],[1,0]],
+    katse:[[0,0],[.55,0],[.66,1],[.80,1],[.96,0],[1,0]],
+    siipi:[[0,0],[.35,0],[.46,.7],[.57,.7],[.77,0],[1,0]],
+    takasiipi:[[0,0],[.42,0],[.55,.42],[.62,.42],[.84,0],[1,0]],
+    sulat:[[0,0],[.40,0],[.51,.7],[.60,.7],[.82,0],[1,0]],
+    rapaytys:[[0,0],[.80,0],[.84,1],[.89,0],[1,0]],
+  },
   'uusi-nod':{
     paaKulma:[[0,0],[.07,0],[.15,8],[.245,-24],[.27,-23],[.40,3],[.53,-12],[.59,-9],[.79,1],[.94,0],[1,0]],
     paaY:[[0,0],[.15,-3],[.25,8],[.40,-1],[.53,4],[.81,0],[1,0]],
@@ -105,7 +158,7 @@ const RADAT={
 export function uudenEleenAsento(id,p,{voimakkuus=.5}={}){
   const radat=RADAT[id];
   if(!radat)throw new RangeError('Tuntematon katseluele: '+id);
-  const s={id,p:rajaa(p),paaKulma:0,paaX:0,paaY:0,rinta:0,siipi:0,takasiipi:0,sulat:0,katse:0,ilme:0,suu:0,rapaytys:0,sivu:0,paperi:0,havahdus:0,kirjaKulma:0,kirjaKiinni:0,kirjaX:0,kirjaY:0,kirjaKallistus:0,vihellys:0,ryhti:0,kyyry:0,lasikorjaus:0};
+  const s={id,p:rajaa(p),paaKulma:0,paaX:0,paaY:0,rinta:0,siipi:0,takasiipi:0,sulat:0,katse:0,ilme:0,suu:0,rapaytys:0,sivu:0,paperi:0,havahdus:0,kirjaKulma:0,kirjaKiinni:0,kirjaX:0,kirjaY:0,kirjaKallistus:0,vihellys:0,ryhti:0,kyyry:0,lasikorjaus:0,hengitys:0,suusiipi:0};
   for(const [avain,rata]of Object.entries(radat))s[avain]=liikearvo(s.p,rata);
   const voima=.55+.9*rajaa(voimakkuus);
   for(const avain of ['paaKulma','paaX','paaY','rinta'])s[avain]*=voima;
@@ -117,12 +170,12 @@ export function uudenEleenAsento(id,p,{voimakkuus=.5}={}){
 // erikseen, koska muilla ilmeillä sitä ei ole. Ei päällekkäisiä kasvokuvia.
 const GEOMETRIA=/\b(d|transform|cx|cy|rx|ry|x|y)="([^"]*)"/g;
 const NUMERO=/-?\d*\.?\d+(?:e[-+]?\d+)?/gi;
-const ILMEET=['rest','glance','down','shock','blink','smile','smug'];
+const ILMEET=['rest','glance','down','shock','blink','smile','smug','grin','disbelief','yawn'];
 const POHJAT=Object.fromEntries(ILMEET.map(frame=>{
   const svg=livianSvgPaa({frame},{prefix:'katselupaa'}).replace(/<path data-part="smile"[^>]*\/>/,'');
   return [frame,{svg,luvut:[...svg.matchAll(GEOMETRIA)].flatMap(m=>[...m[2].matchAll(NUMERO)].map(n=>Number(n[0])))}];
 }));
-// Vain tämä katseluele kokeilee suurempaa linnunsuuta. Ylänokka ja vahanahka
+// Vain katselueleet kokeilevat suurempaa linnunsuuta. Ylänokka ja vahanahka
 // säilyvät tunnistettavina; avautuminen tulee alaleuasta, ei ihmishuulista.
 const VANHA_NOKKA=/<path d="M30 60L44 61[^"]*" fill="#2e4756"\/>(?:<path[^>]*\/>){4}/;
 function iloinenNokka(avaus){
@@ -130,21 +183,29 @@ function iloinenNokka(avaus){
   return `<g data-part="friendly-beak" data-opening="${n(a)}"><path data-part="mouth-inside" d="M20 67Q34 ${n(66-2*a)} 47 62Q51 ${n(67+3*a)} 40 ${n(69+13*a)}Q29 ${n(72+13*a)} 21 ${n(68+11*a)}Z" fill="#795a64"/><g opacity="${n(rajaa(a*1.5))}"><path data-part="tongue" d="M25 ${n(68+9*a)}Q28 ${n(63+10*a)} 34 ${n(66+9*a)}Q40 ${n(63+10*a)} 43 ${n(66+9*a)}Q40 ${n(73+9*a)} 32 ${n(72+10*a)}Q28 ${n(72+10*a)} 25 ${n(68+9*a)}Z" fill="#d99fa5"/><path d="M29 ${n(68+9*a)}Q34 ${n(65+9*a)} 39 ${n(67+9*a)}" fill="none" stroke="#efbdb8" stroke-width="1.1" stroke-linecap="round"/></g><path data-part="lower-beak" d="M21 ${n(68+11*a)}Q29 ${n(72+13*a)} 40 ${n(69+13*a)}Q45 ${n(66+9*a)} 47 62L48 ${n(64+2*a)}Q45 ${n(70+14*a)} 40 ${n(71+14*a)}Q29 ${n(74+13*a)} 20 ${n(70+11*a)}Z" fill="#6c8490"/><g transform="rotate(${n(a*8)} 43 63)"><path d="M32 57Q37 55 42 59L46 63Q38 66 19 68Q22 64 26 61Z" fill="#526b79"/><path d="M31 59Q35 57 40 60Q30 65 21 67L27 63Z" fill="#9baaae"/><path d="M27 59Q28 54 33 55Q36 51 39 55Q42 56 41 60Q35 59 32 62Z" fill="#e3e2d6"/></g><path d="M44 66Q49 65 50 62" fill="none" stroke="#334e5b" stroke-width="1.4" stroke-linecap="round" opacity="${n(a)}"/></g>`;
 }
 function paa(s,prefix){
-  const lepo=POHJAT.rest.luvut,ilme=POHJAT[s.id==='uusi-doubleTake'?'shock':s.id==='uusi-welcome'?'smile':onKirja(s)?'down':'rest'].luvut;
+  const ilmekartta={'uusi-chuckle':'grin','uusi-yawn':'yawn','uusi-grin':'grin','uusi-disbelief':'disbelief'};
+  const lepo=POHJAT.rest.luvut,ilme=POHJAT[ilmekartta[s.id]||(s.id==='uusi-doubleTake'?'shock':s.id==='uusi-welcome'?'smile':onKirja(s)?'down':'rest')].luvut;
   let i=0;
   let kuva=POHJAT.rest.svg.replaceAll('katselupaa',prefix).replace(GEOMETRIA,(_,nimi,arvo)=>`${nimi}="${arvo.replace(NUMERO,()=>{
     const n=i++,avoin=lepo[n]+(ilme[n]-lepo[n])*s.ilme+(POHJAT.glance.luvut[n]-lepo[n])*s.katse+(POHJAT.shock.luvut[n]-lepo[n])*s.havahdus+(POHJAT.smug.luvut[n]-lepo[n])*s.ryhti;
     return pyorista(avoin+(POHJAT.blink.luvut[n]-avoin)*s.rapaytys);
   })}"`);
-  if(s.id==='uusi-welcome'){
+  if(s.id==='uusi-welcome'||ilmekartta[s.id]){
     // Nokan aukko leikkaa myös takana olevan posken: tausta näkyy raosta.
     // Kurkku ja kieli jäävät suun takaosaan, eivät täytä koko nokkaväliä.
     const a=rajaa(s.suu),maski=prefix+'mouth-space';
+    // Virne leviää sivulle, haukotus alas. Sama muutos koskee sekä
+    // nokkaa että posken aukkoa, jotta tausta jää oikeasti näkyviin.
+    const muoto=s.id==='uusi-grin'?`translate(47 62) scale(${pyorista(1+.15*a)} ${pyorista(1-.3*a)}) translate(-47 -62)`:s.id==='uusi-yawn'?`translate(47 62) scale(1 ${pyorista(1+.2*a)}) translate(-47 -62)`:'';
     const aukko=`M16 65Q33 63 47 62Q49 ${pyorista(66+7*a)} 42 ${pyorista(67+14*a)}L14 ${pyorista(69+15*a)}Z`;
     kuva=kuva.replace(/^(<g[^>]*>)/,`$1<defs><mask id="${maski}" maskUnits="userSpaceOnUse" x="0" y="0" width="120" height="120" style="mask-type:luminance"><rect width="120" height="120" fill="white"/><path data-part="mouth-space" d="${aukko}" fill="black" opacity="${pyorista(rajaa(a*4))}"/></mask></defs><g mask="url(#${maski})">`)
       .replace('<g><defs><clipPath','</g><g><defs><clipPath');
     let nokka=iloinenNokka(s.suu);
     nokka=nokka.replace(/(<path data-part="mouth-inside" d=")[^"]+/,`$1M39 65Q44 62 47 62Q51 ${pyorista(67+3*a)} 40 ${pyorista(69+13*a)}L34 ${pyorista(70+12*a)}Q44 ${pyorista(69+4*a)} 39 65Z`);
+    if(muoto){
+      nokka=`<g data-part="mouth-shape" transform="${muoto}">${nokka}</g>`;
+      kuva=kuva.replace('data-part="mouth-space"',`data-part="mouth-space" transform="${muoto}"`);
+    }
     kuva=kuva.replace(VANHA_NOKKA,nokka);
   }
   if(s.vihellys>0)kuva=kuva.replace(VANHA_NOKKA,iloinenNokka(s.vihellys*.2));
@@ -162,8 +223,10 @@ function siipi(s,taka=false){
   // Kirjaan kurotetaan alhaalta rinnan ohi, ei kasvojen poikki.
   const moikkaus=s.id==='uusi-welcome'&&!taka,lasit=!taka?s.lasikorjaus:0;
   const perus=165+(kirja?75:moikkaus?-153:-112)*t+(s.sulat-t)*14;
-  const kulma=perus+(-8-perus)*lasit;
-  return `${taka?'':`<g opacity="${pyorista(1-auki)}">${TAITTUNUT_SIIPI}</g>`}<g data-part="${taka?'far':'near'}-wing" opacity="${pyorista(auki)}" transform="translate(${pyorista((taka?88:121)-(kirja?8:0)*t-lasit*2)} ${pyorista(143+(kirja?2:0)*t-(moikkaus?14:0)*t-lasit*18)}) scale(${taka?-1:1} 1) rotate(${pyorista(kulma)}) scale(${pyorista((.65+.35*t)*(1-lasit*.2))} ${pyorista(.5+(kirja?.65:moikkaus?1.05:.5)*t)})"><path d="M-3 4Q-11-7-4-20L4-38Q7-44 10-37L10-29Q16-42 20-37L17-24Q23-35 26-30L22-17Q29-23 29-17Q23-5 12 3Q4 8-3 4Z" fill="${taka?'#788e99':'#8499a3'}"/><path d="M0-13L8-27M5-7L16-23M10-1L21-15" fill="none" stroke="#506b7a" stroke-width="3.7" stroke-linecap="round"/></g>`;
+  const suulle=taka?0:s.suusiipi,kulma=perus+(-8-perus)*lasit+(-73-perus)*suulle;
+  // Naurun pää nyökkää alas: siipikin laskee suupieleen, ei silmän päälle.
+  const suupieli=s.id==='uusi-chuckle'?10*suulle:0;
+  return `${taka?'':`<g opacity="${pyorista(1-auki)}">${TAITTUNUT_SIIPI}</g>`}<g data-part="${taka?'far':'near'}-wing" opacity="${pyorista(auki)}" transform="translate(${pyorista((taka?88:121)-(kirja?8:0)*t-lasit*2)} ${pyorista(143+(kirja?2:0)*t-(moikkaus?14:0)*t-lasit*18+suupieli)}) scale(${taka?-1:1} 1) rotate(${pyorista(kulma)}) scale(${pyorista((.65+.35*t)*(1-lasit*.2)*(1-.2*suulle))} ${pyorista(.5+(kirja?.65:moikkaus?1.05:.5)*t+.4*suulle)})"><path d="M-3 4Q-11-7-4-20L4-38Q7-44 10-37L10-29Q16-42 20-37L17-24Q23-35 26-30L22-17Q29-23 29-17Q23-5 12 3Q4 8-3 4Z" fill="${taka?'#788e99':'#8499a3'}"/><path d="M0-13L8-27M5-7L16-23M10-1L21-15" fill="none" stroke="#506b7a" stroke-width="3.7" stroke-linecap="round"/></g>`;
 }
 function kirja(s){
   if(!onKirja(s))return '';
@@ -200,6 +263,6 @@ function kommellus(s){
 export function uudenEleenKuva(s,{prefix='uusi',right=44}={}){
   prefix=prefix.replace(/[^a-zA-Z0-9_-]/g,'');
   const jalka=x=>`<path d="M${x} 177l-1 8m0 0l-7 2m7-2l5 3m-5-3l1 3" fill="none" stroke="#ac7b74" stroke-width="2.1" stroke-linecap="round"/>`;
-  const vartalo=s.id==='uusi-bookPanic'?`translate(109 177) rotate(${pyorista(s.rinta)}) scale(${pyorista(1+s.kyyry*.12)} ${pyorista(1-s.kyyry*.3+s.ryhti*.16)}) translate(-109 -177)`:`rotate(${pyorista(s.rinta)} 109 177)`;
+  const vartalo=s.id==='uusi-bookPanic'?`translate(109 177) rotate(${pyorista(s.rinta)}) scale(${pyorista(1+s.kyyry*.12)} ${pyorista(1-s.kyyry*.3+s.ryhti*.16)}) translate(-109 -177)`:s.hengitys?`translate(109 177) rotate(${pyorista(s.rinta)}) scale(${pyorista(1-s.hengitys*.07)} ${pyorista(1+s.hengitys*.16)}) translate(-109 -177)`:`rotate(${pyorista(s.rinta)} 109 177)`;
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${152+right} 304" width="${152+right}" height="304" aria-hidden="true" data-uusi-versio="${s.id}"><defs><radialGradient id="${prefix}ground"><stop stop-color="#635b4e" stop-opacity=".58"/><stop offset=".55" stop-color="#635b4e" stop-opacity=".32"/><stop offset="1" stop-color="#635b4e" stop-opacity="0"/></radialGradient></defs><ellipse cx="128" cy="301" rx="19" ry="2.8" fill="url(#${prefix}ground)"/><g data-part="whole-bird" transform="translate(128 302) scale(.56) translate(-108 -188)"><g data-part="feet">${jalka(99)}${jalka(118)}</g>${siipi(s,true)}<g data-part="body" transform="${vartalo}">${VARTALO}</g><g data-part="approach" transform="translate(${pyorista(s.paaX)} ${pyorista(s.paaY)}) rotate(${pyorista(s.paaKulma)} 105 146)"><g transform="translate(44 61) scale(1 .87)">${paa(s,prefix)}</g></g>${siipi(s)}${katselukirja(s)}${kommellus(s)}</g></svg>`;
 }
