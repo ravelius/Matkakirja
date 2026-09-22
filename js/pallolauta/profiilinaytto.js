@@ -298,15 +298,34 @@ export function luoProfiilinaytto({
     };
     return d.piirtoja >= 0 && d.ohitettuja >= 0 ? d : null;
   };
+  /*
+   * ══ RUUTUNÄYTTÖ EI OMISTA MITTAUSTA (Laitetestaajan löydös
+   * 22.9.2026) ══════════════════════════════════════════════════════
+   *
+   * Ennen tämä sulki ja avasi profiilin joka jaksossa. Profiili on
+   * SINGLETON, joten samalla katkesi mittauspalvelimen otos: neljä eri
+   * koetta sai kukin saman ~47 kehyksen pätkän, vaikka harness pyysi
+   * kymmentä sekuntia. Nyt mittaus jää auki ja tästä otetaan vain
+   * VIIPALE (`otos`), joka ei koske mittaukseen.
+   *
+   * Jos joku muu (harness) sulkee mittauksen, ruutunäyttö käynnistää
+   * sen uudelleen seuraavassa jaksossa — mutta vasta suljettuaan sen
+   * itse, ei koskaan kesken toisen ikkunan.
+   */
+  let omaMittaus = false;
+  const varmistaMittaus = () => {
+    if (profiili.kaynnissa?.()) return;
+    try { profiili.aloita(); omaMittaus = true; } catch { /* ei mittausta */ }
+  };
   const jakso = () => {
     if (purettu) return;
     let tiiviste = null;
     let tahti = null;
     const nykyLepo = lueLepo();
     try {
-      const tulos = profiili.lopeta();
-      tiiviste = profiili.tiivista(tulos);
-      tahti = profiiliTahti(tulos, lepoDelta(nykyLepo));
+      const tulos = profiili.otos ? profiili.otos(jaksoMs) : profiili.lopeta();
+      tiiviste = tulos ? profiili.tiivista(tulos) : null;
+      tahti = tulos ? profiiliTahti(tulos, lepoDelta(nykyLepo)) : null;
     } catch { tiiviste = null; }
     edellinenLepo = nykyLepo;
     const nykyAsetukset = (() => { try { return asetukset() ?? {}; } catch { return {}; } })();
@@ -323,17 +342,18 @@ export function luoProfiilinaytto({
         tiiviste, asetukset: nykyAsetukset, lepo: nykyLepo, tahti, ua: ikkuna.navigator?.userAgent ?? '',
       }));
     }
-    try { profiili.aloita(); } catch { /* ei mittausta */ }
+    varmistaMittaus();
     ajastin = ikkuna.setTimeout(jakso, jaksoMs);
   };
-  try { profiili.aloita(); } catch { /* ei mittausta */ }
+  varmistaMittaus();
   ajastin = ikkuna.setTimeout(jakso, jaksoMs);
 
   return () => {
     if (purettu) return;
     purettu = true;
     ikkuna.clearTimeout(ajastin);
-    try { profiili.lopeta(); } catch { /* jo suljettu */ }
+    // Vain oma mittaus suljetaan: harnessin ikkuna ei saa katketa tähän.
+    if (omaMittaus) { try { profiili.lopeta(); } catch { /* jo suljettu */ } }
     kerros.remove();
   };
 }
