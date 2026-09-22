@@ -1223,3 +1223,7 @@ Fable 22.9.2026 klo 16.10: omistaja huomasi headless-Chromen kuorman (load 47–
 ## AIDOT VEDOT v2106 (SAFARI + CHROME): KAMERA SEURAA MEDIAANISSA 1:1 MUTTA ≥ 10 % KEHYKSISTA TAYSI PYSAHDYS JA PERAAN YLIKORJAUS — SYY KERRAN-KEHYKSESSA-SOVELLUS ILMAN INTERPOLOINTIA; KORJAUS AIKALEIMAINTERPOLOINTI (22.9.2026 klo 16.10)
 
 Laitetestaaja 22.9.2026 klo 16.15 (raakadata kamera vs osoitin per kehys, 8+8 kierrosta): mediaanisuhde Chromium 0,88–1,0, WebKit 0,7–1,35; p10 = 0 kaikissa 16 kierroksessa; p90 3–14 (pysähdys → ylikorjaus); alku10 WebKit: 2 kehystä camD=0 osoittimen liikuttua 130 px, sitten 104 px yhdessä kehyksessä (suhde 3,8) = omistajan tahmea lähtö ja kiihtyminen; pysähdysosuus Chromium ~14 %, WebKit ~13 % — ero piikkien voimakkuudessa. Fable → Pelikoodari: kameran paikka kehyksen hetkellä interpoloidaan osoittimen aikaleimatuista näytteistä vakioviiveellä (1 kehys), ekstrapolointi viimeisellä nopeudella enintään kehys, getCoalescedEvents, ei ease-iniä; hyväksymisraja seuraamisvirheen p10 > 0,7 ja p90 < 1,4 molemmissa. Järjestys: lepopiirto-korjaus → A → tämä.
+
+## OMISTAJA: KONEELLA ON MUUTAKIN TYOTA — TYHJAN KONEEN MITTAUS PYYDETAAN ETUKATEEN (22.9.2026 klo 16.12)
+
+Omistaja 22.9.2026 klo 16.20: prosessorilla on nyt paljon muuta työtä; jos mittaus tyhjällä koneella tarvitaan, Fable pyytää sitä etukäteen. Sääntö: mittausikkunat sovitaan omistajan kanssa ennalta (aika ja kesto), muuten sessioiden headless-ajot saavat jatkua normaalisti.
