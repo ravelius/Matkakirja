@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2121, teksti: 'Nostopiste harmaaksi, vari vivusta' },
   { v: 2120, teksti: 'Nostosymbolin valkoinen halo pois' },
   { v: 2119, teksti: 'Karttaselite: linssi peittaa rivin, vipu reaaliajassa' },
   { v: 2118, teksti: 'Tarkkuus liikkeessa -asetus palautettu' },
