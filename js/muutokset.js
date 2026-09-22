@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2125, teksti: 'Piirtokoe-valikko ja kehysprofiilin kytkin' },
   { v: 2124, teksti: 'Profiilin rollaava ikkuna: rAF-ketjut korjattu' },
   { v: 2123, teksti: 'Vedon aikana ei ohiteta kehyksia' },
   { v: 2122, teksti: 'koe=profiili: kehysprofiili, rAF-tahti ja mittauspalvelin' },
