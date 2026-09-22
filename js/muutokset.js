@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2119, teksti: 'Karttaselite: linssi peittaa rivin, vipu reaaliajassa' },
   { v: 2118, teksti: 'Tarkkuus liikkeessa -asetus palautettu' },
   { v: 2117, teksti: 'Vedon seuranta valikkoon, viisi syötetapaa' },
   { v: 2116, teksti: 'Pallon laattaosoitin poltto 2026-09-22c' },
