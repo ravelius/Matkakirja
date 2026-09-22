@@ -39,10 +39,10 @@ export const PROFIILIN_POLKU = '/__profiili';
  * aina, kun jonkin luvun merkitys muuttuu (v2124: rollaava ikkuna,
  * v2126: valmistumisviive, 22.9.2026 ilta: koetila riville; p4: js ilman
  * tuplarenderiä, viive → varattu/vapaa pitkissä, dt-kerrannaiset,
- * ohitukset jaksolta) — muuten
+ * ohitukset jaksolta; p5: liikkeen tasaisuus) — muuten
  * eri päivien kaappauksia verrataan kuin ne mittaisivat samaa.
  */
-export const PROFIILIN_VERSIO = 4;
+export const PROFIILIN_VERSIO = 5;
 
 /**
  * Koeliput overlayn nimeksi: `profiili` (itse näyttö) pois, loput
@@ -191,9 +191,68 @@ export function profiiliTahti(tulos, lepoDelta = null) {
      * ohitetuista vsynceistä ilman Web Inspectoria.
      */
     pitkienJakauma: pitkienJakauma(dts),
+    liike: liikkeenTasaisuus(kehykset),
   };
 }
 
+
+/*
+ * LIIKKEEN TASAISUUS (p5, omistaja ja Fable 23.9.2026). Kehysaika ei
+ * mittaa nähtyä nykimistä; tämä mittaa kartan liikettä sormen alla.
+ * Kehysprofiili kirjaa joka renderin jälkeen vedon alussa tartutun
+ * maapisteen ruutupaikan (`kartta`) ja sormen paikan (`sormi`).
+ *
+ * Vain peräkkäiset vetokehykset, joissa sormi liikkui (≥ 0,5 px tässä tai
+ * edellisessä kehysparissa):
+ *   siirtymä  kartan liike ruudulla kehystä kohti; ka, CV = sd / ka
+ *   nollat    kartta ei liikkunut (< 0,25 px), vaikka sormi liikkui
+ *   tuplat    siirtymä > 1,8 × naapurien keskiarvo (kiinniotto)
+ *   virhe     pisteen ja sormen etäisyys: ka = viive, sd = nyky
+ *   syöte     osoitintapahtumia kehystä kohti, kehyksiä ilman tapahtumaa,
+ *             syötteen ikä renderin hetkellä (ms)
+ * PUHDAS: kehykset sisään, luvut ulos. null, jos vetoa ei ollut.
+ */
+export function liikkeenTasaisuus(kehykset = []) {
+  const kelpaa = (k) => k?.alhaalla && k.kartta && k.sormi;
+  const parit = [];
+  for (let i = 1; i < kehykset.length; i += 1) {
+    const a = kehykset[i - 1]; const b = kehykset[i];
+    if (!kelpaa(a) || !kelpaa(b)) continue;
+    parit.push({
+      d: Math.hypot(b.kartta.x - a.kartta.x, b.kartta.y - a.kartta.y),
+      ds: Math.hypot(b.sormi.x - a.sormi.x, b.sormi.y - a.sormi.y),
+      k: b,
+    });
+  }
+  const liike = parit.filter((q, i) => q.ds >= 0.5 || (i > 0 && parit[i - 1].ds >= 0.5));
+  if (liike.length < 5) return null;
+  const ka = (xs) => xs.reduce((a, b) => a + b, 0) / Math.max(1, xs.length);
+  const sd = (xs) => { const m = ka(xs); return Math.sqrt(ka(xs.map((x) => (x - m) ** 2))); };
+  const d = liike.map((q) => q.d);
+  let tuplat = 0;
+  for (let i = 1; i < liike.length - 1; i += 1) {
+    const naapurit = (liike[i - 1].d + liike[i + 1].d) / 2;
+    if (liike[i - 1].d >= 0.25 && liike[i + 1].d >= 0.25 && liike[i].d > 1.8 * naapurit) tuplat += 1;
+  }
+  const virheet = liike.map((q) => Math.hypot(q.k.kartta.x - q.k.sormi.x, q.k.kartta.y - q.k.sormi.y));
+  const syotteet = liike.map((q) => q.k.syotteita ?? 0);
+  const iat = liike.map((q) => q.k.syoteIka).filter(Number.isFinite);
+  const siirtymaKa = ka(d);
+  return {
+    kehyksia: liike.length,
+    siirtymaKa,
+    siirtymaCv: siirtymaKa > 0 ? sd(d) / siirtymaKa : null,
+    sormiKa: ka(liike.map((q) => q.ds)),
+    nollat: d.filter((x) => x < 0.25).length,
+    tuplat,
+    virheKa: ka(virheet),
+    virheSd: sd(virheet),
+    syotteitaKa: ka(syotteet),
+    ilmanSyotetta: syotteet.filter((n) => n === 0).length,
+    kosketuksiaKa: ka(liike.map((q) => q.k.kosketuksia ?? 0)),
+    syoteIkaKa: iat.length ? ka(iat) : null,
+  };
+}
 
 /** Pitkien (> 25 ms) kehysten keskimääräinen varattu ja vapaa aika. */
 function pitkienJako(kehykset) {
@@ -233,6 +292,18 @@ export function profiilirivit({
 } = {}) {
   const rivit = [koetilarivi(koetila ?? {})];
   if (!tiiviste || !tiiviste.kehyksia) return [...rivit, 'profiili: ei kehyksiä'];
+  const L = tahti?.liike;
+  if (L) {
+    /*
+     * LIIKE HETI TILAN JÄLKEEN (p5): tämä on se, minkä omistaja näkee.
+     * Ilman vetoa jaksossa rivejä ei ole — silloin mitattavaa liikettä
+     * ei ollut.
+     */
+    rivit.push(`liike ${L.kehyksia} kehystä · siirt ka ${p(L.siirtymaKa, 1)} px · CV ${p((L.siirtymaCv ?? NaN) * 100)} %`
+      + ` · nollat ${L.nollat} · tuplat ${L.tuplat}`);
+    rivit.push(`syöte ${p(L.syotteitaKa, 2)}/kehys (kosk ${p(L.kosketuksiaKa, 2)}) · ilman ${L.ilmanSyotetta}`
+      + ` · ikä ${p(L.syoteIkaKa, 1)} ms · virhe ka ${p(L.virheKa, 1)} sd ${p(L.virheSd, 1)} px`);
+  }
   const pisin = tiiviste.pisimmat?.[0] ?? null;
   if (tahti) {
     /*
@@ -317,6 +388,7 @@ export function profiilitiiviste({
       pitkatPiirretty: tahti.pitkatPiirretty, pitkatOhitettu: tahti.pitkatOhitettu,
       ketjuja: tahti.ketjuja, vienteja: tahti.vienteja,
       varattuPitkissa: tahti.varattuPitkissa, vapaaPitkissa: tahti.vapaaPitkissa, pitkienJakauma: tahti.pitkienJakauma,
+      liike: tahti.liike,
       puskuriKehys: tahti.puskuriKehys, uniformiKehys: tahti.uniformiKehys, glVienteja: tahti.glVienteja,
     } : null,
     kehyksia: tiiviste?.kehyksia ?? 0,

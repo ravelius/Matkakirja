@@ -17,7 +17,7 @@ import { readFileSync } from 'node:fs';
 
 import {
   PROFIILIN_POLKU, profiiliTahti, profiilirivit, profiilitiiviste, luoProfiilinaytto,
-  PROFIILIN_VERSIO, koetilanNimi, koetilarivi, koetilanOtsikko, pitkienJakauma,
+  PROFIILIN_VERSIO, koetilanNimi, koetilarivi, koetilanOtsikko, pitkienJakauma, liikkeenTasaisuus,
 } from '../js/pallolauta/profiilinaytto.js';
 import { PIIRTOKOKEIDEN_VAIHTOEHDOT } from '../js/piirtokoe-asetus.js';
 import { luoKehysprofiili } from '../js/pallolauta/kehysprofiili.js';
@@ -407,4 +407,60 @@ test('p4: globe.tick tunnistetaan pallon omasta syklistä', () => {
   kehys();
   const k = profiili.lopeta().kehykset.at(-1);
   assert.deepEqual(Object.keys(k.kutsut ?? {}), ['globe.tick']);
+});
+
+/*
+ * p5 LIIKKEEN TASAISUUS (omistaja ja Fable 23.9.2026): kartan tartunta-
+ * pisteen ruutupaikka ja sormi samasta kehyksestä.
+ */
+const vetokehykset = (askeleet, { viive = 0 } = {}) => {
+  let kx = 100; let sx = 100;
+  return askeleet.map(([kartta, sormi], i) => {
+    kx += kartta; sx += sormi;
+    return { dt: 16.7, alhaalla: true, kartta: { x: kx, y: 200 }, sormi: { x: sx + viive, y: 200 }, syotteita: i % 2, kosketuksia: 1, syoteIka: 8 };
+  });
+};
+
+test('p5: tasainen veto — CV 0, ei nollia eikä tuplia, virhe = viive', () => {
+  const L = liikkeenTasaisuus(vetokehykset(Array.from({ length: 20 }, () => [6, 6]), { viive: 6 }));
+  assert.equal(L.kehyksia, 19);
+  assert.equal(L.siirtymaKa, 6);
+  assert.equal(L.siirtymaCv, 0);
+  assert.equal(L.nollat, 0);
+  assert.equal(L.tuplat, 0);
+  assert.equal(L.virheKa, 6, 'kartta sormen perässä vakiomatkan');
+  assert.equal(L.virheSd, 0, 'ei nykyä');
+  assert.equal(L.ilmanSyotetta, 9, 'joka toinen kehys ilman tapahtumaa (parit kehyksistä 1–19)');
+});
+
+test('p5: 0/2-kuvio näkyy nollina ja CV:nä, kiinniotto tuplana', () => {
+  const nollat = liikkeenTasaisuus(vetokehykset(Array.from({ length: 20 }, (_, i) => [i % 2 ? 12 : 0, 6])));
+  assert.equal(nollat.nollat, 9, 'parilliset kehykset 2–18');
+  assert.ok(nollat.siirtymaCv > 0.9, `CV ${nollat.siirtymaCv}`);
+  const tupla = liikkeenTasaisuus(vetokehykset(Array.from({ length: 20 }, (_, i) => [i === 10 ? 12 : 6, 6])));
+  assert.equal(tupla.tuplat, 1);
+  assert.equal(tupla.nollat, 0);
+});
+
+test('p5: ei vetoa tai sormi paikallaan → ei lukuja; vain liikkeen kehykset', () => {
+  assert.equal(liikkeenTasaisuus([]), null);
+  assert.equal(liikkeenTasaisuus(vetokehykset(Array.from({ length: 20 }, () => [0, 0]))), null, 'sormi ei liikkunut');
+  // Nosto kesken: kehykset ilman alhaalla-tietoa katkaisevat parit.
+  const k = vetokehykset(Array.from({ length: 12 }, () => [6, 6]));
+  k[6] = { dt: 16.7 };
+  assert.equal(liikkeenTasaisuus(k).kehyksia, 9);
+});
+
+test('p5: overlay näyttää liikkeen rivit heti tilan jälkeen, tiiviste kantaa ne', () => {
+  const kehykset = vetokehykset(Array.from({ length: 20 }, (_, i) => [i % 2 ? 12 : 0, 6]));
+  const tahti = profiiliTahti({ kehykset });
+  assert.ok(tahti.liike);
+  const rivit = profiilirivit({ tiiviste: TIIVISTE, tahti });
+  assert.match(rivit[1], /^liike 19 kehystä · siirt ka 6\.3 px · CV \d+ % · nollat 9 · tuplat 0$/);
+  assert.match(rivit[2], /^syöte 0\.\d\d\/kehys \(kosk 1\.00\) · ilman \d+ · ikä 8\.0 ms · virhe ka [\d.]+ sd [\d.]+ px$/);
+  assert.equal(profiilitiiviste({ tiiviste: TIIVISTE, tahti }).tahti.liike.nollat, 9);
+  // Ilman vetoa ei liikerivejä.
+  const lepo = profiiliTahti({ kehykset: Array.from({ length: 20 }, () => ({ dt: 16.7 })) });
+  assert.equal(lepo.liike, null);
+  assert.doesNotMatch(profiilirivit({ tiiviste: TIIVISTE, tahti: lepo }).join('\n'), /^liike/m);
 });

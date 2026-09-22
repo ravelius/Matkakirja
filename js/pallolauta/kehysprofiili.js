@@ -148,12 +148,81 @@ export function luoKehysprofiili(uiTaiHaku, ikkuna = globalThis) {
     const r = haeUi()?.pallonInstanssi?.renderer?.();
     if (!r?.render || r.__kehysprofiili) return;
     const alkuperainen = r.render;
-    r.render = function render(...args) { const a = nyt(); try { return alkuperainen.apply(this, args); } finally { kirjaa('three.render', nyt() - a, rafSyvyys > 0); if (kehysNyt) kehysNyt.render = (kehysNyt.render ?? 0) + (nyt() - a); } };
+    r.render = function render(...args) { const a = nyt(); try { return alkuperainen.apply(this, args); } finally { kirjaa('three.render', nyt() - a, rafSyvyys > 0); if (kehysNyt) kehysNyt.render = (kehysNyt.render ?? 0) + (nyt() - a); kirjaaLiike(); } };
     r.__kehysprofiili = true;
     renderPurku = () => { r.render = alkuperainen; delete r.__kehysprofiili; };
   };
   if (kanava) kanava.port1.onmessage = () => { if (odottaa) { odottaa.kehys.varattu = ikkuna.performance.now() - odottaa.alku; odottaa = null; } };
   const nyt = () => ikkuna.performance.now();
+  /*
+   * ══ LIIKKEEN TASAISUUS: SORMI JA KARTTA SAMASSA KEHYKSESSÄ ══════════
+   * (omistaja ja Fable 23.9.2026: kehysaika ei mittaa nähtyä nykimistä —
+   * yli 20 ms:n kehysten putoaminen 25 % → 8 % ei muuttanut tuntumaa.)
+   *
+   * Vedon alussa otetaan talteen maapiste sormen alla (tartunta). Joka
+   * renderin JÄLKEEN luetaan, missä se piste on ruudulla, ja samalla
+   * sormen viimeisin paikka: ideaalissa piste pysyy sormen alla, joten
+   *   - kartan siirtymä kehystä kohti = pisteen liike ruudulla (px)
+   *   - liikevirhe = pisteen ja sormen etäisyys (ka = viive, sd = nyky)
+   * Kehyksen alussa kirjataan, montako osoitin-/kosketustapahtumaa tuli
+   * edellisen kehyksen jälkeen, ja syötteen ikä (viimeisimmän
+   * tapahtuman aikaleimasta).
+   *
+   * KUUNTELIJAT PYSYVÄT: ruutunäyttö sulkee ja avaa mittauksen 3 s:n
+   * välein, eikä veto saa katketa jakson rajalla. Kuuntelijat ovat
+   * passiivisia ja kaappausvaiheessa, eivätkä ne koske tapahtumaan.
+   */
+  const sormi = {
+    alhaalla: false, tartunta: null, x: 0, y: 0, ts: 0, tapahtumia: 0, kosketuksia: 0, vasen: 0, yla: 0, osoittimet: new Set(),
+  };
+  let sormiKuuntelee = false;
+  const kuunteleSormea = () => {
+    if (sormiKuuntelee || typeof ikkuna.addEventListener !== 'function') return;
+    sormiKuuntelee = true;
+    const kangas = () => haeUi()?.pallonInstanssi?.renderer?.()?.domElement ?? null;
+    const alas = (e) => {
+      sormi.osoittimet.add(e.pointerId);
+      const el = kangas();
+      const pallo = haeUi()?.pallonInstanssi;
+      // Kaksi sormea = nipistys, ei vetoa: tartunta pois, kunnes kaikki nousevat.
+      if (!el || !pallo || sormi.osoittimet.size !== 1) { sormi.tartunta = null; sormi.alhaalla = false; return; }
+      const kotelo = haeUi()?.pallolauta?.kotelo ?? el.parentElement;
+      if (kotelo?.contains && e.target && !kotelo.contains(e.target)) return;
+      const r = el.getBoundingClientRect();
+      sormi.vasen = r.left; sormi.yla = r.top;
+      sormi.x = e.clientX - r.left; sormi.y = e.clientY - r.top; sormi.ts = e.timeStamp;
+      let g = null;
+      try { g = pallo.toGlobeCoords?.(sormi.x, sormi.y) ?? null; } catch { g = null; }
+      sormi.tartunta = g && Number.isFinite(g.lat) && Number.isFinite(g.lng) ? { lat: g.lat, lng: g.lng } : null;
+      sormi.alhaalla = Boolean(sormi.tartunta);
+    };
+    const liikkuu = (e) => {
+      if (!sormi.alhaalla || e.isPrimary === false) return;
+      sormi.x = e.clientX - sormi.vasen; sormi.y = e.clientY - sormi.yla; sormi.ts = e.timeStamp;
+      sormi.tapahtumia += 1;
+    };
+    const kosketus = () => { if (sormi.alhaalla) sormi.kosketuksia += 1; };
+    const ylos = (e) => {
+      sormi.osoittimet.delete(e.pointerId);
+      sormi.alhaalla = false; sormi.tartunta = null;
+    };
+    const valinnat = { capture: true, passive: true };
+    ikkuna.addEventListener('pointerdown', alas, valinnat);
+    ikkuna.addEventListener('pointermove', liikkuu, valinnat);
+    ikkuna.addEventListener('touchmove', kosketus, valinnat);
+    ikkuna.addEventListener('pointerup', ylos, valinnat);
+    ikkuna.addEventListener('pointercancel', ylos, valinnat);
+  };
+  /** Renderin jälkeen: tartuntapisteen ruutupaikka ja sormi samaan kehykseen. */
+  const kirjaaLiike = () => {
+    if (!kehysNyt || !sormi.alhaalla || !sormi.tartunta) return;
+    let p = null;
+    try { p = haeUi()?.pallonInstanssi?.getScreenCoords?.(sormi.tartunta.lat, sormi.tartunta.lng) ?? null; } catch { p = null; }
+    if (!p || !Number.isFinite(p.x) || !Number.isFinite(p.y)) return;
+    kehysNyt.kartta = { x: p.x, y: p.y };
+    kehysNyt.sormi = { x: sormi.x, y: sormi.y };
+    kehysNyt.syoteIka = nyt() - sormi.ts;
+  };
   /*
    * ══ YKSI KETJU PER MITTAUS (v2123:n vika, omistajan kaappaus) ══════
    *
@@ -171,12 +240,16 @@ export function luoKehysprofiili(uiTaiHaku, ikkuna = globalThis) {
   const aloita = () => {
     const oma = { kehykset: [], kaynnissa: true, t: nyt(), alku: nyt() };
     tila = oma;
-    kaariRaf(); kaariRender();
+    kaariRaf(); kaariRender(); kuunteleSormea();
     ketjuja += 1;
     const askel = () => {
       if (tila !== oma || !oma.kaynnissa) { ketjuja = Math.max(0, ketjuja - 1); return; }
       const t = nyt(); const dt = t - oma.t; oma.t = t;
       const kehys = { t: t - oma.alku, dt, varattu: null, js: 0, render: 0, ...lue() };
+      // Syötteet edellisen kehyksen jälkeen (ks. LIIKKEEN TASAISUUS).
+      kehys.alhaalla = sormi.alhaalla;
+      kehys.syotteita = sormi.tapahtumia; sormi.tapahtumia = 0;
+      kehys.kosketuksia = sormi.kosketuksia; sormi.kosketuksia = 0;
       oma.kehykset.push(kehys);
       // Ruutunäyttö pitää mittausta auki pitkään; katto estää taulukkoa kasvamasta rajatta.
       if (oma.kehykset.length > KEHYSKATTO) oma.kehykset.splice(0, oma.kehykset.length - KEHYSKATTO);
@@ -241,7 +314,17 @@ export function luoKehysprofiili(uiTaiHaku, ikkuna = globalThis) {
    * mittarit ovat siirtymän keskiarvo ja hajonta/keskiarvo, pysähdykset
    * (siirtymä < 0,25 px vaikka sormi liikkui) ja pisin pysähdys ms.
    */
-  const veto = async ({ kesto = 3000, nopeusPx = 80, suunta = [1, 0.3], pointerType = 'touch' } = {}) => {
+  /*
+   * iOS-TYYLINEN SYÖTE (p5): `syote: 'ajastin'` lähettää pointermoven
+   * omalla ajastimellaan `vali` ms:n välein rAF:sta riippumatta (iOS ei
+   * tahdista pointermovea rAF:iin — ks. v2123), jolloin kehykseen osuu
+   * vuoroin 0, 1 tai 2 tapahtumaa. `kuorma` (ms) = satunnainen 0…kuorma
+   * ms:n pääsäikeen työ joka kehyksessä, joka siirtää kirjaston tickin
+   * alkuhetkeä kuten laitteen muu työ.
+   */
+  const veto = async ({
+    kesto = 3000, nopeusPx = 80, suunta = [1, 0.3], pointerType = 'touch', syote = 'raf', vali = 17.4, kuorma = 0,
+  } = {}) => {
     const ui = haeUi();
     const pallo = ui?.pallonInstanssi;
     const kohde = pallo?.renderer?.()?.domElement ?? ui?.pallolauta?.kotelo;
@@ -262,11 +345,25 @@ export function luoKehysprofiili(uiTaiHaku, ikkuna = globalThis) {
     const alku = nyt();
     let edellinenRuutu = ruutu();
     let edellinenT = alku;
+    let ajastin = 0;
+    if (syote === 'ajastin') {
+      let edellinen = nyt();
+      const lahetä = () => {
+        const t = nyt(); const d = t - edellinen; edellinen = t;
+        x += dx * nopeusPx * d / 1000; y += dy * nopeusPx * d / 1000;
+        tapahtuma('pointermove');
+        ajastin = ikkuna.setTimeout(lahetä, vali);
+      };
+      ajastin = ikkuna.setTimeout(lahetä, vali);
+    }
     await new Promise((valmis) => {
       const askel = () => {
         const t = nyt(); const dt = t - edellinenT; edellinenT = t;
-        x += dx * nopeusPx * dt / 1000; y += dy * nopeusPx * dt / 1000;
-        tapahtuma('pointermove');
+        if (kuorma > 0) { const loppu = nyt() + Math.random() * kuorma; while (nyt() < loppu) { /* kuorma */ } }
+        if (syote !== 'ajastin') {
+          x += dx * nopeusPx * dt / 1000; y += dy * nopeusPx * dt / 1000;
+          tapahtuma('pointermove');
+        }
         const nykyinen = ruutu();
         const kehys = tila?.kehykset.at(-1);
         if (kehys && nykyinen && edellinenRuutu) kehys.siirtyma = Math.hypot(nykyinen.x - edellinenRuutu.x, nykyinen.y - edellinenRuutu.y);
@@ -275,6 +372,7 @@ export function luoKehysprofiili(uiTaiHaku, ikkuna = globalThis) {
       };
       alkuperainenRaf.call(ikkuna, askel);
     });
+    if (ajastin) ikkuna.clearTimeout(ajastin);
     tapahtuma('pointerup');
     const tulos = lopeta();
     return { ...tulos, tasaisuus: tasaisuus(tulos), nopeusPx, pointerType };
