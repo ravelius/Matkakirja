@@ -1175,3 +1175,7 @@ Karttaseppä 22.9.2026 klo 15.10: /Users/koodaus/pyramidi-poltto/ajo-20260922b/{
 ## OMISTAJA TOTESI LEPOPIIRRON VAKAAKSI iPHONELLA (?koe=lepopiirto, v2107) → OLETUS PAALLE; PUHELINMITTAUS KESKEYTETTY (TOKKIMINEN TOISTUU TYOPOYDALLA); PUHELIN LAMPENEE JATKUVASTA PIIRROSTA (22.9.2026 klo 15.28)
 
 Omistaja 22.9.2026 klo 15.25: puhelu katkaisi puhelinyhteyden; sama tökkiminen näkyy työpöytäselaimella, joten puhelinmittaus (LTE, viileä/lämmin) keskeytettiin — työpöytä on mittapenkki (Laitetestaaja: headed Safari ja Chrome oikeilla hiiritapahtumilla, syöteputki vs laattojen saapuminen). Puhelin on taas lämmin (jatkuva 60 fps piirto levossa + USB-lataus). Omistaja avasi tuotannon v2107 osoitteella ?koe=lepopiirto: lepo 15 s, panorointi, lepo — 'ei välky, vakaa' → Pelikoodari kääntää lepopiirron oletukseksi omana PR:nä (levovanha paluulippu), kiireellinen lämmön takia.
+
+## OMISTAJA: TOKKIMINEN NAKYY SAFARILLA TYOPOYDALLA (CHROME TESTATAAN); PUHELIMELLA EI TESTATA ELLEI PAKKO (22.9.2026 klo 15.28)
+
+Omistaja 22.9.2026 klo 15.30: panoroinnin tökkiminen näkyy ainakin Safarilla työpöydällä, Chrome testataan vielä; puhelinta ei käytetä testaamiseen ellei ole pakko. Sääntö sessioille: mittaukset ja korjausten todennus työpöydän Safarilla (WebKit) ensisijaisesti; puhelinpyynnöt vain Fablen kautta ja vain kun muu ei riitä.
