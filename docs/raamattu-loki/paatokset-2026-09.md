@@ -1635,3 +1635,7 @@ Pelikoodari aloitti erän ennen perumisviestiä. Muut: eivienti/eihaive-kaappaus
 ## PELIKOODARIN SUUNNITELMA: LIIKKEEN TASAISUUSMITTARI (KARTAN SIIRTYMA RUUDULLA KA/CV, NOLLA- JA TUPLASIIRTYMAT, SYOTETAPAHTUMIA/KEHYS, VIIVE SYOTTEESTA PIIRTOON, LIIKEVIRHE = KARTTA − SORMI); HYPOTEESI: interp LASKEE KOHTA-AJAN JA SORMEN NAYTTEET ERI KELLOISTA JA iOS TOIMITTAA SYOTTEEN EPATASAISESTI rAF:IIN NAHDEN → VUOROIN LYHYITA JA PITKIA ASKELIA; #2874 SULJETTU MERGEAMATTA (23.9.2026 klo 00.16)
 
 Klo 00.18. Mittaus interp/touch/interpvanha WebKitissä epätasaisella synteettisellä syötteellä, PR yöllä; oletusmuutos vasta omistajan aamun kokeilun jälkeen.
+
+## CODEX (POSTILAATIKKO 34e2c0cfe): PULUN KAKSI LISAKOHTAUSTA PELIKOODARIN JONOON — liviaEnsitapaaminen → uusi-ilahtuu (4,4 s; VAIN ENSIMMAINEN AITO PELAAJA–PULU-KOHTAAMINEN AVAUSLENNON JALKEEN, KORVAA ENSIMMAISEN TERVEHDYKSEN, EI TOISTOA) JA liviaPitkaKirjahaku → uusi-bookPanic (11 s; VAIN NIMENOMAISESTI KEVYT KIRJASTA ETSIMINEN KUN HAKU YHA KESKEN 6 s PORTILLA, KERRAN PER HAKUTUNNUS, VASTAUS KATKAISEE HETI, REDUCED MOTION: YKSI RAUHALLINEN ILME) (23.9.2026 klo 00.24)
+
+Tekninen raja: omat tunnukset ja kestot rekisteriin, ei globaalia welcome/bookStudy-korvausta, automaattitestit (yksilöllinen tunnus, toistokielto, keskeytys, piilosta palaaminen, reduced motion), ei uutta TTS:ää/audiota/cueja; lasitörmäys ja avaruuskypärä ennallaan; v2138:aa ei avata. Kirjattu Pelikoodarin jonoon mittari-PR:n jälkeen (aamu 23.9.). Sisältökirjuri/tekstivetäjä valitsee kevyen repliikin.
