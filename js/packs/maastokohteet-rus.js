@@ -88,6 +88,7 @@ export const MAASTOKOHTEET_RUS = [
     ],
     nimi: 'Elbrus',
     tyyppi: 'vuori',
+    taso: 1,
     kysymykset: [
       'Onko Elbrus Euroopassa vai Aasiassa?',
       'Milloin Elbrus viimeksi purkautui?',
@@ -365,6 +366,7 @@ export const MAASTOKOHTEET_RUS = [
     ],
     nimi: 'Volga',
     tyyppi: 'joki',
+    taso: 1,
     kysymykset: [
       'Miksi Volga ei laske mereen vaan järveen?',
       'Mikä Rusin kaganaatti oli?',
@@ -460,6 +462,7 @@ export const MAASTOKOHTEET_RUS = [
     ],
     nimi: 'Kizhin pogosta',
     tyyppi: 'kulttuuri',
+    taso: 1,
     kysymykset: [
       'Kuinka monta kupolia Kirkastuksen kirkossa on?',
       'Mitä sana pogosta tarkoittaa?',
