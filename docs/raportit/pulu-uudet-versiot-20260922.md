@@ -58,3 +58,8 @@ ilmeisiin. Tämä erä säilyy neljän eleen katseluna, ei pelin muutoksena.
 - Päivitetty 24 asennon kuvasarja katsottu: suu näkyy ja kirjan kansi on ulospäin.
 - Itsenäinen katselujulkaisu valmistellaan erilliseen `ravelius/pulun-eleet`
   -repoon. Lähdehaara ja pelin julkaisu pysyvät erillisinä.
+
+Omistajan jatkopalaute: **kirja on hyvä**, eli tämä kirjan versio hyväksyttiin.
+Suuta pyydettiin vaaleammaksi ja kieltä näkyviin. Sisäosa on nyt lämmin
+roosanruskea, kieli vaaleampi ja alaleuka vain sen alapuolinen reunus:
+ensimmäisen kokeilun alaleuka peitti kielen. Kirjaan ei tehty jatkomuutoksia.
