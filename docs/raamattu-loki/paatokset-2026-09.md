@@ -1499,3 +1499,7 @@ Kaappaus 1: piirto 166/166, pitkät 23, silmukoita 16,5, laattavientejä 28, pus
 ## OMISTAJAN PAATOS (KORTTI): MERGEA #2850, #2851, #2853 VAIKKA CI:N WebKit-SAVUKKEET PUNAISIA (launch-AIKAKATKAISU = YMPARISTO); OVERLAYHIN PIIRTOKOE-TILA NUMEROLLA, KOSKA OMISTAJA EI MUISTA KAAPPAUSTEN TILOJA (22.9.2026 klo 21.49)
 
 Omistaja klo 21.50: 'En muista. Se pitäisi kirjoittaa siihen testiarkkiin numeroiden kanssa jatkossa' → overlayn ensimmäinen rivi näyttää tilan avaimen ja numeron (Pelikoodari, tilattu). Kolmen kaappauksen tilat tuntemattomat; uusi kierros v2128+:lla. Merge-lupa: vain jos ainoat uudet punaiset ovat browserType.launch-aikakatkaisuja.
+
+## KARTTASEPPA VAIHDETTU OPUS 5.5:EEN (OMISTAJA); PELIKOODARI JA KARTTASEPPA MOLEMMAT OPUS 5.5 (22.9.2026 klo 21.52)
+
+Omistaja klo 21.53. Karttaseppä on ollut idle koko illan (viimeksi 22.9. klo 15.40); avoimet asiat sillä: meren lika laatassa, harvennetut viivat vaimeina -ehdotus, paperirae jäissä, omistajan tuntumatesti kartasta 22c ja nostotason poltto odottavat omistajaa.
