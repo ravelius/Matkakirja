@@ -1519,3 +1519,7 @@ Pelikoodari: testit 3994/0, vartijat 2/2 kaatuvat vanhalla koodilla, savuke-prof
 ## PR #2859: ORVOT globe.gl-TICKERIT POIS (KIRJASTON LATAUKSESSA SYNTYVIA rAF-KUTSUJA EI REKISTEROIDA); WebKit rAF-KUTSUJA LEVOSSA 5,7 → 1,4 JA VEDOSSA 15,1 → 11,1 PER KEHYS (22.9.2026 klo 22.18)
 
 Pelikoodari: testit 3989/0 (uusia 3/3), savukkeet lepopiirto 12/12, glnimiot-nimet 7/7. Jono Julkaisijalla: #2854 → #2857 → #2859.
+
+## PR #2861: PIIRTOKOE 7 'EI HAIVYTYSTA VEDOSSA' (?koe=eihaivevedossa: LAATAT VAIHTUVAT SUORAAN VEDON AIKANA, KESKEN OLEVAT HAIVYTYKSET PAATTYVAT VEDON ALKAESSA; LEVOSSA ENNALLAAN); VARTIJA WebKit HAIPYVIA 21–57 → 0 (22.9.2026 klo 22.26)
+
+Pelikoodari: pinottu #2857:n päälle (valikko 6 → 7 kohtaa, testien 'koe 3/6' -muoto). Testit 3994/0, savuke 4/4. Merge-järjestys #2854 → #2857 → #2861 → #2859. Omistajan kierros kun pino on tuotannossa: kokeet 1, 3, 2, 6, 7. Pelikoodari odottaa tuloksia.
