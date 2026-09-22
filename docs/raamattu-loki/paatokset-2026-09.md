@@ -883,3 +883,7 @@ Fable 22.9.2026 klo 02.05: Sisältökirjurin ehdotukset HRV/SVN/SVK/ROU/BGR, BIH
 ## HILJAINEN SAVUKEAJO MAINISTA: 4 KORJAUTUI, UUDET PUNAISET NOSTOTASOT JA NIMIOT-ELAVAT (REUNAN YLITYS, LIIKEVARA?) (22.9.2026 klo 07.11)
 
 Julkaisija 22.9.2026 klo 02.15 (load 3–8): korjautuneet glnimiot-nimet, glnimiot-nostot, kaupungit-piiloon, noppa-saapumisen-aikana; vanhat ennallaan pariisi-lahizoom-390-liuska 16/17, nimiot-sulavat 12/16; uudet punaiset nostotasot 14/18 ja nimiot-elavat 16/22 'reunan ylitys' — todennäköisesti liikevaran (v2056) seuraus ja savukkeiden vanha oletus; Pelikoodari arvioi ja korjaa vartiot tai koodin.
+
+## SAVUKKEET NOSTOTASOT JA NIMIOT-ELAVAT VIHREIKSI (3be174d16): VARTIOT LUKIVAT IKKUNAN MITTOJA, EI BUGIA (22.9.2026 klo 07.22)
+
+Pelikoodari 22.9.2026 klo 02.30: 'reunan ylitys' ei ollut bugi: vartiot lukivat ikkunan mittoja (390) mutta laput ovat kotelon pikseleitä (374), joten kokonaan kotelon ulkopuoliset laput (Bonifacio, Nizza, Bernhardilainen) laskettiin ylityksiksi; nyt ruutu = kotelo ja ylitys vain osittain ruudussa olevalle. Yhtään puoliksi ruudussa olevaa lappua ei löytynyt. Testit 3848/0, Julkaisijalle. Ranska z6 zoomi: mittari mittaa-zoomipiirto.mjs (pääsäie/GPU-jako + CDP-profiili); laattakokeet (aniso, mipmap, silmät, häive, vienti levossa) eivät muuta p95:tä headlessissä → pulu/DOM-kerrokset ja iPhone-mittaus seuraavaksi.
