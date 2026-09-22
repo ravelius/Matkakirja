@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2137, teksti: 'Lehtipalstat pidempiin nostoihin' },
   { v: 2136, teksti: 'Kaksi palstaa kaikkiin nostoihin' },
   { v: 2135, teksti: 'Piirtokoe: automaattilataus ja neljan tilan valikko' },
   { v: 2134, teksti: 'Pallo: orvot globe.gl-tickerit pois' },
