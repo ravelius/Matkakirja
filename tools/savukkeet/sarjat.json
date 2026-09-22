@@ -385,7 +385,7 @@
       "env": {
         "SAVUKE_MOOTTORI": "webkit"
       },
-      "huomautus": "Lepopiirto (sulavuus kohta 18, js/pallolauta/lepopiirto.js): levossa pysaytetaan KIRJASTON SILMUKKA, ei vain renderia. Savuke ajaa saman polun kuin pelaaja (ei koelippua; webdriver-poikkeus poistui 22.9.2026 valkeen korjauksen myota). V1 levossa <= 20 fps ilman kamera-syita, V5 levossa sommittelijan kaappaukset ovat kaikki karttaa (kokoero <= 1,5x; omistajan valkevika 22.9.), V2 vedossa pysahdyksia <= 2, V3 laattojen saapuminen piirretaan ilmoituksesta ja syke piirtaa laatan (readPixels kirjaston oman piirron jalkeen), V4 paluulippu ?koe=levovanha piirtaa joka kehys. Chromium ANGLE Metal -lipuilla (SwiftShaderin rAF ~4 fps). Mac 22.9.2026: ~50 s."
+      "huomautus": "Lepopiirto (sulavuus kohta 18, js/pallolauta/lepopiirto.js): levossa pysaytetaan KIRJASTON SILMUKKA, ei vain renderia. Oletus on POIS kunnes omistaja on nahnyt levon iPhonella (Fable 22.9.2026), joten savuke pyytaa lipun ?koe=lepopiirto; webdriver-poikkeus poistui, eli lippu on sama pelaajalle ja automaatiolle. V1 levossa <= 20 fps ilman kamera-syita, V5 levossa sommittelijan kaappaukset ovat kaikki karttaa (kokoero <= 1,5x; omistajan valkevika 22.9.), V2 vedossa pysahdyksia <= 2, V3 laattojen saapuminen piirretaan ilmoituksesta ja syke piirtaa laatan (readPixels kirjaston oman piirron jalkeen), V4 ilman lippua piirto joka kehys. Chromium ANGLE Metal -lipuilla (SwiftShaderin rAF ~4 fps). Mac 22.9.2026: ~50 s."
     },
     "savuke-lepopiirto.mjs#chromium": {
       "env": {

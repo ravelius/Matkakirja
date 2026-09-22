@@ -63,8 +63,12 @@
  * renderiä, ei CSS2D-kirjoituksia, ei katsesädettä — ja kangas jää
  * sommittelijalle sellaisena kuin se viimeksi piirrettiin.
  *
- * Paluulippu `?koe=levovanha`: kirjaston silmukka pyörii koko ajan
- * kuten ennen v2101:tä.
+ * OLETUS ON POIS, KUNNES OMISTAJA ON NÄHNYT LEVON OIKEALLA IPHONELLA
+ * (Fable 22.9.2026). v2105 sammutti lepopiirron hätäkorjauksena, ja
+ * vaikka tickin ohitus korjaa välkkeen mitattavasti WebKitissä, oletusta
+ * ei käännetä pelkän WebKit-toiston perusteella: EDELLINEN VARTIJA PETTI
+ * TÄSMÄLLEEN TÄSSÄ KOHDASSA. Lepopiirto on siis käytössä vain lipulla
+ * `?koe=lepopiirto`; `?koe=levovanha` sammuttaa sen myös lipun kanssa.
  *
  * UNI ON ERI ASIA KUIN LEPO. Kun palloa ei katsota (lehti auki, kuori
  * piilossa, sivu taustalla), lauta.js nukuttaa sen: `uni(true)` lopettaa
@@ -81,17 +85,22 @@ export const LEPOPIIRTO_HIDAS_MS = 66;
 export const LEPOPIIRTO_JALKIKEHYKSIA = 1;
 
 /**
- * Onko lepopiirto käytössä. Vain `?koe=levovanha` sammuttaa sen.
- * v2101–v2104 sammutti lepopiirron myös automaatiossa
- * (`navigator.webdriver`), koska kaappaukset saivat tyhjän kankaan —
- * se oli välkkeen oire, ja tickin ohitus korjasi sen, joten CI mittaa
- * nyt samaa polkua kuin pelaaja ajaa.
+ * Onko lepopiirto käytössä: vain `?koe=lepopiirto`-lipulla, ja
+ * `?koe=levovanha` voittaa sen.
+ *
+ * EI WEBDRIVER-POIKKEUSTA. v2101–v2104 sammutti lepopiirron erikseen
+ * automaatiossa (`navigator.webdriver`), koska kaappaukset saivat tyhjän
+ * kankaan. Juuri se poikkeus esti vartijaa näkemästä välkkeen: CI mittasi
+ * eri polkua kuin pelaaja ajoi. Poikkeus on poistettu — automaatio ja
+ * pelaaja saavat saman käytöksen samalla lipulla, ja savuke pyytää
+ * lipun itse.
  */
 export function lepopiirtoKaytossa(haku) {
   const h = haku ?? (() => { try { return globalThis.location?.search ?? ''; } catch { return ''; } })();
   let kokeet = [];
   try { kokeet = (new URLSearchParams(h).get('koe') ?? '').split(',').map((k) => k.trim()); } catch { kokeet = []; }
-  return !kokeet.includes('levovanha');
+  if (kokeet.includes('levovanha')) return false;
+  return kokeet.includes('lepopiirto');
 }
 
 /**

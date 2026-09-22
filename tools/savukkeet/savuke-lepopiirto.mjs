@@ -8,7 +8,10 @@
  *
  * js/pallolauta/lepopiirto.js (sulavuuskatsaus kohta 18) pysäyttää
  * kirjaston silmukan, kun mikään ei muuttunut, ja piirtää sykkeellä
- * 4 fps. Savuke ajaa saman polun kuin pelaaja — ei koelippua.
+ * 4 fps. Oletus on POIS, kunnes omistaja on nähnyt levon iPhonella
+ * (Fable 22.9.2026), joten savuke pyytää sen lipulla `?koe=lepopiirto`.
+ * Erotus v2101–v2104:ään: lippu on nyt SAMA pelaajalle ja automaatiolle
+ * — webdriver-poikkeus, joka esti vartijaa näkemästä välkkeen, on poissa.
  *
  * === VÄITTEET =======================================================
  *
@@ -20,7 +23,7 @@
  *   V3  MUUTOS NÄKYY HETI: kamera uuteen paikkaan → laattojen saapuminen
  *       kirjaa 'pakko'/'tarve'-piirtoja (ryhmän add ilmoittaa), ja
  *       levossa readPixels ilman pakotusta antaa laatan värin, ei taustaa.
- *   V4  PALUULIPPU: `?koe=levovanha` piirtää joka kehys (≥ 50 fps).
+ *   V4  ILMAN LIPPUA: oletus on pois, eli piirto joka kehys (≥ 50 fps).
  *   V5  KANGAS EI VÄLKY: levossa SOMMITTELIJAN kautta otetut kaappaukset
  *       ovat kaikki karttaa, eivät tyhjää. Tämä on omistajan 22.9.2026
  *       löytämä vika ("kartta välkkyy kuin strobovalo"): renderin ohitus
@@ -151,9 +154,9 @@ const laske = async (ms) => {
   return { fps, syyt };
 };
 
-vaadi('pallolauta avautuu (lepopiirto)', await avaa(process.env.SAVUKE_LEPOPIIRTO_KOE ?? 'mittaus'));
+vaadi('pallolauta avautuu (lepopiirto)', await avaa(process.env.SAVUKE_LEPOPIIRTO_KOE ?? 'lepopiirto'));
 const paalla = await sivu.evaluate(() => Boolean(window.matkakirja.ui.pallonInstanssi.__piirto));
-vaadi('lepopiirto asennettu ilman lippua', paalla);
+vaadi('lepopiirto asennettu lipulla', paalla);
 if (!paalla) { await ctx.close(); await selain.close(); palvelin.close(); process.exit(1); }
 const lepo = await laske(2000);
 tieto(`V1 ${MOOTTORI} lepo`, `${lepo.fps.toFixed(1)} fps, syyt ${JSON.stringify(lepo.syyt)}`);
@@ -220,12 +223,12 @@ const pikseli = await sivu.evaluate(() => {
 });
 tieto(`V3 ${MOOTTORI} pikseli`, JSON.stringify(pikseli));
 vaadi(`V3 ${MOOTTORI}: levossa syke piirtää laatan (pikseli ei tausta)`, pikseli.px && pikseli.px[3] === 255 && !(pikseli.px[0] < 10 && pikseli.px[1] < 10 && pikseli.px[2] < 10), JSON.stringify(pikseli));
-/* V4: paluulippu levovanha piirtää joka kehys. */
-vaadi('pallolauta avautuu (levovanha)', await avaa('levovanha'));
+/* V4: ilman lippua oletus on pois → piirto joka kehys. */
+vaadi('pallolauta avautuu (ilman lippua)', await avaa('mittaus'));
 const ilman = await sivu.evaluate(() => Boolean(window.matkakirja.ui.pallonInstanssi.__piirto));
 const vanha = await laske(1500);
-tieto(`V4 ${MOOTTORI} levovanha`, `${vanha.fps.toFixed(1)} fps, lepopiirto ${ilman}`);
-vaadi(`V4 ${MOOTTORI}: paluulippu piirtää joka kehys`, !ilman && vanha.fps >= 50, `${vanha.fps.toFixed(1)} fps, lepopiirto ${ilman}`);
+tieto(`V4 ${MOOTTORI} ilman lippua`, `${vanha.fps.toFixed(1)} fps, lepopiirto ${ilman}`);
+vaadi(`V4 ${MOOTTORI}: ilman lippua piirto joka kehys`, !ilman && vanha.fps >= 50, `${vanha.fps.toFixed(1)} fps, lepopiirto ${ilman}`);
 if (konsoli.length) tieto('konsolivirheet', JSON.stringify(konsoli.slice(0, 3)));
 
 await ctx.close();
