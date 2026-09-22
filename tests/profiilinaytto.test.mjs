@@ -17,9 +17,10 @@ import { readFileSync } from 'node:fs';
 
 import {
   PROFIILIN_POLKU, profiiliTahti, profiilirivit, profiilitiiviste, luoProfiilinaytto,
-  PROFIILIN_VERSIO, koetilanNimi, koetilarivi, koetilanOtsikko,
+  PROFIILIN_VERSIO, koetilanNimi, koetilarivi, koetilanOtsikko, pitkienJakauma,
 } from '../js/pallolauta/profiilinaytto.js';
 import { PIIRTOKOKEIDEN_VAIHTOEHDOT } from '../js/piirtokoe-asetus.js';
+import { luoKehysprofiili } from '../js/pallolauta/kehysprofiili.js';
 
 const TIIVISTE = {
   kehyksia: 180,
@@ -50,7 +51,7 @@ test('rivit: pisin kehys, jakauma, syy ja asetukset', () => {
   assert.match(teksti, /js 48 · render 22 · muu 13/);
   assert.match(teksti, /syy: pallonSyoteUpdate 41 · ladoUudelleen 22 · tick 8/, 'kolme suurinta');
   assert.match(teksti, /veto jousi · tarkkuus tasainen/, 'kuvakaappaus kertoo tilan');
-  assert.match(teksti, /lepo päällä · ohitettuja 120/);
+  assert.match(teksti, /lepo päällä · ohitettuja istunnossa 120/, 'ilman tahtia vain istunnon luku, nimettynä');
   assert.match(teksti, />25 ms: 7\/180/);
 });
 
@@ -234,4 +235,94 @@ test('tiiviste lähetykseen kantaa koetilan ja version', () => {
   assert.equal(r.profiiliVersio, PROFIILIN_VERSIO);
   assert.equal(r.versio, 'v2127');
   assert.equal(profiilitiiviste({ tiiviste: TIIVISTE }).koe, 'normaali');
+});
+
+test('p4: ohitukset jaksolta, ei istunnon laskurista (v2126 "ohitettuja 943" piirto 100 %)', () => {
+  const kehykset = Array.from({ length: 20 }, () => ({ dt: 16.7 }));
+  const tahti = profiiliTahti({ kehykset }, { piirtoja: 20, ohitettuja: 0 });
+  const rivit = profiilirivit({
+    tiiviste: TIIVISTE, tahti, lepo: { paalla: true, unessa: false, ohitettuja: 943, piirtoja: 5000 },
+  }).join('\n');
+  assert.match(rivit, /ohitettuja jaksossa 0/);
+  assert.doesNotMatch(rivit, /943/, 'istunnon laskuri ei näy ohituksina');
+});
+
+test('p4: pitkien kehysten varattu/vapaa korvaa valmistumisviiveen', () => {
+  // 60 Hz, kehyksistä neljännes 50 ms, joista pääsäie varattuna 3 ms.
+  const kehykset = Array.from({ length: 40 }, (_, i) => (i % 4 === 0
+    ? { dt: 50, varattu: 3, js: 2, render: 0.5 } : { dt: 16.7, varattu: 4, js: 3, render: 0.8 }));
+  const t = profiiliTahti({ kehykset });
+  assert.equal(t.varattuPitkissa, 3);
+  assert.equal(t.vapaaPitkissa, 47, 'aika kului pääsäikeen ulkopuolella');
+  assert.ok(!('viiveKa' in t), 'kaavan artefakti pois');
+  const rivit = profiilirivit({ tiiviste: TIIVISTE, tahti: t }).join('\n');
+  assert.match(rivit, /pitkissä varattu 3\.0 · vapaa 47\.0 ms/);
+  assert.doesNotMatch(rivit, /valmistumisviive/);
+  assert.match(rivit, /dt>20: 50×10/);
+});
+
+test('p4: dt-jakauma näytön tahdin kerrannaisina erottaa 120 ja 60 Hz:n pudotukset', () => {
+  assert.deepEqual(pitkienJakauma([16.7, 25.1, 24.9, 33.4, 41.6, 50.2, 8.3]), [[25, 2], [33, 1], [42, 1], [50, 1]]);
+  assert.deepEqual(pitkienJakauma([16.7, 18]), []);
+});
+
+test('p4: kirjaston nimettömät silmukat nimetään, render ei tuplaannu js:ään', () => {
+  let aika = 0;
+  let jono = [];
+  const ikkuna = {
+    performance: { now: () => aika },
+    requestAnimationFrame: (fn) => { jono.push(fn); return jono.length; },
+    cancelAnimationFrame: () => {},
+  };
+  // Globe.gl:n kapsule-kääre ja frame-tickerin nuoli täsmälleen kirjaston muodossa.
+  const kapsule = () => (0, eval)('(function(){for(var t,n=arguments.length,r=new Array(n),i=0;i<n;i++)r[i]=arguments[i];return globalThis.__kapsuleKoukku?.(this)})');
+  const tick = kapsule();
+  const tweenit = kapsule();
+  const ticker = (0, eval)('(function(e){return function(){return e.onFrame()}})')({ onFrame: () => { aika += 0.5; } });
+  const renderer = { render: () => { aika += 1; } };
+  const pallo = { _animationCycle: tick, renderer: () => renderer };
+  globalThis.__kapsuleKoukku = (kutsuja) => {
+    if (String(kutsuja) === 'tick') { aika += 2; renderer.render(); } else aika += 0.25;
+  };
+  try {
+    const profiili = luoKehysprofiili(() => ({ pallonInstanssi: pallo }), ikkuna);
+    profiili.aloita();
+    const kehys = () => { aika += 16.7; const nyt = jono; jono = []; for (const fn of nyt) fn(aika); };
+    kehys();
+    for (let i = 0; i < 3; i += 1) {
+      ikkuna.requestAnimationFrame(() => tick.call('tick'));
+      ikkuna.requestAnimationFrame(tick.bind('tick'));
+      ikkuna.requestAnimationFrame(tweenit);
+      ikkuna.requestAnimationFrame(ticker);
+      kehys();
+    }
+    const tulos = profiili.lopeta();
+    const k = tulos.kehykset.at(-1);
+    assert.ok(k.kutsut['globe.ticker'] > 0, `ticker nimetty: ${Object.keys(k.kutsut)}`);
+    assert.ok(k.kutsut['globe.tweenit'] > 0, 'kapsule-kääre nimetty');
+    assert.ok(!Object.keys(k.kutsut).some((n) => n.startsWith('function(){for')), 'ei raakaa lähdettä');
+    // Render ajettiin rAF-kutsun sisällä: js = kutsujen aika kerran.
+    const kutsujenSumma = Object.entries(k.kutsut).filter(([n]) => n !== 'three.render').reduce((a, [, ms]) => a + ms, 0);
+    assert.ok(Math.abs(k.js - kutsujenSumma) < 1e-9, `js ${k.js} = kutsut ${kutsujenSumma}`);
+    assert.ok(k.render > 0, 'render kirjataan erikseen');
+  } finally { delete globalThis.__kapsuleKoukku; }
+});
+
+test('p4: globe.tick tunnistetaan pallon omasta syklistä', () => {
+  let aika = 0;
+  let jono = [];
+  const ikkuna = {
+    performance: { now: () => aika },
+    requestAnimationFrame: (fn) => { jono.push(fn); return jono.length; },
+    cancelAnimationFrame: () => {},
+  };
+  const tick = (0, eval)('(function(){for(var t,n=arguments.length,r=new Array(n),i=0;i<n;i++)r[i]=arguments[i];return 0})');
+  const profiili = luoKehysprofiili(() => ({ pallonInstanssi: { _animationCycle: tick } }), ikkuna);
+  profiili.aloita();
+  const kehys = () => { aika += 16.7; const nyt = jono; jono = []; for (const fn of nyt) fn(aika); };
+  kehys();
+  ikkuna.requestAnimationFrame(tick);
+  kehys();
+  const k = profiili.lopeta().kehykset.at(-1);
+  assert.deepEqual(Object.keys(k.kutsut ?? {}), ['globe.tick']);
 });

@@ -37,10 +37,12 @@ export const PROFIILIN_POLKU = '/__profiili';
 /**
  * Kehysprofiilin (mittarin) versio overlayn ylimmälle riville. NOSTA
  * aina, kun jonkin luvun merkitys muuttuu (v2124: rollaava ikkuna,
- * v2126: valmistumisviive, 22.9.2026 ilta: koetila riville) — muuten
+ * v2126: valmistumisviive, 22.9.2026 ilta: koetila riville; p4: js ilman
+ * tuplarenderiä, viive → varattu/vapaa pitkissä, dt-kerrannaiset,
+ * ohitukset jaksolta) — muuten
  * eri päivien kaappauksia verrataan kuin ne mittaisivat samaa.
  */
-export const PROFIILIN_VERSIO = 3;
+export const PROFIILIN_VERSIO = 4;
 
 /**
  * Koeliput overlayn nimeksi: `profiili` (itse näyttö) pois, loput
@@ -164,18 +166,47 @@ export function profiiliTahti(tulos, lepoDelta = null) {
     uniformiKehys,
     glVienteja,
     /*
-     * KEHYKSEN VALMISTUMISVIIVE (Fable 22.9.2026): rAF-väli miinus se
-     * aika, jonka pääsäie oli mitattavasti töissä. Safarissa ei ole
-     * EXT_disjoint_timer_query_webgl2:ta, joten tämä on paras saatava
-     * arvio GPU:n ja komposiittorin osuudesta: jos js ja render ovat
-     * ~0 mutta dt on 50 ms, aika kuluu kehyksen valmistumiseen.
+     * PITKIEN KEHYSTEN JAKO: VARATTU VAI VAPAA (p4, korvaa v2126:n
+     * "valmistumisviiveen"). Vanha luku oli kaikkien kehysten dt − js −
+     * render: 60 Hz:ssä se on väkisin ≈ 16,7 − js eikä kerro mitään —
+     * omistajan kaappauksissa "14–16 ms joka kehyksessä" oli kaava, ei
+     * havainto. Merkitsevä kysymys koskee vain pitkiä kehyksiä: oliko
+     * pääsäie varattuna (MessageChannel-mittaus: rAF + tyyli + asettelu
+     * + maalaus) vai odottiko se? Jos pitkä kehys on vapaa, aika kuluu
+     * pääsäikeen ulkopuolella (Safarin GPU-prosessi, komposiittori).
      */
-    viiveKa: kehykset.length
-      ? kehykset.reduce((a, k) => a + Math.max(0, (k.dt ?? 0) - (k.js ?? 0) - (k.render ?? 0)), 0) / kehykset.length
-      : NaN,
+    ...pitkienJako(kehykset),
+    /*
+     * PITKÄT KEHYKSET NÄYTÖN TAHDIN KERRANNAISINA. Jos näyttö päivittää
+     * 120 Hz:llä, pudonneet kehykset ovat 8,3 ms:n kerrannaisia (25, 42);
+     * 60 Hz:llä 16,7:n (33, 50). Jakauma erottaa ProMotion-tahdin
+     * ohitetuista vsynceistä ilman Web Inspectoria.
+     */
+    pitkienJakauma: pitkienJakauma(dts),
   };
 }
 
+
+/** Pitkien (> 25 ms) kehysten keskimääräinen varattu ja vapaa aika. */
+function pitkienJako(kehykset) {
+  const pitkat = kehykset.filter((k) => k.dt > 25 && Number.isFinite(k.varattu));
+  if (!pitkat.length) return { varattuPitkissa: null, vapaaPitkissa: null };
+  const varattu = pitkat.reduce((a, k) => a + k.varattu, 0) / pitkat.length;
+  const vapaa = pitkat.reduce((a, k) => a + Math.max(0, k.dt - k.varattu), 0) / pitkat.length;
+  return { varattuPitkissa: varattu, vapaaPitkissa: vapaa };
+}
+
+/** Yli 20 ms:n dt:t pyöristettynä 8,33 ms:n kerrannaisiin: [[ms, kpl], …] nousevasti. */
+export function pitkienJakauma(dts) {
+  const V = 1000 / 120;
+  const laskuri = new Map();
+  for (const d of dts) {
+    if (!(d > 20)) continue;
+    const k = Math.round(d / V);
+    laskuri.set(k, (laskuri.get(k) ?? 0) + 1);
+  }
+  return [...laskuri.entries()].sort((a, b) => a[0] - b[0]).map(([k, n]) => [Math.round(k * V), n]);
+}
 
 /**
  * Overlayn rivit tiivisteestä. PUHDAS funktio: ei DOMia, ei kelloa —
@@ -211,7 +242,11 @@ export function profiilirivit({
       rivit.push(`pitkät (>25 ms): piirretty ${tahti.pitkatPiirretty} · ohitettu ${tahti.pitkatOhitettu}`);
     }
     rivit.push(`silmukoita ${p(tahti.ketjuja, 1)} · laattavientejä ${tahti.vienteja ?? '—'}`
-      + ` · valmistumisviive ${p(tahti.viiveKa, 1)} ms`);
+      + ` · pitkissä varattu ${p(tahti.varattuPitkissa, 1)} · vapaa ${p(tahti.vapaaPitkissa, 1)} ms`);
+    if (tahti.pitkienJakauma?.length) {
+      // Lyhyt muoto: 33×12 = kaksitoista noin 33 ms:n kehystä.
+      rivit.push(`dt>20: ${tahti.pitkienJakauma.slice(0, 8).map(([ms, n]) => `${ms}×${n}`).join(' ')}`);
+    }
     if (tahti.puskuriKehys != null || tahti.uniformiKehys != null) {
       rivit.push(`puskurikirj./kehys ${p(tahti.puskuriKehys, 2)} · uniformeja/kehys ${p(tahti.uniformiKehys, 1)}`
         + ` · GL-vientejä ${tahti.glVienteja ?? '—'}`);
@@ -238,7 +273,13 @@ export function profiilirivit({
   if (asetukset.tarkkuus) tila.push(`tarkkuus ${asetukset.tarkkuus}`);
   if (lepo) {
     tila.push(`lepo ${lepo.paalla ? 'päällä' : 'pois'}${lepo.unessa ? ' (uni)' : ''}`);
-    if (Number.isFinite(lepo.ohitettuja)) tila.push(`ohitettuja ${lepo.ohitettuja}`);
+    /*
+     * Lepopiirron laskuri on ISTUNNON kumulatiivinen: v2126:n "ohitettuja
+     * 470–943" näytti ohituksilta, vaikka jakson piirto oli 100 %.
+     * Jakson luku tulee tahdista; istunnon luku vain nimettynä.
+     */
+    if (Number.isFinite(tahti?.ohitettuja)) tila.push(`ohitettuja jaksossa ${tahti.ohitettuja}`);
+    else if (Number.isFinite(lepo.ohitettuja)) tila.push(`ohitettuja istunnossa ${lepo.ohitettuja}`);
   }
   if (tila.length) rivit.push(tila.join(' · '));
   return rivit;
@@ -265,7 +306,8 @@ export function profiilitiiviste({
       jsKa: tahti.jsKa, renderKa: tahti.renderKa,
       piirtoja: tahti.piirtoja, ohitettuja: tahti.ohitettuja, piirtoOsuus: tahti.piirtoOsuus,
       pitkatPiirretty: tahti.pitkatPiirretty, pitkatOhitettu: tahti.pitkatOhitettu,
-      ketjuja: tahti.ketjuja, vienteja: tahti.vienteja, viiveKa: tahti.viiveKa,
+      ketjuja: tahti.ketjuja, vienteja: tahti.vienteja,
+      varattuPitkissa: tahti.varattuPitkissa, vapaaPitkissa: tahti.vapaaPitkissa, pitkienJakauma: tahti.pitkienJakauma,
       puskuriKehys: tahti.puskuriKehys, uniformiKehys: tahti.uniformiKehys, glVienteja: tahti.glVienteja,
     } : null,
     kehyksia: tiiviste?.kehyksia ?? 0,

@@ -74,13 +74,48 @@ export function luoKehysprofiili(uiTaiHaku, ikkuna = globalThis) {
    * (rAF-kutsut + render) = tyyli, asettelu ja maalaus + muut tehtävät.
    */
   const alkuperainenRaf = ikkuna.requestAnimationFrame;
-  const nimi = (fn) => fn?.name || String(fn).replace(/\s+/g, ' ').slice(0, 48);
+  /*
+   * KIRJASTON NIMETTÖMÄT SILMUKAT NIMELLÄ (omistajan kaappaukset v2126:
+   * "syy: function(){for(var t,n=arguments.length,r=new Ar"). Globe.gl on
+   * kapsule-olio, jonka jokainen metodi on sama nimetön kääre, ja sen
+   * kerrokset (arcs, paths, rings + neljä latauksessa luotua oletusoliota)
+   * pyörittävät frame-tickereitä nimettömällä nuolella. Ilman nimeä
+   * kolme eri asiaa näkyi yhtenä "Ar"-rivinä:
+   *   globe.tick    globe.gl _animationCycle: ohjaimet + three.render
+   *   globe.tweenit three-globe _animationCycle: tweenGroup.update
+   *   globe.ticker  frame-tickerin onFrame (kerrosten animaatiot)
+   * Nimi lasketaan kerran funktiota kohti (WeakMap): sama funktio-olio
+   * rekisteröidään joka kehyksellä uudelleen.
+   */
+  const nimet = new WeakMap();
+  const nimi = (fn) => {
+    if (typeof fn !== 'function') return String(fn);
+    const muistettu = nimet.get(fn);
+    if (muistettu) return muistettu;
+    const lahde = String(fn).replace(/\s+/g, ' ');
+    let n = fn.name;
+    if (!n) {
+      if (fn === haeUi()?.pallonInstanssi?._animationCycle) n = 'globe.tick';
+      else if (lahde.startsWith('function(){for(var t,n=arguments.length')) n = 'globe.tweenit';
+      else if (lahde === 'function(){return e.onFrame()}') n = 'globe.ticker';
+      else n = lahde.slice(0, 48);
+    }
+    nimet.set(fn, n);
+    return n;
+  };
   let kehysNyt = null;
+  /** rAF-takaisinkutsun sisällä: sisäkkäinen render on jo kutsun ajassa. */
+  let rafSyvyys = 0;
   /** Elossa olevat mittausketjut (ks. YKSI KETJU PER MITTAUS). */
   let ketjuja = 0;
-  const kirjaa = (avain, ms) => {
+  const kirjaa = (avain, ms, sisakkainen = false) => {
     if (!kehysNyt) return;
-    kehysNyt.js = (kehysNyt.js ?? 0) + ms;
+    /*
+     * js = rAF-kutsujen aika KERRAN. three.render ajetaan globe.tick-
+     * kutsun sisällä, joten sen lisääminen js:ään laski renderin kahdesti
+     * (v2126-kaappausten "js ka 4,0" sisälsi render 0,9 kahteen kertaan).
+     */
+    if (!sisakkainen) kehysNyt.js = (kehysNyt.js ?? 0) + ms;
     kehysNyt.kutsut ??= {};
     kehysNyt.kutsut[avain] = (kehysNyt.kutsut[avain] ?? 0) + ms;
   };
@@ -94,7 +129,8 @@ export function luoKehysprofiili(uiTaiHaku, ikkuna = globalThis) {
        * Keskiarvo kehystä kohti kertoo, moninkertaistuiko jokin niistä.
        */
       if (kehysNyt) kehysNyt.rafKutsuja = (kehysNyt.rafKutsuja ?? 0) + 1;
-      try { return fn(t); } finally { kirjaa(nimi(fn), nyt() - a); }
+      rafSyvyys += 1;
+      try { return fn(t); } finally { rafSyvyys -= 1; kirjaa(nimi(fn), nyt() - a); }
     });
   };
   const puraRaf = () => { ikkuna.requestAnimationFrame = alkuperainenRaf; };
@@ -103,7 +139,7 @@ export function luoKehysprofiili(uiTaiHaku, ikkuna = globalThis) {
     const r = haeUi()?.pallonInstanssi?.renderer?.();
     if (!r?.render || r.__kehysprofiili) return;
     const alkuperainen = r.render;
-    r.render = function render(...args) { const a = nyt(); try { return alkuperainen.apply(this, args); } finally { kirjaa('three.render', nyt() - a); if (kehysNyt) kehysNyt.render = (kehysNyt.render ?? 0) + (nyt() - a); } };
+    r.render = function render(...args) { const a = nyt(); try { return alkuperainen.apply(this, args); } finally { kirjaa('three.render', nyt() - a, rafSyvyys > 0); if (kehysNyt) kehysNyt.render = (kehysNyt.render ?? 0) + (nyt() - a); } };
     r.__kehysprofiili = true;
     renderPurku = () => { r.render = alkuperainen; delete r.__kehysprofiili; };
   };
