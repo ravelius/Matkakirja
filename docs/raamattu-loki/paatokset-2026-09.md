@@ -1459,3 +1459,7 @@ Julkaisija: testit 3966/0, head-tarkistus ok. Julkaisijan oppi: head tarkistetaa
 ## PR #2847: PIIRTOKOKEESEEN alpha0 JA vahemmandc; HAVAINTO: alpha:false EI MENE LAPI (three r185 LUO KONTEKSTIN AINA alpha:true, getContextAttributes().alpha TOSI) → alpha0 VAIKUTTAA VAIN LAPINAKYMATTOMANA TAUSTAVARINA; vahemmandc WebKit Camargue z8: 22 → 18 PIIRTOKUTSUA (22.9.2026 klo 20.30)
 
 Pelikoodari, haara pelikoodari-alpha-dc, 3982 testiä 0 punaista. Seuraus: jos alpha0-mittauksessa ei näy eroa, syy on tämä eikä alfakanava. Seuraava Pelikoodarille: luo WebGL-konteksti itse alpha:false-lipulla ja anna se rendererille (canvas+context), jotta lippu mittaa mitä väittää. Julkaisija mergeää #2847 v2126:ksi; omistajan neljän tilan testi ei muutu.
+
+## LAITETESTAAJA NOLLATTU (73 % → UUSI SESSIO) KAAVALLA ILMAN OMISTAJAA; LUOVUTUS viesti-laitetestaaja-luovutus-20260922-ilta.md; ENSIMMAINEN TEHTAVA PIIRTOKOE-TAULUKKO MAC-SAFARILLA v2125 (22.9.2026 klo 20.33)
+
+Postivahti ilmoitti 73 % klo 20.27; luovutus pushattu haaraan laitetestaaja (8f8fa1bfa) klo 20.31; RC pois, clear_session self, aloitusviesti, RC päälle klo 20.34. Luovutuksen mukaan Piirtokoe-data on jo osin kerätty ja kehysmäärä-anomalia pitää selvittää ennen raporttia.
