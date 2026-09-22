@@ -750,15 +750,59 @@ export function pallokirjastonOsoite(yritys = 0, leima = 0) {
 
 let kirjastoLupaus = null;
 
+/*
+ * ── ORVOT FRAME-TICKERIT (Fable 22.9.2026, omistajan v2126-kaappaukset) ──
+ *
+ * Globe.gl:n paketti luo JO LATAUKSESSA (paketin global code) neljä
+ * kerrosoliota (arcs ja paths, kahdesti), joita peli ei koskaan käytä.
+ * Jokaisen konstruktori käynnistää frame-tickerin, joka pyörittää omaa
+ * rAF-ketjuaan ikuisesti — myös levossa, kun lepopiirto on pysäyttänyt
+ * pallon (mitattu WebKit: 4 kutsua/kehys levossa). Olioihin ei pääse
+ * käsiksi, joten ketju katkaistaan ennen kuin se alkaa: paketin
+ * suorituksen ajan requestAnimationFrame jättää rekisteröimättä
+ * TÄSMÄLLEEN frame-tickerin nuolen. Oman pallon tickerit syntyvät vasta
+ * latauksen jälkeen, eikä niihin kosketa. Jos kirjaston versio muuttaa
+ * nuolen muotoa, suodatin ei osu mihinkään (turvallinen suunta).
+ */
+export const ORVON_TICKERIN_LAHDE = 'function(){return e.onFrame()}';
+
+/**
+ * Suodatin paketin suorituksen ajaksi. Palauttaa { lopeta, pudotettuja }.
+ * Lipulla eikä purkamalla: jos joku muu (kehysprofiili) käärii rAF:n
+ * väliin, ketju pysyy ehjänä ja suodatin vain lakkaa suodattamasta.
+ */
+export function suodataOrvotTickerit(ikkuna = globalThis) {
+  const alkuperainen = ikkuna?.requestAnimationFrame;
+  const tila = { paalla: true, pudotettuja: 0 };
+  if (typeof alkuperainen !== 'function') return { lopeta: () => 0, tila };
+  const suodatin = function requestAnimationFrame(fn) {
+    if (tila.paalla && typeof fn === 'function' && !fn.name && String(fn) === ORVON_TICKERIN_LAHDE) {
+      tila.pudotettuja += 1;
+      return 0;
+    }
+    return alkuperainen.call(ikkuna, fn);
+  };
+  ikkuna.requestAnimationFrame = suodatin;
+  const lopeta = () => {
+    tila.paalla = false;
+    if (ikkuna.requestAnimationFrame === suodatin) ikkuna.requestAnimationFrame = alkuperainen;
+    return tila.pudotettuja;
+  };
+  return { lopeta, tila };
+}
+
 /** Yksi latausyritys: `<script>` sivulle, aikakatko ja siivous. */
 function yritaPallokirjasto(doc, osoite, aikakatko, ikkuna) {
   return new Promise((ok, ei) => {
     const s = doc.createElement('script');
     let kello = 0;
     let ratkaistu = false;
+    const orvot = suodataOrvotTickerit(ikkuna);
     const paata = (virhe) => {
       if (ratkaistu) return;
       ratkaistu = true;
+      const pudotettuja = orvot.lopeta();
+      if (pudotettuja) pallodiag('kirjasto-orvot', { n: pudotettuja }, ikkuna);
       if (kello) { try { ikkuna.clearTimeout?.(kello); } catch { /* ei kelloa */ } }
       if (virhe) ei(virhe);
       else ok(globalThis.Globe);
