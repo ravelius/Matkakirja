@@ -1075,3 +1075,7 @@ Pelikoodari 22.9.2026 klo 17.15: #2778 = katsauksen kohdat 13–15 (ohjaimet.upd
 ## POHJAN PIILOTUS (#2779) MITATTU MERELLA: EI AUKKOJA, MERGETTAVISSA; MITTARI PR #2781 (22.9.2026 klo 12.13)
 
 Karttaseppä 22.9.2026 klo 17.25: gl.readPixels joka kehyksellä 24 riviltä zoomin aikana (WebKit 390×844 dpr 3), A pohja piiloon vs B ?koe=pohjavanha: alpha 0 -pikseleitä 0 kummassakin, taustaväriset pikselit samat samoissa kehyksissä (meren kermaväri, ei aukkoja); pohja piilossa 229/249 kehystä merellä, peittoOsuus 1 koko ajan; loppukaappausten ero 0,22–0,28 px 765:stä; mittaa-zoomiennakko-meri 3/3 OK, meri 426–448 ms. Raportti + mittari PR #2781 (pelkkä raportti/työkalu). #2779 mergettävissä.
+
+## ERA 1 TUOTANNOSSA: #2778 → v2097 (SYOTE KERRAN KEHYKSESSA YM.), #2779 → v2098 (ILMAKEHA, POHJA PIILOON, KERMA ILMAN POW); #2783 (ESIKAANNOS, LIVIA JA POLLO LEPOON) JULKAISIJALLA (22.9.2026 klo 12.25)
+
+Julkaisija 22.9.2026 klo 17.35: #2778 → v2097, #2779 → v2098 (rebasattu kerma-hotfixin päälle, konflikti laattakerma-shader.js:ssä ratkaistu). Pelikoodarin #2783 (katsauksen kohdat 7 compileAsync ja 17 Livia/pöllönappi lepoon liikkeessä) seuraavana. Jäljellä ennen omistajan tuntumatestiä: asetus Tarkkuus liikkeessä, erä 3 (nollakopio-bittikartta, opaakit laatat, roska ja häive, atlas, ladonta, lepopiirto sykkeellä).
