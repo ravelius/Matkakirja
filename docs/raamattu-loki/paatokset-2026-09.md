@@ -1483,3 +1483,7 @@ Laitetestaaja: raportti docs/raportit/piirtokoe-mac-safari-20260922.md, haara la
 ## #2850 (v2127, alpha0 AITO) PIDATETTY: savukkeet-mac 24 UUTTA PUNAISTA, ~15 ERILLISTA SAVUKETTA KAATUU KOODILLA 1 ILMAN OK/FAIL-RIVIA; AIKAJANAOHJE #2846 MAINISSA ILMAN VERSIOTA (b9198073) (22.9.2026 klo 21.30)
 
 Julkaisijan epäily kontekstivuoto (elävien WebGL-kontekstien raja); Fablen epäily itse luotu kangas rikkoo savukeharnessin (kanvas ei löydy tai getContext ajetaan ennen DOMia). Pelikoodari lukee CI-lokin ja korjaa haaraan; Laitetestaaja ajaa yhden kaatuneen savukkeen paikallisesti ja lähettää stackin. Profiili-jakaa-push odottaa tämän perään. Oppi: Ubuntun node-testit eivät näe selainvikoja; Julkaisijan savukevertailu (uudet punaiset vs. huojunta) toimi portin tavoin.
+
+## PR #2851 (PROFIILI JAKAA: RUUTUNAYTTO JA PALVELIN EIVAT JAA SINGLETONIA); PELIKOODARI: PUSKURIKIRJOITUKSET-LASKURI KUMULATIIVINEN (HARNESS LUKI SUMMAN; OIKEA WebKit NORMAALI 0,07/KEHYS, eipuskuri 0); eivienti KOSKEE VAIN NIMIOATLASTA, EI LAATTATEKSTUUREJA → LAATTAVIENTI JONOON VEDON AJAKSI TILATTU (#2850:n JALKEEN) (22.9.2026 klo 21.30)
+
+Omistajan illan iPhone-testissä 'Ei tekstuurivientejä' ei siis estä laattojen vientiä, vain nimiöatlaksen; tulos siitä tilasta ei kerro laattaviennin osuutta. Järjestys Pelikoodarille: 1) #2850 savukekaatumisen juurisyy, 2) laattavienti jonoon + laskuri overlayhin.
