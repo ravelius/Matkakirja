@@ -118,6 +118,16 @@ test('kytkennät: lauta asentaa, häiveet ja nimiöt ilmoittavat, savuke pakotta
   assert.match(lauta, /hitaat: \(\) => sykkiiNyt\(\)/);
   assert.match(lauta, /sykkiiNyt = \(\) => Boolean\(glSovitin\?\.sykkii\?\.\(\)\);/);
   assert.match(lauta, /ryhma\[nimi\] = function ryhmanMuutos/);
+  /*
+   * Syöte on muutoslähde kuten häiveet ja nimiöt: se ilmoittaa
+   * lepopiirrolle. Mitattu hyöty on vedon alun determinismi — yksi
+   * kehys (14–15 ms) sen sijaan että lähtö riippuisi sykkeen osumasta
+   * (29 ms chromium, 52 ms webkit ilman ilmoitusta). Ks. V6.
+   */
+  const pallo = lue('../js/pallo.js');
+  assert.match(pallo, /const ilmoitaSyote = \(\) => \{ try \{ pallo\.__piirto\?\.tarvitaan\?\.\(\); \} catch/);
+  assert.match(pallo, /kotelo\.addEventListener\('pointerdown', \(\) => \{\n\s*ilmoitaSyote\(\);/);
+  assert.match(pallo, /if \(!tartunta \|\| sormet\.alhaalla !== 1\) return;\n\s*ilmoitaSyote\(\);/);
   // Uni kulkee lepopiirron kautta: kirjaston silmukalla on yksi omistaja.
   assert.match(lauta, /if \(pallo\.__piirto\) pallo\.__piirto\.uni\(false\);\n\s*else pallo\.resumeAnimation\?\.\(\);/);
   assert.match(lauta, /if \(pallo\.__piirto\) pallo\.__piirto\.uni\(true\);\n\s*else pallo\.pauseAnimation\?\.\(\);/);
