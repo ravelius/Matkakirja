@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2061, teksti: 'Linssikatalogi: mannernavigointi, yö/päivätila' },
   { v: 2060, teksti: 'Hehkupiste: säteittäinen häive ja sykähdys' },
   { v: 2059, teksti: 'Savuke-glnimiot-nostot: näkyvät kokonaan ruudussa' },
   { v: 2058, teksti: 'IRL: 6 ykköstason nostoa' },
