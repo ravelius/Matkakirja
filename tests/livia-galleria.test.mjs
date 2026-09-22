@@ -23,7 +23,7 @@ test('katselusivu näyttää kategoriat ja vain valitun kategorian eleet',async 
  await import(`../docs/livia-svg-demo.mjs?test=${Date.now()}`);
  const ryhmat=[...new Set(LIVIA_SVG_ELEET.map(ele=>ele.group))],kategoriat=elements['gesture-categories'].children;
  assert.equal(kategoriat.length,ryhmat.length+2);
- assert.match(kategoriat[0].textContent,/^Uudet versiot \(4\)$/);assert.equal(kategoriat[0].attrs['aria-pressed'],'true');
+ assert.equal(kategoriat[0].textContent,`Uudet versiot (${LIVIAN_UUDET_VERSIOT.length})`);assert.equal(kategoriat[0].attrs['aria-pressed'],'true');
  assert.deepEqual(elements['gesture-options'].children.map(n=>n.dataset.gesture),LIVIAN_UUDET_VERSIOT.map(e=>e.id));
  assert.match(elements.actual.innerHTML,/data-uusi-versio="uusi-nod"/);
  assert.match(elements.zoom.innerHTML,/viewBox="65 207 115 99"/);
