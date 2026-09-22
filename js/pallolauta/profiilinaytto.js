@@ -35,6 +35,54 @@ export const PROFIILIN_POLKU = '/__profiili';
 
 const p = (x, n = 0) => (Number.isFinite(x) ? x.toFixed(n) : '—');
 
+const prosenttipiste = (arvot, q) => {
+  if (!arvot.length) return NaN;
+  const s = [...arvot].sort((a, b) => a - b);
+  return s[Math.min(s.length - 1, Math.floor(q * (s.length - 1)))];
+};
+
+/**
+ * RAAKA rAF-TAHTI JA PIIRTOJEN OSUUS (omistajan iPhone-havainto
+ * 22.9.2026: nykiminen on tasaista koko vedon ajan, eikä se ole
+ * syöteputki, dpr eikä laattojen saapuminen — Fablen hypoteesi:
+ * rAF käy 120 Hz:ssä ja peli piirtää ~60, jolloin joka toinen kehys
+ * putoaa epätasaisesti).
+ *
+ * Kehysprofiilin oma askel on rAF-ketjussa joka kehyksellä, joten sen
+ * `dt` ON raaka rAF-väli — mediaani kertoo suoraan, onko näyttö 60 vai
+ * 120 Hz. Piirtojen osuus luetaan lepopiirron laskureista (piirtoja /
+ * ohitettuja) jakson yli, koska juuri se kerros päättää, piirretäänkö
+ * kehys — kolmiulotteisen `render`-kääre kirjaa ajan myös ohitetusta
+ * kutsusta eikä siksi kelpaa mittariksi.
+ *
+ * PUHDAS: kehykset sisään, luvut ulos.
+ *
+ * @param {object} tulos  __kehysprofiili.lopeta()
+ * @param {?object} [lepoDelta] { piirtoja, ohitettuja } jakson yli
+ */
+export function profiiliTahti(tulos, lepoDelta = null) {
+  const kehykset = tulos?.kehykset ?? [];
+  const dts = kehykset.map((k) => k.dt).filter((d) => Number.isFinite(d) && d > 0);
+  const dtP50 = prosenttipiste(dts, 0.5);
+  const piirtoja = lepoDelta?.piirtoja ?? null;
+  const ohitettuja = lepoDelta?.ohitettuja ?? null;
+  const yhteensa = Number.isFinite(piirtoja) && Number.isFinite(ohitettuja) ? piirtoja + ohitettuja : null;
+  return {
+    kehyksia: dts.length,
+    hz: Number.isFinite(dtP50) && dtP50 > 0 ? Math.round(1000 / dtP50) : null,
+    dtP50,
+    dtP95: prosenttipiste(dts, 0.95),
+    dtMax: dts.length ? Math.max(...dts) : NaN,
+    yli20: dts.filter((d) => d > 20).length,
+    jsKa: kehykset.length ? kehykset.reduce((a, k) => a + (k.js ?? 0), 0) / kehykset.length : NaN,
+    renderKa: kehykset.length ? kehykset.reduce((a, k) => a + (k.render ?? 0), 0) / kehykset.length : NaN,
+    piirtoja,
+    ohitettuja,
+    piirtoOsuus: yhteensa ? piirtoja / yhteensa : null,
+  };
+}
+
+
 /**
  * Overlayn rivit tiivisteestä. PUHDAS funktio: ei DOMia, ei kelloa —
  * juuri tämä on se osa, joka voi mennä hiljaa rikki (kentän nimi
@@ -46,10 +94,25 @@ const p = (x, n = 0) => (Number.isFinite(x) ? x.toFixed(n) : '—');
  * @param {object} [p0.lepo]     lepopiirron tila()
  * @returns {string[]} rivit ylhäältä alas
  */
-export function profiilirivit({ tiiviste, asetukset = {}, lepo = null } = {}) {
+export function profiilirivit({
+  tiiviste, asetukset = {}, lepo = null, tahti = null,
+} = {}) {
   if (!tiiviste || !tiiviste.kehyksia) return ['profiili: ei kehyksiä'];
   const pisin = tiiviste.pisimmat?.[0] ?? null;
   const rivit = [];
+  if (tahti) {
+    /*
+     * TÄRKEIN RIVI YLIMMÄKSI: näytön tahti ja se, piirretäänkö JOKA
+     * rAF-kehys. Jos rAF on 120 Hz ja piirto-osuus on noin puolet,
+     * nykiminen on tahdin eikä kuorman vika.
+     */
+    const piirto = tahti.piirtoOsuus == null
+      ? 'piirto —'
+      : `piirto ${tahti.piirtoja}/${tahti.piirtoja + tahti.ohitettuja} (${Math.round(tahti.piirtoOsuus * 100)} %)`;
+    rivit.push(`rAF ${tahti.hz ?? '—'} Hz (dt p50 ${p(tahti.dtP50, 1)}) · ${piirto}`);
+    rivit.push(`dt p95 ${p(tahti.dtP95, 1)} · max ${p(tahti.dtMax)} · >20 ms: ${tahti.yli20}/${tahti.kehyksia}`
+      + ` · js ka ${p(tahti.jsKa, 1)} · render ka ${p(tahti.renderKa, 1)}`);
+  }
   if (pisin) {
     /*
      * PISIN KEHYS ON SE, JONKA OMISTAJA TUNTEE. Jakauma kertoo heti,
@@ -82,11 +145,18 @@ export function profiilirivit({ tiiviste, asetukset = {}, lepo = null } = {}) {
  * suoraan taulukkoon — ei koko kehyslistaa, joka olisi satoja rivejä
  * jokaista jaksoa kohti.
  */
-export function profiilitiiviste({ tiiviste, asetukset = {}, lepo = null, ua = '' } = {}) {
+export function profiilitiiviste({
+  tiiviste, asetukset = {}, lepo = null, ua = '', tahti = null,
+} = {}) {
   const pisin = tiiviste?.pisimmat?.[0] ?? null;
   return {
     t: Date.now(),
     ua,
+    tahti: tahti ? {
+      hz: tahti.hz, dtP50: tahti.dtP50, dtP95: tahti.dtP95, dtMax: tahti.dtMax, yli20: tahti.yli20,
+      jsKa: tahti.jsKa, renderKa: tahti.renderKa,
+      piirtoja: tahti.piirtoja, ohitettuja: tahti.ohitettuja, piirtoOsuus: tahti.piirtoOsuus,
+    } : null,
     kehyksia: tiiviste?.kehyksia ?? 0,
     mediaani: tiiviste?.mediaani ?? null,
     p95: tiiviste?.p95 ?? null,
@@ -149,24 +219,44 @@ export function luoProfiilinaytto({
 
   let purettu = false;
   let ajastin = 0;
+  /*
+   * Lepopiirron laskurit ovat KUMULATIIVISIA, joten jakson piirrot ja
+   * ohitukset ovat kahden lukeman erotus. Ensimmäinen jakso vertaa
+   * asennushetkeen.
+   */
+  const lueLepo = () => { try { return lepo() ?? null; } catch { return null; } };
+  let edellinenLepo = lueLepo();
+  const lepoDelta = (nyt) => {
+    if (!nyt || !edellinenLepo) return null;
+    const d = {
+      piirtoja: (nyt.piirtoja ?? 0) - (edellinenLepo.piirtoja ?? 0),
+      ohitettuja: (nyt.ohitettuja ?? 0) - (edellinenLepo.ohitettuja ?? 0),
+    };
+    return d.piirtoja >= 0 && d.ohitettuja >= 0 ? d : null;
+  };
   const jakso = () => {
     if (purettu) return;
     let tiiviste = null;
+    let tahti = null;
+    const nykyLepo = lueLepo();
     try {
       const tulos = profiili.lopeta();
       tiiviste = profiili.tiivista(tulos);
+      tahti = profiiliTahti(tulos, lepoDelta(nykyLepo));
     } catch { tiiviste = null; }
+    edellinenLepo = nykyLepo;
     const nykyAsetukset = (() => { try { return asetukset() ?? {}; } catch { return {}; } })();
-    const nykyLepo = (() => { try { return lepo() ?? null; } catch { return null; } })();
     kerros.textContent = '';
-    for (const rivi of profiilirivit({ tiiviste, asetukset: nykyAsetukset, lepo: nykyLepo })) {
+    for (const rivi of profiilirivit({
+      tiiviste, asetukset: nykyAsetukset, lepo: nykyLepo, tahti,
+    })) {
       const r = doc.createElement('div');
       r.textContent = rivi;
       kerros.appendChild(r);
     }
     if (tiiviste?.kehyksia) {
       lahetin(profiilitiiviste({
-        tiiviste, asetukset: nykyAsetukset, lepo: nykyLepo, ua: ikkuna.navigator?.userAgent ?? '',
+        tiiviste, asetukset: nykyAsetukset, lepo: nykyLepo, tahti, ua: ikkuna.navigator?.userAgent ?? '',
       }));
     }
     try { profiili.aloita(); } catch { /* ei mittausta */ }

@@ -26102,10 +26102,13 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
  * kirjasin, tumma pohja ja kapea rivinväli, jotta neljä riviä mahtuu
  * 390 px:n leveydelle kuvakaappaukseen luettavana.
  */
+/* Kotelon yleissääntö (.pallo-kotelo > div { inset: 0 }) on tätä
+   täsmällisempi, joten valitsimessa on kotelo mukana ja `inset: auto`
+   purkaa venytyksen — muuten laatikko olisi koko kartan kokoinen. */
+.pallo-kotelo > .profiilinaytto,
 .profiilinaytto {
   position: absolute;
-  left: 0.4rem;
-  bottom: 0.4rem;
+  inset: auto auto 0.4rem 0.4rem;
   z-index: 6;
   max-width: calc(100% - 0.8rem);
   padding: 0.3rem 0.45rem;

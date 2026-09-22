@@ -16,7 +16,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 
 import {
-  PROFIILIN_POLKU, profiilirivit, profiilitiiviste, luoProfiilinaytto,
+  PROFIILIN_POLKU, profiiliTahti, profiilirivit, profiilitiiviste, luoProfiilinaytto,
 } from '../js/pallolauta/profiilinaytto.js';
 
 const TIIVISTE = {
@@ -147,4 +147,50 @@ test('lähetyspolku on se, jota mittauspalvelin kuuntelee', () => {
   );
   assert.match(palvelin, /polku === '\/__profiili' && req\.method === 'POST'/);
   assert.match(palvelin, /appendFileSync\(PROFIILIPOLKU/);
+});
+
+/* --- tahti: 120 Hz rAF ja joka toinen kehys piirtämättä ---------------- */
+
+/*
+ * FABLEN HYPOTEESI (omistajan iPhone 22.9.2026): rAF käy 120 Hz:ssä ja
+ * peli piirtää ~60, jolloin joka toinen kehys putoaa. Overlayn on
+ * näytettävä juuri tämä — mitattu tahti ja piirtojen osuus — tai
+ * omistajan kuvakaappaus ei ratkaise mitään.
+ */
+test('tahti: rAF-Hz mediaanista ja piirto-osuus lepopiirron laskureista', () => {
+  const kehykset = Array.from({ length: 60 }, (_, i) => ({
+    dt: i % 2 ? 8.3 : 8.4, js: 4, render: i % 2 ? 0 : 5,
+  }));
+  const t = profiiliTahti({ kehykset }, { piirtoja: 30, ohitettuja: 30 });
+  assert.equal(t.hz, 120, 'dt p50 8,3 ms → 120 Hz');
+  assert.equal(t.kehyksia, 60);
+  assert.equal(t.piirtoOsuus, 0.5, 'joka toinen kehys piirretään');
+  assert.equal(t.yli20, 0);
+  assert.ok(Math.abs(t.jsKa - 4) < 1e-9);
+
+  const rivit = profiilirivit({ tiiviste: TIIVISTE, tahti: t }).join('\n');
+  assert.match(rivit, /rAF 120 Hz \(dt p50 8\.3\) · piirto 30\/60 \(50 %\)/);
+  assert.match(rivit, />20 ms: 0\/60/);
+});
+
+test('tahti: 60 Hz ja täysi piirto, pitkät kehykset lasketaan', () => {
+  const kehykset = Array.from({ length: 30 }, (_, i) => ({ dt: i < 3 ? 40 : 16.7, js: 6, render: 5 }));
+  const t = profiiliTahti({ kehykset }, { piirtoja: 30, ohitettuja: 0 });
+  assert.equal(t.hz, 60);
+  assert.equal(t.yli20, 3, 'kolme kehystä yli 20 ms');
+  assert.equal(t.piirtoOsuus, 1);
+  assert.equal(t.dtMax, 40);
+});
+
+test('tahti: ilman lepopiirron lukemia piirto-osuus on tuntematon, ei nolla', () => {
+  const t = profiiliTahti({ kehykset: [{ dt: 16.7 }] }, null);
+  assert.equal(t.piirtoOsuus, null);
+  assert.match(profiilirivit({ tiiviste: TIIVISTE, tahti: t }).join('\n'), /piirto —/);
+});
+
+test('tahti kulkee myös lähetykseen', () => {
+  const t = profiiliTahti({ kehykset: [{ dt: 8.3 }, { dt: 8.3 }] }, { piirtoja: 1, ohitettuja: 1 });
+  const r = profiilitiiviste({ tiiviste: TIIVISTE, tahti: t });
+  assert.equal(r.tahti.hz, 120);
+  assert.equal(r.tahti.piirtoOsuus, 0.5);
 });
