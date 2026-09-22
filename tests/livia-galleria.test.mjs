@@ -22,14 +22,23 @@ test('katselusivu näyttää kategoriat ja vain valitun kategorian eleet',async 
  }
  await import(`../docs/livia-svg-demo.mjs?test=${Date.now()}`);
  const ryhmat=[...new Set(LIVIA_SVG_ELEET.map(ele=>ele.group))],kategoriat=elements['gesture-categories'].children;
- assert.equal(kategoriat.length,ryhmat.length+2);
- assert.equal(kategoriat[0].textContent,`Uudet versiot (${LIVIAN_UUDET_VERSIOT.length})`);assert.equal(kategoriat[0].attrs['aria-pressed'],'true');
- assert.deepEqual(elements['gesture-options'].children.map(n=>n.dataset.gesture),LIVIAN_UUDET_VERSIOT.map(e=>e.id));
+ assert.equal(kategoriat.length,ryhmat.length*2+2);
+ const poiminnat=LIVIAN_UUDET_VERSIOT.filter(e=>e.group==='Uudet versiot');
+ assert.equal(kategoriat[0].textContent,`Uudet versiot (${poiminnat.length})`);assert.equal(kategoriat[0].attrs['aria-pressed'],'true');
+ assert.deepEqual(elements['gesture-options'].children.map(n=>n.dataset.gesture),poiminnat.map(e=>e.id));
  assert.match(elements.actual.innerHTML,/data-uusi-versio="uusi-ilahtuu"/);
  assert.match(elements.zoom.innerHTML,/viewBox="65 207 115 99"/);
  assert.equal(elements['preview-note'].hidden,false);
  elements.all.onclick();
  assert.match(elements.actual.innerHTML,/data-uusi-versio="uusi-ilahtuu"/,'sarja alkaa oman ryhmän ensimmäisestä');
+ const uudetRyhmitellyt=[];
+ for(const ryhma of ryhmat){
+  elements['gesture-categories'].children.find(nappi=>nappi.dataset.category==='uusi-'+ryhma).onclick();
+  const odotetut=LIVIA_SVG_ELEET.filter(ele=>ele.group===ryhma).map(ele=>'uusi-'+ele.id);
+  assert.deepEqual(elements['gesture-options'].children.map(nappi=>nappi.dataset.gesture),odotetut);
+  uudetRyhmitellyt.push(...odotetut);
+ }
+ assert.deepEqual(uudetRyhmitellyt.sort(),LIVIA_SVG_ELEET.map(ele=>'uusi-'+ele.id).sort(),'jokainen peliele löytyy uutena versiona omasta ryhmästään');
  const ryhmitellyt=[];
  for(const ryhma of ryhmat){
   elements['gesture-categories'].children.find(nappi=>nappi.dataset.category===ryhma).onclick();
