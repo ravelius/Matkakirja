@@ -1083,3 +1083,7 @@ Julkaisija 22.9.2026 klo 17.35: #2778 → v2097, #2779 → v2098 (rebasattu kerm
 ## ERA 1 KOKONAAN VALMIS (#2783: COMPILEASYNC, LIVIA JA POLLO LEPOON, ASETUS TARKKUUS LIIKKEESSA); ERA 3 ALKAA JARJESTYKSESSA 18, 10, 6, 11–12, 8, 16 (22.9.2026 klo 12.30)
 
 Pelikoodari 22.9.2026 klo 17.45: #2783 (v2098:n päälle) Julkaisijalle: compileAsync-esikäännös kaikille laattamateriaalivarianteille (headless 40–130 ms async), Livian nousu/lasku paikattu (ei innerHTML-rakennusta eleen alussa), pöllövahti lepää pallolauta-liikkuu-luokan ajan, asetus Tarkkuus liikkeessä (hampurilainen → Kartta: terävä = dpr 3 + MSAA oletus, tasainen = dpr 2 liikkeessä ja 3 levossa, kokeellinen = antialias pois + latausvihje). Fable: omistaja kokeilee vasta kun kaikki on tuotannossa → erä 3 alkaa heti: 18 lepopiirto sykkeellä ensin (näkyvin: lämpö), sitten 10 nollakopio-bittikartta, 6 opaakit laatat, 11–12 roska ja häive, 8 atlas, 16 ladonta vain mittarin osoittaessa; paluuliput ja kuvaero jokaisessa.
+
+## ERA 1 KOKONAAN TUOTANNOSSA v2097–v2099; KOHTAAMISET C4–C7 MAINISSA (v2093); JULKAISIJAN JONO TYHJA PAITSI MAAKUNTIEN KUVAVIENTI R2 (22.9.2026 klo 12.32)
+
+Julkaisija 22.9.2026 klo 17.55: #2783 → v2099 (main fc651208a); sulavuuserä 1 kokonaan live (v2097 syöte ja kuuntelijat, v2098 ilmakehä/pohja/kerma, v2099 esikäännös/Livia/pöllö + asetus Tarkkuus liikkeessä). Kohtaamiset C4–C7 mergetty v2093:ssa (#2771, 20 kaupunkia) ja C3-kuvat kytketty (#2775). Fable kysyi maakuntien kuvaviennin R2 tilaa (sisalto-maakunnat-era2). Erä 3 Pelikoodarilla käynnissä.
