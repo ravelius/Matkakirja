@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2064, teksti: 'SVN: 4 ykköstason nostoa' },
   { v: 2063, teksti: 'HRV: 4 ykköstason nostoa' },
   { v: 2062, teksti: 'Savukkeet: reunan ylitys vain osittain ruudussa' },
   { v: 2061, teksti: 'Linssikatalogi: mannernavigointi, yö/päivätila' },
