@@ -3,7 +3,7 @@
 Edellinen luovutus: viesti-fable-luovutus-20260922-ilta.md. Kaikki päätökset lokissa
 docs/raamattu-loki/paatokset-2026-09.md (22.9. klo 20.14 → 23.9. klo 00.29). Raamattua ei muutettu.
 
-## Tuotanto: v2138 (klo 00.17), v2139 (#2875 liikemittari) Julkaisijalla
+## Tuotanto: v2140 (v2139 liikemittari p5 + v2140 koe ?koe=vientibudjetti mainissa klo 00.40)
 Illan sarja v2124–v2138: profiiliketju, Piirtokoe-valikko (4 tilaa + automaattilataus), alpha0 aito,
 profiili jakaa, eivienti laattoihin, tilarivi, mittari p4, Piirtokoe 7, valikon siivous (Vedon
 seuranta ja Tarkkuus pois valikosta, liput ?koe=/?tarkkuus= toimivat), orvot globe.gl-tickerit pois,

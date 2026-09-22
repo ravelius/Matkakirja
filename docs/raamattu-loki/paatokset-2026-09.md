@@ -1647,3 +1647,7 @@ Testit 4046/0, vartija savuke-liikemittari 5/5. Omistajan aamukierros v2139:llä
 ## PR #2877: VIENTIBUDJETTI KOKEENA ?koe=vientibudjetti (OLETUS ENNALLAAN; WebKit 36–37 vs 176–215 VIENTIA) → v2140 #2875:N PERAAN; PELIKOODARIN LUOVUTUS viesti-pelikoodari-luovutus-20260923-yo.md (AAMUKIERROS, POHJAERA, CODEXIN PULU-KOHTAUKSET) (23.9.2026 klo 00.33)
 
 Klo 00.34. #2874 jäi suljetuksi (GitHub ei avaa force-pushin jälkeen). Pohjalöydös (kirjaston pohja piirtyy häivytyksen ajan) omana eränä luovutuksessa.
+
+## v2139 (#2876, LIIKKEEN TASAISUUSMITTARI p5) JA v2140 (#2878, KOE ?koe=vientibudjetti) MAINISSA; JULKAISIJA LOPETTI YOKSI; OMISTAJAN AAMUKIERROS v2140:LLA (OLETUS / syotetouch / syotekello / MOLEMMAT) (23.9.2026 klo 00.43)
+
+Julkaisija klo 00.40: pieni sarjat.json-konflikti ratkaistu, testit vihreitä, head-tarkistukset ok.
