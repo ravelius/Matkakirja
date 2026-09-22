@@ -1227,3 +1227,7 @@ Laitetestaaja 22.9.2026 klo 16.15 (raakadata kamera vs osoitin per kehys, 8+8 ki
 ## OMISTAJA: KONEELLA ON MUUTAKIN TYOTA — TYHJAN KONEEN MITTAUS PYYDETAAN ETUKATEEN (22.9.2026 klo 16.12)
 
 Omistaja 22.9.2026 klo 16.20: prosessorilla on nyt paljon muuta työtä; jos mittaus tyhjällä koneella tarvitaan, Fable pyytää sitä etukäteen. Sääntö: mittausikkunat sovitaan omistajan kanssa ennalta (aika ja kesto), muuten sessioiden headless-ajot saavat jatkua normaalisti.
+
+## OIKAISU: v2109:N LEPOPIIRTO EI JUMITA VEDON ALKUA (MITATTU 29–52 ms); #2810 ON NORMAALI PARANNUS (LAHTO 14–15 ms DETERMINISTISESTI, VARTIJA V6 OIKEILLA OSOITINTAPAHTUMILLA) (22.9.2026 klo 16.15)
+
+Pelikoodari 22.9.2026 klo 16.25: mittasi ennen pushia — ilman korjausta veto lähtee 29 ms (Chromium) / 52 ms (WebKit), eli päätelty kehä ei sulkeudu; kiirekutsu oli mittaamaton päätelmä, peruttu. #2810 avattu oikealla perustelulla: syöte ilmoittaa lepopiirrolle pointerdownissa ja -movessa → lähtö 14/15 ms deterministisesti, syöte muutoslähteenä samalla sopimuksella kuin häiveet ja nimiöt; vartija V6 oikeilla osoitintapahtumilla; testit 3926/0, savuke 11/11. Julkaisijalle normaalina. Aito vika on kohta 13 (kamera per tapahtuma): aikaleimattu interpolointi seuraavaksi A:n jälkeen.
