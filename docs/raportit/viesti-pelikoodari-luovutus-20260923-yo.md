@@ -71,7 +71,7 @@ parempi" → syöteputki.
    kartan liike sormen alla.
 2. **Synteettinen veto voi mitata seinää.** Pitkä veto osui
    panorointirajaan, ja "nollat" ja virhe 100+ px olivat rajan, eivät
-   syötteen. Tarkista rahtikehykset (tahdistettu syöte ilman nollia) ennen
+   syötteen. Tarkista vertailuajo (tahdistettu syöte ilman nollia) ennen
    kuin tulkitset.
 3. **Pienen muutoksen suuri sivuvaikutus:** häive + peittävyysehto piirsi
    koko kirjaston pohjan valtaosassa vetokehyksistä. dc-piikki pisimmässä
