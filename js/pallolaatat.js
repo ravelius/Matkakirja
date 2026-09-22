@@ -36,7 +36,7 @@ import {
   pyramidinReliefinValoliuku, pyramidinReliefinVaraLahde as reliefinVaraLahde,
   pyramidinTasoitus, pyramidinVaritasonMaa,
 } from './laattapyramidi.js';
-import { laudaltaAsteiksi, projisoiLaudalle } from './fokusmitat.js';
+import { laudaltaAsteiksi, laudanMiller, projisoiLaudalle } from './fokusmitat.js';
 import { asennaKermaShader, luoKermanJaetut, paivitaKermanJaetut } from './laattakerma-shader.js';
 
 /** Kuinka kauan kameran on oltava paikallaan ennen lepolaatua (ms). */
@@ -2304,7 +2304,30 @@ export function luoLaattakerros({
    * kun tasoituksen avain vaihtuu — laattoja ei silloin pureta.
    */
   const kermaShader = !kokeet.has('kermakangas');
-  const kermanJaetut = luoKermanJaetut();
+  const kermanJaetut = luoKermanJaetut({ ...(laudanMiller('maailmankartta') ?? {}), sade: pallo.getGlobeRadius?.() ?? 100 });
+  /*
+   * POHJAPALLON LAATAT SAMAAN KERMAAN (vaihe 2). Kirjaston laattamoottorin
+   * pallonkappaleet (MeshLambertMaterial) saavat saman shaderin kärjestä
+   * lasketulla lauta-paikalla — silloin huntu on myös siellä, missä
+   * kerroksen laatta ei ole vielä saapunut (panoroinnin aukot, omistaja
+   * 22.9.2026). Asennus tehdään kehyksittäin uusille kappaleille
+   * (moottori luo ne haun mukaan); yksi läpikäynti on ~40 lasta.
+   */
+  let pohjanMoottori = null;
+  const kermaPohjalle = () => {
+    if (!kermaShader) return;
+    if (!pohjanMoottori) {
+      pallo.scene?.()?.traverse?.((o) => {
+        if (!pohjanMoottori && Array.isArray(o.thresholds) && typeof o.updatePov === 'function') pohjanMoottori = o;
+      });
+      if (!pohjanMoottori) return;
+    }
+    for (const o of pohjanMoottori.children) {
+      const m = o.material;
+      if (!m || !m.map || m.kermaUniformit) continue;
+      asennaKermaShader(m, { jaettu: kermanJaetut, pohja: true });
+    }
+  };
   let kermanMaskiAvain = '';
   const haiveMs = () => (reduced() || kokeet.has('eihaive') ? 0 : LAATTAKERROS_HAIVE_MS);
   if (kokeet.size) mittarit.kokeet = [...kokeet];
@@ -3537,6 +3560,7 @@ export function luoLaattakerros({
       paivitaKermanJaetut(kermanJaetut, tasoitusNyt, { luoKangas, Texture: luokat.Texture, THREE_LINEAR, THREE_CLAMP });
       mittarit.kermamaskeja = (mittarit.kermamaskeja ?? 0) + 1;
     }
+    kermaPohjalle();
     if (variMaa !== variMaaEdellinen || (!kermaShader && tasoitusAvain !== tasoitusAvainEdellinen)
       || kerrokset.reliefi !== reliefiEdellinen) {
       variMaaEdellinen = variMaa;
@@ -4117,6 +4141,8 @@ export function luoLaattakerros({
       if (!lukittu) ajaVienti();
       return lukittu;
     },
+    /** Kerman jaetut uniformit (savukkeet: maski, peitot, käytössä). */
+    kermanJaetut: () => kermanJaetut,
     /** Onko kerros lukossa (savukkeet ja vartijat). */
     lukossa: () => lukittu,
     /**

@@ -288,6 +288,17 @@ export function laudaltaAsteiksi(lauta, x, y) {
   return { lon, lat };
 }
 
+/**
+ * Laudan Miller-projektion parametrit shaderille (js/laattakerma-shader.js
+ * luoKermanJaetut: kerma pohjapallon laatoissa lasketaan kärjessä samalla
+ * kaavalla kuin teeProjektionKaavat). Null, jos lauta ei ole Miller.
+ */
+export function laudanMiller(lauta) {
+  const p = FOKUS_LAUTAPROJEKTIOT[lauta];
+  if (!p || p.tyyppi !== 'miller') return null;
+  return { lon0: p.lon0, leveys: p.leveys, pohjoinen: p.pohjoinen };
+}
+
 export function projisoiLaudalle(lauta, lon, lat) {
   const projektio = FOKUS_LAUTAPROJEKTIOT[lauta];
   const kaavat = projektionKaavat(projektio);

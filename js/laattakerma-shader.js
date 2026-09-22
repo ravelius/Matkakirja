@@ -45,21 +45,45 @@ export const KERMA_MASKIN_MARGINAALI = 0.05;
 const KERMA_GLSL_UNIFORMIT = `
 uniform sampler2D kermaMaski;
 uniform vec4 kermaMaskiAlue;   // lauta: x0, y0, w, h
-uniform vec4 kermaLaattaAlue;  // lauta: x0, y0, w, h (tämä laatta)
+uniform vec4 kermaLaattaAlue;  // lauta: x0, y0, w, h (tämä laatta; vain laattakerros)
 uniform vec3 kermaVari;        // sRGB 0…1
 uniform float kermaPeitto;
 uniform float kermaSumuPeitto;
-uniform float kermaPaalla;     // 1 = kerma, 0 = ei (maailmanäkymä, linssin tyhjä arkki)
+uniform float kermaPaalla;     // 1 = kerma, 0 = ei (linssin tyhjä arkki)
+uniform float kermaKaytossa;   // jaettu: 0 = ei tasoitusta / maailmanäkymä
+`;
+
+/*
+ * POHJAPALLON LAATAT (vaihe 2): kirjaston laattamoottorin pallonkappaleet
+ * eivät tiedä lauta-koordinaattejaan, joten ne lasketaan kärjestä:
+ * mesh-avaruuden piste pallon pinnalla → lat/lon (three-globe:
+ * x = r sinφ cosθ, y = r cosφ, z = r sinφ sinθ, φ = 90°−lat, θ = 90°−lng)
+ * → laudan Miller-projektio (js/fokusmitat.js teeProjektionKaavat:
+ * x = ((lon − lon0) mod 360)·skaala, y = (millerY(lat) − yPohjoinen)·skaala).
+ */
+const KERMA_GLSL_VERTEX_UNIFORMIT = `
+uniform vec4 kermaLauta;       // lon0 (aste), skaala (yks/rad), yPohjoinen, pallon säde
+varying vec2 vKermaLauta;
+`;
+const KERMA_GLSL_VERTEX = `
+#include <begin_vertex>
+{
+  vec3 kermaP = position / kermaLauta.w;
+  float kermaLat = asin(clamp(kermaP.y, -1.0, 1.0));
+  float kermaLon = radians(90.0) - atan(kermaP.z, kermaP.x);
+  float kermaD = kermaLon - radians(kermaLauta.x);
+  kermaD = mod(mod(kermaD, 6.2831853) + 6.2831853, 6.2831853);
+  float kermaMy = -1.25 * log(tan(0.7853982 + 0.4 * kermaLat));
+  vKermaLauta = vec2(kermaD * kermaLauta.y, (kermaMy - kermaLauta.z) * kermaLauta.y);
+}
 `;
 
 /** map_fragment-lohkon korvaaja; UV-nimi täydennetään ajossa (vMapUv tai vUv). */
 const KERMA_GLSL_RUNKO = `
 #ifdef USE_MAP
   vec4 kermaTexel = texture2D( map, KERMA_UV );
-  if (kermaPaalla > 0.5) {
-    // Laatan kangas piirretään y alaspäin ja tekstuuri on flipY: v = 1 − y/H.
-    vec2 kermaLaudalla = vec2(kermaLaattaAlue.x + KERMA_UV.x * kermaLaattaAlue.z,
-                              kermaLaattaAlue.y + (1.0 - KERMA_UV.y) * kermaLaattaAlue.w);
+  if (kermaPaalla * kermaKaytossa > 0.5) {
+    vec2 kermaLaudalla = KERMA_LAUDALLA;
     vec2 kermaMaskiUv = (kermaLaudalla - kermaMaskiAlue.xy) / kermaMaskiAlue.zw;
     vec4 kermaM = texture2D( kermaMaski, vec2(kermaMaskiUv.x, 1.0 - kermaMaskiUv.y) );
     // Kankaan sääntö luki sRGB-tavuja: texel on lineaarinen, joten sama ero lasketaan sRGB:ssä.
@@ -79,13 +103,18 @@ const KERMA_GLSL_RUNKO = `
  * `{ value }`-olion arvon piirrossa, joten päivitys näkyy heti joka
  * laatassa ilman materiaalien läpikäyntiä).
  */
-export function luoKermanJaetut() {
+export function luoKermanJaetut({ lon0 = -175, leveys = 12000, pohjoinen = 76, sade = 100 } = {}) {
+  const skaala = leveys / (2 * Math.PI);
+  const yPohjoinen = -1.25 * Math.log(Math.tan(Math.PI / 4 + 0.4 * pohjoinen * Math.PI / 180));
   return {
     kermaMaski: { value: null },
     kermaMaskiAlue: { value: [0, 0, 1, 1] },
     kermaVari: { value: [0.98, 0.957, 0.839] },
     kermaPeitto: { value: 0 },
     kermaSumuPeitto: { value: 0 },
+    kermaKaytossa: { value: 0 },
+    // Pohjapallon laatat: laudan projektio kärkeen (ks. KERMA_GLSL_VERTEX).
+    kermaLauta: { value: [lon0, skaala, yPohjoinen, sade] },
   };
 }
 
@@ -204,6 +233,8 @@ export function paivitaKermanJaetut(jaettu, tasoitus, { luoKangas, Texture, THRE
   jaettu.kermaVari.value = kermanVariLuvuiksi(tasoitus?.kerma);
   jaettu.kermaPeitto.value = Number.isFinite(tasoitus?.peitto) ? tasoitus.peitto : 0;
   jaettu.kermaSumuPeitto.value = Number.isFinite(tasoitus?.sumu?.peitto) ? tasoitus.sumu.peitto : 0;
+  // Ei tasoitusta tai maailmanäkymä: kerma pois kaikilta (myös pohjapallolta).
+  jaettu.kermaKaytossa.value = tasoitus && !tasoitus.maailma ? 1 : 0;
   return Boolean(maski);
 }
 
@@ -212,22 +243,33 @@ export function paivitaKermanJaetut(jaettu, tasoitus, { luoKangas, Texture, THRE
  * paalla: boolean }. Palauttaa laatan omat uniformit (paalla-lippu
  * vaihdettavissa jälkikäteen).
  */
-export function asennaKermaShader(materiaali, { jaettu, laatta }) {
+export function asennaKermaShader(materiaali, { jaettu, laatta = null, pohja = false }) {
   if (!materiaali || !jaettu) return null;
+  const alue = laatta?.alue ?? { x0: 0, y0: 0, w: 1, h: 1 };
   const omat = {
-    kermaLaattaAlue: { value: [laatta.alue.x0, laatta.alue.y0, laatta.alue.w, laatta.alue.h] },
-    kermaPaalla: { value: laatta.paalla === false ? 0 : 1 },
+    kermaLaattaAlue: { value: [alue.x0, alue.y0, alue.w, alue.h] },
+    kermaPaalla: { value: laatta?.paalla === false ? 0 : 1 },
   };
   materiaali.onBeforeCompile = (shader) => {
     Object.assign(shader.uniforms, jaettu, omat);
     const uv = shader.fragmentShader.includes('vMapUv') ? 'vMapUv' : 'vUv';
-    const runko = KERMA_GLSL_RUNKO.replace(/KERMA_UV/g, uv)
+    // Laattakerros: laudan paikka laatan uv:sta (kangas y alaspäin, tekstuuri flipY: v = 1 − y/H).
+    // Pohjapallo: kärjessä laskettu varying.
+    const laudalla = pohja
+      ? 'vKermaLauta'
+      : `vec2(kermaLaattaAlue.x + ${uv}.x * kermaLaattaAlue.z, kermaLaattaAlue.y + (1.0 - ${uv}.y) * kermaLaattaAlue.w)`;
+    const runko = KERMA_GLSL_RUNKO.replace(/KERMA_UV/g, uv).replace('KERMA_LAUDALLA', laudalla)
       .replace('KERMA_MERI', `${KERMA_MERI_ERO}.0`).replace('KERMA_MAA', `${KERMA_MAA_ERO}.0`);
     shader.fragmentShader = shader.fragmentShader
-      .replace('#include <common>', `#include <common>\n${KERMA_GLSL_UNIFORMIT}`)
+      .replace('#include <common>', `#include <common>\n${KERMA_GLSL_UNIFORMIT}${pohja ? 'varying vec2 vKermaLauta;\n' : ''}`)
       .replace('#include <map_fragment>', runko);
+    if (pohja) {
+      shader.vertexShader = shader.vertexShader
+        .replace('#include <common>', `#include <common>\n${KERMA_GLSL_VERTEX_UNIFORMIT}`)
+        .replace('#include <begin_vertex>', KERMA_GLSL_VERTEX);
+    }
   };
-  materiaali.customProgramCacheKey = () => 'laattakerma-1';
+  materiaali.customProgramCacheKey = () => (pohja ? 'laattakerma-pohja-1' : 'laattakerma-1');
   materiaali.needsUpdate = true;
   materiaali.kermaUniformit = omat;
   return omat;
