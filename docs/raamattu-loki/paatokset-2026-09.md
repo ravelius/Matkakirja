@@ -1403,3 +1403,7 @@ Omistaja 22.9.2026 klo 19.33: overlay iPhonella vedon aikana: rAF 59–63 Hz, dt
 ## KORJAUS PR #2841: ELE JA LIUKU OVAT LEPOPIIRRON ESTE (JOKA rAF PIIRRETAAN), VARTIJA V7 JOKA TOISEN KEHYKSEN TAPAHTUMILLA (main 88/2 OHITUSTA → 90/0); VANHA TASAISUUSMITTARI EI NAHNYT VIKAA KOSKA SE LAHETTI TAPAHTUMAN JOKA KEHYKSELLA (22.9.2026 klo 19.45)
 
 Pelikoodari 22.9.2026 klo 19.40: sormi alhaalla, nipistys, kamera-ajo tai liuku (ui.pallonVauhti.raf) ⇒ lepopiirto ei ohita; syke vain levossa. V7 mittaa iOS:n kuviolla (tapahtuma joka toiseen kehykseen): korjaamaton 88/2 ohitusta, korjattu 90/0; V2 pysähdyksiä 0/88. Sivulöydös: tasaisuusmittarin synteettinen veto lähetti tapahtuman joka kehyksellä → vika ei näkynyt yhdessäkään aiemmassa savukkeessa. Overlayhin rivi 'pitkät (>25 ms): piirretty n · ohitettu m' → omistajan seuraava kaappaus erottaa tauot ja työn. Profiilin rAF-ketju mittaa dt:n myös tickin tauolla. Julkaisijalle kiireellisenä.
+
+## v2123 TUOTANNOSSA: VEDON AIKANA EI OHITETA YHTAKAAN KEHYSTA (VARTIJA V7); OMISTAJA MITTAA iPHONELLA (22.9.2026 klo 19.51)
+
+Julkaisija 22.9.2026 klo 19.50: #2841 → #2842 → v2123 (main bd0d55fc), testit 3960/0. Omistajan mittaus: ?koe=profiili, kaappaus vedon aikana (≥ 5 s yhtäjaksoinen veto) ja levossa (10 s).
