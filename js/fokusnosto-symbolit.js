@@ -574,6 +574,35 @@ function nostosymKyna(tera) {
  * (js/pallolauta/aihemerkit.js AIHEMERKIN_R).
  */
 export const NOSTOSYM_PISTE_R = 3.4;
+/** Hehkupisteen häiveen säde pisteen säteinä, häiveen alfa laidalla ja sisuksen vaalennus (0…1). */
+export const NOSTOSYM_HEHKUN_SADE = 2.1;
+export const NOSTOSYM_HEHKUN_ALFA = 0.45;
+export const NOSTOSYM_HEHKUN_SISUS = 0.42;
+/** Sykähdys levossa: koon vaihtelu (±) ja jakso (ms) — runko ja CSS2D lukevat samat luvut. */
+export const NOSTOSYM_SYKKEEN_OSUUS = 0.07;
+export const NOSTOSYM_SYKKEEN_JAKSO_MS = 2400;
+/** Väri (#rrggbb, rgb() tai rgba()) annetulla alfalla; muu merkkijono palautuu sellaisenaan. */
+export function nostosymVariAlfalla(vari, alfa) {
+  const rgb = nostosymRgb(vari);
+  return rgb ? `rgba(${rgb[0]},${rgb[1]},${rgb[2]},${alfa})` : vari;
+}
+/** Väri vaalennettuna valkoista kohti osuudella t (0 = sama, 1 = valkoinen). */
+export function nostosymVaalenna(vari, t) {
+  const rgb = nostosymRgb(vari);
+  if (!rgb) return vari;
+  const v = rgb.map((c) => Math.round(c + (255 - c) * t));
+  return `rgb(${v[0]},${v[1]},${v[2]})`;
+}
+function nostosymRgb(vari) {
+  const s = String(vari ?? '').trim();
+  const hex = /^#([0-9a-f]{6})$/iu.exec(s);
+  if (hex) return [0, 2, 4].map((i) => parseInt(hex[1].slice(i, i + 2), 16));
+  const lyhyt = /^#([0-9a-f]{3})$/iu.exec(s);
+  if (lyhyt) return [...lyhyt[1]].map((c) => parseInt(c + c, 16));
+  const rgb = /^rgba?\(\s*([\d.]+)\s*,\s*([\d.]+)\s*,\s*([\d.]+)/u.exec(s);
+  if (rgb) return [rgb[1], rgb[2], rgb[3]].map(Number);
+  return null;
+}
 
 /**
  * PISTEMERKIN LUONNOS — sama muoto jokaiselle pisteytetylle
@@ -880,10 +909,31 @@ function piirraNostosymMiniCanvas(ctx, tunnus, muste, porras) {
      * kategoriaväri istuu pergamentille samalla painolla kuin merkin
      * oma muste. Alfa asetetaan ja palautetaan tässä, koska kutsujalla
      * voi olla oma peittonsa (haalistunut merkki).
+     *
+     * HEHKUPISTE (omistaja 21.9.2026 klo 22.00: *"eloton yksi
+     * väripallo, saisi olla hehkuvan näköinen"*; Fablen erä): kiekon
+     * ympärille säteittäinen häive aiheen omalla musteella
+     * (NOSTOSYM_HEHKUN_SADE × piste, alfa NOSTOSYM_HEHKUN_ALFA → 0) ja
+     * kiekon sisus vaaleampi kuin laita (NOSTOSYM_HEHKUN_SISUS). Hidas
+     * sykähdys levossa on rungon uniform (js/pallonimiot-gl.js `syke`)
+     * ja CSS2D:ssä keyframe (css/styles.css .nostosym-rasteri-piste) —
+     * rasteri itse on paikallaan. Väri pysyy aiheen musteella.
      */
     const alfa = ctx.globalAlpha;
+    const vari = muste.varit?.[merkki.vari] ?? NOSTOSYM_PISTE_VARIT[merkki.vari];
+    const r = NOSTOSYM_PISTE_R;
+    const hehku = ctx.createRadialGradient(0, 0, r * 0.7, 0, 0, r * NOSTOSYM_HEHKUN_SADE);
+    hehku.addColorStop(0, nostosymVariAlfalla(vari, NOSTOSYM_HEHKUN_ALFA));
+    hehku.addColorStop(1, nostosymVariAlfalla(vari, 0));
+    ctx.fillStyle = hehku;
+    ctx.beginPath();
+    ctx.arc(0, 0, r * NOSTOSYM_HEHKUN_SADE, 0, Math.PI * 2);
+    ctx.fill();
     ctx.globalAlpha = alfa * (muste.pisteHimmeys ?? NOSTOSYM_PISTE_HIMMEYS);
-    ctx.fillStyle = muste.varit?.[merkki.vari] ?? NOSTOSYM_PISTE_VARIT[merkki.vari];
+    const sisus = ctx.createRadialGradient(-r * 0.25, -r * 0.25, 0, 0, 0, r);
+    sisus.addColorStop(0, nostosymVaalenna(vari, NOSTOSYM_HEHKUN_SISUS));
+    sisus.addColorStop(1, vari);
+    ctx.fillStyle = sisus;
     ctx.fill(new Path2D(merkki.taytto));
     ctx.globalAlpha = alfa;
   }
@@ -2899,6 +2949,9 @@ export function piirraNostosymKartalle(g, symboli, nimio, laji, kylki = 'oikea',
    * kortti kertoo) ja se nimi, joka kuvaan ladottiin.
    */
   kuva.dataset.symboli = NOSTOSYM_PIIRTAJAT[symboli] ? symboli : 'huuto';
+  // Hehkupiste sykkii levossa myös CSS2D:ssä (css/styles.css .nostosym-rasteri-piste):
+  // vain kategorian värikiekko ilman kuvamerkkiä, kuten rungolla (glOnHehkupiste).
+  if (!kuvamerkki && nostosymMiniMerkki(symboli, laji)?.vari) kuva.classList.add('nostosym-rasteri-piste');
   /*
    * ERILLINEN NIMIÖKUVA (Fable 21.9.2026, nimiöt vakaat): kun kutsuja
    * pyytää `erillinenNimio`, ikoni ja nimiö ovat KAKSI rasteria samassa

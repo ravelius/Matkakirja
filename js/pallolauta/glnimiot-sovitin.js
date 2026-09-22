@@ -56,6 +56,7 @@
  */
 
 import { luoRasterilahde } from './nimiorasterit.js';
+import { NOSTOSYM_PISTEET, NOSTOSYM_SYKKEEN_JAKSO_MS, NOSTOSYM_SYKKEEN_OSUUS } from '../fokusnosto-symbolit.js';
 
 /** Instanssin tunnus datumista: sama kuin merkkirekisterin avain. */
 export function glInstanssinTunnus(d) {
@@ -120,7 +121,25 @@ export function glNostonInstanssi(d, sprite, osa, opacity) {
     katto: sprite.katto ?? null,
     porras: sprite.porras ?? null,
     opacity,
+    // Hehkupiste sykkii levossa (pallonimiot-gl.js `syke`): vain pistemerkin ikoni, ei kuvamerkki eikä nimiö.
+    syke: osa === 'ikoni' && glOnHehkupiste(d),
   };
+}
+
+/** Onko noston ikoni hehkupiste (kategorian värikiekko ilman kuvamerkkiä). */
+export function glOnHehkupiste(d) {
+  return Boolean(d) && !d.kuvamerkki && !d.poltettu && NOSTOSYM_PISTEET.includes(d.kategoria);
+}
+
+/**
+ * Sykähdyksen koon kerroin hetkellä t (ms): levossa hidas sini
+ * (NOSTOSYM_SYKKEEN_OSUUS, NOSTOSYM_SYKKEEN_JAKSO_MS), liikkeessä 1;
+ * levon alusta amplitudi nousee `nousu` ms:ssä, ettei syke ala hypyllä.
+ */
+export function glSykeKerroin(t, { liikkeessa = false, levonAlku = 0, nousu = 600 } = {}) {
+  if (liikkeessa || !Number.isFinite(t)) return 1;
+  const amplitudi = Math.min(1, Math.max(0, (t - levonAlku) / nousu));
+  return 1 + NOSTOSYM_SYKKEEN_OSUUS * amplitudi * Math.sin((2 * Math.PI * t) / NOSTOSYM_SYKKEEN_JAKSO_MS);
 }
 
 /** Nappulan svg:n mitat CSS-pikseleinä (merkit.js nappulaElementti: width 32, height 36). */
@@ -185,6 +204,9 @@ export function luoGlNimiosovitin({
    * Sama nostoille (jaaNostot): ikoni ja nimiö osittain (tunnus#osa).
    */
   const viimeSpritet = new Map();
+  /** Levon alkuhetki sykähdykselle (null liikkeessä); `sykeKaytossa` false = savukkeiden kuvavertailu ilman sykettä. */
+  let levonAlku = null;
+  let sykeKaytossa = true;
   /** Häipyvät nimiöt: tunnus → { instanssi, alku, mista, mihin, poistu } */
   const haivytykset = new Map();
   const nyt = () => globalThis.performance?.now?.() ?? Date.now();
@@ -469,6 +491,11 @@ export function luoGlNimiosovitin({
       const k = purettu ? null : kerros?.();
       if (!k) return;
       k.kerroin?.(lahde.kuorenKerroin());
+      // Hehkupisteen sykähdys levossa, ei liikkeessä (omistaja 21.9.2026).
+      const t = nyt();
+      if (liikkeessa()) levonAlku = null;
+      else if (levonAlku == null) levonAlku = t;
+      k.syke?.(sykeKaytossa ? glSykeKerroin(t, { liikkeessa: levonAlku == null, levonAlku: levonAlku ?? t }) : 1);
       etenaHaivytykset(k);
     },
     /** Ladonnan kehys: jaot viedään rungolle kerran lopussa (ks. RUNGON RAKENNUS KERRAN PER LADONTA). */
@@ -480,6 +507,8 @@ export function luoGlNimiosovitin({
       const k = purettu ? null : kerros?.();
       if (k) vieNyt(k);
     },
+    /** Hehkupisteen sykähdys päälle/pois (savukkeiden kuvavertailu; oletus päällä). */
+    syke(paalla) { sykeKaytossa = Boolean(paalla); },
     /** Käynnissä olevat häivytykset (savukkeet). */
     haivytykset: () => new Map(haivytykset),
     /** Rungolla olevat instanssitunnukset (savukkeet, osumatesti). */
