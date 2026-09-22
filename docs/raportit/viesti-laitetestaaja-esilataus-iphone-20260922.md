@@ -16,7 +16,7 @@ korin koko ja mittari `laatat.esilataus` luetaan puhelimella ja mitä verrataan.
   `pelikoodari-laitepalvelin`) palvelee `sw.js`:n tilalla itsensä purkavan
   stubin — palvelutyöntekijää ei ole, kori ei täyty, esilataus ei tee mitään.
 - Siis: **mittaus tehdään tuotanto-osoitteessa** `https://matkakirja.app/`
-  (v2090 tai uudempi; `Info`-ruudun versionumero), oikealla iPhonella,
+  (v2090 tai uudempi; versionumero näkyy pelin kulmassa, `#versio-kulma`), oikealla iPhonella,
   Safari Technology Preview'n Web Inspectorilla USB-kaapelin yli (Fablen
   muistio 22.9.: toimii vain STP:llä ja vain kun puhelin on auki;
   Screenshots-aikajana pois). Web Inspector kulkee kaapelissa, joten
@@ -89,10 +89,10 @@ window.__zoomi = { kehykset: [], kaynnissa: true };
 })();
 ```
 
-Zoomaa kahdessa askeleessa kamera-ajolla (sama kuin savukkeessa, Marseille):
+Zoomaa kahdessa askeleessa kamera-ajolla (sama kuin savukkeessa):
 
 ```js
-const pov = { lat: 43.3, lng: 5.4 };
+const pov = { lat: 46.5, lng: 2.5 }; // sama kohde kuin savukkeessa (Ranska)
 await window.matkakirja.ui.pallonInstanssi.pointOfView({ ...pov, altitude: 0.067 }, 1500);
 // odota 2,5 s
 await window.matkakirja.ui.pallonInstanssi.pointOfView({ ...pov, altitude: 0.022 }, 1500);
