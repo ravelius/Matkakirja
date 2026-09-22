@@ -3719,14 +3719,27 @@ export function luoLaattakerros({
         mesh.renderOrder = -1000;
         mesh.frustumCulled = false;
         naytteet.push(mesh);
-        juuri.add(mesh);
       }
     }
+    /*
+     * VAIN NÄYTTEET KÄÄNNETÄÄN, EI KOKO SCENEÄ (vika v2099, CI 22.9.2026:
+     * "Cannot read properties of undefined (reading 'isReady')"). three:n
+     * compileAsync(scene) ottaa jokaisen scenen materiaalin joukkoonsa ja
+     * pollaa niitä 10 ms:n välein, kunnes kaikki ohjelmat ovat valmiit;
+     * jos jokin laatta puretaan sillä välin (LRU, tason vaihto),
+     * materiaalin ominaisuudet ovat poissa ja polli kaatuu — sivuvirhe.
+     * Käännettävä on siksi OMA RYHMÄ, jossa on vain näytemeshit (ne
+     * pidetään elossa), ja oikea scene annetaan kolmantena
+     * argumenttina vain valojen lähteeksi (three: compile(scene,
+     * camera, targetScene)). Näytteitä ei lisätä sceneen lainkaan.
+     */
+    const ryhma = new (juuri.constructor)();
+    for (const n of naytteet) ryhma.add(n);
     esikaannoksenNaytteet = naytteet;
     mittarit.esikaannos = 'kesken';
     const alku = aika();
-    renderer.compileAsync(scene, kamera).catch(() => {}).then(() => {
-      for (const n of naytteet) juuri.remove(n);
+    // Kolmas argumentti (valojen scene) on r16x:n; vanhempi three ohittaa sen.
+    Promise.resolve(renderer.compileAsync(ryhma, kamera, scene)).catch(() => {}).then(() => {
       mittarit.esikaannos = 'valmis';
       mittarit.esikaannosMs = Math.round(aika() - alku);
       mittarit.esikaannoksia = naytteet.length;
