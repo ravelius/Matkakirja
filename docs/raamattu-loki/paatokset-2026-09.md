@@ -1571,3 +1571,7 @@ Pelikoodari: testit 4006/0, savukkeet profiilitila ja koevaihto-lataus 5/5 Chrom
 ## PR #2868 (KARTTASEPPA): KAKSI PALSTAA KAIKKIIN NOSTOIHIN — nostoPalstoiksi js/nostokuva.js:SSA, KUUSI KUTSUJAA, css/nostokuva.css .nostokuva-kortti; VAIHE 1 ISO KUVA MYOS LEVEALLA, VAIHE 2 KUVA PIENENEE PALSTAANSA (FLIP 260 ms, SAMA img); ALLE 1100 px ENNALLAAN; iPad VAAKA (1194) SAA PALSTAT; 11.9. 'KUVA EI LIIKU' PATEE NYT VAIN ALLE 1100 px (22.9.2026 klo 23.23)
 
 Vartijat tests/nostokuva-kortit (jokainen tyyppi 1194/1400/1920, pino 834), tools/mittaa-nostopalstat.mjs WebKit 52/52, npm test 4010/0. Kaappaukset docs/raportit/kaappaukset/nostopalstat-elain-fra-1400-vaihe{1,2}.jpg lähetetty omistajalle. Jono: #2866 (v2135) → #2868 (v2136). Omistaja klo 23.22: Codexilta tulee pulupäivityksiä peliin; Julkaisija käsittelee ne normaalikaavalla.
+
+## v2135 MAINISSA (#2867: PIIRTOKOE 4 TILAA + AUTOMAATTILATAUS) JA v2136 (#2869: KAKSI PALSTAA KAIKKIIN NOSTOIHIN); JULKAISIJAN HEAD-TARKISTUS NAPPASI HAARAAN LISATYN TOISEN COMMITIN (22.9.2026 klo 23.32)
+
+Julkaisija klo 23.33, testit 4013/0. Omistajan kierros v2136:lla: 1/4 Normaali, 3/4 Ei tekstuurivientejä, 2/4 Ei puskurikirjoituksia; kaksi kaappausta kustakin samassa paikassa; valinta lataa sivun itse.
