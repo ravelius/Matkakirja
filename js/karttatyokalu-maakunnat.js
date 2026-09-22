@@ -38,6 +38,7 @@
  */
 import { html, kuunteleSulkevaNapautus, nielaiseSulkevaNapautus } from './ui-apurit.js';
 import { kohteidenNykyinenIso } from './fokuskohteet.js';
+import { taytaLahderivi } from './tekijakortti.js';
 import { MAAKUNTIEN_LUONNEHDINNAT } from './packs/maakunnat-luonnehdinnat.js';
 import { MAAKUNTIEN_PULU } from './packs/maakunnat-pulu.js';
 
@@ -525,7 +526,9 @@ function avaaMaakuntaKortti(avain, nimi, data) {
       img.alt = '';
       kehys.appendChild(img);
       const lahdeteksti = [kuva?.lahde, kuva?.lisenssi].filter(Boolean).join(' · ');
-      if (lahdeteksti) kehys.appendChild(html('figcaption', 'maakunta-kuva-lahde', lahdeteksti));
+      // Lähderivi kulkee talon apurin kautta (tekijakortti.js taytaLahderivi):
+      // Commons- ja lisenssilinkit sekä havainnekuvan selite samoin kuin korteissa.
+      if (lahdeteksti) kehys.appendChild(taytaLahderivi(html('figcaption', 'maakunta-kuva-lahde'), lahdeteksti, kuva));
       kuvalohko.appendChild(kehys);
     }
     sisalto.appendChild(kuvalohko);
