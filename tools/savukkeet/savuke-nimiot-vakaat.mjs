@@ -8,7 +8,9 @@
  *   1. PANOROINTI 2 s (sormi kankaalla): jokaisen eleen alussa
  *      näkyvän lapun asento (kylki, siirto, näkyvyys) on sama joka
  *      näytteessä eleen aikana — nimiö vain seuraa ankkuria.
- *   2. ZOOMI 3 porrasta (rulla): sama väite.
+ *   2. ZOOMI 3 porrasta (ctrl + rulla, pallo.js v1591: paljas rulla
+ *      panoroi): sama väite; rulla ja näytteet sivun sisällä rAF:lla
+ *      220 ms, vertailu vain ennen lepoladontaa.
  *   3. LEVOSSA eleen jälkeen: yksikään näkyvä nimiö ei ylitä reunaa
  *      (4 px) eivätkä näkyvät nimiöt limity keskenään (0 paria;
  *      ykköstason pakkoasento sallitaan).
@@ -271,17 +273,66 @@ for (const ruutu of RUUDUT) {
    * päätöshetkensä ("zoomiportaittain"), jolloin näkyvyys saa muuttua —
    * Playwrightin rullakierros kestää työpöydällä sekunteja.
    */
+  /*
+   * NÄYTTEET SIVUN SISÄLLÄ, EI PLAYWRIGHT-KIERROKSINA (kuormaherkkyys,
+   * 22.9.2026): vartio 2 punastui koneen kuormassa, kun rullan ja
+   * näytteen välinen kierros venyi yli LADONNAN_LEPOVIIVE_MS:n (260 ms) ja
+   * lepoladonta — sallittu päätöshetki — osui näytteiden väliin. Nyt
+   * rullan jälkeen sivu kirjaa asennot joka kehykseltä 220 ms rAF:lla
+   * ilman kierroksia, ja jokaisen näytteen mukana on tieto, oliko
+   * sovittelu lukossa (ele) vai lepoladonnan tulos. Vertailu kattaa vain
+   * näytteet ennen ensimmäistä lepoladontaa: ele päättyy siihen.
+   */
+  const NAYTTEET = `async (x, y) => {
+    const l = window.matkakirja.ui.pallolauta;
+    const asennot = (${ASENNOT});
+    // Lepoladonta = sovittelun tulos on UUSI olio (jokainen ladonta luo omansa) eikä lukossa.
+    let viime = l.nostot.sovittelunTulos();
+    const skaala0 = l.kamera.nakyvaAlue()?.skaala ?? 0;
+    const otto = () => {
+      const s = l.nostot.sovittelunTulos(); const lepo = s !== viime && s?.lukossa === false; viime = s;
+      const sk = l.kamera.nakyvaAlue()?.skaala ?? 0;
+      return { t: performance.now(), lepo, sk, liike: Math.abs(sk - skaala0) > 1e-9, a: asennot() };
+    };
+    // Rulla lähetetään sivun sisältä (WheelEvent kartan päällä olevaan
+    // elementtiin, kirjaston wheel-kuuntelija ei vaadi isTrusted-lippua):
+    // ei Node-kierrosta rullan ja näytteen väliin. Kirjaus päättyy 220 ms
+    // ensimmäisen kameran muutoksen jälkeen tai 4 s:n kuluttua.
+    const ulos = [otto()];
+    const kohde = document.elementFromPoint(x, y) ?? l.kotelo;
+    // ctrl + rulla = zoom (pallo.js v1591: paljas rulla panoroi); zoom liukuu
+    // zoominLiuku-rAF:lla, joten ele kestää useita kehyksiä.
+    kohde.dispatchEvent(new WheelEvent('wheel', { deltaY: -120, deltaMode: 0, ctrlKey: true, clientX: x, clientY: y, bubbles: true, cancelable: true }));
+    const alku = performance.now();
+    let liikeAlku = 0;
+    await new Promise((valmis) => {
+      const askel = () => {
+        const o = otto(); ulos.push(o);
+        if (o.liike && !liikeAlku) liikeAlku = o.t;
+        const nyt = performance.now();
+        if ((liikeAlku && nyt - liikeAlku >= 220) || nyt - alku >= 4000) valmis(); else requestAnimationFrame(askel);
+      };
+      requestAnimationFrame(askel);
+    });
+    return ulos;
+  }`;
   const zoomMuutokset = [];
   let zoomLappuja = 0;
+  let zoomNaytteita = 0;
   await sivu.mouse.move(x0, y0);
   for (let porras = 0; porras < 3; porras += 1) {
-    const naytteet = [await sivu.evaluate(`(${ASENNOT})()`)];
-    zoomLappuja = Math.max(zoomLappuja, Object.keys(naytteet[0]).length);
-    await sivu.mouse.wheel(0, -120);
-    naytteet.push(await sivu.evaluate(`(${ASENNOT})()`));
-    await sivu.waitForTimeout(40);
-    naytteet.push(await sivu.evaluate(`(${ASENNOT})()`));
-    for (const m of eleenMuutokset(naytteet)) zoomMuutokset.push(`porras ${porras + 1}: ${m}`);
+    const otot = await sivu.evaluate(`(${NAYTTEET})(${x0}, ${y0})`);
+    const ekaLiike = otot.findIndex((o) => o.liike);
+    if (ekaLiike < 1) { tieto(`${tunnus}: zoomiporras ${porras + 1}`, `kamera ei liikkunut ${otot.length} näytteen aikana (${Math.round(otot.at(-1).t - otot[0].t)} ms, skaala ${otot[0].sk} → ${otot.at(-1).sk})`); continue; }
+    // Alku = viimeinen näyte ennen kameran liikettä; ele päättyy ensimmäiseen lepoladontaan.
+    const alku = otot[ekaLiike - 1].a;
+    zoomLappuja = Math.max(zoomLappuja, Object.keys(alku).length);
+    const eleessa = [];
+    for (const o of otot.slice(ekaLiike)) { if (o.lepo) break; eleessa.push(o.a); }
+    zoomNaytteita += eleessa.length;
+    for (const m of eleenMuutokset([alku, ...eleessa])) zoomMuutokset.push(`porras ${porras + 1}: ${m}`);
+    const lepoIdx = otot.findIndex((o, i) => i >= ekaLiike && o.lepo);
+    tieto(`${tunnus}: zoomiporras ${porras + 1}`, `${otot.length} näytettä ${Math.round(otot.at(-1).t - otot[0].t)} ms:ssa, liike näytteestä ${ekaLiike}, eleessä ${eleessa.length}, lepoladonta ${lepoIdx >= 0 ? 'näytteessä ' + lepoIdx : 'ei'}`);
     // Lepo portaiden välissä: rullan vaimennus kestää työpöydällä lähes
     // kaksi sekuntia, ja vasta sen jälkeen tulee lepoladonta (260 ms).
     // Päätös saa tulla — se on eleen ULKOPUOLELLA — mutta seuraava
@@ -289,9 +340,9 @@ for (const ruutu of RUUDUT) {
     await odotaLepo();
   }
   if (KUVAKANSIO) await sivu.screenshot({ path: join(KUVAKANSIO, `vakaat-${ruutu.width}-zoom.png`), scale: 'css' });
-  tieto(`${tunnus}: zoomi`, `3 porrasta, lappuja ${zoomLappuja}, muutoksia portaiden aikana ${zoomMuutokset.length}`);
+  tieto(`${tunnus}: zoomi`, `3 porrasta, lappuja ${zoomLappuja}, eleen näytteitä ${zoomNaytteita}, muutoksia portaiden aikana ${zoomMuutokset.length}`);
   vaadi(`${tunnus}: 2. zoomiportaan aikana yhdenkään lapun kylki, siirto tai näkyvyys ei muutu`,
-    zoomLappuja >= 10 && zoomMuutokset.length === 0,
+    zoomLappuja >= 10 && zoomNaytteita >= 3 && zoomMuutokset.length === 0,
     zoomMuutokset.slice(0, 5).join(' | '));
   await sivu.waitForTimeout(800);
   const lepoZoom = await sivu.evaluate(`(${LEPO})()`);
