@@ -10,5 +10,5 @@ ovat auki, älä lähetä aloitusviestejä uudelleen. Kytke oma Remote Control
 päälle (set_remote_control self). Jatka luovutuksesta; kirjaa päätökset
 tools/raamattu-kirjaa.mjs:llä.
 
-Viimeisin luovutus: docs/raportit/viesti-fable-luovutus-20260922.md
+Viimeisin luovutus: docs/raportit/viesti-fable-luovutus-20260922-ilta.md
 (päivitetään nollauksen yhteydessä).

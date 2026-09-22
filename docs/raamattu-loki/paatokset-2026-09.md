@@ -1431,3 +1431,7 @@ Fable 22.9.2026 klo 20.10: omistaja valitsi 'ei puhelimella'. Pelikoodarin lippu
 ## OMISTAJA: KOKEET SUORAAN PELIIN (RATASVALIKKO 'PIIRTOKOE' + KEHYSPROFIILIN KYTKIN), TESTAA HUOMENNA (22.9.2026 klo 20.07)
 
 Omistaja 22.9.2026 klo 20.10: pääsee töihin vasta huomenna; helpompi kun kokeet ovat pelissä valittavina. Fable → Pelikoodari: Piirtokoe-asetus (Normaali, Ei puskurikirjoituksia vedossa, Ilman alfakanavaa, Pikselisuhde 1,5, Ei tekstuurivientejä vedossa, Vähemmän piirtokutsuja) + 'Näytä kehysprofiili' -kytkin ratasvalikkoon; Tasaisen ketjuvika ensin; Mac-Safari-mittaus lippu kerrallaan; PR tänä iltana, versio aamuksi.
+
+## FABLEN OMA NOLLAUS (KONTEKSTI 87 %, RAJA 65 % YLITTYI KAATUMISEN JALKEEN ILMAN ILMOITUSTA); LUOVUTUS viesti-fable-luovutus-20260922-ilta.md (22.9.2026 klo 20.08)
+
+Fable 22.9.2026 klo 20.15: luovutus kirjoitettu, aloitusviesti päivitetty; Postivahti ajaa nollauskaavan (RC pois, 90 s, aloitusviesti, RC päälle), Fable kutsuu clear_session self. Postivahdin kierros ei ilmoittanut Fablen 70 %:a — uusi Fable pyytää Postivahtia lisäämään Fablen kontekstin seurantaan.
