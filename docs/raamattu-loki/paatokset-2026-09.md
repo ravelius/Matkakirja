@@ -1583,3 +1583,7 @@ Pitkissä vapaa 29–50 ms kaikissa; dc 431 Normaalissa (muissa 35–43) tarkist
 ## OMISTAJA: 'EI TEKSTUURIVIENTEJA TOKKII YHTA PAHASTI. EI VAIHDETA SIIHEN. VIKA ON JOSSAIN MUUALLA.' → LAATTAVIENTI-BUDJETTI OLETUKSEKSI PERUTTU; KEHYSAIKAMITTARI EI MITTAA NAHTYA NYKIMISTA → UUSI SUUNTA: LIIKKEEN TASAISUUS (KAMERAN SIIRTYMA PER KEHYS, NOLLA-/TUPLASIIRTYMAT, SYOTETAHTI VS rAF), PROMOTION-JUDDER (rAF 59 Hz vs 120 Hz PANEELI, PARITTOMAT 8,3 ms KERRANNAISET), SYOTEPUTKI (touch vs interp) (22.9.2026 klo 23.46)
 
 Omistaja klo 23.45 iPadilla. Pelikoodarille tilattu overlayhin liikkeen tasaisuusmittarit; omistajalle kokeiltavaksi ?koe=syotetouch ja ?koe=interpvanha.
+
+## OMISTAJA: eivienti-TILASSA 'TULEE VAIN ISOMPI HYPPAYS KUN LIIKE PYSAHTYY' — VEDON NYKIMINEN ENNALLAAN; OMISTAJA KOKEILEE ?koe=syotetouch JA ?koe=interpvanha iPADILLA (22.9.2026 klo 23.47)
+
+Klo 23.47. Vahvistaa suunnan: nähty nykiminen on liikkeen epätasaisuutta vedon aikana, ei kehysaikaa.
