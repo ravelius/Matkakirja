@@ -1335,3 +1335,7 @@ Pelikoodari 22.9.2026 klo 18.10: #2821 (51cff63be) sisältää kaikki viisi tapa
 ## PELIKOODARI NOLLATTU (LUOVUTUS #2823); UUSI SESSIO: RATASVALIKON 'VEDON SEURANTA' ENSIN, SITTEN C, D, E (22.9.2026 klo 18.11)
 
 Fable 22.9.2026 klo 18.12: nollauskaava ajettu, worktree Matkakirja-pelikoodari. Aloitusviesti: Vedon seuranta -asetus (Interpolointi/Vanha/Ennakointi/Jousi/Kosketusnäytteet) mallina tarkkuus-asetus.js, #2821:n päälle; sitten C, D, E; rakekerros ja pohjapallo-shader jäihin.
+
+## SYOTEPUTKI TUOTANNOSSA v2115 (INTERPOLOINTI OLETUS + 4 KOELIPPUA + SYOTELOKI); OMISTAJA TESTAA iPHONELLA (22.9.2026 klo 18.12)
+
+Julkaisija 22.9.2026 klo 18.20: #2821 → #2822 → v2115 (main 8930f517), Mac-savukeajo peruttu ennen mergeä, testit 3928/0; #2823 raportti mainissa. Omistajan testiosoitteet: tuotanto = interpolointi; ?koe=interpvanha; ?koe=syotetouch (iPhone); ?koe=syoteennakko; ?koe=syotejousi. Ratasvalikon asetus tulossa uudelta Pelikoodarilta.
