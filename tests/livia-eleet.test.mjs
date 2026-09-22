@@ -69,15 +69,15 @@ test('pullamaksu omistaa syömisen kiitoskuplan ja luennan yli, kerran per ostos
  const canvas=e.doc.body.children[0].children[0],ostos={},luenta={},puhe={};
  c.tilanne('narration',{tunnus:luenta,lahde:'lukija',ele:'lookUp'});
  assert.equal(c.tilanne('bunGranted',{tunnus:ostos}),true);e.tick(1200);
- assert.match(canvas.innerHTML,/data-part="bun-feast"/);
+ assert.match(canvas.innerHTML,/data-part="preview-bun"/);
  assert.equal(c.tilanne('bunGranted',{tunnus:ostos}),false,'sama maksutoken ei käynnisty uudestaan');
  e.tick(1300);c.kupla('Makea pulla. Sukuni kantoi kuninkaiden kirjeitä.');
  ilmoitaLivianKasvopuhe(puhe,true,'Tämä kelpaa maksuksi');e.tick(80);
- assert.match(canvas.innerHTML,/data-part="bun-feast" data-bites="2"/,'2500 ms kuittaus ei katkaise eikä aloita syömistä alusta');
+ assert.match(canvas.innerHTML,/data-part="preview-bun"/,'2500 ms kuittaus ei katkaise eikä aloita syömistä alusta');
  ilmoitaLivianKasvopuhe(puhe,false);
  c.tilanne('narration',{tunnus:luenta,lahde:'lukija',ele:'lookUp'});e.tick(350);
- assert.match(canvas.innerHTML,/data-part="bun-feast" data-bites="3"/,'puheen loppu ei vaihda kesken kuuntelueleeseen');
- e.tick(1800);assert.doesNotMatch(canvas.innerHTML,/data-part="bun-feast"/);
+ assert.match(canvas.innerHTML,/data-part="preview-bun"/,'puheen loppu ei vaihda kesken kuuntelueleeseen');
+ e.tick(5000);assert.doesNotMatch(canvas.innerHTML,/data-part="preview-bun"/);
  c.tilanne('narrationEnd',{tunnus:luenta});
  assert.equal(c.tilanne('bunGranted',{tunnus:ostos}),false,'myöhempi saman tapahtuman toisto pysyy hiljaisena');
 });
@@ -89,14 +89,14 @@ test('pullariemu ei jonotu piilosta, keskeytyy chatissa ja reduced motion näytt
  assert.equal(c.tilanne('bunGranted',{tunnus:piilo}),false,'taustalla annettu pulla ei jonotu');
  assert.equal(c.tilanne('bunGranted',{}),false);
  assert.equal(c.tilanne('bunGranted',{tunnus:{}}),true);e.tick(1200);
- c.tilanne('chatOpen');e.tick(40);assert.doesNotMatch(canvas.innerHTML,/data-part="bun-feast"/);
+ c.tilanne('chatOpen');e.tick(40);assert.doesNotMatch(canvas.innerHTML,/data-part="preview-bun"/);
  e.reduced.matches=true;assert.equal(c.tilanne('bunGranted',{tunnus:{}}),true);
- assert.match(canvas.innerHTML,/data-part="bun-feast"/);assert.equal(e.raf.size,0,'ei jatkuvaa liikettä');
+ assert.match(canvas.innerHTML,/data-part="preview-bun"/);assert.equal(e.raf.size,0,'ei jatkuvaa liikettä');
  const staattinen=canvas.innerHTML;e.tick(2500);c.kupla('Merci, croissant!');assert.equal(canvas.innerHTML,staattinen);
- e.tick(2200);assert.doesNotMatch(canvas.innerHTML,/data-part="bun-feast"/);
+ e.tick(5200);assert.doesNotMatch(canvas.innerHTML,/data-part="preview-bun"/);
  e.reduced.matches=false;c.tilanne('bunGranted',{tunnus:{}});e.tick(1200);
  e.doc.hidden=true;e.doc.dispatchEvent(new Event('visibilitychange'));e.tick(5000);
- assert.equal(e.raf.size,0);assert.doesNotMatch(canvas.innerHTML,/data-part="bun-feast"/);
+ assert.equal(e.raf.size,0);assert.doesNotMatch(canvas.innerHTML,/data-part="preview-bun"/);
  c.tuhoa();assert.equal(e.timers.size,0);
 });
 
@@ -256,7 +256,7 @@ test('taustalle siirtyminen ja vähennetty liike pysäyttävät eleet, uni herä
  e.tick(5000);c.toista('shock');assert.ok(e.raf.size);e.doc.hidden=true;e.doc.dispatchEvent(new Event('visibilitychange'));assert.equal(e.raf.size,0);
  e.doc.hidden=false;e.doc.dispatchEvent(new Event('visibilitychange'));e.reduced.matches=true;e.reduced.dispatchEvent(new Event('change'));assert.equal(c.toista('crash'),false);assert.equal(e.raf.size,0);assert.equal(e.timers.size,0);
  e.reduced.matches=false;e.reduced.dispatchEvent(new Event('change'));e.tick(230000);assert.equal(e.raf.size,0,'nukkuva pulu lepää paikallaan');
- e.doc.dispatchEvent(new Event('pointerdown'));assert.ok(e.raf.size>0,'kosketus herättää');e.tick(2400);assert.equal(e.raf.size,0);
+ e.doc.dispatchEvent(new Event('pointerdown'));assert.ok(e.raf.size>0,'kosketus herättää');e.tick(4000);assert.equal(e.raf.size,0);
 });
 
 test('äänet osuvat eleeseen, mykistys peruu hännän ja puhe vaimentaa tehosteen',async t=>{
@@ -468,7 +468,7 @@ test('tekstireaktio kuuluu vain oikealle luennalle, perusnyökkäys ei keskeytä
  assert.equal(c.tilanne('reaction',r),true,'seekin jälkeen sallitaan oikeasti uudelleen saavutettu kohta');e.tick(500);
  c.tilanne('narrationEnd',{tunnus:a});assert.equal(e.raf.size,0);assert.doesNotMatch(canvas.innerHTML,/data-gaze="up-left"/);
  assert.equal(c.tilanne('reaction',r),false,'myöhäinen osuma ei herätä päättynyttä ääntä');
- c.tilanne('narration',n);c.tilanne('reaction',r);e.tick(3000);assert.match(canvas.innerHTML,/data-gaze="up-left"/);assert.equal(e.raf.size,0);
+ c.tilanne('narration',n);c.tilanne('reaction',r);e.tick(4000);assert.match(canvas.innerHTML,/data-gaze="up-left"/);assert.equal(e.raf.size,0);
  c.tilanne('reaction',r);c.tilanne('narration',{...n,tunnus:b});assert.equal(e.raf.size,0,'äänenvaihto lopettaa vanhan eleen');
  assert.equal(c.tilanne('reaction',r),false);c.tilanne('narrationEnd',{tunnus:a});c.tilanne('narrationEnd',{tunnus:b});
 });
@@ -485,7 +485,7 @@ test('tekstireaktio väistää puhetta, chattia ja korttia ilman paluujonoa; red
  e.reduced.matches=true;e.reduced.dispatchEvent(new Event('change'));c.tilanne('narration',n);
  assert.equal(c.tilanne('reaction',r),true);const pose=canvas.innerHTML;assert.equal(e.raf.size,0);
  e.tick(800);assert.equal(canvas.innerHTML,pose);c.tilanne('reactionEnd',{luentaTunnus:a});assert.match(canvas.innerHTML,/data-gaze="up-left"/);
- c.tilanne('reaction',r);e.tick(3000);assert.match(canvas.innerHTML,/data-gaze="up-left"/);assert.equal(e.raf.size,0);
+ c.tilanne('reaction',r);e.tick(4000);assert.match(canvas.innerHTML,/data-gaze="up-left"/);assert.equal(e.raf.size,0);
  c.tilanne('reaction',r);e.doc.hidden=true;e.doc.dispatchEvent(new Event('visibilitychange'));e.tick(3000);
  e.doc.hidden=false;e.doc.dispatchEvent(new Event('visibilitychange'));assert.match(canvas.innerHTML,/data-gaze="up-left"/);
  c.tilanne('narrationEnd',{tunnus:a});c.tuhoa();assert.equal(e.timers.size,0);

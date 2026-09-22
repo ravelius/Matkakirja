@@ -202,6 +202,15 @@ export function livianSvgMalli(s,{right=0}={}) {
   m.wing='flap';m.wingAmount=.5+.5*Math.sin(hoverPhase);
  }
  if(id==='wind')m.bodyLean+=8*gate;
+ // Vain katselusivun ehdotuksissa: sama hyväksytty Pulu, mutta uusi
+ // elekohtainen liikekello päästää pään johtamaan ja vartalon/siivet perään.
+ // Peliohjain ei aseta tätä kenttää, joten julkaistun eleen rata ei muutu.
+ if(s.katseluRata){
+  const r=s.katseluRata;
+  m.katseluRata=r;
+  m.headX=r.paaX||0;m.headY+=r.paaY||0;
+  m.headAngle+=r.paaKulma||0;m.bodyLean+=r.rinta||0;
+ }
  return m;
 }
 
@@ -228,6 +237,11 @@ function lvWing(kind,side,amount,phase=0) {
  const shift=kind==='scratch'?-44:kind==='shade'?-55:kind==='cover'?-38:kind==='shy'?-16:0;
  return `<g data-part="${side}-wing" transform="${lvWingTransform(anchor,shift,flip,angle)}"><path d="M-3 4Q-11-7-4-20L4-38Q7-44 10-37L10-29Q16-42 20-37L17-24Q23-35 26-30L22-17Q29-23 29-17Q23-5 12 3Q4 8-3 4Z" fill="${side==='near'?'#8499a3':'#788e99'}"/><path d="M0-13L8-27M5-7L16-23M10-1L21-15" fill="none" stroke="#506b7a" stroke-width="3.7" stroke-linecap="round"/></g>`;
 }
+function lvKatseluSiipi(side,maara,sulka){
+ const anchor=side==='near'?121:88,flip=side==='near'?1:-1;
+ const kulma=165-119*maara+(maara-sulka)*12;
+ return `<g data-part="${side}-wing" transform="${lvWingTransform(anchor,0,flip,lvRound(kulma))} scale(${lvRound(.55+.45*maara)} ${lvRound(.35+.65*maara)})"><path d="M-3 4Q-11-7-4-20L4-38Q7-44 10-37L10-29Q16-42 20-37L17-24Q23-35 26-30L22-17Q29-23 29-17Q23-5 12 3Q4 8-3 4Z" fill="${side==='near'?'#8499a3':'#788e99'}"/><path d="M0-13L8-27M5-7L16-23M10-1L21-15" fill="none" stroke="#506b7a" stroke-width="3.7" stroke-linecap="round"/></g>`;
+}
 function lvFeet(m,s) {
  const step=m.walking?(m.step??Math.sin(m.p*Math.PI*14)):0;
  const tuck=m.mapHover?.height||0,leg=8-5*tuck,toes=1-.72*tuck;
@@ -239,17 +253,36 @@ function lvBird(s,m,prefix){
  const headState={...s,frame:m.mirror?'left':m.face};
  const down=s.frame==='sleep'?10:s.frame==='preen'?8:0;
  // Foot anchors stay fixed. The chest leans and the neck is occluded as the head approaches the camera.
- const body=`<g transform="rotate(${m.bodyLean} 109 177)"><path d="M122 156L139 171L131 172L137 175L122 174L113 163Z" fill="#546b7a"/><path d="M87 137Q97 127 115 133Q131 137 132 152Q134 170 117 175Q100 178 89 165Q82 154 87 137Z" fill="#97a5ac"/><path d="M89 141Q98 134 105 137Q96 147 96 158Q97 170 109 175Q96 171 89 162Q84 152 89 141Z" fill="#b1bcc0"/><path d="M117 135Q132 140 132 154Q134 171 117 175L110 172Q119 161 117 135Z" fill="#738895"/></g>`;
+ const hengitys=m.katseluRata?.hengitys||0;
+ const vartaloMuunnos=hengitys?`translate(109 177) rotate(${lvRound(m.bodyLean)}) scale(${lvRound(1-hengitys*.025)} ${lvRound(1+hengitys*.055)}) translate(-109 -177)`:`rotate(${m.bodyLean} 109 177)`;
+ const body=`<g transform="${vartaloMuunnos}"><path d="M122 156L139 171L131 172L137 175L122 174L113 163Z" fill="#546b7a"/><path d="M87 137Q97 127 115 133Q131 137 132 152Q134 170 117 175Q100 178 89 165Q82 154 87 137Z" fill="#97a5ac"/><path d="M89 141Q98 134 105 137Q96 147 96 158Q97 170 109 175Q96 171 89 162Q84 152 89 141Z" fill="#b1bcc0"/><path d="M117 135Q132 140 132 154Q134 171 117 175L110 172Q119 161 117 135Z" fill="#738895"/></g>`;
  const peck=s.mapPeck?` data-map-peck="${s.mapPeck.peck}" data-map-peck-amount="${lvRound(s.mapPeck.amount)}"`:'';
  /* 192 px:n PNG piirretään 96 px:n nimelliskokoa suurempana, jotta
   * läpinäkyvä visiiri ympäröi koko pään mutta ei peitä nokkaa tai silmiä.
   * Asuste on samassa pään muunnoksessa: nyökkäys, kallistus ja ilme
   * pysyvät yhtenä paperinukkena. */
  const kypara=s.astronautti?`<image data-part="astronautti-kypara" href="${LIVIAN_ASTRONAUTTI_KYPARA}" x="-7" y="-10" width="126" height="126" preserveAspectRatio="xMidYMid meet"/>`:'';
- const head=`<g data-part="approach"${peck} transform="translate(${-8*m.lean} ${8*m.lean+down+m.headY}) rotate(${m.headAngle} 105 146) translate(105 146) scale(${lvRound(m.headScale)}) translate(-105 -146)"><g transform="translate(44 61) scale(1 .87)">${livianSvgPaa(headState,{prefix,lean:m.lean,strength:m.strength})}${kypara}</g></g>`;
+ const headX=m.katseluRata?lvRound(-8*m.lean+(m.headX||0)):-8*m.lean;
+ const headY=m.katseluRata?lvRound(8*m.lean+down+m.headY):8*m.lean+down+m.headY;
+ const headAngle=m.katseluRata?lvRound(m.headAngle):m.headAngle;
+ const head=`<g data-part="approach"${peck} transform="translate(${headX} ${headY}) rotate(${headAngle} 105 146) translate(105 146) scale(${lvRound(m.headScale)}) translate(-105 -146)"><g transform="translate(44 61) scale(1 .87)">${livianSvgPaa(headState,{prefix,lean:m.lean,strength:m.strength})}${kypara}</g></g>`;
  const dashPart=s.flight?.kind==='chatDashOut'||s.flight?.kind==='chatDashBack'?` data-part-chat-dash="${s.flight.kind}"`:'';
  const hoverPart=m.mapHover?` data-map-hover="${lvRound(m.mapHover.height)}"`:'';
- const wing=side=>m.mapHover?`<g opacity="${lvRound(1-m.mapHover.height)}">${lvWing('fold',side,0)}</g><g opacity="${lvRound(m.mapHover.height)}">${lvWing(m.wing,side,m.wingAmount,m.p*12)}</g>`:lvWing(m.wing,side,m.wingAmount,m.p*12);
+ const wing=side=>{
+  const perus=m.mapHover?`<g opacity="${lvRound(1-m.mapHover.height)}">${lvWing('fold',side,0)}</g><g opacity="${lvRound(m.mapHover.height)}">${lvWing(m.wing,side,m.wingAmount,m.p*12)}</g>`:lvWing(m.wing,side,m.wingAmount,m.p*12);
+  const rata=m.katseluRata;
+  if(!rata||m.flight)return perus;
+  const maara=lvClamp(side==='near'?rata.siipi:rata.takasiipi);
+  if(maara<.001)return perus;
+  const sulka=lvClamp(rata.sulat||0),ero=side==='near'?maara-sulka:0;
+  // Kasvojen peitto, kirjaan kurottaminen, sääsuoja ja osoittaminen ovat
+  // tarinan kannalta täsmällisiä käsieleitä: niiden muoto ei saa vaihtua
+  // yleiseksi räpytykseksi. Uusi rata antaa niille vain pienen jälkiliikkeen.
+  if(m.wing!=='fold')return `<g data-part="katselu-siipi-${side}" transform="rotate(${lvRound(ero*9)} ${side==='near'?121:88} 143)">${perus}</g>`;
+  const uusi=lvKatseluSiipi(side,maara,maara-ero);
+  const vaihto=lvClamp(maara/.14);
+  return `<g data-part="katselu-siipi-${side}"><g opacity="${lvRound(1-vaihto)}">${perus}</g><g opacity="${lvRound(vaihto)}">${uusi}</g></g>`;
+ };
  return `<g data-part="whole-bird"${dashPart}${hoverPart} transform="${lvBirdTransform(m)}">
  ${lvFeet(m,s)}${wing('far')}${body}${head}${wing('near')}
  </g>`;
@@ -268,7 +301,7 @@ function lvChatDustFx(s){
 }
 function lvProps(s,m,prefix){
  let out='';const x=m.x,y=m.y;
- if(m.id==='bunFeast'&&s.feast?.phase==='bite'){
+ if(m.id==='bunFeast'&&s.feast?.phase==='bite'&&!s.katseluRata?.pulla){
   const grab=lvClamp(s.feast.grab),bites=Math.max(0,Math.min(3,s.feast.bites||0));
   const bx=76+23*grab,by=286-35*grab,scale=1-bites*.105;
   // Jokainen puraisu etenee sisäänpäin, ei jo syödyn reunan ulkopuolelle.
@@ -276,9 +309,28 @@ function lvProps(s,m,prefix){
   out+=`<g data-part="bun-feast" data-bites="${bites}" transform="translate(${lvRound(bx)} ${lvRound(by)}) scale(${lvRound(scale)})"><defs><mask id="${prefix}bun-bites"><rect x="-20" y="-22" width="52" height="44" fill="white"/>${cuts}</mask></defs><g mask="url(#${prefix}bun-bites)"><ellipse cx="0" cy="0" rx="19" ry="13" fill="#d59a50"/><path d="M-16 2Q-13-12 0-10Q14-13 17 2Q13 13 0 12Q-14 13-16 2Z" fill="#e7bd76"/><path d="M-10-2Q-7-9 0-6Q7-10 11-2M-8 5Q0 9 9 4" fill="none" stroke="#b8783e" stroke-width="2" stroke-linecap="round"/></g></g>`;
   if(bites>0){const burst=lvClamp(1-Math.abs((s.p-[.34,.48,.62][bites-1])/.035));for(let i=0;i<3;i++)out+=`<path data-part="bun-crumb" d="M${lvRound(91+i*7)} ${lvRound(250+Math.sin(i*2.1)*4+burst*8)}l3 1-1 3-3-1Z" fill="#c18b48" opacity="${lvRound(burst)}"/>`;}
  }
- if(s.side?.kind==='bread'){
+ if(s.side?.kind==='bread'&&!s.katseluRata?.pulla){
   const bx=s.propsRight?x+12:x-80+(s.side.x||0)*2,by=y-50+(s.side.y||0)*1.5;
   out+=`<g transform="translate(${bx} ${by}) scale(${s.propsRight?.62:1})"><defs><mask id="${prefix}bite"><rect x="-8" y="-25" width="60" height="60" fill="white"/>${s.side.bite?'<circle cx="35" cy="-11" r="7" fill="black"/><circle cx="41" cy="0" r="7" fill="black"/>':''}</mask></defs><g mask="url(#${prefix}bite)"><path d="M0 9C-3-4 4-14 18-14C32-16 41-7 40 7Q38 21 20 20Q2 22 0 9Z" fill="#c18b48"/><ellipse cx="20" cy="1" rx="18" ry="13" fill="#e0b875"/><path d="M11 4C9-9 34-8 32 5C30 15 15 15 15 5C15 0 25-1 25 5" fill="none" stroke="#ab743f" stroke-width="2.5" stroke-linecap="round"/></g></g>`;
+ }
+ if(s.katseluRata?.pulla){
+  const p=lvClamp(s.katseluRata.pulla.p);
+  const lift=lvEase((p-.12)/.18)*(1-lvEase((p-.79)/.13));
+  const bx=lvRound(79+2*lift),by=lvRound(290-32*lift);
+  const show=lvEase(p/.055)*(1-lvEase((p-.88)/.09));
+  const bites=m.id==='bunFeast'?Math.max(0,Math.min(3,s.feast?.bites||0)):(p>.36?2:p>.27?1:0);
+  const scale=lvRound(1-bites*.095);
+  let cuts='';for(const [cx,cy] of [[15,-5],[12,4],[4,-4]].slice(0,bites))cuts+=`<circle cx="${cx}" cy="${cy}" r="6" fill="black"/>`;
+  // Siipi tavoittaa pullan ennen nostoa ja kannattelee sitä nokan alla.
+  // Sama näkyvä otteenvaihto seuraa pullaa: herkku ei leiju irrallaan.
+  const wing=lvClamp((p-.075)/.14)*(1-lvEase((p-.83)/.13));
+  out+=`<g data-part="holding-wing" opacity="${lvRound(wing)}"><path d="M${lvRound(x-1)} ${lvRound(y-30)}Q${lvRound(x-16)} ${lvRound(y-36)} ${lvRound(bx+10)} ${lvRound(by+7)}Q${lvRound(bx+3)} ${lvRound(by+12)} ${lvRound(bx+4)} ${lvRound(by+5)}Q${lvRound(x-16)} ${lvRound(y-26)} ${lvRound(x-1)} ${lvRound(y-30)}Z" fill="#8499a3" stroke="#506b7a" stroke-width="1.2"/></g>`;
+  out+=`<g data-part="preview-bun" data-bites="${bites}" opacity="${lvRound(show)}" transform="translate(${bx} ${by}) scale(${scale})"><defs><mask id="${prefix}preview-bun-bites"><rect x="-19" y="-16" width="38" height="32" fill="white"/>${cuts}</mask></defs><g mask="url(#${prefix}preview-bun-bites)"><ellipse rx="15" ry="11" fill="#d59a50"/><path d="M-13 2Q-11-9 0-8Q10-9 13 2Q9 10 0 10Q-11 10-13 2Z" fill="#e7bd76"/><path d="M-8-2Q-4-7 1-5Q6-7 9-1M-6 5Q0 7 7 4" fill="none" stroke="#b8783e" stroke-width="1.5" stroke-linecap="round"/></g></g>`;
+ }
+ if(s.katseluRata?.mapContact){
+  const opacity=lvRound(lvClamp(s.katseluRata.mapContact));
+  const cx=lvRound(x-34+(s.katseluRata.mapPeckNumber===2?3:0));
+  out+=`<g data-part="map-contact" opacity="${opacity}" fill="none" stroke="#aa9272" stroke-width="1.1" stroke-linecap="round"><path d="M${cx-8} 301q-3-2-4-4m${cx+16} 4q3-2 4-4"/><ellipse cx="${cx}" cy="302" rx="8" ry="1.3"/></g>`;
  }
  if(s.crumbY!==null&&s.crumbY!==undefined)out+=`<path d="M${x-34} ${y-36+(s.crumbY-35)*4}l4 1-2 4-3-1Z" fill="#c18b48"/>`;
  if(s.side?.kind==='pfft')out+=`<path d="M${x-47} ${y-46}q-16-10-22-4m20 8q-15 2-23 12" fill="none" stroke="#9b9c91" stroke-width="1.6" stroke-linecap="round"/>`;
@@ -333,11 +385,11 @@ let lvSerial=0;
 const LV_LEIJUNNAN_PORTAAT=6;
 const lvLeijuVanha=()=>{try{return new URLSearchParams(globalThis.location?.search??'').get('koe')?.split(',').includes('leijuvanha')??false;}catch{return false;}};
 const lvLeijuntaAvain=s=>{try{const h=s.mapHover?.height;return JSON.stringify({...s,mapHover:Number.isFinite(h)?Math.round(h*LV_LEIJUNNAN_PORTAAT)/LV_LEIJUNNAN_PORTAAT:null});}catch{return null;}};
-export function luoLivianSvg(element) {
+export function luoLivianSvg(element,{kuva=livianSvgKuva}={}) {
  let right=0;const prefix='livia'+(++lvSerial);
  let viimeAvain=null,osat=null;
  function resize(extra=0){right=Math.max(0,extra);element.style.width=`${152+right}px`;element.style.height='304px';viimeAvain=null;}
- function paint(s){element.innerHTML=livianSvgKuva(s,{right,prefix});viimeAvain=lvLeijuntaAvain(s);osat=null;}
+ function paint(s){element.innerHTML=kuva(s,{right,prefix});viimeAvain=lvLeijuntaAvain(s);osat=null;}
  /* Vaihe-eron paikkaus: true, kun kuva päivitettiin ilman rakennusta. */
  function paikkaa(s){
   if(!(s?.mapHover?.height>0)||!element.querySelector)return false;

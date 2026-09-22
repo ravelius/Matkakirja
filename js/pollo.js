@@ -950,9 +950,9 @@ const POLLO_ALANAPPIRIVISSA = false;
 /**
  * KELLUVAN NAPIN VARAPAIKKA pikseleinä, kun nappia ei ole piirretty
  * (ks. ankkuriLaatikko). Luvut vastaavat css/styles.css:n sääntöä
- * `.pollo-nappi.pollo-kelluu.pollo-kelluu-kartalla`: oikea reuna
- * 1,1rem, halkaisija 2,9rem ja alareuna 5,3rem — 16 px:n juurikoolla
- * 18, 46 ja 85 pikseliä. Tarkkuus riittää: kupla vain asettuu tähän
+ * `.pollo-nappi.pollo-kelluu.pollo-kelluu-kartalla.livia-kasvot-valmis`:
+ * oikea reuna ja alareuna 3,6rem, halkaisija 48 px — 16 px:n
+ * juurikoolla noin 58, 48 ja 58 pikseliä. Tarkkuus riittää: kupla asettuu tähän
  * kohtaan, mitään ei kohdisteta napin pikseleihin.
  */
 /** Pinon etäisyys ruudun reunasta (px), sama kuin vaakapaikan marginaali. */
@@ -967,7 +967,7 @@ const KUPLAN_NAPAUTUSSADE_PX = 8;
 const PINON_MARGINAALI = 14;
 /** Kuplan kärjen keskikohta kuplan oikeasta reunasta (css right 1.1rem + 6px). */
 const PINON_KARJEN_SIIRTO = 24;
-const KELLUVAN_NAPIN_VARAPAIKKA = { reuna: 18, koko: 46, pohja: 85 };
+const KELLUVAN_NAPIN_VARAPAIKKA = { reuna: 58, koko: 48, pohja: 58 };
 
 /*
  * ── VAIN VIIMEISIN KUPLA, HISTORIA KELATTAVISSA ──────────────────────
@@ -4243,8 +4243,8 @@ export class Pollo {
    * vasemmassa yläkulmassa. Livian avauskupla puhuu juuri siinä
    * näkymässä, ja ilman varapaikkaa se asettuisi ruudun yläreunan
    * ulkopuolelle. Varapaikka on se kohta, jossa kelluva nappi
-   * muutenkin on (css/styles.css .pollo-kelluu-kartalla: oikea reuna,
-   * 5,3rem alalaidasta) — kupla puhuu siis siitä paikasta, johon
+   * muutenkin on (css/styles.css .pollo-kelluu-kartalla.livia-kasvot-valmis:
+   * 3,6rem kummastakin reunasta) — kupla puhuu siis siitä paikasta, johon
    * pöllö ilmestyy myöhemmin.
    *
    * Muut kuplat eivät päädy tänne piilotetulla napilla: ne palaavat

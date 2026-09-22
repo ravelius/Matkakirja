@@ -1,17 +1,77 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {LIVIA_SVG_ELEET} from '../js/livia-svg.js';
+import {LIVIA_SVG_ELEET,livianSvgAsento,livianSvgKuva} from '../js/livia-svg.js';
 import {livianSvgPaa} from '../js/livia-svg-paa.js';
 import {LIVIAN_UUDET_VERSIOT,uudenEleenAsento,uudenEleenKuva} from '../docs/livia-uudet-versiot.mjs';
+import {LIVIAN_UUDET_PELIELEET,livianUusiPelitila,livianUusiPelikuva} from '../js/livia-uudet-versiot.js';
 
 test('kasvopohjien polut vastaavat toisiaan myös tuotantopään muuttuessa',()=>{
   const topologia=frame=>[...livianSvgPaa({frame},{prefix:'koe'}).replace(/<path data-part="smile"[^>]*\/>/,'')
     .matchAll(/\b(d|transform|cx|cy|rx|ry|x|y)="([^"]*)"/g)]
     .map(m=>[m[1],m[2].replace(/-?\d*\.?\d+(?:e[-+]?\d+)?/gi,'#')]);
-  for(const ilme of ['glance','down','shock','blink','smile'])assert.deepEqual(topologia(ilme),topologia('rest'),ilme);
+  for(const ilme of ['glance','down','shock','blink','smile','smug','grin','disbelief','yawn'])assert.deepEqual(topologia(ilme),topologia('rest'),ilme);
 });
 
-test('neljä katseluehdotusta pysyvät erillään pelieleistä ja kestävät kelauksen',()=>{
+test('katselun kaikki ehdotukset käyttävät vanhan Pulun piirrosta',()=>{
+  assert.equal(LIVIAN_UUDET_VERSIOT.length,LIVIA_SVG_ELEET.length+2);
+  assert.equal(LIVIAN_UUDET_VERSIOT[0].id,'uusi-ilahtuu');
+  for(const e of LIVIA_SVG_ELEET)assert.equal(LIVIAN_UUDET_VERSIOT.filter(u=>u.id==='uusi-'+e.id).length,1,e.id+' saa oman version');
+  for(const e of LIVIAN_UUDET_VERSIOT){
+    const kuva=uudenEleenKuva(uudenEleenAsento(e.id,.4));
+    assert.doesNotMatch(kuva,/data-style="sarjakuvakokeilu"|cartoon-eye|data-part="scarf"/);
+    assert.match(kuva,/data-part="whole-bird"/);
+    assert.match(kuva,/data-part="head"/,'vanhan Pulun pää');
+  }
+  for(const id of ['uusi-hymy-levea','uusi-hymy-pieni','uusi-hymy-nauru','uusi-livia-ilahtuu','uusi-sarjakuvapulu']){
+    assert.ok(!LIVIAN_UUDET_VERSIOT.some(e=>e.id===id));
+    assert.throws(()=>uudenEleenAsento(id,.4),RangeError);
+  }
+});
+
+test('peliohjain saa jokaiselle 70 eleelle saman uuden version kuin katselussa',()=>{
+  assert.equal(LIVIAN_UUDET_PELIELEET.length,LIVIA_SVG_ELEET.length);
+  for(const ele of LIVIAN_UUDET_PELIELEET){
+    const uusi=LIVIAN_UUDET_VERSIOT.find(e=>e.id==='uusi-'+ele.id);
+    assert.equal(ele.duration,uusi.duration,ele.id+' kesto');
+    const asento=livianUusiPelitila(ele.id,.46,{voimakkuus:.5});
+    assert.equal(asento.ele,ele.id);
+    const kuva=livianUusiPelikuva(asento,{prefix:'peli',right:12});
+    assert.match(kuva,/data-part="whole-bird"/,ele.id);
+    assert.doesNotMatch(kuva,/NaN|Infinity|undefined/,ele.id);
+    assert.ok(asento.uusiPiirto||asento.katseluRata,ele.id+' käyttää uutta rataa');
+  }
+  assert.equal(livianUusiPelitila('cityExplain',.46,{cueKestoMs:6200}).cityExplain.variant,'pitka');
+  assert.equal(livianUusiPelitila('cityExplain',.46,{cueKestoMs:6200,playbackRate:2}).cityExplain.variant,'lyhyt');
+  assert.match(livianUusiPelikuva(livianUusiPelitila('bookStudy',.5)),/data-uusi-versio="uusi-bookStudy"/);
+  const avaruus={...livianUusiPelitila('bookStudy',.5),astronautti:true};
+  assert.match(livianUusiPelikuva(avaruus),/data-part="astronautti-kypara"/);
+  assert.doesNotMatch(livianUusiPelikuva(avaruus),/data-uusi-versio=/);
+  assert.deepEqual(LIVIAN_UUDET_VERSIOT.filter(e=>!LIVIAN_UUDET_PELIELEET.some(p=>p.id===e.baseId)).map(e=>e.id),[]);
+  assert.ok(!LIVIAN_UUDET_PELIELEET.some(e=>['uusi-ilahtuu','uusi-bookPanic'].includes(e.id)),'lisäkohtaukset jäävät omalle myöhemmälle käyttöportille');
+});
+
+test('vanhan Pulun ilahtumisessa katse, rintasiipi ja tervehdys seuraavat eri rytmeissä',()=>{
+  const a=p=>uudenEleenAsento('uusi-ilahtuu',p),kuva=p=>uudenEleenKuva(a(p));
+  assert.ok(a(.055).katse<-.8&&a(.055).siipi===0);
+  assert.equal(a(.155).rintasiipi,0);
+  assert.equal(a(.325).rintasiipi,1);
+  assert.equal(a(.45).rintasiipi,1);
+  assert.match(kuva(.325),/data-part="chest-wing" opacity="1"/);
+  assert.doesNotMatch(kuva(.325),/data-part="friendly-beak"|data-part="tongue"/);
+  assert.ok(a(.4).paaKulma<-9&&a(.415).rapaytys>.8);
+  assert.equal(a(.535).rintasiipi,0);
+  assert.ok(a(.615).siipi>.9&&a(.615).takasiipi<.25);
+  assert.ok(a(.615).sulat<a(.615).siipi,'siivenkärjet seuraavat jäljessä');
+  assert.equal(kuva(0),kuva(1),'vanha Pulu palautuu lepoon');
+  let edellinen=a(0);
+  for(let i=1;i<=1000;i++){
+    const s=a(i/1000);
+    for(const k of ['rintasiipi','siipi','hengitys'])assert.ok(Math.abs(s[k]-edellinen[k])<.035,k+' vaihtuu jatkuvasti');
+    edellinen=s;
+  }
+});
+
+test('katseluehdotukset pysyvät erillään pelieleistä ja kestävät kelauksen',()=>{
   const perus=LIVIA_SVG_ELEET.map(e=>e.id);
   for(const e of LIVIAN_UUDET_VERSIOT){
     assert.ok(!perus.includes(e.id)&&perus.includes(e.baseId));
@@ -25,9 +85,162 @@ test('neljä katseluehdotusta pysyvät erillään pelieleistä ja kestävät kel
       for(const m of kuva.matchAll(/url\(#([^)]+)\)/g))assert.ok(ids.includes(m[1]),m[1]);
       assert.ok(ids.every(id=>id.startsWith('koe')));
     }
-    for(const k of ['paaKulma','paaY','paaX','rinta','siipi','takasiipi','rapaytys','ilme'])assert.equal(asento(0)[k],asento(1)[k],e.id+' '+k);
-    const jalat=p=>uudenEleenKuva(asento(p)).match(/<g data-part="feet">.*?<\/g>/)[0];
-    assert.equal(jalat(0),jalat(.45),'jalkojen ankkurit pysyvät maassa');
+    if(e.id!=='uusi-bookPanic')for(const k of ['paaKulma','paaY','paaX','rinta','siipi','takasiipi','rapaytys','ilme','suusiipi','hengitys','rintasiipi'])assert.equal(asento(0)[k],asento(1)[k],e.id+' '+k);
+    const jalat=p=>uudenEleenKuva(asento(p)).match(/<g data-part="feet">.*?<\/g>/)?.[0];
+    if(jalat(0)&&jalat(.45)&&!asento(.45).perusAsento?.walk&&e.baseId!=='cityExplain')
+      assert.equal(jalat(0),jalat(.45),'paikallaan tehdyn eleen jalat pysyvät maassa');
+  }
+});
+
+test('kiireinen kirjanhaku erottaa sähläyksen, havahtumisen, peittelyn ja ryhdin',()=>{
+  const a=p=>uudenEleenAsento('uusi-bookPanic',p),svg=p=>uudenEleenKuva(a(p));
+  assert.equal(a(0).kirjaKulma,180);
+  assert.equal(a(.246).sivu,7,'seitsemän nopeaa sivunkääntöä alle 2,8 sekunnissa');
+  assert.ok(a(.15).kyyry>.95&&a(.15).paaY>20,'alussa pää ja koko vartalo painuvat kyyryyn');
+  assert.ok(a(.40).paaY<-14&&a(.40).kyyry===0,'kirjan sulkemisen jälkeen Pulu suoristuu pitkäksi');
+  assert.equal(a(.25).sivu,a(.80).sivu,'havahtumisessa ja kirjan käännössä ei plärätä');
+  assert.ok(a(.28).havahdus>.8&&a(.32).havahdus===0);
+  assert.equal(a(.286).kirjaKiinni,0);
+  assert.equal(a(.304).kirjaKiinni,1,'läimäys kestää alle 200 ms');
+  assert.equal(a(.728).kirjaKiinni,1,'kirja pysyy kiinni koko hitaan käännön');
+  assert.equal(a(.80).kirjaKiinni,0);
+  assert.equal(a(.43).kirjaKulma,180);
+  assert.equal(a(.69).kirjaKulma,360);
+  assert.ok(a(.449).kirjaKulma<180,'ranteen pieni vastaliike ennen kääntöä');
+  assert.equal(a(.531).kirjaKulma,a(.544).kirjaKulma,'lyhyt otteenvaihto pysäyttää kierron');
+  assert.ok(a(.54).kirjaX>15&&a(.54).kirjaY<0&&a(.54).kirjaKallistus>.85,'kirja nousee rinnan luo ja kääntyy myös syvyyssuunnassa');
+  assert.ok(a(.50).siipi>a(.546).siipi+.2,'siipi päästää otetta vaihdon ajaksi');
+  assert.ok(a(.54).vihellys>.9&&a(.54).katse>.9,'katsoo sivuun ja viheltää käännön aikana');
+  assert.match(svg(.155),/data-part="sweat"/);
+  assert.doesNotMatch(svg(.45),/data-part="sweat"/);
+  assert.match(svg(.56),/data-part="whistle"/);
+  assert.match(svg(.31),/data-part="book-closed" opacity="1"/);
+  assert.match(svg(.31),/data-part="book-slap"/);
+  assert.equal(a(.80).lasikorjaus,0,'lasit oikaistaan vasta avatun kirjan jälkeen');
+  assert.equal(a(.855).lasikorjaus,1);
+  assert.match(svg(.855),/data-part="glasses-adjust" transform="translate\(0 -4\)/);
+  assert.equal(a(1).lasikorjaus,0);
+  assert.ok(a(1).ryhti>.7&&a(1).paaKulma>0&&a(1).paaY<0,'leuka nousee lopuksi arvokkaasti');
+  assert.equal(a(1).siipi,0);assert.equal(a(1).vihellys,0);
+  assert.doesNotMatch(svg(1),/data-part="sweat"|data-part="whistle"/);
+  assert.match(svg(.1),/>ATLAS<\/text>/,'kannen epäsymmetrinen otsikko kertoo kirjan suunnan');
+  for(let i=1;i<=1000;i++)assert.ok(Math.abs(a(i/1000).kirjaKulma-a((i-1)/1000).kirjaKulma)<4,'kirja kääntyy jatkuvasti eikä hyppää');
+});
+
+test('vanha nokka säilyy myös tervehdyksessä, naurussa ja haukotuksessa',()=>{
+  for(const e of LIVIAN_UUDET_VERSIOT){
+    for(const p of [0,.22,.4,.61,1]){
+      const svg=uudenEleenKuva(uudenEleenAsento(e.id,p));
+      if(!svg.includes('data-livia-visible="false"'))assert.match(svg,/data-part="head"/,e.id+' alkuperäinen pää');
+      assert.doesNotMatch(svg,/friendly-beak|mouth-space|data-part="tongue"|cartoon-beak/,e.id+' ei suukokeiluja');
+    }
+  }
+});
+
+test('vanhan Pulun pään, hengityksen ja siipien liike pysyy eriytettynä',()=>{
+  const a=(id,p)=>uudenEleenAsento('uusi-'+id,p);
+  assert.ok(a('chuckle',.20).hengitys>0&&a('chuckle',.35).hengitys<0);
+  assert.ok(a('chuckle',.32).paaKulma<-15&&a('chuckle',.32).rinta<a('chuckle',.36).rinta);
+  assert.ok(a('yawn',.6).hengitys===1&&a('yawn',.7).hengitys===1,'haukotus pysyy avoimena');
+  assert.ok(a('yawn',.9).hengitys<0&&a('yawn',.9).paaY>3,'huokaus tulee vasta aktiivivaiheen jälkeen');
+  assert.ok(a('grin',.17).ilme>0&&a('grin',.23).paaKulma<0);
+  assert.equal(a('disbelief',.13).paaKulma,a('disbelief',.26).paaKulma);
+  assert.ok(a('disbelief',.46).siipi>a('disbelief',.46).takasiipi*2);
+  assert.ok(a('disbelief',.66).katse>.9);
+  for(const id of ['chuckle','yawn','grin','disbelief']){
+    let edellinen=a(id,0);
+    for(let i=1;i<=1000;i++){
+      const s=a(id,i/1000);
+      for(const k of ['paaKulma','rinta','siipi','suusiipi','hengitys'])assert.ok(Math.abs(s[k]-edellinen[k])<.6,id+' '+k+' ei hypähdä');
+      edellinen=s;
+    }
+  }
+});
+
+test('Touhu-eleissä tekeminen kestää pidempään ilman että nopea pärskähdys venyy',()=>{
+  const touhut=LIVIA_SVG_ELEET.filter(e=>e.group==='Touhu');
+  for(const ele of touhut){
+    const uusi=LIVIAN_UUDET_VERSIOT.find(e=>e.id==='uusi-'+ele.id);
+    assert.ok(uusi.duration>=ele.duration*1.35,ele.id+' saa olennaisesti lisää toiminta-aikaa');
+  }
+  for(const id of ['crumb','bread'])assert.ok(['crumb','chew','chewManic'].includes(uudenEleenAsento('uusi-'+id,.68).perusAsento.frame),id+' syö yhä loppupuolella');
+  assert.equal(uudenEleenAsento('uusi-preen',.72).perusAsento.frame,'preen');
+  assert.equal(uudenEleenAsento('uusi-sleep',.78).perusAsento.frame,'sleep');
+  assert.equal(uudenEleenAsento('uusi-wake',.75).perusAsento.frame,'front');
+  for(const id of ['wind','rain','sun','snow']){
+    const asento=uudenEleenAsento('uusi-'+id,.75).perusAsento;
+    assert.equal(asento.fx,id,id+' jatkaa sään kanssa touhuamista');
+  }
+  assert.equal(uudenEleenAsento('uusi-wind',.6).perusAsento.frame,'glance','tuulessa silmät eivät pysy koko ajan kiinni');
+  const ennen=uudenEleenAsento('uusi-sneeze',.5),jalkeen=uudenEleenAsento('uusi-sneeze',.6);
+  assert.equal(ennen.perusAsento.frame,'yawn');assert.equal(jalkeen.perusAsento.frame,'blink');
+  assert.ok(jalkeen.toimintaP-ennen.toimintaP>.1,'aivastuksen isku säilyy nopeana');
+});
+
+test('pulla pysyy siiven kannattelemana ja siitä katoaa paloja ruokailun aikana',()=>{
+  const kuva=(id,p)=>uudenEleenKuva(uudenEleenAsento('uusi-'+id,p));
+  for(const id of ['bread','bunFeast']){
+    const alku=kuva(id,.12),nosto=kuva(id,.36),syonti=kuva(id,.68);
+    assert.match(alku,/data-part="preview-bun"/);
+    assert.match(nosto,/data-part="holding-wing"/);
+    assert.match(nosto,/data-part="preview-bun"/);
+    assert.match(syonti,/data-bites="[1-3]"/);
+    assert.doesNotMatch(nosto,/data-part="bun-feast"/);
+    assert.doesNotMatch(nosto,/id="liviabite"/);
+  }
+  assert.ok(LIVIAN_UUDET_VERSIOT.find(e=>e.id==='uusi-bunFeast').duration>=7000);
+});
+
+test('kartan nokkimisessa on kaksi nopeaa kosketusta ja niiden välinen tarkastelu',()=>{
+  const a=p=>uudenEleenAsento('uusi-mapPeck',p);
+  assert.equal(a(.1).perusAsento.mapPeck.amount,0);
+  assert.ok(a(.335).perusAsento.mapPeck.amount>.95);
+  assert.equal(a(.55).perusAsento.mapPeck.amount,0);
+  assert.ok(a(.76).perusAsento.mapPeck.amount>.95);
+  assert.equal(a(.93).perusAsento.mapPeck.amount,0);
+  assert.equal(a(.335).mapPeckNumber,1);
+  assert.equal(a(.76).mapPeckNumber,2);
+  assert.match(uudenEleenKuva(a(.335)),/data-part="map-contact" opacity="1"/);
+  assert.doesNotMatch(uudenEleenKuva(a(.55)),/data-part="map-contact"/);
+  assert.equal(LIVIAN_UUDET_VERSIOT.find(e=>e.id==='uusi-mapPeck').duration,4000);
+});
+
+test('jokaisen 70 pelieleen uusi versio käyttää jatkuvaa liikerataa, mutta alku ja loppu säilyvät',()=>{
+  for(const ele of LIVIA_SVG_ELEET){
+    const id='uusi-'+ele.id,alku=uudenEleenAsento(id,0),loppu=uudenEleenAsento(id,1);
+    if(!alku.perusAsento)continue; // erikseen piirretyillä on omat vaihetestinsä
+    for(const p of [0,1]){
+      const s=uudenEleenAsento(id,p);
+      assert.equal(uudenEleenKuva(s,{prefix:'alku',right:44}),
+        livianSvgKuva(livianSvgAsento(ele.id,p,{voimakkuus:.5}),{prefix:'alku',right:44}),
+        ele.id+' päätyy alkuperäiseen ankkuriin');
+    }
+    const avaimet=['paaKulma','paaX','paaY','rinta','siipi','takasiipi','sulat','hengitys'];
+    const edelliset=Object.fromEntries(avaimet.map(avain=>[avain,alku[avain]]));
+    const suurimmat=Object.fromEntries(avaimet.map(avain=>[avain,0]));
+    for(const avain of avaimet){
+      assert.equal(alku[avain],0,ele.id+' '+avain+' alkaa levosta');
+      assert.equal(loppu[avain],0,ele.id+' '+avain+' päättyy lepoon');
+    }
+    for(let i=1;i<=1000;i++){
+      const s=uudenEleenAsento(id,i/1000);
+      for(const avain of avaimet){
+        const arvo=s[avain];
+        assert.ok(Number.isFinite(arvo),ele.id+' '+avain+' on äärellinen');
+        suurimmat[avain]=Math.max(suurimmat[avain],Math.abs(arvo-edelliset[avain]));edelliset[avain]=arvo;
+      }
+    }
+    for(const avain of avaimet)assert.ok(suurimmat[avain]<(avain==='paaKulma'?1:.5),ele.id+' '+avain+' ei hypähdä');
+  }
+});
+
+test('kirjan ulkokannet ovat katsojaan päin ja peittävät sivun alareunan',()=>{
+  for(const p of [0,.45,.52,.57,.65,1]){
+    const svg=uudenEleenKuva(uudenEleenAsento('uusi-bookStudy',p));
+    assert.match(svg,/data-part="book" data-facing="pulu"/);
+    assert.ok(svg.indexOf('data-part="page"')<svg.indexOf('data-part="book-covers"'),'kannet piirretään sivun eteen');
+    assert.match(svg,/data-part="page-edges"/);
+    assert.doesNotMatch(svg,/m-17-20l12 2/,'vanhat katsojaan päin näkyvät tekstirivit poistettu');
   }
 });
 

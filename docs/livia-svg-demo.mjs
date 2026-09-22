@@ -6,7 +6,14 @@ let selected=LIVIAN_UUDET_VERSIOT[0].id,phase=0,strength=.5,raf=0,playing=false,
 // Katselusivun "uudet" tarkoittaa nykyisen SVG-kokopulun myöhemmin
 // lisättyjä koreografioita. Ne ovat myös omissa varsinaisissa ryhmissään.
 const UUDET_ELEET=new Set(['glideIn','trailerFlee','trailerBack','chatDashOut','chatDashBack','chatDustOff','mapPeck','bunFeast','cityExplain','smile','grin','wink','welcome','present','glasses','bookStudy','scratch','eyeRub','chuckle']);
-const KATEGORIAT=[{id:'uudet-versiot',nimi:'Uudet versiot',eleet:LIVIAN_UUDET_VERSIOT},{id:'uudet',nimi:'Lisätyt eleet',eleet:LIVIA_SVG_ELEET.filter(ele=>UUDET_ELEET.has(ele.id))},...[...new Set(LIVIA_SVG_ELEET.map(ele=>ele.group))].map(nimi=>({id:nimi,nimi,eleet:LIVIA_SVG_ELEET.filter(ele=>ele.group===nimi)}))];
+const RYHMAT=[...new Set(LIVIA_SVG_ELEET.map(ele=>ele.group))];
+const uudetId=Object.fromEntries(LIVIAN_UUDET_VERSIOT.map(ele=>[ele.id,ele]));
+const KATEGORIAT=[
+ {id:'uudet-versiot',nimi:'Uudet versiot',eleet:LIVIAN_UUDET_VERSIOT.filter(ele=>ele.group==='Uudet versiot')},
+ ...RYHMAT.map(nimi=>({id:'uusi-'+nimi,nimi:'Uusi · '+nimi,eleet:LIVIA_SVG_ELEET.filter(ele=>ele.group===nimi).map(ele=>uudetId['uusi-'+ele.id])})),
+ {id:'uudet',nimi:'Aiemmin lisätyt eleet',eleet:LIVIA_SVG_ELEET.filter(ele=>UUDET_ELEET.has(ele.id))},
+ ...RYHMAT.map(nimi=>({id:nimi,nimi:'Aiempi · '+nimi,eleet:LIVIA_SVG_ELEET.filter(ele=>ele.group===nimi)})),
+];
 let kategoria='uudet-versiot';
 function piirraKategoriat(){
  // Säilytä painikkeet ja näppäimistöfokus myös kategorian vaihtuessa.
