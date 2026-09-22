@@ -8,10 +8,10 @@
  *
  * js/pallolauta/lepopiirto.js (sulavuuskatsaus kohta 18) pysäyttää
  * kirjaston silmukan, kun mikään ei muuttunut, ja piirtää sykkeellä
- * 4 fps. Oletus on POIS, kunnes omistaja on nähnyt levon iPhonella
- * (Fable 22.9.2026), joten savuke pyytää sen lipulla `?koe=lepopiirto`.
- * Erotus v2101–v2104:ään: lippu on nyt SAMA pelaajalle ja automaatiolle
- * — webdriver-poikkeus, joka esti vartijaa näkemästä välkkeen, on poissa.
+ * 4 fps. Oletus on PÄÄLLÄ (omistaja todensi levon iPhonella 22.9.2026),
+ * ja savuke ajaa saman polun kuin pelaaja — ei koelippua. Erotus
+ * v2101–v2104:ään: webdriver-poikkeus, joka esti vartijaa näkemästä
+ * välkkeen, on poissa.
  *
  * === VÄITTEET =======================================================
  *
@@ -23,7 +23,12 @@
  *   V3  MUUTOS NÄKYY HETI: kamera uuteen paikkaan → laattojen saapuminen
  *       kirjaa 'pakko'/'tarve'-piirtoja (ryhmän add ilmoittaa), ja
  *       levossa readPixels ilman pakotusta antaa laatan värin, ei taustaa.
- *   V4  ILMAN LIPPUA: oletus on pois, eli piirto joka kehys (≥ 50 fps).
+ *   V4  PALUULIPPU: `?koe=levovanha` piirtää joka kehys (≥ 50 fps).
+ *   V6  VEDON ALKU: oikeilla osoitintapahtumilla kamera liikkuu alle
+ *       120 ms:ssä ensimmäisestä tapahtumasta. Mitattu 22.9.2026:
+ *       ilman syötteen ilmoitusta 29 ms (chromium) ja 52 ms (webkit),
+ *       ilmoituksen kanssa 14 ja 15 ms eli yksi kehys. V2 ei kata tätä,
+ *       koska tasaisuusmittari ajaa kameraa suoraan.
  *   V5  KANGAS EI VÄLKY: levossa SOMMITTELIJAN kautta otetut kaappaukset
  *       ovat kaikki karttaa, eivät tyhjää. Tämä on omistajan 22.9.2026
  *       löytämä vika ("kartta välkkyy kuin strobovalo"): renderin ohitus
@@ -154,9 +159,9 @@ const laske = async (ms) => {
   return { fps, syyt };
 };
 
-vaadi('pallolauta avautuu (lepopiirto)', await avaa(process.env.SAVUKE_LEPOPIIRTO_KOE ?? 'lepopiirto'));
+vaadi('pallolauta avautuu (lepopiirto)', await avaa(process.env.SAVUKE_LEPOPIIRTO_KOE ?? 'mittaus'));
 const paalla = await sivu.evaluate(() => Boolean(window.matkakirja.ui.pallonInstanssi.__piirto));
-vaadi('lepopiirto asennettu lipulla', paalla);
+vaadi('lepopiirto asennettu oletuksena', paalla);
 if (!paalla) { await ctx.close(); await selain.close(); palvelin.close(); process.exit(1); }
 const lepo = await laske(2000);
 tieto(`V1 ${MOOTTORI} lepo`, `${lepo.fps.toFixed(1)} fps, syyt ${JSON.stringify(lepo.syyt)}`);
@@ -181,6 +186,47 @@ const suhde = Math.max(...koot) / Math.max(1, Math.min(...koot));
 tieto(`V5 ${MOOTTORI} kaappaukset levossa`, `${Math.min(...koot)}–${Math.max(...koot)} tavua, ero ${suhde.toFixed(2)}×`);
 // Piirto joka kehys antaa 1,12 ×; renderin ohitus antoi 24 ×. Raja 1,5 ×.
 vaadi(`V5 ${MOOTTORI}: kangas ei välky levossa`, suhde <= 1.5, `ero ${suhde.toFixed(2)}×, koot ${koot.join(',')}`);
+
+/*
+ * V6: VEDON ALKU. Odottava veto sovelletaan kameraan kirjaston tickissä
+ * (pallo.js sovellaSyote → ohjaimet.update), ja lepopiirto pysäyttää
+ * tickin levossa. Ennustin tästä 250 ms:n jumin (veto ei voi herättää
+ * tickiä, koska herätesyy on "kamera muuttui" eikä kamera voi muuttua
+ * ennen sovellusta) — MITTAUS EI VAHVISTANUT SITÄ: ilman ilmoitustakin
+ * veto lähti 29 ms:ssä (chromium) ja 52 ms:ssä (webkit), eli jokin muu
+ * herättää tickin. Ilmoitus tekee lähdöstä silti yhden kehyksen
+ * mittaisen ja DETERMINISTISEN (14 ja 15 ms) sen sijaan, että se
+ * riippuisi sykkeen osumasta. Tämä väite vahtii lukua, ei teoriaa.
+ */
+const alkuviive = await (async () => {
+  await sivu.evaluate(() => { window.matkakirja.ui.pallolauta.heraa?.(); });
+  await sivu.waitForTimeout(1200); // varmistetaan lepo: tick pysäytetty
+  const ennen = await sivu.evaluate(() => {
+    const p = window.matkakirja.ui.pallonInstanssi.pointOfView();
+    window.__vedonAlku = { lng: p.lng, lat: p.lat, t: performance.now(), havaittu: null };
+    const seuraa = () => {
+      const n = window.matkakirja.ui.pallonInstanssi.pointOfView();
+      if (window.__vedonAlku.havaittu == null
+        && (Math.abs(n.lng - window.__vedonAlku.lng) > 1e-6 || Math.abs(n.lat - window.__vedonAlku.lat) > 1e-6)) {
+        window.__vedonAlku.havaittu = performance.now() - window.__vedonAlku.t;
+      }
+      requestAnimationFrame(seuraa);
+    };
+    requestAnimationFrame(seuraa);
+    return true;
+  });
+  if (!ennen) return null;
+  const x = 195; const y = 500;
+  await sivu.mouse.move(x, y);
+  await sivu.evaluate(() => { window.__vedonAlku.t = performance.now(); });
+  await sivu.mouse.down();
+  for (let i = 1; i <= 8; i += 1) { await sivu.mouse.move(x - i * 6, y); await sivu.waitForTimeout(16); }
+  await sivu.mouse.up();
+  return sivu.evaluate(() => window.__vedonAlku.havaittu);
+})();
+tieto(`V6 ${MOOTTORI} vedon alku`, `kamera liikkui ${alkuviive == null ? 'EI LAINKAAN' : `${alkuviive.toFixed(0)} ms`} ensimmäisestä tapahtumasta`);
+// Syke on 250 ms; aito veto saa lähteä enintään parin kehyksen viiveellä.
+vaadi(`V6 ${MOOTTORI}: veto lähtee heti (ei sykettä odottaen)`, alkuviive != null && alkuviive < 120, `${alkuviive} ms`);
 
 const veto = await sivu.evaluate(async () => {
   const v = await window.__kehysprofiili.veto({ kesto: 1500, nopeusPx: 80 });
@@ -223,12 +269,12 @@ const pikseli = await sivu.evaluate(() => {
 });
 tieto(`V3 ${MOOTTORI} pikseli`, JSON.stringify(pikseli));
 vaadi(`V3 ${MOOTTORI}: levossa syke piirtää laatan (pikseli ei tausta)`, pikseli.px && pikseli.px[3] === 255 && !(pikseli.px[0] < 10 && pikseli.px[1] < 10 && pikseli.px[2] < 10), JSON.stringify(pikseli));
-/* V4: ilman lippua oletus on pois → piirto joka kehys. */
-vaadi('pallolauta avautuu (ilman lippua)', await avaa('mittaus'));
+/* V4: paluulippu levovanha piirtää joka kehys. */
+vaadi('pallolauta avautuu (levovanha)', await avaa('levovanha'));
 const ilman = await sivu.evaluate(() => Boolean(window.matkakirja.ui.pallonInstanssi.__piirto));
 const vanha = await laske(1500);
-tieto(`V4 ${MOOTTORI} ilman lippua`, `${vanha.fps.toFixed(1)} fps, lepopiirto ${ilman}`);
-vaadi(`V4 ${MOOTTORI}: ilman lippua piirto joka kehys`, !ilman && vanha.fps >= 50, `${vanha.fps.toFixed(1)} fps, lepopiirto ${ilman}`);
+tieto(`V4 ${MOOTTORI} levovanha`, `${vanha.fps.toFixed(1)} fps, lepopiirto ${ilman}`);
+vaadi(`V4 ${MOOTTORI}: paluulippu piirtää joka kehys`, !ilman && vanha.fps >= 50, `${vanha.fps.toFixed(1)} fps, lepopiirto ${ilman}`);
 if (konsoli.length) tieto('konsolivirheet', JSON.stringify(konsoli.slice(0, 3)));
 
 await ctx.close();
