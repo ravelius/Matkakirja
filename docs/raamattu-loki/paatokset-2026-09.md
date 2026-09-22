@@ -903,3 +903,7 @@ Sisältökirjuri 22.9.2026 klo 03.15: erä 2 kirjoitettu js/packs/maakunnat-luon
 ## MAAKUNTIEN ERA 3 (PULUN KYSYMYKSET) HYVAKSYTTY; OMA TIEDOSTO js/packs/maakunnat-pulu.js (22.9.2026 klo 08.10)
 
 Fable 22.9.2026 klo 03.30: Sisältökirjurin erä 3 (2–3 kysymys-vastaus-paria per alue, 97 aluetta, raportit docs/raportit/maakunnat-era3-*-20260922.md) hyväksytty otoksen perusteella. Päätös: pulun parit omaan tiedostoon js/packs/maakunnat-pulu.js samoilla avaimilla, lazy-import pulun napista; guard-testi 2–3 paria ja vastaus ≤ 400 merkkiä; sw.js ja build-standalone rekisteröinti.
+
+## MAAKUNNAT 1-3 VALMIIT (maakunnat-pulu.js 498280100); SISALTOKIRJURIN SEURAAVA ERA KOHTAAMISET C1 (6 KAUPUNKIA) (22.9.2026 klo 08.17)
+
+Sisältökirjuri 22.9.2026 klo 03.45: js/packs/maakunnat-pulu.js valmis (erillinen tiedosto, samat avaimet, guard-testi, 9 vastausta lyhennetty ≤ 400 merkkiin), testit 0 fail, Julkaisijalle. Maakuntasisältö lyhyt/pitkä/kuva/pulu valmis 97 alueelle. Seuraava erä: kohtaamiset puuttuviin 41 kaupunkiin, ensin 6 kaupunkia (eniten nostoja ilman kohtaamista), nykyisten hyväksyttyjen rakenteella, tekstit Fablelle tiedostona ennen dataa.
