@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2111, teksti: 'GL-nimioiden atlas varihallintaan' },
   { v: 2110, teksti: 'Syote herattaa lepopiirron' },
   { v: 2109, teksti: 'Lepopiirto oletukseksi' },
   { v: 2108, teksti: 'Tiivista Pulun gallerian valinta' },
