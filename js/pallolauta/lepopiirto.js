@@ -62,7 +62,16 @@ export function lepopiirtoKaytossa(haku, nav = globalThis.navigator) {
   try { kokeet = (new URLSearchParams(h).get('koe') ?? '').split(',').map((k) => k.trim()); } catch { kokeet = []; }
   if (kokeet.includes('levovanha')) return false;
   if (kokeet.includes('lepopiirto')) return true;
-  return !(nav && nav.webdriver === true);
+  /*
+   * OLETUS POIS (Fable 22.9.2026, omistajan tuntumatesti v2104: "kartta
+   * välkkyy kuin strobovalo" iPhonella). Kun piirto ohitetaan, WebKit
+   * näyttää kankaan tyhjänä — sama ilmiö, joka Playwrightissa näkyi tyhjänä
+   * kaappauksena. Lepopiirto on käytössä vain `?koe=lepopiirto`-lipulla,
+   * kunnes ohitetun kehyksen esitys on ratkaistu (esim. preserveDrawingBuffer
+   * tai piirron ohitus kirjaston tickin tasolla, ei renderer.renderissä).
+   */
+  void nav;
+  return false;
 }
 
 /**

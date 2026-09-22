@@ -37,7 +37,9 @@ test('päätös: kamera, tarve, este, hidas ja syke — muuten ei piirretä', ()
   tila.paalla = false;
   assert.equal(lepopiirtoPaatos(tila, { nyt: 303, kameraMuuttui: false }), 'pois');
   assert.equal(lepopiirtoKaytossa('?koe=levovanha', { webdriver: false }), false);
-  assert.equal(lepopiirtoKaytossa('?koe=mittaus', { webdriver: false }), true);
+  // Oletus POIS myös selaimessa (v2104: strobovälkyntä iPhonella), vain lipulla päälle.
+  assert.equal(lepopiirtoKaytossa('?koe=mittaus', { webdriver: false }), false);
+  assert.equal(lepopiirtoKaytossa('?koe=lepopiirto', { webdriver: false }), true);
   // Automaatio (Playwright): pois, ellei pyydetä — kaappaukset saisivat tyhjän kankaan.
   assert.equal(lepopiirtoKaytossa('', { webdriver: true }), false);
   assert.equal(lepopiirtoKaytossa('?koe=lepopiirto', { webdriver: true }), true);
