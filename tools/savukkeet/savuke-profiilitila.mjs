@@ -2,9 +2,9 @@
  * SAVUKE: KEHYSPROFIILIN YLIN RIVI KERTOO KOETILAN (Pelikoodari 22.9.2026).
  * Omistajan iPhone-kaappauksia ei voinut kohdistaa Piirtokoe-tilaan, koska
  * overlay ei näyttänyt sitä. Tarkistaa oikeassa selaimessa:
- *   T1 osoitelippu ?koe=profiili,dpr15 → "koe: dpr15 · profiili pN · vNNNN"
- *   T2 valikon tallennus (eipuskuri + kytkin) ilman lippua → "koe: eipuskuri"
- *   T3 valinta vaihdetaan kesken istunnon → "(seuraavassa latauksessa: normaali)"
+ *   T1 osoitelippu ?koe=profiili,dpr15 → "koe 3/6 Pikselisuhde 1,5 · profiili pN · vNNNN"
+ *   T2 valikon tallennus (eipuskuri + kytkin) ilman lippua → "koe 2/6 Ei puskurikirjoituksia"
+ *   T3 valinta vaihdetaan kesken istunnon → "(seuraavassa latauksessa: koe 1/6 Normaali)"
  *   T4 ei sivuvirheitä
  * KÄYTTÖ: PLAYWRIGHT_JS=... SAVUKE_MOOTTORI=webkit node tools/savukkeet/savuke-profiilitila.mjs
  */
@@ -64,7 +64,7 @@ const avaa = async (haku, muistiin = {}) => {
 };
 const ylinRivi = (sivu, ehto = '') => sivu.waitForFunction((e) => {
   const r = document.querySelector('.profiilinaytto > div')?.textContent ?? '';
-  return r.startsWith('koe:') && r.includes(e) ? r : false;
+  return r.startsWith('koe') && r.includes(e) ? r : false;
 }, ehto, { timeout: 20000 }).then((h) => h.jsonValue()).catch(() => '');
 
 const versio = `v${readFileSync(join(JUURI, 'js/main.js'), 'utf8').match(/APP_VERSION = '([^']+)'/)[1].split('.').pop()}`;
@@ -73,7 +73,7 @@ try {
     const { ctx, sivu, virheet } = await avaa('&koe=profiili,dpr15');
     const r = await ylinRivi(sivu);
     tieto('T1 rivi', r);
-    vaadi('T1 osoitelippu näkyy ylimpänä', /^koe: dpr15 · profiili p\d+ · v\d+$/.test(r) && r.endsWith(versio), r);
+    vaadi('T1 osoitelippu näkyy ylimpänä', /^koe 3\/6 Pikselisuhde 1,5 · profiili p\d+ · v\d+$/.test(r) && r.endsWith(versio), r);
     vaadi('T4a ei sivuvirheitä', virheet.length === 0, virheet.join(' | '));
     await ctx.close();
   }
@@ -81,11 +81,11 @@ try {
     const { ctx, sivu, virheet } = await avaa('', { 'matkakirja-piirtokoe': 'eipuskuri', 'matkakirja-kehysprofiili': '1' });
     const r = await ylinRivi(sivu);
     tieto('T2 rivi', r);
-    vaadi('T2 valikon valinta näkyy', r.startsWith('koe: eipuskuri · profiili p'), r);
+    vaadi('T2 valikon valinta näkyy', r.startsWith('koe 2/6 Ei puskurikirjoituksia · profiili p'), r);
     await sivu.evaluate(() => localStorage.setItem('matkakirja-piirtokoe', 'normaali'));
     const r3 = await ylinRivi(sivu, 'seuraavassa');
     tieto('T3 rivi', r3);
-    vaadi('T3 vaihto näkyy seuraavana', r3.startsWith('koe: eipuskuri (seuraavassa latauksessa: normaali)'), r3);
+    vaadi('T3 vaihto näkyy seuraavana', r3.startsWith('koe 2/6 Ei puskurikirjoituksia (seuraavassa latauksessa: koe 1/6 Normaali)'), r3);
     vaadi('T4b ei sivuvirheitä', virheet.length === 0, virheet.join(' | '));
     await ctx.close();
   }

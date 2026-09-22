@@ -17,8 +17,9 @@ import { readFileSync } from 'node:fs';
 
 import {
   PROFIILIN_POLKU, profiiliTahti, profiilirivit, profiilitiiviste, luoProfiilinaytto,
-  PROFIILIN_VERSIO, koetilanNimi, koetilarivi,
+  PROFIILIN_VERSIO, koetilanNimi, koetilarivi, koetilanOtsikko,
 } from '../js/pallolauta/profiilinaytto.js';
+import { PIIRTOKOKEIDEN_VAIHTOEHDOT } from '../js/piirtokoe-asetus.js';
 
 const TIIVISTE = {
   kehyksia: 180,
@@ -125,7 +126,7 @@ test('jakso: sulkee ja avaa profiilin, kirjoittaa kerroksen, lähettää ja purk
   assert.match(kerros.rivit.join('\n'), /veto vanha · tarkkuus terava/);
   assert.equal(lahetykset.length, 1);
   assert.equal(lahetykset[0].ua, 'iPhone');
-  assert.match(kerros.rivit[0], /^koe: dpr15 · profiili p\d+ · v2127$/, 'tila ylimpänä');
+  assert.match(kerros.rivit[0], /^koe 3\/6 Pikselisuhde 1,5 · profiili p\d+ · v2127$/, 'tila ylimpänä');
   assert.equal(lahetykset[0].koe, 'dpr15');
 
   // Toinen jakso ei kasvata kerrosta: rivit korvataan, eivät kerry.
@@ -201,9 +202,9 @@ test('tahti kulkee myös lähetykseen', () => {
 
 test('ylin rivi kertoo koetilan ja mittarin version (omistajan kaappaukset 22.9.2026)', () => {
   const rivit = profiilirivit({ tiiviste: TIIVISTE, tila: { koe: 'dpr15', versio: 'v2127' } });
-  assert.equal(rivit[0], `koe: dpr15 · profiili p${PROFIILIN_VERSIO} · v2127`);
-  assert.match(profiilirivit({ tiiviste: TIIVISTE })[0], /^koe: normaali · profiili p\d+$/, 'oletus on normaali');
-  assert.match(profiilirivit({ tiiviste: null })[0], /^koe: normaali/, 'myös ilman kehyksiä');
+  assert.equal(rivit[0], `koe 3/6 Pikselisuhde 1,5 · profiili p${PROFIILIN_VERSIO} · v2127`);
+  assert.match(profiilirivit({ tiiviste: TIIVISTE })[0], /^koe 1\/6 Normaali · profiili p\d+$/, 'oletus on normaali');
+  assert.match(profiilirivit({ tiiviste: null })[0], /^koe 1\/6 Normaali/, 'myös ilman kehyksiä');
 });
 
 test('koetila: profiili ei ole koe, useampi lippu aakkosjärjestyksessä', () => {
@@ -214,8 +215,16 @@ test('koetila: profiili ei ole koe, useampi lippu aakkosjärjestyksessä', () =>
 
 test('koetila: valikon uusi valinta näkyy seuraavana, ei voimassa olevana', () => {
   assert.equal(koetilarivi({ koe: 'normaali', seuraava: 'dpr15' }),
-    `koe: normaali (seuraavassa latauksessa: dpr15) · profiili p${PROFIILIN_VERSIO}`);
-  assert.equal(koetilarivi({ koe: 'dpr15', seuraava: 'dpr15' }), `koe: dpr15 · profiili p${PROFIILIN_VERSIO}`);
+    `koe 1/6 Normaali (seuraavassa latauksessa: koe 3/6 Pikselisuhde 1,5) · profiili p${PROFIILIN_VERSIO}`);
+  assert.equal(koetilarivi({ koe: 'dpr15', seuraava: 'dpr15' }), `koe 3/6 Pikselisuhde 1,5 · profiili p${PROFIILIN_VERSIO}`);
+});
+
+test('koetila: numero seuraa valikon järjestystä, valikon ulkopuolinen lippu raakana', () => {
+  PIIRTOKOKEIDEN_VAIHTOEHDOT.forEach((k, i) => {
+    assert.equal(koetilanOtsikko(k.lippu ?? 'normaali'), `koe ${i + 1}/${PIIRTOKOKEIDEN_VAIHTOEHDOT.length} ${k.nimi}`);
+  });
+  assert.equal(koetilanOtsikko('alpha0,vahemmandc'), 'koe: alpha0,vahemmandc');
+  assert.equal(koetilanOtsikko('kermakangas'), 'koe: kermakangas');
 });
 
 test('tiiviste lähetykseen kantaa koetilan ja version', () => {
