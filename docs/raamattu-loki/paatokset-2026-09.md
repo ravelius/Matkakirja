@@ -1575,3 +1575,7 @@ Vartijat tests/nostokuva-kortit (jokainen tyyppi 1194/1400/1920, pino 834), tool
 ## v2135 MAINISSA (#2867: PIIRTOKOE 4 TILAA + AUTOMAATTILATAUS) JA v2136 (#2869: KAKSI PALSTAA KAIKKIIN NOSTOIHIN); JULKAISIJAN HEAD-TARKISTUS NAPPASI HAARAAN LISATYN TOISEN COMMITIN (22.9.2026 klo 23.32)
 
 Julkaisija klo 23.33, testit 4013/0. Omistajan kierros v2136:lla: 1/4 Normaali, 3/4 Ei tekstuurivientejä, 2/4 Ei puskurikirjoituksia; kaksi kaappausta kustakin samassa paikassa; valinta lataa sivun itse.
+
+## OMISTAJAN KIERROS iPADILLA (v2135/v2136, 4 TILAA, 10 s VEDOT): NORMAALI p95 45 / >20 ms 25 % / LAATTAVIENTEJA 186; EI PUSKURIKIRJ. 37 / 18 % / 203; EI TEKSTUURIVIENTEJA 25 / 8 % / 38; EI HAIVYTYSTA 37 / 10 % / 30 (MAX 150) → TEKSTUURILATAUKSET VEDOSSA OVAT PAASYY; TILATTU OLETUKSEKSI: LAATTAVIENTI BUDJETILLA VEDON AIKANA (≈1 LAATTA/KEHYS, JONO VALUU LEVOSSA) (22.9.2026 klo 23.42)
+
+Pitkissä vapaa 29–50 ms kaikissa; dc 431 Normaalissa (muissa 35–43) tarkistettavana; laattavientejä 30–38 vs 186–203 tarkistettavana (jonon tyhjeneminen levossa). Pelikoodari toteuttaa, vartija WebKit-vedolla. Nämä olivat iPad-kaappauksia; iPhone-vahvistus samalla versiolla myöhemmin.
