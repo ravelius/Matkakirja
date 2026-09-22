@@ -1427,3 +1427,7 @@ Fable 22.9.2026 klo 20.10: omistaja kysyi, löytyisikö netistä apua ja miten k
 ## OMISTAJA: EI PUHELINMITTAUSTA → GPU-PROSESSIN KEVENNYKSET KOELIPPUINA (eipuskuri, alpha0, dpr15, eivienti, vahemmandc), MITTAUS MACIN SAFARILLA JA OMISTAJAN OVERLAY-KAAPPAUKSILLA; LAITETESTAAJA VALMISTELEE MAC-SAFARIN FRAMES-MITTAUKSEN (22.9.2026 klo 20.06)
 
 Fable 22.9.2026 klo 20.10: omistaja valitsi 'ei puhelimella'. Pelikoodarin lipputyö tärkeysjärjestyksessä: 1) eipuskuri (jäädytä vedon aikaiset puskurikirjoitukset — epäily GL-rungon instanssipuskuri joka kehys; bufferSubData on Safarissa kallis), 2) alpha0, 3) dpr15, 4) eivienti (ei tekstuurivientejä vedossa), 5) vahemmandc; ensin Tasaisen ketjuvika; overlayhin puskurikirjoitukset/uniformit/dc per laji. Mittaus Macin Safarilla (sama GPU-prosessi) ja omistajan overlay-kaappauksilla iPhonella lippu kerrallaan. Laitetestaaja: Macin Safarin Web Inspector Frames -ohje + CGEvent-vedon toimivuus.
+
+## OMISTAJA: KOKEET SUORAAN PELIIN (RATASVALIKKO 'PIIRTOKOE' + KEHYSPROFIILIN KYTKIN), TESTAA HUOMENNA (22.9.2026 klo 20.07)
+
+Omistaja 22.9.2026 klo 20.10: pääsee töihin vasta huomenna; helpompi kun kokeet ovat pelissä valittavina. Fable → Pelikoodari: Piirtokoe-asetus (Normaali, Ei puskurikirjoituksia vedossa, Ilman alfakanavaa, Pikselisuhde 1,5, Ei tekstuurivientejä vedossa, Vähemmän piirtokutsuja) + 'Näytä kehysprofiili' -kytkin ratasvalikkoon; Tasaisen ketjuvika ensin; Mac-Safari-mittaus lippu kerrallaan; PR tänä iltana, versio aamuksi.
