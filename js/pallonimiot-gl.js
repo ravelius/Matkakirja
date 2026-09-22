@@ -76,6 +76,13 @@ export const GLNIMIOT_TESTIFONTTI = '"Liberation Serif", "Times New Roman", seri
  * sceneen tai runko kaatuu) lauta putoaa CSS2D:hen automaattisesti
  * (js/pallolauta/lauta.js glKehys).
  */
+/**
+ * Atlaksen väriavaruus: NoColorSpace ('' three r152+). Ks. uusiSivu —
+ * oma varjostin kirjoittaa näytteen sellaisenaan, joten purkua ei saa
+ * tehdä. Vakio on nimetty, jotta testi voi vahtia sitä.
+ */
+export const GLNIMIOT_VARIAVARUUS = '';
+
 export function glNimiotKaytossa(win = globalThis) {
   try {
     const arvo = new URLSearchParams(win.location?.search ?? '').get('glnimiot');
@@ -305,8 +312,42 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
     tekstuuri.minFilter = 1006; // LinearFilter
     tekstuuri.magFilter = 1006;
     tekstuuri.premultiplyAlpha = true;
-    const malli = L.tekstuurimalli;
-    if (malli && 'colorSpace' in malli) tekstuuri.colorSpace = malli.colorSpace;
+    /*
+     * ATLAS EI OLE VÄRIHALLITTU TEKSTUURI (Pelikoodari 22.9.2026).
+     *
+     * Aiemmin väriavaruus kopioitiin pallon PINNAN tekstuurista
+     * (`L.tekstuurimalli`). Se on oikein siellä, missä kuvan lukee
+     * kirjaston oma materiaali: three purkaa sRGB:n lineaariseksi
+     * näytteistyksessä ja koodaa sen takaisin ulostulossa. TÄMÄN
+     * kerroksen lukee oma varjostin, joka kirjoittaa näytteen
+     * sellaisenaan (`gl_FragColor = v`) — koodausta takaisin ei ole.
+     * Niinpä sRGB-purku jäi puolitiehen: kangas piirsi kullan
+     * rgba(246,210,122,0.72), mutta ruudulle tuli kylläinen oranssi ja
+     * punamullasta tummanpuhuva. Virhe on keskisävyissä suurin, joten
+     * se ei näkynyt lähes mustassa musteessa eikä lähes valkoisessa
+     * halossa — vasta kohdemerkin iso kultalevy paljasti sen.
+     *
+     * Atlas on valmiiksi ruudun väriavaruudessa (2D-kangas piirsi sen
+     * CSS-väreillä), joten oikea ratkaisu on olla purkamatta ja
+     * koodaamatta lainkaan: NoColorSpace ('' three r152+). Tällöin
+     * tavut kulkevat kankaasta ruudulle muuttumattomina ja sekoitus
+     * tapahtuu samassa avaruudessa kuin CSS:llä — eli täsmälleen kuten
+     * CSS2D-polulla, jota vasten ulkoasu on mitoitettu.
+     *
+     * Vaihtoehto olisi koodata varjostimessa lineaarinen → sRGB, mutta
+     * se olisi esikerrotun alfan kanssa väärin ilman puramista ja
+     * uudelleenkertomista, ja maksaisi pow():n joka pikselille.
+     *
+     * OLETUS PÄTEE VAIN SUORAAN RUUTUPUSKURIIN PIIRRETTÄESSÄ
+     * (Karttaseppä, rungon omistaja, katselmuksessa 22.9.2026). Jos
+     * tämä kerros joskus piirretään VÄLIRENDERTARGETTIIN tai kulkee
+     * jälkikäsittelyn läpi, välipuskuri on lineaarinen ja väriavaruus
+     * on mietittävä uudestaan — silloin purku ja koodaus kuuluvat
+     * ketjuun. Vartijat kattavat varjostimen (tests/pallonimiot-gl) ja
+     * väriketjun identiteetin (savuke-glnimiot), MUTTA EIVÄT tätä:
+     * rendertargetin lisääjä ei saa niistä varoitusta.
+     */
+    tekstuuri.colorSpace = GLNIMIOT_VARIAVARUUS;
     const materiaali = new L.ShaderMaterial({
       uniforms: {
         atlas: { value: tekstuuri },
