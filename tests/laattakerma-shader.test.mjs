@@ -45,12 +45,19 @@ test('shader ujutetaan map_fragmentin tilalle ja uniformit jaetaan', () => {
   assert.match(shader.fragmentShader, /smoothstep\(36\.0, 52\.0, kermaEro\)/);
   assert.doesNotMatch(shader.fragmentShader, /#include <map_fragment>/);
   // Oma varying, ei kirjaston nimeä (vika v2084: vUv ei ole r155:ssä → ei käänny).
-  assert.match(shader.fragmentShader, /texture2D\( map, vKermaUv \)/);
+  assert.match(shader.fragmentShader, /texture2D\( map, vec2\(vKermaUv\.x, /);
   assert.doesNotMatch(shader.fragmentShader, /\bvUv\b|\bvMapUv\b/);
   assert.match(shader.vertexShader, /varying vec2 vKermaUv;/);
   assert.match(shader.vertexShader, /#include <uv_vertex>\nvKermaUv = uv;/);
   assert.match(shader.fragmentShader, /varying vec2 vKermaUv;/);
   assert.equal(materiaali.customProgramCacheKey(), 'laattakerma-2');
+  // Nollakopio-bittikartta: kuva v-käännettynä uniformin mukaan, lauta-y verkon uv:stä.
+  assert.equal(omat.kermaKaanto.value, 0);
+  assert.match(shader.fragmentShader, /texture2D\( map, vec2\(vKermaUv\.x, mix\(vKermaUv\.y, 1\.0 - vKermaUv\.y, kermaKaanto\)\) \)/);
+  assert.match(shader.fragmentShader, /\(1\.0 - vKermaUv\.y\) \* kermaLaattaAlue\.w/);
+  const kaannetty = {};
+  const omat2 = asennaKermaShader(kaannetty, { jaettu, laatta: { alue: { x0: 0, y0: 0, w: 1, h: 1 } }, kaanto: true });
+  assert.equal(omat2.kermaKaanto.value, 1);
   // Sulavuus kohta 3: ei pow-pareja, sekoitus lineaarisessa, sqrt-likiarvo erolle.
   assert.doesNotMatch(shader.fragmentShader, /pow\(/);
   assert.match(shader.fragmentShader, /sqrt\(kermaTexel\.r\) - sqrt\(kermaTexel\.b\)/);

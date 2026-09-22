@@ -50,6 +50,7 @@ uniform vec3 kermaVari;        // LINEAARINEN 0…1 (kermanVariLineaariseksi)
 uniform float kermaPeitto;
 uniform float kermaSumuPeitto;
 uniform float kermaPaalla;     // 1 = kerma, 0 = ei (maailmanäkymä, linssin tyhjä arkki)
+uniform float kermaKaanto;     // 1 = kuva luetaan v-käännettynä (nollakopio-bittikartta, flipY = false)
 `;
 
 /*
@@ -84,7 +85,7 @@ vKermaUv = uv;
  */
 const KERMA_GLSL_RUNKO = `
 #ifdef USE_MAP
-  vec4 kermaTexel = texture2D( map, KERMA_UV );
+  vec4 kermaTexel = texture2D( map, vec2(KERMA_UV.x, mix(KERMA_UV.y, 1.0 - KERMA_UV.y, kermaKaanto)) );
   if (kermaPaalla > 0.5) {
     // Laatan kangas piirretään y alaspäin ja tekstuuri on flipY: v = 1 − y/H.
     vec2 kermaLaudalla = vec2(kermaLaattaAlue.x + KERMA_UV.x * kermaLaattaAlue.z,
@@ -104,7 +105,7 @@ const KERMA_GLSL_RUNKO = `
 /** Täsmällinen sRGB-runko (kaksi pow-paria) vain mittauslipulla `?koe=kermapow`. */
 const KERMA_GLSL_RUNKO_TARKKA = `
 #ifdef USE_MAP
-  vec4 kermaTexel = texture2D( map, KERMA_UV );
+  vec4 kermaTexel = texture2D( map, vec2(KERMA_UV.x, mix(KERMA_UV.y, 1.0 - KERMA_UV.y, kermaKaanto)) );
   if (kermaPaalla > 0.5) {
     vec2 kermaLaudalla = vec2(kermaLaattaAlue.x + KERMA_UV.x * kermaLaattaAlue.z,
                               kermaLaattaAlue.y + (1.0 - KERMA_UV.y) * kermaLaattaAlue.w);
@@ -270,11 +271,17 @@ export function paivitaKermanJaetut(jaettu, tasoitus, { luoKangas, Texture, THRE
  * paalla: boolean }. Palauttaa laatan omat uniformit (paalla-lippu
  * vaihdettavissa jälkikäteen).
  */
-export function asennaKermaShader(materiaali, { jaettu, laatta, tarkka = false }) {
+export function asennaKermaShader(materiaali, { jaettu, laatta, tarkka = false, kaanto = false }) {
   if (!materiaali || !jaettu) return null;
   const omat = {
     kermaLaattaAlue: { value: [laatta.alue.x0, laatta.alue.y0, laatta.alue.w, laatta.alue.h] },
     kermaPaalla: { value: laatta.paalla === false ? 0 : 1 },
+    /*
+     * NOLLAKOPIO-BITTIKARTTA (sulavuus kohta 10, js/pallolaatat.js
+     * SUORA BITTIKARTTA): tekstuuri on flipY = false, joten kuva luetaan
+     * v-käännettynä; lauta-koordinaatti lasketaan yhä verkon omasta uv:stä.
+     */
+    kermaKaanto: { value: kaanto ? 1 : 0 },
   };
   materiaali.onBeforeCompile = (shader) => {
     Object.assign(shader.uniforms, jaettu, omat);
