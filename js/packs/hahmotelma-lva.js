@@ -189,6 +189,7 @@ export const HAHMOTELMA_LVA = [
     ],
     nimi: 'Jūrmala',
     tyyppi: 'kulttuuri',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Miksi rautatie sai Jūrmalan kasvamaan kylpyläkaupungiksi?',
