@@ -252,6 +252,7 @@ const SHELL = [
   './js/pallolauta/lepopiirto.js',
   './js/pallolauta/profiilinaytto.js',
   './js/kartta-liike.js',
+  './js/piirtokoe-asetus.js',
   './js/vedon-seuranta.js',
   './js/tarkkuus-asetus.js',
   './js/kehittaja-pikatie.js',

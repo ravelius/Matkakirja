@@ -3969,7 +3969,11 @@ export async function avaaPallolauta(ui) {
       if (!glKerros) {
         const luokat = glLuokat(pallo);
         if (!luokat) return;
-        glKerros = luoNimiokerrosGL({ pallo, kotelo, luokat, juuri: pallonKolmiulotteinen(pallo)?.juuri ?? null });
+        glKerros = luoNimiokerrosGL({
+          pallo, kotelo, luokat, juuri: pallonKolmiulotteinen(pallo)?.juuri ?? null,
+          // Piirtokokeet (?koe=eipuskuri, ?koe=eivienti) jäädyttävät kirjoitukset liikkeen ajaksi.
+          liikkeessa: () => liikkeessaNyt(),
+        });
         // Ladonnan nimet ja nostot rungolle heti, kun runko on olemassa (ei uutta ladontaa).
         if (!glTesti) { nimet.jaaUudestaan?.(); nostot.jaaUudestaan?.(); peliUudestaan(); }
       }

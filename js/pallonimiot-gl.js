@@ -267,14 +267,40 @@ export function rasteroiTeksti(teksti, { px = 14, dpr = 1, doc = globalThis.docu
  * @param {object} [p.luokat] kirjaston luokat (oletus glLuokat(pallo))
  * @returns {{ aseta, poista, tyhjenna, peitto, kerroin, kehys, mittarit, pura }}
  */
-export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = null, juuri = null }) {
+/*
+ * ══ PIIRTOKOKEET: PUSKURIKIRJOITUKSET JA VIENNIT VEDON AIKANA ═══════
+ * (omistajan tilaus Fablen kautta 22.9.2026, taustana Safarin GPU-
+ * prosessi: jokainen GL-kutsu kulkee IPC:n yli ja `bufferSubData` on
+ * Safarissa poikkeuksellisen kallis.)
+ *
+ * `?koe=eipuskuri` jäädyttää vedon ajaksi ne kirjoitukset, jotka
+ * muuten menevät GPU:lle joka kehyksessä: peiton osapäivitykset
+ * (crossfade) ja koko geometrian rakennuksen. Ne eivät katoa, vaan
+ * odottavat lepoa — kuva jää siis eleen ajaksi siihen asentoon, jossa
+ * häivytys oli. `?koe=eivienti` tekee saman tekstuurivienneille.
+ *
+ * Kokeet ovat MITTAUSTA VARTEN: kumpikin muuttaa ulkoasua vedon aikana
+ * eikä kumpaakaan ole tarkoitettu oletukseksi ilman omistajan päätöstä.
+ */
+export function luoNimiokerrosGL({
+  pallo, kotelo, ikkuna = globalThis, luokat = null, juuri = null, liikkeessa = () => false,
+}) {
   const doc = kotelo?.ownerDocument ?? ikkuna.document;
   const L = luokat ?? glLuokat(pallo);
   const atlasKoko = (() => { try { return (new URLSearchParams(ikkuna.location?.search ?? '').get('koe') ?? '').split(',').includes('atlaskoko'); } catch { return false; } })();
+  const kokeet = (() => {
+    try { return new Set(((new URLSearchParams(ikkuna.location?.search ?? '')).get('koe') ?? '').split(',').map((k) => k.trim())); } catch { return new Set(); }
+  })();
+  const eiPuskuri = kokeet.has('eipuskuri');
+  const eiVienti = kokeet.has('eivienti');
+  /** Jäädytetäänkö kirjoitukset juuri nyt (koe + liike). */
+  const jaassa = (lippu) => lippu && liikkeessa();
   const mittarit = {
     tila: L ? 'valmis' : 'ei-luokkia', instansseja: 0, sivuja: 0, rastereita: 0, drawcalls: 0,
     rakennuksia: 0, rakennusMs: 0, atlasTayttoaste: 0, kerroin: 1, kehyksia: 0,
     tiivistyksia: 0, pudotettuja: 0, kuolleita: 0,
+    /* Puskuri- ja uniformikirjoitukset (overlay, ?koe=profiili). */
+    puskurikirjoituksia: 0, uniformeja: 0, vienteja: 0, jaadytettyja: 0,
   };
   if (!L) {
     return {
@@ -696,8 +722,10 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
       inst.peitto = Math.max(0, Math.min(1, arvo));
       const attr = !likainen && inst.sivu ? inst.sivu.geometria.getAttribute('peitto') : null;
       if (!attr || !(inst.kulmaAlku >= 0) || inst.kulmaAlku + 3 >= attr.count) { likaa(); return; }
+      if (jaassa(eiPuskuri)) { mittarit.jaadytettyja += 1; return; }
       for (let k = 0; k < 4; k += 1) attr.setX(inst.kulmaAlku + k, inst.peitto);
       attr.needsUpdate = true;
+      mittarit.puskurikirjoituksia += 1;
       pallo?.__piirto?.tarvitaan();
       mittarit.peittopaivityksia = (mittarit.peittopaivityksia ?? 0) + 1;
     },
@@ -718,14 +746,19 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
       const suhde = mitat?.suhde ?? 1;
       ruutu.x = Math.max(1, (mitat?.W ?? kotelo?.clientWidth ?? 1) * suhde);
       ruutu.y = Math.max(1, (mitat?.H ?? kotelo?.clientHeight ?? 1) * suhde);
-      if (likainen) rakenna();
+      // Rakennus kirjoittaa KAIKKI puskurit uusiksi; kokeessa se odottaa lepoa.
+      if (likainen && !jaassa(eiPuskuri)) { rakenna(); mittarit.puskurikirjoituksia += 1; }
+      else if (likainen) mittarit.jaadytettyja += 1;
       for (const s of sivut) {
         s.materiaali.uniforms.ruutu.value.set(ruutu.x, ruutu.y);
         s.materiaali.uniforms.kerroin.value = kerroinNyt;
         s.materiaali.uniforms.sykeKerroin.value = sykeNyt;
         s.materiaali.uniforms.dpr.value = suhde;
+        mittarit.uniformeja += 4;
+        if (s.likainen && jaassa(eiVienti)) { mittarit.jaadytettyja += 1; continue; }
         if (s.likainen) {
           s.tekstuuri.needsUpdate = true; s.likainen = false; s.viety = true;
+          mittarit.vienteja += 1;
           mittarit.atlasKokopaivityksia = (mittarit.atlasKokopaivityksia ?? 0) + 1;
         }
       }

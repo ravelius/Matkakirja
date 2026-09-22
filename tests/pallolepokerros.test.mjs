@@ -466,8 +466,13 @@ test('E0: laattakerroksen apurit ovat js/pallolaatat.js:ssä, pallo.js vie ne ed
   assert.ok(!/from '\.\/pallo\.js'/.test(laatat), 'js/pallolaatat.js ei saa tuoda js/pallo.js:ää');
   const tuonnit = [...laatat.matchAll(/^import [\s\S]*?from '([^']+)';$/gm)].map((m) => m[1]);
   // 22.9.2026: kerma laatan shaderissa (js/laattakerma-shader.js, ei tuo palloa eikä laattoja);
-  // esilataus levossa (js/laattaesilataus.js, ei tuonteja); katkaisija (js/media.js, ei tuo kumpaakaan).
-  assert.deepEqual(tuonnit.sort(), ['./fokusmitat.js', './laattaesilataus.js', './laattakerma-shader.js', './laattapyramidi.js', './media.js']);
+  // esilataus levossa (js/laattaesilataus.js, ei tuonteja); katkaisija (js/media.js, ei tuo kumpaakaan);
+  // ratasvalikon piirtokoe (js/piirtokoe-asetus.js) — lehti ilman tuonteja, joten kehää ei synny,
+  // ja sen on oltava täällä, koska `laattakerroksenKokeet` on koelippujen toinen lähde.
+  assert.deepEqual(tuonnit.sort(), ['./fokusmitat.js', './laattaesilataus.js', './laattakerma-shader.js', './laattapyramidi.js', './media.js', './piirtokoe-asetus.js']);
+  // Lehti pysyy lehtenä: jos tämä moduuli alkaa tuoda muuta, kehäriski palaa.
+  const koeLahde = lue('../js/piirtokoe-asetus.js');
+  assert.ok(!/^import /m.test(koeLahde), 'js/piirtokoe-asetus.js ei saa tuoda mitään');
 });
 
 /*
