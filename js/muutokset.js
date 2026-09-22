@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2094, teksti: 'Korjaus: kerma-shaderin laatat eivat piirtyneet' },
   { v: 2093, teksti: 'Kohtaamiset C4-C7: 20 kaupunkia' },
   { v: 2092, teksti: 'Laattapyynnoille katkaisija' },
   { v: 2091, teksti: 'Preconnect ja dns-prefetch ampariin' },
