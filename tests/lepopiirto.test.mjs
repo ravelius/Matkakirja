@@ -36,11 +36,10 @@ test('päätös: kamera, tarve, este, hidas ja syke — muuten ei piirretä', ()
   assert.equal(lepopiirtoPaatos(tila, { nyt: 302, kameraMuuttui: false }), null);
   tila.paalla = false;
   assert.equal(lepopiirtoPaatos(tila, { nyt: 303, kameraMuuttui: false }), 'pois');
-  // Oletus POIS, kunnes omistaja on nähnyt levon iPhonella (Fable 22.9.2026).
-  assert.equal(lepopiirtoKaytossa(''), false);
-  assert.equal(lepopiirtoKaytossa('?koe=mittaus'), false);
-  assert.equal(lepopiirtoKaytossa('?koe=lepopiirto'), true);
-  // levovanha voittaa lipun; webdriver-poikkeusta ei enää ole (automaatio = pelaaja).
+  // Oletus PÄÄLLÄ: omistaja todensi levon iPhonella 22.9.2026 ("ei välky, vakaa").
+  assert.equal(lepopiirtoKaytossa(''), true);
+  assert.equal(lepopiirtoKaytossa('?koe=mittaus'), true);
+  // Paluulippu; webdriver-poikkeusta ei ole (automaatio ajaa pelaajan polkua).
   assert.equal(lepopiirtoKaytossa('?koe=levovanha'), false);
   assert.equal(lepopiirtoKaytossa('?koe=lepopiirto,levovanha'), false);
 });
@@ -119,6 +118,16 @@ test('kytkennät: lauta asentaa, häiveet ja nimiöt ilmoittavat, savuke pakotta
   assert.match(lauta, /hitaat: \(\) => sykkiiNyt\(\)/);
   assert.match(lauta, /sykkiiNyt = \(\) => Boolean\(glSovitin\?\.sykkii\?\.\(\)\);/);
   assert.match(lauta, /ryhma\[nimi\] = function ryhmanMuutos/);
+  /*
+   * Syöte on muutoslähde kuten häiveet ja nimiöt: se ilmoittaa
+   * lepopiirrolle. Mitattu hyöty on vedon alun determinismi — yksi
+   * kehys (14–15 ms) sen sijaan että lähtö riippuisi sykkeen osumasta
+   * (29 ms chromium, 52 ms webkit ilman ilmoitusta). Ks. V6.
+   */
+  const pallo = lue('../js/pallo.js');
+  assert.match(pallo, /const ilmoitaSyote = \(\) => \{ try \{ pallo\.__piirto\?\.tarvitaan\?\.\(\); \} catch/);
+  assert.match(pallo, /kotelo\.addEventListener\('pointerdown', \(\) => \{\n\s*ilmoitaSyote\(\);/);
+  assert.match(pallo, /if \(!tartunta \|\| sormet\.alhaalla !== 1\) return;\n\s*ilmoitaSyote\(\);/);
   // Uni kulkee lepopiirron kautta: kirjaston silmukalla on yksi omistaja.
   assert.match(lauta, /if \(pallo\.__piirto\) pallo\.__piirto\.uni\(false\);\n\s*else pallo\.resumeAnimation\?\.\(\);/);
   assert.match(lauta, /if \(pallo\.__piirto\) pallo\.__piirto\.uni\(true\);\n\s*else pallo\.pauseAnimation\?\.\(\);/);
