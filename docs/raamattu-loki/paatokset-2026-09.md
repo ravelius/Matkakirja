@@ -1595,3 +1595,7 @@ Omistaja testaa iPadilla ?koe=alpha0 ja Safarin 120 Hz -lipun. Lähteet: github.
 ## OMISTAJAN LINJAUS: SKANDAALIKORTIN LEHTIPALSTAT (LEIPATEKSTI KAHDESSA PALSTASSA KUVAN ALLA) NAYTTAVAT PAREMMALTA → SAMA KAIKKIIN PIDEMPIIN NOSTOIHIN, MYOS iPAD-PYSTYNAKYMASSA (ALLE 1100 px, JOSSA KUVA/TEKSTI-PALSTAT EIVAT OLE KAYTOSSA) (22.9.2026 klo 23.50)
 
 Omistaja klo 23.48 iPadilla (v2136), kaappaukset: Chartresin katedraali (kohdekortti, yksi palsta) vs Kuningattaren kaulanauhajuttu (skandaali, lisälehti, leipäteksti kahdessa palstassa): 'Kaksi erilaista. Tuo kaksi palstaa näyttää paremmalta kaiken kaikkiaan myös muuten. Voisi tehdä kaikkiin pidempiin ainakin.' Toteutus Karttasepälle: leipäteksti CSS-palstoina (2) kun kortin leveys ≥ ~700 px ja teksti pitkä (raja esim. ≥ 2 kappaletta tai ≥ 600 merkkiä), anfangi ja palstaväli skandaalikortin tapaan; puhelimella yksi palsta; ≥ 1100 px: kuva vasemmalla ja tekstipalsta oikealla voi sisältää kaksi lehtipalstaa jos leveys riittää, muuten yksi.
+
+## OMISTAJA iPADILLA: ?koe=alpha0 (LAPINAKYMATON KANGAS) JA SAFARIN 120 Hz -LIPPU EIVAT AUTTANEET NYKIMISEEN (22.9.2026 klo 23.56)
+
+Klo 23.53. Jäljellä syöteputki (?koe=syotetouch, ?koe=interpvanha) ja liikkeen tasaisuusmittarit (Pelikoodari tekee).
