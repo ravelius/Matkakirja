@@ -891,3 +891,7 @@ Pelikoodari 22.9.2026 klo 02.30: 'reunan ylitys' ei ollut bugi: vartiot lukivat 
 ## NOSTOTASOT KOKO EUROOPPAAN VALMIIT (37 MAATA); VIIMEISET 16 HAARAA JULKAISIJALLA (22.9.2026 klo 07.29)
 
 Sisältökirjuri 22.9.2026 klo 02.40: viimeinen erä dataan (HRV Split → Stonin muurit, SVK Bratislava → Bojnice, UKR Kiova ja Odesa → Kamjanets-Podilskyi ja Bakhchysarai, MLT Valletta → Sininen luola; SRB ilman dataa), 16 haaraa, testit 0 fail, Julkaisijalle. Nostotasot ovat nyt koko Euroopassa (FRA 8, DEU/ITA/ESP 8, 15 maata 5–6, 16 maata 3–4). Sisältökirjuri aloittaa maakuntien erän 2 (pitkä teksti + kuva, 97 aluetta).
+
+## MAAKUNTIEN ERA 2 (PITKA TEKSTI + KUVA, 97 ALUETTA) TARKASTETTU: HYVAKSYTTY, 1873-TOISTO HARVEMMAKSI (22.9.2026 klo 07.46)
+
+Fable 22.9.2026 klo 03.00: Sisältökirjurin erä 2 (haara sisalto-maakunnat-era2, raportit docs/raportit/maakunnat-era2-*-20260922.md; kuvat Commonsista tools/hae-commons.mjs:llä, sha256 + R2-osoite) tarkastettu: FRA kokonaan, POL:n 1873-faktat pistokokeena (toukokuun lait 1873, Danzigin keisarillinen telakka 1871, Vulcan Stettin, Breslau) pitävät; Monet 1872, Verne 1873, Thiers/MacMahon 1873, Alsace 1871 oikein. Korjaus: 'isoisän matkavuonna 1873' toistuu lähes joka alueella → enintään puolessa alueista per maa ja vaihtelevin muodoin; pituus 3–6 virkettä. Sitten dataan ja Julkaisijalle; erä 3 pulun kysymykset.
