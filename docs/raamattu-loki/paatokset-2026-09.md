@@ -887,3 +887,7 @@ Julkaisija 22.9.2026 klo 02.15 (load 3–8): korjautuneet glnimiot-nimet, glnimi
 ## SAVUKKEET NOSTOTASOT JA NIMIOT-ELAVAT VIHREIKSI (3be174d16): VARTIOT LUKIVAT IKKUNAN MITTOJA, EI BUGIA (22.9.2026 klo 07.22)
 
 Pelikoodari 22.9.2026 klo 02.30: 'reunan ylitys' ei ollut bugi: vartiot lukivat ikkunan mittoja (390) mutta laput ovat kotelon pikseleitä (374), joten kokonaan kotelon ulkopuoliset laput (Bonifacio, Nizza, Bernhardilainen) laskettiin ylityksiksi; nyt ruutu = kotelo ja ylitys vain osittain ruudussa olevalle. Yhtään puoliksi ruudussa olevaa lappua ei löytynyt. Testit 3848/0, Julkaisijalle. Ranska z6 zoomi: mittari mittaa-zoomipiirto.mjs (pääsäie/GPU-jako + CDP-profiili); laattakokeet (aniso, mipmap, silmät, häive, vienti levossa) eivät muuta p95:tä headlessissä → pulu/DOM-kerrokset ja iPhone-mittaus seuraavaksi.
+
+## NOSTOTASOT KOKO EUROOPPAAN VALMIIT (37 MAATA); VIIMEISET 16 HAARAA JULKAISIJALLA (22.9.2026 klo 07.29)
+
+Sisältökirjuri 22.9.2026 klo 02.40: viimeinen erä dataan (HRV Split → Stonin muurit, SVK Bratislava → Bojnice, UKR Kiova ja Odesa → Kamjanets-Podilskyi ja Bakhchysarai, MLT Valletta → Sininen luola; SRB ilman dataa), 16 haaraa, testit 0 fail, Julkaisijalle. Nostotasot ovat nyt koko Euroopassa (FRA 8, DEU/ITA/ESP 8, 15 maata 5–6, 16 maata 3–4). Sisältökirjuri aloittaa maakuntien erän 2 (pitkä teksti + kuva, 97 aluetta).
