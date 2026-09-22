@@ -1515,3 +1515,7 @@ Oikea signaali: 25 % kehyksistä yli 20 ms vaikka pääsäie varattuna vain 2–
 ## PR #2857 (PINOTTU #2854:N PAALLE): MITTARIKORJAUS — 'Ar' NIMETTY KOLMEKSI SILMUKAKSI (globe.tick, globe.tweenit, globe.ticker), js ILMAN TUPLARENDERIA, 'VALMISTUMISVIIVE' → 'PITKISSA VARATTU X · VAPAA Y ms' JA 'dt>20: 25×n 33×n …' (120/60 Hz KERRANNAISET), OHITUKSET JAKSOLTA, PROFIILI p4 (22.9.2026 klo 22.11)
 
 Pelikoodari: testit 3994/0, vartijat 2/2 kaatuvat vanhalla koodilla, savuke-profiilitila WebKit 5/5; paikallinen WebKit-veto globe.tick 1,3 ms (render 0,8), js 2,0. Omistajan seuraava koe vasta kun #2857 on tuotannossa: 'vapaa pitkissä' ja dt-kerrannaiset vastaavat suoraan GPU vai tahti.
+
+## PR #2859: ORVOT globe.gl-TICKERIT POIS (KIRJASTON LATAUKSESSA SYNTYVIA rAF-KUTSUJA EI REKISTEROIDA); WebKit rAF-KUTSUJA LEVOSSA 5,7 → 1,4 JA VEDOSSA 15,1 → 11,1 PER KEHYS (22.9.2026 klo 22.18)
+
+Pelikoodari: testit 3989/0 (uusia 3/3), savukkeet lepopiirto 12/12, glnimiot-nimet 7/7. Jono Julkaisijalla: #2854 → #2857 → #2859.
