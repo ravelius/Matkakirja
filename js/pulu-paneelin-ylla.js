@@ -120,6 +120,21 @@ export function asennaPuluPaneelinYlla(nappi, doc = globalThis.document) {
     nappi.style.removeProperty('--pulu-paneelin-ylla-bottom');
   };
 
+  /*
+   * VAHTI LEPÄÄ KARTAN LIIKKEEN AJAN (sulavuuskatsaus 22.9.2026 kohta 17):
+   * elementsFromPoint + getComputedStyle + rect-luvut 5×/s pakottivat
+   * asettelun keskellä panorointia, vaikka paneelit eivät liikkeessä
+   * avaudu eivätkä sulkeudu. Pallolauta merkitsee kotelonsa luokalla
+   * `pallolauta-liikkuu` (js/pallolauta/nimet.js LIIKKUU_LUOKKA) liikkeen
+   * ajaksi; silloin kierros ohitetaan (querySelector ei pakota
+   * asettelua). Resize ja lepo ajavat tarkistuksen kuten ennen.
+   * `?koe=pollovahtivanha` pitää vahdin käynnissä liikkeessäkin.
+   */
+  const vahtiVanha = (() => {
+    try { return new URLSearchParams(win.location?.search ?? '').get('koe')?.split(',').includes('pollovahtivanha') ?? false; } catch { return false; }
+  })();
+  let ohitettuja = 0;
+  const kartanLiike = () => !vahtiVanha && Boolean(doc.querySelector?.('.pallolauta-liikkuu'));
   const paivita = () => {
     if (!nakyvissa(nappi, win) || !nappi.classList.contains('pollo-kelluu')) {
       if (paneeli) vapauta();
@@ -177,12 +192,13 @@ export function asennaPuluPaneelinYlla(nappi, doc = globalThis.document) {
     nappi.classList.add('pulu-paneelin-ylla');
   };
 
-  const ajastin = win.setInterval(paivita, PULUN_TARKISTUSVALI_MS);
+  const kierros = () => { if (kartanLiike()) { ohitettuja += 1; return; } paivita(); };
+  const ajastin = win.setInterval(kierros, PULUN_TARKISTUSVALI_MS);
   win.addEventListener('resize', paivita);
   paivita();
   return {
     paivita,
-    tila: () => ({ ylla: nappi.classList.contains('pulu-paneelin-ylla'), piilossa: nappi.classList.contains(PULU_PANEELIN_ALLA_PIILOSSA), hyppyja, paneeli: paneeli?.className ?? null }),
+    tila: () => ({ ylla: nappi.classList.contains('pulu-paneelin-ylla'), piilossa: nappi.classList.contains(PULU_PANEELIN_ALLA_PIILOSSA), hyppyja, ohitettuja, paneeli: paneeli?.className ?? null }),
     pura() {
       win.clearInterval(ajastin);
       win.removeEventListener('resize', paivita);
