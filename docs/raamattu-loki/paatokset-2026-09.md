@@ -1563,3 +1563,7 @@ Laitetestaaja kirjoittaa muistion docs/raportit/ci-webkit-launch-20260922.md (oi
 ## PR #2866: PIIRTOKOE- JA KEHYSPROFIILIVALINTA NAYTTAA 'LADATAAN…' JA LATAA SIVUN 600 ms:SSA (VARTIJA 5/5); PELIKOODARIN TARKENNUKSET: dpr15 LASKI p95 59 → 28–47 JA >20 ms 32 % → 16–30 % ELI TAYTTO VAIKUTTAA HITAIMPIIN KEHYKSIIN (EI KOKO SYY); 'LAATTAVIENTEJA' ON 3 s JAKSOLTA → VEDOSSA 30–70 LAATTATEKSTUURIA/s = VAHVA EHDOKAS GPU-PROSESSIN KUORMAKSI; OHITUKSET 26 = AITOA LEPOA VETOJEN VALISSA (22.9.2026 klo 23.14)
 
 Seuraava koe #2866:n jälkeen: sama paikka, 10 s veto, kaksi kaappausta per tila: 1 Normaali (vertailukohta terävällä puuttuu), sitten eivienti ja eipuskuri. Jos eivienti vähentää >20 ms kehyksiä selvästi, syy on tekstuurilataukset → korjaus latausbudjetti vedon aikana tai pienemmät tekstuurit. Testit 4005/0.
+
+## #2866 SISALTAA MYOS PIIRTOKOEN 4 TILAA (1 NORMAALI, 2 EI PUSKURIKIRJOITUKSIA, 3 EI TEKSTUURIVIENTEJA, 4 EI HAIVYTYSTA VEDOSSA; OVERLAY 'koe 3/4'); dpr15/alpha0/vahemmandc VAIN OSOITTEESSA, TALLENNETTU VALINTA PALAUTUU NORMAALIIN (22.9.2026 klo 23.19)
+
+Pelikoodari: testit 4006/0, savukkeet profiilitila ja koevaihto-lataus 5/5 Chromium+WebKit. Omistajan kierros v2135:llä: 1/4, 3/4, 2/4, kaksi kaappausta kustakin samassa paikassa; valinta lataa sivun itse.
