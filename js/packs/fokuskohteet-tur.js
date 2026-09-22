@@ -135,6 +135,7 @@ export const FOKUSKOHTEET_TUR = [
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'historia',
     tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Kuinka pitkälle kaivaukset ovat ehtineet nykyään?',
       'Mitä Priamoksen aarteelle tapahtui löydön jälkeen?',
@@ -176,6 +177,7 @@ export const FOKUSKOHTEET_TUR = [
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'historia',
     tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Miksi kaupunki lopulta hylättiin?',
       'Minne temppelin löydöt vietiin?',
@@ -257,6 +259,7 @@ export const FOKUSKOHTEET_TUR = [
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'luonto',
     tyyppi: 'vuori',
+    taso: 1,
     kysymykset: [
       'Asuuko kallokolotaloissa vielä ihmisiä?',
       'Kuinka syvälle maanalaiset kaupungit ulottuvat?',
@@ -314,6 +317,7 @@ export const FOKUSKOHTEET_TUR = [
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'luonto',
     tyyppi: 'vuori',
+    taso: 1,
     kysymykset: [
       'Saako terasseilla vielä kävellä?',
       'Miksi antiikin kaupunki rakennettiin juuri tähän?',
