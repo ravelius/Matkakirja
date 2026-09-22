@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2077, teksti: 'C1-kohtaamiset: Fabrizio, Saana ja Kemal' },
   { v: 2076, teksti: 'CYP: 4 ykköstason nostoa' },
   { v: 2075, teksti: 'MLT: 4 ykköstason nostoa' },
   { v: 2074, teksti: 'LUX: 4 ykköstason nostoa' },

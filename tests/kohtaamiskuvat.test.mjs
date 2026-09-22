@@ -3,8 +3,11 @@ import { readFile, stat } from 'node:fs/promises';
 import test from 'node:test';
 
 import {
-  KOHTAAMIS_R2_JUURI, KOHTAAMISKUVAT_KOHTEELLE, kohtaamiskuvaKohteelle, kohtaamiskuvaOsoite, kohtaamiskuvat,
+  KOHTAAMIS_R2_JUURI, KOHTAAMISKUVAT_KOHTEELLE, KOHTAAMISKUVAT_TAVALLISELLE,
+  kohtaamiskuvaKohteelle, kohtaamiskuvaOsoite, kohtaamiskuvat,
+  kohtaamiskuvaTavalliselleKohtaamiselle,
 } from '../js/kohtaamiskuvat-data.js';
+import { KOHTAAMISET } from '../js/packs/kohtaamiset.js';
 import { TARINAKAARI } from '../js/packs/tarinakaari.js';
 import { KAARI_PAKETIT } from '../js/tyohuone-kehitys-data.js';
 
@@ -101,7 +104,7 @@ test('galleriasivu kytkee katalogin ja R2-virheen varanäkymän', async () => {
  * kentästä, joten kirjoitusvirhe tai kaupunki jota kaari ei tunne
  * jättäisi kuvan hiljaa pois ruudulta — se kaatuu tässä.
  */
-test('jokainen kohtaamiskuva osuu tarinakaaren kohteeseen ja sen hahmoon', () => {
+test('jokainen tarinakaaren kohtaamiskuva osuu kohteeseen ja sen hahmoon', () => {
   const kaikkiKaaret = new Map(KAARI_PAKETIT.kohteet.map((kaari) => [kaari.id, kaari]));
   for (const [kohde, kuva] of KOHTAAMISKUVAT_KOHTEELLE) {
     const kaari = TARINAKAARI[kohde];
@@ -145,9 +148,29 @@ test('jokainen kohtaamiskuva osuu tarinakaaren kohteeseen ja sen hahmoon', () =>
   }
 });
 
+test('22.9.2026 C1-kuvat osuvat tavallisen visan eri kohtaamishahmoihin', () => {
+  assert.equal(KOHTAAMISKUVAT_TAVALLISELLE.size, 3);
+  for (const [kohde, id, hahmo] of [
+    ['rooma', 'rooma-fabrizio-c1', 'Fabrizio'],
+    ['helsinki', 'helsinki-saana-c1', 'Saana'],
+    ['istanbul', 'istanbul-kemal-c1', 'Kemal'],
+  ]) {
+    const kuva = kohtaamiskuvaTavalliselleKohtaamiselle(kohde);
+    assert.equal(kuva?.id, id);
+    assert.ok(KOHTAAMISET[kohde]?.hahmo.includes(hahmo),
+      `${id}: hahmo ${hahmo} ei esiinny tavallisen visan kohtaamisessa`);
+    assert.equal(kuva?.kaytto, 'tavallinen');
+    assert.match(kuva?.osoite ?? '', /\/kohtaamiset\/20260922\/kasvo-/);
+    assert.notEqual(kohtaamiskuvaKohteelle(kohde)?.id, id,
+      `${id}: tavallisen visan kuva ei saa korvata tarinakaaren henkilöä`);
+  }
+});
+
 test('vain tarkistettu aktiivinen kuva päätyy peliin, muut jäävät galleriaan', () => {
   for (const kuva of kohtaamiskuvat) {
-    const peliin = kohtaamiskuvaKohteelle(kuva.kohde ?? kuva.kaupunki);
+    const peliin = kuva.kaytto === 'tavallinen'
+      ? kohtaamiskuvaTavalliselleKohtaamiselle(kuva.kohde ?? kuva.kaupunki)
+      : kohtaamiskuvaKohteelle(kuva.kohde ?? kuva.kaupunki);
     if (kuva.tila === 'tarkistettu' && kuva.aktiivinen !== false) {
       assert.equal(peliin?.id, kuva.id);
       assert.ok(peliin.osoite.startsWith(`${KOHTAAMIS_R2_JUURI}/`));
@@ -184,5 +207,6 @@ test('kohtaamiskortilla kuva on tervehdyksen yläpuolella ja kuvateksti kuvan al
   assert.match(html, /class="kuvalahde">Matkakirjan kuvitus</);
   // Kuvaton kohtaaminen ja kaksintaistelu piilottavat koko kuvion.
   assert.match(visa, /ui\.naytaKohtaamiskuva\(null\)/);
+  assert.match(visa, /kohtaamiskuvaTavalliselleKohtaamiselle\(quiz\.cityId\)/);
   assert.match(ui, /naytaKohtaamiskuva\(tiedot\) \{/);
 });

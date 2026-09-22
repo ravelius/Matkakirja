@@ -795,6 +795,60 @@ export const kohtaamiskuvat = [
     hetki: 'Avain on yhä portin lukossa, kun Freja kääntyy matkaajan puoleen ja viimeiset vieraat poistuvat karusellista.',
     vihje: 'Musiikkikaruselli, portti ja sulkemishetki vastaavat Kööpenhaminan Tivoliin sijoittuvaa kohtaamista paljastamatta kysymyksen vastausta.',
   },
+  /*
+   * KUVAPUTKEN TOIMITUS 22.9.2026: erä C1 palvelee tavallisten visojen
+   * KOHTAAMISET-hahmoja. `kaytto: 'tavallinen'` erottaa nämä kuvat saman
+   * kaupungin tarinakaaren henkilöstä (Rooman Enzo, Helsingin ja Istanbulin
+   * kaarihahmot), jotta ensimmäinen aarrekohtaaminen ei vaihda henkilöä.
+   */
+  {
+    id: 'rooma-fabrizio-c1',
+    kaupunki: 'Rooma',
+    kohde: 'rooma',
+    maa: 'Italia',
+    hahmo: 'Fabrizio',
+    kansio: '20260922',
+    tiedosto: 'kasvo-rooma-fabrizio.jpg',
+    tila: 'tarkistettu',
+    kaytto: 'tavallinen',
+    alt: 'Mopokorjaaja Fabrizio keskeyttää vanhan skootterin huollon roomalaisen kivimuurin työpajasyvennyksessä ja katsoo suoraan pelaajaan.',
+    lyhyt: 'Fabrizio nostaa katseensa kesken vanhan skootterin huollon.',
+    kuvateksti: 'Fabrizio keskeyttää vanhan skootterin huollon roomalaisen kivimuurin työpajasyvennyksessä ja arvioi yllättävää kysyjää huvittuneena.',
+    hetki: 'Toinen käsi jää skootterin rungolle ja rengasrauta osoittaa alas, kun Fabrizio nostaa katseensa työstä.',
+    vihje: 'Nykyinen korjaustyö ja vuosisatoja vanhan muurin rosoinen korjauskohta muodostavat kaksi aikakerrosta paljastamatta aarteen paikkaa.',
+  },
+  {
+    id: 'helsinki-saana-c1',
+    kaupunki: 'Helsinki',
+    kohde: 'helsinki',
+    maa: 'Suomi',
+    hahmo: 'Saana',
+    kansio: '20260922',
+    tiedosto: 'kasvo-helsinki-saana.jpg',
+    tila: 'tarkistettu',
+    kaytto: 'tavallinen',
+    alt: 'Telakkahitsaaja Saana seisoo visiiri nostettuna jäänmurtajan rungon vierellä, hitsauspoltin alaspäin ja katse suoraan pelaajassa.',
+    lyhyt: 'Saana nostaa katseensa telakkatyöstä visiiri ylhäällä.',
+    kuvateksti: 'Saana on juuri lopettanut hitsaussauman Hietalahden telakalla. Visiiri ylhäällä hän tunnistaa pelaajan kysymyksessä jotakin tuttua.',
+    hetki: 'Sammutettu poltin riippuu turvallisesti alaspäin ja toinen käsi nojaa kylmään kaiteeseen keskeytyneen työhetken ajan.',
+    vihje: 'Moderni laivanrunko ja yhä käytössä oleva patinoitunut kiinnityspollari yhdistävät telakan nykyhetken sen pitkään historiaan.',
+  },
+  {
+    id: 'istanbul-kemal-c1',
+    kaupunki: 'Istanbul',
+    kohde: 'istanbul',
+    maa: 'Turkki',
+    hahmo: 'Kemal',
+    kansio: '20260922',
+    tiedosto: 'kasvo-istanbul-kemal.jpg',
+    tila: 'tarkistettu',
+    kaytto: 'tavallinen',
+    alt: 'Raitiovaunuseppä Kemal pysähtyy kesken puupenkin lakkaamisen ja katsoo suoraan pelaajaan Istanbulin Tünelin lähellä.',
+    lyhyt: 'Kemal pysähtyy kesken raitiovaunupenkin lakkaamisen.',
+    kuvateksti: 'Kemalin sivellin jää raitiovaunupenkin puunsyylle, kun hän kääntyy arvioimaan aarrekysymystä suoraan ja hieman huvittuneena.',
+    hetki: 'Sivellin koskettaa yhä puuta ja toinen käsi tukee penkkiä, vaikka huomio on jo kokonaan pelaajassa.',
+    vihje: 'Vanhat messinki- ja puuosat sekä oviaukon ohi kulkeva nykyinen punainen raitiovaunu yhdistävät kaksi aikakerrosta.',
+  },
 
 ];
 
@@ -812,7 +866,16 @@ const kuvaAvain = (nimi) => String(nimi ?? '')
 /** Peliin kelpaavat kuvat kaupunkitunnuksen mukaan. */
 export const KOHTAAMISKUVAT_KOHTEELLE = new Map(
   kohtaamiskuvat
-    .filter((kuva) => kuva.tila === 'tarkistettu' && kuva.aktiivinen !== false)
+    .filter((kuva) => kuva.tila === 'tarkistettu'
+      && kuva.aktiivinen !== false && kuva.kaytto !== 'tavallinen')
+    .map((kuva) => [kuvaAvain(kuva.kohde ?? kuva.kaupunki), kuva]),
+);
+
+/** Tavallisen visan KOHTAAMISET-hahmojen kuvat kaupunkitunnuksen mukaan. */
+export const KOHTAAMISKUVAT_TAVALLISELLE = new Map(
+  kohtaamiskuvat
+    .filter((kuva) => kuva.tila === 'tarkistettu'
+      && kuva.aktiivinen !== false && kuva.kaytto === 'tavallinen')
     .map((kuva) => [kuvaAvain(kuva.kohde ?? kuva.kaupunki), kuva]),
 );
 
@@ -841,5 +904,11 @@ export const kohtaamiskuvaOsoite = (kuva) => [
  */
 export function kohtaamiskuvaKohteelle(cityId) {
   const kuva = KOHTAAMISKUVAT_KOHTEELLE.get(kuvaAvain(cityId));
+  return kuva ? { ...kuva, osoite: kohtaamiskuvaOsoite(kuva) } : null;
+}
+
+/** Tavallisen visan kohtaamiskuva, joka voi olla eri henkilö kuin tarinakaaressa. */
+export function kohtaamiskuvaTavalliselleKohtaamiselle(cityId) {
+  const kuva = KOHTAAMISKUVAT_TAVALLISELLE.get(kuvaAvain(cityId));
   return kuva ? { ...kuva, osoite: kohtaamiskuvaOsoite(kuva) } : null;
 }
