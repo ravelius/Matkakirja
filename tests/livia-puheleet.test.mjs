@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { kytkeLivianPuheEleet, LIVIAN_PUHEELEEN_MAX_MS, tarkistaLivianPuheEleet } from '../js/livia-puheleet.js';
+import { kytkeLivianPuheEleet, LIVIAN_PUHEELEEN_MAX_MS, tarkistaLivianPuheEleet, paivitaLivianPuheEleet } from '../js/livia-puheleet.js';
 import { LIVIA_SVG_ELEET } from '../js/livia-svg.js';
 import { kuunteleLivianTilanteita } from '../js/livia-tilanteet.js';
 
@@ -18,6 +18,36 @@ const eleet = [
   { id: 'marseille.livia.c1', alku: 500, loppu: 2100, tarkoitus: 'selittaa', voimakkuus: .45 },
   { id: 'marseille.livia.c2', alku: 2600, loppu: 3400, tarkoitus: 'selittaa', voimakkuus: .35 },
 ];
+
+test('piirtokello havaitsee rajat ilman timeupdatea, ei herätä taukoa tai keskeneräistä kelausta',t=>{
+ const audio=new KoeAudio(),tapahtumat=[];
+ const off=kuunteleLivianTilanteita((laji,tiedot)=>tapahtumat.push([laji,tiedot.tunnus]));
+ const pura=kytkeLivianPuheEleet(audio,eleet);t.after(()=>{pura();off();});
+ audio.paused=false;audio.laheta('playing');
+ audio.currentTime=.51;paivitaLivianPuheEleet(audio);
+ assert.deepEqual(tapahtumat.at(-1),['speechCue','marseille.livia.c1']);
+ audio.currentTime=2.11;paivitaLivianPuheEleet(audio);
+ assert.equal(tapahtumat.at(-1)[0],'speechCueEnd');
+ audio.laheta('seeking');audio.currentTime=2.8;
+ const n=tapahtumat.length;paivitaLivianPuheEleet(audio);assert.equal(tapahtumat.length,n);
+ audio.laheta('seeked');assert.equal(tapahtumat.at(-1)[1],'marseille.livia.c2');
+ for(const event of ['waiting','stalled','pause']){
+  audio.laheta(event);const maara=tapahtumat.length;
+  paivitaLivianPuheEleet(audio);assert.equal(tapahtumat.length,maara,event);
+  audio.laheta('playing');
+ }
+ pura();const maara=tapahtumat.length;paivitaLivianPuheEleet(audio);assert.equal(tapahtumat.length,maara);
+});
+
+test('saman audion uusi sidonta korvaa vanhan eikä vanha purku poista uutta piirtoyhteyttä',t=>{
+ const audio=new KoeAudio(),tapahtumat=[];
+ const off=kuunteleLivianTilanteita((laji,tiedot)=>tapahtumat.push([laji,tiedot.tunnus]));
+ const vanha=kytkeLivianPuheEleet(audio,eleet);
+ const uusi=kytkeLivianPuheEleet(audio,[{...eleet[0],id:'uusi.c1'}]);
+ t.after(()=>{vanha();uusi();off();});vanha();
+ audio.paused=false;audio.laheta('playing');audio.currentTime=.6;paivitaLivianPuheEleet(audio);
+ assert.deepEqual(tapahtumat,[['speechCue','uusi.c1']]);
+});
 
 test('kohdistettu lista hylkää epäselvän datan kokonaan', () => {
   assert.equal(LIVIA_SVG_ELEET.find((ele) => ele.id === 'cityExplain').duration, LIVIAN_PUHEELEEN_MAX_MS);

@@ -11,6 +11,9 @@ import { ilmoitaLivianPuheEle, ilmoitaLivianTilanne, livianPuheeleenTiedot } fro
 
 /** CityExplain palaa lepoankkuriin viimeistään tässä ajassa. */
 export const LIVIAN_PUHEELEEN_MAX_MS = 6200;
+const livianPuhePaivitykset = new WeakMap();
+/** Tuotannon olemassa oleva piirtojakso tarkistaa rajat myös timeupdaten välissä. */
+export function paivitaLivianPuheEleet(audio) { livianPuhePaivitykset.get(audio)?.paivita(); }
 
 /** Tarkista ja järjestä yksi jo kohdistettu puhe-elelista. Virheessä hiljaisuus. */
 export function tarkistaLivianPuheEleet(eleet) {
@@ -44,8 +47,10 @@ export function tarkistaLivianPuheEleet(eleet) {
 export function kytkeLivianPuheEleet(audio, eleet, { voimassa = () => true } = {}) {
   const rivit = tarkistaLivianPuheEleet(eleet);
   if (!audio?.addEventListener || !rivit.length) return () => {};
+  livianPuhePaivitykset.get(audio)?.pura();
   let elossa = true;
   let soiva = false;
+  let kelaamassa = false;
   let aktiivinen = null;
 
   const nyt = () => Math.round((Number(audio.currentTime) || 0) * 1000);
@@ -75,14 +80,15 @@ export function kytkeLivianPuheEleet(audio, eleet, { voimassa = () => true } = {
   const sovita = () => {
     if (!elossa) return;
     if (!voimassa()) { pura(); return; }
-    if (!soiva || audio.paused || audio.ended || audio.muted || !(audio.volume > 0)) { paata(); return; }
+    if (!soiva || kelaamassa || audio.seeking || audio.paused || audio.ended || audio.muted || !(audio.volume > 0)) { paata(); return; }
     const rivi = riviHetkella(nyt());
     if (!rivi) paata();
     else aloita(rivi);
   };
   const alkoi = () => { soiva = true; sovita(); };
   const tauko = () => { soiva = false; paata(); };
-  const kelaus = () => { paata(); };
+  const kelaus = () => { kelaamassa = true; paata(); };
+  const kelattu = () => { kelaamassa = false; sovita(); };
   const loppu = () => { tauko(); irrota(); };
   const tapahtumat = {
     playing: alkoi,
@@ -90,7 +96,7 @@ export function kytkeLivianPuheEleet(audio, eleet, { voimassa = () => true } = {
     ratechange: sovita,
     volumechange: sovita,
     seeking: kelaus,
-    seeked: sovita,
+    seeked: kelattu,
     pause: tauko,
     waiting: tauko,
     stalled: tauko,
@@ -98,6 +104,8 @@ export function kytkeLivianPuheEleet(audio, eleet, { voimassa = () => true } = {
     error: loppu,
     emptied: loppu,
   };
+  const paivitys = { paivita: sovita, pura };
+  livianPuhePaivitykset.set(audio, paivitys);
   for (const [nimi, kuuntelija] of Object.entries(tapahtumat)) audio.addEventListener(nimi, kuuntelija);
   // Loader voi valmistua vasta play()-tapahtuman jälkeen. Soittimen tila
   // ja currentTime ovat silloin totuus; menneitä cueita ei pureta jonona.
@@ -105,6 +113,7 @@ export function kytkeLivianPuheEleet(audio, eleet, { voimassa = () => true } = {
   function irrota() {
     if (!elossa) return;
     elossa = false;
+    if (livianPuhePaivitykset.get(audio) === paivitys) livianPuhePaivitykset.delete(audio);
     for (const [nimi, kuuntelija] of Object.entries(tapahtumat)) audio.removeEventListener(nimi, kuuntelija);
   }
   function pura() { paata(); irrota(); }

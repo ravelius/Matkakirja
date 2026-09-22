@@ -1,15 +1,32 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { asennaLivianKasvot, livianLuentaEstaaRauhan, livianMietintaEle, onkoLivianTarkkaMietinta, valitseLivianTaustaEle } from '../js/livia-eleet.js';
+import { asennaLivianKasvot, livianLuentaEstaaRauhan, livianMietintaEle, onkoLivianTarkkaMietinta, valitseLivianTaustaEle, luoLivianSaapumisrytmi } from '../js/livia-eleet.js';
 import { pehmeaLoppu } from '../js/luenta.js';
 import { LIVIAN_MIETINNAT } from '../js/pollo.js';
 import { LIVIA_SVG_ELEET } from '../js/livia-svg.js';
 import { ilmoitaLivianKasvopuhe } from '../js/livia-puhetila.js';
+import { kytkeLivianPuheEleet } from '../js/livia-puheleet.js';
 import { livianDialogikoti, seuraaLivianDialogeja } from '../js/livia-dialogitila.js';
 import { LIVIAN_ASTRONAUTTI_LUOKKA, LIVIAN_ASTRONAUTTI_PUHE_LUOKKA } from '../js/livia-astronautti.js';
 
 // Pieni DOM- ja kellosovitin: testataan pelin odotus/puhe/piilotus-elinkaarta,
 // ei piirtofunktion kopiota. Soittimet eivät vaadi verkkoa tai uusia ääniä.
+test('korttien nopea selailu ei tihennä saapumistemppuja eikä lasitörmäystä',()=>{
+ const valitse=luoLivianSaapumisrytmi(0);
+ for(let i=0;i<100;i++)assert.equal(valitse(i*1000),'arrive');
+ assert.equal(valitse(179999),'arrive');
+ assert.equal(valitse(180000),'clumsyLand');
+ assert.equal(valitse(180001),'arrive','saapumiskupla ei tuplaa näkyviin paluun temppua');
+ assert.equal(valitse(600000,false),'arrive','puhe, luenta ja reduced motion eivät saa temppua');
+ assert.equal(valitse(600000),'glassCrash','estetty tilanne ei kuluta myöhemmän paluun mahdollisuutta');
+ assert.equal(valitse(600001),'arrive');
+ assert.equal(valitse(780000),'clumsyLand');
+ assert.equal(valitse(960000),'clumsyLand');
+ assert.equal(valitse(1199999),'clumsyLand','törmäyksen kymmenen minuuttia ei ole täynnä');
+ assert.equal(valitse(1200000),'arrive','törmäys ei ohita muun tempun rauhoitusaikaa');
+ assert.equal(valitse(1379999),'glassCrash');
+});
+
 function liviaTestYmparisto(t){
  let now=1000,id=0;const raf=new Map(),timers=new Map(),observers=[];
  class El extends EventTarget{
@@ -316,21 +333,42 @@ test('pitkä odotus reagoi kerran, ei herää päättyneenä eikä keskeytä lue
  c.tuhoa();assert.equal(e.timers.size,0,'odotus-, tausta- tai paluuajastimia ei vuoda purussa');c=null;
 });
 
-test('karttakameran liike nostaa, jatkuu inertian ajan ja laskeutuu vasta pysähdyttyä',t=>{
+test('karttakameran liike vie pois, inertian jälkeen kolme sekuntia piilossa ja vasta sitten kurkistus',t=>{
  let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t),tila={x:0,y:0,skaala:1},kamera={kameranTila:()=>tila};
  e.pollo.haeUi=()=>({kamera:()=>kamera});c=asennaLivianKasvot(e.pollo);e.tick(5000);
- const canvas=e.doc.body.children[0].children[0];assert.doesNotMatch(canvas.innerHTML,/data-map-hover/);
- e.doc.dispatchEvent(new Event('pointermove'));e.tick(200);assert.doesNotMatch(canvas.innerHTML,/data-map-hover/,'pelkkä osoitin ei ole karttaliike');
- tila.x+=10;e.tick(160);assert.match(canvas.innerHTML,/data-map-hover/);
- for(let i=0;i<10;i++){tila.x+=3;e.tick(100);assert.match(canvas.innerHTML,/data-map-hover/,'kamera liikkuu ilman uutta pointer-eventtiä');}
- e.tick(400);assert.match(canvas.innerHTML,/data-map-hover/,'puolen sekunnin rauhoittumisviive');
- // Uusi zoom kesken laskeutumisen jatkaa samaa lentoa, ei käy maassa.
- e.tick(220);tila.skaala=1.1;e.tick(100);assert.match(canvas.innerHTML,/data-map-hover/);
- e.tick(900);assert.doesNotMatch(canvas.innerHTML,/data-map-hover/);assert.equal(e.raf.size,0,'lepotila ei pyöritä rAF:ia');
+ const canvas=e.doc.body.children[0].children[0];assert.doesNotMatch(canvas.innerHTML,/data-map-escape/);
+ e.doc.dispatchEvent(new Event('pointermove'));e.tick(200);assert.doesNotMatch(canvas.innerHTML,/data-map-escape/,'pelkkä osoitin ei ole karttaliike');
+ tila.x+=10;e.tick(160);assert.match(canvas.innerHTML,/data-map-escape="poistuu"/);
+ for(let i=0;i<10;i++){tila.x+=3;e.tick(100);}
+ assert.match(canvas.innerHTML,/data-map-escape="piilossa"/);assert.doesNotMatch(canvas.innerHTML,/data-part="whole-bird"/);
+ e.tick(3300);assert.doesNotMatch(canvas.innerHTML,/data-part="whole-bird"/,'inertia ja kolme sekuntia rauhaa odotetaan');
+ assert.equal(e.raf.size,0,'piilossa ei ole jatkuvaa piirtoa');
+ e.tick(300);assert.match(canvas.innerHTML,/data-map-peek="true"/);assert.doesNotMatch(canvas.innerHTML,/data-part="feet"/);
+ // Uusi zoom kurkistuksen aikana piilottaa heti, ei tuo koko lintua esiin.
+ tila.skaala=1.1;e.tick(120);assert.doesNotMatch(canvas.innerHTML,/data-part="whole-bird"/);
+ e.tick(3300);assert.doesNotMatch(canvas.innerHTML,/data-part="whole-bird"/);
+ e.tick(300);assert.match(canvas.innerHTML,/data-map-peek="true"/);
+ e.tick(2200);assert.doesNotMatch(canvas.innerHTML,/data-map-escape/);assert.equal(e.raf.size,0,'lepotila ei pyöritä rAF:ia');
  c.tuhoa();assert.equal(e.timers.size,0);assert.equal(e.raf.size,0);
 });
 
-test('luonnollisen pehmeän lopun stale diaryVoice ei estä karttaleijuntaa',t=>{
+test('viisi karttapaluuta vuorottelee; chat kesken piilovaiheen peruuttaa paluukellon',t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t),tila={x:0,y:0,skaala:1};
+ const kamera={kameranTila:()=>tila};e.pollo.haeUi=()=>({kamera:()=>kamera});c=asennaLivianKasvot(e.pollo);e.tick(5000);
+ const canvas=e.doc.body.children[0].children[0],tavat=[];
+ for(let i=0;i<6;i++){
+  tila.x+=20;e.tick(3900);assert.match(canvas.innerHTML,/data-map-peek/);
+  tavat.push(Number(canvas.innerHTML.match(/data-map-return="(\d)"/)[1]));
+  e.tick(2400);assert.doesNotMatch(canvas.innerHTML,/data-map-escape/);
+ }
+ assert.deepEqual(tavat,[0,1,2,3,4,0]);
+ tila.x+=20;e.tick(800);assert.match(canvas.innerHTML,/data-map-escape="piilossa"/);assert.equal(e.raf.size,0);
+ e.pollo.auki=true;e.notify(e.button);assert.doesNotMatch(canvas.innerHTML,/data-map-escape/);
+ e.tick(6000);assert.doesNotMatch(canvas.innerHTML,/data-map-peek/,'peruttu piilokello ei ilmesty chattiin');
+ c.tuhoa();assert.equal(e.timers.size,0);assert.equal(e.raf.size,0);
+});
+
+test('luonnollisen pehmeän lopun stale diaryVoice ei estä karttavaistoa',t=>{
  let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t),tila={x:0,y:0,skaala:1},kamera={kameranTila:()=>tila};
  const ui={kamera:()=>kamera};e.pollo.haeUi=()=>ui;
  class Luenta extends EventTarget{
@@ -345,26 +383,26 @@ test('luonnollisen pehmeän lopun stale diaryVoice ei estä karttaleijuntaa',t=>
  assert.equal(livianLuentaEstaaRauhan(ui),false);
 
  c=asennaLivianKasvot(e.pollo);e.tick(5000);const canvas=e.doc.body.children[0].children[0];
- tila.x+=10;e.tick(200);assert.match(canvas.innerHTML,/data-map-hover/,'luonnollisen lopun kahva esti hoverin');
- e.tick(1400);assert.doesNotMatch(canvas.innerHTML,/data-map-hover/);
+ tila.x+=10;e.tick(200);assert.match(canvas.innerHTML,/data-map-escape/,'luonnollisen lopun kahva esti poistumisen');
+ e.tick(5400);assert.doesNotMatch(canvas.innerHTML,/data-map-escape/);
 
  // Soiva ja tavallisesti kesken pauselle jätetty luenta pysyvät esteinä.
  ui.diaryVoice={paused:false,ended:false,currentTime:5,duration:22.32};
- assert.equal(livianLuentaEstaaRauhan(ui),true);tila.x+=10;e.tick(200);assert.doesNotMatch(canvas.innerHTML,/data-map-hover/);
+ assert.equal(livianLuentaEstaaRauhan(ui),true);tila.x+=10;e.tick(200);assert.doesNotMatch(canvas.innerHTML,/data-map-escape/);
  ui.diaryVoice={paused:true,ended:false,currentTime:5,duration:22.32};
- assert.equal(livianLuentaEstaaRauhan(ui),true);tila.x+=10;e.tick(200);assert.doesNotMatch(canvas.innerHTML,/data-map-hover/);
+ assert.equal(livianLuentaEstaaRauhan(ui),true);tila.x+=10;e.tick(200);assert.doesNotMatch(canvas.innerHTML,/data-map-escape/);
 
  // Luonnollinen loppumerkki ei ohita chatin tai lehden prioriteettia.
- ui.diaryVoice=luonnollinen;e.pollo.auki=true;e.notify(e.button);tila.x+=10;e.tick(200);assert.doesNotMatch(canvas.innerHTML,/data-map-hover/);
+ ui.diaryVoice=luonnollinen;e.pollo.auki=true;e.notify(e.button);tila.x+=10;e.tick(200);assert.doesNotMatch(canvas.innerHTML,/data-map-escape/);
  e.pollo.auki=false;e.notify(e.button);e.lehti.open=true;e.lehti.classList.add('lehti');e.notify(e.lehti);
- tila.x+=10;e.tick(200);assert.doesNotMatch(canvas.innerHTML,/data-map-hover/);
+ tila.x+=10;e.tick(200);assert.doesNotMatch(canvas.innerHTML,/data-map-escape/);
 });
 
-for(const este of ['chat','speech','narration','bun','dialog','hidden','reduced','flight'])test(`karttaleijunta väistää eikä jonotu: ${este}`,t=>{
+for(const este of ['chat','speech','narration','bun','dialog','hidden','reduced','flight'])test(`karttavaisto väistää eikä jonotu: ${este}`,t=>{
  let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t),tila={x:0,y:0,skaala:1},kamera={kameranTila:()=>tila};
  e.pollo.haeUi=()=>({kamera:()=>kamera});c=asennaLivianKasvot(e.pollo);e.tick(5000);
  const canvas=e.doc.body.children[0].children[0],puhe={},luenta={},lento={};
- tila.x=10;e.tick(200);assert.match(canvas.innerHTML,/data-map-hover/);
+ tila.x=10;e.tick(200);assert.match(canvas.innerHTML,/data-map-escape/);
  if(este==='chat'){e.pollo.auki=true;e.notify(e.button);c.tilanne('waiting',{tunnus:{},lahde:'vastaus'});}
  if(este==='speech')ilmoitaLivianKasvopuhe(puhe,true,'Hei');
  if(este==='narration')c.tilanne('narration',{tunnus:luenta,lahde:'matkakirja',reaktiotAjastettu:true});
@@ -373,24 +411,24 @@ for(const este of ['chat','speech','narration','bun','dialog','hidden','reduced'
  if(este==='hidden'){e.doc.hidden=true;e.doc.dispatchEvent(new Event('visibilitychange'));}
  if(este==='reduced'){e.reduced.matches=true;e.reduced.dispatchEvent(new Event('change'));}
  if(este==='flight')c.tilanne('startFlight',{tunnus:lento,vaihe:'alku'});
- e.tick(100);assert.doesNotMatch(canvas.innerHTML,/data-map-hover/);
- for(let i=0;i<10;i++){tila.x+=4;e.tick(100);assert.doesNotMatch(canvas.innerHTML,/data-map-hover/,'liikkuvakaan kamera ei ohita tärkeämpää tilaa');}
+ e.tick(100);assert.doesNotMatch(canvas.innerHTML,/data-map-escape/);
+ for(let i=0;i<10;i++){tila.x+=4;e.tick(100);assert.doesNotMatch(canvas.innerHTML,/data-map-escape/,'liikkuvakaan kamera ei ohita tärkeämpää tilaa');}
  if(este==='speech')ilmoitaLivianKasvopuhe(puhe,false);
  if(este==='narration')c.tilanne('narrationEnd',{tunnus:luenta});
  if(este==='hidden'){e.doc.hidden=false;e.doc.dispatchEvent(new Event('visibilitychange'));}
  if(este==='reduced'){e.reduced.matches=false;e.reduced.dispatchEvent(new Event('change'));}
  if(este==='flight')c.tilanne('startFlight',{tunnus:lento,vaihe:'peru'});
- e.tick(5000);assert.doesNotMatch(canvas.innerHTML,/data-map-hover/,'vanhaa liikettä ei jonoteta');
+ e.tick(5000);assert.doesNotMatch(canvas.innerHTML,/data-map-escape/,'vanhaa liikettä ei jonoteta');
  c.tuhoa();assert.equal(e.timers.size,0);assert.equal(e.raf.size,0);
 });
 
-test('karttakameran vaihto ja numeerinen värinä eivät laukaise leijuntaa',t=>{
+test('karttakameran vaihto ja numeerinen värinä eivät laukaise karttavaistoa',t=>{
  let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);let tila={x:0,y:0,skaala:1},kamera={kameranTila:()=>tila};
  e.pollo.haeUi=()=>({kamera:()=>kamera});c=asennaLivianKasvot(e.pollo);e.tick(5000);const canvas=e.doc.body.children[0].children[0];
  for(let i=0;i<20;i++){tila.x+=.001;tila.skaala+=.000001;e.tick(100);}
- assert.doesNotMatch(canvas.innerHTML,/data-map-hover/);
- kamera={kameranTila:()=>({x:200,y:300,skaala:4})};e.tick(1000);assert.doesNotMatch(canvas.innerHTML,/data-map-hover/,'uuden kameran ensimmäinen kuva on vertailupiste');
- kamera={kameranTila:()=>null};e.tick(300);assert.doesNotMatch(canvas.innerHTML,/data-map-hover/);
+ assert.doesNotMatch(canvas.innerHTML,/data-map-escape/);
+ kamera={kameranTila:()=>({x:200,y:300,skaala:4})};e.tick(1000);assert.doesNotMatch(canvas.innerHTML,/data-map-escape/,'uuden kameran ensimmäinen kuva on vertailupiste');
+ kamera={kameranTila:()=>null};e.tick(300);assert.doesNotMatch(canvas.innerHTML,/data-map-escape/);
 });
 
 test('taustaeleet ovat neutraaleja eivätkä toistu heti',()=>{
@@ -505,6 +543,19 @@ test('selittävä sisältöele kuuluu vain aktiiviselle puhetunnukselle ja nokka
  assert.equal(c.tilanne('speechCue',cue),false,'uuden äänen jälkeen vanha cue on stale');
  ilmoitaLivianKasvopuhe(b,false);assert.equal(c.tilanne('speechCue',cue),true,'alkuperäinen yhä kuuluva puhe palautuu uusimmaksi');
  ilmoitaLivianKasvopuhe(a,false);e.tick(40);assert.equal(e.raf.size,0,'puheen tauko katkaisee sisältöeleen');
+});
+
+test('aito piirto-ohjain havaitsee cuerajan ilman timeupdatea ja nokka käyttää mediakelloa',t=>{
+ let c,pura;const speech=new EventTarget();Object.assign(speech,{currentTime:.2,playbackRate:1,paused:false,ended:false,muted:false,volume:1,src:'koe.mp3'});
+ t.after(()=>{pura?.();ilmoitaLivianKasvopuhe(speech,false);c?.tuhoa();});
+ const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);const canvas=e.doc.body.children[0].children[0];
+ ilmoitaLivianKasvopuhe(speech,true,'Selitän.');
+ pura=kytkeLivianPuheEleet(speech,[{id:'koe.c1',alku:1000,loppu:2500,tarkoitus:'selittaa',voimakkuus:.4}]);
+ speech.currentTime=1.5;e.tick(40);assert.match(canvas.innerHTML,/data-part="near-wing"/,'rAF käynnistää ajantasaisen cuen');
+ assert.equal(e.raf.size,1,'cueraja ei jätä toista piirtojaksoa');
+ const sama=canvas.innerHTML;e.tick(200);assert.equal(canvas.innerHTML,sama,'seinäaika ei liikuta elettä tai nokkaa paikallaan olevaan mediaan nähden');
+ speech.currentTime=1.65;e.tick(40);assert.notEqual(canvas.innerHTML,sama);
+ speech.currentTime=2.51;e.tick(40);assert.doesNotMatch(canvas.innerHTML,/data-part="near-wing"/,'cue loppuu ilman timeupdatea');
 });
 
 test('selitysele seuraa audioa: lyhyt pysyy paikallaan, pitkä jatkuu seek-kohdasta ja 2x ei kiirehdi kävelyä',t=>{

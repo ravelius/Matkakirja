@@ -27,14 +27,49 @@ const lvClamp=n=>Math.max(0,Math.min(1,Number.isFinite(n)?n:0));
 const lvEase=n=>{n=lvClamp(n);return n*n*(3-2*n);};
 const lvGate=p=>lvEase((p-.06)/.18)*(1-lvEase((p-.79)/.18));
 const lvRound=n=>Math.round(n*1000)/1000;
+/* Piirretyt rytmiavaimet: pieni valmistelu, napakka isku, pito ja vaimeneva
+ * palautus. Media-aikaa ei venytetä: cue, äänitehoste ja kelaus säilyvät
+ * samassa kellossa. Eri pituiset välit tekevät nopeudenvaihtelun. */
+export function livianLiikekaari(p,avaimet) {
+ p=lvClamp(p);
+ for(let i=1;i<avaimet.length;i++){
+  const [a,x]=avaimet[i-1],[b,y]=avaimet[i];
+  if(p<=b)return x+(y-x)*lvEase((p-a)/(b-a));
+ }
+ return avaimet.at(-1)[1];
+}
+const lvIsku=[[0,0],[.10,-.12],[.23,1.06],[.34,1],[.58,1],[.85,-.035],[1,0]];
+const lvNyokkays=[[0,0],[.13,-.7],[.23,3.2],[.37,-.4],[.47,0],[.57,1.8],[.76,0],[1,0]];
+const lvKielto=[[0,0],[.14,1],[.24,-4.5],[.39,4],[.52,-2.8],[.65,1.4],[.84,0],[1,0]];
+const lvKatse=[[0,0],[.10,-.1],[.24,1],[.66,1],[.91,0],[1,0]];
+const lvKaannos=[[0,0],[.12,-.4],[.26,2.8],[.46,2.8],[.55,-2.2],[.72,-2.2],[.91,0],[1,0]];
+const lvHammastys=[[0,0],[.13,-.6],[.23,0],[.34,3.5],[.43,-1],[.59,1.2],[.84,0],[1,0]];
+/** Sama cue saa saman koreografian myös kelauksen ja tauon jälkeen. */
+export function livianEleMuunnelma(tunnus='') {
+ let arvo=0;for(const merkki of String(tunnus))arvo=(Math.imul(arvo,31)+merkki.codePointAt(0))>>>0;
+ return arvo%3;
+}
+// Karttapaluu on nykyisten lento-, kurkistus- ja katseosien koreografia,
+// ei uusi tunne tai gagi. Kaikki viisi päättyvät samaan lepoankkuriin.
+export const LIVIAN_KARTTAPALUUT=Object.freeze([
+ Object.freeze({nimi:'Varovainen sivukurkkija',kurkistus:700,paluu:720,kaari:14}),
+ Object.freeze({nimi:'Kaksi tarkistusta',kurkistus:1100,paluu:760,kaari:10}),
+ Object.freeze({nimi:'Matala liuku',kurkistus:800,paluu:850,kaari:5}),
+ Object.freeze({nimi:'Reipas pieni kaari',kurkistus:650,paluu:680,kaari:25}),
+ Object.freeze({nimi:'Nyökkäys ja kaksi askelta',kurkistus:1000,paluu:900,kaari:13}),
+]);
+export function livianKarttavaistonAsento(vaihe,p,muunnelma=0){
+ return {...livianSvgAsento('blink',0),karttaVaisto:{vaihe,p:lvClamp(p),muunnelma:Math.abs(Math.trunc(muunnelma)||0)%5}};
+}
 const lvEmotion={shock:1,embarrassed:.6,angry:.9,bored:.3,puff:.72,manic:1,expert:.65,disbelief:.8,confused:.55,happy:.65,smile:.35,grin:.6,chuckle:.6,wink:.3,welcome:.35,present:.5,glasses:.38,love:.65,facepalm:.6,doubleTake:.75,bread:.85};
+export const LIVIAN_PAIVITETYT_ELEET=Object.freeze([...new Set([...Object.keys(lvEmotion),'nod','shake','turn','glance','lookRight','lookUp','lookDown','tilt','think','listen','reading','mapPeck','cityExplain'])]);
 export function livianEleenVoima(id,text='') {
  let strength=lvEmotion[id]??.35;
  if(/!{2,}|aivan mahdoton|todellakaan|kääk!/iu.test(text))strength+=.15;
  return lvClamp(strength);
 }
-export function livianSvgAsento(id,p=0,{voimakkuus=livianEleenVoima(id),cueKestoMs=0,playbackRate=1}={}) {
- const s={...livianPikseliAsento(id,p),ele:id,p:lvClamp(p),voimakkuus:lvClamp(voimakkuus)};
+export function livianSvgAsento(id,p=0,{voimakkuus=livianEleenVoima(id),cueKestoMs=0,playbackRate=1,muunnelma=0}={}) {
+ const s={...livianPikseliAsento(id,p),ele:id,p:lvClamp(p),voimakkuus:lvClamp(voimakkuus),muunnelma:Math.abs(Math.trunc(muunnelma)||0)%3};
  if(id==='bunFeast'){
   const t=s.p;
   s.frame=t===0||t===1?'rest':t<.2?'grin':t<.9?'smile':'rest';
@@ -51,8 +86,8 @@ export function livianSvgAsento(id,p=0,{voimakkuus=livianEleenVoima(id),cueKesto
  if(id==='mapPeck'){
   // Kaksi rauhallista, toisistaan erottuvaa nokkaisua. Lyhyt väli tekee
   // liikkeestä uteliaan eikä mekaanista edestakaista pumppausta.
-  const first=s.p>.12&&s.p<.42?Math.sin((s.p-.12)/.30*Math.PI):0;
-  const second=s.p>.52&&s.p<.82?Math.sin((s.p-.52)/.30*Math.PI):0;
+  const first=livianLiikekaari(s.p,[[0,0],[.12,0],[.22,.12],[.27,1],[.30,.92],[.42,0],[1,0]]);
+  const second=livianLiikekaari(s.p,[[0,0],[.52,0],[.63,.18],[.67,1],[.70,.94],[.82,0],[1,0]]);
   const amount=Math.max(0,first,second);
   s.frame=amount>.08?'down':'rest';
   s.gazeDown=amount>.08;
@@ -63,17 +98,21 @@ export function livianSvgAsento(id,p=0,{voimakkuus=livianEleenVoima(id),cueKesto
   if(variant==='pitka'){
    // Rauhallinen askel sivuun, pysähdys, kaksi selityseletta ja paluu.
    const out=lvEase(s.p/.20),back=1-lvEase((s.p-.80)/.18),amount=out*back;
-   const point=lvEase((s.p-.18)/.10)*(1-lvEase((s.p-.40)/.10));
-   const open=lvEase((s.p-.50)/.10)*(1-lvEase((s.p-.72)/.12));
+   const point=lvEase((s.p-.20)/.055)*(1-lvEase((s.p-.40)/.10));
+   const open=lvEase((s.p-.52)/.075)*(1-lvEase((s.p-.72)/.12));
    s.frame=s.p<=0||s.p>=1?'rest':s.p<.42?'glance':s.p<.72?'front':'rest';
    s.cityExplain={variant,amount,point,open,gesture:Math.max(point,open),phase:s.p};
   }else{
    // Oma lyhyt koreografia, ei 6,2 sekunnin kävelyn nopeutettu pienennös:
    // katse sivuun, yksi hillitty siipiele ja pehmeä paluu paikallaan.
-   const point=lvEase((s.p-.12)/.18)*(1-lvEase((s.p-.68)/.22));
+   const point=lvEase((s.p-.14)/.09)*(1-lvEase((s.p-.60)/.30));
    s.frame=s.p<=0||s.p>=1?'rest':s.p<.78?'glance':'rest';
    s.cityExplain={variant,amount:0,point,open:0,gesture:point*.65,phase:s.p};
   }
+  // Vaihdetaan vain selittämisen tapaa, ei repliikin tunnetta tai kestoa.
+  // Kävelyalue ja pitkä/lyhyt-valinta pysyvät kaikilla samoina.
+  if(s.muunnelma===1){const c=s.cityExplain;[c.point,c.open]=[c.open,c.point];}
+  if(s.muunnelma===2){s.cityExplain.point*=.72;s.cityExplain.open*=.72;}
  }
  if(id==='glideIn')s.flight={kind:'opening',t:lvEase(p)};
  if(id==='trailerFlee')s.flight={kind:'trailerAway',t:lvEase(p)};
@@ -103,11 +142,29 @@ export function livianSvgAsento(id,p=0,{voimakkuus=livianEleenVoima(id),cueKesto
 }
 export function livianSvgMalli(s,{right=0}={}) {
  const id=s.ele||'',p=lvClamp(s.p??0),strength=lvClamp(s.voimakkuus??livianEleenVoima(id));
- const gate=lvGate(p),moving=Boolean(s.flight||s.walk||['arrive','crash','emerge','leaveDown','handoff','peek','owl','flyAway','flyBack','clumsyLand','glassCrash','walkRight','walkBack','leaveRight'].includes(id));
+ const gate=id in lvEmotion?lvClamp(livianLiikekaari(p,lvIsku)):lvGate(p),moving=Boolean(s.flight||s.walk||['arrive','crash','emerge','leaveDown','handoff','peek','owl','flyAway','flyBack','clumsyLand','glassCrash','walkRight','walkBack','leaveRight'].includes(id));
  const lean=!moving&&id in lvEmotion?strength*gate:0;
  const m={id,p,strength,gate,lean,headScale:1/(1-.48*lean),bodyLean:-9*lean,
   x:128+(s.x||0)*4,y:302+(moving?(s.y||0)*4:0),headY:moving?0:(s.y||0)*2,headAngle:(s.tilt||0)*(3+5*strength),scale:.56,angle:0,squash:1,visible:true,
   flight:Boolean(s.flight),walking:Boolean(s.walk),mirror:s.walk?.direction===1,face:s.frame||'rest',wing:'fold',wingAmount:0};
+ if(!moving){
+  const isku=livianLiikekaari(p,lvIsku),katse=livianLiikekaari(p,lvKatse);
+  const vaimea=.55+.45*strength,suunta=s.muunnelma===1?-1:1;
+  if(id in lvEmotion){
+   m.headAngle+=suunta*2.4*isku*vaimea;
+   m.headY-=1.8*isku*vaimea;
+   m.bodyLean-=.8*livianLiikekaari(Math.max(0,(p-.035)/.965),lvIsku)*vaimea;
+  }
+  if(id==='nod'){m.headY=livianLiikekaari(p,lvNyokkays)*vaimea;m.headAngle=m.headY*.65;}
+  if(id==='shake'){m.headAngle=livianLiikekaari(p,lvKielto)*vaimea;m.headY=-.7*katse;}
+  if(['turn','glance','lookRight'].includes(id))m.headAngle=livianLiikekaari(p,lvKaannos)*vaimea;
+  if(['lookUp','lookDown','tilt','think','listen','reading'].includes(id)){
+   m.headAngle=(id==='lookUp'?3:id==='lookDown'?-3:suunta*2)*katse*vaimea;
+   m.headY=(id==='lookUp'?-2:id==='lookDown'||id==='reading'?2:-.5)*katse;
+  }
+  if(['shock','doubleTake','disbelief'].includes(id))m.headY=-livianLiikekaari(p,lvHammastys)*vaimea;
+  if(id==='cityExplain')m.headAngle+=suunta*(s.muunnelma===2?3:1.4)*katse;
+ }
  if(id==='bunFeast'&&s.feast?.hop){m.y-=7*Math.abs(s.feast.hop);m.angle=2.5*Math.sin(p/.2*Math.PI*2);}
  if(id==='mapPeck'&&s.mapPeck){
   const amount=lvClamp(s.mapPeck.amount);
@@ -182,12 +239,15 @@ export function livianSvgMalli(s,{right=0}={}) {
   else if(id==='bunFeast'&&s.feast){m.wing=s.feast.phase==='squeal'?'spread':s.feast.phase==='bite'?'reach':'fold';}
   else if(s.frame==='shock')m.wing='spread';
   m.wingAmount=gate*(.25+.75*strength);
+  m.wingLift=gate;
   if(['shade','cover','preen'].includes(m.wing))m.wingAmount=1;
+  if(['shade','cover','preen'].includes(m.wing))m.wingLift=1;
  }
  if(id==='cityExplain'&&(s.cityExplain?.point>0||s.cityExplain?.open>0)){
   const point=lvClamp(s.cityExplain.point),open=lvClamp(s.cityExplain.open);
   m.wing=point>0?'point':'shrug';
   m.wingAmount=Math.max(point,open)*(.45+.35*strength);
+  m.wingLift=Math.max(point,open);
  }
  if(id==='chatDustOff'&&p>0&&p<1){
   const dustGate=lvEase(p/.12)*(1-lvEase((p-.82)/.18));
@@ -202,6 +262,30 @@ export function livianSvgMalli(s,{right=0}={}) {
   m.wing='flap';m.wingAmount=.5+.5*Math.sin(hoverPhase);
  }
  if(id==='wind')m.bodyLean+=8*gate;
+ if(s.karttaVaisto){
+  const {vaihe,p:t,muunnelma}=s.karttaVaisto,v=LIVIAN_KARTTAPALUUT[muunnelma];
+  const reuna=152+right+5,korkeus=muunnelma===3?12:muunnelma===2?-3:0;
+  m.karttaVaisto=vaihe;m.face='glance';m.headAngle=0;m.headY=0;m.bodyLean=0;m.lean=0;m.headScale=1;
+  if(vaihe==='piilossa')m.visible=false;
+  else if(vaihe==='poistuu'){
+   const u=1-(1-t)**3;m.x=128+(right+115)*u;m.y=302-52*Math.sin(u*Math.PI/2);
+   m.mirror=true;m.angle=-12*u;m.wing='flap';m.wingAmount=Math.sin(t*Math.PI*4);m.flight=true;m.visible=t<1;
+  }else if(vaihe==='kurkistaa'){
+   const kurkistus=lvEase(t/.22),piiloon=muunnelma===1?livianLiikekaari(t,[[0,0],[.38,0],[.50,1],[.62,0],[1,0]]):0;
+   m.x=reuna+32*(1-kurkistus)+18*piiloon;m.y=302-korkeus;
+   m.peekOnly=true;m.wing='fold';m.wingAmount=0;
+   m.headAngle=muunnelma===4?livianLiikekaari(t,lvNyokkays)*1.3:muunnelma===3?-4*kurkistus:0;
+   m.face=muunnelma===1&&t>.6?'front':t<.4?'glance':'front';
+  }else if(vaihe==='palaa'){
+   const u=lvEase(t),hypahdys=Math.sin(Math.PI*t)*v.kaari;
+   m.x=reuna+(128-reuna)*u;m.y=302-korkeus*(1-u)-hypahdys;
+   m.angle=(muunnelma===2?-3:5)*Math.sin(Math.PI*t);
+   m.face=t<.35?'front':'rest';m.revealBody=lvEase(t/.22);
+   m.flight=t<.86;m.wing=t>0&&t<.86?'flap':'fold';m.wingAmount=Math.sin(t*Math.PI*(muunnelma===2?2:4))*(1-t);m.wingLift=1;
+   if(muunnelma===4&&t>.65){const q=(t-.65)/.35;m.y-=3*Math.abs(Math.sin(q*Math.PI*2))*(1-q);m.walking=t<1;m.step=Math.sin(q*Math.PI*2)*(1-q);}
+   if(t===1){m.x=128;m.y=302;m.angle=0;m.flight=false;m.walking=false;}
+  }
+ }
  return m;
 }
 
@@ -211,7 +295,7 @@ export function livianLeijuntaSiipi(side,phase){
  const amount=.5+.5*Math.sin(phase);
  return lvWingTransform(side==='near'?121:88,0,side==='near'?1:-1,25+amount*65);
 }
-function lvWing(kind,side,amount,phase=0) {
+function lvWing(kind,side,amount,phase=0,lift=1) {
  if(['rubEyes','liftGlasses'].includes(kind)&&side==='near'){
   const dx=kind==='rubEyes'?Math.sin(phase*3)*2:0,dy=kind==='rubEyes'?Math.cos(phase*3)*1.2:-12;
   return `<g data-part="${kind}" transform="translate(${lvRound(dx)} ${lvRound(dy)})"><path d="M117 140Q132 131 122 112L113 100Q115 93 109 92L105 88Q101 87 102 93L97 91Q93 93 99 97L96 98Q94 101 102 103L109 106Q107 122 112 135Z" fill="#8499a3"/><path d="M102 95l8 5m-8 0l8 4m3 5q-2 12 5 19" fill="none" stroke="#506b7a" stroke-width="2.2" stroke-linecap="round"/></g>`;
@@ -225,6 +309,12 @@ function lvWing(kind,side,amount,phase=0) {
  if(kind==='scratch'&&side==='near'){angle=-76+Math.sin(phase*4)*9;raised=true;}
  if(['shade','cover','shy','preen','reach','reachRight'].includes(kind)&&side==='near'){angle=kind==='shade'?-67:kind==='reachRight'?80:kind==='reach'?-110:kind==='preen'?-115:-78;raised=true;}
  if(!raised)return side==='near'?`<path d="M112 136Q128 137 133 150Q135 161 128 171Q116 166 112 151Z" fill="#84959f"/><path d="M119 145Q126 148 130 153L129 157Q123 151 118 150Z M120 155Q126 158 130 163L128 167Q124 162 120 160Z" fill="#4d6472"/>`:'';
+ // Siipi ei ilmesty valmiiksi koholle: nosto ja taitetun siiven häivytys
+ // seuraavat samaa elekaarta. Lentojen siivet säilyttävät oman rytminsä.
+ if(lift<1&&kind!=='flap'){
+  const nosto=lvClamp(lift),valmis=lvWing(kind,side,amount,phase,1);
+  return `<g opacity="${lvRound(1-nosto)}">${lvWing('fold',side,0)}</g><g data-wing-lift="${lvRound(nosto)}" opacity="${lvRound(nosto)}" transform="rotate(${lvRound((1-nosto)*72)} ${anchor} 143)">${valmis}</g>`;
+ }
  const shift=kind==='scratch'?-44:kind==='shade'?-55:kind==='cover'?-38:kind==='shy'?-16:0;
  return `<g data-part="${side}-wing" transform="${lvWingTransform(anchor,shift,flip,angle)}"><path d="M-3 4Q-11-7-4-20L4-38Q7-44 10-37L10-29Q16-42 20-37L17-24Q23-35 26-30L22-17Q29-23 29-17Q23-5 12 3Q4 8-3 4Z" fill="${side==='near'?'#8499a3':'#788e99'}"/><path d="M0-13L8-27M5-7L16-23M10-1L21-15" fill="none" stroke="#506b7a" stroke-width="3.7" stroke-linecap="round"/></g>`;
 }
@@ -247,11 +337,12 @@ function lvBird(s,m,prefix){
   * pysyvät yhtenä paperinukkena. */
  const kypara=s.astronautti?`<image data-part="astronautti-kypara" href="${LIVIAN_ASTRONAUTTI_KYPARA}" x="-7" y="-10" width="126" height="126" preserveAspectRatio="xMidYMid meet"/>`:'';
  const head=`<g data-part="approach"${peck} transform="translate(${-8*m.lean} ${8*m.lean+down+m.headY}) rotate(${m.headAngle} 105 146) translate(105 146) scale(${lvRound(m.headScale)}) translate(-105 -146)"><g transform="translate(44 61) scale(1 .87)">${livianSvgPaa(headState,{prefix,lean:m.lean,strength:m.strength})}${kypara}</g></g>`;
+ if(m.peekOnly)return `<g data-part="whole-bird" data-map-peek="true" transform="${lvBirdTransform(m)}">${head}</g>`;
  const dashPart=s.flight?.kind==='chatDashOut'||s.flight?.kind==='chatDashBack'?` data-part-chat-dash="${s.flight.kind}"`:'';
  const hoverPart=m.mapHover?` data-map-hover="${lvRound(m.mapHover.height)}"`:'';
- const wing=side=>m.mapHover?`<g opacity="${lvRound(1-m.mapHover.height)}">${lvWing('fold',side,0)}</g><g opacity="${lvRound(m.mapHover.height)}">${lvWing(m.wing,side,m.wingAmount,m.p*12)}</g>`:lvWing(m.wing,side,m.wingAmount,m.p*12);
+ const wing=side=>m.mapHover?`<g opacity="${lvRound(1-m.mapHover.height)}">${lvWing('fold',side,0)}</g><g opacity="${lvRound(m.mapHover.height)}">${lvWing(m.wing,side,m.wingAmount,m.p*12)}</g>`:lvWing(m.wing,side,m.wingAmount,m.p*12,m.wingLift??1);
  return `<g data-part="whole-bird"${dashPart}${hoverPart} transform="${lvBirdTransform(m)}">
- ${lvFeet(m,s)}${wing('far')}${body}${head}${wing('near')}
+ <g${m.revealBody!==undefined?` opacity="${lvRound(m.revealBody)}"`:''}>${lvFeet(m,s)}${wing('far')}${body}</g>${head}<g${m.revealBody!==undefined?` opacity="${lvRound(m.revealBody)}"`:''}>${wing('near')}</g>
  </g>`;
 }
 function lvChatDashFx(s,m){
@@ -300,13 +391,13 @@ export function livianSvgKuva(s,{right=0,prefix='livia'}={}) {
  right=Math.max(0,Number.isFinite(right)?right:0);prefix=prefix.replace(/[^a-zA-Z0-9_-]/g,'');
  const m=livianSvgMalli(s,{right}),width=152+right;
  // The contact shadow belongs to the ground, not to the leaning or flying body.
- const groundY=m.mapHover?.groundY??m.y,contact=m.visible&&!s.flight&&!s.line&&groundY<=304?lvClamp((groundY-290)/12):0;
+ const groundY=m.mapHover?.groundY??m.y,contact=m.visible&&!s.flight&&!m.flight&&!m.peekOnly&&!s.line&&groundY<=304?lvClamp((groundY-290)/12):0;
  const hoverHeight=m.mapHover?.height||0,shadowOpacity=contact*(1-.65*hoverHeight),shadowRx=19*(1-.45*hoverHeight);
  const shadow=contact?`<defs><radialGradient id="${prefix}ground"><stop stop-color="#635b4e" stop-opacity=".58"/><stop offset=".55" stop-color="#635b4e" stop-opacity=".32"/><stop offset="1" stop-color="#635b4e" stop-opacity="0"/></radialGradient></defs><ellipse data-part="ground-shadow" cx="${lvRound(m.x)}" cy="301" rx="${lvRound(shadowRx)}" ry="2.8" fill="url(#${prefix}ground)" opacity="${lvRound(shadowOpacity)}"/>`:'';
  let markup=(m.visible?shadow+lvBird(s,m,prefix)+lvProps(s,m,prefix):'')+lvChatDashFx(s,m)+lvChatDustFx(s);
  if(s.owlX!==null&&s.owlX!==undefined){const ox=128+(right+80)*s.owlX/24;markup+=`<g transform="translate(${ox-14} 267)" fill="#73654f"><path d="M0 3L4-3L11 2L20-3L23 3V23Q12 35 0 23Z"/><circle cx="7" cy="10" r="5" fill="#e8ddc4"/><circle cx="17" cy="10" r="5" fill="#e8ddc4"/><circle cx="7" cy="10" r="2"/><circle cx="17" cy="10" r="2"/><path d="M9 15h6l-3 5Z" fill="#e8ddc4"/></g>`;}
  if(s.line)markup+=`<path d="M94 303H${Math.min(width,152)}" stroke="#988d79" stroke-width="1.3" stroke-linecap="round"/>`;
- return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} 304" width="${width}" height="304" overflow="${s.flight?.kind==='opening'?'visible':'hidden'}" aria-hidden="true" data-livia-visible="${m.visible}">${markup}</svg>`;
+ return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} 304" width="${width}" height="304" overflow="${s.flight?.kind==='opening'?'visible':'hidden'}" aria-hidden="true"${s.karttaVaisto?` data-map-escape="${s.karttaVaisto.vaihe}" data-map-return="${s.karttaVaisto.muunnelma}"`:''} data-livia-visible="${m.visible}">${markup}</svg>`;
 }
 let lvSerial=0;
 /*
