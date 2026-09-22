@@ -52,6 +52,22 @@ export const PIIRTOKOKEIDEN_VAIHTOEHDOT = [
     lataus: true,
   },
   {
+    avain: 'alpha0',
+    nimi: 'Ilman alfakanavaa',
+    seloste: 'Läpinäkymätön kangas — komposiittorin ei tarvitse sekoittaa sitä sivuun',
+    lippu: 'alpha0',
+    ikoni: '<path d="M4.5 5.5h15v13h-15z"/><path d="m4.5 18.5 15-13"/>',
+    lataus: true,
+  },
+  {
+    avain: 'vahemmandc',
+    nimi: 'Vähemmän piirtokutsuja',
+    seloste: 'Tuki- ja ennakkolaatat piiloon, kun näkyvä ala on jo täysin peitetty',
+    lippu: 'vahemmandc',
+    ikoni: '<path d="M4.5 8.5h9v9h-9z"/><path d="M10.5 5.5h9v9"/>',
+    lataus: true,
+  },
+  {
     avain: 'eivienti',
     nimi: 'Ei tekstuurivientejä',
     seloste: 'Vedon aikana ei viedä uusia tekstuureja näytönohjaimelle',

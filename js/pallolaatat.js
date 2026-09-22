@@ -2271,9 +2271,11 @@ export function luoLaattakerros({
   /** Tekstuurimuistin kiintiö laitteelle (ks. LAATTAKERROS_TAVUKERROIN_OSOITIN). */
   const kosketuslaite = () => Boolean(ikkuna.matchMedia?.('(hover: none)')?.matches);
   const tavukatto = () => LAATTAKERROS_LAATTAKATTO_TAVUT * (kosketuslaite() ? 1 : LAATTAKERROS_TAVUKERROIN_OSOITIN);
+  // Piirtokoe: tuki- ja ennakkolaatat piiloon täydellä peitolla (ks. vahemmandc alempana).
+  const vahemmanDc = laattakerroksenKokeet().has('vahemmandc');
   const mittarit = {
     tila: 'ei', taso: null, laattoja: 0, valmiita: 0, hapyvia: 0, pyyntoja: 0, pyydettyja: 0,
-    syy: '', kaytetytTavut: 0, jonossa: 0, scenessa: 0, purettuja: 0, paivityksia: 0,
+    syy: '', kaytetytTavut: 0, jonossa: 0, scenessa: 0, purettuja: 0, paivityksia: 0, piilotettuja: 0,
     /*
      * NÄKYVÄN ALUEEN PEITTO (heilurimittaus, savuke --vaihe=heiluri).
      * `nakyvia` on näkyvän alueen laattojen määrä, `nakyviaScenessa`
@@ -4357,6 +4359,28 @@ export function luoLaattakerros({
     mittarit.nakyviaTaysin = nakyviaTaysin;
     mittarit.ennakkoja = ennakko.size;
     mittarit.tukia = tuet.size;
+    /*
+     * KOELIPPU `?koe=vahemmandc` (Fable 22.9.2026): kun näkyvä ala on
+     * TÄYSIN peitetty (peittoOsuus === 1), tuki- ja ennakkolaatat eivät
+     * näy mistään — ne ovat varalla tasonvaihtoa ja panorointia varten.
+     * Kokeessa ne piilotetaan scenestä, jolloin piirtokutsuja on
+     * vähemmän eikä kuvassa muutu mitään. Häipyvää laattaa ei koskaan
+     * piiloteta: se on kesken olevaa ristihäivytystä.
+     *
+     * Mittaus, ei oletus: jos peitto arvioi väärin, kokeessa vilahtaa
+     * pohja. Siksi näkyvyys palautetaan heti, kun peitto ei ole täysi.
+     */
+    if (vahemmanDc) {
+      const taysi = mittarit.peittoOsuus === 1;
+      let piilossa = 0;
+      for (const t of laatat.values()) {
+        if (!t.scenessa || !t.verkko) continue;
+        const piiloon = taysi && !t.nakyva && !t.haipyy;
+        if (piiloon) piilossa += 1;
+        if (t.verkko.visible !== !piiloon) t.verkko.visible = !piiloon;
+      }
+      mittarit.piilotettuja = piilossa;
+    }
     // Syvyyssiirto aseman mukaan joka päivityksellä: taso vaihtui tai laatta vaihtoi roolia.
     for (const t of laatat.values()) {
       if (!t.materiaali) continue;
