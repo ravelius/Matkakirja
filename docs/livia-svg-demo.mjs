@@ -11,8 +11,8 @@ const uudetId=Object.fromEntries(LIVIAN_UUDET_VERSIOT.map(ele=>[ele.id,ele]));
 const KATEGORIAT=[
  {id:'uudet-versiot',nimi:'Uudet versiot',eleet:LIVIAN_UUDET_VERSIOT.filter(ele=>ele.group==='Uudet versiot')},
  ...RYHMAT.map(nimi=>({id:'uusi-'+nimi,nimi:'Uusi · '+nimi,eleet:LIVIA_SVG_ELEET.filter(ele=>ele.group===nimi).map(ele=>uudetId['uusi-'+ele.id])})),
- {id:'uudet',nimi:'Pelin lisätyt eleet',eleet:LIVIA_SVG_ELEET.filter(ele=>UUDET_ELEET.has(ele.id))},
- ...RYHMAT.map(nimi=>({id:nimi,nimi:'Pelissä · '+nimi,eleet:LIVIA_SVG_ELEET.filter(ele=>ele.group===nimi)})),
+ {id:'uudet',nimi:'Aiemmin lisätyt eleet',eleet:LIVIA_SVG_ELEET.filter(ele=>UUDET_ELEET.has(ele.id))},
+ ...RYHMAT.map(nimi=>({id:nimi,nimi:'Aiempi · '+nimi,eleet:LIVIA_SVG_ELEET.filter(ele=>ele.group===nimi)})),
 ];
 let kategoria='uudet-versiot';
 function piirraKategoriat(){

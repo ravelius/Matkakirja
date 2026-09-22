@@ -22,6 +22,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 
 import {
+  Pollo,
   KONTEKSTIN_ENIMMAISPITUUS,
   LINSSIJONON_KATTO,
   LIVIAN_LOKIN_KATTO,
@@ -45,6 +46,16 @@ import {
   puhdistaWikiPutket,
   vastauskuvanAihe,
 } from '../js/pollo.js';
+
+test('Pulun piilotetun napin vara-ankkuri vastaa uutta alaoikeaa paikkaa',()=>{
+  const pollo=Object.create(Pollo.prototype),ikkuna={innerWidth:390,innerHeight:844};
+  const piilossa={getBoundingClientRect:()=>({left:0,top:0,width:0,height:0})};
+  assert.deepEqual(pollo.ankkuriLaatikko(piilossa,ikkuna),{
+    left:284,right:332,width:48,top:738,bottom:786,height:48,
+  });
+  const nakyva={left:50,right:98,top:700,bottom:748,width:48,height:48};
+  assert.equal(pollo.ankkuriLaatikko({getBoundingClientRect:()=>nakyva},ikkuna),nakyva);
+});
 // Kuplan napautusnielu asuu ui-apureissa: sama vuoto koskee kaikkia
 // kelluvia kuplia (ks. tämän tiedoston loppu). Puheenvuoron jako osiin
 // asuu samassa tiedostossa (kuplapino, 3.9.2026).
