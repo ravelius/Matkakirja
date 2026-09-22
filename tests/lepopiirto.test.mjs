@@ -36,11 +36,10 @@ test('päätös: kamera, tarve, este, hidas ja syke — muuten ei piirretä', ()
   assert.equal(lepopiirtoPaatos(tila, { nyt: 302, kameraMuuttui: false }), null);
   tila.paalla = false;
   assert.equal(lepopiirtoPaatos(tila, { nyt: 303, kameraMuuttui: false }), 'pois');
-  // Oletus POIS, kunnes omistaja on nähnyt levon iPhonella (Fable 22.9.2026).
-  assert.equal(lepopiirtoKaytossa(''), false);
-  assert.equal(lepopiirtoKaytossa('?koe=mittaus'), false);
-  assert.equal(lepopiirtoKaytossa('?koe=lepopiirto'), true);
-  // levovanha voittaa lipun; webdriver-poikkeusta ei enää ole (automaatio = pelaaja).
+  // Oletus PÄÄLLÄ: omistaja todensi levon iPhonella 22.9.2026 ("ei välky, vakaa").
+  assert.equal(lepopiirtoKaytossa(''), true);
+  assert.equal(lepopiirtoKaytossa('?koe=mittaus'), true);
+  // Paluulippu; webdriver-poikkeusta ei ole (automaatio ajaa pelaajan polkua).
   assert.equal(lepopiirtoKaytossa('?koe=levovanha'), false);
   assert.equal(lepopiirtoKaytossa('?koe=lepopiirto,levovanha'), false);
 });
