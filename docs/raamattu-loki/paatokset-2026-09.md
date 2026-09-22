@@ -1559,3 +1559,7 @@ Omistaja klo 23.07 kaappauksen kera: 'Poista tuolta samalla ylimääräiset'. Pe
 ## CI-AJURIN UUDELLEENKAYNNISTYS (22.42) EI AUTTANUT: WebKit-launch-AIKAKATKAISU JATKUU (12/78 AJOSSA 35776510683) → VIKA YLEMPANA (GUI-SESSIO/WindowServer TAI WEBKIT-KOPION TILA); KONEEN REBOOT HUOMENNA AAMULLA, SIIHEN ASTI MERGET OMISTAJAN SAANNOLLA (22.9.2026 klo 23.13)
 
 Laitetestaaja kirjoittaa muistion docs/raportit/ci-webkit-launch-20260922.md (oireet, aikaraja 19.44, poissuljetut, järjestys huomiselle: reboot → webkit-2336 uudelleenasennus → runner-ympäristön env-dump).
+
+## PR #2866: PIIRTOKOE- JA KEHYSPROFIILIVALINTA NAYTTAA 'LADATAAN…' JA LATAA SIVUN 600 ms:SSA (VARTIJA 5/5); PELIKOODARIN TARKENNUKSET: dpr15 LASKI p95 59 → 28–47 JA >20 ms 32 % → 16–30 % ELI TAYTTO VAIKUTTAA HITAIMPIIN KEHYKSIIN (EI KOKO SYY); 'LAATTAVIENTEJA' ON 3 s JAKSOLTA → VEDOSSA 30–70 LAATTATEKSTUURIA/s = VAHVA EHDOKAS GPU-PROSESSIN KUORMAKSI; OHITUKSET 26 = AITOA LEPOA VETOJEN VALISSA (22.9.2026 klo 23.14)
+
+Seuraava koe #2866:n jälkeen: sama paikka, 10 s veto, kaksi kaappausta per tila: 1 Normaali (vertailukohta terävällä puuttuu), sitten eivienti ja eipuskuri. Jos eivienti vähentää >20 ms kehyksiä selvästi, syy on tekstuurilataukset → korjaus latausbudjetti vedon aikana tai pienemmät tekstuurit. Testit 4005/0.
