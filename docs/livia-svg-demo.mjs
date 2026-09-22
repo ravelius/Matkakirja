@@ -1,21 +1,21 @@
 import {LIVIA_SVG_ELEET,livianSvgAsento,livianSvgKuva,livianEleenVoima} from '../js/livia-svg.js';
 const $=id=>document.getElementById(id),reduced=matchMedia('(prefers-reduced-motion: reduce)');
-let selected='expert',phase=0,strength=livianEleenVoima(selected),raf=0,playing=false,all=false,timer=0,last=0;
+let selected='glideIn',phase=0,strength=livianEleenVoima(selected),raf=0,playing=false,all=false,timer=0,last=0;
 // Katselusivun "uudet" tarkoittaa nykyisen SVG-kokopulun myöhemmin
 // lisättyjä koreografioita. Ne ovat myös omissa varsinaisissa ryhmissään.
 const UUDET_ELEET=new Set(['glideIn','trailerFlee','trailerBack','chatDashOut','chatDashBack','chatDustOff','mapPeck','bunFeast','cityExplain','smile','grin','wink','welcome','present','glasses','bookStudy','scratch','eyeRub','chuckle']);
-for(const name of new Set(LIVIA_SVG_ELEET.map(e=>e.group))){const g=document.createElement('optgroup');g.label=name;for(const e of LIVIA_SVG_ELEET.filter(e=>e.group===name)){const o=document.createElement('option');o.value=e.id;o.textContent=e.label;g.append(o);}$('gesture').append(g);}
-function lisaaVetolaatikko(nimi,eleet,{auki=false,selite=''}={}){
- const laatikko=document.createElement('details'),otsikko=document.createElement('summary'),lista=document.createElement('div');
- laatikko.className='gesture-drawer';laatikko.open=auki;otsikko.textContent=`${nimi} (${eleet.length})`;lista.className='gesture-list';
- laatikko.append(otsikko);
- if(selite){const p=document.createElement('p');p.textContent=selite;laatikko.append(p);}
- for(const ele of eleet){const nappi=document.createElement('button');nappi.type='button';nappi.dataset.gesture=ele.id;nappi.textContent=ele.label;nappi.onclick=()=>{cancelAll();choose(ele.id);};lista.append(nappi);}
- laatikko.append(lista);$('gesture-drawers').append(laatikko);
+const KATEGORIAT=[{id:'uudet',nimi:'Uudet eleet',eleet:LIVIA_SVG_ELEET.filter(ele=>UUDET_ELEET.has(ele.id))},...[...new Set(LIVIA_SVG_ELEET.map(ele=>ele.group))].map(nimi=>({id:nimi,nimi,eleet:LIVIA_SVG_ELEET.filter(ele=>ele.group===nimi)}))];
+let kategoria='uudet';
+function piirraKategoriat(){
+ $('gesture-categories').replaceChildren();
+ for(const ryhma of KATEGORIAT){const nappi=document.createElement('button');nappi.type='button';nappi.dataset.category=ryhma.id;nappi.textContent=`${ryhma.nimi} (${ryhma.eleet.length})`;nappi.setAttribute('aria-pressed',String(ryhma.id===kategoria));nappi.onclick=()=>{cancelAll();kategoria=ryhma.id;piirraKategoriat();piirraElevalinnat();choose(ryhma.eleet[0].id,true);};$('gesture-categories').append(nappi);}
 }
-function merkitseValittu(){for(const nappi of $('gesture-drawers').querySelectorAll('button'))nappi.setAttribute('aria-pressed',String(nappi.dataset.gesture===selected));}
-lisaaVetolaatikko('Uudet eleet',LIVIA_SVG_ELEET.filter(ele=>UUDET_ELEET.has(ele.id)),{auki:true,selite:'Viimeksi lisätyt koreografiat. Samat eleet löytyvät myös omista ryhmistään.'});
-for(const nimi of new Set(LIVIA_SVG_ELEET.map(ele=>ele.group)))lisaaVetolaatikko(nimi,LIVIA_SVG_ELEET.filter(ele=>ele.group===nimi));
+function piirraElevalinnat(){
+ const ryhma=KATEGORIAT.find(r=>r.id===kategoria);$('gesture-options').replaceChildren();
+ for(const ele of ryhma.eleet){const nappi=document.createElement('button');nappi.type='button';nappi.dataset.gesture=ele.id;nappi.textContent=ele.label;nappi.onclick=()=>{cancelAll();choose(ele.id,true);};$('gesture-options').append(nappi);}
+ merkitseValittu();
+}
+function merkitseValittu(){for(const nappi of $('gesture-options').querySelectorAll('button'))nappi.setAttribute('aria-pressed',String(nappi.dataset.gesture===selected));}
 function current(){return LIVIA_SVG_ELEET.find(e=>e.id===selected);}
 function paint(){
  const s=livianSvgAsento(selected,phase,{voimakkuus:strength});
@@ -33,8 +33,11 @@ function run(){
  const tick=now=>{phase=Math.min(1,from+(now-start)/duration);if(now-last>=30||phase>=1){paint();last=now;}if(phase<1)raf=requestAnimationFrame(tick);else{stop();if(all){timer=setTimeout(()=>{const i=LIVIA_SVG_ELEET.findIndex(e=>e.id===selected);if(i===LIVIA_SVG_ELEET.length-1){cancelAll();$('description').textContent=`Kaikki ${LIVIA_SVG_ELEET.length} elettä näytetty.`;}else choose(LIVIA_SVG_ELEET[i+1].id);},450);}}};
  raf=requestAnimationFrame(tick);
 }
-function choose(id){stop();selected=id;$('gesture').value=id;strength=livianEleenVoima(id);$('strength').value=Math.round(strength*100);phase=reduced.matches?.45:0;$('description').textContent=current().label;merkitseValittu();paint();run();}
-$('gesture').onchange=()=>{cancelAll();choose($('gesture').value);};
+function choose(id,pidaKategoria=false){
+ stop();selected=id;
+ if(!pidaKategoria){const ryhma=KATEGORIAT.find(r=>r.id!=='uudet'&&r.eleet.some(ele=>ele.id===id));if(ryhma&&ryhma.id!==kategoria){kategoria=ryhma.id;piirraKategoriat();piirraElevalinnat();}}
+ strength=livianEleenVoima(id);$('strength').value=Math.round(strength*100);phase=reduced.matches?.45:0;$('description').textContent=current().label;merkitseValittu();paint();run();
+}
 $('strength').oninput=()=>{strength=Number($('strength').value)/100;paint();};
 $('position').oninput=()=>{cancelAll();stop();phase=Number($('position').value)/1000;paint();};
 $('play').onclick=()=>{cancelAll();stop();phase=reduced.matches?.45:0;paint();run();};
@@ -43,4 +46,4 @@ $('all').onclick=()=>{if(all){cancelAll();stop();}else if(!reduced.matches){all=
 $('slow').onchange=()=>{if(playing)run();};
 function motion(){stop();cancelAll();$('reduced').hidden=!reduced.matches;phase=reduced.matches?.45:0;paint();}
 reduced.addEventListener('change',motion);document.addEventListener('visibilitychange',()=>{stop();cancelAll();});
-$('reduced').hidden=!reduced.matches;choose(selected);
+$('reduced').hidden=!reduced.matches;piirraKategoriat();piirraElevalinnat();choose(selected,true);
