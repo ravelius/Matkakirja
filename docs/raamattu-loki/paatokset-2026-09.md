@@ -1235,3 +1235,7 @@ Pelikoodari 22.9.2026 klo 16.25: mittasi ennen pushia — ilman korjausta veto l
 ## v2110 (#2810 SYOTE HERATTAA LEPOPIIRRON); JONOON #2807, #2808, #2803; #2809 KARTTASEPAN KATSELMUKSEEN (22.9.2026 klo 16.22)
 
 Julkaisija 22.9.2026 klo 16.30: #2810 → v2110 (main e2db737ff), testit 3913/0. Fable: jonoon #2807 (GL-rungon värivika, Karttaseppä hyväksynyt) omana versiona, #2808 (patina.mjs vesiviivat, ei tuotantovaikutusta ennen polttoa) ja #2803 (raportti) ilman versiota; #2809 odottaa Karttasepän katselmusta.
+
+## MAC STUDIO KAATUI JA KAYNNISTYI UUDESTAAN (KLO ~16.24); SESSIOT PALAUTUVAT; MAIN v2110 (22.9.2026 klo 16.33)
+
+Omistaja 22.9.2026 klo 16.33: kone kaatui, nyt taas toimii (uptime 9 min, load 47 käynnistyksen jälkeen). Fablen worktree ehjä (claude/bold-ride-vow4ki 27b58942c), rooli-worktreet paikallaan, main v2110. ListAgents: Julkaisija ja Karttaseppä käynnissä uudestaan, Pelikoodari, Sisältökirjuri, Laitetestaaja ja Postivahti eivät vielä (Remote Control -merkinnät offline). Fable tarkistaa keskeneräiset työt luovutuksista ja käynnistää ohjeet uudestaan kun sessiot ovat auki.
