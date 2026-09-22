@@ -1179,3 +1179,7 @@ Omistaja 22.9.2026 klo 15.25: puhelu katkaisi puhelinyhteyden; sama tökkiminen 
 ## OMISTAJA: TOKKIMINEN NAKYY SAFARILLA TYOPOYDALLA (CHROME TESTATAAN); PUHELIMELLA EI TESTATA ELLEI PAKKO (22.9.2026 klo 15.28)
 
 Omistaja 22.9.2026 klo 15.30: panoroinnin tökkiminen näkyy ainakin Safarilla työpöydällä, Chrome testataan vielä; puhelinta ei käytetä testaamiseen ellei ole pakko. Sääntö sessioille: mittaukset ja korjausten todennus työpöydän Safarilla (WebKit) ensisijaisesti; puhelinpyynnöt vain Fablen kautta ja vain kun muu ei riitä.
+
+## OMISTAJA: CHROMESSA PANOROINTI PEHMEAMPI, TOKKIMINEN JO HYVIN VAHAISTA; SAFARISSA (WEBKIT) TOKKII — SYY WEBKITIN SYOTEPUTKESSA, KOHDISTUS SIIHEN (22.9.2026 klo 15.33)
+
+Omistaja 22.9.2026 klo 15.35: Chromessa kartta pyörii pehmeämmin kuin Safarissa, tökkiminen jo todella vähäistä; Safarissa tökkii. Vastaa Laitetestaajan Mac-mittausta (WebKit px/ms-vaihtelu 48–55 % vs Chromium 18–20 %, kehysajat samat). Johtopäätös: jäljellä oleva tökkiminen on WebKit-kohtaista syöteputkea (tapahtumien tahdistus kehyksiin), ei piirtoa; Pelikoodarin seuraava kohde Safari-työpöydällä oikeilla hiiritapahtumilla, sama koskee iOS Safaria.
