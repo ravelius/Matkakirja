@@ -1087,3 +1087,7 @@ Pelikoodari 22.9.2026 klo 17.45: #2783 (v2098:n päälle) Julkaisijalle: compile
 ## ERA 1 KOKONAAN TUOTANNOSSA v2097–v2099; KOHTAAMISET C4–C7 MAINISSA (v2093); JULKAISIJAN JONO TYHJA PAITSI MAAKUNTIEN KUVAVIENTI R2 (22.9.2026 klo 12.32)
 
 Julkaisija 22.9.2026 klo 17.55: #2783 → v2099 (main fc651208a); sulavuuserä 1 kokonaan live (v2097 syöte ja kuuntelijat, v2098 ilmakehä/pohja/kerma, v2099 esikäännös/Livia/pöllö + asetus Tarkkuus liikkeessä). Kohtaamiset C4–C7 mergetty v2093:ssa (#2771, 20 kaupunkia) ja C3-kuvat kytketty (#2775). Fable kysyi maakuntien kuvaviennin R2 tilaa (sisalto-maakunnat-era2). Erä 3 Pelikoodarilla käynnissä.
+
+## OMISTAJA TYOSTAA PULUA CODEXIN KANSSA; POSTILAATIKKOA SEURATAAN; PUUTTUVAT CODEX-KUVAT (MONUMENTIT 81, PIENOISMALLIT 25) OMISTAJA SELVITTAA (22.9.2026 klo 12.57)
+
+Omistaja 22.9.2026 klo 18.10: työstää seuraavaksi pulua Codexin kanssa; tietoja tulee Fablelle postilaatikon (claude/postilaatikko, posti/) kautta — Postivahti lukee. Omistaja selvittää itse, miksi Codex ei ole toimittanut monumenttien 81 havainnekuvaa (tilaukset 5–7) eikä 25 pienoismallia. Codexin kuvatila: C1–C3 pelissä (v2084, v2093), maakuntien 97 havainnekuvaa v2096, C4–C7 tilattu tänään (12–15).
