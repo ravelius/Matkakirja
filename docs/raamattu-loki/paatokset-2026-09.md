@@ -1323,3 +1323,7 @@ Omistaja 22.9.2026 klo 17.50: Opus testatkoon kaikki vaihtoehdot yhtä aikaa, ko
 ## OMISTAJA: TODENNAKOISIN SYOTEKORJAUS (INTERPOLOINTI) TUOTANTOON HETI, MUUT VAIHTOEHDOT KOELIPPUINA, OMISTAJA TESTAA iPHONELLA; POIKKEUS CI-TAUKOON (SAVUKKEET-MAC PERUTAAN) (22.9.2026 klo 17.58)
 
 Omistaja 22.9.2026 klo 18.00: peliin voi laittaa todennäköisimmän version heti ja hän testaa itse iPhonella; nykimisen voi testata nykyisellä kartalla, polttoa ei tarvitse odottaa. Fable: Pelikoodari tekee PR:n heti (oletus aikaleimainterpolointi, ?koe=interpvanha paluu, ?koe=syotetouch iOS-kosketusnäytteet; ennakko ja jousi toisessa PR:ssä jos eivät ehdi); Julkaisija mergeää Testit vihreänä ja peruu Mac-savukeajon polton takia.
+
+## OMISTAJA: SYOTEPUTKEN VAIHTOEHDOT RATASVALIKKOON (⚙ → KARTTA → VEDON SEURANTA), EI VAIN URL-LIPPUINA (22.9.2026 klo 17.59)
+
+Omistaja 22.9.2026 klo 18.05: liput valittaviksi ratasvalikon taakse, jotta testaus on nopeampaa. Fable → Pelikoodari: asetus 'Vedon seuranta' (Interpolointi oletus, Vanha, Ennakointi, Jousi, Kosketusnäytteet kosketuslaitteella), localStorage, vaikutus heti jos mahdollista, valinta syötelokiin; URL-liput jäävät mittaukseen; samaan PR:ään tai heti perään omana.
