@@ -1503,3 +1503,7 @@ Omistaja klo 21.50: 'En muista. Se pitäisi kirjoittaa siihen testiarkkiin numer
 ## KARTTASEPPA VAIHDETTU OPUS 5.5:EEN (OMISTAJA); PELIKOODARI JA KARTTASEPPA MOLEMMAT OPUS 5.5 (22.9.2026 klo 21.52)
 
 Omistaja klo 21.53. Karttaseppä on ollut idle koko illan (viimeksi 22.9. klo 15.40); avoimet asiat sillä: meren lika laatassa, harvennetut viivat vaimeina -ehdotus, paperirae jäissä, omistajan tuntumatesti kartasta 22c ja nostotason poltto odottavat omistajaa.
+
+## PR #2854: OVERLAYN YLIN RIVI 'koe: <tila> · profiili pN · vNNNN' (+ 'seuraavassa latauksessa: X'); VIKA LOYTYI: pallonimiot-gl.js LUKI eipuskuri/eivienti VAIN OSOITTEESTA → VALIKOSTA VALITTUNA NE EIVAT KOSKENEET NIMIORUNKOON (OMISTAJAN VALIKKOMITTAUKSET NIILLA = NORMAALI RUNGON OSALTA); KORJATTU, VARTIJA (22.9.2026 klo 21.56)
+
+Pelikoodari: testit 3987/0, savuke-profiilitila 5/5 Chromium+WebKit. Seuraus: illan kolme kaappausta eivät mitanneet eipuskuri/eivienti-kokeita runkoon asti; uusi kierros v2130:llä (tilarivi näkyy). Julkaisijalle: #2854 jonoon #2850/#2851/#2853 perään.
