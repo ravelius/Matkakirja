@@ -10,6 +10,8 @@ import { readFileSync } from 'node:fs';
 import {
   LEPOPIIRTO_HIDAS_MS, LEPOPIIRTO_SYKE_MS, asennaLepopiirto, lepopiirtoKaytossa, lepopiirtoPaatos,
 } from '../js/pallolauta/lepopiirto.js';
+import { luoKehysprofiili } from '../js/pallolauta/kehysprofiili.js';
+import { kokeenPikselisuhde } from '../js/pallo.js';
 
 const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
 
@@ -192,4 +194,57 @@ test('lepopiirto: ele ja liuku ovat este, eli vedon aikana piirretään joka keh
    * tätä vikaa lainkaan (todettu: korjaamattomalla puulla 0 ohitusta).
    */
   assert.match(savuke, /if \(kehyksia % 2 === 0\) \{ x \+= 1\.4; tapahtuma\('pointermove'\); \}/);
+});
+
+/* --- yksi rAF-ketju per mittaus (v2123:n vika) ------------------------- */
+
+/*
+ * OMISTAJAN KAAPPAUS v2123 (Tasainen): "rAF 500 Hz (dt p50 2,0)" ja
+ * 4130 kehystä kolmessa sekunnissa — mahdotonta yhdelle ketjulle.
+ * Syy: rollaava ikkuna sulkee ja avaa profiilin, ja vanha askel katsoi
+ * vain `tila.kaynnissa`, joka oli UUDEN mittauksen kenttä. Jokainen
+ * jakso lisäsi ketjun, ja ne kaikki syöttivät samaa taulukkoa.
+ */
+test('kehysprofiili: uudelleen avaaminen ei kasvata rAF-ketjujen määrää', () => {
+  let jono = [];
+  const ikkuna = {
+    performance: { now: () => aika },
+    requestAnimationFrame: (fn) => { jono.push(fn); return jono.length; },
+    cancelAnimationFrame: () => {},
+  };
+  let aika = 0;
+  const profiili = luoKehysprofiili(() => ({}), ikkuna);
+  /** Yksi kehys: ajetaan kaikki jonossa olevat askeleet. */
+  const kehys = () => {
+    aika += 16.7;
+    const nyt = jono;
+    jono = [];
+    for (const fn of nyt) fn(aika);
+    return nyt.length;
+  };
+  profiili.aloita();
+  kehys();
+  assert.equal(profiili.ketjuja(), 1, 'yksi ketju alussa');
+  for (let i = 0; i < 5; i += 1) {
+    profiili.lopeta();
+    profiili.aloita();
+    kehys();
+    kehys();
+  }
+  assert.equal(profiili.ketjuja(), 1, `viiden jakson jälkeen ketjuja ${profiili.ketjuja()}`);
+  assert.equal(kehys(), 1, 'kehyksessä ajetaan tasan yksi askel');
+  const tulos = profiili.lopeta();
+  // dt on rAF-väli eikä sen murto-osa: monta ketjua puolittaisi sen.
+  const dts = (tulos?.kehykset ?? []).map((k) => k.dt);
+  assert.ok(dts.every((d) => d > 8), `dt p50 ≥ 8 ms (${dts.join(',')})`);
+});
+
+test('koelippu ?koe=dpr15 lukitsee pikselisuhteen täyttökokeeksi', () => {
+  assert.equal(kokeenPikselisuhde(new Set(['dpr15'])), 1.5);
+  assert.equal(kokeenPikselisuhde(new Set(['dpr2'])), 2);
+  assert.equal(kokeenPikselisuhde(new Set(['syoteloki'])), null, 'muut liput eivät koske pikselisuhteeseen');
+  const lahde = readFileSync(new URL('../js/pallo.js', import.meta.url), 'utf8');
+  // Lukko on molemmissa kirjoituskohdissa: asetus ei saa nostaa suhdetta kesken mittauksen.
+  assert.match(lahde, /const suhde = koeSuhde \?\? pikselisuhdeTarkkuudella/);
+  assert.match(lahde, /const suhde = koeSuhde \?\? Math\.min\(dpr, lepoon/);
 });

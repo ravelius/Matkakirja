@@ -72,6 +72,8 @@ export function luoKehysprofiili(uiTaiHaku, ikkuna = globalThis) {
   const alkuperainenRaf = ikkuna.requestAnimationFrame;
   const nimi = (fn) => fn?.name || String(fn).replace(/\s+/g, ' ').slice(0, 48);
   let kehysNyt = null;
+  /** Elossa olevat mittausketjut (ks. YKSI KETJU PER MITTAUS). */
+  let ketjuja = 0;
   const kirjaa = (avain, ms) => {
     if (!kehysNyt) return;
     kehysNyt.js = (kehysNyt.js ?? 0) + ms;
@@ -80,7 +82,15 @@ export function luoKehysprofiili(uiTaiHaku, ikkuna = globalThis) {
   };
   const kaariRaf = () => {
     ikkuna.requestAnimationFrame = (fn) => alkuperainenRaf.call(ikkuna, (t) => {
-      const a = nyt(); try { return fn(t); } finally { kirjaa(nimi(fn), nyt() - a); }
+      const a = nyt();
+      /*
+       * KUINKA MONTA rAF-SILMUKKAA ON ELOSSA (Fable 22.9.2026): jokainen
+       * kehyksessä ajettu kääritty takaisinkutsu on yhden silmukan
+       * askel — kirjaston tick, lepopiirron kello, kartan liike.
+       * Keskiarvo kehystä kohti kertoo, moninkertaistuiko jokin niistä.
+       */
+      if (kehysNyt) kehysNyt.rafKutsuja = (kehysNyt.rafKutsuja ?? 0) + 1;
+      try { return fn(t); } finally { kirjaa(nimi(fn), nyt() - a); }
     });
   };
   const puraRaf = () => { ikkuna.requestAnimationFrame = alkuperainenRaf; };
@@ -95,14 +105,30 @@ export function luoKehysprofiili(uiTaiHaku, ikkuna = globalThis) {
   };
   if (kanava) kanava.port1.onmessage = () => { if (odottaa) { odottaa.kehys.varattu = ikkuna.performance.now() - odottaa.alku; odottaa = null; } };
   const nyt = () => ikkuna.performance.now();
+  /*
+   * ══ YKSI KETJU PER MITTAUS (v2123:n vika, omistajan kaappaus) ══════
+   *
+   * Vanha askel tarkisti vain `tila?.kaynnissa`. Kun profiili suljetaan
+   * ja avataan uudelleen (rollaava ikkuna, js/pallolauta/profiilinaytto.js),
+   * `tila` osoittaa jo UUTEEN mittaukseen, jonka `kaynnissa` on tosi —
+   * joten vanha ketju jatkoi ja syötti kehyksensä uuteen taulukkoon.
+   * Jokainen jakso siis LISÄSI yhden rAF-ketjun: omistajan puhelimessa
+   * mittari näytti "rAF 500 Hz (dt p50 2,0)" ja 4130 kehystä kolmessa
+   * sekunnissa, mikä on mahdotonta yhdelle ketjulle.
+   *
+   * Korjaus: ketju tuntee OMAN mittauksensa ja lopettaa heti, jos
+   * voimassa on toinen. Laskuri `ketjuja` on vartija: sen on oltava 1.
+   */
   const aloita = () => {
-    tila = { kehykset: [], kaynnissa: true, t: nyt(), alku: nyt() };
+    const oma = { kehykset: [], kaynnissa: true, t: nyt(), alku: nyt() };
+    tila = oma;
     kaariRaf(); kaariRender();
+    ketjuja += 1;
     const askel = () => {
-      if (!tila?.kaynnissa) return;
-      const t = nyt(); const dt = t - tila.t; tila.t = t;
-      const kehys = { t: t - tila.alku, dt, varattu: null, js: 0, render: 0, ...lue() };
-      tila.kehykset.push(kehys);
+      if (tila !== oma || !oma.kaynnissa) { ketjuja = Math.max(0, ketjuja - 1); return; }
+      const t = nyt(); const dt = t - oma.t; oma.t = t;
+      const kehys = { t: t - oma.alku, dt, varattu: null, js: 0, render: 0, ...lue() };
+      oma.kehykset.push(kehys);
       kehysNyt = kehys;
       if (kanava) { odottaa = { alku: t, kehys }; kanava.port2.postMessage(0); }
       // Oma askel ensimmäisenä rAF-jonossa: muut saman kehyksen kutsut kirjautuvat tähän kehykseen.
@@ -225,7 +251,7 @@ export function luoKehysprofiili(uiTaiHaku, ikkuna = globalThis) {
     const t = v?.tasaisuus; if (!t) return 'ei vetoa';
     return `veto ${v.nopeusPx} px/s (${v.pointerType}): siirtymä/kehys ka ${p(t.siirtymaKa, 2)} px, hajonta/ka ${p((t.vaihtelu ?? 0) * 100, 0)} % (px/ms-vaihtelu ${p((t.nopeusVaihtelu ?? 0) * 100, 0)} %), pysähdyksiä ${t.pysahdyksia}/${t.kehyksia}, pisin ${p(t.pisinPysahdysMs, 0)} ms, dt p95 ${p(t.dtP95)}`;
   };
-  return { aloita, lopeta, tiivista, teksti, lue, veto, tasaisuus, vetoTeksti };
+  return { aloita, lopeta, tiivista, teksti, lue, veto, tasaisuus, vetoTeksti, ketjuja: () => ketjuja };
 }
 
 /** Asenna `globalThis.__kehysprofiili` (kerran). */
