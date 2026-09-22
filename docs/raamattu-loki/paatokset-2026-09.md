@@ -1375,3 +1375,7 @@ Omistaja 22.9.2026 klo 18.55: kokeili v2117:llä kaikki syötetavat ratasvalikos
 ## E VALMIS (#2835: HARMAA PISTE OLETUS, VARI VIVUN VALOTAPLASTA, ?koe=symbolitkaukana); ?koe=profiili TILATTU (KEHYSPROFIILIN OVERLAY + POST) iPHONE-MITTAUKSEEN ILMAN WEB INSPECTORIA (22.9.2026 klo 19.00)
 
 Pelikoodari 22.9.2026 klo 19.00: #2835 — --sym-piste-harmaa, selitevalikon merkki pitää värinsä (väriavain), väri tulee valotäplästä; poltetun laatan piste värillinen kunnes Karttaseppä polttaa nostotason; 3959/0. ?koe=profiili: kehysprofiili.js:n koneisto on (varattu/vapaa, rAF-kutsut, render, pisimmät 12); lisätään overlay (pisin kehys + syy + asetukset) ja POST /tulos mittauspalvelimelle → Fable tilasi. Julkaisijan jono: #2831 → #2833 → #2835.
+
+## OMISTAJA iPHONELLA v2118: 'TASAINEN' (dpr 2 LIIKKEESSA) EI VAIKUTA, NYKIMINEN TASAISESTI KOKO VEDON AJAN MYOS NAYTETYLLA ALUEELLA → EI SYOTE, EI GPU, EI LAATTOJEN SAAPUMINEN; KEHYSPROFIILI PUHELIMESTA (?koe=profiili) RATKAISEE (22.9.2026 klo 19.07)
+
+Omistaja 22.9.2026 klo 19.05: Tasainen tökki yhtä lailla (sovellus käynnistetty uudestaan valinnan jälkeen); nykiminen tuntuu tasaisesti koko ajan vedon aikana, myös hitaassa vedossa jo näytetyllä alueella. Fable: poissuljettu syöteputki (5 tapaa), piirtotarkkuus (dpr 2) ja laattojen saapuminen; jäljellä pääsäikeen kehyskohtainen työ tai kehystahti (esim. ProMotion 120 Hz rAF vs 60 fps piirto → epätasainen tahti). ?koe=profiili-overlayhin lisätään rAF-väli (Hz), dt-jakauma, render/js-jako ja asetukset; omistaja kuvaa ruudun.
