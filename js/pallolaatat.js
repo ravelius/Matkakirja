@@ -26,6 +26,7 @@
  * Laattapyramidi ja projektio ovat oma asiansa: ne EIVÄT tuo palloa,
  * joten ne tuodaan tästä suoraan — sama ovi kuin tasokartalla.
  */
+import { tallennetutKokeet } from './piirtokoe-asetus.js';
 import {
   KOHDEMAAN_NIMIOT_ELAVINA,
   PYRAMIDIN_JAARAJA_LAT as JAARAJA_LAT,
@@ -996,9 +997,19 @@ export const LAATTAKERROS_TEKSTUUREJA_PER_KEHYS = 2;
  *   vientilepo tekstuurien vienti vain levossa (liikkeessä jono odottaa)
  * Ei vaikuta ilman lippua; yksikkötestit eivät anna lippua.
  */
-export function laattakerroksenKokeet(haku = globalThis.location?.search ?? '') {
-  const arvo = (() => { try { return new URLSearchParams(haku).get('koe') ?? ''; } catch { return ''; } })();
-  return new Set(String(arvo).split(',').map((k) => k.trim()).filter(Boolean));
+export function laattakerroksenKokeet(haku) {
+  const osoite = haku ?? (globalThis.location?.search ?? '');
+  const arvo = (() => { try { return new URLSearchParams(osoite).get('koe') ?? ''; } catch { return ''; } })();
+  const joukko = new Set(String(arvo).split(',').map((k) => k.trim()).filter(Boolean));
+  /*
+   * VALIKON VALINTA ON SAMA KUIN LIPPU (js/piirtokoe-asetus.js):
+   * ratasvalikosta valittu piirtokoe käyttäytyy täsmälleen kuin
+   * `?koe=` osoitteessa. Mukaan VAIN silloin, kun kutsuja ei antanut
+   * omaa hakumerkkijonoa — savuke ja testi eivät saa lukea laitteen
+   * muistia, tai mittaus mittaisi väärää tilaa.
+   */
+  if (haku === undefined) for (const lippu of tallennetutKokeet()) joukko.add(lippu);
+  return joukko;
 }
 /** Häive sisään ja ulos (ms). Reduced motion: 0. */
 export const LAATTAKERROS_HAIVE_MS = 260;

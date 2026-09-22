@@ -1,3 +1,4 @@
+import { tallennetutKokeet } from '../piirtokoe-asetus.js';
 /*
  * ABLAATIOTIKAS — `?kerrokset=<lista>` (omistajan menetelmä 21.9.2026,
  * Fable: sulavuusmittaus kerros kerrallaan; VAIN MITTAUKSEEN, ei
@@ -122,7 +123,10 @@ export function piirtokokeet(haku) {
   const h = haku ?? (() => { try { return globalThis.location?.search ?? ''; } catch { return ''; } })();
   let arvo = '';
   try { arvo = new URLSearchParams(h).get('koe') ?? ''; } catch { return new Set(); }
-  return new Set(arvo.split(',').map((k) => k.trim()).filter(Boolean));
+  const joukko = new Set(arvo.split(',').map((k) => k.trim()).filter(Boolean));
+  // Ratasvalikon valinta on sama kuin lippu; ks. js/pallolaatat.js.
+  if (haku === undefined) for (const lippu of tallennetutKokeet()) joukko.add(lippu);
+  return joukko;
 }
 
 /** Lisää kokeiden tyylit dokumenttiin (kerran). Palauttaa lisätyt nimet. */

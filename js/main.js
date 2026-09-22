@@ -9,6 +9,10 @@ import {
   VEDON_SEURANNAN_TAVAT, asetaVedonSeuranta, kosketuslaite, mittauslippuPaalla, vedonSeuranta,
 } from './vedon-seuranta.js';
 import {
+  PIIRTOKOKEIDEN_VAIHTOEHDOT, asetaKehysprofiili, asetaPiirtokoe,
+  kehysprofiiliPaalla, piirtokoeValinta, piirtokoeVaatiiLatauksen,
+} from './piirtokoe-asetus.js';
+import {
   TARKKUUDET, TARKKUUKSIEN_NIMET, asetaTarkkuusLiikkeessa, tarkkuusLiikkeessa,
 } from './tarkkuus-asetus.js';
 import {
@@ -147,7 +151,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-09-21.2124';
+const APP_VERSION = '2026-09-21.2125';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -816,6 +820,87 @@ if (seurantaValikko) {
     seurantaVihje.hidden = false;
   }
   naytaSeuranta();
+}
+
+/*
+ * KARTTA → PIIRTOKOE JA KEHYSPROFIILI (omistaja 22.9.2026 klo 20.15).
+ * Vaihtoehdot ja tallennus ovat js/piirtokoe-asetus.js:ssä; valinta
+ * käyttäytyy täsmälleen kuin sama `?koe=`-lippu osoitteessa.
+ *
+ * LATAUS VAIN KUN ON PAKKO: pikselisuhde on kontekstin luku, joten sen
+ * koe vaatii uuden latauksen — muut purevat seuraavaan vetoon. Vihjerivi
+ * sanoo sen, eikä sivua ladata pelaajan puolesta: kesken peliä tehty
+ * lataus on isompi yllätys kuin odottaminen.
+ */
+const piirtokoeValikko = document.getElementById('piirtokoe-valikko');
+const piirtokoeVihje = document.getElementById('piirtokoe-vihje');
+const profiiliValikko = document.getElementById('kehysprofiili-valikko');
+
+const naytaPiirtokoe = () => {
+  if (!piirtokoeValikko) return;
+  const nyt = piirtokoeValinta();
+  for (const rivi of piirtokoeValikko.querySelectorAll('button')) {
+    const valittu = rivi.dataset.piirtokoe === nyt;
+    rivi.classList.toggle('valittu', valittu);
+    rivi.setAttribute('aria-checked', valittu ? 'true' : 'false');
+    const tila = rivi.querySelector('.aanikytkin-tila');
+    if (tila) tila.textContent = valittu ? 'valittu' : 'vaihda';
+  }
+};
+
+if (piirtokoeValikko) {
+  for (const koe of PIIRTOKOKEIDEN_VAIHTOEHDOT) {
+    const rivi = document.createElement('button');
+    rivi.type = 'button';
+    rivi.className = 'aanikytkin';
+    rivi.dataset.piirtokoe = koe.avain;
+    rivi.setAttribute('role', 'radio');
+    rivi.title = koe.seloste;
+    rivi.setAttribute('aria-label', `${koe.nimi} — ${koe.seloste}`);
+    rivi.innerHTML = `<span class="viiva-ikoni">${svg(koe.ikoni)}</span>`
+      + `<span class="aanikytkin-nimi">${koe.nimi}</span>`
+      + '<span class="aanikytkin-tila"></span>';
+    rivi.addEventListener('click', () => {
+      asetaPiirtokoe(koe.avain);
+      naytaPiirtokoe();
+      if (piirtokoeVihje) {
+        const lataus = piirtokoeVaatiiLatauksen(koe.avain);
+        piirtokoeVihje.textContent = lataus ? 'Tulee voimaan seuraavassa latauksessa.' : '';
+        piirtokoeVihje.hidden = !lataus;
+      }
+    });
+    piirtokoeValikko.appendChild(rivi);
+  }
+  naytaPiirtokoe();
+}
+
+if (profiiliValikko) {
+  const rivi = document.createElement('button');
+  rivi.type = 'button';
+  rivi.className = 'aanikytkin';
+  rivi.dataset.kytkin = 'kehysprofiili';
+  rivi.setAttribute('role', 'switch');
+  rivi.title = 'Kehysprofiili kartan alakulmaan (sama kuin ?koe=profiili)';
+  rivi.setAttribute('aria-label', 'Näytä kehysprofiili — pisin kehys, sen syy ja valitut asetukset');
+  rivi.innerHTML = `<span class="viiva-ikoni">${svg('<path d="M4 18V9M9 18V5M14 18v-6M19 18v-9"/>')}</span>`
+    + '<span class="aanikytkin-nimi">Näytä kehysprofiili</span>'
+    + '<span class="aanikytkin-tila"></span>';
+  const nayta = () => {
+    const paalla = kehysprofiiliPaalla();
+    rivi.classList.toggle('valittu', paalla);
+    rivi.setAttribute('aria-checked', paalla ? 'true' : 'false');
+    rivi.querySelector('.aanikytkin-tila').textContent = paalla ? 'päällä' : 'pois';
+  };
+  rivi.addEventListener('click', () => {
+    asetaKehysprofiili(!kehysprofiiliPaalla());
+    nayta();
+    if (piirtokoeVihje) {
+      piirtokoeVihje.textContent = 'Tulee voimaan seuraavassa latauksessa.';
+      piirtokoeVihje.hidden = false;
+    }
+  });
+  nayta();
+  profiiliValikko.appendChild(rivi);
 }
 
 for (const tiedot of AANIKYTKIMET) {
