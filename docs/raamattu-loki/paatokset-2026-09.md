@@ -1339,3 +1339,7 @@ Fable 22.9.2026 klo 18.12: nollauskaava ajettu, worktree Matkakirja-pelikoodari.
 ## SYOTEPUTKI TUOTANNOSSA v2115 (INTERPOLOINTI OLETUS + 4 KOELIPPUA + SYOTELOKI); OMISTAJA TESTAA iPHONELLA (22.9.2026 klo 18.12)
 
 Julkaisija 22.9.2026 klo 18.20: #2821 → #2822 → v2115 (main 8930f517), Mac-savukeajo peruttu ennen mergeä, testit 3928/0; #2823 raportti mainissa. Omistajan testiosoitteet: tuotanto = interpolointi; ?koe=interpvanha; ?koe=syotetouch (iPhone); ?koe=syoteennakko; ?koe=syotejousi. Ratasvalikon asetus tulossa uudelta Pelikoodarilta.
+
+## POLTTO 2026-09-22c VALMIS KLO 18.19 (62 min): 117 288 LAATTAA, EHEYS OK, AMPARISSA; VEDOS: VESIVIIVAT SEURAAVAT RANTAA KAIKILLA TASOILLA; OSOITIN-PR JA TASONVAIHTOMITTAUS SEURAAVAKSI (22.9.2026 klo 18.20)
+
+Karttaseppä 22.9.2026 klo 18.19: vaihe 1 114/114 shardia 53 min, vaihe 2 397/397 60 min, 0 kaatunutta; eheystarkistus täsmää kaikilla tasoilla; ämpärissä julisteet/pyramidi/2026-09-22c-pohja/ ja julisteet/pallo/laatat/2026-09-22c-pohja-20260922c/ + laatat.json; luettelo odottaa vientikansiossa. Vedos: vanhassa viivasto levittäytyy joka tasolla eri kauas, uudessa sama vyö seuraa rantaa, karkealla tasolla harvempana; avomerellä ei eroa. CI-tauko päättyi. Seuraavaksi: osoitin-PR (PALLO_LAATTAVERSIO 2026-09-22c-pohja, tunniste 20260922c) → versio → luettelo ämpäriin → tasonvaihtomittaus (vertailu rannikko A−B 5,68 / 0,60; avomeri 2,24 / 0,82).
