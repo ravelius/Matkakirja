@@ -110,8 +110,13 @@ const LUE = `async (kohde) => {
   await new Promise((v) => setTimeout(v, 400));
   const osumat = l.nostot.osumat();
   const laput = l.nostot.lappuLaatikot();
-  const W = innerWidth; const H = innerHeight;
-  const yli = laput.filter((r) => r.x0 < -4 || r.y0 < -4 || r.x1 > W + 4 || r.y1 > H + 4).map((r) => r.nimi);
+  // Laput ovat kotelon pikseleitä (ruudulla → kotelo), eivät ikkunan: ruutu on kotelo.
+  const W = l.kotelo?.clientWidth || innerWidth; const H = l.kotelo?.clientHeight || innerHeight;
+  // Liikevara (v2056): ladonta-alue on ruutua suurempi, joten kokonaan
+  // ruudun ulkopuolinen lappu on tarkoituksellinen. Reunan ylitys on
+  // vain lappu, joka on osittain ruudussa ja ylittää reunan > 4 px.
+  const ruudussa = (r) => r.x1 > 0 && r.x0 < W && r.y1 > 0 && r.y0 < H;
+  const yli = laput.filter((r) => ruudussa(r) && (r.x0 < -4 || r.y0 < -4 || r.x1 > W + 4 || r.y1 > H + 4)).map((r) => r.nimi);
   const { pallonKorostusRenkaat, pallonKorostettuMaa } = await import('/js/maanaariviivat.js');
   const renkaat = pallonKorostusRenkaat(pallonKorostettuMaa());
   const janat = [];

@@ -115,6 +115,7 @@ export const HAHMOTELMA_SVN = [
     ],
     nimi: 'Triglav',
     tyyppi: 'vuori',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Miksi Triglavin nimi tarkoittaa kirjaimellisesti "kolmipäistä"?',
@@ -180,6 +181,7 @@ export const HAHMOTELMA_SVN = [
     ],
     nimi: 'Bledinjärvi',
     tyyppi: 'jarvi',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Miksi pletna-soutajan ammatti on yhä rajattu vain tietyille suvuille?',
@@ -490,6 +492,7 @@ export const HAHMOTELMA_SVN = [
     ],
     nimi: 'Postojnan luola',
     tyyppi: 'vuori',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Miksi Postojnan luolasta tuli matkailukohde jo 1800-luvun alussa?',
@@ -1051,6 +1054,7 @@ export const HAHMOTELMA_SVN = [
     ],
     nimi: 'Piran',
     tyyppi: 'kulttuuri',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Miksi Piranissa puhutaan sekä sloveenia että italiaa?',

@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-09-21.2060';
+const CACHE = 'matkakirja-2026-09-21.2083';
 const SHELL = [
   './',
   './index.html',
@@ -234,6 +234,7 @@ const SHELL = [
   // polkua offline-käyttöön. Vektoriaineisto itse on HTTP-välimuistissa
   // (immutable, versio polussa) eikä palvelutyöntekijän korissa.
   './js/pallovektorit.js',
+  './js/pallomaakunnat.js',
   // Pallolauta (karttapallo pelin lautana, 5.9.2026): tuodaan
   // dynaamisesti kuten pallo.js, mutta kuuluu SHELLiin offline-käyttöä
   // varten. Ei niputeta yhden tiedoston versioon (tests/sw.test.mjs).

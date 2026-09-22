@@ -275,6 +275,7 @@ export const MAASTOKOHTEET_LVA = [
     nimi: 'Rundālen palatsi',
     nimio: 'Rundāle',
     tyyppi: 'kulttuuri',
+    taso: 1,
     kysymykset: [
       'Kuka suunnitteli palatsin?',
       'Mihin palatsia käytettiin vuonna 1812?',
@@ -382,6 +383,7 @@ export const MAASTOKOHTEET_LVA = [
     nimi: 'Turaidan ruusu',
     nimio: 'Turaida',
     tyyppi: 'sana',
+    taso: 1,
     kysymykset: [
       'Mistä legenda sai alkunsa?',
       'Miksi vastavihityt käyvät haudalla?',
@@ -735,6 +737,7 @@ export const MAASTOKOHTEET_LVA = [
     ],
     nimi: 'Ventas rumba',
     tyyppi: 'ruoka',
+    taso: 1,
     kysymykset: [
       'Miksi putous perääntyy hitaasti ylävirtaan?',
       'Miten lohia pyydettiin ilmasta?',

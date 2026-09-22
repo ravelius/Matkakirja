@@ -103,6 +103,7 @@ export const HAHMOTELMA_SVK = [
     ],
     nimi: 'Tatranská Lomnica',
     tyyppi: 'vuori',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Kuka nousi ensimmäisenä kirjatusti Lomnický štítille vuonna 1793?',
@@ -378,6 +379,7 @@ export const HAHMOTELMA_SVK = [
     ],
     nimi: 'Spišin linna',
     tyyppi: 'historia',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Minä vuonna Spišin linna tuhoutui tulipalossa?',
@@ -429,6 +431,7 @@ export const HAHMOTELMA_SVK = [
     ],
     nimi: 'Banská Štiavnica',
     tyyppi: 'tekniikka',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Minä vuonna kaupungissa käytettiin ruutia kaivoksessa yhtenä ensimmäisistä maailmassa?',
@@ -561,6 +564,7 @@ export const HAHMOTELMA_SVK = [
     ],
     nimi: 'Bojnicen linna',
     tyyppi: 'historia',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Minä vuonna Bojnicen linna mainitaan ensi kerran?',

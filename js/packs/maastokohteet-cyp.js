@@ -309,6 +309,7 @@ export const MAASTOKOHTEET_CYP = [
     },
     nimi: 'Kourion',
     tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Mitä kaupungille tapahtui 300-luvulla?',
       'Miksi asutus siirtyi Episkopiin?',
