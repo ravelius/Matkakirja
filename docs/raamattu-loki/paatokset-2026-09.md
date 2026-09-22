@@ -1331,3 +1331,7 @@ Omistaja 22.9.2026 klo 18.05: liput valittaviksi ratasvalikon taakse, jotta test
 ## SYOTEPUTKEN 5 TAPAA PR #2821 (OLETUS INTERPOLOINTI; LIPUT interpvanha, syoteennakko, syotejousi, syotetouch, syoteloki); PELIKOODARI NOLLATAAN (70 %, LUOVUTUS #2823); RATASVALIKKO UUDEN SESSION ENSIMMAINEN TYO (22.9.2026 klo 18.09)
 
 Pelikoodari 22.9.2026 klo 18.10: #2821 (51cff63be) sisältää kaikki viisi tapaa; jousi suljetussa muodossa (eksplisiittinen integrointi räjähti dt = 2 kehystä), vakaa millä tahansa dt:llä; oletus ei ole mittaamalla valittu — Laitetestaajan korjattu harness ja omistajan vedot ratkaisevat, interpolointi palautetaan jos ero ei ole todellinen. Testit 3942/0. Luovutus c66ee9fea (#2823). Fable: Julkaisija mergeää #2821 heti Testit vihreänä (Mac-savuke perutaan), Pelikoodari nollataan; uusi sessio tekee ratasvalikon 'Vedon seuranta' ensin.
+
+## PELIKOODARI NOLLATTU (LUOVUTUS #2823); UUSI SESSIO: RATASVALIKON 'VEDON SEURANTA' ENSIN, SITTEN C, D, E (22.9.2026 klo 18.11)
+
+Fable 22.9.2026 klo 18.12: nollauskaava ajettu, worktree Matkakirja-pelikoodari. Aloitusviesti: Vedon seuranta -asetus (Interpolointi/Vanha/Ennakointi/Jousi/Kosketusnäytteet) mallina tarkkuus-asetus.js, #2821:n päälle; sitten C, D, E; rakekerros ja pohjapallo-shader jäihin.
