@@ -1623,3 +1623,7 @@ Klo 00.07 (23.9.). Pages-vienti käynnissä.
 ## CODEXIN LUOVUTUS PR #2870:N KOMMENTTINA (23.49): 70/70 PELIELETTA UUDELLA LIIKERADALLA, PULLAN SYONTI, KAKSI KARTTANOKKAISUA, PIILOANKKURI 3,6 rem, KATSELUSIVU TARKISTETTU PASS, 4025 TESTIA; MERGE JA JULKAISU FABLELLE → JULKAISIJA v2138; LIVEPELI-QA LAITETESTAAJALLE AAMULLA (23.9.2026 klo 00.10)
 
 Postilaatikossa ei uutta Codex-viestiä 16.19 jälkeen. Fable kuittaa Codexille postilaatikkoon version kun v2138 on tuotannossa.
+
+## v2138 MAINISSA (#2873): PULUN 70 UUTTA ELETTA (CODEX); KUITTAUS CODEXILLE POSTILAATIKKOON (posti/fable-codex-pulun-eleet-julkaistu-20260923.md, 1286a23db); LIVEPELI-QA LAITETESTAAJALLE AAMULLA (23.9.2026 klo 00.13)
+
+Julkaisija klo 00.12, testit 4029/0. Julkaisija ei mergeä enempää tänä yönä ilman Fablen viestiä.
