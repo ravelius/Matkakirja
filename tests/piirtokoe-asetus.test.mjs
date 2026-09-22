@@ -31,7 +31,7 @@ const {
 } = await import('../js/piirtokoe-asetus.js');
 const { laattakerroksenKokeet } = await import('../js/pallolaatat.js');
 const { piirtokokeet } = await import('../js/pallolauta/kerrokset.js');
-const { kankaanTausta } = await import('../js/pallo.js');
+const { kankaanTausta, luoAlfatonKonteksti } = await import('../js/pallo.js');
 
 test('vaihtoehdot: oletus normaali ilman lippua, muilla oma lippunsa', () => {
   assert.equal(PIIRTOKOKEIDEN_VAIHTOEHDOT[0].avain, 'normaali');
@@ -96,20 +96,21 @@ test('valikko on kytketty: rivit, radiogroup ja kytkin', () => {
  * kumpikin elää selaimessa: toinen WebGL-kontekstin luonnissa, toinen
  * laattakerroksen näkyvyydessä.
  */
-test('alpha0: läpinäkymätön tausta (alpha-pyyntö jää three r185:n armoille)', () => {
+test('alpha0: alfaton konteksti itse luotuna ja läpinäkymätön tausta', () => {
   const pallo = readFileSync(new URL('../js/pallo.js', import.meta.url), 'utf8');
   assert.match(pallo, /const eiAlfaa = laattakerroksenKokeet\(\)\.has\('alpha0'\);/);
-  assert.match(pallo, /\.\.\.\(eiAlfaa \? \{ alpha: false \} : \{\}\),/);
+  assert.match(pallo, /const alfaton = eiAlfaa \? luoAlfatonKonteksti\(kotelo, antialiasTarkkuudella/);
   // Ilman alfaa sivun tausta ei paista läpi, joten scene saa oman värin.
   assert.match(pallo, /\.backgroundColor\(eiAlfaa \? kankaanTausta\(kotelo\) : 'rgba\(0,0,0,0\)'\)/);
   /*
-   * Mitattu 22.9.2026 (WebKit): three.js r185 luo kontekstin aina
-   * alpha: true -lipulla, joten kokeen todella vaikuttava osa on
-   * läpinäkymätön taustaväri. Perustelu jää lähteeseen, jottei sitä
-   * mitata uudestaan.
+   * Mitattu 22.9.2026 (WebKit): pelkkä rendererConfigin `alpha: false`
+   * ei riitä, koska three.js r185 luo kontekstin aina alpha: true
+   * -lipulla. Kierto: kangas ja konteksti luodaan itse ja annetaan
+   * kolmoselle valmiina — se käyttää annettua kontekstia sellaisenaan.
    */
-  assert.match(pallo, /MITATTU RAJOITUS/);
-  assert.match(pallo, /r185 luo kontekstin aina/);
+  assert.match(pallo, /MITATTU RAJOITUS JA SEN KIERTO/);
+  assert.match(pallo, /r185 luo kontekstin/);
+  assert.match(pallo, /canvas: alfaton\.kangas, context: alfaton\.gl, alpha: false/);
 });
 
 test('vahemmandc: tuki- ja ennakkolaatat piiloon vain täydellä peitolla', () => {
@@ -131,4 +132,29 @@ test('kankaanTausta: lähin läpinäkymätön tausta, muuten vara', () => {
   assert.equal(kankaanTausta(lapsi), 'rgb(18, 16, 11)', 'läpinäkyvä ohitetaan, isän väri kelpaa');
   assert.equal(kankaanTausta(solmu('transparent')), '#12100b', 'ilman väriä vara');
   assert.equal(kankaanTausta(null), '#12100b', 'ilman DOMia vara');
+});
+
+/*
+ * ALFATON KONTEKSTI (?koe=alpha0). Kontekstin määreet ovat se, mitä
+ * kokeessa mitataan: jos `alpha` jää todeksi, koe ei mittaa mitään.
+ * Savuke lukee ne oikeasta selaimesta; tässä varmistetaan, että pyyntö
+ * lähtee oikeilla arvoilla ja että epäonnistuminen on turvallinen.
+ */
+test('luoAlfatonKonteksti: pyytää webgl2:ta ilman alfaa, epäonnistuminen palauttaa nullin', () => {
+  const pyynnot = [];
+  const doc = {
+    createElement: () => ({
+      getContext: (laji, maareet) => { pyynnot.push({ laji, maareet }); return maareet.__tyhja ? null : { __gl: true }; },
+    }),
+  };
+  const tulos = luoAlfatonKonteksti({ ownerDocument: doc }, true, doc);
+  assert.ok(tulos?.gl, 'konteksti saatiin');
+  assert.equal(pyynnot[0].laji, 'webgl2');
+  assert.equal(pyynnot[0].maareet.alpha, false, 'alfa pois — tämä on koko koe');
+  assert.equal(pyynnot[0].maareet.antialias, true, 'reunanpehmennys pelaajan asetuksesta');
+
+  // Ilman kontekstia peli jatkaa tavallisella polulla eikä koe vain pure.
+  const tyhja = { createElement: () => ({ getContext: () => null }) };
+  assert.equal(luoAlfatonKonteksti({ ownerDocument: tyhja }, false, tyhja), null);
+  assert.equal(luoAlfatonKonteksti(null, false, null), null, 'ilman DOMia ei kaadu');
 });

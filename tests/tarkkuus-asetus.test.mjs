@@ -60,11 +60,12 @@ test('pallo lukee asetuksen: antialias renderer-luonnissa, pikselisuhde kerrokse
   const pallo = lue('../js/pallo.js');
   /*
    * Antialias luetaan yhä asetuksesta renderer-luonnissa; 22.9.2026
-   * rinnalle tuli koelippu `?koe=alpha0`, joka lisää samaan
-   * rendererConfigiin `alpha: false`. Asetuksen polku ei muuttunut.
+   * rinnalle tuli koelippu `?koe=alpha0`, joka antaa rendererConfigiin
+   * itse luodun alfattoman kankaan ja kontekstin. Reunanpehmennys tulee
+   * molemmissa poluissa samasta asetuksesta.
    */
   assert.match(pallo, /antialias: antialiasTarkkuudella\(tarkkuusLiikkeessa\(\)\),/);
-  assert.match(pallo, /\.\.\.\(eiAlfaa \? \{ alpha: false \} : \{\}\),/);
+  assert.match(pallo, /const alfaton = eiAlfaa \? luoAlfatonKonteksti\(kotelo, antialiasTarkkuudella\(tarkkuusLiikkeessa\(\)\)\)/);
   assert.match(pallo, /\.backgroundColor\(eiAlfaa \? kankaanTausta\(kotelo\) : 'rgba\(0,0,0,0\)'\)/);
   assert.match(pallo, /if \(kerrosKaytossa\) \{ tahdistaPikselisuhde\(lepoon\); return; \}/);
   assert.match(pallo, /pikselisuhdeTarkkuudella\(tarkkuusLiikkeessa\(ikkuna\), dpr, lepoon \|\| aina\(\)\)/);
