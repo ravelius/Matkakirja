@@ -1200,6 +1200,18 @@ test('osoittimenKohta: vakiot ovat enintään yksi kehys', () => {
   assert.ok(OSOITTIMEN_NAYTTEITA >= 8, 'kaksi kehystä 125 Hz:n hiirellä');
 });
 
+test('coalesced-näytteisiin ei nojata: kelvoton lista johtaa varapolkuun', () => {
+  /*
+   * Safari tukee getCoalescedEventsia vasta iOS 18.2:sta ja vajaana,
+   * joten näytteet on kelpuutettava yksitellen. Jos yksikään ei kelpaa,
+   * on käytettävä itse tapahtumaa — muuten veto jäisi kokonaan väliin.
+   */
+  const lahde = readFileSync(new URL('../js/pallo.js', import.meta.url), 'utf8');
+  assert.match(lahde, /if \(!Number\.isFinite\(x\) \|\| !Number\.isFinite\(y\)\) return false;/);
+  assert.match(lahde, /if \(!lisatty\) lisaa\(e\);/, 'varapolku, jos coalesced ei tuottanut yhtään näytettä');
+  assert.match(lahde, /Safari tukee sitä vasta iOS 18\.2/);
+});
+
 test('kytkentä: näytteet kerätään coalesced-tapahtumista ja sovelletaan kehyksen hetkellä', () => {
   const lahde = readFileSync(new URL('../js/pallo.js', import.meta.url), 'utf8');
   assert.match(lahde, /typeof e\.getCoalescedEvents === 'function' \? e\.getCoalescedEvents\(\) : null/);
