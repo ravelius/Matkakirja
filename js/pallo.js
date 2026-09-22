@@ -403,7 +403,15 @@ export function reitinLaatat({
 }
 
 let esilatausLahetetty = false;
-/** Lista palvelutyöntekijälle; null, jos työntekijää ei ole. */
+/**
+ * Lista palvelutyöntekijälle; null, jos työntekijää ei ole. Viesti on
+ * sama kaikille laatoille — slippy-laatat, lentoreitti ja 22.9.2026
+ * alkaen pyramidin laatat levossa (js/laattaesilataus.js, laattakerros
+ * kutsuu tätä `esilataa`-vaihtoehdon kautta).
+ */
+export async function lahetaLaattaesilataus(osoitteet, nav = globalThis.navigator, raportoi = null) {
+  return lahetaEsilataus(osoitteet, nav, raportoi);
+}
 async function lahetaEsilataus(osoitteet, nav, raportoi) {
   const tyontekijat = nav?.serviceWorker;
   if (!tyontekijat || !osoitteet.length) return null;
@@ -1501,6 +1509,8 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
     pallo, kotelo, ikkuna, renderer,
     kolmiulotteinen, pallonSarja: () => laattaluettelo,
     lauta: PALLO_LAUTA, naparaja: NAPAKANNEN_LEVEYS,
+    // Esilataus levossa palvelutyöntekijän koriin (js/laattaesilataus.js).
+    esilataa: ikkuna.navigator?.serviceWorker ? (osoitteet) => { void lahetaEsilataus(osoitteet, ikkuna.navigator, null); } : null,
   }) : null;
   if (kerros) lepokerrokset.set(pallo, kerros);
   /*

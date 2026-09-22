@@ -10,6 +10,9 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-title" content="Matkakirja" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <!-- Ämpäri (laatat, kuvat, äänet) on eri alkuperä: yhteys auki ennen ensimmäistä laattaa (sulavuuskatsaus 22.9.2026 kohta 20). Laatat haetaan fetch(mode: cors), siksi crossorigin. -->
+  <link rel="preconnect" href="https://media.matkakirja.app" crossorigin />
+  <link rel="dns-prefetch" href="https://media.matkakirja.app" />
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />

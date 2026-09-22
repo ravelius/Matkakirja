@@ -243,11 +243,11 @@ const NIPUTTAMATTOMAT = new Set([
   // Poltto-koe (20.9.2026): 1873-nimistön aineisto tools/generoi-laattapyramidi.mjs:lle
   // (Node-generaattori), ei minkään selainmoduulin tuoma.
   'js/packs/nimisto-1873.js',
-  // Maakuntien luonnehdinnat, erä 1 (21.9.2026): data on kirjoitettu
-  // valmiiksi Karttatyökalun tulevaa Maakunnat-tilaa varten, mutta
-  // tuoja (Pelikoodari/Karttaseppä) kytketään vasta myöhemmässä erässä.
-  // Poistettava listalta sitten kun ensimmäinen import ilmestyy.
-  'js/packs/maakunnat-luonnehdinnat.js',
+  // Maakuntien luonnehdinnat JA pulu-kysymykset: ensimmäinen tuoja
+  // ilmestyi 22.9.2026 (js/karttatyokalu-maakunnat.js, Karttatyökalun
+  // Maakunnat-runko) — molemmat paketit ovat siis MODULES-listalla
+  // (tools/build-standalone.mjs) eikä enää tässä. Rivit jätetty tähän
+  // muistiksi listan historiasta.
   // Linssien aineistopaketit: vain linssimoduulit (js/linssit/) tuovat
   // näitä, ja ne jäävät listalta pois yllä kerrotusta syystä.
   'js/packs/linssi-historia.js',

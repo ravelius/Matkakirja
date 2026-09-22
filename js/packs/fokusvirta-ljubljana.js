@@ -61,4 +61,41 @@ export const FOKUSVIRTA_LJUBLJANA = {
       lahde: 'Jakub Hałun, Commons (CC BY 4.0)',
     },
   },
+
+  /*
+   * ---------- KEVYT KULKU ----------
+   * Samat kaksi kenttää kuin täysissä pakeissa (esim. fokusvirta-
+   * tampere.js). Fable vahvisti 22.9.2026, ettei kevyt pakki estä
+   * kohtaamisen kirjoittamista: vihreä piste avaa kohtaamisen suoraan
+   * laattakysymyksenä (js/fokusvirta.js avaaFokusKohtaaminen). Ei
+   * vihjeOsiota — Ljubljanalla ei ole kaupunkilehden osioita (kevyt
+   * pakki). Kohtaamiskortin todellinen sisältö (js/packs/
+   * kohtaamiset.js, avain 'ljubljana') on kukkakauppias Vesna.
+   */
+  kohtaaminen: {
+    hahmo: 'Kukkakauppias Vesna',
+    nappi: 'Tapaa kukkakauppias',
+    varmistus: 'Haluatko varmasti tavata Vesnan juuri nyt?',
+    teksti: 'Vesna sitoo kukkakimppua sillan kupeen torilla,'
+      + ' kädet täynnä leikkokukkia. Isoisän aikaan tässä oli vain yksi '
+      + 'kivisilta — kaksi kevyempää vierussiltaa lisättiin vasta '
+      + 'vuosikymmeniä myöhemmin. Hän katsoo tulijaa vieressään '
+      + 'virtaavan joen äärellä ja haluaa tietää, tunteeko tämä '
+      + 'maailman muutenkin kuin kartalta, ennen kuin kertoo mistä ne '
+      + 'kaksi lisäsiltaa oikein ilmestyivät.',
+  },
+
+  /*
+   * KOHTAAMISPAIKKA: KOLMISILLAN TORI (Vesnan kukkastandi). Koordinaatit
+   * ovat kaupungin oma laattapaikka (sama perusteltu poikkeus kuin
+   * Riiassa): js/packs/europe.js 490/682, js/packs/maailmankartta.js
+   * 6316.9/1558.
+   */
+  kohtaamispiste: {
+    nimi: 'Kolmisillan tori',
+    laudat: {
+      maailmankartta: { x: 6316.9, y: 1558 },
+      europe: { x: 490, y: 682 },
+    },
+  },
 };

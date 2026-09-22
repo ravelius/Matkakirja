@@ -13,6 +13,17 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2098, teksti: 'Sulavuus 1-3: ilmakeha ja kerma ilman pow' },
+  { v: 2097, teksti: 'Sulavuus 13-15: syote kehyksessa, kameraloki' },
+  { v: 2096, teksti: 'kytke 97 maakunnan vuoden 1873 havainnekuvat' },
+  { v: 2095, teksti: 'kytke C3-kohtaamiskuvat tavallisiin visoihin' },
+  { v: 2094, teksti: 'Korjaus: kerma-shaderin laatat eivat piirtyneet' },
+  { v: 2093, teksti: 'Kohtaamiset C4-C7: 20 kaupunkia' },
+  { v: 2092, teksti: 'Laattapyynnoille katkaisija' },
+  { v: 2091, teksti: 'Preconnect ja dns-prefetch ampariin' },
+  { v: 2090, teksti: 'Laattojen esilataus levossa' },
+  { v: 2089, teksti: 'Maakuntien pitka+kuva+pulu: 97 aluetta' },
+  { v: 2088, teksti: 'Karttaselite: valilehdet ja Maakunnat-tila' },
   { v: 2087, teksti: 'Pilven varjo pois kartan liikkeesta' },
   { v: 2086, teksti: 'Zoomin karkea taso lyhyemmaksi' },
   { v: 2085, teksti: 'Kerma laatan shaderissa' },
