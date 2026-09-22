@@ -60,4 +60,43 @@ export const FOKUSVIRTA_KOSICE = {
       lahde: 'Maros M r a z, Commons (CC BY-SA 3.0)',
     },
   },
+
+  /*
+   * ---------- KEVYT KULKU ----------
+   * Samat kaksi kenttää kuin täysissä pakeissa (esim. fokusvirta-
+   * tampere.js, fokusvirta-riika.js). Fable vahvisti 22.9.2026, ettei
+   * kevyt pakki estä kohtaamisen kirjoittamista: vihreä piste avaa
+   * kohtaamisen suoraan laattakysymyksenä (js/fokusvirta.js
+   * avaaFokusKohtaaminen), joten hahmo/teksti alla ovat varalla
+   * mahdollista raskaan virran korttia varten (FOKUSVIRTA_KORTIT),
+   * eikä vihjeOsiota ole — Košicella ei ole kaupunkilehden osioita
+   * (kevyt pakki). Kohtaamiskortin todellinen sisältö (js/packs/
+   * kohtaamiset.js, avain 'kosice') on lennätinvirkailija Zuzana.
+   */
+  kohtaaminen: {
+    hahmo: 'Lennätinvirkailija Zuzana',
+    nappi: 'Tapaa lennätinvirkailija',
+    varmistus: 'Haluatko varmasti tavata Zuzanan juuri nyt?',
+    teksti: 'Zuzana istuu asemarakennuksen pienessä lennätinhuoneessa, '
+      + 'sormi valmiina avaimella. Rata pohjoiseen Krakovan suuntaan '
+      + 'valmistui vasta viime vuonna — ennen sitä Kassaan ei tullut '
+      + 'yhtään junaa, ja kaikki viestit kulkivat hitaammin. Nyt hän '
+      + 'näpäyttää sanoman minuutissa sinne, minne ennen kului päiviä. '
+      + 'Hän katsoo saapuvaa junaa ikkunasta ja haluaa tietää, tunteeko '
+      + 'tulija maailman muutenkin kuin junan aikataulusta.',
+  },
+
+  /*
+   * KOHTAAMISPAIKKA: KOŠICEN RAUTATIEASEMA (Zuzanan lennätinhuone).
+   * Koordinaatit ovat kaupungin oma laattapaikka (sama perusteltu
+   * poikkeus kuin Tallinnassa/Riiassa): js/packs/europe.js 619/612,
+   * js/packs/maailmankartta.js 6542/1445.6.
+   */
+  kohtaamispiste: {
+    nimi: 'Rautatieasema',
+    laudat: {
+      maailmankartta: { x: 6542, y: 1445.6 },
+      europe: { x: 619, y: 612 },
+    },
+  },
 };
