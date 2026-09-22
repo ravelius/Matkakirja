@@ -194,3 +194,15 @@ test('tahti kulkee myös lähetykseen', () => {
   assert.equal(r.tahti.hz, 120);
   assert.equal(r.tahti.piirtoOsuus, 0.5);
 });
+
+test('laattavientien rivi: initTexture-kutsut jaksossa ja jonon pituus', () => {
+  const kehykset = [
+    { dt: 16.7, laattaVienteja: 10, vientejaOdottaa: 0 },
+    { dt: 16.7, laattaVienteja: 12, vientejaOdottaa: 0 },
+    { dt: 16.7, laattaVienteja: 12, vientejaOdottaa: 7 },
+  ];
+  const t = profiiliTahti({ kehykset }, null);
+  assert.equal(t.vienteja, 2, 'jakson vientien määrä on laskurin erotus');
+  assert.equal(t.odottaa, 7, 'eivienti: jonossa odottavat näkyvät');
+  assert.match(profiilirivit({ tiiviste: TIIVISTE, tahti: t }).join('\n'), /laattavientejä 2 \(jonossa 7\)/);
+});

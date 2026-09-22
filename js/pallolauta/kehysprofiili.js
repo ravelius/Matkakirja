@@ -52,6 +52,8 @@ export function luoKehysprofiili(uiTaiHaku, ikkuna = globalThis) {
     return {
       piirtolaskuri: lepo?.piirtoja ?? null, ohituslaskuri: lepo?.ohitettuja ?? null,
       pyyntoja: laatat.pyyntoja ?? 0, purettuja: laatat.purettuja ?? 0, paivityksia: laatat.paivityksia ?? 0,
+      // Laattojen tekstuuriviennit näytönohjaimelle (initTexture), kumulatiivinen.
+      laattaVienteja: laatat.vienteja ?? 0, vientejaOdottaa: laatat.vientejaOdottaa ?? 0,
       scenessa: laatat.scenessa ?? 0, hapyvia: laatat.hapyvia ?? 0, nakyvia: laatat.nakyvia ?? 0, taso: laatat.taso ?? null,
       valmisteluja: laatat.valmisteluja ?? 0, vaistoja: laatat.valmisteluVaistoja ?? 0,
       jakoja: (st.jakoja ?? 0) + (st.nostojakoja ?? 0), rasterit: st.rasterit?.valmiita ?? 0,
