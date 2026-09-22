@@ -911,3 +911,7 @@ Sisältökirjuri 22.9.2026 klo 03.45: js/packs/maakunnat-pulu.js valmis (erillin
 ## KOHTAAMISET C1 HYVAKSYTTY (PARIISI, ROOMA, WIEN, HELSINKI, ISTANBUL, AMSTERDAM); ANTON = KATAKOMBIT; LONTOON PELAAJAREPLIIKKI KORJATAAN (22.9.2026 klo 08.34)
 
 Fable 22.9.2026 klo 04.00: Sisältökirjurin kohtaamiset C1 (docs/raportit/kohtaamiset-era-c1-20260922.md): Pariisi bukinisti Colette (bukinistien laatikot 1859/1891), Rooma mopokorjaaja Fabrizio (eri kuin kaaren Enzo), Wien suntio Anton (maailmannäyttely ja kolera 1873), Helsinki telakkahitsaaja Saana, Istanbul raitiovaunuseppä Kemal, Amsterdam Yara (kaaren hahmo). Hyväksytty. Päätökset: Wienin Anton = katakombit (pörssijuoksija-konsepti pois kuvatuotanto-kohtaamiset.md:stä, Amsterdam Yaraksi); Lontoo-esimerkin pelaajarepliikki korjataan Fogg ei puhu -säännön mukaiseksi; hyväksyttyjen kuvakonseptien uudelleenkäyttö ok; Rooma/Helsinki/Istanbul kuvat tilataan Codexilta. C2 seuraavat 6 kaupunkia.
+
+## KOHTAAMISET C1 DATAAN (f281f46ef); KUVATILAUS ROOMA/HELSINKI/ISTANBUL CODEXILLE (TILAUS 8) (22.9.2026 klo 08.47)
+
+Sisältökirjuri 22.9.2026 klo 04.20: kuusi kohtaamista js/packs/kohtaamiset.js:ään, Lontoon pelaajarepliikki korjattu, kuvatuotanto-kohtaamiset.md päivitetty; Rooman ja Istanbulin puhetagit korjattu englanniksi (LIVIAN_TUNTEET-sanat eivät ole ElevenLabs-tageja). Testit 0 fail, sisalto-kohtaamiset-c1 Julkaisijalle. Fable tilasi Codexilta kolme kasvokuvaa (posti/fable-codexille-kohtaamiskuvat-c1-20260922.md). C2 alkaa.
