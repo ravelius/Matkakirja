@@ -1279,3 +1279,7 @@ Karttaseppä 22.9.2026 klo 17.10: kertomuslukko pitää kameran paikallaan ja va
 ## OMISTAJA: POLTTO KORJATULLA RESEPTILLA NOIN KLO 17.30, LAHTOLUPA ERIKSEEN; HIENO RAE ENNALLAAN POLTOSSA (YKSI MUUTTUJA), MITTAUS TOISTETAAN POLTON JALKEEN (22.9.2026 klo 16.59)
 
 Omistaja 22.9.2026 klo 17.00 (kortti): poltto noin puolen tunnin päästä, sanoo vielä erikseen. Resepti 2026-09-22c: vesiviivat laudan yksiköihin (#2808) + laikut maailmaan (#2817), hieno rae ennallaan, isobaattipeitto 0,55, nimiöt g ennallaan. Karttaseppä valmistelee, CI-tauko Julkaisijan kanssa, polton jälkeen tasonvaihtomittaus (#2819) ja vedokset. Rakekerros jäihin.
+
+## TUOTANNOSSA v2113 (ATLAKSEN OSAPAIVITYS ATLASKANKAASTA) JA v2114 (KOHDEKAUPUNKIEN MERKIT GL-KERROKSEEN); MITTAUSTYOKALU #2814 MAINISSA; #2817 JA #2819 ILMAN VERSIOTA (22.9.2026 klo 17.00)
+
+Julkaisija 22.9.2026 klo 17.15: #2807 → v2111, #2809 → v2113 (konflikti savuke-glnimiot.mjs, HEAD:n lisäys — Pelikoodari tarkistaa), #2815 → v2114 (main ea2cd8303); #2814 ilman versiota; testit vihreät. Fable: #2819 ja #2817 ilman versiota, sitten CI-tauko polton ajaksi.
