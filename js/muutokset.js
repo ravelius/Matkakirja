@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2140, teksti: 'Koe vientibudjetti: laattojen vienti vedon aikana' },
   { v: 2139, teksti: 'Kehysprofiili p5: liikkeen tasaisuus' },
   { v: 2138, teksti: 'Pulun 70 uutta eletta ohjaimeen' },
   { v: 2137, teksti: 'Lehtipalstat pidempiin nostoihin' },

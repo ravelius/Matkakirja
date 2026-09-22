@@ -36,6 +36,7 @@
     "savuke-koevaihto-lataus.mjs",
     "savuke-eihaive-veto.mjs",
     "savuke-liikemittari.mjs",
+    "savuke-vientibudjetti.mjs",
     "savuke-nimion-koko-panorointi.mjs",
     "savuke-kartan-liike.mjs",
     "savuke-nimiot-sulavat.mjs",
@@ -701,7 +702,7 @@
       "env": {
         "SAVUKE_MOOTTORI": "webkit"
       },
-      "huomautus": "Piirtokoe 7 'Ei haivytysta vedossa' (?koe=eihaivevedossa, Fable 22.9.2026: omistajan v2126-kaappauksissa vedossa haipyi 10-22 laattaa). Sama synteettinen veto (__kehysprofiili.veto, 3 x 1,5 s, 900 px/s, Ranska alt 0,35) normaalisti ja kokeella: V1 vastakoe normaalissa haipyvia > 0 (21-57), V2 kokeessa 0 kuudennesta kehyksesta alkaen, V3 laattoja vietiin myos kokeessa, V4 ei sivuvirheita (setPointerCapture-artefakti suodatettu kuten savuke-zoomiraja). WebKit 3 x 4/4 (headless-Chromium ei vie laattoja ilman GPU:ta: vastakoe V1 ei nae haivetta, siksi WebKit); ilman pallolaatat.js-muutosta V2 kaatuu (haipyvia 16-22)."
+      "huomautus": "Piirtokoe 7 'Ei haivytysta vedossa' (?koe=eihaivevedossa, Fable 22.9.2026: omistajan v2126-kaappauksissa vedossa haipyi 10-22 laattaa). Sama synteettinen veto (__kehysprofiili.veto, 3 x 1,5 s, 900 px/s, Ranska alt 0,35) normaalisti ja kokeella: V1 vastakoe normaalissa haipyvia > 0 (21-57), V2 kokeessa 0 kuudennesta kehyksesta alkaen, V3 laattoja vietiin myos kokeessa, V4 ei sivuvirheita (setPointerCapture-artefakti suodatettu kuten savuke-zoomiraja). WebKit 3 x 4/4 (headless-Chromium ei vie laattoja ilman GPU:ta: vastakoe V1 ei nae haivetta, siksi WebKit); ilman pallolaatat.js-muutosta V2 kaatuu (haipyvia 16-22). 23.9.2026: arvioi vain liikkeen kehykset (kamera siirtyi viimeisen 240 ms:n aikana), koska synteettinen veto voi pysayttaa kameran ja levossa haive kuuluu asiaan (vientibudjetin jono valuu levossa)."
     },
     "savuke-koevaihto-lataus.mjs": {
       "env": {
@@ -714,6 +715,12 @@
         "SAVUKE_MOOTTORI": "webkit"
       },
       "huomautus": "Kehysprofiili p5: liikkeen tasaisuus (omistaja ja Fable 23.9.2026: kehysaika ei mittaa nahtya nykimista). Tartuntapisteen ruutupaikka renderin jalkeen vs sormi. Synteettinen veto edestakaisin 6 x 0,7 s 400 px/s (pysyy panorointirajan sisalla). M1 tahdistettu syote: >= 60 liikekehysta, nollat 0, virhe ka < 10 px; M2 vastakoe interpvanha + iOS-tyylinen syote (pointermove omalla 17,4 ms ajastimella, 0-6 ms kuorma): nollat > 10 (mitattu 37-44); M3 interp ei nollia; M4 syotekello ei nollia; M5 ei sivuvirheita. WebKit 5/5. CV-luvut (interp 17-23 %, syotekello 12-20 %, interpvanha 46-54 %) vain tietona."
+    },
+    "savuke-vientibudjetti.mjs": {
+      "env": {
+        "SAVUKE_MOOTTORI": "webkit"
+      },
+      "huomautus": "KOE ?koe=vientibudjetti (omistaja 22.9.2026 klo 23.45: ei oletukseksi). Laattojen vienti vedon aikana budjetilla (omistajan iPad-kierros v2135/v2136 23.9.2026: eivienti pudotti >20 ms kehykset 25 % -> 8 %). Liikkeessa 1 vienti/kehys vain nakyvalle laatalle, ennakko 50 ms valein; levossa 2/kehys. Sama synteettinen veto 3 x 1,5 s, 500 px/s, Ranska alt 0,35, vain liikkeen kehykset: B0 esiehto vastakokeessa >= 10 vientia, B1 vastakoe oletus vie kaksi samassa kehyksessa, B2 budjetilla <= 1/kehys, B3 ennakkoja <= 21/s (kerroksen laskuri vedonEnnakkoja), B4 pohja (dc > 200) <= 15 % kehyksista, B5 levossa jono tyhja ja nakyvat taysin scenessa, B6 ei sivuvirheita. WebKit 7/7 useita kertoja; budjetti 37-43 vientia vs vanha 196-199; vanhalla koodilla B2 FAIL. Vanha tahti: pohja piirrossa 52-82 % vetokehyksista (haive kesken) = omistajan dc 431."
     }
   }
 }
