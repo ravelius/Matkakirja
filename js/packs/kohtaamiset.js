@@ -107,9 +107,7 @@ export const KOHTAAMISET = {
       { rooli: 'kertoja', teksti: 'Leila kuvaa rasian ennen kuin ojentaa '
         + 'sen:' },
       { rooli: 'hahmo', teksti: '[softly] "Minä etsin tähän valoa. Sinä '
-        + 'löysit jotain muuta."' },
-      { rooli: 'pelaaja', teksti: '[excited] "Ja minä olen jo '
-        + 'myöhässä!"' },
+        + 'löysit jotain muuta." [excited] "Ja minä olen jo myöhässä!"' },
     ],
     tyhja: 'Leila kurkistaa syvennykseen: "Tyhjä. Tässä kulmassa kulkee '
       + 'tuhat ihmistä tunnissa — joku ehti ensin."',
@@ -389,6 +387,310 @@ export const KOHTAAMISET = {
      * vielä" (hammentynyt 0,4).
      */
     tunneTervehdys: { tunne: 'lammin', voimakkuus: 0.6 },
+    tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
+    tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
+  },
+  /*
+   * Erä C1 (22.9.2026, sisältöinventaarion kohta 3: 41 kaupunkia ilman
+   * kohtaamista). Colette on sama hahmo kuin jo hyväksytyssä
+   * kuvakonseptissa (js/kohtaamiskuvat-data.js, id
+   * 'pariisi-kirjamyyjat-pulu', tila 'tarkistettu') — teksti ja kuva
+   * tukevat toisiaan. 1873-fakta: Pariisin bukinistit saivat 1859
+   * luvan pystyttää kiinteät laatikot rantojen kaiteille, mutta ne
+   * piti yhä kantaa pois joka ilta — pysyvä lukitus sallittiin vasta
+   * 1891 (en-Wikipedia "Bouquinistes", tarkistettu 22.9.2026).
+   */
+  pariisi: {
+    hahmo: 'bukinisti Colette',
+    nappi: 'Tapaa Colette',
+    frame: 'Colette lukitsee kirjalaatikkonsa ja kysyy',
+    tervehdys: 'Colette lukitsee laatikkonsa kaiteeseen: "Isoisäsi '
+      + 'aikaan nämä raahattiin pois joka ilta. Näytä että tunnet '
+      + 'maailmaa kuten piirtäjä — niin kerron mikä odottaa."',
+    tervehdysLuenta: [
+      { rooli: 'kertoja', teksti: 'Colette lukitsee laatikkonsa '
+        + 'kaiteeseen:' },
+      { rooli: 'hahmo', teksti: '[curious] "Isoisäsi aikaan nämä '
+        + 'raahattiin pois joka ilta. [warmly] Näytä että tunnet '
+        + 'maailmaa kuten piirtäjä — niin kerron mikä odottaa."' },
+    ],
+    loyto: 'Colette nostaa rasian pinon alta: "Tämä lojui väärän '
+      + 'kirjan takana vuosia. Kukaan ei koskaan ostanut sitä kirjaa."',
+    loytoLuenta: [
+      { rooli: 'kertoja', teksti: 'Colette nostaa rasian pinon alta:' },
+      { rooli: 'hahmo', teksti: '[curious] "Tämä lojui väärän kirjan '
+        + 'takana vuosia. [warmly] Kukaan ei koskaan ostanut sitä '
+        + 'kirjaa."' },
+    ],
+    tyhja: 'Colette käy laatikon läpi kahdesti: "Tyhjä. Seine tulvii '
+      + 'täällä keväisin — se vie muistot mukanaan."',
+    vaarin: 'Colette latoo kirjat takaisin pinoon: "Ei tänään. Katso '
+      + 'tarkemmin, niin kannen alle näkee."',
+    /*
+     * Tunnetagit (docs/pulu-reaktiot.md E2). Tervehdys: Colette
+     * arvioi tulijaa ja kirjaa, ei vielä lämmin (rekisterin
+     * poikkeus). Muut kolme ovat rekisterin oletukset.
+     */
+    tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
+    tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
+    tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
+  },
+  /*
+   * Erä C1 (22.9.2026). Rooma ON tarinakaaren (KAARI_PAKETIT id
+   * 'rooma') kaupunki, jonka kaaren kohtaaminen on eri hahmo, Enzo
+   * suihkulähteen huoltotyössä (js/packs/fokusvirta-rooma.js, Trevin
+   * kolikkotapa) — tämän rivin tervehdys ei näy kaaren ensimmäisessä
+   * kohtaamisessa vaan kaupungin MYÖHEMPIEN tavallisten visojen
+   * avauksena, sama rakenne kuin Lontoossa, Venetsiassa ja
+   * Berliinissä. Fabrizio, paikka ja motiivi on siksi valittu
+   * tarkoituksella eri kuin Enzo/Trevi: ei suihkulähdettä, ei
+   * kolikkoheittoa. 1873-fakta: Rooma liitettiin Italian
+   * kuningaskuntaan Porta Pian murrolla 20.9.1870 ja julistettiin
+   * pääkaupungiksi 1871 — isoisän 1873-matka osui vain 2-3 vuotta
+   * murron jälkeen (en-Wikipedia "Capture of Rome", tarkistettu
+   * 22.9.2026). Eri fakta kuin fokusvirran 1929-Lateraani-nosto.
+   */
+  rooma: {
+    hahmo: 'mopokorjaaja Fabrizio',
+    nappi: 'Tapaa Fabrizio',
+    frame: 'Fabrizio pyyhkii rasvaiset kätensä liinaan ja kysyy',
+    tervehdys: 'Fabrizio vilkaisee kirjaasi ketjuöljyisin käsin: "Tuo '
+      + 'aukko takana on vuodelta 1870. Näytä että tunnet maailmaa '
+      + 'kuten isoisäsi — niin kerron, mistä se näkyy parhaiten."',
+    tervehdysLuenta: [
+      { rooli: 'kertoja', teksti: 'Fabrizio vilkaisee kirjaasi '
+        + 'ketjuöljyisin käsin:' },
+      { rooli: 'hahmo', teksti: '[curious] "Tuo aukko takana on '
+        + 'vuodelta 1870. [warmly] Näytä että tunnet maailmaa kuten '
+        + 'isoisäsi — niin kerron, mistä se näkyy parhaiten."' },
+    ],
+    loyto: 'Fabrizio pyyhkii rasian liinalla ennen kuin ojentaa sen: '
+      + '"Tämä oli jumissa kuin vanha lukko. Nyt se aukeaa — eteenpäin!"',
+    loytoLuenta: [
+      { rooli: 'kertoja', teksti: 'Fabrizio pyyhkii rasian liinalla '
+        + 'ennen kuin ojentaa sen:' },
+      { rooli: 'hahmo', teksti: '[warmly] "Tämä oli jumissa kuin vanha '
+        + 'lukko. [excited] Nyt se aukeaa — eteenpäin!"' },
+    ],
+    tyhja: 'Fabrizio kurottaa syvennykseen käsivarrellaan ja pudistaa '
+      + 'päätään: "Tyhjä. Täällä remontoidaan usein — joku ehti jo '
+      + 'ennen meitä."',
+    vaarin: 'Fabrizio laskee jakoavaimen pöydälle: "Ei vielä. Ketju ei '
+      + 'irtoa väkisin, eikä tämäkään."',
+    /*
+     * Tunnetagit (docs/pulu-reaktiot.md E2). Kaikki neljä rekisterin
+     * oletukset — Fabrizio kiinnostuu kirjasta ja vanhasta aukosta
+     * ilman erityistä syytä poiketa (tervehdys ei ole lämmin eikä
+     * uhkaava vielä tässä repliikissä).
+     */
+    tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
+    tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
+    tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
+  },
+  /*
+   * Erä C1 (22.9.2026). Kuva jo hyväksytty (js/kohtaamiskuvat-data.js
+   * wien-anton-katakombit-v2.jpg) — Fablen päätös 22.9.2026: katakombi-
+   * Anton jää, kilpaileva pörssirakennus-juoksija-konsepti poistettu
+   * docs/kuvatuotanto-kohtaamiset.md:stä. 1873-fakta: Wienin
+   * maailmannäyttely 1.5.-31.10.1873, pörssiromahdus 9.5.1873
+   * ("Gründerkrach") ja kesän 1873 koleraepidemia (~3000 kuolonuhria)
+   * — kolera ei väitetä liittyvän katakombeihin, vain ajallinen
+   * kontrasti isoisän innostukseen (en-Wikipedia "1873 Vienna World's
+   * Fair", "Panic of 1873", habsburger.net, tarkistettu 22.9.2026).
+   */
+  wien: {
+    hahmo: 'suntio Anton',
+    nappi: 'Tapaa Anton',
+    frame: 'suntio Anton pysäyttää kynttilän ja kysyy',
+    tervehdys: 'Anton nostaa kynttilän kirjaasi kohti pimenevässä '
+      + 'käytävässä. "Isoisäsi taisi ihailla näyttelyn ihmeitä, samana '
+      + 'kesänä kun kolera kulki kaupungilla nopeammin kuin sana '
+      + 'siitä. Näytä että tunnet maailmaa kuten piirtäjä — niin '
+      + 'näytän, minne historia täällä oikeasti katosi."',
+    tervehdysLuenta: [
+      { rooli: 'kertoja', teksti: 'Anton nostaa kynttilän kirjaasi '
+        + 'kohti pimenevässä käytävässä.' },
+      { rooli: 'hahmo', teksti: '[gravely] "Isoisäsi taisi ihailla '
+        + 'näyttelyn ihmeitä, samana kesänä kun kolera kulki '
+        + 'kaupungilla nopeammin kuin sana siitä. [warmly] Näytä että '
+        + 'tunnet maailmaa kuten piirtäjä — niin näytän, minne '
+        + 'historia täällä oikeasti katosi."' },
+    ],
+    loyto: 'Anton harjaa pölyn esineeltä kynttilänvalossa: "Tämä ei '
+      + 'kuulu tähän holviin. Joku toi sen tänne aikoja sitten, '
+      + 'piiloon."',
+    loytoLuenta: [
+      { rooli: 'kertoja', teksti: 'Anton harjaa pölyn esineeltä '
+        + 'kynttilänvalossa:' },
+      { rooli: 'hahmo', teksti: '[softly] "Tämä ei kuulu tähän '
+        + 'holviin. Joku toi sen tänne aikoja sitten, piiloon."' },
+    ],
+    tyhja: 'Anton siirtää kynttilää syvemmälle koloon: "Tyhjä. Nämä '
+      + 'holvit ovat vaihtaneet omistajaa monta kertaa vuosisatojen '
+      + 'varrella."',
+    vaarin: 'Anton pudistaa päätään, kynttilä yhä pystyssä: "Ei tuo. '
+      + 'Täällä alhaalla vastaukset odottavat, kunnes joku katsoo '
+      + 'tarkemmin."',
+    /*
+     * Tunnetagit (docs/pulu-reaktiot.md E2). Tervehdys: Anton ei
+     * tervehdi lämpimästi vaan totisesti — kolera-viittaus on
+     * dekkarisävyinen kontrasti isoisän innostukseen (rekisterin
+     * poikkeus, kuten Lontoon ja Venetsian tervehdyksissä). Muut
+     * kolme ovat rekisterin oletukset.
+     */
+    tunneTervehdys: { tunne: 'vakava', voimakkuus: 0.5 },
+    tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
+    tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
+  },
+  /*
+   * Erä C1 (22.9.2026). 1873-fakta: höyrylaiva Tähti rakennettiin
+   * 1873 Helsingin Hietalahden telakalla (perustettu 1865), sama
+   * telakka-alue on ollut yhtäjaksoisesti käytössä yli 160 vuotta ja
+   * rakentaa nykyään jäänmurtajia (Helsinki Shipyard) — en-Wikipedia
+   * "Hietalahti shipyard" ja telakan alusluettelo, tarkistettu
+   * 22.9.2026. Laivan tarkempaa kohtaloa ei löytynyt luotettavasta
+   * lähteestä, joten tervehdys jättää sen tarkoituksella auki.
+   */
+  helsinki: {
+    hahmo: 'telakkahitsaaja Saana',
+    nappi: 'Tapaa Saana',
+    frame: 'telakkahitsaaja Saana nostaa visiirin ja kysyy',
+    tervehdys: 'Saana nostaa hitsausvisiirin ja vilkaisee kirjaasi: '
+      + '"Höyrylaiva Tähti rakennettiin tässä telakassa 1873. Minä '
+      + 'hitsaan nyt jäänmurtajaa samalla laiturilla. Näytä että '
+      + 'tunnet maailmaa kuten piirtäjä — niin kerron, minne se vanha '
+      + 'laiva päätyi."',
+    tervehdysLuenta: [
+      { rooli: 'kertoja', teksti: 'Saana nostaa hitsausvisiirin ja '
+        + 'vilkaisee kirjaasi:' },
+      { rooli: 'hahmo', teksti: '[proud] "Höyrylaiva Tähti '
+        + 'rakennettiin tässä telakassa 1873. [curious] Näytä että '
+        + 'tunnet maailmaa kuten piirtäjä — niin kerron, minne se '
+        + 'vanha laiva päätyi."' },
+    ],
+    loyto: 'Saana kaivaa rasian telakan arkistolaatikosta: "Tämä on '
+      + 'odottanut täällä pidempään kuin minun jäänmurtajani."',
+    loytoLuenta: [
+      { rooli: 'kertoja', teksti: 'Saana kaivaa rasian telakan '
+        + 'arkistolaatikosta:' },
+      { rooli: 'hahmo', teksti: '[warmly] "Tämä on odottanut täällä '
+        + 'pidempään kuin minun jäänmurtajani."' },
+    ],
+    tyhja: 'Saana katsoo tyhjää koloa laiturin alta: "Ei mitään. Tätä '
+      + 'telakkaa on revitty ja rakennettu niin monesti."',
+    vaarin: 'Saana tarttuu takaisin hitsauspoltittimeen: "Ei vielä. '
+      + 'Sekin laiva vaati minulta monta yritystä."',
+    /*
+     * Tunnetagit (docs/pulu-reaktiot.md E2). Tervehdys: poikkeus
+     * rekisterin oletuksesta (utelias) — Saana on ensisijaisesti
+     * ylpeä työstään, ei uteliaisuudesta kirjaa kohtaan. Muut kolme
+     * ovat rekisterin oletukset.
+     */
+    tunneTervehdys: { tunne: 'ylpea', voimakkuus: 0.5 },
+    tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
+    tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
+  },
+  /*
+   * Erä C1 (22.9.2026). Ei sekoiteta js/kohtaamiskuvat-data.js:n
+   * Emine-hahmoon (tarinakaaren "Sulttaanin timantti" -minilauta) —
+   * kokonaan uusi hahmo ja paikka. 1873-fakta: Konstantinopolin
+   * hevosvetoinen raitiovaunulinja Aksaray-Topkapı avattiin täsmälleen
+   * 14.1.1873; nykyinen İstiklal-kadun nostalginen raitiovaunu on
+   * erillinen, myöhempi (1914, elvytetty 1990) linja — sama perinne,
+   * ei sama linja (en-Wikipedia "Trams in Istanbul (1871-1966)" ja
+   * "Istanbul nostalgic tramways", tarkistettu 22.9.2026).
+   */
+  istanbul: {
+    hahmo: 'raitiovaunuseppä Kemal',
+    nappi: 'Tapaa Kemal',
+    frame: 'Kemal nostaa katseensa vaunun penkistä ja kysyy',
+    tervehdys: 'Kemal pyyhkii lakkaa penkiltä ennen iltavuoroa: '
+      + '"Isoisäsi näki hevosvaunun uutena tammikuussa 1873. Tämä on '
+      + 'sen kaukainen perillinen. Näytä että tunnet maailmaa kuten '
+      + 'hän — niin kerron mitä kellon sisään jäi."',
+    tervehdysLuenta: [
+      { rooli: 'kertoja', teksti: 'Kemal pyyhkii lakkaa penkiltä '
+        + 'ennen iltavuoroa:' },
+      { rooli: 'hahmo', teksti: '[thoughtfully] "Isoisäsi näki '
+        + 'hevosvaunun uutena tammikuussa 1873. Tämä on sen kaukainen '
+        + 'perillinen. [warmly] Näytä että tunnet maailmaa kuten hän '
+        + '— niin kerron mitä kellon sisään jäi."' },
+    ],
+    loyto: 'Kemal kolkuttaa kellon kylkeä ja irrottaa rasian sisältä: '
+      + '"Tämä on kolissut vuosia. Kukaan ei osannut sanoa miksi."',
+    loytoLuenta: [
+      { rooli: 'kertoja', teksti: 'Kemal kolkuttaa kellon kylkeä ja '
+        + 'irrottaa rasian sisältä:' },
+      { rooli: 'hahmo', teksti: '[curious] "Tämä on kolissut vuosia. '
+        + '[thoughtfully] Kukaan ei osannut sanoa miksi."' },
+    ],
+    tyhja: 'Kemal avaa penkin alla olevan lokeron: "Tyhjä. Tämä vaunu '
+      + 'on purettu ja koottu niin monta kertaa, että kätköt katoavat."',
+    vaarin: 'Kemal palaa viilaamaan penkkiä: "Ei tänään. Lakka kuivuu '
+      + 'hitaasti, ja niin kuivuu tietokin."',
+    /*
+     * Tunnetagit (docs/pulu-reaktiot.md E2). Tervehdys: isoisän
+     * muisto (hevosvaunu 1873) kudottu suoraan repliikkiin, sama
+     * perustelu kuin Berliinin posetiivari Otolla — lämpimin
+     * tervehdystyyppi. Muut kolme rekisterin oletukset.
+     */
+    tunneTervehdys: { tunne: 'lammin', voimakkuus: 0.55 },
+    tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
+    tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
+  },
+  /*
+   * Erä C1 (22.9.2026). Yara on sama hahmo kuin hyväksytyt6-paketin
+   * (posti/kohtaamiset-hyvaksytyt6-pelitoimitus-2026-09-05.json) JA
+   * tarinakaaren kanoninen Amsterdam-hahmo (js/tyohuone-kehitys-
+   * data.js KAARI_PAKETIT, Willem->Yara 5.9.2026) — kuva jo hyväksytty
+   * (js/kohtaamiskuvat-data.js, amsterdam-yara-feedback-r20260905-v2,
+   * tila 'tarkistettu'), ei uutta tilausta. Tämä rivi on kaupungin
+   * MYÖHEMPIEN visojen avaus, tekstit kirjoitettu kokonaan uusina
+   * eivätkä toista kaaren omaa dialogia. 1873-fakta: kanavatalojen
+   * kapeus (julkisivuvero 1600-luvulta) ja hijsbalk-nostokoukku ovat
+   * jo pelin hyväksyttyä sisältöä (js/packs/europe-kulttuuri.js,
+   * fokusvirta-amsterdam.js) — tämä rivi viittaa samaan faktaan
+   * paljastamatta sitä suoraan.
+   */
+  amsterdam: {
+    hahmo: 'muuttotyöntekijä Yara',
+    nappi: 'Tapaa Yara',
+    frame: 'Yara pysäyttää nostoköyden hetkeksi ja kysyy',
+    tervehdys: 'Yara nojaa kärryyn ja vilkaisee kirjaasi: "Pääty on '
+      + 'yhä yhtä kapea kuin sata viisikymmentä vuotta sitten. Näytä '
+      + 'että tunnet mitat kuten minä, niin kerron mistä koukku '
+      + 'löytyy."',
+    tervehdysLuenta: [
+      { rooli: 'kertoja', teksti: 'Yara nojaa kärryyn ja vilkaisee '
+        + 'kirjaasi:' },
+      { rooli: 'hahmo', teksti: '[curious] "Pääty on yhä yhtä kapea '
+        + 'kuin sata viisikymmentä vuotta sitten. [warmly] Näytä että '
+        + 'tunnet mitat kuten minä, niin kerron mistä koukku löytyy."' },
+    ],
+    loyto: 'Yara nostaa rasian kämmenelleen ja hihkaisee yläkertaan: '
+      + '"Löytyi! Ei tänään lipu ovesta, mutta pääty piti paikkansa."',
+    loytoLuenta: [
+      { rooli: 'kertoja', teksti: 'Yara nostaa rasian kämmenelleen ja '
+        + 'hihkaisee yläkertaan:' },
+      { rooli: 'hahmo', teksti: '[surprised] "Löytyi! [pleased] Ei '
+        + 'tänään lipu ovesta, mutta pääty piti paikkansa."' },
+    ],
+    tyhja: 'Yara koputtaa koukun kohdalle ja pudistaa päätään: "Tyhjä. '
+      + 'Tässä päädyssä vaihtuu tavaraa useammin kuin luulisi."',
+    vaarin: 'Yara laskee köyden hetkeksi: "Ei ihan. Minäkin luin nuo '
+      + 'mitat väärin, kunnes joku opetti katsomaan koukusta asti."',
+    /*
+     * Tunnetagit (docs/pulu-reaktiot.md E2). Tervehdys: uteliaisuus
+     * kohdistuu kirjan mittoihin, ei lämpöön (rekisterin poikkeus).
+     * Loput kolme rekisterin oletukset.
+     */
+    tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
     tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
     tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
     tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
