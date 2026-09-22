@@ -835,9 +835,43 @@ export const LAATTAKERROS_LAATTAKATTO_ENNAKKO = 96;
  * vanhan heti. Enintään LAATTAKATTO_ZOOMIENNAKKO laattaa, samasta
  * muistibudjetista kuin liikevaran ennakko.
  */
-export const LAATTAKERROS_ZOOMIENNAKKO_OSUUS = 0.35;
+export const LAATTAKERROS_ZOOMIENNAKKO_OSUUS = 0.5;
 export const LAATTAKERROS_ZOOMIENNAKKO_KESKIOSUUS = 0.6;
 export const LAATTAKERROS_LAATTAKATTO_ZOOMIENNAKKO = 16;
+/*
+ * ZOOMIENNAKKO AIEMMIN JA MERELLÄ LAAJEMMALLE (omistajan aamutesti
+ * 22.9.2026: *"merialueella zoomatessa syvyysviivat sotkeutuvat hetkeksi
+ * paksummiksi"*; Fablen päätös b). Ennakko alkaa 50 %:n päässä
+ * kynnyksestä (ennen 35 %). Merellä koko näkymä on samaa venyvää
+ * karkeaa laattaa eikä keskialue riitä — siellä ennakko kattaa 90 %
+ * näkymästä ja katto on 28 laattaa. "Merellä" luetaan laatoista
+ * itsestään: jokaiselle laatalle mitataan haun jälkeen merenosuus
+ * pohjakuvan 8 × 8 -näytteestä (sama R−B-sääntö kuin kerman
+ * maamaskilla, TASOITUS_MERI_ERO), ja näkymän keskimmäisen kolmanneksen
+ * laattojen keskiarvo yli MERIRAJAN on merta (reunojen rannikot eivät
+ * laimenna). Mittarit: laatat.meriOsuus, zoomiennakkoMerella.
+ */
+export const LAATTAKERROS_ZOOMIENNAKKO_KESKIOSUUS_MERI = 0.9;
+export const LAATTAKERROS_LAATTAKATTO_ZOOMIENNAKKO_MERI = 28;
+export const LAATTAKERROS_MERIRAJA = 0.6;
+/** Merenosuuden näytteen sivu pikseleinä (8 × 8 = 64 pikseliä laattaa kohti). */
+export const LAATTAKERROS_MERINAYTE = 8;
+
+/**
+ * Merenosuus RGBA-pikseleistä: osuus pikseleistä, joissa R − B on enintään
+ * TASOITUS_MERI_ERO (pohjan meri on harmaansinistä, maa kermanruskeaa —
+ * sama sääntö kuin maalaaKermaMaamaskilla). Läpinäkyvät pikselit (alfa 0)
+ * lasketaan mereksi: pohjan ulkopuolella ei ole maata.
+ */
+export function meriOsuusPikseleista(data) {
+  const n = data.length / 4;
+  if (!n) return 0;
+  let merta = 0;
+  for (let i = 0; i < data.length; i += 4) {
+    if (data[i + 3] === 0 || data[i] - data[i + 2] <= TASOITUS_MERI_ERO) merta += 1;
+  }
+  return merta / n;
+}
 /*
  * TUKITASO (sulavuus E2, 21.9.2026): näkyvän alueen alla pidetään aina
  * KARKEAMMAN tason laatat — oletuksena kaksi tasoa karkeammat, eli yksi
@@ -2221,6 +2255,8 @@ export function luoLaattakerros({
      * kun jo ladattua aluetta panoroidaan edestakaisin.
      */
     nakyvia: 0, nakyviaScenessa: 0, nakyviaTaysin: 0, ladattavia: 0, ennakkoja: 0, pidettyja: 0, tukia: 0, kattoRajoitti: false, zoomiennakkoja: 0,
+    /** Näkyvien laattojen merenosuus (0–1) ja oliko zoomiennakko meren laajuudella. */
+    meriOsuus: 0, zoomiennakkoMerella: false,
     /** Kertoja, jolloin jonossa oli laattoja mutta kehyksen aloituskatto tuli vastaan. */
     tahditettuja: 0,
     /*
@@ -2469,6 +2505,21 @@ export function luoLaattakerros({
     return kangas;
   };
 
+  /** Jaettu 8 × 8 -kangas merenosuuden näytteelle (ks. meriOsuusPikseleista). */
+  let merikangas = null;
+  const meriOsuusKuvasta = (kuva) => {
+    try {
+      const n = LAATTAKERROS_MERINAYTE;
+      if (!merikangas) merikangas = luoKangas(n, n);
+      const ctx = merikangas?.getContext?.('2d', { willReadFrequently: true });
+      if (!ctx) return null;
+      ctx.clearRect(0, 0, n, n);
+      ctx.imageSmoothingEnabled = true;
+      ctx.drawImage(kuva, 0, 0, n, n);
+      return meriOsuusPikseleista(ctx.getImageData(0, 0, n, n).data);
+    } catch { return null; }
+  };
+
   /* ---------------- häive ---------------- */
 
   const haivyta = (materiaali, kohde, kesto, valmis = null) => {
@@ -2661,6 +2712,9 @@ export function luoLaattakerros({
     t.varillinen = kerrostasot.some((k, i) => k.vari && kuvat[i]);
     t.katkaisin = null;
     if (purettu || laatat.get(t.avain) !== t) { for (const k of kuvat) k?.close?.(); return; }
+    // Merenosuus pohjakuvasta (zoomiennakko merellä): 8 × 8 näyte, ei koko laatan lukua.
+    const pohjaKohta = kerrostasot.findIndex((k) => !k.nosto && !k.viiva && !k.joki && !k.nimio && !k.ranta && !k.vari && !k.reliefi);
+    if (pohjaKohta >= 0 && kuvat[pohjaKohta]) t.meriOsuus = meriOsuusKuvasta(kuvat[pohjaKohta]);
     /*
      * AVOMERI EI OLE VIRHE, KUN POHJAA EI OLE ALLA.
      *
@@ -3769,6 +3823,28 @@ export function luoLaattakerros({
      * muistiin ennen vaihtoa. Ei kertomuslukossa (taso on lukittu).
      */
     let zoomiennakkoja = 0;
+    mittarit.zoomiennakkoMerella = false;
+    /*
+     * Merenosuus näkymän KESKELTÄ: zoomi tarkentuu keskelle, ja reunojen
+     * rannikot eivät saa laimentaa lukua (mitattu Välimeri 40,5 N 6 E,
+     * korkeus 0,2: koko näkymä 0,40, keskikolmannes 1,0). Lasketaan
+     * lähimmästä kolmanneksesta (vähintään neljästä) mitatuista
+     * laatoista; ilman mittausta edellinen arvo jää.
+     */
+    {
+      const mitatut = [];
+      for (const avain of nakyvat) {
+        const t = laatat.get(avain);
+        if (Number.isFinite(t?.meriOsuus)) mitatut.push(t);
+      }
+      if (mitatut.length) {
+        mitatut.sort((a, b) => a.etaisyys - b.etaisyys);
+        const n = Math.max(Math.min(4, mitatut.length), Math.ceil(mitatut.length / 3));
+        let summa = 0;
+        for (let i = 0; i < n; i += 1) summa += mitatut[i].meriOsuus;
+        mittarit.meriOsuus = summa / n;
+      }
+    }
     const laskee = Number.isFinite(edellinenPov?.altitude) && pov.altitude < edellinenPov.altitude * 0.999;
     if (laskee && !kertomuslukko) {
       const seuraava = tasoZ(valittu.z + 1);
@@ -3782,8 +3858,12 @@ export function luoLaattakerros({
       const reliefinKattoZ = kerrokset.reliefi ? pyramidinReliefinSyvinTaso() : null;
       if (seuraava && tarveKohta && (tarveKohta.z >= seuraava.z || kattoRajoitti)
         && !(Number.isFinite(reliefinKattoZ) && seuraava.z > reliefinKattoZ)) {
-        const kw = (raaka.lon1 - raaka.lon0) * LAATTAKERROS_ZOOMIENNAKKO_KESKIOSUUS / 2;
-        const kh = (raaka.lat1 - raaka.lat0) * LAATTAKERROS_ZOOMIENNAKKO_KESKIOSUUS / 2;
+        // Merellä laajemmalle: näkyvien laattojen merenosuus yli rajan.
+        const merella = mittarit.meriOsuus >= LAATTAKERROS_MERIRAJA;
+        mittarit.zoomiennakkoMerella = merella;
+        const keskiosuus = merella ? LAATTAKERROS_ZOOMIENNAKKO_KESKIOSUUS_MERI : LAATTAKERROS_ZOOMIENNAKKO_KESKIOSUUS;
+        const kw = (raaka.lon1 - raaka.lon0) * keskiosuus / 2;
+        const kh = (raaka.lat1 - raaka.lat0) * keskiosuus / 2;
         const kx = (raaka.lon0 + raaka.lon1) / 2;
         const ky = (raaka.lat0 + raaka.lat1) / 2;
         const keskialue = { lon0: kx - kw, lon1: kx + kw, lat0: Math.max(latMin, ky - kh), lat1: Math.min(latMax, ky + kh) };
@@ -3792,7 +3872,7 @@ export function luoLaattakerros({
         });
         const tavuaPerLaatta = koko * koko * 4 * (renderer?.capabilities?.isWebGL2 ? 4 / 3 : 1);
         const mahtuu = Math.floor(tavukatto() / tavuaPerLaatta);
-        const katto = Math.max(0, Math.min(LAATTAKERROS_LAATTAKATTO_ZOOMIENNAKKO,
+        const katto = Math.max(0, Math.min(merella ? LAATTAKERROS_LAATTAKATTO_ZOOMIENNAKKO_MERI : LAATTAKERROS_LAATTAKATTO_ZOOMIENNAKKO,
           mahtuu - nakyvat.size - tuet.size - ennakko.size - LAATTAKERROS_ENNAKKO_MUISTIVARA));
         const seurPpu = seuraava.pikseliaPerYksikko;
         const seurKeskiX = keskiX * (seurPpu / ppu);

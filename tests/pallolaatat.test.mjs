@@ -709,3 +709,19 @@ test('laatan syvyyssiirto aseman mukaan: hienompi edessä, karkeampi ja tuki tak
     assert.ok(Math.abs(v - LAATTAKERROS_SYVYYSSIIRTO) >= 2, `${v}`);
   }
 });
+
+/* ---------------- merenosuus (zoomiennakko merellä) ------------------ */
+
+test('meriOsuusPikseleista: meri on R−B ≤ 36 tai läpinäkyvä, maa kermaa', async () => {
+  const { meriOsuusPikseleista, LAATTAKERROS_MERIRAJA, LAATTAKERROS_ZOOMIENNAKKO_OSUUS } = await import('../js/pallolaatat.js');
+  const px = (r, g, b, a = 255) => [r, g, b, a];
+  const meri = px(150, 160, 170); // harmaansininen: R − B < 0
+  const maa = px(214, 196, 160); // kerma: R − B = 54
+  const raja = px(200, 190, 164); // R − B = 36 → vielä merta
+  assert.equal(meriOsuusPikseleista(new Uint8ClampedArray([...meri, ...meri, ...maa, ...maa])), 0.5);
+  assert.equal(meriOsuusPikseleista(new Uint8ClampedArray([...maa, ...maa, ...maa, ...px(0, 0, 0, 0)])), 0.25);
+  assert.equal(meriOsuusPikseleista(new Uint8ClampedArray([...raja])), 1);
+  assert.equal(meriOsuusPikseleista(new Uint8ClampedArray([])), 0);
+  assert.ok(LAATTAKERROS_MERIRAJA > 0.5 && LAATTAKERROS_MERIRAJA < 1);
+  assert.equal(LAATTAKERROS_ZOOMIENNAKKO_OSUUS, 0.5);
+});
