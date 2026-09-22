@@ -243,6 +243,7 @@ export const MAASTOKOHTEET_ISL = [
     ],
     nimi: 'Þingvellir',
     tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Miksi sama nimi toistuu Skotlannissa ja Mansaarella?',
       'Miksi käräjät lopetettiin täällä?',
@@ -353,6 +354,7 @@ export const MAASTOKOHTEET_ISL = [
     ],
     nimi: 'Geysir',
     tyyppi: 'sana',
+    taso: 1,
     kysymykset: [
       'Mistä sana geysir tulee?',
       'Mikä Strokkur on?',
