@@ -1,12 +1,12 @@
 /*
- * SAVUKE: KEHYSPROFIILIN YLIN RIVI KERTOO KOETILAN (Pelikoodari 22.9.2026).
- * Omistajan iPhone-kaappauksia ei voinut kohdistaa Piirtokoe-tilaan, koska
- * overlay ei näyttänyt sitä. Tarkistaa oikeassa selaimessa:
- *   T1 osoitelippu ?koe=profiili,dpr15 → "koe 3/7 Pikselisuhde 1,5 · profiili pN · vNNNN"
- *   T2 valikon tallennus (eipuskuri + kytkin) ilman lippua → "koe 2/7 Ei puskurikirjoituksia"
- *   T3 valinta vaihdetaan kesken istunnon → "(seuraavassa latauksessa: koe 1/7 Normaali)"
- *   T4 ei sivuvirheitä
- * KÄYTTÖ: PLAYWRIGHT_JS=... SAVUKE_MOOTTORI=webkit node tools/savukkeet/savuke-profiilitila.mjs
+ * SAVUKE: PIIRTOKOE "EI HÄIVYTYSTÄ VEDOSSA" (?koe=eihaivevedossa, Fable 22.9.2026).
+ * Omistajan v2126-kaappauksissa vedon aikana häipyi 10–22 laattaa, eli uusi ja
+ * vanha laatta piirrettiin päällekkäin läpinäkyvinä. Koe poistaa häiveen vain
+ * liikkeen ajaksi. Sama synteettinen veto (__kehysprofiili.veto) kahdesti:
+ *   V1 vastakoe normaali: vedossa häipyviä > 0 (vartija näkee häiveen)
+ *   V2 eihaivevedossa: vedossa häipyviä 0 kuudennesta kehyksestä alkaen
+ *   V3 laattoja tuli sceneen vedon aikana myös kokeessa (koe ei jäädytä kerrosta)
+ *   V4 ei sivuvirheitä
  */
 import http from 'node:http';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
@@ -44,51 +44,53 @@ const tieto = (nimi, arvo) => console.log(`INFO  ${nimi}: ${arvo}`);
 const p = (x, n = 3) => (Number.isFinite(x) ? x.toFixed(n) : '—');
 
 const selain = MOOTTORI === 'webkit' ? await paketti.webkit.launch() : await paketti.chromium.launch({ executablePath: process.env.CHROMIUM || undefined });
-const avaa = async (haku, muistiin = {}) => {
+const avaa = async (haku) => {
   const ctx = await selain.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true, serviceWorkers: 'block' });
-  await ctx.addInitScript(([d, m]) => {
-    if (sessionStorage.getItem('savuke-alustettu')) return;
-    sessionStorage.setItem('savuke-alustettu', '1');
-    localStorage.setItem('matkakirja-save-v1', d); localStorage.removeItem('matkakirja-lauta');
-    for (const [k, v] of Object.entries(m)) localStorage.setItem(k, v);
-  }, [tallenne, muistiin]);
+  await ctx.addInitScript((d) => { localStorage.setItem('matkakirja-save-v1', d); localStorage.removeItem('matkakirja-lauta'); }, tallenne);
   const sivu = await ctx.newPage();
   const virheet = [];
-  sivu.on('pageerror', (e) => virheet.push(String(e.message)));
+  // Synteettinen veto: OrbitControlsin setPointerCapture ei tunne keksittyä pointerId:tä (sama kuin savuke-zoomiraja).
+  sivu.on('pageerror', (e) => { const t = String(e.message ?? e); if (!/PointerCapture|can not be found here/i.test(t)) virheet.push(t); });
   await sivu.route(/media\.matkakirja\.app|r2\.dev\//, async (r) => { const v = await ampari(r.request().url()); if (!v) { r.abort(); return; } r.fulfill({ status: 200, contentType: v.tyyppi ?? 'application/octet-stream', body: v.body, headers: { 'access-control-allow-origin': '*' } }); });
   await sivu.route('**samireivinen.workers.dev/**', (r) => r.abort());
   await sivu.route(/wikimedia\.org/, (r) => r.abort());
   await sivu.goto(`${osoite}?lauta=pallo${haku}`, { waitUntil: 'domcontentloaded', timeout: 90000 });
-  await sivu.waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null, { timeout: 90000 });
+  await sivu.waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta && window.__kehysprofiili), null, { timeout: 90000 });
+  // Lähelle, jotta veto tuo uusia laattoja (häive syntyy vain uudesta laatasta).
+  await sivu.evaluate(() => window.matkakirja.ui.pallonInstanssi.pointOfView({ lat: 46.5, lng: 2.5, altitude: 0.35 }, 0));
+  await sivu.waitForTimeout(5000);
   return { ctx, sivu, virheet };
 };
-const ylinRivi = (sivu, ehto = '') => sivu.waitForFunction((e) => {
-  const r = document.querySelector('.profiilinaytto > div')?.textContent ?? '';
-  return r.startsWith('koe') && r.includes(e) ? r : false;
-}, ehto, { timeout: 20000 }).then((h) => h.jsonValue()).catch(() => '');
+const vedot = async (sivu) => sivu.evaluate(async () => {
+  const tulokset = [];
+  for (const suunta of [[1, 0.3], [-1, -0.2], [0.4, 1]]) {
+    const v = await window.__kehysprofiili.veto({ kesto: 1500, nopeusPx: 900, suunta });
+    /*
+     * Viisi ensimmäistä kehystä (~80 ms) pois: profiili lukee kehyksen
+     * ennen laattakerroksen päivitystä, ja liikkeen tieto (pallo.js
+     * lepoajastin) ehtii kerrokseen vasta seuraavissa tickeissä — levossa
+     * juuri alkanut häive voi näkyä siirtymäkehyksessä.
+     */
+    const k = v.kehykset.slice(5);
+    tulokset.push({ hapyviaMax: Math.max(0, ...k.map((f) => f.hapyvia ?? 0)), sceneenKasvu: Math.max(0, ...k.map((f) => f.scenessa ?? 0)) - (k[0]?.scenessa ?? 0), paivityksia: (k.at(-1)?.paivityksia ?? 0) - (k[0]?.paivityksia ?? 0) });
+  }
+  return tulokset;
+});
 
-const versio = `v${readFileSync(join(JUURI, 'js/main.js'), 'utf8').match(/APP_VERSION = '([^']+)'/)[1].split('.').pop()}`;
 try {
-  {
-    const { ctx, sivu, virheet } = await avaa('&koe=profiili,dpr15');
-    const r = await ylinRivi(sivu);
-    tieto('T1 rivi', r);
-    vaadi('T1 osoitelippu näkyy ylimpänä', /^koe 3\/7 Pikselisuhde 1,5 · profiili p\d+ · v\d+$/.test(r) && r.endsWith(versio), r);
-    vaadi('T4a ei sivuvirheitä', virheet.length === 0, virheet.join(' | '));
-    await ctx.close();
-  }
-  {
-    const { ctx, sivu, virheet } = await avaa('', { 'matkakirja-piirtokoe': 'eipuskuri', 'matkakirja-kehysprofiili': '1' });
-    const r = await ylinRivi(sivu);
-    tieto('T2 rivi', r);
-    vaadi('T2 valikon valinta näkyy', r.startsWith('koe 2/7 Ei puskurikirjoituksia · profiili p'), r);
-    await sivu.evaluate(() => localStorage.setItem('matkakirja-piirtokoe', 'normaali'));
-    const r3 = await ylinRivi(sivu, 'seuraavassa');
-    tieto('T3 rivi', r3);
-    vaadi('T3 vaihto näkyy seuraavana', r3.startsWith('koe 2/7 Ei puskurikirjoituksia (seuraavassa latauksessa: koe 1/7 Normaali)'), r3);
-    vaadi('T4b ei sivuvirheitä', virheet.length === 0, virheet.join(' | '));
-    await ctx.close();
-  }
+  const n = await avaa('&koe=tuntematon');
+  const normaali = await vedot(n.sivu);
+  tieto('V1 normaali', JSON.stringify(normaali));
+  vaadi('V1 vastakoe: normaalissa vedossa häipyviä > 0', normaali.some((t) => t.hapyviaMax > 0), JSON.stringify(normaali));
+  await n.ctx.close();
+
+  const e = await avaa('&koe=eihaivevedossa');
+  const koe = await vedot(e.sivu);
+  tieto('V2 eihaivevedossa', JSON.stringify(koe));
+  vaadi('V2 kokeessa vedon aikana häipyviä 0', koe.every((t) => t.hapyviaMax === 0), JSON.stringify(koe));
+  vaadi('V3 laattoja vietiin vedon aikana myös kokeessa', koe.some((t) => t.paivityksia > 0), JSON.stringify(koe));
+  vaadi('V4 ei sivuvirheitä', n.virheet.length + e.virheet.length === 0, [...n.virheet, ...e.virheet].join(' | '));
+  await e.ctx.close();
 } finally {
   await selain.close();
   palvelin.close();
