@@ -292,7 +292,10 @@ test('parallaksi on poissa: mitattu 4,2 % -> 0,00 px (Chromium 1440 x 900)', () 
 test('katsesäde kirjoitetaan kameran liikkeestä, ladonnasta ja siirtymän jälkeen', () => {
   const lauta = lue('../js/pallolauta/lauta.js');
   // Paikka lasketaan datumin asteista, ei olion nykyisestä paikasta.
-  assert.match(lauta, /katsesateenPaikka\(\s*\n?\s*pallonPiste\(d\.lat, d\.lon, pallonSade\), kameranPaikka, o\.scale\.z,/);
+  // Sulavuus kohta 11 (22.9.2026): pinta lasketaan datumille kerran (__pinta) ja katsesäteen
+  // siirto kirjoitetaan suoraan olion paikkaan — sama kaava kuin katsesateenPaikka, ei olioita.
+  assert.match(lauta, /const p = pallonPiste\(d\.lat, d\.lon, pallonSade\);\n\s*pinta = \{ x: p\.x, y: p\.y, z: p\.z, sade: pallonSade \};\n\s*d\.__pinta = pinta;/);
+  assert.match(lauta, /pinta\.x \+ korkeus \* \(dx \/ matka - pinta\.x \/ pallonSade\),/);
   // Kamera-tapahtuma ja ladonta ajavat saman tahdistuksen kuin ennen.
   assert.match(lauta, /ohjaimet\.addEventListener\('change', tahdistaPisteidenKoko\)/);
   // Kirjaston siirtymä ja herätys korjataan jälkikäteen.

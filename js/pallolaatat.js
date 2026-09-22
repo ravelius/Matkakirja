@@ -2534,6 +2534,35 @@ export function luoLaattakerros({
 
   /* ---------------- häive ---------------- */
 
+  /*
+   * YKSI HÄIVYTYSJONO, EI rAF-KETJUA PER MATERIAALI (sulavuuskatsaus
+   * 22.9.2026 kohta 12). Tason vaihdossa kymmenet laatat häipyivät
+   * yhtä aikaa, kukin omassa requestAnimationFrame-ketjussaan: kymmeniä
+   * takaisinkutsuja kehystä kohti ja kymmeniä lepopiirron ilmoituksia.
+   * Nyt häiveet ovat yhdessä taulussa (materiaali → tietue), ja yksi
+   * rAF-askel etenee ne kaikki: yksi kutsu, yksi ilmoitus kehystä kohti.
+   * `materiaali.__haive` on tietue (peruutus = poisto taulusta), kuten
+   * ennen askel-funktio.
+   */
+  const haiveet = new Map();
+  let haiveRaf = 0;
+  const haiveAskel = () => {
+    haiveRaf = 0;
+    if (!haiveet.size) return;
+    const nyt = aika();
+    for (const [materiaali, h] of haiveet) {
+      if (materiaali.__haive !== h) { haiveet.delete(materiaali); continue; }
+      const t = Math.min(1, (nyt - h.t0) / h.kesto);
+      const e = 1 - (1 - t) ** 3;
+      materiaali.opacity = h.alku + (h.kohde - h.alku) * e;
+      if (t < 1) continue;
+      haiveet.delete(materiaali);
+      materiaali.__haive = null;
+      h.paata();
+    }
+    pallo.__piirto?.tarvitaan(); // lepopiirto: häiveen askel näkyviin (kerran kaikille)
+    if (haiveet.size) haiveRaf = ikkuna.requestAnimationFrame(haiveAskel);
+  };
   const haivyta = (materiaali, kohde, kesto, valmis = null) => {
     const alku = materiaali.opacity;
     materiaali.__kohde = kohde;
@@ -2546,20 +2575,11 @@ export function luoLaattakerros({
       if (kohde >= 1 && materiaali.transparent) { materiaali.transparent = false; materiaali.needsUpdate = true; }
       valmis?.();
     };
-    if (!(kesto > 0) || alku === kohde) { paata(); pallo.__piirto?.tarvitaan(); return; }
-    const t0 = aika();
-    const askel = () => {
-      if (materiaali.__haive !== askel) return;
-      const t = Math.min(1, (aika() - t0) / kesto);
-      const e = 1 - (1 - t) ** 3;
-      materiaali.opacity = alku + (kohde - alku) * e;
-      pallo.__piirto?.tarvitaan(); // lepopiirto: häiveen askel näkyviin
-      if (t < 1) { ikkuna.requestAnimationFrame(askel); return; }
-      materiaali.__haive = null;
-      paata();
-    };
-    materiaali.__haive = askel;
-    ikkuna.requestAnimationFrame(askel);
+    if (!(kesto > 0) || alku === kohde) { haiveet.delete(materiaali); materiaali.__haive = null; paata(); pallo.__piirto?.tarvitaan(); return; }
+    const h = { alku, kohde, kesto, t0: aika(), paata };
+    materiaali.__haive = h;
+    haiveet.set(materiaali, h);
+    if (!haiveRaf) haiveRaf = ikkuna.requestAnimationFrame(haiveAskel);
   };
 
   /* ---------------- tietueen purku ---------------- */
@@ -4176,7 +4196,9 @@ export function luoLaattakerros({
     for (const t of laatat.values()) {
       if (t.tila === 'valmis' && t.scenessa && t.materiaali && t.materiaali.opacity >= 1) valmiit.add(t.avain);
     }
-    for (const t of [...laatat.values()]) {
+    // Suoraan Mapista ilman kopiota (kohta 11: ei taulukoita kehyspolussa); nykyisen
+    // alkion poisto kesken Map-iteroinnin on turvallista.
+    for (const t of laatat.values()) {
       if (t.nakyva || t.tuki || !t.scenessa || t.haipyy) continue;
       if (t.z < valittu.z && laattakerroksenPeitto(t, valmiit, pyramidi.tasot, {
         laattaKoko: koko, kohdeZ: valittu.z,
@@ -4192,12 +4214,12 @@ export function luoLaattakerros({
      * ne ovat pelkkää kirjanpitoa (jono kootaan näkyvistä ja pidetyistä),
      * ja laatta luodaan tarvittaessa uudestaan samalla avaimella.
      */
-    for (const t of [...laatat.values()]) {
+    for (const t of laatat.values()) {
       if (!t.nakyva && !t.pito && t.tila === 'ladataan' && !t.aloitettu) poista(t);
     }
     // Määräkatto samassa suhteessa kuin tavukatto (osoitinlaite 2×).
     const maarakatto = LAATTAKERROS_LAATTAKATTO_MUISTI * (kosketuslaite() ? 1 : LAATTAKERROS_TAVUKERROIN_OSOITIN);
-    for (const avain of laattakerroksenLRU([...laatat.values()], maarakatto, tavukatto())) {
+    for (const avain of laattakerroksenLRU(laatat.values(), maarakatto, tavukatto())) {
       const t = laatat.get(avain);
       if (t && !t.haipyy) poista(t);
     }
@@ -4415,6 +4437,8 @@ export function luoLaattakerros({
     syy: () => mittarit.syy,
     /** Valmistelun hinta (ms, kpl, pisin) savukkeelle — ei varausta. */
     valmistelu: () => [mittarit.valmisteluMs, mittarit.valmisteluja, mittarit.valmisteluMax],
+    /** Käynnissä olevia häiveitä (yksi jono, ks. YKSI HÄIVYTYSJONO). */
+    haiveita: () => haiveet.size,
     /** Peittääkö kerros koko näkyvän alueen juuri nyt (pohjan tarve)? */
     peittaa: () => mittarit.nakyvia > 0 && mittarit.nakyviaScenessa >= mittarit.nakyvia,
     /**
@@ -4436,6 +4460,9 @@ export function luoLaattakerros({
       esikaannoksenNaytteet = null;
       if (vientiRaf) ikkuna.cancelAnimationFrame?.(vientiRaf);
       vientiRaf = 0;
+      if (haiveRaf) ikkuna.cancelAnimationFrame?.(haiveRaf);
+      haiveRaf = 0;
+      haiveet.clear();
       if (aloitusRaf) ikkuna.cancelAnimationFrame?.(aloitusRaf);
       aloitusRaf = 0;
       if (katkoAjastin) ikkuna.clearTimeout?.(katkoAjastin);

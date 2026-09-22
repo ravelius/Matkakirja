@@ -3775,11 +3775,33 @@ export async function avaaPallolauta(ui) {
        * Parallaksi pois JOKAISELTA pisteeltä — kaupungeilta, helmiltä ja
        * aihevaloilta (ks. LEVY KATSESÄTEELLE). Paikka lasketaan aina
        * datumin asteista, ei olion nykyisestä paikasta.
+       *
+       * EI VARAUKSIA KEHYSPOLUSSA (sulavuuskatsaus 22.9.2026 kohta 11):
+       * pinnan piste lasketaan datumille kerran (`__pinta`, lat/lon ja
+       * säde eivät muutu) ja katsesäteen siirto kirjoitetaan suoraan
+       * olion paikkaan — ennen tässä syntyi kaksi oliota pistettä ja
+       * kehystä kohti (satoja per kehys liikkeessä, GC:n merkinnät
+       * Web Inspectorin aikajanalla).
        */
-      const paikka = katsesateenPaikka(
-        pallonPiste(d.lat, d.lon, pallonSade), kameranPaikka, o.scale.z,
+      let pinta = d.__pinta;
+      if (!pinta || pinta.sade !== pallonSade) {
+        const p = pallonPiste(d.lat, d.lon, pallonSade);
+        pinta = { x: p.x, y: p.y, z: p.z, sade: pallonSade };
+        d.__pinta = pinta;
+      }
+      const korkeus = o.scale.z;
+      if (!(korkeus > 0)) { o.position.set(pinta.x, pinta.y, pinta.z); n += 1; continue; }
+      const dx = kameranPaikka.x - pinta.x;
+      const dy = kameranPaikka.y - pinta.y;
+      const dz = kameranPaikka.z - pinta.z;
+      const matka = Math.hypot(dx, dy, dz);
+      if (!(matka > 0)) { o.position.set(pinta.x, pinta.y, pinta.z); n += 1; continue; }
+      // Sama kaava kuin katsesateenPaikka (pinnan säde = pallonSade).
+      o.position.set(
+        pinta.x + korkeus * (dx / matka - pinta.x / pallonSade),
+        pinta.y + korkeus * (dy / matka - pinta.y / pallonSade),
+        pinta.z + korkeus * (dz / matka - pinta.z / pallonSade),
       );
-      if (paikka) o.position.set(paikka.x, paikka.y, paikka.z);
       n += 1;
     }
     return n;

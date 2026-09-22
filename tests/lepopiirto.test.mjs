@@ -91,3 +91,11 @@ test('kytkennät: lauta asentaa, häiveet ja nimiöt ilmoittavat, savuke pakotta
   assert.match(sovitin, /sykkii\(\) \{/);
   assert.match(lue('../tools/savukkeet/savuke-laattaohjelmat.mjs'), /pallo\.__piirto\?\.pakota\?\.\(\); r\.render\(scene, kam\);/);
 });
+
+test('atlaksen osittainen päivitys (sulavuus kohta 8): viedyn sivun rasteri texSubImage2D:llä, ei koko kangasta', () => {
+  const gl = lue('../js/pallonimiot-gl.js');
+  assert.match(gl, /if \(sivu\.viety && !atlasKoko && typeof renderer\?\.copyTextureToTexture === 'function'\)/);
+  assert.match(gl, /if \(renderer\.copyTextureToTexture\.length >= 3\) renderer\.copyTextureToTexture\(kohta, lahde, sivu\.tekstuuri\);\n\s*else renderer\.copyTextureToTexture\(lahde, sivu\.tekstuuri, null, kohta\);/);
+  assert.match(gl, /s\.tekstuuri\.needsUpdate = true; s\.likainen = false; s\.viety = true;/);
+  assert.match(gl, /includes\('atlaskoko'\)/, 'koelippu palauttaa koko kankaan viennin');
+});
