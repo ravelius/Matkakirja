@@ -102,8 +102,13 @@ const LUE = `async (kohde) => {
   await new Promise((v) => setTimeout(v, 600));
   const laput = l.nostot.lappuLaatikot();
   const osumat = l.nostot.osumaLaatikot();
-  const W = innerWidth; const H = innerHeight;
-  const yli = laput.filter((r) => r.x0 < -4 || r.y0 < -4 || r.x1 > W + 4 || r.y1 > H + 4).map((r) => r.nimi);
+  // Laput ovat kotelon pikseleitä (ruudulla → kotelo), eivät ikkunan: ruutu on kotelo.
+  const W = l.kotelo?.clientWidth || innerWidth; const H = l.kotelo?.clientHeight || innerHeight;
+  // Liikevara (v2056): ladonta-alue on ruutua suurempi, joten kokonaan
+  // ruudun ulkopuolinen lappu on tarkoituksellinen. Reunan ylitys on
+  // vain lappu, joka on osittain ruudussa ja ylittää reunan > 4 px.
+  const ruudussa = (r) => r.x1 > 0 && r.x0 < W && r.y1 > 0 && r.y0 < H;
+  const yli = laput.filter((r) => ruudussa(r) && (r.x0 < -4 || r.y0 < -4 || r.x1 > W + 4 || r.y1 > H + 4)).map((r) => r.nimi);
   const elementit = [...document.querySelectorAll('.pallolauta-nosto[data-nosto]')].map((el) => {
     const g = el.querySelector('.pallolauta-nosto-siirto');
     const m = /scale\\(([\\d.]+)\\)/.exec(g?.style.transform ?? '');
@@ -268,10 +273,13 @@ for (const ruutu of RUUDUT) {
     await l.kamera.ajaKamera({ x: c.x, y: c.y, leveys }, { kesto: 0 });
     await new Promise((v) => setTimeout(v, 400));
     l.ladoHeti(); await new Promise((v) => setTimeout(v, 400));
-    const W = innerWidth; const H = innerHeight;
+    // Laput ovat kotelon pikseleitä (ruudulla → kotelo), eivät ikkunan: ruutu on kotelo.
+  const W = l.kotelo?.clientWidth || innerWidth; const H = l.kotelo?.clientHeight || innerHeight;
     const laput = l.nostot.lappuLaatikot();
     const lahella = { osumissa: nakyvissa(l.nostot.osumat()), lapuissa: nakyvissa(laput), taso1: laput.filter((r) => r.taso === 1).length,
-      yli: laput.filter((r) => r.x0 < -4 || r.y0 < -4 || r.x1 > W + 4 || r.y1 > H + 4).map((r) => r.nimi) };
+      // Vain osittain ruudussa oleva lappu on ylitys (liikevara, ks. LUE).
+      yli: laput.filter((r) => r.x1 > 0 && r.x0 < W && r.y1 > 0 && r.y0 < H && (r.x0 < -4 || r.y0 < -4 || r.x1 > W + 4 || r.y1 > H + 4))
+        .map((r) => ({ nimi: r.nimi, x0: Math.round(r.x0), x1: Math.round(r.x1), y0: Math.round(r.y0), y1: Math.round(r.y1), W, H })) };
     for (const k of KOLMOSET) delete k.taso;
     return { tunnukset, saapuen, lahella };
   }, 0.5);
@@ -285,6 +293,7 @@ for (const ruutu of RUUDUT) {
     ujutus.tunnukset.length >= 1 && ujutus.lahella.osumissa.length === ujutus.tunnukset.length && ujutus.lahella.taso1 >= 1,
     JSON.stringify(ujutus.lahella));
   vaadi(`${tunnus}: 3b. lähizoomilla ei reunan ylityksiä`, ujutus.lahella.yli.length === 0, JSON.stringify(ujutus.lahella.yli));
+  if (saapuminen.yli.length) tieto(`${tunnus}: 3a. ylittävät laput`, JSON.stringify(saapuminen.yliLaput));
   if (KUVAKANSIO) await sivu.screenshot({ path: join(KUVAKANSIO, `nostotasot-${ruutu.width}-lahi.png`), scale: 'css' });
 
   vaadi(`${tunnus}: 5. ei sivuvirheitä`, virheet.length === 0, virheet.slice(0, 2).join(' | '));
