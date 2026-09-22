@@ -1447,3 +1447,7 @@ Julkaisija mergesi #2844 (5687fd65), testit 3962/0. Aiemmat Tasaisen dt-johtopä
 ## PIIRTOKOE VALMIS (COMMIT 20bc29f3d HAARASSA pelikoodari-profiili-ketju, EI PR:AA KOSKA #2843 SULJETTU): JULKAISIJA JULKAISEE SUORAAN HAARASTA v2125 (22.9.2026 klo 20.17)
 
 Pelikoodarin erä: ratasvalikkoon Piirtokoe (Normaali / Ei puskurikirjoituksia / Pikselisuhde 1,5 / Ei tekstuurivientejä) ja Näytä kehysprofiili -kytkin; overlayhin puskurikirjoitukset/kehys, uniformeja/kehys, GL-vientejä, silmukoita, valmistumisviive. 3979 testiä 0 punaista. Perässä: alpha0, vahemmandc, Mac-Safari-taulukko (uuteen haaraan ja PR:ään). Omistaja testaa iPhonella heti kun v2125 on tuotannossa.
+
+## LAITETESTAAJA: CGEvent-VETO EI LIIKUTA KARTTAA (0 pointer-TAPAHTUMAA MITATTUNA, KLIKKAUS JA HOVER TOIMIVAT) → AITO VETO VAATII KADEN; MAC-SAFARIN WEB INSPECTOR JA AIKAJANATALLENNUS SKRIPTATTU System Eventsilla (tools/mac/aikajana-mittaus.md) (22.9.2026 klo 20.18)
+
+Laitetestaajan mittaus: CGEvent-vedot (myös hidas mouseMoved-esisarja) tuottivat pelissä nolla pointerdown/move/up-tapahtumaa; aiempi 'kartta liikkui' oli nimiöiden asettelua, ei kameraa. Web Inspectorin avaus ja aikajanatallennuksen aloitus/lopetus onnistuvat yhdellä osascript-komennolla Kehitys-valikosta; vain Kehykset-alavälilehti ja Näyttökuvat-aikajanan poiskytkentä jäävät ihmiselle. Ohje haarassa laitetestaaja (c5a284424), tulee mainiin dokumenttikartan kautta. Seuraus: Piirtokoe-mittaus Macin Safarilla tarvitsee omistajan tai Fablen käden vetoon; iPhonen tulokset omistajan overlay-kaappauksista.
