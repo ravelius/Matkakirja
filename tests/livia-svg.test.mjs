@@ -253,7 +253,15 @@ test('luoLivianSvg.paikkaa päivittää vain vaiheen: sama asento → attribuuti
  assert.equal(el.innerHTML,html1,'innerHTML ei rakennettu uudestaan');
  assert.equal(osat.get('near-wing').getAttribute('transform'),livianLeijuntaSiipi('near',1.3));
  assert.match(livianSvgKuva(s2),new RegExp(`data-part="whole-bird"[^>]*? transform="${osat.get('whole-bird').getAttribute('transform').replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}"`),'linnun transform on sama kuin koko kuvassa');
- assert.equal(k.paikkaa({...rest,mapHover:{height:.5,phase:2}}),false,'nousun aikana rakennetaan');
+ // Nousu: porras vaihtuu → rakennetaan; saman portaan sisällä paikataan (sulavuus kohta 17).
+ assert.equal(k.paikkaa({...rest,mapHover:{height:.5,phase:2}}),false,'eri korkeusporras → rakennetaan');
+ k.paint({...rest,mapHover:{height:.5,phase:2}});
+ const html2=el.innerHTML;
+ assert.equal(k.paikkaa({...rest,mapHover:{height:.55,phase:2.4}}),true,'sama porras (0,5 ≈ 0,55) → paikataan');
+ assert.equal(el.innerHTML,html2,'innerHTML ei rakennettu portaan sisällä');
+ assert.equal(k.paikkaa({...rest,mapHover:{height:.7,phase:2.5}}),false,'seuraava porras → rakennetaan');
+ assert.equal(k.paikkaa({...rest,mapHover:{height:0,phase:3}}),false,'maassa ei paikata');
+ k.paint(s2);
  assert.equal(k.paikkaa({...s2,propsRight:true}),false,'asento muuttui → rakennetaan');
 });
 test('karttaleijunta vetää jalat sisään korkeuden mukana',()=>{

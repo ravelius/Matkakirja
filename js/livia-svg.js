@@ -318,12 +318,21 @@ let lvSerial=0;
  * Ranska z6 zoomi): kerrokset ilman pulua p95 51 ms, pulun kanssa 74 ms;
  * pitkien kehysten selaimen oma aika 155 → 1 554 ms. Oikealla iPhonella
  * sama ero näkyi portaiden 5 ja 6 välissä (p95 18 → 50).
- * Kun vain leijunnan vaihe muuttuu (korkeus tasan 1, muu asento sama),
- * päivitetään linnun ja siipien transform-attribuutit paikalleen; koko
- * kuva rakennetaan vasta, kun asento oikeasti vaihtuu.
+ * Kun vain leijunnan vaihe muuttuu (muu asento sama), päivitetään linnun
+ * ja siipien transform-attribuutit paikalleen; koko kuva rakennetaan
+ * vasta, kun asento oikeasti vaihtuu.
+ *
+ * MYÖS NOUSU JA LASKU PAIKATAAN (sulavuuskatsaus 22.9.2026 kohta 17):
+ * korkeuden ramppi 0 → 1 (260 ms) ja 1 → 0 (280 ms) rakensi koko kuvan
+ * JOKA KEHYS liikkeen alussa ja lopussa (~16 + 17 innerHTML-jäsennystä
+ * juuri silloin, kun ele alkaa). Korkeus kuuluu avaimeen PORRASTETTUNA
+ * (LV_LEIJUNNAN_PORTAAT askelta): jalkojen veto, siipien ristihäive ja
+ * varjo päivittyvät portaittain (~43 ms välein, ei erotu), ja linnun
+ * nousu sekä siipien vaihe paikataan joka kehys transformiin.
  */
+const LV_LEIJUNNAN_PORTAAT=6;
 const lvLeijuVanha=()=>{try{return new URLSearchParams(globalThis.location?.search??'').get('koe')?.split(',').includes('leijuvanha')??false;}catch{return false;}};
-const lvLeijuntaAvain=s=>{try{return JSON.stringify({...s,mapHover:s.mapHover?.height??null});}catch{return null;}};
+const lvLeijuntaAvain=s=>{try{const h=s.mapHover?.height;return JSON.stringify({...s,mapHover:Number.isFinite(h)?Math.round(h*LV_LEIJUNNAN_PORTAAT)/LV_LEIJUNNAN_PORTAAT:null});}catch{return null;}};
 export function luoLivianSvg(element) {
  let right=0;const prefix='livia'+(++lvSerial);
  let viimeAvain=null,osat=null;
@@ -331,7 +340,7 @@ export function luoLivianSvg(element) {
  function paint(s){element.innerHTML=livianSvgKuva(s,{right,prefix});viimeAvain=lvLeijuntaAvain(s);osat=null;}
  /* Vaihe-eron paikkaus: true, kun kuva päivitettiin ilman rakennusta. */
  function paikkaa(s){
-  if(!(s?.mapHover?.height>=1)||!element.querySelector)return false;
+  if(!(s?.mapHover?.height>0)||!element.querySelector)return false;
   // Mittauslippu `?koe=leijuvanha`: vanha tapa (koko kuva joka kehys) vertailuksi.
   if(lvLeijuVanha())return false;
   const avain=lvLeijuntaAvain(s);

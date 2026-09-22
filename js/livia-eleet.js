@@ -247,7 +247,7 @@ export function asennaLivianKasvot(pollo) {
  }
  const piirra=s=>{if(!kuollut){viimeAsento=s;
   // Leijunnan vaihe paikataan paikalleen: ei asettelumittoja, ei rakennusta (ks. luoLivianSvg).
-  if(s.mapHover?.height>=1&&!kohtausPiilossa()&&kasvot.paikkaa?.({...s,compactExplain:viimePiirretty?.compactExplain,astronautti:viimePiirretty?.astronautti,...(lehtiPaalla?{glasses:viimePiirretty?.glasses}:{})}))return;
+  if(s.mapHover?.height>0&&!kohtausPiilossa()&&kasvot.paikkaa?.({...s,compactExplain:viimePiirretty?.compactExplain,astronautti:viimePiirretty?.astronautti,...(lehtiPaalla?{glasses:viimePiirretty?.glasses}:{})}))return;
   sijoita();
   // Kohtaus omistaa myös suorat piirrot: puhe, napin näkyvyys ja
   // taustalta paluu eivät saa palauttaa levossa olevaa lintua sen alle.
