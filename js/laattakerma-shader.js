@@ -52,7 +52,25 @@ uniform float kermaSumuPeitto;
 uniform float kermaPaalla;     // 1 = kerma, 0 = ei (maailmanäkymä, linssin tyhjä arkki)
 `;
 
-/** map_fragment-lohkon korvaaja; UV-nimi täydennetään ajossa (vMapUv tai vUv). */
+/*
+ * OMA UV-VARYING, EI KIRJASTON NIMEÄ (vika v2084, löytyi 22.9.2026
+ * pohjan piilotusta mitattaessa: laattakerros oli tuotannossa NÄKYMÄTÖN
+ * ja pelaaja näki z5-pohjan). `onBeforeCompile` saa shaderin ENNEN
+ * #include-lohkojen avaamista, joten `fragmentShader.includes('vMapUv')`
+ * oli aina epätosi ja runko viittasi `vUv`:hen, jota three r155:n
+ * Lambert-fragmentissa ei ole → fragmentti ei käänny, ohjelma ei linkity,
+ * laatta ei piirry (three ei kirjaa virhettä konsoliin, GL antaa
+ * INVALID_OPERATIONin piirrossa). Kerma lukee nyt oman varyinginsa
+ * `vKermaUv`, joka asetetaan kärjessä suoraan `uv`-attribuutista —
+ * riippumaton siitä, miksi kirjasto varyinginsa nimeää.
+ */
+const KERMA_GLSL_VARYING = 'varying vec2 vKermaUv;';
+const KERMA_GLSL_KARKI = `
+#include <uv_vertex>
+vKermaUv = uv;
+`;
+
+/** map_fragment-lohkon korvaaja. */
 const KERMA_GLSL_RUNKO = `
 #ifdef USE_MAP
   vec4 kermaTexel = texture2D( map, KERMA_UV );
@@ -220,11 +238,13 @@ export function asennaKermaShader(materiaali, { jaettu, laatta }) {
   };
   materiaali.onBeforeCompile = (shader) => {
     Object.assign(shader.uniforms, jaettu, omat);
-    const uv = shader.fragmentShader.includes('vMapUv') ? 'vMapUv' : 'vUv';
-    const runko = KERMA_GLSL_RUNKO.replace(/KERMA_UV/g, uv)
+    const runko = KERMA_GLSL_RUNKO.replace(/KERMA_UV/g, 'vKermaUv')
       .replace('KERMA_MERI', `${KERMA_MERI_ERO}.0`).replace('KERMA_MAA', `${KERMA_MAA_ERO}.0`);
+    shader.vertexShader = shader.vertexShader
+      .replace('#include <common>', `#include <common>\n${KERMA_GLSL_VARYING}`)
+      .replace('#include <uv_vertex>', KERMA_GLSL_KARKI);
     shader.fragmentShader = shader.fragmentShader
-      .replace('#include <common>', `#include <common>\n${KERMA_GLSL_UNIFORMIT}`)
+      .replace('#include <common>', `#include <common>\n${KERMA_GLSL_VARYING}\n${KERMA_GLSL_UNIFORMIT}`)
       .replace('#include <map_fragment>', runko);
   };
   materiaali.customProgramCacheKey = () => 'laattakerma-1';
