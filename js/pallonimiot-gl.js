@@ -337,6 +337,15 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
      * Vaihtoehto olisi koodata varjostimessa lineaarinen → sRGB, mutta
      * se olisi esikerrotun alfan kanssa väärin ilman puramista ja
      * uudelleenkertomista, ja maksaisi pow():n joka pikselille.
+     *
+     * OLETUS PÄTEE VAIN SUORAAN RUUTUPUSKURIIN PIIRRETTÄESSÄ
+     * (Karttaseppä, rungon omistaja, katselmuksessa 22.9.2026). Jos
+     * tämä kerros joskus piirretään VÄLIRENDERTARGETTIIN tai kulkee
+     * jälkikäsittelyn läpi, välipuskuri on lineaarinen ja väriavaruus
+     * on mietittävä uudestaan — silloin purku ja koodaus kuuluvat
+     * ketjuun. Vartijat kattavat varjostimen (tests/pallonimiot-gl) ja
+     * väriketjun identiteetin (savuke-glnimiot), MUTTA EIVÄT tätä:
+     * rendertargetin lisääjä ei saa niistä varoitusta.
      */
     tekstuuri.colorSpace = GLNIMIOT_VARIAVARUUS;
     const materiaali = new L.ShaderMaterial({
