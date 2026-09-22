@@ -262,3 +262,15 @@ test('10 s otos säilyy kokonaisena, vaikka ruutunäyttö pyörii 3 s välein', 
   assert.ok(lahetykset.at(-1).kehyksia < kehyksia / 2, `jakso on viipale (${lahetykset.at(-1).kehyksia})`);
   pura();
 });
+
+test('laattavientien rivi: initTexture-kutsut jaksossa ja jonon pituus', () => {
+  const kehykset = [
+    { dt: 16.7, laattaVienteja: 10, vientejaOdottaa: 0 },
+    { dt: 16.7, laattaVienteja: 12, vientejaOdottaa: 0 },
+    { dt: 16.7, laattaVienteja: 12, vientejaOdottaa: 7 },
+  ];
+  const t = profiiliTahti({ kehykset }, null);
+  assert.equal(t.vienteja, 2, 'jakson vientien määrä on laskurin erotus');
+  assert.equal(t.odottaa, 7, 'eivienti: jonossa odottavat näkyvät');
+  assert.match(profiilirivit({ tiiviste: TIIVISTE, tahti: t }).join('\n'), /laattavientejä 2 \(jonossa 7\)/);
+});

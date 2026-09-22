@@ -158,3 +158,23 @@ test('luoAlfatonKonteksti: pyytää webgl2:ta ilman alfaa, epäonnistuminen pala
   assert.equal(luoAlfatonKonteksti({ ownerDocument: tyhja }, false, tyhja), null);
   assert.equal(luoAlfatonKonteksti(null, false, null), null, 'ilman DOMia ei kaadu');
 });
+
+/*
+ * EIVIENTI KATTAA LAATAT (Laitetestaajan Mac-mittaus 22.9.2026: lippu ei
+ * muuttanut mitään, koska se jäädytti VAIN nimiöatlaksen — laattojen
+ * tekstuurit, jotka iPhonella virtaavat vedon aikana, menivät
+ * näytönohjaimelle kuten ennenkin). Sopimus on lähteessä, koska vienti
+ * tapahtuu kolmosen initTexturessa; savuke mittaa jonon.
+ */
+test('eivienti jäädyttää laattojen viennin vedon ajaksi, ja laskuri laskee vientejä', () => {
+  const laatat = readFileSync(new URL('../js/pallolaatat.js', import.meta.url), 'utf8');
+  assert.match(laatat, /if \(\(kokeet\.has\('vientilepo'\) \|\| kokeet\.has\('eivienti'\)\) && liikkeessaViimeksi\) \{/);
+  // Jono valuu levossa: liikkeen loppu käynnistää viennin uudelleen.
+  assert.match(laatat, /if \(liikkeessaViimeksi && !liikkuu\) \{ liikkeessaViimeksi = false; ajaVienti\(\); \}/);
+  const profiili = readFileSync(new URL('../js/pallolauta/kehysprofiili.js', import.meta.url), 'utf8');
+  assert.match(profiili, /laattaVienteja: laatat\.vienteja \?\? 0/);
+  const naytto = readFileSync(new URL('../js/pallolauta/profiilinaytto.js', import.meta.url), 'utf8');
+  // v2125 laski tähän kerroksen päivityksiä: nimi lupasi vientejä.
+  assert.match(naytto, /const vienteja = kasvu\('laattaVienteja'\);/);
+  assert.doesNotMatch(naytto, /const vienteja = kasvu\('paivityksia'\);/);
+});
