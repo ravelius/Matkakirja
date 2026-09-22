@@ -30,9 +30,11 @@
  * (laattakerros.paivita, nimiöt, vektorit) ajetaan vain piirretyillä
  * kehyksillä — levossa pääsäiekin lepää.
  *
- * Paluulippu `?koe=levovanha`: piirto joka kehys kuten ennen. Savukkeet,
- * jotka kutsuvat renderer.render itse ja lukevat pikseleitä, pakottavat
- * piirron `pallo.__piirto.pakota()`-kutsulla (savuke-laattaohjelmat).
+ * Paluulippu `?koe=levovanha`: piirto joka kehys kuten ennen. Automaatiossa
+ * (navigator.webdriver) lepopiirto on pois, ellei `?koe=lepopiirto` — ks.
+ * AUTOMAATIOSSA POIS alempana. Savukkeet, jotka kutsuvat renderer.render
+ * itse ja lukevat pikseleitä, pakottavat piirron
+ * `pallo.__piirto.pakota()`-kutsulla (savuke-laattaohjelmat).
  */
 
 /** Varmistava syke levossa (ms): 4 fps. */
@@ -42,13 +44,25 @@ export const LEPOPIIRTO_HIDAS_MS = 66;
 /** Piirtoja peräkkäin muutoksen jälkeen: toinen kehys vie CSS2D:n ja häiveen lopun. */
 export const LEPOPIIRTO_JALKIKEHYKSIA = 1;
 
-/** Onko lepopiirto käytössä (`?koe=levovanha` palauttaa vanhan). */
-export function lepopiirtoKaytossa(haku) {
+/*
+ * AUTOMAATIOSSA POIS, ELLEI PYYDETÄ (`?koe=lepopiirto`). Playwright/CDP:n
+ * page.screenshot sommittelee uuden kehyksen, ja WebGL-kangas ilman
+ * preserveDrawingBufferia antaa sille TYHJÄN puskurin, jos kehystä ei
+ * juuri piirretty (mitattu 22.9.2026: kaappaus 47,38,33 = pelkkä
+ * tausta, vaikka laatat olivat scenessä). Näytöllä sommittelija pitää
+ * viimeisen kehyksen (Mapbox ja deck.gl piirtävät tarpeen mukaan iOS
+ * Safarissa juuri näin), mutta CI:n kaappaussavukkeet mittaisivat
+ * tyhjää. Siksi `navigator.webdriver` sammuttaa lepopiirron; mittaus
+ * ja lepopiirron oma savuke pyytävät sen lipulla, ja lukevat pikselit
+ * readPixelsillä piirron jälkeen, eivät kaappauksella.
+ */
+export function lepopiirtoKaytossa(haku, nav = globalThis.navigator) {
   const h = haku ?? (() => { try { return globalThis.location?.search ?? ''; } catch { return ''; } })();
-  try {
-    const koe = new URLSearchParams(h).get('koe') ?? '';
-    return !koe.split(',').map((k) => k.trim()).includes('levovanha');
-  } catch { return true; }
+  let kokeet = [];
+  try { kokeet = (new URLSearchParams(h).get('koe') ?? '').split(',').map((k) => k.trim()); } catch { kokeet = []; }
+  if (kokeet.includes('levovanha')) return false;
+  if (kokeet.includes('lepopiirto')) return true;
+  return !(nav && nav.webdriver === true);
 }
 
 /**

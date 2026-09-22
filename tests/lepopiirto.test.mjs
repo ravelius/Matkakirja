@@ -36,8 +36,12 @@ test('päätös: kamera, tarve, este, hidas ja syke — muuten ei piirretä', ()
   assert.equal(lepopiirtoPaatos(tila, { nyt: 302, kameraMuuttui: false }), null);
   tila.paalla = false;
   assert.equal(lepopiirtoPaatos(tila, { nyt: 303, kameraMuuttui: false }), 'pois');
-  assert.equal(lepopiirtoKaytossa('?koe=levovanha'), false);
-  assert.equal(lepopiirtoKaytossa('?koe=mittaus'), true);
+  assert.equal(lepopiirtoKaytossa('?koe=levovanha', { webdriver: false }), false);
+  assert.equal(lepopiirtoKaytossa('?koe=mittaus', { webdriver: false }), true);
+  // Automaatio (Playwright): pois, ellei pyydetä — kaappaukset saisivat tyhjän kankaan.
+  assert.equal(lepopiirtoKaytossa('', { webdriver: true }), false);
+  assert.equal(lepopiirtoKaytossa('?koe=lepopiirto', { webdriver: true }), true);
+  assert.equal(lepopiirtoKaytossa('?koe=lepopiirto,levovanha', { webdriver: true }), false);
 });
 
 test('asennus: render kääritään, kamera liikkuu → piirto, paikallaan → ohitus, tarvitaan → piirto', () => {
