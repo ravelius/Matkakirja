@@ -908,3 +908,20 @@ pelikoodin kytkentää, jotta se on valmis kun sulavuus on kuitattu.
   samalla vartiolla kuin `puraDelta` (tests/pallovektorit-aineisto).
 - **Ämpäri:** `julisteet/pallo/maakunnat/<versio>/` — ei vielä viety;
   vienti vasta kun M1 on olemassa.
+
+### 11.1 M1 toteutettu: js/pallomaakunnat.js (Karttaseppä 22.9.2026)
+
+Kerros `luoPallomaakunnat` (oletuksena POIS, `?maakunnat=1`): yksi Mesh per
+maa, kärjet `pallonPiste`-kaavalla säteelle R·(1 + 1,2e-4), väri
+kärkiattribuuttina (MeshBasicMaterial vertexColors, peitto 0,34, valittu
+0,62), renderOrder −0,6 ja syvyyssiirto −12 (sama kuin viivoilla; −10:llä
+täyttö jäi laattojen alle). Maa seuraa pelaajan maan korostusta
+(lauta.js `paivita` → `asetaMaa`), kolme maata muistissa. `osuma(lat, lng)`
+ja `valitse(indeksi)` linssille (Pelikoodari). Löydös: `kolmiulotteinen`
+antaa Float32BufferAttributen, joka muuntaa Uint32-indeksit liukuluvuiksi —
+`indeksiluokka` nousee kantaluokkaan. Savuke
+`tools/savukkeet/savuke-pallomaakunnat.mjs` (aineisto paikallisesta
+kansiosta, 9/9: FRA 18 aluetta, osumat Pariisi/Marseille/meri, valinta,
+panorointi p95 19–29 ms WebKit 390 × 844 dpr 3, maanvaihto CHE ja takaisin
+muistista). Testit tests/pallomaakunnat.test.mjs 6/6 (runkovartio
+puraMaa/pisteAlueessa). Ämpäriin ei vielä viety (Fablen käsky).
