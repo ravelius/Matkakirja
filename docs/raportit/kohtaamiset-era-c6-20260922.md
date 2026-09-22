@@ -11,17 +11,23 @@ kaupunki):
 | Marseille | 6 | Kaaren soutaja Baptiste (satama, Ifin saari/Monte Cristo) ja dokumentoitu tyylikoekuva varattuja kaarelle; myös kaupunkilehden/maalehden laajasti kattamat aiheet (saippua, Notre-Dame de la Garde, kalatori) vältetty. Uusi hahmo santontekijä Rosine, kokonaan uusi aihepiiri (santonimessut, perustettu 1803). Uusi kuva tarpeen. |
 | Kiova | 6 | Kaaren näyttelymestari Danylo (Kultainen portti) varattu kaarelle; myös laattakysymysten/lehden kattamat aiheet (Petšerskin luostari, Kiovan Rus) vältetty. Uusi hahmo sillanvartija Oksana, Nikolain ketjusillalla (1853, aikansa Euroopan suurin riippusilta) — fakta pidetty tiukasti 1873-aikakaudessa, ei viittausta myöhempään historiaan tai nykypolitiikkaan. Uusi kuva tarpeen. |
 | Luxemburg | 6 | Puhdas kaupunki. Uusi hahmo kivenhakkaaja Nic. Isoisä-koukku: 1867 Lontoon sopimuksen määräämä linnoituksen purku (1867–1883) oli 1873 tarkalleen puolivälissä. Uusi kuva tarpeen. |
-| Valletta | 6 | Puhdas kaupunki (Malta-nostotaso Blue Grotto/Sininen luola on ERI, rinnakkainen nosto — ei ristiriitaa). **HUOM Fablelle:** Valletta on tällä hetkellä KEVYET_FOKUSVIRRAT-joukossa eikä sillä ole vielä täyttä kaupunkilehteä (kohtaamiskortit pois käytöstä koodissa, `FOKUSVIRTA_KORTIT === false`) — tämä kohtaaminen on siis valmisteltua sisältöä tulevaa täyttä pakkia varten, ei heti kytkettävissä peliin. Uusi hahmo teatterin lipunmyyjä Rita. Isoisä-koukku: Vallettan oopperatalo paloi 25.5.1873, suljettuna lähes 5 vuotta — isoisä ei olisi nähnyt esitystä. Uusi kuva tarpeen. |
+| Riika | 6 | Kaaren kultaaja Ilze (tornikukot, kultaus) ja hänen kuvansa varattuja kaarelle — lisäksi fokusvirrassa TOINEN, eri "apteekkari Ilze" -hahmo, joten nimeä ei käytetä kolmatta kertaa. Uusi hahmo sillanrahastaja Valdis, Daugavan kelluvalla ponttonisillalla. Isoisä-koukku: Riian ensimmäinen pysyvä rautatiesilta avattiin vasta 1.1.1873, puoli vuotta ennen isoisän heinäkuun käyntiä. Uusi kuva tarpeen. |
+
+**Valletta vaihdettu Riikaan Fablen päätöksellä (22.9.2026):** Valletta on
+KEVYET_FOKUSVIRRAT-joukossa eikä sillä ole vielä täyttä kaupunkilehteä
+(kohtaamiskortit pois käytöstä koodissa) — sisältöä ei saa jättää dataan
+kytkemättömänä. Teatterin lipunmyyjä Rita -teksti on valmis ja säilytetty
+tämän raportin lopussa omassa "Valmisteltu, ei vielä kytketty" -osiossa
+tulevaa käyttöä varten, kun Valletta saa täyden fokusvirtapinon.
 
 Rakenne sama kuin erät C1–C5. Ei vielä kirjoitettu js/packs/kohtaamiset.js:ään
-— tarkastukseesi ensin. **Päätöstarve:** pidetäänkö Valletta mukana tässä
-erässä (valmisteltu sisältö, ei vielä kytkettävissä) vai vaihdetaanko se
-toiseen kaupunkiin?
+— tarkastukseesi ensin.
 
-## Läpheivät huomiot
+## Läpikäyvät huomiot
 
-1. Kaksi kuudesta kaupungista on tarinakaarikaupunkeja (Marseille, Kiova);
-   neljä on puhtaita (Sevilla, Bryssel, Luxemburg, Valletta).
+1. Kolme kuudesta aktiivisesta kaupungista on tarinakaarikaupunkeja
+   (Marseille, Kiova, Riika); kolme on puhtaita (Sevilla, Bryssel,
+   Luxemburg).
 2. Sekä Sevilla- että Bryssel-agentit tarkistivat erikseen fokusvirran
    EI-KANONISIA ehdotettuja hahmonimiä (Amparo Sevillassa) ja vältivät
    niitä varmuuden vuoksi, samaan tapaan kuin Bergen-agentti teki
@@ -585,7 +591,146 @@ Lähteet (tarkistettu 22.9.2026, WebSearch/WebFetch):
 
 ---
 
-# Kohtaaminen erä C6: Valletta
+# Kohtaaminen erä C6: Riika
+
+Sisältökirjuri-sessio, 22.9.2026. Sisällöntuotantoa `docs/raportit/`-tiedostoon
+Fablen/Sisältökirjurin tarkastettavaksi — `js/packs/kohtaamiset.js`-,
+`js/kohtaamiskuvat-data.js`- eikä `js/tyohuone-kehitys-data.js`-tiedostoja
+**ei** ole muokattu. Kuudes kaupunki, korvaa Valletan (ks. lopussa oleva
+"Valmisteltu, ei vielä kytketty" -osio).
+
+## RISTIRIITATARKISTUS ENSIN
+
+Riialla ON tarinakaari (`js/tyohuone-kehitys-data.js`, `KAARI_PAKETIT.kohteet`,
+id `'riika'`). Kaaren oma `henkilo`-kenttä:
+
+> "Kultaaja Ilze uudistaa tornikukkojen kultauksen, kun myrskyt ovat sen
+> syöneet — sukunsa viidentenä."
+
+Kultaaja Ilze, tornikukot ja kultaus ovat siis kiistatta varattuja
+kaaren omaan kohtaamiseen. **Kuvatarkistus:** `js/kohtaamiskuvat-data.js`
+rivillä 421 on `riika-ilze-kultalehti` — sama Ilze, molemmissa
+kultalehti, kultaustyö ja torninkukko — myös varattu kaarelle.
+
+**Toinen, ERI Ilze samassa tiedostossa:** `js/packs/fokusvirta-riika.js`
+sisältää Riian fokusvirran oman, kaaresta erillisen kevyen
+kohtaamisjärjestelmän, jonka hahmo on **"Apteekkari Ilze"** (apteekkivihko,
+ilmanpaine/lämpötila, sairaan lapsen valvominen) — jo toinen, samanniminen
+mutta eri ammatin ja tarinan Ilze samassa kaupungissa. Nimeä "Ilze" ei
+siis käytetä kolmatta kertaa, ja aiheet apteekki/vihko/ilmanpaine sekä
+tornikukot/kultaus/myrsky on molemmat vältetty.
+
+**Lehti-/maalehtitarkistus:** kaupunkilehti ja maalehti kattavat jo
+laajasti laulujuhlat, musta balsami -juoman, Riian jugend-arkkitehtuurin,
+zeppelin-hallit, Kissatalon kissat, Kuramaan siirtomaat, Kuldīgan
+putouksen ja Kolkan niemen. Yksikään näistä ei toistu tässä
+kohtaamisessa.
+
+**Johtopäätös:** kirjoitin kokonaan uuden hahmon, uudella nimellä,
+ammatilla, paikalla ja isoisä-koukulla: **sillanrahastaja Valdis**
+Daugava-joen kelluvalla sillalla, rinnallaan vasta puoli vuotta aiemmin
+avattu rautatiesilta.
+
+## Riika — sillanrahastaja Valdis
+
+**hahmo:** `'sillanrahastaja Valdis'`
+
+**nappi:** `'Tapaa Valdis'`
+
+**frame:** `'Valdis pysäyttää rahastuslaatikkonsa kannen ja kysyy'`
+
+**tervehdys** (267 merkkiä, raja ~280):
+`'Valdis pysäyttää rahastuslaatikkonsa kannen: "Tuo rautasilta kantoi ensimmäisen junansa vasta tammikuussa — minun siltani on kannattanut kärryjä jo isäni isän ajoista. Näytä että tunnet maailmaa kuten piirtäjä — niin näytän, mikä laudan alle on jäänyt vuosikausiksi."'`
+
+**tervehdysLuenta:**
+```js
+[
+  { rooli: 'kertoja', teksti: 'Valdis pysäyttää rahastuslaatikkonsa '
+    + 'kannen:' },
+  { rooli: 'hahmo', teksti: '[curious] "Tuo rautasilta kantoi '
+    + 'ensimmäisen junansa vasta tammikuussa — minun siltani on '
+    + 'kannattanut kärryjä jo isäni isän ajoista. [warmly] Näytä että '
+    + 'tunnet maailmaa kuten piirtäjä — niin näytän, mikä laudan alle '
+    + 'on jäänyt vuosikausiksi."' },
+]
+```
+
+**loyto** (123 merkkiä, raja 130):
+`'Valdis nostaa rasian sillan lautojen raosta: "Tämä ei ole tullimaksu eikä hukkunut nappi — tämä on jäänyt tänne tahallaan."'`
+
+**loytoLuenta:**
+```js
+[
+  { rooli: 'kertoja', teksti: 'Valdis nostaa rasian sillan lautojen '
+    + 'raosta:' },
+  { rooli: 'hahmo', teksti: '[surprised] "Tämä ei ole tullimaksu eikä '
+    + 'hukkunut nappi — tämä on jäänyt tänne tahallaan."' },
+]
+```
+
+**tyhja** (119 merkkiä, raja 130):
+`'Valdis koputtaa tyhjää lautarakoa: "Tyhjä. Silta puretaan joka syksy jäiden tieltä — kaikki irtonainen katoaa silloin."'`
+
+**vaarin** (102 merkkiä, raja 130):
+`'Valdis laskee kolikot takaisin laatikkoon: "Ei vielä. Silta kestää vain, kun luku on laskettu oikein."'`
+
+**tunnetagit:**
+```js
+tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 }
+tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 }
+tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 }
+tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 }
+```
+
+## 1873-fakta ja lähteet
+
+Riian ensimmäinen pysyvä silta Väinäjoen (Daugavan) yli — rautatiesilta
+Riika–Jelgava-radalle — rakennettiin vuosina 1871–1872, ja se
+**avattiin 1. tammikuuta 1873**: isoisän heinäkuun 1873 käynnin aikaan
+silta oli siis vasta puoli vuotta vanha. Ennen tätä ja vielä sen
+rinnalla Riiassa kulki pitkään perinteinen kelluva ponttonisilta
+("bridge of boats"), joka kannatteli tavallista kärry- ja
+jalankulkuliikennettä.
+
+Lähteet (tarkistettu 22.9.2026, WebSearch/WebFetch):
+- [Railway Bridge, Riga – Wikipedia](https://en.wikipedia.org/wiki/Railway_Bridge,_Riga)
+- [Iron Bridge, Riga – Wikipedia](https://en.wikipedia.org/wiki/Iron_Bridge,_Riga)
+- [Pontoon Bridge (Riga) – Wikidata](https://www.wikidata.org/wiki/Q25553955)
+
+Huom. varovaisuudesta: en väitä tekstissä, että uusi rautatiesilta olisi
+korvannut kelluvan sillan tai uhannut Valdisin toimeentuloa — lähteet
+eivät vahvista syy-seuraussuhdetta, vain kahden erityyppisen sillan
+samanaikaisen olemassaolon.
+
+## Olemassa olevat Riika-kuvakonseptit (ristiriitatarkistus)
+
+- `riika-ilze-kultalehti` (hahmo Ilze, kultalehti leijumassa).
+  **Varattu kokonaan kaaren omaan kohtaamiseen.**
+- Ei olemassa olevaa kuvaa sillanrahastaja Valdisille — uusi tilaus.
+
+## Kuvatarve: uusi tilaus Codexille
+
+> **Riika — sillanrahastaja Valdis.** Latvialainen mies, noin 45–60-
+> vuotias. Paikka: Daugavan kelluvan (ponttoni-) sillan kansi,
+> puulankkuja ja köysiä, taustalla joen toisella rannalla siintää
+> uuden rautatiesillan rautarakenne kaukana — **ei Riian tuomiokirkkoa,
+> ei Pyhän Pietarin kirkkoa, ei Kolmea veljestä, ei Vapaudenpatsasta
+> eikä Mustapäiden taloa näkyvissä lähikuvassa**. Kesken aidon
+> tekemisen: kämmenessä muutama kolikko, toinen käsi rahastuslaatikon
+> kannella. Valo/sää: heinäkuinen aamu, joelta nouseva kevyt usva.
+> Rajaus enintään puolivartalo. **Ei näytetä:** rasian sisältöä, junaa
+> tai veturia lähikuvassa, eikä mitään tekstiä tai numeroa, joka voisi
+> vihjata kysymyksen vastaukseen.
+
+---
+
+# Valmisteltu, ei vielä kytketty: Valletta — teatterin lipunmyyjä Rita
+
+**Fablen päätös 22.9.2026:** Valletta ei tähän erään — kohtaamiskortit
+ovat kevyissä fokusvirroissa pois käytöstä, eikä sisältöä saa jättää
+dataan kytkemättömänä. Teksti säilytetään tässä valmiina siihen asti,
+kun Valletta saa täyden fokusvirtapinon (kaupunkilehden sivut, täky,
+oppitunti). EI kirjoiteta js/packs/kohtaamiset.js:ään tässä erässä.
 
 Sisältökirjuri-sessio, 22.9.2026. Sisällöntuotantoa `docs/raportit/`-tiedostoon
 Fablen/Sisältökirjurin tarkastettavaksi — `js/packs/kohtaamiset.js`-,
