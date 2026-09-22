@@ -23,6 +23,27 @@ Tulokset kirjautuvat suoraan `docs/raportit/data/seuraamisvirhe-<pvm>.jsonl`-
 tiedostoon (EI /tmp:hen — ensimmäisen ajon raakadata menetettiin Mac-
 kaatumisessa 22.9.2026, koska se oli vielä /tmp:ssä).
 
+## Lähde: syöteloki vs. onBeforeRender-vertailu
+
+Oletus (`koe=mittaus,syoteloki`) lukee ENSISIJAISESTI pelin oman lokin
+`ui.pallonSyote.loki` (Pelikoodari 22.9.2026, haara pelikoodari-syote-
+interpolointi, commit 3a9d34bfc): rivi jokaisesta kamerakirjoituksesta
+`{t,x,y,lat,lng,alt,ohitus}`, jossa x/y = käytetty osoittimen paikka ja
+lat/lng/alt = kamera HETI sen jälkeen — lukuhetki ei voi mennä väärin,
+koska kirjaus tapahtuu kirjoituskohdassa itsessään. Jos lokia ei ole
+(vanhempi haara, tai `syoteloki`-lippu puuttuu osoitteesta), harnessi
+palaa `seurantaVertailu`-kenttään: passiivinen pointer-kuuntelu + kameran
+luku `scene.onBeforeRender`-koukusta (ei enää erillinen oma rAF — Fable
+22.9.2026 huomautti, että erillinen rAF kilpailisi kirjaston piirto-
+silmukan kanssa ja voisi tuottaa 0/2×-kuvion; ensimmäisen mittauskierroksen
+[docs/raportit/seuraamisvirhe-v2106-20260922.md] data kärsi tästä).
+
+Vastauksen tulostuksesta ja jsonl-rivistä näkyy kumpaa lähdettä käytettiin
+(`seuranta` = syöteloki, `seurantaVertailu` = aina mukana vertailuksi).
+`laskurit`-kenttä (`interpolointeja`, `ekstrapolointeja`, `viiveMs`,
+`sovelluksia`, `interpVanha`) kertoo suoraan datasta kumpaa polkua ajettiin,
+ei vain osoitteesta.
+
 ## Muut mittauspisteet
 
 Oletus on Ranska/Marseille z6 (`--dev marseille --lat 46.5 --lng 2.5 --alt 0.2`).
