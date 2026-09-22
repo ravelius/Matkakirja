@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2128, teksti: 'Ruutunaytto ei katkaise mittauspalvelimen otosta' },
   { v: 2127, teksti: 'alpha0 aito: oma kangas ja WebGL2-konteksti' },
   { v: 2126, teksti: 'Piirtokokeet alpha0 ja vahemmandc' },
   { v: 2125, teksti: 'Piirtokoe-valikko ja kehysprofiilin kytkin' },
