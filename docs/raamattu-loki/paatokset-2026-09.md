@@ -1587,3 +1587,7 @@ Omistaja klo 23.45 iPadilla. Pelikoodarille tilattu overlayhin liikkeen tasaisuu
 ## OMISTAJA: eivienti-TILASSA 'TULEE VAIN ISOMPI HYPPAYS KUN LIIKE PYSAHTYY' — VEDON NYKIMINEN ENNALLAAN; OMISTAJA KOKEILEE ?koe=syotetouch JA ?koe=interpvanha iPADILLA (22.9.2026 klo 23.47)
 
 Klo 23.47. Vahvistaa suunnan: nähty nykiminen on liikkeen epätasaisuutta vedon aikana, ei kehysaikaa.
+
+## NETTISELVITYS 2 (OMISTAJA: 'ETSITAAN VIKAA VAARASTA KOHDASTA'): 1) LAPINAKYVA WEBGL-KANGAS + SORMI RUUDULLA KUORMITTAA KOMPOSIITTORIA, alpha:false PUDOTTI PITKAT KEHYKSET 65 → 3 VEDOSSA (EmulatorJS #1255); 2) PROMOTION: SAFARIN rAF 60 Hz vs PANEELI 120 Hz, PARITTOMAT 8,3 ms KERRANNAISET = KEHYS LIUKUU PAIKAN (LIPPU 'Prefer Page Rendering Updates near 60fps'); 3) three.js: 'OrbitControls NYKII SAFARISSA VAIKKA fps 60' RATKAISEMATON → WEBKITIN ESITYS, EI SOVELLUS (22.9.2026 klo 23.50)
+
+Omistaja testaa iPadilla ?koe=alpha0 ja Safarin 120 Hz -lipun. Lähteet: github.com/EmulatorJS/EmulatorJS/issues/1255; groups.google.com/g/webgl-dev-list/c/h7WYgntLnvU; macrumors.com/how-to/enable-smoother-120hz-browsing-in-safari; developer.apple.com/forums/thread/690911; discourse.threejs.org/t/issue-with-orbitcontrols-on-safari/28317; github.com/mrdoob/three.js/issues/22254; nolanlawson.com/2019/08/11/high-performance-input-handling-on-the-web. Pelikoodarille: jos alpha0 auttaa → oletukseksi + premultipliedAlpha:false; jos 120 Hz -lippu auttaa → esitystahdin ideointi; liikkeen tasaisuusmittarit jatkuvat.
