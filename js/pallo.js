@@ -94,6 +94,9 @@ export {
   lepokerroksenSuunnitelma, lepokerroksenTaso, lepokerroksenTasoRiittaa, lepokerroksenUV,
   lepokerroksenVerkko, luoLepokerroksenAjoitus, pallonPiste, pinnanPiste, pyramidinKarttaAla,
 } from './pallolaatat.js';
+import {
+  VEDON_SEURANTA_TAPAHTUMA, mittauslippuPaalla, seurannanAsetukset,
+} from './vedon-seuranta.js';
 
 const R2 = 'https://media.matkakirja.app/';
 /**
@@ -2932,6 +2935,71 @@ export const VAUHDIN_KATTO_MS = 250;
  * (viimeisin näyte sellaisenaan), jotta ero voidaan mitata samalla
  * rakennuksella.
  */
+/*
+ * VIISI SYÖTETAPAA RINNAKKAIN (omistajan päätös Fablen kautta
+ * 22.9.2026). Oikeaa tapaa ei valita päättelemällä vaan mittaamalla:
+ * kaikki vaihtoehdot ovat samassa rakennuksessa koelippuina, samalla
+ * lokilla ja samoilla laskureilla, jotta sama mittari ja samat vedot
+ * vertaavat niitä keskenään.
+ *
+ *   (1) `?koe=interpvanha`  viimeisin näyte kerran kehyksessä (v2097)
+ *   (2) oletus              aikaleimainterpolointi 1 kehyksen viiveellä
+ *   (3) `?koe=syoteennakko` ekstrapolointi ILMAN viivettä, kiihtyvyys-
+ *                           rajalla — nolla viive, arvaus tilalle
+ *   (4) `?koe=syotejousi`   kriittisesti vaimennettu jousi sormeen,
+ *                           aikavakio ~1 kehys, dt-pohjainen
+ *   (5) `?koe=syotetouch`   näytteet touchmovesta (rAF-tahdistettu
+ *                           iOS:llä) pointermoven sijaan; hiiri ennallaan
+ *
+ * Kohta 5 on ORTOGONAALINEN: se vaihtaa näytteiden LÄHTEEN, ei tapaa
+ * laskea paikkaa, joten sen voi yhdistää kohtiin 2–4.
+ */
+/** Kiihtyvyyden katto ennakoinnissa (px/ms² ): nopeus ei saa hypätä. */
+export const SYOTE_KIIHTYVYYS_MAX = 0.02;
+/** Jousen aikavakio kehyksinä (kriittisesti vaimennettu). */
+export const SYOTE_JOUSI_KEHYKSIA = 1;
+
+/**
+ * Kriittisesti vaimennetun jousen askel kohti tavoitetta. Puhdas ja
+ * dt-pohjainen, joten tulos ei riipu kehystaajuudesta.
+ *
+ * @returns {{p:number, v:number}} uusi paikka ja nopeus
+ */
+export function jousiAskel(p, v, tavoite, dt, tau) {
+  if (!Number.isFinite(p) || !Number.isFinite(tavoite)) return { p: tavoite, v: 0 };
+  const t = Math.max(1e-3, tau);
+  const askel = Math.max(0, Number(dt) || 0);
+  if (!(askel > 0)) return { p, v: Number.isFinite(v) ? v : 0 };
+  /*
+   * SULJETTU MUOTO, EI ASKELLUSTA. Kriittisesti vaimennetun jousen
+   * ratkaisu on x(t) = (A + B t) e^(-ωt), ja sitä käyttämällä askel on
+   * vakaa MILLÄ TAHANSA dt:llä. Eksplisiittinen integrointi räjähti
+   * testissä, kun dt oli kaksi kehystä (dt ≈ 2τ): tulos karkasi
+   * arvoon 1999 tavoitteen 100 sijaan. Pitkä tauko (välilehti taustalla,
+   * pitkä kehys) on juuri se tilanne, jossa niin kävisi.
+   */
+  const omega = 1 / t;
+  const d = p - tavoite;
+  const v0 = Number.isFinite(v) ? v : 0;
+  const B = v0 + omega * d;
+  const e = Math.exp(-omega * askel);
+  const uusiP = tavoite + (d + B * askel) * e;
+  const uusiV = (B - omega * (d + B * askel)) * e;
+  return { p: uusiP, v: uusiV };
+}
+
+/**
+ * Nopeuden rajaus kiihtyvyyskatolla: ennakointi ei saa hypätä, kun
+ * sormi vaihtaa suuntaa. Puhdas.
+ */
+export function rajaaKiihtyvyys(edellinen, uusi, dt, kattoPerMs = SYOTE_KIIHTYVYYS_MAX) {
+  if (!Number.isFinite(edellinen)) return uusi;
+  const sallittu = Math.max(0, kattoPerMs) * Math.max(1, dt);
+  const muutos = uusi - edellinen;
+  if (Math.abs(muutos) <= sallittu) return uusi;
+  return edellinen + Math.sign(muutos) * sallittu;
+}
+
 /** Näytteitä puskurissa: kaksi kehystä 125 Hz:n hiirellä on ~8. */
 export const OSOITTIMEN_NAYTTEITA = 12;
 /** Vakioviive enintään yksi kehys (ms); Fablen rajaus 22.9.2026. */
@@ -3284,8 +3352,45 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
      * kamera HETI kirjoituksen jälkeen. Kehä on näin mahdoton.
      */
     loki: null, lokiKatto: 4000,
+    /* Mitattava syötetapa (ks. VIISI SYÖTETAPAA RINNAKKAIN). */
+    tapa: 'interp',
+    touchLahde: false,
+    jousi: null, // { x, y, vx, vy }
   };
-  if (laattakerroksenKokeet().has('syoteloki')) syote.loki = [];
+  /*
+   * TAPA TULEE JOKO MITTAUSLIPUSTA TAI PELAAJAN VALINNASTA
+   * (js/vedon-seuranta.js, valikko → Kartta → Vedon seuranta).
+   *
+   * LIPPU VOITTAA KOKONAAN. Savuke ei saa joutua arvaamaan, mikä
+   * laitteen localStorageen on jäänyt: kun osoitteessa on yksikin tämän
+   * perheen lippu, valinta ei vaikuta mihinkään — ei alussa eikä
+   * lennossa. Ilman lippuja valinta ratkaisee, ja se voi vaihtua kesken
+   * pelin ilman uutta latausta.
+   *
+   * Kohta 5: touchmove on iOS:n Safarissa rAF-tahdistettu, pointermove
+   * ei. Näytteiden lähde vaihtuu VAIN kosketuslaitteella; hiirellä
+   * pointermove on ainoa lähde eikä käytös muutu.
+   */
+  const kosketusLaite = typeof globalThis.ontouchstart !== 'undefined';
+  const mittausLippu = mittauslippuPaalla();
+  const asetaTapa = ({ tapa, touchLahde }) => {
+    syote.tapa = tapa;
+    syote.interpVanha = tapa === 'vanha';
+    syote.touchLahde = Boolean(touchLahde) && kosketusLaite;
+  };
+  {
+    const k = laattakerroksenKokeet();
+    if (k.has('syoteloki')) syote.loki = [];
+    if (mittausLippu) {
+      let tapa = 'interp';
+      if (syote.interpVanha) tapa = 'vanha';
+      else if (k.has('syoteennakko')) tapa = 'ennakko';
+      else if (k.has('syotejousi')) tapa = 'jousi';
+      asetaTapa({ tapa, touchLahde: k.has('syotetouch') });
+    } else {
+      asetaTapa(seurannanAsetukset());
+    }
+  }
   ui.pallonSyote = syote; // mittausta varten (savukkeet)
   let kotelonMitat = null; // { left, top, W, H }
   const lueKotelonMitat = () => {
@@ -3312,6 +3417,10 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
     lueKotelonMitat();
     syote.veto = null;
     syote.naytteet.length = 0;
+    syote.jousi = null;
+    syote.vx = undefined;
+    syote.vy = undefined;
+    syote.edellinenNyt = 0;
     tartunta = sormet.alhaalla === 1 ? sormenKohta(e.clientX, e.clientY) : null;
   });
   /*
@@ -3462,6 +3571,9 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
      * erikseen — kelvoton lista johtaa varapolkuun (itse tapahtuma),
      * ei rikkinäisiin näytteisiin.
      */
+    // (5) Kun näytteet luetaan touchmovesta, pointermove ei enää syötä
+    // puskuria — muuten sama liike tulisi kahdesti eri kellotuksella.
+    if (syote.touchLahde) return;
     const osat = typeof e.getCoalescedEvents === 'function' ? e.getCoalescedEvents() : null;
     const lisaa = (p) => {
       const x = p?.clientX;
@@ -3497,29 +3609,118 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
     }
     edellinenKehys = nyt;
   };
+  /*
+   * (5) NÄYTTEET TOUCHMOVESTA. iOS:n Safari tahdistaa touchmoven
+   * rAF:iin mutta EI pointermovea (Nolan Lawson, ks. OSOITIN KEHYKSEN
+   * HETKELLÄ), joten kosketuslaitteella touchmove antaa valmiiksi
+   * kehystahtiset näytteet. Lippu vaikuttaa VAIN kosketuslaitteella:
+   * hiirellä pointermove on ainoa lähde.
+   */
+  const touchNayte = (ev) => {
+    if (!syote.touchLahde || !tartunta || sormet.alhaalla !== 1) return;
+    const kosketukset = ev?.touches;
+    const k = kosketukset && kosketukset.length === 1 ? kosketukset[0] : null;
+    if (!k || !Number.isFinite(k.clientX) || !Number.isFinite(k.clientY)) return;
+    const t = leima(ev);
+    const n = syote.naytteet;
+    if (n.length && t < n[n.length - 1].t) return;
+    n.push({ x: k.clientX, y: k.clientY, t });
+    if (n.length > OSOITTIMEN_NAYTTEITA) n.shift();
+    syote.veto = { x: k.clientX, y: k.clientY, aika: t };
+    syote.touchNaytteita = (syote.touchNaytteita ?? 0) + 1;
+  };
+  /*
+   * KUUNTELIJA KAIKILLE KOSKETUSLAITTEILLE, EI VAIN VALINNAN AIKANA:
+   * käsittelijä palaa heti, kun `syote.touchLahde` on epätosi, ja
+   * valinta voi vaihtua kesken pelin. Ehdollinen kytkentä vaatisi
+   * lisäyksen ja poiston lennossa — yksi passiivinen kuuntelija on
+   * halvempi kuin kaksi kirjanpitoa.
+   */
+  if (kosketusLaite) kotelo.addEventListener('touchmove', touchNayte, { passive: true });
+
+  /*
+   * VALINTA VAIHTUI VALIKOSSA (js/vedon-seuranta.js): tapa vaihtuu
+   * heti, ilman uutta latausta. Puskuri nollataan — vanhat näytteet on
+   * kerätty vanhalla tavalla ja vanhasta lähteestä, ja jousen tila
+   * kuuluu jouselle.
+   */
+  const seurantaVaihtui = () => {
+    if (mittausLippu) return; // mittausajossa lippu pitää valtansa
+    asetaTapa(seurannanAsetukset());
+    syote.naytteet.length = 0;
+    syote.veto = null;
+    syote.jousi = null;
+    syote.vx = undefined;
+    syote.vy = undefined;
+    syote.edellinenNyt = 0;
+  };
+  globalThis.addEventListener?.(VEDON_SEURANTA_TAPAHTUMA, seurantaVaihtui);
+
   const sovellaSyote = () => {
     const nyt = performance.now();
     paivitaKehysvali(nyt);
-    if (syote.interpVanha) {
-      // Paluulippu: v2097:n käytös, viimeisin näyte sellaisenaan.
+    if (syote.tapa === 'vanha') {
+      // (1) v2097: viimeisin näyte sellaisenaan, kerran kehyksessä.
       const v = syote.veto;
       if (v) { syote.veto = null; sovellaVeto(v.x, v.y, v.aika); }
     } else if (syote.naytteet.length) {
-      /*
-       * Osoittimen paikka KEHYKSEN HETKELLÄ: kehyksen aika miinus
-       * vakioviive (enintään yksi kehys). Näin kamera seuraa sormen
-       * liikettä eikä tapahtumajonon rytmiä: kehys ilman uutta
-       * näytettä ei ole enää pysähdys eikä seuraava ole piikki.
-       */
-      const viive = Math.min(kehysvali, OSOITTIMEN_VIIVE_MAX_MS);
-      syote.viiveMs = viive;
-      const kohta = osoittimenKohta(syote.naytteet, nyt - viive, {
-        ekstraMax: Math.min(kehysvali, OSOITTIMEN_EKSTRAPOLOINTI_MAX_MS),
-      });
+      const n = syote.naytteet;
+      const viimeinen = n[n.length - 1];
+      const dt = Math.max(1, nyt - (syote.edellinenNyt || nyt - kehysvali));
+      syote.edellinenNyt = nyt;
+      let kohta = null;
+      if (syote.tapa === 'ennakko') {
+        /*
+         * (3) NOLLA VIIVE, ARVAUS TILALLE. Tavoite on kehyksen hetki
+         * ILMAN viivettä, eli näytteiden yli ekstrapoloidaan aina.
+         * Kiihtyvyyskatto estää hypyn, kun sormi vaihtaa suuntaa:
+         * ilman sitä suunnanvaihdos heittäisi kameran väärään suuntaan
+         * ennen kuin uusi näyte ehtii korjata.
+         */
+        const raaka = osoittimenKohta(n, nyt, { ekstraMax: OSOITTIMEN_EKSTRAPOLOINTI_MAX_MS });
+        if (raaka) {
+          const vx = (raaka.x - viimeinen.x) / Math.max(1, raaka.t - viimeinen.t || 1);
+          const vy = (raaka.y - viimeinen.y) / Math.max(1, raaka.t - viimeinen.t || 1);
+          const rx = rajaaKiihtyvyys(syote.vx, vx, dt);
+          const ry = rajaaKiihtyvyys(syote.vy, vy, dt);
+          syote.vx = rx;
+          syote.vy = ry;
+          const yli = Math.max(0, nyt - viimeinen.t);
+          kohta = { x: viimeinen.x + rx * yli, y: viimeinen.y + ry * yli, t: nyt };
+          syote.ekstrapolointeja += 1;
+        }
+      } else if (syote.tapa === 'jousi') {
+        /*
+         * (4) KRIITTISESTI VAIMENNETTU JOUSI sormen viimeisimpään
+         * näytteeseen. Aikavakio on noin yksi kehys, ja askel on
+         * dt-pohjainen, joten tulos ei riipu kehystaajuudesta (toisin
+         * kuin kehyskohtainen kerroin, joka 120 Hz:llä olisi kaksi
+         * kertaa nopeampi kuin 60 Hz:llä).
+         */
+        const tau = Math.max(1, kehysvali * SYOTE_JOUSI_KEHYKSIA);
+        if (!syote.jousi) syote.jousi = { x: viimeinen.x, y: viimeinen.y, vx: 0, vy: 0 };
+        const jx = jousiAskel(syote.jousi.x, syote.jousi.vx, viimeinen.x, dt, tau);
+        const jy = jousiAskel(syote.jousi.y, syote.jousi.vy, viimeinen.y, dt, tau);
+        syote.jousi = { x: jx.p, y: jy.p, vx: jx.v, vy: jy.v };
+        kohta = { x: jx.p, y: jy.p, t: nyt };
+        syote.interpolointeja += 1;
+      } else {
+        /*
+         * (2) OLETUS: paikka kehyksen hetkelle, viive enintään yksi
+         * kehys. Näytteetön kehys jatkaa viimeisellä nopeudella
+         * korkeintaan yhden kehyksen verran.
+         */
+        const viive = Math.min(kehysvali, OSOITTIMEN_VIIVE_MAX_MS);
+        syote.viiveMs = viive;
+        kohta = osoittimenKohta(n, nyt - viive, {
+          ekstraMax: Math.min(kehysvali, OSOITTIMEN_EKSTRAPOLOINTI_MAX_MS),
+        });
+        if (kohta) {
+          if (kohta.t > viimeinen.t) syote.ekstrapolointeja += 1;
+          else syote.interpolointeja += 1;
+        }
+      }
       if (kohta) {
-        const viimeinen = syote.naytteet[syote.naytteet.length - 1];
-        if (kohta.t > viimeinen.t) syote.ekstrapolointeja += 1;
-        else syote.interpolointeja += 1;
         syote.veto = null;
         sovellaVeto(kohta.x, kohta.y, kohta.t);
       }
@@ -3532,6 +3733,8 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
     return alkuperainenUpdate.apply(this, args);
   };
   const puraSyote = () => {
+    if (kosketusLaite) kotelo.removeEventListener('touchmove', touchNayte);
+    globalThis.removeEventListener?.(VEDON_SEURANTA_TAPAHTUMA, seurantaVaihtui);
     if (ohjaimet.update?.name === 'pallonSyoteUpdate') ohjaimet.update = alkuperainenUpdate;
     kokovahti?.disconnect();
   };
