@@ -9,6 +9,9 @@ import {
   VEDON_SEURANNAN_TAVAT, asetaVedonSeuranta, kosketuslaite, mittauslippuPaalla, vedonSeuranta,
 } from './vedon-seuranta.js';
 import {
+  TARKKUUDET, TARKKUUKSIEN_NIMET, asetaTarkkuusLiikkeessa, tarkkuusLiikkeessa,
+} from './tarkkuus-asetus.js';
+import {
   VANHA_KARTTA_KAYTOSSA,
   asennaValikonSulkuvartija,
   asetaKehittajaMaailma, asetaKehittajaTila, asetaLautaValinta,
@@ -144,7 +147,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-09-21.2117';
+const APP_VERSION = '2026-09-21.2118';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -691,6 +694,76 @@ if (karttaValikko) {
   rivi.addEventListener('click', () => { asetaLiike(!liikePaalla()); nayta(); });
   nayta();
   karttaValikko.appendChild(rivi);
+  /*
+   * TARKKUUS LIIKKEESSÄ (omistaja 22.9.2026 Fablen kautta, sulavuus-
+   * katsauksen kohta 5; js/tarkkuus-asetus.js): kolme radioriviä samassa
+   * riviasussa. terävä = dpr 3 + MSAA (oletus), tasainen = dpr 2
+   * liikkeessä ja 3 levossa (vaikuttaa heti), kokeellinen = dpr 3 ilman
+   * MSAA:ta — antialias on kontekstin luontiparametri, joten vihjerivi
+   * kertoo "tulee voimaan seuraavassa latauksessa".
+   */
+  /*
+   * RIVIT OSASTON TASOLLE, EIVÄT KYTKINLISTAN SISÄÄN. Sisäkkäinen
+   * .kertoja-valikko peri listan oman sisennyksen, ja tarkkuusrivit
+   * jäivät 15 px muita kapeammiksi — samassa valikossa kahta leveyttä
+   * ei ole. Lisäys menee siis Kartta-kotelon lapseksi heti kytkinlistan
+   * jälkeen, Vedon seurannan (index.html) eteen.
+   */
+  const koteloKartta = karttaValikko.parentElement ?? karttaValikko;
+  let edellinen = karttaValikko;
+  const lisaaOsastoon = (solmu) => {
+    koteloKartta.insertBefore(solmu, edellinen.nextSibling);
+    edellinen = solmu;
+  };
+  const otsikko = document.createElement('p');
+  otsikko.className = 'valikko-alaotsikko';
+  otsikko.textContent = 'Tarkkuus liikkeessä';
+  lisaaOsastoon(otsikko);
+  const ryhma = document.createElement('div');
+  ryhma.className = 'kertoja-valikko tarkkuus-valikko';
+  ryhma.setAttribute('role', 'radiogroup');
+  ryhma.setAttribute('aria-label', 'Tarkkuus liikkeessä');
+  const vihje = document.createElement('p');
+  vihje.className = 'lauta-vihje tarkkuus-vihje';
+  vihje.hidden = true;
+  const IKONIT = {
+    terava: '<circle cx="12" cy="12" r="7"/><path d="M12 5v14M5 12h14"/>',
+    tasainen: '<path d="M4 15.5c2.5-2.5 5-2.5 7.5 0s5 2.5 7.5 0"/><circle cx="12" cy="8" r="3"/>',
+    kokeellinen: '<path d="M9 4h6M10 4v6l-5 8a1 1 0 0 0 .9 1.5h12.2A1 1 0 0 0 19 18l-5-8V4"/>',
+  };
+  const naytaTarkkuus = () => {
+    const nyt = tarkkuusLiikkeessa();
+    for (const r of ryhma.querySelectorAll('button')) {
+      const valittu = r.dataset.tarkkuus === nyt;
+      r.classList.toggle('valittu', valittu);
+      r.setAttribute('aria-checked', valittu ? 'true' : 'false');
+      r.querySelector('.aanikytkin-tila').textContent = valittu ? 'valittu' : 'vaihda';
+    }
+  };
+  for (const avain of TARKKUUDET) {
+    const tiedot = TARKKUUKSIEN_NIMET[avain];
+    const r = document.createElement('button');
+    r.type = 'button';
+    r.className = 'aanikytkin';
+    r.dataset.tarkkuus = avain;
+    r.setAttribute('role', 'radio');
+    r.title = tiedot.seloste;
+    r.setAttribute('aria-label', `${tiedot.nimi} — ${tiedot.seloste}`);
+    r.innerHTML = `<span class="viiva-ikoni">${svg(IKONIT[avain])}</span>`
+      + `<span class="aanikytkin-nimi">${tiedot.nimi}</span>`
+      + '<span class="aanikytkin-tila"></span>';
+    r.addEventListener('click', () => {
+      if (tarkkuusLiikkeessa() === avain) return;
+      const lataus = asetaTarkkuusLiikkeessa(avain);
+      naytaTarkkuus();
+      vihje.textContent = lataus ? 'Reunanpehmennys vaihtuu seuraavassa latauksessa.' : '';
+      vihje.hidden = !lataus;
+    });
+    ryhma.appendChild(r);
+  }
+  naytaTarkkuus();
+  lisaaOsastoon(ryhma);
+  lisaaOsastoon(vihje);
 }
 
 /*

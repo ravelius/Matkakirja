@@ -706,10 +706,15 @@ button, .brand, .turn-pill, .fact-card h2 {
 .lauta-vihje[hidden] { display: none; }
 
 /*
- * VEDON SEURANNAN ALAOTSIKKO (omistaja 22.9.2026). Kartta-osastossa on
- * nyt kaksi asiaa: kytkin ja viiden rivin valinta. Alaotsikko erottaa
- * ne toisistaan ilman uutta osastoa — se on osaston otsikkoa pienempi
- * ja vaimeampi, jottei valikkoon tule kahta samanarvoista otsikkoa.
+ * KARTTA-OSASTON ALAOTSIKKO (omistaja 22.9.2026). Osastossa on nyt
+ * kytkin ja kaksi rivivalintaa — Tarkkuus liikkeessä ja Vedon seuranta.
+ * Alaotsikko erottaa ne toisistaan ilman uutta osastoa: se on osaston
+ * otsikkoa pienempi ja vaimeampi, jottei valikkoon tule kahta
+ * samanarvoista otsikkoa.
+ *
+ * YKSI NIMI, EI KAHTA. Tarkkuus liikkeessä toi mukanaan oman
+ * `.valikko-aliotsikko`-luokkansa; kaksi lähes samannimistä luokkaa
+ * samalle asialle on yksi liikaa, joten molemmat käyttävät tätä.
  */
 .valikko-alaotsikko {
   margin: 0.5rem 0 0.3rem;

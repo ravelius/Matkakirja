@@ -50,6 +50,9 @@ import { JAAVARI, MERIVARI, kuunteleReliefiLinssi, reliefiKaytossa } from './rel
 import {
   KOSKETUKSEN_VAPAUTUS, laattakerrosPaalla, laatuAinaPaalla, nollaaKosketusOhjaimet,
 } from './ui-apurit.js';
+import {
+  TARKKUUS_TAPAHTUMA, antialiasTarkkuudella, pikselisuhdeTarkkuudella, tarkkuusLiikkeessa,
+} from './tarkkuus-asetus.js';
 /*
  * Laattakerros ja sen puhtaat apurit (erät E0 ja E1, suunnitelma
  * docs/moduulit/pallon-liike-taydella-tarkkuudella.md luvut 4 ja 6)
@@ -884,7 +887,13 @@ export function rakennaPallo(Globe, kotelo, laatat) {
   // Pelkkä pinnoite: ei pisteitä, nimiä, kaaria eikä renkaita (omistaja
   // 4.9.2026: "älä lisää mitään sen päälle"). Pelilaudalla PELIN merkit
   // lisätään lauta.js:ssä (Raamattu 5.9.2026: kartta laatoissa, peli päällä).
-  const pallo = Globe()(kotelo)
+  /*
+   * REUNANPEHMENNYS PELAAJAN ASETUKSESTA (js/tarkkuus-asetus.js,
+   * "Tarkkuus liikkeessä" → kokeellinen = ei MSAA:ta). WebGL-kontekstin
+   * antialias-parametri luetaan kerran tässä; asetuksen vaihto tulee
+   * voimaan seuraavassa latauksessa.
+   */
+  const pallo = Globe({ rendererConfig: { antialias: antialiasTarkkuudella(tarkkuusLiikkeessa()) } })(kotelo)
     .width(kotelo.clientWidth).height(kotelo.clientHeight)
     .backgroundColor('rgba(0,0,0,0)')
     .showAtmosphere(true).atmosphereColor('#d9a13b').atmosphereAltitude(0.18);
@@ -1514,6 +1523,8 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
     lauta: PALLO_LAUTA, naparaja: NAPAKANNEN_LEVEYS,
     // Esilataus levossa palvelutyöntekijän koriin (js/laattaesilataus.js).
     esilataa: ikkuna.navigator?.serviceWorker ? (osoitteet) => { void lahetaEsilataus(osoitteet, ikkuna.navigator, null); } : null,
+    // Tason valinta ja laatan koko levon suhteella (ks. PIKSELISUHDE KERROKSEN KANSSA).
+    lepoSuhde: Math.min(ikkuna.devicePixelRatio || 1, LAATU_PIKSELISUHDE_LEPO),
   }) : null;
   if (kerros) lepokerrokset.set(pallo, kerros);
   /*
@@ -1595,10 +1606,26 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
    * perustelu ja mittaus ylempänä (fov on pystysuunnan avauskulma).
    */
   const piirtokorkeus = () => kotelo.clientHeight * Math.min(dpr, LAATU_PIKSELISUHDE_LEPO);
+  /*
+   * PIKSELISUHDE KERROKSEN KANSSA (js/tarkkuus-asetus.js): terävä ja
+   * kokeellinen pitävät levon katon (3) myös liikkeessä; tasainen pudottaa
+   * liikkeessä kattoon 2 ja palauttaa 3:n levossa — yksi puskurinvaihto
+   * eleen alussa (LAATU_LIIKEVIIVE_MS:n jälkeen) ja lopussa
+   * (LAATU_LEPOVIIVE_MS). Laattakerros valitsee tasonsa ja kokoaa
+   * laattansa aina LEVON suhteella (lepoSuhde), joten liikkeen alempi
+   * puskuri ei vaihda laattatasoa eikä jätä sumeita laattoja levoon.
+   */
+  const lepoSuhde = () => Math.min(dpr, LAATU_PIKSELISUHDE_LEPO);
+  const tahdistaPikselisuhde = (lepoon) => {
+    if (!renderer) return;
+    const suhde = pikselisuhdeTarkkuudella(tarkkuusLiikkeessa(ikkuna), dpr, lepoon || aina());
+    if (renderer.getPixelRatio?.() !== suhde) renderer.setPixelRatio(suhde);
+  };
   const asetaTila = (lepoon) => {
     lepo = lepoon;
-    // Kerros päällä: kynnykset ja pikselisuhde jäävät asennuksen arvoihin.
-    if (kerrosKaytossa) return;
+    // Kerros päällä: kynnykset jäävät asennuksen arvoihin; pikselisuhde
+    // seuraa pelaajan asetusta (tahdistaPikselisuhde).
+    if (kerrosKaytossa) { tahdistaPikselisuhde(lepoon); return; }
     if (aina()) lepoon = true;
     const nakyma = kameranNakyma();
     kynnysLat = Number.isFinite(nakyma?.lat) ? nakyma.lat : 0;
@@ -1788,10 +1815,10 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
    * Pikselisuhde kerran asennuksessa, kun kerros on päällä: puskurin koon
    * vaihto on raskas kehys eikä kuvan tarkkuus saa vaihtua liikkeessä.
    */
-  if (kerros && renderer) {
-    const suhde = Math.min(dpr, LAATU_PIKSELISUHDE_LEPO);
-    if (renderer.getPixelRatio?.() !== suhde) renderer.setPixelRatio(suhde);
-  }
+  if (kerros && renderer) tahdistaPikselisuhde(true);
+  // Asetuksen vaihto valikosta vaikuttaa heti (terävä ↔ tasainen).
+  const tarkkuusKuuntelija = () => { if (kerrosKaytossa) tahdistaPikselisuhde(lepo); };
+  ikkuna.addEventListener?.(TARKKUUS_TAPAHTUMA, tarkkuusKuuntelija);
   /*
    * PAKOTUS VAIKUTTAA HETI (pakotaPallonLaatu): kynnykset ja
    * pikselisuhde asetetaan uudestaan samasta liike/lepo-tilasta, ja
@@ -1810,6 +1837,7 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
   kamera = pallo.camera?.() ?? null;
   if (kamera) lepoAjastin = ikkuna.setTimeout(lepoon, LAATU_LEPOVIIVE_MS);
   return () => {
+    ikkuna.removeEventListener?.(TARKKUUS_TAPAHTUMA, tarkkuusKuuntelija);
     laatuKuuntelijat.delete(pakotus);
     kehyspurku();
     ikkuna.clearTimeout(lepoAjastin);
