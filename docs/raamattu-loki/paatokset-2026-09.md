@@ -1463,3 +1463,7 @@ Pelikoodari, haara pelikoodari-alpha-dc, 3982 testiä 0 punaista. Seuraus: jos a
 ## LAITETESTAAJA NOLLATTU (73 % → UUSI SESSIO) KAAVALLA ILMAN OMISTAJAA; LUOVUTUS viesti-laitetestaaja-luovutus-20260922-ilta.md; ENSIMMAINEN TEHTAVA PIIRTOKOE-TAULUKKO MAC-SAFARILLA v2125 (22.9.2026 klo 20.33)
 
 Postivahti ilmoitti 73 % klo 20.27; luovutus pushattu haaraan laitetestaaja (8f8fa1bfa) klo 20.31; RC pois, clear_session self, aloitusviesti, RC päälle klo 20.34. Luovutuksen mukaan Piirtokoe-data on jo osin kerätty ja kehysmäärä-anomalia pitää selvittää ennen raporttia.
+
+## v2126 MAINISSA (#2848: alpha0 JA vahemmandc); PR #2849 alpha0 AIDOKSI (PELI LUO KANKAAN JA WEBGL2-KONTEKSTIN ITSE, getContextAttributes().alpha EPATOSI, VARTIJA savuke-piirtokokeet.mjs 7/7); LAITETESTAAJA: ?koe=profiili VARASTAA KEHYSPROFIILI-SINGLETONIN 3 s VALEIN → MITTAUS ILMAN profiili-LIPPUA (22.9.2026 klo 20.42)
+
+Pelikoodari: globe.gl antaa kontekstin läpi (Object.assign({antialias, alpha}, config)), three r185 käyttää annettua kontekstia; savuke P1–P4 läpi, vahemmandc dc 22 → 18, 3983 testiä 0 punaista. Laitetestaaja: profiilinaytto.js:n rullaava ruutunäyttö ottaa saman __kehysprofiili-singletonin joka 3 s, joten neljä koetta saivat saman ~47 kehyksen otoksen; mittaus tehdään ilman profiili-lippua (kehysprofiili asentuu ilman sitäkin). Pelikoodarille korjattavaksi: ruutunäyttö ja mittauspalvelin eivät saa jakaa singletonia. Mittaus alkaa kun #2849:n CI on ohi; Julkaisija odottaa #2849 (v2127) ja #2846 (v2128) mergeillä mittauksen loppua.
