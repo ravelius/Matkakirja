@@ -4,6 +4,7 @@
  *   node tools/tee-maakuntavektorit.mjs --ne=<ne_10m_admin_1_states_provinces.geojson>
  *        [--ulos=<kansio>] [--maat=CHE,DEU,…] [--versio=2026-09-22a]
  *        [--harvennus=0.004] [--maxsarma=1.5] [--nykyalueet=<kansio>] [--kuiva]
+ *        [--taso=admin1|admin0]   admin0 = maapolygonit (ne_10m_admin_0_countries)
  *
  * OMISTAJAN TOIVE (maakuntalinssi, Karttasepän luovutus 21.9.2026 ilta,
  * kohta 4): karttatyökaluun nykyisten maakuntien VEKTORITASO — admin-1-
@@ -95,6 +96,20 @@ const RYHMA = {
   ITA: (p) => p.region, ESP: (p) => p.region, FRA: (p) => p.region, GBR: (p) => p.geonunit,
 };
 export const ryhmanTunnus = (iso, p) => (RYHMA[iso]?.(p) || p.name || p.adm1_code);
+
+/*
+ * ADMIN-0 SAMASTA PUTKESTA (Fable 22.9.2026: kerma tehdään GPU-
+ * peittotasona, Pelikoodari tarvitsee maapolygonit kolmioituna per maa).
+ * `--taso=admin0` lukee ne_10m_admin_0_countries: yksi alue per maa
+ * (tunnus = ADM0_A3, nimi = NAME), muuten sama kolmiointi, puolitus ja
+ * tiedostomuoto. NE:n admin-0-kentät ovat ISOLLA (ADM0_A3, NAME), admin-1:n
+ * pienellä — `piirteenIso` lukee kummankin. HUOM: admin-0:n rannikko ei
+ * ole sama viiva kuin laattoihin poltettu GSHHG-ranta (mitattu ocean-
+ * aineistoa vastaan mediaani 72 m, maksimit yli 700 m, js/pallovektorit.js
+ * osio KOROSTUSKEHÄ) — peittotason reuna on sovitettava sen mukaan.
+ */
+export const piirteenIso = (p) => p.adm0_a3 ?? p.ADM0_A3 ?? null;
+export const maapolygonienKansio = (versio) => `julisteet/pallo/maapolygonit/${versio}/`;
 
 /* ---------------- geometria ---------------------------------------- */
 
@@ -427,10 +442,12 @@ export function varita(naapurit) {
 export function kolmioiMaa(iso, piirteet, asetukset = {}) {
   const harvennus = asetukset.harvennus ?? HARVENNUS;
   const maxsarma = asetukset.maxsarma ?? MAXSARMA;
+  const admin0 = asetukset.taso === 'admin0';
   const ryhmat = new Map();
   for (const f of piirteet) {
-    const tunnus = ryhmanTunnus(iso, f.properties);
-    if (!ryhmat.has(tunnus)) ryhmat.set(tunnus, { tunnus, nimi: RYHMA[iso] ? tunnus : f.properties.name, polygonit: [] });
+    const tunnus = admin0 ? iso : ryhmanTunnus(iso, f.properties);
+    const nimi = admin0 ? (f.properties.NAME ?? f.properties.name ?? iso) : (RYHMA[iso] ? tunnus : f.properties.name);
+    if (!ryhmat.has(tunnus)) ryhmat.set(tunnus, { tunnus, nimi, polygonit: [] });
     const polys = f.geometry.type === 'Polygon' ? [f.geometry.coordinates] : f.geometry.coordinates;
     ryhmat.get(tunnus).polygonit.push(...polys);
   }
@@ -606,13 +623,16 @@ export function teeMaakuntavektorit(a) {
   const ne = JSON.parse(readFileSync(a.ne, 'utf8'));
   const maittain = new Map();
   for (const f of ne.features) {
-    const iso = f.properties.adm0_a3;
+    const iso = piirteenIso(f.properties);
+    if (!iso) continue;
     if (a.maat ? !a.maat.includes(iso) : OHITA.has(iso)) continue;
     if (!maittain.has(iso)) maittain.set(iso, []);
     maittain.get(iso).push(f);
   }
+  const taso = a.taso === 'admin0' ? 'admin0' : 'admin1';
   const luettelo = {
-    versio: a.versio, muoto: 'MKV1', lahde: 'Natural Earth 10m admin_1_states_provinces (public domain)',
+    versio: a.versio, muoto: 'MKV1', taso,
+    lahde: taso === 'admin0' ? 'Natural Earth 10m admin_0_countries (public domain)' : 'Natural Earth 10m admin_1_states_provinces (public domain)',
     harvennus: a.harvennus ?? HARVENNUS, maxsarma: a.maxsarma ?? MAXSARMA, maat: {},
   };
   const taulukko = [];
@@ -620,7 +640,7 @@ export function teeMaakuntavektorit(a) {
   if (!a.kuiva) mkdirSync(a.ulos, { recursive: true });
   for (const [iso, piirteet] of [...maittain.entries()].sort()) {
     const alku = Date.now();
-    const maa = kolmioiMaa(iso, piirteet, { harvennus: luettelo.harvennus, maxsarma: luettelo.maxsarma, nimet: nimet.get(iso) ?? null });
+    const maa = kolmioiMaa(iso, piirteet, { harvennus: luettelo.harvennus, maxsarma: luettelo.maxsarma, nimet: nimet.get(iso) ?? null, taso });
     const puskuri = koodaaMaa(maa);
     const gz = gzipSync(puskuri).length;
     const alueet = maa.alueet.map((x) => ({
@@ -642,7 +662,7 @@ export function teeMaakuntavektorit(a) {
   if (!a.kuiva) {
     writeFileSync(join(a.ulos, 'luettelo.json'), JSON.stringify(luettelo));
     writeFileSync(join(a.ulos, 'mitat.json'), JSON.stringify(taulukko, null, 1));
-    writeFileSync(join(a.ulos, 'kansio.txt'), `${maakuntienKansio(a.versio)}\n`);
+    writeFileSync(join(a.ulos, 'kansio.txt'), `${(taso === 'admin0' ? maapolygonienKansio : maakuntienKansio)(a.versio)}\n`);
   }
   return { luettelo, taulukko };
 }
@@ -667,9 +687,10 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
     harvennus: Number(arg('harvennus', HARVENNUS)),
     maxsarma: Number(arg('maxsarma', MAXSARMA)),
     nykyalueet: arg('nykyalueet', null),
+    taso: arg('taso', 'admin1'),
     kuiva: process.argv.includes('--kuiva'),
     kerro: (rivi) => console.log(rivi),
   });
-  console.log(`versio ${VERSIO} → ${maakuntienKansio(VERSIO)}`);
+  console.log(`versio ${VERSIO} → ${(arg('taso', 'admin1') === 'admin0' ? maapolygonienKansio : maakuntienKansio)(VERSIO)}`);
   console.table(taulukko);
 }
