@@ -72,3 +72,18 @@ Euroopan kaupunkia katettu (vain Eurooppa). Sitten: Codex-toimitusten otostarkis
 2. Sulavuus ennen kaikkea: odota Pelikoodarin kerma-shader ja tasaisuusmittari, Karttasepän
    esilataus, Laitetestaajan xctrace; kysy omistajalta STP-asennus ja tuntumatesti.
 3. Kirjaa kaikki lokiin; kortit vain aidoille päätöksille.
+
+## Lisäys klo 12.25 (juuri ennen nollausta)
+- Safari Technology Preview asennettu; sen kehittäjäominaisuudet kytketty GUI-skriptillä.
+  Sekä Safari että STP näyttävät puhelimelle "Connecting…" → vika on puhelimen puolella
+  (lukitus, Web Inspector -kytkin, Developer Mode tai luottamus). Skripti tallessa:
+  tools/mac/safari-kehitys-iphone.applescript. Kun puhelin näkyy, jatko: Develop →
+  Samin iPhone → sivu → Web Inspector → Timelines → nauhoitus → Export → Työpöytä →
+  Laitetestaaja analysoi.
+- Laitetestaaja: xctrace ei toimi ilman Developer Tools -lupaa (Järjestelmäasetukset →
+  Tietosuoja ja suojaus → Kehittäjätyökalut → Claude/Terminal) — pyydä omistajalta.
+- Julkaisija 73 %: luovutus pyydetty (viesti-julkaisija-luovutus-20260922.md); uusi Fable
+  ajaa nollauskaavan (RC pois → clear self → aloitusviesti → RC päälle) ja siirtää
+  worktreen jos tarpeen (jo Matkakirja-julkaisija). Aloitusviestiin: merge vihreänä ilman
+  --admin, ei worktree-poistoja, mittausikkunat, jono: kohtaamiset c2/c3/c4 (sama tiedosto),
+  hehkupiste, linssikatalogi, maakuntien kuvavienti R2, Codex-PR:t.
