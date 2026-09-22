@@ -1611,3 +1611,7 @@ Klo 00.02 (23.9.). Pelikoodarille: liikkeen tasaisuusmittarit ensin, sitten A/B 
 ## KARTTASEPPA 70 % → LUOVUTUS JA NOLLAUS (viesti-karttaseppa-luovutus-20260923.md) (23.9.2026 klo 00.02)
 
 Postivahti klo 00.04. Karttasepän illan erät: #2868 nostopalstat (v2136), #2871 lehtipalstat (jonossa v2137).
+
+## KIRJASTOSELVITYS (OMISTAJAN KYSYMYS): globe.gl 2.46.2 (22.8.2026) ON UUSIN, SISALLA three r185; three r186 UUSIN, EI SAFARI/iOS/KOSKETUS-KORJAUKSIA r183–r186; WEBGPU (SAFARI 26, three WebGPURenderer r171+) AINOA UUSI REITTI MUTTA globe.gl EI TUE JA ILLAN LOYDOS OSOITTAA SYOTEPUTKEEN; MAPLIBRE GL JS 5 (PALLONAKYMA) iOS-LAAHAUS AVOIN ISSUE → RATKAISU OMAAN SYOTEKOODIIN (23.9.2026 klo 00.05)
+
+Klo 00.10 (23.9.). Lähteet: npm globe.gl/three; github mrdoob/three.js/releases; utsubo.com threejs-2026; appdevelopermagazine webgpu-in-ios-26; maplibre globe-view; visgl/react-map-gl#1529.
