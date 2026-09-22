@@ -311,6 +311,66 @@ export function karttavalotKaikki(paalla) {
   karttavalotSovita();
 }
 
+/*
+ * ── YKSI KERRALLAAN (omistajan päätös 22.9.2026) ───────────────────
+ *
+ * Karttaselitteen monivalinta poistui: valikossa on nyt PEUKALOLEVY
+ * (js/karttaselite-levy.js), joka osoittaa aina tasan yhteen riviin.
+ * Kaksi funktiota riittää sille koko koneiston rajapinnaksi — kolmas,
+ * karttavaloAseta, jää ennalleen, koska sitä voi yhä käyttää se
+ * koodi, joka ei tunne valikon uutta rakennetta lainkaan.
+ *
+ * TILA ON EDELLEEN SAMA JOUKKO (KARTTAVALO_TALLE) JA SAMAT
+ * BODY-LUOKAT: karttavaloValitse kirjoittaa vain sen, montako aihetta
+ * joukossa on — kartan valot eivät tiedä, tuliko sytytys vanhasta
+ * OFF/ALL-parista vai uudesta levystä.
+ */
+
+/**
+ * Uusi valikko kirjoittaa tilan tällä yhdellä kutsulla: `valinta` on
+ * joko yksittäinen aihe, `'kaikki'` (sama kuin vanha ALL) tai `'ei'`
+ * (sama kuin vanha OFF). Tuntematon arvo ei tee mitään — kutsujan on
+ * itse tiedettävä aiheensa (KARTTAVALO_TYYPIT).
+ */
+export function karttavaloValitse(valinta) {
+  if (valinta === 'kaikki') { karttavalotKaikki(true); return; }
+  if (valinta === 'ei') { karttavalotKaikki(false); return; }
+  if (!KARTTAVALO_TYYPIT.has(valinta)) return;
+  const palaa = karttavalotLue();
+  palaa.clear();
+  palaa.add(valinta);
+  karttavalotTallenna();
+  karttavalotSovita();
+}
+
+/**
+ * Nykyinen valinta uuden mallin sanoin — peukalolevyn ainoa totuus.
+ *
+ * VANHA MONIVALINTATILA NORMALISOIDAAN: laitteella voi vielä olla
+ * useampi valo päällä ajalta ennen 22.9.2026 (tai käyttäjä on ehtinyt
+ * kutsua karttavaloAsetaa suoraan). Levy ei voi osoittaa moneen
+ * riviin yhtä aikaa, joten tilanne puretaan heti ensimmäisen sytkeen
+ * mukaiseksi ja KIRJOITETAAN talteen — muuten sama ristiriita
+ * palaisi joka päivityksellä.
+ *
+ * `jarjestys` on valinnainen: kutsuja (valikko) voi antaa oman
+ * näyttöjärjestyksensä (js/karttaselite.js KARTTASELITE_JARJESTYS),
+ * jotta "ensimmäinen" tarkoittaa samaa kuin mitä pelaaja NÄKEE
+ * ylimpänä. Oletus on tämän tiedoston oma KARTTAVALO_AIHEET-järjestys,
+ * jotta funktio on kutsuttavissa ilman argumenttia — koneisto ei
+ * tarvitse valikkoa toimiakseen, eikä tästä tiedostosta ole syytä
+ * tuoda karttaselite.js:ää (se toisi riippuvuuden takaisinpäin).
+ */
+export function karttavaloValinta(jarjestys = KARTTAVALO_AIHEET.map((r) => r.aihe)) {
+  const palaa = karttavalotLue();
+  if (palaa.size === 0) return 'ei';
+  if (palaa.size === KARTTAVALO_AIHEET.length) return 'kaikki';
+  if (palaa.size === 1) return [...palaa][0];
+  const uusi = jarjestys.find((aihe) => palaa.has(aihe)) ?? [...palaa][0];
+  karttavaloValitse(uusi);
+  return uusi;
+}
+
 /* ==================== LASKURIT ==================== */
 
 /**
@@ -330,6 +390,17 @@ export function karttavalotKaikki(paalla) {
  * KIERTOKOHDAT EIVÄT TUPLAA LUKUA. Kiertävällä laudalla sama merkki
  * piirretään kahteen kohtaan (ui.kiertoKohdat), joten laskuri laskee
  * ERI avaimia eikä solmuja.
+ *
+ * POIKKEUS 22.9.2026: KADONNEET IHMEET (aihe 'ihmeet') EIVÄT NOUDATA
+ * YLLÄ OLEVAA LUPAUSTA. Pallolaudan oma laskuri (ui.karttavaloLaskuri,
+ * js/pallolauta/nostot.js laskurikoonti) lisää tähän aiheeseen myös ne
+ * maan kadonneet ihmeet, joilla EI ole täplää ruudulla juuri nyt —
+ * tyypillisesti siksi, että kohde on siirretty kaupunkilehden
+ * kohdekartalle (js/fokuskohteet.js karsiKaupunkikartanNostot) eikä
+ * siksi enää koskaan piirry pääkartan merkiksi. Omistajan päätös:
+ * ihme on silti MAASSA, joten rivin luku on maan koko ihmemäärä, ei
+ * vain kartalla juuri nyt näkyvä osajoukko. Muut kahdeksan aihetta
+ * noudattavat yhä alkuperäistä sääntöä sellaisenaan.
  */
 export function karttavalotLaskurit(ui) {
   const luvut = new Map(KARTTAVALO_AIHEET.map(({ aihe }) => [aihe, 0]));

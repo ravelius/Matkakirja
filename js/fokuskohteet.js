@@ -1304,6 +1304,29 @@ export function maanKohdetiedot(ui, iso) {
   return tiedot;
 }
 
+/**
+ * MAAN KAIKKI KADONNEET IHMEET — riippumatta siitä, onko kohteella
+ * paikkaa pääkartalla vai onko se kaupunkilehden kohdekartalle
+ * siirretty (js/fokuskohteet.js karsiKaupunkikartanNostot pudottaa
+ * jälkimmäiset pääkartan riveiltä, mutta ne ovat silti MAASSA).
+ *
+ * Omistajan bugiraportti 22.9.2026: Ranskan selitteen "Kadonneet
+ * ihmeet" -rivi näytti 0, vaikka maassa on kolme kadonnutta ihmettä
+ * (Tuileries, Bastilji, Saint-Cloud) — kaksi niistä asuu Pariisin
+ * kaupunkikartalla eikä ollut koskaan pääkartan osumissa, josta vanha
+ * laskuri luki lukunsa (js/pallolauta/nostot.js laskurikoonti).
+ *
+ * SÄÄNTÖ ON SAMA KUIN KARTAN MERKILLÄ (kohteenKategoria) — ei
+ * kopioitu ehtoa, jottei tämä funktio voi eriytyä kartan merkistä.
+ *
+ * @param {Map<string,object>|Iterable<object>} kohdetiedot maanKohdetiedot(ui, iso).
+ * @returns {object[]} kadonneet ihmekohteet, joilla on `id`.
+ */
+export function maanKadonneetIhmeet(kohdetiedot) {
+  const kohteet = kohdetiedot instanceof Map ? kohdetiedot.values() : (kohdetiedot ?? []);
+  return [...kohteet].filter((kohde) => kohde?.id && kohteenKategoria(kohde) === 'ihme');
+}
+
 /*
  * KOHTEEN OMA MAA (Sonnet 1, kierros 16b, 20.9.2026). Kortin arvonimi
  * luettiin pelaajan sijainnista, joten Liettuan kortissa luki
@@ -1505,8 +1528,23 @@ const KOHDE_TYYPPISYMBOLIT = {
   kaupunki: 'kaupunki',
 };
 
-/** Kohteen TARKKA kategoria (neljätoista) — ks. valintajärjestys yllä. */
-function kohteenKategoria(kohde) {
+/**
+ * Kohteen TARKKA kategoria (neljätoista) — ks. valintajärjestys yllä.
+ *
+ * EXPORTATTU 22.9.2026 (Ranskan "Kadonneet ihmeet" -bugi): tämä on
+ * AINOA paikka, joka tuntee ehdon `ihme.kadonnut && ihme.osoite`.
+ * Kaikkien muiden passien — myös kaupunkilehden kohdekartalle
+ * siirrettyjen kohteiden aiheen (js/pallolauta/nostot.js "siirretyt")
+ * ja maan kadonneiden ihmeiden lukumäärän (maanKadonneetIhmeet alla) —
+ * on kysyttävä TÄTÄ funktiota eikä koottava ehtoa uudelleen
+ * `kohde.symboli ?? kohde.tyyppi`-tyyppisellä oikotiellä: se ohittaa
+ * ihme-lipun, koska ihme ei ole kategoria vaan kohteen KENTTÄ, ja
+ * silloin kadonnut ihme luokittuu vahingossa historiaksi tai joksikin
+ * muuksi (juuri se, mikä pudotti Tuileriesin ja Bastiljin selitteen
+ * "Kadonneet ihmeet" -laskurista, kun ne siirtyivät Pariisin
+ * kaupunkikartalle).
+ */
+export function kohteenKategoria(kohde) {
   if (kohde?.ihme?.kadonnut && kohde.ihme.osoite) return 'ihme';
   if (NOSTOSYM_TYYPIT.has(kohde?.symboli)) return kohde.symboli;
   if (kohteenKierrokset(kohde).length) return 'silma';
