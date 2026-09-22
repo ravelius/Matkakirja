@@ -274,6 +274,7 @@ export const FOKUSKOHTEET_BGR = [
     id: 'musala',
     nimi: 'Musala',
     tyyppi: 'vuori',
+    taso: 1,
     kysymykset: [
       'Miksi juuri huipulle rakennettiin tutkimusasema?',
       'Millainen sää Musalalla on kesällä?',
@@ -308,6 +309,7 @@ export const FOKUSKOHTEET_BGR = [
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'kulttuuri',
     tyyppi: 'kulttuuri',
+    taso: 1,
     kysymykset: [
       'Miten luostari selvisi osmanivallan läpi?',
       'Mitä munkit tekevät luostarissa nykyään?',
@@ -639,6 +641,7 @@ export const FOKUSKOHTEET_BGR = [
     // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
     nimio: 'Jogurtti',
     tyyppi: 'ruoka',
+    taso: 1,
     symboli: 'ruoka',
     kysymykset: [
       'Mitä bakteeri tekee maidolle?',
@@ -1002,6 +1005,7 @@ export const FOKUSKOHTEET_BGR = [
     ],
     nimi: 'Nesebar',
     tyyppi: 'kaupunki',
+    taso: 1,
     kysymykset: [
       'Mikä doorilainen siirtokunta oli?',
       'Miksi kirkkoja on niin monta?',
