@@ -967,3 +967,7 @@ Fable 22.9.2026 klo 10.50: C3 (docs/raportit/kohtaamiset-era-c3-20260922.md, sis
 ## KOHTAAMISET RAJATTU EUROOPPAAN KUNNES MUUT LAUDAT VALMISTUVAT (22.9.2026 klo 09.53)
 
 Fable 22.9.2026 klo 11.00: kohtaamisten erät C4–C7 vain Euroopan kaupungeille (inventaarion 41); New York, Tokio, Dubai ym. vasta kun mantereen lauta on valmis.
+
+## NOSTOTASOT KOKO EUROOPPAAN TUOTANNOSSA (v2082, 36 MAATA); WEB INSPECTOR EI YHDISTA iOS 27 -LAITTEESEEN SAFARI 26.6:LLA (22.9.2026 klo 10.02)
+
+Julkaisija 22.9.2026 klo 11.20: 30 maan nostotasoerä mainissa (v2082), kaikkiaan 36 Euroopan maata FRA/DEU/ITA/ESP mukaan lukien (SRB ilman dataa). Jonossa kohtaamiset c2 ja c3 (sama tiedosto kuin c1, konfliktinratkaisu rivit säilyttäen) ja maakuntien kuvien vienti R2:een. Fable: iPhone (iOS 27.0) USB:ssä ja parina, Käytettävyys-lupa annettu ja Safarin Kehitys-valikko ohjattavissa GUI-skriptillä, mutta Web Inspector ei yhdistä (Appien ja laitteiden tarkastus ei listaa laitetta; todennäköisesti Safari 26.6.2 vanhempi kuin iOS 27) → ehdotettu Safari Technology Preview; Laitetestaaja jatkaa xctrace-simulaattoriprofiililla.
