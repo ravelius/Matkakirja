@@ -1543,3 +1543,7 @@ Julkaisija klo 22.54; useita pinottujen PR:ien rebase-konflikteja ratkaistu, tes
 ## v2134 MAINISSA (#2865): ORVOT globe.gl-TICKERIT POIS; OMISTAJAN KYSYMYS NOSTOISTA: MAALEHDEN NOSTON KAKSIPALSTATAITTO (21.9.) EI OLE VANHA KAAVA VAAN VAIHE 2; ELAINTAKY JAA PINOKSI 21.9. RAJAUKSEN MUKAAN; OMISTAJAN EHDOTUS 'KUVA ENSIN ISONA, LISAA → KAHDEN PALSTAN MUOTO' = NYKYINEN fokusnosto-KAYTOS; SELVITETTAVANA AVAUTUIKO KORTTI SUORAAN VAIHEESEEN 2 (22.9.2026 klo 23.02)
 
 Julkaisija klo 23.05: testit 3990/0, #2859 suljettu korvattuna. Omistajan kaappaukset: eläintäky 'Valkoinen hevonen syntyy tummana' (js/packs/elaintakyt.js) ja maalehden nosto 'Hevonen vaihtaa väriä kasvaessaan' (maa-kategoriat, kuvasarja 1/2, kaksipalsta). Tarjottu: palstataiton laajennus eläintäkyihin ja muihin karttakortteihin; odottaa omistajan vastausta.
+
+## OMISTAJAN KIERROS v2133 (p4, 5 KAAPPAUSTA klo 23.01–23.02): 3/5 YHA dpr15-TILASSA (LATAUS PUUTTUI) → PATEVAT 7/7 EI HAIVYTYSTA (p95 59, >20 ms 32 %, TASO 7) JA 3/7 dpr15 (p95 28–47, >20 ms 16–30 %); PITKISSA VARATTU 4–8 ms · VAPAA 26–42 ms → GPU/KOMPOSIITTORI; dt-KERRANNAISET 25/42/58 ms = PARITTOMAT 8,3 ms:N KERRANNAISET → 120 Hz ESITYS; dpr15 EI POISTA PITKIA → EI TAYTTO (22.9.2026 klo 23.04)
+
+Laattavientejä 95–207 per 10 s vedossa (terävä), dc 54–111, häipyy 0 (7/7) / 7–20 (dpr15). Omistajalle: tilat 1, 2, 6 kuvattava uudestaan latauksen jälkeen. Pelikoodarille luvut ja neljä kysymystä + tilaus: tilan valinta lataa sivun automaattisesti kun lataus vaaditaan.
