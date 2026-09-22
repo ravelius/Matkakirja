@@ -40,10 +40,16 @@ test('main.js ei rakenna vedon seurannan eikä tarkkuuden rivejä', () => {
 
 test('aiempi tallennus nollataan: avaimet samat kuin moduuleissa', () => {
   assert.deepEqual([...POISTETUT_VALINTA_AVAIMET].sort(), [TARKKUUS_AVAIN, VEDON_SEURANTA_AVAIN].sort());
-  const muisti = new Map([[VEDON_SEURANTA_AVAIN, 'jousi'], [TARKKUUS_AVAIN, 'tasainen'], ['matkakirja-piirtokoe', 'dpr15']]);
-  const varasto = { getItem: (k) => muisti.get(k) ?? null, removeItem: (k) => muisti.delete(k) };
+  const muisti = new Map([[VEDON_SEURANTA_AVAIN, 'jousi'], [TARKKUUS_AVAIN, 'tasainen'], ['matkakirja-piirtokoe', 'eivienti']]);
+  const varasto = { getItem: (k) => muisti.get(k) ?? null, removeItem: (k) => muisti.delete(k), setItem: (k, v) => muisti.set(k, v) };
   assert.equal(unohdaPoistetutValinnat(varasto), 2);
-  assert.deepEqual([...muisti.keys()], ['matkakirja-piirtokoe'], 'Piirtokoe-valinta säilyy');
+  assert.deepEqual([...muisti.entries()], [['matkakirja-piirtokoe', 'eivienti']], 'valikossa oleva Piirtokoe säilyy');
   assert.equal(unohdaPoistetutValinnat(varasto), 0, 'toinen kerta ei tee mitään');
+  // Valikosta poistettu koe (dpr15, alpha0, vahemmandc; omistaja 22.9.2026 klo 23.08) → Normaali.
+  for (const poistettu of ['dpr15', 'alpha0', 'vahemmandc']) {
+    muisti.set('matkakirja-piirtokoe', poistettu);
+    assert.equal(unohdaPoistetutValinnat(varasto), 1);
+    assert.equal(muisti.get('matkakirja-piirtokoe'), 'normaali', poistettu);
+  }
   assert.equal(unohdaPoistetutValinnat(null), 0, 'ilman muistia ei kaadu');
 });

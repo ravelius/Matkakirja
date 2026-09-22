@@ -2,9 +2,9 @@
  * SAVUKE: PIIRTOKOKEEN VALINTA LATAA SIVUN (omistaja 22.9.2026 klo 23.05).
  * v2133-kierroksen kolme viidestä kaappauksesta mittasi vanhaa koetta, koska
  * sivua ei ladattu valinnan jälkeen. Tarkistaa oikeassa selaimessa:
- *   L1 valikosta "Pikselisuhde 1,5" → vihje "Ladataan…"
+ *   L1 valikosta "Ei tekstuurivientejä" → vihje "Ladataan…"
  *   L2 sivu latautuu itse (navigaatio tapahtuu viiveen jälkeen)
- *   L3 latauksen jälkeen overlayn ylin rivi "koe 3/7 Pikselisuhde 1,5" ilman
+ *   L3 latauksen jälkeen overlayn ylin rivi "koe 3/4 Ei tekstuurivientejä" ilman
  *      "seuraavassa latauksessa" — koe on voimassa
  *   L4 paluu samaan tilaan viiveen aikana perii latauksen
  *   L5 ei sivuvirheitä
@@ -71,7 +71,7 @@ const ylinRivi = (sivu, ehto = '') => sivu.waitForFunction((e) => {
 
 const avaaValikko = async (sivu) => {
   await sivu.evaluate(() => { const m = document.getElementById('paavalikko'); if (m?.hidden) document.getElementById('menu-btn')?.click(); });
-  await sivu.waitForSelector('#piirtokoe-valikko button[data-piirtokoe="dpr15"]', { state: 'visible', timeout: 10000 });
+  await sivu.waitForSelector('#piirtokoe-valikko button[data-piirtokoe="eivienti"]', { state: 'visible', timeout: 10000 });
 };
 try {
   const { ctx, sivu, virheet } = await avaa('', { 'matkakirja-piirtokoe': 'normaali', 'matkakirja-kehysprofiili': '1' });
@@ -82,22 +82,22 @@ try {
   await avaaValikko(sivu);
   // Samassa tehtävässä: Playwrightin kaksi erillistä klikkausta voi viedä yli viiveen (Chromium).
   await sivu.evaluate(() => {
-    document.querySelector('#piirtokoe-valikko button[data-piirtokoe="eipuskuri"]').click();
+    document.querySelector('#piirtokoe-valikko button[data-piirtokoe="eihaivevedossa"]').click();
     document.querySelector('#piirtokoe-valikko button[data-piirtokoe="normaali"]').click();
   });
   await sivu.waitForTimeout(1500);
   vaadi('L4 paluu samaan tilaan perii latauksen', navigaatioita === 0, `navigaatioita ${navigaatioita}`);
   await avaaValikko(sivu);
   const lataus = sivu.waitForEvent('load', { timeout: 15000 }).then(() => true).catch(() => false);
-  await sivu.click('#piirtokoe-valikko button[data-piirtokoe="dpr15"]');
+  await sivu.click('#piirtokoe-valikko button[data-piirtokoe="eivienti"]');
   const vihje = await sivu.evaluate(() => { const v = document.getElementById('piirtokoe-vihje'); return v && !v.hidden ? v.textContent : ''; });
   tieto('vihje', vihje);
   vaadi('L1 vihje "Ladataan…"', vihje === 'Ladataan…', vihje);
   vaadi('L2 sivu latautuu itse', await lataus, `navigaatioita ${navigaatioita}`);
   await sivu.waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null, { timeout: 90000 });
-  const r = await ylinRivi(sivu, 'Pikselisuhde');
+  const r = await ylinRivi(sivu, 'tekstuurivientejä');
   tieto('rivi latauksen jälkeen', r);
-  vaadi('L3 koe voimassa latauksen jälkeen', /^koe 3\/7 Pikselisuhde 1,5 · profiili p\d+/.test(r) && !r.includes('seuraavassa'), r);
+  vaadi('L3 koe voimassa latauksen jälkeen', /^koe 3\/4 Ei tekstuurivientejä · profiili p\d+/.test(r) && !r.includes('seuraavassa'), r);
   vaadi('L5 ei sivuvirheitä', virheet.length === 0, virheet.join(' | '));
   await ctx.close();
 } finally {

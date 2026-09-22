@@ -68,14 +68,14 @@ test('osoitteen haku ohittaa muistin kokonaan (savukkeet ja mittaukset)', () => 
   const pura = valeMuisti();
   try {
     globalThis.location = { search: '?koe=eipuskuri' };
-    asetaPiirtokoe('dpr15');
+    asetaPiirtokoe('eivienti');
     asetaKehysprofiili(true);
     // Annettu haku: vain osoitteen liput, ei laitteen muistia.
     assert.deepEqual([...laattakerroksenKokeet('?koe=syoteloki')], ['syoteloki']);
     assert.deepEqual([...piirtokokeet('?koe=syoteloki')], ['syoteloki']);
     // Ilman hakua osoite ja muisti yhdistyvät.
     const yhdessa = piirtokokeet();
-    assert.ok(yhdessa.has('eipuskuri') && yhdessa.has('dpr15') && yhdessa.has('profiili'));
+    assert.ok(yhdessa.has('eipuskuri') && yhdessa.has('eivienti') && yhdessa.has('profiili'));
   } finally { pura(); }
 });
 
@@ -233,13 +233,13 @@ test('koevaihto: muutos ajastaa latauksen viiveellä ja näyttää "Ladataan…"
       peru: (i) => { ajastetut[i].peruttu = true; },
     });
     assert.equal(lataaja.muuttui(), false, 'ei muutosta, ei latausta');
-    asetaPiirtokoe('dpr15');
+    asetaPiirtokoe('eivienti');
     assert.equal(lataaja.muuttui(), true);
     assert.equal(ajastetut.at(-1).ms, PIIRTOKOE_LATAUS_VIIVE_MS);
     assert.ok(PIIRTOKOE_LATAUS_VIIVE_MS >= 300 && PIIRTOKOE_LATAUS_VIIVE_MS <= 1500, 'pieni viive: teksti ehtii näkyä');
     assert.equal(naytetty.at(-1), true, 'Ladataan… näkyviin');
     // Toinen valinta viiveen aikana: vanha ajastin perutaan, uusi tilalle.
-    asetaPiirtokoe('eivienti');
+    asetaPiirtokoe('eihaivevedossa');
     lataaja.muuttui();
     assert.equal(ajastetut.filter((a) => !a.peruttu).length, 1, 'yksi lataus kerrallaan');
     // Paluu latauksen tilaan perii latauksen.
@@ -262,4 +262,17 @@ test('koevaihto: main.js kytkee lataajan sekä kokeeseen että kehysprofiiliin',
   assert.match(main, /piirtokoeVihje\.textContent = lataus \? 'Ladataan…' : '';/);
   assert.equal(main.match(/koevaihto\.muuttui\(\);/g)?.length, 2, 'Piirtokoe-rivit ja kehysprofiilin kytkin');
   assert.doesNotMatch(main, /Tulee voimaan seuraavassa latauksessa/);
+});
+
+test('valikossa neljä tilaa omistajan järjestyksessä; poistetut liput vain osoitteessa', () => {
+  // Omistajan kortti 22.9.2026 klo 23.08.
+  assert.deepEqual(PIIRTOKOKEIDEN_VAIHTOEHDOT.map((k) => k.avain), ['normaali', 'eipuskuri', 'eivienti', 'eihaivevedossa']);
+  const pura = valeMuisti();
+  try {
+    globalThis.location = { search: '?koe=dpr15' };
+    globalThis.localStorage.setItem('matkakirja-piirtokoe', 'alpha0');
+    assert.equal(piirtokoeValinta(), 'normaali', 'tallennettu poistettu koe ei ole valinta');
+    assert.ok(!tallennetutKokeet().has('alpha0'), 'eikä vaikuta peliin');
+    assert.ok(piirtokokeet().has('dpr15') && laattakerroksenKokeet().has('dpr15'), 'osoitteen lippu toimii yhä');
+  } finally { pura(); }
 });

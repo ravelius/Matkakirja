@@ -29,6 +29,15 @@ export const PIIRTOKOE_TAPAHTUMA = 'matkakirja-piirtokoe';
  * Jokainen koe tulee voimaan vasta latauksessa; valikko lataa sivun
  * itse (luoKoevaihdonLataaja alla).
  */
+/*
+ * VALIKOSSA NELJÄ TILAA (omistajan kortti 22.9.2026 klo 23.08): Normaali,
+ * Ei puskurikirjoituksia, Ei tekstuurivientejä, Ei häivytystä vedossa.
+ * Pois valikosta: dpr15 (mitattu v2133: ei poista pitkiä kehyksiä),
+ * alpha0 ja vahemmandc — liput toimivat yhä osoitteessa (`?koe=`), ja
+ * overlay näyttää ne raakana ("koe: dpr15"). Tallennettu poistettu
+ * valinta palautuu Normaaliin (piirtokoeValinta: tuntematon = oletus;
+ * unohdaPoistetutValinnat kirjoittaa sen muistiin).
+ */
 export const PIIRTOKOKEIDEN_VAIHTOEHDOT = [
   {
     avain: 'normaali',
@@ -43,27 +52,6 @@ export const PIIRTOKOKEIDEN_VAIHTOEHDOT = [
     seloste: 'Vedon aikana ei kirjoiteta GPU-puskureita (häivytykset odottavat lepoa)',
     lippu: 'eipuskuri',
     ikoni: '<path d="M5 7h14M5 12h14M5 17h9"/><path d="M15.5 15.5 20 20"/>',
-  },
-  {
-    avain: 'dpr15',
-    nimi: 'Pikselisuhde 1,5',
-    seloste: 'Neljäsosa pikseleistä dpr 3:een nähden — karkea täyttökoe',
-    lippu: 'dpr15',
-    ikoni: '<path d="M4.5 5.5h15v13h-15z"/><path d="M4.5 12h15M12 5.5v13"/>',
-  },
-  {
-    avain: 'alpha0',
-    nimi: 'Ilman alfakanavaa',
-    seloste: 'Läpinäkymätön kangas — komposiittorin ei tarvitse sekoittaa sitä sivuun',
-    lippu: 'alpha0',
-    ikoni: '<path d="M4.5 5.5h15v13h-15z"/><path d="m4.5 18.5 15-13"/>',
-  },
-  {
-    avain: 'vahemmandc',
-    nimi: 'Vähemmän piirtokutsuja',
-    seloste: 'Tuki- ja ennakkolaatat piiloon, kun näkyvä ala on jo täysin peitetty',
-    lippu: 'vahemmandc',
-    ikoni: '<path d="M4.5 8.5h9v9h-9z"/><path d="M10.5 5.5h9v9"/>',
   },
   {
     avain: 'eivienti',
@@ -150,7 +138,7 @@ export const POISTETUT_VALINTA_AVAIMET = Object.freeze([
   'matkakirja-tarkkuus-liikkeessa',
 ]);
 
-/** Poista valikosta poistettujen vipujen tallennukset. Palauttaa poistettujen määrän. */
+/** Poista valikosta poistettujen vipujen ja kokeiden tallennukset. Palauttaa nollattujen määrän. */
 export function unohdaPoistetutValinnat(varasto = (() => { try { return globalThis.localStorage; } catch { return null; } })()) {
   let n = 0;
   for (const avain of POISTETUT_VALINTA_AVAIMET) {
@@ -158,6 +146,14 @@ export function unohdaPoistetutValinnat(varasto = (() => { try { return globalTh
       if (varasto?.getItem(avain) != null) { varasto.removeItem(avain); n += 1; }
     } catch { /* ei muistia */ }
   }
+  // Valikosta poistettu Piirtokoe (dpr15, alpha0, vahemmandc; 22.9.2026 klo 23.08) → Normaali.
+  try {
+    const koe = varasto?.getItem(PIIRTOKOE_AVAIN);
+    if (koe != null && !PIIRTOKOKEIDEN_VAIHTOEHDOT.some((k) => k.avain === koe)) {
+      varasto.setItem(PIIRTOKOE_AVAIN, PIIRTOKOKEEN_OLETUS);
+      n += 1;
+    }
+  } catch { /* ei muistia */ }
   return n;
 }
 
