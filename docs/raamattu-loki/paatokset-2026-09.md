@@ -1643,3 +1643,7 @@ Tekninen raja: omat tunnukset ja kestot rekisteriin, ei globaalia welcome/bookSt
 ## PR #2875 (PELIKOODARI): LIIKKEEN TASAISUUSMITTARI (PROFIILI p5: RIVIT 'liike' SIIRTYMA KA/CV, NOLLAT, TUPLAT JA 'syote' POINTER/KEHYS, KOSK/KEHYS, KEHYKSIA ILMAN SYOTETTA, SYOTTEEN IKA, VIRHE KA/SD) + KOE ?koe=syotekello; WebKit iOS-TYYLISELLA SYOTTEELLA: interpvanha CV 46–54 % (37–44 NOLLAKEHYSTA), interp 17–23 %, syotekello 12–20 %, TAHDISTETTU SYOTE 14–16 % → syotetouch TODENNAKOISESTI LAHELLA TAHDISTETTUA (iOS touchmove KEHYSRYTMISSA) (23.9.2026 klo 00.29)
 
 Testit 4046/0, vartija savuke-liikemittari 5/5. Omistajan aamukierros v2139:llä, kehysprofiili päällä, 10 s veto: 1) oletus, 2) ?koe=syotetouch, 3) ?koe=syotekello, 4) ?koe=syotetouch,syotekello; vertaa CV, nollat, tuplat, virheen sd. Jos syotetouch tasaisin → PR 'touch oletukseksi kosketuslaitteilla'. Pelikoodari lopetti yöksi.
+
+## PR #2877: VIENTIBUDJETTI KOKEENA ?koe=vientibudjetti (OLETUS ENNALLAAN; WebKit 36–37 vs 176–215 VIENTIA) → v2140 #2875:N PERAAN; PELIKOODARIN LUOVUTUS viesti-pelikoodari-luovutus-20260923-yo.md (AAMUKIERROS, POHJAERA, CODEXIN PULU-KOHTAUKSET) (23.9.2026 klo 00.33)
+
+Klo 00.34. #2874 jäi suljetuksi (GitHub ei avaa force-pushin jälkeen). Pohjalöydös (kirjaston pohja piirtyy häivytyksen ajan) omana eränä luovutuksessa.
