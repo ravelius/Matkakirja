@@ -1195,3 +1195,7 @@ Omistaja 22.9.2026 klo 15.45: Chromessa yhdellä sormivetäisyllä panorointi l�
 ## OMISTAJA PERUI VESIVIIVOITUKSEN POISTON: VIIVAT SAILYTETAAN JA SAADAAN TOIMIMAAN; VIRHE ON KOKO MEREN ALUEELLA ZOOMATESSA; KLO 17 POLTTO PERUTTU (22.9.2026 klo 15.37)
 
 Omistaja 22.9.2026 klo 15.50: 'se virhe ei ole vain niiden meriviivojen kohdalla vaan koko meren alueella. ei vielä polteta niitä viivoja pois, ne ovat hienoja. kokeillaan saada ne vain toimimaan.' Fable: klo 17 poltto (2026-09-22b) peruttu. Karttasepän tehtävä: viivoitus globaaliin koordinaatistoon (tasojen kuviot kohdakkain, crossfade ilman likaa), ruudulla vakio paksuus ja peitto tasoittain, ja koko meren likakuvioiden syy zoomissa (kaappaussarja avomeri + rannikko); Pelikoodari tutkii saman pelipuolelta (kohta B); vedokset omistajalle ennen polttoa, poltto vain hyväksynnän jälkeen ja iltaisin.
+
+## LEPOPIIRTO OLETUKSENA TUOTANNOSSA v2109 (22.9.2026 klo 15.40)
+
+Julkaisija 22.9.2026 klo 15.45: #2805 → v2109 (main 10673e7fc), testit 3913/0. Kartta piirretään levossa vain muutoksista (syke 4 fps, hehkupiste 15 fps); paluulippu ?koe=levovanha. Omistaja todensi laitteella ennen käännöstä.
