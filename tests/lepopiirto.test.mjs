@@ -36,44 +36,77 @@ test('päätös: kamera, tarve, este, hidas ja syke — muuten ei piirretä', ()
   assert.equal(lepopiirtoPaatos(tila, { nyt: 302, kameraMuuttui: false }), null);
   tila.paalla = false;
   assert.equal(lepopiirtoPaatos(tila, { nyt: 303, kameraMuuttui: false }), 'pois');
-  assert.equal(lepopiirtoKaytossa('?koe=levovanha', { webdriver: false }), false);
-  // Oletus POIS myös selaimessa (v2104: strobovälkyntä iPhonella), vain lipulla päälle.
-  assert.equal(lepopiirtoKaytossa('?koe=mittaus', { webdriver: false }), false);
-  assert.equal(lepopiirtoKaytossa('?koe=lepopiirto', { webdriver: false }), true);
-  // Automaatio (Playwright): pois, ellei pyydetä — kaappaukset saisivat tyhjän kankaan.
-  assert.equal(lepopiirtoKaytossa('', { webdriver: true }), false);
-  assert.equal(lepopiirtoKaytossa('?koe=lepopiirto', { webdriver: true }), true);
-  assert.equal(lepopiirtoKaytossa('?koe=lepopiirto,levovanha', { webdriver: true }), false);
+  assert.equal(lepopiirtoKaytossa('?koe=levovanha'), false);
+  assert.equal(lepopiirtoKaytossa('?koe=mittaus'), true);
+  // Automaatio ajaa saman polun kuin pelaaja: ei webdriver-poikkeusta (välke 22.9.2026).
+  assert.equal(lepopiirtoKaytossa(''), true);
 });
 
-test('asennus: render kääritään, kamera liikkuu → piirto, paikallaan → ohitus, tarvitaan → piirto', () => {
+test('asennus: levossa kirjaston silmukka pysäytetään, muutos herättää sen', () => {
+  /*
+   * VÄLKKEEN KORJAUS (22.9.2026): portti on kirjaston silmukassa, ei
+   * renderissä — ohitetulla kehyksellä tickiä ei ajeta lainkaan, joten
+   * kangasta ei kosketa. Malli jäljittelee kirjastoa: `resumeAnimation`
+   * ajaa syklin heti ja jättää silmukan päälle, `pauseAnimation`
+   * peruu sen oman kehyspyynnön.
+   */
   let aika = 1000;
-  const ikkuna = { performance: { now: () => aika } };
+  const jono = [];
+  const ikkuna = {
+    performance: { now: () => aika },
+    requestAnimationFrame: (cb) => jono.push(cb),
+    cancelAnimationFrame: () => { jono.length = 0; },
+  };
   let piirtoja = 0;
+  let kay = true;
   const camera = { matrixWorld: { elements: new Array(16).fill(0) }, projectionMatrix: { elements: new Array(16).fill(1) } };
   const renderer = { render() { piirtoja += 1; }, getContext: () => ({ drawingBufferWidth: 100, drawingBufferHeight: 200 }) };
-  const pallo = { renderer: () => renderer };
+  const pallo = {
+    renderer: () => renderer,
+    camera: () => camera,
+    resumeAnimation() { if (!kay) { kay = true; renderer.render({}, camera); } },
+    pauseAnimation() { kay = false; },
+  };
   const pura = asennaLepopiirto(pallo, { ikkuna });
-  const kehys = (dt = 16) => { aika += dt; renderer.render({}, camera); };
+  const kehys = (dt = 16) => {
+    aika += dt;
+    const kirjastonVuoro = kay;
+    for (const cb of jono.splice(0)) cb();
+    // Kirjaston oma kehyspyyntö tälle kehykselle, jos sitä ei peruttu.
+    if (kirjastonVuoro && kay) renderer.render({}, camera);
+  };
   kehys(); assert.equal(piirtoja, 1, 'ensimmäinen kehys piirretään');
   kehys(); assert.equal(piirtoja, 2, 'jälkikehys');
-  kehys(); kehys(); assert.equal(piirtoja, 2, 'paikallaan ei piirretä');
+  kehys(); kehys();
+  assert.equal(piirtoja, 2, 'paikallaan ei piirretä');
+  assert.equal(kay, false, 'levossa kirjaston silmukka on pysäytetty');
   camera.matrixWorld.elements[12] = 5;
-  kehys(); assert.equal(piirtoja, 3, 'kamera liikkui');
-  kehys(); kehys(); assert.equal(piirtoja, 4, 'jälkikehys ja sitten lepo');
+  kehys(); assert.equal(piirtoja, 3, 'kamera liikkui → sykli heti');
+  assert.equal(kay, true, 'silmukka jäi päälle');
+  kehys(); assert.equal(piirtoja, 4, 'jälkikehys');
+  kehys(); assert.equal(piirtoja, 4, 'ja sitten lepo');
   pallo.__piirto.tarvitaan();
   kehys(); assert.equal(piirtoja, 5, 'ilmoitettu tarve');
   pallo.__piirto.tarvitaan(100);
-  kehys(); kehys(); kehys(); kehys(); kehys(); kehys(); kehys();
+  for (let i = 0; i < 7; i += 1) kehys();
   assert.ok(piirtoja >= 11, `häiveen ajan joka kehys (${piirtoja})`);
   const ennen = piirtoja;
   for (let i = 0; i < 20; i += 1) kehys(16);
   assert.ok(piirtoja - ennen <= 3, `syke 4 fps: ${piirtoja - ennen} piirtoa 320 ms:ssä`);
   const t = pallo.__piirto.tila();
   assert.ok(t.ohitettuja > 10 && t.syyt.kamera >= 2);
+  // Uni (lehti auki, sivu taustalla): kello seisoo eikä silmukkaa herätetä.
+  pallo.__piirto.uni(true);
+  assert.equal(jono.length, 0, 'uni pysäyttää oman kellon');
+  assert.equal(kay, false);
+  const uninen = piirtoja;
+  pallo.__piirto.uni(false);
+  kehys();
+  assert.ok(piirtoja > uninen, 'herätys piirtää');
   pura();
   assert.equal(renderer.render.name, 'render');
   assert.equal(pallo.__piirto, undefined);
+  assert.equal(kay, true, 'purku jättää silmukan pyörimään');
 });
 
 test('kytkennät: lauta asentaa, häiveet ja nimiöt ilmoittavat, savuke pakottaa', () => {
@@ -83,6 +116,9 @@ test('kytkennät: lauta asentaa, häiveet ja nimiöt ilmoittavat, savuke pakotta
   assert.match(lauta, /hitaat: \(\) => sykkiiNyt\(\)/);
   assert.match(lauta, /sykkiiNyt = \(\) => Boolean\(glSovitin\?\.sykkii\?\.\(\)\);/);
   assert.match(lauta, /ryhma\[nimi\] = function ryhmanMuutos/);
+  // Uni kulkee lepopiirron kautta: kirjaston silmukalla on yksi omistaja.
+  assert.match(lauta, /if \(pallo\.__piirto\) pallo\.__piirto\.uni\(false\);\n\s*else pallo\.resumeAnimation\?\.\(\);/);
+  assert.match(lauta, /if \(pallo\.__piirto\) pallo\.__piirto\.uni\(true\);\n\s*else pallo\.pauseAnimation\?\.\(\);/);
   assert.match(lue('../js/pallolaatat.js'), /pallo\.__piirto\?\.tarvitaan\(\); \/\/ lepopiirto: häiveen askel näkyviin/);
   assert.match(lue('../js/pallovektorit.js'), /pallo\.__piirto\?\.tarvitaan\(\); \/\/ lepopiirto: häiveen askel näkyviin/);
   const gl = lue('../js/pallonimiot-gl.js');

@@ -293,7 +293,9 @@ test('purku kesken kamera-ajon estää myöhäisen first-load-invalidoinnin', as
 
 test('pallolaudan herääminen käyttää näkyvyystahdistusta ja purkaa odottavan framen', () => {
   const lauta = lue('../js/pallolauta/lauta.js');
-  assert.match(lauta, /merkkienNakyvyys\.ajasta\(\);\n\s*pallo\.resumeAnimation\?\.\(\);\n\s*tahdistaSiirtymanJalkeen\(\);/,
+  // Herätys kulkee lepopiirron kautta, kun se on asennettu (kirjaston
+  // silmukalla on yksi omistaja); ilman sitä suoraan resumeAnimation.
+  assert.match(lauta, /merkkienNakyvyys\.ajasta\(\);\n\s*if \(pallo\.__piirto\) pallo\.__piirto\.uni\(false\);\n\s*else pallo\.resumeAnimation\?\.\(\);\n\s*tahdistaSiirtymanJalkeen\(\);/,
     'invalidointi jonotetaan ennen Globe.gl:n ensimmäistä herätysframea');
   assert.match(lauta, /const tahdistaLepo = \(\) => \{ if \(lepoTarpeen\(\)\) lepaa\(\); else heraa\(\); \};/);
   assert.match(lauta, /new MutationObserver\(tahdistaLepo\)/,
