@@ -54,6 +54,8 @@
  * vektorikerroksessa — uutta kirjastoa ei ladata.
  */
 
+import { tallennetutKokeet } from './piirtokoe-asetus.js';
+
 /** Atlassivun koko laitepikseleinä. */
 export const GLNIMIOT_ATLAS = 2048;
 /** Rasterien väli atlaksessa (px), ettei suodatus vuoda naapurista. */
@@ -289,7 +291,16 @@ export function luoNimiokerrosGL({
   const L = luokat ?? glLuokat(pallo);
   const atlasKoko = (() => { try { return (new URLSearchParams(ikkuna.location?.search ?? '').get('koe') ?? '').split(',').includes('atlaskoko'); } catch { return false; } })();
   const kokeet = (() => {
-    try { return new Set(((new URLSearchParams(ikkuna.location?.search ?? '')).get('koe') ?? '').split(',').map((k) => k.trim())); } catch { return new Set(); }
+    let joukko;
+    try { joukko = new Set(((new URLSearchParams(ikkuna.location?.search ?? '')).get('koe') ?? '').split(',').map((k) => k.trim())); } catch { joukko = new Set(); }
+    /*
+     * VALIKON VALINTA ON SAMA KUIN LIPPU (js/piirtokoe-asetus.js, korjattu
+     * 22.9.2026): ennen tätä ratasvalikon eipuskuri/eivienti ei koskenut
+     * nimiörunkoon lainkaan, vaikka juuri runko kirjoittaa puskureita
+     * vedon aikana. Vain oikeassa ikkunassa — testin ikkuna ei lue laitteen muistia.
+     */
+    if (ikkuna === globalThis) for (const lippu of tallennetutKokeet()) joukko.add(lippu);
+    return joukko;
   })();
   const eiPuskuri = kokeet.has('eipuskuri');
   const eiVienti = kokeet.has('eivienti');

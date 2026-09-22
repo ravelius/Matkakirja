@@ -32,6 +32,7 @@
     "savuke-nostojen-tyyppimerkit.mjs",
     "savuke-nostojen-liikevara.mjs",
     "savuke-hehkupiste.mjs",
+    "savuke-profiilitila.mjs",
     "savuke-nimion-koko-panorointi.mjs",
     "savuke-kartan-liike.mjs",
     "savuke-nimiot-sulavat.mjs",
@@ -686,6 +687,12 @@
       },
       "kuvakansio": true,
       "huomautus": "Hehkupiste (omistaja 21.9.2026 klo 22.00: eloton yksi varipallo). Kategorian varikiekko: sateittainen haive aiheen musteella (NOSTOSYM_HEHKUN_SADE 2,1 x piste, alfa 0,45 -> 0), sisus vaaleampi (NOSTOSYM_HEHKUN_SISUS), hidas sykahdys +-7 % / 2,4 s levossa, ei liikkeessa (runko uniform syke; CSS2D keyframe .nostosym-rasteri-piste, pysahtyy .pallolauta-liikkuu). WebKit puhelin Ranska z6: rasterin naytteet, syke levossa/liikkeessa, CSS2D-luokka ja animaatio. 6/6."
+    },
+    "savuke-profiilitila.mjs": {
+      "env": {
+        "SAVUKE_MOOTTORI": "chromium"
+      },
+      "huomautus": "Kehysprofiilin ylin rivi kertoo koetilan (omistajan iPhone-kaappaukset 22.9.2026 eivat kertoneet Piirtokoe-valintaa). T1 ?koe=profiili,dpr15 -> 'koe: dpr15 · profiili p3 · vNNNN'; T2 valikon tallennus eipuskuri + kytkin ilman lippua; T3 valinta vaihdetaan kesken istunnon -> '(seuraavassa latauksessa: normaali)', koska kokeet luetaan kerrosten luonnissa; T4 ei sivuvirheita. Chromium ja WebKit 5/5."
     }
   }
 }
