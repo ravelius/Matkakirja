@@ -1251,3 +1251,7 @@ Codex 22.9.2026 klo 16.40 (posti/codex-pulu-nelja-uutta-versiota-20260922.md): o
 ## OMISTAJA: OPENINFRAMAP — KAIKKI KERROKSET (SAHKO, TIETOLIIKENNE, OLJY/KAASU, VESI) VOISI VISUALISOIDA OMASSA LINSSISSAAN JA KAYTTAA MUISSAKIN; KOODINPATKAT JA IDEAT TALTEEN; PALATAAN MYOHEMMIN (22.9.2026 klo 16.36)
 
 Omistaja 22.9.2026 klo 16.45: openinframapista saisi hyviä koodinpätkiä ja ideoita; kaikkia sen kerroksia voisi visualisoida omassa linssissään ja käyttää ehkä muissakin linsseissä; palataan myöhemmin. Fable: kirjattu linssijonoon (uudet linssit vasta sulavuuden jälkeen); kun aika on, Karttaseppä arvioi OSM-otteen koon per kerros ja lainattavat tyylit (jännitetasot, energialähteet, putkityypit) repon web/-tyylistä.
+
+## SEURAAMISVIRHEEN RAAKADATA HAVISI REBOOTISSA (/tmp); KOOSTELUVUT RAPORTISSA seuraamisvirhe-v2106-20260922.md (HAARA laitetestaaja 21fbbeba6); OPPI: MITTAUSDATA HETI REPOON, EI /tmp:HEN (22.9.2026 klo 16.37)
+
+Laitetestaaja 22.9.2026 klo 16.50: /tmp/laitetestaaja-mittaus-desktop.jsonl tyhjeni rebootissa; raportti kirjoitettu viesteihin palautetuista luvuista (16 kierrosta + alku10) docs/raportit/seuraamisvirhe-v2106-20260922.md, haara laitetestaaja. Palvelimet 8793/8794 kuolleet. Sääntö jatkossa: raakadata tallennetaan heti worktreehen (docs/raportit/data/), ei /tmp:hen. Pelikoodarin interpolointikorjauksen todennukseen tarvitaan uusi omistajan veto tyhjällä koneella — pyydetään etukäteen.
