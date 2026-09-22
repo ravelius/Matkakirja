@@ -2228,6 +2228,13 @@ export function laattakerroksenLRU(tietueet, katto = LAATTAKERROS_LAATTAKATTO_MU
 export function luoLaattakerros({
   pallo, kotelo, ikkuna, renderer,
   kolmiulotteinen, pallonSarja = () => null, lauta = 'maailmankartta', naparaja = 90,
+  /*
+   * Levon pikselisuhde (js/pallo.js PIKSELISUHDE KERROKSEN KANSSA):
+   * tason valinta lasketaan tästä, ei renderöijän hetkellisestä
+   * suhteesta, jotta tasaisen tilan liikkeen alempi puskuri (2) ei vaihda
+   * laattatasoa eleen alussa ja lopussa. null = renderöijän suhde.
+   */
+  lepoSuhde = null,
 }) {
   const doc = kotelo?.ownerDocument ?? ikkuna?.document ?? null;
   const aika = () => ikkuna.performance?.now?.() ?? Date.now();
@@ -3665,7 +3672,8 @@ export function luoLaattakerros({
       LAATTAKERROS_VARA_OSUUS * Math.max(raaka.lat1 - raaka.lat0, raaka.lon1 - raaka.lon0));
     const alue = lepokerroksenAlue(naytteet, pov.lng, { latMin, latMax, vara }) ?? raaka;
     // Ruudun tarve: laitepikseleitä astetta kohti keskellä (fov on pystykulma).
-    const suhde = mitat.suhde;
+    // Levon suhde, jos annettu: liikkeen alempi puskuri (tasainen tila) ei vaihda tasoa.
+    const suhde = lepoSuhde ?? mitat.suhde;
     const tarvePxAste = (LEPOKERROS_MITTAMATKA_PX * suhde) / Math.abs(keski.lat - alas.lat);
     /*
      * TASO KERTOMUSLUKOSTA, JOS SE ON PÄÄLLÄ (ks. KERTOMUSLUKKO yllä).
