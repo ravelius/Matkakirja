@@ -13,7 +13,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 
 import {
-  koodaaMaa, kolmioiMaa, kolmioiPolygoni, pintaAla, pisteAlueessa, puolitaSarmat, puraMaa, varita,
+  koodaaMaa, kolmioiMaa, kolmioiPolygoni, piirteenIso, pintaAla, pisteAlueessa, puolitaSarmat, puraMaa, varita,
 } from '../tools/tee-maakuntavektorit.mjs';
 
 const risti = (a, b, c) => (b[0] - a[0]) * (c[1] - a[1]) - (b[1] - a[1]) * (c[0] - a[0]);
@@ -174,4 +174,16 @@ test('MKV1: koodaus ja purku palauttavat samat kärjet, alueet ja kolmiot', () =
   // Koko: otsikko 16 + kärjet 8K + alueet 2K (täyte 4:ään) + kolmiot 12T.
   const K = maa.pisteet.length; const T = maa.kolmiot.length;
   assert.equal(puskuri.length, 16 + 8 * K + Math.ceil((2 * K) / 4) * 4 + 12 * T);
+});
+
+test('admin-0: isot kenttänimet luetaan, yksi alue per maa, nimi NAME-kentästä', () => {
+  const f = { properties: { ADM0_A3: 'XXX', NAME: 'Xland' }, geometry: { type: 'MultiPolygon', coordinates: [[nelio(0, 0, 1, 1)], [nelio(2, 0, 3, 1)]] } };
+  assert.equal(piirteenIso(f.properties), 'XXX');
+  assert.equal(piirteenIso({ adm0_a3: 'YYY' }), 'YYY');
+  const maa = kolmioiMaa('XXX', [f], { harvennus: 0, maxsarma: 0, taso: 'admin0' });
+  assert.equal(maa.alueet.length, 1);
+  assert.equal(maa.alueet[0].tunnus, 'XXX');
+  assert.equal(maa.alueet[0].nimi, 'Xland');
+  assert.equal(maa.alueet[0].renkaat.length, 2);
+  assert.ok(Math.abs(maa.alueet[0].ala - 2) < 1e-9);
 });
