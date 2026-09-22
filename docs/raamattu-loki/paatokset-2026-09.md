@@ -899,3 +899,7 @@ Fable 22.9.2026 klo 03.00: Sisältökirjurin erä 2 (haara sisalto-maakunnat-era
 ## MAAKUNTIEN ERA 2 DATAAN (053ce36b2); KUVAT R2:EEN ENNEN MERGEA (22.9.2026 klo 08.01)
 
 Sisältökirjuri 22.9.2026 klo 03.15: erä 2 kirjoitettu js/packs/maakunnat-luonnehdinnat.js:ään (97 aluetta pitka + kuva), 1873-kytkös 42/97 vaihtelevin muodoin, testit 0 fail. Kuvat paikallisessa kansiossa, R2-osoitteet datassa. Fable: Julkaisija vie 97 kuvaa ämpäriin kuvaputken tavalla ja tarkistaa otoksen ennen mergeä (lupa annettu). Sisältökirjuri aloittaa erän 3 (pulu).
+
+## MAAKUNTIEN ERA 3 (PULUN KYSYMYKSET) HYVAKSYTTY; OMA TIEDOSTO js/packs/maakunnat-pulu.js (22.9.2026 klo 08.10)
+
+Fable 22.9.2026 klo 03.30: Sisältökirjurin erä 3 (2–3 kysymys-vastaus-paria per alue, 97 aluetta, raportit docs/raportit/maakunnat-era3-*-20260922.md) hyväksytty otoksen perusteella. Päätös: pulun parit omaan tiedostoon js/packs/maakunnat-pulu.js samoilla avaimilla, lazy-import pulun napista; guard-testi 2–3 paria ja vastaus ≤ 400 merkkiä; sw.js ja build-standalone rekisteröinti.
