@@ -1531,3 +1531,7 @@ Omistaja klo 22.30. Pelikoodari tekee PR:n #2861:n päälle; tallennettu valikko
 ## CI:N WebKit-LAUNCH-VIKA: PAIKALLINEN TOISTO SAVUKE_RINNAKKAIN=6 EI TOISTA (0/12), AJURILLA JATKUU (35768446176) → AJURIN OMA JUMI 16.44 UTC:STA; OMISTAJAN LUPA (KORTTI): LAITETESTAAJA KAYNNISTAA AJURIN SamiMacStudio2 UUDELLEEN AJOJEN VALISSA (22.9.2026 klo 22.34)
 
 Laitetestaaja poissulki ruudunsäästäjän/lukituksen, näytön unen, jumiprosessit ja ulimitin. Ei kosketa -testit-ajuriin. Todennus: yksi WebKit-savuke CI:ssä käynnistyksen jälkeen.
+
+## PR #2863: VALIKON SIIVOUS — KARTTA-OSIOSSA VAIN PIENI LIIKE, PIIRTOKOE (7) JA NAYTA KEHYSPROFIILI; VEDON SEURANTA JA TARKKUUS LIIKKEESSA POIS (LIPUT ?koe= JA ?tarkkuus= TOIMIVAT); TALLENNETUT VALINNAT NOLLATAAN → OLETUKSET veto interp, tarkkuus terävä (22.9.2026 klo 22.35)
+
+Pelikoodari: vartija tests/valikko-siivous.test.mjs, testit 3997/0, WebKit 5/5. Huomio: omistajan aiemmat kaappaukset olivat tarkkuudella tasainen, uusi kierros terävällä → luvut eivät suoraan vertailukelpoisia. Jono: #2857 → #2861 → #2863 → #2859.
