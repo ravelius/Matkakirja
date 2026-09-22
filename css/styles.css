@@ -25810,6 +25810,15 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
   transition: transform 220ms ease, opacity 180ms ease, visibility 0s linear 220ms;
 }
 
+/*
+ * AUKI OLEVA LEVY NOUSEE RAILIN YLI (22.9.2026). Levy alkaa nyt kartan
+ * yläreunasta (peittää avausnapin), jolloin se osuu päiväkirjapilleriin
+ * (.rail .fact-card.pieni). .map-pane on oma pinontakontekstinsa
+ * (isolation: isolate), joten levyn oma z-index ei yllä railin (4) yli —
+ * ruutu nostetaan railin ohi vain levyn ollessa auki.
+ */
+.map-pane:has(.karttaselite-levy.auki) { z-index: 5; }
+
 .karttaselite-levy.auki {
   /*
    * PANEELI PEITTÄÄ AVAUSNAPIN (omistajan päätös 22.9.2026): auki
@@ -25893,7 +25902,10 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
   cursor: pointer;
 }
 
-.karttaselite-sulje:hover:not(:disabled) {
+.karttaselite-sulje:hover:not(:disabled),
+.karttaselite-sulje:active:not(:disabled) {
+  /* Yleinen button:hover maalaa tumman taustan (rivi 2329) — risti katoaisi. */
+  background: rgba(70, 51, 31, 0.12);
   color: rgba(70, 51, 31, 1);
 }
 
@@ -26174,7 +26186,15 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
 }
 
 .maakunnat-luonnehdinta {
-  position: relative;
+  /*
+   * LUONNEHDINTA PYSYY NÄKYVISSÄ LISTAN ALLA (omistaja 22.9.2026: "paneelin
+   * alapuolelle"): levy vierii (max-height), joten laatikko tarttuu
+   * vierityslaatikon alareunaan eikä jää maalistan alle piiloon.
+   */
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+  background: #f5f0e2;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;

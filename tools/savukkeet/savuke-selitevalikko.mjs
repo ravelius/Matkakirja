@@ -232,13 +232,15 @@ const valikko = () => sivu.evaluate(() => {
   const napinTila = nappi?.getBoundingClientRect();
   const rivit = [...document.querySelectorAll('.karttaselite-rivi')].map((r) => ({
     aihe: r.dataset.aihe,
+    valinta: r.dataset.valinta,
     nimi: r.querySelector('.karttaselite-nimi')?.textContent ?? '',
     luku: r.querySelector('.karttaselite-luku')?.textContent ?? '',
     paalla: r.getAttribute('aria-pressed') === 'true',
     // Symboli on joko kirjaston kaiverruskuva tai koodilla piirretyt
     // muodot — kumpi tahansa kelpaa, tyhjä ruutu ei.
+    // Symboli on minimerkki (svg) tai Codexin kuvamerkki (img) — Kaikki/Ei mitään -riveillä ei kumpaakaan.
     symboleita: r.querySelectorAll('.karttaselite-symboli image, .karttaselite-symboli path, '
-      + '.karttaselite-symboli circle').length,
+      + '.karttaselite-symboli circle, img.karttaselite-kuvamerkki').length,
     pallonVari: getComputedStyle(r.querySelector('.karttaselite-pallo')).backgroundColor,
     // Rivin oma tausta ja teksti: sormen alla oleva rivi ei saa maalautua
     // pelin yleisellä button:hover-mustella tummaksi (teksti katoaisi).
@@ -417,7 +419,7 @@ vaadi('eläinvalot palavat kartalla',
   elainkuva.elaimet?.nakyvia === elainkuva.elaimet?.solmuja && elainkuva.elaimet?.nakyvia > 0,
   JSON.stringify(elainkuva.elaimet));
 await sivu.screenshot({ path: join(KAAPPAUKSET, 'selitevalikko-valot-elaimet.png') });
-await klikkaa('.karttaselite-kaikki:first-of-type');
+await klikkaa('.karttaselite-rivi[data-valinta="ei"]');
 
 /* --- 4: kartalla on vain selitteen symbolit, ja pallo sytyttää oman --- */
 
@@ -500,19 +502,21 @@ vaadi('toinen painallus sammuttaa saman aiheen valot',
 
 /* --- 5: OFF ja ALL --- */
 
-await klikkaa('.karttaselite-kaikki:last-of-type');
+await klikkaa('.karttaselite-rivi[data-valinta="kaikki"]');
 const kaikkiPaalla = await valot();
 const kaikkiLuokat = await luokat();
 vaadi('ALL sytyttää kaikki aiheet yhdellä painalluksella',
   kaikkiLuokat.length === KARTTAVALO_AIHEET.length
   && Object.values(kaikkiPaalla).every((t) => t.nakyvia === t.solmuja),
   `${kaikkiLuokat.length} luokkaa`);
-vaadi('ALL sytyttää myös jokaisen rivin pallon',
-  (await valikko()).rivit.every((r) => r.paalla), 'rivit');
+// Valinta on yksi kerrallaan (omistaja 22.9.2026): vain Kaikki-rivi on painettuna,
+// aiheiden valot palavat kartalla (yllä).
+vaadi('Kaikki-rivi on valittuna, aiherivit eivät',
+  (await valikko()).rivit.every((r) => r.paalla === (r.valinta === 'kaikki')), 'rivit');
 
 await sivu.screenshot({ path: join(KAAPPAUKSET, 'selitevalikko-kaikki-valot.png') });
 
-await klikkaa('.karttaselite-kaikki:first-of-type');
+await klikkaa('.karttaselite-rivi[data-valinta="ei"]');
 vaadi('OFF sammuttaa kaikki yhdellä painalluksella',
   (await luokat()).length === 0
   && Object.values(await valot()).every((t) => t.nakyvia === 0),

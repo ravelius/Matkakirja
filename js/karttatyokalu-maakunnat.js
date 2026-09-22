@@ -336,6 +336,8 @@ export function rakennaMaakunnat(paneeli, { levy, ui } = {}) {
 
   const rivit = [];
   const rivitAvaimella = new Map();
+  /** Peukalolevyn kahva; luodaan vasta kun rivit ovat olemassa (valitse voi ajaa jo ennen sitä). */
+  let levykahva = null;
   const ryhmat = new Map();
   const kuuntelijat = new Set();
 
@@ -353,6 +355,8 @@ export function rakennaMaakunnat(paneeli, { levy, ui } = {}) {
       r.otsikko.setAttribute('aria-expanded', String(tuleeAuki));
       r.rivitRyhma.hidden = !tuleeAuki;
     }
+    // Rivit siirtyivät: levy uudelle paikalle (piiloon, jos valittu rivi on suljetussa ryhmässä).
+    levykahva?.paivita(valittuAvain);
   }
 
   /** Valitun alueen luonnehdintalaatikko: nimi, teksti ja tarvittaessa plus. */
@@ -433,8 +437,9 @@ export function rakennaMaakunnat(paneeli, { levy, ui } = {}) {
    * VASTA kun rivit ovat kaikki olemassa — levy tarvitsee koko listan
    * mitatakseen rivien paikat.
    */
-  const levykahva = typeof levy === 'function'
-    ? levy({ lista, rivit, valittu: valittuAvain, valitse })
+  // Levy lukee rivit Map-muodossa (avain → rivi), kuten karttaselite-levy.js dokumentoi.
+  levykahva = typeof levy === 'function'
+    ? levy({ lista, rivit: rivitAvaimella, valittu: valittuAvain, valitse })
     : null;
 
   paivitaLuonnehdinta(valittuAvain);

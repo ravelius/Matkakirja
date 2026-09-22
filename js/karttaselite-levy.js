@@ -102,7 +102,8 @@ export function luoPeukalolevy({
 
   /** Rivien pystykeskikohdat `lista`-elementin omassa koordinaatistossa. */
   function rivienYt() {
-    return jarjestys.map((valinta) => {
+    // Piilossa oleva rivi (suljettu maaryhmä, offsetHeight 0) ei ole ehdokas.
+    return jarjestys.filter((valinta) => rivit.get(valinta)?.offsetHeight > 0).map((valinta) => {
       const rivi = rivit.get(valinta);
       return { valinta, y: rivi.offsetTop + (rivi.offsetHeight / 2) };
     });
@@ -111,7 +112,9 @@ export function luoPeukalolevy({
   /** Levy nykyisen valinnan rivin kohdalle. */
   function sijoita(animoi) {
     const rivi = rivit.get(nykyinen);
-    if (!rivi) return;
+    // Ei valintaa tai valittu rivi piilossa (suljettu ryhmä): levy pois näkyvistä.
+    levy.hidden = !rivi || !(rivi.offsetHeight > 0);
+    if (levy.hidden) return;
     levy.classList.toggle('ei-siirtyma', !animoi);
     levy.style.height = `${rivi.offsetHeight}px`;
     levy.style.transform = `translateY(${rivi.offsetTop}px)`;
