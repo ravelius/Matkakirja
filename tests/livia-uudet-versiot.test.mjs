@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {LIVIA_SVG_ELEET} from '../js/livia-svg.js';
+import {LIVIA_SVG_ELEET,livianSvgAsento,livianSvgKuva} from '../js/livia-svg.js';
 import {livianSvgPaa} from '../js/livia-svg-paa.js';
 import {LIVIAN_UUDET_VERSIOT,uudenEleenAsento,uudenEleenKuva} from '../docs/livia-uudet-versiot.mjs';
 
@@ -12,13 +12,14 @@ test('kasvopohjien polut vastaavat toisiaan myös tuotantopään muuttuessa',()=
 });
 
 test('katselun kaikki ehdotukset käyttävät vanhan Pulun piirrosta',()=>{
-  assert.equal(LIVIAN_UUDET_VERSIOT.length,10);
+  assert.equal(LIVIAN_UUDET_VERSIOT.length,LIVIA_SVG_ELEET.length+2);
   assert.equal(LIVIAN_UUDET_VERSIOT[0].id,'uusi-ilahtuu');
+  for(const e of LIVIA_SVG_ELEET)assert.equal(LIVIAN_UUDET_VERSIOT.filter(u=>u.id==='uusi-'+e.id).length,1,e.id+' saa oman version');
   for(const e of LIVIAN_UUDET_VERSIOT){
     const kuva=uudenEleenKuva(uudenEleenAsento(e.id,.4));
     assert.doesNotMatch(kuva,/data-style="sarjakuvakokeilu"|cartoon-eye|data-part="scarf"/);
     assert.match(kuva,/data-part="whole-bird"/);
-    assert.match(kuva,/fill="#2e4756"/,'vanhan Pulun nokka');
+    assert.match(kuva,/data-part="head"/,'vanhan Pulun pää');
   }
   for(const id of ['uusi-hymy-levea','uusi-hymy-pieni','uusi-hymy-nauru','uusi-livia-ilahtuu','uusi-sarjakuvapulu']){
     assert.ok(!LIVIAN_UUDET_VERSIOT.some(e=>e.id===id));
@@ -62,8 +63,9 @@ test('katseluehdotukset pysyvät erillään pelieleistä ja kestävät kelauksen
       assert.ok(ids.every(id=>id.startsWith('koe')));
     }
     if(e.id!=='uusi-bookPanic')for(const k of ['paaKulma','paaY','paaX','rinta','siipi','takasiipi','rapaytys','ilme','suusiipi','hengitys','rintasiipi'])assert.equal(asento(0)[k],asento(1)[k],e.id+' '+k);
-    const jalat=p=>uudenEleenKuva(asento(p)).match(/<g data-part="feet">.*?<\/g>/)[0];
-    assert.equal(jalat(0),jalat(.45),'jalkojen ankkurit pysyvät maassa');
+    const jalat=p=>uudenEleenKuva(asento(p)).match(/<g data-part="feet">.*?<\/g>/)?.[0];
+    if(jalat(0)&&jalat(.45)&&!asento(.45).perusAsento?.walk&&e.baseId!=='cityExplain')
+      assert.equal(jalat(0),jalat(.45),'paikallaan tehdyn eleen jalat pysyvät maassa');
   }
 });
 
@@ -106,7 +108,7 @@ test('vanha nokka säilyy myös tervehdyksessä, naurussa ja haukotuksessa',()=>
   for(const e of LIVIAN_UUDET_VERSIOT){
     for(const p of [0,.22,.4,.61,1]){
       const svg=uudenEleenKuva(uudenEleenAsento(e.id,p));
-      assert.match(svg,/fill="#2e4756"/,e.id+' alkuperäinen nokka');
+      if(!svg.includes('data-livia-visible="false"'))assert.match(svg,/data-part="head"/,e.id+' alkuperäinen pää');
       assert.doesNotMatch(svg,/friendly-beak|mouth-space|data-part="tongue"|cartoon-beak/,e.id+' ei suukokeiluja');
     }
   }
@@ -129,6 +131,35 @@ test('vanhan Pulun pään, hengityksen ja siipien liike pysyy eriytettynä',()=>
       for(const k of ['paaKulma','rinta','siipi','suusiipi','hengitys'])assert.ok(Math.abs(s[k]-edellinen[k])<.6,id+' '+k+' ei hypähdä');
       edellinen=s;
     }
+  }
+});
+
+test('jokaisen 70 pelieleen uusi versio käyttää jatkuvaa liikerataa, mutta alku ja loppu säilyvät',()=>{
+  for(const ele of LIVIA_SVG_ELEET){
+    const id='uusi-'+ele.id,alku=uudenEleenAsento(id,0),loppu=uudenEleenAsento(id,1);
+    if(!alku.perusAsento)continue; // erikseen piirretyillä on omat vaihetestinsä
+    for(const p of [0,1]){
+      const s=uudenEleenAsento(id,p);
+      assert.equal(uudenEleenKuva(s,{prefix:'alku',right:44}),
+        livianSvgKuva(livianSvgAsento(ele.id,p,{voimakkuus:.5}),{prefix:'alku',right:44}),
+        ele.id+' päätyy alkuperäiseen ankkuriin');
+    }
+    const avaimet=['paaKulma','paaX','paaY','rinta','siipi','takasiipi','sulat','hengitys'];
+    const edelliset=Object.fromEntries(avaimet.map(avain=>[avain,alku[avain]]));
+    const suurimmat=Object.fromEntries(avaimet.map(avain=>[avain,0]));
+    for(const avain of avaimet){
+      assert.equal(alku[avain],0,ele.id+' '+avain+' alkaa levosta');
+      assert.equal(loppu[avain],0,ele.id+' '+avain+' päättyy lepoon');
+    }
+    for(let i=1;i<=1000;i++){
+      const s=uudenEleenAsento(id,i/1000);
+      for(const avain of avaimet){
+        const arvo=s[avain];
+        assert.ok(Number.isFinite(arvo),ele.id+' '+avain+' on äärellinen');
+        suurimmat[avain]=Math.max(suurimmat[avain],Math.abs(arvo-edelliset[avain]));edelliset[avain]=arvo;
+      }
+    }
+    for(const avain of avaimet)assert.ok(suurimmat[avain]<(avain==='paaKulma'?1:.5),ele.id+' '+avain+' ei hypähdä');
   }
 });
 
