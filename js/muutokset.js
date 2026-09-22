@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2130, teksti: 'Kehysprofiili: koetila ja versio overlayn ylimmalla rivilla' },
   { v: 2129, teksti: 'eivienti kattaa laattojen tekstuurit' },
   { v: 2128, teksti: 'Ruutunaytto ei katkaise mittauspalvelimen otosta' },
   { v: 2127, teksti: 'alpha0 aito: oma kangas ja WebGL2-konteksti' },
