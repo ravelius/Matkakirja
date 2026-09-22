@@ -1535,3 +1535,7 @@ Laitetestaaja poissulki ruudunsäästäjän/lukituksen, näytön unen, jumiprose
 ## PR #2863: VALIKON SIIVOUS — KARTTA-OSIOSSA VAIN PIENI LIIKE, PIIRTOKOE (7) JA NAYTA KEHYSPROFIILI; VEDON SEURANTA JA TARKKUUS LIIKKEESSA POIS (LIPUT ?koe= JA ?tarkkuus= TOIMIVAT); TALLENNETUT VALINNAT NOLLATAAN → OLETUKSET veto interp, tarkkuus terävä (22.9.2026 klo 22.35)
 
 Pelikoodari: vartija tests/valikko-siivous.test.mjs, testit 3997/0, WebKit 5/5. Huomio: omistajan aiemmat kaappaukset olivat tarkkuudella tasainen, uusi kierros terävällä → luvut eivät suoraan vertailukelpoisia. Jono: #2857 → #2861 → #2863 → #2859.
+
+## KOKO JONO MAINISSA: v2127 alpha0 AITO, v2128 PROFIILI JAKAA, v2129 eivienti LAATTOIHIN, v2130 TILARIVI, v2131 MITTARI p4, v2132 PIIRTOKOE 7, v2133 VALIKON SIIVOUS; KAIKKI savukkeet-mac-PUNAISET OLIVAT WebKit-launch-AIKAKATKAISUJA; JULKAISIJA KORJASI #2863:N ORVON js/vedon-seuranta.js:N NIPUTUSLISTALLA (NIPUTTAMATTOMAT); #2859 VIELA AUKI → v2134 (22.9.2026 klo 22.55)
+
+Julkaisija klo 22.54; useita pinottujen PR:ien rebase-konflikteja ratkaistu, testimäärät täsmäsivät. Omistajan kierros alkaa v2133:sta (Pages-vienti käynnissä klo 22.55, tuotannossa vielä v2132). Ajuri käynnistetty uudelleen klo 22.38 (omistaja itse); Laitetestaaja todentaa seuraavasta savukeajosta.
