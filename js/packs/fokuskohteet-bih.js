@@ -122,6 +122,7 @@ export const FOKUSKOHTEET_BIH = [
     id: 'mostar',
     nimi: 'Mostar',
     tyyppi: 'kaupunki',
+    taso: 1,
     kysymykset: [
       'Kuka oli Mimar Sinan?',
       'Mitä sillanvartijan työhön kuului?',
@@ -208,6 +209,7 @@ export const FOKUSKOHTEET_BIH = [
     id: 'una',
     nimi: 'Una-joki',
     tyyppi: 'joki',
+    taso: 1,
     kysymykset: [
       'Mihin Una lopulta laskee?',
       'Mitä Unan kansallispuistossa voi tehdä?',
@@ -298,6 +300,7 @@ export const FOKUSKOHTEET_BIH = [
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'historia',
     tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Mistä romaani Drinan silta kertoo?',
       'Mitä suurvisiirin työhön kuului?',
@@ -539,6 +542,7 @@ export const FOKUSKOHTEET_BIH = [
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'luonto',
     tyyppi: 'vuori',
+    taso: 1,
     kysymykset: [
       'Miten luolaeläin tulee toimeen ilman valoa?',
       'Miksi luolan suusta puhaltaa kylmää?',
