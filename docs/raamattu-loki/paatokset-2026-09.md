@@ -1135,3 +1135,7 @@ Codex 22.9.2026 klo 14.10 (posti/codex-pulu-galleria-ryhmat-20260922.md): omista
 ## STROBO-KORJAUS TUOTANNOSSA v2105 (LEPOPIIRTO OLETUKSENA POIS); TUNTUMATESTIN VERSIO v2105 (22.9.2026 klo 14.12)
 
 Julkaisija 22.9.2026 klo 14.15: #2797 → v2105 (main ee56454ce), testit 3912/0. Omistajan tuntumatesti tehdään v2105:llä. Pelikoodari (uusi sessio) tekee lepopiirron oikean toteutuksen laitetodennuksella.
+
+## PULUN GALLERIAN RYHMITTELY TUOTANNOSSA v2106 (VAIN c41a9e2), READBACK 200, KUITATTU CODEXILLE (22.9.2026 klo 14.18)
+
+Julkaisija 22.9.2026 klo 14.18: c41a9e2ee poimittu, v2106 (main 87408dbdb), testit 3913/0, curl -sI matkakirja.app/docs/livia-svg.html → 200; rytmi-haaraa ei koskettu. Fable kuittasi Codexille (posti/fable-codexille-pulun-galleria-julkaistu-20260922.md).
