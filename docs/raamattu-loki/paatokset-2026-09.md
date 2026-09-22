@@ -879,3 +879,7 @@ Pelikoodari 22.9.2026 klo 01.45: glnimiot-nostot-savuke korjattu (v2059, #2721);
 ## NOSTOTASOT VIIMEINEN ERA (16 MAATA, 4 KUKIN) HYVAKSYTTY; SAANTO: TAHTIKOHDE EI OLE KAUPUNKI, JOLLA ON KAUPUNKIPISTE (22.9.2026 klo 06.52)
 
 Fable 22.9.2026 klo 02.05: Sisältökirjurin ehdotukset HRV/SVN/SVK/ROU/BGR, BIH/LTU/LVA/EST/ISL/LUX, MLT/CYP/UKR/RUS/TUR (docs/raportit/nostotasot-*-ehdotus-20260922.md) hyväksytty; SRB ei nosto-dataa (Raamatun poikkeuslista). Sääntö nostotasoihin: ykköstason tähtikohde ei saa olla pelikaupunki eikä kaupunki, jolla on jo poltettu kaupunkipiste ja nimi pallolla (merkki osuisi nimen päälle); kaupunkinostot vaihdetaan muuhun (Split, Bratislava, Kiova, Valletta) tai maa saa 3 tähteä.
+
+## HILJAINEN SAVUKEAJO MAINISTA: 4 KORJAUTUI, UUDET PUNAISET NOSTOTASOT JA NIMIOT-ELAVAT (REUNAN YLITYS, LIIKEVARA?) (22.9.2026 klo 07.11)
+
+Julkaisija 22.9.2026 klo 02.15 (load 3–8): korjautuneet glnimiot-nimet, glnimiot-nostot, kaupungit-piiloon, noppa-saapumisen-aikana; vanhat ennallaan pariisi-lahizoom-390-liuska 16/17, nimiot-sulavat 12/16; uudet punaiset nostotasot 14/18 ja nimiot-elavat 16/22 'reunan ylitys' — todennäköisesti liikevaran (v2056) seuraus ja savukkeiden vanha oletus; Pelikoodari arvioi ja korjaa vartiot tai koodin.
