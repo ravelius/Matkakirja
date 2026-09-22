@@ -149,6 +149,9 @@ import { glLuokat, glNimiotKaytossa, luoNimiokerrosGL, rasteroiTeksti } from '..
 import { luoGlNimiosovitin } from './glnimiot-sovitin.js';
 import { ablaatioPaalla, kerrosKaytossa, kerrostenBodyLuokat, asennaPiirtokokeet, piirtokokeet } from './kerrokset.js';
 import { asennaKehysprofiili } from './kehysprofiili.js';
+import { luoProfiilinaytto } from './profiilinaytto.js';
+import { vedonSeuranta } from '../vedon-seuranta.js';
+import { tarkkuusLiikkeessa } from '../tarkkuus-asetus.js';
 import { sfx } from '../sound.js';
 import { luoNappulanKuljettaja } from './siirto.js';
 import { luoAloituslennonKohtaus } from './avaus.js';
@@ -2077,6 +2080,21 @@ export async function avaaPallolauta(ui) {
   // kehysprofiili (pääsäie/GPU-jako) samoilla lipuilla laitteen konsoliin.
   asennaPiirtokokeet();
   if (ablaatioPaalla() || piirtokokeet().size) asennaKehysprofiili(() => globalThis.matkakirja?.ui);
+  /*
+   * `?koe=profiili` (omistajan tilaus Fablen kautta 22.9.2026): sama
+   * profiili RUUDULLE ja mittauspalvelimelle, jotta puhelimen pitkän
+   * kehyksen syyn näkee ilman Web Inspectoria. Rivillä ovat myös
+   * voimassa olevat asetukset, jolloin omistajan kuvakaappaus kertoo
+   * itsessään, missä tilassa peli oli (js/pallolauta/profiilinaytto.js).
+   */
+  const puraProfiilinaytto = piirtokokeet().has('profiili')
+    ? luoProfiilinaytto({
+      profiili: globalThis.__kehysprofiili,
+      kotelo,
+      asetukset: () => ({ veto: vedonSeuranta(), tarkkuus: tarkkuusLiikkeessa() }),
+      lepo: () => pallo.__piirto?.tila?.() ?? null,
+    })
+    : () => {};
   const vektorit = pallovektoritPaalla() && kerrosKaytossa('vektorit') ? luoPallovektorit({ pallo, kotelo, reitit }) : null;
   /*
    * Maakuntavektorit (js/pallomaakunnat.js, erä M1): admin-1-alueet
@@ -5797,6 +5815,7 @@ export async function avaaPallolauta(ui) {
       kamera.pysaytaKameraAjo();
       eleet.pura();
       ryhmienVahti();
+      puraProfiilinaytto();
       puraLepopiirto();
       litistaja.pura();
       // Panoroinnin raja on tämän laudan sääntö: se ei saa jäädä
