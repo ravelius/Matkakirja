@@ -299,7 +299,7 @@ test('pohja vapautetaan omaan syvimpään tasoonsa, jos kerros ei piirrä', () =
   assert.match(pallo, /pallo\.globeTileEngineMaxLevel\(syvin\);/);
   // v1645:n laatutilat palaavat: asetaTila kulkee läpi vasta kun kerros on pois.
   assert.match(pallo, /if \(kerrosKaytossa\) return;/);
-  assert.match(pallo, /if \(!kerrosKaytossa\) return;\n\s*kerros\.paivita\(kehys, true, \{ liike: Boolean\(lepoAjastin\) \}\);\n\s*vapautaPohja\(\);/,
+  assert.match(pallo, /if \(!kerrosKaytossa\) \{ tahdistaPohjanNakyvyys\(\); return; \}\n\s*kerros\.paivita\(kehys, true, \{ liike: Boolean\(lepoAjastin\) \}\);\n\s*vapautaPohja\(\);/,
     'vapautus ajetaan piirtokoukusta, samasta kehyksestä kuin päivitys');
 });
 
@@ -441,7 +441,8 @@ test('kytkentä: pohja naulataan tasoon 5 vain kerroksen ollessa päällä', () 
    */
   assert.ok(!/kerros\.paivita\(kam, true\)/.test(pallo), 'kerros ei saa päivittyä updatePovista');
   // Kolmas argumentti kertoo kerrokselle kameran liikkeen (lepoajastin käy): koe `vientilepo` lukee sen.
-  assert.match(pallo, /const kehyspurku = kerros\n\s*\? kytkePallonKehys\(pallo, kotelo, \(kehys\) => \{\n\s*if \(!kerrosKaytossa\) return;\n\s*kerros\.paivita\(kehys, true, \{ liike: Boolean\(lepoAjastin\) \}\);\n\s*vapautaPohja\(\);\n\s*\}, ikkuna\)\n\s*: \(\) => \{\};/);
+  // Pohjan piilotus (sulavuus kohta 2) ajetaan samasta koukusta päivityksen jälkeen.
+  assert.match(pallo, /const kehyspurku = kerros\n\s*\? kytkePallonKehys\(pallo, kotelo, \(kehys\) => \{\n\s*if \(!kerrosKaytossa\) \{ tahdistaPohjanNakyvyys\(\); return; \}\n\s*kerros\.paivita\(kehys, true, \{ liike: Boolean\(lepoAjastin\) \}\);\n\s*vapautaPohja\(\);\n\s*tahdistaPohjanNakyvyys\(\);\n\s*\}, ikkuna\)\n\s*: \(\) => \{\};/);
   assert.match(pallo, /if \(kerrosKaytossa\) \{\n\s*kerros\.paivita\(pallonKehysmitat\(pallo, kotelo, kamera, ikkuna\), false\);\n\s*vapautaPohja\(\);\n\s*\} else lepokerros\?\.levossa\(\);/);
   assert.match(pallo, /laatuKuuntelijat\.delete\(pakotus\);\n\s*kehyspurku\(\);/, 'koukku puretaan');
   // Kahva on sama accessorille ja savukkeille; purku purkaa kerroksen.
