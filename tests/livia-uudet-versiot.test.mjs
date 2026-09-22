@@ -14,7 +14,12 @@ test('kasvopohjien polut vastaavat toisiaan myös tuotantopään muuttuessa',()=
 test('sarjakuvakokeilu käyttää omaa piirrosta, huivia ja jatkuvaa silmänräpäytystä',()=>{
   const a=p=>uudenEleenAsento('uusi-sarjakuvapulu',p),kuva=p=>uudenEleenKuva(a(p));
   assert.match(kuva(.22),/data-style="sarjakuvakokeilu"/);
+  assert.match(kuva(.22),/data-face-shape="slender"/,'poskien siluetti kapenee kohti leukaa');
+  assert.match(kuva(.22),/data-part="face-outline"/);
   assert.equal((kuva(.22).match(/data-part="cartoon-eye"/g)||[]).length,2);
+  assert.equal((kuva(.22).match(/data-eye-shape="almond"/g)||[]).length,2);
+  assert.equal((kuva(.22).match(/<path data-part="eye-white"/g)||[]).length,2,'silmän muoto ei ole pelkkä pyöreä ellipsi');
+  assert.equal((kuva(.22).match(/data-part="upper-lid"/g)||[]).length,2);
   assert.match(kuva(.22),/data-part="cartoon-beak" data-opening="1"/);
   assert.match(kuva(.22),/data-beak-shape="pigeon"/,'oma kyyhkyn nokka, ei pitkä ankan nokka');
   assert.equal((kuva(.22).match(/data-part="eyelashes"/g)||[]).length,2);

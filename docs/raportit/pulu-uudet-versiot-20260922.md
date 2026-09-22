@@ -223,3 +223,30 @@ vähennetty liike ja 0 selainvirhettä. Julkaisun kuitti kirjataan erikseen.
 
 Ei muutoksia pelin hahmoon, ohjaimeen, audioon, cueihin tai julkaisuun.
 Kuvaputkelle ei tilauksia. Tämä on vain itsenäisen katselusivun uusi ele.
+
+### Kasvot kapeammiksi ja silmiin särmää
+
+Omistajan palaute: kasvot ovat liian pullan muotoiset; silmiin saisi tulla
+hieman särmää. Kavennettiin poskien ja takaraivon siluettia ja annettiin
+posken kaventua selkeämmin leukaa kohti. Pienennettiin vaaleaa poskialuetta
+ja poskisävyä. Lähempi silmä on mantelimaisempi, yläluomet viistot ja
+kulmakaarissa on pieni epäsymmetria. Ulkonurkan nousu antaa katseelle
+itsevarmuutta ilman vihaista V-kulmaa. Silmät aukeavat yhä ilahtumiseen.
+
+Muutos on vain tämän sarjakuvahahmon piirroksessa, joten se näkyy sekä
+Ihana nähdä! -eleessä että Sarjakuvapulu — tyylikokeilu -painikkeessa.
+Nokka, kieli, huivi, vartalo ja kaikki liikeradat säilyvät. Koneellinen
+vertailu committiin `10be41deaf25`: kaikkien 11 eleen 1111 liikeasentoa
+täsmälleen ennallaan; yhdeksän muun hahmon ehdotuksen 909 SVG-kuvaa
+tavulleen ennallaan. Edellinen hahmopiirros säilyy julkaisuversiossa
+`10be41deaf25-74770475`.
+
+Kuvallinen kahdeksan asennon tarkistus ja lähikuva katsottu. Paikallinen
+selain: kasvosiluetin leveys 65,21 ja korkeus 66,57 SVG-yksikköä;
+81 valintaa, 11 ehdotuksen ajallinen sarja, suun ja kielen näkyvyys,
+70 % jatko/tauko, 390 px ja vähennetty liike PASS. Selainvirheitä 0.
+Kaksoisavaimet, niputus, savukevartio, nimiöt ja diff-check PASS.
+Peli, audio, cue, päähaara ja kuvaputki eivät muutu; ei kuvatilauksia.
+
+Lopullinen koko testisarja: 3936 = 3923 PASS, 13 SKIP, 0 FAIL.
+Kohdesarjan kaikki 11 testiä PASS, mukana siluetin ja silmien uudet vartijat.
