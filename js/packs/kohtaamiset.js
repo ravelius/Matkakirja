@@ -1280,4 +1280,95 @@ export const KOHTAAMISET = {
     tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
     tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
   },
+  /*
+   * Erä C7 (22.9.2026, viimeinen erä — docs/raportit/kohtaamiset-era-
+   * c7-20260922.md). Tromssan kaari (KAARI_PAKETIT, 'tromssa') nimeää
+   * venemekaanikko Sigridin (satama, venekorjaus), varattu kaaren
+   * omaan kohtaamiseen. Tromssa on kevyt fokusvirta — Fable vahvisti
+   * 22.9.2026, ettei se estä kirjoittamista, ja fokusvirta-tromssa.js
+   * sai kohtaaminen/kohtaamispiste-kentät samassa haarassa. 1873-
+   * fakta: puukirkon urut asennettiin 1863, soineet ~10 vuotta.
+   */
+  tromssa: {
+    hahmo: 'kirkon urkuri Kirsten',
+    nappi: 'Tapaa Kirsten',
+    frame: 'Kirsten nostaa kätensä koskettimilta ja kysyy',
+    tervehdys: 'Kirsten kääntyy urkujen luota ja katsoo kirjaasi: '
+      + '"Nämä pillit soivat tässä puukirkossa vasta kymmenen vuotta '
+      + '— minä olen soittanut niitä koko sen ajan. Näytä että tunnet '
+      + 'maailmaa kuten piirtäjä — niin soitan sinulle sävelen, jota '
+      + 'kukaan muu ei kuule tänä vuonna."',
+    tervehdysLuenta: [
+      { rooli: 'kertoja', teksti: 'Kirsten kääntyy urkujen luota ja '
+        + 'katsoo kirjaasi:' },
+      { rooli: 'hahmo', teksti: '[curious] "Nämä pillit soivat tässä '
+        + 'puukirkossa vasta kymmenen vuotta — minä olen soittanut '
+        + 'niitä koko sen ajan. [warmly] Näytä että tunnet maailmaa '
+        + 'kuten piirtäjä — niin soitan sinulle sävelen, jota kukaan '
+        + 'muu ei kuule tänä vuonna."' },
+    ],
+    loyto: 'Kirsten nostaa rasian urkupenkin alta: "Tämä ei ole '
+      + 'ilmapiirin osa eikä pilli — joku on jättänyt tänne oman '
+      + 'sävelensä."',
+    loytoLuenta: [
+      { rooli: 'kertoja', teksti: 'Kirsten nostaa rasian urkupenkin '
+        + 'alta:' },
+      { rooli: 'hahmo', teksti: '[surprised] "Tämä ei ole ilmapiirin '
+        + 'osa eikä pilli — joku on jättänyt tänne oman sävelensä."' },
+    ],
+    tyhja: 'Kirsten koputtaa tyhjää urkulaatikkoa: "Tyhjä. Puukirkko '
+      + 'notkuu ja elää — mikä tahansa irtonainen liikkuu täällä ajan '
+      + 'myötä."',
+    vaarin: 'Kirsten painaa koskettimen hiljaa alas: "Ei vielä. '
+      + 'Sävel ei synny ensimmäisellä yrityksellä — kokeile '
+      + 'uudestaan."',
+    tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
+    tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
+    tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
+  },
+  /*
+   * Erä C7 (22.9.2026). Valletta kirjoitettiin ensin erässä C6, mutta
+   * jätettiin pois datasta "ei täyttä lehteä" -perusteella. Fable
+   * vahvisti 22.9.2026, ettei kevyt fokusvirta estä — fokusvirta-
+   * valletta.js sai kohtaaminen/kohtaamispiste-kentät samassa
+   * haarassa. 1873-fakta: oopperatalo paloi 25.5.1873, suljettuna
+   * lähes 5 vuotta.
+   */
+  valletta: {
+    hahmo: 'teatterin lipunmyyjä Rita',
+    nappi: 'Tapaa Rita',
+    frame: 'Rita avaa lippukopin luukun ja kysyy',
+    tervehdys: 'Rita nojaa lippukoppiin vanhan oopperatalon paikalla: '
+      + '"Isoisäsi käyntivuonna talo oli juuri palanut sisältä '
+      + 'tyhjäksi — se pysyi kiinni lähes viisi vuotta. Näytä että '
+      + 'tunnet maailmaa kuten piirtäjä — niin kerron, mistä liekit '
+      + 'silloin lähtivät."',
+    tervehdysLuenta: [
+      { rooli: 'kertoja', teksti: 'Rita nojaa lippukoppiin vanhan '
+        + 'oopperatalon paikalla:' },
+      { rooli: 'hahmo', teksti: '[curious] "Isoisäsi käyntivuonna '
+        + 'talo oli juuri palanut sisältä tyhjäksi — se pysyi kiinni '
+        + 'lähes viisi vuotta. [warmly] Näytä että tunnet maailmaa '
+        + 'kuten piirtäjä — niin kerron, mistä liekit silloin '
+        + 'lähtivät."' },
+    ],
+    loyto: 'Rita nostaa rasian lippukopin lattian raosta: "Tämä ei '
+      + 'ole palon jälkeä. Joku on piilottanut tämän paljon '
+      + 'myöhemmin."',
+    loytoLuenta: [
+      { rooli: 'kertoja', teksti: 'Rita nostaa rasian lippukopin '
+        + 'lattian raosta:' },
+      { rooli: 'hahmo', teksti: '[surprised] "Tämä ei ole palon '
+        + 'jälkeä. Joku on piilottanut tämän paljon myöhemmin."' },
+    ],
+    tyhja: 'Rita koputtaa tyhjää rakoa vanhassa muurissa: "Tyhjä. '
+      + 'Tätä paikkaa on rakennettu uudelleen niin monta kertaa."',
+    vaarin: 'Rita sulkee luukun hetkeksi: "Ei vielä. Esitys alkaa '
+      + 'vasta illalla — ehdit yrittää uudelleen."',
+    tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
+    tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
+    tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
+    tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 },
+  },
 };
