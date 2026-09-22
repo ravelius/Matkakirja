@@ -883,6 +883,23 @@ export const POHJAN_VAPAUTUS_SYYT = new Set([
  * (avaaPallo) ja pallolaudan (js/pallolauta/lauta.js) kesken — pinta ja
  * sen varapolku ovat yhdet.
  */
+/**
+ * Kankaan taustaväri, kun alfakanavaa ei ole (`?koe=alpha0`): lähin
+ * läpinäkymätön tausta kotelon esivanhemmista, jotta koe ei näytä
+ * rikkinäiseltä. Vara on pelin oma tumma pergamenttipohja.
+ */
+export function kankaanTausta(kotelo, vara = '#12100b') {
+  try {
+    let solmu = kotelo;
+    while (solmu) {
+      const vari = solmu.ownerDocument?.defaultView?.getComputedStyle?.(solmu)?.backgroundColor;
+      if (vari && vari !== 'transparent' && !/rgba\(\s*0\s*,\s*0\s*,\s*0\s*,\s*0\s*\)/.test(vari)) return vari;
+      solmu = solmu.parentElement;
+    }
+  } catch { /* ilman DOMia vara */ }
+  return vara;
+}
+
 export function rakennaPallo(Globe, kotelo, laatat) {
   // Pelkkä pinnoite: ei pisteitä, nimiä, kaaria eikä renkaita (omistaja
   // 4.9.2026: "älä lisää mitään sen päälle"). Pelilaudalla PELIN merkit
@@ -893,9 +910,33 @@ export function rakennaPallo(Globe, kotelo, laatat) {
    * antialias-parametri luetaan kerran tässä; asetuksen vaihto tulee
    * voimaan seuraavassa latauksessa.
    */
-  const pallo = Globe({ rendererConfig: { antialias: antialiasTarkkuudella(tarkkuusLiikkeessa()) } })(kotelo)
+  /*
+   * KOELIPPU `?koe=alpha0` (Fable 22.9.2026): LÄPINÄKYMÄTÖN KANGAS.
+   * Safarissa WebGL ajetaan omassa GPU-prosessissaan, ja läpinäkyvä
+   * kangas pakottaa komposiittorin sekoittamaan sen sivun kanssa joka
+   * kehyksessä; läpinäkymättömän kerroksen se voi näyttää sellaisenaan.
+   *
+   * MITATTU RAJOITUS (22.9.2026, WebKit): `alpha: false` EI mene läpi
+   * asti. globe.gl välittää rendererConfigin oikein
+   * (`Object.assign({antialias:!0,alpha:!0}, config)`), mutta three.js
+   * r185 luo kontekstin aina `alpha: true` -lipulla — kokeessa
+   * `getContextAttributes().alpha` on yhä tosi. Lippu jätetään mukaan,
+   * koska se on oikea pyyntö ja tulee voimaan jos three vaihtuu; TODELLA
+   * vaikuttava osa on läpinäkymätön taustaväri, jolloin kankaalla ei ole
+   * yhtään läpinäkyvää pikseliä.
+   *
+   * Koe on mittausta varten: tausta peittää kaiken, mitä kankaan alla
+   * oli, joten oletukseksi sitä ei oteta ilman omistajan päätöstä.
+   */
+  const eiAlfaa = laattakerroksenKokeet().has('alpha0');
+  const pallo = Globe({
+    rendererConfig: {
+      antialias: antialiasTarkkuudella(tarkkuusLiikkeessa()),
+      ...(eiAlfaa ? { alpha: false } : {}),
+    },
+  })(kotelo)
     .width(kotelo.clientWidth).height(kotelo.clientHeight)
-    .backgroundColor('rgba(0,0,0,0)')
+    .backgroundColor(eiAlfaa ? kankaanTausta(kotelo) : 'rgba(0,0,0,0)')
     .showAtmosphere(true).atmosphereColor('#d9a13b').atmosphereAltitude(0.18);
   asennaIlmakehanVahti(pallo, kotelo);
   if (laatat && pallo.globeTileEngineUrl) {

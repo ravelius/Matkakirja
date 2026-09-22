@@ -58,7 +58,14 @@ test('asetus muistiin, tapahtuma, ja lataustarve vain kun antialias vaihtuu', ()
 
 test('pallo lukee asetuksen: antialias renderer-luonnissa, pikselisuhde kerroksen kanssa, taso levon suhteella', () => {
   const pallo = lue('../js/pallo.js');
-  assert.match(pallo, /Globe\(\{ rendererConfig: \{ antialias: antialiasTarkkuudella\(tarkkuusLiikkeessa\(\)\) \} \}\)\(kotelo\)/);
+  /*
+   * Antialias luetaan yhä asetuksesta renderer-luonnissa; 22.9.2026
+   * rinnalle tuli koelippu `?koe=alpha0`, joka lisää samaan
+   * rendererConfigiin `alpha: false`. Asetuksen polku ei muuttunut.
+   */
+  assert.match(pallo, /antialias: antialiasTarkkuudella\(tarkkuusLiikkeessa\(\)\),/);
+  assert.match(pallo, /\.\.\.\(eiAlfaa \? \{ alpha: false \} : \{\}\),/);
+  assert.match(pallo, /\.backgroundColor\(eiAlfaa \? kankaanTausta\(kotelo\) : 'rgba\(0,0,0,0\)'\)/);
   assert.match(pallo, /if \(kerrosKaytossa\) \{ tahdistaPikselisuhde\(lepoon\); return; \}/);
   assert.match(pallo, /pikselisuhdeTarkkuudella\(tarkkuusLiikkeessa\(ikkuna\), dpr, lepoon \|\| aina\(\)\)/);
   assert.match(pallo, /lepoSuhde: Math\.min\(ikkuna\.devicePixelRatio \|\| 1, LAATU_PIKSELISUHDE_LEPO\),/);
