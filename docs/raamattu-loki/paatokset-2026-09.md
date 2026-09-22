@@ -1239,3 +1239,7 @@ Julkaisija 22.9.2026 klo 16.30: #2810 → v2110 (main e2db737ff), testit 3913/0.
 ## MAC STUDIO KAATUI JA KAYNNISTYI UUDESTAAN (KLO ~16.24); SESSIOT PALAUTUVAT; MAIN v2110 (22.9.2026 klo 16.33)
 
 Omistaja 22.9.2026 klo 16.33: kone kaatui, nyt taas toimii (uptime 9 min, load 47 käynnistyksen jälkeen). Fablen worktree ehjä (claude/bold-ride-vow4ki 27b58942c), rooli-worktreet paikallaan, main v2110. ListAgents: Julkaisija ja Karttaseppä käynnissä uudestaan, Pelikoodari, Sisältökirjuri, Laitetestaaja ja Postivahti eivät vielä (Remote Control -merkinnät offline). Fable tarkistaa keskeneräiset työt luovutuksista ja käynnistää ohjeet uudestaan kun sessiot ovat auki.
+
+## LINSSI-IDEA: OPEN INFRASTRUCTURE MAP (OSM, ODbL) DATANA OMAAN VEKTORITASOON — SAHKOVERKKO 1873 → NYT; JONOON SULAVUUDEN JALKEEN (22.9.2026 klo 16.34)
+
+Omistaja 22.9.2026 klo 16.40 kysyi, voisiko github.com/openinframap/openinframap:ia hyödyntää omassa linssissä. Fable: kyllä datana, ei palveluna — OSM-pohjainen infrakartta (voimalinjat, sähköasemat, voimalat, tietoliikenne, öljy/kaasu, vesi); koodi BSD-3, data ODbL (attribuutio © OpenStreetMap contributors); heidän laattapalvelintaan ei kytketä peliin. Toteutus: Karttaseppä tekee OSM-otteesta oman vektoritason (Euroopan ≥ 220 kV linjat ja voimalat) maakuntavektorien putkeen; tyylit ja luokittelu lainataan repon tyylistä. Linssi 'Maapallon voimat' -perheeseen: Sähkö 1873 → nyt (1873 ei verkkoa, ensimmäiset voimalat 1882). Uudet linssit vasta sulavuuden jälkeen; Karttaseppä arvioi koon ja työmäärän kun meri- ja polttotyöt ovat ohi.
