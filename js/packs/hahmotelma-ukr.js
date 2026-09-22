@@ -275,6 +275,7 @@ export const HAHMOTELMA_UKR = [
     ],
     nimi: 'Bakhchysarain palatsi',
     tyyppi: 'kulttuuri',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Kenen puolesta suru synnytti Kyynelten suihkulähteen tarinan?',

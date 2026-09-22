@@ -316,6 +316,7 @@ export const MAASTOKOHTEET_UKR = [
     },
     nimi: 'Kamjanets-Podilskyin linna',
     tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Mikä joki tekee linnasta niemen?',
       'Kuka valtasi linnan vuonna 1672?',
@@ -360,6 +361,7 @@ export const MAASTOKOHTEET_UKR = [
     },
     nimi: 'Tšernobylin ydinvoimala',
     tyyppi: 'tekniikka',
+    taso: 1,
     kysymykset: [
       'Millainen reaktori RBMK on?',
       'Miksi Prypjatin kaupunki rakennettiin?',
@@ -470,6 +472,7 @@ export const MAASTOKOHTEET_UKR = [
     ],
     nimi: 'Lviv',
     tyyppi: 'kaupunki',
+    taso: 1,
     kysymykset: [
       'Kenen mukaan Lviv on nimetty?',
       'Miksi kaupungilla on monta nimeä?',
