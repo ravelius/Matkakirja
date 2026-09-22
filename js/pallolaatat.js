@@ -984,6 +984,29 @@ export const LAATTAKERROS_ALOITUKSIA_PER_KEHYS = 2;
  */
 export const LAATTAKERROS_TEKSTUUREJA_PER_KEHYS = 2;
 /*
+ * VEDON AIKANA VIENTI BUDJETILLA (omistajan iPad-kierros v2135/v2136,
+ * 22.9.2026 klo 23.35): koe "Ei tekstuurivientejä" pudotti yli 20 ms:n
+ * kehykset 25 %:sta 8 %:iin ja p95:n 45 → 25 ms. Pääsäie oli pitkissä
+ * kehyksissä vapaana (varattu 3–5 ms, vapaa 30–40 ms): initTexture
+ * palaa nopeasti, mutta tekstuurin lataus maksetaan Safarin
+ * GPU-prosessissa, joka myöhästyttää kehyksen esityksen. Normaali vei
+ * vedossa 62–68 laattaa sekunnissa — lähes kaiken, mitä ohi vilahti.
+ *
+ * SIVUVAIKUTUS, JOKA POISTUU SAMALLA (mitattu WebKit, savuke-
+ * vientibudjetti): jokainen vedossa viety laatta häipyy sisään, ja
+ * häiveen ajan kerros ei peitä ruutua, joten kirjaston pohja (z5-laatat,
+ * dc ≈ 400) piirtyi alle 52–82 %:ssa vetokehyksistä. Budjetilla 0–8 %.
+ * Tämä oli omistajan iPad-kaappauksen "dc 431".
+ *
+ * Liikkeessä siksi korkeintaan YKSI vienti kehystä kohti ja vain NÄKYVÄ
+ * laatta (aukko ruudulla), lähin keskeltä; alueella pidetty ennakko vain
+ * VEDON_VIENTIVALI_MS:n välein (≤ 20/s). Jo alueelta pois liukuneet laatat odottavat
+ * lepoa, jolloin jono valuu entiseen tahtiin (2/kehys) — mitään ei
+ * hukata, ja häive toimii kuten ennen. Aikaväli eikä kehysmäärä, koska rAF voi käydä 60 tai
+ * 120 Hz:llä. `?koe=vientivanha` palauttaa vanhan vientitahdin vertailuun.
+ */
+export const LAATTAKERROS_VEDON_VIENTIVALI_MS = 50;
+/*
  * ZOOMIN PIIRTOKOKEET (kehittäjälippu `?koe=a,b`, Pelikoodari 22.9.2026).
  * Ranska z6 zoomin pisimmät kehykset olivat oikealla iPhonella
  * "piirtoa" — ei ladontaa, ei laskurimuutosta (docs/raportit/
@@ -2374,6 +2397,8 @@ export function luoLaattakerros({
   /** Katkaisijan jatkoajastin (kaynnista uudestaan, kun katko päättyy). */
   let katkoAjastin = 0;
   let vientiRaf = 0;
+  /** Edellisen liikkeen aikaisen viennin kehysaika (VEDON_VIENTIVALI_MS). */
+  let vedonVientiViimeksi = -Infinity;
   const vientiKehys = { kehys: 0, perakkain: 0 };
   let liikkeessaViimeksi = false;
   let taso = null;
@@ -3600,60 +3625,118 @@ export function luoLaattakerros({
       mittarit.vientejaOdottaa = vientijono.length;
       return;
     }
+    /*
+     * VEDON BUDJETTI (ks. LAATTAKERROS_VEDON_VIENTIVALI_MS): liikkeessä
+     * vain alueen laatta. Jos jonossa ei ole yhtään, silmukkaa ei pidetä
+     * käynnissä — uusi laatta tai seuraava päivitys (suorita) kutsuu
+     * ajaVientiä, ja lepo valuttaa loput.
+     */
+    const budjetti = liikkeessaViimeksi && !kokeet.has('vientivanha');
+    if (budjetti && vedonVientiehdokas() < 0) {
+      mittarit.vientejaOdottaa = vientijono.length;
+      return;
+    }
     vientiRaf = ikkuna.requestAnimationFrame((kehysAlku) => {
       vientiRaf = 0;
       // Vienti (initTexture 3–7 ms) väistää pitkää kehystä liikkeessä kuten valmistelu.
       if (kehysVaisto(kehysAlku, vientiKehys, 'vientiVaistoja')) { ajaVienti(); return; }
+      if (liikkeessaViimeksi && !kokeet.has('vientivanha')) {
+        const nytT = Number.isFinite(kehysAlku) ? kehysAlku : aika();
+        const i = vedonVientiehdokas();
+        if (i < 0) { mittarit.vientejaOdottaa = vientijono.length; return; }
+        // Näkyvä laatta (aukko ruudulla) saa viennin joka kehys; ennakko odottaa väliä.
+        if (!vientijono[i].nakyva && nytT - vedonVientiViimeksi < LAATTAKERROS_VEDON_VIENTIVALI_MS) { ajaVienti(); return; }
+        const [t] = vientijono.splice(i, 1);
+        vie(t);
+        vedonVientiViimeksi = nytT;
+        mittarit.vedonVienteja = (mittarit.vedonVienteja ?? 0) + 1;
+        if (!t.nakyva) mittarit.vedonEnnakkoja = (mittarit.vedonEnnakkoja ?? 0) + 1;
+        mittarit.vientejaOdottaa = vientijono.length;
+        if (vientijono.length) ajaVienti();
+        return;
+      }
       let n = 0;
       while (vientijono.length && n < LAATTAKERROS_TEKSTUUREJA_PER_KEHYS) {
-        const t = vientijono.shift();
-        /*
-         * SAMA AVAIN EI OLE SAMA LAATTA (mitattu 19.9.2026, erä
-         * opus-local-laastari): pelilaudan z7-laatan haku oli kesken,
-         * kun Astronautin kamera avautui, ja laastari loi heti saman
-         * avaimen laatan. `laatat.has(avain)` päästi vanhan seepialaatan
-         * asentamaan verkkonsa, eikä `poista` purkanut sitä koskaan —
-         * se jäi näyttämöön läiskänä (kankaita 74, laattoja 72). Vain
-         * taulun nykyinen olio saa asentua; orpo vapautetaan tässä.
-         */
-        if (laatat.get(t.avain) !== t) {
-          t.verkko?.geometry?.dispose?.();
-          t.tekstuuri?.dispose?.();
-          t.materiaali?.dispose?.();
-          t.verkko = null; t.tekstuuri = null; t.materiaali = null;
-          mittarit.orpoja = (mittarit.orpoja ?? 0) + 1;
-          continue;
-        }
-        if (!t.tekstuuri) continue;
-        const vientiAlkoi = aika();
-        renderer?.initTexture?.(t.tekstuuri);
-        const vientiKesti = aika() - vientiAlkoi;
-        mittarit.vientiMs = (mittarit.vientiMs ?? 0) + vientiKesti;
-        mittarit.vienteja = (mittarit.vienteja ?? 0) + 1;
-        if (vientiKesti > (mittarit.vientiMax ?? 0)) mittarit.vientiMax = vientiKesti;
-        // Suoran bittikartan viennit erikseen (kohta 10: mittaus kangas vs nollakopio).
-        if (t.suoraKuva) {
-          mittarit.vientiMsSuora = (mittarit.vientiMsSuora ?? 0) + vientiKesti;
-          mittarit.vientejaSuora = (mittarit.vientejaSuora ?? 0) + 1;
-        }
-        // Suora bittikartta on nyt näytönohjaimella: keskusmuistin kopio kiinni.
-        if (t.suoraKuva) { try { t.tekstuuri.image?.close?.(); } catch { /* jo kiinni */ } }
-        t.viety = true;
-        n += 1;
-        /*
-         * VALMIS LAATTA MENEE SCENEEN, JOS SE ON YHÄ ALUEELLA — näkyvä
-         * tai juuri nähty (pito). Vanha ehto (vain `nakyva`) jätti
-         * heilurin ääripään laatan scenen ulkopuolelle, kun tekstuuri
-         * sattui valmistumaan sillä kehyksellä, jolla laatta oli
-         * käännöksen toisella puolella (omistajan palaute v1649).
-         */
-        if (t.nakyva || t.pito) {
-          lisaaSceneen(t);
-          if (kerrokset.reliefi) pyramidinLinssiketju('laatta-ruudulla');
-        }
+        if (vie(vientijono.shift())) n += 1;
       }
+      mittarit.vientejaOdottaa = vientijono.length;
       if (vientijono.length) ajaVienti();
     });
+  };
+
+  /**
+   * Liikkeen aikainen vientiehdokas: näkyvä ensin, sitten alueella pidetty
+   * (ennakko, tuki), kummassakin lähin keskeltä. Indeksi tai -1.
+   *
+   * ENNAKKO MUKAAN (mitattu WebKit 390 × 844, savuke-vientibudjetti):
+   * pelkillä näkyvillä vedon reunaan tuleva laatta puuttui muutaman
+   * kehyksen, jolloin kerros ei peittänyt ruutua ja kirjaston pohja
+   * (z5-laatat) piirtyi alle — dc 400–423 joka vedossa. Ennakon kanssa
+   * dc 42–47 (pohja piilossa) ja vientejä silti ~37 per kolme vetoa, kun
+   * vanha tahti vei samoista vedoista 36–180.
+   */
+  const vedonVientiehdokas = () => {
+    let paras = -1;
+    let parasSija = Infinity;
+    for (let i = 0; i < vientijono.length; i += 1) {
+      const t = vientijono[i];
+      if (!t.tekstuuri || laatat.get(t.avain) !== t) continue;
+      if (!t.nakyva && !t.pito) continue;
+      const sija = (t.nakyva ? 0 : 1e9) + (t.etaisyys ?? 0);
+      if (sija < parasSija) { paras = i; parasSija = sija; }
+    }
+    return paras;
+  };
+
+  /**
+   * Yksi laatta näytönohjaimelle ja sceneen. Palauttaa true, jos vienti
+   * tehtiin (orpo tai tekstuuriton laatta ei kuluta budjettia).
+   */
+  const vie = (t) => {
+    /*
+     * SAMA AVAIN EI OLE SAMA LAATTA (mitattu 19.9.2026, erä
+     * opus-local-laastari): pelilaudan z7-laatan haku oli kesken,
+     * kun Astronautin kamera avautui, ja laastari loi heti saman
+     * avaimen laatan. `laatat.has(avain)` päästi vanhan seepialaatan
+     * asentamaan verkkonsa, eikä `poista` purkanut sitä koskaan —
+     * se jäi näyttämöön läiskänä (kankaita 74, laattoja 72). Vain
+     * taulun nykyinen olio saa asentua; orpo vapautetaan tässä.
+     */
+    if (laatat.get(t.avain) !== t) {
+      t.verkko?.geometry?.dispose?.();
+      t.tekstuuri?.dispose?.();
+      t.materiaali?.dispose?.();
+      t.verkko = null; t.tekstuuri = null; t.materiaali = null;
+      mittarit.orpoja = (mittarit.orpoja ?? 0) + 1;
+      return false;
+    }
+    if (!t.tekstuuri) return false;
+    const vientiAlkoi = aika();
+    renderer?.initTexture?.(t.tekstuuri);
+    const vientiKesti = aika() - vientiAlkoi;
+    mittarit.vientiMs = (mittarit.vientiMs ?? 0) + vientiKesti;
+    mittarit.vienteja = (mittarit.vienteja ?? 0) + 1;
+    if (vientiKesti > (mittarit.vientiMax ?? 0)) mittarit.vientiMax = vientiKesti;
+    // Suoran bittikartan viennit erikseen (kohta 10: mittaus kangas vs nollakopio).
+    if (t.suoraKuva) {
+      mittarit.vientiMsSuora = (mittarit.vientiMsSuora ?? 0) + vientiKesti;
+      mittarit.vientejaSuora = (mittarit.vientejaSuora ?? 0) + 1;
+    }
+    // Suora bittikartta on nyt näytönohjaimella: keskusmuistin kopio kiinni.
+    if (t.suoraKuva) { try { t.tekstuuri.image?.close?.(); } catch { /* jo kiinni */ } }
+    t.viety = true;
+    /*
+     * VALMIS LAATTA MENEE SCENEEN, JOS SE ON YHÄ ALUEELLA — näkyvä
+     * tai juuri nähty (pito). Vanha ehto (vain `nakyva`) jätti
+     * heilurin ääripään laatan scenen ulkopuolelle, kun tekstuuri
+     * sattui valmistumaan sillä kehyksellä, jolla laatta oli
+     * käännöksen toisella puolella (omistajan palaute v1649).
+     */
+    if (t.nakyva || t.pito) {
+      lisaaSceneen(t);
+      if (kerrokset.reliefi) pyramidinLinssiketju('laatta-ruudulla');
+    }
+    return true;
   };
 
   /* ---------------- scene ---------------- */
@@ -4431,6 +4514,8 @@ export function luoLaattakerros({
     mittarit.paivityksia += 1;
     mittarit.syy = '';
     kaynnista();
+    // Vedon budjetti: jonon laatta voi tulla näkyviin vasta tässä päivityksessä.
+    if (liikkeessaNyt && vientijono.length) ajaVienti();
     return true;
   }
 
