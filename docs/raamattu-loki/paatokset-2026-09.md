@@ -1299,3 +1299,7 @@ Omistaja 22.9.2026 klo 17.20: polton voi aloittaa. Karttaseppä ajaa ajo-2026092
 ## JULKAISIJA NOLLATTU (69 %, LUOVUTUS #2820) POLTON AJAKSI; CI-TAUKO POLTON LOPPUUN (22.9.2026 klo 17.18)
 
 Fable 22.9.2026 klo 17.25: Julkaisijan luovutus 99c15c641 (#2820) kuitattu, nollauskaava ajettu, worktree Matkakirja-julkaisija. Uusi sessio: CI-tauko polton ajan (ei savukkeita, dispatcheja, pushauksia), polton jälkeen Karttasepän laattaversio omana versiona, sitten Pelikoodarin C–E.
+
+## MITTARIVIRHE VAHVISTETTU: SEURAAMISVIRHEHARNESS LUKI KAMERAN OMASTA rAF-SILMUKASTA (EI onBeforeRender) → KAIKKI TAHANASTISET SEURAAMISVIRHELUVUT PATEMATTOMIA; KORJAUS ONBEFORERENDERIIN, UUSI VETO POLTON JALKEEN (22.9.2026 klo 17.21)
+
+Laitetestaaja 22.9.2026 klo 17.35: harness luki pallo.getScreenCoords omasta requestAnimationFrame-silmukasta, ei kirjaston onBeforeRender/kytkePallonKehys-koukusta → kilpailu kirjaston silmukan kanssa tuotti 0/2×-kuvion mittarissa. Koskee kaikkea seuraamisvirhedataa (myös 16.10 kierrokset ja interpolointi-A/B); raakadataa ei voi korjata jälkikäteen (väärä arvo tallentui). Korjaus: luku scene.onBeforeRenderissä synkronisesti ennen piirtoa; itsetesti, PR, uusi omistajan veto polton jälkeen. Interpolointia ei palauteta ennen uutta mittausta. Aiemmat päätelmät 'p10 = 0 kaikissa kierroksissa' ja 'pysähdys + ylikorjaus' ovat siis todistamattomia; omistajan tuntuma (tahmea lähtö, kiihtyminen) pysyy havaintona.
