@@ -113,7 +113,7 @@ import { kuvatekstiLyhyt, kuvatekstiPitka } from './kuvatekstit.js';
 import {
   html, jaaKappaleiksi, kuunteleSulkevaNapautus, linssiEstaa, NAPAUTUKSEN_KESTO_MS,
   arvonimenPaikkaMaalle, nielaiseSulkevaNapautus, polloNimilappu, RAAHAUKSEN_KYNNYS,
-  suurennoksenMitat,
+  suurennoksenMitat, lehtipalstaKotelo,
 } from './ui-apurit.js';
 import { nostokuvaAloita, nostokuvaKortissa, nostokuvaTurvaAlue } from './nostokuva.js';
 import { piirraReaktiot } from './reaktiot.js';
@@ -5441,7 +5441,8 @@ function piirraKohdeTeksti(ui, sisalto, kohde) {
   for (const kappale of jaaKappaleiksi(kohde.teksti)) {
     teksti.appendChild(piirraKohdeKappale(ui, kohde, kappale, jaljella));
   }
-  sisalto.appendChild(teksti);
+  // Pitkä teksti lehtipalstoihin (ui-apurit lehtipalstaKotelo).
+  sisalto.appendChild(lehtipalstaKotelo(teksti, kohde.teksti));
 }
 
 /** Kortin loppuun enintään kaksi valmista kysymystä pöllölle. */

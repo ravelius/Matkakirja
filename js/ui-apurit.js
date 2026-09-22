@@ -1845,6 +1845,57 @@ export function virkkeiksi(teksti) {
   return ulos.filter(Boolean);
 }
 
+/*
+ * ── LEHTIPALSTAT PITKÄLLE NOSTOTEKSTILLE (omistaja 22.9.2026 klo 23.48,
+ * iPad pystyssä, sanatarkasti: *"Kaksi erilaista. Tuo kaksi palstaa näyttää
+ * paremmalta kaiken kaikkiaan myös muuten. Voisi tehdä kaikkiin pidempiin
+ * ainakin."*) ────────────────────────────────────────────────────────────
+ *
+ * Skandaalikortin lööppi latoo leipätekstin kahteen CSS-palstaan
+ * anfangilla (css/fokusnosto.css osio 9, .looppi-leipa). Sama malli
+ * kaikkien karttakorttien PITKÄÄN leipätekstiin: kohdekortti, eläintäky,
+ * historian hetki, syvennys ja maalehden nosto.
+ *
+ * PITKÄ = vähintään kaksi KIRJOITTAJAN kappaletta (tyhjä rivi tekstissä)
+ * tai vähintään LEHTIPALSTA_MERKKEJA merkkiä. Automaattista puolitusta
+ * (jaaKappaleiksi alla, ≥ 3 virkettä → kaksi kappaletta) ei lasketa:
+ * muuten jokainen kolmen virkkeen lyhyt teksti menisi kahteen kapeaan
+ * palstaan, ja juuri lyhyen tekstin omistaja halusi pitää yhdessä.
+ *
+ * LEVEYS RATKAISEE CSS:SSÄ, EI TÄÄLLÄ. Palstat tulevat vasta kun tekstin
+ * OMA leveys riittää (css/styles.css .lehtipalsta-kotelo, container
+ * query): puhelimella ja kapeassa kortissa yksi palsta, iPadin
+ * kuvakortissa kaksi. Sama sääntö toimii myös ≥ 1100 px:n kuva/teksti-
+ * taitossa (js/nostokuva.js nostoPalstoiksi), jossa tekstipalsta on
+ * kapeampi kuin kortti — siellä ratkaisee tekstipalstan leveys.
+ */
+export const LEHTIPALSTA_MERKKEJA = 600;
+
+/** Onko nostoteksti niin pitkä, että se saa lehtipalstat (ks. yllä)? */
+export function onPitkaNostoteksti(teksti) {
+  const koko = String(teksti ?? '').trim();
+  if (koko.length >= LEHTIPALSTA_MERKKEJA) return true;
+  return koko.split(/\n{2,}/).map((k) => k.trim()).filter(Boolean).length >= 2;
+}
+
+/**
+ * Leipätekstin kotelo lehtipalstoja varten. Pitkä teksti saa luokan
+ * `lehtipalsta` ja kotelon `.lehtipalsta-kotelo`, jonka leveys on
+ * container queryn mitta (css/styles.css); lyhyt palautetaan
+ * sellaisenaan. Palauttaa solmun, joka liitetään korttiin tekstin
+ * paikalle.
+ *
+ * @param {Element} tekstiEl  valmis leipätekstielementti (kappaleet sisällä)
+ * @param {string} lahde      sama teksti merkkijonona (pituuden mittaus)
+ */
+export function lehtipalstaKotelo(tekstiEl, lahde) {
+  if (!tekstiEl || !onPitkaNostoteksti(lahde)) return tekstiEl;
+  tekstiEl.classList.add('lehtipalsta');
+  const kotelo = html('div', 'lehtipalsta-kotelo');
+  kotelo.appendChild(tekstiEl);
+  return kotelo;
+}
+
 export function jaaKappaleiksi(teksti) {
   const koko = String(teksti ?? '').trim();
   /*

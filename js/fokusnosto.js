@@ -75,7 +75,7 @@ import { merkitseLivianNosto } from './livia-tilanteet.js';
 import {
   arvonimenPaikkaMaalle, fokusmoodiPaalla, html, jaaKappaleiksi,
   kuunteleSulkevaNapautus, linssiEstaa, nielaiseSulkevaNapautus,
-  polloNimilappu, TOAST_MS,
+  polloNimilappu, TOAST_MS, lehtipalstaKotelo,
 } from './ui-apurit.js';
 import { asetaKuva, assetOsoite } from './media.js';
 import { kuvatekstiLyhyt } from './kuvatekstit.js';
@@ -1021,7 +1021,9 @@ function piirraNostonSisus(ui, sisalto, nosto, valmisKuva) {
   for (const kappale of jaaKappaleiksi(nosto.teksti)) {
     teksti.appendChild(html('p', '', kappale));
   }
-  tekstipalsta.appendChild(teksti);
+  // Pitkä teksti lehtipalstoihin (ui-apurit lehtipalstaKotelo) — paitsi
+  // lööpissä, jolla on omat palstansa (.looppi-leipa, osio 9).
+  tekstipalsta.appendChild(looppi ? teksti : lehtipalstaKotelo(teksti, nosto.teksti));
   if (nosto.valokuva) piirraNostonValokuva(ui, tekstipalsta, nosto.valokuva);
   /*
    * KORTIN LÄHDERIVI POIS (omistaja 20.9.2026, kaappaus nosto-lahderivi-

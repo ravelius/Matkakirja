@@ -29028,3 +29028,51 @@ body.kerros-pois-ui .ylapalkki-nappi,
 body.kerros-pois-ui .pallolauta-maapaneeli,
 body.kerros-pois-ui .kartuutsi,
 body.kerros-pois-ui .pallolauta-kartuutsi { display: none !important; }
+
+/* ===========================================================================
+   LEHTIPALSTAT PITKÄLLE NOSTOTEKSTILLE (omistaja 22.9.2026 klo 23.48, iPad
+   pystyssä: "Kaksi erilaista. Tuo kaksi palstaa näyttää paremmalta kaiken
+   kaikkiaan myös muuten. Voisi tehdä kaikkiin pidempiin ainakin.")
+   ---------------------------------------------------------------------------
+   Skandaalikortin lööpin leipätekstimalli (css/fokusnosto.css osio 9,
+   .looppi-leipa: kaksi palstaa, anfangi, palstaväli 1,4 rem, vasen tasaus)
+   kaikkien karttakorttien PITKÄÄN leipätekstiin — kohdekortti, eläintäky,
+   historian hetki, syvennys, maalehden nosto. Pituuden ratkaisee JS
+   (js/ui-apurit.js onPitkaNostoteksti): lyhyt teksti ei saa luokkaa eikä
+   koteloa, joten se pysyy yhtenä palstana kaikilla leveyksillä.
+
+   TÄÄLTÄ TÄYSIN ERIKSEEN RATKEAA LEVEYS: container query tekstin OMASTA
+   leveydestä, ei ruudun. Silloin sama sääntö toimii kolmessa eri
+   tilanteessa ilman erikoistapauksia:
+     - puhelin ja kapea tekstikortti (34 rem)  → yksi palsta;
+     - iPadin kuvakortti pinona (~760 px)       → kaksi palstaa;
+     - ≥ 1100 px kuva/teksti-taitto: tekstipalsta on ~500 px kuvan
+       vieressä → yksi palsta (kaksi ~240 px:n palstaa olisi alle 35
+       merkkiä rivillä; mitattu tools/mittaa-lehtipalstat.mjs).
+   Kotelo on oma elementtinsä (.lehtipalsta-kotelo), koska container-
+   type tuo mukanaan layout-rajauksen: sitä ei haluta kortin vieritys-
+   koteloon, jossa se muuttaisi kiinteästi asemoitujen lasten
+   sijoituspohjaa. Tekstikotelossa on vain kappaleita.
+   =========================================================================== */
+.lehtipalsta-kotelo { container-type: inline-size; }
+
+@container (min-width: 600px) {
+  .lehtipalsta {
+    column-count: 2;
+    column-gap: 1.4rem;
+    text-align: left;
+    hyphens: auto;
+  }
+  .lehtipalsta p { margin: 0 0 0.65em; }
+  .lehtipalsta p:last-child { margin-bottom: 0; }
+  /* Anfangi vain palstoissa: lehden etusivun ele, ei puhelimen pino. */
+  .lehtipalsta p:first-of-type::first-letter {
+    float: left;
+    font-family: var(--font-type);
+    font-size: 3.1em;
+    line-height: 0.82;
+    font-weight: 700;
+    padding: 0.06em 0.12em 0 0;
+    color: rgba(70, 51, 31, 0.9);
+  }
+}

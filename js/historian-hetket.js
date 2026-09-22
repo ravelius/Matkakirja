@@ -53,7 +53,7 @@
  * HETKI_/hetki-etuliitteellä.
  */
 import {
-  fokusmoodiPaalla, html, jaaKappaleiksi, nielaiseSulkevaNapautus, TOAST_MS,
+  fokusmoodiPaalla, html, jaaKappaleiksi, nielaiseSulkevaNapautus, TOAST_MS, lehtipalstaKotelo,
 } from './ui-apurit.js';
 import { natiiviVastaus } from './natiivi.js';
 import { HISTORIAN_HETKET, hetkenKuvat } from './packs/historian-hetket.js';
@@ -303,7 +303,8 @@ function piirraHetkenSisus(ui, sailio, iso, hetki, valmisKuva) {
   for (const kappale of jaaKappaleiksi(hetki.teksti ?? '')) {
     teksti.appendChild(html('p', '', kappale));
   }
-  sailio.appendChild(teksti);
+  // Pitkä teksti lehtipalstoihin (ui-apurit lehtipalstaKotelo).
+  sailio.appendChild(lehtipalstaKotelo(teksti, hetki.teksti));
   piirraHetkiVisa(ui, sailio, iso, hetki);
 }
 
