@@ -107,7 +107,7 @@ export const RAAMATTU = {
           + 'repair, ja symlinkki vanhasta polusta uuteen (session cwd osoittaa vanhaan; ilman '
           + 'symlinkkiä viesti ei mene perille). Omistajaa ei tarvita; "Choose folder" vain '
           + 'siisteydeksi. '
-          + 'FABLEN OMA NOLLAUS (omistaja 21.9.2026 ilta): kun Fable ylittää 70 % (Postivahti '
+          + 'FABLEN OMA NOLLAUS (omistaja 21.9.2026 ilta, raja 65 % 22.9.): kun Fable ylittää 65 % (Postivahti '
           + 'ilmoittaa tai Fable näkee get_usage self), Fable kirjoittaa luovutuksen '
           + 'docs/raportit/viesti-fable-luovutus-<pvm>.md ja aloitusviestin '
           + 'docs/raportit/viesti-fable-aloitus.md, pushaa, ja pyytää Postivahtia: kytke '

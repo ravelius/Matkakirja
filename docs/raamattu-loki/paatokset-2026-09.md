@@ -987,3 +987,7 @@ Omistaja 22.9.2026 klo 11.50: esilatausta muuallekin. Fable Pelikoodarille suunn
 ## KOHTAAMISET C4 HYVAKSYTTY (TALLINNA, VILNA, BARCELONA, PRAHA, MOSKOVA, LJUBLJANA) (22.9.2026 klo 10.07)
 
 Fable 22.9.2026 klo 12.00: C4 (docs/raportit/kohtaamiset-era-c4-20260922.md, sisalto-kohtaamiset-c4 16ce6cc10): Tallinna lyhdynsytyttäjä Miina (kaasuvalo 1865), Vilna kirjansitoja Aldona (lehdistökielto 1864–1904, kiristyi 1873), Barcelona kivenveistäjä Pau (Sagrada Família vasta 1882), Praha kellonvartija Věra (Orlojin apostolit 1865–66), Moskova lukkoseppä Stepan (GUM vasta 1893), Ljubljana kukkakauppias Vesna (Kolmisilta yksiosainen 1873). Hyväksytty, kuusi kuvaa Codexilta. C5 lupa.
+
+## FABLEN NOLLAUSRAJA 65 %; ESILATAUS ILMAN MOBIILIBUDJETTIA; FABLE NOLLAA ITSENSA (LUOVUTUS 22.9.) (22.9.2026 klo 10.09)
+
+Omistaja 22.9.2026 klo 12.05: Fablen nollausraja 65 % (Raamattu päivitetty); esilatauksessa ei erillistä mobiilibudjettia. Julkaisija: ei aja worktree remove/prune/branch -D, vain gh --delete-branch (etähaara); app ei ole tehnyt worktreitä → Karttasepän worktreen poistaja tuntematon. Codex-tilaus 11 (C3-kohtaamiskuvat) postilaatikkoon. Fable (72 %) tekee luovutuksen docs/raportit/viesti-fable-luovutus-20260922.md ja nollaa itsensä Postivahdin kautta Raamatun kaavalla.
