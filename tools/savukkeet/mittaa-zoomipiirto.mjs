@@ -25,9 +25,11 @@
  *     SAVUKE_MOOTTORI=chromium|webkit  PORTAAT=1,6  NAKYMAT=ranska
  *     KOKEET=perus,aniso1,eimip,eihaive  ULOS=<kansio>  CPU=4 (Chromium-kuristus)
  *
- * Kokeet vaihtavat pallolaatat.js:n asetuksia sivun sisällä
- * (window.__zoomipiirtoKoe luetaan ennen laudan luontia, ks.
- * js/pallolaatat.js `koeasetus`).
+ * Kokeet kulkevat osoitteen `?koe=`-lipussa: laattojen kokeet lukee
+ * js/pallolaatat.js laattakerroksenKokeet (aniso1, eimip, silmat40,
+ * eihaive, vientilepo), DOM-kerrosten kokeet js/pallolauta/kerrokset.js
+ * asennaPiirtokokeet (eiliike, eiblend, eikasvot, eipollo, eicss2d).
+ * KOKEET=perus,eiliike+eipollo — '+' yhdistää.
  */
 import http from 'node:http';
 import { readFileSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
@@ -78,46 +80,7 @@ const prosenttipiste = (arvot, q) => {
   return s[Math.min(s.length - 1, Math.floor(q * (s.length - 1)))];
 };
 
-/** Sivun sisäinen kehysprofiili: dt, varattu (pääsäie), absoluuttiset laskurit. */
-const PROFIILI = `(() => {
-  const ui = window.matkakirja.ui; const l = ui.pallolauta; const pallo = ui.pallonInstanssi;
-  const lue = () => {
-    const laatat = l.lepokerros?.()?.mittarit?.() ?? {};
-    const s = l.glSovitin?.(); const st = s?.tila?.() ?? {};
-    const k = ui.pallolautaGL?.()?.mittarit?.() ?? {};
-    const info = pallo.renderer?.()?.info ?? {};
-    return {
-      pyyntoja: laatat.pyyntoja ?? 0, purettuja: laatat.purettuja ?? 0, paivityksia: laatat.paivityksia ?? 0,
-      scenessa: laatat.scenessa ?? 0, hapyvia: laatat.hapyvia ?? 0, nakyvia: laatat.nakyvia ?? 0, taso: laatat.taso ?? null,
-      jakoja: (st.jakoja ?? 0) + (st.nostojakoja ?? 0), rasterit: st.rasterit?.valmiita ?? 0,
-      rakennuksia: k.rakennuksia ?? 0, tekstuurit: info.memory?.textures ?? 0,
-      drawcalls: info.render?.calls ?? 0, kolmiot: info.render?.triangles ?? 0,
-    };
-  };
-  const kanava = new MessageChannel();
-  let tila = null;
-  let odottaa = null;
-  kanava.port1.onmessage = () => { if (odottaa) { odottaa.kehys.varattu = performance.now() - odottaa.alku; odottaa = null; } };
-  window.__zoomipiirto = {
-    aloita() {
-      tila = { kehykset: [], kaynnissa: true, t: performance.now(), alku: performance.now() };
-      const askel = () => {
-        if (!tila.kaynnissa) return;
-        const nyt = performance.now(); const dt = nyt - tila.t; tila.t = nyt;
-        const kehys = { t: nyt - tila.alku, dt, varattu: null, ...lue() };
-        tila.kehykset.push(kehys);
-        odottaa = { alku: nyt, kehys };
-        kanava.port2.postMessage(0);
-        requestAnimationFrame(askel);
-      };
-      requestAnimationFrame(askel);
-    },
-    lopeta() {
-      if (!tila) return null; tila.kaynnissa = false;
-      return { alku: tila.alku, kehykset: tila.kehykset.slice(1) };
-    },
-  };
-})()`;
+/* Sivun sisäinen kehysprofiili on js/pallolauta/kehysprofiili.js (asennetaan, kun ?kerrokset= tai ?koe= on osoitteessa). */
 
 /** Profiilin näytteet kehyksiin: self-aika funktioittain pitkissä kehyksissä. */
 function kokoaProfiili(profiili, kehykset, aikaSiirto, raja) {
@@ -165,7 +128,7 @@ const selain = MOOTTORI === 'webkit'
   : await paketti.chromium.launch({ executablePath: process.env.CHROMIUM || undefined, args: ['--use-angle=metal', '--ignore-gpu-blocklist'] });
 for (const koe of KOKEET) for (const porras of PORTAAT) {
   const ctx = await selain.newContext({ viewport: VIEWPORT, deviceScaleFactor: DPR, isMobile: true, hasTouch: true, serviceWorkers: 'block' });
-  await ctx.addInitScript((d) => { localStorage.setItem('matkakirja-save-v1', d.tallenne); localStorage.removeItem('matkakirja-lauta'); window.__zoomipiirtoKoe = d.koe; }, { tallenne, koe });
+  await ctx.addInitScript((d) => { localStorage.setItem('matkakirja-save-v1', d.tallenne); localStorage.removeItem('matkakirja-lauta'); }, { tallenne });
   const sivu = await ctx.newPage();
   const virheet = [];
   sivu.on('pageerror', (e) => virheet.push(String(e.message)));
@@ -177,26 +140,19 @@ for (const koe of KOKEET) for (const porras of PORTAAT) {
     cdp = await ctx.newCDPSession(sivu);
     if (CPU > 1) await cdp.send('Emulation.setCPUThrottlingRate', { rate: CPU });
   }
-  await sivu.goto(`${osoite}?lauta=pallo&kerrokset=${porras}`, { waitUntil: 'domcontentloaded', timeout: 90000 });
+  // Koe kulkee osoitteessa (`?koe=`), jotta Laitetestaaja toistaa saman laitteella; '+' erottaa yhdistelmän.
+  await sivu.goto(`${osoite}?lauta=pallo&kerrokset=${porras}${koe && koe !== 'perus' ? `&koe=${koe.split('+').join(',')}` : ''}`, { waitUntil: 'domcontentloaded', timeout: 90000 });
   await sivu.waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null, { timeout: 90000 });
   await sivu.waitForTimeout(2500);
   await sivu.evaluate(() => { setInterval(() => { const ui = window.matkakirja?.ui; const n = ui?.ohitaNappi?.isConnected ? ui.ohitaNappi : document.querySelector('.fokusvirta-ohitanappi'); if (n) n.click(); }, 150); });
   await sivu.waitForTimeout(2000);
   await sivu.evaluate(() => window.matkakirja.ui.pallolauta.saavu?.({ kesto: 0 }));
   await sivu.waitForTimeout(1500);
-  /* CSS-kokeet (eivät koske pallolaatat.js:ää): mikä DOM-kerros pallon päällä maksaa komposiittorissa. */
-  const CSS_KOKEET = {
-    eiliike: '.pallolauta-liike{display:none!important}',
-    eiblend: '.pallolauta-liike-savy,.pallolauta-liike-pilvi{mix-blend-mode:normal!important}',
-    eikasvot: '.livia-kasvot-pinta{display:none!important}',
-    eipollo: '.pollo-nappi,.livia-kasvot-pinta{display:none!important}',
-  };
-  for (const k of koe.split('+')) if (CSS_KOKEET[k]) await sivu.addStyleTag({ content: CSS_KOKEET[k] });
-  await sivu.evaluate(PROFIILI);
+  await sivu.waitForFunction(() => Boolean(window.__kehysprofiili), null, { timeout: 30000 });
   const gpu = await sivu.evaluate(() => {
     const gl = window.matkakirja.ui.pallonInstanssi.renderer?.()?.getContext?.();
     const d = gl?.getExtension?.('WEBGL_debug_renderer_info');
-    return { renderer: d ? gl.getParameter(d.UNMASKED_RENDERER_WEBGL) : gl?.getParameter?.(gl.RENDERER), aniso: gl?.getExtension?.('EXT_texture_filter_anisotropic') ? 'on' : 'ei', koe: window.__zoomipiirtoKoeTila ?? null };
+    return { renderer: d ? gl.getParameter(d.UNMASKED_RENDERER_WEBGL) : gl?.getParameter?.(gl.RENDERER), aniso: gl?.getExtension?.('EXT_texture_filter_anisotropic') ? 'on' : 'ei', koe: [...document.body.classList].filter((c) => c.startsWith('piirtokoe-')), laattakoe: window.matkakirja.ui.pallolauta.lepokerros?.()?.mittarit?.()?.kokeet ?? null };
   });
   for (const nakyma of NAKYMAT) {
     await sivu.evaluate((pov) => { window.matkakirja.ui.pallolauta.heraa?.(); window.matkakirja.ui.pallonInstanssi.pointOfView(pov, 0); }, KOHTEET[nakyma]);
@@ -206,12 +162,12 @@ for (const koe of KOKEET) for (const porras of PORTAAT) {
     // ── ZOOMI: sisään kolmasosaan ja takaisin, kirjaston tween; profiloija päällä ──
     let profiloijanAlku = 0;
     if (cdp) { await cdp.send('Profiler.enable'); await cdp.send('Profiler.setSamplingInterval', { interval: 250 }); await cdp.send('Profiler.start'); profiloijanAlku = await sivu.evaluate(() => performance.now()); }
-    await sivu.evaluate(() => window.__zoomipiirto.aloita());
+    await sivu.evaluate(() => window.__kehysprofiili.aloita());
     await sivu.evaluate((pov) => window.matkakirja.ui.pallonInstanssi.pointOfView({ ...pov, altitude: pov.altitude / 3 }, 1500), KOHTEET[nakyma]);
     await sivu.waitForTimeout(1700);
     await sivu.evaluate((pov) => window.matkakirja.ui.pallonInstanssi.pointOfView(pov, 1500), KOHTEET[nakyma]);
     await sivu.waitForTimeout(1700);
-    const zoomi = await sivu.evaluate(() => window.__zoomipiirto.lopeta());
+    const zoomi = await sivu.evaluate(() => window.__kehysprofiili.lopeta());
     let profiili = null;
     if (cdp) { profiili = (await cdp.send('Profiler.stop')).profile; await cdp.send('Profiler.disable'); }
     const kehykset = zoomi.kehykset;

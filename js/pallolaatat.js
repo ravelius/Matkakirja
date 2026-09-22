@@ -966,7 +966,7 @@ export const LAATTAKERROS_TEKSTUUREJA_PER_KEHYS = 1;
  * Ei vaikuta ilman lippua; yksikkötestit eivät anna lippua.
  */
 export function laattakerroksenKokeet(haku = globalThis.location?.search ?? '') {
-  const arvo = (() => { try { return new URLSearchParams(haku).get('koe') ?? globalThis.__zoomipiirtoKoe ?? ''; } catch { return ''; } })();
+  const arvo = (() => { try { return new URLSearchParams(haku).get('koe') ?? ''; } catch { return ''; } })();
   return new Set(String(arvo).split(',').map((k) => k.trim()).filter(Boolean));
 }
 /** Häive sisään ja ulos (ms). Reduced motion: 0. */

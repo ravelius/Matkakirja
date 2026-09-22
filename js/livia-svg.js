@@ -322,6 +322,7 @@ let lvSerial=0;
  * päivitetään linnun ja siipien transform-attribuutit paikalleen; koko
  * kuva rakennetaan vasta, kun asento oikeasti vaihtuu.
  */
+const lvLeijuVanha=()=>{try{return new URLSearchParams(globalThis.location?.search??'').get('koe')?.split(',').includes('leijuvanha')??false;}catch{return false;}};
 const lvLeijuntaAvain=s=>{try{return JSON.stringify({...s,mapHover:s.mapHover?.height??null});}catch{return null;}};
 export function luoLivianSvg(element) {
  let right=0;const prefix='livia'+(++lvSerial);
@@ -331,6 +332,8 @@ export function luoLivianSvg(element) {
  /* Vaihe-eron paikkaus: true, kun kuva päivitettiin ilman rakennusta. */
  function paikkaa(s){
   if(!(s?.mapHover?.height>=1)||!element.querySelector)return false;
+  // Mittauslippu `?koe=leijuvanha`: vanha tapa (koko kuva joka kehys) vertailuksi.
+  if(lvLeijuVanha())return false;
   const avain=lvLeijuntaAvain(s);
   if(avain==null||avain!==viimeAvain)return false;
   if(!osat){
