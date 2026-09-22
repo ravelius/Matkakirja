@@ -100,3 +100,10 @@ Viimeisen kierroksen testit: 3933 yhteensä, 3920 PASS, 13 SKIP, 0 FAIL.
 Kohdesarja 8/8 PASS; kaksoisavaimet, niputus, savukevartio, nimiöt ja
 diff-check PASS. Kyyry, suljettu kirja ja vihellys, lasien oikaisu sekä
 tervehdyksen suu ja ylös nostettu siipi tarkistettu lähikuvista.
+
+Kirjan käännön jatkopalaute: pelkkä tasopyörähdys kiinteän keskipisteen
+ympäri näytti robottimaiselta. Kääntöön lisättiin ranteen vastaliike,
+kirjan nosto rinnan lähelle, kaksi epäsymmetristä kiertoa ja lyhyt
+otteenvaihto niiden väliin. Kirja kallistuu syvyyssuunnassa, ja siipi,
+sulat sekä vartalo seuraavat omilla viiveillään. Tämä muuttaa vain
+kiireisen kirjahaun suljetun kirjan käsittelyä; rauhallinen selaus säilyy.
