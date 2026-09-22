@@ -241,6 +241,7 @@ export const HAHMOTELMA_CYP = [
     ],
     nimi: 'Akamas',
     tyyppi: 'vuori',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Minkä sankarin mukaan Akamas on nimetty?',
@@ -767,6 +768,7 @@ export const HAHMOTELMA_CYP = [
     ],
     nimi: 'Kyrenia',
     tyyppi: 'historia',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Minä vuonna venetsialaiset laajensivat Kyrenian linnaa nykyiseen asuunsa?',
@@ -830,6 +832,7 @@ export const HAHMOTELMA_CYP = [
     ],
     nimi: 'Famagusta',
     tyyppi: 'kauppa',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Minkä kaupungin seuraajaksi Famagusta perustettiin?',
