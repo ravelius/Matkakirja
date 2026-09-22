@@ -1095,3 +1095,7 @@ Omistaja 22.9.2026 klo 18.10: työstää seuraavaksi pulua Codexin kanssa; tieto
 ## POSTIVAHDIN KIERROS 5 MIN KAHDEKSI TUNNIKSI (OMISTAJA) (22.9.2026 klo 13.21)
 
 Omistaja 22.9.2026 klo 18.15: posteja tulee tiheämmin (pulutyö Codexin kanssa) → Postivahdin kierros 10 → 5 minuuttia seuraavat kaksi tuntia (noin klo 20.15 asti), sitten takaisin 10 minuuttiin.
+
+## OIKAISU: FABLEN LOKITEKSTIEN KELLONAJAT 22.9. KLO 10.19–13.21 OVAT NOIN 3 TUNTIA LIIAN MYOHAISIA; OTSIKOIDEN LEIMAT OVAT OIKEIN (22.9.2026 klo 13.22)
+
+Omistaja 22.9.2026 (Macin kello 13.22): Fable arvasi tekstien sisällä kellonajat väärin — tämän päivän merkinnöissä otsikoilla 10.19–13.21 tekstin ajat (esim. 'klo 13.20' … 'klo 18.15') ovat noin kolme tuntia liian myöhäisiä; oikea aika on otsikon leima (tools/raamattu-kirjaa.mjs lukee kellon). Sama koskee docs/raportit/sulavuus-katsaus-20260922.md:n mainintaa 'klo 15.20' (oikeasti noin 11.15). Postivahdin 5 minuutin kierros päättyy noin klo 15.20, ei 20.15. Sääntö Fablelle: kellonaika vain date-komennosta.

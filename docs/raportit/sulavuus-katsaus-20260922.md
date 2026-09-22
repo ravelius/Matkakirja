@@ -96,7 +96,7 @@ päälle komposiittorin alpha-kangas ja multiply-kerros.
 
 ### B. Laattaputki (pääsäie)
 
-9. **2–7 kuvaa per laatta.** *(Karttasepän tarkennus 22.9. klo 15.20: pallolla laatta on pohja + ranta vain rannikkolaatoilla (10 %) + nimiöt (0,5 %) + kohdemaan nostot; viiva- ja väritasot ovat tasokartan. Yhdistäminen toisi pallolle vain −10…−25 % pyynnöistä rannikolla ja peruisi 6.9. päätöksen rannan erottamisesta → kohtaa 9 EI tehdä pallolla. Alkuperäinen arvio alla koskee tasokarttaa.)* `js/laattapyramidi.js:3006–3020` kokoaa
+9. **2–7 kuvaa per laatta.** *(Karttasepän tarkennus 22.9. klo 11.15: pallolla laatta on pohja + ranta vain rannikkolaatoilla (10 %) + nimiöt (0,5 %) + kohdemaan nostot; viiva- ja väritasot ovat tasokartan. Yhdistäminen toisi pallolle vain −10…−25 % pyynnöistä rannikolla ja peruisi 6.9. päätöksen rannan erottamisesta → kohtaa 9 EI tehdä pallolla. Alkuperäinen arvio alla koskee tasokarttaa.)* `js/laattapyramidi.js:3006–3020` kokoaa
    pohja + väri + ranta + viiva/joki + nimiö + nosto; `js/pallolaatat.js:2676`
    hakee ja dekoodaa ne kaikki (`Promise.all`) ja yhdistää kankaalla
    pääsäikeessä. 45 näkyvää z8-laattaa = jopa 300 pyyntöä ja dekoodausta
