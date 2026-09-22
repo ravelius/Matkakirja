@@ -3259,7 +3259,17 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
     naytteet: [],
     interpVanha: laattakerroksenKokeet().has('interpvanha'),
     viiveMs: 0, ekstrapolointeja: 0, interpolointeja: 0,
+    /*
+     * MITTAUSLOKI (`?koe=syoteloki`). Seuraamisvirhettä ei voi mitata
+     * ulkopuolisesta rAF:sta: jos lukija ajetaan ENNEN kirjaston
+     * tickiä, se näkee edellisen kehyksen kameran, ja mittariin syntyy
+     * 0/2x-kuvio, jota pelissä ei ole. Siksi peli kirjaa itse, samassa
+     * kohdassa jossa kamera kirjoitetaan: käytetty osoittimen paikka ja
+     * kamera HETI kirjoituksen jälkeen. Kehä on näin mahdoton.
+     */
+    loki: null, lokiKatto: 4000,
   };
+  if (laattakerroksenKokeet().has('syoteloki')) syote.loki = [];
   ui.pallonSyote = syote; // mittausta varten (savukkeet)
   let kotelonMitat = null; // { left, top, W, H }
   const lueKotelonMitat = () => {
@@ -3372,15 +3382,21 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
     vauhti.lng = 0;
   });
   /** Vedon sovellus: sormi kohdassa (x, y) hetkellä aika → kamera. */
+  /** Ohituksen kirjaus mittauslokiin: 1 = ei tartuntaa, 2 = ei pintapistettä, 3 = katto. */
+  const kirjaaOhitus = (syy, x, y, aika) => {
+    if (syote.loki && syote.loki.length < syote.lokiKatto) {
+      syote.loki.push({ t: aika, x, y, lat: null, lng: null, alt: null, ohitus: syy });
+    }
+  };
   const sovellaVeto = (x, y, aika) => {
-    if (!tartunta || sormet.alhaalla !== 1) return;
+    if (!tartunta || sormet.alhaalla !== 1) { kirjaaOhitus(1, x, y, aika); return; }
     const nyt = sormenKohta(x, y);
-    if (!nyt) return;
+    if (!nyt) { kirjaaOhitus(2, x, y, aika); return; }
     const pov = pallo.pointOfView();
     // KARTTA EI HYPPÄÄ ILMAN PELAAJAN ELETTÄ (vika v1664): yksi
     // pointermove ei saa kääntää palloa yli puolta näkyvästä kaistasta.
     const siirto = vedonSiirto(pov, tartunta, nyt, { fov: kamera.fov });
-    if (!siirto) return;
+    if (!siirto) { kirjaaOhitus(3, x, y, aika); return; }
     const { dLat, dLng } = siirto;
     const kohta = rajaaKohta(
       Math.max(-89.5, Math.min(89.5, pov.lat - dLat)),
@@ -3388,6 +3404,11 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
     );
     pallo.pointOfView({ lat: kohta.lat, lng: kohta.lng, altitude: pov.altitude }, 0);
     syote.sovelluksia += 1;
+    if (syote.loki && syote.loki.length < syote.lokiKatto) {
+      syote.loki.push({
+        t: aika, x, y, lat: kohta.lat, lng: kohta.lng, alt: pov.altitude, ohitus: 0,
+      });
+    }
     // Nopeus: liukuva keskiarvo, jotta yksittäinen nykäys ei määrää liukua.
     const dt = Math.max(1, aika - (vauhti.aika || aika));
     if (vauhti.aika) {
