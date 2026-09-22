@@ -1347,3 +1347,7 @@ Karttaseppä 22.9.2026 klo 18.19: vaihe 1 114/114 shardia 53 min, vaihe 2 397/39
 ## OSOITIN-PR #2824 (pallo.js + sw.js → 2026-09-22c) JULKAISIJALLE; VEDOKSET poltto-22c-rannikko/avomeri NAYTETTY OMISTAJALLE (22.9.2026 klo 18.25)
 
 Karttaseppä 22.9.2026 klo 18.25: PR #2824 PALLO_LAATTAVERSIO → 2026-09-22c-pohja, PALLO_LAATTATUNNISTE → 20260922c, sw.js LAATTAKANSIO/LAATTAKANSIO_SYVA (tahallinen kaksoiskappale, tests/sw vartioi), testit 3928/0; vedokset docs/raportit/kuvat/poltto-22c-rannikko-z5-z8.jpg ja -avomeri (ylärivi vanha, alarivi uusi). Fable näytti omistajalle; Julkaisija mergeää omana versiona, sitten luettelo ämpäriin ja tasonvaihtomittaus.
+
+## v2115:STA PUUTTUIVAT ENNAKKO, JOUSI JA TOUCH (REBASE EHTI ENNEN VIIMEISTA COMMITIA); PR #2825 TUO NE JA RATASVALIKON 'VEDON SEURANTA' (22.9.2026 klo 18.26)
+
+Pelikoodari (uusi sessio) 22.9.2026 klo 18.30: #2821:n viimeinen commit (viisi tapaa, 18.08) syntyi Julkaisijan rebasen (18.03) jälkeen → v2115:ssä vain interpolointi + interpvanha + syoteloki. PR #2825: cherry-pick puuttuvat kolme tapaa + ratasvalikko → Kartta → Vedon seuranta (5 riviä, localStorage, vaikutus heti, ?koe-lippu voittaa ja valikko kertoo sen, kosketusrivi vain kosketuslaitteella); 3952 testiä 0 punaista. Oppi Julkaisijalle: tarkista PR:n head-commit juuri ennen rebasea.
