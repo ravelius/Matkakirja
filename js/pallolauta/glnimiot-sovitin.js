@@ -57,6 +57,10 @@
 
 import { luoRasterilahde } from './nimiorasterit.js';
 import { NOSTOSYM_PISTEET, NOSTOSYM_SYKKEEN_JAKSO_MS, NOSTOSYM_SYKKEEN_OSUUS } from '../fokusnosto-symbolit.js';
+import {
+  KOHDEMERKIN_HALO_LAAJIN, KOHDEMERKIN_HALO_PEITTO_KAPEA, KOHDEMERKIN_HALO_PEITTO_LAAJA,
+  KOHDEMERKIN_NIMI_PX, KOHDEMERKIN_NIMI_RAKO_PX, KOHDEMERKIN_PISTE_PX, KOHDEMERKIN_PX,
+} from './merkit.js';
 
 /** Instanssin tunnus datumista: sama kuin merkkirekisterin avain. */
 export function glInstanssinTunnus(d) {
@@ -142,6 +146,39 @@ export function glSykeKerroin(t, { liikkeessa = false, levonAlku = 0, nousu = 60
   return 1 + NOSTOSYM_SYKKEEN_OSUUS * amplitudi * Math.sin((2 * Math.PI * t) / NOSTOSYM_SYKKEEN_JAKSO_MS);
 }
 
+/*
+ * KOHTEEN HALON PEITTO (A, 22.9.2026). Rungon syke-uniform antaa halolle
+ * KOON hengityksen (glSykeKerroin: 1 + 0,07·sin, jakso 2400 ms). CSS:n
+ * @keyframes kohde-halo hengittää myös PEITON: laajimmillaan himmein.
+ * Sama sini VASTAVAIHEESSA antaa saman parin: kun koko on suurimmillaan
+ * (sin = 1), peitto on pienimmillään. Liikkeessä syke on 1, joten peitto
+ * on keskiarvo — kuten CSS, joka pysäyttää halon raahauksen ajaksi.
+ */
+export function glKohteenHalonPeitto(t, { liikkeessa = false } = {}) {
+  const keski = (KOHDEMERKIN_HALO_PEITTO_KAPEA + KOHDEMERKIN_HALO_PEITTO_LAAJA) / 2;
+  const amplitudi = (KOHDEMERKIN_HALO_PEITTO_KAPEA - KOHDEMERKIN_HALO_PEITTO_LAAJA) / 2;
+  if (liikkeessa || !Number.isFinite(t)) return keski;
+  return keski - amplitudi * Math.sin((2 * Math.PI * t) / NOSTOSYM_SYKKEEN_JAKSO_MS);
+}
+
+/** Paluulippu `?koe=kohteetcss2d`: kohteet piirretään CSS2D:nä kuten ennen. */
+export function glKohteetCss2d(ikkuna = globalThis) {
+  try {
+    return (new URLSearchParams(ikkuna.location?.search ?? '').get('koe') ?? '').split(',').map((k) => k.trim()).includes('kohteetcss2d');
+  } catch { return false; }
+}
+
+/**
+ * Kohteen ladonta-esteen mitat CSS-pikseleinä — samat kuin CSS2D-merkin
+ * svg:llä (merkit.js kohdeElementti), jotta ladonta ei muutu.
+ */
+export function glKohteenLaatikonMitat(d) {
+  const r = (d?.city ? KOHDEMERKIN_PX : KOHDEMERKIN_PISTE_PX) / 2;
+  const nimenSade = r * KOHDEMERKIN_HALO_LAAJIN;
+  const korkeus = 2 * (nimenSade + KOHDEMERKIN_NIMI_RAKO_PX + KOHDEMERKIN_NIMI_PX + 4);
+  return { lat: d.lat, lng: d.lng, leveys: 160, ylos: korkeus / 2, alas: korkeus / 2 };
+}
+
 /** Nappulan svg:n mitat CSS-pikseleinä (merkit.js nappulaElementti: width 32, height 36). */
 export const NAPPULAN_LEVEYS_PX = 32;
 export const NAPPULAN_KORKEUS_PX = 36;
@@ -179,6 +216,7 @@ export function luoGlNimiosovitin({
   let pyynto = false;
   let purettu = false;
   const luvut = { gl: 0, css2d: 0, tayntyi: 0, jakoja: 0, nostotGl: 0, nostotCss2d: 0, nostojakoja: 0 };
+  const kohteetCss2d = glKohteetCss2d();
   /** Nimet ja nostot ovat yksi lista rungolle: kumpikin jako säilyttää toisen. */
   let nimiInstanssit = [];
   let nostoInstanssit = [];
@@ -403,21 +441,68 @@ export function luoGlNimiosovitin({
   };
 
   /** Pelin merkkien jako: nappula rungolle, kohteet ja muut CSS2D:hen. */
+  /** Kohteiden halo-instanssien tunnukset (peitto hengittää kehyskoukussa). */
+  let halonTunnukset = [];
+  /*
+   * GL-KOHTEET OVAT YHÄ LADONNAN ESTEITÄ. CSS2D-kohde oli este, koska
+   * `merkit.laatikot('peli')` luki sen DOM-laatikon; GL:ään siirretty
+   * kohde katoaisi siitä listasta ja nimet ladottaisiin sen päälle
+   * (mitattu 22.9.2026: Loch Lomond ja Haggis osuivat merkkiin).
+   * Sama ratkaisu kuin nappulalla: laatikko annetaan datumista ja
+   * laudan ruutupisteestä.
+   */
+  let kohdeLaatikot = [];
   const jaaPeli = (datumit) => {
     const k = purettu ? null : kerros?.();
     nappula = null;
+    halonTunnukset = [];
+    kohdeLaatikot = [];
     if (!k) { peliInstanssit = []; return datumit; }
     const css2d = [];
     const gl = [];
+    /* Ruutuvakio sprite: koko ei seuraa zoomia (sama katto kuin nappulalla). */
+    const RUUTUVAKIO = { a: 1e6, b: 1 };
     for (const d of datumit) {
-      if (d.laji !== 'nappula') { css2d.push(d); continue; }
-      const sprite = lahde.haeNappula(d)[0];
-      if (!sprite?.valmis || !varaa(k, sprite)) { css2d.push(d); continue; }
-      gl.push({
-        tunnus: glInstanssinTunnus(d), lat: d.lat, lng: d.lng, avain: sprite.avain, rasteri: sprite,
-        skaala: sprite.skaala, dx: 0, dy: 0, katto: sprite.katto ?? { a: 1e6, b: 1 }, opacity: 1,
-      });
-      nappula = d;
+      if (d.laji === 'nappula') {
+        const sprite = lahde.haeNappula(d)[0];
+        if (!sprite?.valmis || !varaa(k, sprite)) { css2d.push(d); continue; }
+        gl.push({
+          tunnus: glInstanssinTunnus(d), lat: d.lat, lng: d.lng, avain: sprite.avain, rasteri: sprite,
+          skaala: sprite.skaala, dx: 0, dy: 0, katto: sprite.katto ?? RUUTUVAKIO, opacity: 1,
+        });
+        nappula = d;
+        continue;
+      }
+      /*
+       * KOHTEET (A, 22.9.2026): halo ja merkki GL:ään, jotta ne eivät
+       * laahaa kankaan perässä panoroidessa. HUOMIOKOHDE JÄÄ CSS2D:HEN:
+       * lähtövalinnan huomiorengas sykkii omaa 2,6 s:n tahtiaan
+       * (.pallolauta-huomio), eikä se mahdu rungon yhteen 2,4 s:n
+       * syke-uniformiin ilman että toinen niistä muuttuu.
+       */
+      if (d.laji !== 'kohde' || d.huomio === true || kohteetCss2d || typeof lahde.haeKohde !== 'function') { css2d.push(d); continue; }
+      const osat = lahde.haeKohde(d);
+      if (osat.some((sp) => !sp?.valmis) || !osat.every((sp) => varaa(k, sp))) { css2d.push(d); continue; }
+      const tunnus = glInstanssinTunnus(d);
+      /*
+       * Este ladonnalle TÄSMÄLLEEN CSS2D-merkin mitoilla (merkit.js
+       * kohdeElementti: svg 160 × 2·(nimenSade + rako + nimiPx + 4),
+       * keskitettynä maapisteeseen). Sprite itse on kapeampi, mutta
+       * ladonnan pitää käyttäytyä kuten ennen — muuten nimet
+       * asettuvat eri tavalla kuin CSS2D-polulla.
+       */
+      kohdeLaatikot.push(glKohteenLaatikonMitat(d));
+      for (const sprite of osat) {
+        const halo = sprite.osa === 'halo';
+        const t = `${tunnus}:${sprite.osa}`;
+        if (halo) halonTunnukset.push(t);
+        gl.push({
+          tunnus: t, lat: d.lat, lng: d.lng, avain: sprite.avain, rasteri: sprite,
+          skaala: sprite.skaala, dx: 0, dy: 0, katto: sprite.katto ?? RUUTUVAKIO,
+          opacity: halo ? glKohteenHalonPeitto(nyt(), { liikkeessa: liikkeessa() }) : 1,
+          syke: halo,
+        });
+      }
     }
     peliInstanssit = gl;
     vieKaikki(k);
@@ -482,11 +567,22 @@ export function luoGlNimiosovitin({
       if (kutsuKunValmis) kunPeliValmis = kutsuKunValmis;
       return jaaPeli(datumit);
     },
-    /** GL-nappulan laatikko kotelon pikseleinä ladonnan esteeksi (tai tyhjä). */
+    /** GL-nappulan ja GL-kohteiden laatikot kotelon pikseleinä ladonnan esteiksi. */
     pelinLaatikot() {
-      if (!nappula || typeof ruutupiste !== 'function') return [];
-      const laatikko = glNappulanLaatikko(ruutupiste(nappula.lat, nappula.lng));
-      return laatikko ? [laatikko] : [];
+      if (typeof ruutupiste !== 'function') return [];
+      const ulos = [];
+      if (nappula) {
+        const laatikko = glNappulanLaatikko(ruutupiste(nappula.lat, nappula.lng));
+        if (laatikko) ulos.push(laatikko);
+      }
+      for (const kl of kohdeLaatikot) {
+        const p = ruutupiste(kl.lat, kl.lng);
+        if (!p || !Number.isFinite(p.x) || !Number.isFinite(p.y)) continue;
+        ulos.push({
+          x0: p.x - kl.leveys / 2, y0: p.y - kl.ylos, x1: p.x + kl.leveys / 2, y1: p.y + kl.alas,
+        });
+      }
+      return ulos;
     },
     /** Kehyskoukku: kuoren kerroin rungon uniformiin (E2 --nimiokerroin) ja häivytykset. */
     kehys() {
@@ -498,6 +594,15 @@ export function luoGlNimiosovitin({
       if (liikkeessa()) levonAlku = null;
       else if (levonAlku == null) levonAlku = t;
       k.syke?.(sykeKaytossa ? glSykeKerroin(t, { liikkeessa: levonAlku == null, levonAlku: levonAlku ?? t }) : 1);
+      /*
+       * Kohteen halon peitto vastavaiheessa koon kanssa (ks.
+       * glKohteenHalonPeitto). Osapäivitys `peitto`lla, ei rungon
+       * uudelleenrakennusta — sama halpa tie kuin crossfadeilla.
+       */
+      if (halonTunnukset.length) {
+        const peitto = sykeKaytossa ? glKohteenHalonPeitto(t, { liikkeessa: levonAlku == null }) : 1;
+        for (const tunnus of halonTunnukset) k.peitto?.(tunnus, peitto);
+      }
       etenaHaivytykset(k);
     },
     /** Ladonnan kehys: jaot viedään rungolle kerran lopussa (ks. RUNGON RAKENNUS KERRAN PER LADONTA). */
