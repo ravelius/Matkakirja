@@ -218,6 +218,10 @@ export function avaaSyvennys(ui, cityId, taky, tiedot) {
     aseta: (img, leveys, onVirhe) => asetaNostonKuva(img, taky.kuva, leveys, onVirhe),
     avaaSuurennos: (nappi) => avaaKohdeSuurennos(ui, taky.kuva, () => nappi, 'syvennysZoom'),
     latoNosto: latoSyvennys,
+    // Kaksi palstaa leveällä kuten nostokortilla (omistaja 22.9.2026 klo
+    // 23.06, js/nostokuva.js nostoPalstoiksi): iso kuva ensin, sitten
+    // kuva pienenee vasemmalle ja teksti tulee oikealle.
+    kaksipalstaTaitto: true,
   }) : null;
   if (!kaksivaihe) latoSyvennys(sisalto, undefined);
   // Kaiutin kortin otsikkoriville (js/lukija.js lisaaLukijanappi).
