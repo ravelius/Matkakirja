@@ -148,8 +148,8 @@ test('jokainen tarinakaaren kohtaamiskuva osuu kohteeseen ja sen hahmoon', () =>
   }
 });
 
-test('22.9.2026 C1-C3-kuvat osuvat tavallisen visan eri kohtaamishahmoihin', () => {
-  assert.equal(KOHTAAMISKUVAT_TAVALLISELLE.size, 12);
+test('22.9.2026 C1-C7-kuvat osuvat tavallisen visan eri kohtaamishahmoihin', () => {
+  assert.equal(KOHTAAMISKUVAT_TAVALLISELLE.size, 32);
   for (const [kohde, id, hahmo] of [
     ['rooma', 'rooma-fabrizio-c1', 'Fabrizio'],
     ['helsinki', 'helsinki-saana-c1', 'Saana'],
@@ -163,6 +163,26 @@ test('22.9.2026 C1-C3-kuvat osuvat tavallisen visan eri kohtaamishahmoihin', () 
     ['dublin', 'dublin-niamh-c3', 'Niamh'],
     ['granada', 'granada-pastora-c3', 'Pastora'],
     ['pietari', 'pietari-larisa-c3', 'Larisa'],
+    ['tallinna', 'tallinna-miina-c4', 'Miina'],
+    ['vilna', 'vilna-aldona-c4', 'Aldona'],
+    ['barcelona', 'barcelona-pau-c4', 'Pau'],
+    ['praha', 'praha-vera-c4', 'Věra'],
+    ['moskova', 'moskova-stepan-c4', 'Stepan'],
+    ['ljubljana', 'ljubljana-vesna-c4', 'Vesna'],
+    ['kosice', 'kosice-zuzana-c5', 'Zuzana'],
+    ['bergen', 'bergen-ingrid-c5', 'Ingrid'],
+    ['edinburgh', 'edinburgh-fiona-c5', 'Fiona'],
+    ['krakova', 'krakova-tadeusz-c5', 'Tadeusz'],
+    ['varsova', 'varsova-wiktor-c5', 'Wiktor'],
+    ['sarajevo', 'sarajevo-amra-c5', 'Amra'],
+    ['tromssa', 'tromssa-kirsten-c7', 'Kirsten'],
+    ['valletta', 'valletta-rita-c7', 'Rita'],
+    ['sevilla', 'sevilla-remedios-c6', 'Remedios'],
+    ['bryssel', 'bryssel-aline-c6', 'Aline'],
+    ['marseille', 'marseille-rosine-c6', 'Rosine'],
+    ['kiova', 'kiova-oksana-c6', 'Oksana'],
+    ['luxemburg', 'luxemburg-nic-c6', 'Nic'],
+    ['riika', 'riika-valdis-c6', 'Valdis'],
   ]) {
     const kuva = kohtaamiskuvaTavalliselleKohtaamiselle(kohde);
     assert.equal(kuva?.id, id);
