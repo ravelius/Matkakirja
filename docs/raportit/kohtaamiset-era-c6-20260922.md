@@ -639,8 +639,13 @@ avattu rautatiesilta.
 
 **frame:** `'Valdis pysäyttää rahastuslaatikkonsa kannen ja kysyy'`
 
-**tervehdys** (267 merkkiä, raja ~280):
-`'Valdis pysäyttää rahastuslaatikkonsa kannen: "Tuo rautasilta kantoi ensimmäisen junansa vasta tammikuussa — minun siltani on kannattanut kärryjä jo isäni isän ajoista. Näytä että tunnet maailmaa kuten piirtäjä — niin näytän, mikä laudan alle on jäänyt vuosikausiksi."'`
+**tervehdys** (265 merkkiä, raja ~280) — KORJATTU 22.9.2026 Fablen
+pyynnöstä: tarkka päivämäärä (1.1.1873) ei löytänyt kahdesta
+riippumattomasta lähteestä (Wikipedia-artikkelit "Railway Bridge, Riga"
+ja "Iron Bridge, Riga" mainitsevat vain rakennusvuodet 1871–1872, ei
+avauspäivää; kolmas lähde antoi ristiriitaisen linjan nimen). Muotoiltu
+varovaisemmin ilman kuukautta:
+`'Valdis pysäyttää rahastuslaatikkonsa kannen: "Tuo rautasilta kantoi ensimmäisen junansa vasta äskettäin — minun siltani on kannattanut kärryjä jo isäni isän ajoista. Näytä että tunnet maailmaa kuten piirtäjä — niin näytän, mikä laudan alle on jäänyt vuosikausiksi."'`
 
 **tervehdysLuenta:**
 ```js
@@ -648,7 +653,7 @@ avattu rautatiesilta.
   { rooli: 'kertoja', teksti: 'Valdis pysäyttää rahastuslaatikkonsa '
     + 'kannen:' },
   { rooli: 'hahmo', teksti: '[curious] "Tuo rautasilta kantoi '
-    + 'ensimmäisen junansa vasta tammikuussa — minun siltani on '
+    + 'ensimmäisen junansa vasta äskettäin — minun siltani on '
     + 'kannattanut kärryjä jo isäni isän ajoista. [warmly] Näytä että '
     + 'tunnet maailmaa kuten piirtäjä — niin näytän, mikä laudan alle '
     + 'on jäänyt vuosikausiksi."' },
@@ -684,23 +689,37 @@ tunneVaarin: { tunne: 'hammentynyt', voimakkuus: 0.4 }
 
 ## 1873-fakta ja lähteet
 
-Riian ensimmäinen pysyvä silta Väinäjoen (Daugavan) yli — rautatiesilta
-Riika–Jelgava-radalle — rakennettiin vuosina 1871–1872, ja se
-**avattiin 1. tammikuuta 1873**: isoisän heinäkuun 1873 käynnin aikaan
-silta oli siis vasta puoli vuotta vanha. Ennen tätä ja vielä sen
-rinnalla Riiassa kulki pitkään perinteinen kelluva ponttonisilta
-("bridge of boats"), joka kannatteli tavallista kärry- ja
-jalankulkuliikennettä.
+**KORJATTU 22.9.2026** (Fablen pyynnöstä toisen tarkistuksen jälkeen):
+alkuperäinen raportti väitti tarkkaa avauspäivää 1.1.1873, mutta
+kaksi Wikipedia-lähdettä ("Railway Bridge, Riga" ja "Iron Bridge, Riga")
+mainitsevat itse artikkelitekstissä vain rakennusvuodet, eivät
+avauspäivää, ja kolmas (ei-Wikipedia) lähde, josta päivämäärä oli
+peräisin, nimesi väärän radan (Riika–Bolderāja, ei Riika–Jelgava) —
+ristiriitainen eikä siis luotettava. Varmistettu, kahdella
+riippumattomalla lähteellä tuettu fakta on:
 
-Lähteet (tarkistettu 22.9.2026, WebSearch/WebFetch):
+Riian ensimmäinen pysyvä rautasilta Väinäjoen (Daugavan) yli —
+rautatiesilta Riika–Jelgava-radalle — **rakennettiin vuosina
+1871–1872**. Isoisän heinäkuun 1873 käynnin aikaan silta oli siis
+vasta äskettäin valmistunut, korkeintaan pari vuotta vanha. Ennen
+tätä ja vielä sen rinnalla Riiassa kulki pitkään perinteinen kelluva
+ponttonisilta ("bridge of boats"), joka kannatteli tavallista kärry-
+ja jalankulkuliikennettä.
+
+Lähteet (tarkistettu 22.9.2026, WebFetch, molemmat artikkelit luettu
+suoraan):
 - [Railway Bridge, Riga – Wikipedia](https://en.wikipedia.org/wiki/Railway_Bridge,_Riga)
+  ("erected in 1871–1872 for the Riga–Jelgava Railway")
 - [Iron Bridge, Riga – Wikipedia](https://en.wikipedia.org/wiki/Iron_Bridge,_Riga)
+  ("built in 1871–72")
 - [Pontoon Bridge (Riga) – Wikidata](https://www.wikidata.org/wiki/Q25553955)
 
 Huom. varovaisuudesta: en väitä tekstissä, että uusi rautatiesilta olisi
 korvannut kelluvan sillan tai uhannut Valdisin toimeentuloa — lähteet
 eivät vahvista syy-seuraussuhdetta, vain kahden erityyppisen sillan
-samanaikaisen olemassaolon.
+samanaikaisen olemassaolon. Tervehdyksestä on nyt poistettu tarkka
+kuukausi ("äskettäin" korvaa "tammikuussa"), koska sitä ei voitu
+vahvistaa kahdesta riippumattomasta lähteestä.
 
 ## Olemassa olevat Riika-kuvakonseptit (ristiriitatarkistus)
 
