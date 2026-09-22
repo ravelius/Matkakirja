@@ -89,7 +89,12 @@ class Solmu {
   get rivit() { return this.children.map((l) => l.textContent); }
 }
 
-test('jakso: sulkee ja avaa profiilin, kirjoittaa kerroksen, lähettää ja purkautuu', () => {
+/*
+ * Vanha rajapinta (ilman `otos`/`kaynnissa`) käyttäytyy kuten ennen:
+ * ruutunäyttö sulkee ja avaa mittauksen. Näin savukkeet ja vanhat
+ * tallenteet toimivat, vaikka profiili olisi eri versiosta.
+ */
+test('jakso vanhalla rajapinnalla: sulkee ja avaa profiilin, lähettää ja purkautuu', () => {
   const kotelo = new Solmu('div');
   kotelo.ownerDocument = { createElement: (tag) => new Solmu(tag) };
   const tapahtumat = [];
@@ -193,4 +198,67 @@ test('tahti kulkee myös lähetykseen', () => {
   const r = profiilitiiviste({ tiiviste: TIIVISTE, tahti: t });
   assert.equal(r.tahti.hz, 120);
   assert.equal(r.tahti.piirtoOsuus, 0.5);
+});
+
+/* --- ruutunäyttö ei katkaise mittauspalvelimen otosta ------------------- */
+
+/*
+ * LAITETESTAAJAN LÖYDÖS 22.9.2026: `?koe=profiili` käynnisti
+ * ruutunäytön, joka otti saman __kehysprofiili-SINGLETONIN kolmen
+ * sekunnin välein ja katkaisi mittauspalvelimen otoksen — neljä eri
+ * koetta sai kukin saman ~47 kehyksen pätkän, vaikka harness pyysi
+ * kymmenen sekunnin ikkunaa.
+ *
+ * Nyt ruutunäyttö ottaa vain VIIPALEEN (`otos`) koskematta mittaukseen.
+ */
+test('10 s otos säilyy kokonaisena, vaikka ruutunäyttö pyörii 3 s välein', async () => {
+  const { luoKehysprofiili } = await import('../js/pallolauta/kehysprofiili.js');
+  let aika = 0;
+  let rafJono = [];
+  const ajastimet = new Map();
+  let seuraavaAjastin = 1;
+  const ikkuna = {
+    performance: { now: () => aika },
+    requestAnimationFrame: (fn) => { rafJono.push(fn); return rafJono.length; },
+    cancelAnimationFrame: () => {},
+    setTimeout: (fn, ms) => { const id = seuraavaAjastin++; ajastimet.set(id, { fn, milloin: aika + ms }); return id; },
+    clearTimeout: (id) => { ajastimet.delete(id); },
+    navigator: { userAgent: 'testi' },
+  };
+  const kotelo = new Solmu('div');
+  kotelo.ownerDocument = { createElement: (tag) => new Solmu(tag) };
+
+  const profiili = luoKehysprofiili(() => ({}), ikkuna);
+  const lahetykset = [];
+  const pura = luoProfiilinaytto({
+    profiili, kotelo, jaksoMs: 3000, laheta: (d) => lahetykset.push(d), ikkuna,
+  });
+  assert.equal(profiili.kaynnissa(), true, 'ruutunäyttö käynnisti mittauksen');
+
+  /** Yksi kehys: rAF-jono ja erääntyneet ajastimet. */
+  const kehys = () => {
+    aika += 16.7;
+    const jono = rafJono;
+    rafJono = [];
+    for (const fn of jono) fn(aika);
+    for (const [id, a] of [...ajastimet]) {
+      if (a.milloin <= aika) { ajastimet.delete(id); a.fn(); }
+    }
+  };
+  kehys();
+
+  // Harness (tools/mittaus) avaa oman ikkunansa kesken ruutunäytön jaksojen.
+  profiili.aloita();
+  const kehyksia = Math.round(10000 / 16.7);
+  for (let i = 0; i < kehyksia; i += 1) kehys();
+  const tulos = profiili.lopeta();
+
+  assert.ok(lahetykset.length >= 3, `ruutunäyttö ehti päivittyä (${lahetykset.length} jaksoa)`);
+  assert.ok(
+    tulos.kehykset.length > kehyksia * 0.9,
+    `harnessin otos on kokonainen: ${tulos.kehykset.length} kehystä (odotus ~${kehyksia})`,
+  );
+  // Ruutunäytön oma jakso on lyhyt viipale samasta mittauksesta.
+  assert.ok(lahetykset.at(-1).kehyksia < kehyksia / 2, `jakso on viipale (${lahetykset.at(-1).kehyksia})`);
+  pura();
 });
