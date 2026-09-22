@@ -39,7 +39,7 @@ test('jokaisella alueella on ei-tyhjä lyhyt-teksti enintään 160 merkkiä', ()
   }
 });
 
-test('pitka, kuva ja pulu ovat oikeaa muotoa kun ne on annettu', () => {
+test('pitka, kuvat ja pulu ovat oikeaa muotoa kun ne on annettu', () => {
   for (const [iso, alueet] of Object.entries(MAAKUNTIEN_LUONNEHDINNAT)) {
     for (const [tunnus, alue] of Object.entries(alueet)) {
       if (alue.pitka !== undefined) {
@@ -47,9 +47,13 @@ test('pitka, kuva ja pulu ovat oikeaa muotoa kun ne on annettu', () => {
         assert.ok(alue.pitka.trim().length > 0, `${iso}:${tunnus} pitka on tyhjä`);
       }
       if (alue.kuva !== undefined) {
-        assert.equal(typeof alue.kuva, 'object', `${iso}:${tunnus} kuva ei ole olio`);
-        for (const kentta of ['osoite', 'lahde', 'lisenssi', 'tekija']) {
-          assert.ok(alue.kuva[kentta], `${iso}:${tunnus} kuva.${kentta} puuttuu`);
+        const kuvat = Array.isArray(alue.kuva) ? alue.kuva : [alue.kuva];
+        assert.ok(kuvat.length > 0, `${iso}:${tunnus} kuva on tyhjä lista`);
+        for (const [indeksi, kuva] of kuvat.entries()) {
+          assert.equal(typeof kuva, 'object', `${iso}:${tunnus} kuva ${indeksi} ei ole olio`);
+          for (const kentta of ['osoite', 'lahde', 'lisenssi', 'tekija']) {
+            assert.ok(kuva[kentta], `${iso}:${tunnus} kuva ${indeksi}.${kentta} puuttuu`);
+          }
         }
       }
       if (alue.pulu !== undefined) {
@@ -61,4 +65,29 @@ test('pitka, kuva ja pulu ovat oikeaa muotoa kun ne on annettu', () => {
       }
     }
   }
+});
+
+test('97 maakuntaa säilyttää Commons-kuvan ja saa vuoden 1873 havainnekuvan', () => {
+  const osoitteet = new Set();
+  let maara = 0;
+  for (const [iso, alueet] of Object.entries(MAAKUNTIEN_LUONNEHDINNAT)) {
+    for (const [tunnus, alue] of Object.entries(alueet)) {
+      assert.ok(Array.isArray(alue.kuva), `${iso}:${tunnus} kuva ei ole lista`);
+      assert.equal(alue.kuva.length, 2, `${iso}:${tunnus} kuvien määrä`);
+      const [commons, havainnekuva] = alue.kuva;
+      assert.match(commons.lahdeUrl ?? '', /^https:\/\/commons\.wikimedia\.org\/wiki\/File:/,
+        `${iso}:${tunnus} ensimmäinen kuva ei ole alkuperäinen Commons-kuva`);
+      assert.equal(havainnekuva.havainnekuva, true, `${iso}:${tunnus} toinen kuva ei ole merkitty havainnekuvaksi`);
+      assert.equal(havainnekuva.vuosi, 1873, `${iso}:${tunnus} havainnekuvan vuosi`);
+      assert.match(havainnekuva.osoite,
+        new RegExp(`^https://media\\.matkakirja\\.app/karttanostot/20260922/${iso}-[a-z0-9-]+-1873\\.jpg$`),
+        `${iso}:${tunnus} havainnekuvan osoite`);
+      assert.equal(havainnekuva.lahde, 'Matkakirjan havainnekuva vuodelta 1873');
+      assert.equal(havainnekuva.lisenssi, 'Matkakirjan oma kuvitus');
+      assert.ok(!osoitteet.has(havainnekuva.osoite), `${iso}:${tunnus} havainnekuvan osoite on kahdesti`);
+      osoitteet.add(havainnekuva.osoite);
+      maara += 1;
+    }
+  }
+  assert.equal(maara, 97);
 });
