@@ -62,10 +62,12 @@ for (let i = 0; i < TOISTOJA; i += 1) {
   await kamera(46.5, 2.5, KORKEUS); await sivu.waitForTimeout(2500);
   const s = await sivu.evaluate(async ({ nopeusPx, suunta }) => {
     const v = await window.__kehysprofiili.veto({ kesto: 3000, nopeusPx, suunta });
-    return { tasaisuus: v.tasaisuus, profiili: window.__kehysprofiili.tiivista(v), teksti: window.__kehysprofiili.vetoTeksti(v), sovelluksia: window.matkakirja.ui.pallonSyote?.sovelluksia ?? null, kehykset: v.kehykset.map((k) => [+k.dt.toFixed(2), +(k.siirtyma ?? NaN).toFixed(3)]) };
+    const ks = v.kehykset; const renderKa = ks.reduce((a, k) => a + (k.render ?? 0), 0) / Math.max(1, ks.length);
+    const dc = ks.map((k) => k.drawcalls).sort((a, b) => a - b); const tri = ks.map((k) => k.kolmiot).sort((a, b) => a - b);
+    return { tasaisuus: v.tasaisuus, profiili: window.__kehysprofiili.tiivista(v), teksti: window.__kehysprofiili.vetoTeksti(v), sovelluksia: window.matkakirja.ui.pallonSyote?.sovelluksia ?? null, renderKa, drawcallsMed: dc[dc.length >> 1], kolmiotMed: tri[tri.length >> 1], ilmakeha: window.matkakirja.ui.pallonInstanssi.__ilmakehaPaalla ?? null, pohjaPiilossa: (() => { let m = null; window.matkakirja.ui.pallonInstanssi.scene().traverse((o) => { if (!m && Array.isArray(o.thresholds)) m = o; }); return m?.pohjaPiilossa ?? null; })(), kehykset: ks.map((k) => [+k.dt.toFixed(2), +(k.siirtyma ?? NaN).toFixed(3)]) };
   }, { nopeusPx: NOPEUS, suunta: i % 2 ? [-1, -0.3] : [1, 0.3] });
   tulokset.sisainen.push(s);
-  console.log(`sisäinen ${i + 1}: ${tiivis(s.tasaisuus)} | kehys med ${p(s.profiili.mediaani)} p95 ${p(s.profiili.p95)} max ${p(s.profiili.max)} | varattu med ${p(s.profiili.varattuMed)} p95 ${p(s.profiili.varattuP95)}`);
+  console.log(`sisäinen ${i + 1}: ${tiivis(s.tasaisuus)} | kehys med ${p(s.profiili.mediaani)} p95 ${p(s.profiili.p95)} max ${p(s.profiili.max)} | varattu med ${p(s.profiili.varattuMed)} p95 ${p(s.profiili.varattuP95)} | render ka ${p(s.renderKa, 2)} ms, dc med ${s.drawcallsMed}, kolmiot med ${s.kolmiotMed}, ilmakehä ${s.ilmakeha}, pohja piilossa ${s.pohjaPiilossa}`);
   // CDP-KOSKETUSVETO: 8 ms:n askelin (tapahtumia ~2/kehys), siirtymä luetaan joka kehys.
   await kamera(46.5, 2.5, KORKEUS); await sivu.waitForTimeout(2500);
   await sivu.evaluate(() => {
