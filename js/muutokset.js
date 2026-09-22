@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2133, teksti: 'Valikko: Kartta-osion siivous' },
   { v: 2132, teksti: 'Piirtokoe 7: ei haivytysta vedossa' },
   { v: 2131, teksti: 'Kehysprofiili p4: mittarikorjaus' },
   { v: 2130, teksti: 'Kehysprofiili: koetila ja versio overlayn ylimmalla rivilla' },
