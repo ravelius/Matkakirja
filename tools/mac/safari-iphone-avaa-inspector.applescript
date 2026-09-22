@@ -1,6 +1,6 @@
 on run argv
   set appName to "Safari Technology Preview"
-  if (count of argv) > 0 then set appName to item 1 of argv
+  set target to "matkakirja.app"
   tell application appName to activate
   delay 2
   tell application "System Events"
@@ -13,24 +13,28 @@ on run argv
           if n is "Develop" or n is "Kehitys" then set devMenu to m
         end try
       end repeat
-      if devMenu is missing value then return "Ei Kehitys-valikkoa"
       click devMenu
       delay 0.7
-      set found to ""
       repeat with mi in (every menu item of menu 1 of devMenu)
         try
-          set n to name of mi
-          if n contains "iPhone" then
+          if (name of mi) contains "iPhone" then
             click mi
             delay 6
-            set found to n & " → " & ((name of every menu item of menu 1 of mi) as text)
+            repeat with sub in (every menu item of menu 1 of mi)
+              try
+                if (name of sub) contains target then
+                  click sub
+                  delay 8
+                  return "avattu: " & (name of sub) & " | ikkunat: " & ((name of every window) as text)
+                end if
+              end try
+            end repeat
           end if
         end try
       end repeat
       key code 53
       key code 53
-      if found is "" then return "Ei iPhone-riviä Kehitys-valikossa"
-      return found
+      return "ei löytynyt " & target
     end tell
   end tell
 end run
