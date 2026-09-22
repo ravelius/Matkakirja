@@ -390,6 +390,17 @@ export function karttavaloValinta(jarjestys = KARTTAVALO_AIHEET.map((r) => r.aih
  * KIERTOKOHDAT EIVÄT TUPLAA LUKUA. Kiertävällä laudalla sama merkki
  * piirretään kahteen kohtaan (ui.kiertoKohdat), joten laskuri laskee
  * ERI avaimia eikä solmuja.
+ *
+ * POIKKEUS 22.9.2026: KADONNEET IHMEET (aihe 'ihmeet') EIVÄT NOUDATA
+ * YLLÄ OLEVAA LUPAUSTA. Pallolaudan oma laskuri (ui.karttavaloLaskuri,
+ * js/pallolauta/nostot.js laskurikoonti) lisää tähän aiheeseen myös ne
+ * maan kadonneet ihmeet, joilla EI ole täplää ruudulla juuri nyt —
+ * tyypillisesti siksi, että kohde on siirretty kaupunkilehden
+ * kohdekartalle (js/fokuskohteet.js karsiKaupunkikartanNostot) eikä
+ * siksi enää koskaan piirry pääkartan merkiksi. Omistajan päätös:
+ * ihme on silti MAASSA, joten rivin luku on maan koko ihmemäärä, ei
+ * vain kartalla juuri nyt näkyvä osajoukko. Muut kahdeksan aihetta
+ * noudattavat yhä alkuperäistä sääntöä sellaisenaan.
  */
 export function karttavalotLaskurit(ui) {
   const luvut = new Map(KARTTAVALO_AIHEET.map(({ aihe }) => [aihe, 0]));
