@@ -153,11 +153,25 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   palvelin.listen(PORTTI, '0.0.0.0', async () => {
     console.log(`Piirtokoe-palvelin: ${JUURI}`);
     console.log(`Tulokset: ${DATAPOLKU}`);
+    /*
+     * EI 'profiili'-LIPPUA (kehysmäärä-anomalian juurisyy, Laitetestaaja
+     * 22.9.2026): `?koe=profiili` asentaa js/pallolauta/profiilinaytto.js:n
+     * rullaavan ruutunäytön, joka sulkee ja avaa saman globaalin
+     * `__kehysprofiili`-singletonin uudestaan 3000 ms:n välein
+     * (PROFIILIN_JAKSO_MS, lauta.js `luoProfiilinaytto`). Se kilpailee tämän
+     * työkalun oman `__kehysprofiili.veto()`-kutsun aloita()/lopeta()-parista
+     * samasta `tila`-muuttujasta, joten `lopeta()` palauttaakin ruutunäytön
+     * senhetkisen ~3 s:n jakson kehykset, ei koko `kesto`:n mittaista otosta
+     * (siksi kaikissa neljässä mittauksessa oli sama ~47 kehyksen otos
+     * riippumatta `kesto`-parametrista). `asennaKehysprofiili()` (lauta.js)
+     * asentuu MILLÄ TAHANSA `koe=`-arvolla (piirtokokeet().size riittää),
+     * joten `mittaus` on tässä pelkkä placeholder-lippu kantaa vailla.
+     */
     const LIPUT = [
-      ['normaali', 'profiili'],
-      ['eipuskuri', 'profiili,eipuskuri'],
-      ['dpr15', 'profiili,dpr15'],
-      ['eivienti', 'profiili,eivienti'],
+      ['normaali', 'mittaus'],
+      ['eipuskuri', 'eipuskuri'],
+      ['dpr15', 'dpr15'],
+      ['eivienti', 'eivienti'],
     ];
     for (const [nimi, koe] of LIPUT) {
       const url = `http://127.0.0.1:${PORTTI}/?lauta=pallo&dev=marseille&koe=${encodeURIComponent(koe)}&piirtokoe=1`;
