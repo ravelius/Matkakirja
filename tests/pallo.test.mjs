@@ -1,7 +1,9 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
-import { pallonKaupungit, sukelluskohta, pallonLaatta, laatatSaatavilla, PALLO_KIRJASTO, PALLO_TEKSTUURI, PALLO_TEKSTUURIVERSIO, PALLO_TEKSTUURITASO, PALLO_LAATAT, PALLO_LAATTAVERSIO, PALLO_LAATTAKANSIO, laattatasoMax, PALLO_LAATTATASO_MAX, PALLO_SUKELLUSLEVEYS, laattakynnykset, lepokerroin, LAATU_TERAVYYS, LAATU_TERAVYYS_KAUKO, LAATU_KAUKORAJA, laatuTeravyys, napakerroin, NAPAKERROIN_MIN, NAPAKANNEN_LEVEYS, NAPAKANNEN_HAIVEPEITTO, NAPAKANSI_POHJOINEN, NAPAKANSI_ETELA, asennaNapakannet, kolmiulotteinen, LAATU_LEPOVIIVE_MS, LAATU_LIIKEVIIVE_MS, LAATU_PIKSELISUHDE_LEPO, LAATU_PIKSELISUHDE_LIIKE } from '../js/pallo.js';
+import {
+  LAATU_KAUKORAJA, LAATU_LEPOVIIVE_MS, LAATU_LIIKEVIIVE_MS, LAATU_PIKSELISUHDE_LEPO, LAATU_PIKSELISUHDE_LIIKE, LAATU_TERAVYYS, LAATU_TERAVYYS_KAUKO, NAPAKANNEN_HAIVEPEITTO, NAPAKANNEN_LEVEYS, NAPAKANSI_ETELA, NAPAKANSI_POHJOINEN, NAPAKERROIN_MIN, OSOITTIMEN_EKSTRAPOLOINTI_MAX_MS, OSOITTIMEN_NAYTTEITA, OSOITTIMEN_VIIVE_MAX_MS, PALLO_KIRJASTO, PALLO_LAATAT, PALLO_LAATTAKANSIO, PALLO_LAATTATASO_MAX, PALLO_LAATTAVERSIO, PALLO_SUKELLUSLEVEYS, PALLO_TEKSTUURI, PALLO_TEKSTUURITASO, PALLO_TEKSTUURIVERSIO, asennaNapakannet, kolmiulotteinen, laatatSaatavilla, laattakynnykset, laattatasoMax, laatuTeravyys, lepokerroin, napakerroin, osoittimenKohta, pallonKaupungit, pallonLaatta, sukelluskohta,
+} from '../js/pallo.js';
 import { laatanReunat, rivinLeveysaste, julisteenLeveysvali, tasonLaatat, lahdetaso, laattojenKansio, LAATTA, tayteRivilla, nostaReuna, JAA_RAJA, JAA_SAVY, MERI_SAVY, tyolista, osanLaatat, kaistanRajat, lueOsa, NOUTOVALI_OLETUS, YHTEISTAHTI_MS } from '../tools/tee-pallolaatat.mjs';
 import { LINSSIT } from '../js/linssit/rekisteri.js';
 import { LINSSI as PALLOLINSSI } from '../js/linssit/pallo.js';
@@ -1133,4 +1135,76 @@ test('sulavuus E4b: kameran ennuste ekstrapoloi liikkeen, lepää levossa ja kie
   assert.equal(pallonEnnusteKaytossa({ location: { search: '?ennuste=1' } }), true);
   // Oletuksena pois (omistajan tuntuma 21.9.2026: nimiöt heiluivat työpöydällä).
   assert.equal(pallonEnnusteKaytossa({ location: { search: '' } }), false);
+});
+
+/*
+ * OSOITIN KEHYKSEN HETKELLÄ (sulavuus kohta 13). Mitattu vika: kamera
+ * toisti tapahtumajonon rytmiä, joten kehys ilman näytettä oli
+ * pysähdys (p10-suhde 0 kaikissa 16 aidossa vedossa) ja seuraava oli
+ * ylikorjaava piikki (p90 3–14).
+ */
+test('osoittimenKohta: interpoloi näytteiden välistä', () => {
+  const n = [{ x: 0, y: 0, t: 100 }, { x: 10, y: 20, t: 110 }];
+  assert.deepEqual(osoittimenKohta(n, 105), { x: 5, y: 10, t: 105 });
+  assert.deepEqual(osoittimenKohta(n, 102.5), { x: 2.5, y: 5, t: 102.5 });
+});
+
+test('osoittimenKohta: ennen ensimmäistä näytettä ei ease-iniä', () => {
+  const n = [{ x: 4, y: 6, t: 100 }, { x: 10, y: 20, t: 110 }];
+  // Vedon alussa haluttu hetki on ennen ensimmäistä näytettä: käytetään
+  // sitä sellaisenaan, jotta kartta lähtee heti eikä kiihdy viiveen läpi.
+  assert.deepEqual(osoittimenKohta(n, 90), { x: 4, y: 6, t: 100 });
+});
+
+test('osoittimenKohta: ekstrapoloi enintään yhden kehyksen', () => {
+  const n = [{ x: 0, y: 0, t: 100 }, { x: 10, y: 0, t: 110 }];
+  // Nopeus 1 px/ms: 5 ms viimeisen jälkeen → 15.
+  assert.deepEqual(osoittimenKohta(n, 115, { ekstraMax: 17 }), { x: 15, y: 0, t: 115 });
+  // Katto leikkaa: 40 ms pyydettynä, katto 17 → 27, ei 50.
+  assert.deepEqual(osoittimenKohta(n, 150, { ekstraMax: 17 }), { x: 27, y: 0, t: 127 });
+  // Ilman ekstrapolointia jäädään viimeiseen näytteeseen.
+  assert.deepEqual(osoittimenKohta(n, 150, { ekstraMax: 0 }), { x: 10, y: 0, t: 110 });
+});
+
+test('osoittimenKohta: tyhjä ja yksi näyte', () => {
+  assert.equal(osoittimenKohta([], 100), null);
+  assert.equal(osoittimenKohta(null, 100), null);
+  assert.deepEqual(osoittimenKohta([{ x: 3, y: 4, t: 100 }], 120), { x: 3, y: 4, t: 100 });
+});
+
+test('osoittimenKohta: KEHYS ILMAN NÄYTETTÄ EI OLE PYSÄHDYS', () => {
+  /*
+   * Tämä on koko korjauksen ydin. Näytteitä tulee 125 Hz (8 ms) ja
+   * kehyksiä 60 Hz (16,7 ms), mutta ne eivät ole tahdissa: osaan
+   * kehyksistä osuu kaksi näytettä, osaan ei yhtään. Vanha tapa
+   * (viimeisin näyte sellaisenaan) antoi silloin 0 ja sitten 2x.
+   * Interpoloitu paikka etenee joka kehyksellä saman verran.
+   */
+  const naytteet = [];
+  // Näytteitä koko ikkunan yli, jotta ekstrapoloinnin katto ei sotke väitettä.
+  for (let i = 0; i <= 16; i += 1) naytteet.push({ x: i * 8, y: 0, t: 100 + i * 8 });
+  const askeleet = [];
+  let edellinen = null;
+  for (let k = 0; k < 6; k += 1) {
+    const kohta = osoittimenKohta(naytteet, 120 + k * 16.7);
+    if (edellinen) askeleet.push(+(kohta.x - edellinen.x).toFixed(3));
+    edellinen = kohta;
+  }
+  // Jokainen kehys etenee saman verran (16,7 ms x 1 px/ms), ei 0 ja 2x.
+  for (const a of askeleet) assert.ok(a > 16 && a < 17.5, `askel ${a} (askeleet ${askeleet})`);
+});
+
+test('osoittimenKohta: vakiot ovat enintään yksi kehys', () => {
+  assert.ok(OSOITTIMEN_VIIVE_MAX_MS <= 17, 'viive enintään yksi kehys (Fable 22.9.2026)');
+  assert.ok(OSOITTIMEN_EKSTRAPOLOINTI_MAX_MS <= 17);
+  assert.ok(OSOITTIMEN_NAYTTEITA >= 8, 'kaksi kehystä 125 Hz:n hiirellä');
+});
+
+test('kytkentä: näytteet kerätään coalesced-tapahtumista ja sovelletaan kehyksen hetkellä', () => {
+  const lahde = readFileSync(new URL('../js/pallo.js', import.meta.url), 'utf8');
+  assert.match(lahde, /typeof e\.getCoalescedEvents === 'function' \? e\.getCoalescedEvents\(\) : null/);
+  assert.match(lahde, /const kohta = osoittimenKohta\(syote\.naytteet, nyt - viive, \{/);
+  assert.match(lahde, /const viive = Math\.min\(kehysvali, OSOITTIMEN_VIIVE_MAX_MS\);/);
+  assert.match(lahde, /interpVanha: laattakerroksenKokeet\(\)\.has\('interpvanha'\)/, 'paluulippu');
+  assert.match(lahde, /syote\.naytteet\.length = 0;/, 'pointerdown tyhjentää näytteet');
 });
