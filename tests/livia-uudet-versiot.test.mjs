@@ -11,6 +11,28 @@ test('kasvopohjien polut vastaavat toisiaan myös tuotantopään muuttuessa',()=
   for(const ilme of ['glance','down','shock','blink','smile','smug','grin','disbelief','yawn'])assert.deepEqual(topologia(ilme),topologia('rest'),ilme);
 });
 
+test('sarjakuvakokeilu käyttää omaa piirrosta, huivia ja jatkuvaa silmänräpäytystä',()=>{
+  const a=p=>uudenEleenAsento('uusi-sarjakuvapulu',p),kuva=p=>uudenEleenKuva(a(p));
+  assert.match(kuva(.22),/data-style="sarjakuvakokeilu"/);
+  assert.equal((kuva(.22).match(/data-part="cartoon-eye"/g)||[]).length,2);
+  assert.match(kuva(.22),/data-part="cartoon-beak" data-opening="1"/);
+  assert.match(kuva(.22),/data-part="mouth-space"/);
+  assert.match(kuva(.22),/data-part="tongue"/);
+  assert.match(kuva(.1),/data-part="cartoon-lid" transform="[^"]*scale\(1 0.04\)/);
+  assert.match(kuva(.85),/data-part="folded-wing-layer"/,'suljettu siipi ei katoa väliruuduissa');
+  assert.match(kuva(.22),/data-part="scarf"/);
+  assert.match(kuva(.22),/fill="#d98a98"/);
+  const huivi=p=>kuva(p).match(/data-part="scarf-tails" transform="([^"]+)"/)[1];
+  assert.notEqual(huivi(.2),huivi(.3),'huivin päät seuraavat tervehdyksen jälkiliikettä');
+  for(const e of LIVIAN_UUDET_VERSIOT.filter(e=>e.id!=='uusi-sarjakuvapulu')){
+    assert.doesNotMatch(uudenEleenKuva(uudenEleenAsento(e.id,.4)),/cartoon-eye|data-part="scarf"/,'ei uutta hahmopiirrosta tai huivia muihin eleisiin');
+  }
+  for(let i=0;i<=100;i++){
+    const s=a(i/100),perus=uudenEleenAsento('uusi-welcome',i/100);
+    for(const k of ['paaKulma','siipi','sulat','suu','rapaytys'])assert.equal(s[k],perus[k],'piirrostyylin koe säilyttää tutun tervehdyksen liikeavaimet');
+  }
+});
+
 test('katseluehdotukset pysyvät erillään pelieleistä ja kestävät kelauksen',()=>{
   const perus=LIVIA_SVG_ELEET.map(e=>e.id);
   for(const e of LIVIAN_UUDET_VERSIOT){
