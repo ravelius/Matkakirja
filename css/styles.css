@@ -28091,6 +28091,13 @@ body.aikajana-paalla .pollo-nappi.pollo-kelluu.livia-kasvot-valmis { width: 44px
  * Erillinen, kosketukset läpäisevä pinta ohittaa kartan/napin leikkausrajat. */
 .pollo-nappi.pollo-kelluu.livia-kasvot-valmis,
 body.aikajana-paalla .pollo-nappi.pollo-kelluu.livia-kasvot-valmis { width:48px; height:48px; min-width:48px; right:calc(2.6rem + env(safe-area-inset-right, 0px)); }
+/* Kartalla hahmolle yhtä paljon hengitystilaa oikealle ja alas (22.9.2026).
+   Nappi on myös piirroksen ankkuri, joten kosketuskohde ja puhekuplat
+   seuraavat mukana. Paneelin väistö ja avoimen chatin oma paikka säilyvät. */
+.pollo-nappi.pollo-kelluu.pollo-kelluu-kartalla.livia-kasvot-valmis:not(.livia-chat-nappi) {
+  right: calc(3.6rem + env(safe-area-inset-right, 0px));
+  bottom: calc(3.6rem + env(safe-area-inset-bottom, 0px));
+}
 .livia-kasvot-pinta.livia-lentonayttamo { position:fixed; right:auto; bottom:auto; width:152px; height:304px; z-index:39; pointer-events:none; overflow:hidden; }
 .livia-lentonayttamo[hidden] { display:none; }
 .livia-lentonayttamo canvas { display:block; mix-blend-mode:normal!important; image-rendering:pixelated; }
