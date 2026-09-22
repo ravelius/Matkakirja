@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import {
-  LAATU_KAUKORAJA, LAATU_LEPOVIIVE_MS, LAATU_LIIKEVIIVE_MS, LAATU_PIKSELISUHDE_LEPO, LAATU_PIKSELISUHDE_LIIKE, LAATU_TERAVYYS, LAATU_TERAVYYS_KAUKO, NAPAKANNEN_HAIVEPEITTO, NAPAKANNEN_LEVEYS, NAPAKANSI_ETELA, NAPAKANSI_POHJOINEN, NAPAKERROIN_MIN, OSOITTIMEN_EKSTRAPOLOINTI_MAX_MS, OSOITTIMEN_NAYTTEITA, OSOITTIMEN_VIIVE_MAX_MS, PALLO_KIRJASTO, PALLO_LAATAT, PALLO_LAATTAKANSIO, PALLO_LAATTATASO_MAX, PALLO_LAATTAVERSIO, PALLO_SUKELLUSLEVEYS, PALLO_TEKSTUURI, PALLO_TEKSTUURITASO, PALLO_TEKSTUURIVERSIO, asennaNapakannet, kolmiulotteinen, laatatSaatavilla, laattakynnykset, laattatasoMax, laatuTeravyys, lepokerroin, napakerroin, osoittimenKohta, pallonKaupungit, pallonLaatta, sukelluskohta,
+  LAATU_KAUKORAJA, LAATU_LEPOVIIVE_MS, LAATU_LIIKEVIIVE_MS, LAATU_PIKSELISUHDE_LEPO, LAATU_PIKSELISUHDE_LIIKE, LAATU_TERAVYYS, LAATU_TERAVYYS_KAUKO, NAPAKANNEN_HAIVEPEITTO, NAPAKANNEN_LEVEYS, NAPAKANSI_ETELA, NAPAKANSI_POHJOINEN, NAPAKERROIN_MIN, OSOITTIMEN_EKSTRAPOLOINTI_MAX_MS, OSOITTIMEN_NAYTTEITA, OSOITTIMEN_VIIVE_MAX_MS, PALLO_KIRJASTO, PALLO_LAATAT, PALLO_LAATTAKANSIO, PALLO_LAATTATASO_MAX, PALLO_LAATTAVERSIO, PALLO_SUKELLUSLEVEYS, PALLO_TEKSTUURI, PALLO_TEKSTUURITASO, PALLO_TEKSTUURIVERSIO, SYOTE_KIIHTYVYYS_MAX, asennaNapakannet, jousiAskel, kolmiulotteinen, laatatSaatavilla, laattakynnykset, laattatasoMax, laatuTeravyys, lepokerroin, napakerroin, osoittimenKohta, pallonKaupungit, pallonLaatta, rajaaKiihtyvyys, sukelluskohta,
 } from '../js/pallo.js';
 import { laatanReunat, rivinLeveysaste, julisteenLeveysvali, tasonLaatat, lahdetaso, laattojenKansio, LAATTA, tayteRivilla, nostaReuna, JAA_RAJA, JAA_SAVY, MERI_SAVY, tyolista, osanLaatat, kaistanRajat, lueOsa, NOUTOVALI_OLETUS, YHTEISTAHTI_MS } from '../tools/tee-pallolaatat.mjs';
 import { LINSSIT } from '../js/linssit/rekisteri.js';
@@ -1215,8 +1215,49 @@ test('coalesced-näytteisiin ei nojata: kelvoton lista johtaa varapolkuun', () =
 test('kytkentä: näytteet kerätään coalesced-tapahtumista ja sovelletaan kehyksen hetkellä', () => {
   const lahde = readFileSync(new URL('../js/pallo.js', import.meta.url), 'utf8');
   assert.match(lahde, /typeof e\.getCoalescedEvents === 'function' \? e\.getCoalescedEvents\(\) : null/);
-  assert.match(lahde, /const kohta = osoittimenKohta\(syote\.naytteet, nyt - viive, \{/);
+  assert.match(lahde, /kohta = osoittimenKohta\(n, nyt - viive, \{/);
   assert.match(lahde, /const viive = Math\.min\(kehysvali, OSOITTIMEN_VIIVE_MAX_MS\);/);
   assert.match(lahde, /interpVanha: laattakerroksenKokeet\(\)\.has\('interpvanha'\)/, 'paluulippu');
   assert.match(lahde, /syote\.naytteet\.length = 0;/, 'pointerdown tyhjentää näytteet');
+});
+
+/* (4) Jousi: kriittisesti vaimennettu, dt-pohjainen. */
+test('jousiAskel lähestyy tavoitetta eikä ylitä sitä (kriittinen vaimennus)', () => {
+  let p = 0; let v = 0;
+  const tau = 16.7;
+  const matka = [];
+  for (let i = 0; i < 20; i += 1) {
+    const r = jousiAskel(p, v, 100, 16.7, tau);
+    p = r.p; v = r.v;
+    matka.push(p);
+  }
+  assert.ok(p > 95 && p <= 100.5, `lähestyy tavoitetta (${p})`);
+  assert.ok(Math.max(...matka) <= 101, `ei merkittävää ylitystä (${Math.max(...matka)})`);
+  // Sama matka isommalla dt:llä: tulos ei saa riippua kehystaajuudesta.
+  let p2 = 0; let v2 = 0;
+  for (let i = 0; i < 10; i += 1) { const r = jousiAskel(p2, v2, 100, 33.4, tau); p2 = r.p; v2 = r.v; }
+  assert.ok(Math.abs(p2 - p) < 6, `dt ei ratkaise lopputulosta (${p} vs ${p2})`);
+});
+
+/* (3) Ennakointi: kiihtyvyyskatto estää hypyn suunnanvaihdossa. */
+test('rajaaKiihtyvyys rajaa nopeuden muutoksen, ei nopeutta', () => {
+  // Pieni muutos menee läpi sellaisenaan.
+  assert.equal(rajaaKiihtyvyys(1, 1.1, 16), 1.1);
+  // Suunnanvaihdos rajataan katolla (0,02 px/ms² × 16 ms = 0,32).
+  const r = rajaaKiihtyvyys(1, -1, 16);
+  assert.ok(Math.abs(r - (1 - SYOTE_KIIHTYVYYS_MAX * 16)) < 1e-9, `${r}`);
+  // Ensimmäisellä kehyksellä ei ole edellistä nopeutta: ei rajausta.
+  assert.equal(rajaaKiihtyvyys(undefined, 5, 16), 5);
+});
+
+test('kytkentä: viisi syötetapaa ovat samassa rakennuksessa lippuina', () => {
+  const lahde = readFileSync(new URL('../js/pallo.js', import.meta.url), 'utf8');
+  assert.match(lahde, /if \(syote\.interpVanha\) syote\.tapa = 'vanha';/);
+  assert.match(lahde, /else if \(k\.has\('syoteennakko'\)\) syote\.tapa = 'ennakko';/);
+  assert.match(lahde, /else if \(k\.has\('syotejousi'\)\) syote\.tapa = 'jousi';/);
+  assert.match(lahde, /k\.has\('syotetouch'\)/);
+  // Kosketuslähde vain kosketuslaitteella, ja silloin pointermove ei syötä puskuria.
+  assert.match(lahde, /typeof globalThis\.ontouchstart !== 'undefined'/);
+  assert.match(lahde, /if \(syote\.touchLahde\) return;/);
+  assert.match(lahde, /kotelo\.addEventListener\('touchmove', touchNayte, \{ passive: true \}\)/);
 });
