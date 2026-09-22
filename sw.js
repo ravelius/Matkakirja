@@ -251,6 +251,7 @@ const SHELL = [
   './js/pallolauta/kameraloki.js',
   './js/pallolauta/lepopiirto.js',
   './js/kartta-liike.js',
+  './js/vedon-seuranta.js',
   './js/kehittaja-pikatie.js',
   './js/pallolauta/linssikartta.js',
   './js/pallolauta/linssit.js',

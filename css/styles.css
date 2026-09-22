@@ -706,6 +706,22 @@ button, .brand, .turn-pill, .fact-card h2 {
 .lauta-vihje[hidden] { display: none; }
 
 /*
+ * VEDON SEURANNAN ALAOTSIKKO (omistaja 22.9.2026). Kartta-osastossa on
+ * nyt kaksi asiaa: kytkin ja viiden rivin valinta. Alaotsikko erottaa
+ * ne toisistaan ilman uutta osastoa — se on osaston otsikkoa pienempi
+ * ja vaimeampi, jottei valikkoon tule kahta samanarvoista otsikkoa.
+ */
+.valikko-alaotsikko {
+  margin: 0.5rem 0 0.3rem;
+  font-family: var(--font-type);
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+  color: rgba(230, 214, 184, 0.72);
+}
+
+/*
  * ── VALIKON KOMENNOT: KAKSI LEVEÄÄ TEKSTINAPPIA ──────────────────────
  *
  * Omistajan päätös 18.8.2026: "uusi peli" ja sen alla "ehdota

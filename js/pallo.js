@@ -94,6 +94,9 @@ export {
   lepokerroksenSuunnitelma, lepokerroksenTaso, lepokerroksenTasoRiittaa, lepokerroksenUV,
   lepokerroksenVerkko, luoLepokerroksenAjoitus, pallonPiste, pinnanPiste, pyramidinKarttaAla,
 } from './pallolaatat.js';
+import {
+  VEDON_SEURANTA_TAPAHTUMA, mittauslippuPaalla, seurannanAsetukset,
+} from './vedon-seuranta.js';
 
 const R2 = 'https://media.matkakirja.app/';
 /**
@@ -3354,19 +3357,39 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
     touchLahde: false,
     jousi: null, // { x, y, vx, vy }
   };
+  /*
+   * TAPA TULEE JOKO MITTAUSLIPUSTA TAI PELAAJAN VALINNASTA
+   * (js/vedon-seuranta.js, valikko → Kartta → Vedon seuranta).
+   *
+   * LIPPU VOITTAA KOKONAAN. Savuke ei saa joutua arvaamaan, mikä
+   * laitteen localStorageen on jäänyt: kun osoitteessa on yksikin tämän
+   * perheen lippu, valinta ei vaikuta mihinkään — ei alussa eikä
+   * lennossa. Ilman lippuja valinta ratkaisee, ja se voi vaihtua kesken
+   * pelin ilman uutta latausta.
+   *
+   * Kohta 5: touchmove on iOS:n Safarissa rAF-tahdistettu, pointermove
+   * ei. Näytteiden lähde vaihtuu VAIN kosketuslaitteella; hiirellä
+   * pointermove on ainoa lähde eikä käytös muutu.
+   */
+  const kosketusLaite = typeof globalThis.ontouchstart !== 'undefined';
+  const mittausLippu = mittauslippuPaalla();
+  const asetaTapa = ({ tapa, touchLahde }) => {
+    syote.tapa = tapa;
+    syote.interpVanha = tapa === 'vanha';
+    syote.touchLahde = Boolean(touchLahde) && kosketusLaite;
+  };
   {
     const k = laattakerroksenKokeet();
     if (k.has('syoteloki')) syote.loki = [];
-    if (syote.interpVanha) syote.tapa = 'vanha';
-    else if (k.has('syoteennakko')) syote.tapa = 'ennakko';
-    else if (k.has('syotejousi')) syote.tapa = 'jousi';
-    /*
-     * Kohta 5: touchmove on iOS:n Safarissa rAF-tahdistettu, pointermove
-     * ei. Lippu vaihtaa näytteiden lähteen VAIN kosketuslaitteella;
-     * hiirellä pointermove on ainoa lähde eikä käytös muutu.
-     */
-    syote.touchLahde = k.has('syotetouch')
-      && typeof globalThis.ontouchstart !== 'undefined';
+    if (mittausLippu) {
+      let tapa = 'interp';
+      if (syote.interpVanha) tapa = 'vanha';
+      else if (k.has('syoteennakko')) tapa = 'ennakko';
+      else if (k.has('syotejousi')) tapa = 'jousi';
+      asetaTapa({ tapa, touchLahde: k.has('syotetouch') });
+    } else {
+      asetaTapa(seurannanAsetukset());
+    }
   }
   ui.pallonSyote = syote; // mittausta varten (savukkeet)
   let kotelonMitat = null; // { left, top, W, H }
@@ -3606,7 +3629,32 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
     syote.veto = { x: k.clientX, y: k.clientY, aika: t };
     syote.touchNaytteita = (syote.touchNaytteita ?? 0) + 1;
   };
-  if (syote.touchLahde) kotelo.addEventListener('touchmove', touchNayte, { passive: true });
+  /*
+   * KUUNTELIJA KAIKILLE KOSKETUSLAITTEILLE, EI VAIN VALINNAN AIKANA:
+   * käsittelijä palaa heti, kun `syote.touchLahde` on epätosi, ja
+   * valinta voi vaihtua kesken pelin. Ehdollinen kytkentä vaatisi
+   * lisäyksen ja poiston lennossa — yksi passiivinen kuuntelija on
+   * halvempi kuin kaksi kirjanpitoa.
+   */
+  if (kosketusLaite) kotelo.addEventListener('touchmove', touchNayte, { passive: true });
+
+  /*
+   * VALINTA VAIHTUI VALIKOSSA (js/vedon-seuranta.js): tapa vaihtuu
+   * heti, ilman uutta latausta. Puskuri nollataan — vanhat näytteet on
+   * kerätty vanhalla tavalla ja vanhasta lähteestä, ja jousen tila
+   * kuuluu jouselle.
+   */
+  const seurantaVaihtui = () => {
+    if (mittausLippu) return; // mittausajossa lippu pitää valtansa
+    asetaTapa(seurannanAsetukset());
+    syote.naytteet.length = 0;
+    syote.veto = null;
+    syote.jousi = null;
+    syote.vx = undefined;
+    syote.vy = undefined;
+    syote.edellinenNyt = 0;
+  };
+  globalThis.addEventListener?.(VEDON_SEURANTA_TAPAHTUMA, seurantaVaihtui);
 
   const sovellaSyote = () => {
     const nyt = performance.now();
@@ -3685,7 +3733,8 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
     return alkuperainenUpdate.apply(this, args);
   };
   const puraSyote = () => {
-    if (syote.touchLahde) kotelo.removeEventListener('touchmove', touchNayte);
+    if (kosketusLaite) kotelo.removeEventListener('touchmove', touchNayte);
+    globalThis.removeEventListener?.(VEDON_SEURANTA_TAPAHTUMA, seurantaVaihtui);
     if (ohjaimet.update?.name === 'pallonSyoteUpdate') ohjaimet.update = alkuperainenUpdate;
     kokovahti?.disconnect();
   };
