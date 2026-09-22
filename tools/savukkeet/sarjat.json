@@ -8,6 +8,8 @@
     "savuke-topografialinssi.mjs",
     "savuke-musta-laatta.mjs#webkit",
     "savuke-musta-laatta.mjs#chromium",
+    "savuke-laattaohjelmat.mjs#webkit",
+    "savuke-laattaohjelmat.mjs#chromium",
     "savuke-astro-pallo.mjs#vartija-c",
     "savuke-astro-pallo.mjs#tyopoyta",
     "savuke-astro-pallo.mjs#puhelin",
@@ -376,6 +378,18 @@
       "kuvakansio": true,
       "huomautus": "Omistajan loydos 19.9.2026 klo 14.58 Suomen aikaa (iPhone, v1954): panoroidessa Keski-Ranskaan ilmestyi yhden laatan kokoinen TAYSIN MUSTA suorakaide, joka havisi liikkeen loputtua. Vartio kysyy koko kartan alalta, onko kehyksessa yhtenainen musta suorakaide >= 40 x 40 CSS px. WEBKIT ON ENSISIJAINEN RIVI: loydos on iOS Safarista. Laattapyynnot viivytetaan route-valityksella 300-800 ms, jotta liikkeen aikainen tila nakyy. Jos tama nousee punaiseksi, kartan alla on taas musta pinta.",
       "huomautusMac": "KUORMAPUNAINEN 21.9.2026 klo 19.53-20.15 (savukkeet-mac 9f973a43 pohjapolton aikana, load 540): WebKit-kaynnistys aikakatkaistiin 180 s ja Chromium kaatui SEGV:iin ennen vaitteita; ei koodivika. Yksin ajettuna 21.9. klo 21.15 vihrea. Jos toistuu ilman polttoa, tutki."
+    },
+    "savuke-laattaohjelmat.mjs#webkit": {
+      "env": {
+        "SAVUKE_MOOTTORI": "webkit"
+      },
+      "huomautus": "Vartija (Fable 22.9.2026): v2084:n kerma-shader ei kaantynyt (vUv ei ole three r155:ssa), ohjelma ei linkittynyt eika three kirjannut virhetta - laattakerros oli tuotannossa nakymaton ja kaikki savukkeet vihreita, koska pohja peitti aukon. V1 LINK_STATUS kaikille ohjelmille (kaantajan loki punaisella), V3 lukee laattakerroksen pikselin ILMAN pohjaa (gl.readPixels 3x3-ruudukosta), V4 kerros on pohjan paalla. WebKit ensisijainen (iOS). Mac 22.9.2026: ~25 s."
+    },
+    "savuke-laattaohjelmat.mjs#chromium": {
+      "env": {
+        "SAVUKE_MOOTTORI": "chromium"
+      },
+      "huomautus": "Sama vartio Chromiumilla. Ks. #webkit."
     },
     "savuke-musta-laatta.mjs#chromium": {
       "env": {

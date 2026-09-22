@@ -46,7 +46,7 @@ const KERMA_GLSL_UNIFORMIT = `
 uniform sampler2D kermaMaski;
 uniform vec4 kermaMaskiAlue;   // lauta: x0, y0, w, h
 uniform vec4 kermaLaattaAlue;  // lauta: x0, y0, w, h (tämä laatta)
-uniform vec3 kermaVari;        // sRGB 0…1
+uniform vec3 kermaVari;        // LINEAARINEN 0…1 (kermanVariLineaariseksi)
 uniform float kermaPeitto;
 uniform float kermaSumuPeitto;
 uniform float kermaPaalla;     // 1 = kerma, 0 = ei (maailmanäkymä, linssin tyhjä arkki)
@@ -70,7 +70,18 @@ const KERMA_GLSL_KARKI = `
 vKermaUv = uv;
 `;
 
-/** map_fragment-lohkon korvaaja. */
+/*
+ * map_fragment-lohkon korvaaja. SEKOITUS LINEAARISESSA, EI sRGB-
+ * EDESTAKAISIN (sulavuuskatsaus 22.9.2026 kohta 3): aiempi runko teki
+ * joka laattapikselille kaksi pow(vec3)-kutsua (lineaarinen → sRGB →
+ * lineaarinen) vain siksi, että kankaan sääntö luki sRGB-tavuja. Nyt
+ * maa/meri-ero lasketaan gamma 2:n likiarvolla (sqrt, yksi käsky) —
+ * kynnysten 36/52 kohdalla ero täsmälliseen sRGB:hen on ±3/255, jonka
+ * smoothstepin pehmeä reuna nielee — ja kerma sekoitetaan lineaarisessa
+ * tilassa lineaariseksi muunnettuun kermaväriin (kermanVariLineaariseksi
+ * kerran CPU:lla). Maski haetaan vain kun kermaPaalla (kuten ennenkin).
+ * Mittauslippu `?koe=kermapow` palauttaa täsmällisen sRGB-rungon.
+ */
 const KERMA_GLSL_RUNKO = `
 #ifdef USE_MAP
   vec4 kermaTexel = texture2D( map, KERMA_UV );
@@ -80,12 +91,31 @@ const KERMA_GLSL_RUNKO = `
                               kermaLaattaAlue.y + (1.0 - KERMA_UV.y) * kermaLaattaAlue.w);
     vec2 kermaMaskiUv = (kermaLaudalla - kermaMaskiAlue.xy) / kermaMaskiAlue.zw;
     vec4 kermaM = texture2D( kermaMaski, vec2(kermaMaskiUv.x, 1.0 - kermaMaskiUv.y) );
-    // Kankaan sääntö luki sRGB-tavuja: texel on lineaarinen, joten sama ero lasketaan sRGB:ssä.
+    // Maa/meri-ero sRGB:ssä likimain (gamma 2): sqrt on halpa, pow ei.
+    float kermaEro = (sqrt(kermaTexel.r) - sqrt(kermaTexel.b)) * 255.0;
+    float kermaT = smoothstep(KERMA_MERI, KERMA_MAA, kermaEro);
+    float kermaA = kermaT * (kermaPeitto * (1.0 - kermaM.r) + kermaSumuPeitto * kermaM.g);
+    kermaTexel.rgb = mix(kermaTexel.rgb, kermaVari, clamp(kermaA, 0.0, 1.0));
+  }
+  diffuseColor *= kermaTexel;
+#endif
+`;
+
+/** Täsmällinen sRGB-runko (kaksi pow-paria) vain mittauslipulla `?koe=kermapow`. */
+const KERMA_GLSL_RUNKO_TARKKA = `
+#ifdef USE_MAP
+  vec4 kermaTexel = texture2D( map, KERMA_UV );
+  if (kermaPaalla > 0.5) {
+    vec2 kermaLaudalla = vec2(kermaLaattaAlue.x + KERMA_UV.x * kermaLaattaAlue.z,
+                              kermaLaattaAlue.y + (1.0 - KERMA_UV.y) * kermaLaattaAlue.w);
+    vec2 kermaMaskiUv = (kermaLaudalla - kermaMaskiAlue.xy) / kermaMaskiAlue.zw;
+    vec4 kermaM = texture2D( kermaMaski, vec2(kermaMaskiUv.x, 1.0 - kermaMaskiUv.y) );
     vec3 kermaSrgb = mix(kermaTexel.rgb * 12.92, 1.055 * pow(kermaTexel.rgb, vec3(1.0 / 2.4)) - 0.055, step(0.0031308, kermaTexel.rgb));
     float kermaEro = (kermaSrgb.r - kermaSrgb.b) * 255.0;
     float kermaT = smoothstep(KERMA_MERI, KERMA_MAA, kermaEro);
     float kermaA = kermaT * (kermaPeitto * (1.0 - kermaM.r) + kermaSumuPeitto * kermaM.g);
-    kermaSrgb = mix(kermaSrgb, kermaVari, clamp(kermaA, 0.0, 1.0));
+    vec3 kermaVariSrgb = mix(kermaVari * 12.92, 1.055 * pow(kermaVari, vec3(1.0 / 2.4)) - 0.055, step(0.0031308, kermaVari));
+    kermaSrgb = mix(kermaSrgb, kermaVariSrgb, clamp(kermaA, 0.0, 1.0));
     kermaTexel.rgb = mix(kermaSrgb / 12.92, pow((kermaSrgb + 0.055) / 1.055, vec3(2.4)), step(0.04045, kermaSrgb));
   }
   diffuseColor *= kermaTexel;
@@ -101,17 +131,27 @@ export function luoKermanJaetut() {
   return {
     kermaMaski: { value: null },
     kermaMaskiAlue: { value: [0, 0, 1, 1] },
-    kermaVari: { value: [0.98, 0.957, 0.839] },
+    kermaVari: { value: kermanVariLineaariseksi('#faf4d6') },
     kermaPeitto: { value: 0 },
     kermaSumuPeitto: { value: 0 },
   };
 }
 
-/** '#faf4d6' → [r, g, b] 0…1. */
+/** '#faf4d6' → [r, g, b] 0…1 (sRGB). */
 export function kermanVariLuvuiksi(kerma) {
   const h = String(kerma ?? '#faf4d6').replace('#', '');
   if (h.length < 6) return [0.98, 0.957, 0.839];
   return [0, 2, 4].map((i) => parseInt(h.slice(i, i + 2), 16) / 255);
+}
+
+/** sRGB-kanava 0…1 → lineaarinen (sama kaava kuin three:n sRGBToLinear). */
+export function srgbLineaariseksi(c) {
+  return c < 0.04045 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4;
+}
+
+/** '#faf4d6' → lineaarinen [r, g, b] shaderin sekoitusta varten. */
+export function kermanVariLineaariseksi(kerma) {
+  return kermanVariLuvuiksi(kerma).map(srgbLineaariseksi);
 }
 
 /**
@@ -219,7 +259,7 @@ export function paivitaKermanJaetut(jaettu, tasoitus, { luoKangas, Texture, THRE
     // Ilman renkaita: maski tyhjä (1 × 1 nolla) → kerma kaikkialle maalle.
     jaettu.kermaMaskiAlue.value = [0, 0, 1, 1];
   }
-  jaettu.kermaVari.value = kermanVariLuvuiksi(tasoitus?.kerma);
+  jaettu.kermaVari.value = kermanVariLineaariseksi(tasoitus?.kerma);
   jaettu.kermaPeitto.value = Number.isFinite(tasoitus?.peitto) ? tasoitus.peitto : 0;
   jaettu.kermaSumuPeitto.value = Number.isFinite(tasoitus?.sumu?.peitto) ? tasoitus.sumu.peitto : 0;
   return Boolean(maski);
@@ -230,7 +270,7 @@ export function paivitaKermanJaetut(jaettu, tasoitus, { luoKangas, Texture, THRE
  * paalla: boolean }. Palauttaa laatan omat uniformit (paalla-lippu
  * vaihdettavissa jälkikäteen).
  */
-export function asennaKermaShader(materiaali, { jaettu, laatta }) {
+export function asennaKermaShader(materiaali, { jaettu, laatta, tarkka = false }) {
   if (!materiaali || !jaettu) return null;
   const omat = {
     kermaLaattaAlue: { value: [laatta.alue.x0, laatta.alue.y0, laatta.alue.w, laatta.alue.h] },
@@ -238,7 +278,7 @@ export function asennaKermaShader(materiaali, { jaettu, laatta }) {
   };
   materiaali.onBeforeCompile = (shader) => {
     Object.assign(shader.uniforms, jaettu, omat);
-    const runko = KERMA_GLSL_RUNKO.replace(/KERMA_UV/g, 'vKermaUv')
+    const runko = (tarkka ? KERMA_GLSL_RUNKO_TARKKA : KERMA_GLSL_RUNKO).replace(/KERMA_UV/g, 'vKermaUv')
       .replace('KERMA_MERI', `${KERMA_MERI_ERO}.0`).replace('KERMA_MAA', `${KERMA_MAA_ERO}.0`);
     shader.vertexShader = shader.vertexShader
       .replace('#include <common>', `#include <common>\n${KERMA_GLSL_VARYING}`)
@@ -247,7 +287,7 @@ export function asennaKermaShader(materiaali, { jaettu, laatta }) {
       .replace('#include <common>', `#include <common>\n${KERMA_GLSL_VARYING}\n${KERMA_GLSL_UNIFORMIT}`)
       .replace('#include <map_fragment>', runko);
   };
-  materiaali.customProgramCacheKey = () => 'laattakerma-1';
+  materiaali.customProgramCacheKey = () => (tarkka ? 'laattakerma-2-tarkka' : 'laattakerma-2');
   materiaali.needsUpdate = true;
   materiaali.kermaUniformit = omat;
   return omat;
