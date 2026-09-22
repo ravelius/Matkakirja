@@ -16,9 +16,10 @@ test('esikäännös: molemmat transparent-variantit, kerma kun shader, näytteet
   assert.match(lohko, /for \(const kerma of \(kermaShader \? \[true, false\] : \[false\]\)\)/);
   assert.match(lohko, /for \(const transparent of \[true, false\]\)/);
   assert.match(lohko, /asennaKermaShader\(materiaali, \{\n\s*jaettu: kermanJaetut, tarkka: kokeet\.has\('kermapow'\),/);
-  assert.match(lohko, /renderer\.compileAsync\(scene, kamera\)/);
-  // Näytemeshit pois scenestä, materiaaleja ei pureta (ohjelma vapautuisi).
-  assert.match(lohko, /for \(const n of naytteet\) juuri\.remove\(n\);/);
+  // Vain näytteiden ryhmä käännetään; oikea scene antaa valot (vika v2099: purettu laatta kaatoi pollin).
+  assert.match(lohko, /renderer\.compileAsync\(ryhma, kamera, scene\)/);
+  assert.doesNotMatch(lohko, /juuri\.add\(mesh\)/, 'näytteitä ei lisätä sceneen');
+  assert.doesNotMatch(lohko, /renderer\.compileAsync\(scene/, 'koko sceneä ei käännetä');
   assert.doesNotMatch(lohko, /material\.dispose|materiaali\.dispose/);
   assert.match(lohko, /esikaannoksenNaytteet = naytteet;/);
   // Kutsutaan heti kun kerrokset tiedetään.
