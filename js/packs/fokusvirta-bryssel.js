@@ -61,4 +61,40 @@ export const FOKUSVIRTA_BRYSSEL = {
       lahde: 'Celuici, Commons (CC BY-SA 4.0)',
     },
   },
+
+  /*
+   * ---------- KEVYT KULKU ----------
+   * Samat kaksi kenttää kuin täysissä pakeissa (esim. fokusvirta-
+   * tampere.js). Fable vahvisti 22.9.2026, ettei kevyt pakki estä
+   * kohtaamisen kirjoittamista: vihreä piste avaa kohtaamisen suoraan
+   * laattakysymyksenä (js/fokusvirta.js avaaFokusKohtaaminen). Ei
+   * vihjeOsiota — Brysselillä ei ole kaupunkilehden osioita (kevyt
+   * pakki). Kohtaamiskortin todellinen sisältö (js/packs/kohtaamiset.js,
+   * avain 'bryssel') on kivenveistäjä Aline.
+   */
+  kohtaaminen: {
+    hahmo: 'Kivenveistäjä Aline',
+    nappi: 'Tapaa kivenveistäjä',
+    varmistus: 'Haluatko varmasti tavata Alinen juuri nyt?',
+    teksti: 'Aline seisoo pörssitalon keskeneräisillä telineillä, taltta '
+      + 'kädessään ja kivipöly hihoissaan. Rakennus avataan juhlallisesti '
+      + 'vasta joulun alla, puoli vuotta myöhemmin kuin isoisä kulki '
+      + 'ohitse — hän näki vain runkovaiheen ja kuvanveistäjien '
+      + 'käsityön kesken. Aline haluaa tietää, tunteeko tulija maailman '
+      + 'muutenkin kuin valmiiden rakennusten kautta, ennen kuin näyttää '
+      + 'kumpi kivireliefeistä on hänen omaa käsialaansa.',
+  },
+
+  /*
+   * KOHTAAMISPAIKKA: PÖRSSITALON TYÖMAA (La Bourse). Koordinaatit ovat
+   * kaupungin oma laattapaikka (sama perusteltu poikkeus kuin Riiassa):
+   * js/packs/europe.js 295/556, js/packs/maailmankartta.js 5978.4/1353.
+   */
+  kohtaamispiste: {
+    nimi: 'Pörssitalon työmaa',
+    laudat: {
+      maailmankartta: { x: 5978.4, y: 1353 },
+      europe: { x: 295, y: 556 },
+    },
+  },
 };

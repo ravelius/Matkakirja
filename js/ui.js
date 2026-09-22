@@ -442,6 +442,10 @@ import { paivitaElaintakyt, nollaaElaintakyt } from './elaintaky.js';
 // Karttaselitevalikko ja sen aihevalot (js/karttaselite.js,
 // js/karttavalot.js): nappi kartan oikeaan yläkulmaan, valot merkkien alle.
 import { kaynnistaKarttaselite, paivitaKarttaselite } from './karttaselite.js';
+// Karttatyökalun Maakunnat-välilehti (runko, 22.9.2026): kytketään heti
+// karttaselitteen käynnistyksen jälkeen — turvallinen kutsu myös vanhalla
+// karttaselitteellä, jolla ei vielä ole asetaMaakunnat-koukkua.
+import { kytkeMaakunnatKarttaselitteeseen } from './karttatyokalu-maakunnat.js';
 import { kaynnistaYlapalkkiVaaka } from './ylapalkki-vaaka.js';
 /*
  * Fokusnäkymän RUUTUUN ankkuroidut atlas-elementit: mittajana, maan
@@ -3385,6 +3389,10 @@ export class UI {
      * palavat heti ensimmäisessä piirrossa.
      */
     kaynnistaKarttaselite(this);
+    // Maakunnat-välilehden runko (js/karttatyokalu-maakunnat.js) heti
+    // perässä: se vain rekisteröi rakentajan, ei piirrä mitään ennen
+    // kuin pelaaja avaa välilehden.
+    kytkeMaakunnatKarttaselitteeseen(this);
     /*
      * VAAKAPUHELIMEN YLÄPALKKINAPPI samassa kohdassa ja samasta
      * syystä: se asuu karttaruudussa karttaselitteen vieressä.

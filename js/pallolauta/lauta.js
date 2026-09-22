@@ -72,6 +72,7 @@ import {
 } from '../pallo.js';
 import { luoPallovektorit, pallovektoritPaalla } from '../pallovektorit.js';
 import { luoPallomaakunnat, pallomaakunnatPaalla } from '../pallomaakunnat.js';
+import { maanLaatikko as esilatauksenMaanLaatikko } from '../laattaesilataus.js';
 /*
  * VÄRITASON KOHDEMAA (karttauudistus, erä 1b). Lauta kertoo sen
  * laattapyramidille SAMASSA HETKESSÄ kuin punaisen kehän — kerros ei
@@ -2044,6 +2045,8 @@ export async function avaaPallolauta(ui) {
    * (`?maakunnat=1`); maa seuraa pelaajan maan korostusta alempana.
    */
   const maakunnat = pallomaakunnatPaalla() ? luoPallomaakunnat({ pallo }) : null;
+  /** Maa, jonka laatat on jo annettu esilatausjonoon (js/laattaesilataus.js). */
+  let esilatausMaaAnnettu = null;
   let liikkeessaNyt = () => false;
   // GL-nimiöt (vaihe 2): ladonnan nimet rungolle sovittimen kautta (oletus päällä, `?glnimiot=0` pois).
   const glSovitin = glNimiotKaytossa() && !/[?&]glnimiot=testi\b/.test(globalThis.location?.search ?? '')
@@ -4952,6 +4955,28 @@ export async function avaaPallolauta(ui) {
     });
     // Maakuntatäytöt samasta maasta ja samalla hetkellä kuin korostuskehä.
     maakunnat?.asetaMaa(linssiPaalla() ? null : korostusIso);
+    /*
+     * KOHDEMAAN LAATAT ESILATAUSJONOON (omistaja 22.9.2026; js/
+     * laattaesilataus.js): maan z6–z8 palvelutyöntekijän koriin levossa,
+     * kerran maata kohti, kun korostuksen renkaat ovat saapuneet
+     * (laatikko = manner + lähisaaret, ei merentakaiset).
+     */
+    const esilatausIso = linssiPaalla() ? null : korostusIso;
+    const annaEsilatausMaa = () => {
+      if (!esilatausIso || esilatausIso === esilatausMaaAnnettu || pallonKorostettuMaa() !== esilatausIso) return;
+      const renkaat = pallonKorostusRenkaat(esilatausIso);
+      const laatikko = renkaat.length ? esilatauksenMaanLaatikko(renkaat) : null;
+      const kerros = pallonLepokerros(pallo);
+      if (laatikko && kerros?.asetaEsilatausMaa) {
+        esilatausMaaAnnettu = esilatausIso;
+        kerros.asetaEsilatausMaa(esilatausIso, laatikko);
+      }
+    };
+    annaEsilatausMaa();
+    // Renkaat saapuvat laiskasti: yritetään uudestaan, kun aineisto on perillä.
+    if (esilatausIso && esilatausIso !== esilatausMaaAnnettu) {
+      Promise.resolve(lataaMaapolygonit()).then(() => annaEsilatausMaa()).catch(() => {});
+    }
     /*
      * MAAILMANÄKYMÄ LUETAAN SAMASTA HETKESTÄ KUIN MAA (omistaja
      * 15.9.2026, Raamattu: KARTTAUUDISTUKSEN PAATOKSET 23). Kun

@@ -15,11 +15,21 @@
  * kohteeseen ilman ainuttakaan tapaa jatkaa matkaa (Codexin pelitesti
  * julkaistussa v1855, Alpit).
  *
+ * PÄIVITYS 22.9.2026 (Fablen päätös): kevyet KAUPUNGIT (tromssa,
+ * bryssel, ljubljana, kosice, luxemburg, valletta) saivat kohtaaminen/
+ * kohtaamispiste-kentät, koska kohtaaminen kulkee vihreä piste →
+ * laattakysymys -polkua eikä lue vanhaa fokusvirtakorttiketjua
+ * (js/fokusvirta.js avaaFokusKohtaaminen). ALUEPAKETIT (alpit,
+ * islanti, kreeta, lappi, sisilia) eivät ole yksittäisiä kaupunkeja
+ * eikä niillä ole kohtaamista. Kummallakaan ryhmällä ei ole
+ * aarteen avaavaa lehtitehtävää (lehtitehtavat), joten vanha portti
+ * ei voisi silti koskaan avautua niissä.
+ *
  * Vartiot:
- *   1. Kaikki kuusi kevyttä kohdetta (alpit, islanti, kreeta, lappi,
- *      sisilia, tromssa) ovat oikeasti kevyitä JA laudalla — eli juuri
- *      niitä, joissa vanha portti ei olisi koskaan auennut.
- *   2. Liiku näkyy jokaisessa kuudessa, laatta paikallaan.
+ *   1. Kaikki 11 kevyttä kohdetta ovat oikeasti kevyitä JA laudalla.
+ *   2. Liiku näkyy jokaisessa yhdessätoista, laatta paikallaan —
+ *      TÄMÄ on se todellinen suoja: liikuNappiNakyvissa ei riipu
+ *      kohtaamispisteestä eikä lehtitehtävistä.
  *   3. Täyden pakin kaupunki (Pariisi): Liiku näkyy sekä LUKITUN että
  *      AVATUN aarteen kanssa — uusi linjaus ei saa rikkoa vanhaa
  *      toimivaa polkua.
@@ -42,6 +52,13 @@ import { packById } from '../js/pack.js';
  * liittyi seitsemänneksi samaan nimettyyn joukkoon.
  */
 const KEVYET = ['alpit', 'islanti', 'kreeta', 'lappi', 'sisilia', 'tromssa', 'bryssel', 'ljubljana', 'kosice', 'luxemburg', 'valletta'];
+/*
+ * ALUEPAKETIT eivät ole yksittäisiä kaupunkeja eikä niillä ole
+ * kohtaamista (22.9.2026). KAUPUNGIT-ryhmä sai kohtaaminen/
+ * kohtaamispiste-kentät samana päivänä (Fablen päätös) — Liiku ei
+ * silti riipu niistä (vartio 2 yllä), joten umpikuja-riskiä ei ole.
+ */
+const ALUEPAKETIT = ['alpit', 'islanti', 'kreeta', 'lappi', 'sisilia'];
 /** Täyden pakin verrokki: Pariisilla on kohtaamispiste ja aarretehtävä. */
 const TAYSI = 'pariisi';
 
@@ -64,18 +81,20 @@ function peliKaupungissa(id, { aarreLoydetty = false } = {}) {
   return game;
 }
 
-test('kuusi kevyttä kohdetta ovat laudalla eikä yhdelläkään ole laatan kääntävää ketjua', () => {
+test('11 kevyttä kohdetta ovat laudalla eikä yhdelläkään ole aarteen avaavaa lehtitehtävää', () => {
   assert.deepEqual([...KEVYET_FOKUSVIRRAT].sort(), [...KEVYET].sort(),
-    'nimetty joukko js/packs/fokusvirrat.js:ssä on yhä nämä kuusi');
+    'nimetty joukko js/packs/fokusvirrat.js:ssä on yhä nämä 11');
   for (const id of KEVYET) {
     const city = KAUPUNGIT.get(id);
     assert.ok(city, `${id} on maailmankartan laudalla`);
     const data = fokusvirtaKaupungille(id);
     assert.ok(data, `${id} on fokusvirtapakki`);
-    assert.equal(data.kohtaamispiste, undefined,
-      `${id}: kevyellä pakilla ei ole kohtaamispistettä — aarrepiste ei voi syttyä`);
     assert.ok(!(data.lehtitehtavat?.length),
       `${id}: kevyellä pakilla ei ole aarteen avaavaa lehtitehtävää`);
+    if (ALUEPAKETIT.includes(id)) {
+      assert.equal(data.kohtaamispiste, undefined,
+        `${id}: aluepaketilla ei ole kohtaamispistettä — se ei ole kaupunki`);
+    }
   }
 });
 

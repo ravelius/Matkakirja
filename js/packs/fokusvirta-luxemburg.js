@@ -62,4 +62,41 @@ export const FOKUSVIRTA_LUXEMBURG = {
       lahde: 'P. Hughes, Commons (CC BY-SA 4.0)',
     },
   },
+
+  /*
+   * ---------- KEVYT KULKU ----------
+   * Samat kaksi kenttää kuin täysissä pakeissa (esim. fokusvirta-
+   * tampere.js). Fable vahvisti 22.9.2026, ettei kevyt pakki estä
+   * kohtaamisen kirjoittamista: vihreä piste avaa kohtaamisen suoraan
+   * laattakysymyksenä (js/fokusvirta.js avaaFokusKohtaaminen). Ei
+   * vihjeOsiota — Luxemburgilla ei ole kaupunkilehden osioita (kevyt
+   * pakki). Kohtaamiskortin todellinen sisältö (js/packs/
+   * kohtaamiset.js, avain 'luxemburg') on kivenhakkaaja Nic.
+   */
+  kohtaaminen: {
+    hahmo: 'Kivenhakkaaja Nic',
+    nappi: 'Tapaa kivenhakkaaja',
+    varmistus: 'Haluatko varmasti tavata Nicin juuri nyt?',
+    teksti: 'Nic pysäyttää talttansa muurinrippeiden keskellä ja '
+      + 'osoittaa purettua linnoitusvallia ympärillään. Nämä vallit '
+      + 'purettiin kuusi vuotta sitten, ja kymmenen jää vielä, ennen '
+      + 'kuin koko linnoitus on poissa — 1867 sopimus määräsi sen '
+      + 'purettavaksi ja maan puolueettomaksi. Nic haluaa tietää, '
+      + 'tunteeko tulija maailman muutenkin kuin kartalta, ennen kuin '
+      + 'antaa kiven, joka piti valleja pystyssä vuosisatoja.',
+  },
+
+  /*
+   * KOHTAAMISPAIKKA: PURETUN LINNOITUKSEN MUURI (Bockin kasematit).
+   * Koordinaatit ovat kaupungin oma laattapaikka (sama perusteltu
+   * poikkeus kuin Riiassa): js/packs/europe.js 329/589, js/packs/
+   * maailmankartta.js 6037.7/1407.
+   */
+  kohtaamispiste: {
+    nimi: 'Puretun linnoituksen muuri',
+    laudat: {
+      maailmankartta: { x: 6037.7, y: 1407 },
+      europe: { x: 329, y: 589 },
+    },
+  },
 };

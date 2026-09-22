@@ -37,6 +37,11 @@ import {
   pyramidinTasoitus, pyramidinVaritasonMaa,
 } from './laattapyramidi.js';
 import { laudaltaAsteiksi, projisoiLaudalle } from './fokusmitat.js';
+import {
+  ESILATAUS_LEPO_MS, ESILATAUS_LIIKEVARA, ESILATAUS_MAATASOT, esilatausPaalla, laajennaLaatikko,
+  laattojenOsoitteet, luoEsilatausjono,
+} from './laattaesilataus.js';
+import { peiliKaytossa, peiliPetti, peilinKatkoJaljella } from './media.js';
 import { asennaKermaShader, luoKermanJaetut, paivitaKermanJaetut } from './laattakerma-shader.js';
 
 /** Kuinka kauan kameran on oltava paikallaan ennen lepolaatua (ms). */
@@ -2228,9 +2233,22 @@ export function laattakerroksenLRU(tietueet, katto = LAATTAKERROS_LAATTAKATTO_MU
 export function luoLaattakerros({
   pallo, kotelo, ikkuna, renderer,
   kolmiulotteinen, pallonSarja = () => null, lauta = 'maailmankartta', naparaja = 90,
+  /** Osoitelistan lähettäjä palvelutyöntekijälle (js/pallo.js lahetaLaattaesilataus) tai null. */
+  esilataa = null,
 }) {
   const doc = kotelo?.ownerDocument ?? ikkuna?.document ?? null;
   const aika = () => ikkuna.performance?.now?.() ?? Date.now();
+  /*
+   * ESILATAUS LEVOSSA (js/laattaesilataus.js): seuraavan tason laatat
+   * näkymän ympäriltä ja kohdemaan z6–z8 palvelutyöntekijän koriin.
+   * Jono lähettää erän vain lepopäivityksessä; liike keskeyttää.
+   */
+  const esilataus = esilataa && esilatausPaalla(ikkuna) ? luoEsilatausjono({ laheta: esilataa, nyt: aika }) : null;
+  let viimeLiike = -Infinity;
+  let liikkeessaNyt = false;
+  let esilatausNakymaAvain = '';
+  /** Kohdemaa, jonka laatat odottavat luetteloa ({ iso, laatikko }) tai null. */
+  let esilatausMaaOdottaa = null;
   const reduced = () => Boolean(ikkuna.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches);
   /** Tekstuurimuistin kiintiö laitteelle (ks. LAATTAKERROS_TAVUKERROIN_OSOITIN). */
   const kosketuslaite = () => Boolean(ikkuna.matchMedia?.('(hover: none)')?.matches);
@@ -2249,6 +2267,8 @@ export function luoLaattakerros({
     nakyvia: 0, nakyviaScenessa: 0, nakyviaTaysin: 0, ladattavia: 0, ennakkoja: 0, pidettyja: 0, tukia: 0, kattoRajoitti: false, zoomiennakkoja: 0,
     /** Kertoja, jolloin jonossa oli laattoja mutta kehyksen aloituskatto tuli vastaan. */
     tahditettuja: 0,
+    /** Onko katkaisija (js/media.js 'laatat') juuri nyt auki eli lataukset seis. */
+    katkaistu: false,
     /*
      * JUMISSA on tämän erän tarkin mitta: tietue, joka on tilassa
      * "ladataan", jota ei ole aloitettu eikä ole jonossa — laatta,
@@ -2327,6 +2347,8 @@ export function luoLaattakerros({
   /** Tässä kehyksessä aloitetut lataukset ja kehyksen vaihtava rAF (tahditus). */
   let aloituksia = 0;
   let aloitusRaf = 0;
+  /** Katkaisijan jatkoajastin (kaynnista uudestaan, kun katko päättyy). */
+  let katkoAjastin = 0;
   let vientiRaf = 0;
   const vientiKehys = { kehys: 0, perakkain: 0 };
   let liikkeessaViimeksi = false;
@@ -2425,6 +2447,8 @@ export function luoLaattakerros({
     if (ikkuna.createImageBitmap && ikkuna.fetch) {
       try {
         const vastaus = await ikkuna.fetch(url, { mode: 'cors', credentials: 'omit', signal: merkki ?? undefined });
+        // Katkaisija (js/media.js 'laatat'): 429 ja 5xx ovat ämpärin vikoja, 404 ei.
+        if (vastaus.status === 429 || vastaus.status >= 500) peiliPetti('laatat');
         if (!vastaus.ok) return null;
         const blob = await vastaus.blob();
         try {
@@ -2436,7 +2460,10 @@ export function luoLaattakerros({
           void syy;
         }
         return await ikkuna.createImageBitmap(blob);
-      } catch { /* vara alla */ }
+      } catch {
+        // Verkkovirhe (ei keskeytys) laskee katkaisijaa; vara alla.
+        if (!merkki?.aborted) peiliPetti('laatat');
+      }
     }
     // Katkaistu lataus (laatta purettiin kesken haun) ei mene varapolulle:
     // se ottaisi latauspaikan takaisin siltä laatalta, jota katsotaan.
@@ -2649,6 +2676,39 @@ export function luoLaattakerros({
     });
   };
 
+  /** Kohdemaan z6–z8-laatat esilatausjonon perään, kun luettelo on; palauttaa jonoon lisättyjen määrän. */
+  const annaEsilatausMaa = () => {
+    if (!esilataus || !pyramidi || !esilatausMaaOdottaa) return 0;
+    const { iso, laatikko } = esilatausMaaOdottaa;
+    esilatausMaaOdottaa = null;
+    const osoitteet = [];
+    for (const z of ESILATAUS_MAATASOT) {
+      const taso = tasoZ(z);
+      if (!taso) continue;
+      const kartta = lepokerroksenLaatat({
+        taso, laatta: laattaKoko(), arkki: pyramidi.arkki, projektio: pyramidi.projektio, alue: laatikko, laudanY,
+      });
+      osoitteet.push(...laattojenOsoitteet({
+        laatat: kartta?.laatat ?? [], kerrostasot: kaytossaKerrostasot(z),
+        olemassa: pyramidinLaattaOlemassa, osoite: pyramidinLaattaUrl,
+      }));
+    }
+    return esilataus.maa(iso, osoitteet);
+  };
+  /** Laatan kerrostasot nykyisillä kytkimillä (pohja, viivat, ranta, nimiöt, nostot, väri, reliefi). */
+  const kaytossaKerrostasot = (z) => (pyramidinKerrostasot(z) ?? [])
+    .filter((k) => {
+      if (k.nosto) return kerrokset.nosto;
+      if (k.viiva) return kerrokset.viiva;
+      if (k.joki) return kerrokset.joki;
+      if (k.nimio) return kerrokset.nimio;
+      if (k.ranta) return kerrokset.ranta;
+      if (k.vari) return kerrokset.vari;
+      if (k.reliefi) return kerrokset.reliefi;
+      // Pohja: reliefilinssin ajan `kerrokset.pohja` on epätosi.
+      return kerrokset.pohja !== false;
+    });
+
   const lataa = async (t) => {
     const tasoOlio = tasoZ(t.z);
     const luokat = kolmi();
@@ -2666,18 +2726,7 @@ export function luoLaattakerros({
      * ja kohdemaan laatat piirtyisivät myös silloin, kun pelaaja on
      * naapurissa tai kun laatastoa ei ole ajettu tälle maalle.
      */
-    const kerrostasot = (pyramidinKerrostasot(t.z) ?? [])
-      .filter((k) => {
-        if (k.nosto) return kerrokset.nosto;
-        if (k.viiva) return kerrokset.viiva;
-        if (k.joki) return kerrokset.joki;
-        if (k.nimio) return kerrokset.nimio;
-        if (k.ranta) return kerrokset.ranta;
-        if (k.vari) return kerrokset.vari;
-        if (k.reliefi) return kerrokset.reliefi;
-        // Pohja: reliefilinssin ajan `kerrokset.pohja` on epätosi.
-        return kerrokset.pohja !== false;
-      });
+    const kerrostasot = kaytossaKerrostasot(t.z);
     if (!kerrostasot.length) { t.tila = 'virhe'; return; }
     const katkaisin = ikkuna.AbortController ? new ikkuna.AbortController() : null;
     t.katkaisin = katkaisin;
@@ -3309,6 +3358,21 @@ export function luoLaattakerros({
       }
       return;
     }
+    /*
+     * KATKAISIJA (js/media.js laji 'laatat', sulavuuskatsaus kohta 21):
+     * kolmen verkkovirheen tai 429/5xx:n jälkeen uusia latauksia ei
+     * aloiteta 20 sekuntiin. Jono säilyy; jatko ajastetaan katkon
+     * päättymiseen. Kesken olevat haut saavat valmistua.
+     */
+    if (!peiliKaytossa('laatat')) {
+      mittarit.katkaistu = true;
+      if (!katkoAjastin && jono.length) {
+        katkoAjastin = ikkuna.setTimeout?.(() => { katkoAjastin = 0; if (!purettu) kaynnista(); }, peilinKatkoJaljella('laatat') + 50) ?? 0;
+      }
+      mittarit.jonossa = jono.length;
+      return;
+    }
+    mittarit.katkaistu = false;
     // Näkyvät ensin, sitten tuki, sitten ennakko ja pidetyt — kaikki ruudun keskeltä.
     const sija = (t) => (t.nakyva ? 0 : t.tuki ? 1 : 2);
     jono.sort((a, b) => sija(a) - sija(b) || a.etaisyys - b.etaisyys);
@@ -3923,6 +3987,40 @@ export function luoLaattakerros({
     }
     mittarit.zoomiennakkoja = zoomiennakkoja;
     /*
+     * 1e. ESILATAUS LEVOSSA (js/laattaesilataus.js): kamera paikallaan
+     * ESILATAUS_LEPO_MS eikä sormi alhaalla → seuraavan tason laatat
+     * näkymän laatikosta × LIIKEVARA jonon kärkeen ja yksi erä
+     * palvelutyöntekijälle. Ei kertomuslukossa eikä reliefilinssissä
+     * (eri laatasto). Sama laatikko lasketaan vain kerran (avain).
+     */
+    if (esilataus) {
+      const liikkui = !edellinenPov
+        || Math.abs(pov.lat - edellinenPov.lat) > 1e-6 || lonEro(pov.lng, edellinenPov.lng) > 1e-6
+        || Math.abs(pov.altitude - edellinenPov.altitude) > 1e-9;
+      if (liikkui || liikkeessaNyt) viimeLiike = nyt;
+      const levossa = nyt - viimeLiike >= ESILATAUS_LEPO_MS && !kertomuslukko && !kerrokset.reliefi;
+      if (levossa) {
+        if (esilatausMaaOdottaa) annaEsilatausMaa();
+        const seuraava = tasoZ(valittu.z + 1);
+        if (seuraava) {
+          const laatikko = laajennaLaatikko(raaka, ESILATAUS_LIIKEVARA, latMin, latMax);
+          const avain = `${seuraava.z}|${laatikko.lon0.toFixed(2)},${laatikko.lat0.toFixed(2)},${laatikko.lon1.toFixed(2)},${laatikko.lat1.toFixed(2)}`;
+          if (avain !== esilatausNakymaAvain) {
+            esilatausNakymaAvain = avain;
+            const kartta = lepokerroksenLaatat({
+              taso: seuraava, laatta: koko, arkki: pyramidi.arkki, projektio: pyramidi.projektio, alue: laatikko, laudanY,
+            });
+            esilataus.nakyma(laattojenOsoitteet({
+              laatat: kartta?.laatat ?? [], kerrostasot: kaytossaKerrostasot(seuraava.z),
+              olemassa: pyramidinLaattaOlemassa, osoite: pyramidinLaattaUrl,
+            }));
+          }
+        }
+        esilataus.askel(true);
+      }
+      mittarit.esilataus = esilataus.mittarit();
+    }
+    /*
      * PITO: laatta, joka on ollut näkyvissä tai ennakossa viimeisen
      * LAATTAKERROS_PITO_MS:n aikana, ei putoa jonosta eikä LRU:n
      * määräkatosta. Tavukatto purkaa yhä (ks. laattakerroksenLRU).
@@ -4113,6 +4211,7 @@ export function luoLaattakerros({
     const liikkuu = liike == null ? Boolean(liikkeessa) : Boolean(liike);
     if (liikkeessaViimeksi && !liikkuu) { liikkeessaViimeksi = false; ajaVienti(); }
     liikkeessaViimeksi = liikkuu;
+    liikkeessaNyt = liikkuu;
     if (liikkeessa && nyt - viimePaivitys < LAATTAKERROS_PAIVITYSVALI_LIIKE_MS) return false;
     viimePaivitys = nyt;
     return suorita(kehys);
@@ -4136,6 +4235,19 @@ export function luoLaattakerros({
     },
     /** Onko kerros lukossa (savukkeet ja vartijat). */
     lukossa: () => lukittu,
+    /**
+     * Kohdemaan laatat (ESILATAUS_MAATASOT) esilatausjonon perään:
+     * `laatikko` asteina { lon0, lat0, lon1, lat1 } (lauta.js maanvaihdossa).
+     * Erät lähtevät lepopäivityksissä näkymän z+1:n jälkeen.
+     */
+    asetaEsilatausMaa: (iso, laatikko) => {
+      if (!esilataus || !laatikko) return 0;
+      // Luettelo voi olla vielä matkalla: maa jää odottamaan lepopäivitystä.
+      esilatausMaaOdottaa = { iso, laatikko };
+      return annaEsilatausMaa();
+    },
+    /** Esilatausjonon mittarit (savukkeet) tai null. */
+    esilataus: () => (esilataus ? esilataus.mittarit() : null),
     /**
      * KERTOMUSLUKKO päälle (true) tai pois (false). Ks. KERTOMUSLUKKO
      * yllä. Päälle mennessä naulataan se taso, joka on juuri nyt
@@ -4193,6 +4305,8 @@ export function luoLaattakerros({
       vientiRaf = 0;
       if (aloitusRaf) ikkuna.cancelAnimationFrame?.(aloitusRaf);
       aloitusRaf = 0;
+      if (katkoAjastin) ikkuna.clearTimeout?.(katkoAjastin);
+      katkoAjastin = 0;
       vientijono.length = 0;
       tyhjennaValmistelujono();
       jono.length = 0;

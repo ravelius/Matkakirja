@@ -148,8 +148,8 @@ test('jokainen tarinakaaren kohtaamiskuva osuu kohteeseen ja sen hahmoon', () =>
   }
 });
 
-test('22.9.2026 C1-C2-kuvat osuvat tavallisen visan eri kohtaamishahmoihin', () => {
-  assert.equal(KOHTAAMISKUVAT_TAVALLISELLE.size, 6);
+test('22.9.2026 C1-C3-kuvat osuvat tavallisen visan eri kohtaamishahmoihin', () => {
+  assert.equal(KOHTAAMISKUVAT_TAVALLISELLE.size, 12);
   for (const [kohde, id, hahmo] of [
     ['rooma', 'rooma-fabrizio-c1', 'Fabrizio'],
     ['helsinki', 'helsinki-saana-c1', 'Saana'],
@@ -157,6 +157,12 @@ test('22.9.2026 C1-C2-kuvat osuvat tavallisen visan eri kohtaamishahmoihin', () 
     ['ateena', 'ateena-iason-c2', 'Iason'],
     ['firenze', 'firenze-ilaria-c2', 'Ilaria'],
     ['kobenhavn', 'kobenhavn-sofie-c2', 'Sofie'],
+    ['bukarest', 'bukarest-radu-c3', 'Radu'],
+    ['oslo', 'oslo-halvor-c3', 'Halvor'],
+    ['tampere', 'tampere-aatu-c3', 'Aatu'],
+    ['dublin', 'dublin-niamh-c3', 'Niamh'],
+    ['granada', 'granada-pastora-c3', 'Pastora'],
+    ['pietari', 'pietari-larisa-c3', 'Larisa'],
   ]) {
     const kuva = kohtaamiskuvaTavalliselleKohtaamiselle(kohde);
     assert.equal(kuva?.id, id);

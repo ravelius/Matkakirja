@@ -591,7 +591,18 @@ export function peiliAaniPolku(url) {
 // kuvia mukanaan.
 
 const VIRHERAJA = 3;
-const LAJIT = ['kuvat', 'aanet'];
+/*
+ * LAATAT OMANA LAJINAAN (sulavuuskatsaus 22.9.2026 kohta 21): pallon
+ * laattakerros (js/pallolaatat.js haeKuva) tekee jopa 40 rinnakkaista
+ * pyyntöä, eikä sillä ollut katkaisijaa — nurin oleva ämpäri tai
+ * 429-purske olisi jauhettu jokaisella päivityksellä. Laatoilla ei ole
+ * varareittiä: katkaisu tarkoittaa, että uusia latauksia EI ALOITETA
+ * kestoajan verran (jono säilyy ja jatkuu, kun aika on kulunut). Kesto
+ * on lyhyempi kuin kuvilla, koska tyhjä kartta on pahempi kuin tyhjä
+ * kuva: 20 s riittää purskeen (429) ja lyhyen katkon yli.
+ */
+const LAJIT = ['kuvat', 'aanet', 'laatat'];
+const KATKAISUN_KESTO_LAATAT_MS = 20 * 1000;
 const poisAvain = (laji) => `matkakirja-peili-pois-${laji}`;
 
 /*
@@ -617,8 +628,8 @@ const poisAvain = (laji) => `matkakirja-peili-pois-${laji}`;
  */
 const KATKAISUN_KESTO_MS = 5 * 60 * 1000;
 
-const virheita = { kuvat: 0, aanet: 0 };
-const poisAsti = { kuvat: 0, aanet: 0 };
+const virheita = { kuvat: 0, aanet: 0, laatat: 0 };
+const poisAsti = { kuvat: 0, aanet: 0, laatat: 0 };
 for (const laji of LAJIT) {
   try {
     const tallennettu = Number(globalThis.sessionStorage?.getItem(poisAvain(laji)));
@@ -641,12 +652,17 @@ export function peiliKaytossa(laji = 'kuvat') {
   return true;
 }
 
+/** Katkaisun jäljellä oleva aika (ms) tälle lajille; 0 kun käytössä. */
+export function peilinKatkoJaljella(laji = 'kuvat') {
+  return Math.max(0, (poisAsti[laji] ?? 0) - Date.now());
+}
+
 /** Peili petti: kolmannen virheen jälkeen se laji jätetään hetkeksi väliin. */
 export function peiliPetti(laji = 'kuvat') {
   if (!LAJIT.includes(laji) || !peiliKaytossa(laji)) return;
   virheita[laji] += 1;
   if (virheita[laji] < VIRHERAJA) return;
-  poisAsti[laji] = Date.now() + KATKAISUN_KESTO_MS;
+  poisAsti[laji] = Date.now() + (laji === 'laatat' ? KATKAISUN_KESTO_LAATAT_MS : KATKAISUN_KESTO_MS);
   try {
     globalThis.sessionStorage?.setItem(poisAvain(laji), String(poisAsti[laji]));
   } catch { /* ks. yllä */ }
