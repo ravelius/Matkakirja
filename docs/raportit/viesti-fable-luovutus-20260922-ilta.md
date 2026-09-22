@@ -56,7 +56,7 @@ pulun karttapaikka v2103. Mittaustyökalut: tools/mittaus/seuraamisvirhe-palveli
   "Piirtokoe" (Normaali / Ei puskurikirjoituksia vedossa / Ilman alfakanavaa / Pikselisuhde
   1,5 / Ei tekstuurivientejä vedossa / Vähemmän piirtokutsuja) + "Näytä kehysprofiili";
   overlayhin puskurikirjoitukset, uniformit, dc per laji, rAF-ketjujen määrä; mittaus Macin
-  Safarilla lippu kerrallaan. Omistaja kokeilee huomenna ja lähettää overlay-kaappaukset.
+  Safarilla lippu kerrallaan. Omistaja kokeilee TÄNÄ ILTANA heti kun PR on tuotannossa (klo 20.15: "ei odoteta huomista") ja lähettää overlay-kaappaukset.
 - Laitetestaaja: Macin Safarin Web Inspector Frames -mittauksen ohje (ei puhelinta) ja
   CGEvent-vedon toimivuus.
 - Karttaseppä: meren lika on laatassa (kaksi tasoa piirtää eri kuvion); poltto 22c ei
@@ -65,7 +65,7 @@ pulun karttapaikka v2103. Mittaustyökalut: tools/mittaus/seuraamisvirhe-palveli
   omistajan tuntumatesti kartasta 22c odottaa; nostotason poltto harmaalla pisteellä odottaa
   omistajan hyväksyntää (E-kaappaukset näytetty, myös ?koe=symbolitkaukana).
 
-## Odottaa omistajaa (huomenna)
+## Odottaa omistajaa (tänä iltana kohta 1, muut huomenna)
 1. Piirtokoe-tulokset iPhonella (overlay-kaappaus per vaihtoehto).
 2. Harmaat pisteet vs piirrokset kaukonäkymässä; nostotason poltto.
 3. Kartta 22c: hyväksyntä/hylkäys (palautus yhdellä versiolla).
