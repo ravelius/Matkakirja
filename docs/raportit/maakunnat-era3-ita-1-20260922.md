@@ -100,7 +100,7 @@ olemassa olevia lyhyt/pitka-tekstejä, eivät toista niitä.
 **pulu:**
 ```
 [
-  { q: "Miksi alueella on niin laaja itsehallinto?", a: "Ensimmäisen maailmansodan jälkeen alueen saksankieliset asukkaat joutuivat fasismin aikana pakkoitalialaistamisen kohteeksi, mikä kärjistyi 1960-luvulla separatistien pommi-iskuiksi. Konflikti ratkesi vuoden 1972 toisella autonomiastatuutilla, joka takasi laajan itsehallinnon, kielioikeudet ja verotulojen jäämisen alueelle. Järjestely on nykyään esimerkki toimivasta vähemmistöjen suojelusta Euroopassa." },
+  { q: "Miksi alueella on niin laaja itsehallinto?", a: "Ensimmäisen maailmansodan jälkeen alueen saksankieliset asukkaat joutuivat fasismin aikana pakkoitalialaistamisen kohteeksi, mikä kärjistyi 1960-luvulla separatistien pommi-iskuiksi. Konflikti ratkesi vuoden 1972 autonomiastatuutilla, joka takasi laajan itsehallinnon, kielioikeudet ja verotulot alueelle. Järjestely toimii nykyään mallina vähemmistöjen suojelulle Euroopassa." },
   { q: "Missä Ötzi on nykyään esillä?", a: "Ötzi on esillä Bolzanon arkeologisessa museossa erityisessä jäähdytetyssä huoneessa, joka jäljittelee jäätikön olosuhteita. Jäämuumio on noin 5300 vuotta vanha ja kuoli nuolen aiheuttamaan haavaan. Se on yksi maailman vanhimmista ja parhaiten säilyneistä ihmismuumioista." },
 ]
 ```

@@ -74,7 +74,7 @@ sisällöntuotanto raporttiin.
 ```
 [
   { q: "Miksi Neusiedler-järvi on niin erikoinen järvi?", a: "Neusiedler See on Keski-Euroopan ainoa aroluontoinen järvi, ja sen keskisyvyys on vain runsas metri. Järvi jakautuu Itävallan ja Unkarin kesken, ja sen etelä- ja itärannat kuuluvat Unkarin puolelle. Matala vesi ja laajat ruovikot tekevät siitä myös poikkeuksellisen lämpimän uimapaikan kesäisin." },
-  { q: "Miksi Burgenlandin viinit ovat niin makeita?", a: "Neusiedler-järven ympäristön kostea mikroilmasto suosii jalohomeen syntymistä rypäleissä, mikä mahdollistaa makeiden Ruster Ausbruch -viinien valmistuksen Rustin kaupungin ympärillä. Perinne on niin vanha ja arvostettu, että Rust sai jo 1600-luvulla oikeuden kutsua itseään vapaaksi kuninkaalliseksi kaupungiksi juuri viinintuotantonsa ansiosta. Burgenland tuottaa nykyään suurimman osan Itävallan makeista viineistä." },
+  { q: "Miksi Burgenlandin viinit ovat niin makeita?", a: "Neusiedler-järven ympäristön kostea mikroilmasto suosii jalohomeen syntyä rypäleissä, mikä mahdollistaa makeat Ruster Ausbruch -viinit Rustin ympärillä. Perinne on niin vanha ja arvostettu, että Rust sai jo 1600-luvulla oikeuden kutsua itseään vapaaksi kuninkaalliseksi kaupungiksi juuri viinintuotantonsa ansiosta. Burgenland tuottaa nykyään suurimman osan Itävallan makeista viineistä." },
 ]
 ```
 
@@ -93,7 +93,7 @@ sisällöntuotanto raporttiin.
 **pulu:**
 ```
 [
-  { q: "Mikä on se iso vanha maailmanpyörä Praterissa?", a: "Praterin kuuluisa Riesenrad-maailmanpyörä valmistui vuonna 1897 keisari Frans Joosef I:n 50-vuotisen hallituskauden kunniaksi. Se selvisi juuri ja juuri toisesta maailmansodasta, vaikka suuri osa sen vaunuista tuhoutui pommituksissa ja korvattiin vasta sodan jälkeen. Pyörä on yhä käytössä ja yksi Wienin tunnetuimmista maamerkeistä, vaikka se rakennettiinkin vasta isoisän vierailun jälkeisellä vuosikymmenellä." },
+  { q: "Mikä on se iso vanha maailmanpyörä Praterissa?", a: "Praterin kuuluisa Riesenrad-maailmanpyörä valmistui vuonna 1897 keisari Frans Joosef I:n 50-vuotisen hallituskauden kunniaksi. Se selvisi juuri toisesta maailmansodasta, vaikka suuri osa sen vaunuista tuhoutui pommituksissa ja korjattiin sodan jälkeen. Pyörä on yhä käytössä ja yksi Wienin tunnetuimmista maamerkeistä, vaikka se rakennettiinkin vasta isoisän vierailun jälkeisellä vuosikymmenellä." },
   { q: "Miksi Wienin keskustaa kiertää niin leveä bulevardi?", a: "Keisari Frans Joosef I määräsi vuonna 1857 keskiaikaiset kaupunginmuurit purettavaksi, ja niiden paikalle rakennettiin 1860-luvulla Ringstrasse, komea bulevardi jonka varrelle nousivat muun muassa oopperatalo, parlamentti ja useita museoita. Katu valmistui vain muutamaa vuotta ennen isoisän vierailua ja maailmannäyttelyä 1873. Ringstrasse on yhä Wienin arkkitehtoninen selkäranka." },
 ]
 ```

@@ -142,7 +142,7 @@ ovat tarkistettavissa en-Wikipediasta.
 ```
 [
   { q: "Onko Katowicen seutu yksi ainoa kaupunki vai monta?", a: "Katowicen ympärillä on Puolan ainoa virallisesti tunnustettu suurkaupunkialue, johon kuuluu yli 40 kuntaa ja lähes kaksi miljoonaa asukasta. Kaupungit kuten Katowice, Gliwice, Zabrze ja Sosnowiec ovat käytännössä kasvaneet yhteen ilman selkeitä rajoja. Alue on Puolan tiheimmin asuttu ja teollistunein seutu, vaikka kaivosten sulkeminen on hidastanut kasvua." },
-  { q: "Kokevatko sleesialaiset itsensä omaksi kansanryhmäkseen?", a: "Osa alueen asukkaista pitää itseään sleesialaisina, omana etnisenä ryhmänään puolalaisten sijaan, ja he puhuvat sleesian murretta, joka eroaa selvästi kirjakielisestä puolasta. Puola ei virallisesti tunnusta sleesialaisia kansallisena vähemmistönä, mikä on aiheuttanut kiistoja väestönlaskennoissa. Viimeisimmissä laskennoissa satojatuhannet ovat ilmoittaneet sleesialaisuuden ensisijaiseksi identiteetikseen." },
+  { q: "Kokevatko sleesialaiset itsensä omaksi kansanryhmäkseen?", a: "Osa alueen asukkaista pitää itseään sleesialaisina, omana etnisenä ryhmänään puolalaisten sijaan, ja he puhuvat sleesian murretta, joka eroaa kirjapuolasta. Puola ei virallisesti tunnusta sleesialaisia kansallisena vähemmistönä, mikä on aiheuttanut kiistoja väestönlaskennoissa. Viimeisimmissä laskennoissa satojatuhannet ovat ilmoittaneet sleesialaisuuden ensisijaiseksi identiteetikseen." },
 ]
 ```
 
@@ -162,7 +162,7 @@ ovat tarkistettavissa en-Wikipediasta.
 ```
 [
   { q: "Milloin iskelmäfestivaali sai alkunsa ja miksi se oli erityinen?", a: "Opolen laulufestivaali järjestettiin ensimmäisen kerran vuonna 1963, ja kommunismin aikana se oli poikkeuksellisen vapaa tila, jossa artistit saattoivat vihjailla yhteiskuntakritiikkiä sanoituksissa sensuurin siitä juuri huomaamatta. Festivaali televisioitiin koko maahan ja siitä tuli kesän suurin populaarikulttuurin tapahtuma. Perinne jatkuu yhä." },
-  { q: "Miksi juuri Opolessa saksalainen vähemmistö on niin näkyvä?", a: "Opolen voivodikunnassa asuu Puolan suurin virallisesti tunnustettu saksalainen kansallinen vähemmistö, joka jäi alueelle toisen maailmansodan jälkeen rajan siirryttyä. Osa kylistä on saanut luvan pystyttää kaksikieliset kylttien nimet 2000-luvulla EU-jäsenyyden myötä syntyneen vähemmistölainsäädännön ansiosta - laajimmin juuri täällä. Alueen pieni väkiluku selittyy osin siitä, että moni asukas muutti Saksaan rajojen avauduttua 1990-luvulla." },
+  { q: "Miksi juuri Opolessa saksalainen vähemmistö on niin näkyvä?", a: "Opolen voivodikunnassa asuu Puolan suurin tunnustettu saksalainen vähemmistö, joka jäi alueelle toisen maailmansodan jälkeen rajan siirryttyä. Osa kylistä on saanut pystyttää kaksikieliset kyltit 2000-luvulla EU:n vähemmistölainsäädännön ansiosta - laajimmin juuri täällä. Alueen pieni väkiluku selittyy osin siitä, että moni muutti Saksaan rajojen avauduttua 1990-luvulla." },
 ]
 ```
 

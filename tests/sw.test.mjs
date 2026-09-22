@@ -248,6 +248,11 @@ const NIPUTTAMATTOMAT = new Set([
   // tuoja (Pelikoodari/Karttaseppä) kytketään vasta myöhemmässä erässä.
   // Poistettava listalta sitten kun ensimmäinen import ilmestyy.
   'js/packs/maakunnat-luonnehdinnat.js',
+  // Maakuntien pulu-kysymykset, erä 3 (22.9.2026): sama syy kuin
+  // luonnehdinnoilla — tuoja (Pelikoodari) kytkee vasta myöhemmin,
+  // dynaamisena importtina pulun napista. Poistettava listalta sitten
+  // kun ensimmäinen import ilmestyy.
+  'js/packs/maakunnat-pulu.js',
   // Linssien aineistopaketit: vain linssimoduulit (js/linssit/) tuovat
   // näitä, ja ne jäävät listalta pois yllä kerrotusta syystä.
   'js/packs/linssi-historia.js',
