@@ -1119,3 +1119,7 @@ Julkaisija 22.9.2026 klo 13.40: #2786 → v2101, #2788 → v2102 (kaksi konflikt
 ## v2102 TARKISTETTU (KOHDAT 8, 10, 11, 12, 18 MAINISSA); AITO VIKA v2099: compileAsync(scene) KAATAA SIVUN PURETUN LAATAN MATERIAALIIN — KORJAUS #2794; WEBKIT-KAATUMISET CI:SSA = KUORMAN AIKAKATKAISUJA (22.9.2026 klo 13.50)
 
 Pelikoodari 22.9.2026 klo 13.55: v2102 sisältää kohdat 11 (__pinta, Map suoraan), 12 (haiveet-taulu, haiveAskel), 8 (copyTextureToTexture) sekä 18 ja 10. CI: WebKit-rivien kaatumiset ovat WebKitin käynnistyksen 180 s aikakatkaisuja kuormassa (paikallisesti launch 151 ms), ei koodivika. Aito vika v2099:stä (kohta 7 esikäännös): three:n compileAsync(scene) pollaa kaikkia scenen materiaaleja ja kesken puretun laatan materiaali kaataa pollin → sivuvirhe 'reading isReady' topografialinssissä, reittiverkossa ja GL-nimissä. Korjaus PR #2794 (käännetään vain näytteiden ryhmä, scene valojen lähteenä, ohjelmat 11 = samat) → Julkaisijalle kiireellisenä. Omistajan tuntumatesti v2103:lla käy; korjausversio tulee perään.
+
+## ESIKAANNOSKORJAUS #2794 TUOTANNOSSA v2104; TUNTUMATESTIN VERSIO v2104 (22.9.2026 klo 13.56)
+
+Julkaisija 22.9.2026 klo 14.00: #2794 → v2104 (main f69ff7ace), testit 3912/0. Jono tyhjä. Omistajan tuntumatesti tehdään v2104:llä (kaikki katsauksen erät + korjaukset mukana).
