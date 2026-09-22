@@ -74,6 +74,20 @@ export const PIIRTOKOKEIDEN_VAIHTOEHDOT = [
     lippu: 'eivienti',
     ikoni: '<path d="M12 16V5"/><path d="m8 9 4-4 4 4"/><path d="M5 19h14"/>',
   },
+  {
+    /*
+     * Fable 22.9.2026 (omistajan v2126-kaappaukset: häipyviä 10–22 laattaa
+     * vedon aikana). Häivyttäessä uusi ja vanha laatta piirretään
+     * päällekkäin läpinäkyvinä; koe rajaa, onko tämä päällekkäinen piirto
+     * GPU-prosessin kuorma. Laattakerros lukee lipun luonnissa → lataus.
+     */
+    avain: 'eihaivevedossa',
+    nimi: 'Ei häivytystä vedossa',
+    seloste: 'Vedon aikana laatat vaihtuvat suoraan ilman häivytystä — ei päällekkäistä piirtoa',
+    lippu: 'eihaivevedossa',
+    ikoni: '<path d="M4.5 5.5h15v13h-15z"/><path d="M9 9.5h6v5H9z"/>',
+    lataus: true,
+  },
 ];
 
 export const PIIRTOKOKEEN_OLETUS = 'normaali';

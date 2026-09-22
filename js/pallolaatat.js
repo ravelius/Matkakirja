@@ -994,6 +994,8 @@ export const LAATTAKERROS_TEKSTUUREJA_PER_KEHYS = 2;
  *   eimip      ei mipmappeja, minFilter LINEAR
  *   silmat40   laatan verkko enintään 40 × 40 silmää (oletus 160)
  *   eihaive    ei häivettä: uusi laatta heti täysi, vanha pois heti
+ *   eihaivevedossa  sama vain liikkeen ajan; alkanut häive päättyy heti,
+ *              kun liike alkaa (ratasvalikon Piirtokoe "Ei häivytystä vedossa")
  *   vientilepo tekstuurien vienti vain levossa (liikkeessä jono odottaa)
  * Ei vaikuta ilman lippua; yksikkötestit eivät anna lippua.
  */
@@ -2361,7 +2363,9 @@ export function luoLaattakerros({
   const kermaShader = !kokeet.has('kermakangas');
   const kermanJaetut = luoKermanJaetut();
   let kermanMaskiAvain = '';
-  const haiveMs = () => (reduced() || kokeet.has('eihaive') ? 0 : LAATTAKERROS_HAIVE_MS);
+  const eiHaiveVedossa = kokeet.has('eihaivevedossa');
+  const haiveMs = () => (reduced() || kokeet.has('eihaive') || (eiHaiveVedossa && liikkeessaNyt)
+    ? 0 : LAATTAKERROS_HAIVE_MS);
   if (kokeet.size) mittarit.kokeet = [...kokeet];
   let ladattavia = 0;
   /** Tässä kehyksessä aloitetut lataukset ja kehyksen vaihtava rAF (tahditus). */
@@ -2582,6 +2586,20 @@ export function luoLaattakerros({
     }
     pallo.__piirto?.tarvitaan(); // lepopiirto: häiveen askel näkyviin (kerran kaikille)
     if (haiveet.size) haiveRaf = ikkuna.requestAnimationFrame(haiveAskel);
+  };
+  /** Kaikki käynnissä olevat häiveet loppuun heti (koe eihaivevedossa, liikkeen alku). */
+  const paataHaiveet = () => {
+    if (!haiveet.size) return 0;
+    const kesken = [...haiveet.entries()];
+    haiveet.clear();
+    for (const [materiaali, h] of kesken) {
+      if (materiaali.__haive !== h) continue;
+      materiaali.__haive = null;
+      h.paata();
+    }
+    mittarit.haiveitaKatkaistu = (mittarit.haiveitaKatkaistu ?? 0) + kesken.length;
+    pallo.__piirto?.tarvitaan();
+    return kesken.length;
   };
   const haivyta = (materiaali, kohde, kesto, valmis = null) => {
     const alku = materiaali.opacity;
@@ -4431,6 +4449,8 @@ export function luoLaattakerros({
      */
     const liikkuu = liike == null ? Boolean(liikkeessa) : Boolean(liike);
     if (liikkeessaViimeksi && !liikkuu) { liikkeessaViimeksi = false; ajaVienti(); }
+    // Koe eihaivevedossa: liikkeen alkaessa kesken olevat häiveet päättyvät heti.
+    if (eiHaiveVedossa && liikkuu && !liikkeessaViimeksi) paataHaiveet();
     liikkeessaViimeksi = liikkuu;
     liikkeessaNyt = liikkuu;
     if (liikkeessa && nyt - viimePaivitys < LAATTAKERROS_PAIVITYSVALI_LIIKE_MS) return false;
