@@ -76,7 +76,7 @@ function valeKotelo() {
   return { kotelo, doc, laheta };
 }
 
-test('veto: kaksi pointermovea yhdessä kehyksessä = yksi kamerakirjoitus, nolla = ei yhtään', () => {
+test('veto: kaksi pointermovea yhdessä kehyksessä = yksi kamerakirjoitus, nolla = ekstrapolointi', () => {
   const { pallo, ohjaimet } = valePallo();
   const { kotelo, laheta } = valeKotelo();
   const ui = { reducedMotion: false };
@@ -91,6 +91,15 @@ test('veto: kaksi pointermovea yhdessä kehyksessä = yksi kamerakirjoitus, noll
   assert.equal(pallo.kirjoituksia(), 0, 'tapahtuma ei kirjoita kameraa');
   assert.deepEqual(ui.pallonSyote.veto, { x: 230, y: 420, aika: 1016 }, 'vain viimeisin paikka');
 
+  /*
+   * Kello samalle asteikolle kuin tapahtumien aikaleimat (1000…1016):
+   * interpolointi ja ekstrapolointi ovat aikaperusteisia, joten testin
+   * on hallittava aikaa. Palautetaan lopuksi.
+   */
+  const oikeaNow = performance.now;
+  let kello = 1016;
+  performance.now = () => kello;
+  try {
   ohjaimet.update(0.016);
   assert.equal(ohjaimet.paivityksia, 1, 'kirjaston update ajettiin');
   assert.equal(pallo.kirjoituksia(), 1, 'kehys kirjoitti kameran kerran');
@@ -100,9 +109,25 @@ test('veto: kaksi pointermovea yhdessä kehyksessä = yksi kamerakirjoitus, noll
   assert.ok(jalkeen.lng < alku.lng, `sormi oikealle → kamera länteen (${alku.lng} → ${jalkeen.lng})`);
   assert.equal(jalkeen.altitude, alku.altitude);
 
-  // Kehys ilman tapahtumaa: ei kirjoitusta.
+  /*
+   * KEHYS ILMAN TAPAHTUMAA EI OLE ENÄÄ PYSÄHDYS (sulavuus kohta 13,
+   * 22.9.2026). v2097 sovelsi viimeisimmän näytteen sellaisenaan, joten
+   * näytteetön kehys ei kirjoittanut kameraa lainkaan — ja Laitetestaajan
+   * aidoissa vedoissa se näkyi niin, että seuraamisvirheen p10-suhde oli
+   * 0 kaikissa 16 kierroksessa ja pysähdystä seurasi ylikorjaava piikki.
+   * Nyt osoittimen paikka lasketaan kehyksen hetkelle, ja näytteettömällä
+   * kehyksellä jatketaan viimeisellä nopeudella enintään yhden kehyksen
+   * verran. Kamera siis etenee myös tällä kehyksellä.
+   */
+  const ennenEkstraa = pallo.pointOfView();
+  kello = 1032; // seuraava kehys, ei uutta näytettä
   ohjaimet.update(0.016);
-  assert.equal(pallo.kirjoituksia(), 1);
+  assert.equal(pallo.kirjoituksia(), 2, 'näytteetön kehys etenee eikä pysähdy');
+  const ekstranJalkeen = pallo.pointOfView();
+  assert.ok(ekstranJalkeen.lng < ennenEkstraa.lng, `kamera etenee samaan suuntaan (${ennenEkstraa.lng} → ${ekstranJalkeen.lng})`);
+  } finally {
+    performance.now = oikeaNow;
+  }
 
   // Liu'un nopeus tuli aikaleimoista (16 ms), ei sovellushetkestä.
   const v = ui.pallonSormet && ui.pallonSyote;
