@@ -1599,3 +1599,7 @@ Omistaja klo 23.48 iPadilla (v2136), kaappaukset: Chartresin katedraali (kohdeko
 ## OMISTAJA iPADILLA: ?koe=alpha0 (LAPINAKYMATON KANGAS) JA SAFARIN 120 Hz -LIPPU EIVAT AUTTANEET NYKIMISEEN (22.9.2026 klo 23.56)
 
 Klo 23.53. Jäljellä syöteputki (?koe=syotetouch, ?koe=interpvanha) ja liikkeen tasaisuusmittarit (Pelikoodari tekee).
+
+## PR #2871 (KARTTASEPPA): LEHTIPALSTAT KAIKKIIN PIDEMPIIN NOSTOIHIN — PITUUS JS:SSA (onPitkaNostoteksti: ≥ 600 MERKKIA TAI ≥ 2 KIRJOITTAJAN KAPPALETTA), LEVEYS CONTAINER QUERYLLA (TEKSTI ≥ 600 px); ≥ 1100 px KUVAN VIEREINEN TEKSTIPALSTA (498 px) PYSYY YHTENA PALSTANA; iPAD PYSTY 712 px → KAKSI; ANFANGI VAIN PALSTOISSA (22.9.2026 klo 23.59)
+
+Kohdekortti, eläintäky, hetki, syvennys, maalehden nosto; lööppi ennallaan. Vartijat tests/lehtipalstat, tools/mittaa-lehtipalstat.mjs WebKit 25/25, npm test 4017/0. Kaappaus docs/raportit/kaappaukset/lehtipalstat-chartres-1024-vaihe2.jpg. Jono: #2871 → v2137.
