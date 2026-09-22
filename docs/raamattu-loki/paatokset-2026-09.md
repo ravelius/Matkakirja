@@ -1255,3 +1255,7 @@ Omistaja 22.9.2026 klo 16.45: openinframapista saisi hyviä koodinpätkiä ja id
 ## SEURAAMISVIRHEEN RAAKADATA HAVISI REBOOTISSA (/tmp); KOOSTELUVUT RAPORTISSA seuraamisvirhe-v2106-20260922.md (HAARA laitetestaaja 21fbbeba6); OPPI: MITTAUSDATA HETI REPOON, EI /tmp:HEN (22.9.2026 klo 16.37)
 
 Laitetestaaja 22.9.2026 klo 16.50: /tmp/laitetestaaja-mittaus-desktop.jsonl tyhjeni rebootissa; raportti kirjoitettu viesteihin palautetuista luvuista (16 kierrosta + alku10) docs/raportit/seuraamisvirhe-v2106-20260922.md, haara laitetestaaja. Palvelimet 8793/8794 kuolleet. Sääntö jatkossa: raakadata tallennetaan heti worktreehen (docs/raportit/data/), ei /tmp:hen. Pelikoodarin interpolointikorjauksen todennukseen tarvitaan uusi omistajan veto tyhjällä koneella — pyydetään etukäteen.
+
+## SEURAAMISVIRHEMITTARI PYSYVAKSI TYOKALUKSI (PR #2814: tools/mittaus/seuraamisvirhe-palvelin.mjs, TULOKSET docs/raportit/data/, --tarkista-tila PASS/FAIL p10>0,7 p90<1,4) (22.9.2026 klo 16.47)
+
+Laitetestaaja 22.9.2026 klo 16.55: palvelin injektoi harnessin vastaukseen (index.html koskematon), tulokset repoon, hyväksymisraja lipuilla; itsetestattu v2111:llä (ensimmäinen versio vahingossa roolihaarassa, korjattu, PR origin/mainista). Fable: Julkaisijalle ilman versiota; interpolointikorjauksen todennus tällä mittarilla omistajan vedolla tyhjällä koneella, pyydetään etukäteen.
