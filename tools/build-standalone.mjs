@@ -905,9 +905,14 @@ const MODULES = [
    * rivin yllä.
    */
   /*
+   * Peukalolevy (js/karttaselite-levy.js) ennen karttaselitettä, joka
+   * tuo sen (22.9.2026: valikon uusi liukukahva, ks. Raamattu).
+   */
+  'js/karttaselite-levy.js',
+  /*
    * Karttaselitevalikko ennen ui:ta (ui tuo sen käynnistys- ja
    * päivityskutsun). Se tuo valojen koneiston, symbolikirjaston,
-   * mapartin ja ui-apurit — kaikki jo yllä.
+   * mapartin, ui-apurit ja peukalolevyn — kaikki jo yllä.
    */
   'js/karttaselite.js',
   'js/vakasikoni.js',
@@ -944,6 +949,15 @@ const MODULES = [
   // päivitys- ja nollauskutsun; kohteiden lista, symbolikirjasto,
   // mapart, media, ui-apurit, valokuvat ja äänet ovat kaikki jo yllä).
   'js/fokuskohteet.js',
+  /*
+   * Karttatyökalun Maakunnat-välilehden runko (22.9.2026) ennen ui:ta
+   * (ui tuo kytkentäkutsun). Data ensin, moduuli perässä: se tuo
+   * ui-apurit ja fokuskohteet.js:n nykyisen maan päättelyn — molemmat
+   * jo yllä.
+   */
+  'js/packs/maakunnat-luonnehdinnat.js',
+  'js/packs/maakunnat-pulu.js',
+  'js/karttatyokalu-maakunnat.js',
   /*
    * Kevyen kulun vihreä kohtaamispiste ennen ui:ta (ui tuo sen päivitys-
    * ja nollauskutsun). Se tuo fokusvirran kohtaamiskortin ja mapartin,

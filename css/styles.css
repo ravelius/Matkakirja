@@ -25795,7 +25795,8 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
   display: flex;
   flex-direction: column;
   width: max-content;
-  max-width: min(78vw, 20rem);
+  /* Mahdollisimman kapea (omistaja 22.9.2026): nimet lyhyinä, yksi merkkisarake. */
+  max-width: min(78vw, 15rem);
   max-height: min(60vh, 26rem);
   overflow-y: auto;
   padding: 0.35rem;
@@ -25810,7 +25811,26 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
   transition: transform 220ms ease, opacity 180ms ease, visibility 0s linear 220ms;
 }
 
+/*
+ * AUKI OLEVA LEVY NOUSEE RAILIN YLI (22.9.2026). Levy alkaa nyt kartan
+ * yläreunasta (peittää avausnapin), jolloin se osuu päiväkirjapilleriin
+ * (.rail .fact-card.pieni). .map-pane on oma pinontakontekstinsa
+ * (isolation: isolate), joten levyn oma z-index ei yllä railin (4) yli —
+ * ruutu nostetaan railin ohi vain levyn ollessa auki.
+ */
+.map-pane:has(.karttaselite-levy.auki) { z-index: 5; }
+
 .karttaselite-levy.auki {
+  /*
+   * PANEELI PEITTÄÄ AVAUSNAPIN (omistajan päätös 22.9.2026): auki
+   * levy alkaa täsmälleen kotelon yläreunasta eli napin omasta
+   * yläreunasta, `top: calc(100% + …)` sijaan. Nappi jää sen alle —
+   * sulku hoidetaan levyn omalla ✕-napilla, kartan napautuksella tai
+   * Escapella, joten napin ei tarvitse olla tavoitettavissa sillä
+   * välin (sama poikkeus kuin ylapalkki-vaaka.js:n ja tämän napin
+   * välillä, css/styles.css `body.ylapalkki-auki .karttaselite`).
+   */
+  top: 0;
   transform: none;
   opacity: 1;
   visibility: visible;
@@ -25831,44 +25851,80 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
   border-bottom: 1px solid rgba(70, 51, 31, 0.18);
 }
 
-.karttaselite-otsikko {
+/*
+ * VÄLILEHDET "NOSTOT | MAAKUNNAT" (omistajan päätös 22.9.2026)
+ * korvasivat vanhan otsikkorivin. Nostot on nykyinen selitelista;
+ * Maakunnat rakennetaan js/karttatyokalu-maakunnat.js:stä
+ * (js/karttaselite.js asetaMaakunnat) — tämä tiedosto tietää vain,
+ * että molemmat ovat samaa nappiperhettä kuin muut selitteen napit.
+ */
+.karttaselite-valilehdet {
+  display: flex;
   flex: 1 1 auto;
-  color: rgba(70, 51, 31, 0.92);
-  font-family: var(--font-type);
-  font-size: 0.72rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  gap: 0.25rem;
 }
 
-.karttaselite-kaikki {
+.karttaselite-valilehti {
   min-height: 0;
-  padding: 0.2rem 0.45rem;
-  border: 1px solid rgba(70, 51, 31, 0.3);
+  padding: 0.2rem 0.5rem;
+  border: 1px solid transparent;
   border-radius: 5px;
-  background: rgba(255, 252, 242, 0.7);
-  color: rgba(70, 51, 31, 0.85);
+  background: none;
+  color: rgba(70, 51, 31, 0.7);
   font-family: var(--font-type);
-  font-size: 0.66rem;
-  letter-spacing: 0.1em;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   cursor: pointer;
 }
 
-.karttaselite-kaikki:hover:not(:disabled) {
-  background: rgba(255, 252, 242, 1);
+.karttaselite-valilehti:hover:not(:disabled) {
+  background: rgba(255, 252, 242, 0.7);
+  color: rgba(70, 51, 31, 0.92);
+}
+
+.karttaselite-valilehti[aria-selected='true'] {
+  border-color: rgba(70, 51, 31, 0.3);
+  background: rgba(255, 252, 242, 0.85);
+  color: rgba(70, 51, 31, 0.96);
+}
+
+/* Sulkuristi (omistajan päätös 22.9.2026: paneeli peittää nyt
+   avausnapin, joten napin täytyy saada oma sulkijansa levyn sisään). */
+.karttaselite-sulje {
+  min-width: 0;
+  min-height: 0;
+  padding: 0.15rem 0.4rem;
+  border: 0;
+  background: none;
+  color: rgba(70, 51, 31, 0.7);
+  font-size: 0.85rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.karttaselite-sulje:hover:not(:disabled),
+.karttaselite-sulje:active:not(:disabled) {
+  /* Yleinen button:hover maalaa tumman taustan (rivi 2329) — risti katoaisi. */
+  background: rgba(70, 51, 31, 0.12);
   color: rgba(70, 51, 31, 1);
 }
 
+.karttaselite-paneeli-maakunnat { padding-top: 0.2rem; }
+
 .karttaselite-lista {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding-top: 0.2rem;
 }
 
-/* Neljä saraketta: pallo, symboli, selite, luku. Selite venyy, joten
-   luku asettuu joka rivillä samaan kohtaan oikeaan laitaan. */
+/* Kolme saraketta: tyyppimerkki, selite, luku (värirenkaat poistuivat
+   22.9.2026). Selite venyy, joten luku asettuu joka rivillä samaan
+   kohtaan oikeaan laitaan. */
 .karttaselite-rivi {
   display: grid;
-  grid-template-columns: auto auto 1fr auto;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 0.45rem;
   min-height: 0;
@@ -25888,41 +25944,7 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
   color: rgba(70, 51, 31, 0.92);
 }
 
-/*
- * VÄRIPALLO ON KYTKIN JA TILANÄYTTÖ (omistajan täsmennys 29.8.2026:
- * *"päälle kytketyn aiheen väripallo syttyy myös valikon
- * seliterivillä — valikko näyttää aina mitkä valot ovat päällä"*).
- *
- * Sammuneena pallo on pelkkä ääriviiva aiheen omassa värissä; syttyneenä
- * se on täytetty ja saa ympärilleen saman himmeän kehän kuin kartan
- * valotäplä.
- *
- * KEHÄ ON PSEUDOELEMENTTI EIKÄ color-mix-varjo: läpinäkyvyys pitäisi
- * silloin laskea CSS:n omalla funktiolla, jota vanhempi WebKit ei
- * tunne — ja peliä pelataan iOS:n kotivalikkosovelluksessa. Sama väri
- * `opacity`lla on sama jälki ilman uutta funktiota.
- */
-.karttaselite-pallo {
-  position: relative;
-  width: 0.85rem;
-  height: 0.85rem;
-  border: 2px solid var(--valo, #8a6d4a);
-  border-radius: 50%;
-  background: transparent;
-}
-
-.karttaselite-rivi[aria-pressed='true'] .karttaselite-pallo {
-  background: var(--valo, #8a6d4a);
-}
-
-.karttaselite-rivi[aria-pressed='true'] .karttaselite-pallo::after {
-  content: '';
-  position: absolute;
-  inset: -0.3rem;
-  border-radius: 50%;
-  background: var(--valo, #8a6d4a);
-  opacity: 0.24;
-}
+/* Värirenkaat (.karttaselite-pallo) poistettiin 22.9.2026 omistajan päätöksellä. */
 
 .karttaselite-rivi[aria-pressed='true'],
 .karttaselite-rivi[aria-pressed='true']:hover:not(:disabled) {
@@ -25933,6 +25955,26 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
   width: 1.35rem;
   height: 1.35rem;
   display: block;
+}
+
+/*
+ * TYYPPIMERKKI (omistajan päätös 22.9.2026): sama Codexin kuvamerkki
+ * kuin kartalla (assets/nostotyypit/merkki-*.png). Kotelo pitää yhden
+ * tai useamman merkin vierekkäin (Kulttuuri ja ruoka, Kauppa ja
+ * tekniikka) samalla leveydellä kuin ennen kaiverrettu symboli, jotta
+ * pallo-sarake ei hyppää rivien välillä.
+ */
+.karttaselite-merkki {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  min-width: 1.35rem;
+}
+
+.karttaselite-kuvamerkki {
+  display: block;
+  height: 1.05rem;
+  width: auto;
 }
 
 .karttaselite-nimi { line-height: 1.25; }
@@ -25953,11 +25995,399 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
    kartan selite eikä sisällysluettelo. */
 .karttaselite-tyhja { opacity: 0.45; }
 
-.karttaselite-vihje {
-  margin: 0.35rem 0.4rem 0.1rem;
-  color: rgba(70, 51, 31, 0.62);
-  font-size: 0.7rem;
-  line-height: 1.35;
+
+/*
+ * PEUKALOLEVY (js/karttaselite-levy.js) — pystysuuntainen liukukahva,
+ * joka napsahtaa aina valitun rivin kohdalle (omistajan päätös
+ * 22.9.2026: monivalinta pois, valinta on aina yksi rivi).
+ *
+ * LEVY ISTUU RIVIEN LUVUN PÄÄLLE EIKÄ NIIDEN VIERELLE (omistajan
+ * täsmennys): tausta on vaalea ja läpinäkyvä, jotta lukumäärä näkyy
+ * levyn ALTA. `.karttaselite-lista` on tämän containing block
+ * (position: relative), ja pystysijainti on JS:n oma `transform:
+ * translateY(...)` — se lasketaan vain avatessa ja valinnan
+ * vaihtuessa, ei kehyksittäin.
+ */
+.karttaselite-peukalolevy {
+  position: absolute;
+  top: 0;
+  right: 0.1rem;
+  width: 2.2rem;
+  /* Läpinäkyvä vedin (omistaja 22.9.2026): vain ohut reunus ja linssi keskellä. */
+  border: 1px solid rgba(70, 51, 31, 0.3);
+  border-radius: 7px;
+  background: transparent;
+  box-shadow: none;
+  cursor: grab;
+  touch-action: none;
+  transition: transform 120ms ease;
+  z-index: 1;
+}
+
+.karttaselite-peukalolevy:active { cursor: grabbing; }
+
+/* Raahauksen ajaksi siirtymä pois, jotta levy ei jää jälkeen sormesta. */
+.karttaselite-peukalolevy.ei-siirtyma { transition: none; }
+
+/*
+ * LINSSI vetimen keskellä: pyöreä lasi, jossa rivin luku näkyy hieman
+ * suurennettuna. Pallopyöristymä (linssivirhe) tehdään kahdella
+ * liukuvärillä — kiilto vasemmalla ylhäällä, tummuva reuna — ja sisäisellä
+ * varjolla; numero on lasin sisällä 1,25-kertaisena.
+ */
+.karttaselite-peukalolevy-linssi {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 1.55rem;
+  height: 1.55rem;
+  border-radius: 50%;
+  border: 1px solid rgba(70, 51, 31, 0.55);
+  background:
+    radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.75) 0, rgba(255, 255, 255, 0.25) 28%, rgba(255, 255, 255, 0) 55%),
+    radial-gradient(circle at 50% 50%, rgba(245, 240, 225, 0.35) 55%, rgba(70, 51, 31, 0.18) 100%);
+  box-shadow: inset 0 0 3px rgba(70, 51, 31, 0.35), 0 1px 2px rgba(20, 14, 6, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: rgba(70, 51, 31, 0.95);
+  transform: scale(1.25);
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .karttaselite-peukalolevy { transition: none; }
+}
+
+/* ===========================================================================
+   KARTTATYÖKALUN MAAKUNNAT-VÄLILEHTI (js/karttatyokalu-maakunnat.js)
+   ---------------------------------------------------------------------------
+   Omistajan päätös 22.9.2026: karttaselitepaneeliin uusi välilehti,
+   josta pelaaja selaa nykymaakuntia maittain ja lukee Livian lyhyen
+   luonnehdinnan. Tämä lohko on RUNKO ILMAN KARTTAKYTKENTÄÄ — värjäys
+   kartalla tulee myöhemmin Karttasepän vektoritasolta.
+
+   Puhelin ensin (390 px): sarakkeet ja fontit mitoitettu kapealle
+   ruudulle, samat tokenit kuin karttaselitteen levyllä (ruskea muste,
+   #f5f0e2-pergamentti) — työkalu on saman valikon toinen välilehti eikä
+   saa näyttää vieraalta sen vierellä.
+   =========================================================================== */
+
+.maakunnat-tyokalu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Rivien yhteinen esi-isä: position: relative, jotta tuleva peukalolevy
+   (js/karttaselite-levy.js) voi liukua tämän päällä samassa sarakkeessa
+   kuin muillakin välilehdillä. Ryhmäkotelot eivät aseta omaa position-
+   arvoaan, joten tämä pysyy lähimpänä asemoituna esivanhempana. */
+.maakunnat-lista {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.maakunnat-ryhma {
+  display: flex;
+  flex-direction: column;
+}
+
+.maakunnat-maaotsikko {
+  display: flex;
+  align-items: center;
+  min-height: 0;
+  padding: 0.3rem 0.4rem;
+  border: 0;
+  border-radius: 6px;
+  background: none;
+  color: rgba(70, 51, 31, 0.92);
+  font-family: var(--font-type);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: left;
+  cursor: pointer;
+}
+
+.maakunnat-maaotsikko:hover:not(:disabled) { background: rgba(70, 51, 31, 0.07); }
+
+/* Pieni nuoli kertoo auki/kiinni-tilan ilman erillistä kuvaketta. */
+.maakunnat-maaotsikko::before {
+  content: '▸';
+  display: inline-block;
+  margin-right: 0.4rem;
+  transition: transform 160ms ease;
+}
+
+.maakunnat-maaotsikko[aria-expanded='true']::before { transform: rotate(90deg); }
+
+.maakunnat-rivit-ryhma {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Kaksi saraketta: nimi venyy, luku asettuu oikeaan laitaan samaan
+   sarakkeeseen kuin karttaselitteen kappalemäärä. */
+.maakunnat-rivi {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 0;
+  padding: 0.3rem 0.4rem 0.3rem 1.4rem;
+  border: 0;
+  border-radius: 6px;
+  background: none;
+  color: rgba(70, 51, 31, 0.92);
+  font: inherit;
+  font-size: 0.86rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.maakunnat-rivi:hover:not(:disabled) { background: rgba(70, 51, 31, 0.07); }
+
+.maakunnat-rivi[aria-pressed='true'] {
+  background: rgba(70, 51, 31, 0.1);
+  font-weight: 600;
+}
+
+.maakunnat-rivi-nimi {
+  line-height: 1.25;
+  /* Pitkä nimi kolmella pisteellä (omistaja 22.9.2026); koko nimi rivin title-attribuutissa. */
+  max-width: 9.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Tyhjä lukupaikka: ei tekstiä tässä erässä, mutta sarake on olemassa
+   niin että peukalolevy löytää saman kohdan kuin Nostot-välilehdellä. */
+.maakunnat-luku {
+  min-width: 1.4rem;
+}
+
+.maakunnat-luonnehdinta {
+  /*
+   * LUONNEHDINTA PYSYY NÄKYVISSÄ LISTAN ALLA (omistaja 22.9.2026: "paneelin
+   * alapuolelle"): levy vierii (max-height), joten laatikko tarttuu
+   * vierityslaatikon alareunaan eikä jää maalistan alle piiloon.
+   */
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+  background: #f5f0e2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 0.3rem 0.5rem;
+  margin: 0.2rem 0.15rem 0;
+  padding: 0.5rem 0.6rem;
+  border-top: 1px solid rgba(70, 51, 31, 0.18);
+}
+
+.maakunnat-luonnehdinta-nimi {
+  flex: 1 1 100%;
+  margin: 0;
+  color: rgba(70, 51, 31, 0.75);
+  font-family: var(--font-type);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.maakunnat-luonnehdinta-teksti {
+  flex: 1 1 auto;
+  margin: 0;
+  color: rgba(70, 51, 31, 0.92);
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.maakunnat-luonnehdinta-lisaa {
+  display: grid;
+  flex: 0 0 auto;
+  width: 1.6rem;
+  height: 1.6rem;
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  place-items: center;
+  border: 1px solid rgba(122, 85, 20, 0.32);
+  border-radius: 50%;
+  background: rgba(255, 252, 242, 0.7);
+  color: rgba(70, 51, 31, 0.85);
+  cursor: pointer;
+}
+
+.maakunnat-luonnehdinta-lisaa:hover:not(:disabled) {
+  background: rgba(255, 252, 242, 1);
+  color: rgba(70, 51, 31, 1);
+}
+
+/* --------------------------------------------------------------------
+   ALUEEN KORTTI (plussan avaama pop-up) — sama korttikerrosmalli kuin
+   nostokortilla (css/fokusnosto.css .fokusnosto-kerros), oma luokka-
+   perhe: kelluva paperi kartan/paneelin päällä, ei koko ruudun modaali.
+   -------------------------------------------------------------------- */
+
+.maakunta-kortti-kerros {
+  position: fixed;
+  inset: 0;
+  z-index: 46;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(1rem + var(--turva-yla, 0px)) calc(1rem + var(--turva-oikea, 0px))
+    calc(1rem + var(--turva-ala, 0px)) calc(1rem + var(--turva-vasen, 0px));
+  background: rgba(18, 12, 4, 0);
+  transition: background 220ms ease-out;
+}
+
+.maakunta-kortti-auki { background: rgba(18, 12, 4, 0.3); }
+
+.maakunta-kortti {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: min(30rem, 100%);
+  max-height: min(86vh, 46rem);
+  overflow-y: auto;
+  padding: 0.7rem 0.8rem 0.9rem;
+  border-radius: 12px;
+  border: 1px solid rgba(122, 85, 20, 0.32);
+  background: #f5f0e2;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.34);
+  color: #211d18;
+  font-family: var(--font-luku);
+  touch-action: pan-y;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 220ms ease-out, transform 220ms cubic-bezier(0.22, 0.9, 0.24, 1);
+}
+
+.maakunta-kortti-auki .maakunta-kortti {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .maakunta-kortti-kerros,
+  .maakunta-kortti { transition: none; }
+}
+
+.maakunta-kortti-sulje {
+  position: absolute;
+  top: 0.35rem;
+  right: 0.4rem;
+  z-index: 2;
+  min-height: 30px;
+  padding: 0.1rem 0.45rem;
+  border: 1px solid rgba(122, 85, 20, 0.3);
+  border-radius: 6px;
+  background: rgba(245, 240, 226, 0.86);
+  color: rgba(70, 51, 31, 0.9);
+  cursor: pointer;
+}
+
+.maakunta-kortti-otsikko {
+  margin: 0 1.6rem 0.4rem 0;
+  font-family: var(--font-type);
+  font-size: 1.05rem;
+}
+
+.maakunta-kortti-teksti {
+  margin: 0 0 0.6rem;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+/* Kaksi kuvaa vierekkäin; useampi vaihtaa vaakakarusellin puolelle. */
+.maakunta-kuvat-ruudukko {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.maakunta-kuvat-karuselli {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.maakunta-kuvat-karuselli .maakunta-kuva {
+  flex: 0 0 80%;
+  scroll-snap-align: start;
+}
+
+.maakunta-kuva {
+  margin: 0;
+}
+
+.maakunta-kuva img {
+  display: block;
+  width: 100%;
+  height: 8rem;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.maakunta-kuva-lahde {
+  margin-top: 0.2rem;
+  color: rgba(70, 51, 31, 0.65);
+  font-size: 0.66rem;
+  line-height: 1.3;
+}
+
+/* Pulun kysymykset: nappi ikonilla ja tekstillä, vastaus puhekuplana heti alla. */
+.maakunta-pulu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.maakunta-pulu-kysymys {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 0;
+  padding: 0.4rem 0.55rem;
+  border: 1px solid rgba(122, 85, 20, 0.3);
+  border-radius: 8px;
+  background: rgba(255, 252, 242, 0.7);
+  color: rgba(70, 51, 31, 0.92);
+  font: inherit;
+  font-size: 0.84rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.maakunta-pulu-kysymys:hover:not(:disabled) { background: rgba(255, 252, 242, 1); }
+
+.maakunta-pulu-ikoni {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  color: rgba(70, 51, 31, 0.7);
+}
+
+.maakunta-pulu-vastaus {
+  margin: -0.15rem 0 0;
+  padding: 0.45rem 0.6rem;
+  border-radius: 8px;
+  background: rgba(70, 51, 31, 0.08);
+  font-size: 0.84rem;
+  line-height: 1.45;
 }
 
 /* ==================== KARTTAPALLO (js/pallo.js) ==================== */

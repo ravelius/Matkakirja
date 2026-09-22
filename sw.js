@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-09-21.2087';
+const CACHE = 'matkakirja-2026-09-21.2090';
 const SHELL = [
   './',
   './index.html',
@@ -107,7 +107,9 @@ const SHELL = [
   './js/packs/elaintakyt.js',
   './js/fokusnosto-symbolit.js',
   './js/karttavalot.js',
+  './js/karttaselite-levy.js',
   './js/karttaselite.js',
+  './js/karttatyokalu-maakunnat.js',
   './js/vakasikoni.js',
   './js/ylapalkki-vaaka.js',
   './js/fokusnosto.js',
@@ -234,6 +236,7 @@ const SHELL = [
   // polkua offline-käyttöön. Vektoriaineisto itse on HTTP-välimuistissa
   // (immutable, versio polussa) eikä palvelutyöntekijän korissa.
   './js/pallovektorit.js',
+  './js/laattaesilataus.js',
   './js/pallomaakunnat.js',
   // Pallolauta (karttapallo pelin lautana, 5.9.2026): tuodaan
   // dynaamisesti kuten pallo.js, mutta kuuluu SHELLiin offline-käyttöä
@@ -482,6 +485,7 @@ const SHELL = [
   './js/packs/hahmotelma-ukr.js',
   './js/packs/maakartat.js',
   './js/packs/maakunnat-luonnehdinnat.js',
+  './js/packs/maakunnat-pulu.js',
   './js/packs/nahtavyysjutut.js',
   './js/packs/miniatyyrit.js',
   // Ykköstason nostojen kuvamerkit (js/fokusnosto-symbolit.js NOSTOSYM_KUVAMERKIT).
@@ -2092,11 +2096,27 @@ const LAATTAKANSIOT = [LAATTAKANSIO, LAATTAKANSIO_SYVA];
 const LAATTAKATTO = 3000;
 /** Kerralla poistettava erä: yksi keys()-ajo riittää sadoiksi laatoiksi. */
 const LAATTASIIVOUS = 200;
-/** Esilatauksen rinnakkaiset noudot (ei pursketa ämpäriä). */
-const LAATTAESILATAUKSEN_LEVEYS = 6;
+/** Esilatauksen rinnakkaiset noudot (ei pursketa ämpäriä; 6 → 4 22.9.2026, omistaja: pieni rinnakkaisuus levossa). */
+const LAATTAESILATAUKSEN_LEVEYS = 4;
 
 /** Onko osoite pallon laatta tai sen luettelo (peili tai paikallinen peili)? */
 const PALLOLAATTA = (osoite) => osoite.pathname.includes(LAATTAPOLKU);
+/*
+ * PYRAMIDIN LAATAT SAMAAN KORIIN (esilataus levossa, 22.9.2026;
+ * js/laattaesilataus.js). Laattakerroksen (js/pallolaatat.js) laatat
+ * asuvat polussa julisteet/pyramidi/<versio>/… ja ne haetaan
+ * fetch()-kutsulla, joka ei ole `destination: image` — ne eivät siis
+ * osuneet mihinkään koriin, vaan vain selaimen HTTP-välimuistiin. Nyt
+ * ne palvellaan kuten pallon laatat (välimuisti ensin, talletus
+ * ensimmäisellä haulla), ja lepoaikainen esilataus voi tuoda ne koriin
+ * ennen zoomia. Luettelot (pyramidi.json, .json) menevät verkkoon
+ * kuten ennen (js/laattapyramidi.js revalidoi ne itse). Versiot eivät
+ * ole täällä kaksoiskappaleina: pyramidin versio vaihtuu ämpärin
+ * luettelossa ilman sw.js-muutosta, joten vanhat versiot vanhenevat
+ * FIFO-katon (LAATTAKATTO) kautta eikä siivoaVanhatLaatat koske niihin.
+ */
+const PYRAMIDIPOLKU = '/julisteet/pyramidi/';
+const PYRAMIDILAATTA = (osoite) => osoite.pathname.includes(PYRAMIDIPOLKU) && !osoite.pathname.endsWith('.json');
 
 /*
  * Laattojen määrä muistissa, jotta keys() ei aja jokaisella laatalla —
@@ -2205,7 +2225,8 @@ async function esilataaLaatat(osoitteet, portti) {
   const alku = Date.now();
   const kori = await caches.open(LAATTACACHE);
   const jono = (Array.isArray(osoitteet) ? osoitteet : [])
-    .filter((u) => typeof u === 'string' && LAATTAKANSIOT.some((k) => u.includes(`${LAATTAPOLKU}${k}/`)))
+    .filter((u) => typeof u === 'string'
+      && (LAATTAKANSIOT.some((k) => u.includes(`${LAATTAPOLKU}${k}/`)) || u.includes(PYRAMIDIPOLKU)))
     .slice(0, LAATTAKATTO);
   let seuraava = 0;
   let uusia = 0;
@@ -2242,7 +2263,11 @@ async function siivoaVanhatLaatat() {
   if (!kori) return;
   const nykyiset = LAATTAKANSIOT.map((k) => `${LAATTAPOLKU}${k}/`);
   const avaimet = await kori.keys();
-  const vanhat = avaimet.filter((p) => !nykyiset.some((n) => new URL(p.url).pathname.includes(n)));
+  // Pyramidin laatat eivät ole kansiosiivouksen kohde (ks. PYRAMIDILAATTA).
+  const vanhat = avaimet.filter((p) => {
+    const polku = new URL(p.url).pathname;
+    return !polku.includes(PYRAMIDIPOLKU) && !nykyiset.some((n) => polku.includes(n));
+  });
   await Promise.all(vanhat.map((p) => kori.delete(p).catch(() => {})));
   laattojaKorissa = avaimet.length - vanhat.length;
 }
@@ -2367,6 +2392,10 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(osoite.pathname.endsWith('/laatat.json')
       ? laattaluettelo(event)
       : laattaPeilista(event.request));
+    return;
+  }
+  if (PYRAMIDILAATTA(osoite)) {
+    event.respondWith(laattaPeilista(event.request));
     return;
   }
   // Ulkoisista kutsuista välimuistitetaan vain wikikuvat (kuva kerran
