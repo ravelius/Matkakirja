@@ -1603,3 +1603,7 @@ Klo 23.53. Jäljellä syöteputki (?koe=syotetouch, ?koe=interpvanha) ja liikkee
 ## PR #2871 (KARTTASEPPA): LEHTIPALSTAT KAIKKIIN PIDEMPIIN NOSTOIHIN — PITUUS JS:SSA (onPitkaNostoteksti: ≥ 600 MERKKIA TAI ≥ 2 KIRJOITTAJAN KAPPALETTA), LEVEYS CONTAINER QUERYLLA (TEKSTI ≥ 600 px); ≥ 1100 px KUVAN VIEREINEN TEKSTIPALSTA (498 px) PYSYY YHTENA PALSTANA; iPAD PYSTY 712 px → KAKSI; ANFANGI VAIN PALSTOISSA (22.9.2026 klo 23.59)
 
 Kohdekortti, eläintäky, hetki, syvennys, maalehden nosto; lööppi ennallaan. Vartijat tests/lehtipalstat, tools/mittaa-lehtipalstat.mjs WebKit 25/25, npm test 4017/0. Kaappaus docs/raportit/kaappaukset/lehtipalstat-chartres-1024-vaihe2.jpg. Jono: #2871 → v2137.
+
+## OMISTAJA iPADILLA: ?koe=syotetouch (RAAKA KOSKETUSSYOTE ILMAN INTERPOLOINTIA) 'EHKA PAREMPI KUIN MUUT' → ENSIMMAINEN MYONTEINEN SIGNAALI OSOITTAA SYOTEPUTKEEN (INTERPOLOINTI / KAMERAN VIIVE), EI PIIRTOON (23.9.2026 klo 00.01)
+
+Klo 00.02 (23.9.). Pelikoodarille: liikkeen tasaisuusmittarit ensin, sitten A/B interp vs touch mittarilla; jos touch on mitatusti tasaisempi, touch oletukseksi kosketuslaitteilla ja interp vain hiirelle.
