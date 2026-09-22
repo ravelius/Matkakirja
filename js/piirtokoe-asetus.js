@@ -70,7 +70,7 @@ export const PIIRTOKOKEIDEN_VAIHTOEHDOT = [
   {
     avain: 'eivienti',
     nimi: 'Ei tekstuurivientejä',
-    seloste: 'Vedon aikana ei viedä uusia tekstuureja näytönohjaimelle',
+    seloste: 'Vedon aikana ei viedä laattoja eikä nimiöatlasta näytönohjaimelle — jono odottaa lepoa',
     lippu: 'eivienti',
     ikoni: '<path d="M12 16V5"/><path d="m8 9 4-4 4 4"/><path d="M5 19h14"/>',
   },

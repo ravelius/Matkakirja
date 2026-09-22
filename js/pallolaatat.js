@@ -3568,8 +3568,20 @@ export function luoLaattakerros({
      * ajaVientiä uudestaan) — mitään ei siis hukata.
      */
     if (purettu || lukittu || vientiRaf || !vientijono.length) return;
-    // Koe `vientilepo`: liikkeessä vienti odottaa seuraavaa lepopäivitystä.
-    if (kokeet.has('vientilepo') && liikkeessaViimeksi) return;
+    /*
+     * Koe `vientilepo`: liikkeessä vienti odottaa seuraavaa lepopäivitystä.
+     *
+     * `eivienti` (ratasvalikon "Ei tekstuurivientejä", Fable 22.9.2026)
+     * tekee saman: se jäädytti aiemmin VAIN nimiöatlaksen viennin
+     * (js/pallonimiot-gl.js), ja laattojen tekstuurit — juuri se vienti,
+     * joka iPhonella virtaa vedon aikana — menivät näytönohjaimelle kuten
+     * ennenkin. Laitetestaajan Mac-mittauksessa lippu ei siksi muuttanut
+     * mitään. Jono säilyy ja valuu sceneen levossa; mitään ei hukata.
+     */
+    if ((kokeet.has('vientilepo') || kokeet.has('eivienti')) && liikkeessaViimeksi) {
+      mittarit.vientejaOdottaa = vientijono.length;
+      return;
+    }
     vientiRaf = ikkuna.requestAnimationFrame((kehysAlku) => {
       vientiRaf = 0;
       // Vienti (initTexture 3–7 ms) väistää pitkää kehystä liikkeessä kuten valmistelu.

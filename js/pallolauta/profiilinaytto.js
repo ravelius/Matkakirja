@@ -87,7 +87,14 @@ export function profiiliTahti(tulos, lepoDelta = null) {
     const vika = [...kehykset].reverse().find((k) => Number.isFinite(k[kentta]))?.[kentta] ?? null;
     return Number.isFinite(eka) && Number.isFinite(vika) ? vika - eka : null;
   };
-  const vienteja = kasvu('paivityksia');
+  /*
+   * LAATTAVIENNIT = initTexture-kutsut (`laattaVienteja`), EI kerroksen
+   * päivityksiä. v2125:n overlay laski tähän `paivityksia`-laskurin, joka
+   * kasvaa jokaisesta ladontakierroksesta — nimi lupasi vientejä, luku
+   * kertoi päivityksistä (Laitetestaajan Mac-mittaus 22.9.2026).
+   */
+  const vienteja = kasvu('laattaVienteja');
+  const odottaa = [...kehykset].reverse().find((k) => Number.isFinite(k.vientejaOdottaa))?.vientejaOdottaa ?? null;
   const kehyksiaN = Math.max(1, kehykset.length);
   const puskuriKehys = kasvu('puskurikirjoituksia') != null ? kasvu('puskurikirjoituksia') / kehyksiaN : null;
   const uniformiKehys = kasvu('uniformeja') != null ? kasvu('uniformeja') / kehyksiaN : null;
@@ -118,6 +125,7 @@ export function profiiliTahti(tulos, lepoDelta = null) {
     pitkatOhitettu,
     ketjuja,
     vienteja,
+    odottaa,
     puskuriKehys,
     uniformiKehys,
     glVienteja,
@@ -168,7 +176,7 @@ export function profiilirivit({
       rivit.push(`pitkät (>25 ms): piirretty ${tahti.pitkatPiirretty} · ohitettu ${tahti.pitkatOhitettu}`);
     }
     rivit.push(`silmukoita ${p(tahti.ketjuja, 1)} · laattavientejä ${tahti.vienteja ?? '—'}`
-      + ` · valmistumisviive ${p(tahti.viiveKa, 1)} ms`);
+      + `${tahti.odottaa ? ` (jonossa ${tahti.odottaa})` : ''} · valmistumisviive ${p(tahti.viiveKa, 1)} ms`);
     if (tahti.puskuriKehys != null || tahti.uniformiKehys != null) {
       rivit.push(`puskurikirj./kehys ${p(tahti.puskuriKehys, 2)} · uniformeja/kehys ${p(tahti.uniformiKehys, 1)}`
         + ` · GL-vientejä ${tahti.glVienteja ?? '—'}`);
