@@ -37,6 +37,7 @@ import {
   pyramidinTasoitus, pyramidinVaritasonMaa,
 } from './laattapyramidi.js';
 import { laudaltaAsteiksi, projisoiLaudalle } from './fokusmitat.js';
+import { asennaKermaShader, luoKermanJaetut, paivitaKermanJaetut } from './laattakerma-shader.js';
 
 /** Kuinka kauan kameran on oltava paikallaan ennen lepolaatua (ms). */
 export const LAATU_LEPOVIIVE_MS = 260;
@@ -2310,6 +2311,16 @@ export function luoLaattakerros({
   const jono = [];
   const vientijono = [];
   const kokeet = laattakerroksenKokeet();
+  /*
+   * KERMA SHADERISSA (js/laattakerma-shader.js, 22.9.2026): kerma, sumu ja
+   * kohdemaan reikä lasketaan laatan materiaalissa yhdestä maskista, ei
+   * laatan kankaalle. `?koe=kermakangas` palauttaa vanhan kangaspolun
+   * vertailuksi (kerma-reuna-savuke). Maski päivitetään `suorita`ssa,
+   * kun tasoituksen avain vaihtuu — laattoja ei silloin pureta.
+   */
+  const kermaShader = !kokeet.has('kermakangas');
+  const kermanJaetut = luoKermanJaetut();
+  let kermanMaskiAvain = '';
   const haiveMs = () => (reduced() || kokeet.has('eihaive') ? 0 : LAATTAKERROS_HAIVE_MS);
   if (kokeet.size) mittarit.kokeet = [...kokeet];
   let ladattavia = 0;
@@ -2877,7 +2888,11 @@ export function luoLaattakerros({
        * KERMAN_ODOTUS_MS:n päästä, enintään KERMAN_ODOTUS_KERTOJA (maa,
        * jolle polygoneja ei ole, ei saa jäädä ikuisesti piirtämättä).
        */
-      if (tasoitus && !tasoitus.maailma && !tasoitus.suoja?.tarkka && (t.kermanOdotus ?? 0) < KERMAN_ODOTUS_KERTOJA) {
+      // Shaderilla kerma on materiaalissa: laatta saa maskin heti kun se saapuu, odotusta ei tarvita.
+      const shaderKerma = kermaShader && tasoitus && !tasoitus.maailma;
+      // Sama portti kuin kankaalla: kerma vain laatalle, jolla on väritaso (kerrostasot[i].vari).
+      let variTasoOli = false;
+      if (!shaderKerma && tasoitus && !tasoitus.maailma && !tasoitus.suoja?.tarkka && (t.kermanOdotus ?? 0) < KERMAN_ODOTUS_KERTOJA) {
         t.kermanOdotus = (t.kermanOdotus ?? 0) + 1;
         mittarit.kermaaOdottaa = (mittarit.kermaaOdottaa ?? 0) + 1;
         kangas.width = 0; kangas.height = 0;
@@ -2996,7 +3011,14 @@ export function luoLaattakerros({
            * (aineisto vielä haussa) värilaatta jätetään kokonaan pois,
            * jolloin kartta on se pohjakartta, joka se muutenkin on.
            */
-          piirraKerma(kuva);
+          if (shaderKerma) {
+            // Kerma tulee shaderista; linssin tyhjä arkki (tasoituksenUlkopuolella) sammuttaa sen laatalta.
+            variTasoOli = true;
+            t.kermaPois = Boolean(kertomuslukko && tasoituksenUlkopuolella({
+              tasoitus, kartta, ppu: tasoOlio.pikseliaPerYksikko, arkki: pyramidi.arkki,
+            }));
+            if (t.kermaPois && !t.kermatta) { mittarit.kermattomia += 1; t.kermatta = true; }
+          } else piirraKerma(kuva);
           kuva?.close?.();
           continue;
         }
@@ -3133,6 +3155,16 @@ export function luoLaattakerros({
         ...(kerrokset.astronautti ? { alphaTest: 0.004, premultipliedAlpha: true } : {}),
         ...(savy === null ? {} : { color: savy }),
       });
+      if (shaderKerma && variTasoOli) {
+        const ppuL = tasoOlio.pikseliaPerYksikko;
+        asennaKermaShader(materiaali, {
+          jaettu: kermanJaetut,
+          laatta: {
+            alue: { x0: pyramidi.arkki.x + kartta.kansX0 / ppuL, y0: pyramidi.arkki.y + kartta.kansY0 / ppuL, w: kartta.leveys / ppuL, h: kartta.korkeus / ppuL },
+            paalla: !t.kermaPois,
+          },
+        });
+      }
       const verkko = new luokat.Mesh(geometria, materiaali);
       verkko.renderOrder = LAATTAKERROS_RENDER_ORDER_POHJA + t.z;
       // Kerros ei ota napautuksia: pelin merkit ja onGlobeClick kuten ennen.
@@ -3511,8 +3543,16 @@ export function luoLaattakerros({
      * haettava uudestaan. Sukupolvi kasvaa, jotta kesken oleva vienti
      * ei asenna purettua laattaa takaisin.
      */
-    const tasoitusAvain = kerrokset.vari ? (pyramidinTasoitus()?.avain ?? '') : '';
-    if (variMaa !== variMaaEdellinen || tasoitusAvain !== tasoitusAvainEdellinen
+    const tasoitusNyt = kerrokset.vari ? pyramidinTasoitus() : null;
+    const tasoitusAvain = tasoitusNyt?.avain ?? '';
+    // Shaderilla tasoituksen muutos (tarkka suoja, liikkeen kohde, sumu) on
+    // pelkkä maskin päivitys; laatat pysyvät. Maanvaihto puretaan yhä.
+    if (kermaShader && tasoitusAvain !== kermanMaskiAvain) {
+      kermanMaskiAvain = tasoitusAvain;
+      paivitaKermanJaetut(kermanJaetut, tasoitusNyt, { luoKangas, Texture: luokat.Texture, THREE_LINEAR, THREE_CLAMP });
+      mittarit.kermamaskeja = (mittarit.kermamaskeja ?? 0) + 1;
+    }
+    if (variMaa !== variMaaEdellinen || (!kermaShader && tasoitusAvain !== tasoitusAvainEdellinen)
       || kerrokset.reliefi !== reliefiEdellinen) {
       variMaaEdellinen = variMaa;
       tasoitusAvainEdellinen = tasoitusAvain;
