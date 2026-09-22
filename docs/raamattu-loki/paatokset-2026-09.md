@@ -1527,3 +1527,7 @@ Pelikoodari: pinottu #2857:n päälle (valikko 6 → 7 kohtaa, testien 'koe 3/6'
 ## OMISTAJA: 'POISTA KAIKKI YLIMAARAISET VIVUT VALIKOSTA NIIN LOYDAN TESTATTAVAT VAIHTOEHDOT PAREMMIN' → KARTTA-OSIOON JAA PIENI LIIKE, PIIRTOKOE (7) JA NAYTA KEHYSPROFIILI; VEDON SEURANTA JA TARKKUUS LIIKKEESSA POIS VALIKOSTA (LIPUT SAILYVAT ?koe=-OSOITTEESSA) (22.9.2026 klo 22.28)
 
 Omistaja klo 22.30. Pelikoodari tekee PR:n #2861:n päälle; tallennettu valikkovalinta ei saa enää vaikuttaa; oletukset veto interp ja nykyinen tarkkuusoletus; overlay näyttää arvot yhä. Jono: #2854 (mainissa v2130) → #2857 (v2131) → #2861 → valikkosiivous → #2859.
+
+## CI:N WebKit-LAUNCH-VIKA: PAIKALLINEN TOISTO SAVUKE_RINNAKKAIN=6 EI TOISTA (0/12), AJURILLA JATKUU (35768446176) → AJURIN OMA JUMI 16.44 UTC:STA; OMISTAJAN LUPA (KORTTI): LAITETESTAAJA KAYNNISTAA AJURIN SamiMacStudio2 UUDELLEEN AJOJEN VALISSA (22.9.2026 klo 22.34)
+
+Laitetestaaja poissulki ruudunsäästäjän/lukituksen, näytön unen, jumiprosessit ja ulimitin. Ei kosketa -testit-ajuriin. Todennus: yksi WebKit-savuke CI:ssä käynnistyksen jälkeen.
