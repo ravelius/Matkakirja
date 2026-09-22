@@ -849,6 +849,59 @@ export const kohtaamiskuvat = [
     hetki: 'Sivellin koskettaa yhä puuta ja toinen käsi tukee penkkiä, vaikka huomio on jo kokonaan pelaajassa.',
     vihje: 'Vanhat messinki- ja puuosat sekä oviaukon ohi kulkeva nykyinen punainen raitiovaunu yhdistävät kaksi aikakerrosta.',
   },
+  /*
+   * KUVAPUTKEN TOIMITUS 22.9.2026: erä C2 jatkaa tavallisten visojen
+   * KOHTAAMISET-hahmoja. Kaupunkien mahdolliset tarinakaaren henkilöt ja
+   * kuvat säilyvät erillään `kaytto: 'tavallinen'` -rajauksella.
+   */
+  {
+    id: 'ateena-iason-c2',
+    kaupunki: 'Ateena',
+    kohde: 'ateena',
+    maa: 'Kreikka',
+    hahmo: 'Iason',
+    kansio: '20260922',
+    tiedosto: 'kasvo-ateena-iason.jpg',
+    tila: 'tarkistettu',
+    kaytto: 'tavallinen',
+    alt: 'Juoksuvalmentaja Iason katsoo suoraan pelaajaan sekuntikello kädessään Panathinaikoksen stadionin marmoriportailla.',
+    lyhyt: 'Iason pysäyttää sekuntikellon Kallimarmaron portailla.',
+    kuvateksti: 'Iason ehti pysäyttää sekuntikellon, kun pelaajan kysymys tavoitti hänet Kallimarmaron marmoriportailla.',
+    hetki: 'Valmentaja jää istumaan portaalle sekuntikello kädessään ja kääntää uteliaan, hieman huvittuneen katseensa suoraan pelaajaan.',
+    vihje: 'Nykyinen ajanotto ja urheiluvarusteet kohtaavat vanhan stadionin kuluneet marmoriportaat paljastamatta aarteen sijaintia.',
+  },
+  {
+    id: 'firenze-ilaria-c2',
+    kaupunki: 'Firenze',
+    kohde: 'firenze',
+    maa: 'Italia',
+    hahmo: 'Ilaria',
+    kansio: '20260922',
+    tiedosto: 'kasvo-firenze-ilaria.jpg',
+    tila: 'tarkistettu',
+    kaytto: 'tavallinen',
+    alt: 'Kultaseppä Ilaria katsoo suoraan pelaajaan pihdit kädessään Ponte Vecchion vanhassa puuverstaassa.',
+    lyhyt: 'Ilaria keskeyttää kultalangan työstämisen Arnon yllä.',
+    kuvateksti: 'Ilaria nosti kullan pois liekiltä juuri ennen kuin pelaaja puhui. Arnon valo osuu vanhaan puuverstaaseen.',
+    hetki: 'Pihdit jäävät työpöydän ylle, kun Ilaria kääntyy pelaajaan päin uteliaan ja puoliksi huvittuneen näköisenä.',
+    vihje: 'Nykyaikaiset työvälineet ja vuosisatoja vanhan puukojun ikkunaluukku muodostavat kaksi aikakerrosta ilman aarrevihjettä.',
+  },
+  {
+    id: 'kobenhavn-sofie-c2',
+    kaupunki: 'Kööpenhamina',
+    kohde: 'kobenhavn',
+    maa: 'Tanska',
+    hahmo: 'Sofie',
+    kansio: '20260922',
+    tiedosto: 'kasvo-kobenhavn-sofie.jpg',
+    tila: 'tarkistettu',
+    kaytto: 'tavallinen',
+    alt: 'Pyörämekaanikko Sofie katsoo suoraan pelaajaan jakoavain lastipyörän etuakselilla Christianshavnin kanavan korjaamolla.',
+    lyhyt: 'Sofie keskeyttää lastipyörän etuakselin kiristämisen.',
+    kuvateksti: 'Sofie jätti jakoavaimen hetkeksi lastipyörän etuakselille ja kohotti katseensa pelaajaan.',
+    hetki: 'Rasvaiset kädet jäävät pyörän etuakselille, kun yllättyneen huvittunut puolihymy kääntyy kohti pelaajaa.',
+    vihje: 'Nykyinen lastipyörä ja työpajan vanha korkeapyöräkuva yhdistävät kaksi aikakerrosta paljastamatta aarteen paikkaa.',
+  },
 
 ];
 
