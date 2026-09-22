@@ -135,6 +135,7 @@ export const HAHMOTELMA_RUS = [
     ],
     nimi: 'Peterhof',
     tyyppi: 'historia',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Miksi Peterhofia kutsutaan "Venäjän Versailles\'ksi"?',
