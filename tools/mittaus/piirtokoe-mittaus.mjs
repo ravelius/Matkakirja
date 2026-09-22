@@ -64,6 +64,7 @@ const HARNESSI = `
       if (n) n.click();
       poistaVerho();
     }, 150);
+    const koe = new URLSearchParams(location.search).get('koe') ?? '';
     odota(() => Boolean(window.matkakirja?.ui?.pallolauta && window.__kehysprofiili))
       .then(() => new Promise((r) => setTimeout(r, 2500)))
       .then(() => window.matkakirja.ui.pallolauta.saavu?.({ kesto: 0 }))
@@ -73,7 +74,6 @@ const HARNESSI = `
       .then(() => { clearInterval(ohitusAjastin); poistaVerho(); })
       .then(() => new Promise((r) => setTimeout(r, 2000)))
       .then(async () => {
-        const koe = new URLSearchParams(location.search).get('koe') ?? '';
         kirjoita('vedetään ' + ${KESTO} + ' ms...');
         const v = await window.__kehysprofiili.veto({ kesto: ${KESTO}, nopeusPx: 80, suunta: [1, 0.3], pointerType: 'mouse' });
         const kehykset = v.kehykset ?? [];
@@ -93,7 +93,10 @@ const HARNESSI = `
         kirjoita('valmis:\\n' + JSON.stringify(tulos, null, 1));
         laheta({ aika: new Date().toISOString(), ...tulos });
       })
-      .catch((e) => kirjoita('Virhe: ' + e.message));
+      .catch((e) => {
+        kirjoita('Virhe: ' + e.message);
+        laheta({ aika: new Date().toISOString(), koe, virhe: e.message, virhePino: String(e.stack ?? '') });
+      });
   }
 </script>`;
 
