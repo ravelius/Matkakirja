@@ -905,9 +905,14 @@ const MODULES = [
    * rivin yllä.
    */
   /*
+   * Peukalolevy (js/karttaselite-levy.js) ennen karttaselitettä, joka
+   * tuo sen (22.9.2026: valikon uusi liukukahva, ks. Raamattu).
+   */
+  'js/karttaselite-levy.js',
+  /*
    * Karttaselitevalikko ennen ui:ta (ui tuo sen käynnistys- ja
    * päivityskutsun). Se tuo valojen koneiston, symbolikirjaston,
-   * mapartin ja ui-apurit — kaikki jo yllä.
+   * mapartin, ui-apurit ja peukalolevyn — kaikki jo yllä.
    */
   'js/karttaselite.js',
   'js/vakasikoni.js',

@@ -107,6 +107,7 @@ const SHELL = [
   './js/packs/elaintakyt.js',
   './js/fokusnosto-symbolit.js',
   './js/karttavalot.js',
+  './js/karttaselite-levy.js',
   './js/karttaselite.js',
   './js/vakasikoni.js',
   './js/ylapalkki-vaaka.js',

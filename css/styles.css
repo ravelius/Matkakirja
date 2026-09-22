@@ -25811,6 +25811,16 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
 }
 
 .karttaselite-levy.auki {
+  /*
+   * PANEELI PEITTÄÄ AVAUSNAPIN (omistajan päätös 22.9.2026): auki
+   * levy alkaa täsmälleen kotelon yläreunasta eli napin omasta
+   * yläreunasta, `top: calc(100% + …)` sijaan. Nappi jää sen alle —
+   * sulku hoidetaan levyn omalla ✕-napilla, kartan napautuksella tai
+   * Escapella, joten napin ei tarvitse olla tavoitettavissa sillä
+   * välin (sama poikkeus kuin ylapalkki-vaaka.js:n ja tämän napin
+   * välillä, css/styles.css `body.ylapalkki-auki .karttaselite`).
+   */
+  top: 0;
   transform: none;
   opacity: 1;
   visibility: visible;
@@ -25831,41 +25841,73 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
   border-bottom: 1px solid rgba(70, 51, 31, 0.18);
 }
 
-.karttaselite-otsikko {
+/*
+ * VÄLILEHDET "NOSTOT | MAAKUNNAT" (omistajan päätös 22.9.2026)
+ * korvasivat vanhan otsikkorivin. Nostot on nykyinen selitelista;
+ * Maakunnat rakennetaan js/karttatyokalu-maakunnat.js:stä
+ * (js/karttaselite.js asetaMaakunnat) — tämä tiedosto tietää vain,
+ * että molemmat ovat samaa nappiperhettä kuin muut selitteen napit.
+ */
+.karttaselite-valilehdet {
+  display: flex;
   flex: 1 1 auto;
-  color: rgba(70, 51, 31, 0.92);
-  font-family: var(--font-type);
-  font-size: 0.72rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  gap: 0.25rem;
 }
 
-.karttaselite-kaikki {
+.karttaselite-valilehti {
   min-height: 0;
-  padding: 0.2rem 0.45rem;
-  border: 1px solid rgba(70, 51, 31, 0.3);
+  padding: 0.2rem 0.5rem;
+  border: 1px solid transparent;
   border-radius: 5px;
-  background: rgba(255, 252, 242, 0.7);
-  color: rgba(70, 51, 31, 0.85);
+  background: none;
+  color: rgba(70, 51, 31, 0.7);
   font-family: var(--font-type);
-  font-size: 0.66rem;
-  letter-spacing: 0.1em;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   cursor: pointer;
 }
 
-.karttaselite-kaikki:hover:not(:disabled) {
-  background: rgba(255, 252, 242, 1);
+.karttaselite-valilehti:hover:not(:disabled) {
+  background: rgba(255, 252, 242, 0.7);
+  color: rgba(70, 51, 31, 0.92);
+}
+
+.karttaselite-valilehti[aria-selected='true'] {
+  border-color: rgba(70, 51, 31, 0.3);
+  background: rgba(255, 252, 242, 0.85);
+  color: rgba(70, 51, 31, 0.96);
+}
+
+/* Sulkuristi (omistajan päätös 22.9.2026: paneeli peittää nyt
+   avausnapin, joten napin täytyy saada oma sulkijansa levyn sisään). */
+.karttaselite-sulje {
+  min-width: 0;
+  min-height: 0;
+  padding: 0.15rem 0.4rem;
+  border: 0;
+  background: none;
+  color: rgba(70, 51, 31, 0.7);
+  font-size: 0.85rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.karttaselite-sulje:hover:not(:disabled) {
   color: rgba(70, 51, 31, 1);
 }
 
+.karttaselite-paneeli-maakunnat { padding-top: 0.2rem; }
+
 .karttaselite-lista {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding-top: 0.2rem;
 }
 
-/* Neljä saraketta: pallo, symboli, selite, luku. Selite venyy, joten
-   luku asettuu joka rivillä samaan kohtaan oikeaan laitaan. */
+/* Neljä saraketta: pallo, tyyppimerkki, selite, luku. Selite venyy,
+   joten luku asettuu joka rivillä samaan kohtaan oikeaan laitaan. */
 .karttaselite-rivi {
   display: grid;
   grid-template-columns: auto auto 1fr auto;
@@ -25935,6 +25977,26 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
   display: block;
 }
 
+/*
+ * TYYPPIMERKKI (omistajan päätös 22.9.2026): sama Codexin kuvamerkki
+ * kuin kartalla (assets/nostotyypit/merkki-*.png). Kotelo pitää yhden
+ * tai useamman merkin vierekkäin (Kulttuuri ja ruoka, Kauppa ja
+ * tekniikka) samalla leveydellä kuin ennen kaiverrettu symboli, jotta
+ * pallo-sarake ei hyppää rivien välillä.
+ */
+.karttaselite-merkki {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  min-width: 1.35rem;
+}
+
+.karttaselite-kuvamerkki {
+  display: block;
+  height: 1.05rem;
+  width: auto;
+}
+
 .karttaselite-nimi { line-height: 1.25; }
 
 /* Kappalemäärä (omistajan lisätilaus 29.8.2026): montako tämän aiheen
@@ -25958,6 +26020,53 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
   color: rgba(70, 51, 31, 0.62);
   font-size: 0.7rem;
   line-height: 1.35;
+}
+
+/*
+ * PEUKALOLEVY (js/karttaselite-levy.js) — pystysuuntainen liukukahva,
+ * joka napsahtaa aina valitun rivin kohdalle (omistajan päätös
+ * 22.9.2026: monivalinta pois, valinta on aina yksi rivi).
+ *
+ * LEVY ISTUU RIVIEN LUVUN PÄÄLLE EIKÄ NIIDEN VIERELLE (omistajan
+ * täsmennys): tausta on vaalea ja läpinäkyvä, jotta lukumäärä näkyy
+ * levyn ALTA. `.karttaselite-lista` on tämän containing block
+ * (position: relative), ja pystysijainti on JS:n oma `transform:
+ * translateY(...)` — se lasketaan vain avatessa ja valinnan
+ * vaihtuessa, ei kehyksittäin.
+ */
+.karttaselite-peukalolevy {
+  position: absolute;
+  top: 0;
+  right: 0.2rem;
+  width: 2.6rem;
+  border: 1px solid rgba(70, 51, 31, 0.45);
+  border-radius: 7px;
+  background: rgba(245, 240, 225, 0.55);
+  box-shadow: 0 1px 2px rgba(20, 14, 6, 0.2);
+  cursor: grab;
+  touch-action: none;
+  transition: transform 120ms ease;
+  z-index: 1;
+}
+
+.karttaselite-peukalolevy:active { cursor: grabbing; }
+
+/* Raahauksen ajaksi siirtymä pois, jotta levy ei jää jälkeen sormesta. */
+.karttaselite-peukalolevy.ei-siirtyma { transition: none; }
+
+/* Ohut "urite" keskelle — kaksi vaakaviivaa, mekaanisen näköinen kahva. */
+.karttaselite-peukalolevy-urite {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 1.1rem;
+  height: 0;
+  border-top: 2px solid rgba(70, 51, 31, 0.5);
+  box-shadow: 0 5px 0 rgba(70, 51, 31, 0.5);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .karttaselite-peukalolevy { transition: none; }
 }
 
 /* ==================== KARTTAPALLO (js/pallo.js) ==================== */
