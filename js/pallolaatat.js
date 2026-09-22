@@ -1003,7 +1003,12 @@ export const LAATTAKERROS_TEKSTUUREJA_PER_KEHYS = 2;
  * VEDON_VIENTIVALI_MS:n välein (≤ 20/s). Jo alueelta pois liukuneet laatat odottavat
  * lepoa, jolloin jono valuu entiseen tahtiin (2/kehys) — mitään ei
  * hukata, ja häive toimii kuten ennen. Aikaväli eikä kehysmäärä, koska rAF voi käydä 60 tai
- * 120 Hz:llä. `?koe=vientivanha` palauttaa vanhan vientitahdin vertailuun.
+ * 120 Hz:llä.
+ *
+ * VAIN KOKEENA (`?koe=vientibudjetti`): omistaja 22.9.2026 klo 23.45 —
+ * "Ei tekstuurivientejä tökkii yhtä pahasti. Ei vaihdeta siihen." Nähty
+ * nykiminen ei ole kehysaikaa, joten oletus pysyy entisenä (2/kehys myös
+ * liikkeessä).
  */
 export const LAATTAKERROS_VEDON_VIENTIVALI_MS = 50;
 /*
@@ -3631,7 +3636,7 @@ export function luoLaattakerros({
      * käynnissä — uusi laatta tai seuraava päivitys (suorita) kutsuu
      * ajaVientiä, ja lepo valuttaa loput.
      */
-    const budjetti = liikkeessaViimeksi && !kokeet.has('vientivanha');
+    const budjetti = liikkeessaViimeksi && kokeet.has('vientibudjetti');
     if (budjetti && vedonVientiehdokas() < 0) {
       mittarit.vientejaOdottaa = vientijono.length;
       return;
@@ -3640,7 +3645,7 @@ export function luoLaattakerros({
       vientiRaf = 0;
       // Vienti (initTexture 3–7 ms) väistää pitkää kehystä liikkeessä kuten valmistelu.
       if (kehysVaisto(kehysAlku, vientiKehys, 'vientiVaistoja')) { ajaVienti(); return; }
-      if (liikkeessaViimeksi && !kokeet.has('vientivanha')) {
+      if (liikkeessaViimeksi && kokeet.has('vientibudjetti')) {
         const nytT = Number.isFinite(kehysAlku) ? kehysAlku : aika();
         const i = vedonVientiehdokas();
         if (i < 0) { mittarit.vientejaOdottaa = vientijono.length; return; }

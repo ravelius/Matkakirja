@@ -713,7 +713,7 @@
       "env": {
         "SAVUKE_MOOTTORI": "webkit"
       },
-      "huomautus": "Laattojen vienti vedon aikana budjetilla (omistajan iPad-kierros v2135/v2136 23.9.2026: eivienti pudotti >20 ms kehykset 25 % -> 8 %). Liikkeessa 1 vienti/kehys vain nakyvalle laatalle, ennakko 50 ms valein; levossa 2/kehys. Sama synteettinen veto 3 x 1,5 s, 500 px/s, Ranska alt 0,35, vain liikkeen kehykset: B0 esiehto vastakokeessa >= 10 vientia, B1 vastakoe ?koe=vientivanha vie kaksi samassa kehyksessa, B2 budjetilla <= 1/kehys, B3 ennakkoja <= 21/s (kerroksen laskuri vedonEnnakkoja), B4 pohja (dc > 200) <= 15 % kehyksista, B5 levossa jono tyhja ja nakyvat taysin scenessa, B6 ei sivuvirheita. WebKit 7/7 useita kertoja; budjetti 37-43 vientia vs vanha 196-199; vanhalla koodilla B2 FAIL. Vanha tahti: pohja piirrossa 52-82 % vetokehyksista (haive kesken) = omistajan dc 431."
+      "huomautus": "KOE ?koe=vientibudjetti (omistaja 22.9.2026 klo 23.45: ei oletukseksi). Laattojen vienti vedon aikana budjetilla (omistajan iPad-kierros v2135/v2136 23.9.2026: eivienti pudotti >20 ms kehykset 25 % -> 8 %). Liikkeessa 1 vienti/kehys vain nakyvalle laatalle, ennakko 50 ms valein; levossa 2/kehys. Sama synteettinen veto 3 x 1,5 s, 500 px/s, Ranska alt 0,35, vain liikkeen kehykset: B0 esiehto vastakokeessa >= 10 vientia, B1 vastakoe oletus vie kaksi samassa kehyksessa, B2 budjetilla <= 1/kehys, B3 ennakkoja <= 21/s (kerroksen laskuri vedonEnnakkoja), B4 pohja (dc > 200) <= 15 % kehyksista, B5 levossa jono tyhja ja nakyvat taysin scenessa, B6 ei sivuvirheita. WebKit 7/7 useita kertoja; budjetti 37-43 vientia vs vanha 196-199; vanhalla koodilla B2 FAIL. Vanha tahti: pohja piirrossa 52-82 % vetokehyksista (haive kesken) = omistajan dc 431."
     }
   }
 }
