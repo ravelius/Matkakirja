@@ -1067,3 +1067,7 @@ Pelikoodari 22.9.2026 klo 16.50: kerma laatan shaderissa (v2084, #2754) ei kää
 ## KERMA-SHADERIN KORJAUS TUOTANNOSSA v2094 (#2776) + VARTIJA savuke-laattaohjelmat.mjs (22.9.2026 klo 11.59)
 
 Julkaisija 22.9.2026 klo 17.05: #2774 → #2776 mergetty, v2094 (main eefab0ce0), testit 3897/0. Vartija savuke-laattaohjelmat.mjs julkaisusarjassa (WebKit + Chromium): LINK_STATUS kaikille ohjelmille + kääntäjän loki, laattakerroksen pikseli ilman pohjaa (readPixels 3×3), kerros pohjan päällä — vanhalla shaderilla punainen, korjatulla vihreä. Tuotanto oli rikki v2084–v2093 (noin 6 h): laattakerros ei piirtynyt. Jono jatkuu: Codex C3-kuvat #2775 → v2095.
+
+## ERAN 1 PR:T #2778 (SYOTE KERRAN KEHYKSESSA, KAMERALOKI, CHANGE-KUUNTELIJAT) JA #2779 (ILMAKEHA, POHJA PIILOON, KERMA ILMAN POW) JULKAISIJALLE (22.9.2026 klo 12.07)
+
+Pelikoodari 22.9.2026 klo 17.15: #2778 = katsauksen kohdat 13–15 (ohjaimet.update-kääre soveltaa sormen paikan kerran kehyksessä, timeStamp-nopeus liukuun; kameralokin pino vain kehittäjätilassa; maapaneelin change-kirjoitus pois; kotelon mitat eleen alussa) — headless sisäinen px/ms-vaihtelu 35 → 30 %, CDP ei eroa (M4 Max pääsäie < 1 ms), ero odotetaan laitteella. #2779 = kohdat 1–3 (ilmakehä pois lähikuvassa, kirjaston pohja piiloon kun kerros peittää, kerma ilman pow-pareja): drawcallit 84 → 66, render 0,80 → 0,55 ms, kuvaero 0,00 % pohja / 2,3 px 765:stä kerma. Paluuliput syotevanha, ilmakehavanha, pohjavanha, kermapow. Seuraavaksi 7 compileAsync, 17 Livia ja pöllö lepoon, sitten asetus Tarkkuus liikkeessä.
