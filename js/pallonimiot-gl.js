@@ -476,13 +476,68 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
     const renderer = pallo?.renderer?.();
     if (sivu.viety && !atlasKoko && typeof renderer?.copyTextureToTexture === 'function') {
       try {
-        const lahde = new L.Texture(rasteri.kuva);
-        lahde.flipY = false;
+        /*
+         * LÄHTEENÄ ATLASKANGAS, EI RASTERIN OMA KUVA (Pelikoodari
+         * 22.9.2026). Kun lähde oli rasterin oma kangas, osittain
+         * päivitetty läpinäkyvä pikseli piirtyi LIIAN KIRKKAANA:
+         * mitattu kohdemerkin kultalevy rgba(246,210,122,0.72)
+         * pohjalla (144,116,90) — koko kankaan viennillä ja CSS2D:llä
+         * (212,182,117), osapäivityksellä (246,237,148). Kun lähde on
+         * SAMA kangas, josta koko sivun vientikin tulee, molemmat polut
+         * vievät tavulleen samat pikselit samoilla asetuksilla eikä
+         * eroa voi syntyä. Alue annetaan srcRegionina (ankka-Box2:
+         * three lukee vain min/max).
+         */
+        /*
+         * EI `needsUpdate`iä LÄHTEELLE (Karttasepän katselmushuomio
+         * 22.9.2026 ja sen mittaus). Välimuistitettu lähdetekstuuri
+         * voisi periaatteessa jäädä ensimmäiseen kuvaan. Näin ei käy:
+         * three ei lataa lähdettä GPU-tekstuurina lainkaan, vaan lukee
+         * `srcTexture.image`in — eli ELÄVÄN kankaan — ja vie sen
+         * suoraan texSubImage2D:llä. Mitattu kahdella peräkkäisellä
+         * osapäivityksellä eri väreillä: molemmat oikein (ero 0),
+         * eikä ensimmäinen turmellu (vartija savuke-glnimiot
+         * "osapäivityksen lähde on tuore").
+         *
+         * `needsUpdate = true` olisi tässä paitsi turha myös riski:
+         * jos three joskus SITOO lähteen, lippu laukaisisi koko
+         * 2048²-kankaan latauksen joka rasterilla — juuri sen kulun,
+         * jonka osapäivitys poistaa (kohta 8).
+         */
+        if (!sivu.lahdetekstuuri) {
+          sivu.lahdetekstuuri = new L.Texture(sivu.kangas);
+          sivu.lahdetekstuuri.flipY = false;
+          sivu.lahdetekstuuri.premultiplyAlpha = true;
+        }
+        const lahde = sivu.lahdetekstuuri;
+        const alue = {
+          min: { x: paikka.x, y: paikka.y },
+          max: { x: paikka.x + rasteri.w, y: paikka.y + rasteri.h },
+        };
         const kohta = { x: paikka.x, y: paikka.y, z: 0 };
-        // three ≥ r165: (src, dst, srcRegion, dstPosition); vanhempi: (position, src, dst).
-        if (renderer.copyTextureToTexture.length >= 3) renderer.copyTextureToTexture(kohta, lahde, sivu.tekstuuri);
-        else renderer.copyTextureToTexture(lahde, sivu.tekstuuri, null, kohta);
-        mittarit.atlasOsapaivityksia = (mittarit.atlasOsapaivityksia ?? 0) + 1;
+        /*
+         * ALUE ON PAKOLLINEN, KOSKA LÄHDE ON KOKO ATLASKANGAS
+         * (Karttasepän katselmushuomio 22.9.2026, voimaan jäänyt kohta).
+         * three laskee kopioitavan koon srcRegionista; jos alue on
+         * null, koko on lähteen koko eli KOKO ATLAS, ja se kopioituisi
+         * siirtymään. Vanha allekirjoitus (position, src, dst) ei ota
+         * aluetta lainkaan, joten sillä ei voi tehdä rajattua kopiota
+         * nyt kun lähde on kangas eikä yksittäinen rasteri.
+         *
+         * Siksi vanhalla allekirjoituksella EI tehdä osapäivitystä
+         * lainkaan, vaan jäädään koko sivun vientiin: hitaampi mutta
+         * oikea. Nidotulla kirjastolla (globe.gl 2.46.2) haara on
+         * kuollut — `copyTextureToTexture.length === 2`, koska
+         * oletusarvolliset parametrit eivät lasketa mukaan — mutta
+         * kirjaston vaihtuessa tämä ei hiljaa turmele atlasta.
+         */
+        if (renderer.copyTextureToTexture.length >= 3) {
+          sivu.likainen = true;
+          mittarit.atlasVanhaAllekirjoitus = (mittarit.atlasVanhaAllekirjoitus ?? 0) + 1;
+        } else {
+          renderer.copyTextureToTexture(lahde, sivu.tekstuuri, alue, kohta);
+          mittarit.atlasOsapaivityksia = (mittarit.atlasOsapaivityksia ?? 0) + 1;
+        }
         pallo?.__piirto?.tarvitaan();
       } catch (virhe) {
         sivu.likainen = true;
