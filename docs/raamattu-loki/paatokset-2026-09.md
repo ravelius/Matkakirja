@@ -1343,3 +1343,7 @@ Julkaisija 22.9.2026 klo 18.20: #2821 → #2822 → v2115 (main 8930f517), Mac-s
 ## POLTTO 2026-09-22c VALMIS KLO 18.19 (62 min): 117 288 LAATTAA, EHEYS OK, AMPARISSA; VEDOS: VESIVIIVAT SEURAAVAT RANTAA KAIKILLA TASOILLA; OSOITIN-PR JA TASONVAIHTOMITTAUS SEURAAVAKSI (22.9.2026 klo 18.20)
 
 Karttaseppä 22.9.2026 klo 18.19: vaihe 1 114/114 shardia 53 min, vaihe 2 397/397 60 min, 0 kaatunutta; eheystarkistus täsmää kaikilla tasoilla; ämpärissä julisteet/pyramidi/2026-09-22c-pohja/ ja julisteet/pallo/laatat/2026-09-22c-pohja-20260922c/ + laatat.json; luettelo odottaa vientikansiossa. Vedos: vanhassa viivasto levittäytyy joka tasolla eri kauas, uudessa sama vyö seuraa rantaa, karkealla tasolla harvempana; avomerellä ei eroa. CI-tauko päättyi. Seuraavaksi: osoitin-PR (PALLO_LAATTAVERSIO 2026-09-22c-pohja, tunniste 20260922c) → versio → luettelo ämpäriin → tasonvaihtomittaus (vertailu rannikko A−B 5,68 / 0,60; avomeri 2,24 / 0,82).
+
+## OSOITIN-PR #2824 (pallo.js + sw.js → 2026-09-22c) JULKAISIJALLE; VEDOKSET poltto-22c-rannikko/avomeri NAYTETTY OMISTAJALLE (22.9.2026 klo 18.25)
+
+Karttaseppä 22.9.2026 klo 18.25: PR #2824 PALLO_LAATTAVERSIO → 2026-09-22c-pohja, PALLO_LAATTATUNNISTE → 20260922c, sw.js LAATTAKANSIO/LAATTAKANSIO_SYVA (tahallinen kaksoiskappale, tests/sw vartioi), testit 3928/0; vedokset docs/raportit/kuvat/poltto-22c-rannikko-z5-z8.jpg ja -avomeri (ylärivi vanha, alarivi uusi). Fable näytti omistajalle; Julkaisija mergeää omana versiona, sitten luettelo ämpäriin ja tasonvaihtomittaus.
