@@ -11,9 +11,9 @@
  *      on lämmin ja näkyvissä; keskipäivällä sävy on pois.
  *   3. Pulu: lennätys onnistuu levossa, elementti on lennossa ja
  *      transform muuttuu; lento päättyy PULUN_LENTO_MS:n jälkeen.
- *   4. Kortti auki (nosto-popup-auki): lauta ei ole levossa, pilvi
- *      pysähtyy (animation-play-state paused) eikä pulu lähde.
- *   5. Kytkin pois (asetaLiike(false)): kerros ei ole päällä, pilvi ja
+ *   4. Kortti auki (nosto-popup-auki): lauta ei ole levossa eikä pulu
+ *      lähde.
+ *   5. Kytkin pois (asetaLiike(false)): kerros ei ole päällä ja
  *      sävy pois.
  *   6. Suorituskyky 390: kehysnopeus liikkeen kanssa ≥ 95 % ilman.
  *   7. Ei sivuvirheitä.
@@ -145,17 +145,20 @@ for (const ruutu of RUUDUT) {
     const l = window.matkakirja.ui.pallolauta;
     const liike = l.liike?.();
     const kerros = l.kotelo.querySelector('.pallolauta-liike');
+    // Pilven varjo poistettu (omistaja 22.9.2026): kerroksessa ei saa olla
+    // koko kartan korkuista sekoituskerrosta pulun ja sävyn lisäksi.
     const pilvi = kerros?.querySelector('.pallolauta-liike-pilvi');
     const savy = kerros?.querySelector('.pallolauta-liike-savy');
     const pulu = kerros?.querySelector('.pallolauta-liike-pulu');
     const cs = (el) => (el ? getComputedStyle(el) : null);
+    const varjoja = kerros ? [...kerros.children].filter((el) => el !== savy && cs(el).mixBlendMode !== 'normal').length : 0;
     return {
       kerros: Boolean(kerros),
+      pilvi: Boolean(pilvi),
+      varjoja,
       luokat: kerros ? [...kerros.classList] : [],
       tila: liike?.tila?.() ?? null,
       levossa: liike?.levossa?.() ?? null,
-      pilviTila: cs(pilvi)?.animationPlayState ?? null,
-      pilviPeitto: Number(cs(pilvi)?.opacity ?? -1),
       savyPeitto: Number(cs(savy)?.opacity ?? -1),
       savyAika: savy?.dataset.aika ?? null,
       puluLennossa: Boolean(pulu?.classList.contains('lennossa')),
@@ -168,9 +171,10 @@ for (const ruutu of RUUDUT) {
   const alku = await lueTila();
   tieto(`${ruutu.nimi} · alku`, JSON.stringify(alku));
   vaadi(`${ruutu.nimi} · 1. Kerros laudalla, liike päällä ja lauta levossa`,
-    alku.kerros && alku.tila?.paalla && alku.levossa === true && alku.luokat.includes('levossa')
-      && alku.pilviTila === 'running' && alku.pilviPeitto > 0 && alku.pilviPeitto <= 0.08,
+    alku.kerros && alku.tila?.paalla && alku.levossa === true && alku.luokat.includes('levossa'),
     JSON.stringify(alku));
+  vaadi(`${ruutu.nimi} · 1b. Ei pilven varjoa: kerroksessa ei koko kartan korkuista sekoituskerrosta (omistaja 22.9.2026)`,
+    alku.pilvi === false && alku.varjoja === 0, JSON.stringify({ pilvi: alku.pilvi, varjoja: alku.varjoja }));
 
   /* ── 2. illan sävy ───────────────────────────────────────────────── */
   const asetaAika = (tunti) => sivu.evaluate(async (t) => {
@@ -231,10 +235,10 @@ for (const ruutu of RUUDUT) {
   await sivu.evaluate(() => document.body.classList.remove('nosto-popup-auki'));
   await sivu.waitForTimeout(2300);
   const takaisin = await lueTila();
-  vaadi(`${ruutu.nimi} · 4. Kortti auki: ei levossa, pilvi pysähtyy, pulu ei lähde; kortin jälkeen lepo palaa`,
-    kortti.levossa === false && !kortti.luokat.includes('levossa') && kortti.pilviTila === 'paused'
-      && lahtiKortilla === false && takaisin.levossa === true && takaisin.pilviTila === 'running',
-    JSON.stringify({ kortti: [kortti.levossa, kortti.pilviTila, lahtiKortilla], takaisin: [takaisin.levossa, takaisin.pilviTila] }));
+  vaadi(`${ruutu.nimi} · 4. Kortti auki: ei levossa, pulu ei lähde; kortin jälkeen lepo palaa`,
+    kortti.levossa === false && !kortti.luokat.includes('levossa')
+      && lahtiKortilla === false && takaisin.levossa === true,
+    JSON.stringify({ kortti: [kortti.levossa, lahtiKortilla], takaisin: [takaisin.levossa] }));
 
   /* ── 5. kytkin pois, 6. suorituskyky ─────────────────────────────── */
   /*
@@ -276,9 +280,8 @@ for (const ruutu of RUUDUT) {
   }
   await sivu.waitForTimeout(1600);
   const pois = await lueTila();
-  vaadi(`${ruutu.nimi} · 5. Kytkin pois: kerros ei päällä, pilvi ja sävy pois`,
-    pois.tila?.paalla === false && !pois.luokat.includes('paalla') && pois.pilviTila === 'paused'
-      && pois.pilviPeitto === 0 && pois.savyPeitto === 0,
+  vaadi(`${ruutu.nimi} · 5. Kytkin pois: kerros ei päällä, sävy pois`,
+    pois.tila?.paalla === false && !pois.luokat.includes('paalla') && pois.savyPeitto === 0,
     JSON.stringify(pois));
   const vPaalla = mediaani(valitPaalla);
   const vPois = mediaani(valitPois);
