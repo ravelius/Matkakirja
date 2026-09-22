@@ -4712,12 +4712,16 @@ export async function avaaPallolauta(ui) {
   // Zoomi muuttaa kaupunkipisteen säteen heti, ei vasta levossa.
   ohjaimet.addEventListener('change', tahdistaPisteidenKoko);
   /*
-   * Maapaneeli skaalautuu kuin painettu kartta, joten sen mittakaava
-   * on zoomin asia eikä ladonnan: se kirjoitetaan samalla
-   * kamera-tapahtumalla kuin kaupunkipisteen säde, ei vasta levossa
-   * (muuten paneeli hyppäisi kokoonsa vasta eleen päätyttyä).
+   * MAAPANEELIA EI KIRJOITETA KAMERAN TAHDISSA (sulavuuskatsaus
+   * 22.9.2026 kohta 15). Aiemmin ohjainten `change` ajoi joka kehys
+   * `maapaneeli.tahdistaKoko()` → `kirjoita()` (rect-luku, kaksi CSS-
+   * muuttujaa, kortin täyttö, Liikun pohjan mittaus rAF:eineen ja
+   * ajastimineen), vaikka kamera ei vaikuta paneelin kokoon eikä
+   * paikkaan lainkaan (PÄÄTÖKSET 28, TARKENNUS 2: typografia on
+   * ruutupikseleitä). Paneeli kirjoitetaan nyt vain, kun sen sisältö
+   * tai ruutu muuttuu: `paivita` pelin tilasta ja `tahdistaZoomirajat`
+   * (ResizeObserver → mitoita) ruudun koosta.
    */
-  ohjaimet.addEventListener('change', () => maapaneeli.tahdistaKoko());
   // Aihevalot: selitteen väripallo vaihtaa bodyn luokan.
   let valoAvain = '';
   const valovahti = new MutationObserver(() => {
