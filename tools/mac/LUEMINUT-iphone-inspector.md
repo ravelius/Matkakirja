@@ -14,4 +14,4 @@ ja matkakirja.app Safarissa etualalla. Safari 26.6 ei näe iOS 27 -laitetta.
    "Stop recording once page loads" (1426,272), Enabled Timelines -kynä (963,298).
 4. Kytke Screenshots-aikajana pois ennen nauhoitusta: kuvakaappaukset
    kuormittavat puhelinta niin, että nykiminen on tavallista pahempi.
-5. Avoin: Export-nappi jää harmaaksi eikä tallennusikkunaa tule (Laitetestaaja selvittää).
+5. Avoin: nauhoituksen pysäytys jää pyörimään (spinner Events-napin vieressä) eikä Export aktivoidu — todennäköisesti puhelin nukahtaa tai WebContent ei lähetä loppua; Laitetestaaja selvittää (lyhyempi nauhoitus, puhelin auki koko ajan).
