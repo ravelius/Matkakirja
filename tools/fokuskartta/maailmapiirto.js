@@ -611,8 +611,42 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
      * px/yksikkö), joten z7 näyttää samalta kuin ennen.
      */
     syvyysKohinaLaudalla = false,
+    /*
+     * PAPERIN HIENO RAE RUUDULLE, EI LAATTAAN (omistaja 22.9.2026 klo
+     * 15.55, vaihtoehto b).
+     *
+     * Kuitu ja rae on mitoitettu paperipikseleinä (`P`), ja pyramidissa
+     * `paperiS: 1` tekee niistä joka tasolla saman kokoisia — mutta myös
+     * joka tasolla ERI KUVION samassa maantieteellisessä kohdassa. Kun
+     * peli häivyttää tason toiseksi, kaksi korreloimatonta rakeisuutta
+     * sekoittuu ja meri näyttää likaiselta. Mitattu 22.9.2026: saman
+     * maa-alan korkeataajuinen kuvio korreloi z5:n ja z6:n välillä 0,14,
+     * kun meren sävy korreloi 0,96
+     * (docs/raportit/merikuviot-tasoissa-20260922.md).
+     *
+     * Kohinakenttä ei voi olla yhtä aikaa maailmaan sidottu JA ruudulla
+     * samankokoinen. Isoille laikuille valittiin maailma (ne saavat
+     * kasvaa), hienolle rakeelle ruutu: se poistetaan laatasta ja peli
+     * piirtää sen ruutuavaruuden kerroksena, jolloin paperintuntu on
+     * vakio eikä välky lainkaan. Tämä lippu poistaa kuidun ja rakeen
+     * laatasta; laikku jää ja siirtyy laudan yksiköihin.
+     */
+    paperiRaeRuudulla = false,
   } = asetukset;
   const SYVYYSKOHINA_YKSIKOT = 30 / 7.2;
+  /*
+   * Laikun mitta laudan yksiköissä. 260 px / 7,2 px/yksikkö on sama
+   * viitetaso kuin syvyyskohinalla: z7 näyttää samalta kuin ennen ja
+   * muut tasot sovittautuvat siihen.
+   */
+  const LAIKKU_YKSIKOT = 260 / 7.2;
+  /*
+   * Laikku seuraa samaa kytkintä kuin meren vyöhykekohina: kumpikin on
+   * sama päätös — matalan taajuuden kuvio kuuluu maailmalle, ei
+   * paperille. Pyramidi ajaa `--syvyyskohina lauta`, yksittäinen
+   * koelehti ei anna sitä eikä silloin muutu mikään.
+   */
+  const laikkuLaudalla = syvyysKohinaLaudalla;
   const portaat = Array.isArray(syvyysPortaat) && syvyysPortaat.length
     ? [...syvyysPortaat].map(Number).filter((v) => v > 0).sort((a, b) => a - b) : null;
   const kayrat = Array.isArray(syvyysKayrat) && syvyysKayrat.length
@@ -1090,9 +1124,13 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
         const i = (y * W + x) * 4;
         const gx = x + GX;
         // --- paperi: kuitujuovat, rae ja laikut ---
-        const kuitu = fbm(KOHINA, gx / (52 * P), gy / (7 * P), 3) - 0.5;
-        const rae = KOHINA2(gx / (1.7 * P), gy / (1.7 * P)) - 0.5;
-        const laikka = fbm(KOHINA2, gx / (260 * P), gy / (260 * P), 3) - 0.5;
+        const kuitu = paperiRaeRuudulla ? 0 : fbm(KOHINA, gx / (52 * P), gy / (7 * P), 3) - 0.5;
+        const rae = paperiRaeRuudulla ? 0 : KOHINA2(gx / (1.7 * P), gy / (1.7 * P)) - 0.5;
+        /* Laikku on maailman mitta (ks. paperiRaeRuudulla): sama
+         * maailmankohta saa saman laikun joka tasolla. */
+        const laikka = laikkuLaudalla
+          ? fbm(KOHINA2, (origo.x + gx / px) / LAIKKU_YKSIKOT, (origo.y + gy / px) / LAIKKU_YKSIKOT, 3) - 0.5
+          : fbm(KOHINA2, gx / (260 * P), gy / (260 * P), 3) - 0.5;
         const v = kuitu * 9 + rae * 11 + laikka * 16;
         if (marginaalissa) {
           const s = (1 - reuna) * 15;
