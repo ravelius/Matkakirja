@@ -1439,3 +1439,7 @@ Fable 22.9.2026 klo 20.15: luovutus kirjoitettu, aloitusviesti päivitetty; Post
 ## FABLE NOLLATTU JA JATKAA LUOVUTUKSESTA; PIIRTOKOE-PR ODOTTAA PELIKOODARIA, v2124 (#2844, PROFIILIKETJU) JULKAISIJALLA (22.9.2026 klo 20.14)
 
 Uusi Fable-sessio aloitti klo 20.13 luovutuksesta viesti-fable-luovutus-20260922-ilta.md. Remote Control päällä. Avoimet PR:t: #2843 (Pelikoodari: profiilin rollaava ikkuna kasvatti rAF-ketjujen määrän eli Tasaisen 500 Hz oli mittarin vika, ei pelin; lisämittarit silmukoita/laattavientejä/valmistumisviive; ?koe=dpr15) ja sen julkaisu #2844 v2124 (reitti vihreä, mergeable). Piirtokoe-valikon PR ei vielä auki; Pelikoodarilta kysytty tilanne. Omistaja testaa kännykällä tänä iltana heti kun Piirtokoe on tuotannossa.
+
+## v2124 TUOTANNOSSA (#2844): PROFIILIN rAF-KETJUVIKA KORJATTU, TASAISEN 500 Hz OLI MITTARIN VIKA; LISAMITTARIT silmukoita/laattavienteja/valmistumisviive JA ?koe=dpr15 (22.9.2026 klo 20.15)
+
+Julkaisija mergesi #2844 (5687fd65), testit 3962/0. Aiemmat Tasaisen dt-johtopäätökset luettava uudelleen korjatulla mittarilla. Piirtokoe-PR odottaa yhä Pelikoodaria; Julkaisija käsittelee sen heti.
