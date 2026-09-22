@@ -489,6 +489,15 @@ for (const tyyppi of TYYPIT) {
   });
 
   for (const [nimi, ruutuLeveys, ruutuKorkeus] of RUUDUT) {
+    /*
+     * LEVEÄLLÄ KUVA PIENENEE TARKOITUKSELLA (omistaja 22.9.2026 klo
+     * 23.06, kaksipalstataitto ≥ NOSTOKUVA_LEVEA_RAJA): "ensin Kuva
+     * avautuu isona ja kun klikkaa niin sitten kuva pienenee ja tulee
+     * teksti palsta mukaan oikealle". Siellä vartija on alempana
+     * (KAKSI PALSTAA LEVEÄLLÄ); tämä testi koskee kapeita ruutuja, joilla
+     * kuva pysyy pikselilleen paikallaan kuten 11.9.2026 alkaen.
+     */
+    if (ruutuLeveys >= 1100) continue;
     test(`${tyyppi.nimi}: kuva ei liiku vaiheenvaihdossa — ${nimi}`, async () => {
       const { sisalto, kortti } = await avaaMallissa(tyyppi, { ruutuLeveys, ruutuKorkeus });
       const img = sisalto.querySelector('.nostokuva-img');
@@ -528,6 +537,105 @@ for (const tyyppi of TYYPIT) {
 }
 
 /* ================================================================= */
+/* 7: KAKSI PALSTAA LEVEÄLLÄ (omistaja 22.9.2026 klo 23.06)          */
+/* ================================================================= */
+
+/*
+ * Omistaja sanatarkasti: *"Kaikkiin nostoihin kaksi palstaa. Ja niin että
+ * ensin Kuva avautuu isona ja kun klikkaa niin sitten kuva pienenee ja
+ * tulee teksti palsta mukaan oikealle."*
+ *
+ * Vartioidaan jokaiselle korttityypille ≥ 1100 px:n ruuduilla:
+ *   - vaiheessa 1 kuva on ISO (ei vielä palstan levyinen);
+ *   - vaiheessa 2 sisältö on jaettu: ylärivi ja otsikko palstojen
+ *     yläpuolella, kuva kuvateksteineen .fokusnosto-kuvapalstassa ja
+ *     leipäteksti .fokusnosto-tekstipalstassa (sama rakenne kuin
+ *     nostokortilla, css/nostokuva.css tekee niistä vierekkäiset);
+ *   - kuva PIENENEE mutta on SAMA elementti samalla src:llä (ei
+ *     uudelleenlatausta, ei välähdystä);
+ *   - kortti pysyy ~1100 px:n katon alla.
+ */
+const LEVEAT = [
+  ['iPad vaaka', 1194, 834],
+  ['työpöytä 1400', 1400, 900],
+  ['työpöytä 1920', 1920, 1080],
+];
+
+for (const tyyppi of TYYPIT) {
+  for (const [nimi, ruutuLeveys, ruutuKorkeus] of LEVEAT) {
+    test(`${tyyppi.nimi}: kaksi palstaa leveällä — ${nimi}`, async () => {
+      const { NOSTOKUVA_LEVEA_KATTO } = await import('../js/nostokuva.js');
+      const { sisalto, kortti } = await avaaMallissa(tyyppi, { ruutuLeveys, ruutuKorkeus });
+      const img = sisalto.querySelector('.nostokuva-img');
+      const src = img.src;
+      const ennen = img.getBoundingClientRect();
+      assert.ok(ennen.width > ruutuLeveys * 0.55 || ennen.height > ruutuKorkeus * 0.55,
+        `vaiheen 1 kuva ei ole iso: ${ennen.width}x${ennen.height} ruudulla ${ruutuLeveys}x${ruutuKorkeus}`);
+      assert.equal(sisalto.querySelector('.fokusnosto-rivi'), null, 'palstat eivät kuulu vaiheeseen 1');
+
+      sisalto.querySelector('.nostokuva-lisaa').napauta();
+
+      const rivi = sisalto.children.find((l) => l.classList.contains('fokusnosto-rivi'));
+      assert.ok(rivi, 'vaiheessa 2 sisällön suoralapsena pitää olla .fokusnosto-rivi');
+      const [kuvapalsta, tekstipalsta] = rivi.children;
+      assert.ok(kuvapalsta?.classList.contains('fokusnosto-kuvapalsta'), 'rivin 1. lapsi ei ole kuvapalsta');
+      assert.ok(tekstipalsta?.classList.contains('fokusnosto-tekstipalsta'), 'rivin 2. lapsi ei ole tekstipalsta');
+      assert.equal(kuvapalsta.querySelector('.nostokuva-img'), img, 'kuva ei ole kuvapalstassa');
+      assert.ok(kuvapalsta.querySelector('.nostokuva-teksti'), 'kuvateksti ei kulje kuvan mukana kuvapalstaan');
+      assert.ok(tekstipalsta.querySelector('.fokusnosto-teksti'), 'leipäteksti ei ole tekstipalstassa');
+      assert.equal(kuvapalsta.querySelector('.fokusnosto-teksti'), null, 'leipätekstiä kuvapalstassa');
+      // Otsikko palstojen YLÄPUOLELLA, kuten nostokortilla.
+      const otsikko = sisalto.querySelector('.fokusnosto-kortti-otsikko');
+      assert.ok(otsikko, 'otsikko puuttuu');
+      assert.ok(!rivi.contains?.(otsikko) && !kuvapalsta.querySelector('.fokusnosto-kortti-otsikko')
+        && !tekstipalsta.querySelector('.fokusnosto-kortti-otsikko'), 'otsikko joutui palstaan');
+      if (tyyppi.ohjain) {
+        assert.ok(kuvapalsta.querySelector(tyyppi.ohjain), 'gallerian ohjaimet eivät ole kuvapalstassa');
+      }
+
+      // Sama kuva, pienempänä.
+      assert.equal(sisalto.querySelector('.nostokuva-img'), img, 'kuva vaihtui toiseen elementtiin');
+      assert.equal(img.src, src, 'kuvan src vaihtui — selain lataisi kuvan uudestaan');
+      const jalkeen = img.getBoundingClientRect();
+      assert.ok(jalkeen.width < ennen.width, `kuva ei pienentynyt: ${ennen.width} → ${jalkeen.width}`);
+      assert.ok(Number.parseFloat(kortti.style.width) <= NOSTOKUVA_LEVEA_KATTO,
+        `kortti ylittää leveän katon: ${kortti.style.width}`);
+    });
+  }
+
+  test(`${tyyppi.nimi}: kapealla pino ennallaan (ei palstoja)`, async () => {
+    const { sisalto } = await avaaMallissa(tyyppi, { ruutuLeveys: 834, ruutuKorkeus: 1194 });
+    sisalto.querySelector('.nostokuva-lisaa').napauta();
+    assert.equal(sisalto.querySelector('.fokusnosto-rivi'), null,
+      'alle 1100 px:n kortti on pino eikä sitä jaeta palstoiksi');
+  });
+}
+
+test('nostoPalstoiksi jakaa kohdekortin kaltaisen pinon: kuva gallerian sisällä', async () => {
+  asennaMalli({ ruutuLeveys: 1400, ruutuKorkeus: 900 });
+  const { nostoPalstoiksi } = await import('../js/nostokuva.js');
+  const d = globalThis.document;
+  const luo = (luokka) => { const e = d.createElement('div'); e.className = luokka; return e; };
+  const kotelo = luo('fokuskohde-sisalto');
+  const ylarivi = luo('ylarivi');
+  const otsikko = luo('fokuskohde-otsikko');
+  const galleria = luo('galleria');
+  const kehys = luo('nostokuva-kehys');
+  galleria.append(luo('nuoli'), kehys, luo('pisteet'));
+  const teksti = luo('fokuskohde-teksti');
+  const napit = luo('napit');
+  kotelo.append(ylarivi, otsikko, galleria, teksti, napit);
+
+  assert.equal(nostoPalstoiksi(kotelo, kehys), true);
+  assert.deepEqual(kotelo.children.map((l) => l.className), ['ylarivi', 'fokuskohde-otsikko', 'fokusnosto-rivi']);
+  const [kuvapalsta, tekstipalsta] = kotelo.children[2].children;
+  assert.deepEqual(kuvapalsta.children.map((l) => l.className), ['galleria'],
+    'kuvan sisältävä lapsi (galleria nuolineen) siirtyy kokonaisena kuvapalstaan');
+  assert.deepEqual(tekstipalsta.children.map((l) => l.className), ['fokuskohde-teksti', 'napit']);
+  assert.equal(nostoPalstoiksi(kotelo, kehys), false, 'toinen kutsu ei saa kääriä uudestaan');
+});
+
+/* ================================================================= */
 /* Lähdekoodin vartijat                                              */
 /* ================================================================= */
 
@@ -540,6 +648,25 @@ test('kaikki kartan korttimoduulit avaavat kuvan edellä', () => {
       `${polku}: kuvaton nosto pitää latoa suoraan tekstikorttina`);
     assert.ok(src.includes('latoNosto'), `${polku} ei anna ladontaa kuvaesittelylle`);
   }
+});
+
+test('kaikki kuva edellä -kortit pyytävät kaksipalstataiton (omistaja 22.9.2026)', () => {
+  for (const polku of ['js/skandaalit.js', 'js/historian-hetket.js', 'js/syvennys.js',
+    'js/elaintaky.js', 'js/fokusnosto.js', 'js/fokuskohteet.js']) {
+    const src = lue(polku);
+    const kutsu = src.slice(src.indexOf('nostokuvaAloita({'));
+    const loppu = kutsu.indexOf('}) : null;');
+    assert.ok(loppu > 0, `${polku}: nostokuvaAloita-kutsua ei löytynyt`);
+    assert.ok(/kaksipalstaTaitto: true/.test(kutsu.slice(0, loppu)),
+      `${polku}: kutsu ei pyydä kaksipalstataittoa — kortti jäisi pinoksi leveällä`);
+  }
+  const css = lue('css/nostokuva.css');
+  const media = css.slice(css.indexOf('@media (min-width: 1100px)'));
+  assert.ok(media.length > 30, 'css/nostokuva.css: leveän ruudun palstasääntö puuttuu');
+  assert.match(media, /\.nostokuva-kortti \.fokusnosto-rivi \{[^}]*display: flex/,
+    'palstarivi ei ole flex kaikilla kuorilla (.nostokuva-kortti)');
+  assert.match(media, /\.nostokuva-kortti \.fokusnosto-tekstipalsta \{[^}]*flex: 1 1 0%/,
+    'tekstipalsta ei täytä kuvan viereistä tilaa');
 });
 
 test('kortin sulku purkaa kuvaesittelyn ikkunakuuntelijat', () => {

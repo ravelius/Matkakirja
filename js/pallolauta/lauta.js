@@ -149,6 +149,9 @@ import { glLuokat, glNimiotKaytossa, luoNimiokerrosGL, rasteroiTeksti } from '..
 import { luoGlNimiosovitin } from './glnimiot-sovitin.js';
 import { ablaatioPaalla, kerrosKaytossa, kerrostenBodyLuokat, asennaPiirtokokeet, piirtokokeet } from './kerrokset.js';
 import { asennaKehysprofiili } from './kehysprofiili.js';
+import { luoProfiilinaytto, koetilanNimi } from './profiilinaytto.js';
+import { vedonSeuranta } from '../vedon-seuranta.js';
+import { tarkkuusLiikkeessa } from '../tarkkuus-asetus.js';
 import { sfx } from '../sound.js';
 import { luoNappulanKuljettaja } from './siirto.js';
 import { luoAloituslennonKohtaus } from './avaus.js';
@@ -1436,8 +1439,34 @@ export async function avaaPallolauta(ui) {
    * ilmoittavat itse: ks. ryhmienVahti.
    */
   let sykkiiNyt = () => false;
+  /*
+   * ══ ELEEN AIKANA EI OHITETA YHTÄKÄÄN KEHYSTÄ (omistajan iPhone-
+   * mittaus 22.9.2026, v2122:n kehysprofiili) ══════════════════════
+   *
+   * Omistajan kolme kaappausta vedon aikana: rAF 59–63 Hz (ei siis
+   * ProMotion-tahtivika), mutta PIIRTO 51–86 % rAF-kehyksistä ja
+   * ohitettuja 133–234. Vedon aikana jäi siis joka toinen tai joka
+   * kuudes kehys piirtämättä.
+   *
+   * KEHÄ. iOS:n Safari ei tahdista pointermovea rAF:iin, joten osaan
+   * kehyksistä ei osu yhtään tapahtumaa. Lepopiirto näki sellaisen
+   * kehyksen levollisena (kamera ei ole vielä muuttunut) ja pysäytti
+   * kirjaston tickin — mutta KAIKKI syötetavat (interpolointi, ennakko,
+   * jousi) ajetaan `ohjaimet.update`in sisällä eli juuri siinä tickissä.
+   * Tauolla ollut tick ei voi soveltaa odottavaa vetoa, joten kamera ei
+   * muutu, joten seuraavakin kehys näyttää levolliselta. Siitä syntyy
+   * se 0/2-kuvio, jonka omistaja tuntee nykimisenä — ja se selittää,
+   * miksi syötetavan tai dpr:n vaihtaminen ei muuttanut mitään.
+   *
+   * v2110 ilmoitti lepopiirrolle vedon ALUSTA (yksi kehys); tämä on sen
+   * puuttunut puolisko: koko eleen ja sen jälkeisen liu'un ajan piirto
+   * on este, eli jokainen rAF-kehys piirretään. Syke ja ohitukset
+   * palaavat vasta levossa.
+   */
+  let vetoNyt = () => false; // sidotaan alempana (eleKaynnissa + liuku)
   const puraLepopiirto = lepopiirtoKaytossa() ? asennaLepopiirto(pallo, {
-    esteet: () => LEVON_ESTEET.some((l) => document.body.classList.contains(l) || kuori.classList.contains(l)),
+    esteet: () => vetoNyt()
+      || LEVON_ESTEET.some((l) => document.body.classList.contains(l) || kuori.classList.contains(l)),
     hitaat: () => sykkiiNyt(),
   }) : () => {};
   /* Ryhmien add/remove → piirto: kirjaston pohjan laatat, kerroksen laatat, vektorit. */
@@ -2077,6 +2106,28 @@ export async function avaaPallolauta(ui) {
   // kehysprofiili (pääsäie/GPU-jako) samoilla lipuilla laitteen konsoliin.
   asennaPiirtokokeet();
   if (ablaatioPaalla() || piirtokokeet().size) asennaKehysprofiili(() => globalThis.matkakirja?.ui);
+  /*
+   * `?koe=profiili` (omistajan tilaus Fablen kautta 22.9.2026): sama
+   * profiili RUUDULLE ja mittauspalvelimelle, jotta puhelimen pitkän
+   * kehyksen syyn näkee ilman Web Inspectoria. Rivillä ovat myös
+   * voimassa olevat asetukset, jolloin omistajan kuvakaappaus kertoo
+   * itsessään, missä tilassa peli oli (js/pallolauta/profiilinaytto.js).
+   */
+  // Koetila luetaan nyt, samaan aikaan kuin kerrokset lukevat lippunsa; valikon myöhempi valinta näkyy "seuraavana".
+  const koeAlussa = koetilanNimi(piirtokokeet());
+  const sovellusversio = (() => {
+    const t = document.getElementById('app-version')?.textContent ?? '';
+    return t ? `v${t.split('.').pop()}` : '';
+  })();
+  const puraProfiilinaytto = piirtokokeet().has('profiili')
+    ? luoProfiilinaytto({
+      profiili: globalThis.__kehysprofiili,
+      kotelo,
+      asetukset: () => ({ veto: vedonSeuranta(), tarkkuus: tarkkuusLiikkeessa() }),
+      lepo: () => pallo.__piirto?.tila?.() ?? null,
+      tila: () => ({ koe: koeAlussa, seuraava: koetilanNimi(piirtokokeet()), versio: sovellusversio }),
+    })
+    : () => {};
   const vektorit = pallovektoritPaalla() && kerrosKaytossa('vektorit') ? luoPallovektorit({ pallo, kotelo, reitit }) : null;
   /*
    * Maakuntavektorit (js/pallomaakunnat.js, erä M1): admin-1-alueet
@@ -3925,7 +3976,11 @@ export async function avaaPallolauta(ui) {
       if (!glKerros) {
         const luokat = glLuokat(pallo);
         if (!luokat) return;
-        glKerros = luoNimiokerrosGL({ pallo, kotelo, luokat, juuri: pallonKolmiulotteinen(pallo)?.juuri ?? null });
+        glKerros = luoNimiokerrosGL({
+          pallo, kotelo, luokat, juuri: pallonKolmiulotteinen(pallo)?.juuri ?? null,
+          // Piirtokokeet (?koe=eipuskuri, ?koe=eivienti) jäädyttävät kirjoitukset liikkeen ajaksi.
+          liikkeessa: () => liikkeessaNyt(),
+        });
         // Ladonnan nimet ja nostot rungolle heti, kun runko on olemassa (ei uutta ladontaa).
         if (!glTesti) { nimet.jaaUudestaan?.(); nostot.jaaUudestaan?.(); peliUudestaan(); }
       }
@@ -4508,6 +4563,14 @@ export async function avaaPallolauta(ui) {
   let kameraMuuttuiHetki = -Infinity;
   liikkeessaNyt = () => eleKaynnissa()
     || ((globalThis.performance?.now?.() ?? Date.now()) - kameraMuuttuiHetki) < LIIKKEEN_IKKUNA_MS;
+  /*
+   * Lepopiirron este (ks. ELEEN AIKANA EI OHITETA YHTÄKÄÄN KEHYSTÄ):
+   * sormi alhaalla, nipistys, kamera-ajo TAI irrotuksen jälkeinen liuku
+   * (`ui.pallonVauhti.raf`, js/pallo.js). Liuku kirjoittaa kameraa itse,
+   * mutta este on silti oikea paikka: sen pysähdykset näkyisivät samana
+   * nykimisenä vedon lopussa.
+   */
+  vetoNyt = () => eleKaynnissa() || Boolean(ui.pallonVauhti?.raf);
   /*
    * ══ LIIKKEESSÄ EI TÄYTTÄ LADONTAA (sulavuus 22.9.2026, ablaatiotikas
    * docs/raportit/sulavuus-ablaatio-20260921.md; Fablen päätös) ═════
@@ -5797,6 +5860,7 @@ export async function avaaPallolauta(ui) {
       kamera.pysaytaKameraAjo();
       eleet.pura();
       ryhmienVahti();
+      puraProfiilinaytto();
       puraLepopiirto();
       litistaja.pura();
       // Panoroinnin raja on tämän laudan sääntö: se ei saa jäädä

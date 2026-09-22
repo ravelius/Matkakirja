@@ -6,7 +6,12 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 
-import { glInstanssinTunnus, glNimenInstanssi, luoGlNimiosovitin } from '../js/pallolauta/glnimiot-sovitin.js';
+import {
+  glInstanssinTunnus, glKohteenHalonPeitto, glNimenInstanssi, glSykeKerroin, luoGlNimiosovitin,
+} from '../js/pallolauta/glnimiot-sovitin.js';
+import {
+  KOHDEMERKIN_HALO_PEITTO_KAPEA, KOHDEMERKIN_HALO_PEITTO_LAAJA,
+} from '../js/pallolauta/merkit.js';
 
 const DATUMIT = [
   { avain: 'nimi:pariisi', laji: 'nimi', id: 'pariisi', teksti: 'Pariisi', lat: 48.9, lng: 2.3, dx: 25.1, dy: 5.6, ank: 'start', koko: 13.8 },
@@ -277,7 +282,7 @@ test('nimet ja nostot ovat yksi lista rungolle: kumpikin jako säilyttää toise
 /* ---- Pelin merkit (vaihe 4) ---------------------------------------- */
 import { glNappulanLaatikko } from '../js/pallolauta/glnimiot-sovitin.js';
 
-test('nappula rungolle kiinteällä koolla, kohteet CSS2D:hen; laatikko jalasta ylös', () => {
+test('nappula rungolle kiinteällä koolla, kohteet CSS2D:hen ilman kohderasteria; laatikko jalasta ylös', () => {
   const kerros = teeKerros();
   const lahde = {
     ...teeNostolahde(),
@@ -291,6 +296,7 @@ test('nappula rungolle kiinteällä koolla, kohteet CSS2D:hen; laatikko jalasta 
     { avain: 'kohde:x', laji: 'kohde', key: 'x', lat: 1, lng: 2 },
     { avain: 'nappula', laji: 'nappula', lat: 10, lng: 20 },
   ];
+  // Lähde ilman haeKohde-funktiota (vaiheen 1 lähde): kohde jää CSS2D:hen.
   const css2d = s.peli(datumit);
   assert.deepEqual(css2d.map((d) => d.avain), ['kohde:x']);
   assert.deepEqual(kerros.lista.map((i) => i.tunnus), ['nappula']);
@@ -301,6 +307,59 @@ test('nappula rungolle kiinteällä koolla, kohteet CSS2D:hen; laatikko jalasta 
   s.peli([datumit[0]]);
   assert.deepEqual(s.pelinLaatikot(), []);
   assert.equal(glNappulanLaatikko(null), null);
+});
+
+
+/*
+ * KOHTEET GL-KERROKSEEN (A, 22.9.2026; omistaja v2106: "kohdekaupunkien
+ * pallot liikkuvat vielä"). Halo ja merkki rungolle ruutuvakiona, halo
+ * syke-lipulla; lähtövalinnan huomiokohde jää CSS2D:hen, koska sen
+ * rengas sykkii eri tahtia (.pallolauta-huomio 2,6 s).
+ */
+test('kohteet rungolle: halo sykkii, merkki ei; huomiokohde ja keskeneräinen rasteri jäävät CSS2D:hen', () => {
+  const kerros = teeKerros();
+  const valmiit = new Set(['kohdehalo|0|12.00|2', 'kohdemerkki|0|12.00|Pariisi|2']);
+  const lahde = {
+    ...teeNostolahde(),
+    haeNappula: () => [{ osa: 'nappula', avain: 'n', valmis: false }],
+    haeKohde: (d) => [
+      { osa: 'halo', avain: `kohdehalo|0|12.00|2`, valmis: valmiit.has('kohdehalo|0|12.00|2'), kuva: {}, w: 40, h: 40, ankkuriX: 20, ankkuriY: 20, skaala: 0.5, katto: null },
+      { osa: 'merkki', avain: `kohdemerkki|0|12.00|${d.city?.name ?? ''}|2`, valmis: valmiit.has(`kohdemerkki|0|12.00|${d.city?.name ?? ''}|2`), kuva: {}, w: 80, h: 60, ankkuriX: 40, ankkuriY: 40, skaala: 0.5, katto: null },
+    ],
+  };
+  const s = luoGlNimiosovitin({ kerros: () => kerros, rasterilahde: lahde, ajasta: (f) => f() });
+  const css2d = s.peli([
+    { avain: 'kohde:pariisi', laji: 'kohde', key: 'pariisi', city: { name: 'Pariisi' }, lat: 48, lng: 2 },
+    { avain: 'kohde:huomio', laji: 'kohde', key: 'huomio', city: { name: 'Lontoo' }, huomio: true, lat: 51, lng: 0 },
+    { avain: 'kohde:kesken', laji: 'kohde', key: 'kesken', city: { name: 'Rooma' }, lat: 41, lng: 12 },
+  ]);
+  // Huomiokohde ja se, jonka rasteri on kesken, jäävät CSS2D:hen.
+  assert.deepEqual(css2d.map((d) => d.avain).sort(), ['kohde:huomio', 'kohde:kesken']);
+  assert.deepEqual(kerros.lista.map((i) => i.tunnus), ['kohde:pariisi:halo', 'kohde:pariisi:merkki']);
+  const [halo, merkki] = kerros.lista;
+  assert.equal(halo.syke, true, 'halo hengittää rungon syke-uniformilla');
+  assert.equal(merkki.syke, false, 'levy ja nimi eivät hengitä');
+  // Ruutuvakio: koko ei seuraa zoomia, eikä siirtoa ole (nimi on samassa rasterissa).
+  assert.deepEqual(halo.katto, { a: 1e6, b: 1 });
+  assert.deepEqual(merkki.katto, { a: 1e6, b: 1 });
+  assert.equal(merkki.dx, 0);
+  assert.equal(merkki.dy, 0);
+  // Halon peitto on hengityksen sisällä, ei 1.
+  assert.ok(halo.opacity >= KOHDEMERKIN_HALO_PEITTO_LAAJA && halo.opacity <= KOHDEMERKIN_HALO_PEITTO_KAPEA, `peitto ${halo.opacity}`);
+});
+
+/* Peitto hengittää vastavaiheessa koon kanssa: laajimmillaan himmein. */
+test('kohteen halon peitto on vastavaiheessa sykkeen kanssa', () => {
+  const jakso = 2400;
+  const keski = (KOHDEMERKIN_HALO_PEITTO_KAPEA + KOHDEMERKIN_HALO_PEITTO_LAAJA) / 2;
+  // sin = 1 → koko suurin → peitto pienin.
+  assert.ok(Math.abs(glKohteenHalonPeitto(jakso / 4) - KOHDEMERKIN_HALO_PEITTO_LAAJA) < 1e-9);
+  assert.ok(glSykeKerroin(jakso / 4, { levonAlku: -1e6 }) > 1, 'koko on tuolloin suurin');
+  // sin = -1 → koko pienin → peitto suurin.
+  assert.ok(Math.abs(glKohteenHalonPeitto((3 * jakso) / 4) - KOHDEMERKIN_HALO_PEITTO_KAPEA) < 1e-9);
+  assert.ok(glSykeKerroin((3 * jakso) / 4, { levonAlku: -1e6 }) < 1, 'koko on tuolloin pienin');
+  // Liikkeessä ei hengitetä: keskiarvo, kuten CSS pysäyttää halon raahauksessa.
+  assert.equal(glKohteenHalonPeitto(jakso / 4, { liikkeessa: true }), keski);
 });
 
 test('kytkentä: merkit.js jakaa osan sovittimelle ja lauta sitoo pelin jaon ja esteet', () => {

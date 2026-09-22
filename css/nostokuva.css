@@ -253,3 +253,51 @@ button.nostokuva-nappi:focus-visible { background: transparent; }
 .nostokuva-vaihe1 .fokusnosto-kortti-sulje,
 .nostokuva-vaihe1 .fokuskohde-sulje,
 .nostokuva-vaihe1 .nostokuva-lahde { display: none; }
+
+/*
+ * KAKSI PALSTAA KAIKILLE KUVA EDELLÄ -KORTEILLE ≥ 1100 PX (omistaja
+ * 22.9.2026 klo 23.06: *"Kaikkiin nostoihin kaksi palstaa. Ja niin että
+ * ensin Kuva avautuu isona ja kun klikkaa niin sitten kuva pienenee ja
+ * tulee teksti palsta mukaan oikealle."*).
+ *
+ * Sama taitto kuin nostokortilla (css/fokusnosto.css osio 13), mutta
+ * luokkaan `.nostokuva-kortti` sidottuna, jonka js/nostokuva.js antaa
+ * JOKAISELLE kuorelle — nostokortti, kohdekortti (.fokuskohde-popup),
+ * skandaali, eläintäky, historian hetki, syvennys. Palstat rakentaa
+ * js/nostokuva.js nostoPalstoiksi (tai nostokortilla js/fokusnosto.js
+ * itse), ja kuvan pikselileveys tulee JS:stä; max-width alla on vain
+ * varmistus. Alle rajan rivi on tavallinen lohko: pino kuten ennen.
+ *
+ * Flexbox eikä grid (osio 13, TOINEN YRITYS): palstat ovat toisistaan
+ * riippumattomia, joten leipäteksti alkaa aina tekstipalstan yläreunasta.
+ */
+@media (min-width: 1100px) {
+  .nostokuva-kortti .fokusnosto-rivi {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  .nostokuva-kortti .fokusnosto-kuvapalsta {
+    flex: 0 0 auto;
+    min-width: 0;
+    max-width: 50%;
+  }
+  .nostokuva-kortti.fokusnosto-pysty .fokusnosto-kuvapalsta {
+    max-width: 34%;
+  }
+  .nostokuva-kortti .fokusnosto-tekstipalsta {
+    flex: 1 1 0%;
+    min-width: 0;
+  }
+  /* Lööpin kaksipalstateksti (skandaali on lööppi) yhteen palstaan:
+     tekstipalsta on jo kapea. */
+  .nostokuva-kortti .fokusnosto-tekstipalsta .looppi-leipa {
+    column-count: 1;
+  }
+  /* Kuvapalstan kuva ei saa venyä palstan levyiseksi: JS antaa sille
+     tarkan mitan, eikä vaiheen 1 keskitys (margin auto) kuulu tänne. */
+  .nostokuva-kortti.nostokuva-vaihe2 .fokusnosto-kuvapalsta .nostokuva-kehys {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

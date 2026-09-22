@@ -50,6 +50,9 @@ import { JAAVARI, MERIVARI, kuunteleReliefiLinssi, reliefiKaytossa } from './rel
 import {
   KOSKETUKSEN_VAPAUTUS, laattakerrosPaalla, laatuAinaPaalla, nollaaKosketusOhjaimet,
 } from './ui-apurit.js';
+import {
+  TARKKUUS_TAPAHTUMA, antialiasTarkkuudella, pikselisuhdeTarkkuudella, tarkkuusLiikkeessa,
+} from './tarkkuus-asetus.js';
 /*
  * Laattakerros ja sen puhtaat apurit (erät E0 ja E1, suunnitelma
  * docs/moduulit/pallon-liike-taydella-tarkkuudella.md luvut 4 ja 6)
@@ -94,6 +97,9 @@ export {
   lepokerroksenSuunnitelma, lepokerroksenTaso, lepokerroksenTasoRiittaa, lepokerroksenUV,
   lepokerroksenVerkko, luoLepokerroksenAjoitus, pallonPiste, pinnanPiste, pyramidinKarttaAla,
 } from './pallolaatat.js';
+import {
+  VEDON_SEURANTA_TAPAHTUMA, mittauslippuPaalla, seurannanAsetukset,
+} from './vedon-seuranta.js';
 
 const R2 = 'https://media.matkakirja.app/';
 /**
@@ -114,7 +120,7 @@ export const PALLO_TEKSTUURI = `${R2}julisteet/pallo/${PALLO_TEKSTUURIVERSIO}/te
  * tarkkuuskatto poistuu. Yksi z4-tekstuuri jää VARAKSI: jos laattojen
  * luetteloa (laatat.json) ei saada, pallo piirtyy kuten ennen.
  */
-export const PALLO_LAATTAVERSIO = '2026-09-22-pohja';
+export const PALLO_LAATTAVERSIO = '2026-09-22c-pohja';
 /*
  * NOSTOTASOLLINEN KANSIO (omistaja 5.9.2026: "lisää palloon myös se
  * toinen kerros missä nimet ja kohteet yms." ja "päästään siitä
@@ -184,7 +190,7 @@ export const PALLO_LAATTAVERSIO = '2026-09-22-pohja';
  * versiovahti (js/pallolaatat.js lepokerroksenKerrokset) vaatii aina
  * saman viivaversion sarjaan ja luetteloon — muuten kerros sammuu.
  */
-export const PALLO_LAATTATUNNISTE = '20260922a';
+export const PALLO_LAATTATUNNISTE = '20260922c';
 /*
  * Sarja k on poltettu ILMAN nostoja (tools/tee-pallolaatat.mjs laattojenKansio:
  * kansiossa ei ole '-nostot'-osaa): nostot tulevat maittain lepokerroksesta
@@ -744,15 +750,59 @@ export function pallokirjastonOsoite(yritys = 0, leima = 0) {
 
 let kirjastoLupaus = null;
 
+/*
+ * ── ORVOT FRAME-TICKERIT (Fable 22.9.2026, omistajan v2126-kaappaukset) ──
+ *
+ * Globe.gl:n paketti luo JO LATAUKSESSA (paketin global code) neljä
+ * kerrosoliota (arcs ja paths, kahdesti), joita peli ei koskaan käytä.
+ * Jokaisen konstruktori käynnistää frame-tickerin, joka pyörittää omaa
+ * rAF-ketjuaan ikuisesti — myös levossa, kun lepopiirto on pysäyttänyt
+ * pallon (mitattu WebKit: 4 kutsua/kehys levossa). Olioihin ei pääse
+ * käsiksi, joten ketju katkaistaan ennen kuin se alkaa: paketin
+ * suorituksen ajan requestAnimationFrame jättää rekisteröimättä
+ * TÄSMÄLLEEN frame-tickerin nuolen. Oman pallon tickerit syntyvät vasta
+ * latauksen jälkeen, eikä niihin kosketa. Jos kirjaston versio muuttaa
+ * nuolen muotoa, suodatin ei osu mihinkään (turvallinen suunta).
+ */
+export const ORVON_TICKERIN_LAHDE = 'function(){return e.onFrame()}';
+
+/**
+ * Suodatin paketin suorituksen ajaksi. Palauttaa { lopeta, pudotettuja }.
+ * Lipulla eikä purkamalla: jos joku muu (kehysprofiili) käärii rAF:n
+ * väliin, ketju pysyy ehjänä ja suodatin vain lakkaa suodattamasta.
+ */
+export function suodataOrvotTickerit(ikkuna = globalThis) {
+  const alkuperainen = ikkuna?.requestAnimationFrame;
+  const tila = { paalla: true, pudotettuja: 0 };
+  if (typeof alkuperainen !== 'function') return { lopeta: () => 0, tila };
+  const suodatin = function requestAnimationFrame(fn) {
+    if (tila.paalla && typeof fn === 'function' && !fn.name && String(fn) === ORVON_TICKERIN_LAHDE) {
+      tila.pudotettuja += 1;
+      return 0;
+    }
+    return alkuperainen.call(ikkuna, fn);
+  };
+  ikkuna.requestAnimationFrame = suodatin;
+  const lopeta = () => {
+    tila.paalla = false;
+    if (ikkuna.requestAnimationFrame === suodatin) ikkuna.requestAnimationFrame = alkuperainen;
+    return tila.pudotettuja;
+  };
+  return { lopeta, tila };
+}
+
 /** Yksi latausyritys: `<script>` sivulle, aikakatko ja siivous. */
 function yritaPallokirjasto(doc, osoite, aikakatko, ikkuna) {
   return new Promise((ok, ei) => {
     const s = doc.createElement('script');
     let kello = 0;
     let ratkaistu = false;
+    const orvot = suodataOrvotTickerit(ikkuna);
     const paata = (virhe) => {
       if (ratkaistu) return;
       ratkaistu = true;
+      const pudotettuja = orvot.lopeta();
+      if (pudotettuja) pallodiag('kirjasto-orvot', { n: pudotettuja }, ikkuna);
       if (kello) { try { ikkuna.clearTimeout?.(kello); } catch { /* ei kelloa */ } }
       if (virhe) ei(virhe);
       else ok(globalThis.Globe);
@@ -877,13 +927,100 @@ export const POHJAN_VAPAUTUS_SYYT = new Set([
  * (avaaPallo) ja pallolaudan (js/pallolauta/lauta.js) kesken — pinta ja
  * sen varapolku ovat yhdet.
  */
+/**
+ * ALFATON WEBGL2-KONTEKSTI ITSE LUOTUNA (`?koe=alpha0`, Fable 22.9.2026).
+ *
+ * MIKSI ITSE. three.js r185 luo kontekstin aina `alpha: true` -lipulla:
+ * sen oma parametritaulu on kovakoodattu, eikä rendererConfigin `alpha`
+ * mene sen läpi (mitattu 22.9.2026 WebKitissä). Kolmonen KUITENKIN
+ * käyttää valmista kontekstia, jos sellainen annetaan
+ * (`parameters.context`), ja globe.gl välittää rendererConfigin
+ * sellaisenaan (`Object.assign({antialias:!0,alpha:!0}, config)`), joten
+ * kangas ja konteksti voidaan luoda tässä ja antaa niille.
+ *
+ * Määreet ovat samat kuin kolmosen omat, paitsi `alpha: false`: muuten
+ * kokeesta mitattaisiin kahta eroa yhden sijaan. `antialias` tulee
+ * pelaajan asetuksesta kuten ennenkin.
+ *
+ * @returns {?{kangas: HTMLCanvasElement, gl: WebGL2RenderingContext}}
+ *   null, jos kontekstia ei saada — silloin peli jatkaa tavallisella
+ *   polulla eikä koe vain pure.
+ */
+export function luoAlfatonKonteksti(kotelo, antialias, doc = kotelo?.ownerDocument) {
+  try {
+    const kangas = doc?.createElement?.('canvas');
+    const gl = kangas?.getContext?.('webgl2', {
+      alpha: false,
+      antialias: Boolean(antialias),
+      depth: true,
+      stencil: false,
+      preserveDrawingBuffer: false,
+      failIfMajorPerformanceCaveat: false,
+    });
+    return gl ? { kangas, gl } : null;
+  } catch { return null; }
+}
+
+/**
+ * Kankaan taustaväri, kun alfakanavaa ei ole (`?koe=alpha0`): lähin
+ * läpinäkymätön tausta kotelon esivanhemmista, jotta koe ei näytä
+ * rikkinäiseltä. Vara on pelin oma tumma pergamenttipohja.
+ */
+export function kankaanTausta(kotelo, vara = '#12100b') {
+  try {
+    let solmu = kotelo;
+    while (solmu) {
+      const vari = solmu.ownerDocument?.defaultView?.getComputedStyle?.(solmu)?.backgroundColor;
+      if (vari && vari !== 'transparent' && !/rgba\(\s*0\s*,\s*0\s*,\s*0\s*,\s*0\s*\)/.test(vari)) return vari;
+      solmu = solmu.parentElement;
+    }
+  } catch { /* ilman DOMia vara */ }
+  return vara;
+}
+
 export function rakennaPallo(Globe, kotelo, laatat) {
   // Pelkkä pinnoite: ei pisteitä, nimiä, kaaria eikä renkaita (omistaja
   // 4.9.2026: "älä lisää mitään sen päälle"). Pelilaudalla PELIN merkit
   // lisätään lauta.js:ssä (Raamattu 5.9.2026: kartta laatoissa, peli päällä).
-  const pallo = Globe()(kotelo)
+  /*
+   * REUNANPEHMENNYS PELAAJAN ASETUKSESTA (js/tarkkuus-asetus.js,
+   * "Tarkkuus liikkeessä" → kokeellinen = ei MSAA:ta). WebGL-kontekstin
+   * antialias-parametri luetaan kerran tässä; asetuksen vaihto tulee
+   * voimaan seuraavassa latauksessa.
+   */
+  /*
+   * KOELIPPU `?koe=alpha0` (Fable 22.9.2026): LÄPINÄKYMÄTÖN KANGAS.
+   * Safarissa WebGL ajetaan omassa GPU-prosessissaan, ja läpinäkyvä
+   * kangas pakottaa komposiittorin sekoittamaan sen sivun kanssa joka
+   * kehyksessä; läpinäkymättömän kerroksen se voi näyttää sellaisenaan.
+   *
+   * MITATTU RAJOITUS JA SEN KIERTO (22.9.2026, WebKit): pelkkä
+   * `alpha: false` rendererConfigissa EI mene läpi asti — globe.gl
+   * välittää konfiguraation oikein, mutta three.js r185 luo kontekstin
+   * aina `alpha: true` -lipulla. Siksi kangas ja WebGL2-konteksti
+   * luodaan tässä itse (`luoAlfatonKonteksti`) ja annetaan kolmoselle
+   * valmiina; se käyttää annettua kontekstia sellaisenaan. Ilman
+   * kiertoa kokeen ainoa vaikutus olisi läpinäkymätön taustaväri.
+   *
+   * Taustaväri asetetaan silti: alfattomalla kankaalla tausta EI voi
+   * olla läpinäkyvä, ja sivun oma tausta ei enää paista läpi.
+   *
+   * Koe on mittausta varten: tausta peittää kaiken, mitä kankaan alla
+   * oli, joten oletukseksi sitä ei oteta ilman omistajan päätöstä.
+   */
+  const eiAlfaa = laattakerroksenKokeet().has('alpha0');
+  const alfaton = eiAlfaa ? luoAlfatonKonteksti(kotelo, antialiasTarkkuudella(tarkkuusLiikkeessa())) : null;
+  const pallo = Globe({
+    rendererConfig: {
+      antialias: antialiasTarkkuudella(tarkkuusLiikkeessa()),
+      // Valmis kangas ja konteksti: vain näin alfa saadaan oikeasti pois
+      // (ks. ALFATON WEBGL2-KONTEKSTI ITSE LUOTUNA). `alpha: false` jää
+      // mukaan, jotta pyyntö näkyy myös silloin, kun kolmonen luo itse.
+      ...(alfaton ? { canvas: alfaton.kangas, context: alfaton.gl, alpha: false } : {}),
+    },
+  })(kotelo)
     .width(kotelo.clientWidth).height(kotelo.clientHeight)
-    .backgroundColor('rgba(0,0,0,0)')
+    .backgroundColor(eiAlfaa ? kankaanTausta(kotelo) : 'rgba(0,0,0,0)')
     .showAtmosphere(true).atmosphereColor('#d9a13b').atmosphereAltitude(0.18);
   asennaIlmakehanVahti(pallo, kotelo);
   if (laatat && pallo.globeTileEngineUrl) {
@@ -1481,8 +1618,29 @@ export function asennaLaatunosto(pallo, kotelo, ikkuna = globalThis) {
   return () => purkaja();
 }
 
+/*
+ * KOELIPPU `?koe=dpr15` (Fable 22.9.2026): pikselisuhde lukitaan 1,5:een
+ * karkeaksi TÄYTTÖKOKEEKSI. Safarissa ei ole
+ * EXT_disjoint_timer_query_webgl2:ta, joten GPU-aikaa ei voi mitata
+ * suoraan; jos pitkät kehykset katoavat puolittamalla täytettävien
+ * pikselien määrä (3 → 1,5 = neljäsosa pikseleistä), syy on täytössä tai
+ * komposiittorissa. Jos eivät katoa, syy on muualla (laattojen vienti
+ * GPU:lle, mipmapit, lämpökellotus).
+ *
+ * Lippu ohittaa sekä Tarkkuus liikkeessä -asetuksen että kerroksen omat
+ * kynnykset, koska se on mittaus eikä ulkoasu.
+ */
+export const KOE_DPR = { dpr15: 1.5, dpr2: 2 };
+
+/** Koelipun lukitsema pikselisuhde, tai null. */
+export function kokeenPikselisuhde(kokeet = laattakerroksenKokeet()) {
+  for (const [lippu, suhde] of Object.entries(KOE_DPR)) if (kokeet.has(lippu)) return suhde;
+  return null;
+}
+
 function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
-  const dpr = ikkuna.devicePixelRatio || 1;
+  const koeSuhde = kokeenPikselisuhde();
+  const dpr = koeSuhde ?? (ikkuna.devicePixelRatio || 1);
   /*
    * KOKEILUVIPU (omistaja 5.9.2026: "kokeile pyörisikö vieritys sillä
    * korkeammalla tarkkuudella joka kytkeytyy nyt päälle vasta kun liike
@@ -1511,6 +1669,8 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
     lauta: PALLO_LAUTA, naparaja: NAPAKANNEN_LEVEYS,
     // Esilataus levossa palvelutyöntekijän koriin (js/laattaesilataus.js).
     esilataa: ikkuna.navigator?.serviceWorker ? (osoitteet) => { void lahetaEsilataus(osoitteet, ikkuna.navigator, null); } : null,
+    // Tason valinta ja laatan koko levon suhteella (ks. PIKSELISUHDE KERROKSEN KANSSA).
+    lepoSuhde: Math.min(ikkuna.devicePixelRatio || 1, LAATU_PIKSELISUHDE_LEPO),
   }) : null;
   if (kerros) lepokerrokset.set(pallo, kerros);
   /*
@@ -1592,10 +1752,27 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
    * perustelu ja mittaus ylempänä (fov on pystysuunnan avauskulma).
    */
   const piirtokorkeus = () => kotelo.clientHeight * Math.min(dpr, LAATU_PIKSELISUHDE_LEPO);
+  /*
+   * PIKSELISUHDE KERROKSEN KANSSA (js/tarkkuus-asetus.js): terävä ja
+   * kokeellinen pitävät levon katon (3) myös liikkeessä; tasainen pudottaa
+   * liikkeessä kattoon 2 ja palauttaa 3:n levossa — yksi puskurinvaihto
+   * eleen alussa (LAATU_LIIKEVIIVE_MS:n jälkeen) ja lopussa
+   * (LAATU_LEPOVIIVE_MS). Laattakerros valitsee tasonsa ja kokoaa
+   * laattansa aina LEVON suhteella (lepoSuhde), joten liikkeen alempi
+   * puskuri ei vaihda laattatasoa eikä jätä sumeita laattoja levoon.
+   */
+  const lepoSuhde = () => Math.min(dpr, LAATU_PIKSELISUHDE_LEPO);
+  const tahdistaPikselisuhde = (lepoon) => {
+    if (!renderer) return;
+    // Koelippu lukitsee suhteen: mittaus ei saa vaihdella asetuksen mukana.
+    const suhde = koeSuhde ?? pikselisuhdeTarkkuudella(tarkkuusLiikkeessa(ikkuna), dpr, lepoon || aina());
+    if (renderer.getPixelRatio?.() !== suhde) renderer.setPixelRatio(suhde);
+  };
   const asetaTila = (lepoon) => {
     lepo = lepoon;
-    // Kerros päällä: kynnykset ja pikselisuhde jäävät asennuksen arvoihin.
-    if (kerrosKaytossa) return;
+    // Kerros päällä: kynnykset jäävät asennuksen arvoihin; pikselisuhde
+    // seuraa pelaajan asetusta (tahdistaPikselisuhde).
+    if (kerrosKaytossa) { tahdistaPikselisuhde(lepoon); return; }
     if (aina()) lepoon = true;
     const nakyma = kameranNakyma();
     kynnysLat = Number.isFinite(nakyma?.lat) ? nakyma.lat : 0;
@@ -1603,7 +1780,7 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
     kynnysTeravyys = teravyys;
     const kerroin = (lepoon ? lepokerroin(piirtokorkeus(), teravyys) : 1) * napakerroin(kynnysLat);
     moottori.thresholds = laattakynnykset(kerroin);
-    const suhde = Math.min(dpr, lepoon ? LAATU_PIKSELISUHDE_LEPO : LAATU_PIKSELISUHDE_LIIKE);
+    const suhde = koeSuhde ?? Math.min(dpr, lepoon ? LAATU_PIKSELISUHDE_LEPO : LAATU_PIKSELISUHDE_LIIKE);
     if (renderer && renderer.getPixelRatio?.() !== suhde) renderer.setPixelRatio(suhde);
   };
   /** Laattojen tekstuureille anisotrooppinen suodatus (kerran per laatta). */
@@ -1785,10 +1962,10 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
    * Pikselisuhde kerran asennuksessa, kun kerros on päällä: puskurin koon
    * vaihto on raskas kehys eikä kuvan tarkkuus saa vaihtua liikkeessä.
    */
-  if (kerros && renderer) {
-    const suhde = Math.min(dpr, LAATU_PIKSELISUHDE_LEPO);
-    if (renderer.getPixelRatio?.() !== suhde) renderer.setPixelRatio(suhde);
-  }
+  if (kerros && renderer) tahdistaPikselisuhde(true);
+  // Asetuksen vaihto valikosta vaikuttaa heti (terävä ↔ tasainen).
+  const tarkkuusKuuntelija = () => { if (kerrosKaytossa) tahdistaPikselisuhde(lepo); };
+  ikkuna.addEventListener?.(TARKKUUS_TAPAHTUMA, tarkkuusKuuntelija);
   /*
    * PAKOTUS VAIKUTTAA HETI (pakotaPallonLaatu): kynnykset ja
    * pikselisuhde asetetaan uudestaan samasta liike/lepo-tilasta, ja
@@ -1807,6 +1984,7 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
   kamera = pallo.camera?.() ?? null;
   if (kamera) lepoAjastin = ikkuna.setTimeout(lepoon, LAATU_LEPOVIIVE_MS);
   return () => {
+    ikkuna.removeEventListener?.(TARKKUUS_TAPAHTUMA, tarkkuusKuuntelija);
     laatuKuuntelijat.delete(pakotus);
     kehyspurku();
     ikkuna.clearTimeout(lepoAjastin);
@@ -2874,6 +3052,178 @@ export const VEDON_KATTO_RUUTUA = 1;
 /** Liuku enintään yksi näkyvä kaista tässä ajassa (ms). */
 export const VAUHDIN_KATTO_MS = 250;
 
+/*
+ * ======== OSOITIN KEHYKSEN HETKELLÄ (sulavuus kohta 13) =============
+ *
+ * MITATTU VIKA (Laitetestaaja 22.9.2026, aidot hiirivedot, 16 kierrosta
+ * Safarilla ja Chromella): seuraamisvirheen suhde (kameran siirtymä /
+ * osoittimen siirtymä) on p10 = 0 JOKAISESSA kierroksessa — eli
+ * vähintään joka kymmenes kehys on täysi pysähdys, vaikka osoitin
+ * liikkuu — ja pysähdystä seuraa ylikorjaava piikki (p90 3–14).
+ * Selvin yksittäinen tapaus: kaksi kehystä (36 ms) kamera ei liikkunut
+ * lainkaan, vaikka osoitin oli liikkunut 130 px, ja sitten yksi kehys
+ * korjasi 104 px kerralla. Sama molemmilla moottoreilla, eikä
+ * kehysajoissa ollut pitkiä kehyksiä — vika on syöteputkessa, ei
+ * piirrossa.
+ *
+ * SYY. v2097 sovelsi VIIMEISIMMÄN näytteen sellaisenaan kerran
+ * kehyksessä. Selain ei kuitenkaan toimita tapahtumia tasatahtia rAF:n
+ * kanssa: kehykseen osuu nolla, yksi tai kaksi tapahtumaa. Nollan
+ * kehyksen kamera ei liiku (pysähdys) ja seuraavan kehyksen näyte on
+ * kahden kehyksen matkan päässä (piikki). Kamera siis toistaa
+ * tapahtumajonon rytmin eikä sormen liikettä.
+ *
+ * MIKSI JUURI SAFARISSA (dokumentoitu, Fable 22.9.2026; Nolan Lawson,
+ * "Browsers, input events, and frame throttling",
+ * nolanlawson.com/2019/08/14/): Chrome TAHDISTAA pointermoven,
+ * mousemoven ja wheelin rAF:iin, macOS:n Safari EI tahdista niistä
+ * yhtäkään, ja iOS:n Safari tahdistaa touchmoven mutta EI pointermovea.
+ * Pallolauta kuuntelee vain pointer-tapahtumia, joten sekä Macin
+ * Safarissa että iPhonessa syöte tulee kehyksistä riippumatta — juuri
+ * se kuvio, jonka omistaja tunsi tökkimisenä. Chromessa sama ilmiö on
+ * lievempi, koska selain tekee tahdistuksen puolestamme.
+ *
+ * Suorempi vaihtoehto iOS:lle olisi lukea vedon näytteet
+ * touchmove-tapahtumista (rAF-tahdistettu) ja käyttää pointeria vain
+ * hiirelle. Se on mitattava erikseen eikä sitä tehdä tässä: tämä
+ * korjaus on moottorista riippumaton, ja kahden syötepolun ylläpito on
+ * oma päätöksensä.
+ *
+ * KORJAUS. Näytteet kerätään aikaleimoineen (myös getCoalescedEvents,
+ * jolloin selaimen yhdistämät välinäytteet saadaan talteen), ja
+ * kehyksen alussa osoittimen paikka lasketaan HALUTULLE HETKELLE
+ * lineaarisella interpoloinnilla kahden näytteen välistä. Hetki on
+ * kehyksen aika miinus VAKIOVIIVE, joka on enintään yksi kehys — sen
+ * verran, että kahden näytteen väliin osutaan, mutta ei enempää, koska
+ * viive pehmentäisi tuntumaa.
+ *
+ * ALKU ILMAAN VIIVETTÄ (ei ease-inia): jos haluttu hetki on ennen
+ * ensimmäistä näytettä, käytetään ensimmäistä näytettä sellaisenaan.
+ * Kartta lähtee siis heti sormen mukana eikä kiihdy viiveen läpi.
+ *
+ * EKSTRAPOLOINTI ENINTÄÄN YKSI KEHYS: jos uutta näytettä ei ole
+ * ehtinyt, jatketaan viimeisellä nopeudella korkeintaan yhden kehyksen
+ * verran. Ilman sitä näytteetön kehys olisi taas pysähdys; rajan yli
+ * mentäessä arvaus karkaisi.
+ *
+ * Paluulippu `?koe=interpvanha` palauttaa v2097:n käytöksen
+ * (viimeisin näyte sellaisenaan), jotta ero voidaan mitata samalla
+ * rakennuksella.
+ */
+/*
+ * VIISI SYÖTETAPAA RINNAKKAIN (omistajan päätös Fablen kautta
+ * 22.9.2026). Oikeaa tapaa ei valita päättelemällä vaan mittaamalla:
+ * kaikki vaihtoehdot ovat samassa rakennuksessa koelippuina, samalla
+ * lokilla ja samoilla laskureilla, jotta sama mittari ja samat vedot
+ * vertaavat niitä keskenään.
+ *
+ *   (1) `?koe=interpvanha`  viimeisin näyte kerran kehyksessä (v2097)
+ *   (2) oletus              aikaleimainterpolointi 1 kehyksen viiveellä
+ *   (3) `?koe=syoteennakko` ekstrapolointi ILMAN viivettä, kiihtyvyys-
+ *                           rajalla — nolla viive, arvaus tilalle
+ *   (4) `?koe=syotejousi`   kriittisesti vaimennettu jousi sormeen,
+ *                           aikavakio ~1 kehys, dt-pohjainen
+ *   (5) `?koe=syotetouch`   näytteet touchmovesta (rAF-tahdistettu
+ *                           iOS:llä) pointermoven sijaan; hiiri ennallaan
+ *
+ * Kohta 5 on ORTOGONAALINEN: se vaihtaa näytteiden LÄHTEEN, ei tapaa
+ * laskea paikkaa, joten sen voi yhdistää kohtiin 2–4.
+ */
+/** Kiihtyvyyden katto ennakoinnissa (px/ms² ): nopeus ei saa hypätä. */
+export const SYOTE_KIIHTYVYYS_MAX = 0.02;
+/** Jousen aikavakio kehyksinä (kriittisesti vaimennettu). */
+export const SYOTE_JOUSI_KEHYKSIA = 1;
+
+/**
+ * Kriittisesti vaimennetun jousen askel kohti tavoitetta. Puhdas ja
+ * dt-pohjainen, joten tulos ei riipu kehystaajuudesta.
+ *
+ * @returns {{p:number, v:number}} uusi paikka ja nopeus
+ */
+export function jousiAskel(p, v, tavoite, dt, tau) {
+  if (!Number.isFinite(p) || !Number.isFinite(tavoite)) return { p: tavoite, v: 0 };
+  const t = Math.max(1e-3, tau);
+  const askel = Math.max(0, Number(dt) || 0);
+  if (!(askel > 0)) return { p, v: Number.isFinite(v) ? v : 0 };
+  /*
+   * SULJETTU MUOTO, EI ASKELLUSTA. Kriittisesti vaimennetun jousen
+   * ratkaisu on x(t) = (A + B t) e^(-ωt), ja sitä käyttämällä askel on
+   * vakaa MILLÄ TAHANSA dt:llä. Eksplisiittinen integrointi räjähti
+   * testissä, kun dt oli kaksi kehystä (dt ≈ 2τ): tulos karkasi
+   * arvoon 1999 tavoitteen 100 sijaan. Pitkä tauko (välilehti taustalla,
+   * pitkä kehys) on juuri se tilanne, jossa niin kävisi.
+   */
+  const omega = 1 / t;
+  const d = p - tavoite;
+  const v0 = Number.isFinite(v) ? v : 0;
+  const B = v0 + omega * d;
+  const e = Math.exp(-omega * askel);
+  const uusiP = tavoite + (d + B * askel) * e;
+  const uusiV = (B - omega * (d + B * askel)) * e;
+  return { p: uusiP, v: uusiV };
+}
+
+/**
+ * Nopeuden rajaus kiihtyvyyskatolla: ennakointi ei saa hypätä, kun
+ * sormi vaihtaa suuntaa. Puhdas.
+ */
+export function rajaaKiihtyvyys(edellinen, uusi, dt, kattoPerMs = SYOTE_KIIHTYVYYS_MAX) {
+  if (!Number.isFinite(edellinen)) return uusi;
+  const sallittu = Math.max(0, kattoPerMs) * Math.max(1, dt);
+  const muutos = uusi - edellinen;
+  if (Math.abs(muutos) <= sallittu) return uusi;
+  return edellinen + Math.sign(muutos) * sallittu;
+}
+
+/** Näytteitä puskurissa: kaksi kehystä 125 Hz:n hiirellä on ~8. */
+export const OSOITTIMEN_NAYTTEITA = 12;
+/** Vakioviive enintään yksi kehys (ms); Fablen rajaus 22.9.2026. */
+export const OSOITTIMEN_VIIVE_MAX_MS = 17;
+/** Ekstrapolointi enintään yksi kehys (ms). */
+export const OSOITTIMEN_EKSTRAPOLOINTI_MAX_MS = 17;
+
+/**
+ * Osoittimen paikka hetkellä `tavoite` näytteistä `naytteet`
+ * (aikajärjestyksessä, { x, y, t }). Puhdas funktio.
+ *
+ * - ennen ensimmäistä näytettä → ensimmäinen näyte (ei ease-inia)
+ * - kahden näytteen välissä → lineaarinen interpolointi
+ * - viimeisen jälkeen → viimeinen nopeus, enintään `ekstraMax` ms
+ *
+ * @returns {{x:number,y:number,t:number}|null}
+ */
+export function osoittimenKohta(naytteet, tavoite, {
+  ekstraMax = OSOITTIMEN_EKSTRAPOLOINTI_MAX_MS,
+} = {}) {
+  if (!Array.isArray(naytteet) || naytteet.length === 0) return null;
+  const n = naytteet.length;
+  if (n === 1 || !Number.isFinite(tavoite)) {
+    const v = naytteet[n - 1];
+    return { x: v.x, y: v.y, t: v.t };
+  }
+  const eka = naytteet[0];
+  if (tavoite <= eka.t) return { x: eka.x, y: eka.y, t: eka.t };
+  const vika = naytteet[n - 1];
+  if (tavoite >= vika.t) {
+    const edel = naytteet[n - 2];
+    const dt = vika.t - edel.t;
+    const yli = Math.min(tavoite - vika.t, Math.max(0, ekstraMax));
+    if (!(dt > 0) || yli <= 0) return { x: vika.x, y: vika.y, t: vika.t };
+    const k = yli / dt;
+    return { x: vika.x + (vika.x - edel.x) * k, y: vika.y + (vika.y - edel.y) * k, t: vika.t + yli };
+  }
+  for (let i = n - 1; i > 0; i -= 1) {
+    const b = naytteet[i];
+    const a = naytteet[i - 1];
+    if (tavoite >= a.t && tavoite <= b.t) {
+      const dt = b.t - a.t;
+      const k = dt > 0 ? (tavoite - a.t) / dt : 1;
+      return { x: a.x + (b.x - a.x) * k, y: a.y + (b.y - a.y) * k, t: tavoite };
+    }
+  }
+  return { x: vika.x, y: vika.y, t: vika.t };
+}
+
 /** Näkyvä kaista asteina korkeudella `korkeus` (fov on pystykulma). */
 export function nakyvaKaista(korkeus, fov = PALLON_FOV) {
   return Math.max(1e-4, Number(korkeus) || 0) * 2 * Math.tan((fov / 2) * (Math.PI / 180)) * (180 / Math.PI);
@@ -3162,7 +3512,60 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
    * (myös mitat joka tapahtumassa), jotta ero voidaan mitata samalla
    * rakennuksella (tasaisuusmittari, __kehysprofiili.veto).
    */
-  const syote = { veto: null, nipistys: false, vanha: laattakerroksenKokeet().has('syotevanha'), sovelluksia: 0 };
+  const syote = {
+    veto: null, nipistys: false, vanha: laattakerroksenKokeet().has('syotevanha'), sovelluksia: 0,
+    /* Osoittimen näytteet aikaleimoineen (kohta 13, ks. OSOITIN KEHYKSEN HETKELLÄ). */
+    naytteet: [],
+    interpVanha: laattakerroksenKokeet().has('interpvanha'),
+    viiveMs: 0, ekstrapolointeja: 0, interpolointeja: 0,
+    /*
+     * MITTAUSLOKI (`?koe=syoteloki`). Seuraamisvirhettä ei voi mitata
+     * ulkopuolisesta rAF:sta: jos lukija ajetaan ENNEN kirjaston
+     * tickiä, se näkee edellisen kehyksen kameran, ja mittariin syntyy
+     * 0/2x-kuvio, jota pelissä ei ole. Siksi peli kirjaa itse, samassa
+     * kohdassa jossa kamera kirjoitetaan: käytetty osoittimen paikka ja
+     * kamera HETI kirjoituksen jälkeen. Kehä on näin mahdoton.
+     */
+    loki: null, lokiKatto: 4000,
+    /* Mitattava syötetapa (ks. VIISI SYÖTETAPAA RINNAKKAIN). */
+    tapa: 'interp',
+    touchLahde: false,
+    jousi: null, // { x, y, vx, vy }
+  };
+  /*
+   * TAPA TULEE JOKO MITTAUSLIPUSTA TAI PELAAJAN VALINNASTA
+   * (js/vedon-seuranta.js, valikko → Kartta → Vedon seuranta).
+   *
+   * LIPPU VOITTAA KOKONAAN. Savuke ei saa joutua arvaamaan, mikä
+   * laitteen localStorageen on jäänyt: kun osoitteessa on yksikin tämän
+   * perheen lippu, valinta ei vaikuta mihinkään — ei alussa eikä
+   * lennossa. Ilman lippuja valinta ratkaisee, ja se voi vaihtua kesken
+   * pelin ilman uutta latausta.
+   *
+   * Kohta 5: touchmove on iOS:n Safarissa rAF-tahdistettu, pointermove
+   * ei. Näytteiden lähde vaihtuu VAIN kosketuslaitteella; hiirellä
+   * pointermove on ainoa lähde eikä käytös muutu.
+   */
+  const kosketusLaite = typeof globalThis.ontouchstart !== 'undefined';
+  const mittausLippu = mittauslippuPaalla();
+  const asetaTapa = ({ tapa, touchLahde }) => {
+    syote.tapa = tapa;
+    syote.interpVanha = tapa === 'vanha';
+    syote.touchLahde = Boolean(touchLahde) && kosketusLaite;
+  };
+  {
+    const k = laattakerroksenKokeet();
+    if (k.has('syoteloki')) syote.loki = [];
+    if (mittausLippu) {
+      let tapa = 'interp';
+      if (syote.interpVanha) tapa = 'vanha';
+      else if (k.has('syoteennakko')) tapa = 'ennakko';
+      else if (k.has('syotejousi')) tapa = 'jousi';
+      asetaTapa({ tapa, touchLahde: k.has('syotetouch') });
+    } else {
+      asetaTapa(seurannanAsetukset());
+    }
+  }
   ui.pallonSyote = syote; // mittausta varten (savukkeet)
   let kotelonMitat = null; // { left, top, W, H }
   const lueKotelonMitat = () => {
@@ -3188,6 +3591,11 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
   kotelo.addEventListener('pointerdown', (e) => {
     lueKotelonMitat();
     syote.veto = null;
+    syote.naytteet.length = 0;
+    syote.jousi = null;
+    syote.vx = undefined;
+    syote.vy = undefined;
+    syote.edellinenNyt = 0;
     tartunta = sormet.alhaalla === 1 ? sormenKohta(e.clientX, e.clientY) : null;
   });
   /*
@@ -3254,17 +3662,41 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
     if (Math.hypot(vauhti.lat, vauhti.lng) > VAUHTI_KYNNYS) vauhti.raf = requestAnimationFrame(() => liu(nyt));
     else vauhti.raf = 0;
   };
-  kotelo.addEventListener('pointerdown', () => { pysaytaLiuku(); vauhti.lat = 0; vauhti.lng = 0; });
+  /*
+   * SYÖTE ON MUUTOSLÄHDE, JOTEN SE ILMOITTAA LEPOPIIRROLLE
+   * (js/pallolauta/lepopiirto.js). Ilman tätä vedon alku jää kiinni
+   * KEHÄÄN: odottava veto sovelletaan kameraan `ohjaimet.update`issa eli
+   * kirjaston tickissä, lepopiirto pysäyttää tickin levossa, ja sen
+   * ainoa herätesyy tässä tilanteessa olisi "kamera muuttui" — mutta
+   * kamera ei voi muuttua ennen kuin veto on sovellettu. Veto lähtisi
+   * siis vasta varmistavasta sykkeestä (enintään 250 ms) ja kiihtyisi
+   * vasta sitten, kun kamera alkaa muuttua joka kehys. Pallolaudan veto
+   * ei myöskään nosta `kartta-raahaus`-luokkaa (se on tasokartan,
+   * js/kartta.js), joten estelista ei kata tätä.
+   */
+  const ilmoitaSyote = () => { try { pallo.__piirto?.tarvitaan?.(); } catch { /* ei lepopiirtoa */ } };
+  kotelo.addEventListener('pointerdown', () => {
+    ilmoitaSyote();
+    pysaytaLiuku();
+    vauhti.lat = 0;
+    vauhti.lng = 0;
+  });
   /** Vedon sovellus: sormi kohdassa (x, y) hetkellä aika → kamera. */
+  /** Ohituksen kirjaus mittauslokiin: 1 = ei tartuntaa, 2 = ei pintapistettä, 3 = katto. */
+  const kirjaaOhitus = (syy, x, y, aika) => {
+    if (syote.loki && syote.loki.length < syote.lokiKatto) {
+      syote.loki.push({ t: aika, x, y, lat: null, lng: null, alt: null, ohitus: syy });
+    }
+  };
   const sovellaVeto = (x, y, aika) => {
-    if (!tartunta || sormet.alhaalla !== 1) return;
+    if (!tartunta || sormet.alhaalla !== 1) { kirjaaOhitus(1, x, y, aika); return; }
     const nyt = sormenKohta(x, y);
-    if (!nyt) return;
+    if (!nyt) { kirjaaOhitus(2, x, y, aika); return; }
     const pov = pallo.pointOfView();
     // KARTTA EI HYPPÄÄ ILMAN PELAAJAN ELETTÄ (vika v1664): yksi
     // pointermove ei saa kääntää palloa yli puolta näkyvästä kaistasta.
     const siirto = vedonSiirto(pov, tartunta, nyt, { fov: kamera.fov });
-    if (!siirto) return;
+    if (!siirto) { kirjaaOhitus(3, x, y, aika); return; }
     const { dLat, dLng } = siirto;
     const kohta = rajaaKohta(
       Math.max(-89.5, Math.min(89.5, pov.lat - dLat)),
@@ -3272,6 +3704,11 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
     );
     pallo.pointOfView({ lat: kohta.lat, lng: kohta.lng, altitude: pov.altitude }, 0);
     syote.sovelluksia += 1;
+    if (syote.loki && syote.loki.length < syote.lokiKatto) {
+      syote.loki.push({
+        t: aika, x, y, lat: kohta.lat, lng: kohta.lng, alt: pov.altitude, ohitus: 0,
+      });
+    }
     // Nopeus: liukuva keskiarvo, jotta yksittäinen nykäys ei määrää liukua.
     const dt = Math.max(1, aika - (vauhti.aika || aika));
     if (vauhti.aika) {
@@ -3294,18 +3731,175 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
   };
   kotelo.addEventListener('pointermove', (e) => {
     if (!tartunta || sormet.alhaalla !== 1) return;
+    ilmoitaSyote();
     if (syote.vanha) { sovellaVeto(e.clientX, e.clientY, leima(e)); return; }
-    // Vain viimeisin paikka: kehys sovittaa kameran siihen.
+    // Viimeisin paikka vanhaa polkua varten (?koe=interpvanha).
     syote.veto = { x: e.clientX, y: e.clientY, aika: leima(e) };
+    /*
+     * NÄYTTEET AIKALEIMOINEEN. `getCoalescedEvents` antaa ne
+     * välinäytteet, jotka selain niputti yhteen tapahtumaan.
+     *
+     * EI SAA NOJATA SIIHEN. Safari tukee sitä vasta iOS 18.2:sta ja
+     * vajaana (kentät kuten pointerId ja target puuttuvat), eikä
+     * `pointerrawupdate`a ole Safarissa lainkaan. Tässä käytetään vain
+     * clientX/clientY ja aikaleima, ja jokainen näyte kelpuutetaan
+     * erikseen — kelvoton lista johtaa varapolkuun (itse tapahtuma),
+     * ei rikkinäisiin näytteisiin.
+     */
+    // (5) Kun näytteet luetaan touchmovesta, pointermove ei enää syötä
+    // puskuria — muuten sama liike tulisi kahdesti eri kellotuksella.
+    if (syote.touchLahde) return;
+    const osat = typeof e.getCoalescedEvents === 'function' ? e.getCoalescedEvents() : null;
+    const lisaa = (p) => {
+      const x = p?.clientX;
+      const y = p?.clientY;
+      if (!Number.isFinite(x) || !Number.isFinite(y)) return false;
+      const t = leima(p);
+      const n = syote.naytteet;
+      if (n.length && t < n[n.length - 1].t) return false; // ei taaksepäin
+      n.push({ x, y, t });
+      if (n.length > OSOITTIMEN_NAYTTEITA) n.shift();
+      return true;
+    };
+    let lisatty = 0;
+    if (osat && osat.length) for (const p of osat) { if (lisaa(p)) lisatty += 1; }
+    if (!lisatty) lisaa(e);
   });
   /*
    * KEHYKSEN ALUSSA: odottava veto ja nipistys sovelletaan kameraan
    * ennen kirjaston ohjainpäivitystä ja piirtoa. Kääre puretaan
    * `pura`ssa.
    */
+  /*
+   * KEHYSVÄLI MITATAAN, EI OLETETA. Viive ja ekstrapoloinnin katto ovat
+   * "yksi kehys", ja se on 120 Hz:n näytöllä eri luku kuin 60 Hz:n.
+   * Liukuva keskiarvo tasaa yksittäisen pitkän kehyksen.
+   */
+  let kehysvali = 16.7;
+  let edellinenKehys = 0;
+  const paivitaKehysvali = (nyt) => {
+    if (edellinenKehys > 0) {
+      const dt = nyt - edellinenKehys;
+      if (dt > 4 && dt < 60) kehysvali = kehysvali * 0.8 + dt * 0.2;
+    }
+    edellinenKehys = nyt;
+  };
+  /*
+   * (5) NÄYTTEET TOUCHMOVESTA. iOS:n Safari tahdistaa touchmoven
+   * rAF:iin mutta EI pointermovea (Nolan Lawson, ks. OSOITIN KEHYKSEN
+   * HETKELLÄ), joten kosketuslaitteella touchmove antaa valmiiksi
+   * kehystahtiset näytteet. Lippu vaikuttaa VAIN kosketuslaitteella:
+   * hiirellä pointermove on ainoa lähde.
+   */
+  const touchNayte = (ev) => {
+    if (!syote.touchLahde || !tartunta || sormet.alhaalla !== 1) return;
+    const kosketukset = ev?.touches;
+    const k = kosketukset && kosketukset.length === 1 ? kosketukset[0] : null;
+    if (!k || !Number.isFinite(k.clientX) || !Number.isFinite(k.clientY)) return;
+    const t = leima(ev);
+    const n = syote.naytteet;
+    if (n.length && t < n[n.length - 1].t) return;
+    n.push({ x: k.clientX, y: k.clientY, t });
+    if (n.length > OSOITTIMEN_NAYTTEITA) n.shift();
+    syote.veto = { x: k.clientX, y: k.clientY, aika: t };
+    syote.touchNaytteita = (syote.touchNaytteita ?? 0) + 1;
+  };
+  /*
+   * KUUNTELIJA KAIKILLE KOSKETUSLAITTEILLE, EI VAIN VALINNAN AIKANA:
+   * käsittelijä palaa heti, kun `syote.touchLahde` on epätosi, ja
+   * valinta voi vaihtua kesken pelin. Ehdollinen kytkentä vaatisi
+   * lisäyksen ja poiston lennossa — yksi passiivinen kuuntelija on
+   * halvempi kuin kaksi kirjanpitoa.
+   */
+  if (kosketusLaite) kotelo.addEventListener('touchmove', touchNayte, { passive: true });
+
+  /*
+   * VALINTA VAIHTUI VALIKOSSA (js/vedon-seuranta.js): tapa vaihtuu
+   * heti, ilman uutta latausta. Puskuri nollataan — vanhat näytteet on
+   * kerätty vanhalla tavalla ja vanhasta lähteestä, ja jousen tila
+   * kuuluu jouselle.
+   */
+  const seurantaVaihtui = () => {
+    if (mittausLippu) return; // mittausajossa lippu pitää valtansa
+    asetaTapa(seurannanAsetukset());
+    syote.naytteet.length = 0;
+    syote.veto = null;
+    syote.jousi = null;
+    syote.vx = undefined;
+    syote.vy = undefined;
+    syote.edellinenNyt = 0;
+  };
+  globalThis.addEventListener?.(VEDON_SEURANTA_TAPAHTUMA, seurantaVaihtui);
+
   const sovellaSyote = () => {
-    const v = syote.veto;
-    if (v) { syote.veto = null; sovellaVeto(v.x, v.y, v.aika); }
+    const nyt = performance.now();
+    paivitaKehysvali(nyt);
+    if (syote.tapa === 'vanha') {
+      // (1) v2097: viimeisin näyte sellaisenaan, kerran kehyksessä.
+      const v = syote.veto;
+      if (v) { syote.veto = null; sovellaVeto(v.x, v.y, v.aika); }
+    } else if (syote.naytteet.length) {
+      const n = syote.naytteet;
+      const viimeinen = n[n.length - 1];
+      const dt = Math.max(1, nyt - (syote.edellinenNyt || nyt - kehysvali));
+      syote.edellinenNyt = nyt;
+      let kohta = null;
+      if (syote.tapa === 'ennakko') {
+        /*
+         * (3) NOLLA VIIVE, ARVAUS TILALLE. Tavoite on kehyksen hetki
+         * ILMAN viivettä, eli näytteiden yli ekstrapoloidaan aina.
+         * Kiihtyvyyskatto estää hypyn, kun sormi vaihtaa suuntaa:
+         * ilman sitä suunnanvaihdos heittäisi kameran väärään suuntaan
+         * ennen kuin uusi näyte ehtii korjata.
+         */
+        const raaka = osoittimenKohta(n, nyt, { ekstraMax: OSOITTIMEN_EKSTRAPOLOINTI_MAX_MS });
+        if (raaka) {
+          const vx = (raaka.x - viimeinen.x) / Math.max(1, raaka.t - viimeinen.t || 1);
+          const vy = (raaka.y - viimeinen.y) / Math.max(1, raaka.t - viimeinen.t || 1);
+          const rx = rajaaKiihtyvyys(syote.vx, vx, dt);
+          const ry = rajaaKiihtyvyys(syote.vy, vy, dt);
+          syote.vx = rx;
+          syote.vy = ry;
+          const yli = Math.max(0, nyt - viimeinen.t);
+          kohta = { x: viimeinen.x + rx * yli, y: viimeinen.y + ry * yli, t: nyt };
+          syote.ekstrapolointeja += 1;
+        }
+      } else if (syote.tapa === 'jousi') {
+        /*
+         * (4) KRIITTISESTI VAIMENNETTU JOUSI sormen viimeisimpään
+         * näytteeseen. Aikavakio on noin yksi kehys, ja askel on
+         * dt-pohjainen, joten tulos ei riipu kehystaajuudesta (toisin
+         * kuin kehyskohtainen kerroin, joka 120 Hz:llä olisi kaksi
+         * kertaa nopeampi kuin 60 Hz:llä).
+         */
+        const tau = Math.max(1, kehysvali * SYOTE_JOUSI_KEHYKSIA);
+        if (!syote.jousi) syote.jousi = { x: viimeinen.x, y: viimeinen.y, vx: 0, vy: 0 };
+        const jx = jousiAskel(syote.jousi.x, syote.jousi.vx, viimeinen.x, dt, tau);
+        const jy = jousiAskel(syote.jousi.y, syote.jousi.vy, viimeinen.y, dt, tau);
+        syote.jousi = { x: jx.p, y: jy.p, vx: jx.v, vy: jy.v };
+        kohta = { x: jx.p, y: jy.p, t: nyt };
+        syote.interpolointeja += 1;
+      } else {
+        /*
+         * (2) OLETUS: paikka kehyksen hetkelle, viive enintään yksi
+         * kehys. Näytteetön kehys jatkaa viimeisellä nopeudella
+         * korkeintaan yhden kehyksen verran.
+         */
+        const viive = Math.min(kehysvali, OSOITTIMEN_VIIVE_MAX_MS);
+        syote.viiveMs = viive;
+        kohta = osoittimenKohta(n, nyt - viive, {
+          ekstraMax: Math.min(kehysvali, OSOITTIMEN_EKSTRAPOLOINTI_MAX_MS),
+        });
+        if (kohta) {
+          if (kohta.t > viimeinen.t) syote.ekstrapolointeja += 1;
+          else syote.interpolointeja += 1;
+        }
+      }
+      if (kohta) {
+        syote.veto = null;
+        sovellaVeto(kohta.x, kohta.y, kohta.t);
+      }
+    }
     if (syote.nipistys) { syote.nipistys = false; sovellaNipistys(); }
   };
   const alkuperainenUpdate = ohjaimet.update;
@@ -3314,6 +3908,8 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
     return alkuperainenUpdate.apply(this, args);
   };
   const puraSyote = () => {
+    if (kosketusLaite) kotelo.removeEventListener('touchmove', touchNayte);
+    globalThis.removeEventListener?.(VEDON_SEURANTA_TAPAHTUMA, seurantaVaihtui);
     if (ohjaimet.update?.name === 'pallonSyoteUpdate') ohjaimet.update = alkuperainenUpdate;
     kokovahti?.disconnect();
   };

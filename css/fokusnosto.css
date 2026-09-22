@@ -1145,10 +1145,14 @@ button.skandaali-kuvanuoli:is(:hover, :active, :focus, :focus-visible) { backgro
        Le Mans -kaappaus työpöydällä; korjattu samana päivänä omistajan
        hylkäyksen jälkeen — ks. TOINEN YRITYS alla)
    ---------------------------------------------------------------------------
-   Leveällä ruudulla nostokortti (VAIN js/fokusnosto.js, ei kohdekortti,
-   skandaali, eläintäky, hetki eikä syvennys — ne käyttävät samoja
-   .fokusnosto-* luokkia mutta OMAA kuorielementtiään, ks. tiedoston
-   alkukommentti) saa kaksi palstaa: kuva JA sen kuvateksti vasemmalla
+   22.9.2026: SAMA TAITTO ON NYT KAIKILLA KUVA EDELLÄ -KORTEILLA (omistaja
+   klo 23.06, "Kaikkiin nostoihin kaksi palstaa") — kohdekortti,
+   skandaali, eläintäky, hetki ja syvennys saavat saman säännön
+   css/nostokuva.css:stä luokan .nostokuva-kortti kautta, ja
+   js/nostokuva.js nostoPalstoiksi rakentaa niille samat kotelot. Tämä
+   osio koskee edelleen nostokorttia sellaisenaan.
+
+   Leveällä ruudulla nostokortti saa kaksi palstaa: kuva JA sen kuvateksti vasemmalla
    (KUVAPALSTA, enintään 50 % kortista, pystykuvalla kapeampi), kaikki
    muu oikealla (TEKSTIPALSTA: leipäteksti, mahdollinen kakkoskuva,
    lähde, karttaliite, "Lukijan kysymys", kohdenappi, pöllökysymykset).

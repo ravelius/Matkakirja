@@ -10,6 +10,8 @@ import { readFileSync } from 'node:fs';
 import {
   LEPOPIIRTO_HIDAS_MS, LEPOPIIRTO_SYKE_MS, asennaLepopiirto, lepopiirtoKaytossa, lepopiirtoPaatos,
 } from '../js/pallolauta/lepopiirto.js';
+import { luoKehysprofiili } from '../js/pallolauta/kehysprofiili.js';
+import { kokeenPikselisuhde } from '../js/pallo.js';
 
 const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
 
@@ -118,6 +120,16 @@ test('kytkennät: lauta asentaa, häiveet ja nimiöt ilmoittavat, savuke pakotta
   assert.match(lauta, /hitaat: \(\) => sykkiiNyt\(\)/);
   assert.match(lauta, /sykkiiNyt = \(\) => Boolean\(glSovitin\?\.sykkii\?\.\(\)\);/);
   assert.match(lauta, /ryhma\[nimi\] = function ryhmanMuutos/);
+  /*
+   * Syöte on muutoslähde kuten häiveet ja nimiöt: se ilmoittaa
+   * lepopiirrolle. Mitattu hyöty on vedon alun determinismi — yksi
+   * kehys (14–15 ms) sen sijaan että lähtö riippuisi sykkeen osumasta
+   * (29 ms chromium, 52 ms webkit ilman ilmoitusta). Ks. V6.
+   */
+  const pallo = lue('../js/pallo.js');
+  assert.match(pallo, /const ilmoitaSyote = \(\) => \{ try \{ pallo\.__piirto\?\.tarvitaan\?\.\(\); \} catch/);
+  assert.match(pallo, /kotelo\.addEventListener\('pointerdown', \(\) => \{\n\s*ilmoitaSyote\(\);/);
+  assert.match(pallo, /if \(!tartunta \|\| sormet\.alhaalla !== 1\) return;\n\s*ilmoitaSyote\(\);/);
   // Uni kulkee lepopiirron kautta: kirjaston silmukalla on yksi omistaja.
   assert.match(lauta, /if \(pallo\.__piirto\) pallo\.__piirto\.uni\(false\);\n\s*else pallo\.resumeAnimation\?\.\(\);/);
   assert.match(lauta, /if \(pallo\.__piirto\) pallo\.__piirto\.uni\(true\);\n\s*else pallo\.pauseAnimation\?\.\(\);/);
@@ -135,7 +147,104 @@ test('kytkennät: lauta asentaa, häiveet ja nimiöt ilmoittavat, savuke pakotta
 test('atlaksen osittainen päivitys (sulavuus kohta 8): viedyn sivun rasteri texSubImage2D:llä, ei koko kangasta', () => {
   const gl = lue('../js/pallonimiot-gl.js');
   assert.match(gl, /if \(sivu\.viety && !atlasKoko && typeof renderer\?\.copyTextureToTexture === 'function'\)/);
-  assert.match(gl, /if \(renderer\.copyTextureToTexture\.length >= 3\) renderer\.copyTextureToTexture\(kohta, lahde, sivu\.tekstuuri\);\n\s*else renderer\.copyTextureToTexture\(lahde, sivu\.tekstuuri, null, kohta\);/);
+  assert.match(gl, /renderer\.copyTextureToTexture\(lahde, sivu\.tekstuuri, alue, kohta\);/);
+  // Vanha allekirjoitus ei ota aluetta: silloin EI osapäivitystä, vaan koko sivun vienti.
+  assert.match(gl, /if \(renderer\.copyTextureToTexture\.length >= 3\) \{\n\s*sivu\.likainen = true;/);
+  assert.doesNotMatch(gl, /copyTextureToTexture\(kohta, lahde, sivu\.tekstuuri\)/, 'aluetonta kopiota ei saa tehdä: lähde on koko atlas');
+  /*
+   * LÄHDE ON ATLASKANGAS, EI RASTERIN OMA KUVA (22.9.2026). Kun lähde
+   * oli rasterin kangas, osittain päivitetty läpinäkyvä pikseli piirtyi
+   * liian kirkkaana (kultalevy 0,72-alfalla: (246,237,148) eikä
+   * (212,182,117)) — koko kankaan vienti teki saman oikein. Sama
+   * kangas molemmille poluille on se, mikä takaa saman tuloksen.
+   */
+  assert.match(gl, /sivu\.lahdetekstuuri = new L\.Texture\(sivu\.kangas\);/);
+  assert.match(gl, /sivu\.lahdetekstuuri\.premultiplyAlpha = true;/);
+  assert.doesNotMatch(gl, /const lahde = new L\.Texture\(rasteri\.kuva\);/, 'rasterin oma kangas ei kelpaa lähteeksi');
   assert.match(gl, /s\.tekstuuri\.needsUpdate = true; s\.likainen = false; s\.viety = true;/);
   assert.match(gl, /includes\('atlaskoko'\)/, 'koelippu palauttaa koko kankaan viennin');
+});
+
+/*
+ * ELEEN AIKANA EI OHITETA YHTÄKÄÄN KEHYSTÄ (omistajan iPhone-mittaus
+ * 22.9.2026, v2122:n kehysprofiili: rAF 59–63 Hz mutta piirto vain
+ * 51–86 % ja ohitettuja 133–234 vedon aikana).
+ *
+ * KEHÄ: iOS ei tahdista pointermovea rAF:iin, joten osaan kehyksistä ei
+ * osu tapahtumaa. Lepopiirto näki sellaisen kehyksen levollisena ja
+ * pysäytti kirjaston tickin — mutta kaikki syötetavat ajetaan
+ * `ohjaimet.update`issa eli juuri siinä tickissä, joten odottava veto
+ * ei voinut edetä eikä kamera muuttua. Siitä syntyy 0/2-kuvio, jota
+ * mikään syötetapa tai dpr ei voi korjata.
+ *
+ * Sopimus on lähteessä, koska ele ja lepopiirto kohtaavat vasta
+ * selaimessa; savuke-lepopiirto V7 mittaa saman ajossa.
+ */
+test('lepopiirto: ele ja liuku ovat este, eli vedon aikana piirretään joka kehys', () => {
+  const lauta = lue('../js/pallolauta/lauta.js');
+  assert.match(lauta, /esteet: \(\) => vetoNyt\(\)/, 'ele ohittaa lepopiirron ohitukset');
+  assert.match(lauta, /vetoNyt = \(\) => eleKaynnissa\(\) \|\| Boolean\(ui\.pallonVauhti\?\.raf\);/,
+    'sormi, nipistys, kamera-ajo ja irrotuksen jälkeinen liuku');
+  assert.match(lauta, /ELEEN AIKANA EI OHITETA YHTÄKÄÄN KEHYSTÄ/, 'perustelu jää lähteeseen');
+  const savuke = lue('../tools/savukkeet/savuke-lepopiirto.mjs');
+  assert.match(savuke, /vedon aikana piirto joka rAF-kehyksessä, myös ilman tapahtumaa/, 'vartija ajossa');
+  /*
+   * Vartijan on ANNETTAVA kehyksiä ilman tapahtumaa: tasaisuusmittarin
+   * oma veto lähettää pointermoven joka kehyksellä, eikä se paljasta
+   * tätä vikaa lainkaan (todettu: korjaamattomalla puulla 0 ohitusta).
+   */
+  assert.match(savuke, /if \(kehyksia % 2 === 0\) \{ x \+= 1\.4; tapahtuma\('pointermove'\); \}/);
+});
+
+/* --- yksi rAF-ketju per mittaus (v2123:n vika) ------------------------- */
+
+/*
+ * OMISTAJAN KAAPPAUS v2123 (Tasainen): "rAF 500 Hz (dt p50 2,0)" ja
+ * 4130 kehystä kolmessa sekunnissa — mahdotonta yhdelle ketjulle.
+ * Syy: rollaava ikkuna sulkee ja avaa profiilin, ja vanha askel katsoi
+ * vain `tila.kaynnissa`, joka oli UUDEN mittauksen kenttä. Jokainen
+ * jakso lisäsi ketjun, ja ne kaikki syöttivät samaa taulukkoa.
+ */
+test('kehysprofiili: uudelleen avaaminen ei kasvata rAF-ketjujen määrää', () => {
+  let jono = [];
+  const ikkuna = {
+    performance: { now: () => aika },
+    requestAnimationFrame: (fn) => { jono.push(fn); return jono.length; },
+    cancelAnimationFrame: () => {},
+  };
+  let aika = 0;
+  const profiili = luoKehysprofiili(() => ({}), ikkuna);
+  /** Yksi kehys: ajetaan kaikki jonossa olevat askeleet. */
+  const kehys = () => {
+    aika += 16.7;
+    const nyt = jono;
+    jono = [];
+    for (const fn of nyt) fn(aika);
+    return nyt.length;
+  };
+  profiili.aloita();
+  kehys();
+  assert.equal(profiili.ketjuja(), 1, 'yksi ketju alussa');
+  for (let i = 0; i < 5; i += 1) {
+    profiili.lopeta();
+    profiili.aloita();
+    kehys();
+    kehys();
+  }
+  assert.equal(profiili.ketjuja(), 1, `viiden jakson jälkeen ketjuja ${profiili.ketjuja()}`);
+  assert.equal(kehys(), 1, 'kehyksessä ajetaan tasan yksi askel');
+  const tulos = profiili.lopeta();
+  // dt on rAF-väli eikä sen murto-osa: monta ketjua puolittaisi sen.
+  const dts = (tulos?.kehykset ?? []).map((k) => k.dt);
+  assert.ok(dts.every((d) => d > 8), `dt p50 ≥ 8 ms (${dts.join(',')})`);
+});
+
+test('koelippu ?koe=dpr15 lukitsee pikselisuhteen täyttökokeeksi', () => {
+  assert.equal(kokeenPikselisuhde(new Set(['dpr15'])), 1.5);
+  assert.equal(kokeenPikselisuhde(new Set(['dpr2'])), 2);
+  assert.equal(kokeenPikselisuhde(new Set(['syoteloki'])), null, 'muut liput eivät koske pikselisuhteeseen');
+  const lahde = readFileSync(new URL('../js/pallo.js', import.meta.url), 'utf8');
+  // Lukko on molemmissa kirjoituskohdissa: asetus ei saa nostaa suhdetta kesken mittauksen.
+  assert.match(lahde, /const suhde = koeSuhde \?\? pikselisuhdeTarkkuudella/);
+  assert.match(lahde, /const suhde = koeSuhde \?\? Math\.min\(dpr, lepoon/);
 });

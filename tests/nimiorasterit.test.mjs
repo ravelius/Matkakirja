@@ -126,3 +126,21 @@ test('sw.js kantaa rasterilähteen', () => {
   const sw = readFileSync(new URL('../sw.js', import.meta.url), 'utf8');
   assert.match(sw, /'\.\/js\/pallolauta\/nimiorasterit\.js'/);
 });
+
+/*
+ * KUVAMERKIN VAALEA KEHÄ POISTETTU (omistaja 22.9.2026, kuva
+ * Carcassonnesta: *"Nostoihin jää valkoinen reunus, joka kyllä poistuu,
+ * kun zoomaa tarpeeksi lähelle, mutta maailma tilan ollessa päällä
+ * valkoinen reunus jää. Se saisi olla aina poissa."*).
+ *
+ * Kehä oli elävän rasterin oma varjo (`shadowColor`), eikä poltettu
+ * laatta voi toistaa sitä — siitä syntyi kaksi eri ulkoasua samalle
+ * merkille. Tämä on lähdesopimus, koska kangasta ei ole Nodessa: jos
+ * varjo palaa kuvamerkin piirtoon, sama vika palaa mukana.
+ */
+test('kuvamerkki piirretään ilman vaaleaa kehää (ei varjoa rasterissa)', () => {
+  const lahde = readFileSync(new URL('../js/fokusnosto-symbolit.js', import.meta.url), 'utf8');
+  assert.doesNotMatch(lahde, /NOSTOSYM_KUVAMERKIN_HALO/, 'halon vakiot poistettu');
+  assert.doesNotMatch(lahde, /ctx\.shadowColor/, 'rasteri ei piirrä varjoa');
+  assert.match(lahde, /KUVAMERKIN HALO POISTETTU/, 'poiston perustelu jää lähteeseen');
+});

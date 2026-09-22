@@ -875,13 +875,18 @@ export function nostosymMiniMerkki(symboli, laji) {
  * rasteria varten (nostosymMustelajit), joten kumpikin piirtotapa
  * jäljittää yhtä lähdettä.
  */
-export function piirraNostosymMini(g, symboli, laji) {
+export function piirraNostosymMini(g, symboli, laji, { harmaa = false } = {}) {
   const merkki = nostosymMiniMerkki(symboli, laji);
   // Kiekko ensin ja mustereuna sen päälle: reunan on peitettävä värin
   // laita, tai kiekosta jää musteen ulkopuolelle värillinen kehä.
+  //
+  // `harmaa` on KARTAN piste (ks. KARTAN PISTE ON HARMAA): kartalla
+  // kiekko on neutraali ja värin kertoo vivun sytyttämä valotäplä.
+  // Selitevalikon oma merkki (js/karttaselite.js) on sen sijaan
+  // VÄRIAVAIN, joten se pitää kategoriavärinsä.
   if (merkki.taytto) {
     el('path', {
-      class: `nostosym-mini-taytto nostosym-mini-${merkki.vari}`,
+      class: `nostosym-mini-taytto nostosym-mini-${harmaa ? 'harmaa' : merkki.vari}`,
       d: merkki.taytto,
     }, g);
   }
@@ -920,7 +925,9 @@ function piirraNostosymMiniCanvas(ctx, tunnus, muste, porras) {
      * rasteri itse on paikallaan. Väri pysyy aiheen musteella.
      */
     const alfa = ctx.globalAlpha;
-    const vari = muste.varit?.[merkki.vari] ?? NOSTOSYM_PISTE_VARIT[merkki.vari];
+    // Kartan kiekko on harmaa (ks. KARTAN PISTE ON HARMAA); hehkukin
+    // on siis neutraali, ja aiheen väri tulee vivun valotäplästä.
+    const vari = muste.harmaa ?? NOSTOSYM_PISTE_HARMAA;
     const r = NOSTOSYM_PISTE_R;
     const hehku = ctx.createRadialGradient(0, 0, r * 0.7, 0, 0, r * NOSTOSYM_HEHKUN_SADE);
     hehku.addColorStop(0, nostosymVariAlfalla(vari, NOSTOSYM_HEHKUN_ALFA));
@@ -2187,6 +2194,30 @@ export const NOSTOSYM_PISTE_VARIT = {
  */
 export const NOSTOSYM_PISTE_HIMMEYS = 0.86;
 
+/*
+ * KARTAN PISTE ON HARMAA, VÄRI TULEE VIVUSTA (omistaja 22.9.2026,
+ * sanatarkasti: *"...tai sitten muuttaa piste pelkäksi harmaaksi
+ * pisteeksi jossa itsessään ei ole väriä vaan väri tulisi vasta kun
+ * nostoväri on laitettu vivusta päälle."*).
+ *
+ * Yksitoista kategoriaa jakoi saman kiekon ja erosi vain väristä, joten
+ * kartta oli täynnä värejä, joista yksikään ei ollut vastaus mihinkään
+ * kysymykseen. Nyt kiekko on kartalla neutraali — ja kun karttaselitteen
+ * vipu sytyttää aiheen, sen merkkien alle piirtyy aiheen VÄRINEN
+ * valotäplä (js/pallolauta/nostot.js paivitaValot, js/karttavalot.js).
+ * Väri on siis vastaus vipuun eikä merkin pysyvä ominaisuus.
+ *
+ * VÄRIT EIVÄT KADONNEET: NOSTOSYM_PISTE_VARIT elää yhä selitevalikon
+ * väripallossa ja valotäplässä (karttavaloVari) — vain kartan oma
+ * kiekko on harmaa.
+ *
+ * POLTETTU LAATTA ON VIELÄ VÄRILLINEN: Karttasepän nostolaatoissa on
+ * kiekon väri poltettuna, joten lähizoomissa näkyy toistaiseksi vanha
+ * värillinen piste, kunnes laatat poltetaan uudelleen. Elävä kerros ja
+ * tämä vakio ovat sen poltonkin lähde.
+ */
+export const NOSTOSYM_PISTE_HARMAA = '#6f6a61';
+
 /** Mittanauha tekstin leveydelle; yksi konteksti koko kirjastolle. */
 let NOSTOSYM_MITTA = null;
 
@@ -2295,6 +2326,7 @@ function nostosymMustelajit(svg) {
     return NOSTOSYM_MUSTE ?? {
       ...NOSTOSYM_MUSTE_VARA,
       varit: NOSTOSYM_PISTE_VARIT,
+      harmaa: NOSTOSYM_PISTE_HARMAA,
       pisteHimmeys: NOSTOSYM_PISTE_HIMMEYS,
     };
   }
@@ -2324,6 +2356,8 @@ function nostosymMustelajit(svg) {
   NOSTOSYM_MUSTE = {
     vahva: lue('nostosym-mini', NOSTOSYM_MUSTE_VARA.vahva),
     ohut: lue('nostosym-mini-ohut', NOSTOSYM_MUSTE_VARA.ohut),
+    // Kartan kiekon harmaa samasta tyylitiedostosta kuin muutkin sävyt.
+    harmaa: lue('nostosym-mini-taytto nostosym-mini-harmaa', NOSTOSYM_PISTE_HARMAA),
     varit,
     pisteHimmeys: Number.isFinite(peitto) ? peitto : NOSTOSYM_PISTE_HIMMEYS,
   };
@@ -2492,16 +2526,24 @@ const NOSTOSYM_NIMIO_ALAOSA = 0.25;
 export const NOSTOSYM_KUVAMERKIN_KERROIN = 1.6;
 export const NOSTOSYM_TASO1_MUSTE = 'rgba(46,30,14,0.98)';
 /*
- * KUVAMERKIN HALO (Fable 21.9.2026): tumman reliefin päällä (Mont Blanc
- * Alppien rinteellä) vaalea kuvamerkki hukkui taustaan. Sama
- * paperinvaalea sädekehä kuin Karttasepän poltetuilla nimiöillä
- * (js/pallolaatat.js NIMION_HALO): varjo kuvan omasta muodosta, neljä
- * vetoa, ja päälle merkki terävänä. Säde on merkin yksiköissä ja
- * kerrotaan portaalla rasterissa.
+ * KUVAMERKIN HALO POISTETTU (omistaja 22.9.2026, kuva Carcassonnesta,
+ * sanatarkasti: *"Nostoihin jää valkoinen reunus, joka kyllä poistuu,
+ * kun zoomaa tarpeeksi lähelle, mutta maailma tilan ollessa päällä
+ * valkoinen reunus jää. Se saisi olla aina poissa."*).
+ *
+ * Halo oli paperinvaalea sädekehä (rgb(252,249,242), neljä vetoa)
+ * kuvamerkin ympärillä — Fablen lisäys 21.9.2026 siihen, että vaalea
+ * kuvamerkki hukkui tumman reliefin päälle (Mont Blanc Alppien
+ * rinteellä). Lähizoomissa merkki tulee Karttasepän poltetusta
+ * laatasta, jossa haloa ei ole, joten reunus katosi zoomatessa ja jäi
+ * näkyviin siellä, missä elävä rasteri piirtää merkin — muun muassa
+ * maailmanäkymässä. Kahdesta eri ulkoasusta samalle merkille omistaja
+ * valitsi sen, jossa reunusta ei ole.
+ *
+ * JOS LUETTAVUUS PETTÄÄ tumman reliefin päällä, ratkaisu on merkin oma
+ * muste (tummempi veto tai ohut musteääriviiva), ei vaalea kehä: se ei
+ * saa palata, koska poltettu laatta ei voi sitä toistaa.
  */
-export const NOSTOSYM_KUVAMERKIN_HALO = 'rgb(252, 249, 242)';
-export const NOSTOSYM_KUVAMERKIN_HALO_SADE = 1.2;
-export const NOSTOSYM_KUVAMERKIN_HALO_VETOJA = 4;
 /** Tyyppi (kategoria tai luonnon laji) → kuvamerkin tiedosto. */
 export const NOSTOSYM_KUVAMERKIT = {
   vuori: 'merkki-vuori', saari: 'merkki-saari', jarvi: 'merkki-jarvi', joki: 'merkki-joki',
@@ -2712,16 +2754,10 @@ async function nostosymRasteroi(tunnus, nimio, svg, porras, nimionLaji, puoli = 
     // Pelkkä nimiö samaan laatikkoon (erillinen nimiökuva, ks.
     // piirraNostosymKartalle `erillinenNimio`): ikonin ruutu jää tyhjäksi.
   } else if (merkkikuva) {
-    // Kuvamerkki koko ruutuun (2 × sade), keskitettynä origoon —
-    // ensin paperinvaalea halo (ks. KUVAMERKIN HALO), sitten merkki.
+    // Kuvamerkki koko ruutuun (2 × sade), keskitettynä origoon. Ei
+    // vaaleaa kehää (ks. KUVAMERKIN HALO POISTETTU): elävän rasterin on
+    // näytettävä samalta kuin poltetun laatan.
     const koko = 2 * sade * porras;
-    ctx.save();
-    ctx.shadowColor = NOSTOSYM_KUVAMERKIN_HALO;
-    ctx.shadowBlur = NOSTOSYM_KUVAMERKIN_HALO_SADE * porras;
-    for (let veto = 0; veto < NOSTOSYM_KUVAMERKIN_HALO_VETOJA; veto += 1) {
-      ctx.drawImage(merkkikuva, -koko / 2, -koko / 2, koko, koko);
-    }
-    ctx.restore();
     ctx.drawImage(merkkikuva, -koko / 2, -koko / 2, koko, koko);
   } else {
     piirraNostosymMiniCanvas(ctx, tunnus, muste, porras);
@@ -2933,7 +2969,7 @@ export function piirraNostosymKartalle(g, symboli, nimio, laji, kylki = 'oikea',
   const puoli = teksti ? nostosymNimioPuoli(kylki) : 'oikea';
   const elavana = () => {
     g.replaceChildren();
-    piirraNostosymMini(g, symboli, laji);
+    piirraNostosymMini(g, symboli, laji, { harmaa: true });
     // Teksti on jo ladottu mittaansa yllä; toinen lyhennys katkaisisi
     // yhdistetyn merkin pilkkulistan uudestaan (Infinity = älä koske).
     if (teksti) piirraNostosymNimio(g, teksti, laji, puoli, Infinity);

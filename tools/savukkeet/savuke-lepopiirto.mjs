@@ -19,11 +19,19 @@
  *       hehkupisteen syke 15 fps), ja yhtään 'kamera'-syytä ei kerry
  *       (kameran vertailu ei värähtele).
  *   V2  LIIKKEESSÄ JOKA KEHYS: tasaisuusmittarin veto — pysähdyksiä ≤ 2
+ *   V7  VEDON AIKANA EI OHITUKSIA, vaikka tapahtuma osuisi vain joka
+ *       toiseen kehykseen (iOS ei tahdista pointermovea rAF:iin);
+ *       ohitettu kehys pysäyttää tickin, jossa syöte sovelletaan
  *       (headless WebKit pysähtyy 1–2 kehystä ilman lepopiirtoakin).
  *   V3  MUUTOS NÄKYY HETI: kamera uuteen paikkaan → laattojen saapuminen
  *       kirjaa 'pakko'/'tarve'-piirtoja (ryhmän add ilmoittaa), ja
  *       levossa readPixels ilman pakotusta antaa laatan värin, ei taustaa.
  *   V4  PALUULIPPU: `?koe=levovanha` piirtää joka kehys (≥ 50 fps).
+ *   V6  VEDON ALKU: oikeilla osoitintapahtumilla kamera liikkuu alle
+ *       120 ms:ssä ensimmäisestä tapahtumasta. Mitattu 22.9.2026:
+ *       ilman syötteen ilmoitusta 29 ms (chromium) ja 52 ms (webkit),
+ *       ilmoituksen kanssa 14 ja 15 ms eli yksi kehys. V2 ei kata tätä,
+ *       koska tasaisuusmittari ajaa kameraa suoraan.
  *   V5  KANGAS EI VÄLKY: levossa SOMMITTELIJAN kautta otetut kaappaukset
  *       ovat kaikki karttaa, eivät tyhjää. Tämä on omistajan 22.9.2026
  *       löytämä vika ("kartta välkkyy kuin strobovalo"): renderin ohitus
@@ -182,6 +190,47 @@ tieto(`V5 ${MOOTTORI} kaappaukset levossa`, `${Math.min(...koot)}–${Math.max(.
 // Piirto joka kehys antaa 1,12 ×; renderin ohitus antoi 24 ×. Raja 1,5 ×.
 vaadi(`V5 ${MOOTTORI}: kangas ei välky levossa`, suhde <= 1.5, `ero ${suhde.toFixed(2)}×, koot ${koot.join(',')}`);
 
+/*
+ * V6: VEDON ALKU. Odottava veto sovelletaan kameraan kirjaston tickissä
+ * (pallo.js sovellaSyote → ohjaimet.update), ja lepopiirto pysäyttää
+ * tickin levossa. Ennustin tästä 250 ms:n jumin (veto ei voi herättää
+ * tickiä, koska herätesyy on "kamera muuttui" eikä kamera voi muuttua
+ * ennen sovellusta) — MITTAUS EI VAHVISTANUT SITÄ: ilman ilmoitustakin
+ * veto lähti 29 ms:ssä (chromium) ja 52 ms:ssä (webkit), eli jokin muu
+ * herättää tickin. Ilmoitus tekee lähdöstä silti yhden kehyksen
+ * mittaisen ja DETERMINISTISEN (14 ja 15 ms) sen sijaan, että se
+ * riippuisi sykkeen osumasta. Tämä väite vahtii lukua, ei teoriaa.
+ */
+const alkuviive = await (async () => {
+  await sivu.evaluate(() => { window.matkakirja.ui.pallolauta.heraa?.(); });
+  await sivu.waitForTimeout(1200); // varmistetaan lepo: tick pysäytetty
+  const ennen = await sivu.evaluate(() => {
+    const p = window.matkakirja.ui.pallonInstanssi.pointOfView();
+    window.__vedonAlku = { lng: p.lng, lat: p.lat, t: performance.now(), havaittu: null };
+    const seuraa = () => {
+      const n = window.matkakirja.ui.pallonInstanssi.pointOfView();
+      if (window.__vedonAlku.havaittu == null
+        && (Math.abs(n.lng - window.__vedonAlku.lng) > 1e-6 || Math.abs(n.lat - window.__vedonAlku.lat) > 1e-6)) {
+        window.__vedonAlku.havaittu = performance.now() - window.__vedonAlku.t;
+      }
+      requestAnimationFrame(seuraa);
+    };
+    requestAnimationFrame(seuraa);
+    return true;
+  });
+  if (!ennen) return null;
+  const x = 195; const y = 500;
+  await sivu.mouse.move(x, y);
+  await sivu.evaluate(() => { window.__vedonAlku.t = performance.now(); });
+  await sivu.mouse.down();
+  for (let i = 1; i <= 8; i += 1) { await sivu.mouse.move(x - i * 6, y); await sivu.waitForTimeout(16); }
+  await sivu.mouse.up();
+  return sivu.evaluate(() => window.__vedonAlku.havaittu);
+})();
+tieto(`V6 ${MOOTTORI} vedon alku`, `kamera liikkui ${alkuviive == null ? 'EI LAINKAAN' : `${alkuviive.toFixed(0)} ms`} ensimmäisestä tapahtumasta`);
+// Syke on 250 ms; aito veto saa lähteä enintään parin kehyksen viiveellä.
+vaadi(`V6 ${MOOTTORI}: veto lähtee heti (ei sykettä odottaen)`, alkuviive != null && alkuviive < 120, `${alkuviive} ms`);
+
 const veto = await sivu.evaluate(async () => {
   const v = await window.__kehysprofiili.veto({ kesto: 1500, nopeusPx: 80 });
   return { t: v.tasaisuus, teksti: window.__kehysprofiili.vetoTeksti(v) };
@@ -189,6 +238,57 @@ const veto = await sivu.evaluate(async () => {
 tieto(`V2 ${MOOTTORI} veto`, veto.teksti);
 // Headless WebKit pysähtyy 1–2 kehystä myös ilman lepopiirtoa (mitattu 22.9.2026: 63 % / 2 vs 65 % / 1); raja 2.
 vaadi(`V2 ${MOOTTORI}: liikkeessä joka kehys (pysähdyksiä ≤ 2)`, veto.t && veto.t.pysahdyksia <= 2 && veto.t.kehyksia > 30, JSON.stringify(veto.t));
+/*
+ * V7: VEDON AIKANA EI OHITETA YHTÄKÄÄN KEHYSTÄ (omistajan iPhone-
+ * mittaus 22.9.2026, v2122:n kehysprofiili: piirto 51–86 % ja
+ * ohitettuja 133–234 vedon aikana). Ohitettu kehys pysäyttää kirjaston
+ * tickin, ja kaikki syötetavat ajetaan juuri siinä tickissä — siitä
+ * syntyy 0/2-kuvio, jota mikään syötetapa ei voi korjata. Mitataan
+ * lepopiirron omista laskureista saman vedon yli: ohituksia 0.
+ */
+const vetoPiirto = await sivu.evaluate(async () => {
+  /*
+   * TAPAHTUMA JOKA TOISEEN KEHYKSEEN — juuri se, mitä iOS tekee.
+   * Tasaisuusmittarin oma veto lähettää pointermoven JOKA kehyksellä,
+   * jolloin kamera muuttuu joka kehys eikä ohituksia synny edes
+   * korjaamattomalla lepopiirrolla: se ei siis mittaa tätä vikaa
+   * lainkaan. Kehys ilman tapahtumaa on se tilanne, jossa vanha
+   * lepopiirto pysäytti tickin ja odottava veto jäi soveltamatta.
+   */
+  const ui = window.matkakirja.ui;
+  const kotelo = ui.pallonInstanssi.renderer().domElement;
+  const r = kotelo.getBoundingClientRect();
+  let x = r.left + r.width * 0.3;
+  const y = r.top + r.height * 0.55;
+  const tapahtuma = (tyyppi) => kotelo.dispatchEvent(new PointerEvent(tyyppi, {
+    bubbles: true, cancelable: true, composed: true, pointerId: 9, pointerType: 'touch',
+    isPrimary: true, clientX: x, clientY: y, buttons: tyyppi === 'pointerup' ? 0 : 1, button: 0,
+  }));
+  const lepo = () => ui.pallonInstanssi.__piirto.tila();
+  tapahtuma('pointerdown');
+  await new Promise((valmis) => { requestAnimationFrame(() => requestAnimationFrame(valmis)); });
+  const a = lepo();
+  let kehyksia = 0;
+  await new Promise((valmis) => {
+    const askel = () => {
+      kehyksia += 1;
+      if (kehyksia % 2 === 0) { x += 1.4; tapahtuma('pointermove'); }
+      if (kehyksia < 90) requestAnimationFrame(askel); else valmis();
+    };
+    requestAnimationFrame(askel);
+  });
+  const b = lepo();
+  tapahtuma('pointerup');
+  return {
+    kehyksia,
+    piirtoja: b.piirtoja - a.piirtoja,
+    ohitettuja: b.ohitettuja - a.ohitettuja,
+  };
+});
+tieto(`V7 ${MOOTTORI} vedon piirto`, `${vetoPiirto.kehyksia} kehystä, joka toisessa tapahtuma: piirtoja ${vetoPiirto.piirtoja}, ohitettuja ${vetoPiirto.ohitettuja}`);
+vaadi(`V7 ${MOOTTORI}: vedon aikana piirto joka rAF-kehyksessä, myös ilman tapahtumaa (ohituksia 0)`,
+  vetoPiirto.piirtoja > 30 && vetoPiirto.ohitettuja === 0, JSON.stringify(vetoPiirto));
+
 await sivu.waitForTimeout(800);
 /* V3: uusi paikka → laatat saapuvat → piirtoja ilman kameran liikettä; sitten pikseli ilman pakotusta. */
 await sivu.evaluate(() => { window.matkakirja.ui.pallolauta.heraa?.(); window.matkakirja.ui.pallonInstanssi.pointOfView({ lat: 43.5, lng: 4.5, altitude: 0.05 }, 0); });

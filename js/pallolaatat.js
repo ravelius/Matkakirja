@@ -26,6 +26,7 @@
  * Laattapyramidi ja projektio ovat oma asiansa: ne EIVÄT tuo palloa,
  * joten ne tuodaan tästä suoraan — sama ovi kuin tasokartalla.
  */
+import { tallennetutKokeet } from './piirtokoe-asetus.js';
 import {
   KOHDEMAAN_NIMIOT_ELAVINA,
   PYRAMIDIN_JAARAJA_LAT as JAARAJA_LAT,
@@ -993,12 +994,24 @@ export const LAATTAKERROS_TEKSTUUREJA_PER_KEHYS = 2;
  *   eimip      ei mipmappeja, minFilter LINEAR
  *   silmat40   laatan verkko enintään 40 × 40 silmää (oletus 160)
  *   eihaive    ei häivettä: uusi laatta heti täysi, vanha pois heti
+ *   eihaivevedossa  sama vain liikkeen ajan; alkanut häive päättyy heti,
+ *              kun liike alkaa (ratasvalikon Piirtokoe "Ei häivytystä vedossa")
  *   vientilepo tekstuurien vienti vain levossa (liikkeessä jono odottaa)
  * Ei vaikuta ilman lippua; yksikkötestit eivät anna lippua.
  */
-export function laattakerroksenKokeet(haku = globalThis.location?.search ?? '') {
-  const arvo = (() => { try { return new URLSearchParams(haku).get('koe') ?? ''; } catch { return ''; } })();
-  return new Set(String(arvo).split(',').map((k) => k.trim()).filter(Boolean));
+export function laattakerroksenKokeet(haku) {
+  const osoite = haku ?? (globalThis.location?.search ?? '');
+  const arvo = (() => { try { return new URLSearchParams(osoite).get('koe') ?? ''; } catch { return ''; } })();
+  const joukko = new Set(String(arvo).split(',').map((k) => k.trim()).filter(Boolean));
+  /*
+   * VALIKON VALINTA ON SAMA KUIN LIPPU (js/piirtokoe-asetus.js):
+   * ratasvalikosta valittu piirtokoe käyttäytyy täsmälleen kuin
+   * `?koe=` osoitteessa. Mukaan VAIN silloin, kun kutsuja ei antanut
+   * omaa hakumerkkijonoa — savuke ja testi eivät saa lukea laitteen
+   * muistia, tai mittaus mittaisi väärää tilaa.
+   */
+  if (haku === undefined) for (const lippu of tallennetutKokeet()) joukko.add(lippu);
+  return joukko;
 }
 /** Häive sisään ja ulos (ms). Reduced motion: 0. */
 export const LAATTAKERROS_HAIVE_MS = 260;
@@ -2235,6 +2248,13 @@ export function luoLaattakerros({
   kolmiulotteinen, pallonSarja = () => null, lauta = 'maailmankartta', naparaja = 90,
   /** Osoitelistan lähettäjä palvelutyöntekijälle (js/pallo.js lahetaLaattaesilataus) tai null. */
   esilataa = null,
+  /*
+   * Levon pikselisuhde (js/pallo.js PIKSELISUHDE KERROKSEN KANSSA):
+   * tason valinta lasketaan tästä, ei renderöijän hetkellisestä
+   * suhteesta, jotta tasaisen tilan liikkeen alempi puskuri (2) ei vaihda
+   * laattatasoa eleen alussa ja lopussa. null = renderöijän suhde.
+   */
+  lepoSuhde = null,
 }) {
   const doc = kotelo?.ownerDocument ?? ikkuna?.document ?? null;
   const aika = () => ikkuna.performance?.now?.() ?? Date.now();
@@ -2253,9 +2273,11 @@ export function luoLaattakerros({
   /** Tekstuurimuistin kiintiö laitteelle (ks. LAATTAKERROS_TAVUKERROIN_OSOITIN). */
   const kosketuslaite = () => Boolean(ikkuna.matchMedia?.('(hover: none)')?.matches);
   const tavukatto = () => LAATTAKERROS_LAATTAKATTO_TAVUT * (kosketuslaite() ? 1 : LAATTAKERROS_TAVUKERROIN_OSOITIN);
+  // Piirtokoe: tuki- ja ennakkolaatat piiloon täydellä peitolla (ks. vahemmandc alempana).
+  const vahemmanDc = laattakerroksenKokeet().has('vahemmandc');
   const mittarit = {
     tila: 'ei', taso: null, laattoja: 0, valmiita: 0, hapyvia: 0, pyyntoja: 0, pyydettyja: 0,
-    syy: '', kaytetytTavut: 0, jonossa: 0, scenessa: 0, purettuja: 0, paivityksia: 0,
+    syy: '', kaytetytTavut: 0, jonossa: 0, scenessa: 0, purettuja: 0, paivityksia: 0, piilotettuja: 0,
     /*
      * NÄKYVÄN ALUEEN PEITTO (heilurimittaus, savuke --vaihe=heiluri).
      * `nakyvia` on näkyvän alueen laattojen määrä, `nakyviaScenessa`
@@ -2341,7 +2363,9 @@ export function luoLaattakerros({
   const kermaShader = !kokeet.has('kermakangas');
   const kermanJaetut = luoKermanJaetut();
   let kermanMaskiAvain = '';
-  const haiveMs = () => (reduced() || kokeet.has('eihaive') ? 0 : LAATTAKERROS_HAIVE_MS);
+  const eiHaiveVedossa = kokeet.has('eihaivevedossa');
+  const haiveMs = () => (reduced() || kokeet.has('eihaive') || (eiHaiveVedossa && liikkeessaNyt)
+    ? 0 : LAATTAKERROS_HAIVE_MS);
   if (kokeet.size) mittarit.kokeet = [...kokeet];
   let ladattavia = 0;
   /** Tässä kehyksessä aloitetut lataukset ja kehyksen vaihtava rAF (tahditus). */
@@ -2562,6 +2586,20 @@ export function luoLaattakerros({
     }
     pallo.__piirto?.tarvitaan(); // lepopiirto: häiveen askel näkyviin (kerran kaikille)
     if (haiveet.size) haiveRaf = ikkuna.requestAnimationFrame(haiveAskel);
+  };
+  /** Kaikki käynnissä olevat häiveet loppuun heti (koe eihaivevedossa, liikkeen alku). */
+  const paataHaiveet = () => {
+    if (!haiveet.size) return 0;
+    const kesken = [...haiveet.entries()];
+    haiveet.clear();
+    for (const [materiaali, h] of kesken) {
+      if (materiaali.__haive !== h) continue;
+      materiaali.__haive = null;
+      h.paata();
+    }
+    mittarit.haiveitaKatkaistu = (mittarit.haiveitaKatkaistu ?? 0) + kesken.length;
+    pallo.__piirto?.tarvitaan();
+    return kesken.length;
   };
   const haivyta = (materiaali, kohde, kesto, valmis = null) => {
     const alku = materiaali.opacity;
@@ -3548,8 +3586,20 @@ export function luoLaattakerros({
      * ajaVientiä uudestaan) — mitään ei siis hukata.
      */
     if (purettu || lukittu || vientiRaf || !vientijono.length) return;
-    // Koe `vientilepo`: liikkeessä vienti odottaa seuraavaa lepopäivitystä.
-    if (kokeet.has('vientilepo') && liikkeessaViimeksi) return;
+    /*
+     * Koe `vientilepo`: liikkeessä vienti odottaa seuraavaa lepopäivitystä.
+     *
+     * `eivienti` (ratasvalikon "Ei tekstuurivientejä", Fable 22.9.2026)
+     * tekee saman: se jäädytti aiemmin VAIN nimiöatlaksen viennin
+     * (js/pallonimiot-gl.js), ja laattojen tekstuurit — juuri se vienti,
+     * joka iPhonella virtaa vedon aikana — menivät näytönohjaimelle kuten
+     * ennenkin. Laitetestaajan Mac-mittauksessa lippu ei siksi muuttanut
+     * mitään. Jono säilyy ja valuu sceneen levossa; mitään ei hukata.
+     */
+    if ((kokeet.has('vientilepo') || kokeet.has('eivienti')) && liikkeessaViimeksi) {
+      mittarit.vientejaOdottaa = vientijono.length;
+      return;
+    }
     vientiRaf = ikkuna.requestAnimationFrame((kehysAlku) => {
       vientiRaf = 0;
       // Vienti (initTexture 3–7 ms) väistää pitkää kehystä liikkeessä kuten valmistelu.
@@ -3828,7 +3878,8 @@ export function luoLaattakerros({
       LAATTAKERROS_VARA_OSUUS * Math.max(raaka.lat1 - raaka.lat0, raaka.lon1 - raaka.lon0));
     const alue = lepokerroksenAlue(naytteet, pov.lng, { latMin, latMax, vara }) ?? raaka;
     // Ruudun tarve: laitepikseleitä astetta kohti keskellä (fov on pystykulma).
-    const suhde = mitat.suhde;
+    // Levon suhde, jos annettu: liikkeen alempi puskuri (tasainen tila) ei vaihda tasoa.
+    const suhde = lepoSuhde ?? mitat.suhde;
     const tarvePxAste = (LEPOKERROS_MITTAMATKA_PX * suhde) / Math.abs(keski.lat - alas.lat);
     /*
      * TASO KERTOMUSLUKOSTA, JOS SE ON PÄÄLLÄ (ks. KERTOMUSLUKKO yllä).
@@ -4338,6 +4389,28 @@ export function luoLaattakerros({
     mittarit.nakyviaTaysin = nakyviaTaysin;
     mittarit.ennakkoja = ennakko.size;
     mittarit.tukia = tuet.size;
+    /*
+     * KOELIPPU `?koe=vahemmandc` (Fable 22.9.2026): kun näkyvä ala on
+     * TÄYSIN peitetty (peittoOsuus === 1), tuki- ja ennakkolaatat eivät
+     * näy mistään — ne ovat varalla tasonvaihtoa ja panorointia varten.
+     * Kokeessa ne piilotetaan scenestä, jolloin piirtokutsuja on
+     * vähemmän eikä kuvassa muutu mitään. Häipyvää laattaa ei koskaan
+     * piiloteta: se on kesken olevaa ristihäivytystä.
+     *
+     * Mittaus, ei oletus: jos peitto arvioi väärin, kokeessa vilahtaa
+     * pohja. Siksi näkyvyys palautetaan heti, kun peitto ei ole täysi.
+     */
+    if (vahemmanDc) {
+      const taysi = mittarit.peittoOsuus === 1;
+      let piilossa = 0;
+      for (const t of laatat.values()) {
+        if (!t.scenessa || !t.verkko) continue;
+        const piiloon = taysi && !t.nakyva && !t.haipyy;
+        if (piiloon) piilossa += 1;
+        if (t.verkko.visible !== !piiloon) t.verkko.visible = !piiloon;
+      }
+      mittarit.piilotettuja = piilossa;
+    }
     // Syvyyssiirto aseman mukaan joka päivityksellä: taso vaihtui tai laatta vaihtoi roolia.
     for (const t of laatat.values()) {
       if (!t.materiaali) continue;
@@ -4376,6 +4449,8 @@ export function luoLaattakerros({
      */
     const liikkuu = liike == null ? Boolean(liikkeessa) : Boolean(liike);
     if (liikkeessaViimeksi && !liikkuu) { liikkeessaViimeksi = false; ajaVienti(); }
+    // Koe eihaivevedossa: liikkeen alkaessa kesken olevat häiveet päättyvät heti.
+    if (eiHaiveVedossa && liikkuu && !liikkeessaViimeksi) paataHaiveet();
     liikkeessaViimeksi = liikkuu;
     liikkeessaNyt = liikkuu;
     if (liikkeessa && nyt - viimePaivitys < LAATTAKERROS_PAIVITYSVALI_LIIKE_MS) return false;

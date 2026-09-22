@@ -271,6 +271,13 @@ const NIPUTTAMATTOMAT = new Set([
   // ainoa tuoja on js/pallolauta/nostot.js, ja pallolauta on
   // niputuksen ulkopuolella. SHELLissä paketti on.
   'js/packs/maastokohteet-ark.js',
+  // Vedon seuranta (valikko poistettu 22.9.2026, "Poista kaikki
+  // ylimääräiset vivut valikosta"): js/main.js:n staattinen tuonti
+  // hävisi menun mukana. Ainoat jäljellä olevat tuojat, js/pallo.js ja
+  // js/pallolauta/lauta.js, ovat itse niputuksen ulkopuolella (pallo.js
+  // ladataan dynaamisesti) — sama peruste kuin pallolaudan paketeilla
+  // yllä. Liput (?koe=, ratasvalikon Kartta-osio) toimivat yhä.
+  'js/vedon-seuranta.js',
   // Ranskan nostojen lukitut ankkurit: ainoa tuoja on
   // js/pallolauta/nostoankkurit.js, ja pallolauta on niputuksen
   // ulkopuolella (sama peruste kuin yllä). SHELLissä paketti on.

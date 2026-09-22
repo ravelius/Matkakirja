@@ -44,6 +44,22 @@ export const KOHDEMERKIN_PISTE_PX = 15;
 export const KOHDEMERKIN_NIMI_PX = 13;
 /** Halon laajin aste (CSS kohde-halo) — nimi sen yläpuolelle. */
 export const KOHDEMERKIN_HALO_LAAJIN = 1.42;
+/*
+ * HALON HENGITYS LUKUINA (css @keyframes kohde-halo, 2,4 s ease-in-out):
+ * 0 % scale 1,14 / opacity 0,85 — 50 % scale 1,42 / opacity 0,4. CSS
+ * omistaa animaation CSS2D-merkissä; GL-kerros (glnimiot-sovitin.js)
+ * tarvitsee samat luvut, koska siellä hengitys tulee rungon
+ * syke-uniformista ja peitosta, ei selaimen animaatiosta. Jakso on
+ * NOSTOSYM_SYKKEEN_JAKSO_MS = 2400 ms, eli TÄSMÄLLEEN sama kuin tässä
+ * keyframessa — siksi sama uniform kelpaa molemmille.
+ */
+/** Halon kapein aste (CSS kohde-halo 0 %). */
+export const KOHDEMERKIN_HALO_KAPEIN = 1.14;
+/** Halon keskiaste: GL-rasteri piirretään tähän ja syke heiluttaa sen ympärillä. */
+export const KOHDEMERKIN_HALO_KESKI = (KOHDEMERKIN_HALO_KAPEIN + KOHDEMERKIN_HALO_LAAJIN) / 2;
+/** Halon peitto kapeimmillaan ja laajimmillaan (CSS kohde-halo). */
+export const KOHDEMERKIN_HALO_PEITTO_KAPEA = 0.85;
+export const KOHDEMERKIN_HALO_PEITTO_LAAJA = 0.4;
 /** Rako halon ja nimen väliin (px). */
 export const KOHDEMERKIN_NIMI_RAKO_PX = 8;
 /*
@@ -376,7 +392,15 @@ export function luoMerkit({
       if (haivyta) poista(d); else data.delete(d.avain);
     }
     osat.set(osa, lista);
-    if (osa === 'peli') kohteet = lista.filter((d) => d.laji === 'kohde');
+    /*
+     * OSUMATESTI LUKEE KAIKKI KOHTEET, EI VAIN CSS2D:HEN JÄÄNEITÄ
+     * (A, 22.9.2026). `lista` on jakajan JÄLKEEN jäljellä oleva osa,
+     * eli GL-kerrokseen siirtyneet kohteet puuttuvat siitä. Napautus
+     * etsii lähimmän kohteen tästä listasta (lauta.js lahinKohde),
+     * joten se on luettava `annetut`ista — muuten GL-kohdetta ei voi
+     * napauttaa. Sama syy kuin nappulan `pelinLaatikot`illa.
+     */
+    if (osa === 'peli') kohteet = annetut.filter((d) => d.laji === 'kohde');
     tyonna();
   };
 

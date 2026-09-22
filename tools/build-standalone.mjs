@@ -1053,6 +1053,8 @@ const MODULES = [
    */
   'js/pulu-paikka.js',
   'js/kartta-liike.js',
+  'js/piirtokoe-asetus.js',
+  'js/tarkkuus-asetus.js',
   // Kehittäjän pikatie (?lauta=pallo&dev=<kaupunki>): main.js tuo sen staattisesti;
   // ei pallolauta-tuonteja (kayttaa ui.pallolautaa vain ajossa, jos se on).
   'js/kehittaja-pikatie.js',

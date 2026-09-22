@@ -54,6 +54,8 @@
  * vektorikerroksessa — uutta kirjastoa ei ladata.
  */
 
+import { tallennetutKokeet } from './piirtokoe-asetus.js';
+
 /** Atlassivun koko laitepikseleinä. */
 export const GLNIMIOT_ATLAS = 2048;
 /** Rasterien väli atlaksessa (px), ettei suodatus vuoda naapurista. */
@@ -76,6 +78,13 @@ export const GLNIMIOT_TESTIFONTTI = '"Liberation Serif", "Times New Roman", seri
  * sceneen tai runko kaatuu) lauta putoaa CSS2D:hen automaattisesti
  * (js/pallolauta/lauta.js glKehys).
  */
+/**
+ * Atlaksen väriavaruus: NoColorSpace ('' three r152+). Ks. uusiSivu —
+ * oma varjostin kirjoittaa näytteen sellaisenaan, joten purkua ei saa
+ * tehdä. Vakio on nimetty, jotta testi voi vahtia sitä.
+ */
+export const GLNIMIOT_VARIAVARUUS = '';
+
 export function glNimiotKaytossa(win = globalThis) {
   try {
     const arvo = new URLSearchParams(win.location?.search ?? '').get('glnimiot');
@@ -260,14 +269,49 @@ export function rasteroiTeksti(teksti, { px = 14, dpr = 1, doc = globalThis.docu
  * @param {object} [p.luokat] kirjaston luokat (oletus glLuokat(pallo))
  * @returns {{ aseta, poista, tyhjenna, peitto, kerroin, kehys, mittarit, pura }}
  */
-export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = null, juuri = null }) {
+/*
+ * ══ PIIRTOKOKEET: PUSKURIKIRJOITUKSET JA VIENNIT VEDON AIKANA ═══════
+ * (omistajan tilaus Fablen kautta 22.9.2026, taustana Safarin GPU-
+ * prosessi: jokainen GL-kutsu kulkee IPC:n yli ja `bufferSubData` on
+ * Safarissa poikkeuksellisen kallis.)
+ *
+ * `?koe=eipuskuri` jäädyttää vedon ajaksi ne kirjoitukset, jotka
+ * muuten menevät GPU:lle joka kehyksessä: peiton osapäivitykset
+ * (crossfade) ja koko geometrian rakennuksen. Ne eivät katoa, vaan
+ * odottavat lepoa — kuva jää siis eleen ajaksi siihen asentoon, jossa
+ * häivytys oli. `?koe=eivienti` tekee saman tekstuurivienneille.
+ *
+ * Kokeet ovat MITTAUSTA VARTEN: kumpikin muuttaa ulkoasua vedon aikana
+ * eikä kumpaakaan ole tarkoitettu oletukseksi ilman omistajan päätöstä.
+ */
+export function luoNimiokerrosGL({
+  pallo, kotelo, ikkuna = globalThis, luokat = null, juuri = null, liikkeessa = () => false,
+}) {
   const doc = kotelo?.ownerDocument ?? ikkuna.document;
   const L = luokat ?? glLuokat(pallo);
   const atlasKoko = (() => { try { return (new URLSearchParams(ikkuna.location?.search ?? '').get('koe') ?? '').split(',').includes('atlaskoko'); } catch { return false; } })();
+  const kokeet = (() => {
+    let joukko;
+    try { joukko = new Set(((new URLSearchParams(ikkuna.location?.search ?? '')).get('koe') ?? '').split(',').map((k) => k.trim())); } catch { joukko = new Set(); }
+    /*
+     * VALIKON VALINTA ON SAMA KUIN LIPPU (js/piirtokoe-asetus.js, korjattu
+     * 22.9.2026): ennen tätä ratasvalikon eipuskuri/eivienti ei koskenut
+     * nimiörunkoon lainkaan, vaikka juuri runko kirjoittaa puskureita
+     * vedon aikana. Vain oikeassa ikkunassa — testin ikkuna ei lue laitteen muistia.
+     */
+    if (ikkuna === globalThis) for (const lippu of tallennetutKokeet()) joukko.add(lippu);
+    return joukko;
+  })();
+  const eiPuskuri = kokeet.has('eipuskuri');
+  const eiVienti = kokeet.has('eivienti');
+  /** Jäädytetäänkö kirjoitukset juuri nyt (koe + liike). */
+  const jaassa = (lippu) => lippu && liikkeessa();
   const mittarit = {
     tila: L ? 'valmis' : 'ei-luokkia', instansseja: 0, sivuja: 0, rastereita: 0, drawcalls: 0,
     rakennuksia: 0, rakennusMs: 0, atlasTayttoaste: 0, kerroin: 1, kehyksia: 0,
     tiivistyksia: 0, pudotettuja: 0, kuolleita: 0,
+    /* Puskuri- ja uniformikirjoitukset (overlay, ?koe=profiili). */
+    puskurikirjoituksia: 0, uniformeja: 0, vienteja: 0, jaadytettyja: 0,
   };
   if (!L) {
     return {
@@ -305,8 +349,42 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
     tekstuuri.minFilter = 1006; // LinearFilter
     tekstuuri.magFilter = 1006;
     tekstuuri.premultiplyAlpha = true;
-    const malli = L.tekstuurimalli;
-    if (malli && 'colorSpace' in malli) tekstuuri.colorSpace = malli.colorSpace;
+    /*
+     * ATLAS EI OLE VÄRIHALLITTU TEKSTUURI (Pelikoodari 22.9.2026).
+     *
+     * Aiemmin väriavaruus kopioitiin pallon PINNAN tekstuurista
+     * (`L.tekstuurimalli`). Se on oikein siellä, missä kuvan lukee
+     * kirjaston oma materiaali: three purkaa sRGB:n lineaariseksi
+     * näytteistyksessä ja koodaa sen takaisin ulostulossa. TÄMÄN
+     * kerroksen lukee oma varjostin, joka kirjoittaa näytteen
+     * sellaisenaan (`gl_FragColor = v`) — koodausta takaisin ei ole.
+     * Niinpä sRGB-purku jäi puolitiehen: kangas piirsi kullan
+     * rgba(246,210,122,0.72), mutta ruudulle tuli kylläinen oranssi ja
+     * punamullasta tummanpuhuva. Virhe on keskisävyissä suurin, joten
+     * se ei näkynyt lähes mustassa musteessa eikä lähes valkoisessa
+     * halossa — vasta kohdemerkin iso kultalevy paljasti sen.
+     *
+     * Atlas on valmiiksi ruudun väriavaruudessa (2D-kangas piirsi sen
+     * CSS-väreillä), joten oikea ratkaisu on olla purkamatta ja
+     * koodaamatta lainkaan: NoColorSpace ('' three r152+). Tällöin
+     * tavut kulkevat kankaasta ruudulle muuttumattomina ja sekoitus
+     * tapahtuu samassa avaruudessa kuin CSS:llä — eli täsmälleen kuten
+     * CSS2D-polulla, jota vasten ulkoasu on mitoitettu.
+     *
+     * Vaihtoehto olisi koodata varjostimessa lineaarinen → sRGB, mutta
+     * se olisi esikerrotun alfan kanssa väärin ilman puramista ja
+     * uudelleenkertomista, ja maksaisi pow():n joka pikselille.
+     *
+     * OLETUS PÄTEE VAIN SUORAAN RUUTUPUSKURIIN PIIRRETTÄESSÄ
+     * (Karttaseppä, rungon omistaja, katselmuksessa 22.9.2026). Jos
+     * tämä kerros joskus piirretään VÄLIRENDERTARGETTIIN tai kulkee
+     * jälkikäsittelyn läpi, välipuskuri on lineaarinen ja väriavaruus
+     * on mietittävä uudestaan — silloin purku ja koodaus kuuluvat
+     * ketjuun. Vartijat kattavat varjostimen (tests/pallonimiot-gl) ja
+     * väriketjun identiteetin (savuke-glnimiot), MUTTA EIVÄT tätä:
+     * rendertargetin lisääjä ei saa niistä varoitusta.
+     */
+    tekstuuri.colorSpace = GLNIMIOT_VARIAVARUUS;
     const materiaali = new L.ShaderMaterial({
       uniforms: {
         atlas: { value: tekstuuri },
@@ -435,13 +513,68 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
     const renderer = pallo?.renderer?.();
     if (sivu.viety && !atlasKoko && typeof renderer?.copyTextureToTexture === 'function') {
       try {
-        const lahde = new L.Texture(rasteri.kuva);
-        lahde.flipY = false;
+        /*
+         * LÄHTEENÄ ATLASKANGAS, EI RASTERIN OMA KUVA (Pelikoodari
+         * 22.9.2026). Kun lähde oli rasterin oma kangas, osittain
+         * päivitetty läpinäkyvä pikseli piirtyi LIIAN KIRKKAANA:
+         * mitattu kohdemerkin kultalevy rgba(246,210,122,0.72)
+         * pohjalla (144,116,90) — koko kankaan viennillä ja CSS2D:llä
+         * (212,182,117), osapäivityksellä (246,237,148). Kun lähde on
+         * SAMA kangas, josta koko sivun vientikin tulee, molemmat polut
+         * vievät tavulleen samat pikselit samoilla asetuksilla eikä
+         * eroa voi syntyä. Alue annetaan srcRegionina (ankka-Box2:
+         * three lukee vain min/max).
+         */
+        /*
+         * EI `needsUpdate`iä LÄHTEELLE (Karttasepän katselmushuomio
+         * 22.9.2026 ja sen mittaus). Välimuistitettu lähdetekstuuri
+         * voisi periaatteessa jäädä ensimmäiseen kuvaan. Näin ei käy:
+         * three ei lataa lähdettä GPU-tekstuurina lainkaan, vaan lukee
+         * `srcTexture.image`in — eli ELÄVÄN kankaan — ja vie sen
+         * suoraan texSubImage2D:llä. Mitattu kahdella peräkkäisellä
+         * osapäivityksellä eri väreillä: molemmat oikein (ero 0),
+         * eikä ensimmäinen turmellu (vartija savuke-glnimiot
+         * "osapäivityksen lähde on tuore").
+         *
+         * `needsUpdate = true` olisi tässä paitsi turha myös riski:
+         * jos three joskus SITOO lähteen, lippu laukaisisi koko
+         * 2048²-kankaan latauksen joka rasterilla — juuri sen kulun,
+         * jonka osapäivitys poistaa (kohta 8).
+         */
+        if (!sivu.lahdetekstuuri) {
+          sivu.lahdetekstuuri = new L.Texture(sivu.kangas);
+          sivu.lahdetekstuuri.flipY = false;
+          sivu.lahdetekstuuri.premultiplyAlpha = true;
+        }
+        const lahde = sivu.lahdetekstuuri;
+        const alue = {
+          min: { x: paikka.x, y: paikka.y },
+          max: { x: paikka.x + rasteri.w, y: paikka.y + rasteri.h },
+        };
         const kohta = { x: paikka.x, y: paikka.y, z: 0 };
-        // three ≥ r165: (src, dst, srcRegion, dstPosition); vanhempi: (position, src, dst).
-        if (renderer.copyTextureToTexture.length >= 3) renderer.copyTextureToTexture(kohta, lahde, sivu.tekstuuri);
-        else renderer.copyTextureToTexture(lahde, sivu.tekstuuri, null, kohta);
-        mittarit.atlasOsapaivityksia = (mittarit.atlasOsapaivityksia ?? 0) + 1;
+        /*
+         * ALUE ON PAKOLLINEN, KOSKA LÄHDE ON KOKO ATLASKANGAS
+         * (Karttasepän katselmushuomio 22.9.2026, voimaan jäänyt kohta).
+         * three laskee kopioitavan koon srcRegionista; jos alue on
+         * null, koko on lähteen koko eli KOKO ATLAS, ja se kopioituisi
+         * siirtymään. Vanha allekirjoitus (position, src, dst) ei ota
+         * aluetta lainkaan, joten sillä ei voi tehdä rajattua kopiota
+         * nyt kun lähde on kangas eikä yksittäinen rasteri.
+         *
+         * Siksi vanhalla allekirjoituksella EI tehdä osapäivitystä
+         * lainkaan, vaan jäädään koko sivun vientiin: hitaampi mutta
+         * oikea. Nidotulla kirjastolla (globe.gl 2.46.2) haara on
+         * kuollut — `copyTextureToTexture.length === 2`, koska
+         * oletusarvolliset parametrit eivät lasketa mukaan — mutta
+         * kirjaston vaihtuessa tämä ei hiljaa turmele atlasta.
+         */
+        if (renderer.copyTextureToTexture.length >= 3) {
+          sivu.likainen = true;
+          mittarit.atlasVanhaAllekirjoitus = (mittarit.atlasVanhaAllekirjoitus ?? 0) + 1;
+        } else {
+          renderer.copyTextureToTexture(lahde, sivu.tekstuuri, alue, kohta);
+          mittarit.atlasOsapaivityksia = (mittarit.atlasOsapaivityksia ?? 0) + 1;
+        }
         pallo?.__piirto?.tarvitaan();
       } catch (virhe) {
         sivu.likainen = true;
@@ -600,8 +733,10 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
       inst.peitto = Math.max(0, Math.min(1, arvo));
       const attr = !likainen && inst.sivu ? inst.sivu.geometria.getAttribute('peitto') : null;
       if (!attr || !(inst.kulmaAlku >= 0) || inst.kulmaAlku + 3 >= attr.count) { likaa(); return; }
+      if (jaassa(eiPuskuri)) { mittarit.jaadytettyja += 1; return; }
       for (let k = 0; k < 4; k += 1) attr.setX(inst.kulmaAlku + k, inst.peitto);
       attr.needsUpdate = true;
+      mittarit.puskurikirjoituksia += 1;
       pallo?.__piirto?.tarvitaan();
       mittarit.peittopaivityksia = (mittarit.peittopaivityksia ?? 0) + 1;
     },
@@ -622,14 +757,19 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
       const suhde = mitat?.suhde ?? 1;
       ruutu.x = Math.max(1, (mitat?.W ?? kotelo?.clientWidth ?? 1) * suhde);
       ruutu.y = Math.max(1, (mitat?.H ?? kotelo?.clientHeight ?? 1) * suhde);
-      if (likainen) rakenna();
+      // Rakennus kirjoittaa KAIKKI puskurit uusiksi; kokeessa se odottaa lepoa.
+      if (likainen && !jaassa(eiPuskuri)) { rakenna(); mittarit.puskurikirjoituksia += 1; }
+      else if (likainen) mittarit.jaadytettyja += 1;
       for (const s of sivut) {
         s.materiaali.uniforms.ruutu.value.set(ruutu.x, ruutu.y);
         s.materiaali.uniforms.kerroin.value = kerroinNyt;
         s.materiaali.uniforms.sykeKerroin.value = sykeNyt;
         s.materiaali.uniforms.dpr.value = suhde;
+        mittarit.uniformeja += 4;
+        if (s.likainen && jaassa(eiVienti)) { mittarit.jaadytettyja += 1; continue; }
         if (s.likainen) {
           s.tekstuuri.needsUpdate = true; s.likainen = false; s.viety = true;
+          mittarit.vienteja += 1;
           mittarit.atlasKokopaivityksia = (mittarit.atlasKokopaivityksia ?? 0) + 1;
         }
       }

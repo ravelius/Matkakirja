@@ -42,12 +42,26 @@ export function luoKehysprofiili(uiTaiHaku, ikkuna = globalThis) {
     const st = l?.glSovitin?.()?.tila?.() ?? {};
     const k = ui?.pallolautaGL?.()?.mittarit?.() ?? {};
     const info = ui?.pallonInstanssi?.renderer?.()?.info ?? {};
+    /*
+     * PIIRRETTIINKÖ TÄMÄ KEHYS (Fablen kysymys 22.9.2026: ovatko pitkät
+     * kehykset juuri lepopiirron ohittamia?). Lepopiirron laskuri on
+     * kumulatiivinen, joten kehyksen oma vastaus on kahden peräkkäisen
+     * lukeman erotus — se lasketaan tiivistyksessä, tässä vain luetaan.
+     */
+    const lepo = ui?.pallonInstanssi?.__piirto?.tila?.() ?? null;
     return {
+      piirtolaskuri: lepo?.piirtoja ?? null, ohituslaskuri: lepo?.ohitettuja ?? null,
       pyyntoja: laatat.pyyntoja ?? 0, purettuja: laatat.purettuja ?? 0, paivityksia: laatat.paivityksia ?? 0,
+      // Laattojen tekstuuriviennit näytönohjaimelle (initTexture), kumulatiivinen.
+      laattaVienteja: laatat.vienteja ?? 0, vientejaOdottaa: laatat.vientejaOdottaa ?? 0,
       scenessa: laatat.scenessa ?? 0, hapyvia: laatat.hapyvia ?? 0, nakyvia: laatat.nakyvia ?? 0, taso: laatat.taso ?? null,
       valmisteluja: laatat.valmisteluja ?? 0, vaistoja: laatat.valmisteluVaistoja ?? 0,
       jakoja: (st.jakoja ?? 0) + (st.nostojakoja ?? 0), rasterit: st.rasterit?.valmiita ?? 0,
       rakennuksia: k.rakennuksia ?? 0, tekstuurit: info.memory?.textures ?? 0,
+      /* GL-rungon kirjoitukset (Safarin GPU-prosessi: bufferSubData on kallis). */
+      puskurikirjoituksia: k.puskurikirjoituksia ?? null,
+      uniformeja: k.uniformeja ?? null,
+      glVienteja: k.vienteja ?? null,
       drawcalls: info.render?.calls ?? 0, kolmiot: info.render?.triangles ?? 0,
     };
   };
@@ -62,17 +76,70 @@ export function luoKehysprofiili(uiTaiHaku, ikkuna = globalThis) {
    * (rAF-kutsut + render) = tyyli, asettelu ja maalaus + muut tehtävät.
    */
   const alkuperainenRaf = ikkuna.requestAnimationFrame;
-  const nimi = (fn) => fn?.name || String(fn).replace(/\s+/g, ' ').slice(0, 48);
+  /*
+   * KIRJASTON NIMETTÖMÄT SILMUKAT NIMELLÄ (omistajan kaappaukset v2126:
+   * "syy: function(){for(var t,n=arguments.length,r=new Ar"). Globe.gl on
+   * kapsule-olio, jonka jokainen metodi on sama nimetön kääre, ja sen
+   * kerrokset (arcs, paths, rings + neljä latauksessa luotua oletusoliota)
+   * pyörittävät frame-tickereitä nimettömällä nuolella. Ilman nimeä
+   * kolme eri asiaa näkyi yhtenä "Ar"-rivinä:
+   *   globe.tick    globe.gl _animationCycle: ohjaimet + three.render
+   *   globe.tweenit three-globe _animationCycle: tweenGroup.update
+   *   globe.ticker  frame-tickerin onFrame (kerrosten animaatiot)
+   * Nimi lasketaan kerran funktiota kohti (WeakMap): sama funktio-olio
+   * rekisteröidään joka kehyksellä uudelleen.
+   */
+  const nimet = new WeakMap();
+  const nimi = (fn) => {
+    if (typeof fn !== 'function') return String(fn);
+    const muistettu = nimet.get(fn);
+    if (muistettu) return muistettu;
+    const lahde = String(fn).replace(/\s+/g, ' ');
+    let n = fn.name;
+    if (!n) {
+      if (fn === haeUi()?.pallonInstanssi?._animationCycle) n = 'globe.tick';
+      else if (lahde.startsWith('function(){for(var t,n=arguments.length')) n = 'globe.tweenit';
+      else if (lahde === 'function(){return e.onFrame()}') n = 'globe.ticker';
+      else n = lahde.slice(0, 48);
+    }
+    nimet.set(fn, n);
+    return n;
+  };
   let kehysNyt = null;
-  const kirjaa = (avain, ms) => {
+  /** rAF-takaisinkutsun sisällä: sisäkkäinen render on jo kutsun ajassa. */
+  let rafSyvyys = 0;
+  /** Elossa olevat mittausketjut (ks. YKSI KETJU PER MITTAUS). */
+  let ketjuja = 0;
+  /*
+   * KEHYSTEN KATTO. Ruutunäyttö (js/pallolauta/profiilinaytto.js) pitää
+   * mittausta auki niin kauan kuin peli on auki, joten taulukolla on
+   * oltava yläraja. 4000 kehystä on yli minuutti 60 Hz:llä — pidempää
+   * otosta ei lue kukaan.
+   */
+  const KEHYSKATTO = 4000;
+  const kirjaa = (avain, ms, sisakkainen = false) => {
     if (!kehysNyt) return;
-    kehysNyt.js = (kehysNyt.js ?? 0) + ms;
+    /*
+     * js = rAF-kutsujen aika KERRAN. three.render ajetaan globe.tick-
+     * kutsun sisällä, joten sen lisääminen js:ään laski renderin kahdesti
+     * (v2126-kaappausten "js ka 4,0" sisälsi render 0,9 kahteen kertaan).
+     */
+    if (!sisakkainen) kehysNyt.js = (kehysNyt.js ?? 0) + ms;
     kehysNyt.kutsut ??= {};
     kehysNyt.kutsut[avain] = (kehysNyt.kutsut[avain] ?? 0) + ms;
   };
   const kaariRaf = () => {
     ikkuna.requestAnimationFrame = (fn) => alkuperainenRaf.call(ikkuna, (t) => {
-      const a = nyt(); try { return fn(t); } finally { kirjaa(nimi(fn), nyt() - a); }
+      const a = nyt();
+      /*
+       * KUINKA MONTA rAF-SILMUKKAA ON ELOSSA (Fable 22.9.2026): jokainen
+       * kehyksessä ajettu kääritty takaisinkutsu on yhden silmukan
+       * askel — kirjaston tick, lepopiirron kello, kartan liike.
+       * Keskiarvo kehystä kohti kertoo, moninkertaistuiko jokin niistä.
+       */
+      if (kehysNyt) kehysNyt.rafKutsuja = (kehysNyt.rafKutsuja ?? 0) + 1;
+      rafSyvyys += 1;
+      try { return fn(t); } finally { rafSyvyys -= 1; kirjaa(nimi(fn), nyt() - a); }
     });
   };
   const puraRaf = () => { ikkuna.requestAnimationFrame = alkuperainenRaf; };
@@ -81,20 +148,38 @@ export function luoKehysprofiili(uiTaiHaku, ikkuna = globalThis) {
     const r = haeUi()?.pallonInstanssi?.renderer?.();
     if (!r?.render || r.__kehysprofiili) return;
     const alkuperainen = r.render;
-    r.render = function render(...args) { const a = nyt(); try { return alkuperainen.apply(this, args); } finally { kirjaa('three.render', nyt() - a); if (kehysNyt) kehysNyt.render = (kehysNyt.render ?? 0) + (nyt() - a); } };
+    r.render = function render(...args) { const a = nyt(); try { return alkuperainen.apply(this, args); } finally { kirjaa('three.render', nyt() - a, rafSyvyys > 0); if (kehysNyt) kehysNyt.render = (kehysNyt.render ?? 0) + (nyt() - a); } };
     r.__kehysprofiili = true;
     renderPurku = () => { r.render = alkuperainen; delete r.__kehysprofiili; };
   };
   if (kanava) kanava.port1.onmessage = () => { if (odottaa) { odottaa.kehys.varattu = ikkuna.performance.now() - odottaa.alku; odottaa = null; } };
   const nyt = () => ikkuna.performance.now();
+  /*
+   * ══ YKSI KETJU PER MITTAUS (v2123:n vika, omistajan kaappaus) ══════
+   *
+   * Vanha askel tarkisti vain `tila?.kaynnissa`. Kun profiili suljetaan
+   * ja avataan uudelleen (rollaava ikkuna, js/pallolauta/profiilinaytto.js),
+   * `tila` osoittaa jo UUTEEN mittaukseen, jonka `kaynnissa` on tosi —
+   * joten vanha ketju jatkoi ja syötti kehyksensä uuteen taulukkoon.
+   * Jokainen jakso siis LISÄSI yhden rAF-ketjun: omistajan puhelimessa
+   * mittari näytti "rAF 500 Hz (dt p50 2,0)" ja 4130 kehystä kolmessa
+   * sekunnissa, mikä on mahdotonta yhdelle ketjulle.
+   *
+   * Korjaus: ketju tuntee OMAN mittauksensa ja lopettaa heti, jos
+   * voimassa on toinen. Laskuri `ketjuja` on vartija: sen on oltava 1.
+   */
   const aloita = () => {
-    tila = { kehykset: [], kaynnissa: true, t: nyt(), alku: nyt() };
+    const oma = { kehykset: [], kaynnissa: true, t: nyt(), alku: nyt() };
+    tila = oma;
     kaariRaf(); kaariRender();
+    ketjuja += 1;
     const askel = () => {
-      if (!tila?.kaynnissa) return;
-      const t = nyt(); const dt = t - tila.t; tila.t = t;
-      const kehys = { t: t - tila.alku, dt, varattu: null, js: 0, render: 0, ...lue() };
-      tila.kehykset.push(kehys);
+      if (tila !== oma || !oma.kaynnissa) { ketjuja = Math.max(0, ketjuja - 1); return; }
+      const t = nyt(); const dt = t - oma.t; oma.t = t;
+      const kehys = { t: t - oma.alku, dt, varattu: null, js: 0, render: 0, ...lue() };
+      oma.kehykset.push(kehys);
+      // Ruutunäyttö pitää mittausta auki pitkään; katto estää taulukkoa kasvamasta rajatta.
+      if (oma.kehykset.length > KEHYSKATTO) oma.kehykset.splice(0, oma.kehykset.length - KEHYSKATTO);
       kehysNyt = kehys;
       if (kanava) { odottaa = { alku: t, kehys }; kanava.port2.postMessage(0); }
       // Oma askel ensimmäisenä rAF-jonossa: muut saman kehyksen kutsut kirjautuvat tähän kehykseen.
@@ -217,7 +302,44 @@ export function luoKehysprofiili(uiTaiHaku, ikkuna = globalThis) {
     const t = v?.tasaisuus; if (!t) return 'ei vetoa';
     return `veto ${v.nopeusPx} px/s (${v.pointerType}): siirtymä/kehys ka ${p(t.siirtymaKa, 2)} px, hajonta/ka ${p((t.vaihtelu ?? 0) * 100, 0)} % (px/ms-vaihtelu ${p((t.nopeusVaihtelu ?? 0) * 100, 0)} %), pysähdyksiä ${t.pysahdyksia}/${t.kehyksia}, pisin ${p(t.pisinPysahdysMs, 0)} ms, dt p95 ${p(t.dtP95)}`;
   };
-  return { aloita, lopeta, tiivista, teksti, lue, veto, tasaisuus, vetoTeksti };
+  /*
+   * ══ OTOS EI KATKAISE MITTAUSTA (Laitetestaajan löydös 22.9.2026) ══
+   *
+   * Ruutunäyttö sulki ja avasi mittauksen kolmen sekunnin välein, ja
+   * koska profiili on SINGLETON, se katkaisi samalla mittauspalvelimen
+   * otoksen: neljä eri koetta sai kukin saman ~47 kehyksen pätkän,
+   * vaikka harness pyysi kymmenen sekuntia.
+   *
+   * Nyt mittaus jää auki ja lukijat ottavat siitä VIIPALEITA: `otos(ms)`
+   * palauttaa viimeiset ms millisekuntia samassa muodossa kuin
+   * `lopeta()`, koskematta mittaukseen. Kumpikin lukija näkee siis oman
+   * ikkunansa, eikä harnessin `lopeta()` jää ruutunäytön jalkoihin.
+   */
+  return {
+    aloita,
+    lopeta,
+    tiivista,
+    teksti,
+    lue,
+    veto,
+    tasaisuus,
+    vetoTeksti,
+    ketjuja: () => ketjuja,
+    /** Onko mittaus käynnissä (ruutunäyttö ei käynnistä päälle). */
+    kaynnissa: () => Boolean(tila?.kaynnissa),
+    /**
+     * Viimeisten `ms` millisekuntien kehykset ilman, että mittaus
+     * pysähtyy. Sama muoto kuin `lopeta()`, joten `tiivista` kelpaa.
+     */
+    otos: (ms) => {
+      if (!tila) return null;
+      const kehykset = tila.kehykset;
+      const loppu = kehykset.length ? kehykset[kehykset.length - 1].t : 0;
+      const raja = loppu - Math.max(0, Number(ms) || 0);
+      const alku = kehykset.findIndex((k) => k.t >= raja);
+      return { alku: tila.alku, kehykset: alku < 0 ? [] : kehykset.slice(alku) };
+    },
+  };
 }
 
 /** Asenna `globalThis.__kehysprofiili` (kerran). */

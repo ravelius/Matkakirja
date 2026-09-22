@@ -308,3 +308,25 @@ eivät nykyisen sivun valintoihin. Koko testisarja muutoksen jälkeen:
 3936 yhteensä, 3923 PASS, 13 SKIP, 0 FAIL. Kohdetestit 11/11 PASS.
 Kaksoisavaimet, niputus, savukevartio, nimiöt ja diff-check PASS.
 Julkaisukuitti kirjataan erikseen. Ei kuvatilauksia.
+
+## 22.9.2026: kaikki nykyiset eleet pelin koodiin
+
+Tämä myöhempi päätös korvaa yllä olevan katselu-only-rajauksen. Kaikkien
+70 nykyisen pelieleen uusi liikerata on nyt myös tuotanto-ohjaimen käytössä:
+katselun elekello, pelin kesto ja piirtomoduuli ovat yhteiset. Kaksi
+ylimääräistä kohtausta (Ihana nähdä! ja Kiireinen kirjanhaku) jäävät
+katseluun odottamaan omia pelitapahtumiaan; niitä ei yhdistetä
+väkisin saman vanhan eleen tunnukseen. Laskeutumiskommellus ja harvinainen
+lasitörmäys säilyttävät nykyiset käynnistymisporttinsa.
+
+Pullan syönti kestää nyt 7,4 s. Pulla nousee siiven kannattelemana nokalle
+ja puremajäljet etenevät; kartan nokkimisessa on kaksi nopeaa osumaa,
+niiden välissä havaintotauko ja kevyt pintakosketuksen merkki. Touhu-eleiden
+lisäaika kuuluu aktiiviseen tekemiseen eikä yleiseen hidastukseen.
+Kartalla näkyvän Pulun oikea ja alareunan etäisyys (3,6 rem) on jo
+julkaistun pelin CSS:ssä; vain piilossa olevan napin vanha vara-ankkuri
+päivitettiin samaan paikkaan (58/48/58 px 16 px:n juurikoolla).
+
+Katselusivu on edelleen erillinen julkaisu. Pelin päähaaran yhdistäminen,
+versiointi ja live-QA ovat siitä erilliset portit. Ääniä ja cueita ei
+muutettu. Kuvaputkelle ei tule tilauksia.

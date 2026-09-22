@@ -48,6 +48,8 @@ import {
   luoSisaisyysTesti,
   onKaupunginSisainen,
 } from './kaupunkiliuska.js';
+// Koeliput osoitteesta (?koe=): sama jäsennys kuin laattakerroksella.
+import { laattakerroksenKokeet } from '../pallolaatat.js';
 import { FOKUS_POHJAT } from '../packs/fokus-grc.js';
 import { MAASTOKOHTEET_ARK } from '../packs/maastokohteet-ark.js';
 import { MAASTOKOHTEET_ATA } from '../packs/maastokohteet-ata.js';
@@ -493,8 +495,23 @@ export const NOSTON_TASO1_KERROIN = 1.3;
  * isomman tilan ja tavallinen merkki pisteen tilan.
  */
 export const NOSTOJEN_TYYPPIMERKIN_KERROIN = 4;
+/*
+ * KOELIPPU `?koe=symbolitkaukana` (omistaja 22.9.2026, sanatarkasti:
+ * *"Voisi kokeilla vaihtaa nostojen pisteet piirroksiksi jo
+ * kaukonäkymässä..."*). Lippu pudottaa kertoimen rajan pois, eli
+ * tyyppimerkit ovat käytössä KAIKILLA zoomeilla — omistajan vertailua
+ * varten harmaata pistettä vasten (ks. KARTAN PISTE ON HARMAA
+ * js/fokusnosto-symbolit.js). Ei muuta mitään muuta: merkki, ruudun
+ * kerroin ja laatikot tulevat samasta koodista kuin lähizoomissa.
+ *
+ * Lippu luetaan KERRAN moduulin latauksessa, koska sama vastaus
+ * tarvitaan ladonnassa, rasteripyynnössä ja sovittelun laatikoissa —
+ * kesken kehyksen vaihtuva vastaus repisi ne eri tiloihin.
+ */
+const SYMBOLIT_KAUKANA = laattakerroksenKokeet().has('symbolitkaukana');
 /** Ovatko tyyppimerkit käytössä kartan kertoimella (z8 ja lähempänä). */
 export function tyyppimerkitKaytossa(kerroin) {
+  if (SYMBOLIT_KAUKANA) return true;
   return Number.isFinite(kerroin) && kerroin >= NOSTOJEN_TYYPPIMERKIN_KERROIN;
 }
 
