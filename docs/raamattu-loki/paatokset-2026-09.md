@@ -991,3 +991,7 @@ Fable 22.9.2026 klo 12.00: C4 (docs/raportit/kohtaamiset-era-c4-20260922.md, sis
 ## FABLEN NOLLAUSRAJA 65 %; ESILATAUS ILMAN MOBIILIBUDJETTIA; FABLE NOLLAA ITSENSA (LUOVUTUS 22.9.) (22.9.2026 klo 10.09)
 
 Omistaja 22.9.2026 klo 12.05: Fablen nollausraja 65 % (Raamattu päivitetty); esilatauksessa ei erillistä mobiilibudjettia. Julkaisija: ei aja worktree remove/prune/branch -D, vain gh --delete-branch (etähaara); app ei ole tehnyt worktreitä → Karttasepän worktreen poistaja tuntematon. Codex-tilaus 11 (C3-kohtaamiskuvat) postilaatikkoon. Fable (72 %) tekee luovutuksen docs/raportit/viesti-fable-luovutus-20260922.md ja nollaa itsensä Postivahdin kautta Raamatun kaavalla.
+
+## PULUN LASKEUTUMISVARJO POIS; STP EI YHDISTA (PUHELIMEN PUOLI); JULKAISIJA NOLLATAAN; FABLE NOLLAA ITSENSA (22.9.2026 klo 10.12)
+
+Omistaja 22.9.2026 klo 12.25: pulun istahtaessa takaisin kartalle panoroinnin jälkeen kartalle piirtyy pitkä himmeä varjo pulun kohdalle koko kartan yli — turha, poistetaan (Pelikoodari; mahdollisesti leijunnan paikkauksen v2077 sivutuote). Safari Technology Preview asennettu ja kehittäjäominaisuudet kytketty, mutta puhelin jää yhä Connecting… → vika puhelimen puolella (lukitus, Web Inspector, Developer Mode, luottamus); skripti tools/mac/safari-kehitys-iphone.applescript. Laitetestaajan xctrace tarvitsee Developer Tools -luvan omistajalta. Julkaisija (73 %) kirjoittaa luovutuksen; uusi Fable nollaa sen. Fable nollaa itsensä nyt (luovutus viesti-fable-luovutus-20260922.md).
