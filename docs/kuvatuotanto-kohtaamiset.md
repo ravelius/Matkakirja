@@ -78,11 +78,11 @@ Livia nokkii taustalla murua ja huomaa kameran vasta kesken nokkaisun.
 | Kaupunki | Hahmo(t) ja nykyhetki | Kysymyskytkös | Tila |
 | --- | --- | --- | --- |
 | Lontoo | Taksikuski Ned kääntyy pysäytetyn mustan taksin ratista takapenkille | Sumuinen lasi ja vanha katulamppu; selitystä ei näytetä | Tyylikoe valmis |
-| Amsterdam | Willem pysähtyy nykyajan kaupunkipyörällä kanaalisillalle | Vanhat kattokoukut taustassa; käyttötapaa ei näytetä | Tyylikoe valmis |
+| Amsterdam | Yara keskeyttää kanavatalon muuton vastatakseen matkaajalle | Vanhat kattokoukut taustassa; käyttötapaa ei näytetä | Tyylikoe valmis (hahmo vaihdettu Willemistä Yaraksi 5.9.2026, taulukko korjattu 22.9.2026) |
 | Venetsia | Lucia keskeyttää naamioiden lastauksen sähköiseen kuljetusveneeseen | Suljettu pitkänokkainen naamio; nokan sisältöä ei näytetä | Tyylikoe valmis |
 | Budapest | Márta ja aikuinen tytär Réka juovat smoothieita modernissa lasiatriumissa | Kolme erillistä kaupunkimerkkiä; yhdistävää vastausta ei näytetä | Tyylikoe valmis |
 | Istanbul | 52-vuotias konservointi-insinööri Emine roikkuu turvallisesti pää alaspäin vesisäiliössä | Pylväät ja vesi; Medusan asentoa ei näytetä | Tyylikoe valmis |
-| Wien | 64-vuotias Anton jatkaa juoksuaskelta ja kääntää vain päänsä pelaajaan | Vanha pörssirakennus bokehissa; päivämäärää ei näytetä | Tyylikoe valmis |
+| Wien | Suntio Anton pysähtyy kynttilät kädessään katakombien portaille | Vanhat holvit hämärässä; sijaintia ei näytetä | Tyylikoe valmis (korvaa 22.9.2026 vanhentuneen pörssirakennus-juoksija-konseptin — kuva wien-anton-katakombit-v2.jpg on hyväksytty) |
 | Pariisi | Colette avaa bouquiniste-kojua Maëlle-tyttärensä kanssa; Pulu jää vahingossa kuvaan | Vanha nimetön kirja ja vihreä koju; etymologiaa ei näytetä | Tyylikoe valmis |
 | Palermo / Sisilia | Rosalia ja Salvatore-isä keskeytetään nukketeatterin valmistelusta | Ritarinukke ilman nimiä tai tunnuksia | Tyylikoe valmis |
 | Barcelona | Mercè varjostaa silmiään kovalta auringolta tiheässä festivaaliväkijoukossa konfettipamauksen jälkeen | Lohikäärmehahmo bokehissa; ruusua ei näytetä | Tyylikoe valmis |
