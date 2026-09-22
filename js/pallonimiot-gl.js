@@ -488,6 +488,22 @@ export function luoNimiokerrosGL({ pallo, kotelo, ikkuna = globalThis, luokat = 
          * eroa voi syntyä. Alue annetaan srcRegionina (ankka-Box2:
          * three lukee vain min/max).
          */
+        /*
+         * EI `needsUpdate`iä LÄHTEELLE (Karttasepän katselmushuomio
+         * 22.9.2026 ja sen mittaus). Välimuistitettu lähdetekstuuri
+         * voisi periaatteessa jäädä ensimmäiseen kuvaan. Näin ei käy:
+         * three ei lataa lähdettä GPU-tekstuurina lainkaan, vaan lukee
+         * `srcTexture.image`in — eli ELÄVÄN kankaan — ja vie sen
+         * suoraan texSubImage2D:llä. Mitattu kahdella peräkkäisellä
+         * osapäivityksellä eri väreillä: molemmat oikein (ero 0),
+         * eikä ensimmäinen turmellu (vartija savuke-glnimiot
+         * "osapäivityksen lähde on tuore").
+         *
+         * `needsUpdate = true` olisi tässä paitsi turha myös riski:
+         * jos three joskus SITOO lähteen, lippu laukaisisi koko
+         * 2048²-kankaan latauksen joka rasterilla — juuri sen kulun,
+         * jonka osapäivitys poistaa (kohta 8).
+         */
         if (!sivu.lahdetekstuuri) {
           sivu.lahdetekstuuri = new L.Texture(sivu.kangas);
           sivu.lahdetekstuuri.flipY = false;
