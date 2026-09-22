@@ -1,40 +1,80 @@
 /*
- * LEPOPIIRTO — PIIRRÄ VAIN, KUN JOKIN MUUTTUI (sulavuuskatsaus 22.9.2026
- * kohta 18; omistajan periaatepäätös Fablen kautta 22.9.2026).
+ * LEPOPIIRTO — LEPÄÄ KIRJASTON TICKIN TASOLLA, KUN MIKÄÄN EI MUUTTUNUT
+ * (sulavuuskatsaus 22.9.2026 kohta 18; omistajan periaatepäätös Fablen
+ * kautta 22.9.2026).
  *
  * Pallo piirsi 60 kehystä sekunnissa myös täysin levossa: koko
  * koukkuketju (laattakerros, nimiöt, vektorit) ja koko täyttö joka
  * kehys, vaikka kuva ei muuttunut. Se on lämpöä ja akkua — ja ele alkaa
  * lämpimällä laitteella, jonka kello on jo laskettu. Karttapallo.md 15.5
  * hylkäsi "silmukan pysäytyksen levossa" jäätymisriskin takia; tässä
- * silmukka ei pysähdy vaan PIIRTO ohitetaan, ja varmistava syke
- * (LEPOPIIRTO_SYKE_MS, 4 fps) piirtää aina — unohtunut muutoslähde
- * näkyy enintään 250 ms:n viiveenä, ei jäätymisenä (Mapbox
- * triggerRepaint, deck.gl).
+ * lepo ei ole jäätymistä, koska varmistava syke (LEPOPIIRTO_SYKE_MS,
+ * 4 fps) piirtää aina — unohtunut muutoslähde näkyy enintään 250 ms:n
+ * viiveenä (Mapbox triggerRepaint, deck.gl).
  *
- * MITEN. `renderer.render` kääritään. Kehys piirretään, jos
+ * ── OMISTAJAN VIKA 22.9.2026: "KARTTA VÄLKKYY KUIN STROBOVALO" ──────
+ *
+ * v2101–v2104 ohitti `renderer.render`-kutsun ja jätti kirjaston tickin
+ * pyörimään. Se VÄLKKYI iPhonella: kartta katosi kokonaan ja palasi
+ * 15 kertaa sekunnissa (hehkupisteen syke), eli ohitetut kehykset
+ * sommiteltiin TYHJÄNÄ kankaana. Sama oire oli nähty Playwrightin
+ * kaappauksissa ja tulkittu automaation erikoisuudeksi; se oli oire,
+ * ei erikoisuus.
+ *
+ * MITATTU 22.9.2026 (WebKit, kaappaus sommittelijan kautta — PNG:n koko
+ * erottaa tyhjän kankaan kartasta; tools/savukkeet/savuke-lepopiirto.mjs
+ * väite V5 vartioi tätä):
+ *
+ *   | toteutus                                     | kaappausten kokoero |
+ *   | -------------------------------------------- | ------------------- |
+ *   | piirto joka kehys (`?koe=levovanha`)          | 1,12 ×              |
+ *   | render-kutsun ohitus (v2101–v2104)            | 24,0 ×  ← VÄLKE     |
+ *   | render-kutsun ohitus + preserveDrawingBuffer  | 18,4 ×  ← VÄLKE     |
+ *   | TICKIN ohitus (tämä)                          | 1,00 ×              |
+ *
+ * `preserveDrawingBuffer: true` EI siis korjaa tätä (eikä sitä kannata
+ * maksaa joka kehyksellä): puskurin säilyttäminen ei auta, koska WebKit
+ * ei anna sommittelijalle kankaan edellistä kuvaa, kun sivu animoi eikä
+ * kangasta piirretty tällä kehyksellä. Ainoa toimiva tapa on olla
+ * KOSKEMATTA kankaaseen ohitetulla kehyksellä — ja kirjaston tick
+ * koskee siihen myös ilman renderiä (`controls.update`, CSS2D-piirto,
+ * katsesäde). Siksi ohitetaan koko tick.
+ *
+ * MITEN. Oma rAF on kello. Joka kehyksellä päätetään, tarvitaanko
+ * piirto:
  *   1. kameran maailmamatriisi, projektio, piirtopuskurin koko tai
  *      pikselisuhde muuttui (verrataan edelliseen piirtoon — kattaa
- *      eleet, liu'ut, ajot, tweenit ja resizen ilman ilmoituksia);
+ *      eleet, liu'ut, ajot ja resizen ilman ilmoituksia; laudan
+ *      kamera-ajot kirjoittavat `pointOfView(pov, 0)` omasta
+ *      rAF:staan, eivät kirjaston tweenistä, joten ne näkyvät tässä);
  *   2. joku ilmoitti tarpeen: `tarvitaan(ms)` pitää piirron päällä ms:n
  *      ajan (häiveet: laattakerros, vektorit, nimiöt) tai vain seuraavan
  *      kehyksen (laatta scenessä, nimiöt likaiset, kerman maski);
  *   3. este on päällä (`esteet()`: linssi, lento, iso animaatio — vanha
- *      käytös kokonaan, koska niiden animaatiot eivät ilmoita);
+ *      käytös kokonaan, koska niiden animaatiot eivät ilmoita ja koska
+ *      linssin avausajo on kirjaston OMA tween, joka pysähtyisi levossa);
  *   4. hidas animaatio käy (`hitaat()`: hehkupisteen syke levossa) ja
  *      edellisestä piirrosta on LEPOPIIRTO_HIDAS_MS (15 fps riittää
  *      2,4 s:n sinille);
  *   5. sykkeen aika on täynnä.
- * Kirjaston tick (controls.update, hover-säteenjäljitys, tweenit) ja
- * CSS2D-piirto pyörivät ennallaan; scene.onBeforeRender-koukut
- * (laattakerros.paivita, nimiöt, vektorit) ajetaan vain piirretyillä
- * kehyksillä — levossa pääsäiekin lepää.
+ * Tarvitaan → `resumeAnimation()` ajaa kirjaston syklin HETI ja jättää
+ * silmukan pyörimään 60 Hz:llä; ei tarvita → `pauseAnimation()`
+ * pysäyttää sen. Levossa kirjaston tickiä ei ajeta lainkaan: ei
+ * renderiä, ei CSS2D-kirjoituksia, ei katsesädettä — ja kangas jää
+ * sommittelijalle sellaisena kuin se viimeksi piirrettiin.
  *
- * Paluulippu `?koe=levovanha`: piirto joka kehys kuten ennen. Automaatiossa
- * (navigator.webdriver) lepopiirto on pois, ellei `?koe=lepopiirto` — ks.
- * AUTOMAATIOSSA POIS alempana. Savukkeet, jotka kutsuvat renderer.render
- * itse ja lukevat pikseleitä, pakottavat piirron
- * `pallo.__piirto.pakota()`-kutsulla (savuke-laattaohjelmat).
+ * OLETUS ON POIS, KUNNES OMISTAJA ON NÄHNYT LEVON OIKEALLA IPHONELLA
+ * (Fable 22.9.2026). v2105 sammutti lepopiirron hätäkorjauksena, ja
+ * vaikka tickin ohitus korjaa välkkeen mitattavasti WebKitissä, oletusta
+ * ei käännetä pelkän WebKit-toiston perusteella: EDELLINEN VARTIJA PETTI
+ * TÄSMÄLLEEN TÄSSÄ KOHDASSA. Lepopiirto on siis käytössä vain lipulla
+ * `?koe=lepopiirto`; `?koe=levovanha` sammuttaa sen myös lipun kanssa.
+ *
+ * UNI ON ERI ASIA KUIN LEPO. Kun palloa ei katsota (lehti auki, kuori
+ * piilossa, sivu taustalla), lauta.js nukuttaa sen: `uni(true)` lopettaa
+ * myös tämän kellon. Lepo on hereillä olevan pallon säästö, uni on
+ * katsomattoman pallon säästö; molemmat pysäyttävät saman kirjaston
+ * silmukan, joten omistaja on YKSI (tämä moduuli) eikä kaksi.
  */
 
 /** Varmistava syke levossa (ms): 4 fps. */
@@ -44,39 +84,28 @@ export const LEPOPIIRTO_HIDAS_MS = 66;
 /** Piirtoja peräkkäin muutoksen jälkeen: toinen kehys vie CSS2D:n ja häiveen lopun. */
 export const LEPOPIIRTO_JALKIKEHYKSIA = 1;
 
-/*
- * AUTOMAATIOSSA POIS, ELLEI PYYDETÄ (`?koe=lepopiirto`). Playwright/CDP:n
- * page.screenshot sommittelee uuden kehyksen, ja WebGL-kangas ilman
- * preserveDrawingBufferia antaa sille TYHJÄN puskurin, jos kehystä ei
- * juuri piirretty (mitattu 22.9.2026: kaappaus 47,38,33 = pelkkä
- * tausta, vaikka laatat olivat scenessä). Näytöllä sommittelija pitää
- * viimeisen kehyksen (Mapbox ja deck.gl piirtävät tarpeen mukaan iOS
- * Safarissa juuri näin), mutta CI:n kaappaussavukkeet mittaisivat
- * tyhjää. Siksi `navigator.webdriver` sammuttaa lepopiirron; mittaus
- * ja lepopiirron oma savuke pyytävät sen lipulla, ja lukevat pikselit
- * readPixelsillä piirron jälkeen, eivät kaappauksella.
+/**
+ * Onko lepopiirto käytössä: vain `?koe=lepopiirto`-lipulla, ja
+ * `?koe=levovanha` voittaa sen.
+ *
+ * EI WEBDRIVER-POIKKEUSTA. v2101–v2104 sammutti lepopiirron erikseen
+ * automaatiossa (`navigator.webdriver`), koska kaappaukset saivat tyhjän
+ * kankaan. Juuri se poikkeus esti vartijaa näkemästä välkkeen: CI mittasi
+ * eri polkua kuin pelaaja ajoi. Poikkeus on poistettu — automaatio ja
+ * pelaaja saavat saman käytöksen samalla lipulla, ja savuke pyytää
+ * lipun itse.
  */
-export function lepopiirtoKaytossa(haku, nav = globalThis.navigator) {
+export function lepopiirtoKaytossa(haku) {
   const h = haku ?? (() => { try { return globalThis.location?.search ?? ''; } catch { return ''; } })();
   let kokeet = [];
   try { kokeet = (new URLSearchParams(h).get('koe') ?? '').split(',').map((k) => k.trim()); } catch { kokeet = []; }
   if (kokeet.includes('levovanha')) return false;
-  if (kokeet.includes('lepopiirto')) return true;
-  /*
-   * OLETUS POIS (Fable 22.9.2026, omistajan tuntumatesti v2104: "kartta
-   * välkkyy kuin strobovalo" iPhonella). Kun piirto ohitetaan, WebKit
-   * näyttää kankaan tyhjänä — sama ilmiö, joka Playwrightissa näkyi tyhjänä
-   * kaappauksena. Lepopiirto on käytössä vain `?koe=lepopiirto`-lipulla,
-   * kunnes ohitetun kehyksen esitys on ratkaistu (esim. preserveDrawingBuffer
-   * tai piirron ohitus kirjaston tickin tasolla, ei renderer.renderissä).
-   */
-  void nav;
-  return false;
+  return kokeet.includes('lepopiirto');
 }
 
 /**
- * Puhdas päätös: piirretäänkö tämä kehys. `tila` on asennuksen sisäinen
- * olio; testattavissa ilman renderöijää.
+ * Puhdas päätös: tarvitaanko tällä kehyksellä piirto. `tila` on
+ * asennuksen sisäinen olio; testattavissa ilman renderöijää.
  */
 export function lepopiirtoPaatos(tila, {
   nyt, kameraMuuttui, este = false, hidas = false,
@@ -94,10 +123,10 @@ export function lepopiirtoPaatos(tila, {
 }
 
 /**
- * Asentaa lepopiirron palloon. Palauttaa purkajan. `pallo.__piirto`
- * saa rajapinnan { tarvitaan(ms), pakota(), tila(), paalla(bool) }.
+ * Asentaa lepopiirron palloon. Palauttaa purkajan. `pallo.__piirto` saa
+ * rajapinnan { tarvitaan(ms), pakota(), tila(), paalla(bool), uni(bool) }.
  *
- * @param {object} pallo Globe.gl-olio (renderer(), scene(), camera())
+ * @param {object} pallo Globe.gl-olio (renderer(), camera(), pause/resumeAnimation())
  * @param {object} p
  * @param {() => boolean} [p.esteet]  linssi, lento, iso animaatio → piirrä aina
  * @param {() => boolean} [p.hitaat]  hidas animaatio käy (hehkupisteen syke)
@@ -112,7 +141,7 @@ export function asennaLepopiirto(pallo, {
   const nyt = () => ikkuna.performance?.now?.() ?? Date.now();
   const tila = {
     paalla: true, pakko: 0, tarveAsti: -Infinity, jalki: 0, viimePiirto: -Infinity,
-    piirtoja: 0, ohitettuja: 0, syyt: {},
+    piirtoja: 0, ohitettuja: 0, syyt: {}, unessa: false,
   };
   // Edellisen piirron kamera: 16 + 16 lukua, puskurin koko ja pikselisuhde.
   const edellinen = new Float64Array(34);
@@ -134,21 +163,57 @@ export function asennaLepopiirto(pallo, {
     ensimmainen = false;
     return muuttui;
   };
-  const alkuperainen = renderer.render;
-  renderer.render = function lepopiirtoRender(scene, camera, ...loput) {
-    const t = nyt();
-    const syy = lepopiirtoPaatos(tila, {
-      nyt: t, kameraMuuttui: kameraMuuttui(camera), este: esteet(), hidas: hitaat(), sykeMs, hidasMs,
-    });
-    if (!syy) { tila.ohitettuja += 1; return undefined; }
-    tila.viimePiirto = t;
+  /*
+   * TARKKAILIJA, EI PORTTI. `renderer.render` kääritään vain kirjaamaan
+   * piirron hetki — sykkeen ja hitaiden tahti mitataan siitä, ei
+   * päätöksestä, joten myös savukkeen oma piirto siirtää sykettä.
+   * Portti on kirjaston silmukassa, ei täällä.
+   */
+  const alkuperainenRender = renderer.render;
+  renderer.render = function lepopiirtoRender(...a) {
+    tila.viimePiirto = nyt();
     tila.piirtoja += 1;
+    return alkuperainenRender.apply(this, a);
+  };
+  renderer.__lepopiirto = tila;
+
+  /*
+   * SILMUKAN TILA LUETAAN PIIRROISTA, EI VAIN OMASTA LIPUSTA. Kirjaston
+   * `pauseAnimation` käy joka kutsulla läpi kerroslistansa, joten sitä
+   * ei kannata kutsua 60 kertaa sekunnissa levossa — lippu riittää.
+   * Mutta silmukan voi herättää MUUKIN kuin tämä moduuli
+   * (satelliitti-avaruus.js varmistaKehykset pakottaa kehyksen
+   * pause+resume-parilla), ja silloin pelkkä lippu jäisi jälkeen ja
+   * jättäisi silmukan pyörimään 60 Hz:llä loputtomiin. Odottamaton
+   * piirto kertoo herätyksestä: lippu korjataan siitä.
+   */
+  let kirjastoKay = true;
+  let nahtyjaPiirtoja = 0;
+  let kehys = 0;
+  const kayntiin = () => { if (kirjastoKay) return; kirjastoKay = true; pallo.resumeAnimation?.(); };
+  const seis = () => { if (!kirjastoKay) return; kirjastoKay = false; pallo.pauseAnimation?.(); };
+  const askel = () => {
+    kehys = ikkuna.requestAnimationFrame(askel);
+    const t = nyt();
+    if (tila.piirtoja !== nahtyjaPiirtoja) { kirjastoKay = true; nahtyjaPiirtoja = tila.piirtoja; }
+    const syy = lepopiirtoPaatos(tila, {
+      nyt: t,
+      kameraMuuttui: kameraMuuttui(pallo.camera?.()),
+      este: esteet(),
+      hidas: hitaat(),
+      sykeMs,
+      hidasMs,
+    });
+    if (!syy) { tila.ohitettuja += 1; seis(); return; }
     tila.syyt[syy] = (tila.syyt[syy] ?? 0) + 1;
     // Muutoksen jälkeen vielä yksi kehys: CSS2D ja häiveen viimeinen askel.
     if (syy === 'kamera' || syy === 'tarve') tila.jalki = LEPOPIIRTO_JALKIKEHYKSIA;
-    return alkuperainen.call(this, scene, camera, ...loput);
+    kayntiin();
   };
-  renderer.__lepopiirto = tila;
+  const kelloKayntiin = () => { if (!kehys) kehys = ikkuna.requestAnimationFrame(askel); };
+  const kelloSeis = () => { if (kehys) { ikkuna.cancelAnimationFrame?.(kehys); kehys = 0; } };
+  kelloKayntiin();
+
   const rajapinta = {
     /** Piirrä seuraava kehys, ja ms:n ajan joka kehys (häiveet). */
     tarvitaan(ms = 0) {
@@ -156,15 +221,31 @@ export function asennaLepopiirto(pallo, {
       if (asti > tila.tarveAsti) tila.tarveAsti = asti;
       if (!(ms > 0)) tila.pakko = Math.max(tila.pakko, 1);
     },
-    /** Seuraava render-kutsu piirretään varmasti (savukkeet, jotka lukevat pikseleitä). */
-    pakota() { tila.pakko = Math.max(tila.pakko, 1); },
-    tila: () => ({ ...tila, syyt: { ...tila.syyt } }),
-    paalla(arvo) { tila.paalla = Boolean(arvo); },
+    /** Seuraava kehys piirretään varmasti (savukkeet, jotka lukevat pikseleitä). */
+    pakota() { tila.pakko = Math.max(tila.pakko, 1); if (!tila.unessa) kayntiin(); },
+    tila: () => ({ ...tila, syyt: { ...tila.syyt }, kirjastoKay }),
+    paalla(arvo) { tila.paalla = Boolean(arvo); if (arvo && !tila.unessa) kayntiin(); },
+    /**
+     * Uni: palloa ei katsota (lauta.js lepaa/heraa). Kello seisoo eikä
+     * kirjastoa herätetä ennen kuin uni loppuu.
+     */
+    uni(arvo) {
+      const uusi = Boolean(arvo);
+      if (uusi === tila.unessa) return;
+      tila.unessa = uusi;
+      if (uusi) { kelloSeis(); seis(); return; }
+      tila.pakko = Math.max(tila.pakko, 1);
+      kelloKayntiin();
+      kayntiin();
+    },
   };
   pallo.__piirto = rajapinta;
   return () => {
-    if (renderer.render?.name === 'lepopiirtoRender') renderer.render = alkuperainen;
+    kelloSeis();
+    if (renderer.render?.name === 'lepopiirtoRender') renderer.render = alkuperainenRender;
     delete renderer.__lepopiirto;
     if (pallo.__piirto === rajapinta) delete pallo.__piirto;
+    // Purku jättää silmukan pyörimään: kukaan muu ei enää herättäisi sitä.
+    kayntiin();
   };
 }

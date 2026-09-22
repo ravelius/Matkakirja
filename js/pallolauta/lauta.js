@@ -1472,19 +1472,27 @@ export async function avaaPallolauta(ui) {
   let siirtymaAjastin = 0;
   let tahdistaSiirtymanJalkeen = () => {};
   let merkkienNakyvyys = { ajasta() {}, kameranJalkeen: async (ajo) => ajo, pura() {} };
+  /*
+   * UNI KULKEE LEPOPIIRRON KAUTTA, KUN SE ON ASENNETTU: kirjaston
+   * silmukalla on yksi omistaja (lepopiirto.js "UNI ON ERI ASIA KUIN
+   * LEPO"). Ilman lepopiirtoa (`?koe=levovanha`) pause/resume suoraan
+   * kuten ennen.
+   */
   const heraa = () => {
     if (!tauolla) return;
     tauolla = false;
     // Jono ennen Globe.gl:n omaa ensimmäistä herätysframea: datan
     // invalidointi ehtii sen päivitysjonoon heti heräämisen alussa.
     merkkienNakyvyys.ajasta();
-    pallo.resumeAnimation?.();
+    if (pallo.__piirto) pallo.__piirto.uni(false);
+    else pallo.resumeAnimation?.();
     tahdistaSiirtymanJalkeen();
   };
   const lepaa = () => {
     if (tauolla) return;
     tauolla = true;
-    pallo.pauseAnimation?.();
+    if (pallo.__piirto) pallo.__piirto.uni(true);
+    else pallo.pauseAnimation?.();
   };
   /** Nukkuuko pallo: lehti auki, kuori piilossa tai sivu taustalla. */
   const lepoTarpeen = () => kuori.hidden
