@@ -28,6 +28,8 @@
  * savukkeet käyttävät, ja se ajetaan kerran jaksossa (oletus 3 s).
  */
 
+import { PIIRTOKOKEIDEN_VAIHTOEHDOT } from '../piirtokoe-asetus.js';
+
 /** Rollaavan ikkunan pituus (ms). */
 export const PROFIILIN_JAKSO_MS = 3000;
 /** Polku, johon yhteenveto lähetetään (sama origin). */
@@ -57,8 +59,20 @@ export function koetilanNimi(kokeet) {
  */
 export function koetilarivi({ koe, seuraava = null, versio = '' } = {}) {
   const nyt = koe || 'normaali';
-  const vaihto = seuraava && seuraava !== nyt ? ` (seuraavassa latauksessa: ${seuraava})` : '';
-  return `koe: ${nyt}${vaihto} · profiili p${PROFIILIN_VERSIO}${versio ? ` · ${versio}` : ''}`;
+  const vaihto = seuraava && seuraava !== nyt ? ` (seuraavassa latauksessa: ${koetilanOtsikko(seuraava)})` : '';
+  return `${koetilanOtsikko(nyt)}${vaihto} · profiili p${PROFIILIN_VERSIO}${versio ? ` · ${versio}` : ''}`;
+}
+
+/**
+ * NUMERO JA NIMI VALIKON JÄRJESTYKSESSÄ (omistajan tarkennus Fablen
+ * kautta 22.9.2026): "koe 3/6 Pikselisuhde 1,5" — kaappauksen voi
+ * kohdistaa katsomalla valikkoa, ilman lippujen muistamista. Osoitteen
+ * lippu, jota valikossa ei ole (tai useampi yhtä aikaa), näkyy raakana.
+ */
+export function koetilanOtsikko(koe) {
+  const i = PIIRTOKOKEIDEN_VAIHTOEHDOT.findIndex((k) => (k.lippu ?? 'normaali') === koe);
+  if (i < 0) return `koe: ${koe}`;
+  return `koe ${i + 1}/${PIIRTOKOKEIDEN_VAIHTOEHDOT.length} ${PIIRTOKOKEIDEN_VAIHTOEHDOT[i].nimi}`;
 }
 
 const p = (x, n = 0) => (Number.isFinite(x) ? x.toFixed(n) : '—');
