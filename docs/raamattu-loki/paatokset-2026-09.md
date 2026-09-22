@@ -1387,3 +1387,7 @@ Fable 22.9.2026 klo 19.12: v2114:n jälkeen nimet, nostot, nappula ja kohteet GL
 ## OMISTAJA iPHONELLA: ?koe=eiblend (ILLAN SAVYN MULTIPLY POIS) EI VAIKUTA NYKIMISEEN → DOM-SEKOITUSKERROS POISSULJETTU; SEURAAVAKSI KEHYSPROFIILIN OVERLAY (#2837) PUHELIMESTA (22.9.2026 klo 19.13)
 
 Omistaja 22.9.2026 klo 19.15: eiblend ei vaikuta. Poissuljettu tähän mennessä iPhonella: syötetapa (5), dpr 2 liikkeessä, laattojen saapuminen (nykii myös näytetyllä alueella), DOM-multiply-kerros. Jäljellä: kehystahti (120 Hz rAF vs piirto) tai pääsäikeen kehyskohtainen työ (ladonta, roska, kerroksen päivitys) — overlay #2837 kertoo.
+
+## C, D, E TUOTANNOSSA (v2119–v2121); KAAPPAUKSET NAYTETTY OMISTAJALLE (HARMAAT PISTEET, symbolitkaukana 6 → 41 MERKKIA, HALO POIS); NOSTOTASON POLTTO HARMAALLA PISTEELLA ODOTTAA OMISTAJAA (22.9.2026 klo 19.18)
+
+Pelikoodari 22.9.2026 klo 19.18: kaappaukset docs/raportit/kaappaukset/nostopiste-20260922/ (haara pelikoodari-harmaapiste) ja nostohalo-20260922/ (pelikoodari-nostohalo), WebKit 390×844 dpr 2, savuke 10/10; ?koe=symbolitkaukana nostaa kuvamerkit z6:ssa 6 → 41; Avignonin kaariportti ennen/jälkeen. C (v2119) ei kuvattu (tuotannossa). Poltetun laatan piste yhä värillinen kunnes nostotaso poltetaan.
