@@ -301,7 +301,7 @@ function lvChatDustFx(s){
 }
 function lvProps(s,m,prefix){
  let out='';const x=m.x,y=m.y;
- if(m.id==='bunFeast'&&s.feast?.phase==='bite'){
+ if(m.id==='bunFeast'&&s.feast?.phase==='bite'&&!s.katseluRata?.pulla){
   const grab=lvClamp(s.feast.grab),bites=Math.max(0,Math.min(3,s.feast.bites||0));
   const bx=76+23*grab,by=286-35*grab,scale=1-bites*.105;
   // Jokainen puraisu etenee sisäänpäin, ei jo syödyn reunan ulkopuolelle.
@@ -309,9 +309,28 @@ function lvProps(s,m,prefix){
   out+=`<g data-part="bun-feast" data-bites="${bites}" transform="translate(${lvRound(bx)} ${lvRound(by)}) scale(${lvRound(scale)})"><defs><mask id="${prefix}bun-bites"><rect x="-20" y="-22" width="52" height="44" fill="white"/>${cuts}</mask></defs><g mask="url(#${prefix}bun-bites)"><ellipse cx="0" cy="0" rx="19" ry="13" fill="#d59a50"/><path d="M-16 2Q-13-12 0-10Q14-13 17 2Q13 13 0 12Q-14 13-16 2Z" fill="#e7bd76"/><path d="M-10-2Q-7-9 0-6Q7-10 11-2M-8 5Q0 9 9 4" fill="none" stroke="#b8783e" stroke-width="2" stroke-linecap="round"/></g></g>`;
   if(bites>0){const burst=lvClamp(1-Math.abs((s.p-[.34,.48,.62][bites-1])/.035));for(let i=0;i<3;i++)out+=`<path data-part="bun-crumb" d="M${lvRound(91+i*7)} ${lvRound(250+Math.sin(i*2.1)*4+burst*8)}l3 1-1 3-3-1Z" fill="#c18b48" opacity="${lvRound(burst)}"/>`;}
  }
- if(s.side?.kind==='bread'){
+ if(s.side?.kind==='bread'&&!s.katseluRata?.pulla){
   const bx=s.propsRight?x+12:x-80+(s.side.x||0)*2,by=y-50+(s.side.y||0)*1.5;
   out+=`<g transform="translate(${bx} ${by}) scale(${s.propsRight?.62:1})"><defs><mask id="${prefix}bite"><rect x="-8" y="-25" width="60" height="60" fill="white"/>${s.side.bite?'<circle cx="35" cy="-11" r="7" fill="black"/><circle cx="41" cy="0" r="7" fill="black"/>':''}</mask></defs><g mask="url(#${prefix}bite)"><path d="M0 9C-3-4 4-14 18-14C32-16 41-7 40 7Q38 21 20 20Q2 22 0 9Z" fill="#c18b48"/><ellipse cx="20" cy="1" rx="18" ry="13" fill="#e0b875"/><path d="M11 4C9-9 34-8 32 5C30 15 15 15 15 5C15 0 25-1 25 5" fill="none" stroke="#ab743f" stroke-width="2.5" stroke-linecap="round"/></g></g>`;
+ }
+ if(s.katseluRata?.pulla){
+  const p=lvClamp(s.katseluRata.pulla.p);
+  const lift=lvEase((p-.12)/.18)*(1-lvEase((p-.79)/.13));
+  const bx=lvRound(79+2*lift),by=lvRound(290-32*lift);
+  const show=lvEase(p/.055)*(1-lvEase((p-.88)/.09));
+  const bites=m.id==='bunFeast'?Math.max(0,Math.min(3,s.feast?.bites||0)):(p>.36?2:p>.27?1:0);
+  const scale=lvRound(1-bites*.095);
+  let cuts='';for(const [cx,cy] of [[15,-5],[12,4],[4,-4]].slice(0,bites))cuts+=`<circle cx="${cx}" cy="${cy}" r="6" fill="black"/>`;
+  // Siipi tavoittaa pullan ennen nostoa ja kannattelee sitä nokan alla.
+  // Sama näkyvä otteenvaihto seuraa pullaa: herkku ei leiju irrallaan.
+  const wing=lvClamp((p-.075)/.14)*(1-lvEase((p-.83)/.13));
+  out+=`<g data-part="holding-wing" opacity="${lvRound(wing)}"><path d="M${lvRound(x-1)} ${lvRound(y-30)}Q${lvRound(x-16)} ${lvRound(y-36)} ${lvRound(bx+10)} ${lvRound(by+7)}Q${lvRound(bx+3)} ${lvRound(by+12)} ${lvRound(bx+4)} ${lvRound(by+5)}Q${lvRound(x-16)} ${lvRound(y-26)} ${lvRound(x-1)} ${lvRound(y-30)}Z" fill="#8499a3" stroke="#506b7a" stroke-width="1.2"/></g>`;
+  out+=`<g data-part="preview-bun" data-bites="${bites}" opacity="${lvRound(show)}" transform="translate(${bx} ${by}) scale(${scale})"><defs><mask id="${prefix}preview-bun-bites"><rect x="-19" y="-16" width="38" height="32" fill="white"/>${cuts}</mask></defs><g mask="url(#${prefix}preview-bun-bites)"><ellipse rx="15" ry="11" fill="#d59a50"/><path d="M-13 2Q-11-9 0-8Q10-9 13 2Q9 10 0 10Q-11 10-13 2Z" fill="#e7bd76"/><path d="M-8-2Q-4-7 1-5Q6-7 9-1M-6 5Q0 7 7 4" fill="none" stroke="#b8783e" stroke-width="1.5" stroke-linecap="round"/></g></g>`;
+ }
+ if(s.katseluRata?.mapContact){
+  const opacity=lvRound(lvClamp(s.katseluRata.mapContact));
+  const cx=lvRound(x-34+(s.katseluRata.mapPeckNumber===2?3:0));
+  out+=`<g data-part="map-contact" opacity="${opacity}" fill="none" stroke="#aa9272" stroke-width="1.1" stroke-linecap="round"><path d="M${cx-8} 301q-3-2-4-4m${cx+16} 4q3-2 4-4"/><ellipse cx="${cx}" cy="302" rx="8" ry="1.3"/></g>`;
  }
  if(s.crumbY!==null&&s.crumbY!==undefined)out+=`<path d="M${x-34} ${y-36+(s.crumbY-35)*4}l4 1-2 4-3-1Z" fill="#c18b48"/>`;
  if(s.side?.kind==='pfft')out+=`<path d="M${x-47} ${y-46}q-16-10-22-4m20 8q-15 2-23 12" fill="none" stroke="#9b9c91" stroke-width="1.6" stroke-linecap="round"/>`;
@@ -366,11 +385,11 @@ let lvSerial=0;
 const LV_LEIJUNNAN_PORTAAT=6;
 const lvLeijuVanha=()=>{try{return new URLSearchParams(globalThis.location?.search??'').get('koe')?.split(',').includes('leijuvanha')??false;}catch{return false;}};
 const lvLeijuntaAvain=s=>{try{const h=s.mapHover?.height;return JSON.stringify({...s,mapHover:Number.isFinite(h)?Math.round(h*LV_LEIJUNNAN_PORTAAT)/LV_LEIJUNNAN_PORTAAT:null});}catch{return null;}};
-export function luoLivianSvg(element) {
+export function luoLivianSvg(element,{kuva=livianSvgKuva}={}) {
  let right=0;const prefix='livia'+(++lvSerial);
  let viimeAvain=null,osat=null;
  function resize(extra=0){right=Math.max(0,extra);element.style.width=`${152+right}px`;element.style.height='304px';viimeAvain=null;}
- function paint(s){element.innerHTML=livianSvgKuva(s,{right,prefix});viimeAvain=lvLeijuntaAvain(s);osat=null;}
+ function paint(s){element.innerHTML=kuva(s,{right,prefix});viimeAvain=lvLeijuntaAvain(s);osat=null;}
  /* Vaihe-eron paikkaus: true, kun kuva päivitettiin ilman rakennusta. */
  function paikkaa(s){
   if(!(s?.mapHover?.height>0)||!element.querySelector)return false;

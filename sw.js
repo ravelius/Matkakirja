@@ -135,6 +135,7 @@ const SHELL = [
   './js/livia-svg-paa.js',
   './js/livia-astronautti.js',
   './js/livia-svg.js',
+  './js/livia-uudet-versiot.js',
   './assets/livia/livia-astronauttikypara-2x.png',
   './js/minipulu.js',
   './js/livia-eleet.js',

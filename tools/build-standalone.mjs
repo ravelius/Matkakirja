@@ -735,6 +735,7 @@ const MODULES = [
   'js/livia-svg-paa.js',
   'js/livia-astronautti.js',
   'js/livia-svg.js',
+  'js/livia-uudet-versiot.js',
   'js/livia-nostotila.js',
   'js/livia-dialogitila.js',
   'js/pulu-paneelin-ylla.js',

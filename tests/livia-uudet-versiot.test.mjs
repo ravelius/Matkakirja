@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {LIVIA_SVG_ELEET,livianSvgAsento,livianSvgKuva} from '../js/livia-svg.js';
 import {livianSvgPaa} from '../js/livia-svg-paa.js';
 import {LIVIAN_UUDET_VERSIOT,uudenEleenAsento,uudenEleenKuva} from '../docs/livia-uudet-versiot.mjs';
+import {LIVIAN_UUDET_PELIELEET,livianUusiPelitila,livianUusiPelikuva} from '../js/livia-uudet-versiot.js';
 
 test('kasvopohjien polut vastaavat toisiaan myös tuotantopään muuttuessa',()=>{
   const topologia=frame=>[...livianSvgPaa({frame},{prefix:'koe'}).replace(/<path data-part="smile"[^>]*\/>/,'')
@@ -25,6 +26,28 @@ test('katselun kaikki ehdotukset käyttävät vanhan Pulun piirrosta',()=>{
     assert.ok(!LIVIAN_UUDET_VERSIOT.some(e=>e.id===id));
     assert.throws(()=>uudenEleenAsento(id,.4),RangeError);
   }
+});
+
+test('peliohjain saa jokaiselle 70 eleelle saman uuden version kuin katselussa',()=>{
+  assert.equal(LIVIAN_UUDET_PELIELEET.length,LIVIA_SVG_ELEET.length);
+  for(const ele of LIVIAN_UUDET_PELIELEET){
+    const uusi=LIVIAN_UUDET_VERSIOT.find(e=>e.id==='uusi-'+ele.id);
+    assert.equal(ele.duration,uusi.duration,ele.id+' kesto');
+    const asento=livianUusiPelitila(ele.id,.46,{voimakkuus:.5});
+    assert.equal(asento.ele,ele.id);
+    const kuva=livianUusiPelikuva(asento,{prefix:'peli',right:12});
+    assert.match(kuva,/data-part="whole-bird"/,ele.id);
+    assert.doesNotMatch(kuva,/NaN|Infinity|undefined/,ele.id);
+    assert.ok(asento.uusiPiirto||asento.katseluRata,ele.id+' käyttää uutta rataa');
+  }
+  assert.equal(livianUusiPelitila('cityExplain',.46,{cueKestoMs:6200}).cityExplain.variant,'pitka');
+  assert.equal(livianUusiPelitila('cityExplain',.46,{cueKestoMs:6200,playbackRate:2}).cityExplain.variant,'lyhyt');
+  assert.match(livianUusiPelikuva(livianUusiPelitila('bookStudy',.5)),/data-uusi-versio="uusi-bookStudy"/);
+  const avaruus={...livianUusiPelitila('bookStudy',.5),astronautti:true};
+  assert.match(livianUusiPelikuva(avaruus),/data-part="astronautti-kypara"/);
+  assert.doesNotMatch(livianUusiPelikuva(avaruus),/data-uusi-versio=/);
+  assert.deepEqual(LIVIAN_UUDET_VERSIOT.filter(e=>!LIVIAN_UUDET_PELIELEET.some(p=>p.id===e.baseId)).map(e=>e.id),[]);
+  assert.ok(!LIVIAN_UUDET_PELIELEET.some(e=>['uusi-ilahtuu','uusi-bookPanic'].includes(e.id)),'lisäkohtaukset jäävät omalle myöhemmälle käyttöportille');
 });
 
 test('vanhan Pulun ilahtumisessa katse, rintasiipi ja tervehdys seuraavat eri rytmeissä',()=>{
@@ -118,8 +141,8 @@ test('vanhan Pulun pään, hengityksen ja siipien liike pysyy eriytettynä',()=>
   const a=(id,p)=>uudenEleenAsento('uusi-'+id,p);
   assert.ok(a('chuckle',.20).hengitys>0&&a('chuckle',.35).hengitys<0);
   assert.ok(a('chuckle',.32).paaKulma<-15&&a('chuckle',.32).rinta<a('chuckle',.36).rinta);
-  assert.ok(a('yawn',.53).hengitys===1&&a('yawn',.78).hengitys<0);
-  assert.ok(a('yawn',.78).paaY>4);
+  assert.ok(a('yawn',.6).hengitys===1&&a('yawn',.7).hengitys===1,'haukotus pysyy avoimena');
+  assert.ok(a('yawn',.9).hengitys<0&&a('yawn',.9).paaY>3,'huokaus tulee vasta aktiivivaiheen jälkeen');
   assert.ok(a('grin',.17).ilme>0&&a('grin',.23).paaKulma<0);
   assert.equal(a('disbelief',.13).paaKulma,a('disbelief',.26).paaKulma);
   assert.ok(a('disbelief',.46).siipi>a('disbelief',.46).takasiipi*2);
@@ -132,6 +155,54 @@ test('vanhan Pulun pään, hengityksen ja siipien liike pysyy eriytettynä',()=>
       edellinen=s;
     }
   }
+});
+
+test('Touhu-eleissä tekeminen kestää pidempään ilman että nopea pärskähdys venyy',()=>{
+  const touhut=LIVIA_SVG_ELEET.filter(e=>e.group==='Touhu');
+  for(const ele of touhut){
+    const uusi=LIVIAN_UUDET_VERSIOT.find(e=>e.id==='uusi-'+ele.id);
+    assert.ok(uusi.duration>=ele.duration*1.35,ele.id+' saa olennaisesti lisää toiminta-aikaa');
+  }
+  for(const id of ['crumb','bread'])assert.ok(['crumb','chew','chewManic'].includes(uudenEleenAsento('uusi-'+id,.68).perusAsento.frame),id+' syö yhä loppupuolella');
+  assert.equal(uudenEleenAsento('uusi-preen',.72).perusAsento.frame,'preen');
+  assert.equal(uudenEleenAsento('uusi-sleep',.78).perusAsento.frame,'sleep');
+  assert.equal(uudenEleenAsento('uusi-wake',.75).perusAsento.frame,'front');
+  for(const id of ['wind','rain','sun','snow']){
+    const asento=uudenEleenAsento('uusi-'+id,.75).perusAsento;
+    assert.equal(asento.fx,id,id+' jatkaa sään kanssa touhuamista');
+  }
+  assert.equal(uudenEleenAsento('uusi-wind',.6).perusAsento.frame,'glance','tuulessa silmät eivät pysy koko ajan kiinni');
+  const ennen=uudenEleenAsento('uusi-sneeze',.5),jalkeen=uudenEleenAsento('uusi-sneeze',.6);
+  assert.equal(ennen.perusAsento.frame,'yawn');assert.equal(jalkeen.perusAsento.frame,'blink');
+  assert.ok(jalkeen.toimintaP-ennen.toimintaP>.1,'aivastuksen isku säilyy nopeana');
+});
+
+test('pulla pysyy siiven kannattelemana ja siitä katoaa paloja ruokailun aikana',()=>{
+  const kuva=(id,p)=>uudenEleenKuva(uudenEleenAsento('uusi-'+id,p));
+  for(const id of ['bread','bunFeast']){
+    const alku=kuva(id,.12),nosto=kuva(id,.36),syonti=kuva(id,.68);
+    assert.match(alku,/data-part="preview-bun"/);
+    assert.match(nosto,/data-part="holding-wing"/);
+    assert.match(nosto,/data-part="preview-bun"/);
+    assert.match(syonti,/data-bites="[1-3]"/);
+    assert.doesNotMatch(nosto,/data-part="bun-feast"/);
+    assert.doesNotMatch(nosto,/id="liviabite"/);
+  }
+  assert.ok(LIVIAN_UUDET_VERSIOT.find(e=>e.id==='uusi-bunFeast').duration>=7000);
+});
+
+test('kartan nokkimisessa on kaksi nopeaa kosketusta ja niiden välinen tarkastelu',()=>{
+  const a=p=>uudenEleenAsento('uusi-mapPeck',p);
+  assert.equal(a(.1).perusAsento.mapPeck.amount,0);
+  assert.ok(a(.335).perusAsento.mapPeck.amount>.95);
+  assert.equal(a(.55).perusAsento.mapPeck.amount,0);
+  assert.ok(a(.76).perusAsento.mapPeck.amount>.95);
+  assert.equal(a(.93).perusAsento.mapPeck.amount,0);
+  assert.equal(a(.335).mapPeckNumber,1);
+  assert.equal(a(.76).mapPeckNumber,2);
+  assert.match(uudenEleenKuva(a(.335)),/data-part="map-contact" opacity="1"/);
+  assert.doesNotMatch(uudenEleenKuva(a(.55)),/data-part="map-contact"/);
+  assert.equal(LIVIAN_UUDET_VERSIOT.find(e=>e.id==='uusi-mapPeck').duration,4000);
 });
 
 test('jokaisen 70 pelieleen uusi versio käyttää jatkuvaa liikerataa, mutta alku ja loppu säilyvät',()=>{
