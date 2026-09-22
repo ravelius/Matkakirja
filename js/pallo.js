@@ -3254,7 +3254,25 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
     if (Math.hypot(vauhti.lat, vauhti.lng) > VAUHTI_KYNNYS) vauhti.raf = requestAnimationFrame(() => liu(nyt));
     else vauhti.raf = 0;
   };
-  kotelo.addEventListener('pointerdown', () => { pysaytaLiuku(); vauhti.lat = 0; vauhti.lng = 0; });
+  /*
+   * SYÖTE ON MUUTOSLÄHDE, JOTEN SE ILMOITTAA LEPOPIIRROLLE
+   * (js/pallolauta/lepopiirto.js). Ilman tätä vedon alku jää kiinni
+   * KEHÄÄN: odottava veto sovelletaan kameraan `ohjaimet.update`issa eli
+   * kirjaston tickissä, lepopiirto pysäyttää tickin levossa, ja sen
+   * ainoa herätesyy tässä tilanteessa olisi "kamera muuttui" — mutta
+   * kamera ei voi muuttua ennen kuin veto on sovellettu. Veto lähtisi
+   * siis vasta varmistavasta sykkeestä (enintään 250 ms) ja kiihtyisi
+   * vasta sitten, kun kamera alkaa muuttua joka kehys. Pallolaudan veto
+   * ei myöskään nosta `kartta-raahaus`-luokkaa (se on tasokartan,
+   * js/kartta.js), joten estelista ei kata tätä.
+   */
+  const ilmoitaSyote = () => { try { pallo.__piirto?.tarvitaan?.(); } catch { /* ei lepopiirtoa */ } };
+  kotelo.addEventListener('pointerdown', () => {
+    ilmoitaSyote();
+    pysaytaLiuku();
+    vauhti.lat = 0;
+    vauhti.lng = 0;
+  });
   /** Vedon sovellus: sormi kohdassa (x, y) hetkellä aika → kamera. */
   const sovellaVeto = (x, y, aika) => {
     if (!tartunta || sormet.alhaalla !== 1) return;
@@ -3294,6 +3312,7 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
   };
   kotelo.addEventListener('pointermove', (e) => {
     if (!tartunta || sormet.alhaalla !== 1) return;
+    ilmoitaSyote();
     if (syote.vanha) { sovellaVeto(e.clientX, e.clientY, leima(e)); return; }
     // Vain viimeisin paikka: kehys sovittaa kameran siihen.
     syote.veto = { x: e.clientX, y: e.clientY, aika: leima(e) };
