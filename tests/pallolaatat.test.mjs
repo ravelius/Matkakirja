@@ -388,9 +388,11 @@ test('vakiot: renderOrder karkeista hienoihin, syvyyssiirto laattojen edelle, ki
    * `renderer.initTexture` 3,0 ms (p50) / 6,7 ms (max): kaksi peräkkäin
    * samassa kehyksessä on pahimmillaan 13 ms 16,7 ms:n budjetista.
    * Yksi vienti kehyksessä on 60 Hz:llä yhä 60 laattaa sekunnissa eli
-   * enemmän kuin LAATTAKERROS_RINNAKKAIN ehtii ladata.
+   * enemmän kuin LAATTAKERROS_RINNAKKAIN ehtii ladata — mutta zoomissa
+   * se oli karkean tason näkymisajan lattia (22.9.2026, ks.
+   * LAATTAKERROS_TEKSTUUREJA_PER_KEHYS): kaksi vientiä, p95 ennallaan.
    */
-  assert.equal(LAATTAKERROS_TEKSTUUREJA_PER_KEHYS, 1);
+  assert.equal(LAATTAKERROS_TEKSTUUREJA_PER_KEHYS, 2);
   assert.ok(LAATTAKERROS_TEKSTUUREJA_PER_KEHYS * 60 > LAATTAKERROS_RINNAKKAIN,
     'vienti ei saa jäädä latauksen pullonkaulaksi');
   assert.equal(LAATTAKERROS_NAYTTEITA, 9);
