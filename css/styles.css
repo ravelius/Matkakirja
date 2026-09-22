@@ -25377,6 +25377,26 @@ body.infotaulu-auki .toimintorivi .monitoimi-nappi {
  * ympyrä (.fokuskohde-osuma).
  */
 .nostosym-rasteri { pointer-events: none; }
+/*
+ * HEHKUPISTEEN SYKÄHDYS CSS2D:SSÄ (omistaja 21.9.2026: "eloton yksi
+ * väripallo"; runko tekee saman uniformilla, js/pallonimiot-gl.js
+ * `syke`): kategorian värikiekko ilman kuvamerkkiä sykkii levossa
+ * hitaasti ±7 % (fokusnosto-symbolit.js NOSTOSYM_SYKKEEN_OSUUS, jakso
+ * 2,4 s) ja seisoo liikkeessä (.pallolauta-liikkuu).
+ */
+.nostosym-rasteri-piste {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: nostosym-syke 2.4s ease-in-out infinite;
+}
+.pallolauta-liikkuu .nostosym-rasteri-piste { animation-play-state: paused; }
+@keyframes nostosym-syke {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.07); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nostosym-rasteri-piste { animation: none; }
+}
 
 /*
  * LÖYTÄMISEN SUMU — LUONNOS (js/pallolauta/sumu.js; omistaja 21.9.2026
