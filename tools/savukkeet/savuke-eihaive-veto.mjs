@@ -5,6 +5,7 @@
  * liikkeen ajaksi. Sama synteettinen veto (__kehysprofiili.veto) kahdesti:
  *   V1 vastakoe normaali: vedossa häipyviä > 0 (vartija näkee häiveen)
  *   V2 eihaivevedossa: vedossa häipyviä 0 kuudennesta kehyksestä alkaen
+ *      (vain kehykset, joissa kamera liikkui viimeisen 240 ms:n aikana)
  *   V3 laattoja tuli sceneen vedon aikana myös kokeessa (koe ei jäädytä kerrosta)
  *   V4 ei sivuvirheitä
  */
@@ -72,7 +73,15 @@ const vedot = async (sivu) => sivu.evaluate(async () => {
      * juuri alkanut häive voi näkyä siirtymäkehyksessä.
      */
     const k = v.kehykset.slice(5);
-    tulokset.push({ hapyviaMax: Math.max(0, ...k.map((f) => f.hapyvia ?? 0)), sceneenKasvu: Math.max(0, ...k.map((f) => f.scenessa ?? 0)) - (k[0]?.scenessa ?? 0), paivityksia: (k.at(-1)?.paivityksia ?? 0) - (k[0]?.paivityksia ?? 0) });
+    /*
+     * VAIN LIIKKEEN KEHYKSET (vientibudjetti 23.9.2026): synteettinen veto
+     * voi pysäyttää kameran ennen osoittimen nostoa; LAATU_LEPOVIIVE_MS:n
+     * (260) jälkeen pallo on levossa, jono valuu ja häive kuuluu asiaan.
+     * Kehys on liikkeessä, jos kamera siirtyi viimeisen 240 ms:n aikana.
+     */
+    const liikkeessa = (i) => k.some((f, j) => j <= i && k[i].t - f.t < 240 && (f.siirtyma ?? 0) > 0.25);
+    const liike = k.filter((f, i) => liikkeessa(i));
+    tulokset.push({ liikeKehyksia: liike.length, hapyviaMax: Math.max(0, ...liike.map((f) => f.hapyvia ?? 0)), sceneenKasvu: Math.max(0, ...k.map((f) => f.scenessa ?? 0)) - (k[0]?.scenessa ?? 0), paivityksia: (k.at(-1)?.paivityksia ?? 0) - (k[0]?.paivityksia ?? 0) });
   }
   return tulokset;
 });
