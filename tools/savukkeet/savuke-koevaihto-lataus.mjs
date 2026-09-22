@@ -1,12 +1,14 @@
 /*
- * SAVUKE: KEHYSPROFIILIN YLIN RIVI KERTOO KOETILAN (Pelikoodari 22.9.2026).
- * Omistajan iPhone-kaappauksia ei voinut kohdistaa Piirtokoe-tilaan, koska
- * overlay ei näyttänyt sitä. Tarkistaa oikeassa selaimessa:
- *   T1 osoitelippu ?koe=profiili,eivienti → "koe 3/4 Ei tekstuurivientejä · profiili pN · vNNNN"
- *   T2 valikon tallennus (eipuskuri + kytkin) ilman lippua → "koe 2/4 Ei puskurikirjoituksia"
- *   T3 valinta vaihdetaan kesken istunnon → "(seuraavassa latauksessa: koe 1/4 Normaali)"
- *   T4 ei sivuvirheitä
- * KÄYTTÖ: PLAYWRIGHT_JS=... SAVUKE_MOOTTORI=webkit node tools/savukkeet/savuke-profiilitila.mjs
+ * SAVUKE: PIIRTOKOKEEN VALINTA LATAA SIVUN (omistaja 22.9.2026 klo 23.05).
+ * v2133-kierroksen kolme viidestä kaappauksesta mittasi vanhaa koetta, koska
+ * sivua ei ladattu valinnan jälkeen. Tarkistaa oikeassa selaimessa:
+ *   L1 valikosta "Ei tekstuurivientejä" → vihje "Ladataan…"
+ *   L2 sivu latautuu itse (navigaatio tapahtuu viiveen jälkeen)
+ *   L3 latauksen jälkeen overlayn ylin rivi "koe 3/4 Ei tekstuurivientejä" ilman
+ *      "seuraavassa latauksessa" — koe on voimassa
+ *   L4 paluu samaan tilaan viiveen aikana perii latauksen
+ *   L5 ei sivuvirheitä
+ * KÄYTTÖ: PLAYWRIGHT_JS=... SAVUKE_MOOTTORI=webkit node tools/savukkeet/savuke-koevaihto-lataus.mjs
  */
 import http from 'node:http';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
@@ -67,28 +69,37 @@ const ylinRivi = (sivu, ehto = '') => sivu.waitForFunction((e) => {
   return r.startsWith('koe') && r.includes(e) ? r : false;
 }, ehto, { timeout: 20000 }).then((h) => h.jsonValue()).catch(() => '');
 
-const versio = `v${readFileSync(join(JUURI, 'js/main.js'), 'utf8').match(/APP_VERSION = '([^']+)'/)[1].split('.').pop()}`;
+const avaaValikko = async (sivu) => {
+  await sivu.evaluate(() => { const m = document.getElementById('paavalikko'); if (m?.hidden) document.getElementById('menu-btn')?.click(); });
+  await sivu.waitForSelector('#piirtokoe-valikko button[data-piirtokoe="eivienti"]', { state: 'visible', timeout: 10000 });
+};
 try {
-  {
-    const { ctx, sivu, virheet } = await avaa('&koe=profiili,eivienti');
-    const r = await ylinRivi(sivu);
-    tieto('T1 rivi', r);
-    vaadi('T1 osoitelippu näkyy ylimpänä', /^koe 3\/4 Ei tekstuurivientejä · profiili p\d+ · v\d+$/.test(r) && r.endsWith(versio), r);
-    vaadi('T4a ei sivuvirheitä', virheet.length === 0, virheet.join(' | '));
-    await ctx.close();
-  }
-  {
-    const { ctx, sivu, virheet } = await avaa('', { 'matkakirja-piirtokoe': 'eipuskuri', 'matkakirja-kehysprofiili': '1' });
-    const r = await ylinRivi(sivu);
-    tieto('T2 rivi', r);
-    vaadi('T2 valikon valinta näkyy', r.startsWith('koe 2/4 Ei puskurikirjoituksia · profiili p'), r);
-    await sivu.evaluate(() => localStorage.setItem('matkakirja-piirtokoe', 'normaali'));
-    const r3 = await ylinRivi(sivu, 'seuraavassa');
-    tieto('T3 rivi', r3);
-    vaadi('T3 vaihto näkyy seuraavana', r3.startsWith('koe 2/4 Ei puskurikirjoituksia (seuraavassa latauksessa: koe 1/4 Normaali)'), r3);
-    vaadi('T4b ei sivuvirheitä', virheet.length === 0, virheet.join(' | '));
-    await ctx.close();
-  }
+  const { ctx, sivu, virheet } = await avaa('', { 'matkakirja-piirtokoe': 'normaali', 'matkakirja-kehysprofiili': '1' });
+  await ylinRivi(sivu, 'Normaali');
+  // L4 ensin: valinta ja paluu viiveen aikana ei lataa.
+  let navigaatioita = 0;
+  sivu.on('framenavigated', (f) => { if (f === sivu.mainFrame()) navigaatioita += 1; });
+  await avaaValikko(sivu);
+  // Samassa tehtävässä: Playwrightin kaksi erillistä klikkausta voi viedä yli viiveen (Chromium).
+  await sivu.evaluate(() => {
+    document.querySelector('#piirtokoe-valikko button[data-piirtokoe="eihaivevedossa"]').click();
+    document.querySelector('#piirtokoe-valikko button[data-piirtokoe="normaali"]').click();
+  });
+  await sivu.waitForTimeout(1500);
+  vaadi('L4 paluu samaan tilaan perii latauksen', navigaatioita === 0, `navigaatioita ${navigaatioita}`);
+  await avaaValikko(sivu);
+  const lataus = sivu.waitForEvent('load', { timeout: 15000 }).then(() => true).catch(() => false);
+  await sivu.click('#piirtokoe-valikko button[data-piirtokoe="eivienti"]');
+  const vihje = await sivu.evaluate(() => { const v = document.getElementById('piirtokoe-vihje'); return v && !v.hidden ? v.textContent : ''; });
+  tieto('vihje', vihje);
+  vaadi('L1 vihje "Ladataan…"', vihje === 'Ladataan…', vihje);
+  vaadi('L2 sivu latautuu itse', await lataus, `navigaatioita ${navigaatioita}`);
+  await sivu.waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null, { timeout: 90000 });
+  const r = await ylinRivi(sivu, 'tekstuurivientejä');
+  tieto('rivi latauksen jälkeen', r);
+  vaadi('L3 koe voimassa latauksen jälkeen', /^koe 3\/4 Ei tekstuurivientejä · profiili p\d+/.test(r) && !r.includes('seuraavassa'), r);
+  vaadi('L5 ei sivuvirheitä', virheet.length === 0, virheet.join(' | '));
+  await ctx.close();
 } finally {
   await selain.close();
   palvelin.close();

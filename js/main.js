@@ -7,7 +7,7 @@ import { UI } from './ui.js';
 import { asetaLiike, liikePaalla } from './kartta-liike.js';
 import {
   PIIRTOKOKEIDEN_VAIHTOEHDOT, asetaKehysprofiili, asetaPiirtokoe,
-  kehysprofiiliPaalla, piirtokoeValinta, piirtokoeVaatiiLatauksen, unohdaPoistetutValinnat,
+  kehysprofiiliPaalla, piirtokoeValinta, koetilanAvain, luoKoevaihdonLataaja, unohdaPoistetutValinnat,
 } from './piirtokoe-asetus.js';
 import { unohdaTarkkuus } from './tarkkuus-asetus.js';
 import {
@@ -153,7 +153,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-09-21.2134';
+const APP_VERSION = '2026-09-21.2135';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -707,14 +707,28 @@ if (karttaValikko) {
  * Vaihtoehdot ja tallennus ovat js/piirtokoe-asetus.js:ssä; valinta
  * käyttäytyy täsmälleen kuin sama `?koe=`-lippu osoitteessa.
  *
- * LATAUS VAIN KUN ON PAKKO: pikselisuhde on kontekstin luku, joten sen
- * koe vaatii uuden latauksen — muut purevat seuraavaan vetoon. Vihjerivi
- * sanoo sen, eikä sivua ladata pelaajan puolesta: kesken peliä tehty
- * lataus on isompi yllätys kuin odottaminen.
+ * VALINTA LATAA SIVUN (omistaja 22.9.2026 klo 23.05, korvaa aiemman
+ * "lataus vain kun on pakko" -linjan): kaikki kokeet luetaan kerrosten
+ * luonnissa, joten ilman latausta valinta ei mittaa mitään — ja
+ * vihjeriviä ei puhelimella huomannut. Peli on tallessa joka siirrolla.
  */
 const piirtokoeValikko = document.getElementById('piirtokoe-valikko');
 const piirtokoeVihje = document.getElementById('piirtokoe-vihje');
 const profiiliValikko = document.getElementById('kehysprofiili-valikko');
+/*
+ * Valinta lataa sivun itse (js/piirtokoe-asetus.js luoKoevaihdonLataaja):
+ * "seuraavassa latauksessa" -vihje jäi omistajalta huomaamatta, ja
+ * kierros mittasi vanhaa koetta.
+ */
+const koevaihto = luoKoevaihdonLataaja({
+  alussa: koetilanAvain(),
+  lataa: () => location.reload(),
+  nayta: (lataus) => {
+    if (!piirtokoeVihje) return;
+    piirtokoeVihje.textContent = lataus ? 'Ladataan…' : '';
+    piirtokoeVihje.hidden = !lataus;
+  },
+});
 
 const naytaPiirtokoe = () => {
   if (!piirtokoeValikko) return;
@@ -743,11 +757,7 @@ if (piirtokoeValikko) {
     rivi.addEventListener('click', () => {
       asetaPiirtokoe(koe.avain);
       naytaPiirtokoe();
-      if (piirtokoeVihje) {
-        const lataus = piirtokoeVaatiiLatauksen(koe.avain);
-        piirtokoeVihje.textContent = lataus ? 'Tulee voimaan seuraavassa latauksessa.' : '';
-        piirtokoeVihje.hidden = !lataus;
-      }
+      koevaihto.muuttui();
     });
     piirtokoeValikko.appendChild(rivi);
   }
@@ -774,10 +784,7 @@ if (profiiliValikko) {
   rivi.addEventListener('click', () => {
     asetaKehysprofiili(!kehysprofiiliPaalla());
     nayta();
-    if (piirtokoeVihje) {
-      piirtokoeVihje.textContent = 'Tulee voimaan seuraavassa latauksessa.';
-      piirtokoeVihje.hidden = false;
-    }
+    koevaihto.muuttui();
   });
   nayta();
   profiiliValikko.appendChild(rivi);

@@ -119,7 +119,7 @@ test('jakso vanhalla rajapinnalla: sulkee ja avaa profiilin, lähettää ja purk
     asetukset: () => ({ veto: 'vanha', tarkkuus: 'terava' }),
     lepo: () => ({ paalla: false, unessa: false, ohitettuja: 0, piirtoja: 9 }),
     laheta: (d) => lahetykset.push(d),
-    tila: () => ({ koe: 'dpr15', seuraava: 'dpr15', versio: 'v2127' }),
+    tila: () => ({ koe: 'eivienti', seuraava: 'eivienti', versio: 'v2127' }),
     ikkuna,
   });
   assert.deepEqual(tapahtumat, ['aloita'], 'mittaus alkaa heti');
@@ -132,8 +132,8 @@ test('jakso vanhalla rajapinnalla: sulkee ja avaa profiilin, lähettää ja purk
   assert.match(kerros.rivit.join('\n'), /veto vanha · tarkkuus terava/);
   assert.equal(lahetykset.length, 1);
   assert.equal(lahetykset[0].ua, 'iPhone');
-  assert.match(kerros.rivit[0], /^koe 3\/7 Pikselisuhde 1,5 · profiili p\d+ · v2127$/, 'tila ylimpänä');
-  assert.equal(lahetykset[0].koe, 'dpr15');
+  assert.match(kerros.rivit[0], /^koe 3\/4 Ei tekstuurivientejä · profiili p\d+ · v2127$/, 'tila ylimpänä');
+  assert.equal(lahetykset[0].koe, 'eivienti');
 
   // Toinen jakso ei kasvata kerrosta: rivit korvataan, eivät kerry.
   const riveja = kerros.children.length;
@@ -282,10 +282,12 @@ test('laattavientien rivi: initTexture-kutsut jaksossa ja jonon pituus', () => {
 });
 
 test('ylin rivi kertoo koetilan ja mittarin version (omistajan kaappaukset 22.9.2026)', () => {
-  const rivit = profiilirivit({ tiiviste: TIIVISTE, tila: { koe: 'dpr15', versio: 'v2127' } });
-  assert.equal(rivit[0], `koe 3\/7 Pikselisuhde 1,5 · profiili p${PROFIILIN_VERSIO} · v2127`);
-  assert.match(profiilirivit({ tiiviste: TIIVISTE })[0], /^koe 1\/7 Normaali · profiili p\d+$/, 'oletus on normaali');
-  assert.match(profiilirivit({ tiiviste: null })[0], /^koe 1\/7 Normaali/, 'myös ilman kehyksiä');
+  const rivit = profiilirivit({ tiiviste: TIIVISTE, tila: { koe: 'eivienti', versio: 'v2127' } });
+  assert.equal(rivit[0], `koe 3/4 Ei tekstuurivientejä · profiili p${PROFIILIN_VERSIO} · v2127`);
+  // Valikosta poistettu koe (omistaja 22.9.2026 klo 23.08) näkyy osoitteesta raakana.
+  assert.equal(profiilirivit({ tiiviste: TIIVISTE, tila: { koe: 'dpr15' } })[0], `koe: dpr15 · profiili p${PROFIILIN_VERSIO}`);
+  assert.match(profiilirivit({ tiiviste: TIIVISTE })[0], /^koe 1\/4 Normaali · profiili p\d+$/, 'oletus on normaali');
+  assert.match(profiilirivit({ tiiviste: null })[0], /^koe 1\/4 Normaali/, 'myös ilman kehyksiä');
 });
 
 test('koetila: profiili ei ole koe, useampi lippu aakkosjärjestyksessä', () => {
@@ -295,9 +297,9 @@ test('koetila: profiili ei ole koe, useampi lippu aakkosjärjestyksessä', () =>
 });
 
 test('koetila: valikon uusi valinta näkyy seuraavana, ei voimassa olevana', () => {
-  assert.equal(koetilarivi({ koe: 'normaali', seuraava: 'dpr15' }),
-    `koe 1\/7 Normaali (seuraavassa latauksessa: koe 3\/7 Pikselisuhde 1,5) · profiili p${PROFIILIN_VERSIO}`);
-  assert.equal(koetilarivi({ koe: 'dpr15', seuraava: 'dpr15' }), `koe 3\/7 Pikselisuhde 1,5 · profiili p${PROFIILIN_VERSIO}`);
+  assert.equal(koetilarivi({ koe: 'normaali', seuraava: 'eivienti' }),
+    `koe 1/4 Normaali (seuraavassa latauksessa: koe 3/4 Ei tekstuurivientejä) · profiili p${PROFIILIN_VERSIO}`);
+  assert.equal(koetilarivi({ koe: 'eivienti', seuraava: 'eivienti' }), `koe 3/4 Ei tekstuurivientejä · profiili p${PROFIILIN_VERSIO}`);
 });
 
 test('koetila: numero seuraa valikon järjestystä, valikon ulkopuolinen lippu raakana', () => {

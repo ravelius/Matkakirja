@@ -25,8 +25,18 @@ export const KEHYSPROFIILI_AVAIN = 'matkakirja-kehysprofiili';
 export const PIIRTOKOE_TAPAHTUMA = 'matkakirja-piirtokoe';
 
 /**
- * Valittavat kokeet. `lippu` on se `?koe=`-arvo, jonka valinta lisää;
- * `lataus` kertoo, ettei koe voi vaihtua ilman sivun uutta latausta.
+ * Valittavat kokeet. `lippu` on se `?koe=`-arvo, jonka valinta lisää.
+ * Jokainen koe tulee voimaan vasta latauksessa; valikko lataa sivun
+ * itse (luoKoevaihdonLataaja alla).
+ */
+/*
+ * VALIKOSSA NELJÄ TILAA (omistajan kortti 22.9.2026 klo 23.08): Normaali,
+ * Ei puskurikirjoituksia, Ei tekstuurivientejä, Ei häivytystä vedossa.
+ * Pois valikosta: dpr15 (mitattu v2133: ei poista pitkiä kehyksiä),
+ * alpha0 ja vahemmandc — liput toimivat yhä osoitteessa (`?koe=`), ja
+ * overlay näyttää ne raakana ("koe: dpr15"). Tallennettu poistettu
+ * valinta palautuu Normaaliin (piirtokoeValinta: tuntematon = oletus;
+ * unohdaPoistetutValinnat kirjoittaa sen muistiin).
  */
 export const PIIRTOKOKEIDEN_VAIHTOEHDOT = [
   {
@@ -44,30 +54,6 @@ export const PIIRTOKOKEIDEN_VAIHTOEHDOT = [
     ikoni: '<path d="M5 7h14M5 12h14M5 17h9"/><path d="M15.5 15.5 20 20"/>',
   },
   {
-    avain: 'dpr15',
-    nimi: 'Pikselisuhde 1,5',
-    seloste: 'Neljäsosa pikseleistä dpr 3:een nähden — karkea täyttökoe',
-    lippu: 'dpr15',
-    ikoni: '<path d="M4.5 5.5h15v13h-15z"/><path d="M4.5 12h15M12 5.5v13"/>',
-    lataus: true,
-  },
-  {
-    avain: 'alpha0',
-    nimi: 'Ilman alfakanavaa',
-    seloste: 'Läpinäkymätön kangas — komposiittorin ei tarvitse sekoittaa sitä sivuun',
-    lippu: 'alpha0',
-    ikoni: '<path d="M4.5 5.5h15v13h-15z"/><path d="m4.5 18.5 15-13"/>',
-    lataus: true,
-  },
-  {
-    avain: 'vahemmandc',
-    nimi: 'Vähemmän piirtokutsuja',
-    seloste: 'Tuki- ja ennakkolaatat piiloon, kun näkyvä ala on jo täysin peitetty',
-    lippu: 'vahemmandc',
-    ikoni: '<path d="M4.5 8.5h9v9h-9z"/><path d="M10.5 5.5h9v9"/>',
-    lataus: true,
-  },
-  {
     avain: 'eivienti',
     nimi: 'Ei tekstuurivientejä',
     seloste: 'Vedon aikana ei viedä laattoja eikä nimiöatlasta näytönohjaimelle — jono odottaa lepoa',
@@ -79,14 +65,13 @@ export const PIIRTOKOKEIDEN_VAIHTOEHDOT = [
      * Fable 22.9.2026 (omistajan v2126-kaappaukset: häipyviä 10–22 laattaa
      * vedon aikana). Häivyttäessä uusi ja vanha laatta piirretään
      * päällekkäin läpinäkyvinä; koe rajaa, onko tämä päällekkäinen piirto
-     * GPU-prosessin kuorma. Laattakerros lukee lipun luonnissa → lataus.
+     * GPU-prosessin kuorma.
      */
     avain: 'eihaivevedossa',
     nimi: 'Ei häivytystä vedossa',
     seloste: 'Vedon aikana laatat vaihtuvat suoraan ilman häivytystä — ei päällekkäistä piirtoa',
     lippu: 'eihaivevedossa',
     ikoni: '<path d="M4.5 5.5h15v13h-15z"/><path d="M9 9.5h6v5H9z"/>',
-    lataus: true,
   },
 ];
 
@@ -103,11 +88,6 @@ const kirjoitaMuisti = (avain, arvo) => {
 export function piirtokoeValinta() {
   const arvo = lueMuisti(PIIRTOKOE_AVAIN);
   return PIIRTOKOKEIDEN_VAIHTOEHDOT.some((k) => k.avain === arvo) ? arvo : PIIRTOKOKEEN_OLETUS;
-}
-
-/** Vaatiiko koe uuden latauksen (pikselisuhde on kontekstin luku). */
-export function piirtokoeVaatiiLatauksen(avain) {
-  return Boolean(PIIRTOKOKEIDEN_VAIHTOEHDOT.find((k) => k.avain === avain)?.lataus);
 }
 
 /** Valinta laitteelle ja ilmoitus. Palauttaa voimaan jääneen. */
@@ -158,7 +138,7 @@ export const POISTETUT_VALINTA_AVAIMET = Object.freeze([
   'matkakirja-tarkkuus-liikkeessa',
 ]);
 
-/** Poista valikosta poistettujen vipujen tallennukset. Palauttaa poistettujen määrän. */
+/** Poista valikosta poistettujen vipujen ja kokeiden tallennukset. Palauttaa nollattujen määrän. */
 export function unohdaPoistetutValinnat(varasto = (() => { try { return globalThis.localStorage; } catch { return null; } })()) {
   let n = 0;
   for (const avain of POISTETUT_VALINTA_AVAIMET) {
@@ -166,5 +146,57 @@ export function unohdaPoistetutValinnat(varasto = (() => { try { return globalTh
       if (varasto?.getItem(avain) != null) { varasto.removeItem(avain); n += 1; }
     } catch { /* ei muistia */ }
   }
+  // Valikosta poistettu Piirtokoe (dpr15, alpha0, vahemmandc; 22.9.2026 klo 23.08) → Normaali.
+  try {
+    const koe = varasto?.getItem(PIIRTOKOE_AVAIN);
+    if (koe != null && !PIIRTOKOKEIDEN_VAIHTOEHDOT.some((k) => k.avain === koe)) {
+      varasto.setItem(PIIRTOKOE_AVAIN, PIIRTOKOKEEN_OLETUS);
+      n += 1;
+    }
+  } catch { /* ei muistia */ }
   return n;
+}
+
+/*
+ * VALINTA LATAA SIVUN (omistaja 22.9.2026 klo 23.05 Fablen kautta: kolme
+ * viidestä kaappauksesta jäi vanhaan kokeeseen, koska sivua ei ladattu).
+ * Jokainen koe luetaan KERROSTEN LUONNISSA (laattakerros, nimiörunko,
+ * konteksti) ja kehysprofiilin näyttö laudan rakennuksessa, joten mikä
+ * tahansa muutos tulee voimaan vasta latauksessa. Valikko lataa sivun
+ * itse pienen viiveen jälkeen ("Ladataan…"); peli on jo tallessa, koska
+ * jokainen siirto tallennetaan (main.js saveGame). Jos valinta palaa
+ * viiveen aikana latauksessa voimassa olleeseen, lataus perutaan.
+ */
+export const PIIRTOKOE_LATAUS_VIIVE_MS = 600;
+
+/** Valikon koetila yhtenä avaimena: koe + kehysprofiilin kytkin. */
+export function koetilanAvain() {
+  return `${piirtokoeValinta()}|${kehysprofiiliPaalla() ? 1 : 0}`;
+}
+
+/**
+ * Lataaja: `muuttui()` kutsutaan jokaisen valinnan jälkeen. Palauttaa
+ * true, jos lataus on ajastettu. PUHDAS riippuvuuksiltaan (testit).
+ *
+ * @param {object} p0
+ * @param {string} p0.alussa      koetilanAvain() sivun latautuessa
+ * @param {() => string} [p0.nyt]  nykyinen avain
+ * @param {() => void} p0.lataa    location.reload
+ * @param {(n: boolean) => void} [p0.nayta] "Ladataan…" näkyviin / pois
+ */
+export function luoKoevaihdonLataaja({
+  alussa, nyt = koetilanAvain, lataa, nayta = () => {},
+  viive = PIIRTOKOE_LATAUS_VIIVE_MS, ajasta = globalThis.setTimeout, peru = globalThis.clearTimeout,
+}) {
+  let ajastin = null;
+  return {
+    muuttui() {
+      const tarvitaan = nyt() !== alussa;
+      if (ajastin !== null) { peru(ajastin); ajastin = null; }
+      nayta(tarvitaan);
+      if (tarvitaan) ajastin = ajasta(() => { ajastin = null; lataa(); }, viive);
+      return tarvitaan;
+    },
+    odottaa: () => ajastin !== null,
+  };
 }

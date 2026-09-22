@@ -27,7 +27,8 @@ function valeMuisti() {
 
 const {
   PIIRTOKOKEIDEN_VAIHTOEHDOT, asetaKehysprofiili, asetaPiirtokoe, kehysprofiiliPaalla,
-  piirtokoeValinta, piirtokoeVaatiiLatauksen, tallennetutKokeet,
+  piirtokoeValinta, tallennetutKokeet, koetilanAvain, luoKoevaihdonLataaja,
+  PIIRTOKOE_LATAUS_VIIVE_MS,
 } = await import('../js/piirtokoe-asetus.js');
 const { laattakerroksenKokeet } = await import('../js/pallolaatat.js');
 const { piirtokokeet } = await import('../js/pallolauta/kerrokset.js');
@@ -39,8 +40,6 @@ test('vaihtoehdot: oletus normaali ilman lippua, muilla oma lippunsa', () => {
   for (const koe of PIIRTOKOKEIDEN_VAIHTOEHDOT.slice(1)) {
     assert.ok(koe.lippu && koe.nimi && koe.seloste && koe.ikoni, `${koe.avain}: lippu, nimi, seloste, ikoni`);
   }
-  assert.equal(piirtokoeVaatiiLatauksen('dpr15'), true, 'pikselisuhde on kontekstin luku');
-  assert.equal(piirtokoeVaatiiLatauksen('eipuskuri'), false);
 });
 
 test('valinta muistetaan ja näkyy molemmissa lippuapureissa', () => {
@@ -69,14 +68,14 @@ test('osoitteen haku ohittaa muistin kokonaan (savukkeet ja mittaukset)', () => 
   const pura = valeMuisti();
   try {
     globalThis.location = { search: '?koe=eipuskuri' };
-    asetaPiirtokoe('dpr15');
+    asetaPiirtokoe('eivienti');
     asetaKehysprofiili(true);
     // Annettu haku: vain osoitteen liput, ei laitteen muistia.
     assert.deepEqual([...laattakerroksenKokeet('?koe=syoteloki')], ['syoteloki']);
     assert.deepEqual([...piirtokokeet('?koe=syoteloki')], ['syoteloki']);
     // Ilman hakua osoite ja muisti yhdistyvät.
     const yhdessa = piirtokokeet();
-    assert.ok(yhdessa.has('eipuskuri') && yhdessa.has('dpr15') && yhdessa.has('profiili'));
+    assert.ok(yhdessa.has('eipuskuri') && yhdessa.has('eivienti') && yhdessa.has('profiili'));
   } finally { pura(); }
 });
 
@@ -209,4 +208,71 @@ test('jokainen valikon koelipun lukija yhdistää myös tallennetun valinnan', a
     rikkojat.push(`${polku.slice(juuri.length)}: ${luettu.join(', ')}`);
   }
   assert.deepEqual(rikkojat, []);
+});
+
+/*
+ * VALINTA LATAA SIVUN (omistaja 22.9.2026 klo 23.05): v2133-kierroksen
+ * kolme viidestä kaappauksesta mittasi vanhaa koetta, koska sivua ei
+ * ladattu. Lataaja ajastaa latauksen aina, kun valikon tila poikkeaa
+ * latauksessa voimassa olleesta, ja perii sen, jos valinta palaa.
+ */
+test('koevaihto: muutos ajastaa latauksen viiveellä ja näyttää "Ladataan…"', () => {
+  const pura = valeMuisti();
+  try {
+    globalThis.location = { search: '' };
+    const alussa = koetilanAvain();
+    assert.equal(alussa, 'normaali|0');
+    const ajastetut = [];
+    let ladattu = 0;
+    const naytetty = [];
+    const lataaja = luoKoevaihdonLataaja({
+      alussa,
+      lataa: () => { ladattu += 1; },
+      nayta: (n) => naytetty.push(n),
+      ajasta: (fn, ms) => { ajastetut.push({ fn, ms, peruttu: false }); return ajastetut.length - 1; },
+      peru: (i) => { ajastetut[i].peruttu = true; },
+    });
+    assert.equal(lataaja.muuttui(), false, 'ei muutosta, ei latausta');
+    asetaPiirtokoe('eivienti');
+    assert.equal(lataaja.muuttui(), true);
+    assert.equal(ajastetut.at(-1).ms, PIIRTOKOE_LATAUS_VIIVE_MS);
+    assert.ok(PIIRTOKOE_LATAUS_VIIVE_MS >= 300 && PIIRTOKOE_LATAUS_VIIVE_MS <= 1500, 'pieni viive: teksti ehtii näkyä');
+    assert.equal(naytetty.at(-1), true, 'Ladataan… näkyviin');
+    // Toinen valinta viiveen aikana: vanha ajastin perutaan, uusi tilalle.
+    asetaPiirtokoe('eihaivevedossa');
+    lataaja.muuttui();
+    assert.equal(ajastetut.filter((a) => !a.peruttu).length, 1, 'yksi lataus kerrallaan');
+    // Paluu latauksen tilaan perii latauksen.
+    asetaPiirtokoe('normaali');
+    assert.equal(lataaja.muuttui(), false);
+    assert.equal(ajastetut.filter((a) => !a.peruttu).length, 0, 'lataus peruttu');
+    assert.equal(naytetty.at(-1), false);
+    // Kehysprofiilin kytkin on osa tilaa: sekin vaatii latauksen.
+    asetaKehysprofiili(true);
+    assert.equal(lataaja.muuttui(), true);
+    ajastetut.at(-1).fn();
+    assert.equal(ladattu, 1, 'ajastin lataa sivun');
+    assert.equal(lataaja.odottaa(), false);
+  } finally { pura(); }
+});
+
+test('koevaihto: main.js kytkee lataajan sekä kokeeseen että kehysprofiiliin', () => {
+  const main = readFileSync(new URL('../js/main.js', import.meta.url), 'utf8');
+  assert.match(main, /const koevaihto = luoKoevaihdonLataaja\(\{\n  alussa: koetilanAvain\(\),\n  lataa: \(\) => location\.reload\(\),/);
+  assert.match(main, /piirtokoeVihje\.textContent = lataus \? 'Ladataan…' : '';/);
+  assert.equal(main.match(/koevaihto\.muuttui\(\);/g)?.length, 2, 'Piirtokoe-rivit ja kehysprofiilin kytkin');
+  assert.doesNotMatch(main, /Tulee voimaan seuraavassa latauksessa/);
+});
+
+test('valikossa neljä tilaa omistajan järjestyksessä; poistetut liput vain osoitteessa', () => {
+  // Omistajan kortti 22.9.2026 klo 23.08.
+  assert.deepEqual(PIIRTOKOKEIDEN_VAIHTOEHDOT.map((k) => k.avain), ['normaali', 'eipuskuri', 'eivienti', 'eihaivevedossa']);
+  const pura = valeMuisti();
+  try {
+    globalThis.location = { search: '?koe=dpr15' };
+    globalThis.localStorage.setItem('matkakirja-piirtokoe', 'alpha0');
+    assert.equal(piirtokoeValinta(), 'normaali', 'tallennettu poistettu koe ei ole valinta');
+    assert.ok(!tallennetutKokeet().has('alpha0'), 'eikä vaikuta peliin');
+    assert.ok(piirtokokeet().has('dpr15') && laattakerroksenKokeet().has('dpr15'), 'osoitteen lippu toimii yhä');
+  } finally { pura(); }
 });
