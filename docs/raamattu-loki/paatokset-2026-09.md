@@ -1607,3 +1607,7 @@ Kohdekortti, eläintäky, hetki, syvennys, maalehden nosto; lööppi ennallaan. 
 ## OMISTAJA iPADILLA: ?koe=syotetouch (RAAKA KOSKETUSSYOTE ILMAN INTERPOLOINTIA) 'EHKA PAREMPI KUIN MUUT' → ENSIMMAINEN MYONTEINEN SIGNAALI OSOITTAA SYOTEPUTKEEN (INTERPOLOINTI / KAMERAN VIIVE), EI PIIRTOON (23.9.2026 klo 00.01)
 
 Klo 00.02 (23.9.). Pelikoodarille: liikkeen tasaisuusmittarit ensin, sitten A/B interp vs touch mittarilla; jos touch on mitatusti tasaisempi, touch oletukseksi kosketuslaitteilla ja interp vain hiirelle.
+
+## KARTTASEPPA 70 % → LUOVUTUS JA NOLLAUS (viesti-karttaseppa-luovutus-20260923.md) (23.9.2026 klo 00.02)
+
+Postivahti klo 00.04. Karttasepän illan erät: #2868 nostopalstat (v2136), #2871 lehtipalstat (jonossa v2137).
