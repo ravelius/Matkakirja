@@ -64,7 +64,7 @@ import {
   LEPOKERROS_NAYTTEITA, LEPOKERROS_SYVYYSSIIRTO, THREE_CLAMP, THREE_LINEAR,
   THREE_LINEAR_MIPMAP_LINEAR, lepokerroksenAlue, lepokerroksenKerrokset, lepokerroksenLaattakatto,
   lepokerroksenSilmat, lepokerroksenSuunnitelma, lepokerroksenTasoRiittaa, lepokerroksenVerkko,
-  laattakerroksenOsuma,
+  laattakerroksenKokeet, laattakerroksenOsuma,
   luoLaattakerros, luoLepokerroksenAjoitus, pallonPiste, pinnanPiste, pyramidinKarttaAla,
 } from './pallolaatat.js';
 
@@ -1504,7 +1504,7 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
    * pelkkä dpr yliarvioisi tarpeen). Ruudun LEVEYS ei ole kaavassa —
    * perustelu ja mittaus ylempänä (fov on pystysuunnan avauskulma).
    */
-  const piirtokorkeus = () => kotelo.clientHeight * Math.min(dpr, LAATU_PIKSELISUHDE_LEPO);
+  const piirtokorkeus = () => kotelo.clientHeight * Math.min(dpr, laattakerroksenKokeet().has('dpr2') ? LAATU_PIKSELISUHDE_LIIKE : LAATU_PIKSELISUHDE_LEPO);
   const asetaTila = (lepoon) => {
     lepo = lepoon;
     // Kerros päällä: kynnykset ja pikselisuhde jäävät asennuksen arvoihin.
@@ -1699,7 +1699,14 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
    * vaihto on raskas kehys eikä kuvan tarkkuus saa vaihtua liikkeessä.
    */
   if (kerros && renderer) {
-    const suhde = Math.min(dpr, LAATU_PIKSELISUHDE_LEPO);
+    /*
+     * KOE `?koe=dpr2` (22.9.2026, Ranska z6 zoomin loppuosa iPhonella):
+     * pikselisuhteen katto 2 myös levossa — kolmasosa vähemmän
+     * fragmentteja (2,25×). Vain mittaukseen (kehysprofiili), ei oletus;
+     * omistaja päättää tarkkuudesta.
+     */
+    const katto = laattakerroksenKokeet().has('dpr2') ? LAATU_PIKSELISUHDE_LIIKE : LAATU_PIKSELISUHDE_LEPO;
+    const suhde = Math.min(dpr, katto);
     if (renderer.getPixelRatio?.() !== suhde) renderer.setPixelRatio(suhde);
   }
   /*

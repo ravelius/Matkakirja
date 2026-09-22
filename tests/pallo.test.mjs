@@ -392,7 +392,7 @@ test('laatu palaa levossa: kynnykset ruudun pikseleistä, liike kevyt (omistaja 
   assert.ok(kauko > 3.5 && kauko < 5, `kaukokerroin ${kauko}`);
   // Kerroin lasketaan piirtopuskurin korkeudesta (ei ruudun leveydestä
   // eikä pelkästä dpr:stä): fov on pystysuunnan kulma, ks. js/pallo.js.
-  assert.match(lue('../js/pallo.js'), /kotelo\.clientHeight \* Math\.min\(dpr, LAATU_PIKSELISUHDE_LEPO\)/);
+  assert.match(lue('../js/pallo.js'), /kotelo\.clientHeight \* Math\.min\(dpr, laattakerroksenKokeet\(\)\.has\('dpr2'\) \? LAATU_PIKSELISUHDE_LIIKE : LAATU_PIKSELISUHDE_LEPO\)/);
   assert.match(lue('../js/pallo.js'), /lepokerroin\(piirtokorkeus\(\), teravyys\)/);
   assert.ok(LAATU_LEPOVIIVE_MS >= 200 && LAATU_LEPOVIIVE_MS <= 400);
   assert.ok(LAATU_LIIKEVIIVE_MS > 0 && LAATU_LIIKEVIIVE_MS < LAATU_LEPOVIIVE_MS);

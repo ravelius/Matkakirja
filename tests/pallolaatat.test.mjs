@@ -424,7 +424,8 @@ test('kytkentä: pohja naulataan tasoon 5 vain kerroksen ollessa päällä', () 
   assert.match(pallo, /globeTileEngineMaxLevel\(\n\s*laattakerrosPaalla\(globalThis, LAATTAKERROS_OLETUS\) \? Math\.min\(syvin, POHJAN_TASO_MAX\) : syvin,\n\s*\)/);
   // asetaTila ei kosketa kynnyksiin eikä pikselisuhteeseen kerroksen kanssa.
   assert.match(pallo, /const asetaTila = \(lepoon\) => \{\n\s*lepo = lepoon;\n(?:\s*\/\/[^\n]*\n)*\s*if \(kerrosKaytossa\) return;/);
-  assert.match(pallo, /const suhde = Math\.min\(dpr, LAATU_PIKSELISUHDE_LEPO\);\n\s*if \(renderer\.getPixelRatio\?\.\(\) !== suhde\) renderer\.setPixelRatio\(suhde\);/,
+  // 22.9.2026: koe `?koe=dpr2` laskee katon liikkeen arvoon (vain mittaus).
+  assert.match(pallo, /const katto = laattakerroksenKokeet\(\)\.has\('dpr2'\) \? LAATU_PIKSELISUHDE_LIIKE : LAATU_PIKSELISUHDE_LEPO;\n\s*const suhde = Math\.min\(dpr, katto\);\n\s*if \(renderer\.getPixelRatio\?\.\(\) !== suhde\) renderer\.setPixelRatio\(suhde\);/,
     'pikselisuhde kerran asennuksessa');
   // Lepokerrosta ei luoda kerroksen kanssa (vanha polku vain ?laattakerros=0).
   assert.match(pallo, /const lepokerros = kerros \? null : luoLepokerros\(\{/);
