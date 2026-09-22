@@ -393,6 +393,17 @@
             <div class="kertoja-kotelo kartta-kotelo">
               <p class="valikko-otsikko">Kartta</p>
               <div id="kartta-valikko" class="kertoja-valikko"></div>
+              <!-- VEDON SEURANTA (omistaja 22.9.2026): viisi tapaa, joilla
+                   kamera seuraa sormea pallolaudalla. Rivit rakentaa
+                   js/main.js, tavat ja tallennus js/vedon-seuranta.js,
+                   toteutus js/pallo.js (VIISI SYÖTETAPAA RINNAKKAIN).
+                   Kosketusnäytteet-rivi näkyy vain kosketuslaitteella, ja
+                   mittauslippu (?koe=) ohittaa valinnan — vihjerivi kertoo
+                   sen, jottei rivin purematta jääminen jää arvoitukseksi. -->
+              <p class="valikko-alaotsikko" id="vedon-seuranta-otsikko">Vedon seuranta</p>
+              <div id="vedon-seuranta-valikko" class="kertoja-valikko"
+                   role="radiogroup" aria-labelledby="vedon-seuranta-otsikko"></div>
+              <p id="vedon-seuranta-vihje" class="lauta-vihje" hidden></p>
             </div>
             <!--
               PELILAUTA: KARTTAPALLO VAI VANHA KARTTA (omistaja

@@ -1252,12 +1252,18 @@ test('rajaaKiihtyvyys rajaa nopeuden muutoksen, ei nopeutta', () => {
 
 test('kytkentä: viisi syötetapaa ovat samassa rakennuksessa lippuina', () => {
   const lahde = readFileSync(new URL('../js/pallo.js', import.meta.url), 'utf8');
-  assert.match(lahde, /if \(syote\.interpVanha\) syote\.tapa = 'vanha';/);
-  assert.match(lahde, /else if \(k\.has\('syoteennakko'\)\) syote\.tapa = 'ennakko';/);
-  assert.match(lahde, /else if \(k\.has\('syotejousi'\)\) syote\.tapa = 'jousi';/);
+  assert.match(lahde, /if \(syote\.interpVanha\) tapa = 'vanha';/);
+  assert.match(lahde, /else if \(k\.has\('syoteennakko'\)\) tapa = 'ennakko';/);
+  assert.match(lahde, /else if \(k\.has\('syotejousi'\)\) tapa = 'jousi';/);
   assert.match(lahde, /k\.has\('syotetouch'\)/);
   // Kosketuslähde vain kosketuslaitteella, ja silloin pointermove ei syötä puskuria.
   assert.match(lahde, /typeof globalThis\.ontouchstart !== 'undefined'/);
   assert.match(lahde, /if \(syote\.touchLahde\) return;/);
   assert.match(lahde, /kotelo\.addEventListener\('touchmove', touchNayte, \{ passive: true \}\)/);
+  /*
+   * Mittauslippu voittaa valikon valinnan (js/vedon-seuranta.js): ilman
+   * tätä savuke mittaisi sitä, mikä laitteen localStorageen on jäänyt.
+   */
+  assert.match(lahde, /const mittausLippu = mittauslippuPaalla\(\);/);
+  assert.match(lahde, /if \(mittausLippu\) return; \/\/ mittausajossa lippu pitää valtansa/);
 });

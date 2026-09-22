@@ -6,6 +6,9 @@ import { Game } from './game.js';
 import { UI } from './ui.js';
 import { asetaLiike, liikePaalla } from './kartta-liike.js';
 import {
+  VEDON_SEURANNAN_TAVAT, asetaVedonSeuranta, kosketuslaite, mittauslippuPaalla, vedonSeuranta,
+} from './vedon-seuranta.js';
+import {
   VANHA_KARTTA_KAYTOSSA,
   asennaValikonSulkuvartija,
   asetaKehittajaMaailma, asetaKehittajaTila, asetaLautaValinta,
@@ -688,6 +691,58 @@ if (karttaValikko) {
   rivi.addEventListener('click', () => { asetaLiike(!liikePaalla()); nayta(); });
   nayta();
   karttaValikko.appendChild(rivi);
+}
+
+/*
+ * KARTTA → VEDON SEURANTA (omistaja 22.9.2026 klo 18.05): viisi tapaa,
+ * joilla kamera seuraa sormea pallolaudalla. Sama riviasu kuin
+ * pelilaudan valinnalla (role="radio", tasan yksi voimassa); tavat,
+ * tallennus ja ilmoitus laudalle ovat js/vedon-seuranta.js:ssä.
+ *
+ * VAIHTO PUREE HETI: js/pallo.js kuuntelee tapahtumaa eikä sivua
+ * tarvitse ladata. Siksi tässä ei ole "tulee voimaan seuraavassa
+ * latauksessa" -vihjettä — vihjerivi kertoo vain sen tilanteen, jossa
+ * osoitteen mittauslippu ohittaa valinnan.
+ *
+ * KOSKETUSNÄYTTEET VAIN KOSKETUSLAITTEELLA: hiirellä touchmovea ei
+ * tule, joten rivi jäisi valinnaksi joka ei tee mitään.
+ */
+const seurantaValikko = document.getElementById('vedon-seuranta-valikko');
+const seurantaVihje = document.getElementById('vedon-seuranta-vihje');
+
+const naytaSeuranta = () => {
+  if (!seurantaValikko) return;
+  const nyt = vedonSeuranta();
+  for (const rivi of seurantaValikko.querySelectorAll('button')) {
+    const valittu = rivi.dataset.seuranta === nyt;
+    rivi.classList.toggle('valittu', valittu);
+    rivi.setAttribute('aria-checked', valittu ? 'true' : 'false');
+    const tila = rivi.querySelector('.aanikytkin-tila');
+    if (tila) tila.textContent = valittu ? 'valittu' : 'vaihda';
+  }
+};
+
+if (seurantaValikko) {
+  for (const tapa of VEDON_SEURANNAN_TAVAT) {
+    if (tapa.kosketus && !kosketuslaite()) continue;
+    const rivi = document.createElement('button');
+    rivi.type = 'button';
+    rivi.className = 'aanikytkin';
+    rivi.dataset.seuranta = tapa.avain;
+    rivi.setAttribute('role', 'radio');
+    rivi.title = tapa.seloste;
+    rivi.setAttribute('aria-label', `${tapa.nimi} — ${tapa.seloste}`);
+    rivi.innerHTML = `<span class="viiva-ikoni">${svg(tapa.ikoni)}</span>`
+      + `<span class="aanikytkin-nimi">${tapa.nimi}</span>`
+      + '<span class="aanikytkin-tila"></span>';
+    rivi.addEventListener('click', () => { asetaVedonSeuranta(tapa.avain); naytaSeuranta(); });
+    seurantaValikko.appendChild(rivi);
+  }
+  if (seurantaVihje && mittauslippuPaalla()) {
+    seurantaVihje.textContent = 'Osoitteen ?koe-lippu ohittaa valinnan.';
+    seurantaVihje.hidden = false;
+  }
+  naytaSeuranta();
 }
 
 for (const tiedot of AANIKYTKIMET) {
