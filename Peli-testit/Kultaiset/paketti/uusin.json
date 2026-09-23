@@ -1,0 +1,15 @@
+{
+ "$skeema": "matkakirja-vienti/1/osoitin",
+ "versio": 1,
+ "polku": "sisalto/1/v1/",
+ "sha256": "392fff89aa69eb3a7a4373c5e4ea605af8db3a0469c9cf470fca6933acd81f40",
+ "skeemaversio": "1.1",
+ "minSovellus": {
+  "ios": 1,
+  "web": null
+ },
+ "edellinen": null,
+ "commit": "b4f7a5b16a2b525727b957583edc8c865a2c10a1",
+ "appVersion": "2026-09-21.2148",
+ "julkaistu": "2026-09-23T10:57:32.407Z"
+}
