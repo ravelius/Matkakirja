@@ -155,6 +155,17 @@ test('työnkulku vie paketin ennen osoitinta ja tarkistaa julkisen osoitteen vä
   assert.match(yml, /cancel-in-progress: false/);
 });
 
+test('osoitinvartija: pienempi skeema ei korvaa osoitinta', async () => {
+  const { saakoKorvata, vertaaSkeemaa } = await import('../tools/vienti/osoitinvartija.mjs');
+  assert.ok(vertaaSkeemaa('1.10', '1.9') > 0);
+  assert.equal(saakoKorvata({ skeemaversio: '1.10', versio: 11 }, { skeemaversio: '1.9' }).korvaa, false);
+  assert.equal(saakoKorvata({ skeemaversio: '1.9' }, { skeemaversio: '1.9' }).korvaa, true);
+  assert.equal(saakoKorvata({ skeemaversio: '1.9' }, { skeemaversio: '1.12' }).korvaa, true);
+  assert.equal(saakoKorvata(null, { skeemaversio: '1.0' }).korvaa, true);
+  const yml = readFileSync(`${JUURI}/.github/workflows/vie-sisalto.yml`, 'utf8');
+  assert.ok(yml.indexOf('osoitinvartija.mjs') < yml.indexOf('aws s3 cp dist/sisalto/uusin.json'));
+});
+
 test('työnkulun aws-sijoitukset kestävät bash -e:n', () => {
   // GitHub ajaa askeleet `bash -e`:llä: paljas `x=$(aws …)` lopettaa
   // askeleen hiljaa, kun aws palauttaa virheen (ensimmäinen ajo
