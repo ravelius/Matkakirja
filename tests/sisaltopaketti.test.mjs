@@ -397,3 +397,14 @@ test('skeema 1.9: kuva- ja lippukysymykset pelin järjestyksessä, url kuten med
   assert.deepEqual(aineisto.get('kuunvaiheet:KUUT').data, JSON.parse(JSON.stringify(KUUT)));
   assert.ok(aineisto.get('pylvaat:PYLVASKUVAT').data.every((k) => k.url && k.lahde));
 });
+
+test('skeema 1.9: luennat valmiilla ääniosoitteella', async () => {
+  const rivit = new Map(JSON.parse(tiedostot.get('kokoelmat/luennat.json')).alkiot.map((r) => [r.id, r]));
+  const { aaniUrl } = await import('../js/media.js');
+  assert.equal(rivit.get('intro').url, aaniUrl('assets/audio/intro-puhe.mp3'));
+  assert.match(rivit.get('intro').url, /\?v=2$/);
+  const pariisi = rivit.get('matkakirja:pariisi');
+  assert.ok(pariisi && /^https:\/\//.test(pariisi.url) && pariisi.teksti && pariisi.paikkarivi);
+  assert.equal(rivit.size, 47);
+  assert.ok([...rivit.values()].filter((r) => r.kesto).length >= 40, 'kestot Horatio-kuiteista');
+});

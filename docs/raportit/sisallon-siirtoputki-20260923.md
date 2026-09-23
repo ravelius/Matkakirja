@@ -417,7 +417,7 @@ Funktiot tunnisteiksi ja sisältöversion näyttäminen ovat myöhempiä osia.
   ja saapuminen; 1.5 manifest.logiikka, kokoelma esilasketut ja media.suurennos; 1.6 aarteiden
   arvovälit ja botin taito saannoissa, kokoelma tapahtumat; 1.7 kokoelma
   linssiaineisto; 1.8 kokoelma aanitaulut; 1.9 kokoelmat kuvakysymykset,
-  lippumaat ja pulmaaineisto. Raakaoliot (`data`) eivät kuulu sopimukseen: niiden kentät
+  lippumaat, pulmaaineisto ja luennat. Raakaoliot (`data`) eivät kuulu sopimukseen: niiden kentät
   voivat muuttua ilman versionnostoa.
 - **Pakolliset kentät.** Jokainen sovellus julistaa, mitkä kokoelmat ja
   kentät se vaatii. Tuoja validoi paketin ennen käyttöönottoa, ja jos

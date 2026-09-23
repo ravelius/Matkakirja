@@ -23,6 +23,7 @@ import { laudaltaAsteiksi } from '../../js/fokusmitat.js';
 import { ISO2 } from './iso2.mjs';
 import { PAAKAUPUNGIT } from './paakaupungit.mjs';
 import { ratkaiseMedia } from './media.mjs';
+import { aaniUrl, horatioAanenKesto } from '../../js/media.js';
 
 const LAUTA = 'js/packs/maailmankartta.js';
 
@@ -503,6 +504,36 @@ function kysymyskuvaKokoelmat(ns, hae) {
   };
 }
 
+/*
+ * LUENNAT (skeema 1.9, Pelikoodarin tarve 23.9.2026): isoisän
+ * matkakirjaluennat valmiilla ääniosoitteella, ettei natiivin tarvitse
+ * ladata media.json:ia repopolun ratkaisemiseen. url = pelin aaniUrl()
+ * (versioitu Horatio-polku tai ?v=-versio), kesto = horatioAanenKesto().
+ * Matkakirjaluennoilla ei ole luentokohtaista mykistyslistaa (mykistys on
+ * pelaajan asetus), joten kaikki äänitteelliset ovat mukana.
+ */
+const ERIKOISLUENNAT = [
+  { id: 'intro', aanite: 'assets/audio/intro-puhe.mp3', kuvaus: 'Pelin avaus' },
+  { id: 'lento-alku', aanite: 'assets/audio/puhe-lento-alku.mp3', kuvaus: 'Avauslento' },
+];
+
+function luentoKokoelma(hae) {
+  const { FOKUSVIRRAT } = hae('js/packs/fokusvirrat.js');
+  const aani = (polku) => ({ url: aaniUrl(polku), kesto: horatioAanenKesto(polku) });
+  const rivit = [
+    ...ERIKOISLUENNAT.map((l) => ({ id: l.id, kaupunki: null, paikkarivi: null, teksti: null, kuvaus: l.kuvaus,
+      aanite: l.aanite, ...aani(l.aanite) })),
+    ...Object.entries(FOKUSVIRRAT).filter(([, v]) => v?.matkakirja?.aanite).map(([kaupunki, v]) => ({
+      id: `matkakirja:${kaupunki}`, kaupunki, paikkarivi: v.matkakirja.paikkarivi ?? null,
+      teksti: v.matkakirja.teksti ?? null, kuvaus: null, aanite: v.matkakirja.aanite, ...aani(v.matkakirja.aanite),
+    })),
+  ];
+  return taulukko('js/packs/fokusvirrat.js#FOKUSVIRRAT.*.matkakirja + erikoisluennat',
+    'Isoisän luennat: intro ja lento-alku sekä matkakirjaluennat kaupungeittain. url = valmis https-osoite '
+      + '(aaniUrl), kesto sekunteina tai null, aanite = repopolku.',
+    { kaupunki: 'kaupungit' }, rivit);
+}
+
 /** nimiavaruudet: Map<moduulipolku, moduulin nimiavaruus> */
 export function kokoaKokoelmat(nimiavaruudet) {
   const ns = {
@@ -524,5 +555,6 @@ export function kokoaKokoelmat(nimiavaruudet) {
     linssiaineisto: linssiKokoelma(hae),
     aanitaulut: aaniKokoelma(ns, hae),
     ...kysymyskuvaKokoelmat(ns, hae),
+    luennat: luentoKokoelma(hae),
   };
 }

@@ -68,7 +68,7 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        äänet, avauskynnykset)
  *   1.8  kokoelma aanitaulut (tehosteet ja näytteet, ambienssit, pulu,
  *        siirtymä-, tila- ja paikkaraidat, musiikkiketju kaupungeittain)
- *   1.9  kokoelmat kuvakysymykset, lippumaat ja pulmaaineisto
+ *   1.9  kokoelmat kuvakysymykset, lippumaat, pulmaaineisto ja luennat
  */
 export const SKEEMAVERSIO_TARKKA = '1.9';
 
