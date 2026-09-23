@@ -234,11 +234,33 @@ jobs:
                   return e.code, (json.loads(out) if out else {})
 
           # 1) Onko avainnipussa jo Apple Distribution -identiteetti (varmenne + yksityinen avain)?
-          identiteetit = subprocess.run(
-              ['security', 'find-identity', '-v', '-p', 'codesigning', nippu],
-              capture_output=True, text=True).stdout
+          def identiteetti_loytyy():
+              out = subprocess.run(
+                  ['security', 'find-identity', '-v', '-p', 'codesigning', nippu],
+                  capture_output=True, text=True).stdout
+              return 'Apple Distribution' in out
+
           cert_id = None
-          if 'Apple Distribution' not in identiteetit:
+          if not identiteetti_loytyy():
+              # Avainnippu on pysyvä, joten edellisen (mahdollisesti kesken
+              # jääneen) ajon yksityinen avain saattaa jo olla tallessa —
+              # yritetään ensin liittää ASC:n olemassa olevat varmenteet
+              # siihen ennen uuden avainparin luontia (kiintiön säästö).
+              tila, d = kutsu('GET', '/v1/certificates?filter[certificateType]=IOS_DISTRIBUTION&limit=50')
+              for c in (d.get('data', []) if tila == 200 else []):
+                  certpolku = f"{tmp}/olemassaoleva-{c['id']}.cer"
+                  with open(certpolku, 'wb') as f:
+                      f.write(base64.b64decode(c['attributes']['certificateContent']))
+                  subprocess.run(['security', 'import', certpolku, '-k', nippu,
+                                   '-T', '/usr/bin/codesign', '-T', '/usr/bin/security'],
+                                  capture_output=True)
+              if identiteetti_loytyy():
+                  print('Avainnipussa oli jo yksityinen avain jollekin ASC:n varmenteelle — liitetty, ei luoda uutta.')
+                  tila, d = kutsu('GET', '/v1/certificates?filter[certificateType]=IOS_DISTRIBUTION&limit=50')
+                  if tila == 200 and d.get('data'):
+                      cert_id = d['data'][0]['id']
+
+          if not identiteetti_loytyy():
               print('Ei Distribution-identiteettiä avainnipussa — luodaan uusi.')
               avainpolku = f'{tmp}/dist.key'; csrpolku = f'{tmp}/dist.csr'
               subprocess.run(['openssl', 'genrsa', '-out', avainpolku, '2048'], check=True, capture_output=True)
@@ -261,10 +283,10 @@ jobs:
               print(f'Uusi Distribution-varmenne luotu, id={cert_id}')
               certpolku = f'{tmp}/dist.cer'
               with open(certpolku, 'wb') as f:
-                  f.write(base64.b64decode(d['data']['attributes']['certContent']))
+                  f.write(base64.b64decode(d['data']['attributes']['certificateContent']))
               subprocess.run(['security', 'import', certpolku, '-k', nippu,
                                '-T', '/usr/bin/codesign', '-T', '/usr/bin/security'], check=True, capture_output=True)
-          else:
+          elif cert_id is None:
               print('Distribution-identiteetti löytyi avainnipusta, ei luoda uutta.')
               tila, d = kutsu('GET', '/v1/certificates?filter[certificateType]=IOS_DISTRIBUTION&limit=50')
               if tila == 200 and d.get('data'):
