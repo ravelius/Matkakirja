@@ -5,6 +5,11 @@
  *
  *   node tools/maasto/tee-maasto.mjs --dem <kansio> --ulos <kansio>
  *        [--alue -6,41,10,52] [--tasot 0-11] [--ruudukko 65] [--osa i/n] [--luettelo]
+ *        [--maailma 6]
+ *
+ * --maailma Z (korjaus 23.9.2026): tasot 0…Z tehdään koko maailmalle
+ * (DEM:n ulkopuolella 0 m), jotta Cesium ei ylinäytteistä alueen
+ * ulkopuolta z0:n jättiläislaatasta vaan tason Z laatoista.
  *
  * TIILITYS on Cesiumin GeographicTilingScheme (EPSG:4326, TMS): tasolla z on
  * 2^(z+1) × 2^z laattaa, laatta (x, y) kattaa lon −180 + x·180/2^z …, lat
@@ -32,10 +37,20 @@ import { join } from 'node:path';
 import { gzipSync } from 'node:zlib';
 
 import { avaaGeotiff } from './geotiff.mjs';
-import { rtinVerkko } from './rtin.mjs';
+import { rtinVerkko, rtinVirheet } from './rtin.mjs';
 import { koodaaLaatta } from './quantized-mesh.mjs';
 
 export const CESIUM_TASO0_VIRHE = (6378137 * 2 * Math.PI * 0.25) / (65 * 2);
+const MAAN_SADE = 6371008.8;
+const RAD = Math.PI / 180;
+
+/** Jänteen keskipisteen painuma (m) kahden pisteen (lon, lat asteina) välillä. */
+export function janteenPainuma(lon1, lat1, lon2, lat2) {
+  const s = Math.sin(((lat2 - lat1) * RAD) / 2) ** 2
+    + Math.cos(lat1 * RAD) * Math.cos(lat2 * RAD) * Math.sin(((lon2 - lon1) * RAD) / 2) ** 2;
+  const kulma = 2 * Math.asin(Math.min(1, Math.sqrt(s)));
+  return MAAN_SADE * (1 - Math.cos(kulma / 2));
+}
 export const LAHDEMAININTA = 'Produced using Copernicus WorldDEM-30 © DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved.';
 
 /** Laatan rajat asteina. */
@@ -99,7 +114,9 @@ export function teeLaatta(dem, z, x, y, n = 65) {
     for (let i = 0; i < n; i += 1) h[j * n + i] = dem.korkeus(a.west + i * vali, lat, vali);
   }
   const kynnys = Math.max(0.5, (CESIUM_TASO0_VIRHE / 2 ** z) * 0.5);
-  const { pisteet, kolmiot } = rtinVerkko(h, n, kynnys);
+  // Ruutupiste (i, j) → (lon, lat); kaarevuus virheeseen (ks. rtin.mjs).
+  const kaarevuus = (ax, ay, bx, by) => janteenPainuma(a.west + ax * vali, a.north - ay * vali, a.west + bx * vali, a.north - by * vali);
+  const { pisteet, kolmiot } = rtinVerkko(h, n, kynnys, rtinVirheet(h, n, kaarevuus));
   const P = pisteet.map(([i, j]) => [i / (n - 1), 1 - j / (n - 1), h[j * n + i]]);
   // Kiertosuunta vastapäivään (u itään, v pohjoiseen) jokaiselle kolmiolle.
   const T = kolmiot.map(([p, q, r]) => {
@@ -111,11 +128,15 @@ export function teeLaatta(dem, z, x, y, n = 65) {
 }
 
 /** layer.json (Cesium CesiumTerrainProvider). */
-export function kerroksenKuvaus({ tasot, alue, versio }) {
+export const MAAILMA = [-180, -90, 180, 90];
+/** Tason z alue: koko maailma tasoilla 0…maailma, muuten `alue`. */
+export const tasonAlue = (z, alue, maailma = -1) => (z <= maailma ? MAAILMA : alue);
+
+export function kerroksenKuvaus({ tasot, alue, versio, maailma = -1 }) {
   const available = [];
   for (let z = 0; z <= tasot[1]; z += 1) {
     if (z < tasot[0]) { available.push([]); continue; }
-    const t = tasonLaatat(z, alue);
+    const t = tasonLaatat(z, tasonAlue(z, alue, maailma));
     available.push([{ startX: t.x0, startY: t.y0, endX: t.x1, endY: t.y1 }]);
   }
   return {
@@ -136,9 +157,10 @@ async function main() {
   const n = Number(arvo('ruudukko', 65));
   const [osa, osia] = arvo('osa', '0/1').split('/').map(Number);
   const versio = arvo('versio', '2026-09-23a');
+  const maailma = Number(arvo('maailma', -1));
   mkdirSync(ulos, { recursive: true });
   if (argv.includes('--luettelo')) {
-    writeFileSync(join(ulos, 'layer.json'), `${JSON.stringify(kerroksenKuvaus({ tasot, alue, versio }), null, 1)}\n`);
+    writeFileSync(join(ulos, 'layer.json'), `${JSON.stringify(kerroksenKuvaus({ tasot, alue, versio, maailma }), null, 1)}\n`);
     console.log(`layer.json: tasot ${tasot.join('–')}, alue ${alue.join(',')}`);
     return;
   }
@@ -147,7 +169,7 @@ async function main() {
   const alku = Date.now();
   let laattoja = 0; let tavuja = 0; let kolmioita = 0;
   for (let z = tasot[0]; z <= tasot[1]; z += 1) {
-    const t = tasonLaatat(z, alue);
+    const t = tasonLaatat(z, tasonAlue(z, alue, maailma));
     const tz = Date.now(); let tasolla = 0;
     for (let x = t.x0; x <= t.x1; x += 1) {
       // Osat sarakkeittain (sama jako kuin pyramidin shardeilla).

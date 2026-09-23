@@ -22,7 +22,16 @@
  * verkkoon tuli T-liitos. Kun koko syvin taso on valmis ennen seuraavaa,
  * jokainen keskipiste on lopullinen ennen kuin sitä luetaan.
  */
-export function rtinVirheet(korkeudet, n) {
+/*
+ * KAAREVUUS (korjaus 23.9.2026, Natiivisepän havainto: mustia kiiloja
+ * alueen reunalla). Kolmio on jänne: sen sisäpisteet ovat ellipsoidin
+ * alla. Kun virheenä oli vain korkeus, tasainen laatta jäi kahdeksi
+ * kolmioksi — z0:ssa 180°:n jänne, joka painuu tuhansia kilometrejä
+ * maan alle — ja Cesium ylinäytteisti alueen ulkopuolen siitä.
+ * `kaarevuus(ax, ay, bx, by)` antaa hypotenuusan keskipisteen painuman
+ * metreinä, ja se lasketaan virheeseen korkeuspoikkeaman rinnalle.
+ */
+export function rtinVirheet(korkeudet, n, kaarevuus = null) {
   const virheet = new Float32Array(n * n);
   const h = (x, y) => korkeudet[y * n + x];
   const m = n - 1;
@@ -42,6 +51,7 @@ export function rtinVirheet(korkeudet, n) {
     for (const [ax, ay, bx, by, cx, cy] of tasot[d]) {
       const mx = (ax + bx) >> 1; const my = (ay + by) >> 1;
       let e = Math.abs(h(mx, my) - (h(ax, ay) + h(bx, by)) / 2);
+      if (kaarevuus) e = Math.max(e, kaarevuus(ax, ay, bx, by));
       if (Math.abs(ax - cx) + Math.abs(ay - cy) > 1) {
         // Lasten (c, a, m) ja (b, c, m) keskipisteet.
         e = Math.max(e, virheet[((cy + ay) >> 1) * n + ((cx + ax) >> 1)], virheet[((by + cy) >> 1) * n + ((bx + cx) >> 1)]);
