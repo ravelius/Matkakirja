@@ -43,6 +43,8 @@ korkeudet metreinä. Kaaret ovat asteina kapeammassa näyttösuunnassa.
 | `bool Korosta(string a, string b)` | valmis | Valittu reitti korostuu, ja katko liikkuu. |
 | `void Tyhjenna(bool myosKorostus = true)` | valmis | |
 | `bool OnReitti(a, b)` | valmis | |
+| `void Lentokaaret(string lahto, IReadOnlyCollection<string> kohteet)` | valmis | Lentolista auki: kirkkaat lentokaaret lähdöstä kohteisiin (web matkareittienValinta, lennot); null = pois. Ei napautusta. |
+| `void SovitaKohteet(IEnumerable<string> kaupungit, marginaali = 0,12)` | valmis | Kamera loitontaa, jos kohteet eivät mahdu ruutuun (web sovitaKohteetNakyviin); ei lähennä. Pohja: `PalloKierto.SovitaPisteet`. |
 | `List<(lat, lon)> Polku(a, b)` | tulossa | Reitin polku kamera-ajoa ja nappulaa varten (sama kuin piirretty viiva). |
 
 ## 3b. Pelinappula ja aloituslento — `Nappula` (`KarttaKerrokset.Instanssi.nappula`)
