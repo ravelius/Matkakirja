@@ -95,6 +95,9 @@ namespace Matkakirja.Editori
             maat.kerrokset = kerrokset;
             maat.materiaali = Materiaali("Maatayttö", "Matkakirja/MaaTaytto", Color.white);
             kerrokset.maaKartta = maat;
+            var valot = georefGo.AddComponent<AiheValot>();
+            valot.georeferenssi = georef;
+            valot.materiaali = Materiaali("Karttavalo", "Matkakirja/Valopiste", Color.white);
 
             var korttiGo = new GameObject("Käyttöliittymä");
             var kortti = korttiGo.AddComponent<NimiKortti>();
