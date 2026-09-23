@@ -17,8 +17,8 @@ aloituspiste. Lue ensin tämä dokumentti, sitten tarvittaessa raportit (lopussa
 | Haara | Commit | Sisältö | Tila |
 |---|---|---|---|
 | `linssiseppa/linssirunko` | f24645e | Linssisopimus, rekisteri, odotuspeite, topografia, LinssiOhjain (Unity), KarttaKerrokset-sovitin | **Mergetty masteriin 0244858** (Natiiviseppä 23.9. klo 18) |
-| `linssiseppa/astronautti` | daf5e93 | Kaikki edellinen + aikajana (asteikko, kello, kamera), ihmisen matka (esitys, virrat, vanat, valot, tähdet, kertojan ääni), astronautin kamera (pisteet, ISS, pilvet), keksinnöt (pysäkkiajo, valot) | Natiivisepän koekäännös: kaikki viisi varjostinta kääntyvät Metalille ilman virheitä, sim-vienti ok. **Merge-pyyntö koko haarasta lähetetty klo 18.10**; laitteella ei vielä ajettu. Testit 116/116 |
-| `linssiseppa/vesistot` | c172608 | Vesistölinssi (topografian päällä): 169 uomaa ja 84 penkkaa Viiva-materiaalilla, 38 järveä Tasavari-varjostimella (korvanleikkaus ajossa, 20 ms), 20 nimeä, rekisteröinti; kultaiset webistä, testit 128/128, unity-tarkistus 0 | Valmis, worktree poistettu. Pohjana astronautti 7a86c81. **Jatkaja: kun astronautti on masterissa, `git merge master` tähän haaraan ja merge-pyyntö Natiivisepälle** (Tasavari.shader ei vielä käännetty; nosto järvet 19 km, joet 25 km webin arvoista — tarkista laitteella) |
+| `linssiseppa/astronautti` | daf5e93 | Kaikki edellinen + aikajana (asteikko, kello, kamera), ihmisen matka (esitys, virrat, vanat, valot, tähdet, kertojan ääni), astronautin kamera (pisteet, ISS, pilvet), keksinnöt (pysäkkiajo, valot) | Natiivisepän koekäännös: kaikki viisi varjostinta kääntyvät Metalille ilman virheitä, sim-vienti ok. **Mergetty masteriin 4b7e600**; Natiiviseppä ajaa iPadilla ja lähettää linssi-loki.txt:n jatkajalle. Testit 116/116 |
+| `linssiseppa/vesistot` | 0062796 | Vesistölinssi (topografian päällä): 169 uomaa ja 84 penkkaa Viiva-materiaalilla, 38 järveä Tasavari-varjostimella (korvanleikkaus ajossa, 20 ms), 20 nimeä, rekisteröinti; kultaiset webistä, testit 128/128, unity-tarkistus 0 | Valmis, worktree poistettu. Pohjana astronautti 7a86c81. **Master yhdistetty ja merge-pyyntö Natiivisepälle lähetetty 23.9. ilta** (Tasavari.shader ei vielä käännetty; nosto järvet 19 km, joet 25 km webin arvoista — tarkista laitteella) |
 
 Laitetesti ilman UI:ta: `Documents/linssi-komento.txt` → `linssi topografia | ihmisen-matka | satelliitti |
 keksinnot | vesistot | pois`, loki `Documents/linssi-loki.txt`.
@@ -49,7 +49,7 @@ keksinnot | vesistot | pois`, loki `Documents/linssi-loki.txt`.
 
 ## Seuraavat työt
 
-1. Vesistöjen merge-pyyntö astronautti-haaran mergen jälkeen (ks. taulukko).
+1. Vesistöjen merge ja laitehavainnot (ks. taulukko).
 2. Laitehavainnot (Natiiviseppä/Laitetestaaja) ihmisen matkasta, astronautista ja keksinnöistä.
 3. Vertailu ja maatiedot, kun MaaTila on masterissa (linssit ovat karttatiloja; maalehti ja käyrät Natiivi-UI).
 4. Ihmisen matkan tutkimusvaihe (viisi virtanappia, nostokortit) ja muisti; keksintöjen luennat, kun
