@@ -1,5 +1,13 @@
 # Pulu (Livia) — 70 pelieleen laukaisijataulukko
 
+**Päivitys 23.9.2026 (Codexin omistajapäätös,
+`posti/codex-fable-pulun-9-orvon-omistajavastaus-20260923.md`):** 70/70
+tarkoittaa taulukon KARTOITUSKATTAVUUTTA — jokaiselle ID:lle on etsitty ja
+todennettu (tai todettu puuttuvaksi) koodipolku — EI sitä, että kaikki 70
+olisi nähty livepelissä. Yhdeksän orvon (rivit alla) kytkentä on oma,
+erillinen hyväksyntäportti Pelikoodarin jonossa, ei automaattinen lisäys
+idle-arvontaan pelkän lukumäärän täyttämiseksi.
+
 Laitteistotestaajan (QA) analyysi Codexin pyyntöön
 (`posti/codex-fable-pulun-idle-qa-vastaus-20260923.md`). Tuotos ei ole
 koodimuutos. `LIVIAN_UUDET_PELIELEET` (js/livia-uudet-versiot.js:398-400) on
@@ -78,10 +86,10 @@ Legenda "Odotettu yleisyys":
 | walkBack | Liike | `palaa()`-paluu kävelystä; SUORA kutsu `js/linssit/ihmisen-matka-esitys.js:1987` pulun saapuessa "Ihmisen matka" -esityksen näyttämölle (`PULUN_SISAANTULOELE`) | tapahtumapohjainen-yleinen | Avaa "Ihmisen matka" -linssi/esitys ja katso pulun kävelevän sisään oikealta (`walkBack`). |
 | peek | Liike | Mietintälauseet "kaivan sähkeitä"/"arkiston hyllyt ovat minua korkeammalla"/"tästä on jossain sähke" | tapahtumapohjainen-yleinen | Chat-odotus kunnes osuu arkisto/sähke-aiheinen täytelause; katso `peek`. |
 | owl | Liike | **EI LÖYDETTYÄ LAUKAISIJAA (orpo?).** `toista()`-funktio (eleet.js:332) aliasoi JOKAISEN `'owl'`-kutsun heti `'flyAway'`:ksi ennen suoritusta (`if(id==='owl')id='flyAway';`), joten oma piirto ei koskaan näy pelissä vaikka geometria on olemassa. Huom: js/livia-kasvot.js:n `'owl'` on ERI, pollon pään ikoni-tila — ei sama asia. | — | Ei toistettavaa: mikä tahansa yritys näyttää `owl` päätyy aina näyttämään `flyAway`. Vahvistettu myös tests/livia-eleet.test.mjs:ssä epäsuorasti (owl-baseId geometriaa testataan vain `livianPikseliAsento`-tasolla, ei `toista()`-tasolla). |
-| arrive | Liike | **EI LÖYDETTYÄ LAUKAISIJAA (orpo?).** Vain `palaa()`-paluulogiikan varalauseke `else if(s?.x>0)toista('arrive')` (eleet.js:534), mutta mikään ele ei koskaan aseta `x>0`-tilaa ilman että kyseinen lähde-ele (`leaveRight`/`walkRight`, myös orpoja) olisi ensin käynnistynyt. | — | Ei toistettavaa pelitestiä; vaatisi ensin orvon `leaveRight`/`walkRight`-tilan. |
+| arrive | Liike | **EI LÖYDETTYÄ LAUKAISIJAA (orpo?), rakenteellisesti saavuttamaton.** Codexin vahvistus (23.9.): `leaveRight` EI ole `arrive`n lähdepari — se asettaa `walk.direction=1` ja päättyy `x=0`:aan, ja `palaa()` valitsee sille `walkBack`in, ei `arrive`a. `palaa()`-varalauseke `else if(s?.x>0)toista('arrive')` (eleet.js:534) jää siis kuolleeksi koodiksi nykyohjaimella — mikään olemassa oleva ele ei jätä `x>0`-tilaa taakseen. | — | Ei toistettavaa pelitestiä; vaatisi uuden lähdepolun tai tilakorjauksen (Codexin jonossa, ei automaattinen `leaveRight`-kytkentä). |
 | crash | Liike | **EI LÖYDETTYÄ LAUKAISIJAA (orpo?).** Ei yhtään kutsupaikkaa `js/`-pelikoodissa; ainoa `toista('crash')`-kutsu koko repossa on tests/livia-eleet.test.mjs:257 (reduced-motion-testi). | — | Ei toistettavaa pelitestiä. Yllättävä löydös: näyttää "käytössä olevalta" koska sillä on täysi geometria ja testikattavuus, mutta testi kutsuu sitä vain suoraan `toista('crash')`, ei minkään oikean pelitapahtuman kautta. |
 | emerge | Liike | **EI LÖYDETTYÄ LAUKAISIJAA (orpo?).** Vain `palaa()`-varalauseke `else if(s?.y>5)toista('emerge')`, sama ongelma kuin `arrive` (lähde `leaveDown` on itsekin orpo). | — | Ei toistettavaa pelitestiä. |
-| leaveRight | Liike | **EI LÖYDETTYÄ LAUKAISIJAA (orpo?).** Ei kutsupaikkaa `toista('leaveRight',…)` missään js/-tiedostossa. | — | Ei toistettavaa pelitestiä. |
+| leaveRight | Liike | **EI LÖYDETTYÄ LAUKAISIJAA (orpo?).** Ei kutsupaikkaa `toista('leaveRight',…)` missään js/-tiedostossa. Paluupari on jo olemassa (`palaa()` valitsee sille `walkBack`in, ei `arrive`a) — Codexin mukaan mahdollinen tuleva tarkoituksellinen sivupoistuminen, EI kytketä `arrive`en. | — | Ei toistettavaa pelitestiä. |
 | leaveDown | Liike | **EI LÖYDETTYÄ LAUKAISIJAA (orpo?).** Ei kutsupaikkaa `toista('leaveDown',…)` missään js/-tiedostossa. | — | Ei toistettavaa pelitestiä. |
 | handoff | Liike | Pulun NAPPI tulee ensimmäistä kertaa näkyviin koko sessiossa (`saapuminen()`, `!ensisaapuminen`, eleet.js:594) — "pöllön sijainen" | tapahtumapohjainen-harvinainen | Lataa peli tyhjästä tilasta ja katso ensimmäinen pulun ilmestyminen ruudulle: sen pitää olla `handoff`, ei `clumsyLand`. |
 | glideIn | Liike | Julkinen `ensiliito()`-rajapinta (eleet.js:688-692), kutsutaan pollo.js:7356:sta kun pulu avataan ensi kertaa sivulle | vain suoralla toista()-kutsulla | Lataa peli ja katso pulun ensimmäistä liitoa ruudulle sisään (`glideIn`), ennen kuin mitään muuta tapahtuu. |
@@ -126,5 +134,9 @@ Legenda "Odotettu yleisyys":
   (+ 1 erikoistapaus, EI lasketa orvoksi mutta ei myöskään koskaan oma
   pelieleen: **talk** — käytetään vain nokan aukion muotolähteenä puheen
   aikana, ei koskaan `toista('talk', …)`.)
+  Yhdeksän orvon omistajapäätös ja toteutusraja:
+  `posti/codex-fable-pulun-9-orvon-omistajavastaus-20260923.md` — ei
+  yhtään merkitä livekäytössä olevaksi ennen erillistä kytkentää;
+  `leaveRight`/`arrive` EI ole valmis pari (ks. rivit yllä).
 
 8 + 2 + 33 + 16 + 1 + 9 + 1 = 70. ✓
