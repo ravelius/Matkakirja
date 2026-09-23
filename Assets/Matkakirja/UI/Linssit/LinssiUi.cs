@@ -19,8 +19,8 @@
 // Rekisteri syntyy LinssiOhjaimen mukana (AfterSceneLoad), joten kytkentä
 // odottaa sitä ja kytkeytyy uudelleen, jos ohjain vaihtuu.
 using System;
-using System.Reflection;
 using Matkakirja.Linssit;
+using Matkakirja.Linssit.Aikajana;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -175,37 +175,12 @@ namespace Matkakirja.Natiivi
 
         // --- linssi-oliot sovittimien takaa ---------------------------------------------
 
-        /// <summary>
-        /// Linssi-olio rekisterin sovittimen takaa. Maatilan sovitin on julkinen;
-        /// keksintöjen ja ihmisen matkan sovittimet ovat LinssiOhjaimen yksityisiä
-        /// sisäluokkia, joiden julkinen Linssi-ominaisuus luetaan heijastuksella.
-        /// TODO(Linssiseppä): sovittimet julkisiksi, niin heijastus jää pois.
-        /// </summary>
-        public static T LinssiOlio<T>(ILinssi l) where T : class
-        {
-            if (l == null) return null;
-            if (l is T suora) return suora;
-            try
-            {
-                var p = l.GetType().GetProperty("Linssi", BindingFlags.Instance | BindingFlags.Public);
-                return p?.GetValue(l) as T;
-            }
-            catch (Exception e)
-            {
-                Debug.LogWarning("MATKAKIRJA ui linssit: " + e.Message);
-                return null;
-            }
-        }
+        /// <summary>Auki oleva keksintölinssi (LinssiOhjain.KeksinnotSovitin), muuten null.</summary>
+        public static KeksinnotLinssi Keksinnot =>
+            (Rekisteri?.Auki as LinssiOhjain.KeksinnotSovitin)?.Linssi;
 
-        /// <summary>Onko LinssiOhjaimen sovittimella luettava Linssi-ominaisuus (heijastus).</summary>
-        public static bool SovitinLuettavissa(string sovitin)
-        {
-            try
-            {
-                var t = typeof(LinssiOhjain).GetNestedType(sovitin, BindingFlags.NonPublic | BindingFlags.Public);
-                return t?.GetProperty("Linssi", BindingFlags.Instance | BindingFlags.Public) != null;
-            }
-            catch (Exception) { return false; }
-        }
+        /// <summary>Auki oleva ihmisen matkan linssi (LinssiOhjain.IhmisenMatkaSovitin), muuten null.</summary>
+        public static IhmisenMatkaLinssi IhmisenMatka =>
+            (Rekisteri?.Auki as LinssiOhjain.IhmisenMatkaSovitin)?.Linssi;
     }
 }
