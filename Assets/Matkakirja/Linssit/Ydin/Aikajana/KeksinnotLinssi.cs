@@ -3,6 +3,12 @@
 // Avaus: pelin kerrokset piiloon, musiikki pitoon, kamera ensimmäisen pysäkin
 // lähikuvaan; esittelylaatikko (Natiivi-UI) käynnistää kellon (Kaynnista).
 // Ilman UI:ta sovitin kutsuu Kaynnista-metodia itse.
+//
+// LUENNAT (KeksintoLuennat + ILuentaSoitin, web js/aikajana.js): esittelyn teksti
+// soi laatikon auetessa ja katkeaa Käynnistä-napista; syttyvä pysäkki soittaa
+// oman luentansa, merkkipaalun välinäytös syrjäyttää sen omalla puheellaan ja
+// katkeaa Jatka-napista; selaus ja sulku hiljentävät. Soiva luenta pidättää
+// pysäkin tauon loppua (Kello.PidataLuennalle).
 using System;
 
 namespace Matkakirja.Linssit.Aikajana
@@ -12,6 +18,8 @@ namespace Matkakirja.Linssit.Aikajana
         readonly KeksinnotAineisto aineisto;
         readonly IPysakkiajonNakyma nakyma;
         readonly Func<bool> luentaSoi;
+        readonly KeksintoLuennat luennat;
+        readonly ILuentaSoitin soitin;
         ILinssiYmparisto y;
         Nakyma talteen;
         double edellinen;
@@ -20,11 +28,58 @@ namespace Matkakirja.Linssit.Aikajana
         public LinssiTiedot Tiedot => aineisto.Tiedot;
         public bool Auki { get; private set; }
 
-        public KeksinnotLinssi(KeksinnotAineisto aineisto, IPysakkiajonNakyma nakyma, Func<bool> luentaSoi = null)
+        public KeksinnotLinssi(KeksinnotAineisto aineisto, IPysakkiajonNakyma nakyma, Func<bool> luentaSoi = null,
+            KeksintoLuennat luennat = null, ILuentaSoitin soitin = null)
         {
             this.aineisto = aineisto;
-            this.nakyma = nakyma;
-            this.luentaSoi = luentaSoi;
+            this.luennat = luennat;
+            this.soitin = soitin;
+            this.nakyma = soitin == null ? nakyma : new LuennanValittaja(this, nakyma);
+            this.luentaSoi = luentaSoi ?? (soitin == null ? null : () => soitin.Soi);
+        }
+
+        /// <summary>Viimeksi soitettu luenta (testit ja linssi-loki); null = hiljaa.</summary>
+        public string Luenta { get; private set; }
+
+        void Soita(string url)
+        {
+            if (soitin == null) return;
+            Luenta = url;
+            if (url == null) soitin.Lopeta();
+            else soitin.Soita(url, KeksintoLuennat.ViiveMs);
+        }
+
+        void Hiljaa()
+        {
+            if (Luenta == null) return;
+            Luenta = null;
+            soitin?.Lopeta();
+        }
+
+        /// <summary>Kuuntelee pysäkkiajon näkymäkutsuja ja soittaa luennat; välittää kaiken eteenpäin.</summary>
+        sealed class LuennanValittaja : IPysakkiajonNakyma
+        {
+            readonly KeksinnotLinssi l;
+            readonly IPysakkiajonNakyma n;
+            public LuennanValittaja(KeksinnotLinssi l, IPysakkiajonNakyma n) { this.l = l; this.n = n; }
+            public void Kello(double vuosi) => n?.Kello(vuosi);
+            public void Sytyta(int i)
+            {
+                n?.Sytyta(i);
+                var p = l.aineisto.Pysakit[i];
+                // Hiljainen pysäkki ei puhu. Välinäytöksen pysäkki soittaa ensin oman
+                // luentansa; jos välinäytös aukeaa (ensimmäinen kerta), Valinaytos
+                // vaihtaa sen samassa askeleessa ennen kuin viive ehtii kulua.
+                if (!p.Hiljainen) l.Soita(l.luennat?.Pysakille(p));
+            }
+            public void Selaus(int i) { l.Hiljaa(); n?.Selaus(i); }
+            public void Valinaytos(int i)
+            {
+                l.Soita(l.luennat?.Valinaytos);
+                n?.Valinaytos(i);
+            }
+            public void Tauolla(bool tauolla) => n?.Tauolla(tauolla);
+            public void Loppu() => n?.Loppu();
         }
 
         public void Avaa(ILinssiYmparisto ymparisto)
@@ -39,10 +94,25 @@ namespace Matkakirja.Linssit.Aikajana
             Ajo = new Pysakkiajo(aineisto.Pysakit, aineisto.Alku, aineisto.Alue, y, nakyma, luentaSoi);
             // Pimeässä ajettu avauskamera (web AVAUS_KAMERA_MS 700).
             Ajo.SovitaAlkuun(700);
+            // Kertoja lukee esittelyn laatikon auetessa (web avaa → ESITTELYN_RUNKO).
+            if (luennat?.Esittely != null) Soita(luennat.Esittely);
         }
 
-        /// <summary>Esittelylaatikon Käynnistä-nappi.</summary>
-        public void Kaynnista() => Ajo?.Jatka();
+        /// <summary>Esittelylaatikon Käynnistä-nappi: esittelyn luenta katkeaa, kello lähtee.</summary>
+        public void Kaynnista()
+        {
+            if (Ajo == null) return;
+            Hiljaa();
+            Ajo.Jatka();
+        }
+
+        /// <summary>Välinäytöksen Jatka-nappi: välinäytöksen puhe katkeaa (web suljeValinaytos).</summary>
+        public void JatkaValinaytoksesta()
+        {
+            if (Ajo == null) return;
+            if (Ajo.ValinaytosAuki) Hiljaa();
+            Ajo.Jatka();
+        }
 
         public void Paivita()
         {
@@ -57,6 +127,7 @@ namespace Matkakirja.Linssit.Aikajana
             if (!Auki) return;
             Auki = false;
             Ajo.Tauko();
+            Hiljaa();
             y.Pelikerrokset(true);
             y.MusiikkiPitoon(false);
             y.AjaKamera(talteen, y.VahennettyLiike ? 0f : 0.9f);
