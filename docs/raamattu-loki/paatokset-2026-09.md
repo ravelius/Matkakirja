@@ -2491,3 +2491,7 @@ Radiot-kokoelma luokkineen Siirtosepältä; soittimeen 'Avaa aseman sivu' -tila.
 ## KARTTASEPPA: DEM VALMIS — GLO-30 E28 42,5 Gt, GLO-90 MAAILMA 71,1 Gt; VIERAAT RUUDUT glo30-KANSIOSSA → MUUT LATAUKSET OMAAN KANSIOON dem/kaupunkikorkeudet/; SYVA RANSKA ODOTTAA #2957; k08-SARJA VALMIS (#2980) (23.9.2026 klo 20.41)
 
 Siirtoseppä siirtää omansa.
+
+## NATIIVI-UI NOLLATAAN klo 20.4x (89 %): LUOVUTUS viesti-natiivi-ui-luovutus-20260923-ilta.md (6aeb78670), MERGE-PYYNNOSSA natiivi-ui/paljastus 3f1cd06 (LEHTI, B4, TARKASTUS), WIP natiivi-ui/galleriat 7aab9a7; ALOITUS viesti-natiivi-ui-aloitus.md (23.9.2026 klo 20.43)
+
+Kolmas Natiivi-UI-sessio tänään.
