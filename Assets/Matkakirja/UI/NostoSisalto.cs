@@ -11,6 +11,9 @@
 //   "syvennys:<kaupunki>-<täky>" kokoelma fokusvirrat → virta.takyt + moduuli syvennyspaikat
 //                      (web js/syvennys.js; myös "syvennys:<kaupunki>:<täky>" ja "syvennys-<kaupunki>-<täky>")
 // Täkynoston "Katso X kartalla" lukee kohteen nimen ja paikan karttavaloista (kohde:<id>).
+// Lisäkaupunki (web js/kaupunkinosto.js latoLisakaupunginKortti, PAATOKSET 16): aiheen "kaupungit"
+// kohdevalo, jonka kohde on moduulissa nakyvat-kaupungit-<iso> lipulla kaupunkikortti →
+// HaeLisakaupunki (herokuva, esittely ja yksi kaupunkiin ankkuroitu nosto).
 // Kuvan osoite: suora https-osoite sellaisenaan; paketin omat tiedostot (hetkikuvat,
 // assets/elaimet/…) media.json:n viitteistä; muut Commons-nimet Kuvat.Hae-reitillä.
 // Kokoelmat ja moduulit haetaan kerran ja pidetään muistissa (media.json jäsennetään
@@ -88,13 +91,22 @@ namespace Matkakirja.Natiivi
         public string LeikekirjaOtsikko, LeikekirjaValo;
     }
 
+    /// <summary>Lisäkaupungin kortti (web kohde.kaupunkikortti): kuva, esittely, yksi nosto.</summary>
+    public sealed class Lisakaupunki
+    {
+        public string Id, Iso, Nimi, Esittely, NostoOtsikko, NostoTeksti;
+        /// <summary>Herokuva (null = paikkamerkki, web kaupunkipopup-heropaikka).</summary>
+        public NostoKuva Hero;
+    }
+
     public static class NostoSisalto
     {
         static readonly Dictionary<string, Dictionary<string, Dictionary<string, object>>> kokoelmat =
             new Dictionary<string, Dictionary<string, Dictionary<string, object>>>();
         static readonly Dictionary<string, object> moduulit = new Dictionary<string, object>();
-        /// <summary>Karttavalot id:n mukaan: maa, nimi ja paikka (kohdekortin maa, täkynoston "Katso X kartalla").</summary>
-        static Dictionary<string, (string Maa, string Nimi, double Lat, double Lon)> valot;
+        /// <summary>Karttavalot id:n mukaan: maa, aihe, nimi ja paikka (kohdekortin maa, lisäkaupungin aihe,
+        /// täkynoston "Katso X kartalla").</summary>
+        static Dictionary<string, (string Maa, string Aihe, string Nimi, double Lat, double Lon)> valot;
         static Dictionary<string, string> media;
         static bool mediaHaussa;
         static readonly List<Action> mediaOdottajat = new List<Action>();
@@ -290,15 +302,76 @@ namespace Matkakirja.Natiivi
             if (valot != null) yield break;
             string teksti = null;
             yield return Sisalto.HaeTeksti("karttavalot", t => teksti = t, valinnainen: true);
-            var m = new Dictionary<string, (string, string, double, double)>();
+            var m = new Dictionary<string, (string, string, string, double, double)>();
             try
             {
                 foreach (var a in MiniJson.Kentta(Ob(MiniJson.Jasenna(teksti ?? "{}")), "alkiot") as List<object> ?? new List<object>())
                     if (Ob(a) is Dictionary<string, object> o && T(o, "id") is string id)
-                        m[id] = (T(o, "maa"), T(o, "nimi"), MiniJson.Luku(o, "lat") ?? double.NaN, MiniJson.Luku(o, "lon") ?? double.NaN);
+                        m[id] = (T(o, "maa"), T(o, "aihe"), T(o, "nimi"), MiniJson.Luku(o, "lat") ?? double.NaN, MiniJson.Luku(o, "lon") ?? double.NaN);
             }
             catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui nostot: karttavalot: " + e.Message); }
             valot = m;
+        }
+
+        /// <summary>
+        /// Lisäkaupungin kortti valon id:llä ("kohde:<id>[@ISO]"), tai null. Vain aiheen "kaupungit" valot
+        /// (tai @ISO-testitunnus) katsotaan, jottei jokainen kohde hae maan lisäkaupunkimoduulia turhaan.
+        /// </summary>
+        public static IEnumerator HaeLisakaupunki(string valoId, Action<Lisakaupunki> valmis)
+        {
+            Lisakaupunki tulos = null;
+            if (valoId != null && valoId.StartsWith("kohde:", StringComparison.Ordinal))
+            {
+                string tunnus = valoId.Substring(6), iso = null;
+                int at = tunnus.IndexOf('@');
+                if (at > 0) { iso = tunnus.Substring(at + 1); tunnus = tunnus.Substring(0, at); }
+                bool kaupunki = iso != null;
+                if (iso == null)
+                {
+                    yield return ValojenMaat();
+                    if (valot.TryGetValue(valoId, out var valo)) { iso = valo.Maa; kaupunki = valo.Aihe == "kaupungit"; }
+                }
+                int tilde = tunnus.IndexOf('~');
+                if (tilde > 0) tunnus = tunnus.Substring(0, tilde);
+                if (kaupunki && !string.IsNullOrEmpty(iso))
+                {
+                    List<object> lista = null;
+                    yield return Moduuli($"moduulit/js/packs/nakyvat-kaupungit-{iso.ToLowerInvariant()}.json", $"NAKYVAT_KAUPUNGIT_{iso.ToUpperInvariant()}", l => lista = l);
+                    var d = lista?.Select(Ob).FirstOrDefault(x => x != null && T(x, "id") == tunnus && MiniJson.Totuus(x, "kaupunkikortti"));
+                    if (d != null) tulos = LuoLisakaupunki(tunnus, iso.ToUpperInvariant(), d);
+                }
+            }
+            valmis(tulos);
+        }
+
+        static Lisakaupunki LuoLisakaupunki(string id, string iso, Dictionary<string, object> d)
+        {
+            var l = new Lisakaupunki { Id = id, Iso = iso, Nimi = T(d, "nimi"), Esittely = T(d, "esittely")?.Trim() };
+            // Herokuva: pelkkä osoite (vanha muoto) tai kuvaolio (osoite, lyhyt, selite, lahde).
+            var hero = MiniJson.Kentta(d, "herokuva");
+            if (hero is string hs && hs.Length > 0) l.Hero = new NostoKuva { Lahde = hs };
+            else if (Ob(hero) is Dictionary<string, object> h && (T(h, "osoite") ?? T(h, "url")) is string osoite)
+                l.Hero = new NostoKuva
+                {
+                    Lahde = osoite, Lyhyt = T(h, "lyhyt") ?? T(h, "selite"), Selite = T(h, "selite") ?? T(h, "lyhyt"),
+                    Tekija = T(h, "tekija"), LahdeRivi = T(h, "lahde"),
+                };
+            // Yksi kaupunkiin ankkuroitu nosto: otsikko ja teksti (maalehtinostolla lunastus-kappaleet).
+            var nosto = Ob(MiniJson.Kentta(d, "korttiNosto"));
+            if (nosto != null)
+            {
+                string teksti = T(nosto, "teksti");
+                if (teksti == null && MiniJson.Kentta(nosto, "lunastus") is object lunastus)
+                    teksti = lunastus is List<object> kk
+                        ? string.Join("\n\n", kk.Select(x => (x?.ToString() ?? "").Trim()).Where(x => x.Length > 0))
+                        : lunastus as string;
+                if (!string.IsNullOrEmpty(T(nosto, "otsikko")) && !string.IsNullOrEmpty(teksti))
+                {
+                    l.NostoOtsikko = T(nosto, "otsikko");
+                    l.NostoTeksti = teksti;
+                }
+            }
+            return l;
         }
 
         /// <summary>

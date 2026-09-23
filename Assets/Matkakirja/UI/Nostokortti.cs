@@ -30,6 +30,9 @@
 // Kaiutin (web js/lukija.js lisaaLukijanappi, KortinLukija) vaiheessa 2 sulkuruksin vieressä.
 // Ero webiin: kortti on keskellä (ei napautuspisteen vieressä). Testikomennot painavat kortin
 // nappeja nimellä (Testaa: lisaa, ihme, leikekirja, kartalla, liite, valokuva, vastaa<n>, juliste).
+// LISÄKAUPUNKI (web kaupunkinosto.js avaaLisakaupunginKortti, kohde.kaupunkikortti ohittaa kohdekortin):
+// ✕, otsikkona kaupungin nimi, herokuva (kuvateksti ja lähderivi; ilman kuvaa paikkamerkki nimellä),
+// esittely kappaleittain ja yksi kaupunkiin ankkuroitu nosto (otsikko + teksti). Ei visaa eikä kaiutinta.
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -78,16 +81,34 @@ namespace Matkakirja.Natiivi
         /// <summary>Avaa kortin karttavalon id:llä (UiPalvelut.ValoNapautettu, testikomento).</summary>
         public void Avaa(string valoId) => Avaa(valoId, null);
 
-        void Avaa(string valoId, Action<Nosto> jalkeen)
+        void Avaa(string valoId, Action<bool> jalkeen)
         {
             int v = ++versio;
-            UiKerros.Hae().StartCoroutine(NostoSisalto.Hae(valoId, n =>
+            UiKerros.Hae().StartCoroutine(AvaaReitti(valoId, v, jalkeen));
+        }
+
+        /// <summary>
+        /// Web: lisäkaupungin kaupunkikortti ennen kohteen tietoruutua (fokuskohteet.js avaaFokuskohde),
+        /// muuten nostokortti. jalkeen(true) = jokin kortti aukesi (testikomennot painavat sen nappeja).
+        /// </summary>
+        System.Collections.IEnumerator AvaaReitti(string valoId, int v, Action<bool> jalkeen)
+        {
+            Lisakaupunki lk = null;
+            yield return NostoSisalto.HaeLisakaupunki(valoId, x => lk = x);
+            if (v != versio) yield break;
+            if (lk != null)
             {
-                if (v != versio) return;
-                if (n == null) Debug.Log("MATKAKIRJA ui nostot: ei sisältöä valolle " + valoId);
-                else Nayta(n);
-                jalkeen?.Invoke(n);
-            }));
+                napit.Clear();
+                NaytaLisakaupunki(lk);
+                jalkeen?.Invoke(true);
+                yield break;
+            }
+            Nosto n = null;
+            yield return NostoSisalto.Hae(valoId, x => n = x);
+            if (v != versio) yield break;
+            if (n == null) Debug.Log("MATKAKIRJA ui nostot: ei sisältöä valolle " + valoId);
+            else Nayta(n);
+            jalkeen?.Invoke(n != null);
         }
 
         /// <summary>
@@ -109,9 +130,9 @@ namespace Matkakirja.Natiivi
                 Paina();
                 return;
             }
-            Avaa(valoId, n =>
+            Avaa(valoId, loytyi =>
             {
-                if (n == null) { tulos?.Invoke("ei sisältöä valolle " + valoId); return; }
+                if (!loytyi) { tulos?.Invoke("ei sisältöä valolle " + valoId); return; }
                 Paina();
             });
         }
@@ -134,12 +155,59 @@ namespace Matkakirja.Natiivi
             kortti.EnableInClassList("mk-nosto--looppi", n.Looppi);
             kortti.EnableInClassList("mk-nosto--kohde", n.Laji == NostoLaji.Kohde);
             if (n.Kuvat.Count > 0) Vaihe1(); else Vaihe2();
-            if (!Auki)
+            AvaaKerros();
+        }
+
+        void AvaaKerros()
+        {
+            if (Auki) return;
+            Auki = true;
+            Rakenne.Nayta(kerros, true, 220);
+            SyoteLukko.Esta(this);
+        }
+
+        // --- lisäkaupunki (web latoLisakaupunginKortti) -------------------------------------
+
+        void NaytaLisakaupunki(Lisakaupunki lk)
+        {
+            nosto = new Nosto { Laji = NostoLaji.Kohde, Id = lk.Id, Iso = lk.Iso, Otsikko = lk.Nimi };
+            if (lk.Hero != null) nosto.Kuvat.Add(lk.Hero);
+            kuvaIndeksi = 0;
+            kortti.RemoveFromClassList("mk-nosto--looppi");
+            kortti.RemoveFromClassList("mk-nosto--kohde");
+            kortti.RemoveFromClassList("mk-nosto--esittely");
+            sisus.Clear();
+            sisus.scrollOffset = Vector2.zero;
+            sulje.style.display = DisplayStyle.Flex;
+            lukija.Aseta(null);
+
+            Kirjasimet.Aseta(Rakenne.Teksti(lk.Nimi ?? "", "mk-nosto__otsikko", sisus), Kirjasin.LukuLihava);
+            // 1. Kuva tai sen paikkamerkki (seepiaruutu ja nimi, ei hakua ulkoa).
+            var lohko = Rakenne.El("mk-nosto__kuvasarja", sisus, PickingMode.Ignore);
+            if (lk.Hero != null)
             {
-                Auki = true;
-                Rakenne.Nayta(kerros, true, 220);
-                SyoteLukko.Esta(this);
+                Kuvakehys(lohko, lk.Hero, () => Suurenna(0));
+                if (!string.IsNullOrEmpty(lk.Hero.Lyhyt))
+                    Kirjasimet.Aseta(Rakenne.Teksti(lk.Hero.Lyhyt, "mk-nosto__kuvateksti", lohko), Kirjasin.LukuKursiivi);
+                if (!string.IsNullOrEmpty(lk.Hero.LahdeRivi)) Rakenne.Teksti(lk.Hero.LahdeRivi, "mk-kansikuva__lahde", lohko);
             }
+            else
+            {
+                var paikka = Rakenne.El("mk-nosto__kuvakehys", lohko, PickingMode.Ignore);
+                paikka.style.justifyContent = Justify.Center;
+                paikka.style.alignItems = Align.Center;
+                paikka.RegisterCallback<GeometryChangedEvent>(e => { if (e.newRect.width > 0) paikka.style.height = Mathf.Round(e.newRect.width * 2f / 3f); });
+                Kirjasimet.Aseta(Rakenne.Teksti(lk.Nimi ?? "", "mk-nosto__kuvateksti", paikka), Kirjasin.LukuKursiivi);
+            }
+            // 2. Esittely vain, jos se on kirjoitettu.
+            foreach (var k in Kappaleet(lk.Esittely)) Rakenne.Teksti(k, "mk-nosto__teksti", sisus);
+            // 3. Yksi kaupunkiin ankkuroitu nosto nostokortin otsikolla ja tekstillä.
+            if (lk.NostoOtsikko != null)
+            {
+                Kirjasimet.Aseta(Rakenne.Teksti(lk.NostoOtsikko, "mk-nosto__otsikko", sisus), Kirjasin.KoneLihava);
+                foreach (var k in Kappaleet(lk.NostoTeksti)) Rakenne.Teksti(k, "mk-nosto__teksti", sisus);
+            }
+            AvaaKerros();
         }
 
         // --- vaihe 1: kuva edellä ------------------------------------------------------------

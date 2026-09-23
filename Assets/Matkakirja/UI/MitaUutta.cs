@@ -11,6 +11,8 @@
 // kokoelma muutosloki-natiivi (rivit: versio/build, päivä, 1–3 lausetta suomeksi), jonka
 // Julkaisija täyttää joka TestFlight-buildissa. Kunnes kokoelma on paketissa, lista on
 // nykyisen buildin rivi "Ensimmäinen natiiviversio."
+// Sisältöpaketin päivitys (Siirtoseppä, skeema 1.22) on osoittimessa (sisalto/1/uusin.json:
+// muutos {paiva, teksti}, esim. "Sisältö päivittyi: 3 uutta kaupunkilehteä") ja näytetään listan kärjessä.
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -22,7 +24,7 @@ namespace Matkakirja.Natiivi
 {
     public sealed class MitaUutta
     {
-        public struct Rivi { public string Versio, Paiva, Teksti; }
+        public struct Rivi { public string Versio, Paiva, Teksti, Otsake; }
 
         const string VersioAvain = "matkakirja-natiivi-versio";
         static List<Rivi> loki;
@@ -82,7 +84,7 @@ namespace Matkakirja.Natiivi
             {
                 if (i++ >= enintaan) break;
                 var rivi = Rakenne.El("mk-muutos", lista, PickingMode.Ignore);
-                var v = Rakenne.Teksti("v" + r.Versio, "mk-muutos__versio", rivi);
+                var v = Rakenne.Teksti(r.Otsake ?? "v" + r.Versio, "mk-muutos__versio", rivi);
                 Kirjasimet.Aseta(v, Kirjasin.KoneLihava);
                 var t = Rakenne.Teksti(string.IsNullOrEmpty(r.Paiva) ? r.Teksti : r.Teksti + " (" + r.Paiva + ")", "mk-muutos__teksti", rivi);
                 Kirjasimet.Aseta(t, Kirjasin.Luku);
@@ -159,6 +161,32 @@ namespace Matkakirja.Natiivi
             }
             catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui muutosloki: " + e.Message); }
             if (rivit.Count == 0) rivit.Add(new Rivi { Versio = Application.version, Teksti = "Ensimmäinen natiiviversio." });
+
+            // Sisältöpäivityksen rivi osoittimesta listan kärkeen (versionumero syntyy vasta paketin tiivisteestä).
+            using (var r = UnityEngine.Networking.UnityWebRequest.Get(Sisalto.Osoitin))
+            {
+                r.timeout = 8;
+                yield return r.SendWebRequest();
+                if (r.result == UnityEngine.Networking.UnityWebRequest.Result.Success)
+                {
+                    try
+                    {
+                        var o = MiniJson.Objekti(MiniJson.Jasenna(r.downloadHandler.text));
+                        var m = MiniJson.Kentta(o, "muutos") as Dictionary<string, object>;
+                        string t = MiniJson.Teksti(m, "teksti");
+                        if (!string.IsNullOrEmpty(t))
+                        {
+                            var nro = MiniJson.Luku(o, "versio");
+                            rivit.Insert(0, new Rivi
+                            {
+                                Otsake = nro.HasValue ? "sisältö " + (int)nro.Value : "sisältö",
+                                Paiva = MiniJson.Teksti(m, "paiva"), Teksti = t,
+                            });
+                        }
+                    }
+                    catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui muutosloki: osoitin: " + e.Message); }
+                }
+            }
             loki = rivit;
             valmis();
         }

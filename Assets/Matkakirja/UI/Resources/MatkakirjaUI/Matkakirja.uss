@@ -861,6 +861,83 @@
     flex-direction: column;
 }
 
+/* Nostokategoriat haitarina (web kaupunkiliuska: hiusviiva, väripallo, sisennetyt kohteet). */
+.mk-liuska__hiusviiva {
+    height: 1px;
+    width: 46%;
+    margin: 4px 0 6px 12px;
+    background-color: rgba(70, 51, 31, 0.35);
+}
+
+.mk-liuska__rivi {
+    justify-content: flex-start;
+    min-height: 40px;
+    margin: 0 0 2px 0;
+    padding: 6px 12px 6px 12px;
+    border-width: 0;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--map-ink);
+}
+
+.mk-liuska__rivi:active {
+    background-color: rgba(70, 51, 31, 0.12);
+}
+
+.mk-liuska__rivi--auki {
+    background-color: rgba(70, 51, 31, 0.08);
+}
+
+.mk-liuska__kohde {
+    min-height: 36px;
+    padding-left: 34px;
+}
+
+.mk-liuska__pallo {
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.mk-liuska__nimi {
+    font-size: 15.5px;
+    white-space: normal;
+    flex-shrink: 1;
+    -unity-text-align: middle-left;
+}
+
+.mk-liuska__kohde > .mk-liuska__nimi {
+    font-size: 14.5px;
+    color: var(--map-ink-soft);
+}
+
+/* Kelausrivit (web "▲ edelliset" / "▼ lisää"): kortin reunoilla, vierityksen ulkopuolella. */
+.mk-liuska__kelaus {
+    flex-shrink: 0;
+    min-height: 32px;
+    padding: 4px 12px;
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--map-ink-soft);
+}
+
+.mk-liuska__kelaus:active {
+    background-color: rgba(70, 51, 31, 0.12);
+}
+
+.mk-liuska__kelaus > .mk-ikoni {
+    width: 15px;
+    height: 15px;
+    margin-right: 6px;
+}
+
+.mk-liuska__kelaus > .mk-nappi__teksti {
+    font-size: 12.5px;
+    letter-spacing: 1px;
+}
+
 /* --- tekijätiedot ja lähteet --------------------------------------------- */
 
 .mk-tietoja {
@@ -2226,6 +2303,8 @@
 
 .mk-muutos__versio {
     min-width: 58px;
+    max-width: 96px;
+    white-space: normal;
     margin-right: 8px;
     font-size: 14px;
     color: #46331f;

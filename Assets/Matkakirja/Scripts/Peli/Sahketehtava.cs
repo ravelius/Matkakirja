@@ -297,6 +297,10 @@ namespace Matkakirja.Natiivi
     public sealed class SahkeKortti
     {
         public string Otsikko = "Sähke", Hahmo;
+        /// <summary>Tehtävän kaupunki ja hakemiston maa (ISO3; tehtävän hakemistoMaa tai kaupungin maa).</summary>
+        public string Kaupunki, HakemistoMaa;
+        /// <summary>Nappien ja vapaan kentän tekstit datasta oletuksineen (web piirraSahketehtava).</summary>
+        public string Laheta, VapaaOtsake, VapaaVihje, LahetaVapaa;
         /// <summary>Sähkeen teksti riveinä kirjoitettavaksi (Aikataulu); lähetetyllä kuittaus.</summary>
         public string Sahke;
         public SahkeAikataulu Aikataulu;
@@ -358,21 +362,21 @@ namespace Matkakirja.Natiivi
         /// Kortti vihreän pisteen napautuksesta (web piirraSahketehtava). <paramref name="hakemistonLahteet"/>
         /// = maan otsikot (SahkeTulkinta.Hakemisto järjestää); null = tyhjä lista (vain vapaa vastaus käy).
         /// </summary>
-        public SahkeKortti Kortti(Sahketehtava t, IEnumerable<string> hakemistonLahteet = null)
+        public SahkeKortti Kortti(Sahketehtava t, IEnumerable<string> hakemistonLahteet = null, string maa = null)
         {
             var k = t.Kaupunki;
             if (Vastattu(k))
             {
                 var aikataulu = SahkeTulkinta.KirjoitusAikataulu(t.Lahetetty, SahkeTulkinta.PaluuMerkkiMs, SahkeTulkinta.PaluuKattoMs, SahkeTulkinta.PaluuRivivaliMs);
-                return new SahkeKortti
+                return Tayta(new SahkeKortti
                 {
                     Hahmo = t.Hahmo, Sahke = t.Lahetetty, Aikataulu = aikataulu, Animoi = Kerran(kirjoitettu, k + ":lahetetty"),
                     Kuplat = Kerran(sanottu, k + ":odotus") ? t.Odotus : new List<string>(),
                     Lomake = false,
-                };
+                }, t, maa);
             }
             int n = Ohi(k), palkkio = Palkkio(t, k);
-            return new SahkeKortti
+            return Tayta(new SahkeKortti
             {
                 Hahmo = t.Hahmo, Sahke = t.Sahke, Aikataulu = SahkeTulkinta.KirjoitusAikataulu(t.Sahke), Animoi = Kerran(kirjoitettu, k),
                 Kuplat = Kerran(sanottu, k) ? t.Johdanto : new List<string>(),
@@ -382,20 +386,29 @@ namespace Matkakirja.Natiivi
                 Vinkki = n >= SahkeTulkinta.VinkkiOhi && t.Vinkki.Count > 0 ? t.Vinkki : null,
                 Palkkio = palkkio,
                 Maksurivi = $"Sähkeen palkkio nyt {palkkio} puntaa. Jokainen ohilyönti pienentää sitä — mutta aarre ei lukitu koskaan.",
-            };
+            }, t, maa);
+        }
+
+        /// <summary>Kortin tunnistetiedot ja tekstit tehtävästä (kaikki kortit).</summary>
+        static SahkeKortti Tayta(SahkeKortti k, Sahketehtava t, string hakemistoMaa)
+        {
+            k.Kaupunki = t.Kaupunki;
+            k.HakemistoMaa = t.HakemistoMaa ?? hakemistoMaa;
+            k.Laheta = t.Laheta; k.VapaaOtsake = t.VapaaOtsake; k.VapaaVihje = t.VapaaVihje; k.LahetaVapaa = t.LahetaVapaa;
+            return k;
         }
 
         /// <summary>Kuittauskortti oikean vastauksen jälkeen (web sahkeOsui): kirjoitetaan kerran istunnossa.</summary>
-        public SahkeKortti KuittausKortti(Sahketehtava t)
+        public SahkeKortti KuittausKortti(Sahketehtava t, string maa = null)
         {
             var sahke = t.Vastaussahke;
-            return new SahkeKortti
+            return Tayta(new SahkeKortti
             {
                 Hahmo = t.Hahmo, Sahke = sahke, Kuittaus = true, Lomake = false,
                 Aikataulu = SahkeTulkinta.KirjoitusAikataulu(sahke, SahkeTulkinta.PaluuMerkkiMs, SahkeTulkinta.PaluuKattoMs, SahkeTulkinta.PaluuRivivaliMs),
                 Animoi = Kerran(kirjoitettu, t.Kaupunki + ":vastaus"),
                 Teksti = Kuittaus(t), Nappi = t.Lento,
-            };
+            }, t, maa);
         }
 
         /// <summary>Pullojen tila kortille pelin kirjanpidosta (Kaupat.PullaOstettu; säilyy tallennuksen yli).</summary>
