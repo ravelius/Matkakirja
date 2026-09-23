@@ -114,6 +114,15 @@ namespace Matkakirja.Linssit.Aikajana
         public bool AvausOhi { get; private set; }
         public bool MustaPaalla { get; private set; } = true;
         double alkuHetki, puluHetki;
+        double viimeHaku = double.NegativeInfinity;
+
+        /// <summary>
+        /// Äänen kohta kelpaa kelloksi vain jakson leimojen sisällä (± tämä). iPadilla
+        /// (2e26b45, ee68957) kelaus jakson alkuun ei aina tarttunut, jolloin kohta jäi
+        /// jakson alun alle, Kulunut pysyi nollassa ja esitys jumittui. Silloin kello
+        /// kulkee seinäkellolla, ja kelausta pyydetään uudelleen enintään kerran sekunnissa.
+        /// </summary>
+        public const double AanenToleranssiMs = 1000, KelauksenValiMs = 1000;
         bool puluSanottu, avausOdottaa = true, valotOdottaa, kohdeajo;
         double? kelauksenAlku, kohdeajonTauko;
         double avaruusAlku = double.NaN, avaruusKesto, avaruusTauko = double.NaN;
@@ -195,8 +204,21 @@ namespace Matkakirja.Linssit.Aikajana
             var jakso = Nykyinen;
             var l = Leimat(jakso);
             double? kohta = aani?.KohtaMs;
-            if (kohta is double k && l != null) { Kulunut = Math.Max(0, k - l.Alku); alkuHetki = nyt - Kulunut; }
-            else Kulunut = nyt - alkuHetki;
+            if (kohta is double k && l != null && k >= l.Alku - AanenToleranssiMs && k <= l.Paattyy + AanenToleranssiMs)
+            {
+                Kulunut = Math.Max(0, k - l.Alku);
+                alkuHetki = nyt - Kulunut;
+            }
+            else
+            {
+                Kulunut = nyt - alkuHetki;
+                // Ääni soi väärässä kohdassa (kelaus ei tarttunut): pyydä uudelleen.
+                if (kohta != null && l != null && nyt - viimeHaku >= KelauksenValiMs)
+                {
+                    viimeHaku = nyt;
+                    aani.Soita(l.Alku + Kulunut);
+                }
+            }
 
             if (I == 0 && !AvausOhi)
             {
@@ -265,8 +287,12 @@ namespace Matkakirja.Linssit.Aikajana
             {
                 nakyma.SytytaKohde(jakso.Kohde);
                 nakyma.Kuva(jakso.Kohde);
-                if (kohdeajo) kohdeajo = false;
-                else AjaKohteeseen(jakso.Kohde, kesto, alku, loppu);
+                // Avauksen Marokko-ajo on jo matkalla ensimmäiseen kohteeseen (web sama).
+                // Hyppy toiseen jaksoon kesken ajon (natiivin aikaselain, iPad 23.9.)
+                // ajaa kuitenkin oman kohteensa, muuten kamera jatkaisi Marokkoon.
+                bool ajoPerilla = kohdeajo && !hyppy && jakso == ensimmainenKohde;
+                kohdeajo = false;
+                if (!ajoPerilla) AjaKohteeseen(jakso.Kohde, kesto, alku, loppu);
             }
             else
             {

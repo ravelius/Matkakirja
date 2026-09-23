@@ -186,6 +186,8 @@ namespace Matkakirja.Natiivi
             public bool Auki => linssi?.Auki ?? false;
             /// <summary>Käynnissä oleva linssi (Natiivi-UI: Esitys.Tauko/Jatka/Valitse).</summary>
             public Matkakirja.Linssit.Aikajana.IhmisenMatkaLinssi Linssi => linssi;
+            /// <summary>Kertojan ääni (linssi-loki), null ennen avausta.</summary>
+            public EsityksenAani Aani => aani;
 
             public void VanatValmiit(Matkakirja.Linssit.Virrat.VanatTulos tulos)
             {
@@ -599,7 +601,8 @@ namespace Matkakirja.Natiivi
             if (mita == "tauko") e.Tauko();
             else if (mita == "jatka") e.Jatka();
             else if (mita != "tila") e.Valitse(mita);
-            Kirjaa($"esitys: jakso {e.I}, kulunut {e.Kulunut / 1000:F1}/{e.Kesto / 1000:F1} s, vuosia {e.Vuosia:F0}, käynnissä {e.Kaynnissa}");
+            var aani = (rekisteri.Auki as IhmisenMatkaSovitin)?.Aani;
+            Kirjaa($"esitys: jakso {e.I}, kulunut {e.Kulunut / 1000:F1}/{e.Kesto / 1000:F1} s, vuosia {e.Vuosia:F0}, käynnissä {e.Kaynnissa}, ääni {aani?.Tila ?? "ei"}");
         }
 
         void Kirjaa(string teksti)
