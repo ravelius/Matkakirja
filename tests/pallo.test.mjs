@@ -28,7 +28,7 @@ import {
 import {
   PANOROINNIN_HERKKYYS, PANOROINNIN_KOHTISUORA_RAJA, PANOROINNIN_LEVEYSRAJA, RULLAN_LIUKU_MS,
   RULLAN_RIVI_PX, RULLAN_SIVU_PX, RULLAN_SUORA_RAJA, VAUHDIN_KATTO_MS, VEDON_KATTO_RUUTUA,
-  nakyvaKaista, rajaaVauhti, rullanAskel, vedonSiirto,
+  nakyvaKaista, rajaaVauhti, rullanAskel, vedonSiirto, liukuLoppuAskel, LIUKU_LOPPU_PX_MS,
   ZOOMIN_ASKELKATTO, ZOOMIN_HERKKYYS, ZOOMIN_LIUKU_MS, kohdistaAnkkuri, zoominAskel,
   ENNUSTE_KEHYS_MAX_MS, ennustaKamera, pallonEnnusteKaytossa,
 } from '../js/pallo.js';
@@ -1279,4 +1279,32 @@ test('kytkentä: viisi syötetapaa ovat samassa rakennuksessa lippuina', () => {
    */
   assert.match(lahde, /const mittausLippu = mittauslippuPaalla\(\);/);
   assert.match(lahde, /if \(mittausLippu\) return; \/\/ mittausajossa lippu pitää valtansa/);
+});
+
+/*
+ * LIU'UN LOPPU PEHMEÄSTI (omistaja 23.9.2026: "pehmeämmin hidastaa sen
+ * ihan lopun vierityksen"). Loppuvaihe v0·(1 − s/T)²: sauma kitkaan on
+ * sileä, ja lopussa nopeus ja hidastuvuus ovat nolla.
+ */
+test('liu\'un loppuvaihe: sileä sauma, asettuu nollaan, tarkka matka', () => {
+  const KITKA = 0.0028;
+  const T = 2 / KITKA;
+  // Hidastuvuus vaiheen alussa = kitka · v0 (sama kuin eksponentiaalisen kitkan).
+  const h = 0.01;
+  const alku = liukuLoppuAskel(0, h, T);
+  assert.ok(Math.abs((1 - alku.nopeus) / h - KITKA) < 1e-4, `hidastuvuus ${(1 - alku.nopeus) / h}`);
+  // Koko vaiheen matka = v0·T/3 askeleista riippumatta (60 Hz ja 120 Hz samat).
+  const matka = (dt) => { let s = 0; let m = 0; for (;;) { const a = liukuLoppuAskel(s, s + dt, T); m += a.matka; s += dt; if (a.valmis) return m; } };
+  assert.ok(Math.abs(matka(16.7) - T / 3) < 1e-9);
+  assert.ok(Math.abs(matka(8.3) - T / 3) < 1e-9);
+  // Loppu: nopeus nolla, ja viimeisen kehyksen askel on pieni (ei seinää).
+  const loppu = liukuLoppuAskel(T - 16.7, T, T);
+  assert.equal(loppu.valmis, true);
+  assert.equal(loppu.nopeus, 0);
+  assert.ok(loppu.matka < 0.001 * 16.7, `viimeinen askel ${loppu.matka}`);
+  // Kynnys pikseleinä, noin 2,5 px/kehys.
+  assert.ok(LIUKU_LOPPU_PX_MS > 0.1 && LIUKU_LOPPU_PX_MS < 0.2);
+  const pallo = lue('../js/pallo.js');
+  assert.match(pallo, /if \(ruutunopeus\(vauhti, kohta\.lat\) < LIUKU_LOPPU_PX_MS\)/, 'kynnys luetaan ruudun pikseleinä');
+  assert.doesNotMatch(pallo, /hypot\(vauhti\.lat, vauhti\.lng\) > VAUHTI_KYNNYS\) pysaytaLiuku|> VAUHTI_KYNNYS\) vauhti\.raf = requestAnimationFrame/, 'ei asteisiin perustuvaa katkaisua kesken liu\'un');
 });

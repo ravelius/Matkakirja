@@ -3060,6 +3060,43 @@ export const VEDON_KATTO_RUUTUA = 1;
 export const VAUHDIN_KATTO_MS = 250;
 
 /*
+ * ======== LIU'UN LOPPU PEHMEÄSTI (omistaja 23.9.2026 klo 12.4x) ========
+ *
+ * *"siinä lopussa on vähän turhan nopea liikkeen lopetus, jos sen
+ * pystyisi vielä pehmeämmin hidastamaan sen ihan lopun vierityksen."*
+ *
+ * VANHA: eksponentiaalinen kitka ja katkaisu, kun kulmanopeus alitti
+ * 0,0006 °/ms. Kynnys oli ASTEINA, joten ruudulla se oli sitä
+ * isompi, mitä lähempänä kamera oli: iPadin maakuvassa (korkeus ~0,2)
+ * kartta liikkui vielä ~1 px/kehys (60 px/s) ja pysähtyi seuraavassa
+ * kehyksessä kuin seinään.
+ *
+ * UUSI: kun ruutunopeus laskee alle LIUKU_LOPPU_PX_MS:n, liuku siirtyy
+ * loppuvaiheeseen, jossa nopeus on v0·(1 − s/T)² ja T = 2 / kitka.
+ * Silloin
+ *   - hidastuvuus vaiheen alussa (2·v0/T = kitka·v0) on sama kuin
+ *     eksponentiaalisen kitkan juuri ennen vaihtoa: saumaa ei tunne;
+ *   - lopussa sekä nopeus että hidastuvuus ovat nolla: kartta asettuu
+ *     eikä pysähdy.
+ * Kynnys on ruudun pikseleinä, joten tuntuma on sama jokaisella
+ * zoomitasolla. Loppuvaihe kestää T ≈ 710 ms ja kulkee v0·T/3 ≈ 36 px.
+ */
+/** Ruutunopeus (px/ms), jonka alla liuku siirtyy loppuvaiheeseen (~2,5 px/kehys). */
+export const LIUKU_LOPPU_PX_MS = 0.15;
+
+/**
+ * Loppuvaiheen askel hetkestä s0 hetkeen s1 (ms vaiheen alusta), kesto T.
+ * Palauttaa { matka, nopeus } suhteessa vaiheen alkunopeuteen v0:
+ * matka (ms-yksikköä, kerro v0:lla) on nopeuden tarkka integraali, ja
+ * nopeus on kerroin v0:lle hetkellä s1. `valmis`, kun s1 ≥ T.
+ */
+export function liukuLoppuAskel(s0, s1, T) {
+  const k = (s) => Math.max(0, 1 - Math.min(s, T) / T);
+  const a = k(s0); const b = k(s1);
+  return { matka: (T / 3) * (a ** 3 - b ** 3), nopeus: b * b, valmis: s1 >= T };
+}
+
+/*
  * ======== OSOITIN KEHYKSEN HETKELLÄ (sulavuus kohta 13) =============
  *
  * MITATTU VIKA (Laitetestaaja 22.9.2026, aidot hiirivedot, 16 kierrosta
@@ -3681,6 +3718,14 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
     if (vauhti.raf) cancelAnimationFrame(vauhti.raf);
     vauhti.raf = 0;
     vauhti.liukuu = false;
+    vauhti.loppu = null;
+  };
+  const LIUKU_LOPPU_T_MS = 2 / VAUHTI_KITKA;
+  /** Liu'un nopeus ruudun pikseleinä/ms (pystykaista = kotelon korkeus). */
+  const ruutunopeus = (v, lat) => {
+    const korkeus = kotelo.clientHeight || globalThis.innerHeight || 800;
+    const pxAste = korkeus / nakyvaKaista(pallo.pointOfView().altitude, kamera.fov);
+    return Math.hypot(v.lat, v.lng * Math.cos((lat * Math.PI) / 180)) * pxAste;
   };
   const liu = (nyt) => {
     if (!vauhti.liukuu) return;
@@ -3690,17 +3735,38 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
     if (!(dt > 0)) return; // sama kehys (update kahdesti) tai kello taaksepäin
     vauhti.liukuAika = tavoite;
     const pov = pallo.pointOfView();
+    // Siirtymä tällä askeleella: kitkavaiheessa v·dt, loppuvaiheessa tarkka integraali.
+    let dLat = vauhti.lat * dt;
+    let dLng = vauhti.lng * dt;
+    const loppu = vauhti.loppu;
+    let askel = null;
+    if (loppu) {
+      askel = liukuLoppuAskel(loppu.s, loppu.s + dt, LIUKU_LOPPU_T_MS);
+      loppu.s += dt;
+      dLat = loppu.lat * askel.matka;
+      dLng = loppu.lng * askel.matka;
+    }
     const kohta = rajaaKohta(
-      Math.max(-89.5, Math.min(89.5, pov.lat + vauhti.lat * dt)),
-      pov.lng + vauhti.lng * dt,
+      Math.max(-89.5, Math.min(89.5, pov.lat + dLat)),
+      pov.lng + dLng,
     );
     pallo.pointOfView({ lat: kohta.lat, lng: kohta.lng, altitude: pov.altitude }, 0);
     // Seinään osunut suunta pysähtyy tähän (ks. PEHMEÄ PYSÄYTYS).
-    if (kohta.latRajattu) vauhti.lat = 0;
-    if (kohta.lngRajattu) vauhti.lng = 0;
+    if (kohta.latRajattu) { vauhti.lat = 0; if (loppu) loppu.lat = 0; }
+    if (kohta.lngRajattu) { vauhti.lng = 0; if (loppu) loppu.lng = 0; }
+    if (loppu) {
+      vauhti.lat = loppu.lat * askel.nopeus;
+      vauhti.lng = loppu.lng * askel.nopeus;
+      if (askel.valmis || !(loppu.lat || loppu.lng)) pysaytaLiuku();
+      return;
+    }
     const vaimennus = Math.exp(-VAUHTI_KITKA * dt);
     vauhti.lat *= vaimennus; vauhti.lng *= vaimennus;
-    if (!(Math.hypot(vauhti.lat, vauhti.lng) > VAUHTI_KYNNYS)) pysaytaLiuku();
+    if (!(vauhti.lat || vauhti.lng)) { pysaytaLiuku(); return; }
+    // Ruutunopeus alle LIUKU_LOPPU_PX_MS → pehmeä loppuvaihe (ks. LIU'UN LOPPU PEHMEÄSTI).
+    if (ruutunopeus(vauhti, kohta.lat) < LIUKU_LOPPU_PX_MS) {
+      vauhti.loppu = { s: 0, lat: vauhti.lat, lng: vauhti.lng };
+    }
   };
   const liukuSyke = () => {
     if (!vauhti.liukuu) { vauhti.raf = 0; return; }
