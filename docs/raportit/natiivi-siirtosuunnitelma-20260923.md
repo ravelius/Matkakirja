@@ -4,6 +4,30 @@
 peli kaikkine linsseineen tehdään natiiviin pysähtymättä, web jätetään
 kesken ja nopeutukset ovat vapaat.*
 
+## Päivitys 23.9.2026 ilta: Fablen ja omistajan päätökset (sitova)
+
+Nämä kumoavat alla olevat ristiriitaiset rivit (Fablen tarkastus
+docs/raportit/natiivi-ajantasaisuus-20260923.md, kohdat A1–A4, A8, A10):
+- **Täysi toimintopariteetti.** Kaikki, mitä pelaaja webissä näkee ja voi
+  tehdä, tehdään natiiviin. "Harkittava"-karsintoja ei ole. Vain
+  kehittäjätyökalut (työhuone, piirtokoe, koeliput, turvatila) jäävät pois.
+- **Pois natiivista:** kaksintaistelu ja rosvo (ryöstäjälaatta,
+  DUEL_PRIZE), botit (js/ai.js, BOT_SKILL) ja tapahtumakorttien mekaniikka.
+  Tapahtumakortit jäävät kaanoniin sisältönä (kokoelma `tapahtumat` on
+  paketissa). Paketista poistettiin kaksintaistelut, DUEL_PRIZE, BOT_SKILL,
+  ai.js, robber ja vanhat mannerlaudat (skeema 1.14).
+- **Lehdet natiivisti** UI Toolkitilla paketin datasta (skeema 1.15:
+  typitetyt aiheet ja nostot, kulttuurivisat, sää, maan intro, radio,
+  lipputarina ja Maa numeroina). **Ei WKWebView-lehtikuorta.** Rivit
+  "Lehtikuori ?lehti=" ja web/lehti.json ovat vanhentuneita.
+- **Radio mukaan natiiviin:** kartuschan radiomerkki (valo, viritysääni)
+  ja maailmanradio-linssi. Asemien lisenssit tarkistetaan maksulliseen
+  appiin (Siirtoseppä, B6). Tämä kumoaa rivin "radiot vain webissä".
+- **Pöllö aarteena** on tauolla (24.8.). **Vanha tasokartta** ei ole
+  käytössä (VANHA_KARTTA_KAYTOSSA=false), joten sitä ei tehdä linssiksi.
+- Tuntitaulukko on laskettu ennen näitä päätöksiä. Kaksintaistelu, botit
+  ja lehtikuori pienentävät sitä; natiivilehti ja radio kasvattavat.
+
 ## Miten tämä tehtiin
 
 Kuusi Sonnet-agenttia inventoi kukin oman alueensa web-pelistä (haara
@@ -22,8 +46,8 @@ ei aikatauluksi. Kaksi tunnettua vinoumaa:
   laudan osuus pienenee arviolta puoleen.
 - **Natiivi-UI (1661 h)** sisältää pulun (7500 riviä), fokusvirran
   (7200) ja fokuskohteet (6800). Niiden tuntimäärä riippuu siitä, kuinka
-  uskollisesti web-taitto toistetaan. Lehtikuori (WKWebView, #2942) on
-  väliaikainen oikotie lehtiin.
+  uskollisesti web-taitto toistetaan. Lehdet tehdään natiivisti paketin
+  datasta (päivitys 23.9. ilta); WKWebView-lehtikuori (#2942) poistuu.
 
 ## Yhteenveto omistajittain (h)
 
@@ -50,7 +74,8 @@ mutta niitä ei ole laskettu mukaan. Kaikki-riviin sisältyy 8 h ilman omistajaa
 2. *Pelikoodari:* säännöt (rules.js: siirrot ja etäisyydet), vuorot ja
    päivät, pysähdyksen muoto, visat (`kysymykset`), väittämät, valokuva-
    ja lippukysymykset, laatat ja aarteet (`laatat`), kaupat ja raha
-   (`saannot`), kaksintaistelu, voitto ja tallennus. Aloita tallennusmuodosta
+   (`saannot`), voitto ja tallennus (ei kaksintaistelua, botteja eikä
+  tapahtumakortteja, päivitys 23.9. ilta). Aloita tallennusmuodosta
    ja `class Game` -tilakoneen pilkkomisesta.
 3. *Natiivi-UI:* HUD, saapumisdialogi ja traileri (`saapuminen`,
    `saapumispuheet`), fokusvirran minimiversio, matkalaukku, valikko ja
@@ -60,21 +85,22 @@ mutta niitä ei ole laskettu mukaan. Kaikki-riviin sisältyy 8 h ilman omistajaa
    (App Store -riski), ks. puutelista alla.
 
 **Vaihe 2: sisällön syvyys (noin 1987 h).** Kaupunki- ja maalehti natiivina
-(lehtikuori siihen asti), nähtävyydet ja kohdekartat, kohtaamiset ja
+paketin datasta (skeema 1.15, ei lehtikuorta), nähtävyydet ja kohdekartat, kohtaamiset ja
 tarinakaari, Livia ja pulu (tarvitsee AI-välityspalvelun), elävät
 nostot, ambienssi ja kaupunkimusiikki, keksinnöt, ihmisen matka ja
 satelliitti.
 
 **Vaihe 3: linssit ja lisät (noin 486 h).** Topografia, vesistöt, vertailu,
-maatiedot, radio, vanha tasokartta linssikarttana (harkittava korvaamista),
-sähke, ehdotukset ja reaktiot.
+maatiedot, radio (maailmanradio-linssi ja kartuschan radiomerkki; lisenssit
+maksulliseen appiin), sähke, ehdotukset ja reaktiot. Vanha tasokartta ei
+kuulu natiiviin.
 
 ## Siirtosepän korjauslista paketille (koottu ja tarkistettu)
 
 Seuraavaksi lisätään pakettiin:
 1. **Sääntövakiot, jotka puuttuvat `saannot`-kokoelmasta:**
-   tokens.js PIENI_AARRE_ARVO ja ISO_AARRE_ARVO, ai.js BOT_SKILL,
-   kaksintaistelun todennäköisyys (game.js) ja linssien omistus
+   tokens.js PIENI_AARRE_ARVO ja ISO_AARRE_ARVO (BOT_SKILL ja
+   kaksintaistelu poistettu 1.14:ssä) ja linssien omistus
    (omistus.js LINSSIKYNNYKSET, OPTIKON_HYVITYS, PERUSLINSSIT).
 2. **Linssien data ja media:** reliefikuvan ja astronautin sumun
    tekstuurit, astronautin kameran äänet sekä ihmisen matkan
@@ -89,8 +115,8 @@ Seuraavaksi lisätään pakettiin:
    worker, sähke, ehdotukset ja reaktiot sekä localStorage-avainten luettelo.
 6. **Tarkistettu, ei puutu:** game.js:n hinnat ja XP ovat kokoelmassa
    `saannot`, ja reittien geometria on päätasolla (skeema 1.5).
-   Tapahtumakortit: data on vain `AFRICA.events`, maailmankartalla ei
-   ole tapahtumia. Kaanonikysymys Fablelle.
+   Tapahtumakortit: data on vain `AFRICA.events`. Fablen päätös 23.9.:
+   data jää kaanonina pakettiin, mekaniikka ei tule natiiviin.
 
 ## Suurimmat riskit
 
@@ -125,7 +151,7 @@ Ydin on `js/game.js` (3601 riviä, `class Game` — ~120 metodia: vuoro, kauppa,
 | Tietovisa (monivalinta) | `actionQuiz`, `pickQuestion`, `answerQuiz`, `closeQuiz`, `timeoutQuiz`, `hardAvailable` — vaikea kysymys +HARD_BONUS 100 | game.js, kysymykset(1407) | Kysymysdata viety (kokoelmat.kysymykset); vastauslogiikka, vaikeustaso, ajastin (45s) eivät | Pelikoodari | 25 | 1 |
 | Isoisän väittämä | `openClaim` — tosi/tarua kaksi nappia, sama quiz-olio eri `kind` | game.js, questions.claims | Data mukana (allQuestions suodattaa 'claims' erikseen) | Pelikoodari | 6 | 1 |
 | Valokuva- ja lippukysymykset | `openPhotoQuestion`, `openFlagQuestion`, `photoTargets`, `flagTargets`, `setPhotoPool` — PHOTO_CHOICES/FLAG_CHOICES=4 | game.js, media.json | Kuva-URL:t paketissa; poiminta-/pool-logiikka ei | Pelikoodari | 10 | 1 |
-| Tapahtumakortti | `openEvent`, `closeEvent` — vaikutus raha / kyyti / viive; ilmainen, ei laattaa käännä | game.js, pack.events | Tarkistettu: tapahtumadata on vain AFRICA.events (raakakerros); pelattavalla maailmankartalla ei tapahtumia | Pelikoodari | 8 | 1 |
+| Tapahtumakortti (POIS natiivista, päivitys 23.9. ilta) | `openEvent`, `closeEvent` — vaikutus raha / kyyti / viive; ilmainen, ei laattaa käännä | game.js, pack.events | Tarkistettu: tapahtumadata on vain AFRICA.events (raakakerros); pelattavalla maailmankartalla ei tapahtumia | Pelikoodari | 8 | 1 |
 | Kohtaaminen (tarinakaari) | `kaariTilanne`, `kaariTarina`, `kaariYritysLuku` — 2 yritystä (KAARI_YRITYKSET), ainoa ääneen luettu tehtävä, edeltää visaa/pulmaa joka kaupungissa | game.js, packs/tarinakaari.js (85 r.) | tarinakaari(42) kokoelmassa | Pelikoodari + Sisältökirjuri (tekstit) | 14 | 2 |
 | Aarteen pysyvä lukitus | `aarreLukittu`, `lukitseAarre` — toinen väärä vastaus sulkee kätkön pysyvästi, tähti siirtyy toiselle laatalle ettei peli jumitu | game.js | Ei dataa, sääntölogiikka | Pelikoodari | 8 | 1 |
 | Pöllön sähketehtävä | `avaaAarreSahkeella` — vaihtoehtoinen tapa avata laatta ilman visaa, pienenevä palkkio ohilyönneistä | game.js, fokusvirta.js (ulkopuolinen) | Ei paketissa (mekaniikka pilottivaiheessa, 1 kaupunki) | Pelikoodari | 6 | 2 |
@@ -133,10 +159,10 @@ Ydin on `js/game.js` (3601 riviä, `class Game` — ~120 metodia: vuoro, kauppa,
 | Laatat ja aarteet | `TOKEN_TYPES`, `AARRETYYPIT`, `onAarre`, `arvoAarteenArvo` (100–250/500–800 arvottu 10 punnan tarkkuudella), `createTokenPile` (Fisher–Yates) | tokens.js | TOKEN_TYPES-nimet/värit viety; arvonta- ja pinontalogiikka ei | Pelikoodari | 10 | 1 |
 | Aarteen paljastus | `revealToken` — pääaarre (mannerkohtainen, STAR_PRIZE 2000/vaellus), ryöstäjä→kaksintaistelu, paikallisaarre→raha; pöllö-mekaniikka POLLO_ON_AARRE (pois päältä) | game.js, tokens.js | Ei dataa; sääntö monimutkainen (manner-siirto ettei jumitu) | Pelikoodari | 16 | 1 |
 | Kaupat / raha-apu | `actionHint` (40), `actionFiftyFifty` (80), `actionKaveriapu` (25), `actionPullaVinkki`/`actionPullaOstos`/`pullaOstettu` (25), STRANDED_AID=100 | game.js | Hintavakiot (saannot); osto/tila-logiikka ei | Pelikoodari | 10 | 1 |
-| Kaksintaistelu (rosvo) | `beginDuel`, `actionDuelRelief` (puolet rahasta, 4→2 vaihtoehtoa pois), `answerDuel`, `timeoutDuel`, `closeDuel`, DUEL_PRIZE=200 | game.js, kaksintaistelut(42) | Kysymysdata viety; sääntölogiikka ei | Pelikoodari | 12 | 1 |
+| Kaksintaistelu (rosvo) (POIS natiivista, päivitys 23.9. ilta) | `beginDuel`, `actionDuelRelief` (puolet rahasta, 4→2 vaihtoehtoa pois), `answerDuel`, `timeoutDuel`, `closeDuel`, DUEL_PRIZE=200 | game.js, kaksintaistelut(42) | Kysymysdata viety; sääntölogiikka ei | Pelikoodari | 12 | 1 |
 | Kulttuuri/minitehtävät/eläintäky/juliste | `actionKulttuuri`, `actionMinitehtava`, `actionElaintaky`, `myonnaJuliste` — pienet sivutehtävät, kertakäyttöiset | game.js | Osittain: elaintayt(109), julisteet(114) datana; suorituslogiikka ei | Pelikoodari | 10 | 2 |
 | XP ja tietäjätasot | `awardXp`, `tarkistaTietajataso` (game.js) + `tietajataso`, `tietajatasonNousut`, `tietajatasonOsuus`, `varssynSakeet` (tietajatasot.js, 229 r., 10 tasoa värsseineen) | game.js, tietajatasot.js | TIETAJATASOT-taulukko viety kokonaan (nimetty export); laskentafunktiot eivät | Pelikoodari + Sisältökirjuri (värssyt jo dataa) | 8 | 2 |
-| Botit | `chooseTravel`, `chooseMove`, `wantsFiftyFifty`, `wantsHint`, `chooseQuizAnswer` (BOT_SKILL 0.55), `wantsDuelRelief`, `chooseDuelAnswer` | ai.js, rules.js | Ei paketissa lainkaan (js/ai.js ei ole packs/-kansiossa eikä lahteet.mjs:ssä) | Pelikoodari | 20 | 2 |
+| Botit (POIS natiivista, päivitys 23.9. ilta) | `chooseTravel`, `chooseMove`, `wantsFiftyFifty`, `wantsHint`, `chooseQuizAnswer` (BOT_SKILL 0.55), `wantsDuelRelief`, `chooseDuelAnswer` | ai.js, rules.js | Ei paketissa lainkaan (js/ai.js ei ole packs/-kansiossa eikä lahteet.mjs:ssä) | Pelikoodari | 20 | 2 |
 | Voitto ja vaellustila | `checkWin` (ensimmäinen tähti + kotikaupunki riittää), `roaming`-lippu jolloin peli ei pääty ja jokainen aarre = raha (STAR_PRIZE) | game.js | Ei dataa | Pelikoodari | 8 | 1 |
 | Tallennus | `toJSON`/`fromJSON` (versio 1↔2 -migraatio), `localStorage` (SAVE_KEY, main.js: lataus/poisto/turvatila-leimat rajakohdissa) | game.js (toJSON ~60 kenttää), main.js | Ei osa siirtopakettia — natiivi suunnittelee oman tallennusmuodon | Pelikoodari | 20 | 1 |
 | Laudan/pakkien rekisteri | `PACKS`, `packById`, `allQuestions`, lähdeapurit (`sourceList`, `sourceLabel`), kaksi ääntä (`VOICES`, `factVoice`) — nyt yksi pelattava lauta (maailmankartta), muut vain katselu/data-lähde | pack.js | Rakenteellinen tieto (packId, questions-jaottelu) heijastuu moduulit/kokoelmat-tasoon | Pelikoodari | 6 | 3 |
@@ -256,7 +282,7 @@ Alue kattaa n. 60 tiedostoa ja n. 90 000 riviä (js/ui.js yksin 23 919 riviä �
 |---|---|---|---|---|---|---|
 | Kaupunkilehti | Lehden sivupino, selaus, sisällysvalikko, lukijakytkennät | js/lehti.js (2819), kaupunkilehdet-data | Data 195 lehteä paketissa; taitto/selaus puuttuu | Natiivi-UI | 90 | 2 |
 | Maalehti | Maan tunnusluvut, mediarivit, kielinäyte, V-Dem, kulttuurinostot | js/maalehti.js (1192) | Data 119 maalehteä paketissa; piirto puuttuu | Natiivi-UI | 60 | 2 |
-| Lehtikuori ?lehti= | WKWebView-kuori avaa index.html?lehti=id; LATAA main.jsin koko staattisen tuontipuun | web/lehti.json: 42,9 Mt koodia, 303 Mt tiedostoja yhteensä | Ei kevyt paketti — koko peli mukana | Natiivi-UI/Pelikoodari | (arvioi natiivilehti erikseen, ei tässä) | 1 |
+| Lehtikuori ?lehti= (POIS natiivista, päivitys 23.9. ilta) | WKWebView-kuori avaa index.html?lehti=id; LATAA main.jsin koko staattisen tuontipuun | web/lehti.json: 42,9 Mt koodia, 303 Mt tiedostoja yhteensä | Ei kevyt paketti — koko peli mukana | Natiivi-UI/Pelikoodari | (arvioi natiivilehti erikseen, ei tässä) | 1 |
 | Nähtävyydet ja kohdekartta | Kaupungin värikartta piirroskohteineen, nähtävyysjuttu-dialogi, karusellit | js/nahtavyydet.js (2755), fokusnosto-symbolit, karttazoom | Data 1520 nähtävyyttä paketissa; piirto puuttuu | Natiivi-UI | 80 | 2 |
 | Fokusvirta (annosteluvirta) | Kaupunkiin saapuessa: matkakirja→pöllö→oppitunti→kohtaaminen, 4-vaiheinen kortisto | js/fokusvirta.js (7227, suurin lohko tässä alueessa) | fokusvirrat-data (50) paketissa; koko virtakoneisto puuttuu | Natiivi-UI/Pelikoodari | 140 | 1 |
 | Fokuskohteet (popupit) | Kartan erityiskohteiden (vuoret, joet, kaupungit) klikattavat popup-tietoruudut | js/fokuskohteet.js (6821) | Osa maakohtaisista fokuskohteista saanto-luokassa (esim. bgr/bih/grc/ita/rou/tur); DEU merkitty "kuollut" | Natiivi-UI | 130 | 1 |
