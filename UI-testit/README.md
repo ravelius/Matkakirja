@@ -82,6 +82,30 @@ kuva maakunta-kortti
 ui sulje
 ```
 
+Aloitusnäkymä ja matkan huipennus (`Aloitusnakyma.cs`): peli jää tilaan Aloitus
+(PeliOhjain.AloitusNakyma = true). Portti (Aloita seikkailu, tai Jatka matkaa / Uusi matka),
+julisteotsikko ja naputettava avausteksti (kertoja lukee intro-puhe.mp3:n; napautus
+kirjoittaa loppuun), VALITSE ALOITUSKAUPUNKI → lähtökaupungit → PeliOhjain.UusiMatka(id).
+`ui aloitus [portti|avaus|valinta|jatka]` ilman peliä, `ui huipennus` kaikkien aarteiden
+huipennus esimerkkiluvuin.
+
+```
+ui aloitus portti
+odota 1
+kuva aloitus-portti
+ui aloitus avaus
+odota 6
+kuva aloitus-avaus
+ui aloitus valinta
+odota 2
+kuva aloitus-valinta
+ui sulje
+ui huipennus
+odota 1
+kuva huipennus
+ui sulje
+```
+
 Matkalaukku (`Matkalaukku.cs`, webin #passport-dialog): yläpalkin tilapilleri avaa laukun pillerin
 alle. `ui laukku` näyttää pelin datan (PeliOhjain.Laukku()), `ui laukku esimerkki` keksityn
 sisällön ilman peliä. "Matkan tilastot ›" avaa lohkon (tila muistetaan).
