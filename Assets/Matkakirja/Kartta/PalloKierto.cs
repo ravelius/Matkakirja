@@ -70,7 +70,27 @@ namespace Matkakirja
         public double ajonRamppi = 0.3;
 
         /// <summary>Onko sormi ruudulla, liukuma tai kamera-ajo käynnissä (kehysmittari lukee).</summary>
-        public bool Liikkeessa => edellinenSormia > 0 || math.lengthsq(liuku) > 1e-4 || ajo != null;
+        public bool Liikkeessa => edellinenSormia > 0 || math.lengthsq(liuku) > 1e-4 || ajo != null || Seurataan;
+
+        /// <summary>Nappula ohjaa kameraa (Nappula.seuraaKamera): kamera katsoo annettua pistettä.</summary>
+        public bool Seurataan { get; private set; }
+
+        /// <summary>Kamera katsomaan pistettä (nappulan seuranta); korkeus &lt;= 0 = nykyinen. Keskeyttää ajon.</summary>
+        public void Seuraa(double lat, double lon, double korkeus = 0)
+        {
+            ajo = null;
+            liuku = 0;
+            Seurataan = true;
+            leveys = lat;
+            pituus = lon;
+            if (korkeus > 0) this.korkeus = math.clamp(korkeus, MinKorkeus(), MaxKorkeus());
+        }
+
+        public void SeurantaLoppui() => Seurataan = false;
+
+        /// <summary>Lepo vaihtui: true = ei liikettä eikä peittoa (Natiivi-UI:n pieni liike herää vain levossa).</summary>
+        public event Action<bool> LepoMuuttui;
+        public bool Levossa { get; private set; } = true;
 
         /// <summary>Napautus näytön pikselikoordinaateissa (KaupunkiMerkit etsii osuman).</summary>
         public event Action<Vector2> Napautettu;
@@ -173,6 +193,8 @@ namespace Matkakirja
             Aseta();
             var nakyma = new double4(pituus, leveys, korkeus, kallistus);
             if (!nakyma.Equals(edellinenNakyma)) { edellinenNakyma = nakyma; NakymaMuuttui?.Invoke(); }
+            bool lepo = !Liikkeessa && !Peitetty;
+            if (lepo != Levossa) { Levossa = lepo; LepoMuuttui?.Invoke(lepo); }
         }
 
         float Kerroin => Screen.dpi > 0 ? Mathf.Max(1f, Screen.dpi / 163f) : 1f;
