@@ -19,12 +19,13 @@ Lähde: main `eaeda81cf` (v2143).
   (js/media.js). Lisäksi viitteissä on 1 681 lähde- ja lisenssilinkkiä.
 - 21 kokoelmaa tyypitettyinä entiteetteinä, esimerkiksi kaupungit
   lat/lon-koordinaatein, reitit, kysymykset, lehdet ja kohtaamiset.
-- Skeemaversio on **1.4** (`manifest.skeemaversio`): versiossa 1.1
+- Skeemaversio on **1.5** (`manifest.skeemaversio`): versiossa 1.1
   kaupungit saivat kentät `maa2` (ISO2), `tyyppi`, `lentokentta` ja
   `aloitus` natiivin 3D-proton tarpeen mukaan, versiossa 1.2 `tarkeys`
   (0–3), ja manifest sai tiedostojen koot (`tavuja`), versiossa 1.3
   lehden web-riippuvuudet (`web/lehti.json`), versiossa 1.4 kokoelmat
-  `saannot` ja `saapuminen`.
+  `saannot` ja `saapuminen`, versiossa 1.5 funktioiden luettelo
+  `manifest.logiikka` ja kokoelma `esilasketut`.
 - `tests/vienti.test.mjs` (6 testiä, 3 s) todistaa, ettei mitään jää pois.
   Se vertaa jokaista exporttia suoraan lähdemoduuliin. Testi on todettu
   herkäksi: kun Set muutettiin taulukoksi, testi kaatui.
@@ -404,7 +405,7 @@ Funktiot tunnisteiksi ja sisältöversion näyttäminen ovat myöhempiä osia.
 
 ### 5.3 Yhteensopivuus: vanha sovellus ja uusi sisältö
 
-- **Skeeman major.minor.** Nykyinen on 1.4 (`SKEEMAVERSIO_TARKKA`,
+- **Skeeman major.minor.** Nykyinen on 1.5 (`SKEEMAVERSIO_TARKKA`,
   manifestissa ja osoittimessa). `matkakirja-vienti/1` on major. Lisäykset
   (uusi kenttä, uusi kokoelma) nostavat minoria, ja vanha sovellus
   ohittaa tuntemattomat kentät. Poisto tai merkityksen muutos nostaa
@@ -413,7 +414,7 @@ Funktiot tunnisteiksi ja sisältöversion näyttäminen ovat myöhempiä osia.
   pakettiin. Historia: 1.0 ensimmäinen vienti; 1.1 kaupunkien maa2,
   tyyppi, lentokentta, aloitus; 1.2 kaupunkien tarkeys ja manifestin
   tavuja; 1.3 web-näkymien riippuvuuslistat (web/lehti.json); 1.4 kokoelmat saannot
-  ja saapuminen. Raakaoliot (`data`) eivät kuulu sopimukseen: niiden kentät
+  ja saapuminen; 1.5 manifest.logiikka, kokoelma esilasketut ja media.suurennos. Raakaoliot (`data`) eivät kuulu sopimukseen: niiden kentät
   voivat muuttua ilman versionnostoa.
 - **Pakolliset kentät.** Jokainen sovellus julistaa, mitkä kokoelmat ja
   kentät se vaatii. Tuoja validoi paketin ennen käyttöönottoa, ja jos
@@ -455,9 +456,25 @@ kielellään. Arvio: 2–3 sessiota Pelikoodarille.
   `js/tekstipohja.js` (`taytaPohja`); tuntematon paikkamerkki jää näkyviin.
 - Vartija `tests/sisaltopaketti.test.mjs` ("kaupunkidatassa ei ole
   funktioita") kaataa viennin, jos kaupunkidataan lisätään funktio.
-Jäljellä olevat funktiot ovat apufunktio-exportteja (kuva-URL:n
-rakentajat, fokuskohteiden haut) ja linssien logiikkaa; seuraava erä on
-kaupunkilehdet.
+
+**Tehty, erä 2: loput 70 funktiota luokiteltu (skeema 1.5, 23.9.2026).**
+Kolme Sonnet-agenttia analysoi funktiot tiedostoittain.
+`tools/vienti/logiikka.mjs` luokittelee jokaisen, ja
+`manifest.logiikka` on natiivin porttauslista:
+- media (7): kuva- ja lippu-URL:t ovat jo media.json:ssa, ja uusi kenttä
+  `suurennos` (1600 px) vastaa funktiota valokuvaSuurennos().
+- esilaskettu (14): kokoelmat `saapuminen` (erä A) ja `esilasketut`
+  (hetkenKuvat, elaintakynKuvat, maanGenetiivi 135 maalle sisäisine
+  poikkeuksineen, linssien selitteet, piirroksen omaavat pulmat).
+- saanto (16): pieni sääntö sanallisesti (esim. karttaKuvasuhde,
+  viritysPolku, kaariLuentaSoi).
+- logiikka (29): linssien piirto ja pallokytkentä, 11 pulmageneraattoria
+  ja pulmapiirrokset tunnisteilla (`linssi:topografia.piirra`,
+  `pulma:roomalaiset`, `pulmapiirros:<id>`), karttapiste ja mittakaava.
+- kuollut (4): paivanKuva, fokuskohteetDeu, juliste, maanAiheOtsikko.
+Vartija (`tests/sisaltopaketti.test.mjs`) kaatuu, jos pakettiin tulee
+luokittelematon funktio tai jos luettelossa on vanhentunut rivi.
+Lähdeteksti jää raakakerrokseen, mutta natiivi ei aja sitä.
 
 Yhteensä: **3,5–5 sessiota** siihen, että sisältö julkaistaan molempiin
 peleihin yhdellä mergellä. Overlay lisää tähän 2 sessiota, jos sitä

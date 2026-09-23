@@ -21,7 +21,9 @@
  *   7. skeema 1.4: matkustuksen hinnat (saannot) ja saapumishaut
  *      (saapuminen) vastaavat pelin omia vakioita ja funktioita;
  *   8. osa 2 (funktiot tunnisteiksi): kaupunkidatassa ei ole funktioita —
- *      pulmat nimeävät generaattorinsa, packien tekstit ovat pohjia.
+ *      pulmat nimeävät generaattorinsa, packien tekstit ovat pohjia;
+ *   9. skeema 1.5: jokainen paketin funktio on luokiteltu
+ *      (tools/vienti/logiikka.mjs), esilasketut vastaavat pelin funktioita.
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -260,4 +262,56 @@ test('osa 2: pulmien generaattorit ja tekstipohjat', () => {
   assert.equal(taytaPohja(lauta.texts.winnerStar, { name: 'Fogg', money: 120 }),
     'Fogg toi unohdetun aarteen kotiin 120 punnan kanssa.');
   assert.equal(taytaPohja('{name} ja {tuntematon}', { name: 'A' }), 'A ja {tuntematon}');
+});
+
+test('skeema 1.5: jokainen paketin funktio on luokiteltu natiiville', async () => {
+  const { LOGIIKKA } = await import('../tools/vienti/logiikka.mjs');
+  const loydetyt = new Set();
+  const kay = (o, polku, kohta) => {
+    if (!o || typeof o !== 'object') return;
+    if ('$funktio' in o) { loydetyt.add(`${kohta}${polku}`); return; }
+    for (const [k, v] of Object.entries(o)) kay(v, `${polku}/${k}`, kohta);
+  };
+  for (const m of manifest.moduulit) {
+    const { exportit } = JSON.parse(tiedostot.get(m.tiedosto));
+    for (const [nimi, arvo] of Object.entries(exportit)) kay(arvo, '', `${m.moduuli}#${nimi}`);
+  }
+  for (const k of manifest.kokoelmat) {
+    assert.ok(!tiedostot.get(k.tiedosto).includes('"$funktio"'), `kokoelmassa ${k.nimi} on funktio`);
+  }
+  const luetellut = new Set(Object.keys(LOGIIKKA));
+  const puuttuvat = [...loydetyt].filter((k) => !luetellut.has(k));
+  const vanhentuneet = [...luetellut].filter((k) => !loydetyt.has(k));
+  assert.deepEqual(puuttuvat, [], 'uusi funktio paketissa: luokittele se tiedostoon tools/vienti/logiikka.mjs');
+  assert.deepEqual(vanhentuneet, [], 'tools/vienti/logiikka.mjs:ssä on rivi funktiolle, jota ei enää ole');
+  const lista = manifest.logiikka;
+  assert.equal(lista.length, luetellut.size);
+  for (const r of lista) {
+    const vaadittu = { logiikka: 'tunniste', saanto: 'saanto', esilaskettu: 'esilaskettu', media: 'media' }[r.luokka];
+    if (vaadittu) assert.ok(r[vaadittu], `${r.kohta}: ${vaadittu} puuttuu`);
+  }
+});
+
+test('skeema 1.5: esilasketut ja suurennokset vastaavat pelin funktioita', async () => {
+  const esi = JSON.parse(tiedostot.get('kokoelmat/esilasketut.json')).alkiot;
+  const hae = (funktio, avain) => esi.find((r) => r.funktio === funktio && r.avain === avain)?.arvo;
+  const { maanGenetiivi } = await import('../js/packs/maa-kategoriat.js');
+  assert.equal(hae('maanGenetiivi', 'Alankomaat'), maanGenetiivi('Alankomaat'));
+  assert.equal(hae('maanGenetiivi', 'Alankomaat'), 'Alankomaiden');
+  const { HISTORIAN_HETKET, hetkenKuvat } = await import('../js/packs/historian-hetket.js');
+  assert.deepEqual(hae('hetkenKuvat', HISTORIAN_HETKET[0].id), JSON.parse(JSON.stringify(hetkenKuvat(HISTORIAN_HETKET[0]))));
+  assert.ok(hae('linssiSelite', 'topografia').length > 3);
+  assert.equal(hae('pulmapiirrokset', 'kaikki').length, 11);
+  const { valokuvaSuurennos } = await import('../js/packs/africa-valokuvat.js');
+  const { VALOKUVAT_FLICKR } = await import('../js/packs/valokuvat-flickr.js');
+  const kuvat = JSON.parse(tiedostot.get('media.json')).viitteet.filter((v) => v.laji === 'kuva-commons');
+  let verrattu = 0;
+  for (const v of kuvat) {
+    // Rajatun Flickr-kuvan suurennos on repon oma rajaus; Nodessa peli ei
+    // tiedä omaa kansiotaan, joten ne verrataan vain muotoon.
+    if (VALOKUVAT_FLICKR.get(v.arvo)?.rajattu) { assert.match(v.suurennos, /assets\/valokuvat\/|_h\.jpg$/); continue; }
+    assert.equal(v.suurennos, valokuvaSuurennos(v.arvo, 1600), v.arvo);
+    verrattu++;
+  }
+  assert.ok(verrattu > 1000);
 });
