@@ -14,7 +14,9 @@
 //   kohde      luokka, nimi, kuvat, teksti, LUKIJAN KYSYMYS (+25, "nosto"/id),
 //              "Kysy viisaalta pöllöltä pululta:" (PuluChat.Kysy), kierrokset (ulkoinen linkki)
 // Pelin tila muuttuu vain PeliOhjain.KauppaTeko-kutsuilla (Pelikoodari). Kerros 40, pallo lukittu.
-// Erot webiin: kortti on keskellä (ei napautuspisteen vieressä), ei kaiutinta eikä korostuksia.
+// Kohdekortin korostetut sanat (web fokuskohteet piirraKorostettuSana): kunkin korostuksen
+// ensimmäinen esiintymä tekstissä on alleviivattu linkki, napautus → pulu "Kerro lisää: X (kohteessa Y)".
+// Erot webiin: kortti on keskellä (ei napautuspisteen vieressä), ei kaiutinta.
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -142,7 +144,21 @@ namespace Matkakirja.Natiivi
 
             if (n.Kuvat.Count > 0) Kuvasarja(sisus);
 
-            foreach (var k in Kappaleet(n.Teksti)) Rakenne.Teksti(k, "mk-nosto__teksti", sisus);
+            var jaljella = n.Laji == NostoLaji.Kohde ? n.Korostukset.Select(PuraKorostus).Where(x => x.HasValue).Select(x => x.Value).ToList()
+                : new List<(string Perus, string Nakyva)>();
+            foreach (var k in Kappaleet(n.Teksti))
+            {
+                var l = Rakenne.Teksti(Korosta(k, jaljella), "mk-nosto__teksti", sisus);
+                if (!l.text.Contains("<link=")) continue;
+                l.pickingMode = PickingMode.Position;
+                string nimi = n.Otsikko;
+                l.RegisterCallback<UnityEngine.UIElements.Experimental.PointerUpLinkTagEvent>(e =>
+                {
+                    if (string.IsNullOrEmpty(e.linkID)) return;
+                    Sulje();
+                    UiNakymat.Hae()?.Chat.Kysy($"Kerro lisää: {e.linkID} (kohteessa {nimi})");
+                });
+            }
 
             if (n.Visa != null) Visa(sisus, n);
             if (n.Laji == NostoLaji.Elain) Elainpalkkio(sisus, n);
@@ -170,6 +186,42 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Tyhjä rivi erottaa kappaleet; muuten ≥ 3 virkkeen teksti puolitetaan (web jaaKappaleiksi).</summary>
+        static (string Perus, string Nakyva)? PuraKorostus(string merkinta)
+        {
+            string t = (merkinta ?? "").Trim();
+            if (t.Length == 0) return null;
+            int p = t.IndexOf('|');
+            if (p < 0) return (t, t);
+            string perus = t.Substring(0, p).Trim(), nakyva = t.Substring(p + 1).Trim();
+            return perus.Length == 0 || nakyva.Length == 0 ? ((string, string)?)null : (perus, nakyva);
+        }
+
+        /// <summary>Kappaleen korostukset linkeiksi; käytetty korostus poistuu jäljellä olevista (kerran per kortti).</summary>
+        static string Korosta(string kappale, List<(string Perus, string Nakyva)> jaljella)
+        {
+            string Suojaa(string x) => x.Replace("<", "<noparse><</noparse>");
+            if (jaljella.Count == 0) return Suojaa(kappale);
+            var sb = new System.Text.StringBuilder();
+            string loppu = kappale;
+            while (true)
+            {
+                int paras = -1; (string Perus, string Nakyva) osuma = default;
+                foreach (var k in jaljella)
+                {
+                    int i = loppu.IndexOf(k.Nakyva, StringComparison.OrdinalIgnoreCase);
+                    if (i >= 0 && (paras < 0 || i < paras)) { paras = i; osuma = k; }
+                }
+                if (paras < 0) break;
+                sb.Append(Suojaa(loppu.Substring(0, paras)));
+                sb.Append("<link=\"").Append(osuma.Perus.Replace("\"", "")).Append("\"><color=#7a5514><u>")
+                  .Append(Suojaa(loppu.Substring(paras, osuma.Nakyva.Length))).Append("</u></color></link>");
+                loppu = loppu.Substring(paras + osuma.Nakyva.Length);
+                jaljella.Remove(osuma);
+            }
+            sb.Append(Suojaa(loppu));
+            return sb.ToString();
+        }
+
         static List<string> Kappaleet(string teksti)
         {
             var l = new List<string>();

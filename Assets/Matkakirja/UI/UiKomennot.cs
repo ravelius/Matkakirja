@@ -23,6 +23,7 @@
 //   ui tietaja [pisteet]                      Tietäjän tie -minipopup (oletus 120)
 //   ui seloste                                laukku esimerkillä + Aarnin luettelon pikkuseloste
 //   ui opas [kaupunki] [vieritä px]           turistiopas (oletus lontoo), valinnainen vieritys
+//   ui lippu [ISO3]                           lipun tarina (oletus FIN; skeema 1.15 maat.lipputarina)
 //   ui offline demo|verkoton|verkko|pois      offline-tilan pilleri: keksitty lataus / verkon tila
 //   ui maakunnat [kortti] [ISO:tunnus]        karttaselite Maakunnat-välilehdellä, valinta, kortti
 //   ui pulu sano [teksti] | aani [lähde n] | ele id | tilanne laji | tunne t | pois | paalle
@@ -222,6 +223,16 @@ namespace Matkakirja.Natiivi
                 {
                     int n = int.TryParse(loput, out var m) ? m : 7;
                     UiSisalto.Lataa(() => ui.Julistegalleria.Avaa(System.Linq.Enumerable.Select(System.Linq.Enumerable.Take(UiSisalto.Julisteet, n), j => j.Id)));
+                    return null;
+                }
+                case "lippu":
+                {
+                    string maa = loput.Length > 0 ? loput.ToUpperInvariant() : "FIN";
+                    UiSisalto.Lataa(() =>
+                    {
+                        if (Lippuikkuna.On(maa)) Lippuikkuna.Avaa(maa);
+                        else ui.Tilarivi.Viesti("Ei lipun tarinaa: " + maa);
+                    });
                     return null;
                 }
                 case "opas":

@@ -1830,3 +1830,134 @@
     white-space: normal;
     color: rgba(58, 42, 21, 0.7);
 }
+
+/* --- maalehden etusivu: korkokartta kaupunkipisteineen (web .maakartta-*) -------------- */
+
+.mk-lehti__maakartta {
+    margin: 4px 0 4px 0;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.4);
+    border-radius: 2px;
+}
+
+.mk-lehti__maakarttakuva {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -unity-background-scale-mode: stretch-to-fill;
+}
+
+.mk-lehti__maapiste {
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    margin-left: -4.5px;
+    margin-top: -4.5px;
+    border-width: 1.5px;
+    border-color: #f7efdc;
+    border-radius: 5px;
+    background-color: #2c2318;
+    overflow: visible;
+}
+
+.mk-lehti__maapiste--paa {
+    width: 12px;
+    height: 12px;
+    margin-left: -6px;
+    margin-top: -6px;
+    border-color: #2c2318;
+    border-radius: 6px;
+    background-color: #c69e52;
+}
+
+.mk-lehti__maapistenimi {
+    position: absolute;
+    left: 12px;
+    top: -6px;
+    padding: 0 3px;
+    border-radius: 2px;
+    background-color: rgba(247, 240, 222, 0.72);
+    font-size: 11px;
+    white-space: nowrap;
+    color: #2c2318;
+}
+
+.mk-lehti__maapistenimi--vasen {
+    left: auto;
+    right: 12px;
+}
+
+/* --- lipun tarina (Lippuikkuna.cs; web .lippu-ikkuna) ------------------------------------- */
+
+.mk-lippu__iso {
+    height: 180px;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.35);
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.mk-lippu__valinta {
+    margin: 4px 0 10px 0;
+    font-size: 11px;
+    letter-spacing: 1.6px;
+    -unity-text-align: upper-center;
+    color: rgba(70, 51, 31, 0.65);
+}
+
+.mk-lippu__symbolit {
+    margin-bottom: 10px;
+    padding: 8px 10px;
+    border-left-width: 3px;
+    border-left-color: rgba(70, 51, 31, 0.4);
+    background-color: rgba(120, 96, 60, 0.06);
+}
+
+.mk-lippu__symboli {
+    margin-bottom: 3px;
+    font-size: 14px;
+    white-space: normal;
+}
+
+.mk-lippu__versiotyhdys {
+    margin: 10px 0 8px 0;
+    font-size: 11px;
+    letter-spacing: 1.8px;
+    color: #46331f;
+}
+
+.mk-lippu__versio {
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 0;
+    padding: 0;
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.mk-lippu__versiokuva {
+    height: 58px;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.35);
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.mk-lippu__versionimi {
+    margin-top: 3px;
+    font-size: 10.5px;
+    white-space: normal;
+    -unity-text-align: upper-center;
+    color: #46331f;
+}
+
+.mk-aloitus__periaatelinkki {
+    align-self: flex-start;
+    margin-top: 8px;
+}
+
+.mk-aloitus__oikeudet {
+    margin-top: 10px;
+    font-size: 11px;
+    color: rgba(70, 51, 31, 0.6);
+}

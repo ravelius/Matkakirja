@@ -369,6 +369,17 @@ namespace Matkakirja.Natiivi
             Aanet.Juuri + "aanet/pulu/livia-" + lahde + "-" + (indeksi + 1) + ".mp3" + (versio != null ? "?v=" + versio : "");
 
         /// <summary>Pulun napautus (UiNakymat avaa keskustelun).</summary>
+        /// <summary>Onko ohi mennyt repliikki palautettavissa (chatin "Näytä puhekuplat").</summary>
+        public bool KuplaPalautettavissa => viimeRepliikki != null && Kuplat.Maara == 0;
+
+        /// <summary>Web naytaPuhekuplatUudelleen: viimeisin repliikki kuplaksi uudelleen.</summary>
+        public bool NaytaViimeisinKupla()
+        {
+            if (!KuplaPalautettavissa) return false;
+            Kuplat.Lisaa(viimeRepliikki);
+            return true;
+        }
+
         public event Action Napautus;
 
         void Napautettu()

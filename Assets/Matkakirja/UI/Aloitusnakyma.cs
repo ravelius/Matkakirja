@@ -437,9 +437,12 @@ namespace Matkakirja.Natiivi
                 + "on tehnyt. Peli itse on tekijänsä omaisuutta: sitä saa pelata "
                 + "ja lähdekoodia lukea vapaasti, mutta julkaisuun tai omaan "
                 + "tuotteeseen tarvitaan lupa.");
+            // Web periaate-linkit ja -oikeudet (ui.js naytaPeriaatteet).
+            var gh = Rakenne.Nappi("Pelin GitHub-sivu", "mk-lehti__linkki mk-aloitus__periaatelinkki", () => Application.OpenURL("https://github.com/ravelius/Matkakirja"), v);
+            Kirjasimet.Aseta(gh, Kirjasin.Kone);
+            Kirjasimet.Aseta(Rakenne.Teksti("© Visuaaliviestinnän Instituutti Tampere Oy", "mk-aloitus__oikeudet", v), Kirjasin.Kone);
             var napit = Rakenne.El("mk-kortti__napit", kortti.Sisus, PickingMode.Ignore);
-            var sulje = Rakenne.Nappi("Sulje", "mk-nappi--kulta", () => Rakenne.Nayta(h, false, 250), napit);
-            Rakenne.Tausta(sulje, Kuviot.Kulta);
+            var sulje = Rakenne.Nappi("Takaisin", "mk-nappi--haamu", () => Rakenne.Nayta(h, false, 250), napit);
             Kirjasimet.Aseta(sulje, Kirjasin.KoneLihava);
             return h;
         }

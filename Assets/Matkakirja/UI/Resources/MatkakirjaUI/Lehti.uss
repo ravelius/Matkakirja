@@ -1118,3 +1118,112 @@
 .mk-lehti__opaslinkki .mk-nappi__teksti {
     font-size: 15px;
 }
+
+/* --- Maa numeroina (MaaNumeroina.cs): webin .maakayrat, .maakayra-*, .pyramidi-* ja
+ * .numeroina-ingressi (css/styles.css). Muste + kulta kuten säägraafissa. ------------------ */
+
+/* Otsikko kuten muiden aihesivujen (web h3.aihe-nimi, natiivissa .mk-lehti__aihe). */
+.mk-numerot__otsikko {
+    margin: 4px 0 12px 0;
+    padding: 6px 0;
+    border-top-width: 3px;
+    border-bottom-width: 1px;
+    border-top-color: rgba(70, 51, 31, 0.75);
+    border-bottom-color: rgba(70, 51, 31, 0.45);
+}
+
+.mk-numerot__otsikkoteksti {
+    font-size: 21px;
+    letter-spacing: 1.2px;
+    color: #16130f;
+    -unity-text-align: middle-center;
+    white-space: normal;
+}
+
+/* Yleisluonnehdinta isolla ennen käyriä (web 1.18rem). */
+.mk-numerot__ingressi {
+    font-size: 19px;
+    white-space: normal;
+    margin: 3px 0 6px 0;
+    color: #211d18;
+}
+
+.mk-numerot__johdanto,
+.mk-numerot__tila {
+    font-size: 16px;
+    white-space: normal;
+    margin: 0 0 14px 0;
+    color: rgba(70, 51, 31, 0.9);
+}
+
+.mk-numerot__ristikko {
+    margin: 5px 0 6px 0;
+}
+
+.mk-numerot__lohko-otsikko {
+    margin: 0 0 5px 0;
+    font-size: 12.5px;
+    white-space: normal;
+    color: #211d18;
+}
+
+.mk-numerot__kuvio {
+    width: 100%;
+    flex-shrink: 0;
+    background-color: rgba(255, 250, 238, 0.65);
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.35);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+/* Akselitekstit: koko asetetaan koodista viewBoxin skaalan mukaan (8,5 / 7,5 yksikköä). */
+.mk-numerot__akseli {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    color: rgba(70, 51, 31, 0.8);
+}
+
+.mk-numerot__ennusteteksti {
+    color: rgba(164, 105, 28, 0.75);
+}
+
+.mk-numerot__silloinvuosi {
+    color: rgba(138, 97, 20, 0.9);
+}
+
+.mk-numerot__ika {
+    color: rgba(70, 51, 31, 0.65);
+}
+
+/* Tulkintalause käyrän alla: ingressin ääni pienempänä. */
+.mk-numerot__tulkinta {
+    margin: 5px 0 0 0;
+    font-size: 14px;
+    white-space: normal;
+    color: rgba(33, 29, 24, 0.88);
+}
+
+/* "Silloin ja nyt" — isoisän päiväkirjan ääni käyrän alla. */
+.mk-numerot__silloin {
+    margin: 4px 0 0 0;
+    font-size: 13px;
+    white-space: normal;
+    color: rgba(138, 97, 20, 0.95);
+}
+
+.mk-numerot__vdem {
+    margin: 4px 0 0 0;
+    font-size: 14px;
+    white-space: normal;
+    color: rgba(33, 29, 24, 0.88);
+}
+
+.mk-numerot__lahde {
+    margin: 11px 0 8px 0;
+    font-size: 11.5px;
+    white-space: normal;
+    color: rgba(70, 51, 31, 0.68);
+}

@@ -46,6 +46,8 @@ namespace Matkakirja.Natiivi
         public List<NostoKuva> Kuvat = new List<NostoKuva>();
         public NostoVisa Visa;
         public List<string> Kysymykset = new List<string>();
+        /// <summary>Kohteen korostukset "perus|näkyvä" (web fokuskohteet korostukset): sana → "Kysy pululta lisää".</summary>
+        public List<string> Korostukset = new List<string>();
         public List<(string Nappi, string Url)> Kierrokset = new List<(string, string)>();
         /// <summary>Minitehtävän avain (Kaupat.Minitehtava(kaupunki, aihe)) ja palkkio.</summary>
         public string VisaKaupunki, VisaAihe;
@@ -256,6 +258,7 @@ namespace Matkakirja.Natiivi
             n.Kuvat = n.Kuvat.GroupBy(x => x.Lahde).Select(g => g.First()).ToList();
             n.Visa = Visa(d);
             if (MiniJson.Kentta(d, "kysymykset") is List<object> q) n.Kysymykset = q.OfType<string>().Take(2).ToList();
+            if (MiniJson.Kentta(d, "korostukset") is List<object> kor) n.Korostukset = kor.OfType<string>().ToList();
             var kierrokset = MiniJson.Kentta(d, "kierrokset") as List<object> ?? (MiniJson.Kentta(d, "kierros") is object yksi ? new List<object> { yksi } : null);
             foreach (var x in kierrokset?.Select(Ob).Where(x => x != null) ?? Enumerable.Empty<Dictionary<string, object>>())
                 if (T(x, "url") is string url) n.Kierrokset.Add((T(x, "nappi") ?? "Kierros", url));

@@ -643,3 +643,25 @@
     border-radius: 6px;
     -unity-background-scale-mode: scale-and-crop;
 }
+
+/* Chatin ylärivi (web .pollo-ylarivi, .pollo-naytakuplat: pikkupilleri). */
+.mk-chat__ylarivi {
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-shrink: 0;
+    padding: 6px 9px 0 9px;
+}
+
+.mk-chat__pilleri {
+    min-height: 0;
+    padding: 2px 9px;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.3);
+    border-radius: 12px;
+    background-color: #efe5cf;
+    color: #7a4a1c;
+}
+
+.mk-chat__pilleri .mk-nappi__teksti {
+    font-size: 11.5px;
+}
