@@ -67,6 +67,9 @@ export const LISAMODUULIT = [
   // Natiivi-UI 23.9.2026: avausteksti, paikkarivi, aloitusnappi ja
   // periaatelappu (js/ui.js tuo samat vakiot).
   m('js/ui-tekstit.js', ['INTRO_TEXT', 'INTRO_PAIKKA', 'INTRO_VALINTA', 'PERIAATTEET']),
+  // Natiivi-UI 23.9.2026: pullan nimet maittain (js/fokustehtavat.js pullanNimi)
+  // ja lehtitehtävien palkkio; hinta on saannoissa (game.js PULLA_HINTA).
+  m('js/fokustehtavat.js', ['PULLA_NIMET', 'PULLA_YLEISNIMI', 'FOKUS_TEHTAVA_PALKKIO', 'FOKUS_LEHTITEHTAVAT']),
   m('js/pollo.js', ['LIVIAN_MIETINNAT', 'POLLO_AARRE']),
   // Skeema 1.15 (lehdet natiiville): lehden kiinteät tekstit ja luvut.
   // LEHDEN_VAKIOESITTELY = etusivun esittely, kun kaupungilla ei ole omaa;

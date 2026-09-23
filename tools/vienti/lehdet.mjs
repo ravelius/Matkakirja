@@ -446,6 +446,29 @@ export function rikastaLehdet(kokoelmat, ns, hae, { media: mediaLista = [], taul
       }),
     };
   });
+  // Skeema 1.17: fokusvirtojen lehtitehtävät (js/fokustehtavat.js
+  // kaupunginTehtavat ja piirraSivunTehtava). Juliste: tehtävän oma avain
+  // voittaa kaupungin oletuksen, jos se on julisteissa (sama sääntö kuin webissä).
+  const { FOKUSVIRRAT } = hae('js/packs/fokusvirrat.js');
+  const { JULISTEET } = hae('js/packs/julisteet.js');
+  const { FOKUS_TEHTAVA_PALKKIO } = hae('js/fokustehtavat.js');
+  const lehtitehtavat = Object.keys(FOKUSVIRRAT).sort().flatMap((kaupunki) =>
+    (FOKUSVIRRAT[kaupunki]?.lehtitehtavat ?? []).map((t) => {
+      const julisteAvain = t.juliste && JULISTEET[t.juliste] ? t.juliste : kaupunki;
+      return {
+        id: `${kaupunki}:${t.id}`, kaupunki, tehtava: t.id, sivu: t.sivu, otsake: t.otsake, palkinto: t.palkinto,
+        juliste: t.palkinto === 'juliste' && JULISTEET[julisteAvain] ? julisteAvain : null,
+        palkkio: FOKUS_TEHTAVA_PALKKIO,
+        visa: { kysymys: t.visa.kysymys, vaihtoehdot: t.visa.vaihtoehdot, oikea: t.visa.oikea, fakta: t.visa.fakta ?? null },
+      };
+    }));
+  kokoelmat.lehtitehtavat = taulukko('js/packs/fokusvirrat.js#FOKUSVIRRAT.*.lehtitehtavat',
+    'Kaupunkilehden sivuille sidotut tehtävät (fokusvirta). sivu = kaupunkilehden sivun järjestysnumero (0 = etusivu, '
+      + 'kaupunkilehdet.sivut), otsake = tehtävälaatikon otsikko, palkinto: piste = aarrepiste | juliste = juliste-kokoelman id '
+      + '(juliste; tehtävän oma avain voittaa kaupungin oletuksen; null = kaupungille ei ole julistetta), palkkio = puntaa oikeasta vastauksesta '
+      + '(js/fokustehtavat.js FOKUS_TEHTAVA_PALKKIO). visa = { kysymys, vaihtoehdot, oikea (indeksi), fakta }.',
+    { kaupunki: 'kaupungit', juliste: 'julisteet' }, lehtitehtavat);
+
   kokoelmat.kohdekartat = taulukko('js/packs/maakartat.js#KAUPUNKIKARTAT',
     'Kaupunkien kohdekartat (Nähtävyydet). kuva = näytettävä kartta (värikartta, jos on, muuten juliste; url/varat/'
       + 'leveys/korkeus, ämpärissä assets/kartat/), juliste ja varikartta erikseen. rajat = ydinrajaus asteina '

@@ -174,6 +174,7 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
     tapahtumat: ns('africa.js').AFRICA.events.length,
     linssiaineisto: 8,
     kohdekartat: avaimia(ns('maakartat.js').KAUPUNKIKARTAT),
+    lehtitehtavat: Object.values(ns('fokusvirrat.js').FOKUSVIRRAT).reduce((a, v) => a + (v?.lehtitehtavat?.length ?? 0), 0),
     radiot: avaimia(ns('radiot.js').RADIOT),
     aanitaulut: ns('viritysaanet.js').VIRITYSAANET.length + new Set([...ns('js/sound.js').AANITEHOSTEET, ...Object.keys(ns('js/sound.js').REAL_SAMPLES)]).size
       + ns('js/sound.js').AMBIENCE_TYPES.length + Object.keys(ns('js/sound.js').PULUN_TEHOSTEET).length

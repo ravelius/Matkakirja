@@ -582,6 +582,20 @@ test('skeema 1.17: kohdekartat (kuva ämpärissä, kohteet karttapisteinä)', as
   assert.equal(tokio.kohteet[0].x, Math.round(p.x * 100) / 100);
 });
 
+test('skeema 1.17: lehtitehtävät ja pullan nimet', async () => {
+  const t = JSON.parse(tiedostot.get('kokoelmat/lehtitehtavat.json')).alkiot;
+  assert.ok(t.length >= 70);
+  assert.ok(t.every((x) => Number.isInteger(x.visa.oikea) && x.visa.oikea < x.visa.vaihtoehdot.length));
+  assert.equal(t.find((x) => x.id === 'ateena:juliste').juliste, 'ateena-nike');
+  const julisteet = new Set(JSON.parse(tiedostot.get('kokoelmat/julisteet.json')).alkiot.map((j) => j.id));
+  // juliste null = kaupungille ei ole julistetta (23.9.2026: bergen, sevilla; sisältöaukko myös webissä).
+  assert.ok(t.filter((x) => x.palkinto === 'juliste').every((x) => x.juliste === null || julisteet.has(x.juliste)));
+  assert.ok(t.filter((x) => x.palkinto === 'juliste' && x.juliste === null).length <= 2);
+  const f = JSON.parse(tiedostot.get('moduulit/js/fokustehtavat.json')).exportit;
+  assert.equal(f.PULLA_NIMET.GRC, 'tsoureki');
+  assert.equal(f.PULLA_YLEISNIMI, 'makea pulla');
+});
+
 test('skeema 1.9: offline-manifesti maittain (laatat, maasto, media, tavut)', async () => {
   const m = JSON.parse(tiedostot.get('manifest.json'));
   const o = JSON.parse(tiedostot.get(m.offline.tiedosto));

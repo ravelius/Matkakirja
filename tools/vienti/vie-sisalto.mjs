@@ -113,7 +113,9 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        kiellettyjä ei pakettiin, omistaja 23.9.2026) ja aanitaulut
  *        laji viritys (viritysäänet pelin osoitteella, tekijä ja lisenssi).
  *   1.17 kokoelma kohdekartat (kaupunkien kohdekartat, kohteiden x/y pelin
- *        karttapiste()-funktiolla, kartat ämpärissä assets/kartat/).
+ *        karttapiste()-funktiolla, kartat ämpärissä assets/kartat/),
+ *        kokoelma lehtitehtavat (fokusvirtojen lehtitehtävät) ja moduuli
+ *        js/fokustehtavat.js (PULLA_NIMET, PULLA_YLEISNIMI, palkkio).
  */
 export const SKEEMAVERSIO_TARKKA = '1.17';
 
