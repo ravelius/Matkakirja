@@ -11,7 +11,7 @@
 //                                             tulos [laattatyyppi], kohtaaminen,
 //                                             kohtaaminen-tervehdys (KysymysEsimerkki.cs)
 //   ui selite                                 karttaselite auki (Nostot-välilehti)
-//   ui aloitus [portti|avaus|valinta|kortti|jatka]  aloitusnäkymä ilman peliä (valinta pallolla, kortti = vara; → ilmoitus)
+//   ui aloitus [portti|valinta|kortti|lento|jatka]  aloitusnäkymä ilman peliä (valinta kartalla + vahvistus, kortti = vara, lento = avausteksti pallon päällä)
 //   ui aloita [kaupunki] | ui jatka           automaatio: ohittaa aloitusnäkymän (UusiMatka / Jatka);
 //                                             listan ulkopuolinen kaupunki (pariisi) = oletuslähtö Pariisi
 //   ui lehti <kaupunki> [sivu] | ui lehti sivu n | ui lehti kuva | ui maalehti <ISO> [aihe] | ui lehti sisallys
