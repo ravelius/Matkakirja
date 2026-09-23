@@ -129,7 +129,7 @@ export const RAAMATTU = {
           + 'sisältöpaketin (sisalto/1/) kautta. Laattapoltot jatkuvat, koska natiivi käyttää '
           + 'samoja laattoja. Natiivin ensimmäinen pelattava tavoite: matkustus pallolla ja '
           + 'kaupunkilehdet; sen jälkeen korkeusmalli, kallistus ja auringonvalo. Web on ilmainen, '
-          + 'natiivi maksullinen tai 3D-lisäosat IAP:na; radiot vain webissä; lisensseissä '
+          + 'natiivi maksullinen tai 3D-lisäosat IAP:na; radiot myös natiiviin (23.9. klo 20.2x); lisensseissä '
           + 'attribuutio riittää (ei juristia). Peli on mahdollisimman pieni: sisältö, media, '
           + 'laatat ja maasto striimataan ämpäristä, pelaaja voi ladata alueita offline-käyttöön '
           + 'halutessaan (omistaja 23.9.). Prototyyppi /Users/Shared/Claude/proto-3d. '
