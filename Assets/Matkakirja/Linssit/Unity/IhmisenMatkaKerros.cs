@@ -13,6 +13,13 @@ namespace Matkakirja.Natiivi
 {
     public class IhmisenMatkaKerros : MonoBehaviour, IEsityksenNakyma
     {
+        /// <summary>
+        /// Onko UI:ssa esittelylaatikko (Natiivi-UI asettaa). Tosi: esitys ei käynnisty
+        /// avatessa, vaan laatikon Käynnistä-nappi kutsuu IhmisenMatkaLinssi.Kaynnista
+        /// (web aloitaAjo, joka odottaa myös vanojen laskennan). Vastine KeksinnotKerros.EsittelyUIssa.
+        /// </summary>
+        public static bool EsittelyUIssa;
+
         public static Action<bool, double> MustaKasittelija;       // päällä, häivytys ms
         public static Action<double> ValotKasittelija;             // häivytys ms: kehys ja kartta esiin
         public static Action<int, KertomusJakso> JaksoKasittelija; // teksti alas / keskelle avauksessa
