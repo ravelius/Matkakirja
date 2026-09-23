@@ -13,7 +13,7 @@
 //   ui linssi vertailu [arkki|taynna]     alapalkki esimerkkimailla / vertailuarkki / täyden listan ilmoitus
 //   ui linssi maa [ISO3]                  maatietojen maakyltti (oletus ITA; napautus avaa maalehden)
 //   ui linssi keksinnot [esittely|pysakki i|valinaytos [i]|loppu]
-//   ui linssi matka [musta|valot|jakso i|kuva i|loppu]
+//   ui linssi matka [aloitus|musta|valot|jakso i|kuva i|loppu]
 //   ui linssi sulje                       auki oleva linssi kiinni (Rekisteri.Sulje)
 //   ui linssi pois                        kaikki linssien testinäkymät pois
 using System.Collections.Generic;

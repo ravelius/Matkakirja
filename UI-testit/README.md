@@ -219,8 +219,9 @@ UI-osat ilman linssiä esimerkkiaineistolla (`LinssiKomennot.cs`):
 - `ui linssi maa [ISO3]` — maakyltti (oletus ITA); napautus avaa maalehden, jos peli käy.
 - `ui linssi keksinnot [esittely|pysakki i|valinaytos [i]|loppu]` — keksintökaaren osat
   paketin `keksinnot.json`:n teksteillä.
-- `ui linssi matka [musta|valot|jakso i|kuva i|loppu]` — ihmisen matkan osat paketin
-  kertomuksella ja löytöpaikoilla.
+- `ui linssi matka [aloitus|musta|valot|jakso i|kuva i|loppu]` — ihmisen matkan osat paketin
+  kertomuksella ja löytöpaikoilla (`aloitus` = aloituskortti Ken Burns -taustalla; ilman auki
+  olevaa linssiä Käynnistä vain sulkee kortin).
 - `ui linssi sulje` — auki oleva linssi kiinni; `ui linssi pois` — testinäkymät pois.
 
 Kuvasarja linssien tarkistukseen:
@@ -260,6 +261,10 @@ kuva linssi-keksinnot
 ui linssi keksinnot valinaytos
 odota 1
 kuva linssi-valinaytos
+ui linssi pois
+ui linssi matka aloitus
+odota 6
+kuva linssi-matka-aloitus
 ui linssi pois
 ui linssi matka jakso 0
 odota 3

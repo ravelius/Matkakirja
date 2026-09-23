@@ -49,6 +49,45 @@ namespace Matkakirja.Natiivi
             return t;
         }
 
+        /// <summary>
+        /// Ihmisen matkan aloituksen reunapimennys (css/aikajana.css .aikajana-avaus-tausta):
+        /// mask-image radial-gradient(ellipse 70% 76% at 50% 47%, #000 26%, .6 54%, .12 76%,
+        /// transparent 92%) käännettynä mustaksi peitoksi, ja päälle ::after-kehyksen suorat
+        /// liu'ut (ylä/ala 24 %, sivut 20 %). Venyy elementin kokoon kuten webin prosentit.
+        /// </summary>
+        public static Texture2D Vinjetti
+        {
+            get
+            {
+                const string nimi = "vinjetti";
+                if (valimuisti.TryGetValue(nimi, out var t) && t != null) return t;
+                const int N = 128;
+                t = Uusi(nimi, N, N);
+                t.wrapMode = TextureWrapMode.Clamp;
+                var px = new Color[N * N];
+                float[] asemat = { 0f, 0.26f, 0.54f, 0.76f, 0.92f };
+                float[] arvot = { 1f, 1f, 0.6f, 0.12f, 0f };
+                for (int y = 0; y < N; y++)
+                for (int x = 0; x < N; x++)
+                {
+                    float u = (x + 0.5f) / N, v = 1f - (y + 0.5f) / N; // v = 0 ylhäällä
+                    float dx = (u - 0.5f) / 0.70f, dy = (v - 0.47f) / 0.76f;
+                    float r = Mathf.Sqrt(dx * dx + dy * dy);
+                    float nakyy = 0f;
+                    for (int i = 1; i < asemat.Length; i++)
+                        if (r <= asemat[i]) { nakyy = Mathf.Lerp(arvot[i - 1], arvot[i], (r - asemat[i - 1]) / (asemat[i] - asemat[i - 1])); break; }
+                    float pysty = v < 0.24f ? 1f - v / 0.24f : v > 0.76f ? (v - 0.76f) / 0.24f : 0f;
+                    float vaaka = u < 0.2f ? 1f - u / 0.2f : u > 0.8f ? (u - 0.8f) / 0.2f : 0f;
+                    float musta = 1f - nakyy * (1f - pysty) * (1f - vaaka);
+                    px[y * N + x] = new Color(0f, 0f, 0f, musta);
+                }
+                t.SetPixels(px);
+                t.Apply(false, true);
+                valimuisti[nimi] = t;
+                return t;
+            }
+        }
+
         /// <summary>Dialogikortin pergamentti: säteittäinen liukuväri kertaa paperin rae.</summary>
         public static Texture2D Pergamentti
         {

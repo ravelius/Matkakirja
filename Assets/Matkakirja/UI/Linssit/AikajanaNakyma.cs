@@ -22,7 +22,10 @@
 //   LoppuKasittelija     loppukortti
 // Ohjaimet (ylärivi): ◀ ⏸ ▶. Keksinnöissä selaus (Ajo.Siirry) ja
 // Ajo.Tauko/Jatka; ihmisen matkassa Esitys.Valitse(edellinen/seuraava jakso)
-// ja Esitys.Tauko/Jatka. Linssi-oliot luetaan LinssiUi.LinssiOlio-heijastuksella.
+// ja Esitys.Tauko/Jatka. Linssi-oliot sovittimien takaa: LinssiUi.Keksinnot/IhmisenMatka.
+// IHMISEN MATKAN ALOITUS: EsittelyUIssa = true: musta ruutu, Ken Burns -taustakuvat
+// (AvausTausta) ja pergamentti, jossa IHMISEN_MATKA_ALOITUS; Käynnistä →
+// IhmisenMatkaLinssi.Kaynnista() (false = vanat vielä laskennassa → uusi yritys).
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -51,8 +54,10 @@ namespace Matkakirja.Natiivi
         bool tauolla;
         KeksintoTekstit keksinnot;
         IhmisenMatkaAineisto ihminen;
+        IhmisenAloitus ihmisenAloitus = new IhmisenAloitus();
         bool keksinnotHaussa, ihminenHaussa;
-        IVisualElementScheduledItem mustaPois;
+        IVisualElementScheduledItem mustaPois, yritys;
+        readonly AvausTausta avausTausta;
 
         public AikajanaNakyma(UiKerros kerros, LinssiUi linssit)
         {
@@ -122,12 +127,15 @@ namespace Matkakirja.Natiivi
             // Ihmisen matkan musta: tilarivin (15) päällä, linssin tekstien (25) alla.
             musta = Rakenne.El("mk-aikajana-musta", kerros.Juuri(LinssiUi.MustaKerros));
             musta.style.display = DisplayStyle.None;
+            // Aloituksen Ken Burns -tausta mustan päällä, pergamentin (25) alla.
+            avausTausta = new AvausTausta(kerros.Juuri(LinssiUi.MustaKerros));
 
             kerros.TurvaMuuttui += Asettele;
             Asettele();
 
             // Koukut.
-            KeksinnotKerros.EsittelyUIssa = LinssiUi.SovitinLuettavissa("KeksinnotSovitin");
+            KeksinnotKerros.EsittelyUIssa = true;
+            IhmisenMatkaKerros.EsittelyUIssa = true;
             KeksinnotKerros.KelloKasittelija = v => { Ala(Tila.Keksinnot); AsetaKello(Mathf.FloorToInt((float)v).ToString(CultureInfo.InvariantCulture)); };
             KeksinnotKerros.PysakkiKasittelija = NaytaPysakki;
             KeksinnotKerros.ValinaytosKasittelija = NaytaValinaytos;
@@ -181,14 +189,19 @@ namespace Matkakirja.Natiivi
                 {
                     if (tila != Tila.Keksinnot) return;
                     if (!string.IsNullOrEmpty(keksinnot.Otsikko)) otsikko.text = keksinnot.Otsikko.ToUpperInvariant();
-                    var ajo = LinssiUi.LinssiOlio<KeksinnotLinssi>(LinssiUi.Rekisteri?.Auki)?.Ajo;
+                    var ajo = LinssiUi.Keksinnot?.Ajo;
                     if (KeksinnotKerros.EsittelyUIssa && ajo != null && !ajo.Kaynnissa && ajo.Tila.I < 0) NaytaEsittely();
                 });
             }
             else
             {
                 otsikko.text = (linssi.Tiedot.Nimi ?? "").ToUpperInvariant();
-                LataaIhminen(null);
+                LataaIhminen(() =>
+                {
+                    if (tila != Tila.Ihminen) return;
+                    var e = LinssiUi.IhmisenMatka?.Esitys;
+                    if (IhmisenMatkaKerros.EsittelyUIssa && e != null && !e.Kaynnissa && !e.Paattynyt && e.I < 0) NaytaIhmisenAloitus();
+                });
             }
         }
 
@@ -215,6 +228,9 @@ namespace Matkakirja.Natiivi
             // Rakenne.Nayta mitätöi myös kesken olevan avauksen (versiolaskuri).
             Rakenne.Nayta(esittely, false, 0);
             Rakenne.Nayta(loppu, false, 0);
+            yritys?.Pause();
+            AsetaKaynnistaOdottaa(false);
+            avausTausta.Pois(0);
             mustaPois?.Pause();
             musta.style.display = DisplayStyle.None;
             kelloTeksti = null;
@@ -253,17 +269,16 @@ namespace Matkakirja.Natiivi
 
         void VaihdaTauko()
         {
-            var auki = LinssiUi.Rekisteri?.Auki;
             if (tila == Tila.Keksinnot)
             {
-                var ajo = LinssiUi.LinssiOlio<KeksinnotLinssi>(auki)?.Ajo;
+                var ajo = LinssiUi.Keksinnot?.Ajo;
                 if (ajo == null) { AsetaTauko(!tauolla); return; }
                 if (ajo.ValinaytosAuki) { JatkaValinaytoksesta(); return; }
                 if (ajo.Kaynnissa) ajo.Tauko(); else ajo.Jatka();
             }
             else if (tila == Tila.Ihminen)
             {
-                var e = LinssiUi.LinssiOlio<IhmisenMatkaLinssi>(auki)?.Esitys;
+                var e = LinssiUi.IhmisenMatka?.Esitys;
                 if (e == null) { AsetaTauko(!tauolla); return; }
                 if (e.Kaynnissa) e.Tauko(); else e.Jatka();
                 AsetaTauko(!e.Kaynnissa);
@@ -272,17 +287,16 @@ namespace Matkakirja.Natiivi
 
         void Selaa(int suunta)
         {
-            var auki = LinssiUi.Rekisteri?.Auki;
             if (tila == Tila.Keksinnot)
             {
-                var ajo = LinssiUi.LinssiOlio<KeksinnotLinssi>(auki)?.Ajo;
+                var ajo = LinssiUi.Keksinnot?.Ajo;
                 if (ajo == null) return;
                 valinaytos.style.display = DisplayStyle.None;
                 ajo.Siirry(Mathf.Max(0, pysakki + suunta));
             }
             else if (tila == Tila.Ihminen && ihminen != null)
             {
-                var e = LinssiUi.LinssiOlio<IhmisenMatkaLinssi>(auki)?.Esitys;
+                var e = LinssiUi.IhmisenMatka?.Esitys;
                 if (e == null) return;
                 int i = Mathf.Clamp(e.I + suunta, 0, ihminen.Kertomus.Count - 1);
                 e.Valitse(ihminen.Kertomus[i].Id);
@@ -301,9 +315,9 @@ namespace Matkakirja.Natiivi
 
         void Kaynnista()
         {
+            if (tila == Tila.Ihminen) { KaynnistaIhminen(); return; }
             Rakenne.Nayta(esittely, false, 250);
-            var l = LinssiUi.LinssiOlio<KeksinnotLinssi>(LinssiUi.Rekisteri?.Auki);
-            l?.Kaynnista();
+            LinssiUi.Keksinnot?.Kaynnista();
         }
 
         void NaytaPysakki(int i)
@@ -340,7 +354,7 @@ namespace Matkakirja.Natiivi
         {
             valinaytos.style.display = DisplayStyle.None;
             if (pysakki >= 0) paneeli.style.display = DisplayStyle.Flex;
-            var l = LinssiUi.LinssiOlio<KeksinnotLinssi>(LinssiUi.Rekisteri?.Auki);
+            var l = LinssiUi.Keksinnot;
             if (l != null) l.JatkaValinaytoksesta();
             else AsetaTauko(false);
         }
@@ -354,6 +368,39 @@ namespace Matkakirja.Natiivi
         }
 
         // --- ihmisen matka ---------------------------------------------------------------
+
+        void NaytaIhmisenAloitus()
+        {
+            eOtsikko.text = ihmisenAloitus.Otsikko ?? "Ihmisen matka";
+            eTeksti.text = ihmisenAloitus.Teksti ?? "";
+            AsetaKaynnistaOdottaa(false);
+            avausTausta.Nayta(ihmisenAloitus.Taustakuvat);
+            Rakenne.Nayta(esittely, true, 250);
+        }
+
+        /// <summary>Käynnistä: esitys alkaa, kun vanat ovat valmiit (web aloitaAjo odottaa niitä).</summary>
+        void KaynnistaIhminen()
+        {
+            yritys?.Pause();
+            var l = LinssiUi.IhmisenMatka;
+            if (l == null) { Rakenne.Nayta(esittely, false, 250); avausTausta.Pois(550); return; }
+            if (!l.Kaynnista())
+            {
+                AsetaKaynnistaOdottaa(true);
+                yritys = kaynnista.schedule.Execute(() => { if (tila == Tila.Ihminen) KaynnistaIhminen(); }).StartingIn(250);
+                return;
+            }
+            AsetaKaynnistaOdottaa(false);
+            Rakenne.Nayta(esittely, false, 250);
+            // Esitys.Aloita laittoi mustan päälle saman tien: tausta häipyy sen päältä (web 550 ms).
+            avausTausta.Pois(550);
+        }
+
+        void AsetaKaynnistaOdottaa(bool odottaa)
+        {
+            kaynnista.SetEnabled(!odottaa);
+            kaynnista.Q<Label>().text = odottaa ? "Hetki…" : "Käynnistä";
+        }
 
         void Musta(bool paalla, double feidiMs)
         {
@@ -505,6 +552,42 @@ namespace Matkakirja.Natiivi
             return t;
         }
 
+        /// <summary>Aloituskortti, jota IhmisenMatkaAineisto ei lue (web ihmisen-matka.js avauslaatikko).</summary>
+        sealed class IhmisenAloitus
+        {
+            public string Otsikko, Teksti;
+            public List<string> Taustakuvat = new List<string>();
+        }
+
+        /// <summary>
+        /// Taustakuvat matkan järjestyksessä (web ALOITUKSEN_TAUSTAKUVAT): aineiston
+        /// havainnekuvat tunnuksilla; tuntematon tunnus jää pois (tausta vain lyhenee).
+        /// </summary>
+        static readonly string[] AloituksenTaustakuvat =
+            { "jebel-irhoud", "pinnacle-point", "al-wusta", "madjedbebe", "beringia", "monte-verde" };
+
+        static IhmisenAloitus LueIhmisenAloitus(object moduuli, IhmisenMatkaAineisto a)
+        {
+            var v = Ob(MiniJson.Kentta(Ob(moduuli), "exportit"));
+            // laatikoksi(IHMISEN_MATKA_ALOITUS) ?? laatikoksi(IHMISEN_MATKA_ESITTELY): teksti tai { otsikko, teksti }.
+            var t = new IhmisenAloitus();
+            foreach (var nimi in new[] { "IHMISEN_MATKA_ALOITUS", "IHMISEN_MATKA_ESITTELY" })
+            {
+                var x = MiniJson.Kentta(v, nimi);
+                // Vientiformaatti voi kääriä arvon ({ arvo: … }) kuten keksintöjen LINSSI.
+                if (Ob(x) is Dictionary<string, object> o) x = MiniJson.Kentta(o, "arvo") ?? x;
+                if (x is string teksti && teksti.Length > 0) { t.Teksti = teksti; break; }
+                if (Ob(x) is Dictionary<string, object> l && MiniJson.Teksti(l, "teksti") is string lt)
+                { t.Otsikko = MiniJson.Teksti(l, "otsikko"); t.Teksti = lt; break; }
+            }
+            foreach (var tunnus in AloituksenTaustakuvat)
+            {
+                var p = a.Paikat.FirstOrDefault(x => x.Tunnus == tunnus) ?? a.Lisanostot.FirstOrDefault(x => x.Tunnus == tunnus);
+                if (!string.IsNullOrEmpty(p?.Kuva)) t.Taustakuvat.Add(p.Kuva);
+            }
+            return t;
+        }
+
         void LataaIhminen(Action valmis)
         {
             if (ihminen != null) { valmis?.Invoke(); return; }
@@ -524,6 +607,7 @@ namespace Matkakirja.Natiivi
             {
                 ihminen = data == null || kertomusJson == null ? new IhmisenMatkaAineisto()
                     : IhmisenMatkaAineisto.Lue(MiniJson.Jasenna(data), MiniJson.Jasenna(kertomusJson));
+                if (data != null) ihmisenAloitus = LueIhmisenAloitus(MiniJson.Jasenna(data), ihminen);
             }
             catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui ihmisen matka: " + e.Message); ihminen = new IhmisenMatkaAineisto(); }
             var o = ihminenOdottajat.ToList();
@@ -557,7 +641,7 @@ namespace Matkakirja.Natiivi
             return null;
         }
 
-        /// <summary>Testikomento: ihmisen matkan osat ilman linssiä (musta|valot|jakso i|kuva i|loppu).</summary>
+        /// <summary>Testikomento: ihmisen matkan osat ilman linssiä (aloitus|musta|valot|jakso i|kuva i|loppu).</summary>
         public string TestaaIhminen(string mita, int i)
         {
             Ala(Tila.Ihminen);
@@ -576,6 +660,7 @@ namespace Matkakirja.Natiivi
                         if (p != null) { Valot(0); NaytaLoytopaikka(p.Tunnus); AsetaKello(VuottaSitten(p.VuosiaSitten)); }
                         break;
                     case "loppu": IhmisenLoppu(); break;
+                    case "aloitus": NaytaIhmisenAloitus(); break;
                     default:
                         int n = Mathf.Clamp(i, 0, Math.Max(0, ihminen.Kertomus.Count - 1));
                         var j = ihminen.Kertomus.Count > 0 ? ihminen.Kertomus[n]
