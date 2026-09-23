@@ -850,7 +850,8 @@ namespace Matkakirja.Natiivi
             m.Loysi += (p, l) =>
             {
                 kysymysLoyto = l;
-                if (m == matka) Aanita(Aanitunnukset.Aarre(l.Tyyppi));
+                // Aarreääni (star/gem/empty) ei soi tässä: web soittaa treasureSound(type) vasta laatan
+                // paljastuskortilla (ui.js playTokenReveal), joten UI soittaa Aanitunnukset.Aarre(tyyppi) itse.
                 if (l.Tyyppi != Laattatyypit.Paaaarre || m != matka) return;
                 var yv = MatkanYhteenveto.Laske(m, Laukku());
                 if (!yv.KaikkiLoytyi) return;
@@ -1181,12 +1182,15 @@ namespace Matkakirja.Natiivi
             osat.AddRange(tapahtumat);
             if (t.Saapui != null) osat.Add("Saavuit: " + PeliApu.KaupunginNimi(verkko, t.Saapui));
             Viesti(string.Join(" · ", osat));
-            if (t.Noppa.HasValue) Aanita(Aanitunnukset.Noppa);
             Debug.Log($"MATKAKIRJA peli: {PeliApu.TavanNimi(t.Tapa)} {t.Lahto} → {t.Kohde}" + (t.Noppa.HasValue ? $" (noppa {t.Noppa})" : "")
                       + (t.Saapui != null ? ", saapui " + t.Saapui : ""));
 
             var a = PeliApu.Koordinaatti(verkko, t.Lahto);
             var b = PeliApu.Koordinaatti(verkko, t.Kohde);
+            // dieLand: näkyvän nopan kanssa UI soittaa sen nopan ensimmäisessä osumassa (web animateDie
+            // onLand); ohjain soittaa sen vain, kun noppaa ei näytetä (sama ehto kuin PeliNakymat.Noppa-kutsulla).
+            bool noppaNakyy = t.Noppa.HasValue && PeliNakymat.Noppa != null && Kaytossa && a.HasValue && t.Liikkui && b.HasValue;
+            if (t.Noppa.HasValue && !noppaNakyy) Aanita(Aanitunnukset.Noppa);
             if (!t.Liikkui || !b.HasValue)
             {
                 Kartalle(false);

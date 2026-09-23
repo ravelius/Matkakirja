@@ -1,28 +1,22 @@
-// TEHOSTEIDEN SIIVUTAULU (Natiivi-UI, B7, 23.9.2026) — VÄLIAIKAINEN.
+// TEHOSTEIDEN SIIVUTAULU (B7 §1.8): verkkopelin js/sound.js REAL_SAMPLES (tiedosto) ja
+// REAL_PLAYERS (siivu) yhtenä puhtaana datana. Muoto on sovittu Natiivi-UI:n kanssa
+// (UI/UiTehosteet.cs on sama kenttänimistö): Tehoste {Nimi, Url, Aloitus, Kesto, Gain, Vire?,
+// Tasavire}, Tehostetaulu {Master, NousuS, LaskuS, VireHeitto, Kaikki, Hae, Lento}.
+// Natiivi-UI:n Aanet.cs vaihtaa aliaksensa tähän (using Tehostetaulu = Matkakirja.Peli.Tehostetaulu).
 //
-// Webin js/sound.js REAL_SAMPLES (tiedosto) + REAL_PLAYERS (siivu) yhtenä datana,
-// B7-spesifikaation §1.8 mukaan. Muoto on TÄSMÄLLEEN Pelikoodarin tulevan
-// puhtaan datataulun `Tehostetaulu` / `Tehoste` muoto (sama kenttänimistö), jotta
-// vaihto on pelkkä viittauksen vaihto:
-//   1. Aanet.cs:n alussa kaksi aliasta:
-//        using Tehostetaulu = Matkakirja.Natiivi.UiTehosteet;  → Pelikoodarin Tehostetaulu
-//        using TehosteRivi  = Matkakirja.Natiivi.UiTehoste;    → Pelikoodarin Tehoste
-//   2. tämä tiedosto (ja .meta) pois.
+// Soiva taso = Gain × Master × Taso(Tehosteet) (webin bus → master 0,24 × tehosteVoima).
+// Siivu: 10 ms eksponentiaalinen nousu, 40 ms lasku lopussa; toistonopeus ±5 %, ellei Tasavire
+// tai nimetty Vire (±2 %). Aloitus: alusta | isku (webin findHits) | hanta (äänitteen loppu,
+// Kesto = hännän pituus) | satunnainen (20–80 %). Kultainen jälki (tehosteet) vartioi rivit.
 //
-// URL:t media.js:n kaavalla (§1.9): assets/audio/<nimi> → media.matkakirja.app/audio/<nimi>,
-// Freesound-esikuuntelu → media.matkakirja.app/aanet/freesound-<ID>.mp3. Efektit
-// eivät ole UUSITUT_AANET-taulussa, joten ?v=-kyselyä ei tule. Tiedostot tarkistettu
-// ämpäristä (HTTP 200) 23.9.2026.
-//
-// Pois jätetyt webin rivit: zoom (toistonopeuden käyrä, natiivissa ei kartan zoomausääntä)
-// ja robber (rosvolaatat poistettu pelistä). Pulun tehosteet ovat Aanet.cs:ssä (UI:n oma
-// kirjasto manifestin tunnuksin, §5.3).
+// Pois jätetty (kuten UiTehosteet): zoom (toistonopeuden käyrä, natiivissa ei kartan zoomausääntä),
+// robber (rosvolaatat poistettu) ja pulun tehosteet (Natiivi-UI:n oma kirjasto, §5.3).
 using System.Collections.Generic;
 
-namespace Matkakirja.Natiivi
+namespace Matkakirja.Peli
 {
     /// <summary>Yksi tehoste: mistä tiedostosta, mistä kohtaa ja kuinka pitkä siivu, millä voimalla.</summary>
-    public sealed class UiTehoste
+    public sealed class Tehoste
     {
         public string Nimi, Url;
         /// <summary>alusta | isku (webin findHits) | hanta (äänitteen loppu) | satunnainen (20–80 %).</summary>
@@ -34,21 +28,23 @@ namespace Matkakirja.Natiivi
         public bool Tasavire;
     }
 
-    public static class UiTehosteet
+    public static class Tehostetaulu
     {
         /// <summary>Webin MASTER_PERUSTASO; soiva taso = Gain × Master × Taso(Tehosteet).</summary>
         public const float Master = 0.24f, NousuS = 0.010f, LaskuS = 0.040f, VireHeitto = 0.05f;
+        /// <summary>Nimetyn vireen heitto (webin jitter(vire, 0,02)).</summary>
+        public const float NimettyVireHeitto = 0.02f;
 
-        const string Audio = Aanet.Juuri + "audio/", Freesound = Aanet.Juuri + "aanet/freesound-";
+        const string Audio = AaniOsoite.Juuri + "audio/", Freesound = AaniOsoite.Juuri + "aanet/freesound-";
 
-        static UiTehoste T(string nimi, string url, string aloitus, float kesto, float gain, float? vire = null, bool tasavire = false)
-            => new UiTehoste { Nimi = nimi, Url = url, Aloitus = aloitus, Kesto = kesto, Gain = gain, Vire = vire, Tasavire = tasavire };
+        static Tehoste T(string nimi, string url, string aloitus, float kesto, float gain, float? vire = null, bool tasavire = false)
+            => new Tehoste { Nimi = nimi, Url = url, Aloitus = aloitus, Kesto = kesto, Gain = gain, Vire = vire, Tasavire = tasavire };
 
-        static readonly Dictionary<string, UiTehoste> kaikki = Taulu(
+        static readonly Dictionary<string, Tehoste> kaikki = Taulu(
             // Noppa: iskukohdasta lyhyt naksu, asettuminen äänitteen hännästä.
             T("dieTick", Freesound + "94031.mp3", "isku", 0.08f, 0.40f),
             T("dieLand", Freesound + "94031.mp3", "hanta", 0.6f, 0.55f),
-            // Kirjoituskoneen lyönti (voima kutsujalta, etusivu 1, pöllön taustanaputus vaimeampi).
+            // Kirjoituskoneen lyönti (voima kutsujalta: etusivu 1, pöllön taustanaputus vaimeampi).
             T("pen", Freesound + "856165.mp3", "isku", 0.24f, 0.35f, tasavire: true),
             T("quizOpen", Freesound + "842183.mp3", "alusta", 1.1f, 0.40f),
             T("click", Audio + "efekti-klik.mp3", "alusta", 0.5f, 0.35f),
@@ -78,24 +74,24 @@ namespace Matkakirja.Natiivi
             T("turn", Audio + "efekti-vuoro.mp3", "alusta", 1.1f, 0.30f),
             T("win", Audio + "efekti-voitto.mp3", "alusta", 3.6f, 0.50f));
 
-        static Dictionary<string, UiTehoste> Taulu(params UiTehoste[] rivit)
+        static Dictionary<string, Tehoste> Taulu(params Tehoste[] rivit)
         {
-            var d = new Dictionary<string, UiTehoste>();
+            var d = new Dictionary<string, Tehoste>();
             foreach (var r in rivit) d[r.Nimi] = r;
             return d;
         }
 
-        public static IReadOnlyDictionary<string, UiTehoste> Kaikki => kaikki;
+        public static IReadOnlyDictionary<string, Tehoste> Kaikki => kaikki;
 
         /// <summary>Tehoste nimellä; null = ei tunneta (webissä synteesi, natiivissa hiljaisuus §2.10).</summary>
-        public static UiTehoste Hae(string nimi) => nimi != null && kaikki.TryGetValue(nimi, out var t) ? t : null;
+        public static Tehoste Hae(string nimi) => nimi != null && kaikki.TryGetValue(nimi, out var t) ? t : null;
 
         /// <summary>Lentomoottori (webin startFlight/stopFlight, tehoste `jet`).</summary>
         public static class Lento
         {
-            public const string Url = Aanet.Juuri + "aanet/freesound-315660.mp3";
-            /// <summary>Silmukka alkaa tästä, jos äänite on yli 60 s (webin jet.duration > 60 ? 40 : 0).</summary>
-            public const float SilmukkaAlkuS = 40f;
+            public const string Url = AaniOsoite.Juuri + "aanet/freesound-315660.mp3";
+            /// <summary>Silmukka alkaa tästä, jos äänite on yli PitkaAaniteS (webin jet.duration &gt; 60 ? 40 : 0).</summary>
+            public const float SilmukkaAlkuS = 40f, PitkaAaniteS = 60f;
             /// <summary>Huipputaso (× Master × Taso(Tehosteet)); eksponentiaalinen nousu 0,0001 → Gain välillä NousuAlkuS…NousuLoppuS, lasku LaskuS.</summary>
             public const float Gain = 0.7f, NousuAlkuS = 0.15f, NousuLoppuS = 5.2f, LaskuS = 0.9f;
         }

@@ -145,13 +145,6 @@ namespace Matkakirja.Natiivi
                 if (LinssiUi.Rekisteri?.Auki != null || Aloitus.Auki) return;
                 Nostokortti.Avaa(id);
             });
-            // Turisti-info-merkin napautus (Natiiviseppä, rajapintatoive) → turistiopas isossa muodossaan
-            // (web avaaTuristiOpas: ei välipop-upia); linssin ja aloituksen aikana ei.
-            UiPalvelut.TuristiInfoNapautettu += id => UiKerros.PaaSaikeessa(() =>
-            {
-                if (LinssiUi.Rekisteri?.Auki != null || Aloitus.Auki) return;
-                LehtiSisalto.HaeOpas(id, o => { if (o != null) Nahtavyydet.AvaaOpas(o); });
-            });
             // Linssit (valitsin, peite, selite, astronautti, vertailu, aikajanat): kartuschan ja selitteen jälkeen.
             Linssit = new LinssiUi(kerros, this);
             Valikko.TietojaPainettu += Tietoja.Avaa;
@@ -337,9 +330,10 @@ namespace Matkakirja.Natiivi
             kierto ??= UnityEngine.Object.FindAnyObjectByType<PalloKierto>();
             if (kierto != null && kierto.RuutuPiste(lat, lon, out var ruutu, 5000))
                 alku = UnityEngine.UIElements.RuntimePanelUtils.ScreenToPanel(juuri.panel, new Vector2(ruutu.x, Screen.height - ruutu.y));
-            // Web animateDie: onTick → dieTick (pyörintä), onBounce → clack (pomppu). dieLand tulee
-            // PeliOhjaimen Aani-tapahtumasta.
+            // Web animateDie: onTick → dieTick (pyörintä), onLand → dieLand (ensimmäinen osuma; ohjain ei
+            // soita sitä näkyvän nopan kanssa, Pelikoodari b32be57), onBounce → clack (pomppu).
             Noppa.Heita(arvo, alku, loppu, valmis, vahennettyLiike: LinssiUi.VahennettyLiike(),
+                laskeutui: () => Aanet.Tehoste(Aanitunnukset.Noppa),
                 pomppu: () => Aanet.Tehoste("clack"), kohina: () => Aanet.Tehoste("dieTick"));
         }
 

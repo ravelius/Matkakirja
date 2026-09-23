@@ -370,6 +370,20 @@ namespace Matkakirja.Editori
 
         static bool TestFlightVienti;
 
+        /// <summary>
+        /// Build-numero (PlayerSettings.iOS.buildNumber = CFBundleVersion) Xcode-projektin
+        /// StreamingAssetsiin (Data/Raw/rakennus.txt): BuildNumeroSilta lukee sen Natiivi-UI:n
+        /// "Peli päivittyi" -vertailuun. Ei kirjoita repoon.
+        /// </summary>
+        [UnityEditor.Callbacks.PostProcessBuild(180)]
+        static void BuildNumeroTiedostoon(BuildTarget kohde, string polku)
+        {
+            if (kohde != BuildTarget.iOS) return;
+            string kansio = Path.Combine(polku, "Data", "Raw");
+            Directory.CreateDirectory(kansio);
+            File.WriteAllText(Path.Combine(kansio, "rakennus.txt"), PlayerSettings.iOS.buildNumber ?? "");
+        }
+
         /// <summary>Laattapalvelin (127.0.0.1) vaatii ATS-poikkeuksen paikalliselle verkolle.</summary>
         [UnityEditor.Callbacks.PostProcessBuild(190)]
         static void PaikallinenVerkkoPlist(BuildTarget kohde, string polku)
