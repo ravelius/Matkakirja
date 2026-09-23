@@ -13,7 +13,13 @@
 //   [kirja]   Turistiopas          (web liuskan rivi: kaupungilla on oppaan artikkeli)
 //   [kompassi] Liiku tänne
 //   [kone]    Mannerlento (300 £)    (omassa kaupungissa, mantereen aarre löytynyt)
+//   ───────                          (hiusviiva, web liuskan PAATOKSET 34 kohta 8)
+//   ● Kadonneet ihmeet (2)           (nostokategoriat haitarina, KaupunkiNostot; toisen avaus
+//   ● Skandaalit (3)                  sulkee edellisen, saman napautus sulkee)
+//        Mona Lisan varkaus          (kohderivi: kortti kiinni ja nosto auki, web liuska = null)
 //                              [Sulje]
+//   ▾ lisää / ▴ edelliset            (kelausrivit kortin ala- ja yläreunassa, kun sisältö ei mahdu:
+//                                     web kelattuLiuska ja kelauksenAskel, askel = ikkuna − 2 riviä)
 //
 // Näyttödata tulee sisältöpaketista (UiSisalto, Kuvat); toiminnot antaa
 // PeliOhjain (Pelikoodarin KaupunkiToiminnot, null = rivi piiloon). Kortti ei
@@ -22,6 +28,8 @@
 // Kortti peittää vain oman alueensa (UiKerros.Peittaa → SyoteLukko).
 // Korvaa 3D:n NimiKortin, kun pelisilmukka on päällä (UiNakymat).
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -35,6 +43,8 @@ namespace Matkakirja.Natiivi
 
         readonly UiKerros kerros;
         readonly VisualElement alue, kuvaKehys, kuva, rivit;
+        readonly ScrollView vieritys;
+        readonly Button kelausYlos, kelausAlas;
         readonly Kortti kortti;
         readonly Label maa, nimio, kuvateksti, lahde, johdanto;
         readonly VisualElement lippu;
@@ -42,6 +52,15 @@ namespace Matkakirja.Natiivi
         string kaupunki;
         OpasArtikkeli opas;
         bool nahtavyyksia;
+        KaupunkiTiedot tiedot;
+        /// <summary>Nostokategoriat (null = ei vielä ladattu), avattu kategoria (null = kaikki kiinni).</summary>
+        List<NostoKategoria> kategoriat;
+        string avattu;
+        readonly List<Action> nostoOdottajat = new List<Action>();
+
+        /// <summary>Kelausrivin askel = näkyvä ala miinus kaksi riviä (web kelauksenAskel).</summary>
+        const float RivinKorkeus = 40f;
+        static readonly string KelausYlosIkoni = "<path d=\"M5.5 15 12 8.5 18.5 15\"/>";
 
         public bool Auki { get; private set; }
         /// <summary>Kortin alue (pulu hyppää kortin yläpuolelle).</summary>
@@ -60,11 +79,19 @@ namespace Matkakirja.Natiivi
 
             kortti = new Kortti("mk-kaupunkikortti");
             alue.Add(kortti);
-            var vieritys = new ScrollView(ScrollViewMode.Vertical);
+            // Kelausrivit vierityksen ulkopuolella: näkyvät vain, kun sisältöä on piilossa ylä- tai alapuolella.
+            kelausYlos = Kelausrivi("edelliset", KelausYlosIkoni, -1);
+            kortti.Sisus.Add(kelausYlos);
+            vieritys = new ScrollView(ScrollViewMode.Vertical);
             vieritys.AddToClassList("mk-kaupunkikortti__vieritys");
             vieritys.verticalScrollerVisibility = ScrollerVisibility.Hidden;
             vieritys.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
             kortti.Sisus.Add(vieritys);
+            kelausAlas = Kelausrivi("lisää", Ikonit.NuoliAlas, 1);
+            kortti.Sisus.Add(kelausAlas);
+            vieritys.verticalScroller.valueChanged += _ => PaivitaKelaus();
+            vieritys.contentContainer.RegisterCallback<GeometryChangedEvent>(_ => PaivitaKelaus());
+            vieritys.contentViewport.RegisterCallback<GeometryChangedEvent>(_ => PaivitaKelaus());
 
             var masto = Rakenne.El("mk-masto", vieritys, PickingMode.Ignore);
             var ylarivi = Rakenne.El("mk-masto__ylarivi", masto, PickingMode.Ignore);
@@ -99,9 +126,14 @@ namespace Matkakirja.Natiivi
 
         public void Nayta(string kaupunkiId, string nimi, KaupunkiToiminnot t)
         {
+            if (kaupunki != kaupunkiId) nostoOdottajat.Clear();
             kaupunki = kaupunkiId;
             opas = null;
             nahtavyyksia = false;
+            tiedot = null;
+            kategoriat = null;
+            avattu = null;
+            vieritys.scrollOffset = Vector2.zero;
             toiminnot = t ?? new KaupunkiToiminnot();
             nimio.text = (nimi ?? kaupunkiId ?? "").ToUpperInvariant();
             maa.text = "";
@@ -153,7 +185,18 @@ namespace Matkakirja.Natiivi
                     kuvaKehys.style.display = DisplayStyle.Flex;
                 });
             }
+            tiedot = k;
             RakennaRivit(k);
+            // Nostokategoriat (web liuskan kategoriarivit): kaupungin sisäiset nostot aiheittain.
+            KaupunkiNostot.Hae(k.Id, l =>
+            {
+                if (!Auki || kaupunki != k.Id) return;
+                kategoriat = l;
+                RakennaRivit(k);
+                var odottajat = nostoOdottajat.ToArray();
+                nostoOdottajat.Clear();
+                foreach (var a in odottajat) a();
+            });
             // Nähtävyydet-rivi, kun kaupungilla on kohdekartta (web KAUPUNKIKARTAT).
             Kohdekartat.Hae(k.Id, kk =>
             {
@@ -192,8 +235,126 @@ namespace Matkakirja.Natiivi
             // Tutki kaupunkia -riviä ei ole (Fablen tarkastus A6: fokusmoodi korvaa, Pelikoodarin vihreä piste).
             if (t.Mannerlento != null) Rivi(Ikonit.Viiva["kone"], t.MannerlentoTeksti ?? "Mannerlento", null, t.Mannerlento);
             if (t.Liiku != null) Rivi(Ikonit.Viiva["kompassi"], t.LiikuTeksti ?? "Liiku tänne", null, t.Liiku);
+            Haitari();
             var napit = Rakenne.El("mk-kortti__napit", rivit, PickingMode.Ignore);
             Rakenne.Nappi("Sulje", "mk-nappi--haamu", Sulje, napit);
+        }
+
+        // --- nostokategoriat haitarina (web liuskanRivit) -----------------------------------
+
+        VisualElement Haitari()
+        {
+            if (kategoriat == null || kategoriat.Count == 0) return null;
+            VisualElement avattuRivi = null;
+            // Hiusviiva erottaa yläryhmän kategorioista (web PAATOKSET 34 kohta 8).
+            Rakenne.El("mk-liuska__hiusviiva", rivit, PickingMode.Ignore);
+            foreach (var kat in kategoriat)
+            {
+                var k = kat;
+                bool auki = avattu == k.Aihe;
+                var b = Rakenne.Nappi(null, "mk-liuska__rivi mk-liuska__kategoria", () => { if (Auki) VaihdaKategoria(k.Aihe); }, rivit);
+                b.EnableInClassList("mk-liuska__rivi--auki", auki);
+                var pallo = Rakenne.El("mk-liuska__pallo", b, PickingMode.Ignore);
+                pallo.style.backgroundColor = Kuviot.Vari(k.Vari);
+                Rakenne.Teksti(k.Otsikko, "mk-liuska__nimi", b);
+                if (!auki) continue;
+                avattuRivi = b;
+                foreach (var n in k.Jasenet)
+                {
+                    var nosto = n;
+                    var r = Rakenne.Nappi(null, "mk-liuska__rivi mk-liuska__kohde", () => { if (Auki) AvaaNosto(nosto); }, rivit);
+                    Rakenne.Teksti(nosto.Nimi, "mk-liuska__nimi", r);
+                }
+            }
+            return avattuRivi;
+        }
+
+        /// <summary>Kategorian napautus: avaa (edellinen sulkeutuu) tai sulkee avatun. Uusi alkaa aina alusta.</summary>
+        void VaihdaKategoria(string aihe)
+        {
+            avattu = avattu == aihe ? null : aihe;
+            rivit.Clear();
+            RakennaRivit(tiedot);
+            // Web: kelaus nollautuu kategorian vaihtuessa; natiivissa avattu rivi vieritetään näkyviin.
+            if (avattu == null) return;
+            foreach (var e in rivit.Children())
+                if (e.ClassListContains("mk-liuska__rivi--auki")) { Rakenne.Vierita(vieritys, e, 60); break; }
+        }
+
+        /// <summary>Kohderivi: kortti kiinni (web liuska = null) ja noston kortti auki.</summary>
+        void AvaaNosto(KaupunkiNosto n)
+        {
+            Sulje();
+            n.Avaa();
+        }
+
+        // --- kelausrivit (web kelattuLiuska) ------------------------------------------------
+
+        Button Kelausrivi(string teksti, string ikoni, int suunta)
+        {
+            var b = Rakenne.Nappi(teksti, "mk-liuska__kelaus", () => { if (Auki) Kelaa(suunta); }, null, ikoni);
+            Kirjasimet.Aseta(b, Kirjasin.Kone);
+            b.style.display = DisplayStyle.None;
+            return b;
+        }
+
+        float Liikkumavara => Mathf.Max(0f, vieritys.contentContainer.layout.height - vieritys.contentViewport.layout.height);
+
+        void PaivitaKelaus()
+        {
+            float vara = Liikkumavara, y = vieritys.scrollOffset.y;
+            bool ylos = vara > 1f && y > 1f, alas = vara > 1f && y < vara - 1f;
+            var ny = ylos ? DisplayStyle.Flex : DisplayStyle.None;
+            var na = alas ? DisplayStyle.Flex : DisplayStyle.None;
+            if (kelausYlos.style.display != ny) kelausYlos.style.display = ny;
+            if (kelausAlas.style.display != na) kelausAlas.style.display = na;
+        }
+
+        /// <summary>Kelausrivi siirtää näkyvää alaa; kortti pysyy auki (web kohta 5).</summary>
+        public void Kelaa(int suunta)
+        {
+            float ikkuna = vieritys.contentViewport.layout.height;
+            if (float.IsNaN(ikkuna) || ikkuna <= 0) return;
+            float askel = Mathf.Max(RivinKorkeus, ikkuna - 2 * RivinKorkeus);
+            float y = Mathf.Clamp(vieritys.scrollOffset.y + suunta * askel, 0f, Liikkumavara);
+            vieritys.scrollOffset = new Vector2(0, y);
+            PaivitaKelaus();
+        }
+
+        // --- testikomento (ui kaupunki <id> …) ---------------------------------------------
+
+        /// <summary>Kutsuu toiminnon, kun nykyisen kaupungin nostokategoriat on ladottu korttiin.</summary>
+        public void KunNostot(Action a)
+        {
+            if (a == null) return;
+            if (Auki && kategoriat != null) a();
+            else nostoOdottajat.Add(a);
+        }
+
+        /// <summary>Kategoriat tekstinä: "Skandaalit (3): Mona Lisan varkaus, …; Muut (1): …".</summary>
+        public string Kuvaus() => kategoriat == null ? "ei ladattu" : kategoriat.Count == 0 ? "ei nostoja"
+            : string.Join("; ", kategoriat.Select(k => k.Otsikko + ": " + string.Join(", ", k.Jasenet.Select(n => n.Nimi))));
+
+        /// <summary>Avaa kategorian aiheella tai järjestysnumerolla (1…); null = ensimmäinen.</summary>
+        public string AvaaKategoria(string aihe)
+        {
+            if (kategoriat == null || kategoriat.Count == 0) return "ei nostokategorioita";
+            var k = aihe == null ? kategoriat[0]
+                : int.TryParse(aihe, out var nro) && nro >= 1 && nro <= kategoriat.Count ? kategoriat[nro - 1]
+                : kategoriat.Find(x => x.Aihe == aihe || string.Equals(x.Nimi, aihe, StringComparison.OrdinalIgnoreCase));
+            if (k == null) return "ei kategoriaa " + aihe;
+            if (avattu != k.Aihe) VaihdaKategoria(k.Aihe);
+            return null;
+        }
+
+        /// <summary>Napauttaa avatun kategorian n:ttä kohderiviä (1…).</summary>
+        public string NapautaKohde(int n)
+        {
+            var k = kategoriat?.Find(x => x.Aihe == avattu);
+            if (k == null) return "ei avattua kategoriaa";
+            if (n < 1 || n > k.Maara) return "kohteita on " + k.Maara;
+            AvaaNosto(k.Jasenet[n - 1]);
+            return null;
         }
 
         void Rivi(string ikoni, string nimi, string selite, Action toiminto)

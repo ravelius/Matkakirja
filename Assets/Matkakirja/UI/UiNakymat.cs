@@ -38,6 +38,8 @@ namespace Matkakirja.Natiivi
         public readonly PuluChat Chat;
         public readonly Saapumistraileri Traileri;
         public readonly Tietoja Tietoja;
+        /// <summary>"Kerro mitä huomasit": ehdotus, kuvavinkki ja pro (webin naytaPalauteKulmasta).</summary>
+        public readonly PalauteIkkuna Palaute;
         public readonly LinssiUi Linssit;
         public readonly Aloitusnakyma Aloitus;
         public readonly Huipennus Huipennus;
@@ -117,6 +119,7 @@ namespace Matkakirja.Natiivi
             // Livia lennähtää paikalle, kun käyttöliittymä on valmis (webin ensisaapuminen: handoff).
             kerros.Juuri(UiKerros.Tilarivi).schedule.Execute(() => Pulu.Tilanne("arrival")).StartingIn(1500);
             Tietoja = new Tietoja(kerros);
+            Palaute = new PalauteIkkuna(kerros); // hampurilaisen "ehdota sisältöä"
             Valikko.MitaUutta.TarkistaPaivitys(); // web: "Peli päivittyi", kun laitteella oli aiempi versio
             Aloitus = new Aloitusnakyma(kerros);
             Huipennus = new Huipennus(kerros);
@@ -142,9 +145,17 @@ namespace Matkakirja.Natiivi
                 if (LinssiUi.Rekisteri?.Auki != null || Aloitus.Auki) return;
                 Nostokortti.Avaa(id);
             });
+            // Turisti-info-merkin napautus (Natiiviseppä, rajapintatoive) → turistiopas isossa muodossaan
+            // (web avaaTuristiOpas: ei välipop-upia); linssin ja aloituksen aikana ei.
+            UiPalvelut.TuristiInfoNapautettu += id => UiKerros.PaaSaikeessa(() =>
+            {
+                if (LinssiUi.Rekisteri?.Auki != null || Aloitus.Auki) return;
+                LehtiSisalto.HaeOpas(id, o => { if (o != null) Nahtavyydet.AvaaOpas(o); });
+            });
             // Linssit (valitsin, peite, selite, astronautti, vertailu, aikajanat): kartuschan ja selitteen jälkeen.
             Linssit = new LinssiUi(kerros, this);
             Valikko.TietojaPainettu += Tietoja.Avaa;
+            Valikko.EhdotaPainettu += () => Palaute.Avaa();
             Tilarivi.LogoPainettu += () => { Valikko.Sulje(); Aanentasot.Sulje(); Matkalaukku.Sulje(); Tietoja.Avaa(); };
             UiSisalto.Lataa(null); // kaupunkidata valmiiksi ennen ensimmäistä napautusta
 
@@ -193,6 +204,8 @@ namespace Matkakirja.Natiivi
             };
             // Aloitus ja matkan huipennus (Pelikoodarin tapahtumat); tila voi olla jo Aloitus.
             o.AloitusTarjolla += () => UiKerros.PaaSaikeessa(() => NaytaAloitus(o));
+            // Aloituskaava: avausteksti häipyy, kun aloituslento on perillä (Pelikoodarin PeliOhjain.Aloitus).
+            o.AloituslentoPaattyi += _ => UiKerros.PaaSaikeessa(Aloitus.AloituslentoPaattyi);
             if (o.Tila == SilmukanTila.Aloitus) NaytaAloitus(o);
             // Rahan muutos kupliksi (web buildToast kind stamp, "+10 puntaa · Lehden minitehtävä ratkesi").
             o.RahaMuuttui += (muutos, syy, _) => UiKerros.PaaSaikeessa(() => Leima.Raha(muutos, syy));
@@ -295,6 +308,7 @@ namespace Matkakirja.Natiivi
             Karttaselite.Maakunnat.SuljeKortti();
             Kartuscha.Sulje();
             Tietoja.Sulje();
+            Palaute.Sulje();
             Linssit.SuljeValikot();
             Chat.Sulje();
         }

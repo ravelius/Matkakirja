@@ -45,7 +45,7 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// Avaa uuden minipopupin (sulkee edellisen); rakenna täyttää Sisallon. kerros = UiKerros-kerros
-        /// (oletus Valikot; lehden ja nähtävyysarkin päälle UiKerros.Traileri).
+        /// (oletus Valikot; Traileri = lehden, nähtävyysarkin ja aloitusnäkymän päälle, ettei popup jää alle).
         /// </summary>
         public static Minipopup Avaa(string otsikko, Action<VisualElement> rakenna, string luokka = null, int kerros = UiKerros.Valikot)
         {
@@ -59,8 +59,8 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Avaa minipopupin pelkällä tekstillä (web sisalto: string).</summary>
-        public static Minipopup AvaaTeksti(string otsikko, string teksti) =>
-            Avaa(otsikko, s => Rakenne.Teksti(teksti, "mk-minipopup__teksti", s));
+        public static Minipopup AvaaTeksti(string otsikko, string teksti, int kerros = UiKerros.Valikot) =>
+            Avaa(otsikko, s => Rakenne.Teksti(teksti, "mk-minipopup__teksti", s), null, kerros);
 
         public static void SuljeAuki() => auki?.Sulje();
 

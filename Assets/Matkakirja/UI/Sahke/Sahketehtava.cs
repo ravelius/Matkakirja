@@ -293,12 +293,19 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>
-        /// Kortin kaupunki ja tehtävä. SahkeKortissa ei ole kaupunkia: tehtävä tunnistetaan fokusvirroista
-        /// hahmon ja sähkeen perusteella; epäselvässä tapauksessa vihjeenä avauksen Livian kuplat (ohjain
-        /// soittaa ne samassa ruudussa ennen Naytaa), saman kortin edellinen kaupunki tai pelaajan kaupunki.
+        /// Kortin kaupunki ja tehtävä: SahkeKortti.Kaupunki ja HakemistoMaa (Pelikoodari 5f31a79). Varana
+        /// (vanha kortti ilman kaupunkia) tunnistus fokusvirroista hahmon ja sähkeen perusteella; vihjeenä
+        /// avauksen Livian kuplat, saman kortin edellinen kaupunki tai pelaajan kaupunki.
         /// </summary>
         void TunnistaTehtava(SahkeKortti k, bool uusiAvaus)
         {
+            if (!string.IsNullOrEmpty(k.Kaupunki) && Fokusvirrat.Hae(k.Kaupunki)?.Sahketehtava is Matkakirja.Natiivi.Sahketehtava suora)
+            {
+                tehtava = suora;
+                kaupunki = k.Kaupunki;
+                iso = k.HakemistoMaa ?? suora.HakemistoMaa ?? UiSisalto.Kaupunki(kaupunki)?.Maa;
+                return;
+            }
             var pelaaja = PeliOhjain.Instanssi?.PelaajanKaupunki;
             var vihje = avausKaupunki ?? (uusiAvaus ? pelaaja ?? kaupunki : kaupunki ?? pelaaja);
             var ehdokkaat = Fokusvirrat.Kaikki.Where(v => v.Sahketehtava != null).Select(v => v.Sahketehtava)
@@ -458,10 +465,10 @@ namespace Matkakirja.Natiivi
             if (k.Aukot != null && k.Aukot.Count > 0)
             {
                 var vapaa = Rakenne.El("mk-st__vapaa", isa, PickingMode.Ignore);
-                Kirjasimet.Aseta(Rakenne.Teksti(SahkeTeksti.JsIsot(tehtava?.VapaaOtsake ?? "Tai kirjoita vastaus omin sanoin"), "mk-st__vapaaotsake", vapaa), Kirjasin.Kone);
+                Kirjasimet.Aseta(Rakenne.Teksti(SahkeTeksti.JsIsot(nakyva?.VapaaOtsake ?? tehtava?.VapaaOtsake ?? "Tai kirjoita vastaus omin sanoin"), "mk-st__vapaaotsake", vapaa), Kirjasin.Kone);
                 var kentta = new TextField { multiline = true, maxLength = 400 };
                 kentta.AddToClassList("mk-st__vapaakentta");
-                kentta.textEdition.placeholder = tehtava?.VapaaVihje ?? "Yhdellä lauseella, omin sanoin";
+                kentta.textEdition.placeholder = nakyva?.VapaaVihje ?? tehtava?.VapaaVihje ?? "Yhdellä lauseella, omin sanoin";
                 kentta.tooltip = "Vastaus omin sanoin";
                 if (vapaaAvain == avain && !string.IsNullOrEmpty(vapaaTeksti)) kentta.SetValueWithoutNotify(vapaaTeksti);
                 kentta.RegisterValueChangedCallback(e => { vapaaAvain = avain; vapaaTeksti = e.newValue; });
@@ -469,7 +476,7 @@ namespace Matkakirja.Natiivi
                 vapaa.Add(kentta);
                 vapaaKentta = kentta;
                 var vapaanapit = Rakenne.El("mk-st__vapaanapit", vapaa, PickingMode.Ignore);
-                Toissijainen(tehtava?.LahetaVapaa ?? "Lähetä omin sanoin", () => LahetaVapaa(avain), vapaanapit);
+                Toissijainen(nakyva?.LahetaVapaa ?? tehtava?.LahetaVapaa ?? "Lähetä omin sanoin", () => LahetaVapaa(avain), vapaanapit);
             }
 
             tulos = Rakenne.Teksti("", "mk-st__tulos", isa);
@@ -489,7 +496,7 @@ namespace Matkakirja.Natiivi
 
             RakennaPullat(k, isa);
 
-            Ensisijainen(tehtava?.Laheta ?? "Lähetä sähke", Laheta, napit);
+            Ensisijainen(nakyva?.Laheta ?? tehtava?.Laheta ?? "Lähetä sähke", Laheta, napit);
             Toissijainen("Myöhemmin", () => { Tehoste("pulu.sahke"); Teko(toiminnot.Sulje); }, napit);
         }
 

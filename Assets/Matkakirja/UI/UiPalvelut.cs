@@ -12,6 +12,10 @@
 //   ValoNapautettu  karttavalon napautus (Natiiviseppä: AiheValot → KarttaValotSilta
 //              → IlmoitaValo(id), id karttavalot.json:sta, esim. "skandaali:…");
 //              Natiivi-UI avaa nostokortin (Nostokortti).
+//   TuristiInfoNapautettu  turisti-info-merkin (i) napautus kartalla (RAJAPINTATOIVE Natiivisepälle,
+//              web js/kaupunkinosto.js turistiInfoElementti + lauta.js avaa → avaaTuristiOpas):
+//              kartta kutsuu IlmoitaTuristiInfo(kaupunkiId); Natiivi-UI avaa turistioppaan isossa
+//              muodossaan (Nahtavyysarkki.AvaaOpas). Merkin ainoa ehto: OnkoTuristiInfo(id) = true.
 using System;
 using System.Collections.Generic;
 
@@ -72,5 +76,16 @@ namespace Matkakirja.Natiivi
         /// <summary>Karttavaloa napautettiin (id karttavalot.json:sta). Pääsäikeessä.</summary>
         public static event Action<string> ValoNapautettu;
         public static void IlmoitaValo(string id) => ValoNapautettu?.Invoke(id);
+
+        /// <summary>Turisti-info-merkkiä (i) napautettiin (kaupungin id kokoelmasta kaupungit). Pääsäikeessä.</summary>
+        public static event Action<string> TuristiInfoNapautettu;
+        public static void IlmoitaTuristiInfo(string kaupunkiId) => TuristiInfoNapautettu?.Invoke(kaupunkiId);
+
+        /// <summary>
+        /// Onko kaupungilla turisti-info (oppaan artikkeli, web kaupunginMatkailijalle): merkkiä ei piirretä
+        /// ilman opasta. Ensimmäinen kutsu lataa kaupunkilehdet (3,7 Mt), sen jälkeen muistista.
+        /// </summary>
+        public static void OnkoTuristiInfo(string kaupunkiId, Action<bool> valmis) =>
+            LehtiSisalto.HaeOpas(kaupunkiId, o => valmis?.Invoke(o != null));
     }
 }

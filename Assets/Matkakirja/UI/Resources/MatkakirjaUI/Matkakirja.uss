@@ -861,6 +861,83 @@
     flex-direction: column;
 }
 
+/* Nostokategoriat haitarina (web kaupunkiliuska: hiusviiva, väripallo, sisennetyt kohteet). */
+.mk-liuska__hiusviiva {
+    height: 1px;
+    width: 46%;
+    margin: 4px 0 6px 12px;
+    background-color: rgba(70, 51, 31, 0.35);
+}
+
+.mk-liuska__rivi {
+    justify-content: flex-start;
+    min-height: 40px;
+    margin: 0 0 2px 0;
+    padding: 6px 12px 6px 12px;
+    border-width: 0;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--map-ink);
+}
+
+.mk-liuska__rivi:active {
+    background-color: rgba(70, 51, 31, 0.12);
+}
+
+.mk-liuska__rivi--auki {
+    background-color: rgba(70, 51, 31, 0.08);
+}
+
+.mk-liuska__kohde {
+    min-height: 36px;
+    padding-left: 34px;
+}
+
+.mk-liuska__pallo {
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.mk-liuska__nimi {
+    font-size: 15.5px;
+    white-space: normal;
+    flex-shrink: 1;
+    -unity-text-align: middle-left;
+}
+
+.mk-liuska__kohde > .mk-liuska__nimi {
+    font-size: 14.5px;
+    color: var(--map-ink-soft);
+}
+
+/* Kelausrivit (web "▲ edelliset" / "▼ lisää"): kortin reunoilla, vierityksen ulkopuolella. */
+.mk-liuska__kelaus {
+    flex-shrink: 0;
+    min-height: 32px;
+    padding: 4px 12px;
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--map-ink-soft);
+}
+
+.mk-liuska__kelaus:active {
+    background-color: rgba(70, 51, 31, 0.12);
+}
+
+.mk-liuska__kelaus > .mk-ikoni {
+    width: 15px;
+    height: 15px;
+    margin-right: 6px;
+}
+
+.mk-liuska__kelaus > .mk-nappi__teksti {
+    font-size: 12.5px;
+    letter-spacing: 1px;
+}
+
 /* --- tekijätiedot ja lähteet --------------------------------------------- */
 
 .mk-tietoja {
@@ -2226,6 +2303,8 @@
 
 .mk-muutos__versio {
     min-width: 58px;
+    max-width: 96px;
+    white-space: normal;
     margin-right: 8px;
     font-size: 14px;
     color: #46331f;
@@ -2406,4 +2485,258 @@
 
 .mk-reaktio__nappi .mk-nappi__teksti {
     font-size: 12.5px;
+}
+
+/* --- palaute ja ehdotukset (PalauteLomake.cs, Kuvavinkki.cs, ProOsio.cs) --------------------
+ * Web css/styles.css .periaate-palaute, -kentta, -rasti, -nimio, -huomio, -ehdotus, .pro-rasti-rivi,
+ * .pro-ulos ja .kuvavinkki-oikeudet pergamentilla. USS-erot: katkoviivareuna yhtenäisenä (ei
+ * dashed-reunaa), checkbox piirretty ruutuna (ei selaimen omaa), select = DropdownField. */
+
+.mk-palaute {
+    margin-top: 20px;
+    padding-top: 14px;
+    border-top-width: 1px;
+    border-color: rgba(122, 85, 20, 0.35);
+}
+
+.mk-palaute__osio {
+    margin-top: 18px;
+    padding-top: 12px;
+    border-top-width: 1px;
+    border-color: rgba(122, 85, 20, 0.35);
+}
+
+.mk-palaute__valiotsikko {
+    margin-top: 16px;
+    margin-bottom: 4px;
+    font-size: 12.5px;
+    letter-spacing: 1.5px;
+    white-space: normal;
+    color: #8a6a2c;
+}
+
+.mk-palaute__valiotsikko--alku {
+    margin-top: 0;
+}
+
+.mk-palaute__teksti {
+    margin-bottom: 8px;
+    font-size: 15px;
+    white-space: normal;
+    color: var(--map-ink);
+}
+
+.mk-palaute__nimio {
+    margin-top: 11px;
+    font-size: 13px;
+    white-space: normal;
+    color: #6d5a3c;
+}
+
+.mk-palaute__huomio {
+    margin-top: 8px;
+    font-size: 12.5px;
+    white-space: normal;
+    color: #6d5a3c;
+}
+
+.mk-palaute__kursiivi {
+    -unity-font-style: italic;
+}
+
+/* Kentät (.periaate-kentta): vaalea paperi, ohut ruskea reuna. */
+.mk-palaute__kentta {
+    margin: 10px 0 0 0;
+}
+
+.mk-palaute__kentta > .unity-base-text-field__input {
+    min-height: 40px;
+    padding: 9px 11px;
+    border-width: 1px;
+    border-radius: 8px;
+    border-color: rgba(122, 85, 20, 0.45);
+    background-color: rgba(255, 252, 240, 0.7);
+    font-size: 14.5px;
+    color: var(--map-ink);
+}
+
+.mk-palaute__kentta--iso > .unity-base-text-field__input {
+    min-height: 96px;
+    white-space: normal;
+    -unity-text-align: upper-left;
+}
+
+.mk-palaute__kentta:focus > .unity-base-text-field__input {
+    border-color: rgba(176, 138, 60, 0.95);
+    background-color: rgba(255, 252, 240, 0.9);
+}
+
+/* Rasti (.periaate-rasti): ruutu + teksti, koko rivi napautettava. */
+.mk-palaute__rasti {
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 10px;
+    min-height: 30px;
+}
+
+.mk-palaute__ruutu {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    margin-top: 1px;
+    align-items: center;
+    justify-content: center;
+    border-width: 1px;
+    border-radius: 4px;
+    border-color: rgba(122, 85, 20, 0.6);
+    background-color: rgba(255, 252, 240, 0.8);
+}
+
+.mk-palaute__ruksi {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    background-color: var(--map-ink);
+    opacity: 0;
+}
+
+.mk-palaute__rasti.mk-valittu .mk-palaute__ruksi {
+    opacity: 1;
+}
+
+.mk-palaute__rastiteksti {
+    flex-shrink: 1;
+    margin-left: 9px;
+    font-size: 13px;
+    white-space: normal;
+    color: #6d5a3c;
+}
+
+/* Pro-hakurasti ja i (.pro-rasti-rivi). */
+.mk-palaute__prorivi {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.mk-palaute__prorivi > .mk-palaute__rasti {
+    flex-shrink: 1;
+    margin-top: 0;
+    align-items: center;
+}
+
+.mk-palaute__seloste {
+    margin-left: 8px;
+}
+
+/* Lähetysnappi (button.primary.periaate-laheta): koko leveys. */
+.mk-palaute__laheta {
+    margin-top: 12px;
+    align-self: stretch;
+}
+
+/* Kuvan valinta ja toissijainen nappi paperilla (.pro-ulos). */
+.mk-palaute__kuvanappi,
+.mk-palaute__toissijainen {
+    min-height: 38px;
+    margin-top: 6px;
+    padding: 6px 12px;
+    border-color: rgba(122, 85, 20, 0.45);
+    background-color: rgba(255, 252, 240, 0.7);
+    color: #6d5a3c;
+}
+
+.mk-palaute__kuvanappi {
+    align-self: flex-start;
+}
+
+.mk-palaute__toissijainen {
+    margin-top: 12px;
+    align-self: stretch;
+}
+
+.mk-palaute__kuvanappi:active,
+.mk-palaute__toissijainen:active {
+    background-color: rgba(122, 85, 20, 0.12);
+}
+
+.mk-palaute__kuvanappi .mk-nappi__teksti,
+.mk-palaute__toissijainen .mk-nappi__teksti {
+    font-size: 13.5px;
+}
+
+/* Väkänen (details > summary). */
+.mk-palaute__vakanappi {
+    justify-content: flex-start;
+    min-height: 36px;
+    padding: 4px 0;
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: #8a6a2c;
+}
+
+.mk-palaute__vakanappi:active {
+    background-color: rgba(122, 85, 20, 0.08);
+}
+
+.mk-palaute__vakanen {
+    margin-right: 8px;
+    font-size: 16px;
+    color: #8a6a2c;
+    transition-property: rotate;
+    transition-duration: 0.2s;
+}
+
+.mk-palaute__vakanappi.mk-auki .mk-palaute__vakanen {
+    rotate: 90deg;
+}
+
+.mk-palaute__vakaotsikko {
+    flex-shrink: 1;
+    font-size: 12.5px;
+    letter-spacing: 1.5px;
+    white-space: normal;
+    color: #8a6a2c;
+}
+
+/* Kuvan oikeudet omana ryhmänään (.kuvavinkki-oikeudet). */
+.mk-palaute__oikeudet {
+    margin: 10px 0;
+    padding: 8px 10px;
+    border-width: 1px;
+    border-radius: 6px;
+    border-color: rgba(70, 51, 31, 0.22);
+    background-color: rgba(70, 51, 31, 0.04);
+}
+
+/* Käyttölupa ja lisenssi (select). */
+.mk-palaute__valinta {
+    margin: 6px 0 0 0;
+}
+
+.mk-palaute__valinta > .unity-base-popup-field__input {
+    min-height: 40px;
+    padding: 8px 11px;
+    border-width: 1px;
+    border-radius: 8px;
+    border-color: rgba(122, 85, 20, 0.45);
+    background-color: rgba(255, 252, 240, 0.7);
+    color: var(--map-ink);
+}
+
+.mk-palaute__valinta .unity-base-popup-field__text {
+    font-size: 14px;
+    white-space: normal;
+    flex-shrink: 1;
+    color: var(--map-ink);
+}
+
+.mk-palaute__valinta .unity-base-popup-field__arrow {
+    -unity-background-image-tint-color: var(--map-ink);
+}
+
+/* Kuvasuurennoksen reaktiorivi keskellä paperin alla (web .reaktiot-suurennos). */
+.mk-reaktiot--suurennos {
+    justify-content: center;
+    margin-top: 3px;
 }

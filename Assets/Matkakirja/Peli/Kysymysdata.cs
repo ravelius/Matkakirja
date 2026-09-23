@@ -143,7 +143,7 @@ namespace Matkakirja.Peli
             {
                 var ryhma = MiniJson.Teksti(o, "ryhma") ?? MiniJson.Teksti(o, "kaupunki")
                     ?? throw new FormatException($"kysymykseltä {MiniJson.Teksti(o, "id")} puuttuu ryhmä");
-                var k = LueKysymys(MiniJson.Objekti(MiniJson.Kentta(o, "data")));
+                var k = LueKysymys(Paataso.Yhdista(o, Paataso.Kysymys));
                 if (ryhma == "general") Yleiset.Add(k);
                 else if (ryhma == "claims") Vaitteet.Add(k);
                 else
