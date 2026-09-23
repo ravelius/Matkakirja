@@ -1,1 +1,611 @@
-/* Pöllön sähketehtävä (UI/Sahke/Sahketehtava.cs). */
+/* Pöllön sähketehtävä (UI/Sahke/Sahketehtava.cs, luokka SahketehtavaNakyma).
+ *
+ * Web css/fokusvirta.css "PÖLLÖN SÄHKETEHTÄVÄ": 1870-luvun sähkösanomalomake
+ * (painettu otsake, sähköaseman pyöreä leima, liimatut liuskat, rei'itetyt reunat),
+ * painetut lomakekentät ("KOHDE ______"), vapaa vastaus, palkkiorivi ja pullat.
+ * USS:ssä ei ole box-shadowta, katkoviivaa eikä text-transformia: varjot ovat
+ * tummempia alareunoja, katkoviivat ohuita yhtenäisiä viivoja, kaksoisviiva kaksi
+ * elementtiä ja versaalit tehdään koodissa. Kirjasimet (American Typewriter,
+ * Iowan Old Style) ja lihavoinnit koodista (Kirjasimet.Aseta).
+ */
+
+/* --- kortti ja otsikko ------------------------------------------------------ */
+
+.mk-st {
+    max-height: 100%;
+}
+
+.mk-st > .mk-kortti {
+    flex-shrink: 1;
+    padding: 13px 14px 12px 14px;
+}
+
+.mk-st__paa {
+    flex-direction: row;
+    align-items: flex-start;
+    flex-shrink: 0;
+    margin-bottom: 2px;
+}
+
+.mk-st__paateksti {
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+}
+
+.mk-st__ylarivi {
+    font-size: 11.5px;
+    letter-spacing: 2px;
+    color: rgba(70, 51, 31, 0.72);
+    margin-bottom: 1px;
+}
+
+.mk-st__otsikko {
+    font-size: 20px;
+    white-space: normal;
+    color: var(--map-ink);
+}
+
+.mk-nappi.mk-st__sulje {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    min-height: 40px;
+    padding: 0;
+    margin: -6px -6px 0 6px;
+    border-width: 0;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--map-ink);
+}
+
+.mk-nappi.mk-st__sulje:active {
+    background-color: rgba(122, 85, 20, 0.12);
+}
+
+.mk-st__sulje .mk-nappi__teksti {
+    font-size: 26px;
+    -unity-text-align: middle-center;
+}
+
+.mk-st__vieritys {
+    flex-shrink: 1;
+}
+
+/* --- sähkösanomalomake (.fokusvirta-sahke) ----------------------------------- */
+
+.mk-st__paperi {
+    margin: 8px 0 0 0;
+    padding: 12px 10px 14px 10px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-color: rgba(58, 38, 16, 0.34);
+    background-color: #f7edcf;
+    overflow: hidden;
+}
+
+/* Rei'itetty reuna: kortin värisiä puoliympyröitä ylä- ja alareunassa. */
+.mk-st__reiat {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 5px;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.mk-st__reiat--yla {
+    top: 0;
+}
+
+.mk-st__reiat--ala {
+    bottom: 0;
+}
+
+.mk-st__reika {
+    flex-shrink: 0;
+    width: 8px;
+    height: 8px;
+    margin: 0 2px 0 2px;
+    border-radius: 4px;
+    background-color: #ead6ab;
+}
+
+.mk-st__reiat--yla > .mk-st__reika {
+    translate: 0 -4px;
+}
+
+.mk-st__reiat--ala > .mk-st__reika {
+    translate: 0 1px;
+}
+
+/* Painettu otsake: leima, nimiö ja lomakenumero, alla kaksoisviiva. */
+.mk-st__otsake {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    min-height: 54px;
+    padding: 0 2px 5px 64px;
+    border-bottom-width: 1px;
+    border-color: rgba(58, 38, 16, 0.42);
+}
+
+.mk-st__tuplaviiva {
+    height: 3px;
+    border-bottom-width: 1px;
+    border-color: rgba(58, 38, 16, 0.42);
+}
+
+.mk-st__nimio {
+    font-size: 14.5px;
+    letter-spacing: 4px;
+    color: rgba(58, 38, 16, 0.82);
+}
+
+.mk-st__numero {
+    font-size: 11.5px;
+    letter-spacing: 1px;
+    color: rgba(58, 38, 16, 0.5);
+}
+
+.mk-st__leima {
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    width: 56px;
+    height: 56px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 3px 0 3px;
+    border-width: 2px;
+    border-radius: 28px;
+    border-color: rgba(72, 74, 116, 0.62);
+    rotate: -11deg;
+}
+
+.mk-st__leima-nimi {
+    font-size: 9px;
+    letter-spacing: 0.4px;
+    -unity-text-align: middle-center;
+    white-space: normal;
+    color: rgba(72, 74, 116, 0.62);
+}
+
+.mk-st__leima-asema {
+    margin-top: 1px;
+    font-size: 6.5px;
+    -unity-text-align: middle-center;
+    color: rgba(72, 74, 116, 0.62);
+}
+
+/* Liimatut liuskat (.fokusvirta-sahkerivi): vaalea paperi, pieni kallistus. */
+.mk-st__liuskat {
+    margin: 11px 2px 0 2px;
+}
+
+.mk-st__rivi {
+    margin: 0 0 5px 0;
+    padding: 4px 7px 4px 7px;
+    border-width: 1px;
+    border-bottom-width: 1.5px;
+    border-color: rgba(58, 38, 16, 0.08);
+    border-bottom-color: rgba(58, 38, 16, 0.22);
+    background-color: #fffbee;
+    font-size: 15px;
+    letter-spacing: 0.4px;
+    white-space: normal;
+    color: #3a2610;
+}
+
+.mk-st__rivi--k1 { rotate: -0.35deg; }
+.mk-st__rivi--k2 { rotate: 0.28deg; }
+.mk-st__rivi--k3 { rotate: -0.16deg; }
+.mk-st__rivi--k4 { rotate: 0.4deg; }
+.mk-st__rivi--k5 { rotate: -0.26deg; }
+
+/* Kysymysrivi erottuu (web .fokusvirta-sahkekysymys). */
+.mk-st__rivi--kysymys {
+    padding-left: 9px;
+    border-left-width: 3px;
+    border-left-color: rgba(122, 85, 20, 0.8);
+    border-bottom-color: rgba(58, 38, 16, 0.28);
+    background-color: #f4e5bd;
+    color: #2a1c09;
+}
+
+.mk-st__rivi--odottaa {
+    visibility: hidden;
+}
+
+/* --- vastauslomake (.fokusvirta-sahkelomake) --------------------------------- */
+
+/* Kirjoituksen ajan lomake on himmeänä mutta ei estettynä (web .kirjoittaa ~ …). */
+.mk-st__himmea {
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 0.32s;
+    transition-timing-function: ease-in-out;
+}
+
+.mk-st--kirjoittaa .mk-st__himmea {
+    opacity: 0.4;
+}
+
+.mk-st__lomakeviiva {
+    height: 3px;
+    margin-top: 13px;
+    border-bottom-width: 1px;
+    border-color: rgba(58, 38, 16, 0.35);
+}
+
+.mk-st__lomake {
+    margin-top: 2px;
+    padding: 8px 2px 0 2px;
+    border-top-width: 1px;
+    border-color: rgba(58, 38, 16, 0.35);
+}
+
+.mk-st__aukko {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.mk-st__kentannimi {
+    flex-shrink: 0;
+    min-width: 72px;
+    margin-right: 8px;
+    font-size: 14.5px;
+    letter-spacing: 1.5px;
+    color: rgba(58, 38, 16, 0.9);
+}
+
+/* Valinta: painettu viiva, teksti ja pieni nuoli (web select + chevron). */
+.mk-nappi.mk-st__valinta {
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+    min-height: 44px;
+    padding: 4px 2px 4px 2px;
+    justify-content: space-between;
+    border-width: 0;
+    border-bottom-width: 1px;
+    border-radius: 0;
+    border-color: rgba(58, 38, 16, 0.55);
+    background-color: rgba(0, 0, 0, 0);
+    color: #211d18;
+}
+
+.mk-nappi.mk-st__valinta:active {
+    background-color: rgba(122, 85, 20, 0.08);
+}
+
+.mk-st__valinta .mk-nappi__teksti {
+    flex-shrink: 1;
+    font-size: 15.5px;
+    white-space: normal;
+}
+
+.mk-st__valinta--tyhja .mk-nappi__teksti {
+    color: rgba(58, 38, 16, 0.5);
+}
+
+.mk-st__valinta > .mk-ikoni {
+    flex-shrink: 0;
+    width: 15px;
+    height: 15px;
+    margin: 0 2px 0 6px;
+    color: #3a2610;
+}
+
+/* Lukukenttä ja vapaa kenttä: läpinäkyvä, vain alaviiva. */
+.mk-st__luku {
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+    margin: 0;
+}
+
+.mk-st__luku > .unity-base-text-field__input,
+.mk-st__vapaakentta > .unity-base-text-field__input {
+    min-height: 44px;
+    padding: 4px 2px 4px 2px;
+    border-width: 0;
+    border-bottom-width: 1px;
+    border-radius: 0;
+    border-color: rgba(58, 38, 16, 0.55);
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 16px;
+    color: #211d18;
+}
+
+.mk-st__luku > .unity-base-text-field__input {
+    letter-spacing: 2px;
+}
+
+.mk-st__luku:focus > .unity-base-text-field__input,
+.mk-st__vapaakentta:focus > .unity-base-text-field__input {
+    border-bottom-color: rgba(58, 38, 16, 0.85);
+    background-color: rgba(122, 85, 20, 0.06);
+}
+
+/* Vapaa vastaus (.fokusvirta-sahkevapaa). */
+.mk-st__vapaa {
+    margin-top: 13px;
+    padding: 10px 2px 0 2px;
+    border-top-width: 1px;
+    border-color: rgba(58, 38, 16, 0.22);
+}
+
+.mk-st__vapaaotsake {
+    font-size: 14.5px;
+    letter-spacing: 1.5px;
+    white-space: normal;
+    color: rgba(58, 38, 16, 0.9);
+    margin-bottom: 2px;
+}
+
+.mk-st__vapaakentta {
+    margin: 0;
+}
+
+.mk-st__vapaakentta > .unity-base-text-field__input {
+    min-height: 72px;
+    white-space: normal;
+    -unity-text-align: upper-left;
+}
+
+.mk-st__vapaanapit {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 8px;
+}
+
+/* --- tulos, vinkki ja palkkio ------------------------------------------------ */
+
+.mk-st__tulos {
+    margin-top: 10px;
+    font-size: 15px;
+    white-space: normal;
+    color: #211d18;
+}
+
+.mk-st__tulos--vaarin {
+    color: #9a2b21;
+}
+
+.mk-st__tulos--odotus {
+    color: rgba(58, 38, 16, 0.75);
+}
+
+.mk-st__vinkki {
+    margin-top: 13px;
+    font-size: 15px;
+    white-space: normal;
+    color: #211d18;
+}
+
+.mk-st__maksu {
+    margin-top: 13px;
+    padding-top: 7px;
+    border-top-width: 1px;
+    border-color: rgba(58, 38, 16, 0.22);
+    font-size: 12.5px;
+    letter-spacing: 0.3px;
+    white-space: normal;
+    color: rgba(58, 38, 16, 0.72);
+}
+
+/* --- pullat (.fokusvirta-sahkepullat, .fokus-pulla) -------------------------- */
+
+.mk-st__pullat {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top-width: 1px;
+    border-color: rgba(58, 38, 16, 0.3);
+}
+
+.mk-st__pulla {
+    margin-bottom: 8px;
+}
+
+.mk-nappi.mk-st__pullanappi {
+    min-height: 44px;
+    padding: 8px 14px 8px 14px;
+    border-width: 1px;
+    border-radius: 4px;
+    border-color: rgba(60, 44, 26, 0.6);
+    background-color: rgba(255, 253, 245, 0.72);
+    color: #211d18;
+}
+
+.mk-nappi.mk-st__pullanappi:active {
+    background-color: #fffdf5;
+    border-color: rgba(60, 44, 26, 0.85);
+}
+
+.mk-st__pullanappi .mk-nappi__teksti {
+    font-size: 15px;
+    -unity-text-align: middle-center;
+    white-space: normal;
+}
+
+.mk-nappi.mk-st__pullanappi--varmistus {
+    border-color: rgba(122, 85, 20, 0.75);
+    background-color: #e4b650;
+    color: #2c1e07;
+}
+
+.mk-nappi.mk-st__pullanappi--varmistus:active {
+    background-color: #dda63a;
+}
+
+.mk-nappi.mk-st__pullanappi:disabled {
+    opacity: 1;
+    border-color: rgba(60, 44, 26, 0.3);
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(33, 29, 24, 0.55);
+}
+
+.mk-st__pullahuomio,
+.mk-st__pullatehty {
+    margin-top: 6px;
+    font-size: 13px;
+    -unity-text-align: middle-center;
+    white-space: normal;
+    color: rgba(60, 44, 26, 0.72);
+}
+
+.mk-st__pullatehty {
+    margin-top: 0;
+}
+
+.mk-st__linkki {
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+/* --- kuittaus ---------------------------------------------------------------- */
+
+.mk-st__kuittaus {
+    margin-top: 12px;
+}
+
+.mk-st__kappale {
+    margin-bottom: 9px;
+    font-size: 16px;
+    white-space: normal;
+    color: var(--map-ink);
+}
+
+/* --- napit ------------------------------------------------------------------- */
+
+.mk-st__napit {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    flex-shrink: 0;
+    margin-top: 10px;
+}
+
+.mk-st__napit > .mk-nappi {
+    margin-left: 8px;
+    margin-top: 4px;
+}
+
+.mk-nappi.mk-st__toissijainen {
+    min-height: 44px;
+    padding: 6px 14px 6px 14px;
+    border-color: rgba(70, 51, 31, 0.5);
+    border-top-left-radius: 13px;
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 14px;
+    border-bottom-left-radius: 8px;
+    background-color: rgba(255, 252, 243, 0.42);
+    color: var(--map-ink);
+}
+
+.mk-nappi.mk-st__toissijainen:active {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.mk-nappi.mk-st__ensisijainen {
+    min-height: 46px;
+    padding: 8px 18px 8px 18px;
+    border-color: #7a5a12;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 9px;
+    color: #33240a;
+}
+
+.mk-st__ensisijainen .mk-nappi__teksti,
+.mk-st__toissijainen .mk-nappi__teksti {
+    font-size: 15.5px;
+}
+
+/* --- hakemiston valitsin (web <select>) ---------------------------------------- */
+
+.mk-st__valitsin-tausta {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 14px 24px 14px;
+    background-color: rgba(14, 9, 4, 0.45);
+}
+
+.mk-st__valitsin {
+    width: 100%;
+    max-width: 380px;
+    max-height: 100%;
+    padding: 12px 12px 10px 12px;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.55);
+    border-top-left-radius: 16px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 11px;
+    background-color: #f7edcf;
+}
+
+.mk-st__valitsin-otsikko {
+    flex-shrink: 0;
+    margin: 0 2px 8px 2px;
+    padding-bottom: 6px;
+    border-bottom-width: 1px;
+    border-color: rgba(58, 38, 16, 0.35);
+    font-size: 13.5px;
+    letter-spacing: 1.5px;
+    white-space: normal;
+    color: rgba(58, 38, 16, 0.85);
+}
+
+.mk-st__valitsin-lista {
+    flex-shrink: 1;
+}
+
+.mk-nappi.mk-st__vaihtoehto {
+    justify-content: flex-start;
+    min-height: 44px;
+    padding: 6px 8px 6px 8px;
+    border-width: 0;
+    border-bottom-width: 1px;
+    border-radius: 0;
+    border-color: rgba(58, 38, 16, 0.14);
+    background-color: rgba(0, 0, 0, 0);
+    color: #211d18;
+}
+
+.mk-nappi.mk-st__vaihtoehto:active {
+    background-color: rgba(122, 85, 20, 0.12);
+}
+
+.mk-st__vaihtoehto .mk-nappi__teksti {
+    font-size: 15.5px;
+    white-space: normal;
+}
+
+.mk-nappi.mk-st__vaihtoehto--valittu {
+    background-color: rgba(217, 161, 59, 0.28);
+}
+
+.mk-st__valitsin-tyhja {
+    margin: 12px 4px 12px 4px;
+    font-size: 14px;
+    white-space: normal;
+    color: rgba(58, 38, 16, 0.7);
+}
+
+.mk-st__valitsin-napit {
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-shrink: 0;
+    margin-top: 8px;
+}
