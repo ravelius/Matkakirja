@@ -73,3 +73,16 @@ Fablelle vain valmis erä / jumi / kysymys (≤ 8 riviä). Natiiviseppä: merge-
 rivillä + editoritoimet. Pelikoodari: rajapinnat (NakymaSopimukset, PeliOhjaimen tapahtumat),
 Pelikoodari tekee rajapintalisäykset itse pyynnöstä. Siirtoseppä: sisältökokoelmat.
 Laitetestaaja: kuvasarjat (`kuva`-komento odottaa nyt 0,3 s, joten sarjoissa ei tarvita odota-rivejä).
+
+## Lisäys (Linssiseppä, luovutuksen jälkeen)
+
+Linssiseppä toteutti toiveet haarassa `linssiseppa/ui-koukut` @ 10b7398 (merge-pyyntö Natiivisepällä):
+1. Sovittimet julkisia: `(LinssiOhjain.Rekisteri.Auki as LinssiOhjain.KeksinnotSovitin)?.Linssi` (myös
+   IhmisenMatkaSovitin, AstronauttiSovitin + Kerros, VesistotSovitin, MaatSovitin) → poista heijastus
+   `LinssiUi.LinssiOlio`.
+2. `IhmisenMatkaKerros.EsittelyUIssa = true` / `KeksinnotKerros.EsittelyUIssa = true`: esitys ei käynnisty
+   avatessa; esittelylaatikon Käynnistä kutsuu `Linssi.Kaynnista()` (false = vanat vielä laskennassa →
+   yritä uudelleen, kuten webin aloitaAjo).
+3. Keksinnöissä `Kaynnista()` katkaisee esittelyn luennan, ja välinäytöksen Jatka kutsuu
+   `JatkaValinaytoksesta()` eikä `Ajo.Jatka()` — korjaa AikajanaNakyma.cs.
+Ensimmäinen työ uudelle sessiolle: yhdistä 10b7398 linssi-UI:hin ja tee nämä kolme muutosta.
