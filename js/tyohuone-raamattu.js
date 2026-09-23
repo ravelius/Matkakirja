@@ -146,7 +146,13 @@ export const RAAMATTU = {
           + 'asemat striimataan, lisenssit tarkistetaan maksulliseen appiin). Kehittäjäsäätimet '
           + '(koeliput, piirtokokeet, mittarit) vain kehittäjätilassa: piilotettu KOKEET-valikko '
           + 'TestFlight-buildeissa, ei App Store -versiossa. Sessiot kysyvät Fablelta heti, jos jokin '
-          + 'toiminto mietityttää; Fable kysyy omistajalta.',
+          + 'toiminto mietityttää; Fable kysyy omistajalta. EI WEBISSÄ → KYSY (omistaja 23.9.2026 '
+          + 'klo 22.3x, sitova): jos natiiviin oltaisiin tekemässä mitään, mitä web-pelissä ei ole '
+          + '(ominaisuus, näkymä, sisältö, sääntö), Fable kysyy omistajalta erillisellä kortilla ENNEN '
+          + 'työtä. Jos omistaja ei ehdi vastata, sitä ei tehdä, vaan se merkitään puuttuvien listaan '
+          + '(docs/raportit/nappi-inventaario-natiivi-*.md, osio "Ei webissä, odottaa omistajaa"). '
+          + 'Poikkeukset 23.9.: peninkulmalinssi ja huipennusnäkymä hyväksytty; aloituskaupungin '
+          + 'valinta kortilla hylätty → valitaan kartalta kuten webissä.',
         'CLAUDEN JA CHATGPT/CODEXIN AGENTTISÄÄNNÖT ERIKSEEN (omistaja 11.9.2026 '
           + 'tekstisession kautta, sanatarkasti: "Peliä kehitetään Claudella ja '
           + 'ChatGPT/Codexilla. Opus/Sonnet-rajoitus ja Fable-mallin agenttikäytön '
