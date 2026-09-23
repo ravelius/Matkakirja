@@ -347,9 +347,18 @@ jobs:
           print(f"Profiili asennettu: {profiili['attributes']['name']} (UUID {uuid})")
           PY
 
+      # UnityFramework on kehysmoduuli (embedded framework), joka ei tue
+      # provisiointiprofiilia lainkaan ("UnityFramework does not support
+      # provisioning profiles") — komentorivin PROVISIONING_PROFILE_SPECIFIER
+      # koskee kuitenkin KAIKKIA skeeman targeteja, joten manuaalinen
+      # profiili kaatuu framework-targetissa. Nyt kun ASC:ssä on oikea
+      # Distribution-varmenne ja App Store -profiili (ks. edellinen vaihe),
+      # Automatic-tila löytää ne itse eikä yritä enää Development-varmennetta.
       - name: Arkistoi ja allekirjoita
         working-directory: ${{ env.PROJEKTI }}
         env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
           TEAM_ID: ${{ secrets.TEAM_ID }}
         run: |
           set -euo pipefail
@@ -359,16 +368,20 @@ jobs:
             -configuration Release \
             -destination 'generic/platform=iOS' \
             -archivePath "$RUNNER_TEMP/proto3d.xcarchive" \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath "$ASC_AVAIN_POLKU" \
+            -authenticationKeyID "$ASC_KEY_ID" \
+            -authenticationKeyIssuerID "$ASC_ISSUER_ID" \
             DEVELOPMENT_TEAM="$TEAM_ID" \
-            CODE_SIGN_STYLE=Manual \
+            CODE_SIGN_STYLE=Automatic \
             CODE_SIGN_IDENTITY="$DIST_IDENTITEETTI" \
-            "PROVISIONING_PROFILE_SPECIFIER=$PROFIILI_NIMI" \
             archive
 
       - name: Vie IPA
         env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
           TEAM_ID: ${{ secrets.TEAM_ID }}
-          BUNDLE_ID: ${{ inputs.bundle_id }}
         run: |
           set -euo pipefail
           cat > "$RUNNER_TEMP/ExportOptions.plist" <<PLIST
@@ -381,12 +394,7 @@ jobs:
             <key>teamID</key>
             <string>$TEAM_ID</string>
             <key>signingStyle</key>
-            <string>manual</string>
-            <key>provisioningProfiles</key>
-            <dict>
-              <key>$BUNDLE_ID</key>
-              <string>$PROFIILI_NIMI</string>
-            </dict>
+            <string>automatic</string>
             <key>uploadSymbols</key>
             <true/>
           </dict>
@@ -395,7 +403,11 @@ jobs:
           xcodebuild -exportArchive \
             -archivePath "$RUNNER_TEMP/proto3d.xcarchive" \
             -exportOptionsPlist "$RUNNER_TEMP/ExportOptions.plist" \
-            -exportPath "$RUNNER_TEMP/ipa"
+            -exportPath "$RUNNER_TEMP/ipa" \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath "$ASC_AVAIN_POLKU" \
+            -authenticationKeyID "$ASC_KEY_ID" \
+            -authenticationKeyIssuerID "$ASC_ISSUER_ID"
           ipa=$(find "$RUNNER_TEMP/ipa" -maxdepth 2 -name '*.ipa' | head -1) || true
           if [ -z "$ipa" ]; then
             echo "::error title=IPA puuttuu::Vienti ei tuottanut .ipa-tiedostoa."
