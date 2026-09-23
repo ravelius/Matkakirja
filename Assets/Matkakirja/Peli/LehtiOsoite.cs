@@ -106,6 +106,22 @@ namespace Matkakirja.Peli
             return (risu >= 0 ? osoite.Substring(0, risu) : osoite) + "#tila=" + b64;
         }
 
+        /// <summary>
+        /// Maalehti kaupunkilehden sijaan (verkkopelin lehtikuorenMaa):
+        /// osoite&amp;maa=ISO3[&amp;sivu=aihe]. Kelvoton maa → osoite sellaisenaan,
+        /// kelvoton sivu jätetään pois (lehti aukeaa ensimmäiseltä sivulta).
+        /// </summary>
+        public static string LisaaMaa(string osoite, string iso3, string sivu = null)
+        {
+            if (string.IsNullOrEmpty(osoite) || iso3 == null || iso3.Length != 3) return osoite;
+            foreach (var c in iso3) if (c < 'A' || c > 'Z') return osoite;
+            bool sivuKelpaa = !string.IsNullOrEmpty(sivu) && sivu.Length <= 60;
+            if (sivuKelpaa) foreach (var c in sivu) if (!((c >= 'a' && c <= 'z') || (c >= '0' && c <= '9') || c == '-')) { sivuKelpaa = false; break; }
+            int risu = osoite.IndexOf('#');
+            string alku = risu >= 0 ? osoite.Substring(0, risu) : osoite, loppu = risu >= 0 ? osoite.Substring(risu) : "";
+            return alku + "&maa=" + iso3 + (sivuKelpaa ? "&sivu=" + sivu : "") + loppu;
+        }
+
         /// <summary>Kuten YritaRakentaa, mutta heittää ArgumentExceptionin.</summary>
         public static string Rakenna(string kaupunki, string pohja = OletusPohja)
         {

@@ -884,6 +884,8 @@ namespace Matkakirja.Natiivi
         void LehtiSuljettu(string kaupunki)
         {
             if (Tila != SilmukanTila.Lehti) return;
+            bool maalehti = maalehtiAuki;
+            maalehtiAuki = false;
             Tallenna();
             Kartalle(false);
             // Lehdestä avattu tehtävä (esim. sähkeen ryöstäjä) näkyviin vasta nyt.
@@ -891,18 +893,41 @@ namespace Matkakirja.Natiivi
             // Lehden aikana tapahtunut mannerlento: kamera pelaajaan.
             var k = PeliApu.Koordinaatti(verkko, matka.Tila.Pelaaja.Sijainti);
             if (matka.Tila.Pelaaja.Sijainti.Kaupunki != kaupunki && k.HasValue) Ajo(k.Value.Lat, k.Value.Lon, SaapumisKaari, 1.5f, null);
-            // Isoisän matkakirjaluento kaupungissa kerran istunnossa, kun lehti on luettu.
-            var l = luennat.OtaLuento(kaupunki);
+            // Isoisän matkakirjaluento kaupungissa kerran istunnossa, kun lehti on luettu (ei maalehdestä).
+            var l = maalehti ? null : luennat.OtaLuento(kaupunki);
             if (l != null && SoitaLuento(l, 0.6f) == null && !string.IsNullOrEmpty(l.Paikkarivi)) Viesti(l.Paikkarivi);
         }
 
         /// <summary>Avaa lehden natiivin rahalla ja kauppojen kirjanpidolla (lehtikuoren #tila).</summary>
-        void AvaaLehti(string kaupunki)
+        bool maalehtiAuki;
+
+        /// <summary>
+        /// Maalehti (kartuscha, Natiivi-UI): maan lehti aiheen sivulta (aihe = webin
+        /// MAA_KATEGORIAT-id, esim. "historia"). Pelaajan sijainti on kuoren kaupunki
+        /// (reitillä lähtökaupunki). Palauttaa virheen tai null.
+        /// </summary>
+        public string LueMaalehti(string iso3, string aihe = null)
+        {
+            if (lehti == null) return "lehteä ei ole";
+            if (matka == null) return "peli ei ole valmis";
+            if (Tila != SilmukanTila.Kartta) return "silmukka on tilassa " + Tila;
+            var s = matka.Tila.Pelaaja.Sijainti;
+            var kaupunki = s.Kaupungissa ? s.Kaupunki : verkko.Reitit.TryGetValue(s.Reitti, out var r) ? r.A : null;
+            if (kaupunki == null) return "sijainti ei ole kaupungissa eikä reitillä";
+            PiilotaKortti();
+            dialogi.PiilotaHeitto();
+            Tila = SilmukanTila.Lehti;
+            maalehtiAuki = true;
+            AvaaLehti(kaupunki, iso3, aihe);
+            return null;
+        }
+
+        void AvaaLehti(string kaupunki, string maa = null, string sivu = null)
         {
             string tila = matka == null ? null
                 : "{\"raha\":" + matka.Tila.Pelaaja.Raha.ToString(System.Globalization.CultureInfo.InvariantCulture)
                   + ",\"kaupat\":" + matka.Tila.Kaupat.Json() + "}";
-            lehti.Avaa(kaupunki, tila);
+            lehti.Avaa(kaupunki, tila, maa, sivu);
         }
 
         /// <summary>
