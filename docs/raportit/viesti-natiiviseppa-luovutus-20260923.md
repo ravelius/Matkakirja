@@ -1,4 +1,4 @@
-# Natiivisepän (ent. 3D-selvittäjä) luovutus 23.9.2026 klo 17.15
+# Natiivisepän (ent. 3D-selvittäjä) luovutus 23.9.2026 ilta
 
 Luovuttaja: 3D-selvittäjä / Natiiviseppä (Opus 5.5, Macin käyttäjä koodaus). Syy: konteksti on
 yli 65 %:ssa. Edellinen luovutus: viesti-3d-selvittaja-luovutus-20260923.md (aamu).
