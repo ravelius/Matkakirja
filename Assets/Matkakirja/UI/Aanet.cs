@@ -29,6 +29,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.IO;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -111,6 +112,8 @@ namespace Matkakirja.Natiivi
             kertoja = go.AddComponent<AudioSource>();
             puhe.playOnAwake = kertoja.playOnAwake = false;
             if (!ensimmainen) return;
+            Sanelu.Alkoi += SaneluAlkoi;
+            Sanelu.Loppui += SaneluLoppui;
             Asetukset.Muuttui += nimi =>
             {
                 if (puhe != null) puhe.volume = Taso(AaniKanava.Puhe);
@@ -324,10 +327,33 @@ namespace Matkakirja.Natiivi
         /// <summary>Tehostetaulun nimet (testikomennolle).</summary>
         public static IEnumerable<string> TehosteNimet => Tehostetaulu.Kaikki.Keys;
 
+        // --- sanelun tauko (web taukoaSanelunAjaksi: sfx.taukoaKonteksti + taukoaPuhePiiri) -----------
+
+        static readonly List<AudioSource> sanelunTauolla = new List<AudioSource>();
+        static bool sanelussa;
+
+        /// <summary>Mikrofoni avautuu: kaikki tämän palvelun soivat lähteet (tehosteet, lento, puhe, kertoja) tauolle.</summary>
+        static void SaneluAlkoi()
+        {
+            if (sanelussa) return;
+            sanelussa = true;
+            foreach (var s in new[] { puhe, kertoja }.Concat(tehosteet))
+                if (s != null && s.isPlaying) { s.Pause(); sanelunTauolla.Add(s); }
+        }
+
+        /// <summary>Mikrofoni kiinni: tauolle pannut jatkavat (web jatkaKonteksti + jatkaPuhePiiri).</summary>
+        static void SaneluLoppui()
+        {
+            if (!sanelussa) return;
+            sanelussa = false;
+            foreach (var s in sanelunTauolla) if (s != null) s.UnPause();
+            sanelunTauolla.Clear();
+        }
+
         static void SoitaSiivu(string url, string aloitus, float kesto, float gain, float? vire, bool tasavire, float viive)
         {
-            // Webin play(): mykistettynä tehosteita ei synny lainkaan.
-            if (Mykistetty) return;
+            // Webin play(): mykistettynä tehosteita ei synny lainkaan; sanelun ajan konteksti on pysäytetty.
+            if (Mykistetty || sanelussa) return;
             string osoite = Osoite(url);
             Hae(osoite, klippi =>
             {
