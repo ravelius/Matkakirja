@@ -1129,6 +1129,206 @@
     color: rgba(58, 38, 16, 0.7);
 }
 
+/* Täkynosto ja syvennys (web css/fokusnosto.css, fokusvirta.css) ja kohdekortin ihme ja
+ * leikekirja (css/fokuskohteet.css). */
+
+.mk-nosto__media {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 0 8px 0;
+}
+
+.mk-nosto__medianappi {
+    min-height: 32px;
+    margin: 0 5px 5px 0;
+    padding: 4px 10px;
+    border-width: 1px;
+    border-color: rgba(122, 85, 20, 0.5);
+    border-radius: 14px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #6d4d12;
+}
+
+.mk-nosto__medianappi .mk-nappi__teksti {
+    font-size: 12.5px;
+}
+
+.mk-nosto__valokuva {
+    width: 62%;
+    margin: 4px 0 10px 0;
+}
+
+.mk-nosto__liite {
+    margin: 10px 0 4px 0;
+    padding: 6px 7px 7px 7px;
+    border-width: 1px;
+    border-color: rgba(122, 85, 20, 0.34);
+    border-radius: 3px;
+    background-color: #efe7d3;
+}
+
+.mk-nosto__liiteotsake {
+    margin-bottom: 6px;
+    padding-bottom: 3px;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(122, 85, 20, 0.26);
+    color: rgba(94, 66, 16, 0.85);
+    font-size: 10.5px;
+    letter-spacing: 1.3px;
+}
+
+.mk-nosto__liitenappi {
+    height: 210px;
+    padding: 0;
+    border-width: 1px;
+    border-color: rgba(122, 85, 20, 0.3);
+    border-radius: 0;
+    background-color: #f7f2e4;
+}
+
+.mk-nosto__liitekuva {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.mk-nosto__liitetaite {
+    position: absolute;
+    background-color: rgba(122, 85, 20, 0.16);
+}
+
+.mk-nosto__liitetaite--pysty {
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+}
+
+.mk-nosto__liitetaite--vaaka {
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 1px;
+}
+
+.mk-nosto__kohdenappi {
+    justify-content: flex-start;
+    min-height: 44px;
+    margin-top: 10px;
+    padding: 6px 3px;
+    border-width: 0;
+    border-top-width: 1px;
+    border-top-color: rgba(122, 85, 20, 0.28);
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: #7a5514;
+}
+
+.mk-nosto__kohdenappi .mk-nappi__teksti {
+    font-size: 15px;
+    white-space: normal;
+    color: #7a5514;
+}
+
+.mk-nosto__lunastus {
+    min-height: 44px;
+    margin-top: 8px;
+    border-width: 1px;
+    border-color: rgba(122, 85, 20, 0.4);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.62);
+    color: #211d18;
+}
+
+.mk-nosto__lunastus .mk-nappi__teksti {
+    font-size: 15px;
+}
+
+.mk-nosto__ihmenappi {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    margin: 0 0 11px 0;
+    padding: 6px 12px;
+    border-width: 1px;
+    border-color: rgba(122, 85, 20, 0.6);
+    border-radius: 4px;
+    background-color: rgba(214, 168, 62, 0.2);
+    color: #6d4d12;
+}
+
+.mk-nosto__ihmenappi .mk-nappi__teksti {
+    font-size: 13.5px;
+    letter-spacing: 1.4px;
+}
+
+.mk-nosto__ihmetahti {
+    width: 24px;
+    height: 24px;
+    margin-right: 7px;
+    color: #b8862b;
+}
+
+.mk-nosto__leikekirja {
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 44px;
+    margin: 10px 0 3px 0;
+    padding: 7px 11px;
+    border-width: 1px;
+    border-color: rgba(122, 85, 20, 0.6);
+    border-radius: 4px;
+    background-color: rgba(214, 168, 62, 0.18);
+    color: #211d18;
+}
+
+.mk-nosto__leikekirjaotsake {
+    margin-bottom: 2px;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: #6d4d12;
+}
+
+.mk-nosto__leikekirjaotsikko {
+    font-size: 14.5px;
+    white-space: normal;
+    color: #211d18;
+}
+
+/* Matkakirjan ihmeen kulmanauha (PUNA, sinettivaha): vino kaista kuvan vasemmassa yläkulmassa.
+ * Säiliö leikkaa kaistan; Nostokortti.SovitaNauha siirtää säiliön kuvan todelliseen kulmaan. */
+.mk-ihmenauha {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 124px;
+    height: 124px;
+    overflow: hidden;
+}
+
+.mk-ihmenauha__kaista {
+    position: absolute;
+    left: -45px;
+    top: 36px;
+    width: 180px;
+    height: 20px;
+    rotate: -45deg;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-color: rgba(30, 9, 8, 0.55);
+    background-color: #8b3d38;
+    color: #f6e7c6;
+    font-size: 9.5px;
+    letter-spacing: 1.2px;
+    -unity-text-align: middle-center;
+    white-space: nowrap;
+}
+
 /* --- noppa (UI/Noppa.cs; webin .die-layer, css/styles.css ~2103) ---------------- */
 /* Kerros koko isän alueella, ei poimi kosketuksia. Kuutio, varjo ja silmät piirretään
  * koodissa (generateVisualContent), joten USS:ssä on vain asettelu ja häivytys. */

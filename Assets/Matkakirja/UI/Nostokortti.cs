@@ -1,6 +1,7 @@
 // NOSTOKORTTI (Natiivi-UI): karttavalon napautuksesta avautuva kortti — webin
 // fokuskohde (js/fokuskohteet.js), skandaalin lisälehti (js/skandaalit.js), historian
-// hetki (js/historian-hetket.js) ja eläintäky (js/elaintaky.js) yhtenä näkymänä.
+// hetki (js/historian-hetket.js), eläintäky (js/elaintaky.js), täkynosto (js/fokusnosto.js) ja
+// syvennystarina (js/syvennys.js) yhtenä näkymänä.
 //
 // Kuva edellä kahdessa vaiheessa (js/nostokuva.js): 1) pelkkä kuva, lyhyt kuvateksti ja
 // LISÄÄ; 2) koko kortti (kuvasarja ‹ › ja laskuri, teksti kappaleittain, lajin lohkot).
@@ -11,13 +12,24 @@
 //              kuvat, teksti, minivisa (+50, Kaupat.Minitehtava(iso, "skandaali:<id>"))
 //   hetki      "paikka · päiväys", kuvat, teksti, minivisa (+50, "hetki:<id>")
 //   eläin      kuva(t), teksti, palkkiorivi (Kaupat.Elaintaky(iso, 20) vaiheessa 2)
-//   kohde      luokka, nimi, kuvat, teksti, LUKIJAN KYSYMYS (+25, "nosto"/id),
-//              "Kysy viisaalta pöllöltä pululta:" (PuluChat.Kysy), kierrokset (ulkoinen linkki)
+//   kohde      luokka, nimi, kuvat (kadonneen ihmeen kuva ensin, nauha "Unohdettu aarre"),
+//              "Koe ihme" kuvien alla (säilyneen ihmeen kuva suurennokseen), teksti, LUKIJAN KYSYMYS
+//              (+25, "nosto"/id), "Kysy viisaalta pöllöltä pululta:" (PuluChat.Kysy), kierrokset
+//              (ulkoinen linkki), "Livian leikekirja" (kohteen nimeävä täkynosto, web piirraKohteenNosto)
+//   täkynosto  (web js/fokusnosto.js avaaNostonKortti) luokka, [lööppi: LISÄLEHTI, päiväys], otsikko,
+//              [ingressi], äänirivi (näyte, musiikki, Apple Music), kuvat, lunastus, valokuva
+//              "näin se löytyi", isoisän karttaliite (napautus → suurena), LUKIJAN KYSYMYS (+25,
+//              nostotehtävälaskuri), "Katso X kartalla" (→ kohdekortti), pulun
+//              kysymykset (3); kaiutin "Kuuntele kortti"
+//   syvennys   (web js/syvennys.js avaaSyvennys) luokka, otsikko, kuva, tarina, minivisa (+50,
+//              "<kaupunki>"/"fokus:<täky>"); oikea vastaus myöntää kaupungin julisteen ja tuo napin
+//              "Lunasta juliste" (suurennos); kaiutin "Kuuntele tarina"
 // Pelin tila muuttuu vain PeliOhjain.KauppaTeko-kutsuilla (Pelikoodari). Kerros 40, pallo lukittu.
 // Kohdekortin korostetut sanat (web fokuskohteet piirraKorostettuSana): kunkin korostuksen
 // ensimmäinen esiintymä tekstissä on alleviivattu linkki, napautus → pulu "Kerro lisää: X (kohteessa Y)".
 // Kaiutin (web js/lukija.js lisaaLukijanappi, KortinLukija) vaiheessa 2 sulkuruksin vieressä.
-// Ero webiin: kortti on keskellä (ei napautuspisteen vieressä).
+// Ero webiin: kortti on keskellä (ei napautuspisteen vieressä). Testikomennot painavat kortin
+// nappeja nimellä (Testaa: lisaa, ihme, leikekirja, kartalla, liite, valokuva, vastaa<n>, juliste).
 // LISÄKAUPUNKI (web kaupunkinosto.js avaaLisakaupunginKortti, kohde.kaupunkikortti ohittaa kohdekortin):
 // ✕, otsikkona kaupungin nimi, herokuva (kuvateksti ja lähderivi; ilman kuvaa paikkamerkki nimellä),
 // esittely kappaleittain ja yksi kaupunkiin ankkuroitu nosto (otsikko + teksti). Ei visaa eikä kaiutinta.
@@ -42,6 +54,8 @@ namespace Matkakirja.Natiivi
 
         Nosto nosto;
         int kuvaIndeksi, versio;
+        /// <summary>Kortin napit nimellä testikomentoja varten (ui nosto … &lt;nappi&gt;, ui ihme, ui leikekirja).</summary>
+        readonly Dictionary<string, Action> napit = new Dictionary<string, Action>();
 
         public bool Auki { get; private set; }
 
@@ -65,24 +79,62 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Avaa kortin karttavalon id:llä (UiPalvelut.ValoNapautettu, testikomento).</summary>
-        public void Avaa(string valoId)
+        public void Avaa(string valoId) => Avaa(valoId, null);
+
+        void Avaa(string valoId, Action<bool> jalkeen)
         {
             int v = ++versio;
-            UiKerros.Hae().StartCoroutine(AvaaReitti(valoId, v));
+            UiKerros.Hae().StartCoroutine(AvaaReitti(valoId, v, jalkeen));
         }
 
-        System.Collections.IEnumerator AvaaReitti(string valoId, int v)
+        /// <summary>
+        /// Web: lisäkaupungin kaupunkikortti ennen kohteen tietoruutua (fokuskohteet.js avaaFokuskohde),
+        /// muuten nostokortti. jalkeen(true) = jokin kortti aukesi (testikomennot painavat sen nappeja).
+        /// </summary>
+        System.Collections.IEnumerator AvaaReitti(string valoId, int v, Action<bool> jalkeen)
         {
-            // Web: lisäkaupungin kaupunkikortti ennen kohteen tietoruutua (fokuskohteet.js avaaFokuskohde).
             Lisakaupunki lk = null;
             yield return NostoSisalto.HaeLisakaupunki(valoId, x => lk = x);
             if (v != versio) yield break;
-            if (lk != null) { NaytaLisakaupunki(lk); yield break; }
+            if (lk != null)
+            {
+                napit.Clear();
+                NaytaLisakaupunki(lk);
+                jalkeen?.Invoke(true);
+                yield break;
+            }
             Nosto n = null;
             yield return NostoSisalto.Hae(valoId, x => n = x);
             if (v != versio) yield break;
-            if (n == null) { Debug.Log("MATKAKIRJA ui nostot: ei sisältöä valolle " + valoId); yield break; }
-            Nayta(n);
+            if (n == null) Debug.Log("MATKAKIRJA ui nostot: ei sisältöä valolle " + valoId);
+            else Nayta(n);
+            jalkeen?.Invoke(n != null);
+        }
+
+        /// <summary>
+        /// Testikomento: avaa kortin (valoId ≠ null) ja painaa napin nimeltä, tai painaa auki olevan
+        /// kortin nappia. Tulos (lokiriville) takaisinkutsulla: null = ok.
+        /// </summary>
+        public void Testaa(string valoId, string nappi, Action<string> tulos)
+        {
+            void Paina()
+            {
+                if (string.IsNullOrEmpty(nappi)) { tulos?.Invoke(null); return; }
+                if (nappi != "lisaa" && kortti.ClassListContains("mk-nosto--esittely")) Vaihe2();
+                if (napit.TryGetValue(nappi, out var a)) { a(); tulos?.Invoke(null); }
+                else tulos?.Invoke("kortilla ei ole nappia " + nappi + " (on: " + string.Join(", ", napit.Keys) + ")");
+            }
+            if (valoId == null)
+            {
+                if (!Auki) { tulos?.Invoke("nostokortti ei ole auki"); return; }
+                Paina();
+                return;
+            }
+            Avaa(valoId, loytyi =>
+            {
+                if (!loytyi) { tulos?.Invoke("ei sisältöä valolle " + valoId); return; }
+                Paina();
+            });
         }
 
         public void Sulje()
@@ -100,7 +152,7 @@ namespace Matkakirja.Natiivi
         {
             nosto = n;
             kuvaIndeksi = 0;
-            kortti.EnableInClassList("mk-nosto--looppi", n.Laji == NostoLaji.Skandaali);
+            kortti.EnableInClassList("mk-nosto--looppi", n.Looppi);
             kortti.EnableInClassList("mk-nosto--kohde", n.Laji == NostoLaji.Kohde);
             if (n.Kuvat.Count > 0) Vaihe1(); else Vaihe2();
             AvaaKerros();
@@ -163,6 +215,8 @@ namespace Matkakirja.Natiivi
         void Vaihe1()
         {
             sisus.Clear();
+            napit.Clear();
+            napit["lisaa"] = Vaihe2;
             sisus.scrollOffset = Vector2.zero;
             sulje.style.display = DisplayStyle.None;
             lukija.Aseta(null);
@@ -181,20 +235,23 @@ namespace Matkakirja.Natiivi
         void Vaihe2()
         {
             sisus.Clear();
+            napit.Clear();
             sisus.scrollOffset = Vector2.zero;
             sulje.style.display = DisplayStyle.Flex;
             kortti.RemoveFromClassList("mk-nosto--esittely");
             var n = nosto;
             // Web: lööppi kuuluu luentaan; otsikko lajin mukaan (skandaalit.js, historian-hetket.js,
-            // elaintaky.js, fokuskohteet.js lisaaLukijanappi).
+            // elaintaky.js, fokuskohteet.js, fokusnosto.js, syvennys.js lisaaLukijanappi).
             lukija.Aseta(new[] { n.Otsikko, n.Ingressi }.Concat(Kappaleet(n.Teksti)),
                 n.Laji == NostoLaji.Skandaali ? "Kuuntele lisälehti"
                 : n.Laji == NostoLaji.Kohde ? "Kuuntele: " + (n.Otsikko ?? "")
-                : n.Laji == NostoLaji.Elain ? "Kuuntele eläinkortti" : "Kuuntele hetki");
+                : n.Laji == NostoLaji.Elain ? "Kuuntele eläinkortti"
+                : n.Laji == NostoLaji.Takynosto ? "Kuuntele kortti"
+                : n.Laji == NostoLaji.Syvennys ? "Kuuntele tarina" : "Kuuntele hetki");
 
             var yla = Rakenne.Teksti(n.Luokka ?? "", "mk-nosto__ylarivi", sisus);
             Kirjasimet.Aseta(yla, Kirjasin.Kone);
-            if (n.Laji == NostoLaji.Skandaali)
+            if (n.Looppi)
             {
                 var nimio = Rakenne.Teksti("LISÄLEHTI", "mk-nosto__nimio", sisus);
                 Kirjasimet.Aseta(nimio, Kirjasin.Kone);
@@ -212,7 +269,11 @@ namespace Matkakirja.Natiivi
             if (!string.IsNullOrEmpty(n.Ingressi))
                 foreach (var k in Kappaleet(n.Ingressi)) Kirjasimet.Aseta(Rakenne.Teksti(k, "mk-nosto__ingressi", sisus), Kirjasin.LukuLihava);
 
+            // Web piirraNostonMedia: äänet otsikon alle, ennen kuvaa.
+            if (n.Laji == NostoLaji.Takynosto) Media(sisus, n);
             if (n.Kuvat.Count > 0) Kuvasarja(sisus);
+            // Web piirraKortinIhmenappi: "Koe ihme" ensimmäisen kuvan (sarjan) alle.
+            if (n.Ihme != null) Ihmenappi(sisus, n);
 
             var jaljella = n.Laji == NostoLaji.Kohde ? n.Korostukset.Select(PuraKorostus).Where(x => x.HasValue).Select(x => x.Value).ToList()
                 : new List<(string Perus, string Nakyva)>();
@@ -230,29 +291,175 @@ namespace Matkakirja.Natiivi
                 });
             }
 
+            // Täkynosto: valokuva ja karttaliite jutun jälkeen, ennen kysymystä (web piirraNostonSisus).
+            if (n.Valokuva != null) Valokuva(sisus, n.Valokuva);
+            if (n.Karttaliite != null) Karttaliite(sisus, n.Karttaliite);
             if (n.Visa != null) Visa(sisus, n);
             if (n.Laji == NostoLaji.Elain) Elainpalkkio(sisus, n);
+            if (n.Laji == NostoLaji.Takynosto)
+            {
+                if (n.KohdeId != null) Kohdenappi(sisus, n);
+                KysyPululta(sisus, n);
+            }
             if (n.Laji == NostoLaji.Kohde)
             {
-                if (n.Kysymykset.Count > 0)
-                {
-                    var q = Rakenne.Teksti("Kysy <s>viisaalta pöllöltä</s> pululta:", "mk-nosto__kysyotsikko", sisus);
-                    q.enableRichText = true;
-                    Kirjasimet.Aseta(q, Kirjasin.KoneLihava);
-                    foreach (var kysymys in n.Kysymykset)
-                    {
-                        string kk = kysymys;
-                        var b = Rakenne.Nappi(kk, "mk-nosto__kysymys", () => { Sulje(); UiNakymat.Hae()?.Chat.Kysy(kk); }, sisus);
-                        Kirjasimet.Aseta(b, Kirjasin.Luku);
-                    }
-                }
+                KysyPululta(sisus, n);
                 foreach (var (nappi, url) in n.Kierrokset)
                 {
                     string u = url;
                     var b = Rakenne.Nappi(nappi.ToUpperInvariant() + " ›", "mk-nosto__kierros", () => Application.OpenURL(u), sisus);
                     Kirjasimet.Aseta(b, Kirjasin.Kone);
                 }
+                if (n.LeikekirjaValo != null) Leikekirja(sisus, n);
             }
+        }
+
+        // --- lajien lohkot ------------------------------------------------------------------
+
+        /// <summary>Web piirraNostonKysymykset / piirraKohdeKysymykset: napautus sulkee kortin ja kysyy pululta.</summary>
+        void KysyPululta(VisualElement isa, Nosto n)
+        {
+            if (n.Kysymykset.Count == 0) return;
+            var q = Rakenne.Teksti("Kysy <s>viisaalta pöllöltä</s> pululta:", "mk-nosto__kysyotsikko", isa);
+            q.enableRichText = true;
+            Kirjasimet.Aseta(q, Kirjasin.KoneLihava);
+            for (int i = 0; i < n.Kysymykset.Count; i++)
+            {
+                string kk = n.Kysymykset[i];
+                Action kysy = () => { Sulje(); UiNakymat.Hae()?.Chat.Kysy(kk); };
+                var b = Rakenne.Nappi(kk, "mk-nosto__kysymys", kysy, isa);
+                Kirjasimet.Aseta(b, Kirjasin.Luku);
+                napit["kysy" + i] = kysy;
+            }
+        }
+
+        /// <summary>
+        /// Web piirraNostonMedia (ui.lisaaNostonNapit): ääninäyte ja vapaa musiikkinäyte soivat pelissä,
+        /// Apple Music -linkit aukeavat selaimeen. Rivi vain, jos jokin kenttä on.
+        /// </summary>
+        void Media(VisualElement isa, Nosto n)
+        {
+            if (n.Aani == null && n.MusiikkiNayte == null && n.Musiikkilinkit.Count == 0) return;
+            var rivi = Rakenne.El("mk-nosto__media", isa, PickingMode.Ignore);
+            void Nappi(string teksti, string otsake, Action a)
+            {
+                var b = Rakenne.Nappi(teksti, "mk-nosto__medianappi", a, rivi);
+                if (otsake != null) b.tooltip = otsake;
+                Kirjasimet.Aseta(b, Kirjasin.Kone);
+            }
+            if (n.Aani != null) { string u = n.Aani; Nappi("▷ Kuuntele näyte", null, () => Puhe.Hae()?.Soita(u)); }
+            foreach (var (nimi, url) in n.Musiikkilinkit) { string u = url; Nappi(nimi + " ›", null, () => Application.OpenURL(u)); }
+            if (n.MusiikkiNayte != null)
+            {
+                string u = n.MusiikkiNayte;
+                Nappi("▷ Kuuntele musiikkia", n.MusiikkiNayteNimi ?? "Vapaasti lisensoitu ääninäyte", () => Puhe.Hae()?.Soita(u));
+            }
+        }
+
+        /// <summary>Web piirraNostonValokuva: "näin se löytyi" pienempänä tekstin alla, napautus suurentaa.</summary>
+        void Valokuva(VisualElement isa, NostoKuva k)
+        {
+            var lohko = Rakenne.El("mk-nosto__valokuva", isa, PickingMode.Ignore);
+            Kuvakehys(lohko, k, () => SuurennaYksi(k));
+            if (!string.IsNullOrEmpty(k.Lyhyt)) Kirjasimet.Aseta(Rakenne.Teksti(k.Lyhyt, "mk-nosto__kuvateksti", lohko), Kirjasin.LukuKursiivi);
+            napit["valokuva"] = () => SuurennaYksi(k);
+        }
+
+        /// <summary>
+        /// Web piirraNostonKarttaliite: "Isoisän matkakirjan liite" omana arkkinaan jutun jälkeen; kartta
+        /// luetaan vasta suurena, joten napautus avaa suurennoksen. Lataamaton kuva vie koko liitteen.
+        /// </summary>
+        void Karttaliite(VisualElement isa, NostoKuva k)
+        {
+            var liite = Rakenne.El("mk-nosto__liite", isa, PickingMode.Ignore);
+            Kirjasimet.Aseta(Rakenne.Teksti("ISOISÄN MATKAKIRJAN LIITE", "mk-nosto__liiteotsake", liite), Kirjasin.Luku);
+            Action avaa = () => SuurennaYksi(k);
+            var nappi = Rakenne.Nappi(null, "mk-nosto__liitenappi", avaa, liite);
+            nappi.tooltip = "Avaa kartta suurena";
+            var kuva = Rakenne.El("mk-nosto__liitekuva", nappi, PickingMode.Ignore);
+            // Taitteen viivat (web .fokusnosto-liitekehys::after): arkki on ollut taitettuna kirjan välissä.
+            Rakenne.El("mk-nosto__liitetaite mk-nosto__liitetaite--pysty", nappi, PickingMode.Ignore);
+            Rakenne.El("mk-nosto__liitetaite mk-nosto__liitetaite--vaaka", nappi, PickingMode.Ignore);
+            int v = versio;
+            NostoSisalto.HaeKuva(k.Lahde, t =>
+            {
+                if (v != versio) return;
+                if (t == null) { liite.RemoveFromHierarchy(); napit.Remove("liite"); return; }
+                kuva.style.backgroundImage = new StyleBackground(t);
+            });
+            var teksti = string.Join(" · ", new[] { k.Lyhyt, k.LahdeRivi }.Where(x => !string.IsNullOrEmpty(x)));
+            if (teksti.Length > 0) Kirjasimet.Aseta(Rakenne.Teksti(teksti, "mk-nosto__kuvateksti", liite), Kirjasin.LukuKursiivi);
+            napit["liite"] = avaa;
+        }
+
+        /// <summary>
+        /// Web nostonKarttakohde + kohdenappi: kortti kiinni ja kohteen oma kortti auki (web avaaFokuskohde).
+        /// </summary>
+        void Kohdenappi(VisualElement isa, Nosto n)
+        {
+            Action katso = () => KatsoKartalla(n);
+            var b = Rakenne.Nappi("→ Katso " + n.KohdeNimi + " kartalla", "mk-nosto__kohdenappi", katso, isa);
+            Kirjasimet.Aseta(b, Kirjasin.Luku);
+            napit["kartalla"] = katso;
+        }
+
+        void KatsoKartalla(Nosto n)
+        {
+            // Web: suljeNostonKortti + avaaFokuskohde — kamera ei liiku, kohteen kortti aukeaa heti.
+            string valo = "kohde:" + n.KohdeId + (n.KohdeIso != null ? "@" + n.KohdeIso : "");
+            Sulje();
+            Avaa(valo);
+        }
+
+        /// <summary>
+        /// Web piirraKohteenNosto: kohteen nimeävä täkynosto aukeaa kohdekortista. Klikkiotsikko on
+        /// napin sisältö — lupaus lunastetaan noston omassa kortissa.
+        /// </summary>
+        void Leikekirja(VisualElement isa, Nosto n)
+        {
+            string valo = n.LeikekirjaValo;
+            Action avaa = () => Avaa(valo);
+            var b = Rakenne.Nappi(null, "mk-nosto__leikekirja", avaa, isa);
+            Kirjasimet.Aseta(Rakenne.Teksti("LIVIAN LEIKEKIRJA", "mk-nosto__leikekirjaotsake", b), Kirjasin.Kone);
+            Kirjasimet.Aseta(Rakenne.Teksti(n.LeikekirjaOtsikko, "mk-nosto__leikekirjaotsikko", b), Kirjasin.Luku);
+            napit["leikekirja"] = avaa;
+        }
+
+        /// <summary>Web piirraIhmenappi: tähti (kadonneiden ihmeiden karttamerkki) ja napin teksti versaalina.</summary>
+        void Ihmenappi(VisualElement isa, Nosto n)
+        {
+            var k = n.Ihme;
+            Action avaa = () => SuurennaYksi(k);
+            var b = Rakenne.Nappi(null, "mk-nosto__ihmenappi", avaa, isa);
+            var tahti = new SvgIkoni(NostoMerkit.Ruusu) { Ruutu = 16, Alku = new Vector2(-8, -8) };
+            tahti.AddToClassList("mk-ikoni--tayta");
+            tahti.AddToClassList("mk-nosto__ihmetahti");
+            b.Add(tahti);
+            Kirjasimet.Aseta(Rakenne.Teksti((n.IhmeNappi ?? "Koe ihme").ToUpperInvariant(), "mk-nappi__teksti", b), Kirjasin.Kone);
+            napit["ihme"] = avaa;
+        }
+
+        /// <summary>
+        /// Matkakirjan ihmeen kulmanauha (web piirraIhmenauha, PUNA-sävy): vino kaista kuvan vasemmassa
+        /// yläkulmassa. Isäntä on kuvaelementti (scale-to-fit); nauha siirtyy kuvan todelliseen kulmaan.
+        /// </summary>
+        public static VisualElement Ihmenauha(VisualElement kuva, string teksti)
+        {
+            var nauha = Rakenne.El("mk-ihmenauha", kuva, PickingMode.Ignore);
+            var kaista = Rakenne.Teksti((teksti ?? "").ToUpperInvariant(), "mk-ihmenauha__kaista", nauha);
+            Kirjasimet.Aseta(kaista, Kirjasin.LukuLihava);
+            return nauha;
+        }
+
+        /// <summary>Nauha kuvan todelliseen vasempaan yläkulmaan (tausta sovitetaan laatikkoon).</summary>
+        public static void SovitaNauha(VisualElement kuva, VisualElement nauha, Texture2D t)
+        {
+            if (nauha == null || t == null) return;
+            var r = kuva.contentRect;
+            if (r.width <= 0 || r.height <= 0 || t.width <= 0 || t.height <= 0) return;
+            float s = Mathf.Min(r.width / t.width, r.height / t.height);
+            nauha.style.left = Mathf.Round((r.width - t.width * s) / 2f);
+            nauha.style.top = Mathf.Round((r.height - t.height * s) / 2f);
         }
 
         /// <summary>Tyhjä rivi erottaa kappaleet; muuten ≥ 3 virkkeen teksti puolitetaan (web jaaKappaleiksi).</summary>
@@ -315,8 +522,20 @@ namespace Matkakirja.Natiivi
             kehys.RegisterCallback<ClickEvent>(_ => napautus?.Invoke());
             // 3:2-kehys leveyden mukaan (web oletussuhde).
             kehys.RegisterCallback<GeometryChangedEvent>(e => { if (e.newRect.width > 0) kehys.style.height = Mathf.Round(e.newRect.width * 2f / 3f); });
+            var nauha = k.Nauha != null ? Ihmenauha(kuva, k.Nauha) : null;
+            if (nauha != null) nauha.style.display = DisplayStyle.None; // näkyviin, kun kuvan kulma tiedetään
+            Texture2D ladattu = null;
+            if (nauha != null) kuva.RegisterCallback<GeometryChangedEvent>(_ => SovitaNauha(kuva, nauha, ladattu));
             int v = versio;
-            NostoSisalto.HaeKuva(k.Lahde, t => { if (t != null && v == versio) kuva.style.backgroundImage = new StyleBackground(t); });
+            NostoSisalto.HaeKuva(k.Lahde, t =>
+            {
+                if (t == null || v != versio) return;
+                ladattu = t;
+                kuva.style.backgroundImage = new StyleBackground(t);
+                if (nauha == null) return;
+                nauha.style.display = DisplayStyle.Flex;
+                SovitaNauha(kuva, nauha, t);
+            });
             return kehys;
         }
 
@@ -350,22 +569,25 @@ namespace Matkakirja.Natiivi
             Nayta(kuvaIndeksi);
         }
 
-        void Suurenna(int alku)
+        void Suurenna(int alku) => suurennos.Avaa(nosto.Kuvat.Select(Lehtikuva).ToList(), alku);
+
+        void SuurennaYksi(NostoKuva k) => suurennos.Avaa(new List<LehtiKuva> { Lehtikuva(k) });
+
+        static LehtiKuva Lehtikuva(NostoKuva k) => new LehtiKuva
         {
-            var sarja = nosto.Kuvat.Select(k => new LehtiKuva
-            {
-                Lahde = k.Lahde, Lyhyt = k.Lyhyt, Selite = k.Selite ?? k.Lyhyt,
-                LahdeRivi = string.Join(" · ", new[] { k.Tekija, k.LahdeRivi }.Where(x => !string.IsNullOrEmpty(x))),
-            }).ToList();
-            suurennos.Avaa(sarja, alku);
-        }
+            Lahde = k.Lahde, Lyhyt = k.Lyhyt, Selite = k.Selite ?? k.Lyhyt, Nauha = k.Nauha,
+            LahdeRivi = string.Join(" · ", new[] { k.Tekija, k.LahdeRivi }.Where(x => !string.IsNullOrEmpty(x))),
+        };
 
         // --- minivisa ja palkkiot -----------------------------------------------------------
 
         void Visa(VisualElement isa, Nosto n)
         {
+            // Lukijan kysymys (kohde, täkynosto: web piirraNostonVisa) otsakkeineen ja vihjeineen;
+            // skandaali, hetki ja syvennys (web piirraSyvennysVisa) kertovat palkkion.
+            bool lukijan = n.Laji == NostoLaji.Kohde || n.Laji == NostoLaji.Takynosto;
             var laatikko = Rakenne.El("mk-nosto__visa", isa, PickingMode.Ignore);
-            if (n.Laji == NostoLaji.Kohde) Kirjasimet.Aseta(Rakenne.Teksti("LUKIJAN KYSYMYS", "mk-nosto__visaotsikko", laatikko), Kirjasin.Kone);
+            if (lukijan) Kirjasimet.Aseta(Rakenne.Teksti(n.Visa.Otsake ?? "LUKIJAN KYSYMYS", "mk-nosto__visaotsikko", laatikko), Kirjasin.Kone);
             Kirjasimet.Aseta(Rakenne.Teksti(n.Visa.Kysymys, "mk-nosto__visakysymys", laatikko), Kirjasin.LukuLihava);
             var o = PeliOhjain.Instanssi;
             bool vastattu = o?.Kaupat != null && o.Kaupat.MinitehtavaVastattu(n.VisaKaupunki, n.VisaAihe);
@@ -374,32 +596,75 @@ namespace Matkakirja.Natiivi
                 Rakenne.Teksti(n.Visa.Fakta ?? "Tähän on jo vastattu.", "mk-nosto__visavihje", laatikko);
                 return;
             }
-            Rakenne.Teksti(n.Laji == NostoLaji.Kohde ? $"Vastaus löytyy tästä jutusta · +{n.VisaPalkkio} puntaa"
+            var vihje = Rakenne.Teksti(lukijan ? n.Visa.Vihje ?? $"Vastaus löytyy tästä jutusta · +{n.VisaPalkkio} puntaa"
                 : $"Oikeasta vastauksesta saat {n.VisaPalkkio} puntaa.", "mk-nosto__visavihje", laatikko);
-            var napit = new List<Button>();
+            var napitVisa = new List<Button>();
             var tulos = Rakenne.Teksti("", "mk-nosto__visatulos", laatikko);
             tulos.style.display = DisplayStyle.None;
+            var juliste = n.VisaJuliste != null ? Juliste(n.VisaJuliste) : null;
             for (int i = 0; i < n.Visa.Vaihtoehdot.Count; i++)
             {
                 int valinta = i;
-                var b = Rakenne.Nappi(n.Visa.Vaihtoehdot[i], "mk-nosto__visanappi", null, laatikko);
-                Kirjasimet.Aseta(b, Kirjasin.Luku);
-                b.clicked += () =>
+                Button b = null;
+                Action vastaa = () =>
                 {
+                    if (!b.enabledSelf) return;
                     bool oikein = valinta == n.Visa.Oikea;
-                    var t = PeliOhjain.Instanssi?.KauppaTeko(k => k.Minitehtava(n.VisaKaupunki, n.VisaAihe, oikein, n.VisaPalkkio));
-                    foreach (var x in napit) x.SetEnabled(false);
-                    napit[n.Visa.Oikea].AddToClassList("mk-oikein");
+                    bool julisteUusi = false;
+                    var peli = PeliOhjain.Instanssi;
+                    // Yksi teko: vastaus, nostotehtävälaskuri (web kirjaaNostotehtava) ja juliste
+                    // (web myonnaJuliste) samaan tallennukseen.
+                    var t = peli?.KauppaTeko(k =>
+                    {
+                        var r = k.Minitehtava(n.VisaKaupunki, n.VisaAihe, oikein, n.VisaPalkkio);
+                        if (r.Ok && oikein)
+                        {
+                            if (n.VisaNostotehtava) k.KirjaaNostotehtava();
+                            if (juliste != null && !k.JulisteLaukussa(n.VisaJuliste)) julisteUusi = k.MyonnaJuliste(n.VisaJuliste).Uusi;
+                        }
+                        return r;
+                    }, oikein ? n.VisaRahaSyy : null);
+                    // Testiavaus ilman peliä: juliste näytetään kuin se olisi myönnetty.
+                    if (peli == null) julisteUusi = oikein && juliste != null;
+                    foreach (var x in napitVisa) x.SetEnabled(false);
+                    napitVisa[n.Visa.Oikea].AddToClassList("mk-oikein");
                     if (!oikein) b.AddToClassList("mk-vaarin");
+                    // Web: vihjerivi oli lupaus vastaamattomalle; tulos korvaa sen.
+                    if (lukijan) vihje.style.display = DisplayStyle.None;
                     tulos.text = t != null && !t.Ok && t.Virhe != null && t.Virhe != "Jo vastattu" ? t.Virhe
                         : oikein ? $"Oikein! +{n.VisaPalkkio} puntaa." : $"Oikea vastaus: {n.Visa.Vaihtoehdot[n.Visa.Oikea]}.";
                     if (!string.IsNullOrEmpty(n.Visa.Fakta)) tulos.text += " " + n.Visa.Fakta;
                     tulos.EnableInClassList("mk-oikein", oikein);
                     tulos.style.display = DisplayStyle.Flex;
+                    if (julisteUusi)
+                    {
+                        // Web syvennys: juliste laukkuun heti, katselu napista (naytaJuliste).
+                        Action nayta = () => NaytaJuliste(juliste);
+                        var lunasta = Rakenne.Nappi("Lunasta juliste", "mk-nosto__lunastus", nayta, laatikko);
+                        Kirjasimet.Aseta(lunasta, Kirjasin.LukuLihava);
+                        napit["juliste"] = nayta;
+                    }
                 };
-                napit.Add(b);
+                b = Rakenne.Nappi(n.Visa.Vaihtoehdot[i], "mk-nosto__visanappi", vastaa, laatikko);
+                Kirjasimet.Aseta(b, Kirjasin.Luku);
+                napitVisa.Add(b);
+                napit["vastaa" + i] = vastaa;
             }
         }
+
+        /// <summary>Kaupungin juliste (web kaupunginJuliste = JULISTEET[kaupunki]).</summary>
+        static JulisteTiedot Juliste(string kaupunki) =>
+            UiSisalto.Julisteet.FirstOrDefault(j => j.Id == kaupunki) ?? UiSisalto.Julisteet.FirstOrDefault(j => j.Id == null && j.Kaupunki == kaupunki);
+
+        void NaytaJuliste(JulisteTiedot j) =>
+            suurennos.Avaa(new List<LehtiKuva>
+            {
+                new LehtiKuva
+                {
+                    Lahde = j.Url, Otsikko = j.Otsikko, Lyhyt = j.Lyhyt, Selite = j.Selite ?? j.Lyhyt ?? j.Otsikko,
+                    LahdeRivi = "Matkakirjan oma paino",
+                },
+            });
 
         void Elainpalkkio(VisualElement isa, Nosto n)
         {
