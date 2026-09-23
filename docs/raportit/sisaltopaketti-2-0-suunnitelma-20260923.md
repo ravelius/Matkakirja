@@ -1,7 +1,7 @@
 # Sisältöpaketti 2.0: raakakopio pois (suunnitelma, ei toteuteta vielä)
 
 *Siirtoseppä 23.9.2026, Fablen tilaus. Pohjana koepaketti v16 (skeema
-1.16, haara siirtoseppa-radiot).*
+1.16, haara siirtoseppa-radiot); täydennetty v19:n (skeema 1.17) jälkeen.*
 
 ## Lähtötilanne (mitattu)
 
@@ -33,14 +33,33 @@ maasto, maakunnat, radiot, viritysäänet ja ui-tekstit.
   sovelluksille (sääntö 5.3: poisto nostaa majoria). CI julkaisee
   siirtymäaikana molemmat majorit samasta commitista.
 
+## Natiivin `data`-lukijat kokoelmittain (master 23.9.2026 ilta)
+
+| Natiivin tiedosto | Kokoelmat, joiden `data`-kenttää luetaan | 1.x-tyypitys |
+|---|---|---|
+| LehtiSisalto.cs, UiSisalto.cs | kaupunkilehdet, maalehdet | tehty 1.15 (lukija lukee jo molempia) |
+| Kohdekartat.cs | nahtavyydet, miniatyyrit | kohdekartat 1.17; nahtavyydet ja miniatyyrit tyypittämättä |
+| Fokusvirrat.cs, Fokus.cs, Luennat.cs, Sahketehtava.cs | fokusvirrat | lehtitehtavat 1.17; muu fokusvirta tyypittämättä |
+| Kysymysdata.cs, NostoSisalto.cs, KysymysApu.cs | kysymykset, elaintayt | tyypittämättä |
+| Kaupat.cs, UiSisalto.cs | elaintayt, julisteet | tyypittämättä |
+| Pulmat.cs | pulmat | tyypittämättä (generaattori on jo päätasolla) |
+| Laatat.cs | laatat | osittain (kuvat päätasolla 1.10, tyypit datassa) |
+| Reitit.cs, SisaltoTuonti.cs | kaupungit, reitit | pääosin päätasolla (1.5); tarkista loput |
+| LinssiOhjain.cs, KeksintoLuennat.cs, Rantamaski.cs, Isoisa1873.cs | linssiaineisto ja linssimoduulit | valkolista-ehdokkaat |
+
+Lisäksi natiivin lehtikuori poistuu (Pelikoodari, A4). Sen jälkeen
+paketista voidaan poistaa `web/lehti.json`, `skeema/web-nakyma.schema.json`
+ja manifestin `webNakymat`. Poisto tehdään 1.x:ssä minor-poikkeuksella
+(kuten 1.14), kun Pelikoodari ilmoittaa haaran olevan natiivin masterissa.
+
 ## Vaiheet
 
 1. **1.x: tyypitä jokainen natiivin lukema `data`-polku** (kokoelma
    kerrallaan, minor-nostot). Lista saadaan greppaamalla natiivin
    `Kentta(…, "data")`-kutsut ja lukemalla kenttäpolut. Lehdet on tehty
-   (1.15). Seuraavat suuruusjärjestyksessä: nahtavyydet, fokusvirrat,
-   kysymykset ja kuvakysymykset, pulmat, laatat, reitit, luennat ja
-   linssiaineisto.
+   (1.15), kohdekartat ja lehtitehtävät (1.17). Seuraavat taulukon mukaan
+   suuruusjärjestyksessä: nahtavyydet ja miniatyyrit, fokusvirrat,
+   kysymykset ja elaintayt, julisteet, pulmat, laatat ja reitit.
 2. **1.x: moduulien korvaus.** Jokaiselle natiivin lukemalle moduulille
    joko kokoelma (esim. radiot on jo tehty; maailmankartan nimet →
    maastonimet on jo tehty) tai merkintä `natiivi: true` valkolistaan.
