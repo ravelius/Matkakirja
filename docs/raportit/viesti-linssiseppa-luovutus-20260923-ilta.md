@@ -37,7 +37,7 @@ linssit-kontaktiarkki-20260923.md. Edellinen luovutus: viesti-linssiseppa-luovut
 - Ydin, AVPlayer-liitännäinen ja Unity-sovitin ovat masterissa; Natiiviseppä on kääntänyt .mm:n ja ATS-korjauksen
   (NSAllowsArbitraryLoadsForMedia). **Laitteella ei ole vielä kuultu yhtään lähetystä**: v16:ssa kaikki 115 asemaa
   ovat luokassa linkki.
-- **Luokkasääntö toteutettu** (haara linssiseppa/radioluokat, merge-pyyntö Natiivisepällä): omistajan päätös
+- **Luokkasääntö toteutettu** (linssiseppa/radioluokat, mergetty masteriin 9fd0c07; TestFlight 3 = d29971b sisältää vielä tiukemman "vain sallittu" -säännön, uusi sääntö tulee seuraavaan laitekäännökseen): omistajan päätös
   23.9. klo 21.1x — "sallittu" ja "epaselva" soivat, "kielletty" (ja v16:n vanha "linkki") avaa aseman sivun,
   ilman sivua ei mitään; luokaton ei soi eikä näy asteikolla, ei edes kehittäjätilassa. Korvaavat asemat 16 maalle:
   docs/raportit/radio-korvaavat-asemat-20260923.md (Siirtoseppä päivittää kokoelman). **Seuraavaksi:** laitetesti,
