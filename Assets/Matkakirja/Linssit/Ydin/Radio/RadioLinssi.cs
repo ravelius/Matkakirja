@@ -27,6 +27,8 @@ namespace Matkakirja.Linssit.Radio
     {
         void Avaa(string url, string tyyppi);
         void Sulje();
+        /// <summary>Tauko (AVPlayer pause/play, web audio.pause): yhteys jää, data ei kulje mykistettynä.</summary>
+        void Tauko(bool paalle);
         float Voimakkuus { set; }
         /// <summary>Kuuluuko lähetys (soitto on alkanut ja kulkee).</summary>
         bool Kuuluu { get; }
@@ -67,6 +69,8 @@ namespace Matkakirja.Linssit.Radio
         public string Sivu;
         /// <summary>Soiko vara-äänite eikä suora lähetys.</summary>
         public bool Aanite;
+        /// <summary>Pelaajan tauko (merkkivalo, web asetaTauko): lähetys ja viritysääni seis, tila säilyy.</summary>
+        public bool Tauolla;
         /// <summary>Asteikon kohta 0…1 (asemat lännestä itään kaupunkinsa pituusasteen mukaan).</summary>
         public double Taajuus;
         /// <summary>Pistenäytön kaksi riviä (web TILAN_RIVIT ja aseman nimi).</summary>
@@ -151,11 +155,40 @@ namespace Matkakirja.Linssit.Radio
         public IReadOnlyList<Asema> Asemat => aineisto.Asemat.Values.ToList();
         /// <summary>Maan asema (kartuscha).</summary>
         public Asema MaanAsema(string iso3) => aineisto.MaanAsema(iso3);
+        /// <summary>Radiotilan kaupunki (nimi, maa, sijainti) UI:lle.</summary>
+        public RadioKaupunki Kaupunki(string id) => aineisto.Kaupunki(id);
+        /// <summary>Maan nimi näytölle (paketin maat), null jos ei tiedossa.</summary>
+        public string MaanNimi(string iso3) => iso3 != null && aineisto.Maat.TryGetValue(iso3, out var n) ? n : null;
+
+        /// <summary>Pelaajan tauko päällä (web tauolla).</summary>
+        public bool Tauolla { get; private set; }
+        double tauonAlku;
+
+        /// <summary>
+        /// Merkkivalon tauko (web asetaTauko): TAUKO EIKÄ MYKISTYS — lähetys pysähtyy (AVPlayer pause),
+        /// viritysääni vaikenee, ja tila (asema, vaihe, asteikko) säilyy. Virityksen ajastimet
+        /// seisovat tauon ajan, joten tauko ei tuota aikakatkaisua. Uusi asema tai STOP purkaa tauon.
+        /// </summary>
+        public void Tauko(bool paalle)
+        {
+            if (!Auki || Tauolla == paalle) return;
+            Tauolla = paalle;
+            if (paalle) tauonAlku = Nyt;
+            else
+            {
+                double kesto = Nyt - tauonAlku;
+                alkoi += kesto;
+                lukittuHetki += kesto;
+            }
+            if (viritin != null) viritin.Voimakkuus = paalle ? 0 : aani;
+            virta?.Tauko(paalle);
+            if (Tila != null) { Tila.Tauolla = paalle; TilaMuuttui?.Invoke(Tila); }
+        }
 
         public float Voimakkuus
         {
             get => aani;
-            set { aani = Math.Clamp(value, 0, 1); if (lukittu && virta != null) virta.Voimakkuus = aani; if (viritin != null) viritin.Voimakkuus = aani; }
+            set { aani = Math.Clamp(value, 0, 1); if (lukittu && virta != null) virta.Voimakkuus = aani; if (viritin != null && !Tauolla) viritin.Voimakkuus = aani; }
         }
 
         double Nyt => (y?.Aika ?? 0) * 1000;
@@ -259,7 +292,7 @@ namespace Matkakirja.Linssit.Radio
 
         public void Paivita()
         {
-            if (!Auki || soiva == null) return;
+            if (!Auki || soiva == null || Tauolla) return;
             double t = Nyt - alkoi;
             if (Tila.Vaihe == RadioVaihe.Virhe) return;
 
@@ -297,6 +330,8 @@ namespace Matkakirja.Linssit.Radio
 
         void LopetaAani(double haiveS, bool viritysJatkuu = false)
         {
+            // Uusi asema, STOP tai sulku purkaa tauon (uusi valinta = soita).
+            if (Tauolla) { Tauolla = false; if (viritin != null) viritin.Voimakkuus = aani; }
             virta?.Sulje();
             if (!viritysJatkuu) viritin?.Lopeta(haiveS);
             kuuluu = lukittu = false;
@@ -322,6 +357,9 @@ namespace Matkakirja.Linssit.Radio
             aineisto.Maat.TryGetValue(iso ?? "", out var maa);
             string naytto = asema == null ? null : RadioAineisto.NaytonNimi(asema.Nimi, maa, iso, fontti);
             bool linkki = vaihe == RadioVaihe.Linkki;
+            // Web radiosoitin rivit(): asema = lyhennetty näyttönimi, paikka = "KAUPUNKI · MAA".
+            string asemaRivi = (naytto ?? asema?.Nimi ?? "").ToUpperInvariant();
+            string paikka = string.Join(" · ", new[] { k?.Nimi, maa }.Where(x => !string.IsNullOrEmpty(x))).ToUpperInvariant();
             int i = kaupunki == null ? -1 : asteikko.IndexOf(kaupunki);
             Tila = new RadioTila
             {
@@ -329,8 +367,16 @@ namespace Matkakirja.Linssit.Radio
                 Maa = maa, KaupunkiId = kaupunki, KaupunkiNimi = k?.Nimi, Viesti = viesti,
                 Sivu = linkki ? asema?.Sivu : null, Aanite = aanite && !linkki && vaihe != RadioVaihe.Virhe,
                 Taajuus = i < 0 || asteikko.Count < 2 ? (asteikko.Count == 1 && i == 0 ? 0.5 : Tila?.Taajuus ?? 0.5) : i / (double)(asteikko.Count - 1),
-                Rivi1 = vaihe switch { RadioVaihe.Viritys => "VIRITTÄÄ...", RadioVaihe.Virhe => "EI KUULU", _ => (naytto ?? "").ToUpperInvariant() },
-                Rivi2 = vaihe == RadioVaihe.Soi || linkki ? (k?.Nimi ?? "").ToUpperInvariant() : vaihe == RadioVaihe.Virhe ? (viesti ?? "").ToUpperInvariant() : "",
+                Rivi1 = vaihe switch
+                {
+                    RadioVaihe.Viritys => "VIRITTÄÄ...",
+                    RadioVaihe.Virhe => "EI KUULU",
+                    RadioVaihe.Soi => asemaRivi.Length > 0 ? asemaRivi : "SUORA LÄHETYS",
+                    _ => asemaRivi,
+                },
+                // Virittäessä ja virheessä asema, soidessa ja linkissä paikka (web: virhe → asema || '').
+                Rivi2 = vaihe == RadioVaihe.Soi || linkki ? paikka : asemaRivi,
+                Tauolla = Tauolla,
             };
             TilaMuuttui?.Invoke(Tila);
         }

@@ -20,6 +20,7 @@ namespace Matkakirja.Natiivi
         [DllImport("__Internal")] static extern void MatkakirjaRadio_Sulje();
         [DllImport("__Internal")] static extern void MatkakirjaRadio_Voimakkuus(float arvo);
         [DllImport("__Internal")] static extern int MatkakirjaRadio_Tila();
+        [DllImport("__Internal")] static extern void MatkakirjaRadio_Tauko(int paalle);
 #else
         float aukesi = -1;
         static void MatkakirjaRadio_Voimakkuus(float arvo) { }
@@ -56,6 +57,17 @@ namespace Matkakirja.Natiivi
         }
 
         public float Voimakkuus { set => MatkakirjaRadio_Voimakkuus(value); }
+
+        /// <summary>Tauko: AVPlayer pause/play (yhteys jää, RadioLinssi ei lue Kuuluu-tilaa tauolla).</summary>
+        public void Tauko(bool paalle)
+        {
+            if (!auki) return;
+#if UNITY_IOS && !UNITY_EDITOR
+            MatkakirjaRadio_Tauko(paalle ? 1 : 0);
+#else
+            Debug.Log($"MATKAKIRJA radio: (editori) tauko {paalle}");
+#endif
+        }
 
         int Tila
         {

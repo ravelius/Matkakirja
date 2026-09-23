@@ -9,6 +9,7 @@
 //   MatkakirjaRadio_Sulje()            virta pois
 //   MatkakirjaRadio_Voimakkuus(0…1)    ristihäivytys (RadioLinssi)
 //   MatkakirjaRadio_Tila()             0 ei virtaa, 1 yhdistää, 2 soi, 3 ei vastaa, 4 katkesi
+//   MatkakirjaRadio_Tauko(0|1)         merkkivalon tauko: pause/play (int, ei bool: P/Invoke-koko)
 //
 // "Soi" = timeControlStatus Playing ja kohdan eteneminen (kuten webin 'playing' tai
 // 'timeupdate'): puskurointi ei ole vielä kuulumista.
@@ -127,6 +128,14 @@ void MatkakirjaRadio_Voimakkuus(float arvo)
 int MatkakirjaRadio_Tila(void)
 {
     return [[MatkakirjaRadio jaettu] tila];
+}
+
+// Merkkivalon tauko (web audio.pause/play): yhteys jää, data ei kulje mykistettynä.
+void MatkakirjaRadio_Tauko(int paalle)
+{
+    AVPlayer* soitin = [MatkakirjaRadio jaettu].soitin;
+    if (soitin == nil) return;
+    if (paalle) [soitin pause]; else [soitin play];
 }
 
 }
