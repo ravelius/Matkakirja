@@ -66,6 +66,22 @@ odota 3
 kuva selite
 ```
 
+Karttaselitteen Maakunnat-välilehti (`Maakunnat.cs`; data sisältöpaketin moduuleista
+karttatyokalu-maakunnat, maakunnat-luonnehdinnat, maakunnat-pulu):
+`ui maakunnat [kortti] [ISO:tunnus]` avaa selitteen Maakunnat-välilehdelle, valitsee alueen
+(avaa sen maan) ja `kortti` avaa ⊕-kortin (kuvat, pitkä teksti, Pulun kysymykset).
+`ui selite` palauttaa Nostot-välilehden.
+
+```
+ui maakunnat ITA:Toscana
+odota 3
+kuva maakunnat
+ui maakunnat kortti FRA:Grand Est
+odota 4
+kuva maakunta-kortti
+ui sulje
+```
+
 Kuvasarja kysymysnäkymän tarkistukseen (erä 3):
 
 ```

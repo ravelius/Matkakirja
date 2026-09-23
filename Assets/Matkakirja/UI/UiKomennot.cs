@@ -10,7 +10,8 @@
 //                                             kuva, lippu, pulma [id], kaksintaistelu,
 //                                             tapahtumakortti, tulos [laattatyyppi], kohtaaminen,
 //                                             kohtaaminen-tervehdys (KysymysEsimerkki.cs)
-//   ui selite                                 karttaselite auki
+//   ui selite                                 karttaselite auki (Nostot-välilehti)
+//   ui maakunnat [kortti] [ISO:tunnus]        karttaselite Maakunnat-välilehdellä, valinta, kortti
 //   ui pulu sano [teksti] | aani [lähde n] | ele id | tilanne laji | tunne t | pois | paalle
 //   ui tietoja                                tekijätiedot ja lähteet
 //   ui chat [kysymys]                         pulun keskustelu auki / kysy
@@ -164,7 +165,16 @@ namespace Matkakirja.Natiivi
                     if (loput.Length > 0) ui.Chat.Kysy(loput); else ui.Chat.Vaihda();
                     return null;
                 case "tietoja": ui.Tietoja.Avaa(); return null;
-                case "selite": ui.Karttaselite.Avaa(); return UiPalvelut.KarttaValot == null ? "ei KarttaValot-palvelua: vain selitykset" : null;
+                case "maakunnat":
+                {
+                    bool kortti = loput == "kortti" || loput.StartsWith("kortti ");
+                    string avain = (kortti ? loput.Substring(6) : loput).Trim();
+                    ui.Karttaselite.Avaa();
+                    ui.Karttaselite.VaihdaValilehti(true);
+                    ui.Karttaselite.Maakunnat.Testaa(avain.Length > 0 ? avain : null, kortti);
+                    return null;
+                }
+                case "selite": ui.Karttaselite.Avaa(); ui.Karttaselite.VaihdaValilehti(false); return UiPalvelut.KarttaValot == null ? "ei KarttaValot-palvelua: vain selitykset" : null;
                 case "kartuscha":
                 {
                     var ks = loput.Split(' ');
