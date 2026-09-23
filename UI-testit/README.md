@@ -469,3 +469,10 @@ ui chat Missä Sparta on?
 odota 8
 kuva chat-vastaus
 ```
+
+Kuvien suurennokset (nappi-inventaarion rivit 5–10, 23.9.2026): yläpalkin logo avaa tekijätiedot;
+kysymyksen valokuva ja lippu sekä kohtaamiskuva (pitkä kuvateksti) avautuvat Kuvasuurennokseen;
+nostokortin ja luennan pikkukuvien suurennosta voi selata ‹ ›; pulun vastaukseen tulee Wikipedian
+kuva (vastauksen ensimmäinen [[käsite]] tai kysymys), napautus → kuva isompana tiivistelmän ja
+lähteen kanssa. Testit: `ui kysymys kuva` / `ui kysymys lippu` / `ui kysymys kohtaaminen` ja
+napautus kuvaan, `ui nosto hetki:kolumbus-portugali-1484` ja kuvan napautus, `ui chat Mikä on Colosseum?`.

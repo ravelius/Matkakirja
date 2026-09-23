@@ -625,3 +625,21 @@
     margin-right: 0;
     --mk-ikoni-viiva: 2;
 }
+
+/* Vastauksen kuva kuplan oikeaan yläkulmaan (web .pollo-vastauskuva: float right, 5,2 rem). */
+.mk-chat__livia--kuva {
+    min-height: 90px;
+    padding-right: 92px;
+}
+
+.mk-chat__vastauskuva {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    width: 83px;
+    height: 83px;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.45);
+    border-radius: 6px;
+    -unity-background-scale-mode: scale-and-crop;
+}
