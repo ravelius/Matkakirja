@@ -28,14 +28,16 @@ varoituksia (`RGBA Compressed ASTC6X6 ... not supported, decompressing
 texture`) — tunnettu simulaattori-only-rajoite, ei odoteta oikealla
 laitteella. Ei poikkeuksia (exception), ei kaatumisia.
 
-## Visuaalinen tarkistus (3/10 kuvaa katsottu tarkkaan)
+## Visuaalinen tarkistus (4/10 kuvaa katsottu tarkkaan)
 
-- **kysymys-visa**: näyttää kaupunkikortin (Lontoo, aarrekysymys-esikatselu,
-  45 s tiimalasi, "Tutki kaupunkia" -nappi) — EI itse monivalintakysymystä
-  vielä. Jos tarkoitus oli näyttää suoraan visa-kysymyksen
-  vastausvaihtoehdot, tämä ei täsmää; jos tarkoitus oli näyttää
-  esikatselukortti ensin, tämä on oikein. En osaa päätellä kumpi ilman
-  lisätietoa — tarkistakaa te.
+- **kysymys-visa (KORJATTU):** ensimmäinen kaappaus näytti väärin
+  kaupunkikortin — juurisyy löytyi (Natiivi-UI): `kuva`-komento kaappasi
+  liian aikaisin, joten kuva näytti SEURAAVAN komennon tilan (räätälöity
+  off-by-one). Korjattu väliaikaisesti `odota 1` jokaisen `kuva`-rivin
+  jälkeen (pysyvä korjaus haarassa natiivi-ui/pulu 8e21f30, tulossa
+  masteriin). Uusintakaappaus näyttää nyt oikein: Budapest-visa-kysymys
+  A–D-vaihtoehdoin, Vihje (40£) ja 50:50 (80£) -napit, 44 s tiimalasi.
+  Täydellisen näköinen.
 - **kysymys-tulos**: TÄYSI monivalintanäkymä (A–D, oikea B korostettu
   vihreällä, "Oikein!"-banneri, palkinto +640 £ / +1, lähdeteksti,
   "Jatka matkaa" -nappi) — täydellisen näköinen, ei visuaalisia vikoja.
