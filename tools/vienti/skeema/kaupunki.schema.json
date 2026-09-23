@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://matkakirja.app/vienti/1/kaupunki.schema.json",
+  "title": "Matkakirja-vienti: kaupungit-kokoelman alkio",
+  "description": "Pelilaudan kaupunki. Natiivin 3D-proton ensimmäinen tarve (3D-selvittäjä 23.9.2026): id, nimi, lat, lon ja maa ISO2-koodina; tyyppi, lentokentta ja aloitus nimien harvennukseen. data = laudan alkuperäinen olio.",
+  "type": "object",
+  "required": ["id", "nimi", "maa", "maa2", "manner", "lat", "lon", "sijaintiLahde", "saari", "lentokentta", "aloitus", "tyyppi", "data"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9]+$" },
+    "nimi": { "type": "string" },
+    "maa": { "type": ["string", "null"], "pattern": "^[A-Z]{3}$", "description": "pelin maakoodi (ISO3; Etelä-Sudan SDS)" },
+    "maa2": { "type": ["string", "null"], "pattern": "^[A-Z]{2}$", "description": "ISO 3166-1 alpha-2 (tools/vienti/iso2.mjs)" },
+    "manner": { "type": ["string", "null"] },
+    "lat": { "type": "number", "minimum": -90, "maximum": 90 },
+    "lon": { "type": "number", "minimum": -180, "maximum": 180 },
+    "sijaintiLahde": { "enum": ["pallopiste", "laudalta-laskettu"] },
+    "saari": { "type": "boolean" },
+    "lentokentta": { "type": "boolean" },
+    "aloitus": { "type": "boolean" },
+    "tyyppi": { "type": ["string", "null"], "description": "laudan ambience (kaupunki, satama, erämaa…)" },
+    "data": { "$ref": "arvo.schema.json" }
+  },
+  "additionalProperties": false
+}

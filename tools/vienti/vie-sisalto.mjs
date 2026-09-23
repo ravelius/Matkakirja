@@ -42,6 +42,15 @@ import { kokoaKokoelmat } from './kokoelmat.mjs';
 
 export const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 export const SKEEMAVERSIO = 'matkakirja-vienti/1';
+/*
+ * Skeeman major.minor (siirtoputkiraportin osa 5.3). Major on polussa
+ * (`matkakirja-vienti/1`, ämpärissä `sisalto/1/`); minor nousee, kun
+ * lisätään kenttä tai kokoelma, eikä vanha sovellus välitä siitä.
+ * Poisto tai merkityksen muutos nostaa majoria ja vaihtaa osoitinpolun.
+ *   1.0  ensimmäinen vienti (PR #2890)
+ *   1.1  kaupungit: maa2 (ISO2), tyyppi, lentokentta, aloitus; osoitin
+ */
+export const SKEEMAVERSIO_TARKKA = '1.1';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 
@@ -162,6 +171,7 @@ export async function kokoaVienti({ juuri = JUURI } = {}) {
 
   const manifest = {
     $skeema: `${SKEEMAVERSIO}/manifest`,
+    skeemaversio: SKEEMAVERSIO_TARKKA,
     kuvaus: 'Matkakirjan sisältö moottorineutraalissa muodossa. Ks. docs/raportit/sisallon-siirtoputki-20260923.md.',
     mediaJuuri: 'https://media.matkakirja.app/',
     laskennat: {

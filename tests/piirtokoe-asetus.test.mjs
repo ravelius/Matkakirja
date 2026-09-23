@@ -377,3 +377,30 @@ test('paljas: CSS jättää kankaan, overlayn ja valikon näkyviin', () => {
     assert.ok(css.includes(`body.kerros-pois-dom ${s}`), s);
   }
 });
+
+/*
+ * SUORAAN KARTALLE (omistajan testitila 23.9.2026 klo 10.50): kytkin
+ * tallentuu, ?koe=suoraan toimii, ja käynnistys- ja saapumispolku
+ * ohittavat päivitysikkunan, trailerin ja automaattisen luennan.
+ */
+test('suoraan kartalle: tallennus, osoitelippu ja ohituskohdat', async () => {
+  const { suoraanKartallePaalla, asetaSuoraanKartalle, SUORAAN_AVAIN } = await import('../js/piirtokoe-asetus.js');
+  const pura = valeMuisti();
+  try {
+    globalThis.location = { search: '' };
+    assert.equal(suoraanKartallePaalla(), false, 'oletus pois: nykyinen käytös');
+    asetaSuoraanKartalle(true);
+    assert.equal(globalThis.localStorage.getItem(SUORAAN_AVAIN), '1');
+    assert.equal(suoraanKartallePaalla(), true);
+    asetaSuoraanKartalle(false);
+    assert.equal(suoraanKartallePaalla(), false);
+    assert.equal(suoraanKartallePaalla('?koe=suoraan'), true, 'osoitelippu');
+    assert.equal(suoraanKartallePaalla('?koe=eivienti'), false);
+  } finally { pura(); }
+  const ui = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
+  assert.match(ui, /&& !this\.arrivalDialog\?\.open && !suoraanKartallePaalla\(\);/, 'traileri ohitetaan');
+  assert.match(ui, /if \(suoraanKartallePaalla\(\)\) \{\n\s*this\.factText\.textContent = merkinta\.teksti;\n\s*this\.asetaMerkinnanLuenta\(luentatehtava, \{ aloita: false \}\);\n\s*return;/, 'merkintä heti, luenta ei käyntiin');
+  const main = readFileSync(new URL('../js/main.js', import.meta.url), 'utf8');
+  assert.match(main, /if \(paivitysTapahtui && edellinenVersio && !katseluPack && !suoraanKartallePaalla\(\)\) \{/, 'ei päivitysikkunaa');
+  assert.match(main, /suoraan\.dataset\.kytkin = 'suoraan-kartalle';/, 'kytkin valikossa');
+});

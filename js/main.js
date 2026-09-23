@@ -8,6 +8,7 @@ import { asetaLiike, liikePaalla } from './kartta-liike.js';
 import {
   PIIRTOKOKEIDEN_VAIHTOEHDOT, asetaKehysprofiili, asetaPiirtokoe,
   kehysprofiiliPaalla, piirtokoeValinta, koetilanAvain, luoKoevaihdonLataaja, unohdaPoistetutValinnat,
+  suoraanKartallePaalla, asetaSuoraanKartalle,
   PALJAAN_KERROKSET, PALJAAT_KOKEET, asetaPaljasKerros, paljaatKerrokset,
 } from './piirtokoe-asetus.js';
 import { unohdaTarkkuus } from './tarkkuus-asetus.js';
@@ -154,7 +155,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-09-21.2145';
+const APP_VERSION = '2026-09-21.2148';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -831,6 +832,31 @@ if (profiiliValikko) {
   });
   nayta();
   profiiliValikko.appendChild(rivi);
+
+  /*
+   * SUORAAN KARTALLE (omistajan testitila 23.9.2026 klo 10.50): sama
+   * riviasu kuin kehysprofiilin kytkimellä. Ei latausta: tila koskee
+   * seuraavaa uudelleenlatausta ja seuraavia saapumisia.
+   */
+  const suoraan = document.createElement('button');
+  suoraan.type = 'button';
+  suoraan.className = 'aanikytkin';
+  suoraan.dataset.kytkin = 'suoraan-kartalle';
+  suoraan.setAttribute('role', 'switch');
+  suoraan.title = 'Testitila: lataus suoraan kartalle, ei saapumisesityksiä eikä automaattisia luentoja';
+  suoraan.setAttribute('aria-label', 'Suoraan kartalle — testitila: ei päivitysikkunaa, traileria eikä automaattisia luentoja');
+  suoraan.innerHTML = `<span class="viiva-ikoni">${svg('<path d="M5 12h12"/><path d="m13 7 5 5-5 5"/>')}</span>`
+    + '<span class="aanikytkin-nimi">Suoraan kartalle</span>'
+    + '<span class="aanikytkin-tila"></span>';
+  const naytaSuoraan = () => {
+    const paalla = suoraanKartallePaalla();
+    suoraan.classList.toggle('valittu', paalla);
+    suoraan.setAttribute('aria-checked', paalla ? 'true' : 'false');
+    suoraan.querySelector('.aanikytkin-tila').textContent = paalla ? 'päällä' : 'pois';
+  };
+  suoraan.addEventListener('click', () => { asetaSuoraanKartalle(!suoraanKartallePaalla()); naytaSuoraan(); });
+  naytaSuoraan();
+  profiiliValikko.appendChild(suoraan);
 }
 
 for (const tiedot of AANIKYTKIMET) {
@@ -1688,7 +1714,8 @@ if (!katseluPack) {
  * eivät kerro mitään — eikä katselutilassa, joka on työhuoneen
  * esikatselu. Koko loki on edelleen versionumeron takana.
  */
-if (paivitysTapahtui && edellinenVersio && !katseluPack) {
+// Suoraan kartalle (testitila, js/piirtokoe-asetus.js): ei päivitysikkunaa.
+if (paivitysTapahtui && edellinenVersio && !katseluPack && !suoraanKartallePaalla()) {
   const paivitysDialog = document.getElementById('paivitys-dialog');
   const paivitysLista = document.getElementById('paivitys-lista');
   for (const m of MUUTOKSET.slice(0, 2)) paivitysLista.appendChild(muutosRivi(m));
