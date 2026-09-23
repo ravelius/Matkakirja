@@ -350,6 +350,7 @@ namespace Matkakirja.Natiivi
             }
             else if (AvoinTehtava != Tehtava.Ei) NaytaKysymys();
             else PaivitaNakyma();
+            PaivitaNappula();
             KaytossaMuuttui?.Invoke(paalla);
         }
 
@@ -680,6 +681,7 @@ namespace Matkakirja.Natiivi
                 matka = null;
                 Tila = SilmukanTila.Aloitus;
                 tilarivi.Aseta("");
+                PaivitaNappula();
                 Debug.Log("MATKAKIRJA peli: aloitusnäkymä, tallennus " + (jatkettava != null ? "on" : "ei"));
                 try { AloitusTarjolla?.Invoke(); } catch (Exception e) { Debug.LogException(e); }
                 return;
@@ -852,6 +854,7 @@ namespace Matkakirja.Natiivi
             vaihtoehdot = new List<MatkaVaihtoehto>();
             Tila = SilmukanTila.Kartta;
             PaivitaNakyma();
+            PaivitaNappula();
             if (kameraPelaajaan && Kaytossa)
             {
                 var k = PeliApu.Koordinaatti(verkko, matka.Tila.Pelaaja.Sijainti);
@@ -1099,6 +1102,20 @@ namespace Matkakirja.Natiivi
             else if (t.Saapui != null && PeliNakymat.Saapumistraileri == null) SoitaLuento(luennat.Saapumispuhe(t.Saapui), 0.3f);
             float kesto = PeliApu.AjoKesto(kulma);
             if (t.Tapa == Kulkutapa.Lento) Lentoaani(true, kesto);
+            var nappula = Nappula;
+            if (nappula != null && a.HasValue)
+            {
+                // Pelinappula (Natiiviseppä, B16): liftaus, laiva ja bussi ajavat reitin pisteet
+                // (autokyyti), lento lentää kaaren; kamera seuraa nappulaa (seuraaKamera).
+                if (t.Tapa == Kulkutapa.Lento)
+                    NappulaAjo(v => nappula.Lenna(a.Value.Lat, a.Value.Lon, b.Value.Lat, b.Value.Lon, kesto, v), kesto, Perilla);
+                else
+                {
+                    var pisteet = PeliApu.Matkapisteet(verkko, t.Lahto, t.Polku, t.Kohde);
+                    NappulaAjo(v => nappula.Aja(pisteet, kesto, v), kesto, Perilla);
+                }
+                return null;
+            }
             Ajo(b.Value.Lat, b.Value.Lon, SaapumisKaari, kesto, Perilla);
             return null;
         }
@@ -1502,6 +1519,29 @@ namespace Matkakirja.Natiivi
             ajoValmis = valmis;
             ajoLoppuu = Time.unscaledTime + kesto + AjonVara;
             ((IKamera)kierto).Aja(lat, lon, kierto.KorkeusKaarelle(kaari), kesto, () => { if (tunnus == ajoTunnus) AjoValmis(); });
+        }
+
+        /// <summary>Pelinappula tai null (kohtaus ilman nappulaa: kamera-ajo kuten ennen).</summary>
+        static Nappula Nappula => KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.nappula : null;
+
+        /// <summary>Nappulan liike samalla valmis-vartioinnilla kuin kamera-ajo (varareitti ajon jälkeen).</summary>
+        void NappulaAjo(Action<Action> kaynnista, float kesto, Action valmis)
+        {
+            int tunnus = ++ajoTunnus;
+            kameranOhitus = null;
+            ajoValmis = valmis;
+            ajoLoppuu = Time.unscaledTime + kesto + AjonVara;
+            try { kaynnista(() => { if (tunnus == ajoTunnus) AjoValmis(); }); }
+            catch (Exception e) { Debug.LogException(e); AjoValmis(); }
+        }
+
+        /// <summary>Nappula pelaajan kohdalle (lataus, uusi peli, mannerlento, matkan jälkeen); piiloon ilman peliä.</summary>
+        void PaivitaNappula()
+        {
+            var n = Nappula;
+            if (n == null || n.Liikkeessa) return;
+            var k = matka != null ? PeliApu.Koordinaatti(verkko, matka.Tila.Pelaaja.Sijainti) : null;
+            if (k.HasValue && Kaytossa) n.Aseta(k.Value.Lat, k.Value.Lon); else n.Piilota();
         }
 
         void AjoValmis()
