@@ -28625,6 +28625,136 @@ export const KULTTUURI_KATEGORIAT = {
           + 'puolueeton.',
       },
     },
+    /*
+     * EUROOPPA-SIVU (23.9.2026). Toinen aihesivu kannen rinnalle: kansi
+     * kertoo kalliolinnoituksesta ja vanhastakaupungista, tämä sivu
+     * EU:n toimielinten kaupungista 1952 alkaen. LUX-maalehti
+     * (js/packs/maa-kategoriat.js) ei käsittele EU:ta, joten nostot
+     * eivät toista sitä. Faktat en-Wikipediasta: Robert Schuman,
+     * Clausen (Luxembourg), Schuman Declaration, Location of European
+     * Union institutions, High Authority of the European Coal and Steel
+     * Community, European Court of Justice, Villa Vauban, Kirchberg
+     * (Luxembourg), European Parliament in Luxembourg ja Grand Duchess
+     * Charlotte Bridge. Minitehtävän vastaus on nostossa 2.
+     *
+     * SIVU-ID `eurooppa` on AIHE_IKONIT-taulun ulkopuolella ja piirtyy
+     * yleiskuvakkeella (sama perusteltu poikkeus kuin esim.
+     * `saksalaisperinne`): vakioaiheista `historia` olisi harhaanjohtava,
+     * koska sivu jatkuu nykypäivän Kirchbergiin.
+     *
+     * KUVAT: neljä Commons-kuvaa, lisenssi ja tekijä luettu rajapinnan
+     * extmetadatasta (LicenseShortName, Artist, Restrictions tyhjä),
+     * kaikki vähintään 3500 px leveitä, katsottu silmin eikä yhtäkään
+     * käytetä muualla repossa.
+     */
+    {
+      id: 'eurooppa',
+      nimi: 'Eurooppa',
+      johdanto: 'Seitsemästä EU:n toimielimestä viisi toimii ainakin osittain '
+        + 'Luxemburgissa — enemmän kuin missään muussa kaupungissa. Kaikki alkoi '
+        + '1952, kun kuusi maata ei päässyt sopuun, minne uusi hiili- ja '
+        + 'teräsyhteisö sijoitetaan.',
+      tehtava: {
+        kysymys: 'Miksi Luxemburgista tuli vuonna 1952 Euroopan hiili- ja '
+          + 'teräsyhteisön kotipaikka?',
+        vaihtoehdot: [
+          'Robert Schuman vaati sitä, koska oli syntynyt kaupungissa',
+          'Jäsenmaat eivät päässeet sopuun, ja Luxemburg tarjoutui väliaikaiseksi kotipaikaksi',
+          'Luxemburg oli jäsenmaista suurin teräksentuottaja',
+          'Kirchbergissä oli jo valmiina toimistokortteli',
+        ],
+        oikea: 1,
+        fakta: 'Bryssel olisi kelvannut monelle, mutta Belgia vaati Liègeä. '
+          + 'Luxemburgin pääministeri Joseph Bech ehdotti umpikujan ratkaisuksi, '
+          + 'että toimielimet sijoitetaan Luxemburgiin väliaikaisesti, kunnes '
+          + 'pysyvästä paikasta sovitaan.',
+      },
+      nostot: [
+        {
+          otsikko: 'Clausenin poika, joka ehdotti yhteistä Eurooppaa',
+          tiedosto: 'Luxembourg rue Jules Wilhelm - Gebuertshaus Robert Schuman (101).jpg',
+          teksti: 'Robert Schuman syntyi 29. kesäkuuta 1886 Luxemburgin '
+            + 'Clausenissa, talossa, jota hänen vanhempansa vuokrasivat rue Jules '
+            + 'Wilhelmin varrelta. Isä oli kotoisin Lotaringiasta ja äiti '
+            + 'luxemburgilainen; poika puhui äidinkielenään luxemburgia ja kävi '
+            + 'koulua Luxemburgin Athénée-lyseossa. Ranskan ulkoministerinä hän '
+            + 'ehdotti 9. toukokuuta 1950, että Ranskan ja Länsi-Saksan hiili ja '
+            + 'teräs asetetaan yhteisen viranomaisen alle, jotta sota maiden '
+            + 'välillä kävisi aineellisesti mahdottomaksi. Päivää juhlitaan '
+            + 'nykyään EU:ssa Eurooppa-päivänä. Valtio osti syntymätalon 1985, ja '
+            + 'Euroopan parlamentti on kunnostanut sen.',
+          lyhyt: 'Robert Schumanin syntymätalo Clausenissa rue Jules Wilhelmin varrella.',
+          selite: 'Robert Schumanin syntymätalo Clausenin kaupunginosassa; '
+            + 'Luxemburgin valtio osti talon 1985, ja nykyään siinä toimii pieni '
+            + 'tutkimuslaitos.',
+          lahde: 'GilPe, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Robert Schuman',
+        },
+        {
+          otsikko: 'Väliaikainen kotipaikka, joka jäi pysyväksi',
+          tiedosto: 'Lux City Hall 1952.jpg',
+          teksti: 'Pariisin sopimus perusti 1951 Euroopan hiili- ja '
+            + 'teräsyhteisön, mutta kuusi jäsenmaata ei päässyt sopuun sen '
+            + 'kotipaikasta. Bryssel olisi kelvannut monelle, mutta Belgia vaati '
+            + 'Liègeä. Umpikujan ratkaisi Luxemburgin pääministeri Joseph Bech: '
+            + 'toimielimet sijoitettaisiin väliaikaisesti Luxemburgiin, kunnes '
+            + 'pysyvästä paikasta sovitaan. Yhteisön toimeenpanoelin, korkea '
+            + 'viranomainen, piti ensimmäisen istuntonsa Luxemburgin '
+            + 'kaupungintalossa 10. elokuuta 1952, ja sen ensimmäiseksi '
+            + 'puheenjohtajaksi valittiin Jean Monnet. Myöhemmin komissio ja '
+            + 'neuvosto keskittyivät Brysseliin, mutta vuoden 1965 päätös '
+            + 'korvasi menetyksen: tuomioistuin jäi Luxemburgiin, ja EU:n '
+            + 'neuvosto kokoontuu täällä yhä huhti-, kesä- ja lokakuussa.',
+          lyhyt: 'Väkijoukko Luxemburgin kaupungintalon edessä 10. elokuuta 1952.',
+          selite: 'Väkeä kerääntyi Luxemburgin kaupungintalon eteen 10. elokuuta '
+            + '1952, kun sisällä pidettiin hiili- ja teräsyhteisön korkean '
+            + 'viranomaisen ensimmäinen istunto.',
+          lahde: 'European Parliament, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'High Authority of the European Coal and Steel Community',
+        },
+        {
+          otsikko: 'Tuomioistuin taiteilijahuvilassa',
+          tiedosto: 'Villa Vauban - Luxembourg City - DSC06363.JPG',
+          teksti: 'Villa Vauban rakennettiin 1873 yksityisasunnoksi tontille, '
+            + 'joka vapautui, kun kaupungin linnoitukset purettiin, ja nimensä se '
+            + 'sai paikalla aiemmin seisseestä Vaubanin linnakkeesta. Kaupunki '
+            + 'osti huvilan 1949 taidekokoelmilleen, mutta hiili- ja '
+            + 'teräsyhteisön tuomioistuin tarvitsi tilat, ja se piti huvilassa '
+            + 'ensimmäisen istuntonsa 28. marraskuuta 1954. Talo jäi pian '
+            + 'ahtaaksi: tuomioistuin muutti 1959 Côte d\'Eichin rakennukseen ja '
+            + '1972 omaan palatsiinsa Kirchbergiin. Tuomarit neuvottelevat yhä '
+            + 'ranskaksi, ja tuomio kirjoitetaan ensin sillä kielellä, oli asian '
+            + 'kieli mikä tahansa.',
+          lyhyt: 'Villa Vauban on nykyään Luxemburgin kaupungin taidemuseo.',
+          selite: 'Villa Vauban rakennettiin 1873, ja siinä toimi hiili- ja '
+            + 'teräsyhteisön tuomioistuin vuosina 1952–1959. Nykyään se on '
+            + 'kaupungin taidemuseo.',
+          lahde: 'Daderot, Wikimedia Commons (CC0)',
+          wiki: 'Villa Vauban',
+        },
+        {
+          otsikko: 'Punainen silta Euroopan kortteleihin',
+          tiedosto: 'Puente rojo, ciudad de Luxemburgo, Luxemburgo, 2023-12-16, DD 137.jpg',
+          teksti: 'Kun Bryssel ja Strasbourg kilpailivat 1950-luvun lopulla '
+            + 'uusien yhteisöjen virastoista, Luxemburgin hallitus halusi tarjota '
+            + 'niille halpaa maata Kirchbergin lähes rakentamattomalta ylängöltä. '
+            + 'Sinne oli kuitenkin hankala päästä, koska välissä oli 75 metriä '
+            + 'syvä Pfaffenthalin laakso. Vuoden 1957 suunnittelukilpailuun tuli '
+            + '69 ehdotusta, ja voittajan, saksalaisen Egon Juxin, silta avattiin '
+            + 'liikenteelle 24. lokakuuta 1966. Kirkkaanpunainen väri valittiin '
+            + 'tarkoituksella, jotta silta erottuisi myös sumussa. Nykyään '
+            + 'Kirchbergissä ovat EU:n tuomioistuin, tilintarkastustuomioistuin, '
+            + 'Euroopan investointipankki ja parlamentin sihteeristö, jossa '
+            + 'työskentelee yli 4 000 ihmistä.',
+          lyhyt: 'Punainen Grande-Duchesse Charlotten silta ylittää Pfaffenthalin laakson.',
+          selite: 'Grande-Duchesse Charlotten silta, luxemburgiksi Rout Bréck, '
+            + 'kulkee 75 metrin korkeudella Alzetten yllä ja yhdistää '
+            + 'yläkaupungin Kirchbergin EU-kortteleihin.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Grand Duchess Charlotte Bridge',
+        },
+      ],
+    },
   ],
   nikosia: [
     {
