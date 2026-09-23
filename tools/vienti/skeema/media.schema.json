@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://matkakirja.app/vienti/1/media.schema.json",
+  "title": "Matkakirja-vienti: mediaviitteet",
+  "description": "Jokainen datassa esiintyvä kuva-, ääni- tai tiedostoviite ja URL. url on valmis haettava osoite; avain on ämpärin (https://media.matkakirja.app/) avain, kun media on ämpärissä.",
+  "type": "object",
+  "required": ["$skeema", "viitteet"],
+  "properties": {
+    "$skeema": { "const": "matkakirja-vienti/1/media" },
+    "viitteet": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["arvo", "laji", "esiintymat"],
+        "properties": {
+          "arvo": { "type": "string", "description": "Merkkijono sellaisenaan kuin se on datassa" },
+          "laji": { "enum": ["kuva-commons", "lippu-commons", "kuva-flickr", "aani-peilattu", "aani-oma", "ampari-avain", "kohtaamiskuva", "juliste", "hetkikuva", "asset-miniatyyrit", "asset-elaimet", "asset-aarteet", "asset-nostot", "asset-ihmeet", "repo", "kuva-url", "aani-url", "video-url", "linkki", "tiedosto"] },
+          "avain": { "type": "string" },
+          "url": { "type": "string", "format": "uri" },
+          "varat": { "type": "array", "items": { "type": "string", "format": "uri" }, "description": "Varareitit järjestyksessä, jos url ei vastaa (pelin oma järjestys)" },
+          "alkuperainen": { "type": "string", "format": "uri", "description": "Alkuperäinen lähde (Commons, Freesound, archive.org), varareitti" },
+          "esiintymat": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["moduuli", "export", "polku"],
+              "properties": {
+                "moduuli": { "type": "string" },
+                "export": { "type": "string" },
+                "polku": { "type": "string", "description": "JSON pointer moduulitiedoston exportin sisällä" }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
