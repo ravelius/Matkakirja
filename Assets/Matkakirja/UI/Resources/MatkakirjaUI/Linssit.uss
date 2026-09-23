@@ -1061,3 +1061,153 @@
     letter-spacing: 2px;
     color: #f6e6c2;
 }
+
+/* --- minipulun kysymyskortti (webin .satelliitti-pulukortti) ----------------- */
+
+.mk-minipuluKortti {
+    position: absolute;
+    right: 12px;
+    bottom: 80px;
+    width: 320px;
+    max-width: 92%;
+    max-height: 62%;
+    padding: 10px 12px 12px 12px;
+    border-width: 1px;
+    border-color: rgba(93, 255, 168, 0.28);
+    border-radius: 12px;
+    background-color: rgba(4, 12, 9, 0.9);
+    color: #eafff3;
+}
+
+.mk-minipuluKortti__ylarivi {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+}
+
+.mk-minipuluKortti__otsikko {
+    font-size: 13.5px;
+    color: #5dffa8;
+}
+
+.mk-minipuluKortti__sulje {
+    width: 28px;
+    height: 28px;
+    min-height: 28px;
+    padding: 0;
+    border-width: 1px;
+    border-color: rgb(170, 170, 170);
+    border-radius: 14px;
+    background-color: rgba(130, 130, 130, 0.42);
+    color: rgb(224, 224, 224);
+}
+
+.mk-minipuluKortti__sulje .mk-nappi__teksti {
+    font-size: 16px;
+    -unity-text-align: middle-center;
+}
+
+.mk-minipuluKortti__virta {
+    flex-shrink: 1;
+    margin-top: 8px;
+}
+
+.mk-minipuluKortti__ehdotukset {
+    flex-direction: column;
+}
+
+.mk-minipuluKortti__kysymys {
+    justify-content: flex-start;
+    min-height: 34px;
+    margin-bottom: 6px;
+    padding: 7px 10px;
+    border-width: 1px;
+    border-color: rgba(93, 255, 168, 0.3);
+    border-radius: 10px;
+    background-color: rgba(10, 24, 18, 0.85);
+    color: #eafff3;
+}
+
+.mk-minipuluKortti__kysymys:active,
+.mk-minipuluKortti__kysymys.mk-valittu {
+    border-color: #5dffa8;
+    background-color: rgba(93, 255, 168, 0.18);
+}
+
+.mk-minipuluKortti__kysymysteksti {
+    font-size: 14px;
+    white-space: normal;
+    flex-shrink: 1;
+}
+
+.mk-minipuluKortti__oma {
+    align-self: flex-end;
+    max-width: 88%;
+    margin-bottom: 6px;
+    padding: 6px 10px;
+    border-width: 1px;
+    border-color: rgba(93, 255, 168, 0.22);
+    border-radius: 12px 12px 4px 12px;
+    background-color: rgba(10, 24, 18, 0.9);
+    font-size: 13px;
+    white-space: normal;
+}
+
+.mk-minipuluKortti__vastaus {
+    align-self: flex-start;
+    max-width: 96%;
+    margin-bottom: 6px;
+    padding: 9px 11px;
+    border-width: 1px;
+    border-color: rgba(93, 255, 168, 0.35);
+    border-radius: 12px 12px 12px 4px;
+    background-color: rgba(18, 40, 30, 0.92);
+    font-size: 14.5px;
+    white-space: normal;
+}
+
+.mk-minipuluKortti__vastaus.mk-odottaa {
+    opacity: 0.7;
+}
+
+.mk-minipuluKortti__syote {
+    flex-direction: row;
+    align-items: center;
+    flex-shrink: 0;
+    margin-top: 8px;
+}
+
+.mk-minipuluKortti__kentta {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin: 0 6px 0 0;
+    font-size: 15px;
+}
+
+.mk-minipuluKortti__kentta > .unity-base-text-field__input {
+    min-height: 36px;
+    padding: 4px 10px 4px 10px;
+    border-width: 1px;
+    border-color: rgba(93, 255, 168, 0.3);
+    border-radius: 10px;
+    background-color: rgba(10, 24, 18, 0.9);
+    color: #eafff3;
+}
+
+.mk-minipuluKortti__laheta {
+    width: 38px;
+    height: 36px;
+    min-height: 36px;
+    padding: 0;
+    border-width: 1px;
+    border-color: rgba(93, 255, 168, 0.45);
+    border-radius: 10px;
+    background-color: rgba(93, 255, 168, 0.16);
+    color: #5dffa8;
+}
+
+.mk-minipuluKortti__laheta .mk-nappi__teksti {
+    font-size: 18px;
+    -unity-text-align: middle-center;
+}
