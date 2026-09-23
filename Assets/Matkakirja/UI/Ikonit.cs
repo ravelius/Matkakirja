@@ -32,6 +32,10 @@ namespace Matkakirja.Natiivi
         // js/ui.js renderTurnPill (~rivi 10942-10946): matkalaukun kahva.
         public const string Laukku = "<rect x=\"4\" y=\"8\" width=\"16\" height=\"11.5\" rx=\"4\"/><path d=\"M9.3 8V6.3a1.7 1.7 0 0 1 1.7-1.7h2a1.7 1.7 0 0 1 1.7 1.7V8\"/><path d=\"M6.6 9.6h10.8\"/><circle cx=\"12\" cy=\"9.6\" r=\"0.85\"/><path d=\"M7 13.6 10.3 16.4 13.7 13.6 17 16.4\"/>";
 
+        // js/karttatyokalu-maakunnat.js PLUS_IKONI ja PULU_IKONI (maakunnan luonnehdinta ja kortti).
+        public const string Plus = "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8v8M8 12h8\"/>";
+        public const string Puhekupla = "<path d=\"M4 5h16v10H9l-4 4v-4H4z\"/><circle cx=\"9.5\" cy=\"10\" r=\"0.9\"/><circle cx=\"14.5\" cy=\"10\" r=\"0.9\"/>";
+
         /// <summary>VIIVA_IKONIT avaimittain (sama avain kuin webissä, js/ui-apurit.js).</summary>
         public static readonly Dictionary<string, string> Viiva = new Dictionary<string, string>
         {

@@ -159,6 +159,7 @@ namespace Matkakirja.Natiivi
             Kaupunkikortti.Piilota();
             Kysymys.Piilota();
             Karttaselite.Sulje();
+            Karttaselite.Maakunnat.SuljeKortti();
             Kartuscha.Sulje();
             Tietoja.Sulje();
             Linssit.SuljeValikot();
