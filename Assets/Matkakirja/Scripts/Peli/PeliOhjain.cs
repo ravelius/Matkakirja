@@ -1257,9 +1257,14 @@ namespace Matkakirja.Natiivi
             Kartalle(false);
         }
 
-        void LehtiSuljettu(string kaupunki)
+        /// <summary>Kaupunki, jonka lehti (tai jonka kautta maalehti) avattiin: Suljettu antaa maalehdessä ISO3:n.</summary>
+        string lehdenKaupunki;
+
+        void LehtiSuljettu(string omistaja)
         {
             if (Tila != SilmukanTila.Lehti) return;
+            var kaupunki = lehdenKaupunki ?? omistaja;
+            lehdenKaupunki = null;
             bool maalehti = maalehtiAuki;
             maalehtiAuki = false;
             Tallenna();
@@ -1300,6 +1305,7 @@ namespace Matkakirja.Natiivi
 
         void AvaaLehti(string kaupunki, string maa = null, string sivu = null)
         {
+            lehdenKaupunki = kaupunki;
             if (lehtiNakyma != null)
             {
                 lehtiNakyma.Nayta(new LehtiAvaus { Maalehti = maa != null, Kaupunki = kaupunki, Maa = maa, Aihe = sivu },
