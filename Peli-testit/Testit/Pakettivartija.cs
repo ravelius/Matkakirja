@@ -158,6 +158,8 @@ namespace Matkakirja.Peli.Testit
         public readonly List<Vartijarivi> Rivit = new List<Vartijarivi>();
         public readonly List<string> Virheet = new List<string>();
         public readonly List<string> Huomiot = new List<string>();
+        /// <summary>Skeeman lupaama kenttä puuttuu (varoitus, ei virhe: lukijat sietävät puuttuvan).</summary>
+        public readonly List<string> Varoitukset = new List<string>();
         public bool Vihrea => Virheet.Count == 0;
     }
 
@@ -481,6 +483,14 @@ namespace Matkakirja.Peli.Testit
 
         // --- tarkistus -----------------------------------------------------
 
+        /// <summary>Skeemaversiot, joista alkaen kenttä kuuluu kokoelman alkioihin (RAJAPINTA.md, Siirtoseppä).</summary>
+        public static readonly (string Versio, string Kokoelma, string Kentta)[] LuvatutKentat =
+        {
+            ("1.10", "kaupungit", "korkeus"),
+            ("1.10", "luennat", "reaktiot"),
+            ("1.10", "luennat", "tekstiSha256"),
+        };
+
         public static Vartijatulos Tarkista(Paketti p, IEnumerable<Lukijasaanto> saannot = null)
         {
             var tulos = new Vartijatulos { Paketti = p, RaakaKielletty = Paataso.RaakaKielletty };
@@ -526,6 +536,17 @@ namespace Matkakirja.Peli.Testit
                 if (p.Teksti(s.Kokoelma) == null) continue;
                 var rivi = TarkistaSaanto(p, s, tulos);
                 tulos.Rivit.Add(rivi);
+            }
+
+            // 5. Skeeman lupaamat kentät (Fable/Siirtoseppä 24.9.2026): ämpärin v11 ilmoittaa 1.10:n,
+            // mutta koottiin varhaisesta 1.10-koepaketista ilman näitä. Lukijat sietävät puuttuvan,
+            // joten puute on varoitus, ei virhe, kunnes skeemasopimus (tunnuskentät + tiiviste) valvoo sen.
+            foreach (var (versio, kokoelma, kentta) in LuvatutKentat)
+            {
+                if (!Pakettiskeema.Vahintaan(p.Skeemaversio, versio) || p.Teksti(kokoelma) == null) continue;
+                var alkiot = p.Alkiot(kokoelma).ToList();
+                if (alkiot.Count > 0 && !alkiot.Any(o => o.ContainsKey(kentta)))
+                    tulos.Varoitukset.Add($"{kokoelma}.{kentta} puuttuu kaikista alkioista, vaikka skeema {p.Skeemaversio} ≥ {versio} lupaa sen");
             }
             return tulos;
         }
@@ -652,6 +673,7 @@ namespace Matkakirja.Peli.Testit
                 Console.WriteLine($"    {g.Kokoelma} / {g.Lukija}: {string.Join(", ", g.RaakaPolut.Select(kv => $"{kv.Key} {kv.Value}"))}");
             foreach (var m in MuutRaakaluvut) Console.WriteLine("    " + m);
             foreach (var h in t.Huomiot) Console.WriteLine("  huom: " + h);
+            foreach (var v in t.Varoitukset) Console.WriteLine("  VAROITUS: " + v);
             if (t.Vihrea) Console.WriteLine($"  VIHREÄ: {t.Rivit.Sum(r => r.Luettu)} alkiota luettu, {t.Rivit.Sum(r => r.Ohitettu)} ohitettu, 0 hylätty");
             else
             {

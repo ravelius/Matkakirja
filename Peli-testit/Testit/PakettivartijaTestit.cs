@@ -103,6 +103,22 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(rivi.Alkioita - 1, rivi.Luettu, "muut luettu");
         }
 
+        /// <summary>Ämpärin v11 (skeema 1.10 ilman 1.10:n kenttiä): varoitus, ei virhe (Siirtoseppä 24.9.2026).</summary>
+        [Testi] static void LuvattuKenttaPuuttuuOnVaroitus()
+        {
+            // Paikallinen kopio v11 on juuri tällainen paketti; tuoreemmalla kopiolla varoitusta ei odoteta.
+            var p = Paikallinen;
+            var t = Pakettivartija.Tarkista(p);
+            Oleta.Tosi(t.Vihrea, "vihreä, vaikka luvattu kenttä puuttuu: " + string.Join(" | ", t.Virheet));
+            foreach (var (versio, kokoelma, kentta) in Pakettivartija.LuvatutKentat)
+            {
+                bool odotus = Pakettiskeema.Vahintaan(p.Skeemaversio, versio) && p.Teksti(kokoelma) != null
+                    && !p.Alkiot(kokoelma).Any(o => o.ContainsKey(kentta));
+                Oleta.Sama(odotus, t.Varoitukset.Any(v => v.StartsWith(kokoelma + "." + kentta + " ")), $"varoitus {kokoelma}.{kentta} skeemalla {p.Skeemaversio}");
+            }
+            Oleta.Tosi(Pakettiskeema.Vahintaan("1.24", "1.10") && !Pakettiskeema.Vahintaan("1.9", "1.10") && !Pakettiskeema.Vahintaan("x", "1.10"), "Vahintaan");
+        }
+
         [Testi] static void VaaraTyyppiOnPunainen()
         {
             var teksti = Muokkaa("kaupungit", l => l[0]["lat"] = "48.85");

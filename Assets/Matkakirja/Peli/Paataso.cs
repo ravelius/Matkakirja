@@ -82,6 +82,10 @@ namespace Matkakirja.Peli
                 && int.TryParse(osat[1], NumberStyles.None, CultureInfo.InvariantCulture, out minor);
         }
 
+        /// <summary>Onko versio vähintään raja (sama major, minor ≥); jäsentymätön = false.</summary>
+        public static bool Vahintaan(string versio, string raja) =>
+            Jasenna(versio, out var a, out var b) && Jasenna(raja, out var c, out var d) && a == c && b >= d;
+
         /// <summary>Tunteeko lukija version (major sama, minor välillä PieninMinor–SuurinMinor).</summary>
         public static bool Tunnettu(string versio) =>
             Jasenna(versio, out var major, out var minor) && major == Major && minor >= PieninMinor && minor <= SuurinMinor;
