@@ -29,6 +29,7 @@ namespace Matkakirja.Natiivi
         readonly Label vapaaTila;
         readonly Dictionary<string, OfflineRivi> offlineRivit = new Dictionary<string, OfflineRivi>();
         IOfflineLataus kuunneltu;
+        volatile bool offlinePyydetty;
 
         sealed class OfflineRivi
         {
@@ -45,9 +46,11 @@ namespace Matkakirja.Natiivi
             offlineOsio = Rakenne.El("mk-offline", Sisalto, PickingMode.Ignore);
             Rakenne.Teksti("LATAA OFFLINE-KÄYTTÖÖN", "mk-pudotus__otsikko", offlineOsio);
             Rakenne.Teksti("Kartat ja lehdet tulevat verkosta. Ladatut maat toimivat ilman yhteyttä.", "mk-offline__selite", offlineOsio);
+            AukiMuuttui += auki => { if (!auki) Asetukset.Tallenna(); };
             offlineLista = Rakenne.El("mk-offline__lista", offlineOsio, PickingMode.Ignore);
             vapaaTila = Rakenne.Teksti("", "mk-offline__vapaa", offlineOsio);
-            Asetukset.Muuttui += _ => { if (Auki) Paivita(); };
+            // Omat liukusäätimet päivittävät arvonsa itse; muut muutokset (Uusi peli nollaa) päivittävät kaiken.
+            Asetukset.Muuttui += nimi => { if (Auki && !Asetukset.OnTaso(nimi)) Paivita(); };
         }
 
         void Saadinrivi(Voima v)
@@ -62,8 +65,9 @@ namespace Matkakirja.Natiivi
             {
                 int p = Mathf.RoundToInt(e.newValue);
                 arvo.text = p + " %";
-                Asetukset.AsetaTaso(v, p / 100f);
+                Asetukset.AsetaTaso(v, p / 100f, tallenna: false);
             });
+            s.RegisterCallback<PointerCaptureOutEvent>(_ => Asetukset.Tallenna());
             saatimet[v] = (s, arvo);
         }
 
@@ -107,8 +111,10 @@ namespace Matkakirja.Natiivi
 
         void OfflineMuuttui()
         {
-            // Palvelu voi kutsua taustasäikeestä: päivitys aina pääsäikeen ajastimella.
-            offlineOsio.schedule.Execute(() => { if (Auki) PaivitaOffline(); });
+            // Palvelu voi kutsua taustasäikeestä: päivitys aina pääsäikeessä, enintään kerran ruudussa.
+            if (offlinePyydetty) return;
+            offlinePyydetty = true;
+            UiKerros.PaaSaikeessa(() => { offlinePyydetty = false; if (Auki) PaivitaOffline(); });
         }
 
         OfflineRivi UusiOfflineRivi(string id)

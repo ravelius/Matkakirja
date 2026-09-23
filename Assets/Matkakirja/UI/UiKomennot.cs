@@ -78,9 +78,10 @@ namespace Matkakirja.Natiivi
             }
             if (k == "kuva" && osat.Length > 1)
             {
-                var tiedosto = Path.Combine(Application.persistentDataPath, "ui-" + osat[1] + ".png");
-                ScreenCapture.CaptureScreenshot(tiedosto);
-                return tiedosto;
+                // Mobiilissa CaptureScreenshot tulkitsee nimen suhteessa persistentDataPathiin.
+                var nimi = "ui-" + osat[1] + ".png";
+                ScreenCapture.CaptureScreenshot(Application.isMobilePlatform ? nimi : Path.Combine(Application.persistentDataPath, nimi));
+                return nimi;
             }
             if (k != "ui" || osat.Length < 2) return "tuntematon komento";
             string loput = osat.Length > 2 ? osat[2] : "";

@@ -25,12 +25,14 @@
 }
 
 .mk-juuri {
-    -unity-font: url("../../../Fontit/EBGaramond.ttf");
+    -unity-font-definition: url("../../../Fontit/EBGaramond.ttf");
     font-size: 15px;
     color: var(--ink-light);
 }
 
-.mk-juuri Label {
+/* Oletusteeman .unity-label-reunat pois; sama tarkkuus, myöhempi sääntö voittaa,
+ * ja .mk-*-luokkien omat marginaalit ohittavat tämän. */
+.unity-label {
     margin: 0;
     padding: 0;
 }

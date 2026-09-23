@@ -65,17 +65,24 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public static void Nayta(VisualElement e, bool auki, int kestoMs = 220)
         {
+            // Versiolaskuri: vain viimeisimmän kutsun viivästetty askel saa toimia
+            // (näytä + piilota samassa ruudussa ei jätä elementtiä näkyviin).
+            var versio = new NayttoVersio();
+            e.userData = versio;
+            bool Voimassa() => ReferenceEquals(e.userData, versio);
             if (auki)
             {
                 e.style.display = DisplayStyle.Flex;
                 // Luokka seuraavassa ruudussa, jotta siirtymä alkaa piilosta.
-                e.schedule.Execute(() => { if (e.style.display == DisplayStyle.Flex) e.AddToClassList("mk-auki"); });
+                e.schedule.Execute(() => { if (Voimassa()) e.AddToClassList("mk-auki"); });
             }
             else
             {
                 e.RemoveFromClassList("mk-auki");
-                e.schedule.Execute(() => { if (!e.ClassListContains("mk-auki")) e.style.display = DisplayStyle.None; }).StartingIn(kestoMs);
+                e.schedule.Execute(() => { if (Voimassa()) e.style.display = DisplayStyle.None; }).StartingIn(kestoMs);
             }
         }
+
+        sealed class NayttoVersio { }
     }
 }

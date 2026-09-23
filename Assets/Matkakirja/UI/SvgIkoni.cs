@@ -57,7 +57,7 @@ namespace Matkakirja.Natiivi
                 if (i >= d.Length) break;
                 char c = d[i];
                 if (char.IsLetter(c)) { cmd = c; i++; }
-                else if (cmd == ' ') break; // numero ilman komentoa: rikkinäinen polku
+                else if (cmd == ' ' || cmd == 'Z' || cmd == 'z') break; // numero ilman komentoa: rikkinäinen polku
                 bool rel = char.IsLower(cmd);
                 Vector2 o = rel ? nyt : Vector2.zero;
                 switch (char.ToUpperInvariant(cmd))
@@ -213,7 +213,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Merkintä tai pelkkä path-d (ei ala '&lt;'-merkillä).</summary>
         public static SvgKuvio Jasenna(string merkinta)
         {
-            if (string.IsNullOrEmpty(merkinta)) return new SvgKuvio();
+            if (string.IsNullOrWhiteSpace(merkinta)) return new SvgKuvio();
             if (valimuisti.TryGetValue(merkinta, out var k)) return k;
             k = new SvgKuvio();
             if (merkinta.TrimStart()[0] != '<') k.Osat.Add((SvgPolku.Jasenna(merkinta), false));

@@ -74,15 +74,24 @@ namespace Matkakirja.Natiivi
             return Mathf.Clamp01(t);
         }
 
-        public static void AsetaTaso(Voima v, float taso)
+        /// <summary>
+        /// Asettaa tason heti (äänimoottori kuulee Muuttui-tapahtumasta). tallenna = false
+        /// liukusäätimen vedon aikana: levylle vasta Tallenna-kutsussa (sormi irti).
+        /// </summary>
+        public static void AsetaTaso(Voima v, float taso, bool tallenna = true)
         {
             taso = Mathf.Clamp01(Mathf.Round(taso * 100f) / 100f);
-            if (Mathf.Approximately(Taso(v), taso)) return;
+            if (Mathf.Approximately(Taso(v), taso)) { if (tallenna) PlayerPrefs.Save(); return; }
             if (Mathf.Approximately(taso, Oletus(v))) PlayerPrefs.DeleteKey(Avain(v));
             else PlayerPrefs.SetString(Avain(v), taso.ToString("0.##", CultureInfo.InvariantCulture));
-            PlayerPrefs.Save();
+            if (tallenna) PlayerPrefs.Save();
             Muuttui?.Invoke(v.ToString());
         }
+
+        public static void Tallenna() => PlayerPrefs.Save();
+
+        /// <summary>Onko muutoksen nimi (Muuttui-tapahtuman argumentti) äänentaso.</summary>
+        public static bool OnTaso(string nimi) => Enum.TryParse<Voima>(nimi, out _);
 
         /// <summary>Kaikki asetukset oletuksiin (Uusi peli tyhjentää myös ääniasetukset, kuten webissä).</summary>
         public static void Nollaa()

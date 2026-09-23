@@ -24,6 +24,8 @@ namespace Matkakirja.Natiivi
     public sealed class UiKerros : MonoBehaviour
     {
         public const string TeemaPolku = "MatkakirjaUI/Matkakirja";
+        /// <summary>Editorissa luotu PanelSettings-pohja (Create → UI Toolkit → Panel Settings Asset).</summary>
+        public const string PaneeliPolku = "MatkakirjaUI/Paneeli";
         public static readonly Vector2Int Viiteruutu = new Vector2Int(393, 852);
 
         public const int Tilarivi = 15, Matkavalinta = 20, Pelidialogit = 30, Valikot = 40;
@@ -93,7 +95,12 @@ namespace Matkakirja.Natiivi
         UIDocument Dokumentti(int kerros)
         {
             if (dokumentit.TryGetValue(kerros, out var d)) return d;
-            var asetukset = ScriptableObject.CreateInstance<PanelSettings>();
+            // Pohja-asset (editorissa luotu PanelSettings) tuo UI:n shaderit iOS-käännökseen:
+            // koodissa luodulla PanelSettingsillä ei ole shaderiviitteitä, ja ne haetaan
+            // nimellä unity_builtin_extrasta, johon pääsee vain viitattu shader.
+            var pohja = Resources.Load<PanelSettings>(PaneeliPolku);
+            if (pohja == null) Debug.LogWarning("MATKAKIRJA ui: Resources/" + PaneeliPolku + " puuttuu — UI:n shaderit voivat puuttua laitekäännöksestä");
+            var asetukset = pohja != null ? Instantiate(pohja) : ScriptableObject.CreateInstance<PanelSettings>();
             asetukset.name = "Matkakirja UI " + kerros;
             asetukset.themeStyleSheet = teema;
             asetukset.scaleMode = PanelScaleMode.ScaleWithScreenSize;
@@ -151,7 +158,25 @@ namespace Matkakirja.Natiivi
         /// <summary>Staattinen oikotie (PalloKierron UiPeittaa-koukulle).</summary>
         public static bool Peittaa(Vector2 ruutu) => instanssi != null && instanssi.PeittaaPisteen(ruutu);
 
-        void Update() => PaivitaTurvaalueet();
+        static readonly Queue<Action> paasaie = new Queue<Action>();
+
+        /// <summary>Ajaa toiminnon pääsäikeessä seuraavassa ruudussa (turvallinen mistä tahansa säikeestä).</summary>
+        public static void PaaSaikeessa(Action a)
+        {
+            if (a == null) return;
+            lock (paasaie) paasaie.Enqueue(a);
+        }
+
+        void Update()
+        {
+            PaivitaTurvaalueet();
+            while (true)
+            {
+                Action a;
+                lock (paasaie) { if (paasaie.Count == 0) break; a = paasaie.Dequeue(); }
+                try { a(); } catch (Exception e) { Debug.LogException(e); }
+            }
+        }
 
         void PaivitaTurvaalueet()
         {
