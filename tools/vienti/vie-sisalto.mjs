@@ -104,6 +104,8 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        maakartta, rajat, radio, vanhaAani, uutislahde, lipputarina,
  *        numeroina; kaupungit: intro, kielinayte; moduulit js/lehti.js,
  *        js/ui-apurit.js, js/ui.js ja js/saa.js (lehden kiinteät tekstit).
+ *        Lisäksi kokoelma maakuntarajat (tools/vienti/maakuntarajat.mjs) ja
+ *        lisenssit.json (manifest.lisenssit, tools/vienti/lisenssit.mjs).
  */
 export const SKEEMAVERSIO_TARKKA = '1.15';
 
