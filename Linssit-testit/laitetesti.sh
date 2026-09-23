@@ -11,6 +11,9 @@
 #   ./laitetesti.sh sisalto [koepaketti]   v11:n linssiaineisto + maat välimuistiin
 #   ./laitetesti.sh astronautti <kansio>   kuvasarja ja loki
 #   ./laitetesti.sh keksinnot <kansio>     kuvasarja ja loki
+#   ./laitetesti.sh maat <kansio>          vertailu ja maatiedot: valinnat, täysi lista, lehti
+#   ./laitetesti.sh kontakti <kansio>      kontaktiarkin natiivikuvat (samat näkymät kuin webin
+#                                          kuvissa, ks. docs/raportit/linssit-kontaktiarkki-*.md)
 #
 # Komennot: linssi-komento.txt (LinssiOhjain) ja komento.txt (Kartta/Komennot: kuva).
 UDID=${UDID:-00008142-0019686E02F3801C}
@@ -45,6 +48,25 @@ case "$1" in
     linssi "keksinnot 25"; sleep 5; linssi "keksinnot tila"; kuva linssitesti-keks-1928
     linssi "keksinnot jatka"; sleep 12; linssi "keksinnot tila"; kuva linssitesti-keks-loppu
     linssi "linssi pois"; sleep 4; hae "$2"; tail -25 "$2/linssi-loki.txt" ;;
-  *) echo "käyttö: $0 sisalto [koepaketti] | astronautti <kansio> | keksinnot <kansio>"; exit 1 ;;
+  maat)
+    linssi "linssi vertailu"; sleep 4; linssi "kamera 60 15 5000"; sleep 5; kuva kontakti-vertailu-fin
+    linssi "maa SWE" "maa NOR"; sleep 3; kuva linssitesti-vertailu-3
+    linssi "maa DNK"; sleep 3; kuva kontakti-vertailu
+    linssi "maa DEU" "vertaa"; sleep 2
+    linssi "linssi maatiedot"; sleep 4; linssi "kamera 36 138 4000"; sleep 5; kuva linssitesti-maatiedot-alku
+    linssi "maa JPN"; sleep 3; kuva kontakti-maatiedot
+    linssi "lehti" "maa KOR"; sleep 3; kuva linssitesti-maatiedot-kor
+    linssi "linssi pois"; sleep 4; hae "$2"; tail -20 "$2/linssi-loki.txt" ;;
+  kontakti)
+    # Kiinteät näkymät (lat lon korkeus km); keksinnöt, ihmisen matka ja astronautti
+    # ohjaavat kameraa itse, joten niistä otetaan linssin oma näkymä.
+    linssi "linssi topografia"; sleep 8; linssi "kamera 45 10 8000"; sleep 8; kuva kontakti-topografia
+    linssi "linssi vesistot"; sleep 8; linssi "kamera 0 20 9000"; sleep 8; kuva kontakti-vesistot
+    linssi "linssi satelliitti"; sleep 15; kuva kontakti-satelliitti
+    linssi "linssi keksinnot"; sleep 6; linssi "keksinnot 11"; sleep 6; kuva kontakti-keksinnot-1873
+    linssi "keksinnot 25" "keksinnot jatka"; sleep 12; kuva kontakti-keksinnot-loppu
+    linssi "linssi ihmisen-matka"; sleep 20; linssi "esitys levantti"; sleep 6; linssi "esitys tauko"; sleep 2; kuva kontakti-ihmisen-matka-levantti
+    linssi "linssi pois"; sleep 4; hae "$2"; tail -12 "$2/linssi-loki.txt" ;;
+  *) echo "käyttö: $0 sisalto [koepaketti] | astronautti <kansio> | keksinnot <kansio> | maat <kansio> | kontakti <kansio>"; exit 1 ;;
 esac
 rm -rf $TMP
