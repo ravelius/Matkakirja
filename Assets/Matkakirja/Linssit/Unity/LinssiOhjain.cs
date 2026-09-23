@@ -18,7 +18,7 @@
 // ihmisen matkalle "esitys <jakso-id> | tauko | jatka | tila"; kaikille
 // "kamera <lat> <lon> <korkeus km>" (hyppy kuvakaappausta varten), "tila" ja
 // "kyllaisyys 0.8|1" (astronautin reliefi) ja "kehittaja 0|1" (kaikki linssit auki);
-// radiolle "radio <ISO3> | kaupunki <id> | taajuus <0–1> | aani <0–1> | stop | tila" (aani 0 = testit ilman ääntä, soi-tila näkyy silti);
+// radiolle "radio <ISO3> | kaupunki <id> | taajuus <0–1> | aani <0–1> | tauko 0|1 | stop | tila" (aani 0 = testit ilman ääntä, soi-tila näkyy silti);
 // molemmat muistetaan PlayerPrefsissä.
 // Tulos lokiin ja Documents/linssi-loki.txt:hen.
 using System;
@@ -725,8 +725,9 @@ namespace Matkakirja.Natiivi
                     if (r == null) Kirjaa("radio: linssi ei ole auki");
                     else if (osat[1] == "stop") r.Keskeyta();
                     else if (osat[1] == "taajuus" && osat.Length > 2) r.Taajuus(Luku(osat[2]));
+                    else if (osat[1] == "tauko" && osat.Length > 2) r.Tauko(osat[2] == "1");
                     else if (osat[1] == "aani" && osat.Length > 2) { r.Voimakkuus = (float)Luku(osat[2]); Kirjaa($"radio: äänenvoimakkuus {Luku(osat[2]):F2}"); }
-                    else if (osat[1] == "tila") Kirjaa($"radio: {r.Tila.Vaihe} {r.Tila.AsemaId} {r.Tila.Rivi1} / {r.Tila.Rivi2}, asteikolla {r.Asteikko.Count}, näkyvissä {r.Nakyvat.Count}");
+                    else if (osat[1] == "tila") Kirjaa($"radio: {r.Tila.Vaihe}{(r.Tauolla ? " (tauolla)" : "")} {r.Tila.AsemaId} {r.Tila.Rivi1} / {r.Tila.Rivi2}, asteikolla {r.Asteikko.Count}, näkyvissä {r.Nakyvat.Count}");
                     else if (osat[1] == "kaupunki" && osat.Length > 2) r.SoitaKaupunki(osat[2]);
                     else r.Viritä(osat[1].ToUpperInvariant());
                 }
