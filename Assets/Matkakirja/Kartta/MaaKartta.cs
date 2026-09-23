@@ -95,8 +95,9 @@ namespace Matkakirja
 
         void Napautus(Vector2 ruutu)
         {
-            if (!Paalla || osuma == null || kierto == null) return;
-            if (!RuutuPallolle(ruutu, out double lat, out double lon)) return;
+            if (!Paalla) return;
+            if (osuma == null || kierto == null) { Debug.Log($"MATKAKIRJA maat: napautus ohitettu (osuma {osuma != null}, kierto {kierto != null})"); return; }
+            if (!RuutuPallolle(ruutu, out double lat, out double lon)) { Debug.Log($"MATKAKIRJA maat: napautus {ruutu} ohi pallon"); return; }
             var iso3 = osuma.Hae(lat, lon, toleranssi);
             Debug.Log($"MATKAKIRJA maat: napautus {lat:0.00} {lon:0.00} → {iso3 ?? "meri"}");
             if (iso3 != null) MaaNapautettu?.Invoke(iso3);
