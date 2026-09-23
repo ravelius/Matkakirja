@@ -82,6 +82,17 @@ kuva maakunta-kortti
 ui sulje
 ```
 
+Matkalaukku (`Matkalaukku.cs`, webin #passport-dialog): yläpalkin tilapilleri avaa laukun pillerin
+alle. `ui laukku` näyttää pelin datan (PeliOhjain.Laukku()), `ui laukku esimerkki` keksityn
+sisällön ilman peliä. "Matkan tilastot ›" avaa lohkon (tila muistetaan).
+
+```
+ui laukku esimerkki
+odota 2
+kuva laukku
+ui sulje
+```
+
 Offline-latauksen tila (`OfflineTilaUi.cs`): pilleri yläpalkin alla vasemmalla näkyy, kun
 lataus on käynnissä tai verkkoa ei ole; napautus avaa ratas-paneelin. `ui offline demo`
 vaihtaa tilalle keksityn palvelun (Ranska latautuu ~6 s ja valmistuu, Italia epäonnistuu

@@ -26,6 +26,7 @@ namespace Matkakirja.Natiivi
         public readonly Vahvistus Vahvistus;
         public readonly Paavalikko Valikko;
         public readonly Aanentasot Aanentasot;
+        public readonly Matkalaukku Matkalaukku;
         public readonly KaupunkiKortti Kaupunkikortti;
         public readonly KysymysNakyma Kysymys;
         public readonly Karttaselite Karttaselite;
@@ -68,6 +69,7 @@ namespace Matkakirja.Natiivi
             Vahvistus = new Vahvistus(kerros);
             Valikko = new Paavalikko(kerros, () => Tilarivi.Alareuna, Vahvistus);
             Aanentasot = new Aanentasot(kerros, () => Tilarivi.Alareuna);
+            Matkalaukku = new Matkalaukku(kerros, () => Tilarivi.Alareuna, () => Tilarivi.Pilleri);
             Kaupunkikortti = new KaupunkiKortti(kerros);
             Kysymys = new KysymysNakyma(kerros);
             Kartuscha = new Kartuscha(kerros);
@@ -87,8 +89,9 @@ namespace Matkakirja.Natiivi
             Valikko.TietojaPainettu += Tietoja.Avaa;
             UiSisalto.Lataa(null); // kaupunkidata valmiiksi ennen ensimmäistä napautusta
 
-            Tilarivi.Valikko.clicked += () => { Aanentasot.Sulje(); Valikko.Vaihda(); };
-            Tilarivi.Ratas.clicked += () => { Valikko.Sulje(); Aanentasot.Vaihda(); };
+            Tilarivi.Valikko.clicked += () => { Aanentasot.Sulje(); Matkalaukku.Sulje(); Valikko.Vaihda(); };
+            Tilarivi.Ratas.clicked += () => { Valikko.Sulje(); Matkalaukku.Sulje(); Aanentasot.Vaihda(); };
+            Tilarivi.PilleriPainettu += () => { Valikko.Sulje(); Aanentasot.Sulje(); Matkalaukku.Vaihda(); };
             Valikko.AukiMuuttui += auki => Tilarivi.Valikko.EnableInClassList("mk-valittu", auki);
             Aanentasot.AukiMuuttui += auki => Tilarivi.Ratas.EnableInClassList("mk-valittu", auki);
             Valikko.UusiPeli += () =>
@@ -129,7 +132,7 @@ namespace Matkakirja.Natiivi
                 else Pulu.Tilanne(laji, null, tunne, v);
             };
             // Lehti (WKWebView) aukeaa kaiken päälle: auki jääneet valikot kiinni.
-            if (o.Lehti != null) o.Lehti.Avautui += _ => { Valikko.Sulje(); Aanentasot.Sulje(); Vahvistus.Sulje(); };
+            if (o.Lehti != null) o.Lehti.Avautui += _ => { Valikko.Sulje(); Aanentasot.Sulje(); Matkalaukku.Sulje(); Vahvistus.Sulje(); };
         }
 
         KaupunkiMerkit merkit;
@@ -155,6 +158,7 @@ namespace Matkakirja.Natiivi
         {
             Valikko.Sulje();
             Aanentasot.Sulje();
+            Matkalaukku.Sulje();
             Vahvistus.Sulje();
             Matkavalinta.Piilota();
             Matkavalinta.PiilotaHeitto();

@@ -26,11 +26,13 @@ namespace Matkakirja.Natiivi
         readonly VisualElement palkki, pilleri, ilmoitus;
         readonly Label raha, kello, ilmoitusTeksti;
         string rivi = "", kelloTeksti = "";
-        IVisualElementScheduledItem ilmoitusAjastin, valahdysAjastin;
+        IVisualElementScheduledItem ilmoitusAjastin, valahdysAjastin, rahaAjastin;
 
         /// <summary>Ratas- ja valikkonappi (Paavalikko ja Aanentasot ankkuroituvat näihin).</summary>
         public readonly Button Ratas, Valikko;
         public event Action PilleriPainettu;
+        /// <summary>Tilapilleri (matkalaukku ankkuroituu sen alle).</summary>
+        public VisualElement Pilleri => pilleri;
 
         public Ylapalkki(UiKerros kerros)
         {
@@ -100,10 +102,13 @@ namespace Matkakirja.Natiivi
             }
             else
             {
-                raha.text = Raha(osat[0]);
+                string uusiRaha = Raha(osat[0]);
+                // Kukkaron muutos välähtää kuten kello (osto, palkkio, lento).
+                if (uusiRaha != raha.text && raha.text.StartsWith("£")) Valahda(raha, ref rahaAjastin);
+                raha.text = uusiRaha;
                 string uusiKello = Iso(osat[1]) + ", " + osat[2];
                 kello.style.display = DisplayStyle.Flex;
-                if (uusiKello != kelloTeksti && kelloTeksti.Length > 0) Valahda();
+                if (uusiKello != kelloTeksti && kelloTeksti.Length > 0) Valahda(kello, ref valahdysAjastin);
                 kelloTeksti = uusiKello;
                 kello.text = "· " + uusiKello;
             }
@@ -121,11 +126,11 @@ namespace Matkakirja.Natiivi
 
         static string Iso(string s) => string.IsNullOrEmpty(s) ? s : char.ToUpperInvariant(s[0]) + s.Substring(1);
 
-        void Valahda()
+        static void Valahda(Label l, ref IVisualElementScheduledItem ajastin)
         {
-            kello.AddToClassList("mk-valahdys");
-            valahdysAjastin?.Pause();
-            valahdysAjastin = kello.schedule.Execute(() => kello.RemoveFromClassList("mk-valahdys")).StartingIn(700);
+            l.AddToClassList("mk-valahdys");
+            ajastin?.Pause();
+            ajastin = l.schedule.Execute(() => l.RemoveFromClassList("mk-valahdys")).StartingIn(700);
         }
 
         public void Viesti(string teksti, float kestoS = 3f)
