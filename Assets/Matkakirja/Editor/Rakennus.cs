@@ -225,6 +225,24 @@ namespace Matkakirja.Editori
             PlayerSettings.iOS.appleDeveloperTeamID = "F72JLS57C5";
             PlayerSettings.iOS.appleEnableAutomaticSigning = true;
             PlayerSettings.defaultInterfaceOrientation = UIOrientation.AutoRotation;
+            Kuvake();
+        }
+
+        /// <summary>Pelin kompassiruusukuvake (sama kuin iOS-kuoressa) kaikkiin iOS-kokoihin, myös App Storen 1024 px.</summary>
+        public const string KuvakeTiedosto = "Assets/Matkakirja/Kuvake/Kuvake-1024.png";
+
+        static void Kuvake()
+        {
+            var tex = AssetDatabase.LoadAssetAtPath<Texture2D>(KuvakeTiedosto);
+            if (tex == null) throw new Exception("Kuvaketta ei löydy: " + KuvakeTiedosto);
+            var kohde = UnityEditor.Build.NamedBuildTarget.iOS;
+            foreach (var laji in PlayerSettings.GetSupportedIconKinds(kohde))
+            {
+                var kuvakkeet = PlayerSettings.GetPlatformIcons(kohde, laji);
+                foreach (var k in kuvakkeet)
+                    for (int kerros = 0; kerros < k.maxLayerCount; kerros++) k.SetTexture(tex, kerros);
+                PlayerSettings.SetPlatformIcons(kohde, laji, kuvakkeet);
+            }
         }
 
         static void Kaanna(string kansio, BuildOptions lisat = BuildOptions.None)
