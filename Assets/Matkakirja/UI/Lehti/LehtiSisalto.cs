@@ -140,8 +140,9 @@ namespace Matkakirja.Natiivi
                 {
                     var o = Ob(a);
                     string id = T(o, avain) ?? T(o, "id");
-                    // Päätason aiheet (skeema 1.13) ensin, muuten raakaolion data.
-                    var aiheet = Rakenne.Lista(MiniJson.Kentta(o, "aiheet")) ?? Rakenne.Lista(MiniJson.Kentta(o, "data"));
+                    // Raaka data ensin: skeema 1.15 säilyttää sen ennallaan tyypitetyn kopion (aiheet +
+                    // kansi) rinnalla. Tyypitetty aiheet vain, kun dataa ei ole (Elämää-kaupungit).
+                    var aiheet = Rakenne.Lista(MiniJson.Kentta(o, "data")) ?? Rakenne.Lista(MiniJson.Kentta(o, "aiheet"));
                     if (id != null && aiheet != null) t[id] = aiheet;
                 }
             }
@@ -217,10 +218,14 @@ namespace Matkakirja.Natiivi
             {
                 var nosto = new LehtiNosto
                 {
-                    Otsikko = T(n, "otsikko"), Teksti = T(n, "teksti"), Aika = T(n, "aika"), Wiki = T(n, "wiki"),
-                    Leveys = T(n, "leveys"), Linkki = T(n, "linkki"), Nayte = T(n, "musiikkiNayte"), NayteNimi = T(n, "musiikkiNayteNimi"),
+                    // Tyypitetyssä (1.15) muodossa wiki, linkki, näyte ja kuva ovat olioita.
+                    Otsikko = T(n, "otsikko"), Teksti = T(n, "teksti"), Aika = T(n, "aika"),
+                    Wiki = T(n, "wiki") ?? T(Ob(MiniJson.Kentta(n, "wiki")), "otsikko"),
+                    Leveys = T(n, "leveys"), Linkki = T(n, "linkki") ?? T(Ob(MiniJson.Kentta(n, "linkki")), "url"),
+                    Nayte = T(n, "musiikkiNayte") ?? T(Ob(MiniJson.Kentta(n, "musiikkiNayte")), "url"),
+                    NayteNimi = T(n, "musiikkiNayteNimi") ?? T(Ob(MiniJson.Kentta(n, "musiikkiNayte")), "nimi"),
                     Musiikki = T(n, "musiikki"), MusiikkiNimi = T(n, "musiikkiNimi"),
-                    Kuva = Kuva(n),
+                    Kuva = Kuva(n) ?? Kuva(Ob(MiniJson.Kentta(n, "kuva"))),
                 };
                 foreach (var g in (Rakenne.Lista(MiniJson.Kentta(n, "galleria")) ?? new List<object>()).Select(Ob).Where(x => x != null))
                     if (Kuva(g) is LehtiKuva gk) nosto.Galleria.Add(gk);
@@ -303,7 +308,8 @@ namespace Matkakirja.Natiivi
         static LehtiKuva Kuva(Dictionary<string, object> o)
         {
             if (o == null) return null;
-            string lahde = T(o, "tiedosto") ?? T(o, "osoite") ?? T(o, "ampari");
+            // Skeema 1.15 (tyypitetty kuva): url on valmis CDN-osoite, arvo media.jsonin avain.
+            string lahde = T(o, "url") ?? T(o, "tiedosto") ?? T(o, "osoite") ?? T(o, "ampari") ?? T(o, "arvo");
             if (string.IsNullOrEmpty(lahde)) return null;
             return new LehtiKuva
             {
