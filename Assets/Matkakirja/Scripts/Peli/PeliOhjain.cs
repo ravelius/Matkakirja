@@ -780,6 +780,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Aloitusnäkymän Jatka: tallennettu matka jatkuu. Palauttaa virheen tai null.</summary>
         public string Jatka()
         {
+            using var _ = Ajoita("jatka");
             if (Tila != SilmukanTila.Aloitus) return "silmukka on tilassa " + Tila;
             if (jatkettava == null) return "tallennusta ei ole";
             matka = jatkettava;
@@ -794,6 +795,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public string UusiMatka(string lahtokaupunki, long? siemen = null)
         {
+            using var _ = Ajoita("uusiMatka");
             if (verkko == null) return "sisältö ei ole vielä latautunut";
             if (lahtokaupunki != null && !Lahtokaupungit().Any(k => k.Id == lahtokaupunki)) return "ei lähtökaupunki: " + lahtokaupunki;
             if (Tila != SilmukanTila.Aloitus && Tila != SilmukanTila.Kartta && Tila != SilmukanTila.Dialogi) return "silmukka on tilassa " + Tila;
@@ -845,6 +847,7 @@ namespace Matkakirja.Natiivi
 
         void Kytke(Matka m)
         {
+            using var _ = Ajoita("kytke");
             linssit = new Linssiomistus(passi ?? new Passi(), m.Tila.Linssit).Kytke(m);
             linssit.Kynnyssaanto = Linssirekisteri.Kynnys;   // omistajan sääntö (1400: radio ja topografia)
             kytkettyRekisteri = null;
@@ -874,6 +877,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Kysymysmoottori matkaan, kun sekä matka että kysymykset ovat valmiit.</summary>
         void KytkeKysely()
         {
+            using var _ = Ajoita("kytkeKysely");
             if (matka == null || Kysymykset == null || (kysely != null && kysely.Matka == matka)) return;
             kysely = new Kysely(matka, Kysymykset);
             kysely.Tapahtui += (laji, teksti) => kysymysLisat.Add(teksti);
@@ -903,6 +907,7 @@ namespace Matkakirja.Natiivi
 
         void Tallenna()
         {
+            using var _ = Ajoita("tallennus");
             if (matka == null) return;
             // Kuten web (visa.js): jäljellä oleva aika talteen kokonaisina sekunteina.
             if (Tila == SilmukanTila.Kysymys && KysymysTila != null && KysymysTila.Sekunnit.HasValue && !KysymysTila.Vastattu)
@@ -913,13 +918,15 @@ namespace Matkakirja.Natiivi
             }
             try
             {
+                using var __ = Ajoita("tallennus.kirjoitus");
                 PeliApu.KirjoitaAtomisesti(TallennusPolku, matka.Tallenna());
                 PeliApu.KirjoitaAtomisesti(TavoitePolku, Tavoite ?? "");
             }
             catch (Exception e) { Debug.LogError("MATKAKIRJA peli: tallennus epäonnistui: " + e.Message); }
             PaivitaAarrepiste();
             SahkeTallennettu();
-            try { TilaMuuttui?.Invoke(); } catch (Exception e) { Debug.LogException(e); }
+            using (Ajoita("tallennus.tilaMuuttui"))
+                try { TilaMuuttui?.Invoke(); } catch (Exception e) { Debug.LogException(e); }
         }
 
         void OnApplicationPause(bool tauko)
@@ -936,6 +943,7 @@ namespace Matkakirja.Natiivi
 
         void Kartalle(bool kameraPelaajaan)
         {
+            using var _ = Ajoita("kartalle");
             Lentoaani(false);
             dialogi.Piilota();
             PiilotaKortti();
@@ -971,6 +979,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         void Napautettu(string kaupunki)
         {
+            using var _ = Ajoita("napautus");
             if (NapautusSallittu != null && !NapautusSallittu()) return;
             if (!Kaytossa || matka == null) return;
             bool uiPaalla = false;
@@ -1007,6 +1016,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public string AvaaKortti(string kaupunki)
         {
+            using var _ = Ajoita("kortti");
             if (matka == null) return "peli ei ole valmis";
             if (kaupunkiKortti == null) return AvaaDialogi(kaupunki);
             if (Tila != SilmukanTila.Kartta) return "silmukka on tilassa " + Tila;
@@ -1024,7 +1034,8 @@ namespace Matkakirja.Natiivi
                 Sulje = () => PiilotaKortti(),
             };
             KorttiKaupunki = kaupunki;
-            kaupunkiKortti.Nayta(kaupunki, PeliApu.KaupunginNimi(verkko, kaupunki), t);
+            using (Ajoita("kortti.nayta"))
+                kaupunkiKortti.Nayta(kaupunki, PeliApu.KaupunginNimi(verkko, kaupunki), t);
             return null;
         }
 
@@ -1144,6 +1155,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public string Matkusta(string kohde, Kulkutapa tapa, bool mannerlento = false, bool vapaa = false)
         {
+            using var _ = Ajoita("matka");
             if (matka == null) return "peli ei ole valmis";
             if (Tila != SilmukanTila.Kartta && Tila != SilmukanTila.Dialogi) return "silmukka on tilassa " + Tila;
             if (kohde != null && !verkko.Kaupungit.ContainsKey(kohde)) return "tuntematon kaupunki " + kohde;
@@ -1574,6 +1586,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Avoin tehtävä (kysymys, pulma, tapahtumakortti) näkyviin, myös tallennuksesta jatkettaessa.</summary>
         void NaytaKysymys(string viesti = null)
         {
+            using var _ = Ajoita("kysymysNayta");
             var tehtava = AvoinTehtava;
             if (tehtava == Tehtava.Ei) return;
             if (Tila != SilmukanTila.Kysymys)
@@ -1695,6 +1708,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public string JatkaKysymyksesta()
         {
+            using var _ = Ajoita("kysymysJatka");
             var tehtava = AvoinTehtava;
             if (Tila != SilmukanTila.Kysymys || tehtava == Tehtava.Ei) return "kysymys ei ole auki";
             if (KysymysTila != null && !KysymysTila.Vastattu) return "kysymykseen ei ole vastattu";
@@ -1896,6 +1910,7 @@ namespace Matkakirja.Natiivi
                 + ",\"aanet\":[" + string.Join(",", aaniLoki.Select(PeliApu.Json)) + "],\"lentoSoi\":" + (lentoSoi ? "true" : "false")
                 + ",\"aarrepiste\":" + (Aarrepiste() is Aarrepiste ap ? "{\"kaupunki\":" + PeliApu.Json(ap.Kaupunki) + ",\"lukittu\":" + (ap.Lukittu ? "true" : "false") + "}" : "null")
                 + ",\"sahke\":" + SahkeJson()
+                + ",\"ajoitus\":" + PeliApu.Json(viimeAjoitus)
                 + ",\"tehtavaNappi\":" + PeliApu.Json(matka != null && matka.Tila.Pelaaja.Sijainti.Kaupungissa ? LehtiTilaNyt(matka.Tila.Pelaaja.Sijainti.Kaupunki).TehtavaNappi : null);
             return json.Substring(0, json.Length - 1) + lisa + "}";
         }
