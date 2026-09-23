@@ -29,6 +29,7 @@ namespace Matkakirja.Natiivi
         public readonly KaupunkiKortti Kaupunkikortti;
         public readonly KysymysNakyma Kysymys;
         public readonly Karttaselite Karttaselite;
+        public readonly OfflineTilaUi OfflineTila;
         public readonly Kartuscha Kartuscha;
         public readonly Pulu Pulu;
         public readonly Matkakirjakortti Matkakirja;
@@ -71,6 +72,7 @@ namespace Matkakirja.Natiivi
             Kysymys = new KysymysNakyma(kerros);
             Kartuscha = new Kartuscha(kerros);
             Karttaselite = new Karttaselite(kerros);
+            OfflineTila = new OfflineTilaUi(kerros, Tilarivi, () => { Valikko.Sulje(); Aanentasot.Avaa(); });
             Matkakirja = new Matkakirjakortti(kerros);
             Pulu = Natiivi.Pulu.Hae();
             Saapuminen = new Saapumisesitys(Matkakirja, Pulu);
