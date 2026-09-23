@@ -186,6 +186,28 @@ kuva laukku
 ui sulje
 ```
 
+Laukun galleriat (`Galleriat.cs`, `Minipopup.cs`): julisterivi "n/m »" avaa julistegallerian
+(maanosittain, voittamattomat "?"-paikkoina, vedoksen napautus → Kuvasuurennos selattavana
+sarjana; kehittäjätilassa kaikki voitettuina kuten webissä), tietäjärivin i avaa Tietäjän
+tien minipopupina ja Aarnin luettelon i pikkuselosteen. `ui julisteet [n]` näyttää gallerian
+n ensimmäisellä julisteella voitettuna, `ui tietaja [pisteet]` minipopupin, `ui seloste`
+laukun esimerkillä ja Aarnin selosteen auki.
+
+```
+ui julisteet 7
+odota 3
+kuva julistegalleria
+ui sulje
+ui tietaja 120
+odota 3
+kuva tietajan-tie
+ui sulje
+ui seloste
+odota 2
+kuva aarni-seloste
+ui sulje
+```
+
 Offline-latauksen tila (`OfflineTilaUi.cs`): pilleri yläpalkin alla vasemmalla näkyy, kun
 lataus on käynnissä tai verkkoa ei ole; napautus avaa ratas-paneelin. `ui offline demo`
 vaihtaa tilalle keksityn palvelun (Ranska latautuu ~6 s ja valmistuu, Italia epäonnistuu
