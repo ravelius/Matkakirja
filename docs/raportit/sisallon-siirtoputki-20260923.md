@@ -19,7 +19,7 @@ Lähde: main `eaeda81cf` (v2143).
   (js/media.js). Lisäksi viitteissä on 1 681 lähde- ja lisenssilinkkiä.
 - 21 kokoelmaa tyypitettyinä entiteetteinä, esimerkiksi kaupungit
   lat/lon-koordinaatein, reitit, kysymykset, lehdet ja kohtaamiset.
-- Skeemaversio on **1.12** (`manifest.skeemaversio`): versiossa 1.1
+- Skeemaversio on **1.14** (`manifest.skeemaversio`): versiossa 1.1
   kaupungit saivat kentät `maa2` (ISO2), `tyyppi`, `lentokentta` ja
   `aloitus` natiivin 3D-proton tarpeen mukaan, versiossa 1.2 `tarkeys`
   (0–3), ja manifest sai tiedostojen koot (`tavuja`), versiossa 1.3
@@ -405,7 +405,7 @@ Funktiot tunnisteiksi ja sisältöversion näyttäminen ovat myöhempiä osia.
 
 ### 5.3 Yhteensopivuus: vanha sovellus ja uusi sisältö
 
-- **Skeeman major.minor.** Nykyinen on 1.12 (`SKEEMAVERSIO_TARKKA`,
+- **Skeeman major.minor.** Nykyinen on 1.14 (`SKEEMAVERSIO_TARKKA`,
   manifestissa ja osoittimessa). `matkakirja-vienti/1` on major. Lisäykset
   (uusi kenttä, uusi kokoelma) nostavat minoria, ja vanha sovellus
   ohittaa tuntemattomat kentät. Poisto tai merkityksen muutos nostaa
@@ -423,7 +423,11 @@ Funktiot tunnisteiksi ja sisältöversion näyttäminen ovat myöhempiä osia.
   linssiluennat; 1.11 Livian cue-data (livianpuhe.cuet[].ele, alku, loppu,
   eleetTila; luennat.reaktiot[].ele; kokoelma livianrepliikit); 1.12 repon
   assets/-kuvat ämpärissä (media.matkakirja.app/assets/…?v=, Pages varana,
-  CI vie ne, tools/vienti/sivustoassetit.mjs). Versiot verrataan numeroina (1.10 > 1.9). Raakaoliot (`data`) eivät kuulu sopimukseen: niiden kentät
+  CI vie ne, tools/vienti/sivustoassetit.mjs); 1.13 media.json leveys ja korkeus; 1.14
+  POISTOT MINORINA (Fablen poikkeus 23.9.2026): kaksintaistelut, DUEL_PRIZE, BOT_SKILL,
+  js/ai.js, laattatyyppi robber ja vanhat mannerlaudat. Poikkeus on sallittu, koska yksikään
+  natiivin haara ei lue niitä ja lukijat sietävät puuttuvan tiedoston. Testi valvoo, ettei
+  paketti viittaa niihin. Versiot verrataan numeroina (1.10 > 1.9). Raakaoliot (`data`) eivät kuulu sopimukseen: niiden kentät
   voivat muuttua ilman versionnostoa.
 - **Pakolliset kentät.** Jokainen sovellus julistaa, mitkä kokoelmat ja
   kentät se vaatii. Tuoja validoi paketin ennen käyttöönottoa, ja jos

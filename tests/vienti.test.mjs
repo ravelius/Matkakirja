@@ -86,9 +86,11 @@ test('jokainen paketti ja jokainen export on manifestissa oikealla lukumääräl
   const packit = readdirSync(join(JUURI, 'js/packs')).filter((f) => f.endsWith('.js'));
   const manifestissa = new Map(manifest.moduulit.map((m) => [m.moduuli, m]));
   assert.ok(packit.length > 300, `pakettien määrä ${packit.length}`);
+  const { PAKETISTA_POISTETUT } = await import('../tools/vienti/lahteet.mjs');
   for (const f of packit) {
     const polku = `js/packs/${f}`;
     const m = manifestissa.get(polku);
+    if (PAKETISTA_POISTETUT.has(polku)) { assert.ok(!m, `${polku} on poistettu paketista (skeema 1.14)`); continue; }
     assert.ok(m, `${polku} puuttuu viennistä`);
     const ns = await import(pathToFileURL(join(JUURI, polku)).href);
     assert.deepEqual(m.exportit.map((e) => e.nimi), Object.keys(ns), `${polku}: exportit`);
@@ -145,7 +147,6 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
     reitit: P.edges.length + P.airRoutes.length,
     kysymykset: Object.values(P.questions).flat().length,
     paikkatiedot: Object.values(P.placeFacts).flat().length,
-    kaksintaistelut: P.duels.length,
     laatat: 1,
     pulmat: P.puzzles.length,
     kaupunkilehdet: avaimia(ns('kulttuuri-kategoriat.js').KULTTUURI_KATEGORIAT),
@@ -163,8 +164,8 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
     tarinakaari: avaimia(ns('tarinakaari.js').TARINAKAARI),
     saapumispuheet: avaimia(ns('saapumispuheet.js').SAAPUMISPUHEET),
     fokusvirrat: avaimia(ns('fokusvirrat.js').FOKUSVIRRAT),
-    saannot: new Set(['js/rules.js', 'js/game.js', 'js/tokens.js', 'js/ai.js'].flatMap((f) => Object.entries(ns(f))
-      .filter(([, v]) => onSaantoArvo(v)).map(([n]) => n))).size + 2, // + KATKOKUVA, LIVIAN_ASTRONAUTTI_KYPARA
+    saannot: new Set(['js/rules.js', 'js/game.js', 'js/tokens.js'].flatMap((f) => Object.entries(ns(f))
+      .filter(([n, v]) => onSaantoArvo(v) && !['DUEL_PRIZE', 'BOT_SKILL'].includes(n)).map(([n]) => n))).size + 2, // + KATKOKUVA, LIVIAN_ASTRONAUTTI_KYPARA
     tapahtumat: ns('africa.js').AFRICA.events.length,
     linssiaineisto: 8,
     aanitaulut: new Set([...ns('js/sound.js').AANITEHOSTEET, ...Object.keys(ns('js/sound.js').REAL_SAMPLES)]).size

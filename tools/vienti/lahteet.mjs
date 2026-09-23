@@ -45,6 +45,19 @@ function voimassaOlevatAikaleimat() {
 }
 const m = (moduuli, exportit, luokka = 'peli') => ({ moduuli, exportit, luokka });
 
+/*
+ * PAKETISTA POISTETUT (skeema 1.14, Fablen tarkastus 23.9.2026 A11 ja C5):
+ * vanhat mannerlaudat eivät kuulu natiiviin (yksi lauta), eikä yksikään
+ * proto-haara lue niitä. Vienti lataa ne yhä muistiin, koska kokoelma
+ * tapahtumat tulee js/packs/africa.js:stä, mutta niitä ei kirjoiteta
+ * pakettiin eikä niiden mediaviitteitä kerätä. Botti (js/ai.js) ja
+ * kaksintaistelu on poistettu natiivista kokonaan.
+ */
+const MANNERLAUDAT = ['africa', 'asia', 'europe', 'istanbul', 'maailma', 'middleeast', 'northamerica', 'oceania',
+  'southamerica', 'suomi'];
+export const PAKETISTA_POISTETUT = new Set(MANNERLAUDAT.flatMap((l) => [`js/packs/${l}.js`, `js/packs/${l}-questions.js`]));
+export const POISTETUT_SAANNOT = new Set(['DUEL_PRIZE', 'BOT_SKILL']);
+
 export const LISAMODUULIT = [
   m('js/kohtaamiskuvat-data.js', ['kohtaamiskuvat', 'KOHTAAMIS_R2_JUURI']),
   m('js/isoisan-valokuvat.js', ['ISOISAN_VALOKUVAT', 'ISOISAN_KUVAJUURI']),
@@ -57,7 +70,6 @@ export const LISAMODUULIT = [
   m('js/pollo.js', ['LIVIAN_MIETINNAT', 'POLLO_AARRE']),
   m('js/game.js', ['ASKERS', 'MANNER_NIMET', 'FORM_WEIGHTS']),
   m('js/tokens.js', ['TOKEN_TYPES', 'PIENI_AARRE_ARVO', 'ISO_AARRE_ARVO']),
-  m('js/ai.js', ['BOT_SKILL']),
   // Matkustuksen hinnat (laiva, lento, bussi); skeema 1.4 kokoaa ne ja
   // game.js:n vakiot kokoelmaan saannot (tools/vienti/kokoelmat.mjs).
   m('js/rules.js', ['SEA_FEE', 'FLIGHT_PRICE', 'BUS_FARE']),

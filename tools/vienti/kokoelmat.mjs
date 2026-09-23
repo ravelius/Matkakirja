@@ -21,6 +21,7 @@
 import { sarjallista } from './sarjallista.mjs';
 import { laudaltaAsteiksi } from '../../js/fokusmitat.js';
 import { ISO2 } from './iso2.mjs';
+import { POISTETUT_SAANNOT } from './lahteet.mjs';
 import { PAAKAUPUNGIT } from './paakaupungit.mjs';
 import { lueKorkeudet } from './korkeudet.mjs';
 import { maarajaRivit, MAARAJOJEN_TOLERANSSI } from './maarajat.mjs';
@@ -143,7 +144,9 @@ function lautaKokoelmat(ns) {
     laatat: taulukko(`${LAUTA}#MAAILMANKARTTA.tokens`,
       'Aarrelaatat sellaisenaan yhtenä alkiona: data = { types, mannerTypes, counts } '
         + '(laattatyypit, mantereiden omat tyypit, määrät laudalla).',
-      {}, [{ id: 'tokens', data: P.tokens }]),
+      // Skeema 1.14: ryöstäjä (robber) pois, natiivissa ei rosvoa.
+      {}, [{ id: 'tokens', data: { ...P.tokens,
+        types: Object.fromEntries(Object.entries(P.tokens.types).filter(([t]) => t !== 'robber')) } }]),
     // Tapahtumakortit (Fablen kaanonipäätös 23.9.2026): tuodaan sellaisenaan
     // AFRICA.events-taulusta; maailmankartalla niitä ei ole, natiivi tekee
     // mekanismin yleisenä (effect.kind raha | kyyti | viive).
@@ -152,8 +155,6 @@ function lautaKokoelmat(ns) {
         + '(amount, kukkaro ei mene miinukselle), kyyti (ilmainen siirto rideTarget-kaupunkiin), viive '
         + '(yksi ylimääräinen vuoro paikallaan).',
       {}, (ns.AFRICA_EVENTS ?? []).map((e, i) => ({ id: `afrikka:${i}`, lauta: 'africa', data: e }))),
-    kaksintaistelut: taulukko(`${LAUTA}#MAAILMANKARTTA.duels`, 'Kaksintaistelukysymykset.', {},
-      P.duels.map((d, i) => ({ id: `kaksintaistelu:${i}`, data: d }))),
     pulmat: taulukko(`${LAUTA}#MAAILMANKARTTA.puzzles`,
       'Kaupunkipulmat. generaattori = arvontalogiikan tunniste (js/pulmageneraattorit.js); natiivi toteuttaa saman tunnisteen.',
       { kaupunki: 'kaupungit' }, P.puzzles.map((p) => ({ id: p.id, kaupunki: p.city, data: p }))),
@@ -243,7 +244,7 @@ function sisaltoKokoelmat(hae, kaupunkiIdt) {
  *
  * Natiivi porttaa matkustuksen ja saapumisen ensin (Fable 23.9.2026).
  * Sen luvut ja kaupunkikohtaiset haut ovat webissä koodia:
- *   - saannot: js/rules.js:n, js/game.js:n, js/tokens.js:n ja js/ai.js:n
+ *   - saannot: js/rules.js:n, js/game.js:n ja js/tokens.js:n
  *     sääntöarvot (hinnat, aloitusraha, vuoron tunnit, XP, aarteiden
  *     arvovälit, botin taito; onSaantoArvo).
  *     Kootaan nimiavaruudesta automaattisesti, joten uusi vakio tulee
@@ -256,7 +257,7 @@ function sisaltoKokoelmat(hae, kaupunkiIdt) {
  *     natiivin tarvitse toistaa varasääntöjä (esim. vanha tallenne:
  *     kaupungin oma, muuten maan).
  */
-const SAANTOMODUULIT = ['js/rules.js', 'js/game.js', 'js/tokens.js', 'js/ai.js'];
+const SAANTOMODUULIT = ['js/rules.js', 'js/game.js', 'js/tokens.js'];
 
 /*
  * Sääntöarvo = luku, teksti, totuusarvo tai litteä rakenne niistä
@@ -279,7 +280,7 @@ function saantoKokoelma(hae) {
   const nahdyt = new Set();
   for (const moduuli of SAANTOMODUULIT) {
     for (const [nimi, arvo] of Object.entries(hae(moduuli)).sort(([a], [b]) => (a < b ? -1 : 1))) {
-      if (!onSaantoArvo(arvo)) continue;
+      if (!onSaantoArvo(arvo) || POISTETUT_SAANNOT.has(nimi)) continue;
       // game.js vie rules.js:n hinnat edelleen; alkuperäinen moduuli voittaa.
       if (nahdyt.has(nimi)) continue;
       nahdyt.add(nimi);
@@ -288,7 +289,7 @@ function saantoKokoelma(hae) {
   }
   return taulukko(SAANTOMODUULIT.join('+'),
     'Pelin sääntövakiot: matkustuksen hinnat (SEA_FEE laiva, FLIGHT_PRICE lento, BUS_FARE bussi), '
-      + 'aloitusraha, vuoron tunnit, palkkiot, XP, aarteiden arvovälit (PIENI_AARRE_ARVO, ISO_AARRE_ARVO: min–max, 10 punnan askel) ja botin taito (BOT_SKILL). id = vakion nimi koodissa. SEA_FARE (game.js) '
+      + 'aloitusraha, vuoron tunnit, palkkiot, XP, aarteiden arvovälit (PIENI_AARRE_ARVO, ISO_AARRE_ARVO: min–max, 10 punnan askel). id = vakion nimi koodissa. SEA_FARE (game.js) '
       + 'on SEA_FEE:n vanha kaksoiskappale.',
     {}, alkiot);
 }
@@ -741,7 +742,7 @@ function rikastaNippu4(kokoelmat, ns) {
   for (const a of kokoelmat.tarinakaari.alkiot) a.muotokuva = a.kaupunki ? muotokuva(kohtaamiskuvaKohteelle(a.kaupunki)) : null;
   const tokens = ns.MAAILMANKARTTA.tokens;
   const [laatta] = kokoelmat.laatat.alkiot;
-  laatta.kuvat = Object.fromEntries(Object.entries(tokens.types).map(([t, v]) => [t, mediaOsoite(v.kuva)]));
+  laatta.kuvat = Object.fromEntries(Object.entries(tokens.types).filter(([t]) => t !== 'robber').map(([t, v]) => [t, mediaOsoite(v.kuva)]));
   laatta.mannerKuvat = Object.fromEntries(Object.entries(tokens.mannerTypes).map(([m, tyypit]) => [m,
     Object.fromEntries(Object.entries(tyypit).map(([t, v]) => [t, mediaOsoite(v?.kuva)]))]));
   for (const a of kokoelmat.paikallisaarteet.alkiot) {

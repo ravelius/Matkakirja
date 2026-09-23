@@ -38,7 +38,7 @@ import { readdirSync, readFileSync, mkdirSync, writeFileSync, rmSync } from 'nod
 import { dirname, join, relative, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { sarjallista } from './sarjallista.mjs';
-import { LISAMODUULIT, LISATIEDOSTOT } from './lahteet.mjs';
+import { LISAMODUULIT, LISATIEDOSTOT, PAKETISTA_POISTETUT } from './lahteet.mjs';
 import { SIVUSTON_ASSET_ETULIITE, TARKKUUS, mediaLaji, ratkaiseMedia, sivustonTiiviste } from './media.mjs';
 import { kokoaKokoelmat } from './kokoelmat.mjs';
 import { kokoaWebNakymat } from './web-riippuvuudet.mjs';
@@ -88,8 +88,14 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        saannot LIVIAN_ASTRONAUTTI_KYPARA. CI vie tiedostot
  *        (tools/vienti/sivustoassetit.mjs).
  *   1.13 media.json leveys ja korkeus (px, tools/vienti/kuvamitat.mjs).
+ *   1.14 POISTOJA MINORINA (Fablen poikkeus 23.9.2026; sääntö 5.3 vaatisi
+ *        majorin): kokoelma kaksintaistelut, saannot DUEL_PRIZE ja
+ *        BOT_SKILL, moduuli js/ai.js, laatat.data.types.robber ja vanhat
+ *        mannerlaudat (moduulit/js/packs/<lauta>[-questions].json,
+ *        lahteet.mjs PAKETISTA_POISTETUT). Yksikään proto-haara ei lue niitä,
+ *        ja kaksintaistelujen lukija sietää puuttuvan tiedoston.
  */
-export const SKEEMAVERSIO_TARKKA = '1.13';
+export const SKEEMAVERSIO_TARKKA = '1.14';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 const tavuja = (s) => Buffer.byteLength(s);
@@ -136,6 +142,7 @@ export async function kokoaVienti({ juuri = JUURI } = {}) {
     const lahde = readFileSync(join(juuri, polku), 'utf8');
     const ns = await import(pathToFileURL(join(juuri, polku)).href);
     nimiavaruudet.set(polku, ns);
+    if (PAKETISTA_POISTETUT.has(polku)) continue;
     const exportit = {};
     const kuvaus = [];
     for (const nimi of valitut ?? Object.keys(ns)) {

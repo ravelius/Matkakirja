@@ -250,7 +250,8 @@ test('osa 2: kaupunkidatassa ei ole funktioita', () => {
   }
   assert.ok(tarkistetut.includes('js/packs/maailmankartta.js#MAAILMANKARTTA'));
   assert.ok(tarkistetut.includes('js/packs/europe-puzzles.js#EUROPE_PUZZLES'));
-  assert.ok(tarkistetut.length >= 12, tarkistetut.join(', '));
+  // Skeema 1.14: vanhat mannerlaudat eivät ole paketissa (lahteet.mjs PAKETISTA_POISTETUT).
+  assert.ok(tarkistetut.length >= 2, tarkistetut.join(', '));
 });
 
 test('osa 2: pulmien generaattorit ja tekstipohjat', () => {
@@ -327,7 +328,10 @@ test('skeema 1.5: laatat-kokoelma on laudan tokens sellaisenaan', () => {
   const P = nimiavaruudet.get('js/packs/maailmankartta.js').MAAILMANKARTTA;
   const [rivi] = JSON.parse(tiedostot.get('kokoelmat/laatat.json')).alkiot;
   assert.equal(rivi.id, 'tokens');
-  assert.deepEqual(rivi.data, JSON.parse(JSON.stringify(P.tokens)));
+  // Skeema 1.14: ryöstäjä pois (natiivissa ei rosvoa).
+  const { robber, ...tyypit } = JSON.parse(JSON.stringify(P.tokens.types));
+  assert.ok(robber, 'laudalla on yhä ryöstäjä');
+  assert.deepEqual(rivi.data, { ...JSON.parse(JSON.stringify(P.tokens)), types: tyypit });
   assert.deepEqual(Object.keys(rivi.data), ['types', 'mannerTypes', 'counts']);
 });
 
@@ -346,11 +350,10 @@ test('skeema 1.5: laudan pisteet ja reittien taitteet päätasolla (reittigeomet
 
 test('skeema 1.6: aarteiden arvovälit, botin taito ja tapahtumakortit', async () => {
   const tokens = await import('../js/tokens.js');
-  const ai = await import('../js/ai.js');
   const saannot = new Map(JSON.parse(tiedostot.get('kokoelmat/saannot.json')).alkiot.map((a) => [a.id, a]));
   assert.deepEqual(saannot.get('PIENI_AARRE_ARVO').arvo, tokens.PIENI_AARRE_ARVO);
   assert.deepEqual(saannot.get('ISO_AARRE_ARVO').arvo, tokens.ISO_AARRE_ARVO);
-  assert.equal(saannot.get('BOT_SKILL').arvo, ai.BOT_SKILL);
+  assert.ok(!saannot.has('BOT_SKILL') && !saannot.has('DUEL_PRIZE'), 'skeema 1.14: botti ja kaksintaistelu pois');
   assert.ok(saannot.has('FORM_WEIGHTS'), 'litteä sääntörakenne');
   assert.ok(!saannot.has('TOKEN_TYPES') && !saannot.has('ASKERS'), 'sisäkkäinen sisältö ei ole sääntö');
   const { AFRICA } = await import('../js/packs/africa.js');
@@ -494,6 +497,24 @@ test('skeema 1.13: kuvien mitat media.json:ssa', async () => {
   if (kypara) assert.deepEqual([kypara.leveys, kypara.korkeus], kuvanMitat(readFileSync(`${JUURI}/${kypara.arvo}`)));
   const png = Buffer.alloc(24); png.writeUInt32BE(0x89504e47, 0); png.writeUInt32BE(640, 16); png.writeUInt32BE(480, 20);
   assert.deepEqual(kuvanMitat(png), [640, 480]);
+});
+
+test('skeema 1.14: poistetut eivät ole paketissa eikä niihin viitata', async () => {
+  const { PAKETISTA_POISTETUT } = await import('../tools/vienti/lahteet.mjs');
+  const polut = [...tiedostot.keys()];
+  assert.ok(!polut.includes('kokoelmat/kaksintaistelut.json'));
+  assert.ok(!manifest.kokoelmat.some((k) => k.nimi === 'kaksintaistelut'));
+  assert.ok(!polut.includes('moduulit/js/ai.json'));
+  for (const m of PAKETISTA_POISTETUT) {
+    assert.ok(!polut.includes(`moduulit/${m.replace(/\.js$/, '.json')}`), m);
+    assert.ok(!manifest.moduulit.some((x) => x.moduuli === m), m);
+  }
+  const media = JSON.parse(tiedostot.get('media.json')).viitteet;
+  assert.ok(media.every((v) => v.esiintymat.every((e) => !PAKETISTA_POISTETUT.has(e.moduuli) && e.moduuli !== 'js/ai.js')));
+  const [laatat] = JSON.parse(tiedostot.get('kokoelmat/laatat.json')).alkiot;
+  assert.ok(!('robber' in laatat.data.types) && !('robber' in laatat.kuvat));
+  const kaikki = [...tiedostot.values()].join('');
+  assert.ok(!kaikki.includes('kokoelmat/kaksintaistelut'), 'ei viittausta poistettuun kokoelmaan');
 });
 
 test('skeema 1.9: offline-manifesti maittain (laatat, maasto, media, tavut)', async () => {
