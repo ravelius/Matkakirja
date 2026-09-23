@@ -531,37 +531,13 @@ export const AFRICA_KULTTUURI = {
         + 'kalliokuvien eläimet elivät täällä oikeasti.',
     },
   },
+  // Al Kufralla on kaupunkilehti (kulttuuri-kategoriat.js, 23.9.2026):
+  // litteät nostot siirtyivät lehden kanteen (keidas, vieraanvaraisuus
+  // ja tee yhdistettiin), joten tänne jää vain kulttuurivisa. Visan
+  // lähdejuttu on kannen nosto "Vihreä loppuu siihen, mihin vesi
+  // ylettyy". Vanha kuva "Kufra Oasis.jpg" jäi pois, koska se on vain
+  // 662 px leveä.
   alkufra: {
-    nostot: [
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Keidas hiekkameressä',
-        tiedosto: 'Kufra Oasis.jpg',
-        teksti: 'Al Kufran keitaat ovat vihreitä saaria keskellä maailman '
-          + 'karuinta hiekkaa — pohjavesi nousee täällä lähelle pintaa, ja '
-          + 'sen varassa kasvavat taatelitarhat ja pellot.',
-        selite: 'Kufran keidasta ilmasta: tumma palmuvyöhyke ja pellot '
-          + 'erottuvat hiekasta jyrkkärajaisena kuin piirretty. Raja '
-          + 'kulkee täsmälleen siinä, mihin vesi ylettyy.',
-        lahde: 'Wikimedia Commons (PD)',
-      },
-      {
-        tyyppi: 'teksti',
-        otsikko: 'Vieraanvaraisuuden laki',
-        teksti: 'Aavikolla vieraanvaraisuus ei ole kohteliaisuutta vaan '
-          + 'laki: matkalaiselle annetaan vettä, ruokaa ja yösija '
-          + 'kysymättä, sillä jokainen tietää olevansa itse joskus '
-          + 'matkalainen. Vieras on suojeluksessa kolme päivää.',
-      },
-      {
-        tyyppi: 'teksti',
-        otsikko: 'Vihreä tee hiilillä',
-        teksti: 'Beduiinien tee keitetään hiilloksella pienessä kannussa '
-          + 'vahvaksi ja makeaksi. Kolme lasillista kuuluu tapaan: '
-          + 'ensimmäinen on karvas kuin elämä, toinen makea kuin '
-          + 'rakkaus ja kolmas lempeä kuin kuolema, sanotaan.',
-      },
-    ],
     kysymys: {
       q: 'Minkä varassa Al Kufran keitaat kukoistavat keskellä aavikkoa?',
       options: ['Pohjaveden', 'Sadekauden', 'Joen', 'Meriveden'],

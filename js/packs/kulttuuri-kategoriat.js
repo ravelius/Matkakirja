@@ -39667,6 +39667,319 @@ export const KULTTUURI_KATEGORIAT = {
     },
   ],
   /*
+   * AL KUFRA (Opus 23.9.2026, paketti O7) — Afrikan laudan
+   * kaupunkilehti. Väitteet on luettu en-Wikipedian raakateksteistä
+   * 23.9.2026: "Kufra", "Kufra District", "Al Jawf, Libya",
+   * "Senussi", "Muhammad al-Mahdi as-Senussi", "Friedrich Gerhard
+   * Rohlfs", "Rosita Forbes", "Ahmed Hassanein", "Capture of Kufra",
+   * "Patrick Clayton", "Kufra Airport". Pohjana olivat myös
+   * africa-kulttuuri.js:n kolme litteää nostoa (keidas, vieraanvaraisuus,
+   * tee); ne siirtyivät kanteen, ja litteään tauluun jäi vain kysymys.
+   *
+   * SIVUJA ON KAKSI: kansi (keidas, vesi, ilmasto, tee) ja Historia.
+   * Kansi on pakollinen (tests/lehdet.test.mjs), ja Historialla on
+   * minitehtävä. Kulttuurivisa kysyy pohjavedestä, ja sen lähdejuttu on
+   * kannen ensimmäinen nosto; minitehtävä kysyy Kufran valasta eikä
+   * osu visaan.
+   *
+   * RAJAUS MAALEHTEEN: Libyan maalehti (maa-kategoriat.js LBY) kertoo
+   * jo Nubian pohjavesikerroksen iän ja Suuren keinojoen. Niitä ei
+   * toisteta; kannen ympyrät kertovat vain Kufran oman hankkeen.
+   *
+   * EI NYKYPOLITIIKKAA: artikkelin 2008–2026 osiot (siirtolaisreitti,
+   * vankila, sisällissodat, heimojen yhteenotot) jäävät kokonaan pois.
+   * Vuoden 1931 valloitus kerrotaan asiallisesti ilman julmuuksien
+   * yksityiskohtia.
+   *
+   * LÄHTEIDEN RISTIRIIDAT, ratkaistu näin:
+   *  - Senussien muutto Kufraan: "Kufra" ja "al-Mahdi" sanovat 1895,
+   *    "Senussi" 1894 → "1890-luvun puolivälissä".
+   *  - Vuotuinen sade: "Kufra" 1 mm, "Al Jawf" 2,5 mm → "millin tai
+   *    pari".
+   *  - Valan päivä: en-Wikipedia 1. maaliskuuta, Strasbourgin kivi
+   *    2. maaliskuuta → teksti sanoo "maaliskuun alussa", ja kuvan
+   *    selite kertoo kiveen hakatun päiväyksen.
+   *  - "Ensimmäinen eurooppalainen": Rohlfs ja Stecker 1879
+   *    (tiettävästi), Forbes 1921 ensimmäinen eurooppalainen nainen.
+   *    Forbes-artikkelin "vasta toinen eurooppalainen" jätettiin pois,
+   *    koska se ei sovi yhteen Steckerin kanssa.
+   *  - Nimen etymologia (kafir/kufr, tubujen nimet) on artikkelissa
+   *    kiistanalainen ja osin lähteetön, joten sitä ei käytetä.
+   *
+   * KUVAT haettiin Commonsin rajapinnasta 23.9.2026 (koko, lisenssi ja
+   * tekijä extmetadatasta) ja jokainen katsottiin silmin 900 px
+   * esikatseluna. Yksikään ei ole muualla pelissä. HYLÄTYT:
+   * "Kufra Oasis.jpg" (vain 662 px leveä; oli litteässä nostossa),
+   * "Kufra (aeroview).jpg", "AFR V2 D046 The Kufra oasis.jpg" ja
+   * "ISS-50 Al-Jawf Oasis in Eastern Libya.jpg" (jo matkakirjassa),
+   * "Libyan pivot irrigation 460142568 02e969004a o.jpg" (jo
+   * maalehdessä), Remelén retkikuva 45/51 (Société de Géographien leima
+   * keskellä taivasta, kohde Egyptissä), "ISS-43 Center pivot
+   * irrigation in the Libyan Desert.jpg" (paikkaa ei nimetä, ei
+   * todennettavasti Kufra), ISS010-E-5264, Apollo–Sojuz AST-16-1242 ja
+   * STS003-17-856 (haalistuneita tai violetteja filmiruutuja),
+   * "Tea set - Libya 2025.jpg" (kaupan hylly),
+   * "Graziani and Amedeo d'Aosta enter Kufra.jpg" (tuntematon tekijä
+   * mutta CC BY 3.0 -merkintä, epäselvä lisenssi).
+   * Hassaneinin kuvan toista miekkailijaa ei nimetä: nimi on
+   * tiedostonimessä ja painetussa kuvatekstissä eri asussa.
+   *
+   * KUVATON NOSTO: "Keidas, joka oli kartalla ennen kävijöitään".
+   * Commonsista ei löytynyt varhaista karttaa, jossa seutu olisi
+   * nimellä Berdoa, eikä muuta nostoon sopivaa kuvaa.
+   *
+   * EI ENNEN–NYT-PARIA, KANSIKUVIA EIKÄ AVAUSKUVIA: ne tehdään
+   * myöhemmällä täydennyskierroksella. Pari olisi valmiina
+   * africa-valokuvat.js:n alkufra-merkinnässä ("Kufra (aeroview).jpg"
+   * ja "ISS-50 Al-Jawf Oasis in Eastern Libya.jpg").
+   */
+  alkufra: [
+    {
+      id: 'kaupunki',
+      nimi: 'Al Kufra',
+      johdanto: 'Keitaiden rypäs Libyan kaakkoiskulmassa, satojen kilometrien '
+        + 'päässä rannikosta. Täällä vesi nousee maan alta, sadetta ei juuri '
+        + 'tule, ja vihreä vaihtuu hiekaksi kuin veitsellä leikaten.',
+      nostot: [
+        {
+          otsikko: 'Vihreä loppuu siihen, mihin vesi ylettyy',
+          teksti: 'Al Kufra ei ole yksi keidas vaan kokonainen allas: soikea '
+            + 'painanne, noin viisikymmentä kilometriä pitkä ja kaksikymmentä '
+            + 'leveä, jota kiertävät enintään sadan metrin korkuiset '
+            + 'kukkulat. Pohjalla on punaista mergeliä ja hiekkaa, ja '
+            + 'alimmissa kohdissa on suolajärviä tai niiden kuivia pohjia. '
+            + 'Suurin keidas on Al Jawf, palmujen ja puutarhojen täyttämä '
+            + 'kaistale altaan koillispäässä. Pienempiä ovat Buma, Buema ja '
+            + 'kauimmaisena Et-Tallab. Kaikki elävät samasta lähteestä: '
+            + 'pohjavedestä, joka nousee täällä lähelle maanpintaa.',
+          tiedosto: 'AFR V2 D049 Kufra oasis.jpg',
+          lyhyt: 'Reclus\'n kartta 1891: katkoviiva rajaa kasvillisuuden, ja Kufra on alhaalla nimellä Kebabo.',
+          selite: 'Élisée Reclus\'n maantieteen kartta vuodelta 1891: katkoviiva '
+            + 'rajaa kasvillisuuden, ja palmumerkit piirtyvät vain sen '
+            + 'sisäpuolelle. Kufran keitaat ovat kartan alalaidassa nimellä '
+            + 'Kebabo.',
+          lahde: 'Élisée Reclus, Wikimedia Commons (PD)',
+          wiki: 'Kufra',
+        },
+        {
+          otsikko: 'Ympyrät, jotka näkyvät avaruuteen',
+          teksti: 'Libya aloitti 1970-luvun alussa Kufrassa suuren hankkeen: '
+            + 'aavikosta piti tehdä peltoa. Vain parilla prosentilla Libyan '
+            + 'maa-alasta sataa niin paljon, että maata voi viljellä, joten '
+            + 'vesi pumpataan syvältä Nubian hiekkakiven '
+            + 'pohjavesikerroksesta. Se on seudun ainoa saatavilla oleva '
+            + 'vesi, eikä se uusiudu. Pellolle vesi jaetaan pitkällä '
+            + 'puomilla, joka kiertää keskipisteensä ympäri, ja niin syntyy '
+            + 'noin kilometrin levyinen ympyrä. Avaruusasemalta ympyrät '
+            + 'tunnistaa helposti. Liikapumppaus on näkynyt myös maan '
+            + 'pinnalla: joulukuuhun 2011 mennessä keitaan järvi oli kuivunut '
+            + 'kokonaan.',
+          tiedosto: 'Kufra SPOT 1301.jpg',
+          lyhyt: 'Kufra satelliitista 2002: kaupunki, kiitorata ja kastelupiirit hiekan keskellä.',
+          selite: 'Kufra SPOT-5-satelliitin kuvassa 2002: keskellä kaupunki ja '
+            + 'palmupuutarhat, oikealla kiitorata, oikeassa alakulmassa '
+            + 'pyöreät kastelupellot ja vasemmalla kuusikulmaisia peltoja.',
+          lahde: 'Cnes - Spot Image, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Kufra',
+        },
+        {
+          otsikko: 'Millin verran sadetta vuodessa',
+          teksti: 'Kufra on maailman kuivimpia paikkoja: sadetta kertyy vuodessa '
+            + 'vain millin tai pari. Aurinko paistaa lähes 3 700 tuntia '
+            + 'vuodessa, mikä on 84 prosenttia kaikesta mahdollisesta. Kesä-, '
+            + 'heinä- ja elokuussa päivän keskiylin on 38 asteen tienoilla, '
+            + 'mutta tammikuun öinä lämpötila laskee keskimäärin viiteen '
+            + 'asteeseen, joten päivän ja yön ero on suuri. Kesällä '
+            + 'ilmankosteus on vain 23 prosenttia, joulukuussa kaksi kertaa '
+            + 'niin paljon. Keväällä seudulla nousee hiekkamyrskyjä, jotka '
+            + 'voivat kestää neljästä kahdeksaan päivään.',
+          tiedosto: 'Kufra District, Libya (34446934481).jpg',
+          lyhyt: 'Kufran seutu satelliitista 2017: dyynimeri vasemmalla, Al Jawf kastelupiireineen oikealla.',
+          selite: 'Kufran seutu Landsat 8 -satelliitin kuvassa 2017: vasemmalla '
+            + 'hiekkameren aaltoilevat dyynit, keskellä tummia kallioita ja '
+            + 'oikealla Al Jawfin kaupunki kastelupiireineen.',
+          lahde: 'O.V.E.R.V.I.E.W., Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Kufra',
+        },
+        {
+          otsikko: 'Kolme lasillista hiillokselta',
+          teksti: 'Aavikolla vieraanvaraisuus ei ole kohteliaisuutta vaan laki. '
+            + 'Matkalaiselle annetaan vettä, ruokaa ja yösija kysymättä, '
+            + 'sillä jokainen tietää olevansa itse joskus matkalainen, ja '
+            + 'vieras on isäntänsä suojeluksessa kolme päivää. Vieraalle '
+            + 'keitetään teetä. Beduiinien tee valmistetaan hiilloksella '
+            + 'pienessä kannussa vahvaksi ja makeaksi, ja lasillisia juodaan '
+            + 'kolme. Sanotaan, että ensimmäinen on karvas kuin elämä, toinen '
+            + 'makea kuin rakkaus ja kolmas lempeä kuin kuolema.',
+          tiedosto: 'Traditional Libyan Tea Brewing Over Firewood.jpg',
+          lyhyt: 'Nokiset teekannut hiillosastioiden päällä palmukatoksen alla Libyassa.',
+          selite: 'Nokiset teekannut hiillosastioiden päällä palmukatoksen alla '
+            + 'Libyassa: etummainen kannu lämpenee suoraan hiilloksella, ja '
+            + 'toinen odottaa vuoroaan taempana.',
+          lahde: 'Mhmd.abdrzg, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kufra oli pitkään Saharan suljetuimpia paikkoja, ja sen tiet tunsi '
+        + 'vain harva. Tänne pyrki silti tutkimusmatkailijoita, uskonnollinen '
+        + 'veljeskunta ja kaksi armeijaa, ja jokainen jätti jälkensä.',
+      tehtava: {
+        kysymys: 'Minkä kaupungin katedraalin ylle Leclercin miehet vannoivat '
+          + 'Kufrassa nostavansa Ranskan lipun?',
+        vaihtoehdot: [
+          'Strasbourgin',
+          'Pariisin',
+          'Reimsin',
+          'Lyonin',
+        ],
+        oikea: 0,
+        fakta: 'Vala täyttyi 23. marraskuuta 1944, kun Leclercin johtama 2. '
+          + 'panssaridivisioona vapautti Strasbourgin ja lippu nostettiin '
+          + 'katedraalin torniin.',
+      },
+      nostot: [
+        {
+          otsikko: 'Keidas, joka oli kartalla ennen kävijöitään',
+          teksti: 'Kufrasta kirjoitettiin kauan ennen kuin yksikään '
+            + 'eurooppalainen pääsi perille. Arabimaantieteilijä al-Idrisi '
+            + 'kuvasi 1154 paikkaa, jonka tutkija Lewicki on tunnistanut '
+            + 'Kufraksi: se oli ollut kukoistava ja asuttu, mutta nyt '
+            + 'raunioina, kaivot kuivina ja karja villiintyneenä. 1400-luvun '
+            + 'lopulla Leo Africanus kertoi keitaasta berdoa-kansan maassa, '
+            + 'ja varhaiset eurooppalaiset kartat nimesivät koko seudun '
+            + 'Berdoaksi. Saksalainen Friedrich Hornemann kuuli 1798 Awjilan '
+            + 'keitaalla, että Febaboon, kuten keidasta silloin kutsuttiin, '
+            + 'oli sieltä kymmenen päivän matka.',
+          wiki: 'Kufra',
+        },
+        {
+          otsikko: '1874: dyynit, joita kamelit eivät jaksaneet',
+          teksti: 'Isoisän matkavuonna 1873 saksalainen Gerhard Rohlfs lähti '
+            + 'Libyan autiomaahan sadan kamelin ja yhdeksänkymmenen miehen '
+            + 'retkikunnalla Egyptin khedivin suojeluksessa. Retki osoitti, '
+            + 'ettei monille kartoille piirrettyä kuivaa jokiuomaa, Bahr '
+            + 'Bela-maa, ollut olemassakaan. Vuoden 1874 alussa Rohlfs yritti '
+            + 'Dakhlan keitaalta länteen kohti Kufraa. Helmikuussa '
+            + 'autiomaahan satoi rankasti, mikä on siellä harvinaista, ja '
+            + 'leiripaikka sai nimen Regenfeld, sadekenttä. Hiekkameren '
+            + 'pohjoisesta etelään kulkevat dyyniselänteet olivat kuitenkin '
+            + 'liikaa kuormatuille kameleille, ja retkikunta kääntyi Siwaan.',
+          tiedosto: 'ISS-31 Linear dunes in the Great Sand Sea in southwest Egypt.jpg',
+          lyhyt: 'Hiekkameren dyyniselänteet avaruudesta: juuri ne käänsivät Rohlfsin kamelit.',
+          selite: 'Hiekkameren pitkittäisdyynit avaruusasemalta 2012: selänteet '
+            + 'kulkevat pohjoisesta etelään, nousevat 20–30 metriä ja ovat '
+            + '1,5–2,5 kilometrin välein. Oikeassa yläkulmassa on tumma '
+            + 'kalliosaareke.',
+          lahde: 'NASA, Wikimedia Commons (PD)',
+          wiki: 'Friedrich Gerhard Rohlfs',
+        },
+        {
+          otsikko: '1879: perillä, mutta vain hetken',
+          teksti: 'Toisella yrityksellä Rohlfs tuli pohjoisesta. Saksan '
+            + 'Afrikka-seura lähetti hänet ja Anton Steckerin 1878 kohti '
+            + 'Wadain sulttaanikuntaa, ja matkalla he pääsivät tiettävästi '
+            + 'ensimmäisinä eurooppalaisina Kufraan. Rohlfs leiriytyi Bueman '
+            + 'keitaan pohjoispuolelle, ja paikka tunnetaan yhä nimellä '
+            + 'Garet-en-Nasrani, kristityn kenttä. Retkikuntaan kuitenkin '
+            + 'hyökättiin, eikä matka etelään jatkunut: miehet vetäytyivät '
+            + 'rannikolle ja saapuivat Benghaziin lokakuussa 1879. Rohlfs '
+            + 'kutsui keidasta nimellä Kebabo, ja hänen kirjansa Kufra '
+            + 'ilmestyi 1881.',
+          tiedosto: 'Übersichtskarte von G. Rohlfs\' Expedition in Tripolitanien, Barka und der Oasengruppe von Kufra, Dec. 1878 bis Oct. 1879.png',
+          lyhyt: 'Rohlfsin retken kartta 1880: Kufran keitaat ovat oikeassa alakulmassa.',
+          selite: 'Bruno Hassensteinin kartta Rohlfsin retkestä Petermanns '
+            + 'Geographische Mitteilungen -lehdessä 1880. Reitti on piirretty '
+            + 'punaisella, ja Kufran keitaat ovat kartan oikeassa '
+            + 'alakulmassa.',
+          lahde: 'Bruno Hassenstein, Wikimedia Commons (PD)',
+          wiki: 'Friedrich Gerhard Rohlfs',
+        },
+        {
+          otsikko: 'Kruunu keitaan yllä',
+          teksti: 'Senussi-veljeskunta on sufilainen uskonnollinen liike, jonka '
+            + 'Muhammad ibn Ali as-Senussi perusti Mekassa 1837. Sen jäsenten '
+            + 'piti elää omalla työllään eikä almuilla, ja piristeet olivat '
+            + 'kiellettyjä. Veljeskunta asettui ensin Kyrenaikan vuorille ja '
+            + 'sitten Jaghbubin keitaalle, ja 1890-luvun puolivälissä '
+            + 'perustajan poika Muhammad al-Mahdi siirsi sen keskuksen vielä '
+            + 'kauemmas, Kufraan. Hän perusti altaan pohjoislaidalle kylän '
+            + 'nimeltä El Tag, kruunu, ja siitä tuli veljeskunnan pyhä '
+            + 'paikka. Kufrasta tuli karavaanien solmukohta, jonne tultiin '
+            + 'Sahelista ja Maghrebista.',
+          tiedosto: 'Kufra 1930-2.jpg',
+          lyhyt: 'Kufran katu 1930: kaarioviset savitalot, kaapuihin pukeutuneita ihmisiä ja kameli levossa.',
+          selite: 'Kufran katu vuonna 1930: kaarioviset savitalot reunustavat '
+            + 'leveää hiekkakatua, ja vasemmalla etualalla lepää kameli. Kuva '
+            + 'on otettu vuotta ennen italialaisten tuloa.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
+          wiki: 'Senussi',
+        },
+        {
+          otsikko: 'Sitt Khadija, joka oli englantilainen',
+          teksti: 'Senussien aikaan eurooppalaiset eivät päässeet Kufraan. Vuonna '
+            + '1921 sinne pääsi englantilainen matkakirjailija Rosita Forbes, '
+            + 'joka oli pukeutunut arabinaiseksi ja kulki nimellä Sitt '
+            + 'Khadija. Hän oli ensimmäinen eurooppalainen nainen, joka näki '
+            + 'keitaan, ja sen ajan harvoja eurooppalaisia ylipäätään. Retken '
+            + 'järjesti egyptiläinen Ahmed Hassanein. Forbesin kirja The '
+            + 'Secret of the Sahara: Kufara ilmestyi 1921, mutta arvostelijat '
+            + 'ja Hassaneinin kollegat moittivat sitä: Oxfordissa koulutettu '
+            + 'diplomaatti näytti kirjassa pelkältä sivuhenkilöltä.',
+          tiedosto: 'The secret of the Sahara BHL25263856.jpg',
+          lyhyt: 'Rosita Forbes beduiinipuvussa omassa kirjassaan 1921.',
+          selite: 'Rosita Forbes beduiinipuvussa omassa kirjassaan 1921: '
+            + 'ruudullinen huivi on vedetty pään yli, ja taustalla on kuormia '
+            + 'ja valkoiseen pukeutunut mies.',
+          lahde: 'Rosita Forbes, Wikimedia Commons (PD)',
+          wiki: 'Rosita Forbes',
+        },
+        {
+          otsikko: 'Miekkailija, joka korjasi kartan',
+          teksti: 'Ahmed Hassanein palasi autiomaahan joulukuussa 1922, nyt '
+            + 'johtamaan omaa tieteellistä retkeään. Hän lähti Sallumista '
+            + 'rannikolta, mittasi suuntia ja etäisyyksiä, valokuvasi ja '
+            + 'keräsi näytteitä. Hän korjasi Kufran sijainnin kartoilla ja '
+            + 'jatkoi sieltä Uweinatin ja Arkenun vuorille, joiden '
+            + 'vesipaikkoja eurooppalaiset kartat eivät tunteneet. Niiden '
+            + 'kautta avautui uusia reittejä Kufrasta etelään. Kuninkaallinen '
+            + 'maantieteellinen seura palkitsi hänet mitalilla 1924. Samoihin '
+            + 'aikoihin Hassanein edusti Egyptiä miekkailussa kaksissa '
+            + 'olympialaisissa, 1920 ja 1924.',
+          tiedosto: 'Prof. F. Darriculat and Ahmed Hassanein, photo by Kadel & Herbert.jpg',
+          lyhyt: 'Ahmed Hassanein (oikealla) miekkailusalissa olympiavuonna 1924.',
+          selite: 'Ahmed Hassanein (oikealla) harjoitussalissa 1924 toisen '
+            + 'Egyptin olympiamiekkailijan kanssa. Amerikkalaisen lehtikuvan '
+            + 'tekstin mukaan Hassaneinia pidettiin yhtenä maailman parhaista '
+            + 'miekkailijoista.',
+          lahde: 'Kadel & Herbert, Wikimedia Commons (PD)',
+          wiki: 'Ahmed Hassanein',
+        },
+        {
+          otsikko: 'Vala, joka vannottiin keitaalla',
+          teksti: 'Italia valloitti Kufran 1931: kenraali Rodolfo Graziani toi '
+            + 'paikalle noin 3 000 sotilasta ja parikymmentä pommikonetta, ja '
+            + 'moni asukas pakeni itään Egyptiin. Italialaiset rakensivat '
+            + 'Buman keitaalle lentokentän ja El Tagiin linnakkeen, joka '
+            + 'hallitsee kaupunkikuvaa yhä. Vuonna 1941 vapaan Ranskan joukot '
+            + 'tulivat Tšadista ja piirittivät Kufraa Leclercin johdolla, '
+            + 'kunnes italialaisten varuskunta antautui maaliskuun alussa. '
+            + 'Silloin Leclerc ja hänen miehensä vannoivat, etteivät laske '
+            + 'aseitaan ennen kuin Ranskan lippu liehuu Strasbourgin '
+            + 'katedraalin yllä.',
+          tiedosto: 'Serment de Koufra 2 mars 1941.JPG',
+          lyhyt: 'Kufran vala kiveen hakattuna Strasbourgissa, päiväys 2. maaliskuuta 1941.',
+          selite: 'Kufran vala kaiverrettuna marsalkka Leclercin muistomerkkiin '
+            + 'Strasbourgissa. Kiveen hakattu päiväys on 2. maaliskuuta 1941.',
+          lahde: 'Claude TRUONG-NGOC, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Capture of Kufra',
+        },
+      ],
+    },
+  ],
+  /*
    * TEKSTIREMONTTI 20.8.2026, ERÄ R9a (Raamattu, "TEKSTIEN PAINOPISTE"):
    * neljän Uralin ja Siperian kaupungin — Jekaterinburg, Novosibirsk,
    * Irkutsk ja Vladivostok — kaikki kuvatekstit (kansikuvat,
