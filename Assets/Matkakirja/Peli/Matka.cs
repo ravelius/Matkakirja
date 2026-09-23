@@ -1,22 +1,27 @@
 // MATKA: matkustuksen tilakone, suora portti verkkopelin js/game.js
 // Game-luokasta (beginTurn, endTurn, travelModes, busDestinations,
 // airportDestinations, actionTravel, actionCancelTravel, actionRoll,
-// actionMove, actionBus, actionFly, needsAid, rollDie). Kultainen jälki
-// Kultaiset/matkajalki.json (Kultaiset/tee-matkajalki.mjs) vaatii, että
-// sama käsikirjoitus tuottaa täsmälleen saman tilan joka teon jälkeen.
+// actionMove, actionBus, actionFly, needsAid, rollDie) sekä erästä 3
+// laattojen jako konstruktorissa (enterWorld), revealToken, lukitseAarre:n
+// laattaosa, noteRecord ja duelArmed-lippu. Kultaiset jäljet
+// Kultaiset/matkajalki.json (matkustus) ja Kultaiset/pelijalki.json (koko
+// peli laattoineen, Kultaiset/tee-pelijalki.mjs) vaativat, että sama
+// käsikirjoitus tuottaa täsmälleen saman tilan joka teon jälkeen.
 //
-// TÄMÄN ERÄN LAAJUUS: yksinpeli vaellustilassa (roaming), matkustus,
-// saapuminen, raha ja aika. Laatat, kysymykset, kaksintaistelut, XP ja
-// pulmat puuttuvat; niille on koukut (erä 2: Peli/Kysely.cs asettaa kaksi
-// ensimmäistä ja Peli/Kokemus.cs kuuntelee Saapui-tapahtumaa):
+// LAAJUUS: yksinpeli vaellustilassa (roaming). Matka omistaa pelitilan,
+// satunnaisuuden, laattamaailman (Tila.Laatat) ja Kokemuksen (tietäjäpisteet
+// saapumisista ja löydöistä). Kysely (Peli/Kysely.cs) kytkeytyy koukkuihin:
 //   TehtavaTarjolla  — web tehtavaTarjolla: tuo 'stay'-tavan (Pysy)
 //   Tutki            — web actionQuiz: mitä Pysy tekee
-//   Tavoitteet       — web needsAid: laattakaupungit (null = kaikki, kuten
-//                      alussa, kun jokaisessa kaupungissa on laatta)
+//   Tavoitteet       — web needsAid: ohitus; oletus = kääntämättömät laatat
+//                      (ilman laattamaailmaa kaikki kaupungit)
 //   PysaytaSaapuessa — web offerQuiz: tosi → vuoro ei pääty saapumiseen
-//                      (seuraava erä asettaa Vaihe.Kysymys)
 //   Saapui           — web visitCity: XP, arrivalFact ja lehti kuuntelevat tätä
-// checkWin puuttuu: vaelluksessa se on aina epätosi.
+// Laattojen koukut (null = ei toteutettu):
+//   Kaksintaistelu      — web beginDuel: ryöstäjän jälkeen, tosi = alkoi
+//   LinssiKylkiaisena   — web linssiAarteenKylkiaisena (passi ei kuulu tänne)
+// Puuttuu: checkWin (vaelluksessa aina epätosi), mannerlennot
+// (actionMannerLento), porttikaupungit ja muut laudat (worlds).
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,6 +43,16 @@ namespace Matkakirja.Peli
         public IReittiverkko Verkko { get; }
         public Satunnainen Satunnainen { get; }
         public Pelitila Tila { get; }
+        /// <summary>Tietäjäpisteet (web awardXp): saapumiset, löydöt, kysymykset.</summary>
+        public Kokemus Kokemus { get; }
+        /// <summary>Laudan aarrelaatat (Tila.Laatat). null = peli ilman laattoja.</summary>
+        public Laattamaailma Laatat => Tila.Laatat;
+        /// <summary>Vaellustila (web roaming): yksinpeli. Pääaarre maksaa STAR_PRIZE.</summary>
+        public bool Vaellus => Tila.Pelaajat.Count == 1;
+        /// <summary>Viimeisin tavallinen löytö (web viimeAarre): istunnon viesti, ei tallenneta.</summary>
+        public Loyto ViimeLoyto;
+        /// <summary>Pöllön paljastus odottaa näyttämistä (web polloPaljastus). Ei tallenneta.</summary>
+        public bool PolloPaljastus;
 
         // --- koukut myöhemmille erille ---------------------------------------
 
@@ -45,14 +60,24 @@ namespace Matkakirja.Peli
         public Func<Pelaaja, bool> TehtavaTarjolla;
         /// <summary>Pysy-tavan teko (web actionQuiz). Ilman koukkua Pysy ei ole käytettävissä.</summary>
         public Func<Pelaaja, TekoTulos> Tutki;
-        /// <summary>Pankkiavun tavoitekaupungit (web tokens). null = kaikki kaupungit.</summary>
+        /// <summary>Pankkiavun tavoitekaupungit, ohitus. null = kääntämättömät laatat (web tokens.keys()), ilman laattamaailmaa kaikki kaupungit.</summary>
         public Func<IEnumerable<string>> Tavoitteet;
         /// <summary>Saapumispysähdys (web offerQuiz). Tosi → vuoro ei pääty.</summary>
         public Func<Pelaaja, bool> PysaytaSaapuessa;
+        /// <summary>
+        /// Web beginDuel: ryöstäjä löytyi ja kysymys suljettiin. Tosi = kaksintaistelu
+        /// alkoi (vuoro ei pääty). null tai epätosi → vuoro päättyy tavalliseen tapaan.
+        /// </summary>
+        public Func<Pelaaja, bool> Kaksintaistelu;
+        /// <summary>Web linssiAarteenKylkiaisena(pelaaja, kaupunki, tyyppi): tavallisen löydön jälkeen.</summary>
+        public Action<Pelaaja, string, string> LinssiKylkiaisena;
+
+        /// <summary>Laatta käännettiin (pelaaja, löytö). Kirjanpito on jo tehty.</summary>
+        public event Action<Pelaaja, Loyto> Loysi;
 
         /// <summary>Pelaaja saapui kaupunkiin (pelaaja, kaupunki, ensikäynti). Web visitCity.</summary>
         public event Action<Pelaaja, string, bool> Saapui;
-        /// <summary>Näytölle animoitava tapahtuma (web emit): laji 'fare', 'flight', 'aid', 'stuck'.</summary>
+        /// <summary>Näytölle animoitava tapahtuma (web emit): 'fare', 'flight', 'aid', 'stuck', 'treasure', 'robber'.</summary>
         public event Action<string, string> Tapahtui;
 
         public Matka(IReittiverkko verkko, Satunnainen satunnainen, Pelitila tila = null)
@@ -60,7 +85,13 @@ namespace Matkakirja.Peli
             Verkko = verkko ?? throw new ArgumentNullException(nameof(verkko));
             Satunnainen = satunnainen ?? throw new ArgumentNullException(nameof(satunnainen));
             Tila = tila ?? new Pelitila();
+            Kokemus = new Kokemus(Tila);
+            Kokemus.Kytke(this);
         }
+
+        /// <summary>Laudan kaupungit järjestyksessä (web board.cities; laattojen jako).</summary>
+        public static IReadOnlyList<Kaupunki> KaupunkiLista(IReittiverkko verkko) =>
+            (verkko as Reittiverkko)?.KaupunkiLista ?? verkko.Kaupungit.Values.ToList();
 
         /// <summary>
         /// Uusi yksinpeli annetusta aloituskaupungista (web new Game, kun
@@ -74,8 +105,39 @@ namespace Matkakirja.Peli
             return m;
         }
 
+        /// <summary>UusiPeli aarrelaatoin (web new Game): ks. Luo(…, Laattamaarat).</summary>
+        public static Matka UusiPeli(IReittiverkko verkko, Satunnainen satunnainen, string nimi, string aloitus,
+            Laattamaarat laatat, bool polloAarteena = false)
+        {
+            var m = Luo(verkko, satunnainen, nimi, aloitus, laatat, polloAarteena);
+            m.AloitaVuoro();
+            return m;
+        }
+
         /// <summary>
-        /// Kuten UusiPeli, mutta ensimmäinen vuoro jää aloittamatta: kutsuja
+        /// Luo aarrelaatoin kuten webin konstruktori: laatat jaetaan HETI
+        /// (enterWorld: pinon sekoitus + jaaLaatat, maailmankartalla 279
+        /// arvontaa) ennen pelaajia ja ensimmäistä vuoroa, samalla
+        /// satunnaislähteellä. <paramref name="laatat"/> = paketin
+        /// kokoelmat/laatat.json (Laattamaarat.Lue). Kutsuja kytkee koukut ja
+        /// kutsuu AloitaVuoro().
+        /// </summary>
+        public static Matka Luo(IReittiverkko verkko, Satunnainen satunnainen, string nimi, string aloitus,
+            Laattamaarat laatat, bool polloAarteena = false)
+        {
+            if (laatat == null) throw new ArgumentNullException(nameof(laatat));
+            if (!verkko.Kaupungit.ContainsKey(aloitus)) throw new ArgumentException($"Tuntematon kaupunki {aloitus}");
+            var maailma = Laattamaailma.Jaa(KaupunkiLista(verkko), laatat, satunnainen);
+            var m = Luo(verkko, satunnainen, nimi, aloitus);
+            m.Tila.Laatat = maailma;
+            m.Tila.PolloAarteena = polloAarteena;
+            m.Tila.PolloLoydetty = !polloAarteena;
+            return m;
+        }
+
+        /// <summary>
+        /// Peli ILMAN laattoja (erän 1 muoto, pienet testiverkot). Kuten
+        /// UusiPeli, mutta ensimmäinen vuoro jää aloittamatta: kutsuja
         /// kytkee ensin koukut (Kysely, laatat), koska webin konstruktorin
         /// beginTurn laskee automaattivalinnan jo niiden kanssa. Sen jälkeen
         /// kutsutaan AloitaVuoro().
@@ -99,11 +161,31 @@ namespace Matkakirja.Peli
         /// samaan kohtaan, siirrot lasketaan nopasta uudelleen ja
         /// jatkolippu johdetaan asemasta.
         /// </summary>
-        public static Matka Lataa(IReittiverkko verkko, string json)
+        public static Matka Lataa(IReittiverkko verkko, string json) => Lataa(verkko, json, null);
+
+        /// <summary>
+        /// Lataus, joka antaa vanhalle tallennukselle (versiot 1–2, erät 1–2:
+        /// peli ilman laattoja) aarrelaatat. PERUSTELU: laatat ovat pelin
+        /// ydin (Aarnin luettelo); tyhjä maailma jättäisi vanhan pelin ilman
+        /// yhtään aarretta ja tehtäviksi vain kertatutkimiset. Jako tehdään
+        /// pelin omalla satunnaislähteellä tallennuksen kohdasta, joten sama
+        /// tallennus antaa aina saman jaon, ja seuraava tallennus on versio 3
+        /// laattoineen. Jo lukitut kaupungit (Kyselytila.AarreLukot) menettävät
+        /// laattansa kuten lukitseAarre (ainutkertainen aarre siirtyy).
+        /// <paramref name="laatat"/> = null: vanha peli jatkuu ilman laattoja.
+        /// Versio 3 käyttää aina tallennettua laattamaailmaa.
+        /// </summary>
+        public static Matka Lataa(IReittiverkko verkko, string json, Laattamaarat laatat)
         {
-            var tila = Pelitila.FromJson(json);
+            var tila = Pelitila.FromJson(json, KaupunkiLista(verkko));
             var rng = new Satunnainen((long)tila.Siemen);
             rng.Kelaa(tila.Arvontoja);
+            if (tila.Laatat == null && tila.LuettuVersio < 3 && laatat != null)
+            {
+                tila.Laatat = Laattamaailma.Jaa(KaupunkiLista(verkko), laatat, rng);
+                foreach (var lukko in tila.Kysely.AarreLukot.OrderBy(k => k, StringComparer.Ordinal))
+                    tila.Laatat.PoistaLukittu(lukko, rng);
+            }
             var m = new Matka(verkko, rng, tila);
             tila.JatkaAutomaattisesti = tila.Vaihe == Vaihe.Heitto && !tila.Pelaaja.Sijainti.Kaupungissa;
             if (tila.Vaihe == Vaihe.Siirto && tila.Noppa.HasValue)
@@ -253,12 +335,14 @@ namespace Matkakirja.Peli
 
         /// <summary>
         /// Web needsAid: ei yhtään kulkutapaa, tai mikään tavoite ei ole
-        /// rahoilla saavutettavissa. Vaellustilassa tavoitteet ovat laatat.
+        /// rahoilla saavutettavissa. Vaellustilassa tavoitteet ovat laatat
+        /// (tokens.keys()); kun kaikki on käännetty, apua ei tule.
         /// </summary>
         public bool TarvitseeApua(Pelaaja p)
         {
             if (!Kulkutavat(p).Any(t => t != Kulkutapa.Pysy)) return true;
-            var tavoitteet = new HashSet<string>(Tavoitteet?.Invoke() ?? Verkko.Kaupungit.Keys);
+            var tavoitteet = new HashSet<string>(Tavoitteet?.Invoke()
+                ?? (Laatat != null ? Laatat.Laatat.Keys : Verkko.Kaupungit.Keys));
             if (tavoitteet.Count == 0) return false;
             // Web reachableCities(board, pos, money): sama BFS myös reitin varrelta.
             var saavutettavat = Verkko.Saavutettavat(p.Sijainti, p.Raha);
@@ -402,6 +486,107 @@ namespace Matkakirja.Peli
             Tapahtui?.Invoke("flight", $"Lento kaupunkiin {Verkko.Kaupungit[kohde].Nimi}");
             SaapumisenJalkeen(true);
             return TekoTulos.Onnistui();
+        }
+
+        // --- aarrelaatat (web revealToken, lukitseAarre, noteRecord) ----------
+
+        /// <summary>Web tokens.has(kaupunki): kääntämätön laatta.</summary>
+        public bool LaattaTassa(string kaupunki) =>
+            kaupunki != null && Laatat != null && Laatat.Laatat.ContainsKey(kaupunki);
+
+        /// <summary>Web tokenHere: kaupunki, jossa pelaaja seisoo, jos siinä on laatta; muuten null.</summary>
+        public string LaattaKaupungissa(Pelaaja p = null)
+        {
+            var k = KaupunkiJossa(p ?? P);
+            return LaattaTassa(k) ? k : null;
+        }
+
+        /// <summary>
+        /// Web revealToken: kääntää laatan vuorossa olevalle pelaajalle ja
+        /// kirjaa löydön (finds, findManner, findMaa), rahat, tähdet,
+        /// tietäjäpisteet (Kokemus.Anna) ja ennätyksen. Ryöstäjä nostaa
+        /// kaksintaistelun lipun (Tila.KaksintaisteluOdottaa). Pöllö
+        /// (Tila.PolloAarteena, oletus pois) korvaa ensimmäisen laatan.
+        /// Palauttaa null, jos kaupungissa ei ole laattaa.
+        /// </summary>
+        public Loyto KaannaLaatta(string kaupunki)
+        {
+            if (Laatat == null) return null;
+            var p = P;
+            bool pollo = Tila.PolloAarteena && !Tila.PolloLoydetty && !p.Botti;
+            var l = Laatat.Kaanna(kaupunki, Satunnainen, Vaellus, pollo);
+            if (l == null) return null;
+            p.Loydot.Add(l.Tyyppi);
+            p.LoytoMantereet.Add(l.Manner);
+            p.LoytoMaat.Add(l.Maa);
+            if (l.Pollo)
+            {
+                Tila.PolloLoydetty = true;
+                PolloPaljastus = true;
+                Loysi?.Invoke(p, l);
+                return l;
+            }
+            ViimeLoyto = l;
+            p.Raha += l.RahaLisays;
+            p.Tahdet += l.TahtiLisays;
+            if (l.TpLisays != 0) Kokemus.Anna(p, l.TpLisays);
+            if (l.Ennatys) KirjaaEnnatys(p);
+            if (l.Kaksintaistelu)
+            {
+                Tila.KaksintaisteluOdottaa = true;
+                Tapahtui?.Invoke("robber", "Ryöstäjä!");
+            }
+            else
+            {
+                Tapahtui?.Invoke("treasure", $"+{l.RahaLisays} puntaa");
+                if (l.Tyyppi != Laattatyypit.Paaaarre) LinssiKylkiaisena?.Invoke(p, kaupunki, l.Tyyppi);
+            }
+            Loysi?.Invoke(p, l);
+            return l;
+        }
+
+        /// <summary>
+        /// Web lukitseAarre:n laattaosa: laatta poistuu kääntämättä, ja pääaarre
+        /// tai mantereen aarre siirtyy saman mantereen toiseen laattaan.
+        /// Lukkojoukko on Kyselytila.AarreLukot (Kysely.LukitseAarre).
+        /// Palauttaa poistetun tyypin tai null.
+        /// </summary>
+        public string LukitseLaatta(string kaupunki) => Laatat?.PoistaLukittu(kaupunki, Satunnainen);
+
+        /// <summary>
+        /// Web noteRecord: kerran pelissä ensimmäisen pääaarteen löytyessä;
+        /// jos päivä ≤ RECORD_DAYS, +XP_RECORD ja merkintä. Palauttaa
+        /// rikkomispäivän tai null.
+        /// </summary>
+        public int? KirjaaEnnatys(Pelaaja p = null)
+        {
+            if (Tila.EnnatysKirjattu) return null;
+            Tila.EnnatysKirjattu = true;
+            int paiva = Tila.Paiva();
+            if (paiva > LaattaVakiot.EnnatysPaivat) return null;
+            Kokemus.Anna(p ?? P, LaattaVakiot.TpEnnatys);
+            Tila.EnnatysPaiva = paiva;
+            return paiva;
+        }
+
+        /// <summary>
+        /// Web closeQuiz/avaaAarreSahkeella: jos ryöstäjä odottaa, lippu laskee
+        /// ja Kaksintaistelu-koukku saa pelin. Tosi = kaksintaistelu alkoi
+        /// (vuoro ei pääty). Ilman koukkua ryöstäjä ei tee mitään.
+        /// </summary>
+        public bool KaksintaisteluAlkaa()
+        {
+            if (!Tila.KaksintaisteluOdottaa) return false;
+            Tila.KaksintaisteluOdottaa = false;
+            return Kaksintaistelu != null && Kaksintaistelu(P);
+        }
+
+        /// <summary>Web takePolloPaljastus: palauttaa ja nollaa lipun.</summary>
+        public bool OtaPolloPaljastus()
+        {
+            bool odottaa = PolloPaljastus;
+            PolloPaljastus = false;
+            return odottaa;
         }
     }
 }

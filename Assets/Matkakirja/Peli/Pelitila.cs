@@ -7,7 +7,11 @@
 // raha ja aika. Erä 2 (tallennusversio 2): tietäjäpisteet ja tietoprosentin
 // laskurit pelaajalle sekä kysymysmoottorin tila (Kyselytila: käytetyt
 // kysymykset, tutkitut, kohtaamiset, aarrelukot, avoin kysymys).
-// Laatat, kaksintaistelut ja pulmat tulevat omiin kenttiinsä.
+// Erä 3 (tallennusversio 3): aarrelaatat (Laattamaailma: laatat, käännetyt,
+// löydetyt pääaarteet Map-järjestyksessä), pelaajan tähdet ja löydöt
+// (finds, findManner, findMaa), kaksintaistelun lippu (duelArmed),
+// ennätys (recordNoted, recordMark.day) ja pöllöliput.
+// Versiot 1 ja 2 latautuvat; niissä ei ole laattoja (ks. Matka.Lataa).
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -35,12 +39,20 @@ namespace Matkakirja.Peli
         public Vaikeustaso Taso = Vaikeustaso.Perus;
         /// <summary>Tekoälypelaaja (web isBot): ei kohtaamisia eikä tasokuplia.</summary>
         public bool Botti;
+        /// <summary>Kannetut unohdetut aarteet (web stars).</summary>
+        public int Tahdet;
+        /// <summary>Käännetyt laatat tyyppeinä (web finds; pöllön korvaama "empty").</summary>
+        public List<string> Loydot = new List<string>();
+        /// <summary>Löydön manner samoin indeksein (web findManner; null = ei merkitty).</summary>
+        public List<string> LoytoMantereet = new List<string>();
+        /// <summary>Löydön maa (ISO3) samoin indeksein (web findMaa).</summary>
+        public List<string> LoytoMaat = new List<string>();
     }
 
     /// <summary>Pelin tila (web Game): matkan kentät ja kello.</summary>
     public sealed class Pelitila
     {
-        public const int TallennusVersio = 2;
+        public const int TallennusVersio = 3;
 
         public List<Pelaaja> Pelaajat = new List<Pelaaja>();
         public int Vuorossa;                                   // web current
@@ -69,6 +81,21 @@ namespace Matkakirja.Peli
         /// <summary>Kysymysmoottorin tila (Peli/Kysely.cs).</summary>
         public Kyselytila Kysely = new Kyselytila();
 
+        /// <summary>Laudan aarrelaatat (web world.tokens/revealed/starsFound). null = peli ilman laattoja.</summary>
+        public Laattamaailma Laatat;
+        /// <summary>Ryöstäjä löytyi: kaksintaistelu alkaa kysymyksen sulkeutuessa (web duelArmed).</summary>
+        public bool KaksintaisteluOdottaa;
+        /// <summary>Isoisän ennätys on jo kirjattu (web recordNoted).</summary>
+        public bool EnnatysKirjattu;
+        /// <summary>Ennätyksen rikkomispäivä (web recordMark.day), null jos ei rikottu.</summary>
+        public int? EnnatysPaiva;
+        /// <summary>Pöllö aarteena -mekaniikka (web polloAarteena; oletus false kuten POLLO_ON_AARRE).</summary>
+        public bool PolloAarteena;
+        /// <summary>Pöllö on jo löytynyt (web polloLoydetty = !polloAarteena alussa).</summary>
+        public bool PolloLoydetty = true;
+        /// <summary>Luetun tallennuksen versio (0 = ei luettu). Ei tallenneta.</summary>
+        public int LuettuVersio;
+
         // --- aika (web elapsedHours, dayCount, timeOfDay) -------------------
 
         /// <summary>Kuluneet tunnit matkan alusta; ensimmäinen vuoro on hetki nolla.</summary>
@@ -93,7 +120,10 @@ namespace Matkakirja.Peli
         /// Tila JSON-tekstinä. Kentät ovat portin omia (ei webin
         /// toJSON-muoto): versio, siemen, arvontoja, vuorossa, vaihe,
         /// vuoroLaskuri, noppa, kulkutapa, autoMatka, odottavaMaksu, pelaajat
-        /// (myös xp, kysytty, oikein, taso, botti) ja kysely (Kyselytila).
+        /// (myös xp, kysytty, oikein, taso, botti, tahdet, loydot,
+        /// loytoMantereet, loytoMaat), kysely (Kyselytila) ja versiosta 3
+        /// laattamaailma, kaksintaistelu, ennatys, ennatysPaiva, polloAarteena,
+        /// polloLoydetty.
         /// Sijainti tallennetaan avaimena (web posKey).
         /// </summary>
         public string ToJson()
@@ -129,11 +159,22 @@ namespace Matkakirja.Peli
                 Kentta(sb, "oikein", p.Oikein.ToString(CultureInfo.InvariantCulture));
                 Kentta(sb, "taso", Teksti(p.Taso.ToString()));
                 Kentta(sb, "botti", p.Botti ? "true" : "false");
+                Kentta(sb, "tahdet", p.Tahdet.ToString(CultureInfo.InvariantCulture));
+                Kentta(sb, "loydot", "[" + string.Join(",", p.Loydot.Select(Teksti)) + "]");
+                Kentta(sb, "loytoMantereet", "[" + string.Join(",", p.LoytoMantereet.Select(Teksti)) + "]");
+                Kentta(sb, "loytoMaat", "[" + string.Join(",", p.LoytoMaat.Select(Teksti)) + "]");
                 sb.Append('}');
             }
             sb.Append(']');
             sb.Append(",\"kysely\":");
             Kysely.Kirjoita(sb);
+            sb.Append(",\"laattamaailma\":");
+            if (Laatat == null) sb.Append("null"); else Laatat.Kirjoita(sb);
+            Kentta(sb, "kaksintaistelu", KaksintaisteluOdottaa ? "true" : "false");
+            Kentta(sb, "ennatys", EnnatysKirjattu ? "true" : "false");
+            Kentta(sb, "ennatysPaiva", EnnatysPaiva.HasValue ? EnnatysPaiva.Value.ToString(CultureInfo.InvariantCulture) : "null");
+            Kentta(sb, "polloAarteena", PolloAarteena ? "true" : "false");
+            Kentta(sb, "polloLoydetty", PolloLoydetty ? "true" : "false");
             sb.Append('}');
             return sb.ToString();
         }
@@ -141,15 +182,19 @@ namespace Matkakirja.Peli
         /// <summary>
         /// Lukee ToJsonin tekstin. Siirrot ja JatkaAutomaattisesti johdetaan
         /// vasta Matkan latauksessa (web fromJSON), koska ne tarvitsevat verkon.
+        /// <paramref name="kaupungit"/> = laudan kaupungit järjestyksessä
+        /// laattamaailman mantereita varten (Matka.Lataa antaa ne verkosta).
         /// </summary>
-        public static Pelitila FromJson(string json)
+        public static Pelitila FromJson(string json, IReadOnlyList<Kaupunki> kaupungit = null)
         {
             var o = MiniJson.Objekti(MiniJson.Jasenna(json));
             var versio = (int)(MiniJson.Luku(o, "versio") ?? 0);
             // Versio 1 (erä 1) luetaan oletuksin: ei pisteitä eikä kysymystilaa.
-            if (versio != TallennusVersio && versio != 1) throw new FormatException($"tuntematon tallennusversio {versio}");
+            // Versiot 1–2: ei laattoja (Laatat = null); Matka.Lataa voi jakaa ne.
+            if (versio < 1 || versio > TallennusVersio) throw new FormatException($"tuntematon tallennusversio {versio}");
             var t = new Pelitila
             {
+                LuettuVersio = versio,
                 Siemen = (uint)(MiniJson.Luku(o, "siemen") ?? 0),
                 Arvontoja = (long)(MiniJson.Luku(o, "arvontoja") ?? 0),
                 Vuorossa = (int)(MiniJson.Luku(o, "vuorossa") ?? 0),
@@ -177,6 +222,10 @@ namespace Matkakirja.Peli
                     Taso = MiniJson.Teksti(pd, "taso") is string taso
                         ? (Vaikeustaso)Enum.Parse(typeof(Vaikeustaso), taso) : Vaikeustaso.Perus,
                     Botti = MiniJson.Totuus(pd, "botti"),
+                    Tahdet = (int)(MiniJson.Luku(pd, "tahdet") ?? 0),
+                    Loydot = Tekstit(pd, "loydot"),
+                    LoytoMantereet = Tekstit(pd, "loytoMantereet"),
+                    LoytoMaat = Tekstit(pd, "loytoMaat"),
                 };
                 foreach (var kay in MiniJson.Taulukko(MiniJson.Kentta(pd, "kaydyt") ?? new List<object>()))
                     p.Kaydyt.Add((string)kay);
@@ -184,8 +233,18 @@ namespace Matkakirja.Peli
             }
             if (t.Pelaajat.Count == 0) throw new FormatException("tallennuksessa ei ole pelaajia");
             t.Kysely = Kyselytila.Lue(MiniJson.Kentta(o, "kysely") as Dictionary<string, object>);
+            if (MiniJson.Kentta(o, "laattamaailma") is Dictionary<string, object> lm) t.Laatat = Laattamaailma.Lue(lm, kaupungit);
+            t.KaksintaisteluOdottaa = MiniJson.Totuus(o, "kaksintaistelu");
+            t.EnnatysKirjattu = MiniJson.Totuus(o, "ennatys");
+            t.EnnatysPaiva = MiniJson.Luku(o, "ennatysPaiva") is double ep ? (int)ep : (int?)null;
+            // Web fromJSON: polloLoydetty = polloAarteena ? (tallennettu ?? true) : true.
+            t.PolloAarteena = MiniJson.Totuus(o, "polloAarteena");
+            t.PolloLoydetty = !t.PolloAarteena || MiniJson.Totuus(o, "polloLoydetty", true);
             return t;
         }
+
+        static List<string> Tekstit(Dictionary<string, object> o, string nimi) =>
+            MiniJson.Kentta(o, nimi) is List<object> l ? l.Select(x => x as string).ToList() : new List<string>();
 
         /// <summary>Sijainti avaimesta "c:id" tai "e:a|b:idx" (web posKey käänteisenä).</summary>
         public static Sijainti LueSijainti(string avain)

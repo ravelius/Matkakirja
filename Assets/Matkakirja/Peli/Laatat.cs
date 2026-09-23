@@ -14,16 +14,18 @@
 //   4. jaaLaatat: yksi kutsu per aloituskaupunkiin osunut ylimääräinen
 //      pääaarre (maailmankartalla ei koskaan)
 // Maailmankartalla yhteensä 279 = matkajäljen rngAlussa. Konstruktorin
-// beginTurn ei kuluta satunnaisuutta, joten Matka voi korvata kelauksen
-// kutsumalla Laattamaailma.Jaa samalla Satunnaisella ennen ensimmäistä vuoroa.
+// beginTurn ei kuluta satunnaisuutta: Matka.Luo(…, Laattamaarat) kutsuu
+// Laattamaailma.Jaa samalla Satunnaisella ennen ensimmäistä vuoroa (erä 3).
 //
 // JAKO MATKAN KANSSA: tämä luokka omistaa laudan laattatilan (web world.tokens,
 // world.revealed, world.starsFound). Pelaajan tila (raha, tähdet,
 // tietäjäpisteet, finds) kuuluu Pelitilalle: Kaanna palauttaa Loyto-olion,
-// jonka Matka kirjaa pelaajalle (ks. Loyto-luokan kommentti).
+// jonka Matka.KaannaLaatta kirjaa pelaajalle (ks. Loyto-luokan kommentti).
+// Tallennus: Pelitila.Laatat (Kirjoita/Lue alla), Map-järjestys säilyy.
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 
 namespace Matkakirja.Peli
 {
@@ -458,6 +460,56 @@ namespace Matkakirja.Peli
                     break;
             }
             return loyto;
+        }
+
+        // --- tallennus (Pelitila, versio 3) ----------------------------------------
+
+        static void Parit(StringBuilder sb, JarjestettyKartta k)
+        {
+            sb.Append('[');
+            bool eka = true;
+            foreach (var kv in k)
+            {
+                if (!eka) sb.Append(',');
+                eka = false;
+                sb.Append('[').Append(Pelitila.Teksti(kv.Key)).Append(',').Append(Pelitila.Teksti(kv.Value)).Append(']');
+            }
+            sb.Append(']');
+        }
+
+        /// <summary>
+        /// {"lauta":…,"laatat":[[kaupunki,tyyppi],…],"kaannetyt":[…],"tahdet":[[manner,kaupunki],…]}
+        /// — taulukot Map-järjestyksessä, koska pöllön ja lukituksen siirrot arpovat siitä.
+        /// </summary>
+        internal void Kirjoita(StringBuilder sb)
+        {
+            sb.Append("{\"lauta\":").Append(Pelitila.Teksti(LautaId));
+            sb.Append(",\"laatat\":"); Parit(sb, Laatat);
+            sb.Append(",\"kaannetyt\":"); Parit(sb, Kaannetyt);
+            sb.Append(",\"tahdet\":"); Parit(sb, TahdetLoydetty);
+            sb.Append('}');
+        }
+
+        /// <summary>
+        /// Kirjoita-muodon luku. Kaupunkilista antaa mantereet (MannerOf); ilman sitä
+        /// (Pelitila.FromJson ilman verkkoa) teksti kulkee ehjänä, mutta mantereet puuttuvat.
+        /// </summary>
+        internal static Laattamaailma Lue(Dictionary<string, object> o, IReadOnlyList<Kaupunki> kaupungit)
+        {
+            var w = new Laattamaailma(MiniJson.Teksti(o, "lauta") ?? "maailmankartta", kaupungit ?? Array.Empty<Kaupunki>());
+            void Tayta(JarjestettyKartta k, string nimi)
+            {
+                if (!(MiniJson.Kentta(o, nimi) is List<object> l)) return;
+                foreach (var pari in l)
+                {
+                    var p = (List<object>)pari;
+                    k.Aseta((string)p[0], (string)p[1]);
+                }
+            }
+            Tayta(w.Laatat, "laatat");
+            Tayta(w.Kaannetyt, "kaannetyt");
+            Tayta(w.TahdetLoydetty, "tahdet");
+            return w;
         }
 
         // --- js/game.js lukitseAarre (laattaosa) --------------------------------

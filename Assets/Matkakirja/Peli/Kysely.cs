@@ -10,18 +10,22 @@
 // satunnaislukukutsuja joka teon jälkeen.
 //
 // KYTKENTÄ MATKAAN: new Kysely(matka, data) asettaa Matkan koukut
-// TehtavaTarjolla ('stay'-tapa) ja Tutki (ValitseKulkutapa(Pysy) → Avaa)
-// sekä Kokemuksen saapumispisteet (Matka.Saapui). Tallennuksen jälkeen
-// luodaan uusi Kysely ladatulle Matkalle; kysymystila kulkee Pelitilassa.
+// TehtavaTarjolla ('stay'-tapa) ja Tutki (ValitseKulkutapa(Pysy) → Avaa).
+// Kokemus on Matkan (Matka.Kokemus, saapumispisteet kytketty siellä).
+// Tallennuksen jälkeen luodaan uusi Kysely ladatulle Matkalle; kysymystila
+// ja laatat kulkevat Pelitilassa.
 //
-// KOUKUT MUILLE OSILLE (null = ominaisuutta ei ole):
-//   LaattaTassa     — web tokens.has(city): onko kaupungissa kääntämätön laatta
-//   LaattaKaantyy   — web revealToken(city): kääntää laatan, palauttaa löydön
-//                     (web-tulos, esim. 'pieniAarre' tai 'pollo'); Laatat.cs
-//   AarreLukittuu   — web lukitseAarre:n laattaosa (laatan poisto ja
-//                     ainutkertaisen aarteen siirto, joka voi arpoa)
+// LAATTAKOUKUT: jos Matkalla on laattamaailma (Matka.Luo(…, Laattamaarat)),
+// konstruktori kytkee ne Matkaan (erä 3); testit voivat korvata ne.
+//   LaattaTassa     — web tokens.has(city) → Matka.LaattaTassa
+//   LaattaKaantyy   — web revealToken(city) → Matka.KaannaLaatta (rahat,
+//                     tähdet, pisteet, löytöpaikat, ennätys); palauttaa
+//                     web-tuloksen, esim. 'pieniAarre' tai 'pollo'
+//   AarreLukittuu   — web lukitseAarre:n laattaosa → Matka.LukitseLaatta
 //   Kaksintaistelu  — web closeQuiz: duelArmed → beginDuel. Tosi = kaksintaistelu
-//                     alkoi eikä vuoro pääty
+//                     alkoi eikä vuoro pääty → Matka.KaksintaisteluAlkaa
+//                     (itse kaksintaistelu on Matka.Kaksintaistelu-koukku)
+// MUUT KOUKUT (null = ominaisuutta ei ole):
 //   PulmaOdottaa, AvaaPulma — web pendingPuzzle / openPuzzle. Pulmien generate-
 //                     funktiot eivät ole sisältöpaketissa; vastaus- ja
 //                     sulkulogiikka (Laji Pulma) on silti portattu tähän
@@ -324,10 +328,16 @@ namespace Matkakirja.Peli
             Data = data ?? throw new ArgumentNullException(nameof(data));
             Kaupungit = kaupungit ?? (matka.Verkko as Reittiverkko)?.KaupunkiLista
                 ?? matka.Verkko.Kaupungit.Values.ToList();
-            Kokemus = new Kokemus(matka.Tila);
-            Kokemus.Kytke(matka);
+            Kokemus = matka.Kokemus;
             matka.TehtavaTarjolla = TehtavaTarjolla;
             matka.Tutki = _ => Avaa();
+            if (matka.Laatat != null)
+            {
+                LaattaTassa = matka.LaattaTassa;
+                LaattaKaantyy = c => matka.KaannaLaatta(c)?.WebTulos;
+                AarreLukittuu = c => matka.LukitseLaatta(c);
+                Kaksintaistelu = matka.KaksintaisteluAlkaa;
+            }
         }
 
         Pelaaja P => Tila.Pelaaja;

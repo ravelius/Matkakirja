@@ -10,8 +10,9 @@
 // RAJAUKSET (erä 2 ei tee laattoja, pulmia eikä kaksintaisteluja):
 // - Laatat: revealToken ja lukitseAarre korvataan ENNEN pelin luontia
 //   minimiversioilla, jotka vain poistavat laatan (ei rahaa, ei arvontaa,
-//   ei rosvoa). C#:ssa samat kohdat ovat koukut Kysely.LaattaKaantyy ja
-//   Kysely.AarreLukittuu; testin valelaatat tekevät saman.
+//   ei rosvoa). Jako on oikea (C#: Matka.Luo(…, Laattamaarat)); samat kohdat
+//   ovat C#:ssa koukut Kysely.LaattaKaantyy ja Kysely.AarreLukittuu, jotka
+//   testi korvaa rajatuilla (RajatutLaatat). Oikeat käännöt: pelijalki.
 // - Pulmat (isoisän luonnoskirja) vaativat generate-funktiot, joita
 //   sisältöpaketissa ei ole (pulmat.json: "siirretään käsin"):
 //   pendingPuzzle kytketään pois. C#: koukku Kysely.PulmaOdottaa.

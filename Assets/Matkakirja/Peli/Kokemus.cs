@@ -133,7 +133,8 @@ namespace Matkakirja.Peli
         public Kokemus(Pelitila tila) { Tila = tila ?? throw new ArgumentNullException(nameof(tila)); }
 
         /// <summary>
-        /// Kytkee saapumisen pisteet ja havainnon matkaan (web visitCity):
+        /// Kytkee saapumisen pisteet ja havainnon matkaan (web visitCity).
+        /// Matka kytkee oman Kokemuksensa itse (erä 3):
         /// laudan ensimmäinen kaupunki +50 (uusi lauta), jokainen uusi
         /// kaupunki +10, ja joka saapuminen päivittää havainnon.
         /// </summary>
@@ -157,10 +158,13 @@ namespace Matkakirja.Peli
             int ennen = p.Xp;
             p.Xp = ennen + maara;
             KynnysYlitetty?.Invoke(p, ennen, p.Xp);
+            // Web tarkistaTietajataso palaa ensimmäisen nousun jälkeen ("yksi rivi
+            // kerrallaan"): useamman rajan hyppy kirjaa vain alimman.
             foreach (var t in Nousut(ennen, p.Xp))
             {
                 if (!p.Botti) NousuJono.Add(t);
                 TasoNousi?.Invoke(p, t);
+                break;
             }
             return maara;
         }

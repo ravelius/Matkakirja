@@ -138,10 +138,11 @@ namespace Matkakirja.Peli.Testit
             int vuorot = (int)MiniJson.Luku(Jalki, "vuorot").Value;
             var nimi = $"siemen {siemen} {alku}";
 
-            // Web kulutti konstruktorissa arvontoja laattojen jakoon: kelataan samaan kohtaan.
+            // Laatat jaetaan oikeasti kuten webin konstruktorissa (erä 3): jaon
+            // kulutus on jäljen rngAlussa, ja alku-askel vertaa sen rngCalls-kentässä.
             var rng = new Satunnainen(siemen);
-            rng.Kelaa((long)MiniJson.Luku(ajo, "rngAlussa").Value);
-            var m = Matka.UusiPeli(KultaisetApu.Verkko, rng, "Fogg", alku);
+            var m = Matka.UusiPeli(KultaisetApu.Verkko, rng, "Fogg", alku, KultaisetApu.Laattamaarat);
+            Oleta.Sama((long)MiniJson.Luku(ajo, "rngAlussa").Value, rng.Kutsuja, nimi + ": jaon kulutus");
 
             int i = 0;
             void Vertaa(string teko)

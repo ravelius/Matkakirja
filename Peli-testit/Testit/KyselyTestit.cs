@@ -12,7 +12,22 @@ using System.Text;
 
 namespace Matkakirja.Peli.Testit
 {
-    /// <summary>Testin valelaatat: web revealToken/lukitseAarre rajattuina (poisto, ei arvontaa).</summary>
+    /// <summary>
+    /// Kysymysjäljen rajaus (tee-kysymysjalki.mjs): laatat jaetaan oikeasti,
+    /// mutta revealToken/lukitseAarre vain poistavat laatan (ei rahaa, ei
+    /// arvontaa). Koukut korvaavat Kyselyn oletuskytkennän Matkan laattoihin.
+    /// </summary>
+    static class RajatutLaatat
+    {
+        public static void Kytke(Kysely k)
+        {
+            var laatat = k.Matka.Laatat.Laatat;
+            k.LaattaKaantyy = c => { var t = laatat.Hae(c); if (t != null) laatat.Poista(c); return t; };
+            k.AarreLukittuu = c => laatat.Poista(c);
+        }
+    }
+
+    /// <summary>Pienen verkon testien valelaatat: kaupunki → tyyppi ilman jakoa.</summary>
     sealed class ValeLaatat
     {
         public readonly Dictionary<string, string> Laatat = new Dictionary<string, string>();
@@ -114,10 +129,10 @@ namespace Matkakirja.Peli.Testit
     public static class KyselyTestit
     {
         static Kysymysdata data;
-        static Kysymysdata Data => data ??= Kysymysdata.LueKansiosta(KultaisetApu.Paketti);
+        internal static Kysymysdata Data => data ??= Kysymysdata.LueKansiosta(KultaisetApu.Paketti);
 
         static List<Lippumaa> liput;
-        static List<Lippumaa> Liput => liput ??= Kysymysdata.LueLiput(File.ReadAllText(Path.Combine(KultaisetApu.Juuri, "Kultaiset", "liput.json")));
+        internal static List<Lippumaa> Liput => liput ??= Kysymysdata.LueLiput(File.ReadAllText(Path.Combine(KultaisetApu.Juuri, "Kultaiset", "liput.json")));
 
         static Dictionary<string, object> jalki;
         static Dictionary<string, object> Jalki => jalki ??= MiniJson.Objekti(MiniJson.Jasenna(
@@ -125,13 +140,13 @@ namespace Matkakirja.Peli.Testit
 
         // --- webin nimet --------------------------------------------------------
 
-        static string Web(Vaihe v) => v switch
+        internal static string Web(Vaihe v) => v switch
         {
             Vaihe.Toiminta => "action", Vaihe.Heitto => "roll", Vaihe.Siirto => "move",
             Vaihe.Kysymys => "quiz", Vaihe.Ohi => "over", _ => "pickstart",
         };
 
-        static string Web(KysymysMuoto m) => m switch
+        internal static string Web(KysymysMuoto m) => m switch
         {
             KysymysMuoto.Visa => "quiz", KysymysMuoto.Vaite => "claim", KysymysMuoto.Kuva => "photo",
             KysymysMuoto.Lippu => "flag", KysymysMuoto.Tapahtuma => "event", _ => "puzzle",
@@ -171,7 +186,7 @@ namespace Matkakirja.Peli.Testit
             }
         }
 
-        static string Kanoninen(object o) { var sb = new StringBuilder(); Kanoninen(o, sb); return sb.ToString(); }
+        internal static string Kanoninen(object o) { var sb = new StringBuilder(); Kanoninen(o, sb); return sb.ToString(); }
 
         static Dictionary<string, object> KysymysRivi(AvoinKysymys q)
         {
@@ -192,7 +207,7 @@ namespace Matkakirja.Peli.Testit
         static List<object> Jarj(IEnumerable<string> l) => l.OrderBy(x => x, StringComparer.Ordinal).Cast<object>().ToList();
 
         /// <summary>C#-tila samoin kentin kuin skriptin tila().</summary>
-        static Dictionary<string, object> Rivi(string teko, Kysely ky, ValeLaatat laatat)
+        internal static Dictionary<string, object> Rivi(string teko, Kysely ky)
         {
             var m = ky.Matka;
             var t = m.Tila;
@@ -219,7 +234,7 @@ namespace Matkakirja.Peli.Testit
                 ["tietoprosentti"] = Kokemus.Tietoprosentti(p),
                 ["kaytetyt"] = k.Kaytetyt.Count,
                 ["lastForm"] = k.ViimeMuoto.HasValue ? Web(k.ViimeMuoto.Value) : null,
-                ["laatat"] = laatat.Laatat.Count,
+                ["laatat"] = m.Laatat.Laatat.Count,
                 ["tutkitut"] = Jarj(k.Tutkitut),
                 ["kaari"] = Jarj(k.KaariYritykset.Select(kv => $"{kv.Key}={kv.Value.Yritykset}{(kv.Value.Onnistui ? "+" : "")}")),
                 ["lukot"] = Jarj(k.AarreLukot),
@@ -228,11 +243,11 @@ namespace Matkakirja.Peli.Testit
             };
         }
 
-        /// <summary>Uusi tai ladattu Kysely ajon asetuksin (laatat, liput, kuvat).</summary>
-        static Kysely Kytke(Matka m, Dictionary<string, object> ajo, ValeLaatat laatat)
+        /// <summary>Uusi tai ladattu Kysely ajon asetuksin (rajatut laatat, liput, kuvat).</summary>
+        static Kysely Kytke(Matka m, Dictionary<string, object> ajo)
         {
             var ky = new Kysely(m, Data);
-            laatat.Kytke(ky);
+            RajatutLaatat.Kytke(ky);
             if (MiniJson.Totuus(ajo, "liput")) ky.Liput = Liput;
             if (MiniJson.Totuus(ajo, "kuvat"))
                 ky.AsetaKuvat(MiniJson.Taulukko(MiniJson.Kentta(Jalki, "kuvat")).Cast<string>());
@@ -252,15 +267,14 @@ namespace Matkakirja.Peli.Testit
             int maxTeot = (int)MiniJson.Luku(Jalki, "maxTeot").Value;
             var nimi = $"siemen {siemen} {alku}";
 
-            var laatat = new ValeLaatat();
-            foreach (var l in MiniJson.Taulukko(MiniJson.Kentta(ajo, "laatat")).Cast<List<object>>())
-                laatat.Laatat[(string)l[0]] = (string)l[1];
-
+            // Oikea jako (erä 3): sama laattakartta ja kulutus kuin webin konstruktorissa.
             var rng = new Satunnainen(siemen);
-            rng.Kelaa((long)MiniJson.Luku(ajo, "rngAlussa").Value);
-            var m = Matka.Luo(KultaisetApu.Verkko, rng, "Fogg", alku);
+            var m = Matka.Luo(KultaisetApu.Verkko, rng, "Fogg", alku, KultaisetApu.Laattamaarat);
+            Oleta.Sama((long)MiniJson.Luku(ajo, "rngAlussa").Value, rng.Kutsuja, nimi + ": jaon kulutus");
+            var odotetutLaatat = string.Join(";", MiniJson.Taulukko(MiniJson.Kentta(ajo, "laatat")).Cast<List<object>>().Select(l => l[0] + "=" + l[1]));
+            Oleta.Sama(odotetutLaatat, string.Join(";", m.Laatat.Laatat.Select(kv => kv.Key + "=" + kv.Value)), nimi + ": laattakartta");
             if (MiniJson.Teksti(ajo, "taso") == "easy") m.Tila.Pelaaja.Taso = Vaikeustaso.Helppo;
-            var ky = Kytke(m, ajo, laatat);
+            var ky = Kytke(m, ajo);
             vikaan?.Invoke(ky);
             m.AloitaVuoro();
 
@@ -269,7 +283,7 @@ namespace Matkakirja.Peli.Testit
             {
                 if (i >= askeleet.Count) throw new Exception($"{nimi}: C# jatkoi jäljen jälkeen ({teko})");
                 var odotettu = askeleet[i];
-                var saatu = Rivi(teko, ky, laatat);
+                var saatu = Rivi(teko, ky);
                 var eroja = saatu.Keys.Union(odotettu.Keys)
                     .Where(key => Kanoninen(MiniJson.Kentta(odotettu, key)) != Kanoninen(saatu.TryGetValue(key, out var v) ? v : null))
                     .Select(key => $"\n  {key}: web {Kanoninen(MiniJson.Kentta(odotettu, key))}\n  {new string(' ', key.Length)}  C#  {Kanoninen(saatu.TryGetValue(key, out var v) ? v : null)}")
@@ -294,7 +308,7 @@ namespace Matkakirja.Peli.Testit
                     var json = m.Tallenna();
                     m = Matka.Lataa(KultaisetApu.Verkko, json);
                     Oleta.Sama(json, m.Tallenna(), nimi + ": tallennus pysyy samana latauksen yli");
-                    ky = Kytke(m, ajo, laatat);
+                    ky = Kytke(m, ajo);
                 }
             }
             Oleta.Sama(askeleet.Count, i, nimi + ": jäljen pituus");
@@ -564,7 +578,8 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(string.Join(",", q1.Piilotetut), string.Join(",", q2.Piilotetut));
             Oleta.Sama(m.Tila.Kysely.Kaytetyt.Count, m2.Tila.Kysely.Kaytetyt.Count);
             // Versio 1 (erä 1) latautuu yhä.
-            var v1 = json.Replace("\"versio\":2", "\"versio\":1");
+            Oleta.Tosi(json.Contains("\"versio\":3"), "tallennusversio 3");
+            var v1 = json.Replace("\"versio\":3", "\"versio\":1");
             v1 = v1.Substring(0, v1.IndexOf(",\"kysely\":", StringComparison.Ordinal)) + "}";
             var vanha = Pelitila.FromJson(v1);
             Oleta.Sama(0, vanha.Kysely.Kaytetyt.Count);

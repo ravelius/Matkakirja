@@ -11,11 +11,11 @@
 //   myös konstruktorin ensimmäinen beginTurn laskee automaattivalinnan
 //   ilman sitä. C#:ssa sama koukku on Matka.TehtavaTarjolla (oletus false).
 // - Konstruktori kuluttaa RNG:tä laattojen jakoon (createTokenPile,
-//   jaaLaatat). Jälki kirjaa kulutuksen kenttään rngAlussa; C# kelaa
-//   satunnaislukunsa samaan kohtaan ennen toistoa.
+//   jaaLaatat). Jälki kirjaa kulutuksen kenttään rngAlussa; C# jakaa laatat
+//   samoin (Matka.UusiPeli(…, Laattamaarat), erä 3) ja tarkistaa kulutuksen.
 // - needsAid lukee tavoitteiksi laattakaupungit. Laattoja ei käännetä
 //   tässä käsikirjoituksessa, joten tavoitteita ovat kaikki kaupungit —
-//   sama kuin C#:n oletus (Matka.Tavoitteet = null).
+//   sama kuin C#:n oletus (kääntämättömät laatat).
 //
 // KÄSIKIRJOITUS (sama kuin MatkaTestit.Kasikirjoitus):
 //   vaihe action: tavat = travelModes(); tapa = tavat[valinnat % tavat.length]

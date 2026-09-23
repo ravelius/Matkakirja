@@ -166,7 +166,7 @@ namespace Matkakirja.Peli.Testit
 
         /// <summary>
         /// Matkajäljen rngAlussa (konstruktorin kulutus ennen ensimmäistä vuoroa)
-        /// on täsmälleen laattojen jako: Matka voi korvata kelauksen Jaa-kutsulla.
+        /// on täsmälleen laattojen jako, jonka Matka.Luo(…, Laattamaarat) tekee.
         /// </summary>
         [Testi] static void MatkajaljenAlkukulutusOnLaattajako()
         {
