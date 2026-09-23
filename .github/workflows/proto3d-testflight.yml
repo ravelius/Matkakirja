@@ -171,6 +171,13 @@ jobs:
       # ajon lopussa, joten yksityinen avain katosi vaikka varmenne jäi
       # ASC:hen ("private key not installed in keychain" -virhe). Salasana
       # on oma secret (PROTO3D_KEYCHAIN_PASSWORD), ei repossa.
+      #
+      # Avainnippu lisätään käyttäjän hakulistaan VAIN tämän ajon ajaksi
+      # (poistetaan listalta — ei tiedostona — "Siivoa avaimet" -vaiheessa)
+      # ja oletusavainnippu palautetaan lopuksi. Muuten se jää pysyvästi
+      # omistajan Macin hakulistalle ja oletukseksi, mikä sai Unity Hubin
+      # kysymään avainnipun salasanaa Macin kirjautumissalasanan sijaan.
+      # set-key-partition-list estää codesign/xcodebuildin omat kyselyt.
       - name: Pysyvä avainnippu
         env:
           NIPPU_SALASANA: ${{ secrets.PROTO3D_KEYCHAIN_PASSWORD }}
@@ -182,6 +189,9 @@ jobs:
           fi
           security set-keychain-settings -lut 21600 "$nippu"
           security unlock-keychain -p "$NIPPU_SALASANA" "$nippu"
+          security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k "$NIPPU_SALASANA" "$nippu" || true
+          alkuperainen_oletus=$(security default-keychain -d user | sed 's/^[[:space:]]*"//;s/"[[:space:]]*$//')
+          echo "ALKUPERAINEN_OLETUSNIPPU=$alkuperainen_oletus" >> "$GITHUB_ENV"
           nykyiset=$(security list-keychains -d user | sed 's/"//g')
           if ! echo "$nykyiset" | grep -qF "$nippu"; then
             security list-keychains -d user -s "$nippu" $nykyiset
@@ -260,8 +270,10 @@ jobs:
               # yritetään ensin liittää ASC:n olemassa olevat varmenteet
               # siihen ennen uuden avainparin luontia (kiintiön säästö).
               tila, d = kutsu('GET', '/v1/certificates?filter[certificateType]=IOS_DISTRIBUTION&limit=50')
-              print(f"ASC:ssa {len(d.get('data', [])) if tila == 200 else '?'} olemassa olevaa Distribution-varmennetta, yritetaan parittaa.")
-              for c in (d.get('data', []) if tila == 200 else []):
+              ehdokkaat = d.get('data', []) if tila == 200 else []
+              print(f"ASC:ssa {len(ehdokkaat)} olemassa olevaa Distribution-varmennetta, yritetaan parittaa yksitellen.")
+              voittaja = None
+              for c in ehdokkaat:
                   certpolku = f"{tmp}/olemassaoleva-{c['id']}.cer"
                   with open(certpolku, 'wb') as f:
                       f.write(base64.b64decode(c['attributes']['certificateContent']))
@@ -269,11 +281,17 @@ jobs:
                                            '-T', '/usr/bin/codesign', '-T', '/usr/bin/security'],
                                           capture_output=True, text=True)
                   print(f"  {c['id']}: import exit={tulos.returncode} {tulos.stderr.strip()[:200]}")
-              if identiteetti_loytyy():
-                  print('Avainnipussa oli jo yksityinen avain jollekin ASC:n varmenteelle — liitetty, ei luoda uutta.')
-                  tila, d = kutsu('GET', '/v1/certificates?filter[certificateType]=IOS_DISTRIBUTION&limit=50')
-                  if tila == 200 and d.get('data'):
-                      cert_id = d['data'][0]['id']
+                  if voittaja is None and identiteetti_loytyy():
+                      voittaja = c['id']
+                      print(f"  -> {c['id']} pariutui, tama on kaytettava varmenne.")
+              if voittaja is not None:
+                  cert_id = voittaja
+                  # Omistajan lupa 23.9.2026: peru (revoke) muut kuin
+                  # pariutunut varmenne, jottei kiintio tayty orvoista.
+                  for c in ehdokkaat:
+                      if c['id'] != voittaja:
+                          tila_r, d_r = kutsu('DELETE', f"/v1/certificates/{c['id']}")
+                          print(f"  Perutaan orpo varmenne {c['id']}: {tila_r}")
 
           if not identiteetti_loytyy():
               print('Ei Distribution-identiteettiä avainnipussa — luodaan uusi.')
@@ -552,3 +570,16 @@ jobs:
         run: |
           rm -rf "$RUNNER_TEMP/asc" "$HOME/.appstoreconnect/private_keys" || true
           rm -f "$RUNNER_TEMP/ExportOptions.plist" "$RUNNER_TEMP/dist.key" "$RUNNER_TEMP/dist.csr" "$RUNNER_TEMP/dist.cer" "$RUNNER_TEMP/proto3d.mobileprovision" || true
+          # Palauta omistajan oma oletusavainnippu ja poista testflight-
+          # avainnippu hakulistalta (ei tiedostona) — muuten se jää
+          # pysyvästi käyttöön ja macOS kysyy sen salasanaa muilta
+          # sovelluksilta (esim. Unity Hub) Macin oman salasanan sijaan.
+          if [ -n "${ALKUPERAINEN_OLETUSNIPPU:-}" ]; then
+            security default-keychain -s "$ALKUPERAINEN_OLETUSNIPPU" || true
+          fi
+          if [ -n "${AVAINNIPPU:-}" ]; then
+            jaljelle=$(security list-keychains -d user | sed 's/"//g' | grep -vF "$AVAINNIPPU") || true
+            if [ -n "$jaljelle" ]; then
+              security list-keychains -d user -s $jaljelle || true
+            fi
+          fi
