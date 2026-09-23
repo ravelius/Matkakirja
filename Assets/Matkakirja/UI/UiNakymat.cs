@@ -28,6 +28,8 @@ namespace Matkakirja.Natiivi
         public readonly Aanentasot Aanentasot;
         public readonly KaupunkiKortti Kaupunkikortti;
         public readonly KysymysNakyma Kysymys;
+        public readonly Karttaselite Karttaselite;
+        public readonly Kartuscha Kartuscha;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         static void KytkeTehdas()
@@ -57,6 +59,8 @@ namespace Matkakirja.Natiivi
             Aanentasot = new Aanentasot(kerros, () => Tilarivi.Alareuna);
             Kaupunkikortti = new KaupunkiKortti(kerros);
             Kysymys = new KysymysNakyma(kerros);
+            Kartuscha = new Kartuscha(kerros);
+            Karttaselite = new Karttaselite(kerros);
             UiSisalto.Lataa(null); // kaupunkidata valmiiksi ennen ensimmäistä napautusta
 
             Tilarivi.Valikko.clicked += () => { Aanentasot.Sulje(); Valikko.Vaihda(); };
@@ -124,6 +128,8 @@ namespace Matkakirja.Natiivi
             Matkavalinta.PiilotaHeitto();
             Kaupunkikortti.Piilota();
             Kysymys.Piilota();
+            Karttaselite.Sulje();
+            Kartuscha.Sulje();
         }
 
         /// <summary>Testikomento 'ui matka': esimerkkivalinta ilman peliä.</summary>

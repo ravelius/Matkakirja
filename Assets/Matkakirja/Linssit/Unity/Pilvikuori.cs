@@ -1,0 +1,116 @@
+// PILVIKUORI astronautin kameralle (web js/linssit/astro-sumu.js): pallokuori
+// 1,01 × säde, NASA Blue Marble -pilvikuva (osoite sisältöpaketin
+// linssiaineistosta), pyörii 0,5°/min maapallon akselin ympäri, peitto kameran
+// korkeudesta (Astronauttimatikka.PilvienPeitto).
+using System.Collections;
+using CesiumForUnity;
+using Matkakirja.Linssit.Astronautti;
+using Unity.Mathematics;
+using UnityEngine;
+using UnityEngine.Networking;
+using UnityEngine.Rendering;
+
+namespace Matkakirja.Natiivi
+{
+    public class Pilvikuori : MonoBehaviour
+    {
+        public const string OletusOsoite = "https://media.matkakirja.app/matkakirja/linssit/pilvet-bluemarble-2048.jpg";
+        const double MaanSade = 6_371_000;
+        const int Sarakkeet = 128, Rivit = 64;
+
+        Material materiaali;
+        Texture2D kuva;
+        Vector3 akseli;
+
+        public static Pilvikuori Luo(CesiumGeoreference georeferenssi, string osoite = OletusOsoite)
+        {
+            var varjostin = Resources.Load<Shader>("Varjostimet/Pilvet");
+            if (varjostin == null || georeferenssi == null) return null;
+            var go = new GameObject("Pilvikuori");
+            go.transform.SetParent(georeferenssi.transform, false);
+            var p = go.AddComponent<Pilvikuori>();
+            p.Rakenna(georeferenssi, varjostin);
+            p.StartCoroutine(p.Lataa(osoite ?? OletusOsoite));
+            return p;
+        }
+
+        void Rakenna(CesiumGeoreference g, Shader varjostin)
+        {
+            double3 keskus = g.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);
+            akseli = ((Vector3)(float3)(g.TransformEarthCenteredEarthFixedPositionToUnity(new double3(0, 0, MaanSade)) - keskus)).normalized;
+            transform.localPosition = (Vector3)(float3)keskus;
+            var paikat = new Vector3[(Sarakkeet + 1) * (Rivit + 1)];
+            var uv = new Vector2[paikat.Length];
+            for (int r = 0; r <= Rivit; r++)
+                for (int s = 0; s <= Sarakkeet; s++)
+                {
+                    double lat = 90 - 180.0 * r / Rivit, lon = -180 + 360.0 * s / Sarakkeet;
+                    var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(
+                        new double3(lon, lat, (Astronauttimatikka.PilvienSade - 1) * MaanSade));
+                    int i = r * (Sarakkeet + 1) + s;
+                    paikat[i] = (Vector3)(float3)(g.TransformEarthCenteredEarthFixedPositionToUnity(ecef) - keskus);
+                    uv[i] = new Vector2(s / (float)Sarakkeet, 1 - r / (float)Rivit);
+                }
+            var kolmiot = new int[Sarakkeet * Rivit * 6];
+            int t = 0;
+            for (int r = 0; r < Rivit; r++)
+                for (int s = 0; s < Sarakkeet; s++)
+                {
+                    int a = r * (Sarakkeet + 1) + s, b = a + 1, c = a + Sarakkeet + 1, d = c + 1;
+                    kolmiot[t++] = a; kolmiot[t++] = b; kolmiot[t++] = c;
+                    kolmiot[t++] = b; kolmiot[t++] = d; kolmiot[t++] = c;
+                }
+            var mesh = new Mesh { name = "Pilvikuori", indexFormat = IndexFormat.UInt32, vertices = paikat, uv = uv, triangles = kolmiot };
+            mesh.RecalculateNormals();
+            mesh.RecalculateBounds();
+            gameObject.AddComponent<MeshFilter>().sharedMesh = mesh;
+            var rend = gameObject.AddComponent<MeshRenderer>();
+            materiaali = new Material(varjostin);
+            materiaali.SetFloat("_Peitto", 0);
+            rend.sharedMaterial = materiaali;
+            rend.shadowCastingMode = ShadowCastingMode.Off;
+            rend.receiveShadows = false;
+        }
+
+        IEnumerator Lataa(string osoite)
+        {
+            using var pyynto = UnityWebRequestTexture.GetTexture(osoite, false);
+            yield return pyynto.SendWebRequest();
+            if (pyynto.result != UnityWebRequest.Result.Success)
+            {
+                Debug.LogWarning("MATKAKIRJA linssit: pilvikuva ei latautunut: " + pyynto.error);
+                yield break;
+            }
+            var lahde = DownloadHandlerTexture.GetContent(pyynto);
+            var pikselit = lahde.GetPixels32();
+            var tavut = new byte[pikselit.Length * 4];
+            for (int i = 0; i < pikselit.Length; i++)
+            {
+                tavut[i * 4] = pikselit[i].r; tavut[i * 4 + 1] = pikselit[i].g;
+                tavut[i * 4 + 2] = pikselit[i].b; tavut[i * 4 + 3] = pikselit[i].a;
+            }
+            // GetPixels32: rivi 0 on kuvan alareuna eli eteläisin.
+            Pilvikuva.Alfa(tavut, lahde.width, lahde.height, pohjoinenEnsin: false);
+            kuva = new Texture2D(lahde.width, lahde.height, TextureFormat.RGBA32, true) { wrapModeU = TextureWrapMode.Repeat, wrapModeV = TextureWrapMode.Clamp };
+            kuva.LoadRawTextureData(tavut);
+            kuva.Apply(true, true);
+            Destroy(lahde);
+            materiaali.SetTexture("_MainTex", kuva);
+        }
+
+        /// <summary>Peitto 0…1 ja kierto asteina (Astronauttimatikka).</summary>
+        public void Aseta(double peitto, double kiertoAsteina)
+        {
+            materiaali.SetFloat("_Peitto", (float)peitto);
+            transform.localRotation = Quaternion.AngleAxis((float)kiertoAsteina, akseli);
+            gameObject.SetActive(peitto > 0.001 || kuva == null);
+        }
+
+        void OnDestroy()
+        {
+            if (TryGetComponent<MeshFilter>(out var f)) Destroy(f.sharedMesh);
+            if (kuva != null) Destroy(kuva);
+            Destroy(materiaali);
+        }
+    }
+}

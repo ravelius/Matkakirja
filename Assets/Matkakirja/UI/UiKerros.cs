@@ -167,9 +167,13 @@ namespace Matkakirja.Natiivi
             lock (paasaie) paasaie.Enqueue(a);
         }
 
+        /// <summary>Joka ruudussa (esim. napautus paneelin ohi pallolle, jota UI ei näe).</summary>
+        public event Action JokaRuutu;
+
         void Update()
         {
             PaivitaTurvaalueet();
+            JokaRuutu?.Invoke();
             while (true)
             {
                 Action a;

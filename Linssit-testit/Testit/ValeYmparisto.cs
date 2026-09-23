@@ -1,3 +1,4 @@
+using System;
 // Vale-ympäristö: kirjaa jokaisen linssin kutsun lokiin ja antaa testin
 // ohjata aikaa ja kerrosten tilaa.
 using System.Collections.Generic;
@@ -46,9 +47,14 @@ namespace Matkakirja.Linssit.Testit
 
         public IKarttaKerrokset Kerrokset => Vale;
         public Nakyma Kamera => Asento;
-        public void AjaKamera(Nakyma kohde, float kestoS) { Loki.Add("ajo"); Ajo = kohde; AjonKesto = kestoS; }
+        public Func<double, double> AjonPehmennys;
+        public void AjaKamera(Nakyma kohde, float kestoS, Func<double, double> pehmennys = null)
+        { Loki.Add("ajo"); Ajo = kohde; AjonKesto = kestoS; AjonPehmennys = pehmennys; }
         public void ZoomiKatto(double? max) { Loki.Add("katto " + (max?.ToString() ?? "pois")); Katto = max; }
         public double KokoPallonKorkeus => 25_000_000;
+        /// <summary>Vale: 1° ruudun leveydellä = 100 km korkeutta.</summary>
+        public double KorkeusLeveydelle(double leveysAsteina) => leveysAsteina * 100_000;
+        public double Kuvasuhde { get; set; } = 0.46;
         public void Pelikerrokset(bool n) { Loki.Add("pelikerrokset " + n); PelikerroksetNakyvissa = n; }
         public void Peite(bool p) { Loki.Add("peite " + p); PeitePaalla = p; }
         public void MusiikkiPitoon(bool p) { Loki.Add("musiikki " + p); Musiikkipito = p; }

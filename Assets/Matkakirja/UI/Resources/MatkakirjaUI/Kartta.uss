@@ -1,0 +1,403 @@
+/* KARTAN KALUSTEET (Natiivi-UI, erä 4): kartuscha (webin maapaneeli, css/styles.css
+ * ~27191–27870) ja karttaselite (~25710–26170). Pergamentin muste rgba(58,40,25,.92),
+ * toissijainen rgba(74,52,33,…); kartalla kelluva teksti saa pergamenttihalon. */
+
+/* --- kartuscha ---------------------------------------------------------- */
+
+.mk-kartuscha {
+    position: absolute;
+    flex-direction: column;
+    max-width: 92%;
+    padding: 4px 8px 4px 8px;
+    border-width: 0;
+    border-radius: 2px;
+    color: rgba(58, 40, 25, 0.92);
+}
+
+.mk-kartuscha.mk-auki {
+    width: 100%;
+    max-width: 460px;
+    padding: 10px 14px 10px 14px;
+    background-color: rgba(247, 239, 219, 0.94);
+    border-width: 1px;
+    border-color: rgba(74, 52, 33, 0.55);
+}
+
+.mk-kartuscha__sisus {
+    flex-direction: column;
+    padding: 4px 2px 8px 2px;
+    margin-bottom: 6px;
+    border-bottom-width: 1px;
+    border-color: rgba(74, 52, 33, 0.22);
+}
+
+.mk-kartuscha__masto {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-height: 0;
+    padding: 0;
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(58, 40, 25, 0.92);
+}
+
+.mk-kartuscha__masto:active {
+    background-color: rgba(0, 0, 0, 0);
+    opacity: 0.8;
+}
+
+.mk-kartuscha__nimirivi {
+    flex-direction: row;
+    align-items: center;
+}
+
+.mk-kartuscha__nimi {
+    font-size: 24px;
+    letter-spacing: 4.8px;
+    text-shadow: 0 0 4px rgb(244, 232, 205);
+}
+
+.mk-kartuscha.mk-auki .mk-kartuscha__nimi,
+.mk-kartuscha.mk-auki .mk-kartuscha__alarivi {
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.mk-kartuscha__lippu {
+    display: none;
+    height: 18px;
+    width: 27px;
+    margin-right: 9px;
+    border-width: 1px;
+    border-color: rgba(74, 52, 33, 0.45);
+    -unity-background-scale-mode: stretch-to-fill;
+}
+
+.mk-kartuscha.mk-auki .mk-kartuscha__lippu {
+    display: flex;
+}
+
+.mk-kartuscha__viiva {
+    height: 1px;
+    align-self: stretch;
+    margin: 3px 0 3px 0;
+    background-color: rgba(74, 52, 33, 0.55);
+}
+
+.mk-kartuscha__alarivi {
+    font-size: 14px;
+    letter-spacing: 1.1px;
+    color: rgba(74, 52, 33, 0.85);
+    white-space: normal;
+    text-shadow: 0 0 3px rgb(244, 232, 205);
+}
+
+.mk-kartuscha__aiheet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+}
+
+.mk-kartuscha__aihe {
+    min-height: 26px;
+    padding: 2px 0 1px 0;
+    margin: 0 12px 6px 0;
+    border-width: 0;
+    border-bottom-width: 1px;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(58, 40, 25, 0.92);
+}
+
+.mk-kartuscha__aihe:active {
+    background-color: rgba(74, 52, 33, 0.08);
+}
+
+.mk-kartuscha__aihe .mk-nappi__teksti {
+    font-size: 12.5px;
+    letter-spacing: 1.5px;
+}
+
+.mk-kartuscha__vuosi,
+.mk-kartuscha__rivi {
+    flex-direction: row;
+    align-items: center;
+    min-height: 20px;
+}
+
+.mk-kartuscha__nimike {
+    width: 118px;
+    flex-shrink: 0;
+    font-size: 11px;
+    letter-spacing: 1.4px;
+    color: rgba(74, 52, 33, 0.75);
+}
+
+.mk-kartuscha__arvo {
+    flex-shrink: 1;
+    font-size: 12.5px;
+    white-space: normal;
+}
+
+.mk-kartuscha__sija {
+    display: none;
+    margin-left: 8px;
+    font-size: 10.5px;
+    color: rgba(74, 52, 33, 0.6);
+}
+
+.mk-kartuscha__tilastot.mk-sijat-auki .mk-kartuscha__sija {
+    display: flex;
+}
+
+.mk-kartuscha__nyt {
+    font-size: 11px;
+    -unity-font-style: italic;
+    color: rgba(74, 52, 33, 0.7);
+    margin: 6px 0 2px 0;
+}
+
+.mk-kartuscha__kielet {
+    flex-direction: row;
+    margin-top: 2px;
+}
+
+.mk-kartuscha__tervehdykset {
+    flex-direction: column;
+    flex-shrink: 1;
+}
+
+.mk-tervehdys {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 18px;
+}
+
+.mk-tervehdys__teksti {
+    font-size: 12.5px;
+    -unity-font-style: italic;
+    margin-right: 6px;
+}
+
+.mk-tervehdys__lippu {
+    height: 11px;
+    width: 16px;
+    margin-right: 5px;
+    border-width: 0.5px;
+    border-color: rgba(74, 52, 33, 0.4);
+    -unity-background-scale-mode: stretch-to-fill;
+}
+
+.mk-tervehdys__kieli {
+    font-size: 11px;
+    color: rgba(74, 52, 33, 0.7);
+}
+
+/* --- karttaselite -------------------------------------------------------- */
+
+.mk-seliteNappi {
+    position: absolute;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    min-height: 40px;
+    padding: 0;
+    border-radius: 12px;
+    border-color: rgba(70, 51, 31, 0.35);
+    background-color: rgba(239, 220, 180, 0.9);
+    color: var(--map-ink);
+}
+
+.mk-seliteNappi:active {
+    background-color: rgba(225, 204, 160, 0.95);
+}
+
+.mk-seliteNappi.mk-valittu {
+    background-color: var(--map-ink);
+    color: #f5f0e2;
+}
+
+.mk-seliteNappi > .mk-ikoni {
+    width: 20px;
+    height: 20px;
+    margin-right: 0;
+    --mk-ikoni-viiva: 1.6;
+}
+
+.mk-selite {
+    position: absolute;
+    right: 10px;
+    width: 240px;
+    max-width: 78%;
+    max-height: 60%;
+    padding: 8px 8px 10px 8px;
+    background-color: #f5f0e2;
+    border-radius: 8px;
+    color: var(--map-ink);
+    opacity: 0;
+    translate: 0 -10px;
+    scale: 1 0.86;
+    transform-origin: top;
+    transition-property: opacity, translate, scale;
+    transition-duration: 0.18s, 0.22s, 0.22s;
+    transition-timing-function: ease-out;
+}
+
+.mk-selite.mk-auki {
+    opacity: 1;
+    translate: 0 0;
+    scale: 1 1;
+}
+
+.mk-karhea-kehys {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    right: 1px;
+    bottom: 1px;
+    border-color: rgba(70, 51, 31, 0.78);
+}
+
+.mk-selite__ylarivi {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2px 6px 8px;
+}
+
+.mk-selite__otsikko {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--map-ink);
+    padding-bottom: 2px;
+    border-bottom-width: 1px;
+    border-color: rgba(70, 51, 31, 0.5);
+}
+
+.mk-selite__sulje {
+    width: 32px;
+    height: 32px;
+    min-height: 32px;
+    padding: 0;
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--map-ink);
+}
+
+.mk-selite__sulje:active {
+    background-color: rgba(70, 51, 31, 0.1);
+}
+
+.mk-selite__sulje .mk-nappi__teksti {
+    font-size: 16px;
+    -unity-text-align: middle-center;
+}
+
+.mk-selite__vieritys {
+    flex-shrink: 1;
+}
+
+.mk-selite__lista {
+    position: relative;
+}
+
+.mk-selite-rivi {
+    justify-content: flex-start;
+    min-height: 36px;
+    padding: 2px 10px 2px 6px;
+    border-width: 0;
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--map-ink);
+}
+
+.mk-selite-rivi:active {
+    background-color: rgba(70, 51, 31, 0.07);
+}
+
+.mk-selite-rivi.mk-tyhja {
+    opacity: 0.45;
+}
+
+.mk-selite-rivi.mk-valittu .mk-selite-rivi__nimi {
+    -unity-font-style: bold;
+}
+
+.mk-selite-rivi__merkki {
+    flex-direction: row;
+    align-items: center;
+    width: 64px;
+    flex-shrink: 0;
+}
+
+.mk-selite-rivi__vektori {
+    width: 22px;
+    height: 22px;
+}
+
+.mk-selite-rivi__symboli {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 22px;
+    height: 22px;
+}
+
+.mk-selite-rivi__rengas {
+    color: #4b3a1c;
+}
+
+.mk-selite-rivi__kuva {
+    width: 17px;
+    height: 17px;
+    margin-right: 3px;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.mk-selite-rivi__nimi {
+    flex-grow: 1;
+    font-size: 13.8px;
+}
+
+.mk-selite-rivi__luku {
+    font-size: 12px;
+    -unity-text-align: middle-right;
+    min-width: 24px;
+}
+
+.mk-peukalo {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 36px;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.3);
+    border-radius: 7px;
+    align-items: center;
+    justify-content: center;
+    transition-property: translate;
+    transition-duration: 0.12s;
+}
+
+.mk-peukalo.mk-vetaa {
+    transition-duration: 0s;
+}
+
+.mk-peukalo__linssi {
+    width: 25px;
+    height: 25px;
+    border-radius: 12.5px;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.45);
+    background-color: rgba(255, 252, 240, 0.9);
+    align-items: center;
+    justify-content: center;
+}
+
+.mk-peukalo__luku {
+    font-size: 14px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    color: var(--map-ink);
+}
