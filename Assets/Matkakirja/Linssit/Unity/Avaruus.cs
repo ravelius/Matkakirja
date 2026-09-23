@@ -2,13 +2,12 @@
 // ILMAKEHAN_VARI #7fb6ff, ILMAKEHAN_KORKEUS 0,25): tumma avaruus pallon taakse ja
 // ilmakehän sininen hehku pallon reunalle.
 //
-//   tausta    koko ruudun kalvo (Tummennus-varjostin) Background-jonossa: piirtyy
-//             ennen palloa ja tähtiä, joten kameran oma tausta (Natiivisepän) jää alle
-//             koskematta kameraan
+//   tausta    KarttaKerrokset.Taustavari (Natiivisepän rajapinta); purku palauttaa
+//             pelin oman taustan (null)
 //   hehku     kuori R × 1,25 (Ilmakeha-varjostin, three-glow-mesh: coefficient 0,1,
 //             power 3,5, takapinnat, pallon kiekko hylätään)
 //
-// Molemmat häivytetään sisään linssin avautuessa (0,6 s) ja puretaan kerroksen mukana.
+// Hehku häivytetään sisään linssin avautuessa (0,6 s); molemmat puretaan kerroksen mukana.
 using CesiumForUnity;
 using Unity.Mathematics;
 using UnityEngine;
@@ -24,8 +23,8 @@ namespace Matkakirja.Natiivi
         static readonly Color Ilmakeha = new Color32(127, 182, 255, 255);
         const int Sektorit = 96, Kehat = 48;
 
-        Material tausta, hehku;
-        Mesh nelio, kuori;
+        Material hehku;
+        Mesh kuori;
         float peitto;
 
         public static Avaruus Luo(CesiumGeoreference georeferenssi, Transform isanta)
@@ -39,27 +38,8 @@ namespace Matkakirja.Natiivi
 
         void Rakenna(CesiumGeoreference g)
         {
-            var taustaVarjostin = Resources.Load<Shader>("Varjostimet/Tummennus");
-            if (taustaVarjostin != null)
-            {
-                var t = new GameObject("Tausta");
-                t.transform.SetParent(transform, false);
-                nelio = new Mesh
-                {
-                    name = "Avaruus",
-                    vertices = new[] { new Vector3(-1, -1, 0), new Vector3(1, -1, 0), new Vector3(1, 1, 0), new Vector3(-1, 1, 0) },
-                    triangles = new[] { 0, 2, 1, 0, 3, 2 },
-                    bounds = new Bounds(Vector3.zero, Vector3.one * 1e9f),
-                };
-                t.AddComponent<MeshFilter>().sharedMesh = nelio;
-                var r = t.AddComponent<MeshRenderer>();
-                tausta = new Material(taustaVarjostin) { renderQueue = (int)RenderQueue.Background };
-                tausta.SetColor("_Vari", Tausta);
-                tausta.SetVector("_Reika", Vector4.zero);
-                tausta.SetFloat("_Peitto", 0);
-                r.sharedMaterial = tausta;
-                r.shadowCastingMode = ShadowCastingMode.Off;
-            }
+            // Tausta Natiivisepän rajapinnalla (kameran tausta); null palauttaa pelin oman.
+            KarttaKerrokset.Instanssi?.Taustavari(Tausta);
 
             var hehkuVarjostin = Resources.Load<Shader>("Varjostimet/Ilmakeha");
             if (hehkuVarjostin == null) { Debug.LogWarning("MATKAKIRJA linssit: Ilmakeha-varjostin puuttuu"); return; }
@@ -108,15 +88,13 @@ namespace Matkakirja.Natiivi
         void Update()
         {
             peitto = Mathf.MoveTowards(peitto, 1f, Time.unscaledDeltaTime / HaivytysS);
-            if (tausta != null) tausta.SetFloat("_Peitto", peitto);
             if (hehku != null) hehku.SetFloat("_Peitto", peitto);
         }
 
         void OnDestroy()
         {
-            if (tausta != null) Destroy(tausta);
+            KarttaKerrokset.Instanssi?.Taustavari(null);
             if (hehku != null) Destroy(hehku);
-            if (nelio != null) Destroy(nelio);
             if (kuori != null) Destroy(kuori);
         }
     }
