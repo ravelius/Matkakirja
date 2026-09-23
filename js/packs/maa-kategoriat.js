@@ -13963,7 +13963,7 @@ export const MAA_KATEGORIAT = {
           wiki: 'Jean Sibelius',
           musiikki: 'https://music.apple.com/fi/search?term=sibelius%20finlandia',
           musiikkiNimi: 'Sibeliuksen Finlandia Apple Musicissa',
-          musiikkiNayte: 'https://upload.wikimedia.org/wikipedia/commons/a/ac/Finlandia_-_Cwmbach_Male_Choir.ogg',
+          musiikkiNayte: 'https://upload.wikimedia.org/wikipedia/commons/transcoded/a/ac/Finlandia_-_Cwmbach_Male_Choir.ogg/Finlandia_-_Cwmbach_Male_Choir.ogg.mp3',
           musiikkiNayteNimi: 'Finlandia-hymni — Cwmbach Male Choir, CC BY-SA (Wikimedia Commons)',
         },
         {
