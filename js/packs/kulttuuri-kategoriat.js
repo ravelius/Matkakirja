@@ -106114,4 +106114,693 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  galapagos: [
+    {
+      id: 'kaupunki',
+      nimi: 'Galápagossaaret',
+      johdanto: 'Tyynellämerellä lymyilee vulkaaninen saaristo, jonka laavarannat kätkevät maailman erikoisimman eläimistön. Isoisän matkapäiväkirja mainitsee sen ohimennen — mutta juuri täällä yksi laivamatka muutti käsityksen elämän synnystä.',
+      nostot: [
+        {
+          otsikko: 'Tulivuorista noussut saaristo',
+          teksti: 'Galápagossaaret ovat syntyneet keskellä Tyyntämerta kuuman pisteen yllä, jossa maankuoren alla virtaava magma on työntänyt esiin tulivuoria miljoonien vuosien ajan. Espanjalainen piispa Tomás de Berlanga törmäsi saaristoon vahingossa vuonna 1535, kun hänen laivansa ajelehti tyynellä säällä Panamasta Peruun matkatessa. Kolme vuosisataa myöhemmin, vuonna 1835, saariston rannoille nousi nuori luonnontutkija Charles Darwin HMS Beaglelta. Hänen huomionsa saariston omalaatuisesta eläimistöstä kypsyi vuosikymmenten varrella teokseksi Lajien synty (1859) — isoisän matkavuosi 1873 sijoittuu vain 14 vuotta sen jälkeen.',
+          tiedosto: 'Western Galapagos Islands2000Nasa.jpg',
+          lyhyt: 'Isabela ja Fernandina näkyvät avaruudesta kuvattuna tulivuorisaarina.',
+          selite: 'Space Shuttlestä otettu kuva näyttää saariston kaksi läntisintä ja vulkaanisesti aktiivisinta saarta, hevosenkengän muotoisen Isabelan ja pyöreän Fernandinan.',
+          lahde: 'NASA, Wikimedia Commons (PD)',
+          wiki: 'Galápagos Islands',
+        },
+        {
+          otsikko: 'Piispan harhaan ajautunut laiva',
+          teksti: 'Tomás de Berlanga oli matkalla Panamasta Peruun sovittelemaan riitaa, kun tuulet tyyntyivät ja virtaukset kuljettivat hänen laivansa harhaan reitiltä. Miehistö ajautui tuntemattomaan saaristoon, jossa ei ollut makeaa vettä: kaksi merimiestä ja kymmenen hevosta kuoli janoon ennen kuin retkikunta pääsi jatkamaan matkaa. Berlanga kirjoitti Espanjan kuninkaalle kuvauksen karusta paikasta, jonka kivikkoisilla rannoilla vaelsi jättiläiskilpikonnia ja oudon näköisiä liskoja. Raportti oli ensimmäinen kirjallinen maininta saaristosta — mutta yli kolme vuosisataa kului ennen kuin kukaan tutki sitä tieteellisesti.',
+          tiedosto: 'Santiago Island (4229132942).jpg',
+          lyhyt: 'Santiagon saaren karu, mustan laavan peittämä rannikko.',
+          selite: 'Kuva Santiagon saaren tulivuoriperäisestä rannikosta muistuttaa siitä karusta maisemasta, johon Tomás de Berlangan miehistö saapui vuonna 1535.',
+          lahde: 'Peter Wilton, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Tomás de Berlanga',
+        },
+        {
+          otsikko: 'Beagle saapuu saaristoon',
+          teksti: 'HMS Beagle laski ankkurin San Cristóbalin edustalle 15. syyskuuta 1835, ja seuraavien viiden viikon aikana Darwin kävi maissa neljällä saarella — San Cristóbalilla, Floreanalla, Isabelalla ja Santiagolla, yhteensä noin 19 päivän ajan. Floreanalla saarikolonian johtaja Nicholas Lawson kertoi Darwinille osaavansa erottaa, miltä saarelta mikäkin kilpikonna oli peräisin pelkän kuoren muodon perusteella. Darwin pani merkille myös, että matkijalinnut näyttivät hieman erilaisilta saaresta toiseen. Kumpikaan havainto ei vielä tuolloin muuttanut hänen ajatteluaan — se tapahtui vasta Englantiin paluun jälkeen.',
+          tiedosto: 'HMS Beagle by Conrad Martens.jpg',
+          lyhyt: 'Conrad Martensin maalaus HMS Beaglesta purjehtimassa.',
+          selite: 'Beaglen oma taiteilija Conrad Martens maalasi laivan matkan aikana; tämä näkymä on samalta purjehdukselta, joka toi laivan myös Galápagosille.',
+          lahde: 'Conrad Martens, Wikimedia Commons (PD)',
+          wiki: 'Second voyage of HMS Beagle',
+        },
+        {
+          otsikko: 'Peipposet jotka nimettiin Lontoossa',
+          teksti: 'Darwin keräsi saaristosta lintunäytteitä tietämättä vielä niiden merkitystä — hän ei edes merkinnyt muistiin, miltä saarelta mikäkin peippolintu oli peräisin. Vasta Lontoossa vuonna 1837 lintutieteilijä John Gould tutki näytteet ja huomasi, ettei kyse ollut sekalaisesta joukosta lintuja vaan lähisukuisista lajeista, joiden nokan muoto vaihteli ravinnon mukaan siemensyöjästä hyönteissyöjään. Löytö oli yksi niistä paloista, joista Darwinin ajattelu vähitellen kasvoi kohti Lajien syntyä (1859). Isoisän matkavuonna 1873 teoria oli yhä tuore ja kiistanalainen keskustelunaihe Euroopassa.',
+          tiedosto: "Darwin's finches by Gould.jpg",
+          lyhyt: 'John Gouldin 1837 piirros neljästä erilaisesta peipposen nokasta.',
+          selite: 'Kuvassa on lintutieteilijä John Gouldin piirtämät neljä peipposlajin päätä, jotka julkaistiin Darwinin matkakertomuksen myöhemmässä painoksessa havainnollistamaan nokkien muotoeroja.',
+          lahde: 'John Gould, Wikimedia Commons (PD)',
+          wiki: "Darwin's finches",
+        },
+        {
+          otsikko: 'Ecuadorin saaristo ja Puerto Ayora',
+          teksti: 'Ecuador liitti saariston osakseen 12. helmikuuta 1832 juhlallisella seremonialla Floreanan saarella, vain kolmisen vuotta ennen Darwinin vierailua. Ensimmäiset siirtokunnat olivat pieniä ja karuja: makeaa vettä oli niukasti, ja moni varhainen asukas oli sinne karkotettu vanki. Nykyään saaristossa asuu yli 30 000 ihmistä, ja suurin osa heistä elää Puerto Ayoran kaupungissa Santa Cruzin saarella, joka toimii saariston kaupallisena keskuksena ja useimpien vierailijoiden ensimmäisenä pysähdyspaikkana.',
+          tiedosto: 'Collage Puerto Ayora.png',
+          lyhyt: 'Kuvakollaasi Puerto Ayoran kaupungista Santa Cruzin saarella.',
+          selite: 'Kollaasi näyttää Puerto Ayoran satamaa ja katukuvaa — kaupunki on saariston suurin asutuskeskus ja useimpien vierailijoiden ensimmäinen pysähdyspaikka.',
+          lahde: 'David C. S., Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Puerto Ayora',
+        },
+        {
+          otsikko: 'Kansallispuisto ja tutkimusasema',
+          teksti: 'Vuonna 1959, tasan sata vuotta Lajien synnyn julkaisusta, Ecuador perusti saaristoon maansa ensimmäisen kansallispuiston. Puisto kattaa 97 prosenttia saariston maa-alasta ja jättää ihmisasutukselle tilaa vain jo olemassa olevien kylien kohdalla. Viisi vuotta myöhemmin, vuonna 1964, Puerto Ayoran laidalle avattiin Charles Darwin -tutkimusasema, joka yhä tänään kasvattaa uhanalaisia kilpikonnia takaisin luontoon ja seuraa saariston lajien tilaa. Vuonna 1978 Unesco lisäsi koko saariston maailmanperintöluetteloonsa ensimmäisten kohteiden joukossa.',
+          tiedosto: 'Charles Darwin Research Station.jpg',
+          lyhyt: 'Charles Darwin -tutkimusaseman rakennuksia Puerto Ayorassa.',
+          selite: 'Vuonna 1964 avattu tutkimusasema Santa Cruzin saarella kasvattaa uhanalaisia jättiläiskilpikonnia ja seuraa saariston lajien tilaa.',
+          lahde: 'TriiipleThreat, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Charles Darwin Research Station',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Erakoitunut sijainti kaukana mantereesta on tehnyt Galápagossaarista evoluution näyttämön: täällä elää lajeja, jotka eivät ole sopeutuneet vastaavalla tavalla missään muualla maailmassa.',
+      tehtava: {
+        kysymys: 'Mistä saariston nimi "Galápagos" juontuu?',
+        vaihtoehdot: [
+          'Ensimmäisen löytäjän sukunimestä',
+          'Espanjan sanasta, jolla purjehtijat nimesivät saarten jättiläiskilpikonnat',
+          'Alkuperäisasukkaiden kielestä',
+          'Saariston muodosta kartalla',
+        ],
+        oikea: 1,
+        fakta: 'Nimi tulee sanasta galápago, jolla espanjalaiset purjehtijat kutsuivat 1500-luvulla saariston jättiläiskilpikonnia.',
+      },
+      nostot: [
+        {
+          otsikko: 'Jättiläiskilpikonnat ja satulakuori',
+          teksti: 'Saariston nimi juontuu espanjan sanasta galápago, jolla purjehtijat nimesivät tapaamansa jättiläiskilpikonnat. Lajia on ollut alun perin viisitoista, joista kolme on jo sammunut — viimeinen niistä, Pinta-saaren Lonesome George, kuoli vuonna 2012 ilman jälkeläisiä. Kuoren muoto kertoo saaren kasvillisuudesta: kuivilla saarilla kuori on satulamainen ja kaula pitkä, jotta se yltää korkealle kaktuksiin, kosteammilla saarilla kuori taas on matala kupu ja niska lyhyt. 1500-luvulla kilpikonnia oli noin 250 000, mutta pyytäjät keräsivät niitä laivoihinsa lihaksi — 1970-luvulla jäljellä oli enää noin 3 000 yksilöä.',
+          tiedosto: 'Galápagos giant tortoise, head profile (Chelonoidis niger hoodensis).jpg',
+          lyhyt: 'Satulakuorinen jättiläiskilpikonna Española-saarelta.',
+          selite: 'Kuvan kilpikonna edustaa Hoodin (Españolan) saaren alalajia, jonka satulamainen, ylös kaartuva kuoren etureuna erottaa sen kosteampien saarien kupukuorisista sukulaisista.',
+          lahde: 'E bailey, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Galápagos tortoise',
+        },
+        {
+          otsikko: 'Meri-iguaanit — ainoat sukeltavat liskot',
+          teksti: 'Meri-iguaani on maailman ainoa lisko, joka hakee ravintonsa merestä. Se ui litteän, sivuttain puristuneen häntänsä avulla ja raapii tylpällä kuonollaan levää vedenalaisilta kiviltä — lähes koko ruokavalio on punaista ja vihreää levää. Suurimmat urokset sukeltavat jopa 30 metrin syvyyteen ja pysyvät veden alla lähes tunnin, naaraat ja pienemmät yksilöt tyytyvät matalan veden paljastamiin levämattoihin. Ylimääräinen suola erittyy sieraimista pieninä aivastuksina, mikä jättää päälaelle valkoisen suolakuorrutuksen. Koko vaihtelee saarittain: Genovesan pienet yksilöt ovat reilut 19 senttiä, Santa Cruzin ja Fernandinan iguaanit lähes kaksinkertaisia.',
+          tiedosto: 'Amblyrhynchus cristatus 813.jpg',
+          lyhyt: 'Meri-iguaani lepäämässä laavakivellä.',
+          selite: 'Kuvassa näkyvät iguaanin litteä, sivuttain puristunut häntä ja tylppä kuono, jotka ovat sopeutumia levän raapimiseen vedenalaisilta kiviltä.',
+          lahde: 'Putneymark, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Marine iguana',
+        },
+        {
+          otsikko: 'Darwinin peipposet',
+          teksti: 'Peipposia elää saaristossa kaikkiaan noin 18 lajia, ja jokaisen nokan muoto paljastaa, mitä se syö: paksu nokka murskaa kovia siemeniä, kapea ja terävä nokka nappaa hyönteisiä, ja pitkä, koveroitunut nokka pääsee käsiksi kaktuksen sisään kätkeytyvään mehuun ja siitepölyyn. Nimen "Darwinin peipposet" teki tunnetuksi vasta brittiläinen tutkija David Lack vuonna 1947 ilmestyneessä kirjassaan, joka perustui vuosien 1905–1906 tutkimusmatkalla kerättyihin näytteisiin. Peipposista tuli oppikirjaesimerkki siitä, miten yksi ainoa mantereelta saapunut kantalaji voi haarautua moneksi lajiksi, kun jokainen sopeutuu oman saarensa ruokavalikoimaan.',
+          tiedosto: 'Medium ground finch on Floreana Island in the Galápagos Islands.jpg',
+          lyhyt: 'Keskikokoinen maapeippo Floreanan saarelta.',
+          selite: 'Uroksen tukeva, kartiomainen nokka on tyypillinen siemensyöjälajille — yksi lähes kahdestakymmenestä peipposlajista, jotka eroavat toisistaan juuri nokan muodon perusteella.',
+          lahde: 'Andrew Katsis, Wikimedia Commons (CC BY 4.0)',
+          wiki: "Darwin's finches",
+        },
+        {
+          otsikko: 'Pohjoisin pingviini',
+          teksti: 'Galápagospingviini on ainoa pingviinilaji, joka elää luonnostaan päiväntasaajan pohjoispuolella. Trooppisessa lämmössä selviäminen on mahdollista vain siksi, että kylmät Humboldtin ja Cromwellin merivirrat tuovat saariston länsiosaan ravinnerikasta, viileää vettä. Laji on maailman toiseksi pienin pingviini, vain 48–50 senttiä pitkä ja 2–4 kiloa painava, ja se pesii pääasiassa Fernandinalla ja Isabelan länsirannikolla. Kanta on äärimmäisen pieni, noin 1 200 aikuista yksilöä, ja El Niño -ilmiön lämmittäessä merta kalakanta pakenee syvemmälle ja pesintä epäonnistuu — laji luokitellaan siksi uhanalaiseksi.',
+          tiedosto: 'Galápagos penguin (Spheniscus mendiculus) male.jpg',
+          lyhyt: 'Uros-galápagospingviini uimassa Isabelan saaren edustalla.',
+          selite: 'Kuva on otettu Moreno Pointin edustalla Isabelan saarella, jonka viileät merivirrat mahdollistavat pingviinin elämän lähes päiväntasaajalla.',
+          lahde: 'Charles J. Sharp, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Galápagos penguin',
+        },
+        {
+          otsikko: 'Lintu joka unohti lentää',
+          teksti: 'Ilman luontaisia vihollisia saaristossa yksi kormoraanilaji menetti lentokykynsä kokonaan: sen siivet ovat vain kolmasosan lentämiseen tarvittavasta koosta, ja rintalastan harjanne, johon lentolihakset kiinnittyvät, on kutistunut olemattomiin. Lintu metsästää sukeltamalla matalassa rantavedessä kalaa, pieniä mustekaloja ja muuta merenelävää, työntäen itseään eteenpäin vahvoilla räpyläjaloillaan. Laji elää vain Fernandinan ja Isabelan rannikoilla ja pysyttelee koko elämänsä muutaman sadan metrin pituisella kotirannalla. Kantaa on jäljellä noin 1 500 yksilöä, ja se on luokiteltu haavoittuvaiseksi — suurimmat uhat ovat kalastusverkot ja tulokaspedot.',
+          tiedosto: 'Flightless cormorant (Phalacrocorax harrisi) drying wings.jpg',
+          lyhyt: 'Lentokyvytön kormoraani kuivattamassa pieniä siipiään.',
+          selite: 'Vaikka laji ei enää osaa lentää, se levittää siipensä auringossa samaan tapaan kuin lentävät kormoraanisukulaisensa.',
+          lahde: 'Charles J. Sharp, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Flightless cormorant',
+        },
+      ],
+    },
+  ],
+
+  kongo: [
+    {
+      id: 'kaupunki',
+      nimi: 'Kongo',
+      johdanto:
+        'Kongojoki halkoo Keski-Afrikan sademetsää lähes 4 700 kilometrin matkan ja on vesimäärältään maailman toiseksi suurin virta heti Amazonin jälkeen. Isoisän matkavuonna 1873 sen yläjuoksu oli eurooppalaisille vielä täysi arvoitus.',
+      nostot: [
+        {
+          otsikko: 'Virta joka halkaisee mantereen',
+          teksti:
+            'Kongojoki on Afrikan toiseksi pisin ja koko maailman toiseksi vesirikkain joki heti Amazonin jälkeen: sen suulta virtaa mereen keskimäärin yli 40 000 kuutiometriä vettä sekunnissa. Joki on myös ainoa suuri virta, joka ylittää päiväntasaajan kahdesti, ja sen syvimmät kohdat ulottuvat yli 200 metrin syvyyteen — syvemmälle kuin minkään muun joen tunnetaan ulottuvan. Isoisän matkavuonna 1873 joen yläjuoksu oli eurooppalaisille kartoille yhä valkoinen läiskä: kukaan ei tiennut varmasti, mihin se laskee. Paikalliset kansat olivat tosin kulkeneet sitä kanooillaan vuosisatoja.',
+          tiedosto: 'Pirogues on the Congo River -a.jpg',
+          lyhyt: 'Kongojoki on maailman toiseksi vesirikkain joki ja ylittää päiväntasaajan kahdesti.',
+          selite:
+            'Kaivettu puuvene eli pirogi Kongojoella auringonlaskun aikaan — perinteinen kulkuväline, joka oli käytössä joella jo isoisän aikaan ja on sitä yhä.',
+          lahde: 'Julien Harneis, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Congo River',
+        },
+        {
+          otsikko: 'Kivi joka pysäytti purjehtijat',
+          teksti:
+            'Portugalilainen merenkulkija Diogo Cão saapui Kongojoen suulle vuonna 1482 ja pystytti rannalle kivipaadon Portugalin kuninkaan vallan merkiksi — ensimmäinen eurooppalainen kirjattu kosketus jokeen. Myöhemmällä matkallaan hänen miehensä etenivät jokea ylös Matadin kohdalle asti, missä koskien alkava sarja pysäytti veneet; kalliolle hakattu kirjoitus muistuttaa yhä käynnistä. Koskien takana avautuva ylänkö ja sen joki jäivät eurooppalaisilta kartoittamatta lähes 400 vuodeksi — vasta 1870-luvulla selvisi, että sama virta jatkuu satojen kilometrien päähän sisämaahan.',
+          tiedosto: 'Matadi, Congo, pedra de Ielala, Diogo Cão.jpg',
+          lyhyt: 'Diogo Cão pystytti kivipaadon Kongojoen suulle 1482, ensimmäisenä eurooppalaisena.',
+          selite:
+            'Matadin lähellä sijaitseva Ielalan kivi, johon Diogo Cãon retkikunta hakkasi kirjoituksen koskien pysäyttäessä sen matkan jokea ylös.',
+          lahde: 'Victorcouto, Wikimedia Commons (Public domain)',
+          wiki: 'Diogo Cão',
+        },
+        {
+          otsikko: 'Livingstonen viimeinen arvoitus',
+          teksti:
+            'Skotlantilainen lähetyssaarnaaja ja tutkimusmatkailija David Livingstone vaelsi 1860-luvun lopulla Keski-Afrikkaan etsimään Niilin lähteitä ja löysi Lualaba-joen, jota hän piti mahdollisena Niilin yläjuoksuna. Hän epäili kuitenkin itsekin totuutta: virta saattoi yhtä hyvin laskea länteen Atlantille Kongona. Livingstone ei koskaan saanut varmuutta — hän kuoli sairauksiin nykyisen Sambian alueella toukokuussa 1873, samana vuonna kun isoisä aloitti oman matkansa. Arvoituksen ratkaisi vasta muutama vuosi myöhemmin toinen tutkimusmatkailija, joka seurasi virtaa aina merelle asti.',
+          tiedosto: 'David Livingstone by Thomas Annan.jpg',
+          lyhyt: 'Livingstone löysi Lualaba-joen mutta kuoli 1873 saamatta varmuutta, laskiko se Niiliin vai Kongoon.',
+          selite:
+            'David Livingstone valokuvassa vuodelta 1864, kuusi vuotta ennen hänen viimeistä ja ratkaisematonta Lualaba-retkeään.',
+          lahde: 'Thomas Annan / Adam Cuerden, Wikimedia Commons (Public domain)',
+          wiki: 'David Livingstone',
+        },
+        {
+          otsikko: 'Stanleyn ylitys mantereen poikki',
+          teksti:
+            'Walesilaissyntyinen toimittaja Henry Morton Stanley lähti 1874 retkikunnan johtoon Sansibarista tarkoituksenaan ratkaista Livingstonen jättämä arvoitus. Löydettyään Lualaban hän seurasi sitä alavirtaan yli 700 päivän ajan, ohitti Boyoman putoukset ja lukuisat muut kosket ja saapui elokuussa 1877 lopulta merelle asti — todistaen virran olevan Kongo, ei Niili. Matkasta selvisi hengissä vain noin kolmasosa lähteneistä. Stanley piirsi matkastaan yksityiskohtaisen kartan, jonka hän julkaisi vuonna 1878 ilmestyneessä kirjassaan Through the Dark Continent.',
+          tiedosto: 'Congo Map by Stanley.jpg',
+          lyhyt: 'Stanley seurasi Kongojokea 1874–1877 lähteeltä merelle ja ratkaisi Livingstonen arvoituksen.',
+          selite:
+            'Henry Morton Stanleyn itse piirtämä kartta Kongojoen reitistä, julkaistu hänen kirjassaan Through the Dark Continent (1878).',
+          lahde: 'Henry M. Stanley, Wikimedia Commons (Public domain)',
+          wiki: "Henry Morton Stanley's first trans-Africa expedition",
+        },
+        {
+          otsikko: 'Kosket jotka sulkivat sisämaan',
+          teksti:
+            'Alajuoksulla, ennen kuin Kongojoki saavuttaa Atlantin, se syöksyy sarjana koskia ja putouksia lähes 270 metriä alaspäin noin 350 kilometrin matkalla. Kosket nimettiin myöhemmin Livingstonen mukaan, vaikka hän ei koskaan nähnyt niitä itse. Ne tekivät joesta laivakelvottoman rannikolta sisämaahan, ja siksi tavarat ja veneet jouduttiin vuosikymmenten ajan kuljettamaan koskien ohi maitse — työ, joka vaati myöhemmin kokonaisen rautatien rakentamista. Koskien yläpuolella joki levenee rauhalliseksi järvimäiseksi altaaksi, josta löytyi vasta 1800-luvun lopulla toimiva reitti sisämaahan.',
+          tiedosto: 'Fleuve Congo Kinshasa 7.JPG',
+          lyhyt: 'Livingstonen putoukset pudottavat jokea 270 metriä ja tekivät siitä laivakelvottoman.',
+          selite:
+            'Kongojoen rantaa Livingstonen putousten yläosassa lähellä Kinshasaa — kosket katkaisevat joen laivaväylän kohti rannikkoa.',
+          lahde: 'Serein, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Livingstone Falls',
+        },
+        {
+          otsikko: 'Kuningas joka omisti joen',
+          teksti:
+            'Belgian kuningas Leopold II ei koskaan itse käynyt Kongossa, mutta hän palkkasi Stanleyn solmimaan sopimuksia paikallisten päälliköiden kanssa ja rahoitti asemien perustamisen joen varrelle. Berliinin konferenssi tunnusti 1885 hänen vaatimuksensa, ja alueesta tuli Kongo-vapaavaltio — ei Belgian siirtomaa vaan kuninkaan henkilökohtainen omaisuus, suurempi kuin koko Länsi-Eurooppa. Vain kaksitoista vuotta isoisän matkan jälkeen koko jokilaakso siirtyi näin yhden miehen hallintaan tavalla, joka muutti alueen historian suunnan pysyvästi.',
+          tiedosto: 'Leopold II, King of the Belgians.jpg',
+          lyhyt: 'Berliinin konferenssi tunnusti 1885 Leopold II:n Kongo-vapaavaltion henkilökohtaiseksi omaisuudeksi.',
+          selite:
+            'Belgian kuningas Leopold II, jonka henkilökohtaiseksi omaisuudeksi Kongo-vapaavaltio julistettiin vuonna 1885.',
+          lahde: 'Internet Archive Book Images, Wikimedia Commons (Public domain)',
+          wiki: 'Congo Free State',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Sademetsä ja joen eliöstö',
+      johdanto:
+        'Kongojoen ympärillä leviää maailman toiseksi suurin yhtenäinen sademetsä, ja itse joki kätkee syvyyksiinsä lajeja, jotka elävät vain siellä. Kosket ja virran voima ovat eristäneet eliöstön muusta Afrikasta vuosituhansien ajan.',
+      tehtava: {
+        kysymys: 'Miksi bonobot elävät vain Kongojoen eteläpuolella?',
+        vaihtoehdot: [
+          'Koska ne eivät osaa uida joen yli',
+          'Koska pohjoispuolella ei ole tarpeeksi ruokaa',
+          'Koska metsästäjät ajoivat ne sinne',
+          'Koska joen vesi on niille liian kylmää',
+        ],
+        oikea: 0,
+        fakta:
+          'Bonobot ja simpanssit erosivat toisistaan, kun leveä ja virtaava Kongojoki muodostui noin 1,5–2 miljoonaa vuotta sitten eikä kumpikaan laji osaa uida sen yli.',
+      },
+      nostot: [
+        {
+          otsikko: 'Toiseksi suurin viherkatto',
+          teksti:
+            'Kongojoen valuma-alueella kasvaa yli kahden miljoonan neliökilometrin yhtenäinen sademetsä — maailman toiseksi suurin heti Amazonin jälkeen ja kotipaikka arviolta kymmenille miljoonille ihmisille sekä lukemattomille eläin- ja kasvilajeille. Joki itse toimii metsän valtaväylänä: kylät ja kaupungit ovat syntyneet lähes poikkeuksetta sen rantaville, koska tiheässä metsässä maakulku on hidasta ja vaikeaa. Ylhäältä katsottuna virta mutkittelee tummanvihreän kattometsän halki lukemattomina haarautuvina uomina ja hiekkasärkkinä, ennen kuin yhtyy taas yhdeksi valtavaksi väyläksi.',
+          tiedosto: 'Aerial view of the Congo River near Kisangani.jpg',
+          lyhyt: 'Kongon sademetsä on maailman toiseksi suurin yhtenäinen sademetsä heti Amazonin jälkeen.',
+          selite:
+            'Ilmakuva Kongojoesta Kisanganin lähellä: virta haarautuu lukuisiksi uomiksi tiheän sademetsän keskellä.',
+          lahde: 'MONUSCO/Myriam Asmani, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Congolian rainforests',
+        },
+        {
+          otsikko: 'Apina joka jäi joen väärälle puolelle',
+          teksti:
+            'Kongojoki jakaa kahden lähisukulaisapinan elinalueet kahtia: simpanssit elävät joen pohjoispuolella, bonobot yksinomaan sen eteläpuolella metsissä Kasai- ja Sankuru-jokien väliin jäävällä alueella. Kumpikaan laji ei osaa uida kunnolla, joten leveä ja virtaava joki on toiminut lähes läpäisemättömänä rajana jo puolitoista–kaksi miljoonaa vuotta — riittävän pitkään, että kahdesta yhteisestä kannasta kehittyi kaksi eri lajia. Bonoboyhteisöt ovat tunnettuja naarasjohtoisuudestaan ja rauhanomaisesta käytöksestään, mikä poikkeaa selvästi pohjoisen puolen simpanssien hierarkiasta.',
+          tiedosto: 'Bonobo (Pan paniscus) at Lola Ya Bonobo - 3.JPG',
+          lyhyt: 'Bonobot elävät vain Kongojoen eteläpuolella, koska ne eivät osaa uida joen yli.',
+          selite:
+            'Bonoboemo ja -poikanen Lola ya Bonobo -suojelualueella Kinshasassa, Kongon demokraattisessa tasavallassa.',
+          lahde: 'Christina Bergey, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Bonobo',
+        },
+        {
+          otsikko: 'Lintu joka löytyi vasta 1930-luvulla',
+          teksti:
+            'Kongon riikinkukko on ainoa Aasian ulkopuolella elävä riikinkukkolaji, ja se tunnistettiin tieteelle yllättävän myöhään: amerikkalainen ornitologi James Chapin huomasi vuonna 1936 museossa oudon höyhenen, jota kukaan ei osannut nimetä, ja jäljitti sen lopulta elävään lintuun Kongon sademetsän syvyyksistä. Lintu elää arkana ja piileskelevänä sankan aluskasvillisuuden suojassa, minkä vuoksi se vältti tutkijoiden huomion vuosikymmenten ajan, vaikka paikalliset asukkaat olivat tunteneet sen — nimeltä mbulu — kauan ennen sitä.',
+          tiedosto: 'Congo Peafowl 456.jpg',
+          lyhyt: 'Kongon riikinkukko tunnistettiin tieteelle vasta 1936, vaikka paikalliset tunsivat sen jo kauan.',
+          selite: 'Kongon riikinkukko (Afropavo congensis) eläintarhassa Cincinnatissa Yhdysvalloissa.',
+          lahde: 'Ltshears, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Congo peafowl',
+        },
+        {
+          otsikko: 'Hampaat jotka pelottavat kalastajiakin',
+          teksti:
+            'Jättitiikerikala kasvaa Kongojoessa jopa puolitoistametriseksi ja viisikymmenkiloiseksi, ja sen leuoissa on rivistö toisiinsa lomittuvia, jopa 2,5 senttimetrin hampaita — piirre, joka teki siitä paikallisten kalastajien pelkäämän saaliin jo kauan ennen kuin länsimaiset luonnontieteilijät kuvasivat lajin. Se viihtyy erityisesti koskien ja voimakkaiden virtausten lähellä, joissa harva muu suurikokoinen kala pärjää, ja saalistaa tehokkaasti myös muita, itseään pienempiä petokaloja. Tarinat sen hyökkäyksistä jopa pieniin krokotiileihin kuuluvat joen kalastajaperinteeseen.',
+          tiedosto: 'Hydrocynus goliath.jpg',
+          lyhyt: 'Jättitiikerikala kasvaa 1,5-metriseksi ja saalistaa koskien voimakkaissa virtauksissa.',
+          selite: 'Nuori jättitiikerikala (Hydrocynus goliath), kasvatettu akvaariossa.',
+          lahde: 'Sablegsd, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Hydrocynus goliath',
+        },
+        {
+          otsikko: 'Maailman syvin joki',
+          teksti:
+            'Ennen kuin Kongojoki syöksyy koskiensa läpi kohti merta, se levenee rauhalliseksi, järvenkaltaiseksi altaaksi nimeltä Pool Malebo, jonka rannoilla sijaitsevat nykyiset Kinshasa ja Brazzaville — ainoat kaksi pääkaupunkia maailmassa, jotka näkevät toisensa joen yli. Muualla uomassaan Kongo mitataan paikoin yli 200 metrin syvyiseksi, mikä tekee siitä mittaustietojen mukaan maailman syvimmän tunnetun joen. Syvät, pimeät ja voimakasvirtaiset kohdat ovat omine olosuhteineen eristäneet niissä elävät kalakannat toisistaan, minkä ansiosta joesta on löydetty kymmeniä vain sille ominaisia kalalajeja.',
+          tiedosto: 'Congo River with upstream half of Pool Malebo and Mbamu.jpg',
+          lyhyt: 'Kongojoki on paikoin yli 200 metriä syvä — maailman syvin tunnettu joki.',
+          selite:
+            'Ilmakuva Pool Malebosta, Kongojoen leveästä ja rauhallisesta altaasta Brazzavillen pohjoispuolella.',
+          lahde: 'Dicklyon, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Congo River',
+        },
+      ],
+    },
+  ],
+
+  machupicchu: [
+    {
+      id: 'kaupunki',
+      nimi: 'Machu Picchu',
+      johdanto:
+        'Kivinen kaupunki vuoristonharjanteella, jota isoisä ei koskaan nähnyt – vuonna 1873 sitä ei vielä tunnettu ulkomaailmassa. Kansisivu kertoo, miten paikka rakennettiin, hylättiin ja löydettiin uudelleen 1900-luvun alussa.',
+      nostot: [
+        {
+          otsikko: 'Kaupunki, jota isoisä ei koskaan nähnyt',
+          teksti:
+            'Machu Picchu kohosi vuoristonharjanteelle 1400-luvun puolivälissä, todennäköisesti keisari Pachacutecin käskystä Urubamban laakson valloituksen jälkeen: kausiluonteinen maatila, ei pysyvä pääkaupunki. Espanjalaisten kukistaessa inkavallan 1500-luvulla kaupunki autioitui, tutkijoiden mukaan mahdollisesti tautien ja vallan romahduksen vuoksi. Kun isoisä kirjoitti matkapäiväkirjaansa 1873, Machu Picchu oli yhä täysin tuntematon ulkomaailmalle: vain muutama lähilaakson perhe tiesi raunioista. Hiram Bingham toi paikan maailman tietoisuuteen vasta 1911 – isoisä ei siis koskaan voinut käydä täällä, koska paikka ei vielä ollut kenenkään ulkopuolisen kartalla.',
+          tiedosto: 'Partial view of Machu Picchu in 1911.jpg',
+          lyhyt: 'Machu Picchu kasvillisuuden peittämänä heinäkuussa 1911, ennen raivaustöitä.',
+          selite:
+            'Yhdysvaltalaisen retkikunnan valokuvaaja H. L. Tucker kuvasi rauniot 24. heinäkuuta 1911, samana päivänä kun Hiram Bingham saapui paikalle paikallisen oppaan johdattamana. Sankka kasvillisuus peittää muurit lähes kokonaan – vasta seuraavana vuonna otetut kuvat paljastavat raivatun kaupungin.',
+          lahde: 'H. L. Tucker, Wikimedia Commons (PD)',
+          wiki: 'Machu Picchu',
+        },
+        {
+          otsikko: 'Kahden huipun satulassa',
+          teksti:
+            'Machu Picchu sijaitsee 2 430 metrin korkeudessa Itäisen Kordilleerin vuoristonharjanteella, noin 80 kilometriä Cuscosta luoteeseen. Kaupunki on rakennettu satulaksi kahden huipun, Machu Picchun ja Huayna Picchun, väliin, ja Urubamba-joki kiertää sitä kolmelta sivulta jyrkkien, noin 450 metriä syvien rotkojen pohjalla. Ilmasto on kostea vuoristosademetsä: sadetta kertyy yli 2 000 millimetriä vuodessa ja ilmankosteus pysyy usein 80–90 prosentissa. Sijainti oli tarkoituksella vaikeapääsyinen ja helposti puolustettava, mutta samalla poikkeuksellisen näyttävä – pilvet verhoavat huippuja lähes joka aamu.',
+          tiedosto: 'Machu Picchu, Perú, 2015-07-30, DD 47.JPG',
+          lyhyt: 'Kaupungin kiviset asuinrakennukset ja terassit Huayna Picchun juurella.',
+          selite:
+            'Kuva on otettu klassiselta näköalapaikalta: harjakattoisten kivirakennusten rivistö laskeutuu terasseille, ja taustalla kohoaa jyrkkä Huayna Picchun huippu pilvien seassa.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Machu Picchu',
+        },
+        {
+          otsikko: 'Kuninkaan kesämaatila',
+          teksti:
+            'Arkeologien nykykäsityksen mukaan Machu Picchu oli inkakeisarin yksityinen maatila ja pyhäkkö, ei tavallinen kaupunki eikä sotilaslinnake – asiaa ei kuitenkaan voi vahvistaa suoraan yhdestäkään aikalaislähteestä. Paikalla on noin 200 rakennusta asuintaloista temppeleihin, ja niissä asui pääasiassa yanaconoiksi kutsuttuja pysyviä palvelijoita sekä papistoa. Väkeä oli eniten kesäisin hallitsijan seurueen vieraillessa; talvella paikalle jäi vain pieni ylläpitohenkilöstö. Viljelysterassit eivät riittäneet ruokkimaan edes tätä pientä väestöä, joten suurin osa ruoasta kannettiin ylös naapurilaaksoista.',
+          tiedosto: '80 - Machu Picchu - Juin 2009 - edit.jpg',
+          lyhyt: 'Koko kaupunki iltavalossa, Huayna Picchu taustalla.',
+          selite:
+            'Laaja iltakuva näyttää kaupungin rakennukset ja viljelysterassit kokonaisuutena laaksoa reunustavien vuorten keskellä; dramaattinen pilvitaivas korostaa paikan eristyneisyyttä.',
+          lahde: 'Martin St-Amant (S23678), Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Machu Picchu',
+        },
+        {
+          otsikko: 'Opas, viljelijät ja unohdettu nimikirjoitus',
+          teksti:
+            'Heinäkuun 24. päivänä 1911 paikallinen maanviljelijä Melchor Arteaga johdatti yhdysvaltalaisen historioitsijan Hiram Binghamin raunioille, vaikka tämä oli tuolloin etsimässä aivan toista paikkaa, kadonnutta Vilcabamban pääkaupunkia. Kukkulalla asui jo kaksi ketšua-viljelijäperhettä, Richarte ja Álvarez, jotka olivat raivanneet vanhoja terasseja uuteen käyttöön, ja Kolmen ikkunan temppelin seinästä löytyi toisen perulaisen, Agustín Lizárragan, vuonna 1902 jättämä nimikirjoitus. Binghamin varhaisimmat kirjoitukset mainitsivat Lizárragan ensimmäisenä kävijänä, mutta myöhemmin hän alkoi verrata itseään Kolumbukseen ja esitti löydön omakseen.',
+          tiedosto: 'Machupicchu hb10.jpg',
+          lyhyt: 'Binghamin oma valokuva raivatusta kaupungista vuodelta 1912.',
+          selite:
+            'Hiram Bingham kuvasi raunioiden noin puolikkaan itse vuonna 1912, kun terassit, Pyhä aukio ja Intihuatana-kukkula oli jo raivattu näkyviin; kuva julkaistiin National Geographicissa 1913.',
+          lahde: 'Hiram Bingham III, Wikimedia Commons (PD)',
+          wiki: 'Hiram Bingham III',
+        },
+        {
+          otsikko: 'Maailmanperintöä ja miljoonajonoja',
+          teksti:
+            'Peru julisti 325,92 neliökilometrin alueen Machu Picchun ympärillä historialliseksi pyhäkköalueeksi 1981, ja Unesco lisäsi sen maailmanperintöluetteloon 1983 kuvaillen sitä taiteen, kaupunkisuunnittelun ja tekniikan mestariteokseksi. Vuonna 2007 äänestyskampanja nosti Machu Picchun myös uusien maailmanihmeiden joukkoon. Suosio on kasvanut valtavaksi: kävijöitä on nykyään yli 1,5 miljoonaa vuodessa, ja päivittäistä kävijämäärää on jouduttu rajoittamaan – vuoden 2011 2 500 kävijän katosta on noustu 4 500:aan, ruuhka-aikoina jopa 5 600:aan. Unesco harkitsi 2017 paikan siirtämistä vaarassa olevien listalle, mutta päätti olla tekemättä niin.',
+          tiedosto: '2013-02-16 Tourists in Machu Picchu.jpg',
+          lyhyt: 'Matkailijoita kulkemassa kivisen portin läpi vuonna 2013.',
+          selite:
+            'Reput selässään matkailijat kulkevat kaupungin sisääntuloportin läpi kivimuurin ja Huayna Picchun rinteen välissä; tällaisia jonoja kertyy nykyään yli 1,5 miljoonasta vuosittaisesta kävijästä.',
+          lahde: 'Shinji, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Machu Picchu',
+        },
+        {
+          otsikko: 'Väärän vuoren nimi?',
+          teksti:
+            'Nimi Machu Picchu tarkoittaa ketšuaksi suunnilleen "vanha huippu", ja se erottaa kaupungin vieressään kohoavasta terävästä Huayna Picchusta, "nuoresta huipusta". Osa tutkijoista epäilee kuitenkin, että alkuperäinen inkanimi koko kaupungille saattoi todellisuudessa olla Huayna Picchu – nimen "Machu Picchu" popularisoivat vasta Hiram Binghamin 1910-luvun julkaisut. Jos epäily pitää paikkansa, koko kaupunki on tunnettu vuosikymmenet naapurivuoren nimellä ilman että kukaan on virallisesti korjannut asiaa – pieni muistutus siitä, kuinka hataralla pohjalla moni "tunnettu" nimi lepää.',
+          tiedosto: '99 - Machu Picchu - Juin 2009.jpg',
+          lyhyt: 'Panoraama Huayna Picchun huipulta Urubamban laaksoon.',
+          selite:
+            'Kuva on kuvattu Huayna Picchun laelta laajana panoraamana yli sumuisen jokilaakson – samalta vuorelta, jonka nimi saattaa tutkijoiden mukaan alun perin kuulua koko kaupungille.',
+          lahde: 'Martin St-Amant (S23678), Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Huayna Picchu',
+        },
+      ],
+    },
+    {
+      id: 'tiede',
+      nimi: 'Kiveen veistetty taito',
+      johdanto:
+        'Machu Picchu on inkojen insinööritaidon näyteikkuna: laastittomat muurit, tähtitieteellisesti suunnattu kivi ja terassit, jotka kestävät sekä rankkasateen että maanjäristykset. Lue, miten tämä tehtiin ilman rautatyökaluja.',
+      tehtava: {
+        kysymys: 'Millä aineella inkat kiinnittivät Machu Picchun muurien kivet toisiinsa?',
+        vaihtoehdot: [
+          'Kalkkilaastilla',
+          'Ei millään – kivet veistettiin ja hiottiin sopimaan tarkasti toisiinsa',
+          'Märällä savella',
+          'Puutapeilla ja -liitoksilla',
+        ],
+        oikea: 1,
+        fakta:
+          'Machu Picchun muurit on ladottu ilman laastia: kivet on veistetty niin tarkasti yhteen sopiviksi, ettei veitsenterä mahdu saumaan.',
+      },
+      nostot: [
+        {
+          otsikko: 'Muuri ilman laastia',
+          teksti:
+            'Machu Picchun muurit on ladottu ilman laastia: kivet on veistetty ja hiottu niin tarkasti toisiinsa sopiviksi, ettei ohuinkaan veitsenterä mahdu saumaan. Hienoimmat, kuninkaallisille rakennuksille varatut muurit koostuvat suorakulmaisista lohkoista, kun taas tavallisempien rakennusten seinät on karkeampaa kenttäkiveä. Vuonna 2019 julkaistu tutkimus huomasi, ettei kaupungin sijainti aktiivisten maanjäristysvyöhykkeiden päällä liene sattumaa: samat kallion murtumat, jotka tekevät seudusta järistysherkän, ovat tuottaneet runsaasti lohkeillutta kiveä rakennusaineeksi. Trapetsinmuotoiset aukot auttavat rakenteita kestämään tärinää murtumatta.',
+          tiedosto: 'Machu Picchu Interior stone walls 2.jpg',
+          lyhyt: 'Kattamattomien kivirakennusten sisäpihaa ja muureja.',
+          selite:
+            'Kuvassa erottuu sekä karkeampaa kenttäkiveä että tarkkaan veistettyä suorakulmaista muurausta – kaksi Machu Picchun rakennustavoista, jotka molemmat pysyvät pystyssä ilman laastia.',
+          lahde: 'CEllen, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Machu Picchu',
+        },
+        {
+          otsikko: 'Aurinkoon sidottu kivi',
+          teksti:
+            'Pyhän aukion yläpuolisella terassilla seisoo Intihuatana, luonnonkalliosta veistetty pylväskivi, jonka nimi tarkoittaa suunnilleen "paikka, johon aurinko sidotaan". Talvipäivänseisauksena kivi osoittaa suoraan aurinkoon, ja se liittyy laajempaan pyhien vuorten ja taivaankappaleiden linjaukseen – nykytutkijat kuitenkin epäilevät vanhaa käsitystä, jonka mukaan kivi olisi toiminut tarkkana aurinkokellona. Kivi selvisi ehjänä espanjalaisvalloituksesta, jolloin monet vastaavat pyhät kivet tuhottiin muualla Perussa, mutta vuonna 2000 mainoskuvausryhmän nostokurki putosi sen päälle ja lohkaisi siitä kulman irti. Nykyään kiveä ympäröi suoja-aitaus.',
+          tiedosto:
+            'Lascar The Intihuatana stone, damaged by JWT when filming and ad campaign here (4548727214).jpg',
+          lyhyt: 'Intihuatana-kivi köysiaidan takana, matkailijoita ympärillä.',
+          selite:
+            'Luonnonkalliosta veistetty Intihuatana-pylväs seisoo korotetulla terassilla; sitä suojaa nyt aitaus sen jälkeen, kun mainoskuvausten nostokurki vaurioitti kiveä vuonna 2000.',
+          lahde: 'Jorge Láscar from Australia, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Intihuatana',
+        },
+        {
+          otsikko: 'Viljelyä pilvimetsän reunalla',
+          teksti:
+            'Viljelysterassit kattoivat noin 4,9 hehtaaria ja olivat itsessään insinööritaidon näyte: pohjalla oli suuria kiviä, niiden päällä sepeliä, sitten hiekkaa ja soraa ja päällimmäisenä laaksosta ylös kannettua multaa. Kerrosrakenne juoksutti sadeveden tehokkaasti pois eikä päästänyt terasseja sortumaan, vaikka sadetta kertyy seudulla yli 1 800 millimetriä vuodessa. Maissia ja perunaa viljeltiin, mutta sato ei riittänyt ruokkimaan koko väestöä, joten suurin osa ruoasta tuotiin muualta laaksoista. Kanavat ja lähteet johtivat vettä ylhäältä alaspäin koko kaupungin läpi, ja osa terasseista rakennettiin vasta aiemman maanvyörymän tuhoaman rakennelman tilalle.',
+          tiedosto:
+            'View of the temples zone and agricultural terraces from the Astronomical Observatory at Machu Picchu, Peru.jpg',
+          lyhyt: 'Terassiportaat laskeutuvat temppelialueelle sumuisten vuorten keskellä.',
+          selite:
+            'Näkymä korkealta kiviterassilta yli portaittain laskeutuvien viljelysterassien ja temppelialueen rakennusten; sadevesi valui terassikerrosten läpi sortamatta rakenteita.',
+          lahde: 'CEllen, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Machu Picchu',
+        },
+        {
+          otsikko: 'Torni kallion ympärillä',
+          teksti:
+            'Torreón eli Aurinkotemppeli on Machu Picchun ainoa pyöreäseinäinen rakennus, ja se on muurattu suoraan luonnollisen kalliolohkareen ympärille sen sijaan, että kallio olisi tasoitettu pois tieltä. Puolipyöreä yläosa on rakennettu hienoimmalla mahdollisella tekniikalla, kun taas kallion alle jäävä tila on jätetty karkeammaksi. Trapetsinmuotoiset ikkuna-aukot on suunnattu niin, että auringonvalo osuu tarkasti tiettyihin kohtiin tornin sisällä vuoden tiettyinä päivinä, mikä viittaa rakennuksen käyttöön taivaanilmiöiden seuraamisessa ja niihin liittyvissä rituaaleissa.',
+          tiedosto: 'Machu Picchu Torreón.jpg',
+          lyhyt: 'Aurinkotemppelin pyöreä torni luonnonkiven päällä.',
+          selite:
+            'Puolipyöreä Torreón on muurattu suoraan luonnollisen kallionlohkareen ympärille; trapetsinmuotoiset ikkuna-aukot päästävät auringonvalon sisään tarkasti tiettyinä päivinä.',
+          lahde: 'Hans Brian Brandsberg Berg, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Machu Picchu',
+        },
+      ],
+    },
+  ],
+
+  madagaskar: [
+    {
+      id: 'kaupunki',
+      nimi: 'Madagaskar',
+      johdanto:
+        'Madagaskar on maailman neljänneksi suurin saari, joka irtosi Afrikasta ja lopulta Intiasta noin 88 miljoonaa vuotta sitten ja kehitti oman, eristyneen luontonsa. Vuonna 1873 saarta hallitsi yhä itsenäinen Merina-kuningaskunta.',
+      nostot: [
+        {
+          otsikko: 'Saari joka irtosi mantereista',
+          teksti:
+            'Madagaskar on lähes 1600 kilometriä pitkä ja pinta-alaltaan suurempi kuin Ranska. Se erosi ensin Afrikasta, myöhemmin Intian mantereesta – niin kauan sitten, että suurin osa saaren kasveista ja eläimistä on kehittynyt omaa tietään eikä löydy mistään muualta. Kun isoisä saapui saarelle vuonna 1873, hän astui kuningaskuntaan, jota eurooppalaiset kartat tunsivat vielä huonosti: keskiylängön Merina-kuningaskunta hallitsi pääkaupungistaan Antananarivosta, ja saaren rannikoilla asui kymmeniä muita kansoja omine hallitsijoineen ja tapoineen.',
+          tiedosto: 'Tsingy de Bemaraha Strict Nature Reserve.jpg',
+          lyhyt: 'Bemarahan tsingy-kalkkikivimuodostuma läntisellä Madagaskarilla.',
+          selite:
+            'Piikikäs kalkkikivilabyrintti Bemarahan luonnonpuistossa: sade on vuosituhansien aikana veistänyt kalliosta terävät harjanteet ja syvät kuilut, joita malagassiksi kutsutaan tsingyksi.',
+          lahde: 'ASMaloney, Wikimedia Commons (PD)',
+          wiki: 'Tsingy de Bemaraha Strict Nature Reserve',
+        },
+        {
+          otsikko: 'Kuninkaanmäki pilvien yläpuolella',
+          teksti:
+            'Antananarivo kohoaa lähes 1500 metrin korkeudessa Analamanga-kukkulalla, jonka huipulle kuningas Andrianjaka perusti hallitsijoidensa kotipaikan jo 1600-luvun alussa. Vuosisatojen kuluessa mäelle nousi viisi palatsia, kappeli ja yhdeksän kuninkaallista hautaa – kokonaisuutta kutsutaan Rovaksi. 1860- ja 1870-luvulla se koki uuden kukoistuksen: Ranavalona II teetätti mäelle komean kivikappelin ja vuorasi vanhan puisen Manjakamiadana-palatsin kivimuurilla, joka näkyy yhä nykyisessä, tulipalon jälkeen jälleenrakennetussa Rovassa.',
+          tiedosto: 'Rova Antananarivo Madagascar 2015.jpg',
+          lyhyt: 'Antananarivon Rova, Merina-kuninkaiden entinen palatsikukkula.',
+          selite:
+            'Jälleenrakennettu Manjakamiadana-palatsi kahden tornin ja kivikaarigallerian kanssa Antananarivon Rova-kukkulalla, kuvattuna kirkkaana päivänä alhaalta käsin.',
+          lahde: 'Pufacz, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Rova of Antananarivo',
+        },
+        {
+          otsikko: 'Hopeapalatsi ja pääministerin valta',
+          teksti:
+            'Todellinen valta oli 1870-luvun Madagaskarilla pääministerillä, ei kuningattarella. Rainilaiarivony johti hallitusta 31 vuoden ajan ja piti asemansa naimalla peräkkäin kolme hallitsevaa kuningatarta – ensin Rasoherinan, sitten Ranavalona II:n. Hän uudisti maata: pakollinen kouluopetus, englantilaiseen malliin nojaava lakikirja, uudistettu armeija ja oikeuslaitos. Vuonna 1873, samana vuonna kun isoisä matkusti saarella, hän tilasi itselleen Rova-kukkulan alarinteeseen upean Andafiavaratra-palatsin, jota englantilainen arkkitehti William Pool suunnitteli.',
+          tiedosto: 'Andafiavaratra Palace Antananarivo2 2019-10-02 .jpg',
+          lyhyt: 'Andafiavaratra, pääministeri Rainilaiarivonyn palatsi vuodelta 1873.',
+          selite:
+            'Andafiavaratran palatsin punatiiliset tornit ja kupoli kohoavat Antananarivon kattojen yläpuolella, kuvattuna muinaisen muistomerkin pylväikön takaa.',
+          lahde: 'Z thomas, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Andafiavaratra Palace',
+        },
+        {
+          otsikko: 'Kuningatar Ranavalona II',
+          teksti:
+            'Ranavalona II nousi valtaistuimelle 1868 ja meni seuraavana vuonna naimisiin pääministeri Rainilaiarivonyn kanssa julkisessa seremoniassa Andohalon torilla – tilaisuus, jossa hovi kääntyi virallisesti kristinuskoon. Syyskuussa 1869 kuningatar antoi polttaa perinteiset kuninkaalliset sampy-talismaanit roihussa ja korvasi niiden uskonnollisen aseman Raamatulla. Isoisän matkavuonna 1873 kristinusko oli siis ollut Merina-hovin virallinen uskonto jo neljä vuotta, vaikka suuri osa maaseudun väestöstä eli edelleen vanhojen tapojensa mukaan.',
+          tiedosto: 'Ranavalona II (USC).jpg',
+          lyhyt: 'Kuningatar Ranavalona II muotokuvamaalauksen jäljennöksessä.',
+          selite:
+            'Valokuva Philippe-Auguste Ramanankirahinan maalaamasta muotokuvasta: kuningatar Ranavalona II kruunussa ja turkisreunaisessa viitassa, käsi nojaamassa tuoliin.',
+          lahde: 'Philippe-Auguste Ramanankirahina, Wikimedia Commons (PD)',
+          wiki: 'Ranavalona II',
+        },
+        {
+          otsikko: 'Kivikirkot muistona vainoista',
+          teksti:
+            'Lontoon lähetysseuran opettajat saapuivat Antananarivoon 1820-luvulla kuningas Radama I:n kutsumina ja opettivat malagassin kielen kirjoittamista latinalaisin kirjaimin sekä käänsivät Raamatun. Seuraava kuningatar Ranavalona I kielsi kristinuskon 1835 kuolemanrangaistuksen uhalla, ja seuraavien vuosikymmenien aikana kymmeniä uskovia teloitettiin tai ajettiin koettelemuksiin. Vainot päättyivät 1860-luvulla, ja niiden muistoksi lähetysseura pystytti Antananarivoon useita kivikirkkoja – yksi niistä seisoo yhä Ambatonakangan kukkulalla kaupungin vanhassa keskustassa.',
+          tiedosto: 'FJKM Ambatonakanga,.jpg',
+          lyhyt: 'Ambatonakangan kivikirkko Antananarivon vanhassa kaupungissa.',
+          selite:
+            'Ambatonakangan kirkon hiekkakivinen kellotorni kohoaa kapealta kadulta kuvattuna; edustalla pysäköityjä autoja ja ohikulkija valkoisessa mekossa.',
+          lahde: 'Haër14, Wikimedia Commons (CC0)',
+          wiki: 'London Missionary Society',
+        },
+        {
+          otsikko: 'Satama joka piti Ranskan odottamassa',
+          teksti:
+            'Toamasina oli 1800-luvulla Madagaskarin tärkein satamakaupunki: luonnollinen koralliriutan suojaama satama-allas, josta ulkomaiset kauppiaat, konsulit ja lähetyssaarnaajat astuivat maihin Merina-kuningattaren luvalla. Satamaa ja rannikkoa hallinnoivat kuningattaren nimittämät kuvernöörit, jotka valvoivat myös kasvavaa ranskalaista kauppaetua. Ranska oli 1873 jo kiinnostunut saaresta, mutta varsinainen valloitus tapahtui vasta 1896–1897 – isoisän vieraillessa saari oli yhä täysin itsenäinen kuningaskunta, ei siirtomaa.',
+          tiedosto:
+            'Rainandriamampandry ex gouverneur de Tamatave et sa famille.jpg',
+          lyhyt: 'Toamasinan entinen kuvernööri Rainandriamampandry perheineen.',
+          selite:
+            'Sepiansävyinen ryhmäpotretti noin vuodelta 1880: kuvernööri istuu keskellä ruudullisessa puvussa, ympärillä kymmenkunta perheenjäsentä osin perinteisissä raidallisissa lamba-viitoissa.',
+          lahde: 'Wikimedia Commons (PD)',
+          wiki: 'Toamasina',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto:
+        'Eristyneisyys teki Madagaskarista luonnon laboratorion: yli 90 prosenttia saaren nisäkkäistä, matelijoista ja kasveista ei elä missään muualla maailmassa. Itärannikon sademetsät kätkevät osan maailman erikoisimmasta eläimistöstä.',
+      tehtava: {
+        kysymys: 'Mikä on maailman pienin tunnettu kädellinen?',
+        vaihtoehdot: ['Hiirimaki', 'Indri', 'Kissamaki', 'Sifaka'],
+        oikea: 0,
+        fakta:
+          'Ruskohiirimaki (Microcebus rufus) painaa vain noin 40 grammaa ja on pienin tunnettu kädellinen – se metsästää öisin Madagaskarin sademetsissä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Indri – sademetsän laulaja',
+          teksti:
+            'Indri on suurin nyt elävistä maki-lajeista ja lähes hännätön, mikä erottaa sen muista maki-eläimistä heti näöltä. Se elää perheryhminä Madagaskarin itärannikon sademetsissä, muun muassa Andasibe-Mantadian kansallispuistossa, ja tunnetaan kaikuvasta, minuutteja kestävästä laulustaan, joka kantaa metsässä kilometrien päähän ja merkitsee ryhmän reviiriä. Toisin kuin useimmat maki-lajit indri on päiväeläin. Elinympäristön hupeneminen on tehnyt siitä uhanalaisen, eikä lajia ole koskaan onnistuttu pitämään hengissä eläintarhassa pitkään.',
+          tiedosto: 'Indri in Andasibe 16.JPG',
+          lyhyt: 'Indri syömässä lehteä puun latvuksessa Andasibessa.',
+          selite:
+            'Musta-valkoinen indri istuu puunrungon kupeessa vihreässä latvustossa ja pureskelee lehteä käpälässään, silmät suoraan kameraan päin.',
+          lahde: 'Heinonlein, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Indri',
+        },
+        {
+          otsikko: 'Baobabien kuja',
+          teksti:
+            'Länsi-Madagaskarin kuivissa lehtimetsissä kasvaa Grandidierin baobabeja, joiden paksu, pullea runko varastoi vettä kuivan kauden varalle ja voi elää satoja vuosia. Kuuluisin näky on Morondavan lähellä kulkeva hiekkatie, jonka reunustavat parikymmentä jopa 30 metriä korkeaa baobabia – paikalliset kutsuvat sitä esi-isien kujaksi. Puut ovat jäänteitä kerran laajemmasta metsästä, joka on raivattu viljelymaaksi niiden ympäriltä; yksinäisinä seisovat jättiläiset ovat siksi sekä luonnonihme että muistutus metsäkadosta.',
+          tiedosto: 'Allée des baobabs Morondava Madagascar.jpg',
+          lyhyt: 'Baobabien kuja Morondavan lähellä auringonlaskun aikaan.',
+          selite:
+            'Rivi paksurunkoisia baobabeja hiekkatien varrella hämärtyvässä illassa; puiden pyöreät latvukset erottuvat mustina siluetteina vaaleaa taivasta vasten.',
+          lahde: 'Cactus0625, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Avenue of the Baobabs',
+        },
+        {
+          otsikko: 'Väriä vaihtava kameleontti',
+          teksti:
+            'Pantterikameleontti on yksi Madagaskarin näyttävimmistä matelijoista: koiraat voivat olla kirkkaan vihreitä, punaisia tai turkoosinsinisiä alueesta riippuen, ja väri vaihtelee myös mielialan, lämpötilan ja seuraparinvalinnan mukaan – ei siis vain naamioitumiseksi. Laji elää erityisesti saaren pohjoisosissa, muun muassa Montagne d’Ambren kansallispuiston sademetsissä, ja sen silmät liikkuvat toisistaan riippumatta, mikä antaa lähes koko ympäristön kattavan näkökentän saaliin ja saalistajien tarkkailuun.',
+          tiedosto: 'Panther chameleon (Furcifer pardalis) male Montagne d’Ambre.jpg',
+          lyhyt: 'Vihreä pantterikameleontti oksalla Montagne d’Ambressa.',
+          selite:
+            'Vihreä, valkoisin ja tummin raidoin kuvioitu pantterikameleontti lepää vaakasuoralla oksalla, kuono ja kuperat, itsenäisesti kääntyvät silmät kohti kameraa.',
+          lahde: 'Charles J. Sharp, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Panther chameleon',
+        },
+        {
+          otsikko: 'Fossa – saaren suurin peto',
+          teksti:
+            'Fossa näyttää pieneltä puumalta tai isolta kissalta, mutta se ei ole kumpaakaan: se kuuluu omaan sukuunsa, joka on läheisintä sukua saaren mangusteille. Aikuinen uros voi olla lähes kaksi metriä pitkä hännän kanssa mitattuna ja on Madagaskarin suurin lihansyöjänisäkäs. Fossa liikkuu taitavasti sekä maassa että puiden latvuksissa ja saalistaa pääasiassa makeja – yksi ainoa fossa voi tappaa kymmeniä lemurin sukuisia eläimiä vuodessa. Laji elää yksin laajalla reviirillä eri puolilla saaren metsiä ja on elinympäristön häviämisen vuoksi harvinaistunut.',
+          tiedosto: 'Cryptoprocta ferox 61884767.jpg',
+          lyhyt: 'Fossa istumassa valppaana metsän aukiolla.',
+          selite:
+            'Ruskea, pitkähäntäinen fossa istuu valppaana hiekkaisella metsäaukiolla katse sivulle suunnattuna; taustalla toinen fossa makaa maassa.',
+          lahde: 'Lennart Hudel, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Fossa (animal)',
+        },
+        {
+          otsikko: 'Maailman pienin kädellinen',
+          teksti:
+            'Ruskohiirimaki mahtuisi kokonaan kämmenelle: aikuinen painaa vain noin 40 grammaa ja on pituudeltaan hännän kanssa alle 30 senttimetriä. Se on yöeläin, joka liikkuu itärannikon sademetsissä, kuten Ranomafanan kansallispuistossa, etsimässä hedelmiä, hyönteisiä ja kasvimehua suurten, hämärässä hyvin näkevien silmiensä avulla. Päivät se viettää nukkuen puunkoloissa tai itse rakentamissaan pallomaisissa pesissä. Vaikka laji on pieni, se on yksi todiste siitä, kuinka moneen suuntaan lemurien sukupuu on Madagaskarilla haarautunut.',
+          tiedosto: 'Brown Mouse Lemur (Microcebus rufus) (3442061750).jpg',
+          lyhyt: 'Ruskohiirimaki kiipeämässä oksalla yöllä.',
+          selite:
+            'Pieni, isosilmäinen ruskohiirimaki kävelee neljällä jalalla paksua oksaa pitkin vihreiden lehtien keskellä, pitkä häntä kaartuu takana.',
+          lahde: 'Leonora (Ellie) Enking, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Brown mouse lemur',
+        },
+      ],
+    },
+  ],
+
+  sahara: [
+    {
+      id: 'kaupunki',
+      nimi: 'Sahara',
+      johdanto: 'Sahara on maailman suurin kuuma aavikko, lähes Yhdysvaltain kokoinen hiekka- ja kivikkomeri. Isoisän 1873 päiväkirjassa se on rajaton autius, jonka halki tutkimusmatkailijat etenivät karavaanireittejä pitkin.',
+      nostot: [
+        {
+          otsikko: 'Maailman suurin kuuma aavikko',
+          teksti: 'Sahara peittää yli 9 miljoonaa neliökilometriä Pohjois-Afrikkaa – alueen kokoinen soisi koko Yhdysvallat. Se on maailman suurin kuuma aavikko, vain Etelämanner ja arktiset seudut ovat sitä laajempia kylminä autiomaina. Yleisestä mielikuvasta poiketen suurin osa Saharasta ei ole hiekkadyynejä vaan kivistä hamada-tasankoa ja paljasta kalliota; hiekkamerten eli ergien osuus koko pinta-alasta on vain murto-osa. Isoisän matkapäiväkirjassa vuodelta 1873 aavikko kuvataan äärettömänä tyhjyytenä, mutta sen halki kulki tuolloinkin vuosisataisia karavaanireittejä kaupungista toiseen.',
+          tiedosto: 'Sahara satellite hires.jpg',
+          lyhyt: 'Sahara avaruudesta kuvattuna ulottuu horisontista toiseen.',
+          selite: 'NASA:n satelliittikuva näyttää Saharan hiekka- ja kivikkoalueet ylhäältä, koko aavikon laajuuden hahmottuen kerralla.',
+          lahde: 'NASA, Wikimedia Commons (PD)',
+          wiki: 'Sahara',
+        },
+        {
+          otsikko: 'Kultaa, suolaa ja karavaanireittejä',
+          teksti: 'Ranskalainen tutkimusmatkailija Edouard Blanc piirsi vuonna 1889 kartan Saharan kauppareiteistä – samoista reiteistä, joita pitkin kamelikaravaanit olivat kulkeneet vuosisatoja. Pohjoiseen vietiin kultaa ja suolaa: Taghazan ja Bilman suolakaivoksista louhittu suola vaihdettiin Länsi-Afrikan kultaan ja muihin tavaroihin. Osa karavaaneista käsitti tuhansia kameleita, ja berberioppaat johtivat matkueen kaivolta toiselle. Reittien varrelle nousivat vauraat kaupungit kuten Timbuktu. Isoisän matkavuosina 1870-luvulla perinteinen karavaanikauppa oli jo hiipumassa, kun ranskalaiset laajensivat valtaansa ja rakensivat rautateitä rannikolle.',
+          tiedosto: 'Grandes routes commerciales du Sahara par E Blanc 1889.JPG',
+          lyhyt: 'Ranskalaisen tutkimusmatkailijan vuonna 1889 piirtämä kartta Saharan kauppareiteistä.',
+          selite: 'Edouard Blancin kartta esittää Saharan halki kulkeneet karavaanireitit ja niiden solmukohdat 1800-luvun lopulla.',
+          lahde: 'Edouard Blanc (1858-1923), Wikimedia Commons (PD)',
+          wiki: 'Trans-Saharan trade',
+        },
+        {
+          otsikko: 'Barth, mies joka kartoitti tuntemattoman',
+          teksti: 'Preussilaissyntyinen Heinrich Barth lähti 1850 brittihallituksen rahoittamalle retkikunnalle, jonka piti avata kauppasuhteita Saharan eteläpuolisiin alueisiin. Matkatoverit Richardson ja Overweg kuolivat tautiin matkan varrella, ja Barth jatkoi lopulta yksin. Viidessä vuodessa hän kulki yli 19 000 kilometriä Tripolista Timbuktuun ja Tsad-järvelle asti, monin paikoin ensimmäisenä eurooppalaisena. Palattuaan hän julkaisi viisiosaisen, lähes 3 500-sivuisen matkakertomuksen kielistä, historiasta ja kaupankäynnistä – teoksesta tuli tutkijoiden perusteos vuosikymmeniksi.',
+          tiedosto: 'Portret van Heinrich Barth, RP-P-1915-724.jpg',
+          lyhyt: 'Heinrich Barthin muotokuva teräspiirroksena 1800-luvulta.',
+          selite: 'August Wegerin teräspiirros esittää tutkimusmatkailija Heinrich Barthia, joka kartoitti Saharaa ja Länsi-Sudania 1850-luvulla.',
+          lahde: 'August Weger / Rijksmuseum, Wikimedia Commons (CC0)',
+          wiki: 'Heinrich Barth',
+        },
+        {
+          otsikko: 'Nachtigal ja tuntematon Tibesti',
+          teksti: 'Preussin kuningas Vilhelm I lähetti lääkäri Gustav Nachtigalin viemään lahjoja Bornun hallitsijalle vuonna 1869. Vain kahdeksalla kamelilla ja kuudella miehellä Nachtigal poikkesi reitiltään ja ylitti Tibestin ja Borkoun vuoret, alueet joilla eurooppalainen ei ollut aiemmin käynyt. Matka venyi viideksi vuodeksi ja päättyi Khartumiin talvella 1874 – isoisän oman matkavuoden kynnyksellä. Nachtigal kirjasi havaintonsa teokseen Sahara ja Sudan ja kohteli tapaamiaan kansoja tutkivalla, ei alistavalla otteella, mikä oli aikanaan harvinaista.',
+          tiedosto: 'Gustav Nachtigal par Adolph Ludwig BNF Gallica.jpg',
+          lyhyt: 'Gustav Nachtigalin muotokuva, valokuvaaja Adolph Ludwig.',
+          selite: 'Valokuva esittää saksalaista tutkimusmatkailijaa Gustav Nachtigalia, joka ylitti Tibestin ja Borkoun vuoret 1870-luvun alussa.',
+          lahde: 'Adolph Ludwig, Wikimedia Commons (PD)',
+          wiki: 'Gustav Nachtigal',
+        },
+        {
+          otsikko: 'Hiekkaa siellä missä kerran virtasi vesi',
+          teksti: 'Libyan lounaisosassa kohoava Tadrart Acacus -vuoristo on täynnä hiekkakivikaaria, syviä rotkoja ja värikkäitä dyynejä. Kallioihin on piirretty ja hakattu kuvia kirahveista, norsuista, strutseista ja tanssivista ihmisistä, osa jopa 14 000 vuoden takaa. Kuvat todistavat, että alue oli kerran vihreä ja eläimistä vilisevä savanni ennen kuin ilmasto kuivui nykyiseksi aavikoksi. Unesco liitti Tadrart Acacusin maailmanperintöluetteloon 1985; vuodesta 2016 kohde on ollut uhanalaisten listalla öljynetsinnän ja muinaismuistoryöstöjen vuoksi.',
+          tiedosto: 'Libya 4985 Tadrart Acacus Luca Galuzzi 2007.jpg',
+          lyhyt: 'Hiekkadyynejä ja jalanjälkiä Libyan Tadrart Acacus -vuoristossa.',
+          selite: 'Kuva näyttää pehmeät hiekkadyynit Tadrart Acacus -alueella Libyan länsiosassa, osana laajempaa Saharan aavikkoa.',
+          lahde: 'Luca Galuzzi, Wikimedia Commons (CC BY-SA 2.5)',
+          wiki: 'Acacus Mountains',
+        },
+        {
+          otsikko: 'Sammuneet tulivuoret keskellä aavikkoa',
+          teksti: 'Keskellä Algerian aavikkoa kohoaa Ahaggarin eli Hoggarin vuoristo, jonka huippu Tahat nousee 2 908 metriin – Algerian korkein kohta. Osa jyrkistä huipuista, kuten Ilamen, on sammuneiden tulivuorten eroosion paljastamia syöttökanavia, ja peruskallio on lähes kaksi miljardia vuotta vanhaa. Yöt ovat vuoristossa kylmiä, toisinaan pakkasen puolella, vaikka ympäröivä aavikko hehkuu päivällä kuumuudesta. Alue on vuosisatoja ollut Kel Ahaggar -tuaregien kotiseutua ja yksi Saharan harvoista paikoista, joissa erikoistunut linnusto on säilynyt muuttuvassa ilmastossa.',
+          tiedosto: 'Ahaggar Landsat 8 pan sharpened composite.jpg',
+          lyhyt: 'Ahaggarin tulivuoristo satelliittikuvassa keskellä Algerian aavikkoa.',
+          selite: 'Kuva on koostettu 58 Landsat 8 -satelliittikuvasta ja näyttää Ahaggarin eli Hoggarin vuoriston muodot ylhäältä.',
+          lahde: 'Linus Wolf, Wikimedia Commons (CC0)',
+          wiki: 'Hoggar Mountains',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Eliöstö ja maasto',
+      johdanto: 'Sahara vaikuttaa elottomalta, mutta hiekan alla ja kivikoiden seassa elää eliöitä, jotka ovat sopeutuneet äärimmäiseen kuivuuteen ja kuumuuteen. Maasto vaihtelee laakeista dyynimeristä suolajärviin ja tuulen kuluttamiin vuoriin.',
+      tehtava: {
+        kysymys: 'Kuinka monta yksilöä villejä addax-antilooppeja arvioidaan olevan jäljellä luonnossa?',
+        vaihtoehdot: ['Alle 500', 'Noin 5 000', 'Noin 50 000', 'Noin 500 000'],
+        oikea: 0,
+        fakta: 'Metsästys ja elinympäristön häviäminen ovat ajaneet addaxin äärimmäisen uhanalaiseksi – luonnossa lajia arvioidaan olevan enää alle 500 yksilöä, lähinnä Nigerin Termit-alueella.',
+      },
+      nostot: [
+        {
+          otsikko: 'Aavikkoketun jättikorvat',
+          teksti: 'Fennekki on maailman pienin kettu- ja koiraeläinlaji: naaraat painavat vain 1–2 kiloa. Sen valtavat, jopa 15 senttiä pitkät korvat ovat suhteessa ruumiiseen suurimmat koko koiraeläinten heimossa – ne johtavat ylimääräisen lämmön pois verenkierrosta ja kuulevat samalla jyrsijöiden liikkeet hiekan alla. Fennekki on yöeläin: polttavan päiväkuumuuden se viettää kolossa ja lähtee liikkeelle vasta illan viilettyä. Munuaiset varastoivat vettä tehokkaasti, ja tuuhea turkki jalkapohjissa suojaa kuumalta hiekalta. Vaalea turkki heijastaa auringonvaloa ja kätkee ketun hiekan sävyihin.',
+          tiedosto: 'Fennec Fox (9163009503).jpg',
+          lyhyt: 'Fennekki suurine korvineen valppaana.',
+          selite: 'Kuva näyttää fennekin, maailman pienimmän kettulajin, sen tunnusomaiset suuret korvat selvästi esillä.',
+          lahde: 'Daniel Ramirez, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Fennec fox',
+        },
+        {
+          otsikko: 'Antilooppi joka ei juo koskaan',
+          teksti: 'Addax on saharansarvieläin, joka voi elää käytännössä juomatta ollenkaan – se saa tarvitsemansa nesteen ravinnostaan ja kasveille yöllä tiivistyvästä kasteesta. Sen kierteiset, jopa 85 senttiä pitkät sarvet antoivat lajille lempinimen ruuvisarvi. Ennen addaxeja laidunsi laajalti Pohjois-Afrikassa ja Arabiassa, mutta metsästys ja elinympäristön häviäminen ovat ajaneet lajin äärimmäisen uhanalaiseksi: luonnossa niitä arvioidaan olevan enää alle 500 yksilöä, lähinnä Nigerin Termit-alueella. Addax liikkuu hitaasti ja rauhallisesti, mikä on tehnyt siitä helpon saaliin autoilla metsästäjille.',
+          tiedosto: 'Addax nasomaculatus 290501482.jpg',
+          lyhyt: 'Addax-antilooppi Marokon aavikolla.',
+          selite: 'Kuva näyttää addax-antiloopin, jonka kierteiset sarvet ja vaalea turkki auttavat selviämään Saharan helteessä.',
+          lahde: 'Justin Philbois, Wikimedia Commons (CC0)',
+          wiki: 'Addax',
+        },
+        {
+          otsikko: 'Aavikon vaarallisin pikkuolento',
+          teksti: 'Androctonus australis eli keltainen paksuhäntäskorpioni on yksi maailman vaarallisimmista skorpionilajeista. Se kasvaa noin 10 senttiseksi ja kantaa paksussa pyrstössään myrkkyä, joka vaurioittaa hermostoa, sydäntä ja lihaksia – ihmiselle pistos voi olla hengenvaarallinen, ja laji aiheuttaa Pohjois-Afrikassa vuosittain kuolemantapauksia. Päivät se piileskelee viileässä kolossa ja lähtee liikkeelle vasta pimeän tultua saalistamaan hyönteisiä ja pikkunisäkkäitä. Toisin kuin moni muu aavikkoeläin, se ei kaivaudu hiekkamyrskyjä pakoon, vaan sen karhea kuori suojaa hiovalta hiekalta sellaisenaan.',
+          tiedosto: 'Androctonus australis qtl1.jpg',
+          lyhyt: 'Keltainen paksuhäntäskorpioni pistoasennossa.',
+          selite: 'Kuva näyttää Androctonus australis -skorpionin, jonka myrkky kuuluu Pohjois-Afrikan vaarallisimpiin.',
+          lahde: 'Quartl, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Androctonus australis',
+        },
+        {
+          otsikko: 'Suolajärviä hiekkameren keskellä',
+          teksti: 'Libyan Fezzanin alueella, keskellä 58 000 neliökilometrin laajuista Awbarin hiekkamerta, piilee yli kaksikymmentä järveä palmulehtoineen. Vettä ei virtaa niihin mistään joesta, joten haihtuminen on tehnyt osasta järvistä lähes viisi kertaa merivettä suolaisempia; suolaa sietävät levät värjäävät joidenkin pinnan punertavaksi. Noin 200 000 vuotta sitten alue oli osa valtavaa Megafezzan-järveä, joka kutistui vähitellen muutaman tuhannen vuoden kuluessa. Nykyiset järvet ovat siis viimeiset jäänteet ajasta, jolloin Sahara oli vihreä ja vetinen.',
+          tiedosto: 'Libya 5391 Ubari Lakes Luca Galuzzi 2007.jpg',
+          lyhyt: 'Suolajärvi ja palmulehto keskellä Awbarin hiekkamerta.',
+          selite: 'Kuva näyttää yhden Ubarin järvistä Libyan Fezzanissa, missä palmut kasvavat hiekkadyynien keskellä olevan suolajärven ympärillä.',
+          lahde: 'Luca Galuzzi, Wikimedia Commons (CC BY-SA 2.5)',
+          wiki: 'Idehan Ubari',
+        },
+        {
+          otsikko: 'Dyynimeri avaruudesta nähtynä',
+          teksti: 'Erg on tuulen vuosisatojen kuluessa kasaama hiekkameri, ja Marokon Erg Chebbi on yksi Saharan tunnetuimmista: dyynit kohoavat paikoin 150 metriin ympäröivästä kivikkoisesta hamadasta ja jatkuvat noin 28 kilometrin matkan. Kansainvälisen avaruusaseman miehistön ottama kuva paljastaa, miten tuuli piirtää hiekkaan toistuvia harjanteita – kuvio muuttuu jatkuvasti tuulen mukana, vaikka koko dyynikenttä pysyy paikallaan vuosisatoja. Ergit peittävät vain pienen osan Saharasta; suurin osa aavikosta on paljasta kalliota ja soraa, jota erg-alueet vain reunustavat.',
+          tiedosto: 'Erg Chebbi dunes Morocco iss070e105480 lrg.jpg',
+          lyhyt: 'Erg Chebbin dyynimeri kuvattuna avaruusasemalta.',
+          selite: 'Kansainvälisen avaruusaseman miehistön ottama kuva näyttää Erg Chebbin dyynikentän harjanteet Marokon ja Algerian rajalla.',
+          lahde: 'NASA (ISS-miehistön valokuva), Wikimedia Commons (PD)',
+          wiki: 'Erg Chebbi',
+        },
+      ],
+    },
+  ],
 };
