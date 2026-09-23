@@ -2387,3 +2387,7 @@ Uusi sessio jatkaa kuva-/lippukysymyksistä ja pulmapiirroksista.
 ## SIIRTOSEPPA NOLLATAAN klo 19.2x (70 %): LUOVUTUS viesti-siirtoseppa-luovutus-20260923-ilta2.md (siirtoseppa-luovutus 53b843d5a), ALOITUS viesti-siirtoseppa-aloitus.md; NIPPU 4 SIISTI (39d0582d8, KAUPUNKIEN KORKEUS 59/266, LOPUT ODOTTAVAT OMISTAJAN DEM-LATAUSLUPAA) (23.9.2026 klo 19.25)
 
 Uusi sessio: CI-paketin tarkistus nipun 3 jälkeen, natiivisessioiden pyynnöt.
+
+## LAITETESTAAJA NOLLATAAN klo 19.2x (70 %): LUOVUTUS viesti-laitetestaaja-luovutus-20260923-ilta.md (HAARA laitetestaaja), ALOITUS viesti-laitetestaaja-aloitus.md; 4 PR:AA MERGETTY; KESKEN KONTAKTI-WEB-AGENTTI LINSSISEPALLE JA PELISILMUKAN 6/6-AJO (liiku MERGETTY) (23.9.2026 klo 19.27)
+
+Uusi sessio: silmukka 6/6, kontaktiarkit, natiivin savukkeet.
