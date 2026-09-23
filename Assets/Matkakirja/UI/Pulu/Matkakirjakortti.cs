@@ -17,6 +17,7 @@
 // kuvat alkavat, kun luento todella alkaa (PeliOhjain.LuentoAlkoi), toinen
 // luentakuva 9 s kohdalla, Livian kommentti ja PuluCam-kuvat luennon jälkeen.
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -161,8 +162,15 @@ namespace Matkakirja.Natiivi
         {
             var el = Rakenne.El("mk-matkakirja__pikkukuva", pikkukuvat);
             el.tooltip = k.Lyhyt;
+            el.userData = k;
             Natiivi.Kuvat.Hae(k.Osoite, t => { if (t != null) el.style.backgroundImage = new StyleBackground(t); });
-            el.RegisterCallback<PointerDownEvent>(e => { e.StopPropagation(); Kuvat.Suurenna(k); });
+            // Suurennos selattavana: kortin kaikki pikkukuvat (web avaaSuurennos ‹ ›).
+            el.RegisterCallback<PointerDownEvent>(e =>
+            {
+                e.StopPropagation();
+                var sarja = pikkukuvat.Children().Select(x => x.userData as VirtaKuva).Where(x => x != null).ToList();
+                Kuvat.Suurenna(sarja, Mathf.Max(0, sarja.IndexOf(k)));
+            });
         }
 
         // --- kaiutin: Kertoja-kytkin ja VU-mittari -----------------------------------

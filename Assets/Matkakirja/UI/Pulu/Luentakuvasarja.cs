@@ -23,11 +23,11 @@ namespace Matkakirja.Natiivi
         public const int VaihtoMs = 9000, PuluVaihtoMs = 4000, LoppuMs = 6000, Katto = 7;
         const float Kallistus = 2.0f, KallistusLisa = 0.4f, SiirtoX = 14f, SiirtoY = 8f;
 
-        readonly VisualElement pakka, suurennos;
+        readonly VisualElement pakka;
+        // Suurennos selattavana sarjana (webin avaaSuurennos ‹ ›): pitkä kuvateksti ja lähde.
+        readonly Kuvasuurennos suurennos;
         readonly Button ohita;
         readonly List<VisualElement> kortit = new List<VisualElement>();
-        readonly Label suurennosTeksti, suurennosLahde;
-        readonly VisualElement suurennosKuva;
         IVisualElementScheduledItem loppu;
 
         /// <summary>Kutsutaan kun kuvat lähtevät (webin kuvien lento korttiin).</summary>
@@ -41,14 +41,7 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(ohita, Kirjasin.Kone);
             ohita.style.display = DisplayStyle.None;
 
-            // Suurennos (webin avaaSuurennos): koko ruutu, pitkä kuvateksti ja lähde.
-            suurennos = Rakenne.El("mk-himmennys mk-himmennys--tumma mk-suurennos", kerros.Juuri(UiKerros.Valikot));
-            suurennos.style.display = DisplayStyle.None;
-            suurennos.RegisterCallback<PointerDownEvent>(_ => Rakenne.Nayta(suurennos, false, 200));
-            suurennosKuva = Rakenne.El("mk-suurennos__kuva", suurennos, PickingMode.Ignore);
-            suurennosTeksti = Rakenne.Teksti("", "mk-suurennos__teksti", suurennos);
-            suurennosLahde = Rakenne.Teksti("", "mk-suurennos__lahde", suurennos);
-            Kirjasimet.Aseta(suurennosTeksti, Kirjasin.Luku);
+            suurennos = new Kuvasuurennos(kerros.Juuri(UiKerros.Valikot));
         }
 
         public bool Nakyy => kortit.Count > 0;
@@ -113,13 +106,16 @@ namespace Matkakirja.Natiivi
             Tyhjenna(true);
         }
 
-        public void Suurenna(VirtaKuva k)
+        /// <summary>Suurennos sarjasta (luennan kuvat), alkaen kohdasta alku; ‹ › selaa.</summary>
+        public void Suurenna(IReadOnlyList<VirtaKuva> sarja, int alku = 0)
         {
-            suurennosTeksti.text = k.Selite ?? k.Lyhyt ?? "";
-            suurennosLahde.text = k.Lahde ?? "";
-            suurennosKuva.style.backgroundImage = StyleKeyword.None;
-            Natiivi.Kuvat.Hae(k.Osoite, t => { if (t != null) suurennosKuva.style.backgroundImage = new StyleBackground(t); });
-            Rakenne.Nayta(suurennos, true, 250);
+            if (sarja == null || sarja.Count == 0) return;
+            var kuvat = new List<LehtiKuva>();
+            foreach (var k in sarja)
+                kuvat.Add(new LehtiKuva { Lahde = k.Osoite, Lyhyt = k.Lyhyt, Selite = k.Selite ?? k.Lyhyt, LahdeRivi = k.Lahde });
+            suurennos.Avaa(kuvat, alku);
         }
+
+        public void Suurenna(VirtaKuva k) => Suurenna(new List<VirtaKuva> { k });
     }
 }

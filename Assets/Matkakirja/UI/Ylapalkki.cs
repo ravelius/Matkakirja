@@ -34,6 +34,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Tilapilleri (matkalaukku ankkuroituu sen alle).</summary>
         public VisualElement Pilleri => pilleri;
 
+        /// <summary>Logon napautus (UiNakymat: tekijätiedot ja lähteet).</summary>
+        public event Action LogoPainettu;
+
         public Ylapalkki(UiKerros kerros)
         {
             var juuri = kerros.Juuri(UiKerros.Tilarivi);
@@ -42,7 +45,9 @@ namespace Matkakirja.Natiivi
             palkki = Rakenne.El("mk-ylapalkki", juuri);
             Rakenne.Tausta(palkki, Kuviot.Ylapalkki);
 
-            var logo = Rakenne.El("mk-logo", palkki, PickingMode.Ignore);
+            // Logo avaa tekijätiedot ja lähteet (web brand-btn, omistaja 5.8.2026).
+            var logo = Rakenne.El("mk-logo", palkki);
+            logo.AddManipulator(new Clickable(() => LogoPainettu?.Invoke()));
             var logoKuva = Resources.Load<Texture2D>("MatkakirjaUI/logo");
             if (logoKuva != null) logo.style.backgroundImage = new StyleBackground(logoKuva);
 
