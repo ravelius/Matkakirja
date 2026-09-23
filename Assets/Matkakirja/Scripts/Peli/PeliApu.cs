@@ -328,6 +328,65 @@ namespace Matkakirja.Natiivi
             return tulos;
         }
 
+        // --- Liiku-vuo: tapa ensin, kohde sitten (web renderTravelChoice vaihe B) ------------------
+
+        /// <summary>
+        /// Kohderivit valitulle tavalle (web vaihe B): bussi "Kaupunki (50 p)" naapureihin (busDestinations),
+        /// lento "Kaupunki (300 p)" (airportDestinations) ja perään mannerlennot "Lennä Oseaniaan: Sydney (300 p)",
+        /// laiva yksi rivi "Laivalla (100 p)" (kohde null: valitsee tavan, noppa heitetään heittonapista).
+        /// Liftaus: tyhjä (web doWalk heittää heti; kohde valitaan siirroista, SiirtoRivit).
+        /// </summary>
+        public static List<(string Kohde, MatkaVaihtoehto Rivi)> KohdeRivit(Matka m, Kulkutapa tapa, IReadOnlyList<MannerlentoKohde> mannerlennot = null)
+        {
+            var rivit = new List<(string, MatkaVaihtoehto)>();
+            switch (tapa)
+            {
+                case Kulkutapa.Bussi:
+                    foreach (var k in m.BussiKohteet())
+                        rivit.Add((k, new MatkaVaihtoehto { Tapa = Kulkutapa.Bussi, Hinta = Vakiot.BussiHinta, Nimi = $"{KaupunginNimi(m.Verkko, k)} ({Vakiot.BussiHinta} p)" }));
+                    break;
+                case Kulkutapa.Lento:
+                    foreach (var k in m.LentoKohteet())
+                        rivit.Add((k, new MatkaVaihtoehto { Tapa = Kulkutapa.Lento, Hinta = Vakiot.LentoHinta, Nimi = $"{KaupunginNimi(m.Verkko, k)} ({Vakiot.LentoHinta} p)" }));
+                    foreach (var k in mannerlennot ?? new Kaupat(m).MannerLennot())
+                        rivit.Add((k.Kaupunki, new MatkaVaihtoehto
+                        {
+                            Tapa = Kulkutapa.Lento, Hinta = Vakiot.LentoHinta, Mannerlento = true,
+                            Nimi = $"{KauppaVakiot.MannerlentoNappi(k)} ({Vakiot.LentoHinta} p)",
+                        }));
+                    break;
+                case Kulkutapa.Meri:
+                    if (m.Kulkutavat().Contains(Kulkutapa.Meri))
+                        rivit.Add((null, new MatkaVaihtoehto { Tapa = Kulkutapa.Meri, Hinta = Vakiot.MeriHinta, Noppa = true, Nimi = $"Laivalla ({Vakiot.MeriHinta} p)" }));
+                    break;
+            }
+            return rivit;
+        }
+
+        /// <summary>
+        /// Nopan siirrot valittaviksi riveiksi (web vaihe 'move': korostetut kohteet kartalla): kaupungit ensin
+        /// nimen mukaan, sitten reitin varren pisteet. Nimi = kaupunki tai "A–B", Selite = askeleet.
+        /// </summary>
+        public static List<(string Avain, MatkaVaihtoehto Rivi)> SiirtoRivit(Matka m)
+        {
+            var t = m.Tila;
+            var rivit = new List<(string, MatkaVaihtoehto)>();
+            if (t.Vaihe != Vaihe.Siirto || t.Siirrot == null) return rivit;
+            var tapa = t.Kulkutapa ?? Kulkutapa.Maa;
+            foreach (var s in t.Siirrot.OrderBy(s => s.Value.Kohde.Kaupungissa ? 0 : 1)
+                         .ThenBy(s => SijaintiNimi(m.Verkko, s.Value.Kohde), StringComparer.Ordinal).ThenBy(s => s.Key, StringComparer.Ordinal))
+            {
+                int askelia = s.Value.Polku?.Count ?? 0;
+                rivit.Add((s.Key, new MatkaVaihtoehto
+                {
+                    Tapa = tapa, Noppa = true, Askelia = askelia,
+                    Nimi = SijaintiNimi(m.Verkko, s.Value.Kohde),
+                    Selite = s.Value.Kohde.Kaupungissa ? $"{askelia} askelta" : $"{askelia} askelta · reitin varrelle",
+                }));
+            }
+            return rivit;
+        }
+
         /// <summary>Mannerlento kohteeseen, jos se on nyt tarjolla (web mannerLennot), muuten null.</summary>
         public static MannerlentoKohde Mannerlento(Matka m, string kohde) =>
             new Kaupat(m).MannerLennot().FirstOrDefault(k => k.Kaupunki == kohde);
@@ -354,7 +413,7 @@ namespace Matkakirja.Natiivi
         };
 
         public static MatkanTulos Matkusta(Matka m, string kohde, Kulkutapa tapa, bool mannerlento = false,
-            Func<string, TekoTulos> vapaaSiirtyminen = null)
+            Func<string, TekoTulos> vapaaSiirtyminen = null, string siirto = null)
         {
             var tulos = new MatkanTulos { Tapa = tapa, Lahto = m.Tila.Pelaaja.Sijainti };
             if (m.Tila.Vaihe == Vaihe.Siirto && m.Tila.Kulkutapa.HasValue && OnNoppatapa(m.Tila.Kulkutapa.Value))
@@ -398,7 +457,8 @@ namespace Matkakirja.Natiivi
                         {
                             // Tallennus jäi heiton ja siirron väliin: noppa on jo heitetty.
                             tulos.Noppa = m.Tila.Noppa;
-                            var jatko = ValitseSiirto(m.Verkko, m.Tila.Siirrot, kohde, m.Tila.Kulkutapa ?? tapa);
+                            // Pelaajan valitsema siirto (Liiku-vuo: noppa ensin, kohde sitten) tai lähin tavoitetta.
+                            var jatko = siirto ?? ValitseSiirto(m.Verkko, m.Tila.Siirrot, kohde, m.Tila.Kulkutapa ?? tapa);
                             tulos.Polku = Polku(m, jatko);
                             r = m.Liiku(jatko);
                             break;
