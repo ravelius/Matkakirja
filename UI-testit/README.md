@@ -108,6 +108,21 @@ kuva huipennus
 ui sulje
 ```
 
+Aarteen paljastus (`Paljastus.cs`, B4): kun kysymyksen löytö on aarre (star = pääaarre tummana,
+muut pergamentilla), paljastus peittää ruudun tulosvaiheessa 2; Jatka matkaa tai napautus sulkee.
+`ui kysymys tulos` (pääaarre) ja `ui kysymys tulos pieniAarre` (paikallisaarre):
+
+```
+ui kysymys tulos
+odota 2
+kuva paljastus-paa
+ui sulje
+ui kysymys tulos pieniAarre
+odota 2
+kuva paljastus-paikallis
+ui sulje
+```
+
 Lehti (`Lehti/Lehtinakyma.cs`, `LehtiSisalto.cs`; natiivi, WKWebView poistuu): kaupunkilehti
 (etusivu, "pintaa syvemmältä", aiheet, maan Menovinkit) ja maalehti (aiheet, sisällys ☰).
 Sivu vaihtuu napeista tai vaakapyyhkäisyllä; kuvan napautus avaa suurennoksen; kaiutin lukee sivun.

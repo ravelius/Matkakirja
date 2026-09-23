@@ -43,6 +43,7 @@ namespace Matkakirja.Natiivi
         public readonly Huipennus Huipennus;
         public readonly Nostokortti Nostokortti;
         public readonly Lehtinakyma Lehti;
+        public readonly Paljastus Paljastus;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         static void KytkeTehdas()
@@ -94,6 +95,7 @@ namespace Matkakirja.Natiivi
             Huipennus = new Huipennus(kerros);
             Nostokortti = new Nostokortti(kerros);
             Lehti = new Lehtinakyma(kerros);
+            Paljastus = new Paljastus(kerros);
             // Karttavalon napautus (Natiiviseppä: AiheValot → KarttaValotSilta) → nostokortti;
             // linssin aikana ei (web linssiEstaa).
             UiPalvelut.ValoNapautettu += id => UiKerros.PaaSaikeessa(() =>
@@ -204,6 +206,7 @@ namespace Matkakirja.Natiivi
             Aloitus.Piilota();
             Nostokortti.Sulje();
             Lehti.Sulje();
+            Paljastus.Sulje();
             Vahvistus.Sulje();
             Matkavalinta.Piilota();
             Matkavalinta.PiilotaHeitto();
