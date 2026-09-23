@@ -166,6 +166,7 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
     saannot: new Set(['js/rules.js', 'js/game.js', 'js/tokens.js', 'js/ai.js'].flatMap((f) => Object.entries(ns(f))
       .filter(([, v]) => onSaantoArvo(v)).map(([n]) => n))).size,
     tapahtumat: ns('africa.js').AFRICA.events.length,
+    linssiaineisto: 7,
     saapuminen: P.cities.length,
     esilasketut: ns('historian-hetket.js').HISTORIAN_HETKET.length + avaimia(ns('elaintakyt.js').ELAINTAKYT)
       + new Set(Object.values(P.map.countryShapes).map((m) => m.nimi).filter(Boolean)).size + 2 + 1,

@@ -346,6 +346,67 @@ function esilaskettuKokoelma(ns, hae) {
     {}, rivit);
 }
 
+/*
+ * LINSSIAINEISTO (skeema 1.7, Linssisepän tarve 23.9.2026): natiivin
+ * linssien tarvitsema data, joka ei ole linssien LINSSI-olioissa.
+ * Reliefikuvia ja topografian tarkennusta ei viedä: natiivi käyttää
+ * Karttasepän reliefipyramidia (Linssiseppä 23.9.2026).
+ */
+// Natiivin avauskynnykset (Fable 23.9.2026 Linssisepän kautta). Web avaa
+// kynnyksillä rekisterin järjestyksessä ensimmäisen omistamattoman
+// mantereettoman linssin (js/linssit/omistus.js), jolloin järjestys on
+// ihmisen matka, keksinnöt, radio, satelliitti.
+const NATIIVIN_AVAUSKYNNYKSET = [
+  { linssi: 'ihmisen-matka', tp: 400 },
+  { linssi: 'keksinnot', tp: 800 },
+  { linssi: 'topografia', tp: 1400 },
+  { linssi: 'satelliitti', tp: 2200 },
+];
+
+function linssiKokoelma(hae) {
+  const L = 'js/linssit/';
+  const { MAAMASKI } = hae(`${L}ihmisen-matka-maamaski.js`);
+  const { RANTAMASKI } = hae(`${L}ihmisen-matka-rantamaski.js`);
+  const { MAISEMAJUURI } = hae(`${L}ihmisen-matka-aanimaisema.js`);
+  const { KERTOMUS_MANIFESTI } = hae(`${L}ihmisen-matka-luenta.js`);
+  const { IHMISEN_MATKA_KUVAJUURI } = hae(`${L}ihmisen-matka-data.js`);
+  const pilvet = hae(`${L}astro-sumu.js`);
+  const aani = hae(`${L}satelliitti-aani.js`);
+  const omistus = hae(`${L}omistus.js`);
+  const RIVIJUOKSUT = 'Rivijuoksut: ruudukko riveittäin pohjoisesta etelään ja lännestä itään (rivi 0 = '
+    + 'pohjoisin, sarake 0 = 180°W). juoksut = base64-tavut, joissa peräkkäiset LEB128-varint-luvut ovat '
+    + 'vuorotellen meren ja maan juoksujen pituuksia, meri ensin (js/aikajana-virrat-laskenta.js puraMaamaski).';
+  const rivit = [
+    { id: 'maamaski', linssi: 'ihmisen-matka', laji: 'maski', muoto: 'rivijuoksut',
+      kuvaus: `${RIVIJUOKSUT} 0,5° ruudut. peitot = maapeitto 0–9 piirtoa varten: pareja (tavu & 15 = arvo, `
+        + 'sitten varint-pituus), puraPeitto. Kulku käyttää vain juoksuja.', data: MAAMASKI },
+    { id: 'rantamaski', linssi: 'ihmisen-matka', laji: 'maski', muoto: 'rivijuoksut',
+      kuvaus: `${RIVIJUOKSUT} Ruudun koko = aste.`, data: RANTAMASKI },
+    { id: 'aanimaisemat', linssi: 'ihmisen-matka', laji: 'manifesti',
+      kuvaus: 'Äänimaisemien manifesti ämpärissä; rivin tiedosto haetaan osoitteesta juuri + tiedosto.',
+      data: { juuri: MAISEMAJUURI, manifesti: `${MAISEMAJUURI}manifesti.json` } },
+    { id: 'kertomus', linssi: 'ihmisen-matka', laji: 'manifesti',
+      kuvaus: 'Kertomuksen luennan manifesti (jaksot ja aikaleimat) ämpärissä; äänet samassa kansiossa.',
+      data: { juuri: `${IHMISEN_MATKA_KUVAJUURI}/puhe`, manifesti: `${IHMISEN_MATKA_KUVAJUURI}/puhe/${KERTOMUS_MANIFESTI}` } },
+    { id: 'pilvet', linssi: 'satelliitti', laji: 'tekstuuri',
+      kuvaus: 'Astronautin kameran pilvikerros (equirectangular).',
+      data: { url: pilvet.PILVIEN_OSOITE, leveys: pilvet.PILVIEN_LEVEYS, korkeus: pilvet.PILVIEN_KORKEUS, lahde: pilvet.PILVIEN_LAHDE } },
+    { id: 'astronautin-aanet', linssi: 'satelliitti', laji: 'aani',
+      kuvaus: 'Aseman humina (aina) ja avaruusmusiikki (musiikkiKaytossa = oletus).',
+      data: { humina: aani.ASTRONAUTIN_HUMINA, musiikki: aani.ASTRONAUTIN_MUSIIKKI, musiikkiKaytossa: aani.ASTRONAUTIN_MUSIIKKI_KAYTOSSA } },
+    { id: 'avauskynnykset', linssi: null, laji: 'saanto',
+      kuvaus: 'Natiivin linssien avaus tietäjäpisteillä (Fable 23.9.2026; radio ei natiivissa). Web avaa samoilla '
+        + 'kynnyksillä järjestyksessä ihmisen matka, keksinnöt, radio, satelliitti. perus = omistettu heti; '
+        + 'optikonHyvitys = puntia, jos kynnyslinssi on jo omistettu.',
+      data: { kynnykset: NATIIVIN_AVAUSKYNNYKSET, webKynnykset: omistus.LINSSIKYNNYKSET,
+        perus: omistus.PERUSLINSSIT, optikonHyvitys: omistus.OPTIKON_HYVITYS } },
+  ];
+  return taulukko('js/linssit/* (ks. rivien kuvaus)',
+    'Linssien aineisto natiiville: ihmisen matkan maa- ja rantamaski, äänimaisemien ja kertomuksen manifestit, '
+      + 'astronautin kameran pilvet ja äänet sekä avauskynnykset. Reliefi = Karttasepän reliefipyramidi.',
+    {}, rivit);
+}
+
 /** nimiavaruudet: Map<moduulipolku, moduulin nimiavaruus> */
 export function kokoaKokoelmat(nimiavaruudet) {
   const ns = {
@@ -364,5 +425,6 @@ export function kokoaKokoelmat(nimiavaruudet) {
     saannot: saantoKokoelma(hae),
     saapuminen: saapumisKokoelma(ns, hae),
     esilasketut: esilaskettuKokoelma(ns, hae),
+    linssiaineisto: linssiKokoelma(hae),
   };
 }

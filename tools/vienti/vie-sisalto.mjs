@@ -64,8 +64,10 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        media.suurennos; kaupungit.lauta {x, y}, reitit.askelia ja via
  *   1.6  saannot: tokens.js ja ai.js (aarteiden arvovälit, BOT_SKILL),
  *        litteät sääntörakenteet; kokoelma tapahtumat (AFRICA.events)
+ *   1.7  kokoelma linssiaineisto (maskit, manifestit, pilvet, astronautin
+ *        äänet, avauskynnykset)
  */
-export const SKEEMAVERSIO_TARKKA = '1.6';
+export const SKEEMAVERSIO_TARKKA = '1.7';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 const tavuja = (s) => Buffer.byteLength(s);
