@@ -22,6 +22,12 @@ Lähde: main `eaeda81cf` (v2143).
 - `tests/vienti.test.mjs` (6 testiä, 3 s) todistaa, ettei mitään jää pois.
   Se vertaa jokaista exporttia suoraan lähdemoduuliin. Testi on todettu
   herkäksi: kun Set muutettiin taulukoksi, testi kaatui.
+- **Osa 5 (lisätty 23.9. klo 10.05 tilauksesta): yhteinen sisältölähde.**
+  `js/packs` pysyy ainoana lähteenä. CI vie jokaisesta mergestä
+  versioidun paketin ämpäriin, ja natiivi lukee sen. Web on sama lähde
+  ilman muutoksia, koska se julkaistaan samasta commitista. Tähän kuluu
+  3,5–5 sessiota. Maksullista versiota estävät 23 NC-ääntä, jotka on
+  korvattava; kuvissa NC-tapauksia ei ole.
 - Mekaaninen osa on nyt valmis. Suurin työ on ei-mekaanisessa osassa eli
   UI:ssa ja Liviassa, ei sisällössä. Arvio on lopussa.
 
@@ -256,3 +262,219 @@ web-näkymät pidetään kuoressa. Näkymät voivat lukea tätä samaa vientiä.
 Työkalut: `tools/vienti/vie-sisalto.mjs`, `sarjallista.mjs`,
 `media.mjs`, `kokoelmat.mjs`, `lahteet.mjs`, `tarkista-media.mjs` ja
 `skeema/`. Testi: `tests/vienti.test.mjs`.
+
+## 5. Yhteinen sisältölähde kahdelle pelille
+
+Omistajan tilaus 23.9.2026 klo 10.05: kun nostoteksti muuttuu tai kuva
+lisätään, muutoksen pitää päivittyä sekä web-peliin että natiiviin
+iOS-peliin samaan aikaan ja helpoimmalla tavalla. Yksityiskohdat ovat
+liitteissä: [web ja julkaisuputki](sisallon-siirtoputki-20260923-liite-web.md)
+ja [App Store -säännöt](sisallon-siirtoputki-20260923-liite-app-store.md).
+
+### 5.1 Periaate: yksi lähde, yksi paketti, kaksi lukijaa
+
+Repon `js/packs` pysyy **ainoana muokattavana lähteenä**. Kirjoittajat ja
+sessiot muokkaavat sitä kuten nytkin, ja kommentit, päätöshistoria ja
+testit säilyvät. Jokaisesta mergestä syntyy kaksi julkaisua samasta
+commitista:
+
+- **web**: GitHub Pages julkaisee packit sellaisinaan, eli nykyinen putki
+  jatkuu muuttumattomana.
+- **sisältöpaketti**: CI ajaa `tools/vienti/vie-sisalto.mjs`:n ja vie
+  tuloksen ämpäriin versioituna. Natiivi peli lukee tämän paketin.
+
+Koska molemmat julkaisut syntyvät samasta commitista, sisältö ei voi
+eriytyä. Web ei tarvitse ajonaikaista pakettilatausta ollakseen "sama
+lähde", koska Pages päivittyy jo jokaisella mergellä. Tämä on liitteen
+suositus, ja se on selvästi halvin tapa. Kuvat ja äänet ovat jo nyt
+yhteisiä: molemmat pelit hakevat ne samoista ämpärin osoitteista, jotka
+vienti kirjaa `media.json`:iin. Uusi kuva ämpärissä ja rivi packissa
+riittävät.
+
+### 5.2 Julkaisuputki: repo → CI → ämpäri
+
+Uusi työnkulku `vie-sisalto.yml` käyttää samoja R2-secretejä kuin 33
+nykyistä ämpärityönkulkua. Sen osoitinmalli on sama kuin `pyramidi.json`-
+ja `laatat.json`-tiedostoilla.
+
+1. Työnkulku laukeaa pushista mainiin polkusuodattimella `js/**` ja
+   `assets/data/**`.
+2. Se ajaa viennin ja testin. Jos paketin tiiviste ei muuttunut, mitään
+   ei viedä.
+3. Paketti viedään muuttumattomana polkuun `sisalto/1/v<N>/`
+   (`Cache-Control: immutable`, vuosi) ja tarkistetaan julkisesta
+   osoitteesta.
+4. Osoitin `sisalto/1/uusin.json` kirjoitetaan **viimeisenä** (max-age
+   60 s). Siinä on `{ versio, polku, sha256, skeema, minSovellus,
+   edellinen, commit, appVersion }`.
+5. Palautus tehdään käsiajolla `palauta: N`, joka vaihtaa osoittimen.
+   20 viimeisintä versiota säilytetään.
+
+Sisältöversio N on CI:n laskuri, erillään APP_VERSIONista. Tekstimuutos
+ei siis vaadi uutta sovellusversiota kummassakaan pelissä. Natiivi peli
+tarkistaa osoittimen käynnistyessä, lataa uuden paketin taustalla ja ottaa
+sen käyttöön seuraavalla käynnistyksellä tai näkymänvaihdossa. Peli pitää
+aina viimeisen toimivan paketin tallessa. Webissä service worker
+välimuistittaa packit kuten nyt.
+
+Arvio: 1–1,5 sessiota työnkululle ja manifestin laajennukselle, 0,5
+sessiota sisältöversion näyttämiselle (työhuone ja natiivin tietoja-sivu).
+
+### 5.3 Yhteensopivuus: vanha sovellus ja uusi sisältö
+
+- **Skeeman major.minor.** `matkakirja-vienti/1` on major. Lisäykset
+  (uusi kenttä, uusi kokoelma) nostavat minoria, ja vanha sovellus
+  ohittaa tuntemattomat kentät. Poisto tai merkityksen muutos nostaa
+  majoria, jolloin osoitin vaihtuu (`sisalto/2/…`). Vanha sovellus ei
+  koskaan näe uutta majoria, vaan jää viimeiseen yhteensopivaan
+  pakettiin.
+- **Pakolliset kentät.** Jokainen sovellus julistaa, mitkä kokoelmat ja
+  kentät se vaatii. Tuoja validoi paketin ennen käyttöönottoa, ja jos
+  jokin puuttuu, vanha paketti pysyy käytössä. Skeemat
+  (`skeema/*.schema.json`) ovat tämän tarkistuksen pohja.
+- **`minSovellus`** kirjataan manifestiin ja osoittimeen erikseen webille
+  ja iOS:lle. Näin sisältö, joka vaatii uutta koodia (esimerkiksi uusi
+  pulmatyyppi), ei mene vanhalle sovellukselle.
+- **Avoin riski:** vanhan koodin käytös uusien enum-arvojen kanssa
+  (token-tyyppi, linssi-id, pulmageneraattori) on tarkistamatta. Tuojan
+  pitää ohittaa tuntematon arvo eikä kaatua.
+
+### 5.4 Mitä webissä pitää muuttaa
+
+Sama lähde toteutuu ilman webin muutoksia (5.1). Jos web halutaan
+myöhemmin päivittää sisällön osalta ilman Pages-julkaisua (esimerkiksi
+kiireellinen tekstikorjaus), liitteen vaihtoehtojen arvio on seuraava:
+
+| Vaihtoehto | Arvio |
+|---|---|
+| (a) top-level await -latausmoduuli, packit ämpäristä | **hylätään**: rikkoo yhden tiedoston version, ensikäynnistys ei toimisi offline, ja käynnistys odottaisi noin 27 Mt verkosta. 58 moduulia laskee pack-datasta jo importtihetkellä (esim. `KOHDE_MAAT`), joten "lataa myöhemmin" -malli ei sovi |
+| (b) JSON lähteeksi, .js generoidaan siitä | **ei nyt**: 17 % pack-riveistä on päätöskommentteja, projektin build-vaiheettomuus rikkoutuisi, ja 119 testiä lukee packeja suoraan |
+| (c) overlay: käynnistysmoduuli lukee ämpärin muutokset IndexedDB:stä ja paikkaa packit ennen main.js:ää | **toimii tarvittaessa**, 2 sessiota ja laitekierros. Kulkee vaiheittain ilman katkoa: overlay on tyhjä oletuksena, ja virhe palauttaa pelin packeihin |
+
+Kummassakin pelissä on tehtävä yksi valmisteleva muutos: **funktiot pois
+datasta**. 125 funktiota, esimerkiksi pulmageneraattorit ja kaksi
+tekstifunktiota, korvataan tunnisteilla (esim. `generaattori:
+'roomalaiset'`), ja kumpikin peli toteuttaa generaattorin omalla
+kielellään. Arvio: 2–3 sessiota Pelikoodarille.
+
+Yhteensä: **3,5–5 sessiota** siihen, että sisältö julkaistaan molempiin
+peleihin yhdellä mergellä. Overlay lisää tähän 2 sessiota, jos sitä
+tarvitaan.
+
+### 5.5 App Store
+
+Liitteessä ovat kohdat ja lähteet. Olennaiset:
+
+- **Sisältö datana on sallittua (2.5.2).** JSON, kuvat ja äänet saa
+  ladata palvelimelta ja päivittää ilman arvostelua (2.3.1: sisältö saa
+  muuttua, mutta uusia toimintoja ei saa avata palvelimelta). Paketin on
+  pysyttävä deklaratiivisena. Tämä on toinen syy poistaa funktiot
+  datasta: lähdetekstinä kulkeva `$funktio` ei saa koskaan päätyä
+  ajettavaksi natiivissa.
+- **Offline.** Sääntö ei vaadi sitä, mutta arvostelija testaa luvatun
+  toiminnon. Suositus: viimeisin paketti mukaan sovellukseen (noin
+  27–60 Mt JSONia, pakattuna selvästi vähemmän) ja päivitykset verkosta.
+  Näin ensikäynnistys toimii ilman verkkoa.
+- **Nykyinen WKWebView-kuori** on riskissä kohdan 4.2 (minimitoiminnallisuus)
+  takia, jos se on vain verkkosivun kääre. Natiivi peli poistaa riskin.
+- **3D-lisäosat (IAP, 3.1.1).** Lukittu digitaalinen sisältö vaatii
+  sovelluksen sisäisen oston. Samaa pakettia rajataan näin:
+  - Manifestiin tulee lisäosille kenttä `oikeus` (esim.
+    `lisaosa:colosseum`). Perussisältö ja lisäosien esittelytekstit ovat
+    avoimia.
+  - Raskas 3D-data on omissa lisäosapaketeissaan
+    (`sisalto/lisaosat/<id>/v<N>/`). Ne ladataan vasta StoreKit 2
+    -transaktion jälkeen: worker tarkistaa transaktion palvelimella ja
+    antaa lyhytikäisen allekirjoitetun osoitteen. iOS:n Background
+    Assets hoitaa suuret lataukset.
+  - Webissä ostettu lisäosa saa aueta iOS:ssä (3.1.3(b)), jos sama tuote
+    on myynnissä myös IAP:na. Ulkoisten maksulinkkien säännöt ovat
+    USA:ssa ja EU:ssa muutoksessa, joten ne tarkistetaan juuri ennen
+    julkaisua.
+- **Livia-chat (5.1.2(i), vuoden 2025 lisäys).** Kun henkilötietoja
+  jaetaan kolmannen osapuolen tekoälylle (Anthropic), siitä on kerrottava
+  ja siihen on pyydettävä nimenomainen suostumus ennen ensimmäistä
+  viestiä. Ikäluokitus (13+) määräytyy chatin mahdollisen sisällön
+  mukaan.
+
+### 5.6 Lisenssit maksullisessa versiossa
+
+Laskettu kaikista 20 391 mediaviitteestä viitteen omien lisenssikenttien
+perusteella (`lahde`, `lisenssi`, `nimi`, `musiikkiNayteNimi`). NC- ja
+ND-tapaukset ovat rivi riviltä raportissa
+docs/raportit/lisenssi-inventaario-20260923.md (PR #2896).
+
+| Laji | n | BY-SA | BY | CC0/PD | NC/ND | Oma tuotanto | Tuntematon |
+|---|---|---|---|---|---|---|---|
+| Commons-kuvat | 9 360 | 5 590 (60 %) | 1 443 (15 %) | 2 309 (25 %) | **0** | 11 | 0 |
+| Ulkoiset kuvaosoitteet (hahmotelmien viitekuvat, nostot) | 6 456 | 4 017 | 660 | 842 | 0 | 912 | 24 |
+| Liput | 183 | 8 | – | 141 | 0 | – | 34 |
+| Flickr | 53 | 14 | 34 | 1 | 0 | – | 4 |
+| Kenttä-äänitteet (Freesound, archive.org) | 175 | 30 | 17 | 104 | **23** | 1 | 0 |
+| Julisteet, hetki-, kohtaamis-, aarre-, eläin-, ihme- ja miniatyyrikuvat | 1 279 | – | – | – | 0 | 1 165 | 114 (julisteita ilman lähderiviä) |
+| Omat äänet (ElevenLabs, Lyria, textdesk) | 179 | – | – | – | 0 | 179 | 0 |
+
+- **NC:** 23 ääntä ja 0 kuvaa. Kaikki 23 soivat oletuksena, joten ne on
+  korvattava ennen maksullista versiota. Korvaus on annettu
+  Sisältökirjurille. Kuvissa `js/kuvagalleria.js` `lisenssiKelpaa()`
+  estää NC:n ja ND:n jo tuonnissa. Äänistä vastaava portti puuttuu, ja se
+  kannattaa lisätä testiksi.
+- **SA noin 9 600 kuvaa.** ShareAlike koskee kuvaa itseään, ei koko
+  sovellusta. Rajaus ja koon muutos eivät tee pelistä SA-teosta, mutta
+  jokaisesta kuvasta on näytettävä tekijä ja lisenssi. Kuvateksti ja
+  lähdeluettelo tekevät tämän jo nyt, ja natiivin pitää säilyttää se
+  (vienti kuljettaa `lahde`-kentät). Tulkinta on vakiintunut mutta ei
+  kiistaton, joten juristin vahvistus kannattaa hankkia ennen maksullista
+  julkaisua.
+- **Radiovirrat (78 asemaa):** ne eivät kuulu CC-lisenssien piiriin. On
+  tarkistettava, saako asemien virtoja soittaa kaupallisessa
+  sovelluksessa, tai ne jätetään maksullisesta versiosta pois.
+- **Oma tuotanto:** ElevenLabsin kaupallinen käyttö vaatii maksullisen
+  tilauksen tuotantohetkellä (js/lahteet.js, tarkistettu 27.8.2026).
+  OpenStreetMap-karttakuvat (ODbL) vaativat attribuution.
+- **Kolmannen osapuolen äänistä ei yhdeltäkään puutu lisenssiä.**
+  Tarkistamatta ovat vain 24 ulkoista kuvaosoitetta, 34 lippua (valtaosa
+  PD:tä) ja 114 julistetta, joiden lähderivi puuttuu (oletettavasti omaa
+  painoa).
+
+### 5.7 Riskit ja suositus
+
+**Riskit**
+
+1. **NC-äänet maksullisessa versiossa.** Nyt tunnetut 23 ääntä ja tulevat
+   lisäykset. Torjunta: korvaus ja äänten lisenssiportti testiin.
+2. **Kaksi julkaisua eriytyy**, jos natiivi saa sisältöä muualta kuin
+   CI:stä. Torjunta: paketti syntyy vain CI:ssä samasta commitista kuin
+   web, ja manifestiin kirjataan commit.
+3. **Vanha sovellus ja uusi skeema.** Torjunta: major-kohtainen osoitin,
+   `minSovellus` ja tuojan validointi. Uusien enum-arvojen käsittely on
+   vielä auditoimatta.
+4. **Funktiot datassa.** Ne ovat App Storen kohdan 2.5.2 riski ja estävät
+   kahden kielen toteutuksen. Torjunta: generaattoritunnisteet (2–3
+   sessiota) ennen kuin natiivi lukee paketin.
+5. **Ämpärin aukot.** 33 kuvaa puuttuu ämpäristä (4, havainto 2), ja
+   service worker ei välttämättä toimi WKWebView-kuoressa
+   (`WKAppBoundDomains` puuttuu, tarkistamatta). Torjunta:
+   `tarkista-media.mjs` CI:hin viikoittain ja laitetestaajalle
+   kuoritesti.
+6. **Apple-säännöt muuttuvat**, erityisesti ulkoiset maksulinkit EU:ssa ja
+   USA:ssa. Torjunta: tarkistus juuri ennen julkaisupäätöstä.
+
+**Suositus**
+
+1. **Heti:** NC-äänten korvaus (Sisältökirjuri) ja äänten lisenssiportti
+   (Pelikoodari).
+2. **Seuraavaksi (3,5–5 sessiota):**
+   - `vie-sisalto.yml`: CI vie paketin ämpäriin versioituna ja päivittää
+     osoittimen.
+   - sisältöversio näkyviin
+   - funktiot datasta tunnisteiksi.
+   Web ei muutu: se on sama lähde, koska Pages ja paketti syntyvät samasta
+   commitista.
+3. **Natiivi** lukee paketin osoittimen kautta, pitää viimeisimmän paketin
+   mukana sovelluksessa (offline) ja päivittää taustalla. 3D-lisäosat ovat
+   omina paketteinaan IAP-oikeuden takana (StoreKit 2 ja allekirjoitettu
+   osoite workerilta).
+4. **Webin overlay** (ämpärin sisältö ajon aikana ilman Pages-julkaisua)
+   tehdään vain, jos kiireellisiä korjauksia tarvitaan julkaisujen välillä.
+   Nykyinen julkaisutahti (useita kertoja päivässä) ei sitä vaadi.
