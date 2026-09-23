@@ -320,3 +320,27 @@ export function voimassaOlevatKokeet(haku) {
   if (haku === undefined) for (const lippu of tallennetutKokeet()) joukko.add(lippu);
   return laajennaKokeet(joukko);
 }
+
+/*
+ * SUORAAN KARTALLE (omistajan testitila 23.9.2026 klo 10.50). Päällä:
+ * uudelleenlataus avaa pelin suoraan kartalle tallennetusta tilasta ilman
+ * "Peli päivittyi" -ikkunaa, kaupunkiin saapumisen traileria, isoja
+ * luentakuvia ja pulun välihuutoja, eivätkä isoisän ja pulun luennat
+ * käynnisty itsestään — merkinnän teksti on kortissa heti, ja "Kuuntele"
+ * toimii käsin. Tallennus, eteneminen ja äänet muuten ennallaan. Myös
+ * osoitteessa `?koe=suoraan`.
+ */
+export const SUORAAN_AVAIN = 'matkakirja-suoraan-kartalle';
+
+/** Onko testitila "Suoraan kartalle" päällä (valikko tai ?koe=suoraan). */
+export function suoraanKartallePaalla(haku) {
+  if (haku === undefined && lueMuisti(SUORAAN_AVAIN) === '1') return true;
+  return voimassaOlevatKokeet(haku).has('suoraan');
+}
+
+/** Kytkin päälle/pois laitteelle. */
+export function asetaSuoraanKartalle(paalla) {
+  kirjoitaMuisti(SUORAAN_AVAIN, paalla ? '1' : '0');
+  globalThis.dispatchEvent?.(new CustomEvent(PIIRTOKOE_TAPAHTUMA, { detail: { suoraan: Boolean(paalla) } }));
+  return Boolean(paalla);
+}

@@ -286,6 +286,8 @@ test('ylin rivi kertoo koetilan ja mittarin version (omistajan kaappaukset 22.9.
   assert.equal(rivit[0], `koe 3/8 Yhteinen kello · profiili p${PROFIILIN_VERSIO} · v2127`);
   // Syötekoe valikossa (omistaja 23.9.2026 klo 08.34): numero ja nimi.
   assert.equal(koetilarivi({ koe: 'syotetouch' }), `koe 2/8 Kosketus suoraan · profiili p${PROFIILIN_VERSIO}`);
+  // Testitila Suoraan kartalle (omistaja 23.9.2026 klo 10.50): oma merkintä, ei koe.
+  assert.equal(koetilarivi({ koe: koetilanNimi(new Set(['suoraan', 'profiili'])), suoraan: true }), `koe 1/8 Oletus · suoraan · profiili p${PROFIILIN_VERSIO}`);
   // Paljas kartta (omistaja 23.9.2026 klo 09.20): yksi lippu, oma numero.
   assert.equal(koetilarivi({ koe: 'paljas' }), `koe 5/8 Paljas kartta · profiili p${PROFIILIN_VERSIO}`);
   // Pikavalinta ja kytkin yhdessä: "koe 6/8 Paljas + nimiöt +runko".

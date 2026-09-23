@@ -460,6 +460,7 @@ import { nollaaFokusmitat, paivitaFokusmitat, projisoiLaudalle } from './fokusmi
  * ainoa tapa sanoa, mikä vaihe maksaa. Ks. moduulin oma perustelu.
  */
 import { aloitaLinssiketju, merkitseLinssiketju, linssiketjunLoki } from './reliefipyramidi.js';
+import { suoraanKartallePaalla } from './piirtokoe-asetus.js';
 
 const DIE_FACES = ['', '⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
 const BOT_DELAY = 650;
@@ -13771,6 +13772,17 @@ export class UI {
           // merkinnän korttiin.
           if (this.dead || this.factKey !== merkinta.avain) return;
           if (this.game.cityOf?.()?.id !== virtaKaupunki.id) return;
+          /*
+           * SUORAAN KARTALLE (omistajan testitila 23.9.2026): merkintä
+           * kortissa heti, luenta valmiiksi "Kuuntele"-napin taakse mutta
+           * ei käyntiin, ei pulun välihuutoa eikä isoja luentakuvia. Pulun
+           * saapumiskupla (merkinnän lopun koukku) jää samalla pois.
+           */
+          if (suoraanKartallePaalla()) {
+            this.factText.textContent = merkinta.teksti;
+            this.asetaMerkinnanLuenta(luentatehtava, { aloita: false });
+            return;
+          }
           this.typeText(this.factText, merkinta.teksti, 'fact', () => {
             fokusvirtaMerkintaLuettu(this, virtaKaupunki);
           });
@@ -13812,8 +13824,9 @@ export class UI {
          */
         const trailerAvain = `${game.pack.id}:${virtaKaupunki.id}`;
         this.trailerNaytetty ??= new Set();
+        // Suoraan kartalle (testitila): ei traileria.
         const trailerSaa = !this.katselu && !this.trailerNaytetty.has(trailerAvain)
-          && !this.arrivalDialog?.open;
+          && !this.arrivalDialog?.open && !suoraanKartallePaalla();
         if (trailerSaa) {
           this.trailerNaytetty.add(trailerAvain);
           void naytaSaapumistraileri(this, virtaKaupunki).then(aloitaMerkinta);

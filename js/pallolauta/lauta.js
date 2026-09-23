@@ -151,6 +151,7 @@ import { paljasTila, ablaatioPaalla, kerrosKaytossa, kerrostenBodyLuokat, asenna
 import { asennaKehysprofiili } from './kehysprofiili.js';
 import { asennaKallistus, kallistusKaytossa } from './kallistus.js';
 import { luoProfiilinaytto, koetilanNimi } from './profiilinaytto.js';
+import { suoraanKartallePaalla } from '../piirtokoe-asetus.js';
 import { vedonSeuranta } from '../vedon-seuranta.js';
 import { tarkkuusLiikkeessa } from '../tarkkuus-asetus.js';
 import { sfx } from '../sound.js';
@@ -2132,7 +2133,7 @@ export async function avaaPallolauta(ui) {
       kotelo,
       asetukset: () => ({ veto: vedonSeuranta(), tarkkuus: tarkkuusLiikkeessa() }),
       lepo: () => pallo.__piirto?.tila?.() ?? null,
-      tila: () => ({ koe: koeAlussa, seuraava: koetilanNimi(piirtokokeet()), versio: sovellusversio }),
+      tila: () => ({ koe: koeAlussa, seuraava: koetilanNimi(piirtokokeet()), versio: sovellusversio, suoraan: suoraanKartallePaalla() }),
       // Paljas kartta: 1 s:n jakso, DOM-kirjoitus minimiin mutta luvut tuoreina (omistaja 23.9.2026).
       ...(paljasTila() ? { jaksoMs: 1000 } : {}),
     })
