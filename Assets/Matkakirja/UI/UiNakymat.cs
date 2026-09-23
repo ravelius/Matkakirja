@@ -42,6 +42,7 @@ namespace Matkakirja.Natiivi
         public readonly Aloitusnakyma Aloitus;
         public readonly Huipennus Huipennus;
         public readonly Nostokortti Nostokortti;
+        public readonly Lehtinakyma Lehti;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         static void KytkeTehdas()
@@ -92,6 +93,7 @@ namespace Matkakirja.Natiivi
             Aloitus = new Aloitusnakyma(kerros);
             Huipennus = new Huipennus(kerros);
             Nostokortti = new Nostokortti(kerros);
+            Lehti = new Lehtinakyma(kerros);
             // Karttavalon napautus (Natiiviseppä: AiheValot → KarttaValotSilta) → nostokortti;
             // linssin aikana ei (web linssiEstaa).
             UiPalvelut.ValoNapautettu += id => UiKerros.PaaSaikeessa(() =>
@@ -201,6 +203,7 @@ namespace Matkakirja.Natiivi
             // Aloitus (kerros 45) jäi muuten kaiken päälle: ui sulje ja pelin tilanvaihdot sulkevat sen.
             Aloitus.Piilota();
             Nostokortti.Sulje();
+            Lehti.Sulje();
             Vahvistus.Sulje();
             Matkavalinta.Piilota();
             Matkavalinta.PiilotaHeitto();

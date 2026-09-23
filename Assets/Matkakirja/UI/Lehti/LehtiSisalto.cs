@@ -1,0 +1,244 @@
+// LEHDEN SISÄLTÖ (Natiivi-UI): kaupunki- ja maalehti sisältöpaketista (webin js/lehti.js
+// rakennaSivut, js/maalehti.js; docs/moduulit/kaupunkilehti.md ja maalehti.md).
+//
+//   kaupunkilehdet  alkio {kaupunki, data: [aihe]}   aihe {id, nimi, otsikko?, johdanto,
+//                   nostot[], tehtava?, kansikuvat?, avauskuvat?, ennenNyt?, matkailijalle?}
+//   maalehdet       alkio {maa, data: [aihe]}        + lista (menovinkit)
+// Kaupunkilehden sivut: 0 = etusivu (aihe "kaupunki"), 1 = "<Kaupunki> pintaa syvemmältä"
+// (saman aiheen johdanto ja nostot), sitten muut aiheet data-järjestyksessä ja lopuksi maan
+// Menovinkit, jos maalla on sellainen (web rakennaSivut — sähkeen sivulinkit nojaavat tähän
+// järjestykseen). Maalehti: aiheet järjestyksessä (maa-etusivu tulee, kun maakartat ovat
+// paketissa). Data luetaan toistaiseksi alkion data-kentästä (Siirtoseppä nostaa päätasolle
+// skeemassa 1.13).
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using Matkakirja.Peli;
+using UnityEngine;
+
+namespace Matkakirja.Natiivi
+{
+    public enum LehtiLaji { Kaupunki, Maa }
+
+    public sealed class LehtiKuva
+    {
+        public string Lahde, Lyhyt, Selite, LahdeRivi, Vuosi, Otsikko;
+    }
+
+    public sealed class LehtiNosto
+    {
+        public string Otsikko, Teksti, Aika, Wiki, Leveys, Linkki, Nayte, NayteNimi, Musiikki, MusiikkiNimi;
+        public LehtiKuva Kuva;
+        public List<LehtiKuva> Galleria = new List<LehtiKuva>();
+    }
+
+    public sealed class LehtiTehtava
+    {
+        public string Kysymys, Fakta;
+        public List<string> Vaihtoehdot = new List<string>();
+        public int Oikea;
+    }
+
+    public sealed class LehtiListaKohde
+    {
+        public string Nimi, Teksti, Linkki;
+        public LehtiKuva Kuva;
+    }
+
+    public sealed class LehtiAihe
+    {
+        public string Id, Nimi, Otsikko, Johdanto;
+        public List<LehtiNosto> Nostot = new List<LehtiNosto>();
+        public LehtiTehtava Tehtava;
+        public List<LehtiKuva> Kansikuvat = new List<LehtiKuva>(), Avauskuvat = new List<LehtiKuva>(), EnnenNyt = new List<LehtiKuva>();
+        public string MatkailijalleKappale;
+        public LehtiKuva MatkailijalleKuva;
+        public List<(string Otsikko, List<LehtiListaKohde> Kohteet)> Lista = new List<(string, List<LehtiListaKohde>)>();
+        /// <summary>Aihe on lainattu maalehdestä (Menovinkit kaupunkilehden lopussa): lippu otsikkoon.</summary>
+        public string LainattuMaasta;
+    }
+
+    public enum LehtiSivuLaji { Etusivu, Aihe }
+
+    public sealed class LehtiSivu
+    {
+        public LehtiSivuLaji Laji;
+        public LehtiAihe Aihe;
+        /// <summary>Sivun otsikko (aihe-nimi) ja lyhyt nimi alapalkin nuoliin.</summary>
+        public string Otsikko, Lyhyt;
+        /// <summary>Minitehtävän avain Kaupat.Minitehtava(kaupunki, aihe): kaupunkilehdessä aiheId, maalehdessä ISO:aiheId.</summary>
+        public string TehtavaAihe;
+    }
+
+    public sealed class Lehti
+    {
+        public LehtiLaji Laji;
+        public string Omistaja, Nimi, Maa, MaaNimi;
+        public List<LehtiSivu> Sivut = new List<LehtiSivu>();
+        public string Johdanto;   // kaupungin esittely etusivulle (UiSisalto)
+    }
+
+    public static class LehtiSisalto
+    {
+        static Dictionary<string, List<object>> kaupungit, maat;
+        static bool haussa;
+
+        static Dictionary<string, object> Ob(object x) => x as Dictionary<string, object>;
+        static string T(Dictionary<string, object> o, string k) => MiniJson.Teksti(o, k);
+
+        public static IEnumerator Hae(LehtiLaji laji, string omistaja, Action<Lehti> valmis)
+        {
+            while (haussa) yield return null;
+            if (kaupungit == null || maat == null)
+            {
+                haussa = true;
+                string k = null, m = null;
+                yield return Sisalto.HaeTeksti("kaupunkilehdet", t => k = t, valinnainen: true);
+                yield return Sisalto.HaeTeksti("maalehdet", t => m = t, valinnainen: true);
+                kaupungit = Taulu(k, "kaupunki");
+                maat = Taulu(m, "maa");
+                haussa = false;
+            }
+            bool kaupunkiValmis = false;
+            UiSisalto.Lataa(() => kaupunkiValmis = true);
+            while (!kaupunkiValmis) yield return null;
+            valmis(laji == LehtiLaji.Kaupunki ? Kaupunkilehti(omistaja) : Maalehti(omistaja?.ToUpperInvariant()));
+        }
+
+        static Dictionary<string, List<object>> Taulu(string json, string avain)
+        {
+            var t = new Dictionary<string, List<object>>();
+            try
+            {
+                foreach (var a in Rakenne.Lista(MiniJson.Kentta(Ob(MiniJson.Jasenna(json ?? "{}")), "alkiot")) ?? new List<object>())
+                {
+                    var o = Ob(a);
+                    string id = T(o, avain) ?? T(o, "id");
+                    // Päätason aiheet (skeema 1.13) ensin, muuten raakaolion data.
+                    var aiheet = Rakenne.Lista(MiniJson.Kentta(o, "aiheet")) ?? Rakenne.Lista(MiniJson.Kentta(o, "data"));
+                    if (id != null && aiheet != null) t[id] = aiheet;
+                }
+            }
+            catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui lehti: " + e.Message); }
+            return t;
+        }
+
+        public static bool OnKaupunkilehti(string kaupunki) => kaupungit != null && kaupunki != null && kaupungit.ContainsKey(kaupunki);
+
+        static Lehti Kaupunkilehti(string kaupunki)
+        {
+            if (kaupunki == null || kaupungit == null || !kaupungit.TryGetValue(kaupunki, out var data)) return null;
+            var k = UiSisalto.Kaupunki(kaupunki);
+            var l = new Lehti
+            {
+                Laji = LehtiLaji.Kaupunki, Omistaja = kaupunki, Nimi = k?.Nimi ?? kaupunki,
+                Maa = k?.Maa, MaaNimi = k?.MaaNimi, Johdanto = k?.Johdanto,
+            };
+            var aiheet = data.Select(Ob).Where(x => x != null).Select(Aihe).ToList();
+            var kansi = aiheet.FirstOrDefault(a => a.Id == "kaupunki");
+            if (kansi != null)
+            {
+                l.Sivut.Add(new LehtiSivu { Laji = LehtiSivuLaji.Etusivu, Aihe = kansi, Otsikko = l.Nimi, Lyhyt = "Etusivu" });
+                l.Sivut.Add(new LehtiSivu
+                {
+                    Laji = LehtiSivuLaji.Aihe, Aihe = kansi, TehtavaAihe = kansi.Id,
+                    Otsikko = kansi.Otsikko ?? l.Nimi + " pintaa syvemmältä", Lyhyt = kansi.Nimi ?? l.Nimi,
+                });
+            }
+            foreach (var a in aiheet.Where(a => a != kansi))
+                l.Sivut.Add(new LehtiSivu { Laji = LehtiSivuLaji.Aihe, Aihe = a, TehtavaAihe = a.Id, Otsikko = a.Otsikko ?? a.Nimi, Lyhyt = a.Nimi });
+            // Maan Menovinkit viimeiseksi (lainattu maalehdestä, lipun kanssa).
+            if (l.Maa != null && maat != null && maat.TryGetValue(l.Maa, out var maaData))
+            {
+                var mv = maaData.Select(Ob).Where(x => x != null && T(x, "id") == "menovinkit").Select(Aihe).FirstOrDefault();
+                if (mv != null)
+                {
+                    mv.LainattuMaasta = l.Maa;
+                    l.Sivut.Add(new LehtiSivu { Laji = LehtiSivuLaji.Aihe, Aihe = mv, TehtavaAihe = l.Maa + ":" + mv.Id, Otsikko = mv.Otsikko ?? mv.Nimi, Lyhyt = mv.Nimi });
+                }
+            }
+            return l.Sivut.Count > 0 ? l : null;
+        }
+
+        static Lehti Maalehti(string iso)
+        {
+            if (iso == null || maat == null || !maat.TryGetValue(iso, out var data)) return null;
+            var m = UiSisalto.Maa(iso);
+            var l = new Lehti { Laji = LehtiLaji.Maa, Omistaja = iso, Maa = iso, Nimi = m?.Nimi ?? iso, MaaNimi = m?.Nimi };
+            foreach (var a in data.Select(Ob).Where(x => x != null).Select(Aihe))
+            {
+                a.LainattuMaasta = iso;
+                l.Sivut.Add(new LehtiSivu { Laji = LehtiSivuLaji.Aihe, Aihe = a, TehtavaAihe = iso + ":" + a.Id, Otsikko = a.Otsikko ?? a.Nimi, Lyhyt = a.Nimi });
+            }
+            return l.Sivut.Count > 0 ? l : null;
+        }
+
+        /// <summary>Maalehden sivun indeksi aiheen id:llä (web maalehdenSivunumero), muuten 0.</summary>
+        public static int SivuAiheelle(Lehti l, string aihe)
+        {
+            if (l == null || string.IsNullOrEmpty(aihe)) return 0;
+            int i = l.Sivut.FindIndex(s => s.Laji == LehtiSivuLaji.Aihe && s.Aihe.Id == aihe);
+            return Math.Max(0, i);
+        }
+
+        static LehtiAihe Aihe(Dictionary<string, object> o)
+        {
+            var a = new LehtiAihe
+            {
+                Id = T(o, "id"), Nimi = T(o, "nimi"), Otsikko = T(o, "otsikko"), Johdanto = T(o, "johdanto"),
+            };
+            foreach (var n in (Rakenne.Lista(MiniJson.Kentta(o, "nostot")) ?? new List<object>()).Select(Ob).Where(x => x != null))
+            {
+                var nosto = new LehtiNosto
+                {
+                    Otsikko = T(n, "otsikko"), Teksti = T(n, "teksti"), Aika = T(n, "aika"), Wiki = T(n, "wiki"),
+                    Leveys = T(n, "leveys"), Linkki = T(n, "linkki"), Nayte = T(n, "musiikkiNayte"), NayteNimi = T(n, "musiikkiNayteNimi"),
+                    Musiikki = T(n, "musiikki"), MusiikkiNimi = T(n, "musiikkiNimi"),
+                    Kuva = Kuva(n),
+                };
+                foreach (var g in (Rakenne.Lista(MiniJson.Kentta(n, "galleria")) ?? new List<object>()).Select(Ob).Where(x => x != null))
+                    if (Kuva(g) is LehtiKuva gk) nosto.Galleria.Add(gk);
+                a.Nostot.Add(nosto);
+            }
+            var t = Ob(MiniJson.Kentta(o, "tehtava"));
+            if (t != null && Rakenne.Lista(MiniJson.Kentta(t, "vaihtoehdot")) is List<object> vv && vv.Count > 0)
+            {
+                a.Tehtava = new LehtiTehtava { Kysymys = T(t, "kysymys"), Fakta = T(t, "fakta"), Vaihtoehdot = vv.Select(x => x?.ToString() ?? "").ToList() };
+                var oikea = MiniJson.Kentta(t, "oikea");
+                a.Tehtava.Oikea = oikea is string os ? Math.Max(0, a.Tehtava.Vaihtoehdot.IndexOf(os)) : (int)(MiniJson.Luku(t, "oikea") ?? 0);
+            }
+            Kuvat(MiniJson.Kentta(o, "kansikuvat"), a.Kansikuvat);
+            Kuvat(MiniJson.Kentta(o, "avauskuvat"), a.Avauskuvat);
+            Kuvat(MiniJson.Kentta(o, "ennenNyt"), a.EnnenNyt);
+            var mk = Ob(MiniJson.Kentta(o, "matkailijalle"));
+            if (mk != null) { a.MatkailijalleKappale = T(mk, "kappale"); a.MatkailijalleKuva = Kuva(Ob(MiniJson.Kentta(mk, "kuva"))); }
+            foreach (var r in (Rakenne.Lista(MiniJson.Kentta(o, "lista")) ?? new List<object>()).Select(Ob).Where(x => x != null))
+            {
+                var kohteet = new List<LehtiListaKohde>();
+                foreach (var k in (Rakenne.Lista(MiniJson.Kentta(r, "kohteet")) ?? new List<object>()).Select(Ob).Where(x => x != null))
+                    kohteet.Add(new LehtiListaKohde { Nimi = T(k, "nimi"), Teksti = T(k, "teksti"), Linkki = T(k, "linkki"), Kuva = Kuva(k) });
+                a.Lista.Add((T(r, "otsikko"), kohteet));
+            }
+            return a;
+        }
+
+        static void Kuvat(object arvo, List<LehtiKuva> kohde)
+        {
+            foreach (var x in (Rakenne.Lista(arvo) ?? new List<object>()).Select(Ob).Where(x => x != null))
+                if (Kuva(x) is LehtiKuva k) kohde.Add(k);
+        }
+
+        static LehtiKuva Kuva(Dictionary<string, object> o)
+        {
+            if (o == null) return null;
+            string lahde = T(o, "tiedosto") ?? T(o, "osoite") ?? T(o, "ampari");
+            if (string.IsNullOrEmpty(lahde)) return null;
+            return new LehtiKuva
+            {
+                Lahde = lahde, Lyhyt = T(o, "lyhyt") ?? T(o, "selite"), Selite = T(o, "selite") ?? T(o, "lyhyt"),
+                LahdeRivi = T(o, "lahde"), Vuosi = T(o, "vuosi"), Otsikko = T(o, "otsikko"),
+            };
+        }
+    }
+}
