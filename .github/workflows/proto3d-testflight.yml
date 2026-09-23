@@ -120,6 +120,51 @@ jobs:
           fi
           echo "ASC_AVAIN_POLKU=$polku" >> "$GITHUB_ENV"
 
+      # Diagnoosi ennen arkistointia: kuinka monta Development/Distribution
+      # -varmennetta ASC:ssä on jo (kiintiö on rajallinen, ja edellinen ajo
+      # saattoi luoda varmenteen väliaikaiseen avainnippuun joka poistettiin
+      # ajon lopussa — private key katosi vaikka varmenne jäi ASC:hen).
+      - name: Diagnoosi ASC-varmenteista
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+        run: |
+          set -euo pipefail
+          python3 -m pip install --quiet --break-system-packages "pyjwt[crypto]==2.9.0"
+          python3 - <<'PY'
+          import os, time, json, urllib.request, urllib.error
+          import jwt
+          kid = os.environ['ASC_KEY_ID']; iss = os.environ['ASC_ISSUER_ID']
+          avain = open(os.environ['ASC_AVAIN_POLKU']).read()
+
+          def tunnus():
+              nyt = int(time.time())
+              return jwt.encode({'iss': iss, 'iat': nyt, 'exp': nyt + 600, 'aud': 'appstoreconnect-v1'},
+                                 avain, algorithm='ES256', headers={'kid': kid, 'typ': 'JWT'})
+
+          def kutsu(polku):
+              req = urllib.request.Request(
+                  'https://api.appstoreconnect.apple.com' + polku,
+                  headers={'Authorization': 'Bearer ' + tunnus(), 'Accept': 'application/json'})
+              try:
+                  with urllib.request.urlopen(req, timeout=60) as v:
+                      return v.status, json.loads(v.read())
+              except urllib.error.HTTPError as e:
+                  return e.code, json.loads(e.read())
+
+          tila, d = kutsu('/v1/certificates?filter[certificateType]=IOS_DEVELOPMENT,DISTRIBUTION,IOS_DISTRIBUTION&limit=50')
+          if tila != 200:
+              print(f'::warning title=Varmenneluettelo epaonnistui::{tila}: {d}')
+          else:
+              rivit = []
+              for c in d.get('data', []):
+                  a = c['attributes']
+                  rivit.append(f"{a.get('certificateType')}\t{a.get('name')}\t{a.get('expirationDate')}\t{c['id']}")
+              print(f'Varmenteita yhteensa: {len(rivit)}')
+              for r in rivit:
+                  print(r)
+          PY
+
       # Ilman tätä -allowProvisioningUpdates ei voi tallentaa Applen
       # luomaa varmennetta ("User interaction is not allowed" archive-
       # vaiheessa) — sama lohko kuin ios-testflight.yml:ssä.
@@ -156,6 +201,7 @@ jobs:
             -authenticationKeyIssuerID "$ASC_ISSUER_ID" \
             DEVELOPMENT_TEAM="$TEAM_ID" \
             CODE_SIGN_STYLE=Automatic \
+            CODE_SIGN_IDENTITY="Apple Distribution" \
             archive
 
       - name: Vie IPA
