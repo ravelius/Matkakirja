@@ -143,14 +143,22 @@ namespace Matkakirja.Peli
             Siirtyma(null);
         }
 
-        /// <summary>Uusi matka (main.js): kaikki pois; paikka lähetetään seuraavassa päivityksessä uudelleen.</summary>
-        public void UusiMatka()
+        /// <summary>
+        /// Uusi matka (main.js): kaikki pois; paikka lähetetään seuraavassa päivityksessä uudelleen.
+        /// pysayta = false (lähtö aloitusnäkymästä): vain siirtymäraita loppuu, ja etusivun raita ja maisema
+        /// soivat, kunnes paikka vaihtuu.
+        /// </summary>
+        public void UusiMatka(bool pysayta = true)
         {
-            tila.UusiMatka();
-            siirtymaLaji = null;
+            if (pysayta)
+            {
+                tila.UusiMatka();
+                siirtymaLaji = null;
+                lahetetty = false;
+                visa = false;
+            }
+            else Siirtyma(null);
             liike = null;
-            lahetetty = false;
-            visa = false;
         }
 
         /// <summary>Kertojan tai lukijan puhe (Puhe.Puhuu): vain reunat, koska AaniTila laskee puhujia.</summary>

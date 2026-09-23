@@ -71,6 +71,7 @@ namespace Matkakirja.Natiivi
                     {
                         if (tunnus != ajoTunnus) return;
                         // Kone lähtee: moottorin ääni, isoisän intro ja nousu samalla hetkellä.
+                        IlmoitaLiike(Kulkutapa.Lento, 0);
                         Lentoaani(true, kesto);
                         AloitaLento(Lentosuunnitelma.Laske("lontoo", kohde, (AloitusLat, AloitusLon), b.Value, kesto,
                             AloituslennonKesto(), aloitus: true));
