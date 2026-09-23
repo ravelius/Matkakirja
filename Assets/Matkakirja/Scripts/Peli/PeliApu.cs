@@ -32,6 +32,8 @@ namespace Matkakirja.Natiivi
         public int? Askelia;
         public string Nimi;
         public string Selite;
+        /// <summary>Mannerlento (Kaupat.MannerLento, web actionMannerLento): Tapa = Lento ilman lentokenttää.</summary>
+        public bool Mannerlento;
     }
 
     /// <summary>Matkan tulos käyttöliittymälle: minne kamera ajaa ja avataanko lehti.</summary>
@@ -279,6 +281,8 @@ namespace Matkakirja.Natiivi
                     Tapa = Kulkutapa.Lento, Hinta = Vakiot.LentoHinta,
                     Nimi = "Lento", Selite = $"{Vakiot.LentoHinta} {Valuutta} · perillä, vie vuoron",
                 });
+            else if (Mannerlento(m, kohde) is MannerlentoKohde ml)
+                tulos.Add(MannerlentoVaihtoehto(ml));
             foreach (var tapa in new[] { Kulkutapa.Maa, Kulkutapa.Meri })
             {
                 if (!tavat.Contains(tapa)) continue;
@@ -299,13 +303,25 @@ namespace Matkakirja.Natiivi
             return tulos;
         }
 
+        /// <summary>Mannerlento kohteeseen, jos se on nyt tarjolla (web mannerLennot), muuten null.</summary>
+        public static MannerlentoKohde Mannerlento(Matka m, string kohde) =>
+            new Kaupat(m).MannerLennot().FirstOrDefault(k => k.Kaupunki == kohde);
+
+        /// <summary>Matkavalinnan rivi mannerlennolle (web MANNERLENTO_NAPPI, hinta kuten lennossa).</summary>
+        public static MatkaVaihtoehto MannerlentoVaihtoehto(MannerlentoKohde k) => new MatkaVaihtoehto
+        {
+            Tapa = Kulkutapa.Lento, Hinta = Vakiot.LentoHinta, Mannerlento = true,
+            Nimi = KauppaVakiot.MannerlentoNappi(k),
+            Selite = $"{Vakiot.LentoHinta} {Valuutta} · mannerlento, vie vuoron",
+        };
+
         /// <summary>
         /// Toteuttaa valinnan Matkan teoilla: Heitto-vaiheessa ensin
         /// PeruKulkutapa, jos valittiin muu kuin jo valittu noppatapa; bussi →
-        /// Bussi, lento → Lenna, noppatapa → ValitseKulkutapa + Heita + Liiku
+        /// Bussi, lento → Lenna (mannerlento → Kaupat.MannerLento), noppatapa → ValitseKulkutapa + Heita + Liiku
         /// (ValitseSiirto). Saapuminen luetaan Matka.Saapui-tapahtumasta.
         /// </summary>
-        public static MatkanTulos Matkusta(Matka m, string kohde, Kulkutapa tapa)
+        public static MatkanTulos Matkusta(Matka m, string kohde, Kulkutapa tapa, bool mannerlento = false)
         {
             var tulos = new MatkanTulos { Tapa = tapa, Lahto = m.Tila.Pelaaja.Sijainti };
             if (m.Tila.Vaihe == Vaihe.Siirto && m.Tila.Kulkutapa.HasValue && OnNoppatapa(m.Tila.Kulkutapa.Value))
@@ -324,7 +340,11 @@ namespace Matkakirja.Natiivi
                 switch (tapa)
                 {
                     case Kulkutapa.Bussi: r = m.Bussi(kohde); break;
-                    case Kulkutapa.Lento: r = m.Lenna(kohde); break;
+                    case Kulkutapa.Lento:
+                        if (!mannerlento) { r = m.Lenna(kohde); break; }
+                        var ml = new Kaupat(m).MannerLento(kohde);
+                        r = ml.Ok ? TekoTulos.Onnistui() : TekoTulos.Epaonnistui(ml.Virhe);
+                        break;
                     case Kulkutapa.Maa:
                     case Kulkutapa.Meri:
                         if (m.Tila.Vaihe == Vaihe.Siirto)

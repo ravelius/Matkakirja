@@ -86,6 +86,34 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(0, PeliApu.Vaihtoehdot(m, "ei-ole").Count, "tuntematon");
         }
 
+        [Testi] static void MannerlentoMatkavalinnassaKunMantereenAarreLoytyi()
+        {
+            var m = Matka.UusiPeli(KultaisetApu.Verkko, new Satunnainen(9L), "Fogg", "pariisi", KultaisetApu.Laattamaarat);
+            Oleta.Sama(Vaihe.Heitto, m.Tila.Vaihe, "liftaus valittu valmiiksi");
+            Oleta.Tosi(m.PeruKulkutapa().Ok, "bussi sallii perumisen");
+            var kaukana = new Kaupat(m).MannerLennot();
+            Oleta.Sama(0, kaukana.Count, "ei ennen Euroopan aarretta");
+            var tahti = m.Laatat.Laatat.First(kv => kv.Value == Laattatyypit.Paaaarre && m.Laatat.MannerOf(kv.Key) == "europe").Key;
+            m.KaannaLaatta(tahti);
+            Oleta.Sama(Vaihe.Toiminta, m.Tila.Vaihe);
+            var kohteet = new Kaupat(m).MannerLennot();
+            Oleta.Tosi(kohteet.Count > 0 && kohteet.All(k => k.Manner != "europe"), "muut mantereet");
+            var k0 = kohteet[0];
+            var v = PeliApu.Vaihtoehdot(m, k0.Kaupunki);
+            var ml = v.Single(x => x.Mannerlento);
+            Oleta.Sama(Kulkutapa.Lento, ml.Tapa);
+            Oleta.Sama(KauppaVakiot.MannerlentoNappi(k0), ml.Nimi);
+            Oleta.Tosi(!v.Any(x => x.Tapa == Kulkutapa.Lento && !x.Mannerlento), "ei tavallista lentoa samaan");
+            Oleta.Sama(0, PeliApu.Vaihtoehdot(m, "lontoo").Count(x => x.Mannerlento), "Eurooppaan ei mannerlentoa");
+            int raha = m.Tila.Pelaaja.Raha;
+            var t = PeliApu.Matkusta(m, k0.Kaupunki, Kulkutapa.Lento, true);
+            Oleta.Tosi(t.Ok, t.Virhe);
+            Oleta.Sama(k0.Kaupunki, t.Saapui, "perillä");
+            Oleta.Sama(raha - Vakiot.LentoHinta, m.Tila.Pelaaja.Raha, "300 p");
+            // Tavallisena lentona sama kohde epäonnistuu siististi (ei lentokenttäreittiä).
+            Oleta.Tosi(!PeliApu.Matkusta(m, "pariisi", Kulkutapa.Lento, true).Ok, "ei toista mannerlentoa ilman aarretta");
+        }
+
         [Testi] static void BussiLontooseenSaapuuIlmanAikaa()
         {
             var m = UusiPariisissa();

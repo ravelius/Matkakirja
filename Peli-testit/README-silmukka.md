@@ -72,7 +72,8 @@ JSON-tiedostot. 3D:n `komento.txt` (esim. `kuva nimi`) toimii rinnalla.
 | `napauta kaupunki` | kuin sormi kaupungin merkillä (KaupunkiMerkit.ValitseKaupunki) |
 | `valitse bussi\|lento\|liftaus\|laiva` | matkavalinnan nappi |
 | `peruuta` | matkavalinnan Peruuta |
-| `matka kaupunki tapa` | valinta ilman dialogia |
+| `mannerlennot` | kortin "Mannerlento": matkavalinta mannerlennoille (vain kun mantereen aarre löytyi ja vaihe Toiminta) |
+| `matka kaupunki tapa` | valinta ilman dialogia (tapa bussi, lento, liftaus, laiva tai mannerlento) |
 | `heita` | "Heitä noppaa" (kesken reitin) |
 | `sulje-lehti` | sulkee lehden kuin pelaaja |
 | `ohita-traileri` | saapumistrailerin ohitus. Kun Natiivi-UI:n traileri on käytössä, saapuminen menee Matkalla → **Traileri** → Lehti, kerran per kaupunki eikä aarrekaupungeissa; käsikirjoituksissa `odota-tila lehti` tarvitsee lisäaikaa tai `ohita-traileri` |
