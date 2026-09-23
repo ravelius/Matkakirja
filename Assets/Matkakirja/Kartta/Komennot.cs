@@ -29,6 +29,7 @@ namespace Matkakirja
     ///   palvelin                  laattapalvelimen osumat lokiin (offline / välimuisti / verkko)
     ///   valot <aihe>|kaikki|ei|tila     karttavalot (AiheValot), tila = laskurit lokiin
     ///   maat paalle|pois | maat korosta ISO3 [#täyttö #raja] | maat pois-korostus   Maatila (MaaKartta)
+    ///   napauta x y               synteettinen napautus (osuus näytöstä, origo vasen alakulma)
     ///   maasto paalle|pois        Karttasepän maasto (layer.json) tai ellipsoidi; valinta
     ///                             muistetaan tiedostossa Documents/maasto.txt
     /// </summary>
@@ -132,6 +133,10 @@ namespace Matkakirja
                         b1 = new Unity.Mathematics.float2(0.6f, (float)D(2)),
                         kesto = (float)D(3),
                     });
+                    break;
+                case "napauta":
+                    // napauta x y: osuus näytöstä 0–1, origo vasen alakulma
+                    kierto.Napauta(new Vector2((float)D(1) * Screen.width, (float)D(2) * Screen.height));
                     break;
                 case "maasto":
                     Maasto(o[1] == "paalle");
