@@ -18,6 +18,7 @@ iPhone kuvataan pystyssä ja vaakana, iPad pystyssä.
 | A5 | `ui lehti ateena` → `ui chat Mikä on Akropolis?` | Vastauksen alla "Ehdota tallennettavaksi" (ei paineta). Ilman avointa lehteä nappia ei tule |
 | A6 | `ui matkakirja tanger havainto` iPhonella ja iPadilla | iPhonessa kortti alkaa lappuna, iPadissa auki |
 | A7 | oikea saapuminen luennan kanssa (uusi matka → ensimmäinen kaupunki) | Kun kertoja alkaa, kortti kutistuu lapuksi. Luennan jälkeen se pysyy lappuna, ja napautus avaa sen |
+| A8 | `ui chat` laitteella (master 87fa697+) | Nappirivi: näppäimistö, kaiutin, leveä mikki. Mikki → lupakyselyt → "Kuuntelen…" → osittainen teksti tilarivillä → kysymys lähtee; Lopeta-tila korostettuna. Lupa kielletty → kirjoitustila + lause |
 
 ## B. Aiemmat erät (luovutuksen lista, ei vielä kuvattu)
 
