@@ -117,7 +117,12 @@ namespace Matkakirja.Editori
             nappula.materiaali = Materiaali("Nappula", "Matkakirja/Nappula", Color.white);
             kerrokset.nappula = nappula;
             nappula.koneMalli = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Matkakirja/Kartta/Malli/DC3.fbx");
-            nappula.koneMateriaali = Materiaali("Kone", "Universal Render Pipeline/Lit", new Color(0.78f, 0.79f, 0.80f));
+            // Hopea mutta pergamenttia tummempi, jotta kone erottuu kartasta; raita pelin punaisella.
+            nappula.koneMateriaali = Materiaali("Kone", "Universal Render Pipeline/Lit", new Color(0.55f, 0.57f, 0.60f));
+            nappula.koneMateriaali.SetFloat("_Metallic", 0.6f);
+            nappula.koneMateriaali.SetFloat("_Smoothness", 0.55f);
+            nappula.raitaMateriaali = Materiaali("KoneRaita", "Universal Render Pipeline/Lit", new Color32(0x9a, 0x3b, 0x2c, 0xff));
+            nappula.ikkunaMateriaali = Materiaali("KoneIkkuna", "Universal Render Pipeline/Lit", new Color(0.12f, 0.10f, 0.09f));
             var savuGo = new GameObject("Savujana");
             savuGo.transform.SetParent(georefGo.transform, false);
             nappula.savu = savuGo.AddComponent<Savujana>();
