@@ -350,3 +350,161 @@
     color: var(--muted);
     -unity-text-align: middle-center;
 }
+
+/* --- pulun keskustelu (webin .pollo-paneeli, css/styles.css ~21651–22903) --- */
+
+.mk-chat {
+    position: absolute;
+    height: 62%;
+    max-height: 608px;
+    min-height: 224px;
+    padding: 0;
+    border-width: 1px;
+    border-color: rgba(122, 85, 20, 0.32);
+    border-radius: 12px;
+    background-color: #f5f0e2;
+    color: #211d18;
+    opacity: 0;
+    translate: 0 10px;
+    transition-property: opacity, translate;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+}
+
+.mk-chat.mk-auki {
+    opacity: 1;
+    translate: 0 0;
+}
+
+/* Tuore keskustelu: korkeus sisällön mukaan (webin .pollo-alku). */
+.mk-chat.mk-chat--alku {
+    height: auto;
+    max-height: 66%;
+}
+
+.mk-chat__virta {
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: 11px 10px 6px 10px;
+}
+
+.mk-chat__viesti {
+    margin-bottom: 9px;
+    font-size: 14.5px;
+    white-space: normal;
+}
+
+.mk-chat__livia {
+    font-size: 15px;
+}
+
+.mk-chat__pelaaja {
+    align-self: flex-end;
+    max-width: 86%;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    background-color: #e9dfc8;
+    font-size: 13.5px;
+}
+
+.mk-chat__odottaa {
+    -unity-font-style: italic;
+    color: rgba(33, 29, 24, 0.6);
+    font-size: 13.5px;
+}
+
+.mk-chat__paikkarivi {
+    -unity-font-style: italic;
+    color: rgba(33, 29, 24, 0.6);
+    font-size: 13px;
+}
+
+.mk-chat__sirut {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.mk-chat__siru {
+    min-height: 34px;
+    margin-bottom: 6px;
+    padding: 5px 11px 5px 11px;
+    border-color: rgba(122, 85, 20, 0.45);
+    border-radius: 16px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #7a5514;
+}
+
+.mk-chat__siru:active {
+    background-color: rgba(122, 85, 20, 0.12);
+}
+
+.mk-chat__siru .mk-nappi__teksti {
+    font-size: 13px;
+    white-space: normal;
+}
+
+.mk-chat__rivi {
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 8px 9px 8px;
+    border-top-width: 1px;
+    border-color: rgba(122, 85, 20, 0.25);
+}
+
+.mk-chat__kentta {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin: 0 6px 0 0;
+    font-size: 16px;
+}
+
+.mk-chat__kentta > .unity-base-text-field__input {
+    min-height: 38px;
+    padding: 4px 10px 4px 10px;
+    border-width: 1px;
+    border-color: rgba(122, 85, 20, 0.35);
+    border-radius: 10px;
+    background-color: #fffaf0;
+    color: #211d18;
+}
+
+.mk-chat__laheta,
+.mk-chat__kaiutin {
+    width: 42px;
+    height: 38px;
+    min-height: 38px;
+    padding: 0;
+    margin-left: 4px;
+    border-color: rgba(122, 85, 20, 0.45);
+    background-color: rgba(0, 0, 0, 0);
+    color: #7a5514;
+}
+
+.mk-chat__laheta .mk-nappi__teksti {
+    font-size: 18px;
+    -unity-text-align: middle-center;
+}
+
+.mk-chat__kaiutin > .mk-ikoni {
+    margin-right: 0;
+}
+
+.mk-chat__kaiutin.mk-valittu {
+    background-color: #d9a13b;
+    color: #2c1e07;
+}
+
+.mk-chat__palaa {
+    position: absolute;
+    right: 10px;
+    min-height: 34px;
+    padding: 4px 12px 4px 12px;
+    border-color: rgba(70, 51, 31, 0.5);
+    background-color: rgba(247, 241, 226, 0.94);
+    color: var(--map-ink);
+}
+
+.mk-chat__palaa .mk-nappi__teksti {
+    font-size: 13px;
+}

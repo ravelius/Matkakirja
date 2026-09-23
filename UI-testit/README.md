@@ -172,3 +172,14 @@ SVG:ksi ja verrattiin Chromiumissa webin `livianUusiPelikuva`-kuvaan 832 tilassa
 (kaikki eleet p = 0 … 1, puhe, leijunta, astronautti, `right` 60). Erot: tekstit
 (”z Z”, ”…”, ”?”) ovat viivakorvikkeita ja ryhmän peittävyys kerrotaan osille
 (leijunnan siipien ristihäive), muuten kuvat vastaavat toisiaan.
+
+Pulun keskustelu (vaatii, että pollo-worker sallii natiivin chatin; muuten näkyy selittävä rivi):
+
+```
+ui chat
+odota 3
+kuva chat-auki
+ui chat Missä Sparta on?
+odota 8
+kuva chat-vastaus
+```

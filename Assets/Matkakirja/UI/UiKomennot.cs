@@ -13,6 +13,7 @@
 //   ui selite                                 karttaselite auki
 //   ui pulu sano [teksti] | aani [lähde n] | ele id | tilanne laji | tunne t | pois | paalle
 //   ui tietoja                                tekijätiedot ja lähteet
+//   ui chat [kysymys]                         pulun keskustelu auki / kysy
 //   ui luento [kaupunki] [loppu]              matkakirjakortti + luentakuvat (oletus ateena); loppu = Livian vuoro
 //   ui kartuscha [ISO3] [auki]                kartuscha maalle ilman peliä (oletus ITA)
 //   ui heitto [teksti]                        kartan toimintonappi näkyviin
@@ -150,6 +151,9 @@ namespace Matkakirja.Natiivi
                     if (lk.Length > 1 && lk[1] == "loppu") ui.Saapuminen.Loppui(kaup); else ui.Saapuminen.Alkoi(kaup);
                     return null;
                 }
+                case "chat":
+                    if (loput.Length > 0) ui.Chat.Kysy(loput); else ui.Chat.Vaihda();
+                    return null;
                 case "tietoja": ui.Tietoja.Avaa(); return null;
                 case "selite": ui.Karttaselite.Avaa(); return UiPalvelut.KarttaValot == null ? "ei KarttaValot-palvelua: vain selitykset" : null;
                 case "kartuscha":
