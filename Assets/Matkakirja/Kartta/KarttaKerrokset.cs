@@ -41,6 +41,10 @@ namespace Matkakirja
             "provided under COPERNICUS by the European Union and ESA; all rights reserved.\n" +
             "Pallo: Cesium for Unity (Apache 2.0).";
 
+        /// <summary>Maatila linsseille (IMaaKartta, RAJAPINTA.md luku 4).</summary>
+        public Matkakirja.Linssit.Maat.IMaaKartta Maat => maaKartta;
+        public MaaKartta maaKartta;
+
         void Awake()
         {
             Instanssi = this;
