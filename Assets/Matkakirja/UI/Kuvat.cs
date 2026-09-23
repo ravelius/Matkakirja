@@ -114,30 +114,41 @@ namespace Matkakirja.Natiivi
             UiKerros.Hae().StartCoroutine(Lataa(avain, reitit));
         }
 
+        /// <summary>
+        /// Lataus ja purku ilman pääsäikeen piikkiä (Natiiviseppä mittasi kaupunkikortin avauksessa
+        /// ~33 ms kehyksiä): UnityWebRequestTexture purkaa JPG/PNG:n taustasäikeessä (nonReadable),
+        /// laitevälimuisti luetaan file://-osoitteella samaa reittiä ja kirjoitetaan taustasäikeessä.
+        /// </summary>
         static IEnumerator Lataa(string avain, string[] reitit)
         {
             Texture2D tulos = null;
             string levy = Valimuisti(reitit[0]);
             if (File.Exists(levy))
             {
-                tulos = Pura(File.ReadAllBytes(levy), avain);
-                if (tulos == null) File.Delete(levy);
+                using var l = UnityWebRequestTexture.GetTexture("file://" + levy, true);
+                yield return l.SendWebRequest();
+                tulos = l.result == UnityWebRequest.Result.Success ? Nimea(DownloadHandlerTexture.GetContent(l), avain) : null;
+                if (tulos == null) try { File.Delete(levy); } catch (IOException) { }
             }
             for (int i = 0; tulos == null && i < reitit.Length; i++)
             {
-                using var p = UnityWebRequest.Get(reitit[i]);
+                using var p = UnityWebRequestTexture.GetTexture(reitit[i], true);
                 p.timeout = 20;
                 yield return p.SendWebRequest();
                 if (p.result != UnityWebRequest.Result.Success) continue;
-                var tavut = p.downloadHandler.data;
-                tulos = Pura(tavut, avain);
+                tulos = Nimea(DownloadHandlerTexture.GetContent(p), avain);
                 if (tulos == null) continue;
-                try
+                var tavut = p.downloadHandler.data;
+                if (tavut == null || tavut.Length < 16) continue;
+                System.Threading.Tasks.Task.Run(() =>
                 {
-                    Directory.CreateDirectory(Path.GetDirectoryName(levy));
-                    File.WriteAllBytes(levy, tavut);
-                }
-                catch (IOException e) { Debug.LogWarning("MATKAKIRJA ui kuva: " + e.Message); }
+                    try
+                    {
+                        Directory.CreateDirectory(Path.GetDirectoryName(levy));
+                        File.WriteAllBytes(levy, tavut);
+                    }
+                    catch (IOException e) { Debug.LogWarning("MATKAKIRJA ui kuva: " + e.Message); }
+                });
             }
             if (tulos == null) Debug.LogWarning("MATKAKIRJA ui kuva ei latautunut: " + reitit[0]);
             else Muista(avain, tulos);
@@ -148,11 +159,11 @@ namespace Matkakirja.Natiivi
             }
         }
 
-        static Texture2D Pura(byte[] tavut, string nimi)
+        static Texture2D Nimea(Texture2D t, string nimi)
         {
-            if (tavut == null || tavut.Length < 16) return null;
-            var t = new Texture2D(2, 2, TextureFormat.RGBA32, false) { name = nimi, wrapMode = TextureWrapMode.Clamp };
-            if (!t.LoadImage(tavut, true)) { UnityEngine.Object.Destroy(t); return null; }
+            if (t == null || t.width <= 8) { if (t != null) UnityEngine.Object.Destroy(t); return null; }
+            t.name = nimi;
+            t.wrapMode = TextureWrapMode.Clamp;
             return t;
         }
 

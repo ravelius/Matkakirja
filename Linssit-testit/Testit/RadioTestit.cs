@@ -21,6 +21,7 @@ namespace Matkakirja.Linssit.Testit
         public float Voimakkuus { set => V = value; }
         public void Avaa(string url, string tyyppi) { Loki.Add("avaa " + tyyppi); Auki = url; Kuuluu = false; Virhe = null; }
         public void Sulje() { Loki.Add("sulje"); Auki = null; Kuuluu = false; }
+        public void Tauko(bool p) => Loki.Add("tauko " + p);
     }
 
     public sealed class ValeViritin : IViritin
@@ -267,6 +268,9 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(w.Soi && v.Auki != null && v.V == 0, "kohina soi, lähetys mykkänä");
             Oleta.Sama("helsinki", k.Korostettu);
             Oleta.Sama("FIN", l.Tila.AsemaId);
+            // Web radiosoitin rivit(): virittäessä [VIRITTÄÄ..., asema].
+            Oleta.Sama("VIRITTÄÄ...", l.Tila.Rivi1);
+            Oleta.Tosi(l.Tila.Rivi2.Length > 0 && l.Tila.Rivi2 == l.Tila.Naytto.ToUpperInvariant(), "rivi 2 = asema: " + l.Tila.Rivi2);
             v.Kuuluu = true;   // nopea asema: kuuluu heti
             Aja(l, y, 1.3);
             Oleta.Sama(ViritysVaihe.Haku, l.Tila.Viritys);
@@ -277,7 +281,8 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(!w.Soi, "kohina häivytetään");
             Aja(l, y, 0.4);
             Oleta.Sama(RadioVaihe.Soi, l.Tila.Vaihe);
-            Oleta.Sama("HELSINKI", l.Tila.Rivi2);
+            Oleta.Sama(l.Tila.Naytto.ToUpperInvariant(), l.Tila.Rivi1);
+            Oleta.Sama("HELSINKI · SUOMI", l.Tila.Rivi2, "soidessa [asema, KAUPUNKI · MAA]");
             Aja(l, y, 1);
             Oleta.Tosi(Math.Abs(v.V - RadioLinssi.OletusAani) < 1e-4, "täysi voimakkuus: " + v.V);
         }
@@ -303,6 +308,31 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(RadioVaihe.Viritys, l.Tila.Vaihe);
         }
 
+        [Testi] static void TaukoSeisooJaJatkuu()
+        {
+            var (l, y, v, w, k, tilat) = Luo();
+            k.Napauta("helsinki");
+            Aja(l, y, 1.0);
+            l.Tauko(true);
+            Oleta.Tosi(l.Tauolla && l.Tila.Tauolla && v.Loki.Last() == "tauko True", "tauko virralle ja tilaan");
+            Aja(l, y, 20);   // yli aikakatkaisun: ajastimet seisovat
+            Oleta.Sama(RadioVaihe.Viritys, l.Tila.Vaihe, "ei aikakatkaisua tauolla");
+            l.Tauko(false);
+            Oleta.Tosi(!l.Tauolla && v.Loki.Last() == "tauko False");
+            v.Kuuluu = true;
+            Aja(l, y, 1.3);   // 1,0 + 1,3 = 2,3 s virityksen omaa aikaa > 2,28 s
+            Oleta.Sama(ViritysVaihe.Lukittuu, l.Tila.Viritys);
+            Aja(l, y, 0.4);
+            Oleta.Sama(RadioVaihe.Soi, l.Tila.Vaihe);
+            l.Tauko(true);
+            Oleta.Sama(RadioVaihe.Soi, l.Tila.Vaihe, "tila säilyy");
+            // Uusi asema purkaa tauon.
+            k.Napauta(l.Asteikko.First(id => id != "helsinki"));
+            Oleta.Tosi(!l.Tauolla && !l.Tila.Tauolla, "uusi asema soi");
+            Oleta.Sama("FIN", l.Kaupunki("helsinki").Iso3);
+            Oleta.Sama("Suomi", l.MaanNimi("FIN"));
+        }
+
         [Testi] static void VirheJaKanavatonMaa()
         {
             var (l, y, v, w, k, tilat) = Luo();
@@ -311,6 +341,7 @@ namespace Matkakirja.Linssit.Testit
             Aja(l, y, 0.1);
             Oleta.Sama(RadioVaihe.Virhe, l.Tila.Vaihe);
             Oleta.Sama("EI KUULU", l.Tila.Rivi1);
+            Oleta.Sama(l.Tila.Naytto.ToUpperInvariant(), l.Tila.Rivi2, "virheessä [EI KUULU, asema]");
             var kanavaton = l.Nakyvat.FirstOrDefault(id => S().MaanAsema(S().Kaupunki(id)?.Iso3) == null);
             Oleta.Tosi(kanavaton != null, "kanavaton kaupunki löytyy");
             k.Napauta(kanavaton);

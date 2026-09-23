@@ -42,6 +42,10 @@ namespace Matkakirja.Natiivi
         /// <summary>50:50-nappi näkyvissä (neljä vaihtoehtoa, ei käytetty, ei vastattu).</summary>
         public bool PuolitusTarjolla;
         public int PuolitusHinta;
+        /// <summary>Kaveriavun nappi (Sahkepinta.Apunappi) tai null = ei nappia (sähkelinja kiinni tai ohjain ei kytkenyt).</summary>
+        public ApuNappi Kaveriapu;
+        /// <summary>Kaveriavun odotus- tai veikkauskortti kysymyksen ja vaihtoehtojen väliin (Sahkepinta.Apukortti) tai null.</summary>
+        public ApuKortti KaveriapuKortti;
 
         // --- pulma (Laji Pulma) ---
         /// <summary>Pulman tunniste (web puzzleId), piirroksen valintaan.</summary>
@@ -122,6 +126,10 @@ namespace Matkakirja.Natiivi
         public Action<int> Vastaa;
         public Action Vihje;
         public Action Puolita;
+        /// <summary>"Kysy kaverilta (25 £)" (null = ei nappia). Aika pysähtyy odotuksen ajaksi.</summary>
+        public Action KysyKaverilta;
+        /// <summary>Apukortin nappi ("Selvä" / "Peru odotus"): apu päättyy ja aika jatkuu.</summary>
+        public Action KaveriapuValmis;
         /// <summary>Tuloksen jälkeen: sulkee kysymyksen.</summary>
         public Action Jatka;
         /// <summary>Tervehdyssivun "Aloita peli": kysymys ja aika alkavat.</summary>

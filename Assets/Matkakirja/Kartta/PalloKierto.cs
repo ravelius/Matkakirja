@@ -88,6 +88,27 @@ namespace Matkakirja
 
         public void SeurantaLoppui() => Seurataan = false;
 
+        /// <summary>
+        /// Pisteen paikka näytöllä pikseleinä (origo vasen alakulma kuten Input), esim. Natiivi-UI:n
+        /// noppa pelaajan kohdalta. false = pallon takapuolella tai ruudun ulkopuolella.
+        /// korkeus metreinä ellipsoidista (nappula on 5000 m:ssä).
+        /// </summary>
+        public bool RuutuPiste(double lat, double lon, out Vector2 ruutu, double korkeus = 0)
+        {
+            ruutu = default;
+            var kamera = GetComponent<Camera>();
+            if (georeferenssi == null || kamera == null) return false;
+            var gt = georeferenssi.transform;
+            double3 ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(lon, lat, korkeus));
+            Vector3 p = gt.TransformPoint((float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef));
+            Vector3 keskus = gt.TransformPoint((float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero));
+            if (Vector3.Dot((p - keskus).normalized, (kamera.transform.position - p).normalized) < 0.02f) return false;
+            Vector3 r = kamera.WorldToScreenPoint(p);
+            if (r.z <= 0 || r.x < 0 || r.y < 0 || r.x > Screen.width || r.y > Screen.height) return false;
+            ruutu = r;
+            return true;
+        }
+
         /// <summary>Lepo vaihtui: true = ei liikettä eikä peittoa (Natiivi-UI:n pieni liike herää vain levossa).</summary>
         public event Action<bool> LepoMuuttui;
         public bool Levossa { get; private set; } = true;

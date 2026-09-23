@@ -1245,3 +1245,248 @@
 .mk-astrokuva__vakanen {
     justify-content: center;
 }
+
+/* ------------------------------------------------------------------------ *
+ * MAAILMANRADIO (RadioNakyma.cs): webin css/radio.css. Puinen kotelo
+ * alalaidassa, pistenäyttö tummalla lasilla, merkkivalo ja viritysasteikko.
+ * Puu, paperi ja lasin liukuväri ovat tekstuureja (RadioNakyma), viivat ja
+ * lamppu Painter2D:llä. Mitat: ≤ 700 px näyttö 324 × 54 ja kotelo kiinni
+ * alareunassa; leveällä (.mk-radio--levea) 408 × 68 ja pyöristys 14 14 9 9.
+ * ------------------------------------------------------------------------ */
+.mk-radio {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: row;
+    justify-content: center;
+    opacity: 0;
+    translate: 0 12px;
+    transition-property: opacity, translate;
+    transition-duration: 0.18s;
+    transition-timing-function: ease;
+}
+
+.mk-radio.mk-auki {
+    opacity: 1;
+    translate: 0 0;
+}
+
+.mk-radio--levea {
+    padding: 5px 6px 0 6px;
+}
+
+.mk-radio__kotelo {
+    flex-grow: 1;
+    max-width: 478px;
+    flex-direction: column;
+    padding: 7.2px 8px;
+    border-width: 1px 1px 0 1px;
+    border-color: rgba(0, 0, 0, 0.5);
+    border-top-color: rgba(217, 161, 59, 0.55);
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.mk-radio--levea .mk-radio__kotelo {
+    padding: 8px 9.6px;
+    border-bottom-width: 1px;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+}
+
+/* Kotelon varjo kartalle (web box-shadow 0 -3px 14px). */
+.mk-radio__varjo {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    top: -12px;
+    height: 12px;
+}
+
+.mk-radio__keskio {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mk-radio__nayttorivi {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.mk-radio__naytto {
+    flex-shrink: 1;
+    width: 324px;
+    height: 54px;
+    border-radius: 3px;
+    background-color: #221204;
+    overflow: hidden;
+}
+
+.mk-radio--levea .mk-radio__naytto {
+    width: 408px;
+    height: 68px;
+}
+
+/* Sammuksissa: saturate(.55) brightness(.86); virheessä lasi punertaa. */
+.mk-radio--hiljaa .mk-radio__naytto {
+    background-color: #1d1006;
+    -unity-background-image-tint-color: rgb(219, 219, 219);
+}
+
+.mk-radio--virhe .mk-radio__naytto {
+    background-color: #3a1408;
+}
+
+.mk-radio__pisteet {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.mk-radio__lasikehys {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-width: 2px;
+    border-color: rgba(24, 15, 6, 0.85);
+    border-radius: 3px;
+}
+
+/* Merkkivalo: painettava 44 × 44, lamppu 22 (leveällä 26) keskellä; näkyvä
+ * väli näyttöön .7rem kuten webissä. */
+.mk-radio__lamppu {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    margin-left: 0.2px;
+    margin-right: 0.2px;
+}
+
+.mk-radio--levea .mk-radio__lamppu {
+    margin-left: 2.2px;
+    margin-right: 2.2px;
+}
+
+.mk-radio__asteikko {
+    height: 30px;
+    margin-top: 5.6px;
+    border-width: 1px;
+    border-color: rgba(58, 42, 23, 0.5);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.mk-radio__nauha {
+    position: absolute;
+    left: 6px;
+    right: 6px;
+    top: 0;
+    bottom: 0;
+    flex-direction: row;
+}
+
+.mk-radio__kaupunki {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    min-width: 0;
+    padding: 3px 1px 0 1px;
+    font-size: 7px;
+    letter-spacing: 0.14px;
+    -unity-text-align: upper-center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+    color: rgba(48, 33, 15, 0.82);
+    text-shadow: 0 1px 0 rgba(255, 246, 220, 0.4);
+    transition-property: color, opacity;
+    transition-duration: 0.18s;
+}
+
+.mk-radio__kaupunki--keski {
+    color: rgba(40, 27, 12, 0.95);
+    letter-spacing: 0.28px;
+}
+
+.mk-radio__kaupunki--kauka {
+    color: rgba(40, 26, 10, 0.94);
+    text-shadow: 0 1px 0 rgba(255, 247, 224, 0.55);
+}
+
+.mk-radio__kaupunki:active {
+    color: #b03a2b;
+}
+
+.mk-radio--viritys .mk-radio__kaupunki {
+    opacity: 0.55;
+}
+
+.mk-radio--viritys .mk-radio__kaupunki--keski {
+    opacity: 0.8;
+}
+
+/* Viisari: punainen 1,5 px viiva ja paperinvärinen 1 px reunus. */
+.mk-radio__viisari {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3.5px;
+    margin-left: -1.75px;
+    background-color: rgba(251, 241, 216, 0.85);
+    transition-property: opacity;
+    transition-duration: 0.18s;
+}
+
+.mk-radio__viisari-punainen {
+    position: absolute;
+    left: 1px;
+    top: 0;
+    bottom: 0;
+    width: 1.5px;
+    background-color: #b03a2b;
+}
+
+.mk-radio--hiljaa .mk-radio__viisari {
+    opacity: 0.45;
+}
+
+/* Linkkiasema (hybridimalli 23.9.2026): nimi ja "Avaa aseman sivu". */
+.mk-radio__linkki {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 6px;
+}
+
+.mk-radio__linkkinimi {
+    flex-shrink: 1;
+    min-width: 0;
+    margin-right: 8px;
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #f3e6d0;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+.mk-radio__sivu {
+    flex-shrink: 0;
+    min-height: 32px;
+    padding: 4px 12px;
+    border-radius: 16px;
+}
+
+.mk-radio__sivu .mk-nappi__teksti {
+    font-size: 12.5px;
+}
