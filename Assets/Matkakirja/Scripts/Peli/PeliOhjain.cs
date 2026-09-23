@@ -46,7 +46,7 @@ using UnityEngine.Networking;
 namespace Matkakirja.Natiivi
 {
     /// <summary>Silmukan tila (testikomentojen 'odota-tila' ja peli-tila.json).</summary>
-    public enum SilmukanTila { Lataa, Kartta, Dialogi, Matkalla, Lehti, Virhe, Kysymys }
+    public enum SilmukanTila { Lataa, Kartta, Dialogi, Matkalla, Lehti, Virhe, Kysymys, Traileri }
 
     [DisallowMultipleComponent]
     public sealed class PeliOhjain : MonoBehaviour
@@ -965,7 +965,7 @@ namespace Matkakirja.Natiivi
             // Lennon alun repliikki kerran istunnossa; muuten saapumispuhe kohteeseen.
             var lentoRepliikki = t.Tapa == Kulkutapa.Lento ? luennat.OtaLentoAlku() : null;
             if (lentoRepliikki != null) SoitaLuento(lentoRepliikki, 0.2f);
-            else if (t.Saapui != null) SoitaLuento(luennat.Saapumispuhe(t.Saapui), 0.3f);
+            else if (t.Saapui != null && PeliNakymat.Saapumistraileri == null) SoitaLuento(luennat.Saapumispuhe(t.Saapui), 0.3f);
             Ajo(b.Value.Lat, b.Value.Lon, SaapumisKaari, PeliApu.AjoKesto(kulma), Perilla);
             return null;
         }
@@ -976,6 +976,52 @@ namespace Matkakirja.Natiivi
             if (Tila != SilmukanTila.Matkalla) return;
             var kaupunki = saapumisKaupunki;
             saapumisKaupunki = null;
+            if (kaupunki != null && TraileriTarjolla(kaupunki))
+            {
+                // Traileri ennen lehteä (web: saapumisesitys → lehti → luento).
+                trailerinaytetty.Add(kaupunki);
+                Tila = SilmukanTila.Traileri;
+                traileriKaupunki = kaupunki;
+                bool valmis = false;
+                try
+                {
+                    PeliNakymat.Saapumistraileri(kaupunki, luennat.Saapumispuhe(kaupunki)?.Url, () =>
+                    {
+                        if (valmis) return;
+                        valmis = true;
+                        TraileriValmis(kaupunki);
+                    });
+                }
+                catch (Exception e) { Debug.LogException(e); TraileriValmis(kaupunki); }
+                return;
+            }
+            SaavuLehteen(kaupunki);
+        }
+
+        readonly HashSet<string> trailerinaytetty = new HashSet<string>();
+        string traileriKaupunki;
+
+        /// <summary>Traileri kerran per kaupunki istunnossa, ei aarrekaupungeissa (web saapumistraileri).</summary>
+        bool TraileriTarjolla(string kaupunki) =>
+            PeliNakymat.Saapumistraileri != null && Kaytossa && !trailerinaytetty.Contains(kaupunki) && !matka.LaattaTassa(kaupunki);
+
+        /// <summary>Ohittaa trailerin ohjaimen puolelta (testikomento 'ohita-traileri'); näkymä piilottaa itsensä Tilan vaihtuessa.</summary>
+        public string OhitaTraileri()
+        {
+            if (Tila != SilmukanTila.Traileri) return "traileri ei ole auki";
+            TraileriValmis(traileriKaupunki);
+            return null;
+        }
+
+        void TraileriValmis(string kaupunki)
+        {
+            if (Tila != SilmukanTila.Traileri || traileriKaupunki != kaupunki) return;
+            traileriKaupunki = null;
+            SaavuLehteen(kaupunki);
+        }
+
+        void SaavuLehteen(string kaupunki)
+        {
             if (kaupunki != null && lehti != null)
             {
                 Tila = SilmukanTila.Lehti;
@@ -1347,7 +1393,7 @@ namespace Matkakirja.Natiivi
             PaivitaReaktiot();
             PaivitaKysymysAika();
             // Pallo ei ota kosketuksia modaalisen näkymän (ja lehden) aikana.
-            bool esta = Kaytossa && (Tila == SilmukanTila.Dialogi || Tila == SilmukanTila.Kysymys || Tila == SilmukanTila.Lehti);
+            bool esta = Kaytossa && (Tila == SilmukanTila.Dialogi || Tila == SilmukanTila.Kysymys || Tila == SilmukanTila.Lehti || Tila == SilmukanTila.Traileri);
             if (esta != lukossa) { lukossa = esta; SyoteLukko.Aseta(this, esta); }
         }
 
