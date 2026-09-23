@@ -44,33 +44,19 @@ namespace Matkakirja.Editori
             pallo.tilesetSource = CesiumDataSource.FromEllipsoid;
             pallo.showCreditsOnScreen = false;
 
-            // Pohjakerros (materialKey 0) alle, laatat (1) päälle. Komponenttien järjestys
-            // on sama kuin piirtojärjestys.
-            var pohja = palloGo.AddComponent<CesiumUrlTemplateRasterOverlay>();
-            pohja.materialKey = "0";
-            pohja.projection = CesiumUrlTemplateRasterOverlayProjection.Geographic;
-            pohja.specifyTilingScheme = true;
-            pohja.rootTilesX = 1;
-            pohja.rootTilesY = 1;
-            pohja.rectangleWest = -180;
-            pohja.rectangleSouth = -90;
-            pohja.rectangleEast = 180;
-            pohja.rectangleNorth = 90;
-            pohja.minimumLevel = 0;
-            pohja.maximumLevel = 0;
-            pohja.tileWidth = 2048;
-            pohja.tileHeight = 1024;
-            var pohjaKerros = palloGo.AddComponent<PohjaKerros>();
-            pohjaKerros.kerros = pohja;
-
             var kerros = palloGo.AddComponent<CesiumUrlTemplateRasterOverlay>();
-            kerros.materialKey = "1";
             kerros.templateUrl = LaattaUrl;
             kerros.projection = CesiumUrlTemplateRasterOverlayProjection.WebMercator;
             kerros.minimumLevel = 0;
             kerros.maximumLevel = LaattaMaxTaso;
             kerros.tileWidth = 256;
             kerros.tileHeight = 256;
+
+            var kannet = georefGo.AddComponent<NapaKannet>();
+            kannet.georeferenssi = georef;
+            // Sävyt sovitettu mitattuihin laattoihin 82°:n kohdalla (simulaattorikaappaus 23.9.).
+            kannet.pohjoinen = KansiMateriaali("Napakansi-pohjoinen", new Color32(0xba, 0xb6, 0xa6, 0xff));
+            kannet.etela = KansiMateriaali("Napakansi-etela", new Color32(0xdc, 0xd6, 0xc6, 0xff));
 
             var kameraGo = new GameObject("Kamera") { tag = "MainCamera" };
             var kamera = kameraGo.AddComponent<Camera>();
@@ -107,6 +93,18 @@ namespace Matkakirja.Editori
             Debug.Log("MATKAKIRJA: kohtaus luotu " + PalloKohtaus);
         }
 
+        /// <summary>Napakannen materiaali assetiksi (Matkakirja/Napakansi, häivytetty reuna).</summary>
+        static Material KansiMateriaali(string nimi, Color vari)
+        {
+            string polku = $"Assets/Matkakirja/Materiaalit/{nimi}.mat";
+            Directory.CreateDirectory(Path.GetDirectoryName(polku));
+            var m = new Material(Shader.Find("Matkakirja/Napakansi"));
+            m.SetColor("_BaseColor", vari);
+            AssetDatabase.DeleteAsset(polku);
+            AssetDatabase.CreateAsset(m, polku);
+            return AssetDatabase.LoadAssetAtPath<Material>(polku);
+        }
+
         static void AsetaIos(iOSSdkVersion sdk)
         {
             PlayerSettings.companyName = "Matkakirja";
@@ -132,6 +130,8 @@ namespace Matkakirja.Editori
                 target = BuildTarget.iOS,
                 options = lisat,
             };
+            // Release-käännös: Development-tila hidastaa ja näyttää kehityskonsolin.
+            EditorUserBuildSettings.development = false;
             var raportti = BuildPipeline.BuildPlayer(asetukset);
             var s = raportti.summary;
             Debug.Log($"MATKAKIRJA: käännös {s.result}, {s.totalTime.TotalSeconds:F0} s, virheitä {s.totalErrors}, {kansio}");
