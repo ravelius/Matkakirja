@@ -497,8 +497,7 @@ namespace Matkakirja.Natiivi
                         Teko(new LehtiTeko { Laji = LehtiTekoLaji.JulisteMyonto, Avain = juliste.Id, Kaupunki = omistaja });
                         voita?.Invoke();
                         var lunasta = Rakenne.Nappi("Lunasta juliste", "mk-lehti__lunastus", () => NaytaJuliste(juliste), palsta);
-                        Rakenne.Tausta(lunasta, Kuviot.Kulta);
-                        Kirjasimet.Aseta(lunasta, Kirjasin.KoneLihava);
+                        Kirjasimet.Aseta(lunasta, Kirjasin.LukuLihava);
                     }
                 };
                 napit.Add(b);
@@ -688,12 +687,17 @@ namespace Matkakirja.Natiivi
 
         // --- testi ---------------------------------------------------------------------------------
 
-        /// <summary>Testikomento: "sivu n" kääntää, "sisallys" avaa sisällyksen, "kuva" suurennoksen.</summary>
+        /// <summary>Testikomento: "sivu n" kääntää, "sisallys" avaa sisällyksen, "kuva" suurennoksen, "tehtava(-pois)" keksityn tehtävänapin, "viimeinen" viimeiselle sivulle.</summary>
         public void Testaa(string mita, int n)
         {
             switch (mita)
             {
                 case "sivu": Kaanna(n); break;
+                case "tehtava":
+                case "tehtava-pois":
+                    PaivitaTila(new LehtiTila { Matkapaiva = 12, TehtavaNappi = mita == "tehtava" ? "Tapaa gondolieeri" : "Gondolieeri ei tavattavissa", TehtavaNappiPois = mita != "tehtava" });
+                    break;
+                case "viimeinen": if (lehti != null) Kaanna(lehti.Sivut.Count - 1); break;
                 case "sisallys": if (lehti?.Laji == LehtiLaji.Maa) VaihdaSisallys(); break;
                 case "kuva":
                     var k = sivu?.contentContainer.Q(className: "mk-lehti__kuvakehys");
