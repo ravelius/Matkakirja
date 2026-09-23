@@ -53,6 +53,7 @@ korkeudet metreinä. Kaaret ovat asteina kapeammassa näyttösuunnassa.
 | `void Aja(IList<(lat, lon)> matkapisteet, kestoS, Action valmis)` | valmis | Autokyyti pisteiden läpi, kamera seuraa (`seuraaKamera`). |
 | `void Lenna(lat0, lon0, lat1, lon1, kestoS, Action valmis)` | valmis | Lento isoympyräkaarena. |
 | `void AloitusLento(lahtoLat, lahtoLon, lat, lon, kestoS, Action lahti, Action valmis)` | valmis | Omistajan aloituskaava: kamera zoomaa lähtöön (`lahtoZoomS` 2,5 s, kaari 18,6°), sitten `lahti` (Pelikoodari: koneen ääni ja intro-luenta), lentokone lentää kaarta pitkin `kestoS` sekuntia kameran seuratessa ja noustessa niin, että kaari näkyy; perillä `valmis` (Pelikoodari: AloituslentoPaattyi → UI) ja kone vaihtuu nappulaksi. Sormi ei pysäytä lentoa. Testi: `nappula aloitus 51.5 -0.13 41.9 12.5 20`. |
+| `LennonVaihe Vaihe`, `event Action<LennonVaihe> VaiheVaihtui` | valmis | LENNON ESITYS (kaikki lennot, `Lenna` ja `AloitusLento`): `Nousu` (p < 0,2), `Matka`, `Lasku` (p > 0,8, puoliorbitti koneen ympäri), `Ei` perillä tai keskeytettäessä. Kamera yläviistosta koneen takaa (`PalloKierto.Kuvaa`), aurinko UTC-ajan mukaan (`Aurinko.Aika` = pelin kello, jos Pelikoodari asettaa), etäisyyssumu matkalennolla, Linssisepän `LentoPilvet`, savujana (`Savujana`) ja DC-3-malli (`koneMalli`). Punaista reittikorostusta ei tarvita lennoilla. |
 
 ## 4. Kerrokset linsseille — `KarttaKerrokset` (valmis, `KarttaKerrokset.Instanssi`)
 
