@@ -131,7 +131,7 @@ namespace Matkakirja.Natiivi
         {
             if (string.IsNullOrEmpty(teksti)) yield break;
             var juuri = MiniJson.Objekti(MiniJson.Jasenna(teksti));
-            var alkiot = juuri != null ? MiniJson.Taulukko(MiniJson.Kentta(juuri, "alkiot")) : null;
+            var alkiot = juuri != null ? Rakenne.Lista(MiniJson.Kentta(juuri, "alkiot")) : null;
             if (alkiot == null) yield break;
             foreach (var a in alkiot) { var o = MiniJson.Objekti(a); if (o != null) yield return o; }
         }
@@ -180,7 +180,7 @@ namespace Matkakirja.Natiivi
                     if (dem != null) { m.Demokratia = MiniJson.Teksti(dem, "arvo"); m.DemokratiaSija = MiniJson.Teksti(dem, "sija"); }
                     var tulo = MiniJson.Objekti(MiniJson.Kentta(tiedot, "keskitulo"));
                     if (tulo != null) { m.Keskitulo = MiniJson.Teksti(tulo, "arvo"); m.KeskituloSija = MiniJson.Teksti(tulo, "sija"); }
-                    var terv = MiniJson.Taulukko(MiniJson.Kentta(tiedot, "tervehdykset"));
+                    var terv = Rakenne.Lista(MiniJson.Kentta(tiedot, "tervehdykset"));
                     if (terv != null)
                         foreach (var x in terv)
                         {
@@ -189,7 +189,7 @@ namespace Matkakirja.Natiivi
                             m.Tervehdykset.Add((MiniJson.Teksti(o, "teksti"), MiniJson.Teksti(o, "kieli"), MiniJson.Teksti(o, "lippu"), MiniJson.Teksti(o, "osuus")));
                         }
                 }
-                var aiheet = MiniJson.Taulukko(MiniJson.Kentta(a, "aiheet"));
+                var aiheet = Rakenne.Lista(MiniJson.Kentta(a, "aiheet"));
                 if (aiheet != null)
                     foreach (var x in aiheet)
                     {
@@ -229,7 +229,7 @@ namespace Matkakirja.Natiivi
                 var osoitteet = new List<string>();
                 var url = MiniJson.Teksti(a, "url");
                 if (url != null) osoitteet.Add(url);
-                var varat = MiniJson.Taulukko(MiniJson.Kentta(a, "varat"));
+                var varat = Rakenne.Lista(MiniJson.Kentta(a, "varat"));
                 if (varat != null) foreach (var v in varat) if (v is string s) osoitteet.Add(s);
                 maat[iso] = (MiniJson.Teksti(a, "nimi"), osoitteet);
             }
@@ -240,7 +240,7 @@ namespace Matkakirja.Natiivi
             {
                 string id = MiniJson.Teksti(a, "kaupunki") ?? MiniJson.Teksti(a, "id");
                 if (id == null || !t.TryGetValue(id, out var k)) continue;
-                var kategoriat = MiniJson.Taulukko(MiniJson.Kentta(a, "data"));
+                var kategoriat = Rakenne.Lista(MiniJson.Kentta(a, "data"));
                 if (kategoriat == null) continue;
                 foreach (var ko in kategoriat)
                 {
@@ -250,8 +250,8 @@ namespace Matkakirja.Natiivi
                     {
                         k.Lehti = true;
                         k.Johdanto = MiniJson.Teksti(kat, "johdanto");
-                        LueKuvat(MiniJson.Taulukko(MiniJson.Kentta(kat, "kansikuvat")) ?? MiniJson.Taulukko(MiniJson.Kentta(kat, "avauskuvat")), k.Kansikuvat);
-                        LueKuvat(MiniJson.Taulukko(MiniJson.Kentta(kat, "avauskuvat")), k.Avauskuvat);
+                        LueKuvat(Rakenne.Lista(MiniJson.Kentta(kat, "kansikuvat")) ?? Rakenne.Lista(MiniJson.Kentta(kat, "avauskuvat")), k.Kansikuvat);
+                        LueKuvat(Rakenne.Lista(MiniJson.Kentta(kat, "avauskuvat")), k.Avauskuvat);
                     }
                     else
                     {
