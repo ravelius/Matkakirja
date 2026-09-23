@@ -1719,3 +1719,7 @@ Pelikoodari klo 09.5x, testit 4051/0, savuke 7/7. Omistajan kierros: tila 5 ilma
 ## OMISTAJA (KORTTI 10.02): VANHEMPI GOOGLE CLOUD -PROJEKTI (ENNEN 8.7.2025) API-AVAIMELLA — VOIKO SEN 3D-LAATTOJA KAYTTAA PELISSA? APURAHA MAX 20 000 € (UNITY PERSONAL RIITTAA); HALUAA ERILLISEN RAPORTIN UNREAL ENGINE vs UNITY EDUISTA JA HAITOISTA ENNEN PAATOSTA (23.9.2026 klo 10.02)
 
 3D-selvittäjälle kaksi jatkotehtävää: A) Google-laattojen käyttöoikeus vanhalla projektilla (Unmodified State, käyttöehdot pelissä, hinnoittelu, riski) → docs/raportit/3d-google-laatat-eu-20260923.md; B) Unreal vs Unity -vertailu → docs/raportit/3d-unreal-vs-unity-20260923.md. Prototyyppiä ei aloiteta ennen omistajan päätöstä.
+
+## OMISTAJAN AJATUS: WEB-VERSIO AINA ILMAINEN, APP STORE -VERSIO MAKSULLINEN TAI 3D-LISAOSAT LISAMAKSULLISIA (MARKKINOINTIMALLI); SELVITYS: MITEN KAKSI PELIA PYSYVAT SISALLOLTAAN AJAN TASALLA YHTA AIKAA → FABLEN KANTA: YKSI SISALTOLAHDE (VERSIOITU JSON-PAKETTI AMPARISSA, MOLEMMAT PELIT HAKEVAT KAYNNISTYESSA, SISALTOVERSIO ERILLAAN KOODIVERSIOSTA); TARKISTETTAVAT: CC-NC/SA-LISENSSIT MAKSULLISESSA KAYTOSSA, APURAHAN AVOIMUUSEHDOT, APPLEN 15–30 % JA IAP-PAKKO (23.9.2026 klo 10.08)
+
+Klo 10.05. Siirtosepän tehtävä laajennettu: yhteinen sisältölähde, julkaisuputki, skeeman versiointi, webin muutos vaiheittain, App Storen säännöt datan lataamisesta, IAP-rajaus, lisenssijakauma js/lahteet.js:stä.
