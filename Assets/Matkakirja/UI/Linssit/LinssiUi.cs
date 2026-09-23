@@ -11,6 +11,9 @@
 //   RadioNakyma        maailmanradion kotelo alalaidassa (pistenäyttö, merkkivalo, asteikko)
 // Linssin ollessa auki kartan kalusteet väistyvät (kartuscha, karttaselitteen
 // nappi) ja oikeaan yläkulmaan tulee "✕ Sulje linssi" (Rekisteri.Sulje).
+// Aikajanalinsseissä (keksinnöt, ihmisen matka) sulku on ylärivin hampurilaisen
+// ensimmäinen rivi "Poistu" (LinssiValikko, web js/aikajana-valikko.js), joten
+// pilleri väistyy aina, kun hampurilainen on käytettävissä.
 //
 // Kerrokset (UiKerros, sortingOrder): 5 avaruussumu (3D:n päällä, kaiken UI:n
 // alla), 24 ihmisen matkan musta (tilarivin päällä), 25 linssien kalusteet
@@ -43,6 +46,8 @@ namespace Matkakirja.Natiivi
         public readonly RadioNakyma Radio;
         readonly Button sulje;
         Linssirekisteri kuunneltu;
+        // Sulkupillerin peittäjät: astronautin kuvanäkymä, vertailuarkki ja aikajanan hampurilainen.
+        bool kuvaPeittaa, arkkiPeittaa, valikkoKorvaa;
 
         /// <summary>Auki oleva linssi (null = ei mitään).</summary>
         public ILinssi Auki { get; private set; }
@@ -76,11 +81,16 @@ namespace Matkakirja.Natiivi
             // Vähennetty liike: pelaajan "Pieni liike" pois = vähemmän liikettä.
             // TODO: iOS:n UIAccessibilityIsReduceMotionEnabled liitännäisenä (LinssiOhjaimen kommentti).
             LinssiOhjain.VahennettyLiikeKysely ??= VahennettyLiike;
+            // Kertojan kytkin (päävalikko, linssin hampurilainen) koskee myös linssin luentaa ja
+            // kertomusta (web luentaKytkinPaalla); Äänimaisema pois = koko pelin mykistys.
+            // Mykistys-koukku on Pelikoodarin: vain jos kukaan ei ole asettanut omaansa.
+            EsityksenAani.Mykistetty ??= () => !Asetukset.Paalla(Kytkin.Kertoja) || !Asetukset.Paalla(Kytkin.Aanimaisema);
 
             Valitsin.Valittu += Valitse;
             Valitsin.Suljettava += SuljeLinssi;
-            Astronautti.KuvaAuki += auki => SulkuNakyviin(!auki);
-            Maat.ArkkiMuuttui += auki => SulkuNakyviin(!auki);
+            Astronautti.KuvaAuki += auki => { kuvaPeittaa = auki; PaivitaSulku(); };
+            Maat.ArkkiMuuttui += auki => { arkkiPeittaa = auki; PaivitaSulku(); };
+            Aikajana.ValikkoKaytettavissa += kaytossa => { valikkoKorvaa = kaytossa; PaivitaSulku(); };
 
             kerros.Juuri(Kerros).schedule.Execute(Kytke).Every(500);
             Kytke();
@@ -151,7 +161,9 @@ namespace Matkakirja.Natiivi
             if (paalla) ui.Karttaselite.Sulje();
             Valitsin.Sulje();
             Valitsin.Merkitse(id);
-            sulje.style.display = paalla ? DisplayStyle.Flex : DisplayStyle.None;
+            // Linssin vaihtuessa pilleri esiin kuten ennenkin; peittäjät ilmoittavat itsensä uudelleen.
+            kuvaPeittaa = arkkiPeittaa = false;
+            PaivitaSulku();
             Selite.Nayta(linssi?.Tiedot);
             // Astronautin kamera (Linssisepän kuvaus 23.9.2026): yläpalkki piiloon, vain ✕
             // oikeassa yläkulmassa; Livialle kypärä.
@@ -164,15 +176,19 @@ namespace Matkakirja.Natiivi
             Astronautti.Vaihtui(astro);
             Maat.Kytke(linssi);
             Aikajana.Kytke(linssi);
+            Aikajana.VahdiValikkoa(); // hampurilainen korvaa pillerin jo tässä ruudussa
             Radio.Kytke(linssi);
             if (!paalla) Peite.Aseta(false);
         }
 
-        /// <summary>Kuvanäkymä tai muu koko ruudun linssinäkymä peittää sulkunapin.</summary>
-        public void SulkuNakyviin(bool nakyy)
+        /// <summary>
+        /// Sulkupilleri näkyy, kun linssi on auki eikä sitä peitä kuvanäkymä tai vertailuarkki
+        /// eikä korvaa aikajanan hampurilainen (sen "Poistu").
+        /// </summary>
+        void PaivitaSulku()
         {
-            bool paalla = Auki != null;
-            sulje.style.display = paalla && nakyy ? DisplayStyle.Flex : DisplayStyle.None;
+            bool nakyy = Auki != null && !kuvaPeittaa && !arkkiPeittaa && !valikkoKorvaa;
+            sulje.style.display = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
         }
 
         /// <summary>Kaikki linssien valikot ja testinäkymät kiinni (UiNakymat.SuljeKaikki).</summary>
@@ -180,6 +196,7 @@ namespace Matkakirja.Natiivi
         {
             Valitsin.Sulje();
             Maat.SuljeArkki();
+            Aikajana.Valikko.Sulje();
         }
 
         // --- linssi-oliot sovittimien takaa ---------------------------------------------

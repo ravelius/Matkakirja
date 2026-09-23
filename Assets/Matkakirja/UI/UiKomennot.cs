@@ -44,9 +44,11 @@
 //   ui livia [ele] [p] [astro|leiju|puhe|mini] Livia (152 × 304) keskellä kerrosta 40 (oletus blink 0.5)
 //   ui livia kierros [astro|leiju|puhe]       kaikki eleet peräkkäin oikeassa ajassa (videotarkistus)
 //   ui livia pois                             Livia pois
-//   ui linssi valitsin|peite|selite|astro|kuva|sumu|vertailu|maa|keksinnot|matka|sulje|pois
+//   ui linssi valitsin|peite|selite|astro|kuva|sumu|vertailu|maa|keksinnot|matka|radio|valikko|varusteet|sulje|pois
 //                                             linssien UI esimerkkiaineistolla (Linssit/LinssiKomennot.cs)
 //   ui linssi vertailu FIN SWE [ITA JPN]      vertailuarkki näillä mailla + maakäyrät (latautuu|verkko = tilat)
+//   ui linssi valikko [keksinnot|matka] [kiinni|alusta]  linssin hampurilaisvalikko aikajanan ylärivissä
+//   ui linssi varusteet [id|ei] [paalla]      laukun Varusteet: esikatselu + Aktivoi esimerkkilinsseillä
 //   kuva nimi                                 Documents/ui-nimi.png (koko ruutu)
 //   odota s                                   seuraava rivi s sekunnin päästä
 using System.Collections.Generic;
