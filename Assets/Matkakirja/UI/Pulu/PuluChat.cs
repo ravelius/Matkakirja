@@ -109,6 +109,15 @@ namespace Matkakirja.Natiivi
             naytaKuplat = Rakenne.Nappi("Näytä puhekuplat", "mk-chat__pilleri", () => { Sulje(); pulu.NaytaViimeisinKupla(); }, ylarivi);
             naytaKuplat.tooltip = "Tuo ohi menneet puhekuplat takaisin näkyviin";
             Kirjasimet.Aseta(naytaKuplat, Kirjasin.Luku);
+            // "Ehdota sisältöä" (web .pollo-ehdota): chat väistyy ja ehdotuslomake aukeaa tilanteen kanssa.
+            var ehdota = Rakenne.Nappi("Ehdota sisältöä", "mk-chat__pilleri", () =>
+            {
+                if (!UiNakymat.Olemassa) return;
+                Sulje();
+                UiNakymat.Hae().Palaute.Avaa();
+            }, ylarivi);
+            ehdota.tooltip = "Ehdota sisältöä tähän kohtaan peliä";
+            Kirjasimet.Aseta(ehdota, Kirjasin.Luku);
             virta = new ScrollView(ScrollViewMode.Vertical);
             virta.AddToClassList("mk-chat__virta");
             virta.verticalScrollerVisibility = ScrollerVisibility.Hidden;
@@ -159,6 +168,7 @@ namespace Matkakirja.Natiivi
             sulkija.style.display = DisplayStyle.Flex;
             Rakenne.Nayta(paneeli, true, 200);
             SyoteLukko.Esta(this);
+            Aanisoitin.Hiljennys("pollo", true);
             pulu.Tilanne("chatOpen");
             naytaKuplat.style.display = pulu.KuplaPalautettavissa ? DisplayStyle.Flex : DisplayStyle.None;
             if (!tervehditty) { tervehditty = true; Tervehdi(); }
@@ -175,6 +185,7 @@ namespace Matkakirja.Natiivi
             sulkija.style.display = DisplayStyle.None;
             Rakenne.Nayta(paneeli, false, 200);
             SyoteLukko.Vapauta(this);
+            Aanisoitin.Hiljennys("pollo", false);
             pulu.Tilanne("chatClose");
             kentta.Blur();
         }
@@ -264,7 +275,7 @@ namespace Matkakirja.Natiivi
             using (var r = Pyynto(runko.ToString()))
             {
                 yield return r.SendWebRequest();
-                var json = MiniJson.Objekti(Jasenna(r.downloadHandler?.text));
+                var json = Rakenne.Olio(Jasenna(r.downloadHandler?.text));
                 if (r.responseCode == 403) t.Virhe = EiNatiivissa;
                 else if (r.result != UnityWebRequest.Result.Success)
                 {
@@ -283,7 +294,7 @@ namespace Matkakirja.Natiivi
                         t.Jatkot = new List<string>();
                         foreach (var x in j) if (x is string s) t.Jatkot.Add(s);
                     }
-                    t.Paikka = MiniJson.Objekti(MiniJson.Kentta(json, "paikka"));
+                    t.Paikka = Rakenne.Olio(MiniJson.Kentta(json, "paikka"));
                     if (syy == null) { historia.Add(("kayttaja", kysymys)); historia.Add(("pollo", Nakyva(t.Vastaus))); }
                 }
                 else t.Virhe = EiSaanut;
@@ -325,16 +336,16 @@ namespace Matkakirja.Natiivi
                 {
                     yield return r.SendWebRequest();
                     if (r.result != UnityWebRequest.Result.Success) continue;
-                    var o = MiniJson.Objekti(Jasenna(r.downloadHandler.text));
+                    var o = Rakenne.Olio(Jasenna(r.downloadHandler.text));
                     if (o == null || MiniJson.Teksti(o, "type") == "disambiguation") continue;
                     string tiiv = (MiniJson.Teksti(o, "extract") ?? "").Trim();
                     if (tiiv.Length == 0) continue;
                     var y = new WikiYhteenveto
                     {
                         Kieli = kieli, Otsikko = MiniJson.Teksti(o, "title") ?? otsikko, Tiivistelma = tiiv,
-                        Kuva = MiniJson.Teksti(MiniJson.Objekti(MiniJson.Kentta(o, "originalimage")), "source")
-                            ?? MiniJson.Teksti(MiniJson.Objekti(MiniJson.Kentta(o, "thumbnail")), "source"),
-                        Osoite = MiniJson.Teksti(MiniJson.Objekti(MiniJson.Kentta(MiniJson.Objekti(MiniJson.Kentta(o, "content_urls")), "desktop")), "page"),
+                        Kuva = MiniJson.Teksti(Rakenne.Olio(MiniJson.Kentta(o, "originalimage")), "source")
+                            ?? MiniJson.Teksti(Rakenne.Olio(MiniJson.Kentta(o, "thumbnail")), "source"),
+                        Osoite = MiniJson.Teksti(Rakenne.Olio(MiniJson.Kentta(Rakenne.Olio(MiniJson.Kentta(o, "content_urls")), "desktop")), "page"),
                     };
                     if (tiiv.Length >= 200) { valmis(y); yield break; }
                     vara ??= y;
@@ -371,8 +382,8 @@ namespace Matkakirja.Natiivi
                 {
                     yield return r.SendWebRequest();
                     if (r.result != UnityWebRequest.Result.Success) continue;
-                    var haku = Rakenne.Lista(MiniJson.Kentta(MiniJson.Objekti(MiniJson.Kentta(MiniJson.Objekti(Jasenna(r.downloadHandler.text)), "query")), "search"));
-                    osuma = haku != null && haku.Count > 0 ? MiniJson.Teksti(MiniJson.Objekti(haku[0]), "title") : null;
+                    var haku = Rakenne.Lista(MiniJson.Kentta(Rakenne.Olio(MiniJson.Kentta(Rakenne.Olio(Jasenna(r.downloadHandler.text)), "query")), "search"));
+                    osuma = haku != null && haku.Count > 0 ? MiniJson.Teksti(Rakenne.Olio(haku[0]), "title") : null;
                 }
                 if (osuma == null || !OtsikkoVastaa(aihe, osuma)) continue;
                 WikiYhteenveto y = null;
@@ -526,8 +537,58 @@ namespace Matkakirja.Natiivi
             pulu.Tilanne("answer", nakyva);
             if (AaniPaalla) Puhe.Hae()?.Lue(nakyva, "pollo");
             if (paikkakysymys && !joLennetty && t.Paikka != null) LennaPaikkaan(t.Paikka);
+            if (!t.Uusittava) PoimintaRivi(kysymys, nakyva);
             if (t.Uusittava) Sirut(new[] { "Yritä uudelleen" }, "mk-chat__uusinta", jatko);
             else Sirut(t.Jatkot, "mk-chat__jatkot", true);
+        }
+
+        // --- pöllöpoiminta (web liitaPoimintaNapit, js/pollopoiminnat.js) -------------------------
+
+        /// <summary>
+        /// Web nykyinenPoimintaAvain: auki oleva nähtävyysjuttu voittaa lehden (juttu:kaupunki:nimi),
+        /// muuten lehden sivu (aihe:omistaja:aihe). null = mitään artikkelia ei ole auki.
+        /// </summary>
+        static string PoimintaAvain()
+        {
+            if (!UiNakymat.Olemassa) return null;
+            var ui = UiNakymat.Hae();
+            return ui.Nahtavyydet?.AukiAvain ?? ui.Lehti?.AukiAvain;
+        }
+
+        /// <summary>
+        /// Hyvän vastauksen perään "Ehdota tallennettavaksi": pari lähtee ehdotuskanavaan omistajan
+        /// kuratointiin (ei näy pelissä ennen hyväksyntää). Kehittäjätilassa "Tallenna juttuun" samaan
+        /// kanavaan tarkenteella (webin laitteen oma varasto ja Pöllöpoiminnat-vienti ovat webin työkaluja).
+        /// Ei nappia, jos vastausta ei voi kiinnittää artikkeliin (esim. chat avattu kartalta).
+        /// </summary>
+        void PoimintaRivi(string kysymys, string vastaus)
+        {
+            string avain = PoimintaAvain();
+            if (avain == null || string.IsNullOrEmpty(kysymys) || string.IsNullOrEmpty(vastaus)) return;
+            bool kehittaja = Asetukset.Kehittaja;
+            var rivi = Rakenne.El("mk-chat__poimintarivi", virta, PickingMode.Ignore);
+            Label tila = null;
+            Button nappi = null;
+            nappi = Rakenne.Nappi(kehittaja ? "Tallenna juttuun" : "Ehdota tallennettavaksi", "mk-chat__poimintanappi", () =>
+            {
+                nappi.SetEnabled(false);
+                tila.text = "Lähetetään…";
+                var kentat = new List<(string, string)>
+                {
+                    ("laji", ""), ("teksti", "Pöllöpoiminta\n\nKysymys: " + kysymys + "\n\nVastaus: " + vastaus),
+                    ("sivu", avain), ("tarkenne", kehittaja ? "Pöllöpoiminta (kehittäjä)" : "Pöllöpoiminta"),
+                };
+                Palautekanava.Postita("/laheta", kentat, null, t =>
+                {
+                    if (rivi.panel == null) return;
+                    if (t.Ok) { tila.text = kehittaja ? "Tallennettu kuratointijonoon." : "Kiitos! Ehdotus lähti kuratointiin."; return; }
+                    tila.text = t.Estetty ? Palautekanava.Virheviesti(t) : "Ehdotus ei lähtenyt. Yritä myöhemmin uudelleen.";
+                    nappi.SetEnabled(true);
+                });
+            }, rivi);
+            Kirjasimet.Aseta(nappi, Kirjasin.Luku);
+            tila = Rakenne.Teksti("", "mk-chat__poimintatila", rivi);
+            Vierita(rivi);
         }
 
         /// <summary>
@@ -599,7 +660,7 @@ namespace Matkakirja.Natiivi
             yield return r.SendWebRequest();
             odotus.RemoveFromHierarchy();
             if (poletti != ehdotusPoletti || r.result != UnityWebRequest.Result.Success) yield break; // ei kriittinen
-            var lista = Rakenne.Lista(MiniJson.Kentta(MiniJson.Objekti(Jasenna(r.downloadHandler.text)), "ehdotukset"));
+            var lista = Rakenne.Lista(MiniJson.Kentta(Rakenne.Olio(Jasenna(r.downloadHandler.text)), "ehdotukset"));
             if (lista == null) yield break;
             var tekstit = new List<string>();
             foreach (var x in lista) if (x is string s && s.Length > 0) tekstit.Add(s);

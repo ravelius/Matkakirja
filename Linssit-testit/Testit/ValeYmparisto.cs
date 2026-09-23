@@ -58,6 +58,10 @@ namespace Matkakirja.Linssit.Testit
         public void Pelikerrokset(bool n) { Loki.Add("pelikerrokset " + n); PelikerroksetNakyvissa = n; }
         public void Peite(bool p) { Loki.Add("peite " + p); PeitePaalla = p; }
         public void MusiikkiPitoon(bool p) { Loki.Add("musiikki " + p); Musiikkipito = p; }
+        public string Raita;
+        public double RaidanTaso = -1;
+        public void LinssiMusiikki(string laji) { Loki.Add("raita " + (laji ?? "pois")); Raita = laji; }
+        public void LinssiMusiikkiHimmennys(double t) { Loki.Add("raidan taso " + t); RaidanTaso = t; }
         public bool VahennettyLiike => Vahennetty;
         public double Aika => Kello;
     }

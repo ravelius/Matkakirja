@@ -88,10 +88,17 @@ namespace Matkakirja.Linssit.Testit
             r.Lisaa(l);
             r.Valitse("ihmisen-matka");
             Oleta.Sama(false, l.Esitys.Kaynnissa, "odottaa vanoja");
+            Oleta.Sama(null, y.Raita, "musta ruutu on hiljainen");
             l.AsetaVanat(tulos);
             Oleta.Sama(true, l.Esitys.Kaynnissa);
             for (int i = 0; i < 60 * 30; i++) { y.Kello += 1 / 60.0; r.Paivita(); }
             Oleta.Tosi(l.Esitys.I >= 2, "30 s:ssa ollaan jo kohdejaksoissa: " + l.Esitys.I);
+            Oleta.Sama("ihmisen-matka", y.Raita, "raita nousi valojen syttyessä");
+            Oleta.Sama(1.0, y.RaidanTaso);
+            l.Esitys.Tauko();
+            Oleta.Sama(0.5, y.RaidanTaso, "tauolla puolet");
+            l.Esitys.Jatka();
+            Oleta.Sama(1.0, y.RaidanTaso, "jatkossa täysi");
             // Valikon "Aloita alusta" (web aloitaAlusta): uusi esitys alusta, kamera ei liiku.
             var vanha = l.Esitys;
             int ajot = y.Loki.Count(rivi => rivi == "ajo");
@@ -100,6 +107,7 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(true, l.Auki);
             Oleta.Sama(ajot, y.Loki.Count(rivi => rivi == "ajo"), "ei paluuajoa");
             r.Sulje();
+            Oleta.Sama(null, y.Raita, "sulku: pois");
             Oleta.Sama(false, l.AloitaAlusta(), "suljettuna ei tee mitään");
             Oleta.Sama(true, y.PelikerroksetNakyvissa);
         }

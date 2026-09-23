@@ -73,9 +73,12 @@ namespace Matkakirja.Linssit.Aikajana
             talteen = y.Kamera;
             y.Pelikerrokset(false);
             y.MusiikkiPitoon(true);
-            Esitys = new Esitys(aineisto.Kertomus, aineisto.Kohteet, leimat, () => vanat, y, nakyma, aani);
+            Esitys = new Esitys(aineisto.Kertomus, aineisto.Kohteet, leimat, () => vanat, y, nakyma, aani) { MusiikkiLaji = MusiikkiLaji };
             if (VanatValmiit && Itsestaan) Esitys.Aloita();
         }
+
+        /// <summary>Kaaren oma raita (web ihmisen-matka.js aikajana.musiikki).</summary>
+        public const string MusiikkiLaji = "ihmisen-matka";
 
         /// <summary>Esittelylaatikon Käynnistä-nappi (odottaa vanoja kuten web).</summary>
         public bool Kaynnista()
@@ -95,7 +98,7 @@ namespace Matkakirja.Linssit.Aikajana
         {
             if (!Auki) return false;
             Esitys?.Pura();
-            Esitys = new Esitys(aineisto.Kertomus, aineisto.Kohteet, leimat, () => vanat, y, nakyma, aani);
+            Esitys = new Esitys(aineisto.Kertomus, aineisto.Kohteet, leimat, () => vanat, y, nakyma, aani) { MusiikkiLaji = MusiikkiLaji };
             if (VanatValmiit && Itsestaan) Esitys.Aloita();
             return true;
         }

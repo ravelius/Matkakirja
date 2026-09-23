@@ -63,6 +63,9 @@ namespace Matkakirja.Natiivi
         public bool Auki { get; private set; }
         /// <summary>Auki olevan sivun nimi (palautteen ehdotusSivu) tai null.</summary>
         public string AukiSivunNimi => Auki && lehti != null && nyt >= 0 ? SivunNimi(nyt) : null;
+        /// <summary>Auki olevan aihesivun poiminta-avain aihe:omistaja:aihe (web aiheAvain) tai null.</summary>
+        public string AukiAvain => Auki && lehti != null && nyt >= 0 && nyt < lehti.Sivut.Count
+            ? Reaktiot.AiheAvain(lehti.Omistaja, lehti.Sivut[nyt].Aihe?.Id) : null;
         /// <summary>Lehti avautui (omistaja: kaupunki tai ISO).</summary>
         public event Action<string> Avautui;
         /// <summary>Lehti suljettiin (omistaja), kerran per avaus.</summary>
@@ -207,6 +210,7 @@ namespace Matkakirja.Natiivi
             if (!Auki) return;
             Auki = false;
             PysaytaLuenta();
+            Aanisoitin.Nayte(false);
             suurennos.Sulje();
             Rakenne.Nayta(peite, false, 220);
             SyoteLukko.Vapauta(this);
@@ -456,7 +460,11 @@ namespace Matkakirja.Natiivi
             if (!string.IsNullOrEmpty(n.Nayte))
             {
                 string url = n.Nayte;
-                var b = Rakenne.Nappi("▷ " + (n.NayteNimi ?? "Kuuntele musiikkia"), "mk-lehti__linkki", () => Puhe.Hae()?.Soita(url), loppu);
+                var b = Rakenne.Nappi("▷ " + (n.NayteNimi ?? "Kuuntele musiikkia"), "mk-lehti__linkki", () =>
+                {
+                    // Kulttuurinäyte vaimentaa taustan (web vaimennaTausta, B7-soitin); loppu palauttaa.
+                    if (Puhe.Hae()?.Soita(url, 0, () => Aanisoitin.Nayte(false)) == true) Aanisoitin.Nayte(true);
+                }, loppu);
                 Kirjasimet.Aseta(b, Kirjasin.Kone);
             }
             if (!string.IsNullOrEmpty(n.Wiki))

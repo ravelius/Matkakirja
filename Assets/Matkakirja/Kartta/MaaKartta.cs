@@ -41,6 +41,9 @@ namespace Matkakirja
         [Tooltip("Tunnuskartan rajaus (länsi, etelä, itä, pohjoinen) asteina; nollat = koko maailma. " +
                  "Maakunnille Eurooppa: sama tekstuurimuisti, noin 9× tarkempi raja. Rajauksen ulkopuoliset alueet jätetään pois.")]
         public Vector4 rajaus;
+        [Tooltip("Rajat vektoriviivoina (Shaders/Rajaviiva), tarkkuus ei riipu tunnuskartasta. null = rajat " +
+                 "tunnuskartasta varjostimessa (maatila). Korostetun alueen raja piirtyy edelleen varjostimessa.")]
+        public Material rajaMateriaali;
 
         public event Action<string> MaaNapautettu;
         public bool Paalla { get; private set; }
@@ -52,7 +55,8 @@ namespace Matkakirja
         readonly Dictionary<string, Savy> korostukset = new Dictionary<string, Savy>();
         Savy perus = new Savy(new Rgba(0, 0, 0, 0), new Rgba(0.23f, 0.18f, 0.13f, 0.8f));
         Texture2D tunnukset, paletti;
-        MeshRenderer kuori;
+        MeshRenderer kuori, rajat;
+        Material rajaOma;
         bool latausAlkanut;
 
         void Start()
@@ -80,6 +84,7 @@ namespace Matkakirja
             }
             if (paalla && !latausAlkanut) StartCoroutine(Lataa());
             if (kuori != null) kuori.enabled = paalla && Valmis;
+            if (rajat != null) rajat.enabled = paalla && Valmis;
         }
 
         public void MaaPerussavy(Savy savy) { perus = savy; PaivitaPaletti(); }
@@ -156,15 +161,25 @@ namespace Matkakirja
             MaatAineisto aineistoT = null;
             byte[] kartta = null;
             List<Maa> jarjestys = null;
+            bool vektorirajat = rajaMateriaali != null;
+            List<(double3 a, double3 b)> janat = null;
             var tehtava = Task.Run(() =>
             {
-                aineistoT = MaatAineisto.LueRajat(Peli.MiniJson.Jasenna(teksti));
+                var juuri = Peli.MiniJson.Jasenna(teksti);
+                aineistoT = MaatAineisto.LueRajat(juuri);
                 jarjestys = new List<Maa>(aineistoT.Maat.Values);
                 // Rajatussa kartassa vain rajauksen sisään osuvat alueet (FRA:n merentakaiset pois).
                 if (rajattu) jarjestys.RemoveAll(m => m.E < r4.x || m.W > r4.z || m.N < r4.y || m.S > r4.w);
                 jarjestys.Sort((x, y) => string.CompareOrdinal(x.Id, y.Id));
                 if (jarjestys.Count > 255) jarjestys.RemoveRange(255, jarjestys.Count - 255);
                 kartta = Rasteroi(jarjestys, w, h, lon0, lat1, lonVali, latVali, !rajattu);
+                if (vektorirajat)
+                {
+                    // Skeema 1.25: "kaaret" (Siirtoseppä) = jokainen raja kerran, samat pisteet kuin renkaissa.
+                    // Vanhemmissa paketeissa janat renkaista (naapurien harvennus eroaa → osin tuplana).
+                    var kaaret = (juuri as Dictionary<string, object>)?.GetValueOrDefault("kaaret") as List<object>;
+                    janat = kaaret != null ? JanatKaarista(kaaret, r4, rajattu) : Janat(jarjestys);
+                }
             });
             while (!tehtava.IsCompleted) yield return null;
             if (tehtava.IsFaulted)
@@ -194,9 +209,11 @@ namespace Matkakirja
             };
             PaivitaPaletti();
             TeeKuori();
+            if (janat != null) TeeRajat(janat);
             Debug.Log($"MATKAKIRJA maat ({kokoelma}): {jarjestys.Count} aluetta, tunnuskartta {w}×{h}, " +
-                      $"{(Time.realtimeSinceStartup - alku) * 1000f:0} ms");
+                      $"{janat?.Count ?? 0} rajajanaa, {(Time.realtimeSinceStartup - alku) * 1000f:0} ms");
             if (kuori != null) kuori.enabled = Paalla;
+            if (rajat != null) rajat.enabled = Paalla;
         }
 
         /// <summary>
@@ -263,10 +280,14 @@ namespace Matkakirja
             Color32 C(Rgba v) => new Color32((byte)(v.R * 255), (byte)(v.G * 255), (byte)(v.B * 255), (byte)(v.A * 255));
             foreach (var p in indeksi)
             {
-                var s = korostukset.TryGetValue(p.Key, out var k) ? k : perus;
+                bool korostettu = korostukset.TryGetValue(p.Key, out var k);
+                var s = korostettu ? k : perus;
                 px[p.Value] = C(s.Taytto);
-                px[256 + p.Value] = C(s.Reuna);
+                // Vektorirajojen kanssa varjostin piirtää vain korostetun alueen rajan.
+                px[256 + p.Value] = rajat != null && !korostettu ? new Color32(0, 0, 0, 0) : C(s.Reuna);
             }
+            if (rajaOma != null)
+                rajaOma.SetColor("_BaseColor", new Color(perus.Reuna.R, perus.Reuna.G, perus.Reuna.B, perus.Reuna.A));
             paletti.SetPixels32(px);
             paletti.Apply(false);
         }
@@ -288,6 +309,103 @@ namespace Matkakirja
             kuori.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
             kuori.receiveShadows = false;
             kuori.enabled = false;
+        }
+
+        /// <summary>
+        /// Rajajanat renkaista ECEF-pisteinä (taustasäikeessä). Naapurien yhteinen raja on
+        /// aineistossa kahdesti: sama jana (1e-5° pyöristys, suunnasta riippumatta) piirretään kerran.
+        /// </summary>
+        List<(double3 a, double3 b)> Janat(List<Maa> maat)
+        {
+            var nahty = new HashSet<(long, long, long, long)>();
+            var ulos = new List<(double3, double3)>();
+            (long, long) Q((double Lon, double Lat) p) => ((long)math.round(p.Lon * 1e5), (long)math.round(p.Lat * 1e5));
+            double3 E((double Lon, double Lat) p) => CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(p.Lon, p.Lat, korkeus));
+            foreach (var m in maat)
+                foreach (var rengas in m.Renkaat)
+                    for (int i = 0; i < rengas.Length; i++)
+                    {
+                        var a = rengas[i];
+                        var b = rengas[(i + 1) % rengas.Length];
+                        var qa = Q(a); var qb = Q(b);
+                        if (qa == qb) continue;
+                        var avain = qa.CompareTo(qb) < 0 ? (qa.Item1, qa.Item2, qb.Item1, qb.Item2) : (qb.Item1, qb.Item2, qa.Item1, qa.Item2);
+                        if (!nahty.Add(avain)) continue;
+                        ulos.Add((E(a), E(b)));
+                    }
+            return ulos;
+        }
+
+        /// <summary>Janat kaarista ([[lon, lat], …] kukin), rajauksen ulkopuoliset pois.</summary>
+        List<(double3 a, double3 b)> JanatKaarista(List<object> kaaret, Vector4 r4, bool rajattu)
+        {
+            var ulos = new List<(double3, double3)>();
+            double3 E(double lon, double lat) => CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(lon, lat, korkeus));
+            foreach (var k in kaaret)
+            {
+                if (!(k is List<object> pisteet) || pisteet.Count < 2) continue;
+                double3? edellinen = null;
+                foreach (var p in pisteet)
+                {
+                    if (!(p is List<object> l) || l.Count < 2 || !(l[0] is double lon) || !(l[1] is double lat)) { edellinen = null; continue; }
+                    bool sisalla = !rajattu || (lon >= r4.x && lon <= r4.z && lat >= r4.y && lat <= r4.w);
+                    var e = E(lon, lat);
+                    if (edellinen.HasValue && sisalla) ulos.Add((edellinen.Value, e));
+                    edellinen = sisalla ? e : (double3?)null;
+                }
+            }
+            return ulos;
+        }
+
+        /// <summary>Janoista nauhaverkko Rajaviiva-varjostimelle: jokainen jana on oma nelikulmionsa.</summary>
+        void TeeRajat(List<(double3 a, double3 b)> janat)
+        {
+            if (rajat != null || janat.Count == 0) return;
+            int n = janat.Count;
+            var paikat = new Vector3[n * 4];
+            var toiset = new Vector3[n * 4];
+            var puolet = new Vector2[n * 4];
+            var kolmiot = new int[n * 6];
+            for (int i = 0; i < n; i++)
+            {
+                Vector3 a = (float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(janat[i].a);
+                Vector3 b = (float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(janat[i].b);
+                Vector3 jatko = b + (b - a); // b-pään kärjille sama suunta kuin a-päälle
+                int v = i * 4;
+                paikat[v] = a; paikat[v + 1] = a; paikat[v + 2] = b; paikat[v + 3] = b;
+                toiset[v] = b; toiset[v + 1] = b; toiset[v + 2] = jatko; toiset[v + 3] = jatko;
+                puolet[v] = new Vector2(-1, 0); puolet[v + 1] = new Vector2(1, 0);
+                puolet[v + 2] = new Vector2(-1, 0); puolet[v + 3] = new Vector2(1, 0);
+                int t = i * 6;
+                kolmiot[t] = v; kolmiot[t + 1] = v + 1; kolmiot[t + 2] = v + 2;
+                kolmiot[t + 3] = v + 1; kolmiot[t + 4] = v + 3; kolmiot[t + 5] = v + 2;
+            }
+            var mesh = new Mesh { name = "Aluerajat", indexFormat = UnityEngine.Rendering.IndexFormat.UInt32 };
+            mesh.vertices = paikat;
+            mesh.SetUVs(0, toiset);
+            mesh.SetUVs(1, puolet);
+            mesh.triangles = kolmiot;
+            mesh.RecalculateBounds();
+            var go = new GameObject("Aluerajat");
+            go.transform.SetParent(georeferenssi.transform, false);
+            go.AddComponent<MeshFilter>().sharedMesh = mesh;
+            rajat = go.AddComponent<MeshRenderer>();
+            rajaOma = new Material(rajaMateriaali);
+            rajaOma.renderQueue = rajaMateriaali.renderQueue + jonoLisa;
+            float kerroin = Screen.dpi > 0 ? Mathf.Max(1f, Screen.dpi / 163f) : 1f;
+            rajaOma.SetFloat("_Kerroin", kerroin);
+            rajat.sharedMaterial = rajaOma;
+            rajat.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+            rajat.receiveShadows = false;
+            rajat.enabled = false;
+            PaivitaPaletti();
+        }
+
+        void LateUpdate()
+        {
+            if (rajaOma == null || georeferenssi == null || !rajat.enabled) return;
+            double3 keskus = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);
+            rajaOma.SetVector("_Keskus", georeferenssi.transform.TransformPoint((float3)keskus));
         }
 
         /// <summary>Tasakulmainen ellipsoidikuori: rivit pohjoisesta etelään, uv = (lon, 0 pohjoisessa … 1 etelässä).</summary>

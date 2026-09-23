@@ -111,7 +111,7 @@ namespace Matkakirja.Natiivi
         static void Jasenna(string teksti, Dictionary<string, Saapumisvirta> t)
         {
             if (string.IsNullOrEmpty(teksti)) return;
-            var juuri = MiniJson.Objekti(MiniJson.Jasenna(teksti));
+            var juuri = Rakenne.Olio(MiniJson.Jasenna(teksti));
             var alkiot = Rakenne.Lista(MiniJson.Kentta(juuri, "alkiot"));
             if (alkiot == null) return;
             foreach (var a in alkiot)
@@ -160,7 +160,7 @@ namespace Matkakirja.Natiivi
                     v.AarteenAvaus = true;
                 var am = MiniJson.Kentta(d, "aarremerkinta");
                 if (am is string amt) v.AarreTeksti = amt;
-                else if (MiniJson.Objekti(am) is Dictionary<string, object> amo)
+                else if (Rakenne.Olio(am) is Dictionary<string, object> amo)
                 {
                     v.AarreTeksti = MiniJson.Teksti(amo, "teksti");
                     v.AarrePaikkarivi = MiniJson.Teksti(amo, "paikkarivi");

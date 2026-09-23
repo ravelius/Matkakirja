@@ -149,7 +149,7 @@ namespace Matkakirja.Natiivi
         static IEnumerable<(string Kaupunki, Dictionary<string, object> Data)> Alkiot(string json)
         {
             if (string.IsNullOrEmpty(json)) yield break;
-            var juuri = MiniJson.Objekti(MiniJson.Jasenna(json));
+            var juuri = Rakenne.Olio(MiniJson.Jasenna(json));
             if (!(MiniJson.Kentta(juuri, "alkiot") is List<object> alkiot)) yield break;
             foreach (var o in alkiot)
             {

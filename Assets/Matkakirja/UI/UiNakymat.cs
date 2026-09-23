@@ -131,6 +131,11 @@ namespace Matkakirja.Natiivi
             Noppa = new Noppa(kerros.Juuri(PieniLiike.Kerros)); // web die-layer karttaruudussa, UI:n alla
             Leima = new Leima(kerros); // tapahtumakuplat (rahan muutokset)
             // Lehti aukeaa kaiken päälle: auki jääneet valikot ja popupit kiinni.
+            // B7-soitin: lehti hiljentää äänimaiseman myös testiavauksessa (tuplakutsu ohjaimen kanssa on harmiton).
+            Lehti.Avautui += _ => Aanisoitin.Hiljennys("lehti", true);
+            Lehti.Suljettu += _ => Aanisoitin.Hiljennys("lehti", false);
+            // Pulun puhekanavan reunat soittimelle (soitin suodattaa toistot).
+            kerros.JokaRuutu += () => Aanisoitin.PuluPuhuu(Aanet.PuluPuhuu);
             Lehti.Avautui += _ => { Valikko.Sulje(); Aanentasot.Sulje(); Matkalaukku.Sulje(); Vahvistus.Sulje(); Julistegalleria.Sulje(); Minipopup.SuljeAuki(); };
             Paljastus = new Paljastus(kerros);
             // Löytö päätyy matkalaukkuun: laukku heilahtaa paljastuksen sulkeutuessa (web elavoitaLaukku).
@@ -199,6 +204,8 @@ namespace Matkakirja.Natiivi
             // Aloitus ja matkan huipennus (Pelikoodarin tapahtumat); tila voi olla jo Aloitus.
             o.AloitusTarjolla += () => UiKerros.PaaSaikeessa(() => NaytaAloitus(o));
             // Aloituskaava: avausteksti häipyy, kun aloituslento on perillä (Pelikoodarin PeliOhjain.Aloitus).
+            // Aloituslento ilman pallovalintaa (testikomento ui aloita, muut polut): avausteksti silti lennolle.
+            o.AloituslentoAlkoi += _ => UiKerros.PaaSaikeessa(() => { if (!Aloitus.Lennolla) Aloitus.LentoKirjoitus(); });
             o.AloituslentoPaattyi += _ => UiKerros.PaaSaikeessa(Aloitus.AloituslentoPaattyi);
             if (o.Tila == SilmukanTila.Aloitus) NaytaAloitus(o);
             // Rahan muutos kupliksi (web buildToast kind stamp, "+10 puntaa · Lehden minitehtävä ratkesi").

@@ -49,9 +49,13 @@ namespace Matkakirja
             yield return Sisalto.HaeTeksti("reitit", t => rt = t);
             if (kt == null || rt == null) yield break;
 
-            foreach (var o in MiniJson.Taulukko(MiniJson.Kentta(MiniJson.Objekti(MiniJson.Jasenna(kt)), "alkiot")))
+            // Null-turvallisesti: yksi rikkinäinen alkio ei kaada koko luetteloa (MiniJson.Objekti heittää).
+            var kaupunkiAlkiot = (MiniJson.Jasenna(kt) as Dictionary<string, object>)?.GetValueOrDefault("alkiot") as List<object>;
+            var reittiAlkiot = (MiniJson.Jasenna(rt) as Dictionary<string, object>)?.GetValueOrDefault("alkiot") as List<object>;
+            if (kaupunkiAlkiot == null || reittiAlkiot == null) { Debug.LogWarning("MATKAKIRJA reitit: kaupungit tai reitit ilman alkioita"); yield break; }
+            foreach (var o in kaupunkiAlkiot)
             {
-                var k = MiniJson.Objekti(o);
+                if (!(o is Dictionary<string, object> k)) continue;
                 var c = new Kaupunki
                 {
                     id = MiniJson.Teksti(k, "id"),
@@ -65,11 +69,11 @@ namespace Matkakirja
                     c.lauta = new double2(x, y);
                     c.lautaOn = true;
                 }
-                kaupungit[c.id] = c;
+                if (c.id != null) kaupungit[c.id] = c;
             }
-            foreach (var o in MiniJson.Taulukko(MiniJson.Kentta(MiniJson.Objekti(MiniJson.Jasenna(rt)), "alkiot")))
+            foreach (var o in reittiAlkiot)
             {
-                var r = MiniJson.Objekti(o);
+                if (!(o is Dictionary<string, object> r)) continue;
                 var d = MiniJson.Kentta(r, "data") as Dictionary<string, object>;
                 var reitti = new Reitti
                 {
@@ -84,11 +88,11 @@ namespace Matkakirja
                     reitti.via = new List<double2>();
                     foreach (var v in via)
                     {
-                        var xy = MiniJson.Taulukko(v);
+                        if (!(v is List<object> xy) || xy.Count < 2) continue;
                         reitti.via.Add(new double2(System.Convert.ToDouble(xy[0]), System.Convert.ToDouble(xy[1])));
                     }
                 }
-                if (!kaupungit.ContainsKey(reitti.a) || !kaupungit.ContainsKey(reitti.b)) continue;
+                if (reitti.a == null || reitti.b == null || !kaupungit.ContainsKey(reitti.a) || !kaupungit.ContainsKey(reitti.b)) continue;
                 reitit.Add(reitti);
                 Lisaa(reitti.a, reitti);
                 Lisaa(reitti.b, reitti);

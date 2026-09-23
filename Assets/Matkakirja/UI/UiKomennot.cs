@@ -87,7 +87,7 @@
 //                                             vierittää (ja avaa väkäsen); periaate = aloitusportin periaatteet
 //                                             palautelohkon kohdalla; kuvapalaute = havainnekuvan palaute
 //                                             minipopupissa keksityllä kuvalla. Lähetys vain napista käsin.
-//   ui chat [kysymys]                         pulun keskustelu auki / kysy
+//   ui chat [kysymys]                         pulun keskustelu auki / kysy (lehti tai nähtävyysjuttu auki → "Ehdota tallennettavaksi")
 //   ui traileri [kaupunki]                    saapumistraileri ilman puhetta (oletus lontoo)
 //   ui luento [kaupunki] [loppu]              matkakirjakortti + luentakuvat (oletus ateena); loppu = Livian vuoro
 //   ui matkakirja [kaupunki] [laji]           matkakirjakortin polut ilman ääntä (oletus tanger; Matkakirjamerkinnat.cs):
@@ -412,8 +412,9 @@ namespace Matkakirja.Natiivi
                     // PeliOhjain.AloitusKaupunki) aloittaa oletuslähdöstä UusiMatka(null).
                     string lahto = loput.Length > 0 ? loput.ToLowerInvariant() : null;
                     if (lahto != null && !o.Lahtokaupungit().Exists(k => k.Id == lahto)) lahto = null;
+                    // Piilotus ensin: UusiMatka voi käynnistää aloituslennon ja sen avaustekstin heti.
+                    ui.Aloitus.Piilota();
                     string v = osat[1].ToLowerInvariant() == "jatka" ? o.Jatka() : o.UusiMatka(lahto);
-                    if (v == null) ui.Aloitus.Piilota();
                     return v;
                 }
                 case "lehti":

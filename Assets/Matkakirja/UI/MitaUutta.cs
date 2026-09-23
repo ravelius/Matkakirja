@@ -163,7 +163,7 @@ namespace Matkakirja.Natiivi
             var rivit = new List<Rivi>();
             try
             {
-                var alkiot = Rakenne.Lista(MiniJson.Kentta(MiniJson.Objekti(MiniJson.Jasenna(teksti ?? "{}")), "alkiot"));
+                var alkiot = Rakenne.Lista(MiniJson.Kentta(Rakenne.Olio(MiniJson.Jasenna(teksti ?? "{}")), "alkiot"));
                 foreach (var a in alkiot ?? new List<object>())
                 {
                     var o = a as Dictionary<string, object>;
@@ -186,7 +186,7 @@ namespace Matkakirja.Natiivi
                 {
                     try
                     {
-                        var o = MiniJson.Objekti(MiniJson.Jasenna(r.downloadHandler.text));
+                        var o = Rakenne.Olio(MiniJson.Jasenna(r.downloadHandler.text));
                         var m = MiniJson.Kentta(o, "muutos") as Dictionary<string, object>;
                         string t = MiniJson.Teksti(m, "teksti");
                         if (!string.IsNullOrEmpty(t))
