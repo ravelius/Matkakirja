@@ -21,6 +21,7 @@ namespace Matkakirja.Natiivi
         [DllImport("__Internal")] static extern void MatkakirjaRadio_Voimakkuus(float arvo);
         [DllImport("__Internal")] static extern int MatkakirjaRadio_Tila();
         [DllImport("__Internal")] static extern void MatkakirjaRadio_Tauko(int paalle);
+        [DllImport("__Internal")] static extern string MatkakirjaRadio_Kuvaus();
 #else
         float aukesi = -1;
         static void MatkakirjaRadio_Voimakkuus(float arvo) { }
@@ -83,6 +84,14 @@ namespace Matkakirja.Natiivi
         }
 
         public bool Kuuluu => Tila == 2;
+
+        /// <summary>Soittimen tila lokiin (virheen tai aikakatkaisun hetkellä): AVPlayerin tilat, syyt ja istunto.</summary>
+        public string Kuvaus =>
+#if UNITY_IOS && !UNITY_EDITOR
+            MatkakirjaRadio_Kuvaus() ?? "-";
+#else
+            $"(editori) auki {auki}, tila {Tila}";
+#endif
         public string Virhe => Tila switch { 3 => "Asema ei vastaa", 4 => "Lähetys katkesi", _ => null };
 
         void OnDestroy() => Sulje();
