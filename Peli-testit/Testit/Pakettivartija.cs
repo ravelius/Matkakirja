@@ -153,6 +153,8 @@ namespace Matkakirja.Peli.Testit
     sealed class Vartijatulos
     {
         public Paketti Paketti;
+        /// <summary>Paataso.RaakaKielletty tarkistuksen aikana.</summary>
+        public bool RaakaKielletty;
         public readonly List<Vartijarivi> Rivit = new List<Vartijarivi>();
         public readonly List<string> Virheet = new List<string>();
         public readonly List<string> Huomiot = new List<string>();
@@ -481,7 +483,7 @@ namespace Matkakirja.Peli.Testit
 
         public static Vartijatulos Tarkista(Paketti p, IEnumerable<Lukijasaanto> saannot = null)
         {
-            var tulos = new Vartijatulos { Paketti = p };
+            var tulos = new Vartijatulos { Paketti = p, RaakaKielletty = Paataso.RaakaKielletty };
             var lista = saannot?.ToList() ?? Saannot.ToList();
 
             // 1. Skeemaversio (osoitin ja manifesti).
@@ -547,7 +549,13 @@ namespace Matkakirja.Peli.Testit
                 rivi.Alkioita++;
                 var id = MiniJson.Teksti(o, "id") ?? "#" + indeksi;
                 indeksi++;
-                var ohitus = s.Suotimet.FirstOrDefault(x => !x.Ehto(o));
+                // Suodin kuvaa sisältöä (esim. "ei sähketehtävää"), joten se katsoo myös raakaa dataa;
+                // raakakiellon rikkeet näkyvät kenttien tarkistuksessa.
+                var kielto = Paataso.RaakaKielletty;
+                Paataso.RaakaKielletty = false;
+                (Func<Dictionary<string, object>, bool> Ehto, string Syy) ohitus;
+                try { ohitus = s.Suotimet.FirstOrDefault(x => !x.Ehto(o)); }
+                finally { Paataso.RaakaKielletty = kielto; }
                 if (ohitus.Ehto != null) { rivi.Ohitettu++; Kirjaa(rivi.Ohitussyyt, ohitus.Syy, id); continue; }
 
                 var syyt = new List<string>();
@@ -627,7 +635,7 @@ namespace Matkakirja.Peli.Testit
             var p = t.Paketti;
             Console.WriteLine($"  PAKETTIVARTIJA {p.Nimi}");
             Console.WriteLine($"  versio {p.Versio}, skeema {p.Skeemaversio ?? "?"}, julkaistu {MiniJson.Teksti(p.Osoitin, "julkaistu") ?? "?"}, commit {MiniJson.Teksti(p.Osoitin, "commit") ?? "?"}"
-                + $"; raakadata {(Paataso.RaakaKielletty ? "KIELLETTY (vaihe 2)" : "sallittu")}");
+                + $"; raakadata {(t.RaakaKielletty ? "KIELLETTY (vaihe 2)" : "sallittu")}");
             Console.WriteLine($"  {"kokoelma",-16} {"lukija",-38} {"alkiot",6} {"luettu",6} {"ohitettu",8} {"hylätty",7} {"raaka",5}  lukijan tulos");
             foreach (var r in t.Rivit)
             {

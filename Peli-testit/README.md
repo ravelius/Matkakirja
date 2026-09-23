@@ -121,4 +121,16 @@ muuttua ilman webin muutosta; C# toistaa ne identtisesti, myös satunnaislukukut
 | `tee-linssijalki.mjs` | linssijalki.json | LinssiomistusTestit | passin leimat (JSON-teksti, stampList, isoDate, stampDate, rikkinäinen tallennus) ja omistus kolmella ajolla koerekisterillä (2 hiomassa-riviä): kylkiäiset, kynnykset (myös kaksi kerralla), optikon hyvitys, valmistuminen, kehittäjätila, toinen pelikerta samalla passilla, tallennus välissä ja joka teon jälkeen |
 | `tee-pelijalki.mjs` | pelijalki.json | PeliTestit | koko peli laattoineen (~2700 tekoa, 9 siementä, pöllöajo; koelaudalla ei ryöstäjiä), myös tallennus/lataus välein 7 ja 3 |
 
+## Pakettivartija (sisältöpaketti vs lukijat)
+
+`./vartija.sh` (= `./kaanna.sh PakettivartijaTestit`) ajaa tuotantopaketin jokaisen natiivin lukijan läpi
+(`Testit/Pakettivartija.cs`: yksi sääntö per kokoelma + lukija). Punainen, jos lukijan pakollinen kenttä
+puuttuu, tyyppi on väärä, lukija kaatuu tai lukee eri määrän kuin vartija hyväksyy, tai skeemaversio on
+tuntematon (`Pakettiskeema` Peli/Paataso.cs). Tuloste: kokoelma, lukija, luettu, ohitettu, hylätty ja syy
+sekä raakadatan (`data.*`) lukukohdat. Oletus ilman verkkoa: paikallinen kopio `Kultaiset/tuotanto`
+(uusin.json + v<N>/manifest.json-ote + kokoelmat). Liput: `--hae` (tuore tuotanto curlilla, kertoo
+vanhentuneen kopion), `--paivita` (kirjoittaa kopion), `--koe [kansio]` (koepaketti
+/Users/Shared/Claude/sisalto-koe), `--raaka-kielletty` (vaihe 2: `Paataso.RaakaKielletty`). Uusi lukija
+= uusi sääntö `Pakettivartija.Saannot`-listaan (AaniTaulut: kohta AANITAULUT).
+
 `.meta`-tiedostot eivät ole mukana: Unity luo ne ensimmäisessä tuonnissa (3D-selvittäjän editori).
