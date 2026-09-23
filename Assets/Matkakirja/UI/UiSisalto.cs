@@ -8,6 +8,8 @@
 //   kaupunkilehdet kaupunki → kategoria "kaupunki": johdanto, kansikuvat[0..], muut aiheet
 //   julisteet      kaupunki → tuotantojuliste (tiedosto, otsikko)
 //   lippumaat      ISO3 → nimi, lippu (url + varat)
+//   maat           ISO3 → oma nimi, valtiomuoto 1873, tunnusluvut, tervehdykset, maalehden aiheet
+//                  (Siirtosepän kokoelma skeemasta 1.9 alkaen; puuttuessa kartuscha näyttää vain nimen)
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -30,6 +32,17 @@ namespace Matkakirja.Natiivi
         public bool Lehti;
     }
 
+    public sealed class MaaTiedot
+    {
+        public string Iso3, Nimi, Paikallinen, Valtiomuoto, Maalehti;
+        public List<string> Lippu = new List<string>();
+        /// <summary>Tunnusluvut (null = maalla ei tietoja).</summary>
+        public string Vakiluku, VakilukuSija, PintaAla, PintaAlaSija, Demokratia, DemokratiaSija, Keskitulo, KeskituloSija;
+        public List<(string Teksti, string Kieli, string Lippu, string Osuus)> Tervehdykset = new List<(string, string, string, string)>();
+        public List<(string Id, string Nimi)> Aiheet = new List<(string, string)>();
+        public bool OnTiedot => Vakiluku != null || PintaAla != null || Demokratia != null || Keskitulo != null || Tervehdykset.Count > 0;
+    }
+
     public sealed class Kuvateksti
     {
         public string Tiedosto, Lyhyt, Selite, Lahde;
@@ -38,6 +51,7 @@ namespace Matkakirja.Natiivi
     public static class UiSisalto
     {
         static Dictionary<string, KaupunkiTiedot> kaupungit;
+        static Dictionary<string, MaaTiedot> maat = new Dictionary<string, MaaTiedot>();
         static bool haussa;
         static readonly List<Action> odottajat = new List<Action>();
 
@@ -46,6 +60,10 @@ namespace Matkakirja.Natiivi
         /// <summary>Kaupungin tiedot, tai null (ei vielä ladattu tai tuntematon).</summary>
         public static KaupunkiTiedot Kaupunki(string id) =>
             id != null && kaupungit != null && kaupungit.TryGetValue(id, out var k) ? k : null;
+
+        /// <summary>Maan tiedot ISO3-koodilla, tai null.</summary>
+        public static MaaTiedot Maa(string iso3) =>
+            iso3 != null && maat.TryGetValue(iso3, out var m) ? m : null;
 
         /// <summary>Lataa (kerran) ja kutsuu valmis pääsäikeessä. Epäonnistuessa Valmis = false.</summary>
         public static void Lataa(Action valmis)
@@ -64,6 +82,8 @@ namespace Matkakirja.Natiivi
             yield return Sisalto.HaeTeksti("kaupunkilehdet", t => lehdet = t);
             yield return Sisalto.HaeTeksti("julisteet", t => julisteet = t);
             yield return Sisalto.HaeTeksti("lippumaat", t => liput = t);
+            string maaTeksti = null;
+            yield return Sisalto.HaeTeksti("maat", t => maaTeksti = t);
             if (kaup == null)
             {
                 Debug.LogWarning("MATKAKIRJA ui sisältö: kaupungit-kokoelmaa ei saatu");
@@ -73,7 +93,7 @@ namespace Matkakirja.Natiivi
             Task.Run(() =>
             {
                 Dictionary<string, KaupunkiTiedot> tulos = null;
-                try { tulos = Jasenna(kaup, lehdet, julisteet, liput); }
+                try { tulos = Jasenna(kaup, lehdet, julisteet, liput); JasennaMaat(maaTeksti, tulos); }
                 catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui sisältö: jäsennys epäonnistui: " + e.Message); }
                 UiKerros.PaaSaikeessa(() => Valmistu(tulos));
             });
@@ -95,6 +115,60 @@ namespace Matkakirja.Natiivi
             var alkiot = juuri != null ? MiniJson.Taulukko(MiniJson.Kentta(juuri, "alkiot")) : null;
             if (alkiot == null) yield break;
             foreach (var a in alkiot) { var o = MiniJson.Objekti(a); if (o != null) yield return o; }
+        }
+
+        static void JasennaMaat(string teksti, Dictionary<string, KaupunkiTiedot> kaupungit)
+        {
+            var t = new Dictionary<string, MaaTiedot>();
+            foreach (var a in Alkiot(teksti))
+            {
+                string iso = MiniJson.Teksti(a, "id");
+                if (iso == null) continue;
+                var m = new MaaTiedot
+                {
+                    Iso3 = iso, Nimi = MiniJson.Teksti(a, "nimi"), Paikallinen = MiniJson.Teksti(a, "paikallinen"),
+                    Valtiomuoto = MiniJson.Teksti(a, "valtiomuoto"), Maalehti = MiniJson.Teksti(a, "maalehti"),
+                };
+                var lippuUrl = MiniJson.Teksti(a, "lippuUrl");
+                if (lippuUrl != null) m.Lippu.Add(lippuUrl);
+                var lippu = MiniJson.Teksti(a, "lippu");
+                if (lippu != null) m.Lippu.Add(lippu); // Commons-nimi → ämpäri + Commons (Kuvat, kansio liput)
+                var tiedot = MiniJson.Objekti(MiniJson.Kentta(a, "tiedot"));
+                if (tiedot != null)
+                {
+                    m.Vakiluku = MiniJson.Teksti(tiedot, "vakiluku");
+                    m.VakilukuSija = MiniJson.Teksti(tiedot, "vakilukuSija");
+                    m.PintaAla = MiniJson.Teksti(tiedot, "pintaAla");
+                    m.PintaAlaSija = MiniJson.Teksti(tiedot, "pintaAlaSija");
+                    var dem = MiniJson.Objekti(MiniJson.Kentta(tiedot, "demokratia"));
+                    if (dem != null) { m.Demokratia = MiniJson.Teksti(dem, "arvo"); m.DemokratiaSija = MiniJson.Teksti(dem, "sija"); }
+                    var tulo = MiniJson.Objekti(MiniJson.Kentta(tiedot, "keskitulo"));
+                    if (tulo != null) { m.Keskitulo = MiniJson.Teksti(tulo, "arvo"); m.KeskituloSija = MiniJson.Teksti(tulo, "sija"); }
+                    var terv = MiniJson.Taulukko(MiniJson.Kentta(tiedot, "tervehdykset"));
+                    if (terv != null)
+                        foreach (var x in terv)
+                        {
+                            var o = MiniJson.Objekti(x);
+                            if (o == null) continue;
+                            m.Tervehdykset.Add((MiniJson.Teksti(o, "teksti"), MiniJson.Teksti(o, "kieli"), MiniJson.Teksti(o, "lippu"), MiniJson.Teksti(o, "osuus")));
+                        }
+                }
+                var aiheet = MiniJson.Taulukko(MiniJson.Kentta(a, "aiheet"));
+                if (aiheet != null)
+                    foreach (var x in aiheet)
+                    {
+                        var o = MiniJson.Objekti(x);
+                        var id = o != null ? MiniJson.Teksti(o, "id") : null;
+                        if (id != null) m.Aiheet.Add((id, MiniJson.Teksti(o, "nimi") ?? id));
+                    }
+                t[iso] = m;
+            }
+            // Vanha paketti ilman maat-kokoelmaa: maan nimi ja lippu lippumaista kaupunkien kautta.
+            if (kaupungit != null)
+                foreach (var k in kaupungit.Values)
+                    if (k.Maa != null && !t.ContainsKey(k.Maa) && k.MaaNimi != null)
+                        t[k.Maa] = new MaaTiedot { Iso3 = k.Maa, Nimi = k.MaaNimi, Lippu = k.Lippu };
+            maat = t;
         }
 
         static Dictionary<string, KaupunkiTiedot> Jasenna(string kaup, string lehdet, string julisteet, string liput)
