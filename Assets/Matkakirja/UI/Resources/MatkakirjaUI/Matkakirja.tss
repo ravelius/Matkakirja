@@ -5,3 +5,4 @@
 @import url("Pulu.uss");
 @import url("Linssit.uss");
 @import url("Lehti.uss");
+@import url("Kohdekartta.uss");
