@@ -15,9 +15,14 @@
 // Vertailuarkki: koko ruudun pergamentti, ylärivillä maiden laput (kytkevät
 // maan kortin pois/päälle, eivät muuta kartan valintaa) ja "Muuta valintoja"
 // (paluu kartalle). Kortit rinnakkain: lippu, nimi ja tunnusluvut
-// (Maa.Tunnusluvut, webin rakennaVertailuTunnusluvut).
-// TODO: webin maakäyrät (js/maakayrat.js: väkiluku, tulot ja V-Dem vuosittain
-// samoilla asteikoilla) tarvitsevat maakäyrien aineiston natiiviin; nyt vain kortit.
+// (Maa.Tunnusluvut, webin rakennaVertailuTunnusluvut). Korttien alla maakäyrät
+// (web piirraVertailu: väkiluku, tulot, elinajanodote, kaupungistuminen ja
+// hiilidioksidipäästöt samoilla asteikoilla) ja lähderivi, piirto Maakayrakuva.cs.
+// Näkyvät maat ja niiden värit kuten webissä: ylärivin pois kytketyt jäävät pois ja
+// jäljelle jäävät saavat värit järjestyksessä (kortti ja käyrä samalla värillä).
+// Aineisto: VertailuLinssi.Kayrat (LinssiOhjain lataa sen linssin ensimmäisellä
+// avauksella). Sillä välin "Haetaan tilastoja…"; arkki kyselee aineistoa ja piirtää
+// käyrät heti, kun se tulee. Jos sitä ei kuulu, webin verkkoyhteysrivi.
 using System.Collections.Generic;
 using System.Linq;
 using Matkakirja.Linssit;
@@ -30,7 +35,7 @@ namespace Matkakirja.Natiivi
     public sealed class MaidenNakyma
     {
         readonly UiNakymat ui;
-        readonly VisualElement palkki, kyltti, kylttiLippu, arkki, arkinYlarivi, kortit;
+        readonly VisualElement palkki, kyltti, kylttiLippu, arkki, arkinYlarivi, kortit, kayrat;
         readonly Label kylttiNimi, kylttiLehti;
         VertailuLinssi vertailu;
         MaatiedotLinssi maatiedot;
@@ -40,6 +45,22 @@ namespace Matkakirja.Natiivi
         Maa kylttiMaa;
         // Testikomennot ilman linssiä: laput ja kyltti suoraan.
         List<(Maa Maa, Rgba Vari)> testiLaput;
+
+        // Maakäyrien tila arkissa (web avaaVertailuNakyma: "Haetaan tilastoja…" → käyrät / verkkorivi).
+        public const string KayratHaussa = "Haetaan tilastoja…";
+        public const string KayratEiVerkkoa = "Tämä näkymä tarvitsee verkkoyhteyden ensimmäisellä avauksella "
+            + "— luvut haetaan silloin talteen.";
+        public const string KayratVirhe = "Tilastoja ei saatu haettua.";
+        /// <summary>Näin kauan odotetaan aineistoa ennen verkkoyhteysriviä (kysely jatkuu silti).</summary>
+        const float KayraOdotus = 15f;
+        enum KayraTesti { Ei, Latautuu, EiVerkkoa }
+        KayraTesti kayraTesti;
+        IVisualElementScheduledItem kayraKysely;
+        float kayraHakuAlkoi;
+        bool kayratPiirretty;
+        // Testikomennon oma aineisto (ilman linssiä): null = ei haettu, haussa-lippu estää tuplahaun.
+        static MaakayratAineisto testiKayrat;
+        static bool testiKayratHaussa, testiKayratPuuttuu;
 
         public bool ArkkiAuki { get; private set; }
         /// <summary>Vertailuarkki auki/kiinni (LinssiUi piilottaa linssin sulkunapin sen ajaksi).</summary>
@@ -84,6 +105,9 @@ namespace Matkakirja.Natiivi
             vieritys.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
             sisus.Add(vieritys);
             kortit = Rakenne.El("mk-vertailuarkki__kortit", vieritys, PickingMode.Ignore);
+            kayrat = Rakenne.El("mk-vertailuarkki__kayrat", vieritys, PickingMode.Ignore);
+            kayraKysely = arkki.schedule.Execute(KyseleKayria).Every(250);
+            kayraKysely.Pause();
 
             kerros.TurvaMuuttui += Asettele;
             Asettele();
@@ -181,6 +205,7 @@ namespace Matkakirja.Natiivi
             arkinMaat = maat.Where(m => m != null)
                 .Select((m, i) => (m, VertailuLinssi.Varit[Mathf.Min(i, VertailuLinssi.Varit.Count - 1)])).ToList();
             pois.Clear();
+            kayraHakuAlkoi = Time.realtimeSinceStartup;
             RakennaArkki();
             if (!ArkkiAuki)
             {
@@ -195,6 +220,8 @@ namespace Matkakirja.Natiivi
         {
             if (!ArkkiAuki) return;
             ArkkiAuki = false;
+            kayraKysely.Pause();
+            kayraTesti = KayraTesti.Ei;
             Rakenne.Nayta(arkki, false, 250);
             SyoteLukko.Vapauta(this);
             ArkkiMuuttui?.Invoke(false);
@@ -217,9 +244,12 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(muuta, Kirjasin.Kone);
 
             kortit.Clear();
-            foreach (var (maa, vari) in arkinMaat)
+            var nakyvat = arkinMaat.Where(x => !pois.Contains(x.Maa.Id)).Select(x => x.Maa).ToList();
+            for (int i = 0; i < nakyvat.Count; i++)
             {
-                if (pois.Contains(maa.Id)) continue;
+                var maa = nakyvat[i];
+                // Web piirraVertailu: värit näkyvien maiden järjestyksessä (sama kuin käyrillä).
+                var vari = VertailuLinssi.Varit[Mathf.Min(i, VertailuLinssi.Varit.Count - 1)];
                 var k = Rakenne.El("mk-vertailukortti", kortit, PickingMode.Ignore);
                 k.style.borderTopColor = new Color(vari.R, vari.G, vari.B, 1f);
                 var ylarivi = Rakenne.El("mk-vertailukortti__yla", k, PickingMode.Ignore);
@@ -237,6 +267,73 @@ namespace Matkakirja.Natiivi
                     Rakenne.Teksti(arvo, "mk-vertailukortti__arvo", r);
                 }
             }
+            RakennaKayrat();
+        }
+
+        // --- maakäyrät -------------------------------------------------------------------
+
+        /// <summary>Käyrien aineisto: auki olevan (tai aiemmin kytketyn) vertailulinssin, testissä oma.</summary>
+        MaakayratAineisto KayraAineisto()
+        {
+            if (kayraTesti != KayraTesti.Ei) return null;
+            if (testiLaput != null) return testiKayrat;
+            if (vertailu?.Kayrat != null) return vertailu.Kayrat;
+            foreach (var l in kytketyt)
+                if (l is VertailuLinssi v && v.Kayrat != null) return v.Kayrat;
+            return null;
+        }
+
+        void RakennaKayrat()
+        {
+            kayrat.Clear();
+            kayratPiirretty = false;
+            var data = KayraAineisto();
+            if (data == null)
+            {
+                bool eiVerkkoa = kayraTesti == KayraTesti.EiVerkkoa
+                    || (kayraTesti == KayraTesti.Ei && (testiLaput != null ? testiKayratPuuttuu
+                        : Time.realtimeSinceStartup - kayraHakuAlkoi > KayraOdotus));
+                Rakenne.Teksti(eiVerkkoa ? KayratEiVerkkoa : KayratHaussa, "mk-maakayrat__tila", kayrat);
+                kayraKysely.Resume(); // KyseleKayria pysähtyy itse, kun arkki sulkeutuu
+                return;
+            }
+            kayraKysely.Pause();
+            var isot = arkinMaat.Where(x => !pois.Contains(x.Maa.Id)).Select(x => x.Maa.Id).ToList();
+            try
+            {
+                MaakayraRistikko.Rakenna(Maakayrat.Vertailu(isot, data), kayrat);
+                kayratPiirretty = true;
+            }
+            catch (System.Exception e)
+            {
+                Debug.LogWarning("MATKAKIRJA ui vertailu: maakäyrät " + e);
+                kayrat.Clear();
+                Rakenne.Teksti(KayratVirhe, "mk-maakayrat__tila", kayrat);
+            }
+        }
+
+        /// <summary>Aineisto tuli (linssi latasi sen) tai odotus venyi: käyrät tai verkkorivi.</summary>
+        void KyseleKayria()
+        {
+            if (!ArkkiAuki) { kayraKysely.Pause(); return; }
+            if (kayratPiirretty) { kayraKysely.Pause(); return; }
+            bool tila = kayrat.childCount == 1 && kayrat[0] is Label t && t.text == KayratHaussa;
+            if (KayraAineisto() != null
+                || (tila && kayraTesti == KayraTesti.Ei && (testiLaput != null ? testiKayratPuuttuu
+                    : Time.realtimeSinceStartup - kayraHakuAlkoi > KayraOdotus)))
+                RakennaKayrat();
+        }
+
+        static System.Collections.IEnumerator HaeTestiKayrat()
+        {
+            testiKayratHaussa = true;
+            testiKayratPuuttuu = false;
+            string teksti = null;
+            yield return LinssiSisalto.Hae("tiedostot/assets/data/maakayrat.json", t => teksti = t);
+            testiKayratHaussa = false;
+            if (teksti == null) { testiKayratPuuttuu = true; Debug.LogWarning("MATKAKIRJA ui vertailu: maakayrat.json puuttuu"); yield break; }
+            try { testiKayrat = MaakayratAineisto.Lue(Matkakirja.Peli.MiniJson.Jasenna(teksti)); }
+            catch (System.Exception e) { testiKayratPuuttuu = true; Debug.LogWarning("MATKAKIRJA ui vertailu: maakäyrät " + e.Message); }
         }
 
         // --- maakyltti -------------------------------------------------------------------
@@ -302,12 +399,22 @@ namespace Matkakirja.Natiivi
             Testimaa("JPN", "Japani", "Flag of Japan.svg", ("Väkiluku ", "124 milj."), ("Pinta-ala ", "378 000 km²"), ("Tulot ", "45 500 $/v"), ("V-Dem ", "0,75")),
         };
 
-        /// <summary>Testikomento: alapalkki esimerkkimailla ilman linssiä (arkki = vertailuarkki heti).</summary>
-        public void TestaaVertailu(bool arkki)
+        /// <summary>
+        /// Testikomento: alapalkki esimerkkimailla ilman linssiä (arkki = vertailuarkki heti).
+        /// isot = omat maat (ISO3, enintään neljä); tila "latautuu" / "verkko" pysäyttää käyrät
+        /// hakutilaan tai verkkoyhteysriville. Käyrien aineisto haetaan paketista kerran.
+        /// </summary>
+        public void TestaaVertailu(bool arkki, IReadOnlyList<string> isot = null, string tila = null)
         {
-            testiLaput = Testimaat().Select((m, i) => (m, VertailuLinssi.Varit[i])).ToList();
+            var esimerkit = Testimaat();
+            var maat = isot == null || isot.Count == 0 ? esimerkit
+                : isot.Take(VertailuLinssi.VertailuMax).Select(iso => esimerkit.FirstOrDefault(m => m.Id == iso) ?? Testimaa(iso, iso, null)).ToList();
+            testiLaput = maat.Select((m, i) => (m, VertailuLinssi.Varit[i])).ToList();
             RakennaPalkki();
-            if (arkki) Vertaa();
+            if (!arkki) return;
+            if (testiKayrat == null && !testiKayratHaussa) UiKerros.Hae().StartCoroutine(HaeTestiKayrat());
+            kayraTesti = tila == "latautuu" ? KayraTesti.Latautuu : tila == "verkko" ? KayraTesti.EiVerkkoa : KayraTesti.Ei;
+            Vertaa();
         }
 
         /// <summary>Testikomento: maakyltti ilman linssiä.</summary>
