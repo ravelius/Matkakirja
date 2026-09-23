@@ -728,6 +728,13 @@ namespace Matkakirja.Natiivi
             return null;
         }
 
+        /// <summary>Kortin "Liiku tänne" (testikomento 'liiku'): kortti kiinni ja matkavalinta auki.</summary>
+        public string Liiku(string kaupunki)
+        {
+            PiilotaKortti();
+            return AvaaDialogi(kaupunki);
+        }
+
         void PiilotaKortti()
         {
             if (KorttiKaupunki == null) return;
