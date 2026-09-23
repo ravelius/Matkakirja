@@ -101,6 +101,10 @@ namespace Matkakirja.Editori
             maat.kerrokset = kerrokset;
             maat.materiaali = Materiaali("Maatayttö", "Matkakirja/MaaTaytto", Color.white);
             kerrokset.maaKartta = maat;
+            var nappula = georefGo.AddComponent<Nappula>();
+            nappula.georeferenssi = georef;
+            nappula.materiaali = Materiaali("Nappula", "Matkakirja/Nappula", Color.white);
+            kerrokset.nappula = nappula;
             var valot = georefGo.AddComponent<AiheValot>();
             valot.georeferenssi = georef;
             valot.materiaali = Materiaali("Karttavalo", "Matkakirja/Valopiste", Color.white);

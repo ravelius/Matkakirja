@@ -30,6 +30,7 @@ namespace Matkakirja
     ///   valot <aihe>|kaikki|ei|tila     karttavalot (AiheValot), tila = laskurit lokiin
     ///   valot osoita <id>               napauttaa valon kohtaa (esim. skandaali:shakkiturkkilainen)
     ///   maat paalle|pois | maat korosta ISO3 [#täyttö #raja] | maat pois-korostus   Maatila (MaaKartta)
+    ///   nappula aseta lat lon | aja lat lon … kesto | lenna lat0 lon0 lat1 lon1 kesto | pois
     ///   napauta x y               synteettinen napautus (osuus näytöstä, origo vasen alakulma)
     ///   maasto paalle|pois        Karttasepän maasto (layer.json) tai ellipsoidi; valinta
     ///                             muistetaan tiedostossa Documents/maasto.txt
@@ -135,6 +136,22 @@ namespace Matkakirja
                         kesto = (float)D(3),
                     });
                     break;
+                case "nappula":
+                {
+                    // nappula aseta lat lon | nappula aja lat lon lat lon … kesto | nappula lenna lat0 lon0 lat1 lon1 kesto | nappula pois
+                    var np = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.nappula : null;
+                    if (np == null) break;
+                    if (o[1] == "aseta") np.Aseta(D(2), D(3));
+                    else if (o[1] == "lenna") np.Lenna(D(2), D(3), D(4), D(5), (float)D(6), () => Debug.Log("MATKAKIRJA nappula: perillä"));
+                    else if (o[1] == "aja")
+                    {
+                        var pisteet = new List<(double, double)>();
+                        for (int i = 2; i + 1 < o.Length - 1; i += 2) pisteet.Add((D(i), D(i + 1)));
+                        np.Aja(pisteet, (float)D(o.Length - 1), () => Debug.Log("MATKAKIRJA nappula: perillä"));
+                    }
+                    else if (o[1] == "pois") np.Piilota();
+                    break;
+                }
                 case "napauta":
                     // napauta x y: osuus näytöstä 0–1, origo vasen alakulma
                     kierto.Napauta(new Vector2((float)D(1) * Screen.width, (float)D(2) * Screen.height));
