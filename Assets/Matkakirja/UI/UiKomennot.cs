@@ -7,7 +7,7 @@
 //   ui matka                                  esimerkkimatkavalinta (ilman peliä)
 //   ui kortti [kaupunki] [oma]                kaupunkikortti (oletus firenze, ilman peliä; oma = Tutki + Mannerlento)
 //   ui kysymys [laji]                         esimerkkikysymys ilman peliä: visa (oletus), vaite,
-//                                             kuva, lippu, pulma [id], kaksintaistelu,
+//                                             kuva, lippu, pulma [id],
 //                                             tapahtumakortti, tulos [laattatyyppi], kohtaaminen,
 //                                             kohtaaminen-tervehdys (KysymysEsimerkki.cs)
 //   ui selite                                 karttaselite auki (Nostot-välilehti)

@@ -16,7 +16,7 @@ namespace Matkakirja.Natiivi
 {
     public static class KysymysEsimerkki
     {
-        public const string Lajit = "visa|vaite|kuva|lippu|pulma [id]|kaksintaistelu|tapahtumakortti|tulos [laattatyyppi]|kohtaaminen|kohtaaminen-tervehdys";
+        public const string Lajit = "visa|vaite|kuva|lippu|pulma [id]|tapahtumakortti|tulos [laattatyyppi]|kohtaaminen|kohtaaminen-tervehdys";
         const long TuomioMs = 900;
 
         static KysymysNaytto d;
@@ -38,7 +38,6 @@ namespace Matkakirja.Natiivi
                 case "kuva": d = Kuva(); break;
                 case "lippu": d = Lippu(); break;
                 case "pulma": d = Pulma(osat.Length > 1 ? osat[1] : "pylvaat"); break;
-                case "kaksintaistelu": d = Kaksintaistelu(); break;
                 case "tapahtumakortti": d = Tapahtumakortti(); break;
                 case "tulos": d = Tulos(osat.Length > 1 ? osat[1] : "isoAarre"); break;
                 case "kohtaaminen": d = Kohtaaminen(false); break;
@@ -122,19 +121,7 @@ namespace Matkakirja.Natiivi
                 d.Viesti = null;
                 var vaarat = new List<int>();
                 for (int i = 0; i < d.Vaihtoehdot.Count; i++) if (i != d.Oikea && !d.Piilotetut.Contains(i)) vaarat.Add(i);
-                if (d.Laji == KysymysLaji.Kaksintaistelu)
-                {
-                    // Helpotus: rosvo vie puolet rahoista ja puolet vääristä pois (enintään kaksi kertaa).
-                    int vie = d.Raha / 2;
-                    d.Raha -= vie;
-                    int pois = vaarat.Count / 2;
-                    for (int i = 0; i < pois; i++) d.Piilotetut.Add(vaarat[i * 2 % vaarat.Count]);
-                    int kerrat = d.Huomautus == null ? 1 : 2;
-                    d.Huomautus = $"Rosvo on vienyt {(kerrat == 1 ? vie : 150 + vie)} puntaa.";
-                    d.PuolitusHarmaa = kerrat >= 2 || d.Raha / 2 <= 0;
-                    d.PuolitusTeksti = kerrat >= 2 ? "Helpotukset käytetty" : $"Helpotus (rosvo vie {d.Raha / 2} {d.Valuutta})";
-                }
-                else if (d.Raha < d.PuolitusHinta) d.Viesti = "Rahat eivät riitä 50:50:een.";
+                if (d.Raha < d.PuolitusHinta) d.Viesti = "Rahat eivät riitä 50:50:een.";
                 else
                 {
                     d.Raha -= d.PuolitusHinta;
@@ -158,12 +145,6 @@ namespace Matkakirja.Natiivi
         {
             x.VihjeTarjolla = false;
             x.PuolitusTarjolla = false;
-            if (x.Laji == KysymysLaji.Kaksintaistelu)
-            {
-                x.Loyto = x.Oikein ? "Voitit rosvon — saalis 220 puntaa!"
-                    : (x.AikaLoppui ? "Aika loppui. " : "") + $"Rosvo vei rahat — oikea vastaus oli \"{x.Vaihtoehdot[x.Oikea]}\".";
-                return;
-            }
             x.VuoroVaihtuu = !x.Oikein && x.Laji != KysymysLaji.Pulma;
             if (x.Oikein && x.Loyto == null && x.Laji != KysymysLaji.Pulma)
             {
@@ -325,22 +306,6 @@ namespace Matkakirja.Natiivi
             return d;
         }
 
-        static KysymysNaytto Kaksintaistelu() => new KysymysNaytto
-        {
-            Laji = KysymysLaji.Kaksintaistelu,
-            Otsikko = "Rosvon kaksintaistelu — Fogg",
-            Kehys = "Ryöstäjä tukkii tien. Väärä vastaus vie kaikki rahasi.",
-            Kysymys = "Mikä joki virtaa Budapestin halki?",
-            Vaihtoehdot = new List<string> { "Reinin", "Tonava", "Elbe", "Visla", "Dnepr", "Oder", "Po", "Rhône" },
-            Oikea = 1,
-            PuolitusTarjolla = true,
-            PuolitusTeksti = "Helpotus (rosvo vie 150 £)",
-            Raha = 300,
-            Sekunnit = 45,
-            Fakta = "Tonava jakaa Budapestin kukkulaiseen Budaan ja tasaiseen Pestiin. Kaupungit yhdistettiin yhdeksi vuonna 1873.",
-            Lahteet = new List<string> { "https://fi.wikipedia.org/wiki/Budapest" },
-        };
-
         static KysymysNaytto Tapahtumakortti() => new KysymysNaytto
         {
             Laji = KysymysLaji.Tapahtumakortti,
@@ -421,7 +386,6 @@ namespace Matkakirja.Natiivi
                 d.LoytoFakta = "Terva oli 1800-luvun Suomen tärkein vientitavara, ja Oulu oli maailman suurimpia tervasatamia.";
             }
             if (tyyppi == "piirros") d.LoytoTyyppi = "isoAarre"; // ilman kuvaa: webin piirrosikoni
-            if (tyyppi == "robber") d.JatkaTeksti = "Kohtaa ryöstäjä";
             d.TulosVaihe = 2;
             return d;
         }
