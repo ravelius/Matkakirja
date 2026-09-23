@@ -30,4 +30,8 @@ ui heitto
 ui viesti Heitit 4 — valitse kohde kartalta
 odota 1
 kuva heitto
+ui sulje
+ui kortti firenze
+odota 4
+kuva kortti
 ```
