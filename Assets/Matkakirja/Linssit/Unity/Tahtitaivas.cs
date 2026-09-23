@@ -6,12 +6,12 @@
 // levittää ne kameraan päin kääntyväksi neliöksi. Pölykerros ajelehtii maapallon
 // akselin ympäri, muut ovat paikallaan.
 //
-// Kameran tausta ja clearFlags ovat Natiivisepän (RAJAPINTA.md). Ainoa poikkeus:
-// PalloKierto asettaa kaukorajaksi korkeus + 2 R, mutta tähdet ovat 2,6–10,4 R
-// pinnan yläpuolella (astronautti kerroin 1,6), joten ne leikkautuivat kaikki
-// pois (iPad 2e26b45). Taivas jatkaa kaukorajan juuri ennen renderöintiä
-// (beginCameraRendering, ennen URP:n karsintaa) vain niin pitkälle kuin
-// kaukaisin tähti vaatii, ja vain taivaan ollessa olemassa.
+// Kameran tausta ja clearFlags ovat Natiivisepän (RAJAPINTA.md). PalloKierto
+// asettaa kaukorajaksi korkeus + 2 R, mutta tähdet ovat 2,6–10,4 R pinnan
+// yläpuolella (astronautti kerroin 1,6), joten ne leikkautuivat pois (iPad
+// 2e26b45). Taivas pyytää siksi PalloKierto.KaukorajaVahintaan-arvoksi kameran
+// etäisyyden keskipisteestä + kaukaisimman tähden säteen, ja palauttaa sen
+// nollaksi poistuessaan.
 using System.Collections.Generic;
 using CesiumForUnity;
 using Matkakirja.Linssit;
@@ -128,16 +128,21 @@ namespace Matkakirja.Natiivi
             }
         }
 
-        void OnEnable() => RenderPipelineManager.beginCameraRendering += JatkaKaukorajaa;
-        void OnDisable() => RenderPipelineManager.beginCameraRendering -= JatkaKaukorajaa;
+        PalloKierto pallo;
 
         /// <summary>Kaukoraja kaukaisimman tähden taakse (kameran etäisyys keskipisteestä + tähtikuoren säde).</summary>
-        void JatkaKaukorajaa(ScriptableRenderContext _, Camera kamera)
+        void Update()
         {
-            if (kamera.cameraType != CameraType.Game || kamera.orthographic || georeferenssi == null) return;
+            if (georeferenssi == null) return;
+            if (pallo == null) pallo = FindAnyObjectByType<PalloKierto>();
+            if (pallo == null) return;
             Vector3 keskus = georeferenssi.transform.TransformPoint(keskusPaikallinen);
-            float tarve = (float)(Vector3.Distance(kamera.transform.position, keskus) + kaukaisinSade * 1.02);
-            if (kamera.farClipPlane < tarve) kamera.farClipPlane = tarve;
+            pallo.KaukorajaVahintaan = Vector3.Distance(pallo.transform.position, keskus) + kaukaisinSade * 1.05;
+        }
+
+        void OnDisable()
+        {
+            if (pallo != null) pallo.KaukorajaVahintaan = 0;
         }
 
         void OnDestroy()
