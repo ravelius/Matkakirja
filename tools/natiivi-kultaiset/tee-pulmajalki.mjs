@@ -29,7 +29,7 @@
 //    Kultaiset/paketti/tapahtumat.json lähdemoduulin muodossa.
 //
 // RAJAUKSET (kuten pelijäljessä): lippukysymykset pois (flagTargets → []),
-// valokuvapooli tyhjä, kaksintaistelu stubina (beginDuel päättää vuoron),
+// valokuvapooli tyhjä (rosvot ja kaksintaistelu poistettu pelistä),
 // linssit pois (linssiAarteet = {}), viimeAarre nollataan ennen tekoa.
 import { writeFileSync } from 'node:fs';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -46,12 +46,6 @@ const { pulmanGeneraattori } = await import(pathToFileURL(join(JS, 'pulmageneraa
   .catch(() => ({ pulmanGeneraattori: () => null }));
 const generaattori = (pulma) => pulma.generate ?? pulmanGeneraattori(pulma);
 
-Game.prototype.beginDuel = function beginDuelStub() {
-  this.kaksintaisteluja = (this.kaksintaisteluja ?? 0) + 1;
-  this.phase = 'action';
-  this.endTurn();
-  return { ok: true };
-};
 
 const ordinaali = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
 const pack = packById('maailmankartta');
@@ -180,8 +174,6 @@ function tila(g, teko) {
     eventCard: g.eventCard
       ? { cityId: g.eventCard.cityId, text: g.eventCard.text, effect: ei(g.eventCard.effect) }
       : null,
-    duelArmed: g.duelArmed,
-    kaksintaisteluja: g.kaksintaisteluja ?? 0,
     quiz: kysymys(g.quiz),
   };
 }
