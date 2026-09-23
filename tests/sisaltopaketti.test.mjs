@@ -379,3 +379,21 @@ test('skeema 1.8: äänitaulut ja musiikkiketju vastaavat peliä', async () => {
   assert.equal(rivit.filter((r) => r.laji === 'musiikkiketju').length, 266);
   assert.deepEqual(['jalan', 'laiva', 'lento'].filter((l) => !id.has(`siirtyma:${l}`)), []);
 });
+
+test('skeema 1.9: kuva- ja lippukysymykset pelin järjestyksessä, url kuten media.json', async () => {
+  const { MAAILMANKARTTA: P } = await import('../js/packs/maailmankartta.js');
+  const kuvat = JSON.parse(tiedostot.get('kokoelmat/kuvakysymykset.json')).alkiot;
+  const jarjestys = P.cities.map((c) => c.id);
+  const paikat = kuvat.map((k) => jarjestys.indexOf(k.kaupunki));
+  assert.deepEqual(paikat, [...paikat].sort((a, b) => a - b), 'cities-järjestys');
+  const media = new Map(JSON.parse(tiedostot.get('media.json')).viitteet.map((v) => [v.arvo, v]));
+  for (const k of kuvat.slice(0, 50)) assert.equal(k.url, media.get(k.tiedosto)?.url, k.tiedosto);
+  const liput = JSON.parse(tiedostot.get('kokoelmat/lippumaat.json')).alkiot;
+  const odotus = Object.entries(P.map.countryShapes).filter(([, m]) => m.lippu && m.nimi).map(([iso]) => iso);
+  assert.deepEqual(liput.map((l) => l.iso), odotus, 'countryShapes-järjestys (flagTargets)');
+  assert.ok(liput.every((l) => /^https:\/\//.test(l.url)));
+  const aineisto = new Map(JSON.parse(tiedostot.get('kokoelmat/pulmaaineisto.json')).alkiot.map((r) => [r.id, r]));
+  const { KUUT } = await import('../js/packs/africa-puzzles.js');
+  assert.deepEqual(aineisto.get('kuunvaiheet:KUUT').data, JSON.parse(JSON.stringify(KUUT)));
+  assert.ok(aineisto.get('pylvaat:PYLVASKUVAT').data.every((k) => k.url && k.lahde));
+});

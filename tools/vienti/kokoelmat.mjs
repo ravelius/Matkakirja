@@ -22,6 +22,7 @@ import { sarjallista } from './sarjallista.mjs';
 import { laudaltaAsteiksi } from '../../js/fokusmitat.js';
 import { ISO2 } from './iso2.mjs';
 import { PAAKAUPUNGIT } from './paakaupungit.mjs';
+import { ratkaiseMedia } from './media.mjs';
 
 const LAUTA = 'js/packs/maailmankartta.js';
 
@@ -449,6 +450,59 @@ function aaniKokoelma(ns, hae) {
     { kaupunki: 'kaupungit' }, rivit);
 }
 
+/*
+ * KUVA- JA LIPPUKYSYMYKSET, PULMIEN AINEISTO (skeema 1.9, Pelikoodarin
+ * tarve 23.9.2026). Järjestys on pelin järjestys, koska arvonta riippuu
+ * siitä: kuvakysymykset laudan cities-järjestyksessä (js/ui.js
+ * primePhotoPool), lippumaat countryShapes-järjestyksessä (js/game.js
+ * flagTargets). url ja varat samoilla säännöillä kuin media.json
+ * (tools/vienti/media.mjs ratkaiseMedia): repon kopio → Flickr → ämpäri
+ * → Commons.
+ */
+function kysymyskuvaKokoelmat(ns, hae) {
+  const P = ns.MAAILMANKARTTA;
+  const { KAIKKI_VALOKUVAT, EI_VALOKUVAKYSYMYKSEEN } = hae('js/sisaltotaulut.js');
+  const osoite = (tiedosto, laji) => {
+    const { url, varat = [] } = ratkaiseMedia(tiedosto, laji);
+    return { url, varat };
+  };
+  const kuvat = [];
+  for (const c of P.cities) {
+    if (EI_VALOKUVAKYSYMYKSEEN.has(c.id)) continue;
+    const valokuva = KAIKKI_VALOKUVAT[c.id];
+    // Nykykuva ensin, vanha vedos varalla (js/ui.js primePhotoPool).
+    const valittu = valokuva?.uusi?.tiedosto ? valokuva.uusi : valokuva;
+    if (!valittu?.tiedosto) continue;
+    kuvat.push({ id: c.id, kaupunki: c.id, tiedosto: valittu.tiedosto, lahde: valittu.lahde ?? null,
+      ...osoite(valittu.tiedosto, 'kuva-commons') });
+  }
+  const liput = Object.entries(P.map.countryShapes)
+    .filter(([, maa]) => maa.lippu && maa.nimi)
+    .map(([iso, maa]) => ({ id: iso, iso, nimi: maa.nimi, lippu: maa.lippu, ...osoite(maa.lippu, 'lippu-commons') }));
+  const E = hae('js/packs/europe-puzzles.js');
+  const A = hae('js/packs/africa-puzzles.js');
+  const aineisto = [
+    ['roomalaiset', 'ROMAANIT', E.ROMAANIT], ['pylvaat', 'PYLVAAT', E.PYLVAAT],
+    ['pylvaat', 'PYLVASKUVAT', E.PYLVASKUVAT.map((k) => ({ ...k, ...osoite(k.tiedosto, 'kuva-commons') }))],
+    ['kukko', 'SUUNNAT', E.SUUNNAT], ['kuunvaiheet', 'KUUT', A.KUUT],
+    ['naksutus', 'NAKSUTUSVARIANTIT', A.NAKSUTUSVARIANTIT], ['vesileilit', 'LEILIVARIANTIT', A.LEILIVARIANTIT],
+  ].map(([pulma, taulu, data]) => ({ id: `${pulma}:${taulu}`, pulma, taulu, data }));
+  return {
+    kuvakysymykset: taulukko(`${LAUTA}#MAAILMANKARTTA.cities + js/sisaltotaulut.js#KAIKKI_VALOKUVAT`,
+      'Valokuvakysymysten kuvat laudan cities-järjestyksessä (arvonta riippuu järjestyksestä): nykykuva, '
+        + 'muuten vanha vedos; EI_VALOKUVAKYSYMYKSEEN pois. url ja varat kuten media.json.',
+      { kaupunki: 'kaupungit' }, kuvat),
+    lippumaat: taulukko(`${LAUTA}#MAAILMANKARTTA.map.countryShapes`,
+      'Lippukysymysten maat countryShapes-järjestyksessä (js/game.js flagTargets): vain maat, joilla on nimi '
+        + 'ja lippu. iso = pelin maakoodi, lippu = Commons-tiedosto, url ja varat kuten media.json.',
+      {}, liput),
+    pulmaaineisto: taulukko('js/packs/europe-puzzles.js + js/packs/africa-puzzles.js',
+      'Pulmageneraattorien ja -piirrosten lähdetaulut (pulma = generaattorin tunniste, taulu = vakion nimi '
+        + 'koodissa). PYLVASKUVAT-kuvilla on url ja varat.',
+      {}, aineisto),
+  };
+}
+
 /** nimiavaruudet: Map<moduulipolku, moduulin nimiavaruus> */
 export function kokoaKokoelmat(nimiavaruudet) {
   const ns = {
@@ -469,5 +523,6 @@ export function kokoaKokoelmat(nimiavaruudet) {
     esilasketut: esilaskettuKokoelma(ns, hae),
     linssiaineisto: linssiKokoelma(hae),
     aanitaulut: aaniKokoelma(ns, hae),
+    ...kysymyskuvaKokoelmat(ns, hae),
   };
 }

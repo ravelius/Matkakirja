@@ -39,7 +39,7 @@ const euroSekoita = (rng, lista) => {
 // Kolme esimerkkiriviä arvoineen opettaa järjestelmän: merkit lasketaan
 // yhteen, mutta pienempi ennen suurempaa vähennetään. Neljäs ratkaistaan.
 
-const ROMAANIT = [
+export const ROMAANIT = [
   { rivit: ['VII', 'XXIV', 'LX'], arvot: [7, 24, 60], kysytty: 'XLII', oikea: 42, muut: [62, 52, 38] },
   { rivit: ['VI', 'XIX', 'XL'], arvot: [6, 19, 40], kysytty: 'XCIV', oikea: 94, muut: [114, 84, 96] },
   { rivit: ['IX', 'XXXI', 'LXX'], arvot: [9, 31, 70], kysytty: 'XXIX', oikea: 29, muut: [31, 21, 39] },
@@ -79,7 +79,7 @@ const piirraRoomalaiset = (svg, data) => {
 // Kolme pylvästä nimilappuineen, neljäs kysymysmerkillä. Vastaus näkyy
 // piirroksesta: sama pää kuin jollakin nimetyistä.
 
-const PYLVAAT = ['doorilainen', 'joonialainen', 'korinttilainen'];
+export const PYLVAAT = ['doorilainen', 'joonialainen', 'korinttilainen'];
 
 const piirraPaa = (x, y, tyyli, p) => {
   // Runko: uurrettu pylväs.
@@ -111,7 +111,7 @@ const piirraPaa = (x, y, tyyli, p) => {
  * kuvattuna British Museumissa) — tarkistettu Commonsista ja
  * katsottu silmin, kulkevat peilin kautta kuten muutkin kuvat.
  */
-const PYLVASKUVAT = [
+export const PYLVASKUVAT = [
   {
     tyyli: 'doorilainen',
     tiedosto: 'Parthenon (30276156187).jpg',
@@ -294,7 +294,7 @@ const piirraLaiturit = (svg, data) => {
 // Kirkontornin tuuliviirin kukko osoittaa yhteen ilmansuuntaan. Piirroksesta
 // luetaan suunta — spatiaalinen, ei laskennallinen mekaniikka.
 
-const SUUNNAT = [
+export const SUUNNAT = [
   { avain: 'pohjoinen', kulma: -90 },
   { avain: 'koillinen', kulma: -45 },
   { avain: 'itä', kulma: 0 },

@@ -351,7 +351,7 @@ function arvoPunnukset(rng) {
 // Kuun kahdeksan vaihetta järjestyksessä: nimi, valaistu osuus 0…1 ja tieto
 // siitä, kummalla puolella valaistu reuna on. Kasvavassa kuussa valo on
 // oikealla, vähenevässä vasemmalla (pohjoinen pallonpuolisko).
-const KUUT = [
+export const KUUT = [
   { nimi: 'uusikuu', v: 0, peilaa: false },
   { nimi: 'kasvava sirppi', v: 0.18, peilaa: false },
   { nimi: 'ensimmäinen neljännes', v: 0.5, peilaa: false },
@@ -397,7 +397,7 @@ function arvoKuunvaiheet(rng) {
  * tai q, ja suuprofiilien järjestys vaihtelee. Sanat ja artikulaatiokuvaukset
  * on kirjoitettu käsin, koska ne ovat kielitiedettä eivätkä arvattavia.
  */
-const NAKSUTUSVARIANTIT = [
+export const NAKSUTUSVARIANTIT = [
   {
     q: 'Piirsin muistiin kolme kohtaa, joista kieli irtoaa naksahtaen; jokaisella on oma kirjaimensa. Kansan kielen nimi on isiXhosa, ja sen keskellä kuuluu naksaus — kirjainpari Xh. Mikä näistä se on?',
     vastaus: 'x — kielen sivu poskihampailta',
@@ -450,7 +450,7 @@ function arvoNaksutus(rng) {
  * tarkistettu käsin simuloimalla — koneella generoitu toimintosarja tuottaisi
  * kömpelöä kieltä, ja testi tarkistaa jokaisen sarjan lopputuloksen.
  */
-const LEILIVARIANTIT = [
+export const LEILIVARIANTIT = [
   {
     tavoite: 4,
     hint: 'Kun täydestä viitosesta kaadetaan kolmonen täyteen, viitoseen jää kaksi mittaa. Mieti, mihin ne kaksi saadaan talteen.',

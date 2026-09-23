@@ -68,8 +68,9 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        äänet, avauskynnykset)
  *   1.8  kokoelma aanitaulut (tehosteet ja näytteet, ambienssit, pulu,
  *        siirtymä-, tila- ja paikkaraidat, musiikkiketju kaupungeittain)
+ *   1.9  kokoelmat kuvakysymykset, lippumaat ja pulmaaineisto
  */
-export const SKEEMAVERSIO_TARKKA = '1.8';
+export const SKEEMAVERSIO_TARKKA = '1.9';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 const tavuja = (s) => Buffer.byteLength(s);
