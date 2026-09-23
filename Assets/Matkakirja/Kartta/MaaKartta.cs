@@ -32,6 +32,12 @@ namespace Matkakirja
         public double korkeus = 0.0;
         [Tooltip("Napautuksen toleranssi asteina (rannikkokaupungit osuvat maahan).")]
         public double toleranssi = 0.5;
+        [Tooltip("Sisältöpaketin kokoelma: maarajat (maat, ISO3) tai maakuntarajat (\"ISO:tunnus\", B17).")]
+        public string kokoelma = "maarajat";
+        [Tooltip("Piilotetaanko kaupungit ja nimiöt tilan ajaksi (maatila kyllä, maakuntien värjäys ei).")]
+        public bool piilotaKaupungit = true;
+        [Tooltip("Piirtojärjestys kuorten kesken (maakunnat maiden päälle).")]
+        public int jonoLisa = 0;
 
         public event Action<string> MaaNapautettu;
         public bool Paalla { get; private set; }
@@ -64,7 +70,7 @@ namespace Matkakirja
         public void MaaTila(bool paalla)
         {
             Paalla = paalla;
-            if (kerrokset != null)
+            if (kerrokset != null && piilotaKaupungit)
             {
                 kerrokset.Nakyvyys("kaupungit", !paalla);
                 kerrokset.Nakyvyys("nimiot", !paalla);
@@ -136,8 +142,8 @@ namespace Matkakirja
         {
             latausAlkanut = true;
             string teksti = null;
-            yield return Sisalto.HaeTeksti("maarajat", t => teksti = t, true);
-            if (teksti == null) { Debug.LogWarning("MATKAKIRJA maat: maarajat.json puuttuu (paketti ennen nippua 4?)"); latausAlkanut = false; yield break; }
+            yield return Sisalto.HaeTeksti(kokoelma, t => teksti = t, true);
+            if (teksti == null) { Debug.LogWarning($"MATKAKIRJA maat: {kokoelma}.json puuttuu tästä paketista"); latausAlkanut = false; yield break; }
             float alku = Time.realtimeSinceStartup;
             int w = leveys, h = leveys / 2;
             MaatAineisto aineistoT = null;
@@ -178,7 +184,7 @@ namespace Matkakirja
             };
             PaivitaPaletti();
             TeeKuori();
-            Debug.Log($"MATKAKIRJA maat: {jarjestys.Count} maata, tunnuskartta {w}×{h}, " +
+            Debug.Log($"MATKAKIRJA maat ({kokoelma}): {jarjestys.Count} aluetta, tunnuskartta {w}×{h}, " +
                       $"{(Time.realtimeSinceStartup - alku) * 1000f:0} ms");
             if (kuori != null) kuori.enabled = Paalla;
         }
@@ -262,6 +268,7 @@ namespace Matkakirja
             go.AddComponent<MeshFilter>().sharedMesh = Verkko(180, 90);
             kuori = go.AddComponent<MeshRenderer>();
             kuori.sharedMaterial = new Material(materiaali);
+            kuori.sharedMaterial.renderQueue = materiaali.renderQueue + jonoLisa;
             kuori.sharedMaterial.SetTexture("_Tunnus", tunnukset);
             kuori.sharedMaterial.SetTexture("_Paletti", paletti);
             kuori.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
