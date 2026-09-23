@@ -78,6 +78,8 @@ namespace Matkakirja.Natiivi
         List<Lippumaa> lippumaat;
         List<(string Kaupunki, string Tiedosto, string Lahde)> kuvakohteet;
         readonly Dictionary<string, string> kuvaOsoitteet = new Dictionary<string, string>();
+        Kohtaamiset kohtaamiset;
+        readonly HashSet<string> tervehdyksetNahty = new HashSet<string>();
         KysymysToiminnot kysymysToiminnot;
         Loyto kysymysLoyto;
         readonly List<string> kysymysLisat = new List<string>();
@@ -378,7 +380,8 @@ namespace Matkakirja.Natiivi
             yield return HaeKokoelma("kysymykset", false, t => kysymykset = t);
             yield return HaeKokoelma("tarinakaari", false, t => kaari = t);
             yield return HaeKokoelma("paikkatiedot", false, t => paikat = t);
-            string pulmaTeksti = null, rosvoTeksti = null, tapahtumaTeksti = null, kuvaTeksti = null, lippuTeksti = null;
+            string pulmaTeksti = null, rosvoTeksti = null, tapahtumaTeksti = null, kuvaTeksti = null, lippuTeksti = null, kohtaamisTeksti = null;
+            yield return HaeTiedosto("kokoelmat/kohtaamiset.json", false, true, t => kohtaamisTeksti = t);
             yield return HaeTiedosto("kokoelmat/kuvakysymykset.json", false, true, t => kuvaTeksti = t);
             yield return HaeTiedosto("kokoelmat/lippumaat.json", false, true, t => lippuTeksti = t);
             try { LueKuvatJaLiput(kuvaTeksti, lippuTeksti); }
@@ -398,6 +401,9 @@ namespace Matkakirja.Natiivi
                 var d = new Kysymysdata();
                 d.LueKysymykset(kysymykset);
                 if (kaari != null) d.LueTarinakaari(kaari);
+                kohtaamiset = new Kohtaamiset();
+                if (kaari != null) kohtaamiset.LueTarinakaari(kaari);
+                if (kohtaamisTeksti != null) kohtaamiset.LueKohtaamiset(kohtaamisTeksti);
                 if (paikat != null) d.LuePaikkatiedot(paikat);
                 Kysymykset = d;
                 KytkeKysely();
@@ -1016,7 +1022,13 @@ namespace Matkakirja.Natiivi
             switch (tehtava)
             {
                 case Tehtava.Kysymys:
-                    KysymysTila = KysymysApu.Nakyma(kysely, matka.Tila.Kysely.Kysymys, kysymysLoyto, kysymysLisat, viesti, kuvaOsoitteet);
+                {
+                    var q = matka.Tila.Kysely.Kysymys;
+                    KysymysTila = KysymysApu.Nakyma(kysely, q, kysymysLoyto, kysymysLisat, viesti, kuvaOsoitteet);
+                    // Kaupungin tavallinen tervehdys kerran istunnossa (web ui.kohtaamisetNahty).
+                    if (KysymysApu.LisaaKohtaaminen(KysymysTila, q, kohtaamiset, q.Kaupunki != null && tervehdyksetNahty.Contains(q.Kaupunki)))
+                        tervehdyksetNahty.Add(q.Kaupunki);
+                }
                     break;
                 case Tehtava.Kaksintaistelu:
                     KysymysTila = KysymysApu.Kaksintaistelu(rosvo);
@@ -1048,6 +1060,9 @@ namespace Matkakirja.Natiivi
             var tehtava = AvoinTehtava;
             if (tehtava == Tehtava.Tapahtuma) return "tapahtumakortissa ei vastata";
             var r = KysymysTeko(() => tehtava == Tehtava.Kaksintaistelu ? rosvo.Vastaa(indeksi) : kysely.Vastaa(indeksi));
+            // Löytöhetken repliikki luetaan ääneen (web lueKertojana, persoona kertoja).
+            if (r == null && KysymysTila != null && KysymysTila.RepliikkiLoyto && puhe != null)
+                puhe.Lue(KysymysTila.Repliikki, "kertoja", 0.3f);
             if (r == null) Debug.Log($"MATKAKIRJA peli: {tehtava} vastaus {indeksi}, {(KysymysTila.Oikein ? "oikein" : "väärin")}"
                                      + (kysymysLoyto != null ? ", laatta " + kysymysLoyto.WebTulos : "") + $", raha {matka.Tila.Pelaaja.Raha}");
             return r;
