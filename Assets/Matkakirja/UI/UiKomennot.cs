@@ -20,6 +20,13 @@
 //                                             juliste = JULISTE-tehtävä); vastaus ja pulla kirjataan, jos peli on käynnissä
 //   ui lehti fokus-vastaa n | fokus-pulla     napauttaa fokustehtävän vaihtoehtoa n (0–) / pullanappia (2× = osto)
 //   ui nosto <valoId>                         nostokortti: skandaali:<id> | hetki:<id> | elaintaky:<ISO> | kohde:<id>[@ISO]
+//                                             (lisäkaupunki: kohde:nakyva-kaupunki-lyon → lisäkaupungin kortti)
+//   ui lisakaupunki [nimi]                    lisäkaupungin kortti (oletus lyon = kohde:nakyva-kaupunki-lyon)
+//   ui kaupunki <id> [nostot [aihe|n] | kohde n | alas | ylos]  kaupunkikortti ilman peliä (kuten ui kortti) ja
+//                                             nostokategoriat haitarina: nostot = avaa aiheen (tai n:nnen,
+//                                             oletus ensimmäinen) ja kirjaa kategoriat lokiin; kohde n = avatun
+//                                             kategorian n:s rivi (kortti kiinni, nosto auki); alas/ylos = kelausrivi
+//   ui turistiinfo [kaupunki]                 turisti-info-merkin napautus (UiPalvelut.IlmoitaTuristiInfo, oletus lontoo)
 //   ui huipennus                              matkan huipennus (kaikki aarteet) esimerkkiluvuin
 //   ui sahke liuska|apu|sulje|kiinni|uusi|jasen|tila   sähkeliuska ja retkikuntaosio valekutsuin (SahkeNakyma.Testaa)
 //   ui sahketehtava [kaupunki] [tila]         pöllön sähketehtävä ilman peliä (oletus sofia tyhja), oikea sisältö ja
@@ -125,6 +132,44 @@ namespace Matkakirja.Natiivi
             catch (IOException) { }
         }
 
+        /// <summary>ui kaupunki &lt;id&gt; [nostot [aihe|n] | kohde n | alas | ylos]: kortti ja nostohaitari.</summary>
+        string Kaupunki(UiNakymat ui, string loput)
+        {
+            var o = loput.Split(new[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries);
+            string kid = o.Length > 0 ? o[0] : "pariisi";
+            string teko = o.Length > 1 ? o[1] : "";
+            string arvo = o.Length > 2 ? o[2] : null;
+            var kortti = ui.Kaupunkikortti;
+            if (kortti.Kaupunki != kid)
+                kortti.Nayta(kid, null, new KaupunkiToiminnot
+                {
+                    LueLehti = () => ui.Tilarivi.Viesti("Lue lehti"),
+                    Liiku = () => ui.Tilarivi.Viesti("Liiku"),
+                    Sulje = () => { },
+                });
+            switch (teko)
+            {
+                case "":
+                    kortti.KunNostot(() => Kirjaa("kaupunki " + kid + ": " + kortti.Kuvaus()));
+                    return null;
+                case "nostot":
+                    kortti.KunNostot(() => Kirjaa("kaupunki " + kid + ": " + (kortti.AvaaKategoria(arvo) ?? kortti.Kuvaus())));
+                    return null;
+                case "kohde":
+                    if (!int.TryParse(arvo, out var n)) return "ui kaupunki <id> kohde <n>";
+                    kortti.KunNostot(() =>
+                    {
+                        var virhe = kortti.NapautaKohde(n);
+                        if (virhe != null && kortti.AvaaKategoria(null) == null) virhe = kortti.NapautaKohde(n);
+                        Kirjaa("kaupunki " + kid + " kohde " + n + ": " + (virhe ?? "ok"));
+                    });
+                    return null;
+                case "alas": kortti.KunNostot(() => kortti.Kelaa(1)); return null;
+                case "ylos": kortti.KunNostot(() => kortti.Kelaa(-1)); return null;
+                default: return "ui kaupunki <id> [nostot [aihe|n] | kohde n | alas | ylos]";
+            }
+        }
+
         string Aja(string rivi)
         {
             var osat = rivi.Split(new[] { ' ' }, 3, System.StringSplitOptions.RemoveEmptyEntries);
@@ -228,6 +273,17 @@ namespace Matkakirja.Natiivi
                 case "nosto":
                     ui.Nostokortti.Avaa(loput.Length > 0 ? loput : "skandaali:shakkiturkkilainen");
                     return null;
+                case "lisakaupunki":
+                    ui.Nostokortti.Avaa("kohde:nakyva-kaupunki-" + (loput.Length > 0 ? loput.ToLowerInvariant() : "lyon"));
+                    return null;
+                case "turistiinfo":
+                {
+                    string tk = loput.Length > 0 ? loput : "lontoo";
+                    UiPalvelut.OnkoTuristiInfo(tk, on => Kirjaa("turisti-info " + tk + ": " + (on ? "on" : "ei opasta")));
+                    UiPalvelut.IlmoitaTuristiInfo(tk);
+                    return null;
+                }
+                case "kaupunki": return Kaupunki(ui, loput);
                 case "huipennus":
                     ui.Huipennus.Nayta(new MatkanYhteenveto { Paivat = 83, Kaupungit = 41, Aarteet = 6, AarteitaKaikkiaan = 6 },
                         () => ui.Aloitus.NaytaAvaus(id => ui.Tilarivi.Viesti("Lähtö: " + id)));

@@ -139,6 +139,13 @@ namespace Matkakirja.Natiivi
                 if (LinssiUi.Rekisteri?.Auki != null || Aloitus.Auki) return;
                 Nostokortti.Avaa(id);
             });
+            // Turisti-info-merkin napautus (Natiiviseppä, rajapintatoive) → turistiopas isossa muodossaan
+            // (web avaaTuristiOpas: ei välipop-upia); linssin ja aloituksen aikana ei.
+            UiPalvelut.TuristiInfoNapautettu += id => UiKerros.PaaSaikeessa(() =>
+            {
+                if (LinssiUi.Rekisteri?.Auki != null || Aloitus.Auki) return;
+                LehtiSisalto.HaeOpas(id, o => { if (o != null) Nahtavyydet.AvaaOpas(o); });
+            });
             // Linssit (valitsin, peite, selite, astronautti, vertailu, aikajanat): kartuschan ja selitteen jälkeen.
             Linssit = new LinssiUi(kerros, this);
             Valikko.TietojaPainettu += Tietoja.Avaa;
