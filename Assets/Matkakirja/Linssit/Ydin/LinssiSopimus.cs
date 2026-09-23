@@ -113,6 +113,10 @@ namespace Matkakirja.Linssit
         void ZoomiKatto(double? maxKorkeus);
         /// <summary>Korkeus, jolla koko pallo mahtuu ruutuun (web kokoPallonKorkeus).</summary>
         double KokoPallonKorkeus { get; }
+        /// <summary>Korkeus, jolla ruudun LEVEYS näyttää annetun kaaren (asteina).</summary>
+        double KorkeusLeveydelle(double leveysAsteina);
+        /// <summary>Ruudun leveys / korkeus.</summary>
+        double Kuvasuhde { get; }
 
         /// <summary>
         /// Pelin kerrokset (kaupunkien nimet ja pisteet, nappula, nostot,

@@ -103,6 +103,27 @@ namespace Matkakirja.Natiivi
 
         public double KokoPallonKorkeus => kierto.MaxKorkeus();
 
+        /// <summary>
+        /// PalloKierto.KorkeusKaarelle mittaa kapeamman suunnan kaaren. Pystyruudulla
+        /// se on leveys; vaakaruudulla leveyden kaari muunnetaan korkeuden kaareksi
+        /// kuvasuhteella (pienillä kulmilla tarkka, koko pallolla katto rajaa).
+        /// </summary>
+        public double KorkeusLeveydelle(double leveysAsteina)
+        {
+            double suhde = Kuvasuhde;
+            double kapea = suhde > 1 ? leveysAsteina / suhde : leveysAsteina;
+            return kierto.KorkeusKaarelle(kapea);
+        }
+
+        public double Kuvasuhde
+        {
+            get
+            {
+                var kamera = kierto.GetComponent<Camera>();
+                return kamera != null && kamera.aspect > 0 ? kamera.aspect : (double)Screen.width / Mathf.Max(1, Screen.height);
+            }
+        }
+
         public void Pelikerrokset(bool nakyvissa)
         {
             var k = KarttaKerrokset.Instanssi;
