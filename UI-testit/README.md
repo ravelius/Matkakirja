@@ -8,6 +8,16 @@ Pelikoodarin näkymärajapinnat `Scripts/Peli/NakymaSopimukset.cs` ovat Assembly
 - Laitteella/simulaattorissa: kirjoita `Documents/ui-komento.txt`, rivit (ks. UiKomennot.cs):
   `ui valikko`, `ui asetukset`, `ui matka`, `ui heitto`, `ui viesti teksti`, `ui sulje`,
   `ui osuma x y`, `kuva nimi` (→ `Documents/ui-nimi.png`), `odota s`. Loki `Documents/ui-loki.txt`.
+- `ui kysymys [laji]` näyttää kysymysnäkymän (`KysymysNakyma.cs`) käsin rakennetulla
+  esimerkillä ilman peliä (`KysymysEsimerkki.cs`). Lajit: `visa` (oletus; vihje, 50:50,
+  45 s tiimalasi), `vaite` (isoisän väittämä ja paikka), `kuva` (valokuva Commonsista),
+  `lippu`, `pulma [id]` (luonnos Painter2D:llä; id: `pylvaat` (oletus, valokuvavaihtoehdot),
+  `roomalaiset`, `kuunvaiheet`, muut webin oletusdatalla: `hieroglyfit`, `punnukset`,
+  `naksutus`, `vesileilit`, `suolaaltaat`, `geysir`, `laiturit`, `kukko`),
+  `kaksintaistelu` (8 vaihtoehtoa, helpotus), `tapahtumakortti` ja `tulos` (vastattu:
+  oikea korostettu, 50:50 käytetty, löytö, fakta, lähteet, Jatka). Esimerkki toimii kuin
+  ohjain: vastaus, vihje, 50:50 ja Jatka päivittävät näkymän, aika kuluu, ja aika loppuu
+  -tulos tulee itsestään. `ui sulje` sulkee.
 
 Kuvasarja erän 1 tarkistukseen (simulaattori, peli käynnissä):
 
@@ -34,4 +44,40 @@ ui sulje
 ui kortti firenze
 odota 4
 kuva kortti
+```
+
+Kuvasarja kysymysnäkymän tarkistukseen (erä 3):
+
+```
+ui kysymys visa
+odota 2
+kuva kysymys-visa
+ui kysymys vaite
+odota 2
+kuva kysymys-vaite
+ui kysymys kuva
+odota 4
+kuva kysymys-kuva
+ui kysymys lippu
+odota 4
+kuva kysymys-lippu
+ui kysymys pulma pylvaat
+odota 5
+kuva kysymys-pulma
+ui kysymys pulma kukko
+odota 1
+kuva kysymys-kukko
+ui kysymys pulma kuunvaiheet
+odota 1
+kuva kysymys-kuunvaiheet
+ui kysymys kaksintaistelu
+odota 2
+kuva kysymys-kaksintaistelu
+ui kysymys tapahtumakortti
+odota 1
+kuva kysymys-tapahtuma
+ui kysymys tulos
+odota 1
+kuva kysymys-tulos
+ui sulje
 ```
