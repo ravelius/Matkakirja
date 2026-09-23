@@ -58404,6 +58404,147 @@ export const KULTTUURI_KATEGORIAT = {
         },
       },
     },
+    /*
+     * ALCATRAZ (lisätty 23.9.2026). Kansi kertoo Alcatrazista vain
+     * avauskuvan rivin ja oppaan maininnan, joten saari saa oman
+     * sivunsa: majakka, linnake, liittovaltion vankila ja valtaus
+     * 1969–1971. Faktat en-Wikipedian raakatekstistä (haettu
+     * 23.9.2026): Alcatraz Island, Alcatraz Island Lighthouse, Fort
+     * Alcatraz, Alcatraz Federal Penitentiary, Occupation of Alcatraz ja
+     * Alcatraz water tower. Hopi-vankien vuosi 1895 on Fort Alcatraz
+     * -artikkelista (Alcatraz Island -artikkeli sanoo epätarkasti
+     * "1870s"). RAJAUS: vankilasta kerrotaan rakenne, arki ja
+     * sulkemisen syyt — ei Battle of Alcatrazia, ammuttuja pakenijoita
+     * eikä D-korttelin rangaistussellejä. Valtaus kerrotaan
+     * alkuperäiskansojen omana aloitteena ja päättyy nykyhetkeen
+     * (Raamatun pilari 3). Kuvien lisenssit ja tekijät Commonsin
+     * extmetadatasta 23.9.2026, kaikki katsottu silmin: majakkakuvan
+     * vasemmassa laidassa oleva kävijä pitää puhelinta kasvojensa
+     * edessä, eikä muissa ole ihmisiä; vuoden 1888 vedoksen numero
+     * "3071" on alkuperäinen negatiivimerkintä.
+     */
+    {
+      id: 'historia',
+      nimi: 'Alcatrazin saari',
+      johdanto: 'Lahden keskellä, kahden kilometrin päässä rannasta, on pieni '
+        + 'kallio, jolla on ollut majakka, linnake, sotilasvankila ja maan '
+        + 'kuuluisin vankila. Isoisän matkavuonna 1873 armeija tasoitti '
+        + 'saarta vankiensa voimin.',
+      tehtava: {
+        kysymys: 'Mihin sopimukseen Alcatrazin valtaajat vetosivat vaatiessaan saarta 1969?',
+        vaihtoehdot: [
+          'Guadalupe Hidalgon rauhaan 1848',
+          'Fort Laramien sopimukseen 1868',
+          'Chicagon sopimukseen 1833',
+          'Pariisin rauhaan 1783',
+        ],
+        oikea: 1,
+        fakta: 'Valtaajien mukaan sopimus lupasi palauttaa käytöstä poistetut '
+          + 'liittovaltion maat alkuperäiskansoille. Vankila oli suljettu '
+          + '1963, ja saari oli julistettu ylijäämämaaksi 1964.',
+      },
+      nostot: [
+        {
+          otsikko: 'Pelikaanien saari ja lännen ensimmäinen majakka',
+          tiedosto: 'San Francisco (CA, USA), Alcatraz, Lighthouse -- 2022 -- 3155.jpg',
+          teksti: 'Espanjalainen merenkulkija Juan Manuel de Ayala kartoitti '
+            + 'lahden 1775 ja antoi nykyiselle Yerba Buena Islandille nimen '
+            + 'La Isla de los Alcatraces; nimen siirsi myöhemmin tälle '
+            + 'kalliolle englantilainen kapteeni Frederick W. Beechey. Nimi '
+            + 'tarkoittanee pelikaanien saarta, ja ranskalainen kapteeni '
+            + 'Auguste Duhaut-Cilly kirjoitti elokuussa 1827, että laukaus '
+            + 'nosti saaren linnut pilveksi hurrikaanin äänellä. '
+            + 'Kultaryntäyksen vilkastuttama merenkulku sai kongressin '
+            + 'tilaamaan 1851–1852 seitsemän majakkaa länsirannikolle, ja '
+            + 'Alcatrazin majakka valmistui niistä ensimmäisenä. Ranskalainen '
+            + 'Fresnel-linssi tuotiin laivalla Etelä-Amerikan ympäri, ja '
+            + 'vartija Michael Cassin sytytti valon 1. kesäkuuta 1854 — '
+            + 'ensimmäisenä Yhdysvaltain Tyynenmeren rannikolla.',
+          lyhyt: 'Nykyinen betonitorni rakennettiin 1909, kun alkuperäinen majakka oli vaurioitunut maanjäristyksessä.',
+          selite: 'Nykyinen betoninen majakkatorni rakennettiin 1909 uuden '
+            + 'sellirakennuksen viereen, ja vuoden 1906 maanjäristyksessä '
+            + 'vaurioitunut alkuperäinen majakka purettiin.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Alcatraz Island Lighthouse',
+        },
+        {
+          otsikko: 'Isoisän vuonna: linnakkeesta tuli vankila',
+          tiedosto: 'Fort Alcatraz, San Francisco, circa 1888 (14660678076).jpg',
+          teksti: 'Armeijan insinöörit linnoittivat saarta 1853–1859 Zealous '
+            + 'B. Towerin johdolla, ja sisällissodan alkaessa 1861 muureilla '
+            + 'oli 85 tykkiä, vuoteen 1866 mennessä 105. Tykkejä ei koskaan '
+            + 'laukaistu vihollista kohti, mutta kylmä vesi ja voimakkaat '
+            + 'virtaukset tekivät saaresta hyvän vankilan: rikoksiin '
+            + 'syyllistyneitä sotilaita pidettiin siellä jo 1859, ja 1868 '
+            + 'saari nimettiin virallisesti armeijan pitkäaikaisvankilaksi. '
+            + 'Vuosina 1870–1876 armeija yritti tasoittaa koko saaren, ja '
+            + 'majuri George Mendell pani vangit ja muulit kaatamaan louhetta '
+            + 'lahteen; nykyinen paraatikenttä on keskeneräisen työn jälki. '
+            + 'Kesäkuun 5. päivänä 1873 saarelle tuotiin ensimmäinen '
+            + 'alkuperäiskansan vanki, paiute Tom, ja vuoteen 1895 mennessä '
+            + 'heitä oli ollut 32 — joukossa 19 hopi-miestä, jotka olivat '
+            + 'kieltäytyneet lähettämästä lapsiaan pois perheiltään '
+            + 'sisäoppilaitoksiin.',
+          lyhyt: 'Noin vuodelta 1888 oleva valokuva katsoo kaupungin rannasta lahdelle ja Fort Alcatrazin kalliolle.',
+          selite: 'Noin vuodelta 1888 oleva valokuva katsoo kaupungin '
+            + 'rannasta lahdelle, jonka keskellä seisoo Fort Alcatraz '
+            + 'linnakkeineen ja majakoineen.',
+          lahde: 'USMC Archives from Quantico, USA, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Fort Alcatraz',
+        },
+        {
+          otsikko: 'Kallio, josta ei pitänyt päästä pois',
+          tiedosto: 'Alcatraz cell block (5938779149).jpg',
+          teksti: 'Oikeusministeriö otti saaren armeijalta 12. lokakuuta 1933, '
+            + 'ja 11. elokuuta 1934 ensimmäiset 137 vankia tuotiin junalla '
+            + 'Kansasin Leavenworthista lahden rantaan ja sieltä saarelle. '
+            + 'Alcatraz oli tarkoitettu vangeille, jotka olivat aiheuttaneet '
+            + 'jatkuvasti ongelmia muissa liittovaltion vankiloissa, ja 29 '
+            + 'toimintavuoden aikana siellä oli kaikkiaan 1 576 vankia. Selli '
+            + 'oli noin 2,7 metriä pitkä ja 1,5 metriä leveä, eikä yksikään '
+            + 'selli ollut ulkoseinää vasten. Alkuvuosina vankilassa vallitsi '
+            + 'ehdoton vaikenemisen sääntö, ja kirjastosta, jossa oli 10 000–'
+            + '15 000 kirjaa, keskivertovanki luki 75–100 kirjaa vuodessa. '
+            + 'Vankila suljettiin 21. maaliskuuta 1963, koska se oli maan '
+            + 'kallein: vankipäivä maksoi lähes kymmenen dollaria, Atlantassa '
+            + 'kolme, ja saarelle piti kuljettaa mantereelta lähes miljoona '
+            + 'gallonaa vettä viikossa.',
+          lyhyt: 'Sellirakennus valmistui armeijan vankilaksi 1912, ja siinä on neljä selliosastoa A:sta D:hen.',
+          selite: 'Sellirakennus valmistui armeijan vankilaksi 1912, ja '
+            + 'liittovaltion vankilan aikana sen kolmikerroksiset sellirivit '
+            + 'jakautuivat neljään osastoon A:sta D:hen.',
+          lahde: 'Tim Wilson from Blaine, MN, USA, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Alcatraz Federal Penitentiary',
+        },
+        {
+          otsikko: 'Kaikkien heimojen intiaanit',
+          tiedosto: 'San Francisco (CA, USA), Alcatraz, Water Tower -- 2022 -- 3136.jpg',
+          teksti: 'Maaliskuun 8. päivänä 1964 joukko lakotoja nousi Belva '
+            + 'Cottierin aloitteesta saarelle neljäksi tunniksi ja tarjosi '
+            + 'siitä saman hinnan, jonka valtio oli aikanaan tarjonnut heille '
+            + 'maistaan: 47 senttiä eekkeriltä eli 9,40 dollaria koko '
+            + 'saaresta. Marraskuun 20. päivänä 1969 lähti 89 alkuperäiskansojen '
+            + 'jäsentä, enimmäkseen lahden alueen opiskelijoita, valtaamaan '
+            + 'saarta nimellä Indians of All Tribes, Kaikkien heimojen '
+            + 'intiaanit. He vetosivat vuoden 1868 Fort Laramien sopimukseen, '
+            + 'jonka katsoivat lupaavan käytöstä poistetut liittovaltion maat '
+            + 'takaisin alkuperäisille asukkailleen, ja suunnittelivat '
+            + 'saarelle kulttuurikeskusta. Valtaus kesti 19 kuukautta, '
+            + 'parhaimmillaan saarella oli 400 ihmistä, ja siellä toimivat '
+            + 'koulu, päiväkoti, terveysasema ja John Trudellin Radio Free '
+            + 'Alcatraz. Presidentti Nixon luopui heinäkuussa 1970 '
+            + 'alkuperäiskansojen aseman lakkauttamispolitiikasta, ja '
+            + 'saarella pidetään yhä joka vuosi Unthanksgiving Dayn '
+            + 'aamunkoittoseremonia.',
+          lyhyt: 'Vesitornin punaiset tekstit maalattiin valtauksen aikana ja uudelleen korjauksessa 2011–2012.',
+          selite: 'Vesitorni rakennettiin 1940–1941, ja sen kylkeen valtauksen '
+            + 'aikana maalatut punaiset tekstit maalattiin uudelleen, kun '
+            + 'torni korjattiin 2011–2012.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Occupation of Alcatraz',
+        },
+      ],
+    },
   ],
   /*
    * NEW YORK (Opus 23.8.2026). Pohjois-Amerikan laudan PILOTTIKAUPUNKI
