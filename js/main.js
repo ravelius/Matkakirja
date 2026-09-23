@@ -702,6 +702,41 @@ if (karttaValikko) {
   rivi.addEventListener('click', () => { asetaLiike(!liikePaalla()); nayta(); });
   nayta();
   karttaValikko.appendChild(rivi);
+
+  /*
+   * KARTTA → KALLISTUS (Fable 23.9.2026, omistaja: "en näe kallistusta"):
+   * pysyvä kamerakallistus tuntuman arviointiin (js/pallolauta/kallistus.js
+   * PYSYVÄ KALLISTUS). Ei oletus. Kallistus asennetaan laudan luonnissa,
+   * joten valinta lataa sivun kuten Syötekoe; peli on tallessa.
+   */
+  const kallistusRivi = document.createElement('button');
+  kallistusRivi.type = 'button';
+  kallistusRivi.className = 'aanikytkin';
+  kallistusRivi.dataset.kytkin = 'kallistus';
+  kallistusRivi.setAttribute('role', 'switch');
+  kallistusRivi.title = 'Kamera katsoo karttaa loivasti viistosta, myös vedossa ja zoomissa (koe)';
+  kallistusRivi.setAttribute('aria-label', 'Kallistus — kamera katsoo karttaa loivasti viistosta (koe)');
+  kallistusRivi.innerHTML = `<span class="viiva-ikoni">${svg('<path d="M3 17l6-9h9l3 9z"/><path d="M9 8l2 9"/>')}</span>`
+    + '<span class="aanikytkin-nimi">Kallistus</span>'
+    + '<span class="aanikytkin-tila"></span>';
+  // Sama avain kuin js/pallolauta/kallistus.js KALLISTUS_AVAIN (ei tuontia:
+  // pallon moduulit latautuvat laiskasti; tests/kallistus.test.mjs vartioi).
+  const KALLISTUS_AVAIN = 'matkakirja-kallistus';
+  const kallistusPaalla = () => { try { return localStorage.getItem(KALLISTUS_AVAIN) === '1'; } catch { return false; } };
+  const naytaKallistus = () => {
+    const paalla = kallistusPaalla();
+    kallistusRivi.classList.toggle('valittu', paalla);
+    kallistusRivi.setAttribute('aria-checked', paalla ? 'true' : 'false');
+    kallistusRivi.querySelector('.aanikytkin-tila').textContent = paalla ? 'päällä' : 'pois';
+  };
+  kallistusRivi.addEventListener('click', () => {
+    try { localStorage.setItem(KALLISTUS_AVAIN, kallistusPaalla() ? '0' : '1'); } catch { return; }
+    naytaKallistus();
+    kallistusRivi.querySelector('.aanikytkin-tila').textContent = 'ladataan…';
+    setTimeout(() => location.reload(), 250);
+  });
+  naytaKallistus();
+  karttaValikko.appendChild(kallistusRivi);
 }
 
 /*
