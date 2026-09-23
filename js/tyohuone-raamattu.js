@@ -158,7 +158,13 @@ export const RAAMATTU = {
           + 'Lontoosta kaarta pitkin kohti valittua kaupunkia kameran seuratessa; samalla hetkellä '
           + 'alkavat koneen ääni ja isoisän intro-luenta, jotka kestävät lennon ajan; saapuminen '
           + 'jatkuu normaalina saapumisena. Valittu kaupunki on ensimmäinen kohde, ei lähtöpaikka; '
-          + 'avaustekstiä ei näytetä erillisellä ruudulla.',
+          + 'avaustekstiä ei näytetä erillisellä ruudulla. LENNON ESITYS NATIIVISSA (omistaja '
+          + '23.9.2026 klo 22.5x, sitova; koskee kaikkia lentoja): pilvisumu (pilvikerros + '
+          + 'etäisyyssumu), aurinko valaisee mantereet oikean kellonajan mukaan (CesiumSunSky), '
+          + 'kamera yläviistosta ja muuttaa kulmaa ja korkeutta lennon vaiheen mukaan, laskussa '
+          + 'puoliorbitti koneen ympäri; kone näkyy kolmiulotteisena KLASSISENA POTKURIKONEENA '
+          + '(DC-3-tyyppinen, CC0-malli tai kuvaputken oma), ja sen perässä häipyvä savujana korvaa '
+          + 'webin punaisen viivan (kuljettu reitti säilyy logiikassa).',
         'CLAUDEN JA CHATGPT/CODEXIN AGENTTISÄÄNNÖT ERIKSEEN (omistaja 11.9.2026 '
           + 'tekstisession kautta, sanatarkasti: "Peliä kehitetään Claudella ja '
           + 'ChatGPT/Codexilla. Opus/Sonnet-rajoitus ja Fable-mallin agenttikäytön '
