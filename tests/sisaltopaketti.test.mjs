@@ -441,6 +441,8 @@ test('skeema 1.9: offline-manifesti maittain (laatat, maasto, media, tavut)', as
   assert.ok(o.maat.NOR.laattoja.rasteri < bboxLaattoja);
   assert.ok(Object.keys(o.maat.FRA.maasto).length > 0, 'Ranskan syvä maasto available-alueella');
   assert.deepEqual(Object.keys(o.globaali.rasteri), ['0', '1', '2', '3', '4', '5']);
+  assert.equal(o.globaali.media.length, 0, 'globaali = vain laatat ja maasto');
+  assert.ok(o.valinnaiset.aanet.media.length > 0 && o.valinnaiset.aanet.tavuja > 0);
   assert.ok(o.maat.ITA.media.every((u) => /^https:\/\//.test(u)));
   assert.ok(!JSON.stringify(o).includes('upload.wikimedia.org/wikipedia/commons/thumb'), 'ulkoiset kuva-URLit eivät ole pelin mediaa');
 });

@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://matkakirja.app/vienti/1/offline.schema.json",
   "title": "Matkakirja-vienti: offline-manifesti",
-  "description": "Mitä natiivi lataa offline-käyttöön maailmalle kerran (globaali) ja maittain (maat, avain ISO3) sekä arvioidut tavut (skeema 1.9, tools/vienti/offline.mjs). Laattavälit {z: [x0, y0, x1, y1]} lahteet-kaavoissa; maaston globaalit välit ovat layer.json:n available-välejä. Tavut ovat otoksella arvioituja (arvio: true).",
+  "description": "Mitä natiivi lataa offline-käyttöön maailmalle kerran (globaali: vain laatat ja maasto), valinnaisina ryhminä (valinnaiset: maahan sitomaton media) ja maittain (maat, avain ISO3) sekä arvioidut tavut (skeema 1.9, tools/vienti/offline.mjs). Laattavälit {z: [x0, y0, x1, y1]} lahteet-kaavoissa; maaston globaalit välit ovat layer.json:n available-välejä. Tavut ovat otoksella arvioituja (arvio: true).",
   "type": "object",
   "required": [
     "$skeema",
@@ -10,6 +10,7 @@
     "koot",
     "lahteet",
     "globaali",
+    "valinnaiset",
     "maat"
   ],
   "properties": {
@@ -39,6 +40,31 @@
       },
       "additionalProperties": {
         "$ref": "#/$defs/maa"
+      }
+    },
+    "valinnaiset": {
+      "type": "object",
+      "description": "Maahan sitomaton media ryhmittäin (aanet, kuvat, linssit): ladataan erikseen, ei kerran kaikille",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "media",
+          "tavuja"
+        ],
+        "properties": {
+          "media": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "tavuja": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "additionalProperties": false
       }
     }
   },

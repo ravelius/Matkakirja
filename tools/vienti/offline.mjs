@@ -19,7 +19,9 @@
  *     tavut lasketaan vain laatoista, jotka leikkaavat maan muotoa
  *     (countryShapes), ettei Norjan tai Chilen bbox yliarvioi.
  *   - media: maan kuvat ja äänet url:eina (kokoelmien kaupunki/maa-
- *     viittauksista ja raakakerroksen esiintymistä); loput globaaleja.
+ *     viittauksista ja raakakerroksen esiintymistä). Maahan sitomaton media
+ *     ei ole globaalissa osassa vaan valinnaisina ryhminä (aanet, kuvat,
+ *     linssit), jotka pelaaja lataa erikseen.
  *
  * Tavut ovat ARVIOITA: laattojen ja median keskikoot haetaan otoksella
  * (julkiset HEAD-pyynnöt, --paivita-koot) tiedostoon offline-koot.json,
@@ -199,7 +201,7 @@ export function lueKoot() {
 }
 
 /**
- * offline.json: { $skeema, arvio, lahteet, globaali, maat: { ISO3: … } }.
+ * offline.json: { $skeema, arvio, lahteet, globaali, valinnaiset, maat: { ISO3: … } }.
  * countryShapes: MAAILMANKARTTA.map.countryShapes (ISO3 → { nimi, renkaat }).
  */
 export function kokoaOffline({ tiedostot, manifest, countryShapes, koot = lueKoot() }) {
@@ -220,8 +222,25 @@ export function kokoaOffline({ tiedostot, manifest, countryShapes, koot = lueKoo
     globaaliMaastoTavut += saatavilla[z].reduce((s, a) => s + (a.endX - a.startX + 1) * (a.endY - a.startY + 1), 0)
       * (koot.maasto.keskitavut[z] ?? 0);
   }
-  const gMedia = [...globaali].sort();
-  const gMediaTavut = mediaTavut(gMedia);
+  // Maahan sitomaton media ei kuulu "kerran kaikille" -osaan (Natiiviseppä
+  // 23.9.2026): se jaetaan valinnaisiksi ryhmiksi, jotka pelaaja voi ladata
+  // erikseen. Ryhmä: linssit (js/linssit/-esiintymä), äänet (aani-*-lajit),
+  // kuvat (muut).
+  const ryhma = (arvo) => {
+    const v = arvot.get(arvo);
+    if (v.esiintymat.some((e) => e.moduuli.startsWith('js/linssit/'))) return 'linssit';
+    return v.laji.startsWith('aani-') ? 'aanet' : 'kuvat';
+  };
+  const ryhmat = new Map();
+  for (const arvo of [...globaali].sort()) {
+    const r = ryhma(arvo);
+    if (!ryhmat.has(r)) ryhmat.set(r, []);
+    ryhmat.get(r).push(arvo);
+  }
+  const valinnaiset = Object.fromEntries(['aanet', 'kuvat', 'linssit'].filter((r) => ryhmat.has(r)).map((r) => {
+    const lista = ryhmat.get(r);
+    return [r, { media: lista.map(url), tavuja: Math.round(mediaTavut(lista)) }];
+  }));
 
   const maat = {};
   for (const [iso, maa] of Object.entries(countryShapes)) {
@@ -254,10 +273,11 @@ export function kokoaOffline({ tiedostot, manifest, countryShapes, koot = lueKoo
     koot: { haettu: koot.haettu, otos: koot.otos },
     lahteet: OFFLINE_LAHTEET,
     globaali: {
-      rasteri: globaaliRasteri, maasto: globaaliMaasto, media: gMedia.map(url),
+      rasteri: globaaliRasteri, maasto: globaaliMaasto, media: [],
       tavuja: { rasteri: Math.round(globaaliRasteriTavut), maasto: Math.round(globaaliMaastoTavut),
-        media: Math.round(gMediaTavut), yht: Math.round(globaaliRasteriTavut + globaaliMaastoTavut + gMediaTavut) },
+        media: 0, yht: Math.round(globaaliRasteriTavut + globaaliMaastoTavut) },
     },
+    valinnaiset,
     maat,
   };
 }
