@@ -90,6 +90,7 @@ namespace Matkakirja.Editori
             PlayerSettings.SetApplicationIdentifier(UnityEditor.Build.NamedBuildTarget.iOS, "app.matkakirja.proto3d");
             PlayerSettings.SetScriptingBackend(UnityEditor.Build.NamedBuildTarget.iOS, ScriptingImplementation.IL2CPP);
             PlayerSettings.iOS.sdkVersion = sdk;
+            PlayerSettings.iOS.simulatorSdkArchitecture = AppleMobileArchitectureSimulator.ARM64;
             PlayerSettings.iOS.targetOSVersionString = "17.0";
             PlayerSettings.defaultInterfaceOrientation = UIOrientation.AutoRotation;
         }

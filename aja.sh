@@ -10,9 +10,11 @@ case "$1" in
   sim)
     "$UNITY" -batchmode -quit -projectPath . -buildTarget iOS -executeMethod Matkakirja.Editori.Rakennus.IosSimulaattori -logFile tulokset/sim.log ;;
   xcode-sim)
+    # Cesium toimittaa vain laitekirjastot: merkitään kopio simulaattorille (ks. tyokalut/).
+    python3 tyokalut/simulaattorimerkinta.py Build/iOS-sim/Libraries/com.cesium.unity/Plugins/iOS
     xcodebuild -project Build/iOS-sim/Unity-iPhone.xcodeproj -scheme Unity-iPhone -configuration Release \
       -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' -derivedDataPath Build/dd-sim \
-      CODE_SIGNING_ALLOWED=NO build > tulokset/xcode-sim.log 2>&1 || { tail -40 tulokset/xcode-sim.log; exit 1; }
+      ARCHS=arm64 ONLY_ACTIVE_ARCH=YES CODE_SIGNING_ALLOWED=NO build > tulokset/xcode-sim.log 2>&1 || { tail -40 tulokset/xcode-sim.log; exit 1; }
     ls -d Build/dd-sim/Build/Products/Release-iphonesimulator/*.app ;;
   asenna-sim)
     APP=$(ls -d Build/dd-sim/Build/Products/Release-iphonesimulator/*.app | head -1)
