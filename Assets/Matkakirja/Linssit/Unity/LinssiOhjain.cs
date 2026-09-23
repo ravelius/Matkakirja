@@ -114,6 +114,10 @@ namespace Matkakirja.Natiivi
 #else
             Linssirekisteri.Kehittajatila = PlayerPrefs.GetInt(KehittajatilaAvain, KehittajatilaOletus ? 1 : 0) == 1;
 #endif
+            // Radiotila (web luentaSallittu): kaupungin napautus on play-nappi eikä avaa korttia,
+            // ja luennat vaikenevat (Pelikoodarin koukut, pelikoodari/linssikytkennat).
+            PeliOhjain.NapautusSallittu = () => Matkakirja.Linssit.Radio.RadioLinssi.LuentaSallittu;
+            PeliOhjain.LuentaSallittu = () => Matkakirja.Linssit.Radio.RadioLinssi.LuentaSallittu;
             rekisteri = new Linssirekisteri(this);
             rekisteri.Lisaa(new Topografia());
             StartCoroutine(LataaAstronautti());
@@ -501,6 +505,8 @@ namespace Matkakirja.Natiivi
                 kartta = new Kartta(o.kierto);
                 linssi = new Matkakirja.Linssit.Radio.RadioLinssi(aineisto, virta, viritin, kartta,
                     Matkakirja.Linssit.Radio.RadioAineisto.Pistefontti);
+                // Pelaajan kaupunki näkyy aina radiotilassa (web sääntö 1).
+                linssi.Sijainti = () => PeliOhjain.Instanssi?.PelaajanKaupunki;
                 linssi.TilaMuuttui += t => o.Kirjaa($"radio: {t.Vaihe}{(t.Viritys != Matkakirja.Linssit.Radio.ViritysVaihe.Ei ? "/" + t.Viritys : "")} " +
                     $"{t.AsemaId ?? "-"} {t.KaupunkiNimi ?? ""} {t.Nimi ?? ""}{(t.Viesti != null ? " (" + t.Viesti + ")" : "")}{(t.Sivu != null ? " → " + t.Sivu : "")}");
                 linssi.Avaa(y);
