@@ -99,7 +99,18 @@ namespace Matkakirja.Natiivi
         Matka matka;
         string versioPolku;
 
-        public SilmukanTila Tila { get; private set; } = SilmukanTila.Lataa;
+        SilmukanTila silmukanTila = SilmukanTila.Lataa;
+        public SilmukanTila Tila
+        {
+            get => silmukanTila;
+            private set
+            {
+                if (silmukanTila == value) return;
+                var vanha = silmukanTila;
+                silmukanTila = value;
+                TilaAsetettu(vanha, value);   // TilaVaihtui (PeliOhjain.Aanet.cs)
+            }
+        }
         public Matka Matka => matka;
         public IReittiverkko Verkko => verkko;
         /// <summary>Aarrelaattojen määrät paketista; null = peli ilman laattoja.</summary>
@@ -386,6 +397,7 @@ namespace Matkakirja.Natiivi
                 SyoteLukko.LisaaNakymaPeitto(() => lehtiNakyma.Auki);
                 lehtiNakyma.Suljettu += LehtiSuljettu;
             }
+            AlustaAanet();
 
             if (File.Exists(PoisPolku))
             {
@@ -511,6 +523,7 @@ namespace Matkakirja.Natiivi
                 tilarivi.Aseta("Matkakirjaa ei saatu — yritetään uudelleen");
                 yield return new WaitForSecondsRealtime(yritys < 3 ? 3f : 15f);
             }
+            AloitaAanitaulut();
 
             yield return HaeLaattamaarat();
             AloitaTaiJatka();
@@ -842,6 +855,7 @@ namespace Matkakirja.Natiivi
             KysymysTila = null;
             Tallenna();
             Debug.Log("MATKAKIRJA peli: uusi peli, " + PeliApu.TilaTeksti(verkko, matka.Tila));
+            IlmoitaUusiMatka();
             Kartalle(true);
         }
 
@@ -1241,6 +1255,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Lentoääni, nappula tai kamera-ajo kohteeseen; perillä Perilla.</summary>
         void AloitaLiike(MatkanTulos t, (double Lat, double Lon)? a, (double Lat, double Lon) b, float kesto)
         {
+            IlmoitaLiike(t.Tapa, t.Polku?.Count ?? 0);
             if (t.Tapa == Kulkutapa.Lento)
             {
                 Lentoaani(true, kesto);
@@ -1833,6 +1848,7 @@ namespace Matkakirja.Natiivi
             bool esta = Kaytossa && (Tila == SilmukanTila.Dialogi || Tila == SilmukanTila.Kysymys || Tila == SilmukanTila.Lehti
                                      || Tila == SilmukanTila.Traileri || Tila == SilmukanTila.Sahketehtava || AloituslentoKaynnissa);
             if (esta != lukossa) { lukossa = esta; SyoteLukko.Aseta(this, esta); }
+            PaivitaAanet();
         }
 
         void LateUpdate()
@@ -1889,6 +1905,7 @@ namespace Matkakirja.Natiivi
                 + ",\"kysymys\":" + KysymysApu.Json(KysymysTila, kysymysJaljella)
                 + ",\"laukku\":" + Natiivi.Laukku.Json(Laukku())
                 + ",\"aanet\":[" + string.Join(",", aaniLoki.Select(PeliApu.Json)) + "],\"lentoSoi\":" + (lentoSoi ? "true" : "false")
+                + ",\"musiikki\":" + (aanisoitin != null ? aanisoitin.Json() : "null")
                 + ",\"aarrepiste\":" + (Aarrepiste() is Aarrepiste ap ? "{\"kaupunki\":" + PeliApu.Json(ap.Kaupunki) + ",\"lukittu\":" + (ap.Lukittu ? "true" : "false") + "}" : "null")
                 + ",\"sahke\":" + SahkeJson()
                 + ",\"ajoitus\":" + PeliApu.Json(viimeAjoitus)
