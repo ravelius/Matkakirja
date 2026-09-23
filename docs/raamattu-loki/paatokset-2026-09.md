@@ -2235,3 +2235,7 @@ Fable jatkaa luovutuksen jonosta kohdasta 2. Julkaisijalta pyydetty polton ja ni
 ## KORJAUS klo 16.35 KOHTAAN: NIPPU 3 (julkaisija-julkaise-nippu3, 6 SIIRTOSEPAN PR:AA) KOSKEE AJOAIKAISTA KOODIA (game.js, ui.js, sw.js, packs, sound.js) → AJETAAN NORMAALILLA SAVUKKEELLA NIPUN 2 JALKEEN, EI OHITETA; POLTTO 23a YHA KESKEN, NIPUT ODOTTAVAT (23.9.2026 klo 17.42)
 
 Julkaisija tarkisti diffin; Fable vahvistaa. Testejä ei vielä ajettu koneen kuorman takia.
+
+## PELIKOODARI: TTS-PAATOS TOTEUTETTU — POLLO-WORKER PR #2956 (NATIIVI TUNNISTETAAN x-matkakirja-natiivi + BUNDLE ID, VAIN PUHESYNTEESI, 4094/0) → JULKAISIJA MERGEAA, MAIN JULKAISEE WORKERIN; PROTO 76366d6 (Puhe.Lue, KOHTAAMISTEN TERVEHDYS JA REPLIIKIT, LOYTOREPLIIKKI AANEEN, 131/131) MERGE-PYYNTO NATIIVISEPALLA; iPAD ab8098e SILMUKKA k1–k8 OK, LUENTO SOI; PR #2955 (LEHDEN TEKO-SILTA) ODOTTAA #2942 (23.9.2026 klo 17.51)
+
+Tila: docs/raportit/viesti-pelikoodari-luovutus-20260923-natiivi2.md
