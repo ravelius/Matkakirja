@@ -1,0 +1,1022 @@
+/* LINSSIT (Natiivi-UI, 23.9.2026): linssivalitsin, odotuspeite, selitekortti,
+ * astronautin kamera (avaus, kuvanäkymä, sumu), vertailu ja maatiedot sekä
+ * aikajanojen esitykset. Lähteet: css/styles.css (.linssi-valikko,
+ * .linssi-selite, .maa-pilleri, .vertailu-palkki), css/satelliitti.css
+ * (.satelliitti-katselu, .satelliitti-selite, .satelliitti-nauha) ja
+ * css/aikajana.css (.aikajana-ylarivi, .aikajana-kello, .aikajana-ilmio,
+ * .aikajana-valinaytos, .aikajana-avaus-laatikko). Koodi: UI/Linssit/. */
+
+/* --- taikalasit-nappi ja linssin sulku ------------------------------------ */
+
+.mk-linssiNappi {
+    position: absolute;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    min-height: 40px;
+    padding: 0;
+    border-radius: 12px;
+    border-color: rgba(70, 51, 31, 0.35);
+    background-color: rgba(239, 220, 180, 0.9);
+    color: var(--map-ink);
+}
+
+.mk-linssiNappi:active {
+    background-color: rgba(225, 204, 160, 0.95);
+}
+
+.mk-linssiNappi > .mk-ikoni {
+    width: 22px;
+    height: 22px;
+    margin-right: 0;
+    --mk-ikoni-viiva: 1.6;
+}
+
+/* Linssi päällä: kulta (web #linssi-btn.paalla). */
+.mk-linssiNappi.mk-paalla {
+    background-color: var(--panel);
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.mk-linssiNappi.mk-valittu {
+    background-color: var(--map-ink);
+    color: #f5f0e2;
+}
+
+.mk-linssiSulje {
+    position: absolute;
+    min-height: 32px;
+    height: 32px;
+    padding: 0 12px 0 10px;
+    border-radius: 16px;
+    border-color: rgba(170, 170, 170, 0.9);
+    background-color: rgba(60, 56, 50, 0.72);
+    color: rgb(232, 228, 220);
+}
+
+.mk-linssiSulje:active {
+    background-color: rgba(90, 84, 76, 0.85);
+}
+
+.mk-linssiSulje__risti {
+    font-size: 15px;
+    margin-right: 6px;
+    color: rgb(232, 228, 220);
+}
+
+.mk-linssiSulje .mk-nappi__teksti {
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+/* --- valitsinpaneeli (pergamentti) ----------------------------------------- */
+
+.mk-linssivalitsin {
+    position: absolute;
+    right: 10px;
+    width: 300px;
+    max-width: 88%;
+    max-height: 70%;
+    padding: 8px 8px 10px 8px;
+    border-radius: 10px;
+    color: var(--map-ink);
+    opacity: 0;
+    translate: 0 -10px;
+    scale: 1 0.9;
+    transform-origin: top;
+    transition-property: opacity, translate, scale;
+    transition-duration: 0.18s, 0.22s, 0.22s;
+    transition-timing-function: ease-out;
+}
+
+.mk-linssivalitsin.mk-auki {
+    opacity: 1;
+    translate: 0 0;
+    scale: 1 1;
+}
+
+.mk-linssivalitsin__vieritys {
+    flex-shrink: 1;
+}
+
+.mk-linssivalitsin__tyhja {
+    padding: 10px 8px;
+    font-size: 13px;
+    color: var(--map-ink-soft);
+    white-space: normal;
+}
+
+.mk-linssirivi {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 56px;
+    margin: 2px 0;
+    padding: 8px 10px;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--map-ink);
+}
+
+.mk-linssirivi:active {
+    background-color: rgba(70, 51, 31, 0.1);
+}
+
+.mk-linssirivi.mk-valittu {
+    background-color: rgba(217, 161, 59, 0.2);
+    border-color: rgba(138, 97, 20, 0.6);
+}
+
+.mk-linssirivi__ikoni {
+    width: 34px;
+    height: 34px;
+    margin-right: 12px;
+    padding: 5px;
+    border-radius: 17px;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.4);
+    background-color: rgba(255, 250, 238, 0.55);
+    color: var(--map-ink);
+    --mk-ikoni-viiva: 1.6;
+}
+
+.mk-linssirivi.mk-valittu .mk-linssirivi__ikoni {
+    border-color: var(--accent-dark);
+    color: var(--accent-dark);
+}
+
+.mk-linssirivi__tekstit {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-direction: column;
+}
+
+.mk-linssirivi__nimirivi {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mk-linssirivi__nimi {
+    font-size: 16px;
+    color: #3a2812;
+}
+
+.mk-linssirivi__tila {
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: var(--accent-dark);
+}
+
+.mk-linssirivi__lyhyt {
+    margin-top: 2px;
+    font-size: 13px;
+    white-space: normal;
+    color: rgba(70, 51, 31, 0.85);
+}
+
+.mk-linssivalitsin__pois {
+    margin-top: 8px;
+    align-self: center;
+}
+
+.mk-linssivalitsin__pois .mk-nappi__teksti {
+    font-size: 14px;
+}
+
+/* --- odotuspeite ---------------------------------------------------------- */
+
+.mk-linssipeite {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(20, 16, 10, 0.96);
+}
+
+.mk-linssipeite--haipyy {
+    transition-property: opacity;
+    transition-duration: 0.32s;
+    transition-timing-function: ease;
+}
+
+/* --- selitekortti (webin .linssi-selite) ----------------------------------- */
+
+.mk-linssiselite {
+    position: absolute;
+    width: 240px;
+    max-width: 52%;
+    max-height: 46%;
+    padding: 8px 10px;
+    border-width: 1px;
+    border-color: rgba(217, 161, 59, 0.45);
+    border-radius: 12px;
+    background-color: rgba(46, 33, 20, 0.88);
+    color: var(--ink-light);
+    opacity: 0;
+    translate: 0 16px;
+    scale: 0.97 0.97;
+    transition-property: opacity, translate, scale;
+    transition-duration: 0.32s;
+    transition-timing-function: ease-out-back;
+}
+
+.mk-linssiselite.mk-auki {
+    opacity: 1;
+    translate: 0 0;
+    scale: 1 1;
+}
+
+.mk-linssiselite.mk-pieni {
+    width: auto;
+    padding: 0;
+}
+
+.mk-linssiselite__nimi {
+    min-height: 0;
+    padding: 0;
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+    justify-content: flex-start;
+}
+
+.mk-linssiselite__nimi:active {
+    background-color: rgba(0, 0, 0, 0);
+    opacity: 0.8;
+}
+
+.mk-linssiselite.mk-pieni .mk-linssiselite__nimi {
+    padding: 6px 10px;
+}
+
+.mk-linssiselite__otsikko {
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    color: var(--accent);
+    -unity-text-align: middle-left;
+}
+
+.mk-linssiselite__runko {
+    margin-top: 6px;
+    flex-shrink: 1;
+}
+
+.mk-linssiselite__vieritys {
+    flex-shrink: 1;
+}
+
+.mk-linssiselite__rivi {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 3px;
+}
+
+.mk-linssiselite__lappu {
+    width: 12px;
+    height: 12px;
+    margin-right: 6px;
+    flex-shrink: 0;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.35);
+    border-radius: 3px;
+}
+
+.mk-linssiselite__teksti {
+    flex-shrink: 1;
+    font-size: 12px;
+    white-space: normal;
+    color: var(--ink-light);
+}
+
+.mk-linssiselite__lahde {
+    margin-top: 8px;
+    font-size: 11px;
+    white-space: normal;
+    color: var(--muted);
+}
+
+/* --- astronautin kamera: avaus --------------------------------------------- */
+
+.mk-astroavaus {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+}
+
+.mk-astroavaus--haipyy {
+    transition-property: opacity;
+    transition-duration: 1.1s;
+    transition-timing-function: ease;
+}
+
+.mk-astroavaus__otsikko {
+    align-items: center;
+    color: rgb(232, 237, 245);
+}
+
+.mk-astroavaus__otsikko--haipyy {
+    transition-property: opacity;
+    transition-duration: 0.7s;
+    transition-timing-function: ease;
+}
+
+.mk-astroavaus__nimi {
+    font-size: 17px;
+    letter-spacing: 5.4px;
+    padding-left: 5.4px;
+    color: rgb(232, 237, 245);
+}
+
+.mk-astroavaus__viiva {
+    width: 51px;
+    height: 1px;
+    margin: 11px 0;
+    background-color: rgba(232, 237, 245, 0.5);
+}
+
+.mk-astroavaus__lahde {
+    font-size: 12.5px;
+    letter-spacing: 1.5px;
+    color: rgba(232, 237, 245, 0.72);
+}
+
+/* --- astronautin kamera: avaruussumu -------------------------------------- */
+
+.mk-astrosumu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.mk-astrosumu__kalvo {
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    right: -20%;
+    bottom: -20%;
+}
+
+/* --- astronautin kamera: kuvanäkymä ---------------------------------------- */
+
+.mk-astrokuva {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(4, 9, 7);
+    color: rgb(223, 246, 232);
+}
+
+.mk-astrokuva__lava {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.mk-astrokuva__kuva {
+    position: absolute;
+    background-color: rgb(6, 13, 10);
+    -unity-background-scale-mode: stretch-to-fill;
+    transform-origin: center;
+}
+
+.mk-astrokuva__turva {
+    position: absolute;
+}
+
+.mk-astrokuva__selite {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    right: 64px;
+    max-width: 560px;
+    padding: 8px 10px 6px 10px;
+    border-width: 1px;
+    border-color: rgba(93, 255, 168, 0.28);
+    border-radius: 10px;
+    background-color: rgba(6, 13, 10, 0.72);
+    color: rgba(233, 250, 240, 0.92);
+}
+
+.mk-astrokuva__selite.mk-kiinni {
+    padding: 5px 10px;
+    background-color: rgba(6, 13, 10, 0.25);
+    border-color: rgba(93, 255, 168, 0.12);
+}
+
+.mk-astrokuva__otsikko {
+    font-size: 16px;
+    white-space: normal;
+    color: rgb(93, 255, 168);
+}
+
+.mk-astrokuva__selite.mk-kiinni .mk-astrokuva__otsikko {
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    opacity: 0.7;
+}
+
+.mk-astrokuva__runko {
+    margin-top: 4px;
+}
+
+.mk-astrokuva__teksti {
+    font-size: 13px;
+    white-space: normal;
+    color: rgba(233, 250, 240, 0.92);
+}
+
+.mk-astrokuva__vakasenRivi {
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.mk-astrokuva__vakanen {
+    width: 26px;
+    height: 26px;
+    min-height: 26px;
+    padding: 0;
+    border-radius: 13px;
+    border-color: rgba(93, 255, 168, 0.35);
+    background-color: rgba(6, 13, 10, 0.6);
+    color: rgb(234, 255, 243);
+    transition-property: rotate;
+    transition-duration: 0.2s;
+}
+
+.mk-astrokuva__vakanen.mk-auki {
+    rotate: 180deg;
+}
+
+.mk-astrokuva__vakanen .mk-nappi__teksti {
+    font-size: 15px;
+    -unity-text-align: middle-center;
+    color: rgb(234, 255, 243);
+}
+
+.mk-astrokuva__lisatiedot {
+    margin-top: 4px;
+    padding-top: 6px;
+    border-top-width: 1px;
+    border-color: rgba(93, 255, 168, 0.18);
+}
+
+.mk-astrokuva__lisarivi {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 3px;
+}
+
+.mk-astrokuva__lisanimi {
+    font-size: 12px;
+    color: rgb(234, 255, 243);
+}
+
+.mk-astrokuva__lisaarvo {
+    flex-shrink: 1;
+    font-size: 12px;
+    white-space: normal;
+    color: rgba(223, 246, 232, 0.85);
+}
+
+.mk-astrokuva__sulku {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 38px;
+    height: 38px;
+    min-height: 38px;
+    padding: 0;
+    border-radius: 19px;
+    border-color: rgb(170, 170, 170);
+    background-color: rgba(130, 130, 130, 0.42);
+    color: rgb(224, 224, 224);
+}
+
+.mk-astrokuva__sulku:active {
+    background-color: rgba(170, 170, 170, 0.55);
+}
+
+.mk-astrokuva__sulku .mk-nappi__teksti {
+    font-size: 20px;
+    -unity-text-align: middle-center;
+    color: rgb(224, 224, 224);
+}
+
+.mk-astrokuva__nauha {
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+    max-width: 50%;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.mk-astrokuva__pikku {
+    width: 38px;
+    height: 26px;
+    min-height: 26px;
+    margin: 0 4px 4px 0;
+    padding: 0;
+    border-radius: 4px;
+    border-color: rgba(93, 255, 168, 0.3);
+    background-color: rgba(6, 13, 10, 0.9);
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.mk-astrokuva__pikku.mk-valittu {
+    border-color: rgb(93, 255, 168);
+    border-width: 2px;
+}
+
+.mk-astrokuva__pulu {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+}
+
+/* --- vertailu: alapalkki ja laput (webin .vertailu-palkki) ------------------ */
+
+.mk-vertailupalkki {
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    bottom: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 8px;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.45);
+    border-radius: 22px;
+    background-color: rgba(247, 237, 216, 0.94);
+    color: var(--map-ink);
+}
+
+.mk-vertailupalkki__ohje {
+    margin: 6px 4px;
+    font-size: 12.5px;
+    white-space: normal;
+    -unity-text-align: middle-center;
+    color: rgba(70, 51, 31, 0.8);
+}
+
+.mk-vertailulappu {
+    flex-direction: row;
+    min-height: 30px;
+    margin: 3px;
+    padding: 3px 9px;
+    border-color: rgba(70, 51, 31, 0.4);
+    border-radius: 15px;
+    background-color: rgba(255, 250, 238, 0.9);
+    color: var(--map-ink);
+}
+
+.mk-vertailulappu:active {
+    background-color: rgba(176, 58, 43, 0.12);
+}
+
+.mk-vertailulappu.mk-pois {
+    opacity: 0.45;
+}
+
+.mk-vertailulappu__laatta {
+    width: 11px;
+    height: 11px;
+    margin-right: 5px;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.45);
+    border-radius: 2px;
+}
+
+.mk-vertailulappu__nimi {
+    font-size: 13px;
+    color: var(--map-ink);
+}
+
+.mk-vertailupalkki__vertaa {
+    min-height: 32px;
+    margin: 3px 3px 3px 6px;
+    padding: 3px 14px;
+    border-radius: 16px;
+}
+
+/* --- vertailuarkki ----------------------------------------------------------- */
+
+.mk-vertailuarkki {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: var(--map-ink);
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.25s;
+}
+
+.mk-vertailuarkki.mk-auki {
+    opacity: 1;
+}
+
+.mk-vertailuarkki__sisus {
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+.mk-vertailuarkki__otsikko {
+    font-size: 23px;
+    margin-bottom: 6px;
+    color: #3a2812;
+}
+
+.mk-vertailuarkki__ylarivi {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    border-bottom-width: 1px;
+    border-color: rgba(70, 51, 31, 0.45);
+}
+
+.mk-vertailuarkki__muuta {
+    min-height: 32px;
+    margin: 3px;
+}
+
+.mk-vertailuarkki__muuta .mk-nappi__teksti {
+    font-size: 13px;
+}
+
+.mk-vertailuarkki__vieritys {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.mk-vertailuarkki__kortit {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.mk-vertailukortti {
+    width: 46%;
+    min-width: 150px;
+    flex-grow: 1;
+    margin: 4px;
+    padding: 10px 12px;
+    border-width: 1px;
+    border-top-width: 4px;
+    border-color: rgba(70, 51, 31, 0.35);
+    border-radius: 8px;
+    background-color: rgba(255, 250, 238, 0.55);
+}
+
+.mk-vertailukortti__yla {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.mk-vertailukortti__lippu {
+    margin-right: 8px;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.4);
+    border-radius: 2px;
+}
+
+.mk-vertailukortti__nimi {
+    flex-shrink: 1;
+    font-size: 17px;
+    white-space: normal;
+    color: #3a2812;
+}
+
+.mk-vertailukortti__rivi {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 0;
+    border-bottom-width: 1px;
+    border-color: rgba(70, 51, 31, 0.15);
+}
+
+.mk-vertailukortti__nimio {
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: var(--map-ink-soft);
+}
+
+.mk-vertailukortti__arvo {
+    font-size: 14px;
+    color: var(--map-ink);
+}
+
+.mk-vertailukortti__tyhja {
+    font-size: 13px;
+    color: var(--map-ink-soft);
+}
+
+/* --- maakyltti (webin .maa-pilleri) ------------------------------------------ */
+
+.mk-maakyltti {
+    position: absolute;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 0;
+    padding: 5px 10px;
+    border-width: 0;
+    border-radius: 6px;
+    background-color: rgba(244, 231, 202, 0.9);
+    color: rgba(70, 51, 31, 0.92);
+}
+
+.mk-maakyltti:active {
+    background-color: rgba(245, 231, 200, 0.97);
+}
+
+.mk-maakyltti__rivi {
+    flex-direction: row;
+    align-items: center;
+}
+
+.mk-maakyltti__lippu {
+    margin-right: 7px;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.4);
+    border-radius: 2px;
+}
+
+.mk-maakyltti__nimi {
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: rgba(70, 51, 31, 0.92);
+}
+
+.mk-maakyltti__lehti {
+    margin-top: 2px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    color: var(--accent-dark);
+}
+
+/* --- aikajanat: ylärivi, kello ja ohjaimet (webin .aikajana-ylarivi) --------- */
+
+.mk-aikajana-ylarivi {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    flex-direction: row;
+    align-items: center;
+    padding: 3px 6px 3px 10px;
+    border-width: 1px;
+    border-color: rgba(217, 161, 59, 0.38);
+    border-radius: 10px;
+    background-color: #201a14;
+    color: #f1e6d0;
+    transition-property: opacity;
+    transition-duration: 0s;
+}
+
+.mk-aikajana-ylarivi__otsikot {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 6px;
+    overflow: hidden;
+}
+
+.mk-aikajana-ylarivi__otsikko {
+    font-size: 10.5px;
+    letter-spacing: 1px;
+    color: var(--accent);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mk-aikajana-ylarivi__paikka {
+    font-size: 13px;
+    color: rgba(241, 230, 208, 0.85);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mk-aikajana-kello {
+    flex-shrink: 0;
+    padding: 2px 6px;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.5);
+    border-radius: 6px;
+    background-color: #2a1f16;
+    color: #f3e6d0;
+    font-size: 20px;
+}
+
+.mk-aikajana-kello.mk-tauolla {
+    color: var(--accent);
+}
+
+.mk-aikajana-ohjaimet {
+    flex-direction: row;
+    flex-shrink: 0;
+    margin-left: 4px;
+}
+
+.mk-aikajana-nappi {
+    width: 30px;
+    height: 30px;
+    min-height: 30px;
+    margin-left: 3px;
+    padding: 0;
+    border-color: rgba(217, 161, 59, 0.45);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.07);
+    color: #f1e6d0;
+}
+
+.mk-aikajana-nappi:active {
+    background-color: rgba(217, 161, 59, 0.22);
+}
+
+.mk-aikajana-nappi .mk-nappi__teksti {
+    font-size: 13px;
+    -unity-text-align: middle-center;
+    color: #f1e6d0;
+}
+
+/* --- aikajanat: paneeli (webin .aikajana-ilmio) ----------------------------- */
+
+.mk-aikajana-paneeli {
+    position: absolute;
+    right: 10px;
+    width: 240px;
+    max-width: 62%;
+    padding: 10px 12px;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.45);
+    border-radius: 10px;
+    color: var(--map-ink);
+}
+
+.mk-aikajana-paneeli__kuva {
+    height: 120px;
+    margin: -4px -6px 8px -6px;
+    border-radius: 6px;
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.mk-aikajana-paneeli__vuosi {
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: var(--accent-dark);
+}
+
+.mk-aikajana-paneeli__otsikko {
+    font-size: 18px;
+    white-space: normal;
+    color: #3a2812;
+}
+
+.mk-aikajana-paneeli__alarivi {
+    margin-top: 2px;
+    font-size: 13px;
+    white-space: normal;
+    color: #3d3126;
+}
+
+.mk-aikajana-paneeli__teksti {
+    margin-top: 6px;
+    font-size: 13.5px;
+    white-space: normal;
+    color: #2b2116;
+}
+
+/* --- aikajanat: kertojan teksti, välinäytös, musta --------------------------- */
+
+.mk-aikajana-kertomus {
+    position: absolute;
+    left: 12px;
+    right: 90px;
+    bottom: 14px;
+    padding: 10px 14px;
+    border-width: 1px;
+    border-color: rgba(217, 161, 59, 0.3);
+    border-radius: 10px;
+    background-color: rgba(32, 26, 20, 0.82);
+}
+
+.mk-aikajana-kertomus.mk-keskella {
+    left: 10%;
+    right: 10%;
+    top: 38%;
+    bottom: auto;
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.mk-aikajana-kertomus__teksti {
+    font-size: 15px;
+    white-space: normal;
+    color: #f1e6d0;
+}
+
+.mk-aikajana-kertomus.mk-keskella .mk-aikajana-kertomus__teksti {
+    font-size: 18px;
+    -unity-text-align: middle-center;
+    color: rgb(232, 224, 208);
+}
+
+.mk-aikajana-valinaytos {
+    position: absolute;
+    left: 5%;
+    top: 34%;
+    width: 60%;
+    max-width: 420px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    background-color: rgba(20, 16, 10, 0.55);
+}
+
+.mk-aikajana-valinaytos__otsikko {
+    margin-bottom: 8px;
+    font-size: 19px;
+    white-space: normal;
+    color: #f3dfae;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
+}
+
+.mk-aikajana-valinaytos__teksti {
+    font-size: 15px;
+    white-space: normal;
+    color: #f1e6d0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
+}
+
+.mk-aikajana-valinaytos > .mk-aikajana-avausnappi {
+    align-self: flex-start;
+    margin-top: 12px;
+}
+
+.mk-aikajana-musta {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0);
+    transition-property: opacity;
+    transition-duration: 0s;
+}
+
+/* Esittely- ja loppulaatikko (webin .aikajana-avaus-laatikko ja -nappi). */
+.mk-himmennys.mk-aikajana-laatikko {
+    justify-content: center;
+}
+
+.mk-aikajana-laatikko__otsikko {
+    font-size: 22px;
+    letter-spacing: 1px;
+    color: #3a2812;
+}
+
+.mk-aikajana-avausnappi {
+    min-height: 44px;
+    padding: 8px 26px;
+    border-width: 1.5px;
+    border-color: rgba(214, 168, 84, 0.92);
+    border-radius: 22px;
+    background-color: rgb(58, 39, 16);
+    color: #f6e6c2;
+}
+
+.mk-aikajana-avausnappi:active {
+    background-color: rgb(74, 51, 22);
+}
+
+.mk-aikajana-avausnappi .mk-nappi__teksti {
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: #f6e6c2;
+}

@@ -23,6 +23,8 @@
 //   ui livia [ele] [p] [astro|leiju|puhe|mini] Livia (152 × 304) keskellä kerrosta 40 (oletus blink 0.5)
 //   ui livia kierros [astro|leiju|puhe]       kaikki eleet peräkkäin oikeassa ajassa (videotarkistus)
 //   ui livia pois                             Livia pois
+//   ui linssi valitsin|peite|selite|astro|kuva|sumu|vertailu|maa|keksinnot|matka|sulje|pois
+//                                             linssien UI esimerkkiaineistolla (Linssit/LinssiKomennot.cs)
 //   kuva nimi                                 Documents/ui-nimi.png (koko ruutu)
 //   odota s                                   seuraava rivi s sekunnin päästä
 using System.Collections.Generic;
@@ -172,6 +174,7 @@ namespace Matkakirja.Natiivi
                 case "pois": UiKerros.Hae().Nayta(false); return null;
                 case "paalle": UiKerros.Hae().Nayta(true); return null;
                 case "livia": return Livia(loput);
+                case "linssi": return LinssiKomennot.Aja(ui, loput);
                 case "osuma":
                 {
                     var xy = loput.Split(' ');
