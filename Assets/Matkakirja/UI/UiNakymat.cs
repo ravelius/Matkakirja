@@ -1,7 +1,8 @@
 // UI-NÄKYMÄT: natiivin käyttöliittymän kokoaja (Natiivi-UI, erä 1).
 //
 // Rakentaa yläpalkin (tilarivi, ratas, hampurilainen), pudotuspaneelit,
-// vahvistusdialogin ja matkavalinnan UiKerroksen paneeleihin ja kytkee ne
+// vahvistusdialogin, matkavalinnan, kaupunkikortin ja kysymysnäkymän
+// UiKerroksen paneeleihin ja kytkee ne
 // Pelikoodarin näkymätehtaaseen (PeliNakymat, BeforeSceneLoad), joten
 // PeliOhjain käyttää näitä UGUI-varanäkymien sijaan. Näkymät ovat olemassa
 // myös ilman pelisilmukkaa (peli pois -tila, 3D-mittaukset).
@@ -26,6 +27,7 @@ namespace Matkakirja.Natiivi
         public readonly Paavalikko Valikko;
         public readonly Aanentasot Aanentasot;
         public readonly KaupunkiKortti Kaupunkikortti;
+        public readonly KysymysNakyma Kysymys;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         static void KytkeTehdas()
@@ -33,6 +35,7 @@ namespace Matkakirja.Natiivi
             PeliNakymat.Tilarivi = _ => Hae().Tilarivi;
             PeliNakymat.MatkaValinta = _ => Hae().Matkavalinta;
             PeliNakymat.KaupunkiKortti = _ => Hae().Kaupunkikortti;
+            PeliNakymat.Kysymys = _ => Hae().Kysymys;
         }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
@@ -53,6 +56,7 @@ namespace Matkakirja.Natiivi
             Valikko = new Paavalikko(kerros, () => Tilarivi.Alareuna, Vahvistus);
             Aanentasot = new Aanentasot(kerros, () => Tilarivi.Alareuna);
             Kaupunkikortti = new KaupunkiKortti(kerros);
+            Kysymys = new KysymysNakyma(kerros);
             UiSisalto.Lataa(null); // kaupunkidata valmiiksi ennen ensimmäistä napautusta
 
             Tilarivi.Valikko.clicked += () => { Aanentasot.Sulje(); Valikko.Vaihda(); };
@@ -119,6 +123,7 @@ namespace Matkakirja.Natiivi
             Matkavalinta.Piilota();
             Matkavalinta.PiilotaHeitto();
             Kaupunkikortti.Piilota();
+            Kysymys.Piilota();
         }
 
         /// <summary>Testikomento 'ui matka': esimerkkivalinta ilman peliä.</summary>
@@ -132,5 +137,8 @@ namespace Matkakirja.Natiivi
                 ("Laiva", "100 £ · noppa · 6 askelta perille"),
             }, i => { Matkavalinta.Piilota(); Tilarivi.Viesti("Valittu: " + i); }, () => Tilarivi.Viesti("Peruttu"));
         }
+
+        /// <summary>Testikomento 'ui kysymys [laji]': esimerkkikysymys ilman peliä (KysymysEsimerkki).</summary>
+        public string Esimerkkikysymys(string laji) => KysymysEsimerkki.Nayta(Kysymys, laji, s => Tilarivi.Viesti(s));
     }
 }
