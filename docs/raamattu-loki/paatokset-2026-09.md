@@ -2375,3 +2375,7 @@ Jos profiilivirhe jatkuu, verrataan bundleId-capabilities Unityn entitlementseih
 ## SISALTOKIRJURI (UUSI SESSIO): AFRIKAN O7 ERA 1 PR #2966 (MURZUK, AL KUFRA, GAO, KARTHAGO; KANSI + 1 AIHE/KPL; KARTHAGON FAKTAKORJAUKSET CATON KAYNTI 152 eaa., 2170 HAUTAKIVEA), 4125/0, KAKSOISAVAIMET PUHTAAT; LOPUT 6 O7-KAUPUNKIA ERAAN 2; SEURAAVAKSI KOHDEKARTAT (83/266 PUUTTUU) (23.9.2026 klo 19.12)
 
 Julkaisijalle ilmoitettu suoraan; savuke normaalisti (lehtisisältö).
+
+## NATIIVI-UI NOLLATTU klo 19.1x (78 %): LINSSIKOUKUT natiivi-ui/linssit 9b1d035 JA TRAILERI f160300 MERGE-PYYNNOSSA, CHAT MASTERISSA; LUOVUTUS viesti-natiivi-ui-luovutus-20260923.md (9df5842ce), ALOITUS viesti-natiivi-ui-aloitus.md (23.9.2026 klo 19.13)
+
+Uusi sessio: koukkujen kytkentä Linssisepän kanssa, kontaktiarkit, Maakunnat, offline-UI, ero-lista.
