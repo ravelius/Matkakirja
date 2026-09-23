@@ -108,6 +108,11 @@ namespace Matkakirja.Natiivi
         public string LoytoNimi, LoytoFakta, LoytoKuvaUrl;
         /// <summary>Kätkökuva kaaren aarretekstin yhteydessä (web kohtaaminen-katko.jpg), tai null.</summary>
         public string KatkoKuvaUrl;
+        /// <summary>
+        /// Tarinakaaren aarreteksti (web visa.js kaariAarre), kun kaaren kohtaaminen ratkesi oikein, muuten
+        /// null. Sama teksti on myös Repliikin alussa; UI voi näyttää sen omana rivinään kätkökuvan kanssa.
+        /// </summary>
+        public string KaariAarre;
         /// <summary>Käännetyn laatan tyyppi (Laattatyypit: star, mannerAarre, isoAarre, pieniAarre; "pollo"), tai null.</summary>
         public string LoytoTyyppi;
         /// <summary>Rivi "Vuoro vaihtuu — seuraavalla vuorolla saat uuden kysymyksen." (web: väärä vastaus).</summary>
@@ -467,7 +472,7 @@ namespace Matkakirja.Natiivi
                 d.Tuloslaji = !oikein ? "vaarin" : loyto ? "loyto" : "tyhja";
                 d.RepliikkiLoyto = loyto && !string.IsNullOrEmpty(d.Repliikki);
             }
-            if (kaari != null && oikein && !string.IsNullOrEmpty(kaari.KaariAarre)) d.KatkoKuvaUrl = kohtaamiset.KatkoKuvaUrl;
+            if (kaari != null && oikein && !string.IsNullOrEmpty(kaari.KaariAarre)) { d.KatkoKuvaUrl = kohtaamiset.KatkoKuvaUrl; d.KaariAarre = kaari.KaariAarre; }
             if (kaari != null && oikein && !string.IsNullOrEmpty(kaari.KaariAarre)) d.Repliikki = kaari.KaariAarre + (d.Repliikki != null ? "\n" + d.Repliikki : "");
             if (q.Kaari && !oikein && q.AarreLukittui != true) d.Loyto = (d.Loyto != null ? d.Loyto + "\n" : "") + UusiYritysOhje;
             return false;
