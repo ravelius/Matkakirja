@@ -948,6 +948,14 @@ export function kokoaKokoelmat(nimiavaruudet, { media = [] } = {}) {
       + `harvennettu ${maakunnat.toleranssi ?? MAAKUNTARAJOJEN_TOLERANSSI}° Douglas–Peuckerilla. Täytä parillisuussäännöllä. `
       + 'Maat: AUT, CHE, DEU, ESP, FRA (myös merentakaiset alueet), GBR, ITA, POL.',
     {}, maakunnat.alueet);
+  // Skeema 1.22 (Natiivi-UI:n "Mitä uutta"): käsin kirjoitetut rivit, uusin ensin.
+  const muutosloki = JSON.parse(readFileSync(new URL('./muutosloki-natiivi.json', import.meta.url), 'utf8'));
+  kokoelmat['muutosloki-natiivi'] = taulukko('tools/vienti/muutosloki-natiivi.json',
+    'Natiivin "Mitä uutta" -rivit uusin ensin: { id = versio, versio (build), paiva (YYYY-MM-DD), teksti }. '
+      + 'Julkaisija lisää rivin jokaisesta TestFlight-buildista. Sisältöpäivitysten rivi on osoittimessa '
+      + '(uusin.json muutos { paiva, teksti }); näytä se listan kärjessä, jos sen päivä on uusin.',
+    {}, [...muutosloki.rivit].sort((a, b) => (a.paiva === b.paiva ? String(b.versio).localeCompare(String(a.versio)) : b.paiva.localeCompare(a.paiva)))
+      .map((r) => ({ id: String(r.versio), versio: String(r.versio), paiva: r.paiva, teksti: r.teksti })));
   kokoelmat.karttavalot = karttavaloKokoelma(hae, kokoelmat.kaupungit.alkiot);
   rikastaNippu4(kokoelmat, ns);
   // Skeema 1.15: lehdet natiiville (tools/vienti/lehdet.mjs).

@@ -649,6 +649,18 @@ test('skeema 1.21: fokusvirrat ja laatat päätasolla', () => {
   assert.deepEqual(l.maarat, l.data.counts);
 });
 
+test('skeema 1.22: muutosrivi osoittimeen ja muutosloki-natiivi', async () => {
+  const { muutosRivi, kokoaJulkaisu } = await import('../tools/vienti/julkaise-sisalto.mjs');
+  assert.deepEqual(muutosRivi(null, { kaupunkilehdet: 5 }, '2026-09-23T20:00:00Z'), { paiva: '2026-09-23', teksti: 'Sisältö päivittyi.' });
+  assert.equal(muutosRivi({ kaupunkilehdet: 5, nahtavyydet: 10 }, { kaupunkilehdet: 8, nahtavyydet: 10 }, '2026-09-24T00:00:00Z').teksti,
+    'Sisältö päivittyi: 3 uutta kaupunkilehteä.');
+  assert.equal(muutosRivi({ kaupunkilehdet: 5 }, { kaupunkilehdet: 5 }, '2026-09-24T00:00:00Z').teksti, 'Sisältöä päivitettiin.');
+  const j = kokoaJulkaisu({ tiedostot, edellinen: null, suurin: 0, commit: 'abcdef1', julkaistu: '2026-09-23T20:00:00.000Z' });
+  assert.deepEqual(j.virheet, []);
+  assert.equal(j.osoitin.kokoelmaLkm.kaupungit, 266);
+  assert.ok(Array.isArray(JSON.parse(tiedostot.get('kokoelmat/muutosloki-natiivi.json')).alkiot));
+});
+
 test('skeema 1.9: offline-manifesti maittain (laatat, maasto, media, tavut)', async () => {
   const m = JSON.parse(tiedostot.get('manifest.json'));
   const o = JSON.parse(tiedostot.get(m.offline.tiedosto));

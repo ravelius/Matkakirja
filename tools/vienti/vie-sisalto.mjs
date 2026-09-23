@@ -123,8 +123,10 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *   1.21 fokusvirrat (virta: kuvat ratkaistuina, lehtitehtävien id:t) ja
  *        laatat (tyypit, mannerTyypit, maarat) päätasolle; 2.0-polun
  *        natiivin data-lukijat ovat nyt kaikki tyypitetty.
+ *   1.22 kokoelma muutosloki-natiivi (Julkaisijan rivit) ja osoittimeen
+ *        kokoelmaLkm ja muutos (automaattinen sisältörivi, julkaise-sisalto.mjs).
  */
-export const SKEEMAVERSIO_TARKKA = '1.21';
+export const SKEEMAVERSIO_TARKKA = '1.22';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 const tavuja = (s) => Buffer.byteLength(s);
