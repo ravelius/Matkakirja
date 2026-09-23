@@ -179,6 +179,8 @@ namespace Matkakirja.Natiivi
             // Tuomio ja paljastus näkyviin (tulos on vaihtoehtojen alla, usein ruudun ulkopuolella).
             if (tulosVaihtui && tulos != null && !uusi)
                 Rakenne.Vierita(vieritys, tulos, 60);
+            // Aarteen paljastus koko ruudulle (B4), kun löytö paljastuu (TulosVaihe 2).
+            if (tulosVaihtui && tulosVaihe >= 2 && Natiivi.Paljastus.Kuuluu(d)) UiNakymat.Hae()?.Paljastus.Nayta(d);
             edellinenTulosVaihe = tulosVaihe;
             edellinenTervehdys = tervehdys;
             if (!Auki)
