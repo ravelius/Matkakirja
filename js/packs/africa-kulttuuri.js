@@ -1193,40 +1193,15 @@ export const AFRICA_KULTTUURI = {
         + 'lehdetön latva harottaa kuin juuristo taivasta kohti.',
     },
   },
+  // Kilimandžaron litteät nostot siirtyivät kaupunkilehteen
+  // (kulttuuri-kategoriat.js, kilimandzaro) 23.9.2026: yksinäinen vuori,
+  // kihamba-tarhat ja nimen alkuperä kirjoitettiin siellä uudelleen
+  // lähteestä tarkistettuina (kahvi tuli vuorelle vasta noin 1900, Kipoo
+  // tarkoittaa täplikästä, kilima on kukkula). Visan lähdejuttu on lehden
+  // "Kolme tulivuorta yhdessä"; faktan "ympärillä ei ole muita vuoria"
+  // korjattiin, koska Meru-vuori on vain noin 40 mailin päässä (en-wiki
+  // Karl Klaus von der Decken), ja vuori nousee tasangolta noin 4 900 m.
   kilimandzaro: {
-    nostot: [
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Afrikan katto',
-        tiedosto: 'Kilimanjaro, Tanzania, 2024-05-22, DD 109.jpg',
-        teksti: 'Kilimandžaro on Afrikan korkein vuori ja maailman '
-          + 'korkein yksinäinen vuori: se ei kuulu mihinkään '
-          + 'vuoristoon vaan nousee savannilta yksin lähes kuuteen '
-          + 'kilometriin, lumihuippu päiväntasaajan auringossa.',
-        selite: 'Kilimandžaron leveä lumihuippu kohoaa pilvivyön '
-          + 'yläpuolelle, ja etualalla on matalaa akasiapensaikkoa. '
-          + 'Vuorella kiivetään viiden ilmastovyöhykkeen läpi — '
-          + 'viidakosta jäätikölle kuin matkalla päiväntasaajalta '
-          + 'navalle.',
-        lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
-      },
-      {
-        tyyppi: 'teksti',
-        otsikko: 'Chaggojen kahvitarhat',
-        teksti: 'Vuoren rinteillä chagga-kansa viljelee kahvia ja '
-          + 'banaania samoissa puutarhoissa, joissa banaani varjostaa '
-          + 'kahvipensaita. Kihamba-tarhojen viljelytapa on satoja '
-          + 'vuosia vanha ja YK:n palkitsema.',
-      },
-      {
-        tyyppi: 'teksti',
-        otsikko: 'Vuori jolla on monta nimeä',
-        teksti: 'Nimen alkuperästä kiistellään yhä: swahilin kilima '
-          + 'tarkoittaa vuorta, ja njaro voi olla loistava, valkoinen '
-          + 'tai karavaanien vesipaikka. Chaggat kutsuvat huippua '
-          + 'nimellä Kipoo — sekin tarkoittaa loistavaa.',
-      },
-    ],
     kysymys: {
       q: 'Miksi Kilimandžaroa sanotaan maailman korkeimmaksi yksinäiseksi vuoreksi?',
       options: [
@@ -1236,8 +1211,8 @@ export const AFRICA_KULTTUURI = {
         'Se ei kuulu mihinkään vuoristoon',
       ],
       correct: 3,
-      fact: 'Kilimandžaro nousee savannilta yksin lähes kuuteen '
-        + 'kilometriin — ympärillä ei ole muita vuoria.',
+      fact: 'Kilimandžaro ei ole osa vuorijonoa: se nousee suoraan '
+        + 'tasangolta noin 4 900 metriä, ja huippu on 5 895 metrissä.',
     },
   },
   viktoria: {

@@ -107812,4 +107812,344 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * KILIMANDŽARO (Afrikan kaupunkilehtierä O7, toinen erä, 23.9.2026).
+   *
+   * KANSI ON VUOREN HISTORIAN JA LUONNON SIVU (Karthagon ja Timbuktun
+   * malli): tulivuoret, nimi, Rebmannin lumi, nousuyritykset, Meyerin
+   * huiputus 1889, Lauwo ja jäätiköt. Toinen aihe on chaggojen arki
+   * (kihamba, vesikourut, kuningaskunnat, Ruwa). Kansikuvat, avauskuvat
+   * ja matkailijalle-osio tulevat myöhemmällä kierroksella.
+   *
+   * VANHAT LITTEÄT NOSTOT (africa-kulttuuri.js) siirtyivät tänne
+   * uudelleen kirjoitettuina ja korjattuina:
+   *   - "Vuori jolla on monta nimeä": Kipoo ei tarkoita loistavaa vaan
+   *     täplikästä (Kibon lumi), njaron tulkinnat lähteessä ovat suuruus,
+   *     karavaanit ja valkoisuus (ei "loistava" eikä "vesipaikka"), ja
+   *     swahilin kilima on kukkula, ei vuori. Chaggoilla ei ole nimeä
+   *     koko vuorelle, vain huipuille.
+   *   - "Chaggojen kahvitarhat": kahvi ei ole satoja vuosia vanha
+   *     viljelykasvi vuorella — katoliset lähetyssaarnaajat toivat
+   *     arabican jo 1900 (Chagga states) ja chaggojen kahvinviljely
+   *     kasvoi 1920-luvulla; Chaga people sanoo kahvin nousseen
+   *     rahakasviksi saksalaisaikana 1800-luvun lopulla, joten juttu
+   *     sanoo "saksalaisten siirtomaa-aikana" eikä tarkkaa alkuvuotta.
+   *     Vanha tarha (kihamba) on banaanitarha. "YK:n palkitsema" ei
+   *     löytynyt lähteistä, joten se jätettiin pois.
+   *   - "Afrikan katto": "nousee savannilta lähes kuuteen kilometriin" on
+   *     tarkennettu: huippu 5 895 m merenpinnasta, tasangolta noin
+   *     4 900 m. Myös visan faktasta poistettiin "ympärillä ei ole muita
+   *     vuoria" (Meru on noin 40 mailin päässä). Visan (yksinäinen vuori,
+   *     ei kuulu mihinkään vuoristoon) lähdejuttu on "Kolme tulivuorta
+   *     yhdessä"; minitehtävä kysyy Ruwan nimestä eikä osu visaan.
+   *
+   * FAKTAPOHJA: en-Wikipedia raakatekstinä 23.9.2026 — Mount Kilimanjaro,
+   * Chaga people, Chagga states, Johannes Rebmann, Johann Ludwig Krapf,
+   * William Desborough Cooley, Karl Klaus von der Decken, Hans Meyer
+   * (geographer), Ludwig Purtscheller, Mawenzi, Furtwängler Glacier,
+   * Kilimanjaro National Park. Artikkelien ristiriidat ratkaistiin
+   * varovasti: Rebmannin näköhavainnon päivä (11.5. vai 10.11.1848)
+   * jätettiin pois, ja Meyer on "maantieteilijä", koska professoriksi
+   * hän tuli vasta 1899. Kivoi Mwendwan mainitun nousun vuoksi
+   * johdanto puhuu ensimmäisestä TUNNETUSTA huiputuksesta.
+   *
+   * KUVAT katsottu silmin 900 px:n esikatseluna, kaikki >= 1200 px ja
+   * käyttämättömiä muualla repossa: Kibo ruohotasangon takaa (Ray in
+   * Manila, CC BY 2.0), Rebmannin muotokuva (käsin kirjoitetut vuodet
+   * alareunassa), Meyerin kirjan kuva Marangusta 1888 (BnF:n lasidia:
+   * Kibon kupu vasemmalla, Mawenzi oikealla, etualalla mies kasvien
+   * keskellä), E. T. Comptonin Mawenzi Satulatasangolta Meyerin kirjassa
+   * 1890 (kivilohkare, oikealla retkikunnan jono), Furtwänglerin
+   * jäätikkö kraatterissa 2005 (pystysuorat jääseinät), perinteinen
+   * chaggojen kartiotalo (Wiki Loves Africa 2022, sijainti ei tiedossa,
+   * siksi selitteessä ei paikkaa) ja Illustrirte Zeitungin chaggasoturi
+   * 15.3.1890 Meyerin valokuvan mukaan (keihäs, kuvioidut kilvet,
+   * turkiskoristeet nilkoissa). GFDL-lisenssiset chaggamajat hylättiin.
+   */
+  kilimandzaro: [
+    {
+      id: 'kaupunki',
+      nimi: 'Kilimandžaro',
+      johdanto: 'Afrikan korkein vuori nousee yksin tasangolta, ja sen '
+        + 'huipulla on jäätä lähes päiväntasaajalla. Kun isoisä kulki '
+        + 'täällä 1873, ensimmäiseen tunnettuun huiputukseen oli vielä '
+        + '16 vuotta, ja koko lumen olemassaoloa oli Lontoossa epäilty '
+        + 'vielä kymmenen vuotta aiemmin.',
+      nostot: [
+        {
+          otsikko: 'Kolme tulivuorta yhdessä',
+          teksti: 'Kilimandžaro on Afrikan korkein vuori ja maailman '
+            + 'korkein yksinäinen vuori: se ei kuulu mihinkään vuoristoon, '
+            + 'vaan nousee suoraan tasangolta noin 4 900 metriä. Vuori on '
+            + 'kolmen tulivuoren kasauma. Shira alkoi purkautua noin 2,4 '
+            + 'miljoonaa vuotta sitten, Mawenzi ja Kibo noin miljoona '
+            + 'vuotta sitten. Shira ja Mawenzi ovat sammuneet, mutta Kibo '
+            + 'vain lepää: sen kraatterissa purkautuu yhä kaasua. '
+            + 'Nykyisen huippukraatterin muovasi purkausvaihe 150 000–200 000 '
+            + 'vuotta sitten. '
+            + 'Korkein kohta on Kibon kraatterin reunalla. Virallinen '
+            + 'korkeus 5 895 metriä perustuu brittien mittaukseen vuodelta '
+            + '1952; myöhemmät mittaukset ovat antaneet tulokseksi 5 892:sta '
+            + '5 902 metriin.',
+          tiedosto: 'Kibo Summit, Mount Kilimanjaro, Tanzania (30819102678).jpg',
+          lyhyt: 'Kibon lumipeitteinen huippu kohoaa pilvivyön yläpuolelle kellertävän ruohotasangon takana.',
+          selite: 'Kibo, Kilimandžaron korkein ja suurin kartio, heinäkuussa '
+            + '2018: lumipeitteinen huippu nousee pilvivyön yläpuolelle, '
+            + 'ja etualalla on kuivaa ruohotasankoa.',
+          lahde: 'Ray in Manila, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Mount Kilimanjaro',
+        },
+        {
+          otsikko: 'Nimi, jota kukaan ei osaa selittää',
+          teksti: 'Mistä nimi Kilimandžaro tulee, sitä ei tiedetä. '
+            + 'Chaggoilla ei ole omaa nimeä koko vuorelle, vain sen '
+            + 'kahdelle huipulle: Kipoo eli Kibo tarkoittaa täplikästä '
+            + 'lumen vuoksi ja Kimawenze eli Mawenzi rikkinäistä huippua. '
+            + 'Lähetyssaarnaaja Johann Ludwig Krapf kirjoitti 1860, että '
+            + 'swahilit käyttivät nimeä Kilimanjaro ja että se tarkoitti '
+            + 'joko suuruuden tai karavaanien vuorta. Skotlantilainen '
+            + 'tutkimusmatkailija Joseph Thomson ehdotti 1885 valkoista '
+            + 'vuorta. Swahilin kilima tarkoittaa kuitenkin kukkulaa eikä '
+            + 'vuorta. Yhden selityksen mukaan nimi on väärinkäsitys: '
+            + 'chaggat sanoivat vuorta mahdottomaksi kiivetä, '
+            + 'kilemanjaare, ja tulijat luulivat sanaa nimeksi. Kambat '
+            + 'kutsuivat sitä valkoisuuden vuoreksi, maasait valkoiseksi '
+            + 'vuoreksi.',
+          wiki: 'Mount Kilimanjaro',
+        },
+        {
+          otsikko: 'Lumi, jota Lontoo ei uskonut',
+          teksti: 'Vuonna 1848 saksalainen lähetyssaarnaaja Johannes '
+            + 'Rebmann kulki swahilikaravaanin johtajan Bwana Kherin '
+            + 'kanssa Kilimandžaron juurelle. Huipulla näkyi häikäisevän '
+            + 'valkoinen pilvi. Kun Rebmann kysyi, mitä se oli, opas '
+            + 'vastasi vain: baridi, kylmää. Rebmann ymmärsi, että se oli '
+            + 'lunta. Havainto julkaistiin 1849, mutta Lontoon '
+            + 'maantieteilijät pitivät sitä kuvitelmana: lunta ei voinut '
+            + 'olla niin lähellä päiväntasaajaa, joten lähetyssaarnaajan '
+            + 'arveltiin nähneen malariahoureita. Irlantilainen William '
+            + 'Desborough Cooley julisti lumivuoret taruiksi 1852. Vasta '
+            + 'paroni Karl Klaus von der Decken ja geologi Richard '
+            + 'Thornton arvioivat 1861 vuoren korkeudeksi noin 20 000 '
+            + 'jalkaa, ja heidän mittauksensa päättivät kiistan. Cooley ei '
+            + 'silti taipunut, vaan kiisti lumen vielä heidän '
+            + 'palattuaankin.',
+          tiedosto: 'Johannes rebmann.gif',
+          lyhyt: 'Johannes Rebmann nuorena; alareunaan on käsin kirjoitettu hänen elämänsä vuosiluvut.',
+          selite: 'Johannes Rebmannin muotokuva. Alareunan käsin '
+            + 'kirjoitetuissa merkinnöissä ovat syntymävuosi 1820, '
+            + 'kotikylä Gerlingen, lähtö Itä-Afrikkaan 1844 ja '
+            + 'kuolinvuosi 1876.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
+          wiki: 'Johannes Rebmann',
+        },
+        {
+          otsikko: 'Ensimmäisenä lumessa',
+          teksti: 'Rebmannin jälkeen vuorelle yritettiin yhä uudelleen. '
+            + 'Von der Decken pääsi elokuussa 1861 huonon sään takia vain '
+            + 'noin 2 500 metriin ja joulukuussa 1862 Otto Kerstenin '
+            + 'kanssa noin 4 300 metriin. Elokuussa 1871, kaksi vuotta '
+            + 'ennen isoisän matkaa, englantilainen lähetyssaarnaaja '
+            + 'Charles New nousi hieman yli 4 000 metriin ja oli '
+            + 'ensimmäinen eurooppalainen päiväntasaajan lumessa. New '
+            + 'valitsi myös kirjoitusasun Chagga ja liitti nimen '
+            + 'swahilin sanoihin, jotka tarkoittavat eksymistä: vuoren '
+            + 'tiheissä metsissä vieraat eksyivät helposti. Vuonna 1887 '
+            + 'unkarilainen kreivi Sámuel Teleki pääsi lumeen 5 300 '
+            + 'metrissä, ja saksalainen Hans Meyer ylsi samana vuonna '
+            + 'Kibon jääpeitteen alareunaan. Sen yli hän ei päässyt, koska '
+            + 'häneltä puuttuivat jäällä kulkemiseen tarvittavat '
+            + 'varusteet.',
+          tiedosto: 'Kilimandjaro. 8 (Le Kilimandjaro vu du SE depuis Marangu) - (mission) Le Roy ; (gravure présente dans un ouvrage de) Hans Meyer ; (gravure reproduite par) Molteni (pour la conférence donnée par) Le Roy - btv1b53286745v.jpg',
+          lyhyt: 'Kilimandžaro Marangusta kaakosta Hans Meyerin kirjan kuvassa 1888: vasemmalla Kibo, oikealla Mawenzi.',
+          selite: 'Kilimandžaro Marangusta kaakosta nähtynä Hans Meyerin '
+            + 'vuoden 1888 kirjan kuvassa: vasemmalla Kibon laakea kupu, '
+            + 'oikealla Mawenzin terävämpi huippu ja edessä tiheää '
+            + 'kasvillisuutta. Ranskalainen lähetyssaarnaaja Alexandre Le '
+            + 'Roy näytti kuvaa esitelmässään lasidiana.',
+          lahde: 'Hans Meyer ja Alexandre Le Roy (BnF), Wikimedia Commons (PD)',
+          wiki: 'Karl Klaus von der Decken',
+        },
+        {
+          otsikko: 'Huipulla syntymäpäivänä',
+          teksti: 'Meyer palasi 1889 itävaltalaisen vuorikiipeilijän Ludwig '
+            + 'Purtschellerin kanssa. Nyt he perustivat rinteelle '
+            + 'ruokavarastollisia leirejä, jotta huippua voitiin yrittää '
+            + 'monta kertaa laskeutumatta joka välissä kauas alas. 3. '
+            + 'lokakuuta he pääsivät lähelle kraatterin reunaa mutta '
+            + 'kääntyivät uupuneina, sillä askelmat oli hakattava jäiseen '
+            + 'rinteeseen. Kolme päivää myöhemmin, 6. lokakuuta 1889, '
+            + 'Purtschellerin 40-vuotispäivänä, he seisoivat korkeimmalla '
+            + 'huipulla ja näkivät ensimmäisinä, että Kibolla on '
+            + 'kraatteri. Meyer nimesi huipun keisari Vilhelmin mukaan; '
+            + 'vuonna 1964, Tansanian synnyttyä, se sai nimen Uhuru, '
+            + 'swahiliksi vapaus. Ylämajoilla mukana oli Mwini Amani '
+            + 'Panganista, joka kokkasi ja kantoi leireihin vettä ja '
+            + 'polttopuuta.',
+          tiedosto: 'Der Mawensi Vom Sattelplateau - 4.400 m - aus NW. gesehen - Edward Theodore Compton.png',
+          lyhyt: 'Mawenzi Satulatasangolta nähtynä: E. T. Comptonin kuvitus Hans Meyerin kirjaan 1890.',
+          selite: 'Edward Theodore Comptonin kuvitus Hans Meyerin kirjaan '
+            + 'Ostafrikanische Gletscherfahrten (1890): Mawenzin repaleinen '
+            + 'huippu 4 400 metrin Satulatasangolta luoteesta, oikealla '
+            + 'retkikunnan jono. Meyer ja Purtscheller yrittivät myös '
+            + 'Mawenzille, mutta sairaus käänsi heidät takaisin '
+            + 'sivuhuipulta.',
+          lahde: 'Edward Theodore Compton, Wikimedia Commons (PD)',
+          wiki: 'Hans Meyer (geographer)',
+        },
+        {
+          otsikko: 'Kantaja, joka kiipesi ilman kenkiä',
+          teksti: 'Kun ensimmäisen nousun satavuotisjuhlaa valmisteltiin '
+            + '1989, järjestäjät päättivät antaa postuumit todistukset '
+            + 'myös Meyerin afrikkalaisille kantajille ja oppaille. '
+            + 'Retkikunnan kuvista ja asiakirjoista yhden henkilön '
+            + 'arveltiin olevan yhä elossa: Marangussa asuvan Yohani '
+            + 'Kinyala Lauwon. Lauwo ei tiennyt ikäänsä eikä muistanut '
+            + 'Meyeriä tai Purtschelleria. Hän muisti kuitenkin retken, '
+            + 'jossa oli mukana vuoren lähellä asunut hollantilainen '
+            + 'lääkäri, ja sen, ettei hänellä ollut kenkiä. Hänen mukaansa '
+            + 'hän nousi vuorelle kolmesti ennen ensimmäistä '
+            + 'maailmansotaa. Toimikunta päätteli, että hän oli ollut '
+            + 'Meyerin joukossa ja syntynyt noin 1871. Lauwo kuoli 10. '
+            + 'toukokuuta 1996, 107 vuotta ensimmäisen nousun jälkeen. '
+            + 'Joskus hänet mainitaan jopa yhtenä ensimmäisistä '
+            + 'huipulla kävijöistä.',
+          wiki: 'Mount Kilimanjaro',
+        },
+        {
+          otsikko: 'Jää, joka on lähdössä',
+          teksti: 'Kun Meyer kiipesi 1880-luvun lopulla, Kibon huippua '
+            + 'peitti noin 20 neliökilometrin jääpeite, ja jäätiköt '
+            + 'valuivat rinteitä alas. Lokakuun 1912 ja kesäkuun 2011 '
+            + 'välillä jäästä katosi lähes 85 prosenttia. Syy ei ole '
+            + 'pelkkä lämpö: huipulla ilma on aina pakkasella, mutta '
+            + 'aurinko sulattaa jäätiköiden pystysuoria seinämiä, ja '
+            + 'ilmankosteus on laskenut 1800-luvun lopulta. Furtwänglerin '
+            + 'jäätikkö, joka on nimetty huipulle 1912 nousseen Walter '
+            + 'Furtwänglerin mukaan, kutistui vuosina 1976–2000 lähes '
+            + 'puoleen, ja 2006 sen keskelle aukesi kallioon asti ulottuva '
+            + 'reikä. Vuonna 2013 arvioitiin, että jäätä tuskin on enää '
+            + 'vuoden 2060 jälkeen. Vuoren ympärillä asuvien vesi ei silti '
+            + 'ole jäätiköiden varassa, vaan alempana kasvavien metsien.',
+          tiedosto: 'Kilimandscharo-Gletscherkrater.jpg',
+          lyhyt: 'Furtwänglerin jäätikkö Kibon kraatterissa 2005, taustalla pohjoinen jääkenttä.',
+          selite: 'Kibon kraatteri elokuussa 2005: edessä Furtwänglerin '
+            + 'jäätikkö, taustalla pohjoinen jääkenttä. Jään reunat ovat '
+            + 'pystysuoria seinämiä, joita aurinko sulattaa sivulta.',
+          lahde: 'ProfessorX, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Furtwängler Glacier',
+        },
+      ],
+    },
+    {
+      id: 'arki',
+      nimi: 'Chaggojen vuori',
+      johdanto: 'Vuoren etelä- ja itärinteillä asuvat chaggat, joiden '
+        + 'pienet kuningaskunnat elivät banaanitarhoista ja vuoren '
+        + 'puroista kaivetuista kouruista. Huipulla asui heidän '
+        + 'jumalansa.',
+      tehtava: {
+        kysymys: 'Mitä chaggojen korkeimman jumalan nimi Ruwa tarkoittaa '
+          + 'myös?',
+        vaihtoehdot: [
+          'Aurinkoa',
+          'Lunta',
+          'Banaania',
+          'Vuorta',
+        ],
+        oikea: 0,
+        fakta: 'Sekä Ruwa että läntisten kuningaskuntien muoto Iruva ovat '
+          + 'chaggan kielen sanoja auringolle.',
+      },
+      nostot: [
+        {
+          otsikko: 'Banaanitarhan keskellä',
+          teksti: 'Chaggat eivät asuneet kylissä. Jokainen perhe asui '
+            + 'omassa aidatussa tarhassaan, kihambassa. Tarhaa kiersi '
+            + 'pyhä masale-kasvi, rauhan ja anteeksiannon merkki, ja '
+            + 'banaanipuiden pitkät lehdet varjostivat tomaatteja, '
+            + 'sipuleita ja jamsseja. Keskellä seisoi pyöreä, '
+            + 'mehiläispesän muotoinen talo, jonka katto oli heinää tai '
+            + 'banaaninlehtiä. Sisällä paloi kolmen kiven tukema tuli, ja '
+            + 'sen yllä kuivui banaaneja. Samassa talossa asuivat vuohet '
+            + 'ja lehmä, ja naiset kantoivat niille rehua tasangolta. '
+            + 'Banaanilajikkeita oli 1800-luvulla yli 18. Kahvi, josta '
+            + 'vuori nykyään tunnetaan, tuli vasta saksalaisten '
+            + 'siirtomaa-aikana: katoliset lähetyssaarnaajat toivat '
+            + 'arabicakahvin vuorelle jo vuonna 1900, ja chaggojen '
+            + 'oma kahvinviljely kasvoi suureksi 1920-luvulla.',
+          tiedosto: 'Chaga traditional house.jpg',
+          lyhyt: 'Perinteinen chaggojen kartiotalo, jonka heinäkatto ulottuu lähes maahan asti.',
+          selite: 'Perinteinen chaggojen talo vuonna 2022: kartion '
+            + 'muotoinen, kerroksittain heinillä katettu, ja ainoana '
+            + 'aukkona matala ovi. Tällaiset ikkunattomat talot kestivät '
+            + 'huollettuina yli kaksikymmentä vuotta.',
+          lahde: 'Killy95, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Chaga people',
+        },
+        {
+          otsikko: 'Kourut, jotka uhmaavat painovoimaa',
+          teksti: 'Vuoren rinteitä halkoo chaggojen oma ihme, '
+            + 'mfongo-vesikourujen verkosto. Jokainen kouru alkaa '
+            + 'korkealta vuoripurosta ja kiertää rinnettä korkeuskäyriä '
+            + 'myöten kilometrikaupalla. Pääkouruista haarautuu yhä '
+            + 'pienempiä uomia, kunnes jokaisen talon läpi virtaa oma '
+            + 'kirkas puronsa juomiseen, peseytymiseen ja kasteluun. '
+            + 'Kourujen linjaajilla oli työkaluinaan vain pieniä keppejä. '
+            + 'Kileman rinteellä kulkee yhä jopa viisi kourua '
+            + 'päällekkäin, ja ne näyttävät virtaavan takaisin jokea kohti '
+            + 'eikä alas tasangolle, niin tarkasti ne on linjattu. '
+            + 'Mbokomussa kourut vietiin jyrkkien rotkojen yli '
+            + 'koverrettuja puunrunkoja pitkin. Jokaisella kourulla on '
+            + 'nimi. Mbokomun kuningas Mlatie linjasi kouruja '
+            + 'maanpaossakin, missä hän milloinkin oli, ja chaggat '
+            + 'käyttävät hänen nimeään kantavia kouruja yhä.',
+          wiki: 'Chagga states',
+        },
+        {
+          otsikko: 'Kolmekymmentäseitsemän kuningasta',
+          teksti: 'Chaggat eivät olleet yksi valtakunta vaan kymmeniä '
+            + 'pieniä kuningaskuntia, joita hallitsi mangi eli kuningas. '
+            + 'Vuonna 1899 niitä oli 37. Kun Rebmann saapui Kilemaan '
+            + '1848, hän pani heti merkille järjestyksen, jota mangin '
+            + 'vahva valta piti yllä. Kuningaskunnat kävivät toisiaan ja '
+            + 'naapureitaan vastaan jatkuvia sotia ja ryöstöretkiä '
+            + 'karjan, rautatyökalujen ja vallan vuoksi. Moshin Mandara '
+            + 'hankki arabiyhteyksiensä kautta ensimmäisenä mangina '
+            + 'tuliaseita 1860-luvulla. Sodassa sai polttaa taloja ja '
+            + 'tuhota banaanitarhoja, mutta mangia tai seppää ei saanut '
+            + 'tappaa eikä vangita. Sepät olivat arvossaan, sillä '
+            + 'vuorella ei ollut omaa rautamalmia. Kuningaskunnat '
+            + 'lakkautettiin virallisesti vasta 1963, kaksi vuotta '
+            + 'Tanganjikan itsenäistymisen jälkeen.',
+          tiedosto: 'Dschagga-Krieger (um 1890).jpg',
+          lyhyt: 'Chaggasoturi keihäineen ja kilpineen Illustrirte Zeitung -lehden kuvassa 1890.',
+          selite: 'Chaggasoturi Illustrirte Zeitung -lehdessä 15. '
+            + 'maaliskuuta 1890 Hans Meyerin valokuvan mukaan: kädessä '
+            + 'pitkä keihäs, vieressä soikeat kilvet ja nilkoissa '
+            + 'turkiskoristeet. Kilpien kuviot kertoivat, mihin '
+            + 'ikäluokkaan soturi kuului.',
+          lahde: 'Tuntematon piirtäjä, Illustrirte Zeitung, Wikimedia Commons (PD)',
+          wiki: 'Chagga states',
+        },
+        {
+          otsikko: 'Ruwa ja karannut karja',
+          teksti: 'Ennen kristinuskoa ja islamia chaggojen korkein jumala '
+            + 'oli Ruwa. Hän ei ollut ihmisten luoja vaan vapauttaja ja '
+            + 'ravinnon antaja, ja hän asui vuoren huipulla, joten vuori '
+            + 'oli pyhä. Erään tarinan mukaan Tone-niminen mies suututti '
+            + 'Ruwan, joka lähetti maahan nälänhädän. Tone pakeni, ja '
+            + 'hänet otti suojiinsa vain yksinäinen erakko, jonka kivet '
+            + 'muuttuivat ihmeen kautta karjaksi. Tone ei saanut koskaan '
+            + 'avata karjasuojan ovea, mutta hän avasi, ja karja karkasi. '
+            + 'Pakenevat eläimet nostivat alleen kukkuloita juostakseen, '
+            + 'niiden joukossa Mawenzin ja Kibon, ja lopulta Tone '
+            + 'lyyhistyi Kibolle. Vainajat haudattiin perinteisesti '
+            + 'kasvot Kiboa kohti, ja esi-isien kallotkin asetettiin '
+            + 'katsomaan huippua.',
+          wiki: 'Chaga people',
+        },
+      ],
+    },
+  ],
 };
