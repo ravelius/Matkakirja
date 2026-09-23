@@ -14,7 +14,7 @@ iPad-/simulaattorikäännösten ajaja.
 
 ## Tila
 
-- Proto-master **284c798** (`/Users/Shared/Claude/proto-3d/Matkakirja-proto`, paikallinen git, ei remotea).
+- Proto-master **9fd0c07** (284c798 + linssiseppa/radioluokat 194fbee: sallittu ja epäselvä soivat, kielletty = aseman sivu, luokaton ei mitään) (`/Users/Shared/Claude/proto-3d/Matkakirja-proto`, paikallinen git, ei remotea).
 - **TestFlight build 3** = master d29971b, `Build/testflight-3`, fi.matkakirja.peli 1.0.0 (3),
   Julkaisijalla ladattavana. Signing: Release, app-store-connect-vienti, DEVELOPMENT_TEAM
   ohitetaan workflowssa (projektissa Personal Team F72JLS57C5), CFBundleVersion PlistBuddyllä.
@@ -90,5 +90,5 @@ iPad-/simulaattorikäännösten ajaja.
 > Olet Natiiviseppä (Opus), natiivin Unity + Cesium -pelin pääkehittäjä ja proto-gitin
 > master. Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 ja NATIIVI PELI ETUSIJALLE,
 > docs/raportit/viesti-natiiviseppa-luovutus-20260923-ilta2.md (haara selvittaja-3d-luovutus),
-> proto-3d/TYOTAPA.md ja Assets/Matkakirja/RAJAPINTA.md. Proto-master 284c798. Tee
+> proto-3d/TYOTAPA.md ja Assets/Matkakirja/RAJAPINTA.md. Proto-master 9fd0c07. Tee
 > "Kesken"-lista järjestyksessä ja mergeä muiden pyynnöt tarkista.sh + luo -kaavalla.
