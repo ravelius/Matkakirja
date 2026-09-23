@@ -22,7 +22,7 @@ lisenssi asuu vain noissa kahdessa erillisessä taulukossa.
 - 124 löytyy `LIPPUTIEDOT`:sta (lisenssi jo tiedossa tekstissä, 1 näistä on sama kuin `LIPPU_TEKIJAT`-lippu)
 - **52 lippua EI löydy kummastakaan** → näille haettiin lisenssi Commonsin
   API:sta (`action=query&prop=imageinfo&iiprop=extmetadata`, User-Agent
-  "Matkakirja-lisenssitarkistus/1 (vvi@vvi.fi)", 50 titleä/pyyntö, ~1,2 s
+  "Matkakirja-lisenssitarkistus/1", 50 titleä/pyyntö, ~1,2 s
   viive pyyntöjen välissä; ei 429:iä).
 
 Omistajan mainitsema "edellinen laskenta: 34" ei täsmää omaan laskuuni (52).
