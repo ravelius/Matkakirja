@@ -132,7 +132,15 @@ export const RAAMATTU = {
           + 'natiivi maksullinen tai 3D-lisäosat IAP:na; radiot vain webissä; lisensseissä '
           + 'attribuutio riittää (ei juristia). Peli on mahdollisimman pieni: sisältö, media, '
           + 'laatat ja maasto striimataan ämpäristä, pelaaja voi ladata alueita offline-käyttöön '
-          + 'halutessaan (omistaja 23.9.). Prototyyppi /Users/Shared/Claude/proto-3d.',
+          + 'halutessaan (omistaja 23.9.). Prototyyppi /Users/Shared/Claude/proto-3d. '
+          + 'VAIN AJANTASAISTA JA VAIN NATIIVIA (omistaja 23.9.2026 klo 20.1x, sitova): natiiviin '
+          + 'siirretään vain se, mikä on Raamatun VOIMASSA OLEVAA kaanonia — ei webin koodissa '
+          + 'olevia kuolleita polkuja (esim. rosvon kaksintaistelu, poistettu 25.8.2026). Siirto '
+          + 'tehdään Raamatun ja siirtosuunnitelman mukaan, ei koodin mukaan, ja jokainen siirretty '
+          + 'ominaisuus tarkistetaan Raamattua vasten. Vanhasta pelistä ei tuoda mitään kuorta: ei '
+          + 'WKWebView-lehtiä eikä muuta web-koodia appiin — kaupunki- ja maalehdet tehdään '
+          + 'natiivisti UI Toolkitilla sisältöpaketin datasta (omistajan kortti 23.9. klo 20.1x). '
+          + 'Uuteen peliin lisätään vain natiiveja ominaisuuksia.',
         'CLAUDEN JA CHATGPT/CODEXIN AGENTTISÄÄNNÖT ERIKSEEN (omistaja 11.9.2026 '
           + 'tekstisession kautta, sanatarkasti: "Peliä kehitetään Claudella ja '
           + 'ChatGPT/Codexilla. Opus/Sonnet-rajoitus ja Fable-mallin agenttikäytön '
