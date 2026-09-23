@@ -8,7 +8,7 @@ namespace Matkakirja.Linssit.Testit
     {
         public readonly List<string> Loki;
         public readonly Dictionary<string, Rasteri> Rasterit = new Dictionary<string, Rasteri>();
-        public readonly Dictionary<string, bool> Nakyvat = new Dictionary<string, bool> { ["pohja"] = true };
+        public readonly Dictionary<string, bool> Nakyvat = new Dictionary<string, bool> { ["laatat"] = true };
         public readonly Dictionary<string, KerrosTila> Tilat = new Dictionary<string, KerrosTila>();
         public ValeKerrokset(List<string> loki) { Loki = loki; }
 

@@ -76,7 +76,9 @@ namespace Matkakirja.Linssit
 
     /// <summary>
     /// Pallon kerrokset (Natiivisepän KarttaKerrokset sovittimen takana).
-    /// Avaimet: linssin omat kerrokset sekä "pohja" (pelin pergamenttilaatat).
+    /// Avaimet: linssin omat rasterit sekä pelin sisäiset kerrokset
+    /// (RAJAPINTA.md luku 4): "laatat", "maasto", "kaupungit", "nimiot",
+    /// "reitit", "napakannet".
     /// </summary>
     public interface IKarttaKerrokset
     {

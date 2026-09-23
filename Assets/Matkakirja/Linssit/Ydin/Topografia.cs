@@ -25,14 +25,15 @@ namespace Matkakirja.Linssit
     {
         /// <summary>Kerroksen avain KarttaKerroksissa.</summary>
         public const string Kerros = "topografia";
-        /// <summary>Pelin pergamenttilaatat (KarttaKerrokset).</summary>
-        public const string Pohja = "pohja";
+        /// <summary>Pelin pergamenttilaatat (KarttaKerrokset sisäinen kerros "laatat").</summary>
+        public const string Pohja = "laatat";
 
         /// <summary>
         /// Reliefin Web Mercator -sarja (EPSG:3857 XYZ, 256 px, Z0–Z8), laskettu
         /// reliefipyramidista samalla kaavalla kuin pallon sarja pohjapyramidista
-        /// (tools/tee-pallolaatat.mjs). Karttaseppä polttaa; osoite vahvistetaan
-        /// polton jälkeen. Jos osoite ei vastaa, kerros luovuttaa ja pohja palaa.
+        /// (tools/tee-pallolaatat.mjs --relief-tila). Osoite Karttasepän vahvistama
+        /// 23.9.2026; merilaatat ja julisteen ulkopuoli reliefin merisävyllä, joten
+        /// sarja on läpinäkymätön. Jos osoite ei vastaa, kerros luovuttaa ja pohja palaa.
         /// </summary>
         public static string ReliefiSarja =
             "https://media.matkakirja.app/matkakirja/reliefipyramidi/20260920/pallo/{z}/{x}/{y}.jpg";

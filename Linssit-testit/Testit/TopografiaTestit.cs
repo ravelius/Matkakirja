@@ -30,7 +30,7 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(1f, ras.Alfa);
             Oleta.Sama(Projektio.WebMercator, ras.Projektio);
             Oleta.Sama(8, ras.MaxTaso);
-            Oleta.Sama(false, y.Vale.Nakyvat["pohja"]);
+            Oleta.Sama(false, y.Vale.Nakyvat["laatat"]);
         }
 
         [Testi] static void PelikerroksetPiiloonVastaPeitteenAlla()
@@ -65,7 +65,7 @@ namespace Matkakirja.Linssit.Testit
             y.Kello = 0.5; r.Paivita();
             Oleta.Sama(false, y.PeitePaalla);
             Oleta.Sama("luovutti", t.Peite.Syy);
-            Oleta.Sama(true, y.Vale.Nakyvat["pohja"], "pelaaja näkee oman karttansa");
+            Oleta.Sama(true, y.Vale.Nakyvat["laatat"], "pelaaja näkee oman karttansa");
         }
 
         [Testi] static void PeiteLaskeeKatossa()
@@ -89,7 +89,7 @@ namespace Matkakirja.Linssit.Testit
             r.Sulje();
             Oleta.Sama(false, y.PeitePaalla);
             Oleta.Tosi(!y.Vale.Rasterit.ContainsKey("topografia"));
-            Oleta.Sama(true, y.Vale.Nakyvat["pohja"]);
+            Oleta.Sama(true, y.Vale.Nakyvat["laatat"]);
             Oleta.Sama(true, y.PelikerroksetNakyvissa);
             Oleta.Sama(null, y.Katto);
             Oleta.Sama(false, y.Musiikkipito);
