@@ -104,7 +104,10 @@ namespace Matkakirja.Linssit.Maat
             ymparisto = null;
         }
 
-        void Napautettu(string iso3)
+        void Napautettu(string iso3) => Napauta(iso3);
+
+        /// <summary>Sama kuin kartan napautus (testikomennot ja UI:n maalista). Tuntematon maa ohitetaan.</summary>
+        public void Napauta(string iso3)
         {
             if (Auki && aineisto.Hae(iso3) != null) Napautus(iso3);
         }

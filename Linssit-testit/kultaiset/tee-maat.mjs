@@ -16,7 +16,7 @@ import { fileURLToPath } from 'node:url';
 
 const tama = dirname(fileURLToPath(import.meta.url));
 const juuri = process.argv[2] ?? '/Users/Shared/Claude/Matkakirja-linssiseppa';
-const paketti = process.argv[3] ?? '/Users/Shared/Claude/sisalto-koe/v10';
+const paketti = process.argv[3] ?? '/Users/Shared/Claude/sisalto-koe/v11';
 const V = await import(join(juuri, 'js/vertailu.js'));
 const { VERTAILUVARIT } = await import(join(juuri, 'js/maakayrat.js'));
 const { MAAILMANKARTTA } = await import(join(juuri, 'js/packs/maailmankartta.js'));

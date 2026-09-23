@@ -7,7 +7,7 @@
 //   moduulit/js/linssit/maatiedot.json  LINSSI (jarjestys 95)
 //
 // Maan tunnus on koko natiivissa ISO3 (maarajat.json id, sama kuin webin
-// countryShapes-avain): 18 maalta puuttuu iso2 (Natiivisepän kanssa sovittu 23.9.).
+// countryShapes-avain; Natiivisepän kanssa sovittu 23.9.). Iso2 on kaikilla koepaketista v11 alkaen.
 //
 // Vienti koodaa negatiivisen nollan olioksi { "$luku": "-0" } (JSON ei erota
 // -0:aa), joten koordinaatit luetaan Luku-apurilla.
