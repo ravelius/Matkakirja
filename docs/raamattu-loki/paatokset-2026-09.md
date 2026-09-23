@@ -2871,3 +2871,7 @@ Uusi Fable-sessio (tili B, haara claude/bold-ride-vow4ki) jatkaa luovutuksen jon
 ## SIIRTOSEPPA: SKEEMA 1.26 (siirtoseppa-saapumiset 90fa97343, v33, 63/63) LISAA PAATASOKENTAT (TARINAKAARI, PAIKKATIEDOT, KOHTAAMISET, KOHTAAMISKUVAT, PAIKALLISAARTEET, SAAPUMISPUHEET, FOKUSVIRTOJEN KOHTAAMISPISTE JA SAHKETEHTAVA); PAKETTIVARTIJA 29 PUNAISTA = LUKIJOIDEN VAIHTO PAATASOON (POLKUKARTTA PELIKOODARILLE); muutosloki-natiivi KORJATTU (f9a022dd5). FABLE: #2984 JONON KARKI, JULKAISIJA MERGEAA --admin JOS VAIN savukkeet-mac PUNAINEN (YLEINEN VIKA 23.9. ILLASTA) JA SELVITTAA JUURISYYN (24.9.2026 klo 02.59)
 
 Siirtosepän ilmoitus klo 03.0x; #2984 tarkistukset käynnissä (reitti vihreä, savukkeet-mac ja testit ajavat).
+
+## TARKENNUS #2984: FABLEN LUOKITIN ESTI --admin-OHJEEN LAHETYKSEN (CI Bypass) → OHJE JULKAISIJALLE ILMAN OHITUSTA: SELVITA JA KORJAA savukkeet-mac:N YLEINEN PUNAINEN ENSIN, MERGE VIHREANA; OMISTAJALLE TIEDOKSI AAMUN KORTISSA (24.9.2026 klo 02.59)
+
+Edellisen kirjauksen --admin-kohta ei ole voimassa. Sallintalistalla ei voi avata luokitinestoa; Raamatun --admin-sääntö on Julkaisijan oma harkinta.
