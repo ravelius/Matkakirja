@@ -86,6 +86,34 @@ namespace Matkakirja.Natiivi
         public string Repliikki;
         /// <summary>Repliikki on löytörepliikki (luetaan ääneen, web lueKertojana).</summary>
         public bool RepliikkiLoyto;
+        /// <summary>Kohtaamiskuva (https) tervehdyssivulle ja pieneksi kysymyssivulle, tai null.</summary>
+        public string MuotokuvaUrl;
+        public string MuotokuvaAlt;
+        /// <summary>Lyhyt kuvateksti kortille; pitkä avatulle kuvalle (web js/kuvatekstit.js).</summary>
+        public string MuotokuvaLyhyt, MuotokuvaKuvateksti;
+        /// <summary>
+        /// Tervehdyssivu (web visa.js SIVU 1): näytä muotokuva, tervehdys, Varoitus ja
+        /// AloitaTeksti-nappi (KysymysToiminnot.Aloita); kysymys, vaihtoehdot ja aika
+        /// vasta sen jälkeen. Aika ei kulu tervehdyssivulla.
+        /// </summary>
+        public bool TervehdysVaihe;
+        public string AloitaTeksti;
+        /// <summary>Viimeisen yrityksen varoitus tervehdyssivulla, tai null.</summary>
+        public string Varoitus;
+        /// <summary>Kohtaamisen yritys "n/kaikki" otsikkoriville (web kaariYritysLuku), tai null.</summary>
+        public int? Yritys, Yrityksia;
+
+        // --- tulos ---
+        /// <summary>Käännetyn laatan tyyppi (Laattatyypit: star, mannerAarre, isoAarre, pieniAarre, robber; "pollo"), tai null.</summary>
+        public string LoytoTyyppi;
+        /// <summary>Rivi "Vuoro vaihtuu — seuraavalla vuorolla saat uuden kysymyksen." (web: väärä vastaus).</summary>
+        public bool VuoroVaihtuu;
+        /// <summary>
+        /// Tuloksen ajoitus (web: tuomio 0,9 s, sitten paljastus): 0 = vastaamatta,
+        /// 1 = vain tuomio (Oikein!/Väärin./Aika loppui) ja värit, 2 = kaikki
+        /// (fakta, repliikki, löytö, Jatka). Ohjain vaihtaa 1 → 2 ja kutsuu Nayta uudelleen.
+        /// </summary>
+        public int TulosVaihe;
     }
 
     /// <summary>Kysymysnäkymän takaisinkutsut (ohjain kutsuu pelilogiikkaa).</summary>
@@ -96,15 +124,23 @@ namespace Matkakirja.Natiivi
         public Action Puolita;
         /// <summary>Tuloksen jälkeen: sulkee kysymyksen.</summary>
         public Action Jatka;
+        /// <summary>Tervehdyssivun "Aloita peli": kysymys ja aika alkavat.</summary>
+        public Action Aloita;
     }
 
     /// <summary>Kaupungin kohtaamistekstit (kokoelmat kohtaamiset ja tarinakaari).</summary>
     public sealed class Kohtaaminen
     {
         public string Tervehdys, Loyto, Tyhja, Vaarin;
+        /// <summary>Hahmon nimi ja napin teksti (web KOHTAAMISET[id].hahmo, .nappi).</summary>
+        public string Hahmo, Nappi;
+        /// <summary>Kohtaamiskuvat (kokoelma kohtaamiskuvat): tarinakaaren henkilö ja tavallinen kohtaaminen.</summary>
+        public Kohtaamiskuva KaariKuva, TavallinenKuva;
         /// <summary>Tarinakaaren henkilön kohtaaminen ja aarreteksti (TARINAKAARI[id].kohtaaminen, .aarre).</summary>
         public string KaariKohtaaminen, KaariAarre;
     }
+
+    public sealed class Kohtaamiskuva { public string Url, Alt, Lyhyt, Kuvateksti; }
 
     /// <summary>Kohtaamistekstit kaupungeittain.</summary>
     public sealed class Kohtaamiset
@@ -139,6 +175,49 @@ namespace Matkakirja.Natiivi
                 x.Loyto = MiniJson.Teksti(d, "loyto");
                 x.Tyhja = MiniJson.Teksti(d, "tyhja");
                 x.Vaarin = MiniJson.Teksti(d, "vaarin");
+                x.Hahmo = MiniJson.Teksti(d, "hahmo");
+                x.Nappi = MiniJson.Teksti(d, "nappi");
+            }
+        }
+
+        /// <summary>Web kuvaAvain: diakriitit pois, pienet kirjaimet, vain a–z ja 0–9 ("Pariisi" = "pariisi").</summary>
+        public static string KuvaAvain(string nimi)
+        {
+            if (string.IsNullOrEmpty(nimi)) return "";
+            var sb = new System.Text.StringBuilder();
+            foreach (var c in nimi.Normalize(System.Text.NormalizationForm.FormD).ToLowerInvariant())
+                if ((c >= 'a' && c <= 'z') || (c >= '0' && c <= '9')) sb.Append(c);
+            return sb.ToString();
+        }
+
+        /// <summary>
+        /// Kokoelma kohtaamiskuvat (web kohtaamiskuvat-data.js): vain tila
+        /// 'tarkistettu' ja aktiivinen ≠ false; kaytto 'tavallinen' → tavallisen
+        /// kohtaamisen kuva, muuten tarinakaaren. Avain kuvaAvain(kohde ?? kaupunki);
+        /// myöhempi alkio voittaa (JS Map).
+        /// </summary>
+        public void LueKohtaamiskuvat(string json)
+        {
+            var avaimet = new Dictionary<string, string>();
+            foreach (var k in Kaupungit.Keys) avaimet[KuvaAvain(k)] = k;
+            var juuri = MiniJson.Objekti(MiniJson.Jasenna(json));
+            foreach (var a in MiniJson.Taulukko(MiniJson.Kentta(juuri, "alkiot")))
+            {
+                var o = MiniJson.Objekti(a);
+                var d = MiniJson.Kentta(o, "data") as Dictionary<string, object>;
+                var url = MiniJson.Teksti(o, "url");
+                if (d == null || string.IsNullOrEmpty(url)) continue;
+                if (MiniJson.Teksti(d, "tila") != "tarkistettu" || MiniJson.Kentta(d, "aktiivinen") is bool b && !b) continue;
+                var avain = KuvaAvain(MiniJson.Teksti(d, "kohde") ?? MiniJson.Teksti(d, "kaupunki"));
+                var kaupunki = avaimet.TryGetValue(avain, out var id) ? id : MiniJson.Teksti(o, "kaupunki");
+                if (string.IsNullOrEmpty(kaupunki)) continue;
+                var kuva = new Kohtaamiskuva
+                {
+                    Url = url, Alt = MiniJson.Teksti(d, "alt"),
+                    Lyhyt = MiniJson.Teksti(d, "lyhyt"), Kuvateksti = MiniJson.Teksti(d, "kuvateksti"),
+                };
+                var x = Hae(kaupunki);
+                if (MiniJson.Teksti(d, "kaytto") == "tavallinen") x.TavallinenKuva = kuva; else x.KaariKuva = kuva;
             }
         }
 
@@ -160,6 +239,12 @@ namespace Matkakirja.Natiivi
     public static class KysymysApu
     {
         /// <summary>Web visa.js UUSI_YRITYS_OHJE (kohtaamisen ensimmäinen väärä vastaus).</summary>
+        /// <summary>Web VIIMEISEN_YRITYKSEN_VAROITUS ja _NAPPI.</summary>
+        public const string ViimeisenYrityksenVaroitus = "Tämä on viimeinen mahdollisuutesi. "
+            + "Jos vastaus menee nyt väärin, aarre jää ikuisiksi ajoiksi piiloon.";
+        public const string ViimeisenYrityksenNappi = "Yritä viimeistä kertaa";
+        public const string VuoroVaihtuuRivi = "Vuoro vaihtuu — seuraavalla vuorolla saat uuden kysymyksen.";
+
         public const string UusiYritysOhje = "Yksi yritys on vielä jäljellä: voit tavata hänet "
             + "uudelleen. Jos toinenkin vastaus menee väärin, aarre jää ikuisiksi ajoiksi piiloon.";
 
@@ -182,6 +267,12 @@ namespace Matkakirja.Natiivi
             {
                 if (kaari != null) d.Tervehdys = kaari.KaariKohtaaminen;
                 else if (visa && !tervehdysNahty && !string.IsNullOrEmpty(x.Tervehdys)) { d.Tervehdys = x.Tervehdys; tervehdysNyt = true; }
+                var kuva = d.Tervehdys == null ? null : kaari != null ? x.KaariKuva : x.TavallinenKuva;
+                if (kuva != null)
+                {
+                    d.MuotokuvaUrl = kuva.Url; d.MuotokuvaAlt = kuva.Alt;
+                    d.MuotokuvaLyhyt = kuva.Lyhyt; d.MuotokuvaKuvateksti = kuva.Kuvateksti;
+                }
                 return tervehdysNyt;
             }
             bool oikein = q.OikeinVastattu == true;
@@ -194,6 +285,26 @@ namespace Matkakirja.Natiivi
             if (kaari != null && oikein && !string.IsNullOrEmpty(kaari.KaariAarre)) d.Repliikki = kaari.KaariAarre + (d.Repliikki != null ? "\n" + d.Repliikki : "");
             if (q.Kaari && !oikein && q.AarreLukittui != true) d.Loyto = (d.Loyto != null ? d.Loyto + "\n" : "") + UusiYritysOhje;
             return false;
+        }
+
+        /// <summary>
+        /// Tervehdyssivu, yritysluku ja viimeisen yrityksen varoitus (web visa.js avaus).
+        /// aloitettu = pelaaja on jo painanut Aloita peli tälle kysymykselle.
+        /// </summary>
+        public static void LisaaVaiheet(KysymysNaytto d, Kysely kysely, AvoinKysymys q, bool aloitettu)
+        {
+            if (q.Kaari)
+            {
+                var luku = kysely.KaariYritysLuku(q.Kaupunki);
+                if (luku.HasValue) { d.Yritys = luku.Value.Nyt; d.Yrityksia = luku.Value.Kaikki; }
+            }
+            bool viimeinen = d.Yritys.HasValue && d.Yritys >= d.Yrityksia;
+            if (!q.Valittu.HasValue && !string.IsNullOrEmpty(d.Tervehdys) && !aloitettu)
+            {
+                d.TervehdysVaihe = true;
+                d.AloitaTeksti = viimeinen ? ViimeisenYrityksenNappi : "Aloita peli";
+                d.Varoitus = viimeinen ? ViimeisenYrityksenVaroitus : null;
+            }
         }
 
         /// <summary>Commons-tiedoston osoite halutulla leveydellä (web commonsUrl; PNG-pienennös myös SVG:stä).</summary>
@@ -320,6 +431,8 @@ namespace Matkakirja.Natiivi
                 if (q.AarreLukittui == true) rivit.Add("Kätkö sulkeutui — tämän kaupungin aarre on menetetty.");
                 d.Loyto = rivit.Count > 0 ? string.Join("\n", rivit) : null;
                 d.JatkaTeksti = loyto != null && loyto.Kaksintaistelu ? "Kohtaa ryöstäjä" : "Jatka matkaa";
+                d.LoytoTyyppi = loyto?.WebTulos;
+                d.VuoroVaihtuu = q.OikeinVastattu != true && q.Laji != KysymysMuoto.Pulma;
             }
             return d;
         }
@@ -414,7 +527,9 @@ namespace Matkakirja.Natiivi
                 + ",\"jaljella\":" + I((int)Math.Ceiling(Math.Max(0, jaljella)))
                 + ",\"vastattu\":" + B(d.Vastattu) + ",\"valittu\":" + I(d.Valittu) + ",\"oikea\":" + (d.Vastattu ? I(d.Oikea) : "null")
                 + ",\"oikein\":" + B(d.Oikein) + ",\"aikaLoppui\":" + B(d.AikaLoppui)
-                + ",\"loyto\":" + J(d.Loyto) + ",\"viesti\":" + J(d.Viesti) + "}";
+                + ",\"loyto\":" + J(d.Loyto) + ",\"loytoTyyppi\":" + J(d.LoytoTyyppi) + ",\"viesti\":" + J(d.Viesti)
+                + ",\"tervehdysVaihe\":" + B(d.TervehdysVaihe) + ",\"tulosVaihe\":" + I(d.TulosVaihe)
+                + ",\"yritys\":" + (d.Yritys.HasValue ? I(d.Yritys.Value) : "null") + ",\"muotokuva\":" + J(d.MuotokuvaUrl) + "}";
         }
     }
 }
