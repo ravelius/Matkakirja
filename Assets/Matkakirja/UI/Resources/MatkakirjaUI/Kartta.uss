@@ -782,6 +782,13 @@
     flex-shrink: 1;
 }
 
+/* Kaiutin sulkuruksin vasemmalla puolella (web: otsikkorivin oikea reuna). */
+.mk-nosto__lukija {
+    position: absolute;
+    top: 4px;
+    right: 40px;
+}
+
 .mk-nosto__sulje {
     position: absolute;
     top: 4px;

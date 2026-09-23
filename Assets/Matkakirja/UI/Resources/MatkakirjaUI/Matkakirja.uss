@@ -1983,3 +1983,36 @@
     transition-property: opacity, background-color;
     transition-duration: 2s;
 }
+
+/* Kortin lukija (KortinLukija.cs, web .lukija-otsikkorivi > button.lukija-nappi): kaiutin ilman
+ * taustaa, luennan aikana kultainen, mykistettynä himmeä ja vinoviiva (Pulu.uss mk-kaiutin__vinoviiva). */
+.mk-lukija {
+    width: 34px;
+    height: 34px;
+    min-height: 34px;
+    padding: 0;
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: #46331f;
+    justify-content: center;
+    overflow: visible;
+}
+
+.mk-lukija > .mk-ikoni {
+    width: 21px;
+    height: 21px;
+    margin-right: 0;
+}
+
+.mk-lukija.mk-lukee {
+    color: #a8741a;
+}
+
+.mk-lukija.mk-mykistetty {
+    color: rgba(70, 51, 31, 0.5);
+}
+
+.mk-lukija > .mk-kaiutin__vinoviiva {
+    left: 16px;
+    top: 6px;
+}
