@@ -1,60 +1,73 @@
 # Natiivin linssit: inventaario ja porttaussuunnitelma
 
-*Linssiseppä 23.9.2026. Pohjana js/linssit/* (38 tiedostoa, 31 117 riviä), js/aikajana.js,
-Siirtosepän natiivi-siirtosuunnitelma (luku 3) ja Natiivisepän RAJAPINTA.md (proto-3d).*
+*Linssiseppä 23.9.2026, päivitetty illalla omistajan päätösten jälkeen
+(docs/raportit/natiivi-ajantasaisuus-20260923.md: A7, A8/B6/C9, B8, B9, B10, B18).
+Pohjana webin js/linssit/* (main 497765175), Siirtosepän natiivi-siirtosuunnitelma ja
+Natiivisepän RAJAPINTA.md (proto-3d).*
 
 ## Tiivistelmä
 
-- Webissä on 9 pelattavaa linssiä. Natiiviin tulee 7: **topografia, ihmisen matka,
-  astronautin kamera, keksinnöt, vesistöt, vertailu ja maatiedot**. Radio jää pois
-  (Fablen linjaus). Karttapallo ei ole natiivissa linssi, koska pallo on koko peli.
-- Linssit piirretään natiivissa vain pallolle. Vanhaa tasokarttaa (SVG, kerros.js) ei porteta.
-- Linssien sisältö on jo sisältöpaketissa (sisalto/1/v2, moduulit/js/linssit/*.json).
-  Paketista puuttuvat tekstuurit ja äänet on listattu alla.
-- Yhteinen runko on valmis: proto-3d haara `linssiseppa/linssirunko` (commit 5111c3b,
-  testit 16/16). Siinä ovat ILinssi, ILinssiYmparisto, Linssirekisteri, Odotuspeite ja
-  topografialinssin logiikka.
+- Natiiviin tulee **9 linssiä**: topografia, ihmisen matka, astronautin kamera, keksinnöt,
+  vesistöt, vertailu, maatiedot, **maailmanradio** (omistaja 23.9. klo 20.2x: RADIO MYÖS
+  NATIIVIIN) ja **isoisän linssi 1873**. Karttapallo ei ole natiivissa linssi, koska pallo on
+  koko peli.
+- Linssit piirretään vain pallolle; vanhaa tasokarttaa ei porteta.
+- **Linssit eivät saa olla kaikki auki** (A7): omistus ja tietäjäpisterajat kuten webissä,
+  kaikki auki vain kehittäjätilassa. Hankintalogiikka (kauppa, hiomassa, aarteen kylkiäinen,
+  optikon hyvitys) on Pelikoodarin (B8); linssien puolella on kynnystaulu ja omistuskoukku.
+- Seitsemän peninkulman linssi (B9) avaa kaikki linssit: sama koukku kuin kehittäjätila.
 
-## Linssit porttausjärjestyksessä
+## Linssit ja tila
 
-| # | Linssi | Web (rivit) | Natiivi toteutus | Tarvitsee muilta | Tila |
-|---|---|---|---|---|---|
-| 1 | Topografia | topografia.js, -tarkennus, reliefikuva, reliefipyramidi.js (~2500) | Rasterikerros pohjan tilalle (Web Mercator XYZ). Tarkennuslaastaria ja 4k/8k-valintaa ei tarvita, koska Cesium hakee laatat tasoittain. | Karttaseppä: reliefisarja EPSG:3857 Z0–Z8. Natiiviseppä: KarttaKerrokset (LisaaRasteri, Nakyvyys, KerrosValmis, epäonnistumistapahtuma). Natiivi-UI: peite, valitsin, selite. | Logiikka valmis ja testattu. Sovitin odottaa KarttaKerroksia ja reliefisarjaa. |
-| 2 | Ihmisen matka | 14 tiedostoa (~8600) + aikajana.js (6442) + aikajana-virrat*.js (~2600) + aikajana-vanat.js (1205) | Aikajanamoottori C#:na (kello, pysäkit, kamera-ajot, hyppykaari, kertomus). Värivirrat pallon pintaan ajonaikaisena tasavälisenä tekstuurina (maski + virtojen laajeneminen), vanat viivoina. | Natiiviseppä: tasavälinen ajonaikainen tekstuurikerros (Texture2D, lat/lon-kehys, alfa) laattojen päälle ja viivat (polut) pallolle. Natiivi-UI: kortti, karuselli ja Tiedeliite. Pelikoodari: äänimaisema, luenta ja pulun kysymykset. | Aikajanamoottorin kuvaus tekeillä (agentti). |
-| 3 | Astronautin kamera | 7 tiedostoa (~10 600) | Oma avaruusnäkymä: reliefi vaimeana (kylläisyys 0,8), ISS-rata (inklinaatio 51,6°), tähdet, pilvikuori (1,01 × säde), 64 kohdetta ja 83 NASA-kuvaa, nimiöiden limityksen esto. | Natiiviseppä: pilvikuoren mesh ja tähtitaivas (tai lupa tehdä ne Linssit-kansioon georeferenssin alle). Siirtoseppä: pilvitekstuuri, humina ja musiikki media.json:iin. | Ei aloitettu. |
-| 4 | Keksinnöt | keksinnot.js (1859) | Sama aikajanamoottori ilman virtoja: reittiviiva ja valopisteet, 26 pysäkkiä 1765–1928. | Kuten ihmisen matka, lisäksi Valokeila. | Ei aloitettu. |
-| 5 | Vesistöt | vesistot.js (700) | Topografian reliefi, joet viivoina, järvet polygoneina ja enintään 20 vesinimeä. | Viivat ja polygonit pallolle (KarttaKerrokset). Vesidata (maailmankartta-maasto.js) on laudan koordinaateissa, joten se viedään asteiksi tai tuotetaan uudelleen Natural Earthista. | Ei aloitettu. |
-| 6 | Vertailu | vertailu.js (70) + js/vertailu.js, maakayrat.js | Karttatila: kaupungit piiloon, maat napautettaviksi, enintään 3 maata Suomen rinnalle. | Maiden rajat pallolle ja maan napautus. Natiivi-UI: vertailukäyrät. | Ei aloitettu. |
-| 7 | Maatiedot | maatiedot.js (69) | Sama karttatila, napautus avaa maalehden. | Kuten vertailu. Natiivi-UI: maalehti. | Ei aloitettu. |
+| # | Linssi | Web | Natiivi | Tila (proto-3d master) |
+|---|---|---|---|---|
+| 1 | Topografia | topografia.js ym. (~2500) | Reliefisarja rasterina pohjan tilalle (Cesium, {reverseY}) | Valmis, iPad OK |
+| 2 | Ihmisen matka | 14 tiedostoa + aikajana (~19 000) | Esitysmoottori, virrat, vanat, valot, kertojan ääni aikaleimoin | Valmis; tutkimusvaihe ja muisti puuttuvat. iPad: vanat, kertoja; hyppy- ja äänikorjaukset 23.9. |
+| 3 | Astronautin kamera | 7 tiedostoa (~10 600) | Reliefi, pilvikuori, tähdet, ISS, 64 kohdetta, avaruuden tausta ja ilmakehän hehku | Valmis, iPad OK. Kylläisyys 0,8/1,0 kytkimen takana (omistaja päättää TestFlightissa; vaimea sarja Karttasepältä) |
+| 4 | Keksinnöt | keksinnot.js + aikajana | Pysäkkiajo, valot, tummennus, pysäkkiluennat | Valmis, iPad OK. Puuttuu: reiän kulku hypyssä, tiedeliite (B18) |
+| 5 | Vesistöt | vesistot.js (700) | Topografia + joet, järvet (Tasavari), nimet | Valmis, iPad OK |
+| 6 | Vertailu | vertailu.js, js/vertailu.js, maakayrat.js | Maatila (Natiiviseppä), valinnat, laput, Vertaa | Valmis, iPad OK. Maakäyrät (B18): Natiivi-UI piirtää, data puuttuu (ks. alla) |
+| 7 | Maatiedot | maatiedot.js | Maatila, kaksivaiheinen valinta, maalehti | Valmis, iPad OK |
+| 8 | **Maailmanradio** | radio.js (2215), radiosoitin.js (1248), viritin.js (1209), pistenaytto.js (1430), packs/radiot.js (183, ~50 asemaa) | Karttatila: kaupungit play-nappeina, yksi striimi kerrallaan, viritysääni (kohina) vähimmäisajan, asema kerrallaan; soitinkotelo ja pistenäyttö UI:ssa | **Ei aloitettu.** Tarvitsee: striimisoitin (iOS AVPlayer -liitännäinen: Icecast mp3/aac ja yksi HLS), asemat paketissa, lisenssit (Siirtoseppä), kartuschan radio-merkki ja soitin (Natiivi-UI) |
+| 9 | **Isoisän linssi 1873** | haara karttaseppa-isoisan-linssi (erä 1 kesken, tauolla 21.9.): isoisa-1873.js, valtiot-1873.js, rajat-1873.json.gz | Erä 1: rajat 1873 pallolle (viivat), nimet 1873 nimiöinä, nykyrajat piiloon. Erä 2: Horation reitti katkoviivana, retroasu (seepia, tumma muste). Valokuvat, äänet ja media myöhemmin | **Ei aloitettu.** Odottaa webin erää 1 ja lisenssipäätöstä: raja-aineisto on GPL-3.0 (historical-basemaps) — käykö maksulliseen appiin? |
 
-## Yhteinen infra (linssien tarpeet muille)
+## Omistus ja kynnykset (A7, C9)
 
-| Tarve | Kenelle | Tila |
+Web (js/linssit/omistus.js, main): omistus = passin leimat ∪ pelaajan lista ∪ perusvarusteet;
+kehittäjätila antaa kaikki toimivat linssit. Tietäjäpistekynnykset [400, 800, 1400, 2200]
+antavat kukin seuraavan omistamattoman `manner: null` -linssin rekisterijärjestyksessä,
+eli ihmisen matka, keksinnöt, radio, astronautin kamera.
+
+**Natiivi omistajan päätöksellä:**
+
+| Kynnys | Linssi |
+|---|---|
+| 400 tp | ihmisen matka |
+| 800 tp | keksinnöt |
+| 1400 tp | maailmanradio **ja** topografia (topografia pysyy samalla kynnyksellä) |
+| 2200 tp | astronautin kamera |
+| — | vertailu, maatiedot, vesistöt: kehittäjätila (webissä sama) ja myöhemmin kauppa (B8) |
+| lahja | isoisän linssi 1873: tarinan lahja isoisän matkakirjan mukana, ei aarre (loki 21.9. klo 14.59) |
+
+Toteutus: `Linssirekisteri.Avauskynnykset` ja `Saatavilla`-koukku (proto-3d). Pelikoodari
+kytkee tallennuksen, passin, kaupan ja hyvityksen; seitsemän peninkulman linssi ja
+kehittäjätila avaavat kaikki.
+
+## Lisäosat (B18)
+
+| Osa | Web | Natiivi |
 |---|---|---|
-| KarttaKerrokset: rasteri, näkyvyys, valmis- ja epäonnistumistapahtuma | Natiiviseppä | Sovittu, "tulossa" RAJAPINTA.md:ssä |
-| Tasavälinen ajonaikainen tekstuurikerros (ihmisen matkan virrat) | Natiiviseppä | Pyydetään ihmisen matkan alussa |
-| Viivat ja polygonit pallolle (vanat, joet, järvet, maiden rajat) | Natiiviseppä | Reitit-viivan pohjalta; pyydetään |
-| Valokeila (keksinnöt, pysäkin korostus) | Natiiviseppä | "tulossa" RAJAPINTA.md:ssä |
-| Linssivalitsin, odotuspeite ja selitekortti | Natiivi-UI | Sovittu, Natiivi-UI:n erän 3 jälkeen |
-| Linssien omistus (LINSSIKYNNYKSET [400, 800, 1400, 2200], PERUSLINSSIT, OPTIKON_HYVITYS 500) | Pelikoodari | Kytketään Linssirekisteri.Saatavilla-koukkuun |
-| Musiikin pito, kertojan luenta ja äänimaisemat | Pelikoodari | Rajapinta ILinssiYmparisto.MusiikkiPitoon; muut sovitaan ihmisen matkan alussa |
+| Keksintöjen tiedeliite | js/tiedeliite.js (909) | Natiivi-UI (koukku KeksinnotKerros.PysakkiKasittelija); linssi antaa pysäkin |
+| Vertailun maakäyrät | js/maakayrat.js (773), data maakayrat.json (lataaMaakayrat) | Natiivi-UI piirtää (VertailuLinssi.VertailuPyydetty); käyrädata pakettiin (Siirtoseppä) |
+| Minipulun kysymyskortti | Natiivi-UI (merge-pyynnössä) | — |
 
-## Paketista puuttuvat (Siirtosepän korjauslista kohta 2 vahvistaa)
+## Muille
 
-- Reliefisarja Web Mercatorina (Karttaseppä, pyydetty 23.9.)
-- Astronautin pilvitekstuuri (`matkakirja/linssit/pilvet-bluemarble-2048.jpg`), humina ja musiikki
-- Ihmisen matkan äänimaisemien manifesti ja kertomusmanifesti (luenta)
-- Maa- ja rantamaskit (ihmisen matka, astronautti): ne ovat generoituja (tools/tee-maamaski.mjs,
-  tee-rantamaski.mjs), joten natiivi lukee ne samasta vientikaavasta eikä kopiona
-
-## Avaussäännöt nyt (js/linssit/omistus.js)
-
-Pallo on perusvaruste. Tietäjäpisterajat 400, 800, 1400 ja 2200 antavat seuraavan omistamattoman
-manner: null -linssin rekisterijärjestyksessä, eli webissä ihmisen matka, keksinnöt, radio ja
-astronautin kamera. Topografia (manner: southamerica), vertailu, maatiedot ja vesistöt ovat vain
-kehittäjätilassa.
-
-**Natiivi (Fablen päätös 23.9.2026):** radio jää pois, ja sen 1400 tp:n kynnys on topografian.
-Kynnykset: ihmisen matka 400, keksinnöt 800, topografia 1400, astronautin kamera 2200. Muut
-linssit ovat vain kehittäjätilassa. Taulu on proto-3d:ssä `Linssirekisteri.Avauskynnykset`
-(haara linssiseppa/linssirunko, 772c9dc).
+| Tarve | Kenelle |
+|---|---|
+| Kehittäjätilan lippu natiivissa (kaikki linssit auki) ja omistuksen tallennus | Pelikoodari |
+| Radion striimisoitin (AVPlayer-liitännäinen) | Linssiseppä ehdottaa tekevänsä; Natiiviseppä kääntää |
+| Radioasemat ja lisenssit maksulliseen appiin | Siirtoseppä |
+| Kartuschan radio-merkki, radiosoittimen kotelo ja pistenäyttö | Natiivi-UI |
+| saturate(0.8) -reliefisarja | Karttaseppä |
+| Isoisän linssin raja-aineiston lisenssi (GPL-3.0) | Fable / omistaja |
