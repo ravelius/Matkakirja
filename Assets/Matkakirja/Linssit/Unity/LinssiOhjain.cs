@@ -476,7 +476,7 @@ namespace Matkakirja.Natiivi
                 Kytke();
                 if (kytketty == null) { tilat[avain] = KerrosTila.Luovutti; return; }
                 tilat[avain] = KerrosTila.Latautuu;
-                kytketty.LisaaRasteri(avain, r.Url,
+                kytketty.LisaaRasteri(avain, r.CesiumUrl,
                     r.Projektio == Projektio.Geographic
                         ? CesiumUrlTemplateRasterOverlayProjection.Geographic
                         : CesiumUrlTemplateRasterOverlayProjection.WebMercator,

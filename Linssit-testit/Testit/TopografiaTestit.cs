@@ -31,6 +31,9 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(Projektio.WebMercator, ras.Projektio);
             Oleta.Sama(8, ras.MaxTaso);
             Oleta.Sama(false, y.Vale.Nakyvat["laatat"]);
+            // Sarja on slippy XYZ (y = 0 pohjoisin); Cesiumin {y} laskee etelästä.
+            Oleta.Tosi(ras.Url.EndsWith("/{z}/{x}/{y}.jpg"), ras.Url);
+            Oleta.Tosi(ras.CesiumUrl.EndsWith("/{z}/{x}/{reverseY}.jpg"), ras.CesiumUrl);
         }
 
         [Testi] static void PelikerroksetPiiloonVastaPeitteenAlla()

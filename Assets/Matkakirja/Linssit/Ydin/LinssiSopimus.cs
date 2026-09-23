@@ -61,6 +61,14 @@ namespace Matkakirja.Linssit
         public int MinTaso;
         public int MaxTaso;
         public float Alfa = 1f;
+
+        /// <summary>
+        /// Osoite Cesiumin UrlTemplate-kerrokselle: Cesiumin {y} laskee etelästä,
+        /// joten OSM-järjestyksen {y} vaihdetaan {reverseY}:ksi (kuten
+        /// Rakennus.LaattaUrl). Ilman tätä reliefi piirtyi iPadilla vaakaraitoina
+        /// (Natiivisepän löydös 23.9.2026, 741352b).
+        /// </summary>
+        public string CesiumUrl => Url?.Replace("{y}", "{reverseY}");
     }
 
     /// <summary>Rasterikerroksen lataustila näkyvällä alueella.</summary>
