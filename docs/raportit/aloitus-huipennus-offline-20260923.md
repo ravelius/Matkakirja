@@ -23,35 +23,39 @@ Kuvat: `/Users/Shared/Claude/proto-3d/lokit/natiivi-aloitus-huipennus-20260923/`
 ## 2. Offline-savuke
 
 Omistajan ohje (AskUserQuestion 23.9.2026): verkon katkaisu sovelluksen omalla
-lipulla (`ui offline verkoton`), EI oikealla host-tason verkkokatkolla —
-jaettu Mac, muut sessiot eivät saa häiriintyä.
+lipulla, EI oikealla host-tason verkkokatkolla — jaettu Mac, muut sessiot
+eivät saa häiriintyä.
 
-- **Reaali-lataus (Luxemburg)**: yritin ladata Luxemburgin oikeasti asetukset-
-  paneelin "Lataa"-napista (simulaattorin kosketustyökalulla, vieritin listan
-  L-kirjaimeen ja napautin). Napautus ei tuottanut havaittavaa muutosta eikä
-  `Documents/offline/`-kansioon ilmestynyt tiedostoja 2 minuutin sisällä.
-  **En vahvistanut, toimiko lataus oikeasti** — napautus saattoi osua ohi
-  (Unity-canvasilla ei ole natiivia accessibility-puuta, joten kohdistus on
-  pelkkää pikselilaskentaa screenshotista) tai lataus ei kirjoita
-  `Documents/offline/`-kansioon vaan johonkin muualle (esim. `Library/Caches/
-  laatat/`, joka täyttyy joka tapauksessa tavallisesta kartan selauksesta).
-  Ei tutkittu pidemmälle ajan puutteessa — jos reaali-lataus on tärkeä todistaa,
-  tarvitaan joko konsolilokin luku asennushetkellä tai selkeämpi osoitin
-  (esim. latauspalkin animaatio) siitä että lataus todella käynnistyi.
-- **Verkoton-tila**: `ui offline verkoton` → pilleri "Ei verkkoa · ei
-  ladattuja maita" ilmestyi oikein (kuva `offline-savuke-20260923/
-  ei-verkkoa-ei-ladattuja.png`). Peruskartta (topografia, kaupunkinimet)
-  piirtyi silti oikein Ranskan/Beneluxin alueella — perusprojisointi ei
-  vaadi verkkoa (erillinen pohjadata bundlessa vai jo välimuistissa
-  aiemmasta selauksesta, ei varmistettu kumpi). **Ei todistettu** että
-  nimenomaan Luxemburgin laatat tulisivat ladatusta offline-datasta, koska
-  latausta ei voitu vahvistaa (yllä).
-- `ui offline pois` palautti tilan oikein lokin mukaan.
+Ensimmäinen yritys (build 760f9d8, ilman reaalilataus-komentoa): epäonnistui,
+ks. alla. **Natiiviseppä lisäsi Fablen pyynnöstä oikean reaalilataus-komennon**
+(`offline lataa <ISO>`, `palvelin`, Documents/komento.txt, build 689d020) —
+uusittu sillä, **7/7 onnistui**:
+
+- `offline lataa LUX` (komento.txt): lataa ensin maailman yleiskartan (8,5 Mt,
+  6 s), sitten LUX:n (27,3 Mt, 465/465 tiedostoa, 0 virhettä, 7 s). Lokinäyte
+  `offline-savuke-20260923/lataus-lokinaki.txt`.
+- Sovellus käynnistetty uudelleen (kylmä, ei säilynyttä yhteyttä), kamera
+  ajettu Luxemburgiin (`aja 49.61 6.13 4 1.5`), `palvelin`-komento:
+  **`offline 733, välimuisti 563, verkko 147, virheitä 0`** — offline-lukema
+  reilusti yli nollan (iPadilla vertailuarvo oli 613). Todistaa, että laatat
+  todella tulevat ladatusta offline-datasta eikä pelkästä ajonaikaisesta
+  välimuistista. Lokinäyte `offline-savuke-20260923/palvelin-lokinaki.txt`.
+- **Verkoton-tila** (`ui offline verkoton`, build 760f9d8): pilleri "Ei
+  verkkoa · ei ladattuja maita" ilmestyi oikein (kuva `offline-savuke-
+  20260923/ei-verkkoa-ei-ladattuja.png`), peruskartta piirtyi silti.
+  `ui offline pois` palautti tilan oikein.
+
+### Aiempi, epäonnistunut yritys (jätetty talteen oppina)
+
+Ennen reaalilataus-komennon saamista yritin ladata Luxemburgin
+asetuspaneelin "Lataa"-napista simulaattorin kosketustyökalulla (vieritin
+L-kirjaimeen, napautin pikselilaskennalla — Unity-canvasilla ei ole natiivia
+accessibility-puuta). Napautus ei tuottanut havaittavaa muutosta eikä
+`Documents/offline/`-kansioon ilmestynyt tiedostoja 2 min sisällä; en
+saanut varmuutta osuiko napautus edes oikein. Natiiviseppä ratkaisi tämän
+lisäämällä suoran testikomennon — kosketuspohjainen reitti jäi tarpeettomaksi.
 
 ## Johtopäätös
 
-Offline-UI:n tilanhallinta (pilleri, verkoton-pakotus) toimii. Itse
-lataustoiminnon (`OfflineSilta.Lataa`) todentaminen jäi kesken — tarvitaan
-joko oma ui-komento reaalilataukselle (esim. `ui offline lataa luxemburg`)
-tai Documents-polun varmistus keneltä omistaa `OfflineTilaUi.cs`/
-`OfflineSilta.cs` (Natiiviseppä, Kartta-alue TYOTAPA.md:n mukaan).
+Sekä lataus että offline-serveröinti todistettu toimivaksi oikealla datalla
+(733 offline-osumaa). Verkoton-UI (pilleri) toimii. Ei avoimia löydöksiä.
