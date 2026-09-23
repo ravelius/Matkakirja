@@ -46,3 +46,14 @@ merget omistajan säännöllä. Laitetestaajan pulu-QA (v2138) tekemättä.
    163 kaupungin lat/lon (Siirtosepän löydös); kartta 22c ja nostotason poltto odottavat omistajaa.
 4. Laitetestaaja: pulu-QA v2138 + CI-reboot. 5. Julkaisija: 33 Commons-kuvaa ämpäriin (peilaa-media
    ei lue js/linssit). 6. Codex: kuittaukset postilaatikossa.
+
+## Lisäys klo 11.05 (ennen tilinvaihtoa)
+- v2145 tuotannossa (kallistus koelippuna); Julkaisija tekee jonoa: v2146 korit, #2902 Suoraan
+  kartalle, #2895/#2897/#2898/#2901/#2904 → versiot Julkaisijan luovutuksessa.
+- Luovutukset pushattu: 3D-selvittäjä (selvittaja-3d-luovutus), Karttaseppä (karttaseppa-tyo-
+  20260922), Laitetestaaja (laitetestaaja 0edd6c8de), Pelikoodari (nollattu, odottaa tehtävää),
+  Siirtoseppä (siirtoseppa-luovutus 032ff32a5). Julkaisijan luovutus tulossa.
+- Herokuvat (#2904): 60/394 Commons-viitteillä (56 BY-SA), 94 omistajan ChatGPT-erän viitteet
+  tuntemattomat → KYSYMYS OMISTAJALLE; suositus attribuutio + juristi (herot + SA + radiot).
+- Pulu-QA v2138 osittain (postilaatikko); Codexin kaksi lisäkohtausta Pelikoodarin jonossa.
+- Postivahti tietää tilinvaihdosta; uusi Fable antaa sille session id:nsä.
