@@ -157,6 +157,22 @@ namespace Matkakirja
             return m;
         }
 
+        /// <summary>Valon paikka näytöllä pikseleinä (testikomento "valot osoita id"); false, jos ei näy.</summary>
+        public bool RuutuPaikka(string id, out Vector2 ruutu)
+        {
+            ruutu = default;
+            var kamera = kierto != null ? kierto.GetComponent<Camera>() : Camera.main;
+            foreach (var v in valot)
+            {
+                if (v.Id != id || kamera == null) continue;
+                Vector3 r = kamera.WorldToScreenPoint(georeferenssi.transform.TransformPoint(v.Paikka));
+                if (r.z <= 0) return false;
+                ruutu = r;
+                return true;
+            }
+            return false;
+        }
+
         void Napautus(Vector2 ruutu)
         {
             if (!Valmis || Valittu == "ei" || Napautettu == null) return;
