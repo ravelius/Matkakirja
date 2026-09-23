@@ -58,9 +58,11 @@
 //   ui livia pois                             Livia pois
 //   ui livia avaus [nollaa|peru]              Livian avausesittely (ensiliito + kuplat, ilman valintavahtia);
 //                                             nollaa = lippu matkakirja-livia-avaus pois ensin, peru = keskeytä
-//   ui linssi valitsin|peite|selite|astro|kuva|sumu|vertailu|maa|keksinnot|matka|sulje|pois
+//   ui linssi valitsin|peite|selite|astro|kuva|sumu|vertailu|maa|keksinnot|matka|radio|valikko|varusteet|sulje|pois
 //                                             linssien UI esimerkkiaineistolla (Linssit/LinssiKomennot.cs)
 //   ui linssi vertailu FIN SWE [ITA JPN]      vertailuarkki näillä mailla + maakäyrät (latautuu|verkko = tilat)
+//   ui linssi valikko [keksinnot|matka] [kiinni|alusta]  linssin hampurilaisvalikko aikajanan ylärivissä
+//   ui linssi varusteet [id|ei] [paalla]      laukun Varusteet: esikatselu + Aktivoi esimerkkilinsseillä
 //   kuva nimi                                 Documents/ui-nimi.png (koko ruutu)
 //   odota s                                   seuraava rivi s sekunnin päästä
 using System.Collections.Generic;
