@@ -388,31 +388,110 @@
 }
 
 .mk-lehti__tehtavatulos {
-    margin-top: 8px;
-    font-size: 14.5px;
+    margin-top: 11px;
+    padding: 8px 11px;
+    border-left-width: 4px;
+    border-left-color: rgba(60, 44, 26, 0.55);
+    background-color: rgba(60, 44, 26, 0.07);
+    font-size: 15px;
     white-space: normal;
-    color: #9a2b21;
+    color: #211d18;
 }
 
 .mk-lehti__tehtavatulos.mk-oikein {
-    color: #2f6b3a;
+    border-left-color: rgba(74, 124, 58, 0.9);
+    background-color: rgba(106, 158, 84, 0.2);
+}
+
+.mk-lehti__tehtavatulos.mk-vaarin {
+    border-left-color: rgba(74, 124, 58, 0.85);
+    background-color: rgba(106, 158, 84, 0.1);
+}
+
+/* Palkintojuliste tehtävälaatikon kyljessä (web .minitehtava-palkinnollinen, .juliste-palkinto). */
+.mk-lehti__tehtavarunko {
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.mk-lehti__tehtavapalsta {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.mk-lehti__julistepalkinto {
+    width: 110px;
+    flex-shrink: 0;
+    margin: 2px 0 10px 12px;
+    align-items: stretch;
+}
+
+.mk-lehti__julistekuva {
+    height: 165px;
+    border-width: 1px;
+    border-color: rgba(60, 44, 26, 0.55);
+    -unity-background-scale-mode: scale-to-fit;
+    opacity: 0.5;
+    -unity-background-image-tint-color: rgb(200, 190, 175);
+    transition-property: opacity, -unity-background-image-tint-color;
+    transition-duration: 0.26s;
+}
+
+.mk-lehti__julistepalkinto.mk-voitettu .mk-lehti__julistekuva {
+    opacity: 1;
+    border-color: rgba(60, 44, 26, 0.8);
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+}
+
+.mk-lehti__julistemerkki {
+    margin-top: 5px;
+    font-size: 9px;
+    letter-spacing: 2.2px;
+    -unity-text-align: upper-center;
+    color: rgba(60, 44, 26, 0.72);
+}
+
+.mk-lehti__julistepalkinto.mk-voitettu .mk-lehti__julistemerkki {
+    color: rgba(60, 44, 26, 0.95);
+}
+
+.mk-lehti__lunastus {
+    min-height: 44px;
+    margin-top: 8px;
+    border-width: 1px;
+    border-color: rgba(60, 44, 26, 0.65);
+    border-radius: 4px;
+    background-color: rgba(255, 253, 245, 0.9);
+    color: #211d18;
+}
+
+.mk-lehti__lunastus .mk-nappi__teksti {
+    font-size: 15.5px;
 }
 
 /* --- alapalkki ja sisällys ------------------------------------------------------------ */
 
 .mk-lehti__alapalkki {
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
     flex-shrink: 0;
     padding: 8px 14px 14px 14px;
     border-top-width: 1px;
     border-top-color: rgba(70, 51, 31, 0.25);
 }
 
+/* Poistu vasemmalla, eteenpäin vievä oikealla (omistaja 8.8.2026). */
+.mk-lehti__navi {
+    flex-direction: row;
+    align-items: stretch;
+}
+
 .mk-lehti__poistu {
     min-height: 40px;
-    padding: 0 10px 0 0;
-    border-width: 0;
+    margin-right: auto;
+    padding: 4px 12px;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.3);
+    border-radius: 3px;
     background-color: rgba(0, 0, 0, 0);
     color: rgba(70, 51, 31, 0.55);
 }
@@ -422,10 +501,11 @@
 }
 
 .mk-lehti__selaus {
+    flex-direction: column;
     flex-shrink: 1;
     min-height: 40px;
     margin-left: 8px;
-    padding: 6px 12px;
+    padding: 4px 12px;
     border-width: 1px;
     border-color: rgba(70, 51, 31, 0.45);
     border-radius: 3px;
@@ -434,16 +514,72 @@
 }
 
 .mk-lehti__selaus--seuraava {
-    margin-left: auto;
     background-color: rgba(217, 161, 59, 0.22);
     border-color: rgba(122, 85, 20, 0.6);
 }
 
-.mk-lehti__selaus .mk-nappi__teksti {
+.mk-lehti__selaus--sisallys {
+    flex-direction: row;
+    margin-left: 0;
+    margin-right: auto;
+    padding: 4px 11px;
+}
+
+.mk-lehti__selaus--sisallys > .mk-ikoni {
+    width: 18px;
+    height: 18px;
+    margin-right: 0;
+}
+
+.mk-lehti__selaussuunta {
     font-size: 13px;
+    -unity-text-align: middle-center;
+}
+
+.mk-lehti__selausaihe {
+    max-width: 150px;
+    font-size: 10.5px;
+    opacity: 0.72;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    -unity-text-align: middle-center;
+}
+
+/* Tehtävänappi (web #arrival-yes, primary) täysleveänä rivinä alapalkin alla. */
+.mk-lehti__tehtavanappi {
+    min-height: 0;
+    margin-top: 8px;
+    padding: 7px 13px;
+    border-width: 1px;
+    border-color: rgba(122, 85, 20, 0.6);
+    border-radius: 10px;
+    color: #2a1a08;
+}
+
+.mk-lehti__tehtavanappi .mk-nappi__teksti {
+    font-size: 14px;
+}
+
+.mk-lehti__tehtavanappi--pois {
+    opacity: 0.55;
+    -unity-background-image-tint-color: rgb(170, 170, 170);
+}
+
+/* "Maa-liite" kaupunkilehden viimeisellä sivulla (web .maa-liite-nappi). */
+.mk-lehti__liite {
+    min-height: 0;
+    margin-top: 8px;
+    padding: 7px 13px;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.45);
+    border-radius: 10px;
+    background-color: rgba(255, 252, 242, 0.5);
+    color: #46331f;
+}
+
+.mk-lehti__liite .mk-nappi__teksti {
+    font-size: 13px;
 }
 
 .mk-lehti__sisallys {
@@ -493,4 +629,492 @@
 
 .mk-suurennos {
     position: absolute;
+}
+
+/* --- nähtävyysarkki ja turistiopas (Nahtavyysarkki.cs; web .nahtavyys-arkki, .opas-*) ---- */
+
+.mk-nahtavyys__peite {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(14, 9, 4, 0.34);
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.22s;
+}
+
+.mk-nahtavyys__peite.mk-auki {
+    opacity: 1;
+}
+
+.mk-nahtavyys {
+    flex-shrink: 1;
+    max-height: 100%;
+    padding: 19px 18px 16px 18px;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.3);
+    border-radius: 3px;
+    background-color: #f5f0e2;
+    color: rgba(58, 42, 26, 0.95);
+}
+
+.mk-nahtavyys__yla {
+    flex-shrink: 0;
+}
+
+.mk-nahtavyys__aika {
+    margin-bottom: 2px;
+    font-size: 11.5px;
+    letter-spacing: 2.5px;
+    color: rgba(70, 51, 31, 0.72);
+}
+
+.mk-nahtavyys__otsikkorivi {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 11px;
+}
+
+.mk-nahtavyys__otsikko {
+    flex-shrink: 1;
+    font-size: 24px;
+    white-space: normal;
+    color: #3a2a1a;
+}
+
+.mk-nahtavyys__kaiutin {
+    width: 40px;
+    height: 40px;
+    min-height: 40px;
+    margin-left: 6px;
+    padding: 0;
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(70, 51, 31, 0.62);
+    justify-content: center;
+}
+
+.mk-nahtavyys__kaiutin > .mk-ikoni {
+    width: 22px;
+    height: 22px;
+    margin-right: 0;
+}
+
+.mk-nahtavyys__kaiutin.mk-valittu {
+    color: #a8741a;
+}
+
+.mk-nahtavyys__vieritys {
+    flex-shrink: 1;
+}
+
+.mk-nahtavyys__kappale {
+    margin-bottom: 13px;
+    font-size: 16px;
+    white-space: normal;
+}
+
+.mk-nahtavyys__lainaus {
+    margin: 17px 0 18px 0;
+    padding: 2px 0 2px 14px;
+    border-left-width: 3px;
+    border-left-color: rgba(70, 51, 31, 0.4);
+}
+
+.mk-nahtavyys__lainausteksti {
+    font-size: 17px;
+    white-space: normal;
+}
+
+.mk-nahtavyys__lainauslahde {
+    margin-top: 5px;
+    font-size: 11.8px;
+    white-space: normal;
+    color: rgba(70, 51, 31, 0.72);
+}
+
+.mk-nahtavyys__kuvalohko {
+    align-self: center;
+    margin-bottom: 16px;
+}
+
+.mk-nahtavyys__kuvakehys {
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: rgba(70, 51, 31, 0.08);
+}
+
+.mk-nahtavyys__kuva {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.mk-nahtavyys__kuvateksti {
+    margin-top: 5px;
+}
+
+.mk-nahtavyys__selite {
+    font-size: 14px;
+    white-space: normal;
+}
+
+.mk-nahtavyys__kuvalahde {
+    margin-top: 2px;
+    font-size: 10px;
+    white-space: normal;
+    color: rgba(70, 51, 31, 0.66);
+}
+
+.mk-nahtavyys__lahderivi {
+    margin-top: 10px;
+    font-size: 11.5px;
+    letter-spacing: 0.8px;
+    white-space: normal;
+    color: rgba(70, 51, 31, 0.66);
+}
+
+.mk-nahtavyys__wiki {
+    align-self: flex-start;
+    min-height: 40px;
+    margin-top: 10px;
+    padding: 6px 14px;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.45);
+    border-radius: 3px;
+    background-color: rgba(255, 252, 242, 0.5);
+    color: #46331f;
+}
+
+.mk-nahtavyys__napit {
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-shrink: 0;
+    padding-top: 10px;
+}
+
+.mk-nahtavyys__sulje {
+    min-width: 120px;
+}
+
+/* Opas (web .opas-arkki): oma paletti, iso otsikko aksenttivärillä. */
+.mk-nahtavyys--opas {
+    background-color: #f8efdc;
+    color: #3a2a15;
+    padding-top: 10px;
+}
+
+.mk-nahtavyys--opas .mk-nahtavyys__otsikko {
+    font-size: 36px;
+    letter-spacing: -0.3px;
+    color: #a53a22;
+}
+
+.mk-nahtavyys--opas.mk-nahtavyys--levea .mk-nahtavyys__otsikko {
+    font-size: 44px;
+}
+
+.mk-nahtavyys--opas .mk-nahtavyys__kaiutin > .mk-ikoni {
+    width: 24px;
+    height: 24px;
+}
+
+.mk-nahtavyys--opas .mk-nahtavyys__lahderivi,
+.mk-nahtavyys--opas .mk-nahtavyys__aika {
+    color: #6d5942;
+}
+
+.mk-opas__ingressi {
+    margin-bottom: 18px;
+    padding-bottom: 14px;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(165, 58, 34, 0.3);
+    font-size: 19.8px;
+    white-space: normal;
+    color: #3a2a15;
+}
+
+.mk-opas__jakso {
+    margin-bottom: 22px;
+}
+
+.mk-opas__valiotsikko {
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(165, 58, 34, 0.3);
+    font-size: 12px;
+    letter-spacing: 2.6px;
+    color: #a53a22;
+}
+
+.mk-opas__rinnakkain {
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.mk-opas__pino {
+    flex-direction: column;
+}
+
+.mk-opas__palsta {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+}
+
+.mk-opas__sivupalsta {
+    width: 256px;
+    flex-shrink: 0;
+    margin-left: 20px;
+}
+
+.mk-opas__sivupalsta--kuva {
+    width: 40%;
+}
+
+.mk-opas__kainalo {
+    margin: 3px 0 14px 0;
+    border-width: 1px;
+    border-color: rgba(58, 42, 21, 0.22);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.mk-opas__vyo {
+    padding: 9px 11px 10px 11px;
+}
+
+.mk-opas__vyo--lammin {
+    background-color: #f6ddc8;
+}
+
+.mk-opas__vyo--viilea {
+    background-color: #e0eae7;
+}
+
+.mk-opas__vyootsikko {
+    margin-bottom: 5px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #6d5942;
+}
+
+.mk-opas__vyorivi {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 0;
+    padding: 5px 0;
+    border-width: 0;
+    border-top-width: 1px;
+    border-top-color: rgba(58, 42, 21, 0.13);
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.mk-opas__vyorivi--eka {
+    border-top-width: 0;
+}
+
+.mk-opas__vyonimi {
+    flex-shrink: 1;
+    font-size: 12.8px;
+    white-space: normal;
+    color: #3a2a15;
+}
+
+.mk-opas__vyonappi .mk-opas__vyonimi {
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(58, 42, 21, 0.3);
+}
+
+.mk-opas__vyonappi.mk-auki .mk-opas__vyonimi {
+    color: #a53a22;
+}
+
+.mk-opas__tahdet {
+    flex-shrink: 0;
+    margin-left: 8px;
+    font-size: 12.8px;
+    color: #7f570b;
+}
+
+.mk-opas__nosto {
+    margin: 24px 0;
+    padding: 14px 10px;
+    border-top-width: 3px;
+    border-bottom-width: 3px;
+    border-color: #a53a22;
+}
+
+.mk-opas__nostoteksti {
+    font-size: 21px;
+    white-space: normal;
+    -unity-text-align: middle-center;
+    color: #a53a22;
+}
+
+.mk-opas__laatikko {
+    margin: 21px 0;
+    padding: 14px 16px 15px 16px;
+    border-width: 1px;
+    border-left-width: 5px;
+    border-color: rgba(58, 42, 21, 0.18);
+    border-left-color: #a53a22;
+    border-radius: 3px;
+    background-color: #f2e5c8;
+}
+
+.mk-opas__laatikkootsikko {
+    margin-bottom: 9px;
+    font-size: 12.8px;
+    letter-spacing: 2.6px;
+    color: #a53a22;
+}
+
+.mk-opas__saagraafi {
+    width: 240px;
+    flex-shrink: 0;
+    margin-left: 16px;
+}
+
+.mk-opas__pino > .mk-opas__saagraafi {
+    width: 100%;
+    max-width: 320px;
+    align-self: center;
+    margin: 0 0 13px 0;
+}
+
+.mk-opas__parasaika {
+    margin-bottom: 10px;
+    font-size: 16px;
+    white-space: normal;
+    color: #3a2a15;
+}
+
+.mk-opas__kausi {
+    flex-direction: row;
+    margin-bottom: 6px;
+}
+
+.mk-opas__kausi--pino {
+    flex-direction: column;
+}
+
+.mk-opas__kausinimi {
+    width: 120px;
+    flex-shrink: 0;
+    margin-right: 14px;
+}
+
+.mk-opas__kausi--pino .mk-opas__kausinimi {
+    width: auto;
+    margin-right: 0;
+}
+
+.mk-opas__kausisana {
+    font-size: 13px;
+    color: #3a2a15;
+}
+
+.mk-opas__kausikk {
+    font-size: 11.5px;
+    opacity: 0.7;
+    color: #3a2a15;
+}
+
+.mk-opas__kausitiedot {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.mk-opas__kausilampo {
+    font-size: 13.8px;
+    color: #1d5a5e;
+}
+
+.mk-opas__kausikuvaus {
+    font-size: 15px;
+    white-space: normal;
+    color: #3a2a15;
+}
+
+.mk-opas__suunnittele {
+    border-left-color: #1d5a5e;
+}
+
+.mk-opas__suunnittele .mk-opas__laatikkootsikko {
+    color: #1d5a5e;
+}
+
+.mk-opas__linkki {
+    align-self: flex-start;
+    min-height: 0;
+    margin-bottom: 6px;
+    padding: 2px 0;
+    border-width: 0;
+    border-bottom-width: 1px;
+    border-bottom-color: #1d5a5e;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: #1d5a5e;
+}
+
+.mk-opas__linkki .mk-nappi__teksti {
+    font-size: 14.4px;
+}
+
+/* Matkailijalle-lohkon sisäänkäynnit oppaaseen (web .opas-nauha-kotelo, .opas-lue-lisaa). */
+.mk-lehti__opaskotelo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 173px;
+    height: 173px;
+    overflow: hidden;
+}
+
+.mk-lehti__opasnauha {
+    position: absolute;
+    top: 46px;
+    right: -115px;
+    width: 352px;
+    min-height: 0;
+    padding: 8px 0;
+    border-width: 0;
+    border-radius: 0;
+    background-color: #b3775f;
+    color: #f2e4d0;
+    rotate: 45deg;
+}
+
+.mk-lehti__opasnauha .mk-nappi__teksti {
+    font-size: 11.2px;
+    letter-spacing: 1.8px;
+    -unity-text-align: middle-center;
+}
+
+.mk-lehti__opaslinkki {
+    align-self: flex-start;
+    min-height: 0;
+    margin-top: 2px;
+    padding: 0;
+    border-width: 0;
+    border-bottom-width: 1px;
+    border-bottom-color: #1c6f6b;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: #1c6f6b;
+}
+
+.mk-lehti__opaslinkki .mk-nappi__teksti {
+    font-size: 15px;
 }

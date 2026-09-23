@@ -2,8 +2,12 @@
 // (js/ui.js showAloitusportti, renderIntro, typeText, aloitaKartalta; css .start-gate,
 // .intro-juliste, .intro-arkki, .intro-valinta).
 //
-//   1 PORTTI     tumma verho pallon päällä: "Laita äänet päälle 🔈", kultainen
-//                "Aloita seikkailu", alhaalla linkki "Oppiminen on hauskaa" (periaatteet).
+//   1 PORTTI     tumma verho pallon päällä; yläosassa heti sama 1873-juliste kuin avauksessa
+//                ja yksi lause pelistä (Fablen kaanonlause 23.9.2026) —
+//                Laitetestaajan ensikokemus 23.9.: pelkkä pyörivä pallo ei kertonut pelistä
+//                mitään. Kehystetty nappi "Laita äänet päälle 🔈" (laittaa Äänimaiseman
+//                päälle ja kuittaa "Äänet päällä"), kultainen "Aloita seikkailu",
+//                alhaalla linkki "Oppiminen on hauskaa" (periaatteet).
 //                Tallennettu matka (PeliOhjain.TallennusOn): "Jatka matkaa" (kulta) ja
 //                "Uusi matka" (haamu) — webissä tallennus jatkuu ilman porttia.
 //   2 AVAUS      yläosassa 1873-juliste (◈-viivat, MATKAKIRJA, MAAILMAN YMPÄRI,
@@ -116,11 +120,23 @@ namespace Matkakirja.Natiivi
             // 1 PORTTI (päällimmäisenä)
             portti = Rakenne.El("mk-aloitus__portti", juuri);
             Rakenne.Tausta(Rakenne.El("mk-aloitus__porttireuna", portti, PickingMode.Ignore), Kuviot.Vinjetti);
+            // Juliste ja lause heti portissa; sama juliste jää avaukseen portin häipyessä.
+            var porttiYla = Rakenne.El("mk-aloitus__ylaosa mk-aloitus__porttiyla", portti, PickingMode.Ignore);
+            Rakenne.Tausta(porttiYla, Kuviot.Pysty("aloitus-verho", Kuviot.Vari("#f7edd8", 0.86f), Kuviot.Vari("#f7edd8", 0f)));
+            var porttiJuliste = Rakenne.El("mk-juliste", porttiYla, PickingMode.Ignore);
+            Viiva(porttiJuliste);
+            JulisteRivi(porttiJuliste, "MATKAKIRJA", "mk-juliste__nimi");
+            JulisteRivi(porttiJuliste, "MAAILMAN YMPÄRI", "mk-juliste__yla");
+            JulisteRivi(porttiJuliste, "KAHDEKSASSAKYMMENESSÄ PÄIVÄSSÄ", "mk-juliste__ala");
+            JulisteRivi(porttiJuliste, "OSA II · UNOHDETTU AARRE", "mk-juliste__osa");
+            Viiva(porttiJuliste);
+            porttiLause = Rakenne.Teksti(PorttiLause, "mk-aloitus__porttilause", porttiYla);
+            Kirjasimet.Aseta(porttiLause, Kirjasin.LukuKursiivi);
             var keskus = Rakenne.El("mk-aloitus__keskus", portti, PickingMode.Ignore);
-            var aanet = Rakenne.El("mk-aloitus__aanet", keskus, PickingMode.Ignore);
-            var at = Rakenne.Teksti("Laita äänet päälle", "mk-aloitus__aaniteksti", aanet);
-            Kirjasimet.Aseta(at, Kirjasin.Kone);
-            aanet.Add(new SvgIkoni(Ikonit.Viiva["kaiutin"]));
+            aaniNappi = Rakenne.Nappi(null, "mk-aloitus__aanet", AanetPaalle, keskus);
+            aaniTeksti = Rakenne.Teksti("Laita äänet päälle", "mk-aloitus__aaniteksti", aaniNappi);
+            Kirjasimet.Aseta(aaniTeksti, Kirjasin.Kone);
+            aaniNappi.Add(new SvgIkoni(Ikonit.Viiva["kaiutin"]));
             jatkaNappi = Rakenne.Nappi("Jatka matkaa", "mk-nappi--kulta mk-aloitus__aloita", Jatka, keskus);
             Rakenne.Tausta(jatkaNappi, Kuviot.Kulta);
             Kirjasimet.Aseta(jatkaNappi, Kirjasin.KoneLihava);
@@ -132,6 +148,26 @@ namespace Matkakirja.Natiivi
 
             periaatteet = Periaatteet(juuri);
             UiKerros.Hae().StartCoroutine(LataaTekstit());
+        }
+
+        // Fablen kaanonlause (23.9.2026); webin meta description päivitetään samaksi.
+        const string PorttiLause = "Seuraa isoisän matkakirjaa vuodelta 1873 ja etsi Aarnin luettelon unohdetut aarteet.";
+        Label porttiLause, aaniTeksti;
+        Button aaniNappi;
+
+        /// <summary>Äänet päälle -nappi: Äänimaisema (koko pelin mykistys) päälle ja kuittaus.</summary>
+        void AanetPaalle()
+        {
+            Asetukset.Aseta(Kytkin.Aanimaisema, true);
+            aaniTeksti.text = "Äänet päällä";
+            aaniNappi.AddToClassList("mk-valittu");
+            Aanet.PulunTehoste("paper");
+        }
+
+        void PaivitaAaniNappi()
+        {
+            aaniTeksti.text = "Laita äänet päälle";
+            aaniNappi.RemoveFromClassList("mk-valittu");
         }
 
         string introText = IntroText, introPaikka = IntroPaikka, introValinta = IntroValinta;
@@ -210,6 +246,7 @@ namespace Matkakirja.Natiivi
         public void Nayta(Action<string> aloita, IReadOnlyList<(string Id, string Nimi)> kohteet = null, Action jatka = null)
         {
             this.aloita = aloita;
+            PaivitaAaniNappi();
             this.jatka = jatka;
             this.kohteet = kohteet != null && kohteet.Count > 0 ? kohteet : Array.ConvertAll(Kohteet, id => (id, (string)null));
             jatkaNappi.style.display = jatka != null ? DisplayStyle.Flex : DisplayStyle.None;

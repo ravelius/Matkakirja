@@ -6,7 +6,7 @@
 //                                  tyyppi, yleisradio, lahde, sivu, luokka "sallittu" | "linkki" |
 //                                  "kielletty", peruste, varaAani { url, kesto, tekija, lisenssi } | null }
 //   moduulit/js/packs/radiot.json  RADIOT { ISO3: { url, asema, virallinen } } (varareitti ilman
-//                                  lisenssitietoa: luokka null → soitetaan vain kehittäjätilassa)
+//                                  lisenssitietoa: luokka null → ei soittoa, ei edes kehittäjätilassa)
 //   kokoelmat/kaupungit.json       kaupungit laudan järjestyksessä (maa, aloitus, lentokentta)
 //   moduulit/js/packs/viritysaanet.json  VIRITYSAANET [{ tiedosto, kesto }]
 //
@@ -28,7 +28,7 @@ namespace Matkakirja.Linssit.Radio
         /// <summary>
         /// Omistajan hybridimalli (23.9.2026): "sallittu" = soitetaan sovelluksessa, "linkki" =
         /// aseman oma sivu avataan (ei soittoa), "kielletty" = vain vara-äänite jos on.
-        /// null = tuntematon (varareitin moduuli): soitetaan vain kehittäjätilassa.
+        /// null = tuntematon (varareitin moduuli): ei soittoa missään tilassa.
         /// </summary>
         public string Luokka;
         /// <summary>Aseman oma https-sivu (luokka linkki).</summary>

@@ -1214,11 +1214,50 @@
     justify-content: center;
 }
 
+/* Portin yläosa: sama juliste kuin avauksessa ja pelin kuvauslause (ensikokemus 23.9.). */
+.mk-aloitus__porttiyla {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.mk-aloitus__porttilause {
+    width: 86%;
+    max-width: 480px;
+    margin-top: 4px;
+    font-size: 17px;
+    white-space: normal;
+    -unity-text-align: middle-center;
+    color: var(--map-ink);
+}
+
+/* Keskus portin alaosaan (juliste vie ylimmät 44 %). */
+.mk-aloitus__portti > .mk-aloitus__keskus {
+    top: 44%;
+}
+
+/* Kehystetty äänet-nappi (ennen pelkkä teksti, joka ei erottunut kosketettavaksi). */
 .mk-aloitus__aanet {
     flex-direction: row;
     align-items: center;
+    min-height: 40px;
     margin-bottom: 14px;
+    padding: 7px 16px;
+    border-width: 1px;
+    border-color: rgba(232, 214, 172, 0.75);
+    border-radius: 20px;
+    background-color: rgba(36, 26, 18, 0.55);
     color: #e8d6ac;
+}
+
+.mk-aloitus__aanet.mk-valittu {
+    border-color: var(--accent);
+    color: var(--kulta);
+}
+
+.mk-aloitus__aanet.mk-valittu .mk-aloitus__aaniteksti {
+    color: var(--kulta);
 }
 
 .mk-aloitus__aaniteksti {
@@ -1390,4 +1429,404 @@
 
 .mk-kehittaja__virhe {
     color: #9a2b21;
+}
+
+/* --- laukun galleriat, minipopup ja pikkuseloste (Galleriat.cs, Minipopup.cs) ---------- */
+
+/* Laukun osion otsikko + i-nappi (web #aarni-otsikko). */
+.mk-laukku__osiorivi {
+    flex-direction: row;
+    align-items: center;
+}
+
+.mk-laukku__osiorivi .mk-laukku__osio {
+    margin-right: 0;
+}
+
+/* web button.seloste-nappi: pieni i-ympyrä otsikon perässä. */
+.mk-seloste-nappi {
+    width: 18px;
+    height: 18px;
+    min-height: 18px;
+    margin: 0 0 0 6px;
+    padding: 0;
+    border-width: 1px;
+    border-color: var(--accent);
+    border-radius: 9px;
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--accent);
+}
+
+.mk-seloste-nappi .mk-nappi__teksti {
+    font-size: 11px;
+    -unity-text-align: middle-center;
+}
+
+.mk-seloste-nappi.mk-auki {
+    background-color: var(--accent);
+    color: var(--panel);
+}
+
+.mk-pikkuseloste {
+    position: absolute;
+    max-width: 304px;
+    padding: 10px 26px 10px 12px;
+    border-width: 1px;
+    border-color: rgba(217, 161, 59, 0.45);
+    border-radius: 8px;
+    color: var(--map-ink);
+}
+
+.mk-pikkuseloste__teksti {
+    font-size: 13px;
+    white-space: normal;
+}
+
+.mk-pikkuseloste__sulje {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 24px;
+    height: 24px;
+    min-height: 24px;
+    padding: 0;
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--map-ink-soft);
+}
+
+.mk-pikkuseloste__sulje .mk-nappi__teksti {
+    font-size: 16px;
+    -unity-text-align: middle-center;
+}
+
+/* web .minipopup-kehys / -kortti */
+.mk-minipopup {
+    background-color: rgba(14, 9, 4, 0.45);
+}
+
+.mk-minipopup__kehys {
+    width: 100%;
+    max-width: 384px;
+    max-height: 66%;
+    padding: 11px 13px 14px 13px;
+    border-width: 1px;
+    border-color: rgba(122, 85, 20, 0.32);
+    border-radius: 12px;
+    color: #211d18;
+    scale: 0.97 0.97;
+    transition-property: scale;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+}
+
+.mk-minipopup.mk-auki .mk-minipopup__kehys {
+    scale: 1 1;
+}
+
+.mk-minipopup__ylarivi {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.mk-minipopup__otsikko {
+    font-size: 17.5px;
+    letter-spacing: 0.9px;
+    color: #46331f;
+}
+
+.mk-minipopup__sulje {
+    min-height: 0;
+    padding: 0 6px;
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(70, 51, 31, 0.75);
+}
+
+.mk-minipopup__sulje .mk-nappi__teksti {
+    font-size: 20px;
+}
+
+.mk-minipopup__vieritys {
+    flex-shrink: 1;
+}
+
+.mk-minipopup__teksti {
+    margin-bottom: 8px;
+    font-size: 14.5px;
+    white-space: normal;
+}
+
+/* TIETÄJÄN TIE (web .tietaja-galleria-*) */
+.mk-tietaja__ylarivi {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 11px;
+}
+
+.mk-tietaja__selitys {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 136px;
+    margin-right: 14px;
+    font-size: 14.4px;
+    white-space: normal;
+}
+
+.mk-tietaja__nykyinen {
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.mk-tietaja__nykykuva {
+    width: 144px;
+    height: 144px;
+    border-radius: 72px;
+    border-width: 2px;
+    border-color: rgba(122, 85, 20, 0.6);
+    background-color: rgba(255, 255, 255, 0.35);
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.mk-tietaja__nykynimi {
+    margin-top: 5px;
+    font-size: 12.5px;
+    color: #46331f;
+    -unity-text-align: upper-center;
+}
+
+.mk-tietaja__kohta {
+    align-items: center;
+    padding: 5px 3px;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0);
+    border-radius: 8px;
+}
+
+.mk-tietaja__kohta.mk-valittu {
+    border-color: rgba(122, 85, 20, 0.55);
+    background-color: rgba(217, 161, 59, 0.18);
+}
+
+.mk-tietaja__kohta--saavuttamaton {
+    opacity: 0.45;
+}
+
+.mk-tietaja__kuva {
+    width: 54px;
+    height: 54px;
+    margin-bottom: 2px;
+    border-radius: 27px;
+    border-width: 1px;
+    border-color: rgba(122, 85, 20, 0.5);
+    background-color: rgba(255, 255, 255, 0.35);
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.mk-tietaja__nimi {
+    font-size: 11px;
+    color: #46331f;
+    white-space: normal;
+    -unity-text-align: upper-center;
+}
+
+.mk-tietaja__raja {
+    font-size: 10.5px;
+    color: rgba(70, 51, 31, 0.7);
+}
+
+/* JULISTEGALLERIA (web .julistegalleria-*) */
+.mk-galleria-huntu {
+    background-color: rgba(26, 18, 8, 0.28);
+}
+
+.mk-galleria {
+    width: 94%;
+    max-width: 760px;
+    max-height: 88%;
+    padding: 10px 14px 16px 14px;
+    border-width: 1px;
+    border-color: rgba(60, 44, 26, 0.35);
+    border-radius: 3px;
+    background-color: #f8f3e6;
+    color: rgba(60, 44, 26, 0.92);
+}
+
+.mk-galleria__yla {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 6px;
+    padding: 4px 0 6px 0;
+    border-bottom-width: 1px;
+    border-color: rgba(60, 44, 26, 0.22);
+}
+
+.mk-galleria__otsikko {
+    margin-right: 8px;
+    font-size: 16px;
+    letter-spacing: 1.6px;
+    color: rgba(60, 44, 26, 0.92);
+}
+
+.mk-galleria__luku {
+    font-size: 13px;
+    color: rgba(60, 44, 26, 0.65);
+}
+
+.mk-galleria__rasti {
+    min-height: 0;
+    margin-left: auto;
+    padding: 0 5px;
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(60, 44, 26, 0.7);
+}
+
+.mk-galleria__rasti .mk-nappi__teksti {
+    font-size: 22px;
+}
+
+.mk-galleria__vieritys {
+    flex-shrink: 1;
+}
+
+.mk-galleria__ryhma {
+    margin: 10px 0 6px 0;
+    font-size: 12px;
+    letter-spacing: 1.1px;
+    color: rgba(60, 44, 26, 0.7);
+}
+
+.mk-galleria__vedos {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    min-height: 0;
+    padding: 0;
+    border-width: 0;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.mk-galleria__kuva {
+    border-width: 1px;
+    border-color: rgba(60, 44, 26, 0.6);
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.mk-galleria__nimi {
+    margin-top: 4px;
+    font-size: 10px;
+    letter-spacing: 0.3px;
+    white-space: normal;
+    -unity-text-align: upper-center;
+    color: rgba(60, 44, 26, 0.8);
+}
+
+.mk-galleria__vedos--lukossa {
+    align-items: center;
+    justify-content: center;
+}
+
+.mk-galleria__kysymys {
+    font-size: 15px;
+    color: rgba(60, 44, 26, 0.92);
+}
+
+.mk-katkokehys {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: rgba(60, 44, 26, 0.4);
+}
+
+.mk-galleria__kuva .mk-katkokehys {
+    display: none;
+}
+
+.mk-galleria__vedos--kuvaton .mk-galleria__kuva {
+    border-width: 0;
+}
+
+.mk-galleria__vedos--kuvaton .mk-galleria__kuva .mk-katkokehys {
+    display: flex;
+}
+
+/* --- SÄÄGRAAFI (Saagraafi.cs; web css .vuosisaa, .vuosisaa-kortti, .opas-saagraafi) ------ */
+/* Korkeus asetetaan koodissa leveydestä (viewBox 300×176); fonttikoot skaalautuvat. */
+.mk-saa {
+    width: 100%;
+    flex-shrink: 0;
+    background-color: rgba(255, 250, 238, 0.65);
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.35);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.mk-saa__akseli,
+.mk-saa__arvo {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    font-size: 8.5px;
+    color: rgba(70, 51, 31, 0.8);
+}
+
+.mk-saa__kuluva {
+    color: #7a5514;
+    -unity-font-style: bold;
+}
+
+/* Ääripäiden lukemat: halo pitää luvut luettavina palkkien päällä (web paint-order: stroke). */
+.mk-saa__arvo {
+    color: #8a5a12;
+    -unity-font-style: bold;
+    text-shadow: 0 0 2px rgba(245, 240, 226, 0.95);
+}
+
+.mk-saa__arvo--sade {
+    color: #4c6478;
+}
+
+/* Iso näkymä minipopupissa: webin sääkortti on enintään 480 px leveä. */
+.mk-saa__popup {
+    max-width: 480px;
+}
+
+.mk-saa__luonnehdinta {
+    margin: 10px 0 0 0;
+    font-size: 13.8px;
+    white-space: normal;
+    color: #2d2010;
+}
+
+.mk-saa__selite {
+    margin: 8px 0 0 0;
+    font-size: 11px;
+    white-space: normal;
+    color: rgba(70, 51, 31, 0.75);
+}
+
+/* Oppaan pieni kuvaaja (web .opas-saagraafi 15rem) ja kuvateksti. */
+.mk-saa__kelluke {
+    width: 240px;
+    max-width: 100%;
+    margin: 2px 0 10px 0;
+}
+
+.mk-saa__kelluke-teksti {
+    margin: 5px 0 0 0;
+    font-size: 10.2px;
+    letter-spacing: 0.2px;
+    white-space: normal;
+    color: rgba(58, 42, 21, 0.7);
 }

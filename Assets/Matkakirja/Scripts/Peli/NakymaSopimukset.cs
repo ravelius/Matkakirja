@@ -30,7 +30,7 @@ namespace Matkakirja.Natiivi
 
     /// <summary>
     /// Matkavalinta (modaalinen) ja kartan alareunan toimintonappi
-    /// ("Heitä noppaa" kesken reitin, "Tutki kaupunkia" kaupungissa).
+    /// ("Heitä noppaa" kesken reitin).
     /// </summary>
     public interface IMatkaValinta
     {
@@ -74,9 +74,6 @@ namespace Matkakirja.Natiivi
         /// <summary>"Liiku tänne" → matkavalinta (muu kuin oma kaupunki).</summary>
         public Action Liiku;
         public string LiikuTeksti;
-        /// <summary>POISTUMASSA (Fablen tarkastus A6): ei enää aseteta; tehtävään mennään lehden tehtävänapista ja vihreästä pisteestä.</summary>
-        public Action Tutki;
-        public string TutkiTeksti;
         /// <summary>
         /// Oma kaupunki, mantereen aarre löytynyt: "Mannerlento" (web mannerLennot) →
         /// matkavalinta, jossa rivi per mantere ("Lennä Oseaniaan: Sydney"). null = ei tarjolla.

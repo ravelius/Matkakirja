@@ -129,6 +129,30 @@ Sivu vaihtuu napeista tai vaakapyyhkäisyllä; kuvan napautus avaa suurennoksen;
 `ui lehti <kaupunki> [sivu]`, `ui lehti sivu <n>`, `ui lehti kuva`, `ui maalehti <ISO> [aihe]`,
 `ui lehti sisallys` (maalehti).
 
+Pelissä lehti avautuu Pelikoodarin ILehtiNakyma-sopimuksella (`PeliNakymat.Lehti`): LehtiTila
+(raha, matkapäivä, vastatut, tehtävänappi) ja LehtiTeko (minitehtävä, juliste, Etsi kätkö,
+maalehti, sivu näkyi). Alapalkki kuten webissä: Poistu vasemmalla, Edellinen/Seuraava kahdella
+rivillä (suunta + sivun nimi), maalehdessä ☰; kaupunkilehdessä täysleveä tehtävänappi jokaisella
+sivulla ja viimeisellä sivulla "Maa-liite". Minitehtävän palkintojuliste (kaupungeilla, joilla
+on juliste): vedos laatikon kyljessä, oikea vastaus → VOITETTU ja "Lunasta juliste".
+`ui lehti tehtava | tehtava-pois` näyttää keksityn tehtävänapin, `ui lehti viimeinen` kääntää
+viimeiselle sivulle.
+
+```
+ui lehti venetsia
+odota 4
+ui lehti tehtava
+odota 1
+kuva lehti-tehtavanappi
+ui lehti viimeinen
+odota 3
+kuva lehti-liite-ja-tehtava
+ui lehti tehtava-pois
+odota 1
+kuva lehti-tehtava-pois
+ui sulje
+```
+
 ```
 ui aloita pariisi
 ui lehti firenze
@@ -183,6 +207,46 @@ sisällön ilman peliä. "Matkan tilastot ›" avaa lohkon (tila muistetaan).
 ui laukku esimerkki
 odota 2
 kuva laukku
+ui sulje
+```
+
+Laukun galleriat (`Galleriat.cs`, `Minipopup.cs`): julisterivi "n/m »" avaa julistegallerian
+(maanosittain, voittamattomat "?"-paikkoina, vedoksen napautus → Kuvasuurennos selattavana
+sarjana; kehittäjätilassa kaikki voitettuina kuten webissä), tietäjärivin i avaa Tietäjän
+tien minipopupina ja Aarnin luettelon i pikkuselosteen. `ui julisteet [n]` näyttää gallerian
+n ensimmäisellä julisteella voitettuna, `ui tietaja [pisteet]` minipopupin, `ui seloste`
+laukun esimerkillä ja Aarnin selosteen auki.
+
+```
+ui julisteet 7
+odota 3
+kuva julistegalleria
+ui sulje
+ui tietaja 120
+odota 3
+kuva tietajan-tie
+ui sulje
+ui seloste
+odota 2
+kuva aarni-seloste
+ui sulje
+```
+
+Turistiopas ja nähtävyysarkki (`Nahtavyysarkki.cs`, `Saagraafi.cs`; web js/opas.js, js/nahtavyydet.js):
+kaupunkikortin rivi "Turistiopas" (kun kaupungilla on oppaan artikkeli) ja lehden etusivun
+Matkailijalle-lohko (vino MATKAOPAS-nauha, kuvan napautus, "Lue lisää matkailijan oppaasta →")
+avaavat oppaan: iso otsikko ja kaiutin, ingressi, "Parasta täällä / Hyvä tietää" -kainalo (rivin
+napautus → pikkuseloste), jaksot kuvineen, "Milloin matkaan?" säägraafilla (napautus → iso
+graafi), nosto ja "Suunnittele matka" -linkit. Leveällä (≥ 640 pt) kainalo ja kapeat kuvat
+tekstin rinnalla, puhelimessa allekkain. `ui opas [kaupunki] [vieritys px]`.
+
+```
+ui opas lontoo
+odota 4
+kuva opas-alku
+ui opas lontoo 900
+odota 4
+kuva opas-kainalo-saa
 ui sulje
 ```
 

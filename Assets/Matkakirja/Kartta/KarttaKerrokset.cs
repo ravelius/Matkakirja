@@ -69,6 +69,8 @@ namespace Matkakirja
         public MaaKartta maakunnat;
         /// <summary>Pelinappula (Pelikoodari: Matkalla-tila, RAJAPINTA luku 3).</summary>
         public Nappula nappula;
+        /// <summary>Pelin omat karttapisteet (B3 aarrepiste, Pelikoodari).</summary>
+        public Karttapisteet pisteet;
 
         void Awake()
         {

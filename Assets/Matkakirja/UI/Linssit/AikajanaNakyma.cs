@@ -189,8 +189,11 @@ namespace Matkakirja.Natiivi
                 {
                     if (tila != Tila.Keksinnot) return;
                     if (!string.IsNullOrEmpty(keksinnot.Otsikko)) otsikko.text = keksinnot.Otsikko.ToUpperInvariant();
-                    var ajo = LinssiUi.Keksinnot?.Ajo;
-                    if (KeksinnotKerros.EsittelyUIssa && ajo != null && !ajo.Kaynnissa && ajo.Tila.I < 0) NaytaEsittely();
+                    var l = LinssiUi.Keksinnot;
+                    KuunteleKaynnistys(l);
+                    var ajo = l?.Ajo;
+                    // Esittely vain käynnistämättömälle kaarelle (selaus tai testikomento voi käynnistää ohi napin).
+                    if (KeksinnotKerros.EsittelyUIssa && ajo != null && !l.OnKaynnistetty && !ajo.Kaynnissa && ajo.Tila.I < 0) NaytaEsittely();
                 });
             }
             else
@@ -305,6 +308,19 @@ namespace Matkakirja.Natiivi
         }
 
         // --- keksinnöt -------------------------------------------------------------------
+
+        KeksinnotLinssi kuunneltu;
+
+        /// <summary>Kaari käynnistyi mistä tahansa reitistä → esittely väistyy (Linssiseppä, Kaynnistetty).</summary>
+        void KuunteleKaynnistys(KeksinnotLinssi l)
+        {
+            if (ReferenceEquals(l, kuunneltu)) return;
+            if (kuunneltu != null) kuunneltu.Kaynnistetty -= Kaynnistyi;
+            kuunneltu = l;
+            if (l != null) l.Kaynnistetty += Kaynnistyi;
+        }
+
+        void Kaynnistyi() => UiKerros.PaaSaikeessa(() => Rakenne.Nayta(esittely, false, 250));
 
         void NaytaEsittely()
         {

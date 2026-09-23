@@ -114,6 +114,10 @@ namespace Matkakirja.Natiivi
 #else
             Linssirekisteri.Kehittajatila = PlayerPrefs.GetInt(KehittajatilaAvain, KehittajatilaOletus ? 1 : 0) == 1;
 #endif
+            // Radiotila (web luentaSallittu): kaupungin napautus on play-nappi eikä avaa korttia,
+            // ja luennat vaikenevat (Pelikoodarin koukut, pelikoodari/linssikytkennat).
+            PeliOhjain.NapautusSallittu = () => Matkakirja.Linssit.Radio.RadioLinssi.LuentaSallittu;
+            PeliOhjain.LuentaSallittu = () => Matkakirja.Linssit.Radio.RadioLinssi.LuentaSallittu;
             rekisteri = new Linssirekisteri(this);
             rekisteri.Lisaa(new Topografia());
             StartCoroutine(LataaAstronautti());
@@ -501,6 +505,8 @@ namespace Matkakirja.Natiivi
                 kartta = new Kartta(o.kierto);
                 linssi = new Matkakirja.Linssit.Radio.RadioLinssi(aineisto, virta, viritin, kartta,
                     Matkakirja.Linssit.Radio.RadioAineisto.Pistefontti);
+                // Pelaajan kaupunki näkyy aina radiotilassa (web sääntö 1).
+                linssi.Sijainti = () => PeliOhjain.Instanssi?.PelaajanKaupunki;
                 linssi.TilaMuuttui += t => o.Kirjaa($"radio: {t.Vaihe}{(t.Viritys != Matkakirja.Linssit.Radio.ViritysVaihe.Ei ? "/" + t.Viritys : "")} " +
                     $"{t.AsemaId ?? "-"} {t.KaupunkiNimi ?? ""} {t.Nimi ?? ""}{(t.Viesti != null ? " (" + t.Viesti + ")" : "")}{(t.Sivu != null ? " → " + t.Sivu : "")}");
                 linssi.Avaa(y);
@@ -747,7 +753,12 @@ namespace Matkakirja.Natiivi
             if (mita == "kaynnista") l.Kaynnista();
             else if (mita == "jatka") l.JatkaValinaytoksesta();
             else if (mita == "tauko") l.Ajo.Tauko();
-            else if (int.TryParse(mita, out int i)) l.Ajo.Siirry(i);
+            else if (int.TryParse(mita, out int i))
+            {
+                // Selaus ennen Käynnistä-nappia: kaari käynnistetään ensin (esittely väistyy).
+                if (!l.OnKaynnistetty) l.Kaynnista();
+                l.Ajo.Siirry(i);
+            }
             else if (mita != "tila") { Kirjaa("keksinnöt: tuntematon " + mita); return; }
             var t = l.Ajo.Tila;
             Kirjaa($"keksinnöt: pysäkki {t.I}, vuosi {t.Paikka:F1}, käynnissä {l.Ajo.Kaynnissa}, välinäytös {l.Ajo.ValinaytosAuki}, luenta {System.IO.Path.GetFileName(l.Luenta ?? "-")}");

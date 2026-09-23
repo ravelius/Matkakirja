@@ -44,6 +44,8 @@ namespace Matkakirja.Natiivi
         public readonly Nostokortti Nostokortti;
         public readonly Lehtinakyma Lehti;
         public readonly Paljastus Paljastus;
+        public readonly Julistegalleria Julistegalleria;
+        public readonly Nahtavyysarkki Nahtavyydet;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         static void KytkeTehdas()
@@ -53,6 +55,8 @@ namespace Matkakirja.Natiivi
             PeliNakymat.KaupunkiKortti = _ => Hae().Kaupunkikortti;
             PeliNakymat.Saapumistraileri = (kaupunki, url, valmis) => Hae().Traileri.NaytaPelista(kaupunki, url, valmis);
             PeliNakymat.Kysymys = _ => Hae().Kysymys;
+            // Natiivilehti (B1): WKWebView-kuori jää käyttämättä.
+            PeliNakymat.Lehti = _ => Hae().Lehti;
             // Aloitusnäkymä: silmukka odottaa tilassa Aloitus (Jatka / Uusi matka).
             PeliOhjain.AloitusNakyma = true;
         }
@@ -95,7 +99,11 @@ namespace Matkakirja.Natiivi
             Huipennus = new Huipennus(kerros);
             Nostokortti = new Nostokortti(kerros);
             Lehti = new Lehtinakyma(kerros);
+            Nahtavyydet = new Nahtavyysarkki(kerros); // lehden päälle (sama kerros, myöhemmin)
+            // Lehti aukeaa kaiken päälle: auki jääneet valikot ja popupit kiinni.
+            Lehti.Avautui += _ => { Valikko.Sulje(); Aanentasot.Sulje(); Matkalaukku.Sulje(); Vahvistus.Sulje(); Julistegalleria.Sulje(); Minipopup.SuljeAuki(); };
             Paljastus = new Paljastus(kerros);
+            Julistegalleria = new Julistegalleria(kerros); // laukun päälle (sama kerros, myöhemmin)
             // Karttavalon napautus (Natiiviseppä: AiheValot → KarttaValotSilta) → nostokortti;
             // linssin aikana ei (web linssiEstaa).
             UiPalvelut.ValoNapautettu += id => UiKerros.PaaSaikeessa(() =>
@@ -205,8 +213,12 @@ namespace Matkakirja.Natiivi
             // Aloitus (kerros 45) jäi muuten kaiken päälle: ui sulje ja pelin tilanvaihdot sulkevat sen.
             Aloitus.Piilota();
             Nostokortti.Sulje();
+            Nahtavyydet.SuljeKokonaan();
             Lehti.Sulje();
             Paljastus.Sulje();
+            Julistegalleria.Sulje();
+            Minipopup.SuljeAuki();
+            Pikkuseloste.Sulje();
             Vahvistus.Sulje();
             Matkavalinta.Piilota();
             Matkavalinta.PiilotaHeitto();

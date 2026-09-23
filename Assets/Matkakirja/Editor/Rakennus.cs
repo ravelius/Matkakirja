@@ -119,6 +119,10 @@ namespace Matkakirja.Editori
             var valot = georefGo.AddComponent<AiheValot>();
             valot.georeferenssi = georef;
             valot.materiaali = Materiaali("Karttavalo", "Matkakirja/Valopiste", Color.white);
+            var pisteet = georefGo.AddComponent<Karttapisteet>();
+            pisteet.georeferenssi = georef;
+            pisteet.materiaali = valot.materiaali;
+            kerrokset.pisteet = pisteet;
 
             var korttiGo = new GameObject("Käyttöliittymä");
             var kortti = korttiGo.AddComponent<NimiKortti>();
@@ -363,6 +367,9 @@ namespace Matkakirja.Editori
             plist.ReadFromFile(plistPolku);
             var ats = plist.root["NSAppTransportSecurity"]?.AsDict() ?? plist.root.CreateDict("NSAppTransportSecurity");
             ats.SetBoolean("NSAllowsLocalNetworking", true);
+            // Radiolinssi (AVPlayer): Icecast-asemista osa on http-osoitteissa; poikkeus koskee vain
+            // AVFoundationin mediaa, ei muuta verkkoliikennettä (App Storen hyväksymä avain).
+            ats.SetBoolean("NSAllowsArbitraryLoadsForMedia", true);
             plist.WriteToFile(plistPolku);
         }
 
