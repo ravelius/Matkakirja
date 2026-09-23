@@ -23,8 +23,8 @@ namespace Matkakirja
         [Tooltip("Aloituspituusaste (astetta).")]
         public double pituus = 10.0;
 
-        [Tooltip("Kameran korkeus maanpinnasta metreinä.")]
-        public double korkeus = 14_000_000.0;
+        [Tooltip("Kuinka suuren osan kapeammasta kuvakulmasta pallo täyttää (0–1).")]
+        public double taytto = 0.92;
 
         void Update()
         {
@@ -33,8 +33,24 @@ namespace Matkakirja
             Aseta();
         }
 
+        /// <summary>
+        /// Korkeus, jolla pallo mahtuu kuvan kapeampaan suuntaan: pystynäytöllä
+        /// vaakakulma on pystykulmaa pienempi.
+        /// </summary>
+        double Korkeus()
+        {
+            var kamera = GetComponent<Camera>();
+            double pysty = math.radians(kamera != null ? kamera.fieldOfView : 40.0) / 2.0;
+            double suhde = kamera != null ? kamera.aspect : 1.0;
+            double vaaka = math.atan(math.tan(pysty) * suhde);
+            double puoli = math.min(pysty, vaaka);
+            double r = CesiumWgs84Ellipsoid.GetMaximumRadius();
+            return r / math.sin(puoli * taytto) - r;
+        }
+
         public void Aseta()
         {
+            double korkeus = Korkeus();
             double3 ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(
                 new double3(pituus, leveys, korkeus));
             double3 paikka = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef);
