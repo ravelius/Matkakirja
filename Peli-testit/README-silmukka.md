@@ -199,7 +199,7 @@ luetaan `/Users/Shared/Claude/proto-3d/Matkakirja-proto/Library/ScriptAssemblies
 - Samassa kysymysnäkymässä (IKysymysNakyma) kulkevat myös pulmat (Pysy-tapa pulmakaupungissa;
   piirros `KysymysNaytto.Luonnos`/`PulmaId` ja vaihtoehtokuvat odottavat Natiivi-UI:n näkymää,
   UGUI-vara näyttää vain tekstit), rosvon kaksintaistelu (ryöstäjälaatan Jatka → 8 vaihtoehtoa,
-  Helpotus-nappi, 45 s) ja tapahtumakortit (vain, jos paketissa on `kokoelmat/tapahtumat.json`).
+  Helpotus-nappi, 45 s) ja tapahtumakortit (vain `PeliOhjain.TapahtumakortitMaailmankartalla = true`; webin maailmankartalla kortteja ei ole, paketin kokoelma on Afrikan laudan).
   Kaupat (`PeliOhjain.Kaupat`) on luotu, mutta sen teot kutsuvat lehti, pulu ja sähke (Natiivi-UI). Kuva- ja lippukysymykset tarvitsevat kuvapoolin ja maalistan (Kysely.AsetaKuvat,
   Kysely.Liput), joita ei vielä ladata: niiden paino siirtyy visalle kuten webissä.
 - Auki jäänyt kysymys avataan latauksessa uudelleen jäljellä olevalla ajalla (web visa.js);
