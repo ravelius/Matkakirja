@@ -149,6 +149,7 @@ import { glLuokat, glNimiotKaytossa, luoNimiokerrosGL, rasteroiTeksti } from '..
 import { luoGlNimiosovitin } from './glnimiot-sovitin.js';
 import { paljasTila, ablaatioPaalla, kerrosKaytossa, kerrostenBodyLuokat, asennaPiirtokokeet, piirtokokeet } from './kerrokset.js';
 import { asennaKehysprofiili } from './kehysprofiili.js';
+import { asennaKallistus, kallistusKaytossa } from './kallistus.js';
 import { luoProfiilinaytto, koetilanNimi } from './profiilinaytto.js';
 import { vedonSeuranta } from '../vedon-seuranta.js';
 import { tarkkuusLiikkeessa } from '../tarkkuus-asetus.js';
@@ -2106,6 +2107,12 @@ export async function avaaPallolauta(ui) {
   // kehysprofiili (pääsäie/GPU-jako) samoilla lipuilla laitteen konsoliin.
   asennaPiirtokokeet();
   if (ablaatioPaalla() || piirtokokeet().size) asennaKehysprofiili(() => globalThis.matkakirja?.ui);
+  /*
+   * KAMERAKALLISTUS, VAIHE 1 (koe; js/pallolauta/kallistus.js): vain
+   * `?koe=kallistus` tai localStorage `matkakirja-kallistus` = '1'. Ilman
+   * lippua mitään ei asenneta eikä pointOfView'ta kääritä.
+   */
+  const kallistus = kallistusKaytossa(piirtokokeet()) ? asennaKallistus({ pallo, kotelo, kuori, ui }) : null;
   /*
    * `?koe=profiili` (omistajan tilaus Fablen kautta 22.9.2026): sama
    * profiili RUUDULLE ja mittauspalvelimelle, jotta puhelimen pitkän
@@ -4555,7 +4562,9 @@ export async function avaaPallolauta(ui) {
    */
   let lepoladonta = false;
   const eleKaynnissa = () => Boolean(eleet.sormet.alhaalla || eleet.sormet.nipistys
-    || kamera.kameraAjossa?.());
+    || kamera.kameraAjossa?.()
+    // Kallistus on ele: ladonnan mitat olettavat ylhäältä-kameran (kallistus.js).
+    || kallistus?.kaynnissa());
   /*
    * LIIKE RASTERIJONOLLE JA SOVITTIMELLE: ele TAI kameran tuore muutos
    * (kirjaston oma pointOfView-ajo ei näy eleistä eikä kameraAjossa-
@@ -5391,6 +5400,8 @@ export async function avaaPallolauta(ui) {
 
   /** Saapumisajo: maan laatikko ruutuun, tai entinen kaupunkinäkymä. */
   const saavu = async ({ kesto = 0 } = {}) => {
+    // Maan esittely (kallistuskoe): animoidun saapumisajon perään kallistus + orbit.
+    if (kallistus && kesto > 0) void kallistus.esitteleAjonJalkeen(() => kamera.kameraAjossa?.());
     /*
      * SAAPUMISLAATIKKO = MAA + MAAPANEELI (erä 3) JA SE ON MYÖS
      * ULOSZOOMAUKSEN KATTO (erä 2). Kamera päätyy juuri tähän
@@ -5639,6 +5650,8 @@ export async function avaaPallolauta(ui) {
     liike: () => liike,
     /** Kameralokin merkinnät (js/pallolauta/kameraloki.js), uusin viimeisenä. */
     kameraloki: () => kameraloki.merkinnat(),
+    /** Kamerakallistus (koe) tai null: kallista/orbit/suorista/esittele/tila. */
+    kallistus: () => kallistus,
     /** GL-nimiöiden sovitin (js/pallolauta/glnimiot-sovitin.js) tai null (savukkeet). */
     glSovitin: () => glSovitin,
     /** Nimiöiden sulavuusmittari (js/pallolauta/sulavuusmittari.js): aloita/lopeta/yhteenveto. */
@@ -5822,6 +5835,7 @@ export async function avaaPallolauta(ui) {
     nayta: () => { kuori.hidden = false; mitoita(); noppaKuoreen(); tahdistaLepo(); },
     piilota: () => { kuori.hidden = true; noppaTakaisin(); tahdistaLepo(); },
     pura: () => {
+      kallistus?.pura();
       doc.body.classList.remove('pallolauta-paalla');
       // Kaupungin pop-up on tämän laudan kortti (ankkuri on pallon
       // ruutupiste): purettu lauta ei jätä sitä leijumaan karttaruutuun.

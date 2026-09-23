@@ -1307,6 +1307,9 @@ export function ennustaKamera(edellinen, nykyinen, {
 } = {}) {
   const pov = nykyinen?.pov;
   const lepo = { dtMs: 0, pov: pov ? { ...pov } : null, nopeus: { lat: 0, lng: 0, lnAlt: 0 } };
+  // Kallistettu kamera (js/pallolauta/kallistus.js): ennusteen näkymä olettaa
+  // lookAt(0, 0, 0):n, joten kallistuksen ajan ei ennusteta.
+  if (pov?.kallistus?.kulma || edellinen?.pov?.kallistus?.kulma) return lepo;
   if (!pov || !edellinen?.pov || !Number.isFinite(nykyinen.aika) || !Number.isFinite(edellinen.aika)) return lepo;
   const dt = nykyinen.aika - edellinen.aika;
   if (!(dt > 0) || dt > 250) return lepo;

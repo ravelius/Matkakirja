@@ -29111,3 +29111,23 @@ body.kerros-pois-dom .pallolauta-maapaneeli { display: none !important; }
     color: rgba(70, 51, 31, 0.9);
   }
 }
+
+/* KAMERAKALLISTUS, VAIHE 1 (koe; js/pallolauta/kallistus.js). Usva peittää
+   horisontin rajauksen; ruutuun ankkuroidut kortit piiloon kallistuksen ajan
+   (suunnitelma docs/raportit/kamerakallistus-suunnitelma-20260923.md). */
+.pallolauta-usva {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 0;
+  z-index: 3;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(to bottom, var(--kerma) 0%, var(--kerma) var(--usva-taysi, 30%), rgb(250 244 214 / 0) 100%);
+}
+body.pallolauta-kallistettu .fokuskohde-popup,
+body.pallolauta-kallistettu .kaupunkipopup,
+body.pallolauta-kallistettu .pallolauta-maapaneeli,
+body.pallolauta-kallistettu .minipopup,
+body.pallolauta-kallistettu [class^="pallolauta-liuska"] {
+  visibility: hidden;
+}

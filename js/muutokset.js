@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2145, teksti: 'Kamerakallistus vaihe 1, koelipun takana' },
   { v: 2144, teksti: 'Paljas kartta: kerrokset-kytkimet' },
   { v: 2143, teksti: 'Syotekoe 5-8: Paljas kartta ja puolitus' },
   { v: 2142, teksti: 'Nimiolukko: nakyva nimio ei vaihda puolta' },
