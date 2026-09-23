@@ -1029,7 +1029,13 @@ const yhdistaResepti = (pohja, muutos) => {
   }
   return ulos;
 };
-const PATINA_MUUTOS = {
+/*
+ * `--resepti-json` YHDISTETÄÄN LIPPUJEN PÄÄLLE SISÄKKÄIN (23.9.2026):
+ * `{"vesiviivoitus":{"harvennus":"haive"}}` muuttaa vain sen kentän
+ * `--vesiviivoitus tumma` -asetuksista. Ennen JSON korvasi koko avaimen,
+ * ja vesiviivoitus jäi ilman parametrejaan.
+ */
+const PATINA_MUUTOS = yhdistaResepti({
   ...(VESIVIIVOITUS_VALINTA ? { vesiviivoitus: VESIVIIVOITUKSET[VESIVIIVOITUS_VALINTA] } : {}),
   /*
    * `--paperirae ruutu` SAMMUTTAA PAPERIN HIENON RAKEEN MYÖS PATINASTA
@@ -1046,8 +1052,7 @@ const PATINA_MUUTOS = {
       rae: 0, raeKarkea: 0, kuitu: 0, kuituRisti: 0, klimppi: 0,
     },
   } : {}),
-  ...(RESEPTI_JSON ? JSON.parse(RESEPTI_JSON) : {}),
-};
+}, RESEPTI_JSON ? JSON.parse(RESEPTI_JSON) : null);
 const PATINA = PATINA_POHJA && Object.keys(PATINA_MUUTOS).length
   ? yhdistaResepti(PATINA_POHJA, PATINA_MUUTOS) : PATINA_POHJA;
 if (PATINA_TASO !== 'ei' && !PATINA) {
