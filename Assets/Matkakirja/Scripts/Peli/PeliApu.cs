@@ -58,6 +58,8 @@ namespace Matkakirja.Natiivi
     public static class PeliApu
     {
         public const string Valuutta = "puntaa";
+        /// <summary>Web ui.js vaihe 'roll': paluunapin nimi (iconButton('nuoli', …)).</summary>
+        public const string VaihdaTeksti = "Vaihda matkustustapa";
 
         /// <summary>
         /// Pelinappulan matkapisteet (Kartta/Nappula.Aja): lähtö ja reitin askeleet (Matka.Tila.ViimePolku,

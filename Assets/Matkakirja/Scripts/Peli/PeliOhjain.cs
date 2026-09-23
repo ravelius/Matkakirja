@@ -969,11 +969,13 @@ namespace Matkakirja.Natiivi
         {
             if (matka == null) return;
             tilarivi.Aseta(PeliApu.TilaTeksti(verkko, matka.Tila));
-            bool kesken = Tila == SilmukanTila.Kartta && matka.Tila.Vaihe == Vaihe.Heitto && !matka.Tila.Pelaaja.Sijainti.Kaupungissa;
-            if (kesken && Kaytossa)
-                dialogi.NaytaHeitto(Tavoite != null ? "Heitä noppaa → " + PeliApu.KaupunginNimi(verkko, Tavoite) : "Heitä noppaa", () => Heita());
+            // Web vaihe 'roll': noppa (ja "Vaihda matkustustapa") sekä kesken reittiä että kaupungissa
+            // esivalitulla tai itse valitulla noppatavalla (PeliOhjain.Liiku.cs).
+            if (Tila == SilmukanTila.Kartta && Kaytossa && matka.Tila.Vaihe == Vaihe.Heitto)
+                NaytaHeittonappi(Tavoite != null ? "Heitä noppaa → " + PeliApu.KaupunginNimi(verkko, Tavoite) : "Heitä noppaa", () => Heita());
             else
                 dialogi.PiilotaHeitto();
+            LiikuMuuttui?.Invoke();
         }
 
         /// <summary>

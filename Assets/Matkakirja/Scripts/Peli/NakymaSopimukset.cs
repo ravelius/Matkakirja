@@ -53,6 +53,20 @@ namespace Matkakirja.Natiivi
         string Otsikko { get; }
     }
 
+    /// <summary>
+    /// Heittonappi ja "Vaihda matkustustapa" (web ui.js vaihe 'roll', ~11262). Valinnainen lisä
+    /// IMatkaValinta-toteutukselle: jos näkymä toteuttaa myös tämän, ohjain kutsuu tätä vanhan
+    /// NaytaHeitto(teksti, painettu) -kutsun sijaan. vaihda = null → ei Vaihda-nappia
+    /// (web: nappi vain kun <c>!autoTravel || muitaTapojaTarjolla()</c>, Matka.VaihtoTarjolla).
+    /// Vaihda palauttaa matkustustavan valintaan (web actionCancelTravel): heittonappi piiloutuu
+    /// (PiilotaHeitto) ja Liiku-liuku on taas käytössä (PeliOhjain.Kulkutavat). Napin teksti:
+    /// PeliApu.VaihdaTeksti ("Vaihda matkustustapa").
+    /// </summary>
+    public interface IHeittoVaihto
+    {
+        void NaytaHeitto(string teksti, Action painettu, Action vaihda);
+    }
+
     // KysymysLaji, KysymysNaytto ja KysymysToiminnot: KysymysApu.cs (ilman UnityEngineä, testattavissa).
 
     /// <summary>Kysymys (modaalinen): kysymys, vaihtoehdot, vihje, 50:50, aikaraja ja tulos.</summary>

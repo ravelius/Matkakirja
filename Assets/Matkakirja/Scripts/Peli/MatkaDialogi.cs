@@ -18,7 +18,7 @@ using UnityEngine.UI;
 
 namespace Matkakirja.Natiivi
 {
-    public sealed class MatkaDialogi : MonoBehaviour, IMatkaValinta
+    public sealed class MatkaDialogi : MonoBehaviour, IMatkaValinta, IHeittoVaihto
     {
         public TMP_FontAsset fontti;
         public Color pohja = new Color32(0xf3, 0xea, 0xd3, 0xf8);
@@ -30,10 +30,10 @@ namespace Matkakirja.Natiivi
 
         const float Leveys = 320f, Reuna = 16f, RivinKorkeus = 58f, Vali = 8f;
 
-        RectTransform turva, paneeli, rivit, heittoNappi;
+        RectTransform turva, paneeli, rivit, heittoNappi, vaihdaNappi;
         CanvasGroup ryhma, heittoRyhma;
         TextMeshProUGUI otsikko, alaotsikko, heittoTeksti;
-        Action peruuta, heita;
+        Action peruuta, heita, vaihda;
         float kohde, alfa, heittoKohde, heittoAlfa;
         Rect viimeTurva;
         Vector2Int viimeKoko;
@@ -105,6 +105,23 @@ namespace Matkakirja.Natiivi
             heittoRyhma.interactable = false;
             heittoTeksti = Teksti(heittoNappi, "Teksti", 19, FontStyles.Normal);
             Tayta(heittoTeksti.rectTransform, 8);
+
+            // "Vaihda matkustustapa" heittonapin yläpuolelle (saman ryhmän lapsi: häivytys yhdessä).
+            var v = new GameObject("Vaihda", typeof(RectTransform), typeof(Image), typeof(Button));
+            v.transform.SetParent(heittoNappi, false);
+            vaihdaNappi = (RectTransform)v.transform;
+            vaihdaNappi.anchorMin = vaihdaNappi.anchorMax = new Vector2(0.5f, 1);
+            vaihdaNappi.pivot = new Vector2(0.5f, 0);
+            vaihdaNappi.sizeDelta = new Vector2(260, 40);
+            vaihdaNappi.anchoredPosition = new Vector2(0, 8);
+            v.GetComponent<Image>().color = new Color(nappi.r, nappi.g, nappi.b, 0.9f);
+            var vb = v.GetComponent<Button>();
+            Varit(vb);
+            vb.onClick.AddListener(() => vaihda?.Invoke());
+            var vt = Teksti(vaihdaNappi, "Teksti", 16, FontStyles.Italic);
+            vt.text = PeliApu.VaihdaTeksti;
+            Tayta(vt.rectTransform, 8);
+            v.SetActive(false);
         }
 
         static void Tayta(RectTransform rt, float sisennys = 0)
@@ -242,12 +259,17 @@ namespace Matkakirja.Natiivi
             p?.Invoke();
         }
 
-        /// <summary>Kartan "Heitä noppaa" -nappi (matka kesken reitillä).</summary>
-        public void NaytaHeitto(string teksti, Action painettu)
+        /// <summary>Kartan "Heitä noppaa" -nappi (vaihe Heitto) ilman Vaihda-nappia.</summary>
+        public void NaytaHeitto(string teksti, Action painettu) => NaytaHeitto(teksti, painettu, null);
+
+        /// <summary>Heittonappi ja vaihda != null → "Vaihda matkustustapa" sen yläpuolelle.</summary>
+        public void NaytaHeitto(string teksti, Action painettu, Action vaihdaTapa)
         {
             if (turva == null) Rakenna(fontti);
             heittoTeksti.text = teksti;
             heita = painettu;
+            vaihda = vaihdaTapa;
+            vaihdaNappi.gameObject.SetActive(vaihdaTapa != null);
             heittoKohde = 1;
             heittoRyhma.blocksRaycasts = true;
             heittoRyhma.interactable = true;
@@ -257,6 +279,7 @@ namespace Matkakirja.Natiivi
         {
             heittoKohde = 0;
             heita = null;
+            vaihda = null;
             if (heittoRyhma == null) return;
             heittoRyhma.blocksRaycasts = false;
             heittoRyhma.interactable = false;
@@ -267,7 +290,8 @@ namespace Matkakirja.Natiivi
         {
             if (Auki) return true;
             return HeittoNakyy && heittoNappi != null
-                && RectTransformUtility.RectangleContainsScreenPoint(heittoNappi, ruutu, null);
+                && (RectTransformUtility.RectangleContainsScreenPoint(heittoNappi, ruutu, null)
+                    || (vaihda != null && RectTransformUtility.RectangleContainsScreenPoint(vaihdaNappi, ruutu, null)));
         }
 
         void Update()

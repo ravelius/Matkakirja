@@ -11,7 +11,8 @@
 //   valitse tapa              matkavalinnan nappi: bussi | lento | liftaus | laiva
 //   peruuta                   matkavalinnan Peruuta
 //   matka kaupunki tapa       napauta + valitse yhdellä rivillä (ilman dialogia)
-//   heita                     "Heitä noppaa" (matka kesken reitillä, kohti tavoitetta)
+//   heita                     "Heitä noppaa" (vaihe Heitto; kohti tavoitetta, jos se on)
+//   vaihda                    "Vaihda matkustustapa" (web actionCancelTravel, heittonapin vieressä)
 //   sulje-lehti               sulkee kaupunkilehden kuin pelaaja
 //   ohita-traileri            saapumistrailerin ohitus (Natiivi-UI:n traileri, tila Traileri)
 //   kortti kaupunki           kaupunkikortti (vain jos Natiivi-UI on asettanut PeliNakymat.KaupunkiKortti)
@@ -131,6 +132,8 @@ namespace Matkakirja.Natiivi
                 }
                 case "heita":
                     return ohjain.Heita();
+                case "vaihda":
+                    return ohjain.VaihdaKulkutapa();
                 case "sulje-lehti":
                     return ohjain.SuljeLehti();
                 case "ohita-traileri":

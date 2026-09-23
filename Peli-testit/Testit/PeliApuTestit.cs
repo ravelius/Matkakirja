@@ -19,6 +19,23 @@ namespace Matkakirja.Peli.Testit
             if (Math.Abs(odotettu - saatu) > sallittu) throw new Exception($"odotettu {odotettu}, saatu {saatu} {viesti}");
         }
 
+        [Testi] static void VaihdaMatkustustapaKuinWeb()
+        {
+            // Web ui.js vaihe 'roll': !autoTravel || muitaTapojaTarjolla().
+            var m = UusiPariisissa();
+            Oleta.Sama(Vaihe.Heitto, m.Tila.Vaihe);
+            Oleta.Tosi(m.Tila.AutoMatka, "Pariisissa liftaus esivalittu");
+            Oleta.Tosi(m.VaihtoTarjolla(), "bussi yhä tarjolla → vaihto");
+            Oleta.Tosi(m.PeruKulkutapa().Ok, "peru");
+            Oleta.Tosi(!m.VaihtoTarjolla(), "vaihe Toiminta: ei heittoa");
+            Oleta.Tosi(m.ValitseKulkutapa(Kulkutapa.Maa).Ok, "itse valittu");
+            Oleta.Tosi(m.VaihtoTarjolla(), "itse valittu tapa: aina vaihto");
+            var k = UusiPariisissa();
+            k.Tila.Pelaaja.Raha = 10;
+            Oleta.Tosi(!k.VaihtoTarjolla(), "esivalinta ilman bussirahaa: ei vaihtoa");
+            Oleta.Tosi(!k.PeruKulkutapa().Ok, "ja peruminen torjutaan kuten webissä");
+        }
+
         [Testi] static void IsoympyranPaatJaKeskipiste()
         {
             var a = PeliApu.Isoympyra(0, 0, 0, 90, 0);
