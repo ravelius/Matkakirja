@@ -107455,4 +107455,361 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * VIKTORIAN PUTOUKSET (Afrikan kaupunkilehtierä O7, toinen erä,
+   * 23.9.2026).
+   *
+   * KANSI ON HISTORIAN SIVU (Timbuktun ja Karthagon malli): tests/
+   * lehdet.test.mjs vaatii jokaiselle lehdelle kannen (id 'kaupunki') ja
+   * jokaiselle muulle sivulle minitehtävän, joten historian seitsemän
+   * juttua ovat kannessa ja toinen aihe on Luonto (viisi juttua).
+   * Kansikuvat, avauskuvat ja matkailijalle-osio tulevat myöhemmällä
+   * kierroksella. Lehden nimi on laudan nimi "Viktorian putoukset".
+   *
+   * VANHAT LITTEÄT NOSTOT (africa-kulttuuri.js) siirtyivät tänne
+   * uudelleen kirjoitettuina ja lähteestä tarkistettuina:
+   *   - Mosi-oa-Tunya: "satojen metrien" tarkennettiin lähteen lukuihin
+   *     (yli 400 m, joskus kaksi kertaa korkeammalle, näkyy jopa 50 km:n
+   *     päähän). "Jylinä kuuluu kauas ennen kuin vettä näkee" ei
+   *     löytynyt lähteestä ja jäi pois. Lisättiin, että nimi on kololoa
+   *     (lozia) ja että tongien ja matabelien nimet tarkoittavat samaa.
+   *   - Kuunvalosateenkaari: "niin harvinainen, että sitä tullaan
+   *     katsomaan toiselta puolelta maapalloa" ei löytynyt lähteestä.
+   *     Vanha selite "väri on silmälle hento" korjattiin: Moonbow-
+   *     artikkelin mukaan valo on yleensä liian himmeä silmän
+   *     värinäölle, joten kaari näyttää valkoiselta ja värit näkyvät
+   *     vasta kuvassa. Kuva (Luke Wilson, PD) siirtyi mukana.
+   *   - Nyaminyami: "riipus kulkee monen joenkulkijan kaulassa suojana"
+   *     ei löytynyt lähteestä. Lähteen mukaan riipuksia veistetään
+   *     puusta, kivestä ja luusta koruiksi ja onnenamuleteiksi. Lisättiin,
+   *     että tunnetuin tarina liittyy Karibaan eikä putouksiin.
+   * Kulttuurivisan (Mosi-oa-Tunya = jylisevä savu) lähdejuttu on "Savu,
+   * joka jylisee"; minitehtävä kysyy kaloista eikä osu visaan.
+   *
+   * FAKTAPOHJA: en-Wikipedia raakatekstinä 23.9.2026 — Victoria Falls,
+   * David Livingstone, Sekeletu, Thomas Baines, John Kirk (explorer),
+   * Emil Holub, Chuma and Susi, Victoria Falls Bridge, Livingstone
+   * (Zambia), Nyami Nyami, Moonbow, Mosi-oa-Tunya National Park,
+   * Victoria Falls National Park ja Taita falcon. Lajien suomenkieliset
+   * nimet (rotkojalohaukka, angolanpalkomahonki, afrikantaateli,
+   * kalliohyppijä) fi-Wikipediasta.
+   *
+   * KUVAT katsottu silmin 900 px:n esikatseluna, kaikki >= 1200 px ja
+   * käyttämättömiä muualla repossa (kuunsateenkaari oli vain vanhassa
+   * litteässä nostossa, joka poistettiin): Sateenkaariputous
+   * Zimbabwen puolelta (sumu peittää rotkon), Livingstonen patsas
+   * 1934 (jalusta kivenlohkareella, vieressä ruuhi), Bainesin
+   * auringonnousu 1865 (sumupilvi, etualalla retkeläisiä), Chitambon
+   * puun kaiverrus lyhtykuvana (LIVINGSTONE MAY 4 1873), Holubin
+   * käsin piirretty kartta 1875 (leveä joki saarineen ja siksak-
+   * rotkot), sillan varhainen kuva rotkon pohjalta (teräskaari),
+   * puinen Nyami Nyami -veistos, sademetsä Zimbabwen puolella
+   * (palmuja ja köynnöksiä), ISS-kuva 2003 (railo ja siksak-rotkot),
+   * kuunsateenkaari 2024 ja kuivan kauden helikopterikuva 2012
+   * (paljasta kalliota, sateenkaari rotkossa). Sillan kuva on
+   * Commonsissa päivätty 1901, mikä ei voi pitää paikkaansa (silta
+   * valmistui 1905), joten selite ei mainitse vuotta.
+   */
+  viktorianputoukset: [
+    {
+      id: 'kaupunki',
+      nimi: 'Viktorian putoukset',
+      johdanto: 'Sambesi syöksyy 1,7 kilometrin levyisenä verhona '
+        + 'basalttirailoon. Paikalliset kansat tunsivat jylisevän savun '
+        + 'kauan ennen kuin Livingstone meloi sen reunalle 1855, ja vielä '
+        + 'isoisän aikaan harva eurooppalainen oli nähnyt sitä.',
+      nostot: [
+        {
+          otsikko: 'Savu, joka jylisee',
+          teksti: 'Putouksilla on monta nimeä, ja lähes kaikki tarkoittavat '
+            + 'samaa. Eteläiset tongat eli batokat kutsuivat niitä nimellä '
+            + 'Shungu na mutitima, myöhemmin tulleet matabelet nimellä '
+            + 'aManz’ aThunqayo ja kololot nimellä Mosi-oa-Tunya, jylisevä '
+            + 'savu. Livingstone kirjasi lisäksi vanhemmat nimet Seongo ja '
+            + 'Chongwe, sateenkaaren paikka. Nimet osuvat: putous on 1 708 '
+            + 'metriä leveä ja keskeltä 108 metriä korkea, ja sen vesipöly '
+            + 'nousee yleensä yli 400 metrin korkeuteen, joskus kaksi kertaa '
+            + 'korkeammalle. Savupatsaan näkee jopa 50 kilometrin päähän. '
+            + 'Maailmanperintöluettelossa ovat molemmat nimet, ja Sambian '
+            + 'puolen kansallispuisto on nimeltään Mosi-oa-Tunya.',
+          tiedosto: 'The Smoke that Thunders, Victoria Falls, Rainbow Falls, Zimbabwe (14535328812).jpg',
+          lyhyt: 'Sateenkaariputous Zimbabwen puolelta: vesipöly peittää rotkon pohjan kuin savu.',
+          selite: 'Sateenkaariputous, putousrintaman korkein osa, kuvattuna '
+            + 'Zimbabwen puolelta kesäkuussa 2014. Vesi katoaa rotkoon, ja '
+            + 'sen tilalle nousee valkoinen vesipöly.',
+          lahde: 'Ninara, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Victoria Falls',
+        },
+        {
+          otsikko: 'Saari putouksen reunalla',
+          teksti: 'Skotlantilainen lähetyssaarnaaja David Livingstone '
+            + 'saapui 1853 Linyantiin kololojen kuninkaan Sekeletun luo. '
+            + 'Sekeletu antoi hänelle ensin 27 miestä matkalle Atlantin '
+            + 'rannikolle Luandaan ja sitten 114 miestä matkalle Sambesia '
+            + 'alas kohti Intian valtamerta. Putouksista Livingstonelle oli '
+            + 'kerrottu etukäteen, ja 16. marraskuuta 1855 hänet meloittiin '
+            + 'keskellä virtaa olevalle saarelle, jonka reunalta hän näki ne '
+            + 'ensimmäisenä eurooppalaisena. Hän nimesi ne kuningatar '
+            + 'Viktorian mukaan. Tuntemattomat putoukset eivät olleet: '
+            + 'paikalliset kansat tunsivat ne hyvin, ja ranskalaisen '
+            + 'Nicolas de Ferin kartassa vuodelta 1715 ne on merkitty '
+            + 'oikealle paikalleen. Saari kantaa nyt Livingstonen nimeä, ja '
+            + 'laatta merkitsee kohdan, josta hän katsoi.',
+          tiedosto: 'Livingstone statue at Victoria Falls, Zimbabwean side.jpg',
+          lyhyt: 'Livingstonen patsas putousten länsirannalla Zimbabwen puolella, paljastettu 1934.',
+          selite: 'David Livingstonen patsas putousten länsirannalla '
+            + 'Zimbabwen puolella, paljastettu 5. elokuuta 1934. Patsas '
+            + 'seisoo kivenlohkareen päällä, ja sen vieressä on puusta '
+            + 'koverrettu ruuhi.',
+          lahde: 'Ninaras, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'David Livingstone',
+        },
+        {
+          otsikko: 'Taiteilija, joka erotettiin',
+          teksti: 'Kun Livingstone palasi Sambesille 1858 hallituksen '
+            + 'rahoittaman retkikunnan johtajana, mukana oli englantilainen '
+            + 'taiteilija Thomas Baines. Retkikunta juuttui joen alajuoksulle '
+            + 'ja riitaantui, ja Baines erotettiin. Livingstone palasi '
+            + 'putouksille 1860 kasvitieteilijä John Kirkin kanssa ja tutki '
+            + 'ne tarkemmin; Kirk kirjoitti myöhemmin pitävänsä häntä '
+            + 'vaarallisena johtajana. Baines ei luovuttanut. Vuosina '
+            + '1861–1862 hän kulki tutkimusmatkailija James Chapmanin '
+            + 'kanssa Walvis Baysta Atlantin rannalta Ngamijärvelle ja '
+            + 'Viktorian putouksille. Matkalla käytettiin ensimmäistä kertaa '
+            + 'laajasti sekä valokuvausta että maalausta, ja kumpikin '
+            + 'kommentoi päiväkirjassaan toisen työtä. Bainesin maalaukset '
+            + 'ovat varhaisimpia kuvia putouksista.',
+          tiedosto: 'Baines Falls by Sunrise col print.jpg',
+          lyhyt: 'Bainesin putoukset auringonnousussa, 1865: sumupilvi nousee 1 200 jalkaa.',
+          selite: 'Thomas Bainesin väripainokuva, julkaistu Lontoossa '
+            + 'lokakuussa 1865: putoukset auringonnousussa, ja kuvatekstin '
+            + 'mukaan sumupilvi nousee 1 200 jalkaa eli noin 370 metriä. '
+            + 'Etualalla retkeläiset kulkevat suuren puun ohi.',
+          lahde: 'Thomas Baines, Wikimedia Commons (PD)',
+          wiki: 'Thomas Baines',
+        },
+        {
+          otsikko: 'Sydän puun juurella',
+          teksti: 'Isoisän matkavuonna, 1. toukokuuta 1873, David '
+            + 'Livingstone kuoli päällikkö Chitambon kylässä '
+            + 'Bangweulujärven kaakkoispuolella, nykyisessä Sambiassa, '
+            + 'malariaan ja punataudin aiheuttamaan sisäiseen '
+            + 'verenvuotoon. Hän oli etsinyt Niilin lähteitä vuodesta 1866. '
+            + 'Hänen palvelijansa Chuma ja Susi hautasivat hänen sydämensä '
+            + 'peltirasiassa puun juurelle ja kuivattivat ruumista kaksi '
+            + 'viikkoa. Sitten seurue kantoi sen puunkuoresta tehdyssä '
+            + 'lieriössä 63 päivää ja yli 1 600 kilometriä Bagamoyoon '
+            + 'Intian valtameren rannalle. Perille pääsi 79 seurueen '
+            + 'jäsentä, ja Livingstone haudattiin Westminster Abbeyyn '
+            + '1874. Puuhun kaiverrettiin päiväksi 4. toukokuuta, mutta '
+            + 'useimmat lähteet pitävät oikeana päiväkirjan viimeisen '
+            + 'merkinnän päivää.',
+          tiedosto: 'Livingstone Memorial at Chitambo, Africa, ca.1873-ca.1900 (imp-cswc-GB-237-CSWC47-LS16-056).jpg',
+          lyhyt: 'Chitambon puun kaiverrus lyhtykuvassa: LIVINGSTONE MAY 4 1873.',
+          selite: 'Lyhtykuva Chitambon puusta, jonka juurelle Livingstonen '
+            + 'sydän haudattiin. Kuoreen on veistetty tasainen kilpi ja '
+            + 'siihen teksti LIVINGSTONE MAY 4 1873 sekä muita sanoja.',
+          lahde: 'Tuntematon kuvaaja, Wikimedia Commons (PD)',
+          wiki: 'Chuma and Susi',
+        },
+        {
+          otsikko: 'Lääkäri Kimberleyn timanttikentiltä',
+          teksti: 'Tšekkiläinen Emil Holub valmistui lääkäriksi Prahassa '
+            + '1872 ja lähti Livingstonen päiväkirjojen innoittamana '
+            + 'Kapkaupunkiin. Hän asettui lääkäriksi Dutoitspaniin '
+            + 'Kimberleyn lähelle ja teki sieltä keräilyretkiä sisämaahan; '
+            + 'toinen niistä alkoi isoisän matkavuonna 1873. Kolmannella '
+            + 'retkellään 1875 hän pääsi Sambesille asti ja piirsi '
+            + 'ensimmäisen yksityiskohtaisen kartan putousten ympäristöstä. '
+            + 'Hän kirjoitti myös ensimmäisen kirjan putouksista, joka '
+            + 'ilmestyi englanniksi Grahamstownissa 1879. Holub kuoli '
+            + 'Wienissä 1902 Afrikassa saamiensa tautien, muun muassa '
+            + 'malarian, jälkiin. Syyskuussa 2005, tasan 130 vuotta hänen '
+            + 'ensimmäisen käyntinsä jälkeen, hänen rintakuvansa '
+            + 'paljastettiin Livingstonen kaupungissa putousten vieressä.',
+          tiedosto: 'Emil Holub - Victoria Katarakt des Sebiet. Zambese.jpg',
+          lyhyt: 'Emil Holubin käsin piirretty kartta putouksista 1875, mittakaava 1:10 500.',
+          selite: 'Emil Holubin käsin piirretty ja väritetty kartta 1875, '
+            + 'mittakaava 1:10 500: vasemmalla leveä Sambesi saarineen, '
+            + 'oikealla putouksen alta alkavat siksak-rotkot.',
+          lahde: 'Emil Holub, Wikimedia Commons (PD)',
+          wiki: 'Emil Holub',
+        },
+        {
+          otsikko: 'Silta, jonka piti kastua',
+          teksti: 'Ennen siltaa Sambesi ylitettiin putousten yläpuolella Old '
+            + 'Driftin ylityspaikalla ruuhella tai teräsvaijerilla '
+            + 'vedetyllä lautalla. Cecil Rhodes haaveili rautatiestä '
+            + 'Kapkaupungista Kairoon ja vaati, että silta rakennetaan '
+            + 'kohtaan, jossa putousten sumu sataa ohi kulkevien junien '
+            + 'päälle. Paikaksi valittiin toinen rotko. Rhodes ei käynyt '
+            + 'putouksilla koskaan ja kuoli ennen kuin työt alkoivat. '
+            + 'Teräsosat valmistettiin Darlingtonissa Englannissa, '
+            + 'laivattiin Mosambikin Beiraan ja tuotiin junalla perille. Jo '
+            + 'ennen sillan valmistumista rotkon yli siirrettiin veturi '
+            + 'osina köysiradalla, jota rakentajat kutsuivat Blondiniksi. '
+            + 'Silta valmistui 14 kuukaudessa, ja sen avasi 12. syyskuuta '
+            + '1905 George Darwin, Charles Darwinin poika. Kaari kohoaa 128 '
+            + 'metriä joen alimman vedenpinnan yläpuolelle.',
+          tiedosto: 'Victoria Falls Bridge (1901).jpg',
+          lyhyt: 'Putousten silta rotkon pohjalta 1900-luvun alussa: teräskaari toisen rotkon yllä.',
+          selite: 'Varhainen kuva putousten sillasta rautatiealan '
+            + 'aikakauslehdestä: teräskaari ylittää toisen rotkon, jonka '
+            + 'pohjalla Sambesi kuohuu jyrkkien kallioseinien välissä.',
+          lahde: 'Internet Archive Book Images, Wikimedia Commons (PD)',
+          wiki: 'Victoria Falls Bridge',
+        },
+        {
+          otsikko: 'Nyami Nyami, joen jumala',
+          teksti: 'Sambesin varren kansat kertovat Nyami Nyamista, joen '
+            + 'jumalasta, joka suojelee ihmisiä ja antaa heille ravintoa '
+            + 'vaikeina aikoina. Hänellä kuvataan olevan käärmeen vartalo '
+            + 'ja kalan pää, ja hän hallitsee kaikkea elämää joessa ja sen '
+            + 'pinnalla. Tunnetuin tarina on Karibasta, noin 480 kilometriä '
+            + 'putouksilta koilliseen. Kun sinne alettiin 1956 rakentaa '
+            + 'patoa, laakson tongat siirrettiin kodeistaan. Tarinan mukaan '
+            + 'Nyami Nyami iski 1957: joen pahin tunnettu tulva vei osan '
+            + 'keskeneräisestä padosta, ja seuraava sadekausi toi vielä '
+            + 'pahemman. Tongat uskovat, että pato erotti Nyami Nyamin '
+            + 'vaimostaan ja että alueen maanjäristykset ovat hänen '
+            + 'yrityksiään päästä tämän luo. Todellisuudessa järistykset '
+            + 'johtuvat tekojärven veden painosta. Puusta, kivestä tai '
+            + 'luusta veistettyjä Nyami Nyami -riipuksia kannetaan yhä '
+            + 'koruina ja onnenamuletteina.',
+          tiedosto: 'Nyaminyami.jpg',
+          lyhyt: 'Puinen Nyami Nyami -veistos: kiertyvä käärmeen vartalo ja suuri, hampainen pää.',
+          selite: 'Puinen Nyami Nyami -veistos: käärmeen vartalo kiertyy '
+            + 'kerälle, ja sen päällä on suuri pää hampaineen. Samaa '
+            + 'hahmoa veistetään riipuksiin ja kävelykeppeihin.',
+          lahde: 'Mangwanani, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Nyami Nyami',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Putouksen vesipöly kasvattaa sademetsän keskelle '
+        + 'savannia, rotkot kertovat, missä putous oli ennen, ja täysikuun '
+        + 'yönä sumuun syttyy kaari, jonka silmä näkee valkoisena.',
+      tehtava: {
+        kysymys: 'Sambesissa elää putousten yläpuolella 84 kalalajia. '
+          + 'Montako lajia elää putousten alapuolella?',
+        vaihtoehdot: ['39', '84', '112', '7'],
+        oikea: 0,
+        fakta: 'Putous on kaloille ylittämätön este, ja siksi joen ylä- ja '
+          + 'alapuolen kalastot ovat erilaiset: alapuolella lajeja on 39.',
+      },
+      nostot: [
+        {
+          otsikko: 'Metsä, jota sumu kastelee',
+          teksti: 'Putousten ympäristö on enimmäkseen kuivaa '
+            + 'mopanesavannia, mutta putousta vastapäätä kallion reunalla '
+            + 'kasvaa sademetsä. Sitä ylläpitää putouksen vesipöly, ja '
+            + 'siinä kasvaa alueelle harvinaisia lajeja: '
+            + 'angolanpalkomahonkia, eebenpuuta, afrikantaatelia ja toista '
+            + 'palmulajia sekä köynnöksiä ja liaaneja. Kostea varjo ruokkii '
+            + 'myös runsasta sienilajistoa, joka hajottaa kuollutta '
+            + 'kasviainesta. Polkujen varrella liikkuu pieniä antilooppeja '
+            + 'ja pahkasikoja. Viime vuosien kuivuus on koetellut '
+            + 'kasvillisuutta ja sen varassa eläviä eläimiä, etenkin '
+            + 'antilooppeja.',
+          tiedosto: 'Rainforest, Victoria Falls, Zimbabwean side.jpg',
+          lyhyt: 'Sumun kastelemaa sademetsää putousten Zimbabwen puolella.',
+          selite: 'Sademetsää putousten Zimbabwen puolella: palmuja, '
+            + 'köynnösten kietomia puunrunkoja ja tiheää aluskasvillisuutta, '
+            + 'jota putouksen vesipöly pitää kosteana.',
+          lahde: 'Ninaras, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Victoria Falls National Park',
+        },
+        {
+          otsikko: 'Kahdeksan vanhaa putousta',
+          teksti: 'Sambesin yläjuoksu virtasi ennen etelään nykyisen '
+            + 'Botswanan kautta Limpopo-jokeen. Noin kaksi miljoonaa vuotta '
+            + 'sitten maankohoaminen tukki reitin, ja Kalaharin reunalle '
+            + 'syntyi suuri Makgadikgadin järvi, josta vesi ei päässyt '
+            + 'minnekään. Noin 20 000 vuotta sitten kosteampi ilmasto sai '
+            + 'järven tulvimaan itään, ja vesi alkoi kaivaa Batokan rotkoa '
+            + 'noin 200 miljoonaa vuotta vanhaan basalttiin. Rotkossa on '
+            + 'kuusi osarotkoa ja kahdeksan putouksen entistä paikkaa: vesi '
+            + 'syö kalliota heikkoja murroslinjoja pitkin, kunnes putous '
+            + 'siirtyy uudelle linjalle ylävirtaan. Seuraava rotko saattaa '
+            + 'jo olla syntymässä Paholaisen katarakti -nimisen putousosan '
+            + 'kohdalla, jossa reuna on matalin ja vettä virtaa tulvalla '
+            + 'eniten.',
+          tiedosto: 'Satellite view of Victoria Falls.jpg',
+          lyhyt: 'Putoukset avaruusasemalta 2003: joki putoaa railoon ja kiemurtelee siksak-rotkoissa.',
+          selite: 'Viktorian putoukset kansainväliseltä avaruusasemalta '
+            + 'syyskuussa 2003: leveä Sambesi putoaa poikittaiseen railoon, '
+            + 'ja sen alapuolella joki kiemurtelee siksak-rotkoissa. '
+            + 'Vasemmalla näkyvät kaupungin kadut.',
+          lahde: 'ISS Expedition 7, NASA, Wikimedia Commons (PD)',
+          wiki: 'Victoria Falls',
+        },
+        {
+          otsikko: 'Kuunvalon sateenkaari',
+          teksti: 'Täysikuun aikaan putousten vesipölyyn voi syttyä '
+            + 'kuunsateenkaari. Se syntyy samoin kuin tavallinen '
+            + 'sateenkaari, mutta valona on kuun pinnasta heijastuva valo, '
+            + 'joka on paljon himmeämpää. Silmän värinäölle se ei yleensä '
+            + 'riitä, joten kaari näyttää paljaalle silmälle valkoiselta; '
+            + 'värit tulevat esiin vasta pitkällä valotuksella otetussa '
+            + 'kuvassa. Kuun on oltava matalalla, alle 42 asteen '
+            + 'korkeudella, ja taivaan pilvetön ja pimeä, joten kaaren voi '
+            + 'yleensä nähdä vain kahdesta kolmeen tuntia auringonlaskun '
+            + 'jälkeen tai ennen auringonnousua. Ilmiön mainitsi jo '
+            + 'Aristoteles noin 350 eaa., ja Viktorian putoukset ovat '
+            + 'laajalti tunnettu paikka nähdä se.',
+          tiedosto: 'Lunar rainbow graces Victoria Falls (8366306).jpg',
+          lyhyt: 'Kuunsateenkaari putousten rotkon yllä huhtikuussa 2024.',
+          selite: 'Kuunsateenkaari kaartuu yöllä putousten rotkon yli '
+            + 'huhtikuussa 2024. Tähdet näkyvät taivaalla, ja kaukana '
+            + 'vasemmalla palavat valot. Kamera tallentaa värit, jotka '
+            + 'paljas silmä näkee vain vaaleana kaarena.',
+          lahde: 'Staff Sgt. Luke Wilson, U.S. Army, Wikimedia Commons (PD)',
+          wiki: 'Moonbow',
+        },
+        {
+          otsikko: 'Kun putous kuivuu',
+          teksti: 'Sambesin tulvakausi kestää helmikuusta toukokuuhun ja on '
+            + 'huipussaan huhtikuussa. Silloin putouksen juurta ja seinämää '
+            + 'ei näe lainkaan. Syyskuusta tammikuuhun jopa puolet '
+            + 'kallioseinästä voi kuivua, ja rotkon pohja näkyy lähes koko '
+            + 'matkalta. Pienin virtaama marraskuussa on vain noin '
+            + 'kymmenesosa huhtikuun virtaamasta, ja vaihtelu on suurempi '
+            + 'kuin muilla suurilla putouksilla. Kun vettä on sopivasti, '
+            + 'yleensä syys- ja joulukuun välillä, Livingstonen saaren '
+            + 'länsikärkeen muodostuu Paholaisen allas: kivikynnys tyynnyttää '
+            + 'virran niin, että rohkeat voivat uida aivan putouksen '
+            + 'reunalla. Vuonna 2019 poikkeuksellisen vähäiset sateet '
+            + 'painoivat virtaaman pienimmäksi sataan vuoteen.',
+          tiedosto: 'View of Victoria Falls from the helicopter.jpg',
+          lyhyt: 'Putoukset kuivana kautena helikopterista: kalliota paljaana, rotkossa sateenkaari.',
+          selite: 'Viktorian putoukset kuivana kautena syyskuussa 2012 '
+            + 'helikopterista kuvattuna: joessa näkyy puiden peittämiä '
+            + 'saaria, osa kallioseinästä on paljaana, ja rotkossa kaartuu '
+            + 'sateenkaari.',
+          lahde: 'Kuroiniisan, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Victoria Falls',
+        },
+        {
+          otsikko: 'Raja kaloille, koti haukoille',
+          teksti: 'Putous on kaloille ylittämätön raja: sen alapuolella '
+            + 'Sambesissa elää 39 kalalajia, yläpuolella 84. Yläpuolen '
+            + 'joessa on runsaasti virtahepoja ja niilinkrokotiileja, ja '
+            + 'kuivana kautena norsulaumat ylittävät joen tietyissä '
+            + 'kohdissa. Alapuolen rotkoissa voi nähdä kalliohyppijöitä ja '
+            + 'saukkoja, mutta ennen kaikkea ne tunnetaan 35 '
+            + 'petolintulajistaan. Yksi niistä on harvinainen '
+            + 'rotkojalohaukka, pieni ja nopea haukka, joka saalistaa '
+            + 'lintuja lennosta. Batokan rotko oli ennen lajin tärkein '
+            + 'esiintymisalue, ja 1990-luvun laskennoissa siellä pesi kuusi '
+            + 'paria. Sittemmin nuo parit ovat kadonneet, ja syyksi '
+            + 'arvellaan muun muassa matkailua ja lisääntynyttä '
+            + 'lentoliikennettä rotkon yllä.',
+          wiki: 'Taita falcon',
+        },
+      ],
+    },
+  ],
 };

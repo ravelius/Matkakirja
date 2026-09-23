@@ -1097,45 +1097,20 @@ export const AFRICA_KULTTUURI = {
         + 'vanhin tunnettu elävä maaeläin.',
     },
   },
+  // Viktorianputousten litteät nostot siirtyivät kaupunkilehteen
+  // (kulttuuri-kategoriat.js, viktorianputoukset) 23.9.2026:
+  // kuunsateenkaari, Mosi-oa-Tunya ja Nyaminyami kirjoitettiin siellä
+  // uudelleen lähteestä tarkistettuina. Visan lähdejuttu on lehden
+  // "Savu, joka jylisee"; faktan "jylinä kuuluu kauas" ei löytynyt
+  // lähteestä ja vaihtui lähteen lukuihin.
   viktorianputoukset: {
-    nostot: [
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Kuunvalosateenkaari',
-        tiedosto: 'Lunar rainbow graces Victoria Falls (8366306).jpg',
-        teksti: 'Täydenkuun öinä putousten vesisumuun syttyy '
-          + 'kuunvalosateenkaari — haalea kaari keskellä yötä. Ilmiö on '
-          + 'niin harvinainen, että sitä tullaan katsomaan toiselta '
-          + 'puolelta maapalloa.',
-        selite: 'Kuunvalosateenkaari kaartuu yöllä putousten rotkon yli. '
-          + 'Kuu valaisee vesisumun, tähdet näkyvät taivaalla, ja '
-          + 'kaukana vasemmalla palavat kaupungin valot. Väri on '
-          + 'silmälle hento, mutta valokuvassa se hehkuu kuin päivällä.',
-        lahde: 'Staff Sgt. Luke Wilson, Wikimedia Commons (Public domain)',
-      },
-      {
-        tyyppi: 'teksti',
-        otsikko: 'Mosi-oa-Tunya',
-        teksti: 'Paikallinen nimi Mosi-oa-Tunya tarkoittaa jylisevää '
-          + 'savua: putousten vesisumu nousee satojen metrien korkeuteen '
-          + 'ja näkyy kymmenien kilometrien päähän kuin savupatsas. '
-          + 'Jylinä kuuluu kauas ennen kuin vettä näkee.',
-      },
-      {
-        tyyppi: 'teksti',
-        otsikko: 'Nyaminyami, joen henki',
-        teksti: 'Zambezin henki on Nyaminyami, käärmeenvartaloinen ja '
-          + 'kalanpäinen joenjumala. Tonga-kansan tarinoissa se hallitsee '
-          + 'joen vesiä, ja sen puinen riipus kulkee yhä monen '
-          + 'joenkulkijan kaulassa suojana.',
-      },
-    ],
     kysymys: {
       q: 'Mitä putousten paikallinen nimi Mosi-oa-Tunya tarkoittaa?',
       options: ['Sateenkaarta', 'Suurta vettä', 'Jylisevää savua', 'Krokotiilien kotia'],
       correct: 2,
-      fact: 'Vesisumu nousee kuin savupatsas ja jylinä kuuluu kauas — '
-        + 'siitä nimi jylisevä savu.',
+      fact: 'Putousten vesipöly nousee yleensä yli 400 metrin korkeuteen '
+        + 'ja näkyy jopa 50 kilometrin päähän kuin savupatsas — siitä '
+        + 'nimi jylisevä savu.',
     },
   },
   // Kimberleyn litteät nostot siirtyivät kaupunkilehteen
