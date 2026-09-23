@@ -45,6 +45,7 @@ import { kokoaWebNakymat } from './web-riippuvuudet.mjs';
 import { logiikkaLista } from './logiikka.mjs';
 import { kokoaOffline } from './offline.mjs';
 import { lueKuvamitat } from './kuvamitat.mjs';
+import { kokoaLisenssit } from './lisenssit.mjs';
 
 export const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 export const SKEEMAVERSIO = 'matkakirja-vienti/1';
@@ -238,6 +239,8 @@ export async function kokoaVienti({ juuri = JUURI } = {}) {
   });
   const offlineTeksti = JSON.stringify(offline) + '\n';
   tiedostot.set('offline.json', offlineTeksti);
+  const lisenssiTeksti = JSON.stringify(kokoaLisenssit(), null, 1) + '\n';
+  tiedostot.set('lisenssit.json', lisenssiTeksti);
 
   const skeemat = readdirSync(join(JUURI, 'tools/vienti/skeema')).filter((f) => f.endsWith('.json')).sort();
   for (const f of skeemat) tiedostot.set(`skeema/${f}`, readFileSync(join(JUURI, 'tools/vienti/skeema', f), 'utf8'));
@@ -265,6 +268,7 @@ export async function kokoaVienti({ juuri = JUURI } = {}) {
     kokoelmat: kokoelmaKuvaus,
     webNakymat,
     offline: { tiedosto: 'offline.json', sha256: sha(offlineTeksti), tavuja: tavuja(offlineTeksti) },
+    lisenssit: { tiedosto: 'lisenssit.json', sha256: sha(lisenssiTeksti), tavuja: tavuja(lisenssiTeksti) },
     logiikka: logiikkaLista(),
     moduulit: manifestModuulit,
   };

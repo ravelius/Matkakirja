@@ -25,6 +25,7 @@ import { POISTETUT_SAANNOT } from './lahteet.mjs';
 import { PAAKAUPUNGIT } from './paakaupungit.mjs';
 import { lueKorkeudet } from './korkeudet.mjs';
 import { maarajaRivit, MAARAJOJEN_TOLERANSSI } from './maarajat.mjs';
+import { lueMaakuntarajat, MAAKUNTARAJOJEN_TOLERANSSI } from './maakuntarajat.mjs';
 import { KOHDE_MAAT, kohteenKategoria } from '../../js/fokuskohteet.js';
 import { nostosymPaakategoria } from '../../js/fokusnosto-symbolit.js';
 import { MAAILMANKARTAN_NIMET } from '../../js/packs/maailmankartta-nimet.js';
@@ -881,6 +882,14 @@ export function kokoaKokoelmat(nimiavaruudet, { media = [] } = {}) {
         + 'rengas voi jatkua yli ±180° (sauma purettu), joten bbox voi kattaa lähes koko pituusasteen (USA, RUS, FJI).',
       {}, maarajaRivit(new URL('../../assets/data/maapolygonit.json', import.meta.url))),
   };
+  // Natiivisepän B17 (23.9.2026): maakuntien värjäys pallolla.
+  const maakunnat = lueMaakuntarajat();
+  kokoelmat.maakuntarajat = taulukko(`js/pallomaakunnat.js ämpäriaineisto ${maakunnat.versio ?? ''} (Natural Earth 10m admin-1)`.trim(),
+    'Maakuntarajat asteina, sama muoto kuin maarajat: id = "<ISO3>:<tunnus>" (sama avain kuin '
+      + 'js/karttatyokalu-maakunnat.js), iso3, nimi (suomeksi), bbox [w, s, e, n], renkaat [[[lon, lat], …]], '
+      + `harvennettu ${maakunnat.toleranssi ?? MAAKUNTARAJOJEN_TOLERANSSI}° Douglas–Peuckerilla. Täytä parillisuussäännöllä. `
+      + 'Maat: AUT, CHE, DEU, ESP, FRA (myös merentakaiset alueet), GBR, ITA, POL.',
+    {}, maakunnat.alueet);
   kokoelmat.karttavalot = karttavaloKokoelma(hae, kokoelmat.kaupungit.alkiot);
   rikastaNippu4(kokoelmat, ns);
   // Skeema 1.15: lehdet natiiville (tools/vienti/lehdet.mjs).

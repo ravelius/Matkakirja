@@ -517,6 +517,26 @@ test('skeema 1.14: poistetut eivät ole paketissa eikä niihin viitata', async (
   assert.ok(!kaikki.includes('kokoelmat/kaksintaistelut'), 'ei viittausta poistettuun kokoelmaan');
 });
 
+test('maakuntarajat (B17): avaimet ja renkaat', () => {
+  const alueet = JSON.parse(tiedostot.get('kokoelmat/maakuntarajat.json')).alkiot;
+  assert.ok(alueet.length >= 120);
+  assert.ok(alueet.every((a) => a.id === `${a.iso3}:${a.id.split(':').slice(1).join(':')}` && a.nimi && a.renkaat.length));
+  assert.ok(alueet.every((a) => a.renkaat.every((r) => r.length >= 4 && r.every(([lon, lat]) => Math.abs(lon) <= 180 && Math.abs(lat) <= 90))));
+  const wien = alueet.find((a) => a.id === 'AUT:Wien');
+  assert.ok(wien.bbox[0] > 16 && wien.bbox[2] < 16.7 && wien.bbox[1] > 48 && wien.bbox[3] < 48.4);
+});
+
+test('lisenssikirjanpito: aineistot ja GPL-rajat', () => {
+  const m = JSON.parse(tiedostot.get('manifest.json'));
+  const l = JSON.parse(tiedostot.get(m.lisenssit.tiedosto));
+  const ids = l.aineistot.map((a) => a.id);
+  assert.ok(ids.includes('historical-basemaps') && ids.includes('natural-earth') && ids.includes('copernicus-dem'));
+  const gpl = l.aineistot.find((a) => a.id === 'historical-basemaps');
+  assert.equal(gpl.lisenssi, 'GPL-3.0');
+  assert.match(gpl.kaytto, /ämpäri/);
+  assert.ok(l.aineistot.every((a) => a.nimi && a.lisenssi && a.lahde && a.attribuutio && a.kaytto));
+});
+
 test('skeema 1.9: offline-manifesti maittain (laatat, maasto, media, tavut)', async () => {
   const m = JSON.parse(tiedostot.get('manifest.json'));
   const o = JSON.parse(tiedostot.get(m.offline.tiedosto));
