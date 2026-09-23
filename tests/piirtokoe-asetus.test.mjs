@@ -49,18 +49,18 @@ test('valinta muistetaan ja näkyy molemmissa lippuapureissa', () => {
     assert.equal(piirtokoeValinta(), 'normaali');
     assert.deepEqual([...tallennetutKokeet()], []);
 
-    asetaPiirtokoe('eipuskuri');
-    assert.equal(piirtokoeValinta(), 'eipuskuri');
-    assert.ok(laattakerroksenKokeet().has('eipuskuri'), 'pallolaatat näkee valinnan');
-    assert.ok(piirtokokeet().has('eipuskuri'), 'kerrokset näkee valinnan');
+    asetaPiirtokoe('syotetouch');
+    assert.equal(piirtokoeValinta(), 'syotetouch');
+    assert.ok(laattakerroksenKokeet().has('syotetouch'), 'pallolaatat näkee valinnan');
+    assert.ok(piirtokokeet().has('syotetouch'), 'kerrokset näkee valinnan');
 
     asetaKehysprofiili(true);
     assert.equal(kehysprofiiliPaalla(), true);
     assert.ok(piirtokokeet().has('profiili'), 'kytkin vastaa ?koe=profiili');
-    assert.ok(piirtokokeet().has('eipuskuri'), 'koe ja profiili yhtä aikaa');
+    assert.ok(piirtokokeet().has('syotetouch'), 'koe ja profiili yhtä aikaa');
 
     assert.equal(asetaPiirtokoe('pöllö'), 'normaali', 'tuntematon arvo palautuu oletukseen');
-    assert.ok(!piirtokokeet().has('eipuskuri'));
+    assert.ok(!piirtokokeet().has('syotetouch'));
   } finally { pura(); }
 });
 
@@ -68,14 +68,14 @@ test('osoitteen haku ohittaa muistin kokonaan (savukkeet ja mittaukset)', () => 
   const pura = valeMuisti();
   try {
     globalThis.location = { search: '?koe=eipuskuri' };
-    asetaPiirtokoe('eivienti');
+    asetaPiirtokoe('syotekello');
     asetaKehysprofiili(true);
     // Annettu haku: vain osoitteen liput, ei laitteen muistia.
     assert.deepEqual([...laattakerroksenKokeet('?koe=syoteloki')], ['syoteloki']);
     assert.deepEqual([...piirtokokeet('?koe=syoteloki')], ['syoteloki']);
     // Ilman hakua osoite ja muisti yhdistyvät.
     const yhdessa = piirtokokeet();
-    assert.ok(yhdessa.has('eipuskuri') && yhdessa.has('eivienti') && yhdessa.has('profiili'));
+    assert.ok(yhdessa.has('eipuskuri') && yhdessa.has('syotekello') && yhdessa.has('profiili'));
   } finally { pura(); }
 });
 
@@ -233,13 +233,13 @@ test('koevaihto: muutos ajastaa latauksen viiveellä ja näyttää "Ladataan…"
       peru: (i) => { ajastetut[i].peruttu = true; },
     });
     assert.equal(lataaja.muuttui(), false, 'ei muutosta, ei latausta');
-    asetaPiirtokoe('eivienti');
+    asetaPiirtokoe('syotekello');
     assert.equal(lataaja.muuttui(), true);
     assert.equal(ajastetut.at(-1).ms, PIIRTOKOE_LATAUS_VIIVE_MS);
     assert.ok(PIIRTOKOE_LATAUS_VIIVE_MS >= 300 && PIIRTOKOE_LATAUS_VIIVE_MS <= 1500, 'pieni viive: teksti ehtii näkyä');
     assert.equal(naytetty.at(-1), true, 'Ladataan… näkyviin');
     // Toinen valinta viiveen aikana: vanha ajastin perutaan, uusi tilalle.
-    asetaPiirtokoe('eihaivevedossa');
+    asetaPiirtokoe('molemmat');
     lataaja.muuttui();
     assert.equal(ajastetut.filter((a) => !a.peruttu).length, 1, 'yksi lataus kerrallaan');
     // Paluu latauksen tilaan perii latauksen.
@@ -264,9 +264,9 @@ test('koevaihto: main.js kytkee lataajan sekä kokeeseen että kehysprofiiliin',
   assert.doesNotMatch(main, /Tulee voimaan seuraavassa latauksessa/);
 });
 
-test('valikossa neljä tilaa omistajan järjestyksessä; poistetut liput vain osoitteessa', () => {
-  // Omistajan kortti 22.9.2026 klo 23.08.
-  assert.deepEqual(PIIRTOKOKEIDEN_VAIHTOEHDOT.map((k) => k.avain), ['normaali', 'eipuskuri', 'eivienti', 'eihaivevedossa']);
+test('valikossa neljä syötekoetta omistajan järjestyksessä; poistetut liput vain osoitteessa', () => {
+  // Omistaja 23.9.2026 klo 08.34 (Fablen kautta): Syötekoe valikkoon, piirtokokeet vain osoitteessa.
+  assert.deepEqual(PIIRTOKOKEIDEN_VAIHTOEHDOT.map((k) => k.avain), ['normaali', 'syotetouch', 'syotekello', 'molemmat']);
   const pura = valeMuisti();
   try {
     globalThis.location = { search: '?koe=dpr15' };
@@ -274,5 +274,24 @@ test('valikossa neljä tilaa omistajan järjestyksessä; poistetut liput vain os
     assert.equal(piirtokoeValinta(), 'normaali', 'tallennettu poistettu koe ei ole valinta');
     assert.ok(!tallennetutKokeet().has('alpha0'), 'eikä vaikuta peliin');
     assert.ok(piirtokokeet().has('dpr15') && laattakerroksenKokeet().has('dpr15'), 'osoitteen lippu toimii yhä');
+  } finally { pura(); }
+});
+
+test('syötekoe valikosta päätyy syöteputkeen: Molemmat = kaksi lippua, mittauslippu näkee tallennetun', async () => {
+  const { mittauslippuPaalla } = await import('../js/vedon-seuranta.js');
+  const pura = valeMuisti();
+  try {
+    globalThis.location = { search: '' };
+    assert.equal(mittauslippuPaalla(), false, 'oletus: ei lippua');
+    asetaPiirtokoe('syotetouch');
+    assert.equal(mittauslippuPaalla(), true, 'Kosketus suoraan ohjaa pallo.js:n lippupolkuun (syotetouch)');
+    assert.equal(mittauslippuPaalla('?koe=syoteloki'), false, 'annettu haku ei lue muistia');
+    asetaPiirtokoe('molemmat');
+    const k = laattakerroksenKokeet();
+    assert.ok(k.has('syotetouch') && k.has('syotekello'), 'Molemmat asettaa kaksi lippua');
+    assert.equal(mittauslippuPaalla(), true);
+    asetaPiirtokoe('syotekello');
+    assert.equal(mittauslippuPaalla(), false, 'pelkkä kello ei ole vedon seurannan lippu');
+    assert.ok(laattakerroksenKokeet().has('syotekello'));
   } finally { pura(); }
 });

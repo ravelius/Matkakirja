@@ -72,7 +72,9 @@ export function koetilarivi({ koe, seuraava = null, versio = '' } = {}) {
  * lippu, jota valikossa ei ole (tai useampi yhtä aikaa), näkyy raakana.
  */
 export function koetilanOtsikko(koe) {
-  const i = PIIRTOKOKEIDEN_VAIHTOEHDOT.findIndex((k) => (k.lippu ?? 'normaali') === koe);
+  // Monilippuinen tila ("Molemmat") verrataan järjestyksestä riippumatta.
+  const jarjesta = (x) => String(x).split(',').map((l) => l.trim()).filter(Boolean).sort().join(',');
+  const i = PIIRTOKOKEIDEN_VAIHTOEHDOT.findIndex((k) => jarjesta(k.lippu ?? 'normaali') === jarjesta(koe));
   if (i < 0) return `koe: ${koe}`;
   return `koe ${i + 1}/${PIIRTOKOKEIDEN_VAIHTOEHDOT.length} ${PIIRTOKOKEIDEN_VAIHTOEHDOT[i].nimi}`;
 }

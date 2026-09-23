@@ -31,6 +31,8 @@
  * nollaa näytepuskurin — vanhat näytteet kuuluvat vanhaan tapaan.
  */
 
+import { tallennetutKokeet } from './piirtokoe-asetus.js';
+
 export const VEDON_SEURANTA_AVAIN = 'matkakirja-vedon-seuranta';
 /** Tapahtuma laudalle, kun valinta vaihtuu. */
 export const VEDON_SEURANTA_TAPAHTUMA = 'matkakirja-vedon-seuranta';
@@ -79,12 +81,18 @@ export function kosketuslaite() {
 }
 
 /** Onko osoitteessa mittauslippu, joka ohittaa valinnan. */
-export function mittauslippuPaalla(haku = globalThis.location?.search ?? '') {
+export function mittauslippuPaalla(haku) {
   // Sama luenta kuin js/pallolaatat.js laattakerroksenKokeet — yksi
   // ?koe=, pilkuilla eroteltuna. Kahta eri jäsennystä ei saa olla.
   let koe = '';
-  try { koe = new URLSearchParams(haku).get('koe') ?? ''; } catch { return false; }
+  try { koe = new URLSearchParams(haku ?? globalThis.location?.search ?? '').get('koe') ?? ''; } catch { return false; }
   const osat = String(koe).split(',').map((o) => o.trim());
+  /*
+   * VALIKON SYÖTEKOE ON SAMA KUIN LIPPU (omistaja 23.9.2026): ilman omaa
+   * hakua myös ratasvalikosta tallennettu koe (esim. "Kosketus suoraan")
+   * lasketaan — muuten valinta ei olisi koskaan päässyt syöteputkeen asti.
+   */
+  if (haku === undefined) osat.push(...tallennetutKokeet());
   return VEDON_SEURANNAN_LIPUT.some((l) => osat.includes(l));
 }
 
