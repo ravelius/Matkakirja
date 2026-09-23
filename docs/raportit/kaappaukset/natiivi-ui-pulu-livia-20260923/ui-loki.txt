@@ -1,0 +1,46 @@
+18.53.47 odota 3 → ok
+18.53.50 ui pulu sano Minä olen Livia. Kirjekyyhky, en mikään pulu. → ok
+18.53.50 odota 2 → ok
+18.53.52 kuva pulu-kupla → ui-pulu-kupla.png
+18.53.53 odota 1 → ok
+18.53.54 ui pulu aani avaus 1 → https://media.matkakirja.app/aanet/pulu/livia-avaus-1.mp3
+18.53.54 odota 3 → ok
+18.53.57 kuva pulu-puhuu → ui-pulu-puhuu.png
+18.53.57 odota 1 → ok
+18.53.58 ui pulu ele flyAway → ok
+18.53.58 odota 1 → ok
+18.53.59 kuva pulu-lento → ui-pulu-lento.png
+18.53.59 odota 1 → ok
+18.54.00 ui luento ateena → ok
+18.54.00 odota 4 → ok
+18.54.04 kuva luento-kortti → ui-luento-kortti.png
+18.54.05 odota 1 → ok
+18.54.06 ui luento ateena loppu → ok
+18.54.06 odota 5 → ok
+18.54.11 kuva luento-pulu → ui-luento-pulu.png
+18.54.11 odota 1 → ok
+18.54.12 ui sulje → ok
+18.54.12 odota 1 → ok
+18.54.13 ui livia blink 0.5 → ok
+18.54.13 odota 1 → ok
+18.54.14 kuva livia-blink → ui-livia-blink.png
+18.54.14 odota 1 → ok
+18.54.15 ui livia welcome 0.4 → ok
+18.54.15 odota 1 → ok
+18.54.16 kuva livia-welcome → ui-livia-welcome.png
+18.54.17 odota 1 → ok
+18.54.18 ui livia bunFeast 0.8 → ok
+18.54.18 odota 1 → ok
+18.54.19 kuva livia-pulla → ui-livia-pulla.png
+18.54.19 odota 1 → ok
+18.54.20 ui livia shock 0.5 astro → ok
+18.54.20 odota 3 → ok
+18.54.23 kuva livia-astro → ui-livia-astro.png
+18.54.23 odota 1 → ok
+18.54.24 ui livia pois → ok
+18.54.24 odota 1 → ok
+18.54.25 ui tietoja → ok
+18.54.25 odota 2 → ok
+18.54.27 kuva tietoja → ui-tietoja.png
+18.54.28 odota 1 → ok
+18.54.29 ui sulje → ok
