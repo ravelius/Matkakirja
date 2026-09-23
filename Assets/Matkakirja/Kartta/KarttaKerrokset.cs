@@ -31,10 +31,37 @@ namespace Matkakirja
         class Rasteri { public CesiumUrlTemplateRasterOverlay kerros; public bool valmis; public float lisatty; }
         readonly Dictionary<string, Rasteri> rasterit = new Dictionary<string, Rasteri>();
 
+        /// <summary>
+        /// Karttalähteiden tekijätiedot Tietoja-näkymään (Natiivi-UI). Cesiumin oma
+        /// ruutukrediitti on piilotettu, koska se piirtyy pelin UI:n päälle; Copernicus-DEM:n
+        /// lisenssi vaatii tekstin, joten se näytetään tästä.
+        /// </summary>
+        public const string Tekijatiedot =
+            "Maasto: Produced using Copernicus WorldDEM-30 © DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 " +
+            "provided under COPERNICUS by the European Union and ESA; all rights reserved.\n" +
+            "Pallo: Cesium for Unity (Apache 2.0).";
+
         void Awake()
         {
             Instanssi = this;
             CesiumRasterOverlay.OnCesiumRasterOverlayLoadFailure += Epaonnistui;
+        }
+
+        void Start() => StartCoroutine(PiilotaRuutukrediitit());
+
+        System.Collections.IEnumerator PiilotaRuutukrediitit()
+        {
+            var odota = new WaitForSeconds(1f);
+            while (true)
+            {
+                // Cesium luo oletuskrediittijärjestelmän (UIDocument) ensimmäisen tilesetin
+                // latautuessa ja rakentaa sen puun uudelleen krediittien muuttuessa.
+                var cs = CesiumCreditSystem.GetDefaultCreditSystem();
+                var juuri = cs != null ? cs.GetComponent<UnityEngine.UIElements.UIDocument>()?.rootVisualElement : null;
+                if (juuri != null && juuri.style.display != UnityEngine.UIElements.DisplayStyle.None)
+                    juuri.style.display = UnityEngine.UIElements.DisplayStyle.None;
+                yield return odota;
+            }
         }
 
         void OnDestroy()
