@@ -4,6 +4,8 @@
 //   matkakirja: paikkarivi, teksti, luentakuva, luentakuva2
 //               kuva = {osoite|ampari|tiedosto, lyhyt, selite, lahde}
 //   pollo:      kuvat[] (PuluCam), kommentti[] (Livian repliikit luennan jälkeen)
+//   aarremerkinta: isoisän myöhempi sivu, kun kaupungin laatta kääntyy
+//               (merkkijono tai {teksti, paikkarivi}; web fokusvirtaAarremerkinta)
 //   kohtaaminen + kohtaamispiste.laudat.maailmankartta {x, y}: aarteen avaus mahdollinen
 //               (lehden fokustehtävät ja pullavinkki, LehtiFokus.cs)
 //   lehtitehtavat: raakana varareitiksi, jos kokoelmaa lehtitehtavat (skeema 1.17) ei ole
@@ -29,21 +31,12 @@ namespace Matkakirja.Natiivi
         public List<VirtaKuva> Luentakuvat = new List<VirtaKuva>();
         public List<VirtaKuva> PuluKuvat = new List<VirtaKuva>();
         public List<string> PuluKommentit = new List<string>();
+        /// <summary>Aarremerkintä (web aarremerkinnanTeksti): teksti ja oma paikkarivi, tai null.</summary>
+        public string AarreTeksti, AarrePaikkarivi;
         /// <summary>Web aarteenAvausMahdollista: kohtaaminen ja sille paikka maailmankartalla.</summary>
         public bool AarteenAvaus;
         /// <summary>data.lehtitehtavat raakana (LehtiFokus lukee, jos kokoelma lehtitehtavat puuttuu).</summary>
         public List<object> Lehtitehtavat;
-
-        /// <summary>
-        /// Paikkarivin jako (webin matkakirjanOtsikko): ensimmäisen vuosiluvun jälkeinen
-        /// ". " erottaa otsikon ("Ateena, elokuussa 1873") ja tunnelman ("Pölyä ja puhetta kullasta.").
-        /// </summary>
-        public (string Otsikko, string Tunnelma) Otsikko()
-        {
-            if (string.IsNullOrEmpty(Paikkarivi)) return (null, null);
-            var m = System.Text.RegularExpressions.Regex.Match(Paikkarivi, @"^(.*?\b\d{4})\.\s+(.*)$");
-            return m.Success ? (m.Groups[1].Value, m.Groups[2].Value) : (Paikkarivi.TrimEnd('.'), null);
-        }
     }
 
     public static class Fokusvirrat
@@ -139,6 +132,14 @@ namespace Matkakirja.Natiivi
                     && MiniJson.Luku(piste, "x") is double px && MiniJson.Luku(piste, "y") is double py
                     && !double.IsNaN(px) && !double.IsNaN(py) && !double.IsInfinity(px) && !double.IsInfinity(py))
                     v.AarteenAvaus = true;
+                var am = MiniJson.Kentta(d, "aarremerkinta");
+                if (am is string amt) v.AarreTeksti = amt;
+                else if (MiniJson.Objekti(am) is Dictionary<string, object> amo)
+                {
+                    v.AarreTeksti = MiniJson.Teksti(amo, "teksti");
+                    v.AarrePaikkarivi = MiniJson.Teksti(amo, "paikkarivi");
+                }
+                if (string.IsNullOrEmpty(v.AarreTeksti)) v.AarreTeksti = null;
                 v.Lehtitehtavat = Rakenne.Lista(MiniJson.Kentta(d, "lehtitehtavat"));
                 t[kaupunki] = v;
             }

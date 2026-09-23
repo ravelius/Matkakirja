@@ -167,6 +167,78 @@
     white-space: normal;
 }
 
+.mk-matkakirja .mk-matkakirja__piilo {
+    display: none;
+}
+
+/* Tavallinen paikkarivi (web .fact-place): kaupunki tai "Matkalla — X", ei kursiivia. */
+.mk-matkakirja__tunnelma.mk-matkakirja__tunnelma--paikka {
+    font-size: 12.8px;
+    -unity-font-style: bold;
+    letter-spacing: 0.5px;
+    margin: 0 0 4px 0;
+}
+
+/* Lähderivi tekstin perään (web .source-line: 0.78rem, --muted; otsikko versaalein). */
+.mk-matkakirja__lahteet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.mk-matkakirja__lahdeotsikko {
+    font-size: 10.9px;
+    letter-spacing: 1.3px;
+    color: var(--muted);
+    opacity: 0.75;
+    margin-right: 5px;
+}
+
+.mk-matkakirja__lahde {
+    font-size: 12.5px;
+    color: var(--muted);
+    white-space: normal;
+}
+
+.mk-matkakirja__lahdelinkki {
+    padding: 0;
+    margin: 0;
+    min-height: 0;
+    border-width: 0;
+    border-bottom-width: 1px;
+    border-color: rgba(179, 156, 125, 0.6);
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 12.5px;
+    color: var(--muted);
+}
+
+.mk-matkakirja__lahdelinkki:hover {
+    color: var(--accent);
+}
+
+/* Pieni kuvaikoni "Katso kuva" (web .fact-image-btn): vasen reuna tekstin alla. */
+.mk-matkakirja__kuva {
+    align-self: flex-start;
+    width: 28px;
+    height: 28px;
+    min-height: 28px;
+    padding: 4px;
+    margin-top: 5px;
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--accent);
+}
+
+.mk-matkakirja__kuva:hover {
+    color: #e7b865;
+}
+
+.mk-matkakirja__kuvaikoni {
+    width: 20px;
+    height: 20px;
+}
+
 .mk-matkakirja__pikkukuvat {
     flex-direction: row;
     flex-wrap: wrap;
@@ -196,6 +268,8 @@
 .mk-matkakirja--pieni .mk-matkakirja__tunnelma,
 .mk-matkakirja--pieni .mk-matkakirja__teksti,
 .mk-matkakirja--pieni .mk-matkakirja__pikkukuvat,
+.mk-matkakirja--pieni .mk-matkakirja__lahteet,
+.mk-matkakirja--pieni .mk-matkakirja__kuva,
 .mk-matkakirja--pieni .mk-matkakirja__kaiutin {
     display: none;
 }

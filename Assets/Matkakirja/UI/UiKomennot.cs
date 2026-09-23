@@ -39,6 +39,11 @@
 //   ui chat [kysymys]                         pulun keskustelu auki / kysy
 //   ui traileri [kaupunki]                    saapumistraileri ilman puhetta (oletus lontoo)
 //   ui luento [kaupunki] [loppu]              matkakirjakortti + luentakuvat (oletus ateena); loppu = Livian vuoro
+//   ui matkakirja [kaupunki] [laji]           matkakirjakortin polut ilman ääntä (oletus tanger; Matkakirjamerkinnat.cs):
+//                                             fokus (virran merkintä) | aarre (aarremerkintä) | saapuminen (pakin
+//                                             kuvaus + nosto) | kaari (tarinakaaren saapuminen) | havainto (isoisän
+//                                             paikkatieto, "Katso kuva") | satunnainen | reitti ("Matkalla — X", lähderivi);
+//                                             ilman lajia kuten saapuessa. Esim. tanger havainto, bergen reitti, ateena aarre
 //   ui kartuscha [ISO3] [auki]                kartuscha maalle ilman peliä (oletus ITA)
 //   ui heitto [teksti]                        kartan toimintonappi näkyviin
 //   ui viesti teksti                          tilarivin hetkellinen viesti
@@ -175,7 +180,15 @@ namespace Matkakirja.Natiivi
                 {
                     var lk = loput.Split(' ');
                     string kaup = lk[0].Length > 0 ? lk[0] : "ateena";
-                    if (lk.Length > 1 && lk[1] == "loppu") ui.Saapuminen.Loppui(kaup); else ui.Saapuminen.Alkoi(kaup);
+                    if (lk.Length > 1 && lk[1] == "loppu") ui.Saapuminen.Loppui(kaup); else ui.Saapuminen.Alkoi(kaup, pakota: true);
+                    return null;
+                }
+                case "matkakirja":
+                {
+                    var mk = loput.Split(' ');
+                    string kaup = mk[0].Length > 0 ? mk[0].ToLowerInvariant() : "tanger";
+                    string laji = mk.Length > 1 ? mk[1].ToLowerInvariant() : "";
+                    ui.Saapuminen.Testi(kaup, laji, t => Kirjaa("matkakirja " + kaup + " → " + t));
                     return null;
                 }
                 case "traileri":
