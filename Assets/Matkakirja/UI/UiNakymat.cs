@@ -106,6 +106,12 @@ namespace Matkakirja.Natiivi
             };
             if (!o.Kaytossa) Kerros.Nayta(false);
             KorvaaNimikortti(o.Kaytossa);
+            // Pelin tilanteet puluun (webin ilmoitaLivianTilanne; Pelikoodarin tapahtuma).
+            o.LivianTilanne += (laji, tunne, v) =>
+            {
+                if (laji == "tunne") Pulu.Tunne(tunne, v);
+                else Pulu.Tilanne(laji, null, tunne, v);
+            };
             // Lehti (WKWebView) aukeaa kaiken päälle: auki jääneet valikot kiinni.
             if (o.Lehti != null) o.Lehti.Avautui += _ => { Valikko.Sulje(); Aanentasot.Sulje(); Vahvistus.Sulje(); };
         }
