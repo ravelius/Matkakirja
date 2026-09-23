@@ -60,7 +60,7 @@ namespace Matkakirja.Natiivi
         static IEnumerator Lue()
         {
             string teksti = null;
-            yield return Sisalto.HaeTeksti("fokusvirrat", t => teksti = t);
+            yield return Sisalto.HaeTeksti("fokusvirrat", t => teksti = t, valinnainen: true);
             Task.Run(() =>
             {
                 var t = new Dictionary<string, Saapumisvirta>();

@@ -87,12 +87,12 @@ namespace Matkakirja.Natiivi
         {
             string kaup = null, lehdet = null, julisteet = null, liput = null;
             yield return Sisalto.HaeTeksti("kaupungit", t => kaup = t);
-            yield return Sisalto.HaeTeksti("kaupunkilehdet", t => lehdet = t);
-            yield return Sisalto.HaeTeksti("julisteet", t => julisteet = t);
-            yield return Sisalto.HaeTeksti("lippumaat", t => liput = t);
+            yield return Sisalto.HaeTeksti("kaupunkilehdet", t => lehdet = t, valinnainen: true);
+            yield return Sisalto.HaeTeksti("julisteet", t => julisteet = t, valinnainen: true);
+            yield return Sisalto.HaeTeksti("lippumaat", t => liput = t, valinnainen: true);
             string maaTeksti = null, puheet = null;
-            yield return Sisalto.HaeTeksti("maat", t => maaTeksti = t);
-            yield return Sisalto.HaeTeksti("saapumispuheet", t => puheet = t);
+            yield return Sisalto.HaeTeksti("maat", t => maaTeksti = t, valinnainen: true);
+            yield return Sisalto.HaeTeksti("saapumispuheet", t => puheet = t, valinnainen: true);
             if (kaup == null)
             {
                 Debug.LogWarning("MATKAKIRJA ui sisältö: kaupungit-kokoelmaa ei saatu");
