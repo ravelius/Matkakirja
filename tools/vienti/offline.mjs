@@ -43,8 +43,8 @@ export const OFFLINE_LAHTEET = {
     skeema: 'xyz', projektio: 'EPSG:3857', koko: 256, minzoom: 0, maxzoom: 8, globaaliMax: 5,
   },
   maasto: {
-    layer: 'https://media.matkakirja.app/julisteet/maasto/2026-09-23a/layer.json',
-    url: 'https://media.matkakirja.app/julisteet/maasto/2026-09-23a/{z}/{x}/{y}.terrain?v=2026-09-23a',
+    layer: 'https://media.matkakirja.app/julisteet/maasto/2026-09-23b/layer.json',
+    url: 'https://media.matkakirja.app/julisteet/maasto/2026-09-23b/{z}/{x}/{y}.terrain?v=2026-09-23b',
     skeema: 'tms', projektio: 'EPSG:4326', globaaliMax: 6,
   },
 };
