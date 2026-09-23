@@ -12,9 +12,17 @@
 // Viesti: verkkopelin .event-toast — kelluva kortti kartan yläkolmanneksessa
 // (top 16 %), tumma liukuväri ja kultareuna, liukuu sisään alhaalta.
 //
+// VAAKA-ASENTO (web js/ylapalkki-vaaka.js, omistaja 13.9.2026): matalalla vaakaruudulla
+// (korkeus ≤ 520 pt) ja kosketuslaitteella vaakasuunnassa (leveys ≤ 1366 pt, siis myös iPad)
+// palkki liukuu ylös piiloon ja oikeaan yläkulmaan tulee karttaselitteen kokoinen väkäsnappi.
+// Napautus avaa palkin muun sisällön päälle; napautus palkin ja sen pudotusvalikoiden
+// ulkopuolelle sulkee sen. Ylhäältä asemoituvat näkymät lukevat varauksen Ylapalkki.Varaus-
+// arvosta (0 piilotettuna), joten kartta ja kortit nousevat palkin paikalle.
+//
 // Toteuttaa Pelikoodarin ITilarivi-rajapinnan (Scripts/Peli/NakymaSopimukset.cs).
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
 namespace Matkakirja.Natiivi
@@ -22,8 +30,42 @@ namespace Matkakirja.Natiivi
     public sealed class Ylapalkki : ITilarivi
     {
         public const float Korkeus = 50f;
+        /// <summary>Väkäsikoni (web js/vakasikoni.js VAKASIKONIN_POLUT).</summary>
+        const string Vakaset = "<path d=\"M4 4.5 L12 8.5 L20 4.5\"/><path d=\"M4 10 L12 14 L20 10\"/><path d=\"M4 15.5 L12 19.5 L20 15.5\"/>";
 
+        /// <summary>Testikomento (ui ylapalkki vaaka|pysty|auto): null = ruudun mukaan.</summary>
+        public static bool? Pakota;
+
+        /// <summary>
+        /// Palkki piilossa väkäsnapin takana (web: @media (orientation: landscape) and (max-height: 520px),
+        /// (orientation: landscape) and (pointer: coarse) and (max-width: 1366px)). Pisteet = pikselit / iOS:n skaala.
+        /// </summary>
+        public static bool Piilossa
+        {
+            get
+            {
+                if (Pakota.HasValue) return Pakota.Value;
+                if (Screen.width <= Screen.height) return false;
+                float skaala = Screen.dpi > 0 ? Mathf.Max(1f, Mathf.Round(Screen.dpi / 163f)) : 1f;
+                float w = Screen.width / skaala, h = Screen.height / skaala;
+                return h <= 520f || (Touchscreen.current != null && w <= 1366f);
+            }
+        }
+
+        /// <summary>Ylhäältä asemoituvien näkymien varaus turva-alueen yläreunasta (0, kun palkki on piilossa).</summary>
+        public static float Varaus => Piilossa ? 0f : Korkeus;
+
+        /// <summary>Piilotettu palkki avattiin väkäsnapista tai suljettiin (karttaselitteen nappi väistyy).</summary>
+        public static event Action<bool> AukiMuuttui;
+        public static bool Auki { get; private set; }
+
+        /// <summary>Onko jokin palkin pudotusvalikoista auki (UiNakymat): silloin ohinapautus ei sulje palkkia.</summary>
+        public Func<bool> PudotusAuki;
+
+        readonly UiKerros kerros;
         readonly VisualElement palkki, pilleri, ilmoitus;
+        readonly Button vakasnappi;
+        bool piilossa, nakyy = true;
         readonly Label raha, kello, ilmoitusTeksti;
         string rivi = "", kelloTeksti = "";
         IVisualElementScheduledItem ilmoitusAjastin, valahdysAjastin, rahaAjastin;
@@ -39,8 +81,9 @@ namespace Matkakirja.Natiivi
 
         public Ylapalkki(UiKerros kerros)
         {
+            this.kerros = kerros;
             var juuri = kerros.Juuri(UiKerros.Tilarivi);
-            kerros.Turva(UiKerros.Tilarivi);
+            var turva = kerros.Turva(UiKerros.Tilarivi);
 
             palkki = Rakenne.El("mk-ylapalkki", juuri);
             Rakenne.Tausta(palkki, Kuviot.Ylapalkki);
@@ -70,18 +113,71 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(ilmoitus, Kirjasin.KoneLihava);
             ilmoitus.style.display = DisplayStyle.None;
 
+            vakasnappi = Rakenne.Nappi(null, "mk-vakasnappi", () => { if (Auki) Sulje(); else Avaa(); }, turva, Vakaset);
+            vakasnappi.tooltip = "Näytä yläpalkki";
+
             Kirjasimet.Aseta(juuri, Kirjasin.Kone);
-            kerros.TurvaMuuttui += () => Asettele(kerros);
-            Asettele(kerros);
+            kerros.TurvaMuuttui += Asettele;
+            kerros.JokaRuutu += TarkistaOhiNapautus;
+            Asettele();
         }
 
-        void Asettele(UiKerros kerros)
+        void Asettele()
         {
             var r = kerros.Reunat(UiKerros.Tilarivi);
             palkki.style.paddingTop = r.y;
             palkki.style.paddingLeft = r.x + 10;
             palkki.style.paddingRight = r.z + 10;
             palkki.style.height = r.y + Korkeus;
+            bool p = Piilossa;
+            if (p != piilossa) { piilossa = p; if (!p) Sulje(); }
+            palkki.EnableInClassList("mk-ylapalkki--piilossa", piilossa);
+            PaivitaNappi();
+        }
+
+        /// <summary>Ruudun koko tai testikomento muutti tilaa: näkymät asettuvat uudelleen (TurvaMuuttui).</summary>
+        public void Paivita() => kerros.PakotaTurva();
+
+        void PaivitaNappi()
+        {
+            vakasnappi.style.display = piilossa && nakyy ? DisplayStyle.Flex : DisplayStyle.None;
+            vakasnappi.EnableInClassList("mk-vakasnappi--auki", Auki);
+            vakasnappi.pickingMode = Auki ? PickingMode.Ignore : PickingMode.Position;
+            vakasnappi.tooltip = Auki ? "Piilota yläpalkki" : "Näytä yläpalkki";
+        }
+
+        public void Avaa()
+        {
+            if (!piilossa || Auki) return;
+            Auki = true;
+            palkki.AddToClassList("mk-ylapalkki--auki");
+            PaivitaNappi();
+            AukiMuuttui?.Invoke(true);
+        }
+
+        public void Sulje()
+        {
+            if (!Auki) return;
+            Auki = false;
+            palkki.RemoveFromClassList("mk-ylapalkki--auki");
+            PaivitaNappi();
+            AukiMuuttui?.Invoke(false);
+        }
+
+        /// <summary>
+        /// Web: pointerdown kaappausvaiheessa sulkee palkin ennen kuin napautuksen kohde reagoi. Pallo lukee
+        /// syötettä suoraan, joten napautus tarkistetaan joka ruudussa; palkki ja auki oleva pudotusvalikko ovat sisällä.
+        /// </summary>
+        void TarkistaOhiNapautus()
+        {
+            if (!Auki) return;
+            if (Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame) { Sulje(); return; }
+            var osoitin = Pointer.current;
+            if (osoitin == null || !osoitin.press.wasPressedThisFrame || palkki.panel == null) return;
+            if (PudotusAuki != null && PudotusAuki()) return;
+            var ruutu = osoitin.position.ReadValue();
+            var pp = RuntimePanelUtils.ScreenToPanel(palkki.panel, new Vector2(ruutu.x, Screen.height - ruutu.y));
+            if (!palkki.worldBound.Contains(pp) && !vakasnappi.worldBound.Contains(pp)) Sulje();
         }
 
         /// <summary>Palkin alareuna paneelin pisteinä (pudotusvalikot asettuvat tämän alle).</summary>
@@ -149,6 +245,12 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Koko palkki näkyviin tai pois (esim. lehti auki).</summary>
-        public void NaytaPalkki(bool nakyy) => palkki.style.display = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
+        public void NaytaPalkki(bool nakyy)
+        {
+            this.nakyy = nakyy;
+            palkki.style.display = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
+            if (!nakyy) Sulje();
+            PaivitaNappi();
+        }
     }
 }

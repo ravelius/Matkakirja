@@ -98,7 +98,7 @@ namespace Matkakirja.Natiivi
             // Tavallisesti taikalasien vasemmalla puolella; astronautin kamerassa (ei yläpalkkia
             // eikä taikalaseja) oikeassa yläkulmassa kuten webin .satelliitti-linssisulku.
             var s = sulje.style;
-            s.top = astroTila ? 12 : Ylapalkki.Korkeus + 8 + 4;
+            s.top = astroTila ? 12 : Ylapalkki.Varaus + 8 + 4;
             s.right = astroTila ? 12 : 10 + 40 + 8;
         }
 

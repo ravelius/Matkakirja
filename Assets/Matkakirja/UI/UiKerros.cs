@@ -44,6 +44,9 @@ namespace Matkakirja.Natiivi
         public event Action TurvaMuuttui;
 
         /// <summary>Kerroksen turva-alueen reunat paneelin pisteinä: x vasen, y ylä, z oikea, w ala.</summary>
+        /// <summary>Turva-alueet ja TurvaMuuttui uudelleen seuraavassa ruudussa (esim. yläpalkin vaakatila vaihtui).</summary>
+        public void PakotaTurva() => viimeKoko = default;
+
         public Vector4 Reunat(int kerros) => reunat.TryGetValue(kerros, out var r) ? r : Vector4.zero;
 
         /// <summary>Kerroksen ainoa instanssi (luodaan ensimmäisellä kutsulla).</summary>

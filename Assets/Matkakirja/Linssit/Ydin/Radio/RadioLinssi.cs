@@ -321,8 +321,12 @@ namespace Matkakirja.Linssit.Radio
             }
         }
 
+        /// <summary>Virhe (virran oma tai aikakatkaisu) juuri ennen kuin virta suljetaan: diagnoosi lokiin.</summary>
+        public event Action<string> VirheSyntyy;
+
         void Virhe(string syy)
         {
+            VirheSyntyy?.Invoke(syy);
             var kaupunki = soiva;
             LopetaAani(0);
             Aseta(RadioVaihe.Virhe, ViritysVaihe.Ei, kaupunki, aineisto.MaanAsema(aineisto.Kaupunki(kaupunki)?.Iso3), syy);

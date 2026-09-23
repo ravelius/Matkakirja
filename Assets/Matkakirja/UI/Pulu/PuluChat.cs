@@ -56,7 +56,8 @@ namespace Matkakirja.Natiivi
             "Pieni hetki, sähkekone rätisee taas..", "Odotas, muistin juuri jotain ja unohdin sen..", "Hetkinen, tämä osui johonkin minkä olen itse nähnyt..",
             "Katson tästä ikkunasta, näkyisikö vastaus..", "Pieni hetki, järjestän faktat riviin..", "Hetki, tuuli vei yhden sivun..",
         };
-        static readonly string[] Vastausmietinnat =
+        /// <summary>Web LIVIAN_MIETINNAT.vastaus (myös sähketehtävän odotusrivi).</summary>
+        internal static readonly string[] Vastausmietinnat =
         {
             "Hyvä kysymys. Käyn kysymässä pöllöltä, pieni hetki..", "Tää on pöllön heiniä. Vien viestin, palaan pian..",
             "Minä tiedän kenelle tämä kuuluu. Käyn lentämässä..", "Otan tämän kysymyksen mukaani. Kaksi kaartoa ja palaan..",
@@ -144,7 +145,7 @@ namespace Matkakirja.Natiivi
             paneeli.style.left = r.x + 11;
             paneeli.style.right = r.z + 11;
             paneeli.style.bottom = r.w + 11;
-            palaa.style.top = Ylapalkki.Korkeus + 56;
+            palaa.style.top = Ylapalkki.Varaus + 56;
         }
 
         // --- avaus ja sulkeminen -------------------------------------------------

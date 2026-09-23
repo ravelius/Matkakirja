@@ -48,11 +48,11 @@ namespace Matkakirja.Linssit.Astronautti
         /// Reliefin kylläisyys astronautin kamerassa: webissä 0,8 (satelliitti-avaruus.js
         /// RELIEFIN_SATURAATIO, canvas saturate). Natiivi valitsee sarjan, koska Cesiumin
         /// rasterikerroksella ei ole kylläisyyssäätöä: 1,0 = Topografia.ReliefiSarja,
-        /// 0,8 = VaimeaSarja (Karttasepän polttama saturate(0.8) -versio). Omistaja
-        /// vertaa molempia TestFlightissa (Fable 23.9.); UI tai testikomento asettaa.
+        /// 0,8 = VaimeaSarja (Karttasepän polttama saturate(0.8) -versio). Oletus on webin 0,8
+        /// (Fable 23.9. klo 22.4x: webin nykytila on oletus); täysväri vain KOKEET-kytkimellä.
         /// </summary>
-        public static double Kyllaisyys = 1.0;
         public const double WebinKyllaisyys = 0.8;
+        public static double Kyllaisyys = WebinKyllaisyys;
 
         /// <summary>
         /// saturate(0.8) -reliefisarja (Karttaseppä 23.9.2026: sRGB-arvoihin ennen jpg-pakkausta,
