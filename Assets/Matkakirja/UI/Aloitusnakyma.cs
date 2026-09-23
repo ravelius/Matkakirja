@@ -365,12 +365,24 @@ namespace Matkakirja.Natiivi
 
     /// <summary>
     /// Matkan huipennus (webin #winner-dialog): kaikki unohdetut aarteet löytyivät
-    /// (PeliOhjain.KaikkiAarteetLoytyi, kerran matkassa). Otsikko, yhteenveto
-    /// (MatkanYhteenveto.Teksti), "Jatka vaeltamista" (kiinni, peli jatkuu) ja
-    /// "Uusi matka" (avausteksti ja lähtökaupungin valinta).
+    /// (PeliOhjain.KaikkiAarteetLoytyi, kerran matkassa). Fablen kaanoniteksti
+    /// (nuoren Foggin merkintä, luvut MatkanYhteenvedosta), "Jatka vaeltamista"
+    /// (kiinni, peli jatkuu) ja "Uusi matka" (avausteksti ja lähtökaupungin valinta).
     /// </summary>
     public sealed class Huipennus
     {
+        // Kaanon: docs/moduulit/huipennus-teksti.md (Fable 23.9.2026; myöhemmin paketin kautta).
+        const string Otsikko = "Aarnin luettelo on täynnä";
+        const string Teksti =
+            "Viimeinen sivu on kirjoitettu. Aarnin luettelossa ei ole enää yhtään "
+            + "aarretta, josta vain kerrotaan — jokaisen olen nähnyt omin silmin.\n\n"
+            + "Isoisä lähti tälle matkalle vuonna 1873 ja jätti sen kesken. Nyt tiedän, "
+            + "ettei se jäänyt kesken siksi, ettei hän olisi löytänyt. Hän löysi jotain, "
+            + "mistä revitty sivu ei kerro. Ehkä hän tahtoi, että löydän sen itse.\n\n"
+            + "{paivat} päivää, {kaupungit} kaupunkia, {loydot} unohdettua aarretta. "
+            + "Matkakirja on täynnä, mutta maailma ei ole. Isoisä kirjoitti kerran: "
+            + "\"Matka ei lopu siihen, että saapuu.\"";
+
         readonly VisualElement himmennys;
         readonly Label teksti;
         Action uusiMatka;
@@ -383,7 +395,7 @@ namespace Matkakirja.Natiivi
             var kortti = new Kortti("mk-huipennus");
             himmennys.Add(kortti);
             var merkki = Rakenne.Teksti("◈", "mk-huipennus__merkki", kortti.Sisus);
-            var o = Rakenne.Teksti("Kaikki aarteet löytyivät!", "mk-kortti__otsikko mk-huipennus__otsikko", kortti.Sisus);
+            var o = Rakenne.Teksti(Otsikko, "mk-kortti__otsikko mk-huipennus__otsikko", kortti.Sisus);
             Kirjasimet.Aseta(o, Kirjasin.LukuLihava);
             teksti = Rakenne.Teksti("", "mk-kortti__teksti", kortti.Sisus);
             var napit = Rakenne.El("mk-kortti__napit", kortti.Sisus, PickingMode.Ignore);
@@ -397,8 +409,10 @@ namespace Matkakirja.Natiivi
         public void Nayta(MatkanYhteenveto yv, Action uusiMatka)
         {
             this.uusiMatka = uusiMatka;
-            // Tarinateksti odottaa Fablea (kaanon): nyt webin jakoteksti sellaisenaan.
-            teksti.text = yv?.Teksti ?? "";
+            teksti.text = Teksti
+                .Replace("{paivat}", (yv?.Paivat ?? 0).ToString())
+                .Replace("{kaupungit}", (yv?.Kaupungit ?? 0).ToString())
+                .Replace("{loydot}", (yv?.Aarteet ?? 0).ToString());
             if (Auki) return;
             Auki = true;
             Rakenne.Nayta(himmennys, true, 320);
