@@ -14,6 +14,8 @@ verkkopelin `Game` (yksinpeli vaellustilassa).
     Laattamaarat (paketin `kokoelmat/laatat.json`), Loyto (yhden käännön tulos).
   - **Kysely** + Kysymysdata — kysymysmoottori (js/game.js actionQuiz…closeQuiz).
   - **Kokemus** — tietäjäpisteet (awardXp, ainoa pisteportti), -tasot, tietoprosentti.
+  - **Kaksintaistelu** + Kaksintaistelut — rosvon kaksintaistelu (js/game.js beginDuel,
+    actionDuelRelief, answerDuel, timeoutDuel, closeDuel), paketin `kokoelmat/kaksintaistelut.json`.
 - `Assets/Matkakirja/Scripts/Peli/LehtiKuori.cs` — ILehti-toteutus (GameObject `MatkakirjaLehti`).
 - `Assets/Plugins/iOS/MatkakirjaLehti.mm` — WKWebView-liitännäinen, ks. README-lehti.md.
 - `Assets/Matkakirja/Editor/LehtiKuoriXcode.cs` — WebKit.framework linkitys Xcode-vientiin.
@@ -34,8 +36,14 @@ matka.Bussi(kohde); matka.Lenna(kohde); matka.PeruKulkutapa();
 kysely.Tutki(vaikea); kysely.Vastaa(i); kysely.Vihje(); kysely.Puolita(); kysely.Kaveriapu();
 kysely.AikaLoppui(); kysely.Sulje();
 
+var rosvo = new Kaksintaistelu(matka, Kaksintaistelut.LueKansiosta(paketti)); // Matka.Kaksintaistelu-koukku
+// kysely.Sulje() ryöstäjän jälkeen → matka.Tila.Vaihe == Vaihe.Kaksintaistelu (tai rosvo.Alkoi)
+rosvo.Avoin;   // Kysymys, Vaihtoehdot (8), Piilotetut, Oikea, Sekunnit, Helpotukset, Viety, Saalis, Fakta, Lahteet
+rosvo.Helpotus(); rosvo.Vastaa(i); rosvo.AikaLoppui(); rosvo.Sulje();   // Sulje päättää vuoron
+rosvo.HelpotuksenHinta; rosvo.HelpotusTarjolla;                          // napin teksti ja tila
+
 string json = matka.Tallenna();
-var ladattu = Matka.Lataa(verkko, json, maarat);  // luo sen jälkeen uusi Kysely
+var ladattu = Matka.Lataa(verkko, json, maarat);  // luo sen jälkeen uusi Kysely ja Kaksintaistelu
 ```
 
 - Tila: `matka.Tila` (vaihe, pelaaja: Raha, Xp, Tahdet, Loydot/LoytoMantereet/LoytoMaat),
@@ -57,7 +65,8 @@ var ladattu = Matka.Lataa(verkko, json, maarat);  // luo sen jälkeen uusi Kysel
 
 Versio 3 lisää `laattamaailma` (laatat, käännetyt, tähdet taulukkoina Map-järjestyksessä),
 pelaajalle `tahdet`, `loydot`, `loytoMantereet`, `loytoMaat` sekä `kaksintaistelu`,
-`ennatys`, `ennatysPaiva`, `polloAarteena`, `polloLoydetty`. Versiot 1–2 latautuvat:
+`ennatys`, `ennatysPaiva`, `polloAarteena`, `polloLoydetty` ja valinnaisena
+`avoinKaksintaistelu` (vain kun kaksintaistelu on auki; vaihe `Kaksintaistelu`). Versiot 1–2 latautuvat:
 `Matka.Lataa(verkko, json, maarat)` jakaa niille laatat pelin omalla satunnaisuudella
 tallennuksen kohdasta (sama tallennus → sama jako; lukitut kaupungit menettävät laattansa),
 koska tyhjä maailma jättäisi vanhan pelin ilman yhtään aarretta. Ilman määriä vanha peli
@@ -77,6 +86,7 @@ muuttua ilman webin muutosta; C# toistaa ne identtisesti, myös satunnaislukukut
 | `tee-matkajalki.mjs` | matkajalki.json | MatkaTestit | matkustus ilman tehtäviä, oikea laattajako |
 | `tee-kysymysjalki.mjs` | kysymysjalki.json, liput.json | KyselyTestit | kysymykset, rajatut käännöt |
 | `tee-laattajalki.mjs` | laattajalki.json, paketti/laatat.json | LaattaTestit | jako, käännöt, lukitus |
+| `tee-kaksintaistelujalki.mjs` | kaksintaistelujalki.json, paketti/kaksintaistelut.json (sisalto/1/v2) | KaksintaisteluTestit | koko peli 220 ryöstäjän koelaudalla ja oikea kaksintaistelu: oikein, väärin, aika, helpotukset, rahan puute, virheteot; web ja C# myös tallennuksen yli |
 | `tee-pelijalki.mjs` | pelijalki.json | PeliTestit | koko peli laattoineen (~2700 tekoa, 9 siementä, pöllö- ja ryöstäjäajot), myös tallennus/lataus välein 7 ja 3 |
 
 `.meta`-tiedostot eivät ole mukana: Unity luo ne ensimmäisessä tuonnissa (3D-selvittäjän editori).

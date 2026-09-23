@@ -76,8 +76,8 @@ namespace Matkakirja.Peli
     /// <summary>Kulkutapa (web travelMode). Pysy = 'stay' (tehtävä kaupungissa).</summary>
     public enum Kulkutapa { Maa, Meri, Lento, Bussi, Pysy }
 
-    /// <summary>Pelin vaihe (web phase).</summary>
-    public enum Vaihe { Aloitus, Toiminta, Heitto, Siirto, Kysymys, Ohi }
+    /// <summary>Pelin vaihe (web phase). Kaksintaistelu = web 'duel' (Peli/Kaksintaistelu.cs).</summary>
+    public enum Vaihe { Aloitus, Toiminta, Heitto, Siirto, Kysymys, Ohi, Kaksintaistelu }
 
     /// <summary>Vuorokaudenaika (web timeOfDay).</summary>
     public enum Vuorokaudenaika { Aamu, Keskipaiva, Ilta, Yo }
