@@ -102,6 +102,14 @@ namespace Matkakirja.Natiivi
         public static Func<GameObject, ITilarivi> Tilarivi;
         public static Func<GameObject, IMatkaValinta> MatkaValinta;
         public static Func<GameObject, IKysymysNakyma> Kysymys;
+        /// <summary>
+        /// Saapumistraileri (web js/saapumistraileri.js): (kaupunki, saapumispuheen url
+        /// tai null, valmis). PeliOhjain kutsuu kaupunkiin saavuttaessa ennen lehteä,
+        /// kerran per kaupunki istunnossa, ei aarrekaupungeissa (laatta kaupungissa).
+        /// Näkymä soittaa saapumispuheen itse ja kutsuu valmis (myös ohitettaessa).
+        /// Asettamaton = ei traileria: saapumispuhe soi kamera-ajon aikana (entinen vuo).
+        /// </summary>
+        public static Action<string, string, Action> Saapumistraileri;
         /// <summary>Asettamaton = ei korttia: napautus avaa matkavalinnan suoraan (erän 3 vuo).</summary>
         public static Func<GameObject, IKaupunkiKortti> KaupunkiKortti;
     }
