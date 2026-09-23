@@ -19,6 +19,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using Matkakirja.Peli;
@@ -191,6 +192,7 @@ namespace Matkakirja.Natiivi
             pulu.Tilanne("chatOpen");
             naytaKuplat.style.display = pulu.KuplaPalautettavissa ? DisplayStyle.Flex : DisplayStyle.None;
             if (!tervehditty) { tervehditty = true; Tervehdi(); }
+            PuluHaku.Valmistele(); // web: indeksi laiskasti chatin ensimmäisellä avauksella
             paneeli.EnableInClassList("mk-chat--alku", historia.Count == 0);
             HaeEhdotukset();
         }
@@ -280,7 +282,7 @@ namespace Matkakirja.Natiivi
         IEnumerator Laheta(string kysymys, bool jatko, Action<Tulos> valmis)
         {
             var runko = new StringBuilder("{\"tehtava\":\"vastaus\",\"kysymys\":").Append(PeliApu.Json(kysymys))
-                .Append(",\"konteksti\":").Append(PeliApu.Json(Konteksti()))
+                .Append(",\"konteksti\":").Append(PeliApu.Json(Konteksti(HaeAineisto(kysymys))))
                 .Append(",\"kehys\":").Append(PeliApu.Json(Kehys(kysymys, jatko)))
                 .Append(",\"historia\":[");
             int alku = Mathf.Max(0, historia.Count - HistoriaKatto);
@@ -421,6 +423,26 @@ namespace Matkakirja.Natiivi
         IEnumerator VastausKuva(Label kupla, string vastaus, string kysymys)
         {
             int poletti = ++kuvaPoletti;
+            // Web paikallinenVastausKuva: oman aineiston nähtävyysjutun kuva ennen Wikipediaa; napautus avaa jutun.
+            foreach (var kat in viimeisetKatkelmat)
+            {
+                var r = kat.Reitti;
+                if (r?.Tyyppi != "nahtavyys" || !ReittiAvattavissa(r)) continue;
+                var (kk, kohde) = Nahtavyys(r);
+                var oma = kohde?.Juttu?.Kuvat.Count > 0 ? kohde.Juttu.Kuvat[0] : null;
+                if (oma == null || string.IsNullOrEmpty(oma.Lahde)) continue;
+                NostoSisalto.HaeKuva(oma.Lahde, tex =>
+                {
+                    if (tex == null || poletti != kuvaPoletti || kupla.panel == null) return;
+                    var nappi = Rakenne.El("mk-chat__vastauskuva", kupla);
+                    nappi.tooltip = "Näytä kuva isompana";
+                    nappi.style.backgroundImage = new StyleBackground(tex);
+                    kupla.AddToClassList("mk-chat__livia--kuva");
+                    nappi.AddManipulator(new Clickable(() => AvaaLinkki(r)));
+                    Vierita(kupla);
+                });
+                yield break;
+            }
             string aihe = VastauskuvanAihe(vastaus, kysymys);
             if (aihe == null) yield break;
             WikiYhteenveto y = null;
@@ -553,6 +575,7 @@ namespace Matkakirja.Natiivi
             string nakyva = Nakyva(t.Vastaus);
             var kupla = Viesti("mk-chat__livia", Kasitelinkit(t.Vastaus));
             KytkeKasitelinkit(kupla);
+            if (!t.Uusittava) Matkakirjalinkit();
             UiKerros.Hae().StartCoroutine(VastausKuva(kupla, t.Vastaus, kysymys));
             pulu.Tilanne("answer", nakyva);
             if (AaniPaalla) Puhe.Hae()?.Lue(nakyva, "pollo");
@@ -689,7 +712,114 @@ namespace Matkakirja.Natiivi
 
         // --- konteksti (webin kokoaKonteksti, yksi merkkijono) ------------------------------
 
-        string Konteksti()
+        // --- pelin oma aineisto (web haeAineisto, kokoaKonteksti, poimiLinkit; PuluHaku.cs) ------
+
+        const int AineistonKatto = 1900;
+        List<PuluHaku.Katkelma> viimeisetKatkelmat = new List<PuluHaku.Katkelma>();
+
+        /// <summary>Web haeAineisto: osuvimmat katkelmat; oman kaupungin ja maan jutut painavat enemmän.</summary>
+        List<PuluHaku.Katkelma> HaeAineisto(string kysymys)
+        {
+            PuluHaku.Valmistele();
+            var o = PeliOhjain.Instanssi;
+            string kaupunki = null;
+            if (o?.Matka != null && o.Matka.Tila.Pelaaja.Sijainti.Kaupungissa) kaupunki = o.Matka.Tila.Pelaaja.Sijainti.Kaupunki;
+            string maa = UiSisalto.Kaupunki(kaupunki)?.Maa;
+            // Minitehtävän fakta vain, kun pelaaja on vastannut siihen (web tehtavaRatkaistu).
+            viimeisetKatkelmat = PuluHaku.Hae(kysymys, kaupunki, maa,
+                aihe => kaupunki != null && (o?.Kaupat?.MinitehtavaVastattu(kaupunki, aihe) ?? false));
+            return viimeisetKatkelmat;
+        }
+
+        /// <summary>Web reittiAvattavissa: lehti on olemassa; nähtävyysjuttu vain siinä kaupungissa, jossa pelaaja on.</summary>
+        static bool ReittiAvattavissa(PuluHaku.Reitti r)
+        {
+            if (r == null) return false;
+            switch (r.Tyyppi)
+            {
+                case "maalehti": return UiSisalto.Maa(r.Tunniste) != null;
+                case "kaupunkilehti": return UiSisalto.Kaupunki(r.Tunniste) != null;
+                case "nahtavyys":
+                    var (k, kohde) = Nahtavyys(r);
+                    return k != null && NahtavyysAvattavissa(k, kohde);
+                default: return false;
+            }
+        }
+
+        static (Kohdekartta, KohdekarttaKohde) Nahtavyys(PuluHaku.Reitti r)
+        {
+            var k = Kohdekartat.Kaikki.FirstOrDefault(x => x.Kaupunki == r.Tunniste);
+            var kohde = k?.Kohteet.FirstOrDefault(x => x.Nimi == r.Kohde && x.Juttu != null);
+            return kohde == null ? (null, null) : (k, kohde);
+        }
+
+        /// <summary>Web poimiLinkit: eri reitit, vain avattavat, enintään kaksi.</summary>
+        List<PuluHaku.Reitti> PoimiLinkit()
+        {
+            var nahdyt = new HashSet<string>();
+            var ulos = new List<PuluHaku.Reitti>();
+            foreach (var k in viimeisetKatkelmat)
+            {
+                var r = k.Reitti;
+                if (r == null) continue;
+                string avain = r.Tyyppi + ":" + r.Tunniste + ":" + (r.Sivu ?? r.Kohde ?? "");
+                if (nahdyt.Contains(avain) || !ReittiAvattavissa(r)) continue;
+                nahdyt.Add(avain);
+                ulos.Add(r);
+                if (ulos.Count >= PuluHaku.LinkkiKatto) break;
+            }
+            return ulos;
+        }
+
+        /// <summary>Web liitaMatkakirjalinkit: "Matkakirja: A · B" vastauksen alle, pienempänä kuin puhe.</summary>
+        void Matkakirjalinkit()
+        {
+            var linkit = PoimiLinkit();
+            if (linkit.Count == 0) return;
+            var sb = new StringBuilder("Matkakirja: ");
+            for (int i = 0; i < linkit.Count; i++)
+            {
+                if (i > 0) sb.Append(" · ");
+                string nimi = linkit[i].Nimi ?? linkit[i].Otsikko ?? linkit[i].Leima ?? "lue";
+                sb.Append("<link=\"").Append(i).Append("\"><color=#7a5514><u>").Append(nimi.Replace("<", "")).Append("</u></color></link>");
+            }
+            var rivi = Viesti("mk-chat__matkakirja", sb.ToString());
+            rivi.enableRichText = true;
+            rivi.pickingMode = PickingMode.Position;
+            rivi.RegisterCallback<UnityEngine.UIElements.Experimental.PointerUpLinkTagEvent>(e =>
+            {
+                if (int.TryParse(e.linkID, out int i) && i >= 0 && i < linkit.Count) AvaaLinkki(linkit[i]);
+            });
+        }
+
+        /// <summary>
+        /// Web avaaLinkki/avaaKohde: nähtävyys kuvakortin kautta chatin päälle; lehti on kokoruudun tila,
+        /// joten chat väistyy ja lehti aukeaa oikealle sivulle.
+        /// </summary>
+        bool AvaaLinkki(PuluHaku.Reitti r)
+        {
+            if (r == null || !UiNakymat.Olemassa) return false;
+            var ui = UiNakymat.Hae();
+            var o = PeliOhjain.Instanssi;
+            switch (r.Tyyppi)
+            {
+                case "nahtavyys":
+                    var (k, kohde) = Nahtavyys(r);
+                    return k != null && AvaaNahtavyys(k, kohde);
+                case "maalehti":
+                    Sulje();
+                    if (o == null || o.LueMaalehti(r.Tunniste, r.Sivu) != null) ui.Lehti.Nayta(LehtiLaji.Maa, r.Tunniste, r.Sivu);
+                    return true;
+                case "kaupunkilehti":
+                    Sulje();
+                    if (o != null && o.LueLehti(r.Tunniste) == null) ui.Lehti.SiirryAiheeseen(r.Sivu);
+                    else ui.Lehti.Nayta(LehtiLaji.Kaupunki, r.Tunniste, r.Sivu);
+                    return true;
+            }
+            return false;
+        }
+
+        string Konteksti(List<PuluHaku.Katkelma> aineisto = null)
         {
             var sb = new StringBuilder();
             var o = PeliOhjain.Instanssi;
@@ -712,6 +842,17 @@ namespace Matkakirja.Natiivi
             if (v?.Teksti != null)
                 sb.Append("\nIsoisän matkakirjamerkintä: ").Append(v.Teksti.Length > 900 ? v.Teksti.Substring(0, 900) : v.Teksti);
             var t = sb.ToString();
+            if (aineisto != null && aineisto.Count > 0)
+            {
+                var osio = new StringBuilder("\n\nPELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):");
+                foreach (var pala in aineisto)
+                {
+                    string rivi = "\n- [" + pala.Leima + "] " + pala.Teksti;
+                    if (osio.Length + rivi.Length > AineistonKatto) break;
+                    osio.Append(rivi);
+                }
+                if (t.Length + osio.Length <= KontekstiKatto) t += osio.ToString();
+            }
             return t.Length > KontekstiKatto ? t.Substring(0, KontekstiKatto) : t;
         }
 

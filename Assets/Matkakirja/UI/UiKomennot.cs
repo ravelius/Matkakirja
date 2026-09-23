@@ -87,6 +87,7 @@
 //                                             vierittää (ja avaa väkäsen); periaate = aloitusportin periaatteet
 //                                             palautelohkon kohdalla; kuvapalaute = havainnekuvan palaute
 //                                             minipopupissa keksityllä kuvalla. Lähetys vain napista käsin.
+//   ui haku <kysymys>                         pulun paikallisen haun katkelmat (leima + pisteet)
 //   ui liiku                                  Liiku-napin napautus: kulkutapaliuku auki (peli käynnissä)
 //   ui chat [kysymys]                         pulun keskustelu auki / kysy (lehti tai nähtävyysjuttu auki → "Ehdota tallennettavaksi")
 //   ui traileri [kaupunki]                    saapumistraileri ilman puhetta (oletus lontoo)
@@ -117,6 +118,7 @@
 //   kuva nimi                                 Documents/ui-nimi.png (koko ruutu)
 //   odota s                                   seuraava rivi s sekunnin päästä
 using System.Collections.Generic;
+using System.Linq;
 using System.Globalization;
 using System.IO;
 using UnityEngine;
@@ -368,6 +370,16 @@ namespace Matkakirja.Natiivi
                     return null;
                 case "tietoja": ui.Tietoja.Avaa(); return null;
                 case "liiku": ui.Matkavalinta.TestaaLiiku(); return null;
+                case "haku":
+                {
+                    // Pulun paikallinen haku: katkelmien leimat ja pisteet (indeksi rakentuu ensimmäisellä kutsulla).
+                    PuluHaku.Valmistele();
+                    if (!PuluHaku.Valmis) return "indeksi rakentuu, toista hetken päästä";
+                    var o = PeliOhjain.Instanssi;
+                    string kid = o?.Matka != null && o.Matka.Tila.Pelaaja.Sijainti.Kaupungissa ? o.Matka.Tila.Pelaaja.Sijainti.Kaupunki : null;
+                    var kat = PuluHaku.Hae(loput, kid, UiSisalto.Kaupunki(kid)?.Maa, _ => false);
+                    return kat.Count == 0 ? "ei katkelmia" : string.Join(" | ", kat.Select(k => $"{k.Piste:0.#} {k.Leima}"));
+                }
                 case "tehoste":
                 {
                     var tk = loput.Split(new[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries);
