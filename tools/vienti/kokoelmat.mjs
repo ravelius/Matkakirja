@@ -26,6 +26,12 @@ import { ratkaiseMedia } from './media.mjs';
 import { aaniUrl, horatioAanenKesto } from '../../js/media.js';
 import { aikaleimojenOsoite } from '../../js/luentareaktiot.js';
 import { livianEleidenOsoite } from '../../js/livia-puheeleet-lataus.js';
+import { kohtaamiskuvaKohteelle, kohtaamiskuvaTavalliselleKohtaamiselle } from '../../js/kohtaamiskuvat-data.js';
+import {
+  LINSSILUENTA_JUURI, luennanRunko, luennanOsoite, kaarenPuheet, puheenTiiviste,
+} from '../../js/linssipuhe.js';
+import { createHash } from 'node:crypto';
+import { readdirSync, readFileSync } from 'node:fs';
 import { existsSync } from 'node:fs';
 
 const LAUTA = 'js/packs/maailmankartta.js';
@@ -610,6 +616,81 @@ function maaKokoelma(ns, hae) {
     { maalehti: 'maalehdet' }, rivit);
 }
 
+/*
+ * NIPPU 4 (Natiivi-UI:n ja Linssisepän tarpeet 23.9.2026 ilta): kuvat ja
+ * luennat valmiina osoitteina olemassa oleviin kokoelmiin.
+ *   - kohtaamiset[].muotokuva: tavallisen visan kohtaamiskuva
+ *     (kohtaamiskuvaTavalliselleKohtaamiselle), tarinakaari[].muotokuva:
+ *     tarinakaaren kohtaamiskuva (kohtaamiskuvaKohteelle) — samat valinnat
+ *     kuin js/visa.js. Kuvilla ei ole tekijä- eikä lisenssitietoa datassa,
+ *     eikä peli näytä niille lähderiviä: tekija ja lisenssi ovat null.
+ *   - laatat: kuvat tyypeittäin ja mantereittain, paikallisaarteet[].kuvat.
+ *   - karttamerkit: assets/nostotyypit/merkki-*.png (karttaselite), jotka
+ *     ovat vain Pagesissa (matkakirja.app), eivät ämpärissä.
+ *   - linssiaineisto: linssiluennat (pysäkkien ja kaaren puheiden osoitteet
+ *     pelin omilla runkosäännöillä, js/linssipuhe.js).
+ */
+const PAGES_JUURI = 'https://matkakirja.app/';
+
+function muotokuva(kuva) {
+  if (!kuva) return null;
+  return { url: kuva.osoite, varat: [], alt: kuva.alt ?? null, lyhyt: kuva.lyhyt ?? null,
+    kuvateksti: kuva.kuvateksti ?? null, tekija: null, lisenssi: null };
+}
+
+function mediaOsoite(polku) {
+  if (!polku) return null;
+  const { url = null, varat = [] } = ratkaiseMedia(polku, mediaLajiPolulle(polku));
+  return url ? { url, varat } : null;
+}
+// Pelin omat asset-polut (assets/aarteet/…): media.mjs:n laji polusta.
+const mediaLajiPolulle = (polku) => (polku.startsWith('assets/aarteet/') ? 'asset-aarteet' : 'repo');
+
+function linssiluennat(hae) {
+  const tulos = {};
+  for (const [tunnus, moduuli] of [['keksinnot', 'js/linssit/keksinnot.js'], ['ihmisen-matka', 'js/linssit/ihmisen-matka.js']]) {
+    const kaari = hae(moduuli).LINSSI?.aikajana;
+    if (!kaari) continue;
+    const juuri = kaari.luentajuuri ?? LINSSILUENTA_JUURI;
+    const pysakit = (kaari.tapahtumat ?? []).map((t) => ({
+      vuosi: t.vuosi ?? null, otsikko: t.otsikko ?? null, runko: luennanRunko(t), url: luennanOsoite(t, juuri),
+    }));
+    // Esittely saa versiokyselyn tekstin tiivisteestä (js/aikajana.js),
+    // välinäytökset ja loppu eivät.
+    const puheet = kaarenPuheet(kaari).map((p) => ({
+      avain: p.avain, runko: p.runko,
+      url: `${juuri}/${p.runko}.mp3${p.avain === 'esittely' && p.teksti ? `?v=${puheenTiiviste(p.teksti)}` : ''}`,
+    }));
+    tulos[tunnus] = { juuri, pysakit, puheet };
+  }
+  return tulos;
+}
+
+function rikastaNippu4(kokoelmat, ns) {
+  for (const a of kokoelmat.kohtaamiset.alkiot) a.muotokuva = a.kaupunki ? muotokuva(kohtaamiskuvaTavalliselleKohtaamiselle(a.kaupunki)) : null;
+  for (const a of kokoelmat.tarinakaari.alkiot) a.muotokuva = a.kaupunki ? muotokuva(kohtaamiskuvaKohteelle(a.kaupunki)) : null;
+  const tokens = ns.MAAILMANKARTTA.tokens;
+  const [laatta] = kokoelmat.laatat.alkiot;
+  laatta.kuvat = Object.fromEntries(Object.entries(tokens.types).map(([t, v]) => [t, mediaOsoite(v.kuva)]));
+  laatta.mannerKuvat = Object.fromEntries(Object.entries(tokens.mannerTypes).map(([m, tyypit]) => [m,
+    Object.fromEntries(Object.entries(tyypit).map(([t, v]) => [t, mediaOsoite(v?.kuva)]))]));
+  for (const a of kokoelmat.paikallisaarteet.alkiot) {
+    a.kuvat = { pieniAarre: mediaOsoite(a.data?.pieniAarre?.kuva), isoAarre: mediaOsoite(a.data?.isoAarre?.kuva) };
+  }
+}
+
+function karttamerkkiKokoelma() {
+  const kansio = new URL('../../assets/nostotyypit/', import.meta.url);
+  const rivit = readdirSync(kansio).filter((f) => /^merkki-.+\.png$/.test(f)).sort().map((f) => {
+    const b = readFileSync(new URL(f, kansio));
+    return { id: f.replace(/^merkki-|\.png$/g, ''), tiedosto: `assets/nostotyypit/${f}`, url: `${PAGES_JUURI}assets/nostotyypit/${f}`,
+      tavuja: b.length, sha256: createHash('sha256').update(b).digest('hex') };
+  });
+  return taulukko('assets/nostotyypit/merkki-*.png',
+    'Karttaselitteen nostotyyppien merkit (id = tyyppi). url = Pages (matkakirja.app); ämpärissä niitä ei vielä ole.',
+    {}, rivit);
+}
+
 /** nimiavaruudet: Map<moduulipolku, moduulin nimiavaruus> */
 export function kokoaKokoelmat(nimiavaruudet) {
   const ns = {
@@ -622,7 +703,7 @@ export function kokoaKokoelmat(nimiavaruudet) {
     return nimiavaruudet.get(polku);
   };
   const kaupunkiIdt = new Set(ns.MAAILMANKARTTA.cities.map((c) => c.id));
-  return {
+  const kokoelmat = {
     ...lautaKokoelmat(ns),
     ...sisaltoKokoelmat(hae, kaupunkiIdt),
     saannot: saantoKokoelma(hae),
@@ -634,5 +715,20 @@ export function kokoaKokoelmat(nimiavaruudet) {
     luennat: luentoKokoelma(hae),
     livianpuhe: livianPuheKokoelma(hae),
     maat: maaKokoelma(ns, hae),
+    karttamerkit: karttamerkkiKokoelma(),
   };
+  rikastaNippu4(kokoelmat, ns);
+  // Kätkökuva (Pelikoodari 23.9.2026): web näyttää sen kaaren aarretekstin
+  // yhteydessä (assets/kohtaamiset/kohtaaminen-katko.jpg). Vain Pagesissa.
+  kokoelmat.saannot.alkiot.push({
+    id: 'KATKOKUVA', moduuli: 'assets/kohtaamiset/kohtaaminen-katko.jpg',
+    arvo: mediaOsoite('assets/kohtaamiset/kohtaaminen-katko.jpg'),
+  });
+  kokoelmat.linssiaineisto.alkiot.push({
+    id: 'linssiluennat', linssi: null, laji: 'luennat',
+    kuvaus: 'Linssien luennat: juuri, pysäkit (runko = luennanRunko, url = luennanOsoite) ja kaaren puheet '
+      + '(esittely ?v=tiiviste, välinäytökset, loppu). Musiikki: aanitaulut siirtyma:keksinnot ja siirtyma:ihmisen-matka.',
+    data: linssiluennat(hae),
+  });
+  return kokoelmat;
 }

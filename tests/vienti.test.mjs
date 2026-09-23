@@ -164,9 +164,9 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
     saapumispuheet: avaimia(ns('saapumispuheet.js').SAAPUMISPUHEET),
     fokusvirrat: avaimia(ns('fokusvirrat.js').FOKUSVIRRAT),
     saannot: new Set(['js/rules.js', 'js/game.js', 'js/tokens.js', 'js/ai.js'].flatMap((f) => Object.entries(ns(f))
-      .filter(([, v]) => onSaantoArvo(v)).map(([n]) => n))).size,
+      .filter(([, v]) => onSaantoArvo(v)).map(([n]) => n))).size + 1, // + KATKOKUVA
     tapahtumat: ns('africa.js').AFRICA.events.length,
-    linssiaineisto: 7,
+    linssiaineisto: 8,
     aanitaulut: new Set([...ns('js/sound.js').AANITEHOSTEET, ...Object.keys(ns('js/sound.js').REAL_SAMPLES)]).size
       + ns('js/sound.js').AMBIENCE_TYPES.length + Object.keys(ns('js/sound.js').PULUN_TEHOSTEET).length
       + Object.keys(ns('js/siirtymamusiikki.js').RAIDAT).length + Object.keys(ns('js/musiikkivalitsin.js').TILARAIDAT).length
@@ -176,6 +176,7 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
     lippumaat: Object.values(P.map.countryShapes).filter((m) => m.lippu && m.nimi).length,
     pulmaaineisto: 7,
     maat: Object.keys(P.map.countryShapes).length,
+    karttamerkit: readdirSync(join(JUURI, 'assets/nostotyypit')).filter((f) => /^merkki-.+\.png$/.test(f)).length,
     livianpuhe: Object.keys(ns('js/livia-pilotti-cuet.js').LIVIAN_LUENTA_CUET).length,
     luennat: 2 + Object.values(ns('fokusvirrat.js').FOKUSVIRRAT).filter((v) => v?.matkakirja?.aanite).length,
     saapuminen: P.cities.length,

@@ -459,3 +459,20 @@ test('skeema 1.9: maat kartuschaa varten', async () => {
   const [iso] = Object.keys(MAA_KATEGORIAT);
   assert.deepEqual(maat.get(iso).aiheet.map((a) => a.id), MAA_KATEGORIAT[iso].map((a) => a.id));
 });
+
+test('nippu 4: muotokuvat, laattakuvat, karttamerkit, linssiluennat, kätkökuva', async () => {
+  const K = (n) => JSON.parse(tiedostot.get(`kokoelmat/${n}.json`)).alkiot;
+  const { kohtaamiskuvaTavalliselleKohtaamiselle, kohtaamiskuvaKohteelle } = await import('../js/kohtaamiskuvat-data.js');
+  const rooma = K('kohtaamiset').find((a) => a.id === 'rooma');
+  assert.equal(rooma.muotokuva?.url ?? null, kohtaamiskuvaTavalliselleKohtaamiselle('rooma')?.osoite ?? null);
+  for (const a of K('tarinakaari')) assert.equal(a.muotokuva?.url ?? null, kohtaamiskuvaKohteelle(a.kaupunki)?.osoite ?? null, a.id);
+  const laatta = K('laatat')[0];
+  assert.match(laatta.mannerKuvat.europe.star.url, /^https:\/\//);
+  assert.ok(K('paikallisaarteet').every((a) => /^[A-Z]{3}$/.test(a.maa) && a.data.pieniAarre?.name && a.data.isoAarre?.name), 'maa, tyyppi ja nimi');
+  assert.equal(K('karttamerkit').length, 11);
+  const ll = K('linssiaineisto').find((r) => r.id === 'linssiluennat').data;
+  const { luennanOsoite } = await import('../js/linssipuhe.js');
+  const { LINSSI } = await import('../js/linssit/keksinnot.js');
+  assert.equal(ll.keksinnot.pysakit[0].url, luennanOsoite(LINSSI.aikajana.tapahtumat[0]));
+  assert.match(K('saannot').find((r) => r.id === 'KATKOKUVA').arvo.url, /kohtaaminen-katko\.jpg$/);
+});
