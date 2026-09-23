@@ -65,7 +65,13 @@ namespace Matkakirja
         /// Hakee kokoelman raakatekstinä (sisäkkäiset taulukot, kuten reittien via,
         /// luetaan MiniJsonilla). Osoitin haetaan kerran istuntoa kohden.
         /// </summary>
-        public static IEnumerator HaeTeksti(string kokoelma, Action<string> valmis)
+        public static IEnumerator HaeTeksti(string kokoelma, Action<string> valmis) => HaeTeksti(kokoelma, valmis, false);
+
+        /// <summary>
+        /// Kuten yllä; valinnainen = true: puuttuva kokoelma (404, uudempi nippu kuin
+        /// julkaistu paketti) kirjataan tavallisena lokirivinä eikä virheenä.
+        /// </summary>
+        public static IEnumerator HaeTeksti(string kokoelma, Action<string> valmis, bool valinnainen)
         {
             while (osoitinHaussa) yield return null;
             string versioPolku = istunnonPolku;
@@ -107,7 +113,10 @@ namespace Matkakirja
                 yield return k.SendWebRequest();
                 if (k.result != UnityWebRequest.Result.Success)
                 {
-                    Debug.LogError($"MATKAKIRJA sisältö: {polku} epäonnistui: {k.error}");
+                    if (valinnainen && k.responseCode == 404)
+                        Debug.Log($"MATKAKIRJA sisältö: {polku} ei ole tässä paketissa (valinnainen)");
+                    else
+                        Debug.LogError($"MATKAKIRJA sisältö: {polku} epäonnistui: {k.error}");
                     valmis(null);
                     yield break;
                 }

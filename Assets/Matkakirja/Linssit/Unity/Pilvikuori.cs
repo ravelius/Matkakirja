@@ -92,7 +92,9 @@ namespace Matkakirja.Natiivi
             // GetPixels32: rivi 0 on kuvan alareuna eli eteläisin.
             Pilvikuva.Alfa(tavut, lahde.width, lahde.height, pohjoinenEnsin: false);
             kuva = new Texture2D(lahde.width, lahde.height, TextureFormat.RGBA32, true) { wrapModeU = TextureWrapMode.Repeat, wrapModeV = TextureWrapMode.Clamp };
-            kuva.LoadRawTextureData(tavut);
+            // SetPixelData tasolle 0 ja mipit Applyllä. LoadRawTextureData vaatisi koko
+            // mip-ketjun datan ja heitti poikkeuksen, jolloin pilvet jäivät pois (iPad 2e26b45).
+            kuva.SetPixelData(tavut, 0);
             kuva.Apply(true, true);
             Destroy(lahde);
             materiaali.SetTexture("_MainTex", kuva);

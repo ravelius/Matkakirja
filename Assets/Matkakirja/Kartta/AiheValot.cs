@@ -76,7 +76,7 @@ namespace Matkakirja
         IEnumerator Lataa()
         {
             string teksti = null;
-            yield return Sisalto.HaeTeksti("karttavalot", t => teksti = t);
+            yield return Sisalto.HaeTeksti("karttavalot", t => teksti = t, true);
             if (teksti == null) { Debug.LogWarning("MATKAKIRJA valot: karttavalot.json puuttuu (paketti ennen nippua 4?)"); yield break; }
             var juuri = Peli.MiniJson.Jasenna(teksti) as Dictionary<string, object>;
             if (juuri == null || !(juuri.TryGetValue("alkiot", out var a) && a is List<object> alkiot))
