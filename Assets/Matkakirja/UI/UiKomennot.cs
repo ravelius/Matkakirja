@@ -52,6 +52,12 @@
 //                                             kuvallinen juttu tai kohde n) → "Avaa juttu" nähtävyysarkkiin;
 //                                             ohittaa sijaintiehdon (webissä vain kaupungissa, jossa pelaaja on)
 //   ui tietoja                                tekijätiedot ja lähteet
+//   ui palaute [palaute|ehdotus|kuvavinkki|pro|periaate|kuvapalaute]
+//                                             palaute- ja ehdotuslomake AUKI ILMAN LÄHETYSTÄ: palaute (oletus) =
+//                                             "Kerro mitä huomasit" kuten hampurilaisesta; ehdotus/kuvavinkki/pro
+//                                             vierittää (ja avaa väkäsen); periaate = aloitusportin periaatteet
+//                                             palautelohkon kohdalla; kuvapalaute = havainnekuvan palaute
+//                                             minipopupissa keksityllä kuvalla. Lähetys vain napista käsin.
 //   ui chat [kysymys]                         pulun keskustelu auki / kysy
 //   ui traileri [kaupunki]                    saapumistraileri ilman puhetta (oletus lontoo)
 //   ui luento [kaupunki] [loppu]              matkakirjakortti + luentakuvat (oletus ateena); loppu = Livian vuoro
@@ -275,6 +281,20 @@ namespace Matkakirja.Natiivi
                     if (loput.Length > 0) ui.Chat.Kysy(loput); else ui.Chat.Vaihda();
                     return null;
                 case "tietoja": ui.Tietoja.Avaa(); return null;
+                case "palaute":
+                    switch (loput.Length > 0 ? loput : "palaute")
+                    {
+                        case "palaute": ui.Palaute.Avaa(); return null;
+                        case "ehdotus": case "kuvavinkki": case "pro": ui.Palaute.Avaa(loput); return null;
+                        case "periaate":
+                            ui.Aloitus.Testaa("portti", id => ui.Tilarivi.Viesti("Lähtö: " + id));
+                            ui.Aloitus.AvaaPeriaatteet();
+                            return null;
+                        case "kuvapalaute":
+                            Kuvavinkki.AvaaKuvapalaute("kuvat/havainne/esimerkki.jpg", "Havainnekuva: esimerkki (testikomento)", PalauteLomake.EhdotusSivu(""));
+                            return null;
+                        default: return "ui palaute palaute|ehdotus|kuvavinkki|pro|periaate|kuvapalaute";
+                    }
                 case "aloitus":
                     ui.Aloitus.Testaa(loput.Length > 0 ? loput : "portti", id => ui.Tilarivi.Viesti("Lähtö: " + id));
                     return null;
