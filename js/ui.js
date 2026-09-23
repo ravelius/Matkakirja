@@ -460,6 +460,7 @@ import { nollaaFokusmitat, paivitaFokusmitat, projisoiLaudalle } from './fokusmi
  * ainoa tapa sanoa, mikä vaihe maksaa. Ks. moduulin oma perustelu.
  */
 import { aloitaLinssiketju, merkitseLinssiketju, linssiketjunLoki } from './reliefipyramidi.js';
+import { aaniLisenssiSallittu } from './lisenssi.js';
 
 const DIE_FACES = ['', '⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
 const BOT_DELAY = 650;
@@ -16272,7 +16273,14 @@ export class UI {
       linkki.appendChild(document.createTextNode(musiikki.nakyva));
       otsikkoRivi.appendChild(linkki);
     }
-    if (nosto.musiikkiNayte) {
+    /*
+     * LISENSSIPORTTI (Fable 23.9.2026, js/lisenssi.js): NC- tai ND-ehtoinen
+     * näyte ei soi. Silloin nosto käyttäytyy kuin näytettä ei olisi
+     * (esikuuntelu tai linkki voi tulla tilalle alla).
+     */
+    const musiikkiNayte = nosto.musiikkiNayte && aaniLisenssiSallittu(nosto.musiikkiNayteNimi)
+      ? nosto.musiikkiNayte : null;
+    if (musiikkiNayte) {
       const nappi = html('button', 'kulttuuri-kuuntele kulttuuri-musiikkinayte');
       nappi.type = 'button';
       nappi.title = nosto.musiikkiNayteNimi ?? 'Vapaasti lisensoitu ääninäyte';
@@ -16282,7 +16290,7 @@ export class UI {
         + '<circle cx="15.8" cy="15.9" r="2.2" fill="currentColor"/></svg>'
         + '<span>Kuuntele musiikkia</span><span class="aika" hidden></span>';
       nappi.addEventListener('click', () => this.kulttuuriAaniNapista(
-        { aani: nosto.musiikkiNayte, otsikko: nosto.otsikko }, nappi,
+        { aani: musiikkiNayte, otsikko: nosto.otsikko }, nappi,
       ));
       otsikkoRivi.appendChild(nappi);
     }
@@ -16309,7 +16317,7 @@ export class UI {
      * "Kuuntele näyte" -nappia vierekkäin ei kertoisi kumpi soi.
      * Nimenomainen `esikuuntelu`-termi toimii silloinkin.
      */
-    if ((nosto.esikuuntelu || typeof nosto.musiikki === 'string') && !nosto.musiikkiNayte) {
+    if ((nosto.esikuuntelu || typeof nosto.musiikki === 'string') && !musiikkiNayte) {
       const nappi = html('button', 'kulttuuri-kuuntele kulttuuri-musiikkinayte');
       nappi.type = 'button';
       nappi.title = 'Esikuuntelu Apple Musicista (30 s)';

@@ -13,6 +13,7 @@ import { PACKS } from './pack.js';
 // Musiikkipaletin polku tulee yhdestä paikasta (js/media.js
 // MUSIIKIN_PAATE), jotta moottorin vaihto on yhden kytkimen vaihto.
 import { musaPolku } from './media.js';
+import { aaniLisenssiSallittu } from './lisenssi.js';
 
 const AVAIN = 'matkakirja-aanivalinnat';
 
@@ -605,6 +606,33 @@ const POISTETUT = new Set([
   'https://cdn.freesound.org/previews/160/160461_1-lq.mp3#voima=0.17',
 ]);
 
+/*
+ * LISENSSIPORTTI (Fable 23.9.2026: pelistä tulee maksullinen; sama sääntö
+ * kuin kuvilla, js/lisenssi.js). NC- ja ND-ehtoinen äänite ei soi, vaikka
+ * se olisi oletuskorissa tai studiossa valittuna — se putoaa korista, ja
+ * tyhjä kaupunkikori putoaa maan tai maiseman koriin kuten ennenkin.
+ * Lisenssi luetaan ehdokkaan `nimi`-kentästä; vertailu ilman #-merkintöjä,
+ * koska korit kantavat voima- ja alkumerkintöjä. Inventaario:
+ * docs/raportit/lisenssi-inventaario-20260923.md.
+ */
+const perusOsoite = (url) => String(url ?? '').split('#')[0];
+let estetytMuisti = null;
+/** NC/ND-äänitteiden perusosoitteet kaikista ehdokastauluista. */
+export function lisenssiEstetytAanet() {
+  if (estetytMuisti) return estetytMuisti;
+  const ulos = new Set();
+  const lisaa = (e) => { if (e?.url && !aaniLisenssiSallittu(e.nimi)) ulos.add(perusOsoite(e.url)); };
+  for (const lista of Object.values(TYYPPI_EHDOKKAAT)) lista.forEach(lisaa);
+  for (const osa of Object.values(KAUPUNKI_EHDOKKAAT)) for (const lista of Object.values(osa)) lista.forEach(lisaa);
+  for (const slot of Object.values(EHDOKKAAT)) (slot?.ehdokkaat ?? []).forEach(lisaa);
+  estetytMuisti = ulos;
+  return ulos;
+}
+/** Saako osoitteen soittaa (lisenssiportti)? */
+export function aaniSallittu(url) {
+  return !lisenssiEstetytAanet().has(perusOsoite(url));
+}
+
 // Kategoriakohtaiset arvontakorit maanosittain: maisematyypille voi
 // valita studiossa jokaiselle maanosalle omat äänensä, joista peli arpoo
 // yhden joka käynnillä. Talletusmuoto on { tyyppi: { lauta: [urlit] } };
@@ -691,11 +719,11 @@ export function tyyppiKori(tyyppi, lauta) {
     const kaikki = JSON.parse(localStorage.getItem(TYYPPIKORI_AVAIN) ?? '{}');
     const merkinta = kaikki[tyyppi];
     const lista = Array.isArray(merkinta) ? merkinta : merkinta?.[lauta];
-    if (Array.isArray(lista)) return lista.filter(Boolean);
+    if (Array.isArray(lista)) return lista.filter(Boolean).filter(aaniSallittu);
   } catch {
     /* yksityinen selaustila — oletuskori kelpaa */
   }
-  return OLETUSKORIT[tyyppi] ?? [];
+  return (OLETUSKORIT[tyyppi] ?? []).filter(aaniSallittu);
 }
 
 /** Tallentaa tyypin arvontakorin yhdelle maanosalle (laudalle). */
@@ -1039,12 +1067,13 @@ export function kaupunkiKori(lauta, cityId) {
   try {
     const kaikki = JSON.parse(localStorage.getItem(KAUPUNKIKORI_AVAIN) ?? '{}');
     const lista = kaikki[lauta]?.[cityId];
-    if (Array.isArray(lista)) return lista.filter(Boolean);
+    if (Array.isArray(lista)) return lista.filter(Boolean).filter(aaniSallittu);
   } catch {
     /* yksityinen selaustila — oletus kelpaa */
   }
   return (laudanKaupungit(lauta)[cityId] ?? [])
-    .map((e) => (e.alku ? `${e.url}#alku=${e.alku}` : e.url));
+    .map((e) => (e.alku ? `${e.url}#alku=${e.alku}` : e.url))
+    .filter(aaniSallittu);
 }
 
 /**
@@ -1068,7 +1097,7 @@ export function maaKori(lauta, cityId, cityCountry) {
     if (muu === cityId || cityCountry[muu] !== iso) continue;
     for (const e of lista) ulos.push(e.alku ? `${e.url}#alku=${e.alku}` : e.url);
   }
-  return ulos;
+  return ulos.filter(aaniSallittu);
 }
 
 /** Tallentaa yhden kaupungin arvontakorin. Tyhjä lista = tyyppikoriin. */
@@ -1086,6 +1115,8 @@ export function valittuAani(slot) {
   try {
     const arvo = JSON.parse(localStorage.getItem(AVAIN) ?? '{}')[slot] ?? null;
     if (arvo && POISTETUT.has(jaaAlku(arvo).url ?? '')) return null;
+    // Lisenssiportti: NC/ND-valinta ohjataan oletukseen kuten poistettu.
+    if (arvo && !aaniSallittu(arvo)) return null;
     return arvo;
   } catch {
     return null;

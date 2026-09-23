@@ -829,6 +829,7 @@ const MODULES = [
    * riippuvuuksia, joten paikka muuten vapaa.
    */
   'js/piirtokoe-asetus.js',
+  'js/lisenssi.js',
   /*
    * Kaiuttimen VU-mittari (15.9.2026): tuo nyt piirtokoe-asetuksen
    * (yllä); paikka on muuten vapaa — kunhan se on ennen js/ui.js:ää,
