@@ -507,6 +507,12 @@ namespace Matkakirja.Natiivi
         {
             m.Tapahtui += (laji, teksti) => tapahtumat.Add(teksti);
             m.Loysi += (p, l) => kysymysLoyto = l;
+            // Tietäjätason nousu (web pöllön onnittelukupla) kysymyksen tulokseen tai matkan viestiin.
+            m.Kokemus.TasoNousi += (p, taso) =>
+            {
+                var rivi = $"Uusi tietäjätaso: {taso.Nimi}" + (string.IsNullOrEmpty(taso.Onnittelu) ? "" : " — " + taso.Onnittelu);
+                if (Tila == SilmukanTila.Kysymys) kysymysLisat.Add(rivi); else tapahtumat.Add(rivi);
+            };
             kysely = null;
             KytkeKysely();
         }
