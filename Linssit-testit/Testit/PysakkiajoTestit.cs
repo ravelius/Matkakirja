@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text.Json;
 using Matkakirja.Linssit.Aikajana;
 using Matkakirja.Peli;
+using Matkakirja.Linssit.Aikajana;
 
 namespace Matkakirja.Linssit.Testit
 {
@@ -95,6 +96,17 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(p[10].Vuosi, n.Vuosi);
         }
 
+        [Testi] static void AineistoPaketista()
+        {
+            var a = KeksinnotAineisto.Lue(MiniJson.Jasenna(File.ReadAllText(Path.Combine(AppContext.BaseDirectory, "..", "kultaiset", "paketti", "keksinnot.json"))));
+            Oleta.Sama(26, a.Pysakit.Count);
+            Oleta.Sama(1765.0, a.Alku);
+            Oleta.Sama("keksinnot", a.Tiedot.Id);
+            Oleta.Sama(25, a.Tiedot.Jarjestys);
+            Oleta.Tosi(a.Pysakit.Count(p => p.Valinaytos) == 1, "1873 välinäytös");
+            Oleta.Tosi(a.Alue.LatMin > 30 && a.Alue.LatMax < 72 && a.Alue.LonMin > -15 && a.Alue.LonMax < 45, $"Eurooppa: {a.Alue.LatMin}–{a.Alue.LatMax}, {a.Alue.LonMin}–{a.Alue.LonMax}");
+        }
+
         [Testi] static void LautaAsteiksiKutenWebissa()
         {
             var k = JsonDocument.Parse(File.ReadAllText(Path.Combine(AppContext.BaseDirectory, "..", "kultaiset", "lauta.json"))).RootElement;
@@ -105,6 +117,44 @@ namespace Matkakirja.Linssit.Testit
                 Oleta.Tosi(Math.Abs(o.GetProperty("lat").GetDouble() - l.Lat) < 1e-9, $"lat {o.GetProperty("lat").GetDouble()} vs {l.Lat}");
                 Oleta.Tosi(Math.Abs(o.GetProperty("lon").GetDouble() - l.Lon) < 1e-9, $"lon {o.GetProperty("lon").GetDouble()} vs {l.Lon}");
             }
+        }
+    }
+}
+
+namespace Matkakirja.Linssit.Testit
+{
+    public static class KeksinnotLinssiTestit
+    {
+        [Testi] static void AvausKaynnistysJaSulku()
+        {
+            var a = KeksinnotAineisto.Lue(Matkakirja.Peli.MiniJson.Jasenna(System.IO.File.ReadAllText(System.IO.Path.Combine(
+                System.AppContext.BaseDirectory, "..", "kultaiset", "paketti", "keksinnot.json"))));
+            var y = new ValeYmparisto();
+            var alku = y.Asento;
+            var r = new Linssirekisteri(y);
+            var n = new TyhjaNakyma();
+            var l = new KeksinnotLinssi(a, n);
+            r.Lisaa(l);
+            r.Valitse("keksinnot");
+            Oleta.Sama(false, y.PelikerroksetNakyvissa);
+            Oleta.Sama(false, l.Ajo.Kaynnissa, "odottaa Käynnistä-nappia");
+            l.Kaynnista();
+            for (int i = 0; i < 600; i++) { y.Kello += 1 / 60.0; r.Paivita(); }
+            Oleta.Tosi(n.Syttyneita >= 1, "ensimmäinen valo 10 s:ssa");
+            r.Sulje();
+            Oleta.Sama(true, y.PelikerroksetNakyvissa);
+            Oleta.Sama(alku.Lat, y.Ajo.Value.Lat);
+        }
+
+        sealed class TyhjaNakyma : IPysakkiajonNakyma
+        {
+            public int Syttyneita;
+            public void Kello(double v) { }
+            public void Sytyta(int i) => Syttyneita++;
+            public void Selaus(int i) { }
+            public void Valinaytos(int i) { }
+            public void Tauolla(bool t) { }
+            public void Loppu() { }
         }
     }
 }

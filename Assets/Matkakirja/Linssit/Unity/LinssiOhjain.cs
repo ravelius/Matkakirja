@@ -66,6 +66,7 @@ namespace Matkakirja.Natiivi
             rekisteri = new Linssirekisteri(this);
             rekisteri.Lisaa(new Topografia());
             StartCoroutine(LataaAstronautti());
+            StartCoroutine(LataaKeksinnot());
             rekisteri.Vaihtui += l => Kirjaa("auki: " + (l?.Tiedot.Id ?? "ei mitään"));
             komentoPolku = Path.Combine(Application.persistentDataPath, "linssi-komento.txt");
             lokiPolku = Path.Combine(Application.persistentDataPath, "linssi-loki.txt");
@@ -86,6 +87,48 @@ namespace Matkakirja.Natiivi
                 Kirjaa($"astronautin kamera: {aineisto.Kohteet.Count} kohdetta");
             }
             catch (Exception e) { Kirjaa("astronautin kamera: " + e.Message); }
+        }
+
+        System.Collections.IEnumerator LataaKeksinnot()
+        {
+            string data = null;
+            yield return LinssiSisalto.Hae("moduulit/js/linssit/keksinnot.json", t => data = t);
+            if (data == null) { Kirjaa("keksinnöt: aineisto puuttuu"); yield break; }
+            try
+            {
+                var a = Matkakirja.Linssit.Aikajana.KeksinnotAineisto.Lue(Matkakirja.Peli.MiniJson.Jasenna(data));
+                rekisteri.Lisaa(new KeksinnotSovitin(this, a));
+                Kirjaa($"keksinnöt: {a.Pysakit.Count} pysäkkiä");
+            }
+            catch (Exception e) { Kirjaa("keksinnöt: " + e.Message); }
+        }
+
+        sealed class KeksinnotSovitin : ILinssi
+        {
+            readonly LinssiOhjain o;
+            readonly Matkakirja.Linssit.Aikajana.KeksinnotAineisto aineisto;
+            Matkakirja.Linssit.Aikajana.KeksinnotLinssi linssi;
+            KeksinnotKerros kerros;
+            public KeksinnotSovitin(LinssiOhjain o, Matkakirja.Linssit.Aikajana.KeksinnotAineisto a) { this.o = o; aineisto = a; }
+            public LinssiTiedot Tiedot => aineisto.Tiedot;
+            public bool Auki => linssi?.Auki ?? false;
+            /// <summary>Käynnissä oleva linssi (Natiivi-UI: Kaynnista, Ajo.Jatka, Ajo.Siirry).</summary>
+            public Matkakirja.Linssit.Aikajana.KeksinnotLinssi Linssi => linssi;
+            public void Avaa(ILinssiYmparisto y)
+            {
+                kerros = KeksinnotKerros.Luo(o.kierto, aineisto);
+                linssi = new Matkakirja.Linssit.Aikajana.KeksinnotLinssi(aineisto, kerros);
+                linssi.Avaa(y);
+                if (!KeksinnotKerros.EsittelyUIssa) linssi.Kaynnista();
+            }
+            public void Paivita() => linssi?.Paivita();
+            public void Sulje()
+            {
+                linssi?.Sulje();
+                linssi = null;
+                if (kerros != null) Destroy(kerros.gameObject);
+                kerros = null;
+            }
         }
 
         /// <summary>
