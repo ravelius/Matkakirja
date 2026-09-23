@@ -17,6 +17,8 @@ tutki
 odota-tila kysymys 3
 odota 2
 tila k3-kysymys
+aloita
+odota 1
 vastaa oikea
 odota 2
 tila k4-vastattu
