@@ -19,7 +19,7 @@
 //
 // KUVAT: webissä <input type=file> ja canvas-pienennys (skaalaaEhdotusKuva). Natiivissa kuvat
 // valitsee iOS-liitännäinen (Kuvanvalitsin), joka palauttaa jpeg-tavut valmiiksi pienennettyinä.
-// Liitännäistä ei vielä ole: Kuvanvalitsin on null, ja kuvanappi kertoo sen pelaajalle.
+// Pelikoodarin Scripts/Peli/Kuvanvalitsin.cs asettaa sen iOS-laitteella; muualla null, ja kuvanappi kertoo sen.
 using System;
 using System.Collections;
 using System.Collections.Generic;
