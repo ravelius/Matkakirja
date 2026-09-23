@@ -1,0 +1,166 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://matkakirja.app/vienti/1/offline.schema.json",
+  "title": "Matkakirja-vienti: offline-manifesti",
+  "description": "Mitä natiivi lataa offline-käyttöön maailmalle kerran (globaali) ja maittain (maat, avain ISO3) sekä arvioidut tavut (skeema 1.9, tools/vienti/offline.mjs). Laattavälit {z: [x0, y0, x1, y1]} lahteet-kaavoissa; maaston globaalit välit ovat layer.json:n available-välejä. Tavut ovat otoksella arvioituja (arvio: true).",
+  "type": "object",
+  "required": [
+    "$skeema",
+    "arvio",
+    "koot",
+    "lahteet",
+    "globaali",
+    "maat"
+  ],
+  "properties": {
+    "$skeema": {
+      "const": "matkakirja-vienti/1/offline"
+    },
+    "arvio": {
+      "type": "boolean"
+    },
+    "koot": {
+      "type": "object"
+    },
+    "lahteet": {
+      "type": "object",
+      "required": [
+        "rasteri",
+        "maasto"
+      ]
+    },
+    "globaali": {
+      "$ref": "#/$defs/alue"
+    },
+    "maat": {
+      "type": "object",
+      "propertyNames": {
+        "pattern": "^[A-Z]{3}$"
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/maa"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "alue": {
+      "type": "object",
+      "required": [
+        "rasteri",
+        "maasto",
+        "media",
+        "tavuja"
+      ],
+      "properties": {
+        "rasteri": {
+          "type": "object"
+        },
+        "maasto": {
+          "type": "object"
+        },
+        "media": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "tavuja": {
+          "type": "object",
+          "required": [
+            "rasteri",
+            "maasto",
+            "media",
+            "yht"
+          ],
+          "properties": {
+            "rasteri": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "maasto": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "media": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "yht": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        }
+      }
+    },
+    "maa": {
+      "type": "object",
+      "required": [
+        "rasteri",
+        "maasto",
+        "media",
+        "tavuja",
+        "iso2",
+        "nimi",
+        "laattoja"
+      ],
+      "properties": {
+        "rasteri": {
+          "type": "object"
+        },
+        "maasto": {
+          "type": "object"
+        },
+        "media": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "tavuja": {
+          "type": "object",
+          "required": [
+            "rasteri",
+            "maasto",
+            "media",
+            "yht"
+          ],
+          "properties": {
+            "rasteri": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "maasto": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "media": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "yht": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "iso2": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[A-Z]{2}$"
+        },
+        "nimi": {
+          "type": "string"
+        },
+        "laattoja": {
+          "type": "object"
+        }
+      }
+    }
+  }
+}

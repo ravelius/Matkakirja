@@ -43,6 +43,7 @@ import { TARKKUUS, mediaLaji, ratkaiseMedia } from './media.mjs';
 import { kokoaKokoelmat } from './kokoelmat.mjs';
 import { kokoaWebNakymat } from './web-riippuvuudet.mjs';
 import { logiikkaLista } from './logiikka.mjs';
+import { kokoaOffline } from './offline.mjs';
 
 export const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 export const SKEEMAVERSIO = 'matkakirja-vienti/1';
@@ -69,7 +70,7 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *   1.8  kokoelma aanitaulut (tehosteet ja näytteet, ambienssit, pulu,
  *        siirtymä-, tila- ja paikkaraidat, musiikkiketju kaupungeittain)
  *   1.9  kokoelmat kuvakysymykset, lippumaat, pulmaaineisto, luennat
- *        (aikaleimoineen) ja livianpuhe
+ *        (aikaleimoineen) ja livianpuhe; offline.json (manifest.offline)
  */
 export const SKEEMAVERSIO_TARKKA = '1.9';
 
@@ -191,6 +192,16 @@ export async function kokoaVienti({ juuri = JUURI } = {}) {
     return { nimi, tiedosto, sha256: sha(teksti), tavuja: tavuja(teksti) };
   });
 
+  // Offline-manifesti (skeema 1.9): maittain ladattavat laatat, maasto ja
+  // media arvioituine tavuineen (tools/vienti/offline.mjs).
+  const offline = kokoaOffline({
+    tiedostot,
+    manifest: { media: { tiedosto: 'media.json' }, kokoelmat: kokoelmaKuvaus },
+    countryShapes: nimiavaruudet.get('js/packs/maailmankartta.js').MAAILMANKARTTA.map.countryShapes,
+  });
+  const offlineTeksti = JSON.stringify(offline) + '\n';
+  tiedostot.set('offline.json', offlineTeksti);
+
   const skeemat = readdirSync(join(JUURI, 'tools/vienti/skeema')).filter((f) => f.endsWith('.json')).sort();
   for (const f of skeemat) tiedostot.set(`skeema/${f}`, readFileSync(join(JUURI, 'tools/vienti/skeema', f), 'utf8'));
 
@@ -216,6 +227,7 @@ export async function kokoaVienti({ juuri = JUURI } = {}) {
     media: { tiedosto: 'media.json', sha256: sha(mediaTeksti), tavuja: tavuja(mediaTeksti) },
     kokoelmat: kokoelmaKuvaus,
     webNakymat,
+    offline: { tiedosto: 'offline.json', sha256: sha(offlineTeksti), tavuja: tavuja(offlineTeksti) },
     logiikka: logiikkaLista(),
     moduulit: manifestModuulit,
   };
