@@ -111,7 +111,7 @@ namespace Matkakirja.Natiivi
             {
                 if (!a.Loydetty) continue;
                 var r = Rakenne.El("mk-laukku__aarre mk-loytynyt", aarteet, PickingMode.Ignore);
-                Rakenne.Teksti("◈", "mk-laukku__aarremerkki", r);
+                r.Add(Aloitusnakyma.Merkki("mk-laukku__aarremerkki"));
                 Rakenne.Teksti(a.Nimi, "mk-laukku__aarrenimi", r);
                 var tila = Rakenne.Teksti("LÖYTYI", "mk-laukku__aarretila", r);
                 Kirjasimet.Aseta(tila, Kirjasin.Kone);

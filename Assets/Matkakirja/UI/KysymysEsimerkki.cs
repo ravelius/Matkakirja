@@ -399,7 +399,7 @@ namespace Matkakirja.Natiivi
             d.LoytoTyyppi = tyyppi;
             d.Loyto = tyyppi switch
             {
-                "star" => "Löysit: Unohdettu aarre · +1 ◈",
+                "star" => "Löysit: Unohdettu aarre · +1 aarre",
                 "mannerAarre" => "Löysit: Mantereen aarre · +1000 £",
                 "pieniAarre" => "Löysit: Tervatynnyrin pohjalta löytynyt hopeariksi · +180 £",
                 "robber" => "Laatan alla odotti ryöstäjä!",

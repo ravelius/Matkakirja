@@ -1333,3 +1333,26 @@
 .mk-huipennus__otsikko {
     -unity-text-align: middle-center;
 }
+
+/* ◈-aarremerkki viivaikonina (Aloitusnakyma.Merkki). */
+.mk-juliste__merkki.mk-ikoni {
+    width: 13px;
+    height: 13px;
+    margin: 0 8px;
+    color: rgba(70, 51, 31, 0.7);
+    --mk-ikoni-viiva: 1.6;
+}
+
+.mk-huipennus__merkki.mk-ikoni {
+    align-self: center;
+    width: 34px;
+    height: 34px;
+    color: #d9a13b;
+}
+
+.mk-laukku__aarremerkki.mk-ikoni {
+    width: 14px;
+    height: 14px;
+    margin-right: 8px;
+    color: #d9a13b;
+}

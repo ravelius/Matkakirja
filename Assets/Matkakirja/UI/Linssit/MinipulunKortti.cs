@@ -71,7 +71,7 @@ namespace Matkakirja.Natiivi
             });
             syote.Add(kentta);
             Kirjasimet.Aseta(kentta, Kirjasin.Luku);
-            var laheta = Rakenne.Nappi("↑", "mk-minipuluKortti__laheta", () => KysyVapaasti(kentta.value), syote);
+            var laheta = Rakenne.Nappi(null, "mk-minipuluKortti__laheta", () => KysyVapaasti(kentta.value), syote, Ikonit.NuoliYlos);
             laheta.tooltip = "Lähetä kysymys";
         }
 

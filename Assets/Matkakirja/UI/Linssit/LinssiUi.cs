@@ -58,7 +58,7 @@ namespace Matkakirja.Natiivi
             // Pieni pilleri oikeassa yläkulmassa, taikalasien vasemmalla puolella.
             var turva = kerros.Turva(SulkuKerros);
             sulje = Rakenne.Nappi("Sulje linssi", "mk-linssiSulje", SuljeLinssi, turva);
-            sulje.Insert(0, Rakenne.Teksti("✕", "mk-linssiSulje__risti"));
+            sulje.Insert(0, Rakenne.Teksti("×", "mk-linssiSulje__risti"));
             Kirjasimet.Aseta(sulje, Kirjasin.Kone);
             sulje.tooltip = "Sulje linssi";
             sulje.style.display = DisplayStyle.None;

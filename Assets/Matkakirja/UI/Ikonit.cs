@@ -32,6 +32,18 @@ namespace Matkakirja.Natiivi
         // js/ui.js renderTurnPill (~rivi 10942-10946): matkalaukun kahva.
         public const string Laukku = "<rect x=\"4\" y=\"8\" width=\"16\" height=\"11.5\" rx=\"4\"/><path d=\"M9.3 8V6.3a1.7 1.7 0 0 1 1.7-1.7h2a1.7 1.7 0 0 1 1.7 1.7V8\"/><path d=\"M6.6 9.6h10.8\"/><circle cx=\"12\" cy=\"9.6\" r=\"0.85\"/><path d=\"M7 13.6 10.3 16.4 13.7 13.6 17 16.4\"/>";
 
+        // Merkit, joita iOS:n American Typewriter / Iowan Old Style eivät sisällä (◈ ▸ ⌄ ⏸ ▶):
+        // tekstinä ne näkyisivät laatikkoina, joten ne piirretään viivaikoneina.
+        public const string Aarremerkki = "<path d=\"M12 3 21 12 12 21 3 12z\"/><path d=\"M12 8.2 15.8 12 12 15.8 8.2 12z\" fill=\"currentColor\"/>";
+        public const string NuoliOikea = "<path d=\"M9 5.5 15.5 12 9 18.5\"/>";
+        public const string NuoliAlas = "<path d=\"M5.5 9 12 15.5 18.5 9\"/>";
+        public const string Tauko = "<path d=\"M8.5 5v14M15.5 5v14\"/>";
+        public const string Nuoli = "<path d=\"M5 12h14M13 6l6 6-6 6\"/>";
+        public const string NuoliYlos = "<path d=\"M12 19V5M6 11l6-6 6 6\"/>";
+        public const string Kyna = "<path d=\"M4 20h4L19 9l-4-4L4 16z\"/><path d=\"M13.5 6.5l4 4\"/>";
+        public const string Edellinen = "<path d=\"M16.5 4.8 5 12l11.5 7.2z\" fill=\"currentColor\"/>";
+        public const string Toista = "<path d=\"M7.5 4.8 19 12 7.5 19.2z\" fill=\"currentColor\"/>";
+
         // js/karttatyokalu-maakunnat.js PLUS_IKONI ja PULU_IKONI (maakunnan luonnehdinta ja kortti).
         public const string Plus = "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8v8M8 12h8\"/>";
         public const string Puhekupla = "<path d=\"M4 5h16v10H9l-4 4v-4H4z\"/><circle cx=\"9.5\" cy=\"10\" r=\"0.9\"/><circle cx=\"14.5\" cy=\"10\" r=\"0.9\"/>";

@@ -55,7 +55,7 @@ namespace Matkakirja.Natiivi
             var valilehdet = Rakenne.El("mk-selite__valilehdet", ylarivi, PickingMode.Ignore);
             valilehtiNostot = Rakenne.Nappi("NOSTOT", "mk-selite__valilehti", () => VaihdaValilehti(false), valilehdet);
             valilehtiMaakunnat = Rakenne.Nappi("MAAKUNNAT", "mk-selite__valilehti", () => VaihdaValilehti(true), valilehdet);
-            var sulje = Rakenne.Nappi("✕", "mk-selite__sulje", Sulje, ylarivi);
+            var sulje = Rakenne.Nappi("×", "mk-selite__sulje", Sulje, ylarivi);
             sulje.tooltip = "Sulje karttaselitteet";
 
             paneeliNostot = Rakenne.El("mk-selite__paneeli", paneeli, PickingMode.Ignore);
