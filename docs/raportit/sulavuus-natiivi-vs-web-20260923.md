@@ -9,13 +9,23 @@ ajoilla (omistajan pysyvä sääntö 23.9.2026).
 ## Laitteet
 
 - **Natiivi**: iPad Pro 11" (M5), fyysinen laite USB:ssä, 120 Hz ProMotion.
-- **Web**: Chromium (ANGLE Metal, Apple M4 Max) headless Mac Studiolla,
-  `NAKYMA=puhelin` (390×844, dpr 3, kosketus), 60 Hz.
+- **Web (Mac Studio, headless kamera-ajo)**: Chromium (ANGLE Metal, Apple
+  M4 Max) headless Mac Studiolla, `NAKYMA=puhelin` (390×844, dpr 3,
+  kosketus), 60 Hz, synteettinen kamera-ajo — EI omistajan oikeaa
+  kosketuskokemusta.
+- **Web (iPad, omistajan oikea kosketuskierros)**: Safari iPadilla,
+  omistajan oma sormiveto, v2148, 23.9. klo 12.19–12.22
+  (`docs/raportit/kaappaukset/omistaja-20260923/kierros-1222-yhteenveto.md`).
+  Tämä on ainoa tässä raportissa oleva OIKEA ihmisen kosketuskokemus.
 
-**Tärkeä huomio ennen lukuja:** natiivi ja web ajavat ERI kohdenopeuksilla
-(120 Hz vs. 60 Hz) eri laitteilla — raakoja millisekunteja ei voi verrata
-suoraan 1:1. Reilu vertailu on **tökkäysten osuus kunkin alustan omasta
-kehysbudjetista**, ei absoluuttinen ms-luku.
+**Tärkeä huomio ennen lukuja:** kolme eri mittausta, kolme eri asetelmaa.
+Natiivi ja web-Mac ajavat ERI kohdenopeuksilla (120 Hz vs. 60 Hz) eri
+laitteilla eikä web-Mac käytä oikeaa kosketusta. Ainoa suoraan
+vertailukelpoinen pari samalla laitteella (iPad) on natiivi vs.
+omistajan oikea web-kokemus — ks. taulukko "iPad natiivi vs. iPad web"
+alla. Web-Mac-luvut (alkuperäinen taulukko) kertovat vain, että
+headless-kamera-ajo ilman kosketusta on tökkäyksetön — ei sitä, miltä
+peli tuntuu oikealla laitteella oikeasta kosketuksesta.
 
 ## Reitti
 
@@ -32,7 +42,29 @@ kamera-ajo Pariisiin (`aja 48.8 4.5 8 1.5`) → `pallo`-näkymä 3 s.
 nipistys, loitonnus, lento Marseille→Pariisi, heitto) — laajempi kuin
 natiivin reitti tässä kierroksessa.
 
-## Tulokset
+## Tulokset: iPad natiivi vs. iPad web (ainoa suoraan vertailukelpoinen pari)
+
+Omistajan oikea kosketuskierros iPadilla, v2148, 23.9. klo 12.19–12.22
+(`kierros-1222-yhteenveto.md`), verrattuna samana päivänä natiivilla
+iPadilla mitattuun kamera-ajoon. **Huom:** web-luvut ovat kosketusvedosta
+(oikea sormi), natiivin luvut ovat vielä kamera-ajosta (ei kosketusta) —
+ei siis täysin sama syöte, ks. "Seuraava askel".
+
+| Tila | Alusta | p95 | max | yli 20 ms -osuus |
+|---|---|---:|---:|---:|
+| Paljas kartta | web iPad (Safari, oikea kosketus) | 21–23 ms | 43–52 ms | 7–8 % |
+| Täysi tila (1–4, keskiarvo) | web iPad (Safari, oikea kosketus) | 27–40 ms | 44–138 ms | 20–43 % |
+| lepo / ajo / pallo | natiivi iPad (kamera-ajo, ei kosketusta) | 8,55–8,75 ms | 9,0–9,0 ms | 0 % |
+
+Omistajan oma tuntuma samasta kierroksesta (kortti klo 12.4x): "Pelkkä
+kartta tökki kaikkein vähiten, mutta siinäkin on yksi tökkäys yleensä...
+Syöttökokeet kaikki tökkivät." — web-iPad-kosketus tökkii selvästi
+mitattuna JA tuntumalla; natiivin kamera-ajo ei tökkinyt, mutta ei
+myöskään testannut samaa asiaa (kosketusta).
+
+## Tulokset: natiivi vs. web-Mac-headless (kamera-ajo, ei kosketusta)
+
+Alkuperäinen mittaus — EI vastaa omistajan oikeaa kokemusta, ks. yllä.
 
 | Vaihe | Alusta | Kehyksiä | p50 | p95 | p99 | max | Pieniä tökk. (>12,5/>16,7ms*) | Isoja tökk. (>33ms) |
 |---|---|---:|---:|---:|---:|---:|---:|---:|
@@ -53,28 +85,35 @@ merkityksetön sille). Web-luvut yllä `osuusYli`-kentästä (yli 20 ms).
 
 ## Tulkinta
 
-**Molemmat alustat täysin siistejä tällä kierroksella**: 0 tökkäystä,
-0 % kummallakaan mittarilla, kaikki kehykset lukossa alustansa omaan
-kohdenopeuteen (natiivi 8,33 ms / 120 Hz, web 16,7 ms / 60 Hz).
-Ei viitteitä suorituskykyongelmasta kummallakaan puolella tässä
-suppeassa reitissä (lepo + yksi kamera-ajo + pallonäkymä).
+**Korjattu johtopäätös (Fablen huomio 23.9.):** web-Mac-headless-kamera-ajo
+oli 0 % tökkäystä, mutta se EI edusta omistajan oikeaa kokemusta.
+Omistajan oma iPad-kosketuskierros samana päivänä (v2148) tökki
+mitattavasti — paljas kartta p95 21–23 ms (yli 20 ms -osuus 7–8 %),
+täydet pelitilat p95 27–40 ms (yli 20 ms -osuus 20–43 %) — ja omistaja
+itse vahvisti tuntumalla: "Syöttökokeet kaikki tökkivät." Natiivin
+kamera-ajo (ei kosketusta) oli 0 % tökkäystä, mutta se ei vielä testaa
+samaa asiaa kuin web-iPad-kierros testasi (kosketusvetoa).
+
+**Ei siis vielä voida sanoa, onko natiivi sulavampi kuin web** —
+verrattu on kamera-ajo (natiivi) kosketusvetoon (web). Tarvitaan sama
+syöte molemmilla ennen johtopäätöstä.
 
 **Rajoitteet tässä kierroksessa:**
-1. Natiivi ei kata pan/zoom/nipistys-kosketusta — vain kamera-ajo.
-2. Web-kone (Mac Studio, M4 Max, ANGLE Metal) on paljon tehokkaampi kuin
-   tuotannon todennäköinen web-kohdelaite (puhelin); natiivin iPad Pro M5
-   on myös yläpään laite. Kumpikaan tulos ei siis suoraan ennusta
-   suorituskykyä heikommalla laitteella.
-3. Yksi ajo per alusta — ei toistoa, ei tilastollista varmuutta
-   flakyn poissulkemiseksi.
+1. Natiivi ei vielä kata pan/zoom/nipistys-kosketusta — vain kamera-ajo.
+2. Web-Mac-headless (M4 Max, ANGLE Metal) on paljon tehokkaampi kuin
+   omistajan oikea iPad-Safari-kokemus, joka jo osoitti tökkäyksiä.
+3. Yksi ajo per alusta (paitsi omistajan 8-osainen kierros) — ei vielä
+   tilastollista varmuutta flakyn poissulkemiseksi natiivin puolella.
 
-## Seuraava askel
+## Seuraava askel (sovittu Fablen kanssa 23.9.)
 
-Jos natiiviin halutaan aidosti pan/zoom-vertailu, tarvitaan joko
-kosketussyötteen automaatio (esim. XCTest UI-testi tai laitteen oma
-gesturen toisto) tai hyväksytään kamera-ajo-vertailu ainoana yhteisenä
-mittarina. Toistokierros (≥3 ajoa per alusta) suositellaan ennen
-johtopäätösten tekoa tuotantopäätöksiin.
+1. 3D-selvittäjä lisää synteettiset kosketuskomennot (veto, heitto,
+   nipistys) komentoprotokollaan.
+2. Aja 3 toistokierrosta natiivilla iPadilla SAMALLA reitillä kuin
+   omistajan kierros (veto Pariisista etelään/itään, samat pelitilat:
+   paljas kartta, oletus, kosketus suoraan, yhteinen kello, molemmat).
+3. Päivitä tämä taulukko natiivi-iPad vs. web-iPad (kosketus) -parilla —
+   vasta silloin vertailu on aidosti reilu.
 
 ## Ympäristö
 
