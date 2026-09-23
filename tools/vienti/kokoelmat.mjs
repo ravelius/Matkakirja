@@ -447,28 +447,41 @@ function linssiKokoelma(hae) {
  * lisenssiluokka tools/vienti/radioluokat.json:sta
  * (docs/raportit/lisenssi-inventaario-20260923-liite-radiot-hybridi.md).
  * sallittu = natiivi saa soittaa urlin; linkki = vain "Avaa aseman
- * sivu" (sivu), ei soittoa sovelluksessa; kielletty = ei soittoa eikä
- * linkkiä. Nimen saa näyttää, logoa ei ilman lupaa.
+ * sivu" (sivu). Omistajan tarkennus 23.9.: sallittu ja epaselva soivat,
+ * kielletty on linkki. Nimen saa näyttää, logoa ei ilman lupaa.
  */
 const radioTyyppi = (url) => (/\.m3u8(\?|$)/i.test(url) ? 'hls' : /\.aac(\?|$)|aac/i.test(url) ? 'aac'
   : /\.mp3(\?|$)|mp3/i.test(url) ? 'mp3' : null);
 function radioKokoelma(hae) {
   const { RADIOT } = hae('js/packs/radiot.js');
   const luokat = JSON.parse(readFileSync(new URL('./radioluokat.json', import.meta.url), 'utf8')).luokat;
-  return taulukko('js/packs/radiot.js#RADIOT + tools/vienti/radioluokat.json',
-    'Suorat radiolähetykset maittain (id = ISO3). luokka: sallittu = soita url; linkki = näytä nimi ja '
-      + '"Avaa aseman sivu" (sivu), älä soita sovelluksessa; kielletty = ei soittoa eikä linkkiä. sivu voi olla '
-      + 'null (ei luotettavaa kotisivua): silloin linkki-luokassa näytetään vain nimi. Logoja ei näytetä ilman '
-      + 'aseman lupaa. yleisradio = maan virallinen ykkösradio. tyyppi päätelty osoitteesta (mp3 | aac | hls | null).',
-    { iso3: 'maat' },
-    Object.keys(RADIOT).sort().map((iso) => {
-      const r = RADIOT[iso]; const l = luokat[iso] ?? {};
-      return {
-        id: iso, iso3: iso, nimi: r.asema, url: r.url, tyyppi: radioTyyppi(r.url), yleisradio: Boolean(r.virallinen),
-        lahde: 'radio-browser', sivu: l.sivu ?? null, luokka: l.luokka ?? 'linkki', peruste: l.peruste ?? null,
-        perusteLahde: l.lahde ?? null, varaAani: null,
-      };
-    }));
+  const korvaavat = JSON.parse(readFileSync(new URL('./radiokorvaavat.json', import.meta.url), 'utf8')).asemat;
+  const rivit = [];
+  for (const iso of Object.keys(RADIOT).sort()) {
+    const r = RADIOT[iso]; const l = luokat[iso] ?? {};
+    const alkuperainen = {
+      iso3: iso, nimi: r.asema, url: r.url, tyyppi: radioTyyppi(r.url), yleisradio: Boolean(r.virallinen),
+      lahde: 'radio-browser', sivu: l.sivu ?? null, luokka: l.luokka ?? 'epaselva', peruste: l.peruste ?? null,
+      perusteLahde: l.lahde ?? null, varaAani: null,
+    };
+    const k = korvaavat[iso];
+    if (!k) { rivit.push({ id: iso, jarjestys: 1, ...alkuperainen }); continue; }
+    // Kielletyn yleisradion tilalle soiva asema (radio-korvaavat-asemat-20260923.md);
+    // yleisradio jää toiseksi riviksi linkkinä.
+    rivit.push({
+      id: iso, jarjestys: 1, iso3: iso, nimi: k.nimi, url: k.url, tyyppi: radioTyyppi(k.url), yleisradio: false,
+      lahde: 'korvaava', sivu: k.sivu, luokka: k.luokka, peruste: k.peruste, perusteLahde: k.lahde, varaAani: null,
+      kaupunki: k.kaupunki, kuvaus: k.kuvaus,
+    });
+    rivit.push({ id: `${iso}:yleisradio`, jarjestys: 2, ...alkuperainen });
+  }
+  return taulukko('js/packs/radiot.js#RADIOT + tools/vienti/radioluokat.json + tools/vienti/radiokorvaavat.json',
+    'Suorat radiolähetykset maittain. Omistajan linjaus 23.9.2026: luokat sallittu ja epaselva SOIVAT '
+      + 'natiivissa (url); kielletty näytetään vain nimenä ja "Avaa aseman sivu" -linkkinä (sivu), ei soittoa. '
+      + 'Maalla voi olla kaksi riviä: jarjestys 1 = soiva asema (17 maassa kielletyn yleisradion tilalle valittu '
+      + 'korvaava asema, lahde korvaava), jarjestys 2 = yleisradio linkkinä (id <ISO3>:yleisradio). sivu voi olla null. '
+      + 'Logoja ei näytetä ilman aseman lupaa. tyyppi päätelty osoitteesta (mp3 | aac | hls | null).',
+    { iso3: 'maat' }, rivit);
 }
 
 function aaniKokoelma(ns, hae) {

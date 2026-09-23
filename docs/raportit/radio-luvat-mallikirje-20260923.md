@@ -6,17 +6,49 @@ lupaa.** Asemalista ja perusteet ovat liitteessä
 [lisenssi-inventaario-20260923-liite-radiot-hybridi.md](lisenssi-inventaario-20260923-liite-radiot-hybridi.md)
 (kohdat 8.2 ja 8.3).
 
-## Tilanne
+## Tilanne (päivitetty 23.9.2026 illalla)
 
-- Paketin kokoelmassa `radiot` (skeema 1.16) on 115 asemaa, joista 0 on
-  sallittu, 115 linkki ja 0 kielletty (`tools/vienti/radioluokat.json`).
-  Natiivi soittaa vain sallitut. Linkki-luokan asemista näytetään nimi ja
-  "Avaa aseman sivu", eikä sovelluksessa soiteta mitään.
+- Omistajan tarkennus: luokat **sallittu ja epaselva soivat** natiivissa,
+  **kielletty on linkki** ("Avaa aseman sivu"). Kokoelma `radiot` (skeema
+  1.16): 115 maata. 17 maassa kielletyn yleisradion tilalla soi korvaava
+  asema (`tools/vienti/radiokorvaavat.json`, lähde
+  docs/raportit/radio-korvaavat-asemat-20260923.md), ja yleisradio jää
+  toiseksi riviksi linkkinä.
+- Luokat: korvaavista 5 sallittu (ByteFM, ORANGE 94.0, RaBe, BNR, 3RRR) ja
+  12 epaselva; muut 98 maata epaselva; 17 yleisradiota kielletty.
 - Nimi ja linkki aseman sivulle ovat sallittuja ilman lupaa. Logoja ei
   käytetä ilman aseman lupaa.
-- Kun asema myöntää luvan, sen luokka muutetaan
-  `tools/vienti/radioluokat.json`:ssa arvoon `sallittu` ja peruste
-  kirjataan kenttiin `peruste` ja `lahde`. Muuta ei tarvitse tehdä.
+- Kun asema myöntää luvan, luokka muutetaan arvoon `sallittu`
+  (`radiokorvaavat.json` tai `radioluokat.json`) ja peruste kirjataan.
+
+## Lupapyyntöjen 20 asemaa
+
+17 korvaavaa asemaa (luvan kuittaus nostaa epäselvän sallituksi ja varmistaa
+sallitun) ja 3 Fogg-reitin tärkeintä epäselvää asemaa. Yhteys organisaation
+yleiseen osoitteeseen tai lomakkeeseen.
+
+| # | Maa | Asema | Luokka nyt | Sivu |
+|---|---|---|---|---|
+| 1 | AUS | 3RRR Triple R 102.7 (Melbourne) | sallittu | https://www.rrr.org.au/ |
+| 2 | AUT | ORANGE 94.0 (Wien) | sallittu | https://o94.at/ |
+| 3 | BEL | Urgent.fm 105.3 (Gent) | epaselva | https://urgent.fm/ |
+| 4 | CAN | CFRO Vancouver Co-op Radio 100.5 (Vancouver) | epaselva | https://www.coopradio.org/ |
+| 5 | CHE | Radio RaBe 95,6 (Bern) | sallittu | https://rabe.ch/ |
+| 6 | DEU | ByteFM (Hampuri) | sallittu | https://www.byte.fm/ |
+| 7 | DNK | Radio4 (Kööpenhamina) | epaselva | https://radio4.dk/ |
+| 8 | ESP | Radio Vallekas 107.5 (Madrid) | epaselva | https://www.radiovallekas.org/ |
+| 9 | FIN | Radio Helsinki 98,5 (Helsinki) | epaselva | https://www.radiohelsinki.fi/ |
+| 10 | FRA | Radio Campus Paris 93,9 (Pariisi) | epaselva | https://www.radiocampusparis.org/ |
+| 11 | GBR | Resonance 104.4 FM (Lontoo) | epaselva | https://www.resonancefm.com/ |
+| 12 | HKG | D100 (Hongkong (internetradio)) | epaselva | https://www.d100radio.com/ |
+| 13 | NLD | BNR Nieuwsradio (Amsterdam) | sallittu | https://www.bnr.nl/ |
+| 14 | NOR | Radio Nova 99,3 (Oslo) | epaselva | https://radionova.no/ |
+| 15 | PRT | RUC – Rádio Universidade de Coimbra 107.9 (Coimbra) | epaselva | https://ruc.pt/ |
+| 16 | SWE | Radio AF 99,1 (Lund) | epaselva | https://www.radioaf.se/ |
+| 17 | UGA | Bukedde FM 100.5 (Kampala) | epaselva | https://www.bukedde.co.ug/ |
+| 18 | USA | WNYC-FM (New York Public Radio) | epaselva | wnyc.org (lomake) |
+| 19 | IND | Aakashvani / All India Radio | epaselva | prasarbharati.gov.in (lomake) |
+| 20 | EGY | Radio 9090 (Kairo) | epaselva | 9090.fm (lomake) |
 
 ## Avoin ennen App Store -julkaisua: Teosto ja Gramex
 
@@ -59,9 +91,6 @@ luvalla.
 
 ## Lähetysjärjestys (ehdotus)
 
-Ensin ne yleisradiot, joilla on julkinen lisenssiosoite (liitteen 8.3
-taulukossa): Yle (FIN), Radio France (FRA), RTVE (ESP), RTP (PRT) ja ORF
-(AUT). Sen jälkeen Fogg-reitin maat (GBR, EGY, IND, HKG, JPN, CHN, USA)
-lomakkeiden kautta. Liitteen henkilöiden nimellisiä osoitteita ei ole
-kirjattu repoon, joten yhteys otetaan organisaatioiden yleisiin
-osoitteisiin tai lomakkeisiin.
+Ensin 12 epäselvää korvaavaa asemaa (pienet yhteisö- ja opiskelijaradiot
+vastaavat yleensä nopeasti), sitten 5 sallittua kirjallisen kuittauksen
+vuoksi ja lopuksi USA, IND ja EGY.

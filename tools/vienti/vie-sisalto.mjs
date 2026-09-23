@@ -107,8 +107,10 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        Lisäksi kokoelma maakuntarajat (tools/vienti/maakuntarajat.mjs) ja
  *        lisenssit.json (manifest.lisenssit, tools/vienti/lisenssit.mjs).
  *   1.16 Radio hybridinä (omistajan kortti 23.9.2026): kokoelma radiot
- *        (asema, url, tyyppi, yleisradio, sivu, luokka sallittu | linkki |
- *        kielletty, peruste; tools/vienti/radioluokat.json) ja aanitaulut
+ *        (asema, url, tyyppi, yleisradio, sivu, luokka sallittu | epaselva |
+ *        kielletty, peruste, jarjestys; sallittu ja epaselva soivat, kielletty
+ *        on linkki; 17 kielletyn yleisradion maahan korvaava soiva asema
+ *        tools/vienti/radiokorvaavat.json, yleisradio toisena rivinä) ja aanitaulut
  *        laji viritys (viritysäänet pelin osoitteella, tekijä ja lisenssi).
  */
 export const SKEEMAVERSIO_TARKKA = '1.16';

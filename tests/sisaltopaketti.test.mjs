@@ -551,10 +551,16 @@ test('lisenssikirjanpito: aineistot ja GPL-rajat', () => {
 test('skeema 1.16: radiot luokittain ja viritysäänet', async () => {
   const { RADIOT } = await import('../js/packs/radiot.js');
   const radiot = JSON.parse(tiedostot.get('kokoelmat/radiot.json')).alkiot;
-  assert.equal(radiot.length, Object.keys(RADIOT).length);
-  assert.ok(radiot.every((r) => ['sallittu', 'linkki', 'kielletty'].includes(r.luokka)));
+  const ensisijaiset = radiot.filter((r) => r.jarjestys === 1);
+  assert.equal(ensisijaiset.length, Object.keys(RADIOT).length);
+  assert.ok(radiot.every((r) => ['sallittu', 'epaselva', 'kielletty'].includes(r.luokka)));
+  // Jokaisessa maassa soiva asema ensin; kielletty yleisradio vain linkkinä toisena.
+  assert.ok(ensisijaiset.every((r) => r.luokka !== 'kielletty' && /^https:\/\//.test(r.url)));
+  assert.ok(radiot.filter((r) => r.jarjestys === 2).every((r) => r.luokka === 'kielletty' && r.id === `${r.iso3}:yleisradio`));
+  assert.equal(radiot.filter((r) => r.jarjestys === 2).length, 17);
   assert.ok(radiot.every((r) => r.sivu === null || /^https?:\/\//.test(r.sivu)));
-  assert.equal(radiot.find((r) => r.id === 'FIN').url, RADIOT.FIN.url);
+  assert.equal(radiot.find((r) => r.id === 'FIN:yleisradio').url, RADIOT.FIN.url);
+  assert.equal(radiot.find((r) => r.id === 'ITA').url, RADIOT.ITA.url);
   const { aaniUrl } = await import('../js/media.js');
   const { VIRITYSAANET, viritysPolku } = await import('../js/packs/viritysaanet.js');
   const viritys = JSON.parse(tiedostot.get('kokoelmat/aanitaulut.json')).alkiot.filter((a) => a.laji === 'viritys');

@@ -3,694 +3,695 @@
  "paivitetty": "2026-09-23",
  "luokat": {
   "AFG": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": null,
    "peruste": "Radio.co-hostin ToS: sisältöä ei saa käyttää ilman omistajan lupaa -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "https://www.radio.co/legal/terms"
   },
   "AGO": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://rna.ao/",
    "peruste": "Zeno.fm ToS kieltää relay-uudelleenlähetyksen -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "https://zeno.fm/terms/"
   },
   "ARE": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": null,
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "ARG": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://www.radionacional.com.ar/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "AUS": {
-   "luokka": "linkki",
+   "luokka": "kielletty",
    "sivu": "http://www.abc.net.au/radionational/",
    "peruste": "ABC: \"personal, non-commercial use only\" (help.abc.net.au) -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "https://www.abc.net.au/"
   },
   "AUT": {
-   "luokka": "linkki",
+   "luokka": "kielletty",
    "sivu": "https://oe1.orf.at/",
    "peruste": "ORF ON -ehdot: vain yksityiskäyttöön -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "https://oe1.orf.at/"
   },
   "BEL": {
-   "luokka": "linkki",
+   "luokka": "kielletty",
    "sivu": "https://radio1.be/",
    "peruste": "VRT: käyttö vain \"persoonlijke, niet-commerciële doeleinden\" -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "https://radio1.be/"
   },
   "BGR": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://www.radioplay.bg/?radio=bnr",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "BIH": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "http://www.rtvfbih.ba/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "BOL": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://www.panamericana.bo/",
    "peruste": "Zeno.fm ToS -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "https://zeno.fm/terms/"
   },
   "BRA": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://www.bandnewsfm.com.br/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "CAN": {
-   "luokka": "linkki",
+   "luokka": "kielletty",
    "sivu": "https://www.cbc.ca/lite/radio/live-radio/ontario/barrie",
    "peruste": "CBC ToS: ei jakoa luvattomille kolmansille -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "https://cbc.radio-canada.ca/en/vision/governance/terms-of-use-digital-services"
   },
   "CHE": {
-   "luokka": "linkki",
+   "luokka": "kielletty",
    "sivu": "http://www.rts.ch/la-1ere/",
    "peruste": "SRG SSR Developer Portal: \"non-commercial purposes only\" -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "https://www.rts.ch/entreprise/a-propos/8994021-conditions-generales.html"
   },
   "CHL": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://vivo.biobiochile.cl/player/new.html?r=temuco",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "CHN": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "http://www.cnr.cn/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "CMR": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": null,
    "peruste": "Zeno.fm ToS -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "https://zeno.fm/terms/"
   },
   "COD": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": null,
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "COL": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://caracol.com.co/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "CUB": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://radiorebelde.cu/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "CYP": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://www.rik.cy/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "CZE": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://rozhlas.cz/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "DEU": {
-   "luokka": "linkki",
+   "luokka": "kielletty",
    "sivu": "https://www.deutschlandfunk.de/livestream-100.html",
    "peruste": "ARD/Deutschlandradio: kaupallinen 3. osapuoli vaatii luvan (LG München 5/2025) -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "https://www.deutschlandfunk.de/livestream-100.html"
   },
   "DNK": {
-   "luokka": "linkki",
+   "luokka": "kielletty",
    "sivu": "http://www.dr.dk/p1",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "DZA": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://my.radioalgerie.dz/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "ECU": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://radiopichincha.com/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "EGY": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://www.9090.fm/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "ESP": {
-   "luokka": "linkki",
+   "luokka": "kielletty",
    "sivu": "https://www.rtve.es/play/radio/radio-5/",
    "peruste": "RTVE rajoittaa käytön viralliseen sovellukseen -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "https://www.rtve.es/play/radio/radio-5/"
   },
   "EST": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://vikerraadio.ee/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "ETH": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://ebc.et/",
    "peruste": "Zeno.fm ToS -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "https://zeno.fm/terms/"
   },
   "FIN": {
-   "luokka": "linkki",
+   "luokka": "kielletty",
    "sivu": "https://yle.fi/",
    "peruste": "Yle: ei saa jakaa striimejä omilla sivuilla -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "https://yle.fi/a/20-10004373"
   },
   "FJI": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "http://rf1.fbc.com.fj/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "FRA": {
-   "luokka": "linkki",
+   "luokka": "kielletty",
    "sivu": "https://www.franceinter.fr/",
    "peruste": "Radio France CGU: ei jakelua ilman kirjallista lupaa -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "https://www.radiofrance.com/conditions-generales-dutilisation-des-sites-de-radio-france"
   },
   "GBR": {
-   "luokka": "linkki",
+   "luokka": "kielletty",
    "sivu": "https://www.bbc.co.uk/sounds/play/live:bbc_world_service",
    "peruste": "BBC vetäytyi TuneInistä 2019 ilman sopimusta -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "https://tech.yahoo.com/computing/article/2019-08-12-bbc-to-pull-all-radio-services-from-tunein-uk.html"
   },
   "GHA": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://www.inforadio.online/",
    "peruste": "Zeno.fm ToS -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "https://zeno.fm/terms/"
   },
   "GRC": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://webradio.ert.gr/proto/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "GRL": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://nanoqmedia.gl/da/radio/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "GTM": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://emisorasunidas.com/",
    "peruste": "Zeno.fm ToS (zenolive.com) -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "https://zeno.fm/terms/"
   },
   "HKG": {
-   "luokka": "linkki",
+   "luokka": "kielletty",
    "sivu": "http://www.rthk.org.hk/",
    "peruste": "RTHK: \"non-commercial personal use\" -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "http://www.rthk.org.hk/"
   },
   "HRV": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "http://radio.hrt.hr/prvi-program/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "HUN": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://www.mediaklikk.hu/radio-elo/kossuth/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "IDN": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://www.rri.co.id/stream/radio",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "IND": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://newsonair.gov.in/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "IRL": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://www.rte.ie/radio/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "IRN": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://iranintl.com/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "IRQ": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://www.shafaq.com/ar",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "ISL": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://utvarpsaga.is/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "ITA": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "http://www.sedefvg.rai.it/dl/portali/site/page/Page-2331f91a-cc95-4c68-87d7-67c9afd83529.html",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "JOR": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://hayat.fm/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "JPN": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://fmsetagaya.com/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "KAZ": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://qazradio.fm/kz/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "KEN": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://www.kbc.co.ke/",
    "peruste": "Zeno.fm ToS -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "https://zeno.fm/terms/"
   },
   "KOR": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": null,
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "KWT": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": null,
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "LBR": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": null,
    "peruste": "Zeno.fm ToS -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "https://zeno.fm/terms/"
   },
   "LBY": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": null,
    "peruste": "Zeno.fm ToS -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "https://zeno.fm/terms/"
   },
   "LKA": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": null,
    "peruste": "Zeno.fm ToS -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "https://zeno.fm/terms/"
   },
   "LTU": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "http://www.ziniuradijas.lt/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "LUX": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://100komma7.lu/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "LVA": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://www.radioswhplus.lv/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "MAR": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": null,
    "peruste": "Zeno.fm ToS -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "https://zeno.fm/terms/"
   },
   "MDG": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://www.radiomadagasikara.com/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "MEX": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://www.wradio.com.mx/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "MLI": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://www.facebook.com/malijetactu/",
    "peruste": "Zeno.fm ToS -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "https://zeno.fm/terms/"
   },
   "MLT": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://www.calypsomalta.com/",
    "peruste": "Radio.co-hostin ToS -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "https://www.radio.co/legal/terms"
   },
   "MMR": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": null,
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "MNG": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://www.facebook.com/gerbulradio/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "MOZ": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://www.rm.co.mz/rm.co.mz/",
    "peruste": "Zeno.fm ToS -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "https://zeno.fm/terms/"
   },
   "NAM": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://omulunga.com.na/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "NGA": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": null,
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "NIC": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://www.radiolavozdelnorte.com/",
    "peruste": "Zeno.fm ToS -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "https://zeno.fm/terms/"
   },
   "NLD": {
-   "luokka": "linkki",
+   "luokka": "kielletty",
    "sivu": "https://www.nporadio1.nl/",
    "peruste": "NPO: vain \"persoonlijk en niet-commercieel gebruik\" -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "https://npo.nl/overnpo/algemene-voorwaarden/algemene-voorwaarden-online"
   },
   "NOR": {
-   "luokka": "linkki",
+   "luokka": "kielletty",
    "sivu": "https://lyd.nrk.no/",
    "peruste": "NRK: striimit \"developed for private use\" -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "https://lyd.nrk.no/"
   },
   "NPL": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://radiokantipur.com/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "NZL": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://www.newstalkzb.co.nz/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "OMN": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "http://wisal.fm/cms",
    "peruste": "Zeno.fm ToS -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "https://zeno.fm/terms/"
   },
   "PAK": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://www.merafm.com/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "PAN": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": null,
    "peruste": "Zeno.fm ToS -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "https://zeno.fm/terms/"
   },
   "PER": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://rpp.pe/audio/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "PHL": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://www.dzrh.com.ph/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "PNG": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": null,
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "POL": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://www.tokfm.pl/Tokfm/0,0.html",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "PRT": {
-   "luokka": "linkki",
+   "luokka": "kielletty",
    "sivu": "https://www.rtp.pt/play/direto/rdpinternacional",
    "peruste": "RTP: \"personal and non-commercial use\" -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "https://www.rtp.pt/play/direto/rdpinternacional"
   },
   "QAT": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://www.alaraby.com/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "ROU": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://m.digi24.ro/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "RUS": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://smotrim.ru/radiovesti",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "SAU": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://www.aloula.sa/en/live/riyadhradio",
    "peruste": "Zeno.fm ToS -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "https://zeno.fm/terms/"
   },
   "SDN": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": null,
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "SDS": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://freedomfm.ie/",
    "peruste": "Zeno.fm ToS -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "https://zeno.fm/terms/"
   },
   "SEN": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://www.rts.sn/",
    "peruste": "Zeno.fm ToS -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "https://zeno.fm/terms/"
   },
   "SGP": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://www.melisten.sg/radio/capital-958",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "SHN": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": null,
    "peruste": "Radio.co-hostin ToS -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "https://www.radio.co/legal/terms"
   },
   "SLB": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://www.sibconline.com.sb/",
    "peruste": "Mixlr ToS: ei kaupallista käyttöä -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "https://mixlr.com/terms-of-use"
   },
   "SLE": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": null,
    "peruste": "Zeno.fm ToS -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "https://zeno.fm/terms/"
   },
   "SOM": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://shabelle.net/",
    "peruste": "Zeno.fm ToS -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "https://zeno.fm/terms/"
   },
   "SVK": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://slovensko.rtvs.sk/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "SVN": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "http://radioprvi.rtvslo.si/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "SWE": {
-   "luokka": "linkki",
+   "luokka": "kielletty",
    "sivu": "https://www.sverigesradio.se/kanaler",
    "peruste": "Sveriges Radio: linjaaristen kanavien käyttö vaatii kirjallisen luvan -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "https://www.sverigesradio.se/kanaler"
   },
   "SYR": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://asima.airtime.pro/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "TCD": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": null,
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "THA": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://muslim.fm/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "TLS": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": null,
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "TUN": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://diwanfm.net/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "TUR": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://radyo.trt.net.tr/kanallar/radyo-1",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "TWN": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://www.bcc.com.tw/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "TZA": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://www.tbc.go.tz/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "UGA": {
-   "luokka": "linkki",
+   "luokka": "kielletty",
    "sivu": "https://bbc.ug/",
    "peruste": "Sama BBC-linja kuin GBR (relay) -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "https://tech.yahoo.com/computing/article/2019-08-12-bbc-to-pull-all-radio-services-from-tunein-uk.html"
   },
   "UKR": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://radioplayer.ua/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "USA": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "http://www.wnyc.org/",
    "peruste": "WNYC/NPR: ei kopiointia/jakelua/edelleenlisensointia -> soitto kielletty, mutta linkitys asemien omalle sivulle sallittua",
    "lahde": "https://wnyc.org/terms/"
   },
   "UZB": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://qalbimnavosi.uz/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "VEN": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://rnv.gob.ve/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "VNM": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://www.rfi.fr/vi/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "VUT": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://vbtc.vu/radio-2",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "YEM": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "http://www.sanaaradio.net/Programs.aspx",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "ZAF": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://www.ukhozifm.co.za/",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   },
   "ZWE": {
-   "luokka": "linkki",
+   "luokka": "epaselva",
    "sivu": "https://www.starfm.co.zw/#&panel1-9",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
   }
- }
+ },
+ "huom": "Omistajan tarkennus 23.9.2026: sallittu ja epaselva soivat natiivissa, kielletty on linkki. Kielletyt = 16 yleisradiota (inventaario) + DR."
 }
