@@ -42,6 +42,8 @@ import {
   puhePaivaAvain,
   sahkeKehote,
   sahkeViesti,
+  NATIIVIT_OLETUS,
+  sallittuNatiivi,
   sallittuOrigin,
   siivoaHistoria,
   siivoaTeksti,
@@ -1898,7 +1900,10 @@ export default {
     if (pyynto.method !== 'POST') {
       return vastaa({ virhe: 'menetelma', viesti: 'Vain POST.' }, { status: 405, ...kors });
     }
-    if (!sallittuOrigin(origin, sallitut)) {
+    // Natiivi sovellus ilman Originia (rajat.js sallittuNatiivi): vain puhesynteesi.
+    const natiivit = env.POLLO_NATIIVIT ? lueLista(env.POLLO_NATIIVIT) : NATIIVIT_OLETUS;
+    const natiivi = !origin && sallittuNatiivi(pyynto.headers, natiivit);
+    if (!natiivi && !sallittuOrigin(origin, sallitut)) {
       // Ilman kaiutettua originia selain ei näytä runkoa — se on ok,
       // tämä on väärinkäytön esto eikä pelaajalle näkyvä tila.
       return new Response('Origin ei ole sallittu', { status: 403 });
@@ -1908,6 +1913,9 @@ export default {
       runko = await pyynto.json();
     } catch {
       return vastaa({ virhe: 'kysely', viesti: 'Pyyntö ei ollut JSONia.' }, { status: 400, ...kors });
+    }
+    if (natiivi && runko?.tehtava !== 'puhe') {
+      return new Response('Natiiville vain puhe', { status: 403 });
     }
 
     /*

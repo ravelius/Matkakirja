@@ -158,6 +158,26 @@ export function sallittuOrigin(origin, lista = []) {
   return lista.includes(origin.replace(/\/+$/, ''));
 }
 
+/*
+ * NATIIVI SOVELLUS (Fablen päätös 23.9.2026): natiivi iOS-peli ei lähetä
+ * Originia, joten se tunnistetaan otsakkeesta `x-matkakirja-natiivi`, jonka
+ * arvo on sovelluksen bundle id, ja saman tunnisteen esiintymisestä
+ * User-Agentissa (iOS:n NSURLSession kirjoittaa sen sinne itse). Sallitut
+ * tunnisteet: ympäristömuuttuja POLLO_NATIIVIT (pilkkulista) tai oletus
+ * NATIIVIT_OLETUS. Natiivi pääsee vain puhesynteesiin (tehtava 'puhe'),
+ * samoin raja- ja kiintiösäännöin kuin selain.
+ */
+export const NATIIVI_OTSAKE = 'x-matkakirja-natiivi';
+export const NATIIVIT_OLETUS = Object.freeze(['app.matkakirja.proto3d', 'app.matkakirja.peli']);
+
+/** Onko pyyntö sallitusta natiivista sovelluksesta? `otsakkeet` = Headers tai get(nimi)-olio. */
+export function sallittuNatiivi(otsakkeet, lista = NATIIVIT_OLETUS) {
+  const tunniste = String(otsakkeet?.get?.(NATIIVI_OTSAKE) ?? '').trim();
+  if (!tunniste || !lista.includes(tunniste)) return false;
+  const agentti = String(otsakkeet?.get?.('user-agent') ?? '');
+  return agentti.includes(tunniste);
+}
+
 /** Pilkulla erotetun ympäristömuuttujan luku listaksi. */
 export function lueLista(arvo) {
   return String(arvo ?? '')

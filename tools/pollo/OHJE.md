@@ -129,6 +129,14 @@ koodimuutos main-haarassa julkaisee workerin uudelleen itsestään.
   lähettämään `Origin`-otsakkeeseen, jossa ei koskaan ole polkua.
   Arvo on työnkulkutiedoston alussa (`POLLO_ORIGINIT`) — jos pelin
   osoite joskus vaihtuu, se muutetaan sinne.
+- **Natiivi sovellus** (Fablen päätös 23.9.2026): iOS-peli ei lähetä
+  Originia. Se tunnistetaan otsakkeesta `x-matkakirja-natiivi: <bundle id>`
+  ja saman bundle id:n esiintymisestä User-Agentissa (`rajat.js`
+  `sallittuNatiivi`). Sallitut tunnisteet: `NATIIVIT_OLETUS`
+  (`app.matkakirja.proto3d`, `app.matkakirja.peli`), tai valinnainen
+  ympäristömuuttuja `POLLO_NATIIVIT` (pilkkulista), joka korvaa oletuksen.
+  Natiivi pääsee vain puhesynteesiin (`tehtava: 'puhe'`), samoin
+  päivä- ja kuukausirajoin kuin selain; muut tehtävät palauttavat 403.
 - **API-avain**: syötetään wranglerille putkessa, jolloin se ei näy
   komentorivillä eikä lokissa. Cloudflare säilöö sen salaisuutena, eikä
   sitä voi lukea takaisin sen paremmin dashboardista kuin ajostakaan.
