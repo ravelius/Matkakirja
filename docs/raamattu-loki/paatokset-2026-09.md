@@ -2735,3 +2735,7 @@ Omistajan sääntö: kaikki mikä voi, ajetaan Macilla.
 ## PELIKOODARI NOLLATAAN klo 23.2x (70 %): LUOVUTUS viesti-pelikoodari-luovutus-20260923-natiivi5.md (428e93eae); B7 AANIERAT 1–2 AGENTILLA WORKTREESSA proto-pelikoodari-aani; ALOITUS viesti-pelikoodari-aloitus.md (23.9.2026 klo 23.21)
 
 Neljäs Pelikoodari-sessio tänään.
+
+## OMISTAJA klo 23.2x: OFFLINE-LATAUS MAANOSITTAIN TAI KAIKKI, EI YKSITTAISIA MAITA (RAAMATTUUN). SISALTOKIRJURI: N3 PR #3000 (17/21 MAATA); #2991, #2996, #3000 JULKAISIJALLE. FABLE: PR #2999. LUPATILAN VAIHTO ONNISTUU VAIN TUOREESEEN SESSIOON → NOLLAUKSEN YHTEYDESSA (23.9.2026 klo 23.27)
+
+Pelikoodari vaihdettu.
