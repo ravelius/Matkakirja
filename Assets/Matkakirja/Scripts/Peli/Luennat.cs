@@ -18,6 +18,18 @@ using Matkakirja.Peli;
 
 namespace Matkakirja.Natiivi
 {
+    /// <summary>
+    /// Kuuntelureaktio luennan kohtaan (web luentareaktiot.js, fokusvirran
+    /// matkakirja.reaktiot): Livia reagoi, kun kertoja ehtii ankkuriin.
+    /// </summary>
+    public sealed class LuentaReaktio
+    {
+        public string Id, Ankkuri, Tarkoitus;
+        public double Voimakkuus, Siirtyma;
+        /// <summary>Kohdistettu hetki sekunteina (reaktioHetket), tai null = arvio tekstin paikasta.</summary>
+        public double? HetkiS;
+    }
+
     /// <summary>Yksi luenta: äänite ja sen teksti (tekstitystä/merkintää varten).</summary>
     public sealed class Luento
     {
@@ -27,6 +39,31 @@ namespace Matkakirja.Natiivi
         public string Teksti;
         public string Paikkarivi;
         public double? Kesto;
+        public List<LuentaReaktio> Reaktiot = new List<LuentaReaktio>();
+
+        /// <summary>
+        /// Reaktioiden ajat sekunteina kestolla kestoS (äänitteen todellinen pituus):
+        /// kohdistettu hetki, tai ankkurin suhteellinen paikka tekstissä × kesto
+        /// (aikaleimoja ei vielä ole, Siirtoseppä 23.9.), + siirtyma. Löytymätön
+        /// ankkuri jätetään pois. Aikajärjestyksessä.
+        /// </summary>
+        public List<(double AikaS, LuentaReaktio Reaktio)> ReaktioAjat(double kestoS)
+        {
+            var tulos = new List<(double, LuentaReaktio)>();
+            foreach (var r in Reaktiot)
+            {
+                double? aika = r.HetkiS;
+                if (aika == null && !string.IsNullOrEmpty(Teksti) && !string.IsNullOrEmpty(r.Ankkuri) && kestoS > 0)
+                {
+                    int i = Teksti.IndexOf(r.Ankkuri, StringComparison.Ordinal);
+                    if (i >= 0) aika = (double)i / Teksti.Length * kestoS;
+                }
+                if (aika == null) continue;
+                tulos.Add((Math.Max(0, aika.Value + r.Siirtyma), r));
+            }
+            tulos.Sort((a, b) => a.Item1.CompareTo(b.Item1));
+            return tulos;
+        }
     }
 
     public sealed class Luennat
@@ -83,6 +120,22 @@ namespace Matkakirja.Natiivi
                     Kesto = Luku(d, "kesto"),
                 };
                 if (string.IsNullOrEmpty(l.Url)) continue;
+                var hetket = (MiniJson.Kentta(d, "reaktioHetket") ?? MiniJson.Kentta(a, "reaktioHetket")) as Dictionary<string, object>;
+                if ((MiniJson.Kentta(d, "reaktiot") ?? MiniJson.Kentta(a, "reaktiot")) is List<object> reaktiot)
+                    foreach (var ro in reaktiot)
+                    {
+                        if (!(ro is Dictionary<string, object> r)) continue;
+                        var id = MiniJson.Teksti(r, "id");
+                        l.Reaktiot.Add(new LuentaReaktio
+                        {
+                            Id = id,
+                            Ankkuri = MiniJson.Teksti(r, "ankkuri"),
+                            Tarkoitus = MiniJson.Teksti(r, "tarkoitus"),
+                            Voimakkuus = Luku(r, "voimakkuus") ?? 0.5,
+                            Siirtyma = Luku(r, "siirtyma") ?? 0,
+                            HetkiS = id != null && hetket != null && MiniJson.Kentta(hetket, id) is double ms ? ms / 1000.0 : (double?)null,
+                        });
+                    }
                 if (l.Id == "intro") Intro = l;
                 else if (l.Id == "lento-alku") LentoAlku = l;
                 else if (!string.IsNullOrEmpty(l.Kaupunki)) luennot[l.Kaupunki] = l;
