@@ -34,6 +34,7 @@ namespace Matkakirja.Natiivi
         public readonly Matkakirjakortti Matkakirja;
         public readonly Saapumisesitys Saapuminen;
         public readonly PuluChat Chat;
+        public readonly Saapumistraileri Traileri;
         public readonly Tietoja Tietoja;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
@@ -42,6 +43,7 @@ namespace Matkakirja.Natiivi
             PeliNakymat.Tilarivi = _ => Hae().Tilarivi;
             PeliNakymat.MatkaValinta = _ => Hae().Matkavalinta;
             PeliNakymat.KaupunkiKortti = _ => Hae().Kaupunkikortti;
+            PeliNakymat.Saapumistraileri = (kaupunki, url, valmis) => Hae().Traileri.NaytaPelista(kaupunki, url, valmis);
             PeliNakymat.Kysymys = _ => Hae().Kysymys;
         }
 
@@ -72,6 +74,7 @@ namespace Matkakirja.Natiivi
             Pulu = Natiivi.Pulu.Hae();
             Saapuminen = new Saapumisesitys(Matkakirja, Pulu);
             Chat = new PuluChat(kerros, Pulu);
+            Traileri = new Saapumistraileri(kerros);
             Pulu.Napautus += Chat.Vaihda;
             // Livia lennähtää paikalle, kun käyttöliittymä on valmis (webin ensisaapuminen: handoff).
             kerros.Juuri(UiKerros.Tilarivi).schedule.Execute(() => Pulu.Tilanne("arrival")).StartingIn(1500);

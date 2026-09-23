@@ -508,3 +508,109 @@
 .mk-chat__palaa .mk-nappi__teksti {
     font-size: 13px;
 }
+
+/* --- saapumistraileri (webin css/saapumistraileri.css) ------------------- */
+
+.mk-traileri {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(8, 12, 18, 0.72);
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 0.2s;
+}
+
+.mk-traileri.mk-traileri--ohitettu {
+    opacity: 0;
+}
+
+.mk-traileri__kuvat {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.mk-traileri__kuva {
+    position: absolute;
+    width: 90%;
+    height: 60%;
+    border-radius: 18px;
+    -unity-background-scale-mode: scale-to-fit;
+    opacity: 0;
+    transition-property: translate, opacity;
+    transition-duration: 0.7s, 0.26s;
+    transition-timing-function: ease-out-cubic, ease;
+}
+
+.mk-traileri__kuva.mk-traileri__kuva--keskella {
+    opacity: 1;
+}
+
+.mk-traileri__kuva.mk-traileri__kuva--ulos {
+    opacity: 0;
+    transition-duration: 0.6s, 0.6s;
+    transition-timing-function: ease-in-cubic, ease-in-cubic;
+}
+
+.mk-traileri__teksti {
+    align-items: center;
+    justify-content: center;
+    max-width: 96%;
+}
+
+.mk-traileri__nimi {
+    flex-direction: row;
+    justify-content: center;
+    font-size: 48px;
+    color: #ffffff;
+}
+
+.mk-traileri__kirjain {
+    color: #ffffff;
+    text-shadow: 0 2px 18px rgba(0, 0, 0, 0.55);
+    opacity: 0;
+    scale: 0.05 0.05;
+    transition-property: opacity, scale, translate;
+    transition-duration: 0.65s;
+    transition-timing-function: ease-out-cubic;
+}
+
+.mk-traileri__kirjain.mk-auki {
+    opacity: 1;
+    scale: 1 1;
+}
+
+/* Syöksy katsojan ohi: kasvaa ja häipyy. */
+.mk-traileri__kirjain.mk-traileri__kirjain--ulos {
+    opacity: 0;
+    scale: 2.4 2.4;
+    transition-duration: 0.45s;
+    transition-timing-function: ease-in-cubic;
+}
+
+.mk-traileri__iskulause {
+    margin-top: 10px;
+    max-width: 92%;
+    font-size: 19px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.55);
+    white-space: normal;
+    -unity-text-align: middle-center;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.6s;
+}
+
+.mk-traileri__iskulause.mk-auki {
+    opacity: 1;
+}

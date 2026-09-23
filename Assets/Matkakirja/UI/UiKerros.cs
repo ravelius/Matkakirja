@@ -28,7 +28,7 @@ namespace Matkakirja.Natiivi
         public const string PaneeliPolku = "MatkakirjaUI/Paneeli";
         public static readonly Vector2Int Viiteruutu = new Vector2Int(393, 852);
 
-        public const int Tilarivi = 15, Matkavalinta = 20, Pelidialogit = 30, Valikot = 40;
+        public const int Tilarivi = 15, Matkavalinta = 20, Pelidialogit = 30, Valikot = 40, Traileri = 45;
 
         static UiKerros instanssi;
 

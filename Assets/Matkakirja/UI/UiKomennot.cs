@@ -14,6 +14,7 @@
 //   ui pulu sano [teksti] | aani [lähde n] | ele id | tilanne laji | tunne t | pois | paalle
 //   ui tietoja                                tekijätiedot ja lähteet
 //   ui chat [kysymys]                         pulun keskustelu auki / kysy
+//   ui traileri [kaupunki]                    saapumistraileri ilman puhetta (oletus lontoo)
 //   ui luento [kaupunki] [loppu]              matkakirjakortti + luentakuvat (oletus ateena); loppu = Livian vuoro
 //   ui kartuscha [ISO3] [auki]                kartuscha maalle ilman peliä (oletus ITA)
 //   ui heitto [teksti]                        kartan toimintonappi näkyviin
@@ -149,6 +150,12 @@ namespace Matkakirja.Natiivi
                     var lk = loput.Split(' ');
                     string kaup = lk[0].Length > 0 ? lk[0] : "ateena";
                     if (lk.Length > 1 && lk[1] == "loppu") ui.Saapuminen.Loppui(kaup); else ui.Saapuminen.Alkoi(kaup);
+                    return null;
+                }
+                case "traileri":
+                {
+                    string tk = loput.Length > 0 ? loput : "lontoo";
+                    ui.Traileri.Nayta(tk, null, () => Kirjaa("traileri valmis: " + tk));
                     return null;
                 }
                 case "chat":

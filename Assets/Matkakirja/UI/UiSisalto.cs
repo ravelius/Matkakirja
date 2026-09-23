@@ -26,6 +26,10 @@ namespace Matkakirja.Natiivi
         /// <summary>Lipun osoitteet järjestyksessä (url, varat).</summary>
         public List<string> Lippu = new List<string>();
         public List<Kuvateksti> Kansikuvat = new List<Kuvateksti>();
+        /// <summary>Lehden avauskuvat (saapumistraileri); tyhjä = kansikuvat.</summary>
+        public List<Kuvateksti> Avauskuvat = new List<Kuvateksti>();
+        /// <summary>Kaupungin iskulause (saapumispuheet.slogan), tai null.</summary>
+        public string Iskulause;
         /// <summary>Lehden muut aiheet ("Nykytaide", "Luonto" …) lehden sisällysluetteloon.</summary>
         public List<string> Aiheet = new List<string>();
         public string JulisteTiedosto, JulisteOtsikko;
@@ -83,11 +87,12 @@ namespace Matkakirja.Natiivi
         {
             string kaup = null, lehdet = null, julisteet = null, liput = null;
             yield return Sisalto.HaeTeksti("kaupungit", t => kaup = t);
-            yield return Sisalto.HaeTeksti("kaupunkilehdet", t => lehdet = t);
-            yield return Sisalto.HaeTeksti("julisteet", t => julisteet = t);
-            yield return Sisalto.HaeTeksti("lippumaat", t => liput = t);
-            string maaTeksti = null;
-            yield return Sisalto.HaeTeksti("maat", t => maaTeksti = t);
+            yield return Sisalto.HaeTeksti("kaupunkilehdet", t => lehdet = t, valinnainen: true);
+            yield return Sisalto.HaeTeksti("julisteet", t => julisteet = t, valinnainen: true);
+            yield return Sisalto.HaeTeksti("lippumaat", t => liput = t, valinnainen: true);
+            string maaTeksti = null, puheet = null;
+            yield return Sisalto.HaeTeksti("maat", t => maaTeksti = t, valinnainen: true);
+            yield return Sisalto.HaeTeksti("saapumispuheet", t => puheet = t, valinnainen: true);
             if (kaup == null)
             {
                 Debug.LogWarning("MATKAKIRJA ui sisältö: kaupungit-kokoelmaa ei saatu");
@@ -97,7 +102,17 @@ namespace Matkakirja.Natiivi
             Task.Run(() =>
             {
                 Dictionary<string, KaupunkiTiedot> tulos = null;
-                try { tulos = Jasenna(kaup, lehdet, julisteet, liput); JasennaMaat(maaTeksti, tulos); }
+                try
+                {
+                    tulos = Jasenna(kaup, lehdet, julisteet, liput);
+                    JasennaMaat(maaTeksti, tulos);
+                    foreach (var a in Alkiot(puheet))
+                    {
+                        var id = MiniJson.Teksti(a, "kaupunki") ?? MiniJson.Teksti(a, "id");
+                        var d = MiniJson.Objekti(MiniJson.Kentta(a, "data"));
+                        if (id != null && d != null && tulos.TryGetValue(id, out var kt)) kt.Iskulause = MiniJson.Teksti(d, "slogan");
+                    }
+                }
                 catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui sisältö: jäsennys epäonnistui: " + e.Message); }
                 UiKerros.PaaSaikeessa(() => Valmistu(tulos));
             });
@@ -119,6 +134,23 @@ namespace Matkakirja.Natiivi
             var alkiot = juuri != null ? MiniJson.Taulukko(MiniJson.Kentta(juuri, "alkiot")) : null;
             if (alkiot == null) yield break;
             foreach (var a in alkiot) { var o = MiniJson.Objekti(a); if (o != null) yield return o; }
+        }
+
+        static void LueKuvat(List<object> kuvat, List<Kuvateksti> kohde)
+        {
+            if (kuvat == null) return;
+            foreach (var ku in kuvat)
+            {
+                var o = MiniJson.Objekti(ku);
+                // tiedosto = Commons-nimi, ampari = pelin oma kuva julisteet/-kansiossa (Kuvat.Reitit).
+                var tiedosto = o != null ? (MiniJson.Teksti(o, "tiedosto") ?? MiniJson.Teksti(o, "ampari")) : null;
+                if (tiedosto == null) continue;
+                kohde.Add(new Kuvateksti
+                {
+                    Tiedosto = tiedosto, Lyhyt = MiniJson.Teksti(o, "lyhyt"),
+                    Selite = MiniJson.Teksti(o, "selite"), Lahde = MiniJson.Teksti(o, "lahde"),
+                });
+            }
         }
 
         static void JasennaMaat(string teksti, Dictionary<string, KaupunkiTiedot> kaupungit)
@@ -218,19 +250,8 @@ namespace Matkakirja.Natiivi
                     {
                         k.Lehti = true;
                         k.Johdanto = MiniJson.Teksti(kat, "johdanto");
-                        var kuvat = MiniJson.Taulukko(MiniJson.Kentta(kat, "kansikuvat")) ?? MiniJson.Taulukko(MiniJson.Kentta(kat, "avauskuvat"));
-                        if (kuvat != null)
-                            foreach (var ku in kuvat)
-                            {
-                                var ko2 = MiniJson.Objekti(ku);
-                                var tiedosto = ko2 != null ? (MiniJson.Teksti(ko2, "tiedosto") ?? MiniJson.Teksti(ko2, "ampari")) : null;
-                                if (tiedosto == null) continue;
-                                k.Kansikuvat.Add(new Kuvateksti
-                                {
-                                    Tiedosto = tiedosto, Lyhyt = MiniJson.Teksti(ko2, "lyhyt"),
-                                    Selite = MiniJson.Teksti(ko2, "selite"), Lahde = MiniJson.Teksti(ko2, "lahde"),
-                                });
-                            }
+                        LueKuvat(MiniJson.Taulukko(MiniJson.Kentta(kat, "kansikuvat")) ?? MiniJson.Taulukko(MiniJson.Kentta(kat, "avauskuvat")), k.Kansikuvat);
+                        LueKuvat(MiniJson.Taulukko(MiniJson.Kentta(kat, "avauskuvat")), k.Avauskuvat);
                     }
                     else
                     {
