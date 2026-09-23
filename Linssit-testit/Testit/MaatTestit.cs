@@ -291,9 +291,12 @@ namespace Matkakirja.Linssit.Testit
         {
             var ilman = MaatAineisto.LueRajat(Paketti("maarajat.json"));
             ilman.Maat.Remove("FIN");
-            var l = new VertailuLinssi(ilman, new ValeMaaKartta());
+            var nimet = new ValeNimet();
+            var l = new VertailuLinssi(ilman, new ValeMaaKartta(), nimet);
             l.Avaa(new ValeYmparisto());
             Oleta.Sama(0, l.Valinnat.Count, "Suomi vain jos aineistossa");
+            // Pelkillä rajoilla (ei maat.jsonia) nimeksi jäisi ISO3: ei nimiä pallolle.
+            Oleta.Sama(0, nimet.Nakyvat.Count, "ei ISO3-nimiä");
         }
 
         // ── Maiden tiedot ─────────────────────────────────────────────────

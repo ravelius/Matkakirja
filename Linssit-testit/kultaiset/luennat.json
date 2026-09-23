@@ -1,0 +1,201 @@
+{
+ "juuri": "https://media.matkakirja.app/aikajana/keksinnot/puhe",
+ "viiveMs": 350,
+ "esittelynRunko": "esittely",
+ "esittelynVersio": "bd142983",
+ "loppupuhe": false,
+ "pysakit": [
+  {
+   "vuosi": 1769,
+   "otsikko": "Höyrykoneen lauhdutin",
+   "hiljainen": false,
+   "tiedosto": "1769-james-watt.mp3",
+   "valinaytos": null
+  },
+  {
+   "vuosi": 1783,
+   "otsikko": "Kuumailmapallo",
+   "hiljainen": false,
+   "tiedosto": "1783-joseph-montgolfier.mp3",
+   "valinaytos": null
+  },
+  {
+   "vuosi": 1796,
+   "otsikko": "Rokotus",
+   "hiljainen": false,
+   "tiedosto": "1796-edward-jenner.mp3",
+   "valinaytos": null
+  },
+  {
+   "vuosi": 1800,
+   "otsikko": "Sähköparisto",
+   "hiljainen": false,
+   "tiedosto": "1800-alessandro-volta.mp3",
+   "valinaytos": null
+  },
+  {
+   "vuosi": 1804,
+   "otsikko": "Reikäkorttikangaspuut",
+   "hiljainen": false,
+   "tiedosto": "1804-joseph-marie-jacquard.mp3",
+   "valinaytos": null
+  },
+  {
+   "vuosi": 1825,
+   "otsikko": "Rautatie",
+   "hiljainen": false,
+   "tiedosto": "1825-george-stephenson.mp3",
+   "valinaytos": null
+  },
+  {
+   "vuosi": 1837,
+   "otsikko": "Sähkölennätin",
+   "hiljainen": false,
+   "tiedosto": "1837-william-fothergill-cooke.mp3",
+   "valinaytos": null
+  },
+  {
+   "vuosi": 1839,
+   "otsikko": "Valokuva",
+   "hiljainen": false,
+   "tiedosto": "1839-louis-daguerre.mp3",
+   "valinaytos": null
+  },
+  {
+   "vuosi": 1856,
+   "otsikko": "Halpa teräs",
+   "hiljainen": false,
+   "tiedosto": "1856-henry-bessemer.mp3",
+   "valinaytos": null
+  },
+  {
+   "vuosi": 1867,
+   "otsikko": "Dynamiitti",
+   "hiljainen": false,
+   "tiedosto": "1867-alfred-nobel.mp3",
+   "valinaytos": null
+  },
+  {
+   "vuosi": 1869,
+   "otsikko": "Jaksollinen järjestelmä",
+   "hiljainen": false,
+   "tiedosto": "1869-dmitri-mendeleev.mp3",
+   "valinaytos": null
+  },
+  {
+   "vuosi": 1873,
+   "otsikko": "Matkakirjan vuosi",
+   "hiljainen": false,
+   "tiedosto": "1873-matkakirjan-vuosi.mp3",
+   "valinaytos": "valinaytos-1873"
+  },
+  {
+   "vuosi": 1876,
+   "otsikko": "Nelitahtimoottori",
+   "hiljainen": false,
+   "tiedosto": "1876-nikolaus-otto.mp3",
+   "valinaytos": null
+  },
+  {
+   "vuosi": 1879,
+   "otsikko": "Sähköveturi",
+   "hiljainen": false,
+   "tiedosto": "1879-werner-von-siemens.mp3",
+   "valinaytos": null
+  },
+  {
+   "vuosi": 1885,
+   "otsikko": "Raivotautirokote",
+   "hiljainen": false,
+   "tiedosto": "1885-louis-pasteur.mp3",
+   "valinaytos": null
+  },
+  {
+   "vuosi": 1886,
+   "otsikko": "Auto",
+   "hiljainen": false,
+   "tiedosto": "1886-carl-benz.mp3",
+   "valinaytos": null
+  },
+  {
+   "vuosi": 1888,
+   "otsikko": "Radioaallot",
+   "hiljainen": false,
+   "tiedosto": "1888-heinrich-hertz.mp3",
+   "valinaytos": null
+  },
+  {
+   "vuosi": 1895,
+   "otsikko": "Radio",
+   "hiljainen": false,
+   "tiedosto": "1895-guglielmo-marconi.mp3",
+   "valinaytos": null
+  },
+  {
+   "vuosi": 1895,
+   "otsikko": "Röntgensäteet",
+   "hiljainen": false,
+   "tiedosto": "1895-wilhelm-rontgen.mp3",
+   "valinaytos": null
+  },
+  {
+   "vuosi": 1895,
+   "otsikko": "Elokuva",
+   "hiljainen": false,
+   "tiedosto": "1895-auguste-lumiere.mp3",
+   "valinaytos": null
+  },
+  {
+   "vuosi": 1897,
+   "otsikko": "Dieselmoottori",
+   "hiljainen": false,
+   "tiedosto": "1897-rudolf-diesel.mp3",
+   "valinaytos": null
+  },
+  {
+   "vuosi": 1898,
+   "otsikko": "Radium",
+   "hiljainen": false,
+   "tiedosto": "1898-marie-curie.mp3",
+   "valinaytos": null
+  },
+  {
+   "vuosi": 1900,
+   "otsikko": "Ilmalaiva",
+   "hiljainen": false,
+   "tiedosto": "1900-ferdinand-von-zeppelin.mp3",
+   "valinaytos": null
+  },
+  {
+   "vuosi": 1909,
+   "otsikko": "Lento kanaalin yli",
+   "hiljainen": false,
+   "tiedosto": "1909-louis-bleriot.mp3",
+   "valinaytos": null
+  },
+  {
+   "vuosi": 1926,
+   "otsikko": "Televisio",
+   "hiljainen": false,
+   "tiedosto": "1926-john-logie-baird.mp3",
+   "valinaytos": null
+  },
+  {
+   "vuosi": 1928,
+   "otsikko": "Penisilliini",
+   "hiljainen": false,
+   "tiedosto": "1928-alexander-fleming.mp3",
+   "valinaytos": null
+  }
+ ],
+ "puheet": [
+  {
+   "avain": "esittely",
+   "runko": "esittely"
+  },
+  {
+   "avain": "valinaytos",
+   "runko": "valinaytos-1873"
+  }
+ ]
+}

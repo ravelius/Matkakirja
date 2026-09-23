@@ -13,7 +13,10 @@
 //
 // TESTIKOMENNOT ilman UI:ta: Documents/linssi-komento.txt, rivi kerrallaan
 // "linssi <id>" (vaihtokytkin), "linssi pois", "linssit" (luettelo lokiin);
-// maatilan linsseille "maa <ISO3>" (napautus), "vertaa" ja "lehti" (maakyltti).
+// maatilan linsseille "maa <ISO3>" (napautus), "vertaa" ja "lehti" (maakyltti);
+// keksinnöille "keksinnot kaynnista | jatka | tauko | tila | <pysäkki 0–25>";
+// ihmisen matkalle "esitys <jakso-id> | tauko | jatka | tila"; kaikille
+// "kamera <lat> <lon> <korkeus km>" (hyppy kuvakaappausta varten) ja "tila".
 // Tulos lokiin ja Documents/linssi-loki.txt:hen.
 using System;
 using System.Collections.Generic;
@@ -188,7 +191,9 @@ namespace Matkakirja.Natiivi
             {
                 vanat = tulos;
                 if (linssi == null) return;
-                if (rantamaski != null) kerros.AsetaVanat(tulos, virrat, rantamaski);
+                // Rantamaski (linssiaineisto) puuttuu julkaistusta paketista v2: vanat
+                // piirretään silloin ilman rannan leikkausta (VanaPiirto sietää nullin).
+                kerros.AsetaVanat(tulos, virrat, rantamaski);
                 linssi.AsetaVanat(tulos);
             }
 
@@ -266,16 +271,29 @@ namespace Matkakirja.Natiivi
 
         System.Collections.IEnumerator LataaKeksinnot()
         {
-            string data = null;
+            string data = null, aineisto = null;
             yield return LinssiSisalto.Hae("moduulit/js/linssit/keksinnot.json", t => data = t);
             if (data == null) { Kirjaa("keksinnöt: aineisto puuttuu"); yield break; }
+            KeksinnotSovitin sovitin;
             try
             {
                 var a = Matkakirja.Linssit.Aikajana.KeksinnotAineisto.Lue(Matkakirja.Peli.MiniJson.Jasenna(data));
-                rekisteri.Lisaa(new KeksinnotSovitin(this, a));
+                sovitin = new KeksinnotSovitin(this, a);
+                rekisteri.Lisaa(sovitin);
                 Kirjaa($"keksinnöt: {a.Pysakit.Count} pysäkkiä");
             }
-            catch (Exception e) { Kirjaa("keksinnöt: " + e.Message); }
+            catch (Exception e) { Kirjaa("keksinnöt: " + e.Message); yield break; }
+
+            // Pysäkkiluennat linssiaineistosta (koepaketti v9+; julkaistussa v2:ssa ei ole).
+            // Linssiaineistossa on isoja maskeja, joten jäsennys taustasäikeessä.
+            yield return LinssiSisalto.Hae("kokoelmat/linssiaineisto.json", t => aineisto = t);
+            if (aineisto == null) { Kirjaa("keksinnöt: luennat puuttuvat (ei linssiaineistoa)"); yield break; }
+            var lataus = System.Threading.Tasks.Task.Run(() =>
+                Matkakirja.Linssit.Aikajana.KeksintoLuennat.Lue(Matkakirja.Peli.MiniJson.Jasenna(aineisto)));
+            while (!lataus.IsCompleted) yield return null;
+            if (lataus.IsFaulted) { Kirjaa("keksinnöt: luennat: " + lataus.Exception?.InnerException?.Message); yield break; }
+            sovitin.Luennat = lataus.Result;
+            Kirjaa($"keksinnöt: {lataus.Result?.Maara ?? 0} pysäkkiluentaa");
         }
 
         /// <summary>
@@ -381,14 +399,18 @@ namespace Matkakirja.Natiivi
             Matkakirja.Linssit.Aikajana.KeksinnotLinssi linssi;
             KeksinnotKerros kerros;
             public KeksinnotSovitin(LinssiOhjain o, Matkakirja.Linssit.Aikajana.KeksinnotAineisto a) { this.o = o; aineisto = a; }
+            /// <summary>Pysäkkiluennat (ladataan linssin rekisteröinnin jälkeen; null = hiljainen ajo).</summary>
+            public Matkakirja.Linssit.Aikajana.KeksintoLuennat Luennat;
             public LinssiTiedot Tiedot => aineisto.Tiedot;
             public bool Auki => linssi?.Auki ?? false;
-            /// <summary>Käynnissä oleva linssi (Natiivi-UI: Kaynnista, Ajo.Jatka, Ajo.Siirry).</summary>
+            /// <summary>Käynnissä oleva linssi (Natiivi-UI: Kaynnista, JatkaValinaytoksesta, Ajo.Tauko, Ajo.Siirry).</summary>
             public Matkakirja.Linssit.Aikajana.KeksinnotLinssi Linssi => linssi;
             public void Avaa(ILinssiYmparisto y)
             {
                 kerros = KeksinnotKerros.Luo(o.kierto, aineisto);
-                linssi = new Matkakirja.Linssit.Aikajana.KeksinnotLinssi(aineisto, kerros);
+                // Soitin on kerroksen lapsi: kerroksen tuho sulkee luennan.
+                var soitin = Luennat == null ? null : LuentaSoitin.Luo(kerros.transform);
+                linssi = new Matkakirja.Linssit.Aikajana.KeksinnotLinssi(aineisto, kerros, luennat: Luennat, soitin: soitin);
                 linssi.Avaa(y);
                 if (!KeksinnotKerros.EsittelyUIssa) linssi.Kaynnista();
             }
@@ -486,6 +508,10 @@ namespace Matkakirja.Natiivi
             if (k == null) return;
             k.Nakyvyys("kaupungit", nakyvissa);
             k.Nakyvyys("nimiot", nakyvissa);
+            // Kaupungin nimikortti pois linssin tieltä (web body.aikajana-paalla .fact-card;
+            // iPad-kuvassa Pariisin kortti jäi ihmisen matkan päälle). Kortti palaa
+            // seuraavasta kaupungin napautuksesta, joten palautusta ei tarvita.
+            if (!nakyvissa) FindAnyObjectByType<NimiKortti>()?.Piilota();
         }
 
         public void Peite(bool paalla)
@@ -522,6 +548,14 @@ namespace Matkakirja.Natiivi
                     rekisteri.Sulje();
                 else if (osat[0] == "linssi" && osat.Length > 1)
                     rekisteri.Valitse(osat[1]);
+                else if (osat[0] == "keksinnot" && osat.Length > 1)
+                    Keksinnot(osat[1]);
+                else if (osat[0] == "esitys" && osat.Length > 1)
+                    Esitys(osat[1]);
+                else if (osat[0] == "kamera" && osat.Length > 3)
+                    AjaKamera(new Nakyma(Luku(osat[1]), Luku(osat[2]), Luku(osat[3]) * 1000), 0f);
+                else if (osat[0] == "tila")
+                    Kirjaa($"tila: auki {rekisteri.Auki?.Tiedot.Id ?? "ei"}, kamera {Kamera}");
                 else if (osat[0] == "maa" && osat.Length > 1)
                     (rekisteri.Auki as MaatSovitin)?.Linssi?.Napauta(osat[1].ToUpperInvariant());
                 else if (osat[0] == "vertaa")
@@ -532,6 +566,32 @@ namespace Matkakirja.Natiivi
                     Kirjaa("tuntematon komento: " + rivi);
             }
             catch (ArgumentException e) { Kirjaa("virhe: " + e.Message); }
+        }
+
+        static double Luku(string s) =>
+            double.Parse(s.Replace(',', '.'), System.Globalization.CultureInfo.InvariantCulture);
+
+        void Keksinnot(string mita)
+        {
+            var l = (rekisteri.Auki as KeksinnotSovitin)?.Linssi;
+            if (l?.Ajo == null) { Kirjaa("keksinnöt: linssi ei ole auki"); return; }
+            if (mita == "kaynnista") l.Kaynnista();
+            else if (mita == "jatka") l.JatkaValinaytoksesta();
+            else if (mita == "tauko") l.Ajo.Tauko();
+            else if (int.TryParse(mita, out int i)) l.Ajo.Siirry(i);
+            else if (mita != "tila") { Kirjaa("keksinnöt: tuntematon " + mita); return; }
+            var t = l.Ajo.Tila;
+            Kirjaa($"keksinnöt: pysäkki {t.I}, vuosi {t.Paikka:F1}, käynnissä {l.Ajo.Kaynnissa}, välinäytös {l.Ajo.ValinaytosAuki}, luenta {System.IO.Path.GetFileName(l.Luenta ?? "-")}");
+        }
+
+        void Esitys(string mita)
+        {
+            var e = (rekisteri.Auki as IhmisenMatkaSovitin)?.Linssi?.Esitys;
+            if (e == null) { Kirjaa("esitys: ihmisen matka ei ole auki tai ei käynnissä"); return; }
+            if (mita == "tauko") e.Tauko();
+            else if (mita == "jatka") e.Jatka();
+            else if (mita != "tila") e.Valitse(mita);
+            Kirjaa($"esitys: jakso {e.I}, kulunut {e.Kulunut / 1000:F1}/{e.Kesto / 1000:F1} s, vuosia {e.Vuosia:F0}, käynnissä {e.Kaynnissa}");
         }
 
         void Kirjaa(string teksti)
