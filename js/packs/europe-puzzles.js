@@ -365,7 +365,7 @@ const EUROPE_SKETCHES = {
 export const EUROPE_PUZZLES = [
   {
     id: 'roomalaiset',
-    generate: EUROPE_GENERATORS.roomalaiset,
+    generaattori: 'roomalaiset',
     city: 'rooma',
     title: 'Kiveen hakatut luvut',
     selite: 'Piirroksessa: neljä kiveen hakattua lukua. Kolmen ensimmäisen arvo lukee vieressä; neljäs on ratkaistava.',
@@ -376,7 +376,7 @@ export const EUROPE_PUZZLES = [
   },
   {
     id: 'pylvaat',
-    generate: EUROPE_GENERATORS.pylvaat,
+    generaattori: 'pylvaat',
     city: 'ateena',
     title: 'Pylväiden päät',
     selite: 'Piirroksessa: isoisän luonnos yhdestä pylväänpäästä. Vaihtoehdot ovat oikeita valokuvia — valitse se, jossa on samanlainen pää.',
@@ -388,7 +388,7 @@ export const EUROPE_PUZZLES = [
   },
   {
     id: 'suolaaltaat',
-    generate: EUROPE_GENERATORS.suolaaltaat,
+    generaattori: 'suolaaltaat',
     city: 'dubrovnik',
     title: 'Stonin suola-altaat',
     selite: 'Piirroksessa: neljä allasta, joissa lukee veden syvyys senttimetreinä. Alla lukee, montako senttiä haihtuu päivässä ja monenko päivän kuluttua suolan pitää olla valmis.',
@@ -399,7 +399,7 @@ export const EUROPE_PUZZLES = [
   },
   {
     id: 'geysir',
-    generate: EUROPE_GENERATORS.geysir,
+    generaattori: 'geysir',
     city: 'islanti',
     title: 'Geysirin kello',
     selite: 'Piirroksessa: neljä purkausta kellonaikoineen. Kolmen aika lukee alla; neljäs on ratkaistava.',
@@ -410,7 +410,7 @@ export const EUROPE_PUZZLES = [
   },
   {
     id: 'laiturit',
-    generate: EUROPE_GENERATORS.laiturit,
+    generaattori: 'laiturit',
     city: 'venetsia',
     title: 'Vuoroveden laiturit',
     selite: 'Piirroksessa: vedenpinta ja neljä kulkusiltaa eri korkeuksilla senttimetreinä. Oikea on matalin silta, joka jää vielä veden yläpuolelle.',
@@ -421,7 +421,7 @@ export const EUROPE_PUZZLES = [
   },
   {
     id: 'kukko',
-    generate: EUROPE_GENERATORS.kukko,
+    generaattori: 'kukko',
     city: 'pariisi',
     title: 'Tuulikukko',
     selite: 'Piirroksessa: kirkontornin tuulikukko ja pääilmansuunnat (P pohjoinen, I itä, E etelä, L länsi). Oikea on suunta, johon kukon nokka osoittaa.',

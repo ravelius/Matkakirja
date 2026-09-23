@@ -401,6 +401,21 @@ tekstifunktiota, korvataan tunnisteilla (esim. `generaattori:
 'roomalaiset'`), ja kumpikin peli toteuttaa generaattorin omalla
 kielellään. Arvio: 2–3 sessiota Pelikoodarille.
 
+**Tehty, erä 1: kaupunkidata (23.9.2026).** Laudan ja lähdepackien
+(`cities`-exportit ja `*_PUZZLES`) funktiot on poistettu:
+- 11 pulmaa: `generate: fn` → `generaattori: '<tunniste>'`. Rekisteri
+  `js/pulmageneraattorit.js` (`PULMAGENERAATTORIT`, `pulmanGeneraattori`).
+  Natiivi toteuttaa samat 11 tunnistetta; generaattori on
+  `(rng) => { sketch, options, correct }`.
+- 11 packin `texts.starFound` ja `texts.winnerStar`: nuolifunktiot →
+  pohjat, joissa paikkamerkit `{name}`, `{city}` ja `{money}`. Täyttö
+  `js/tekstipohja.js` (`taytaPohja`); tuntematon paikkamerkki jää näkyviin.
+- Vartija `tests/sisaltopaketti.test.mjs` ("kaupunkidatassa ei ole
+  funktioita") kaataa viennin, jos kaupunkidataan lisätään funktio.
+Jäljellä olevat funktiot ovat apufunktio-exportteja (kuva-URL:n
+rakentajat, fokuskohteiden haut) ja linssien logiikkaa; seuraava erä on
+kaupunkilehdet.
+
 Yhteensä: **3,5–5 sessiota** siihen, että sisältö julkaistaan molempiin
 peleihin yhdellä mergellä. Overlay lisää tähän 2 sessiota, jos sitä
 tarvitaan.

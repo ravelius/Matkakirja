@@ -90,7 +90,7 @@ function lautaKokoelmat(ns) {
     kaksintaistelut: taulukko(`${LAUTA}#MAAILMANKARTTA.duels`, 'Kaksintaistelukysymykset.', {},
       P.duels.map((d, i) => ({ id: `kaksintaistelu:${i}`, data: d }))),
     pulmat: taulukko(`${LAUTA}#MAAILMANKARTTA.puzzles`,
-      'Kaupunkipulmat. generate on funktio (logiikka, ei dataa) — siirretään käsin.',
+      'Kaupunkipulmat. generaattori = arvontalogiikan tunniste (js/pulmageneraattorit.js); natiivi toteuttaa saman tunnisteen.',
       { kaupunki: 'kaupungit' }, P.puzzles.map((p) => ({ id: p.id, kaupunki: p.city, data: p }))),
   };
 }
