@@ -156,6 +156,8 @@ const SHELL = [
   './js/pollopoiminnat.js',
   './js/game.js',
   './js/tietajatasot.js',
+  './js/pulmageneraattorit.js',
+  './js/tekstipohja.js',
   './js/tietajagalleria.js',
   './js/minipopup.js',
   './js/ai.js',
