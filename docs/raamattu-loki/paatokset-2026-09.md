@@ -2495,3 +2495,7 @@ Siirtoseppä siirtää omansa.
 ## NATIIVI-UI NOLLATAAN klo 20.4x (89 %): LUOVUTUS viesti-natiivi-ui-luovutus-20260923-ilta.md (6aeb78670), MERGE-PYYNNOSSA natiivi-ui/paljastus 3f1cd06 (LEHTI, B4, TARKASTUS), WIP natiivi-ui/galleriat 7aab9a7; ALOITUS viesti-natiivi-ui-aloitus.md (23.9.2026 klo 20.43)
 
 Kolmas Natiivi-UI-sessio tänään.
+
+## NATIIVISEPPA ERA 6 (149cee1+): B16 AUTOKYYTI JA LENTOKAARI, B17 MAAKUNTIEN VARJAYS, B12 NATIIVI-UI:LLE, VALO → NOSTOKORTTI, RADIOTILAN API, MATKAKIRJA_APPSTORE, LAATTAVALIMUISTI 600 Mt; OFFLINE-LATAUS TODENNETTU (LUX 465/465). SIIRTOSEPPA: DEM-RUUDUT OMAAN KANSIOON, korkeudet 265/266 (23.9.2026 klo 20.43)
+
+Maakuntarajat porrastuvat lähellä → tarkempi Euroopan aluekartta myöhemmin.
