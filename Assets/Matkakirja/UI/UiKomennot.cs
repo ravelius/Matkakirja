@@ -52,6 +52,10 @@
 //                                             kuvallinen juttu tai kohde n) → "Avaa juttu" nähtävyysarkkiin;
 //                                             ohittaa sijaintiehdon (webissä vain kaupungissa, jossa pelaaja on)
 //   ui tietoja                                tekijätiedot ja lähteet
+//   ui tehoste <nimi> [voima] | ui tehoste lista  tehoste siivutaulusta (webin sfx.play-nimet: correct, wrong,
+//                                             quizOpen, tick, dieLand, paper, popup …) tai pulun (pulu.kujerrus);
+//                                             lista = kaikki nimet lokiin. SOI ÄÄNEEN (mykistettynä hiljaa)
+//   ui lentoaani alku [kesto s] | loppu       lennon moottoriääni (PeliOhjain.LentoAani ilman peliä)
 //   ui chat [kysymys]                         pulun keskustelu auki / kysy
 //   ui traileri [kaupunki]                    saapumistraileri ilman puhetta (oletus lontoo)
 //   ui luento [kaupunki] [loppu]              matkakirjakortti + luentakuvat (oletus ateena); loppu = Livian vuoro
@@ -275,6 +279,26 @@ namespace Matkakirja.Natiivi
                     if (loput.Length > 0) ui.Chat.Kysy(loput); else ui.Chat.Vaihda();
                     return null;
                 case "tietoja": ui.Tietoja.Avaa(); return null;
+                case "tehoste":
+                {
+                    var tk = loput.Split(new[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries);
+                    if (tk.Length == 0 || tk[0] == "lista")
+                        return string.Join(" ", Aanet.TehosteNimet) + " | " + string.Join(" ", Aanet.PulunTehosteNimet);
+                    float voima = tk.Length > 1 ? float.Parse(tk[1], CultureInfo.InvariantCulture) : 1f;
+                    if (tk[0].StartsWith("pulu.")) { Aanet.PulunTehoste(tk[0], voima); return null; }
+                    return Aanet.Tehoste(tk[0], voima) ? null : "ei soinut (tuntematon nimi tai Äänimaisema pois): " + tk[0];
+                }
+                case "lentoaani":
+                {
+                    var la = loput.Split(new[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries);
+                    string mita = la.Length > 0 ? la[0] : "alku";
+                    if (mita == "loppu") { Aanet.LentoAani(false); return null; }
+                    if (mita != "alku") return "ui lentoaani alku [kesto] | loppu";
+                    float kesto = la.Length > 1 ? float.Parse(la[1], CultureInfo.InvariantCulture) : 4.8f;
+                    if (Aanet.LentoSoi) return "soi jo";
+                    Aanet.LentoAani(true, kesto);
+                    return null;
+                }
                 case "aloitus":
                     ui.Aloitus.Testaa(loput.Length > 0 ? loput : "portti", id => ui.Tilarivi.Viesti("Lähtö: " + id));
                     return null;

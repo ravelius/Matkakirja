@@ -152,6 +152,7 @@ namespace Matkakirja.Natiivi
             Valikko.TietojaPainettu += Tietoja.Avaa;
             Tilarivi.LogoPainettu += () => { Valikko.Sulje(); Aanentasot.Sulje(); Matkalaukku.Sulje(); Tietoja.Avaa(); };
             UiSisalto.Lataa(null); // kaupunkidata valmiiksi ennen ensimmäistä napautusta
+            Aanet.Alusta(); // tehostekanava, mykistyksen napsahdus ja tehosteiden tiedostot laitteelle
 
             Tilarivi.Valikko.clicked += () => { Aanentasot.Sulje(); Matkalaukku.Sulje(); Valikko.Vaihda(); };
             Tilarivi.Ratas.clicked += () => { Valikko.Sulje(); Matkalaukku.Sulje(); Aanentasot.Vaihda(); };
@@ -209,7 +210,12 @@ namespace Matkakirja.Natiivi
             // Sähkehakemisto valmiiksi, kun saavutaan sähkekaupunkiin (lehtien jäsennys ennen pisteen napautusta).
             o.MatkaPerilla += kaupunki => UiKerros.PaaSaikeessa(() => EsilataaSahkehakemisto(kaupunki));
             EsilataaSahkehakemisto(o.PelaajanKaupunki);
-            o.KaikkiAarteetLoytyi += yv => UiKerros.PaaSaikeessa(() => Huipennus.Nayta(yv, () => UusiMatka(o)));
+            // Web: voittoikkuna aukeaa → sfx.play('win').
+            o.KaikkiAarteetLoytyi += yv => UiKerros.PaaSaikeessa(() => { Aanet.Tehoste("win"); Huipennus.Nayta(yv, () => UusiMatka(o)); });
+            // Pelin tehosteet (webin sfx.play-tunnukset) ja lennon moottoriääni (startFlight/stopFlight),
+            // B7 §1.8: siivut UI:n äänimoottorilla.
+            o.Aani += tunnus => UiKerros.PaaSaikeessa(() => Aanet.Tehoste(tunnus));
+            o.LentoAani += (alkaa, kesto) => UiKerros.PaaSaikeessa(() => Aanet.LentoAani(alkaa, kesto));
             // Lehti (WKWebView) aukeaa kaiken päälle: auki jääneet valikot kiinni.
             if (o.Lehti != null) o.Lehti.Avautui += _ => { Valikko.Sulje(); Aanentasot.Sulje(); Matkalaukku.Sulje(); Vahvistus.Sulje(); };
         }
@@ -310,7 +316,10 @@ namespace Matkakirja.Natiivi
             kierto ??= UnityEngine.Object.FindAnyObjectByType<PalloKierto>();
             if (kierto != null && kierto.RuutuPiste(lat, lon, out var ruutu, 5000))
                 alku = UnityEngine.UIElements.RuntimePanelUtils.ScreenToPanel(juuri.panel, new Vector2(ruutu.x, Screen.height - ruutu.y));
-            Noppa.Heita(arvo, alku, loppu, valmis, vahennettyLiike: LinssiUi.VahennettyLiike());
+            // Web animateDie: onTick → dieTick (pyörintä), onBounce → clack (pomppu). dieLand tulee
+            // PeliOhjaimen Aani-tapahtumasta.
+            Noppa.Heita(arvo, alku, loppu, valmis, vahennettyLiike: LinssiUi.VahennettyLiike(),
+                pomppu: () => Aanet.Tehoste("clack"), kohina: () => Aanet.Tehoste("dieTick"));
         }
 
         /// <summary>Testikomento 'ui matka': esimerkkivalinta ilman peliä.</summary>
