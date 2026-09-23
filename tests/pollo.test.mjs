@@ -82,7 +82,9 @@ import {
   sahkeViesti,
   sallittuOrigin,
   sallittuNatiivi,
+  natiivilleSallittu,
   NATIIVIT_OLETUS,
+  NATIIVIN_TEHTAVAT,
   siivoaHistoria,
   siivoaTeksti,
   siivoaVapaaVastaus,
@@ -2656,7 +2658,7 @@ test('natiivi sovellus tunnistetaan otsakkeesta ja User-Agentista (vain oma bund
   assert.ok(NATIIVIT_OLETUS.includes('app.matkakirja.proto3d'));
 });
 
-test('worker: natiivi pääsee vain puheeseen', async () => {
+test('worker: natiivi pääsee puheeseen ja chattiin, ei kuvaan, sähkeeseen eikä tilaan', async () => {
   const { default: worker } = await import('../tools/pollo/worker.js');
   const env = { POLLO_ORIGINIT: 'https://matkakirja.app' };
   const otsakkeet = {
@@ -2664,17 +2666,52 @@ test('worker: natiivi pääsee vain puheeseen', async () => {
     'x-matkakirja-natiivi': 'app.matkakirja.proto3d',
     'user-agent': 'Matkakirja app.matkakirja.proto3d',
   };
-  const chat = await worker.fetch(new Request('https://pollo.example/', {
-    method: 'POST', headers: otsakkeet, body: JSON.stringify({ viestit: [] }),
+  const pyynto = (runko, o = otsakkeet) => worker.fetch(new Request('https://pollo.example/', {
+    method: 'POST', headers: o, body: JSON.stringify(runko),
   }), env, {});
-  assert.equal(chat.status, 403);
-  assert.equal(await chat.text(), 'Natiiville vain puhe');
-  const vieras = await worker.fetch(new Request('https://pollo.example/', {
-    method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ tehtava: 'puhe', teksti: 'Hei.' }),
-  }), env, {});
+  assert.deepEqual([...NATIIVIN_TEHTAVAT], ['puhe', 'vastaus', 'ehdotukset']);
+  assert.equal(natiivilleSallittu(undefined), true, 'puuttuva tehtävä = vastaus');
+  for (const tehtava of ['kuva', 'sahke', 'tila']) {
+    const v = await pyynto({ tehtava });
+    assert.equal(v.status, 403, tehtava);
+    assert.equal(await v.text(), 'Tehtävä ei ole natiiville sallittu');
+  }
+  const vieras = await pyynto({ tehtava: 'puhe', teksti: 'Hei.' }, { 'content-type': 'application/json' });
   assert.equal(vieras.status, 403, 'ilman originia ja tunnistetta kiinni');
-  const puhe = await worker.fetch(new Request('https://pollo.example/', {
-    method: 'POST', headers: otsakkeet, body: JSON.stringify({ tehtava: 'puhe', teksti: 'Hei.', persoona: 'merkinnat' }),
-  }), env, {});
+  const puhe = await pyynto({ tehtava: 'puhe', teksti: 'Hei.', persoona: 'merkinnat' });
   assert.notEqual(puhe.status, 403, 'natiivi läpi puheen käsittelyyn (ilman avainta 503)');
+  const chat = await pyynto({ kysymys: 'Mikä on Pariisi?' });
+  assert.notEqual(chat.status, 403, 'natiivi läpi chattiin (ilman avainta 503)');
+});
+
+test('worker: natiivin chat kuluttaa samaa 30/vrk per IP -rajaa kuin selain', async () => {
+  const { default: worker } = await import('../tools/pollo/worker.js');
+  const kvData = new Map();
+  const kv = { get: async (k) => kvData.get(k) ?? null, put: async (k, v) => { kvData.set(k, v); } };
+  const env = {
+    ANTHROPIC_API_KEY: 'testiavain', POLLO_ORIGINIT: 'https://matkakirja.app', POLLO_KV: kv, POLLO_PAIVARAJA: '2',
+  };
+  const alkuperainen = globalThis.fetch;
+  globalThis.fetch = async () => new Response(JSON.stringify({ content: [{ type: 'text', text: 'Pariisi on Ranskan pääkaupunki.' }] }),
+    { status: 200, headers: { 'content-type': 'application/json' } });
+  try {
+    const natiivi = () => worker.fetch(new Request('https://pollo.example/', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json', 'cf-connecting-ip': '203.0.113.9',
+        'x-matkakirja-natiivi': 'app.matkakirja.proto3d', 'user-agent': 'Matkakirja/1 (app.matkakirja.proto3d)',
+      },
+      body: JSON.stringify({ kysymys: 'Mikä on Pariisi?' }),
+    }), env, {});
+    const selain = () => worker.fetch(new Request('https://pollo.example/', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json', 'cf-connecting-ip': '203.0.113.9', origin: 'https://matkakirja.app' },
+      body: JSON.stringify({ kysymys: 'Mikä on Pariisi?' }),
+    }), env, {});
+    assert.equal((await natiivi()).status, 200, 'natiivin chat vastaa');
+    assert.equal((await selain()).status, 200, 'sama IP selaimesta');
+    assert.equal((await natiivi()).status, 429, 'päiväraja yhteinen: kolmas pyyntö samasta IP:stä torjutaan');
+  } finally {
+    globalThis.fetch = alkuperainen;
+  }
 });
