@@ -108,6 +108,7 @@ namespace Matkakirja
             public double3 alku, loppu; // (pituus, leveys, korkeus)
             public double kesto, aika, nousu;
             public Action valmis;
+            public Func<double, double> pehmennys;
         }
 
         bool kosketettu;
@@ -341,7 +342,14 @@ namespace Matkakirja
         /// IKamera: ajaa kameran kohteeseen. Korkeus 0 tai alle = nykyinen korkeus.
         /// Sormi ruudulla keskeyttää ajon (valmis-kutsua ei silloin tehdä).
         /// </summary>
-        public void Aja(double lat, double lon, double kohdeKorkeus, float kestoS, Action valmis)
+        public void Aja(double lat, double lon, double kohdeKorkeus, float kestoS, Action valmis) =>
+            Aja(lat, lon, kohdeKorkeus, kestoS, valmis, null);
+
+        /// <summary>
+        /// Kamera-ajo omalla pehmennyskäyrällä (t 0–1 → osuus 0–1), esim. linssin
+        /// kohdeajo. null = verkkopelin siirtoajonPehmennys (ramppi 0,3).
+        /// </summary>
+        public void Aja(double lat, double lon, double kohdeKorkeus, float kestoS, Action valmis, Func<double, double> pehmennys)
         {
             kosketettu = true;
             liuku = 0;
@@ -362,6 +370,7 @@ namespace Matkakirja
                 kesto = math.max(0.05, kestoS),
                 nousu = nousu,
                 valmis = valmis,
+                pehmennys = pehmennys,
             };
         }
 
@@ -369,7 +378,7 @@ namespace Matkakirja
         {
             ajo.aika += dt;
             double t = math.saturate(ajo.aika / ajo.kesto);
-            double e = Pehmennys(t, ajonRamppi);
+            double e = ajo.pehmennys != null ? ajo.pehmennys(t) : Pehmennys(t, ajonRamppi);
             pituus = Kiedo(math.lerp(ajo.alku.x, ajo.loppu.x, e));
             leveys = math.lerp(ajo.alku.y, ajo.loppu.y, e);
             // Korkeus logaritmisesti (tasainen zoomin tuntu) ja nousu kaaren keskellä.

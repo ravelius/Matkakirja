@@ -11,6 +11,7 @@ korkeudet metreinä. Kaaret ovat asteina kapeammassa näyttösuunnassa.
 | Jäsen | Tila | Merkitys |
 |---|---|---|
 | `void Aja(lat, lon, korkeus, kestoS, Action valmis)` | valmis | Kamera-ajo verkkopelin liikekielellä: siirtoajonPehmennys, ramppi 0,3; pitkällä matkalla kaari nousee. `korkeus <= 0` = nykyinen. Sormi keskeyttää ajon, eikä `valmis`-kutsua silloin tehdä. Uusi `Aja` korvaa edellisen. |
+| `void Aja(lat, lon, korkeus, kestoS, valmis, Func<double,double> pehmennys)` | valmis | Sama omalla pehmennyskäyrällä (t → osuus); null = verkkopelin oletus. |
 | `double KorkeusKaarelle(kaari°)` | valmis | Korkeus, jolla näkyy annettu kaari (rajattu Min–Max). Kaupunkiin saavutaan 18,6°:n näkymällä (`KaupunkiMerkit.saapumisKaari`). |
 | `double MinKorkeus()`, `MaxKorkeus()` | valmis | Lähin näkymä (3,6° kuten webissä) ja koko pallo. |
 | `double pituus, leveys, korkeus, kallistus` | valmis | Nykyinen kameratila. Lukea saa, kirjoittaa vain Natiiviseppä. |
