@@ -11,6 +11,7 @@
 //                                             tapahtumakortti, tulos [laattatyyppi], kohtaaminen,
 //                                             kohtaaminen-tervehdys (KysymysEsimerkki.cs)
 //   ui selite                                 karttaselite auki (Nostot-välilehti)
+//   ui offline demo|verkoton|verkko|pois      offline-tilan pilleri: keksitty lataus / verkon tila
 //   ui maakunnat [kortti] [ISO:tunnus]        karttaselite Maakunnat-välilehdellä, valinta, kortti
 //   ui pulu sano [teksti] | aani [lähde n] | ele id | tilanne laji | tunne t | pois | paalle
 //   ui tietoja                                tekijätiedot ja lähteet
@@ -165,6 +166,15 @@ namespace Matkakirja.Natiivi
                     if (loput.Length > 0) ui.Chat.Kysy(loput); else ui.Chat.Vaihda();
                     return null;
                 case "tietoja": ui.Tietoja.Avaa(); return null;
+                case "offline":
+                    switch (loput)
+                    {
+                        case "demo": OfflineTilaUi.TestiLataus.Kaynnista(); return null;
+                        case "verkoton": ui.OfflineTila.TestaaVerkoton(true); return null;
+                        case "verkko": ui.OfflineTila.TestaaVerkoton(false); return null;
+                        case "pois": OfflineTilaUi.TestiLataus.Lopeta(); ui.OfflineTila.TestaaVerkoton(null); return null;
+                        default: return "ui offline demo|verkoton|verkko|pois";
+                    }
                 case "maakunnat":
                 {
                     bool kortti = loput == "kortti" || loput.StartsWith("kortti ");
