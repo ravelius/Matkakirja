@@ -2755,3 +2755,7 @@ Aito omistajan tehtävä: kaksi klikkausta portaalissa.
 ## SIIRTOSEPPA NOLLATAAN klo 23.4x (72 %): LUOVUTUS viesti-siirtoseppa-luovutus-20260923-yo.md (f413129eb), SKEEMA 1.24, v30, KARKI siirtoseppa-saapumiset, EI KESKENERAISIA; ALOITUS viesti-siirtoseppa-aloitus.md (23.9.2026 klo 23.45)
 
 Kolmas Siirtoseppä-sessio tänään.
+
+## SISALTOKIRJURI: N4 PR #3002 (5 LUONTOKOHDETTA), 10/71 TANAAN. AVAINNIPPULAPPU SELITETTY OMISTAJALLE (23.9.2026 klo 23.46)
+
+Julkaisija rajaa avainnipun työnkulun käyttöön.
