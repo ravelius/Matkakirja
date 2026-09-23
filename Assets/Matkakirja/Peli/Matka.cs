@@ -19,9 +19,8 @@
 //   Saapui           — web visitCity: XP, arrivalFact ja lehti kuuntelevat tätä
 // Laattojen koukut (null = ei toteutettu):
 //   LinssiKylkiaisena   — web linssiAarteenKylkiaisena (passi ei kuulu tänne; Linssiseppä)
-// Muualla: pulmat ja tapahtumakortit (Pulmat.cs, Tapahtumat.cs), kaupat,
-// mannerlennot ja checkWin (Kaupat.cs, Voitto.cs; Matka ei vielä kutsu
-// voittotarkistusta, vaelluksessa se on aina epätosi).
+// Muualla: pulmat (Pulmat.cs), kaupat ja mannerlennot (Kaupat.cs). Moninpelin
+// voitto, tekoälypelaaja ja tapahtumakortit on poistettu (Fablen tarkastus A3, C1).
 // Puuttuu: porttikaupungit ja muut laudat (worlds), botit.
 using System;
 using System.Collections.Generic;
@@ -367,7 +366,7 @@ namespace Matkakirja.Peli
             Saapui?.Invoke(p, p.Sijainti.Kaupunki, uusi);
         }
 
-        /// <summary>Web visitCity siirron ulkopuolelta (tapahtumakortin kyyti, Peli/Tapahtumat.cs).</summary>
+        /// <summary>Web visitCity siirron ulkopuolelta (esim. vapaa siirtyminen).</summary>
         public void KirjaaSaapuminen(Pelaaja p = null) => KirjaaKaynti(p ?? P);
 
         /// <summary>Saapumisen jälkeen: pysähdys (koukku) tai vuoron päätös.</summary>
@@ -555,7 +554,7 @@ namespace Matkakirja.Peli
         {
             if (Laatat == null) return null;
             var p = P;
-            bool pollo = Tila.PolloAarteena && !Tila.PolloLoydetty && !p.Botti;
+            bool pollo = Tila.PolloAarteena && !Tila.PolloLoydetty;
             var l = Laatat.Kaanna(kaupunki, Satunnainen, Vaellus, pollo);
             if (l == null) return null;
             p.Loydot.Add(l.Tyyppi);
@@ -570,7 +569,7 @@ namespace Matkakirja.Peli
             }
             ViimeLoyto = l;
             p.Raha += l.RahaLisays;
-            p.Tahdet += l.TahtiLisays;
+            p.Paaaarteet += l.PaaaarreLisays;
             if (l.TpLisays != 0) Kokemus.Anna(p, l.TpLisays);
             if (l.Ennatys) KirjaaEnnatys(p);
             Tapahtui?.Invoke("treasure", $"+{l.RahaLisays} puntaa");

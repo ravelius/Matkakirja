@@ -70,8 +70,8 @@ namespace Matkakirja.Peli.Testit
                 ["laatat"] = m.Laatat.Laatat.Count,
                 ["laattaTiiviste"] = Tiiviste(Kartta(m.Laatat.Laatat)),
                 ["kaannetyt"] = m.Laatat.Kaannetyt.Count,
-                ["tahdet"] = p.Tahdet,
-                ["starsFound"] = m.Laatat.TahdetLoydetty.Select(kv => (object)(kv.Key + "=" + kv.Value)).ToList(),
+                ["tahdet"] = p.Paaaarteet,
+                ["starsFound"] = m.Laatat.PaaaarteetLoydetty.Select(kv => (object)(kv.Key + "=" + kv.Value)).ToList(),
                 ["loydot"] = n,
                 ["viimeLoyto"] = n == 0 ? null : $"{p.Loydot[n - 1]}@{N(p.LoytoMantereet[n - 1])}/{N(p.LoytoMaat[n - 1])}",
                 ["arvo"] = m.ViimeLoyto?.Arvo,
@@ -166,7 +166,7 @@ namespace Matkakirja.Peli.Testit
             var p = m.Tila.Pelaaja;
             Oleta.Sama(Parit(loppu["laatat"]), Kartta(m.Laatat.Laatat), nimi + ": laatat lopuksi");
             Oleta.Sama(Parit(loppu["revealed"]), Kartta(m.Laatat.Kaannetyt), nimi + ": revealed");
-            Oleta.Sama(Parit(loppu["starsFound"]), Kartta(m.Laatat.TahdetLoydetty), nimi + ": starsFound");
+            Oleta.Sama(Parit(loppu["starsFound"]), Kartta(m.Laatat.PaaaarteetLoydetty), nimi + ": starsFound");
             Oleta.Sama(Lista(loppu["finds"]), string.Join(";", p.Loydot), nimi + ": finds");
             Oleta.Sama(Lista(loppu["findManner"]), string.Join(";", p.LoytoMantereet.Select(N)), nimi + ": findManner");
             Oleta.Sama(Lista(loppu["findMaa"]), string.Join(";", p.LoytoMaat.Select(N)), nimi + ": findMaa");
@@ -247,11 +247,11 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(0, p.Xp, "paikallisaarre ei anna pisteitä");
 
             var l2 = m.KaannaLaatta(tahti);
-            Oleta.Sama(1, p.Tahdet);
+            Oleta.Sama(1, p.Paaaarteet);
             Oleta.Sama(300 + l1.Arvo + LaattaVakiot.PaaaarrePalkkio, p.Raha, "vaelluksessa pääaarre maksaa");
             Oleta.Sama(Kokemus.Paaaarre + Kokemus.Ennatys, p.Xp, "pääaarre + ennätys päivänä 1");
             Oleta.Sama(1, m.Tila.EnnatysPaiva);
-            Oleta.Sama(m.Laatat.MannerOf(tahti), m.Laatat.TahdetLoydetty.Keys.Single());
+            Oleta.Sama(m.Laatat.MannerOf(tahti), m.Laatat.PaaaarteetLoydetty.Keys.Single());
             Oleta.Sama("pieniAarre,star", string.Join(",", p.Loydot));
             Oleta.Sama("pieniAarre,star", string.Join(",", loydetyt));
             Oleta.Sama(KultaisetApu.Verkko.Kaupungit[tahti].Manner, p.LoytoMantereet[1]);
@@ -301,10 +301,10 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(json, l.Tallenna());
             Oleta.Sama(Kartta(m.Laatat.Laatat), Kartta(l.Laatat.Laatat), "Map-järjestys");
             Oleta.Sama(Kartta(m.Laatat.Kaannetyt), Kartta(l.Laatat.Kaannetyt));
-            Oleta.Sama(Kartta(m.Laatat.TahdetLoydetty), Kartta(l.Laatat.TahdetLoydetty));
+            Oleta.Sama(Kartta(m.Laatat.PaaaarteetLoydetty), Kartta(l.Laatat.PaaaarteetLoydetty));
             Oleta.Sama(m.Laatat.MannerOf(tahti), l.Laatat.MannerOf(tahti), "mantereet verkosta");
             Oleta.Sama(string.Join(",", m.Tila.Pelaaja.Loydot), string.Join(",", l.Tila.Pelaaja.Loydot));
-            Oleta.Sama(1, l.Tila.Pelaaja.Tahdet);
+            Oleta.Sama(1, l.Tila.Pelaaja.Paaaarteet);
             Oleta.Tosi(l.Tila.EnnatysKirjattu && l.Tila.EnnatysPaiva == 1, "ennätys");
         }
 

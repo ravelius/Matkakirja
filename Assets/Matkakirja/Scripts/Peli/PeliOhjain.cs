@@ -51,7 +51,8 @@ namespace Matkakirja.Natiivi
     [DisallowMultipleComponent]
     public sealed class PeliOhjain : MonoBehaviour
     {
-        public const string AloitusKaupunki = "pariisi";
+        /// <summary>Varaoletus, jos lähtöä ei valita: tarina alkaa Lontoosta (Fablen tarkastus C8).</summary>
+        public const string AloitusKaupunki = "lontoo";
         public const string PelaajanNimi = "Fogg";
         const float AjonVara = 0.75f;       // valmis-kutsun varareitti, jos sormi keskeyttää kamera-ajon
         const float YleiskuvanKesto = 1.0f;
@@ -67,14 +68,10 @@ namespace Matkakirja.Natiivi
         IKaupunkiKortti kaupunkiKortti;
         Kysely kysely;
         Pulmat pulmat;
-        Tapahtumat tapahtumakortit;
         Kaupat kaupat;
         Puhe puhe;
         readonly Luennat luennat = new Luennat();
         Pulmadata pulmadata;
-        Tapahtumadata tapahtumadata;
-        /// <summary>Tapahtumakortit maailmankartalla (web: ei; Fablen linjaus ennen päälle kytkemistä).</summary>
-        public static bool TapahtumakortitMaailmankartalla = false;
         Kuvakokoelmat kuvakokoelmat;
         Kohtaamiset kohtaamiset;
         readonly Aarrenimet aarrenimet = new Aarrenimet();
@@ -495,7 +492,7 @@ namespace Matkakirja.Natiivi
             yield return HaeKokoelma("kysymykset", false, t => kysymykset = t);
             yield return HaeKokoelma("tarinakaari", false, t => kaari = t);
             yield return HaeKokoelma("paikkatiedot", false, t => paikat = t);
-            string pulmaTeksti = null, tapahtumaTeksti = null, kuvaTeksti = null, lippuTeksti = null, kohtaamisTeksti = null;
+            string pulmaTeksti = null, kuvaTeksti = null, lippuTeksti = null, kohtaamisTeksti = null;
             yield return HaeTiedosto("kokoelmat/kohtaamiset.json", false, true, t => kohtaamisTeksti = t);
             string kuvaKohtaamiset = null, laattaTeksti = null, paikallisTeksti = null, saannotTeksti = null;
             yield return HaeTiedosto("kokoelmat/kohtaamiskuvat.json", false, true, t => kuvaKohtaamiset = t);
@@ -519,11 +516,8 @@ namespace Matkakirja.Natiivi
             try { LueKuvatJaLiput(kuvaTeksti, lippuTeksti); }
             catch (Exception e) { Debug.LogWarning("MATKAKIRJA peli: kuva- tai lippukysymykset eivät jäsenny: " + e.Message); }
             yield return HaeTiedosto("kokoelmat/pulmat.json", false, true, t => pulmaTeksti = t);
-            yield return HaeTiedosto("kokoelmat/tapahtumat.json", false, true, t => tapahtumaTeksti = t);
             try { if (pulmaTeksti != null) pulmadata = Pulmadata.Lue(pulmaTeksti); }
             catch (Exception e) { Debug.LogWarning("MATKAKIRJA peli: pulmat eivät jäsenny: " + e.Message); }
-            try { if (tapahtumaTeksti != null) tapahtumadata = Tapahtumadata.Lue(tapahtumaTeksti); }
-            catch (Exception e) { Debug.LogWarning("MATKAKIRJA peli: tapahtumat eivät jäsenny: " + e.Message); }
             if (kysymykset == null) yield break;
             try
             {
@@ -796,30 +790,23 @@ namespace Matkakirja.Natiivi
             kysely = new Kysely(matka, Kysymykset);
             kysely.Tapahtui += (laji, teksti) => kysymysLisat.Add(teksti);
             pulmat = pulmadata != null ? Pulmat.Kytke(kysely, pulmadata) : null;
-            // Webin maailmankartalla ei ole tapahtumakortteja (pack.events tyhjä, game.js
-            // formWeights: event-paino 0). Paketin kokoelma tapahtumat on Afrikan laudan
-            // (AFRICA.events), joten kortit kytketään vain, kun ne linjataan maailmankartalle.
-            tapahtumakortit = TapahtumakortitMaailmankartalla && tapahtumadata != null && tapahtumadata.Kortit.Count > 0
-                ? Tapahtumat.Kytke(kysely, tapahtumadata) : null;
-            if (tapahtumakortit != null) tapahtumakortit.Tapahtui += (laji, teksti) => kysymysLisat.Add(teksti);
             kaupat = new Kaupat(matka);
             kuvakokoelmat?.Kytke(kysely);
             // Pysy-tapa tuli tarjolle vasta nyt: vuoron alun esivalinta puretaan kuten webissä.
             if (matka.ArvioiEsivalinta()) Tallenna();
             if (AvoinTehtava != Tehtava.Ei) { if (Tila == SilmukanTila.Kartta) NaytaKysymys(); }
-            else if (matka.Tila.Vaihe == Vaihe.Kysymys || matka.Tila.Vaihe == Vaihe.Tapahtuma)
+            else if (matka.Tila.Vaihe == Vaihe.Kysymys)
                 SuljeAvoinKysymys();
             else PaivitaNakyma();
         }
 
-        /// <summary>Kysymys- tai tapahtumavaihe ilman näytettävää (moottori tai data puuttuu): vuoro päättyy.</summary>
+        /// <summary>Kysymysvaihe ilman näytettävää (moottori tai data puuttuu): vuoro päättyy.</summary>
         void SuljeAvoinKysymys()
         {
             if (matka == null) return;
             var v = matka.Tila.Vaihe;
-            if (v != Vaihe.Kysymys && v != Vaihe.Tapahtuma) return;
+            if (v != Vaihe.Kysymys) return;
             matka.Tila.Kysely.Kysymys = null;
-            matka.Tila.Tapahtumakortti = null;
             matka.Tila.Vaihe = Vaihe.Toiminta;
             matka.PaataVuoro();
             Tallenna();
@@ -1304,12 +1291,12 @@ namespace Matkakirja.Natiivi
             Tallenna();
             NaytaKysymys();
             var q = matka.Tila.Kysely.Kysymys;
-            Debug.Log($"MATKAKIRJA peli: {AvoinTehtava} {q?.Laji} {q?.Kaupunki ?? matka.Tila.Tapahtumakortti?.Kaupunki}");
+            Debug.Log($"MATKAKIRJA peli: {AvoinTehtava} {q?.Laji} {q?.Kaupunki}");
             return null;
         }
 
         /// <summary>Mikä modaalinen tehtävä on auki pelitilassa.</summary>
-        public enum Tehtava { Ei, Kysymys, Tapahtuma }
+        public enum Tehtava { Ei, Kysymys }
 
         public Tehtava AvoinTehtava
         {
@@ -1318,7 +1305,6 @@ namespace Matkakirja.Natiivi
                 if (matka == null) return Tehtava.Ei;
                 var t = matka.Tila;
                 if (t.Vaihe == Vaihe.Kysymys && t.Kysely.Kysymys != null && kysely != null) return Tehtava.Kysymys;
-                if (t.Vaihe == Vaihe.Tapahtuma && t.Tapahtumakortti != null && tapahtumakortit != null) return Tehtava.Tapahtuma;
                 return Tehtava.Ei;
             }
         }
@@ -1373,13 +1359,9 @@ namespace Matkakirja.Natiivi
                     }
                 }
                     break;
-                case Tehtava.Tapahtuma:
-                    KysymysTila = KysymysApu.Tapahtumakortti(matka, matka.Tila.Tapahtumakortti);
-                    KysymysTila.Viesti = viesti;
-                    break;
             }
             KysymysTila.TulosVaihe = !KysymysTila.Vastattu ? 0
-                : tehtava == Tehtava.Tapahtuma || tulosPaljastettu ? 2 : 1;
+                : tulosPaljastettu ? 2 : 1;
             if (Kaytossa) kysymysNakyma.Nayta(KysymysTila, kysymysToiminnot);
             if (KysymysTila.Sekunnit.HasValue) kysymysNakyma.PaivitaAika(kysymysJaljella);
             tilarivi.Aseta(PeliApu.TilaTeksti(verkko, matka.Tila));
@@ -1412,7 +1394,6 @@ namespace Matkakirja.Natiivi
         public string Vastaa(int indeksi)
         {
             var tehtava = AvoinTehtava;
-            if (tehtava == Tehtava.Tapahtuma) return "tapahtumakortissa ei vastata";
             var r = KysymysTeko(() => kysely.Vastaa(indeksi));
             if (r == null && KysymysTila != null)
             {
@@ -1456,8 +1437,7 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>
-        /// Tuloksen Jatka-nappi (testikomento 'jatka'): kysymys suljetaan, ja
-        /// tapahtumakortti päättää vuoron.
+        /// Tuloksen Jatka-nappi (testikomento 'jatka'): kysymys suljetaan.
         /// </summary>
         public string JatkaKysymyksesta()
         {
@@ -1465,12 +1445,7 @@ namespace Matkakirja.Natiivi
             if (Tila != SilmukanTila.Kysymys || tehtava == Tehtava.Ei) return "kysymys ei ole auki";
             if (KysymysTila != null && !KysymysTila.Vastattu) return "kysymykseen ei ole vastattu";
             var lahto = matka.Tila.Pelaaja.Sijainti;
-            TekoTulos t;
-            switch (tehtava)
-            {
-                case Tehtava.Kysymys: t = kysely.Sulje(); break;
-                default: t = tapahtumakortit.Sulje(); break;
-            }
+            var t = kysely.Sulje();
             if (!t.Ok) return t.Virhe;
             kysymysLoyto = null;
             kysymysLisat.Clear();
@@ -1484,53 +1459,8 @@ namespace Matkakirja.Natiivi
             }
             kysymysNakyma.Piilota();
             KysymysTila = null;
-            // Tapahtumakortin kyyti siirtää pelaajaa: kamera seuraa.
             Kartalle(!matka.Tila.Pelaaja.Sijainti.Equals(lahto));
             return null;
-        }
-
-        // --- laitetestin pakotus (testikomento koe tapahtuma) ----------------
-
-        /// <summary>
-        /// Laitetesti: avaa tapahtumakortin paketin kokoelmasta (Afrikan laudan kortit),
-        /// vaikka kortit eivät ole maailmankartalla käytössä. Koukut puretaan heti,
-        /// joten tavallinen peli ei ala tarjota kortteja. Palauttaa virheen tai null.
-        /// </summary>
-        public string KoeTapahtuma()
-        {
-            var e = KoeValmis();
-            if (e != null) return e;
-            if (tapahtumadata == null || tapahtumadata.Kortit.Count == 0) return "tapahtumakortteja ei ole ladattu";
-            if (tapahtumakortit == null)
-            {
-                tapahtumakortit = new Tapahtumat(kysely, tapahtumadata);
-                if (!TapahtumakortitMaailmankartalla) { kysely.TapahtumiaOn = null; kysely.AvaaTapahtuma = null; }
-                tapahtumakortit.Tapahtui += (laji, teksti) => kysymysLisat.Add(teksti);
-            }
-            var p = matka.Tila.Pelaaja;
-            var r = tapahtumakortit.Avaa(p.Sijainti.Kaupungissa ? p.Sijainti.Kaupunki : null);
-            return r.Ok ? KoeNayta() : r.Virhe;
-        }
-
-        string KoeValmis()
-        {
-            if (matka == null || kysely == null) return "peli ei ole valmis";
-            if (Tila != SilmukanTila.Kartta) return "silmukka on tilassa " + Tila;
-            if (matka.Tila.Vaihe == Vaihe.Heitto && !matka.PeruKulkutapa().Ok) return "vaihe Heitto, eikä kulkutapaa voi perua";
-            if (matka.Tila.Vaihe != Vaihe.Toiminta) return "vaihe " + matka.Tila.Vaihe + " (tarvitaan Toiminta)";
-            PiilotaKortti();
-            dialogi.PiilotaHeitto();
-            return null;
-        }
-
-        string KoeNayta()
-        {
-            kysymysLoyto = null;
-            kysymysLisat.Clear();
-            Tallenna();
-            NaytaKysymys();
-            Debug.Log("MATKAKIRJA peli: koe " + AvoinTehtava + " auki");
-            return AvoinTehtava == Tehtava.Ei ? "näkymä ei auennut" : null;
         }
 
         void PaivitaKysymysAika()

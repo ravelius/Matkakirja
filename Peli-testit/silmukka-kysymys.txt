@@ -3,7 +3,7 @@
 # → Heitä → Pariisi → lehti). Kopioi Documents/peli-komento.txt:ksi.
 # Siemen 12345 laatoilla; odotetut arvot README-silmukka.md (Testit/SilmukkaKysymysTestit.cs).
 odota-tila kartta|aloitus 40
-uusi-peli 12345
+uusi-peli 12345 pariisi
 odota 3
 tila k1-alku
 matka lontoo bussi

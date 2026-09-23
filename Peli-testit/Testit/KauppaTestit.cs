@@ -1,4 +1,4 @@
-// Kauppojen testit: Kaupat (Peli/Kaupat.cs) ja Voitto (Peli/Voitto.cs).
+// Kauppojen testit: Kaupat (Peli/Kaupat.cs).
 // Kultainen jälki Kultaiset/kauppajalki.json (Kultaiset/tee-kauppajalki.mjs):
 // komentolista ajetaan sellaisenaan, ja jokaisen teon tulos ja sen jälkeinen
 // tila (raha, satunnaislukukutsut, laatat, tapahtumat, availableActions,
@@ -106,7 +106,6 @@ namespace Matkakirja.Peli.Testit
                 case "mannerlento": return Tulos(ka.MannerLento(S(0)));
                 case "sahke":
                     return Tulos(On(1) ? ka.AvaaAarreSahkeella(S(0), I(1)) : ka.AvaaAarreSahkeella(S(0)), "found", "palkkio");
-                case "voitto": return Voitto.Tarkista(m);
                 case "travel": return Ok(m.ValitseKulkutapa(KultaisetApu.Tavaksi(S(0))));
                 case "stay": return Ok(m.ValitseKulkutapa(Kulkutapa.Pysy));
                 case "roll": return Ok(m.Heita());
@@ -144,11 +143,11 @@ namespace Matkakirja.Peli.Testit
                 ["kaydyt"] = p.Kaydyt.Count,
                 ["xp"] = p.Xp,
                 ["nousut"] = m.Kokemus.OtaNousut().Select(x => (object)x.Taso).ToList(),
-                ["tahdet"] = p.Tahdet,
+                ["tahdet"] = p.Paaaarteet,
                 ["laatat"] = m.Laatat.Laatat.Count,
                 ["laattaTiiviste"] = Tiiviste(Kartta(m.Laatat.Laatat)),
                 ["kaannetyt"] = m.Laatat.Kaannetyt.Count,
-                ["starsFound"] = m.Laatat.TahdetLoydetty.Select(kv => (object)(kv.Key + "=" + kv.Value)).ToList(),
+                ["starsFound"] = m.Laatat.PaaaarteetLoydetty.Select(kv => (object)(kv.Key + "=" + kv.Value)).ToList(),
                 ["viimeLoyto"] = n == 0 ? null : $"{p.Loydot[n - 1]}@{N(p.LoytoMantereet[n - 1])}/{N(p.LoytoMaat[n - 1])}",
                 ["quiz"] = q == null ? null : new Dictionary<string, object>
                 {
@@ -174,7 +173,6 @@ namespace Matkakirja.Peli.Testit
                     ["elaintayt"] = Jarj(k.ElaintakyLunastetut),
                     ["julisteet"] = Jarj(k.Julisteet),
                 },
-                ["voittaja"] = t.VoittajaId,
             };
         }
 
@@ -245,7 +243,7 @@ namespace Matkakirja.Peli.Testit
             {
                 pe => pe.M.Tila.Kaupat.PullaVinkit.Add("maailmankartta:pariisi"),
                 pe => pe.M.Tila.Kaupat.ElaintakyLunastetut.Add("FIN"),
-                pe => pe.M.Laatat.TahdetLoydetty.Aseta("europe", "lontoo"),
+                pe => pe.M.Laatat.PaaaarteetLoydetty.Aseta("europe", "lontoo"),
             };
             int kaatui = 0;
             foreach (var vika in viat)
@@ -269,7 +267,7 @@ namespace Matkakirja.Peli.Testit
             ka.Kulttuuri("pariisi", true);
             ka.Minitehtava("pariisi", "kaupunki", false);
             var json = m.Tallenna();
-            Oleta.Tosi(json.Contains("\"versio\":4") && json.Contains("\"kaupat\":{") && json.Contains("\"voittaja\":null"), "versio 4 kaupoin");
+            Oleta.Tosi(json.Contains("\"versio\":4") && json.Contains("\"kaupat\":{") && !json.Contains("voittaja"), "versio 4 kaupoin");
             // Ilman kauppakenttiä: versio 4, vanhempi versio 3 ja versio 2.
             int a = json.IndexOf(",\"kaupat\":", StringComparison.Ordinal);
             int b = json.IndexOf(",\"laattamaailma\":", StringComparison.Ordinal);
@@ -278,7 +276,6 @@ namespace Matkakirja.Peli.Testit
             {
                 var l = Matka.Lataa(KultaisetApu.Verkko, vanha, KultaisetApu.Laattamaarat);
                 Oleta.Sama(0, l.Tila.Kaupat.KulttuuriVastatut.Count, "tyhjä kirjanpito");
-                Oleta.Tosi(l.Tila.VoittajaId == null, "ei voittajaa");
                 Oleta.Tosi(new Kaupat(l).Kulttuuri("pariisi", true).Ok, "vastattavissa uudelleen");
             }
             // Web fromJSON: puuttuva oikein-joukko = jokainen vastattu ratkaistuksi.
@@ -303,33 +300,6 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama("maailmankartta", ka.Lauta);
             ka.PullaVinkki("rooma");
             Oleta.Tosi(ka.PullaOstettu("maailmankartta:rooma") && ka.PullaVinkkiOstettu("rooma"), "sama avainavaruus");
-        }
-
-        [Testi] static void VoittoVainMoninpelissa()
-        {
-            var m = UusiPeli();
-            var tahti = m.Laatat.Laatat.First(kv => kv.Value == Laattatyypit.Paaaarre).Key;
-            m.KaannaLaatta(tahti);
-            Oleta.Tosi(m.Tila.Pelaaja.Tahdet == 1 && m.Laatat.JokinTahtiLoytynyt, "tähti laukussa");
-            Oleta.Tosi(!Voitto.Tarkista(m), "vaelluksessa peli ei pääty");
-            // Toinen pelaaja → ei vaellus. Aloituskaupunki ratkaisee.
-            m.Tila.Pelaajat.Add(new Pelaaja { Id = 1, Nimi = "Passepartout", Aloitus = "lontoo", Sijainti = Sijainti.KaupungissaSijainti("lontoo") });
-            Oleta.Tosi(!m.Vaellus, "moninpeli");
-            var eiAloitus = KultaisetApu.Verkko.KaupunkiLista.First(k => !k.Aloitus).Id;
-            m.Tila.Pelaaja.Sijainti = Sijainti.KaupungissaSijainti(eiAloitus);
-            Oleta.Tosi(!Voitto.Tarkista(m), "ei aloituskaupungissa");
-            var aloitus = KultaisetApu.Verkko.KaupunkiLista.First(k => k.Aloitus).Id;
-            m.Tila.Pelaaja.Sijainti = Sijainti.KaupungissaSijainti(aloitus);
-            Oleta.Tosi(Voitto.Tarkista(m), "voitto");
-            Oleta.Sama(Vaihe.Ohi, m.Tila.Vaihe);
-            Oleta.Sama("Fogg", Voitto.Voittaja(m).Nimi);
-            var l = Matka.Lataa(KultaisetApu.Verkko, m.Tallenna());
-            Oleta.Sama(0, l.Tila.VoittajaId, "voittaja tallessa");
-            Oleta.Tosi(Voitto.Tarkista(l), "jo voitettu pysyy voitettuna");
-            // Ilman tähteä ei voittoa.
-            var m2 = UusiPeli(5);
-            m2.Tila.Pelaajat.Add(new Pelaaja { Id = 1, Nimi = "B", Aloitus = "lontoo", Sijainti = Sijainti.KaupungissaSijainti("lontoo") });
-            Oleta.Tosi(!Voitto.Tarkista(m2), "ei tähteä");
         }
 
         [Testi] static void KauppasisaltoLukeeNaytteet()

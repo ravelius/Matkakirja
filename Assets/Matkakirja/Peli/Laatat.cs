@@ -165,7 +165,7 @@ namespace Matkakirja.Peli
 
     /// <summary>
     /// Yhden laatan käännön tulos (web revealToken). Matka kirjaa sen pelaajalle:
-    ///   pelaaja.Raha += RahaLisays; pelaaja.Tahdet += TahtiLisays;
+    ///   pelaaja.Raha += RahaLisays; pelaaja.Paaaarteet += PaaaarreLisays;
     ///   pelaaja.Tp += TpLisays (web awardXp: linssi- ja tasokynnykset);
     ///   finds.Add(Tyyppi); findManner.Add(Manner); findMaa.Add(Maa);
     ///   jos Ennatys: web noteRecord (kerran pelissä recordNoted; jos päivä
@@ -184,7 +184,7 @@ namespace Matkakirja.Peli
         /// <summary>Web viimeAarre.arvo (arvoAarteenArvo): löytöhetkellä arvottu arvo. Pöllöllä 0.</summary>
         public int Arvo;
         public int RahaLisays;
-        public int TahtiLisays;
+        public int PaaaarreLisays;
         public int TpLisays;
         /// <summary>Web findManner: laudan cityManner tai null (EI laudan tunnusta).</summary>
         public string Manner;
@@ -212,7 +212,7 @@ namespace Matkakirja.Peli
         /// <summary>Käännetyt laatat: kaupunki → tyyppi (web world.revealed).</summary>
         public JarjestettyKartta Kaannetyt { get; } = new JarjestettyKartta();
         /// <summary>Löytyneet pääaarteet: manner → kaupunki (web world.starsFound).</summary>
-        public JarjestettyKartta TahdetLoydetty { get; } = new JarjestettyKartta();
+        public JarjestettyKartta PaaaarteetLoydetty { get; } = new JarjestettyKartta();
 
         readonly List<Kaupunki> kaupunkiLista;
         readonly Dictionary<string, Kaupunki> kaupungit = new Dictionary<string, Kaupunki>();
@@ -226,7 +226,7 @@ namespace Matkakirja.Peli
 
         /// <summary>
         /// Tyhjä maailma tallennuksen palautusta varten: kutsuja täyttää Laatat,
-        /// Kaannetyt ja TahdetLoydetty tallennuksen järjestyksessä.
+        /// Kaannetyt ja PaaaarteetLoydetty tallennuksen järjestyksessä.
         /// </summary>
         public static Laattamaailma Tyhja(IReadOnlyList<Kaupunki> kaupungit, string lautaId = "maailmankartta") =>
             new Laattamaailma(lautaId, kaupungit);
@@ -239,10 +239,10 @@ namespace Matkakirja.Peli
             kaupungit.TryGetValue(kaupunki, out var k) && k.Manner != null ? k.Manner : LautaId;
 
         /// <summary>Web mantereenTahtiLoytynyt.</summary>
-        public bool TahtiLoytynyt(string manner) => TahdetLoydetty.ContainsKey(manner);
+        public bool PaaaarreLoytynyt(string manner) => PaaaarteetLoydetty.ContainsKey(manner);
 
         /// <summary>Web starFound: onko yksikään pääaarre löytynyt.</summary>
-        public bool JokinTahtiLoytynyt => TahdetLoydetty.Count > 0;
+        public bool JokinPaaaarreLoytynyt => PaaaarteetLoydetty.Count > 0;
 
         /// <summary>Laudan muut mantereet kaupunkijärjestyksessä (web muutMantereet).</summary>
         public List<string> MuutMantereet(string manner)
@@ -448,15 +448,15 @@ namespace Matkakirja.Peli
                 case Laattatyypit.Paaaarre:
                 {
                     var manner = MannerOf(kaupunki);
-                    TahdetLoydetty.Aseta(manner, kaupunki);
-                    loyto.TahtiLisays = 1;
+                    PaaaarteetLoydetty.Aseta(manner, kaupunki);
+                    loyto.PaaaarreLisays = 1;
                     loyto.TpLisays = LaattaVakiot.TpPaaaarre;
                     loyto.Ennatys = true;
                     if (vaellus)
                     {
                         loyto.RahaLisays = LaattaVakiot.PaaaarrePalkkio;
                         foreach (var m in MuutMantereet(manner))
-                            if (!TahtiLoytynyt(m)) { loyto.MannerlentoIlmoitus = true; break; }
+                            if (!PaaaarreLoytynyt(m)) { loyto.MannerlentoIlmoitus = true; break; }
                     }
                     break;
                 }
@@ -491,7 +491,7 @@ namespace Matkakirja.Peli
             sb.Append("{\"lauta\":").Append(Pelitila.Teksti(LautaId));
             sb.Append(",\"laatat\":"); Parit(sb, Laatat);
             sb.Append(",\"kaannetyt\":"); Parit(sb, Kaannetyt);
-            sb.Append(",\"tahdet\":"); Parit(sb, TahdetLoydetty);
+            sb.Append(",\"tahdet\":"); Parit(sb, PaaaarteetLoydetty);
             sb.Append('}');
         }
 
@@ -516,7 +516,7 @@ namespace Matkakirja.Peli
             foreach (var kaupunki in w.Laatat.Where(kv => !Laattatyypit.OnAarre(kv.Value)).Select(kv => kv.Key).ToList())
                 w.Laatat.Poista(kaupunki);
             Tayta(w.Kaannetyt, "kaannetyt");
-            Tayta(w.TahdetLoydetty, "tahdet");
+            Tayta(w.PaaaarteetLoydetty, "tahdet");
             return w;
         }
 

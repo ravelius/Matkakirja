@@ -35,7 +35,7 @@ namespace Matkakirja.Peli
         // --- vakiot (js/game.js) --------------------------------------------
 
         public const int UusiKaupunki = 10;    // XP_NEW_CITY
-        public const int UusiLauta = 50;       // XP_NEW_BOARD
+        public const int EnsimmainenKaupunki = 50; // web XP_NEW_BOARD (yksi lauta: ensimmäinen kaupunki)
         public const int VaikeaVastaus = 25;   // XP_HARD_ANSWER
         public const int Paaaarre = 100;       // XP_STAR
         public const int Pulma = 25;           // XP_PUZZLE
@@ -148,7 +148,7 @@ namespace Matkakirja.Peli
         {
             Tila.Kysely.Havainto = kaupunki;
             if (!uusi) return;
-            if (p.Kaydyt.Count == 1) Anna(p, UusiLauta);
+            if (p.Kaydyt.Count == 1) Anna(p, EnsimmainenKaupunki);
             Anna(p, UusiKaupunki);
         }
 
@@ -162,7 +162,7 @@ namespace Matkakirja.Peli
             // kerrallaan"): useamman rajan hyppy kirjaa vain alimman.
             foreach (var t in Nousut(ennen, p.Xp))
             {
-                if (!p.Botti) NousuJono.Add(t);
+                NousuJono.Add(t);
                 TasoNousi?.Invoke(p, t);
                 break;
             }

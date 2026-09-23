@@ -72,7 +72,6 @@ JSON-tiedostot. 3D:n `komento.txt` (esim. `kuva nimi`) toimii rinnalla.
 | `napauta kaupunki` | kuin sormi kaupungin merkillä (KaupunkiMerkit.ValitseKaupunki) |
 | `valitse bussi\|lento\|liftaus\|laiva` | matkavalinnan nappi |
 | `peruuta` | matkavalinnan Peruuta |
-| `koe tapahtuma` | laitetesti: avaa tapahtumakortin heti (kartta, vaihe Toiminta; maailmankartalla ei ole kortteja). Sen jälkeen `jatka`, `tila` |
 | `mannerlennot` | kortin "Mannerlento": matkavalinta mannerlennoille (vain kun mantereen aarre löytyi ja vaihe Toiminta) |
 | `matka kaupunki tapa` | valinta ilman dialogia (tapa bussi, lento, liftaus, laiva tai mannerlento) |
 | `heita` | "Heitä noppaa" (kesken reitin) |
@@ -91,7 +90,7 @@ JSON-tiedostot. 3D:n `komento.txt` (esim. `kuva nimi`) toimii rinnalla.
 | `tila [nimi]` | `peli-tila.json` / `peli-tila-nimi.json`: silmukka, vaihe, sijainti, raha, päivä, aika, tilarivi, dialogi ja vaihtoehdot, tavoite, lehtiAuki, viesti, virhe, viimeisin matka; erä 4: syoteEstetty, tutkiTarjolla, kysymys (laji, otsikko, kysymys, vaihtoehdot, piilotetut, vihje, sekunnit, jaljella, vastattu, valittu, oikea, oikein, aikaLoppui, loyto, viesti); laukku (sijainti, kukkaro, tietaja, tilastot, aarni, kateissa, tavarat, julisteet); aanet (12 viimeisintä PeliOhjain.Aani-tunnusta), lentoSoi |
 | `odota s` / `odota-tila tila[\|tila…] [max s]` | tauko / odota tilaa Kartta, Dialogi, Matkalla, Lehti, Kysymys, Traileri, Aloitus; useampi pystyviivalla (aikaraja kirjataan lokiin) |
 | `jatka-matka` / `uusi-matka [kaupunki] [siemen]` | aloitusnäkymän Jatka / Uusi matka lähtökaupungista (tila Aloitus, kun `PeliOhjain.AloitusNakyma` on päällä; `uusi-peli` toimii myös sieltä) |
-| `uusi-peli [siemen]` | uusi peli Pariisista, toistettava noppa |
+| `uusi-peli [siemen] [kaupunki]` | uusi peli (oletus Lontoo, PeliOhjain.AloitusKaupunki), toistettava noppa; käsikirjoitukset antavat `pariisi` |
 | `peli pois\|paalle` | silmukka pois/päälle |
 
 Simulaattorissa:
@@ -106,7 +105,7 @@ sleep 35; cat "$D/peli-loki.txt"; for f in "$D"/peli-tila-*.json; do echo "$f"; 
 
 ```
 odota-tila kartta|aloitus 40
-uusi-peli 12345
+uusi-peli 12345 pariisi
 odota 2
 tila 1-alku
 napauta lontoo
@@ -151,19 +150,8 @@ Odotettu (laskettu dotnetilla samalla paketilla ja 266 laatalla):
 
 Jos laattamääriä ei saatu (peli ilman laattoja), noppa on eri ja liftaus voi jäädä reitille:
 silloin `odota-tila lehti` kirjaa aikarajan ja `heita` jatkaa. Reitin varren kokeilu:
-`uusi-peli 1`, `matka marseille liftaus` (noppa 3 → `e:pariisi|marseille:3`, Heitä-nappi
+`uusi-peli 1 pariisi`, `matka marseille liftaus` (noppa 3 → `e:pariisi|marseille:3`, Heitä-nappi
 näkyy), `heita` (noppa 2 → Marseille, lehti).
-
-### Tapahtumakortti (`Peli-testit/silmukka-tapahtuma.txt`, 23.9.2026)
-
-Pakotettu laitetesti (`koe tapahtuma`; rosvon kaksintaistelu on poistettu pelistä). Laitetestaajan
-kierros 23.9. (build 4b47b35) meni läpi 7/7 vielä kaksintaistelun kanssa. Tarkista `peli-tila-*.json`:
-
-| tila | odotus |
-|---|---|
-| t0-alku | `silmukka` Kartta, sijainti Pariisi |
-| t1-kortti | `kysymys.laji` Tapahtumakortti, teksti ja vaikutusrivi, vain Jatka, `vastattu` true |
-| t2-loppu | `silmukka` Kartta; raha muuttui kortin mukaan, kyyti siirsi naapurikaupunkiin tai vuoro meni (viive) |
 
 ### Kysymysvirta (`Peli-testit/silmukka-kysymys.txt`, erä 4)
 
@@ -212,7 +200,7 @@ luetaan `/Users/Shared/Claude/proto-3d/Matkakirja-proto/Library/ScriptAssemblies
   Erä 4: matkavalinnan, kysymyksen ja lehden ajan pallo on lukossa (SyoteLukko → PalloKierto.SyoteEstetty; heittonapin päältä alkava veto ei pyöritä palloa, UiPeittaa).
 - Samassa kysymysnäkymässä (IKysymysNakyma) kulkevat myös pulmat (Pysy-tapa pulmakaupungissa;
   piirros `KysymysNaytto.Luonnos`/`PulmaId` ja vaihtoehtokuvat odottavat Natiivi-UI:n näkymää,
-  UGUI-vara näyttää vain tekstit) ja tapahtumakortit (vain `PeliOhjain.TapahtumakortitMaailmankartalla = true`; webin maailmankartalla kortteja ei ole, paketin kokoelma on Afrikan laudan).
+  UGUI-vara näyttää vain tekstit).
   Kaupat (`PeliOhjain.Kaupat`) on luotu, mutta sen teot kutsuvat lehti, pulu ja sähke (Natiivi-UI). Kuva- ja lippukysymykset tarvitsevat kuvapoolin ja maalistan (Kysely.AsetaKuvat,
   Kysely.Liput), joita ei vielä ladata: niiden paino siirtyy visalle kuten webissä.
 - Auki jäänyt kysymys avataan latauksessa uudelleen jäljellä olevalla ajalla (web visa.js);
