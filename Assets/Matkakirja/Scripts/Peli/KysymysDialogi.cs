@@ -296,6 +296,7 @@ namespace Matkakirja.Natiivi
                 if (d.TulosVaihe < 2) { Viimeistele(d, y + Reuna, true); return; }
                 y = Lisaa(d.Repliikki, 15, FontStyles.Italic, y, leveys, null, TextAlignmentOptions.Left);
                 y = Lisaa(d.Loyto, 17, FontStyles.Normal, y, leveys);
+                y = Lisaa(d.LoytoFakta, 13, FontStyles.Italic, y, leveys, null, TextAlignmentOptions.Left);
                 y = Lisaa(d.Fakta, 15, FontStyles.Normal, y, leveys, null, TextAlignmentOptions.Left);
                 if (d.Lahteet != null && d.Lahteet.Count > 0)
                     y = Lisaa("Lähde: " + string.Join(", ", d.Lahteet), 11, FontStyles.Italic, y, leveys, null, TextAlignmentOptions.Left);

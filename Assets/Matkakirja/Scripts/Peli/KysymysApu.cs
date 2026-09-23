@@ -104,6 +104,10 @@ namespace Matkakirja.Natiivi
         public int? Yritys, Yrityksia;
 
         // --- tulos ---
+        /// <summary>Löydön näyttönimi, fakta ja kuva (manner- ja maakohtainen, web aarreTyyppi), tai null.</summary>
+        public string LoytoNimi, LoytoFakta, LoytoKuvaUrl;
+        /// <summary>Kätkökuva kaaren aarretekstin yhteydessä (web kohtaaminen-katko.jpg), tai null.</summary>
+        public string KatkoKuvaUrl;
         /// <summary>Käännetyn laatan tyyppi (Laattatyypit: star, mannerAarre, isoAarre, pieniAarre, robber; "pollo"), tai null.</summary>
         public string LoytoTyyppi;
         /// <summary>Rivi "Vuoro vaihtuu — seuraavalla vuorolla saat uuden kysymyksen." (web: väärä vastaus).</summary>
@@ -142,10 +146,100 @@ namespace Matkakirja.Natiivi
 
     public sealed class Kohtaamiskuva { public string Url, Alt, Lyhyt, Kuvateksti; }
 
+    /// <summary>Laattatyypin näyttötiedot (web TOKEN_TYPES / mannerTypes / paikallisaarre).</summary>
+    public sealed class Aarre { public string Nimi, Fakta, KuvaUrl; }
+
+    /// <summary>
+    /// Löytöjen nimet kuten web game.aarreMantereella: pohja = mantereen tyyppi
+    /// (laatat.mannerTypes[manner][tyyppi]) tai laudan tyyppi (laatat.types), ja
+    /// pieni/iso paikallisaarre korvautuu maan omalla (kokoelma paikallisaarteet).
+    /// </summary>
+    public sealed class Aarrenimet
+    {
+        readonly Dictionary<string, Aarre> tyypit = new Dictionary<string, Aarre>();
+        readonly Dictionary<string, Dictionary<string, Aarre>> mantereet = new Dictionary<string, Dictionary<string, Aarre>>();
+        readonly Dictionary<string, Dictionary<string, Aarre>> maat = new Dictionary<string, Dictionary<string, Aarre>>();
+
+        /// <summary>Repopolku assets/aarteet/… → ämpäri (media.matkakirja.app/kohtaamiset/aarteet/…).</summary>
+        public static string KuvaUrl(string polku)
+        {
+            if (string.IsNullOrEmpty(polku)) return null;
+            if (polku.StartsWith("http", StringComparison.Ordinal)) return polku;
+            const string etuliite = "assets/aarteet/";
+            return polku.StartsWith(etuliite, StringComparison.Ordinal)
+                ? "https://media.matkakirja.app/kohtaamiset/aarteet/" + polku.Substring(etuliite.Length)
+                : "https://matkakirja.app/" + polku;
+        }
+
+        static Aarre Lue(object o, string url = null)
+        {
+            var d = o as Dictionary<string, object>;
+            if (d == null) return null;
+            return new Aarre { Nimi = MiniJson.Teksti(d, "name"), Fakta = MiniJson.Teksti(d, "fakta"), KuvaUrl = url ?? KuvaUrl(MiniJson.Teksti(d, "kuva")) };
+        }
+
+        static void Taulu(Dictionary<string, Aarre> kohde, object o)
+        {
+            if (!(o is Dictionary<string, object> d)) return;
+            foreach (var kv in d) { var a = Lue(kv.Value); if (a != null) kohde[kv.Key] = a; }
+        }
+
+        /// <summary>Kokoelma laatat (alkio "tokens": data.types, data.mannerTypes).</summary>
+        public void LueLaatat(string json)
+        {
+            var juuri = MiniJson.Objekti(MiniJson.Jasenna(json));
+            foreach (var a in MiniJson.Taulukko(MiniJson.Kentta(juuri, "alkiot")))
+            {
+                var d = MiniJson.Kentta(MiniJson.Objekti(a), "data") as Dictionary<string, object>;
+                if (d == null) continue;
+                Taulu(tyypit, MiniJson.Kentta(d, "types"));
+                if (MiniJson.Kentta(d, "mannerTypes") is Dictionary<string, object> m)
+                    foreach (var kv in m) { var t = new Dictionary<string, Aarre>(); Taulu(t, kv.Value); mantereet[kv.Key] = t; }
+            }
+        }
+
+        /// <summary>Kokoelma paikallisaarteet: maa (ISO3), data.pieniAarre/isoAarre {name, kuva, fakta}, kuvat.*.url.</summary>
+        public void LuePaikallisaarteet(string json)
+        {
+            var juuri = MiniJson.Objekti(MiniJson.Jasenna(json));
+            foreach (var a in MiniJson.Taulukko(MiniJson.Kentta(juuri, "alkiot")))
+            {
+                var o = MiniJson.Objekti(a);
+                var maa = MiniJson.Teksti(o, "maa") ?? MiniJson.Teksti(o, "id");
+                var d = MiniJson.Kentta(o, "data") as Dictionary<string, object>;
+                var kuvat = MiniJson.Kentta(o, "kuvat") as Dictionary<string, object>;
+                if (maa == null || d == null) continue;
+                var t = new Dictionary<string, Aarre>();
+                foreach (var tyyppi in new[] { Laattatyypit.PieniAarre, Laattatyypit.IsoAarre })
+                {
+                    var url = (MiniJson.Kentta(kuvat, tyyppi) as Dictionary<string, object>) is Dictionary<string, object> k ? MiniJson.Teksti(k, "url") : null;
+                    var aarre = Lue(MiniJson.Kentta(d, tyyppi), url);
+                    if (aarre != null) t[tyyppi] = aarre;
+                }
+                maat[maa] = t;
+            }
+        }
+
+        /// <summary>Web aarreMantereella(tyyppi, manner, maa): null, jos tyyppiä ei tunneta.</summary>
+        public Aarre Hae(string tyyppi, string manner, string maa)
+        {
+            if (tyyppi == null) return null;
+            Aarre pohja = null;
+            if (manner != null && mantereet.TryGetValue(manner, out var m)) m.TryGetValue(tyyppi, out pohja);
+            if (pohja == null) tyypit.TryGetValue(tyyppi, out pohja);
+            if ((tyyppi == Laattatyypit.PieniAarre || tyyppi == Laattatyypit.IsoAarre) && maa != null
+                && maat.TryGetValue(maa, out var t) && t.TryGetValue(tyyppi, out var oma))
+                return new Aarre { Nimi = oma.Nimi ?? pohja?.Nimi, Fakta = oma.Fakta ?? pohja?.Fakta, KuvaUrl = oma.KuvaUrl ?? pohja?.KuvaUrl };
+            return pohja;
+        }
+    }
+
     /// <summary>Kohtaamistekstit kaupungeittain.</summary>
     public sealed class Kohtaamiset
     {
         public readonly Dictionary<string, Kohtaaminen> Kaupungit = new Dictionary<string, Kohtaaminen>();
+        /// <summary>Kätkökuva (saannot KATKOKUVA.url; oletus Pages-kopio).</summary>
+        public string KatkoKuvaUrl = "https://matkakirja.app/assets/kohtaamiset/kohtaaminen-katko.jpg";
 
         Kohtaaminen Hae(string k)
         {
@@ -282,6 +376,7 @@ namespace Matkakirja.Natiivi
                 d.Repliikki = !oikein ? x.Vaarin : loyto ? x.Loyto : x.Tyhja;
                 d.RepliikkiLoyto = loyto && !string.IsNullOrEmpty(d.Repliikki);
             }
+            if (kaari != null && oikein && !string.IsNullOrEmpty(kaari.KaariAarre)) d.KatkoKuvaUrl = kohtaamiset.KatkoKuvaUrl;
             if (kaari != null && oikein && !string.IsNullOrEmpty(kaari.KaariAarre)) d.Repliikki = kaari.KaariAarre + (d.Repliikki != null ? "\n" + d.Repliikki : "");
             if (q.Kaari && !oikein && q.AarreLukittui != true) d.Loyto = (d.Loyto != null ? d.Loyto + "\n" : "") + UusiYritysOhje;
             return false;
@@ -341,12 +436,12 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Laatan kääntö yhdellä rivillä; null, jos laattaa ei käännetty.</summary>
-        public static string LoytoTeksti(Loyto l, string valuutta = "£")
+        public static string LoytoTeksti(Loyto l, string valuutta = "£", Aarrenimet nimet = null)
         {
             if (l == null) return null;
             if (l.Pollo) return "Laatan alta lehahti pöllö!";
             if (l.Kaksintaistelu) return "Laatan alla odotti ryöstäjä!";
-            var nimi = LaatanNimi(l.Tyyppi);
+            var nimi = (l.Tyyppi != Laattatyypit.Tyhja ? nimet?.Hae(l.Tyyppi, l.Manner, l.Maa)?.Nimi : null) ?? LaatanNimi(l.Tyyppi);
             if (nimi == null) return "Laatta oli tyhjä.";
             var osat = new List<string> { "Löysit: " + nimi };
             if (l.RahaLisays != 0) osat.Add($"+{l.RahaLisays} {valuutta}");
@@ -364,7 +459,8 @@ namespace Matkakirja.Natiivi
         /// viesti = epäonnistuneen teon virhe.
         /// </summary>
         public static KysymysNaytto Nakyma(Kysely kysely, AvoinKysymys q, Loyto loyto = null,
-            IEnumerable<string> lisat = null, string viesti = null, IReadOnlyDictionary<string, string> osoitteet = null)
+            IEnumerable<string> lisat = null, string viesti = null, IReadOnlyDictionary<string, string> osoitteet = null,
+            Aarrenimet nimet = null)
         {
             var m = kysely.Matka;
             var p = m.Tila.Pelaaja;
@@ -425,7 +521,9 @@ namespace Matkakirja.Natiivi
                 d.Fakta = q.Fakta;
                 d.Lahteet = new List<string>(q.Lahteet ?? new List<string>());
                 var rivit = new List<string>();
-                var lt = LoytoTeksti(loyto);
+                var lt = LoytoTeksti(loyto, "£", nimet);
+                var aarre = loyto != null && !loyto.Pollo && !loyto.Kaksintaistelu ? nimet?.Hae(loyto.Tyyppi, loyto.Manner, loyto.Maa) : null;
+                if (aarre != null) { d.LoytoNimi = aarre.Nimi; d.LoytoFakta = aarre.Fakta; d.LoytoKuvaUrl = aarre.KuvaUrl; }
                 if (lt != null) rivit.Add(lt);
                 if (lisat != null) rivit.AddRange(lisat.Where(s => !string.IsNullOrEmpty(s)));
                 if (q.AarreLukittui == true) rivit.Add("Kätkö sulkeutui — tämän kaupungin aarre on menetetty.");
