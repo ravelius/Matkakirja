@@ -231,9 +231,9 @@ namespace Matkakirja
             if (File.Exists(f))
             {
                 Interlocked.Increment(ref Valimuistista);
-                var data = File.ReadAllBytes(f);
+                var sisalto = File.ReadAllBytes(f);
                 try { File.SetLastWriteTimeUtc(f, DateTime.UtcNow); } catch { }
-                return (200, data);
+                return (200, sisalto);
             }
             var h = new Haku { Polku = polku };
             jono.Enqueue(h);
