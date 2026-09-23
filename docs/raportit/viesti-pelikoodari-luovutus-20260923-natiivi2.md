@@ -39,8 +39,9 @@ koko peli natiiviin pysähtymättä. Sopimukset sessioiden välillä:
 
 1. **Sim/iPad-ajo** puuttuu kokonaan tämän päivän eristä: Natiiviseppä ajaa silmukka-kysymys.txt
    (odotukset README-silmukka.md k1–k8) ja `luento intro` + `tila puhe`.
-2. **TTS natiivissa:** pollo-worker palauttaa 403 ilman sallittua Originia. Kysytty Fablelta, lisätäänkö
-   natiiville tunniste. Ilman sitä natiivissa ovat vain äänitetyt luennat.
+2. **TTS natiivissa:** Fable hyväksyi (23.9.). Verkkopelin PR #2956 (pollo-worker: x-matkakirja-natiivi +
+   bundle id User-Agentissa, vain puhe) odottaa Julkaisijaa; proto 76366d6 Puhe.Lue + kohtaamisten
+   repliikit (löytörepliikki ääneen). iPad ab8098e: silmukka-kysymys k1–k8 ok, luento soi.
 3. **PR #2955** odottaa #2942:ta (Julkaisija). Kokoelmat kuvakysymykset/lippumaat/luennat/saannot
    tulevat ämpäriin Siirtosepän nipun mukana; siihen asti natiivi toimii ilman niitä (hiljaa).
 4. Pulmapiirrokset (Luonnos/PulmaId) ja kaikki UITK-näkymät: Natiivi-UI.
