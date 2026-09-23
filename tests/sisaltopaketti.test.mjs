@@ -632,6 +632,19 @@ test('skeema 1.20: elaintayt ja julisteet päätasolla', () => {
   assert.ok(j.every((a) => /^https:\/\/media\.matkakirja\.app\/julisteet\//.test(a.kuva.url) && a.kuva.leveys));
 });
 
+test('skeema 1.21: fokusvirrat ja laatat päätasolla', () => {
+  const f = JSON.parse(tiedostot.get('kokoelmat/fokusvirrat.json')).alkiot;
+  const raaka = (x) => JSON.stringify(x).match(/"(osoite|ampari|tiedosto)":/g)?.length ?? 0;
+  // Kaikki kuvaoliot ratkaistu: virrassa ei ole raakoja kuva-avaimia.
+  assert.equal(f.reduce((s, a) => s + raaka(a.virta), 0), 0);
+  const ateena = f.find((a) => a.id === 'ateena');
+  assert.match(ateena.virta.matkakirja.luentakuva.url, /^https:\/\//);
+  assert.deepEqual(ateena.lehtitehtavat, ['ateena:aarre', 'ateena:juliste']);
+  const [l] = JSON.parse(tiedostot.get('kokoelmat/laatat.json')).alkiot;
+  assert.deepEqual(l.tyypit, l.data.types);
+  assert.deepEqual(l.maarat, l.data.counts);
+});
+
 test('skeema 1.9: offline-manifesti maittain (laatat, maasto, media, tavut)', async () => {
   const m = JSON.parse(tiedostot.get('manifest.json'));
   const o = JSON.parse(tiedostot.get(m.offline.tiedosto));

@@ -547,6 +547,35 @@ export function rikastaLehdet(kokoelmat, ns, hae, { media: mediaLista = [], taul
   kokoelmat.julisteet.kuvaus += ' Skeema 1.20: päätasolla nimi (kaupungin nimi julisteessa), otsikko, lyhyt, selite '
     + 'ja kuva { arvo, url, varat, leveys, korkeus } (julisteämpäri).';
 
+  // Skeema 1.21 (2.0-polku): fokusvirrat ja laatat päätasolle. virta =
+  // fokusvirran rakenne sellaisenaan, mutta jokainen kuvaolio (osoite |
+  // ampari | tiedosto) on ratkaistu kuten lehdissä (R.kuva: url, varat,
+  // mitat, lyhyt, selite, lahde). Ratkeamaton kuva jää alkuperäiseksi.
+  const ratkaiseKuvat = (x) => {
+    if (Array.isArray(x)) return x.map(ratkaiseKuvat);
+    if (!x || typeof x !== 'object') return x;
+    if (['osoite', 'ampari', 'tiedosto'].some((k) => typeof x[k] === 'string')) {
+      const k = R.kuva(x);
+      if (k) return k;
+    }
+    return Object.fromEntries(Object.entries(x).map(([k, v]) => [k, ratkaiseKuvat(v)]));
+  };
+  for (const a of kokoelmat.fokusvirrat.alkiot) {
+    const { lehtitehtavat, ...muut } = a.data ?? {};
+    a.virta = ratkaiseKuvat(muut);
+    a.lehtitehtavat = (lehtitehtavat ?? []).map((t) => `${a.kaupunki}:${t.id}`);
+  }
+  kokoelmat.fokusvirrat.kuvaus += ' Skeema 1.21: virta = fokusvirran rakenne (matkakirja, pollo, valinta, kohteet, takyt, '
+    + 'takynostot, oppitunti, kohtaaminen, kohtaamispiste, aarremerkinta, sahketehtava…) sellaisenaan, mutta jokainen '
+    + 'kuvaolio on ratkaistu muotoon { arvo, url, varat, leveys?, korkeus?, lyhyt, selite, lahde }. lehtitehtavat = '
+    + 'lehtitehtavat-kokoelman id:t. Luennan ääni ja reaktiot: luennat-kokoelma (id matkakirja:<kaupunki>).';
+  const [laatta] = kokoelmat.laatat.alkiot;
+  Object.assign(laatta, {
+    tyypit: laatta.data.types, mannerTyypit: laatta.data.mannerTypes, maarat: laatta.data.counts,
+  });
+  kokoelmat.laatat.kuvaus += ' Skeema 1.21: päätasolla tyypit (= data.types), mannerTyypit (= data.mannerTypes) ja '
+    + 'maarat (= data.counts) sekä kuvat ja mannerKuvat.';
+
   kokoelmat.kohdekartat = taulukko('js/packs/maakartat.js#KAUPUNKIKARTAT',
     'Kaupunkien kohdekartat (Nähtävyydet). kuva = näytettävä kartta (värikartta, jos on, muuten juliste; url/varat/'
       + 'leveys/korkeus, ämpärissä assets/kartat/), juliste ja varikartta erikseen. rajat = ydinrajaus asteina '

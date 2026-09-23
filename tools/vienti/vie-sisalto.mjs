@@ -120,8 +120,11 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        tyypitys, docs/raportit/sisaltopaketti-2-0-suunnitelma-20260923.md).
  *   1.19 kysymykset ja pulmat päätasolle (2.0-polku).
  *   1.20 elaintayt ja julisteet päätasolle (2.0-polku).
+ *   1.21 fokusvirrat (virta: kuvat ratkaistuina, lehtitehtävien id:t) ja
+ *        laatat (tyypit, mannerTyypit, maarat) päätasolle; 2.0-polun
+ *        natiivin data-lukijat ovat nyt kaikki tyypitetty.
  */
-export const SKEEMAVERSIO_TARKKA = '1.20';
+export const SKEEMAVERSIO_TARKKA = '1.21';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 const tavuja = (s) => Buffer.byteLength(s);
