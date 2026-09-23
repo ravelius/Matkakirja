@@ -102,7 +102,11 @@ namespace Matkakirja.Natiivi
             AukiKaupunki = null;
         }
 
-        public void Avaa(string kaupunki)
+        /// <summary>ILehti.Avaa ilman natiivin alkutilaa.</summary>
+        public void Avaa(string kaupunki) => Avaa(kaupunki, null);
+
+        /// <summary>Avaa lehden; tilaJson (raha ja kaupat) risuaitaan lehtikuorelle (LehtiOsoite.LisaaTila).</summary>
+        public void Avaa(string kaupunki, string tilaJson)
         {
             if (Auki) Sulje();
 
@@ -115,6 +119,7 @@ namespace Matkakirja.Natiivi
                 return;
             }
 
+            osoite = LehtiOsoite.LisaaTila(osoite, tilaJson);
             Auki = true;
             AukiKaupunki = kaupunki;
 #if UNITY_IOS && !UNITY_EDITOR

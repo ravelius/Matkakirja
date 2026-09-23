@@ -125,6 +125,14 @@ namespace Matkakirja.Peli
         static string Jarj(IEnumerable<string> l) =>
             "[" + string.Join(",", l.OrderBy(x => x, StringComparer.Ordinal).Select(Pelitila.Teksti)) + "]";
 
+        /// <summary>Sama JSON kuin tallennuksen kentässä kaupat (lehtikuoren alkutila, verkkopelin asetaLehtikuorenTila).</summary>
+        public string Json()
+        {
+            var sb = new StringBuilder();
+            Kirjoita(sb);
+            return sb.ToString();
+        }
+
         internal void Kirjoita(StringBuilder sb)
         {
             sb.Append("{\"kulttuuri\":").Append(Jarj(KulttuuriVastatut));
