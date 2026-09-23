@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import {
   LAATTAKERROS_SYVYYSSIIRTO_HIENOMPI, LAATTAKERROS_SYVYYSSIIRTO_KARKEAMPI,
-  LAATTAKERROS_TUKI_SYVYYSSIIRTO, laatanSyvyyssiirto,
+  LAATTAKERROS_TUKI_SYVYYSSIIRTO, LAATTAKERROS_SYVYYSSIIRTO_PORRAS, laatanSyvyyssiirto,
 } from '../js/pallolaatat.js';
 import {
   LAATTAKERROS_HAIVE_MS, LAATTAKERROS_HYSTEREESI_ALAS, LAATTAKERROS_LAATTAKATTO_ENNAKKO,
@@ -703,7 +703,12 @@ test('sulavuus E4: pinnanRuutupiste on laattakerroksenOsuman käänteinen', () =
 test('laatan syvyyssiirto aseman mukaan: hienompi edessä, karkeampi ja tuki takana, kaikki vektorien takana', () => {
   assert.equal(laatanSyvyyssiirto({ z: 7 }, 7), LAATTAKERROS_SYVYYSSIIRTO);
   assert.equal(laatanSyvyyssiirto({ z: 8 }, 7), LAATTAKERROS_SYVYYSSIIRTO_HIENOMPI);
-  assert.equal(laatanSyvyyssiirto({ z: 5 }, 7), LAATTAKERROS_SYVYYSSIIRTO_KARKEAMPI);
+  assert.equal(laatanSyvyyssiirto({ z: 6 }, 7), LAATTAKERROS_SYVYYSSIIRTO_KARKEAMPI);
+  // Karkeammat porrastetaan tasoeron mukaan (23.9.2026): z−2 −4, z−3 −2, sitä karkeammat −1.
+  assert.equal(laatanSyvyyssiirto({ z: 5 }, 7), LAATTAKERROS_SYVYYSSIIRTO_KARKEAMPI + LAATTAKERROS_SYVYYSSIIRTO_PORRAS);
+  assert.equal(laatanSyvyyssiirto({ z: 4 }, 7), -2);
+  assert.equal(laatanSyvyyssiirto({ z: 1 }, 7), -1);
+  assert.equal(laatanSyvyyssiirto({ z: 4, tuki: true }, 7), -2);
   assert.equal(laatanSyvyyssiirto({ z: 5, tuki: true }, 7), LAATTAKERROS_TUKI_SYVYYSSIIRTO);
   assert.equal(laatanSyvyyssiirto({ z: 5 }, null), LAATTAKERROS_SYVYYSSIIRTO);
   // Järjestys: hienompi < nykyinen < karkeampi < tuki < 0 (pohja), ja hienompi > −12 (vektorit, kalvot).
@@ -714,5 +719,25 @@ test('laatan syvyyssiirto aseman mukaan: hienompi edessä, karkeampi ja tuki tak
   // Kokonaiset yksiköt: ero ei jää jänteen painuman varaan.
   for (const v of [LAATTAKERROS_SYVYYSSIIRTO_HIENOMPI, LAATTAKERROS_SYVYYSSIIRTO_KARKEAMPI, LAATTAKERROS_TUKI_SYVYYSSIIRTO]) {
     assert.ok(Math.abs(v - LAATTAKERROS_SYVYYSSIIRTO) >= 2, `${v}`);
+  }
+});
+
+/*
+ * TASONVAIHDON SALMIAKIT (omistaja 23.9.2026, meri-ropelo-1335-*.webp):
+ * vaihdossa z → z+1 vanha z ja entinen tuki z−2 ovat molemmat
+ * karkeampia. Niillä oli sama siirto, ja z−2 pisti esiin karkean verkon
+ * kärkien ympäriltä. Jokaisella karkeammalla tasolla on nyt oma
+ * siirtonsa, ja hienompi on aina edessä.
+ */
+test('tasonvaihdossa jokaisella karkeammalla tasolla on eri siirto, hienompi edessä', () => {
+  for (const valittu of [5, 6, 7, 8, 9]) {
+    const siirrot = [];
+    for (let z = valittu + 1; z >= Math.max(0, valittu - 4); z -= 1) siirrot.push(laatanSyvyyssiirto({ z }, valittu));
+    for (let i = 1; i < siirrot.length; i += 1) {
+      assert.ok(siirrot[i] - siirrot[i - 1] >= 1, `taso ${valittu}: ${siirrot.join(' ')}`);
+    }
+    // Vanha taso ja entinen tuki (z−2) vaihdon jälkeen: vähintään 2 yksikköä väliä.
+    assert.ok(laatanSyvyyssiirto({ z: valittu - 3 }, valittu) - laatanSyvyyssiirto({ z: valittu - 1 }, valittu) >= 2);
+    assert.ok(siirrot.every((v) => v < 0 && v > -12));
   }
 });
