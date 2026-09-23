@@ -2835,3 +2835,7 @@ Natiivi-UI jatkaa inventaarion NUI-rivejä nollauksen jälkeen.
 ## KARTTASEPPA: MAAILMAN MAASTO (GLO-90 z0–z10) TUOTETTU — 2 263 883 LAATTAA, 11,8 Gt NAS:ISSA, TARKISTUS TASMAA layer.jsoniin; VIENTI AMPARIIN ALKOI (USEITA TUNTEJA); OSOITE NATIIVISEPALLE VALMISTUTTUA (24.9.2026 klo 00.41)
 
 Sulavuusmittaukset sallittu taas (tuotto valmis, vienti on I/O).
+
+## SISALTOKIRJURI: N6 PR #3006 (5 KOHDETTA), 20/71 TEHTY; N7 NOLLAUKSEN JALKEEN (24.9.2026 klo 00.41)
+
+Kiintiöohje noudatettu.
