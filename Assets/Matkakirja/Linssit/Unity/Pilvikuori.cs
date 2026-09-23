@@ -1,7 +1,9 @@
 // PILVIKUORI astronautin kameralle (web js/linssit/astro-sumu.js): pallokuori
 // 1,01 × säde, NASA Blue Marble -pilvikuva (osoite sisältöpaketin
 // linssiaineistosta), pyörii 0,5°/min maapallon akselin ympäri, peitto kameran
-// korkeudesta (Astronauttimatikka.PilvienPeitto).
+// korkeudesta (Astronauttimatikka.PilvienPeitto). Lennon pilvisumu (PilviKerros) käyttää
+// samaa kuorta eri korkeudella (Korkeus: mittakaava maan keskipisteestä) ja samaa kuvaa
+// (jaettu tekstuuri, ladataan kerran istunnossa).
 using System.Collections;
 using CesiumForUnity;
 using Matkakirja.Linssit.Astronautti;
@@ -19,8 +21,12 @@ namespace Matkakirja.Natiivi
         const int Sarakkeet = 128, Rivit = 64;
 
         Material materiaali;
-        Texture2D kuva;
         Vector3 akseli;
+        /// <summary>Jaettu pilvikuva (astronautti ja lento); ei tuhota kuoren mukana.</summary>
+        static Texture2D jaettu;
+        static string jaetunOsoite;
+        static bool lataa;
+        Texture2D kuva => jaettu;
 
         public static Pilvikuori Luo(CesiumGeoreference georeferenssi, string osoite = OletusOsoite)
         {
@@ -74,6 +80,16 @@ namespace Matkakirja.Natiivi
 
         IEnumerator Lataa(string osoite)
         {
+            while (lataa) yield return null;
+            if (jaettu != null && jaetunOsoite == osoite) { materiaali.SetTexture("_MainTex", jaettu); yield break; }
+            lataa = true;
+            try { yield return LataaKuva(osoite); }
+            finally { lataa = false; }
+            if (jaettu != null) materiaali.SetTexture("_MainTex", jaettu);
+        }
+
+        static IEnumerator LataaKuva(string osoite)
+        {
             using var pyynto = UnityWebRequestTexture.GetTexture(osoite, false);
             yield return pyynto.SendWebRequest();
             if (pyynto.result != UnityWebRequest.Result.Success)
@@ -91,13 +107,25 @@ namespace Matkakirja.Natiivi
             }
             // GetPixels32: rivi 0 on kuvan alareuna eli eteläisin.
             Pilvikuva.Alfa(tavut, lahde.width, lahde.height, pohjoinenEnsin: false);
-            kuva = new Texture2D(lahde.width, lahde.height, TextureFormat.RGBA32, true) { wrapModeU = TextureWrapMode.Repeat, wrapModeV = TextureWrapMode.Clamp };
+            var kuva = new Texture2D(lahde.width, lahde.height, TextureFormat.RGBA32, true) { wrapModeU = TextureWrapMode.Repeat, wrapModeV = TextureWrapMode.Clamp };
             // SetPixelData tasolle 0 ja mipit Applyllä. LoadRawTextureData vaatisi koko
             // mip-ketjun datan ja heitti poikkeuksen, jolloin pilvet jäivät pois (iPad 2e26b45).
             kuva.SetPixelData(tavut, 0);
             kuva.Apply(true, true);
             Destroy(lahde);
-            materiaali.SetTexture("_MainTex", kuva);
+            if (jaettu != null) Destroy(jaettu);
+            jaettu = kuva;
+            jaetunOsoite = osoite;
+        }
+
+        /// <summary>
+        /// Kuoren korkeus merenpinnasta (m): mittakaava maan keskipisteestä rakennuskorkeuteen
+        /// nähden (Astronauttimatikka.PilvienSade). Ellipsoidi skaalautuu tasaisesti, mikä riittää sumulle.
+        /// </summary>
+        public void Korkeus(double korkeusM)
+        {
+            double rakennettu = (Astronauttimatikka.PilvienSade - 1) * MaanSade;
+            transform.localScale = Vector3.one * (float)((MaanSade + korkeusM) / (MaanSade + rakennettu));
         }
 
         /// <summary>Peitto 0…1 ja kierto asteina (Astronauttimatikka).</summary>
@@ -111,7 +139,6 @@ namespace Matkakirja.Natiivi
         void OnDestroy()
         {
             if (TryGetComponent<MeshFilter>(out var f)) Destroy(f.sharedMesh);
-            if (kuva != null) Destroy(kuva);
             Destroy(materiaali);
         }
     }

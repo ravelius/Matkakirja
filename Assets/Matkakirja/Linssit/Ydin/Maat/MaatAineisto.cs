@@ -135,6 +135,7 @@ namespace Matkakirja.Linssit.Maat
                 Jarjestys = (int)(MiniJson.Luku(l, "jarjestys") ?? jarjestys),
                 Ikoni = MiniJson.Teksti(l, "ikoni"),
                 Valokuva = MiniJson.Totuus(l, "valokuva", false),
+                Kesken = MiniJson.Totuus(l, "kesken", false),
                 Lahde = lahde == null ? null : new Lahde
                 {
                     Aineisto = MiniJson.Teksti(lahde, "aineisto"), Lisenssi = MiniJson.Teksti(lahde, "lisenssi"),

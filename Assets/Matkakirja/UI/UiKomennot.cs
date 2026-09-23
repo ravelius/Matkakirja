@@ -11,7 +11,7 @@
 //                                             tulos [laattatyyppi], kohtaaminen,
 //                                             kohtaaminen-tervehdys (KysymysEsimerkki.cs)
 //   ui selite                                 karttaselite auki (Nostot-välilehti)
-//   ui aloitus [portti|valinta|kortti|lento|jatka]  aloitusnäkymä ilman peliä (valinta kartalla + vahvistus, kortti = vara, lento = avausteksti pallon päällä)
+//   ui aloitus [portti|valinta|kortti|lento|jatka]  aloitusnäkymä ilman peliä (valinta kartalla, kortti = vara, lento = avausteksti pallon päällä)
 //   ui aloita [kaupunki] | ui jatka           automaatio: ohittaa aloitusnäkymän (UusiMatka / Jatka);
 //                                             listan ulkopuolinen kaupunki (pariisi) = oletuslähtö Pariisi
 //   ui lehti <kaupunki> [sivu] | ui lehti sivu n | ui lehti kuva | ui maalehti <ISO> [aihe] | ui lehti sisallys
@@ -40,6 +40,7 @@
 //   ui nahtavyydet [kaupunki] [kohde n]      nähtävyysnäkymä (oletus firenze); kohde n avaa n:nnen kohteen jutun
 //   ui opas [kaupunki] [vieritä px]           turistiopas (oletus lontoo), valinnainen vieritys
 //   ui ylapalkki [vaaka|pysty|auto|auki]    vaaka-asennon piilotettu yläpalkki ja väkäsnappi (auki = avaa väkäsistä)
+//   ui mitauutta [paivittyi]                  "Mitä uutta" (versiorivi) tai "Peli päivittyi" -ilmoitus
 //   ui liike                                  pieni liike: pulu lentää kerran heti (ohittaa levon)
 //   ui leima [muutos] [syy]                   tapahtumakupla: rahan muutos (oletus +10 Lehden minitehtävä ratkesi)
 //   ui noppa [1–6 | pois]                     näkyvä noppa: heitto Pariisista lepopaikkaan / häivytys
@@ -47,6 +48,9 @@
 //   ui offline demo|verkoton|verkko|pois      offline-tilan pilleri: keksitty lataus / verkon tila
 //   ui maakunnat [kortti] [ISO:tunnus]        karttaselite Maakunnat-välilehdellä, valinta, kortti
 //   ui pulu sano [teksti] | aani [lähde n] | ele id | tilanne laji | tunne t | pois | paalle
+//   ui pulu juttu [kaupunki] [n]              pulun kuvakortti nähtävyysjutulle (oletus firenze, ensimmäinen
+//                                             kuvallinen juttu tai kohde n) → "Avaa juttu" nähtävyysarkkiin;
+//                                             ohittaa sijaintiehdon (webissä vain kaupungissa, jossa pelaaja on)
 //   ui tietoja                                tekijätiedot ja lähteet
 //   ui chat [kysymys]                         pulun keskustelu auki / kysy
 //   ui traileri [kaupunki]                    saapumistraileri ilman puhetta (oletus lontoo)
@@ -60,9 +64,13 @@
 //   ui livia [ele] [p] [astro|leiju|puhe|mini] Livia (152 × 304) keskellä kerrosta 40 (oletus blink 0.5)
 //   ui livia kierros [astro|leiju|puhe]       kaikki eleet peräkkäin oikeassa ajassa (videotarkistus)
 //   ui livia pois                             Livia pois
-//   ui linssi valitsin|peite|selite|astro|kuva|sumu|vertailu|maa|keksinnot|matka|sulje|pois
+//   ui livia avaus [nollaa|peru]              Livian avausesittely (ensiliito + kuplat, ilman valintavahtia);
+//                                             nollaa = lippu matkakirja-livia-avaus pois ensin, peru = keskeytä
+//   ui linssi valitsin|peite|selite|astro|kuva|sumu|vertailu|maa|keksinnot|matka|radio|valikko|varusteet|sulje|pois
 //                                             linssien UI esimerkkiaineistolla (Linssit/LinssiKomennot.cs)
 //   ui linssi vertailu FIN SWE [ITA JPN]      vertailuarkki näillä mailla + maakäyrät (latautuu|verkko = tilat)
+//   ui linssi valikko [keksinnot|matka] [kiinni|alusta]  linssin hampurilaisvalikko aikajanan ylärivissä
+//   ui linssi varusteet [id|ei] [paalla]      laukun Varusteet: esikatselu + Aktivoi esimerkkilinsseillä
 //   kuva nimi                                 Documents/ui-nimi.png (koko ruutu)
 //   odota s                                   seuraava rivi s sekunnin päästä
 using System.Collections.Generic;
@@ -218,7 +226,23 @@ namespace Matkakirja.Natiivi
                         case "tunne": return pu.Tunne(arvo) ? null : "ei elettä";
                         case "pois": pu.Nayta(false); return null;
                         case "paalle": pu.Nayta(true); return null;
-                        default: return "ui pulu sano|aani|ele|tilanne|tunne|pois|paalle";
+                        case "juttu":
+                        {
+                            var j = arvo.Split(new[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries);
+                            string kid = j.Length > 0 ? j[0] : "firenze";
+                            int nro = j.Length > 1 && int.TryParse(j[1], out var jn) ? jn : 0;
+                            Kohdekartat.Hae(kid, k =>
+                            {
+                                var kohde = k?.Kohteet.Find(x => nro > 0 ? x.Numero == nro : x.Selattava);
+                                if (kohde == null) { Kirjaa("ui pulu juttu: ei kohdetta " + kid + (nro > 0 ? " " + nro : "")); return; }
+                                bool sijainti = PuluChat.NahtavyysAvattavissa(k, kohde);
+                                ui.Chat.AvaaNahtavyys(k, kohde, true);
+                                Kirjaa("ui pulu juttu: " + kohde.Nimi + (kohde.Juttu?.Kuvat.Count > 0 ? " (kuvakortti)" : " (juttu suoraan)")
+                                    + (sijainti ? "" : " — pelaaja ei ole kaupungissa, webissä linkkiä ei näytettäisi"));
+                            });
+                            return null;
+                        }
+                        default: return "ui pulu sano|aani|ele|tilanne|tunne|pois|paalle|juttu";
                     }
                 }
                 case "luento":
@@ -317,6 +341,9 @@ namespace Matkakirja.Natiivi
                     if (loput == "auki") { ui.Tilarivi.Avaa(); return Ylapalkki.Piilossa ? null : "palkki ei ole piilossa (ui ylapalkki vaaka)"; }
                     Ylapalkki.Pakota = loput == "vaaka" ? true : loput == "pysty" ? false : (bool?)null;
                     ui.Tilarivi.Paivita();
+                    return null;
+                case "mitauutta":
+                    if (loput == "paivittyi") ui.Valikko.MitaUutta.TarkistaPaivitys(true); else ui.Valikko.MitaUutta.Avaa();
                     return null;
                 case "liike":
                     return ui.Liike.Lenna(true) ? null : "pieni liike on pois päältä tai lento jo käynnissä";
@@ -435,6 +462,12 @@ namespace Matkakirja.Natiivi
         string Livia(string loput)
         {
             var osat = new List<string>(loput.Split(new[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries));
+            if (osat.Count > 0 && osat[0] == "avaus")
+            {
+                if (osat.Count > 1 && osat[1] == "peru") { LivianAvaus.Peru(); return null; }
+                if (osat.Count > 1 && osat[1] == "nollaa") LivianAvaus.NollaaLippu();
+                return LivianAvaus.Nayta() ? null : LivianAvaus.Kaynnissa ? "avaus jo käynnissä" : "avaus jo nähty (ui livia avaus nollaa)";
+            }
             if (osat.Count > 0 && osat[0] == "pois")
             {
                 liviaKehys?.RemoveFromHierarchy();

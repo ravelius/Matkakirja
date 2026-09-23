@@ -70,6 +70,27 @@ namespace Matkakirja.Natiivi
             return k;
         }
 
+        /// <summary>
+        /// Viisaan Pöllön muotokuva kuplan vasempaan laitaan (webin naytaAvauskupla
+        /// {muotokuva}: vain avausesittelyn opaslupaus). Kuvapaikka 2:3, puhe oikealla;
+        /// latautumaton kuva jättää paikan tyhjäksi (webissä kuva piiloon virheessä).
+        /// </summary>
+        public void LisaaMuotokuva(Kupla k, string url)
+        {
+            if (k == null || string.IsNullOrEmpty(url)) return;
+            k.El.AddToClassList("mk-kupla--muotokuva");
+            var puhe = Rakenne.El("mk-kupla__puhe", null, PickingMode.Ignore);
+            foreach (var kappale in k.El.Query<Label>(className: "mk-kupla__kappale").ToList()) puhe.Add(kappale);
+            var paikka = Rakenne.El("mk-kupla__muotokuva", null, PickingMode.Ignore);
+            k.El.Insert(0, paikka);
+            k.El.Insert(1, puhe);
+            Kuvat.Hae(url, t =>
+            {
+                if (t == null || paikka.panel == null) return;
+                paikka.style.backgroundImage = new StyleBackground(t);
+            });
+        }
+
         /// <summary>Pidentää kuplan näkyvyyttä (esim. ääni on lukuaikaa pidempi).</summary>
         public void AsetaKesto(Kupla k, float ms)
         {

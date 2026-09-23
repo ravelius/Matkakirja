@@ -50,6 +50,7 @@ namespace Matkakirja.Natiivi
 
         // Nykyinen ele ja lepo.
         string ele, omistaja, jatko, lepoEle;
+        Action eleValmis;
         float eleAlkoi, eleKesto;
         bool nukkuu, ensisaapunut, nakyvissa = true;
         float viimeTilanne = -1e6f, viimeToimi, viimeEle, leiju;
@@ -63,6 +64,7 @@ namespace Matkakirja.Natiivi
         readonly System.Random arpa = new System.Random();
 
         public bool Puhuu => Aanet.PuluPuhuu;
+        public bool Nakyvissa => nakyvissa;
         public string NykyinenEle => ele;
 
         Pulu(UiKerros kerros)
@@ -200,12 +202,16 @@ namespace Matkakirja.Natiivi
 
         // --- eleet --------------------------------------------------------------
 
-        /// <summary>Soittaa eleen (webin toista). Palauttaa false, jos elettä ei ole.</summary>
-        public bool Toista(string id, string omistajaNimi = null, string jatkoEle = null)
+        /// <summary>
+        /// Soittaa eleen (webin toista). Palauttaa false, jos elettä ei ole. valmis kutsutaan,
+        /// kun ele soi loppuun (ei, jos toinen ele katkaisee sen; webin toista {valmis}).
+        /// </summary>
+        public bool Toista(string id, string omistajaNimi = null, string jatkoEle = null, Action valmis = null)
         {
             if (id == "owl") id = "flyAway";
             if (!LiviaEleet.Olemassa(id)) return false;
             ele = id;
+            eleValmis = valmis;
             omistaja = omistajaNimi;
             jatko = jatkoEle;
             eleAlkoi = Aika;
@@ -219,13 +225,37 @@ namespace Matkakirja.Natiivi
 
         public bool Ele(string id) => Toista(id);
 
-        void Katkaise() { ele = null; omistaja = null; jatko = null; }
+        void Katkaise() { ele = null; omistaja = null; jatko = null; eleValmis = null; }
+
+        // --- ensiliito (webin kasvoEleet.ensiliito / peruEnsiliito, Livian avausesittely) ----
+
+        /// <summary>
+        /// Kiireinen ensiliito kartalta ("glideIn", omistaja "opening"): pulu on sen jälkeen
+        /// saapunut (ei erillistä handoff-saapumista). Vähennetty liike: ei liitoa, valmis heti.
+        /// false = pulu ei näy (kutsuja jatkaa ilman liitoa).
+        /// </summary>
+        public bool Ensiliito(Action valmis, bool vahennettyLiike = false)
+        {
+            if (!nakyvissa) return false;
+            ensisaapunut = true;
+            viimeToimi = Aika;
+            if (vahennettyLiike) { Katkaise(); valmis?.Invoke(); return true; }
+            return Toista("glideIn", "opening", null, valmis);
+        }
+
+        /// <summary>Keskeneräinen ensiliito pois ilman valmistumiskutsua.</summary>
+        public void PeruEnsiliito()
+        {
+            if (omistaja == "opening") Katkaise();
+        }
 
         void EleValmis()
         {
             string valmis = ele;
             string seuraava = jatko;
+            var kutsu = eleValmis;
             Katkaise();
+            kutsu?.Invoke();
             // Lähtöeleiden jälkeen pulu palaa (webin palaa(): lento → flyBack, 1/7 lasiin; kävely → walkBack).
             string paluu = valmis switch
             {
@@ -344,11 +374,12 @@ namespace Matkakirja.Natiivi
         /// <summary>
         /// Livian repliikki: kupla + ääni (valinnainen ämpärin mp3) + ele (annettu tai
         /// tekstin sävystä). kuitattu = kuplan napautus (seuraava repliikki). Pulu ei
-        /// puhu kertojan päälle: silloin kupla näkyy äänettä.
+        /// puhu kertojan päälle: silloin kupla näkyy äänettä. aaniLadattu saa äänitteen
+        /// (null = ei ääntä), jotta kuplasarja voi odottaa puheen loppuun. Palauttaa kuplan.
         /// </summary>
-        public void Sano(string teksti, string aaniUrl = null, string eleId = null, Action kuitattu = null)
+        public PuluKuplat.Kupla Sano(string teksti, string aaniUrl = null, string eleId = null, Action kuitattu = null, Action<AudioClip> aaniLadattu = null)
         {
-            if (string.IsNullOrEmpty(teksti)) return;
+            if (string.IsNullOrEmpty(teksti)) return null;
             viimeRepliikki = teksti;
             viimeToimi = Aika;
             if (nukkuu) { nukkuu = false; Toista("wake"); }
@@ -361,7 +392,10 @@ namespace Matkakirja.Natiivi
                 {
                     // Pidempi ääni pidentää kuplaa (webin livianKuplanAjastin).
                     if (klippi != null) Kuplat.AsetaKesto(kupla, Mathf.Max(PuluKuplat.Lukuaika(teksti), klippi.length * 1000f + 600f));
+                    aaniLadattu?.Invoke(klippi);
                 });
+            else aaniLadattu?.Invoke(null);
+            return kupla;
         }
 
         /// <summary>Livian äänitetyn repliikin osoite (webin livianAaniNimi): aanet/pulu/livia-{lähde}-{n}.mp3.</summary>

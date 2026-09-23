@@ -169,6 +169,7 @@ namespace Matkakirja.Natiivi
         public void Sulje()
         {
             suurennos.Sulje();
+            kuvakortti?.Sulje();
             if (!Auki) return;
             Auki = false;
             sulkija.style.display = DisplayStyle.None;
@@ -407,6 +408,49 @@ namespace Matkakirja.Natiivi
                 })));
                 Vierita(kupla);
             });
+        }
+
+        // --- nähtävyyslinkki ja kuvakortti (web avaaLinkki, avaaKuvapopup, avaaKohde, reittiAvattavissa) ---
+
+        PuluKuvakortti kuvakortti;
+
+        /// <summary>Pulun kuvakortti (luodaan ensimmäisellä käytöllä nähtävyysarkin jälkeen).</summary>
+        public PuluKuvakortti Kuvakortti => kuvakortti ??= new PuluKuvakortti(kerros);
+
+        /// <summary>
+        /// Web reittiAvattavissa (tyyppi nahtavyys): kohdekartta kuuluu kaupunkiin, jossa pelaaja
+        /// seisoo, ja kohteella on juttu. Rikkinäinen linkki on pahempi kuin puuttuva.
+        /// </summary>
+        public static bool NahtavyysAvattavissa(Kohdekartta k, KohdekarttaKohde kohde)
+        {
+            if (k == null || kohde?.Juttu == null || string.IsNullOrEmpty(kohde.Juttu.Teksti)) return false;
+            var o = PeliOhjain.Instanssi;
+            if (o?.Matka == null) return false;
+            var s = o.Matka.Tila.Pelaaja.Sijainti;
+            return s.Kaupungissa && s.Kaupunki == k.Kaupunki;
+        }
+
+        /// <summary>
+        /// Web avaaLinkki nähtävyysjuttuun: jutulla on kuva → ensin kuvakortti (kuva, pitkä
+        /// kuvateksti · lähde, "Avaa juttu"), muuten juttu suoraan. Juttu aukeaa nähtävyysarkkiin
+        /// chatin päälle ja chat jää alle (omistaja 18.8.2026: sulku ei pudota kartalle); aikarivillä
+        /// ei kohdenumeroa (web avaaNahtavyys numero null). ohitaSijainti vain testikomennolle.
+        /// </summary>
+        public bool AvaaNahtavyys(Kohdekartta k, KohdekarttaKohde kohde, bool ohitaSijainti = false)
+        {
+            if (ohitaSijainti ? kohde?.Juttu == null || string.IsNullOrEmpty(kohde.Juttu.Teksti) : !NahtavyysAvattavissa(k, kohde)) return false;
+            var kuva = kohde.Juttu.Kuvat.Count > 0 ? kohde.Juttu.Kuvat[0] : null;
+            if (kuva == null || string.IsNullOrEmpty(kuva.Lahde)) return AvaaJuttu(k, kohde);
+            suurennos.Sulje();
+            Kuvakortti.Nayta(kuva, () => AvaaJuttu(k, kohde));
+            return true;
+        }
+
+        static bool AvaaJuttu(Kohdekartta k, KohdekarttaKohde kohde)
+        {
+            if (!UiNakymat.Olemassa) return false;
+            UiNakymat.Hae().Nahtavyydet.AvaaKohde(k, kohde, false);
+            return true;
         }
 
         // --- käsitelinkit (web jasennaKasitteet, a.pollo-kasitelinkki) --------------------------------

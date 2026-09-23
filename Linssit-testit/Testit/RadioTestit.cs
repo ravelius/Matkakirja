@@ -177,6 +177,30 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama("sallittu", a.Asemat["CHE"].Luokka);
         }
 
+        [Testi] static void KoepaketinV24ToimimatonEiSoi()
+        {
+            // v24: Siirtosepän kättelytarkistus; NGA Metro FM toimii false, CHE = Radio Vostok.
+            var a = RadioAineisto.Lue(Paketti("radiot-kokoelma-v24.json"), null, Paketti("kaupungit-radio.json"));
+            Oleta.Sama(115, a.Asemat.Count);
+            Oleta.Sama(false, a.Asemat["NGA"].Toimii);
+            Oleta.Sama(RadioLinssi.Toiminto.Ei, RadioLinssi.ToimintoAsemalle(a.Asemat["NGA"]));
+            Oleta.Sama("Radio Vostok", a.Asemat["CHE"].Nimi);
+            Oleta.Sama(114, a.Asemat.Values.Count(x => RadioLinssi.ToimintoAsemalle(x) == RadioLinssi.Toiminto.Soita));
+        }
+
+        [Testi] static void ToimivaRiviVoittaaToimimattoman()
+        {
+            var a = RadioAineisto.Lue(MiniJson.Jasenna("{\"alkiot\":[" +
+                "{\"id\":\"FIN\",\"iso3\":\"FIN\",\"jarjestys\":1,\"nimi\":\"Rikki\",\"url\":\"https://x\",\"luokka\":\"epaselva\",\"toimii\":false}," +
+                "{\"id\":\"FIN:2\",\"iso3\":\"FIN\",\"jarjestys\":2,\"nimi\":\"Ehjä\",\"url\":\"https://y\",\"luokka\":\"epaselva\",\"toimii\":true}," +
+                "{\"id\":\"SWE\",\"iso3\":\"SWE\",\"nimi\":\"Tarkistamatta\",\"url\":\"https://z\",\"luokka\":\"sallittu\"}]}"),
+                null, Paketti("kaupungit-radio.json"));
+            Oleta.Sama("Ehjä", a.Asemat["FIN"].Nimi);
+            Oleta.Sama("Rikki", a.Vaihtoehdot["FIN"].Single().Nimi);
+            Oleta.Sama(null, a.Asemat["SWE"].Toimii);
+            Oleta.Sama(RadioLinssi.Toiminto.Soita, RadioLinssi.ToimintoAsemalle(a.Asemat["SWE"]), "tarkistamaton soi");
+        }
+
         [Testi] static void PieninJarjestysVoittaaRivienJarjestyksesta()
         {
             var a = RadioAineisto.Lue(MiniJson.Jasenna("{\"alkiot\":[" +

@@ -1536,28 +1536,165 @@
     color: #d9a13b;
 }
 
-/* Laukun Varusteet (linssit) — webin .passport-card .linssi-valikko */
-.mk-laukku__varuste {
-    flex-direction: row;
-    justify-content: flex-start;
+/* Laukun Varusteet (linssit) — webin .passport-card .linssi-valikko: pyöreät
+   64 px:n varustekuvat ruudukossa, "Ei linssiä" vaalealla pohjalla, päällä
+   olevalle messinkirengas, esikatsellulle kevyt rengas; keskeneräiset omalla
+   rivillään 44 px ja himmeinä. Tietolohko keskitetty, Aktivoi-nappi alla. */
+.mk-laukku__linssit {
+    padding: 6px 0 3px 0;
+    border-bottom-width: 1.5px;
+    border-color: rgba(70, 51, 31, 0.28);
+}
+
+.mk-laukku__linssit--kesken {
+    padding-top: 3px;
+    border-top-width: 1px;
+    border-bottom-width: 0;
+    border-color: rgba(70, 51, 31, 0.18);
+}
+
+.mk-laukku__linssisolu {
     align-items: center;
-    min-height: 40px;
-    margin-bottom: 5px;
-    padding: 6px 10px;
-    border-width: 1px;
-    border-color: rgba(122, 85, 20, 0.32);
+    justify-content: center;
+}
+
+.mk-laukku__linssi {
+    width: 64px;
+    height: 64px;
+    min-height: 64px;
+    padding: 0;
+    border-width: 0;
+    border-color: rgba(122, 85, 20, 0.9);
+    border-radius: 32px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #46331f;
+    overflow: hidden;
+}
+
+.mk-laukku__linssi > .mk-ikoni {
+    width: 34px;
+    height: 34px;
+    margin-right: 0;
+    --mk-ikoni-viiva: 1.6;
+}
+
+.mk-laukku__linssikuva {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 32px;
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.mk-laukku__linssi--ei {
+    border-width: 1.5px;
+    border-color: rgba(94, 74, 47, 0.55);
+    background-color: rgba(252, 241, 212, 0.55);
+}
+
+.mk-laukku__linssi--ei > .mk-ikoni {
+    width: 30px;
+    height: 30px;
+}
+
+.mk-laukku__linssi:active {
+    background-color: rgba(252, 241, 212, 0.9);
+}
+
+.mk-laukku__linssi.mk-esikatselu {
+    border-width: 1.5px;
+    border-color: rgba(122, 85, 20, 0.55);
+}
+
+.mk-laukku__linssi.mk-paalla {
+    border-width: 2.5px;
+    border-color: rgba(122, 85, 20, 0.9);
+}
+
+.mk-laukku__linssi--ei.mk-paalla {
+    background-color: rgba(252, 241, 212, 0.9);
+}
+
+.mk-laukku__linssi--kesken {
+    width: 44px;
+    height: 44px;
+    min-height: 44px;
+    border-radius: 22px;
+    opacity: 0.62;
+}
+
+.mk-laukku__linssi--kesken .mk-laukku__linssikuva {
+    border-radius: 22px;
+}
+
+.mk-laukku__linssi--kesken > .mk-ikoni {
+    width: 24px;
+    height: 24px;
+}
+
+.mk-laukku__linssi--kesken.mk-esikatselu,
+.mk-laukku__linssi--kesken.mk-paalla {
+    opacity: 0.85;
+}
+
+.mk-laukku__linssitiedot {
+    align-items: center;
+    padding-top: 10px;
+    opacity: 1;
+    translate: 0 0;
+    transition-property: opacity, translate;
+    transition-duration: 0.22s;
+    transition-timing-function: ease-out;
+}
+
+.mk-laukku__linssitiedot.mk-vaihtui {
+    opacity: 0;
+    translate: 0 3px;
+    transition-duration: 0s;
+}
+
+.mk-laukku__linssinimi {
+    margin-bottom: 3px;
+    font-size: 13.5px;
+    letter-spacing: 0.6px;
+    color: #46331f;
+    -unity-text-align: middle-center;
+}
+
+.mk-laukku__linssilyhyt {
+    font-size: 13px;
+    color: rgba(70, 51, 31, 0.85);
+    white-space: normal;
+    -unity-text-align: middle-center;
+}
+
+.mk-laukku__aktivoi {
+    min-width: 136px;
+    min-height: 44px;
+    margin: 11px 0 2px 0;
+    padding: 5px 19px;
+    border-color: rgba(122, 85, 20, 0.65);
     border-radius: 8px;
-    background-color: rgba(255, 252, 242, 0.55);
-    color: #2b2116;
+    background-color: rgba(250, 238, 208, 0.7);
+    color: #7a5514;
 }
 
-.mk-laukku__varuste.mk-valittu {
-    border-color: #d9a13b;
-    background-color: rgba(217, 161, 59, 0.2);
+.mk-laukku__aktivoi:active {
+    background-color: rgba(255, 250, 238, 0.9);
+    color: #9c6f1e;
 }
 
-.mk-laukku__varuste .mk-laukku__aarretila {
-    margin-left: auto;
+.mk-laukku__aktivoi .mk-nappi__teksti {
+    font-size: 12.5px;
+    letter-spacing: 1.9px;
+    -unity-text-align: middle-center;
+}
+
+.mk-laukku__aktivoi.mk-pois {
+    background-color: rgba(236, 222, 196, 0.5);
+    color: rgba(70, 51, 31, 0.85);
 }
 
 .mk-pudotus__versionappi {
@@ -2155,4 +2292,26 @@
 .mk-lukija > .mk-kaiutin__vinoviiva {
     left: 16px;
     top: 6px;
+}
+
+/* Mitä uutta / Peli päivittyi (MitaUutta.cs, web .muutokset-lista li: versio lihavoituna, teksti perään). */
+.mk-muutos {
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.mk-muutos__versio {
+    min-width: 58px;
+    margin-right: 8px;
+    font-size: 14px;
+    color: #46331f;
+}
+
+.mk-muutos__teksti {
+    flex-shrink: 1;
+    flex-grow: 1;
+    font-size: 15px;
+    white-space: normal;
+    color: #3a2a1a;
 }
