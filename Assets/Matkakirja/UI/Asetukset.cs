@@ -26,6 +26,40 @@ namespace Matkakirja.Natiivi
         /// <summary>Jokin asetus muuttui (kytkimen tai voiman nimi).</summary>
         public static event Action<string> Muuttui;
 
+        // --- kehittäjätila (webin js/main.js kytkeKehittaja) ------------------------------
+        // Koodit vain SHA-256-tiivisteinä kuten webissä (sama pää- ja rajattu koodi).
+        // Kehitysbuildissa (Development Build) päällä aina; muuten koodilla, muistetaan.
+        const string KehittajaAvain = "matkakirja-kehittaja";
+        const string KehittajaTiiviste = "2f7f15d0bb83b97a7ce3054be0972e80b60742cfc8b4c36ce06f3330f6f045c6";
+        const string KehittajaTiivisteRajattu = "b3282a2f2a28757b3a18ab833de16a9c54518c0b0cf493e3f0a7cf09386f326a";
+
+        public static bool Kehittaja => Debug.isDebugBuild || PlayerPrefs.GetString(KehittajaAvain, "") == "1";
+
+        /// <summary>Kytkee kehittäjätilan koodilla (true = onnistui) tai pois (koodi null).</summary>
+        public static bool AsetaKehittaja(string koodi)
+        {
+            if (koodi == null)
+            {
+                PlayerPrefs.DeleteKey(KehittajaAvain);
+                PlayerPrefs.Save();
+                Muuttui?.Invoke("Kehittaja");
+                return true;
+            }
+            string t;
+            using (var sha = System.Security.Cryptography.SHA256.Create())
+            {
+                var tavut = sha.ComputeHash(System.Text.Encoding.UTF8.GetBytes(koodi.Trim()));
+                var sb = new System.Text.StringBuilder();
+                foreach (var b in tavut) sb.Append(b.ToString("x2"));
+                t = sb.ToString();
+            }
+            if (t != KehittajaTiiviste && t != KehittajaTiivisteRajattu) return false;
+            PlayerPrefs.SetString(KehittajaAvain, "1");
+            PlayerPrefs.Save();
+            Muuttui?.Invoke("Kehittaja");
+            return true;
+        }
+
         static string Avain(Kytkin k) => k switch
         {
             Kytkin.Kertoja => "matkakirja-kertoja",

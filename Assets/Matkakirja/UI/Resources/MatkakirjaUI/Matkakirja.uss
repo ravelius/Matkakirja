@@ -1356,3 +1356,38 @@
     margin-right: 8px;
     color: #d9a13b;
 }
+
+/* Laukun Varusteet (linssit) — webin .passport-card .linssi-valikko */
+.mk-laukku__varuste {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 40px;
+    margin-bottom: 5px;
+    padding: 6px 10px;
+    border-width: 1px;
+    border-color: rgba(122, 85, 20, 0.32);
+    border-radius: 8px;
+    background-color: rgba(255, 252, 242, 0.55);
+    color: #2b2116;
+}
+
+.mk-laukku__varuste.mk-valittu {
+    border-color: #d9a13b;
+    background-color: rgba(217, 161, 59, 0.2);
+}
+
+.mk-laukku__varuste .mk-laukku__aarretila {
+    margin-left: auto;
+}
+
+.mk-pudotus__versionappi {
+    min-height: 28px;
+    padding: 0;
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.mk-kehittaja__virhe {
+    color: #9a2b21;
+}

@@ -15,9 +15,10 @@
 //
 // Data: Pelikoodarin PeliOhjain.Instanssi.Laukku() (LaukkuNaytto), päivitys
 // PeliOhjain.TilaMuuttui-tapahtumasta auki ollessa. Kukkaron muutos välähtää
-// yläpalkin pillerissä (Ylapalkki.RahaMuuttui). Varusteet (linssit) ovat
-// kartan taikalaseissa (Linssivalitsin); julistegalleria ja tietäjägalleria
-// tulevat omina erinään.
+// yläpalkin pillerissä (Ylapalkki.RahaMuuttui). VARUSTEET: linssit kuten webin
+// linssikotelo (Fablen tarkastus C3: sekä laukussa että kartan taikalaseissa);
+// rivin napautus sulkee laukun ja vaihtaa linssin (LinssiUi.ValitseLinssi).
+// Julistegalleria ja tietäjägalleria tulevat omina erinään.
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -32,6 +33,8 @@ namespace Matkakirja.Natiivi
         readonly Func<VisualElement> pilleri;
         readonly VisualElement matka, tilastot, lohko, aarteet, tavarat, julisteet;
         readonly Button tilastoNappi;
+        readonly Label varusteOtsikko;
+        readonly VisualElement varusteet;
         PeliOhjain kuunneltu;
         Func<LaukkuNaytto> testiData;
 
@@ -55,6 +58,8 @@ namespace Matkakirja.Natiivi
             Osio("Tavarat", lohko);
             tavarat = Rakenne.El("mk-laukku__rivit", lohko, PickingMode.Ignore);
             julisteet = Rakenne.El("mk-laukku__julisteet", lohko, PickingMode.Ignore);
+            varusteOtsikko = Osio("Varusteet");
+            varusteet = Rakenne.El("mk-laukku__rivit", Sisalto, PickingMode.Ignore);
             AsetaTilastot(PlayerPrefs.GetString(TilastotAvain, "0") == "1");
         }
 
@@ -91,6 +96,7 @@ namespace Matkakirja.Natiivi
             KytkeOhjain();
             var d = testiData?.Invoke() ?? PeliOhjain.Instanssi?.Laukku();
             matka.Clear(); tilastot.Clear(); aarteet.Clear(); tavarat.Clear(); julisteet.Clear();
+            Varusteet();
             if (d == null)
             {
                 Rivi(matka, "Matka ei ole vielä alkanut.", null);
@@ -143,6 +149,27 @@ namespace Matkakirja.Natiivi
                 }
                 var luku = Rakenne.Teksti($"{d.Julisteet.Count}/{d.JulisteitaKaikkiaan} »", "mk-laukku__arvo", julisteet);
                 Kirjasimet.Aseta(luku, Kirjasin.Kone);
+            }
+        }
+
+        void Varusteet()
+        {
+            varusteet.Clear();
+            var r = LinssiUi.Rekisteri;
+            var lista = r?.Valittavat;
+            bool on = lista != null && lista.Count > 0;
+            varusteOtsikko.style.display = varusteet.style.display = on ? DisplayStyle.Flex : DisplayStyle.None;
+            if (!on) return;
+            string auki = r.Auki?.Tiedot?.Id;
+            foreach (var l in lista)
+            {
+                var t = l.Tiedot;
+                string id = t.Id;
+                var b = Rakenne.Nappi(null, "mk-laukku__varuste", () => { Sulje(); UiNakymat.Hae()?.Linssit.ValitseLinssi(id); }, varusteet,
+                    string.IsNullOrEmpty(t.Ikoni) ? Ikonit.Viiva["taikalasit"] : t.Ikoni);
+                b.EnableInClassList("mk-valittu", id == auki);
+                Rakenne.Teksti(t.Nimi ?? id, "mk-laukku__teksti", b);
+                if (id == auki) Kirjasimet.Aseta(Rakenne.Teksti("PÄÄLLÄ", "mk-laukku__aarretila", b), Kirjasin.Kone);
             }
         }
 
