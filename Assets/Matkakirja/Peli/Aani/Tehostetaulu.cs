@@ -34,6 +34,32 @@ namespace Matkakirja.Peli
         public const float Master = 0.24f, NousuS = 0.010f, LaskuS = 0.040f, VireHeitto = 0.05f;
         /// <summary>Nimetyn vireen heitto (webin jitter(vire, 0,02)).</summary>
         public const float NimettyVireHeitto = 0.02f;
+        /// <summary>Eksponenttirampin pohja (webin 0,0001) ja hännän lisävara (alku = kesto − häntä − 0,15 s).</summary>
+        public const float Hiljaisin = 0.0001f, HantaVaraS = 0.15f;
+        /// <summary>Lasku alkaa aikaisintaan tästä (webin max(0,02, kesto − 0,04)); lähde soi kesto + 0,03 s.</summary>
+        public const float PitoMinS = 0.02f, SoittoLisaS = 0.03f;
+        /// <summary>Satunnainen alku: pituus × 0,2 + random × max(0,01, pituus × 0,6 − kesto).</summary>
+        public const float SatunnainenAlku = 0.2f, SatunnainenVali = 0.6f;
+        /// <summary>findHits: kynnys × huippu (huippu joka 16. näytteestä, haku joka 8.), väli 100 ms, kohta −5 ms, 1. kanava.</summary>
+        public const float IskuKynnys = 0.3f, IskuValiS = 0.1f, IskuEtuS = 0.005f;
+
+        /// <summary>Webin tehosteväylän kaiku: bus → kuiva 0,82 + märkä 0,18 (ConvolverNode, normalize) → master.
+        /// Impulssi: 2 kanavaa kohinaa × (1 − i/n)^3,2, pituus 1,2 s.</summary>
+        public static class Kaiku
+        {
+            public const float Kuiva = 0.82f, Marka = 0.18f, PituusS = 1.2f, Vaimeneminen = 3.2f;
+        }
+
+        /// <summary>
+        /// Webin master-kompressori (DynamicsCompressorNode master-gainin JÄLKEEN): −20 dB, knee 26, ratio 3,
+        /// attack 6 ms, release 220 ms. Chromium/WebKit lisää automaattisen makeup-gainin
+        /// (1 / käyrä(0 dBFS))^0,6 = 1,235 (+1,8 dB); tehosteiden tasoilla (≤ −15 dBFS) ero on käytännössä
+        /// tämä vakio. Mitattu erä 5:ssä Chromiumin kaavalla.
+        /// </summary>
+        public static class Kompressori
+        {
+            public const float KynnysDb = -20f, KneeDb = 26f, Suhde = 3f, AttackS = 0.006f, ReleaseS = 0.22f, Makeup = 1.235f;
+        }
 
         const string Audio = AaniOsoite.Juuri + "audio/", Freesound = AaniOsoite.Juuri + "aanet/freesound-";
 
@@ -94,6 +120,37 @@ namespace Matkakirja.Peli
             public const float SilmukkaAlkuS = 40f, PitkaAaniteS = 60f;
             /// <summary>Huipputaso (× Master × Taso(Tehosteet)); eksponentiaalinen nousu 0,0001 → Gain välillä NousuAlkuS…NousuLoppuS, lasku LaskuS.</summary>
             public const float Gain = 0.7f, NousuAlkuS = 0.15f, NousuLoppuS = 5.2f, LaskuS = 0.9f;
+            /// <summary>Lasku on eksponentiaalinen nykytasosta 0,0001:een; lähde pysäytetään 1,0 s:n kohdalla.</summary>
+            public const float PysaytysS = 1.0f;
+            /// <summary>Webin pelin lento ja mannerlento kestävät MANNER_LENTO_MS = 2,8 s (stopFlight silloin):
+            /// nousu ehtii vain noin tasoon 0,010 eli −37 dB huipusta. Avauslennolla web ei soita moottoria.</summary>
+            public const float WebinLentoS = 2.8f;
+
+            /// <summary>Moottorin taso (× Master × Taso(Tehosteet)) hetkellä t lähdöstä, kuten webin rampit.</summary>
+            public static float Taso(float t)
+            {
+                if (t <= NousuAlkuS) return Hiljaisin;
+                if (t >= NousuLoppuS) return Gain;
+                return Hiljaisin * (float)System.Math.Pow(Gain / Hiljaisin, (t - NousuAlkuS) / (NousuLoppuS - NousuAlkuS));
+            }
+        }
+
+        /// <summary>Siivun alkukohta (webin playSlice): hanta, alusta, isku (satunnainen isku, muuten satunnainen) tai satunnainen.
+        /// arpa() ∈ [0, 1).</summary>
+        public static float Alkukohta(Tehoste t, float pituus, IReadOnlyList<float> iskut, System.Func<double> arpa)
+        {
+            if (t.Aloitus == "hanta") return System.Math.Max(0f, pituus - t.Kesto - HantaVaraS);
+            if (t.Aloitus == "alusta") return 0f;
+            if (t.Aloitus == "isku" && iskut != null && iskut.Count > 0) return iskut[(int)System.Math.Floor(arpa() * iskut.Count)];
+            return pituus * SatunnainenAlku + (float)arpa() * System.Math.Max(0.01f, pituus * SatunnainenVali - t.Kesto);
+        }
+
+        /// <summary>Toistonopeus: nimetty vire ±2 %, tasavire 1, muuten ±5 % (webin jitter; r ∈ [0, 1)).</summary>
+        public static float Toistonopeus(Tehoste t, double r)
+        {
+            float heitto = (float)(r * 2 - 1);
+            if (t.Vire.HasValue) return t.Vire.Value * (1 + heitto * NimettyVireHeitto);
+            return t.Tasavire ? 1f : 1 + heitto * VireHeitto;
         }
     }
 }

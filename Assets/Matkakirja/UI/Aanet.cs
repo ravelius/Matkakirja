@@ -69,7 +69,8 @@ namespace Matkakirja.Natiivi
         {
             AaniKanava.Puhe => Asetukset.Taso(Voima.Pulu) * 0.9f,
             AaniKanava.Kertoja => Asetukset.Taso(Voima.Lukija),
-            _ => Tehostetaulu.Master * Asetukset.Taso(Voima.Tehosteet),
+            // Webin master 0,24 × kompressorin automaattinen makeup (+1,8 dB, Tehostetaulu.Kompressori).
+            _ => Tehostetaulu.Master * Tehostetaulu.Kompressori.Makeup * Asetukset.Taso(Voima.Tehosteet),
         };
 
         static AudioSource Soitin(AaniKanava k)
@@ -79,8 +80,13 @@ namespace Matkakirja.Natiivi
             if (k == AaniKanava.Kertoja) return kertoja;
             tehosteet.RemoveAll(s => s == null);
             foreach (var s in tehosteet) if (!s.isPlaying && !Varattu(s)) return s;
-            var uusi = UiKerros.Hae().gameObject.AddComponent<AudioSource>();
+            // Oma lapsi-GameObject: kaiku (AudioReverbFilter) koskee kaikkia saman olion lähteitä,
+            // eikä puhe ja kertoja kulje webissäkään tehosteväylän kaiun läpi.
+            var go = new GameObject("Tehoste " + tehosteet.Count);
+            go.transform.SetParent(UiKerros.Hae().transform, false);
+            var uusi = go.AddComponent<AudioSource>();
             uusi.playOnAwake = false;
+            Kaiku(go.AddComponent<AudioReverbFilter>());
             tehosteet.Add(uusi);
             return uusi;
         }
@@ -348,7 +354,11 @@ namespace Matkakirja.Natiivi
                 }
                 default: alku = Satunnainen(pituus, kesto); break;
             }
-            var siivu = Leikkaa(klippi, alku, kesto, gain, verho: true);
+            // Web src.start(t0, alku, kesto + 0,03): kesto on puskuriaikaa, mutta gain-käyrä kulkee
+            // seinäkelloajassa ja sulkee äänen kohdassa kesto. Puskurista luetaan siis
+            // min(kesto × nopeus, kesto + 0,03) ja käyrä venytetään nopeudella.
+            float luku = Mathf.Min(kesto * nopeus, kesto + Tehostetaulu.SoittoLisaS);
+            var siivu = Leikkaa(klippi, alku, luku, gain, verho: true, nopeus: nopeus, kayraKesto: kesto);
             var s = Soitin(AaniKanava.Tehoste);
             s.loop = false;
             s.pitch = nopeus;
@@ -359,7 +369,7 @@ namespace Matkakirja.Natiivi
             if (viive > 0f) s.PlayDelayed(viive); else s.Play();
             var soiva = new Soiva { Lahde = s, Siivu = siivu, Lahdeklippi = klippi, Gain = gain };
             soivat.Add(soiva);
-            float soi = (siivu != null ? siivu.length : Mathf.Min(kesto, pituus - alku)) / Mathf.Max(0.01f, nopeus);
+            float soi = (siivu != null ? siivu.length : Mathf.Min(luku, pituus - alku)) / Mathf.Max(0.01f, nopeus);
             UiKerros.Hae().StartCoroutine(Lopuksi(soiva, viive + soi + 0.05f));
         }
 
@@ -382,6 +392,29 @@ namespace Matkakirja.Natiivi
             if (s.Siivu != null) UnityEngine.Object.Destroy(s.Siivu);
         }
 
+        /// <summary>
+        /// Webin tehosteväylän kaiku (sound.js: kuiva 0,82 + märkä 0,18, ConvolverNode 1,2 s:n kohinaimpulssilla
+        /// (1 − i/n)^3,2). Impulssin −60 dB on 0,885 × 1,2 s ≈ 1,06 s; heijastukset pois (kohinaimpulssi on
+        /// pelkkää jälkikaikua), korkeat taajuudet vaimenevat samassa tahdissa (valkoinen kohina).
+        /// </summary>
+        static void Kaiku(AudioReverbFilter k)
+        {
+            float Mb(float kerroin) => Mathf.Clamp(2000f * Mathf.Log10(Mathf.Max(kerroin, 1e-5f)), -10000f, 0f);
+            k.reverbPreset = AudioReverbPreset.User;
+            k.dryLevel = Mb(Tehostetaulu.Kaiku.Kuiva);
+            k.room = Mb(Tehostetaulu.Kaiku.Marka);
+            k.roomHF = 0f;
+            k.roomLF = 0f;
+            k.decayTime = Tehostetaulu.Kaiku.PituusS * (1f - Mathf.Pow(0.001f, 1f / Tehostetaulu.Kaiku.Vaimeneminen));
+            k.decayHFRatio = 1f;
+            k.reflectionsLevel = -10000f;
+            k.reflectionsDelay = 0f;
+            k.reverbLevel = 0f;
+            k.reverbDelay = 0f;
+            k.diffusion = 100f;
+            k.density = 100f;
+        }
+
         static float Heitto(float arvo, float osuus) => arvo * (1f + UnityEngine.Random.Range(-1f, 1f) * osuus);
 
         // Webin satunnainen siivu: äänitteen keskiosasta (20–80 %), ettei osuta alun tai lopun hiljaisuuteen.
@@ -391,7 +424,7 @@ namespace Matkakirja.Natiivi
         /// Leikkaa klipistä [alku, alku + kesto] omaksi klipikseen. verho = webin gain-käyrä
         /// näytteisiin (normalisoituna: 1 = gain). null = klippiä ei voi lukea (varareitti).
         /// </summary>
-        static AudioClip Leikkaa(AudioClip c, float alku, float kesto, float gain, bool verho)
+        static AudioClip Leikkaa(AudioClip c, float alku, float kesto, float gain, bool verho, float nopeus = 1f, float kayraKesto = -1f)
         {
             try
             {
@@ -402,7 +435,7 @@ namespace Matkakirja.Natiivi
                 if (n <= 0 || kanavat <= 0) return null;
                 var data = new float[n * kanavat];
                 if (!c.GetData(data, a)) return null;
-                if (verho) Verho(data, kanavat, taajuus, gain);
+                if (verho) Verho(data, kanavat, taajuus, gain, nopeus, kayraKesto > 0f ? kayraKesto : kesto);
                 var siivu = AudioClip.Create("siivu " + c.name, n, kanavat, taajuus, false);
                 siivu.SetData(data, 0);
                 return siivu;
@@ -415,21 +448,21 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>
-        /// Webin playSlice-käyrä: 0,0001 → gain eksponentiaalisesti NousuS:ssa, pito, gain → 0,0001
-        /// eksponentiaalisesti LaskuS:ssa lopussa (lasku alkaa aikaisintaan 20 ms:n kohdalla).
-        /// Normalisoitu: gain itse tulee AudioSource.volumeen.
+        /// Webin playSlice-käyrä seinäkelloajassa: 0,0001 → gain eksponentiaalisesti NousuS:ssa, pito,
+        /// gain → 0,0001 eksponentiaalisesti LaskuS:ssa ennen kohtaa kesto (lasku alkaa aikaisintaan
+        /// 20 ms:n kohdalla). Näyte i soi hetkellä i / taajuus / nopeus. Normalisoitu: gain AudioSource.volumeen.
         /// </summary>
-        static void Verho(float[] data, int kanavat, int taajuus, float gain)
+        static void Verho(float[] data, int kanavat, int taajuus, float gain, float nopeus, float kesto)
         {
             int n = data.Length / kanavat;
-            float pituus = (float)n / taajuus;
             float pohja = Mathf.Min(1f, Hiljaisuus / Mathf.Max(gain, Hiljaisuus));
             float nousu = Tehostetaulu.NousuS;
-            float laskuAlku = Mathf.Max(0.02f, pituus - Tehostetaulu.LaskuS);
-            float lasku = Mathf.Max(1e-4f, pituus - laskuAlku);
+            float laskuAlku = Mathf.Max(Tehostetaulu.PitoMinS, kesto - Tehostetaulu.LaskuS);
+            float lasku = Mathf.Max(1e-4f, kesto - laskuAlku);
+            float r = Mathf.Max(0.01f, nopeus);
             for (int i = 0; i < n; i++)
             {
-                float t = (float)i / taajuus;
+                float t = (float)i / taajuus / r;
                 float e;
                 if (t < nousu) e = pohja * Mathf.Pow(1f / pohja, t / nousu);
                 else if (t < laskuAlku) continue;

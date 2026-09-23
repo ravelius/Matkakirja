@@ -391,6 +391,23 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(MiniJson.Teksti(O(te["lento"]), "url"), Tehostetaulu.Lento.Url);
         }
 
+        [Testi] static void TehosteidenSiivuJaMoottoriKutenSoundJs()
+        {
+            var arpa = new Func<double>(() => 0.5);
+            void F(double o, double x, string v) => Oleta.Tosi(Math.Abs(o - x) < 1e-5, $"odotettu {o}, saatu {x} {v}");
+            Oleta.Sama(10f - 0.6f - 0.15f, Tehostetaulu.Alkukohta(Tehostetaulu.Hae("dieLand"), 10f, null, arpa), "häntä");
+            Oleta.Sama(0f, Tehostetaulu.Alkukohta(Tehostetaulu.Hae("correct"), 10f, null, arpa), "alusta");
+            Oleta.Sama(2f, Tehostetaulu.Alkukohta(Tehostetaulu.Hae("popup"), 10f, new[] { 1f, 2f, 3f }, arpa), "isku");
+            Oleta.Sama(10f * 0.2f + 0.5f * (10f * 0.6f - 0.5f), Tehostetaulu.Alkukohta(Tehostetaulu.Hae("popup"), 10f, new float[0], arpa), "isku ilman iskuja");
+            Oleta.Sama(1f, Tehostetaulu.Toistonopeus(Tehostetaulu.Hae("pen"), 0.9), "tasavire");
+            F(0.82 * 1.02, Tehostetaulu.Toistonopeus(Tehostetaulu.Hae("step"), 1.0), "nimetty vire +2 %");
+            F(0.95, Tehostetaulu.Toistonopeus(Tehostetaulu.Hae("click"), 0.0), "heitto −5 %");
+            F(0.0001, Tehostetaulu.Lento.Taso(0.1f), "moottori hiljaa 0,15 s");
+            F(0.7, Tehostetaulu.Lento.Taso(6f), "huippu");
+            Oleta.Tosi(Tehostetaulu.Lento.Taso(Tehostetaulu.Lento.WebinLentoS) < 0.012f, "webin 2,8 s:n lento jää noin tasoon 0,010");
+            F(0.82 + 0.18, Tehostetaulu.Kaiku.Kuiva + Tehostetaulu.Kaiku.Marka, "kaiku");
+        }
+
         // =====================================================================
         // NATIIVIN OMAT SÄÄNNÖT (ei webissä)
         // =====================================================================

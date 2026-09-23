@@ -305,7 +305,8 @@ namespace Matkakirja.Natiivi
             Auki = false;
             kirjoitus?.Pause();
             juuri.style.opacity = 0f;
-            juuri.schedule.Execute(() => { if (!Auki) juuri.style.display = DisplayStyle.None; }).StartingIn(900);
+            // Ei lennolla: Valitse → Piilota → LentoKirjoitus, ja tämä ajastin piilotti avaustekstin heti (TF4, Laitetestaaja).
+            juuri.schedule.Execute(() => { if (!Auki && !lennolla) juuri.style.display = DisplayStyle.None; }).StartingIn(900);
             SyoteLukko.Vapauta(this);
         }
 
@@ -320,6 +321,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Aloituskaava: portti häipyy suoraan lähtövalintaan kartalla (avausteksti tulee vasta lennolla).</summary>
         void PortistaKartalle()
         {
+            Aanisoitin.AvausAlkoi(); // web aloitaAvauksenAani (B7-soitin)
             portti.style.opacity = 0f;
             portti.schedule.Execute(() => portti.style.display = DisplayStyle.None).StartingIn(400);
             NaytaValinta();
@@ -382,7 +384,7 @@ namespace Matkakirja.Natiivi
         {
             // Web aloitaKartalta: avauksen puhe loppuu, kun valinta alkaa; naksahdus (sfx clack).
             Puhe.Instanssi?.Pysayta();
-            Aanet.PulunTehoste("pulu.kujerrus");
+            Aanet.Tehoste("clack");
             UiSisalto.Lataa(() =>
             {
                 if (!Auki || ValitseePallolla) return;
@@ -411,6 +413,7 @@ namespace Matkakirja.Natiivi
 
         void Valitse(string id)
         {
+            Aanet.Tehoste("clack", 2.4f); // web ui.js:12690 aloituskaupungin napautus
             LopetaPallovalinta();
             Rakenne.Nayta(valinta, false, 200);
             Piilota();
@@ -426,6 +429,8 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public static bool LuentaPelilta;
         bool lennolla, lentoOhi = true;
+        /// <summary>Avausteksti on lennon kaistaleella (tai kirjoittumassa sinne).</summary>
+        public bool Lennolla => lennolla;
 
         /// <summary>
         /// Avausteksti naputetaan pallon päälle alareunan pergamenttikaistaleelle (arkki ilman verhoa ja

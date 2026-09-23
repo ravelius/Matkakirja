@@ -210,6 +210,7 @@ namespace Matkakirja.Natiivi
             if (!Auki) return;
             Auki = false;
             PysaytaLuenta();
+            Aanisoitin.Nayte(false);
             suurennos.Sulje();
             Rakenne.Nayta(peite, false, 220);
             SyoteLukko.Vapauta(this);
@@ -459,7 +460,11 @@ namespace Matkakirja.Natiivi
             if (!string.IsNullOrEmpty(n.Nayte))
             {
                 string url = n.Nayte;
-                var b = Rakenne.Nappi("▷ " + (n.NayteNimi ?? "Kuuntele musiikkia"), "mk-lehti__linkki", () => Puhe.Hae()?.Soita(url), loppu);
+                var b = Rakenne.Nappi("▷ " + (n.NayteNimi ?? "Kuuntele musiikkia"), "mk-lehti__linkki", () =>
+                {
+                    // Kulttuurinäyte vaimentaa taustan (web vaimennaTausta, B7-soitin); loppu palauttaa.
+                    if (Puhe.Hae()?.Soita(url, 0, () => Aanisoitin.Nayte(false)) == true) Aanisoitin.Nayte(true);
+                }, loppu);
                 Kirjasimet.Aseta(b, Kirjasin.Kone);
             }
             if (!string.IsNullOrEmpty(n.Wiki))

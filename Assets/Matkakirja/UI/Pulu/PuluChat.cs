@@ -124,7 +124,12 @@ namespace Matkakirja.Natiivi
             virta.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
             paneeli.Add(virta);
 
-            var rivi = Rakenne.El("mk-chat__rivi", paneeli, PickingMode.Ignore);
+            // Syöte (web rakennaSyote): sanelun tilarivi, kirjoitusrivi (kenttä + →) ja matala nappirivi
+            // (näppäimistö 1, kaiutin 1, mikrofoni 2). Sanelutilassa kirjoitusrivi on piilossa.
+            var syote = Rakenne.El("mk-chat__syote", paneeli, PickingMode.Ignore);
+            saneluTila = Rakenne.Teksti("", "mk-chat__sanelutila", syote);
+            var rivi = Rakenne.El("mk-chat__rivi", syote, PickingMode.Ignore);
+            lomake = rivi;
             kentta = new TextField { maxLength = KysymysKatto };
             kentta.AddToClassList("mk-chat__kentta");
             kentta.textEdition.placeholder = "Kysy pululta…";
@@ -132,11 +137,25 @@ namespace Matkakirja.Natiivi
             rivi.Add(kentta);
             var laheta = Rakenne.Nappi(null, "mk-chat__laheta", () => Kysy(kentta.value), rivi, Ikonit.Nuoli);
             laheta.tooltip = "Lähetä";
-            kaiutin = Rakenne.Nappi(null, "mk-chat__kaiutin", VaihdaAani, rivi, Ikonit.Viiva["kaiutin"]);
+            var nappirivi = Rakenne.El("mk-chat__nappirivi", syote, PickingMode.Ignore);
+            var kirjoita = Rakenne.Nappi(null, "mk-chat__nappula mk-chat__kirjoita", () => VaihdaTilaan(false, kohdista: true), nappirivi, NappaimistoIkoni);
+            kirjoita.tooltip = "Kirjoita kysymys";
+            kaiutin = Rakenne.Nappi(null, "mk-chat__nappula mk-chat__kaiutin", VaihdaAani, nappirivi, Ikonit.Viiva["kaiutin"]);
             kaiutin.tooltip = "Lue vastaukset ääneen";
+            mikki = Rakenne.Nappi(null, "mk-chat__nappula mk-chat__mikki", VaihdaSanelu, nappirivi);
+            mikkiIkoni = Rakenne.Ikoni(MikkiIkoni, "mk-ikoni", mikki);
+            lopetaIkoni = Rakenne.Ikoni(PysaytysIkoni, "mk-ikoni", mikki);
+            lopetaTeksti = Rakenne.Teksti("Lopeta", "mk-chat__mikkiteksti", mikki);
+            MerkitseMikki(false);
             PaivitaKaiutin();
+            sanelussa = Sanelu.Saatavilla; // web: tila = saneluTuettu() ? 'sanelu' : 'kirjoitus'
+            NaytaSyote();
+            AsetaSaneluTila(null);
+            // Web onaudiostart / sanelu-alkoi: mikrofoni oikeasti auki.
+            Sanelu.MikrofoniAuki += () => { if (kuuntelee && saneluTila.text == SaneluKaynnistyy) AsetaSaneluTila(SaneluKuuntelee); };
             Kirjasimet.Aseta(paneeli, Kirjasin.Luku);
             Kirjasimet.Aseta(rivi, Kirjasin.Kone);
+            Kirjasimet.Aseta(nappirivi, Kirjasin.Kone);
 
             // Webin "Palaa" kartan oikeassa yläkulmassa lennon jälkeen.
             palaa = Rakenne.Nappi("", "mk-chat__palaa", Palaa, kerros.Turva(UiKerros.Tilarivi));
@@ -168,6 +187,7 @@ namespace Matkakirja.Natiivi
             sulkija.style.display = DisplayStyle.Flex;
             Rakenne.Nayta(paneeli, true, 200);
             SyoteLukko.Esta(this);
+            Aanisoitin.Hiljennys("pollo", true);
             pulu.Tilanne("chatOpen");
             naytaKuplat.style.display = pulu.KuplaPalautettavissa ? DisplayStyle.Flex : DisplayStyle.None;
             if (!tervehditty) { tervehditty = true; Tervehdi(); }
@@ -177,6 +197,7 @@ namespace Matkakirja.Natiivi
 
         public void Sulje()
         {
+            LopetaSanelu();
             suurennos.Sulje();
             kuvakortti?.Sulje();
             if (!Auki) return;
@@ -184,6 +205,7 @@ namespace Matkakirja.Natiivi
             sulkija.style.display = DisplayStyle.None;
             Rakenne.Nayta(paneeli, false, 200);
             SyoteLukko.Vapauta(this);
+            Aanisoitin.Hiljennys("pollo", false);
             pulu.Tilanne("chatClose");
             kentta.Blur();
         }
@@ -750,6 +772,96 @@ namespace Matkakirja.Natiivi
                 var viimeinen = virta.Query<Label>(className: "mk-chat__livia").Last();
                 if (viimeinen != null && !kysyy) Puhe.Hae()?.Lue(viimeinen.text, "pollo");
             }
+        }
+
+        // --- sanelu (web vaihdaSanelu, aloitaNatiiviSanelu, saneluVirhe; Sanelu.cs Pelikoodarilta) -----
+
+        const string SaneluKuuntelee = "Kuuntelen…", SaneluKaynnistyy = "Käynnistän mikrofonia…";
+        const string MikkiIkoni = "<rect x=\"9\" y=\"2.8\" width=\"6\" height=\"11.4\" rx=\"3\"/>"
+            + "<path d=\"M5.6 11.4a6.4 6.4 0 0 0 12.8 0\"/><path d=\"M12 17.8v3.4M8.6 21.2h6.8\"/>";
+        const string PysaytysIkoni = "<rect class=\"taytto\" x=\"7.2\" y=\"7.2\" width=\"9.6\" height=\"9.6\" rx=\"1.6\"/>";
+        const string NappaimistoIkoni = "<rect x=\"2.4\" y=\"6.2\" width=\"19.2\" height=\"11.6\" rx=\"2.2\"/>"
+            + "<path d=\"M6 10h.01M9.3 10h.01M12.6 10h.01M15.9 10h.01M19.2 10h.01\"/>"
+            + "<path d=\"M6 13h.01M9.3 13h.01M12.6 13h.01M15.9 13h.01M19.2 13h.01\"/><path d=\"M8.4 15.6h7.2\"/>";
+
+        Label saneluTila;
+        VisualElement lomake;
+        Button mikki;
+        VisualElement mikkiIkoni, lopetaIkoni, lopetaTeksti;
+        bool sanelussa, kuuntelee;
+
+        void AsetaSaneluTila(string t)
+        {
+            saneluTila.text = t ?? "";
+            saneluTila.style.display = string.IsNullOrEmpty(t) ? DisplayStyle.None : DisplayStyle.Flex; // web :empty
+        }
+
+        /// <summary>Web naytaSyote: mikki vain, kun laite osaa sanella; sanelutilassa kirjoitusrivi piiloon.</summary>
+        void NaytaSyote()
+        {
+            bool osaa = Sanelu.Saatavilla;
+            mikki.style.display = osaa ? DisplayStyle.Flex : DisplayStyle.None;
+            lomake.style.display = sanelussa && osaa ? DisplayStyle.None : DisplayStyle.Flex;
+        }
+
+        /// <summary>Web vaihdaTilaan: sanelu lopetetaan aina, kirjoitustilassa kenttä kohdistetaan pyydettäessä.</summary>
+        void VaihdaTilaan(bool sanelu, bool kohdista = false)
+        {
+            LopetaSanelu();
+            sanelussa = sanelu;
+            NaytaSyote();
+            if (!sanelu && kohdista) kentta.Focus();
+        }
+
+        void MerkitseMikki(bool paalla)
+        {
+            if (paalla && !kuuntelee) pulu.Tilanne("microphone");
+            kuuntelee = paalla;
+            mikki.EnableInClassList("mk-chat__mikki--kuuntelee", paalla);
+            mikki.tooltip = paalla ? "Lopeta sanelu" : "Kysy ääneen";
+            mikkiIkoni.style.display = paalla ? DisplayStyle.None : DisplayStyle.Flex;
+            lopetaIkoni.style.display = lopetaTeksti.style.display = paalla ? DisplayStyle.Flex : DisplayStyle.None;
+        }
+
+        /// <summary>Mikkinappi: kuunnellessa lopettaa ja lähettää (Sanelu.Lopeta → valmis), muuten aloittaa.</summary>
+        void VaihdaSanelu()
+        {
+            if (Sanelu.Kaynnissa) { Sanelu.Lopeta(); return; }
+            if (!sanelussa) { sanelussa = true; NaytaSyote(); }
+            MerkitseMikki(true);
+            AsetaSaneluTila(SaneluKaynnistyy);
+            Sanelu.Aloita(
+                osittainen: t => AsetaSaneluTila(string.IsNullOrWhiteSpace(t) ? SaneluKuuntelee : t.Trim()),
+                valmis: t =>
+                {
+                    MerkitseMikki(false);
+                    string teksti = (t ?? "").Trim();
+                    AsetaSaneluTila(null);
+                    // Tyhjä valmis = pelaaja lopetti ennen kuin mitään tunnistettiin (web: ei kysymystä, ei moitetta).
+                    if (teksti.Length > 0) Kysy(teksti);
+                },
+                virhe: lause =>
+                {
+                    MerkitseMikki(false);
+                    AsetaSaneluTila(lause);
+                    if (Sanelu.ViimeisinVirhe == SaneluVirhe.Lupa)
+                    {
+                        sanelussa = false;
+                        NaytaSyote();
+                        Virhereaktio(0.5f);
+                    }
+                    else Virhereaktio(0.3f);
+                });
+        }
+
+        void Virhereaktio(float voimakkuus) { if (Auki) pulu.Tilanne("error", tunne: "hammentynyt", voimakkuus: voimakkuus); }
+
+        /// <summary>Web lopetaSanelu ilman lähetystä (paneeli kiinni, tilan vaihto).</summary>
+        void LopetaSanelu()
+        {
+            if (Sanelu.Kaynnissa) Sanelu.Peruuta();
+            if (kuuntelee) MerkitseMikki(false);
+            AsetaSaneluTila(null);
         }
 
         void PaivitaKaiutin() => kaiutin.EnableInClassList("mk-valittu", AaniPaalla);
