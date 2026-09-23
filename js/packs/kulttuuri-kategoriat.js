@@ -106114,4 +106114,368 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * KIMBERLEY (Afrikan kaupunkilehtierä O7, toinen erä, 23.9.2026).
+   *
+   * KANSI ON HISTORIAN SIVU. tests/lehdet.test.mjs vaatii jokaiselle
+   * lehdelle kannen (id 'kaupunki') ja jokaiselle muulle sivulle
+   * minitehtävän, joten historian seitsemän juttua ovat kannessa
+   * (Timbuktun malli) ja toinen aihe on Tiede ja keksinnöt.
+   * Kansikuvat, avauskuvat ja matkailijalle-osio tulevat myöhemmällä
+   * kierroksella.
+   *
+   * VANHAT LITTEÄT NOSTOT (africa-kulttuuri.js) siirtyivät tänne
+   * uudelleen kirjoitettuina ja lähteestä korjattuina:
+   *  - "Big Hole, käsin kaivettu kuilu" väitti kuoppaa maailman
+   *    suurimmaksi käsin kaivetuksi. Lähteen mukaan se on paikallinen
+   *    myytti: vuonna 2005 kaivosasiakirjoista pääteltiin, että
+   *    Jagersfonteinin ja Bultfonteinin käsin kaivetut osat saattoivat
+   *    olla suurempia. Korjattu myös visan fakta.
+   *  - "Timanttikuume 1871" antoi ymmärtää kymmenientuhansien tulleen
+   *    kuukausissa. Lähteen mukaan kuukaudessa kukkulalla oli 900
+   *    valtausta ja 2 000–3 000 kaivajaa; noin 40 000 asukkaan kaupunki
+   *    oli vasta 1873 (leirin väkiluku kasvoi noin 50 000:een 1872).
+   *  - "Katuvalojen kaupunki": vuosi 1882 pitää (2. syyskuuta 1882,
+   *    ensimmäisenä eteläisellä pallonpuoliskolla), mutta "ennen
+   *    Lontoota" ei löydy lähteestä, ja se poistettiin. Artikkelin oma
+   *    lisäys "toisena maailmassa Philadelphian jälkeen" jätettiin
+   *    pois: eteläisen pallonpuoliskon ensisijaisuus riittää eikä vaadi
+   *    maailmanlaajuista vertailua, jota emme pysty tarkistamaan.
+   * Kulttuurivisan (Big Hole kaivettiin käsin lapioin ja hakuin)
+   * lähdejuttu on "Kukkula, josta tuli kuoppa"; minitehtävä kysyy Long
+   * Cecilin putkesta eikä osu visaan.
+   *
+   * FAKTAPOHJA: en-Wikipedia raakatekstinä 23.9.2026 — Kimberley, South
+   * Africa (ent. Kimberley, Northern Cape), Big Hole, Eureka Diamond,
+   * Star of South Africa (diamond), De Beers, Cecil Rhodes, Barney
+   * Barnato, Siege of Kimberley, Long Cecil, Kimberlite, Henrietta
+   * Stockdale; taustaksi Griqualand West ja Sol Plaatje. Eurekan
+   * löytövuosi on lähteissä ristiriitainen (1866 kaupunkiartikkelissa,
+   * 1867 Eureka-artikkelissa), joten teksti mainitsee molemmat. Long
+   * Cecilin ensimmäisen laukauksen päivä vaihtelee artikkeleissa (19.
+   * tai 21.1.1900), joten teksti sanoo "runsaat kolme viikkoa".
+   *
+   * KUVAT katsottu silmin 900 px:n esikatseluna, kaikki >= 1200 px,
+   * lisenssi ja tekijä tarkistettu Commons-APIsta, käyttämättömiä
+   * muualla repossa: Holubin piirros 1872 (vintturi, köydet palstoille),
+   * New Rushin tori 1873 (härkävaljakot, vankkurit, matalat talot),
+   * Kimberleyn kaivos 1875 (porrastuneet palstat, köysistö rinteessä),
+   * Underwood & Underwoodin stereokuva 1901 (työläiset lepotauolla,
+   * verkko pihan yllä), Ashen kirjan liitutaulu 1900 (liha-annos, kaikki
+   * hevosenlihaa, piirityskeitto), sininen maa -näyte (harmaansininen
+   * kimberliitti) ja Long Cecil muistomerkillä (Long Tomin ammukset
+   * ketjun tolppina). Eureka-, Barnato- ja Stockdale-nostot ovat
+   * kuvatta, koska Commonsin muotokuvat ovat alle 1200 px leveitä.
+   */
+  kimberley: [
+    {
+      id: 'kaupunki',
+      nimi: 'Kimberley',
+      johdanto: 'Timanttikuumeen kaupunki, joka sai nimensä isoisän '
+        + 'matkavuonna 1873. Kukkula muuttui kuopaksi, telttaleiri '
+        + 'kaupungiksi ja kaivajien palstat yhtiöksi, joka hallitsi '
+        + 'maailman timantteja.',
+      nostot: [
+        {
+          otsikko: 'Kivi, joka kulki kirjekuoressa',
+          teksti: 'Etelä-Afrikan ensimmäisen timantin löysi 15-vuotias '
+            + 'Erasmus Jacobs Oranjejoen rannalta Hopetownin läheltä '
+            + 'vuonna 1866 tai 1867 — lähteet eivät ole yksimielisiä. '
+            + 'Kirkas pikkukivi kulki kädestä käteen, kunnes Colesbergissa '
+            + 'virkaatekevä siviilikomissaari Lorenzo Boyes näki sen '
+            + 'naarmuttavan lasia ja arveli sitä timantiksi. Kivi '
+            + 'lähetettiin tavallisessa paperikirjekuoressa Grahamstowniin '
+            + 'siirtokunnan johtavalle mineralogille William Guybon '
+            + 'Atherstonelle, joka vahvisti sen 21,25 karaatin '
+            + 'timantiksi. Kivi sai nimen Eureka. Kapmaan kuvernööri osti '
+            + 'sen 500 punnalla ja vei Englantiin, jossa se hiottiin. '
+            + 'Vuonna 1967, sata vuotta löydön jälkeen, De Beers osti '
+            + 'sen ja lahjoitti Etelä-Afrikan kansalle. Nyt se on esillä '
+            + 'Kimberleyn kaivosmuseossa.',
+          wiki: 'Eureka Diamond',
+        },
+        {
+          otsikko: 'Kokki, joka lähetettiin kaivamaan rangaistukseksi',
+          teksti: 'Vuonna 1869 griqua-paimen löysi Oranjejoen varrelta 83,5 '
+            + 'karaatin kiven, joka tunnetaan nimellä Etelä-Afrikan '
+            + 'tähti. Hän myi sen naapurin isännälle 500 lampaasta, '
+            + 'kymmenestä härästä ja hevosesta, ja ostaja myi sen '
+            + 'edelleen 11 200 punnalla. Tieto houkutteli etsijöitä, ja '
+            + 'heinäkuussa 1871 timantteja löytyi De Beerin veljesten '
+            + 'Vooruitzigtin tilalta, Colesberg Kopje -kukkulalta. Erään '
+            + 'kertomuksen mukaan löytäjä oli Esau Damoense, etsijäjoukon '
+            + 'kokki, joka oli lähetetty kukkulalle kaivamaan '
+            + 'rangaistukseksi. Uutisesta syntyi ryntäys, jota alettiin '
+            + 'kutsua nimellä New Rush. Kuukaudessa kukkula oli jaettu '
+            + '900 valtaukseen, ja niitä kaivoi kahdesta kolmeen tuhatta '
+            + 'miestä. Veljekset myivät tilansa jo heinäkuun lopussa 6 600 '
+            + 'punnalla. Heidän kantaisänsä kerrotaan olleen Vaasasta '
+            + 'lähtenyt Hollannin Itä-Intian kauppakomppanian sotilas, '
+            + 'joka tuli Kapmaalle 1699 Lyypekin kautta.',
+          tiedosto: 'Seven Years in South Africa, page 70, Kimberley Kopje in 1872.jpg',
+          lyhyt: 'Kimberleyn kukkulan kaivanto 1872: kaivajat nostavat maata vintturilla köysiä pitkin.',
+          selite: 'Emil Holubin matkakirjan piirros Kimberleyn kukkulan '
+            + 'kaivannosta vuodelta 1872: reunalla miehet kampeavat '
+            + 'vintturia, ja köydet laskeutuvat kaivajien palstoille, jotka '
+            + 'erottuvat kuopassa porrastettuina kivilohkoina.',
+          lahde: 'Emil Holub: Seven Years in South Africa (1881), Wikimedia Commons (PD)',
+          wiki: 'Star of South Africa (diamond)',
+        },
+        {
+          otsikko: 'Nimi, jonka lordi osasi lausua',
+          teksti: 'Kaivosleirin nimi oli New Rush, tilan hollantilainen nimi '
+            + 'Vooruitzigt. Lontoossa siirtomaaministeri, Kimberleyn jaarli '
+            + 'John Wodehouse, vaati paikoille kunnollisia ja '
+            + 'ymmärrettäviä nimiä ennen kuin vaalipiirejä voitiin rajata. '
+            + 'Hän ei halunnut nimeensä liitettävän niin rahvaanomaista '
+            + 'nimeä kuin New Rush, eikä hän osannut kirjoittaa eikä '
+            + 'lausua nimeä Vooruitzigt. Siirtokunnan sihteeri J. B. '
+            + 'Currey ratkaisi asian diplomaatin tavoin ja nimesi leirin '
+            + 'jaarlin mukaan. Julistus annettiin 5. heinäkuuta 1873, '
+            + 'isoisän matkavuonna. Paikallislehti Diamond Field valitti, '
+            + 'että kaivajat menivät nukkumaan New Rushissa, heräsivät '
+            + 'Kimberleyssä, ja niin heidän unelmansa oli mennyt. Samana '
+            + 'vuonna Kimberley oli jo Etelä-Afrikan toiseksi suurin '
+            + 'kaupunki, noin 40 000 asukasta. Kirjailija Anthony '
+            + 'Trollope, joka kävi siellä 1877, ei silti osannut kuvitella '
+            + 'rumempaa paikkaa: kaksikerroksisia taloja oli kaksi, kadut '
+            + 'olivat pölyä ja kuoppia, ja hän epäili asukkaiden olevan '
+            + 'ylpeitä kärpäsistään ja pölystään.',
+          tiedosto: 'DF1873 The New Rush market.jpg',
+          lyhyt: 'New Rushin tori 1873: härkävaljakoita, vankkureita ja matalia taloja leirin laidalla.',
+          selite: 'New Rushin tori vuonna 1873, samana vuonna kun leiri sai '
+            + 'nimen Kimberley: aukiolla seisoo härkävaljakoita ja '
+            + 'katettuja vankkureita polttopuukuormineen, taustalla '
+            + 'matalia taloja ja telttoja tasaisella ylängöllä.',
+          lahde: 'Richard William Murray: The Diamond-field Keepsake for 1873 / British Library, Wikimedia Commons (PD)',
+          wiki: 'Kimberley, South Africa',
+        },
+        {
+          otsikko: 'Kukkula, josta tuli kuoppa',
+          teksti: 'Kaivajien alla kukkula madaltui, kunnes siitä tuli kuoppa: '
+            + 'Kimberleyn kaivos eli Big Hole, afrikaansiksi Groot Gat. '
+            + 'Heinäkuun puolivälistä 1871 vuoteen 1914 jopa 50 000 '
+            + 'kaivajaa louhi sitä hakuin ja lapioin. Kuoppa on 463 metriä '
+            + 'leveä ja pinta-alaltaan 17 hehtaaria, ja se kaivettiin 240 '
+            + 'metrin syvyyteen. Kiveä nostettiin yli 22 miljoonaa tonnia, '
+            + 'ja timantteja saatiin lähes kolme tonnia. Kun avolouhinta '
+            + 'kävi liian vaaralliseksi, De Beers jatkoi kaivosta maan '
+            + 'alla 1 097 metrin syvyyteen. Sittemmin kuoppaa on osin '
+            + 'täytetty, ja pohjalle on noussut noin 40 metriä vettä. '
+            + 'Kuoppaa pidettiin pitkään maailman suurimpana käsin '
+            + 'kaivettuna, mutta vuonna 2005 kaivosasiakirjoja tutkinut '
+            + 'tutkija päätteli, että Jagersfonteinin ja Bultfonteinin '
+            + 'kaivosten käsin kaivetut osat saattoivat olla syvempiä tai '
+            + 'suurempia.',
+          tiedosto: 'IY188 pg127 KIMBERLEY MINE, MIDDLE STAGE (1875).jpg',
+          lyhyt: 'Kimberleyn kaivos 1875: kaivajien palstat porrastuneina kivipilareina kuopan pohjalla.',
+          selite: 'Kimberleyn kaivos keskivaiheessaan 1875: palstat ovat '
+            + 'syventyneet eri tahtiin, ja kuopan pohja on kuin '
+            + 'porrastettujen kivipilarien kaupunki. Reunalla näkyy puisia '
+            + 'nostotelineitä, ja rinteessä kulkee tiheä köysistö.',
+          lahde: 'Josiah Wright Matthews: Incwadi Yami (1887) / British Library, Wikimedia Commons (PD)',
+          wiki: 'Big Hole',
+        },
+        {
+          otsikko: 'Kaivosmiesten kaupunki',
+          teksti: 'Kaivokset tarvitsivat valtavasti mustia työmiehiä, ja '
+            + 'siirtotyöläisiä tuli koko eteläisestä Afrikasta. Samalla '
+            + 'Britannian politiikka kiihdytti 1870-luvulla maan viemistä '
+            + 'afrikkalaisilta. Kimberleyssä kehitettiin 1880-luvulta '
+            + 'alkaen suljettujen työleirien järjestelmä, joka kopioitiin '
+            + 'myöhemmin kultakaivoksille. Kaivosjohdon rakentamat '
+            + 'asuinalueet paransivat vartiointia ja vaikeuttivat '
+            + 'timanttivarkauksia, mutta niiltä puuttuivat luonnolliset '
+            + 'vesilähteet ja kunnollinen jätehuolto. Apartheid-kaupungin '
+            + 'rakenteen juuret voi jäljittää Kimberleyn nopeaan '
+            + 'teollistumiseen. Vuosina 1897–1899 Kimberleyn sairaalaan '
+            + 'otettiin 7 853 potilasta, joista 5 368 oli mustia, ja '
+            + 'heistä 1 144 kuoli, useimmiten tuberkuloosiin, '
+            + 'keuhkokuumeeseen, keripukkiin tai onnettomuuksissa. '
+            + 'Sesothonkieliset lehdet julkaisivat kaivosmiesten kirjeitä, '
+            + 'joissa kerrottiin onnettomuuksista ja lueteltiin kuolleiden '
+            + 'nimet, kylät ja päälliköt.',
+          tiedosto: 'Rustende Afrikaanse mijnwerkers bij een diamantmijn van De Beers in Kimberley, Zuid-Afrika Among the African Employees - rest hour in the De Beers Diamond Mining Compound, Kimberly, S.A. (titel op object), RP-F-F09042.jpg',
+          lyhyt: 'Lepotauko De Beersin työleirissä 1901: miehet istuvat keittoastioiden äärellä.',
+          selite: 'Underwood & Underwoodin stereokuva vuodelta 1901: '
+            + 'afrikkalaiset kaivostyöläiset lepotauolla De Beersin '
+            + 'suljetussa työleirissä. Pihan yllä on pingotettu verkko, ja '
+            + 'taustalla nousee savua keittotulilta.',
+          lahde: 'Underwood & Underwood / Rijksmuseum, Wikimedia Commons (CC0)',
+          wiki: 'Big Hole',
+        },
+        {
+          otsikko: 'Pumppujen vuokraaja ja varieteetaiteilija',
+          teksti: 'Cecil Rhodes oli 18-vuotias, kun hän tuli Kimberleyn '
+            + 'kaivoksille lokakuussa 1871 hoitamaan veljensä valtauksia. '
+            + 'Hän aloitti vuokraamalla vesipumppuja kaivajille, ja '
+            + 'myöhemmin hän ja Charles Rudd saivat urakan pumpata vettä '
+            + 'kolmesta pääkaivoksesta. Isoisän matkavuonna 1873 kentille '
+            + 'saapui Lontoon Whitechapelissa kasvanut Barnet Isaacs, joka '
+            + 'oli esiintynyt varieteelavoilla ja nyrkkeillyt ja tunnettiin '
+            + 'nimellä Barney Barnato. Kahdesta tuli kilpailijat. Kun '
+            + 'ranskalaisyhtiön Kimberleyn kaivoksen halkaiseva '
+            + 'valtausalue tuli myyntiin, Rhodes tarjosi 1,4 miljoonaa '
+            + 'puntaa ja Barnato 1,75 miljoonaa, kunnes Rhodes ehdotti '
+            + 'järjestelyä, jossa Barnato vetäytyi. Vuonna 1888 yhtiöt '
+            + 'yhdistyivät De Beers Consolidated Minesiksi, ja kun Rhodes '
+            + 'kuoli 1902, De Beers hallitsi 90 prosenttia maailman '
+            + 'timanttituotannosta. Barnato putosi laivan laidan yli '
+            + 'Madeiran lähellä 1897, eikä hänen kuolemansa syytä ole '
+            + 'koskaan selvitetty. Rhodesin perintö on yhä kiistelty: '
+            + 'arvostelijat muistuttavat, että hän vei maata Kapmaan '
+            + 'mustalta alkuperäisväestöltä.',
+          wiki: 'Barney Barnato',
+        },
+        {
+          otsikko: 'Kun vesi oli timantteja kalliimpaa',
+          teksti: 'Toinen buurisota alkoi lokakuussa 1899, ja buurijoukot '
+            + 'piirittivät Kimberleyn 124 päiväksi. Cecil Rhodes ehti '
+            + 'kaupunkiin juuri ennen piiritystä ja riiteli koko sen ajan '
+            + 'varuskunnan komentajan, eversti Robert Kekewichin kanssa. '
+            + 'Buurit katkaisivat rautatien ja sulkivat Vaal-joelta tulevan '
+            + 'päävesijohdon, ja ensimmäistä kertaa vesi kaivoksissa oli '
+            + 'arvokkaampaa kuin timantit. De Beersin pääinsinööri George '
+            + 'Labram rakensi kaivoksen uumeniin kylmälaitoksen, jossa '
+            + 'teurastetun karjan liha säilyi kesähelteellä. Lopulta '
+            + 'syötiin hevosenlihaa. Köyhimmille pula oli kovin: '
+            + 'paikallinen lääkäri neuvoi syömään aloen lehtiä keripukin '
+            + 'torjumiseksi, ja Rhodes perusti keittolan. Helmikuussa '
+            + 'buurit toivat Long Tom -tykin, jonka ammukset ulottuivat '
+            + 'joka puolelle kaupunkia, ja asukkaat pakenivat kaivokseen. '
+            + 'Koska tykki käytti savuavaa ruutia, tähystäjät ehtivät '
+            + 'varoittaa jopa 17 sekuntia ennen iskua. Kenraali Frenchin '
+            + 'ratsuväki mursi piirityksen 15. helmikuuta 1900.',
+          tiedosto: 'Besieged by the Boers - a diary of life and events in Kimberly during the siege (1900) (14782031274).jpg',
+          lyhyt: 'Piirityksen liitutaulu: täysi liha-annos kahdeksi päiväksi, kaikki hevosenlihaa.',
+          selite: 'Kimberleyn piirityksen ilmoitustaulu E. Oliver Ashen '
+            + 'päiväkirjassa vuodelta 1900: tänään voidaan jakaa täysi '
+            + 'puolen naulan liha-annos kahdeksi päiväksi, kaikki '
+            + 'hevosenlihaa. Piirityskeiton lipun haltijat saavat ottaa '
+            + 'puolet annoksestaan keittona, eikä keittoa myydä rahalla.',
+          lahde: 'Evelyn Oliver Ashe: Besieged by the Boers (1900), Internet Archive Book Images, Wikimedia Commons (PD)',
+          wiki: 'Siege of Kimberley',
+        },
+      ],
+    },
+    {
+      id: 'tiede',
+      nimi: 'Tiede ja keksinnöt',
+      johdanto: 'Kimberley antoi nimensä kivilajille, sytytti eteläisen '
+        + 'pallonpuoliskon ensimmäiset sähköiset katuvalot ja rakensi '
+        + 'piirityksessä oman tykkinsä. Täältä lähti myös maailman '
+        + 'ensimmäinen sairaanhoitajien rekisteri.',
+      tehtava: {
+        kysymys: 'Mistä Long Cecil -tykin putki sorvattiin Kimberleyn '
+          + 'piirityksen aikana?',
+        vaihtoehdot: [
+          'Kaivoksen vanhasta pumppuputkesta',
+          'Sulatetuista rautatiekiskoista',
+          'Koneen akseliksi tilatusta teräksestä',
+          'Buurien hylkäämästä tykinputkesta',
+        ],
+        oikea: 2,
+        fakta: 'Kolmen metrin pituinen ja 27 senttiä paksu teräsaihio oli '
+          + 'alun perin tilattu De Beersin korjaamon koneen akseliksi. '
+          + 'Osa putken rihlaukseen tarvittavista työkaluista piti ensin '
+          + 'tehdä itse.',
+      },
+      nostot: [
+        {
+          otsikko: 'Sininen maa keltaisen alla',
+          teksti: 'Kimberleyn kaivajat huomasivat, että pehmeän keltaisen '
+            + 'maan alla oli kovaa sinistä kiveä. Kun kentät ajautuivat '
+            + 'lamaan 1874–1875, moni lähti, mutta Cecil Rhodes ja Charles '
+            + 'Rudd jäivät, koska he uskoivat sinisessä maassa olevan '
+            + 'paljon timantteja. Kivilaji sai myöhemmin kaupungin mukaan '
+            + 'nimen kimberliitti. Se syntyy maapallon vaipassa 150–450 '
+            + 'kilometrin syvyydessä ja purkautuu pintaan nopeasti ja '
+            + 'rajusti, usein runsaan hiilidioksidin voimalla. Purkaus '
+            + 'jättää jälkeensä porkkanan muotoisen pystysuoran piipun, '
+            + 'jonka halkaisija on 75 metristä puoleentoista kilometriin. '
+            + 'Timantit eivät synny kimberliitissä: kivi vain kuljettaa '
+            + 'niitä mukanaan syvältä vaipasta pintaan. Kimberleyhin '
+            + 'kaivettiin viisi suurta kuoppaa piippuja seuraten, ja '
+            + 'kolme niistä, Dutoitspan, Wesselton ja Bultfontein, '
+            + 'suljettiin vasta 2005.',
+          tiedosto: 'Kimberlite (South Africa) 2.jpg',
+          lyhyt: 'Sinistä maata eli rapautumatonta kimberliittiä, ilmeisesti Etelä-Afrikasta.',
+          selite: 'Tyypillinen sinisen maan näyte: harmaansinistä, '
+            + 'rapautumatonta kimberliittiä, jossa erottuu tummia ja '
+            + 'vihertäviä rakeita. Rapautunutta kimberliittiä kutsutaan '
+            + 'keltaiseksi maaksi. Kuvaajan mukaan näyte on ilmeisesti '
+            + 'Etelä-Afrikasta.',
+          lahde: 'James St. John, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Kimberlite',
+        },
+        {
+          otsikko: 'Kaupunki, joka ehti ensin',
+          teksti: 'Timanttiraha teki Kimberleystä Etelä-Afrikan '
+            + 'teollistumisen ensimmäisen keskuksen, ja kaupunki ehti '
+            + 'moneen asiaan ensimmäisenä. Maan ensimmäinen pörssi, '
+            + 'Kimberleyn kuninkaallinen pörssi, avattiin 2. helmikuuta '
+            + '1881. Syyskuun 2. päivänä 1882 kaduilla syttyivät sähköiset '
+            + 'katuvalot ensimmäisenä kaupunkina koko eteläisellä '
+            + 'pallonpuoliskolla. Vuonna 1892 kaupungissa pidettiin '
+            + 'kansainvälinen näyttely, jossa oli esillä kaivoskoneita ja '
+            + 'maalauksia kuningatar Viktorian kokoelmista. Etelä-Afrikan '
+            + 'ensimmäinen kaivoskoulu aloitti 1896; myöhemmin se siirtyi '
+            + 'Johannesburgiin, ja siitä tuli Witwatersrandin yliopiston '
+            + 'ydin. Vuonna 1913 Kimberleyssä avattiin maan ensimmäinen '
+            + 'lentokoulu, jossa koulutettiin lentäjiä ilmailujoukoille, '
+            + 'joista tuli myöhemmin Etelä-Afrikan ilmavoimat. Siellä oppi '
+            + 'lentämään myös Ann Maria Bocciarelli, Afrikan mantereen '
+            + 'ensimmäinen nainen, joka sai lentäjän lupakirjan.',
+          wiki: 'Kimberley, South Africa',
+        },
+        {
+          otsikko: 'Tykki, joka tehtiin kaivoksen korjaamossa',
+          teksti: 'Piiritetyllä Kimberleyllä oli vain pieniä vuoristotykkejä, '
+            + 'joten De Beersin pääinsinööri George Labram ja yhtiön '
+            + 'pääpiirtäjä Edward Goffe päättivät tehdä omansa. He kävivät '
+            + 'läpi ne harvat tykinvalmistusta käsittelevät kirjat, joita '
+            + 'kaupungista löytyi, ja laskivat, että tykki voitiin tehdä '
+            + 'käsillä olevista aineista. Putki sorvattiin kolmen metrin '
+            + 'pituisesta ja 27 senttiä paksusta teräsaihiosta, joka oli '
+            + 'alun perin tilattu korjaamon koneen akseliksi, ja osa '
+            + 'työkaluista piti tehdä ensin itse. Työ alkoi tapaninpäivänä '
+            + '1899, ja ensimmäinen laukaus ammuttiin runsaat kolme viikkoa '
+            + 'myöhemmin. Long Cecil -nimen saanut tykki ampui 255 '
+            + 'ammusta, kunnes buurit vastasivat paljon suuremmalla Long '
+            + 'Tomilla. Labram kuoli Long Tomin ammukseen alle viikkoa '
+            + 'ennen piirityksen loppua, ja hänet haudattiin pimeän '
+            + 'turvin. Kun Rhodes kuoli 1902, hänen arkkunsa kuljetettiin '
+            + 'Kapkaupungissa Long Cecilin lavetilla.',
+          tiedosto: 'Boer War Gun "Long Cecil" ... (Photo JC PLE) (52695357112).jpg',
+          lyhyt: 'Long Cecil Honoured Dead -muistomerkillä, ympärillään buurien Long Tomin ammuksia.',
+          selite: 'Long Cecil seisoo nykyään Kimberleyn Honoured Dead '
+            + '-muistomerkin jalustalla. Tykin ympärillä ketjun tolppina '
+            + 'ovat buurien Long Tom -tykin ammukset.',
+          lahde: 'Bernard Dupont, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Long Cecil',
+        },
+        {
+          otsikko: 'Sisar Henrietta ja maailman ensimmäinen rekisteri',
+          teksti: 'Englantilainen Henrietta Stockdale tuli Etelä-Afrikkaan '
+            + '1874 anglikaaniseen lähetystyöhön ja otti sisarlupauksen '
+            + 'nimellä sisar Henrietta. Talvella 1876 hän saapui '
+            + 'Kimberleyhin piirisairaanhoitajaksi kaivosleireille ja '
+            + 'uuteen Carnarvonin sairaalaan. Lavantaudin jälkeen hän '
+            + 'toipui Englannissa, kouluttautui lisää Lontoossa ja perusti '
+            + 'palattuaan Carnarvonin sairaalaan eteläisen Afrikan '
+            + 'ensimmäisen sairaanhoitajakoulun. Lainsäädännön taakse hän '
+            + 'sai vaikutusvaltaisia miehiä, kuten Grahamstownin tohtori '
+            + 'William Guybon Atherstonen, saman miehen, joka oli '
+            + 'tunnistanut Eureka-timantin. Kapmaan lääkintä- ja '
+            + 'apteekkilaki vuodelta 1891 toi maailman ensimmäisen '
+            + 'sairaanhoitajien ja kätilöiden valtiollisen rekisteröinnin. '
+            + 'Sisar Henrietta kuoli Kimberleyssä 1911. Pyhän Kyprianoksen '
+            + 'katedraalin pihalla seisoo Jack Pennin veistämä patsas '
+            + 'vuodelta 1970, jonka kerrotaan olevan yksi harvoista '
+            + 'nunnan patsaista.',
+          wiki: 'Henrietta Stockdale',
+        },
+      ],
+    },
+  ],
 };

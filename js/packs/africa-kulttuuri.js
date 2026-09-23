@@ -1138,45 +1138,20 @@ export const AFRICA_KULTTUURI = {
         + 'siitä nimi jylisevä savu.',
     },
   },
+  // Kimberleyn litteät nostot siirtyivät kaupunkilehteen
+  // (kulttuuri-kategoriat.js, kimberley) 23.9.2026: Big Hole, timanttikuume
+  // ja katuvalot kirjoitettiin siellä uudelleen lähteestä tarkistettuina
+  // ("suurin käsin kaivettu" on myytti, "ennen Lontoota" poistettiin).
+  // Visan lähdejuttu on lehden "Kukkula, josta tuli kuoppa".
   kimberley: {
-    nostot: [
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Big Hole, käsin kaivettu kuilu',
-        tiedosto: 'Big Hole Kimberley.jpg',
-        teksti: 'Kimberleyn Big Hole on suurin ihmisten käsin kaivama '
-          + 'kuoppa maailmassa: kymmenettuhannet kaivajat upottivat sen '
-          + 'lapioin ja hakuin yli kahdensadan metrin syvyyteen '
-          + 'timanttikuumeen vuosina.',
-        selite: 'Big Hole nykyään: kuilun pohjalle on noussut '
-          + 'vihreä järvi, ja reunalla vanha kaivoskaupunki on '
-          + 'museona. Kuopasta nostettiin lähes kolme tonnia '
-          + 'timantteja.',
-        lahde: 'Rudolph Botha, Wikimedia Commons (CC BY-SA 3.0)',
-      },
-      {
-        tyyppi: 'teksti',
-        otsikko: 'Timanttikuume 1871',
-        teksti: 'Kun Colesbergin kukkulalta löytyi timantteja, paikalle '
-          + 'ryntäsi kuukausissa kymmeniätuhansia onnenonkijoita '
-          + 'teltteineen. Kukkula katosi kirjaimellisesti — sen paikalle '
-          + 'kaivettiin kuoppa.',
-      },
-      {
-        tyyppi: 'teksti',
-        otsikko: 'Katuvalojen kaupunki',
-        teksti: 'Timanttirahalla Kimberley sai sähkökatuvalot ensimmäisenä '
-          + 'koko eteläisellä pallonpuoliskolla vuonna 1882 — ennen '
-          + 'Lontoota. Kaivoskaupunki halusi näyttää, ettei se ollut '
-          + 'mikään syrjäkylä.',
-      },
-    ],
     kysymys: {
       q: 'Miten Kimberleyn Big Hole kaivettiin?',
       options: ['Vesisuihkuin', 'Dynamiitilla', 'Kaivinkonein', 'Käsin lapioin ja hakuin'],
       correct: 3,
-      fact: 'Kymmenettuhannet kaivajat upottivat kuopan käsivoimin — se '
-        + 'on suurin käsin kaivettu kuoppa maailmassa.',
+      fact: 'Jopa 50 000 kaivajaa louhi kuoppaa hakuin ja lapioin vuosina '
+        + '1871–1914. Sitä pidettiin pitkään maailman suurimpana käsin '
+        + 'kaivettuna kuoppana, mutta Jagersfonteinin kaivos saattaa olla '
+        + 'vielä suurempi.',
     },
   },
   mosambik: {
