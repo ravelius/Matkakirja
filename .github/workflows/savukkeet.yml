@@ -93,6 +93,15 @@ concurrency:
 jobs:
   # PÄÄREITTI: koko sarja yhtenä jobina Mac Studion runnerilla.
   savukkeet-mac:
+    # Koko repon laajuinen jono (Fable 23.9.2026, kuormaherkkien savukkeiden
+    # satunnaiset punaiset kun 4-5 PR:n savukkeet-mac ajoi rinnakkain samalla
+    # Macilla): vain YKSI savukkeet-mac-ajo kerrallaan riippumatta haarasta.
+    # cancel-in-progress false — jonotetaan, ei peruuteta toisen haaran ajoa.
+    # Yllä oleva per-haara concurrency hoitaa yhä saman haaran vanhan ajon
+    # peruutuksen, tämä vain sarjallistaa Macin käytön haarojen välillä.
+    concurrency:
+      group: savukkeet-mac-macilla
+      cancel-in-progress: false
     if: >-
       github.event_name == 'workflow_dispatch' ||
       github.event_name == 'schedule' ||
