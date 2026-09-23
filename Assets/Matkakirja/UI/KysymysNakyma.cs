@@ -19,12 +19,21 @@
 // kortti ei mahdu puhelimen ruudulle. Tapahtumakortti (#event-dialog) käyttää
 // samaa korttia: "Matkalla sattui", teksti, vaikutus ja Jatka.
 //
+// Kohtaaminen (erä 4, web visa.js "KOHTAAMISEN KAKSI SIVUA"): TervehdysVaihe =
+// sivu 1: iso kohtaamiskuva kuvateksteineen, hahmon tervehdys kirjoituskoneella,
+// viimeisen yrityksen varoitus ja AloitaTeksti-nappi (KysymysToiminnot.Aloita).
+// Sivu 2 (kysymys): kuva pieneksi 104 pt tunnisteeksi, otsikkorivillä "yritys n/2".
+// Tulos kahdessa vaiheessa (TulosVaihe): 1 = tuomio ja vaihtoehtojen värit,
+// 2 = paljastus: löydön kuva (LaattaIkoni), oikea vastaus, ohjeet, "Vuoro
+// vaihtuu", repliikki ja fakta kirjoituskoneella, lähteet ja Jatka. Napautus
+// kortissa näyttää kirjoitettavan tekstin heti kokonaan.
+//
 // Sopimus (RAJAPINTA.md): ohjain kutsuu Nayta jokaisen teon jälkeen, ja näkymä
 // rakentaa sisällön datasta uudelleen (ei omaa pelitilaa). PaivitaAika tulee
 // joka ruudussa, kun Sekunnit != null. Syötelukko on ohjaimen: näkymä ei kutsu
 // SyoteLukkoa. Himmennyksen napautus ei sulje kysymystä (modaalinen, kuten web).
-// Webin kirjoituskoneefekti ja kaksivaiheinen tuomio → paljastus ovat ohjaimen
-// vuon asia; tämä näkymä näyttää tuloksen kerralla (tuomio + löytö + fakta).
+// Tuomion ja paljastuksen ajoitus (0,9 s) on ohjaimen; TulosVaihe 0 vastatussa
+// datassa (vanha ohjain, testiesimerkit) = paljastus suoraan.
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -49,6 +58,18 @@ namespace Matkakirja.Natiivi
         bool odottaa;
         int? aikaraja;
         IVisualElementScheduledItem viestiPiiloon;
+        // Vaiheet: edellinen näyttö (vaiheen vaihtuessa vieritys siirtyy) ja vaihtoehtojen esiinliuku kerran.
+        int edellinenTulosVaihe;
+        bool edellinenTervehdys, vaihtoehdotEsilla;
+        Button aloitaNappi;
+        VisualElement varoitus;
+
+        // Kirjoituskone (web typeText: sana kerrallaan, tuleva teksti näkymättömänä paikallaan).
+        const int TervehdysMs = 95, RepliikkiMs = 55;
+        readonly Dictionary<string, int> kirjoitettu = new Dictionary<string, int>();
+        readonly List<(Label Label, string Teksti, string[] Sanat, int Ms)> kirjoitusJono = new List<(Label, string, string[], int)>();
+        Action kunKirjoitettu;
+        IVisualElementScheduledItem kirjoitusAjo;
 
         public bool Auki { get; private set; }
 
@@ -97,6 +118,8 @@ namespace Matkakirja.Natiivi
             viesti.style.display = DisplayStyle.None;
             napit = Rakenne.El("mk-kysymys__napit", sisus, PickingMode.Ignore);
             Kirjasimet.Aseta(napit, Kirjasin.Kone);
+            // Napautus missä tahansa kortissa näyttää kirjoitettavan tekstin heti kokonaan.
+            sisus.RegisterCallback<PointerDownEvent>(_ => KirjoitusValmiiksi(), TrickleDown.TrickleDown);
 
             kerros.TurvaMuuttui += Asettele;
         }
@@ -118,27 +141,49 @@ namespace Matkakirja.Natiivi
             if (d == null) { Piilota(); return; }
             string uusiAvain = d.Laji + "\u001f" + d.Otsikko + "\u001f" + d.Kysymys;
             bool uusi = uusiAvain != avain || !Auki;
-            bool vastattiinNyt = d.Vastattu && nakyva != null && !nakyva.Vastattu && !uusi;
             avain = uusiAvain;
             nakyva = d;
             toiminnot = t ?? new KysymysToiminnot();
             odottaa = false;
 
             bool tapahtuma = d.Laji == KysymysLaji.Tapahtumakortti;
-            RakennaPaa(d, uusi, tapahtuma);
+            bool tervehdys = d.TervehdysVaihe && !d.Vastattu && !tapahtuma;
+            int tulosVaihe = !d.Vastattu ? 0 : d.TulosVaihe <= 0 ? 2 : Mathf.Min(d.TulosVaihe, 2);
+            if (uusi)
+            {
+                kirjoitettu.Clear();
+                vaihtoehdotEsilla = false;
+                edellinenTulosVaihe = 0;
+                edellinenTervehdys = false;
+            }
+            bool sivuVaihtui = uusi || tervehdys != edellinenTervehdys;
+            bool tulosVaihtui = tulosVaihe > 0 && tulosVaihe != edellinenTulosVaihe;
+
+            // Kesken oleva kirjoitus jatkuu uusissa elementeissä samasta kohdasta.
+            kirjoitusAjo?.Pause();
+            kirjoitusJono.Clear();
+            kunKirjoitettu = null;
+            aloitaNappi = null;
+            varoitus = null;
+
+            RakennaPaa(d, uusi, tapahtuma, tervehdys);
             vieritys.Clear();
             var sisalto = vieritys.contentContainer;
             VisualElement tulos = null;
             if (tapahtuma) RakennaTapahtuma(d, sisalto);
-            else tulos = RakennaKysymys(d, sisalto, uusi);
-            RakennaNapit(d);
+            else if (tervehdys) RakennaTervehdys(d, sisalto);
+            else tulos = RakennaKysymys(d, sisalto, tulosVaihe);
+            RakennaNapit(d, tulosVaihe, tervehdys);
             NaytaViesti(d.Viesti);
+            KirjoitusAloita();
 
             Asettele();
-            if (uusi) vieritys.scrollOffset = Vector2.zero;
-            // Vastauksen jälkeen tulos näkyviin (se on vaihtoehtojen alla, usein ruudun ulkopuolella).
-            if (vastattiinNyt && tulos != null)
+            if (sivuVaihtui) vieritys.scrollOffset = Vector2.zero;
+            // Tuomio ja paljastus näkyviin (tulos on vaihtoehtojen alla, usein ruudun ulkopuolella).
+            if (tulosVaihtui && tulos != null && !uusi)
                 vieritys.schedule.Execute(() => { if (tulos.panel != null) vieritys.ScrollTo(tulos); }).StartingIn(60);
+            edellinenTulosVaihe = tulosVaihe;
+            edellinenTervehdys = tervehdys;
             if (!Auki)
             {
                 Auki = true;
@@ -174,6 +219,9 @@ namespace Matkakirja.Natiivi
             viestiPiiloon?.Pause();
             viesti.RemoveFromClassList("mk-auki");
             viesti.style.display = DisplayStyle.None;
+            kirjoitusAjo?.Pause();
+            kirjoitusJono.Clear();
+            kunKirjoitettu = null;
             if (!Auki) return;
             Auki = false;
             avain = null;
@@ -183,7 +231,7 @@ namespace Matkakirja.Natiivi
 
         // --- rakennus ---------------------------------------------------------------
 
-        void RakennaPaa(KysymysNaytto d, bool uusi, bool tapahtuma)
+        void RakennaPaa(KysymysNaytto d, bool uusi, bool tapahtuma, bool tervehdys)
         {
             paa.style.display = tapahtuma ? DisplayStyle.None : DisplayStyle.Flex;
             // Leima vain pulmissa ja valokuvissa (web: kehys kertoo muuten, kuka kysyy).
@@ -196,10 +244,13 @@ namespace Matkakirja.Natiivi
             };
             leima.text = leimaTeksti ?? "";
             leima.style.display = leimaTeksti == null ? DisplayStyle.None : DisplayStyle.Flex;
-            kaupunki.text = d.Otsikko ?? "";
+            // Kohtaamisen yrityslaskuri otsikkoriville (web: "Kaupunki — kohtaaminen · yritys 1/2").
+            string yritys = d.Yritys.HasValue && d.Yrityksia.HasValue ? $" · yritys {d.Yritys}/{d.Yrityksia}" : "";
+            kaupunki.text = (d.Otsikko ?? "") + yritys;
 
-            // Tiimalasi vain vastaamattomassa, aikarajallisessa kysymyksessä (pulmassa ei kelloa).
-            bool kello = d.Sekunnit.HasValue && !d.Vastattu && !tapahtuma;
+            // Tiimalasi vain vastaamattomassa, aikarajallisessa kysymyksessä (pulmassa ei kelloa,
+            // tervehdyssivulla aika ei kulu).
+            bool kello = d.Sekunnit.HasValue && !d.Vastattu && !tapahtuma && !tervehdys;
             bool alkaa = kello && (uusi || !aikaraja.HasValue);
             aikaraja = kello ? d.Sekunnit : null;
             aika.style.display = kello ? DisplayStyle.Flex : DisplayStyle.None;
@@ -217,8 +268,11 @@ namespace Matkakirja.Natiivi
             }
         }
 
-        VisualElement RakennaKysymys(KysymysNaytto d, VisualElement s, bool uusi)
+        VisualElement RakennaKysymys(KysymysNaytto d, VisualElement s, int tulosVaihe)
         {
+            // Kohtaamisen kysymyssivu: kuva pieneksi tunnisteeksi (web .quiz.kysymysvaihe).
+            if (!string.IsNullOrEmpty(d.MuotokuvaUrl)) Muotokuva(s, d, false);
+
             // Pulman luonnos ja selite (Kehys = pulman selite).
             bool pulma = d.Laji == KysymysLaji.Pulma;
             if (pulma)
@@ -246,11 +300,68 @@ namespace Matkakirja.Natiivi
                 if (!string.IsNullOrEmpty(d.Huomautus)) Lappu(s, d.Huomautus);
             }
 
-            Vaihtoehdot(d, s, uusi);
+            Vaihtoehdot(d, s);
             if (pulma && d.VaihtoehtoKuvat != null && !string.IsNullOrEmpty(d.KuvaLahde))
                 Kirjasimet.Aseta(Rakenne.Teksti(d.KuvaLahde, "mk-kysymys__kuvalahteet", s), Kirjasin.Kone);
 
-            return d.Vastattu ? Tulos(d, s) : null;
+            return tulosVaihe == 0 ? null : tulosVaihe == 1 ? Tuomio(d, s) : Paljastus(d, s);
+        }
+
+        /// <summary>
+        /// Tervehdyssivu (web SIVU 1): iso kohtaamiskuva ja kuvateksti, tervehdys
+        /// kirjoituskoneella ja sen jälkeen varoitus ja Aloita-nappi (napitrivissä).
+        /// </summary>
+        void RakennaTervehdys(KysymysNaytto d, VisualElement s)
+        {
+            if (!string.IsNullOrEmpty(d.MuotokuvaUrl)) Muotokuva(s, d, true);
+            if (!string.IsNullOrEmpty(d.Tervehdys))
+                Kirjoitettava(d.Tervehdys, "mk-kysymys__tervehdys", s, Kirjasin.LukuKursiivi, TervehdysMs);
+            if (!string.IsNullOrEmpty(d.Varoitus))
+            {
+                varoitus = Rakenne.El("mk-kysymys__varoitus", s, PickingMode.Ignore);
+                var l = Rakenne.Teksti(d.Varoitus, "mk-kysymys__varoitusteksti", varoitus);
+                l.enableRichText = false;
+                Kirjasimet.Aseta(l, Kirjasin.LukuKursiivi);
+                varoitus.style.display = DisplayStyle.None;
+            }
+            kunKirjoitettu = () =>
+            {
+                if (varoitus != null) varoitus.style.display = DisplayStyle.Flex;
+                if (aloitaNappi != null) Rakenne.Nayta(aloitaNappi, true, 200);
+            };
+        }
+
+        /// <summary>
+        /// Kohtaamiskuva: iso (tervehdyssivu, object-fit contain, katto ~41 % ruudusta)
+        /// kuvatekstin ja lähderivin kanssa, tai pieni 104 pt pyöristetty neliö (kysymyssivu).
+        /// </summary>
+        void Muotokuva(VisualElement s, KysymysNaytto d, bool iso)
+        {
+            var kuvio = Rakenne.El(iso ? "mk-kysymys__muotokuva" : "mk-kysymys__muotokuva mk-kysymys__muotokuva--pieni", s, PickingMode.Ignore);
+            var kuva = Rakenne.El("mk-kysymys__muotokuvakuva", kuvio, PickingMode.Ignore);
+            if (iso)
+            {
+                var teksti = Rakenne.El("mk-kysymys__muotokuvateksti", kuvio, PickingMode.Ignore);
+                if (!string.IsNullOrEmpty(d.MuotokuvaLyhyt))
+                {
+                    var l = Rakenne.Teksti(d.MuotokuvaLyhyt, "mk-kysymys__muotokuvaselite", teksti);
+                    l.enableRichText = false;
+                    Kirjasimet.Aseta(l, Kirjasin.LukuKursiivi);
+                }
+                Kirjasimet.Aseta(Rakenne.Teksti("Matkakirjan kuvitus", "mk-kysymys__muotokuvalahde", teksti), Kirjasin.Kone);
+            }
+            string odotettu = avain;
+            Kuvat.Hae(d.MuotokuvaUrl, t =>
+            {
+                if (avain != odotettu || kuva.panel == null) return;
+                if (t == null) { kuvio.style.display = DisplayStyle.None; return; } // kortti piirtyy kuvattomana
+                kuva.style.backgroundImage = new StyleBackground(t);
+                if (!iso) return;
+                float leveys = kuva.resolvedStyle.width;
+                if (float.IsNaN(leveys) || leveys <= 0) leveys = 330;
+                float suhde = (float)t.width / Mathf.Max(1, t.height);
+                kuva.style.height = Mathf.Clamp(leveys / suhde, 140, 330);
+            });
         }
 
         static string Kehys(KysymysNaytto d)
@@ -310,10 +421,12 @@ namespace Matkakirja.Natiivi
             });
         }
 
-        void Vaihtoehdot(KysymysNaytto d, VisualElement s, bool uusi)
+        void Vaihtoehdot(KysymysNaytto d, VisualElement s)
         {
             int n = d.Vaihtoehdot?.Count ?? 0;
             if (n == 0) return;
+            bool liuku = !vaihtoehdotEsilla && !d.Vastattu;
+            vaihtoehdotEsilla = true;
             var lista = Rakenne.El("mk-kysymys__vaihtoehdot", s, PickingMode.Ignore);
             if (n > 4) lista.AddToClassList("mk-kysymys__vaihtoehdot--tiivis"); // kaksintaistelun 8 vaihtoehtoa
             for (int i = 0; i < n; i++)
@@ -351,8 +464,8 @@ namespace Matkakirja.Natiivi
                 l.enableRichText = vaara || pois;
                 Kirjasimet.Aseta(l, Kirjasin.Kone);
 
-                // option-in: uusi kysymys liu'uttaa vaihtoehdot esiin porrastetusti.
-                if (uusi && !d.Vastattu)
+                // option-in: vaihtoehdot liukuvat esiin porrastetusti, kun ne tulevat ensi kerran näkyviin.
+                if (liuku)
                 {
                     b.AddToClassList("mk-kysymys__vaihtoehto--tulossa");
                     b.schedule.Execute(() => b.RemoveFromClassList("mk-kysymys__vaihtoehto--tulossa")).StartingIn(40 + i * 70);
@@ -360,28 +473,70 @@ namespace Matkakirja.Natiivi
             }
         }
 
-        VisualElement Tulos(KysymysNaytto d, VisualElement s)
+        /// <summary>Tulosvaihe 1 (web: tuomio 0,9 s): vain "Oikein!" / "Väärin." / "Aika loppui!".</summary>
+        VisualElement Tuomio(KysymysNaytto d, VisualElement s)
         {
-            var laatikko = Rakenne.El("mk-kysymys__tulos", s, PickingMode.Ignore);
-            laatikko.AddToClassList(d.Oikein ? "mk-kysymys__tulos--oikein" : "mk-kysymys__tulos--vaarin");
+            var laatikko = TulosLaatikko(d, s);
             string tuomio = d.AikaLoppui ? "Aika loppui!" : d.Oikein ? "Oikein!" : "Väärin.";
             Kirjasimet.Aseta(Rakenne.Teksti(tuomio, "mk-kysymys__tuomio", laatikko), Kirjasin.KoneLihava);
+            // Kätkön sulkeutuminen näkyy jo tuomiossa (web lukkoRivi).
+            foreach (var rivi in Rivit(d.Loyto))
+                if (rivi.StartsWith("Kätkö sulkeutui")) Ohje(laatikko, rivi);
+            return laatikko;
+        }
+
+        /// <summary>
+        /// Tulosvaihe 2 (web paljastus): löydön kuva vasemmalla, oikealla löytö tai
+        /// oikea vastaus, ohjeet, "Vuoro vaihtuu", repliikki ja fakta (kirjoituskone), lähteet.
+        /// </summary>
+        VisualElement Paljastus(KysymysNaytto d, VisualElement s)
+        {
+            var laatikko = TulosLaatikko(d, s);
+            laatikko.AddToClassList("mk-kysymys__tulos--paljastus");
+            if (d.Oikein && LaattaIkoni.Tunnettu(d.LoytoTyyppi)) laatikko.Add(new LaattaIkoni(d.LoytoTyyppi));
+            var runko = Rakenne.El("mk-kysymys__tulosrunko", laatikko, PickingMode.Ignore);
 
             // Kaksintaistelun Loyto kertoo jo oikean vastauksen ("Rosvo vei rahat — oikea vastaus oli …").
             bool oikeaErikseen = !d.Oikein && d.Laji != KysymysLaji.Kaksintaistelu
                 && d.Oikea >= 0 && d.Vaihtoehdot != null && d.Oikea < d.Vaihtoehdot.Count;
-            if (oikeaErikseen) Vahva(laatikko, $"Oikea vastaus oli \"{d.Vaihtoehdot[d.Oikea]}\".");
-            if (!string.IsNullOrEmpty(d.Loyto))
-                foreach (var rivi in d.Loyto.Split('\n'))
-                    if (rivi.Trim().Length > 0) Vahva(laatikko, rivi);
-            if (!string.IsNullOrEmpty(d.Fakta))
+            var rivit = Rivit(d.Loyto);
+            if (oikeaErikseen) Vahva(runko, (d.AikaLoppui ? "Aika loppui. " : "") + $"Oikea vastaus oli \"{d.Vaihtoehdot[d.Oikea]}\".");
+            else if (d.Oikein && rivit.Count == 0) Vahva(runko, "Oikein!");
+            foreach (var rivi in rivit)
             {
-                var f = Rakenne.Teksti(d.Fakta, "mk-kysymys__fakta", laatikko);
-                f.enableRichText = false;
-                Kirjasimet.Aseta(f, Kirjasin.Luku);
+                // Uuden yrityksen ohje ja kätkön sulkeutuminen punaruskealla (web .quiz-uusi-yritys, .quiz-lukko).
+                if (rivi == KysymysApu.UusiYritysOhje || rivi.StartsWith("Kätkö sulkeutui")) Ohje(runko, rivi);
+                else Vahva(runko, rivi);
             }
-            Lahteet(laatikko, d.Lahteet);
+            if (d.VuoroVaihtuu) Kirjasimet.Aseta(Rakenne.Teksti(KysymysApu.VuoroVaihtuuRivi, "mk-kysymys__fakta", runko), Kirjasin.Luku);
+            foreach (var rivi in Rivit(d.Repliikki))
+                Kirjoitettava(rivi, "mk-kysymys__repliikki", runko, Kirjasin.LukuKursiivi, RepliikkiMs);
+            if (!string.IsNullOrEmpty(d.Fakta))
+                Kirjoitettava(d.Fakta, "mk-kysymys__fakta", runko, Kirjasin.Luku, RepliikkiMs);
+            Lahteet(runko, d.Lahteet);
             return laatikko;
+        }
+
+        static VisualElement TulosLaatikko(KysymysNaytto d, VisualElement s)
+        {
+            var laatikko = Rakenne.El("mk-kysymys__tulos", s, PickingMode.Ignore);
+            laatikko.AddToClassList(d.Oikein ? "mk-kysymys__tulos--oikein" : "mk-kysymys__tulos--vaarin");
+            return laatikko;
+        }
+
+        static List<string> Rivit(string teksti)
+        {
+            var l = new List<string>();
+            if (string.IsNullOrEmpty(teksti)) return l;
+            foreach (var r in teksti.Split('\n')) if (r.Trim().Length > 0) l.Add(r.Trim());
+            return l;
+        }
+
+        static void Ohje(VisualElement isa, string teksti)
+        {
+            var l = Rakenne.Teksti(teksti, "mk-kysymys__ohje", isa);
+            l.enableRichText = false;
+            Kirjasimet.Aseta(l, Kirjasin.LukuKursiivi);
         }
 
         static void Vahva(VisualElement isa, string teksti)
@@ -433,11 +588,21 @@ namespace Matkakirja.Natiivi
                 Kirjasimet.Aseta(Rakenne.Teksti(d.Loyto, "mk-kysymys__vaikutus", s), Kirjasin.Kone);
         }
 
-        void RakennaNapit(KysymysNaytto d)
+        void RakennaNapit(KysymysNaytto d, int tulosVaihe, bool tervehdys)
         {
             napit.Clear();
+            napit.EnableInClassList("mk-kysymys__napit--keski", tervehdys);
             bool tapahtuma = d.Laji == KysymysLaji.Tapahtumakortti;
-            if (!d.Vastattu && !tapahtuma)
+            if (tervehdys)
+            {
+                // "Aloita peli" / "Yritä viimeistä kertaa": näkyviin, kun tervehdys on kirjoitettu.
+                aloitaNappi = Rakenne.Nappi(string.IsNullOrEmpty(d.AloitaTeksti) ? "Aloita peli" : d.AloitaTeksti,
+                    "mk-nappi--kulta mk-kysymys__jatka mk-kysymys__aloita", () => Teko(toiminnot?.Aloita), napit);
+                Rakenne.Tausta(aloitaNappi, Kuviot.Pysty("dialogi-kulta", Kuviot.Vari("#e9c169"), Kuviot.Vari("#d3a03c")));
+                Kirjasimet.Aseta(aloitaNappi, Kirjasin.KoneLihava);
+                aloitaNappi.style.display = DisplayStyle.None;
+            }
+            else if (!d.Vastattu && !tapahtuma)
             {
                 // Vihje: tarjolla → hinta; ostettu → harmaa "Vihje ostettu" (web quizHint).
                 if (d.VihjeTarjolla)
@@ -459,7 +624,7 @@ namespace Matkakirja.Natiivi
                 else if (d.Laji != KysymysLaji.Kaksintaistelu && d.Piilotetut != null && d.Piilotetut.Count > 0)
                     Rakenne.Nappi("50:50 käytetty", "mk-kysymys__apu", null, napit).SetEnabled(false);
             }
-            if (d.Vastattu)
+            if (d.Vastattu && tulosVaihe >= 2)
             {
                 var j = Rakenne.Nappi(string.IsNullOrEmpty(d.JatkaTeksti) ? "Jatka" : d.JatkaTeksti, "mk-nappi--kulta mk-kysymys__jatka",
                     () => Teko(toiminnot?.Jatka), napit);
@@ -497,6 +662,71 @@ namespace Matkakirja.Natiivi
             viestiPiiloon?.Pause();
             Rakenne.Nayta(viesti, true, 250);
             viestiPiiloon = viesti.schedule.Execute(() => Rakenne.Nayta(viesti, false, 250)).StartingIn((long)(ViestiKestoS * 1000));
+        }
+
+        // --- kirjoituskone ------------------------------------------------------------
+
+        /// <summary>Label, jonka teksti kirjoittuu sana kerrallaan (jatkaa kohdasta, johon edellinen rakennus jäi).</summary>
+        Label Kirjoitettava(string teksti, string luokka, VisualElement isa, Kirjasin kirjasin, int ms)
+        {
+            var l = Rakenne.Teksti("", luokka, isa);
+            Kirjasimet.Aseta(l, kirjasin);
+            var sanat = teksti.Split(' ');
+            kirjoitusJono.Add((l, teksti, sanat, ms));
+            Kirjoita(l, teksti, sanat, kirjoitettu.TryGetValue(teksti, out var n) ? n : 0);
+            return l;
+        }
+
+        /// <summary>Näkyvät sanat ja loput läpinäkyvinä, jotta rivitys ei hypi (web .pending { visibility: hidden }).</summary>
+        static void Kirjoita(Label l, string teksti, string[] sanat, int n)
+        {
+            if (n >= sanat.Length) { l.enableRichText = false; l.text = teksti; return; }
+            string nakyva = string.Join(" ", sanat, 0, n);
+            string loput = (n > 0 ? " " : "") + string.Join(" ", sanat, n, sanat.Length - n);
+            l.enableRichText = true;
+            l.text = "<noparse>" + nakyva + "</noparse><alpha=#00><noparse>" + loput + "</noparse>";
+        }
+
+        void KirjoitusAloita()
+        {
+            if (Seuraava() < 0) { var v = kunKirjoitettu; kunKirjoitettu = null; v?.Invoke(); return; }
+            kirjoitusAjo = himmennys.schedule.Execute(KirjoitusAskel).StartingIn(kirjoitusJono[Seuraava()].Ms);
+        }
+
+        int Seuraava()
+        {
+            for (int i = 0; i < kirjoitusJono.Count; i++)
+            {
+                var k = kirjoitusJono[i];
+                if ((kirjoitettu.TryGetValue(k.Teksti, out var n) ? n : 0) < k.Sanat.Length) return i;
+            }
+            return -1;
+        }
+
+        void KirjoitusAskel()
+        {
+            int i = Seuraava();
+            if (i < 0 || !Auki) return;
+            var k = kirjoitusJono[i];
+            int n = (kirjoitettu.TryGetValue(k.Teksti, out var m) ? m : 0) + 1;
+            kirjoitettu[k.Teksti] = n;
+            Kirjoita(k.Label, k.Teksti, k.Sanat, n);
+            KirjoitusAloita();
+        }
+
+        /// <summary>Napautus: kaikki kesken olevat tekstit kerralla (ja tervehdyksen jälkeinen Aloita-nappi).</summary>
+        void KirjoitusValmiiksi()
+        {
+            if (kirjoitusJono.Count == 0 || Seuraava() < 0) return;
+            kirjoitusAjo?.Pause();
+            foreach (var k in kirjoitusJono)
+            {
+                kirjoitettu[k.Teksti] = k.Sanat.Length;
+                Kirjoita(k.Label, k.Teksti, k.Sanat, k.Sanat.Length);
+            }
+            var v = kunKirjoitettu;
+            kunKirjoitettu = null;
+            v?.Invoke();
         }
 
         // --- tiimalasi --------------------------------------------------------------

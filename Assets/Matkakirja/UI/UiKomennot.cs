@@ -8,7 +8,8 @@
 //   ui kortti [kaupunki]                      kaupunkikortti (oletus firenze, ilman peliä)
 //   ui kysymys [laji]                         esimerkkikysymys ilman peliä: visa (oletus), vaite,
 //                                             kuva, lippu, pulma [id], kaksintaistelu,
-//                                             tapahtumakortti, tulos (KysymysEsimerkki.cs)
+//                                             tapahtumakortti, tulos [laattatyyppi], kohtaaminen,
+//                                             kohtaaminen-tervehdys (KysymysEsimerkki.cs)
 //   ui selite                                 karttaselite auki
 //   ui kartuscha [ISO3] [auki]                kartuscha maalle ilman peliä (oletus ITA)
 //   ui heitto [teksti]                        kartan toimintonappi näkyviin

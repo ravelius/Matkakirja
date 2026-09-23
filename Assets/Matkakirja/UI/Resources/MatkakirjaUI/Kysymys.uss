@@ -536,3 +536,142 @@
 .mk-kysymys__jatka .mk-nappi__teksti {
     font-size: 16px;
 }
+
+/* --- kohtaaminen (erä 4): .quiz-kohtaaminen-kuvio, .quiz-kohtaaminen,
+ *     .quiz-varoitus, .quiz-aloita, .quiz.kysymysvaihe ---------------------- */
+
+.mk-kysymys__muotokuva {
+    flex-shrink: 0;
+    margin: 2px 0 9px 0;
+}
+
+/* Iso kuva tervehdyssivulla: kuvasuhde säilyy (contain), katto ~41 % ruudusta. */
+.mk-kysymys__muotokuvakuva {
+    height: 220px;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+/* Kysymyssivulla pieni pyöristetty neliö: muistutus siitä, kuka kysyy. */
+.mk-kysymys__muotokuva--pieni {
+    align-self: flex-start;
+    margin: 0 0 7px 0;
+}
+
+.mk-kysymys__muotokuva--pieni > .mk-kysymys__muotokuvakuva {
+    width: 104px;
+    height: 104px;
+    border-radius: 12px;
+    border-width: 1px;
+    border-color: rgba(52, 36, 16, 0.28);
+    background-color: rgba(70, 51, 31, 0.08);
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.mk-kysymys__muotokuvateksti {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    margin-top: 5px;
+}
+
+.mk-kysymys__muotokuvaselite {
+    margin-right: 6px;
+    font-size: 12.8px;
+    white-space: normal;
+    color: rgba(58, 42, 22, 0.9);
+}
+
+.mk-kysymys__muotokuvalahde {
+    font-size: 10px;
+    letter-spacing: 0.3px;
+    color: rgba(70, 51, 31, 0.55);
+}
+
+.mk-kysymys__tervehdys {
+    margin: 5px 0 9px 0;
+    font-size: 15.2px;
+    white-space: normal;
+    color: rgba(58, 42, 22, 0.95);
+}
+
+.mk-kysymys__varoitus {
+    flex-shrink: 0;
+    margin: 6px 0 3px 0;
+    padding: 7px 11px;
+    border-left-width: 3px;
+    border-color: rgba(150, 58, 34, 0.75);
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background-color: rgba(150, 58, 34, 0.08);
+}
+
+.mk-kysymys__varoitusteksti {
+    font-size: 14.7px;
+    white-space: normal;
+    color: rgba(112, 42, 24, 0.95);
+}
+
+.mk-kysymys__napit--keski {
+    justify-content: center;
+}
+
+.mk-kysymys__napit--keski > .mk-nappi {
+    margin-left: 0;
+}
+
+.mk-nappi.mk-kysymys__aloita {
+    min-width: 180px;
+}
+
+/* --- paljastus: löydön kuva, ohjeet ja repliikki (.quiz-result, aarreIkoni,
+ *     .quiz-uusi-yritys, .kohtaaminen-repliikki) ------------------------------ */
+
+.mk-kysymys__tulos--paljastus {
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.mk-kysymys__tulosrunko {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.mk-laattaikoni {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    margin: 2px 10px 0 0;
+}
+
+/* Tarinallinen aarrekuva pyöreäksi rajattuna (.aarre-ikoni). */
+.mk-laattaikoni__kuva {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 28px;
+    border-width: 2px;
+    border-color: rgba(70, 51, 31, 0.35);
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.mk-laattaikoni__pollo {
+    width: 56px;
+    height: 56px;
+    --mk-ikoni-viiva: 1.5;
+}
+
+.mk-kysymys__ohje {
+    margin: 5px 0 2px 0;
+    font-size: 14.4px;
+    white-space: normal;
+    color: rgba(112, 42, 24, 0.95);
+}
+
+.mk-kysymys__repliikki {
+    margin-top: 5px;
+    font-size: 14.7px;
+    white-space: normal;
+    color: var(--map-ink);
+}
