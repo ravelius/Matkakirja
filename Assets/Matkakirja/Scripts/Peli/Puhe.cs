@@ -7,8 +7,10 @@
 // persistentDataPath/aani/<sha256(url)>.mp3 ja soitetaan sieltä, joten sama
 // luenta toimii toisella kerralla ilman verkkoa.
 //
-// Kytkin (web luentaKytkinPaalla): PlayerPrefs "matkakirja.luennat", oletus
-// päällä. Puhuu-tapahtuma (tosi alkaessa, epätosi loppuessa) on musiikin ja
+// Kytkin ja taso: Natiivi-UI:n Asetukset (UI/Asetukset.cs, webin avaimet):
+// Kytkin.Kertoja (web kertojaTila), Voima.Lukija (oletus 0,9, web puheVoima) ja
+// Kytkin.Aanimaisema (koko pelin mykistys). Asetukset.Muuttui päivittää soivan.
+// Puhuu-tapahtuma (tosi alkaessa, epätosi loppuessa) on musiikin ja
 // ambienssin vaimennusta varten (web puheAlkoi/puheLoppui).
 //
 // PUHESYNTEESI (Lue): muut tekstit luetaan pollo-workerin puheella kuten
@@ -37,7 +39,6 @@ namespace Matkakirja.Natiivi
     [DisallowMultipleComponent]
     public sealed class Puhe : MonoBehaviour
     {
-        public const string KytkinAvain = "matkakirja.luennat";
         public const string Puhepalvelin = "https://matkakirja-pollo.samireivinen.workers.dev";
         /// <summary>Workerin PUHE_TEKSTIN_KATTO (tools/pollo/rajat.js).</summary>
         public const int TekstinKatto = 1000;
@@ -51,7 +52,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Puhe alkoi (tosi) tai loppui/pysähtyi (epätosi): musiikin vaimennus.</summary>
         public event Action<bool> Puhuu;
 
-        [Range(0, 1)] public float voimakkuus = 1f;
+        /// <summary>Puheen taso: Voima.Lukija, nolla kun äänet on mykistetty (Kytkin.Aanimaisema).</summary>
+        public static float Voimakkuus => Asetukset.Paalla(Kytkin.Aanimaisema) ? Asetukset.Taso(Voima.Lukija) : 0f;
 
         AudioSource lahde;
         Coroutine lataus, haivytys;
@@ -66,16 +68,17 @@ namespace Matkakirja.Natiivi
         public float Kesto => lahde != null && lahde.clip != null ? lahde.clip.length : 0;
         public string ViimeVirhe { get; private set; }
 
-        /// <summary>Luennat päällä (web luentaKytkin). Pois kytkeminen pysäyttää soivan.</summary>
+        /// <summary>Kertoja päällä (Asetukset Kytkin.Kertoja, web kertojaTila). Pois kytkeminen pysäyttää soivan.</summary>
         public static bool Paalla
         {
-            get => PlayerPrefs.GetInt(KytkinAvain, 1) != 0;
-            set
-            {
-                PlayerPrefs.SetInt(KytkinAvain, value ? 1 : 0);
-                PlayerPrefs.Save();
-                if (!value && Instanssi != null) Instanssi.Pysayta();
-            }
+            get => Asetukset.Paalla(Kytkin.Kertoja);
+            set => Asetukset.Aseta(Kytkin.Kertoja, value);
+        }
+
+        void AsetuksetMuuttuivat(string nimi)
+        {
+            if (!Paalla && (puhuu || lataus != null)) { Pysayta(0.3f); return; }
+            if (lahde != null && lahde.isPlaying && haivytys == null) lahde.volume = Voimakkuus;
         }
 
         static string Kansio => Path.Combine(Application.persistentDataPath, "aani");
@@ -97,9 +100,14 @@ namespace Matkakirja.Natiivi
             lahde.loop = false;
             lahde.spatialBlend = 0;
             lahde.priority = 0;
+            Asetukset.Muuttui += AsetuksetMuuttuivat;
         }
 
-        void OnDestroy() { if (Instanssi == this) Instanssi = null; }
+        void OnDestroy()
+        {
+            Asetukset.Muuttui -= AsetuksetMuuttuivat;
+            if (Instanssi == this) Instanssi = null;
+        }
 
         /// <summary>
         /// Soittaa äänitteen (https). viiveS odotetaan latauksen rinnalla;
@@ -223,9 +231,11 @@ namespace Matkakirja.Natiivi
             lahde.volume = 0;
             lahde.Play();
             if (vanha != null && vanha != klippi) Destroy(vanha);
+            // Uusi puhe korvasi soivan: kuuntelijat näkevät lopun ja uuden alun.
+            if (puhuu) AsetaPuhuu(false);
             AsetaPuhuu(true);
             lataus = null;
-            haivytys = StartCoroutine(Voimakkuuteen(voimakkuus, Alkuhaivytys, false));
+            haivytys = StartCoroutine(Voimakkuuteen(Voimakkuus, Alkuhaivytys, false));
 
             // Loppu: äänite soi loppuun (ei pysäytetty eikä korvattu).
             while (oma == tunnus && lahde.isPlaying) yield return null;
@@ -271,8 +281,8 @@ namespace Matkakirja.Natiivi
 
         void Update()
         {
-            if (puhuu && haivytys == null && lahde.isPlaying && !Mathf.Approximately(lahde.volume, voimakkuus))
-                lahde.volume = voimakkuus;
+            if (puhuu && haivytys == null && lahde.isPlaying && !Mathf.Approximately(lahde.volume, Voimakkuus))
+                lahde.volume = Voimakkuus;
         }
 
         // --- apurit ------------------------------------------------------------

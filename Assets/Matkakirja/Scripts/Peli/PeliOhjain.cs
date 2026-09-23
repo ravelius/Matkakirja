@@ -85,7 +85,7 @@ namespace Matkakirja.Natiivi
         Loyto kysymysLoyto;
         readonly List<string> kysymysLisat = new List<string>();
         float kysymysJaljella;
-        bool tervehdysAloitettu, tulosPaljastettu;
+        bool tervehdysAloitettu, tulosPaljastettu, tervehdysNakyi;
         float paljastusAika;
         /// <summary>Tuomion kesto ennen paljastusta (web visa.js: 900 ms).</summary>
         const float TuomioS = 0.9f;
@@ -125,6 +125,24 @@ namespace Matkakirja.Natiivi
         public Luennat Luennat => luennat;
         /// <summary>Avoimen kysymyksen näkymätila (null, jos kysymys ei ole auki).</summary>
         public KysymysNaytto KysymysTila { get; private set; }
+        /// <summary>
+        /// Livian (pulu) tilanteet pelin tapahtumista, webin ilmoitaLivianTilanne-
+        /// sanastolla (Natiivi-UI kytkee Pulu.Tilanne/Tunne): (laji, tunne, voimakkuus).
+        /// laji: success | retry (kysymyksen tulos), tunne (kohtaamisen ja kaksintaistelun
+        /// tunnetagit), narration | narrationEnd (luento alkaa/loppuu), reaction
+        /// (luennan kuuntelureaktio: tunne = tarkoitus).
+        /// </summary>
+        public event Action<string, string, float> LivianTilanne;
+        void Livia(string laji, string tunne = null, double voimakkuus = 0)
+        {
+            try { LivianTilanne?.Invoke(laji, tunne, (float)voimakkuus); }
+            catch (Exception e) { Debug.LogException(e); }
+        }
+        void Livia(string laji, (string Tunne, double Voimakkuus)? t)
+        {
+            if (t.HasValue) Livia(laji, t.Value.Tunne, t.Value.Voimakkuus);
+        }
+
         /// <summary>Pelisilmukka päälle/pois (Natiivi-UI piilottaa omat näkymänsä).</summary>
         public event Action<bool> KaytossaMuuttui;
 
@@ -206,6 +224,7 @@ namespace Matkakirja.Natiivi
             };
             gameObject.AddComponent<PeliKomennot>().ohjain = this;
             puhe = Puhe.Hae();
+            puhe.Puhuu += PuheMuuttui;
 
             ((IKamera)kierto).KaupunkiNapautettu += Napautettu;
             // Heittonapin päältä alkava veto ei pyöritä palloa.
@@ -509,12 +528,46 @@ namespace Matkakirja.Natiivi
             return t;
         }
 
+        Luento odottavaLuento, soivaLuento;
+        List<(double AikaS, LuentaReaktio Reaktio)> reaktioJono;
+        int reaktioSeuraava;
+
+        void PuheMuuttui(bool puhuu)
+        {
+            if (puhuu)
+            {
+                soivaLuento = odottavaLuento != null && puhe.SoivaUrl == odottavaLuento.Url ? odottavaLuento : null;
+                odottavaLuento = null;
+                reaktioJono = soivaLuento?.Reaktiot.Count > 0 ? soivaLuento.ReaktioAjat(puhe.Kesto > 0 ? puhe.Kesto : soivaLuento.Kesto ?? 0) : null;
+                reaktioSeuraava = 0;
+                if (soivaLuento != null) Livia("narration");
+            }
+            else if (soivaLuento != null)
+            {
+                soivaLuento = null;
+                reaktioJono = null;
+                Livia("narrationEnd");
+            }
+        }
+
+        /// <summary>Luennan kuuntelureaktiot ajallaan (web luentareaktiot.js).</summary>
+        void PaivitaReaktiot()
+        {
+            if (reaktioJono == null || soivaLuento == null || !puhe.Soi) return;
+            while (reaktioSeuraava < reaktioJono.Count && reaktioJono[reaktioSeuraava].AikaS <= puhe.Aika)
+            {
+                var r = reaktioJono[reaktioSeuraava++].Reaktio;
+                Livia("reaction", r.Tarkoitus, r.Voimakkuus);
+            }
+        }
+
         /// <summary>Soittaa luennan (kaiutinnappi, testikomento). Palauttaa virheen tai null.</summary>
         public string SoitaLuento(Luento l, float viiveS = 0)
         {
             if (l == null) return "luentoa ei ole";
             if (!Puhe.Paalla) return "luennat pois päältä";
-            if (!puhe.Soita(l.Url, viiveS)) return "ei soi";
+            odottavaLuento = l;
+            if (!puhe.Soita(l.Url, viiveS)) { odottavaLuento = null; return "ei soi"; }
             Debug.Log("MATKAKIRJA peli: luento " + (l.Id ?? l.Kaupunki) + " " + l.Url);
             return null;
         }
@@ -1075,6 +1128,7 @@ namespace Matkakirja.Natiivi
                 kysymysJaljella = TehtavanSekunnit() ?? 0;
                 tervehdysAloitettu = false;
                 tulosPaljastettu = false;
+                tervehdysNakyi = false;
                 dialogi.Piilota();
                 dialogi.PiilotaHeitto();
                 DialogiKohde = null;
@@ -1092,7 +1146,15 @@ namespace Matkakirja.Natiivi
                         tervehdyksetNahty.Add(q.Kaupunki);
                     // Näytetty tervehdys pysyy tervehdyssivulla, kunnes pelaaja painaa Aloita peli.
                     if (!tervehdysAloitettu && KysymysTila.Tervehdys == null && !q.Valittu.HasValue) tervehdysAloitettu = true;
+                    bool tervehdysEnnen = tervehdysNakyi;
                     KysymysApu.LisaaVaiheet(KysymysTila, kysely, q, tervehdysAloitettu);
+                    tervehdysNakyi = KysymysTila.TervehdysVaihe;
+                    if (tervehdysNakyi && !tervehdysEnnen)
+                    {
+                        // Viimeisen yrityksen jännitys voittaa tervehdyksen sävyn (web visa.js).
+                        if (KysymysTila.Varoitus != null) Livia("tunne", "jannitys", 0.6);
+                        else Livia("tunne", kohtaamiset?.Tunne(q.Kaupunki, "tervehdys", q.Kaari));
+                    }
                 }
                     break;
                 case Tehtava.Kaksintaistelu:
@@ -1140,6 +1202,19 @@ namespace Matkakirja.Natiivi
             var tehtava = AvoinTehtava;
             if (tehtava == Tehtava.Tapahtuma) return "tapahtumakortissa ei vastata";
             var r = KysymysTeko(() => tehtava == Tehtava.Kaksintaistelu ? rosvo.Vastaa(indeksi) : kysely.Vastaa(indeksi));
+            if (r == null && KysymysTila != null)
+            {
+                if (tehtava == Tehtava.Kaksintaistelu)
+                    Livia("tunne", KysymysTila.Oikein ? "ilo" : "vakava", KysymysTila.Oikein ? 0.65 : 0.55);
+                else
+                {
+                    var q = matka.Tila.Kysely.Kysymys;
+                    Livia(KysymysTila.Oikein ? "success" : "retry");
+                    if (KysymysTila.Tuloslaji != null) Livia("tunne", kohtaamiset?.Tunne(q?.Kaupunki, KysymysTila.Tuloslaji, false));
+                    if (q != null && q.Kaari && KysymysTila.Oikein) Livia("tunne", kohtaamiset?.Tunne(q.Kaupunki, "aarre", true));
+                    if (q?.AarreLukittui == true) Livia("tunne", "vakava", 0.6);
+                }
+            }
             // Löytöhetken repliikki luetaan ääneen (web lueKertojana, persoona kertoja).
             if (r == null && KysymysTila != null && KysymysTila.RepliikkiLoyto && puhe != null)
                 puhe.Lue(KysymysTila.Repliikki, "kertoja", 0.3f);
@@ -1246,6 +1321,7 @@ namespace Matkakirja.Natiivi
         void Update()
         {
             if (ajoValmis != null && Time.unscaledTime > ajoLoppuu) AjoValmis();
+            PaivitaReaktiot();
             PaivitaKysymysAika();
             // Pallo ei ota kosketuksia modaalisen näkymän (ja lehden) aikana.
             bool esta = Kaytossa && (Tila == SilmukanTila.Dialogi || Tila == SilmukanTila.Kysymys || Tila == SilmukanTila.Lehti);

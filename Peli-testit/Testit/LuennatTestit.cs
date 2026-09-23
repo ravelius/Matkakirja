@@ -40,5 +40,26 @@ namespace Matkakirja.Peli.Testit
             Oleta.Tosi(l.Luento("pariisi") != null, "kaiutinnappi ehdoitta");
             Oleta.Sama(null, l.OtaLuento("rooma"));
         }
+        [Testi] static void ReaktiotJaNiidenAjat()
+        {
+            var l = new Luennat();
+            l.LueLuennat(@"{""alkiot"":[{""id"":""matkakirja:pariisi"",""kaupunki"":""pariisi"",""url"":""https://x/p.mp3"",
+              ""teksti"":""0123456789ANKKURI0123456789TOINEN890123456789"",""kesto"":30,
+              ""reaktiot"":[{""id"":""p.r2"",""ankkuri"":""TOINEN"",""tarkoitus"":""epailee"",""voimakkuus"":0.4,""siirtyma"":0.5},
+                           {""id"":""p.r1"",""ankkuri"":""ANKKURI"",""tarkoitus"":""vakavoituu"",""voimakkuus"":0.5,""siirtyma"":0},
+                           {""id"":""p.r3"",""ankkuri"":""puuttuu"",""tarkoitus"":""x"",""voimakkuus"":0.3}],
+              ""reaktioHetket"":null}]}");
+            var p = l.Luento("pariisi");
+            Oleta.Sama(3, p.Reaktiot.Count);
+            var ajat = p.ReaktioAjat(30);
+            Oleta.Sama(2, ajat.Count, "löytymätön ankkuri pois");
+            Oleta.Sama("p.r1", ajat[0].Reaktio.Id, "aikajärjestys");
+            Oleta.Tosi(System.Math.Abs(ajat[0].AikaS - 10.0 / 45 * 30) < 1e-9, "suhteellinen paikka");
+            Oleta.Tosi(System.Math.Abs(ajat[1].AikaS - (27.0 / 45 * 30 + 0.5)) < 1e-9, "siirtymä");
+            l.LueLuennat(@"{""alkiot"":[{""id"":""matkakirja:rooma"",""kaupunki"":""rooma"",""url"":""https://x/r.mp3"",""teksti"":""abc"",
+              ""reaktiot"":[{""id"":""r.r1"",""ankkuri"":""zzz"",""tarkoitus"":""myotailee"",""voimakkuus"":0.35}],""reaktioHetket"":{""r.r1"":1250}}]}");
+            var r = l.Luento("rooma").ReaktioAjat(10);
+            Oleta.Tosi(r.Count == 1 && System.Math.Abs(r[0].AikaS - 1.25) < 1e-9, "kohdistettu hetki voittaa");
+        }
     }
 }
