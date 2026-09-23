@@ -4932,7 +4932,7 @@ export async function avaaPallolauta(ui) {
     eleKaynnissa,
     korttiAuki: () => Boolean(nostot.liuskaAuki?.()),
     // Ablaatiotikas (kerrokset.js): porras ilman pulua jättää pienen liikkeen pois.
-    rakenna: kerrosKaytossa('pulu'),
+    rakenna: kerrosKaytossa('liike'),
   });
   const paivita = () => {
     if (ui.dead) return;

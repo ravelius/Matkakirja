@@ -22,7 +22,8 @@ test('Kartta-osiossa vain Pieni liike, Piirtokoe ja kehysprofiili', () => {
   assert.ok(a > 0, 'Kartta-osio löytyy');
   const osio = h.slice(a, h.indexOf('</div>\n', h.indexOf('id="kehysprofiili-valikko"')));
   const idt = [...osio.matchAll(/id="([^"]+)"/g)].map((m) => m[1]);
-  assert.deepEqual(idt, ['kartta-valikko', 'piirtokoe-otsikko', 'piirtokoe-valikko', 'piirtokoe-vihje', 'kehysprofiili-valikko']);
+  assert.deepEqual(idt, ['kartta-valikko', 'piirtokoe-otsikko', 'piirtokoe-valikko', 'piirtokoe-vihje',
+    'paljaat-kerrokset-otsikko', 'paljaat-kerrokset-valikko', 'kehysprofiili-valikko']);
   assert.doesNotMatch(h, /vedon-seuranta/, 'ei vedon seurannan rivejä');
   assert.doesNotMatch(h, /tarkkuus-valikko/, 'ei tarkkuuden rivejä');
 });
