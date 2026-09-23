@@ -25,12 +25,14 @@ namespace Matkakirja.Natiivi
         public readonly Vahvistus Vahvistus;
         public readonly Paavalikko Valikko;
         public readonly Aanentasot Aanentasot;
+        public readonly KaupunkiKortti Kaupunkikortti;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         static void KytkeTehdas()
         {
             PeliNakymat.Tilarivi = _ => Hae().Tilarivi;
             PeliNakymat.MatkaValinta = _ => Hae().Matkavalinta;
+            PeliNakymat.KaupunkiKortti = _ => Hae().Kaupunkikortti;
         }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
@@ -50,6 +52,8 @@ namespace Matkakirja.Natiivi
             Vahvistus = new Vahvistus(kerros);
             Valikko = new Paavalikko(kerros, () => Tilarivi.Alareuna, Vahvistus);
             Aanentasot = new Aanentasot(kerros, () => Tilarivi.Alareuna);
+            Kaupunkikortti = new KaupunkiKortti(kerros);
+            UiSisalto.Lataa(null); // kaupunkidata valmiiksi ennen ensimmäistä napautusta
 
             Tilarivi.Valikko.clicked += () => { Aanentasot.Sulje(); Valikko.Vaihda(); };
             Tilarivi.Ratas.clicked += () => { Valikko.Sulje(); Aanentasot.Vaihda(); };
@@ -80,8 +84,31 @@ namespace Matkakirja.Natiivi
             {
                 if (!paalla) SuljeKaikki();
                 Kerros.Nayta(paalla);
+                KorvaaNimikortti(paalla);
             };
             if (!o.Kaytossa) Kerros.Nayta(false);
+            KorvaaNimikortti(o.Kaytossa);
+            // Lehti (WKWebView) aukeaa kaiken päälle: auki jääneet valikot kiinni.
+            if (o.Lehti != null) o.Lehti.Avautui += _ => { Valikko.Sulje(); Aanentasot.Sulje(); Vahvistus.Sulje(); };
+        }
+
+        KaupunkiMerkit merkit;
+        NimiKortti nimikortti3d;
+
+        /// <summary>
+        /// Pelin aikana kaupunkikortti korvaa 3D:n nimikortin (RAJAPINTA: KaupunkiMerkit.kortti = null);
+        /// peli pois (3D-mittaukset) palauttaa sen.
+        /// </summary>
+        void KorvaaNimikortti(bool peliPaalla)
+        {
+            if (merkit == null) merkit = Object.FindAnyObjectByType<KaupunkiMerkit>();
+            if (merkit == null) return;
+            if (peliPaalla)
+            {
+                if (merkit.kortti != null) { nimikortti3d = merkit.kortti; nimikortti3d.Piilota(); }
+                merkit.kortti = null;
+            }
+            else if (nimikortti3d != null) merkit.kortti = nimikortti3d;
         }
 
         public void SuljeKaikki()
@@ -91,6 +118,7 @@ namespace Matkakirja.Natiivi
             Vahvistus.Sulje();
             Matkavalinta.Piilota();
             Matkavalinta.PiilotaHeitto();
+            Kaupunkikortti.Piilota();
         }
 
         /// <summary>Testikomento 'ui matka': esimerkkivalinta ilman peliä.</summary>

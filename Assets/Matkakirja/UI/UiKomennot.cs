@@ -5,6 +5,7 @@
 //
 //   ui valikko | ui asetukset | ui sulje      avaa päävalikon / äänentasot, sulkee
 //   ui matka                                  esimerkkimatkavalinta (ilman peliä)
+//   ui kortti [kaupunki]                      kaupunkikortti (oletus firenze, ilman peliä)
 //   ui heitto [teksti]                        kartan toimintonappi näkyviin
 //   ui viesti teksti                          tilarivin hetkellinen viesti
 //   ui tila teksti                            tilarivin teksti
@@ -92,6 +93,13 @@ namespace Matkakirja.Natiivi
                 case "asetukset": ui.Aanentasot.Avaa(); return null;
                 case "sulje": ui.SuljeKaikki(); return null;
                 case "matka": ui.Esimerkkimatka(); return null;
+                case "kortti":
+                    ui.Kaupunkikortti.Nayta(loput.Length > 0 ? loput : "firenze", null, new KaupunkiToiminnot
+                    {
+                        LueLehti = () => ui.Tilarivi.Viesti("Lue lehti"), Liiku = () => ui.Tilarivi.Viesti("Liiku"),
+                        Sulje = () => { },
+                    });
+                    return null;
                 case "heitto": ui.Matkavalinta.NaytaHeitto(loput.Length > 0 ? loput : "Heitä noppaa → Lontoo", () => ui.Tilarivi.Viesti("Noppa: 4")); return null;
                 case "viesti": ui.Tilarivi.Viesti(loput, 4f); return null;
                 case "tila": ui.Tilarivi.Aseta(loput); return null;
