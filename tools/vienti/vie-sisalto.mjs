@@ -77,8 +77,12 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        luennat: reaktiot, tekstiSha256, reaktioHetket (vain voimassa
  *        olevista aikaleimoista; vanhentuneet aikaleimat pois paketista).
  *        Vertaa versioita numeroina (1.10 > 1.9), ei merkkijonoina.
+ *   1.11 Livian cue-data: livianpuhe.cuet[].ele, alku, loppu ja
+ *        eleetTila, aaniTavut, aaniSha256 (tools/vienti/livian-eleet.mjs);
+ *        luennat.reaktiot[].ele; kokoelma livianrepliikit (68 äänitettyä
+ *        repliikkiä).
  */
-export const SKEEMAVERSIO_TARKKA = '1.10';
+export const SKEEMAVERSIO_TARKKA = '1.11';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 const tavuja = (s) => Buffer.byteLength(s);

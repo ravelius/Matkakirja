@@ -31,6 +31,9 @@ import { ratkaiseMedia } from './media.mjs';
 import { aaniUrl, horatioAanenKesto } from '../../js/media.js';
 import { aikaleimojenOsoite, ratkaiseAnkkurit, AIKALEIMOJEN_VERSIO } from '../../js/luentareaktiot.js';
 import { livianEleidenOsoite } from '../../js/livia-puheeleet-lataus.js';
+import { livianPuheeleenTiedot, livianLuentareaktionTiedot } from '../../js/livia-tilanteet.js';
+import { repliikit as livianRepliikit } from '../generoi-pulu.mjs';
+import { lueLivianEleet, eleidenTila } from './livian-eleet.mjs';
 import { kohtaamiskuvaKohteelle, kohtaamiskuvaTavalliselleKohtaamiselle } from '../../js/kohtaamiskuvat-data.js';
 import {
   LINSSILUENTA_JUURI, luennanRunko, luennanOsoite, kaarenPuheet, puheenTiiviste,
@@ -556,7 +559,9 @@ function luentoKokoelma(hae) {
       url: aaniUrl(polku), kesto: horatioAanenKesto(polku), aikaleimat: aikaleimojenOsoite(polku),
       tekstiSha256: teksti ? sha(teksti) : null,
       aikaleimaTiedosto: data ? `tiedostot/assets/aikaleimat/${polku.split('/').at(-1).replace(/\.mp3$/, '.aikaleimat.json')}` : null,
-      reaktiot: reaktiot ?? null,
+      // Skeema 1.11: ele = Livian tekninen ele (js/livia-tilanteet.js
+      // livianLuentareaktionTiedot), null jos tarkoitukselle ei ole elettä.
+      reaktiot: reaktiot ? reaktiot.map((r) => ({ ...r, ele: livianLuentareaktionTiedot(r)?.ele ?? null })) : null,
       reaktioHetket: data && reaktiot ? Object.fromEntries(ratkaiseAnkkurit(reaktiot, data).map((r) => [r.id, r.hetki])) : null,
     };
   };
@@ -573,7 +578,7 @@ function luentoKokoelma(hae) {
     'Isoisän luennat: intro ja lento-alku sekä matkakirjaluennat kaupungeittain. url = valmis https-osoite '
       + '(aaniUrl), kesto sekunteina tai null, aanite = repopolku, aikaleimat = sanatason ajoitus ämpärissä '
       + '(url + .aikaleimat.json; voi puuttua), tekstiSha256 = nykyisen tekstin tiiviste, jota aikaleimojen on '
-      + 'vastattava, reaktiot = Livian kuuntelureaktiot sellaisenaan ({id, ankkuri, tarkoitus, voimakkuus, siirtyma}), '
+      + 'vastattava, reaktiot = Livian kuuntelureaktiot ({id, ankkuri, tarkoitus, voimakkuus, siirtyma, ele}; ele = tekninen SVG-ele), '
       + 'reaktioHetket = {id: ms} ja aikaleimaTiedosto vain, kun paketin aikaleimat on kohdistettu nykyiseen tekstiin.',
     { kaupunki: 'kaupungit' }, rivit);
 }
@@ -590,22 +595,63 @@ function livianPuheKokoelma(hae) {
   const cuet = hae('js/livia-pilotti-cuet.js');
   const { livianAaniOsoite } = hae('js/liviapuhe.js');
   const odottaa = new Set(cuet.ERA5_ODOTTAVAT_KAUPUNGIT ?? []);
+  const eleet = lueLivianEleet();
   return taulukko('js/livia-pilotti-cuet.js#LIVIAN_LUENTA_CUET',
     'Livian luentakommentit kaupungeittain: aani = mp3 ämpärissä, eleet = ratkaistut cue-ajat (.eleet.json aanen '
-      + 'vieressä), cuet = { id, ankkuri, esiintyma, tarkoitus, voimakkuus }, tekstiSha256 = kommentin tekstin '
-      + 'tiiviste, jota eleet vastaavat. odottaa = eleitä ei vielä ole.',
+      + 'vieressä), cuet = { id, ankkuri, esiintyma, tarkoitus, voimakkuus, ele, alku, loppu }, tekstiSha256 = '
+      + 'kommentin tekstin tiiviste, jota eleet vastaavat. ele = tekninen SVG-ele (js/livia-tilanteet.js '
+      + 'livianPuheeleenTiedot). eleetTila: ok = alku/loppu (ms äänen alusta) on tarkistettu pelin validaattorilla '
+      + 'ja aaniTavut/aaniSha256 kertovat, mihin mp3:een ne kuuluvat; puuttuu = ämpärissä ei eleitä (alku/loppu '
+      + 'null); vanhentunut = teksti vaihtunut haun jälkeen. odottaa = teksti ja ääni ovat vielä 13.9.2026 asussa '
+      + '(ERA5_ODOTTAVAT_KAUPUNGIT), ei eleiden puutetta.',
     { kaupunki: 'kaupungit' },
     Object.values(cuet.LIVIAN_LUENTA_CUET).map((c) => {
       // Pelin omat osoitefunktiot: avain <kaupunki>-3 = kommenttikuplan
       // indeksi 2; versioitu polku tai ?v= kuten pelissä.
       const indeksi = Number(c.avain.split('-').at(-1)) - 1;
       const aani = livianAaniOsoite(c.kaupunki, indeksi);
+      // Skeema 1.11: validoidut cue-ajat (tools/vienti/livian-eleet.mjs).
+      const haettu = eleidenTila(eleet.kaupungit[c.kaupunki], c);
+      const ajat = new Map((haettu.tila === 'ok' ? haettu.eleet : []).map((e) => [e.id, e]));
       return {
         id: c.kaupunki, kaupunki: c.kaupunki, revision: c.revision, kentta: c.kentta, kupla: c.kupla,
         tekstiSha256: c.tekstiSha256, aani, eleet: aani ? livianEleidenOsoite(aani) : null,
-        odottaa: odottaa.has(c.kaupunki), cuet: c.cuet,
+        eleetTila: haettu.tila,
+        aaniTavut: haettu.aani?.tavut ?? null, aaniSha256: haettu.aani?.sha256 ?? null,
+        odottaa: odottaa.has(c.kaupunki),
+        cuet: c.cuet.map((q) => ({
+          ...q, ele: livianPuheeleenTiedot(q)?.ele ?? null,
+          alku: ajat.get(q.id)?.alku ?? null, loppu: ajat.get(q.id)?.loppu ?? null,
+        })),
       };
     }));
+}
+
+/*
+ * LIVIAN REPLIIKIT (skeema 1.11, Natiivi-UI): kaikki Livian äänitetyt
+ * kuplat yhtenä listana samasta lähteestä kuin äänitystyökalu
+ * (tools/generoi-pulu.mjs repliikit(): tekstit js/livia.js:stä, kaupunkien
+ * pakkauksista ja linssikertomuksista). aani = pelin livianAaniOsoite;
+ * ajanTasalla = pelin livianAaniAjanTasalla (false → peli vaikenee, koska
+ * äänite sanoo eri asian kuin kupla).
+ */
+function livianRepliikkiKokoelma(hae, kaupunkiIdt) {
+  const { livianAaniOsoite, livianAaniAjanTasalla, LIVIAN_KESTOT, LIVIAN_LINSSILAHTEET } = hae('js/liviapuhe.js');
+  return taulukko('tools/generoi-pulu.mjs#repliikit (js/livia.js, js/liviapuhe.js, kaupunkien pakkaukset)',
+    'Livian äänitetyt repliikit: id = avain (<lahde>-<n>), lahde (avaus, paljastus, mannerivihje, lehtivinkki, '
+      + 'kaupunki-id tai linssi), kaupunki tai linssi, indeksi (0-alkuinen), teksti, aani = valmis https-osoite, '
+      + 'kesto sekunteina tai null (lue äänestä), kuplaSekunteina = kuplan näkyvä vähimmäisaika, pinoutuu, saapuu '
+      + '(saapumisrepliikki), ajanTasalla = äänite vastaa tekstiä (false → älä soita).',
+    { kaupunki: 'kaupungit' },
+    livianRepliikit().map((r) => ({
+      id: r.avain, lahde: r.lahde,
+      kaupunki: kaupunkiIdt.has(r.lahde) ? r.lahde : null,
+      linssi: Object.hasOwn(LIVIAN_LINSSILAHTEET, r.lahde) ? r.lahde : null,
+      indeksi: r.indeksi, teksti: r.teksti, aani: livianAaniOsoite(r.lahde, r.indeksi),
+      kesto: LIVIAN_KESTOT[r.avain] ?? null, kuplaSekunteina: r.kuplaSekunteina,
+      pinoutuu: r.pinoutuu, saapuu: r.saapuu,
+      ajanTasalla: livianAaniAjanTasalla(r.lahde, r.indeksi, r.teksti),
+    })));
 }
 
 /*
@@ -819,6 +865,7 @@ export function kokoaKokoelmat(nimiavaruudet) {
     ...kysymyskuvaKokoelmat(ns, hae),
     luennat: luentoKokoelma(hae),
     livianpuhe: livianPuheKokoelma(hae),
+    livianrepliikit: livianRepliikkiKokoelma(hae, kaupunkiIdt),
     maat: maaKokoelma(ns, hae),
     karttamerkit: karttamerkkiKokoelma(),
     // Natiivisepän tarve 23.9.2026 ilta: sumu (PaljastaMaa) ja maatila.

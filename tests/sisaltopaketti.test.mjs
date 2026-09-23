@@ -428,7 +428,7 @@ test('skeema 1.9: luentojen aikaleimat ja Livian puheen cuet', async () => {
     assert.equal(pariisi.reaktioHetket, null);
   }
   const { FOKUSVIRRAT } = await import('../js/packs/fokusvirrat.js');
-  assert.deepEqual(pariisi.reaktiot, JSON.parse(JSON.stringify(FOKUSVIRRAT.pariisi.matkakirja.reaktiot)));
+  assert.deepEqual(pariisi.reaktiot.map(({ ele, ...r }) => r), JSON.parse(JSON.stringify(FOKUSVIRRAT.pariisi.matkakirja.reaktiot)));
   assert.match(pariisi.tekstiSha256, /^[0-9a-f]{64}$/);
   const livia = JSON.parse(tiedostot.get('kokoelmat/livianpuhe.json')).alkiot;
   assert.equal(livia.length, 45);
@@ -437,6 +437,34 @@ test('skeema 1.9: luentojen aikaleimat ja Livian puheen cuet', async () => {
   assert.equal(ateena.aani, livianAaniOsoite('ateena', 2));
   assert.match(ateena.eleet, /^https:\/\/media\.matkakirja\.app\/.+livia-ateena-3\.eleet\.json(\?.*)?$/);
   assert.ok(ateena.cuet.length >= 3 && ateena.cuet.every((c) => c.ankkuri && c.tarkoitus));
+});
+
+test('skeema 1.11: Livian cue-data (ele, validoidut ajat, repliikit)', async () => {
+  const { livianPuheeleenTiedot, livianLuentareaktionTiedot } = await import('../js/livia-tilanteet.js');
+  const livia = JSON.parse(tiedostot.get('kokoelmat/livianpuhe.json')).alkiot;
+  const { lueLivianEleet } = await import('../tools/vienti/livian-eleet.mjs');
+  const haetut = lueLivianEleet().kaupungit;
+  for (const rivi of livia) {
+    for (const cue of rivi.cuet) assert.equal(cue.ele, livianPuheeleenTiedot(cue)?.ele ?? null, cue.id);
+    if (rivi.eleetTila === 'ok') {
+      assert.equal(rivi.aaniSha256, haetut[rivi.id].aani.sha256);
+      assert.ok(rivi.cuet.every((c) => Number.isInteger(c.alku) && c.loppu > c.alku), rivi.id);
+    } else {
+      assert.ok(rivi.cuet.every((c) => c.alku === null && c.loppu === null), rivi.id);
+    }
+  }
+  assert.ok(livia.some((r) => r.eleetTila === 'ok'), 'ainakin yksi validoitu');
+  const luennat = JSON.parse(tiedostot.get('kokoelmat/luennat.json')).alkiot;
+  for (const r of luennat.flatMap((l) => l.reaktiot ?? [])) {
+    assert.equal(r.ele, livianLuentareaktionTiedot(r)?.ele ?? null, r.id);
+  }
+  const repliikit = JSON.parse(tiedostot.get('kokoelmat/livianrepliikit.json')).alkiot;
+  const { repliikit: lahde } = await import('../tools/generoi-pulu.mjs');
+  const { livianAaniOsoite } = await import('../js/liviapuhe.js');
+  assert.equal(repliikit.length, lahde().length);
+  const avaus = repliikit.find((r) => r.id === 'avaus-1');
+  assert.equal(avaus.aani, livianAaniOsoite('avaus', 0));
+  assert.equal(repliikit.find((r) => r.id === 'ateena-3').kaupunki, 'ateena');
 });
 
 test('skeema 1.9: offline-manifesti maittain (laatat, maasto, media, tavut)', async () => {

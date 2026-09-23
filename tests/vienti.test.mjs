@@ -181,6 +181,7 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
     maat: Object.keys(P.map.countryShapes).length,
     karttamerkit: readdirSync(join(JUURI, 'assets/nostotyypit')).filter((f) => /^merkki-.+\.png$/.test(f)).length,
     livianpuhe: Object.keys(ns('js/livia-pilotti-cuet.js').LIVIAN_LUENTA_CUET).length,
+    livianrepliikit: avaimia(ns('js/liviapuhe.js').LIVIAN_AANITETYT),
     luennat: 2 + Object.values(ns('fokusvirrat.js').FOKUSVIRRAT).filter((v) => v?.matkakirja?.aanite).length,
     saapuminen: P.cities.length,
     esilasketut: ns('historian-hetket.js').HISTORIAN_HETKET.length + avaimia(ns('elaintakyt.js').ELAINTAKYT)
