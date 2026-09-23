@@ -164,6 +164,64 @@ namespace Matkakirja.Natiivi
     }
 
     /// <summary>
+    /// Sähkepinta (web js/sahke.js; Pelikoodarin ehdotus 23.9.2026, Natiivi-UI toteuttaa): pöllön tuoma
+    /// paperiliuska ja retkikuntaosio. Kaveriavun nappi ja kortti kulkevat kysymysnäkymän kautta
+    /// (KysymysNaytto.Kaveriapu/KaveriapuKortti, KysymysToiminnot.KysyKaverilta/KaveriapuValmis).
+    /// Ohjain luo näkymän vain, jos PeliNakymat.Sahke on asetettu; ilman sitä sähkelinjaa ei avata.
+    /// </summary>
+    public interface ISahkeNakyma
+    {
+        /// <summary>
+        /// Liuska ruudulle (yksi kerrallaan; ohjain nostaa seuraavan jonosta, kun kartta on vapaa, ja näkymä
+        /// soittaa paperin äänen kuten web). Sähke = Saate + Teksti (lennättimen kirjaimin) + Alarivi.
+        /// Apupyyntö = Saate, Alarivi ("Nimi kysyy:"), Kysymys, vaihtoehtonapit A–D ja "En osaa auttaa".
+        /// Vaihtoehdon napautus: kaikki napit pois käytöstä, valittu korostuu, kolikon ääni ja veikkaa(i);
+        /// ohjain lähettää veikkauksen ja sulkee liuskan (SuljeLiuska). ✕ tai "En osaa auttaa" → suljettu().
+        /// </summary>
+        void NaytaLiuska(SahkeViesti viesti, Action<int> veikkaa, Action suljettu);
+        void SuljeLiuska();
+        bool LiuskaAuki { get; }
+        /// <summary>
+        /// Retkikuntaosio valikon lomakkeeseen (web retkikuntaOsio). Ohjain kutsuu, kun linjan tila selviää ja
+        /// aina kun tunnus tai jono muuttuu. Kolme tilaa: linja kiinni (vain Rivi), ei retkikuntaa (nimimerkin
+        /// valinta ArvoNimet-listasta + Perusta tai koodi + Liity; koodikenttä suodatetaan SiistiKoodi-kutsulla
+        /// joka näppäilyllä) ja jäsen (Koodi näkyvissä, Pohjat vinkkinappeina → Paikat → Laheta, Eroa).
+        /// Valmis-rivit (null = onnistui) näytetään osion huomiorivillä.
+        /// </summary>
+        void NaytaRetkikunta(RetkikuntaNaytto tila, RetkikuntaToiminnot toiminnot);
+    }
+
+    /// <summary>Sähketehtäväkortin teot (web piirraSahketehtava; ohjain tallentaa ja päivittää kortin).</summary>
+    public sealed class SahketehtavaToiminnot
+    {
+        /// <summary>"Lähetä sähke": aukon tunnus → valinnan otsikko tai numerokentän teksti. Ohjain päivittää kortin itse.</summary>
+        public Func<IReadOnlyDictionary<string, string>, SahkeVastausTulos> Laheta;
+        /// <summary>"Lähetä omin sanoin": tulos voi tulla vasta pöllöltä (enintään 10 s); kortti päivittyy sen jälkeen.</summary>
+        public Action<string, Action<SahkeVastausTulos>> LahetaVapaa;
+        /// <summary>Kokonainen pulla (50 £): Livia sanoo vinkin kuplassa (ohjain: LivianKuplat "vinkki"). null = ei tarjolla.</summary>
+        public Func<KauppaTulos> OstaVinkki;
+        /// <summary>Puolikas pulla (25 £): linkkinappi näkyviin (SahkeKortti.LinkkiNappi). null = ei tarjolla.</summary>
+        public Func<KauppaTulos> OstaLinkki;
+        /// <summary>Livian linkki auki (kortti sulkeutuu alta; paluu sähkeeseen kartan pisteestä). Virhe tai null.</summary>
+        public Func<string> AvaaLinkki;
+        /// <summary>"Myöhemmin", "Selvä", "Anna Livian mennä" tai ✕: kortti kiinni, peli jatkuu.</summary>
+        public Action Sulje;
+    }
+
+    /// <summary>
+    /// Pöllön sähketehtävä (web js/fokusvirta.js PÖLLÖN SÄHKETEHTÄVÄ; Natiivi-UI toteuttaa): 1870-luvun
+    /// sähkösanomalomake vihreän pisteen napautuksesta kaupungissa, jolla on fokusvirrat.sahketehtava.
+    /// Sama Nayta-kutsu päivittää kortin (ohilyönti, pullat, kuittaus). Livian repliikit eivät ole kortilla
+    /// vaan pulun kuplissa (PeliOhjain.LivianKuplat). Asettamaton = piste avaa laattakysymyksen kuten muualla.
+    /// </summary>
+    public interface ISahketehtavaNakyma
+    {
+        void Nayta(SahkeKortti kortti, SahketehtavaToiminnot toiminnot);
+        void Sulje();
+        bool Auki { get; }
+    }
+
+    /// <summary>
     /// Näkymätehdas. Kenttä null = UGUI-varanäkymä. Aseta ennen kohtauksen
     /// latausta (BeforeSceneLoad); PeliOhjain luo näkymät AfterSceneLoad-vaiheessa.
     /// </summary>
@@ -184,5 +242,9 @@ namespace Matkakirja.Natiivi
         public static Func<GameObject, IKaupunkiKortti> KaupunkiKortti;
         /// <summary>Natiivilehti. Asettamaton = WKWebView-kuori (LehtiKuori), kunnes se poistetaan (A4).</summary>
         public static Func<GameObject, ILehtiNakyma> Lehti;
+        /// <summary>Sähkeliuska ja retkikuntaosio. Asettamaton = ei sähkepintaa natiivissa (ohjain ei pollaa).</summary>
+        public static Func<GameObject, ISahkeNakyma> Sahke;
+        /// <summary>Pöllön sähketehtäväkortti. Asettamaton = sähkekaupungin piste avaa laattakysymyksen.</summary>
+        public static Func<GameObject, ISahketehtavaNakyma> Sahketehtava;
     }
 }

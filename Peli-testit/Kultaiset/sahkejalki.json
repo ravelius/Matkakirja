@@ -1,0 +1,4186 @@
+{
+ "kuvaus": "tee-sahkejalki.mjs: js/sahke.js ja js/fokusvirta.js (sähketehtävä) puhtaat funktiot",
+ "vakiot": {
+  "osoite": "https://matkakirja-sahke.samireivinen.workers.dev",
+  "koodinMerkit": "ABCDEFGHJKLMNPQRTUVWXYZ23467889",
+  "koodinPituus": 6,
+  "nahtyjaKatto": 300,
+  "adjektiivit": [
+   "Utelias",
+   "Höyryävä",
+   "Vaitelias",
+   "Ripeä",
+   "Uskalias",
+   "Verkkainen",
+   "Tarkkanäköinen",
+   "Kärsivällinen",
+   "Salaperäinen",
+   "Kohtelias",
+   "Sitkeä",
+   "Valpas",
+   "Rohkea",
+   "Huolellinen",
+   "Levoton",
+   "Sinnikäs",
+   "Oivaltava",
+   "Vakaa",
+   "Nokkela",
+   "Hiljainen",
+   "Iloinen",
+   "Peloton",
+   "Tarmokas",
+   "Viisas"
+  ],
+  "substantiivit": [
+   "Ilves",
+   "Majakka",
+   "Kompassi",
+   "Näätä",
+   "Höyrylaiva",
+   "Kurki",
+   "Lennätin",
+   "Ahma",
+   "Kiikari",
+   "Peltosirkku",
+   "Postivaunu",
+   "Saukko",
+   "Tiimalasi",
+   "Kärppä",
+   "Kartturi",
+   "Merikotka",
+   "Ankkuri",
+   "Mursu",
+   "Karavaani",
+   "Naali",
+   "Sekstantti",
+   "Haikara",
+   "Matkalaukku",
+   "Sorsa"
+  ],
+  "saatteet": [
+   "Sähke sinulle. Luin sen jo matkalla.",
+   "Lennätin naksui. Tässä on tulos.",
+   "Sähke retkikunnalta. En kommentoi sisältöä.",
+   "Toin sähkeen. Postinkantaja tekee työnsä.",
+   "Sähke. Luin sen jo. Hyviä uutisia."
+  ],
+  "apupyynnonSaate": "Retkikunnalta sähke: he pyytävät apua arvoitukseen.",
+  "veikkauksenSaate": "Utelias Ilves vastasi sähkeeseen. Päätös on sinun.",
+  "merkkiMs": 28,
+  "riviKattoMs": 1400,
+  "rivivaliMs": 350,
+  "sahkePalkkio": 200
+ },
+ "kaupungit": [
+  [
+   "tukholma",
+   "Tukholma",
+   "SWE"
+  ],
+  [
+   "goteborg",
+   "Göteborg",
+   "SWE"
+  ],
+  [
+   "helsinki",
+   "Helsinki",
+   "FIN"
+  ],
+  [
+   "turku",
+   "Turku",
+   "FIN"
+  ],
+  [
+   "oslo",
+   "Oslo",
+   "NOR"
+  ],
+  [
+   "berliini",
+   "Berliini",
+   "DEU"
+  ],
+  [
+   "strasse",
+   "Großstraße",
+   "DEU"
+  ],
+  [
+   "sofia",
+   "Sofia",
+   "BGR"
+  ],
+  [
+   "tyhja",
+   "",
+   "EST"
+  ]
+ ],
+ "pohjat": [
+  {
+   "id": "aarre-loytyi",
+   "tyyppi": "auto",
+   "nimi": "Aarre löytyi",
+   "paikat": null
+  },
+  {
+   "id": "saavuin",
+   "tyyppi": "auto",
+   "nimi": "Saavuin perille",
+   "paikat": null
+  },
+  {
+   "id": "vinkki-ei-paakaupunki",
+   "tyyppi": "vinkki",
+   "nimi": "Vinkki: ei pääkaupungissa",
+   "paikat": "loydot"
+  },
+  {
+   "id": "vinkki-vesi",
+   "tyyppi": "vinkki",
+   "nimi": "Vinkki: seuraa vettä",
+   "paikat": "loydot"
+  },
+  {
+   "id": "vinkki-vuori",
+   "tyyppi": "vinkki",
+   "nimi": "Vinkki: katso vuorille",
+   "paikat": "loydot"
+  },
+  {
+   "id": "juliste-saatu",
+   "tyyppi": "vinkki",
+   "nimi": "Sain julisteen",
+   "paikat": "kaydyt"
+  },
+  {
+   "id": "apua-arvoitus",
+   "tyyppi": "apu",
+   "nimi": "Pyydän apua arvoitukseen",
+   "paikat": null
+  }
+ ],
+ "nimet": {
+  "siemen": 20260923,
+  "kutsut": [
+   {
+    "montako": 3,
+    "nimet": [
+     "Tarkkanäköinen Majakka",
+     "Oivaltava Karavaani",
+     "Tarmokas Haikara"
+    ]
+   },
+   {
+    "montako": 3,
+    "nimet": [
+     "Iloinen Kurki",
+     "Kohtelias Kärppä",
+     "Sinnikäs Sorsa"
+    ]
+   },
+   {
+    "montako": 3,
+    "nimet": [
+     "Valpas Lennätin",
+     "Nokkela Sekstantti",
+     "Levoton Matkalaukku"
+    ]
+   },
+   {
+    "montako": 3,
+    "nimet": [
+     "Hiljainen Mursu",
+     "Valpas Naali",
+     "Tarkkanäköinen Postivaunu"
+    ]
+   },
+   {
+    "montako": 3,
+    "nimet": [
+     "Sitkeä Kärppä",
+     "Vakaa Naali",
+     "Ripeä Kartturi"
+    ]
+   },
+   {
+    "montako": 3,
+    "nimet": [
+     "Salaperäinen Ankkuri",
+     "Vaitelias Sekstantti",
+     "Tarkkanäköinen Höyrylaiva"
+    ]
+   },
+   {
+    "montako": 3,
+    "nimet": [
+     "Huolellinen Karavaani",
+     "Levoton Kartturi",
+     "Hiljainen Mursu"
+    ]
+   },
+   {
+    "montako": 3,
+    "nimet": [
+     "Uskalias Sekstantti",
+     "Ripeä Saukko",
+     "Nokkela Kartturi"
+    ]
+   },
+   {
+    "montako": 3,
+    "nimet": [
+     "Tarkkanäköinen Ankkuri",
+     "Vakaa Saukko",
+     "Nokkela Matkalaukku"
+    ]
+   },
+   {
+    "montako": 3,
+    "nimet": [
+     "Vaitelias Matkalaukku",
+     "Levoton Haikara",
+     "Hiljainen Näätä"
+    ]
+   },
+   {
+    "montako": 3,
+    "nimet": [
+     "Tarmokas Merikotka",
+     "Rohkea Haikara",
+     "Tarmokas Tiimalasi"
+    ]
+   },
+   {
+    "montako": 3,
+    "nimet": [
+     "Ripeä Kompassi",
+     "Vaitelias Lennätin",
+     "Utelias Mursu"
+    ]
+   },
+   {
+    "montako": 1,
+    "nimet": [
+     "Rohkea Naali"
+    ]
+   },
+   {
+    "montako": 40,
+    "nimet": [
+     "Verkkainen Kiikari",
+     "Hiljainen Saukko",
+     "Sitkeä Näätä",
+     "Vaitelias Postivaunu",
+     "Vakaa Merikotka",
+     "Utelias Merikotka",
+     "Levoton Kompassi",
+     "Viisas Mursu",
+     "Levoton Ilves",
+     "Uskalias Sekstantti",
+     "Viisas Peltosirkku",
+     "Kohtelias Saukko",
+     "Tarmokas Kompassi",
+     "Rohkea Kartturi",
+     "Valpas Postivaunu",
+     "Nokkela Mursu",
+     "Ripeä Ilves",
+     "Verkkainen Ankkuri",
+     "Hiljainen Postivaunu",
+     "Sinnikäs Ahma",
+     "Tarkkanäköinen Kiikari",
+     "Iloinen Merikotka",
+     "Sitkeä Naali",
+     "Kohtelias Tiimalasi",
+     "Viisas Kompassi",
+     "Levoton Kärppä",
+     "Kohtelias Lennätin",
+     "Peloton Kartturi",
+     "Ripeä Ahma",
+     "Vaitelias Kompassi",
+     "Kärsivällinen Tiimalasi",
+     "Huolellinen Matkalaukku",
+     "Utelias Naali",
+     "Peloton Höyrylaiva",
+     "Valpas Saukko",
+     "Valpas Tiimalasi",
+     "Peloton Ahma",
+     "Oivaltava Kartturi",
+     "Tarmokas Naali"
+    ]
+   },
+   {
+    "montako": 3,
+    "nimet": [
+     "Hiljainen Sorsa",
+     "Utelias Ilves",
+     "Viisas Sekstantti"
+    ]
+   }
+  ]
+ },
+ "koodit": [
+  {
+   "syote": "",
+   "koodi": ""
+  },
+  {
+   "syote": null,
+   "koodi": ""
+  },
+  {
+   "syote": null,
+   "koodi": ""
+  },
+  {
+   "syote": "abc234",
+   "koodi": "ABC234"
+  },
+  {
+   "syote": "ABC-234",
+   "koodi": "ABC234"
+  },
+  {
+   "syote": " k7m 2pq ",
+   "koodi": "K7M2PQ"
+  },
+  {
+   "syote": "OIS015",
+   "koodi": ""
+  },
+  {
+   "syote": "ooiiss",
+   "koodi": ""
+  },
+  {
+   "syote": "ABCDEFGHJK",
+   "koodi": "ABCDEF"
+  },
+  {
+   "syote": "äöå",
+   "koodi": ""
+  },
+  {
+   "syote": "ßtraße",
+   "koodi": "TRAE"
+  },
+  {
+   "syote": "ﬀﬁ ﬂ",
+   "koodi": "FFFFL"
+  },
+  {
+   "syote": "ﬅﬆ",
+   "koodi": "TT"
+  },
+  {
+   "syote": "ǰ",
+   "koodi": "J"
+  },
+  {
+   "syote": "ıi",
+   "koodi": ""
+  },
+  {
+   "syote": "ſs",
+   "koodi": ""
+  },
+  {
+   "syote": "🦉A2",
+   "koodi": "A2"
+  },
+  {
+   "syote": "a\nb\tc",
+   "koodi": "ABC"
+  },
+  {
+   "syote": "zzzzzzzz",
+   "koodi": "ZZZZZZ"
+  },
+  {
+   "syote": "88888",
+   "koodi": "88888"
+  },
+  {
+   "syote": "xyzqw4",
+   "koodi": "XYZQW4"
+  }
+ ],
+ "tekstit": [
+  {
+   "pohjaId": "aarre-loytyi",
+   "paikkaId": "tukholma",
+   "teksti": "AARRE LÖYTYNYT TUKHOLMA STOP"
+  },
+  {
+   "pohjaId": "aarre-loytyi",
+   "paikkaId": "goteborg",
+   "teksti": "AARRE LÖYTYNYT GÖTEBORG STOP"
+  },
+  {
+   "pohjaId": "aarre-loytyi",
+   "paikkaId": "strasse",
+   "teksti": "AARRE LÖYTYNYT GROSSSTRASSE STOP"
+  },
+  {
+   "pohjaId": "aarre-loytyi",
+   "paikkaId": "tyhja",
+   "teksti": "AARRE LÖYTYNYT  STOP"
+  },
+  {
+   "pohjaId": "aarre-loytyi",
+   "paikkaId": "ei-laudalla",
+   "teksti": "AARRE LÖYTYNYT EI-LAUDALLA STOP"
+  },
+  {
+   "pohjaId": "aarre-loytyi",
+   "paikkaId": null,
+   "teksti": "AARRE LÖYTYNYT  STOP"
+  },
+  {
+   "pohjaId": "saavuin",
+   "paikkaId": "tukholma",
+   "teksti": "SAAVUIN TUKHOLMA STOP MATKA JATKUU"
+  },
+  {
+   "pohjaId": "saavuin",
+   "paikkaId": "goteborg",
+   "teksti": "SAAVUIN GÖTEBORG STOP MATKA JATKUU"
+  },
+  {
+   "pohjaId": "saavuin",
+   "paikkaId": "strasse",
+   "teksti": "SAAVUIN GROSSSTRASSE STOP MATKA JATKUU"
+  },
+  {
+   "pohjaId": "saavuin",
+   "paikkaId": "tyhja",
+   "teksti": "SAAVUIN  STOP MATKA JATKUU"
+  },
+  {
+   "pohjaId": "saavuin",
+   "paikkaId": "ei-laudalla",
+   "teksti": "SAAVUIN EI-LAUDALLA STOP MATKA JATKUU"
+  },
+  {
+   "pohjaId": "saavuin",
+   "paikkaId": null,
+   "teksti": "SAAVUIN  STOP MATKA JATKUU"
+  },
+  {
+   "pohjaId": "vinkki-ei-paakaupunki",
+   "paikkaId": "tukholma",
+   "teksti": "VINKKI TUKHOLMA STOP AARRE EI OLLUT PÄÄKAUPUNGISSA"
+  },
+  {
+   "pohjaId": "vinkki-ei-paakaupunki",
+   "paikkaId": "goteborg",
+   "teksti": "VINKKI GÖTEBORG STOP AARRE EI OLLUT PÄÄKAUPUNGISSA"
+  },
+  {
+   "pohjaId": "vinkki-ei-paakaupunki",
+   "paikkaId": "strasse",
+   "teksti": "VINKKI GROSSSTRASSE STOP AARRE EI OLLUT PÄÄKAUPUNGISSA"
+  },
+  {
+   "pohjaId": "vinkki-ei-paakaupunki",
+   "paikkaId": "tyhja",
+   "teksti": "VINKKI  STOP AARRE EI OLLUT PÄÄKAUPUNGISSA"
+  },
+  {
+   "pohjaId": "vinkki-ei-paakaupunki",
+   "paikkaId": "ei-laudalla",
+   "teksti": "VINKKI EI-LAUDALLA STOP AARRE EI OLLUT PÄÄKAUPUNGISSA"
+  },
+  {
+   "pohjaId": "vinkki-ei-paakaupunki",
+   "paikkaId": null,
+   "teksti": "VINKKI  STOP AARRE EI OLLUT PÄÄKAUPUNGISSA"
+  },
+  {
+   "pohjaId": "vinkki-vesi",
+   "paikkaId": "tukholma",
+   "teksti": "VINKKI TUKHOLMA STOP SEURAA VETTÄ"
+  },
+  {
+   "pohjaId": "vinkki-vesi",
+   "paikkaId": "goteborg",
+   "teksti": "VINKKI GÖTEBORG STOP SEURAA VETTÄ"
+  },
+  {
+   "pohjaId": "vinkki-vesi",
+   "paikkaId": "strasse",
+   "teksti": "VINKKI GROSSSTRASSE STOP SEURAA VETTÄ"
+  },
+  {
+   "pohjaId": "vinkki-vesi",
+   "paikkaId": "tyhja",
+   "teksti": "VINKKI  STOP SEURAA VETTÄ"
+  },
+  {
+   "pohjaId": "vinkki-vesi",
+   "paikkaId": "ei-laudalla",
+   "teksti": "VINKKI EI-LAUDALLA STOP SEURAA VETTÄ"
+  },
+  {
+   "pohjaId": "vinkki-vesi",
+   "paikkaId": null,
+   "teksti": "VINKKI  STOP SEURAA VETTÄ"
+  },
+  {
+   "pohjaId": "vinkki-vuori",
+   "paikkaId": "tukholma",
+   "teksti": "VINKKI TUKHOLMA STOP KATSO VUORILLE"
+  },
+  {
+   "pohjaId": "vinkki-vuori",
+   "paikkaId": "goteborg",
+   "teksti": "VINKKI GÖTEBORG STOP KATSO VUORILLE"
+  },
+  {
+   "pohjaId": "vinkki-vuori",
+   "paikkaId": "strasse",
+   "teksti": "VINKKI GROSSSTRASSE STOP KATSO VUORILLE"
+  },
+  {
+   "pohjaId": "vinkki-vuori",
+   "paikkaId": "tyhja",
+   "teksti": "VINKKI  STOP KATSO VUORILLE"
+  },
+  {
+   "pohjaId": "vinkki-vuori",
+   "paikkaId": "ei-laudalla",
+   "teksti": "VINKKI EI-LAUDALLA STOP KATSO VUORILLE"
+  },
+  {
+   "pohjaId": "vinkki-vuori",
+   "paikkaId": null,
+   "teksti": "VINKKI  STOP KATSO VUORILLE"
+  },
+  {
+   "pohjaId": "juliste-saatu",
+   "paikkaId": "tukholma",
+   "teksti": "JULISTE TUKHOLMA STOP LISÄTTY KOKOELMAAN"
+  },
+  {
+   "pohjaId": "juliste-saatu",
+   "paikkaId": "goteborg",
+   "teksti": "JULISTE GÖTEBORG STOP LISÄTTY KOKOELMAAN"
+  },
+  {
+   "pohjaId": "juliste-saatu",
+   "paikkaId": "strasse",
+   "teksti": "JULISTE GROSSSTRASSE STOP LISÄTTY KOKOELMAAN"
+  },
+  {
+   "pohjaId": "juliste-saatu",
+   "paikkaId": "tyhja",
+   "teksti": "JULISTE  STOP LISÄTTY KOKOELMAAN"
+  },
+  {
+   "pohjaId": "juliste-saatu",
+   "paikkaId": "ei-laudalla",
+   "teksti": "JULISTE EI-LAUDALLA STOP LISÄTTY KOKOELMAAN"
+  },
+  {
+   "pohjaId": "juliste-saatu",
+   "paikkaId": null,
+   "teksti": "JULISTE  STOP LISÄTTY KOKOELMAAN"
+  },
+  {
+   "pohjaId": "apua-arvoitus",
+   "paikkaId": "tukholma",
+   "teksti": "PYYDÄN APUA ARVOITUKSEEN TUKHOLMA STOP"
+  },
+  {
+   "pohjaId": "apua-arvoitus",
+   "paikkaId": "goteborg",
+   "teksti": "PYYDÄN APUA ARVOITUKSEEN GÖTEBORG STOP"
+  },
+  {
+   "pohjaId": "apua-arvoitus",
+   "paikkaId": "strasse",
+   "teksti": "PYYDÄN APUA ARVOITUKSEEN GROSSSTRASSE STOP"
+  },
+  {
+   "pohjaId": "apua-arvoitus",
+   "paikkaId": "tyhja",
+   "teksti": "PYYDÄN APUA ARVOITUKSEEN  STOP"
+  },
+  {
+   "pohjaId": "apua-arvoitus",
+   "paikkaId": "ei-laudalla",
+   "teksti": "PYYDÄN APUA ARVOITUKSEEN EI-LAUDALLA STOP"
+  },
+  {
+   "pohjaId": "apua-arvoitus",
+   "paikkaId": null,
+   "teksti": "PYYDÄN APUA ARVOITUKSEEN  STOP"
+  },
+  {
+   "pohjaId": "tuntematon",
+   "paikkaId": "tukholma",
+   "teksti": ""
+  },
+  {
+   "pohjaId": "tuntematon",
+   "paikkaId": "goteborg",
+   "teksti": ""
+  },
+  {
+   "pohjaId": "tuntematon",
+   "paikkaId": "strasse",
+   "teksti": ""
+  },
+  {
+   "pohjaId": "tuntematon",
+   "paikkaId": "tyhja",
+   "teksti": ""
+  },
+  {
+   "pohjaId": "tuntematon",
+   "paikkaId": "ei-laudalla",
+   "teksti": ""
+  },
+  {
+   "pohjaId": "tuntematon",
+   "paikkaId": null,
+   "teksti": ""
+  }
+ ],
+ "muisti": [
+  {
+   "vaihe": "tyhja",
+   "nahdyt": 0,
+   "nahdytLista": [],
+   "tallessa": null,
+   "tunnus": null,
+   "tunnusTallessa": null
+  },
+  {
+   "vaihe": "rikki",
+   "nahdyt": 0,
+   "nahdytLista": [],
+   "tallessa": "rikki{",
+   "tunnus": null,
+   "tunnusTallessa": null
+  },
+  {
+   "vaihe": "sekalainen",
+   "nahdyt": 2,
+   "nahdytLista": [
+    "a",
+    "b"
+   ],
+   "tallessa": "[\"a\",1,\"b\",\"a\",null]",
+   "tunnus": null,
+   "tunnusTallessa": null
+  },
+  {
+   "vaihe": "merkitse c d",
+   "nahdyt": 4,
+   "nahdytLista": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ],
+   "tallessa": "[\"a\",\"b\",\"c\",\"d\"]",
+   "tunnus": null,
+   "tunnusTallessa": null
+  },
+  {
+   "vaihe": "merkitse erä 0",
+   "nahdyt": 54,
+   "nahdytLista": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "x0",
+    "x1",
+    "x2",
+    "x3",
+    "x4",
+    "x5",
+    "x6",
+    "x7",
+    "x8",
+    "x9",
+    "x10",
+    "x11",
+    "x12",
+    "x13",
+    "x14",
+    "x15",
+    "x16",
+    "x17",
+    "x18",
+    "x19",
+    "x20",
+    "x21",
+    "x22",
+    "x23",
+    "x24",
+    "x25",
+    "x26",
+    "x27",
+    "x28",
+    "x29",
+    "x30",
+    "x31",
+    "x32",
+    "x33",
+    "x34",
+    "x35",
+    "x36",
+    "x37",
+    "x38",
+    "x39",
+    "x40",
+    "x41",
+    "x42",
+    "x43",
+    "x44",
+    "x45",
+    "x46",
+    "x47",
+    "x48",
+    "x49"
+   ],
+   "tallessa": "[\"a\",\"b\",\"c\",\"d\",\"x0\",\"x1\",\"x2\",\"x3\",\"x4\",\"x5\",\"x6\",\"x7\",\"x8\",\"x9\",\"x10\",\"x11\",\"x12\",\"x13\",\"x14\",\"x15\",\"x16\",\"x17\",\"x18\",\"x19\",\"x20\",\"x21\",\"x22\",\"x23\",\"x24\",\"x25\",\"x26\",\"x27\",\"x28\",\"x29\",\"x30\",\"x31\",\"x32\",\"x33\",\"x34\",\"x35\",\"x36\",\"x37\",\"x38\",\"x39\",\"x40\",\"x41\",\"x42\",\"x43\",\"x44\",\"x45\",\"x46\",\"x47\",\"x48\",\"x49\"]",
+   "tunnus": null,
+   "tunnusTallessa": null
+  },
+  {
+   "vaihe": "merkitse erä 1",
+   "nahdyt": 104,
+   "nahdytLista": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "x0",
+    "x1",
+    "x2",
+    "x3",
+    "x4",
+    "x5",
+    "x6",
+    "x7",
+    "x8",
+    "x9",
+    "x10",
+    "x11",
+    "x12",
+    "x13",
+    "x14",
+    "x15",
+    "x16",
+    "x17",
+    "x18",
+    "x19",
+    "x20",
+    "x21",
+    "x22",
+    "x23",
+    "x24",
+    "x25",
+    "x26",
+    "x27",
+    "x28",
+    "x29",
+    "x30",
+    "x31",
+    "x32",
+    "x33",
+    "x34",
+    "x35",
+    "x36",
+    "x37",
+    "x38",
+    "x39",
+    "x40",
+    "x41",
+    "x42",
+    "x43",
+    "x44",
+    "x45",
+    "x46",
+    "x47",
+    "x48",
+    "x49",
+    "x50",
+    "x51",
+    "x52",
+    "x53",
+    "x54",
+    "x55",
+    "x56",
+    "x57",
+    "x58",
+    "x59",
+    "x60",
+    "x61",
+    "x62",
+    "x63",
+    "x64",
+    "x65",
+    "x66",
+    "x67",
+    "x68",
+    "x69",
+    "x70",
+    "x71",
+    "x72",
+    "x73",
+    "x74",
+    "x75",
+    "x76",
+    "x77",
+    "x78",
+    "x79",
+    "x80",
+    "x81",
+    "x82",
+    "x83",
+    "x84",
+    "x85",
+    "x86",
+    "x87",
+    "x88",
+    "x89",
+    "x90",
+    "x91",
+    "x92",
+    "x93",
+    "x94",
+    "x95",
+    "x96",
+    "x97",
+    "x98",
+    "x99"
+   ],
+   "tallessa": "[\"a\",\"b\",\"c\",\"d\",\"x0\",\"x1\",\"x2\",\"x3\",\"x4\",\"x5\",\"x6\",\"x7\",\"x8\",\"x9\",\"x10\",\"x11\",\"x12\",\"x13\",\"x14\",\"x15\",\"x16\",\"x17\",\"x18\",\"x19\",\"x20\",\"x21\",\"x22\",\"x23\",\"x24\",\"x25\",\"x26\",\"x27\",\"x28\",\"x29\",\"x30\",\"x31\",\"x32\",\"x33\",\"x34\",\"x35\",\"x36\",\"x37\",\"x38\",\"x39\",\"x40\",\"x41\",\"x42\",\"x43\",\"x44\",\"x45\",\"x46\",\"x47\",\"x48\",\"x49\",\"x50\",\"x51\",\"x52\",\"x53\",\"x54\",\"x55\",\"x56\",\"x57\",\"x58\",\"x59\",\"x60\",\"x61\",\"x62\",\"x63\",\"x64\",\"x65\",\"x66\",\"x67\",\"x68\",\"x69\",\"x70\",\"x71\",\"x72\",\"x73\",\"x74\",\"x75\",\"x76\",\"x77\",\"x78\",\"x79\",\"x80\",\"x81\",\"x82\",\"x83\",\"x84\",\"x85\",\"x86\",\"x87\",\"x88\",\"x89\",\"x90\",\"x91\",\"x92\",\"x93\",\"x94\",\"x95\",\"x96\",\"x97\",\"x98\",\"x99\"]",
+   "tunnus": null,
+   "tunnusTallessa": null
+  },
+  {
+   "vaihe": "merkitse erä 2",
+   "nahdyt": 154,
+   "nahdytLista": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "x0",
+    "x1",
+    "x2",
+    "x3",
+    "x4",
+    "x5",
+    "x6",
+    "x7",
+    "x8",
+    "x9",
+    "x10",
+    "x11",
+    "x12",
+    "x13",
+    "x14",
+    "x15",
+    "x16",
+    "x17",
+    "x18",
+    "x19",
+    "x20",
+    "x21",
+    "x22",
+    "x23",
+    "x24",
+    "x25",
+    "x26",
+    "x27",
+    "x28",
+    "x29",
+    "x30",
+    "x31",
+    "x32",
+    "x33",
+    "x34",
+    "x35",
+    "x36",
+    "x37",
+    "x38",
+    "x39",
+    "x40",
+    "x41",
+    "x42",
+    "x43",
+    "x44",
+    "x45",
+    "x46",
+    "x47",
+    "x48",
+    "x49",
+    "x50",
+    "x51",
+    "x52",
+    "x53",
+    "x54",
+    "x55",
+    "x56",
+    "x57",
+    "x58",
+    "x59",
+    "x60",
+    "x61",
+    "x62",
+    "x63",
+    "x64",
+    "x65",
+    "x66",
+    "x67",
+    "x68",
+    "x69",
+    "x70",
+    "x71",
+    "x72",
+    "x73",
+    "x74",
+    "x75",
+    "x76",
+    "x77",
+    "x78",
+    "x79",
+    "x80",
+    "x81",
+    "x82",
+    "x83",
+    "x84",
+    "x85",
+    "x86",
+    "x87",
+    "x88",
+    "x89",
+    "x90",
+    "x91",
+    "x92",
+    "x93",
+    "x94",
+    "x95",
+    "x96",
+    "x97",
+    "x98",
+    "x99",
+    "x100",
+    "x101",
+    "x102",
+    "x103",
+    "x104",
+    "x105",
+    "x106",
+    "x107",
+    "x108",
+    "x109",
+    "x110",
+    "x111",
+    "x112",
+    "x113",
+    "x114",
+    "x115",
+    "x116",
+    "x117",
+    "x118",
+    "x119",
+    "x120",
+    "x121",
+    "x122",
+    "x123",
+    "x124",
+    "x125",
+    "x126",
+    "x127",
+    "x128",
+    "x129",
+    "x130",
+    "x131",
+    "x132",
+    "x133",
+    "x134",
+    "x135",
+    "x136",
+    "x137",
+    "x138",
+    "x139",
+    "x140",
+    "x141",
+    "x142",
+    "x143",
+    "x144",
+    "x145",
+    "x146",
+    "x147",
+    "x148",
+    "x149"
+   ],
+   "tallessa": "[\"a\",\"b\",\"c\",\"d\",\"x0\",\"x1\",\"x2\",\"x3\",\"x4\",\"x5\",\"x6\",\"x7\",\"x8\",\"x9\",\"x10\",\"x11\",\"x12\",\"x13\",\"x14\",\"x15\",\"x16\",\"x17\",\"x18\",\"x19\",\"x20\",\"x21\",\"x22\",\"x23\",\"x24\",\"x25\",\"x26\",\"x27\",\"x28\",\"x29\",\"x30\",\"x31\",\"x32\",\"x33\",\"x34\",\"x35\",\"x36\",\"x37\",\"x38\",\"x39\",\"x40\",\"x41\",\"x42\",\"x43\",\"x44\",\"x45\",\"x46\",\"x47\",\"x48\",\"x49\",\"x50\",\"x51\",\"x52\",\"x53\",\"x54\",\"x55\",\"x56\",\"x57\",\"x58\",\"x59\",\"x60\",\"x61\",\"x62\",\"x63\",\"x64\",\"x65\",\"x66\",\"x67\",\"x68\",\"x69\",\"x70\",\"x71\",\"x72\",\"x73\",\"x74\",\"x75\",\"x76\",\"x77\",\"x78\",\"x79\",\"x80\",\"x81\",\"x82\",\"x83\",\"x84\",\"x85\",\"x86\",\"x87\",\"x88\",\"x89\",\"x90\",\"x91\",\"x92\",\"x93\",\"x94\",\"x95\",\"x96\",\"x97\",\"x98\",\"x99\",\"x100\",\"x101\",\"x102\",\"x103\",\"x104\",\"x105\",\"x106\",\"x107\",\"x108\",\"x109\",\"x110\",\"x111\",\"x112\",\"x113\",\"x114\",\"x115\",\"x116\",\"x117\",\"x118\",\"x119\",\"x120\",\"x121\",\"x122\",\"x123\",\"x124\",\"x125\",\"x126\",\"x127\",\"x128\",\"x129\",\"x130\",\"x131\",\"x132\",\"x133\",\"x134\",\"x135\",\"x136\",\"x137\",\"x138\",\"x139\",\"x140\",\"x141\",\"x142\",\"x143\",\"x144\",\"x145\",\"x146\",\"x147\",\"x148\",\"x149\"]",
+   "tunnus": null,
+   "tunnusTallessa": null
+  },
+  {
+   "vaihe": "merkitse erä 3",
+   "nahdyt": 204,
+   "nahdytLista": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "x0",
+    "x1",
+    "x2",
+    "x3",
+    "x4",
+    "x5",
+    "x6",
+    "x7",
+    "x8",
+    "x9",
+    "x10",
+    "x11",
+    "x12",
+    "x13",
+    "x14",
+    "x15",
+    "x16",
+    "x17",
+    "x18",
+    "x19",
+    "x20",
+    "x21",
+    "x22",
+    "x23",
+    "x24",
+    "x25",
+    "x26",
+    "x27",
+    "x28",
+    "x29",
+    "x30",
+    "x31",
+    "x32",
+    "x33",
+    "x34",
+    "x35",
+    "x36",
+    "x37",
+    "x38",
+    "x39",
+    "x40",
+    "x41",
+    "x42",
+    "x43",
+    "x44",
+    "x45",
+    "x46",
+    "x47",
+    "x48",
+    "x49",
+    "x50",
+    "x51",
+    "x52",
+    "x53",
+    "x54",
+    "x55",
+    "x56",
+    "x57",
+    "x58",
+    "x59",
+    "x60",
+    "x61",
+    "x62",
+    "x63",
+    "x64",
+    "x65",
+    "x66",
+    "x67",
+    "x68",
+    "x69",
+    "x70",
+    "x71",
+    "x72",
+    "x73",
+    "x74",
+    "x75",
+    "x76",
+    "x77",
+    "x78",
+    "x79",
+    "x80",
+    "x81",
+    "x82",
+    "x83",
+    "x84",
+    "x85",
+    "x86",
+    "x87",
+    "x88",
+    "x89",
+    "x90",
+    "x91",
+    "x92",
+    "x93",
+    "x94",
+    "x95",
+    "x96",
+    "x97",
+    "x98",
+    "x99",
+    "x100",
+    "x101",
+    "x102",
+    "x103",
+    "x104",
+    "x105",
+    "x106",
+    "x107",
+    "x108",
+    "x109",
+    "x110",
+    "x111",
+    "x112",
+    "x113",
+    "x114",
+    "x115",
+    "x116",
+    "x117",
+    "x118",
+    "x119",
+    "x120",
+    "x121",
+    "x122",
+    "x123",
+    "x124",
+    "x125",
+    "x126",
+    "x127",
+    "x128",
+    "x129",
+    "x130",
+    "x131",
+    "x132",
+    "x133",
+    "x134",
+    "x135",
+    "x136",
+    "x137",
+    "x138",
+    "x139",
+    "x140",
+    "x141",
+    "x142",
+    "x143",
+    "x144",
+    "x145",
+    "x146",
+    "x147",
+    "x148",
+    "x149",
+    "x150",
+    "x151",
+    "x152",
+    "x153",
+    "x154",
+    "x155",
+    "x156",
+    "x157",
+    "x158",
+    "x159",
+    "x160",
+    "x161",
+    "x162",
+    "x163",
+    "x164",
+    "x165",
+    "x166",
+    "x167",
+    "x168",
+    "x169",
+    "x170",
+    "x171",
+    "x172",
+    "x173",
+    "x174",
+    "x175",
+    "x176",
+    "x177",
+    "x178",
+    "x179",
+    "x180",
+    "x181",
+    "x182",
+    "x183",
+    "x184",
+    "x185",
+    "x186",
+    "x187",
+    "x188",
+    "x189",
+    "x190",
+    "x191",
+    "x192",
+    "x193",
+    "x194",
+    "x195",
+    "x196",
+    "x197",
+    "x198",
+    "x199"
+   ],
+   "tallessa": "[\"a\",\"b\",\"c\",\"d\",\"x0\",\"x1\",\"x2\",\"x3\",\"x4\",\"x5\",\"x6\",\"x7\",\"x8\",\"x9\",\"x10\",\"x11\",\"x12\",\"x13\",\"x14\",\"x15\",\"x16\",\"x17\",\"x18\",\"x19\",\"x20\",\"x21\",\"x22\",\"x23\",\"x24\",\"x25\",\"x26\",\"x27\",\"x28\",\"x29\",\"x30\",\"x31\",\"x32\",\"x33\",\"x34\",\"x35\",\"x36\",\"x37\",\"x38\",\"x39\",\"x40\",\"x41\",\"x42\",\"x43\",\"x44\",\"x45\",\"x46\",\"x47\",\"x48\",\"x49\",\"x50\",\"x51\",\"x52\",\"x53\",\"x54\",\"x55\",\"x56\",\"x57\",\"x58\",\"x59\",\"x60\",\"x61\",\"x62\",\"x63\",\"x64\",\"x65\",\"x66\",\"x67\",\"x68\",\"x69\",\"x70\",\"x71\",\"x72\",\"x73\",\"x74\",\"x75\",\"x76\",\"x77\",\"x78\",\"x79\",\"x80\",\"x81\",\"x82\",\"x83\",\"x84\",\"x85\",\"x86\",\"x87\",\"x88\",\"x89\",\"x90\",\"x91\",\"x92\",\"x93\",\"x94\",\"x95\",\"x96\",\"x97\",\"x98\",\"x99\",\"x100\",\"x101\",\"x102\",\"x103\",\"x104\",\"x105\",\"x106\",\"x107\",\"x108\",\"x109\",\"x110\",\"x111\",\"x112\",\"x113\",\"x114\",\"x115\",\"x116\",\"x117\",\"x118\",\"x119\",\"x120\",\"x121\",\"x122\",\"x123\",\"x124\",\"x125\",\"x126\",\"x127\",\"x128\",\"x129\",\"x130\",\"x131\",\"x132\",\"x133\",\"x134\",\"x135\",\"x136\",\"x137\",\"x138\",\"x139\",\"x140\",\"x141\",\"x142\",\"x143\",\"x144\",\"x145\",\"x146\",\"x147\",\"x148\",\"x149\",\"x150\",\"x151\",\"x152\",\"x153\",\"x154\",\"x155\",\"x156\",\"x157\",\"x158\",\"x159\",\"x160\",\"x161\",\"x162\",\"x163\",\"x164\",\"x165\",\"x166\",\"x167\",\"x168\",\"x169\",\"x170\",\"x171\",\"x172\",\"x173\",\"x174\",\"x175\",\"x176\",\"x177\",\"x178\",\"x179\",\"x180\",\"x181\",\"x182\",\"x183\",\"x184\",\"x185\",\"x186\",\"x187\",\"x188\",\"x189\",\"x190\",\"x191\",\"x192\",\"x193\",\"x194\",\"x195\",\"x196\",\"x197\",\"x198\",\"x199\"]",
+   "tunnus": null,
+   "tunnusTallessa": null
+  },
+  {
+   "vaihe": "merkitse erä 4",
+   "nahdyt": 254,
+   "nahdytLista": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "x0",
+    "x1",
+    "x2",
+    "x3",
+    "x4",
+    "x5",
+    "x6",
+    "x7",
+    "x8",
+    "x9",
+    "x10",
+    "x11",
+    "x12",
+    "x13",
+    "x14",
+    "x15",
+    "x16",
+    "x17",
+    "x18",
+    "x19",
+    "x20",
+    "x21",
+    "x22",
+    "x23",
+    "x24",
+    "x25",
+    "x26",
+    "x27",
+    "x28",
+    "x29",
+    "x30",
+    "x31",
+    "x32",
+    "x33",
+    "x34",
+    "x35",
+    "x36",
+    "x37",
+    "x38",
+    "x39",
+    "x40",
+    "x41",
+    "x42",
+    "x43",
+    "x44",
+    "x45",
+    "x46",
+    "x47",
+    "x48",
+    "x49",
+    "x50",
+    "x51",
+    "x52",
+    "x53",
+    "x54",
+    "x55",
+    "x56",
+    "x57",
+    "x58",
+    "x59",
+    "x60",
+    "x61",
+    "x62",
+    "x63",
+    "x64",
+    "x65",
+    "x66",
+    "x67",
+    "x68",
+    "x69",
+    "x70",
+    "x71",
+    "x72",
+    "x73",
+    "x74",
+    "x75",
+    "x76",
+    "x77",
+    "x78",
+    "x79",
+    "x80",
+    "x81",
+    "x82",
+    "x83",
+    "x84",
+    "x85",
+    "x86",
+    "x87",
+    "x88",
+    "x89",
+    "x90",
+    "x91",
+    "x92",
+    "x93",
+    "x94",
+    "x95",
+    "x96",
+    "x97",
+    "x98",
+    "x99",
+    "x100",
+    "x101",
+    "x102",
+    "x103",
+    "x104",
+    "x105",
+    "x106",
+    "x107",
+    "x108",
+    "x109",
+    "x110",
+    "x111",
+    "x112",
+    "x113",
+    "x114",
+    "x115",
+    "x116",
+    "x117",
+    "x118",
+    "x119",
+    "x120",
+    "x121",
+    "x122",
+    "x123",
+    "x124",
+    "x125",
+    "x126",
+    "x127",
+    "x128",
+    "x129",
+    "x130",
+    "x131",
+    "x132",
+    "x133",
+    "x134",
+    "x135",
+    "x136",
+    "x137",
+    "x138",
+    "x139",
+    "x140",
+    "x141",
+    "x142",
+    "x143",
+    "x144",
+    "x145",
+    "x146",
+    "x147",
+    "x148",
+    "x149",
+    "x150",
+    "x151",
+    "x152",
+    "x153",
+    "x154",
+    "x155",
+    "x156",
+    "x157",
+    "x158",
+    "x159",
+    "x160",
+    "x161",
+    "x162",
+    "x163",
+    "x164",
+    "x165",
+    "x166",
+    "x167",
+    "x168",
+    "x169",
+    "x170",
+    "x171",
+    "x172",
+    "x173",
+    "x174",
+    "x175",
+    "x176",
+    "x177",
+    "x178",
+    "x179",
+    "x180",
+    "x181",
+    "x182",
+    "x183",
+    "x184",
+    "x185",
+    "x186",
+    "x187",
+    "x188",
+    "x189",
+    "x190",
+    "x191",
+    "x192",
+    "x193",
+    "x194",
+    "x195",
+    "x196",
+    "x197",
+    "x198",
+    "x199",
+    "x200",
+    "x201",
+    "x202",
+    "x203",
+    "x204",
+    "x205",
+    "x206",
+    "x207",
+    "x208",
+    "x209",
+    "x210",
+    "x211",
+    "x212",
+    "x213",
+    "x214",
+    "x215",
+    "x216",
+    "x217",
+    "x218",
+    "x219",
+    "x220",
+    "x221",
+    "x222",
+    "x223",
+    "x224",
+    "x225",
+    "x226",
+    "x227",
+    "x228",
+    "x229",
+    "x230",
+    "x231",
+    "x232",
+    "x233",
+    "x234",
+    "x235",
+    "x236",
+    "x237",
+    "x238",
+    "x239",
+    "x240",
+    "x241",
+    "x242",
+    "x243",
+    "x244",
+    "x245",
+    "x246",
+    "x247",
+    "x248",
+    "x249"
+   ],
+   "tallessa": "[\"a\",\"b\",\"c\",\"d\",\"x0\",\"x1\",\"x2\",\"x3\",\"x4\",\"x5\",\"x6\",\"x7\",\"x8\",\"x9\",\"x10\",\"x11\",\"x12\",\"x13\",\"x14\",\"x15\",\"x16\",\"x17\",\"x18\",\"x19\",\"x20\",\"x21\",\"x22\",\"x23\",\"x24\",\"x25\",\"x26\",\"x27\",\"x28\",\"x29\",\"x30\",\"x31\",\"x32\",\"x33\",\"x34\",\"x35\",\"x36\",\"x37\",\"x38\",\"x39\",\"x40\",\"x41\",\"x42\",\"x43\",\"x44\",\"x45\",\"x46\",\"x47\",\"x48\",\"x49\",\"x50\",\"x51\",\"x52\",\"x53\",\"x54\",\"x55\",\"x56\",\"x57\",\"x58\",\"x59\",\"x60\",\"x61\",\"x62\",\"x63\",\"x64\",\"x65\",\"x66\",\"x67\",\"x68\",\"x69\",\"x70\",\"x71\",\"x72\",\"x73\",\"x74\",\"x75\",\"x76\",\"x77\",\"x78\",\"x79\",\"x80\",\"x81\",\"x82\",\"x83\",\"x84\",\"x85\",\"x86\",\"x87\",\"x88\",\"x89\",\"x90\",\"x91\",\"x92\",\"x93\",\"x94\",\"x95\",\"x96\",\"x97\",\"x98\",\"x99\",\"x100\",\"x101\",\"x102\",\"x103\",\"x104\",\"x105\",\"x106\",\"x107\",\"x108\",\"x109\",\"x110\",\"x111\",\"x112\",\"x113\",\"x114\",\"x115\",\"x116\",\"x117\",\"x118\",\"x119\",\"x120\",\"x121\",\"x122\",\"x123\",\"x124\",\"x125\",\"x126\",\"x127\",\"x128\",\"x129\",\"x130\",\"x131\",\"x132\",\"x133\",\"x134\",\"x135\",\"x136\",\"x137\",\"x138\",\"x139\",\"x140\",\"x141\",\"x142\",\"x143\",\"x144\",\"x145\",\"x146\",\"x147\",\"x148\",\"x149\",\"x150\",\"x151\",\"x152\",\"x153\",\"x154\",\"x155\",\"x156\",\"x157\",\"x158\",\"x159\",\"x160\",\"x161\",\"x162\",\"x163\",\"x164\",\"x165\",\"x166\",\"x167\",\"x168\",\"x169\",\"x170\",\"x171\",\"x172\",\"x173\",\"x174\",\"x175\",\"x176\",\"x177\",\"x178\",\"x179\",\"x180\",\"x181\",\"x182\",\"x183\",\"x184\",\"x185\",\"x186\",\"x187\",\"x188\",\"x189\",\"x190\",\"x191\",\"x192\",\"x193\",\"x194\",\"x195\",\"x196\",\"x197\",\"x198\",\"x199\",\"x200\",\"x201\",\"x202\",\"x203\",\"x204\",\"x205\",\"x206\",\"x207\",\"x208\",\"x209\",\"x210\",\"x211\",\"x212\",\"x213\",\"x214\",\"x215\",\"x216\",\"x217\",\"x218\",\"x219\",\"x220\",\"x221\",\"x222\",\"x223\",\"x224\",\"x225\",\"x226\",\"x227\",\"x228\",\"x229\",\"x230\",\"x231\",\"x232\",\"x233\",\"x234\",\"x235\",\"x236\",\"x237\",\"x238\",\"x239\",\"x240\",\"x241\",\"x242\",\"x243\",\"x244\",\"x245\",\"x246\",\"x247\",\"x248\",\"x249\"]",
+   "tunnus": null,
+   "tunnusTallessa": null
+  },
+  {
+   "vaihe": "merkitse erä 5",
+   "nahdyt": 300,
+   "nahdytLista": [
+    "x0",
+    "x1",
+    "x2",
+    "x3",
+    "x4",
+    "x5",
+    "x6",
+    "x7",
+    "x8",
+    "x9",
+    "x10",
+    "x11",
+    "x12",
+    "x13",
+    "x14",
+    "x15",
+    "x16",
+    "x17",
+    "x18",
+    "x19",
+    "x20",
+    "x21",
+    "x22",
+    "x23",
+    "x24",
+    "x25",
+    "x26",
+    "x27",
+    "x28",
+    "x29",
+    "x30",
+    "x31",
+    "x32",
+    "x33",
+    "x34",
+    "x35",
+    "x36",
+    "x37",
+    "x38",
+    "x39",
+    "x40",
+    "x41",
+    "x42",
+    "x43",
+    "x44",
+    "x45",
+    "x46",
+    "x47",
+    "x48",
+    "x49",
+    "x50",
+    "x51",
+    "x52",
+    "x53",
+    "x54",
+    "x55",
+    "x56",
+    "x57",
+    "x58",
+    "x59",
+    "x60",
+    "x61",
+    "x62",
+    "x63",
+    "x64",
+    "x65",
+    "x66",
+    "x67",
+    "x68",
+    "x69",
+    "x70",
+    "x71",
+    "x72",
+    "x73",
+    "x74",
+    "x75",
+    "x76",
+    "x77",
+    "x78",
+    "x79",
+    "x80",
+    "x81",
+    "x82",
+    "x83",
+    "x84",
+    "x85",
+    "x86",
+    "x87",
+    "x88",
+    "x89",
+    "x90",
+    "x91",
+    "x92",
+    "x93",
+    "x94",
+    "x95",
+    "x96",
+    "x97",
+    "x98",
+    "x99",
+    "x100",
+    "x101",
+    "x102",
+    "x103",
+    "x104",
+    "x105",
+    "x106",
+    "x107",
+    "x108",
+    "x109",
+    "x110",
+    "x111",
+    "x112",
+    "x113",
+    "x114",
+    "x115",
+    "x116",
+    "x117",
+    "x118",
+    "x119",
+    "x120",
+    "x121",
+    "x122",
+    "x123",
+    "x124",
+    "x125",
+    "x126",
+    "x127",
+    "x128",
+    "x129",
+    "x130",
+    "x131",
+    "x132",
+    "x133",
+    "x134",
+    "x135",
+    "x136",
+    "x137",
+    "x138",
+    "x139",
+    "x140",
+    "x141",
+    "x142",
+    "x143",
+    "x144",
+    "x145",
+    "x146",
+    "x147",
+    "x148",
+    "x149",
+    "x150",
+    "x151",
+    "x152",
+    "x153",
+    "x154",
+    "x155",
+    "x156",
+    "x157",
+    "x158",
+    "x159",
+    "x160",
+    "x161",
+    "x162",
+    "x163",
+    "x164",
+    "x165",
+    "x166",
+    "x167",
+    "x168",
+    "x169",
+    "x170",
+    "x171",
+    "x172",
+    "x173",
+    "x174",
+    "x175",
+    "x176",
+    "x177",
+    "x178",
+    "x179",
+    "x180",
+    "x181",
+    "x182",
+    "x183",
+    "x184",
+    "x185",
+    "x186",
+    "x187",
+    "x188",
+    "x189",
+    "x190",
+    "x191",
+    "x192",
+    "x193",
+    "x194",
+    "x195",
+    "x196",
+    "x197",
+    "x198",
+    "x199",
+    "x200",
+    "x201",
+    "x202",
+    "x203",
+    "x204",
+    "x205",
+    "x206",
+    "x207",
+    "x208",
+    "x209",
+    "x210",
+    "x211",
+    "x212",
+    "x213",
+    "x214",
+    "x215",
+    "x216",
+    "x217",
+    "x218",
+    "x219",
+    "x220",
+    "x221",
+    "x222",
+    "x223",
+    "x224",
+    "x225",
+    "x226",
+    "x227",
+    "x228",
+    "x229",
+    "x230",
+    "x231",
+    "x232",
+    "x233",
+    "x234",
+    "x235",
+    "x236",
+    "x237",
+    "x238",
+    "x239",
+    "x240",
+    "x241",
+    "x242",
+    "x243",
+    "x244",
+    "x245",
+    "x246",
+    "x247",
+    "x248",
+    "x249",
+    "x250",
+    "x251",
+    "x252",
+    "x253",
+    "x254",
+    "x255",
+    "x256",
+    "x257",
+    "x258",
+    "x259",
+    "x260",
+    "x261",
+    "x262",
+    "x263",
+    "x264",
+    "x265",
+    "x266",
+    "x267",
+    "x268",
+    "x269",
+    "x270",
+    "x271",
+    "x272",
+    "x273",
+    "x274",
+    "x275",
+    "x276",
+    "x277",
+    "x278",
+    "x279",
+    "x280",
+    "x281",
+    "x282",
+    "x283",
+    "x284",
+    "x285",
+    "x286",
+    "x287",
+    "x288",
+    "x289",
+    "x290",
+    "x291",
+    "x292",
+    "x293",
+    "x294",
+    "x295",
+    "x296",
+    "x297",
+    "x298",
+    "x299"
+   ],
+   "tallessa": "[\"x0\",\"x1\",\"x2\",\"x3\",\"x4\",\"x5\",\"x6\",\"x7\",\"x8\",\"x9\",\"x10\",\"x11\",\"x12\",\"x13\",\"x14\",\"x15\",\"x16\",\"x17\",\"x18\",\"x19\",\"x20\",\"x21\",\"x22\",\"x23\",\"x24\",\"x25\",\"x26\",\"x27\",\"x28\",\"x29\",\"x30\",\"x31\",\"x32\",\"x33\",\"x34\",\"x35\",\"x36\",\"x37\",\"x38\",\"x39\",\"x40\",\"x41\",\"x42\",\"x43\",\"x44\",\"x45\",\"x46\",\"x47\",\"x48\",\"x49\",\"x50\",\"x51\",\"x52\",\"x53\",\"x54\",\"x55\",\"x56\",\"x57\",\"x58\",\"x59\",\"x60\",\"x61\",\"x62\",\"x63\",\"x64\",\"x65\",\"x66\",\"x67\",\"x68\",\"x69\",\"x70\",\"x71\",\"x72\",\"x73\",\"x74\",\"x75\",\"x76\",\"x77\",\"x78\",\"x79\",\"x80\",\"x81\",\"x82\",\"x83\",\"x84\",\"x85\",\"x86\",\"x87\",\"x88\",\"x89\",\"x90\",\"x91\",\"x92\",\"x93\",\"x94\",\"x95\",\"x96\",\"x97\",\"x98\",\"x99\",\"x100\",\"x101\",\"x102\",\"x103\",\"x104\",\"x105\",\"x106\",\"x107\",\"x108\",\"x109\",\"x110\",\"x111\",\"x112\",\"x113\",\"x114\",\"x115\",\"x116\",\"x117\",\"x118\",\"x119\",\"x120\",\"x121\",\"x122\",\"x123\",\"x124\",\"x125\",\"x126\",\"x127\",\"x128\",\"x129\",\"x130\",\"x131\",\"x132\",\"x133\",\"x134\",\"x135\",\"x136\",\"x137\",\"x138\",\"x139\",\"x140\",\"x141\",\"x142\",\"x143\",\"x144\",\"x145\",\"x146\",\"x147\",\"x148\",\"x149\",\"x150\",\"x151\",\"x152\",\"x153\",\"x154\",\"x155\",\"x156\",\"x157\",\"x158\",\"x159\",\"x160\",\"x161\",\"x162\",\"x163\",\"x164\",\"x165\",\"x166\",\"x167\",\"x168\",\"x169\",\"x170\",\"x171\",\"x172\",\"x173\",\"x174\",\"x175\",\"x176\",\"x177\",\"x178\",\"x179\",\"x180\",\"x181\",\"x182\",\"x183\",\"x184\",\"x185\",\"x186\",\"x187\",\"x188\",\"x189\",\"x190\",\"x191\",\"x192\",\"x193\",\"x194\",\"x195\",\"x196\",\"x197\",\"x198\",\"x199\",\"x200\",\"x201\",\"x202\",\"x203\",\"x204\",\"x205\",\"x206\",\"x207\",\"x208\",\"x209\",\"x210\",\"x211\",\"x212\",\"x213\",\"x214\",\"x215\",\"x216\",\"x217\",\"x218\",\"x219\",\"x220\",\"x221\",\"x222\",\"x223\",\"x224\",\"x225\",\"x226\",\"x227\",\"x228\",\"x229\",\"x230\",\"x231\",\"x232\",\"x233\",\"x234\",\"x235\",\"x236\",\"x237\",\"x238\",\"x239\",\"x240\",\"x241\",\"x242\",\"x243\",\"x244\",\"x245\",\"x246\",\"x247\",\"x248\",\"x249\",\"x250\",\"x251\",\"x252\",\"x253\",\"x254\",\"x255\",\"x256\",\"x257\",\"x258\",\"x259\",\"x260\",\"x261\",\"x262\",\"x263\",\"x264\",\"x265\",\"x266\",\"x267\",\"x268\",\"x269\",\"x270\",\"x271\",\"x272\",\"x273\",\"x274\",\"x275\",\"x276\",\"x277\",\"x278\",\"x279\",\"x280\",\"x281\",\"x282\",\"x283\",\"x284\",\"x285\",\"x286\",\"x287\",\"x288\",\"x289\",\"x290\",\"x291\",\"x292\",\"x293\",\"x294\",\"x295\",\"x296\",\"x297\",\"x298\",\"x299\"]",
+   "tunnus": null,
+   "tunnusTallessa": null
+  },
+  {
+   "vaihe": "merkitse erä 6",
+   "nahdyt": 300,
+   "nahdytLista": [
+    "x50",
+    "x51",
+    "x52",
+    "x53",
+    "x54",
+    "x55",
+    "x56",
+    "x57",
+    "x58",
+    "x59",
+    "x60",
+    "x61",
+    "x62",
+    "x63",
+    "x64",
+    "x65",
+    "x66",
+    "x67",
+    "x68",
+    "x69",
+    "x70",
+    "x71",
+    "x72",
+    "x73",
+    "x74",
+    "x75",
+    "x76",
+    "x77",
+    "x78",
+    "x79",
+    "x80",
+    "x81",
+    "x82",
+    "x83",
+    "x84",
+    "x85",
+    "x86",
+    "x87",
+    "x88",
+    "x89",
+    "x90",
+    "x91",
+    "x92",
+    "x93",
+    "x94",
+    "x95",
+    "x96",
+    "x97",
+    "x98",
+    "x99",
+    "x100",
+    "x101",
+    "x102",
+    "x103",
+    "x104",
+    "x105",
+    "x106",
+    "x107",
+    "x108",
+    "x109",
+    "x110",
+    "x111",
+    "x112",
+    "x113",
+    "x114",
+    "x115",
+    "x116",
+    "x117",
+    "x118",
+    "x119",
+    "x120",
+    "x121",
+    "x122",
+    "x123",
+    "x124",
+    "x125",
+    "x126",
+    "x127",
+    "x128",
+    "x129",
+    "x130",
+    "x131",
+    "x132",
+    "x133",
+    "x134",
+    "x135",
+    "x136",
+    "x137",
+    "x138",
+    "x139",
+    "x140",
+    "x141",
+    "x142",
+    "x143",
+    "x144",
+    "x145",
+    "x146",
+    "x147",
+    "x148",
+    "x149",
+    "x150",
+    "x151",
+    "x152",
+    "x153",
+    "x154",
+    "x155",
+    "x156",
+    "x157",
+    "x158",
+    "x159",
+    "x160",
+    "x161",
+    "x162",
+    "x163",
+    "x164",
+    "x165",
+    "x166",
+    "x167",
+    "x168",
+    "x169",
+    "x170",
+    "x171",
+    "x172",
+    "x173",
+    "x174",
+    "x175",
+    "x176",
+    "x177",
+    "x178",
+    "x179",
+    "x180",
+    "x181",
+    "x182",
+    "x183",
+    "x184",
+    "x185",
+    "x186",
+    "x187",
+    "x188",
+    "x189",
+    "x190",
+    "x191",
+    "x192",
+    "x193",
+    "x194",
+    "x195",
+    "x196",
+    "x197",
+    "x198",
+    "x199",
+    "x200",
+    "x201",
+    "x202",
+    "x203",
+    "x204",
+    "x205",
+    "x206",
+    "x207",
+    "x208",
+    "x209",
+    "x210",
+    "x211",
+    "x212",
+    "x213",
+    "x214",
+    "x215",
+    "x216",
+    "x217",
+    "x218",
+    "x219",
+    "x220",
+    "x221",
+    "x222",
+    "x223",
+    "x224",
+    "x225",
+    "x226",
+    "x227",
+    "x228",
+    "x229",
+    "x230",
+    "x231",
+    "x232",
+    "x233",
+    "x234",
+    "x235",
+    "x236",
+    "x237",
+    "x238",
+    "x239",
+    "x240",
+    "x241",
+    "x242",
+    "x243",
+    "x244",
+    "x245",
+    "x246",
+    "x247",
+    "x248",
+    "x249",
+    "x250",
+    "x251",
+    "x252",
+    "x253",
+    "x254",
+    "x255",
+    "x256",
+    "x257",
+    "x258",
+    "x259",
+    "x260",
+    "x261",
+    "x262",
+    "x263",
+    "x264",
+    "x265",
+    "x266",
+    "x267",
+    "x268",
+    "x269",
+    "x270",
+    "x271",
+    "x272",
+    "x273",
+    "x274",
+    "x275",
+    "x276",
+    "x277",
+    "x278",
+    "x279",
+    "x280",
+    "x281",
+    "x282",
+    "x283",
+    "x284",
+    "x285",
+    "x286",
+    "x287",
+    "x288",
+    "x289",
+    "x290",
+    "x291",
+    "x292",
+    "x293",
+    "x294",
+    "x295",
+    "x296",
+    "x297",
+    "x298",
+    "x299",
+    "x300",
+    "x301",
+    "x302",
+    "x303",
+    "x304",
+    "x305",
+    "x306",
+    "x307",
+    "x308",
+    "x309",
+    "x310",
+    "x311",
+    "x312",
+    "x313",
+    "x314",
+    "x315",
+    "x316",
+    "x317",
+    "x318",
+    "x319",
+    "x320",
+    "x321",
+    "x322",
+    "x323",
+    "x324",
+    "x325",
+    "x326",
+    "x327",
+    "x328",
+    "x329",
+    "x330",
+    "x331",
+    "x332",
+    "x333",
+    "x334",
+    "x335",
+    "x336",
+    "x337",
+    "x338",
+    "x339",
+    "x340",
+    "x341",
+    "x342",
+    "x343",
+    "x344",
+    "x345",
+    "x346",
+    "x347",
+    "x348",
+    "x349"
+   ],
+   "tallessa": "[\"x50\",\"x51\",\"x52\",\"x53\",\"x54\",\"x55\",\"x56\",\"x57\",\"x58\",\"x59\",\"x60\",\"x61\",\"x62\",\"x63\",\"x64\",\"x65\",\"x66\",\"x67\",\"x68\",\"x69\",\"x70\",\"x71\",\"x72\",\"x73\",\"x74\",\"x75\",\"x76\",\"x77\",\"x78\",\"x79\",\"x80\",\"x81\",\"x82\",\"x83\",\"x84\",\"x85\",\"x86\",\"x87\",\"x88\",\"x89\",\"x90\",\"x91\",\"x92\",\"x93\",\"x94\",\"x95\",\"x96\",\"x97\",\"x98\",\"x99\",\"x100\",\"x101\",\"x102\",\"x103\",\"x104\",\"x105\",\"x106\",\"x107\",\"x108\",\"x109\",\"x110\",\"x111\",\"x112\",\"x113\",\"x114\",\"x115\",\"x116\",\"x117\",\"x118\",\"x119\",\"x120\",\"x121\",\"x122\",\"x123\",\"x124\",\"x125\",\"x126\",\"x127\",\"x128\",\"x129\",\"x130\",\"x131\",\"x132\",\"x133\",\"x134\",\"x135\",\"x136\",\"x137\",\"x138\",\"x139\",\"x140\",\"x141\",\"x142\",\"x143\",\"x144\",\"x145\",\"x146\",\"x147\",\"x148\",\"x149\",\"x150\",\"x151\",\"x152\",\"x153\",\"x154\",\"x155\",\"x156\",\"x157\",\"x158\",\"x159\",\"x160\",\"x161\",\"x162\",\"x163\",\"x164\",\"x165\",\"x166\",\"x167\",\"x168\",\"x169\",\"x170\",\"x171\",\"x172\",\"x173\",\"x174\",\"x175\",\"x176\",\"x177\",\"x178\",\"x179\",\"x180\",\"x181\",\"x182\",\"x183\",\"x184\",\"x185\",\"x186\",\"x187\",\"x188\",\"x189\",\"x190\",\"x191\",\"x192\",\"x193\",\"x194\",\"x195\",\"x196\",\"x197\",\"x198\",\"x199\",\"x200\",\"x201\",\"x202\",\"x203\",\"x204\",\"x205\",\"x206\",\"x207\",\"x208\",\"x209\",\"x210\",\"x211\",\"x212\",\"x213\",\"x214\",\"x215\",\"x216\",\"x217\",\"x218\",\"x219\",\"x220\",\"x221\",\"x222\",\"x223\",\"x224\",\"x225\",\"x226\",\"x227\",\"x228\",\"x229\",\"x230\",\"x231\",\"x232\",\"x233\",\"x234\",\"x235\",\"x236\",\"x237\",\"x238\",\"x239\",\"x240\",\"x241\",\"x242\",\"x243\",\"x244\",\"x245\",\"x246\",\"x247\",\"x248\",\"x249\",\"x250\",\"x251\",\"x252\",\"x253\",\"x254\",\"x255\",\"x256\",\"x257\",\"x258\",\"x259\",\"x260\",\"x261\",\"x262\",\"x263\",\"x264\",\"x265\",\"x266\",\"x267\",\"x268\",\"x269\",\"x270\",\"x271\",\"x272\",\"x273\",\"x274\",\"x275\",\"x276\",\"x277\",\"x278\",\"x279\",\"x280\",\"x281\",\"x282\",\"x283\",\"x284\",\"x285\",\"x286\",\"x287\",\"x288\",\"x289\",\"x290\",\"x291\",\"x292\",\"x293\",\"x294\",\"x295\",\"x296\",\"x297\",\"x298\",\"x299\",\"x300\",\"x301\",\"x302\",\"x303\",\"x304\",\"x305\",\"x306\",\"x307\",\"x308\",\"x309\",\"x310\",\"x311\",\"x312\",\"x313\",\"x314\",\"x315\",\"x316\",\"x317\",\"x318\",\"x319\",\"x320\",\"x321\",\"x322\",\"x323\",\"x324\",\"x325\",\"x326\",\"x327\",\"x328\",\"x329\",\"x330\",\"x331\",\"x332\",\"x333\",\"x334\",\"x335\",\"x336\",\"x337\",\"x338\",\"x339\",\"x340\",\"x341\",\"x342\",\"x343\",\"x344\",\"x345\",\"x346\",\"x347\",\"x348\",\"x349\"]",
+   "tunnus": null,
+   "tunnusTallessa": null
+  }
+ ],
+ "tunnukset": [
+  {
+   "raaka": "",
+   "tunnus": null
+  },
+  {
+   "raaka": "rikki",
+   "tunnus": null
+  },
+  {
+   "raaka": "{\"koodi\":\"ABC234\"}",
+   "tunnus": null
+  },
+  {
+   "raaka": "{\"koodi\":\"ABC234\",\"jasenId\":\"j1\",\"avain\":\"k1\"}",
+   "tunnus": {
+    "koodi": "ABC234",
+    "jasenId": "j1",
+    "avain": "k1"
+   }
+  },
+  {
+   "raaka": "{\"koodi\":\"ABC234\",\"jasenId\":\"j1\",\"avain\":\"k1\",\"nimimerkki\":\"Utelias Ilves\"}",
+   "tunnus": {
+    "koodi": "ABC234",
+    "jasenId": "j1",
+    "avain": "k1",
+    "nimimerkki": "Utelias Ilves"
+   }
+  },
+  {
+   "raaka": "{\"koodi\":\"\",\"jasenId\":\"j1\",\"avain\":\"k1\"}",
+   "tunnus": null
+  },
+  {
+   "raaka": "[1,2]",
+   "tunnus": null
+  },
+  {
+   "raaka": "null",
+   "tunnus": null
+  }
+ ],
+ "asetukset": [
+  {
+   "asetus": {
+    "koodi": "ABC234",
+    "jasenId": "j1",
+    "avain": "k\"1\\",
+    "nimimerkki": "Utelias Ilves"
+   },
+   "tallessa": "{\"koodi\":\"ABC234\",\"jasenId\":\"j1\",\"avain\":\"k\\\"1\\\\\",\"nimimerkki\":\"Utelias Ilves\"}"
+  },
+  {
+   "asetus": {
+    "koodi": "ABC234",
+    "jasenId": "j1",
+    "avain": "k1"
+   },
+   "tallessa": "{\"koodi\":\"ABC234\",\"jasenId\":\"j1\",\"avain\":\"k1\",\"nimimerkki\":\"\"}"
+  },
+  {
+   "asetus": {
+    "koodi": "ABC234",
+    "jasenId": "",
+    "avain": "k1",
+    "nimimerkki": "X"
+   },
+   "tallessa": null
+  },
+  {
+   "asetus": null,
+   "tallessa": null
+  }
+ ],
+ "kasittely": {
+  "siemen": 73,
+  "askeleet": [
+   {
+    "tila": {
+     "sahkeet": [
+      {
+       "id": "s1",
+       "lahettaja": "j-muu",
+       "pohjaId": "aarre-loytyi",
+       "paikkaId": "tukholma",
+       "aika": "2026-09-23T10:00:00.000Z"
+      },
+      {
+       "id": "s2",
+       "lahettaja": "j-muu",
+       "pohjaId": "uusi-pohja",
+       "paikkaId": "tukholma",
+       "aika": "2026-09-23T10:01:00.000Z"
+      },
+      {
+       "id": "s3",
+       "pohjaId": "saavuin",
+       "paikkaId": "ei-laudalla"
+      },
+      {
+       "pohjaId": "saavuin",
+       "paikkaId": "oslo"
+      },
+      null
+     ],
+     "apupyynnot": [
+      {
+       "apuId": "a1",
+       "kysyja": "j-kaveri",
+       "kysymys": "Mikä on Ruotsin pääkaupunki?",
+       "vaihtoehdot": [
+        "Oslo",
+        "Tukholma",
+        "Helsinki"
+       ]
+      },
+      {
+       "apuId": "a2",
+       "kysyja": "j-kaveri",
+       "kysymys": "Yksi vaihtoehto",
+       "vaihtoehdot": [
+        "A"
+       ]
+      },
+      {
+       "apuId": "a3",
+       "kysymys": "Sekalaiset?",
+       "vaihtoehdot": [
+        "A",
+        7,
+        "B",
+        null
+       ]
+      },
+      {
+       "apuId": "a4",
+       "kysyja": "j-kaveri",
+       "kysymys": "",
+       "vaihtoehdot": [
+        "A",
+        "B"
+       ]
+      }
+     ],
+     "apuvastaukset": [
+      {
+       "apuId": "apu-oma",
+       "vastaaja": "j-kaveri",
+       "veikkaus": 1.5
+      }
+     ]
+    },
+    "jono": [
+     {
+      "laji": "sahke",
+      "saate": "Toin sähkeen. Postinkantaja tekee työnsä.",
+      "pohjaId": "aarre-loytyi",
+      "paikkaId": "tukholma",
+      "lahettaja": "j-muu",
+      "aika": "2026-09-23T10:00:00.000Z",
+      "teksti": "AARRE LÖYTYNYT TUKHOLMA STOP"
+     },
+     {
+      "laji": "sahke",
+      "saate": "Sähke. Luin sen jo. Hyviä uutisia.",
+      "pohjaId": "saavuin",
+      "paikkaId": "ei-laudalla",
+      "lahettaja": "",
+      "aika": "",
+      "teksti": "SAAVUIN EI-LAUDALLA STOP MATKA JATKUU"
+     },
+     {
+      "laji": "apupyynto",
+      "apuId": "a1",
+      "kysyja": "j-kaveri",
+      "kysymys": "Mikä on Ruotsin pääkaupunki?",
+      "vaihtoehdot": [
+       "Oslo",
+       "Tukholma",
+       "Helsinki"
+      ],
+      "teksti": null
+     },
+     {
+      "laji": "apupyynto",
+      "apuId": "a3",
+      "kysyja": "Retkikunta",
+      "kysymys": "Sekalaiset?",
+      "vaihtoehdot": [
+       "A",
+       "B"
+      ],
+      "teksti": null
+     }
+    ],
+    "nahdyt": [
+     "s1",
+     "s2",
+     "s3",
+     "apu:a1",
+     "apu:a2",
+     "apu:a3",
+     "apu:a4"
+    ],
+    "veikkaus": null
+   },
+   {
+    "tila": {
+     "sahkeet": [
+      {
+       "id": "s1",
+       "lahettaja": "j-muu",
+       "pohjaId": "aarre-loytyi",
+       "paikkaId": "tukholma"
+      },
+      {
+       "id": "s4",
+       "lahettaja": "j-muu",
+       "pohjaId": "vinkki-vesi",
+       "paikkaId": "strasse",
+       "aika": "rikki"
+      },
+      {
+       "id": "s5",
+       "lahettaja": "j-muu",
+       "pohjaId": "juliste-saatu",
+       "paikkaId": "goteborg"
+      }
+     ],
+     "apupyynnot": [
+      {
+       "apuId": "a1",
+       "kysyja": "j-kaveri",
+       "kysymys": "Toistettu",
+       "vaihtoehdot": [
+        "A",
+        "B"
+       ]
+      }
+     ],
+     "apuvastaukset": [
+      {
+       "apuId": "toinen",
+       "vastaaja": "j-x",
+       "veikkaus": 0
+      },
+      {
+       "apuId": "apu-oma",
+       "veikkaus": "2"
+      }
+     ]
+    },
+    "jono": [
+     {
+      "laji": "sahke",
+      "saate": "Sähke. Luin sen jo. Hyviä uutisia.",
+      "pohjaId": "vinkki-vesi",
+      "paikkaId": "strasse",
+      "lahettaja": "j-muu",
+      "aika": "rikki",
+      "teksti": "VINKKI GROSSSTRASSE STOP SEURAA VETTÄ"
+     },
+     {
+      "laji": "sahke",
+      "saate": "Sähke sinulle. Luin sen jo matkalla.",
+      "pohjaId": "juliste-saatu",
+      "paikkaId": "goteborg",
+      "lahettaja": "j-muu",
+      "aika": "",
+      "teksti": "JULISTE GÖTEBORG STOP LISÄTTY KOKOELMAAN"
+     }
+    ],
+    "nahdyt": [
+     "s1",
+     "s2",
+     "s3",
+     "apu:a1",
+     "apu:a2",
+     "apu:a3",
+     "apu:a4",
+     "s4",
+     "s5"
+    ],
+    "veikkaus": null
+   },
+   {
+    "tila": {
+     "apuvastaukset": [
+      {
+       "apuId": "apu-oma",
+       "veikkaus": 2
+      },
+      {
+       "apuId": "apu-oma",
+       "vastaaja": "j-y",
+       "veikkaus": 0
+      }
+     ]
+    },
+    "jono": [],
+    "nahdyt": [
+     "s1",
+     "s2",
+     "s3",
+     "apu:a1",
+     "apu:a2",
+     "apu:a3",
+     "apu:a4",
+     "s4",
+     "s5"
+    ],
+    "veikkaus": {
+     "indeksi": 2,
+     "vastaaja": "Retkikunta"
+    }
+   },
+   {
+    "tila": {
+     "apuvastaukset": [
+      {
+       "apuId": "apu-oma",
+       "vastaaja": "j-z",
+       "veikkaus": 3
+      }
+     ]
+    },
+    "jono": [],
+    "nahdyt": [
+     "s1",
+     "s2",
+     "s3",
+     "apu:a1",
+     "apu:a2",
+     "apu:a3",
+     "apu:a4",
+     "s4",
+     "s5"
+    ],
+    "veikkaus": {
+     "indeksi": 2,
+     "vastaaja": "Retkikunta"
+    }
+   },
+   {
+    "tila": null,
+    "jono": [],
+    "nahdyt": [
+     "s1",
+     "s2",
+     "s3",
+     "apu:a1",
+     "apu:a2",
+     "apu:a3",
+     "apu:a4",
+     "s4",
+     "s5"
+    ],
+    "veikkaus": {
+     "indeksi": 2,
+     "vastaaja": "Retkikunta"
+    }
+   },
+   {
+    "tila": {
+     "sahkeet": "ei taulukko"
+    },
+    "jono": [],
+    "nahdyt": [
+     "s1",
+     "s2",
+     "s3",
+     "apu:a1",
+     "apu:a2",
+     "apu:a3",
+     "apu:a4",
+     "s4",
+     "s5"
+    ],
+    "veikkaus": {
+     "indeksi": 2,
+     "vastaaja": "Retkikunta"
+    }
+   }
+  ]
+ },
+ "virstat": [
+  {
+   "loydot": [
+    "helsinki"
+   ],
+   "kaupunki": "helsinki",
+   "maa": "FIN",
+   "pyynnot": []
+  },
+  {
+   "loydot": [
+    "helsinki"
+   ],
+   "kaupunki": "helsinki",
+   "maa": "FIN",
+   "pyynnot": []
+  },
+  {
+   "loydot": [
+    "helsinki",
+    "turku"
+   ],
+   "kaupunki": "turku",
+   "maa": "FIN",
+   "pyynnot": [
+    {
+     "metodi": "POST",
+     "polku": "/sahke",
+     "runko": "{\"koodi\":\"ABC234\",\"jasenId\":\"j-oma\",\"avain\":\"k1\",\"pohjaId\":\"aarre-loytyi\",\"paikkaId\":\"turku\"}"
+    }
+   ]
+  },
+  {
+   "loydot": [
+    "helsinki",
+    "turku"
+   ],
+   "kaupunki": "tukholma",
+   "maa": "SWE",
+   "pyynnot": [
+    {
+     "metodi": "POST",
+     "polku": "/sahke",
+     "runko": "{\"koodi\":\"ABC234\",\"jasenId\":\"j-oma\",\"avain\":\"k1\",\"pohjaId\":\"saavuin\",\"paikkaId\":\"tukholma\"}"
+    }
+   ]
+  },
+  {
+   "loydot": [
+    "helsinki",
+    "turku"
+   ],
+   "kaupunki": null,
+   "maa": null,
+   "pyynnot": []
+  },
+  {
+   "loydot": [
+    "helsinki",
+    "turku"
+   ],
+   "kaupunki": "goteborg",
+   "maa": "SWE",
+   "pyynnot": []
+  },
+  {
+   "loydot": [
+    "helsinki",
+    "turku",
+    "oslo"
+   ],
+   "kaupunki": "oslo",
+   "maa": "NOR",
+   "pyynnot": [
+    {
+     "metodi": "POST",
+     "polku": "/sahke",
+     "runko": "{\"koodi\":\"ABC234\",\"jasenId\":\"j-oma\",\"avain\":\"k1\",\"pohjaId\":\"aarre-loytyi\",\"paikkaId\":\"oslo\"}"
+    },
+    {
+     "metodi": "POST",
+     "polku": "/sahke",
+     "runko": "{\"koodi\":\"ABC234\",\"jasenId\":\"j-oma\",\"avain\":\"k1\",\"pohjaId\":\"saavuin\",\"paikkaId\":\"oslo\"}"
+    }
+   ]
+  },
+  {
+   "loydot": [
+    "helsinki",
+    "turku",
+    "oslo",
+    "goteborg",
+    "sofia"
+   ],
+   "kaupunki": "sofia",
+   "maa": "BGR",
+   "pyynnot": [
+    {
+     "metodi": "POST",
+     "polku": "/sahke",
+     "runko": "{\"koodi\":\"ABC234\",\"jasenId\":\"j-oma\",\"avain\":\"k1\",\"pohjaId\":\"aarre-loytyi\",\"paikkaId\":\"sofia\"}"
+    },
+    {
+     "metodi": "POST",
+     "polku": "/sahke",
+     "runko": "{\"koodi\":\"ABC234\",\"jasenId\":\"j-oma\",\"avain\":\"k1\",\"pohjaId\":\"saavuin\",\"paikkaId\":\"sofia\"}"
+    }
+   ]
+  },
+  {
+   "nollaa": true,
+   "loydot": [
+    "helsinki",
+    "turku",
+    "oslo",
+    "goteborg",
+    "sofia"
+   ],
+   "kaupunki": "berliini",
+   "maa": "DEU",
+   "pyynnot": []
+  },
+  {
+   "loydot": [
+    "helsinki",
+    "turku",
+    "oslo",
+    "goteborg",
+    "sofia"
+   ],
+   "kaupunki": "helsinki",
+   "maa": "FIN",
+   "pyynnot": [
+    {
+     "metodi": "POST",
+     "polku": "/sahke",
+     "runko": "{\"koodi\":\"ABC234\",\"jasenId\":\"j-oma\",\"avain\":\"k1\",\"pohjaId\":\"saavuin\",\"paikkaId\":\"helsinki\"}"
+    }
+   ]
+  },
+  {
+   "linja": false,
+   "loydot": [
+    "helsinki",
+    "turku",
+    "oslo",
+    "goteborg",
+    "sofia",
+    "strasse"
+   ],
+   "kaupunki": "strasse",
+   "maa": "DEU",
+   "pyynnot": []
+  },
+  {
+   "linja": true,
+   "loydot": [
+    "helsinki",
+    "turku",
+    "oslo",
+    "goteborg",
+    "sofia",
+    "strasse"
+   ],
+   "kaupunki": "strasse",
+   "maa": "DEU",
+   "pyynnot": [
+    {
+     "metodi": "POST",
+     "polku": "/sahke",
+     "runko": "{\"koodi\":\"ABC234\",\"jasenId\":\"j-oma\",\"avain\":\"k1\",\"pohjaId\":\"aarre-loytyi\",\"paikkaId\":\"strasse\"}"
+    },
+    {
+     "metodi": "POST",
+     "polku": "/sahke",
+     "runko": "{\"koodi\":\"ABC234\",\"jasenId\":\"j-oma\",\"avain\":\"k1\",\"pohjaId\":\"saavuin\",\"paikkaId\":\"strasse\"}"
+    }
+   ]
+  }
+ ],
+ "muodot": [
+  {
+   "metodi": "POST",
+   "polku": "/retkikunta/luo",
+   "runko": "{\"nimimerkki\":\"Utelias Ilves\"}"
+  },
+  {
+   "metodi": "POST",
+   "polku": "/retkikunta/liity",
+   "runko": "{\"koodi\":\"ABC234\",\"nimimerkki\":\"Höyryävä Majakka\"}"
+  },
+  {
+   "metodi": "GET",
+   "polku": "/retkikunta/tila?koodi=ABC234&jasenId=j+1%2B%2F%C3%A4&avain=k%26%3D%3F%C3%B6%7E*._-",
+   "runko": null
+  },
+  {
+   "metodi": "POST",
+   "polku": "/sahke",
+   "runko": "{\"koodi\":\"ABC234\",\"jasenId\":\"j 1+/ä\",\"avain\":\"k&=?ö~*._-\",\"pohjaId\":\"vinkki-vesi\",\"paikkaId\":\"tukholma\"}"
+  },
+  {
+   "metodi": "POST",
+   "polku": "/apu/kysy",
+   "runko": "{\"koodi\":\"ABC234\",\"jasenId\":\"j 1+/ä\",\"avain\":\"k&=?ö~*._-\",\"apuId\":\"apu-x1\",\"kysymys\":\"Mikä \\\"laiva\\\" nousi\\nmerestä?\\u0001\",\"vaihtoehdot\":[\"Vasa\",\"Kronan\\\\\",\"Titanic\"]}"
+  },
+  {
+   "metodi": "POST",
+   "polku": "/apu/vastaa",
+   "runko": "{\"koodi\":\"ABC234\",\"jasenId\":\"j 1+/ä\",\"avain\":\"k&=?ö~*._-\",\"apuId\":\"apu-x1\",\"veikkaus\":2}"
+  }
+ ],
+ "aikataulut": [
+  {
+   "syote": [
+    "ABCD",
+    "EF"
+   ],
+   "asetukset": null,
+   "rivit": [
+    {
+     "teksti": "ABCD",
+     "merkit": 4,
+     "merkkivali": 28,
+     "kesto": 112,
+     "alku": 0
+    },
+    {
+     "teksti": "EF",
+     "merkit": 2,
+     "merkkivali": 28,
+     "kesto": 56,
+     "alku": 462
+    }
+   ],
+   "valiMs": 350,
+   "kesto": 518
+  },
+  {
+   "syote": [
+    "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+   ],
+   "asetukset": null,
+   "rivit": [
+    {
+     "teksti": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+     "merkit": 120,
+     "merkkivali": 11.666666666666666,
+     "kesto": 1400,
+     "alku": 0
+    }
+   ],
+   "valiMs": 350,
+   "kesto": 1400
+  },
+  {
+   "syote": "LIVIALLE STOP\nPÖLLÖ STOP",
+   "asetukset": null,
+   "rivit": [
+    {
+     "teksti": "LIVIALLE STOP",
+     "merkit": 13,
+     "merkkivali": 28,
+     "kesto": 364,
+     "alku": 0
+    },
+    {
+     "teksti": "PÖLLÖ STOP",
+     "merkit": 10,
+     "merkkivali": 28,
+     "kesto": 280,
+     "alku": 714
+    }
+   ],
+   "valiMs": 350,
+   "kesto": 994
+  },
+  {
+   "syote": "  A  \n\n  B\t\n C ",
+   "asetukset": null,
+   "rivit": [
+    {
+     "teksti": "  A",
+     "merkit": 3,
+     "merkkivali": 28,
+     "kesto": 84,
+     "alku": 0
+    },
+    {
+     "teksti": "B",
+     "merkit": 1,
+     "merkkivali": 28,
+     "kesto": 28,
+     "alku": 434
+    },
+    {
+     "teksti": "C ",
+     "merkit": 2,
+     "merkkivali": 28,
+     "kesto": 56,
+     "alku": 812
+    }
+   ],
+   "valiMs": 350,
+   "kesto": 868
+  },
+  {
+   "syote": "",
+   "asetukset": null,
+   "rivit": [],
+   "valiMs": 350,
+   "kesto": 0
+  },
+  {
+   "syote": null,
+   "asetukset": null,
+   "rivit": [],
+   "valiMs": 350,
+   "kesto": 0
+  },
+  {
+   "syote": [
+    "",
+    "YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY",
+    "",
+    "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ",
+    "QQQQQQQ"
+   ],
+   "asetukset": null,
+   "rivit": [
+    {
+     "teksti": "YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY",
+     "merkit": 51,
+     "merkkivali": 27.45098039215686,
+     "kesto": 1400,
+     "alku": 0
+    },
+    {
+     "teksti": "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ",
+     "merkit": 49,
+     "merkkivali": 28,
+     "kesto": 1372,
+     "alku": 1750
+    },
+    {
+     "teksti": "QQQQQQQ",
+     "merkit": 7,
+     "merkkivali": 28,
+     "kesto": 196,
+     "alku": 3472
+    }
+   ],
+   "valiMs": 350,
+   "kesto": 3668
+  },
+  {
+   "syote": "LIVIALLE STOP\nMISSÄ BULGARIASSA LÖYTYI MAAILMAN VANHIN KULTA JA MINÄ VUONNA STOP\nVASTAA KOHDE JA VUOSI STOP\nPAIKKA ON KARTAN KOHTEISSA STOP\nPÖLLÖ STOP",
+   "asetukset": null,
+   "rivit": [
+    {
+     "teksti": "LIVIALLE STOP",
+     "merkit": 13,
+     "merkkivali": 28,
+     "kesto": 364,
+     "alku": 0
+    },
+    {
+     "teksti": "MISSÄ BULGARIASSA LÖYTYI MAAILMAN VANHIN KULTA JA MINÄ VUONNA STOP",
+     "merkit": 66,
+     "merkkivali": 21.21212121212121,
+     "kesto": 1400,
+     "alku": 714
+    },
+    {
+     "teksti": "VASTAA KOHDE JA VUOSI STOP",
+     "merkit": 26,
+     "merkkivali": 28,
+     "kesto": 728,
+     "alku": 2464
+    },
+    {
+     "teksti": "PAIKKA ON KARTAN KOHTEISSA STOP",
+     "merkit": 31,
+     "merkkivali": 28,
+     "kesto": 868,
+     "alku": 3542
+    },
+    {
+     "teksti": "PÖLLÖ STOP",
+     "merkit": 10,
+     "merkkivali": 28,
+     "kesto": 280,
+     "alku": 4760
+    }
+   ],
+   "valiMs": 350,
+   "kesto": 5040
+  },
+  {
+   "syote": "PÖLLÖLLE STOP\nTUNNUSSANA TÄSMÄÄ STOP\nLIVIA TULEE STOP",
+   "asetukset": {
+    "merkkiMs": 16,
+    "kattoMs": 700,
+    "valiMs": 220
+   },
+   "rivit": [
+    {
+     "teksti": "PÖLLÖLLE STOP",
+     "merkit": 13,
+     "merkkivali": 16,
+     "kesto": 208,
+     "alku": 0
+    },
+    {
+     "teksti": "TUNNUSSANA TÄSMÄÄ STOP",
+     "merkit": 22,
+     "merkkivali": 16,
+     "kesto": 352,
+     "alku": 428
+    },
+    {
+     "teksti": "LIVIA TULEE STOP",
+     "merkit": 16,
+     "merkkivali": 16,
+     "kesto": 256,
+     "alku": 1000
+    }
+   ],
+   "valiMs": 220,
+   "kesto": 1256
+  },
+  {
+   "syote": "SÄHKE LÄHETETTY STOP\nODOTA VASTAUSTA STOP",
+   "asetukset": {
+    "merkkiMs": 16,
+    "kattoMs": 700,
+    "valiMs": 220
+   },
+   "rivit": [
+    {
+     "teksti": "SÄHKE LÄHETETTY STOP",
+     "merkit": 20,
+     "merkkivali": 16,
+     "kesto": 320,
+     "alku": 0
+    },
+    {
+     "teksti": "ODOTA VASTAUSTA STOP",
+     "merkit": 20,
+     "merkkivali": 16,
+     "kesto": 320,
+     "alku": 540
+    }
+   ],
+   "valiMs": 220,
+   "kesto": 860
+  },
+  {
+   "syote": "LIVIALLE STOP\nMIKÄ MEREN OTTAMA ALUS NOUSI RUOTSISSA TAKAISIN JA MINÄ VUONNA STOP\nVASTAA KOHDE JA VUOSI STOP\nMOLEMMAT LUKEVAT LEHDESSÄSI STOP\nPÖLLÖ STOP",
+   "asetukset": null,
+   "rivit": [
+    {
+     "teksti": "LIVIALLE STOP",
+     "merkit": 13,
+     "merkkivali": 28,
+     "kesto": 364,
+     "alku": 0
+    },
+    {
+     "teksti": "MIKÄ MEREN OTTAMA ALUS NOUSI RUOTSISSA TAKAISIN JA MINÄ VUONNA STOP",
+     "merkit": 67,
+     "merkkivali": 20.895522388059703,
+     "kesto": 1400,
+     "alku": 714
+    },
+    {
+     "teksti": "VASTAA KOHDE JA VUOSI STOP",
+     "merkit": 26,
+     "merkkivali": 28,
+     "kesto": 728,
+     "alku": 2464
+    },
+    {
+     "teksti": "MOLEMMAT LUKEVAT LEHDESSÄSI STOP",
+     "merkit": 32,
+     "merkkivali": 28,
+     "kesto": 896,
+     "alku": 3542
+    },
+    {
+     "teksti": "PÖLLÖ STOP",
+     "merkit": 10,
+     "merkkivali": 28,
+     "kesto": 280,
+     "alku": 4788
+    }
+   ],
+   "valiMs": 350,
+   "kesto": 5068
+  },
+  {
+   "syote": "PÖLLÖLLE STOP\nTUNNUSSANA TÄSMÄÄ STOP\nLIVIA TULEE STOP",
+   "asetukset": {
+    "merkkiMs": 16,
+    "kattoMs": 700,
+    "valiMs": 220
+   },
+   "rivit": [
+    {
+     "teksti": "PÖLLÖLLE STOP",
+     "merkit": 13,
+     "merkkivali": 16,
+     "kesto": 208,
+     "alku": 0
+    },
+    {
+     "teksti": "TUNNUSSANA TÄSMÄÄ STOP",
+     "merkit": 22,
+     "merkkivali": 16,
+     "kesto": 352,
+     "alku": 428
+    },
+    {
+     "teksti": "LIVIA TULEE STOP",
+     "merkit": 16,
+     "merkkivali": 16,
+     "kesto": 256,
+     "alku": 1000
+    }
+   ],
+   "valiMs": 220,
+   "kesto": 1256
+  },
+  {
+   "syote": "SÄHKE LÄHETETTY STOP\nODOTA VASTAUSTA STOP",
+   "asetukset": {
+    "merkkiMs": 16,
+    "kattoMs": 700,
+    "valiMs": 220
+   },
+   "rivit": [
+    {
+     "teksti": "SÄHKE LÄHETETTY STOP",
+     "merkit": 20,
+     "merkkivali": 16,
+     "kesto": 320,
+     "alku": 0
+    },
+    {
+     "teksti": "ODOTA VASTAUSTA STOP",
+     "merkit": 20,
+     "merkkivali": 16,
+     "kesto": 320,
+     "alku": 540
+    }
+   ],
+   "valiMs": 220,
+   "kesto": 860
+  }
+ ],
+ "palkkiot": [
+  {
+   "ohi": 0,
+   "pohja": 200,
+   "palkkio": 200
+  },
+  {
+   "ohi": 1,
+   "pohja": 200,
+   "palkkio": 150
+  },
+  {
+   "ohi": 2,
+   "pohja": 200,
+   "palkkio": 100
+  },
+  {
+   "ohi": 3,
+   "pohja": 200,
+   "palkkio": 50
+  },
+  {
+   "ohi": 4,
+   "pohja": 200,
+   "palkkio": 0
+  },
+  {
+   "ohi": 5,
+   "pohja": 200,
+   "palkkio": 0
+  },
+  {
+   "ohi": 6,
+   "pohja": 200,
+   "palkkio": 0
+  },
+  {
+   "ohi": 0,
+   "pohja": 150,
+   "palkkio": 150
+  },
+  {
+   "ohi": 1,
+   "pohja": 150,
+   "palkkio": 113
+  },
+  {
+   "ohi": 2,
+   "pohja": 150,
+   "palkkio": 75
+  },
+  {
+   "ohi": 3,
+   "pohja": 150,
+   "palkkio": 38
+  },
+  {
+   "ohi": 4,
+   "pohja": 150,
+   "palkkio": 0
+  },
+  {
+   "ohi": 5,
+   "pohja": 150,
+   "palkkio": 0
+  },
+  {
+   "ohi": 6,
+   "pohja": 150,
+   "palkkio": 0
+  },
+  {
+   "ohi": 0,
+   "pohja": 99,
+   "palkkio": 99
+  },
+  {
+   "ohi": 1,
+   "pohja": 99,
+   "palkkio": 74
+  },
+  {
+   "ohi": 2,
+   "pohja": 99,
+   "palkkio": 50
+  },
+  {
+   "ohi": 3,
+   "pohja": 99,
+   "palkkio": 25
+  },
+  {
+   "ohi": 4,
+   "pohja": 99,
+   "palkkio": 0
+  },
+  {
+   "ohi": 5,
+   "pohja": 99,
+   "palkkio": 0
+  },
+  {
+   "ohi": 6,
+   "pohja": 99,
+   "palkkio": 0
+  },
+  {
+   "ohi": 0,
+   "pohja": 1,
+   "palkkio": 1
+  },
+  {
+   "ohi": 1,
+   "pohja": 1,
+   "palkkio": 1
+  },
+  {
+   "ohi": 2,
+   "pohja": 1,
+   "palkkio": 1
+  },
+  {
+   "ohi": 3,
+   "pohja": 1,
+   "palkkio": 0
+  },
+  {
+   "ohi": 4,
+   "pohja": 1,
+   "palkkio": 0
+  },
+  {
+   "ohi": 5,
+   "pohja": 1,
+   "palkkio": 0
+  },
+  {
+   "ohi": 6,
+   "pohja": 1,
+   "palkkio": 0
+  },
+  {
+   "ohi": 0,
+   "pohja": 0,
+   "palkkio": 0
+  },
+  {
+   "ohi": 1,
+   "pohja": 0,
+   "palkkio": 0
+  },
+  {
+   "ohi": 2,
+   "pohja": 0,
+   "palkkio": 0
+  },
+  {
+   "ohi": 3,
+   "pohja": 0,
+   "palkkio": 0
+  },
+  {
+   "ohi": 4,
+   "pohja": 0,
+   "palkkio": 0
+  },
+  {
+   "ohi": 5,
+   "pohja": 0,
+   "palkkio": 0
+  },
+  {
+   "ohi": 6,
+   "pohja": 0,
+   "palkkio": 0
+  }
+ ],
+ "normit": [
+  {
+   "syote": "Vasa 1961",
+   "tulos": "vasa 1961"
+  },
+  {
+   "syote": "  VÄSÄ, vuonna 1961!  ",
+   "tulos": "vasa vuonna 1961"
+  },
+  {
+   "syote": "Varnan nekropoli (1974)",
+   "tulos": "varnan nekropoli 1974"
+  },
+  {
+   "syote": "Göteborgissa",
+   "tulos": "goteborgissa"
+  },
+  {
+   "syote": "straße",
+   "tulos": "stra e"
+  },
+  {
+   "syote": "Ångström",
+   "tulos": "angstrom"
+  },
+  {
+   "syote": "café crème",
+   "tulos": "cafe creme"
+  },
+  {
+   "syote": "İstanbul",
+   "tulos": "istanbul"
+  },
+  {
+   "syote": "",
+   "tulos": ""
+  },
+  {
+   "syote": null,
+   "tulos": ""
+  },
+  {
+   "syote": "1 9 7 4",
+   "tulos": "1 9 7 4"
+  },
+  {
+   "syote": "ÆØÅ æøå",
+   "tulos": "a a"
+  },
+  {
+   "syote": "Wasa-laiva, 1961.",
+   "tulos": "wasa laiva 1961"
+  },
+  {
+   "syote": "naïve—coöperate",
+   "tulos": "naive cooperate"
+  },
+  {
+   "syote": "٣ ١٩٧٤",
+   "tulos": ""
+  }
+ ],
+ "tulkinnat": [
+  {
+   "kaupunki": "sofia",
+   "teksti": "varna 1974",
+   "osui": true,
+   "vaarat": []
+  },
+  {
+   "kaupunki": "sofia",
+   "teksti": "Varnassa vuonna 1974",
+   "osui": true,
+   "vaarat": []
+  },
+  {
+   "kaupunki": "sofia",
+   "teksti": "Varnan nekropoli 1974",
+   "osui": true,
+   "vaarat": []
+  },
+  {
+   "kaupunki": "sofia",
+   "teksti": "varna",
+   "osui": false,
+   "vaarat": [
+    "vuosi"
+   ]
+  },
+  {
+   "kaupunki": "sofia",
+   "teksti": "1974",
+   "osui": false,
+   "vaarat": [
+    "kohde"
+   ]
+  },
+  {
+   "kaupunki": "sofia",
+   "teksti": "Varna1974",
+   "osui": false,
+   "vaarat": [
+    "kohde",
+    "vuosi"
+   ]
+  },
+  {
+   "kaupunki": "sofia",
+   "teksti": "sofia 1974",
+   "osui": false,
+   "vaarat": [
+    "kohde"
+   ]
+  },
+  {
+   "kaupunki": "sofia",
+   "teksti": "VARNAN KALMISTO, 1974",
+   "osui": true,
+   "vaarat": []
+  },
+  {
+   "kaupunki": "sofia",
+   "teksti": "Varna 1975",
+   "osui": false,
+   "vaarat": [
+    "vuosi"
+   ]
+  },
+  {
+   "kaupunki": "sofia",
+   "teksti": "",
+   "osui": false,
+   "vaarat": [
+    "kohde",
+    "vuosi"
+   ]
+  },
+  {
+   "kaupunki": "sofia",
+   "teksti": "varnan  1974 ja muuta",
+   "osui": true,
+   "vaarat": []
+  },
+  {
+   "kaupunki": "tukholma",
+   "teksti": "vasa 1961",
+   "osui": true,
+   "vaarat": []
+  },
+  {
+   "kaupunki": "tukholma",
+   "teksti": "Wasa, 1961",
+   "osui": true,
+   "vaarat": []
+  },
+  {
+   "kaupunki": "tukholma",
+   "teksti": "Vaasa 1961",
+   "osui": true,
+   "vaarat": []
+  },
+  {
+   "kaupunki": "tukholma",
+   "teksti": "Laiva, joka upposi ja nousi 1961",
+   "osui": true,
+   "vaarat": []
+  },
+  {
+   "kaupunki": "tukholma",
+   "teksti": "vasa",
+   "osui": false,
+   "vaarat": [
+    "vuosi"
+   ]
+  },
+  {
+   "kaupunki": "tukholma",
+   "teksti": "1961",
+   "osui": false,
+   "vaarat": [
+    "kohde"
+   ]
+  },
+  {
+   "kaupunki": "tukholma",
+   "teksti": "Vasalaiva 1961",
+   "osui": false,
+   "vaarat": [
+    "kohde"
+   ]
+  },
+  {
+   "kaupunki": "tukholma",
+   "teksti": "Väsä 1961",
+   "osui": true,
+   "vaarat": []
+  },
+  {
+   "kaupunki": "tukholma",
+   "teksti": "vasa 1628",
+   "osui": false,
+   "vaarat": [
+    "vuosi"
+   ]
+  },
+  {
+   "kaupunki": "tukholma",
+   "teksti": "  ",
+   "osui": false,
+   "vaarat": [
+    "kohde",
+    "vuosi"
+   ]
+  },
+  {
+   "kaupunki": "tukholma",
+   "teksti": "Vasan nosto 1961",
+   "osui": true,
+   "vaarat": []
+  }
+ ],
+ "osumat": [
+  {
+   "kaupunki": "sofia",
+   "aukko": "kohde",
+   "arvo": "1974",
+   "osuu": false
+  },
+  {
+   "kaupunki": "sofia",
+   "aukko": "kohde",
+   "arvo": " 1974 ",
+   "osuu": false
+  },
+  {
+   "kaupunki": "sofia",
+   "aukko": "kohde",
+   "arvo": "1974.0",
+   "osuu": false
+  },
+  {
+   "kaupunki": "sofia",
+   "aukko": "kohde",
+   "arvo": "1.974e3",
+   "osuu": false
+  },
+  {
+   "kaupunki": "sofia",
+   "aukko": "kohde",
+   "arvo": "0x7B6",
+   "osuu": false
+  },
+  {
+   "kaupunki": "sofia",
+   "aukko": "kohde",
+   "arvo": "0o3666",
+   "osuu": false
+  },
+  {
+   "kaupunki": "sofia",
+   "aukko": "kohde",
+   "arvo": "0b11110110110",
+   "osuu": false
+  },
+  {
+   "kaupunki": "sofia",
+   "aukko": "kohde",
+   "arvo": "1961",
+   "osuu": false
+  },
+  {
+   "kaupunki": "sofia",
+   "aukko": "kohde",
+   "arvo": "",
+   "osuu": false
+  },
+  {
+   "kaupunki": "sofia",
+   "aukko": "kohde",
+   "arvo": "abc",
+   "osuu": false
+  },
+  {
+   "kaupunki": "sofia",
+   "aukko": "kohde",
+   "arvo": "1974abc",
+   "osuu": false
+  },
+  {
+   "kaupunki": "sofia",
+   "aukko": "kohde",
+   "arvo": "+1974",
+   "osuu": false
+  },
+  {
+   "kaupunki": "sofia",
+   "aukko": "kohde",
+   "arvo": "-1974",
+   "osuu": false
+  },
+  {
+   "kaupunki": "sofia",
+   "aukko": "kohde",
+   "arvo": "Infinity",
+   "osuu": false
+  },
+  {
+   "kaupunki": "sofia",
+   "aukko": "kohde",
+   "arvo": "Varna",
+   "osuu": true
+  },
+  {
+   "kaupunki": "sofia",
+   "aukko": "kohde",
+   "arvo": "varna",
+   "osuu": false
+  },
+  {
+   "kaupunki": "sofia",
+   "aukko": "kohde",
+   "arvo": "Laiva, joka upposi ja nousi",
+   "osuu": false
+  },
+  {
+   "kaupunki": "sofia",
+   "aukko": "kohde",
+   "arvo": "Laiva, joka kaatui tuhannen metrin jälkeen",
+   "osuu": false
+  },
+  {
+   "kaupunki": "sofia",
+   "aukko": "kohde",
+   "arvo": " Varna",
+   "osuu": false
+  },
+  {
+   "kaupunki": "sofia",
+   "aukko": "vuosi",
+   "arvo": "1974",
+   "osuu": true
+  },
+  {
+   "kaupunki": "sofia",
+   "aukko": "vuosi",
+   "arvo": " 1974 ",
+   "osuu": true
+  },
+  {
+   "kaupunki": "sofia",
+   "aukko": "vuosi",
+   "arvo": "1974.0",
+   "osuu": true
+  },
+  {
+   "kaupunki": "sofia",
+   "aukko": "vuosi",
+   "arvo": "1.974e3",
+   "osuu": true
+  },
+  {
+   "kaupunki": "sofia",
+   "aukko": "vuosi",
+   "arvo": "0x7B6",
+   "osuu": true
+  },
+  {
+   "kaupunki": "sofia",
+   "aukko": "vuosi",
+   "arvo": "0o3666",
+   "osuu": true
+  },
+  {
+   "kaupunki": "sofia",
+   "aukko": "vuosi",
+   "arvo": "0b11110110110",
+   "osuu": true
+  },
+  {
+   "kaupunki": "sofia",
+   "aukko": "vuosi",
+   "arvo": "1961",
+   "osuu": false
+  },
+  {
+   "kaupunki": "sofia",
+   "aukko": "vuosi",
+   "arvo": "",
+   "osuu": false
+  },
+  {
+   "kaupunki": "sofia",
+   "aukko": "vuosi",
+   "arvo": "abc",
+   "osuu": false
+  },
+  {
+   "kaupunki": "sofia",
+   "aukko": "vuosi",
+   "arvo": "1974abc",
+   "osuu": false
+  },
+  {
+   "kaupunki": "sofia",
+   "aukko": "vuosi",
+   "arvo": "+1974",
+   "osuu": true
+  },
+  {
+   "kaupunki": "sofia",
+   "aukko": "vuosi",
+   "arvo": "-1974",
+   "osuu": false
+  },
+  {
+   "kaupunki": "sofia",
+   "aukko": "vuosi",
+   "arvo": "Infinity",
+   "osuu": false
+  },
+  {
+   "kaupunki": "sofia",
+   "aukko": "vuosi",
+   "arvo": "Varna",
+   "osuu": false
+  },
+  {
+   "kaupunki": "sofia",
+   "aukko": "vuosi",
+   "arvo": "varna",
+   "osuu": false
+  },
+  {
+   "kaupunki": "sofia",
+   "aukko": "vuosi",
+   "arvo": "Laiva, joka upposi ja nousi",
+   "osuu": false
+  },
+  {
+   "kaupunki": "sofia",
+   "aukko": "vuosi",
+   "arvo": "Laiva, joka kaatui tuhannen metrin jälkeen",
+   "osuu": false
+  },
+  {
+   "kaupunki": "sofia",
+   "aukko": "vuosi",
+   "arvo": " Varna",
+   "osuu": false
+  },
+  {
+   "kaupunki": "tukholma",
+   "aukko": "kohde",
+   "arvo": "1974",
+   "osuu": false
+  },
+  {
+   "kaupunki": "tukholma",
+   "aukko": "kohde",
+   "arvo": " 1974 ",
+   "osuu": false
+  },
+  {
+   "kaupunki": "tukholma",
+   "aukko": "kohde",
+   "arvo": "1974.0",
+   "osuu": false
+  },
+  {
+   "kaupunki": "tukholma",
+   "aukko": "kohde",
+   "arvo": "1.974e3",
+   "osuu": false
+  },
+  {
+   "kaupunki": "tukholma",
+   "aukko": "kohde",
+   "arvo": "0x7B6",
+   "osuu": false
+  },
+  {
+   "kaupunki": "tukholma",
+   "aukko": "kohde",
+   "arvo": "0o3666",
+   "osuu": false
+  },
+  {
+   "kaupunki": "tukholma",
+   "aukko": "kohde",
+   "arvo": "0b11110110110",
+   "osuu": false
+  },
+  {
+   "kaupunki": "tukholma",
+   "aukko": "kohde",
+   "arvo": "1961",
+   "osuu": false
+  },
+  {
+   "kaupunki": "tukholma",
+   "aukko": "kohde",
+   "arvo": "",
+   "osuu": false
+  },
+  {
+   "kaupunki": "tukholma",
+   "aukko": "kohde",
+   "arvo": "abc",
+   "osuu": false
+  },
+  {
+   "kaupunki": "tukholma",
+   "aukko": "kohde",
+   "arvo": "1974abc",
+   "osuu": false
+  },
+  {
+   "kaupunki": "tukholma",
+   "aukko": "kohde",
+   "arvo": "+1974",
+   "osuu": false
+  },
+  {
+   "kaupunki": "tukholma",
+   "aukko": "kohde",
+   "arvo": "-1974",
+   "osuu": false
+  },
+  {
+   "kaupunki": "tukholma",
+   "aukko": "kohde",
+   "arvo": "Infinity",
+   "osuu": false
+  },
+  {
+   "kaupunki": "tukholma",
+   "aukko": "kohde",
+   "arvo": "Varna",
+   "osuu": false
+  },
+  {
+   "kaupunki": "tukholma",
+   "aukko": "kohde",
+   "arvo": "varna",
+   "osuu": false
+  },
+  {
+   "kaupunki": "tukholma",
+   "aukko": "kohde",
+   "arvo": "Laiva, joka upposi ja nousi",
+   "osuu": true
+  },
+  {
+   "kaupunki": "tukholma",
+   "aukko": "kohde",
+   "arvo": "Laiva, joka kaatui tuhannen metrin jälkeen",
+   "osuu": true
+  },
+  {
+   "kaupunki": "tukholma",
+   "aukko": "kohde",
+   "arvo": " Varna",
+   "osuu": false
+  },
+  {
+   "kaupunki": "tukholma",
+   "aukko": "vuosi",
+   "arvo": "1974",
+   "osuu": false
+  },
+  {
+   "kaupunki": "tukholma",
+   "aukko": "vuosi",
+   "arvo": " 1974 ",
+   "osuu": false
+  },
+  {
+   "kaupunki": "tukholma",
+   "aukko": "vuosi",
+   "arvo": "1974.0",
+   "osuu": false
+  },
+  {
+   "kaupunki": "tukholma",
+   "aukko": "vuosi",
+   "arvo": "1.974e3",
+   "osuu": false
+  },
+  {
+   "kaupunki": "tukholma",
+   "aukko": "vuosi",
+   "arvo": "0x7B6",
+   "osuu": false
+  },
+  {
+   "kaupunki": "tukholma",
+   "aukko": "vuosi",
+   "arvo": "0o3666",
+   "osuu": false
+  },
+  {
+   "kaupunki": "tukholma",
+   "aukko": "vuosi",
+   "arvo": "0b11110110110",
+   "osuu": false
+  },
+  {
+   "kaupunki": "tukholma",
+   "aukko": "vuosi",
+   "arvo": "1961",
+   "osuu": true
+  },
+  {
+   "kaupunki": "tukholma",
+   "aukko": "vuosi",
+   "arvo": "",
+   "osuu": false
+  },
+  {
+   "kaupunki": "tukholma",
+   "aukko": "vuosi",
+   "arvo": "abc",
+   "osuu": false
+  },
+  {
+   "kaupunki": "tukholma",
+   "aukko": "vuosi",
+   "arvo": "1974abc",
+   "osuu": false
+  },
+  {
+   "kaupunki": "tukholma",
+   "aukko": "vuosi",
+   "arvo": "+1974",
+   "osuu": false
+  },
+  {
+   "kaupunki": "tukholma",
+   "aukko": "vuosi",
+   "arvo": "-1974",
+   "osuu": false
+  },
+  {
+   "kaupunki": "tukholma",
+   "aukko": "vuosi",
+   "arvo": "Infinity",
+   "osuu": false
+  },
+  {
+   "kaupunki": "tukholma",
+   "aukko": "vuosi",
+   "arvo": "Varna",
+   "osuu": false
+  },
+  {
+   "kaupunki": "tukholma",
+   "aukko": "vuosi",
+   "arvo": "varna",
+   "osuu": false
+  },
+  {
+   "kaupunki": "tukholma",
+   "aukko": "vuosi",
+   "arvo": "Laiva, joka upposi ja nousi",
+   "osuu": false
+  },
+  {
+   "kaupunki": "tukholma",
+   "aukko": "vuosi",
+   "arvo": "Laiva, joka kaatui tuhannen metrin jälkeen",
+   "osuu": false
+  },
+  {
+   "kaupunki": "tukholma",
+   "aukko": "vuosi",
+   "arvo": " Varna",
+   "osuu": false
+  }
+ ],
+ "ohilyonnit": [
+  {
+   "kaupunki": "sofia",
+   "vaarat": [
+    "kohde"
+   ],
+   "sahke": "EI TÄSMÄÄ STOP TARKISTA KOHDE STOP"
+  },
+  {
+   "kaupunki": "sofia",
+   "ilmanVaarinSahketta": true,
+   "vaarat": [
+    "kohde"
+   ],
+   "sahke": "EI TÄSMÄÄ STOP TARKISTA KOHDE STOP"
+  },
+  {
+   "kaupunki": "sofia",
+   "vaarat": [
+    "vuosi"
+   ],
+   "sahke": "EI TÄSMÄÄ STOP TARKISTA VUOSILUKU STOP"
+  },
+  {
+   "kaupunki": "sofia",
+   "ilmanVaarinSahketta": true,
+   "vaarat": [
+    "vuosi"
+   ],
+   "sahke": "EI TÄSMÄÄ STOP TARKISTA VUOSI STOP"
+  },
+  {
+   "kaupunki": "sofia",
+   "vaarat": [
+    "kohde",
+    "vuosi"
+   ],
+   "sahke": "EI TÄSMÄÄ STOP TARKISTA KOHDE JA VUOSILUKU STOP"
+  },
+  {
+   "kaupunki": "sofia",
+   "ilmanVaarinSahketta": true,
+   "vaarat": [
+    "kohde",
+    "vuosi"
+   ],
+   "sahke": "EI TÄSMÄÄ STOP TARKISTA KOHDE JA VUOSI STOP"
+  },
+  {
+   "kaupunki": "sofia",
+   "vaarat": [],
+   "sahke": "EI TÄSMÄÄ STOP TARKISTA  STOP"
+  },
+  {
+   "kaupunki": "sofia",
+   "ilmanVaarinSahketta": true,
+   "vaarat": [],
+   "sahke": "EI TÄSMÄÄ STOP TARKISTA  STOP"
+  },
+  {
+   "kaupunki": "tukholma",
+   "vaarat": [
+    "kohde"
+   ],
+   "sahke": "EI TÄSMÄÄ STOP TARKISTA KOHDE STOP"
+  },
+  {
+   "kaupunki": "tukholma",
+   "ilmanVaarinSahketta": true,
+   "vaarat": [
+    "kohde"
+   ],
+   "sahke": "EI TÄSMÄÄ STOP TARKISTA KOHDE STOP"
+  },
+  {
+   "kaupunki": "tukholma",
+   "vaarat": [
+    "vuosi"
+   ],
+   "sahke": "EI TÄSMÄÄ STOP TARKISTA VUOSILUKU STOP"
+  },
+  {
+   "kaupunki": "tukholma",
+   "ilmanVaarinSahketta": true,
+   "vaarat": [
+    "vuosi"
+   ],
+   "sahke": "EI TÄSMÄÄ STOP TARKISTA VUOSI STOP"
+  },
+  {
+   "kaupunki": "tukholma",
+   "vaarat": [
+    "kohde",
+    "vuosi"
+   ],
+   "sahke": "EI TÄSMÄÄ STOP TARKISTA KOHDE JA VUOSILUKU STOP"
+  },
+  {
+   "kaupunki": "tukholma",
+   "ilmanVaarinSahketta": true,
+   "vaarat": [
+    "kohde",
+    "vuosi"
+   ],
+   "sahke": "EI TÄSMÄÄ STOP TARKISTA KOHDE JA VUOSI STOP"
+  },
+  {
+   "kaupunki": "tukholma",
+   "vaarat": [],
+   "sahke": "EI TÄSMÄÄ STOP TARKISTA  STOP"
+  },
+  {
+   "kaupunki": "tukholma",
+   "ilmanVaarinSahketta": true,
+   "vaarat": [],
+   "sahke": "EI TÄSMÄÄ STOP TARKISTA  STOP"
+  }
+ ],
+ "fokusvirrat": {
+  "alkiot": [
+   {
+    "id": "sofia",
+    "kaupunki": "sofia",
+    "data": {
+     "sahketehtava": {
+      "id": "sofia-varna",
+      "hahmo": "Pöllöltä, jostain maan alta",
+      "sahke": "LIVIALLE STOP\nMISSÄ BULGARIASSA LÖYTYI MAAILMAN VANHIN KULTA JA MINÄ VUONNA STOP\nVASTAA KOHDE JA VUOSI STOP\nPAIKKA ON KARTAN KOHTEISSA STOP\nPÖLLÖ STOP",
+      "johdanto": [
+       "Pöllö istuu kuopassa eikä kerro löytöään ennen tunnussanaa.",
+       "Vastaa kaksi aukkoa: kartan kohde Bulgariasta ja vuosiluku."
+      ],
+      "hakemistoMaa": "BGR",
+      "aukot": [
+       {
+        "id": "kohde",
+        "otsake": "KOHDE",
+        "sahkeSana": "KOHDE",
+        "tyyppi": "hakemisto",
+        "vihje": "— valitse Bulgarian luettelosta —",
+        "oikeat": [
+         "Varna"
+        ],
+        "vapaat": [
+         "Varnan",
+         "Varnassa",
+         "Varnasta",
+         "Varnan nekropoli",
+         "Varnan kalmisto"
+        ]
+       },
+       {
+        "id": "vuosi",
+        "otsake": "VUOSI",
+        "sahkeSana": "VUOSILUKU",
+        "tyyppi": "luku",
+        "vihje": "____",
+        "pienin": 1000,
+        "suurin": 2100,
+        "oikea": 1974
+       }
+      ],
+      "laheta": "Lähetä sähke pöllölle",
+      "vapaaOtsake": "Tai kirjoita vastaus omin sanoin",
+      "vapaaVihje": "Esimerkiksi: se paikka jossa kulta löytyi, ja vuosi",
+      "lahetaVapaa": "Lähetä omin sanoin",
+      "vaarinSahke": "EI TÄSMÄÄ STOP TARKISTA KOHDE JA VUOSILUKU STOP",
+      "vinkki": [
+       "Se kulta ei ole Sofiassa vaan Mustanmeren rannalla.",
+       "Katso rannikkokaupungin kortti. Vuosiluku on siinä, seitkytluvulla."
+      ],
+      "linkkiSaate": "No. Puolikas pulla, puolikas palvelus. Tossa on suora linkki, lue itse.",
+      "vastauslinkki": {
+       "tyyppi": "kohde",
+       "maa": "BGR",
+       "kohde": "varna"
+      },
+      "vastaussahke": "PÖLLÖLLE STOP\nTUNNUSSANA TÄSMÄÄ STOP\nLIVIA TULEE STOP",
+      "oikein": [
+       "Se on se. Yli kolmetuhatta kultaesinettä, ennen kuin kukaan osasi kirjoittaa.",
+       "Minä vien tämän pöllölle. Palaan kyllä."
+      ],
+      "fakta": "Varnan nekropoli löytyi 1974, ja siitä on kaivettu esiin yli 3 000 kultaesinettä. Löytö on ajoitettu vuosille 4600–4200 eaa., eli se on maailman vanhin tunnettu kulta-aarre.",
+      "lento": "Anna Livian mennä",
+      "lahetetty": "SÄHKE LÄHETETTY STOP\nODOTA VASTAUSTA STOP",
+      "odotus": "Livia on matkalla. Se palaa kun se palaa — sillä välin sinä saat tehdä mitä huvittaa.",
+      "paluu": [
+       "Perillä oltiin. Pöllö oli kuopan pohjalla mullassa: lapio oli hyvä sijoitus.",
+       "Sitten se kertoi paikan: se on tässä, jalkojesi alla. Katso alas."
+      ]
+     }
+    }
+   },
+   {
+    "id": "tukholma",
+    "kaupunki": "tukholma",
+    "data": {
+     "sahketehtava": {
+      "id": "tukholma-vasa",
+      "hahmo": "Pöllöltä, meren yli",
+      "sahke": "LIVIALLE STOP\nMIKÄ MEREN OTTAMA ALUS NOUSI RUOTSISSA TAKAISIN JA MINÄ VUONNA STOP\nVASTAA KOHDE JA VUOSI STOP\nMOLEMMAT LUKEVAT LEHDESSÄSI STOP\nPÖLLÖ STOP",
+      "johdanto": "No niin. Pöllö on löytänyt paikan eikä kerro sitä ennen tunnussanaa. Vastaa kahteen aukkoon: kohde Ruotsin luettelosta ja vuosiluku. Molemmat lukevat lehdessä, jonka juuri sait käteesi.",
+      "hakemistoMaa": "SWE",
+      "aukot": [
+       {
+        "id": "kohde",
+        "otsake": "KOHDE",
+        "sahkeSana": "KOHDE",
+        "tyyppi": "hakemisto",
+        "vihje": "— valitse Ruotsin luettelosta —",
+        "oikeat": [
+         "Laiva, joka upposi ja nousi",
+         "Laiva, joka kaatui tuhannen metrin jälkeen"
+        ],
+        "vapaat": [
+         "Vasa",
+         "Wasa",
+         "Vaasa",
+         "Vasan",
+         "Vasaa"
+        ]
+       },
+       {
+        "id": "vuosi",
+        "otsake": "VUOSI",
+        "sahkeSana": "VUOSILUKU",
+        "tyyppi": "luku",
+        "vihje": "____",
+        "pienin": 1000,
+        "suurin": 2100,
+        "oikea": 1961
+       }
+      ],
+      "laheta": "Lähetä sähke pöllölle",
+      "vapaaOtsake": "Tai kirjoita vastaus omin sanoin",
+      "vapaaVihje": "Esimerkiksi: se laiva joka nostettiin merestä, ja vuosi",
+      "lahetaVapaa": "Lähetä omin sanoin",
+      "vaarinSahke": "EI TÄSMÄÄ STOP TARKISTA KOHDE JA VUOSILUKU STOP",
+      "vinkki": "No niin. Mä sanon sen näin. Se alus kaatui ennen kuin ehti satamasta ulos, ja makasi pohjassa yli kolmesataa vuotta. Lehtesi ensimmäisellä sivulla on juttu laivasta, joka upposi ja nousi, ja nostovuosi lukee siinä, kuuskytluvun alusta.",
+      "linkkiSaate": "No niin. Puolikas pulla, puolikas palvelus. Tossa on suora linkki, lue itse.",
+      "vastauslinkki": {
+       "tyyppi": "lehtisivu",
+       "kaupunki": "tukholma",
+       "sivu": 1
+      },
+      "vastaussahke": "PÖLLÖLLE STOP\nTUNNUSSANA TÄSMÄÄ STOP\nLIVIA TULEE STOP",
+      "oikein": "Se on se. Kolmesataakolmekymmentäkolme vuotta pohjassa ja sitten ylös — meri ei syönyt sitä, se vain piti sitä. Minä vien tämän pöllölle nyt heti. Älä sinä jää seisomaan tähän, minä palaan kyllä.",
+      "fakta": "Itämeri on niin vähäsuolainen, ettei laivamato elä siinä. Siksi puu säilyy sen pohjassa — ja siksi isoisäsi luettelossa on merkintöjä, jotka ovat yhä olemassa.",
+      "lento": "Anna Livian mennä",
+      "lahetetty": "SÄHKE LÄHETETTY STOP\nODOTA VASTAUSTA STOP",
+      "odotus": "Livia on matkalla. Se palaa kun se palaa — ja sillä välin sinä saat tehdä mitä huvittaa.",
+      "paluu": "Perillä oltiin. Pöllö luki tunnussanan kahdesti, sanoi jotain kohteliaisuudesta ja antoi paikan. Se on tässä, sinun jalkojesi alla — katso alas."
+     }
+    }
+   }
+  ]
+ }
+}
