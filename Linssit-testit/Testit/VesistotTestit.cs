@@ -158,6 +158,7 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama("Vesistölinssi", t.Nimi);
             Oleta.Sama(20, t.Jarjestys);
             Oleta.Tosi(t.Valokuva);
+            Oleta.Tosi(t.Kesken, "web kesken: true");
             Oleta.Tosi(t.Lyhyt.StartsWith("Joet ja järvet"), t.Lyhyt);
             Oleta.Tosi(t.Ikoni.StartsWith("<path"), "ikoni");
             Oleta.Sama("Public domain", t.Lahde.Lisenssi);

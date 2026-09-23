@@ -45,6 +45,8 @@ namespace Matkakirja.Linssit
         public string Ikoni;
         /// <summary>Paperin rakeisuus pois linssin ajaksi (web valokuva).</summary>
         public bool Valokuva;
+        /// <summary>Keskeneräinen linssi (web kesken: true): valitsin merkitsee sen.</summary>
+        public bool Kesken;
         public Lahde Lahde;
         public IReadOnlyList<SeliteRivi> Selite = Array.Empty<SeliteRivi>();
     }
