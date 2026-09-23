@@ -25,7 +25,7 @@ on:
       versio:
         description: 'Näkyvä versionumero (MARKETING_VERSION) — oltava suurempi kuin webkuoren nykyinen (ios/project.yml, tällä hetkellä 0.3.0)'
         type: string
-        default: '0.4.0'
+        default: '1.0.0'
       build_numero:
         description: 'CFBundleVersion — oltava suurempi kuin webkuoren viimeisin ASC-build. Oletus on aikaleima, joka ylittää minkä tahansa pienen juoksevan numeron; vaihda käsin jos tiedät tarkan edellisen buildin.'
         type: string
