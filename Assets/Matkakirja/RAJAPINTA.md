@@ -139,8 +139,9 @@ Kaikki pelin sisältö datana, moottorineutraalina JSONina. Lähde: web-pelin
 `docs/raportit/sisallon-siirtoputki-20260923.md` (Matkakirja-repo).
 
 - **Osoitin:** `https://media.matkakirja.app/sisalto/1/uusin.json`. CI julkaisee sen jokaisesta
-  main-mergestä, jossa sisältö muuttui. Siihen asti, kun nippu 3 on mainissa,
-  koepaketti on paikallisesti kansiossa `/Users/Shared/Claude/sisalto-koe/uusin.json` (polku `v<N>/`).
+  main-mergestä, jossa sisältö muuttui (nippu 3 mainissa 23.9.2026, v2150). Mainia uudemmat
+  haarat ovat koepaketissa `/Users/Shared/Claude/sisalto-koe/uusin.json` (polku `v<N>/`; paikallinen
+  numerointi, ei sama kuin ämpärin N).
 - **Osoittimen kentät:** `versio` (N), `polku` (`sisalto/1/v<N>/`), `sha256`, `skeemaversio` ("1.x"),
   `minSovellus.ios`, `edellinen`, `commit`, `julkaistu`. `sha256` = sha256 riveistä
   `<polku>\t<tiedoston sha256>\n` polkujen aakkosjärjestyksessä (tools/vienti/julkaise-sisalto.mjs
@@ -168,7 +169,23 @@ Kaikki pelin sisältö datana, moottorineutraalina JSONina. Lähde: web-pelin
 | luennat, aanitaulut | Pelikoodari | isoisän luennat (url, kesto, aikaleimat); tehosteet, näytteet, musiikkiketju |
 | linssiaineisto (+ moduulit/js/linssit/*) | Linssiseppä | maskit, manifestit, pilvet, astronautin äänet, avauskynnykset |
 | kaupunkilehdet, maalehdet, nahtavyydet, miniatyyrit, julisteet, skandaalit, monumentit, historianHetket, elaintayt, paikallisaarteet | Natiivi-UI | lehtien ja nostojen sisältö |
-| fokusvirrat, saapumispuheet, kohtaamiset, kohtaamiskuvat, tarinakaari, livianpuhe, paikkatiedot | Natiivi-UI / Pelikoodari | saapumisvirta, puheet, kohtaamiset, Livian cuet (aani, eleet) |
+| fokusvirrat, saapumispuheet, kohtaamiset, kohtaamiskuvat, tarinakaari, livianpuhe, livianrepliikit, paikkatiedot | Natiivi-UI / Pelikoodari | saapumisvirta, puheet, kohtaamiset, Livian cuet (aani, eleet), Livian 68 äänitettyä repliikkiä |
+
+**Skeemat 1.10–1.12 (Siirtoseppä 23.9.2026, koepaketti v14):**
+
+- **1.10** `kaupungit[].korkeus` m (EGM2008, 10 m tarkkuus, Copernicus GLO-30; 265/266, St Helena
+  null = meri). Lisäksi karttamerkit, karttavalot, maastonimet, maarajat ja muotokuvat;
+  `luennat[].reaktiot` ja `tekstiSha256`.
+- **1.11** Livia: `livianpuhe.cuet[]` = `{ id, ankkuri, esiintyma, tarkoitus, voimakkuus, ele, alku, loppu }`.
+  `ele` on valmis SVG-ele (cityExplain, grin, think…), joten tarkoitus-elekarttaa ei tarvita.
+  `alku`/`loppu` (ms äänen alusta) ovat mukana vain, kun `eleetTila` = `ok`; silloin `aaniTavut` ja
+  `aaniSha256` kertovat, mihin mp3:een ajat kuuluvat. Muut tilat: `puuttuu` (ämpärissä ei eleitä),
+  `vanhentunut` (teksti vaihtunut). `luennat[].reaktiot[].ele` samoin. Kokoelma `livianrepliikit`:
+  `{ id, lahde, kaupunki, linssi, indeksi, teksti, aani, kesto, kuplaSekunteina, pinoutuu, saapuu,
+  ajanTasalla }`; `ajanTasalla` false → älä soita.
+- **1.12** Repon `assets/`-kuvat (karttamerkit, kätkökuva, omat liput ja valokuvat, kartat) osoittavat
+  `https://media.matkakirja.app/assets/<polku>?v=<sha256 12>`. Pages-osoite on `varat[0]`:ssa.
+  CI vie tiedostot ämpäriin ennen pakettia. Livian kypärä: `saannot` id `LIVIAN_ASTRONAUTTI_KYPARA`.
 
 ### 10.2 `offline.json` (Siirtoseppä, skeema 1.9, toteutettu)
 
@@ -183,7 +200,7 @@ Paketin juuressa, manifestissa `offline: { tiedosto, sha256, tavuja }`. Lähde
                             "skeema": "tms", "projektio": "EPSG:4326", "globaaliMax": 6 } },
   "globaali": { "rasteri": { "0": [x0,y0,x1,y1], … "5": … },
                 "maasto":  { "0": [[x0,y0,x1,y1], …], … "6": … },   // layer.json available -välit
-                "media": [], "tavuja": { "rasteri", "maasto", "media": 0, "yht" } },   // noin 14 Mt
+                "media": [], "tavuja": { "rasteri", "maasto", "media": 0, "yht" } },   // noin 16,6 Mt (23b)
   "valinnaiset": { "aanet":   { "media": [url, …], "tavuja" },     // maahan sitomaton media,
                    "kuvat":   { "media": [url, …], "tavuja" },     // ladataan erikseen
                    "linssit": { "media": [url, …], "tavuja" } },
@@ -201,8 +218,8 @@ Paketin juuressa, manifestissa `offline: { tiedosto, sha256, tavuja }`. Lähde
 - `media` = valmiit https-osoitteet (ei avaimia). Viite voi kuulua usealle maalle, joten
   poisto tehdään viitelaskennalla. Ulkoiset lähde- ja viitekuvat eivät kuulu mukaan.
 - Tavut ovat arvioita: keskikoko otoksesta × määrä (`tools/vienti/offline-koot.json`,
-  päivitys `node tools/vienti/offline.mjs --paivita-koot`). Nykyarvio: globaali noin 14 Mt
-  (vain laatat ja maasto, Natiiviseppä 23.9.), valinnaiset äänet noin 190 Mt, kuvat noin
+  päivitys `node tools/vienti/offline.mjs --paivita-koot`). Nykyarvio (maasto 2026-09-23b, koko maailma z0–z6): globaali noin 16,6 Mt
+  (rasteri 13,8 + maasto 2,8), valinnaiset äänet noin 190 Mt, kuvat noin
   350 Mt ja linssit noin 8 Mt, maan mediaani noin 30 Mt, suurin Ranska noin 460 Mt
   (maasto z7–z12).
 - Avain on ISO3 (pelin maakoodi), ja `iso2` on mukana `Alueet.Luettelo()`:a varten.
