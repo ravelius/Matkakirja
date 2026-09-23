@@ -44,7 +44,27 @@ namespace Matkakirja.Editori
             pallo.tilesetSource = CesiumDataSource.FromEllipsoid;
             pallo.showCreditsOnScreen = false;
 
+            // Pohjakerros (materialKey 0) alle, laatat (1) päälle. Komponenttien järjestys
+            // on sama kuin piirtojärjestys.
+            var pohja = palloGo.AddComponent<CesiumUrlTemplateRasterOverlay>();
+            pohja.materialKey = "0";
+            pohja.projection = CesiumUrlTemplateRasterOverlayProjection.Geographic;
+            pohja.specifyTilingScheme = true;
+            pohja.rootTilesX = 1;
+            pohja.rootTilesY = 1;
+            pohja.rectangleWest = -180;
+            pohja.rectangleSouth = -90;
+            pohja.rectangleEast = 180;
+            pohja.rectangleNorth = 90;
+            pohja.minimumLevel = 0;
+            pohja.maximumLevel = 0;
+            pohja.tileWidth = 2048;
+            pohja.tileHeight = 1024;
+            var pohjaKerros = palloGo.AddComponent<PohjaKerros>();
+            pohjaKerros.kerros = pohja;
+
             var kerros = palloGo.AddComponent<CesiumUrlTemplateRasterOverlay>();
+            kerros.materialKey = "1";
             kerros.templateUrl = LaattaUrl;
             kerros.projection = CesiumUrlTemplateRasterOverlayProjection.WebMercator;
             kerros.minimumLevel = 0;
@@ -61,6 +81,8 @@ namespace Matkakirja.Editori
             kamera.fieldOfView = 40f;
             var kierto = kameraGo.AddComponent<PalloKierto>();
             kierto.georeferenssi = georef;
+            var mittari = kameraGo.AddComponent<KehysMittari>();
+            mittari.pallo = kierto;
 
             // Valo kulkee kameran mukana: näkyvä puolipallo on aina valaistu.
             var valoGo = new GameObject("Valo");
@@ -74,6 +96,8 @@ namespace Matkakirja.Editori
             RenderSettings.ambientLight = new Color(0.45f, 0.42f, 0.38f);
 
             kierto.Aseta();
+            // Korkeus lasketaan laitteen kuvasuhteesta käynnistyksessä, ei editorin.
+            kierto.korkeus = 0.0;
 
             Directory.CreateDirectory(Path.GetDirectoryName(PalloKohtaus));
             if (!EditorSceneManager.SaveScene(kohtaus, PalloKohtaus))
