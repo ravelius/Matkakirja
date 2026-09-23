@@ -1827,3 +1827,7 @@ Fable 5.1 tilillä B; viikkokiintiö tilillä B 0 %. Uudet sessiot aloittavat lu
 ## TYOTILAT (OMISTAJA 23.9.2026): KAIKKI CLAUDEN KANSIOT /Users/Shared/Claude/ (YHTEINEN KAIKILLE MACIN KAYTTAJILLE, ACL staff): ROOLIEN CHECKOUTIT Matkakirja-<rooli>, ERA-WORKTREET wt/<rooli>-<aihe> TYOKALULLA tools/uusi-worktree.sh, POISTO MERGEN JALKEEN, EI KOSKAAN KAYTTAJAN KOTIHAKEMISTOON; POSTIVAHTI AJAA tools/tarkista-tyotilat.sh; SIIVOUS: 36 TYHJAKAYNTISTA WORKTREETA POISTETTU, 12 MUOKATTUA/VANHAA JAI wt/-KANSIOON; VANHAT POLUT SYMLINKKEINA (23.9.2026 klo 12.12)
 
 Omistajan kolme pyyntöä samassa: siivoa, siirrä kaikki (myös Fable) yhteen alikansioon, ja yhteiselle alueelle käyttäjänvaihtoa varten. Raamatun kohta 2 B) päivitetty, CLAUDE.md sai Työtilat-osion. safe.directory '*' asetettu koodaus-käyttäjälle; toiselle käyttäjälle sama komento vaihdossa.
+
+## PEILAUS LUKEE js/linssit (PR #2913, SIIRTOSEPPA): AMPARISTA PUUTTUI 32 KUVAA 9 543:STA (24 KEKSINTOLINSSIN, 7 ST. JOHN'SIN KAAREVA HEITTOMERKKI, 1 YLLASTUNTURIN A-PISTEET); MERGE KAYNNISTAA PEILAUKSEN; AVOIN: FOKUSLEHTIEN VANHAT WEBP-POHJAKUVAT 404 JOKA AJOSSA; JULKAISIJAN LUOVUTUSHAARAT MAINISSA #2907-#2912; #2895/#2897 SISALTOKIRJURILLE (KESTO >180 s, .ogg) (23.9.2026 klo 12.14)
+
+Sisältökirjuri korjaa lähteet samoissa haaroissa, sitten #2898.
