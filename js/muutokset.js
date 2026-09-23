@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2152, teksti: 'Pulu-eleet: elava kohdistus ilman kuittia (#2978)' },
   { v: 2151, teksti: 'vie-sisalto.yml: osoitinvartija (#2975)' },
   { v: 2150, teksti: 'Sisältöpaketti natiiville: skeema 1.2-1.9' },
   { v: 2149, teksti: 'Pelikoodari+Karttaseppä nippu: sulavuus ja poltetut nostot' },
