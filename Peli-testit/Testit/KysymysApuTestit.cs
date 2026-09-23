@@ -232,5 +232,22 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(tavallinen, Avaimet(x => x.TavallinenKuva), "tavallisen kohtaamisen kuvat");
             Oleta.Tosi(ko.Kaupunki("pariisi").KaariKuva.Url.StartsWith("https://media.matkakirja.app/kohtaamiset/"), "url");
         }
+        [Testi] static void AarrenimetKuinWebinAarreMantereella()
+        {
+            // Odotettu = verkkopelin game.aarreMantereella(tyyppi, manner, maa) (node, 23.9.2026).
+            var n = new Aarrenimet();
+            n.LueLaatat(System.IO.File.ReadAllText(System.IO.Path.Combine(KultaisetApu.Paketti, "laatat-v9.json")));
+            n.LuePaikallisaarteet(System.IO.File.ReadAllText(System.IO.Path.Combine(KultaisetApu.Paketti, "paikallisaarteet.json")));
+            Oleta.Sama("Tervatynnyrin pohjalta löytynyt hopeariksi", n.Hae("pieniAarre", "europe", "FIN").Nimi);
+            Oleta.Sama("https://media.matkakirja.app/kohtaamiset/aarteet/paikallis/fin-pieni.jpg", n.Hae("pieniAarre", "europe", "FIN").KuvaUrl);
+            Oleta.Sama("Ivalojoen kultahippu", n.Hae("isoAarre", "europe", "FIN").Nimi);
+            Oleta.Sama("Meripihkahuoneen aarre", n.Hae("star", "europe", null).Nimi);
+            Oleta.Sama("https://media.matkakirja.app/kohtaamiset/aarteet/aarre-europe-star.jpg", n.Hae("star", "europe", null).KuvaUrl);
+            Oleta.Sama("Kimberleyn timantti", n.Hae("mannerAarre", "africa", null).Nimi);
+            Oleta.Sama("Ritarin hopeamiekka", n.Hae("isoAarre", "europe", "ZZZ").Nimi, "maaton → mantereen");
+            Oleta.Sama("Kourallinen hopeakolikoita", n.Hae("pieniAarre", null, null).Nimi);
+            var l = new Loyto { Tyyppi = "pieniAarre", Manner = "europe", Maa = "FIN", RahaLisays = 120 };
+            Oleta.Sama("Löysit: Tervatynnyrin pohjalta löytynyt hopeariksi · +120 £", KysymysApu.LoytoTeksti(l, "£", n));
+        }
     }
 }
