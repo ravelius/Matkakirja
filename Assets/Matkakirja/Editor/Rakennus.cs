@@ -50,9 +50,9 @@ namespace Matkakirja.Editori
             var palloGo = new GameObject("Pallo");
             palloGo.transform.SetParent(georefGo.transform, false);
             var pallo = palloGo.AddComponent<Cesium3DTileset>();
-            // Maasto kytkimen takana (Komennot: maasto paalle/pois, Documents/maasto.txt),
-            // kunnes laattojen rajasaumat on korjattu; oletus on ellipsoidi.
-            pallo.tilesetSource = CesiumDataSource.FromEllipsoid;
+            // Maasto oletuksena (23b: rajasaumat korjattu, iPad-kokeilu 23.9.). Kytkin
+            // Komennot: maasto paalle/pois, valinta muistetaan Documents/maasto.txt:ssä.
+            pallo.tilesetSource = CesiumDataSource.FromUrl;
             pallo.url = MaastoUrl;
             pallo.showCreditsOnScreen = false;
 
