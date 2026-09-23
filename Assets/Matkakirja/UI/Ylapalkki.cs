@@ -100,7 +100,7 @@ namespace Matkakirja.Natiivi
             }
             else
             {
-                raha.text = osat[0];
+                raha.text = Raha(osat[0]);
                 string uusiKello = Iso(osat[1]) + ", " + osat[2];
                 kello.style.display = DisplayStyle.Flex;
                 if (uusiKello != kelloTeksti && kelloTeksti.Length > 0) Valahda();
@@ -108,6 +108,15 @@ namespace Matkakirja.Natiivi
                 kello.text = "· " + uusiKello;
             }
             pilleri.style.display = teksti.Length > 0 ? DisplayStyle.Flex : DisplayStyle.None;
+        }
+
+        /// <summary>Webin muoto "£250" ("250 puntaa" / "250 £" → "£250"), jotta pilleri mahtuu puhelimeen.</summary>
+        static string Raha(string s)
+        {
+            var osat = s.Trim().Split(' ');
+            if (osat.Length == 2 && int.TryParse(osat[0], out _) && (osat[1] == "£" || osat[1].StartsWith("punta")))
+                return "£" + osat[0];
+            return s;
         }
 
         static string Iso(string s) => string.IsNullOrEmpty(s) ? s : char.ToUpperInvariant(s[0]) + s.Substring(1);

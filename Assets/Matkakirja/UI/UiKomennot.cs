@@ -11,6 +11,7 @@
 //                                             tapahtumakortti, tulos [laattatyyppi], kohtaaminen,
 //                                             kohtaaminen-tervehdys (KysymysEsimerkki.cs)
 //   ui selite                                 karttaselite auki
+//   ui tietoja                                tekijätiedot ja lähteet
 //   ui kartuscha [ISO3] [auki]                kartuscha maalle ilman peliä (oletus ITA)
 //   ui heitto [teksti]                        kartan toimintonappi näkyviin
 //   ui viesti teksti                          tilarivin hetkellinen viesti
@@ -88,6 +89,8 @@ namespace Matkakirja.Natiivi
                 // Mobiilissa CaptureScreenshot tulkitsee nimen suhteessa persistentDataPathiin.
                 var nimi = "ui-" + osat[1] + ".png";
                 ScreenCapture.CaptureScreenshot(Application.isMobilePlatform ? nimi : Path.Combine(Application.persistentDataPath, nimi));
+                // Kaappaus tapahtuu vasta ruudun lopussa: seuraava rivi odottaa, ettei kuvaan tule sen tila.
+                odotus = Time.unscaledTime + 0.3f;
                 return nimi;
             }
             if (k != "ui" || osat.Length < 2) return "tuntematon komento";
@@ -99,6 +102,7 @@ namespace Matkakirja.Natiivi
                 case "asetukset": ui.Aanentasot.Avaa(); return null;
                 case "sulje": ui.SuljeKaikki(); return null;
                 case "matka": ui.Esimerkkimatka(); return null;
+                case "tietoja": ui.Tietoja.Avaa(); return null;
                 case "selite": ui.Karttaselite.Avaa(); return UiPalvelut.KarttaValot == null ? "ei KarttaValot-palvelua: vain selitykset" : null;
                 case "kartuscha":
                 {
