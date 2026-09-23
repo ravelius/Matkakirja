@@ -13,7 +13,11 @@
  *      220 ms, vertailu vain ennen lepoladontaa.
  *   3. LEVOSSA eleen jälkeen: yksikään näkyvä nimiö ei ylitä reunaa
  *      (4 px) eivätkä näkyvät nimiöt limity keskenään (0 paria;
- *      ykköstason pakkoasento sallitaan).
+ *      ykköstason pakkoasento sallitaan). Reunan saa ylittää myös lappu,
+ *      jonka lukko pidettiin ruudulla (syy 'nakyva'/'palaa', omistaja
+ *      23.9.2026: *"Mitkään tekstit eivät saisi vaihtaa paikkaa
+ *      panoroitaessa kun ne ovat ruudulla."* — sovittelu.js sääntö 5);
+ *      ne raportoidaan kentässä yliPakko.
  *   4. Häivytys on siirtymä ≤ 200 ms (css .nostosym-nimiokuva) ja
  *      piilotettu nimiö on yhä DOMissa (ikoni jää, nimiö opacity 0).
  *   5. Ei sivuvirheitä.
@@ -121,7 +125,10 @@ const LEPO = `() => {
   // Ykköstason pakkoasento (kaikki ehdokkaat reunan yli tai tukossa)
   // saa ylittää reunan: se ei häivy (sovittelu.js sääntö 4).
   const asennot = l.nostot.sovittelunAsennot();
-  const pakko = (r) => asennot.get('nosto:' + r.id)?.syy === 'pakko' || [...asennot].some(([k, a]) => k.endsWith(':' + r.id) && a.syy === 'pakko');
+  const syyOn = (r, syyt) => syyt.includes(asennot.get(r.avain ?? ('nosto:' + r.id))?.syy) || [...asennot].some(([k, a]) => k.endsWith(':' + r.id) && syyt.includes(a.syy));
+  // NÄKYVÄ NIMIÖ PITÄÄ PUOLENSA (omistaja 23.9.2026, sovittelu.js sääntö 5):
+  // ruudulla lukossa pidetty lappu saa leikkautua reunaan, se ei loikkaa.
+  const pakko = (r) => syyOn(r, ['pakko', 'nakyva', 'palaa']);
   // Liikevara (nostot.js LIIKEVARA, 22.9.2026): ruudun ulkopuolelle ladotut laput eivät ole
   // reunaylityksiä — ylitys on lappu, joka on OSITTAIN ruudussa ja osittain sen yli.
   const osittain = (r) => r.x1 > 0 && r.x0 < W && r.y1 > 0 && r.y0 < H;

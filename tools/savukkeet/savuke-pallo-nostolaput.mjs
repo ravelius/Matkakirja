@@ -533,9 +533,25 @@ if (auki) {
      * ohitetaan ja haku jatkuu seuraavaan; ohitetut kirjataan.
      */
     const kalusteenAlla = [];
+    /*
+     * TOISEN NOSTON LAPUN PÄÄLLÄ EI MITATA (23.9.2026, nimiölukko):
+     * Transilvaniassa Karhusanktuaarin nimiö on piilossa ja sen ikoni
+     * jää ykköstason "Branin linna" -nimiön alle (ykköstaso ei väistä
+     * ikonia, js/pallolauta/sovittelu.js). Poikkeamanapautus osui siis
+     * Branin TEKSTIIN ja avasi Branin — oikein. Piste, joka on toisen
+     * noston lapun sisällä, ei mittaa tämän lapun kosketusvaraa, joten
+     * ehdokas ohitetaan kuten kalusteen alla oleva.
+     */
+    const toisenLapulla = (r, p) => laput.find((m) => m.id !== r.id
+      && p.x >= m.x0 && p.x <= m.x1 && p.y >= m.y0 && p.y <= m.y1) ?? null;
     const ulottuvilla = (r, osuus) => {
       for (const sivuun of [0, poikkeama]) {
         const p = kohta(r, osuus, sivuun);
+        const toinen = toisenLapulla(r, p);
+        if (toinen) {
+          kalusteenAlla.push(`${r.nimi}: toisen noston lappu ${toinen.nimi}`);
+          return false;
+        }
         const el = document.elementFromPoint(koti.left + p.x, koti.top + p.y);
         const paljas = Boolean(el) && (el.tagName === 'CANVAS'
           || el.classList?.contains('pallolauta-kotelo'));
