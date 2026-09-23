@@ -678,6 +678,21 @@ test('B7: maisemakorit pelin porrastuksella, aarreaiheet ja tilaraidat', async (
   assert.match(a.find((r) => r.id === 'aarreaihe:paa').url, /musa-paaaarre-lyria\.mp3$/);
 });
 
+test('skeema 1.23: offline-ryhmät maanosittain ja kaikki', () => {
+  const o = JSON.parse(tiedostot.get('offline.json'));
+  assert.deepEqual(validoiNimella(o, 'offline.schema.json'), []);
+  const { maailma, kaikki, ...mantereet } = o.ryhmat;
+  assert.equal(maailma.tavuja.yht, o.globaali.tavuja.yht);
+  assert.equal(Object.keys(mantereet).length, 7);
+  const jaettu = Object.values(mantereet).flatMap((r) => r.maat);
+  assert.equal(jaettu.length, new Set(jaettu).size, 'maa vain yhdessä maanosassa');
+  assert.deepEqual([...jaettu].sort(), kaikki.maat);
+  assert.ok(Object.values(o.maat).every((m) => m.maanosa && o.ryhmat[m.maanosa]));
+  const summa = Object.values(mantereet).reduce((a, r) => a + r.tavuja.yht, 0) + maailma.tavuja.yht;
+  assert.equal(kaikki.tavuja.yht, summa);
+  assert.equal(o.maat.FRA.maanosa, 'europe');
+});
+
 test('skeema 1.9: offline-manifesti maittain (laatat, maasto, media, tavut)', async () => {
   const m = JSON.parse(tiedostot.get('manifest.json'));
   const o = JSON.parse(tiedostot.get(m.offline.tiedosto));

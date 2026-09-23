@@ -204,7 +204,42 @@ export function lueKoot() {
  * offline.json: { $skeema, arvio, lahteet, globaali, valinnaiset, maat: { ISO3: … } }.
  * countryShapes: MAAILMANKARTTA.map.countryShapes (ISO3 → { nimi, renkaat }).
  */
-export function kokoaOffline({ tiedostot, manifest, countryShapes, koot = lueKoot() }) {
+/*
+ * MAANOSARYHMÄT (skeema 1.23, omistajan päätös 23.9.2026: offline-lataus
+ * maanosittain tai "Kaikki", ei yksittäisiä maita). Maan maanosa = sen
+ * kaupunkien enemmistön maanosa (map.cityManner); tasatilanteessa ja
+ * kaupungittomalla maalla maan keskipistettä (countryShapes.keskus)
+ * lähimmän kaupungin maanosa laudan koordinaateissa.
+ */
+export function maidenMaanosat({ countryShapes, cities, cityCountry, cityManner }) {
+  const tulos = {};
+  // keskus on laudan pisteenä [x, y].
+  const lahin = ([kx, ky]) => {
+    let paras = null; let d = Infinity;
+    for (const c of cities) {
+      const e = (c.x - kx) ** 2 + (c.y - ky) ** 2;
+      if (e < d) { d = e; paras = c; }
+    }
+    return paras ? cityManner[paras.id] : null;
+  };
+  for (const iso of Object.keys(countryShapes).sort()) {
+    const laskut = {};
+    for (const [c, m] of Object.entries(cityCountry)) if (m === iso && cityManner[c]) laskut[cityManner[c]] = (laskut[cityManner[c]] ?? 0) + 1;
+    const jarj = Object.entries(laskut).sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1));
+    const keskus = countryShapes[iso].keskus;
+    tulos[iso] = jarj.length && (jarj.length === 1 || jarj[0][1] > jarj[1][1]) ? jarj[0][0]
+      : (keskus ? lahin(keskus) : jarj[0]?.[0] ?? null);
+  }
+  return tulos;
+}
+
+function summaa(lista) {
+  const t = { rasteri: 0, maasto: 0, media: 0, yht: 0 };
+  for (const x of lista) for (const k of Object.keys(t)) t[k] += x[k] ?? 0;
+  return t;
+}
+
+export function kokoaOffline({ tiedostot, manifest, countryShapes, kartta = null, mannerNimet = {}, koot = lueKoot() }) {
   const { jako, globaali, arvot } = jaaMedia(tiedostot, manifest);
   const mediaTavut = (lista) => lista.reduce((a, arvo) => a + (koot.media[arvot.get(arvo).laji] ?? koot.media.muu ?? 0), 0);
   const url = (arvo) => arvot.get(arvo).url;
@@ -267,19 +302,42 @@ export function kokoaOffline({ tiedostot, manifest, countryShapes, koot = lueKoo
         yht: Math.round(rTavut + mTavut + medTavut) },
     };
   }
+  const globaaliTavut = { rasteri: Math.round(globaaliRasteriTavut), maasto: Math.round(globaaliMaastoTavut),
+    media: 0, yht: Math.round(globaaliRasteriTavut + globaaliMaastoTavut) };
   return {
     $skeema: 'matkakirja-vienti/1/offline',
     arvio: true,
     koot: { haettu: koot.haettu, otos: koot.otos },
     lahteet: OFFLINE_LAHTEET,
     globaali: {
-      rasteri: globaaliRasteri, maasto: globaaliMaasto, media: [],
-      tavuja: { rasteri: Math.round(globaaliRasteriTavut), maasto: Math.round(globaaliMaastoTavut),
-        media: 0, yht: Math.round(globaaliRasteriTavut + globaaliMaastoTavut) },
+      rasteri: globaaliRasteri, maasto: globaaliMaasto, media: [], tavuja: globaaliTavut,
     },
     valinnaiset,
     maat,
+    ...(kartta ? { ryhmat: kokoaRyhmat(maat, kartta, mannerNimet, globaaliTavut) } : {}),
   };
+}
+
+/*
+ * ryhmat: pelaajan valittavat lataukset. maailma = globaali osa (aina
+ * ensin); <maanosa> = maanosan maat (laatat, maasto ja media summattuina;
+ * maiden jakama media voi laskea kahdesti, joten arvio on yläraja);
+ * kaikki = maailma + kaikki maat. maat-rivit jäävät Natiivisepän
+ * sisäiseen käyttöön (lataaja käy ryhmän maat läpi).
+ */
+function kokoaRyhmat(maat, kartta, mannerNimet, globaaliTavut) {
+  const maanosa = maidenMaanosat(kartta);
+  const ryhmat = { maailma: { nimi: 'Maailma', maat: [], tavuja: globaaliTavut } };
+  const mantereet = [...new Set(Object.values(maanosa).filter(Boolean))]
+    .sort((a, b) => Object.keys(mannerNimet).indexOf(a) - Object.keys(mannerNimet).indexOf(b));
+  for (const m of mantereet) {
+    const isot = Object.keys(maat).filter((iso) => maanosa[iso] === m).sort();
+    ryhmat[m] = { nimi: mannerNimet[m]?.nimi ?? m, maat: isot, tavuja: summaa(isot.map((iso) => maat[iso].tavuja)) };
+  }
+  const kaikki = Object.keys(maat).sort();
+  ryhmat.kaikki = { nimi: 'Kaikki', maat: kaikki, tavuja: summaa([globaaliTavut, ...kaikki.map((iso) => maat[iso].tavuja)]) };
+  for (const iso of Object.keys(maat)) maat[iso].maanosa = maanosa[iso] ?? null;
+  return ryhmat;
 }
 
 /* ------------------------------------------------- kokojen päivitys (verkko) */

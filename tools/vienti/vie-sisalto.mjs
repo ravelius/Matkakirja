@@ -125,8 +125,10 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        natiivin data-lukijat ovat nyt kaikki tyypitetty.
  *   1.22 kokoelma muutosloki-natiivi (Julkaisijan rivit) ja osoittimeen
  *        kokoelmaLkm ja muutos (automaattinen sisältörivi, julkaise-sisalto.mjs).
+ *   1.23 offline.json ryhmat: maailma, maanosat (7) ja kaikki summattuine
+ *        tavuineen; maat[].maanosa (omistaja: lataus maanosittain).
  */
-export const SKEEMAVERSIO_TARKKA = '1.22';
+export const SKEEMAVERSIO_TARKKA = '1.23';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 const tavuja = (s) => Buffer.byteLength(s);
@@ -257,6 +259,10 @@ export async function kokoaVienti({ juuri = JUURI } = {}) {
     tiedostot,
     manifest: { media: { tiedosto: 'media.json' }, kokoelmat: kokoelmaKuvaus },
     countryShapes: nimiavaruudet.get('js/packs/maailmankartta.js').MAAILMANKARTTA.map.countryShapes,
+    // Skeema 1.23: maanosaryhmät (offline.json ryhmat).
+    kartta: (({ cities, map }) => ({ countryShapes: map.countryShapes, cities, cityCountry: map.cityCountry,
+      cityManner: map.cityManner }))(nimiavaruudet.get('js/packs/maailmankartta.js').MAAILMANKARTTA),
+    mannerNimet: nimiavaruudet.get('js/game.js').MANNER_NIMET,
   });
   const offlineTeksti = JSON.stringify(offline) + '\n';
   tiedostot.set('offline.json', offlineTeksti);
