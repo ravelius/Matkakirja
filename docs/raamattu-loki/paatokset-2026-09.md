@@ -1675,3 +1675,7 @@ Julkaisija klo 08.5x, testit 4034/0. Omistajan kierros v2141:llä valikosta: til
 ## OMISTAJAN TARKENNUS NIMIOLUKKOON: SAMA NIMI EI VAIHDA PAIKKAA MYOSKAAN ZOOMIN AIKANA — SAA VAIN MUUTTAA KOKOAAN; NIMI SAA POISTUA NAYTOLTA JA UUSI SAA TULLA, MUTTA NAKYVA NIMIO EI KOSKAAN SIIRRY SYMBOLIN TOISELLE PUOLELLE (23.9.2026 klo 09.13)
 
 Omistaja klo 09.0x. Toteutus: puoli lukitaan koko näkyvyyden ajaksi zoomista riippumatta; törmäyksessä zoomatessa kumpikaan lukittu ei siirry vaan toinen piilotetaan (prioriteetti) ja palaa samalle puolelle kun tila riittää; uudet nimiöt hakevat vapaan puolen, jo näkyvät eivät väistä. Vartija: 10 s veto + zoomi sisään/ulos, 0 puolenvaihtoa näkyvillä nimiöillä.
+
+## OMISTAJA: 'RIISUTAAN KARTALTA KAIKKI YLIMAARAISET ELEMENTIT JA KATSOTAAN LOPPUUKO TOKKIMINEN' → SYOTEKOE-VALIKKOON 5 'PALJAS KARTTA' (?koe=paljas: VAIN LAATAT + VETO; POIS NIMIOT, SYMBOLIT, GL-RUNKO, ILMAKEHA/POHJA, HAIVYTYS, LEPOPIIRTO, PULU, DOM-KERROKSET, PIENI LIIKE; OVERLAY 1 s VALEIN) JA 6–8 PUOLITUSTILAT (+NIMIOT, +SYMBOLIT, +DOM) (23.9.2026 klo 09.17)
+
+Klo 09.21. Pelikoodari tekee pienen PR:n heti; tarkoitus on puolittaa syy: jos paljas on sulava, kerrokset takaisin yksi kerrallaan; jos paljaskin nykii, syy on laattapiirrossa tai syötteessä.
