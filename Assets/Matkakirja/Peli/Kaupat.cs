@@ -120,7 +120,8 @@ namespace Matkakirja.Peli
         public bool AarrepisteOhjeNahty;                                      // web aarrepisteOhjeNahty
         public HashSet<string> PullaVinkit = new HashSet<string>();           // web pullaVinkit
         public HashSet<string> ElaintakyLunastetut = new HashSet<string>();   // web elaintakyLunastetut
-        public HashSet<string> Julisteet = new HashSet<string>();             // web julisteet
+        /// <summary>Web julisteet (Set): voittojärjestyksessä, koska laukku näyttää kolme viimeisintä.</summary>
+        public List<string> Julisteet = new List<string>();
 
         static string Jarj(IEnumerable<string> l) =>
             "[" + string.Join(",", l.OrderBy(x => x, StringComparer.Ordinal).Select(Pelitila.Teksti)) + "]";
@@ -142,7 +143,8 @@ namespace Matkakirja.Peli
             sb.Append(",\"aarrepisteOhje\":").Append(AarrepisteOhjeNahty ? "true" : "false");
             sb.Append(",\"pullat\":").Append(Jarj(PullaVinkit));
             sb.Append(",\"elaintayt\":").Append(Jarj(ElaintakyLunastetut));
-            sb.Append(",\"julisteet\":").Append(Jarj(Julisteet));
+            // Voittojärjestys kuten webin [...julisteet] (ei lajittelua).
+            sb.Append(",\"julisteet\":[").Append(string.Join(",", Julisteet.Select(Pelitila.Teksti))).Append(']');
             sb.Append('}');
         }
 
@@ -168,7 +170,8 @@ namespace Matkakirja.Peli
             t.AarrepisteOhjeNahty = MiniJson.Totuus(o, "aarrepisteOhje");
             Lisaa(t.PullaVinkit, o, "pullat");
             Lisaa(t.ElaintakyLunastetut, o, "elaintayt");
-            Lisaa(t.Julisteet, o, "julisteet");
+            if (MiniJson.Kentta(o, "julisteet") is List<object> jl)
+                foreach (var x in jl) if (x is string s && !t.Julisteet.Contains(s)) t.Julisteet.Add(s);
             return t;
         }
     }
@@ -368,7 +371,8 @@ namespace Matkakirja.Peli
         /// <summary>Web myonnaJuliste: juliste laukkuun (myös takautuvasti). Aina Ok; Uusi = oliko uusi.</summary>
         public KauppaTulos MyonnaJuliste(string avain)
         {
-            if (string.IsNullOrEmpty(avain) || !K.Julisteet.Add(avain)) return new KauppaTulos { Ok = true, Uusi = false };
+            if (string.IsNullOrEmpty(avain) || K.Julisteet.Contains(avain)) return new KauppaTulos { Ok = true, Uusi = false };
+            K.Julisteet.Add(avain);
             return new KauppaTulos { Ok = true, Uusi = true };
         }
 
