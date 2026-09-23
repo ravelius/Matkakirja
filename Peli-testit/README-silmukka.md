@@ -89,7 +89,8 @@ JSON-tiedostot. 3D:n `komento.txt` (esim. `kuva nimi`) toimii rinnalla.
 | `luento kaupunki\|intro\|lento\|saapuminen kaupunki` | soittaa luennan ehdoitta (tila-JSONin `puhe`: soi, url, aika, virhe) |
 | `puhe seis\|pois\|paalle` | pysäyttää puheen / kertoja pois tai päälle (Asetukset Kytkin.Kertoja) |
 | `tila [nimi]` | `peli-tila.json` / `peli-tila-nimi.json`: silmukka, vaihe, sijainti, raha, päivä, aika, tilarivi, dialogi ja vaihtoehdot, tavoite, lehtiAuki, viesti, virhe, viimeisin matka; erä 4: syoteEstetty, tutkiTarjolla, kysymys (laji, otsikko, kysymys, vaihtoehdot, piilotetut, vihje, sekunnit, jaljella, vastattu, valittu, oikea, oikein, aikaLoppui, loyto, viesti); laukku (sijainti, kukkaro, tietaja, tilastot, aarni, kateissa, tavarat, julisteet) |
-| `odota s` / `odota-tila tila [max s]` | tauko / odota tilaa Kartta, Dialogi, Matkalla, Lehti (aikaraja kirjataan lokiin) |
+| `odota s` / `odota-tila tila[\|tila…] [max s]` | tauko / odota tilaa Kartta, Dialogi, Matkalla, Lehti, Kysymys, Traileri, Aloitus; useampi pystyviivalla (aikaraja kirjataan lokiin) |
+| `jatka-matka` / `uusi-matka [kaupunki] [siemen]` | aloitusnäkymän Jatka / Uusi matka lähtökaupungista (tila Aloitus, kun `PeliOhjain.AloitusNakyma` on päällä; `uusi-peli` toimii myös sieltä) |
 | `uusi-peli [siemen]` | uusi peli Pariisista, toistettava noppa |
 | `peli pois\|paalle` | silmukka pois/päälle |
 
@@ -104,7 +105,7 @@ sleep 35; cat "$D/peli-loki.txt"; for f in "$D"/peli-tila-*.json; do echo "$f"; 
 ### 30 s silmukka (`Peli-testit/silmukka-30s.txt`)
 
 ```
-odota-tila kartta 40
+odota-tila kartta|aloitus 40
 uusi-peli 12345
 odota 2
 tila 1-alku

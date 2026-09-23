@@ -46,7 +46,7 @@ namespace Matkakirja.Natiivi
         readonly Queue<string> jono = new Queue<string>();
         string polku, loki;
         float tarkistus, odotus;
-        SilmukanTila? odotettuTila;
+        List<SilmukanTila> odotettuTila;
         float odotusLoppuu;
 
         void Start()
@@ -79,8 +79,8 @@ namespace Matkakirja.Natiivi
         {
             if (Time.unscaledTime < odotus) return false;
             if (odotettuTila == null) return true;
-            if (ohjain.Tila == odotettuTila.Value) { Kirjaa("odota-tila", "ok " + ohjain.Tila); odotettuTila = null; return true; }
-            if (Time.unscaledTime >= odotusLoppuu) { Kirjaa("odota-tila", $"AIKARAJA: odotettiin {odotettuTila}, tila {ohjain.Tila}"); odotettuTila = null; return true; }
+            if (odotettuTila.Contains(ohjain.Tila)) { Kirjaa("odota-tila", "ok " + ohjain.Tila); odotettuTila = null; return true; }
+            if (Time.unscaledTime >= odotusLoppuu) { Kirjaa("odota-tila", $"AIKARAJA: odotettiin {string.Join("|", odotettuTila)}, tila {ohjain.Tila}"); odotettuTila = null; return true; }
             return false;
         }
 
@@ -195,10 +195,22 @@ namespace Matkakirja.Natiivi
                     odotus = Time.unscaledTime + Luku(A(1), 1f);
                     return null;
                 case "odota-tila":
-                    if (!Enum.TryParse(A(1) ?? "", true, out SilmukanTila t)) return "tuntematon tila " + A(1);
-                    odotettuTila = t;
+                {
+                    // Useampi tila pystyviivalla: odota-tila kartta|aloitus 40 (aloitusnäkymä käytössä tai ei).
+                    var tilat = new List<SilmukanTila>();
+                    foreach (var osa in (A(1) ?? "").Split('|'))
+                    {
+                        if (!Enum.TryParse(osa, true, out SilmukanTila t)) return "tuntematon tila " + osa;
+                        tilat.Add(t);
+                    }
+                    odotettuTila = tilat;
                     odotusLoppuu = Time.unscaledTime + Luku(A(2), 20f);
                     return null;
+                }
+                case "jatka-matka":
+                    return ohjain.Jatka();
+                case "uusi-matka":
+                    return ohjain.UusiMatka(A(1), long.TryParse(A(2), NumberStyles.Integer, CultureInfo.InvariantCulture, out var ms) ? ms : (long?)null);
                 case "uusi-peli":
                     if (ohjain.Verkko == null) return "sisältö ei ole vielä latautunut";
                     ohjain.UusiPeli(long.TryParse(A(1), NumberStyles.Integer, CultureInfo.InvariantCulture, out var s) ? s : (long?)null);

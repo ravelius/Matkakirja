@@ -2,7 +2,7 @@
 # Tutki: kohtaaminen → vastaa oikein → laatta → Jatka → liftaus kohti Pariisia
 # → Heitä → Pariisi → lehti). Kopioi Documents/peli-komento.txt:ksi.
 # Siemen 12345 laatoilla; odotetut arvot README-silmukka.md (Testit/SilmukkaKysymysTestit.cs).
-odota-tila kartta 40
+odota-tila kartta|aloitus 40
 uusi-peli 12345
 odota 3
 tila k1-alku
