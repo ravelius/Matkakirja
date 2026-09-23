@@ -31,6 +31,7 @@
 @property (nonatomic, strong) id virheTarkkailija;
 @property (nonatomic) int loppuTila;   // 0 = ei, 3 = ei vastaa, 4 = katkesi
 @property (nonatomic) float voimakkuus;
+@property (nonatomic) BOOL tauolla;    // pelaajan tauko: ei automaattista jatkoa
 @end
 
 @implementation MatkakirjaRadio
@@ -66,7 +67,10 @@
     // Suora lähetys: pieni puskuri riittää, ja soitto alkaa heti kun voi.
     kohde.preferredForwardBufferDuration = 2.0;
     self.soitin = [AVPlayer playerWithPlayerItem:kohde];
-    self.soitin.automaticallyWaitsToMinimizeStalling = NO;
+    // EI automaticallyWaitsToMinimizeStalling = NO: silloin play() ennen puskuria jumittuu
+    // heti, AVPlayer asettaa rate 0:ksi eikä jatka itse (iPad 23.9.2026: kaikki asemat
+    // aikakatkaisuun). Oletus YES odottaa puskurin (preferredForwardBufferDuration 2 s).
+    self.tauolla = NO;
     self.soitin.volume = 0;
     self.voimakkuus = 0;
     self.loppuTila = 0;
@@ -100,6 +104,10 @@
     if (self.soitin.status == AVPlayerStatusFailed || kohde.status == AVPlayerItemStatusFailed) return 3;
     if (self.soitin.timeControlStatus == AVPlayerTimeControlStatusPlaying
         && CMTimeGetSeconds(kohde.currentTime) > 0) return 2;
+    // Pysähtynyt ilman pelaajan taukoa (jumi, keskeytys): uusi yritys, kun kohde on valmis.
+    if (!self.tauolla && kohde.status == AVPlayerItemStatusReadyToPlay
+        && self.soitin.timeControlStatus == AVPlayerTimeControlStatusPaused)
+        [self.soitin play];
     return 1;
 }
 
@@ -133,9 +141,10 @@ int MatkakirjaRadio_Tila(void)
 // Merkkivalon tauko (web audio.pause/play): yhteys jää, data ei kulje mykistettynä.
 void MatkakirjaRadio_Tauko(int paalle)
 {
-    AVPlayer* soitin = [MatkakirjaRadio jaettu].soitin;
-    if (soitin == nil) return;
-    if (paalle) [soitin pause]; else [soitin play];
+    MatkakirjaRadio* radio = [MatkakirjaRadio jaettu];
+    radio.tauolla = paalle != 0;
+    if (radio.soitin == nil) return;
+    if (paalle) [radio.soitin pause]; else [radio.soitin play];
 }
 
 }

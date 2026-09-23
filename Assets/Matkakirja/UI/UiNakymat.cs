@@ -47,6 +47,9 @@ namespace Matkakirja.Natiivi
         public readonly Julistegalleria Julistegalleria;
         public readonly Nahtavyysarkki Nahtavyydet;
         public readonly Nahtavyysnakyma Nahtavyysnakyma;
+        public readonly PieniLiike Liike;
+        public readonly Noppa Noppa;
+        public readonly Leima Leima;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         static void KytkeTehdas()
@@ -56,6 +59,8 @@ namespace Matkakirja.Natiivi
             PeliNakymat.KaupunkiKortti = _ => Hae().Kaupunkikortti;
             PeliNakymat.Saapumistraileri = (kaupunki, url, valmis) => Hae().Traileri.NaytaPelista(kaupunki, url, valmis);
             PeliNakymat.Kysymys = _ => Hae().Kysymys;
+            // Näkyvä noppa (B16/P45): liike odottaa valmis()-kutsua (Pelikoodarin koukku, varareitti 4 s).
+            PeliNakymat.Noppa = (arvo, lat, lon, valmis) => UiKerros.PaaSaikeessa(() => Hae().HeitaNoppa(arvo, lat, lon, valmis));
             // Natiivilehti (B1): WKWebView-kuori jää käyttämättä.
             PeliNakymat.Lehti = _ => Hae().Lehti;
             // Aloitusnäkymä: silmukka odottaa tilassa Aloitus (Jatka / Uusi matka).
@@ -102,6 +107,9 @@ namespace Matkakirja.Natiivi
             Lehti = new Lehtinakyma(kerros);
             Nahtavyysnakyma = new Nahtavyysnakyma(kerros); // kaupunkikortin "Nähtävyydet"
             Nahtavyydet = new Nahtavyysarkki(kerros); // lehden ja nähtävyysnäkymän päälle (sama kerros, myöhemmin)
+            Liike = new PieniLiike(kerros); // kerros 10: pallon päällä, muun UI:n alla
+            Noppa = new Noppa(kerros.Juuri(PieniLiike.Kerros)); // web die-layer karttaruudussa, UI:n alla
+            Leima = new Leima(kerros); // tapahtumakuplat (rahan muutokset)
             // Lehti aukeaa kaiken päälle: auki jääneet valikot ja popupit kiinni.
             Lehti.Avautui += _ => { Valikko.Sulje(); Aanentasot.Sulje(); Matkalaukku.Sulje(); Vahvistus.Sulje(); Julistegalleria.Sulje(); Minipopup.SuljeAuki(); };
             Paljastus = new Paljastus(kerros);
@@ -164,6 +172,10 @@ namespace Matkakirja.Natiivi
             // Aloitus ja matkan huipennus (Pelikoodarin tapahtumat); tila voi olla jo Aloitus.
             o.AloitusTarjolla += () => UiKerros.PaaSaikeessa(() => NaytaAloitus(o));
             if (o.Tila == SilmukanTila.Aloitus) NaytaAloitus(o);
+            // Rahan muutos kupliksi (web buildToast kind stamp, "+10 puntaa · Lehden minitehtävä ratkesi").
+            o.RahaMuuttui += (muutos, syy, _) => UiKerros.PaaSaikeessa(() => Leima.Raha(muutos, syy));
+            // Noppa häipyy, kun nappula on perillä (web haivyta saapuessa).
+            o.MatkaPerilla += _ => UiKerros.PaaSaikeessa(() => Noppa.Haivyta());
             o.KaikkiAarteetLoytyi += yv => UiKerros.PaaSaikeessa(() => Huipennus.Nayta(yv, () => UusiMatka(o)));
             // Lehti (WKWebView) aukeaa kaiken päälle: auki jääneet valikot kiinni.
             if (o.Lehti != null) o.Lehti.Avautui += _ => { Valikko.Sulje(); Aanentasot.Sulje(); Matkalaukku.Sulje(); Vahvistus.Sulje(); };
@@ -234,6 +246,27 @@ namespace Matkakirja.Natiivi
             Tietoja.Sulje();
             Linssit.SuljeValikot();
             Chat.Sulje();
+        }
+
+        PalloKierto kierto;
+
+        /// <summary>
+        /// Web ui.animateDie: noppa lähtee pelaajan paikasta ruudulla (nappula 5000 m korkeudella) ja
+        /// pomppii lepopaikkaan (web decor.dieSpot, oikea alaneljännes, pieni satunnaisheitto).
+        /// Pallon takapuolelta tai ruudun ulkopuolelta noppa lähtee lepopaikasta.
+        /// </summary>
+        public void HeitaNoppa(int arvo, double lat, double lon, System.Action valmis)
+        {
+            var juuri = Kerros.Juuri(PieniLiike.Kerros);
+            float w = juuri.resolvedStyle.width, h = juuri.resolvedStyle.height;
+            if (float.IsNaN(w) || w <= 0 || juuri.panel == null) { valmis?.Invoke(); return; }
+            var arpa = new System.Random();
+            var loppu = new Vector2(w * (0.8f + (float)(arpa.NextDouble() - 0.5) * 0.06f), h * (0.74f + (float)(arpa.NextDouble() - 0.5) * 0.05f));
+            var alku = loppu;
+            kierto ??= UnityEngine.Object.FindAnyObjectByType<PalloKierto>();
+            if (kierto != null && kierto.RuutuPiste(lat, lon, out var ruutu, 5000))
+                alku = UnityEngine.UIElements.RuntimePanelUtils.ScreenToPanel(juuri.panel, new Vector2(ruutu.x, Screen.height - ruutu.y));
+            Noppa.Heita(arvo, alku, loppu, valmis, vahennettyLiike: LinssiUi.VahennettyLiike());
         }
 
         /// <summary>Testikomento 'ui matka': esimerkkivalinta ilman peliä.</summary>

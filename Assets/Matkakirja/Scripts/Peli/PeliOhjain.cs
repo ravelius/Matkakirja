@@ -176,6 +176,19 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public event Action TilaMuuttui;
 
+        /// <summary>
+        /// Kukkaro muuttui teon jälkeen (web kukkaroleima): (muutos puntina, syy näyttötekstinä, saldo).
+        /// Syy on webin leiman alarivi ("Lehden minitehtävä ratkesi", "pulla Livialle", "Bussimatka −5 puntaa").
+        /// Tulee ennen TilaMuuttui-tapahtumaa. Kolikon ääni tulee erikseen Aani("coin")-tapahtumasta, kun rahaa tulee.
+        /// </summary>
+        public event Action<int, string, int> RahaMuuttui;
+
+        /// <summary>
+        /// Matkan liike päättyi (kaupunki, johon saavuttiin, tai null reitin varrella) ennen lehteä tai
+        /// traileria: Natiivi-UI:n noppa häipyy (web: noppa jää näkyviin saapumiseen asti).
+        /// </summary>
+        public event Action<string> MatkaPerilla;
+
         // --- aloitusnäkymä ja virstanpylväät (Natiivi-UI) -------------------
 
         /// <summary>
@@ -648,16 +661,17 @@ namespace Matkakirja.Natiivi
         /// ajaa teon, tallentaa ja päivittää näkymän. Mannerlento siirtää kameran.
         /// Esim. PeliOhjain.Instanssi.KauppaTeko(k => k.Kulttuuri(id, oikein)).
         /// </summary>
-        public KauppaTulos KauppaTeko(Func<Kaupat, KauppaTulos> teko)
+        public KauppaTulos KauppaTeko(Func<Kaupat, KauppaTulos> teko, string rahanSyy = null)
         {
+            rahaSyy = rahanSyy;
             if (kaupat == null || matka == null) return KauppaTulos.Epaonnistui("peli ei ole valmis");
             var lahto = matka.Tila.Pelaaja.Sijainti;
             tapahtumat.Clear();
             KauppaTulos t;
             int rahaEnnen = matka.Tila.Pelaaja.Raha;
             try { t = teko(kaupat); }
-            catch (Exception e) { Debug.LogException(e); return KauppaTulos.Epaonnistui(e.Message); }
-            if (!t.Ok) return t;
+            catch (Exception e) { Debug.LogException(e); rahaSyy = null; return KauppaTulos.Epaonnistui(e.Message); }
+            if (!t.Ok) { rahaSyy = null; return t; }
             if (matka.Tila.Pelaaja.Raha > rahaEnnen) Aanita(Aanitunnukset.Kolikot);
             Tallenna();
             if (tapahtumat.Count > 0) Viesti(string.Join(" · ", tapahtumat));
@@ -774,6 +788,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Aloitusnäkymän Jatka: tallennettu matka jatkuu. Palauttaa virheen tai null.</summary>
         public string Jatka()
         {
+            using var _ = Ajoita("jatka");
             if (Tila != SilmukanTila.Aloitus) return "silmukka on tilassa " + Tila;
             if (jatkettava == null) return "tallennusta ei ole";
             matka = jatkettava;
@@ -788,6 +803,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public string UusiMatka(string lahtokaupunki, long? siemen = null)
         {
+            using var _ = Ajoita("uusiMatka");
             if (verkko == null) return "sisältö ei ole vielä latautunut";
             if (lahtokaupunki != null && !Lahtokaupungit().Any(k => k.Id == lahtokaupunki)) return "ei lähtökaupunki: " + lahtokaupunki;
             if (Tila != SilmukanTila.Aloitus && Tila != SilmukanTila.Kartta && Tila != SilmukanTila.Dialogi) return "silmukka on tilassa " + Tila;
@@ -839,6 +855,7 @@ namespace Matkakirja.Natiivi
 
         void Kytke(Matka m)
         {
+            using var _ = Ajoita("kytke");
             linssit = new Linssiomistus(passi ?? new Passi(), m.Tila.Linssit).Kytke(m);
             linssit.Kynnyssaanto = Linssirekisteri.Kynnys;   // omistajan sääntö (1400: radio ja topografia)
             kytkettyRekisteri = null;
@@ -861,6 +878,8 @@ namespace Matkakirja.Natiivi
                 if (Tila == SilmukanTila.Kysymys) kysymysLisat.Add(rivi); else tapahtumat.Add(rivi);
             };
             SahkeKytke(m);
+            rahaNahty = m.Tila.Pelaaja.Raha;
+            rahaSyy = null;
             kysely = null;
             KytkeKysely();
         }
@@ -868,6 +887,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Kysymysmoottori matkaan, kun sekä matka että kysymykset ovat valmiit.</summary>
         void KytkeKysely()
         {
+            using var _ = Ajoita("kytkeKysely");
             if (matka == null || Kysymykset == null || (kysely != null && kysely.Matka == matka)) return;
             kysely = new Kysely(matka, Kysymykset);
             kysely.Tapahtui += (laji, teksti) => kysymysLisat.Add(teksti);
@@ -897,6 +917,7 @@ namespace Matkakirja.Natiivi
 
         void Tallenna()
         {
+            using var _ = Ajoita("tallennus");
             if (matka == null) return;
             // Kuten web (visa.js): jäljellä oleva aika talteen kokonaisina sekunteina.
             if (Tila == SilmukanTila.Kysymys && KysymysTila != null && KysymysTila.Sekunnit.HasValue && !KysymysTila.Vastattu)
@@ -907,13 +928,16 @@ namespace Matkakirja.Natiivi
             }
             try
             {
+                using var __ = Ajoita("tallennus.kirjoitus");
                 PeliApu.KirjoitaAtomisesti(TallennusPolku, matka.Tallenna());
                 PeliApu.KirjoitaAtomisesti(TavoitePolku, Tavoite ?? "");
             }
             catch (Exception e) { Debug.LogError("MATKAKIRJA peli: tallennus epäonnistui: " + e.Message); }
             PaivitaAarrepiste();
             SahkeTallennettu();
-            try { TilaMuuttui?.Invoke(); } catch (Exception e) { Debug.LogException(e); }
+            IlmoitaRaha();
+            using (Ajoita("tallennus.tilaMuuttui"))
+                try { TilaMuuttui?.Invoke(); } catch (Exception e) { Debug.LogException(e); }
         }
 
         void OnApplicationPause(bool tauko)
@@ -930,6 +954,7 @@ namespace Matkakirja.Natiivi
 
         void Kartalle(bool kameraPelaajaan)
         {
+            using var _ = Ajoita("kartalle");
             Lentoaani(false);
             dialogi.Piilota();
             PiilotaKortti();
@@ -965,6 +990,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         void Napautettu(string kaupunki)
         {
+            using var _ = Ajoita("napautus");
             if (NapautusSallittu != null && !NapautusSallittu()) return;
             if (!Kaytossa || matka == null) return;
             bool uiPaalla = false;
@@ -1001,6 +1027,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public string AvaaKortti(string kaupunki)
         {
+            using var _ = Ajoita("kortti");
             if (matka == null) return "peli ei ole valmis";
             if (kaupunkiKortti == null) return AvaaDialogi(kaupunki);
             if (Tila != SilmukanTila.Kartta) return "silmukka on tilassa " + Tila;
@@ -1018,7 +1045,8 @@ namespace Matkakirja.Natiivi
                 Sulje = () => PiilotaKortti(),
             };
             KorttiKaupunki = kaupunki;
-            kaupunkiKortti.Nayta(kaupunki, PeliApu.KaupunginNimi(verkko, kaupunki), t);
+            using (Ajoita("kortti.nayta"))
+                kaupunkiKortti.Nayta(kaupunki, PeliApu.KaupunginNimi(verkko, kaupunki), t);
             return null;
         }
 
@@ -1138,6 +1166,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public string Matkusta(string kohde, Kulkutapa tapa, bool mannerlento = false, bool vapaa = false)
         {
+            using var _ = Ajoita("matka");
             if (matka == null) return "peli ei ole valmis";
             if (Tila != SilmukanTila.Kartta && Tila != SilmukanTila.Dialogi) return "silmukka on tilassa " + Tila;
             if (kohde != null && !verkko.Kaupungit.ContainsKey(kohde)) return "tuntematon kaupunki " + kohde;
@@ -1158,7 +1187,8 @@ namespace Matkakirja.Natiivi
             Tallenna();
 
             var osat = new List<string>();
-            if (t.Noppa.HasValue) osat.Add("Noppa " + t.Noppa.Value);
+            // Näkyvä noppa kertoo silmäluvun itse (web: ei tekstiä); ilman sitä tilariville.
+            if (t.Noppa.HasValue && (PeliNakymat.Noppa == null || !Kaytossa)) osat.Add("Noppa " + t.Noppa.Value);
             osat.AddRange(tapahtumat);
             if (t.Saapui != null) osat.Add("Saavuit: " + PeliApu.KaupunginNimi(verkko, t.Saapui));
             Viesti(string.Join(" · ", osat));
@@ -1183,6 +1213,35 @@ namespace Matkakirja.Natiivi
             if (lentoRepliikki != null) SoitaLuento(lentoRepliikki, 0.2f);
             else if (t.Saapui != null && PeliNakymat.Saapumistraileri == null) SoitaLuento(luennat.Saapumispuhe(t.Saapui), 0.3f);
             float kesto = PeliApu.AjoKesto(kulma);
+            // Näkyvä noppa (B16/P45, web animateDie): liike alkaa vasta, kun noppa on pysähtynyt.
+            if (t.Noppa.HasValue && PeliNakymat.Noppa != null && Kaytossa && a.HasValue)
+            {
+                int tunnus = ++noppaTunnus;
+                noppaLiike = () => AloitaLiike(t, a, b.Value, kesto);
+                noppaLoppuu = Time.unscaledTime + NopanVaraS;
+                try { PeliNakymat.Noppa(t.Noppa.Value, a.Value.Lat, a.Value.Lon, () => { if (tunnus == noppaTunnus) NoppaValmis(); }); }
+                catch (Exception e) { Debug.LogException(e); NoppaValmis(); }
+                return null;
+            }
+            AloitaLiike(t, a, b.Value, kesto);
+            return null;
+        }
+
+        const float NopanVaraS = 4f;   // valmis-kutsun varareitti, jos näkymä ei kutsu sitä
+        int noppaTunnus;
+        Action noppaLiike;
+        float noppaLoppuu;
+
+        void NoppaValmis()
+        {
+            var l = noppaLiike;
+            noppaLiike = null;
+            if (l != null && Tila == SilmukanTila.Matkalla) l();
+        }
+
+        /// <summary>Lentoääni, nappula tai kamera-ajo kohteeseen; perillä Perilla.</summary>
+        void AloitaLiike(MatkanTulos t, (double Lat, double Lon)? a, (double Lat, double Lon) b, float kesto)
+        {
             if (t.Tapa == Kulkutapa.Lento) Lentoaani(true, kesto);
             var nappula = Nappula;
             if (nappula != null && a.HasValue)
@@ -1190,16 +1249,15 @@ namespace Matkakirja.Natiivi
                 // Pelinappula (Natiiviseppä, B16): liftaus, laiva ja bussi ajavat reitin pisteet
                 // (autokyyti), lento lentää kaaren; kamera seuraa nappulaa (seuraaKamera).
                 if (t.Tapa == Kulkutapa.Lento)
-                    NappulaAjo(v => nappula.Lenna(a.Value.Lat, a.Value.Lon, b.Value.Lat, b.Value.Lon, kesto, v), kesto, Perilla);
+                    NappulaAjo(v => nappula.Lenna(a.Value.Lat, a.Value.Lon, b.Lat, b.Lon, kesto, v), kesto, Perilla);
                 else
                 {
                     var pisteet = PeliApu.Matkapisteet(verkko, t.Lahto, t.Polku, t.Kohde);
                     NappulaAjo(v => nappula.Aja(pisteet, kesto, v), kesto, Perilla);
                 }
-                return null;
+                return;
             }
-            Ajo(b.Value.Lat, b.Value.Lon, SaapumisKaari, kesto, Perilla);
-            return null;
+            Ajo(b.Lat, b.Lon, SaapumisKaari, kesto, Perilla);
         }
 
         /// <summary>Kamera-ajo perille: kaupungissa lehti, reitin varrella takaisin kartalle.</summary>
@@ -1209,6 +1267,8 @@ namespace Matkakirja.Natiivi
             Lentoaani(false);
             var kaupunki = saapumisKaupunki;
             saapumisKaupunki = null;
+            // Liike päättyi (kaupunki tai null = reitin varrella): noppa häipyy (web saapuessa).
+            try { MatkaPerilla?.Invoke(kaupunki); } catch (Exception e) { Debug.LogException(e); }
             if (kaupunki != null) Aanita(Aanitunnukset.Saapuminen);
             if (kaupunki != null && TraileriTarjolla(kaupunki))
             {
@@ -1404,12 +1464,13 @@ namespace Matkakirja.Natiivi
             KauppaTulos tulos;
             switch (t.Laji)
             {
-                case LehtiTekoLaji.Kulttuurivastaus: tulos = KauppaTeko(k => k.Kulttuuri(t.Kaupunki, t.Oikein)); break;
+                case LehtiTekoLaji.Kulttuurivastaus: tulos = KauppaTeko(k => k.Kulttuuri(t.Kaupunki, t.Oikein), RahaSyyt.Kulttuuri); break;
                 case LehtiTekoLaji.Minitehtavavastaus:
-                    tulos = KauppaTeko(k => k.Minitehtava(t.Kaupunki, t.Aihe, t.Oikein, t.Palkkio > 0 ? t.Palkkio : KauppaVakiot.MinitehtavaPalkkio));
+                    tulos = KauppaTeko(k => k.Minitehtava(t.Kaupunki, t.Aihe, t.Oikein, t.Palkkio > 0 ? t.Palkkio : KauppaVakiot.MinitehtavaPalkkio),
+                        RahaSyyt.Minitehtava(t.Aihe));
                     break;
-                case LehtiTekoLaji.JulisteMyonto: tulos = KauppaTeko(k => k.MyonnaJuliste(t.Avain)); break;
-                case LehtiTekoLaji.PullaVinkki: tulos = KauppaTeko(k => k.PullaVinkki(t.Kaupunki)); break;
+                case LehtiTekoLaji.JulisteMyonto: tulos = KauppaTeko(k => k.MyonnaJuliste(t.Avain), RahaSyyt.Juliste); break;
+                case LehtiTekoLaji.PullaVinkki: tulos = KauppaTeko(k => k.PullaVinkki(t.Kaupunki), RahaSyyt.Pulla); break;
                 case LehtiTekoLaji.EtsiKatko:
                 {
                     // Web etsiKatko: lehti kiinni ja kohtaaminen/kysymys alkaa (LehtiSuljettu näyttää sen).
@@ -1537,6 +1598,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Avoin tehtävä (kysymys, pulma, tapahtumakortti) näkyviin, myös tallennuksesta jatkettaessa.</summary>
         void NaytaKysymys(string viesti = null)
         {
+            using var _ = Ajoita("kysymysNayta");
             var tehtava = AvoinTehtava;
             if (tehtava == Tehtava.Ei) return;
             if (Tila != SilmukanTila.Kysymys)
@@ -1599,7 +1661,7 @@ namespace Matkakirja.Natiivi
             if (Tila != SilmukanTila.Kysymys || AvoinTehtava == Tehtava.Ei) return "kysymys ei ole auki";
             bool vastattuEnnen = KysymysTila != null && KysymysTila.Vastattu;
             var t = teko();
-            if (!t.Ok) { NaytaKysymys(t.Virhe); return t.Virhe; }
+            if (!t.Ok) { rahaSyy = null; NaytaKysymys(t.Virhe); return t.Virhe; }
             // Vastaus: ensin tuomio, 0,9 s myöhemmin paljastus (Update).
             if (!vastattuEnnen) { tulosPaljastettu = false; paljastusAika = Time.unscaledTime + TuomioS; }
             Tallenna();
@@ -1632,6 +1694,7 @@ namespace Matkakirja.Natiivi
         public string Vihje()
         {
             if (AvoinTehtava != Tehtava.Kysymys) return "vihjettä ei ole tarjolla";
+            rahaSyy = RahaSyyt.Vihje;
             var r = KysymysTeko(() => kysely.Vihje());
             if (r == null) Aanita(Aanitunnukset.Vihje);
             return r;
@@ -1642,7 +1705,7 @@ namespace Matkakirja.Natiivi
         {
             switch (AvoinTehtava)
             {
-                case Tehtava.Kysymys: return Aanella(KysymysTeko(() => kysely.Puolita()), Aanitunnukset.Puolitus);
+                case Tehtava.Kysymys: rahaSyy = RahaSyyt.Puolitus; return Aanella(KysymysTeko(() => kysely.Puolita()), Aanitunnukset.Puolitus);
                 default: return "50:50 ei ole tarjolla";
             }
         }
@@ -1658,6 +1721,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public string JatkaKysymyksesta()
         {
+            using var _ = Ajoita("kysymysJatka");
             var tehtava = AvoinTehtava;
             if (Tila != SilmukanTila.Kysymys || tehtava == Tehtava.Ei) return "kysymys ei ole auki";
             if (KysymysTila != null && !KysymysTila.Vastattu) return "kysymykseen ei ole vastattu";
@@ -1792,6 +1856,7 @@ namespace Matkakirja.Natiivi
         void Update()
         {
             if (ajoValmis != null && Time.unscaledTime > ajoLoppuu) AjoValmis();
+            if (noppaLiike != null && Time.unscaledTime > noppaLoppuu) NoppaValmis();
             KytkeRekisteri();
             PaivitaReaktiot();
             PaivitaKysymysAika();
@@ -1858,6 +1923,7 @@ namespace Matkakirja.Natiivi
                 + ",\"aanet\":[" + string.Join(",", aaniLoki.Select(PeliApu.Json)) + "],\"lentoSoi\":" + (lentoSoi ? "true" : "false")
                 + ",\"aarrepiste\":" + (Aarrepiste() is Aarrepiste ap ? "{\"kaupunki\":" + PeliApu.Json(ap.Kaupunki) + ",\"lukittu\":" + (ap.Lukittu ? "true" : "false") + "}" : "null")
                 + ",\"sahke\":" + SahkeJson()
+                + ",\"ajoitus\":" + PeliApu.Json(viimeAjoitus)
                 + ",\"tehtavaNappi\":" + PeliApu.Json(matka != null && matka.Tila.Pelaaja.Sijainti.Kaupungissa ? LehtiTilaNyt(matka.Tila.Pelaaja.Sijainti.Kaupunki).TehtavaNappi : null);
             return json.Substring(0, json.Length - 1) + lisa + "}";
         }

@@ -461,9 +461,28 @@ namespace Matkakirja.Natiivi
                     Kirjaaja(linssi);
                 }
                 linssi.Avaa(y);
+                if (linssi is Matkakirja.Linssit.Maat.VertailuLinssi v && v.Kayrat == null && !kayratHaussa)
+                    o.StartCoroutine(LataaKayrat(v));
             }
             public void Paivita() => linssi?.Paivita();
             public void Sulje() => linssi?.Sulje();
+
+            bool kayratHaussa;
+            /// <summary>Maakäyrät laiskasti ensimmäisellä avauksella (web lataaMaakayrat); epäonnistuminen yrittää uudelleen seuraavalla.</summary>
+            System.Collections.IEnumerator LataaKayrat(Matkakirja.Linssit.Maat.VertailuLinssi v)
+            {
+                kayratHaussa = true;
+                string teksti = null;
+                yield return LinssiSisalto.Hae("tiedostot/assets/data/maakayrat.json", t => teksti = t);
+                kayratHaussa = false;
+                if (teksti == null) { o.Kirjaa("vertailu: maakäyrät puuttuvat"); yield break; }
+                try
+                {
+                    v.Kayrat = Matkakirja.Linssit.Maat.MaakayratAineisto.Lue(Matkakirja.Peli.MiniJson.Jasenna(teksti));
+                    o.Kirjaa($"vertailu: maakäyrät {v.Kayrat.Maat.Count} maalle");
+                }
+                catch (Exception e) { o.Kirjaa("vertailu: maakäyrät " + e.Message); }
+            }
 
             void Kirjaaja(Matkakirja.Linssit.Maat.MaatilaLinssi l)
             {
@@ -471,7 +490,12 @@ namespace Matkakirja.Natiivi
                 {
                     v.Muuttui += () => { if (v.Auki) o.Kirjaa("vertailu: " + string.Join(", ", v.Valinnat)); };
                     v.Tayttui += () => o.Kirjaa("vertailu: " + Matkakirja.Linssit.Maat.VertailuLinssi.TaynnaOtsikko);
-                    v.VertailuPyydetty += m => o.Kirjaa("vertailu pyydetty: " + string.Join(", ", m.Select(x => x.Nimi)));
+                    v.VertailuPyydetty += m =>
+                    {
+                        var kuva = v.Kayrakuva();
+                        o.Kirjaa("vertailu pyydetty: " + string.Join(", ", m.Select(x => x.Nimi))
+                            + (kuva == null ? " (käyrät latautuvat)" : kuva.Tyhja ?? $", {kuva.Lohkot.Count} käyrälohkoa"));
+                    };
                 }
                 if (l is Matkakirja.Linssit.Maat.MaatiedotLinssi t)
                 {
