@@ -46,3 +46,43 @@ test('lehtikuori: käynnistys ei tallenna eikä avaa lautaa; vain lehti näkyy',
   const html = lue('../index.html').replace(/<!--[\s\S]*?-->/g, '');
   assert.ok(html.indexOf('<dialog id="arrival-dialog"') > html.lastIndexOf('<div class="app"'));
 });
+
+test('lehtikuori: teko-silta ja natiivin alkutila', async () => {
+  const {
+    LEHDEN_TEOT, asetaLehtikuorenTila, kytkeTekoSilta, lehtikuorenTila,
+  } = await import('../js/lehtikuori.js');
+  const { Game } = await import('../js/game.js');
+  const { packById } = await import('../js/pack.js');
+  const { rakennaPikatiePeli } = await import('../js/kehittaja-pikatie.js');
+  const peli = rakennaPikatiePeli(Game, packById('maailmankartta'), 'pariisi');
+  assert.ok(peli, 'pikatiepeli');
+
+  // Natiivi koodaa tilan base64url-JSONiksi risuaitaan (LehtiOsoite.cs).
+  const tila = {
+    raha: 123,
+    kaupat: { kulttuuri: ['maailmankartta:pariisi'], pullat: [], julisteet: ['pariisi'], nostotehtavat: 2, aarrepisteOhje: true },
+  };
+  const b64 = Buffer.from(JSON.stringify(tila), 'utf8').toString('base64url');
+  assert.deepEqual(lehtikuorenTila(`#tila=${b64}`), tila);
+  assert.equal(lehtikuorenTila('#tila=%%%'), null, 'rikki → null');
+  assert.equal(lehtikuorenTila(''), null);
+  assert.ok(asetaLehtikuorenTila(peli, tila));
+  assert.equal(peli.player.money, 123);
+  assert.equal(peli.nostotehtavatRatkaistu, 2);
+
+  const viestit = [];
+  const ikkuna = { webkit: { messageHandlers: { matkakirja: { postMessage: (v) => viestit.push(v) } } } };
+  assert.deepEqual(kytkeTekoSilta(peli, ikkuna), [...LEHDEN_TEOT]);
+  assert.deepEqual(kytkeTekoSilta(peli, ikkuna), [], 'kerran per peli');
+
+  assert.equal(peli.actionKulttuuri('pariisi', true).ok, false, 'natiivissa jo vastattu');
+  assert.equal(viestit.length, 0, 'epäonnistunut teko ei lähde');
+  assert.equal(peli.actionKulttuuri('lontoo', true, 25).ok, true);
+  assert.equal(peli.player.money, 148);
+  assert.deepEqual(viestit.at(-1), { tapahtuma: 'teko', teko: 'actionKulttuuri', args: ['lontoo', true, 25] });
+  assert.equal(peli.myonnaJuliste('pariisi').uusi, false);
+  assert.equal(peli.myonnaJuliste('lontoo').uusi, true);
+  assert.equal(peli.merkitseAarrepisteOhje(), false, 'natiivissa jo nähty');
+  assert.equal(peli.kirjaaNostotehtava(), 3);
+  assert.deepEqual(viestit.map((v) => v.teko), ['actionKulttuuri', 'myonnaJuliste', 'kirjaaNostotehtava']);
+});

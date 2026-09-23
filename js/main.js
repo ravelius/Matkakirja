@@ -26,7 +26,9 @@ import { esilataaIlme } from './ilme.js';
 import { sfx } from './sound.js';
 import { packById } from './pack.js';
 import { avaaPikatie, pikatienKaupunki, rakennaPikatiePeli } from './kehittaja-pikatie.js';
-import { avaaLehtikuori, lehtikuorenKaupunki } from './lehtikuori.js';
+import {
+  asetaLehtikuorenTila, avaaLehtikuori, kytkeTekoSilta, lehtikuorenKaupunki, lehtikuorenTila,
+} from './lehtikuori.js';
 import { ohitaSaapumisluenta, suljeFokusvirta } from './fokusvirta.js';
 import {
   kaynnistaPohjaMusiikki, startQuizMusic, stopPlaceStream, stopPohjaMusiikki, stopQuizMusic,
@@ -1610,6 +1612,11 @@ function nollaaValitila(game) {
 const lehtiKaupunkiId = lehtikuorenKaupunki();
 const lehtiPeli = lehtiKaupunkiId
   ? rakennaPikatiePeli(Game, packById('maailmankartta'), lehtiKaupunkiId) : null;
+if (lehtiPeli) {
+  // Natiivin raha ja kirjanpito lehteen; lehden teot takaisin natiiville.
+  asetaLehtikuorenTila(lehtiPeli, lehtikuorenTila());
+  kytkeTekoSilta(lehtiPeli);
+}
 const pikatienKaupunkiId = lehtiPeli ? null : pikatienKaupunki();
 const pikatiePeli = pikatienKaupunkiId
   ? rakennaPikatiePeli(Game, packById('maailmankartta'), pikatienKaupunkiId) : null;

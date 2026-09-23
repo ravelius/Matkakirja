@@ -21,6 +21,16 @@
  * `matkakirja` (window.webkit.messageHandlers.matkakirja) ja samalla
  * sivutapahtuman `matkakirja-lehti-suljettu` (testit ja selain).
  *
+ * TEKO-SILTA (23.9.2026): lehden kauppa- ja palkkioteot (kulttuurivisa,
+ * minitehtävä, nostolaskuri, aarrepisteohje, pulla, eläintäky, juliste)
+ * kulkevat natiiville viestinä `{ tapahtuma: 'teko', teko, args }`;
+ * natiivi toistaa ne omalla pelilogiikallaan (C#-portti Kaupat.cs, samat
+ * avaimet), joten raha ja kirjanpito pysyvät natiivin tallennuksessa. Natiivi
+ * antaa lehdelle alkutilan osoitteen risuaidassa `#tila=<base64url JSON>`
+ * ({ raha, kaupat: { kulttuuri, minitehtavat, minitehtavatOikein,
+ * nostotehtavat, aarrepisteOhje, pullat, elaintayt, julisteet } } — sama muoto
+ * kuin natiivin tallennuksen `kaupat`), jotta jo ostettu ei näy uudelleen.
+ *
  * Sisältöpaketin juuri (Siirtoseppä, tools/vienti/web-riippuvuudet.mjs
  * WEB_NAKYMAT): index.html + js/main.js — kuori on sama sovellus eri
  * tilassa eikä oma kopio käyttöliittymästä.
@@ -59,5 +69,72 @@ export function avaaLehtikuori(ui, kaupunki) {
   }, { once: true });
   ui.openArrival(city, { ohitaLehtilukko: true });
   ilmoitaNatiiville('lehti-auki', { kaupunki });
+  return true;
+}
+
+/*
+ * Teot, jotka natiivi toistaa (Kaupat.cs). Palautusarvo kertoo, muuttiko
+ * teko tilaa: { ok } ja { ok, uusi: false } (eläintäky, juliste jo ennestään)
+ * erotetaan, jotta natiivi ei kirjaa samaa kahdesti; kirjaaNostotehtava
+ * palauttaa laskurin, merkitseAarrepisteOhje true vain ensimmäisellä kerralla.
+ */
+export const LEHDEN_TEOT = Object.freeze([
+  'actionKulttuuri', 'actionMinitehtava', 'kirjaaNostotehtava', 'merkitseAarrepisteOhje',
+  'actionPullaVinkki', 'actionPullaOstos', 'actionElaintaky', 'myonnaJuliste',
+]);
+
+function tekoMuuttiTilaa(tulos) {
+  if (tulos === true) return true;
+  if (typeof tulos === 'number') return true;
+  if (!tulos || typeof tulos !== 'object' || !tulos.ok) return false;
+  return tulos.uusi !== false;
+}
+
+/** Kytkee lehden teot natiiville (kerran per peli). Palauttaa kytkettyjen nimet. */
+export function kytkeTekoSilta(game, ikkuna = globalThis) {
+  if (!game || game.__tekoSilta) return [];
+  game.__tekoSilta = true;
+  const kytketyt = [];
+  for (const nimi of LEHDEN_TEOT) {
+    const alkuperainen = game[nimi];
+    if (typeof alkuperainen !== 'function') continue;
+    game[nimi] = function tekoSillanKautta(...args) {
+      const tulos = alkuperainen.apply(this, args);
+      if (tekoMuuttiTilaa(tulos)) ilmoitaNatiiville('teko', { teko: nimi, args }, ikkuna);
+      return tulos;
+    };
+    kytketyt.push(nimi);
+  }
+  return kytketyt;
+}
+
+/** Natiivin antama alkutila osoitteen risuaidasta `#tila=<base64url>` tai null. */
+export function lehtikuorenTila(hash = globalThis.location?.hash ?? '') {
+  try {
+    const arvo = new URLSearchParams(String(hash).replace(/^#/, '')).get('tila');
+    if (!arvo) return null;
+    const b64 = arvo.replace(/-/g, '+').replace(/_/g, '/');
+    const tavut = Uint8Array.from(atob(b64 + '='.repeat((4 - (b64.length % 4)) % 4)), (c) => c.charCodeAt(0));
+    const tila = JSON.parse(new TextDecoder().decode(tavut));
+    return tila && typeof tila === 'object' ? tila : null;
+  } catch {
+    return null;
+  }
+}
+
+/** Asettaa natiivin tilan lehden peliin (raha ja kauppojen kirjanpito). */
+export function asetaLehtikuorenTila(game, tila) {
+  if (!game || !tila) return false;
+  if (Number.isFinite(tila.raha) && game.player) game.player.money = tila.raha;
+  const k = tila.kaupat ?? {};
+  const joukko = (arvo) => new Set(Array.isArray(arvo) ? arvo.filter((x) => typeof x === 'string') : []);
+  game.kulttuuriVastatut = joukko(k.kulttuuri);
+  game.minitehtavatVastatut = joukko(k.minitehtavat);
+  game.minitehtavatOikein = joukko(k.minitehtavatOikein);
+  game.nostotehtavatRatkaistu = Number.isFinite(k.nostotehtavat) ? k.nostotehtavat : 0;
+  game.aarrepisteOhjeNahty = k.aarrepisteOhje === true;
+  game.pullaVinkit = joukko(k.pullat);
+  game.elaintakyLunastetut = joukko(k.elaintayt);
+  game.julisteet = joukko(k.julisteet);
   return true;
 }
