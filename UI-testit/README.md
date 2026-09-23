@@ -86,6 +86,8 @@ Aloitusnäkymä ja matkan huipennus (`Aloitusnakyma.cs`): peli jää tilaan Aloi
 (PeliOhjain.AloitusNakyma = true). Portti (Aloita seikkailu, tai Jatka matkaa / Uusi matka),
 julisteotsikko ja naputettava avausteksti (kertoja lukee intro-puhe.mp3:n; napautus
 kirjoittaa loppuun), VALITSE ALOITUSKAUPUNKI → lähtökaupungit → PeliOhjain.UusiMatka(id).
+Automaatio ohittaa aloituksen: `ui aloita pariisi` (Pariisi = oletuslähtö; lähtökaupunkilistan
+kaupunki kuten `ui aloita ateena` aloittaa siitä) tai `ui jatka` (tallennettu matka).
 `ui aloitus [portti|avaus|valinta|jatka]` ilman peliä, `ui huipennus` kaikkien aarteiden
 huipennus esimerkkiluvuin.
 
