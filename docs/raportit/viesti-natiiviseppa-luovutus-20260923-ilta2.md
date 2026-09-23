@@ -36,7 +36,7 @@ iPad-/simulaattorikäännösten ajaja.
 | Aihevalot + napautus | Kartta/AiheValot.cs, Shaders/Valopiste, KarttaValotSilta | 2672 valoa, valo → nostokortti |
 | Pelinappula B16 | Kartta/Nappula.cs, Shaders/Nappula, PalloKierto.Seuraa | Pelikoodari kytki Matkalla-tilaan |
 | Aarrepiste B3 | Kartta/Karttapisteet.cs | sykkivä, Pelikoodari kytki |
-| Radio-API, App Store -määrite | KaupunkiMerkit.NaytaVain/Korosta, IosTestFlight | soitto vain sallittu-luokalle (Linssiseppä) |
+| Radio-API, App Store -määrite | KaupunkiMerkit.NaytaVain/Korosta, IosTestFlight | soitto luokan mukaan (Linssiseppä, radioluokat 194fbee) |
 | Koekansio | Sisalto.HaePaketista: Documents/sisalto-koe/ | osoittimen vaihto ei riko kokeita |
 
 ## Kesken — tee nämä ensin
@@ -73,7 +73,8 @@ iPad-/simulaattorikäännösten ajaja.
   tulokset/testflight-N.log -batchmode -quit -projectPath . -buildTarget iOS -executeMethod
   Matkakirja.Editori.Rakennus.IosTestFlight`. Kansioon ei kosketa ennen Julkaisijan kuittausta.
 - Fablen linjaus: ei vanhan pelin kuoria (WKWebView-lehti pois natiivilehden myötä),
-  radio soittaa vain sallittu-luokan asemia myös kehittäjätilassa.
+  radio: omistajan luokkapäätös 23.9. klo 21.1x — sallittu ja epäselvä soivat, kielletty ja
+  v16:n "linkki" = aseman sivu, luokaton ei mitään (myös kehittäjätilassa; TF3 vielä tiukempi: vain sallittu).
 
 ## Velat ja opetukset
 
