@@ -43,7 +43,7 @@ import { laudaltaAsteiksi, projisoiLaudalle } from './fokusmitat.js';
 import { diagNyt, pallodiag } from './pallodiag.js';
 import {
   KOHDEMAAN_NIMIOT_ELAVINA, pyramidinMerinimet,
-  haePyramidinLuettelo, nostotasonPoltetut, pyramidinKerrostasot, pyramidinLaattaOlemassa,
+  haePyramidinLuettelo, nostotasonNimetElavina, nostotasonPoltetut, pyramidinKerrostasot, pyramidinLaattaOlemassa,
   pyramidinLaattaUrl,
 } from './laattapyramidi.js';
 import { JAAVARI, MERIVARI, kuunteleReliefiLinssi, reliefiKaytossa } from './reliefipyramidi.js';
@@ -536,6 +536,28 @@ export function pallonNostoOnPoltettu(tunnus, tiiviste = null) {
   if (KOHDEMAAN_NIMIOT_ELAVINA && !laattaluettelo?.nostotaso?.nostot) return false;
   if (!nostot || !tunnus) return false;
   const poltettu = nostot[tunnus];
+  if (!poltettu) return false;
+  return tiiviste ? poltettu === tiiviste : true;
+}
+
+/*
+ * PISTE LAATASSA, NIMI ELÄVÄNÄ (Fable 23.9.2026, koe `poltetutnostot`;
+ * js/piirtokoe-asetus.js POLTETUT NOSTOT). Kohdemaan nostotaso on
+ * poltettu ilman nimiä (js/laattapyramidi.js nostotasonNimetElavina),
+ * ja tämä nosto on siinä samalla tiivisteellä: laatta piirtää pisteen tai
+ * kuvamerkin, elävä kerros vain nimen (js/pallolauta/nostot.js
+ * `pisteLaatassa`). pallonNostoOnPoltettu pysyy false — nimi kulkee
+ * sovittelun läpi kuten muutkin elävät. Koe luetaan kerran: valinta
+ * lataa sivun (js/piirtokoe-asetus.js koetilanAvain).
+ */
+let poltetutNostotKoe = null;
+export function pallonNostonPisteLaatassa(tunnus, tiiviste = null) {
+  poltetutNostotKoe ??= laattakerroksenKokeet().has('poltetutnostot');
+  if (!poltetutNostotKoe || !tunnus) return false;
+  // Pallon sarjaan poltetut nostot (vanha malli): nimet ovat laatassa.
+  if (laattaluettelo?.nostotaso?.nostot) return false;
+  if (!nostotasonNimetElavina()) return false;
+  const poltettu = nostotasonPoltetut()?.[tunnus];
   if (!poltettu) return false;
   return tiiviste ? poltettu === tiiviste : true;
 }
