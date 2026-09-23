@@ -75,11 +75,11 @@ namespace Matkakirja.Natiivi
             kello = Rakenne.Teksti("", "mk-aikajana-kello", ylarivi);
             Kirjasimet.Aseta(kello, Kirjasin.Kone);
             var ohjaimet = Rakenne.El("mk-aikajana-ohjaimet", ylarivi, PickingMode.Ignore);
-            edellinen = Rakenne.Nappi("◀", "mk-aikajana-nappi", () => Selaa(-1), ohjaimet);
+            edellinen = Rakenne.Nappi(null, "mk-aikajana-nappi", () => Selaa(-1), ohjaimet, Ikonit.Edellinen);
             edellinen.tooltip = "Edellinen";
-            tauko = Rakenne.Nappi("⏸", "mk-aikajana-nappi", VaihdaTauko, ohjaimet);
+            tauko = Rakenne.Nappi(null, "mk-aikajana-nappi", VaihdaTauko, ohjaimet, Ikonit.Tauko);
             tauko.tooltip = "Tauko";
-            seuraava = Rakenne.Nappi("▶", "mk-aikajana-nappi", () => Selaa(1), ohjaimet);
+            seuraava = Rakenne.Nappi(null, "mk-aikajana-nappi", () => Selaa(1), ohjaimet, Ikonit.Toista);
             seuraava.tooltip = "Seuraava";
 
             // Paneeli oikealla (webin .aikajana-ilmio): keksinnön tai löytöpaikan kortti.
@@ -250,7 +250,7 @@ namespace Matkakirja.Natiivi
         public static string VuottaSitten(double v)
         {
             long n = Math.Max(0, (long)Math.Round(v));
-            string luku = n.ToString("#,0", CultureInfo.InvariantCulture).Replace(",", " ");
+            string luku = n.ToString("#,0", CultureInfo.InvariantCulture).Replace(",", " ");
             return luku + (n == 1 ? " vuosi sitten" : " vuotta sitten");
         }
 
@@ -262,7 +262,7 @@ namespace Matkakirja.Natiivi
 
         void PaivitaTauko()
         {
-            ((Label)tauko[0]).text = tauolla ? "▶︎" : "⏸";
+            tauko.Q<SvgIkoni>().Polku = tauolla ? Ikonit.Toista : Ikonit.Tauko;
             tauko.tooltip = tauolla ? "Jatka" : "Tauko";
             kello.EnableInClassList("mk-tauolla", tauolla);
         }
@@ -580,6 +580,11 @@ namespace Matkakirja.Natiivi
                 if (Ob(x) is Dictionary<string, object> l && MiniJson.Teksti(l, "teksti") is string lt)
                 { t.Otsikko = MiniJson.Teksti(l, "otsikko"); t.Teksti = lt; break; }
             }
+            // Paketin vientilistalla ei vielä ole ALOITUS/ESITTELY-vientejä (Siirtoseppä lisää):
+            // siihen asti webin IHMISEN_MATKA_ALOITUS sanasta sanaan (js/linssit/ihmisen-matka-data.js).
+            t.Teksti ??= "Yksi laji levisi yhdestä maanosasta kaikkiin. Kukaan ei suunnitellut matkaa: "
+                + "jokainen sukupolvi siirtyi vain vähän kauemmas kuin edellinen, ja tuhat sukupolvea "
+                + "myöhemmin oltiin toisella puolella maapalloa.";
             foreach (var tunnus in AloituksenTaustakuvat)
             {
                 var p = a.Paikat.FirstOrDefault(x => x.Tunnus == tunnus) ?? a.Lisanostot.FirstOrDefault(x => x.Tunnus == tunnus);

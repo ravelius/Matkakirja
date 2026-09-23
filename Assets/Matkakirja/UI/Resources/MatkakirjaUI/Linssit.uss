@@ -1211,3 +1211,37 @@
     font-size: 18px;
     -unity-text-align: middle-center;
 }
+
+/* Ikonit fonteista puuttuvien merkkien (◀ ⏸ ▶ ⌄) tilalla. */
+.mk-aikajana-nappi > .mk-ikoni {
+    width: 15px;
+    height: 15px;
+    margin-right: 0;
+    color: #f1e6d0;
+    --mk-ikoni-viiva: 2.2;
+}
+
+.mk-astrokuva__vakanen > .mk-ikoni {
+    width: 16px;
+    height: 16px;
+    margin-right: 0;
+    color: rgb(234, 255, 243);
+    --mk-ikoni-viiva: 2;
+}
+
+.mk-minipuluKortti__laheta {
+    justify-content: center;
+}
+
+.mk-minipuluKortti__laheta > .mk-ikoni {
+    width: 17px;
+    height: 17px;
+    margin-right: 0;
+    color: #5dffa8;
+    --mk-ikoni-viiva: 2.1;
+}
+
+.mk-aikajana-nappi,
+.mk-astrokuva__vakanen {
+    justify-content: center;
+}

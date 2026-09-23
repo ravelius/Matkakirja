@@ -83,14 +83,14 @@ namespace Matkakirja.Natiivi
             runko = Rakenne.El("mk-astrokuva__runko", selite, PickingMode.Ignore);
             teksti = Rakenne.Teksti("", "mk-astrokuva__teksti", runko);
             var vakasenRivi = Rakenne.El("mk-astrokuva__vakasenRivi", runko, PickingMode.Ignore);
-            vakanen = Rakenne.Nappi("⌄", "mk-astrokuva__vakanen", null, vakasenRivi);
+            vakanen = Rakenne.Nappi(null, "mk-astrokuva__vakanen", null, vakasenRivi, Ikonit.NuoliAlas);
             vakanen.tooltip = "Näytä lisätiedot";
             // Väkänen ei kelaa selitettä (web: stopPropagation).
             vakanen.RegisterCallback<ClickEvent>(e => { e.StopPropagation(); Lisatiedot(!lisatiedotAuki); });
             lisatiedot = Rakenne.El("mk-astrokuva__lisatiedot", runko, PickingMode.Ignore);
             lisatiedot.style.display = DisplayStyle.None;
 
-            var sulku = Rakenne.Nappi("✕", "mk-astrokuva__sulku", SuljeKuva, turva);
+            var sulku = Rakenne.Nappi("×", "mk-astrokuva__sulku", SuljeKuva, turva);
             sulku.tooltip = "Sulje kuva";
 
             nauha = Rakenne.El("mk-astrokuva__nauha", turva);

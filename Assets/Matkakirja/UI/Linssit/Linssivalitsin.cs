@@ -53,7 +53,7 @@ namespace Matkakirja.Natiivi
 
             var ylarivi = Rakenne.El("mk-selite__ylarivi", paneeli, PickingMode.Ignore);
             Rakenne.Teksti("LINSSIT", "mk-selite__otsikko", ylarivi);
-            var sulje = Rakenne.Nappi("✕", "mk-selite__sulje", Sulje, ylarivi);
+            var sulje = Rakenne.Nappi("×", "mk-selite__sulje", Sulje, ylarivi);
             sulje.tooltip = "Sulje linssivalikko";
 
             var vieritys = new ScrollView(ScrollViewMode.Vertical);

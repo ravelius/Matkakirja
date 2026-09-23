@@ -232,7 +232,7 @@ namespace Matkakirja.Natiivi
                     return null;
                 }
                 case "kysymys": return ui.Esimerkkikysymys(loput);
-                case "heitto": ui.Matkavalinta.NaytaHeitto(loput.Length > 0 ? loput : "Heitä noppaa → Lontoo", () => ui.Tilarivi.Viesti("Noppa: 4")); return null;
+                case "heitto": ui.Matkavalinta.NaytaHeitto(loput.Length > 0 ? loput : "Heitä noppaa · Lontoo", () => ui.Tilarivi.Viesti("Noppa: 4")); return null;
                 case "viesti": ui.Tilarivi.Viesti(loput, 4f); return null;
                 case "tila": ui.Tilarivi.Aseta(loput); return null;
                 case "pois": UiKerros.Hae().Nayta(false); return null;

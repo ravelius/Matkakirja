@@ -382,7 +382,9 @@ namespace Matkakirja.Natiivi
         void Lappu(VisualElement s, string teksti)
         {
             var lappu = Rakenne.El("mk-kysymys__vihje", s, PickingMode.Ignore);
-            Rakenne.Teksti("✎", "mk-kysymys__vihjemerkki", lappu);
+            var kyna = new SvgIkoni(Ikonit.Kyna);
+            kyna.AddToClassList("mk-kysymys__vihjemerkki");
+            lappu.Add(kyna);
             var l = Rakenne.Teksti(teksti, "mk-kysymys__vihjeteksti", lappu);
             l.enableRichText = false;
             Kirjasimet.Aseta(l, Kirjasin.LukuKursiivi);

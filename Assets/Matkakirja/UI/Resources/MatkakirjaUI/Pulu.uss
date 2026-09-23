@@ -614,3 +614,14 @@
 .mk-traileri__iskulause.mk-auki {
     opacity: 1;
 }
+
+.mk-chat__laheta {
+    justify-content: center;
+}
+
+.mk-chat__laheta > .mk-ikoni {
+    width: 18px;
+    height: 18px;
+    margin-right: 0;
+    --mk-ikoni-viiva: 2;
+}

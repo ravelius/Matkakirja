@@ -737,3 +737,10 @@
     border-radius: 1px;
     background-color: var(--accent);
 }
+
+.mk-maakunnat__nuoli.mk-ikoni {
+    width: 13px;
+    height: 13px;
+    margin-right: 6px;
+    --mk-ikoni-viiva: 2.2;
+}
