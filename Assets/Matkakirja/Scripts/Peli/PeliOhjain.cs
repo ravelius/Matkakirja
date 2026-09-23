@@ -622,13 +622,7 @@ namespace Matkakirja.Natiivi
                 if (kaari != null) kohtaamiset.LueTarinakaari(kaari);
                 if (kohtaamisTeksti != null) kohtaamiset.LueKohtaamiset(kohtaamisTeksti);
                 if (kuvaKohtaamiset != null) kohtaamiset.LueKohtaamiskuvat(kuvaKohtaamiset);
-                if (saannotTeksti != null)
-                    foreach (var a in MiniJson.Taulukko(MiniJson.Kentta(MiniJson.Objekti(MiniJson.Jasenna(saannotTeksti)), "alkiot")))
-                    {
-                        var o = MiniJson.Objekti(a);
-                        if (MiniJson.Teksti(o, "id") == "KATKOKUVA" && MiniJson.Kentta(o, "arvo") is Dictionary<string, object> k
-                            && MiniJson.Teksti(k, "url") is string url) kohtaamiset.KatkoKuvaUrl = url;
-                    }
+                if (saannotTeksti != null) kohtaamiset.LueSaannot(saannotTeksti);
                 if (paikat != null) d.LuePaikkatiedot(paikat);
                 Kysymykset = d;
                 KytkeKysely();
