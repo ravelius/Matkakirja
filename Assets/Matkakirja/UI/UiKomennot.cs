@@ -13,12 +13,16 @@
 //   ui tila teksti                            tilarivin teksti
 //   ui pois | ui paalle                       koko UI piiloon / näkyviin
 //   ui osuma x y                              osuuko piste (pikseleinä, origo vasen ala) UI:hin
+//   ui livia [ele] [p] [astro|leiju|puhe|mini] Livia (152 × 304) keskellä kerrosta 40 (oletus blink 0.5)
+//   ui livia kierros [astro|leiju|puhe]       kaikki eleet peräkkäin oikeassa ajassa (videotarkistus)
+//   ui livia pois                             Livia pois
 //   kuva nimi                                 Documents/ui-nimi.png (koko ruutu)
 //   odota s                                   seuraava rivi s sekunnin päästä
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace Matkakirja.Natiivi
 {
@@ -27,6 +31,16 @@ namespace Matkakirja.Natiivi
         readonly Queue<string> jono = new Queue<string>();
         string polku, loki;
         float tarkistus, odotus;
+
+        // ui livia: testikuva ilman peliä.
+        VisualElement liviaKehys;
+        LiviaKuva livia;
+        Label liviaNimi;
+        readonly LiviaTila liviaTila = new LiviaTila();
+        bool liviaElaa, liviaPuhe;
+        int kierros = -1;
+        float kierrosAlku;
+        const float KierrosTauko = 0.4f;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         static void Kaynnista() => UiKerros.Hae().gameObject.AddComponent<UiKomennot>();
@@ -61,6 +75,7 @@ namespace Matkakirja.Natiivi
                 catch (System.Exception e) { tulos = "VIRHE " + e.Message; }
                 Kirjaa(rivi + " → " + (tulos ?? "ok"));
             }
+            PaivitaLivia();
         }
 
         void Kirjaa(string teksti)
@@ -116,6 +131,7 @@ namespace Matkakirja.Natiivi
                 case "tila": ui.Tilarivi.Aseta(loput); return null;
                 case "pois": UiKerros.Hae().Nayta(false); return null;
                 case "paalle": UiKerros.Hae().Nayta(true); return null;
+                case "livia": return Livia(loput);
                 case "osuma":
                 {
                     var xy = loput.Split(' ');
@@ -124,6 +140,96 @@ namespace Matkakirja.Natiivi
                 }
                 default: return "tuntematon ui-komento";
             }
+        }
+
+        // --- ui livia ------------------------------------------------------------------
+
+        string Livia(string loput)
+        {
+            var osat = new List<string>(loput.Split(new[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries));
+            if (osat.Count > 0 && osat[0] == "pois")
+            {
+                liviaKehys?.RemoveFromHierarchy();
+                liviaKehys = null; livia = null; kierros = -1;
+                return null;
+            }
+            bool mini = osat.Remove("mini");
+            liviaTila.Astronautti = osat.Remove("astro");
+            liviaTila.Leiju = osat.Remove("leiju") ? 1 : 0;
+            liviaPuhe = osat.Remove("puhe");
+            liviaTila.Puhe = -1;
+            NaytaLivia(mini);
+            if (osat.Count > 0 && osat[0] == "kierros")
+            {
+                kierros = 0;
+                kierrosAlku = Time.unscaledTime;
+                liviaElaa = true;
+                float yhteensa = 0;
+                foreach (var e in LiviaEleet.Kaikki) yhteensa += LiviaEleet.KestoMs(e) / 1000f + KierrosTauko;
+                return LiviaEleet.Kaikki.Count + " elettä, " + yhteensa.ToString("0", CultureInfo.InvariantCulture) + " s";
+            }
+            kierros = -1;
+            string ele = osat.Count > 0 ? osat[0] : "blink";
+            float p = 0.5f;
+            if (osat.Count > 1 && !float.TryParse(osat[1], NumberStyles.Float, CultureInfo.InvariantCulture, out p)) return "p ei ole luku: " + osat[1];
+            if (!LiviaEleet.Olemassa(ele)) return "tuntematon ele " + ele;
+            liviaTila.Ele = ele;
+            liviaTila.P = Mathf.Clamp01(p);
+            // Puhe ja leijunta liikkuvat kellon mukaan, muuten kuva on paikallaan.
+            liviaElaa = liviaPuhe || liviaTila.Leiju > 0;
+            AsetaLivia();
+            return null;
+        }
+
+        void NaytaLivia(bool mini)
+        {
+            if (liviaKehys != null) liviaKehys.RemoveFromHierarchy();
+            liviaKehys = new VisualElement { name = "ui-livia", pickingMode = PickingMode.Ignore };
+            var s = liviaKehys.style;
+            s.position = Position.Absolute;
+            s.left = 0; s.top = 0; s.right = 0; s.bottom = 0;
+            s.alignItems = Align.Center;
+            s.justifyContent = Justify.Center;
+            livia = new LiviaKuva(mini);
+            if (mini) { livia.style.width = 58 * 2; livia.style.height = 70 * 2; }
+            liviaKehys.Add(livia);
+            liviaNimi = new Label { pickingMode = PickingMode.Ignore };
+            liviaNimi.style.marginTop = 8;
+            liviaNimi.style.fontSize = 13;
+            liviaNimi.style.color = new Color(0.27f, 0.2f, 0.12f);
+            liviaNimi.style.backgroundColor = new Color(0.95f, 0.91f, 0.8f, 0.85f);
+            liviaNimi.style.paddingLeft = 6; liviaNimi.style.paddingRight = 6;
+            liviaKehys.Add(liviaNimi);
+            UiKerros.Hae().Turva(UiKerros.Valikot).Add(liviaKehys);
+        }
+
+        void AsetaLivia()
+        {
+            if (livia == null) return;
+            if (liviaPuhe) liviaTila.Puhe = Time.unscaledTime * 1000f % 1500f / 1500f;
+            livia.Aseta(liviaTila);
+            liviaNimi.text = liviaTila.Ele + " " + liviaTila.P.ToString("0.00", CultureInfo.InvariantCulture) + " — " + LiviaEleet.Nimi(liviaTila.Ele);
+        }
+
+        void PaivitaLivia()
+        {
+            if (livia == null || !liviaElaa) return;
+            if (kierros >= 0)
+            {
+                var kaikki = LiviaEleet.Kaikki;
+                float kesto = LiviaEleet.KestoMs(kaikki[kierros]) / 1000f;
+                float t = Time.unscaledTime - kierrosAlku;
+                if (t > kesto + KierrosTauko)
+                {
+                    kierros = (kierros + 1) % kaikki.Count;
+                    kierrosAlku = Time.unscaledTime;
+                    t = 0;
+                    kesto = LiviaEleet.KestoMs(kaikki[kierros]) / 1000f;
+                }
+                liviaTila.Ele = kaikki[kierros];
+                liviaTila.P = kesto > 0 ? Mathf.Clamp01(t / kesto) : 1;
+            }
+            AsetaLivia();
         }
     }
 }
