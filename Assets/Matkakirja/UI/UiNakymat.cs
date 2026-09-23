@@ -117,6 +117,7 @@ namespace Matkakirja.Natiivi
             // Livia lennähtää paikalle, kun käyttöliittymä on valmis (webin ensisaapuminen: handoff).
             kerros.Juuri(UiKerros.Tilarivi).schedule.Execute(() => Pulu.Tilanne("arrival")).StartingIn(1500);
             Tietoja = new Tietoja(kerros);
+            Valikko.MitaUutta.TarkistaPaivitys(); // web: "Peli päivittyi", kun laitteella oli aiempi versio
             Aloitus = new Aloitusnakyma(kerros);
             Huipennus = new Huipennus(kerros);
             Nostokortti = new Nostokortti(kerros);

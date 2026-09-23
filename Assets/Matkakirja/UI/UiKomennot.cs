@@ -33,6 +33,7 @@
 //   ui nahtavyydet [kaupunki] [kohde n]      nähtävyysnäkymä (oletus firenze); kohde n avaa n:nnen kohteen jutun
 //   ui opas [kaupunki] [vieritä px]           turistiopas (oletus lontoo), valinnainen vieritys
 //   ui ylapalkki [vaaka|pysty|auto|auki]    vaaka-asennon piilotettu yläpalkki ja väkäsnappi (auki = avaa väkäsistä)
+//   ui mitauutta [paivittyi]                  "Mitä uutta" (versiorivi) tai "Peli päivittyi" -ilmoitus
 //   ui liike                                  pieni liike: pulu lentää kerran heti (ohittaa levon)
 //   ui leima [muutos] [syy]                   tapahtumakupla: rahan muutos (oletus +10 Lehden minitehtävä ratkesi)
 //   ui noppa [1–6 | pois]                     näkyvä noppa: heitto Pariisista lepopaikkaan / häivytys
@@ -284,6 +285,9 @@ namespace Matkakirja.Natiivi
                     if (loput == "auki") { ui.Tilarivi.Avaa(); return Ylapalkki.Piilossa ? null : "palkki ei ole piilossa (ui ylapalkki vaaka)"; }
                     Ylapalkki.Pakota = loput == "vaaka" ? true : loput == "pysty" ? false : (bool?)null;
                     ui.Tilarivi.Paivita();
+                    return null;
+                case "mitauutta":
+                    if (loput == "paivittyi") ui.Valikko.MitaUutta.TarkistaPaivitys(true); else ui.Valikko.MitaUutta.Avaa();
                     return null;
                 case "liike":
                     return ui.Liike.Lenna(true) ? null : "pieni liike on pois päältä tai lento jo käynnissä";
