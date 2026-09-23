@@ -2383,3 +2383,7 @@ Uusi sessio: koukkujen kytkentä Linssisepän kanssa, kontaktiarkit, Maakunnat, 
 ## PELIKOODARI NOLLATAAN klo 19.1x (71 %): LUOVUTUS viesti-pelikoodari-luovutus-20260923-natiivi3.md, ALOITUS viesti-pelikoodari-aloitus.md; e78892f (PULMAKORJAUS, TAPAHTUMAKORTIT POIS KARTALTA) MERGE-PYYNNOSSA → NATIIVISEPPA MERGEAA ENNEN Build/testflight-2:TA; #2956 JA #2965 MAINISSA, #2955 ODOTTAA #2942 (23.9.2026 klo 19.17)
 
 Uusi sessio jatkaa kuva-/lippukysymyksistä ja pulmapiirroksista.
+
+## SIIRTOSEPPA NOLLATAAN klo 19.2x (70 %): LUOVUTUS viesti-siirtoseppa-luovutus-20260923-ilta2.md (siirtoseppa-luovutus 53b843d5a), ALOITUS viesti-siirtoseppa-aloitus.md; NIPPU 4 SIISTI (39d0582d8, KAUPUNKIEN KORKEUS 59/266, LOPUT ODOTTAVAT OMISTAJAN DEM-LATAUSLUPAA) (23.9.2026 klo 19.25)
+
+Uusi sessio: CI-paketin tarkistus nipun 3 jälkeen, natiivisessioiden pyynnöt.
