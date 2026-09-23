@@ -40,6 +40,7 @@ namespace Matkakirja.Editori
 
         public static void LuoPallo()
         {
+            UiPaneeliPohja();
             var kohtaus = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
 
             var georefGo = new GameObject("CesiumGeoreference");
@@ -137,6 +138,28 @@ namespace Matkakirja.Editori
             EditorBuildSettings.scenes = new[] { new EditorBuildSettingsScene(PalloKohtaus, true) };
             AssetDatabase.SaveAssets();
             Debug.Log("MATKAKIRJA: kohtaus luotu " + PalloKohtaus);
+        }
+
+        public const string UiPaneeli = "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Paneeli.asset";
+
+        /// <summary>
+        /// Natiivi-UI:n PanelSettings-pohja (UiKerros lataa Resources/MatkakirjaUI/Paneeli ja
+        /// instansioi sen kerroksittain). Koodissa luodulla PanelSettingsillä ei ole
+        /// shaderiviitteitä, joten iOS-käännöksestä puuttuisivat UI:n shaderit: editorissa
+        /// ne asettaa PanelSettingsin oma InitializeShaders (Reset kutsuu sitä vain valikosta).
+        /// </summary>
+        static void UiPaneeliPohja()
+        {
+            if (AssetDatabase.LoadAssetAtPath<UnityEngine.UIElements.PanelSettings>(UiPaneeli) != null) return;
+            if (!AssetDatabase.IsValidFolder(Path.GetDirectoryName(UiPaneeli))) return; // UI ei vielä mukana
+            var ps = ScriptableObject.CreateInstance<UnityEngine.UIElements.PanelSettings>();
+            var init = typeof(UnityEngine.UIElements.PanelSettings).GetMethod("InitializeShaders",
+                System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Public);
+            if (init == null) throw new Exception("PanelSettings.InitializeShaders puuttuu (Unityn versio?)");
+            init.Invoke(ps, null);
+            AssetDatabase.CreateAsset(ps, UiPaneeli);
+            AssetDatabase.SaveAssets();
+            Debug.Log("MATKAKIRJA: UI-paneelipohja luotu " + UiPaneeli);
         }
 
         public const string TmpFontti = "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset";

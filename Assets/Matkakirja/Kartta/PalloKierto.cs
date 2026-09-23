@@ -99,6 +99,25 @@ namespace Matkakirja
         public Func<Vector2, bool> UiPeittaa;
         bool eleUilla;
 
+        /// <summary>
+        /// Koko näytön peittokysely (Pelikoodari: WKWebView-lehti auki). Kun tosi, pallo
+        /// piirretään harvemmin (<see cref="PeitettyVali"/>) eikä kehysmittari laske kehyksiä
+        /// lepoon: lehden sivulataus ja asettelu ajavat samassa pääsäikeessä kuin Unity.
+        /// </summary>
+        public Func<bool> NakymaPeitetty;
+        public static int PeitettyVali = 4;
+        public bool Peitetty { get; private set; }
+
+        void PaivitaPeitto()
+        {
+            bool p = false;
+            try { p = NakymaPeitetty != null && NakymaPeitetty(); }
+            catch (Exception e) { Debug.LogWarning("MATKAKIRJA pallo: peittokysely kaatui: " + e.Message); }
+            if (p == Peitetty) return;
+            Peitetty = p;
+            UnityEngine.Rendering.OnDemandRendering.renderFrameInterval = p ? PeitettyVali : 1;
+        }
+
         /// <summary>Kameratila muuttui tässä kehyksessä (pituus, leveys, korkeus tai kallistus).</summary>
         public event Action NakymaMuuttui;
         double4 edellinenNakyma;
@@ -134,6 +153,7 @@ namespace Matkakirja
 
         void Update()
         {
+            PaivitaPeitto();
             if (georeferenssi == null) return;
             if (korkeus <= 0.0) korkeus = MaxKorkeus();
             if (Application.isPlaying)
