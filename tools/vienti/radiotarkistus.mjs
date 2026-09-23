@@ -48,7 +48,16 @@ async function paivita() {
   const korvaavat = JSON.parse(readFileSync(join(TAMA, 'radiokorvaavat.json'), 'utf8')).asemat;
   const osoitteet = [...new Set([...Object.values(RADIOT).map((r) => r.url), ...Object.values(korvaavat).map((k) => k.url)])].sort();
   const tulokset = {};
-  for (const url of osoitteet) tulokset[url] = await kattele(url);
+  // Verkkovirhe (DNS, aikakatkaisu) uusitaan kahdesti: 23.9.2026 NGA:n
+  // ENOTFOUND oli tilapäinen, ja asema hylättiin turhaan.
+  for (const url of osoitteet) {
+    let t = await kattele(url);
+    for (let i = 0; i < 2 && !t.toimii && /ENOTFOUND|EAI_AGAIN|ECONNRESET|aikakatkaisu/.test(t.virhe ?? ''); i++) {
+      await new Promise((ok) => setTimeout(ok, 2000));
+      t = await kattele(url);
+    }
+    tulokset[url] = t;
+  }
   writeFileSync(TARKISTUSTIEDOSTO, `${JSON.stringify({ tarkistettu: new Date().toISOString().slice(0, 10), vaatimus: 'TLS 1.3 tai TLS 1.2 + ECDHE (iOS ATS)', tulokset }, null, 1)}\n`);
   return Object.entries(tulokset).filter(([, t]) => !t.toimii).map(([u, t]) => `${u} ${t.virhe}`);
 }

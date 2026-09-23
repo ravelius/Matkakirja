@@ -563,6 +563,7 @@ test('skeema 1.16: radiot luokittain ja viritysäänet', async () => {
   // iOS ATS: korvaavat ja sallitut toimivat; RaBe vaihdettu 23.9. (ei ECDHE:tä).
   assert.ok(radiot.filter((r) => r.lahde === 'korvaava').every((r) => r.toimii === true));
   assert.ok(radiot.every((r) => r.toimii !== undefined));
+  assert.equal(radiot.find((r) => r.id === 'CHE').nimi, 'Radio Vostok');
   assert.ok(radiot.every((r) => r.sivu === null || /^https?:\/\//.test(r.sivu)));
   assert.notEqual(radiot.find((r) => r.id === 'FIN').url, RADIOT.FIN.url, 'Yle korvattu');
   assert.equal(radiot.find((r) => r.id === 'ITA').url, RADIOT.ITA.url);

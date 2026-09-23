@@ -135,10 +135,10 @@
    "salaus": "ECDHE-RSA-AES128-GCM-SHA256"
   },
   "https://go.webgateready.com/metrofm/radio.mp3": {
-   "toimii": false,
-   "virhe": "ENOTFOUND",
-   "versio": null,
-   "salaus": null
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
   },
   "https://guri.tepuyserver.net/8048/stream": {
    "toimii": true,
