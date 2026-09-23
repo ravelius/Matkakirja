@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using CesiumForUnity;
 using TMPro;
@@ -20,6 +21,17 @@ namespace Matkakirja
     {
         public CesiumGeoreference georeferenssi;
         public Camera kamera;
+        public PalloKierto kierto;
+        public NimiKortti kortti;
+        [Tooltip("Kaupunkiin saapumisen näkymä: kapeamman suunnan kaari asteina " +
+                 "(verkkopelin PALLO_SUKELLUSLEVEYS 620 laudan yksikköä = 18,6°).")]
+        public double saapumisKaari = 18.6;
+        [Tooltip("Verkkopelin PALLOKAMERAN_AJO_MS.")]
+        public float saapumisKesto = 1.4f;
+        [Tooltip("Napautuksen osuma-alue pisteen ympärillä, näytön pisteinä.")]
+        public float osumaSade = 22f;
+        [Tooltip("Montako merkkiä rakennetaan kehystä kohden (käynnistysnykäyksen välttämiseksi).")]
+        public int rakennusKehys = 24;
         public Material pisteMateriaali;
         public TMP_FontAsset fontti;
         public Color musteenVari = new Color(0.20f, 0.15f, 0.10f);
@@ -57,18 +69,32 @@ namespace Matkakirja
         {
             if (kamera == null) kamera = Camera.main;
             nelio = Nelio();
-            StartCoroutine(Sisalto.Hae<Sisalto.Kaupunki>("kaupungit", Rakenna));
+            if (kierto != null) kierto.Napautettu += Napautus;
+            StartCoroutine(Sisalto.Hae<Sisalto.Kaupunki>("kaupungit", k => StartCoroutine(Rakenna(k))));
         }
 
-        void Rakenna(Sisalto.Kaupunki[] kaupungit)
+        /// <summary>Tärkeys 0–2 merkin tyyliä varten: paketin 1.2-kenttä tai vanha päättely.</summary>
+        static int Tarkeys(Sisalto.Kaupunki k, bool paketinTarkeys) =>
+            paketinTarkeys ? (k.tarkeys >= 3 ? 2 : k.tarkeys == 2 ? 1 : 0)
+                           : (k.aloitus ? 2 : k.lentokentta ? 1 : 0);
+
+        /// <summary>Tarkempi järjestysluku harvennukseen (paketin 0–3 tai vanha 0–2).</summary>
+        static int Jarjestys(Sisalto.Kaupunki k, bool paketinTarkeys) =>
+            paketinTarkeys ? k.tarkeys : (k.aloitus ? 2 : k.lentokentta ? 1 : 0);
+
+        IEnumerator Rakenna(Sisalto.Kaupunki[] kaupungit)
         {
-            if (kaupungit == null) return;
+            if (kaupungit == null) yield break;
+            bool paketinTarkeys = System.Array.Exists(kaupungit, k => k.tarkeys > 0);
+            var valmiit = new List<Merkki>();
+            int kehyksessa = 0;
             double3 keskus = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);
             // Nimiöt piirretään pisteiden (Transparent+1) jälkeen, jotta piste ei peitä tekstiä.
             var nimioMateriaali = new Material(fontti.material) { renderQueue = 3005 };
             foreach (var k in kaupungit)
             {
-                int tarkeys = k.aloitus ? 2 : k.lentokentta ? 1 : 0;
+                if (++kehyksessa > rakennusKehys) { kehyksessa = 0; yield return null; }
+                int tarkeys = Tarkeys(k, paketinTarkeys);
                 var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(
                     new double3(k.lon, k.lat, 3000.0));
                 double3 u = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef);
@@ -105,9 +131,10 @@ namespace Matkakirja
                 n.ForceMeshUpdate();
                 var koko = n.GetRenderedValues(false) * 10f;
 
-                merkit.Add(new Merkki
+                juuri.gameObject.SetActive(false);
+                valmiit.Add(new Merkki
                 {
-                    kaupunki = k, juuri = juuri, pisteT = p, nimio = n, tarkeys = tarkeys,
+                    kaupunki = k, juuri = juuri, pisteT = p, nimio = n, tarkeys = Jarjestys(k, paketinTarkeys),
                     normaali = (float3)math.normalize(u - keskus),
                     pinta = (float3)u,
                     pisteKoko = pk,
@@ -115,8 +142,49 @@ namespace Matkakirja
                 });
             }
             // Tärkeimmät ensin; saman tärkeyden sisällä pidempi nimi ei saa etuoikeutta.
-            merkit.Sort((a, b) => b.tarkeys != a.tarkeys ? b.tarkeys - a.tarkeys : a.nimio.text.Length - b.nimio.text.Length);
-            Debug.Log($"MATKAKIRJA kaupungit: {merkit.Count} merkkiä");
+            valmiit.Sort((a, b) => b.tarkeys != a.tarkeys ? b.tarkeys - a.tarkeys : a.nimio.text.Length - b.nimio.text.Length);
+            merkit.AddRange(valmiit);
+            Debug.Log($"MATKAKIRJA kaupungit: {merkit.Count} merkkiä, tärkeys {(paketinTarkeys ? "paketista" : "päätelty")}");
+        }
+
+        /// <summary>Napautus: lähin näkyvä merkki osuma-alueen sisällä (tai nimiö), muuten kortti piiloon.</summary>
+        void Napautus(Vector2 ruutu)
+        {
+            float kerroin = Screen.dpi > 0 ? Mathf.Max(1f, Screen.dpi / 163f) : 1f;
+            Merkki paras = null;
+            float parasEtaisyys = osumaSade * kerroin;
+            foreach (var m in merkit)
+            {
+                if (!m.juuri.gameObject.activeSelf) continue;
+                Vector3 p = kamera.WorldToScreenPoint(m.juuri.position);
+                float d = Vector2.Distance(ruutu, p);
+                // Näkyvän nimiön päällä napautus osuu myös.
+                if (m.nimio.enabled)
+                {
+                    var koko = m.koko * kerroin;
+                    if (ruutu.x >= p.x && ruutu.x <= p.x + koko.x && Mathf.Abs(ruutu.y - p.y) <= koko.y * 0.5f)
+                        d = Mathf.Min(d, 1f);
+                }
+                if (d < parasEtaisyys) { parasEtaisyys = d; paras = m; }
+            }
+            if (paras == null) { kortti?.Piilota(); return; }
+            ValitseKaupunki(paras.kaupunki);
+        }
+
+        /// <summary>Lento kaupunkiin ja nimikortti saapuessa (myös ohjelmallisesti).</summary>
+        public void ValitseKaupunki(Sisalto.Kaupunki k)
+        {
+            kortti?.Piilota();
+            kierto.IlmoitaKaupunki(k.id);
+            kierto.Aja(k.lat, k.lon, kierto.KorkeusKaarelle(saapumisKaari), saapumisKesto, () => kortti?.Nayta(k));
+        }
+
+        public bool ValitseKaupunki(string id)
+        {
+            var m = merkit.Find(x => x.kaupunki.id == id);
+            if (m == null) return false;
+            ValitseKaupunki(m.kaupunki);
+            return true;
         }
 
         void LateUpdate()

@@ -119,7 +119,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &706119499
+--- !u!1 &80180541
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,109 +127,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 706119503}
-  - component: {fileID: 706119500}
-  - component: {fileID: 706119502}
-  - component: {fileID: 706119501}
-  m_Layer: 0
-  m_Name: CesiumGeoreference
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &706119500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 706119499}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1305e05d46db92498ce698a4c366a5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: CesiumForUnity::CesiumForUnity.CesiumGeoreference
-  _ellipsoidOverride: {fileID: 0}
-  _originPlacement: 0
-  _originAuthority: 0
-  _latitude: 39.736401
-  _longitude: -105.25737
-  _height: 2250
-  _ecefX: -1292934.4950404565
-  _ecefY: -4740026.104285267
-  _ecefZ: 4056960.1513377777
-  _scale: 1
---- !u!114 &706119501
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 706119499}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a7ecae08cac94735b451bfb89713e1a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Matkakirja.KaupunkiMerkit
-  georeferenssi: {fileID: 706119500}
-  kamera: {fileID: 1012253650}
-  pisteMateriaali: {fileID: 2100000, guid: 4353d89444b4e402fbea0f34520d7387, type: 2}
-  fontti: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  musteenVari: {r: 0.2, g: 0.15, b: 0.1, a: 1}
-  piste: 9
-  tarkeaPiste: 13
-  kirjain: 13
-  tarkeaKirjain: 15
-  valistys: 3
---- !u!114 &706119502
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 706119499}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4586f549f226f42acbed6ebd7e9c1834, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Matkakirja.NapaKannet
-  georeferenssi: {fileID: 706119500}
-  pohjoinen: {fileID: 2100000, guid: 31340ecd3ed5642ceb46c82452d8daca, type: 2}
-  etela: {fileID: 2100000, guid: 7668f294da8ea421e8f6906dbfe95ec7, type: 2}
-  taysi: 84
-  reuna: 82.5
-  korkeus: 1500
-  sektoreita: 96
-  kehia: 16
---- !u!4 &706119503
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 706119499}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1523546655}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1012253647
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1012253651}
-  - component: {fileID: 1012253650}
-  - component: {fileID: 1012253649}
-  - component: {fileID: 1012253648}
+  - component: {fileID: 80180546}
+  - component: {fileID: 80180545}
+  - component: {fileID: 80180544}
+  - component: {fileID: 80180543}
+  - component: {fileID: 80180542}
   m_Layer: 0
   m_Name: Kamera
   m_TagString: MainCamera
@@ -237,48 +139,65 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1012253648
+--- !u!114 &80180542
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1012253647}
+  m_GameObject: {fileID: 80180541}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3efb14ef7fe0d49ec8f0d47a158b54ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Matkakirja.KehysMittari
-  pallo: {fileID: 1012253649}
+  pallo: {fileID: 80180544}
   jakso: 5
---- !u!114 &1012253649
+--- !u!114 &80180543
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1012253647}
+  m_GameObject: {fileID: 80180541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4cfb3c41238e4e1ca710f83a7c4ab72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Matkakirja.Komennot
+  kierto: {fileID: 80180544}
+  merkit: {fileID: 1423442457}
+--- !u!114 &80180544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80180541}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 29a932395275041a298894fc205565e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Matkakirja.PalloKierto
-  georeferenssi: {fileID: 706119500}
+  georeferenssi: {fileID: 1423442458}
   pituus: 10
   leveys: 25
   korkeus: 0
   nopeus: 6
   liukuAika: 0.35
-  minKorkeus: 250000
+  minKaari: 3.6
   taytto: 0.92
   maxLeveys: 80
---- !u!20 &1012253650
+  napautusLiike: 10
+  napautusAika: 0.35
+  ajonRamppi: 0.3
+--- !u!20 &80180545
 Camera:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1012253647}
+  m_GameObject: {fileID: 80180541}
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
@@ -323,23 +242,23 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!4 &1012253651
+--- !u!4 &80180546
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1012253647}
+  m_GameObject: {fileID: 80180541}
   serializedVersion: 2
   m_LocalRotation: {x: 0.13887054, y: -0.74795324, z: 0.16549946, w: 0.62760735}
   m_LocalPosition: {x: 18038422, y: 8523159, z: 3180660.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1714066497}
+  - {fileID: 1885413222}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1523546654
+--- !u!1 &742045137
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -347,9 +266,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1523546655}
-  - component: {fileID: 1523546657}
-  - component: {fileID: 1523546656}
+  - component: {fileID: 742045138}
+  - component: {fileID: 742045140}
+  - component: {fileID: 742045139}
   m_Layer: 0
   m_Name: Pallo
   m_TagString: Untagged
@@ -357,28 +276,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1523546655
+--- !u!4 &742045138
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1523546654}
+  m_GameObject: {fileID: 742045137}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 706119503}
+  m_Father: {fileID: 1423442460}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1523546656
+--- !u!114 &742045139
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1523546654}
+  m_GameObject: {fileID: 742045137}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 19f3030f151b6184fb5d0e96c8c582dc, type: 3}
@@ -390,7 +309,7 @@ MonoBehaviour:
   _maximumTextureSize: 2048
   _maximumSimultaneousTileLoads: 20
   _subTileCacheBytes: 16777216
-  _templateUrl: https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-21-pohja-20260921a/{z}/{x}/{reverseY}.jpg
+  _templateUrl: https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-22c-pohja-20260922c/{z}/{x}/{reverseY}.jpg
   _projection: 0
   _specifyTilingScheme: 0
   _rootTilesX: 1
@@ -404,13 +323,13 @@ MonoBehaviour:
   _tileWidth: 256
   _tileHeight: 256
   _requestHeaders: []
---- !u!114 &1523546657
+--- !u!114 &742045140
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1523546654}
+  m_GameObject: {fileID: 742045137}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 844ac86b07dcfa3468f56da55d787510, type: 3}
@@ -446,7 +365,7 @@ MonoBehaviour:
   _updateInEditor: 1
   _logSelectionStats: 0
   _createPhysicsMeshes: 1
---- !u!1 &1714066496
+--- !u!1 &872167495
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -454,8 +373,207 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1714066497}
-  - component: {fileID: 1714066498}
+  - component: {fileID: 872167497}
+  - component: {fileID: 872167496}
+  m_Layer: 0
+  m_Name: MatkakirjaLehti
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &872167496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872167495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c7f3ed11edd7402c9cecfd81f591feb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Matkakirja.Natiivi.LehtiKuori
+  osoitePohja: https://matkakirja.app/index.html?lehti=
+  avaaSelaimessaEditorissa: 0
+--- !u!4 &872167497
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872167495}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1423442456
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1423442460}
+  - component: {fileID: 1423442458}
+  - component: {fileID: 1423442459}
+  - component: {fileID: 1423442457}
+  m_Layer: 0
+  m_Name: CesiumGeoreference
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1423442457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423442456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a7ecae08cac94735b451bfb89713e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Matkakirja.KaupunkiMerkit
+  georeferenssi: {fileID: 1423442458}
+  kamera: {fileID: 80180545}
+  kierto: {fileID: 80180544}
+  kortti: {fileID: 1804201162}
+  saapumisKaari: 18.6
+  saapumisKesto: 1.4
+  osumaSade: 22
+  rakennusKehys: 24
+  pisteMateriaali: {fileID: 2100000, guid: 4353d89444b4e402fbea0f34520d7387, type: 2}
+  fontti: {fileID: 11400000, guid: fc4382f2b8d284fd592e90260c58b4ee, type: 2}
+  musteenVari: {r: 0.2, g: 0.15, b: 0.1, a: 1}
+  piste: 9
+  tarkeaPiste: 13
+  kirjain: 13
+  tarkeaKirjain: 15
+  valistys: 3
+--- !u!114 &1423442458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423442456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1305e05d46db92498ce698a4c366a5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: CesiumForUnity::CesiumForUnity.CesiumGeoreference
+  _ellipsoidOverride: {fileID: 0}
+  _originPlacement: 0
+  _originAuthority: 0
+  _latitude: 39.736401
+  _longitude: -105.25737
+  _height: 2250
+  _ecefX: -1292934.4950404565
+  _ecefY: -4740026.104285267
+  _ecefZ: 4056960.1513377777
+  _scale: 1
+--- !u!114 &1423442459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423442456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4586f549f226f42acbed6ebd7e9c1834, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Matkakirja.NapaKannet
+  georeferenssi: {fileID: 1423442458}
+  pohjoinen: {fileID: 2100000, guid: 31340ecd3ed5642ceb46c82452d8daca, type: 2}
+  etela: {fileID: 2100000, guid: 7668f294da8ea421e8f6906dbfe95ec7, type: 2}
+  taysi: 84
+  reuna: 82.5
+  korkeus: 1500
+  sektoreita: 96
+  kehia: 16
+--- !u!4 &1423442460
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423442456}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 742045138}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1804201161
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1804201163}
+  - component: {fileID: 1804201162}
+  m_Layer: 0
+  m_Name: "K\xE4ytt\xF6liittym\xE4"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1804201162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804201161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0bfbd0a510e9416b9a614e4f40aeca9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Matkakirja.NimiKortti
+  fontti: {fileID: 11400000, guid: fc4382f2b8d284fd592e90260c58b4ee, type: 2}
+  pohja: {r: 0.9529412, g: 0.91764706, b: 0.827451, a: 0.9490196}
+  muste: {r: 0.2, g: 0.15294118, b: 0.105882354, a: 1}
+  haive: 0.25
+--- !u!4 &1804201163
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804201161}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1885413221
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1885413222}
+  - component: {fileID: 1885413223}
   m_Layer: 0
   m_Name: Valo
   m_TagString: Untagged
@@ -463,28 +581,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1714066497
+--- !u!4 &1885413222
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1714066496}
+  m_GameObject: {fileID: 1885413221}
   serializedVersion: 2
   m_LocalRotation: {x: 0.08641011, y: -0.13002951, z: 0.011376107, w: 0.98767215}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1012253651}
+  m_Father: {fileID: 80180546}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!108 &1714066498
+--- !u!108 &1885413223
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1714066496}
+  m_GameObject: {fileID: 1885413221}
   m_Enabled: 1
   serializedVersion: 12
   m_Type: 1
@@ -547,5 +665,7 @@ Light:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 706119503}
-  - {fileID: 1012253651}
+  - {fileID: 1423442460}
+  - {fileID: 1804201163}
+  - {fileID: 872167497}
+  - {fileID: 80180546}

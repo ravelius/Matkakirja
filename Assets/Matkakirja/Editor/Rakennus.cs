@@ -23,11 +23,12 @@ namespace Matkakirja.Editori
 
         /// <summary>
         /// Pelin oma pallolaatasto (Web Mercator, z0–8, 256 px, jpg) ämpärissä.
-        /// Sama kansio kuin js/pallo.js:n PALLO_LAATAT. Slippy-rivi 0 on pohjoisin,
+        /// Sama kansio kuin js/pallo.js:n PALLO_LAATTAKANSIO (Karttasepän poltto 22c,
+        /// docs/raportit/natiivi-laattaosoitteet-20260923.md). Slippy-rivi 0 on pohjoisin,
         /// Cesiumin {y} eteläisin, joten osoitteessa on {reverseY}.
         /// </summary>
         public const string LaattaUrl =
-            "https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-21-pohja-20260921a/{z}/{x}/{reverseY}.jpg";
+            "https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-22c-pohja-20260922c/{z}/{x}/{reverseY}.jpg";
         public const int LaattaMaxTaso = 8;
 
         public static void LuoPallo()
@@ -61,8 +62,16 @@ namespace Matkakirja.Editori
             var merkit = georefGo.AddComponent<KaupunkiMerkit>();
             merkit.georeferenssi = georef;
             merkit.pisteMateriaali = Materiaali("Kaupunkipiste", "Matkakirja/Piste", new Color32(0x3b, 0x2f, 0x22, 0xff));
-            merkit.fontti = AssetDatabase.LoadAssetAtPath<TMPro.TMP_FontAsset>(TmpFontti)
-                ?? throw new Exception("TMP-fonttia ei löydy (aja.sh luo tuo sen): (" + TmpFontti + ")");
+            merkit.fontti = Fontti();
+
+            var korttiGo = new GameObject("Käyttöliittymä");
+            var kortti = korttiGo.AddComponent<NimiKortti>();
+            kortti.fontti = merkit.fontti;
+            merkit.kortti = kortti;
+
+            // Pelikoodarin lehtikuori (Scripts/Peli/LehtiKuori.cs): nimen on oltava
+            // MatkakirjaLehti, koska iOS-liitännäinen etsii olion nimellä.
+            new GameObject(Matkakirja.Natiivi.LehtiKuori.PeliolionNimi).AddComponent<Matkakirja.Natiivi.LehtiKuori>();
 
             var kameraGo = new GameObject("Kamera") { tag = "MainCamera" };
             var kamera = kameraGo.AddComponent<Camera>();
@@ -74,6 +83,10 @@ namespace Matkakirja.Editori
             var kierto = kameraGo.AddComponent<PalloKierto>();
             kierto.georeferenssi = georef;
             merkit.kamera = kamera;
+            merkit.kierto = kierto;
+            var komennot = kameraGo.AddComponent<Komennot>();
+            komennot.kierto = kierto;
+            komennot.merkit = merkit;
             var mittari = kameraGo.AddComponent<KehysMittari>();
             mittari.pallo = kierto;
 
@@ -101,6 +114,31 @@ namespace Matkakirja.Editori
         }
 
         public const string TmpFontti = "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset";
+
+        public const string FonttiTiedosto = "Assets/Matkakirja/Fontit/EBGaramond.ttf";
+        public const string FonttiAsset = "Assets/Matkakirja/Fontit/EBGaramond SDF.asset";
+
+        /// <summary>
+        /// EB Garamond (OFL, Fontit/OFL.txt) TextMeshPro-fonttina. Atlas täyttyy
+        /// dynaamisesti ajossa, joten kaikki nimien merkit (á ä é ö š ž ’) toimivat.
+        /// </summary>
+        static TMPro.TMP_FontAsset Fontti()
+        {
+            var olemassa = AssetDatabase.LoadAssetAtPath<TMPro.TMP_FontAsset>(FonttiAsset);
+            if (olemassa != null) return olemassa;
+            var ttf = AssetDatabase.LoadAssetAtPath<Font>(FonttiTiedosto)
+                ?? throw new Exception("Fonttia ei löydy: " + FonttiTiedosto);
+            var fa = TMPro.TMP_FontAsset.CreateFontAsset(ttf, 90, 9,
+                UnityEngine.TextCore.LowLevel.GlyphRenderMode.SDFAA, 1024, 1024,
+                TMPro.AtlasPopulationMode.Dynamic, true);
+            fa.name = "EBGaramond SDF";
+            AssetDatabase.CreateAsset(fa, FonttiAsset);
+            fa.material.name = "EBGaramond SDF Material";
+            AssetDatabase.AddObjectToAsset(fa.material, fa);
+            foreach (var t in fa.atlasTextures) { t.name = "EBGaramond SDF Atlas"; AssetDatabase.AddObjectToAsset(t, fa); }
+            AssetDatabase.SaveAssets();
+            return AssetDatabase.LoadAssetAtPath<TMPro.TMP_FontAsset>(FonttiAsset);
+        }
 
         static Material KansiMateriaali(string nimi, Color vari) => Materiaali(nimi, "Matkakirja/Napakansi", vari);
 

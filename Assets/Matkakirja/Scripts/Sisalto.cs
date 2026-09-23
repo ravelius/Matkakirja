@@ -38,6 +38,8 @@ namespace Matkakirja
             public bool aloitus;
             public bool saari;
             public string sijaintiLahde;
+            /// <summary>Skeema 1.2: 0–3 (3 = pääkaupunki tai aloitus). -1 = ei paketissa.</summary>
+            public int tarkeys = -1;
         }
 
         [Serializable]
