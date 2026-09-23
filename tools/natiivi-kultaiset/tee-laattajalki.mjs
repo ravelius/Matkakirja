@@ -15,7 +15,6 @@
 // - Linssi aarteen kylkiäisenä (linssiAarteenKylkiaisena) kytketään pois
 //   (g.linssiAarteet = {}): se lukee laitteen passia (localStorage) ja voi
 //   maksaa optikon hyvityksen. C#:ssa se on Matkan koukku löydön jälkeen.
-// - Kaksintaistelu jää koukuksi: jäljessä näkyy vain duelArmed-lippu.
 // - checkWin ajetaan webissä, mutta se ei kuluta satunnaisuutta eikä
 //   muuta laattoja (C#: Matkan vastuulla).
 import { writeFileSync, mkdirSync } from 'node:fs';
@@ -30,10 +29,9 @@ const { packById } = await import(pathToFileURL(join(JS, 'pack.js')).href);
 const pack = packById('maailmankartta');
 if (pack.id !== 'maailmankartta') throw new Error('maailmankartta puuttuu');
 
-// Koelauta: sama kartta, mutta mukana ryöstäjiä (kaksintaistelun lippu) ja
-// ylimääräisiä pääaarteita (jaaLaatat-funktion aloituskaupunkivaihto).
+// Koelauta: sama kartta, mutta ylimääräisiä pääaarteita (rosvolaatat on poistettu pelistä) (jaaLaatat-funktion aloituskaupunkivaihto).
 // Pinon koko pysyy kaupunkien määrässä (266).
-const KOE_MAARAT = { star: 20, mannerAarre: 7, robber: 12, isoAarre: 82, pieniAarre: 145 };
+const KOE_MAARAT = { star: 20, mannerAarre: 7, isoAarre: 82, pieniAarre: 157 };
 const koepaketti = { ...pack, tokens: { ...pack.tokens, counts: KOE_MAARAT } };
 
 // Enter­Worldin jälkeinen kutsumäärä talteen (jako erikseen konstruktorista).
@@ -80,17 +78,15 @@ for (const ajo of AJOT) {
   const mannerAarteet = laatat.filter(([, t]) => t === 'mannerAarre').map(([c]) => c);
 
   // Käännettävät kaupungit deterministisesti: kaksi pääaarretta, kaksi
-  // mantereen aarretta, ryöstäjät (koelauta) ja askelin 37 kaupunkilistasta.
+  // mantereen aarretta ja askelin 37 kaupunkilistasta.
   // Pöllöajossa ensimmäinen on valitun lajin laatta.
   const valinta = [];
   const lisaa = (c) => { if (c && !valinta.includes(c)) valinta.push(c); };
   if (pollo === 'star') lisaa(tahdet[0]);
   if (pollo === 'muu') lisaa(laatat.find(([, t]) => t === 'pieniAarre')[0]);
-  const ryostajat = laatat.filter(([, t]) => t === 'robber').map(([c]) => c);
   for (let i = 0; valinta.length < 20; i++) {
     if (i === 1) { lisaa(tahdet[1]); lisaa(mannerAarteet[0]); }
-    if (i === 3) { lisaa(tahdet[2]); lisaa(ryostajat[0]); lisaa(mannerAarteet[3]); }
-    if (i === 5) lisaa(ryostajat[1]);
+    if (i === 3) { lisaa(tahdet[2]); lisaa(mannerAarteet[3]); }
     lisaa(kaupungit[(seed + i * 37) % kaupungit.length]);
   }
   // Toisen kerran käännetty kaupunki: tyhjä tulos, ei arvontaa.
@@ -111,13 +107,11 @@ for (const ajo of AJOT) {
       tahdet: p.stars,
       xp: p.xp,
       starsFound: jarj(g.world.starsFound),
-      duelArmed: g.duelArmed,
       polloLoydetty: g.polloLoydetty,
       rngKaanto: g.rngCalls - ennen,
       rngCalls: g.rngCalls,
       laattoja: g.world.tokens.size,
     });
-    g.duelArmed = false; // kaksintaistelu on koukku: lippu nollataan kuten beginDuel tekisi
   }
 
   // Lukitus (lukitseAarre): mantereen aarre ja pääaarre siirtyvät.
