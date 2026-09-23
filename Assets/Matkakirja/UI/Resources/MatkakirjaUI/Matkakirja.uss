@@ -1214,11 +1214,50 @@
     justify-content: center;
 }
 
+/* Portin yläosa: sama juliste kuin avauksessa ja pelin kuvauslause (ensikokemus 23.9.). */
+.mk-aloitus__porttiyla {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.mk-aloitus__porttilause {
+    width: 86%;
+    max-width: 480px;
+    margin-top: 4px;
+    font-size: 17px;
+    white-space: normal;
+    -unity-text-align: middle-center;
+    color: var(--map-ink);
+}
+
+/* Keskus portin alaosaan (juliste vie ylimmät 44 %). */
+.mk-aloitus__portti > .mk-aloitus__keskus {
+    top: 44%;
+}
+
+/* Kehystetty äänet-nappi (ennen pelkkä teksti, joka ei erottunut kosketettavaksi). */
 .mk-aloitus__aanet {
     flex-direction: row;
     align-items: center;
+    min-height: 40px;
     margin-bottom: 14px;
+    padding: 7px 16px;
+    border-width: 1px;
+    border-color: rgba(232, 214, 172, 0.75);
+    border-radius: 20px;
+    background-color: rgba(36, 26, 18, 0.55);
     color: #e8d6ac;
+}
+
+.mk-aloitus__aanet.mk-valittu {
+    border-color: var(--accent);
+    color: var(--kulta);
+}
+
+.mk-aloitus__aanet.mk-valittu .mk-aloitus__aaniteksti {
+    color: var(--kulta);
 }
 
 .mk-aloitus__aaniteksti {
