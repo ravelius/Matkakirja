@@ -45,23 +45,15 @@ erikoissallinta voidaan poistaa kokonaan** — ei enää tarvita.
 
 - **Ei web-puolella yhtään** — kaikki 4 PR:ni mergetty.
 - **`laitetestaaja-kontakti-web`** (proto-3d-repo,
-  `/Users/Shared/Claude/wt/laitetestaaja-kontakti-web`): KESKEN, tausta-
-  agentti (Sonnet) rakensi ja ajaa `tools/mittaus/kontakti-linssit-web.mjs`
-  -skriptiä Linssisepän pyytämälle 9 kuvan web-kontaktiarkille (topografia,
-  vesistöt, satelliitti, keksinnöt×2, ihmisen-matka, vertailu×2,
-  maatiedot). **Ei committoitu** ohjeen mukaan (kertaluonteinen kaappausajo)
-  — itse skripti jäi worktreehen talteen, tulokset
-  `/Users/Shared/Claude/proto-3d/lokit/kontakti-web/kontakti-*.png` +
-  `POIKKEAMAT.md`. **Tarkista onko agentti valmistunut** (ei tietoa tässä
-  raportissa, koska sessio nollattiin ennen ilmoitusta) — jos ei, käynnistä
-  uudelleen tai jatka Agent-työkalulla, ja ilmoita Linssisepälle kun 9/9
-  kuvaa on kansiossa.
+  `/Users/Shared/Claude/wt/laitetestaaja-kontakti-web`): VALMIS ennen
+  nollausta — kaikki 9/9 kuvaa onnistuivat, ei poikkeamia, Linssisepälle
+  ilmoitettu. Skripti `tools/mittaus/kontakti-linssit-web.mjs` jäi
+  worktreehen talteen (ei committoitu, kertaluonteinen ajo). Ei
+  jatkotoimia tarvita tälle kohdalle.
 
 ## Kesken — tee nämä ensin
 
-1. **Kontakti-web-agentin tulos Linssisepälle** (ks. yllä) — kiireisin,
-   Linssiseppä odottaa.
-2. **Pelisilmukan lopullinen 6/6-ajo.** `pelikoodari/kysymys-ui`
+1. **Pelisilmukan lopullinen 6/6-ajo.** `pelikoodari/kysymys-ui`
    (`liiku`-komento) ON NYT MERGETTY proto-masteriin (todennettu
    `Peli-testit/silmukka-30s.txt`:ssä on `liiku lontoo` / `liiku pariisi`
    -rivit). Väliajo (ohituksella, PR #2946) oli 5/5 OK ennen mergeä —
@@ -75,12 +67,12 @@ erikoissallinta voidaan poistaa kokonaan** — ei enää tarvita.
    23.9.): `1-alku` on vaiheessa **Toiminta** ei Heitto (erä 4 purkaa
    liftauksen esivalinnan) — jos oma tarkistuslistasi vielä odottaa
    Heitto-vaihetta, päivitä se.
-3. **Sulavuusportin toistoajo seuraavan VP:n jälkeen.**
+2. **Sulavuusportin toistoajo seuraavan VP:n jälkeen.**
    `tools/mittaus/aja-natiivi-sulavuus.mjs` (PR #2946, jo mainissa).
    Yksi rivi kirjattu `docs/raportit/sulavuus-natiivi-loki.md`:hen
    (commit c7b2f60, 0 % tökkäystä). Ajetaan aina uuden VP:n asennuksen
    jälkeen — kysy Natiiviseppältä milloin seuraava VP tulee.
-4. **Kontaktiarkit iPadilta jokaisesta VP:stä** (Fablen pyyntö): kuvat +
+3. **Kontaktiarkit iPadilta jokaisesta VP:stä** (Fablen pyyntö): kuvat +
    kehysajat omistajalle, kun linssit/UI etenevät. Ei vielä tehty erikseen
    iPadilla (tänään tehtiin simulaattorin puolella Natiivi-UI:lle).
 
@@ -148,30 +140,28 @@ käännökset ja asennukset (`./aja.sh`).
 
 ## Avoimet velat ja opetukset
 
-1. **Velka:** kontakti-web-agentin tulos (ks. Kesken-kohta 1) —
-   tarkista ensimmäisenä.
-2. **Velka:** pelisilmukan lopullinen 6/6-ajo virallisella
-   käsikirjoituksella (ks. Kesken-kohta 2) — liiku-komento on jo
+1. **Velka:** pelisilmukan lopullinen 6/6-ajo virallisella
+   käsikirjoituksella (ks. Kesken-kohta 1) — liiku-komento on jo
    mergetty, vain ajo puuttuu.
-3. **Opetus:** `xcrun simctl launch --console` + taustaprosessin `kill`
+2. **Opetus:** `xcrun simctl launch --console` + taustaprosessin `kill`
    TERMINOI myös itse sovelluksen, ei vain konsolikaappausta — käytä
    tavallista `simctl launch` (ilman `--console`) jos sovelluksen pitää
    jäädä käyntiin, ja `--console`-muunnosta vain kertaluonteiseen
    lokintarkistukseen jonka jälkeen sovellus käynnistetään uudelleen.
-4. **Opetus:** Unityn `Debug.Log`-rivit EIVÄT näy `xcrun simctl spawn
+3. **Opetus:** Unityn `Debug.Log`-rivit EIVÄT näy `xcrun simctl spawn
    booted log show --predicate 'process == "..."'`-haulla tällä
    simulaattorilla, syytä ei selvitetty. Käytä `simctl launch --console`
    (tai `--console-pty`) suoraan konsolin kaappaamiseen.
-5. **Opetus:** paljas `npx playwright install` ilman `node_modules`ia
+4. **Opetus:** paljas `npx playwright install` ilman `node_modules`ia
    hakee UUSIMMAN playwright-paketin eikä lockfilen pinnattua versiota —
    tarkista aina pinnattu versio (`playwright@X.Y.Z` package.jsonista)
    ja asenna se erikseen scratch-hakemistoon, älä koskaan paljaana
    silloin kun tarkka selainversio on tärkeä (kuten CI-diagnoosissa).
-6. **Opetus:** reboot jättää GitHubille "kadonneen" jobin, jos ajuri
+5. **Opetus:** reboot jättää GitHubille "kadonneen" jobin, jos ajuri
    kuolee kesken ajon — `gh run cancel` ei riitä (jää `in_progress`-
    tilaan loputtomiin), tarvitaan `gh api -X POST .../force-cancel`.
    Ks. `docs/raportit/ci-webkit-launch-20260923.md`.
-7. **Opetus:** `git worktree remove --force` ja `git rm -r` isoille/
+6. **Opetus:** `git worktree remove --force` ja `git rm -r` isoille/
    peruutetuille hakemistoille osuvat auto mode -classifierin
    "Irreversible Local Destruction" -estoon — pyydä omistajalta suora
    AskUserQuestion-lupa, älä yritä kiertää.
@@ -188,16 +178,11 @@ Lue: CLAUDE.md, docs/roolitus.md, Raamatun Ydinajatus kohta 2,
 (docs/raportit/viesti-laitetestaaja-luovutus-20260923-ilta.md)
 kokonaan.
 
-Ensimmäinen tehtävä: tarkista onko tausta-agentti a06ac441bdde203b7
-(kontakti-web-kuvasarja Linssisepälle) valmistunut — worktree
-/Users/Shared/Claude/wt/laitetestaaja-kontakti-web,
-tulokset /Users/Shared/Claude/proto-3d/lokit/kontakti-web/. Jos
-valmis, ilmoita Linssisepälle. Jos ei, jatka/käynnistä uudelleen.
-
-Toinen tehtävä: pelikoodari/kysymys-ui (liiku-komento) on mergetty
+Ensimmäinen tehtävä: pelikoodari/kysymys-ui (liiku-komento) on mergetty
 proto-masteriin — aja pelisilmukan LOPULLINEN 6/6-testi
 (node tools/mittaus/aja-pelisilmukka-savuke.mjs, virallinen
 Peli-testit/silmukka-30s.txt) ja ilmoita Fablelle/Pelikoodarille.
+(Kontakti-web-kuvasarja Linssisepälle on jo valmis ja toimitettu.)
 
 Sitovat säännöt: agentit vain Opus/Sonnet (ei koskaan Fable-mallia),
 uudet erät omiin /Users/Shared/Claude/wt/laitetestaaja-<aihe>-
