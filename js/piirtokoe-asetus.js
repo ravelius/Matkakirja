@@ -30,48 +30,48 @@ export const PIIRTOKOE_TAPAHTUMA = 'matkakirja-piirtokoe';
  * itse (luoKoevaihdonLataaja alla).
  */
 /*
- * VALIKOSSA NELJÄ TILAA (omistajan kortti 22.9.2026 klo 23.08): Normaali,
- * Ei puskurikirjoituksia, Ei tekstuurivientejä, Ei häivytystä vedossa.
- * Pois valikosta: dpr15 (mitattu v2133: ei poista pitkiä kehyksiä),
- * alpha0 ja vahemmandc — liput toimivat yhä osoitteessa (`?koe=`), ja
- * overlay näyttää ne raakana ("koe: dpr15"). Tallennettu poistettu
- * valinta palautuu Normaaliin (piirtokoeValinta: tuntematon = oletus;
- * unohdaPoistetutValinnat kirjoittaa sen muistiin).
+ * SYÖTEKOE VALIKOSSA (omistaja 23.9.2026 klo 08.34 Fablen kautta).
+ * Piirtokokeet (eipuskuri, eivienti, eihaivevedossa, vientibudjetti) on
+ * mitattu eivätkä ne poistaneet nähtyä nykimistä; ne toimivat yhä
+ * osoitteessa (`?koe=`). Valikossa ovat nyt syöteputken kokeet, koska
+ * `?koe=syotetouch` oli ainoa myönteinen signaali:
+ *   1 Oletus            aikaleimainterpolointi pointermovesta (interp)
+ *   2 Kosketus suoraan  näytteet touchmovesta (iOS tahdistaa sen rAF:iin)
+ *   3 Yhteinen kello    kohta-aika kehyksen yhteisestä kellosta
+ *   4 Molemmat          2 + 3
+ * `lippu` voi olla useampi lippu pilkulla eroteltuna. Tallennettu entinen
+ * piirtokoe palautuu Oletukseen (unohdaPoistetutValinnat). Avain ja
+ * tallennuspaikka ovat entiset (`matkakirja-piirtokoe`), jottei
+ * automaattilataus ja kehysprofiilin tilarivi muutu.
  */
 export const PIIRTOKOKEIDEN_VAIHTOEHDOT = [
   {
     avain: 'normaali',
-    nimi: 'Normaali',
-    seloste: 'Ei koetta — peli piirtää kuten tavallisesti',
+    nimi: 'Oletus',
+    seloste: 'Sormen paikka osoitintapahtumista kehyksen hetkelle (interp)',
     lippu: null,
     ikoni: '<circle cx="12" cy="12" r="7"/>',
   },
   {
-    avain: 'eipuskuri',
-    nimi: 'Ei puskurikirjoituksia',
-    seloste: 'Vedon aikana ei kirjoiteta GPU-puskureita (häivytykset odottavat lepoa)',
-    lippu: 'eipuskuri',
-    ikoni: '<path d="M5 7h14M5 12h14M5 17h9"/><path d="M15.5 15.5 20 20"/>',
+    avain: 'syotetouch',
+    nimi: 'Kosketus suoraan',
+    seloste: 'Sormen paikka kosketustapahtumista, jotka iOS tahdistaa ruudun päivitykseen',
+    lippu: 'syotetouch',
+    ikoni: '<path d="M9 11V5.5a1.5 1.5 0 0 1 3 0V10"/><path d="M12 10V8.5a1.5 1.5 0 0 1 3 0V11"/><path d="M15 11v-1a1.5 1.5 0 0 1 3 0v4a6 6 0 0 1-6 6h-1a6 6 0 0 1-5-2.7L4 14.5a1.5 1.5 0 0 1 2.5-1.6L9 15V11"/>',
   },
   {
-    avain: 'eivienti',
-    nimi: 'Ei tekstuurivientejä',
-    seloste: 'Vedon aikana ei viedä laattoja eikä nimiöatlasta näytönohjaimelle — jono odottaa lepoa',
-    lippu: 'eivienti',
-    ikoni: '<path d="M12 16V5"/><path d="m8 9 4-4 4 4"/><path d="M5 19h14"/>',
+    avain: 'syotekello',
+    nimi: 'Yhteinen kello',
+    seloste: 'Kohta-aika koko kehykselle yhteisestä kellosta, ei päivityksen hetkestä',
+    lippu: 'syotekello',
+    ikoni: '<circle cx="12" cy="12" r="8"/><path d="M12 7.5V12l3 2"/>',
   },
   {
-    /*
-     * Fable 22.9.2026 (omistajan v2126-kaappaukset: häipyviä 10–22 laattaa
-     * vedon aikana). Häivyttäessä uusi ja vanha laatta piirretään
-     * päällekkäin läpinäkyvinä; koe rajaa, onko tämä päällekkäinen piirto
-     * GPU-prosessin kuorma.
-     */
-    avain: 'eihaivevedossa',
-    nimi: 'Ei häivytystä vedossa',
-    seloste: 'Vedon aikana laatat vaihtuvat suoraan ilman häivytystä — ei päällekkäistä piirtoa',
-    lippu: 'eihaivevedossa',
-    ikoni: '<path d="M4.5 5.5h15v13h-15z"/><path d="M9 9.5h6v5H9z"/>',
+    avain: 'molemmat',
+    nimi: 'Molemmat',
+    seloste: 'Kosketus suoraan ja yhteinen kello yhdessä',
+    lippu: 'syotetouch,syotekello',
+    ikoni: '<circle cx="8.5" cy="12" r="4.5"/><circle cx="15.5" cy="12" r="4.5"/>',
   },
 ];
 
@@ -117,7 +117,8 @@ export function asetaKehysprofiili(paalla) {
 export function tallennetutKokeet() {
   const joukko = new Set();
   const koe = PIIRTOKOKEIDEN_VAIHTOEHDOT.find((k) => k.avain === piirtokoeValinta());
-  if (koe?.lippu) joukko.add(koe.lippu);
+  // "Molemmat": useampi lippu pilkulla eroteltuna.
+  for (const lippu of String(koe?.lippu ?? '').split(',').map((l) => l.trim()).filter(Boolean)) joukko.add(lippu);
   if (kehysprofiiliPaalla()) joukko.add('profiili');
   return joukko;
 }
@@ -146,7 +147,7 @@ export function unohdaPoistetutValinnat(varasto = (() => { try { return globalTh
       if (varasto?.getItem(avain) != null) { varasto.removeItem(avain); n += 1; }
     } catch { /* ei muistia */ }
   }
-  // Valikosta poistettu Piirtokoe (dpr15, alpha0, vahemmandc; 22.9.2026 klo 23.08) → Normaali.
+  // Valikosta poistettu koe (22.9.2026 klo 23.08 ja 23.9.2026 klo 08.34) → Oletus.
   try {
     const koe = varasto?.getItem(PIIRTOKOE_AVAIN);
     if (koe != null && !PIIRTOKOKEIDEN_VAIHTOEHDOT.some((k) => k.avain === koe)) {

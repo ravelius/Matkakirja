@@ -696,7 +696,7 @@
       "env": {
         "SAVUKE_MOOTTORI": "chromium"
       },
-      "huomautus": "Kehysprofiilin ylin rivi kertoo koetilan (omistajan iPhone-kaappaukset 22.9.2026 eivat kertoneet Piirtokoe-valintaa). T1 ?koe=profiili,eivienti -> 'koe 3/4 Ei tekstuurivientejä · profiili pN · vNNNN' (numero ja nimi valikon jarjestyksessa); T2 valikon tallennus eipuskuri + kytkin ilman lippua; T3 valinta vaihdetaan kesken istunnon -> '(seuraavassa latauksessa: koe 1/4 Normaali)', koska kokeet luetaan kerrosten luonnissa; T4 ei sivuvirheita. Chromium ja WebKit 5/5."
+      "huomautus": "Kehysprofiilin ylin rivi kertoo koetilan (omistajan iPhone-kaappaukset 22.9.2026 eivat kertoneet Piirtokoe-valintaa). T1 ?koe=profiili,syotekello -> 'koe 3/4 Yhteinen kello · profiili pN · vNNNN' (valikossa Syötekoe 23.9.2026) (numero ja nimi valikon jarjestyksessa); T2 valikon tallennus syotetouch + kytkin ilman lippua; T3 valinta vaihdetaan kesken istunnon -> '(seuraavassa latauksessa: koe 1/4 Oletus)', koska kokeet luetaan kerrosten luonnissa; T4 ei sivuvirheita. Chromium ja WebKit 5/5."
     },
     "savuke-eihaive-veto.mjs": {
       "env": {
@@ -708,7 +708,7 @@
       "env": {
         "SAVUKE_MOOTTORI": "chromium"
       },
-      "huomautus": "Piirtokokeen valinta lataa sivun (omistaja 22.9.2026 klo 23.05: v2133-kierroksen 3/5 kaappausta mittasi vanhaa koetta, koska sivua ei ladattu). L1 valikosta eivienti -> vihje 'Ladataan…', L2 sivu latautuu itse 600 ms:n jalkeen, L3 latauksen jalkeen overlay 'koe 3/4 Ei tekstuurivientejä' (valikossa 4 tilaa, omistaja 23.08) ilman 'seuraavassa latauksessa', L4 valinta ja paluu viiveen aikana ei lataa, L5 ei sivuvirheita. Chromium ja WebKit 5/5; vanhalla main.js:lla L1-L3 kaatuvat."
+      "huomautus": "Piirtokokeen valinta lataa sivun (omistaja 22.9.2026 klo 23.05: v2133-kierroksen 3/5 kaappausta mittasi vanhaa koetta, koska sivua ei ladattu). L1 valikosta Syötekoe 'Kosketus suoraan' -> vihje 'Ladataan…', L2 sivu latautuu itse 600 ms:n jalkeen, L3 latauksen jalkeen overlay 'koe 2/4 Kosketus suoraan' (Syötekoe-valikko, omistaja 23.9.2026 klo 08.34), L6 latauksen jälkeen pallonSyote.touchLahde ilman 'seuraavassa latauksessa', L4 valinta ja paluu viiveen aikana ei lataa, L5 ei sivuvirheita. Chromium ja WebKit 5/5; vanhalla main.js:lla L1-L3 kaatuvat."
     },
     "savuke-liikemittari.mjs": {
       "env": {
