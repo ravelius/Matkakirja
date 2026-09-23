@@ -74,7 +74,7 @@ JSON-tiedostot. 3D:n `komento.txt` (esim. `kuva nimi`) toimii rinnalla.
 | `peruuta` | matkavalinnan Peruuta |
 | `etsi-katko [kaupunki]` / `aarrepiste` | lehden tehtävänappi (Etsi kätkö / Tapaa X; lehti auki → sulkeutuu ja kysymys alkaa) / vihreän aarrepisteen napautus (lukittuna ohje) |
 | `mannerlennot` | kortin "Mannerlento": matkavalinta mannerlennoille (vain kun mantereen aarre löytyi ja vaihe Toiminta) |
-| `matka kaupunki tapa` | valinta ilman dialogia (tapa bussi, lento, liftaus, laiva tai mannerlento) |
+| `matka kaupunki tapa` | valinta ilman dialogia (tapa bussi, lento, liftaus, laiva, mannerlento tai peninkulma = seitsemän peninkulman askel) |
 | `heita` | "Heitä noppaa" (kesken reitin) |
 | `sulje-lehti` | sulkee lehden kuin pelaaja |
 | `ohita-traileri` | saapumistrailerin ohitus. Kun Natiivi-UI:n traileri on käytössä, saapuminen menee Matkalla → **Traileri** → Lehti, kerran per kaupunki eikä aarrekaupungeissa; käsikirjoituksissa `odota-tila lehti` tarvitsee lisäaikaa tai `ohita-traileri` |

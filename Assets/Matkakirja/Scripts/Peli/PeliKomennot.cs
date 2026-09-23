@@ -117,6 +117,7 @@ namespace Matkakirja.Natiivi
                 case "matka":
                 {
                     if (A(2) == "mannerlento") return A(1) == null ? "kaupunki puuttuu" : ohjain.Matkusta(A(1), Matkakirja.Peli.Kulkutapa.Lento, true);
+                    if (A(2) == "peninkulma") return A(1) == null ? "kaupunki puuttuu" : ohjain.Matkusta(A(1), Matkakirja.Peli.Kulkutapa.Lento, false, true);
                     var tapa = PeliApu.TapaTekstista(A(2));
                     if (A(1) == null || tapa == null) return "käyttö: matka kaupunki bussi|lento|liftaus|laiva|mannerlento";
                     return ohjain.Matkusta(A(1), tapa.Value);

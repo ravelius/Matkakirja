@@ -34,6 +34,8 @@ namespace Matkakirja.Natiivi
         public string Selite;
         /// <summary>Mannerlento (Kaupat.MannerLento, web actionMannerLento): Tapa = Lento ilman lentokenttää.</summary>
         public bool Mannerlento;
+        /// <summary>Seitsemän peninkulman askel (Linssiomistus.VapaaSiirtyminen): ilman noppaa, hinta 0, vie vuoron.</summary>
+        public bool Vapaa;
     }
 
     /// <summary>Matkan tulos käyttöliittymälle: minne kamera ajaa ja avataanko lehti.</summary>
@@ -342,7 +344,15 @@ namespace Matkakirja.Natiivi
         /// Bussi, lento → Lenna (mannerlento → Kaupat.MannerLento), noppatapa → ValitseKulkutapa + Heita + Liiku
         /// (ValitseSiirto). Saapuminen luetaan Matka.Saapui-tapahtumasta.
         /// </summary>
-        public static MatkanTulos Matkusta(Matka m, string kohde, Kulkutapa tapa, bool mannerlento = false)
+        /// <summary>Peninkulman askeleen rivi matkavalintaan (ensimmäiseksi).</summary>
+        public static MatkaVaihtoehto VapaaVaihtoehto() => new MatkaVaihtoehto
+        {
+            Tapa = Kulkutapa.Lento, Hinta = 0, Vapaa = true,
+            Nimi = "Seitsemän peninkulman askel", Selite = "ilmainen · ilman noppaa, vie vuoron",
+        };
+
+        public static MatkanTulos Matkusta(Matka m, string kohde, Kulkutapa tapa, bool mannerlento = false,
+            Func<string, TekoTulos> vapaaSiirtyminen = null)
         {
             var tulos = new MatkanTulos { Tapa = tapa, Lahto = m.Tila.Pelaaja.Sijainti };
             if (m.Tila.Vaihe == Vaihe.Siirto && m.Tila.Kulkutapa.HasValue && OnNoppatapa(m.Tila.Kulkutapa.Value))
@@ -353,6 +363,17 @@ namespace Matkakirja.Natiivi
             try
             {
                 TekoTulos r;
+                if (vapaaSiirtyminen != null)
+                {
+                    // Peninkulma purkaa esivalinnan itse (VapaaSiirtyminen).
+                    r = vapaaSiirtyminen(kohde);
+                    if (!r.Ok) return Epaonnistui(tulos, m, r.Virhe);
+                    tulos.Ok = true;
+                    tulos.Tapa = Kulkutapa.Lento;
+                    tulos.Kohde = m.Tila.Pelaaja.Sijainti;
+                    tulos.Saapui = saapui;
+                    return tulos;
+                }
                 if (m.Tila.Vaihe == Vaihe.Heitto && !(OnNoppatapa(tapa) && m.Tila.Kulkutapa == tapa))
                 {
                     r = m.PeruKulkutapa();

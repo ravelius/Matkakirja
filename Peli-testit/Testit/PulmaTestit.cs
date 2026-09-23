@@ -401,7 +401,7 @@ namespace Matkakirja.Peli.Testit
             ky.Tutki();
             var json = ky.Matka.Tallenna();
             Oleta.Tosi(json.Contains("\"pulmatNahty\":[\"ala\"]") && !json.Contains("tapahtumakortti"), "uudet kentät");
-            var vanha = json.Substring(0, json.IndexOf(",\"pulmatNahty\":", StringComparison.Ordinal)).Replace("\"versio\":4", "\"versio\":3") + "}";
+            var vanha = json.Substring(0, json.IndexOf(",\"pulmatNahty\":", StringComparison.Ordinal)).Replace("\"versio\":5", "\"versio\":3") + "}";
             vanha = vanha.Replace(",\"pulmaTiedot\":", ",\"eiKaytossa\":");
             var t = Pelitila.FromJson(vanha);
             Oleta.Sama(0, t.NahdytPulmat.Count, "ei nähtyjä");
