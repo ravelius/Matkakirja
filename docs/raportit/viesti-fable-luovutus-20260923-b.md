@@ -60,3 +60,17 @@ Nollauskaava: muistio session-nollaus-automaattinen.md (RC pois → send_message
 4. Omistajalta myöhemmin: fontti (EB Garamond väliaikainen), maksullisen tiimin Apple ID Xcodeen
    TestFlightia varten, z13-maasto kokeilun jälkeen, K110-maat.
 5. Aliakset pois, kun sessiot avataan /Users/Shared/Claude-poluista.
+
+## Lisäys klo 17.40 (ennen Fablen nollausta, 62 %)
+- Natiiviseppä nollattu klo 17.38 (uusi sessio: iPad-käännös ab8098e, Natiivi-UI:n merge, maasto 23b,
+  Linssisepän haarat, levon 94 ylityksen tutkinta). iPadilla b9847ea: kallistus + erät 1–3.
+- Natiivi-UI erä 1 valmis (tilarivi, valikot, ratas + offline, matkavalinta); fontit = iOS:n American
+  Typewriter + Iowan Old Style (webin fontit, EB Garamond vara). Järjestys: kaupunkikortti + lehtikuori →
+  kysymys/pulma/kaksintaistelu/tapahtumakortti-näkymät → kartuscha → pulu → luennat.
+- Siirtoseppä: skeema 1.6–1.9 nipussa 3, koepaketti v4 sisalto-koe/; seuraavaksi Livian cue-data,
+  rajapintasopimukset, offline-manifesti.
+- Pelikoodari: erä 4 valmis (kysymykset, pulmat, kaksintaistelu, tapahtumakortit, kaupat), luennat työn alla.
+- Linssiseppä: aikajanamoottori (ihmisen matka); topografia odottaa reliefisarjaa (~21) ja KarttaKerroksia.
+- Karttaseppä: poltto 23a käynnissä; maasto 23b (mustat kiilat korjattu) ~18.
+- Omistaja treeneissä, palaa ~18; iPad kytkettynä ja auki. Ensimmäinen asia: iPad-kokeilu, kun
+  Natiiviseppä on asentanut ab8098e:n. Lokissa ~100 otsikkoa tältä päivältä (klo 12.01 → 17.4x).
