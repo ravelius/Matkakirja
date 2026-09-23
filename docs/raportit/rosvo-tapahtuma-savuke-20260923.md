@@ -1,5 +1,24 @@
 # Rosvon kaksintaistelu ja tapahtumakortti — laitetesti (23.9.2026)
 
+## Uusinta (build 4b47b35, aanitapahtumat 342f45f): 7/7 OK
+
+Gate: uusi build pysähtyy Aloitus-porttiin (`natiivi-ui/aloitus` mainissa) —
+`ui aloita` (Documents/ui-komento.txt) ennen peli-komento.txt:ää. HUOM:
+`ui aloita pariisi` EI toimi ("ei lähtökaupunki: pariisi" — Pariisi ei ole
+Aloitus-lipulla merkitty lähtökaupunki); paljas `ui aloita` oletuksena
+riittää samaan Pariisiin.
+
+Kaikki 7/7 tarkistuspistettä odotetun mukaisia: r4-vastattu (vastattu
+true, oikein true), r5-kartalla (Kartta/Toiminta), t1-kortti (laji
+Tapahtumakortti, vastattu true), t2-loppu (Kartta, kyyti siirsi Luxemburgiin).
+`aanet`-kenttä täsmää: r2 `[quizOpen]`, r3 `[quizOpen, robber]`, r4
+`[quizOpen, robber, correct]` — t2:ssa ei näy erillistä turn/coin/ferry-
+tapahtumaa, vain kasautunut kysymyslista (`[quizOpen, robber, correct,
+quizOpen]`); ei tutkittu tarkemmin, mainitsen varmuuden vuoksi.
+
+---
+
+
 Ajettu simulaattorissa (iPhone 18 Pro, proto-master 08a9101), käsikirjoitus
 `Peli-testit/silmukka-rosvo.txt`. Kuvat ja raakadata:
 `/Users/Shared/Claude/proto-3d/lokit/rosvo-tapahtuma-20260923/`
