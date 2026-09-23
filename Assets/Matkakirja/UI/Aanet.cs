@@ -32,10 +32,9 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.Networking;
-// Siivutaulu: vaihto Pelikoodarin puhtaaseen tauluun = nämä kaksi riviä
-// (Tehostetaulu / Tehoste) ja UiTehosteet.cs pois. Kenttänimet ovat samat.
-using Tehostetaulu = Matkakirja.Natiivi.UiTehosteet;
-using TehosteRivi = Matkakirja.Natiivi.UiTehoste;
+// Siivutaulu: Pelikoodarin puhdas Peli/Aani/Tehostetaulu.cs (B7 §1.8).
+using Tehostetaulu = Matkakirja.Peli.Tehostetaulu;
+using TehosteRivi = Matkakirja.Peli.Tehoste;
 
 namespace Matkakirja.Natiivi
 {
@@ -296,7 +295,6 @@ namespace Matkakirja.Natiivi
 
         static readonly List<Soiva> soivat = new List<Soiva>();
         static readonly Dictionary<string, float[]> iskut = new Dictionary<string, float[]>();
-        const float NimettyVireHeitto = 0.02f;   // webin jitter(vire, 0.02)
         const float Hiljaisuus = 0.0001f;        // webin eksponenttirampin pohja
 
         static bool Varattu(AudioSource a)
@@ -335,7 +333,7 @@ namespace Matkakirja.Natiivi
         static void SoitaSiivu(AudioClip klippi, string url, string aloitus, float kesto, float gain, float? vire, bool tasavire, float viive)
         {
             // Vireheitto elävöittää kolahduksia; nimetty vire soittaa matalampana/korkeampana.
-            float nopeus = vire.HasValue ? Heitto(vire.Value, NimettyVireHeitto) : tasavire ? 1f : Heitto(1f, Tehostetaulu.VireHeitto);
+            float nopeus = vire.HasValue ? Heitto(vire.Value, Tehostetaulu.NimettyVireHeitto) : tasavire ? 1f : Heitto(1f, Tehostetaulu.VireHeitto);
             float pituus = klippi.length;
             float alku;
             switch (aloitus)
@@ -499,7 +497,6 @@ namespace Matkakirja.Natiivi
 
         static Soiva lento;
         static int lentoVuoro;
-        const float PitkaAanite = 60f;   // silmukka alkaa SilmukkaAlkuS:stä vain tätä pidemmässä äänitteessä
 
         /// <summary>
         /// Lennon moottoriääni (PeliOhjain.LentoAani): alkaa = true käynnistää (jo soiva jatkuu),
@@ -520,7 +517,7 @@ namespace Matkakirja.Natiivi
             {
                 if (klippi == null || vuoro != lentoVuoro || lento != null || Mykistetty) return;
                 // Pitkissä äänityksissä alku on lähestymistä: silmukka lennon ytimestä loppuun.
-                float alku = klippi.length > PitkaAanite ? Tehostetaulu.Lento.SilmukkaAlkuS : 0f;
+                float alku = klippi.length > Tehostetaulu.Lento.PitkaAaniteS ? Tehostetaulu.Lento.SilmukkaAlkuS : 0f;
                 AudioClip silmukka = alku > 0f ? Leikkaa(klippi, alku, klippi.length - alku, 1f, verho: false) : null;
                 var s = Soitin(AaniKanava.Tehoste);
                 s.clip = silmukka != null ? silmukka : klippi;
