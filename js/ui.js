@@ -461,6 +461,7 @@ import { nollaaFokusmitat, paivitaFokusmitat, projisoiLaudalle } from './fokusmi
  */
 import { aloitaLinssiketju, merkitseLinssiketju, linssiketjunLoki } from './reliefipyramidi.js';
 import { suoraanKartallePaalla } from './piirtokoe-asetus.js';
+import { taytaPohja } from './tekstipohja.js';
 
 const DIE_FACES = ['', '⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
 const BOT_DELAY = 650;
@@ -19582,7 +19583,7 @@ export class UI {
     // Voiton ainoa tie on pääaarre kotiin (js/game.js checkWin).
     this.typeText(
       document.getElementById('winner-text'),
-      this.game.pack.texts.winnerStar(w.name, w.money),
+      taytaPohja(this.game.pack.texts.winnerStar, { name: w.name, money: w.money }),
       'winner',
     );
     const roamBtn = document.getElementById('winner-roam');

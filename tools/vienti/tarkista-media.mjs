@@ -36,13 +36,35 @@ for (const v of viitteet) {
   lajeittain.get(v.laji).push(v);
 }
 
+/*
+ * Commons vastaa 429 nopeaan rinnakkaiseen sarjaan, ja 429 näkyi ennen
+ * puuttuvana kuvana (luovutuksen velka 1, 23.9.2026). Siksi Commons-
+ * pyynnöt kulkevat jonossa ≥ 1,1 s välein User-Agentin kanssa, ja 429
+ * yritetään uudelleen kasvavalla odotuksella. Ämpäri ei kuristu, joten
+ * sen pyynnöt pysyvät rinnakkaisina.
+ */
+const UA = { 'User-Agent': 'Matkakirja-tarkistus/1.0 (https://github.com/ravelius/Matkakirja)' };
+const nuku = (ms) => new Promise((r) => { setTimeout(r, ms); });
+let commonsJono = Promise.resolve();
+
 async function vastaa(url) {
-  try {
-    const r = await fetch(url, { method: 'HEAD' });
-    return r.status;
-  } catch {
-    return 'virhe';
-  }
+  const commons = /^https:\/\/commons\.wikimedia\.org\//.test(url);
+  const hae = async () => {
+    for (let y = 0; y < 4; y += 1) {
+      try {
+        const r = await fetch(url, { method: 'HEAD', headers: UA });
+        if (r.status !== 429) return r.status;
+      } catch {
+        return 'virhe';
+      }
+      await nuku(2000 * 2 ** y);
+    }
+    return 429;
+  };
+  if (!commons) return hae();
+  const vuoro = commonsJono.then(async () => { const s = await hae(); await nuku(1100); return s; });
+  commonsJono = vuoro.catch(() => {});
+  return vuoro;
 }
 
 async function rinnakkain(lista, n, f) {

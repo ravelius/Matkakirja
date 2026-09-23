@@ -98,10 +98,6 @@ export function mediaLaji(arvo, polku = '', moduuli = '') {
   if (k === 'ampari' || (moduuli === 'js/packs/julisteet.js' && k === 'tiedosto')) return 'juliste';
   if (moduuli === 'js/kohtaamiskuvat-data.js' && k === 'tiedosto') return 'kohtaamiskuva';
   if (moduuli === 'js/packs/historian-hetket.js' && KUVA.test(arvo)) return 'hetkikuva';
-  // Fokuslehtien vanhat pohjakuvat (<ISO3>.webp): peli käyttää enää vain
-  // FOKUS_POHJAT-rivien bbox- ja rajaus-kenttiä (js/ui.js), kuvaa ei ladata.
-  // Ne eivät ole Commons-nimiä, vaikka kenttä on `tiedosto`.
-  if (moduuli === 'js/packs/fokus-grc.js' && k === 'tiedosto') return 'tiedosto';
   if (k === 'lippu' && KUVA.test(arvo)) return 'lippu-commons';
   if (VALOKUVAT_FLICKR.has?.(arvo)) return 'kuva-flickr';
   if (k === 'tiedosto' || k === 'lisat') {
@@ -133,7 +129,13 @@ export function ratkaiseMedia(arvo, laji) {
         PEILI_JUURI + avain,
         alkuperainen,
       ].filter(Boolean);
-      return { avain, url: reitit[0], varat: reitit.slice(1), alkuperainen };
+      // Skeema 1.5: suurennos (1600 px) kuten pelin valokuvaSuurennos():
+      // rajatun Flickr-kuvan suurennos on repon oma rajaus, muuten Flickrin
+      // h-koko tai Commons 1600 px.
+      const suurennos = lippu ? null : (VALOKUVAT_FLICKR.get(arvo)?.rajattu && oma
+        ? `${PELIN_JUURI}assets/valokuvat/${oma}`
+        : flickrOsoite(arvo, 'h') ?? `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(arvo)}?width=1600`);
+      return { avain, url: reitit[0], varat: reitit.slice(1), alkuperainen, ...(suurennos ? { suurennos } : {}) };
     }
     case 'kuva-flickr': {
       const url = flickrOsoite(arvo);

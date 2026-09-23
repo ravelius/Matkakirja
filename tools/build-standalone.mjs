@@ -586,6 +586,10 @@ const MODULES = [
   // Tietäjätasot ennen peliä: game.js tuo tietajatasonNousut staattisesti
   // (nousu tarkistetaan awardXp-portissa) ja ui.js nimikkeen laukkuun.
   'js/tietajatasot.js',
+  // Sisältöpaketin osa 2: game.js ja ui.js tuovat nämä staattisesti
+  // (pulmien generaattori tunnisteella, packien tekstipohjat).
+  'js/pulmageneraattorit.js',
+  'js/tekstipohja.js',
   'js/game.js',
   'js/ai.js',
   /*

@@ -94,8 +94,10 @@ test('jokainen fokuspohja tuntee lautansa projektion', () => {
   for (const [iso, pohja] of Object.entries(FOKUS_POHJAT)) {
     assert.ok(FOKUS_LAUTAPROJEKTIOT[pohja.lauta],
       `${iso}: tuntematon lauta ${pohja.lauta}`);
-    assert.ok(pohja.tiedosto?.endsWith('.webp') || pohja.tiedosto?.endsWith('.png'),
-      `${iso}: tiedostonimi puuttuu tai on outoa muotoa`);
+    // Lehtikuvat poistuivat v1365:ssä; kuollut `tiedosto`-kenttä sai
+    // peilauksen hakemaan olematonta kuvaa joka ajolla (poistettu 23.9.2026).
+    assert.equal(pohja.tiedosto, undefined,
+      `${iso}: fokuspohjalla ei ole enää kuvaa — poista tiedosto-kenttä`);
     for (const laatikko of [pohja.bbox, pohja.rajaus]) {
       for (const kentta of ['x', 'y', 'w', 'h']) {
         assert.ok(Number.isFinite(laatikko?.[kentta]), `${iso}: ${kentta} ei ole luku`);

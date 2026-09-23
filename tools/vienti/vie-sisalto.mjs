@@ -21,6 +21,8 @@
  *                          reitit, maat...) id-viittauksineen — tuojan
  *                          helppo lähtöpiste (tools/vienti/kokoelmat.mjs).
  *   tiedostot/...          valmiit JSON-aineistot sellaisenaan (lahteet.mjs).
+ *   web/<näkymä>.json      web-näkymän (lehti) koodi- ja tiedostoriippuvuudet
+ *                          natiivin WKWebView-kuorelle (web-riippuvuudet.mjs).
  *   skeema/*.schema.json   JSON Schema (2020-12) jokaiselle tiedostolajille.
  *   manifest.json          sisällysluettelo: moduulit, exportit, lukumäärät,
  *                          tiivisteet. Tuoja tarkistaa tästä, että sai kaiken.
@@ -39,6 +41,9 @@ import { sarjallista } from './sarjallista.mjs';
 import { LISAMODUULIT, LISATIEDOSTOT } from './lahteet.mjs';
 import { TARKKUUS, mediaLaji, ratkaiseMedia } from './media.mjs';
 import { kokoaKokoelmat } from './kokoelmat.mjs';
+import { kokoaWebNakymat } from './web-riippuvuudet.mjs';
+import { logiikkaLista } from './logiikka.mjs';
+import { kokoaOffline } from './offline.mjs';
 
 export const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 export const SKEEMAVERSIO = 'matkakirja-vienti/1';
@@ -49,10 +54,28 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  * Poisto tai merkityksen muutos nostaa majoria ja vaihtaa osoitinpolun.
  *   1.0  ensimmäinen vienti (PR #2890)
  *   1.1  kaupungit: maa2 (ISO2), tyyppi, lentokentta, aloitus; osoitin
+ *   1.2  kaupungit: tarkeys 0–3; manifest: tavuja kokoelmille, medialle
+ *        ja lisätiedostoille; kaupunki.data merkitty raakaolioksi
+ *   1.3  web/<näkymä>.json: web-näkymän (lehti) JS/CSS/tiedostoriippuvuudet
+ *        WKWebView-kuorelle; manifest.webNakymat
+ *   1.4  kokoelmat saannot (hinnat ja sääntövakiot) ja saapuminen
+ *        (saapumishaut kaupungeittain valmiiksi laskettuina)
+ *   1.5  manifest.logiikka (jokainen paketin funktio luokiteltuna,
+ *        tools/vienti/logiikka.mjs), kokoelmat esilasketut ja laatat,
+ *        media.suurennos; kaupungit.lauta {x, y}, reitit.askelia ja via
+ *   1.6  saannot: tokens.js ja ai.js (aarteiden arvovälit, BOT_SKILL),
+ *        litteät sääntörakenteet; kokoelma tapahtumat (AFRICA.events)
+ *   1.7  kokoelma linssiaineisto (maskit, manifestit, pilvet, astronautin
+ *        äänet, avauskynnykset)
+ *   1.8  kokoelma aanitaulut (tehosteet ja näytteet, ambienssit, pulu,
+ *        siirtymä-, tila- ja paikkaraidat, musiikkiketju kaupungeittain)
+ *   1.9  kokoelmat kuvakysymykset, lippumaat, pulmaaineisto, luennat
+ *        (aikaleimoineen), livianpuhe ja maat; offline.json (manifest.offline)
  */
-export const SKEEMAVERSIO_TARKKA = '1.1';
+export const SKEEMAVERSIO_TARKKA = '1.9';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
+const tavuja = (s) => Buffer.byteLength(s);
 
 /**
  * Kaikki vietävät moduulit aakkosjärjestyksessä: js/packs/*.js kokonaan
@@ -153,15 +176,31 @@ export async function kokoaVienti({ juuri = JUURI } = {}) {
     const teksti = JSON.stringify({ $skeema: `${SKEEMAVERSIO}/kokoelma`, nimi, ...k }) + '\n';
     const tiedosto = `kokoelmat/${nimi}.json`;
     tiedostot.set(tiedosto, teksti);
-    kokoelmaKuvaus.push({ nimi, tiedosto, lahde: k.lahde, lkm: k.alkiot.length, sha256: sha(teksti) });
+    kokoelmaKuvaus.push({ nimi, tiedosto, lahde: k.lahde, lkm: k.alkiot.length, sha256: sha(teksti), tavuja: tavuja(teksti) });
   }
 
   const lisatiedostot = LISATIEDOSTOT.map((polku) => {
     const teksti = readFileSync(join(juuri, polku), 'utf8');
     JSON.parse(teksti); // vain kelvollinen JSON kelpaa sellaisenaan
     tiedostot.set(`tiedostot/${polku}`, teksti);
-    return { lahde: polku, tiedosto: `tiedostot/${polku}`, sha256: sha(teksti) };
+    return { lahde: polku, tiedosto: `tiedostot/${polku}`, sha256: sha(teksti), tavuja: tavuja(teksti) };
   });
+
+  const webNakymat = kokoaWebNakymat(juuri).map(({ nimi, tiedosto, sisalto }) => {
+    const teksti = JSON.stringify(sisalto) + '\n';
+    tiedostot.set(tiedosto, teksti);
+    return { nimi, tiedosto, sha256: sha(teksti), tavuja: tavuja(teksti) };
+  });
+
+  // Offline-manifesti (skeema 1.9): maittain ladattavat laatat, maasto ja
+  // media arvioituine tavuineen (tools/vienti/offline.mjs).
+  const offline = kokoaOffline({
+    tiedostot,
+    manifest: { media: { tiedosto: 'media.json' }, kokoelmat: kokoelmaKuvaus },
+    countryShapes: nimiavaruudet.get('js/packs/maailmankartta.js').MAAILMANKARTTA.map.countryShapes,
+  });
+  const offlineTeksti = JSON.stringify(offline) + '\n';
+  tiedostot.set('offline.json', offlineTeksti);
 
   const skeemat = readdirSync(join(JUURI, 'tools/vienti/skeema')).filter((f) => f.endsWith('.json')).sort();
   for (const f of skeemat) tiedostot.set(`skeema/${f}`, readFileSync(join(JUURI, 'tools/vienti/skeema', f), 'utf8'));
@@ -185,8 +224,11 @@ export async function kokoaVienti({ juuri = JUURI } = {}) {
     },
     lisatiedostot,
     skeemat: skeemat.map((f) => `skeema/${f}`),
-    media: { tiedosto: 'media.json', sha256: sha(mediaTeksti) },
+    media: { tiedosto: 'media.json', sha256: sha(mediaTeksti), tavuja: tavuja(mediaTeksti) },
     kokoelmat: kokoelmaKuvaus,
+    webNakymat,
+    offline: { tiedosto: 'offline.json', sha256: sha(offlineTeksti), tavuja: tavuja(offlineTeksti) },
+    logiikka: logiikkaLista(),
     moduulit: manifestModuulit,
   };
   tiedostot.set('manifest.json', JSON.stringify(manifest, null, 1) + '\n');

@@ -307,7 +307,7 @@ const CITIES = [
   // itäkaakkoon) ei maailmankartalla tarvita.
   {"id":"fes","name":"Fès","wiki":"Fès","ambience":"basaari","x":5667.3,"y":2031.9,"la":"start","lx":20,"ly":5},
   {"id":"timbuktu","name":"Timbuktu","wiki":"Timbuktu","ambience":"aavikko","x":5696.7,"y":2632.6,"la":"start","lx":17,"ly":-16},
-  {"id":"gao","name":"Gao","wiki":"Gao","ambience":"aavikko","x":5931.7,"y":2722.8,"la":"start","lx":17,"ly":-16},
+  {"id":"gao","name":"Gao","wiki":"Gao","ambience":"aavikko","x":5831.7,"y":2664.4,"la":"start","lx":17,"ly":-16},
   {"id":"dakar","name":"Dakar","wiki":"Dakar","ambience":"meri","x":5279.2,"y":2722.8,"airport":true,"la":"end","lx":-20,"ly":5},
   {"id":"sierraleone","name":"Sierra Leone","wiki":"Sierra Leone","ambience":"sademetsa","x":5404.2,"y":2922.8,"la":"start","lx":20,"ly":5},
   {"id":"kappalmas","name":"Kap Palmas","wiki":"Cape Palmas","ambience":"meri","x":5601.7,"y":3051.4,"la":"end","lx":-17,"ly":26},
@@ -1204,10 +1204,10 @@ export const MAAILMANKARTTA = {
     // jättää sen arvoitukseksi) — perityt Euroopan rivit kuuluttaisivat
     // täällä Meripihkahuoneen, vaikka aarre löytyisi vaikka Perusta.
     intro: 'Peli alkaa! Etsi unohdettu aarre ja kerää löytöjä ympäri maailmaa.',
-    starFound: (name, city) => `◈ ${name} löysi UNOHDETUN AARTEEN kaupungista ${city}!`,
+    starFound: '◈ {name} löysi UNOHDETUN AARTEEN kaupungista {city}!',
     starToast: 'UNOHDETTU AARRE LÖYTYI!',
     winStar: 'toi unohdetun aarteen turvallisesti kotiin',
-    winnerStar: (name, money) => `${name} toi unohdetun aarteen kotiin ${money} punnan kanssa.`,
+    winnerStar: '{name} toi unohdetun aarteen kotiin {money} punnan kanssa.',
   },
 
   decor: {
