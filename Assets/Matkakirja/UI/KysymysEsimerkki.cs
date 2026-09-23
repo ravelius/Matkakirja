@@ -16,7 +16,7 @@ namespace Matkakirja.Natiivi
 {
     public static class KysymysEsimerkki
     {
-        public const string Lajit = "visa|vaite|kuva|lippu|pulma [id]|tapahtumakortti|tulos [laattatyyppi]|kohtaaminen|kohtaaminen-tervehdys";
+        public const string Lajit = "visa|vaite|kuva|lippu|pulma [id]|tulos [laattatyyppi]|kohtaaminen|kohtaaminen-tervehdys";
         const long TuomioMs = 900;
 
         static KysymysNaytto d;
@@ -38,7 +38,6 @@ namespace Matkakirja.Natiivi
                 case "kuva": d = Kuva(); break;
                 case "lippu": d = Lippu(); break;
                 case "pulma": d = Pulma(osat.Length > 1 ? osat[1] : "pylvaat"); break;
-                case "tapahtumakortti": d = Tapahtumakortti(); break;
                 case "tulos": d = Tulos(osat.Length > 1 ? osat[1] : "isoAarre"); break;
                 case "kohtaaminen": d = Kohtaaminen(false); break;
                 case "kohtaaminen-tervehdys": d = Kohtaaminen(true); break;
@@ -305,18 +304,6 @@ namespace Matkakirja.Natiivi
             d.Fakta = "Pulma on päättelytehtävä: oikea ratkaisu näkyy piirroksesta.";
             return d;
         }
-
-        static KysymysNaytto Tapahtumakortti() => new KysymysNaytto
-        {
-            Laji = KysymysLaji.Tapahtumakortti,
-            Otsikko = "Lyon · tapahtuma",
-            Kysymys = "Postivaunujen pyörä irtoaa mäessä, ja matkustajat joutuvat odottamaan sepän tuloa kylän majatalossa. Isäntä tarjoaa keittoa ja kertoo tarinoita silkinkutojien kapinasta.",
-            Raha = 300,
-            Vastattu = true,
-            Oikein = true,
-            Loyto = "Menetät vuoron",
-            JatkaTeksti = "Jatka",
-        };
 
         /// <summary>
         /// Kohtaaminen (web KOHTAAMISET.budapest + kohtaamiskuva): tervehdys = sivu 1

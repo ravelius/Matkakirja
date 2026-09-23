@@ -8,7 +8,7 @@
 //   ui kortti [kaupunki] [oma]                kaupunkikortti (oletus firenze, ilman peliä; oma = Tutki + Mannerlento)
 //   ui kysymys [laji]                         esimerkkikysymys ilman peliä: visa (oletus), vaite,
 //                                             kuva, lippu, pulma [id],
-//                                             tapahtumakortti, tulos [laattatyyppi], kohtaaminen,
+//                                             tulos [laattatyyppi], kohtaaminen,
 //                                             kohtaaminen-tervehdys (KysymysEsimerkki.cs)
 //   ui selite                                 karttaselite auki (Nostot-välilehti)
 //   ui aloitus [portti|avaus|valinta|jatka]   aloitusnäkymä ilman peliä (valinta → ilmoitus)
