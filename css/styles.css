@@ -28987,8 +28987,6 @@ body[data-mode] .fact-card.pieni > button#fact-kuuntele.fact-kuuntele.ghost {
   mix-blend-mode: multiply;
   transition: opacity 2000ms ease, background 2000ms ease;
 }
-  to { transform: translateX(200%); }
-}
 .pallolauta-liike-pulu {
   position: absolute;
   left: 0;
