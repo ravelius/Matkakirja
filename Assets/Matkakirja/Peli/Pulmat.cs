@@ -170,9 +170,11 @@ namespace Matkakirja.Peli
 
         static PulmaMaaritys LuePulma(Dictionary<string, object> d)
         {
+            // Paketti ≤ 1.x: generate = {"$funktio": "arvoRoomalaiset"}; skeema 1.9+ (Siirtoseppä
+            // nippu 4): tunniste generaattori = "roomalaiset" (tai "pulma:roomalaiset").
             var gen = MiniJson.Kentta(d, "generate");
-            string generaattori = gen is string gs ? gs
-                : gen is Dictionary<string, object> go ? MiniJson.Teksti(go, "$funktio") : null;
+            string generaattori = MiniJson.Teksti(d, "generaattori")
+                ?? (gen is string gs ? gs : gen is Dictionary<string, object> go ? MiniJson.Teksti(go, "$funktio") : null);
             var p = new PulmaMaaritys
             {
                 Id = MiniJson.Teksti(d, "id"),
@@ -191,7 +193,7 @@ namespace Matkakirja.Peli
                 Kuvat = LueKuvat(MiniJson.Kentta(d, "kuvat")),
                 Generaattori = generaattori,
             };
-            if (generaattori != null) Pulmageneraattorit.Generaattorit.TryGetValue(generaattori, out p.Arvo);
+            if (generaattori != null) p.Arvo = Pulmageneraattorit.Hae(generaattori);
             return p;
         }
 
@@ -318,6 +320,19 @@ namespace Matkakirja.Peli
                 ["arvoNaksutus"] = Naksutus,
                 ["arvoVesileilit"] = Vesileilit,
             };
+
+        /// <summary>
+        /// Generaattori nimellä: web-funktion nimi ("arvoRoomalaiset") tai paketin
+        /// tunniste ("roomalaiset", "pulma:roomalaiset"). null = tuntematon.
+        /// </summary>
+        public static Func<Satunnainen, PulmaArvonta> Hae(string nimi)
+        {
+            if (string.IsNullOrEmpty(nimi)) return null;
+            if (Generaattorit.TryGetValue(nimi, out var g)) return g;
+            var t = nimi.StartsWith("pulma:", StringComparison.Ordinal) ? nimi.Substring(6) : nimi;
+            if (t.Length == 0) return null;
+            return Generaattorit.TryGetValue("arvo" + char.ToUpperInvariant(t[0]) + t.Substring(1), out g) ? g : null;
+        }
 
         // --- apurit (web poimi/euroPoimi, sekoita/euroSekoita, arvoLuku) -----
 
