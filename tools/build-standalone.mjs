@@ -369,6 +369,9 @@ const MODULES = [
   // js/pollopoiminnat.js tuo tämän staattisesti.
   'js/packs/pollo-poiminnat.js',
   'js/packs/europe-valokuvat.js',
+  // Lisenssiportti (NC/ND, js/lisenssi.js): ei riippuvuuksia; ennen
+  // kielipakettia, äänilistoja ja kuvagalleriaa, jotka tuovat sen.
+  'js/lisenssi.js',
   'js/packs/europe-kielet.js',
   'js/packs/europe-maatiedot.js',
   'js/packs/europe-artikkelit.js',
@@ -829,7 +832,6 @@ const MODULES = [
    * riippuvuuksia, joten paikka muuten vapaa.
    */
   'js/piirtokoe-asetus.js',
-  'js/lisenssi.js',
   /*
    * Kaiuttimen VU-mittari (15.9.2026): tuo nyt piirtokoe-asetuksen
    * (yllä); paikka on muuten vapaa — kunhan se on ennen js/ui.js:ää,
