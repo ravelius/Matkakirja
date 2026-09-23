@@ -294,6 +294,7 @@ namespace Matkakirja.Editori
         ///   MATKAKIRJA_TEAM       maksullisen tiimin Team ID (oletus Personal Team F72JLS57C5)
         ///   MATKAKIRJA_VERSIO     CFBundleShortVersionString (oletus 0.1.0)
         ///   MATKAKIRJA_BUILD      CFBundleVersion, kasvava kokonaisluku (pakollinen)
+        ///   MATKAKIRJA_KANSIO     vientikansio (oletus Build/testflight; rinnakkainen erä esim. Build/testflight-2)
         /// Info.plistiin ITSAppUsesNonExemptEncryption = false (vain HTTPS).
         /// </summary>
         public static void IosTestFlight()
@@ -309,7 +310,7 @@ namespace Matkakirja.Editori
             PlayerSettings.bundleVersion = Ymp("MATKAKIRJA_VERSIO", "0.1.0");
             PlayerSettings.iOS.buildNumber = build;
             TestFlightVienti = true;
-            try { Kaanna("Build/testflight"); }
+            try { Kaanna(Ymp("MATKAKIRJA_KANSIO", "Build/testflight")); }
             finally { TestFlightVienti = false; }
             Debug.Log($"MATKAKIRJA: TestFlight-vienti {PlayerSettings.applicationIdentifier} " +
                       $"{PlayerSettings.bundleVersion} ({build}), tiimi {PlayerSettings.iOS.appleDeveloperTeamID}");
