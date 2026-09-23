@@ -1663,3 +1663,7 @@ Pelikoodari tekee pienen PR:n heti aamulla; automaattilataus ja overlayn tilariv
 ## PR #2879: SYOTEKOE VALIKOSSA (1 OLETUS, 2 KOSKETUS SUORAAN, 3 YHTEINEN KELLO, 4 MOLEMMAT), PIIRTOKOKEET POIS VALIKOSTA; VIKA KORJATTU: KOSKETUSLIPPU LUETTIIN VAIN OSOITTEESTA → VALIKON 'KOSKETUS SUORAAN' EI OLISI VAIKUTTANUT; VARTIJA TARKISTAA ETTA NAYTTEET TULEVAT KOSKETUKSISTA (23.9.2026 klo 08.45)
 
 Pelikoodari klo 08.5x: savukkeet 6/6 ja 5/5, testit 4047/0. Julkaisija → v2141. Omistajan kierros: tilat 1–4, 10 s veto, overlayn liike- (vaihtelu, nollat, tuplat) ja syöte-rivit (kosk, virheen sd).
+
+## OMISTAJAN LINJAUS (SITOVA): 'MITKAAN TEKSTIT EIVAT SAISI VAIHTAA PAIKKAA PANOROITAESSA KUN NE OVAT RUUDULLA' — NIMION PUOLI (VASEN/OIKEA/YLA/ALA) LUKITAAN KUN NIMIO ON NAKYVISSA; SIJOITTELU SAA MUUTTUA VAIN KUN NIMIO ON POISSA RUUDULTA TAI ZOOMI VAIHTUU (23.9.2026 klo 08.48)
+
+Omistaja klo 08.47 iPhonella (v2140), kaappaukset: 'Chambordin linna' ja 'Loire' hyppäävät symbolin toiselta puolelta toiselle kesken vedon. Epäily: hyppy on osa nähtyä nykimistä. Toteutus Karttasepälle (pallonimiot-gl / nimiölimitys): hystereesi — näkyvän nimiön puoli säilyy vaikka törmäyslaskenta ehdottaisi toista, kunnes nimiö poistuu ruudulta (marginaali) tai zoomtaso vaihtuu; törmäyksessä toinen (näkymätön tai uudempi) väistää; vartija WebKit-vedolla (0 puolenvaihtoa näkyvillä nimiöillä 10 s vedossa).
