@@ -13,7 +13,9 @@
  *   3. versiointi: sama sisältö ei tee uutta versiota, muuttunut tekee,
  *      ja N lasketaan ämpärin suurimmasta versiosta (palautuksen jälkeen
  *      ei kirjoiteta olemassa olevan päälle);
- *   4. työnkulku kirjoittaa osoittimen vasta paketin jälkeen.
+ *   4. työnkulku kirjoittaa osoittimen vasta paketin jälkeen;
+ *   5. skeema 1.2: kaupunkien tärkeys 0–3 (pääkaupungit ja aloitus 3) ja
+ *      tiedostojen koot manifestissa.
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -23,6 +25,7 @@ import { kokoaVienti, JUURI, SKEEMAVERSIO_TARKKA } from '../tools/vienti/vie-sis
 import { kokoaJulkaisu, tarkistaPaketti, paketinTiiviste, MIN_SOVELLUS } from '../tools/vienti/julkaise-sisalto.mjs';
 import { validoiNimella } from '../tools/vienti/validoi.mjs';
 import { ISO2 } from '../tools/vienti/iso2.mjs';
+import { PAAKAUPUNGIT } from '../tools/vienti/paakaupungit.mjs';
 
 const { tiedostot } = await kokoaVienti();
 const kaupungit = JSON.parse(tiedostot.get('kokoelmat/kaupungit.json'));
@@ -42,6 +45,38 @@ test('kaupungeilla on 3D-proton pakolliset kentät ja jokaiselle maalle ISO2', (
     assert.equal(k.maa2, k.maa ? ISO2[k.maa] : null, k.id);
   }
   assert.equal(kaupungit.alkiot.find((k) => k.id === 'helsinki').maa2, 'FI');
+});
+
+test('skeema 1.2: tärkeys 0–3, pääkaupungit ja aloituskaupungit ovat 3', () => {
+  const idt = new Map(kaupungit.alkiot.map((k) => [k.id, k]));
+  for (const [maa, id] of Object.entries(PAAKAUPUNGIT)) {
+    assert.ok(idt.has(id), `${maa}: ${id} ei ole laudalla (tools/vienti/paakaupungit.mjs)`);
+    assert.equal(idt.get(id).maa, maa, `${id}: maa ${idt.get(id).maa}, taulussa ${maa}`);
+    assert.equal(idt.get(id).tarkeys, 3, id);
+  }
+  const jakauma = [0, 0, 0, 0];
+  for (const k of kaupungit.alkiot) {
+    assert.ok(Number.isInteger(k.tarkeys) && k.tarkeys >= 0 && k.tarkeys <= 3, `${k.id}: tarkeys ${k.tarkeys}`);
+    if (k.aloitus) assert.equal(k.tarkeys, 3, k.id);
+    if (k.lentokentta) assert.ok(k.tarkeys >= 2, k.id);
+    jakauma[k.tarkeys]++;
+  }
+  // Harvennus toimii vain, jos portaat oikeasti erottelevat.
+  for (const n of jakauma) assert.ok(n >= 20, `tärkeysjakauma ${jakauma}`);
+  assert.equal(idt.get('helsinki').tarkeys, 3);
+  assert.equal(idt.get('washington'), undefined);
+  assert.ok(validoiNimella({ ...kaupungit.alkiot[0], tarkeys: 4 }, 'kaupunki.schema.json').length);
+});
+
+test('skeema 1.2: manifestissa on jokaisen tiedoston koko tavuina', () => {
+  const m = JSON.parse(tiedostot.get('manifest.json'));
+  const koko = (polku) => Buffer.byteLength(tiedostot.get(polku));
+  assert.equal(m.media.tavuja, koko(m.media.tiedosto));
+  for (const r of [...m.kokoelmat, ...m.lisatiedostot, ...m.moduulit]) {
+    assert.equal(r.tavuja, koko(r.tiedosto), r.tiedosto);
+  }
+  const { kokoelmat, ...ilman } = m;
+  assert.ok(validoiNimella({ ...ilman, kokoelmat: kokoelmat.map(({ tavuja, ...k }) => k) }, 'manifest.schema.json').length);
 });
 
 test('validaattori hylkää rikkinäisen kaupungin ja osoittimen', () => {

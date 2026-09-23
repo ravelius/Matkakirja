@@ -49,10 +49,13 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  * Poisto tai merkityksen muutos nostaa majoria ja vaihtaa osoitinpolun.
  *   1.0  ensimmäinen vienti (PR #2890)
  *   1.1  kaupungit: maa2 (ISO2), tyyppi, lentokentta, aloitus; osoitin
+ *   1.2  kaupungit: tarkeys 0–3; manifest: tavuja kokoelmille, medialle
+ *        ja lisätiedostoille; kaupunki.data merkitty raakaolioksi
  */
-export const SKEEMAVERSIO_TARKKA = '1.1';
+export const SKEEMAVERSIO_TARKKA = '1.2';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
+const tavuja = (s) => Buffer.byteLength(s);
 
 /**
  * Kaikki vietävät moduulit aakkosjärjestyksessä: js/packs/*.js kokonaan
@@ -153,14 +156,14 @@ export async function kokoaVienti({ juuri = JUURI } = {}) {
     const teksti = JSON.stringify({ $skeema: `${SKEEMAVERSIO}/kokoelma`, nimi, ...k }) + '\n';
     const tiedosto = `kokoelmat/${nimi}.json`;
     tiedostot.set(tiedosto, teksti);
-    kokoelmaKuvaus.push({ nimi, tiedosto, lahde: k.lahde, lkm: k.alkiot.length, sha256: sha(teksti) });
+    kokoelmaKuvaus.push({ nimi, tiedosto, lahde: k.lahde, lkm: k.alkiot.length, sha256: sha(teksti), tavuja: tavuja(teksti) });
   }
 
   const lisatiedostot = LISATIEDOSTOT.map((polku) => {
     const teksti = readFileSync(join(juuri, polku), 'utf8');
     JSON.parse(teksti); // vain kelvollinen JSON kelpaa sellaisenaan
     tiedostot.set(`tiedostot/${polku}`, teksti);
-    return { lahde: polku, tiedosto: `tiedostot/${polku}`, sha256: sha(teksti) };
+    return { lahde: polku, tiedosto: `tiedostot/${polku}`, sha256: sha(teksti), tavuja: tavuja(teksti) };
   });
 
   const skeemat = readdirSync(join(JUURI, 'tools/vienti/skeema')).filter((f) => f.endsWith('.json')).sort();
@@ -185,7 +188,7 @@ export async function kokoaVienti({ juuri = JUURI } = {}) {
     },
     lisatiedostot,
     skeemat: skeemat.map((f) => `skeema/${f}`),
-    media: { tiedosto: 'media.json', sha256: sha(mediaTeksti) },
+    media: { tiedosto: 'media.json', sha256: sha(mediaTeksti), tavuja: tavuja(mediaTeksti) },
     kokoelmat: kokoelmaKuvaus,
     moduulit: manifestModuulit,
   };

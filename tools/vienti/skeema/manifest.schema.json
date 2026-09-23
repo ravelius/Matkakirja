@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://matkakirja.app/vienti/1/manifest.schema.json",
   "title": "Matkakirja-vienti: manifest",
-  "description": "Viennin sisällysluettelo. Tuoja tarkistaa tästä, että sai kaiken: jokaisen moduulin exportit lukumäärineen, tiedostojen sha256-tiivisteet ja laskennat.",
+  "description": "Viennin sisällysluettelo. Tuoja tarkistaa tästä, että sai kaiken: jokaisen moduulin exportit lukumäärineen, tiedostojen sha256-tiivisteet ja koot tavuina (tavuja, skeema 1.2) sekä laskennat.",
   "type": "object",
   "required": ["$skeema", "skeemaversio", "mediaJuuri", "laskennat", "media", "kokoelmat", "moduulit"],
   "properties": {
@@ -11,10 +11,14 @@
     "kuvaus": { "type": "string" },
     "mediaJuuri": { "type": "string", "format": "uri" },
     "laskennat": { "type": "object" },
-    "media": { "type": "object", "required": ["tiedosto", "sha256"] },
+    "media": { "type": "object", "required": ["tiedosto", "sha256", "tavuja"] },
+    "lisatiedostot": {
+      "type": "array",
+      "items": { "type": "object", "required": ["lahde", "tiedosto", "sha256", "tavuja"] }
+    },
     "kokoelmat": {
       "type": "array",
-      "items": { "type": "object", "required": ["nimi", "tiedosto", "lahde", "lkm", "sha256"] }
+      "items": { "type": "object", "required": ["nimi", "tiedosto", "lahde", "lkm", "sha256", "tavuja"] }
     },
     "moduulit": {
       "type": "array",
