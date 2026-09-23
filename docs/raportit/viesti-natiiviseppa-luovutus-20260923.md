@@ -39,27 +39,39 @@ suorituskyky, iPad-asennukset.
   - eleet 1141 kehystä, p95 8,49 ms, max 10,3 ms.
 - iPhone 17 Pro: liike p95 8,5–8,6 ms.
 
-## Kesken (tee nämä ensin)
+## Kesken (tee nämä ensin) — päivitetty klo 17.40
 
-1. **iPad-käännös b9847ea**: lokit `tulokset/laite.log` ja `tulokset/xcode-ipad.log`. Jos
-   BUILD SUCCEEDED → `xcrun devicectl device install app --device 00008142-0019686E02F3801C
-   Build/dd-laite/Build/Products/Release-iphoneos/Matkakirja3D.app`, käynnistä, aja
-   `Peli-testit/silmukka-30s.txt` (Documents/peli-komento.txt) ja lähetä Fablelle 8 riviä
-   (ensimmäinen pelattava versio omistajalle). Käytä aina lippua
-   `DEBUG_INFORMATION_FORMAT=dwarf`, koska dsymutil jäi kerran jumiin 10 minuutiksi.
-2. **Maaston saumat**: Karttasepän maasto
-   (media.matkakirja.app/julisteet/maasto/2026-09-23a/layer.json) latautuu, mutta alueen
-   rajalla (lon noin 10° E, Sisilia) on mustia kiiloja. Karttaseppä tutkii reunaindeksit ja
-   helmat. Maasto on siihen asti pois (Rakennus: FromEllipsoid). Kytkin toimii komennolla
-   `maasto paalle` (Komennot) tai `KarttaKerrokset.Nakyvyys("maasto", true)`.
-3. **Linssisepän haara** linssiseppa/linssirunko (209b873) odottaa KarttaKerroksia, joka on
-   nyt masterissa (b9847ea), sekä Karttasepän reliefisarjaa (arvio klo 21). Mergeä, kun
-   hän pyytää. Signatuurit vastaavat hänen tynkäänsä.
-4. **Pelikoodarin ISyoteEsto**: lisää `ISyoteEsto` PalloKierron otsikkoriville, kun hänen
-   Sopimukset.cs-muutoksensa tulee (pelikoodari/kysymys-ui). Pelikoodari ei muokkaa
-   PalloKierto.cs:ää.
-5. **Natiivi-UI** (UI Toolkit, Assets/Matkakirja/UI) kytkee UiKerros.PeittaaPisteen
-   → `PalloKierto.UiPeittaa`.
+Proto-master on **ab8098e**:
+- b9847ea (kartta omaan asmdefiin, KarttaKerrokset, UiPeittaa, kallistus, maastokytkin),
+- a5148ec (Aja + pehmennyskäyrä),
+- Pelikoodarin erä 4 kysymys-ui fc1938b ja luennat d08df08.
+
+`./aja.sh luo` kääntyy. iPadilla on **b9847ea**: silmukka-30s ajettu klo 17.30, kaikki
+rivit ok. Liike 807 kehystä, p95 8,79 ms, max 12 ms. Levossa 94 ylitystä (max 42 ms),
+todennäköisesti WKWebView-lehden aikana. Tutki.
+
+1. **iPad-käännös ab8098e** (erä 4 ja luennat): IosLaite → xcodebuild (dwarf) → asennus →
+   Peli-testit/silmukka-kysymys.txt (odotetut k1…k8 README-silmukka.md:ssä) ja silmukka-30s.txt
+   (1-alku on nyt vaihe Toiminta). Luennat: `luento intro`, `odota 3`, `tila puhe`, ja
+   tuloksena puhe.soi true.
+   **Unityn vienti jäi kahdesti jumiin** (CopyFiles noin 3300/3333, CPU 0 %). Tapa ja aja
+   uudelleen. Luo-ajo jää joskus kiinni sulkeutumiseen: tarkista luo.log ja käytä
+   `timeout 600` ja pkill.
+2. **Natiivi-UI:n merge-pyyntö** natiivi-ui/tilarivi 2a09c4c (pohja kysymys-ui). Editorissa
+   tarvitaan kaksi asiaa:
+   - Panel Settings -asset polkuun Assets/Matkakirja/UI/Resources/MatkakirjaUI/Paneeli.asset
+     (tee Rakennus.cs:ään ScriptableObject.CreateInstance<PanelSettings>() + CreateAsset);
+   - UI-kansion .metat (logo.png: Default, ei mipmappeja).
+   Hän pyytää sim-kuvat (UI-testit/README.md) ja lokirivin "MATKAKIRJA ui: Kone = …".
+   Offline: toteuta IOfflineLataus (UI/UiPalvelut.cs) → RAJAPINTA Alueet.
+3. **Maasto 23b** (Karttaseppä, noin klo 18, korjattu RTIN-kaarevuus, z0–z6 koko maailma):
+   vaihda Rakennus.MaastoUrl polkuun …/2026-09-23b/layer.json, kokeile `maasto paalle`
+   iPadilla (kiilat pois?) ja tee siitä oletus.
+4. **Linssisepän haarat** linssiseppa/linssirunko ja linssiseppa/aikajana: mergeä pyydettäessä
+   (KarttaKerrokset on masterissa). Sovittu: vanat, valot ja tähtitaivas Linssit-kansioon,
+   Piste-materiaali viittauksena.
+5. Pelikoodari poisti ISyoteEsto-rajapinnan: SyoteLukko kirjoittaa suoraan
+   PalloKierto.SyoteEstetty-kytkimeen ja UiPeittaa-koukkuun. PalloKiertoon ei tarvita muutoksia.
 
 ## Seuraavat (Fablen ketju)
 
