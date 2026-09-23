@@ -145,6 +145,7 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
     kysymykset: Object.values(P.questions).flat().length,
     paikkatiedot: Object.values(P.placeFacts).flat().length,
     kaksintaistelut: P.duels.length,
+    laatat: 1,
     pulmat: P.puzzles.length,
     kaupunkilehdet: avaimia(ns('kulttuuri-kategoriat.js').KULTTUURI_KATEGORIAT),
     maalehdet: avaimia(ns('maa-kategoriat.js').MAA_KATEGORIAT),

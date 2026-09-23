@@ -315,3 +315,11 @@ test('skeema 1.5: esilasketut ja suurennokset vastaavat pelin funktioita', async
   }
   assert.ok(verrattu > 1000);
 });
+
+test('skeema 1.5: laatat-kokoelma on laudan tokens sellaisenaan', () => {
+  const P = nimiavaruudet.get('js/packs/maailmankartta.js').MAAILMANKARTTA;
+  const [rivi] = JSON.parse(tiedostot.get('kokoelmat/laatat.json')).alkiot;
+  assert.equal(rivi.id, 'tokens');
+  assert.deepEqual(rivi.data, JSON.parse(JSON.stringify(P.tokens)));
+  assert.deepEqual(Object.keys(rivi.data), ['types', 'mannerTypes', 'counts']);
+});

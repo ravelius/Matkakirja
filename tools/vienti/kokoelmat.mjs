@@ -109,6 +109,12 @@ function lautaKokoelmat(ns) {
     paikkatiedot: taulukko(`${LAUTA}#MAAILMANKARTTA.placeFacts`,
       'Kaupunkien paikkatiedot (merkkijono tai { text, voice, source, wiki }).',
       { kaupunki: 'kaupungit' }, paikkatiedot),
+    // Skeema 1.5 (Pelikoodarin pyyntö 23.9.2026): natiivin laattojen jako
+    // lukee tämän eikä koko 1,6 Mt:n laudan raakamoduulia.
+    laatat: taulukko(`${LAUTA}#MAAILMANKARTTA.tokens`,
+      'Aarrelaatat sellaisenaan yhtenä alkiona: data = { types, mannerTypes, counts } '
+        + '(laattatyypit, mantereiden omat tyypit, määrät laudalla).',
+      {}, [{ id: 'tokens', data: P.tokens }]),
     kaksintaistelut: taulukko(`${LAUTA}#MAAILMANKARTTA.duels`, 'Kaksintaistelukysymykset.', {},
       P.duels.map((d, i) => ({ id: `kaksintaistelu:${i}`, data: d }))),
     pulmat: taulukko(`${LAUTA}#MAAILMANKARTTA.puzzles`,

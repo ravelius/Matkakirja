@@ -472,6 +472,9 @@ Kolme Sonnet-agenttia analysoi funktiot tiedostoittain.
   ja pulmapiirrokset tunnisteilla (`linssi:topografia.piirra`,
   `pulma:roomalaiset`, `pulmapiirros:<id>`), karttapiste ja mittakaava.
 - kuollut (4): paivanKuva, fokuskohteetDeu, juliste, maanAiheOtsikko.
+- Kokoelma `laatat` (Pelikoodarin pyyntö): MAAILMANKARTTA.tokens
+  sellaisenaan yhtenä alkiona, jotta natiivin laattojen jaon ei tarvitse
+  lukea 1,6 Mt:n laudan raakamoduulia.
 Vartija (`tests/sisaltopaketti.test.mjs`) kaatuu, jos pakettiin tulee
 luokittelematon funktio tai jos luettelossa on vanhentunut rivi.
 Lähdeteksti jää raakakerrokseen, mutta natiivi ei aja sitä.
