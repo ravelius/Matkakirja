@@ -42,10 +42,10 @@ Peilattu osoite on muotoa `https://media.matkakirja.app/aanet/<nimi>.mp3`
 
 | Lähde:rivi | Nimi | Alkuperäinen | Lisenssi | Käyttö |
 |---|---|---|---|---|
-| js/aani-ehdokkaat.js:89 | Kaupungin yö (Kairo), rucisko | freesound 723081 | CC BY-NC | `basaari`-kori (OLETUSKORIT rivi 627) |
-| js/aani-ehdokkaat.js:142 | sama tiedosto | freesound 723081 | CC BY-NC | `kaupunki`-kori (rivi 663) |
-| js/aani-ehdokkaat.js:101 | Rantatyrsky, Benson_Arizona | freesound 848927 | CC BY-NC | `meri`-kori (rivi 638) |
-| js/aani-ehdokkaat.js:123 | Ukkosmyrsky Etelä-Afrikassa, tim.kahn | freesound 411996 | CC BY-NC | `savanni`-kori (rivi 660) |
+| js/aani-ehdokkaat.js:89 | Kaupungin yö (Kairo), rucisko | freesound 723081 | CC BY-NC | `OLETUSKORIT.basaari` (rivi 628) |
+| js/aani-ehdokkaat.js:142 | sama tiedosto | freesound 723081 | CC BY-NC | `OLETUSKORIT.kaupunki` (rivi 665) |
+| js/aani-ehdokkaat.js:101 | Rantatyrsky, Benson_Arizona | freesound 848927 | CC BY-NC | `OLETUSKORIT.meri` (rivi 639) |
+| js/aani-ehdokkaat.js:123 | Ukkosmyrsky Etelä-Afrikassa, tim.kahn | freesound 411996 | CC BY-NC | `OLETUSKORIT.savanni` (rivi 659, alku 52 s) |
 
 Kolme tiedostoa neljässä käyttökohdassa. Nämä soivat kaikissa sen tyypin
 kaupungeissa kaikilla mantereilla.
@@ -133,8 +133,7 @@ päivittää.
   korvaaja valitaan, lisenssi tarkistetaan lähteestä.
 - Grep-ristitarkistus `grep -rniE "by-nc|nc-sa|nc-nd|noncommercial|by-nd"
   js/` antaa 28 osumaa: 23 ääntä, 2 `lahteet.js`-riviä ja 2
-  `kuvagalleria.js`-suodatinriviä, eli kaikki on katettu. Yksi osuma on
-  väärä: "Durham, NC" on paikannimi.
+  `kuvagalleria.js`-suodatinriviä, eli kaikki on katettu.
 - Muut kaupallisen version kysymykset kuuluvat raporttiin
   docs/raportit/sisallon-siirtoputki-20260923.md, kohta 5.6. Niitä ovat
   CC BY- ja CC BY-SA -attribuutiot, ElevenLabsin ehdot ja tekoälykuvat.
@@ -145,8 +144,8 @@ päivittää.
    (Freesound-haku lisenssisuodattimella, archive.org ja Commons).
    Järjestys:
    - ensin A-korit, koska ne soivat kaikilla mantereilla
-   - sitten D:n kuusi musiikkinäytettä: Sibeliuksen Finlandialle on
-     tarjolla PD-levytyksiä
+   - sitten D:n kuusi musiikkinäytettä: klassisille teoksille
+     (Sibelius, Šostakovitš) kannattaa etsiä PD-levytys
    - lopuksi C ja B.
 2. Äänille lisätään sama portti kuin kuville. Testi hylkää `nimi`-kentän
    NC- ja ND-merkinnät `aani-ehdokkaat.js`:ssä, `europe-kielet.js`:ssä ja
