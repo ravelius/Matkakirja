@@ -1,0 +1,37 @@
+# Matkakirja erä 4: kysymysvirta ~40 s (Pariisi → bussi Lontooseen → lehti →
+# Tutki: kohtaaminen → vastaa oikein → laatta → Jatka → liftaus kohti Pariisia
+# → Heitä → Pariisi → lehti). Kopioi Documents/peli-komento.txt:ksi.
+# Siemen 12345 laatoilla; odotetut arvot README-silmukka.md (Testit/SilmukkaKysymysTestit.cs).
+odota-tila kartta 40
+uusi-peli 12345
+odota 3
+tila k1-alku
+matka lontoo bussi
+odota-tila lehti 6
+odota 3
+sulje-lehti
+odota-tila kartta 3
+odota 1
+tila k2-lontoossa
+tutki
+odota-tila kysymys 3
+odota 2
+tila k3-kysymys
+vastaa oikea
+odota 2
+tila k4-vastattu
+jatka
+odota-tila kartta 3
+odota 1
+tila k5-kartalla
+matka pariisi liftaus
+odota-tila kartta 8
+odota 1
+tila k6-reitilla
+heita
+odota-tila lehti 8
+tila k7-lehti-pariisi
+odota 2
+sulje-lehti
+odota-tila kartta 3
+tila k8-loppu

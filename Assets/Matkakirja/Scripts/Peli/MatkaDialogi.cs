@@ -18,7 +18,7 @@ using UnityEngine.UI;
 
 namespace Matkakirja.Natiivi
 {
-    public sealed class MatkaDialogi : MonoBehaviour
+    public sealed class MatkaDialogi : MonoBehaviour, IMatkaValinta
     {
         public TMP_FontAsset fontti;
         public Color pohja = new Color32(0xf3, 0xea, 0xd3, 0xf8);

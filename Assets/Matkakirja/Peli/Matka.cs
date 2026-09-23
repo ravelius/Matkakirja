@@ -371,6 +371,9 @@ namespace Matkakirja.Peli
             Saapui?.Invoke(p, p.Sijainti.Kaupunki, uusi);
         }
 
+        /// <summary>Web visitCity siirron ulkopuolelta (tapahtumakortin kyyti, Peli/Tapahtumat.cs).</summary>
+        public void KirjaaSaapuminen(Pelaaja p = null) => KirjaaKaynti(p ?? P);
+
         /// <summary>Saapumisen jälkeen: pysähdys (koukku) tai vuoron päätös.</summary>
         void SaapumisenJalkeen(bool aikaKuluu)
         {
@@ -409,6 +412,28 @@ namespace Matkakirja.Peli
             Tila.AutoMatka = false;
             Tila.JatkaAutomaattisesti = false;
             return TekoTulos.Onnistui();
+        }
+
+        /// <summary>
+        /// Vuoron alun automaattivalinta uudelleen, kun Pysy-tapa tuli tarjolle
+        /// vasta vuoron alun jälkeen (Kysely kytketään, kun kysymykset ovat
+        /// latautuneet): webissä Pysy estää esivalinnan (beginTurn), joten
+        /// esivalittu noppatapa puretaan ennen heittoa. Palauttaa true, jos purettiin.
+        /// </summary>
+        public bool ArvioiEsivalinta()
+        {
+            if (Tila.Vaihe != Vaihe.Heitto || !Tila.AutoMatka || !P.Sijainti.Kaupungissa) return false;
+            var valittu = Tila.Kulkutapa;
+            Tila.Vaihe = Vaihe.Toiminta;
+            bool pysy = Kulkutavat().Contains(Kulkutapa.Pysy);
+            Tila.Vaihe = Vaihe.Heitto;
+            if (!pysy) return false;
+            Tila.Kulkutapa = null;
+            Tila.OdottavaMaksu = 0;
+            Tila.Vaihe = Vaihe.Toiminta;
+            Tila.AutoMatka = false;
+            Tila.JatkaAutomaattisesti = false;
+            return valittu != null;
         }
 
         /// <summary>Web actionRoll: heitto ja siirrot; ilman siirtoja vuoro päättyy.</summary>
@@ -487,6 +512,27 @@ namespace Matkakirja.Peli
             SaapumisenJalkeen(true);
             return TekoTulos.Onnistui();
         }
+
+        // --- rahan ja kauppojen tuki (Peli/Kaupat.cs) ------------------------
+
+        /// <summary>
+        /// Web actionMannerLento:n siirto-osa (Kaupat.MannerLento tarkistaa
+        /// kohteen): 300 p, ei lentokenttäehtoa, saapuminen ja vuoron päätös.
+        /// </summary>
+        internal void MannerLennonSiirto(string kohde)
+        {
+            var p = P;
+            Tila.Kulkutapa = Kulkutapa.Lento;
+            p.Raha -= Vakiot.LentoHinta;
+            p.Sijainti = Sijainti.KaupungissaSijainti(kohde);
+            KirjaaKaynti(p);
+            Tila.ViimePolku = null;
+            Tapahtui?.Invoke("flight", $"Lento kaupunkiin {Verkko.Kaupungit[kohde].Nimi}");
+            SaapumisenJalkeen(true);
+        }
+
+        /// <summary>Näytölle animoitava tapahtuma muista pelin osista (web emit).</summary>
+        internal void Ilmoita(string laji, string teksti) => Tapahtui?.Invoke(laji, teksti);
 
         // --- aarrelaatat (web revealToken, lukitseAarre, noteRecord) ----------
 
