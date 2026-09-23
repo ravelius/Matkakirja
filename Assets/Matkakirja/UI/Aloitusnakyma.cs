@@ -19,14 +19,16 @@
 // Matkan huipennus (Huipennus alla): PeliOhjain.KaikkiAarteetLoytyi → webin
 // #winner-dialog ("Jatka vaeltamista" / "Uusi matka" → avausteksti ja valinta).
 //
-// Tekstit ovat omistajan lukitsemia (js/ui.js INTRO_TEXT, INTRO_PAIKKA, INTRO_VALINTA,
-// naytaPeriaatteet): muutos webin kautta, sitten tänne sanasta sanaan.
+// Tekstit ovat omistajan lukitsemia: ne luetaan sisältöpaketista (moduulit/js/ui-tekstit.json:
+// INTRO_TEXT, INTRO_PAIKKA, INTRO_VALINTA, PERIAATTEET — webin js/ui-tekstit.js). Koodin
+// vakiot ovat vain vara, jos paketissa ei vielä ole moduulia.
 // Pelin kulku (milloin näkymä näkyy, mihin valinta vie) on Pelikoodarin: kutsuja
 // antaa kohteet ja Aloita-toiminnon (Nayta).
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Text.RegularExpressions;
+using Matkakirja.Peli;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -94,7 +96,7 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(paikka, Kirjasin.KoneLihava);
             runko = Rakenne.Teksti("", "mk-aloitus__runko", palsta);
             Kirjasimet.Aseta(runko, Kirjasin.Kone);
-            valintaNappi = Rakenne.Nappi(IntroValinta.ToUpperInvariant(), "mk-aloitus__valinta", NaytaValinta, palsta);
+            valintaNappi = Rakenne.Nappi(introValinta.ToUpperInvariant(), "mk-aloitus__valinta", NaytaValinta, palsta);
             Kirjasimet.Aseta(valintaNappi, Kirjasin.LukuLihava);
 
             // 3 VALINTA
@@ -102,7 +104,8 @@ namespace Matkakirja.Natiivi
             valinta.style.display = DisplayStyle.None;
             var vk = new Kortti("mk-aloitus__valintakortti");
             valinta.Add(vk);
-            var vo = Rakenne.Teksti(IntroValinta, "mk-kortti__otsikko", vk.Sisus);
+            valintaOtsikko = Rakenne.Teksti(introValinta, "mk-kortti__otsikko", vk.Sisus);
+            var vo = valintaOtsikko;
             Kirjasimet.Aseta(vo, Kirjasin.LukuLihava);
             var vv = new ScrollView(ScrollViewMode.Vertical);
             vv.AddToClassList("mk-aloitus__valintavieritys");
@@ -128,6 +131,52 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(linkki, Kirjasin.Kone);
 
             periaatteet = Periaatteet(juuri);
+            UiKerros.Hae().StartCoroutine(LataaTekstit());
+        }
+
+        string introText = IntroText, introPaikka = IntroPaikka, introValinta = IntroValinta;
+        Label valintaOtsikko, periaateOtsikko;
+        ScrollView periaateVieritys;
+
+        /// <summary>Tekstit paketista (moduulit/js/ui-tekstit.json); puuttuva moduuli = koodin vara.</summary>
+        System.Collections.IEnumerator LataaTekstit()
+        {
+            string json = null;
+            yield return Sisalto.HaePaketista("moduulit/js/ui-tekstit.json", t => json = t, true);
+            if (json == null) yield break;
+            try
+            {
+                var v = MiniJson.Objekti(MiniJson.Kentta(MiniJson.Objekti(MiniJson.Jasenna(json)), "exportit"));
+                string Arvo(string nimi)
+                {
+                    var x = MiniJson.Kentta(v, nimi);
+                    if (MiniJson.Objekti(x) is Dictionary<string, object> o) x = MiniJson.Kentta(o, "arvo") ?? x;
+                    return x as string;
+                }
+                introText = Arvo("INTRO_TEXT") ?? introText;
+                introPaikka = Arvo("INTRO_PAIKKA") ?? introPaikka;
+                introValinta = Arvo("INTRO_VALINTA") ?? introValinta;
+                valintaNappi.Q<Label>().text = introValinta.ToUpperInvariant();
+                valintaOtsikko.text = introValinta;
+                var p = MiniJson.Objekti(MiniJson.Kentta(v, "PERIAATTEET"));
+                if (p != null && MiniJson.Objekti(MiniJson.Kentta(p, "arvo")) is Dictionary<string, object> pa) p = pa;
+                if (p != null && MiniJson.Kentta(p, "osat") is List<object> osat && osat.Count > 0)
+                {
+                    periaateOtsikko.text = MiniJson.Teksti(p, "otsikko") ?? periaateOtsikko.text;
+                    periaateVieritys.Clear();
+                    foreach (var x in osat)
+                    {
+                        var o = MiniJson.Objekti(x);
+                        if (o == null) continue;
+                        if (MiniJson.Teksti(o, "otsikko") is string ot)
+                            Kirjasimet.Aseta(Rakenne.Teksti(ot.ToUpperInvariant(), "mk-tietoja__otsikko", periaateVieritys), Kirjasin.Kone);
+                        if (MiniJson.Teksti(o, "teksti") is string te)
+                            Rakenne.Teksti(te, "mk-kortti__teksti mk-aloitus__periaate", periaateVieritys);
+                    }
+                    if (MiniJson.Teksti(p, "oikeudet") is string oik) Rakenne.Teksti(oik, "mk-kortti__teksti mk-aloitus__periaate", periaateVieritys);
+                }
+            }
+            catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui aloitus: ui-tekstit: " + e.Message); }
         }
 
         /// <summary>◈-aarremerkki viivaikonina (fonteissa ei ole ◈:tä).</summary>
@@ -219,8 +268,8 @@ namespace Matkakirja.Natiivi
         void AloitaKirjoitus()
         {
             var nyt = DateTime.Now;
-            paikka.text = IntroPaikka + ", " + nyt.ToString("MMMM", new CultureInfo("fi-FI")) + " " + nyt.Year;
-            sanat = IntroText.Split(' ');
+            paikka.text = introPaikka + ", " + nyt.ToString("MMMM", new CultureInfo("fi-FI")) + " " + nyt.Year;
+            sanat = introText.Split(' ');
             sana = 0;
             runko.text = "";
             // Puhe: yksi puhuja kerrallaan ja musiikin vaimennus (Pelikoodarin Puhe.cs).
@@ -249,7 +298,7 @@ namespace Matkakirja.Natiivi
             if (sanat == null || sana >= sanat.Length) return;
             kirjoitus?.Pause();
             sana = sanat.Length;
-            runko.text = IntroText;
+            runko.text = introText;
             Valmis();
         }
 
@@ -308,7 +357,9 @@ namespace Matkakirja.Natiivi
             h.Add(kortti);
             var o = Rakenne.Teksti("Oppiminen on hauskaa", "mk-kortti__otsikko", kortti.Sisus);
             Kirjasimet.Aseta(o, Kirjasin.LukuLihava);
+            periaateOtsikko = o;
             var v = new ScrollView(ScrollViewMode.Vertical);
+            periaateVieritys = v;
             v.AddToClassList("mk-tietoja__vieritys");
             v.verticalScrollerVisibility = ScrollerVisibility.Hidden;
             kortti.Sisus.Add(v);
