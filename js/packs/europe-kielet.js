@@ -36,11 +36,11 @@ export const EUROPE_KIELET_KAIKKI = {
   berliini: { url: 'https://archive.org/download/aporee_46857_53203/BalkonHusemannstrasseNebenstrasseUnter.mp3', nimi: 'Husemannstraße kevätiltana (Berliini) — fabian.schmidt, PD', kesto: 180 },
   praha: { url: 'https://archive.org/download/aporee_10415_12393/aamalka.mp3', nimi: 'Kahvila Trafika (Praha) — mkin, CC BY-SA', kesto: 97 },
   budapest: { url: 'https://archive.org/download/aporee_13332_15569/12041917streetvendorsathatarut.mp3', nimi: 'Katukauppiaita (Budapest) — nagysui, PD', kesto: 180 },
-  varsova: { url: 'https://archive.org/download/aporee_51947_59319/200219000RD01.mp3', nimi: 'Näyttelyn avajaiset (Varsova) — Andrzej Maciejewski, CC BY-NC', kesto: 180 },
+  varsova: { url: 'https://archive.org/download/aporee_19329_22452/7FontannaWielkawParkOgrodSaski.mp3', nimi: 'Ogród Saskin puiston suihkulähde (Varsova) — Anton Mobin, PD', kesto: 284 },
   krakova: { url: 'https://archive.org/download/aporee_57732_66098/kazimierzmarket.mp3', nimi: 'Plac Nowyn sunnuntaitori (Krakova) — maciej janasik, PD', kesto: 114 },
   venetsia: { url: 'https://archive.org/download/aporee_16461_19081/fishmarketvenice.mp3', nimi: 'Kalatori (Venetsia) — Carlos Santos, PD', kesto: 180 },
   rooma: { url: 'https://archive.org/download/aporee_41154_46967/Aporee180216003RomemarketclossingCampodeFiori.mp3', nimi: 'Campo de\' Fiorin tori sulkeutuu (Rooma) — Benjamin Trimoreau, PD', kesto: 180 },
-  sisilia: { url: 'https://archive.org/download/aporee_46724_53068/dr40xy0007.mp3', nimi: 'Kulkukauppias Gelassa (Sisilia) — Andrea Gianessi, CC BY-NC', kesto: 122 },
+  sisilia: { url: 'https://archive.org/download/aporee_43256_49289/catania20190322124151.mp3', nimi: 'Kalatori raiteiden alla (Catania, Sisilia) — zvukac, PD', kesto: 464 },
   ateena: { url: 'https://archive.org/download/aporee_49899_56908/08527AthensGreece.mp3', nimi: 'Lauantain vihannestori (Ateena) — Piotrek Zyla, PD', kesto: 180 },
   kreeta: { url: 'https://archive.org/download/aporee_14960_17433/markt46.mp3', nimi: 'Iraklionin torikatu (Kreeta) — maciej janasik, PD', kesto: 180 },
   sofia: { url: 'https://archive.org/download/aporee_15486_18035/LS110995catstory.mp3', nimi: 'Naisten tori (Sofia) — Jüang Ren, PD', kesto: 180 },
@@ -54,7 +54,7 @@ export const EUROPE_KIELET_KAIKKI = {
   vilna: { url: 'https://archive.org/download/aporee_50430_57520/gmdgediminas.mp3', nimi: 'Kävely katumusiikin päivänä (Vilna) — alas23/sala, PD', kesto: 180 },
   tukholma: { url: 'https://archive.org/download/aporee_33214_38190/StockholmplaaHtorgetmercatdeflors.mp3', nimi: 'Kukkatori (Tukholma) — Albert Murillo, CC BY', kesto: 152 },
   oslo: { url: 'https://archive.org/download/aporee_13979_16300/StazioneCleTabelloneTreniPassi.mp3', nimi: 'Päärautatieasema (Oslo) — hatoriyumi, PD', kesto: 180 },
-  kobenhavn: { url: 'https://archive.org/download/aporee_28276_32572/NyhavnKopenhagen01.mp3', nimi: 'Nyhavnin rantakatu (Kööpenhamina) — weitere, CC BY-NC-SA', kesto: 180 },
+  kobenhavn: { url: 'https://archive.org/download/aporee_43901_49961/cphnyhavn150415h00.mp3', nimi: 'Nyhavnin rantakatu (Kööpenhamina) — Vincent Duseigne, CC BY', kesto: 420 },
 };
 
 /*

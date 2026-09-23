@@ -15910,8 +15910,8 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Dmitri Šostakovitš',
           musiikki: 'https://music.apple.com/fi/search?term=shostakovich%20symphony%207',
           musiikkiNimi: 'Šostakovitšin 7. sinfonia Apple Musicissa',
-          musiikkiNayte: 'https://archive.org/download/ShostakovichSymphonyNo.5-Stokowski/02.Ii.Allegretto.mp3',
-          musiikkiNayteNimi: 'Šostakovitš: 5. sinfonia — Leopold Stokowski, CC BY-NC-SA',
+          musiikkiNayte: 'https://archive.org/download/dso20060204old/dso20060204.2.mp3',
+          musiikkiNayteNimi: 'Šostakovitš: 5. sinfonia, II Allegretto — DuPage Symphony Orchestra, PD',
         },
       ],
           /*
