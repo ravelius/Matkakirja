@@ -1411,3 +1411,9 @@
 .mk-nahtavyys__nuoli--oikea {
     right: 4px;
 }
+
+/* Listaryhmän otsikko ja sen pieni reaktionappi samalla rivillä (web h4.vinkki-ryhma + .reaktiot-otsikko). */
+.mk-lehti__osastorivi {
+    flex-direction: row;
+    align-items: center;
+}

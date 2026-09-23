@@ -193,6 +193,8 @@ namespace Matkakirja.Natiivi
                     var b = Rakenne.Nappi(nappi.ToUpperInvariant() + " ›", "mk-nosto__kierros", () => Application.OpenURL(u), sisus);
                     Kirjasimet.Aseta(b, Kirjasin.Kone);
                 }
+                // Reaktiot kortin loppuun: tunniste on kohteen oma id (web kohdeReaktioTunniste).
+                Reaktiot.Piirra(sisus, Reaktiot.KohdeAvain(n.Id), n.Otsikko);
             }
         }
 

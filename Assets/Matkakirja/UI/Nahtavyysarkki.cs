@@ -305,6 +305,8 @@ namespace Matkakirja.Natiivi
                 Kirjasimet.Aseta(b, Kirjasin.Kone);
             }
             else Lahderivi(sisus, k.Lahde);
+            // Reaktiot lähderivin kylkeen (web nahtavyydet.js: juttuAvain(kaupunki, kohteen nimi)).
+            Reaktiot.Piirra(sisus, Reaktiot.JuttuAvain(kartta?.Kaupunki ?? PeliOhjain.Instanssi?.PelaajanKaupunki, k.Nimi), k.Nimi);
         }
 
         static void Lahderivi(VisualElement isa, string lahde)
