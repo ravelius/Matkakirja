@@ -23,8 +23,7 @@ ihmisen matkan kamera hypyn jälkeen (korjattu) ja pelin käyttöliittymä, joka
 | 4 | Ihmisen matka | Esityskello pysähtyi hypyn jälkeen, kun kertojan ääni oli mukana (kelaus ei tarttunut) | Linssiseppä | Korjattu: seinäkello + uusi kelaus (6d6f00e) |
 | 5 | Ihmisen matka | Webissä kohteen kuva (valokuva) kartalla; natiivissa ei | Natiivi-UI (KuvaKasittelija) | Koukku tehty |
 | 6 | Astronautti | Web: reliefi vaimeana (kylläisyys 0,8), tiheämpi pilvikerros ja sumu, tummansininen avaruus ja ilmakehän hehku. Natiivi: täysvärinen reliefi, ohuemmat pilvet, ruskea tausta, ei hehkua | Linssiseppä, Natiiviseppä, Natiivi-UI, Karttaseppä | Tausta (Taustavari #04060e) ja hehku tehty (linssiseppa/astro-avaruus b0d61fc). Kylläisyys: kytkin KOKEET-valikossa (natiivi-ui/kokeet), vaimea sarja Karttasepältä; omistaja päättää TestFlightissa. Sumu: Natiivi-UI |
-| 7b | Vertailu, maatiedot | (jatkoa riville 7) | Natiiviseppä | Korjattu 7247eb7: paletti sRGB-tekstuuriksi |
-| 7 | Vertailu, maatiedot | Webissä valittu maa täytetään selvästi (0,3 alfa vaalealla pohjalla); natiivissa täyttö näkyy heikosti reliefin päällä, raja selvästi | Natiiviseppä (MaaTaytto) | Avoin: tarkista alfa lineaarisessa väriavaruudessa |
+| 7 | Vertailu, maatiedot | Webissä valittu maa täytetään selvästi (0,3 alfa vaalealla pohjalla); natiivissa täyttö näkyy heikosti reliefin päällä, raja selvästi | Natiiviseppä (MaaTaytto) | Korjattu 7247eb7: paletti oli lineaarinen tekstuuri, nyt sRGB; tarkistetaan iPadilla |
 | 8 | Vertailu | Webissä alapalkki (laput + Vertaa), maakyltti yläkulmassa maatiedoissa | Natiivi-UI | Koukut tehty |
 | 9 | Vesistöt | Uusinnassa kuvakortti poistui, mutta webin kamera jäi lähikuvaan (linssi ajaa oman kameransa), joten mittakaavaa ei voi verrata. Jokien väri ja tumma penger vastaavat natiivia | Laitetestaaja | Toinen uusinta pyydetty |
 | 10 | Topografia | Web: "Topografialinssi"-merkki oikeassa yläkulmassa (selite) | Natiivi-UI | Koukku tehty |
