@@ -34,6 +34,7 @@
     "savuke-hehkupiste.mjs",
     "savuke-profiilitila.mjs",
     "savuke-koevaihto-lataus.mjs",
+    "savuke-suoraan-kartalle.mjs",
     "savuke-paljas-kartta.mjs",
     "savuke-eihaive-veto.mjs",
     "savuke-liikemittari.mjs",
@@ -728,6 +729,12 @@
         "SAVUKE_MOOTTORI": "webkit"
       },
       "huomautus": "Paljas kartta ja Kerrokset-kytkimet (Syotekoe 5-8, omistaja 23.9.2026 klo 09.20 ja 09.25; 6-8 pikavalintoja = paljas + yksi ryhma). Valinta laitteen muistissa kuten valikosta; normaali, paljas, jokainen 9 kytkimesta yksin ja pikavalinta 6. Tunnusluvut: muuDc (piirtokutsut laatat piilossa, yksi render), dom (nakyvat sivun elementit kartan paalla), pulu, liike, lepo, ilmakeha (liput), haive, aanet. K1 paljas dom 0 ja ryhmat pois, K2 valikkonappi avaa valikon ja 9 kytkinta, K3 tilarivi 'koe 5/8 Paljas kartta' ja '+nimiöt', K4 vastakoe normaali, K5 jokainen kytkin muuttaa vain oman ryhmansa (muuDc: paljas 2, +nimiot 4, +symbolit 3, +runko 17), K8 pikavalinta 6 = paljas + nimiot, K7 napautus lataa sivun, K6 ei sivuvirheita. WebKit 8/8."
+    },
+    "savuke-suoraan-kartalle.mjs": {
+      "env": {
+        "SAVUKE_MOOTTORI": "webkit"
+      },
+      "huomautus": "Suoraan kartalle (omistajan testitila 23.9.2026 klo 10.50). Tallennus kaupungissa + vanha nahty versio. S1 kangas < 3 s (mitattu 1,3-1,9 s), S2 ei paivitysikkunaa, traileria, isokuvaa eika luentaa 8 s:ssa, S3 merkinta kortissa heti, S4 ?koe=suoraan, S5 tilarivi '· suoraan', S6 vastakoe ilman tilaa: paivitysikkuna ja traileri nakyvat, S7 ei sivuvirheita. WebKit 7/7."
     }
   }
 }
