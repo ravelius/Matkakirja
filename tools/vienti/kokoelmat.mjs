@@ -35,6 +35,7 @@ import { livianEleidenOsoite } from '../../js/livia-puheeleet-lataus.js';
 import { livianPuheeleenTiedot, livianLuentareaktionTiedot } from '../../js/livia-tilanteet.js';
 import { repliikit as livianRepliikit } from '../generoi-pulu.mjs';
 import { lueLivianEleet, eleidenTila } from './livian-eleet.mjs';
+import { rikastaLehdet } from './lehdet.mjs';
 import { kohtaamiskuvaKohteelle, kohtaamiskuvaTavalliselleKohtaamiselle } from '../../js/kohtaamiskuvat-data.js';
 import {
   LINSSILUENTA_JUURI, luennanRunko, luennanOsoite, kaarenPuheet, puheenTiiviste,
@@ -842,8 +843,11 @@ function maastonimiKokoelma() {
     {}, rivit);
 }
 
-/** nimiavaruudet: Map<moduulipolku, moduulin nimiavaruus> */
-export function kokoaKokoelmat(nimiavaruudet) {
+/**
+ * nimiavaruudet: Map<moduulipolku, moduulin nimiavaruus>; media =
+ * media.json:n rivit (skeema 1.15: lehtien kuvien url, varat ja mitat).
+ */
+export function kokoaKokoelmat(nimiavaruudet, { media = [] } = {}) {
   const ns = {
     AFRICA_EVENTS: nimiavaruudet.get('js/packs/africa.js')?.AFRICA?.events,
     ...nimiavaruudet.get(LAUTA),
@@ -879,6 +883,8 @@ export function kokoaKokoelmat(nimiavaruudet) {
   };
   kokoelmat.karttavalot = karttavaloKokoelma(hae, kokoelmat.kaupungit.alkiot);
   rikastaNippu4(kokoelmat, ns);
+  // Skeema 1.15: lehdet natiiville (tools/vienti/lehdet.mjs).
+  rikastaLehdet(kokoelmat, ns, hae, { media, taulukko });
   // Kätkökuva (Pelikoodari 23.9.2026): web näyttää sen kaaren aarretekstin
   // yhteydessä (assets/kohtaamiset/kohtaaminen-katko.jpg). Ämpärissä skeemasta 1.12.
   kokoelmat.saannot.alkiot.push({

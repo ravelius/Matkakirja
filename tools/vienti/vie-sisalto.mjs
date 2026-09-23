@@ -94,8 +94,17 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        mannerlaudat (moduulit/js/packs/<lauta>[-questions].json,
  *        lahteet.mjs PAKETISTA_POISTETUT). Yksikään proto-haara ei lue niitä,
  *        ja kaksintaistelujen lukija sietää puuttuvan tiedoston.
+ *   1.15 Lehdet natiiville (omistaja 23.9.2026, tools/vienti/lehdet.mjs):
+ *        kaupunkilehdet ja maalehdet: aiheet[] (nostot kappaleineen,
+ *        kuvat url/varat/mitat, äänet, musiikki, tehtävä palkkioineen,
+ *        lista), sivut; kaupunkilehdet: laji, kansi, menovinkitMaalta,
+ *        maaosastoEtusivulla, saa, kulttuurivisa ja "Elämää"-kaupungit
+ *        (laji elama); kokoelmat kulttuurivisat ja saatiedot; maat: intro,
+ *        maakartta, rajat, radio, vanhaAani, uutislahde, lipputarina,
+ *        numeroina; kaupungit: intro, kielinayte; moduulit js/lehti.js,
+ *        js/ui-apurit.js, js/ui.js ja js/saa.js (lehden kiinteät tekstit).
  */
-export const SKEEMAVERSIO_TARKKA = '1.14';
+export const SKEEMAVERSIO_TARKKA = '1.15';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 const tavuja = (s) => Buffer.byteLength(s);
@@ -198,7 +207,7 @@ export async function kokoaVienti({ juuri = JUURI } = {}) {
   const mediaTeksti = JSON.stringify({ $skeema: `${SKEEMAVERSIO}/media`, viitteet: mediaLista }) + '\n';
   tiedostot.set('media.json', mediaTeksti);
 
-  const kokoelmat = kokoaKokoelmat(nimiavaruudet);
+  const kokoelmat = kokoaKokoelmat(nimiavaruudet, { media: mediaLista });
   const kokoelmaKuvaus = [];
   for (const [nimi, k] of Object.entries(kokoelmat)) {
     const teksti = JSON.stringify({ $skeema: `${SKEEMAVERSIO}/kokoelma`, nimi, ...k }) + '\n';

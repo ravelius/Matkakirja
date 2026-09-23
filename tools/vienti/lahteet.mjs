@@ -68,6 +68,16 @@ export const LISAMODUULIT = [
   // periaatelappu (js/ui.js tuo samat vakiot).
   m('js/ui-tekstit.js', ['INTRO_TEXT', 'INTRO_PAIKKA', 'INTRO_VALINTA', 'PERIAATTEET']),
   m('js/pollo.js', ['LIVIAN_MIETINNAT', 'POLLO_AARRE']),
+  // Skeema 1.15 (lehdet natiiville): lehden kiinteät tekstit ja luvut.
+  // LEHDEN_VAKIOESITTELY = etusivun esittely, kun kaupungilla ei ole omaa;
+  // LEIPAN_ALOITUS_SANOJA = leipätekstin lihavoitu aloitus (sanaa);
+  // MINITEHTAVA_PALKKIO = aihesivun minitehtävän palkkio (myös
+  // kaupunkilehdet.aiheet[].tehtava.palkkio); säärivin koodit, kuvakkeet,
+  // kuukaudet ja Open-Meteon osoite (kokoelma saatiedot).
+  m('js/lehti.js', ['LEHDEN_VAKIOESITTELY']),
+  m('js/ui-apurit.js', ['LEIPAN_ALOITUS_SANOJA']),
+  m('js/ui.js', ['MINITEHTAVA_PALKKIO']),
+  m('js/saa.js', ['SAAKOODIT', 'SAA_IKONIT', 'KUUKAUDET_SSA', 'ENNUSTE_OSOITE']),
   m('js/game.js', ['ASKERS', 'MANNER_NIMET', 'FORM_WEIGHTS']),
   m('js/tokens.js', ['TOKEN_TYPES', 'PIENI_AARRE_ARVO', 'ISO_AARRE_ARVO']),
   // Matkustuksen hinnat (laiva, lento, bussi); skeema 1.4 kokoaa ne ja

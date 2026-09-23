@@ -27,6 +27,25 @@
       "properties": { "x": { "type": "number" }, "y": { "type": "number" } },
       "additionalProperties": false
     },
+    "intro": {
+      "type": ["object", "null"],
+      "description": "Kaupunkilehden etusivun esittely (ARTIKKELIT[wiki ?? nimi].intro); kappaleet = js/ui-apurit.js jaaKappaleiksi, **lihavointi** merkitty tähdillä. null = näytä LEHDEN_VAKIOESITTELY (moduuli js/lehti.js). Skeema 1.15.",
+      "required": ["teksti", "kappaleet"],
+      "properties": { "teksti": { "type": "string" }, "kappaleet": { "type": "array", "items": { "type": "string" } } },
+      "additionalProperties": false
+    },
+    "kielinayte": {
+      "type": ["object", "null"],
+      "description": "Kaupungissa nauhoitettu kielinäyte (js/packs/europe-kielet.js); url ämpärissä, varat = lähde. Skeema 1.15.",
+      "required": ["url", "varat", "nimi", "kesto"],
+      "properties": {
+        "url": { "type": "string" },
+        "varat": { "type": "array", "items": { "type": "string" } },
+        "nimi": { "type": ["string", "null"] },
+        "kesto": { "type": ["number", "null"] }
+      },
+      "additionalProperties": false
+    },
     "data": { "$ref": "arvo.schema.json", "description": "Laudan raakaolio sellaisenaan (x, y, la, lx, ly: laudan Miller-koordinaatit ja nimiön paikka; ambience, airport, start…). Pelin sisäinen muoto: natiivi ei nojaa siihen, ja kentät voivat muuttua ilman skeemaversion nostoa. Käytä päätason kenttiä." }
   },
   "additionalProperties": false

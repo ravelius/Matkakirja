@@ -149,7 +149,12 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
     paikkatiedot: Object.values(P.placeFacts).flat().length,
     laatat: 1,
     pulmat: P.puzzles.length,
-    kaupunkilehdet: avaimia(ns('kulttuuri-kategoriat.js').KULTTUURI_KATEGORIAT),
+    // Skeema 1.15: + "Elämää"-kaupungit (ei omaa lehteä, litteät nostot).
+    kaupunkilehdet: avaimia(ns('kulttuuri-kategoriat.js').KULTTUURI_KATEGORIAT)
+      + P.cities.filter((c) => !(c.id in ns('kulttuuri-kategoriat.js').KULTTUURI_KATEGORIAT)
+        && ns('js/sisaltotaulut.js').KULTTUURIT.maailmankartta[c.id]?.nostot?.length).length,
+    kulttuurivisat: P.cities.filter((c) => ns('js/sisaltotaulut.js').KULTTUURIT.maailmankartta[c.id]?.kysymys).length,
+    saatiedot: avaimia(ns('saatiedot.js').SAATIEDOT),
     maalehdet: avaimia(ns('maa-kategoriat.js').MAA_KATEGORIAT),
     nahtavyydet: sisakkain(ns('nahtavyysjutut.js').NAHTAVYYSJUTUT),
     miniatyyrit: sisakkain(ns('miniatyyrit.js').MINIATYYRIT),

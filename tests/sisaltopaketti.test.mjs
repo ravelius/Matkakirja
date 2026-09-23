@@ -594,3 +594,115 @@ test('skeema 1.10: kaupunkien korkeus (Copernicus GLO-30, null jos ruutua ei ole
   assert.ok(Number.isInteger(hel.korkeus) && hel.korkeus % 10 === 0 && hel.korkeus < 100, `Helsinki ${hel.korkeus}`);
   assert.ok(kaupungit.alkiot.every((k) => k.korkeus === null || (Number.isInteger(k.korkeus) && k.korkeus > -500 && k.korkeus < 6000)));
 });
+
+test('skeema 1.15: lehdet natiiville', async () => {
+  const { jaaKappaleiksi } = await import('../js/ui-apurit.js');
+  const { kuvatekstiLyhyt, kuvatekstiPitka } = await import('../js/kuvatekstit.js');
+  const { sivunOtsikko } = await import('../js/maalehti.js');
+  const { MINITEHTAVA_PALKKIO } = await import('../js/ui.js');
+  const { KULTTUURI_KATEGORIAT } = await import('../js/packs/kulttuuri-kategoriat.js');
+  const { MAA_KATEGORIAT } = await import('../js/packs/maa-kategoriat.js');
+  const { KULTTUURI_PALKKIO } = await import('../js/packs/africa-kulttuuri.js');
+  const { tulkitsePyramidi } = await import('../js/maakayrat.js');
+  const kokoelma = (n) => JSON.parse(tiedostot.get(`kokoelmat/${n}.json`));
+  const media = new Map(JSON.parse(tiedostot.get('media.json')).viitteet.map((v) => [v.arvo, v]));
+
+  const tarkistaKuva = (k, lahde, polku) => {
+    assert.match(k.url, /^https:\/\//, `${polku}: url`);
+    assert.ok(Array.isArray(k.varat), `${polku}: varat`);
+    assert.equal(k.lyhyt, kuvatekstiLyhyt(lahde) || null, `${polku}: lyhyt`);
+    assert.equal(k.selite, kuvatekstiPitka(lahde) || null, `${polku}: selite`);
+    const rivi = media.get(k.arvo);
+    if (rivi) {
+      assert.equal(k.url, rivi.url, `${polku}: url kuten media.json`);
+      assert.equal(k.leveys, rivi.leveys, `${polku}: leveys kuten media.json`);
+    }
+  };
+  const tarkistaAiheet = (aiheet, lahteet, polku) => {
+    assert.deepEqual(aiheet.map((a) => a.id), lahteet.map((a) => a.id), `${polku}: aiheiden järjestys`);
+    aiheet.forEach((a, i) => {
+      const l = lahteet[i];
+      assert.equal(a.sivunOtsikko, sivunOtsikko(l), `${polku}/${a.id}: sivunOtsikko`);
+      assert.equal(a.nostot.length, (l.nostot ?? []).length);
+      a.nostot.forEach((n, j) => {
+        const ln = l.nostot[j];
+        assert.deepEqual(n.kappaleet, jaaKappaleiksi(ln.teksti), `${polku}/${a.id}/${j}: kappaleet`);
+        if (ln.tiedosto || ln.osoite || ln.ampari) tarkistaKuva(n.kuva, ln, `${polku}/${a.id}/${j}`);
+        assert.equal(n.galleria.length, (ln.galleria ?? []).length);
+      });
+      if (l.tehtava) {
+        assert.ok(Number.isInteger(a.tehtava.oikea) && a.tehtava.oikea >= 0 && a.tehtava.oikea < a.tehtava.vaihtoehdot.length);
+        assert.equal(a.tehtava.palkkio, MINITEHTAVA_PALKKIO);
+      } else assert.equal(a.tehtava, null);
+    });
+  };
+
+  // Kaupunkilehti: jokainen KULTTUURI_KATEGORIAT-lehti aiheineen ja kansineen.
+  const kl = new Map(kokoelma('kaupunkilehdet').alkiot.map((a) => [a.id, a]));
+  for (const [id, lahteet] of Object.entries(KULTTUURI_KATEGORIAT)) {
+    const a = kl.get(id);
+    assert.equal(a.laji, 'lehti');
+    tarkistaAiheet(a.aiheet, lahteet, id);
+    const kansi = lahteet.find((x) => x.id === 'kaupunki');
+    assert.equal(a.kansi.kansikuvat.length, (kansi.kansikuvat ?? []).length, `${id}: kansikuvat`);
+    a.kansi.kansikuvat.forEach((k, i) => tarkistaKuva(k, kansi.kansikuvat[i], `${id}/kansi/${i}`));
+    if (kansi.ennenNyt?.length >= 2) assert.equal(a.kansi.ennenNyt.length, 2);
+    assert.equal(a.sivut[0], 'etusivu');
+  }
+  const lontoo = kl.get('lontoo');
+  assert.ok(lontoo.kansi.avauskuvat.every((k) => k.url.startsWith('https://media.matkakirja.app/')));
+  assert.equal(lontoo.menovinkitMaalta, 'GBR');
+  assert.equal(lontoo.sivut.at(-1), 'menovinkit');
+  // Elämää: litteät nostot yhtenä kappaleena, kuten webin vanha piirto.
+  const elama = [...kl.values()].filter((a) => a.laji === 'elama');
+  assert.ok(elama.length > 0);
+  for (const a of elama) {
+    assert.equal(a.kansi, null);
+    assert.deepEqual(a.aiheet.map((x) => x.id), ['elama']);
+    assert.ok(a.aiheet[0].nostot.every((n) => n.kappaleet.length <= 1 && (!n.kuva || n.tyyppi === 'kuva')));
+  }
+
+  // Maalehti: aiheet ja menovinkkilista tyypitettynä.
+  const ml = new Map(kokoelma('maalehdet').alkiot.map((a) => [a.id, a]));
+  for (const [iso, lahteet] of Object.entries(MAA_KATEGORIAT)) tarkistaAiheet(ml.get(iso).aiheet, lahteet, iso);
+  const vinkit = ml.get('GBR').aiheet.find((a) => a.id === 'menovinkit');
+  assert.equal(vinkit.taitto, 'lista');
+  assert.ok(vinkit.lista.length && vinkit.lista.every((r) => r.kohteet.every((k) => k.linkki && (!k.kuva || /^https:/.test(k.kuva.url)))));
+  assert.ok(vinkit.hero?.url);
+
+  // Kulttuurivisat.
+  const visat = kokoelma('kulttuurivisat').alkiot;
+  assert.ok(visat.length > 0);
+  for (const v of visat) {
+    assert.ok(Number.isInteger(v.oikea) && v.oikea >= 0 && v.oikea < v.vaihtoehdot.length, `${v.id}: oikea`);
+    assert.equal(v.palkkio, KULTTUURI_PALKKIO);
+    assert.ok(kl.has(v.id) || kaupungit.alkiot.some((k) => k.id === v.id));
+  }
+
+  // Säätiedot: 12 kuukautta.
+  const saa = kokoelma('saatiedot').alkiot;
+  assert.ok(saa.length > 150);
+  for (const s of saa) {
+    assert.equal(s.keskilampo.length, 12, s.id);
+    assert.equal(s.sade.length, 12, s.id);
+    assert.ok(s.ylin === null || s.ylin.length === 12);
+    assert.match(s.selite, /keskilämpö/);
+  }
+  const saaModuuli = JSON.parse(tiedostot.get('moduulit/js/saa.json')).exportit;
+  assert.equal(saaModuuli.KUUKAUDET_SSA.length, 12);
+  assert.match(saaModuuli.ENNUSTE_OSOITE, /open-meteo/);
+  assert.equal(JSON.parse(tiedostot.get('moduulit/js/ui-apurit.json')).exportit.LEIPAN_ALOITUS_SANOJA, 4);
+  assert.match(JSON.parse(tiedostot.get('moduulit/js/lehti.json')).exportit.LEHDEN_VAKIOESITTELY, /Isoisä/);
+
+  // Maat ja kaupungit: intro, maakartta, numerot.
+  const maat = new Map(kokoelma('maat').alkiot.map((m) => [m.id, m]));
+  const deu = maat.get('DEU');
+  assert.ok(deu.intro && deu.maakartta.kaupungit.every((k) => k.x >= 0 && k.x <= 100 && k.y >= 0 && k.y <= 100));
+  assert.ok(deu.rajat.renkaat.length && deu.radio?.url && deu.uutislahde?.syote && deu.lipputarina?.kappaleet?.length);
+  const maakayrat = JSON.parse(tiedostot.get('tiedostot/assets/data/maakayrat.json'));
+  assert.equal(deu.numeroina.lohkot[0].kayra, 'pyramidi');
+  assert.equal(deu.numeroina.lohkot[0].tulkinta, tulkitsePyramidi(maakayrat.maat.DEU.pyramidi));
+  assert.ok(deu.numeroina.ingressi && deu.numeroina.lahderivi);
+  const intro = kaupungit.alkiot.find((k) => k.id === 'lontoo').intro;
+  assert.deepEqual(intro.kappaleet, jaaKappaleiksi(intro.teksti));
+});

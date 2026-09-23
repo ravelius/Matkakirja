@@ -2119,7 +2119,7 @@ function sykkeenArvo(arvot, osuus) {
 
 // Lehden minitehtävän palkkio: pienempi kuin kulttuurivisan, koska
 // vastaus lukee samalla sivulla.
-const MINITEHTAVA_PALKKIO = 10;
+export const MINITEHTAVA_PALKKIO = 10;
 /*
  * Tarkkuusvahdin kaksi viivettä (ks. tarkistaTarkkuus).
  *
