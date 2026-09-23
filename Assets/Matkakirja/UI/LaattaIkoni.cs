@@ -97,10 +97,7 @@ namespace Matkakirja.Natiivi
 
             switch (tyyppi)
             {
-                case "star":
-                    Polku("M0,-12 L3.5,-4 L12,-3.5 L5.6,2 L7.6,11 L0,6.4 L-7.6,11 L-5.6,2 L-12,-3.5 L-3.5,-4 Z",
-                        Kuviot.Vari("#e8b23c"), Kuviot.Vari("#6d4d12"), 1.6f);
-                    break;
+                // Pääaarre (data "star") ilman kuvaa: kätköarkku, ei tähteä (kaanon: ei tähteä eikä vinoneliötä).
                 case "pieniAarre":
                     foreach (var cy in new[] { 6f, 1f, -4f })
                         Polku(Ellipsi(0, cy, 9, 3.4f), Kuviot.Vari("#c89a3c"), Muste, 1.5f);

@@ -10,7 +10,6 @@
 //   Johdanto (lehden "kaupunki"-aiheen johdanto)
 //   [lehti]   Lue kaupunkilehti   · Nykytaide, Luonto …
 //   [kompassi] Liiku tänne
-//   [lasi]    Tutki kaupunkia        (omassa kaupungissa)
 //   [kone]    Mannerlento (300 £)    (omassa kaupungissa, mantereen aarre löytynyt)
 //                              [Sulje]
 //
@@ -160,7 +159,7 @@ namespace Matkakirja.Natiivi
                 string aiheet = k != null && k.Aiheet.Count > 0 ? string.Join(" · ", k.Aiheet.GetRange(0, Mathf.Min(3, k.Aiheet.Count))) : null;
                 Rivi(LehtiIkoni, "Lue kaupunkilehti", aiheet, t.LueLehti);
             }
-            if (t.Tutki != null) Rivi(Ikonit.Viiva["suurennuslasi"], t.TutkiTeksti ?? "Tutki kaupunkia", null, t.Tutki);
+            // Tutki kaupunkia -riviä ei ole (Fablen tarkastus A6: fokusmoodi korvaa, Pelikoodarin vihreä piste).
             if (t.Mannerlento != null) Rivi(Ikonit.Viiva["kone"], t.MannerlentoTeksti ?? "Mannerlento", null, t.Mannerlento);
             if (t.Liiku != null) Rivi(Ikonit.Viiva["kompassi"], t.LiikuTeksti ?? "Liiku tänne", null, t.Liiku);
             var napit = Rakenne.El("mk-kortti__napit", rivit, PickingMode.Ignore);

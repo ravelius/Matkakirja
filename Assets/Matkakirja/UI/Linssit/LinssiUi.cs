@@ -110,6 +110,9 @@ namespace Matkakirja.Natiivi
             Vaihtui(r?.Auki);
         }
 
+        /// <summary>Linssin valinta muualta (laukun Varusteet): sama vaihtokytkin kuin valitsimessa.</summary>
+        public void ValitseLinssi(string id) => Valitse(id);
+
         void Valitse(string id)
         {
             var r = Rekisteri;
