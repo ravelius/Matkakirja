@@ -484,6 +484,18 @@ test('skeema 1.12: repon assets/-kuvat ämpärissä, Pages varana', async () => 
   assert.deepEqual(muuttuneet({ a: '1', b: '2' }, { a: '1', b: '3' }), ['b']);
 });
 
+test('skeema 1.13: kuvien mitat media.json:ssa', async () => {
+  const { kuvanMitat } = await import('../tools/vienti/kuvamitat.mjs');
+  const media = JSON.parse(tiedostot.get('media.json')).viitteet;
+  const mitatut = media.filter((v) => v.leveys);
+  assert.ok(mitatut.length > 10000, `mitattuja ${mitatut.length}`);
+  assert.ok(mitatut.every((v) => Number.isInteger(v.leveys) && Number.isInteger(v.korkeus) && v.korkeus > 0));
+  const kypara = media.find((v) => v.arvo === 'assets/livia/livia-astronauttikypara-2x.png');
+  if (kypara) assert.deepEqual([kypara.leveys, kypara.korkeus], kuvanMitat(readFileSync(`${JUURI}/${kypara.arvo}`)));
+  const png = Buffer.alloc(24); png.writeUInt32BE(0x89504e47, 0); png.writeUInt32BE(640, 16); png.writeUInt32BE(480, 20);
+  assert.deepEqual(kuvanMitat(png), [640, 480]);
+});
+
 test('skeema 1.9: offline-manifesti maittain (laatat, maasto, media, tavut)', async () => {
   const m = JSON.parse(tiedostot.get('manifest.json'));
   const o = JSON.parse(tiedostot.get(m.offline.tiedosto));

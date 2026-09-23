@@ -44,6 +44,7 @@ import { kokoaKokoelmat } from './kokoelmat.mjs';
 import { kokoaWebNakymat } from './web-riippuvuudet.mjs';
 import { logiikkaLista } from './logiikka.mjs';
 import { kokoaOffline } from './offline.mjs';
+import { lueKuvamitat } from './kuvamitat.mjs';
 
 export const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 export const SKEEMAVERSIO = 'matkakirja-vienti/1';
@@ -86,8 +87,9 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        media.matkakirja.app/assets/…?v=<sha256 12>, Pages varana;
  *        saannot LIVIAN_ASTRONAUTTI_KYPARA. CI vie tiedostot
  *        (tools/vienti/sivustoassetit.mjs).
+ *   1.13 media.json leveys ja korkeus (px, tools/vienti/kuvamitat.mjs).
  */
-export const SKEEMAVERSIO_TARKKA = '1.12';
+export const SKEEMAVERSIO_TARKKA = '1.13';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 const tavuja = (s) => Buffer.byteLength(s);
@@ -176,10 +178,14 @@ export async function kokoaVienti({ juuri = JUURI } = {}) {
     });
   }
 
+  // Skeema 1.13: leveys ja korkeus px ensisijaisesta tiedostosta
+  // (tools/vienti/kuvamitat.mjs), jos mitattu.
+  const kuvamitat = lueKuvamitat();
   const mediaLista = [...mediat.keys()].sort().map((arvo) => ({
     arvo,
     laji: mediat.get(arvo).laji,
     ...ratkaiseMedia(arvo, mediat.get(arvo).laji),
+    ...(kuvamitat[arvo] ? { leveys: kuvamitat[arvo][0], korkeus: kuvamitat[arvo][1] } : {}),
     esiintymat: mediat.get(arvo).esiintymat,
   }));
   const mediaTeksti = JSON.stringify({ $skeema: `${SKEEMAVERSIO}/media`, viitteet: mediaLista }) + '\n';
