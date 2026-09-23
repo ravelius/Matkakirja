@@ -43,6 +43,7 @@ namespace Matkakirja.Natiivi
             PeliNakymat.Tilarivi = _ => Hae().Tilarivi;
             PeliNakymat.MatkaValinta = _ => Hae().Matkavalinta;
             PeliNakymat.KaupunkiKortti = _ => Hae().Kaupunkikortti;
+            PeliNakymat.Saapumistraileri = (kaupunki, url, valmis) => Hae().Traileri.NaytaPelista(kaupunki, url, valmis);
             PeliNakymat.Kysymys = _ => Hae().Kysymys;
         }
 

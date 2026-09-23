@@ -49,6 +49,7 @@ namespace Matkakirja.Natiivi
             iskulause = Rakenne.Teksti("", "mk-traileri__iskulause", teksti);
             Kirjasimet.Aseta(nimi, Kirjasin.LukuLihava);
             Kirjasimet.Aseta(iskulause, Kirjasin.LukuKursiivi);
+            peite.schedule.Execute(Vahdi).Every(250);
         }
 
         /// <summary>Onko kaupungin traileri jo nähty tässä pelissä (kerran per kaupunki).</summary>
@@ -73,6 +74,7 @@ namespace Matkakirja.Natiivi
         void Aloita(KaupunkiTiedot k, List<Kuvateksti> lahteet, string puheUrl, Action kunValmis)
         {
             kaynnissa = true;
+            alkoi = Time.unscaledTime;
             valmis = kunValmis;
             kuvatValmiit = false;
             puheValmis = string.IsNullOrEmpty(puheUrl);
@@ -140,6 +142,23 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        /// <summary>Testikomento ohitti trailerin pelin puolella (PeliOhjain ei ole enää Traileri-tilassa).</summary>
+        void Vahdi()
+        {
+            var o = PeliOhjain.Instanssi;
+            if (kaynnissa && pelista && o != null && o.Tila != SilmukanTila.Traileri && Time.unscaledTime - alkoi > 0.5f) Lopeta(true);
+        }
+
+        float alkoi;
+        bool pelista;
+
+        /// <summary>PeliOhjaimen kutsu (PeliNakymat.Saapumistraileri): vahtii pelin tilaa.</summary>
+        public void NaytaPelista(string kaupunki, string puheUrl, Action kunValmis)
+        {
+            pelista = true;
+            Nayta(kaupunki, puheUrl, kunValmis);
+        }
+
         void Ajasta(int ms, Action a) => ajastimet.Add(peite.schedule.Execute(a).StartingIn(ms));
 
         void YritaLopettaa()
@@ -168,6 +187,7 @@ namespace Matkakirja.Natiivi
         {
             if (!kaynnissa) return;
             kaynnissa = false;
+            pelista = false;
             foreach (var a in ajastimet) a.Pause();
             ajastimet.Clear();
             peite.AddToClassList("mk-traileri--ohitettu");
