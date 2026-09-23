@@ -363,6 +363,9 @@ namespace Matkakirja.Editori
             plist.ReadFromFile(plistPolku);
             var ats = plist.root["NSAppTransportSecurity"]?.AsDict() ?? plist.root.CreateDict("NSAppTransportSecurity");
             ats.SetBoolean("NSAllowsLocalNetworking", true);
+            // Radiolinssi (AVPlayer): Icecast-asemista osa on http-osoitteissa; poikkeus koskee vain
+            // AVFoundationin mediaa, ei muuta verkkoliikennettä (App Storen hyväksymä avain).
+            ats.SetBoolean("NSAllowsArbitraryLoadsForMedia", true);
             plist.WriteToFile(plistPolku);
         }
 
