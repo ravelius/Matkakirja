@@ -228,7 +228,7 @@ namespace Matkakirja.Natiivi
         {
             bool oliAuki = ryhmat[iso].Otsikko.ClassListContains("mk-auki");
             foreach (var muu in ryhmat.Keys.ToList()) AsetaRyhma(muu, !oliAuki && muu == iso);
-            if (!oliAuki) vieritys.schedule.Execute(() => vieritys.ScrollTo(ryhmat[iso].Otsikko));
+            if (!oliAuki) Rakenne.Vierita(vieritys, ryhmat[iso].Otsikko);
         }
 
         /// <summary>Pelaajan nykyinen maa, jos se on listalla; muuten Ranska (web oletusIso).</summary>

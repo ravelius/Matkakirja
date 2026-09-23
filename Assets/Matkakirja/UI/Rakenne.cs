@@ -84,5 +84,21 @@ namespace Matkakirja.Natiivi
         }
 
         sealed class NayttoVersio { }
+
+        /// <summary>
+        /// ScrollView.ScrollTo turvallisesti viiveellä: elementti on voinut poistua (odotusrivi,
+        /// sirut) ennen kuin ajastus ehtii. ScrollTo heittää silloin ArgumentExceptionin, ja
+        /// UI Toolkitin ajastin yrittää heittävää tehtävää uudelleen joka ruudussa (laitteella
+        /// kymmeniä virheitä pinossa) — siksi tarkistus ja poikkeuksen nielaisu.
+        /// </summary>
+        public static void Vierita(ScrollView v, VisualElement e, long viiveMs = 0)
+        {
+            if (v == null || e == null) return;
+            v.schedule.Execute(() =>
+            {
+                if (e.panel == null || !v.contentContainer.Contains(e)) return;
+                try { v.ScrollTo(e); } catch (System.ArgumentException) { }
+            }).StartingIn(viiveMs);
+        }
     }
 }
