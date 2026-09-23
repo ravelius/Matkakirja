@@ -9,6 +9,8 @@
 //   ui kysymys [laji]                         esimerkkikysymys ilman peliä: visa (oletus), vaite,
 //                                             kuva, lippu, pulma [id], kaksintaistelu,
 //                                             tapahtumakortti, tulos (KysymysEsimerkki.cs)
+//   ui selite                                 karttaselite auki
+//   ui kartuscha [ISO3] [auki]                kartuscha maalle ilman peliä (oletus ITA)
 //   ui heitto [teksti]                        kartan toimintonappi näkyviin
 //   ui viesti teksti                          tilarivin hetkellinen viesti
 //   ui tila teksti                            tilarivin teksti
@@ -96,6 +98,13 @@ namespace Matkakirja.Natiivi
                 case "asetukset": ui.Aanentasot.Avaa(); return null;
                 case "sulje": ui.SuljeKaikki(); return null;
                 case "matka": ui.Esimerkkimatka(); return null;
+                case "selite": ui.Karttaselite.Avaa(); return UiPalvelut.KarttaValot == null ? "ei KarttaValot-palvelua: vain selitykset" : null;
+                case "kartuscha":
+                {
+                    var ks = loput.Split(' ');
+                    ui.Kartuscha.Testaa(ks[0].Length > 0 ? ks[0].ToUpperInvariant() : "ITA", ks.Length > 1 && ks[1] == "auki");
+                    return null;
+                }
                 case "kortti":
                     ui.Kaupunkikortti.Nayta(loput.Length > 0 ? loput : "firenze", null, new KaupunkiToiminnot
                     {

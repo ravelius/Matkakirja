@@ -44,6 +44,17 @@ ui sulje
 ui kortti firenze
 odota 4
 kuva kortti
+ui sulje
+ui kartuscha ITA
+odota 3
+kuva kartuscha
+ui kartuscha ITA auki
+odota 2
+kuva kartuscha-auki
+ui sulje
+ui selite
+odota 3
+kuva selite
 ```
 
 Kuvasarja kysymysnäkymän tarkistukseen (erä 3):
