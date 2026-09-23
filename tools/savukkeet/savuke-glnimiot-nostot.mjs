@@ -78,7 +78,7 @@ await sivu.evaluate((p) => { window.matkakirja.ui.pallolauta.heraa?.(); window.m
 await sivu.waitForTimeout(6000);
 
 const tulos = { nakyma: NAKYMA, vartiot: [] };
-const vartio = (nimi, ok, tieto) => { tulos.vartiot.push({ nimi, ok: Boolean(ok), tieto }); console.log(`${ok ? '✓' : '✗'} ${nimi} ${tieto ?? ''}`); };
+const vartio = (nimi, ok, tieto) => { tulos.vartiot.push({ nimi, ok: Boolean(ok), tieto }); console.log(`${ok ? 'OK   ' : 'FAIL '}${nimi} ${tieto ?? ''}`); };
 const lueTila = () => sivu.evaluate(() => {
   const ui = window.matkakirja.ui; const l = ui.pallolauta;
   const k = ui.pallolautaGL?.();
