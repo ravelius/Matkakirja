@@ -8,7 +8,7 @@ import { asetaLiike, liikePaalla } from './kartta-liike.js';
 import {
   PIIRTOKOKEIDEN_VAIHTOEHDOT, asetaKehysprofiili, asetaPiirtokoe,
   kehysprofiiliPaalla, piirtokoeValinta, koetilanAvain, luoKoevaihdonLataaja, unohdaPoistetutValinnat,
-  suoraanKartallePaalla, asetaSuoraanKartalle,
+  suoraanKartallePaalla, asetaSuoraanKartalle, poltetutNostotPaalla, asetaPoltetutNostot,
   PALJAAN_KERROKSET, PALJAAT_KOKEET, asetaPaljasKerros, paljaatKerrokset,
 } from './piirtokoe-asetus.js';
 import { unohdaTarkkuus } from './tarkkuus-asetus.js';
@@ -892,6 +892,35 @@ if (profiiliValikko) {
   suoraan.addEventListener('click', () => { asetaSuoraanKartalle(!suoraanKartallePaalla()); naytaSuoraan(); });
   naytaSuoraan();
   profiiliValikko.appendChild(suoraan);
+
+  /*
+   * POLTETUT NOSTOT (Fable 23.9.2026, koe `poltetutnostot`): kohdemaan
+   * nostojen pisteet laatasta, elävänä vain nimi — omistaja vertaa dc:n
+   * ja tuntuman ennen oletukseksi ottoa. Lataa sivun kuten Syötekoe.
+   */
+  const poltetut = document.createElement('button');
+  poltetut.type = 'button';
+  poltetut.className = 'aanikytkin';
+  poltetut.dataset.kytkin = 'poltetut-nostot';
+  poltetut.setAttribute('role', 'switch');
+  poltetut.title = 'Koe: nostojen pisteet poltetusta laatasta, nimet elävinä (vähemmän piirtokutsuja)';
+  poltetut.setAttribute('aria-label', 'Poltetut nostot — pisteet laatasta, nimet elävinä (koe)');
+  poltetut.innerHTML = `<span class="viiva-ikoni">${svg('<circle cx="8" cy="12" r="2.5"/><path d="M13 12h6"/>')}</span>`
+    + '<span class="aanikytkin-nimi">Poltetut nostot</span>'
+    + '<span class="aanikytkin-tila"></span>';
+  const naytaPoltetut = () => {
+    const paalla = poltetutNostotPaalla();
+    poltetut.classList.toggle('valittu', paalla);
+    poltetut.setAttribute('aria-checked', paalla ? 'true' : 'false');
+    poltetut.querySelector('.aanikytkin-tila').textContent = paalla ? 'päällä' : 'pois';
+  };
+  poltetut.addEventListener('click', () => {
+    asetaPoltetutNostot(!poltetutNostotPaalla());
+    naytaPoltetut();
+    koevaihto.muuttui();
+  });
+  naytaPoltetut();
+  profiiliValikko.appendChild(poltetut);
 }
 
 for (const tiedot of AANIKYTKIMET) {

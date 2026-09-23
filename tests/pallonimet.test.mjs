@@ -273,9 +273,11 @@ test('poltetut nostot luetaan pallon omasta luettelosta, jonka laattatyökalu ki
   assert.equal(pallonNostoOnPoltettu('parnassos'), false);
   // Nostokerros kysyy pallon luetteloa, ei pyramidin.
   const nostot = lue('../js/pallolauta/nostot.js');
-  assert.match(nostot, /import \{ pallonNostoOnPoltettu \} from '\.\.\/pallo\.js';/);
+  assert.match(nostot, /import \{ pallonNostoOnPoltettu, pallonNostonPisteLaatassa \} from '\.\.\/pallo\.js';/);
   // Kytkin tulee pallo.js:n kautta, ei suoraan pyramidista (kommentti saa mainita tiedoston).\n  assert.doesNotMatch(nostot, /from '\.\.\/laattapyramidi\.js'/);
-  assert.match(nostot, /maanKohdemerkit\(pack, iso, pohja, onPoltettu\)/);
+  // Poltettu-liput kulkevat kääreen läpi (koe `poltetutnostot` kirjaa samalla pisteet laatassa).
+  assert.match(nostot, /maanKohdemerkit\(pack, iso, pohja, kirjaaPiste\)/);
+  assert.match(nostot, /return onPoltettu\(tunnus, tiiviste\);/);
   assert.match(nostot, /naapurienPoltetutMerkit\(ui, nakyva, onPoltettu\)/);
   // Elävä nosto: sama merkki ja nimiö kuin kartalla, poltettu vain osuma.
   // Piirto asuu sisäasettelussa (asetteleNosto), koska sovittelu voi

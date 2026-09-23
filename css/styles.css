@@ -25464,6 +25464,9 @@ body.infotaulu-auki .toimintorivi .monitoimi-nappi {
  */
 .nostosym-nimiokuva { transition: opacity 180ms ease-out; }
 .nostosym-nimio-piilossa .nostosym-nimiokuva { opacity: 0; }
+/* Piste laatassa (koe `poltetutnostot`, js/pallolauta/nostot.js onPisteLaatassa):
+   nostotason laatta kantaa pisteen tai kuvamerkin, elävänä vain nimi. */
+.nostosym-ikoni-laatassa .nostosym-rasteri:not(.nostosym-nimiokuva) { visibility: hidden; }
 /*
  * KYLKI VAIHTUU HÄIVYTTÄMÄLLÄ (KARTAN SULAVUUS ENSIN, erä E3;
  * js/pallolauta/nostot.js asetteleNosto): vanha kylki häipyy
