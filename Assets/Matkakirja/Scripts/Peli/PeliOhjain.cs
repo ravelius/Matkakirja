@@ -143,6 +143,23 @@ namespace Matkakirja.Natiivi
             if (t.HasValue) Livia(laji, t.Value.Tunne, t.Value.Voimakkuus);
         }
 
+        /// <summary>
+        /// Luento alkoi soida (kaupunki, luento; intro ja lento-alku: kaupunki null) —
+        /// webin aloitaMerkinta-hetki; Natiivi-UI näyttää matkakirjakortin.
+        /// </summary>
+        public event Action<string, Luento> LuentoAlkoi;
+        /// <summary>Luento loppui (kaupunki): soi loppuun, pysäytettiin tai toinen puhe korvasi sen.</summary>
+        public event Action<string> LuentoLoppui;
+
+        /// <summary>Kortin Ohita-nappi: soiva luento häipyy nopeasti (LuentoLoppui herää).</summary>
+        public void OhitaLuento()
+        {
+            if (soivaLuento != null || odottavaLuento != null) { odottavaLuento = null; puhe?.Pysayta(0.3f); }
+        }
+
+        /// <summary>Soiva luento, tai null.</summary>
+        public Luento SoivaLuento => soivaLuento;
+
         /// <summary>Pelisilmukka päälle/pois (Natiivi-UI piilottaa omat näkymänsä).</summary>
         public event Action<bool> KaytossaMuuttui;
 
@@ -540,13 +557,19 @@ namespace Matkakirja.Natiivi
                 odottavaLuento = null;
                 reaktioJono = soivaLuento?.Reaktiot.Count > 0 ? soivaLuento.ReaktioAjat(puhe.Kesto > 0 ? puhe.Kesto : soivaLuento.Kesto ?? 0) : null;
                 reaktioSeuraava = 0;
-                if (soivaLuento != null) Livia("narration");
+                if (soivaLuento != null)
+                {
+                    Livia("narration");
+                    try { LuentoAlkoi?.Invoke(soivaLuento.Kaupunki, soivaLuento); } catch (Exception e) { Debug.LogException(e); }
+                }
             }
             else if (soivaLuento != null)
             {
+                var kaupunki = soivaLuento.Kaupunki;
                 soivaLuento = null;
                 reaktioJono = null;
                 Livia("narrationEnd");
+                try { LuentoLoppui?.Invoke(kaupunki); } catch (Exception e) { Debug.LogException(e); }
             }
         }
 
