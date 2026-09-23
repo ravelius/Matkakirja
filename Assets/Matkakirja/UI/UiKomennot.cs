@@ -87,7 +87,7 @@
 //                                             vierittää (ja avaa väkäsen); periaate = aloitusportin periaatteet
 //                                             palautelohkon kohdalla; kuvapalaute = havainnekuvan palaute
 //                                             minipopupissa keksityllä kuvalla. Lähetys vain napista käsin.
-//   ui chat [kysymys]                         pulun keskustelu auki / kysy
+//   ui chat [kysymys]                         pulun keskustelu auki / kysy (lehti tai nähtävyysjuttu auki → "Ehdota tallennettavaksi")
 //   ui traileri [kaupunki]                    saapumistraileri ilman puhetta (oletus lontoo)
 //   ui luento [kaupunki] [loppu]              matkakirjakortti + luentakuvat (oletus ateena); loppu = Livian vuoro
 //   ui matkakirja [kaupunki] [laji]           matkakirjakortin polut ilman ääntä (oletus tanger; Matkakirjamerkinnat.cs):
