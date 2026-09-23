@@ -75,5 +75,14 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama("https://x/?lehti=a#tila=eyJyYWhhIjoxMjMsImthdXBhdCI6eyJrdWx0dHV1cmkiOlsibWFhaWxtYW5rYXJ0dGE6cGFyaWlzaSJdLCJqdWxpc3RlZXQiOlsicGFyaWlzaSJdLCJwdWxsYXQiOlsic8OkaGtlOsOkIl19fQ", LehtiOsoite.LisaaTila("https://x/?lehti=a#vanha", json), "vanha risuaita korvautuu");
             Oleta.Sama("https://x/?lehti=a", LehtiOsoite.LisaaTila("https://x/?lehti=a", null));
         }
+        [Testi] static void MaalehtiOsoitteeseen()
+        {
+            const string p = "https://matkakirja.app/index.html?lehti=rooma";
+            Oleta.Sama(p + "&maa=ITA&sivu=ruoka", LehtiOsoite.LisaaMaa(p, "ITA", "ruoka"));
+            Oleta.Sama(p + "&maa=ITA", LehtiOsoite.LisaaMaa(p, "ITA", "<x>"), "kelvoton sivu pois");
+            Oleta.Sama(p, LehtiOsoite.LisaaMaa(p, "ita"), "vain ISO3 isoilla");
+            Oleta.Sama(p + "&maa=ITA#tila=abc", LehtiOsoite.LisaaMaa(p + "#tila=abc", "ITA"), "ennen risuaitaa");
+            Oleta.Sama(p + "&maa=ITA#tila=YQ", LehtiOsoite.LisaaTila(LehtiOsoite.LisaaMaa(p, "ITA"), "a"));
+        }
     }
 }

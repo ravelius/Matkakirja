@@ -14,6 +14,8 @@
 //   heita                     "Heitä noppaa" (matka kesken reitillä, kohti tavoitetta)
 //   sulje-lehti               sulkee kaupunkilehden kuin pelaaja
 //   kortti kaupunki           kaupunkikortti (vain jos Natiivi-UI on asettanut PeliNakymat.KaupunkiKortti)
+//   liiku kaupunki            kortin "Liiku tänne" → matkavalinta (ilman korttia kuten napauta)
+//   maalehti ISO3 [aihe]      maan lehti aiheen sivulta (kartuscha)
 //   lue-lehti kaupunki        kaupunkilehti ilman matkaa (kortin "Lue kaupunkilehti")
 //   tutki [vaikea]            "Tutki kaupunkia" -nappi: kysymys auki (tila Kysymys)
 //   vastaa i | vastaa oikea   valitsee vaihtoehdon i (0..) tai oikean
@@ -116,6 +118,10 @@ namespace Matkakirja.Natiivi
                     return ohjain.SuljeLehti();
                 case "kortti":
                     return A(1) == null ? "kaupunki puuttuu" : ohjain.AvaaKortti(A(1));
+                case "liiku":
+                    return A(1) == null ? "kaupunki puuttuu" : ohjain.Liiku(A(1));
+                case "maalehti":
+                    return A(1) == null ? "maa puuttuu" : ohjain.LueMaalehti(A(1), A(2));
                 case "lue-lehti":
                     return A(1) == null ? "kaupunki puuttuu" : ohjain.LueLehti(A(1));
                 case "tutki":
