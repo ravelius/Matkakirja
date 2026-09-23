@@ -34,10 +34,10 @@ on:
         description: 'CFBundleVersion — oltava suurempi kuin webkuoren viimeisin ASC-build. Oletus on aikaleima, joka ylittää minkä tahansa pienen juoksevan numeron; vaihda käsin jos tiedät tarkan edellisen buildin.'
         type: string
         default: ''
-      testaajan_email:
-        description: 'Apple ID lisättäväksi olemassa olevaan sisäiseen TestFlight-testiryhmään (tyhjä = ohita)'
-        type: string
-        default: 'samireivinen@gmail.com'
+      sisainen_ryhma:
+        description: 'Vie build latauksen jälkeen sisäiselle testiryhmälle (testaaja = TESTFLIGHT_TESTAAJA tai tilin omistaja)'
+        type: boolean
+        default: true
 
 permissions:
   contents: read
@@ -491,74 +491,25 @@ jobs:
             --apiKey "$ASC_KEY_ID" \
             --apiIssuer "$ASC_ISSUER_ID"
 
-      # Lisää testaajan Apple ID:n bundlen sisäiseen (isInternalGroup)
-      # testiryhmään, jos se ei jo ole siinä. Ei luo uutta ryhmää eikä
-      # uutta appimerkintää — vain liittää olemassa olevaan.
-      - name: Lisää testaaja sisäiseen ryhmään
-        if: ${{ success() && inputs.testaajan_email != '' }}
+      # Testaaja (TESTFLIGHT_TESTAAJA tai tilin omistaja) sisäiseen
+      # ryhmään, odotus kunnes Apple on käsitellyt buildin, build ryhmään.
+      # Sama skripti kuin testflight-sisainen.yml:ssä (uusinta ilman latausta).
+      - uses: actions/checkout@v4
+        if: ${{ success() && inputs.sisainen_ryhma }}
+        with:
+          sparse-checkout: tools/testflight
+          path: repo
+
+      - name: Build sisäiselle testiryhmälle
+        if: ${{ success() && inputs.sisainen_ryhma }}
         env:
           ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
           ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
-          BUNDLE_ID: ${{ inputs.bundle_id }}
-          TESTAAJA: ${{ inputs.testaajan_email }}
+          TESTAAJA: ${{ secrets.TESTFLIGHT_TESTAAJA }}
         run: |
           set -euo pipefail
           python3 -m pip install --quiet --break-system-packages "pyjwt[crypto]==2.9.0"
-          python3 - <<'PY'
-          import os, sys, time, json, urllib.request, urllib.error
-          import jwt
-          kid = os.environ['ASC_KEY_ID']; iss = os.environ['ASC_ISSUER_ID']
-          avain = open(os.environ['ASC_AVAIN_POLKU']).read()
-          bundle_id = os.environ['BUNDLE_ID']; email = os.environ['TESTAAJA']
-
-          def tunnus():
-              nyt = int(time.time())
-              return jwt.encode({'iss': iss, 'iat': nyt, 'exp': nyt + 600, 'aud': 'appstoreconnect-v1'},
-                                 avain, algorithm='ES256', headers={'kid': kid, 'typ': 'JWT'})
-
-          def kutsu(metodi, polku, body=None):
-              data = json.dumps(body).encode() if body is not None else None
-              req = urllib.request.Request(
-                  'https://api.appstoreconnect.apple.com' + polku, data=data, method=metodi,
-                  headers={'Authorization': 'Bearer ' + tunnus(), 'Accept': 'application/json',
-                           'Content-Type': 'application/json'})
-              try:
-                  with urllib.request.urlopen(req, timeout=60) as v:
-                      out = v.read(); return v.status, (json.loads(out) if out else {})
-              except urllib.error.HTTPError as e:
-                  out = e.read()
-                  return e.code, (json.loads(out) if out else {})
-
-          tila, d = kutsu('GET', f'/v1/apps?filter[bundleId]={bundle_id}')
-          if tila != 200 or not d.get('data'):
-              print(f'::warning title=Testaajan lisäys ohitettu::Appia {bundle_id} ei löytynyt ASC:sta ({tila}).')
-              sys.exit(0)
-          app_id = d['data'][0]['id']
-
-          tila, d = kutsu('GET', f'/v1/apps/{app_id}/betaGroups')
-          sisainen = next((g for g in d.get('data', []) if g['attributes'].get('isInternalGroup')), None)
-          if tila != 200 or not sisainen:
-              print('::warning title=Testaajan lisäys ohitettu::Sisäistä testiryhmää ei löytynyt.')
-              sys.exit(0)
-          ryhma_id = sisainen['id']
-
-          tila, d = kutsu('GET', f'/v1/betaGroups/{ryhma_id}/betaTesters?filter[email]={email}')
-          if tila == 200 and d.get('data'):
-              print(f'{email} on jo ryhmässä.')
-              sys.exit(0)
-
-          tila, d = kutsu('POST', '/v1/betaTesters', {
-              'data': {
-                  'type': 'betaTesters',
-                  'attributes': {'email': email},
-                  'relationships': {'betaGroups': {'data': [{'type': 'betaGroups', 'id': ryhma_id}]}},
-              }
-          })
-          if tila in (200, 201):
-              print(f'{email} lisätty sisäiseen testiryhmään.')
-          else:
-              print(f'::warning title=Testaajan lisäys epäonnistui::{tila}: {d}')
-          PY
+          python3 repo/tools/testflight/sisainen-ryhma.py --bundle-id "${{ inputs.bundle_id }}" --build "$BUILD_NUMERO"
 
       - name: Kerro mitä lähti
         if: success()
