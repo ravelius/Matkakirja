@@ -813,3 +813,29 @@
 .mk-kaupunkikortti__rivit {
     flex-direction: column;
 }
+
+/* --- tekijätiedot ja lähteet --------------------------------------------- */
+
+.mk-tietoja {
+    max-height: 86%;
+}
+
+.mk-tietoja > .mk-kortti {
+    flex-shrink: 1;
+}
+
+.mk-tietoja__vieritys {
+    flex-shrink: 1;
+    margin-top: 6px;
+}
+
+.mk-tietoja__osio {
+    margin-bottom: 6px;
+}
+
+.mk-tietoja__otsikko {
+    font-size: 11px;
+    letter-spacing: 1.8px;
+    color: var(--map-ink-soft);
+    margin-bottom: 3px;
+}

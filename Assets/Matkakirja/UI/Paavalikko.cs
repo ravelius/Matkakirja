@@ -6,6 +6,7 @@
 //   KARTTA   [aalto]  Pieni liike   PÄÄLLÄ
 //   ─────────────────────────────────────
 //            [ uusi peli ]
+//            [ tekijätiedot ja lähteet ]     (Tietoja: karttojen pakollinen attribuutio)
 //   v1.0 · sisältö v1
 //
 // Kytkinrivit (.kertoja-valikko): min 44 pt, puolihimmeä tausta, reuna --line,
@@ -30,6 +31,8 @@ namespace Matkakirja.Natiivi
 
         /// <summary>"uusi peli" vahvistettiin.</summary>
         public event Action UusiPeli;
+        /// <summary>"tekijätiedot ja lähteet" painettiin.</summary>
+        public event Action TietojaPainettu;
 
         public Paavalikko(UiKerros kerros, Func<float> alareuna, Vahvistus vahvistus) : base(kerros, alareuna, "mk-paavalikko")
         {
@@ -53,6 +56,9 @@ namespace Matkakirja.Natiivi
                     });
             }, Sisalto);
             Kirjasimet.Aseta(uusi, Kirjasin.KoneLihava);
+
+            var tietoja = Rakenne.Nappi("tekijätiedot ja lähteet", "mk-komentorivi", () => { Sulje(); TietojaPainettu?.Invoke(); }, Sisalto);
+            Kirjasimet.Aseta(tietoja, Kirjasin.KoneLihava);
 
             var pohja = Rakenne.El("mk-pudotus__pohjarivi", Sisalto, PickingMode.Ignore);
             versio = Rakenne.Teksti("", "mk-pudotus__versio", pohja);
