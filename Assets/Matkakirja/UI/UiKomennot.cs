@@ -25,6 +25,7 @@
 //   ui julisteet [n]                          julistegalleria, n ensimmäistä voitettuna (oletus 7)
 //   ui tietaja [pisteet]                      Tietäjän tie -minipopup (oletus 120)
 //   ui seloste                                laukku esimerkillä + Aarnin luettelon pikkuseloste
+//   ui nahtavyydet [kaupunki] [kohde n]      nähtävyysnäkymä (oletus firenze); kohde n avaa n:nnen kohteen jutun
 //   ui opas [kaupunki] [vieritä px]           turistiopas (oletus lontoo), valinnainen vieritys
 //   ui liike                                  pieni liike: pulu lentää kerran heti (ohittaa levon)
 //   ui leima [muutos] [syy]                   tapahtumakupla: rahan muutos (oletus +10 Lehden minitehtävä ratkesi)
@@ -48,6 +49,7 @@
 //   ui livia pois                             Livia pois
 //   ui linssi valitsin|peite|selite|astro|kuva|sumu|vertailu|maa|keksinnot|matka|sulje|pois
 //                                             linssien UI esimerkkiaineistolla (Linssit/LinssiKomennot.cs)
+//   ui linssi vertailu FIN SWE [ITA JPN]      vertailuarkki näillä mailla + maakäyrät (latautuu|verkko = tilat)
 //   kuva nimi                                 Documents/ui-nimi.png (koko ruutu)
 //   odota s                                   seuraava rivi s sekunnin päästä
 using System.Collections.Generic;
@@ -255,6 +257,19 @@ namespace Matkakirja.Natiivi
                         if (Lippuikkuna.On(maa)) Lippuikkuna.Avaa(maa);
                         else ui.Tilarivi.Viesti("Ei lipun tarinaa: " + maa);
                     });
+                    return null;
+                }
+                case "nahtavyydet":
+                {
+                    var l = loput.Split(' ');
+                    string kid = l[0].Length > 0 ? l[0] : "firenze";
+                    ui.Nahtavyysnakyma.Avaa(kid);
+                    if (l.Length > 2 && l[1] == "kohde" && int.TryParse(l[2], out var nro))
+                        Kohdekartat.Hae(kid, k =>
+                        {
+                            var kohde = k?.Kohteet.Find(x => x.Numero == nro);
+                            if (kohde != null) ui.Nahtavyydet.AvaaKohde(k, kohde);
+                        });
                     return null;
                 }
                 case "opas":

@@ -1307,4 +1307,107 @@
 
 .mk-fokus__pullatehty {
     margin-top: 0;
+
+/* Nähtävyysarkin ☰-valikko ja ‹ › -nuolet (web .nahtavyys-valikko-nappi, .nahtavyys-nuoli). */
+.mk-nahtavyys__valikkonappi {
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    width: 34px;
+    height: 34px;
+    min-height: 34px;
+    padding: 0;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.35);
+    border-radius: 6px;
+    background-color: rgba(246, 231, 198, 0.9);
+    color: #46331f;
+    justify-content: center;
+}
+
+.mk-nahtavyys__valikkonappi > .mk-ikoni {
+    width: 17px;
+    height: 17px;
+    margin-right: 0;
+}
+
+.mk-nahtavyys__valikko {
+    position: absolute;
+    top: 46px;
+    right: 10px;
+    width: 300px;
+    max-width: 80%;
+    max-height: 60%;
+    padding: 4px 0;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.3);
+    border-radius: 8px;
+    background-color: #f5f0e2;
+}
+
+.mk-nahtavyys__valikkovieritys {
+    flex-shrink: 1;
+}
+
+.mk-nahtavyys__valikkorivi {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 0;
+    padding: 7px 10px;
+    border-width: 0;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: #3a2a1a;
+}
+
+.mk-nahtavyys__valikkorivi.mk-valittu {
+    background-color: rgba(70, 51, 31, 0.12);
+}
+
+.mk-nahtavyys__valikkonumero {
+    width: 22px;
+    height: 22px;
+    margin-right: 8px;
+    border-width: 1.5px;
+    border-color: #2c2318;
+    border-radius: 11px;
+    background-color: #f3e2b8;
+    font-size: 11px;
+    -unity-text-align: middle-center;
+    color: #2c2318;
+}
+
+.mk-nahtavyys__valikkonimi {
+    flex-shrink: 1;
+    font-size: 14.7px;
+    white-space: normal;
+}
+
+.mk-nahtavyys__nuoli {
+    position: absolute;
+    top: 50%;
+    width: 32px;
+    height: 32px;
+    min-height: 32px;
+    margin-top: -16px;
+    padding: 0;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.35);
+    border-radius: 16px;
+    background-color: rgba(246, 231, 198, 0.9);
+    color: #46331f;
+}
+
+.mk-nahtavyys__nuoli .mk-nappi__teksti {
+    font-size: 18px;
+    -unity-text-align: middle-center;
+}
+
+.mk-nahtavyys__nuoli--vasen {
+    left: 4px;
+}
+
+.mk-nahtavyys__nuoli--oikea {
+    right: 4px;
 }

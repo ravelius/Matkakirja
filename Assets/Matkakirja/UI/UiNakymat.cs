@@ -46,6 +46,7 @@ namespace Matkakirja.Natiivi
         public readonly Paljastus Paljastus;
         public readonly Julistegalleria Julistegalleria;
         public readonly Nahtavyysarkki Nahtavyydet;
+        public readonly Nahtavyysnakyma Nahtavyysnakyma;
         public readonly PieniLiike Liike;
         public readonly Noppa Noppa;
         public readonly Leima Leima;
@@ -104,7 +105,8 @@ namespace Matkakirja.Natiivi
             Huipennus = new Huipennus(kerros);
             Nostokortti = new Nostokortti(kerros);
             Lehti = new Lehtinakyma(kerros);
-            Nahtavyydet = new Nahtavyysarkki(kerros); // lehden päälle (sama kerros, myöhemmin)
+            Nahtavyysnakyma = new Nahtavyysnakyma(kerros); // kaupunkikortin "Nähtävyydet"
+            Nahtavyydet = new Nahtavyysarkki(kerros); // lehden ja nähtävyysnäkymän päälle (sama kerros, myöhemmin)
             Liike = new PieniLiike(kerros); // kerros 10: pallon päällä, muun UI:n alla
             Noppa = new Noppa(kerros.Juuri(PieniLiike.Kerros)); // web die-layer karttaruudussa, UI:n alla
             Leima = new Leima(kerros); // tapahtumakuplat (rahan muutokset)
@@ -227,6 +229,7 @@ namespace Matkakirja.Natiivi
             Aloitus.Piilota();
             Nostokortti.Sulje();
             Nahtavyydet.SuljeKokonaan();
+            Nahtavyysnakyma.Sulje();
             Lehti.Sulje();
             Paljastus.Sulje();
             Julistegalleria.Sulje();
