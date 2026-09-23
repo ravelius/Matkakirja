@@ -50,6 +50,8 @@ namespace Matkakirja
         public Color koneVari = new Color32(0x9a, 0x3b, 0x2c, 0xff);
         [Tooltip("Lentokoneen 3D-malli (Natiivi-UI:n DC-3, nokka +Z); null = kuva.")]
         public GameObject koneMalli;
+        [Tooltip("Koneen materiaali (URP Lit, hopea); FBX:n omat materiaalit eivät ole URP:tä.")]
+        public Material koneMateriaali;
         [Tooltip("3D-koneen koko ruudulla iOS-pisteinä (siipiväli).")]
         public float malliPx = 90f;
         public Savujana savu;
@@ -68,6 +70,41 @@ namespace Matkakirja
         {
             if (georeferenssi == null) georeferenssi = GetComponentInParent<CesiumGeoreference>();
             if (kierto == null) kierto = FindAnyObjectByType<PalloKierto>();
+            if (Application.isPlaying) StartCoroutine(Esilammita());
+        }
+
+        /// <summary>
+        /// Lennon ensimmäisen kehyksen piikki (mittaus 24.9.: 209 ms + 42 ms) tulee koneen,
+        /// savun ja sumuvarjostinmuunnelman ensipiirrosta. Piirretään ne kerran heti alussa
+        /// näkymättömän pieninä, kun mitään ei vielä liiku.
+        /// </summary>
+        IEnumerator Esilammita()
+        {
+            yield return new WaitForSecondsRealtime(1.5f);
+            if (liike != null || georeferenssi == null || kierto == null) yield break;
+            var kamera = kierto.GetComponent<Camera>();
+            if (kamera == null) yield break;
+            bool nakyi = Nakyy;
+            Tee();
+            Kone(true);
+            var eteen = kamera.transform.position + kamera.transform.forward * (kamera.nearClipPlane * 4f);
+            if (malli != null) { malli.transform.position = eteen; malli.transform.localScale = Vector3.one * 1e-4f; }
+            if (savu != null)
+            {
+                savu.Aloita();
+                var gt = georeferenssi.transform;
+                double3 e1 = georeferenssi.TransformUnityPositionToEarthCenteredEarthFixed((float3)gt.InverseTransformPoint(eteen));
+                savu.Lisaa(e1);
+                savu.Lisaa(e1 + new double3(0.01, 0, 0));
+            }
+            if (aurinko != null) aurinko.Sumu(1e9, 2e9); // sumumuunnelma käännetään, sumua ei näy
+            yield return null;
+            yield return null;
+            if (aurinko != null && liike == null) aurinko.Sumu(0, 0);
+            if (liike != null) yield break; // lento alkoi välissä: se hoitaa tilan
+            if (savu != null) savu.Lopeta();
+            Kone(false);
+            if (!nakyi && olio != null) olio.SetActive(false);
         }
 
         // ---- Rajapinta ----
@@ -215,6 +252,7 @@ namespace Matkakirja
                 }
                 if (aurinko != null)
                 {
+                    aurinko.Kohde(q.y);
                     if (lasku > 0.3) aurinko.Aseta(false);
                     // Etäisyyssumu matkalennon ajan: alku ja loppu karkaavat kauas nousussa ja laskussa.
                     if (matka > 0.02) aurinko.Sumu(a.etaisyys * (1.1 + 6.0 * (1 - matka)), a.etaisyys * (4.0 + 30.0 * (1 - matka)));
@@ -344,6 +382,12 @@ namespace Matkakirja
                     foreach (var r in malli.GetComponentsInChildren<Renderer>())
                     {
                         r.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+                        if (koneMateriaali != null)
+                        {
+                            var m = r.sharedMaterials;
+                            for (int i = 0; i < m.Length; i++) m[i] = koneMateriaali;
+                            r.sharedMaterials = m;
+                        }
                         if (rajat == null) rajat = r.bounds; else { var b = rajat.Value; b.Encapsulate(r.bounds); rajat = b; }
                     }
                     if (rajat != null) malliKoko = Mathf.Max(0.01f, Mathf.Max(rajat.Value.size.x, rajat.Value.size.z));
