@@ -4,26 +4,35 @@
  * Natiivi 3D-proto (Unity) tarvitsee kaupungin maan ISO2-koodina
  * (3D-selvittäjä 23.9.2026). Lähde: Wikidata, P298 (alpha-3) → P297
  * (alpha-2), haettu 23.9.2026 niille koodeille, joita maailmankartan
- * kaupungeissa esiintyy.
+ * kaupungeissa esiintyy. Linssiseppä 23.9.2026: lisäksi kaikki laudan
+ * maat (countryShapes), joilla ei ole kaupunkia (18 maata ALB…TKM) —
+ * kokoelmat maat ja maarajat saavat iso2:n tästä, ja natiivin vertailu-
+ * ja maatietolinssi tarvitsee sen jokaiselle napautettavalle maalle.
  *
  * Poikkeus: peli käyttää Etelä-Sudanille omaa koodia SDS (standardi on
  * SSD), joten se on kirjattu käsin → SS. Uusi maa laudalla = uusi rivi;
  * tests/sisaltopaketti.test.mjs vaatii, että jokaisella kaupungin maalla
- * on rivi. Jerusalemin maa on laudalla tarkoituksella tyhjä, joten sen
+ * on rivi, ja samoin jokaisella laudan maalla. Jerusalemin maa on laudalla tarkoituksella tyhjä, joten sen
  * ISO2 on myös null.
  */
 export const ISO2 = {
   AFG: 'AF',
   AGO: 'AO',
+  ALB: 'AL',
   ARE: 'AE',
   ARG: 'AR',
+  ARM: 'AM',
   AUS: 'AU',
   AUT: 'AT',
+  AZE: 'AZ',
   BEL: 'BE',
+  BGD: 'BD',
   BGR: 'BG',
   BIH: 'BA',
+  BLR: 'BY',
   BOL: 'BO',
   BRA: 'BR',
+  BTN: 'BT',
   CAN: 'CA',
   CHE: 'CH',
   CHL: 'CL',
@@ -46,6 +55,7 @@ export const ISO2 = {
   FJI: 'FJ',
   FRA: 'FR',
   GBR: 'GB',
+  GEO: 'GE',
   GHA: 'GH',
   GRC: 'GR',
   GRL: 'GL',
@@ -64,8 +74,11 @@ export const ISO2 = {
   JPN: 'JP',
   KAZ: 'KZ',
   KEN: 'KE',
+  KGZ: 'KG',
+  KHM: 'KH',
   KOR: 'KR',
   KWT: 'KW',
+  LAO: 'LA',
   LBR: 'LR',
   LBY: 'LY',
   LKA: 'LK',
@@ -73,13 +86,17 @@ export const ISO2 = {
   LUX: 'LU',
   LVA: 'LV',
   MAR: 'MA',
+  MDA: 'MD',
   MDG: 'MG',
   MEX: 'MX',
+  MKD: 'MK',
   MLI: 'ML',
   MLT: 'MT',
   MMR: 'MM',
+  MNE: 'ME',
   MNG: 'MN',
   MOZ: 'MZ',
+  MYS: 'MY',
   NAM: 'NA',
   NGA: 'NG',
   NIC: 'NI',
@@ -94,6 +111,7 @@ export const ISO2 = {
   PHL: 'PH',
   PNG: 'PG',
   POL: 'PL',
+  PRK: 'KP',
   PRT: 'PT',
   PRY: 'PY',
   QAT: 'QA',
@@ -108,12 +126,15 @@ export const ISO2 = {
   SLB: 'SB',
   SLE: 'SL',
   SOM: 'SO',
+  SRB: 'RS',
   SVK: 'SK',
   SVN: 'SI',
   SWE: 'SE',
   SYR: 'SY',
   TCD: 'TD',
   THA: 'TH',
+  TJK: 'TJ',
+  TKM: 'TM',
   TLS: 'TL',
   TUN: 'TN',
   TUR: 'TR',
