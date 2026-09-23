@@ -12,7 +12,8 @@
 //   - peite, musiikki ja vähennetty liike → koukut, jotka UI ja äänet asettavat
 //
 // TESTIKOMENNOT ilman UI:ta: Documents/linssi-komento.txt, rivi kerrallaan
-// "linssi <id>" (vaihtokytkin), "linssi pois", "linssit" (luettelo lokiin).
+// "linssi <id>" (vaihtokytkin), "linssi pois", "linssit" (luettelo lokiin);
+// maatilan linsseille "maa <ISO3>" (napautus), "vertaa" ja "lehti" (maakyltti).
 // Tulos lokiin ja Documents/linssi-loki.txt:hen.
 using System;
 using System.Collections.Generic;
@@ -69,6 +70,7 @@ namespace Matkakirja.Natiivi
             StartCoroutine(LataaKeksinnot());
             StartCoroutine(LataaIhmisenMatka());
             StartCoroutine(LataaVesistot());
+            StartCoroutine(LataaMaat());
             rekisteri.Vaihtui += l => Kirjaa("auki: " + (l?.Tiedot.Id ?? "ei mitään"));
             komentoPolku = Path.Combine(Application.persistentDataPath, "linssi-komento.txt");
             lokiPolku = Path.Combine(Application.persistentDataPath, "linssi-loki.txt");
@@ -276,6 +278,102 @@ namespace Matkakirja.Natiivi
             catch (Exception e) { Kirjaa("keksinnöt: " + e.Message); }
         }
 
+        /// <summary>
+        /// Vertailu ja maiden tiedot: maarajat ja maat kokoelmista, linssitiedot moduuleista.
+        /// Jäsennys (maarajat ~1 Mt) taustasäikeessä. Maatila on Natiivisepän
+        /// KarttaKerrokset.Maat (MaaKartta), joka haetaan vasta avatessa.
+        /// </summary>
+        System.Collections.IEnumerator LataaMaat()
+        {
+            string rajat = null, maat = null, vertailu = null, maatiedot = null;
+            yield return LinssiSisalto.Hae("kokoelmat/maarajat.json", t => rajat = t);
+            yield return LinssiSisalto.Hae("kokoelmat/maat.json", t => maat = t);
+            yield return LinssiSisalto.Hae("moduulit/js/linssit/vertailu.json", t => vertailu = t);
+            yield return LinssiSisalto.Hae("moduulit/js/linssit/maatiedot.json", t => maatiedot = t);
+            if (rajat == null) { Kirjaa("maat: maarajat puuttuu"); yield break; }
+            object J(string t) => t == null ? null : Matkakirja.Peli.MiniJson.Jasenna(t);
+            var lataus = System.Threading.Tasks.Task.Run(() =>
+                Matkakirja.Linssit.Maat.MaatAineisto.Lue(J(rajat), J(maat), J(vertailu), J(maatiedot)));
+            while (!lataus.IsCompleted) yield return null;
+            if (lataus.IsFaulted) { Kirjaa("maat: " + lataus.Exception?.InnerException?.Message); yield break; }
+            var a = lataus.Result;
+            rekisteri.Lisaa(new MaatSovitin(this, a, vertailu: true));
+            rekisteri.Lisaa(new MaatSovitin(this, a, vertailu: false));
+            Kirjaa($"maat: {a.Maat.Count} maata, {a.Maat.Values.Count(m => m.NimiPallolle)} nimeä");
+        }
+
+        /// <summary>
+        /// Vertailu- tai maatietolinssi Unityssä. Linssi-olio säilyy (vertailun valinnat
+        /// säilyvät sulkemisen yli kuten webissä); maanimikerros luodaan avatessa.
+        /// Natiivi-UI kuuntelee Linssi-olion tapahtumia (VertailuLinssi.Muuttui,
+        /// Tayttui, VertailuPyydetty; MaatiedotLinssi.ValittuMuuttui, LehtiPyydetty).
+        /// </summary>
+        public sealed class MaatSovitin : ILinssi
+        {
+            readonly LinssiOhjain o;
+            readonly Matkakirja.Linssit.Maat.MaatAineisto aineisto;
+            readonly bool onVertailu;
+            Matkakirja.Linssit.Maat.MaatilaLinssi linssi;
+            Matkakirja.Linssit.Maat.IMaaKartta kartta;
+            MaidenNimetKerros nimet;
+
+            public MaatSovitin(LinssiOhjain o, Matkakirja.Linssit.Maat.MaatAineisto a, bool vertailu)
+            { this.o = o; aineisto = a; onVertailu = vertailu; }
+            public LinssiTiedot Tiedot => onVertailu ? aineisto.Vertailu : aineisto.Maatiedot;
+            public bool Auki => linssi?.Auki ?? false;
+            /// <summary>Linssi-olio (luodaan ensimmäisellä avauksella; null ennen sitä).</summary>
+            public Matkakirja.Linssit.Maat.MaatilaLinssi Linssi => linssi;
+
+            public void Avaa(ILinssiYmparisto y)
+            {
+                var k = KarttaKerrokset.Instanssi?.Maat;
+                if (k == null) o.Kirjaa("maat: maatila puuttuu (KarttaKerrokset.Maat)");
+                if (linssi == null || k != kartta)
+                {
+                    kartta = k;
+                    linssi = onVertailu
+                        ? new Matkakirja.Linssit.Maat.VertailuLinssi(aineisto, k, new NimetValitys(this))
+                        : new Matkakirja.Linssit.Maat.MaatiedotLinssi(aineisto, k);
+                    Kirjaaja(linssi);
+                }
+                linssi.Avaa(y);
+            }
+            public void Paivita() => linssi?.Paivita();
+            public void Sulje() => linssi?.Sulje();
+
+            void Kirjaaja(Matkakirja.Linssit.Maat.MaatilaLinssi l)
+            {
+                if (l is Matkakirja.Linssit.Maat.VertailuLinssi v)
+                {
+                    v.Muuttui += () => { if (v.Auki) o.Kirjaa("vertailu: " + string.Join(", ", v.Valinnat)); };
+                    v.Tayttui += () => o.Kirjaa("vertailu: " + Matkakirja.Linssit.Maat.VertailuLinssi.TaynnaOtsikko);
+                    v.VertailuPyydetty += m => o.Kirjaa("vertailu pyydetty: " + string.Join(", ", m.Select(x => x.Nimi)));
+                }
+                if (l is Matkakirja.Linssit.Maat.MaatiedotLinssi t)
+                {
+                    t.ValittuMuuttui += m => o.Kirjaa("maatiedot: " + (m?.Nimi ?? "ei valintaa"));
+                    t.LehtiPyydetty += m => o.Kirjaa($"maatiedot lehti: {m.Nimi} ({m.Maalehti ?? "ei lehteä"})");
+                }
+            }
+
+            /// <summary>Maanimikerros elää vain linssin avauksen ajan.</summary>
+            sealed class NimetValitys : Matkakirja.Linssit.Maat.IMaidenNimet
+            {
+                readonly MaatSovitin s;
+                public NimetValitys(MaatSovitin s) { this.s = s; }
+                public void Nimet(IReadOnlyList<Matkakirja.Linssit.Maat.Maa> maat)
+                {
+                    if (s.nimet == null) s.nimet = MaidenNimetKerros.Luo(s.o.kierto);
+                    s.nimet.Nimet(maat);
+                }
+                public void Pois()
+                {
+                    s.nimet?.Pois();
+                    s.nimet = null;
+                }
+            }
+        }
+
         sealed class KeksinnotSovitin : ILinssi
         {
             readonly LinssiOhjain o;
@@ -424,6 +522,12 @@ namespace Matkakirja.Natiivi
                     rekisteri.Sulje();
                 else if (osat[0] == "linssi" && osat.Length > 1)
                     rekisteri.Valitse(osat[1]);
+                else if (osat[0] == "maa" && osat.Length > 1)
+                    (rekisteri.Auki as MaatSovitin)?.Linssi?.Napauta(osat[1].ToUpperInvariant());
+                else if (osat[0] == "vertaa")
+                    Kirjaa("vertaa: " + ((rekisteri.Auki as MaatSovitin)?.Linssi is Matkakirja.Linssit.Maat.VertailuLinssi v && v.Vertaa()));
+                else if (osat[0] == "lehti")
+                    Kirjaa("lehti: " + ((rekisteri.Auki as MaatSovitin)?.Linssi is Matkakirja.Linssit.Maat.MaatiedotLinssi m && m.AvaaLehti()));
                 else
                     Kirjaa("tuntematon komento: " + rivi);
             }

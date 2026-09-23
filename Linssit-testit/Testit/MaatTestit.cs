@@ -92,8 +92,9 @@ namespace Matkakirja.Linssit.Testit
             // Kaikki pisteet luettu, myös viennin { "$luku": "-0" }.
             Oleta.Sama(59333, A().Maat.Values.Sum(m => m.Renkaat.Sum(r => r.Length)), "pisteitä");
             Oleta.Tosi(A().Maat.Values.All(m => m.W <= m.E && m.S <= m.N), "laatikot");
-            // Iso2 puuttuu 18 maalta: siksi tunnus on ISO3.
-            Oleta.Sama(18, A().Maat.Values.Count(m => m.Iso2 == null), "ilman iso2:ta");
+            // Iso2 kaikilla koepaketista v11 alkaen (PR #2960); tunnus on silti ISO3.
+            Oleta.Sama(0, A().Maat.Values.Count(m => m.Iso2 == null), "ilman iso2:ta");
+            Oleta.Sama("RS", A().Hae("SRB").Iso2);
         }
 
         [Testi] static void LinssitiedotPaketista()
