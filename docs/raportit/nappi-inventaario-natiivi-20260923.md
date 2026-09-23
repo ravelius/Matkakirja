@@ -470,6 +470,12 @@ lisäkaupungin kortti (rivit 132, 133, 136; 135: webin kaupunkipopup ja turisti-
 ole webissä käytössä → ei tarvita). Turisti-info-merkki (134): UI valmis, merkki Natiivisepältä.
 Datat Siirtosepältä: saapumistekstit (~214 kaupunkia), karttavaloista puuttuvat nostot.
 
+Lisäksi (24.9. aamuyö): palaute- ja ehdotuskanava (rivit 49, 73, 97–101; lähetys odottaa ehdotusworkerin
+natiivitunnistusta ja iOS-kuvanvalitsinta, Pelikoodari), täkynostokortti, syvennystarina, "Koe ihme" ja
+"Livian leikekirja" (259–264; kartalta avaus odottaa Siirtosepän nosto-/syvennysvaloja), aarteen paljastus
+koko ruudulle (204) ja reaktiot (266; lähetys odottaa workeria), pelin tehosteet ja lentomoottori (B7),
+"Mitä uutta" + sisältöpäivityksen rivi, offline-lataus maanosittain (omistaja 24.9.).
+
 ## Ei webissä, odottaa omistajaa
 
 Sääntö (omistaja 23.9.2026): jos natiiviin oltaisiin tekemässä jotain, mitä webissä ei ole, sitä ei
