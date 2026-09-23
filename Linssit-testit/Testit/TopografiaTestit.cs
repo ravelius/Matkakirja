@@ -185,20 +185,58 @@ namespace Matkakirja.Linssit.Testit
 
         [Testi] static void OmistamatonEiAukea()
         {
-            var r = new Linssirekisteri(new ValeYmparisto()) { Saatavilla = id => id != "b" };
-            var a = new Koe("a", 1); var b = new Koe("b", 2);
-            r.Lisaa(a); r.Lisaa(b);
-            Oleta.Sama("a", string.Join(",", r.Valittavat.Select(l => l.Tiedot.Id)));
-            Oleta.Sama(false, r.Valitse("b"));
-            Oleta.Sama(0, b.Avauksia);
+            var vanha = Linssirekisteri.Kehittajatila;
+            Linssirekisteri.Kehittajatila = false;
+            try
+            {
+                var r = new Linssirekisteri(new ValeYmparisto()) { Omistaa = id => id != "b" };
+                var a = new Koe("a", 1); var b = new Koe("b", 2);
+                r.Lisaa(a); r.Lisaa(b);
+                Oleta.Sama("a", string.Join(",", r.Valittavat.Select(l => l.Tiedot.Id)));
+                Oleta.Sama(false, r.Valitse("b"));
+                Oleta.Sama(0, b.Avauksia);
+            }
+            finally { Linssirekisteri.Kehittajatila = vanha; }
         }
 
-        [Testi] static void TopografiaAukeaaRadionKynnyksella()
+        [Testi] static void KynnyksetOmistajanPaatoksella()
         {
+            // Omistaja 23.9. (A8/C9): radio 1400 takaisin, topografia samalla kynnyksellä.
+            Oleta.Sama(1400, Linssirekisteri.Avauskynnykset["radio"]);
             Oleta.Sama(1400, Linssirekisteri.Avauskynnykset["topografia"]);
-            Oleta.Tosi(!Linssirekisteri.Avauskynnykset.ContainsKey("radio"));
             Oleta.Sama("ihmisen-matka,keksinnot", string.Join(",", Linssirekisteri.Auenneet(1399)));
-            Oleta.Sama("ihmisen-matka,keksinnot,topografia,satelliitti", string.Join(",", Linssirekisteri.Auenneet(2200)));
+            Oleta.Sama("ihmisen-matka,keksinnot,radio,topografia,satelliitti", string.Join(",", Linssirekisteri.Auenneet(2200)));
+        }
+
+        [Testi] static void KynnysAntaaSeuraavanOmistamattoman()
+        {
+            Oleta.Sama("", string.Join(",", Linssirekisteri.Kynnys(new string[0], 0, 399)));
+            Oleta.Sama("ihmisen-matka", string.Join(",", Linssirekisteri.Kynnys(new string[0], 390, 410)));
+            // Yksi kutsu yli kahden kynnyksen (web: pääaarre + ennätys).
+            Oleta.Sama("ihmisen-matka,keksinnot", string.Join(",", Linssirekisteri.Kynnys(new string[0], 0, 900)));
+            // Ostettu keksinnöt: 800 antaa seuraavan (radio), 1400 astronautin ja topografian.
+            Oleta.Sama("radio", string.Join(",", Linssirekisteri.Kynnys(new[] { "ihmisen-matka", "keksinnot" }, 700, 900)));
+            Oleta.Sama("satelliitti,topografia", string.Join(",",
+                Linssirekisteri.Kynnys(new[] { "ihmisen-matka", "keksinnot", "radio" }, 1300, 1500)));
+            // Kynnys ei ylity kahdesti.
+            Oleta.Sama("", string.Join(",", Linssirekisteri.Kynnys(new string[0], 500, 700)));
+            Oleta.Sama("", string.Join(",", Linssirekisteri.Kynnys(new string[0], 900, 800)));
+        }
+
+        [Testi] static void KehittajatilaAvaaKaikki()
+        {
+            var vanha = Linssirekisteri.Kehittajatila;
+            try
+            {
+                var r = new Linssirekisteri(new ValeYmparisto());
+                r.Lisaa(new Topografia());
+                Linssirekisteri.Kehittajatila = false;
+                Oleta.Sama(0, r.Valittavat.Count, "ilman omistusta ei mitään");
+                Oleta.Sama(false, r.Valitse("topografia"));
+                Linssirekisteri.Kehittajatila = true;
+                Oleta.Sama(1, r.Valittavat.Count);
+            }
+            finally { Linssirekisteri.Kehittajatila = vanha; }
         }
 
         [Testi] static void KaksoistunnusHeittaa()

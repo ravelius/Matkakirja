@@ -54,8 +54,13 @@ namespace Matkakirja.Linssit.Astronautti
         public static double Kyllaisyys = 1.0;
         public const double WebinKyllaisyys = 0.8;
 
-        /// <summary>saturate(0.8) -reliefisarja (null = ei vielä ämpärissä → täysvärinen).</summary>
-        public static string VaimeaSarja = null;
+        /// <summary>
+        /// saturate(0.8) -reliefisarja (Karttaseppä 23.9.2026: sRGB-arvoihin ennen jpg-pakkausta,
+        /// muuten sama kuin Topografia.ReliefiSarja; laatat.json "kyllaisyys": 0.8).
+        /// null = täysvärinen.
+        /// </summary>
+        public static string VaimeaSarja =
+            "https://media.matkakirja.app/matkakirja/reliefipyramidi/20260920/pallo-k08/{z}/{x}/{y}.jpg";
 
         /// <summary>Kytkimen mukainen sarja; vaimea vain, jos se on olemassa.</summary>
         public static string ReliefinSarja() =>

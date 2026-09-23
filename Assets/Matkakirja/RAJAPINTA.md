@@ -164,7 +164,7 @@ Kaikki pelin sisältö datana, moottorineutraalina JSONina. Lähde: web-pelin
 |---|---|---|
 | kaupungit, reitit, laatat | Natiiviseppä | lat/lon, maa2, tarkeys 0–3, lauta {x,y}; reitin laji, askelia, via; laattatyypit ja määrät |
 | saannot, saapuminen, tapahtumat | Pelikoodari | hinnat, XP, arvovälit, BOT_SKILL; saapumishaut kaupungeittain; tapahtumakortit |
-| kysymykset, kaksintaistelut, kuvakysymykset, lippumaat | Pelikoodari | visat ja väittämät; kuvat ja liput pelin arvontajärjestyksessä url:eineen |
+| kysymykset, kuvakysymykset, lippumaat | Pelikoodari | visat ja väittämät; kuvat ja liput pelin arvontajärjestyksessä url:eineen |
 | pulmat, pulmaaineisto, esilasketut | Pelikoodari | generaattori-tunniste; pulmien lähdetaulut; esilasketut apufunktiot |
 | luennat, aanitaulut | Pelikoodari | isoisän luennat (url, kesto, aikaleimat); tehosteet, näytteet, musiikkiketju |
 | linssiaineisto (+ moduulit/js/linssit/*) | Linssiseppä | maskit, manifestit, pilvet, astronautin äänet, avauskynnykset |

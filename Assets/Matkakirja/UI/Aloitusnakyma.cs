@@ -43,7 +43,7 @@ namespace Matkakirja.Natiivi
         public const string IntroPaikka = "Heathrow, Lontoo";
         public const string IntroValinta = "Valitse aloituskaupunki";
         public const string IntroPuhe = "https://media.matkakirja.app/audio/intro-puhe.mp3?v=2";
-        /// <summary>Webin ETUSIVUN_KOHTEET (js/ui-apurit.js), näyttöjärjestyksessä.</summary>
+        /// <summary>Varalista, jos pelin Lahtokaupungit() ei ole saatavilla (webin ETUSIVUN_KOHTEET).</summary>
         public static readonly string[] Kohteet =
         {
             "ateena", "newyork", "kairo", "rio", "mumbai", "peking", "sydney",
@@ -412,7 +412,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Testikomento: portti | avaus | loppu | valinta (ilman peliä; valinta kirjataan ilmoitukseen).</summary>
         public void Testaa(string vaihe, Action<string> valittu)
         {
-            Nayta(valittu, null, vaihe == "jatka" ? () => valittu("(jatka)") : (Action)null);
+            // Pelin lähtökaupungit (paketin aloitus = true, 19 kpl), jos peli on ladattu; muuten webin varalista.
+            Nayta(valittu, PeliOhjain.Instanssi?.Lahtokaupungit(), vaihe == "jatka" ? () => valittu("(jatka)") : (Action)null);
             if (vaihe == "jatka") return;
             if (vaihe == "portti") return;
             Portista();

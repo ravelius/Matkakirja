@@ -46,8 +46,10 @@ namespace Matkakirja.Natiivi
             Kytkinrivi(Kytkin.Aanimaisema, Ikonit.Aanimaisema);
             Otsikko("Kartta");
             Kytkinrivi(Kytkin.PieniLiike, Ikonit.PieniLiike);
-            Otsikko("Kokeet");
-            reliefi = Rakenne.Nappi(null, "mk-kytkinrivi", VaihdaReliefi, Sisalto, Ikonit.Viiva["satelliitti"]);
+            // KOKEET vain kehittäjätilassa (Fablen tarkastus C4: ei App Storen pelaajille).
+            kokeet = Rakenne.El("mk-paavalikko__kokeet", Sisalto, PickingMode.Ignore);
+            Rakenne.Teksti("KOKEET", "mk-pudotus__otsikko", kokeet);
+            reliefi = Rakenne.Nappi(null, "mk-kytkinrivi", VaihdaReliefi, kokeet, Ikonit.Viiva["satelliitti"]);
             reliefi.tooltip = "Astronautin kameran reliefi: täysvärinen (1,0) tai webin vaimea (0,8). Näkyy seuraavalla avauksella.";
             Rakenne.Teksti("Astronautin reliefi", "mk-kytkinrivi__nimi", reliefi);
             reliefiTila = Rakenne.Teksti("", "mk-kytkinrivi__tila", reliefi);
@@ -70,11 +72,17 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(tietoja, Kirjasin.KoneLihava);
 
             var pohja = Rakenne.El("mk-pudotus__pohjarivi", Sisalto, PickingMode.Ignore);
-            versio = Rakenne.Teksti("", "mk-pudotus__versio", pohja);
+            // Versiorivi avaa kehittäjätilan koodi-ikkunan (webin versiokulma #kehittaja-btn).
+            var versioNappi = Rakenne.Nappi("", "mk-pudotus__versionappi", () => { Sulje(); kehittaja.Avaa(); }, pohja);
+            versio = versioNappi.Q<Label>();
+            versio.AddToClassList("mk-pudotus__versio");
+            kehittaja = new KehittajaIkkuna(kerros);
             Asetukset.Muuttui += _ => { if (Auki) Paivita(); };
         }
 
         readonly Button reliefi;
+        readonly VisualElement kokeet;
+        readonly KehittajaIkkuna kehittaja;
         readonly Label reliefiTila;
 
         static bool ReliefiTaysi => Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Kyllaisyys > 0.9f;
@@ -104,7 +112,68 @@ namespace Matkakirja.Natiivi
             }
             reliefi.EnableInClassList("mk-valittu", ReliefiTaysi);
             reliefiTila.text = ReliefiTaysi ? "TÄYSI" : "VAIMEA";
-            versio.text = "v" + Application.version + (UiNakymat.SisaltoVersio != null ? " · sisältö " + UiNakymat.SisaltoVersio : "");
+            kokeet.style.display = Asetukset.Kehittaja ? DisplayStyle.Flex : DisplayStyle.None;
+            versio.text = (Asetukset.Kehittaja ? "kehittäjä · " : "") + "v" + Application.version + (UiNakymat.SisaltoVersio != null ? " · sisältö " + UiNakymat.SisaltoVersio : "");
+        }
+    }
+
+    /// <summary>
+    /// Kehittäjätilan koodi-ikkuna (webin #kehittaja-dialog): salasanakenttä ja Kytke päälle,
+    /// tai päällä ollessa Kytke pois. Väärä koodi: "Koodi ei kelpaa."
+    /// </summary>
+    public sealed class KehittajaIkkuna
+    {
+        readonly VisualElement himmennys;
+        readonly Label selite, virhe;
+        readonly TextField kentta;
+        readonly Button ok;
+
+        public KehittajaIkkuna(UiKerros kerros)
+        {
+            himmennys = Rakenne.El("mk-himmennys mk-himmennys--tumma", kerros.Juuri(UiKerros.Valikot));
+            himmennys.style.display = DisplayStyle.None;
+            himmennys.RegisterCallback<PointerDownEvent>(e => { if (e.target == himmennys) Sulje(); });
+            var kortti = new Kortti("mk-kehittaja");
+            himmennys.Add(kortti);
+            Kirjasimet.Aseta(Rakenne.Teksti("Kehittäjätila", "mk-kortti__otsikko", kortti.Sisus), Kirjasin.LukuLihava);
+            selite = Rakenne.Teksti("", "mk-kortti__teksti", kortti.Sisus);
+            kentta = new TextField { isPasswordField = true, maxLength = 64 };
+            kentta.AddToClassList("mk-chat__kentta");
+            kentta.textEdition.placeholder = "Koodi";
+            kortti.Sisus.Add(kentta);
+            virhe = Rakenne.Teksti("Koodi ei kelpaa.", "mk-kortti__teksti mk-kehittaja__virhe", kortti.Sisus);
+            var napit = Rakenne.El("mk-kortti__napit", kortti.Sisus, PickingMode.Ignore);
+            Rakenne.Nappi("Peruuta", "mk-nappi--haamu", Sulje, napit);
+            ok = Rakenne.Nappi("Kytke päälle", "mk-nappi--kulta", Kytke, napit);
+            Rakenne.Tausta(ok, Kuviot.Kulta);
+            Kirjasimet.Aseta(ok, Kirjasin.KoneLihava);
+        }
+
+        public void Avaa()
+        {
+            bool paalla = Asetukset.Kehittaja;
+            selite.text = paalla ? "Kehittäjätila on päällä: KOKEET-osio näkyy päävalikossa." : "Kehittäjätila avaa päävalikon KOKEET-osion.";
+            kentta.style.display = paalla ? DisplayStyle.None : DisplayStyle.Flex;
+            kentta.value = "";
+            virhe.style.display = DisplayStyle.None;
+            ok.Q<Label>().text = paalla ? "Kytke pois" : "Kytke päälle";
+            Rakenne.Nayta(himmennys, true, 220);
+            SyoteLukko.Esta(this);
+        }
+
+        void Sulje()
+        {
+            kentta.Blur();
+            Rakenne.Nayta(himmennys, false, 200);
+            SyoteLukko.Vapauta(this);
+        }
+
+        void Kytke()
+        {
+            if (Asetukset.Kehittaja) { Asetukset.AsetaKehittaja(null); Sulje(); return; }
+            if (Asetukset.AsetaKehittaja(kentta.value)) { Sulje(); return; }
+            kentta.value = "";
+            virhe.style.display = DisplayStyle.Flex;
         }
     }
 }
