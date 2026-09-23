@@ -29,6 +29,8 @@ namespace Matkakirja.Natiivi
                 var a = l[i];
                 var m = maat[i];
                 m.Id = a.Id; m.Nimi = a.Nimi; m.Tavut = a.Tavut; m.Ladattu = a.Ladattu; m.Virhe = a.Virhe;
+                m.Manner = a.Manner; // maailma-rivillä null: UI laskee sen vain "Kaikki"-riviin
+
                 m.Tila = a.Tila switch
                 {
                     Alueet.Tila.Jonossa => OfflineTila.Jonossa,

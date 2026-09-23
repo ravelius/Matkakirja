@@ -7,8 +7,8 @@ using UnityEngine;
 namespace Matkakirja
 {
     /// <summary>
-    /// Offline-lataus maittain (RAJAPINTA.md luku 7; omistajan linjaus: binaari pieni,
-    /// kaikki striimataan, maat valinnaisesti laitteelle). Latauslista on sisältöpaketin
+    /// Offline-lataus (RAJAPINTA.md luku 7; omistajan linjaus: binaari pieni, kaikki
+    /// striimataan; pelaaja lataa maanosittain tai "Kaikki", UI ryhmittelee maat Manner-kentällä). Latauslista on sisältöpaketin
     /// offline.json (Siirtoseppä, RAJAPINTA 10.2): globaali osa (rasteri z0–5, maaston
     /// yläosa) omana alueenaan "maailma" ja maat ISO3-tunnuksella.
     ///
@@ -29,6 +29,8 @@ namespace Matkakirja
         public sealed class Alue
         {
             public string Id, Nimi;
+            /// <summary>Maanosa offline.jsonin maat[].manner-kentästä (skeema 1.23); maailmalla null.</summary>
+            public string Manner;
             public long Tavut, Ladattu;
             public Tila Tila;
             public string Virhe;
@@ -98,7 +100,7 @@ namespace Matkakirja
             long tavut = 0;
             if (d.TryGetValue("tavuja", out var t) && t is Dictionary<string, object> td && td.TryGetValue("yht", out var y) && y is double yd)
                 tavut = (long)yd;
-            var a = new Alue { Id = id, Nimi = nimi, Tavut = tavut, Tiedot = d };
+            var a = new Alue { Id = id, Nimi = nimi, Tavut = tavut, Tiedot = d, Manner = d.TryGetValue("manner", out var mn) ? mn as string : null };
             if (File.Exists(Merkki(id))) { a.Tila = Tila.Valmis; a.Ladattu = tavut; }
             return a;
         }
