@@ -1,234 +1,169 @@
 {
   "versio": 2,
   "kaupunki": "helsinki",
-  "teksti": "Helsingin valkoisen kirkon katolla apostolit katsovat merelle. Alhaalla torilla kalakauppias katseli vaakaa. Kummankin työ vaikutti vakavalta. Tuuli nosti paperini, ja nainen painoi sen paikoilleen silakalla ennen kuin ehdin auttaa. Nyt kartassani on Suomenlahden kohdalla täsmällinen rasvajälki. Harvoin olen saanut yhtä luotettavaa paikallistietoa.",
-  "tekstiSha256": "7f1dadbbab6f169cfda56441f2b067607649d7193a64fddbabfc3492a8c31fcd",
+  "teksti": "Kirkon apostolit katsoivat merelle. Torilla kalakauppias punnitsi silakoita. Kummankin työ vaikutti vakavalta. Tuuli nosti karttani; nainen painoi sen silakalla paikoilleen. Suomenlahdelle jäi rasvajälki. Harvoin olen saanut yhtä täsmällistä paikallistietoa.",
+  "tekstiSha256": "f348050cd2622c928d369f2e017a38fd5d1813bfaeba8c4b8cbe77bb698fe995",
   "aani": {
     "nimi": "puhe-fokus-matkakirja-helsinki.mp3",
     "versio": 2,
-    "tavut": 491146,
-    "sha256": "233e2e06647b6f3cad753aeafdfbc5d97dc87340d9a5cbd798184718eb57c1e0"
+    "tavut": 382476,
+    "sha256": "6f88a886bdf2628662e83cb6a4a325b8f7b39852840b8de7ae27116ce1f8db32"
   },
-  "kesto": 30619,
+  "kesto": 23820,
   "sanat": [
     {
-      "sana": "Helsingin",
-      "alku": 119,
-      "loppu": 579
-    },
-    {
-      "sana": "valkoisen",
-      "alku": 659,
-      "loppu": 1199
-    },
-    {
-      "sana": "kirkon",
-      "alku": 1299,
-      "loppu": 1699
-    },
-    {
-      "sana": "katolla",
-      "alku": 1759,
-      "loppu": 2200
+      "sana": "Kirkon",
+      "alku": 100,
+      "loppu": 440
     },
     {
       "sana": "apostolit",
-      "alku": 2599,
-      "loppu": 3139
+      "alku": 520,
+      "loppu": 1040
     },
     {
-      "sana": "katsovat",
-      "alku": 3179,
-      "loppu": 3599
+      "sana": "katsoivat",
+      "alku": 1080,
+      "loppu": 1600
     },
     {
       "sana": "merelle",
-      "alku": 3659,
-      "loppu": 4119
+      "alku": 1640,
+      "loppu": 2100
     },
     {
-      "sana": "Alhaalla",
-      "alku": 5759,
-      "loppu": 6199
-    },
-    {
-      "sana": "torilla",
-      "alku": 6279,
-      "loppu": 6739
+      "sana": "Torilla",
+      "alku": 3480,
+      "loppu": 3860
     },
     {
       "sana": "kalakauppias",
-      "alku": 6940,
-      "loppu": 7699
+      "alku": 3900,
+      "loppu": 4660
     },
     {
-      "sana": "katseli",
-      "alku": 7739,
-      "loppu": 8139
+      "sana": "punnitsi",
+      "alku": 4720,
+      "loppu": 5120
     },
     {
-      "sana": "vaakaa",
-      "alku": 8179,
-      "loppu": 8739
+      "sana": "silakoita",
+      "alku": 5180,
+      "loppu": 5840
     },
     {
       "sana": "Kummankin",
-      "alku": 10319,
-      "loppu": 10859
+      "alku": 7340,
+      "loppu": 7840
     },
     {
       "sana": "työ",
-      "alku": 10920,
-      "loppu": 11159
+      "alku": 7880,
+      "loppu": 8080
     },
     {
       "sana": "vaikutti",
-      "alku": 11239,
-      "loppu": 11659
+      "alku": 8140,
+      "loppu": 8580
     },
     {
       "sana": "vakavalta",
-      "alku": 11719,
-      "loppu": 12339
+      "alku": 8640,
+      "loppu": 9360
     },
     {
       "sana": "Tuuli",
-      "alku": 13979,
-      "loppu": 14259
+      "alku": 11040,
+      "loppu": 11300
     },
     {
       "sana": "nosti",
-      "alku": 14299,
-      "loppu": 14599
+      "alku": 11360,
+      "loppu": 11620
     },
     {
-      "sana": "paperini",
-      "alku": 14659,
-      "loppu": 15179
-    },
-    {
-      "sana": "ja",
-      "alku": 15579,
-      "loppu": 15639
+      "sana": "karttani",
+      "alku": 11680,
+      "loppu": 12180
     },
     {
       "sana": "nainen",
-      "alku": 15699,
-      "loppu": 16039
+      "alku": 13040,
+      "loppu": 13380
     },
     {
       "sana": "painoi",
-      "alku": 16100,
-      "loppu": 16420
+      "alku": 13440,
+      "loppu": 13820
     },
     {
       "sana": "sen",
-      "alku": 16479,
-      "loppu": 16639
-    },
-    {
-      "sana": "paikoilleen",
-      "alku": 16699,
-      "loppu": 17340
+      "alku": 13860,
+      "loppu": 14020
     },
     {
       "sana": "silakalla",
-      "alku": 17440,
-      "loppu": 18139
+      "alku": 14080,
+      "loppu": 14580
     },
     {
-      "sana": "ennen",
-      "alku": 18239,
-      "loppu": 18440
+      "sana": "paikoilleen",
+      "alku": 14640,
+      "loppu": 15320
     },
     {
-      "sana": "kuin",
-      "alku": 18500,
-      "loppu": 18639
+      "sana": "Suomenlahdelle",
+      "alku": 16820,
+      "loppu": 17600
     },
     {
-      "sana": "ehdin",
-      "alku": 18739,
-      "loppu": 19000
-    },
-    {
-      "sana": "auttaa",
-      "alku": 19059,
-      "loppu": 19579
-    },
-    {
-      "sana": "Nyt",
-      "alku": 21760,
-      "loppu": 21899
-    },
-    {
-      "sana": "kartassani",
-      "alku": 22000,
-      "loppu": 22579
-    },
-    {
-      "sana": "on",
-      "alku": 22639,
-      "loppu": 22759
-    },
-    {
-      "sana": "Suomenlahden",
-      "alku": 22799,
-      "loppu": 23479
-    },
-    {
-      "sana": "kohdalla",
-      "alku": 23539,
-      "loppu": 23939
-    },
-    {
-      "sana": "täsmällinen",
-      "alku": 24100,
-      "loppu": 24760
+      "sana": "jäi",
+      "alku": 17760,
+      "loppu": 17920
     },
     {
       "sana": "rasvajälki",
-      "alku": 24819,
-      "loppu": 25619
+      "alku": 17980,
+      "loppu": 18860
     },
     {
       "sana": "Harvoin",
-      "alku": 27539,
-      "loppu": 27939
+      "alku": 20760,
+      "loppu": 21140
     },
     {
       "sana": "olen",
-      "alku": 28000,
-      "loppu": 28180
+      "alku": 21180,
+      "loppu": 21360
     },
     {
       "sana": "saanut",
-      "alku": 28239,
-      "loppu": 28579
+      "alku": 21420,
+      "loppu": 21780
     },
     {
       "sana": "yhtä",
-      "alku": 28659,
-      "loppu": 28939
+      "alku": 21900,
+      "loppu": 22100
     },
     {
-      "sana": "luotettavaa",
-      "alku": 29000,
-      "loppu": 29619
+      "sana": "täsmällistä",
+      "alku": 22160,
+      "loppu": 22800
     },
     {
       "sana": "paikallistietoa",
-      "alku": 29719,
-      "loppu": 30619
+      "alku": 22840,
+      "loppu": 23820
     }
   ],
   "lauseet": [
-    119,
-    5759,
-    10319,
-    13979,
-    21760,
-    27539
+    100,
+    3480,
+    7340,
+    11040,
+    16820,
+    20760
   ],
-  "luotu": "2026-09-11T12:04:27.584Z"
+  "luotu": "2026-09-23T15:39:27.725Z"
 }

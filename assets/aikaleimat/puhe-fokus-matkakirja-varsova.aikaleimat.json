@@ -1,239 +1,236 @@
 {
   "versio": 2,
   "kaupunki": "varsova",
-  "teksti": "Kartassani Varsova kuuluu Venäjälle. Torin leipuri sanoi olevansa puolalainen ja kopautti leipää, jotta kuulisin sen olevan tuoretta. Talot olivat vieri vieressä kuin kuuntelemassa. Viraston kyltissä kirjaimet olivat venäläisiä, mutta aamiaiseni sain puolaksi. Karttaan voi vetää rajan yhdellä liikkeellä. Ihmiset eivät siirry kynän mukana.",
-  "tekstiSha256": "718773556689299affff385d2455fa17b64dc1a9fd238dc97e5748cc1726929c",
+  "teksti": "Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.",
+  "tekstiSha256": "cfbd7d32596fb91ef7759e0ad739b20f2c1cb8f6b7283f12eb9a9b1cdd73761b",
   "aani": {
     "nimi": "puhe-fokus-matkakirja-varsova.mp3",
     "versio": 2,
-    "tavut": 451439,
-    "sha256": "c16cce1f7a92622a22e6a5459dfd82f4b26bd0a152a825cb9f428e46628b76b9"
+    "tavut": 505356,
+    "sha256": "b84a215535d352a8bf5e0c46ae29a500391f8af2b4ef88141fb2b0e425fb2d7e"
   },
-  "kesto": 28139,
+  "kesto": 31500,
   "sanat": [
     {
-      "sana": "Kartassani",
-      "alku": 159,
-      "loppu": 740
+      "sana": "Varsovan",
+      "alku": 60,
+      "loppu": 500
     },
     {
-      "sana": "Varsova",
-      "alku": 779,
-      "loppu": 1259
+      "sana": "matkaoppaani",
+      "alku": 540,
+      "loppu": 1340
     },
     {
-      "sana": "kuuluu",
-      "alku": 1299,
-      "loppu": 1620
+      "sana": "oli",
+      "alku": 1400,
+      "loppu": 1540
     },
     {
-      "sana": "Venäjälle",
-      "alku": 1699,
-      "loppu": 2339
+      "sana": "painettu",
+      "alku": 1600,
+      "loppu": 2040
     },
     {
-      "sana": "Torin",
-      "alku": 3839,
-      "loppu": 4099
+      "sana": "Venäjän",
+      "alku": 2100,
+      "loppu": 2520
     },
     {
-      "sana": "leipuri",
-      "alku": 4159,
-      "loppu": 4579
+      "sana": "santarmien",
+      "alku": 2580,
+      "loppu": 3180
     },
     {
-      "sana": "sanoi",
-      "alku": 4619,
-      "loppu": 4880
+      "sana": "kirjapainossa",
+      "alku": 3240,
+      "loppu": 4200
     },
     {
-      "sana": "olevansa",
-      "alku": 4920,
-      "loppu": 5380
+      "sana": "Siinä",
+      "alku": 5620,
+      "loppu": 5820
     },
     {
-      "sana": "puolalainen",
-      "alku": 5420,
-      "loppu": 6019
+      "sana": "oli",
+      "alku": 5880,
+      "loppu": 6000
+    },
+    {
+      "sana": "nähtävyyksiä",
+      "alku": 6040,
+      "loppu": 6880
     },
     {
       "sana": "ja",
-      "alku": 6159,
-      "loppu": 6259
+      "alku": 6920,
+      "loppu": 7020
     },
     {
-      "sana": "kopautti",
-      "alku": 6299,
-      "loppu": 6779
+      "sana": "passisääntöjä",
+      "alku": 7060,
+      "loppu": 8080
     },
     {
-      "sana": "leipää",
-      "alku": 6859,
-      "loppu": 7259
+      "sana": "Tsaarin",
+      "alku": 9320,
+      "loppu": 9700
     },
     {
-      "sana": "jotta",
-      "alku": 7339,
-      "loppu": 7579
+      "sana": "linnoitusta",
+      "alku": 9760,
+      "loppu": 10400
     },
     {
-      "sana": "kuulisin",
-      "alku": 7639,
-      "loppu": 8059
+      "sana": "piirtäessäni",
+      "alku": 10440,
+      "loppu": 11320
     },
     {
-      "sana": "sen",
-      "alku": 8139,
-      "loppu": 8260
+      "sana": "sotilas",
+      "alku": 11400,
+      "loppu": 11800
     },
     {
-      "sana": "olevan",
-      "alku": 8319,
-      "loppu": 8559
+      "sana": "tuli",
+      "alku": 11840,
+      "loppu": 12020
     },
     {
-      "sana": "tuoretta",
-      "alku": 8639,
-      "loppu": 9239
+      "sana": "katsomaan",
+      "alku": 12060,
+      "loppu": 12560
     },
     {
-      "sana": "Talot",
-      "alku": 11079,
-      "loppu": 11340
+      "sana": "olkani",
+      "alku": 12660,
+      "loppu": 13000
     },
     {
-      "sana": "olivat",
-      "alku": 11359,
-      "loppu": 11639
+      "sana": "yli",
+      "alku": 13080,
+      "loppu": 13340
     },
     {
-      "sana": "vieri",
-      "alku": 11739,
-      "loppu": 11979
+      "sana": "Selitin",
+      "alku": 14840,
+      "loppu": 15200
     },
     {
-      "sana": "vieressä",
-      "alku": 12039,
-      "loppu": 12479
+      "sana": "olevani",
+      "alku": 15240,
+      "loppu": 15620
     },
     {
-      "sana": "kuin",
-      "alku": 12519,
-      "loppu": 12779
+      "sana": "brittiläinen",
+      "alku": 15640,
+      "loppu": 16260
     },
     {
-      "sana": "kuuntelemassa",
-      "alku": 12840,
-      "loppu": 13619
+      "sana": "laivaston",
+      "alku": 16320,
+      "loppu": 16840
     },
     {
-      "sana": "Viraston",
-      "alku": 15119,
-      "loppu": 15559
+      "sana": "kartanpiirtäjä",
+      "alku": 16880,
+      "loppu": 17840
     },
     {
-      "sana": "kyltissä",
-      "alku": 15659,
-      "loppu": 16180
+      "sana": "Hän",
+      "alku": 19440,
+      "loppu": 19560
     },
     {
-      "sana": "kirjaimet",
-      "alku": 16239,
-      "loppu": 16680
+      "sana": "haki",
+      "alku": 19600,
+      "loppu": 19820
     },
     {
-      "sana": "olivat",
-      "alku": 16719,
-      "loppu": 16979
+      "sana": "toisen",
+      "alku": 19880,
+      "loppu": 20220
     },
     {
-      "sana": "venäläisiä",
-      "alku": 17039,
-      "loppu": 17659
+      "sana": "sotilaan",
+      "alku": 20260,
+      "loppu": 20840
     },
     {
-      "sana": "mutta",
-      "alku": 18459,
-      "loppu": 18699
+      "sana": "Sana",
+      "alku": 22160,
+      "loppu": 22480
     },
     {
-      "sana": "aamiaiseni",
-      "alku": 18760,
-      "loppu": 19459
+      "sana": "entinen",
+      "alku": 22620,
+      "loppu": 23200
+    },
+    {
+      "sana": "muistui",
+      "alku": 23280,
+      "loppu": 23640
+    },
+    {
+      "sana": "mieleeni",
+      "alku": 23680,
+      "loppu": 24120
+    },
+    {
+      "sana": "vasta",
+      "alku": 24160,
+      "loppu": 24420
+    },
+    {
+      "sana": "vartiotuvassa",
+      "alku": 24460,
+      "loppu": 25500
+    },
+    {
+      "sana": "Illalla",
+      "alku": 27600,
+      "loppu": 27900
     },
     {
       "sana": "sain",
-      "alku": 19579,
-      "loppu": 19799
+      "alku": 27940,
+      "loppu": 28140
     },
     {
-      "sana": "puolaksi",
-      "alku": 19859,
-      "loppu": 20399
+      "sana": "passini",
+      "alku": 28180,
+      "loppu": 28580
     },
     {
-      "sana": "Karttaan",
-      "alku": 22359,
-      "loppu": 22799
+      "sana": "takaisin",
+      "alku": 28620,
+      "loppu": 29240
     },
     {
-      "sana": "voi",
-      "alku": 22859,
-      "loppu": 22999
+      "sana": "Piirros",
+      "alku": 30440,
+      "loppu": 30960
     },
     {
-      "sana": "vetää",
-      "alku": 23039,
-      "loppu": 23359
+      "sana": "jäi",
+      "alku": 31040,
+      "loppu": 31200
     },
     {
-      "sana": "rajan",
-      "alku": 23439,
-      "loppu": 23719
-    },
-    {
-      "sana": "yhdellä",
-      "alku": 23819,
-      "loppu": 24100
-    },
-    {
-      "sana": "liikkeellä",
-      "alku": 24180,
-      "loppu": 24799
-    },
-    {
-      "sana": "Ihmiset",
-      "alku": 26379,
-      "loppu": 26760
-    },
-    {
-      "sana": "eivät",
-      "alku": 26819,
-      "loppu": 27059
-    },
-    {
-      "sana": "siirry",
-      "alku": 27119,
-      "loppu": 27479
-    },
-    {
-      "sana": "kynän",
-      "alku": 27539,
-      "loppu": 27819
-    },
-    {
-      "sana": "mukana",
-      "alku": 27879,
-      "loppu": 28139
+      "sana": "heille",
+      "alku": 31240,
+      "loppu": 31500
     }
   ],
   "lauseet": [
-    159,
-    3839,
-    11079,
-    15119,
-    22359,
-    26379
+    60,
+    5620,
+    9320,
+    14840,
+    19440,
+    22160,
+    27600,
+    30440
   ],
-  "luotu": "2026-09-11T12:05:08.137Z"
+  "luotu": "2026-09-23T15:34:44.867Z"
 }
