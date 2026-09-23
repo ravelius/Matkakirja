@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2150, teksti: 'Sisältöpaketti natiiville: skeema 1.2-1.9' },
   { v: 2149, teksti: 'Pelikoodari+Karttaseppä nippu: sulavuus ja poltetut nostot' },
   { v: 2148, teksti: 'Isoisan etusivukuvat: lahde-kentta taydennetty' },
   { v: 2147, teksti: 'Testitila Suoraan kartalle' },
