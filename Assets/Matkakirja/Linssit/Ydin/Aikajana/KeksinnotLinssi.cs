@@ -98,12 +98,20 @@ namespace Matkakirja.Linssit.Aikajana
             if (luennat?.Esittely != null) Soita(luennat.Esittely);
         }
 
+        /// <summary>
+        /// Kaari käynnistyi (Käynnistä-nappi, testikomento tai muu reitti): esittelylaatikko
+        /// väistyy. UI kuuntelee tätä eikä pelkkää omaa nappiaan (Laitetestaajan havainto 23.9.).
+        /// </summary>
+        public event Action Kaynnistetty;
+        public bool OnKaynnistetty { get; private set; }
+
         /// <summary>Esittelylaatikon Käynnistä-nappi: esittelyn luenta katkeaa, kello lähtee.</summary>
         public void Kaynnista()
         {
             if (Ajo == null) return;
             Hiljaa();
             Ajo.Jatka();
+            if (!OnKaynnistetty) { OnKaynnistetty = true; Kaynnistetty?.Invoke(); }
         }
 
         /// <summary>Välinäytöksen Jatka-nappi: välinäytöksen puhe katkeaa (web suljeValinaytos).</summary>
