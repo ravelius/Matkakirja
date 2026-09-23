@@ -15,7 +15,8 @@
 //
 // HYBRIDIMALLI (omistaja 23.9.2026, Siirtosepän lisenssiluokat): "sallittu" soitetaan,
 // "linkki" näyttää aseman nimen ja sivun (UI: "Avaa aseman sivu"), "kielletty" soittaa vain
-// vara-äänitteen, jos sellainen on. Luokaton (varareitti) soitetaan vain kehittäjätilassa.
+// vara-äänitteen, jos sellainen on. Luokaton (varareitti) ei soi koskaan, ei edes
+// kehittäjätilassa (Fablen sitova sääntö 23.9.2026: esim. Yle on kielletty).
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -118,7 +119,9 @@ namespace Matkakirja.Linssit.Radio
                 case "sallittu": return string.IsNullOrEmpty(a.Url) ? Toiminto.Ei : Toiminto.Soita;
                 case "linkki": return string.IsNullOrEmpty(a.Sivu) ? (string.IsNullOrEmpty(a.VaraUrl) ? Toiminto.Ei : Toiminto.Aanite) : Toiminto.Linkki;
                 case "kielletty": return string.IsNullOrEmpty(a.VaraUrl) ? Toiminto.Ei : Toiminto.Aanite;
-                case null: return Linssirekisteri.Kehittajatila && !string.IsNullOrEmpty(a.Url) ? Toiminto.Soita : Toiminto.Ei;
+                // Luokaton (moduulin varareitti, kokoelma puuttuu) ei soi koskaan, ei edes
+                // kehittäjätilassa (Fablen sitova radiosääntö 23.9.2026).
+                case null: return string.IsNullOrEmpty(a.Sivu) ? Toiminto.Ei : Toiminto.Linkki;
                 default: return Toiminto.Ei;
             }
         }
