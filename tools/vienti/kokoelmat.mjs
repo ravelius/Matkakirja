@@ -36,6 +36,7 @@ import { livianEleidenOsoite } from '../../js/livia-puheeleet-lataus.js';
 import { livianPuheeleenTiedot, livianLuentareaktionTiedot } from '../../js/livia-tilanteet.js';
 import { repliikit as livianRepliikit } from '../generoi-pulu.mjs';
 import { lueLivianEleet, eleidenTila } from './livian-eleet.mjs';
+import { lueRadiotarkistus } from './radiotarkistus.mjs';
 import { rikastaLehdet } from './lehdet.mjs';
 import { kohtaamiskuvaKohteelle, kohtaamiskuvaTavalliselleKohtaamiselle } from '../../js/kohtaamiskuvat-data.js';
 import {
@@ -456,13 +457,19 @@ function radioKokoelma(hae) {
   const { RADIOT } = hae('js/packs/radiot.js');
   const luokat = JSON.parse(readFileSync(new URL('./radioluokat.json', import.meta.url), 'utf8')).luokat;
   const korvaavat = JSON.parse(readFileSync(new URL('./radiokorvaavat.json', import.meta.url), 'utf8')).asemat;
+  // iOS ATS -kättely (tools/vienti/radiotarkistus.mjs); puuttuva tulos = tarkistamatta.
+  const tarkistus = lueRadiotarkistus();
+  const tila = (url) => {
+    const t = tarkistus.tulokset?.[url];
+    return { toimii: t ? t.toimii : null, tarkistus: t ? { pvm: tarkistus.tarkistettu, virhe: t.virhe, versio: t.versio } : null };
+  };
   const rivit = [];
   for (const iso of Object.keys(RADIOT).sort()) {
     const r = RADIOT[iso]; const l = luokat[iso] ?? {};
     const alkuperainen = {
       iso3: iso, nimi: r.asema, url: r.url, tyyppi: radioTyyppi(r.url), yleisradio: Boolean(r.virallinen),
       lahde: 'radio-browser', sivu: l.sivu ?? null, luokka: l.luokka ?? 'epaselva', peruste: l.peruste ?? null,
-      perusteLahde: l.lahde ?? null, varaAani: null,
+      perusteLahde: l.lahde ?? null, varaAani: null, ...tila(r.url),
     };
     const k = korvaavat[iso];
     if (!k) { rivit.push({ id: iso, jarjestys: 1, ...alkuperainen }); continue; }
@@ -472,7 +479,7 @@ function radioKokoelma(hae) {
     rivit.push({
       id: iso, jarjestys: 1, iso3: iso, nimi: k.nimi, url: k.url, tyyppi: radioTyyppi(k.url), yleisradio: false,
       lahde: 'korvaava', sivu: k.sivu, luokka: k.luokka, peruste: k.peruste, perusteLahde: k.lahde, varaAani: null,
-      kaupunki: k.kaupunki, kuvaus: k.kuvaus,
+      kaupunki: k.kaupunki, kuvaus: k.kuvaus, ...tila(k.url),
     });
   }
   return taulukko('js/packs/radiot.js#RADIOT + tools/vienti/radioluokat.json + tools/vienti/radiokorvaavat.json',
@@ -480,7 +487,8 @@ function radioKokoelma(hae) {
       + 'natiivissa (url); kielletty näytetään vain nimenä ja "Avaa aseman sivu" -linkkinä (sivu), ei soittoa. '
       + 'Yksi soiva asema per maa (jarjestys 1); 17 maassa kielletyn yleisradion tilalla on korvaava asema (lahde '
       + 'korvaava). Kielletyt asemat eivät ole paketissa (docs/raportit/lisenssi-inventaario-20260923.md). sivu voi olla null. '
-      + 'Logoja ei näytetä ilman aseman lupaa. tyyppi päätelty osoitteesta (mp3 | aac | hls | null).',
+      + 'Logoja ei näytetä ilman aseman lupaa. tyyppi päätelty osoitteesta (mp3 | aac | hls | null). toimii = iOS ATS '
+      + '-kättely onnistui (TLS 1.3 tai TLS 1.2 + ECDHE; false = älä soita, null = tarkistamatta), tarkistus = { pvm, virhe, versio }.',
     { iso3: 'maat' }, rivit);
 }
 
