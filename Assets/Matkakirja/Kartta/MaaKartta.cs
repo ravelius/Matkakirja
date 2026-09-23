@@ -267,7 +267,7 @@ namespace Matkakirja
             kuori.enabled = false;
         }
 
-        /// <summary>Tasakulmainen ellipsoidikuori: rivit pohjoisesta etelään, uv = (lon, lat).</summary>
+        /// <summary>Tasakulmainen ellipsoidikuori: rivit pohjoisesta etelään, uv = (lon, 0 pohjoisessa … 1 etelässä).</summary>
         Mesh Verkko(int sektoreita, int kehia)
         {
             int n = (kehia + 1) * (sektoreita + 1);
@@ -282,7 +282,8 @@ namespace Matkakirja
                     double lon = -180.0 + 360.0 * s / sektoreita;
                     double3 ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(lon, lat, korkeus));
                     paikat[i] = (float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef);
-                    uv[i] = new Vector2((float)s / sektoreita, 1f - (float)k / kehia);
+                    // Tunnuskartan rivi 0 on pohjoisin (SetPixelData: v = 0), joten v kasvaa etelään.
+                    uv[i] = new Vector2((float)s / sektoreita, (float)k / kehia);
                     i++;
                 }
             }
