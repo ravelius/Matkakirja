@@ -119,7 +119,9 @@ export const RAAMATTU = {
           + 'uusi sessio aloittaa CLAUDE.md:stä, tästä kohdasta ja luovutuksesta.REMOTE CONTROL (omistaja 21.9.2026 ilta): '
           + 'Remote Control on päällä kaikissa sessioissa, myös Postivahdissa; Fable kytkee '
           + 'sen set_remote_control-työkalulla heti kun sessio on avattu tai nollattu.',
-        'NATIIVI PELI ETUSIJALLE (omistaja 23.9.2026, sitova): peli siirretään natiiviksi '
+        'NATIIVI PELI ETUSIJALLE (omistaja 23.9.2026, sitova; tarkennus klo 16.2x: KOKO PELI '
+          + 'KAIKKINE LINSSEINEEN TEHDÄÄN VALMIIKSI NATIIVIIN PYSÄHTYMÄTTÄ, web-kehitys jätetään '
+          + 'kesken toistaiseksi, nopeutukset ja lisäsessiot vapaasti käyttöön): peli siirretään natiiviksi '
           + 'iOS-sovellukseksi (Unity 6.3 + Cesium, omat pergamenttilaatat, ei Googlen laattoja '
           + 'eikä Cesium ionia) mahdollisimman pian, koska se antaa tökkimättömän '
           + 'ruudunpäivityksen, korkeuserot, kameran kallistuksen ja kamera-ajot. Web-peli on '
