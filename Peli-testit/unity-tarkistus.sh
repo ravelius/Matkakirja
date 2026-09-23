@@ -1,12 +1,14 @@
 #!/bin/sh
 # KÄÄNNÖSTARKISTUS ILMAN EDITORIA (Pelikoodari, erä 3, 23.9.2026).
 #
-# Kääntää Unityn Roslynilla (csc) samat kaksi assemblya kuin editori:
+# Kääntää Unityn Roslynilla (csc) samat assemblyt kuin editori:
 #   1. Matkakirja.Peli  = Assets/Matkakirja/Peli/*.cs vain netstandard 2.1:tä
 #      vasten (asmdef noEngineReferences: UnityEngine-viite olisi virhe);
-#   2. Assembly-CSharp  = Assets/Matkakirja/Scripts/**/*.cs Unityn moduuleja,
-#      pakettien assemblyjä (UGUI, TextMeshPro, Input System, Cesium,
-#      Mathematics …) ja vaiheen 1 tulosta vasten, kahdesti:
+#   2. Matkakirja.Kartta = Assets/Matkakirja/Kartta/**/*.cs (Natiivisepän asmdef,
+#      viittaa Matkakirja.Peliin; 23.9.2026 alkaen);
+#   3. Assembly-CSharp  = Assets/Matkakirja/Scripts/**/*.cs ja UI/**/*.cs (Natiivi-UI)
+#      Unityn moduuleja, pakettien assemblyjä (UGUI, TextMeshPro, Input System,
+#      Cesium, Mathematics …) ja vaiheiden 1–2 tuloksia vasten; 2 ja 3 kahdesti:
 #        ios     — iOS/IL2CPP-moduulit, UNITY_IOS (laitekoodi, DllImport-haarat)
 #        editori — editorin moduulit, UNITY_EDITOR + UNITY_IOS (#else-haarat)
 #
@@ -73,20 +75,34 @@ kaanna "Matkakirja.Peli" "$ULOS/peli.log" $YHTEISET $NETSTD -out:"$ULOS/Matkakir
   $(find "$ASSETS/Peli" -name '*.cs')
 [ -f "$ULOS/Matkakirja.Peli.dll" ] || { echo "unity-tarkistus: Matkakirja.Peli ei kääntynyt"; exit 1; }
 
-SKRIPTIT=$(find "$ASSETS/Scripts" -name '*.cs')
+SKRIPTIT=$(find "$ASSETS/Scripts" $( [ -d "$ASSETS/UI" ] && echo "$ASSETS/UI" ) -name '*.cs' -not -path '*/Editor/*')
+KARTTA=""
+[ -d "$ASSETS/Kartta" ] && KARTTA=$(find "$ASSETS/Kartta" -name '*.cs' -not -path '*/Editor/*')
+
+# Kartta-assembly kohteelle ($1 = ios|editori, loput = moduuliviitteet ja määrittelyt).
+kartta() {
+  kohde=$1; shift
+  KARTTA_REF=""
+  [ -n "$KARTTA" ] || return 0
+  kaanna "Matkakirja.Kartta ($kohde)" "$ULOS/kartta-$kohde.log" $YHTEISET $NETSTD "$@" $PAKETIT -r:"$ULOS/Matkakirja.Peli.dll" \
+    -out:"$ULOS/Matkakirja.Kartta-$kohde.dll" $KARTTA
+  KARTTA_REF="-r:$ULOS/Matkakirja.Kartta-$kohde.dll"
+}
 
 # 2a. iOS-laite (IL2CPP): UNITY_IOS ilman UNITY_EDITORia.
 IOS=""
 for f in "$IOS_MODUULIT"/UnityEngine*.dll; do IOS="$IOS -r:$f"; done
-kaanna "Assembly-CSharp (ios)" "$ULOS/ios.log" $YHTEISET $NETSTD $IOS $PAKETIT -r:"$ULOS/Matkakirja.Peli.dll" \
+kartta ios $IOS -define:"$DEF_YHT;ENABLE_IL2CPP"
+kaanna "Assembly-CSharp (ios)" "$ULOS/ios.log" $YHTEISET $NETSTD $IOS $PAKETIT -r:"$ULOS/Matkakirja.Peli.dll" $KARTTA_REF \
   -define:"$DEF_YHT;ENABLE_IL2CPP" -out:"$ULOS/Assembly-CSharp-ios.dll" $SKRIPTIT
 
 # 2b. Editori iOS-kohteella: UNITY_EDITOR, joten #else-haarat käännetään.
 EDI=""
 for f in "$EDITORI_MODUULIT"/*.dll; do EDI="$EDI -r:$f"; done
 EDI="$EDI -r:$S/Managed/UnityEditor.dll"
-kaanna "Assembly-CSharp (editori)" "$ULOS/editori.log" $YHTEISET $NETSTD $EDI $PAKETIT -r:"$ULOS/Matkakirja.Peli.dll" \
+kartta editori $EDI -define:"$DEF_YHT;UNITY_EDITOR;UNITY_EDITOR_OSX;UNITY_EDITOR_64"
+kaanna "Assembly-CSharp (editori)" "$ULOS/editori.log" $YHTEISET $NETSTD $EDI $PAKETIT -r:"$ULOS/Matkakirja.Peli.dll" $KARTTA_REF \
   -define:"$DEF_YHT;UNITY_EDITOR;UNITY_EDITOR_OSX;UNITY_EDITOR_64" -out:"$ULOS/Assembly-CSharp-editori.dll" $SKRIPTIT
 
-echo "unity-tarkistus: $(echo "$SKRIPTIT" | wc -l | tr -d ' ') skriptiä + $(find "$ASSETS/Peli" -name '*.cs' | wc -l | tr -d ' ') pelilogiikkatiedostoa, virheitä yhteensä $VIRHEITA"
+echo "unity-tarkistus: $(echo "$SKRIPTIT" | wc -l | tr -d ' ') skriptiä + $(echo "$KARTTA" | grep -c . || true) karttaskriptiä + $(find "$ASSETS/Peli" -name '*.cs' | wc -l | tr -d ' ') pelilogiikkatiedostoa, virheitä yhteensä $VIRHEITA"
 exit $VIRHEITA

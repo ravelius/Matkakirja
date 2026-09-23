@@ -150,15 +150,13 @@ Odotettu siemenellä 12345 (Testit/SilmukkaKysymysTestit.cs toistaa saman logiik
 |---|---|---|---|---|
 | k1-alku | Kartta | c:pariisi | 300 | vaihe Toiminta, tutkiTarjolla true |
 | k2-lontoossa | Kartta | c:lontoo | 250 | tutkiTarjolla true (laatta + kohtaaminen) |
-| k3-kysymys | Kysymys | c:lontoo | 250 | kysymys.otsikko "Lontoo · kohtaaminen", 4 vaihtoehtoa, oikea 3 (näkyy vasta vastattua), syoteEstetty true* |
+| k3-kysymys | Kysymys | c:lontoo | 250 | kysymys.otsikko "Lontoo · kohtaaminen", 4 vaihtoehtoa, oikea 3 (näkyy vasta vastattua), syoteEstetty true |
 | k4-vastattu | Kysymys | c:lontoo | 440 | oikein true, loyto "Löysit: Kourallinen hopeakolikoita · +190 £" |
 | k5-kartalla | Kartta | c:lontoo | 440 | vaihe Toiminta, keskipäivä, tutkiTarjolla false |
 | k6-reitilla | Kartta | e:lontoo\|pariisi:2 | 440 | viimeisin noppa 2, Heitä-nappi, ilta |
 | k7-lehti-pariisi | Lehti | c:pariisi | 440 | noppa 2, yö |
 | k8-loppu | Kartta | c:pariisi | 440 | tutkiTarjolla true |
 
-\* `syoteEstetty` on tosi vasta, kun PalloKierto toteuttaa `ISyoteEsto`:n (Natiiviseppä lisää
-mergessä); ennen sitä veto kysymyksen päällä pyörittää palloa.
 
 ## Käännöstarkistus ilman editoria
 
@@ -174,7 +172,7 @@ luetaan `/Users/Shared/Claude/proto-3d/Matkakirja-proto/Library/ScriptAssemblies
 
 - Pallon napautus ei tiedä UI:sta (PalloKierto lukee kosketukset suoraan): peli ohittaa
   napautukset matkavalinnan ja Heitä-napin päällä ja korvaa 3D:n lennon LateUpdatessa.
-  Erä 4: matkavalinnan, kysymyksen ja lehden ajan pallo on lukossa (SyoteLukko → ISyoteEsto).
+  Erä 4: matkavalinnan, kysymyksen ja lehden ajan pallo on lukossa (SyoteLukko → PalloKierto.SyoteEstetty; heittonapin päältä alkava veto ei pyöritä palloa, UiPeittaa).
 - Samassa kysymysnäkymässä (IKysymysNakyma) kulkevat myös pulmat (Pysy-tapa pulmakaupungissa;
   piirros `KysymysNaytto.Luonnos`/`PulmaId` ja vaihtoehtokuvat odottavat Natiivi-UI:n näkymää,
   UGUI-vara näyttää vain tekstit), rosvon kaksintaistelu (ryöstäjälaatan Jatka → 8 vaihtoehtoa,

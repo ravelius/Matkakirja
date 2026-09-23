@@ -129,16 +129,6 @@ namespace Matkakirja.Peli
         event Action<string> KaupunkiNapautettu;
     }
 
-    /// <summary>
-    /// Pallon kosketusten esto modaalisen näkymän ajaksi (Natiiviseppä toteuttaa
-    /// PalloKierrossa). Älä aseta suoraan: Unity-kerroksen SyoteLukko laskee
-    /// omistajat (dialogi, linssi, valikko) ja kirjoittaa tämän.
-    /// </summary>
-    public interface ISyoteEsto
-    {
-        bool SyoteEstetty { get; set; }
-    }
-
     /// <summary>Kaupunkilehti WKWebView-kuoressa (index.html?lehti=id, verkkopelin #2942).</summary>
     public interface ILehti
     {

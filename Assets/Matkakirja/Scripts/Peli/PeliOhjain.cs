@@ -182,6 +182,8 @@ namespace Matkakirja.Natiivi
             gameObject.AddComponent<PeliKomennot>().ohjain = this;
 
             ((IKamera)kierto).KaupunkiNapautettu += Napautettu;
+            // Heittonapin päältä alkava veto ei pyöritä palloa.
+            SyoteLukko.LisaaPeitto(p => Kaytossa && dialogi.PeittaaPisteen(p));
             ((ILehti)lehti).Suljettu += LehtiSuljettu;
 
             if (File.Exists(PoisPolku))
