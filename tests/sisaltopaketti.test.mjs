@@ -44,6 +44,13 @@ test('kaupungeilla on 3D-proton pakolliset kentät ja jokaiselle maalle ISO2', (
   assert.equal(kaupungit.alkiot.find((k) => k.id === 'helsinki').maa2, 'FI');
 });
 
+test('jokaisella laudan maalla on ISO2 (maat- ja maarajat-kokoelmat, natiivin maatila)', async () => {
+  const { MAAILMANKARTTA } = await import('../js/packs/maailmankartta.js');
+  const puuttuu = Object.keys(MAAILMANKARTTA.map.countryShapes).filter((iso) => !/^[A-Z]{2}$/.test(ISO2[iso] ?? ''));
+  assert.deepEqual(puuttuu, [], 'ISO2 puuttuu tools/vienti/iso2.mjs:stä');
+  assert.equal(new Set(Object.values(ISO2)).size, Object.keys(ISO2).length, 'ISO2-koodi kahdesti');
+});
+
 test('validaattori hylkää rikkinäisen kaupungin ja osoittimen', () => {
   const hyva = kaupungit.alkiot[0];
   assert.deepEqual(validoiNimella(hyva, 'kaupunki.schema.json'), []);
