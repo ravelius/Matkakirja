@@ -2,14 +2,15 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://matkakirja.app/vienti/1/web-nakyma.schema.json",
   "title": "Matkakirja-vienti: web-näkymän riippuvuudet",
-  "description": "Web-näkymä (esim. lehti), jonka natiivi peli näyttää WKWebView-kuoressa (skeema 1.3). moduulit ja tyylit ovat näkymän koodi; tiedostot ja kansiot ovat paikallisia kuvia ja dataa, jotka näkymä hakee ajon aikana juuriUrl:n alta. Polut ovat suhteessa juuriUrl:iin; sha256 kertoo, mitä versiota paketti vastaa.",
+  "description": "Web-näkymä (esim. lehti), jonka natiivi peli näyttää WKWebView-kuoressa (skeema 1.3). sivut, moduulit ja tyylit ovat näkymän koodi; tiedostot ja kansiot ovat paikallisia kuvia ja dataa, jotka näkymä hakee ajon aikana juuriUrl:n alta. Polut ovat suhteessa juuriUrl:iin; sha256 kertoo, mitä versiota paketti vastaa.",
   "type": "object",
-  "required": ["$skeema", "nimi", "kuvaus", "juuriUrl", "juuret", "tavuja", "moduulit", "tyylit", "tiedostot", "kansiot"],
+  "required": ["$skeema", "nimi", "kuvaus", "juuriUrl", "sivu", "juuret", "tavuja", "sivut", "moduulit", "tyylit", "tiedostot", "kansiot"],
   "properties": {
     "$skeema": { "const": "matkakirja-vienti/1/web-nakyma" },
     "nimi": { "type": "string" },
     "kuvaus": { "type": "string" },
     "juuriUrl": { "type": "string", "format": "uri" },
+    "sivu": { "type": "string", "description": "Kuoren avaama osoite juuriUrl:n alla; {kaupunki} = kaupunki-id" },
     "juuret": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
     "tavuja": {
       "type": "object",
@@ -21,6 +22,7 @@
       },
       "additionalProperties": false
     },
+    "sivut": { "type": "array", "items": { "$ref": "#/$defs/tiedosto" } },
     "moduulit": { "type": "array", "items": { "$ref": "#/$defs/tiedosto" } },
     "tyylit": { "type": "array", "items": { "$ref": "#/$defs/tiedosto" } },
     "tiedostot": { "type": "array", "items": { "$ref": "#/$defs/tiedosto" } },
