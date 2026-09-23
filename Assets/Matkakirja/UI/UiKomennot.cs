@@ -14,6 +14,7 @@
 //   ui aloitus [portti|avaus|valinta|jatka]   aloitusnäkymä ilman peliä (valinta → ilmoitus)
 //   ui aloita [kaupunki] | ui jatka           automaatio: ohittaa aloitusnäkymän (UusiMatka / Jatka);
 //                                             listan ulkopuolinen kaupunki (pariisi) = oletuslähtö Pariisi
+//   ui nosto <valoId>                         nostokortti: skandaali:<id> | hetki:<id> | elaintaky:<ISO> | kohde:<id>[@ISO]
 //   ui huipennus                              matkan huipennus (kaikki aarteet) esimerkkiluvuin
 //   ui laukku [esimerkki]                     matkalaukku (pelin data; esimerkki = keksitty sisältö)
 //   ui offline demo|verkoton|verkko|pois      offline-tilan pilleri: keksitty lataus / verkon tila
@@ -187,6 +188,9 @@ namespace Matkakirja.Natiivi
                     if (v == null) ui.Aloitus.Piilota();
                     return v;
                 }
+                case "nosto":
+                    ui.Nostokortti.Avaa(loput.Length > 0 ? loput : "skandaali:shakkiturkkilainen");
+                    return null;
                 case "huipennus":
                     ui.Huipennus.Nayta(new MatkanYhteenveto { Paivat = 83, Kaupungit = 41, Aarteet = 6, AarteitaKaikkiaan = 6 },
                         () => ui.Aloitus.NaytaAvaus(id => ui.Tilarivi.Viesti("Lähtö: " + id)));

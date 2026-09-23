@@ -108,6 +108,28 @@ kuva huipennus
 ui sulje
 ```
 
+Nostokortit (`Nostokortti.cs`, `NostoSisalto.cs`): karttavalon napautus (UiPalvelut.ValoNapautettu)
+avaa kortin. Kuvallinen kortti aukeaa ensin kuvana (LISÄÄ), sitten koko korttina; kuvan
+napautus avaa suurennoksen. `ui nosto <valoId>`: `skandaali:shakkiturkkilainen`,
+`hetki:kolumbus-portugali-1484`, `elaintaky:FIN`, `kohde:thessaloniki@GRC`.
+
+```
+ui aloita pariisi
+ui nosto skandaali:shakkiturkkilainen
+odota 3
+kuva nosto-skandaali-kuva
+ui nosto hetki:kolumbus-portugali-1484
+odota 3
+kuva nosto-hetki
+ui nosto elaintaky:FIN
+odota 3
+kuva nosto-elain
+ui nosto kohde:thessaloniki@GRC
+odota 3
+kuva nosto-kohde
+ui sulje
+```
+
 Matkalaukku (`Matkalaukku.cs`, webin #passport-dialog): yläpalkin tilapilleri avaa laukun pillerin
 alle. `ui laukku` näyttää pelin datan (PeliOhjain.Laukku()), `ui laukku esimerkki` keksityn
 sisällön ilman peliä. "Matkan tilastot ›" avaa lohkon (tila muistetaan).
