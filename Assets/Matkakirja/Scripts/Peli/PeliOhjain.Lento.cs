@@ -87,8 +87,8 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// Pelin vuorokaudenaika (web timeOfDayName) nappulan aurinkoon paikallisena aurinkoaikana:
-        /// aamu 9, keskipäivä 13, ilta 18. Yö pidetään toistaiseksi illan valossa (18), koska webin
-        /// kartalla ei ole vuorokauden valaistusta (kysytty Fablelta).
+        /// aamu 9, keskipäivä 13, ilta 18. Yö = iltavalo 18 (Fable 23.9.2026: ei pimeää karttaa, pergamentti
+        /// pysyy luettavana; Natiiviseppä voi sävyttää yön sinertävämmäksi samalla valon kulmalla).
         /// </summary>
         void PaivitaAurinko()
         {
