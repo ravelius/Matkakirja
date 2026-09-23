@@ -119,6 +119,16 @@ export const RAAMATTU = {
           + 'uusi sessio aloittaa CLAUDE.md:stä, tästä kohdasta ja luovutuksesta.REMOTE CONTROL (omistaja 21.9.2026 ilta): '
           + 'Remote Control on päällä kaikissa sessioissa, myös Postivahdissa; Fable kytkee '
           + 'sen set_remote_control-työkalulla heti kun sessio on avattu tai nollattu.',
+        'NATIIVI PELI ETUSIJALLE (omistaja 23.9.2026, sitova): peli siirretään natiiviksi '
+          + 'iOS-sovellukseksi (Unity 6.3 + Cesium, omat pergamenttilaatat, ei Googlen laattoja '
+          + 'eikä Cesium ionia) mahdollisimman pian, koska se antaa tökkimättömän '
+          + 'ruudunpäivityksen, korkeuserot, kameran kallistuksen ja kamera-ajot. Web-peli on '
+          + 'ylläpidossa: vain bugikorjaukset ja sisältö, joka siirtyy natiiviin yhteisen '
+          + 'sisältöpaketin (sisalto/1/) kautta. Laattapoltot jatkuvat, koska natiivi käyttää '
+          + 'samoja laattoja. Natiivin ensimmäinen pelattava tavoite: matkustus pallolla ja '
+          + 'kaupunkilehdet; sen jälkeen korkeusmalli, kallistus ja auringonvalo. Web on ilmainen, '
+          + 'natiivi maksullinen tai 3D-lisäosat IAP:na; radiot vain webissä; lisensseissä '
+          + 'attribuutio riittää (ei juristia). Prototyyppi /Users/Shared/Claude/proto-3d.',
         'CLAUDEN JA CHATGPT/CODEXIN AGENTTISÄÄNNÖT ERIKSEEN (omistaja 11.9.2026 '
           + 'tekstisession kautta, sanatarkasti: "Peliä kehitetään Claudella ja '
           + 'ChatGPT/Codexilla. Opus/Sonnet-rajoitus ja Fable-mallin agenttikäytön '
