@@ -1,4 +1,4 @@
-import { laajennaKokeet, tallennetutKokeet } from '../piirtokoe-asetus.js';
+import { laajennaKokeet, paljaanKerroksetJoukosta, tallennetutKokeet } from '../piirtokoe-asetus.js';
 /*
  * ABLAATIOTIKAS — `?kerrokset=<lista>` (omistajan menetelmä 21.9.2026,
  * Fable: sulavuusmittaus kerros kerrallaan; VAIN MITTAUKSEEN, ei
@@ -65,40 +65,41 @@ export function kerroksetHausta(haku) {
 }
 
 /*
- * PALJAS KARTTA (omistaja 23.9.2026 klo 09.20, js/piirtokoe-asetus.js):
- * Syötekoe-valikon tilat 5–8 ovat tikkaan kerrosjoukkoja. `dom` ei ole
- * tikkaan kerros (portaiden mittaukset eivät saa muuttua): se kertoo,
- * jäävätkö kartan päällä olevat sivun elementit näkyviin
- * (body.kerros-pois-dom, css/styles.css PALJAS KARTTA).
+ * PALJAS KARTTA (omistaja 23.9.2026 klo 09.20 ja 09.25, js/piirtokoe-asetus.js
+ * PALJAAN_KERROKSET): pohjana laatat ja `ui` — `ui`:n pois kytkeminen
+ * piilottaisi yläpalkin ja sen mukana valikkonapin, eikä omistaja pääsisi
+ * takaisin; näkyvyys hoidetaan body.kerros-pois-dom-luokalla. Kerroskytkimet
+ * (`kerros-<avain>`) tuovat tikkaan kerroksia takaisin. `liike` (kartan
+ * pieni liike) on paljaassa oma ryhmänsä; tikkaalla se kulkee pulun mukana.
  */
-export const PALJAAT_TILAT = Object.freeze({
-  /*
-   * `ui` pysyy kaikissa: sen pois kytkeminen piilottaa yläpalkin ja sen
-   * mukana valikkonapin, eikä omistaja pääsisi takaisin. Näkyvyys hoidetaan
-   * kerros-pois-dom-luokalla, joka jättää valikon esiin.
-   */
-  paljas: { kerrokset: ['laatat', 'ui'], dom: false },
-  paljasnimet: { kerrokset: ['laatat', 'ui', 'nimet'], dom: false },
-  paljassymbolit: { kerrokset: ['laatat', 'ui', 'nostot', 'nappula'], dom: false },
-  paljasdom: { kerrokset: ['laatat', 'ui', 'kohteet', 'pulu'], dom: true },
-});
+export const PALJAAN_POHJA = Object.freeze(['laatat', 'ui']);
 
-/** Voimassa oleva paljas tila (avain) tai null. `?kerrokset=` voittaa. */
+/** Voimassa oleva paljas tila ('paljas') tai null. `?kerrokset=` voittaa. */
 export function paljasTila(haku) {
   const h = haku ?? (() => { try { return globalThis.location?.search ?? ''; } catch { return ''; } })();
   if (kerroksetHausta(h)) return null;
-  const kokeet = piirtokokeet(haku);
-  return Object.keys(PALJAAT_TILAT).find((k) => kokeet.has(k)) ?? null;
+  return piirtokokeet(haku).has('paljas') ? 'paljas' : null;
 }
 
-let muisti = { avain: null, joukko: null };
+/** Paljaan kartan kerrosjoukko ja DOM-tieto hakua kohti (null, jos ei paljasta). */
+export function paljaanKerrokset(haku) {
+  if (!paljasTila(haku)) return null;
+  const ryhmat = paljaanKerroksetJoukosta(piirtokokeet(haku));
+  return {
+    kerrokset: new Set([...PALJAAN_POHJA, ...ryhmat.flatMap((k) => k.tikas)]),
+    dom: ryhmat.some((k) => k.avain === 'dom'),
+    ryhmat: ryhmat.map((k) => k.avain),
+  };
+}
+
+let muisti = { avain: null, joukko: null, paljas: null };
 function joukkoNyt(haku) {
   const h = haku ?? (() => { try { return globalThis.location?.search ?? ''; } catch { return ''; } })();
   // Tallennettu koe vaihtuu vain latauksen kautta, joten muisti hakua kohti riittää.
   const avain = `${haku === undefined ? 'm' : 'h'}|${h}`;
   if (muisti.avain !== avain) {
-    const paljas = paljasTila(haku);
-    muisti = { avain, joukko: kerroksetHausta(h) ?? (paljas ? new Set(PALJAAT_TILAT[paljas].kerrokset) : null) };
+    const paljas = paljaanKerrokset(haku);
+    muisti = { avain, joukko: kerroksetHausta(h) ?? paljas?.kerrokset ?? null, paljas };
   }
   return muisti.joukko;
 }
@@ -111,7 +112,10 @@ function joukkoNyt(haku) {
  */
 export function kerrosKaytossa(nimi, haku) {
   const joukko = joukkoNyt(haku);
-  return joukko ? joukko.has(nimi) : true;
+  if (!joukko) return true;
+  // Pieni liike: paljaassa oma ryhmänsä, tikkaalla pulun mukana (portaat ennallaan).
+  if (nimi === 'liike' && !muisti.paljas) return joukko.has('pulu');
+  return joukko.has(nimi);
 }
 
 /** Onko ablaatiolippu päällä lainkaan (mittarit, body-luokat). */
@@ -128,10 +132,11 @@ export function kerrostenBodyLuokat(haku) {
   const joukko = joukkoNyt(haku);
   if (!joukko) return [];
   const luokat = KERROKSET.filter((k) => !joukko.has(k)).map((k) => `kerros-pois-${k}`);
-  const paljas = paljasTila(haku);
+  if (!kerrosKaytossa('liike', haku)) luokat.push('kerros-pois-liike');
+  const paljas = paljaanKerrokset(haku);
   if (paljas) {
     luokat.push('paljas-kartta');
-    if (!PALJAAT_TILAT[paljas].dom) luokat.push('kerros-pois-dom');
+    if (!paljas.dom) luokat.push('kerros-pois-dom');
   }
   return luokat;
 }
