@@ -2231,3 +2231,7 @@ Kirjattu Fable.
 ## FABLE UUSI SESSIO (TILI B, local_742d1717) ALOITETTU klo 17.42: LUOVUTUS -b.md LUETTU, 10 SESSIOTA ELOSSA, NATIIVISEPPA UUSI (JONON KOHTA 1 TEHTY); REMOTE CONTROL -KYTKENTA ESTYI LUOKITTIMEEN → OMISTAJA KYTKEE KASIN; SEURAAVA: OMISTAJAN iPAD-KOKEILU ~18, POLTON 23a LOPPU → JULKAISIJAN NIPUT 2 JA 3 (23.9.2026 klo 17.42)
 
 Fable jatkaa luovutuksen jonosta kohdasta 2. Julkaisijalta pyydetty polton ja nippujen tila.
+
+## KORJAUS klo 16.35 KOHTAAN: NIPPU 3 (julkaisija-julkaise-nippu3, 6 SIIRTOSEPAN PR:AA) KOSKEE AJOAIKAISTA KOODIA (game.js, ui.js, sw.js, packs, sound.js) → AJETAAN NORMAALILLA SAVUKKEELLA NIPUN 2 JALKEEN, EI OHITETA; POLTTO 23a YHA KESKEN, NIPUT ODOTTAVAT (23.9.2026 klo 17.42)
+
+Julkaisija tarkisti diffin; Fable vahvistaa. Testejä ei vielä ajettu koneen kuorman takia.
