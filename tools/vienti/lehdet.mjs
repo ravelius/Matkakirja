@@ -518,6 +518,35 @@ export function rikastaLehdet(kokoelmat, ns, hae, { media: mediaLista = [], taul
   kokoelmat.pulmat.kuvaus += ' Skeema 1.19: päätasolla otsikko, selite, vihje, kysymys, vaihtoehdot ja oikea (kiinteät '
     + 'pulmat; generaattoripulmat arpovat nämä), fakta, lahde, luonnos (piirroksen parametrit) ja kuvaLahteet.';
 
+  // Skeema 1.20 (2.0-polku): elaintayt ja julisteet päätasolle
+  // (natiivin Kaupat.cs, NostoSisalto.cs ja UiSisalto.cs).
+  // assetLaji: pelkkä tunnus (kuva vain ämpärissä) ratkaistaan pelin assetOsoite-funktiolla.
+  const kuvaArvosta = (arvo, assetLaji = null) => {
+    if (!arvo) return null;
+    const m = media(arvo, 'kuva') ?? (assetLaji ? { url: assetOsoite(assetLaji, arvo), varat: [] } : null);
+    return m ? { arvo, ...m } : null;
+  };
+  for (const a of kokoelmat.elaintayt.alkiot) {
+    const d = a.data ?? {};
+    Object.assign(a, {
+      elain: d.elain ?? null, otsikko: d.otsikko ?? null, teksti: d.teksti ?? null, lahde: d.lahde ?? null,
+      lat: d.lat ?? null, lon: d.lon ?? null, nimio: d.nimio ?? null,
+      kuva: kuvaArvosta(d.kuva, 'elaimet'),
+      kuvat: (d.kuvat ?? []).map((o) => R.kuva(o.url && !o.osoite ? { ...o, osoite: o.url } : o)).filter(Boolean),
+    });
+  }
+  kokoelmat.elaintayt.kuvaus += ' Skeema 1.20: päätasolla elain, otsikko, teksti, lahde, lat, lon, nimio, kuva '
+    + '{ arvo, url, varat, leveys, korkeus } | null ja kuvat [{ url, varat, lyhyt, selite, lahde }].';
+  for (const a of kokoelmat.julisteet.alkiot) {
+    const d = a.data ?? {};
+    Object.assign(a, {
+      nimi: d.kaupunki ?? null, otsikko: d.otsikko ?? null, lyhyt: d.lyhyt ?? null, selite: d.selite ?? null,
+      kuva: kuvaArvosta(d.tiedosto),
+    });
+  }
+  kokoelmat.julisteet.kuvaus += ' Skeema 1.20: päätasolla nimi (kaupungin nimi julisteessa), otsikko, lyhyt, selite '
+    + 'ja kuva { arvo, url, varat, leveys, korkeus } (julisteämpäri).';
+
   kokoelmat.kohdekartat = taulukko('js/packs/maakartat.js#KAUPUNKIKARTAT',
     'Kaupunkien kohdekartat (Nähtävyydet). kuva = näytettävä kartta (värikartta, jos on, muuten juliste; url/varat/'
       + 'leveys/korkeus, ämpärissä assets/kartat/), juliste ja varikartta erikseen. rajat = ydinrajaus asteina '

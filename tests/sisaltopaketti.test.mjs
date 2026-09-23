@@ -623,6 +623,15 @@ test('skeema 1.19: kysymykset ja pulmat päätasolla', () => {
   assert.deepEqual(p.find((a) => a.id === 'punnukset').luonnos, p.find((a) => a.id === 'punnukset').data.sketch);
 });
 
+test('skeema 1.20: elaintayt ja julisteet päätasolla', () => {
+  const e = JSON.parse(tiedostot.get('kokoelmat/elaintayt.json')).alkiot;
+  assert.ok(e.every((a) => a.otsikko === a.data.otsikko && Number.isFinite(a.lat)));
+  assert.ok(e.filter((a) => a.data.kuva).every((a) => /^https:\/\//.test(a.kuva.url)));
+  assert.equal(e.reduce((s, a) => s + a.kuvat.length, 0), e.reduce((s, a) => s + (a.data.kuvat?.length ?? 0), 0));
+  const j = JSON.parse(tiedostot.get('kokoelmat/julisteet.json')).alkiot;
+  assert.ok(j.every((a) => /^https:\/\/media\.matkakirja\.app\/julisteet\//.test(a.kuva.url) && a.kuva.leveys));
+});
+
 test('skeema 1.9: offline-manifesti maittain (laatat, maasto, media, tavut)', async () => {
   const m = JSON.parse(tiedostot.get('manifest.json'));
   const o = JSON.parse(tiedostot.get(m.offline.tiedosto));
