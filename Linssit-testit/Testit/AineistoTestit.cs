@@ -66,3 +66,48 @@ namespace Matkakirja.Linssit.Testit
         }
     }
 }
+
+namespace Matkakirja.Linssit.Testit
+{
+    public static class IhmisenMatkaLinssiTestit
+    {
+        [Testi] static void VirratPaketistaJaEsitysAlkaaVanojenJalkeen()
+        {
+            object Lue(string n) => Matkakirja.Peli.MiniJson.Jasenna(System.IO.File.ReadAllText(System.IO.Path.Combine(
+                System.AppContext.BaseDirectory, "..", "kultaiset", n)));
+            var moduuli = (System.Collections.Generic.Dictionary<string, object>)Lue("paketti/ihmisen-matka.json");
+            var linssi = ((System.Collections.Generic.Dictionary<string, object>)moduuli["exportit"])["LINSSI"];
+            var virrat = Matkakirja.Linssit.Virrat.AineistonLukija.LueLinssista(linssi);
+            var tulos = IhmisenMatkaLinssi.Laske(virrat);
+            Oleta.Sama(17, tulos.Vanat.Count, "vanat kuten webissä");
+            var a = IhmisenMatkaAineisto.Lue(Lue("paketti/ihmisen-matka-data.json"), Lue("paketti/ihmisen-matka-kertomus.json"));
+            var leimat = IhmisenMatkaAineisto.LueManifesti(Lue("kertomus-manifesti.json"));
+            var y = new ValeYmparisto();
+            var l = new IhmisenMatkaLinssi(a, leimat, new Tyhja(), null);
+            var r = new Linssirekisteri(y);
+            r.Lisaa(l);
+            r.Valitse("ihmisen-matka");
+            Oleta.Sama(false, l.Esitys.Kaynnissa, "odottaa vanoja");
+            l.AsetaVanat(tulos);
+            Oleta.Sama(true, l.Esitys.Kaynnissa);
+            for (int i = 0; i < 60 * 30; i++) { y.Kello += 1 / 60.0; r.Paivita(); }
+            Oleta.Tosi(l.Esitys.I >= 2, "30 s:ssa ollaan jo kohdejaksoissa: " + l.Esitys.I);
+            r.Sulje();
+            Oleta.Sama(true, y.PelikerroksetNakyvissa);
+        }
+
+        sealed class Tyhja : IEsityksenNakyma
+        {
+            public void Musta(bool p, double f) { }
+            public void Valot(double f) { }
+            public void Jakso(int i, KertomusJakso j) { }
+            public void Kello(double v) { }
+            public void SytytaKohde(string k) { }
+            public void Kuva(string k) { }
+            public void Pulu(string t) { }
+            public void Tunne(string t, double v, string j) { }
+            public void VirtojenPito(bool p) { }
+            public void Loppu() { }
+        }
+    }
+}
