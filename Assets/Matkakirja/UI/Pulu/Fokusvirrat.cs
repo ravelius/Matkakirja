@@ -11,6 +11,8 @@
 //   kohtaaminen + kohtaamispiste.laudat.maailmankartta {x, y}: aarteen avaus mahdollinen
 //               (lehden fokustehtävät ja pullavinkki, LehtiFokus.cs)
 //   lehtitehtavat: raakana varareitiksi, jos kokoelmaa lehtitehtavat (skeema 1.17) ei ole
+//   takynostot, takyt: raakana nostokortille (NostoSisalto: täkynosto, syvennystarina, leikekirja);
+//               alkion tyypitetystä virrasta (kuvat {arvo, url}), vara data
 // Jäsennetään taustasäikeessä kerran (0,9 Mt), muistissa vain nämä kentät.
 using System;
 using System.Collections;
@@ -43,6 +45,8 @@ namespace Matkakirja.Natiivi
         public bool AarteenAvaus;
         /// <summary>data.lehtitehtavat raakana (LehtiFokus lukee, jos kokoelma lehtitehtavat puuttuu).</summary>
         public List<object> Lehtitehtavat;
+        /// <summary>Kaupungin täkynostot ja syvennystarinat raakana (web takynostot, takyt; NostoSisalto).</summary>
+        public List<object> Takynostot, Takyt;
     }
 
     public static class Fokusvirrat
@@ -163,6 +167,10 @@ namespace Matkakirja.Natiivi
                 }
                 if (string.IsNullOrEmpty(v.AarreTeksti)) v.AarreTeksti = null;
                 v.Lehtitehtavat = Rakenne.Lista(MiniJson.Kentta(d, "lehtitehtavat"));
+                // Tyypitetty virta (skeema: kuvat {arvo, url, varat}) ensin, raaka data varana.
+                var virta = MiniJson.Kentta(o, "virta") as Dictionary<string, object>;
+                v.Takynostot = Rakenne.Lista(MiniJson.Kentta(virta, "takynostot")) ?? Rakenne.Lista(MiniJson.Kentta(d, "takynostot"));
+                v.Takyt = Rakenne.Lista(MiniJson.Kentta(virta, "takyt")) ?? Rakenne.Lista(MiniJson.Kentta(d, "takyt"));
                 t[kaupunki] = v;
             }
         }

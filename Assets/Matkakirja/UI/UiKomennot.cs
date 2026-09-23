@@ -19,8 +19,16 @@
 //   ui lehti fokus [kaupunki] [juliste]       kaupunkilehti fokustehtävän sivulla (oletus ateena; AARTEEN AVAUS,
 //                                             juliste = JULISTE-tehtävä); vastaus ja pulla kirjataan, jos peli on käynnissä
 //   ui lehti fokus-vastaa n | fokus-pulla     napauttaa fokustehtävän vaihtoehtoa n (0–) / pullanappia (2× = osto)
-//   ui nosto <valoId>                         nostokortti: skandaali:<id> | hetki:<id> | elaintaky:<ISO> | kohde:<id>[@ISO]
+//   ui nosto <valoId> [nappi]                 nostokortti: skandaali:<id> | hetki:<id> | elaintaky:<ISO> | kohde:<id>[@ISO]
+//                                             | takynosto:<id>[@kaupunki] (esim. areena, schliemann, maailmannayttely-1873)
+//                                             | syvennys:<kaupunki>-<täky> (esim. ateena-nike); nappi painetaan
+//                                             latauksen jälkeen: lisaa | ihme | leikekirja | kartalla | liite |
+//                                             valokuva | vastaa<n> (0–) | juliste | kysy<n>
 //                                             (lisäkaupunki: kohde:nakyva-kaupunki-lyon → lisäkaupungin kortti)
+//   ui nostonappi <nappi>                     painaa auki olevan nostokortin nappia (esim. vastaa0, sitten juliste)
+//   ui ihme [kohde[@ISO]]                     kohdekortti ja "Koe ihme" -suurennos (oletus akropolis@GRC;
+//                                             kadonnut ihme on kortin ensimmäinen kuva nauhoineen: ui nosto kohde:crystal-palace@GBR)
+//   ui leikekirja [kohde[@ISO]]               kohdekortti ja sen "Livian leikekirja" (oletus troija@TUR)
 //   ui lisakaupunki [nimi]                    lisäkaupungin kortti (oletus lyon = kohde:nakyva-kaupunki-lyon)
 //   ui kaupunki <id> [nostot [aihe|n] | kohde n | alas | ylos]  kaupunkikortti ilman peliä (kuten ui kortti) ja
 //                                             nostokategoriat haitarina: nostot = avaa aiheen (tai n:nnen,
@@ -56,6 +64,12 @@
 //                                             quizOpen, tick, dieLand, paper, popup …) tai pulun (pulu.kujerrus);
 //                                             lista = kaikki nimet lokiin. SOI ÄÄNEEN (mykistettynä hiljaa)
 //   ui lentoaani alku [kesto s] | loppu       lennon moottoriääni (PeliOhjain.LentoAani ilman peliä)
+//   ui palaute [palaute|ehdotus|kuvavinkki|pro|periaate|kuvapalaute]
+//                                             palaute- ja ehdotuslomake AUKI ILMAN LÄHETYSTÄ: palaute (oletus) =
+//                                             "Kerro mitä huomasit" kuten hampurilaisesta; ehdotus/kuvavinkki/pro
+//                                             vierittää (ja avaa väkäsen); periaate = aloitusportin periaatteet
+//                                             palautelohkon kohdalla; kuvapalaute = havainnekuvan palaute
+//                                             minipopupissa keksityllä kuvalla. Lähetys vain napista käsin.
 //   ui chat [kysymys]                         pulun keskustelu auki / kysy
 //   ui traileri [kaupunki]                    saapumistraileri ilman puhetta (oletus lontoo)
 //   ui luento [kaupunki] [loppu]              matkakirjakortti + luentakuvat (oletus ateena); loppu = Livian vuoro
@@ -299,6 +313,20 @@ namespace Matkakirja.Natiivi
                     Aanet.LentoAani(true, kesto);
                     return null;
                 }
+                case "palaute":
+                    switch (loput.Length > 0 ? loput : "palaute")
+                    {
+                        case "palaute": ui.Palaute.Avaa(); return null;
+                        case "ehdotus": case "kuvavinkki": case "pro": ui.Palaute.Avaa(loput); return null;
+                        case "periaate":
+                            ui.Aloitus.Testaa("portti", id => ui.Tilarivi.Viesti("Lähtö: " + id));
+                            ui.Aloitus.AvaaPeriaatteet();
+                            return null;
+                        case "kuvapalaute":
+                            Kuvavinkki.AvaaKuvapalaute("kuvat/havainne/esimerkki.jpg", "Havainnekuva: esimerkki (testikomento)", PalauteLomake.EhdotusSivu(""));
+                            return null;
+                        default: return "ui palaute palaute|ehdotus|kuvavinkki|pro|periaate|kuvapalaute";
+                    }
                 case "aloitus":
                     ui.Aloitus.Testaa(loput.Length > 0 ? loput : "portti", id => ui.Tilarivi.Viesti("Lähtö: " + id));
                     return null;
@@ -332,8 +360,27 @@ namespace Matkakirja.Natiivi
                     return null;
                 }
                 case "nosto":
-                    ui.Nostokortti.Avaa(loput.Length > 0 ? loput : "skandaali:shakkiturkkilainen");
+                {
+                    var no = loput.Split(new[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries);
+                    string valo = no.Length > 0 ? no[0] : "skandaali:shakkiturkkilainen";
+                    ui.Nostokortti.Testaa(valo, no.Length > 1 ? no[1] : null, v => Kirjaa("ui nosto " + valo + ": " + (v ?? "auki")));
                     return null;
+                }
+                case "nostonappi":
+                {
+                    string tulos = "ok";
+                    ui.Nostokortti.Testaa(null, loput.Trim(), v => tulos = v);
+                    return tulos == "ok" ? null : tulos;
+                }
+                case "ihme":
+                case "leikekirja":
+                {
+                    string kohde = loput.Trim().Length > 0 ? loput.Trim() : osat[1] == "ihme" ? "akropolis@GRC" : "troija@TUR";
+                    string valo = kohde.StartsWith("kohde:") ? kohde : "kohde:" + kohde;
+                    string nappi = osat[1].ToLowerInvariant();
+                    ui.Nostokortti.Testaa(valo, nappi, v => Kirjaa("ui " + nappi + " " + kohde + ": " + (v ?? "ok")));
+                    return null;
+                }
                 case "lisakaupunki":
                     ui.Nostokortti.Avaa("kohde:nakyva-kaupunki-" + (loput.Length > 0 ? loput.ToLowerInvariant() : "lyon"));
                     return null;
