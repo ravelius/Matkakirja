@@ -1,0 +1,118 @@
+# Lähettää App Store Connect -käyttäjäkutsun. Käsin ajettava, kertaluonteinen
+# toimenpide — sähköpostiosoite annetaan vain ajon syötteenä (workflow_dispatch
+# input), EI koskaan committoida repoon eikä tulosteta lokiin.
+#
+# Rooli on aina Developer, ja näkyvyys rajataan yhteen appiin (bundle_id),
+# ei koko tiimiin — sama App Store Connect -API-avain kuin muissa
+# ios-työnkuluissa (ASC_KEY_ID, ASC_ISSUER_ID, ASC_KEY_P8).
+
+name: ASC käyttäjäkutsu
+
+on:
+  workflow_dispatch:
+    inputs:
+      email:
+        description: 'Kutsuttavan Apple ID / sähköposti (ei tallenneta minnekään pysyvästi)'
+        type: string
+        required: true
+      bundle_id:
+        description: 'App, johon näkyvyys rajataan'
+        type: string
+        default: 'fi.matkakirja.peli'
+
+permissions:
+  contents: read
+
+jobs:
+  kutsu:
+    name: Lähetä käyttäjäkutsu
+    runs-on: [self-hosted, macOS, ARM64, savukkeet]
+    timeout-minutes: 5
+    steps:
+      - name: Pura App Store Connect -avain
+        env:
+          ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+        run: |
+          set -euo pipefail
+          hakemisto="$RUNNER_TEMP/asc"
+          mkdir -p "$hakemisto"
+          chmod 700 "$hakemisto"
+          polku="$hakemisto/AuthKey.p8"
+          if printf '%s' "$ASC_KEY_P8" | grep -q "BEGIN PRIVATE KEY"; then
+            printf '%s\n' "$ASC_KEY_P8" > "$polku"
+          else
+            printf '%s' "$ASC_KEY_P8" | openssl base64 -d -A -out "$polku"
+          fi
+          chmod 600 "$polku"
+          echo "ASC_AVAIN_POLKU=$polku" >> "$GITHUB_ENV"
+
+      - name: Lähetä kutsu
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          BUNDLE_ID: ${{ inputs.bundle_id }}
+          KUTSUTTAVA: ${{ inputs.email }}
+        run: |
+          set -euo pipefail
+          python3 -m pip install --quiet "pyjwt[crypto]==2.9.0"
+          python3 - <<'PY'
+          import os, sys, time, json, urllib.request, urllib.error
+          import jwt
+          kid = os.environ['ASC_KEY_ID']; iss = os.environ['ASC_ISSUER_ID']
+          avain = open(os.environ['ASC_AVAIN_POLKU']).read()
+          bundle_id = os.environ['BUNDLE_ID']; email = os.environ['KUTSUTTAVA']
+
+          def tunnus():
+              nyt = int(time.time())
+              return jwt.encode({'iss': iss, 'iat': nyt, 'exp': nyt + 600, 'aud': 'appstoreconnect-v1'},
+                                 avain, algorithm='ES256', headers={'kid': kid, 'typ': 'JWT'})
+
+          def kutsu(metodi, polku, body=None):
+              data = json.dumps(body).encode() if body is not None else None
+              req = urllib.request.Request(
+                  'https://api.appstoreconnect.apple.com' + polku, data=data, method=metodi,
+                  headers={'Authorization': 'Bearer ' + tunnus(), 'Accept': 'application/json',
+                           'Content-Type': 'application/json'})
+              try:
+                  with urllib.request.urlopen(req, timeout=60) as v:
+                      out = v.read(); return v.status, (json.loads(out) if out else {})
+              except urllib.error.HTTPError as e:
+                  out = e.read()
+                  return e.code, (json.loads(out) if out else {})
+
+          tila, d = kutsu('GET', f'/v1/apps?filter[bundleId]={bundle_id}')
+          if tila != 200 or not d.get('data'):
+              print(f'::error title=Appia ei löytynyt::{bundle_id} ({tila})')
+              sys.exit(1)
+          app_id = d['data'][0]['id']
+
+          tila, d = kutsu('POST', '/v1/userInvitations', {
+              'data': {
+                  'type': 'userInvitations',
+                  'attributes': {
+                      'email': email,
+                      # Nimi on pakollinen kentissä, mutta ei näy kutsutulle
+                      # itse ennen kuin hän täyttää oman profiilinsa.
+                      'firstName': 'Matkakirja',
+                      'lastName': 'Kutsuttu',
+                      'roles': ['DEVELOPER'],
+                      'allAppsVisible': False,
+                      'provisioningAllowed': False,
+                  },
+                  'relationships': {
+                      'visibleApps': {'data': [{'type': 'apps', 'id': app_id}]},
+                  },
+              }
+          })
+          if tila in (200, 201):
+              print('Kutsu lähetetty.')
+          elif tila == 409:
+              print('::notice title=Kutsu tai käyttäjä on jo olemassa::Ei uutta kutsua lähetetty.')
+          else:
+              print(f'::error title=Kutsu epäonnistui::{tila}: {d}')
+              sys.exit(1)
+          PY
+
+      - name: Siivoa avain
+        if: always()
+        run: rm -rf "$RUNNER_TEMP/asc" || true
