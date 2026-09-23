@@ -61,6 +61,27 @@ namespace Matkakirja.Natiivi
                 if (o != null) o.UusiPeli(null);
                 else Tilarivi.Viesti("Peli ei ole vielä käynnissä");
             };
+
+            // Pallo ei lue elettä, joka alkaa UI:n päältä (kaikki kerrokset, myös ei-modaaliset napit).
+            SyoteLukko.LisaaPeitto(UiKerros.Peittaa);
+            // Pelisilmukka pois (3D-mittaukset) = koko UI pois. PeliOhjain syntyy samassa
+            // AfterSceneLoad-vaiheessa, joten kytkentä odottaa sen ilmestymistä.
+            kerros.Juuri(UiKerros.Tilarivi).schedule.Execute(KytkeOhjain).Every(250).Until(() => ohjainKytketty);
+        }
+
+        bool ohjainKytketty;
+
+        void KytkeOhjain()
+        {
+            var o = PeliOhjain.Instanssi;
+            if (o == null || ohjainKytketty) return;
+            ohjainKytketty = true;
+            o.KaytossaMuuttui += paalla =>
+            {
+                if (!paalla) SuljeKaikki();
+                Kerros.Nayta(paalla);
+            };
+            if (!o.Kaytossa) Kerros.Nayta(false);
         }
 
         public void SuljeKaikki()

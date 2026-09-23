@@ -3,8 +3,8 @@
 UI Toolkit -näkymät: `Assets/Matkakirja/UI/` (Assembly-CSharp, ei asmdefiä, koska
 Pelikoodarin näkymärajapinnat `Scripts/Peli/NakymaSopimukset.cs` ovat Assembly-CSharpissa).
 
-- `./unity-tarkistus.sh` — Peli-testit/unity-tarkistus.sh + UI-kansio: kääntää kaiken
-  oikeita Unity-DLL:iä vasten (iOS ja editori) ilman editoria. Tavoite 0 virhettä.
+- `../Peli-testit/unity-tarkistus.sh` (Pelikoodarin) kääntää myös UI-kansion oikeita
+  Unity-DLL:iä vasten (iOS ja editori) ilman editoria. Tavoite 0 virhettä.
 - Laitteella/simulaattorissa: kirjoita `Documents/ui-komento.txt`, rivit (ks. UiKomennot.cs):
   `ui valikko`, `ui asetukset`, `ui matka`, `ui heitto`, `ui viesti teksti`, `ui sulje`,
   `ui osuma x y`, `kuva nimi` (→ `Documents/ui-nimi.png`), `odota s`. Loki `Documents/ui-loki.txt`.
