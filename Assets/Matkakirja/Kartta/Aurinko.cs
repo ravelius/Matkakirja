@@ -1,0 +1,101 @@
+using System;
+using CesiumForUnity;
+using Unity.Mathematics;
+using UnityEngine;
+
+namespace Matkakirja
+{
+    /// <summary>
+    /// Pallon valo (LENNON ESITYS, omistaja 23.9.2026): tavallisesti valo kulkee kameran mukana,
+    /// jolloin näkyvä puolipallo on aina valaistu. Lennon ajaksi valo vaihtuu aurinkoon, joka
+    /// paistaa oikean kellonajan mukaan (auringon alapiste UTC-ajasta), ja palaa laskeutuessa.
+    /// Maaston varjot syntyvät pinnan normaaleista (valo matalalta = pitkät rinnevarjot); oikeat
+    /// heittovarjot eivät toimi planeetan mittakaavassa.
+    /// Sumu: etäisyyssumu lennon ajaksi (Cesiumin URP Lit -varjostin lukee RenderSettings.fogin).
+    /// </summary>
+    public class Aurinko : MonoBehaviour
+    {
+        public CesiumGeoreference georeferenssi;
+        public Light valo;
+        [Tooltip("Kameravalon suunta kameraan nähden (paikallinen kierto).")]
+        public Vector3 kameraKierto = new Vector3(10f, -15f, 0f);
+        [Tooltip("Siirtymä kameravalon ja auringon välillä, sekunteja.")]
+        public float siirtymaS = 1.5f;
+        public Color sumuVari = new Color(0.86f, 0.80f, 0.68f);
+
+        /// <summary>Aika, jonka mukaan aurinko paistaa. null = laitteen UTC-aika (Pelikoodari voi asettaa pelin kellon).</summary>
+        public Func<DateTime> Aika;
+
+        /// <summary>Paistaako aurinko (lento) vai kameravalo.</summary>
+        public bool Paalla { get; private set; }
+
+        float osuus;           // 0 = kameravalo, 1 = aurinko
+        double sumuAlku, sumuLoppu;
+        bool sumu;
+        Quaternion kameraSuhde;
+
+        void Start()
+        {
+            if (valo == null) valo = GetComponent<Light>();
+            if (georeferenssi == null) georeferenssi = FindAnyObjectByType<CesiumGeoreference>();
+            kameraSuhde = Quaternion.Euler(kameraKierto);
+        }
+
+        /// <summary>Aurinko päälle (lennon alku) tai pois (laskeutuminen).</summary>
+        public void Aseta(bool paalle) => Paalla = paalle;
+
+        /// <summary>Etäisyyssumu metreinä kamerasta (alku, loppu); loppu &lt;= 0 = sumu pois.</summary>
+        public void Sumu(double alku, double loppu)
+        {
+            sumu = loppu > 0;
+            sumuAlku = alku;
+            sumuLoppu = loppu;
+        }
+
+        void LateUpdate()
+        {
+            if (valo == null) return;
+            float tavoite = Paalla ? 1f : 0f;
+            osuus = Mathf.MoveTowards(osuus, tavoite, Time.unscaledDeltaTime / Mathf.Max(0.05f, siirtymaS));
+            var kamera = transform.parent;
+            Quaternion kameraValo = kamera != null ? kamera.rotation * kameraSuhde : transform.rotation;
+            Quaternion kierto = kameraValo;
+            if (osuus > 0f && georeferenssi != null)
+            {
+                double3 kohti = AurinkoEcef(Aika != null ? Aika() : DateTime.UtcNow);
+                var suunta = georeferenssi.transform.TransformDirection((float3)georeferenssi.TransformEarthCenteredEarthFixedDirectionToUnity(kohti));
+                var aurinko = Quaternion.LookRotation(-suunta, kamera != null ? kamera.up : Vector3.up);
+                float s = osuus * osuus * (3f - 2f * osuus);
+                kierto = Quaternion.Slerp(kameraValo, aurinko, s);
+            }
+            valo.transform.rotation = kierto;
+
+            RenderSettings.fog = sumu;
+            if (sumu)
+            {
+                RenderSettings.fogMode = FogMode.Linear;
+                RenderSettings.fogColor = sumuVari;
+                RenderSettings.fogStartDistance = (float)sumuAlku;
+                RenderSettings.fogEndDistance = (float)sumuLoppu;
+            }
+        }
+
+        /// <summary>
+        /// Suunta maan keskipisteestä aurinkoon (ECEF, yksikkövektori): auringon alapiste
+        /// deklinaatiosta ja aikayhtälöstä (NOAA:n likiarvo, tarkkuus ~0,5°).
+        /// </summary>
+        public static double3 AurinkoEcef(DateTime utc)
+        {
+            double paiva = utc.DayOfYear - 1 + (utc.Hour - 12 + utc.Minute / 60.0) / 24.0;
+            double g = 2 * math.PI / 365.0 * paiva;
+            double deklinaatio = 0.006918 - 0.399912 * math.cos(g) + 0.070257 * math.sin(g)
+                - 0.006758 * math.cos(2 * g) + 0.000907 * math.sin(2 * g)
+                - 0.002697 * math.cos(3 * g) + 0.00148 * math.sin(3 * g);
+            double aikayhtalo = 229.18 * (0.000075 + 0.001868 * math.cos(g) - 0.032077 * math.sin(g)
+                - 0.014615 * math.cos(2 * g) - 0.040849 * math.sin(2 * g)); // minuutteja
+            double minuutit = utc.Hour * 60 + utc.Minute + utc.Second / 60.0;
+            double pituus = math.radians(-(minuutit + aikayhtalo - 720.0) / 4.0);
+            return new double3(math.cos(deklinaatio) * math.cos(pituus), math.cos(deklinaatio) * math.sin(pituus), math.sin(deklinaatio));
+        }
+    }
+}
