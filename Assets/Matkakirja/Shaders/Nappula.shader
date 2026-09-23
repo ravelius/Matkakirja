@@ -8,6 +8,9 @@ Shader "Matkakirja/Nappula"
         _MainTex("Kuva", 2D) = "white" {}
         _Koko("Korkeus (px)", Float) = 36
         _Keskus("Maan keskipiste (maailma)", Vector) = (0, 0, 0, 0)
+        _Suhde("Leveys / korkeus", Float) = 0.8888889
+        _Keskitys("Ankkuri pystysuunnassa (0 = jalka, 0,5 = keskellä)", Float) = 0
+        _Kulma("Kierto ruudulla (rad)", Float) = 0
     }
     SubShader
     {
@@ -31,6 +34,9 @@ Shader "Matkakirja/Nappula"
                 float4 _MainTex_ST;
                 float _Koko;
                 float4 _Keskus;
+                float _Suhde;
+                float _Keskitys;
+                float _Kulma;
             CBUFFER_END
 
             struct Syote { float4 paikka : POSITION; float2 kulma : TEXCOORD0; };
@@ -43,9 +49,12 @@ Shader "Matkakirja/Nappula"
                 float3 normaali = normalize(maailma - _Keskus.xyz);
                 float3 kohti = normalize(_WorldSpaceCameraPos - maailma);
                 o.paikka = TransformWorldToHClip(maailma);
-                // Leveys = 32/36 korkeudesta (webin svg 32×36), jalka pisteessä.
-                float2 koko = float2(_Koko * 32.0 / 36.0, _Koko);
-                float2 siirto = float2(i.kulma.x * 0.5, i.kulma.y) * koko;
+                // Nappula: leveys 32/36 korkeudesta (webin svg 32×36), jalka pisteessä.
+                // Lentokone (aloituslento): neliö keskellä pistettä, kierretty lentosuuntaan.
+                float2 siirto = float2(i.kulma.x * 0.5 * _Suhde, i.kulma.y - _Keskitys) * _Koko;
+                float ks, kc;
+                sincos(_Kulma, ks, kc);
+                siirto = float2(kc * siirto.x - ks * siirto.y, ks * siirto.x + kc * siirto.y);
                 o.paikka.xy += siirto * 2.0 / _ScreenParams.xy * o.paikka.w;
                 if (dot(normaali, kohti) < 0.02) o.paikka = float4(2, 2, 2, 1);
                 o.uv = float2(i.kulma.x * 0.5 + 0.5, i.kulma.y);
