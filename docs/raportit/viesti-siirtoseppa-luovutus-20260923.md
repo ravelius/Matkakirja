@@ -1,4 +1,4 @@
-# Luovutus: Siirtoseppä, 23.9.2026 klo 10.55 (Suomen aika, EEST)
+# Luovutus: Siirtoseppä, 23.9.2026 klo 11.03 (Suomen aika, EEST)
 
 Luovuttaja on Siirtoseppä (Opus). Vastaanottaja on seuraava Siirtoseppä
 toisella Claude-tilillä tai Fable. Syy: omistaja vaihtaa tiliä (Fablen
@@ -17,8 +17,7 @@ ei ole.
      kaksi liitettä)
    - `docs/raportit/lisenssi-inventaario-20260923.md` (jatko-osa ja kaksi
      liitettä)
-   - `docs/raportit/herokuvien-viitteet-20260923.md`, jos se on mergetty
-     (ks. Tila).
+   - `docs/raportit/herokuvien-viitteet-20260923.md` (PR #2904; ks. Tila).
 
 ## Tila
 
@@ -31,7 +30,7 @@ työkaluja, joten versionumeroa ei nosteta.
 | #2890 | `tools/vienti/`: moottorineutraali sisällön vienti, testi `tests/vienti.test.mjs` ja raportti (myöhemmin osa 5 "yhteinen sisältölähde") | mergetty |
 | #2896 | lisenssi-inventaario: 23 NC/ND-ääntä, kuvat puhtaita | mergetty |
 | #2899 | inventaarion jatko: radiot, liput, ulkoiset kuvat ja julisteet | mergetty |
-| herokuvat | `docs/raportit/herokuvien-viitteet-20260923.md`, haara `siirtoseppa-herokuvat` | HEROKUVAT_TILA |
+| herokuvat | `docs/raportit/herokuvien-viitteet-20260923.md`, haara `siirtoseppa-herokuvat` | #2904 avoin, Julkaisijalla |
 
 **Mitä vienti tekee:** `node tools/vienti/vie-sisalto.mjs` kirjoittaa
 kansioon `dist/vienti/` seuraavat:
@@ -49,7 +48,8 @@ lukumäärätarkistuksen testiin.
 
 ## Pushatut haarat ja avoimet PR:t
 
-- `siirtoseppa-herokuvat`: ks. taulukko.
+- `siirtoseppa-herokuvat`: PR #2904. Mukana on myös korjaus, joka
+  poistaa sähköpostiosoitteen lisenssiliitteestä.
 - `siirtoseppa-luovutus`: tämä raportti ja aloitusviesti. Haaraa ei
   mergetä.
 - `siirtoseppa-vienti` ja `siirtoseppa-lisenssit` on mergetty.
@@ -59,9 +59,13 @@ lukumäärätarkistuksen testiin.
 
 Tehtävät tärkeysjärjestyksessä:
 
-1. **Herokuvien viitteet.** Tilanne on raportissa
-   `herokuvien-viitteet-20260923.md`. Jatko riippuu omistajan
-   linjauksesta (ks. Odottaa omistajan päätöstä).
+1. **Herokuvien viitteet** (#2904). Raportin suositus:
+   - attribuutio 60 herolle rekonstruktion JSONista
+     (`herokuvien-viitteet-20260923-rekonstruktio.json`): 0,5 sessiota
+     Sisältökirjurille ja 0,5 Pelikoodarille
+   - viiteloki jatkossa repoon.
+
+   Viiteloki itse on kadonnut. Jatko odottaa omistajan päätöksiä.
 2. **Korit A ja B: 14 NC-ambienssiääntä** (`js/aani-ehdokkaat.js`,
    rivit lisenssi-inventaariossa). Korvaajaa ei ole osoitettu. Kieli- ja
    musiikkinäytteet (C ja D) ovat Sisältökirjurin PR:issä #2895 ja #2897.
@@ -115,7 +119,9 @@ tulokset ovat raporteissa.
    - (b) uudelleengenerointi vain PD/CC0-viitteillä
    - (c) juristin kanta ensin.
 
-   Suositus ja työmäärät ovat herokuvaraportissa.
+   Suositus: (a) heti ja (c) ennen maksullista julkaisua. Lisäksi
+   omistajalta on kysyttävä, mitä viitteitä hänen 94 ChatGPT-erän
+   herossaan käytettiin.
 3. **SA-kuvat (noin 9 600) maksullisessa versiossa.** Attribuutio
    riittää vakiintuneen tulkinnan mukaan, mutta juristin vahvistus
    kannattaa hankkia ennen julkaisua.
@@ -168,6 +174,10 @@ Julkaisija mergeää.
 
 **Opetukset**
 
+- Generointiajon lokit eivät saa jäädä ajokansioon. Herojen viiteloki
+  katosi pilvikontin mukana, eikä sitä voi palauttaa.
+- Agenttien raporteista pitää poistaa omistajan sähköpostiosoite
+  (User-Agent-merkkijonot) ennen commitia.
 - Rivitason lisenssitarkistus antaa vääriä "tuntemattomia". Lisenssi voi
   olla moduulivakiona (`JULISTE_LAHDE`) tai syvemmällä objektipuussa
   (NASA-kuvat). Tarkista koko polku ylöspäin ennen kuin kirjaat puutteen.
