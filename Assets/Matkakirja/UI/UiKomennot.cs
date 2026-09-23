@@ -89,6 +89,8 @@ namespace Matkakirja.Natiivi
                 // Mobiilissa CaptureScreenshot tulkitsee nimen suhteessa persistentDataPathiin.
                 var nimi = "ui-" + osat[1] + ".png";
                 ScreenCapture.CaptureScreenshot(Application.isMobilePlatform ? nimi : Path.Combine(Application.persistentDataPath, nimi));
+                // Kaappaus tapahtuu vasta ruudun lopussa: seuraava rivi odottaa, ettei kuvaan tule sen tila.
+                odotus = Time.unscaledTime + 0.3f;
                 return nimi;
             }
             if (k != "ui" || osat.Length < 2) return "tuntematon komento";
