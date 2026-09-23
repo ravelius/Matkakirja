@@ -800,9 +800,10 @@ namespace Matkakirja.Natiivi
             if (Tila != SilmukanTila.Aloitus && Tila != SilmukanTila.Kartta && Tila != SilmukanTila.Dialogi) return "silmukka on tilassa " + Tila;
             jatkettava = null;
             UusiPeli(siemen, lahtokaupunki);
-            // Aloitusnäkymässä intro soi jo avaustekstin aikana ennen valintaa (web renderIntro →
-            // playIntroVoice, Natiivi-UI); ilman näkymää se soi tässä kuten ennen.
-            if (!AloitusNakyma) SoitaLuento(luennat.Intro, 1.0f);
+            // Aloituskaava (omistaja 23.9.2026): kone lentää Lontoosta valittuun kaupunkiin ja intro soi
+            // lennon ajan (PeliOhjain.Aloitus.cs). Ilman lentoa (Lontoo, ei nappulaa) intro soi tässä,
+            // paitsi aloitusnäkymässä, jossa Natiivi-UI soittaa sen avaustekstin aikana.
+            if (!AloitaAloituslento(matka.Tila.Pelaaja.Sijainti.Kaupunki) && !AloitusNakyma) SoitaLuento(luennat.Intro, 1.0f);
             return null;
         }
 
@@ -996,6 +997,8 @@ namespace Matkakirja.Natiivi
                     PysaytaKamera(); // modaalinen: himmennyksen napautus peruu, pallo ei lennä
                     return;
                 case SilmukanTila.Matkalla:
+                    // Aloituslentoa sormi ei pysäytä (Nappula.AloitusLento hoitaa kameran).
+                    if (AloituslentoKaynnissa) return;
                     // Sormi keskeytti matka-ajon: jatketaan kohteeseen (varareitti hoitaa valmis-kutsun).
                     kameranOhitus = () => kierto.Aja(matkaKohde.Lat, matkaKohde.Lon, kierto.KorkeusKaarelle(SaapumisKaari), 0.8f, null);
                     return;
@@ -1413,10 +1416,10 @@ namespace Matkakirja.Natiivi
                 case LehtiTekoLaji.Kulttuurivastaus: tulos = KauppaTeko(k => k.Kulttuuri(t.Kaupunki, t.Oikein), RahaSyyt.Kulttuuri); break;
                 case LehtiTekoLaji.Minitehtavavastaus:
                     tulos = KauppaTeko(k => k.Minitehtava(t.Kaupunki, t.Aihe, t.Oikein, t.Palkkio > 0 ? t.Palkkio : KauppaVakiot.MinitehtavaPalkkio),
-                        RahaSyyt.Minitehtava(t.Aihe));
+                        t.Selite != null ? t.Selite + " ratkesi" : RahaSyyt.Minitehtava(t.Aihe));
                     break;
                 case LehtiTekoLaji.JulisteMyonto: tulos = KauppaTeko(k => k.MyonnaJuliste(t.Avain), RahaSyyt.Juliste); break;
-                case LehtiTekoLaji.PullaVinkki: tulos = KauppaTeko(k => k.PullaVinkki(t.Kaupunki), RahaSyyt.Pulla); break;
+                case LehtiTekoLaji.PullaVinkki: tulos = KauppaTeko(k => k.PullaVinkki(t.Kaupunki), t.Selite ?? RahaSyyt.Pulla); break;
                 case LehtiTekoLaji.EtsiKatko:
                 {
                     // Web etsiKatko: lehti kiinni ja kohtaaminen/kysymys alkaa (LehtiSuljettu näyttää sen).
@@ -1809,7 +1812,7 @@ namespace Matkakirja.Natiivi
             PaivitaSahke();
             // Pallo ei ota kosketuksia modaalisen näkymän (ja lehden) aikana.
             bool esta = Kaytossa && (Tila == SilmukanTila.Dialogi || Tila == SilmukanTila.Kysymys || Tila == SilmukanTila.Lehti
-                                     || Tila == SilmukanTila.Traileri || Tila == SilmukanTila.Sahketehtava);
+                                     || Tila == SilmukanTila.Traileri || Tila == SilmukanTila.Sahketehtava || AloituslentoKaynnissa);
             if (esta != lukossa) { lukossa = esta; SyoteLukko.Aseta(this, esta); }
         }
 

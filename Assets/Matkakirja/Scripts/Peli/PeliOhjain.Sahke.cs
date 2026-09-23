@@ -266,7 +266,7 @@ namespace Matkakirja.Natiivi
             var maa = t.HakemistoMaa ?? (verkko.Kaupungit.TryGetValue(t.Kaupunki, out var k) ? k.Maa : null);
             IEnumerable<string> lahteet = null;
             try { lahteet = maa != null ? SahkeHakemisto?.Invoke(maa) : null; } catch (Exception e) { Debug.LogException(e); }
-            var kortti = SahketehtavaTila.Pullat(sahketila.Kortti(t, lahteet), t, kaupat);
+            var kortti = SahketehtavaTila.Pullat(sahketila.Kortti(t, lahteet, maa), t, kaupat);
             if (avaus) Kuplat(t.Kaupunki, sahketila.Vastattu(t.Kaupunki) ? "odotus" : "johdanto", kortti.Kuplat);
             if (sahketehtavaNakyma == null) return;
             try { sahketehtavaNakyma.Nayta(kortti, SahkeToiminnot(t)); }
@@ -320,7 +320,7 @@ namespace Matkakirja.Natiivi
             Livia("success");
             if (sahketehtavaNakyma != null && sahkeKorttiKaupunki == t.Kaupunki)
             {
-                try { sahketehtavaNakyma.Nayta(sahketila.KuittausKortti(t), SahkeToiminnot(t)); }
+                try { sahketehtavaNakyma.Nayta(sahketila.KuittausKortti(t, verkko.Kaupungit.TryGetValue(t.Kaupunki, out var kk) ? kk.Maa : null), SahkeToiminnot(t)); }
                 catch (Exception e) { Debug.LogException(e); }
             }
             Kuplat(t.Kaupunki, "oikein", t.Oikein);

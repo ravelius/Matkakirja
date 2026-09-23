@@ -313,9 +313,10 @@ namespace Matkakirja.Natiivi
             return siisti.Length > 0 ? siisti : null;
         }
 
-        sealed class WikiYhteenveto { public string Kieli, Otsikko, Tiivistelma, Kuva, Osoite; }
+        internal sealed class WikiYhteenveto { public string Kieli, Otsikko, Tiivistelma, Kuva, Osoite; }
 
-        static IEnumerator HaeYhteenveto(string otsikko, string[] kielet, Action<WikiYhteenveto> valmis)
+        // Myös matkakirjakortin "Katso kuva" (Matkakirjakortti.AvaaWiki): webin fi → en -järjestys.
+        internal static IEnumerator HaeYhteenveto(string otsikko, string[] kielet, Action<WikiYhteenveto> valmis)
         {
             WikiYhteenveto vara = null;
             foreach (var kieli in kielet)

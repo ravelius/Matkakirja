@@ -8,7 +8,7 @@ namespace Matkakirja
     /// <summary>
     /// Pallon valo (LENNON ESITYS, omistaja 23.9.2026): tavallisesti valo kulkee kameran mukana,
     /// jolloin näkyvä puolipallo on aina valaistu. Lennon ajaksi valo vaihtuu aurinkoon, joka
-    /// paistaa oikean kellonajan mukaan (auringon alapiste UTC-ajasta), ja palaa laskeutuessa.
+    /// paistaa pelin kellonajan mukaan (Aika tai paikallinen aamu koneen kohdalla), ja palaa laskeutuessa.
     /// Maaston varjot syntyvät pinnan normaaleista (valo matalalta = pitkät rinnevarjot); oikeat
     /// heittovarjot eivät toimi planeetan mittakaavassa.
     /// Sumu: etäisyyssumu lennon ajaksi (Cesiumin URP Lit -varjostin lukee RenderSettings.fogin).
@@ -23,8 +23,19 @@ namespace Matkakirja
         public float siirtymaS = 1.5f;
         public Color sumuVari = new Color(0.86f, 0.80f, 0.68f);
 
-        /// <summary>Aika, jonka mukaan aurinko paistaa. null = laitteen UTC-aika (Pelikoodari voi asettaa pelin kellon).</summary>
+        /// <summary>
+        /// Aika, jonka mukaan aurinko paistaa (UTC). null = pelin paikallinen aika: aurinko on
+        /// koneen kohdalla kello <see cref="paikallinenTunti"/> (pelin "aamu"), joten lento ei
+        /// ole yöllä laitteen kellonajasta riippumatta. Pelikoodari voi asettaa pelin kellon.
+        /// </summary>
         public Func<DateTime> Aika;
+        [Tooltip("Paikallinen aurinkoaika koneen kohdalla, kun Aika = null (10 = aamupäivä, pitkät rinnevarjot).")]
+        public double paikallinenTunti = 10.0;
+
+        double kohdePituus;
+
+        /// <summary>Kohta (koneen pituusaste), jonka paikallinen aika määrää auringon, kun Aika = null.</summary>
+        public void Kohde(double pituusAste) => kohdePituus = pituusAste;
 
         /// <summary>Paistaako aurinko (lento) vai kameravalo.</summary>
         public bool Paalla { get; private set; }
@@ -62,7 +73,7 @@ namespace Matkakirja
             Quaternion kierto = kameraValo;
             if (osuus > 0f && georeferenssi != null)
             {
-                double3 kohti = AurinkoEcef(Aika != null ? Aika() : DateTime.UtcNow);
+                double3 kohti = Aika != null ? AurinkoEcef(Aika()) : AurinkoPaikallinen(DateTime.UtcNow, kohdePituus, paikallinenTunti);
                 var suunta = georeferenssi.transform.TransformDirection((float3)georeferenssi.TransformEarthCenteredEarthFixedDirectionToUnity(kohti));
                 var aurinko = Quaternion.LookRotation(-suunta, kamera != null ? kamera.up : Vector3.up);
                 float s = osuus * osuus * (3f - 2f * osuus);
@@ -78,6 +89,15 @@ namespace Matkakirja
                 RenderSettings.fogStartDistance = (float)sumuAlku;
                 RenderSettings.fogEndDistance = (float)sumuLoppu;
             }
+        }
+
+        /// <summary>Aurinko niin, että pituusasteella lon on paikallinen aurinkoaika tunti (deklinaatio päivämäärästä).</summary>
+        public static double3 AurinkoPaikallinen(DateTime utc, double lon, double tunti)
+        {
+            double3 v = AurinkoEcef(utc);
+            double dekl = math.asin(v.z);
+            double pituus = math.radians(lon - (tunti - 12.0) * 15.0);
+            return new double3(math.cos(dekl) * math.cos(pituus), math.cos(dekl) * math.sin(pituus), math.sin(dekl));
         }
 
         /// <summary>

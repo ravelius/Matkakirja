@@ -19,6 +19,8 @@ namespace Matkakirja.Natiivi
     public sealed class KohdekarttaKohde
     {
         public string Nimi, Wiki, Nosto, NimiPuoli, Aika;
+        /// <summary>Kaikki nostolinkit (web nosto: tunnus tai taulukko); Nosto = ensimmäinen.</summary>
+        public List<string> Nostot = new List<string>();
         /// <summary>Paikka prosentteina kuvasta (0–100).</summary>
         public float X, Y;
         /// <summary>Kyltin siirto pikseleinä (web siirto {x, y}), tai nolla.</summary>
@@ -52,6 +54,12 @@ namespace Matkakirja.Natiivi
         static Dictionary<string, Kohdekartta> kartat;
         static bool haussa;
         static readonly List<Action> odottajat = new List<Action>();
+
+        /// <summary>Onko kokoelmat ladattu (myös epäonnistunut lataus = tyhjä).</summary>
+        public static bool Ladattu => kartat != null;
+
+        /// <summary>Kaikki kohdekartat (tyhjä, kunnes ladattu).</summary>
+        public static IEnumerable<Kohdekartta> Kaikki => kartat != null ? kartat.Values : Enumerable.Empty<Kohdekartta>();
 
         /// <summary>Onko kaupungilla kohdekartta (false, kunnes ladattu).</summary>
         public static bool On(string kaupunki) => kartat != null && kaupunki != null && kartat.ContainsKey(kaupunki);
@@ -157,10 +165,15 @@ namespace Matkakirja.Natiivi
                     var siirto = Ob(MiniJson.Kentta(o, "siirto"));
                     var kohde = new KohdekarttaKohde
                     {
-                        Nimi = nimi, Wiki = T(o, "wiki"), Nosto = T(o, "nosto"), NimiPuoli = T(o, "nimiPuoli"), Aika = T(o, "aika"),
+                        Nimi = nimi, Wiki = T(o, "wiki"), NimiPuoli = T(o, "nimiPuoli"), Aika = T(o, "aika"),
                         X = (float)x, Y = (float)y, Numero = ++numero,
                         Siirto = siirto != null ? new Vector2((float)(MiniJson.Luku(siirto, "x") ?? 0), (float)(MiniJson.Luku(siirto, "y") ?? 0)) : Vector2.zero,
                     };
+                    // Nostolinkki on tunnus tai taulukko (Tuileriain rauniot: syvennys + tuileries).
+                    var linkki = MiniJson.Kentta(o, "nosto");
+                    if (linkki is string ls && ls.Length > 0) kohde.Nostot.Add(ls);
+                    else foreach (var osa in Rakenne.Lista(linkki) ?? new List<object>()) if (osa is string xs && xs.Length > 0) kohde.Nostot.Add(xs);
+                    kohde.Nosto = kohde.Nostot.Count > 0 ? kohde.Nostot[0] : null;
                     string avain = id + ":" + nimi;
                     piirrokset.TryGetValue(avain, out kohde.Piirros);
                     // Juttu: kohteen oma teksti (1.17) tai nähtävyyskokoelman juttu samalla nimellä.
