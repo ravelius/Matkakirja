@@ -587,10 +587,11 @@ export const RAAMATTU = {
         'Yksi lauta: koko maailma yhdellä kartalla.',
         'ALKU: tarina alkaa Lontoosta. Ensimmäisen kohteen saa '
           + 'valita kartalta — valinta ratkaisee, minkä mantereen '
-          + 'pääaarretta etsitään ensin. BETA-RAJAUS (25.8.2026): '
-          + 'toistaiseksi valittavissa vain Ateena; vapaa valinta '
-          + 'palaa kun fokusmaita on tarpeeksi.',
-        'VUORO: matkustustapa (jalan/laiva/lento) → noppa → siirto. '
+          + 'pääaarretta etsitään ensin. Aloituskaupunki valitaan laudan '
+          + 'start-merkityistä kaupungeista (js/packs/maailma.js; 23.9.2026 '
+          + 'tilanne 14 kaupunkia, sama lista natiivissa). Vanha beta-rajaus '
+          + '"vain Ateena" (25.8.2026) on purettu.',
+        'VUORO: matkustustapa (liftaus/bussi/laiva/lento, ks. LIIKKUMINEN) → noppa → siirto. '
           + 'Heitto, laiva tai lento = 6 h matka-aikaa.',
         'MANNERRAJA: uudelle mantereelle vasta pääaarteella tai '
           + 'maksamalla 1000 p (per ylitys). Rajakaupunkiin pääsee.',
