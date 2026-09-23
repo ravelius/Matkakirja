@@ -384,7 +384,7 @@ namespace Matkakirja.Natiivi
         {
             // Web aloitaKartalta: avauksen puhe loppuu, kun valinta alkaa; naksahdus (sfx clack).
             Puhe.Instanssi?.Pysayta();
-            Aanet.PulunTehoste("pulu.kujerrus");
+            Aanet.Tehoste("clack");
             UiSisalto.Lataa(() =>
             {
                 if (!Auki || ValitseePallolla) return;
@@ -413,6 +413,7 @@ namespace Matkakirja.Natiivi
 
         void Valitse(string id)
         {
+            Aanet.Tehoste("clack", 2.4f); // web ui.js:12690 aloituskaupungin napautus
             LopetaPallovalinta();
             Rakenne.Nayta(valinta, false, 200);
             Piilota();
