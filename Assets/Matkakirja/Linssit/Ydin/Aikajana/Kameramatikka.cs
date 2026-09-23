@@ -34,6 +34,29 @@ namespace Matkakirja.Linssit.Aikajana
 
         const double Rad = Math.PI / 180;
 
+        // Pelilaudan Miller-arkki (pyramidi.json projektio; sama kuin Kartta/ReittiGeometria).
+        const double MillerLon0 = -175.0, MillerPohjoinen = 76.0;
+        static readonly double MillerS = 12000.0 / (2 * Math.PI);
+        static double MillerY(double phi) => -1.25 * Math.Log(Math.Tan(Math.PI / 4 + 0.4 * phi));
+
+        /// <summary>Laudan piste (x, y) asteiksi (web fokusmitat laudaltaAsteiksi, Miller).</summary>
+        public static LatLon LaudaltaAsteiksi(double x, double y)
+        {
+            double lon = x / MillerS / Rad + MillerLon0;
+            lon = ((lon + 180) % 360 + 360) % 360 - 180;
+            double my = y / MillerS + MillerY(MillerPohjoinen * Rad);
+            double phi = (Math.Atan(Math.Exp(-my / 1.25)) - Math.PI / 4) / 0.4;
+            return new LatLon(phi / Rad, lon);
+        }
+
+        /// <summary>Laudan laatikko { x, y, w, h } asteiden laatikoksi (kaaren alue).</summary>
+        public static Laatikko LaatikkoLaudalta(double x, double y, double w, double h)
+        {
+            var a = LaudaltaAsteiksi(x, y);
+            var b = LaudaltaAsteiksi(x + w, y + h);
+            return new Laatikko(Math.Min(a.Lat, b.Lat), Math.Max(a.Lat, b.Lat), Math.Min(a.Lon, b.Lon), Math.Max(a.Lon, b.Lon));
+        }
+
         /// <summary>Laudan yksiköt (ruudun leveydellä) asteiksi.</summary>
         public static double LeveysAsteina(double lautayksikot) => lautayksikot / LautayksikkoaAsteella;
 
