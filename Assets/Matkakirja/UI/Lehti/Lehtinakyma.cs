@@ -525,7 +525,7 @@ namespace Matkakirja.Natiivi
                     tulos.EnableInClassList("mk-vaarin", !oikein);
                     tulos.style.display = DisplayStyle.Flex;
                     Aanet.PulunTehoste(oikein ? "correct" : "wrong");
-                    if (oikein) UiNakymat.Hae()?.Tilarivi.Viesti($"+{palkkio} puntaa · Lehden minitehtävä ratkesi");
+                    // Palkkiokupla tulee RahaMuuttui-tapahtumasta (Leima); testiavauksessa ilman ohjainta ei kuplaa.
                     // Juliste myönnetään heti; nappi vain avaa katselun (omistaja 22.8.2026).
                     if (oikein && juliste != null)
                     {
