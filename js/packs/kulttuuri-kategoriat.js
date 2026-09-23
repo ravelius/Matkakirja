@@ -107126,4 +107126,333 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * RAS HAFUN (Afrikan kaupunkilehtierä O7, toinen erä, 23.9.2026).
+   *
+   * KANSI ON HISTORIAN SIVU. tests/lehdet.test.mjs vaatii jokaiselle
+   * lehdelle kannen (id 'kaupunki') ja jokaiselle muulle sivulle
+   * minitehtävän, joten historian seitsemän juttua ovat kannessa
+   * (Timbuktun malli) ja toinen aihe on Suitsuke ja kauppa. Kansikuvat,
+   * avauskuvat ja matkailijalle-osio tulevat myöhemmällä kierroksella.
+   *
+   * VANHAT LITTEÄT NOSTOT (africa-kulttuuri.js) siirtyivät tänne
+   * uudelleen kirjoitettuina ja lähteestä korjattuina:
+   *   - "Puntin maa": vanha teksti väitti, että monen tutkijan mielestä
+   *     Punt oli juuri tämä rannikko. Land of Punt -artikkelin mukaan
+   *     sijainti on yhä kiistanalainen; enemmistö sijoittaa Puntin
+   *     yleisesti Afrikan sarveen, ja muumiopaviaanien tutkimukset
+   *     (2010, 2020, 2023) osoittavat Eritrean suuntaan. Oponen ja Puntin
+   *     yhteys on artikkeleissa vain mahdollinen. Nyt "Missä oli Puntin
+   *     maa?".
+   *   - "Suitsukkeen maa": antiikin "Suitsukemaa" (Frankincense Country)
+   *     on Periploksessa Etelä-Arabian Hadramaut, ei Somalia; Guardafuin
+   *     kreikkalainen nimi oli Aromata. Neljän tuhannen vuoden vienti
+   *     nojasi Punt = Somalia -samastukseen, ja "samoilta puilta
+   *     sukupolvesta toiseen" ei löytynyt lähteestä. Nyt "Puu, joka
+   *     tarttuu kallioon" (lähteenä Boswellia sacra ja Frankincense).
+   *   - "Monsuunin kauppiaat": ei lähdettä luetuissa artikkeleissa
+   *     (dhow-kaupasta ja monsuunin tahdista ei ollut kohtia), joten
+   *     juttu jätettiin pois; monsuuni mainitaan vain Guardafuin
+   *     merivirtojen yhteydessä.
+   * Kulttuurivisa kysyi, mitä rannikolta on viety "neljä tuhatta
+   * vuotta"; se muutettiin muotoon "antiikin ajoista asti" (Opone,
+   * suitsuke noin 50 jKr.). Visan lähdejutut ovat "Opone, mausteiden
+   * satama" ja "Puu, joka tarttuu kallioon"; minitehtävä kysyy
+   * tukijuurista eikä osu visaan.
+   *
+   * FAKTAPOHJA: en-Wikipedia raakatekstinä 23.9.2026 — Ras Hafun, Hafun,
+   * Opone, Periplus of the Erythraean Sea, Land of Punt, Mortuary temple
+   * of Hatshepsut, Cape Guardafui, Majeerteen Sultanate, Osman Mohamoud
+   * (king), SS Jeddah, Hafun Salt Factory, Effect of the 2004 Indian
+   * Ocean earthquake on Somalia, Cyclone Gati, Frankincense, Boswellia
+   * sacra, Boswellia frereana, Horn of Africa.
+   *
+   * KUVAT katsottu silmin 900 px:n esikatseluna, kaikki >= 1200 px ja
+   * käyttämättömiä muualla repossa (Frankincense 2005-12-31.jpg oli vain
+   * vanhassa litteässä nostossa, joka poistettiin; valokuvat-paikalliset
+   * -peili jää ennalleen): Gerstin avaruuskuva 2018 (Puntlandin rannikko,
+   * alhaalla oikealla niemi, hiekkakannas ja laguuni), Reclusin kartta
+   * (niemi, laguuni ja syvyysviivoitus), Royal Ontario Museumin
+   * jäljennös Punt-reliefistä (Parahu edellä, Ati takana, kantajat ja
+   * aasi), Guardafuin kivimajakka 1987 (kirvesnipun kiviterä kyljessä),
+   * ISS 2010 (niemi, kannas ja laguunin suorakulmaiset altaat),
+   * Somaliasta ostetut pihkapalat ja Elliotin kirjan 1907 piirros
+   * Punt-laivan lastauksesta (ruukkupuut ja säkit). Elliotin piirroksen
+   * lisenssi on Commonsissa "No known copyright restrictions" (1907,
+   * Internet Archive), joten se on merkitty PD:ksi. Majeerteenin
+   * ratsastajakuva (1878) hylättiin, koska sen lähde on vain
+   * sosiaalisen median tili; Jeddahista ja tsunamista ei löytynyt
+   * kelvollista kuvaa, joten ne jutut ovat kuvattomia.
+   */
+  rashafun: [
+    {
+      id: 'kaupunki',
+      nimi: 'Ras Hafun',
+      johdanto: 'Afrikan itäisin niemi, jonka vain kapea hiekkakannas sitoo '
+        + 'mantereeseen. Täällä oli antiikin Oponen kauppasatama, ja '
+        + 'isoisän aikaan rannikkoa hallitsi Majeerteenin sulttaanikunta.',
+      nostot: [
+        {
+          otsikko: 'Mantereen itäisin kärki',
+          teksti: 'Ras Hafun on Afrikan mantereen itäisin kohta, ja niemellä '
+            + 'sijaitseva Hafunin kalastajakaupunki näkee ensimmäisenä koko '
+            + 'mantereella auringon nousevan. Niemi on melkein saari: '
+            + 'mantereeseen sen yhdistää 20 kilometriä pitkä hiekkakannas, '
+            + 'joka on vain 1–3 kilometriä leveä ja nousee viisi metriä '
+            + 'merenpinnan yläpuolelle. Niemen pohjoispuolella on Guardafuin '
+            + 'salmi, eteläpuolella Somalianmeri. Rannoilla on kalliota, '
+            + 'hiekkaa ja mangrovea, ja sisämaassa kuivaa savannia. '
+            + 'BirdLife International on nimennyt niemen tärkeäksi '
+            + 'lintualueeksi, koska siellä elää merkittäviä kantoja '
+            + 'kyyhkyjen, kiurujen, kottaraisten ja varpusten somalialaisia '
+            + 'lajeja.',
+          tiedosto: 'Desert and ocean.jpg',
+          lyhyt: 'Hafunin niemi avaruudesta 2018: aavikko ulottuu aivan meren rantaan.',
+          selite: 'Saksalainen astronautti Alexander Gerst kuvasi Puntlandin '
+            + 'rannikon avaruudesta kesällä 2018. Alhaalla oikealla on '
+            + 'Hafunin niemi, jonka pitkä hiekkakannas yhdistää mantereeseen, '
+            + 'ja kannaksen takana turkoosi laguuni.',
+          lahde: 'Alexander Gerst, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Ras Hafun',
+        },
+        {
+          otsikko: 'Opone, mausteiden satama',
+          teksti: 'Kreikankielinen merenkulkuopas Erytrean meren periplus '
+            + 'kirjoitettiin 1. vuosisadalla jKr., luultavasti Egyptissä '
+            + 'asuneen kreikkalaisen merimiehen käsin. Sen kolmannessatoista '
+            + 'kohdassa kuvataan kauppakaupunki Opone, johon päästään '
+            + 'purjehtimalla niemen vartta ja jonne virtakin vetää. Oppaan '
+            + 'mukaan Oponessa oli eniten kanelia, sieltä vietiin orjia '
+            + 'Egyptiin, ja sen kilpikonnankuori oli parempaa kuin missään '
+            + 'muualla. Jo noin vuonna 50 '
+            + 'jKr. se tunnettiin mausteiden, norsunluun, eläinten nahkojen '
+            + 'ja suitsukkeen kauppapaikkana. Oponen uskotaan olleen juuri '
+            + 'Hafunin niemellä. Brittiläinen arkeologi Neville Chittick '
+            + 'löysi siellä somalikollegoineen 1970-luvulla kuivamuurattuja '
+            + 'seiniä, sisäpihallisia taloja ja vanhan sataman paikan, ja '
+            + 'myöhemmin niemeltä on kaivettu esiin egyptiläistä, roomalaista '
+            + 'ja Persianlahden keramiikkaa.',
+          tiedosto: 'AFR V4 D470 Ras Hafun.png',
+          lyhyt: 'Ras Hafun Élisée Reclusin maantiedon kartassa 1800-luvun lopulla.',
+          selite: 'Ranskalaisen maantieteilijän Élisée Reclusin teoksen '
+            + 'englanninkielisen laitoksen kartta Ras Hafunista. Viivoitus '
+            + 'näyttää meren syvyyden: niemen länsipuolella on matala laguuni '
+            + 'ja matalikoita, idässä syvä meri.',
+          lahde: 'Élisée Reclus, Wikimedia Commons (PD)',
+          wiki: 'Opone',
+        },
+        {
+          otsikko: 'Missä oli Puntin maa?',
+          teksti: 'Muinaiset egyptiläiset purjehtivat Puntin maahan hakemaan '
+            + 'kultaa, tuoksuvia pihkoja, eebenpuuta, norsunluuta ja '
+            + 'villieläimiä. Ensimmäinen tunnettu retki tehtiin faarao '
+            + 'Sahuren aikana 25. vuosisadalla eaa. Kuuluisin on kuningatar '
+            + 'Hatshepsutin viiden laivan retki 15. vuosisadalla eaa.: se on '
+            + 'kuvattu hänen temppelinsä seinään Deir el-Baharissa, ja '
+            + 'reliefissä Puntia hallitsevat kuningas Parahu ja kuningatar '
+            + 'Ati. Missä Punt oli, siitä kiistellään yhä. Useimmat tutkijat '
+            + 'sijoittavat sen Afrikan sarveen, ja on arveltu, että Opone '
+            + 'olisi voinut kuulua siihen. Egyptin muumioitujen paviaanien '
+            + 'tutkimukset ovat kuitenkin osoittaneet Eritrean ja Itä-Etiopian '
+            + 'suuntaan. Somalian itsehallintoalue Puntland, jossa Ras Hafun '
+            + 'on, on nimetty muinaisen Puntin kunniaksi.',
+          tiedosto: 'Journey to Punt.jpg',
+          lyhyt: 'Puntin kuningas Parahu ja kuningatar Ati: jäljennös Hatshepsutin temppelin reliefistä.',
+          selite: 'Royal Ontario Museumissa Torontossa esillä oleva jäljennös '
+            + 'Deir el-Baharin reliefistä. Ylärivissä oikealla kulkee '
+            + 'kuningas Parahu, hänen takanaan kuningatar Ati, ja perässä '
+            + 'tulevat lahjoja kantavat miehet ja aasi.',
+          lahde: 'Maksim Sokolov, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Land of Punt',
+        },
+        {
+          otsikko: 'Katso ja pakene',
+          teksti: 'Ras Hafunin pohjoispuolella on Guardafuin niemi, Afrikan '
+            + 'sarven kärki, jota antiikin kreikkalaiset kutsuivat nimellä '
+            + 'Aromata. Nimi Guardafui syntyi keskiajan lopulla merimiesten '
+            + 'kielessä: vanhan italian guarda fui tarkoittaa ”katso ja '
+            + 'pakene”. Toisen selityksen mukaan nimi tulee Hafunin vanhasta '
+            + 'nimestä Jard-Hafun. Niemen itäpuolella virrat ovat vaarallisia, '
+            + 'kun taas pohjoispuolella meri on etenkin lounaismonsuunin '
+            + 'aikaan tyynempi. Haaksirikkoja sattui niin usein, että '
+            + 'Britannia sopi 1800-luvulla epävirallisesti Majeerteenin '
+            + 'kuninkaan Osman '
+            + 'Mahamuudin kanssa vuosittaisesta korvauksesta: hänen '
+            + 'alamaisensa suojelisivat haaksirikkoisia brittimerimiehiä ja '
+            + 'vartioisivat hylkyjä ryöstäjiltä. Sopimusta ei koskaan '
+            + 'vahvistettu. Majakka niemelle saatiin vasta 1924, ja 1930 '
+            + 'italialaiset korvasivat sen kivimajakalla, jonka kyljessä on '
+            + 'yhä fasistien kirvesnipun valtava kiviterä.',
+          tiedosto: 'Guardafui Lighthouse.jpg',
+          lyhyt: 'Guardafuin käytöstä poistettu kivimajakka 1987: kyljessä kirvesnipun kiviterä.',
+          selite: 'Guardafuin niemen kärjessä seisova, jo käytöstä poistettu '
+            + 'kivimajakka valokuvattuna 1987. Tornin kyljestä työntyy '
+            + 'kirvesnipun muotoinen kiviterä, fasistisen Italian tunnus.',
+          lahde: 'Timlash, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Cape Guardafui',
+        },
+        {
+          otsikko: 'Laiva, jonka päällystö hylkäsi',
+          teksti: 'Vuonna 1872, vuotta ennen isoisän matkaa, Dumbartonissa '
+            + 'Britanniassa rakennettiin höyrylaiva Jeddah pyhiinvaeltajien '
+            + 'kuljetukseen. Heinäkuussa 1880 se lähti Singaporesta mukanaan '
+            + '953 Mekkaan ja Medinaan matkaavaa muslimipyhiinvaeltajaa. Ras '
+            + 'Hafunin edustalla hirmumyrskyn voimainen tuuli ja raskas '
+            + 'merenkäynti irrottivat kattilat paikoiltaan, ja laiva alkoi '
+            + 'vuotaa. Kapteeni, hänen vaimonsa, konepäällikkö, yliperämies '
+            + 'ja osa miehistöstä pakenivat pelastusveneellä ja kertoivat '
+            + 'Adenissa laivan uponneen. Jeddah ei uponnut: jäljelle jäänyt '
+            + 'miehistö ja matkustajat pitivät sen pinnalla, ja höyrylaiva '
+            + 'Antenor hinasi sen Adeniin. Kuolleita oli 18, mutta lähes '
+            + 'kaikki pyhiinvaeltajat selvisivät. Kapteenin pätevyyskirja '
+            + 'pidätettiin kolmeksi vuodeksi, ja tapaus innoitti Joseph '
+            + 'Conradin romaaniin Lordi Jim.',
+          wiki: 'SS Jeddah',
+        },
+        {
+          otsikko: 'Maailman suurin suolatehdas',
+          teksti: 'Ensimmäisen maailmansodan jälkeen italialaiset huomasivat, '
+            + 'että Hafunin matala lahti pitkine, loivine rantoineen sopi '
+            + 'täydellisesti suolan tuotantoon. Milanossa 1922 perustettu '
+            + 'yhtiö rakensi suola-altaat niemen molemmin puolin, Hafuniin ja '
+            + 'Hurdiyoon, ja vanhan Hafunin paikalle nousi 5 000 asukkaan '
+            + 'kaupunki nimeltä Dante. Tuotanto alkoi 1931, ja 1930-luvulla '
+            + 'tehdas oli maailman suurin: 27 kilometriä pitkä köysirata '
+            + 'kuljetti suolan laguunin yli, ja rata jatkui puolitoista '
+            + 'kilometriä merelle lastauspaikalle. Suola vietiin Intiaan ja '
+            + 'Kaukoitään, ja tehdas työllisti 600 italialaista ja 2 000 '
+            + 'paikallista. Britit tuhosivat sen 1941 toisessa '
+            + 'maailmansodassa, ja 1970-luvulla Hafunissa asui enää noin 500 '
+            + 'ihmistä, lähinnä kalastajia.',
+          tiedosto: 'ISS023-E-22597 - View of Earth.jpg',
+          lyhyt: 'Hafunin niemi avaruusasemalta 2010: hiekkakannas, laguuni ja sen rannan suorakulmaiset altaat.',
+          selite: 'Kansainvälisen avaruusaseman miehistön kuva Hafunin '
+            + 'niemestä huhtikuussa 2010. Oikealla on niemen kallioinen pää, '
+            + 'alhaalla mantereeseen johtava hiekkakannas ja sen takana '
+            + 'laguuni, jonka vasemmalla rannalla erottuu suorakulmaisia '
+            + 'altaita.',
+          lahde: 'NASA:n Johnson Space Center, Wikimedia Commons (PD)',
+          wiki: 'Hafun Salt Factory',
+        },
+        {
+          otsikko: 'Meri, joka vetäytyi ensin',
+          teksti: 'Tapaninpäivänä 2004 Intian valtameren maanjäristyksen '
+            + 'synnyttämä tsunami iski Somaliaan, jopa 4 500 kilometrin '
+            + 'päähän järistyksen keskuksesta. Matala Hafunin niemi kärsi '
+            + 'pahiten koko Afrikan mantereella, ja se oli ainoa paikka Intian '
+            + 'niemimaan länsipuolella, jossa meri vetäytyi rannasta ennen '
+            + 'kuin aallot vyöryivät sisään. Aallot vaurioittivat myös '
+            + 'hiekkakannasta, ja neljä päivää myöhemmin avustuskuorma kulki '
+            + 'Foarin kylästä Hafuniin 60 kilometrin matkan seitsemässä '
+            + 'tunnissa. Marraskuussa 2020 syklooni Gati rantautui Hafunin '
+            + 'lähelle noin 165 kilometrin tuntinopeudella. Se oli '
+            + 'ensimmäinen hurrikaanin voimalla Somaliaan iskenyt syklooni '
+            + 'luotettavien mittausten aikana.',
+          wiki: 'Effect of the 2004 Indian Ocean earthquake on Somalia',
+        },
+      ],
+    },
+    {
+      id: 'kauppa',
+      nimi: 'Suitsuke ja kauppa',
+      johdanto: 'Barin vuorilla kasvaa puu, jonka pihka on tuoksunut '
+        + 'temppeleissä ja kirkoissa vuosituhansia. Vielä sata vuotta '
+        + 'sitten suitsuke oli Majeerteenin sulttaanikunnan tärkein '
+        + 'vientitavara.',
+      tehtava: {
+        kysymys: 'Miten suitsukepuu pysyy pystyssä jyrkällä kallioseinällä?',
+        vaihtoehdot: [
+          'Sen tyvi levenee tukijuuriksi, jotka tarttuvat kallioon',
+          'Se kasvaa aina toisen puun tukemana',
+          'Sen pihka liimaa rungon kiveen',
+          'Sillä on kymmenmetrinen paalujuuri',
+        ],
+        oikea: 0,
+        fakta: 'Tukijuuret muodostavat tyven ympärille tyynyn, joka '
+          + 'takertuu kallioon. Puu viihtyy kalkkipitoisessa maassa jopa '
+          + '1 200 metrin korkeudessa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Puu, joka tarttuu kallioon',
+          teksti: 'Suitsukepuu Boswellia sacra on pieni, kahdesta kahdeksaan '
+            + 'metriä korkea puu, jonka kuori on ohutta kuin paperi. Se kasvaa '
+            + 'kivikkoisilla rinteillä ja rotkoissa jopa 1 200 metrin '
+            + 'korkeudessa, ja jyrkällä rinteellä sen tyvi levenee '
+            + 'tukijuuriksi, jotka muodostavat kallioon tarttuvan tyynyn. '
+            + 'Puu alkaa antaa pihkaa 8–10 vuoden iässä. Kuoreen viilletään '
+            + 'pieni haava, josta valuu maitomaista nestettä; ilmassa se '
+            + 'kovettuu, ja kerääjät poimivat sen käsin. Viiltoja tehdään '
+            + 'kahdesta kolmeen kertaa vuodessa, ja viimeiset antavat '
+            + 'parhaat pihkakyynelet. Somaliassa suitsuketta kerätään Barin '
+            + 'ja Sanaagin maakuntien vuorilla, ja Afrikan sarvesta tulee '
+            + 'nykyään 90 prosenttia koko maailman suitsukkeesta.',
+          tiedosto: 'Frankincense 2005-12-31.jpg',
+          lyhyt: 'Somaliasta 2005 ostettuja suitsukepihkan paloja.',
+          selite: 'Suitsukepihkan kellertäviä, osin läpikuultavia paloja, '
+            + 'jotka kuvaaja osti Somaliasta 2005. Mitä sameampaa pihka on, '
+            + 'sitä parempana laatuna sitä yleensä pidetään.',
+          lahde: 'snotch, Wikimedia Commons (PD)',
+          wiki: 'Boswellia sacra',
+        },
+        {
+          otsikko: 'Kaikkien suitsukkeiden kuningas',
+          teksti: 'Pohjois-Somaliassa kasvaa myös toinen laji, Boswellia '
+            + 'frereana, jota paikalliset kutsuvat nimellä yagcar. Sen '
+            + 'pihkaa, maydia, sanotaan kaikkien suitsukkeiden kuninkaaksi; '
+            + 'yleisnimi kaikille suitsukkeille on somaliksi foox. Lännessä '
+            + 'maydi tunnetaan koptilaisena suitsukkeena, koska sitä käyttää '
+            + 'Egyptin koptilainen kirkko. Noin 80 prosenttia sadosta myydään '
+            + 'Saudi-Arabiaan, josta pyhiinvaeltajat perinteisesti vievät '
+            + 'sitä tuliaisina koteihinsa. Paikalliset tekevät pihkasta myös '
+            + 'malmal-tahnaa, jota sivellään tulehtuneisiin niveliin. Laji on '
+            + 'nimetty Bombayn neuvoston jäsenen William Edward Freren mukaan, '
+            + 'ja jo 1870 sitä kasvoi Adenissa Robert Playfairin '
+            + 'puutarhassa, jonne hän oli tuonut sen Somaliasta.',
+          wiki: 'Boswellia frereana',
+        },
+        {
+          otsikko: 'Puita laivaan',
+          teksti: 'Suitsuketta on poltettu uhrilahjana vuosituhansia. '
+            + 'Egyptiläiset eivät aina erottaneet sitä mirhasta ja muista '
+            + 'pihkoista, mutta Puntin maan suitsukkeesta on mainintoja jo 3. '
+            + 'vuosituhannelta eaa., ja Hatshepsutin temppelin Puntin '
+            + 'pylväikössä suitsukepuita kuljetetaan Thebaan istutettaviksi. '
+            + 'Heprealaisten laki määräsi sekoittamaan suitsuketta kolmen '
+            + 'muun tuoksuaineen kanssa ja polttamaan sitä liitonarkin '
+            + 'edessä, ja Matteuksen evankeliumissa idän tietäjät tuovat '
+            + 'Jeesus-lapselle kultaa, suitsuketta ja mirhaa. Englannin sana '
+            + 'frankincense tulee vanhan ranskan ilmauksesta franc encens, '
+            + 'aito suitsuke, ja kreikan libanos on samaa juurta kuin '
+            + 'Libanonin nimi.',
+          tiedosto: 'The romance of plant life, interesting descriptions of the strange and curious in the plant world (1907) (14782763885).jpg',
+          lyhyt: 'Hatshepsutin Punt-laivaa lastataan: vuoden 1907 kirjan piirros Deir el-Baharin reliefistä.',
+          selite: 'George Francis Scott Elliotin kasvikirjassa 1907 julkaistu '
+            + 'piirros Deir el-Baharin reliefistä. Miehet kantavat laivaan '
+            + 'ruukkuihin istutettuja puita ja säkkejä, ja kannella on jo '
+            + 'rivi puita.',
+          lahde: 'George Francis Scott Elliot, Wikimedia Commons (PD)',
+          wiki: 'Frankincense',
+        },
+        {
+          otsikko: 'Pihkaa, kalaa ja karjaa',
+          teksti: 'Suitsuke kannatteli rannikon taloutta vielä 1900-luvulla. '
+            + 'Italian siirtomaahallinnon vuoden 1924 raporttien mukaan '
+            + 'Majeerteenin sulttaanikunta vei tavaraa yli miljoonan Intian '
+            + 'rupian arvosta, ja 60 prosenttia tuloista tuli suitsukkeesta '
+            + 'ja muista pihkoista. Kala ja muut meren antimet toivat noin '
+            + 'viidenneksen, loput karja. Jo paljon aiemmin portugalilainen '
+            + 'lähetyssaarnaaja Francisco Álvares, joka vietti kuusi vuotta '
+            + 'Portugalin lähetystössä Abessiniassa, kertoi, ettei '
+            + 'Guardafuin seudulla käytetty rahaa vaan kangasta — mitä '
+            + 'paksumpaa, sitä arvokkaampaa — ja että maasta löytyi paljon '
+            + 'valkoista suolaa ja valkoista kumia, joka kelpasi laivojen '
+            + 'tiivistämiseen. Nykyään Hafunin mukaan nimetty kalastusyhtiö '
+            + 'vie hummereita, pakastekalaa ja kuivattua haita Jemeniin, '
+            + 'Arabiemiirikuntiin ja Omaniin.',
+          wiki: 'Majeerteen Sultanate',
+        },
+      ],
+    },
+  ],
 };

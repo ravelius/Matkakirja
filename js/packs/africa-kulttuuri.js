@@ -1449,46 +1449,23 @@ export const AFRICA_KULTTUURI = {
         + 'raunioina.',
     },
   },
+  /*
+   * Ras Hafunin litteät nostot siirtyivät kaupunkilehteen
+   * (kulttuuri-kategoriat.js, rashafun, 23.9.2026) lähteestä
+   * tarkistettuina: Punt-samastus kirjoitettiin kiistanalaiseksi,
+   * "Suitsukemaa" korjattiin (se oli Etelä-Arabia) ja lähteetön
+   * monsuunijuttu jäi pois. Visan "neljä tuhatta vuotta" nojasi
+   * Punt-samastukseen, joten se on nyt "antiikin ajoista asti"; lähdejutut
+   * ovat lehden "Opone, mausteiden satama" ja "Puu, joka tarttuu kallioon".
+   */
   rashafun: {
-    nostot: [
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Suitsukkeen maa',
-        tiedosto: 'Frankincense 2005-12-31.jpg',
-        teksti: 'Somalian rannikon kuivilla rinteillä kasvaa '
-          + 'suitsukepuu, jonka pihka on ollut vientitavaraa neljä '
-          + 'tuhatta vuotta: faaraot polttivat sitä temppeleissä, ja '
-          + 'antiikin purjehtijat kutsuivat seutua Suitsukemaaksi.',
-        selite: 'Suitsukepihkaa eli olibaania: puun kuoreen tehdään '
-          + 'viilto, ja kirkas pihka kovettuu kyyneliksi. Parhaat '
-          + 'laadut kerätään käsin samoilta puilta sukupolvesta '
-          + 'toiseen.',
-        lahde: 'Wikimedia Commons (PD)',
-      },
-      {
-        tyyppi: 'teksti',
-        otsikko: 'Puntin maa',
-        teksti: 'Egyptiläiset purjehtivat jo 3 500 vuotta sitten '
-          + 'Puntin maahan hakemaan suitsuketta, mirhaa ja kultaa — '
-          + 'ja monen tutkijan mielestä Punt oli juuri tämä rannikko. '
-          + 'Kuningatar Hatšepsutin retki on kuvattu temppelin '
-          + 'seinään asti.',
-      },
-      {
-        tyyppi: 'teksti',
-        otsikko: 'Monsuunin kauppiaat',
-        teksti: 'Somalirannikon purjehtijat ovat aina eläneet monsuunin '
-          + 'tahdissa: puoli vuotta tuuli puhaltaa Intiaan, puoli '
-          + 'vuotta takaisin. Dhow-veneet kuljettivat suitsuketta ja '
-          + 'toivat kankaita ja riisiä — kello kävi tuulen mukaan.',
-      },
-    ],
     kysymys: {
-      q: 'Mitä arvokasta Somalian rannikolta on viety neljä tuhatta vuotta?',
-      options: ['Teetä', 'Timantteja', 'Silkkiä', 'Suitsuketta'],
+      q: 'Mitä arvokasta Somalian koillisrannikolta on viety antiikin ajoista asti?',
+      options: ['Teetä', 'Timantteja', 'Kaakaota', 'Suitsuketta'],
       correct: 3,
-      fact: 'Suitsukepuun pihka oli faaraoiden temppelien tuoksu — ja '
-        + 'sitä kerätään samoilta rinteiltä yhä.',
+      fact: 'Suitsuke on suitsukepuun pihkaa. Sitä kerätään yhä Barin ja '
+        + 'Sanaagin vuorilla, ja Afrikan sarvesta tulee nykyään 90 '
+        + 'prosenttia maailman suitsukkeesta.',
     },
   },
   nairobi: {
