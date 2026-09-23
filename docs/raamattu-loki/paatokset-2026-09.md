@@ -2779,3 +2779,7 @@ Natiiviseppä ajaa omistajan tarkistuslistan iPadilla.
 ## PELIKOODARI: PAKETTIVARTIJA MERGE-PYYNNOSSA (v11 4108/0, v31 VIHREA); AMPARIN v11 SKEEMANUMERO EI VASTAA KENTTIA → SIIRTOSEPPA; B7 1–2 MASTERISSA (24.9.2026 klo 00.00)
 
 Vartija yöporttiin.
+
+## NATIIVI-UI NOLLATAAN klo 00.0x (71 %): LUOVUTUS viesti-natiivi-ui-luovutus-20260924.md (bb68596e7), KAIKKI HAARAT MASTERISSA d4493df; ALOITUS viesti-natiivi-ui-aloitus.md (24.9.2026 klo 00.05)
+
+Viides Natiivi-UI-sessio.
