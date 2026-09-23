@@ -137,6 +137,17 @@ KOKEET-osion sijainti rikkoo omistajan linjausta: natiivin KOKEET-osio (Astronau
 
 ## 8. Kaupunkilehti ja maalehti (natiivissa WKWebView-kuori)
 
+**Päivitys 23.9.2026 klo 22 (Natiivi-UI):** lehti on nyt natiivi (`UI/Lehti/Lehtinakyma.cs`, Pelikoodarin
+ILehtiNakyma-sopimus), kuori on poistumassa. Alapalkki (Poistu, Edellinen/Seuraava sivun nimin,
+tehtävänappi, Maa-liite), sisällys, minitehtävä ja palkintojuliste, kaiutin, kuvat ja suurennos ovat natiivissa.
+Laitetestaajan lehtivertailun (PR #2970, `lehti-web-vs-natiivi-20260923.md`) erot:
+
+| Nappi / toiminto | Web | Natiivi | Tila | Kenelle |
+|---|---|---|---|---|
+| Kaupunkilehden sisällys (☰) | lehti.js varmistaLehtiHampurilainen | Lehtinakyma ylärivin ☰ (≥ 2 sivua) | korjattu: testikomento `ui lehti sisallys` avasi vain maalehdessä | NUI |
+| Maalehden etusivu: korkokartta pisteineen, perustiedot, tervehdykset, V-Dem-selitys, kartan nosto | maalehti.js piirraMaaEtusivu, naytaMaaTunnusluvut | Lehtinakyma.MaaEtusivu (skeema 1.15 `maat.maakartta`) | tekeillä (natiivi-ui/inventaario-11-20); radiowidget tulee radion kuoren kanssa | NUI, SS |
+| Maalehden sivut webin järjestyksessä: maan etusivu, aiheet (myös Tavat, Menovinkit) ja "Maa numeroina" | maalehti.js piirraMaaNumerotSivu, maalehdet.sivut | LehtiSisalto.Maalehti + UI/Lehti/MaaNumeroina.cs | tekeillä: v17:ssä data on (Tavat ja Menovinkit olivat jo natiivissa, testissä vierittämättä) | NUI, SS |
+
 Natiivissa lehti on verkkosivu natiivin päällä (`Scripts/Peli/LehtiKuori.cs`, `?lehti=`). Kaupat kulkevat sillan kautta (`PeliOhjain.cs:1260` LehdenTeko). Linjauksen mukaan lehti tehdään natiiviksi. En varmistanut, mitkä alla olevista toimivat kuoressa.
 
 | Nappi / toiminto | Web | Natiivi | Tila | Kenelle |
@@ -431,6 +442,15 @@ Natiivin nykyinen KOKEET-osio (Astronautin reliefi) on julkisessa hampurilaisess
 | UI-, peli- ja linssikomennot (Documents/*-komento.txt) | – | UiKomennot.cs, PeliKomennot.cs, LinssiKomennot.cs | ei pelaajalle; osan (nosto, kysymys, huipennus, offline-demo) voi nostaa KOKEET-riveiksi | NUI, PK, LS |
 
 ---
+
+## Tehty (päivitys 23.9.2026 klo 22, Natiivi-UI)
+
+Masterissa tai merge-pyynnössä: julisterivi → julistegalleria, tietäjärivin i → Tietäjän tie, Aarnin
+luettelon i-seloste, turistiopas (kaupunkikortin rivi, lehden Matkailijalle-nauha/kuva/linkki, vyörivit,
+säägraafin suurennus, linkit), logo → tekijätiedot, kysymyksen kuva/lippu ja kohtaamiskuva → suurennos,
+nostokortin ja luentakuvien suurennoksen ‹ ›, pulun vastauskuva → isompana, pulun käsitelinkit
+("Kerro lisää: aihe"). Kesken: "Nähtävyydet"-rivi ja kohdekartta (odottaa Siirtosepän
+kohdekartat-kokoelmaa), pulun "Avaa juttu", radion kuori (työn alla).
 
 ## Yhteenveto
 
