@@ -17,6 +17,9 @@ verkkopelin `Game` (yksinpeli vaellustilassa).
   - Rosvolaatat ja rosvon kaksintaistelu on POISTETTU pelistä (Raamattu 25.8.2026; natiivista
     23.9.2026). Laattamaarat.Lue ohittaa muut kuin aarretyypit (Ohitetut), vanhan tallennuksen
     rosvolaatta katoaa ja vaihe Kaksintaistelu luetaan Toiminnaksi.
+  - **Liikkuminen** + KulkutapaNappi — Liiku-liu'un napit (web ui.js renderTravelChoice vaihe A: liftaus,
+    bussi, laiva, lento; tekstit, hinnat, estosyyt) ja Matka.VaihtoTarjolla ("Vaihda matkustustapa").
+    Kultainen jälki `Kultaiset/kulkutapajalki.json` (`node Kultaiset/tee-kulkutapajalki.mjs <web/js>`), testit LiikkuminenTestit.
   - **Kaupat** — ostot ja palkkiot (kulttuurivisa, lehden minitehtävä, nostolaskuri,
     pulun karttaohje, pulla Livialle, eläintäky, juliste, mannerlento, pöllön sähke,
     availableActions); tila Pelitila.Kaupat (Kauppatila). KauppaVakiot = webin hinnat ja

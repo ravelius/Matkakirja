@@ -50,5 +50,26 @@ namespace Matkakirja.Peli.Testit
                 Oleta.Tosi(heitti, "pitäisi heittää: " + huono);
             }
         }
-    }
+    
+        [Testi] static void NullTurvallisetLuvut()
+        {
+            // Objekti(null) heittää yhä (tallennus ja reitit nojaavat siihen).
+            bool heitti = false;
+            try { MiniJson.Objekti(null); } catch (FormatException) { heitti = true; }
+            Oleta.Tosi(heitti, "Objekti(null) heittää");
+            Oleta.Tosi(MiniJson.ObjektiTaiNull(null) == null, "ObjektiTaiNull(null)");
+            Oleta.Tosi(MiniJson.ObjektiTaiNull(1.0) == null, "ObjektiTaiNull(luku)");
+            Oleta.Sama(0, MiniJson.TaulukkoTaiTyhja(null).Count);
+            Oleta.Sama(0, System.Linq.Enumerable.Count(MiniJson.Alkiot("{\"nimi\":\"x\"}")));
+            Oleta.Sama(0, System.Linq.Enumerable.Count(MiniJson.Alkiot("{\"alkiot\":null}")));
+            Oleta.Sama(0, System.Linq.Enumerable.Count(MiniJson.Alkiot("null")));
+            var a = System.Linq.Enumerable.ToList(MiniJson.Alkiot("{\"alkiot\":[null,{\"id\":\"a\"},3,{\"id\":\"b\"}]}"));
+            Oleta.Sama(2, a.Count);
+            Oleta.Sama("b", MiniJson.Teksti(a[1], "id"));
+            // Kokoelmalukijat: puuttuva alkiot-kenttä tai null-alkio ei kaada.
+            var k = Matkakirja.Natiivi.Kuvakokoelmat.Lue("{\"nimi\":\"kuvakysymykset\"}", "{\"alkiot\":[null]}");
+            Oleta.Sama(0, k.Kuvat.Count);
+            Oleta.Sama(0, k.Liput.Count);
+        }
+}
 }

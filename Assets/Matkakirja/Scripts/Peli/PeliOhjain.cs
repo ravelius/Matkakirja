@@ -962,6 +962,7 @@ namespace Matkakirja.Natiivi
             PiilotaKortti();
             DialogiKohde = null;
             vaihtoehdot = new List<MatkaVaihtoehto>();
+            riviValittu = null;
             Tila = SilmukanTila.Kartta;
             PaivitaNakyma();
             PaivitaNappula();
@@ -978,11 +979,17 @@ namespace Matkakirja.Natiivi
         {
             if (matka == null) return;
             tilarivi.Aseta(PeliApu.TilaTeksti(verkko, matka.Tila));
-            bool kesken = Tila == SilmukanTila.Kartta && matka.Tila.Vaihe == Vaihe.Heitto && !matka.Tila.Pelaaja.Sijainti.Kaupungissa;
-            if (kesken && Kaytossa)
-                dialogi.NaytaHeitto(Tavoite != null ? "Heitä noppaa → " + PeliApu.KaupunginNimi(verkko, Tavoite) : "Heitä noppaa", () => Heita());
+            // Web vaihe 'roll': noppa (ja "Vaihda matkustustapa") sekä kesken reittiä että kaupungissa
+            // esivalitulla tai itse valitulla noppatavalla (PeliOhjain.Liiku.cs).
+            if (Tila == SilmukanTila.Kartta && Kaytossa && matka.Tila.Vaihe == Vaihe.Heitto)
+                NaytaHeittonappi(Tavoite != null ? "Heitä noppaa → " + PeliApu.KaupunginNimi(verkko, Tavoite) : "Heitä noppaa", () => Heita());
+            else if (Tila == SilmukanTila.Kartta && Kaytossa && matka.Tila.Vaihe == Vaihe.Siirto)
+                // Noppa on heitetty mutta kohde valitsematta (siirtolista suljettiin tai tallennus jäi väliin).
+                NaytaHeittonappi(Tavoite != null ? "Jatka matkaa → " + PeliApu.KaupunginNimi(verkko, Tavoite)
+                    : $"Noppa {matka.Tila.Noppa}: valitse kohde", () => Heita());
             else
                 dialogi.PiilotaHeitto();
+            LiikuMuuttui?.Invoke();
         }
 
         /// <summary>
@@ -1001,6 +1008,9 @@ namespace Matkakirja.Natiivi
 
             switch (Tila)
             {
+                case SilmukanTila.Dialogi when SiirtoKohde(kaupunki) != null:
+                    Siirry(SiirtoKohde(kaupunki));
+                    return;
                 case SilmukanTila.Dialogi:
                 case SilmukanTila.Kysymys:
                 case SilmukanTila.Sahketehtava:
@@ -1014,6 +1024,7 @@ namespace Matkakirja.Natiivi
                     return;
                 case SilmukanTila.Kartta:
                     if (uiPaalla) { PysaytaKamera(); return; }
+                    if (SiirtoKohde(kaupunki) != null) { Siirry(SiirtoKohde(kaupunki)); return; }
                     if (kaupunkiKortti != null) { AvaaKortti(kaupunki); return; }
                     AvaaDialogi(kaupunki);
                     return;
@@ -1093,6 +1104,7 @@ namespace Matkakirja.Natiivi
             vaihtoehdot = PeliApu.Vaihtoehdot(matka, kaupunki);
             if (linssit != null && linssit.VapaaSiirtyminenKaytettavissa()) vaihtoehdot.Insert(0, PeliApu.VapaaVaihtoehto());
             DialogiKohde = kaupunki;
+            riviValittu = null;
             Tila = SilmukanTila.Dialogi;
             dialogi.PiilotaHeitto();
             string ala = $"{p.Raha} {PeliApu.Valuutta} · päivä {matka.Tila.Paiva()} · {PeliApu.AikaNimi(matka.Tila.Vuorokaudenaika())}";
@@ -1127,6 +1139,7 @@ namespace Matkakirja.Natiivi
             if (kohteet.Count == 0) return "mannerlentoa ei ole tarjolla";
             vaihtoehdot = kohteet.Select(PeliApu.MannerlentoVaihtoehto).ToList();
             DialogiKohde = null;
+            riviValittu = null;
             Tila = SilmukanTila.Dialogi;
             dialogi.PiilotaHeitto();
             var p = matka.Tila.Pelaaja;
@@ -1161,6 +1174,8 @@ namespace Matkakirja.Natiivi
         {
             if (matka == null) return "peli ei ole valmis";
             if (matka.Tila.Vaihe != Vaihe.Heitto && matka.Tila.Vaihe != Vaihe.Siirto) return "nyt ei heitetä (vaihe " + matka.Tila.Vaihe + ")";
+            // Ilman tavoitetta (Liiku-vuo, web): noppa ensin, kohde nopan siirroista.
+            if (Tavoite == null) return HeitaJaValitse();
             return Matkusta(Tavoite, matka.Tila.Kulkutapa ?? Kulkutapa.Maa);
         }
 
@@ -1168,7 +1183,7 @@ namespace Matkakirja.Natiivi
         /// Matka kohteeseen valitulla tavalla (dialogin nappi, heittonappi ja
         /// testikomento 'matka'). Palauttaa virheen tai null.
         /// </summary>
-        public string Matkusta(string kohde, Kulkutapa tapa, bool mannerlento = false, bool vapaa = false)
+        public string Matkusta(string kohde, Kulkutapa tapa, bool mannerlento = false, bool vapaa = false, string siirto = null)
         {
             using var _ = Ajoita("matka");
             if (matka == null) return "peli ei ole valmis";
@@ -1179,7 +1194,9 @@ namespace Matkakirja.Natiivi
             if (kohde != null) Tavoite = kohde;
 
             tapahtumat.Clear();
-            var t = PeliApu.Matkusta(matka, Tavoite, tapa, mannerlento, vapaa && linssit != null ? linssit.VapaaSiirtyminen : (Func<string, TekoTulos>)null);
+            var t = PeliApu.Matkusta(matka, Tavoite, tapa, mannerlento, vapaa && linssit != null ? linssit.VapaaSiirtyminen : (Func<string, TekoTulos>)null, siirto);
+            // Liiku-vuossa noppa näytettiin jo heitettäessä (HeitaJaValitse): ei toista kertaa siirrossa.
+            if (siirto != null) t.Noppa = null;
             Viimeisin = t;
             if (!t.Ok)
             {

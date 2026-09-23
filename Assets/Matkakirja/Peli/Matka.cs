@@ -395,6 +395,13 @@ namespace Matkakirja.Peli
             return TekoTulos.Onnistui();
         }
 
+        /// <summary>
+        /// Web ui.js vaihe 'roll': "Vaihda matkustustapa" -nappi heittonapin viereen, kun
+        /// <c>!game.autoTravel || game.muitaTapojaTarjolla()</c>. Sama ehto, jolla PeruKulkutapa onnistuu.
+        /// </summary>
+        public bool VaihtoTarjolla() =>
+            Tila.Vaihe == Vaihe.Heitto && (!Tila.AutoMatka || MuitaTapojaTarjolla());
+
         /// <summary>Web actionCancelTravel: takaisin valintaan ennen heittoa.</summary>
         public TekoTulos PeruKulkutapa()
         {

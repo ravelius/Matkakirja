@@ -258,13 +258,11 @@ namespace Matkakirja.Peli
         /// </summary>
         public int LueAanitaulut(string json)
         {
-            var juuri = MiniJson.Objekti(MiniJson.Jasenna(json));
             var tilat = new List<(string, string)>();
             var siirtymat = new List<SiirtymaRaita>();
             int korit = 0;
-            foreach (var a in MiniJson.Taulukko(MiniJson.Kentta(juuri, "alkiot")))
+            foreach (var o in MiniJson.Alkiot(json))
             {
-                var o = MiniJson.Objekti(a);
                 var laji = MiniJson.Teksti(o, "laji");
                 var nimi = MiniJson.Teksti(o, "nimi");
                 var data = MiniJson.Kentta(o, "data") as Dictionary<string, object>;

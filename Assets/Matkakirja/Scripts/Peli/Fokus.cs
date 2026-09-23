@@ -60,9 +60,8 @@ namespace Matkakirja.Natiivi
         {
             var f = new Fokusdata();
             if (string.IsNullOrEmpty(json)) return f;
-            foreach (var a in MiniJson.Taulukko(MiniJson.Kentta(MiniJson.Objekti(MiniJson.Jasenna(json)), "alkiot")))
+            foreach (var o in MiniJson.Alkiot(json))
             {
-                var o = MiniJson.Objekti(a);
                 var d = MiniJson.Kentta(o, "data") as Dictionary<string, object>;
                 var id = MiniJson.Teksti(o, "kaupunki") ?? MiniJson.Teksti(o, "id");
                 if (d == null || id == null) continue;

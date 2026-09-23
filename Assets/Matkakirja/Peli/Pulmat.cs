@@ -199,7 +199,7 @@ namespace Matkakirja.Peli
 
         internal static List<PulmaKuva> LueKuvat(object o) =>
             o is List<object> l
-                ? l.Select(x => MiniJson.Objekti(x)).Select(k => new PulmaKuva
+                ? l.OfType<Dictionary<string, object>>().Select(k => new PulmaKuva
                     { Tiedosto = MiniJson.Teksti(k, "tiedosto"), Selite = MiniJson.Teksti(k, "selite") }).ToList()
                 : null;
 

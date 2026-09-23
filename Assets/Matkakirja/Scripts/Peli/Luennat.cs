@@ -106,7 +106,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public void LueLuennat(string json)
         {
-            var juuri = MiniJson.Objekti(MiniJson.Jasenna(json));
+            var juuri = MiniJson.ObjektiTaiNull(MiniJson.Jasenna(json));
             if (!(MiniJson.Kentta(juuri, "alkiot") is List<object> alkiot)) return;
             foreach (var o in alkiot)
             {
@@ -172,7 +172,7 @@ namespace Matkakirja.Natiivi
 
         static IEnumerable<(string Kaupunki, Dictionary<string, object> Data)> Alkiot(string json)
         {
-            var juuri = MiniJson.Objekti(MiniJson.Jasenna(json));
+            var juuri = MiniJson.ObjektiTaiNull(MiniJson.Jasenna(json));
             if (!(MiniJson.Kentta(juuri, "alkiot") is List<object> alkiot)) yield break;
             foreach (var o in alkiot)
             {

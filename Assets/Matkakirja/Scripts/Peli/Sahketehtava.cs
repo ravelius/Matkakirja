@@ -71,9 +71,8 @@ namespace Matkakirja.Natiivi
         {
             var tulos = new Dictionary<string, Sahketehtava>();
             if (string.IsNullOrEmpty(json)) return tulos;
-            foreach (var a in MiniJson.Taulukko(MiniJson.Kentta(MiniJson.Objekti(MiniJson.Jasenna(json)), "alkiot")))
+            foreach (var o in MiniJson.Alkiot(json))
             {
-                var o = MiniJson.Objekti(a);
                 var id = MiniJson.Teksti(o, "kaupunki") ?? MiniJson.Teksti(o, "id");
                 if (id != null && MiniJson.Kentta(o, "data") is Dictionary<string, object> d
                     && MiniJson.Kentta(d, "sahketehtava") is Dictionary<string, object> s)
