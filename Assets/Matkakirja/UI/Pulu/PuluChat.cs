@@ -109,6 +109,15 @@ namespace Matkakirja.Natiivi
             naytaKuplat = Rakenne.Nappi("Näytä puhekuplat", "mk-chat__pilleri", () => { Sulje(); pulu.NaytaViimeisinKupla(); }, ylarivi);
             naytaKuplat.tooltip = "Tuo ohi menneet puhekuplat takaisin näkyviin";
             Kirjasimet.Aseta(naytaKuplat, Kirjasin.Luku);
+            // "Ehdota sisältöä" (web .pollo-ehdota): chat väistyy ja ehdotuslomake aukeaa tilanteen kanssa.
+            var ehdota = Rakenne.Nappi("Ehdota sisältöä", "mk-chat__pilleri", () =>
+            {
+                if (!UiNakymat.Olemassa) return;
+                Sulje();
+                UiNakymat.Hae().Palaute.Avaa();
+            }, ylarivi);
+            ehdota.tooltip = "Ehdota sisältöä tähän kohtaan peliä";
+            Kirjasimet.Aseta(ehdota, Kirjasin.Luku);
             virta = new ScrollView(ScrollViewMode.Vertical);
             virta.AddToClassList("mk-chat__virta");
             virta.verticalScrollerVisibility = ScrollerVisibility.Hidden;
@@ -526,8 +535,58 @@ namespace Matkakirja.Natiivi
             pulu.Tilanne("answer", nakyva);
             if (AaniPaalla) Puhe.Hae()?.Lue(nakyva, "pollo");
             if (paikkakysymys && !joLennetty && t.Paikka != null) LennaPaikkaan(t.Paikka);
+            if (!t.Uusittava) PoimintaRivi(kysymys, nakyva);
             if (t.Uusittava) Sirut(new[] { "Yritä uudelleen" }, "mk-chat__uusinta", jatko);
             else Sirut(t.Jatkot, "mk-chat__jatkot", true);
+        }
+
+        // --- pöllöpoiminta (web liitaPoimintaNapit, js/pollopoiminnat.js) -------------------------
+
+        /// <summary>
+        /// Web nykyinenPoimintaAvain: auki oleva nähtävyysjuttu voittaa lehden (juttu:kaupunki:nimi),
+        /// muuten lehden sivu (aihe:omistaja:aihe). null = mitään artikkelia ei ole auki.
+        /// </summary>
+        static string PoimintaAvain()
+        {
+            if (!UiNakymat.Olemassa) return null;
+            var ui = UiNakymat.Hae();
+            return ui.Nahtavyydet?.AukiAvain ?? ui.Lehti?.AukiAvain;
+        }
+
+        /// <summary>
+        /// Hyvän vastauksen perään "Ehdota tallennettavaksi": pari lähtee ehdotuskanavaan omistajan
+        /// kuratointiin (ei näy pelissä ennen hyväksyntää). Kehittäjätilassa "Tallenna juttuun" samaan
+        /// kanavaan tarkenteella (webin laitteen oma varasto ja Pöllöpoiminnat-vienti ovat webin työkaluja).
+        /// Ei nappia, jos vastausta ei voi kiinnittää artikkeliin (esim. chat avattu kartalta).
+        /// </summary>
+        void PoimintaRivi(string kysymys, string vastaus)
+        {
+            string avain = PoimintaAvain();
+            if (avain == null || string.IsNullOrEmpty(kysymys) || string.IsNullOrEmpty(vastaus)) return;
+            bool kehittaja = Asetukset.Kehittaja;
+            var rivi = Rakenne.El("mk-chat__poimintarivi", virta, PickingMode.Ignore);
+            Label tila = null;
+            Button nappi = null;
+            nappi = Rakenne.Nappi(kehittaja ? "Tallenna juttuun" : "Ehdota tallennettavaksi", "mk-chat__poimintanappi", () =>
+            {
+                nappi.SetEnabled(false);
+                tila.text = "Lähetetään…";
+                var kentat = new List<(string, string)>
+                {
+                    ("laji", ""), ("teksti", "Pöllöpoiminta\n\nKysymys: " + kysymys + "\n\nVastaus: " + vastaus),
+                    ("sivu", avain), ("tarkenne", kehittaja ? "Pöllöpoiminta (kehittäjä)" : "Pöllöpoiminta"),
+                };
+                Palautekanava.Postita("/laheta", kentat, null, t =>
+                {
+                    if (rivi.panel == null) return;
+                    if (t.Ok) { tila.text = kehittaja ? "Tallennettu kuratointijonoon." : "Kiitos! Ehdotus lähti kuratointiin."; return; }
+                    tila.text = t.Estetty ? Palautekanava.Virheviesti(t) : "Ehdotus ei lähtenyt. Yritä myöhemmin uudelleen.";
+                    nappi.SetEnabled(true);
+                });
+            }, rivi);
+            Kirjasimet.Aseta(nappi, Kirjasin.Luku);
+            tila = Rakenne.Teksti("", "mk-chat__poimintatila", rivi);
+            Vierita(rivi);
         }
 
         /// <summary>

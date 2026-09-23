@@ -56,6 +56,9 @@ namespace Matkakirja.Natiivi
 
         public bool Auki { get; private set; }
         public event Action Suljettu;
+        /// <summary>Auki olevan nähtävyysjutun poiminta-avain juttu:kaupunki:nimi (web juttuAvain) tai null.</summary>
+        public string AukiAvain => Auki && !opas && nykyinen != null
+            ? Reaktiot.JuttuAvain(kartta?.Kaupunki ?? PeliOhjain.Instanssi?.PelaajanKaupunki, nykyinen.Nimi) : null;
 
         public Nahtavyysarkki(UiKerros ui)
         {
