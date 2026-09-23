@@ -38,6 +38,10 @@ namespace Matkakirja.Natiivi
 #pragma warning restore 0414
 
         public event Action<string> Suljettu;
+        /// <summary>Sivu ilmoitti lehden olevan auki (latauspeitteen poisto, Natiivi-UI).</summary>
+        public event Action<string> Avautui;
+        /// <summary>Muut sivun viestit JSONina (tuleva teko-silta: {tapahtuma:'teko', …}).</summary>
+        public event Action<string> Viesti;
 
         /// <summary>Onko lehti Unityn näkökulmasta auki.</summary>
         public bool Auki { get; private set; }
@@ -117,6 +121,7 @@ namespace Matkakirja.Natiivi
             MatkakirjaLehti_Avaa(osoite);
 #else
             Debug.Log("[LehtiKuori] (ei iOS-laite) lehti: " + osoite);
+            Avautui?.Invoke(kaupunki);
             if (avaaSelaimessaEditorissa) Application.OpenURL(osoite);
             SuljeMyohemmin(kaupunki);
 #endif
@@ -145,6 +150,20 @@ namespace Matkakirja.Natiivi
             Auki = false;
             AukiKaupunki = null;
             Suljettu?.Invoke(suljettu);
+        }
+
+        /// <summary>Liitännäisen viesti: sivu on auki ('lehti-auki'), kerran per avaus.</summary>
+        public void LehtiAvautui(string kaupunki)
+        {
+            if (!Auki) return;
+            Avautui?.Invoke(string.IsNullOrEmpty(kaupunki) ? AukiKaupunki : kaupunki);
+        }
+
+        /// <summary>Liitännäisen viesti: muu sivun viesti JSONina.</summary>
+        public void LehtiViesti(string json)
+        {
+            if (!Auki || string.IsNullOrEmpty(json)) return;
+            Viesti?.Invoke(json);
         }
 
         void SuljeMyohemmin(string kaupunki)
