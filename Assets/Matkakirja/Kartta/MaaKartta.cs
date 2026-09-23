@@ -293,8 +293,10 @@ namespace Matkakirja
                 for (int s = 0; s < sektoreita; s++)
                 {
                     int a = k * (sektoreita + 1) + s, b = a + 1, c = a + sektoreita + 1, d = c + 1;
-                    kolmiot[t++] = a; kolmiot[t++] = c; kolmiot[t++] = b;
-                    kolmiot[t++] = b; kolmiot[t++] = c; kolmiot[t++] = d;
+                    // Etupuoli ulospäin (Unityn vasenkätinen kierto georeferenssin akseleilla;
+                    // varmistettu iPadilla: väärä kierto näytti takapuolen maat peilattuina).
+                    kolmiot[t++] = a; kolmiot[t++] = b; kolmiot[t++] = c;
+                    kolmiot[t++] = b; kolmiot[t++] = d; kolmiot[t++] = c;
                 }
             var m = new Mesh { name = "Maakuori", indexFormat = UnityEngine.Rendering.IndexFormat.UInt32 };
             m.vertices = paikat;
