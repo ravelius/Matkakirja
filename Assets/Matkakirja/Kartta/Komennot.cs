@@ -25,6 +25,7 @@ namespace Matkakirja
     ///   nipistys cx cy d0 d1 s    kahden sormen nipistys keskipisteen ympäri, sormien
     ///                             väli d0 → d1 (osuus näytön leveydestä)
     ///   kallista y0 y1 s          kahden sormen pystyveto (kallistus), y näytön osuutena
+    ///   maat paalle|pois | maat korosta ISO3 [#täyttö #raja] | maat pois-korostus   Maatila (MaaKartta)
     ///   maasto paalle|pois        Karttasepän maasto (layer.json) tai ellipsoidi; valinta
     ///                             muistetaan tiedostossa Documents/maasto.txt
     /// </summary>
@@ -132,6 +133,17 @@ namespace Matkakirja
                 case "maasto":
                     Maasto(o[1] == "paalle");
                     break;
+                case "maat":
+                {
+                    // maat paalle|pois | maat korosta ISO3 [#täyttö #raja] | maat pois-korostus
+                    var mk = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.maaKartta : null;
+                    if (mk == null) { Debug.LogWarning("MATKAKIRJA komento: maatila puuttuu"); break; }
+                    if (o[1] == "paalle" || o[1] == "pois") mk.MaaTila(o[1] == "paalle");
+                    else if (o[1] == "korosta" && o.Length > 2)
+                        mk.Korosta(o[2], new Matkakirja.Linssit.Maat.Savy(o.Length > 3 ? o[3] : "#c0392b", o.Length > 4 ? o[4] : "#3b2f22"));
+                    else if (o[1] == "pois-korostus") mk.KorostusPois(null);
+                    break;
+                }
                 case "odota":
                     odotus = Time.unscaledTime + (float)D(1);
                     break;

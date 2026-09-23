@@ -90,6 +90,11 @@ namespace Matkakirja.Editori
             kerrokset.merkit = merkit;
             kerrokset.reitit = reitit;
             kerrokset.napakannet = kannet;
+            var maat = georefGo.AddComponent<MaaKartta>();
+            maat.georeferenssi = georef;
+            maat.kerrokset = kerrokset;
+            maat.materiaali = Materiaali("Maatayttö", "Matkakirja/MaaTaytto", Color.white);
+            kerrokset.maaKartta = maat;
 
             var korttiGo = new GameObject("Käyttöliittymä");
             var kortti = korttiGo.AddComponent<NimiKortti>();

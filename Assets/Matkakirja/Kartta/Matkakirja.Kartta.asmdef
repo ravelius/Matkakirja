@@ -7,7 +7,8 @@
         "Unity.InputSystem",
         "Unity.TextMeshPro",
         "UnityEngine.UI",
-        "Matkakirja.Peli"
+        "Matkakirja.Peli",
+        "Matkakirja.Linssit.Ydin"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

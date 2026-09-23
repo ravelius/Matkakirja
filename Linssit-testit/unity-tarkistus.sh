@@ -8,7 +8,7 @@
 #   1. Matkakirja.Peli  = Assets/Matkakirja/Peli/*.cs vain netstandard 2.1:tä
 #      vasten (asmdef noEngineReferences: UnityEngine-viite olisi virhe);
 #   2. Matkakirja.Kartta = Assets/Matkakirja/Kartta/**/*.cs (Natiivisepän asmdef,
-#      viittaa Matkakirja.Peliin; 23.9.2026 alkaen);
+#      viittaa Matkakirja.Peliin ja Matkakirja.Linssit.Ydiniin (MaaKartta); 23.9.2026 alkaen);
 #   3. Assembly-CSharp  = Assets/Matkakirja/Scripts/**/*.cs ja UI/**/*.cs (Natiivi-UI)
 #      Unityn moduuleja, pakettien assemblyjä (UGUI, TextMeshPro, Input System,
 #      Cesium, Mathematics …) ja vaiheiden 1–2 tuloksia vasten; 2 ja 3 kahdesti:
@@ -89,7 +89,7 @@ kartta() {
   kohde=$1; shift
   KARTTA_REF=""
   [ -n "$KARTTA" ] || return 0
-  kaanna "Matkakirja.Kartta ($kohde)" "$ULOS/kartta-$kohde.log" $YHTEISET $NETSTD "$@" $PAKETIT -r:"$ULOS/Matkakirja.Peli.dll" \
+  kaanna "Matkakirja.Kartta ($kohde)" "$ULOS/kartta-$kohde.log" $YHTEISET $NETSTD "$@" $PAKETIT -r:"$ULOS/Matkakirja.Peli.dll" -r:"$ULOS/Matkakirja.Linssit.Ydin.dll" \
     -out:"$ULOS/Matkakirja.Kartta-$kohde.dll" $KARTTA
   KARTTA_REF="-r:$ULOS/Matkakirja.Kartta-$kohde.dll"
 }
