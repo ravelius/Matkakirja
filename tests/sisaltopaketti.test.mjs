@@ -351,3 +351,31 @@ test('skeema 1.6: aarteiden arvovälit, botin taito ja tapahtumakortit', async (
   assert.equal(tapahtumat.length, AFRICA.events.length);
   assert.deepEqual(new Set(tapahtumat.map((t) => t.data.effect.kind)), new Set(['raha', 'kyyti', 'viive']));
 });
+
+test('skeema 1.7: linssiaineisto (maskit purkautuvat, osoitteet medialistassa)', async () => {
+  const rivit = new Map(JSON.parse(tiedostot.get('kokoelmat/linssiaineisto.json')).alkiot.map((r) => [r.id, r]));
+  const { puraMaamaski } = await import('../js/aikajana-virrat-laskenta.js');
+  const maa = rivit.get('maamaski').data;
+  const ruudut = puraMaamaski(maa.juoksut, maa.leveys * maa.korkeus);
+  assert.equal(ruudut.reduce((a, x) => a + x, 0), 62064, 'maaruutujen määrä (ihmisen-matka-maamaski.js)');
+  const ranta = rivit.get('rantamaski').data;
+  assert.ok(puraMaamaski(ranta.juoksut, ranta.leveys * ranta.korkeus).some((x) => x === 1));
+  const media = new Set(JSON.parse(tiedostot.get('media.json')).viitteet.map((v) => v.arvo));
+  for (const url of [rivit.get('pilvet').data.url, rivit.get('astronautin-aanet').data.humina]) {
+    assert.ok(media.has(url), `${url} puuttuu media.json:sta`);
+  }
+  assert.match(rivit.get('kertomus').data.manifesti, /^https:\/\/media\.matkakirja\.app\/.+\/puhe\/kertomus-manifesti\.json$/);
+  assert.deepEqual(rivit.get('avauskynnykset').data.kynnykset.map((k) => k.tp), [400, 800, 1400, 2200]);
+});
+
+test('skeema 1.8: äänitaulut ja musiikkiketju vastaavat peliä', async () => {
+  const rivit = JSON.parse(tiedostot.get('kokoelmat/aanitaulut.json')).alkiot;
+  const id = new Map(rivit.map((r) => [r.id, r]));
+  const { AANITEHOSTEET, REAL_SAMPLES } = await import('../js/sound.js');
+  for (const nimi of AANITEHOSTEET) assert.ok(id.has(`tehoste:${nimi}`), nimi);
+  assert.deepEqual(id.get('tehoste:dice').naytte, REAL_SAMPLES.dice);
+  const { musiikkiketju } = await import('../js/musiikkivalitsin.js');
+  assert.deepEqual(id.get('musiikkiketju:rooma').ketju, musiikkiketju('rooma', 'ITA'));
+  assert.equal(rivit.filter((r) => r.laji === 'musiikkiketju').length, 266);
+  assert.deepEqual(['jalan', 'laiva', 'lento'].filter((l) => !id.has(`siirtyma:${l}`)), []);
+});

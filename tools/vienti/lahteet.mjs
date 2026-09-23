@@ -46,6 +46,10 @@ export const LISAMODUULIT = [
   m('js/fokusnosto-symbolit.js', ['NOSTOSYM_LUOKAT', 'NOSTOSYM_PAAKATEGORIAT', 'NOSTOSYM_TYYPIT', 'NOSTOSYM_PISTE_VARIT']),
   m('js/karttaselite.js', ['KARTTASELITE_JARJESTYS', 'KARTTASELITE_KOKONIMET']),
   m('js/kaupunkimusiikki.js', ['ALUERAIDAT', 'ALUEEN_MAAT']),
+  // Skeema 1.8: äänitaulut natiiville (kokoelma aanitaulut).
+  m('js/sound.js', ['REAL_SAMPLES', 'PULUN_TEHOSTEET', 'PULUN_TEHOSTEJUURI', 'AMBIENCE_TYPES', 'AANITEHOSTEET']),
+  m('js/siirtymamusiikki.js', ['RAIDAT', 'SIIRTYMALAJIT']),
+  m('js/musiikkivalitsin.js', ['TILARAIDAT', 'PAIKKARAIDAT', 'POHJARAITA']),
   m('js/aani-ehdokkaat.js', ['EHDOKKAAT', 'TYYPPI_EHDOKKAAT', 'KAUPUNKI_EHDOKKAAT', 'TYYPPI_NIMET', 'KAUPUNGIT_TYYPEITTAIN', 'HUUDAHDUKSET']),
   m('js/viitekuva-herot.js', ['VIITEKUVA_HEROT']),
   m('js/lahteet.js', ['LAHTEET', 'PELI']),
@@ -67,6 +71,17 @@ export const LISAMODUULIT = [
   m('js/linssit/vertailu.js', ['LINSSI'], 'linssi'),
   m('js/linssit/maatiedot.js', ['LINSSI'], 'linssi'),
   m('js/linssit/vesistot.js', ['LINSSI'], 'linssi'),
+  // Skeema 1.7 (Linssisepän tarve 23.9.2026): ihmisen matkan maskit,
+  // äänimaisemien ja kertomuksen manifestien juuret, astronautin kameran
+  // pilvet ja äänet, linssien omistussäännöt. Kokoelma linssiaineisto
+  // kokoaa ne (tools/vienti/kokoelmat.mjs).
+  m('js/linssit/ihmisen-matka-maamaski.js', ['MAAMASKI'], 'linssi'),
+  m('js/linssit/ihmisen-matka-rantamaski.js', ['RANTAMASKI'], 'linssi'),
+  m('js/linssit/ihmisen-matka-aanimaisema.js', ['MAISEMAJUURI'], 'linssi'),
+  m('js/linssit/ihmisen-matka-luenta.js', ['KERTOMUS_MANIFESTI'], 'linssi'),
+  m('js/linssit/astro-sumu.js', ['PILVIEN_LAHDE', 'PILVIEN_OSOITE', 'PILVIEN_LEVEYS', 'PILVIEN_KORKEUS'], 'linssi'),
+  m('js/linssit/satelliitti-aani.js', ['ASTRONAUTIN_HUMINA', 'ASTRONAUTIN_MUSIIKKI', 'ASTRONAUTIN_MUSIIKKI_KAYTOSSA'], 'linssi'),
+  m('js/linssit/omistus.js', ['LINSSIKYNNYKSET', 'OPTIKON_HYVITYS', 'PERUSLINSSIT'], 'linssi'),
   m('js/tyohuone-kehitys-data.js', ['KAARI_PAKETIT'], 'kehittaja'),
 ];
 
