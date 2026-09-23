@@ -144,10 +144,12 @@ namespace Matkakirja.Peli.Testit
         [Testi] static void PaikkaKutenSyncAmbience()
         {
             string Ty(string k) => k == "pariisi" ? "kaupunki" : null;
-            (string, string)? P(Aanitilanne s, bool jalka = false) => Aanikoukut.Paikka(s, jalka, Ty);
+            (string, string)? P(Aanitilanne s, bool jalka = false, bool lento = false) => Aanikoukut.Paikka(s, jalka, lento, Ty);
             Oleta.Sama(null, P(new Aanitilanne { Aloitus = true }), "lataus kesken");
             Oleta.Sama(("etusivu", "lentoasema"), P(new Aanitilanne { Valmis = true, Aloitus = true }).Value, "aloitus");
-            Oleta.Sama(("lentomatka", "lentokone"), P(new Aanitilanne { Valmis = true, Matkalla = true, Lento = true, Kaupunki = "pariisi" }).Value, "lento");
+            Oleta.Sama(("lentomatka", "lentokone"), P(new Aanitilanne { Valmis = true, Matkalla = true, Aloituslento = true, Kaupunki = "pariisi" }, lento: true).Value, "avauslento");
+            Oleta.Sama(("lentomatka", "lentokone"), P(new Aanitilanne { Valmis = true, Matkalla = true, Aloituslento = true, Kaupunki = "pariisi" }).Value, "avauslento ennen koneen lähtöä (napautuksesta)");
+            Oleta.Sama(("pariisi", "kaupunki"), P(new Aanitilanne { Valmis = true, Matkalla = true, Kaupunki = "pariisi" }, lento: true).Value, "pelin lento ja mannerlento: kohdekaupunki heti (ennakoiAmbienssi)");
             Oleta.Sama(("jalkamatka", "metsa"), P(new Aanitilanne { Valmis = true, Matkalla = true, Kaupunki = "pariisi" }, true).Value, "jalkamatka");
             Oleta.Sama(null, P(new Aanitilanne { Valmis = true, Matkalla = true, Kaupunki = "pariisi" }), "meri/bussi: lähtöpaikka soi");
             Oleta.Sama(((string)null, (string)null), P(new Aanitilanne { Valmis = true, Ohi = true, Kaupunki = "pariisi" }).Value, "peli ohi");
@@ -237,18 +239,52 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama("merimatka", k.Koukut.LahetettyPaikka);
         }
 
-        [Testi] static void LentoSoittaaLentomatkaa()
+        [Testi] static void LentoSoittaaKohdekaupunkiaHetiEikaMatkustamoa()
         {
+            // Web doFly maailmankartalla: ei kalvoa eikä flight-activea; animatePawnin ainoa askel on
+            // viimeinen, joten ennakoiAmbienssi(kohde) vaihtaa maiseman ja pohjaraidan lennon alussa.
             var k = new Kirjuri();
             k.Koukut.Paivita(Kaupungissa("pariisi"));
-            k.Koukut.LiikeAlkoi(Kulkutapa.Lento, 1);
-            k.Koukut.Paivita(new Aanitilanne { Valmis = true, Matkalla = true, Lento = true, Kaupunki = "kairo" });
-            Oleta.Sama("lentomatka", k.Koukut.LahetettyPaikka);
+            var pariisinPohja = k.Url(Kanava.Pohja);
+            k.Koukut.LiikeAlkoi(Kulkutapa.Lento, 0);
+            k.Koukut.Paivita(new Aanitilanne { Valmis = true, Matkalla = true, Kaupunki = "ateena" });
+            Oleta.Sama("ateena", k.Koukut.LahetettyPaikka, "kohdekaupunki heti, ei lentomatkaa");
+            Oleta.Tosi(k.Url(Kanava.Pohja).Contains("musa-kaupunki-ateena") && k.Url(Kanava.Pohja) != pariisinPohja, k.Url(Kanava.Pohja));
             Oleta.Tosi(k.Url(Kanava.Siirtyma).Contains("siirtyma-lento"), "lennon raita");
-            k.Koukut.MatkaPerilla("kairo");
-            k.Koukut.Paivita(Kaupungissa("kairo"));
-            Oleta.Sama("kairo", k.Koukut.LahetettyPaikka);
+            int ennen = k.Tapahtumia;
+            k.Koukut.MatkaPerilla("ateena");
+            k.Koukut.Paivita(Kaupungissa("ateena"));
+            Oleta.Sama("ateena", k.Koukut.LahetettyPaikka);
+            Oleta.Sama(ennen + 1, k.Tapahtumia, "perillä vain raidan loppu, paikka on jo sama");
             Oleta.Sama(null, k.Url(Kanava.Siirtyma));
+        }
+
+        [Testi] static void MannerlentoIlmanSiirtymaraitaa()
+        {
+            // Web actionMannerLento pallolla: startFlight + animatePawn ilman aloitaSiirronMusiikkia.
+            var k = new Kirjuri();
+            k.Koukut.Paivita(Kaupungissa("pariisi"));
+            k.Koukut.LiikeAlkoi(Kulkutapa.Lento, 0, siirtymaraita: false);
+            k.Koukut.Paivita(new Aanitilanne { Valmis = true, Matkalla = true, Kaupunki = "kairo" });
+            Oleta.Sama("kairo", k.Koukut.LahetettyPaikka, "kohdekaupunki heti");
+            Oleta.Sama(null, k.Url(Kanava.Siirtyma), "ei lennon raitaa");
+        }
+
+        [Testi] static void AvauslentoSoittaaMatkustamoaNapautuksestaPerille()
+        {
+            var k = new Kirjuri();
+            k.Koukut.Paivita(new Aanitilanne { Valmis = true, Aloitus = true });
+            k.Koukut.UusiMatka(pysayta: false);
+            // Napautus: Tila = Matkalla ja AloituslentoKaynnissa ennen koneen lähtöä (web aloitaLennonAmbienssi).
+            k.Koukut.Paivita(new Aanitilanne { Valmis = true, Matkalla = true, Aloituslento = true, Kaupunki = "ateena" });
+            Oleta.Sama("lentomatka", k.Koukut.LahetettyPaikka, "matkustamo heti napautuksesta");
+            k.Koukut.LiikeAlkoi(Kulkutapa.Lento, 0, siirtymaraita: false);
+            k.Koukut.Paivita(new Aanitilanne { Valmis = true, Matkalla = true, Aloituslento = true, Kaupunki = "ateena" });
+            Oleta.Sama("lentomatka", k.Koukut.LahetettyPaikka, "koneen lähdön jälkeen yhä matkustamo");
+            Oleta.Sama(null, k.Url(Kanava.Siirtyma), "avauslennolla ei siirtymäraitaa");
+            k.Koukut.MatkaPerilla("ateena");
+            k.Koukut.Paivita(Kaupungissa("ateena"));
+            Oleta.Sama("ateena", k.Koukut.LahetettyPaikka, "laskeutuminen: kohdekaupunki");
         }
 
         [Testi] static void LinssinRaitaEiLoppuPerillaSaannolla()
@@ -315,8 +351,8 @@ namespace Matkakirja.Peli.Testit
             Oleta.Tosi(!k.Tila.AvausKaynnissa, "intron loppu");
             k.Tila.Avaus(true);
             k.Koukut.Paivita(new Aanitilanne { Valmis = true, Matkalla = true });
-            Oleta.Tosi(!k.Tila.AvausKaynnissa, "aloitusnäkymästä kartalle (aloituslento)");
-            Oleta.Sama("etusivu", k.Koukut.LahetettyPaikka, "zoomin ajan etusivu soi");
+            Oleta.Tosi(!k.Tila.AvausKaynnissa, "aloitusnäkymästä kartalle");
+            Oleta.Sama("etusivu", k.Koukut.LahetettyPaikka, "liike ilman aloituslentoa: etusivu soi yhä");
         }
     }
 }
