@@ -829,6 +829,7 @@ namespace Matkakirja.Natiivi
             if (!verkko.Kaupungit.ContainsKey(kaupunki)) return "tuntematon kaupunki " + kaupunki;
             var p = matka.Tila.Pelaaja;
             bool oma = p.Sijainti.Kaupungissa && p.Sijainti.Kaupunki == kaupunki;
+            bool mannerlento = oma && kaupat != null && kaupat.MannerLennot().Count > 0;
             var t = new KaupunkiToiminnot
             {
                 LueLehti = lehti != null ? () => LueLehti(kaupunki) : (Action)null,
@@ -836,6 +837,8 @@ namespace Matkakirja.Natiivi
                 LiikuTeksti = oma ? null : "Liiku tänne",
                 Tutki = oma && TutkiTarjolla ? () => { PiilotaKortti(); Tutki(); } : (Action)null,
                 TutkiTeksti = oma && TutkiTarjolla ? "Tutki kaupunkia" : null,
+                Mannerlento = mannerlento ? () => { PiilotaKortti(); AvaaMannerlennot(); } : (Action)null,
+                MannerlentoTeksti = mannerlento ? $"Mannerlento ({Vakiot.LentoHinta} {PeliApu.Valuutta})" : null,
                 Sulje = () => PiilotaKortti(),
             };
             KorttiKaupunki = kaupunki;
@@ -887,7 +890,7 @@ namespace Matkakirja.Natiivi
             if (vaihtoehdot.Count == 0) ala += " · ei kulkutapaa nyt";
             dialogi.Nayta(PeliApu.KaupunginNimi(verkko, kaupunki), ala,
                 vaihtoehdot.Select(v => (v.Nimi, v.Selite)).ToList(),
-                i => Matkusta(DialogiKohde, vaihtoehdot[i].Tapa),
+                i => Matkusta(DialogiKohde, vaihtoehdot[i].Tapa, vaihtoehdot[i].Mannerlento),
                 () => Kartalle(false));
 
             // Yleiskuva: pelaaja ja kohde samaan kuvaan (korvaa 3D:n lennon napautettuun kaupunkiin).
@@ -903,6 +906,28 @@ namespace Matkakirja.Natiivi
             return null;
         }
 
+        /// <summary>
+        /// Matkavalinta mannerlennoille (kortin "Mannerlento", testikomento 'mannerlennot'):
+        /// rivi per mantere, jonka aarre on kateissa. Palauttaa virheen tai null.
+        /// </summary>
+        public string AvaaMannerlennot()
+        {
+            if (matka == null || kaupat == null) return "peli ei ole valmis";
+            if (Tila != SilmukanTila.Kartta && Tila != SilmukanTila.Dialogi) return "silmukka on tilassa " + Tila;
+            var kohteet = kaupat.MannerLennot();
+            if (kohteet.Count == 0) return "mannerlentoa ei ole tarjolla";
+            vaihtoehdot = kohteet.Select(PeliApu.MannerlentoVaihtoehto).ToList();
+            DialogiKohde = null;
+            Tila = SilmukanTila.Dialogi;
+            dialogi.PiilotaHeitto();
+            var p = matka.Tila.Pelaaja;
+            dialogi.Nayta("Mannerlento", $"{p.Raha} {PeliApu.Valuutta} · mantereen aarre löytyi, matka voi jatkua",
+                vaihtoehdot.Select(v => (v.Nimi, v.Selite)).ToList(),
+                i => Matkusta(kohteet[i].Kaupunki, Kulkutapa.Lento, true),
+                () => Kartalle(false));
+            return null;
+        }
+
         /// <summary>Peruuta-nappi (myös testikomento).</summary>
         public string Peruuta()
         {
@@ -915,9 +940,11 @@ namespace Matkakirja.Natiivi
         public string Valitse(Kulkutapa tapa)
         {
             if (Tila != SilmukanTila.Dialogi) return "matkavalinta ei ole auki";
-            if (!vaihtoehdot.Any(v => v.Tapa == tapa))
+            if (DialogiKohde == null) return "mannerlentolista: valitse komennolla 'matka <kaupunki> mannerlento'";
+            var valittu = vaihtoehdot.FirstOrDefault(v => v.Tapa == tapa);
+            if (valittu == null)
                 return $"{PeliApu.TavanNimi(tapa)} ei ole tarjolla (tarjolla: {string.Join(", ", vaihtoehdot.Select(v => v.Nimi))})";
-            return Matkusta(DialogiKohde, tapa);
+            return Matkusta(DialogiKohde, tapa, valittu.Mannerlento);
         }
 
         /// <summary>"Heitä noppaa" -nappi: matka jatkuu kohti tavoitetta.</summary>
@@ -932,7 +959,7 @@ namespace Matkakirja.Natiivi
         /// Matka kohteeseen valitulla tavalla (dialogin nappi, heittonappi ja
         /// testikomento 'matka'). Palauttaa virheen tai null.
         /// </summary>
-        public string Matkusta(string kohde, Kulkutapa tapa)
+        public string Matkusta(string kohde, Kulkutapa tapa, bool mannerlento = false)
         {
             if (matka == null) return "peli ei ole valmis";
             if (Tila != SilmukanTila.Kartta && Tila != SilmukanTila.Dialogi) return "silmukka on tilassa " + Tila;
@@ -942,7 +969,7 @@ namespace Matkakirja.Natiivi
             if (kohde != null) Tavoite = kohde;
 
             tapahtumat.Clear();
-            var t = PeliApu.Matkusta(matka, Tavoite, tapa);
+            var t = PeliApu.Matkusta(matka, Tavoite, tapa, mannerlento);
             Viimeisin = t;
             if (!t.Ok)
             {
