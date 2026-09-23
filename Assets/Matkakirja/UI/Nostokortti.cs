@@ -27,10 +27,12 @@ namespace Matkakirja.Natiivi
 {
     public sealed class Nostokortti
     {
-        readonly VisualElement kerros, kortti, suurennos, suurennosKuva;
+        readonly VisualElement kerros, kortti;
+        // Suurennos selattavana sarjana (web fokuskohteet.js avaaKohdeSuurennos ‹ ›).
+        readonly Kuvasuurennos suurennos;
         readonly ScrollView sisus;
         readonly Button sulje;
-        readonly Label suurennosTeksti, suurennosLahde;
+
         Nosto nosto;
         int kuvaIndeksi, versio;
 
@@ -51,15 +53,7 @@ namespace Matkakirja.Natiivi
             sulje.tooltip = "Sulje";
             Kirjasimet.Aseta(kortti, Kirjasin.Luku);
 
-            suurennos = Rakenne.El("mk-nosto__suurennos", ui.Juuri(UiKerros.Valikot));
-            suurennos.style.display = DisplayStyle.None;
-            suurennos.RegisterCallback<PointerDownEvent>(_ => Rakenne.Nayta(suurennos, false, 200));
-            var kehys = Rakenne.El("mk-nosto__suurennoskehys", suurennos, PickingMode.Ignore);
-            suurennosKuva = Rakenne.El("mk-nosto__suurennoskuva", kehys, PickingMode.Ignore);
-            suurennosTeksti = Rakenne.Teksti("", "mk-nosto__suurennosteksti", kehys);
-            Kirjasimet.Aseta(suurennosTeksti, Kirjasin.Luku);
-            suurennosLahde = Rakenne.Teksti("", "mk-nosto__lahde", kehys);
-            Kirjasimet.Aseta(suurennosLahde, Kirjasin.Kone);
+            suurennos = new Kuvasuurennos(ui.Juuri(UiKerros.Valikot));
         }
 
         /// <summary>Avaa kortin karttavalon id:llä (UiPalvelut.ValoNapautettu, testikomento).</summary>
@@ -80,7 +74,7 @@ namespace Matkakirja.Natiivi
             if (!Auki) return;
             Auki = false;
             Rakenne.Nayta(kerros, false, 200);
-            Rakenne.Nayta(suurennos, false, 150);
+            suurennos.Sulje();
             SyoteLukko.Vapauta(this);
         }
 
@@ -217,7 +211,8 @@ namespace Matkakirja.Natiivi
                 kuvaIndeksi = (i + kuvat.Count) % kuvat.Count;
                 kehysPaikka.Clear();
                 var k = kuvat[kuvaIndeksi];
-                var kehys = Kuvakehys(kehysPaikka, k, () => Suurenna(k));
+                int kohta = kuvaIndeksi;
+                var kehys = Kuvakehys(kehysPaikka, k, () => Suurenna(kohta));
                 teksti.text = k.Lyhyt ?? "";
                 teksti.style.display = string.IsNullOrEmpty(k.Lyhyt) ? DisplayStyle.None : DisplayStyle.Flex;
                 if (kuvat.Count > 1)
@@ -233,16 +228,14 @@ namespace Matkakirja.Natiivi
             Nayta(kuvaIndeksi);
         }
 
-        void Suurenna(NostoKuva k)
+        void Suurenna(int alku)
         {
-            suurennosKuva.style.backgroundImage = StyleKeyword.None;
-            NostoSisalto.HaeKuva(k.Lahde, t => { if (t != null) suurennosKuva.style.backgroundImage = new StyleBackground(t); });
-            suurennosTeksti.text = k.Selite ?? k.Lyhyt ?? "";
-            suurennosTeksti.style.display = string.IsNullOrEmpty(suurennosTeksti.text) ? DisplayStyle.None : DisplayStyle.Flex;
-            string lahde = string.Join(" · ", new[] { k.Tekija, k.LahdeRivi }.Where(x => !string.IsNullOrEmpty(x)));
-            suurennosLahde.text = lahde;
-            suurennosLahde.style.display = lahde.Length > 0 ? DisplayStyle.Flex : DisplayStyle.None;
-            Rakenne.Nayta(suurennos, true, 220);
+            var sarja = nosto.Kuvat.Select(k => new LehtiKuva
+            {
+                Lahde = k.Lahde, Lyhyt = k.Lyhyt, Selite = k.Selite ?? k.Lyhyt,
+                LahdeRivi = string.Join(" · ", new[] { k.Tekija, k.LahdeRivi }.Where(x => !string.IsNullOrEmpty(x))),
+            }).ToList();
+            suurennos.Avaa(sarja, alku);
         }
 
         // --- minivisa ja palkkiot -----------------------------------------------------------
