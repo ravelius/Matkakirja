@@ -23402,6 +23402,18 @@ dialog.tekija-ikkuna:focus-visible { outline: none; }
 /* Ulkoisen linkin merkintä samalla nuolella kuin muualla pelissä. */
 .tekija-linkki::after { content: ' ↗'; text-decoration: none; }
 
+/*
+ * Lähderivin sisällä (Commons-kuvan lähde- ja lisenssilinkit, herojen
+ * pohjaviitteet 23.9.2026) linkki on osa krediittiä: rivin oma koko,
+ * kirjasin ja väri. Yllä oleva 0.9rem kuuluu tekijäkortin linkkilistalle;
+ * lähderivillä se teki linkeistä kuvatekstiä suurempia.
+ */
+.tekija-linkki:not(.tekija-linkkilista .tekija-linkki) {
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+}
+
 .tekija-tila,
 .tekija-huomio {
   margin: 0.6rem 0 0;
