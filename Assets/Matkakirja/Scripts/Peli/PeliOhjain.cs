@@ -1416,10 +1416,10 @@ namespace Matkakirja.Natiivi
                 case LehtiTekoLaji.Kulttuurivastaus: tulos = KauppaTeko(k => k.Kulttuuri(t.Kaupunki, t.Oikein), RahaSyyt.Kulttuuri); break;
                 case LehtiTekoLaji.Minitehtavavastaus:
                     tulos = KauppaTeko(k => k.Minitehtava(t.Kaupunki, t.Aihe, t.Oikein, t.Palkkio > 0 ? t.Palkkio : KauppaVakiot.MinitehtavaPalkkio),
-                        RahaSyyt.Minitehtava(t.Aihe));
+                        t.Selite != null ? t.Selite + " ratkesi" : RahaSyyt.Minitehtava(t.Aihe));
                     break;
                 case LehtiTekoLaji.JulisteMyonto: tulos = KauppaTeko(k => k.MyonnaJuliste(t.Avain), RahaSyyt.Juliste); break;
-                case LehtiTekoLaji.PullaVinkki: tulos = KauppaTeko(k => k.PullaVinkki(t.Kaupunki), RahaSyyt.Pulla); break;
+                case LehtiTekoLaji.PullaVinkki: tulos = KauppaTeko(k => k.PullaVinkki(t.Kaupunki), t.Selite ?? RahaSyyt.Pulla); break;
                 case LehtiTekoLaji.EtsiKatko:
                 {
                     // Web etsiKatko: lehti kiinni ja kohtaaminen/kysymys alkaa (LehtiSuljettu näyttää sen).
