@@ -32,6 +32,7 @@ Shader "Matkakirja/MaaTaytto"
             TEXTURE2D(_Paletti); SAMPLER(sampler_point_clamp);
             CBUFFER_START(UnityPerMaterial)
                 float _ReunaLeveys;
+                float4 _Tunnus_TexelSize;
             CBUFFER_END
 
             struct Syote { float4 paikka : POSITION; float2 uv : TEXCOORD0; };
@@ -58,7 +59,8 @@ Shader "Matkakirja/MaaTaytto"
 
             half4 frag(Vali i) : SV_Target
             {
-                float2 d = fwidth(i.uv) * _ReunaLeveys;
+                // Lähellä teksel on ruutua suurempi: raja vähintään tekselin levyinen, ettei se katkeile.
+                float2 d = max(fwidth(i.uv) * _ReunaLeveys, _Tunnus_TexelSize.xy * 0.75);
                 float k = Tunnus(i.uv);
                 float a = Tunnus(i.uv + float2(d.x, 0));
                 float b = Tunnus(i.uv - float2(d.x, 0));
