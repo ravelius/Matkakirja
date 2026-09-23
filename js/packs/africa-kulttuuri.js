@@ -517,38 +517,12 @@ export const AFRICA_KULTTUURI = {
         + 'kallein väri — kuninkaiden ja keisarien tunnus.',
     },
   },
+  /*
+   * Murzukin nostot siirtyivät kaupunkilehteen (kulttuuri-kategoriat.js,
+   * murzuk, 23.9.2026) laajennettuina; visan lähdejuttu on Luonto-sivun
+   * "Aavikon kalliokuvat".
+   */
   murzuk: {
-    nostot: [
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Aavikon kalliokuvat',
-        tiedosto: 'Libya 4924 Pictograms Tadrart Acacus Luca Galuzzi 2007.jpg',
-        teksti: 'Murzukin aavikon länsipuolella, Tadrart Acacusin vuorilla, '
-          + 'kallioihin on maalattu ja kaiverrettu kuvia tuhansien vuosien '
-          + 'ajan: virtahepoja, kirahveja ja karjapaimenia. Ne todistavat, '
-          + 'että Sahara oli kerran vihreä.',
-        selite: 'Tadrart Acacusin kalliomaalauksia Fezzanissa: ihmishahmoja '
-          + 'ja karjaa ajalta, jolloin aavikon paikalla oli järviä ja '
-          + 'laidunmaita. Alue on Unescon maailmanperintökohde.',
-        lahde: 'Luca Galuzzi (Lucag), Wikimedia Commons (CC BY-SA 2.5)',
-      },
-      {
-        tyyppi: 'teksti',
-        otsikko: 'Taatelipalmun kaikki osat',
-        teksti: 'Keitaalla taatelipalmusta käytetään kaikki: hedelmät '
-          + 'syödään, lehdistä punotaan mattoja ja koreja, rungosta tehdään '
-          + 'kattopalkit ja kuidusta köyttä. Sanotaan, että palmulla on '
-          + 'yhtä monta käyttöä kuin vuodessa on päiviä.',
-      },
-      {
-        tyyppi: 'teksti',
-        otsikko: 'Karavaanien kieli',
-        teksti: 'Karavaanimatkalla vesipaikkojen nimet opeteltiin ulkoa '
-          + 'kuin runo, ja oppaat lukivat reittiä tähdistä, dyynien '
-          + 'muodoista ja hiekan väristä. Kartta kulki päässä, ei '
-          + 'taskussa.',
-      },
-    ],
     kysymys: {
       q: 'Mitä Saharan kalliomaalaukset virtahepoineen todistavat?',
       options: ['Sahara oli kerran vihreä', 'Maalarit liioittelivat', 'Virtahevot elivät hiekassa', 'Kuvat ovat väärennöksiä'],

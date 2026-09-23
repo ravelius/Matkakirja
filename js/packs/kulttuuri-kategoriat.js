@@ -106114,4 +106114,259 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * MURZUK (Afrikan kaupunkilehtierä O7, 23.9.2026). Kolme litteää nostoa
+   * siirtyi africa-kulttuuri.js:stä tänne laajennettuina (Aavikon kalliokuvat,
+   * Taatelipalmun kaikki osat, Karavaanien kieli); litteään tauluun jäi vain
+   * kulttuurivisa, jonka lähdejuttu on Luonto-sivun "Aavikon kalliokuvat".
+   * Faktat en/de-Wikipediasta (Murzuk, Mursuk, Murzuq Desert, Acacus
+   * Mountains, Wadi Mathendous, Garamantes, Date palm, Friedrich Hornemann,
+   * Gustav Nachtigal, Alexine Tinne, George Francis Lyon). Hornemannin
+   * saapumispäivä on lähteissä ristiriitainen (17.11. / 29.10.1798), joten
+   * tekstissä on vain "syksyllä 1798". Nykysotaa (2011–) ei käsitellä.
+   */
+  murzuk: [
+    {
+      id: 'kaupunki',
+      nimi: 'Murzuk',
+      johdanto: 'Keidaskaupunki Fezzanin hiekkameren pohjoislaidalla. Täällä '
+        + 'Tšad-järveltä tulevat karavaanit lepäsivät ennen rannikkoa, ja '
+        + 'täältä eurooppalaiset tutkimusmatkailijat lähtivät etsimään '
+        + 'Saharan eteläpuolta.',
+      nostot: [
+        {
+          otsikko: 'Saharan Pariisi',
+          teksti: 'Murzuk syntyi keitaalle, joka oli pysähdyspaikka Saharan halki '
+            + 'pohjoisesta etelään kulkevalla kauppatiellä. 1500-luvun alussa '
+            + 'valtaan nousi Awlad Muhammadin suku, joka hallitsi kaupunkia '
+            + 'vuoteen 1812. Perimätiedon mukaan suvun kantaisä Muhammad '
+            + 'al-Fasi saapui karavaanin johtajana, ja paikalliset pyysivät '
+            + 'häntä ottamaan linnoituksen haltuunsa. Suvun aikana '
+            + 'pyhiinvaeltajien liikenne ja orjakauppa vilkastuivat, ja '
+            + 'orjakaupan verkosto ulottui nykyiseen Tšadiin asti. 1500-luvun '
+            + 'lopulla Murzuk oli ohittanut merkityksessä Ghatin ja '
+            + 'Ghadamesin. Osmanien kaudella 1574–1912 se oli ajoittain '
+            + 'Fezzanin pääkaupunki, ja sitä kutsuttiin Saharan Pariisiksi.',
+          tiedosto: 'The Castle of Morzouk.jpg',
+          lyhyt: 'Murzukin savilinnoitus, palmut ja kamelit George Francis Lyonin värikuvassa.',
+          selite: 'Murzukin savilinnoitus palmujen takana, edustalla kameli '
+            + 'kantotuoleineen ja kaupunkilaisia, George Francis Lyonin '
+            + 'värikuvassa — Lyon kävi kaupungissa 1819.',
+          lahde: 'George Francis Lyon, Wikimedia Commons (PD)',
+          wiki: 'Murzuk',
+        },
+        {
+          otsikko: 'Barthin luonnos vuodelta 1850',
+          teksti: 'Saksalainen Heinrich Barth saapui Murzukiin 6. toukokuuta 1850 '
+            + 'brittien Afrikan-retkikunnan mukana ja piirsi kaupungista '
+            + 'luonnoksen. Kaupunkia kiersi savimuuri, jossa oli kolme '
+            + 'porttia: pääportti itään sekä portit pohjoiseen ja länteen. '
+            + 'Luonnokseen on merkitty turkkilaisen maaherran asunto, '
+            + 'kasarmi, moskeija, Bornun šeikin talo ja Englannin '
+            + 'varakonsulaatti. Barthin mielestä kaupungin laaja aukio teki '
+            + 'siitä ilmavamman mutta myös alttiimman helteelle. Asukkaita '
+            + 'oli 2 800. Bornun perintö näkyy yhä: vuoteen 1400 mennessä '
+            + 'kaupunki oli Bornun valtakunnan vallassa, ja osalla kaduista '
+            + 'on kanurin- ja kanembunkielinen nimi.',
+          tiedosto: 'Murzuq - Moschee und Festung Qala at Turk.jpg',
+          lyhyt: 'Murzukin vanha moskeija ja osmanien linnoituksen muuri hiekka-aukion laidalla.',
+          selite: 'Murzukin osmanikautinen moskeija kartiomaisine minareetteineen '
+            + 'ja linnoituksen muuri hiekka-aukion laidalla kaarikäytävän '
+            + 'läpi nähtynä.',
+          lahde: 'Franzfoto, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Heinrich Barth',
+        },
+        {
+          otsikko: 'Kuumeen maa',
+          teksti: '1800-luvun alussa Murzuk oli brittiläisten retkikuntien '
+            + 'lähtöpaikka Tšad-järven ja Timbuktun etsinnöissä. Joseph '
+            + 'Ritchie ja George Francis Lyon lähetettiin matkaan 1818, ja '
+            + 'vuotta myöhemmin he olivat päässeet vasta Murzukiin, missä '
+            + 'kumpikin sairastui; Ritchie kuoli Murzukissa, ja Lyon palasi '
+            + 'Tripoliin. Dixon Denham, Walter Oudney ja Hugh Clapperton '
+            + 'tulivat 1822 hakemaan suojelua ja tarvikkeita. James '
+            + 'Richardson kirjoitti 1846, että kolme neljäsosaa tänne '
+            + 'tulleista eurooppalaisista — hän tarkoitti turkkilaisia — sai '
+            + 'kuumeen, ja että paikkaa kutsuttiin kuumeen maaksi. Kaupungin '
+            + 'pohjoislaidan suolasoiden vuoksi malariaepidemiat yleistyivät.',
+          tiedosto: 'The Clapperton expedition at Murzuk (Hugh Clapperton), from 1892 book The Story of Africa and its Explorers.jpg',
+          lyhyt: 'Clapperton-retkikunta Murzukissa vuoden 1892 kirjan kuvituksessa.',
+          selite: 'Clapperton-retkikunnan eurooppalaiset kameleineen '
+            + 'murzukilaisten keskellä vuonna 1892 ilmestyneen '
+            + 'tutkimusmatkailijakirjan kuvituksessa.',
+          lahde: 'Robert Brown, Wikimedia Commons (CC0)',
+          wiki: 'George Francis Lyon',
+        },
+        {
+          otsikko: 'Nuori mies mamelukin asussa',
+          teksti: 'Hildesheimiläinen Friedrich Hornemann oli uudella ajalla '
+            + 'ensimmäinen eurooppalainen, joka ylitti Saharan koillisosan. '
+            + 'Lontoon Afrikkayhdistyksen lähettämänä hän liittyi syyskuussa '
+            + '1798 Egyptissä Mekasta palaavaan karavaaniin. Avoimesti '
+            + 'kristittyä ei olisi otettu mukaan, joten hän esiintyi '
+            + 'Fezzaniin kauppaa tekevänä nuorena mamelukina. Murzukiin hän '
+            + 'saapui syksyllä 1798 ja asui täällä kesäkuuhun 1799. Hän '
+            + 'keräsi kaupungissa luotettavaa tietoa Saharan ja sen '
+            + 'eteläpuolen kansoista ja paikansi ensimmäisenä eurooppalaisena '
+            + 'hausojen maan. Hän palasi vielä Murzukiin ja katosi sitten '
+            + 'etelään; 1819 kaupunkiin kantautui tieto, että hän oli kuollut '
+            + 'Nupessa.',
+          wiki: 'Friedrich Hornemann',
+        },
+        {
+          otsikko: 'Kaksi tutkijaa, yksi keidas',
+          teksti: 'Vuonna 1869 Murzukissa kohtasi kaksi tutkimusmatkailijaa. '
+            + 'Saksalainen Gustav Nachtigal oli lähtenyt Tripolista '
+            + 'helmikuussa viemään Preussin kuninkaan lahjoja Bornun '
+            + 'hallitsijalle. Hollantilainen Alexine Tinne aikoi ylittää '
+            + 'aavikon hänen kanssaan, mutta Nachtigal halusi ensin Tibestin '
+            + 'vuoristoon, joten Tinne lähti yksin. Hänet surmattiin 1. '
+            + 'elokuuta 1869 Murzukin ja Ghatin välisellä tiellä. Nachtigal '
+            + 'pääsi Tibestiin ensimmäisenä eurooppalaisena, mutta hänet '
+            + 'ryöstettiin, ja hän pakeni takaisin Murzukiin talveksi. '
+            + 'Isoisän matkavuonna 1873 hän kulki yhä Wadain '
+            + 'sulttaanikunnassa, ja kun hän 1874 ilmestyi Khartumiin, hänet '
+            + 'oli jo luultu kadonneeksi.',
+          wiki: 'Gustav Nachtigal',
+        },
+        {
+          otsikko: 'Karavaanien kieli',
+          teksti: 'Murzukin kautta kulki Bornun tie, karavaanireitti '
+            + 'Tšad-järveltä Tripoliin. Bilman polku, jota pidettiin '
+            + 'reiteistä helpoimpana, kulki kaupungin läheltä Kawarin '
+            + 'keitaille ja sieltä Bilman suurten dyynien yli. Tienviittoja '
+            + 'ei ollut: vesipaikkojen nimet ja järjestys opeteltiin ulkoa '
+            + 'kuin runo, ja oppaat lukivat suuntaa tähdistä, dyynien '
+            + 'muodoista ja hiekan väristä. Kartta kulki päässä eikä '
+            + 'taskussa. Matkan teki mahdolliseksi kameli. Varhaisimmat '
+            + 'merkit kesytetyistä kameleista Saharassa ovat 200-luvulta, ja '
+            + 'niiden myötä aavikon poikki syntyi säännöllisempää yhteyttä. '
+            + 'Vakiintuneet kauppareitit kehittyivät kuitenkin vasta 600- ja '
+            + '700-luvulla.',
+          wiki: 'Trans-Saharan trade',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Murzukin ympärillä on yksi maailman kuivimmista kolkista. '
+        + 'Kallioiden kuvat, keitaiden palmut ja maan alta nostettu vesi '
+        + 'kertovat silti, että ihmiset ja eläimet ovat eläneet täällä '
+        + 'pitkään.',
+      tehtava: {
+        kysymys: 'Kuinka monelle naaraspalmulle yksi urospalmu riittää, kun '
+          + 'keitaan viljelijä pölyttää kukat käsin?',
+        vaihtoehdot: ['Kahdelle', 'Kymmenelle', 'Jopa sadalle', 'Tuhansille'],
+        oikea: 2,
+        fakta: 'Taatelipalmu on kaksikotinen, ja hedelmää tekevät vain '
+          + 'naaraspuut. Käsin pölyttämällä yksi urospuu riittää jopa sadalle '
+          + 'naaraalle, ja koska urospuista on hyötyä vain pölyttäjinä, niitä '
+          + 'karsitaan yleensä naaraiden hyväksi.',
+      },
+      nostot: [
+        {
+          otsikko: 'Aavikon kalliokuvat',
+          teksti: 'Murzukin hiekkameren länsipuolella kohoavat Tadrart Acacusin '
+            + 'vuoret. Nimi on berberikieltä: tadrart on vuorta tarkoittavan '
+            + 'sanan feminiinimuoto. Vuorten kallioihin on maalattu ja '
+            + 'kaiverrettu kuvia noin vuodesta 12 000 eaa. vuoteen 100 jaa. '
+            + 'asti. Niissä on kirahveja, norsuja, strutseja ja kameleita, ja '
+            + 'ihmiset soittavat ja tanssivat. Algerian puolella Tassili '
+            + 'n\'Ajjerissa samaa perinnettä olevien kuvien tekijät elivät '
+            + 'savannilla, jolla oli norsuja, sarvikuonoja ja virtahepoja. '
+            + 'Kalliomaalaukset nykyään asumattomilla seuduilla saivat '
+            + 'tutkijat päättelemään, että Sahara oli kerran vihreä. Alue on '
+            + 'ollut Unescon maailmanperintökohde vuodesta 1985.',
+          tiedosto: 'Libya 4924 Pictograms Tadrart Acacus Luca Galuzzi 2007.jpg',
+          lyhyt: 'Tadrart Acacusin kalliomaalauksia Fezzanissa: punaisia ihmis- ja eläinhahmoja.',
+          selite: 'Tadrart Acacusin kalliomaalauksia Fezzanissa: punaisia ihmis- '
+            + 'ja eläinhahmoja ajalta, jolloin aavikon paikalla oli järviä ja '
+            + 'laitumia.',
+          lahde: 'Luca Galuzzi (Lucag), Wikimedia Commons (CC BY-SA 2.5)',
+          wiki: 'Acacus Mountains',
+        },
+        {
+          otsikko: 'Krokotiilit kalliossa',
+          teksti: 'German kaupungin lähellä, Messak Settafetin kallioylängön '
+            + 'laaksossa Wadi Mathendousissa, on runsaasti '
+            + 'kalliokaiverruksia. Ne on ajoitettu neoliittiseen aikaan, noin '
+            + '6000 vuotta ennen ajanlaskun alkua. Tekijät hioivat, '
+            + 'nakuttivat ja raapivat eläinten ääriviivat tummuneeseen '
+            + 'hiekkakiveen. Kuvissa on norsuja, kirahveja, alkuhärkiä, '
+            + 'villikissoja ja krokotiileja — keskellä nykyistä aavikkoa. '
+            + 'Paljaalla kalliolla oleva taide on haavoittuvaa, ja suuri osa '
+            + 'Saharan suojaamattomista kalliokuvista on jo kadonnut. Libyan '
+            + 'posti julkaisi Mathendousin kaiverruksista viiden postimerkin '
+            + 'sarjan uudenvuodenpäivänä 1978.',
+          tiedosto: 'Wadi Mathandous, Felsgravur Krokodil.jpg',
+          lyhyt: 'Krokotiileja kaiverrettuna hiekkakiveen Wadi Mathendousissa Fezzanissa.',
+          selite: 'Kivikautinen kaiverrus Wadi Mathendousissa German lähellä: '
+            + 'pitkiä, suomuselkäisiä krokotiileja hiekkakivilohkareissa.',
+          lahde: 'Franzfoto, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Wadi Mathendous',
+        },
+        {
+          otsikko: 'Hiekkameri, joka liikkuu',
+          teksti: 'Murzukin eteläpuolelle levittäytyy Idehan Murzuq, noin 58 000 '
+            + 'neliökilometrin hiekkameri — noin kuudesosa Suomesta. Sen '
+            + 'länsiosan tunnusmerkki ovat draat, valtavat hiekkamassat, '
+            + 'joiden nimi tulee arabian käsivartta tarkoittavasta sanasta. '
+            + 'Niiden väliin jää lähes hiekattomia painanteita. Draat pysyvät '
+            + 'melkein paikallaan, mutta niiden selässä vaeltaa pienempiä '
+            + 'dyynejä: pitkittäisiä, poikittaisia ja tähtidyynejä, joissa '
+            + 'monta harjaa kohtaa yhdessä huipussa. Kun pieni dyyni '
+            + 'saavuttaa draan suojanpuoleisen reunan, se hajoaa, ja tuuli '
+            + 'kuljettaa hiekan jyvä kerrallaan painanteen yli. Murzukissa '
+            + 'sataa keskimäärin seitsemän millimetriä vuodessa.',
+          tiedosto: 'Libya 5230 Wan Caza Dunes Luca Galuzzi 2007.jpg',
+          lyhyt: 'Wan Cazan hiekkadyynejä Fezzanissa, pinnassa tuulen uurtamat väreet.',
+          selite: 'Wan Cazan hiekkadyynejä Fezzanissa: etualalla tuulen väreilemä '
+            + 'harjanne, taustalla korkeita hiekkavuoria.',
+          lahde: 'Luca Galuzzi (Lucag), Wikimedia Commons (CC BY-SA 2.5)',
+          wiki: 'Murzuq Desert',
+        },
+        {
+          otsikko: 'Taatelipalmun kaikki osat',
+          teksti: 'Keitaalla taatelipalmusta käytetään lähes kaikki. Hedelmät '
+            + 'syödään, ja Pohjois-Afrikassa palmunlehdistä rakennetaan '
+            + 'majoja. Kypsistä lehdistä punotaan mattoja, sermejä, koreja ja '
+            + 'viuhkoja. Kuivista lehtiruodeista tulee kävelykeppejä, luutia '
+            + 'ja polttoainetta, ja lehtituppien kuidusta kierretään köyttä '
+            + 'ja kudotaan karkeaa kangasta. Palmu on kaksikotinen: hedelmää '
+            + 'tekevät vain naaraspuut, ja siemenestä kasvatetuista taimista '
+            + 'vain puolet on naaraita. Perinteisillä keitailla kukat '
+            + 'pölytetään käsin, ja näin yksi urospuu riittää jopa sadalle '
+            + 'naaraalle. Sanotaan, että palmulla on yhtä monta käyttöä kuin '
+            + 'vuodessa on päiviä.',
+          tiedosto: 'Alfejej - Oase Gabrun, Dattelpalmen.jpg',
+          lyhyt: 'Taatelipalmuja Gabrunin keitaalla Fezzanin hiekkadyynien keskellä.',
+          selite: 'Luonnonvaraisia taatelipalmuja Gabrunin keitaalla Fezzanissa, '
+            + 'tiheinä pensaina hiekkadyynien välissä.',
+          lahde: 'Franzfoto, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Date palm',
+        },
+        {
+          otsikko: 'Vesi, joka ei palaa',
+          teksti: 'Ennen Murzukia Fezzania hallitsivat garamantit, jotka '
+            + 'välittivät Saharan kauppaa Karthagon ja myöhemmin Rooman sekä '
+            + 'Sahelin valtioiden välillä. Heidän pääkaupunkinsa Garama oli '
+            + 'nykyisen German kohdalla noin 150 kilometriä Sabhasta länteen. '
+            + 'Garamantit kaivoivat tunneleiden ja kuilujen verkoston, '
+            + 'foggarat, joilla he louhivat vettä hiekan alla olevan '
+            + 'kalkkikivikerroksen alta, ja verkosto teki maanviljelyn '
+            + 'mahdolliseksi. Verkostoa pitivät kunnossa orjat. Vesi oli '
+            + 'kuitenkin fossiilista eli uusiutumatonta, ja vuosisatojen '
+            + 'kuluessa pohjaveden pinta laski. Se on yksi selitys sille, '
+            + 'miksi valtakunta hiipui 600-luvun lopulla.',
+          tiedosto: 'Garma (Garama) - Ruinen der antiken Stadt Garama.jpg',
+          lyhyt: 'Garaman savirauniot Germassa, garamanttien pääkaupungin paikalla.',
+          selite: 'Garaman kaupungin savirauniot Germassa Fezzanissa, '
+            + 'garamanttien vanhan pääkaupungin paikalla, taustalla palmuja.',
+          lahde: 'Franzfoto, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Garamantes',
+        },
+      ],
+    },
+  ],
 };
