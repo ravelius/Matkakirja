@@ -85,6 +85,9 @@ namespace Matkakirja.Editori
             merkit.reitit = reitit;
 
             georefGo.AddComponent<Laattapalvelin>();
+            var alueet = georefGo.AddComponent<Alueet>();
+            alueet.rasteriPohja = LaattaUrl.Replace("{reverseY}", "{y}");
+            alueet.maastoLayer = MaastoUrl;
             var kerrokset = georefGo.AddComponent<KarttaKerrokset>();
             kerrokset.pallo = pallo;
             kerrokset.pohja = kerros;

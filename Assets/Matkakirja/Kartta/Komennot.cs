@@ -25,6 +25,7 @@ namespace Matkakirja
     ///   nipistys cx cy d0 d1 s    kahden sormen nipistys keskipisteen ympäri, sormien
     ///                             väli d0 → d1 (osuus näytön leveydestä)
     ///   kallista y0 y1 s          kahden sormen pystyveto (kallistus), y näytön osuutena
+    ///   alue lataa|peru|poista <ISO3|maailma> | alue tila   offline-lataus (Alueet)
     ///   palvelin                  laattapalvelimen osumat lokiin (offline / välimuisti / verkko)
     ///   valot <aihe>|kaikki|ei|tila     karttavalot (AiheValot), tila = laskurit lokiin
     ///   maat paalle|pois | maat korosta ISO3 [#täyttö #raja] | maat pois-korostus   Maatila (MaaKartta)
@@ -135,6 +136,21 @@ namespace Matkakirja
                 case "maasto":
                     Maasto(o[1] == "paalle");
                     break;
+                case "alue":
+                {
+                    // alue lataa|peru|poista <id> | alue tila
+                    var al = FindAnyObjectByType<Alueet>();
+                    if (al == null) break;
+                    if (o[1] == "lataa") al.Lataa(o[2]);
+                    else if (o[1] == "peru") al.Peru(o[2]);
+                    else if (o[1] == "poista") al.Poista(o[2]);
+                    var sb = new StringBuilder("MATKAKIRJA alueet:");
+                    foreach (var a in al.Luettelo)
+                        if (a.Tila != Alueet.Tila.Ei || a.Id == "maailma")
+                            sb.Append($" {a.Id}={a.Tila} {a.Ladattu / 1048576.0:0.0}/{a.Tavut / 1048576.0:0.0} Mt");
+                    Debug.Log(sb.ToString());
+                    break;
+                }
                 case "palvelin":
                     Debug.Log($"MATKAKIRJA laattapalvelin: {Laattapalvelin.Juuri} offline {Laattapalvelin.Offline}, " +
                               $"välimuisti {Laattapalvelin.Valimuistista}, verkko {Laattapalvelin.Verkosta}, virheitä {Laattapalvelin.Virheita}");
