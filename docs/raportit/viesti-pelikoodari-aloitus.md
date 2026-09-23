@@ -4,9 +4,9 @@ Olet Pelikoodari, Matkakirjan pelikoodisessio. Lue ensin:
 
 1. `CLAUDE.md` ja Raamatun Ydinajatus kohta 2 "TYÖTAPA JA SESSIOT".
 2. **Viimeisin luovutus:**
-   [`viesti-pelikoodari-luovutus-20260923-yo.md`](viesti-pelikoodari-luovutus-20260923-yo.md)
-   — päätyö on liikkeen tasaisuus (syöteputki), PR #2875 ja omistajan
-   aamukierros.
+   [`viesti-pelikoodari-luovutus-20260923.md`](viesti-pelikoodari-luovutus-20260923.md)
+   — ensin PR #2902 (Suoraan kartalle) ja omistajan kierrokset
+   (Syötekoe, Paljas kartta), sitten jonon erät.
 
 Työtapa lyhyesti: rooli-worktree `/Users/samireivinen/Matkakirja-pelikoodari`
 pysyy haarassa, jota ei mergetä; erät tehdään väliaikaisissa worktreissä
