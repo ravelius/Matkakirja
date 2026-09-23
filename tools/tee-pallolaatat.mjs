@@ -16,8 +16,8 @@
  * Z0–Z8. Geometria (projektio, rajaus) tulee pohjan luettelosta, koska
  * reliefin luettelossa niitä ei ole (reliefinLuettelo). Relief on
  * täysvärikartta ilman julisteen kehystä ja reunavarjoa, joten
- * alakehystä ei vähennetä, reunaa ei nosteta, ja kartan ulkopuoli
- * jatkaa reunarivin sävyä sarakkeittain (ei pergamentin merta ja jäätä).
+ * reunaa ei nosteta, ja kartan ulkopuoli (RELIEFIN_VALI) on reliefin
+ * omaa täytesävyä (RELIEFIN_TAYTE), ei pergamentin merta ja jäätä.
  *
  * SHARDIT (--osa i/n, 7.9.2026). Sarja on 87 381 laattaa tasoille 0–8, ja
  * yhtenä prosessina se kesti Mac Studiolla noin kolme tuntia YHDELLÄ
@@ -189,9 +189,7 @@ export const SAVYN_TASOITUS = 12;
  * Julisteen meri on eri sävyinen eri kohdissa (varjostus), joten
  * täyte otetaan siitä merestä, johon se liittyy.
  */
-export const MERI_MITTAUS = {
-  pohjoinen: { lon: 0 }, etela: { lon: -130 }, sisaan: REUNAN_NOSTO + 0.6, aukko: { lon: -170, lat: 0 },
-};
+export const MERI_MITTAUS = { pohjoinen: { lon: 0 }, etela: { lon: -130 }, sisaan: REUNAN_NOSTO + 0.6 };
 const MERI_VARA = MERI_SAVY;
 const RAD = Math.PI / 180;
 /** Lähdelaattoja välimuistissa kerrallaan (512 × 512 × 4 t ≈ 1 Mt kukin). */
@@ -533,13 +531,8 @@ function teeLukija(luettelo, sharp, { nostot = false, ranta = true } = {}) {
     meri = {
       pohjoinen: await mittaa(MERI_MITTAUS.pohjoinen.lon, vali.pohjoinen - MERI_MITTAUS.sisaan),
       etela: await mittaa(MERI_MITTAUS.etela.lon, vali.etela + MERI_MITTAUS.sisaan),
-      /*
-       * RELIEFIN AUKKO: reliefipyramidi 20260920 on vailla arkin itäisintä
-       * osittaista laattasaraketta (z7 sarakkeet 167–168, lon −178,75…−175,
-       * mitattu 23.9.2026). Puuttuva lähdelaatta on reliefissä avomerta,
-       * joten se täytetään Tyynenmeren syvän meren sävyllä, ei Jäämeren.
-       */
-      aukko: luettelo.relief ? await mittaa(MERI_MITTAUS.aukko.lon, MERI_MITTAUS.aukko.lat) : null,
+      // Reliefissä puuttuva lähdelaatta saa reliefin oman täytesävyn.
+      aukko: luettelo.relief ? luettelo.tayte : null,
     };
     return meri;
   }
@@ -552,6 +545,7 @@ function teeLukija(luettelo, sharp, { nostot = false, ranta = true } = {}) {
  * y on millerY-arvo (ruutu-y alaspäin, ks. tee-pallotekstuuri.mjs).
  */
 export function julisteenLeveysvali(luettelo) {
+  if (luettelo.vali) return luettelo.vali;
   const p = luettelo.projektio;
   const sk = p.leveys / (2 * Math.PI);
   const yP = millerY(p.pohjoinen);
@@ -594,11 +588,24 @@ export function reliefinLuettelo(pohja, relief, versio) {
     arkki: relief.arkki,
     rajaus: pohja.rajaus,
     kehys: {},
+    vali: RELIEFIN_VALI,
+    tayte: RELIEFIN_TAYTE,
     laatta: relief.laatta ?? 512,
     // Reliefin tasoilla ei ole pikseliaPerYksikko-kenttää (arkinPikseli).
     tasot: relief.tasot.map((t) => ({ ...t, pikseliaPerYksikko: t.leveys / pohja.projektio.leveys })),
   };
 }
+
+/*
+ * RELIEFIN KATTAVUUS JA TÄYTE (mitattu reliefipyramidista 20260920,
+ * 23.9.2026): laatat kattavat 84° N … 65,43° S (z7 rivit 6–95), ja
+ * kattavuuden ulkopuoli — myös arkin itäisin osittainen sarake lon
+ * −179…−175 — on tuottajan omaa täytettä RGB 37, 78, 144. Sarja käyttää
+ * samaa sävyä kartan ulkopuolella ja puuttuvissa laatoissa, joten
+ * saumoja ei synny eikä reunan värejä venytetä raidoiksi.
+ */
+export const RELIEFIN_VALI = { pohjoinen: 84, etela: -65.43 };
+export const RELIEFIN_TAYTE = [37, 78, 144];
 
 /** Reliefisarjan ämpärikansio: reliefipyramidin versio + pallo/. */
 export const reliefinKansio = (versio) => `matkakirja/reliefipyramidi/${versio}/pallo/`;
@@ -668,8 +675,7 @@ export async function laskeLaatta(luettelo, lukija, Z, X, Y) {
           const keski = summa.map((v) => Math.round(v / k));
           const lum = (keski[0] + keski[1] + keski[2]) / 3;
           const kyllainen = Math.abs(keski[0] - keski[1]) > 18 || Math.abs(keski[1] - keski[2]) > 34;
-          // Reliefissä kelpaa vain vesi (sininen): maa (Grönlanti) ei saa venyä täytteeksi.
-          if (relief ? keski[2] > keski[0] + 50 && keski[2] > keski[1] + 10 : (!kyllainen && lum >= 150 && lum <= 235)) savy = keski;
+          if (!kyllainen && lum >= 150 && lum <= 235) savy = keski;
         }
         raaka.push(savy);
       }
@@ -714,7 +720,7 @@ export async function laskeLaatta(luettelo, lukija, Z, X, Y) {
       const o = (r * LAATTA + s) * 3;
       const a = kartalla ? arkinPikseli(luettelo, taso, lon, lat) : null;
       if (!a) {
-        const tayte = relief ? reunanSavy(s, puoli) : tayteRivilla(lat, reunanSavy(s, puoli));
+        const tayte = relief ? luettelo.tayte : tayteRivilla(lat, reunanSavy(s, puoli));
         ulos[o] = tayte[0]; ulos[o + 1] = tayte[1]; ulos[o + 2] = tayte[2];
         continue;
       }
