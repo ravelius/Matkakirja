@@ -699,7 +699,9 @@ namespace Matkakirja.Natiivi
             if (Tila != SilmukanTila.Aloitus && Tila != SilmukanTila.Kartta && Tila != SilmukanTila.Dialogi) return "silmukka on tilassa " + Tila;
             jatkettava = null;
             UusiPeli(siemen, lahtokaupunki);
-            SoitaLuento(luennat.Intro, 1.0f);
+            // Aloitusnäkymässä intro soi jo avaustekstin aikana ennen valintaa (web renderIntro →
+            // playIntroVoice, Natiivi-UI); ilman näkymää se soi tässä kuten ennen.
+            if (!AloitusNakyma) SoitaLuento(luennat.Intro, 1.0f);
             return null;
         }
 
