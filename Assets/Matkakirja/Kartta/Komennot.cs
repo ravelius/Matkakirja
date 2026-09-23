@@ -32,6 +32,7 @@ namespace Matkakirja
     ///   maakunta <ISO3:tunnus>|pois  maakunnan värjäys (B17)
     ///   maat paalle|pois | maat korosta ISO3 [#täyttö #raja] | maat pois-korostus   Maatila (MaaKartta)
     ///   nappula aseta lat lon | aja lat lon … kesto | lenna lat0 lon0 lat1 lon1 kesto | pois
+    ///   piste <id> lat lon [lukittu] | piste pois <id>   pelin karttapiste (vihreä)
     ///   napauta x y               synteettinen napautus (osuus näytöstä, origo vasen alakulma)
     ///   maasto paalle|pois        Karttasepän maasto (layer.json) tai ellipsoidi; valinta
     ///                             muistetaan tiedostossa Documents/maasto.txt
@@ -151,6 +152,15 @@ namespace Matkakirja
                         np.Aja(pisteet, (float)D(o.Length - 1), () => Debug.Log("MATKAKIRJA nappula: perillä"));
                     }
                     else if (o[1] == "pois") np.Piilota();
+                    break;
+                }
+                case "piste":
+                {
+                    // piste <id> lat lon [lukittu] | piste pois <id>: pelin karttapiste (Karttapisteet)
+                    var kp = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.pisteet : null;
+                    if (kp == null) break;
+                    if (o[1] == "pois") kp.Poista(o[2]);
+                    else kp.Aseta(o[1], D(2), D(3), new Color(0.24f, 0.62f, 0.33f), o.Length > 4 && o[4] == "lukittu");
                     break;
                 }
                 case "napauta":
