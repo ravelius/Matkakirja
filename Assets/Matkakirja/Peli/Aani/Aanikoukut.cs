@@ -17,8 +17,12 @@ namespace Matkakirja.Peli
         public bool Valmis;
         /// <summary>Aloitusnäkymä (webin pickstart: portti, avausteksti, lähtövalinta).</summary>
         public bool Aloitus;
-        /// <summary>Lentomoottori soi (lento tai aloituslento koneen lähdöstä perille).</summary>
-        public bool Lento;
+        /// <summary>
+        /// Aloituslento napautuksesta perille (PeliOhjain.AloituslentoKaynnissa; webin lennonAmbienssi ja
+        /// body.flight-active avauslennolla): matkustamon maisema. Pelin omat lennot ja mannerlento EIVÄT
+        /// ole tätä (web: pallolaudan lennolla ei ole kalvoa eikä flight-active-lippua).
+        /// </summary>
+        public bool Aloituslento;
         /// <summary>Liike käynnissä (SilmukanTila.Matkalla, myös nopan pyöriessä ja aloituslennon zoomissa).</summary>
         public bool Matkalla;
         /// <summary>Peli ohi (Vaihe.Ohi).</summary>
@@ -70,17 +74,24 @@ namespace Matkakirja.Peli
 
         /// <summary>
         /// Paikka-avain (§1.3, webin syncAmbience): (paikka, tyyppi), tai null = ei muutosta (lataus kesken,
-        /// tai liike käynnissä ilman lentoa tai jalkamatkaa: lähtöpaikan maisema ja raita soivat perille asti).
-        /// Paikka null = ei maisemaa (reitin varrella maitse, peli ohi), pohjavire soi.
+        /// tai liike käynnissä ilman lentoa tai jalkamatkaa: lähtöpaikan maisema ja raita soivat, kunnes
+        /// render perillä vaihtaa ne). Paikka null = ei maisemaa (reitin varrella maitse, peli ohi), pohjavire soi.
+        ///
+        /// Lennot (web ui.js, erä 5): matkustamo ('lentomatka') soi VAIN avauslennolla (lennonAmbienssi +
+        /// flight-active napautuksesta laskeutumiseen) ja vanhalla kalvolennolla (doFly laudalla 'maailma',
+        /// jota peli ei enää käytä). Pelin oma lento (doFly maailmankartalla) ja mannerlento
+        /// (actionMannerLento) ovat animatePawn(…, [pos], MANNER_LENTO_MS, { lento }): polulla on yksi askel,
+        /// joka on samalla viimeinen, joten ennakoiAmbienssi(kohde) käynnistää kohdekaupungin maiseman ja
+        /// pohjaraidan heti lennon alussa (lento = true → kohdekaupunki; PeliOhjaimen tila on jo perillä).
         /// </summary>
-        public static (string Paikka, string Tyyppi)? Paikka(Aanitilanne s, bool jalkamatka, Func<string, string> kaupunginTyyppi)
+        public static (string Paikka, string Tyyppi)? Paikka(Aanitilanne s, bool jalkamatka, bool lento, Func<string, string> kaupunginTyyppi)
         {
             if (!s.Valmis) return null;
-            if (s.Lento) return (Lentomatka, "lentokone");
+            if (s.Aloituslento) return (Lentomatka, "lentokone");
             if (s.Matkalla && jalkamatka) return (Jalkamatka, "metsa");
             if (s.Ohi) return (null, null);
             if (s.Aloitus) return (Etusivu, "lentoasema");
-            if (s.Matkalla) return null;
+            if (s.Matkalla && !lento) return null;
             if (s.Kaupunki != null) return (s.Kaupunki, kaupunginTyyppi?.Invoke(s.Kaupunki));
             return s.Merireitti ? (Merimatka, "meri") : ((string, string)?)(null, null);
         }
@@ -88,6 +99,7 @@ namespace Matkakirja.Peli
         string Tyyppi(string kaupunki) => kaupunki != null && t.Tyypit.TryGetValue(kaupunki, out var ty) ? ty : null;
 
         bool JalkamatkaKaynnissa => liike == Kulkutapa.Maa && askeleita > 1;
+        bool LentoKaynnissa => liike == Kulkutapa.Lento;
 
         /// <summary>Ruudun lopussa: lähettää vain muuttuneet (paikka, avauksen purku, visamusiikki).</summary>
         public void Paivita(Aanitilanne s)
@@ -98,7 +110,7 @@ namespace Matkakirja.Peli
             aloitus = s.Aloitus;
             if (s.KysymysAuki != visa) { visa = s.KysymysAuki; tila.Visa(visa); }
             if (pito) return; // linssin pito: paikka lähetetään pidon päätyttyä
-            var p = Paikka(s, JalkamatkaKaynnissa, Tyyppi);
+            var p = Paikka(s, JalkamatkaKaynnissa, LentoKaynnissa, Tyyppi);
             if (!p.HasValue) return;
             if (lahetetty && p.Value.Paikka == paikka && p.Value.Tyyppi == tyyppi) return;
             lahetetty = true;
@@ -107,12 +119,16 @@ namespace Matkakirja.Peli
             tila.Paikka(paikka, tyyppi);
         }
 
-        /// <summary>Liike alkaa (noppa pysähtyi, kone lähtee): siirtymäraita ja jalkamatkan maisema.</summary>
-        public void LiikeAlkoi(Kulkutapa tapa, int askelia)
+        /// <summary>
+        /// Liike alkaa (noppa pysähtyi, kone lähtee): siirtymäraita, jalkamatkan maisema ja lennon kohdepaikka.
+        /// siirtymaraita = false: web ei soita siirtymäraitaa avauslennolla (doPickStart) eikä mannerlennolla
+        /// (actionMannerLento-napin polku ilman aloitaSiirronMusiikkia); vain doFly ja doMove soittavat sen.
+        /// </summary>
+        public void LiikeAlkoi(Kulkutapa tapa, int askelia, bool siirtymaraita = true)
         {
             liike = tapa;
             askeleita = askelia;
-            var laji = Laji(tapa);
+            var laji = siirtymaraita ? Laji(tapa) : null;
             if (laji != null) Siirtyma(laji);
         }
 

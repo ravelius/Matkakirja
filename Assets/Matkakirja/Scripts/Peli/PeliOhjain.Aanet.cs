@@ -11,7 +11,8 @@
 // Äänisoitin (Aanisoitin.cs) syntyy PeliOhjaimen lapseksi. Ruudun lopussa PaivitaAanet kokoaa
 // Aanitilanteen (webin syncAmbience jokaisella renderillä) ja Aanikoukut lähettää AaniTilalle vain
 // muutokset. Lisäksi AaniTila saa: MatkaPerilla (siirtymäraidan loppu), Puhe.Puhuu (väistö),
-// lentomoottorin tilan (lentomatkan maisema), lehden Avautui/Suljettu (hiljennys 'lehti') ja
+// aloituslennon tilan (matkustamon maisema vain avauslennolla; pelin lennot ja mannerlento soittavat
+// kohdekaupunkia heti lennon alusta, web ennakoiAmbienssi), lehden Avautui/Suljettu (hiljennys 'lehti') ja
 // LinssiOhjain.MusiikkiKasittelijan (linssin pito). KaikkiAarteetLoytyi ei muuta sekoitusta: web
 // soittaa siinä vain tehosteen 'win', jonka Natiivi-UI soittaa jo.
 using System;
@@ -85,11 +86,14 @@ namespace Matkakirja.Natiivi
             LinssiOhjain.MusiikkiKasittelija = paalla => { if (aanisoitin != null) aanisoitin.Koukut.LinssiPito(paalla); };
         }
 
-        /// <summary>Liike alkaa: tapahtuma ja siirtymäraita (AloitaLiike, aloituslennon lähtö).</summary>
-        void IlmoitaLiike(Kulkutapa tapa, int askelia)
+        /// <summary>
+        /// Liike alkaa: tapahtuma ja siirtymäraita (AloitaLiike, aloituslennon lähtö). siirtymaraita = false
+        /// avauslennolla ja mannerlennolla (web soittaa raidan vain doFlyssä ja doMovessa).
+        /// </summary>
+        void IlmoitaLiike(Kulkutapa tapa, int askelia, bool siirtymaraita = true)
         {
             try { LiikeAlkoi?.Invoke(tapa, askelia); } catch (Exception e) { Debug.LogException(e); }
-            aanisoitin?.Koukut.LiikeAlkoi(tapa, askelia);
+            aanisoitin?.Koukut.LiikeAlkoi(tapa, askelia, siirtymaraita);
         }
 
         /// <summary>
@@ -157,7 +161,7 @@ namespace Matkakirja.Natiivi
                 Valmis = taulut && verkko != null && Tila != SilmukanTila.Lataa && Tila != SilmukanTila.Virhe
                          && (matka != null || Tila == SilmukanTila.Aloitus),
                 Aloitus = Tila == SilmukanTila.Aloitus,
-                Lento = lentoSoi,
+                Aloituslento = AloituslentoKaynnissa,
                 Matkalla = Tila == SilmukanTila.Matkalla,
                 Ohi = matka != null && matka.Tila.Vaihe == Vaihe.Ohi,
                 Kaupunki = PelaajanKaupunki,

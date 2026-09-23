@@ -1249,7 +1249,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Lentoääni, nappula tai kamera-ajo kohteeseen; perillä Perilla.</summary>
         void AloitaLiike(MatkanTulos t, (double Lat, double Lon)? a, (double Lat, double Lon) b, float kesto)
         {
-            IlmoitaLiike(t.Tapa, t.Polku?.Count ?? 0);
+            IlmoitaLiike(t.Tapa, t.Polku?.Count ?? 0, siirtymaraita: !t.Mannerlento);
             if (t.Tapa == Kulkutapa.Lento)
             {
                 Lentoaani(true, kesto);

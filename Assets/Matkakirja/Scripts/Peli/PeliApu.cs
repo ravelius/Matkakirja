@@ -52,6 +52,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Kuljettu polku lähdön jälkeen (web path; nappulan matkapisteet), null lennossa.
         /// Matka.Tila.ViimePolku nollautuu jo seuraavan vuoron alussa, joten se kirjataan tähän.</summary>
         public List<Sijainti> Polku;
+        /// <summary>Mannerlento (web actionMannerLento): lento ilman siirtymäraitaa (äänet B7 erä 5).</summary>
+        public bool Mannerlento;
         public bool Liikkui => !Lahto.Equals(Kohde);
     }
 
@@ -387,6 +389,7 @@ namespace Matkakirja.Natiivi
                         break;
                     case Kulkutapa.Lento:
                         if (!mannerlento) { r = m.Lenna(kohde); break; }
+                        tulos.Mannerlento = true;
                         var ml = new Kaupat(m).MannerLento(kohde);
                         r = ml.Ok ? TekoTulos.Onnistui() : TekoTulos.Epaonnistui(ml.Virhe);
                         break;
