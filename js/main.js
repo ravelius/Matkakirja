@@ -8,7 +8,7 @@ import { asetaLiike, liikePaalla } from './kartta-liike.js';
 import {
   PIIRTOKOKEIDEN_VAIHTOEHDOT, asetaKehysprofiili, asetaPiirtokoe,
   kehysprofiiliPaalla, piirtokoeValinta, koetilanAvain, luoKoevaihdonLataaja, unohdaPoistetutValinnat,
-  PALJAAN_KERROKSET, asetaPaljasKerros, paljaatKerrokset,
+  PALJAAN_KERROKSET, PALJAAT_KOKEET, asetaPaljasKerros, paljaatKerrokset,
 } from './piirtokoe-asetus.js';
 import { unohdaTarkkuus } from './tarkkuus-asetus.js';
 import {
@@ -775,7 +775,7 @@ const paljaatOtsikko = document.getElementById('paljaat-kerrokset-otsikko');
 const paljaatValikko = document.getElementById('paljaat-kerrokset-valikko');
 const naytaPaljaatKerrokset = () => {
   if (!paljaatValikko) return;
-  const nakyvissa = piirtokoeValinta() === 'paljas';
+  const nakyvissa = PALJAAT_KOKEET.includes(piirtokoeValinta());
   paljaatValikko.hidden = !nakyvissa;
   if (paljaatOtsikko) paljaatOtsikko.hidden = !nakyvissa;
   const paalla = new Set(paljaatKerrokset());

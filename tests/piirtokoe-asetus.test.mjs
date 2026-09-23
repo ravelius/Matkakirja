@@ -268,7 +268,7 @@ test('valikossa neljä syötekoetta omistajan järjestyksessä; poistetut liput 
   // Omistaja 23.9.2026 klo 08.34 (Fablen kautta): Syötekoe valikkoon, piirtokokeet vain osoitteessa.
   assert.deepEqual(PIIRTOKOKEIDEN_VAIHTOEHDOT.map((k) => k.avain), ['normaali', 'syotetouch', 'syotekello', 'molemmat',
     // Paljas kartta ja puolitus (omistaja 23.9.2026 klo 09.20).
-    'paljas']);
+    'paljas', 'paljasnimet', 'paljassymbolit', 'paljasdom']);
   const pura = valeMuisti();
   try {
     globalThis.location = { search: '?koe=dpr15' };
@@ -330,9 +330,9 @@ test('paljas: yksi lippu asettaa kerrokset ja lisäriisunnat, menu jää käytt�
  * päällä muuttaa vain oman ryhmänsä — kerrokset, lisäriisunnat ja luokat.
  */
 test('paljas: jokainen kerroskytkin tuo vain oman ryhmänsä', async () => {
-  const { kerrosKaytossa, kerrostenBodyLuokat } = await import('../js/pallolauta/kerrokset.js');
+  const { kerrosKaytossa, kerrostenBodyLuokat, paljasTila } = await import('../js/pallolauta/kerrokset.js');
   const { voimassaOlevatKokeet, PALJAAN_KERROKSET } = await import('../js/piirtokoe-asetus.js');
-  const tikas = ['vektorit', 'nimet', 'nostot', 'nappula', 'kohteet', 'pulu', 'liike'];
+  const tikas = ['vektorit', 'nimet', 'nostot', 'nappula', 'kohteet', 'pulu', 'liike', 'aanet'];
   const pohja = { kerrokset: tikas.filter((k) => kerrosKaytossa(k, '?koe=paljas')), kokeet: [...voimassaOlevatKokeet('?koe=paljas')].sort(), dom: kerrostenBodyLuokat('?koe=paljas').includes('kerros-pois-dom') };
   for (const ryhma of PALJAAN_KERROKSET) {
     const h = `?koe=paljas,kerros-${ryhma.avain}`;
@@ -343,6 +343,11 @@ test('paljas: jokainen kerroskytkin tuo vain oman ryhmänsä', async () => {
     assert.deepEqual(poistuneet.sort(), [...ryhma.riisunta].sort(), `${ryhma.avain}: riisunnat`);
     assert.equal(kerrostenBodyLuokat(h).includes('kerros-pois-dom'), ryhma.avain !== 'dom', `${ryhma.avain}: DOM`);
   }
+  // Pikavalinnat 6–8 = paljas + yksi ryhmä.
+  assert.equal(paljasTila('?koe=paljasnimet'), 'paljas');
+  assert.ok(kerrosKaytossa('nimet', '?koe=paljasnimet') && !kerrosKaytossa('nostot', '?koe=paljasnimet'));
+  assert.ok(kerrosKaytossa('nostot', '?koe=paljassymbolit') && !kerrosKaytossa('nimet', '?koe=paljassymbolit'));
+  assert.ok(!kerrostenBodyLuokat('?koe=paljasdom').includes('kerros-pois-dom') && kerrostenBodyLuokat('?koe=paljas').includes('kerros-pois-dom'));
   // Kaksi yhtä aikaa: molemmat ryhmät.
   assert.ok(kerrosKaytossa('nimet', '?koe=paljas,kerros-nimiot,kerros-runko') && kerrosKaytossa('vektorit', '?koe=paljas,kerros-nimiot,kerros-runko'));
 });

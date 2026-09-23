@@ -4,7 +4,7 @@
  * sivua ei ladattu valinnan jälkeen. Tarkistaa oikeassa selaimessa:
  *   L1 valikosta Syötekoe "Kosketus suoraan" → vihje "Ladataan…"
  *   L2 sivu latautuu itse (navigaatio tapahtuu viiveen jälkeen)
- *   L3 latauksen jälkeen overlayn ylin rivi "koe 2/5 Kosketus suoraan" ilman
+ *   L3 latauksen jälkeen overlayn ylin rivi "koe 2/8 Kosketus suoraan" ilman
  *      "seuraavassa latauksessa" — koe on voimassa
  *   L4 paluu samaan tilaan viiveen aikana perii latauksen
  *   L6 latauksen jälkeen syöteputki ottaa näytteet kosketustapahtumista
@@ -99,7 +99,7 @@ try {
   await sivu.waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null, { timeout: 90000 });
   const r = await ylinRivi(sivu, 'Kosketus');
   tieto('rivi latauksen jälkeen', r);
-  vaadi('L3 koe voimassa latauksen jälkeen', /^koe 2\/5 Kosketus suoraan · profiili p\d+/.test(r) && !r.includes('seuraavassa'), r);
+  vaadi('L3 koe voimassa latauksen jälkeen', /^koe 2\/8 Kosketus suoraan · profiili p\d+/.test(r) && !r.includes('seuraavassa'), r);
   const syote = await sivu.evaluate(() => ({ tapa: window.matkakirja.ui.pallonSyote?.tapa, touchLahde: window.matkakirja.ui.pallonSyote?.touchLahde }));
   vaadi('L6 syöteputki käyttää kosketusnäytteitä', syote.touchLahde === true && syote.tapa === 'interp', JSON.stringify(syote));
   vaadi('L5 ei sivuvirheitä', virheet.length === 0, virheet.join(' | '));

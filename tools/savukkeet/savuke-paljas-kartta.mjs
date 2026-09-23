@@ -6,13 +6,14 @@
  *             render): nimiöt, symbolit, runko, ilmakehä ja pohja
  *   dom       näkyvät sivun elementit kartan päällä (kangas, kehysprofiili,
  *             ratasvalikko, pulu ja pieni liike eivät lasketa)
- *   pulu, liike, lepo, ilmakehä, häive  — päällä vai ei
+ *   pulu, liike, lepo, ilmakehä, häive, äänet  — päällä vai ei
  *   K1 paljas: dom 0, kaikki ryhmät pois
  *   K2 paljas: valikkonappi näkyy ja avaa valikon (paluu tilasta)
- *   K3 paljas: tilarivi "koe 5/5 Paljas kartta"; kytkimen kanssa "+lyhenne"
+ *   K3 paljas: tilarivi "koe 5/8 Paljas kartta"; kytkimen kanssa "+lyhenne"
  *   K4 vastakoe normaali: ryhmät päällä (pulun nappi on tässä näkymässä
  *      normaalistikin piilossa, joten sitä ei vaadita)
  *   K5 jokainen kytkin yksin päällä muuttaa vain oman ryhmänsä
+ *   K8 pikavalinta 6 "Paljas + nimiöt" = paljas + nimiöt-ryhmä
  *   K7 valikon kytkimen napautus lataa sivun ja tuo ryhmän ("+nimiöt")
  *   K6 ei sivuvirheitä
  * KÄYTTÖ: PLAYWRIGHT_JS=... SAVUKE_MOOTTORI=webkit node tools/savukkeet/savuke-paljas-kartta.mjs
@@ -113,11 +114,12 @@ const mittaa = (sivu) => sivu.evaluate(async () => {
     // Kuori näkyy vain kaukaa (ilmakehän vahti), joten ryhmä luetaan lipuista.
     ilmakeha: !laattakerroksenKokeet().has('eiilmakeha') && !laattakerroksenKokeet().has('eipohja'),
     haive: !laattakerroksenKokeet().has('eihaive'),
+    aanet: (await import('/js/pallolauta/kerrokset.js')).kerrosKaytossa('aanet'),
     nappi: nakyy(nappi),
     rivi: document.querySelector('.profiilinaytto > div')?.textContent ?? '',
   };
 });
-const RYHMAT = ['nimiot', 'symbolit', 'runko', 'ilmakeha', 'haive', 'lepo', 'pulu', 'dom', 'liike'];
+const RYHMAT = ['nimiot', 'symbolit', 'runko', 'ilmakeha', 'haive', 'lepo', 'pulu', 'dom', 'aanet'];
 const tulos = {};
 const virheet = [];
 const tila = async (nimi, muisti) => {
@@ -147,19 +149,21 @@ try {
   await tila('normaali', { 'matkakirja-piirtokoe': 'normaali' });
   await tila('paljas', { 'matkakirja-piirtokoe': 'paljas' });
   for (const r of RYHMAT) await tila(r, { 'matkakirja-piirtokoe': 'paljas', 'matkakirja-paljaat-kerrokset': r });
+  // Pikavalinta 6 = paljas + nimiöt.
+  await tila('paljasnimet', { 'matkakirja-piirtokoe': 'paljasnimet' });
 } finally {
   await selain.close();
   palvelin.close();
 }
 const P = tulos.paljas; const N = tulos.normaali;
-vaadi('K1 paljas: dom 0, kaikki ryhmät pois', P.dom === 0 && !P.pulu && !P.liike && !P.lepo && !P.ilmakeha && !P.haive, JSON.stringify(P));
+vaadi('K1 paljas: dom 0, kaikki ryhmät pois', P.dom === 0 && !P.pulu && !P.liike && !P.lepo && !P.ilmakeha && !P.haive && !P.aanet, JSON.stringify(P));
 vaadi('K2 paljas: valikkonappi näkyy ja avaa valikon, 9 kytkintä', P.nappi && tulos.valikko?.auki && tulos.valikko?.kytkimia === RYHMAT.length, JSON.stringify(tulos.valikko));
-vaadi('K3 tilarivi', /^koe 5\/5 Paljas kartta · profiili p\d+/.test(P.rivi) && /^koe 5\/5 Paljas kartta \+nimiöt · /.test(tulos.nimiot.rivi), `${P.rivi} | ${tulos.nimiot.rivi}`);
+vaadi('K3 tilarivi', /^koe 5\/8 Paljas kartta · profiili p\d+/.test(P.rivi) && /^koe 5\/8 Paljas kartta \+nimiöt · /.test(tulos.nimiot.rivi), `${P.rivi} | ${tulos.nimiot.rivi}`);
 vaadi('K4 vastakoe normaali: ryhmät päällä', N.muuDc > P.muuDc + 5 && N.dom > 5 && N.liike && N.lepo && N.haive && N.ilmakeha, JSON.stringify(N));
 /* Oma muutos ja muiden pysyvyys. Piirtokutsut: +1 riittää omaksi muutokseksi, ±1 on sama. */
 const omaMuutos = {
   nimiot: (t) => t.muuDc > P.muuDc, symbolit: (t) => t.muuDc > P.muuDc, runko: (t) => t.muuDc > P.muuDc + 3,
-  ilmakeha: (t) => t.ilmakeha, haive: (t) => t.haive, lepo: (t) => t.lepo, pulu: (t) => t.pulu, dom: (t) => t.dom > 5, liike: (t) => t.liike,
+  ilmakeha: (t) => t.ilmakeha, haive: (t) => t.haive, lepo: (t) => t.lepo, pulu: (t) => t.pulu && t.liike, dom: (t) => t.dom > 5, aanet: (t) => t.aanet,
 };
 const dcRyhmat = new Set(['nimiot', 'symbolit', 'runko', 'ilmakeha']);
 // Ilmakehä ja pohja: pohja on piilossa aina kun laatat peittävät, joten muuDc voi pysyä.
@@ -167,12 +171,14 @@ const rikkeet = [];
 for (const r of RYHMAT) {
   const t = tulos[r];
   if (!omaMuutos[r](t)) rikkeet.push(`${r}: oma ryhmä ei muuttunut`);
-  for (const k of ['pulu', 'liike', 'lepo', 'ilmakeha', 'haive']) if (k !== r && t[k] !== P[k]) rikkeet.push(`${r}: myös ${k}`);
+  // Pulu-ryhmä tuo myös pienen liikkeen.
+  for (const k of ['pulu', 'liike', 'lepo', 'ilmakeha', 'haive', 'aanet']) if (k !== r && !(r === 'pulu' && k === 'liike') && t[k] !== P[k]) rikkeet.push(`${r}: myös ${k}`);
   if (r !== 'dom' && t.dom !== 0) rikkeet.push(`${r}: dom ${t.dom} (${t.esim.join(',')})`);
   if (!dcRyhmat.has(r) && Math.abs(t.muuDc - P.muuDc) > 1) rikkeet.push(`${r}: muuDc ${t.muuDc} vs ${P.muuDc}`);
 }
 vaadi('K5 jokainen kytkin muuttaa vain oman ryhmänsä', rikkeet.length === 0, rikkeet.join(' · '));
-vaadi('K7 kytkimen napautus lataa sivun ja tuo ryhmän', tulos.napautus?.ladattu && /^koe 5\/5 Paljas kartta \+nimiöt/.test(tulos.napautus?.rivi ?? ''), JSON.stringify(tulos.napautus));
+vaadi('K8 pikavalinta Paljas + nimiöt = paljas + nimiöt-ryhmä', tulos.paljasnimet.muuDc === tulos.nimiot.muuDc && tulos.paljasnimet.dom === 0 && /^koe 6\/8 Paljas \+ nimiöt · /.test(tulos.paljasnimet.rivi), JSON.stringify({ pika: tulos.paljasnimet.muuDc, ryhma: tulos.nimiot.muuDc, rivi: tulos.paljasnimet.rivi }));
+vaadi('K7 kytkimen napautus lataa sivun ja tuo ryhmän', tulos.napautus?.ladattu && /^koe 5\/8 Paljas kartta \+nimiöt/.test(tulos.napautus?.rivi ?? ''), JSON.stringify(tulos.napautus));
 vaadi('K6 ei sivuvirheitä', virheet.length === 0, virheet.join(' | '));
 console.log(`\n${lapi}/${kaikki} läpi`);
 process.exit(lapi === kaikki ? 0 : 1);

@@ -78,7 +78,7 @@ export const PIIRTOKOKEIDEN_VAIHTOEHDOT = [
    * kaikki ylimääräiset elementit ja katsotaan loppuuko tökkiminen").
    * Paljas = vain laatat ja veto. Tasot tuodaan takaisin yksi kerrallaan
    * valikon Kerrokset-kytkimillä (PALJAAN_KERROKSET alla; tarkennus klo
-   * 09.25 kiinteiden puolitustilojen sijaan).
+   * 09.25); tilat 6–8 ovat pikavalintoja: paljas + yksi ryhmä.
    */
   {
     avain: 'paljas',
@@ -87,10 +87,34 @@ export const PIIRTOKOKEIDEN_VAIHTOEHDOT = [
     lippu: 'paljas',
     ikoni: '<path d="M4.5 5.5h15v13h-15z"/>',
   },
+  /* Pikavalinnat puolitukseen: paljas + yksi Kerrokset-ryhmä (PALJAAT_PIKAVALINNAT). */
+  {
+    avain: 'paljasnimet',
+    nimi: 'Paljas + nimiöt',
+    seloste: 'Paljas kartta ja paikkojen nimet',
+    lippu: 'paljasnimet',
+    ikoni: '<path d="M4.5 5.5h15v13h-15z"/><path d="M8 12h8"/>',
+  },
+  {
+    avain: 'paljassymbolit',
+    nimi: 'Paljas + symbolit',
+    seloste: 'Paljas kartta ja nostojen symbolit ja pisteet',
+    lippu: 'paljassymbolit',
+    ikoni: '<path d="M4.5 5.5h15v13h-15z"/><circle cx="12" cy="12" r="2"/>',
+  },
+  {
+    avain: 'paljasdom',
+    nimi: 'Paljas + DOM-kerrokset',
+    seloste: 'Paljas kartta ja kartan päällä olevat sivun elementit',
+    lippu: 'paljasdom',
+    ikoni: '<path d="M4.5 5.5h15v13h-15z"/><path d="M4.5 9.5h15"/>',
+  },
 ];
 
-/** Paljaan kartan tila (lippu = avain). */
-export const PALJAAT_KOKEET = Object.freeze(['paljas']);
+/** Paljaan kartan tilat (lippu = avain): paljas ja pikavalinnat. */
+export const PALJAAT_KOKEET = Object.freeze(['paljas', 'paljasnimet', 'paljassymbolit', 'paljasdom']);
+/** Pikavalinta → Kerrokset-ryhmä, jonka se tuo paljaan päälle. */
+export const PALJAAT_PIKAVALINNAT = Object.freeze({ paljasnimet: 'nimiot', paljassymbolit: 'symbolit', paljasdom: 'dom' });
 
 /*
  * KERROKSET PALJAAN KARTAN PÄÄLLE (omistaja 23.9.2026 klo 09.25). Jokainen
@@ -107,9 +131,9 @@ export const PALJAAN_KERROKSET = Object.freeze([
   { avain: 'ilmakeha', nimi: 'Ilmakehä ja pohja', lyhenne: 'ilmakehä', tikas: [], riisunta: ['eipohja', 'eiilmakeha'] },
   { avain: 'haive', nimi: 'Häivytys', lyhenne: 'häive', tikas: [], riisunta: ['eihaive'] },
   { avain: 'lepo', nimi: 'Lepopiirto', lyhenne: 'lepo', tikas: [], riisunta: ['levovanha'] },
-  { avain: 'pulu', nimi: 'Pulu', lyhenne: 'pulu', tikas: ['pulu'], riisunta: [] },
+  { avain: 'pulu', nimi: 'Pulu ja pieni liike', lyhenne: 'pulu', tikas: ['pulu', 'liike'], riisunta: [] },
   { avain: 'dom', nimi: 'DOM-kerrokset (selite, linssit, merkit, vihjeet)', lyhenne: 'dom', tikas: ['kohteet'], riisunta: ['eikaiutin'] },
-  { avain: 'liike', nimi: 'Pieni liike', lyhenne: 'liike', tikas: ['liike'], riisunta: [] },
+  { avain: 'aanet', nimi: 'Äänet', lyhenne: 'äänet', tikas: ['aanet'], riisunta: [] },
 ]);
 export const PALJAAT_KERROKSET_AVAIN = 'matkakirja-paljaat-kerrokset';
 
@@ -128,6 +152,10 @@ export function paljaanKerroksetJoukosta(joukko) {
 /** Laajenna koejoukko: paljas tuo lisäriisunnat, joita kytkimet eivät kumoa. Muokkaa ja palauttaa joukon. */
 export function laajennaKokeet(joukko) {
   if (!PALJAAT_KOKEET.some((k) => joukko.has(k))) return joukko;
+  // Pikavalinta = paljas + yksi ryhmä.
+  for (const [pika, ryhma] of Object.entries(PALJAAT_PIKAVALINNAT)) {
+    if (joukko.has(pika)) { joukko.add('paljas'); joukko.add(`kerros-${ryhma}`); }
+  }
   const kumottu = new Set(paljaanKerroksetJoukosta(joukko).flatMap((k) => k.riisunta));
   for (const k of PALJAAN_LISAKOKEET) if (!kumottu.has(k)) joukko.add(k);
   return joukko;
@@ -193,8 +221,8 @@ export function tallennetutKokeet() {
   const koe = PIIRTOKOKEIDEN_VAIHTOEHDOT.find((k) => k.avain === piirtokoeValinta());
   // "Molemmat": useampi lippu pilkulla eroteltuna.
   for (const lippu of String(koe?.lippu ?? '').split(',').map((l) => l.trim()).filter(Boolean)) joukko.add(lippu);
-  // Paljaan kartan kerroskytkimet vain paljaassa tilassa.
-  if (koe?.avain === 'paljas') for (const a of paljaatKerrokset()) joukko.add(`kerros-${a}`);
+  // Paljaan kartan kerroskytkimet vain paljaassa tilassa (myös pikavalinnoissa).
+  if (PALJAAT_KOKEET.includes(koe?.avain)) for (const a of paljaatKerrokset()) joukko.add(`kerros-${a}`);
   if (kehysprofiiliPaalla()) joukko.add('profiili');
   return joukko;
 }
@@ -248,7 +276,7 @@ export const PIIRTOKOE_LATAUS_VIIVE_MS = 600;
 
 /** Valikon koetila yhtenä avaimena: koe + kehysprofiilin kytkin. */
 export function koetilanAvain() {
-  const kerrokset = piirtokoeValinta() === 'paljas' ? paljaatKerrokset().join(',') : '';
+  const kerrokset = PALJAAT_KOKEET.includes(piirtokoeValinta()) ? paljaatKerrokset().join(',') : '';
   return `${piirtokoeValinta()}|${kehysprofiiliPaalla() ? 1 : 0}|${kerrokset}`;
 }
 

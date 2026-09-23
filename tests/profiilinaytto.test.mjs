@@ -132,7 +132,7 @@ test('jakso vanhalla rajapinnalla: sulkee ja avaa profiilin, lähettää ja purk
   assert.match(kerros.rivit.join('\n'), /veto vanha · tarkkuus terava/);
   assert.equal(lahetykset.length, 1);
   assert.equal(lahetykset[0].ua, 'iPhone');
-  assert.match(kerros.rivit[0], /^koe 3\/5 Yhteinen kello · profiili p\d+ · v2127$/, 'tila ylimpänä');
+  assert.match(kerros.rivit[0], /^koe 3\/8 Yhteinen kello · profiili p\d+ · v2127$/, 'tila ylimpänä');
   assert.equal(lahetykset[0].koe, 'syotekello');
 
   // Toinen jakso ei kasvata kerrosta: rivit korvataan, eivät kerry.
@@ -283,21 +283,23 @@ test('laattavientien rivi: initTexture-kutsut jaksossa ja jonon pituus', () => {
 
 test('ylin rivi kertoo koetilan ja mittarin version (omistajan kaappaukset 22.9.2026)', () => {
   const rivit = profiilirivit({ tiiviste: TIIVISTE, tila: { koe: 'syotekello', versio: 'v2127' } });
-  assert.equal(rivit[0], `koe 3/5 Yhteinen kello · profiili p${PROFIILIN_VERSIO} · v2127`);
+  assert.equal(rivit[0], `koe 3/8 Yhteinen kello · profiili p${PROFIILIN_VERSIO} · v2127`);
   // Syötekoe valikossa (omistaja 23.9.2026 klo 08.34): numero ja nimi.
-  assert.equal(koetilarivi({ koe: 'syotetouch' }), `koe 2/5 Kosketus suoraan · profiili p${PROFIILIN_VERSIO}`);
+  assert.equal(koetilarivi({ koe: 'syotetouch' }), `koe 2/8 Kosketus suoraan · profiili p${PROFIILIN_VERSIO}`);
   // Paljas kartta (omistaja 23.9.2026 klo 09.20): yksi lippu, oma numero.
-  assert.equal(koetilarivi({ koe: 'paljas' }), `koe 5/5 Paljas kartta · profiili p${PROFIILIN_VERSIO}`);
+  assert.equal(koetilarivi({ koe: 'paljas' }), `koe 5/8 Paljas kartta · profiili p${PROFIILIN_VERSIO}`);
+  // Pikavalinta ja kytkin yhdessä: "koe 6/8 Paljas + nimiöt +runko".
+  assert.equal(koetilarivi({ koe: koetilanNimi(new Set(['paljasnimet', 'paljas', 'kerros-nimiot', 'kerros-runko', 'eihaive'])) }), `koe 6/8 Paljas + nimiöt +runko · profiili p${PROFIILIN_VERSIO}`);
   // Kerroskytkimet lyhenteinä valikon järjestyksessä (omistaja 23.9.2026 klo 09.25).
-  assert.equal(koetilarivi({ koe: koetilanNimi(new Set(['paljas', 'kerros-runko', 'kerros-nimiot', 'eihaive'])) }), `koe 5/5 Paljas kartta +nimiöt +runko · profiili p${PROFIILIN_VERSIO}`);
+  assert.equal(koetilarivi({ koe: koetilanNimi(new Set(['paljas', 'kerros-runko', 'kerros-nimiot', 'eihaive'])) }), `koe 5/8 Paljas kartta +nimiöt +runko · profiili p${PROFIILIN_VERSIO}`);
   assert.equal(koetilanNimi(new Set(['paljas', 'eihaive', 'levovanha', 'eipohja', 'eiilmakeha', 'eikaiutin', 'profiili'])), 'paljas', 'lisäriisunnat eivät näy tilan nimessä');
-  assert.equal(koetilarivi({ koe: koetilanNimi(new Set(['syotetouch', 'syotekello', 'profiili'])) }), `koe 4/5 Molemmat · profiili p${PROFIILIN_VERSIO}`, 'monilippu järjestyksestä riippumatta');
+  assert.equal(koetilarivi({ koe: koetilanNimi(new Set(['syotetouch', 'syotekello', 'profiili'])) }), `koe 4/8 Molemmat · profiili p${PROFIILIN_VERSIO}`, 'monilippu järjestyksestä riippumatta');
   // Valikosta poistettu piirtokoe näkyy osoitteesta raakana.
   assert.equal(koetilarivi({ koe: 'eivienti' }), `koe: eivienti · profiili p${PROFIILIN_VERSIO}`);
   // Valikosta poistettu koe (omistaja 22.9.2026 klo 23.08) näkyy osoitteesta raakana.
   assert.equal(profiilirivit({ tiiviste: TIIVISTE, tila: { koe: 'dpr15' } })[0], `koe: dpr15 · profiili p${PROFIILIN_VERSIO}`);
-  assert.match(profiilirivit({ tiiviste: TIIVISTE })[0], /^koe 1\/5 Oletus · profiili p\d+$/, 'oletus on normaali');
-  assert.match(profiilirivit({ tiiviste: null })[0], /^koe 1\/5 Oletus/, 'myös ilman kehyksiä');
+  assert.match(profiilirivit({ tiiviste: TIIVISTE })[0], /^koe 1\/8 Oletus · profiili p\d+$/, 'oletus on normaali');
+  assert.match(profiilirivit({ tiiviste: null })[0], /^koe 1\/8 Oletus/, 'myös ilman kehyksiä');
 });
 
 test('koetila: profiili ei ole koe, useampi lippu aakkosjärjestyksessä', () => {
@@ -308,8 +310,8 @@ test('koetila: profiili ei ole koe, useampi lippu aakkosjärjestyksessä', () =>
 
 test('koetila: valikon uusi valinta näkyy seuraavana, ei voimassa olevana', () => {
   assert.equal(koetilarivi({ koe: 'normaali', seuraava: 'syotekello' }),
-    `koe 1/5 Oletus (seuraavassa latauksessa: koe 3/5 Yhteinen kello) · profiili p${PROFIILIN_VERSIO}`);
-  assert.equal(koetilarivi({ koe: 'syotekello', seuraava: 'syotekello' }), `koe 3/5 Yhteinen kello · profiili p${PROFIILIN_VERSIO}`);
+    `koe 1/8 Oletus (seuraavassa latauksessa: koe 3/8 Yhteinen kello) · profiili p${PROFIILIN_VERSIO}`);
+  assert.equal(koetilarivi({ koe: 'syotekello', seuraava: 'syotekello' }), `koe 3/8 Yhteinen kello · profiili p${PROFIILIN_VERSIO}`);
 });
 
 test('koetila: numero seuraa valikon järjestystä, valikon ulkopuolinen lippu raakana', () => {
