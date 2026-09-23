@@ -3662,7 +3662,7 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
    *   1. Liu'un oma rAF rekisteröitiin pointerupissa, eli kirjaston tickin
    *      JÄLKEEN — liu'un askel näkyi vasta seuraavassa renderissä, joten
    *      irrotuksen jälkeinen ensimmäinen kehys piirtyi paikallaan.
-   *   2. `requestAnimationFrame(() => liu(performance.now()))` luki
+   *   2. rAF-kääre `() => liu(performance.now())` luki
    *      lähtöhetken vasta takaisinkutsussa, joten ensimmäisen askeleen
    *      dt oli ~0 ja toinenkin kehys seisoi.
    * Nyt liuku astuu samassa paikassa kuin veto (`sovellaSyote`, ennen
