@@ -152,7 +152,13 @@ export const RAAMATTU = {
           + 'työtä. Jos omistaja ei ehdi vastata, sitä ei tehdä, vaan se merkitään puuttuvien listaan '
           + '(docs/raportit/nappi-inventaario-natiivi-*.md, osio "Ei webissä, odottaa omistajaa"). '
           + 'Poikkeukset 23.9.: peninkulmalinssi ja huipennusnäkymä hyväksytty; aloituskaupungin '
-          + 'valinta kortilla hylätty → valitaan kartalta kuten webissä.',
+          + 'valinta kortilla hylätty → valitaan kartalta kuten webissä. NATIIVIN ALOITUSKAAVA '
+          + '(omistaja 23.9.2026 klo 22.4x, sitova): aloituskaupunki valitaan kartalta; valinnan '
+          + 'jälkeen pallo jää näkyviin ja kamera zoomaa Lontooseen (tarinan alku); lentokone lähtee '
+          + 'Lontoosta kaarta pitkin kohti valittua kaupunkia kameran seuratessa; samalla hetkellä '
+          + 'alkavat koneen ääni ja isoisän intro-luenta, jotka kestävät lennon ajan; saapuminen '
+          + 'jatkuu normaalina saapumisena. Valittu kaupunki on ensimmäinen kohde, ei lähtöpaikka; '
+          + 'avaustekstiä ei näytetä erillisellä ruudulla.',
         'CLAUDEN JA CHATGPT/CODEXIN AGENTTISÄÄNNÖT ERIKSEEN (omistaja 11.9.2026 '
           + 'tekstisession kautta, sanatarkasti: "Peliä kehitetään Claudella ja '
           + 'ChatGPT/Codexilla. Opus/Sonnet-rajoitus ja Fable-mallin agenttikäytön '
