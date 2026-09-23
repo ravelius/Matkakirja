@@ -169,6 +169,18 @@ namespace Matkakirja.Natiivi
             valojenMaat = m;
         }
 
+        /// <summary>
+        /// Maan karttakohteiden nimet (web KOHDE_MAAT[iso] → nimi) pöllön sähkehakemistoon: sillä nimellä
+        /// kohdekortti otsikoidaan ja pelaaja sen muistaa. Tyhjä lista, jos maalla ei ole fokuskohteita.
+        /// </summary>
+        public static IEnumerator Karttakohteet(string iso, Action<List<string>> valmis)
+        {
+            List<object> lista = null;
+            if (!string.IsNullOrEmpty(iso))
+                yield return Moduuli($"moduulit/js/packs/fokuskohteet-{iso.ToLowerInvariant()}.json", $"FOKUSKOHTEET_{iso.ToUpperInvariant()}", l => lista = l);
+            valmis(lista?.Select(Ob).Where(x => x != null).Select(x => T(x, "nimi")).Where(n => !string.IsNullOrEmpty(n)).ToList() ?? new List<string>());
+        }
+
         static IEnumerator Moduuli(string polku, string vienti, Action<List<object>> valmis)
         {
             if (!moduulit.TryGetValue(polku, out var lista))

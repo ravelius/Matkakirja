@@ -164,6 +164,21 @@ namespace Matkakirja.Natiivi
 
         public static bool OnKaupunkilehti(string kaupunki) => kaupungit != null && kaupunki != null && kaupungit.ContainsKey(kaupunki);
 
+        /// <summary>
+        /// Lehden nostojen otsikot raakadatasta (web sisaltohakemisto: MAA_KATEGORIAT / KULTTUURI_KATEGORIAT
+        /// → nostot[].otsikko) pöllön sähkehakemistoon. Tyhjä, jos lehtiä ei ole vielä haettu (Hae).
+        /// </summary>
+        public static List<string> NostoOtsikot(LehtiLaji laji, string omistaja)
+        {
+            var tulos = new List<string>();
+            var taulu = laji == LehtiLaji.Kaupunki ? kaupungit : maat;
+            if (taulu == null || omistaja == null || !taulu.TryGetValue(omistaja, out var aiheet)) return tulos;
+            foreach (var a in aiheet)
+                foreach (var n in Rakenne.Lista(MiniJson.Kentta(Ob(a), "nostot")) ?? new List<object>())
+                    if (T(Ob(n), "otsikko") is string o && o.Length > 0) tulos.Add(o);
+            return tulos;
+        }
+
         static Lehti Kaupunkilehti(string kaupunki)
         {
             if (kaupunki == null || kaupungit == null || !kaupungit.TryGetValue(kaupunki, out var data)) return null;

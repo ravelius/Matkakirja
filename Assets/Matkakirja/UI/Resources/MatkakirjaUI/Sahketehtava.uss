@@ -11,6 +11,12 @@
 
 /* --- kortti ja otsikko ------------------------------------------------------ */
 
+/* Kortti keskellä (web .fokusvirta-kortti.keskella), kevyt himmennys: kartta näkyy alta,
+   pulun kuplat (kerros 35) piirtyvät kortin päälle. */
+.mk-himmennys.mk-st-tausta {
+    background-color: rgba(14, 9, 4, 0.35);
+}
+
 .mk-st {
     max-height: 100%;
 }
@@ -117,6 +123,27 @@
 
 .mk-st__reiat--ala > .mk-st__reika {
     translate: 0 1px;
+}
+
+/* Lomakepohja kuvana (web .fokusvirta-sahke.lomakekuva, SahketehtavaNakyma.LomakekuvaOsoite):
+   kuva korvaa paperin värin, rei'ityksen ja liuskojen laput; leima, otsake ja rivit piirretään
+   edelleen. Sisennykset (8 % / 9 %) ja 3:4-mitta asetetaan koodissa leveydestä. */
+.mk-st__paperi--kuva {
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+    -unity-background-scale-mode: stretch-to-fill;
+}
+
+.mk-st__paperi--kuva > .mk-st__reiat {
+    display: none;
+}
+
+.mk-st__paperi--kuva .mk-st__rivi,
+.mk-st__paperi--kuva .mk-st__rivi--kysymys {
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+    rotate: 0deg;
+    /* Kysymysrivi erottuu yhä lihavalla musteella (koodi), ei lapulla. */
 }
 
 /* Painettu otsake: leima, nimiö ja lomakenumero, alla kaksoisviiva. */
