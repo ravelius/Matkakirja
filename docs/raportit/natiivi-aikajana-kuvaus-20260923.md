@@ -108,3 +108,69 @@ jälkeen (`ihmisen-matka-tutkimus.js`).
 | Vanat GPU:lla, kalvotekstuuri pallolle | Linssit/Unity + KarttaKerrokset | Linssiseppä + Natiiviseppä |
 | Karuselli, paneeli, Tiedeliite, avausjakso, välinäytös | UI | Natiivi-UI |
 | Musiikki, luenta, efektit, pulu | Äänet ja pulu | Pelikoodari |
+
+## 8. Ihmisen matkan esitys (js/linssit/ihmisen-matka-esitys.js ja apumoduulit)
+
+**Tilakone.** `luoEsitys({ajo})` (r.1118) → `{aloita, esikatsele, valitse, taukoTaiJatka, tauko,
+jatka, pura, tila}`. Vaiheet `pimea → valot → matka × N → hyppy → loppu`; `aloitaJakso(i)` (2058) →
+`seuraavaJakso` (2053) → `paata` (2511). Moottorin pysäkkikello ei käy.
+
+**Ajuri on äänikello.** `kehys` (2380): `kulunut = luenta.kulunut()`, ilman ääntä seinäkello. Vaihto
+luennan rajavahdista (`onRaja`, putki) tai varareitistä `kulunut ≥ kesto`.
+
+**Vakiot (230–588):** VALOJEN 2600, KEHYKSEN_LIUKU 500, AVARUUDEN_KORKEUS 300, AVARUUDEN 7000,
+AVARUUDEN_MIN 1200, ZOOMIN_JATKO 4000, AFRIKAN_VIIVE 700, TAHTIEN_HAIVE 0,55, AVARUUDEN_HARSO 0,35,
+MUSTAN_OSUUS 0,35, TAHTIEN_FEIDI 1800, FEIDIN_OSUUS 0,45, LAUSEEN_HAIVE 340, TEKSTIN_LASKU 900,
+OSAN_MERKIT 240, OSAN_VIRKKEET 3, PULUN_SISAANTULO 2000, PULUN_ELEEN 2200, KELAUKSEN 2400,
+PULUN_VARA 2600, PULUN_VAIMENNUS_PUTKESSA 0,55, KAMERAN_POHJA 1400, KAMERAN_KATTO 9000,
+KAMERAN_OSUUS 0,85, MAROKON_JARRU 0,8, MAROKON_POHJA 1600, MAROKON_TAUKO 1200, MAROKON_ESIVAIHE 1,35,
+KUVAN_POISTUMA 420, LOPUN_ASETUS 1200, KUVAN_OSUUS 0,66, ESITYKSEN_LAHIKUVA 1200 (ms ellei muuta).
+
+**Avaus** `avauksenVaiheet({lauseet, sana, kesto})` (983–1021): `afrikka = min(sanan "Afrik" hetki
++ 700, kesto)`; `musta = min(lauseet[1] ?? afrikka·0,35, afrikka − 1200)`; `feidi = min(1800,
+(afrikka − musta)·0,45)`; `piste = musta + feidi`; `zoomPerus = clamp(afrikka − piste, 1200, 7000)`;
+`zoomAlku = max(musta, afrikka − zoomPerus)`; `zoomKesto = zoomPerus + 4000`. Zoomi `bbox 'afrikka'`
+päättyy sanan jälkeen; perillä `sytytaValot` (2243): kehys takaisin, `virrat.asetaPito(true)`
+pysyvästi, musiikki; sitten kohdeajo Jebel Irhoudiin tauon 1200 jälkeen käyrällä
+`marokonKaari(t) = marokonPehmennys(t^1,35)` (1040–1072, kuutiollinen kiihdytys 0,8:aan, paraabelinen
+jarrutus).
+
+**Kello jaksossa** `paivitaKello` (2360): `osuus = min(1, kulunut/luenta)`, lukema `alku + (loppu −
+alku)·osuus`, `jaksonTahti` (675–690): loppu = seuraavan `vuosia`, mutta jos seuraava on hyppy,
+`loppu = alku`. Hyppyjakso: ensin kelaus `min(1, kulunut/2400)` ease-in-out-neliönä
+kelauksenAlku → alku, sitten normaalisti.
+
+**Kamera jaksossa.** Kohde: `jaksonRajaus` (605–640) = kohde + jakson kellovälillä liikkuvien vanojen
+kärjet 5 näytteestä [0, ,25, ,5, ,75, 1]; selkäranka ≤ 80°, haara ≤ 45°, liike ≥ 2°. Leveys
+`max(1200, rajauksenLeveys(rajaus, kuvasuhde, 0,14))`. Alue: `ESITYKSEN_ALUEET` (269–284: afrikka,
+afrikka-ita, keski-aasia, maailma = koko pallo), `kokonaan: true`. Kesto `clamp(luenta·0,85, 1400,
+9000)`; ajo saa jäädä kesken; `paata` asettaa viimeisen rajauksen 1200 ms:ssa.
+`rajauksenLeveys` (tutkimus.js 198–204): `leveysAst·(12000/360)·(1 + 2·0,12)`, korkeus × kuvasuhde,
+clamp(900, 12000). `vananRajaus` purkaa antimeridiaanin (±360° lähimmäksi edellistä).
+
+**Muut.** Kuva lampun viereen 0,66 × ruutu (`naytaKuva` 1739). `tunne` → `ilmoitaLivianTunne`.
+`valitse(id)` hyppää jakson alkuun, `esikatsele(osuus)` hiljainen tauko + kelaus + vanat heti.
+Muisti `jatkaMuistista` (2641): ei avausta, pito `pitoMin`, tutkimusvaiheeseen suoraan.
+
+**Kertomus** (ihmisen-matka-kertomus.js, 20 jaksoa): `id, vaihe, kohde, hiljaiset, alue, maisema,
+vuosia, teksti, luenta (ElevenLabs-tagit), pulu, tunne`.
+
+**Luenta** (ihmisen-matka-luenta.js): `${luentajuuri}/kertomus-manifesti.json`, luentajuuri
+`https://media.matkakirja.app/aikajana/ihmisen-matka/puhe`. Muoto `{tiedosto, yhtena, jaksot:
+[{tunnus, alku, loppu, lauseet, sanat:[{sana, alku}]}]}`; `kesto = seuraavan alku − oma alku`,
+`puhe = loppu − alku`. Putki: yksi mp3 `${juuri}/${runko}.mp3`; muuten
+`ihmisen-matka-kertomus-<id>.mp3`. Varakesto `max(2500, round(merkit/14·1000))`. Pulun välihuomio
+0,55, kertoja ei väisty.
+
+**Äänimaisema** (ihmisen-matka-aanimaisema.js): `${AANI_JUURI}aanet/tehosteet/ihmisen-matka/manifesti.json`
+`{tehosteet:[{tunnus, tiedosto}]}`, risti 2500 ms, voima 0,1. **Ei kytketty esitykseen webissä**
+(maisema-kentällä ei ole kuluttajaa).
+
+**Kortti, kysymykset, tutkimus, muisti.** Yksi nostokortti (20 löytöpaikkaa + 20 lisänostoa),
+kuvat: `${KUVAJUURI}/<tunnus>.jpg`, esine `${ESINEJUURI}/ihmisen-matka-esine-<tunnus>-r20260907.jpg`,
+lisänosto `${KUVAJUURI}/nosto/<tunnus>.jpg`. Kysymyksiin esikirjoitetut vastaukset
+(`IHMISEN_MATKAN_KYSYMYKSET`), muuten pulun mallikutsu. Tutkimusvaihe: kello seis, nostot sykkivinä
+pisteinä, viisi virtanappia (kääntö 1500 ms, vanan korostus, yhteenveto). Muisti
+`matkakirja-linssimuisti-<tunnus>` `{versio 1, vaihe, jakso, kulunut, pitoMin, kamera, kortti,
+virta, aika}`, ikä ≤ 30 vrk, ei tallenneta mustan aikana. Pulukysymykset: avoin kortti tai lähin
+edeltävä kohde.
