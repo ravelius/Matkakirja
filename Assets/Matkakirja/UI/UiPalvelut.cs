@@ -5,8 +5,9 @@
 //
 //   Offline    Natiiviseppä: maakohtainen lataus offline-käyttöön (laatat,
 //              maasto, lehdet ämpäristä). Omistajan linjaus 23.9.2026: peli
-//              mahdollisimman pieni, kaikki striimataan; ratas-paneelissa
-//              osio "Lataa offline-käyttöön" maittain (koko, edistyminen, poisto).
+//              mahdollisimman pieni, kaikki striimataan. Palvelu lataa maittain; ratas-paneeli
+//              näyttää omistajan päätöksellä (24.9.2026) vain "Kaikki" ja maanosat (OfflineMaa.Manner),
+//              kullekin koko ja tila (ladattu / osittain / ei), ja kohdistaa toiminnon maanosan maihin.
 //   KarttaValot  kartan aihevalot (webin js/karttavalot.js): karttaselite valitsee
 //              yhden aiheen, kartta sytyttää sen merkit ja kertoo laskurit.
 //   ValoNapautettu  karttavalon napautus (Natiiviseppä: AiheValot → KarttaValotSilta
@@ -36,6 +37,11 @@ namespace Matkakirja.Natiivi
         public OfflineTila Tila;
         /// <summary>Virheen syy lyhyesti (Tila = Virhe), muuten null.</summary>
         public string Virhe;
+        /// <summary>
+        /// Maanosa (europe, middleeast, africa, asia, northamerica, southamerica, oceania; Natiiviseppä /
+        /// offline.json). Tyhjänä UI päättelee sen maan kaupungeista (kaupungit.manner).
+        /// </summary>
+        public string Manner;
     }
 
     public interface IOfflineLataus
