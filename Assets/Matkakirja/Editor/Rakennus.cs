@@ -101,6 +101,15 @@ namespace Matkakirja.Editori
             maat.kerrokset = kerrokset;
             maat.materiaali = Materiaali("Maatayttö", "Matkakirja/MaaTaytto", Color.white);
             kerrokset.maaKartta = maat;
+            var maakunnat = georefGo.AddComponent<MaaKartta>();
+            maakunnat.georeferenssi = georef;
+            maakunnat.kerrokset = kerrokset;
+            maakunnat.materiaali = maat.materiaali;
+            maakunnat.kokoelma = "maakuntarajat";
+            maakunnat.piilotaKaupungit = false;
+            maakunnat.jonoLisa = 1;
+            maakunnat.toleranssi = 0.1;
+            kerrokset.maakunnat = maakunnat;
             var nappula = georefGo.AddComponent<Nappula>();
             nappula.georeferenssi = georef;
             nappula.materiaali = Materiaali("Nappula", "Matkakirja/Nappula", Color.white);
@@ -307,6 +316,7 @@ namespace Matkakirja.Editori
         ///   MATKAKIRJA_TEAM       maksullisen tiimin Team ID (oletus Personal Team F72JLS57C5)
         ///   MATKAKIRJA_VERSIO     CFBundleShortVersionString (oletus 0.1.0)
         ///   MATKAKIRJA_BUILD      CFBundleVersion, kasvava kokonaisluku (pakollinen)
+        ///   MATKAKIRJA_APPSTORE   1 = App Store -käännös (määrite MATKAKIRJA_APPSTORE)
         ///   MATKAKIRJA_KANSIO     vientikansio (oletus Build/testflight; rinnakkainen erä esim. Build/testflight-2)
         /// Info.plistiin ITSAppUsesNonExemptEncryption = false (vain HTTPS).
         /// </summary>
@@ -322,9 +332,19 @@ namespace Matkakirja.Editori
             PlayerSettings.iOS.appleDeveloperTeamID = Ymp("MATKAKIRJA_TEAM", "F72JLS57C5");
             PlayerSettings.bundleVersion = Ymp("MATKAKIRJA_VERSIO", "0.1.0");
             PlayerSettings.iOS.buildNumber = build;
+            // MATKAKIRJA_APPSTORE=1: App Store -käännös (linssien kehittäjätila pois, kynnykset aina;
+            // Linssiseppä/Fable 23.9.). Sisäinen TestFlight ilman määritettä.
+            var kohde = UnityEditor.Build.NamedBuildTarget.iOS;
+            string maaritteet = PlayerSettings.GetScriptingDefineSymbols(kohde);
+            bool appStore = Ymp("MATKAKIRJA_APPSTORE", "0") == "1";
+            if (appStore) PlayerSettings.SetScriptingDefineSymbols(kohde, (maaritteet + ";MATKAKIRJA_APPSTORE").Trim(';'));
             TestFlightVienti = true;
             try { Kaanna(Ymp("MATKAKIRJA_KANSIO", "Build/testflight")); }
-            finally { TestFlightVienti = false; }
+            finally
+            {
+                TestFlightVienti = false;
+                if (appStore) PlayerSettings.SetScriptingDefineSymbols(kohde, maaritteet);
+            }
             Debug.Log($"MATKAKIRJA: TestFlight-vienti {PlayerSettings.applicationIdentifier} " +
                       $"{PlayerSettings.bundleVersion} ({build}), tiimi {PlayerSettings.iOS.appleDeveloperTeamID}");
         }
