@@ -42,25 +42,28 @@ kamera-ajo Pariisiin (`aja 48.8 4.5 8 1.5`) → `pallo`-näkymä 3 s.
 nipistys, loitonnus, lento Marseille→Pariisi, heitto) — laajempi kuin
 natiivin reitti tässä kierroksessa.
 
-## Tulokset: iPad natiivi vs. iPad web (ainoa suoraan vertailukelpoinen pari)
+## Tulokset: iPad natiivi (KOSKETUS) vs. iPad web (KOSKETUS) — reilu pari
 
-Omistajan oikea kosketuskierros iPadilla, v2148, 23.9. klo 12.19–12.22
-(`kierros-1222-yhteenveto.md`), verrattuna samana päivänä natiivilla
-iPadilla mitattuun kamera-ajoon. **Huom:** web-luvut ovat kosketusvedosta
-(oikea sormi), natiivin luvut ovat vielä kamera-ajosta (ei kosketusta) —
-ei siis täysin sama syöte, ks. "Seuraava askel".
+3D-selvittäjä lisäsi synteettiset kosketuskomennot (`veto`, `nipistys`) 23.9.
+klo 16.06 (PalloKierto, sama koodipolku kuin oikea sormi). Ajoin 3 toistoa
+sormivedolla Pariisista etelään/itään (hidas panorointi 0,7 s + nopea
+heitto 0,25 s), sama ele-tyyppi kuin omistajan web-kierroksessa.
 
-| Tila | Alusta | p95 | max | yli 20 ms -osuus |
-|---|---|---:|---:|---:|
-| Paljas kartta | web iPad (Safari, oikea kosketus) | 21–23 ms | 43–52 ms | 7–8 % |
-| Täysi tila (1–4, keskiarvo) | web iPad (Safari, oikea kosketus) | 27–40 ms | 44–138 ms | 20–43 % |
-| lepo / ajo / pallo | natiivi iPad (kamera-ajo, ei kosketusta) | 8,55–8,75 ms | 9,0–9,0 ms | 0 % |
+| Tila | Alusta | Toistoja | p95 | max | yli 20 ms -osuus |
+|---|---|---:|---:|---:|---:|
+| Paljas kartta | web iPad (Safari, oikea kosketus, omistaja) | 2 | 21–23 ms | 43–52 ms | 7–8 % |
+| Täysi tila (1–4, keskiarvo) | web iPad (Safari, oikea kosketus, omistaja) | 4 | 27–40 ms | 44–138 ms | 20–43 % |
+| Pariisi-veto+heitto | **natiivi iPad (synteettinen kosketus, sama koodipolku)** | 3 | **8,39–8,51 ms** | **8,43–9,95 ms** | **0 %** |
 
-Omistajan oma tuntuma samasta kierroksesta (kortti klo 12.4x): "Pelkkä
+Kaikki kolme natiivitoistoa erittäin johdonmukaisia (481/481/480 kehystä,
+p95-vaihteluväli vain 0,12 ms) — ei viitteitä flakystä. **Tämä ON nyt
+sama syötetyyppi (kosketusveto) molemmilla alustoilla**, samalla
+laiteluokalla (iPad).
+
+Omistajan oma tuntuma web-kierroksesta (kortti klo 12.4x): "Pelkkä
 kartta tökki kaikkein vähiten, mutta siinäkin on yksi tökkäys yleensä...
-Syöttökokeet kaikki tökkivät." — web-iPad-kosketus tökkii selvästi
-mitattuna JA tuntumalla; natiivin kamera-ajo ei tökkinyt, mutta ei
-myöskään testannut samaa asiaa (kosketusta).
+Syöttökokeet kaikki tökkivät." Natiivi ei tökkinyt kertaakaan kolmessa
+toistossa samalla ele-tyypillä.
 
 ## Tulokset: natiivi vs. web-Mac-headless (kamera-ajo, ei kosketusta)
 
@@ -85,35 +88,47 @@ merkityksetön sille). Web-luvut yllä `osuusYli`-kentästä (yli 20 ms).
 
 ## Tulkinta
 
-**Korjattu johtopäätös (Fablen huomio 23.9.):** web-Mac-headless-kamera-ajo
-oli 0 % tökkäystä, mutta se EI edusta omistajan oikeaa kokemusta.
-Omistajan oma iPad-kosketuskierros samana päivänä (v2148) tökki
-mitattavasti — paljas kartta p95 21–23 ms (yli 20 ms -osuus 7–8 %),
-täydet pelitilat p95 27–40 ms (yli 20 ms -osuus 20–43 %) — ja omistaja
-itse vahvisti tuntumalla: "Syöttökokeet kaikki tökkivät." Natiivin
-kamera-ajo (ei kosketusta) oli 0 % tökkäystä, mutta se ei vielä testaa
-samaa asiaa kuin web-iPad-kierros testasi (kosketusvetoa).
+**Lopullinen johtopäätös tälle kierrokselle (23.9., sama laite, sama
+ele-tyyppi):** samalla iPadilla, samalla kosketusveto+heitto-eleellä,
+natiivi (Unity-prototyyppi) on mitattavasti sulavampi kuin web
+(Safari-peli) — **0 % tökkäystä vs. 7–43 % tökkäystä**. Ero on suuri
+eikä selity mittaustavalla: molemmat mittaukset lukevat oikean
+kosketustapahtuman käsittelevän koodipolun kehysaikoja, ei synteettistä
+arviota. Kolme natiivitoistoa olivat keskenään lähes identtiset
+(p95-vaihteluväli 0,12 ms), joten tulos ei vaikuta sattumalta.
 
-**Ei siis vielä voida sanoa, onko natiivi sulavampi kuin web** —
-verrattu on kamera-ajo (natiivi) kosketusvetoon (web). Tarvitaan sama
-syöte molemmilla ennen johtopäätöstä.
+**Miksi ero on näin suuri — ei vielä selvitetty tässä raportissa.**
+Mahdollisia syitä (ei todennettu): web ajaa DOM/Canvas-pinossa selaimen
+oman tapahtumasilmukan kautta ja rakentaa/purkaa laattoja/nimiöitä
+JS:ssä per kehys (ks. omistajan kierroksen `puskulirjoitukset/kehys`
+17–22 täysissä tiloissa), kun taas natiivi Unity-prototyyppi on
+huomattavasti yksinkertaisempi (ei vielä täysiä pelitiloja, UI-kerroksia
+tai nimiöitä samassa laajuudessa kuin web). **Vertailu ei siis vielä
+ole "natiivi lopullinen peli" vs. "web lopullinen peli" — vaan "natiivin
+nykyinen, suppea prototyyppi" vs. "webin nykyinen, täysi peli".** Ero voi
+kaventua kun natiivi saa lisää ominaisuuksia.
 
-**Rajoitteet tässä kierroksessa:**
-1. Natiivi ei vielä kata pan/zoom/nipistys-kosketusta — vain kamera-ajo.
-2. Web-Mac-headless (M4 Max, ANGLE Metal) on paljon tehokkaampi kuin
-   omistajan oikea iPad-Safari-kokemus, joka jo osoitti tökkäyksiä.
-3. Yksi ajo per alusta (paitsi omistajan 8-osainen kierros) — ei vielä
-   tilastollista varmuutta flakyn poissulkemiseksi natiivin puolella.
+**Rajoitteet:**
+1. Natiivi-prototyyppi on ominaisuuksiltaan paljon suppeampi kuin web —
+   ei täysiä pelitiloja (oletus/kosketus suoraan/yhteinen kello/molemmat),
+   ei nimiöitä/symboleja samassa laajuudessa. Epäreilu vertailu SISÄLLÖN
+   suhteen, vaikka ele-tyyppi on nyt sama.
+2. Web-Mac-headless-kamera-ajon (ensimmäinen taulukko) 0 % oli
+   harhaanjohtava — jätetty raporttiin vain vertailuksi siitä, miten
+   paljon synteettinen kamera-ajo eroaa oikeasta kosketuksesta.
+3. Vain yksi natiivin komentoreitti (Pariisi-veto+heitto) — ei kata
+   nipistystä eikä pitkää istuntoa.
 
-## Seuraava askel (sovittu Fablen kanssa 23.9.)
+## Seuraava askel
 
-1. 3D-selvittäjä lisää synteettiset kosketuskomennot (veto, heitto,
-   nipistys) komentoprotokollaan.
-2. Aja 3 toistokierrosta natiivilla iPadilla SAMALLA reitillä kuin
-   omistajan kierros (veto Pariisista etelään/itään, samat pelitilat:
-   paljas kartta, oletus, kosketus suoraan, yhteinen kello, molemmat).
-3. Päivitä tämä taulukko natiivi-iPad vs. web-iPad (kosketus) -parilla —
-   vasta silloin vertailu on aidosti reilu.
+1. **Ei vielä tuotantopäätöksiä tästä luvusta** — ero on rohkaiseva
+   mutta johtuu todennäköisesti osin siitä, että natiivi on vielä
+   kevyt prototyyppi. Toista mittaus kun natiivi saa lisää sisältöä
+   (laatat, nimiöt, UI).
+2. Lisää natiivin komentoreittiin nipistys-toisto (zoomivertailu
+   omistajan kierroksen kanssa).
+3. Kun natiivi saa web-tason sisällön, aja tämä sama koe uudelleen
+   samalla menetelmällä pysyvänä sulavuusporttina natiivin julkaisulle.
 
 ## Ympäristö
 
