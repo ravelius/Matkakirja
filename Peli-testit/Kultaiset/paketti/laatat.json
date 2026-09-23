@@ -1,0 +1,11 @@
+{
+ "$kuvaus": "Laudan laattamäärät (js/packs/maailmankartta.js tokens.counts), sama muoto kuin sisältöpaketin moduulissa moduulit/js/packs/maailmankartta.json exportit.MAAILMANKARTTA.tokens. Kultaiset/tee-laattajalki.mjs. Älä muokkaa käsin.",
+ "lahde": "js/packs/maailmankartta.js#MAAILMANKARTTA.tokens.counts",
+ "lauta": "maailmankartta",
+ "counts": {
+  "star": 7,
+  "mannerAarre": 7,
+  "isoAarre": 82,
+  "pieniAarre": 170
+ }
+}
