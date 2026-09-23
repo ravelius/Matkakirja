@@ -140,7 +140,13 @@ export const RAAMATTU = {
           + 'ominaisuus tarkistetaan Raamattua vasten. Vanhasta pelistä ei tuoda mitään kuorta: ei '
           + 'WKWebView-lehtiä eikä muuta web-koodia appiin — kaupunki- ja maalehdet tehdään '
           + 'natiivisti UI Toolkitilla sisältöpaketin datasta (omistajan kortti 23.9. klo 20.1x). '
-          + 'Uuteen peliin lisätään vain natiiveja ominaisuuksia.',
+          + 'Uuteen peliin lisätään vain natiiveja ominaisuuksia. TÄYSI TOIMINTOPARITEETTI (omistaja '
+          + '23.9.2026 klo 20.2x, sitova): kaikki pelin nykyiset toiminnot ja napit kopioidaan natiiviin '
+          + 'natiivisti toteutettuina — myös radio-linssi (kumoaa kohdan "radiot vain webissä"; '
+          + 'asemat striimataan, lisenssit tarkistetaan maksulliseen appiin). Kehittäjäsäätimet '
+          + '(koeliput, piirtokokeet, mittarit) vain kehittäjätilassa: piilotettu KOKEET-valikko '
+          + 'TestFlight-buildeissa, ei App Store -versiossa. Sessiot kysyvät Fablelta heti, jos jokin '
+          + 'toiminto mietityttää; Fable kysyy omistajalta.',
         'CLAUDEN JA CHATGPT/CODEXIN AGENTTISÄÄNNÖT ERIKSEEN (omistaja 11.9.2026 '
           + 'tekstisession kautta, sanatarkasti: "Peliä kehitetään Claudella ja '
           + 'ChatGPT/Codexilla. Opus/Sonnet-rajoitus ja Fable-mallin agenttikäytön '
