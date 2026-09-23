@@ -28,6 +28,9 @@ namespace Matkakirja.Linssit.Testit
         public static int Main(string[] args)
         {
             var suodin = args.Length > 0 ? args[0] : "";
+            // Linssien testit avaavat linssejä rekisterin kautta: kehittäjätila (kaikki auki),
+            // omistustestit kytkevät sen itse pois.
+            Linssirekisteri.Kehittajatila = true;
             var testit = typeof(Ajuri).Assembly.GetTypes()
                 .SelectMany(t => t.GetMethods(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static))
                 .Where(m => m.GetCustomAttribute<TestiAttribute>() != null)

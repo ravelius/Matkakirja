@@ -17,7 +17,8 @@
 // keksinnöille "keksinnot kaynnista | jatka | tauko | tila | <pysäkki 0–25>";
 // ihmisen matkalle "esitys <jakso-id> | tauko | jatka | tila"; kaikille
 // "kamera <lat> <lon> <korkeus km>" (hyppy kuvakaappausta varten), "tila" ja
-// "kyllaisyys 0.8|1" (astronautin reliefi, muistetaan PlayerPrefsissä).
+// "kyllaisyys 0.8|1" (astronautin reliefi) ja "kehittaja 0|1" (kaikki linssit auki);
+// molemmat muistetaan PlayerPrefsissä.
 // Tulos lokiin ja Documents/linssi-loki.txt:hen.
 using System;
 using System.Collections.Generic;
@@ -48,6 +49,19 @@ namespace Matkakirja.Natiivi
 
         /// <summary>PlayerPrefs-avain astronautin reliefin kylläisyydelle (Natiivi-UI:n kehittäjävalikko).</summary>
         public const string KyllaisyysAvain = "linssi.astronautti.kyllaisyys";
+
+        /// <summary>PlayerPrefs-avain linssien kehittäjätilalle (kaikki auki).</summary>
+        public const string KehittajatilaAvain = "linssi.kehittajatila";
+        /// <summary>Kehittäjätilan oletus, kun PlayerPrefsissä ei ole arvoa.</summary>
+        public static bool KehittajatilaOletus = true;
+
+        /// <summary>Kehittäjätila päälle/pois ja muistiin (Natiivi-UI:n KOKEET, testikomento kehittaja).</summary>
+        public static void AsetaKehittajatila(bool paalla)
+        {
+            Linssirekisteri.Kehittajatila = paalla;
+            PlayerPrefs.SetInt(KehittajatilaAvain, paalla ? 1 : 0);
+            PlayerPrefs.Save();
+        }
 
         /// <summary>Asettaa ja muistaa astronautin reliefin kylläisyyden (0,8 tai 1,0); vaikuttaa seuraavaan avaukseen.</summary>
         public static void AsetaAstronautinKyllaisyys(float arvo)
@@ -81,6 +95,9 @@ namespace Matkakirja.Natiivi
             kerrokset = new KerrosSovitin();
             // Astronautin reliefin kylläisyys (0,8 web / 1,0): omistajan vertailu TestFlightissa.
             Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Kyllaisyys = PlayerPrefs.GetFloat(KyllaisyysAvain, 1f);
+            // Kehittäjätila (kaikki linssit auki). Oletus päällä, kunnes Pelikoodarin omistus
+            // (Linssirekisteri.Omistaa) on kytketty; sitten oletus pois (A7, Fablen päätös).
+            Linssirekisteri.Kehittajatila = PlayerPrefs.GetInt(KehittajatilaAvain, KehittajatilaOletus ? 1 : 0) == 1;
             rekisteri = new Linssirekisteri(this);
             rekisteri.Lisaa(new Topografia());
             StartCoroutine(LataaAstronautti());
@@ -578,6 +595,11 @@ namespace Matkakirja.Natiivi
                     Esitys(osat[1]);
                 else if (osat[0] == "kamera" && osat.Length > 3)
                     AjaKamera(new Nakyma(Luku(osat[1]), Luku(osat[2]), Luku(osat[3]) * 1000), 0f);
+                else if (osat[0] == "kehittaja" && osat.Length > 1)
+                {
+                    AsetaKehittajatila(osat[1] == "1");
+                    Kirjaa($"kehittäjätila {Linssirekisteri.Kehittajatila}, valittavissa {string.Join(", ", rekisteri.Valittavat.Select(l => l.Tiedot.Id))}");
+                }
                 else if (osat[0] == "kyllaisyys" && osat.Length > 1)
                 {
                     AsetaAstronautinKyllaisyys((float)Luku(osat[1]));
