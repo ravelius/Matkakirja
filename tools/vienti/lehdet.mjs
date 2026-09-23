@@ -421,4 +421,37 @@ export function rikastaLehdet(kokoelmat, ns, hae, { media: mediaLista = [], taul
       + '&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=auto&forecast_days=1 (js/saa.js '
       + 'haeSaaTanaan; välimuisti 1 h), rivi "tänään <lampotila>° (<alin>…<ylin>°), <SAAKOODIT-teksti>[, sadetta <mm> mm jos >= 1]".',
     { kaupunki: 'kaupungit' }, saa);
+
+  // Skeema 1.17 (Natiivi-UI:n Nähtävyydet-rivi): kaupunkien kohdekartat
+  // (js/packs/maakartat.js KAUPUNKIKARTAT, js/nahtavyydet.js piirraKaupunkiKartta).
+  const { KAUPUNKIKARTAT } = hae('js/packs/maakartat.js');
+  const karttakuva = (polku) => (polku ? media(polku, 'polku') : null);
+  const kohdekartat = Object.keys(KAUPUNKIKARTAT).sort().map((kaupunki) => {
+    const k = KAUPUNKIKARTAT[kaupunki];
+    return {
+      id: kaupunki, kaupunki,
+      // Web näyttää värikartan, kun sellainen on (omistaja 15.8.2026), muuten julisteen.
+      kuva: karttakuva(k.varikartta ?? k.polku), juliste: karttakuva(k.polku), varikartta: karttakuva(k.varikartta),
+      lahde: k.lahde ?? null, rajat: k.rajat, piirtoRajat: k.piirtoRajat ?? null, kainalot: k.kainalot ?? [],
+      numeroympyrat: k.numeroympyrat ?? [], esittely: k.esittely ?? null,
+      kohteet: k.kohteet.map((kohde) => {
+        const { x, y } = karttapiste(k, kohde.lat, kohde.lon);
+        return {
+          nimi: kohde.nimi, lat: kohde.lat, lon: kohde.lon, x: Math.round(x * 100) / 100, y: Math.round(y * 100) / 100,
+          wiki: kohde.wiki ?? null, nosto: kohde.nosto ?? null, nimiPuoli: kohde.nimiPuoli ?? null,
+          siirto: kohde.siirto ?? null, aika: kohde.aika ?? null, teksti: kohde.teksti ?? null,
+          kappaleet: kohde.teksti ? kohde.teksti.split(/\n\s*\n/).map((t) => t.trim()).filter(Boolean) : [],
+          kuvat: (kohde.kuvat ?? []).map((o) => R.kuva(o)).filter(Boolean),
+        };
+      }),
+    };
+  });
+  kokoelmat.kohdekartat = taulukko('js/packs/maakartat.js#KAUPUNKIKARTAT',
+    'Kaupunkien kohdekartat (Nähtävyydet). kuva = näytettävä kartta (värikartta, jos on, muuten juliste; url/varat/'
+      + 'leveys/korkeus, ämpärissä assets/kartat/), juliste ja varikartta erikseen. rajat = ydinrajaus asteina '
+      + '{ pohjoinen, etela, lansi, ita }; piirtoRajat = kuvan todellinen alue, jos laajempi. kohteet[].x/y = piste '
+      + 'prosentteina kuvasta pelin karttapiste()-funktiolla (kainalot huomioitu). nosto = nähtävyysjutun tunniste '
+      + '(nahtavyydet-kokoelma), wiki = Wikipedia-otsikko. teksti/kappaleet/kuvat = kohteen oma juttu, jos on. '
+      + 'nimiPuoli ja siirto = webin nimiön asettelu. lahde = kartan lähde (esim. OpenStreetMap ODbL), näytetään kartan alla.',
+    { kaupunki: 'kaupungit' }, kohdekartat);
 }

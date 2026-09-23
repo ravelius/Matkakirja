@@ -568,6 +568,18 @@ test('skeema 1.16: radiot luokittain ja viritysäänet', async () => {
   assert.ok(viritys.every((v) => v.lisenssi && v.tekija));
 });
 
+test('skeema 1.17: kohdekartat (kuva ämpärissä, kohteet karttapisteinä)', async () => {
+  const { KAUPUNKIKARTAT, karttapiste } = await import('../js/packs/maakartat.js');
+  const kartat = JSON.parse(tiedostot.get('kokoelmat/kohdekartat.json')).alkiot;
+  assert.equal(kartat.length, Object.keys(KAUPUNKIKARTAT).length);
+  assert.ok(kartat.every((k) => /^https:\/\/media\.matkakirja\.app\/assets\/kartat\/.+\?v=/.test(k.kuva.url)));
+  const tokio = kartat.find((k) => k.id === 'tokio');
+  assert.equal(tokio.kuva.url, tokio.varikartta.url, 'värikartta voittaa julisteen');
+  const k0 = KAUPUNKIKARTAT.tokio.kohteet[0];
+  const p = karttapiste(KAUPUNKIKARTAT.tokio, k0.lat, k0.lon);
+  assert.equal(tokio.kohteet[0].x, Math.round(p.x * 100) / 100);
+});
+
 test('skeema 1.9: offline-manifesti maittain (laatat, maasto, media, tavut)', async () => {
   const m = JSON.parse(tiedostot.get('manifest.json'));
   const o = JSON.parse(tiedostot.get(m.offline.tiedosto));

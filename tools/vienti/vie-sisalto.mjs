@@ -112,8 +112,10 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        on linkki; 17 kielletyn yleisradion maahan korvaava soiva asema
  *        tools/vienti/radiokorvaavat.json, yleisradio toisena rivinä) ja aanitaulut
  *        laji viritys (viritysäänet pelin osoitteella, tekijä ja lisenssi).
+ *   1.17 kokoelma kohdekartat (kaupunkien kohdekartat, kohteiden x/y pelin
+ *        karttapiste()-funktiolla, kartat ämpärissä assets/kartat/).
  */
-export const SKEEMAVERSIO_TARKKA = '1.16';
+export const SKEEMAVERSIO_TARKKA = '1.17';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 const tavuja = (s) => Buffer.byteLength(s);
