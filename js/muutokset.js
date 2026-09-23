@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2147, teksti: 'Testitila Suoraan kartalle' },
   { v: 2146, teksti: 'NC/ND-lisenssit: ambienssikorit A ja B' },
   { v: 2145, teksti: 'Kamerakallistus vaihe 1, koelipun takana' },
   { v: 2144, teksti: 'Paljas kartta: kerrokset-kytkimet' },
