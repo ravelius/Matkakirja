@@ -1787,3 +1787,7 @@ Pelikoodari tekee pienen PR:n etusijalla; kytkin tallentuu, ?koe=suoraan, tilari
 ## PR #2901 (SISALTOKIRJURI): 27 ISOISAKUVAN LAHDERIVI 'KUVAPUTKEN GENEROITU VALOKUVA'; KANTON/BOMBAY OLI JO TAYDENNETTY (LIITE VANHENTUNUT SILTA OSIN) (23.9.2026 klo 10.49)
 
 Klo 10.5x. Sisältökirjuri vapaana.
+
+## TILINVAIHTO: OMISTAJA SIIRTAA PELINKEHITYKSEN TOISELLE CLAUDE-TILILLE (SAMA TYOPOYTA, KANSIOT, MUISTI, APUSESSIOT); SIIRTOPROMPTI docs/raportit/siirto-2026-09-23-fablelle.md; KAIKKI SESSIOT TEKEVAT ALOITETUT ERAT LOPPUUN, KIRJOITTAVAT LUOVUTUKSEN EIVATKA ALOITA UUTTA; VIIKKOKIINTIO 89 % (23.9.2026 klo 10.54)
+
+Klo 10.58. Apusessiot ovat koneen paikallisia (eivät tilikohtaisia); Remote Control on tilikohtainen ja kytketään uudelleen; Postivahdille uusi Fablen session id.
