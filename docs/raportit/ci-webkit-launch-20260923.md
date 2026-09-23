@@ -86,16 +86,41 @@ kaatuneet ovat SAMAT kaksi jotka kaatuivat myös ennen vaihtoa. Loput
 ei launch-kaatumisia (varmistettu: vain nämä kaksi merkitty
 "[KAATUMINEN]").
 
-**Tulkinta:** selainkopio OLI osittain syyllinen — korruptoitunut tai
-huonossa tilassa oleva `webkit-2336`-asennus selittää suurimman osan
-(88 %) kaatumisista. Jäljellä oleva 2/66 viittaa siihen, että 22.9.
-raportin WindowServer/GUI-sessio-hypoteesi selittää lopun: nämä kaksi
-savuketta (`glnimiot-nimet`, `glnimiot-nostot`) voivat olla erityisen
-herkkiä ajoituksille/resursseille (molemmat lataavat paljon
-glTF-nimiöitä). Ei vielä täysin vahvistettu — seuraava askel jos
-kaatumiset toistuvat: ajaa juuri nämä kaksi savuketta erikseen useita
-kertoja peräkkäin nähdäkseen onko kyse flakystä satunnaisuudesta vai
-systemaattisesta erosta muihin WebKit-savukkeisiin nähden.
+**Tulkinta (PÄIVITETTY, lopullinen): korruptoitunut `webkit-2336`
+selitti 100 % oikeista launch-timeouteista, ei 88 %.** Jäljellä ollut
+2/66 ("glnimiot-nimet", "glnimiot-nostot") EI ole WebKit-launch-vika
+lainkaan — se on erillinen, täysin deterministinen raportointibugi
+tools/savukkeet/-työkaluissa, ei liity tähän tutkintaan:
+
+- `vertaa-tulos.mjs:46-49` laskee OK/FAIL-rivit lokista regexillä
+  `/^OK\b/` ja `/^FAIL\b/`.
+- `savuke-glnimiot-nimet.mjs:81` ja `savuke-glnimiot-nostot.mjs:81`
+  tulostavat oman `vartio()`-funktionsa tuloksen ✓/✗-symboleilla, EI
+  "OK "/"FAIL "-etuliitteellä kuten kaikki muut savukkeet.
+- Siksi `okMaara=0`, `failRivit.length=0`, ja koska exit-koodi on
+  poikkeavassa tapauksessa 1, `vertaa-tulos.mjs:55` päättelee
+  virheellisesti `kaatui=true` ja tulostaa "[KAATUMINEN]" — vaikka
+  savuke oikeasti ajoi loppuun ja tulosti tuloksen (esim. "6/7").
+- **100 % toistettava, ei flaky**: tapahtuu JOKA kerta kun jompikumpi
+  skripti ajetaan, riippumatta WebKit-kopion kunnosta. Korjaus: yhden
+  rivin muutos kummassakin tiedostossa (rivi 81), sama OK/FAIL-muoto
+  kuin muissa savukkeissa. Ei tehty tässä — tools/savukkeet/ ei ole
+  Laitetestaajan aluetta, raportoitu Fablelle/Pelikoodarille
+  päätettäväksi.
+
+**Johtopäätös:** ci-webkit-launch-vika on tältä osin RATKAISTU (selain-
+kopion uudelleenlataus, 17/65 → 0/66 oikeaa launch-timeoutia). Muut
+20 punaista samassa ajossa (nimiot-elavat, topografialinssi ym.) ovat
+todennettu oikeiksi sisältö-/väitevirheiksi — ks. erillinen viesti
+Fablelle 23.9. — eivät liity tähän vikaan.
+
+**Korjaus tehty ja PR avattu:** [#2928](https://github.com/ravelius/Matkakirja/pull/2928)
+(haara `laitetestaaja-glnimiot-tuloste`) — `savuke-glnimiot-nimet.mjs`
+ja `-nostot.mjs` tulostavat nyt OK/FAIL, `vertaa-tulos.mjs` erottelee
+diagnostiikassa väärän tulostemuodon aidosta kaatumisesta. Paikallisesti
+vahvistettu (chromium, sama moottori kuin CI:ssä sarjat.json:n mukaan —
+EI webkit, vaikka nimi viittaa GL-nimiöihin): 7/7 ja 9/9 läpi,
+vertaa-tulos.mjs laskee molemmat oikein.
 
 ## Uusi oppi: reboot jättää GitHubille "kadonneen" jobin
 
