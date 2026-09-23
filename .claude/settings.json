@@ -31,7 +31,16 @@
       "Bash(mkdir:*)",
       "Bash(sha256sum:*)",
       "Bash(timeout:*)",
-      "Bash(for:*)"
+      "Bash(for:*)",
+      "SendMessage",
+      "mcp__ccd_session_mgmt__send_message",
+      "mcp__ccd_session_mgmt__set_remote_control",
+      "mcp__ccd_session_mgmt__clear_session",
+      "Bash(gh:*)",
+      "Bash(aws:*)",
+      "Bash(xcodebuild:*)",
+      "Bash(xcrun:*)",
+      "Bash(security:*)"
     ]
   }
 }
