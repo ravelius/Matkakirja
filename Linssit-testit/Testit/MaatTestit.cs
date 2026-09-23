@@ -106,6 +106,7 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(95, A().Maatiedot.Jarjestys);
             Oleta.Sama("Maiden tiedot", A().Maatiedot.Nimi);
             Oleta.Tosi(!A().Vertailu.Valokuva && !A().Maatiedot.Valokuva, "valokuva false");
+            Oleta.Tosi(A().Vertailu.Kesken && A().Maatiedot.Kesken, "web kesken: true");
             Oleta.Tosi(A().Maatiedot.Lahde?.Aineisto?.Contains("Natural Earth") == true, "lähde");
         }
 
