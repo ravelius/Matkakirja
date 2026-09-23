@@ -50,7 +50,11 @@ Siirtosepän natiivi-siirtosuunnitelma (luku 3) ja Natiivisepän RAJAPINTA.md (p
 ## Avaussäännöt nyt (js/linssit/omistus.js)
 
 Pallo on perusvaruste. Tietäjäpisterajat 400, 800, 1400 ja 2200 antavat seuraavan omistamattoman
-manner: null -linssin rekisterijärjestyksessä, eli käytännössä ihmisen matka, keksinnöt, radio ja
+manner: null -linssin rekisterijärjestyksessä, eli webissä ihmisen matka, keksinnöt, radio ja
 astronautin kamera. Topografia (manner: southamerica), vertailu, maatiedot ja vesistöt ovat vain
-kehittäjätilassa. **Kun radio jää pois natiivista, kolmas kynnys (1400) vapautuu.** Tämä on Fablen
-päätös: mikä linssi tulee kolmannelle kynnykselle, ja saako topografia oman avausreittinsä?
+kehittäjätilassa.
+
+**Natiivi (Fablen päätös 23.9.2026):** radio jää pois, ja sen 1400 tp:n kynnys on topografian.
+Kynnykset: ihmisen matka 400, keksinnöt 800, topografia 1400, astronautin kamera 2200. Muut
+linssit ovat vain kehittäjätilassa. Taulu on proto-3d:ssä `Linssirekisteri.Avauskynnykset`
+(haara linssiseppa/linssirunko, 772c9dc).
