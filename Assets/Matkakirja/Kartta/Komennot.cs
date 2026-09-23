@@ -140,9 +140,9 @@ namespace Matkakirja
                     var av = FindAnyObjectByType<AiheValot>();
                     if (av == null) break;
                     if (o[1] != "tila") av.Valitse(o[1]);
-                    var rivi = new StringBuilder("MATKAKIRJA valot: valittu " + av.Valittu + ":");
-                    foreach (var p in av.Laskurit) rivi.Append(' ').Append(p.Key).Append('=').Append(p.Value);
-                    Debug.Log(rivi.ToString());
+                    var valoRivi = new StringBuilder("MATKAKIRJA valot: valittu " + av.Valittu + ":");
+                    foreach (var p in av.Laskurit) valoRivi.Append(' ').Append(p.Key).Append('=').Append(p.Value);
+                    Debug.Log(valoRivi.ToString());
                     break;
                 }
                 case "maat":
