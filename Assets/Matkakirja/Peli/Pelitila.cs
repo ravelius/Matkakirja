@@ -10,7 +10,8 @@
 // Erä 3 (tallennusversio 3): aarrelaatat (Laattamaailma: laatat, käännetyt,
 // löydetyt pääaarteet Map-järjestyksessä), pelaajan tähdet ja löydöt
 // (finds, findManner, findMaa), kaksintaistelun lippu (duelArmed),
-// ennätys (recordNoted, recordMark.day) ja pöllöliput.
+// ennätys (recordNoted, recordMark.day) ja pöllöliput. Samaan versioon
+// valinnaisina: nähdyt pulmat (puzzlesSeen) ja avoin tapahtumakortti (eventCard).
 // Versiot 1 ja 2 latautuvat; niissä ei ole laattoja (ks. Matka.Lataa).
 using System;
 using System.Collections.Generic;
@@ -81,10 +82,20 @@ namespace Matkakirja.Peli
         /// <summary>Kysymysmoottorin tila (Peli/Kysely.cs).</summary>
         public Kyselytila Kysely = new Kyselytila();
 
+        /// <summary>
+        /// Kauppojen tila (Peli/Kaupat.cs): lehtitehtävät, pullat, eläintäyt,
+        /// julisteet. Tallennusversiossa 3 valinnainen kenttä "kaupat".
+        /// </summary>
+        public Kauppatila Kaupat = new Kauppatila();
+        /// <summary>Voittaja (web winner.id; Peli/Voitto.cs). Vain moninpelissä. Valinnainen kenttä "voittaja".</summary>
+        public int? VoittajaId;
+
         /// <summary>Laudan aarrelaatat (web world.tokens/revealed/starsFound). null = peli ilman laattoja.</summary>
         public Laattamaailma Laatat;
         /// <summary>Ryöstäjä löytyi: kaksintaistelu alkaa kysymyksen sulkeutuessa (web duelArmed).</summary>
         public bool KaksintaisteluOdottaa;
+        /// <summary>Avoin rosvon kaksintaistelu (web duel; Peli/Kaksintaistelu.cs). Tallennetaan vain, kun auki.</summary>
+        public AvoinKaksintaistelu Kaksintaistelu;
         /// <summary>Isoisän ennätys on jo kirjattu (web recordNoted).</summary>
         public bool EnnatysKirjattu;
         /// <summary>Ennätyksen rikkomispäivä (web recordMark.day), null jos ei rikottu.</summary>
@@ -93,6 +104,10 @@ namespace Matkakirja.Peli
         public bool PolloAarteena;
         /// <summary>Pöllö on jo löytynyt (web polloLoydetty = !polloAarteena alussa).</summary>
         public bool PolloLoydetty = true;
+        /// <summary>Nähdyt pulmat kaupunki-id:nä (web puzzlesSeen ilman laudan etuliitettä; Peli/Pulmat.cs).</summary>
+        public HashSet<string> NahdytPulmat = new HashSet<string>();
+        /// <summary>Avoin tapahtumakortti (web eventCard; Peli/Tapahtumat.cs), vaiheessa Tapahtuma.</summary>
+        public Tapahtumakortti Tapahtumakortti;
         /// <summary>Luetun tallennuksen versio (0 = ei luettu). Ei tallenneta.</summary>
         public int LuettuVersio;
 
@@ -123,7 +138,7 @@ namespace Matkakirja.Peli
         /// (myös xp, kysytty, oikein, taso, botti, tahdet, loydot,
         /// loytoMantereet, loytoMaat), kysely (Kyselytila) ja versiosta 3
         /// laattamaailma, kaksintaistelu, ennatys, ennatysPaiva, polloAarteena,
-        /// polloLoydetty.
+        /// polloLoydetty; valinnaisena avoinKaksintaistelu (vain kun auki).
         /// Sijainti tallennetaan avaimena (web posKey).
         /// </summary>
         public string ToJson()
@@ -168,13 +183,23 @@ namespace Matkakirja.Peli
             sb.Append(']');
             sb.Append(",\"kysely\":");
             Kysely.Kirjoita(sb);
+            // Kaupat ja voittaja (Peli/Kaupat.cs, Voitto.cs): versio 3, valinnaiset.
+            sb.Append(",\"kaupat\":");
+            Kaupat.Kirjoita(sb);
+            Kentta(sb, "voittaja", VoittajaId.HasValue ? VoittajaId.Value.ToString(CultureInfo.InvariantCulture) : "null");
             sb.Append(",\"laattamaailma\":");
             if (Laatat == null) sb.Append("null"); else Laatat.Kirjoita(sb);
             Kentta(sb, "kaksintaistelu", KaksintaisteluOdottaa ? "true" : "false");
+            // Valinnainen kenttä (versio 3 ilman nostoa): puuttuu, kun kaksintaistelua ei ole auki.
+            if (Kaksintaistelu != null) { sb.Append(",\"avoinKaksintaistelu\":"); Kaksintaistelu.Kirjoita(sb); }
             Kentta(sb, "ennatys", EnnatysKirjattu ? "true" : "false");
             Kentta(sb, "ennatysPaiva", EnnatysPaiva.HasValue ? EnnatysPaiva.Value.ToString(CultureInfo.InvariantCulture) : "null");
             Kentta(sb, "polloAarteena", PolloAarteena ? "true" : "false");
             Kentta(sb, "polloLoydetty", PolloLoydetty ? "true" : "false");
+            // Pulmat ja tapahtumakortit: valinnaiset kentät (puuttuvat vanhasta tallennuksesta).
+            Kentta(sb, "pulmatNahty", "[" + string.Join(",", NahdytPulmat.OrderBy(k => k, StringComparer.Ordinal).Select(Teksti)) + "]");
+            sb.Append(",\"tapahtumakortti\":");
+            if (Tapahtumakortti == null) sb.Append("null"); else Tapahtumakortti.Kirjoita(sb);
             sb.Append('}');
             return sb.ToString();
         }
@@ -233,13 +258,20 @@ namespace Matkakirja.Peli
             }
             if (t.Pelaajat.Count == 0) throw new FormatException("tallennuksessa ei ole pelaajia");
             t.Kysely = Kyselytila.Lue(MiniJson.Kentta(o, "kysely") as Dictionary<string, object>);
+            // Kaupat ja voittaja: puuttuva kenttä (vanha tallennus) = tyhjä tila.
+            t.Kaupat = Kauppatila.Lue(MiniJson.Kentta(o, "kaupat") as Dictionary<string, object>);
+            t.VoittajaId = MiniJson.Luku(o, "voittaja") is double vo ? (int)vo : (int?)null;
             if (MiniJson.Kentta(o, "laattamaailma") is Dictionary<string, object> lm) t.Laatat = Laattamaailma.Lue(lm, kaupungit);
             t.KaksintaisteluOdottaa = MiniJson.Totuus(o, "kaksintaistelu");
+            t.Kaksintaistelu = AvoinKaksintaistelu.Lue(MiniJson.Kentta(o, "avoinKaksintaistelu") as Dictionary<string, object>);
             t.EnnatysKirjattu = MiniJson.Totuus(o, "ennatys");
             t.EnnatysPaiva = MiniJson.Luku(o, "ennatysPaiva") is double ep ? (int)ep : (int?)null;
             // Web fromJSON: polloLoydetty = polloAarteena ? (tallennettu ?? true) : true.
             t.PolloAarteena = MiniJson.Totuus(o, "polloAarteena");
             t.PolloLoydetty = !t.PolloAarteena || MiniJson.Totuus(o, "polloLoydetty", true);
+            // Pulmat ja tapahtumakortit (valinnaiset): web puzzlesSeen ?? [], eventCard ?? null.
+            foreach (var s in Tekstit(o, "pulmatNahty")) if (s != null) t.NahdytPulmat.Add(s);
+            t.Tapahtumakortti = Tapahtumakortti.Lue(MiniJson.Kentta(o, "tapahtumakortti") as Dictionary<string, object>);
             return t;
         }
 

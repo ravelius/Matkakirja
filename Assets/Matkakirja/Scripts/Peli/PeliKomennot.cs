@@ -13,9 +13,14 @@
 //   matka kaupunki tapa       napauta + valitse yhdellä rivillä (ilman dialogia)
 //   heita                     "Heitä noppaa" (matka kesken reitillä, kohti tavoitetta)
 //   sulje-lehti               sulkee kaupunkilehden kuin pelaaja
+//   tutki [vaikea]            "Tutki kaupunkia" -nappi: kysymys auki (tila Kysymys)
+//   vastaa i | vastaa oikea   valitsee vaihtoehdon i (0..) tai oikean
+//   vastaa vaara              valitsee ensimmäisen näkyvän väärän vaihtoehdon
+//   vihje | puolita           vihje (40 £) tai 50:50 (80 £)
+//   jatka                     tuloksen Jatka-nappi: kysymys kiinni, vuoro päättyy
 //   tila [nimi]               kirjoittaa Documents/peli-tila.json (tai peli-tila-nimi.json)
 //   odota s                   seuraava rivi s sekunnin päästä
-//   odota-tila tila [max s]   odottaa silmukan tilaa (Kartta, Dialogi, Matkalla, Lehti), oletus 20 s
+//   odota-tila tila [max s]   odottaa silmukan tilaa (Kartta, Dialogi, Matkalla, Lehti, Kysymys), oletus 20 s
 //   uusi-peli [siemen]        uusi peli Pariisista (siemen = toistettava noppa)
 //   peli pois | peli paalle   pelisilmukka pois (3D:n napautus kuten ennen) tai päälle
 using System;
@@ -105,6 +110,30 @@ namespace Matkakirja.Natiivi
                     return ohjain.Heita();
                 case "sulje-lehti":
                     return ohjain.SuljeLehti();
+                case "tutki":
+                    return ohjain.Tutki(A(1) == "vaikea");
+                case "vastaa":
+                {
+                    var q = ohjain.Matka?.Tila.Kysely.Kysymys;
+                    if (q == null) return "kysymys ei ole auki";
+                    int i;
+                    if (A(1) == "oikea") i = q.Oikea;
+                    else if (A(1) == "vaara")
+                    {
+                        i = -1;
+                        for (int j = 0; j < q.Vaihtoehdot.Count; j++)
+                            if (j != q.Oikea && !q.Piilotetut.Contains(j)) { i = j; break; }
+                        if (i < 0) return "ei väärää vaihtoehtoa";
+                    }
+                    else if (!int.TryParse(A(1), NumberStyles.Integer, CultureInfo.InvariantCulture, out i)) return "käyttö: vastaa i|oikea|vaara";
+                    return ohjain.Vastaa(i);
+                }
+                case "vihje":
+                    return ohjain.Vihje();
+                case "puolita":
+                    return ohjain.Puolita();
+                case "jatka":
+                    return ohjain.JatkaKysymyksesta();
                 case "tila":
                 {
                     var nimi = A(1) == null ? "peli-tila.json" : "peli-tila-" + A(1) + ".json";

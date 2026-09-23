@@ -1,0 +1,62 @@
+{
+ "$skeema": "matkakirja-vienti/1/kokoelma",
+ "nimi": "elaintayt",
+ "lahde": "js/packs/elaintakyt.js#ELAINTAKYT",
+ "kuvaus": "Eläintäyt maittain (ISO3).",
+ "viittaukset": {},
+ "$nayte": "Näyte sisältöpaketin kokoelmasta sisalto/1/v2/kokoelmat/elaintayt.json (alkioita 109, tässä 4 ensimmäistä/valittua sellaisenaan). Kaupat-testit (Testit/KauppaTestit.cs).",
+ "alkiot": [
+  {
+   "id": "FIN",
+   "maa": "FIN",
+   "data": {
+    "elain": "saimaannorppa",
+    "otsikko": "Järven oma hylje",
+    "teksti": "Saimaannorppa jäi jääkauden jälkeen omaan järveensä, kun maa kohosi ja reitti mereen sulkeutui. Se on yksi maailman harvoista makean veden hylkeistä, eikä sitä tapaa mistään muualta kuin Saimaalta. Kanta on muutaman sadan yksilön varassa, joten jokainen kevätjäällä lepäilevä norppa on pieni ihme.",
+    "lahde": "en-Wikipedia \"Saimaa ringed seal\". Tarkistettu 1.9.2026.",
+    "kuva": "assets/elaimet/elain-fin.jpg",
+    "lon": 28.4,
+    "lat": 61.4
+   }
+  },
+  {
+   "id": "SWE",
+   "maa": "SWE",
+   "data": {
+    "elain": "hirvenvasa",
+    "otsikko": "Metsän kuninkaan perillinen",
+    "teksti": "Hirvenvasa syntyy alkukesästä ja seuraa emoaan ensimmäisen vuotensa. Ruotsissa hirviä on noin 263 000 — metsäalaan suhteutettuna maailman tihein kanta, vaikka luku on pudonnut puoleen 1900-luvun lopun huipusta. Kevätvaellusta katsotaan suorana televisiosta viikkokausia: vuonna 2024 kolmekymmentäkaksi kameraa laski 87 joen ylittänyttä hirveä.",
+    "lahde": "sv-Wikipedia \"Älg\", osio \"Utbredning och population\", ja en-Wikipedia \"Slow television\", osio \"Den stora älgvandringen\". Tarkistettu 1.9.2026.",
+    "kuva": "assets/elaimet/elain-swe.jpg",
+    "lon": 15,
+    "lat": 60.5
+   }
+  },
+  {
+   "id": "NOR",
+   "maa": "NOR",
+   "data": {
+    "elain": "myskihärkä",
+    "otsikko": "Jääkauden muisto Dovrefjellillä",
+    "teksti": "Myskihärkä laidunsi aikoinaan mammuttien rinnalla, ja Dovrefjellin lauma on tuotu takaisin: kymmenen eläintä Grönlannista vuonna 1932. Sota söi ne, ja työ aloitettiin uudestaan 1947. Alusvilla eli qiviut on vahvempaa ja lämpimämpää kuin lampaanvilla ja pehmeämpää kuin kashmir — sitä ei keritä vaan kammataan kevätluonnin aikana.",
+    "lahde": "en-Wikipedia \"Muskox\", osio \"Norway\", ja en-Wikipedia \"Qiviut\", osio \"Properties\". Tarkistettu 1.9.2026.",
+    "kuva": "assets/elaimet/elain-nor.jpg",
+    "lon": 9.4,
+    "lat": 62.3
+   }
+  },
+  {
+   "id": "ISL",
+   "maa": "ISL",
+   "data": {
+    "elain": "lunni",
+    "otsikko": "Poikasten pelastajat",
+    "teksti": "Islannissa pesii valtaosa koko Atlantin lunneista. Vestmannasaarilla on tapana, että kun poikaset eksyvät syksyllä kaupungin valoihin, lapset keräävät ne pahvilaatikoihin ja kantavat rantaan — aamulla poikaset heitetään kaaressa merituuleen, ja matka alkaa.",
+    "lahde": "en-Wikipedia \"Atlantic puffin\". Tarkistettu 1.9.2026.",
+    "kuva": "assets/elaimet/elain-isl.jpg",
+    "lon": -19.4,
+    "lat": 64.6
+   }
+  }
+ ]
+}
