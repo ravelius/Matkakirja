@@ -1671,3 +1671,7 @@ Omistaja klo 08.47 iPhonella (v2140), kaappaukset: 'Chambordin linna' ja 'Loire'
 ## v2141 MAINISSA (#2880): SYOTEKOE-VALIKKO; CI-WEBKIT-MUISTIO MAINISSA (#2881, ILMAN VERSIOTA) (23.9.2026 klo 08.57)
 
 Julkaisija klo 08.5x, testit 4034/0. Omistajan kierros v2141:llä valikosta: tilat 1–4.
+
+## OMISTAJAN TARKENNUS NIMIOLUKKOON: SAMA NIMI EI VAIHDA PAIKKAA MYOSKAAN ZOOMIN AIKANA — SAA VAIN MUUTTAA KOKOAAN; NIMI SAA POISTUA NAYTOLTA JA UUSI SAA TULLA, MUTTA NAKYVA NIMIO EI KOSKAAN SIIRRY SYMBOLIN TOISELLE PUOLELLE (23.9.2026 klo 09.13)
+
+Omistaja klo 09.0x. Toteutus: puoli lukitaan koko näkyvyyden ajaksi zoomista riippumatta; törmäyksessä zoomatessa kumpikaan lukittu ei siirry vaan toinen piilotetaan (prioriteetti) ja palaa samalle puolelle kun tila riittää; uudet nimiöt hakevat vapaan puolen, jo näkyvät eivät väistä. Vartija: 10 s veto + zoomi sisään/ulos, 0 puolenvaihtoa näkyvillä nimiöillä.
