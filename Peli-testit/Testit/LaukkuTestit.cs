@@ -97,6 +97,24 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama("matkalla — " + PeliApu.KaupunginNimi(v, r.B), Laukku.SijaintiNimi(v, Sijainti.ReitillaSijainti(r.Id, r.Askeleet - 1)));
         }
 
+        [Testi] static void MatkanYhteenvetoKutenWeb()
+        {
+            var m = UusiPeli();
+            var yv = MatkanYhteenveto.Laske(m, Laukku.Rakenna(m, Nimet));
+            Oleta.Sama(1, yv.Paivat);
+            Oleta.Sama(7, yv.AarteitaKaikkiaan);
+            Oleta.Tosi(!yv.KaikkiLoytyi, "ei vielä");
+            Oleta.Sama($"Matkakirja: 1 päivä, {yv.Kaupungit} kaupunki{(yv.Kaupungit == 1 ? "" : "a")}, yksikään unohdettu aarre ei vielä löytynyt.", yv.Teksti);
+            foreach (var manner in Nimet.Mantereet)
+            {
+                var tahti = m.Laatat.Laatat.FirstOrDefault(kv => kv.Value == Laattatyypit.Paaaarre && m.Laatat.MannerOf(kv.Key) == manner).Key;
+                if (tahti != null) m.KaannaLaatta(tahti);
+            }
+            yv = MatkanYhteenveto.Laske(m, Laukku.Rakenna(m, Nimet));
+            Oleta.Tosi(yv.KaikkiLoytyi, "kaikki seitsemän");
+            Oleta.Tosi(yv.Teksti.EndsWith(", 7 unohdettua aarretta löytyi.", StringComparison.Ordinal), yv.Teksti);
+        }
+
         [Testi] static void JsonOnJasennettavissa()
         {
             var o = MiniJson.Objekti(MiniJson.Jasenna(Laukku.Json(Laukku.Rakenna(UusiPeli(), Nimet, Julisteet))));

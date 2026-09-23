@@ -46,7 +46,7 @@ using UnityEngine.Networking;
 namespace Matkakirja.Natiivi
 {
     /// <summary>Silmukan tila (testikomentojen 'odota-tila' ja peli-tila.json).</summary>
-    public enum SilmukanTila { Lataa, Kartta, Dialogi, Matkalla, Lehti, Virhe, Kysymys, Traileri }
+    public enum SilmukanTila { Lataa, Kartta, Dialogi, Matkalla, Lehti, Virhe, Kysymys, Traileri, Aloitus }
 
     [DisallowMultipleComponent]
     public sealed class PeliOhjain : MonoBehaviour
@@ -168,6 +168,37 @@ namespace Matkakirja.Natiivi
         /// muuttua): laukun päivitys ja kukkaron välähdys (Natiivi-UI). Ei joka ruudussa.
         /// </summary>
         public event Action TilaMuuttui;
+
+        // --- aloitusnäkymä ja virstanpylväät (Natiivi-UI) -------------------
+
+        /// <summary>
+        /// Natiivi-UI asettaa BeforeSceneLoad: sisällön latauduttua silmukka jää tilaan
+        /// Aloitus (AloitusTarjolla) eikä aloita tai jatka peliä itse. Näkymä kutsuu
+        /// Jatka() (TallennusOn) tai UusiMatka(lähtökaupunki). false = entinen vuo.
+        /// </summary>
+        public static bool AloitusNakyma;
+
+        /// <summary>Silmukka on tilassa Aloitus: näytä aloitusnäkymä (Jatka / Uusi matka).</summary>
+        public event Action AloitusTarjolla;
+
+        /// <summary>Kelvollinen tallennus odottaa jatkamista (aloitusnäkymän Jatka-nappi).</summary>
+        public bool TallennusOn => jatkettava != null;
+        Matka jatkettava;
+
+        /// <summary>Lähtökaupungit (web start: true; paketin kaupungit.aloitus) laudan järjestyksessä.</summary>
+        public List<(string Id, string Nimi)> Lahtokaupungit() =>
+            verkko == null ? new List<(string, string)>()
+                : verkko.KaupunkiLista.Where(k => k.Aloitus).Select(k => (k.Id, k.Nimi)).ToList();
+
+        /// <summary>
+        /// Kaikki unohdetut aarteet löytyivät (web NATIIVI_SAAVUTUKSET.kaikkiAarteet, kerran
+        /// per matka). Vaellustilassa ei ole voittajaa (web checkWin vain moninpelissä); tämä on
+        /// matkan huipennus. Peli jatkuu (Jatka vaeltamista = sulje), Uusi matka = UusiMatka.
+        /// </summary>
+        public event Action<MatkanYhteenveto> KaikkiAarteetLoytyi;
+
+        /// <summary>Matkan yhteenveto (päivät, kaupungit, aarteet, jakoteksti) tai null.</summary>
+        public MatkanYhteenveto Yhteenveto() => matka == null ? null : MatkanYhteenveto.Laske(matka, Laukku());
 
         /// <summary>Kokoelma julisteet (ja eläintäyt) laukkua varten; null ennen latausta.</summary>
         Kauppasisalto kauppasisalto;
@@ -600,6 +631,7 @@ namespace Matkakirja.Natiivi
         void AloitaTaiJatka()
         {
             matka = null;
+            jatkettava = null;
             if (File.Exists(TallennusPolku))
             {
                 try
@@ -624,14 +656,57 @@ namespace Matkakirja.Natiivi
                     try { File.Copy(TallennusPolku, Path.Combine(Documents, nimi), true); } catch { }
                 }
             }
-            if (matka == null || matka.Tila.Vaihe == Vaihe.Ohi)
+            if (matka != null && matka.Tila.Vaihe == Vaihe.Ohi) matka = null;
+            if (AloitusNakyma)
+            {
+                jatkettava = matka;
+                matka = null;
+                Tila = SilmukanTila.Aloitus;
+                tilarivi.Aseta("");
+                Debug.Log("MATKAKIRJA peli: aloitusnäkymä, tallennus " + (jatkettava != null ? "on" : "ei"));
+                try { AloitusTarjolla?.Invoke(); } catch (Exception e) { Debug.LogException(e); }
+                return;
+            }
+            if (matka == null)
             {
                 UusiPeli(null);
                 // Isoisän avaus uuden matkan alussa (web playIntroVoice).
                 SoitaLuento(luennat.Intro, 1.0f);
                 return;
             }
+            JatkaMatkaa();
+        }
 
+        /// <summary>Aloitusnäkymän Jatka: tallennettu matka jatkuu. Palauttaa virheen tai null.</summary>
+        public string Jatka()
+        {
+            if (Tila != SilmukanTila.Aloitus) return "silmukka on tilassa " + Tila;
+            if (jatkettava == null) return "tallennusta ei ole";
+            matka = jatkettava;
+            jatkettava = null;
+            JatkaMatkaa();
+            return null;
+        }
+
+        /// <summary>
+        /// Uusi matka lähtökaupungista (aloitusnäkymä, voiton Uusi matka). null = Pariisi.
+        /// Korvaa tallennuksen. Palauttaa virheen tai null.
+        /// </summary>
+        public string UusiMatka(string lahtokaupunki, long? siemen = null)
+        {
+            if (verkko == null) return "sisältö ei ole vielä latautunut";
+            if (lahtokaupunki != null && !Lahtokaupungit().Any(k => k.Id == lahtokaupunki)) return "ei lähtökaupunki: " + lahtokaupunki;
+            if (Tila != SilmukanTila.Aloitus && Tila != SilmukanTila.Kartta && Tila != SilmukanTila.Dialogi) return "silmukka on tilassa " + Tila;
+            jatkettava = null;
+            UusiPeli(siemen, lahtokaupunki);
+            // Aloitusnäkymässä intro soi jo avaustekstin aikana ennen valintaa (web renderIntro →
+            // playIntroVoice, Natiivi-UI); ilman näkymää se soi tässä kuten ennen.
+            if (!AloitusNakyma) SoitaLuento(luennat.Intro, 1.0f);
+            return null;
+        }
+
+        void JatkaMatkaa()
+        {
             Kytke(matka);
             try { Tavoite = File.Exists(TavoitePolku) ? File.ReadAllText(TavoitePolku).Trim() : null; } catch { Tavoite = null; }
             if (Tavoite != null && !verkko.Kaupungit.ContainsKey(Tavoite)) Tavoite = null;
@@ -642,13 +717,18 @@ namespace Matkakirja.Natiivi
                 Matkusta(Tavoite, matka.Tila.Kulkutapa ?? Kulkutapa.Maa);
         }
 
-        /// <summary>Uusi peli Pariisista (tai paketin ensimmäisestä aloituskaupungista). siemen null = kellosta.</summary>
-        public void UusiPeli(long? siemen)
+        /// <summary>
+        /// Uusi peli lähtökaupungista (null = Pariisi tai paketin ensimmäinen aloituskaupunki).
+        /// siemen null = kellosta.
+        /// </summary>
+        public void UusiPeli(long? siemen, string lahtokaupunki = null)
         {
             if (verkko == null) return;
-            var aloitus = verkko.Kaupungit.ContainsKey(AloitusKaupunki) ? AloitusKaupunki
+            var aloitus = lahtokaupunki != null && verkko.Kaupungit.ContainsKey(lahtokaupunki) ? lahtokaupunki
+                : verkko.Kaupungit.ContainsKey(AloitusKaupunki) ? AloitusKaupunki
                 : (verkko.KaupunkiLista.FirstOrDefault(k => k.Aloitus) ?? verkko.KaupunkiLista[0]).Id;
             if (lehti != null && lehti.Auki) lehti.Sulje();
+            jatkettava = null;
             var rng = new Satunnainen(siemen ?? (long)(uint)DateTime.UtcNow.Ticks);
             matka = Laattamaarat != null
                 ? Matka.UusiPeli(verkko, rng, PelaajanNimi, aloitus, Laattamaarat)
@@ -666,7 +746,15 @@ namespace Matkakirja.Natiivi
         void Kytke(Matka m)
         {
             m.Tapahtui += (laji, teksti) => tapahtumat.Add(teksti);
-            m.Loysi += (p, l) => kysymysLoyto = l;
+            m.Loysi += (p, l) =>
+            {
+                kysymysLoyto = l;
+                if (l.Tyyppi != Laattatyypit.Paaaarre || m != matka) return;
+                var yv = MatkanYhteenveto.Laske(m, Laukku());
+                if (!yv.KaikkiLoytyi) return;
+                Debug.Log("MATKAKIRJA peli: kaikki aarteet löytyivät, " + yv.Teksti);
+                try { KaikkiAarteetLoytyi?.Invoke(yv); } catch (Exception e) { Debug.LogException(e); }
+            };
             // Tietäjätason nousu (web pöllön onnittelukupla) kysymyksen tulokseen tai matkan viestiin.
             m.Kokemus.TasoNousi += (p, taso) =>
             {

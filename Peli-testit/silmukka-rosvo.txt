@@ -1,7 +1,7 @@
 # Laitetesti: rosvon kaksintaistelu ja tapahtumakortti ~30 s (Pariisi, pakotettuina
 # testikomennoilla koe rosvo / koe tapahtuma, koska maailmankartalla ei ole ryöstäjiä
 # eikä kortteja). Kopioi Documents/peli-komento.txt:ksi. Odotetut arvot README-silmukka.md.
-odota-tila kartta 40
+odota-tila kartta|aloitus 40
 uusi-peli 12345
 odota 3
 tila r1-alku

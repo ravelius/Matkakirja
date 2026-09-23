@@ -2,7 +2,7 @@
 # Kopioi sovelluksen Documents/peli-komento.txt:ksi (ks. README-silmukka.md).
 # Kaupunkikortti (Natiivi-UI) on napautuksen ja matkavalinnan välissä: 'liiku' = kortin Liiku tänne.
 # Siemen 12345 laatoilla (266 laattaa): bussi Lontooseen 50 p, liftaus takaisin noppa 4.
-odota-tila kartta 40
+odota-tila kartta|aloitus 40
 uusi-peli 12345
 odota 2
 tila 1-alku

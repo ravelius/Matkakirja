@@ -84,6 +84,35 @@ namespace Matkakirja.Natiivi
             Julisteet.Skip(Math.Max(0, Julisteet.Count - 3)).Reverse().ToList();
     }
 
+    /// <summary>
+    /// Matkan yhteenveto (web matkanYhteenveto + natiiviMatkaTeksti): jakoteksti ja
+    /// kaikkien aarteiden virstanpylväs (PeliOhjain.KaikkiAarteetLoytyi).
+    /// </summary>
+    public sealed class MatkanYhteenveto
+    {
+        public int Paivat, Kaupungit, Aarteet, AarteitaKaikkiaan;
+        public bool KaikkiLoytyi => AarteitaKaikkiaan > 0 && Aarteet >= AarteitaKaikkiaan;
+
+        /// <summary>Web natiiviMatkaTeksti: "Matkakirja: 12 päivää, 30 kaupunkia, 2 unohdettua aarretta löytyi."</summary>
+        public string Teksti
+        {
+            get
+            {
+                string M(int n, string yksi, string monta) => $"{n} {(n == 1 ? yksi : monta)}";
+                return $"Matkakirja: {M(Paivat, "päivä", "päivää")}, {M(Kaupungit, "kaupunki", "kaupunkia")}, "
+                    + (Aarteet > 0 ? M(Aarteet, "unohdettu aarre", "unohdettua aarretta") + " löytyi" : "yksikään unohdettu aarre ei vielä löytynyt") + ".";
+            }
+        }
+
+        public static MatkanYhteenveto Laske(Matka m, LaukkuNaytto laukku) => new MatkanYhteenveto
+        {
+            Paivat = m.Tila.Paiva(),
+            Kaupungit = m.Tila.Pelaaja.Kaydyt.Count,
+            Aarteet = laukku.AarninLuettelo.Count(a => a.Loydetty),
+            AarteitaKaikkiaan = laukku.AarninLuettelo.Count,
+        };
+    }
+
     public static class Laukku
     {
         public const string JulisteJuuri = "https://media.matkakirja.app/julisteet/";
