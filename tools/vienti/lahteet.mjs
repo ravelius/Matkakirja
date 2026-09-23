@@ -51,6 +51,9 @@ export const LISAMODUULIT = [
   m('js/tietajatasot.js', ['TIETAJATASOT']),
   m('js/etusivupallo.js', ['ETUSIVUN_KUVAKIERTO', 'ETUSIVUN_REITTI']),
   m('js/livia.js', ['LIVIAN_AVAUS']),
+  // Natiivi-UI 23.9.2026: avausteksti, paikkarivi, aloitusnappi ja
+  // periaatelappu (js/ui.js tuo samat vakiot).
+  m('js/ui-tekstit.js', ['INTRO_TEXT', 'INTRO_PAIKKA', 'INTRO_VALINTA', 'PERIAATTEET']),
   m('js/pollo.js', ['LIVIAN_MIETINNAT', 'POLLO_AARRE']),
   m('js/game.js', ['ASKERS', 'MANNER_NIMET', 'FORM_WEIGHTS']),
   m('js/tokens.js', ['TOKEN_TYPES', 'PIENI_AARRE_ARVO', 'ISO_AARRE_ARVO']),
@@ -78,7 +81,9 @@ export const LISAMODUULIT = [
   m('js/tyohuone-musiikki.js', ['MUSIIKKISIVUN_RAIDAT', 'SFX_NIMET']),
   m('js/fokuskohteet.js', ['KOHDE_MAAT'], 'johdettu'),
   m('js/linssit/astronaut-kysymykset.js', ['ASTRONAUTIN_KYSYMYKSET'], 'linssi'),
-  m('js/linssit/ihmisen-matka-data.js', ['IHMISEN_MATKA', 'IHMISEN_MATKA_LISANOSTOT', 'IHMISEN_MATKA_KYSYMYKSET'], 'linssi'),
+  m('js/linssit/ihmisen-matka-data.js', ['IHMISEN_MATKA', 'IHMISEN_MATKA_LISANOSTOT', 'IHMISEN_MATKA_KYSYMYKSET',
+    // Natiivi-UI 23.9.2026: aloituskortin ja kaistan tekstit.
+    'IHMISEN_MATKA_ESITTELY', 'IHMISEN_MATKA_ALOITUS', 'IHMISEN_MATKA_KAISTASELITE', 'IHMISEN_MATKA_LOPPU'], 'linssi'),
   m('js/linssit/ihmisen-matka-kertomus.js', ['IHMISEN_MATKA_KERTOMUS'], 'linssi'),
   m('js/linssit/ihmisen-matka-kysymykset.js', ['IHMISEN_MATKAN_KYSYMYKSET'], 'linssi'),
   m('js/linssit/ihmisen-matka-virrat.js', ['IHMISEN_MATKA_VIRRAT', 'IHMISEN_MATKA_RETKI', 'IHMISEN_MATKA_VANHA', 'IHMISEN_MATKA_VANAT'], 'linssi'),

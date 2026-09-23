@@ -590,6 +590,7 @@ const MODULES = [
   // (pulmien generaattori tunnisteella, packien tekstipohjat).
   'js/pulmageneraattorit.js',
   'js/tekstipohja.js',
+  'js/ui-tekstit.js',
   'js/game.js',
   'js/ai.js',
   /*
