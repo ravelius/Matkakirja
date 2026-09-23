@@ -317,7 +317,7 @@ if (!kohdekansio || kohdekansio.startsWith('--')) {
     + '[--tasoja 8|9] '
     + '[--kaariminuutit 1|3] [--korkeuspalat <kansio>] [--vain-palat [tiedosto]] '
     + '[--vain-lista] [--paikkaus <lähdeversio>] '
-    + '[--nostotaso --nostoversio <v> [--nostomaa <ISO>] [--ilman-hahmotelmia [--polta-hahmotelmat t,t]] [--nostotasot <json>]] '
+    + '[--nostotaso --nostoversio <v> [--nostomaa <ISO>] [--ilman-hahmotelmia [--polta-hahmotelmat t,t]] [--nostotasot <json>] [--nostot-ilman-nimioita]] '
     + '[--nimiotaso --nimioversio <v> [--nimiot <json>] [--nimiot-aika pysyva]] '
     + '[--viivataso --viivaversio <v> [--eipiirit] [--eireitit] [--eirajat] [--eijoet]] '
     + '[--vesiviivoitus tihea|harva] [--syvyysportaat m,m,…] [--syvyyskayrat m,m,… [--syvyyskayrapeitto 0.55]] [--syvyyskohina lauta] [--paperirae ruutu] [--resepti-json <json>] [--joet-pohjaan] '
@@ -1029,7 +1029,13 @@ const yhdistaResepti = (pohja, muutos) => {
   }
   return ulos;
 };
-const PATINA_MUUTOS = {
+/*
+ * `--resepti-json` YHDISTETÄÄN LIPPUJEN PÄÄLLE SISÄKKÄIN (23.9.2026):
+ * `{"vesiviivoitus":{"harvennus":"haive"}}` muuttaa vain sen kentän
+ * `--vesiviivoitus tumma` -asetuksista. Ennen JSON korvasi koko avaimen,
+ * ja vesiviivoitus jäi ilman parametrejaan.
+ */
+const PATINA_MUUTOS = yhdistaResepti({
   ...(VESIVIIVOITUS_VALINTA ? { vesiviivoitus: VESIVIIVOITUKSET[VESIVIIVOITUS_VALINTA] } : {}),
   /*
    * `--paperirae ruutu` SAMMUTTAA PAPERIN HIENON RAKEEN MYÖS PATINASTA
@@ -1046,8 +1052,7 @@ const PATINA_MUUTOS = {
       rae: 0, raeKarkea: 0, kuitu: 0, kuituRisti: 0, klimppi: 0,
     },
   } : {}),
-  ...(RESEPTI_JSON ? JSON.parse(RESEPTI_JSON) : {}),
-};
+}, RESEPTI_JSON ? JSON.parse(RESEPTI_JSON) : null);
 const PATINA = PATINA_POHJA && Object.keys(PATINA_MUUTOS).length
   ? yhdistaResepti(PATINA_POHJA, PATINA_MUUTOS) : PATINA_POHJA;
 if (PATINA_TASO !== 'ei' && !PATINA) {
@@ -1273,17 +1278,27 @@ const NOSTOTASOT = valitsin('nostotasot', null) ? JSON.parse(readFileSync(valits
 const NOSTO_TASO1_KERROIN = 1.5;
 const NOSTO_TASO3_ALIN_Z = 7;
 const nostonTaso = (m) => Number(NOSTOTASOT?.[m.tunnus] ?? m.taso ?? 2) || 2;
+/*
+ * `--nostot-ilman-nimioita` (Fable 23.9.2026, paatokset 20.9.: kohdemaan
+ * nimiöt elävinä): nostotasolle palaa vain merkki (harmaa piste tai
+ * kuvamerkki), ei nimeä — peli piirtää nimen elävänä sovittelun läpi
+ * (js/pallo.js pallonNostonPisteLaatassa, koe `poltetutnostot`).
+ * Tiiviste ei muutu (se lasketaan merkin datasta ennen tätä), ja
+ * maan kirjaus saa kentän `nimiot: false`, josta peli tunnistaa tilan.
+ */
+const NOSTOT_ILMAN_NIMIOITA = lippu('nostot-ilman-nimioita');
 const poltettavatMerkit = nostot.merkit
   .filter((m) => m.poltettava && (!NOSTO_MAA || m.iso === NOSTO_MAA))
   .filter((m) => !ILMAN_HAHMOTELMIA || !String(m.tunnus ?? '').startsWith('hahmotelma-')
     || POLTETTAVAT_HAHMOTELMAT.has(String(m.tunnus ?? '')))
   .map((m) => {
     const taso = nostonTaso(m);
+    const nimio = NOSTOT_ILMAN_NIMIOITA ? { nimioNakyy: false } : {};
     if (taso === 1) {
       const kuva = NOSTOTASOT?.['@kuvat']?.[m.laji] ?? NOSTOTASOT?.['@kuvat']?.[m.symboli] ?? null;
-      return { ...m, taso, porras: m.porras * NOSTO_TASO1_KERROIN, nimioRajaton: true, ...(kuva ? { kuva } : {}) };
+      return { ...m, taso, porras: m.porras * NOSTO_TASO1_KERROIN, nimioRajaton: true, ...(kuva ? { kuva } : {}), ...nimio };
     }
-    return { ...m, taso };
+    return { ...m, taso, ...nimio };
   });
 if (NOSTOTASOT) {
   const n = [1, 2, 3].map((k) => poltettavatMerkit.filter((m) => m.taso === k).length);
@@ -4217,6 +4232,8 @@ function teeLuettelo() {
         tasot: omat.map((m) => m.z),
         nostot: poltettuLuettelo,
         laatastot,
+        // Nimet elävinä (ks. NOSTOT_ILMAN_NIMIOITA); kenttä puuttuu = nimet laatassa.
+        ...(NOSTOT_ILMAN_NIMIOITA ? { nimiot: false } : {}),
       },
     };
   })(),
