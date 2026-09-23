@@ -31,6 +31,8 @@ namespace Matkakirja.Natiivi
         Action peru, heita;
 
         public bool Auki { get; private set; }
+        /// <summary>Valinnan himmennys, jonka ensimmäinen lapsi on kortti (pulu hyppää sen yläpuolelle).</summary>
+        public VisualElement KorttiAlue => himmennys;
         public bool HeittoNakyy { get; private set; }
         public string Otsikko => Auki ? otsikko.text : null;
 

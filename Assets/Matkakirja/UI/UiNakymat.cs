@@ -30,6 +30,9 @@ namespace Matkakirja.Natiivi
         public readonly KysymysNakyma Kysymys;
         public readonly Karttaselite Karttaselite;
         public readonly Kartuscha Kartuscha;
+        public readonly Pulu Pulu;
+        public readonly Matkakirjakortti Matkakirja;
+        public readonly Saapumisesitys Saapuminen;
         public readonly Tietoja Tietoja;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
@@ -47,6 +50,8 @@ namespace Matkakirja.Natiivi
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         static void Nollaa() => instanssi = null; // editorin Enter Play Mode ilman domain reloadia
 
+        public static bool Olemassa => instanssi != null;
+
         public static UiNakymat Hae() => instanssi ??= new UiNakymat(UiKerros.Hae());
 
         UiNakymat(UiKerros kerros)
@@ -62,6 +67,11 @@ namespace Matkakirja.Natiivi
             Kysymys = new KysymysNakyma(kerros);
             Kartuscha = new Kartuscha(kerros);
             Karttaselite = new Karttaselite(kerros);
+            Matkakirja = new Matkakirjakortti(kerros);
+            Pulu = Natiivi.Pulu.Hae();
+            Saapuminen = new Saapumisesitys(Matkakirja, Pulu);
+            // Livia lennähtää paikalle, kun käyttöliittymä on valmis (webin ensisaapuminen: handoff).
+            kerros.Juuri(UiKerros.Tilarivi).schedule.Execute(() => Pulu.Tilanne("arrival")).StartingIn(1500);
             Tietoja = new Tietoja(kerros);
             Valikko.TietojaPainettu += Tietoja.Avaa;
             UiSisalto.Lataa(null); // kaupunkidata valmiiksi ennen ensimmäistä napautusta
@@ -96,9 +106,17 @@ namespace Matkakirja.Natiivi
                 if (!paalla) SuljeKaikki();
                 Kerros.Nayta(paalla);
                 KorvaaNimikortti(paalla);
+                Pulu.Nayta(paalla);
             };
             if (!o.Kaytossa) Kerros.Nayta(false);
             KorvaaNimikortti(o.Kaytossa);
+            Saapuminen.Kytke(o);
+            // Pelin tilanteet puluun (webin ilmoitaLivianTilanne; Pelikoodarin tapahtuma).
+            o.LivianTilanne += (laji, tunne, v) =>
+            {
+                if (laji == "tunne") Pulu.Tunne(tunne, v);
+                else Pulu.Tilanne(laji, null, tunne, v);
+            };
             // Lehti (WKWebView) aukeaa kaiken päälle: auki jääneet valikot kiinni.
             if (o.Lehti != null) o.Lehti.Avautui += _ => { Valikko.Sulje(); Aanentasot.Sulje(); Vahvistus.Sulje(); };
         }
