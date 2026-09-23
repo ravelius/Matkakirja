@@ -222,7 +222,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Web normalisoiSahketeksti: pienet, ei diakriitteja (ä → a), välimerkit välilyönneiksi.</summary>
         public static string Normalisoi(string teksti)
         {
-            var nfd = (teksti ?? "").ToLowerInvariant().Normalize(NormalizationForm.FormD);
+            // JS toLowerCase: İ → i + U+0307 (.NETin invariantti jättää İ:n ennalleen).
+            var nfd = (teksti ?? "").Replace("İ", "i\u0307").ToLowerInvariant().Normalize(NormalizationForm.FormD);
             var sb = new StringBuilder(nfd.Length);
             foreach (var c in nfd) if (c < '̀' || c > 'ͯ') sb.Append(c);
             return EiSanaa.Replace(sb.ToString(), " ").Trim();
@@ -246,7 +247,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Web ohilyonninSahke: pöllön paluusähke, kumpi aukko on pielessä.</summary>
         public static string OhilyonninSahke(Sahketehtava t, IReadOnlyList<SahkeAukko> vaarat)
         {
-            if (t.VaarinSahke != null && vaarat.Count == t.Aukot.Count) return t.VaarinSahke;
+            if (!string.IsNullOrEmpty(t.VaarinSahke) && vaarat.Count == t.Aukot.Count) return t.VaarinSahke;
             return $"EI TÄSMÄÄ STOP TARKISTA {string.Join(" JA ", vaarat.Select(a => a.SahkeSana ?? a.Otsake))} STOP";
         }
 

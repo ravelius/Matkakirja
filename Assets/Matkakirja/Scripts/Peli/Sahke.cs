@@ -1114,6 +1114,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Testeille: kesken oleva apu suoraan (kultainen tilankäsittely).</summary>
         internal void AsetaApu(Kaveriapu apu) => Apu = apu;
 
+        /// <summary>Testeille: linjan tila ilman terveystarkistusta (web asetaLinja).</summary>
+        internal void AsetaLinja(bool? auki) => Linja = auki;
+
         /// <summary>Uusi peli (web nollaaSahke): jono, apu ja virstanpylväät nollille; retkikunta säilyy.</summary>
         public void Nollaa()
         {
