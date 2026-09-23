@@ -10,9 +10,7 @@ using Matkakirja.Peli;
 namespace Matkakirja.Natiivi
 {
     /// <summary>Kysymyksen muoto näkymälle (Peli.KysymysMuoto ilman pelilogiikan riippuvuutta).</summary>
-    public enum KysymysLaji { Visa, Vaite, Kuva, Lippu, Pulma,
-        /// <summary>POISTUMASSA (tapahtumakortit poistettu, C1): ei enää aseteta; Natiivi-UI siivoaa käytön.</summary>
-        Tapahtumakortti }
+    public enum KysymysLaji { Visa, Vaite, Kuva, Lippu, Pulma }
 
     /// <summary>
     /// Avoimen kysymyksen näytettävä tila. Ohjain rakentaa tämän uudelleen jokaisen
@@ -540,6 +538,26 @@ namespace Matkakirja.Natiivi
         }
 
         static string Iso(string s) => string.IsNullOrEmpty(s) ? s : char.ToUpperInvariant(s[0]) + s.Substring(1);
+
+        /// <summary>
+        /// Lehden tehtävänappi (web ui.js tehtavaNapinTila): teksti ja harmaa (pois), tai null = ei nappia.
+        /// Kohtaaminen ratkaisee, kunnes se on pelattu; sitten pulma tai laatta ("Etsi kätkö"); muuten
+        /// tehtavaTarjolla. Nappi korvaa kaupunkikortin Tutki-rivin (Fablen tarkastus A6/B3).
+        /// </summary>
+        public static (string Teksti, bool Pois)? TehtavaNappi(Kysely ky, string kaupunki, Kohtaamiset ko = null, Pulmat pulmat = null)
+        {
+            if (ky == null || kaupunki == null) return null;
+            var m = ky.Matka;
+            var kaari = ky.KaariTilanne(kaupunki);
+            string omaNappi = ko != null && ko.Kaupungit.TryGetValue(kaupunki, out var k) ? k.Nappi : null;
+            string tapaa = omaNappi ?? (kaari?.Kohde.Nimi != null ? "Tapaa " + kaari.Value.Kohde.Nimi : "Etsi kätkö");
+            if (kaari.HasValue && ky.KaariTarina(kaupunki) != null)
+                return (kaari.Value.Yritykset > 0 ? "Viimeinen mahdollisuus tavata" : tapaa, false);
+            if (pulmat?.Odottaa() != null || m.LaattaKaupungissa() != null) return ("Etsi kätkö", false);
+            if (kaari.HasValue)
+                return kaari.Value.Onnistui ? (tapaa, true) : ((kaari.Value.Kohde.Nimi ?? "Henkilö") + " ei tavattavissa", true);
+            return ky.TehtavaTarjolla(m.Tila.Pelaaja) ? (tapaa, false) : ((string, bool)?)null;
+        }
 
         /// <summary>
         /// Rakentaa näytettävän tilan. osoitteet = kuva- tai lipputiedoston nimi →

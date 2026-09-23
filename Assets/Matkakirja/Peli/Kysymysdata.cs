@@ -43,6 +43,8 @@ namespace Matkakirja.Peli
     public sealed class KaariKysymys
     {
         public string Kaupunki;
+        /// <summary>Kohtaamisen henkilö (web TARINAKAARI[id].nimi): lehden tehtävänappi "Tapaa {Nimi}".</summary>
+        public string Nimi;
         public string Q;
         public List<string> Vaihtoehdot;
         public int Oikea;
@@ -164,6 +166,7 @@ namespace Matkakirja.Peli
                 Kaaret[id] = new KaariKysymys
                 {
                     Kaupunki = id,
+                    Nimi = MiniJson.Teksti(d, "nimi"),
                     Q = MiniJson.Teksti(k, "q"),
                     Vaihtoehdot = Tekstit(MiniJson.Kentta(k, "vaihtoehdot")),
                     Oikea = (int)(MiniJson.Luku(k, "oikea") ?? 0),
