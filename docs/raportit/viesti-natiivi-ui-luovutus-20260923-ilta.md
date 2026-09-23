@@ -54,7 +54,7 @@ Tämä jatkaa edellistä luovutusta `docs/raportit/viesti-natiivi-ui-luovutus-20
 
 ## Seuraavaksi (Fablen järjestys)
 
-1. **Nähtävyydet ja turistiopas.** Fablen mukaan nämä menevät B4:n edelle, koska ne ovat lehden ydin. Speksi oli agentilla kesken, ja se pitää tehdä uudelleen:
+1. **Nähtävyydet ja turistiopas.** Fablen mukaan nämä menevät B4:n edelle, koska ne ovat lehden ydin. Speksi on valmis tiedostossa `docs/raportit/natiivi-ui-nahtavyydet-opas-speksi-20260923.md` (kulku, arkki, kohdekartta UITK:lla, opas, Pelikoodarin `KaupunkiToiminnot.Nahtavyydet`/`Opas`, puuttuvat datat Siirtosepälle):
    - web: `js/nahtavyydet.js`, `js/opas.js`, `js/kaupunkinosto.js`
    - data: kokoelma `nahtavyydet` (1520 alkiota)
    - kaupunkikorttiin rivit "Nähtävyydet" ja "Turistiopas"
