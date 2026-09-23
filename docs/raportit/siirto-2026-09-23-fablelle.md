@@ -50,8 +50,6 @@ Kaikki muu: docs/raportit/viesti-fable-luovutus-20260923.md.
   luovutuksen; UUSI FABLE nollaa sen (kaava: RC pois → clear_session self → 75 s → aloitusviesti
   → RC päälle; muistio session-nollaus-automaattinen.md). Julkaisijan jäljellä oleva jono
   luovutuksessa.
-- Googlen 3D-laatat: maksullisuus ei ole este; tee lukutesti vanhan projektin avaimella 3D-
-  juuriosoitteeseen (avain ympäristöstä), 200 = oikeus voimassa nyt; Google-näkymä vain omana
-  koko ruudun näkymänä. Omistaja haluaa nykyajan näkymät isoisän näkökulman rinnalle.
+- Googlen 3D-laatat: OMISTAJAN PÄÄTÖS 11.35 — EI KÄYTETÄ OLLENKAAN. Nykyajan näkymät avoimella maastolla, omilla laatoilla ja kohdekohtaisilla 3D-malleilla; ei lukutestiä.
 - Codexin idle-QA-rajaus → Laitetestaajalle (loki 11.10). 94 ChatGPT-erän heron viitteet →
   kysymys omistajalle avoinna.
