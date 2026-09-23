@@ -263,5 +263,46 @@ namespace Matkakirja.Editori
             AsetaIos(iOSSdkVersion.DeviceSDK);
             Kaanna("Build/laite");
         }
+
+        /// <summary>
+        /// Xcode-projekti TestFlightiin: Build/testflight (Julkaisija arkistoi ja lähettää
+        /// pilviallekirjoituksella). Ympäristömuuttujat:
+        ///   MATKAKIRJA_BUNDLE_ID  (oletus app.matkakirja.proto3d)
+        ///   MATKAKIRJA_TEAM       maksullisen tiimin Team ID (oletus Personal Team F72JLS57C5)
+        ///   MATKAKIRJA_VERSIO     CFBundleShortVersionString (oletus 0.1.0)
+        ///   MATKAKIRJA_BUILD      CFBundleVersion, kasvava kokonaisluku (pakollinen)
+        /// Info.plistiin ITSAppUsesNonExemptEncryption = false (vain HTTPS).
+        /// </summary>
+        public static void IosTestFlight()
+        {
+            string Ymp(string nimi, string oletus) =>
+                string.IsNullOrEmpty(Environment.GetEnvironmentVariable(nimi)) ? oletus : Environment.GetEnvironmentVariable(nimi);
+            var build = Ymp("MATKAKIRJA_BUILD", null)
+                ?? throw new Exception("MATKAKIRJA_BUILD puuttuu (kasvava build-numero)");
+            AsetaIos(iOSSdkVersion.DeviceSDK);
+            PlayerSettings.SetApplicationIdentifier(UnityEditor.Build.NamedBuildTarget.iOS,
+                Ymp("MATKAKIRJA_BUNDLE_ID", "app.matkakirja.proto3d"));
+            PlayerSettings.iOS.appleDeveloperTeamID = Ymp("MATKAKIRJA_TEAM", "F72JLS57C5");
+            PlayerSettings.bundleVersion = Ymp("MATKAKIRJA_VERSIO", "0.1.0");
+            PlayerSettings.iOS.buildNumber = build;
+            TestFlightVienti = true;
+            try { Kaanna("Build/testflight"); }
+            finally { TestFlightVienti = false; }
+            Debug.Log($"MATKAKIRJA: TestFlight-vienti {PlayerSettings.applicationIdentifier} " +
+                      $"{PlayerSettings.bundleVersion} ({build}), tiimi {PlayerSettings.iOS.appleDeveloperTeamID}");
+        }
+
+        static bool TestFlightVienti;
+
+        [UnityEditor.Callbacks.PostProcessBuild(200)]
+        static void TestFlightPlist(BuildTarget kohde, string polku)
+        {
+            if (kohde != BuildTarget.iOS || !TestFlightVienti) return;
+            var plistPolku = Path.Combine(polku, "Info.plist");
+            var plist = new UnityEditor.iOS.Xcode.PlistDocument();
+            plist.ReadFromFile(plistPolku);
+            plist.root.SetBoolean("ITSAppUsesNonExemptEncryption", false);
+            plist.WriteToFile(plistPolku);
+        }
     }
 }
