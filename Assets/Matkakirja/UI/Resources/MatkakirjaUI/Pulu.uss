@@ -111,3 +111,242 @@
 .mk-kupla.mk-kupla--viimeinen .mk-kupla__hanta {
     display: flex;
 }
+
+/* --- matkakirjakortti (webin .fact-card, css/styles.css 4755–4910, 9698–9900) --- */
+
+.mk-matkakirja {
+    position: absolute;
+    left: 10px;
+    width: 340px;
+    max-width: 62%;
+    max-height: 60%;
+    padding: 9px 12px 11px 12px;
+    border-width: 1px;
+    border-color: var(--line);
+    border-radius: 12px;
+    background-color: var(--panel);
+    overflow: hidden;
+}
+
+.mk-matkakirja__ylarivi {
+    flex-direction: row;
+    align-items: center;
+    min-height: 24px;
+}
+
+.mk-matkakirja__otsikko {
+    flex-grow: 1;
+    flex-shrink: 1;
+    font-size: 12.5px;
+    letter-spacing: 1.2px;
+    color: var(--accent);
+    white-space: normal;
+}
+
+.mk-matkakirja__otsikko--paikka {
+    font-size: 13.8px;
+    letter-spacing: 0;
+    color: var(--ink-light);
+}
+
+.mk-matkakirja__lyhyt {
+    display: none;
+}
+
+.mk-matkakirja__tunnelma {
+    font-size: 11.8px;
+    -unity-font-style: italic;
+    color: var(--muted);
+    white-space: normal;
+    margin: 1px 0 6px 0;
+}
+
+.mk-matkakirja__teksti {
+    font-size: 13.5px;
+    color: var(--ink-light);
+    white-space: normal;
+}
+
+.mk-matkakirja__pikkukuvat {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.mk-matkakirja__pikkukuva {
+    width: 54px;
+    height: 40px;
+    margin: 0 6px 4px 0;
+    border-width: 1px;
+    border-color: rgba(247, 241, 226, 0.6);
+    border-radius: 3px;
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+/* Pieni: yhden rivin pergamenttikaistale (napautus avaa). */
+.mk-matkakirja.mk-matkakirja--pieni {
+    padding: 4px 10px 4px 10px;
+    max-height: 34px;
+    background-color: rgba(244, 231, 202, 0.86);
+    border-color: rgba(122, 85, 20, 0.32);
+    -unity-background-image-tint-color: rgba(0, 0, 0, 0);
+}
+
+.mk-matkakirja--pieni .mk-matkakirja__otsikko,
+.mk-matkakirja--pieni .mk-matkakirja__tunnelma,
+.mk-matkakirja--pieni .mk-matkakirja__teksti,
+.mk-matkakirja--pieni .mk-matkakirja__pikkukuvat,
+.mk-matkakirja--pieni .mk-matkakirja__kaiutin {
+    display: none;
+}
+
+.mk-matkakirja--pieni .mk-matkakirja__lyhyt {
+    display: flex;
+    flex-grow: 1;
+    font-size: 12.5px;
+    color: #211d18;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mk-matkakirja__kaiutin {
+    width: 30px;
+    height: 30px;
+    min-height: 30px;
+    padding: 0;
+    margin-left: 6px;
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--ink-light);
+}
+
+.mk-kaiutin {
+    width: 20px;
+    height: 20px;
+}
+
+.mk-kaiutin__osa {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    margin-right: 0;
+}
+
+.mk-kaiutin__kaari {
+    opacity: 0.2;
+}
+
+.mk-kaiutin__vinoviiva {
+    display: none;
+    position: absolute;
+    left: 9px;
+    top: -1px;
+    width: 2px;
+    height: 22px;
+    rotate: -45deg;
+    background-color: var(--ink-light);
+}
+
+.mk-mykistetty .mk-kaiutin__vinoviiva {
+    display: flex;
+}
+
+.mk-mykistetty .mk-kaiutin__kaari {
+    opacity: 0.2;
+}
+
+/* --- luentakuvat (webin .fokusvirta-isokuva) ------------------------------- */
+
+.mk-kuvapakka {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.mk-kuvakortti {
+    position: absolute;
+    width: 78%;
+    max-width: 420px;
+    padding: 7px 7px 0 7px;
+    background-color: #f7f1e2;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.35);
+    opacity: 0;
+    transition-property: opacity, translate;
+    transition-duration: 0.4s, 0.6s;
+    transition-timing-function: ease-out, ease-in;
+}
+
+.mk-kuvakortti.mk-auki {
+    opacity: 1;
+}
+
+.mk-kuvakortti.mk-kuvakortti--lahtee {
+    opacity: 0;
+    translate: -40% -60%;
+}
+
+.mk-kuvakortti__kuva {
+    width: 100%;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.mk-kuvakortti__teksti {
+    font-size: 11.5px;
+    color: #3a2a1c;
+    white-space: normal;
+    -unity-text-align: middle-center;
+    padding: 5px 4px 6px 4px;
+}
+
+.mk-ohita {
+    position: absolute;
+    bottom: 110px;
+    left: 50%;
+    translate: -50% 0;
+    min-height: 34px;
+    padding: 4px 16px;
+    border-color: rgba(70, 51, 31, 0.5);
+    background-color: rgba(247, 241, 226, 0.92);
+    color: var(--map-ink);
+}
+
+.mk-ohita .mk-nappi__teksti {
+    font-size: 13.5px;
+    letter-spacing: 1px;
+}
+
+/* --- suurennos ------------------------------------------------------------ */
+
+.mk-suurennos {
+    flex-direction: column;
+}
+
+.mk-suurennos__kuva {
+    width: 100%;
+    height: 62%;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.mk-suurennos__teksti {
+    max-width: 520px;
+    margin-top: 12px;
+    font-size: 15px;
+    color: var(--ink-light);
+    white-space: normal;
+    -unity-text-align: middle-center;
+}
+
+.mk-suurennos__lahde {
+    margin-top: 6px;
+    font-size: 11px;
+    color: var(--muted);
+    -unity-text-align: middle-center;
+}

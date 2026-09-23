@@ -115,3 +115,23 @@ odota 3
 kuva kysymys-kohtaaminen
 ui sulje
 ```
+
+Pulu ja luennat (erä 5):
+
+```
+ui pulu sano Minä olen Livia. Kirjekyyhky, en mikään pulu.
+odota 2
+kuva pulu-kupla
+ui pulu aani avaus 1
+odota 3
+kuva pulu-puhuu
+ui pulu ele flyAway
+odota 1
+kuva pulu-lento
+ui luento ateena
+odota 4
+kuva luento-kortti
+ui luento ateena loppu
+odota 5
+kuva luento-pulu
+```

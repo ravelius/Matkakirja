@@ -13,6 +13,7 @@
 //   ui selite                                 karttaselite auki
 //   ui pulu sano [teksti] | aani [lähde n] | ele id | tilanne laji | tunne t | pois | paalle
 //   ui tietoja                                tekijätiedot ja lähteet
+//   ui luento [kaupunki] [loppu]              matkakirjakortti + luentakuvat (oletus ateena); loppu = Livian vuoro
 //   ui kartuscha [ISO3] [auki]                kartuscha maalle ilman peliä (oletus ITA)
 //   ui heitto [teksti]                        kartan toimintonappi näkyviin
 //   ui viesti teksti                          tilarivin hetkellinen viesti
@@ -126,6 +127,13 @@ namespace Matkakirja.Natiivi
                         case "paalle": pu.Nayta(true); return null;
                         default: return "ui pulu sano|aani|ele|tilanne|tunne|pois|paalle";
                     }
+                }
+                case "luento":
+                {
+                    var lk = loput.Split(' ');
+                    string kaup = lk[0].Length > 0 ? lk[0] : "ateena";
+                    if (lk.Length > 1 && lk[1] == "loppu") ui.Saapuminen.Loppui(kaup); else ui.Saapuminen.Alkoi(kaup);
+                    return null;
                 }
                 case "tietoja": ui.Tietoja.Avaa(); return null;
                 case "selite": ui.Karttaselite.Avaa(); return UiPalvelut.KarttaValot == null ? "ei KarttaValot-palvelua: vain selitykset" : null;
