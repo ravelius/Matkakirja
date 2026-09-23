@@ -15,8 +15,9 @@ lupaa.** Asemalista ja perusteet ovat liitteessä
   docs/raportit/radio-korvaavat-asemat-20260923.md). Omistajan päätös
   23.9.2026: kiellettyjä yleisradioita ei viedä pakettiin lainkaan, vaan ne
   ovat vain lisenssi-inventaariossa.
-- Luokat: korvaavista 5 sallittu (ByteFM, ORANGE 94.0, RaBe, BNR, 3RRR) ja
-  12 epaselva; muut 98 maata epaselva. Kielletyt 17 yleisradiota eivät ole
+- Luokat: korvaavista 4 sallittu (ByteFM, ORANGE 94.0, BNR, 3RRR) ja
+  13 epaselva (Radio RaBe vaihdettu Radio Vostokiin 23.9.2026: palvelin ei
+  täytä iOS:n TLS-vaatimusta); muut 98 maata epaselva. Kielletyt 17 yleisradiota eivät ole
   paketissa.
 - Nimi ja linkki aseman sivulle ovat sallittuja ilman lupaa. Logoja ei
   käytetä ilman aseman lupaa.
@@ -35,7 +36,7 @@ yleiseen osoitteeseen tai lomakkeeseen.
 | 2 | AUT | ORANGE 94.0 (Wien) | sallittu | https://o94.at/ |
 | 3 | BEL | Urgent.fm 105.3 (Gent) | epaselva | https://urgent.fm/ |
 | 4 | CAN | CFRO Vancouver Co-op Radio 100.5 (Vancouver) | epaselva | https://www.coopradio.org/ |
-| 5 | CHE | Radio RaBe 95,6 (Bern) | sallittu | https://rabe.ch/ |
+| 5 | CHE | Radio Vostok (Geneve) | epaselva | https://www.radiovostok.ch/ |
 | 6 | DEU | ByteFM (Hampuri) | sallittu | https://www.byte.fm/ |
 | 7 | DNK | Radio4 (Kööpenhamina) | epaselva | https://radio4.dk/ |
 | 8 | ESP | Radio Vallekas 107.5 (Madrid) | epaselva | https://www.radiovallekas.org/ |
