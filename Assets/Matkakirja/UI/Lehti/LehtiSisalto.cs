@@ -57,7 +57,32 @@ namespace Matkakirja.Natiivi
         public List<(string Otsikko, List<LehtiListaKohde> Kohteet)> Lista = new List<(string, List<LehtiListaKohde>)>();
         /// <summary>Aihe on lainattu maalehdestä (Menovinkit kaupunkilehden lopussa): lippu otsikkoon.</summary>
         public string LainattuMaasta;
+        /// <summary>Turistiopas (matkailijalle.artikkeli, taitto "opas") tai null.</summary>
+        public OpasArtikkeli Opas;
     }
+
+    /// <summary>Turistioppaan artikkeli (web kaupunkilehdet → kansi.matkailijalle.artikkeli, js/opas.js).</summary>
+    public sealed class OpasArtikkeli
+    {
+        public string Kaupunki, Nimi, Teksti, Nosto, Lahde, ParasAika;
+        public List<OpasJakso> Jaksot = new List<OpasJakso>();
+        /// <summary>"Parasta täällä" (Tahdet 0–3) ja "Hyvä tietää" (Tahdet null).</summary>
+        public List<OpasRivi> Parasta = new List<OpasRivi>(), HyvaTietaa = new List<OpasRivi>();
+        public List<OpasKausi> Kaudet = new List<OpasKausi>();
+        public List<(string Nimi, string Url)> Linkit = new List<(string, string)>();
+    }
+
+    public sealed class OpasJakso
+    {
+        public string Otsikko, Teksti;
+        public List<LehtiKuva> Kuvat = new List<LehtiKuva>();
+        /// <summary>Ensimmäisen kuvan asettelu "kapea": kuva kelluu oikealla 40 %.</summary>
+        public bool Kapea;
+    }
+
+    public sealed class OpasRivi { public string Nimi, Selite; public int? Tahdet; }
+
+    public sealed class OpasKausi { public string Nimi, Kk, Lampotila, Kuvaus; }
 
     public enum LehtiSivuLaji { Etusivu, Aihe }
 
@@ -212,7 +237,12 @@ namespace Matkakirja.Natiivi
             Kuvat(MiniJson.Kentta(o, "avauskuvat"), a.Avauskuvat);
             Kuvat(MiniJson.Kentta(o, "ennenNyt"), a.EnnenNyt);
             var mk = Ob(MiniJson.Kentta(o, "matkailijalle"));
-            if (mk != null) { a.MatkailijalleKappale = T(mk, "kappale"); a.MatkailijalleKuva = Kuva(Ob(MiniJson.Kentta(mk, "kuva"))); }
+            if (mk != null)
+            {
+                a.MatkailijalleKappale = T(mk, "kappale");
+                a.MatkailijalleKuva = Kuva(Ob(MiniJson.Kentta(mk, "kuva")));
+                a.Opas = Opas(Ob(MiniJson.Kentta(mk, "artikkeli")));
+            }
             foreach (var r in (Rakenne.Lista(MiniJson.Kentta(o, "lista")) ?? new List<object>()).Select(Ob).Where(x => x != null))
             {
                 var kohteet = new List<LehtiListaKohde>();
@@ -222,6 +252,47 @@ namespace Matkakirja.Natiivi
             }
             return a;
         }
+
+        static List<Dictionary<string, object>> Oliot(object arvo) =>
+            (Rakenne.Lista(arvo) ?? new List<object>()).Select(Ob).Where(x => x != null).ToList();
+
+        static OpasArtikkeli Opas(Dictionary<string, object> o)
+        {
+            if (o == null || string.IsNullOrEmpty(T(o, "teksti"))) return null;
+            var a = new OpasArtikkeli { Nimi = T(o, "nimi"), Teksti = T(o, "teksti"), Nosto = T(o, "nosto"), Lahde = T(o, "lahde") };
+            foreach (var j in Oliot(MiniJson.Kentta(o, "jaksot")))
+            {
+                var jakso = new OpasJakso { Otsikko = T(j, "otsikko"), Teksti = T(j, "teksti") };
+                var kv = MiniJson.Kentta(j, "kuva");
+                var kuvat = Rakenne.Lista(kv) != null ? Oliot(kv) : (Ob(kv) is Dictionary<string, object> yksi ? new List<Dictionary<string, object>> { yksi } : new List<Dictionary<string, object>>());
+                foreach (var k in kuvat) if (Kuva(k) is LehtiKuva lk) jakso.Kuvat.Add(lk);
+                jakso.Kapea = kuvat.Count > 0 && T(kuvat[0], "asettelu") == "kapea";
+                a.Jaksot.Add(jakso);
+            }
+            var m = Ob(MiniJson.Kentta(o, "matkailu"));
+            if (m != null)
+            {
+                a.ParasAika = T(m, "parasAika");
+                foreach (var x in Oliot(MiniJson.Kentta(m, "parasta")))
+                    a.Parasta.Add(new OpasRivi { Nimi = T(x, "mita"), Selite = T(x, "selite"), Tahdet = (int)Math.Round(MiniJson.Luku(x, "tahdet") ?? 0) });
+                foreach (var x in Oliot(MiniJson.Kentta(m, "hyvaTietaa")))
+                    a.HyvaTietaa.Add(new OpasRivi { Nimi = T(x, "otsikko"), Selite = T(x, "teksti") });
+                foreach (var x in Oliot(MiniJson.Kentta(m, "kaudet")))
+                    a.Kaudet.Add(new OpasKausi { Nimi = T(x, "nimi"), Kk = T(x, "kk"), Lampotila = T(x, "lampotila"), Kuvaus = T(x, "kuvaus") });
+                foreach (var x in Oliot(MiniJson.Kentta(m, "linkit")))
+                    if (T(x, "url") is string url) a.Linkit.Add((T(x, "nimi") ?? url, url));
+            }
+            return a;
+        }
+
+        /// <summary>Kaupungin turistiopas (null = ei opasta). Lataa kaupunkilehdet tarvittaessa.</summary>
+        public static void HaeOpas(string kaupunki, Action<OpasArtikkeli> valmis) =>
+            UiKerros.Hae().StartCoroutine(Hae(LehtiLaji.Kaupunki, kaupunki, l =>
+            {
+                var o = l?.Sivut.Select(x => x.Aihe?.Opas).FirstOrDefault(x => x != null);
+                if (o != null) o.Kaupunki = kaupunki;
+                valmis(o);
+            }));
 
         static void Kuvat(object arvo, List<LehtiKuva> kohde)
         {

@@ -9,6 +9,7 @@
 //   [ kansikuva, kuvateksti ja lähde ]
 //   Johdanto (lehden "kaupunki"-aiheen johdanto)
 //   [lehti]   Lue kaupunkilehti   · Nykytaide, Luonto …
+//   [kirja]   Turistiopas          (web liuskan rivi: kaupungilla on oppaan artikkeli)
 //   [kompassi] Liiku tänne
 //   [kone]    Mannerlento (300 £)    (omassa kaupungissa, mantereen aarre löytynyt)
 //                              [Sulje]
@@ -38,6 +39,7 @@ namespace Matkakirja.Natiivi
         readonly VisualElement lippu;
         KaupunkiToiminnot toiminnot;
         string kaupunki;
+        OpasArtikkeli opas;
 
         public bool Auki { get; private set; }
         /// <summary>Kortin alue (pulu hyppää kortin yläpuolelle).</summary>
@@ -96,6 +98,7 @@ namespace Matkakirja.Natiivi
         public void Nayta(string kaupunkiId, string nimi, KaupunkiToiminnot t)
         {
             kaupunki = kaupunkiId;
+            opas = null;
             toiminnot = t ?? new KaupunkiToiminnot();
             nimio.text = (nimi ?? kaupunkiId ?? "").ToUpperInvariant();
             maa.text = "";
@@ -148,6 +151,13 @@ namespace Matkakirja.Natiivi
                 });
             }
             RakennaRivit(k);
+            // Turistiopas-rivi, kun oppaan artikkeli on (kaupunkilehdet ladataan tarvittaessa).
+            LehtiSisalto.HaeOpas(k.Id, o =>
+            {
+                if (o == null || !Auki || kaupunki != k.Id) return;
+                opas = o;
+                RakennaRivit(k);
+            });
         }
 
         void RakennaRivit(KaupunkiTiedot k)
@@ -158,6 +168,11 @@ namespace Matkakirja.Natiivi
             {
                 string aiheet = k != null && k.Aiheet.Count > 0 ? string.Join(" · ", k.Aiheet.GetRange(0, Mathf.Min(3, k.Aiheet.Count))) : null;
                 Rivi(LehtiIkoni, "Lue kaupunkilehti", aiheet, t.LueLehti);
+            }
+            if (opas != null)
+            {
+                var o = opas;
+                Rivi(Ikonit.Viiva["kirja"], "Turistiopas", null, () => UiNakymat.Hae()?.Nahtavyydet.AvaaOpas(o));
             }
             // Tutki kaupunkia -riviä ei ole (Fablen tarkastus A6: fokusmoodi korvaa, Pelikoodarin vihreä piste).
             if (t.Mannerlento != null) Rivi(Ikonit.Viiva["kone"], t.MannerlentoTeksti ?? "Mannerlento", null, t.Mannerlento);

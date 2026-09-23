@@ -91,6 +91,13 @@ namespace Matkakirja.Natiivi
             return b;
         }
 
+        /// <summary>Katkaisija: sama ankkuri sulkee, muu avaa (web opas-vyo-nappi).</summary>
+        public static void Vaihda(VisualElement a, string teksti)
+        {
+            if (ankkuri == a) Sulje();
+            else Avaa(a, teksti);
+        }
+
         public static void Avaa(VisualElement a, string teksti)
         {
             Sulje();

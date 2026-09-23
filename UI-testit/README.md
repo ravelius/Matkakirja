@@ -232,6 +232,24 @@ kuva aarni-seloste
 ui sulje
 ```
 
+Turistiopas ja nähtävyysarkki (`Nahtavyysarkki.cs`, `Saagraafi.cs`; web js/opas.js, js/nahtavyydet.js):
+kaupunkikortin rivi "Turistiopas" (kun kaupungilla on oppaan artikkeli) ja lehden etusivun
+Matkailijalle-lohko (vino MATKAOPAS-nauha, kuvan napautus, "Lue lisää matkailijan oppaasta →")
+avaavat oppaan: iso otsikko ja kaiutin, ingressi, "Parasta täällä / Hyvä tietää" -kainalo (rivin
+napautus → pikkuseloste), jaksot kuvineen, "Milloin matkaan?" säägraafilla (napautus → iso
+graafi), nosto ja "Suunnittele matka" -linkit. Leveällä (≥ 640 pt) kainalo ja kapeat kuvat
+tekstin rinnalla, puhelimessa allekkain. `ui opas [kaupunki] [vieritys px]`.
+
+```
+ui opas lontoo
+odota 4
+kuva opas-alku
+ui opas lontoo 900
+odota 4
+kuva opas-kainalo-saa
+ui sulje
+```
+
 Offline-latauksen tila (`OfflineTilaUi.cs`): pilleri yläpalkin alla vasemmalla näkyy, kun
 lataus on käynnissä tai verkkoa ei ole; napautus avaa ratas-paneelin. `ui offline demo`
 vaihtaa tilalle keksityn palvelun (Ranska latautuu ~6 s ja valmistuu, Italia epäonnistuu
