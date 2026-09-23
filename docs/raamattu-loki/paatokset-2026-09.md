@@ -1679,3 +1679,7 @@ Omistaja klo 09.0x. Toteutus: puoli lukitaan koko näkyvyyden ajaksi zoomista ri
 ## OMISTAJA: 'RIISUTAAN KARTALTA KAIKKI YLIMAARAISET ELEMENTIT JA KATSOTAAN LOPPUUKO TOKKIMINEN' → SYOTEKOE-VALIKKOON 5 'PALJAS KARTTA' (?koe=paljas: VAIN LAATAT + VETO; POIS NIMIOT, SYMBOLIT, GL-RUNKO, ILMAKEHA/POHJA, HAIVYTYS, LEPOPIIRTO, PULU, DOM-KERROKSET, PIENI LIIKE; OVERLAY 1 s VALEIN) JA 6–8 PUOLITUSTILAT (+NIMIOT, +SYMBOLIT, +DOM) (23.9.2026 klo 09.17)
 
 Klo 09.21. Pelikoodari tekee pienen PR:n heti; tarkoitus on puolittaa syy: jos paljas on sulava, kerrokset takaisin yksi kerrallaan; jos paljaskin nykii, syy on laattapiirrossa tai syötteessä.
+
+## OMISTAJAN TARKENNUS: PALJAAN KARTAN PAALLE KYTKINRYHMA 'KERROKSET' (NIMIOT, SYMBOLIT, GL-RUNKO, ILMAKEHA/POHJA, HAIVYTYS, LEPOPIIRTO, PULU, DOM-KERROKSET, PIENI LIIKE) YKSI KERRALLAAN PAALLE/POIS — KIINTEIDEN PUOLITUSTILOJEN SIJAAN; OVERLAY LISTAA PAALLA OLEVAT (23.9.2026 klo 09.21)
+
+Klo 09.25. Kytkimet näkyvät vain Paljas kartta -tilassa, tallentuvat, voimaan latauksessa; liput myös osoitteessa. Sama PR Pelikoodarilta.
