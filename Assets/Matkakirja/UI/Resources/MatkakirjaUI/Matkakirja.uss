@@ -2216,3 +2216,25 @@
     left: 16px;
     top: 6px;
 }
+
+/* Mitä uutta / Peli päivittyi (MitaUutta.cs, web .muutokset-lista li: versio lihavoituna, teksti perään). */
+.mk-muutos {
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.mk-muutos__versio {
+    min-width: 58px;
+    margin-right: 8px;
+    font-size: 14px;
+    color: #46331f;
+}
+
+.mk-muutos__teksti {
+    flex-shrink: 1;
+    flex-grow: 1;
+    font-size: 15px;
+    white-space: normal;
+    color: #3a2a1a;
+}

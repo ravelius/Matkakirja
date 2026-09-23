@@ -144,6 +144,9 @@ namespace Matkakirja.Natiivi
                         // Maa talteen dataan (skandaalin ja hetken minitehtävän avain).
                         var data = Ob(MiniJson.Kentta(o, "data")) ?? o;
                         if (T(o, "maa") != null && !data.ContainsKey("$maa")) data["$maa"] = T(o, "maa");
+                        // Skeema 1.20+: tyypitetty kuva.url on valmis osoite (esim. elaintayt: tunnus tai
+                        // assets/elaimet/… → kohtaamiset/elaimet/…); data.kuva on vain raaka arvo.
+                        if (T(Ob(MiniJson.Kentta(o, "kuva")), "url") is string url && !data.ContainsKey("$kuvaUrl")) data["$kuvaUrl"] = url;
                         taulu[aid] = data;
                     }
                 }
@@ -241,7 +244,7 @@ namespace Matkakirja.Natiivi
             string vara = elain == null ? null : char.ToUpperInvariant(elain[0]) + elain.Substring(1)
                 + (UiSisalto.Maa(iso)?.Nimi is string maa ? ", " + maa : "");
             if (MiniJson.Kentta(d, "kuvat") is List<object> kk && kk.Count > 0) Kuvat(n, kk, "url");
-            else if (T(d, "kuva") is string k) n.Kuvat.Add(new NostoKuva { Lahde = k, Lyhyt = vara, Selite = vara });
+            else if ((T(d, "$kuvaUrl") ?? T(d, "kuva")) is string k) n.Kuvat.Add(new NostoKuva { Lahde = k, Lyhyt = vara, Selite = vara });
             foreach (var x in n.Kuvat) { x.Lyhyt ??= vara; x.Selite ??= x.Lyhyt; }
             return n;
         }

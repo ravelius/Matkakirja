@@ -10,8 +10,9 @@
 //                alhaalla linkki "Oppiminen on hauskaa" (periaatteet).
 //                Tallennettu matka (PeliOhjain.TallennusOn): "Jatka matkaa" (kulta) ja
 //                "Uusi matka" (haamu) — webissä tallennus jatkuu ilman porttia.
-// ALOITUSKAAVA (omistaja 23.9.2026, Raamattu, sitova): portti → kartta (lähtökaupungit korostettuina,
-// napautus + vahvistus) → suoraan lentoon Lontoosta valittuun kaupunkiin (kamera ja lentokaari
+// ALOITUSKAAVA (omistaja 23.9.2026, Raamattu, sitova; Fablen tarkennus 24.9.): portti → kartta
+// (lähtökaupungit korostettuina, napautus valitsee suoraan kuten webin doPickStart, ei vahvistusta)
+// → lento Lontoosta valittuun kaupunkiin (kamera ja lentokaari
 // Natiivisepältä, koneen ääni ja isoisän intro-luenta Pelikoodarilta). Avausteksti naputetaan
 // LENNON AIKANA pallon päälle pergamenttikaistaleelle (LentoKirjoitus), ei omalle ruudulleen.
 // Alla vaiheet 2 ja 3 kuvaavat osia, joista kaava koostuu.
@@ -514,26 +515,14 @@ namespace Matkakirja.Natiivi
 
         void KaupunkiValittu(string id)
         {
-            if (ValitseePallolla && valintaIdt.Contains(id)) UiKerros.PaaSaikeessa(() => Vahvista(id));
+            if (ValitseePallolla && valintaIdt.Contains(id)) UiKerros.PaaSaikeessa(() => Valitse(id));
         }
 
         void PisteValittu(string pid)
         {
             if (!ValitseePallolla || pid == null || !pid.StartsWith(PisteEtuliite)) return;
             string id = pid.Substring(PisteEtuliite.Length);
-            if (valintaIdt.Contains(id)) UiKerros.PaaSaikeessa(() => Vahvista(id));
-        }
-
-        /// <summary>Aloituskaava: napautus + vahvistus. Peruutus jättää valinnan kartalle.</summary>
-        void Vahvista(string id)
-        {
-            var v = UiNakymat.Olemassa ? UiNakymat.Hae().Vahvistus : null;
-            if (v == null) { Valitse(id); return; }
-            if (v.Auki) return;
-            var k = UiSisalto.Kaupunki(id);
-            string nimi = k?.Nimi ?? id;
-            v.Kysy(nimi, string.IsNullOrEmpty(k?.MaaNimi) ? "Lennät Lontoosta tänne ja matka alkaa." : k.MaaNimi + ". Lennät Lontoosta tänne ja matka alkaa.",
-                "Valitse toinen", "Aloita täältä", () => { if (ValitseePallolla) Valitse(id); });
+            if (valintaIdt.Contains(id)) UiKerros.PaaSaikeessa(() => Valitse(id));
         }
 
         void LopetaPallovalinta()

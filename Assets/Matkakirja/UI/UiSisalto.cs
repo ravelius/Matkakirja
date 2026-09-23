@@ -310,7 +310,9 @@ namespace Matkakirja.Natiivi
                     kaikki.Add(new JulisteTiedot
                     {
                         Id = MiniJson.Teksti(a, "id") ?? id, Kaupunki = id, KaupunkiNimi = MiniJson.Teksti(d, "kaupunki"),
-                        Tiedosto = MiniJson.Teksti(d, "tiedosto"), Otsikko = MiniJson.Teksti(d, "otsikko"),
+                        // Skeema 1.20: kuva.url valmiina; vanhempi paketti: tiedosto (Kuvat.Reitit → julisteet/).
+                        Tiedosto = MiniJson.Teksti(MiniJson.Objekti(MiniJson.Kentta(a, "kuva")), "url") ?? MiniJson.Teksti(d, "tiedosto"),
+                        Otsikko = MiniJson.Teksti(d, "otsikko"),
                         Lyhyt = MiniJson.Teksti(d, "lyhyt"), Selite = MiniJson.Teksti(d, "selite"),
                     });
                 if (id == null || d == null || !t.TryGetValue(id, out var k) || k.JulisteTiedosto != null) continue;
