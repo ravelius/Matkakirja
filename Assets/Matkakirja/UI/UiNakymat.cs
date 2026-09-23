@@ -38,6 +38,8 @@ namespace Matkakirja.Natiivi
         public readonly PuluChat Chat;
         public readonly Saapumistraileri Traileri;
         public readonly Tietoja Tietoja;
+        /// <summary>"Kerro mitä huomasit": ehdotus, kuvavinkki ja pro (webin naytaPalauteKulmasta).</summary>
+        public readonly PalauteIkkuna Palaute;
         public readonly LinssiUi Linssit;
         public readonly Aloitusnakyma Aloitus;
         public readonly Huipennus Huipennus;
@@ -117,6 +119,7 @@ namespace Matkakirja.Natiivi
             // Livia lennähtää paikalle, kun käyttöliittymä on valmis (webin ensisaapuminen: handoff).
             kerros.Juuri(UiKerros.Tilarivi).schedule.Execute(() => Pulu.Tilanne("arrival")).StartingIn(1500);
             Tietoja = new Tietoja(kerros);
+            Palaute = new PalauteIkkuna(kerros); // hampurilaisen "ehdota sisältöä"
             Valikko.MitaUutta.TarkistaPaivitys(); // web: "Peli päivittyi", kun laitteella oli aiempi versio
             Aloitus = new Aloitusnakyma(kerros);
             Huipennus = new Huipennus(kerros);
@@ -143,6 +146,7 @@ namespace Matkakirja.Natiivi
             // Linssit (valitsin, peite, selite, astronautti, vertailu, aikajanat): kartuschan ja selitteen jälkeen.
             Linssit = new LinssiUi(kerros, this);
             Valikko.TietojaPainettu += Tietoja.Avaa;
+            Valikko.EhdotaPainettu += () => Palaute.Avaa();
             Tilarivi.LogoPainettu += () => { Valikko.Sulje(); Aanentasot.Sulje(); Matkalaukku.Sulje(); Tietoja.Avaa(); };
             UiSisalto.Lataa(null); // kaupunkidata valmiiksi ennen ensimmäistä napautusta
 
@@ -279,6 +283,7 @@ namespace Matkakirja.Natiivi
             Karttaselite.Maakunnat.SuljeKortti();
             Kartuscha.Sulje();
             Tietoja.Sulje();
+            Palaute.Sulje();
             Linssit.SuljeValikot();
             Chat.Sulje();
         }
