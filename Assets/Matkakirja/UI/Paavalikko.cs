@@ -4,6 +4,8 @@
 //            [nuotti] Musiikki      PÄÄLLÄ
 //            [kaiutin] Äänimaisema  PÄÄLLÄ
 //   KARTTA   [aalto]  Pieni liike   PÄÄLLÄ
+//   RETKIKUNTA (sähkelinja, UI/Sahke/SahkeNakyma rakentaa; piilossa, kunnes linjan tila selviää;
+//            web retkikuntaOsio asuu hampurilaisen palautelomakkeessa)
 //   KOKEET   [satelliitti] Astronautin reliefi  TÄYSI | VAIMEA
 //            (omistajan TestFlight-vertailu 24.9.2026: kylläisyys 1,0 vs. webin 0,8;
 //            LinssiOhjain.AsetaAstronautinKyllaisyys, muistetaan, näkyy seuraavalla
@@ -37,6 +39,8 @@ namespace Matkakirja.Natiivi
         public event Action UusiPeli;
         /// <summary>"tekijätiedot ja lähteet" painettiin.</summary>
         public event Action TietojaPainettu;
+        /// <summary>Retkikuntaosion paikka (SahkeNakyma täyttää; tyhjänä piilossa).</summary>
+        public readonly VisualElement Retkikunta;
 
         public Paavalikko(UiKerros kerros, Func<float> alareuna, Vahvistus vahvistus) : base(kerros, alareuna, "mk-paavalikko")
         {
@@ -46,6 +50,8 @@ namespace Matkakirja.Natiivi
             Kytkinrivi(Kytkin.Aanimaisema, Ikonit.Aanimaisema);
             Otsikko("Kartta");
             Kytkinrivi(Kytkin.PieniLiike, Ikonit.PieniLiike);
+            Retkikunta = Rakenne.El("mk-paavalikko__retkikunta", Sisalto, PickingMode.Ignore);
+            Retkikunta.style.display = DisplayStyle.None;
             // KOKEET vain kehittäjätilassa (Fablen tarkastus C4: ei App Storen pelaajille).
             kokeet = Rakenne.El("mk-paavalikko__kokeet", Sisalto, PickingMode.Ignore);
             Rakenne.Teksti("KOKEET", "mk-pudotus__otsikko", kokeet);

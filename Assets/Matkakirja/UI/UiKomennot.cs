@@ -18,6 +18,7 @@
 //   ui lehti tehtava | tehtava-pois | viimeinen  alapalkin tehtävänappi (keksitty tila) / viimeinen sivu (Maa-liite)
 //   ui nosto <valoId>                         nostokortti: skandaali:<id> | hetki:<id> | elaintaky:<ISO> | kohde:<id>[@ISO]
 //   ui huipennus                              matkan huipennus (kaikki aarteet) esimerkkiluvuin
+//   ui sahke liuska|apu|sulje|kiinni|uusi|jasen|tila   sähkeliuska ja retkikuntaosio valekutsuin (SahkeNakyma.Testaa)
 //   ui laukku [esimerkki]                     matkalaukku (pelin data; esimerkki = keksitty sisältö)
 //   ui julisteet [n]                          julistegalleria, n ensimmäistä voitettuna (oletus 7)
 //   ui tietaja [pisteet]                      Tietäjän tie -minipopup (oletus 120)
@@ -215,6 +216,8 @@ namespace Matkakirja.Natiivi
                     ui.Huipennus.Nayta(new MatkanYhteenveto { Paivat = 83, Kaupungit = 41, Aarteet = 6, AarteitaKaikkiaan = 6 },
                         () => ui.Aloitus.NaytaAvaus(id => ui.Tilarivi.Viesti("Lähtö: " + id)));
                     return null;
+                case "sahke":
+                    return ui.Sahke.Testaa(loput.Length > 0 ? loput : "liuska");
                 case "laukku":
                     ui.Valikko.Sulje(); ui.Aanentasot.Sulje();
                     ui.Matkalaukku.Testaa(loput == "esimerkki" ? new System.Func<LaukkuNaytto>(Matkalaukku.Esimerkki) : null);

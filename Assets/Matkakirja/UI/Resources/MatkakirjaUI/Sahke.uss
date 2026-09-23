@@ -1,1 +1,315 @@
-/* Sähkelinja: pöllön liuska ja retkikunta (UI/Sahke/SahkeNakyma.cs). */
+/* Sähkelinja: pöllön liuska ja retkikunta (UI/Sahke/SahkeNakyma.cs).
+ * Web css/sahke.css kohdat 1, 2 ja 4. USS-erot: ei box-shadowta (liuskan varjo
+ * tummempana alareunana), ei katkoviivareunaa (paperi yhtenäisellä reunalla), ei
+ * gapia (marginaalit), ei monospace-pinoa (lennättimen liuska American Typewriterilla,
+ * Kirjasin.KoneLihava). Retkikunta istuu tummassa päävalikossa, joten webin
+ * pergamenttisävyt (.periaate-*) on käännetty valikon tokeneihin.
+ */
+
+/* --- 1. paperiliuska ------------------------------------------------------ */
+
+.mk-sahke-alue {
+    position: absolute;
+    left: 0;
+    right: 0;
+    align-items: center;
+    padding: 0 56px;
+}
+
+.mk-sahke-liuska {
+    max-width: 460px;
+    padding: 11px 34px 12px 13px;
+    border-width: 1px;
+    border-bottom-width: 3px;
+    border-color: rgba(122, 85, 20, 0.34);
+    border-bottom-color: rgba(40, 26, 10, 0.38);
+    border-radius: 9px;
+    background-color: #f7f2e4;
+    color: #211d18;
+    opacity: 0;
+    translate: 0 14px;
+    transition-property: opacity, translate;
+    transition-duration: 0.26s;
+    transition-timing-function: ease-out;
+}
+
+.mk-sahke-liuska.mk-auki {
+    opacity: 1;
+    translate: 0 0;
+}
+
+.mk-sahke-liuska__sisus {
+    flex-shrink: 1;
+}
+
+.mk-sahke-liuska__sulje {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    width: 30px;
+    height: 30px;
+    min-height: 30px;
+    padding: 0;
+    border-width: 0;
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #7a6a4a;
+}
+
+.mk-sahke-liuska__sulje:active {
+    background-color: rgba(122, 85, 20, 0.12);
+}
+
+.mk-sahke-liuska__sulje .mk-nappi__teksti {
+    font-size: 20px;
+    -unity-text-align: middle-center;
+}
+
+.mk-sahke-liuska__saaterivi {
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.mk-sahke-liuska__pollo {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    margin: 0 7px 0 0;
+    color: #5b4a2c;
+    --mk-ikoni-viiva: 1.5;
+}
+
+.mk-sahke-liuska__saate {
+    flex-shrink: 1;
+    font-size: 14.4px;
+    white-space: normal;
+    color: #5b4a2c;
+}
+
+.mk-sahke-liuska__paperi {
+    padding: 8px 10px;
+    border-width: 1px;
+    border-color: rgba(122, 85, 20, 0.4);
+    border-radius: 5px;
+    background-color: #fdfaf0;
+}
+
+.mk-sahke-liuska__teksti {
+    font-size: 15px;
+    letter-spacing: 0.9px;
+    white-space: normal;
+    color: #1b1712;
+}
+
+.mk-sahke-liuska__alarivi {
+    margin-top: 7px;
+    font-size: 12.5px;
+    white-space: normal;
+    color: #6b5c3e;
+}
+
+/* --- 2. apupyyntö liuskassa ------------------------------------------------ */
+
+.mk-sahke-liuska__kysyja {
+    margin-top: 0;
+}
+
+.mk-sahke-liuska__kysymys {
+    margin: 3px 0 10px 0;
+    font-size: 15.2px;
+    white-space: normal;
+    color: #1b1712;
+}
+
+.mk-sahke-liuska__vaihtoehdot {
+    flex-direction: column;
+}
+
+.mk-sahke-liuska__vaihtoehto {
+    justify-content: flex-start;
+    min-height: 44px;
+    margin-bottom: 6px;
+    padding: 5px 9px;
+    border-width: 1px;
+    border-color: rgba(122, 85, 20, 0.34);
+    border-radius: 6px;
+    background-color: #fffdf6;
+    color: #211d18;
+}
+
+.mk-sahke-liuska__vaihtoehto:active {
+    background-color: #f3ead2;
+}
+
+.mk-sahke-liuska__vaihtoehto:disabled {
+    opacity: 0.55;
+}
+
+.mk-sahke-liuska__vaihtoehto.mk-valittu {
+    border-color: #8a6a1f;
+    background-color: #f0e2bd;
+}
+
+.mk-sahke-liuska__kirjain {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    margin-right: 8px;
+    border-radius: 11px;
+    background-color: rgba(122, 85, 20, 0.16);
+    font-size: 12.8px;
+    -unity-text-align: middle-center;
+    color: #211d18;
+}
+
+.mk-sahke-liuska__vaihtoehtoteksti {
+    flex-shrink: 1;
+    font-size: 14.4px;
+    white-space: normal;
+    color: #211d18;
+}
+
+.mk-sahke-liuska__ohita {
+    align-self: flex-start;
+    min-height: 40px;
+    margin-top: 9px;
+    padding: 5px 11px;
+    border-width: 1px;
+    border-color: rgba(122, 85, 20, 0.28);
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #5b4a2c;
+}
+
+.mk-sahke-liuska__ohita:active {
+    background-color: rgba(122, 85, 20, 0.1);
+}
+
+.mk-sahke-liuska__ohitateksti {
+    font-size: 13.6px;
+    color: #5b4a2c;
+}
+
+/* --- 4. retkikuntaosio päävalikossa --------------------------------------- */
+
+.mk-paavalikko__retkikunta {
+    margin-bottom: 4px;
+}
+
+.mk-sahke {
+    padding: 0 2px;
+}
+
+.mk-sahke__teksti {
+    margin-bottom: 4px;
+    font-size: 13.5px;
+    white-space: normal;
+    color: var(--ink-light);
+}
+
+.mk-sahke__huomio {
+    margin-top: 7px;
+    font-size: 12.5px;
+    white-space: normal;
+    color: var(--muted);
+}
+
+.mk-sahke__huomio--rivi {
+    margin-top: 0;
+    flex-shrink: 1;
+}
+
+.mk-sahke__sirut {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 5px 0 4px 0;
+}
+
+.mk-sahke__siru {
+    min-height: 40px;
+    margin: 0 6px 6px 0;
+    padding: 5px 12px;
+    border-width: 1px;
+    border-color: var(--line);
+    border-radius: 20px;
+    background-color: var(--rivi-tausta);
+    color: var(--ink-light);
+}
+
+.mk-sahke__siru:active {
+    background-color: var(--panel-2);
+}
+
+.mk-sahke__siru:disabled {
+    opacity: 0.5;
+}
+
+/* Valittu siru renkaalla eikä pelkällä sävyllä (web: inset-rengas + lihavointi). */
+.mk-sahke__siru.mk-valittu {
+    border-width: 2px;
+    border-color: var(--accent);
+    background-color: var(--panel-2);
+    color: var(--accent);
+}
+
+.mk-sahke__siruteksti {
+    font-size: 13.5px;
+    white-space: normal;
+}
+
+.mk-sahke__haamu {
+    align-self: flex-start;
+    min-height: 36px;
+    margin: 2px 0 10px 0;
+    padding: 4px 11px;
+    border-color: var(--line);
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--muted);
+}
+
+.mk-sahke__haamu .mk-nappi__teksti {
+    font-size: 13px;
+}
+
+.mk-sahke__laheta {
+    margin: 6px 0 4px 0;
+}
+
+.mk-sahke__laheta .mk-nappi__teksti {
+    -unity-text-align: middle-center;
+}
+
+.mk-sahke__koodi {
+    margin: 6px 0 2px 0;
+    font-size: 16px;
+    letter-spacing: 3px;
+}
+
+.mk-sahke__koodi > .unity-base-text-field__input {
+    min-height: 40px;
+    padding: 4px 10px;
+    border-width: 1px;
+    border-color: var(--line);
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.25);
+    color: var(--ink-light);
+}
+
+.mk-sahke__koodirivi {
+    flex-direction: row;
+    align-items: center;
+    margin: 4px 0 6px 0;
+}
+
+.mk-sahke__koodirivi > .mk-sahke__huomio {
+    margin: 0 8px 0 0;
+}
+
+/* Koodi luetaan ruudulta ääneen kaverille: iso ja harva. */
+.mk-sahke__koodiarvo {
+    font-size: 18.4px;
+    letter-spacing: 4px;
+    color: var(--accent);
+}
