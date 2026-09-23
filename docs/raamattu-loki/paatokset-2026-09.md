@@ -1715,3 +1715,7 @@ Pelikoodari klo 09.5x, testit 4051/0, savuke 7/7. Omistajan kierros: tila 5 ilma
 ## 3D-SELVITYS VALMIS (PR #2887, docs/raportit/3d-selvitys-20260923.md): SUOSITUS UNITY 6.3 LTS + CESIUM FOR UNITY (URP, C#, PUHDAS NATIIVI iOS); KAKKONEN GODOT 4 (PARAS TEKOALYLLE, OMA LAATTAMOOTTORI); UNREAL JA REALITYKIT EIVAT SOVI; TARKEIN LOYDOS: GOOGLEN PHOTOREALISTIC 3D TILES EI SAATAVILLA UUSILLE EU/ETA-PROJEKTEILLE 8.7.2025 ALKAEN → FOTOREALISMI KOHDEKOHTAISINA MALLEINA; PROTOTYYPPI 3–4 vk, RINNAKKAISVERSIO 6–12 kk; v2142 (NIMIOLUKKO) JA v2143 (PALJAS KARTTA) TUOTANNOSSA; KERROSKYTKIMET #2888 → v2144 (23.9.2026 klo 09.58)
 
 3D-selvittäjä klo 09.55. Omistajalle tarkistettavaa: lasketaanko apuraha Unity Personalin 200 k$ rajaan; onko ennen 8.7.2025 luotua Google Cloud -projektia. Julkaisija mergesi #2883:n ensimmäisen version (v2143) ennen kytkimien commitia → kytkimet #2888.
+
+## OMISTAJA (KORTTI 10.02): VANHEMPI GOOGLE CLOUD -PROJEKTI (ENNEN 8.7.2025) API-AVAIMELLA — VOIKO SEN 3D-LAATTOJA KAYTTAA PELISSA? APURAHA MAX 20 000 € (UNITY PERSONAL RIITTAA); HALUAA ERILLISEN RAPORTIN UNREAL ENGINE vs UNITY EDUISTA JA HAITOISTA ENNEN PAATOSTA (23.9.2026 klo 10.02)
+
+3D-selvittäjälle kaksi jatkotehtävää: A) Google-laattojen käyttöoikeus vanhalla projektilla (Unmodified State, käyttöehdot pelissä, hinnoittelu, riski) → docs/raportit/3d-google-laatat-eu-20260923.md; B) Unreal vs Unity -vertailu → docs/raportit/3d-unreal-vs-unity-20260923.md. Prototyyppiä ei aloiteta ennen omistajan päätöstä.
