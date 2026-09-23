@@ -10,6 +10,7 @@ Shader "Matkakirja/MaaTaytto"
         _Tunnus("Tunnuskartta", 2D) = "black" {}
         _Paletti("Paletti", 2D) = "black" {}
         _ReunaLeveys("Rajan leveys (px)", Float) = 1.5
+        _Alue("Rajaus", Vector) = (-180, 90, 360, 180)
     }
     SubShader
     {
@@ -33,6 +34,7 @@ Shader "Matkakirja/MaaTaytto"
             CBUFFER_START(UnityPerMaterial)
                 float _ReunaLeveys;
                 float4 _Tunnus_TexelSize;
+                float4 _Alue; // länsi, pohjoinen, pituusväli, leveysväli (asteina)
             CBUFFER_END
 
             struct Syote { float4 paikka : POSITION; float2 uv : TEXCOORD0; };
@@ -48,6 +50,8 @@ Shader "Matkakirja/MaaTaytto"
 
             float Tunnus(float2 uv)
             {
+                // Rajatun kartan ulkopuolella ei ole alueita.
+                if (_Alue.z < 359.0 && (uv.x < 0 || uv.x > 1 || uv.y < 0 || uv.y > 1)) return 0;
                 uv.y = saturate(uv.y);
                 return round(SAMPLE_TEXTURE2D_LOD(_Tunnus, sampler_point_repeat, uv, 0).r * 255.0);
             }
@@ -59,6 +63,9 @@ Shader "Matkakirja/MaaTaytto"
 
             half4 frag(Vali i) : SV_Target
             {
+                // Kuoren uv on koko maailma (u: -180…180°, v: 90…-90°); tunnuskartan uv rajauksesta.
+                float lon = i.uv.x * 360.0 - 180.0, lat = 90.0 - i.uv.y * 180.0;
+                i.uv = float2((lon - _Alue.x) / _Alue.z, (_Alue.y - lat) / _Alue.w);
                 // Lähellä teksel on ruutua suurempi: raja vähintään tekselin levyinen, ettei se katkeile.
                 float2 d = max(fwidth(i.uv) * _ReunaLeveys, _Tunnus_TexelSize.xy * 0.75);
                 float k = Tunnus(i.uv);
