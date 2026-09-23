@@ -1,0 +1,30 @@
+# Matkakirja erä 3: pelattava silmukka ~30 s (Pariisi → Lontoo → lehti → Pariisi → lehti).
+# Kopioi sovelluksen Documents/peli-komento.txt:ksi (ks. README-silmukka.md).
+# Siemen 12345 laatoilla (266 laattaa): bussi Lontooseen 50 p, liftaus takaisin noppa 4.
+odota-tila kartta 40
+uusi-peli 12345
+odota 2
+tila 1-alku
+napauta lontoo
+odota-tila dialogi 3
+odota 1.5
+tila 2-dialogi
+valitse bussi
+odota-tila lehti 6
+tila 3-lehti-lontoo
+odota 4
+sulje-lehti
+odota-tila kartta 3
+odota 1
+tila 4-lontoossa
+napauta pariisi
+odota-tila dialogi 3
+odota 1
+valitse liftaus
+odota-tila lehti 6
+tila 5-lehti-pariisi
+odota 3
+sulje-lehti
+odota-tila kartta 3
+odota 1
+tila 6-loppu

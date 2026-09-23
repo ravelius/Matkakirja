@@ -1,0 +1,680 @@
+{
+ "$kuvaus": "Lippukysymyksen maat (web pack.map.countryShapes: iso, nimi, lippu) testiaineistoksi. Ei sisältöpaketissa. Tee: Kultaiset/tee-kysymysjalki.mjs.",
+ "maat": [
+  {
+   "iso": "ITA",
+   "nimi": "Italia",
+   "lippu": "Flag of Italy.svg"
+  },
+  {
+   "iso": "FRA",
+   "nimi": "Ranska",
+   "lippu": "Flag of France.svg"
+  },
+  {
+   "iso": "ESP",
+   "nimi": "Espanja",
+   "lippu": "Flag of Spain.svg"
+  },
+  {
+   "iso": "POL",
+   "nimi": "Puola",
+   "lippu": "Flag of Poland.svg"
+  },
+  {
+   "iso": "BIH",
+   "nimi": "Bosnia ja Hertsegovina",
+   "lippu": "Flag of Bosnia and Herzegovina.svg"
+  },
+  {
+   "iso": "ISL",
+   "nimi": "Islanti",
+   "lippu": "Flag of Iceland.svg"
+  },
+  {
+   "iso": "GRC",
+   "nimi": "Kreikka",
+   "lippu": "Flag of Greece.svg"
+  },
+  {
+   "iso": "HRV",
+   "nimi": "Kroatia",
+   "lippu": "Flag of Croatia.svg"
+  },
+  {
+   "iso": "BGR",
+   "nimi": "Bulgaria",
+   "lippu": "Flag of Bulgaria.svg"
+  },
+  {
+   "iso": "GBR",
+   "nimi": "Iso-Britannia",
+   "lippu": "Flag of the United Kingdom.svg"
+  },
+  {
+   "iso": "IRL",
+   "nimi": "Irlanti",
+   "lippu": "Flag of Ireland.svg"
+  },
+  {
+   "iso": "TUR",
+   "nimi": "Turkki",
+   "lippu": "Flag of Turkey.svg"
+  },
+  {
+   "iso": "PRT",
+   "nimi": "Portugali",
+   "lippu": "Flag of Portugal.svg"
+  },
+  {
+   "iso": "MYS",
+   "nimi": "Malesia",
+   "lippu": "Flag of Malaysia.svg"
+  },
+  {
+   "iso": "SGP",
+   "nimi": "Singapore",
+   "lippu": "Flag of Singapore.svg"
+  },
+  {
+   "iso": "NLD",
+   "nimi": "Alankomaat",
+   "lippu": "Flag of the Netherlands.svg"
+  },
+  {
+   "iso": "DEU",
+   "nimi": "Saksa",
+   "lippu": "Flag of Germany.svg"
+  },
+  {
+   "iso": "CZE",
+   "nimi": "Tšekki",
+   "lippu": "Flag of the Czech Republic.svg"
+  },
+  {
+   "iso": "AUT",
+   "nimi": "Itävalta",
+   "lippu": "Flag of Austria.svg"
+  },
+  {
+   "iso": "HUN",
+   "nimi": "Unkari",
+   "lippu": "Flag of Hungary.svg"
+  },
+  {
+   "iso": "CHE",
+   "nimi": "Sveitsi",
+   "lippu": "Flag of Switzerland.svg"
+  },
+  {
+   "iso": "ROU",
+   "nimi": "Romania",
+   "lippu": "Flag of Romania.svg"
+  },
+  {
+   "iso": "UKR",
+   "nimi": "Ukraina",
+   "lippu": "Flag of Ukraine.svg"
+  },
+  {
+   "iso": "RUS",
+   "nimi": "Venäjä",
+   "lippu": "Flag of Russia.svg"
+  },
+  {
+   "iso": "FIN",
+   "nimi": "Suomi",
+   "lippu": "Flag of Finland.svg"
+  },
+  {
+   "iso": "EST",
+   "nimi": "Viro",
+   "lippu": "Flag of Estonia.svg"
+  },
+  {
+   "iso": "LVA",
+   "nimi": "Latvia",
+   "lippu": "Flag of Latvia.svg"
+  },
+  {
+   "iso": "LTU",
+   "nimi": "Liettua",
+   "lippu": "Flag of Lithuania.svg"
+  },
+  {
+   "iso": "SWE",
+   "nimi": "Ruotsi",
+   "lippu": "Flag of Sweden.svg"
+  },
+  {
+   "iso": "NOR",
+   "nimi": "Norja",
+   "lippu": "Flag of Norway.svg"
+  },
+  {
+   "iso": "DNK",
+   "nimi": "Tanska",
+   "lippu": "Flag of Denmark.svg"
+  },
+  {
+   "iso": "ALB",
+   "nimi": "Albania",
+   "lippu": "Flag of Albania.svg"
+  },
+  {
+   "iso": "BEL",
+   "nimi": "Belgia",
+   "lippu": "Flag of Belgium (civil).svg"
+  },
+  {
+   "iso": "BLR",
+   "nimi": "Valko-Venäjä",
+   "lippu": "Flag of Belarus.svg"
+  },
+  {
+   "iso": "LUX",
+   "nimi": "Luxemburg",
+   "lippu": "Flag of Luxembourg.svg"
+  },
+  {
+   "iso": "MDA",
+   "nimi": "Moldova",
+   "lippu": "Flag of Moldova.svg"
+  },
+  {
+   "iso": "MKD",
+   "nimi": "Pohjois-Makedonia",
+   "lippu": "Flag of North Macedonia.svg"
+  },
+  {
+   "iso": "MLT",
+   "nimi": "Malta",
+   "lippu": "Flag of Malta.svg"
+  },
+  {
+   "iso": "MNE",
+   "nimi": "Montenegro",
+   "lippu": "Flag of Montenegro.svg"
+  },
+  {
+   "iso": "SRB",
+   "nimi": "Serbia",
+   "lippu": "Flag of Serbia.svg"
+  },
+  {
+   "iso": "SVK",
+   "nimi": "Slovakia",
+   "lippu": "Flag of Slovakia.svg"
+  },
+  {
+   "iso": "SVN",
+   "nimi": "Slovenia",
+   "lippu": "Flag of Slovenia.svg"
+  },
+  {
+   "iso": "TZA",
+   "nimi": "Tansania",
+   "lippu": "Flag of Tanzania.svg"
+  },
+  {
+   "iso": "COD",
+   "nimi": "Kongo",
+   "lippu": "Flag of the Democratic Republic of the Congo.svg"
+  },
+  {
+   "iso": "SOM",
+   "nimi": "Somalia",
+   "lippu": "Flag of Somalia.svg"
+  },
+  {
+   "iso": "SDN",
+   "nimi": "Sudan",
+   "lippu": "Flag of Sudan.svg"
+  },
+  {
+   "iso": "ZAF",
+   "nimi": "Etelä-Afrikka",
+   "lippu": "Flag of South Africa.svg"
+  },
+  {
+   "iso": "NAM",
+   "nimi": "Namibia",
+   "lippu": "Flag of Namibia.svg"
+  },
+  {
+   "iso": "SEN",
+   "nimi": "Senegal",
+   "lippu": "Flag of Senegal.svg"
+  },
+  {
+   "iso": "MLI",
+   "nimi": "Mali",
+   "lippu": "Flag of Mali.svg"
+  },
+  {
+   "iso": "NGA",
+   "nimi": "Nigeria",
+   "lippu": "Flag of Nigeria.svg"
+  },
+  {
+   "iso": "CMR",
+   "nimi": "Kamerun",
+   "lippu": "Flag of Cameroon.svg"
+  },
+  {
+   "iso": "GHA",
+   "nimi": "Ghana",
+   "lippu": "Flag of Ghana.svg"
+  },
+  {
+   "iso": "LBR",
+   "nimi": "Liberia",
+   "lippu": "Flag of Liberia.svg"
+  },
+  {
+   "iso": "SLE",
+   "nimi": "Sierra Leone",
+   "lippu": "Flag of Sierra Leone.svg"
+  },
+  {
+   "iso": "MOZ",
+   "nimi": "Mosambik",
+   "lippu": "Flag of Mozambique.svg"
+  },
+  {
+   "iso": "AGO",
+   "nimi": "Angola",
+   "lippu": "Flag of Angola.svg"
+  },
+  {
+   "iso": "MDG",
+   "nimi": "Madagaskar",
+   "lippu": "Flag of Madagascar.svg"
+  },
+  {
+   "iso": "SHN",
+   "nimi": "Saint Helena",
+   "lippu": "Flag of Saint Helena.svg"
+  },
+  {
+   "iso": "DZA",
+   "nimi": "Algeria",
+   "lippu": "Flag of Algeria.svg"
+  },
+  {
+   "iso": "MAR",
+   "nimi": "Marokko",
+   "lippu": "Flag of Morocco.svg"
+  },
+  {
+   "iso": "EGY",
+   "nimi": "Egypti",
+   "lippu": "Flag of Egypt.svg"
+  },
+  {
+   "iso": "LBY",
+   "nimi": "Libya",
+   "lippu": "Flag of Libya.svg"
+  },
+  {
+   "iso": "ETH",
+   "nimi": "Etiopia",
+   "lippu": "Flag of Ethiopia.svg"
+  },
+  {
+   "iso": "UGA",
+   "nimi": "Uganda",
+   "lippu": "Flag of Uganda.svg"
+  },
+  {
+   "iso": "SDS",
+   "nimi": "Etelä-Sudan",
+   "lippu": "Flag of South Sudan.svg"
+  },
+  {
+   "iso": "KEN",
+   "nimi": "Kenia",
+   "lippu": "Flag of Kenya.svg"
+  },
+  {
+   "iso": "TCD",
+   "nimi": "Tšad",
+   "lippu": "Flag of Chad.svg"
+  },
+  {
+   "iso": "TUN",
+   "nimi": "Tunisia",
+   "lippu": "Flag of Tunisia.svg"
+  },
+  {
+   "iso": "ZWE",
+   "nimi": "Zimbabwe",
+   "lippu": "Flag of Zimbabwe.svg"
+  },
+  {
+   "iso": "JOR",
+   "nimi": "Jordania",
+   "lippu": "Flag of Jordan.svg"
+  },
+  {
+   "iso": "ARE",
+   "nimi": "Arabiemiirikunnat",
+   "lippu": "Flag of the United Arab Emirates.svg"
+  },
+  {
+   "iso": "IRN",
+   "nimi": "Iran",
+   "lippu": "Flag of Iran.svg"
+  },
+  {
+   "iso": "JPN",
+   "nimi": "Japani",
+   "lippu": "Flag of Japan.svg"
+  },
+  {
+   "iso": "CHN",
+   "nimi": "Kiina",
+   "lippu": "Flag of the People's Republic of China.svg"
+  },
+  {
+   "iso": "HKG",
+   "nimi": "Hongkong",
+   "lippu": "Flag of Hong Kong.svg"
+  },
+  {
+   "iso": "IDN",
+   "nimi": "Indonesia",
+   "lippu": "Flag of Indonesia.svg"
+  },
+  {
+   "iso": "TLS",
+   "nimi": "Itä-Timor",
+   "lippu": "Flag of East Timor.svg"
+  },
+  {
+   "iso": "IND",
+   "nimi": "Intia",
+   "lippu": "Flag of India.svg"
+  },
+  {
+   "iso": "CYP",
+   "nimi": "Kypros",
+   "lippu": "Flag of Cyprus.svg"
+  },
+  {
+   "iso": "SYR",
+   "nimi": "Syyria",
+   "lippu": "Flag of Syria (1980–2024).svg"
+  },
+  {
+   "iso": "SAU",
+   "nimi": "Saudi-Arabia",
+   "lippu": "Flag of Saudi Arabia.svg"
+  },
+  {
+   "iso": "YEM",
+   "nimi": "Jemen",
+   "lippu": "Flag of Yemen.svg"
+  },
+  {
+   "iso": "OMN",
+   "nimi": "Oman",
+   "lippu": "Flag of Oman.svg"
+  },
+  {
+   "iso": "QAT",
+   "nimi": "Qatar",
+   "lippu": "Flag of Qatar.svg"
+  },
+  {
+   "iso": "KWT",
+   "nimi": "Kuwait",
+   "lippu": "Flag of Kuwait.svg"
+  },
+  {
+   "iso": "IRQ",
+   "nimi": "Irak",
+   "lippu": "Flag of Iraq.svg"
+  },
+  {
+   "iso": "ARM",
+   "nimi": "Armenia",
+   "lippu": "Flag of Armenia.svg"
+  },
+  {
+   "iso": "AZE",
+   "nimi": "Azerbaidžan",
+   "lippu": "Flag of Azerbaijan.svg"
+  },
+  {
+   "iso": "GEO",
+   "nimi": "Georgia",
+   "lippu": "Flag of Georgia.svg"
+  },
+  {
+   "iso": "KAZ",
+   "nimi": "Kazakstan",
+   "lippu": "Flag of Kazakhstan.svg"
+  },
+  {
+   "iso": "MNG",
+   "nimi": "Mongolia",
+   "lippu": "Flag of Mongolia.svg"
+  },
+  {
+   "iso": "KOR",
+   "nimi": "Etelä-Korea",
+   "lippu": "Flag of South Korea.svg"
+  },
+  {
+   "iso": "PRK",
+   "nimi": "Pohjois-Korea",
+   "lippu": "Flag of North Korea.svg"
+  },
+  {
+   "iso": "TWN",
+   "nimi": "Taiwan",
+   "lippu": "Flag of the Republic of China.svg"
+  },
+  {
+   "iso": "PHL",
+   "nimi": "Filippiinit",
+   "lippu": "Flag of the Philippines.svg"
+  },
+  {
+   "iso": "VNM",
+   "nimi": "Vietnam",
+   "lippu": "Flag of Vietnam.svg"
+  },
+  {
+   "iso": "KHM",
+   "nimi": "Kambodža",
+   "lippu": "Flag of Cambodia.svg"
+  },
+  {
+   "iso": "LAO",
+   "nimi": "Laos",
+   "lippu": "Flag of Laos.svg"
+  },
+  {
+   "iso": "THA",
+   "nimi": "Thaimaa",
+   "lippu": "Flag of Thailand.svg"
+  },
+  {
+   "iso": "MMR",
+   "nimi": "Myanmar",
+   "lippu": "Flag of Myanmar.svg"
+  },
+  {
+   "iso": "NPL",
+   "nimi": "Nepal",
+   "lippu": "Flag of Nepal.svg"
+  },
+  {
+   "iso": "BGD",
+   "nimi": "Bangladesh",
+   "lippu": "Flag of Bangladesh.svg"
+  },
+  {
+   "iso": "BTN",
+   "nimi": "Bhutan",
+   "lippu": "Flag of Bhutan.svg"
+  },
+  {
+   "iso": "LKA",
+   "nimi": "Sri Lanka",
+   "lippu": "Flag of Sri Lanka.svg"
+  },
+  {
+   "iso": "PAK",
+   "nimi": "Pakistan",
+   "lippu": "Flag of Pakistan.svg"
+  },
+  {
+   "iso": "AFG",
+   "nimi": "Afganistan",
+   "lippu": "Flag of Afghanistan (2013–2021).svg"
+  },
+  {
+   "iso": "UZB",
+   "nimi": "Uzbekistan",
+   "lippu": "Flag of Uzbekistan.svg"
+  },
+  {
+   "iso": "KGZ",
+   "nimi": "Kirgisia",
+   "lippu": "Flag of Kyrgyzstan.svg"
+  },
+  {
+   "iso": "TJK",
+   "nimi": "Tadžikistan",
+   "lippu": "Flag of Tajikistan.svg"
+  },
+  {
+   "iso": "TKM",
+   "nimi": "Turkmenistan",
+   "lippu": "Flag of Turkmenistan.svg"
+  },
+  {
+   "iso": "ARG",
+   "nimi": "Argentiina",
+   "lippu": "Flag of Argentina.svg"
+  },
+  {
+   "iso": "BOL",
+   "nimi": "Bolivia",
+   "lippu": "Flag of Bolivia.svg"
+  },
+  {
+   "iso": "BRA",
+   "nimi": "Brasilia",
+   "lippu": "Flag of Brazil.svg"
+  },
+  {
+   "iso": "CAN",
+   "nimi": "Kanada",
+   "lippu": "Flag of Canada.svg"
+  },
+  {
+   "iso": "CHL",
+   "nimi": "Chile",
+   "lippu": "Flag of Chile.svg"
+  },
+  {
+   "iso": "COL",
+   "nimi": "Kolumbia",
+   "lippu": "Flag of Colombia.svg"
+  },
+  {
+   "iso": "CUB",
+   "nimi": "Kuuba",
+   "lippu": "Flag of Cuba.svg"
+  },
+  {
+   "iso": "ECU",
+   "nimi": "Ecuador",
+   "lippu": "Flag of Ecuador.svg"
+  },
+  {
+   "iso": "GRL",
+   "nimi": "Grönlanti",
+   "lippu": "Flag of Greenland.svg"
+  },
+  {
+   "iso": "GTM",
+   "nimi": "Guatemala",
+   "lippu": "Flag of Guatemala.svg"
+  },
+  {
+   "iso": "MEX",
+   "nimi": "Meksiko",
+   "lippu": "Flag of Mexico.svg"
+  },
+  {
+   "iso": "NIC",
+   "nimi": "Nicaragua",
+   "lippu": "Flag of Nicaragua.svg"
+  },
+  {
+   "iso": "PAN",
+   "nimi": "Panama",
+   "lippu": "Flag of Panama.svg"
+  },
+  {
+   "iso": "PER",
+   "nimi": "Peru",
+   "lippu": "Flag of Peru.svg"
+  },
+  {
+   "iso": "PRY",
+   "nimi": "Paraguay",
+   "lippu": "Flag of Paraguay.svg"
+  },
+  {
+   "iso": "URY",
+   "nimi": "Uruguay",
+   "lippu": "Flag of Uruguay.svg"
+  },
+  {
+   "iso": "USA",
+   "nimi": "Yhdysvallat",
+   "lippu": "Flag of the United States.svg"
+  },
+  {
+   "iso": "VEN",
+   "nimi": "Venezuela",
+   "lippu": "Flag of Venezuela.svg"
+  },
+  {
+   "iso": "AUS",
+   "nimi": "Australia",
+   "lippu": "Flag of Australia.svg"
+  },
+  {
+   "iso": "FJI",
+   "nimi": "Fidži",
+   "lippu": "Flag of Fiji.svg"
+  },
+  {
+   "iso": "NZL",
+   "nimi": "Uusi-Seelanti",
+   "lippu": "Flag of New Zealand.svg"
+  },
+  {
+   "iso": "PNG",
+   "nimi": "Papua-Uusi-Guinea",
+   "lippu": "Flag of Papua New Guinea.svg"
+  },
+  {
+   "iso": "SLB",
+   "nimi": "Salomonsaaret",
+   "lippu": "Flag of the Solomon Islands.svg"
+  },
+  {
+   "iso": "VUT",
+   "nimi": "Vanuatu",
+   "lippu": "Flag of Vanuatu.svg"
+  }
+ ]
+}

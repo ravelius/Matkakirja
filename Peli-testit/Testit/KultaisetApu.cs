@@ -29,6 +29,11 @@ namespace Matkakirja.Peli.Testit
 
         public static Reittiverkko Verkko => verkko ??= SisaltoTuonti.LueKansiosta(Paketti);
 
+        static Laattamaarat laattamaarat;
+        /// <summary>Paketin laattamäärät (Kultaiset/paketti/laatat.json = web pack.tokens.counts).</summary>
+        public static Laattamaarat Laattamaarat =>
+            laattamaarat ??= Laattamaarat.Lue(File.ReadAllText(Path.Combine(Paketti, "laatat.json")));
+
         public static Dictionary<string, object> Kultaiset =>
             kultaiset ??= MiniJson.Objekti(MiniJson.Jasenna(File.ReadAllText(Path.Combine(Juuri, "Kultaiset", "siirrot.json"))));
 
