@@ -1855,3 +1855,7 @@ Fablen aloitusviesti docs/raportit/viesti-fable-aloitus.md.
 ## OMISTAJA 23.9.: METAL TOOLCHAIN ASENNETTU, UNITY-LISENSSI KIRJAUTUMALLA HUBIIN, APPLE ID KIRJATTU koodaus-KAYTTAJALLE (XCODE-ALLEKIRJOITUS TARKISTETAAN); REBOOT NYT (23.9.2026 klo 12.42)
 
 3D-selvittäjä tarkistaa rebootin jälkeen Unity-lisenssin ja allekirjoitusidentiteetit (security find-identity).
+
+## REBOOT TEHTY 23.9. klo 12.43; SESSIOT HERATETTY send_message-TYOKALULLA (SAMAT ID:T, CWD VANHOISSA POLUISSA SYMLINKKIEN KAUTTA), RC PAALLA; FABLEN MUISTI KOPIOITU UUDELLE PROJEKTIAVAIMELLE -Users-Shared-Claude-Matkakirja-fable; ENSIN LAITETESTAAJAN CI-TARKISTUS, SITTEN JULKAISIJAN JONO YKSI AJO KERRALLAAN (23.9.2026 klo 12.49)
+
+Vanhat aliakset poistetaan, kun sessiot on avattu uusista poluista.
