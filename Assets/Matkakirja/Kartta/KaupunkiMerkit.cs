@@ -49,6 +49,10 @@ namespace Matkakirja
 
         [Tooltip("Merkin korkeus pinnan (maasto tai ellipsoidi) yläpuolella, metreinä.")]
         public double nosto = 5000.0;
+        [Tooltip("Lue kaupunkien pintakorkeus maastosta (SampleHeightMostDetailed). Pois oletuksena: " +
+                 "iPadilla haku latasi tarkimmat laatat 266 kaupungille 47 s (23.9.). Korkeus tulee " +
+                 "sisältöpakettiin (kaupungit.korkeus), ja 5 km:n nosto riittää siihen asti.")]
+        public bool maastoKorkeudet = false;
         /// <summary>Pallo, jonka maastosta merkkien pintakorkeus luetaan (tyhjä = haetaan kohtauksesta).</summary>
         public Cesium3DTileset pallo;
 
@@ -104,7 +108,7 @@ namespace Matkakirja
                 kaupunkeja = merkit.Count;
                 var kohteet = merkit.ToArray();
                 var korkeudet = new double[kohteet.Length];
-                if (edellinen == CesiumDataSource.FromUrl)
+                if (edellinen == CesiumDataSource.FromUrl && maastoKorkeudet)
                 {
                     var paikat = new double3[kohteet.Length];
                     for (int i = 0; i < kohteet.Length; i++)

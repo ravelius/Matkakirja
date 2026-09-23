@@ -75,6 +75,8 @@ namespace Matkakirja.Natiivi
         Pulmadata pulmadata;
         Kaksintaistelut kaksintaistelut;
         Tapahtumadata tapahtumadata;
+        /// <summary>Tapahtumakortit maailmankartalla (web: ei; Fablen linjaus ennen päälle kytkemistä).</summary>
+        public static bool TapahtumakortitMaailmankartalla = false;
         List<Lippumaa> lippumaat;
         List<(string Kaupunki, string Tiedosto, string Lahde)> kuvakohteet;
         readonly Dictionary<string, string> kuvaOsoitteet = new Dictionary<string, string>();
@@ -679,7 +681,11 @@ namespace Matkakirja.Natiivi
             kysely = new Kysely(matka, Kysymykset);
             kysely.Tapahtui += (laji, teksti) => kysymysLisat.Add(teksti);
             pulmat = pulmadata != null ? Pulmat.Kytke(kysely, pulmadata) : null;
-            tapahtumakortit = tapahtumadata != null && tapahtumadata.Kortit.Count > 0 ? Tapahtumat.Kytke(kysely, tapahtumadata) : null;
+            // Webin maailmankartalla ei ole tapahtumakortteja (pack.events tyhjä, game.js
+            // formWeights: event-paino 0). Paketin kokoelma tapahtumat on Afrikan laudan
+            // (AFRICA.events), joten kortit kytketään vain, kun ne linjataan maailmankartalle.
+            tapahtumakortit = TapahtumakortitMaailmankartalla && tapahtumadata != null && tapahtumadata.Kortit.Count > 0
+                ? Tapahtumat.Kytke(kysely, tapahtumadata) : null;
             if (tapahtumakortit != null) tapahtumakortit.Tapahtui += (laji, teksti) => kysymysLisat.Add(teksti);
             rosvo = kaksintaistelut != null ? new Kaksintaistelu(matka, kaksintaistelut) : null;
             kaupat = new Kaupat(matka);
