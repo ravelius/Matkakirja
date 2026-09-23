@@ -69,7 +69,6 @@ namespace Matkakirja.Natiivi
         float liukuMatka;
 
         bool tauolla;
-        float tauonAani = RadioLinssi.OletusAani;
 
         // Nimirivin liike (webin radio-liuku / radio-haku / radio-lukko).
         enum Liike { Ei, Liuku, Haku, Lukko }
@@ -220,7 +219,9 @@ namespace Matkakirja.Natiivi
             bool uusiViritys = t.Vaihe == RadioVaihe.Viritys && t.Viritys == ViritysVaihe.Siirtyma &&
                                (vaihe != RadioVaihe.Viritys || viritys != ViritysVaihe.Siirtyma || t.KaupunkiId != kaupunki);
             // Uusi kaupunki on pyyntö kuulla se; hiljaa-tila vapauttaa mykistyksen.
-            if (tauolla && (uusiViritys || t.Vaihe == RadioVaihe.Hiljaa)) AsetaTauko(false);
+            // Tauon tila tulee linssiltä (RadioLinssi.Tauko; uusi asema tai STOP purkaa sen).
+            if (linssi != null) { tauolla = t.Tauolla; lamppu.Tauko = tauolla; }
+            else if (tauolla && (uusiViritys || t.Vaihe == RadioVaihe.Hiljaa)) AsetaTauko(false);
 
             bool vaiheVaihtui = t.Vaihe != vaihe;
             var edellinenViritys = viritys;
@@ -401,11 +402,8 @@ namespace Matkakirja.Natiivi
         {
             if (paalle == tauolla) return;
             tauolla = paalle;
-            if (linssi != null)
-            {
-                if (paalle) { tauonAani = linssi.Voimakkuus > 0 ? linssi.Voimakkuus : RadioLinssi.OletusAani; linssi.Voimakkuus = 0; }
-                else linssi.Voimakkuus = tauonAani;
-            }
+            // Oikea tauko (Linssiseppä 943be95): lähetys ja viritysääni pysähtyvät, tila säilyy.
+            linssi?.Tauko(paalle);
             lamppu.Tauko = paalle;
             lamppu.tooltip = paalle ? "Jatka lähetystä" : "Keskeytä lähetys";
         }
