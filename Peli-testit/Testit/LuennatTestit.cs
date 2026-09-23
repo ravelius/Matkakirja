@@ -30,15 +30,19 @@ namespace Matkakirja.Peli.Testit
             l.LueLuennat(@"{""alkiot"":[
               {""id"":""pariisi"",""kaupunki"":""pariisi"",""data"":{""kaupunki"":""pariisi"",""url"":""https://media.matkakirja.app/audio/p.mp3"",""teksti"":""Tuileries…"",""paikkarivi"":""Pariisi, lokakuussa 1873."",""kesto"":41.5}},
               {""id"":""intro"",""data"":{""id"":""intro"",""url"":""https://media.matkakirja.app/audio/intro-puhe.mp3?v=3""}},
+              {""id"":""wien"",""kaupunki"":""wien"",""data"":{""kaupunki"":""wien"",""url"":""https://media.matkakirja.app/audio/w.mp3""}},
               {""id"":""rikki"",""kaupunki"":""rooma"",""data"":{""kaupunki"":""rooma""}}]}");
-            Oleta.Sama(1, l.Luentoja, "url puuttuu → ohitetaan");
+            Oleta.Sama(2, l.Luentoja, "url puuttuu → ohitetaan");
             Oleta.Sama("https://media.matkakirja.app/audio/intro-puhe.mp3?v=3", l.Intro.Url, "intro korvautuu");
             var p = l.OtaLuento("pariisi");
             Oleta.Sama("Pariisi, lokakuussa 1873.", p.Paikkarivi);
             Oleta.Sama(41.5, p.Kesto.Value);
-            Oleta.Sama(null, l.OtaLuento("pariisi"), "kerran per kaupunki");
+            Oleta.Sama(null, l.OtaLuento("pariisi"), "sama merkintä ei ala uudelleen peräkkäin");
             Oleta.Tosi(l.Luento("pariisi") != null, "kaiutinnappi ehdoitta");
             Oleta.Sama(null, l.OtaLuento("rooma"));
+            l.OtaLuento("lontoo");
+            Oleta.Sama(null, l.OtaLuento("pariisi"), "luennoton kaupunki välissä ei nollaa (web luettuSaapuminen)");
+            Oleta.Tosi(l.OtaLuento("wien") != null && l.OtaLuento("pariisi") != null, "toisen luennon jälkeen Pariisi soi taas (web)");
         }
         [Testi] static void ReaktiotJaNiidenAjat()
         {
