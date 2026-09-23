@@ -187,6 +187,19 @@ export function pallonPiste(lat, lng, sade = 100) {
 export function pinnanPiste(kamera, x, y, W, H, R) {
   const o = kamera?.position;
   if (!o || !(W > 0) || !(H > 0) || !(R > 0)) return null;
+  const fov = Number.isFinite(kamera.fov) && kamera.fov > 0 ? kamera.fov : 50;
+  /*
+   * KALLISTETTU KAMERA (js/pallolauta/kallistus.js, pysyvä kallistus
+   * 23.9.2026): silmä ei ole katsepisteen yllä, joten paikasta johdettu
+   * pov osuisi väärään kohtaan — veto ja zoomin ankkuri karkasivat.
+   * Kallistus kirjoittaa virtuaalisen pov:n kameraan samalla kun se
+   * asettaa paikan, joten lukema on yhä itsensä kanssa yhtenäinen.
+   */
+  const kallistettu = kamera.__kallistusPov;
+  if (kallistettu) {
+    return laattakerroksenOsuma(kallistettu, (2 * x) / W - 1, 1 - (2 * y) / H,
+      { fov, kuvasuhde: W / H, sade: R });
+  }
   const pituus = Math.hypot(o.x, o.y, o.z);
   if (!(pituus > R)) return null;
   const pov = {
@@ -194,7 +207,6 @@ export function pinnanPiste(kamera, x, y, W, H, R) {
     lng: Math.atan2(o.x, o.z) / RAD,
     altitude: pituus / R - 1,
   };
-  const fov = Number.isFinite(kamera.fov) && kamera.fov > 0 ? kamera.fov : 50;
   return laattakerroksenOsuma(pov, (2 * x) / W - 1, 1 - (2 * y) / H,
     { fov, kuvasuhde: W / H, sade: R });
 }

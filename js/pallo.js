@@ -3341,7 +3341,8 @@ export function kohdistaAnkkuri(pov, ankkuri, sx, sy, altitude, linssi, kierroks
     return { lat, lng, altitude };
   }
   for (let i = 0; i < kierroksia; i += 1) {
-    const osuma = laattakerroksenOsuma({ lat, lng, altitude }, sx, sy, linssi);
+    // Kallistettu kamera (pysyvä kallistus) ankkuroi kallistetun säteen kautta.
+    const osuma = laattakerroksenOsuma({ lat, lng, altitude, kallistus: pov?.kallistus }, sx, sy, linssi);
     if (!osuma) break;
     let dLng = ankkuri.lng - osuma.lng;
     if (dLng > 180) dLng -= 360; else if (dLng < -180) dLng += 360;
@@ -3929,6 +3930,9 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
   const alkuperainenUpdate = ohjaimet.update;
   ohjaimet.update = function pallonSyoteUpdate(...args) {
     sovellaSyote();
+    // Pysyvä kallistus (js/pallolauta/kallistus.js): eleet ajetaan, mutta
+    // kirjaston update vetäisi kameran takaisin katsomaan pallon keskelle.
+    if (ohjaimet.__kirjastoOhi) return false;
     return alkuperainenUpdate.apply(this, args);
   };
   const puraSyote = () => {
