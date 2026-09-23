@@ -981,3 +981,22 @@ test('skeema 1.15: lehdet natiiville', async () => {
   const intro = kaupungit.alkiot.find((k) => k.id === 'lontoo').intro;
   assert.deepEqual(intro.kappaleet, jaaKappaleiksi(intro.teksti));
 });
+
+test('skeemasopimus: skeemanumero vastaa kenttiä', async () => {
+  const { tarkistaSopimus, VAATIMUKSET } = await import('../tools/vienti/skeemasopimus.mjs');
+  assert.ok(VAATIMUKSET[SKEEMAVERSIO_TARKKA], 'nykyisellä skeemaversiolla on vaatimusrivi');
+  assert.deepEqual(tarkistaSopimus(tiedostot, SKEEMAVERSIO_TARKKA), []);
+  // Ämpärin v11: "1.10" ilman kaupungit.korkeutta.
+  const ilman = new Map(tiedostot);
+  const k = JSON.parse(ilman.get('kokoelmat/kaupungit.json'));
+  for (const a of k.alkiot) delete a.korkeus;
+  ilman.set('kokoelmat/kaupungit.json', JSON.stringify(k));
+  assert.ok(tarkistaSopimus(ilman, SKEEMAVERSIO_TARKKA).some((v) => v.includes('kaupungit.korkeus')));
+  // Uusi kenttä samalla numerolla = kenttäkuva muuttuu.
+  const lisa = new Map(tiedostot);
+  const r = JSON.parse(lisa.get('kokoelmat/reitit.json'));
+  r.alkiot[0].uusiKentta = 1;
+  lisa.set('kokoelmat/reitit.json', JSON.stringify(r));
+  assert.ok(tarkistaSopimus(lisa, SKEEMAVERSIO_TARKKA).some((v) => v.includes('kentät muuttuivat')));
+  assert.ok(tarkistaSopimus(tiedostot, '9.99').some((v) => v.includes('ei ole riviä')));
+});

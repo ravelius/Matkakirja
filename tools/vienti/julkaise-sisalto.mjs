@@ -37,6 +37,7 @@ import { existsSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSy
 import { dirname, join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { SKEEMAVERSIO, SKEEMAVERSIO_TARKKA, JUURI } from './vie-sisalto.mjs';
+import { tarkistaSopimus } from './skeemasopimus.mjs';
 import { validoiNimella } from './validoi.mjs';
 
 export const MIN_SOVELLUS = { ios: 1, web: null };
@@ -76,6 +77,8 @@ export function tarkistaPaketti(tiedostot) {
   for (const w of manifest.webNakymat ?? []) {
     virheet.push(...validoiNimella(lue(w.tiedosto), 'web-nakyma.schema.json', { polku: w.tiedosto }));
   }
+  // Skeemanumero vastaa kenttiä (ämpärin v11 oli "1.10" ilman 1.10:n kenttiä).
+  virheet.push(...tarkistaSopimus(tiedostot, manifest.skeemaversio ?? SKEEMAVERSIO_TARKKA));
   return virheet;
 }
 
