@@ -510,3 +510,9 @@ test('nippu 4: karttavalot, maastonimet ja maarajat pallolle', async () => {
   const [w, s, e, n] = fin.bbox;
   assert.ok(w > 19 && e < 32 && s > 59 && n < 71, `Suomen bbox ${fin.bbox}`);
 });
+
+test('skeema 1.10: kaupunkien korkeus (Copernicus GLO-30, null jos ruutua ei ole)', () => {
+  const hel = kaupungit.alkiot.find((k) => k.id === 'helsinki');
+  assert.ok(Number.isInteger(hel.korkeus) && hel.korkeus % 10 === 0 && hel.korkeus < 100, `Helsinki ${hel.korkeus}`);
+  assert.ok(kaupungit.alkiot.every((k) => k.korkeus === null || (Number.isInteger(k.korkeus) && k.korkeus > -500 && k.korkeus < 6000)));
+});

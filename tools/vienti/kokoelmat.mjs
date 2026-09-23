@@ -22,6 +22,7 @@ import { sarjallista } from './sarjallista.mjs';
 import { laudaltaAsteiksi } from '../../js/fokusmitat.js';
 import { ISO2 } from './iso2.mjs';
 import { PAAKAUPUNGIT } from './paakaupungit.mjs';
+import { lueKorkeudet } from './korkeudet.mjs';
 import { maarajaRivit, MAARAJOJEN_TOLERANSSI } from './maarajat.mjs';
 import { KOHDE_MAAT, kohteenKategoria } from '../../js/fokuskohteet.js';
 import { nostosymPaakategoria } from '../../js/fokusnosto-symbolit.js';
@@ -64,6 +65,7 @@ function lautaKokoelmat(ns) {
   const P = ns.MAAILMANKARTTA;
   const pallo = ns.PALLON_KAUPUNKIPISTEET ?? {};
   const saaret = new Set(P.islands);
+  const korkeudet = lueKorkeudet().kaupungit ?? {};
   const reitteja = new Map();
   for (const e of [...P.edges, ...P.airRoutes]) {
     for (const id of [e.a, e.b]) reitteja.set(id, (reitteja.get(id) ?? 0) + 1);
@@ -93,6 +95,9 @@ function lautaKokoelmat(ns) {
       // lasketaan verkkopelin kaavalla laudan pisteistä, jotta viiva osuu
       // laattoihin. Laudan Miller-yksiköt (maailmankartta).
       lauta: { x: c.x, y: c.y },
+      // Skeema 1.10 (Natiiviseppä): korkeus m EGM2008, 10 m tarkkuus,
+      // Copernicus GLO-30 (tools/vienti/korkeudet.mjs); null = ei ruutua.
+      korkeus: korkeudet[c.id] ?? null,
       data: c,
     };
   });
