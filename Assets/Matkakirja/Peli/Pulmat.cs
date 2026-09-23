@@ -157,7 +157,7 @@ namespace Matkakirja.Peli
             foreach (var a in alkiot)
             {
                 var ao = MiniJson.Objekti(a);
-                var data = MiniJson.Kentta(ao, "data") as Dictionary<string, object> ?? ao;
+                var data = Paataso.Yhdista(ao, Paataso.Pulma);
                 var p = LuePulma(data);
                 if (p.Kaupunki == null) p.Kaupunki = MiniJson.Teksti(ao, "kaupunki");
                 if (p.Id == null) p.Id = MiniJson.Teksti(ao, "id");
