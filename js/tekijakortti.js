@@ -102,7 +102,8 @@ const HAVAINNEKUVA_BY_SA = {
  * on BY-SA, havainnekuva lisensoidaan CC BY-SA 4.0:lla (ShareAlike
  * periytyy muunneltuun kuvaan); maininta tulee rivin loppuun.
  *
- * Viitteet on rekonstruoitu (docs/raportit/herokuvien-viitteet-20260923.md);
+ * Viitteet on rekonstruoitu ja varmistettu ajonaikaista Commonsia vasten
+ * (docs/raportit/herokuvien-viitteet-20260923-varmistus.md);
  * uusissa ajoissa hero-ajuri kirjaa ne repoon (tools/hero-viiteloki.tsv).
  *
  * @param {HTMLElement} el täytetty lähderivi

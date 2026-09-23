@@ -1,5 +1,5 @@
 # Herokuvien viiteloki: tiedosto<TAB>viitekuva<TAB>lisenssi<TAB>tekijä<TAB>kuvasivu. tools/hero-ajuri.mjs täydentää.
-# Rivit 23.–24.8.2026 ajosta on REKONSTRUOITU 23.9.2026 (alkuperäinen loki katosi; docs/raportit/herokuvien-viitteet-20260923.md).
+# Rivit 23.–24.8.2026 ajosta on REKONSTRUOITU 23.9.2026 (alkuperäinen loki katosi; docs/raportit/herokuvien-viitteet-20260923.md) ja varmistettu ajonaikaista Commonsia vasten 60/60 (tools/varmista-hero-viitteet.mjs).
 hero7-oodi.png	File:Helsingin keskustakirjasto Oodi 2022-09-16 01.jpg	CC0	Leonhard Lenz	https://commons.wikimedia.org/wiki/File:Helsingin_keskustakirjasto_Oodi_2022-09-16_01.jpg
 hero7-oodi.png	File:Kansalaistori square and the Central Library in Helsinki, Finland, 2020 April.jpg	CC BY 4.0	Yehia Eweis	https://commons.wikimedia.org/wiki/File:Kansalaistori_square_and_the_Central_Library_in_Helsinki,_Finland,_2020_April.jpg
 hero7-oodi.png	File:Central Library Oodi in Helsinki, Finland, 2019 September.jpg	CC BY 4.0	ALA Architects	https://commons.wikimedia.org/wiki/File:Central_Library_Oodi_in_Helsinki,_Finland,_2019_September.jpg
