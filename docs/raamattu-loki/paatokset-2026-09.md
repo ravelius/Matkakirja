@@ -1683,3 +1683,7 @@ Klo 09.21. Pelikoodari tekee pienen PR:n heti; tarkoitus on puolittaa syy: jos p
 ## OMISTAJAN TARKENNUS: PALJAAN KARTAN PAALLE KYTKINRYHMA 'KERROKSET' (NIMIOT, SYMBOLIT, GL-RUNKO, ILMAKEHA/POHJA, HAIVYTYS, LEPOPIIRTO, PULU, DOM-KERROKSET, PIENI LIIKE) YKSI KERRALLAAN PAALLE/POIS — KIINTEIDEN PUOLITUSTILOJEN SIJAAN; OVERLAY LISTAA PAALLA OLEVAT (23.9.2026 klo 09.21)
 
 Klo 09.25. Kytkimet näkyvät vain Paljas kartta -tilassa, tallentuvat, voimaan latauksessa; liput myös osoitteessa. Sama PR Pelikoodarilta.
+
+## PR #2882 (KARTTASEPPA): NIMIOLUKKO — JUURISYY: LEPOLADONTA RATKAISI KYLJEN UUDESTAAN VEDON TAUOILLA JA ZOOMIN JALKEEN; sovittelu.js SAANTO 5: RUUDULLA (16 px VARA) OLEVA LUKITTU NIMIO PITAA KYLJEN ZOOMISTA RIIPPUMATTA, REUNA EI PURA LUKKOA (SAA LEIKKAUTUA), TUKOSSA HAIPYY PAIKALLAAN JA PALAA SAMAAN KYLKEEN; TORMAYKSESSA VANHEMPI VOITTAA; WebKit 390 px LOIRE 16 VETOA + 12 ZOOMIPORRASTA: main 34 PUOLENVAIHTOA → 0 (23.9.2026 klo 09.30)
+
+npm test 4040/0. Vartiolinjaus: 'levossa ei reunaylityksiä' sallii nyt lukossa pidetyn leikkautuvan nimiön. Sivuhuomio: savuke-nimiot-sulavat punainen myös mainissa (piirtoviive maapisteeseen) — tutkimatta. Kaappaus docs/raportit/kaappaukset/nimiolukko-ennen-jalkeen-390.jpg. → v2142.
