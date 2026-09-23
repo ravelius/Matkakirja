@@ -70,8 +70,10 @@ namespace Matkakirja.Natiivi
                     () =>
                     {
                         if (tunnus != ajoTunnus) return;
-                        // Kone lähtee: moottorin ääni ja isoisän intro samalla hetkellä.
+                        // Kone lähtee: moottorin ääni, isoisän intro ja nousu samalla hetkellä.
                         Lentoaani(true, kesto);
+                        AloitaLento(Lentosuunnitelma.Laske("lontoo", kohde, (AloitusLat, AloitusLon), b.Value, kesto,
+                            AloituslennonKesto(), aloitus: true));
                         SoitaLuento(luennat.Intro, 0f);
                     },
                     () => { if (tunnus == ajoTunnus) AjoValmis(); });
