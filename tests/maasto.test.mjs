@@ -12,7 +12,9 @@ import { deflateSync, gunzipSync } from 'node:zlib';
 import { avaaGeotiff } from '../tools/maasto/geotiff.mjs';
 import { rtinVerkko } from '../tools/maasto/rtin.mjs';
 import { koodaaLaatta, puraLaatta } from '../tools/maasto/quantized-mesh.mjs';
-import { kerroksenKuvaus, laatanAlue, tasonLaatat, teeLaatta, LAHDEMAININTA } from '../tools/maasto/tee-maasto.mjs';
+import {
+  janteenPainuma, kerroksenKuvaus, laatanAlue, tasonLaatat, teeLaatta, CESIUM_TASO0_VIRHE, LAHDEMAININTA,
+} from '../tools/maasto/tee-maasto.mjs';
 
 /** Pieni COG: w × h float32, ruutu r, prediktori 3, DEFLATE, lon0/lat1 ja askel. */
 function teeTiff(w, h, r, arvo, { lon0 = 2, lat1 = 46, askel = 0.01 } = {}) {
@@ -154,4 +156,33 @@ test('laatta keinotekoisesta maastosta: naapurien yhteinen reuna täsmää', () 
     const sallittu = Math.max(vasen.otsake.hMax - vasen.otsake.hMin, oikea.otsake.hMax - oikea.otsake.hMin) / 32767 * 2 + 1e-3;
     assert.ok(Math.abs(ita.get(v) - lansi.get(v)) <= sallittu, `v ${v}: ${ita.get(v)} vs ${lansi.get(v)}`);
   }
+});
+
+test('kaarevuus: tasainen laatta ei ole kaksi jännettä maan alla (mustat kiilat 23.9.2026)', () => {
+  // 90°:n jänteen keskipiste on R(1 − cos 45°) ≈ 1 866 km pinnan alla.
+  assert.ok(Math.abs(janteenPainuma(0, 0, 90, 0) - 6371008.8 * (1 - Math.cos(Math.PI / 4))) < 1);
+  const tasainen = { korkeus: () => 0 };
+  const z0 = teeLaatta(tasainen, 0, 1, 0);
+  assert.ok(z0.kolmioita > 100, `z0: ${z0.kolmioita} kolmiota`);
+  // Jokaisen kolmion painuma on tason virherajan alla: purettu laatta.
+  for (const [z, x, y] of [[0, 1, 0], [4, 16, 12], [7, 133, 99]]) {
+    const { kolmiot, pisteet } = puraLaatta(gunzipSync(teeLaatta(tasainen, z, x, y).tavut));
+    const a = laatanAlue(z, x, y);
+    const lonlat = ([u, v]) => [a.west + (u / 32767) * (a.east - a.west), a.south + (v / 32767) * (a.north - a.south)];
+    const kynnys = Math.max(0.5, (CESIUM_TASO0_VIRHE / 2 ** z) * 0.5);
+    for (const t of kolmiot) {
+      for (let k = 0; k < 3; k += 1) {
+        const [l1, b1] = lonlat(pisteet[t[k]]); const [l2, b2] = lonlat(pisteet[t[(k + 1) % 3]]);
+        assert.ok(janteenPainuma(l1, b1, l2, b2) <= kynnys * 1.01, `z${z}: sivun painuma yli ${kynnys} m`);
+      }
+    }
+  }
+  // Tarkalla tasolla painuma on millimetrejä: laatta pysyy kahtena kolmiona.
+  assert.equal(teeLaatta(tasainen, 12, 4252, 3090).kolmioita, 2);
+});
+
+test('--maailma: matalat tasot koko maailmalle, syvät vain alueelle', () => {
+  const l = kerroksenKuvaus({ tasot: [0, 4], alue: [-6, 41, 10, 52], versio: 'x', maailma: 2 });
+  assert.deepEqual(l.available[2], [{ startX: 0, startY: 0, endX: 7, endY: 3 }]);
+  assert.ok(l.available[3][0].endX < 15);
 });
