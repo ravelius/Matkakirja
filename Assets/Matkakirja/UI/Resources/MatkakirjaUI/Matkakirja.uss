@@ -2226,6 +2226,8 @@
 
 .mk-muutos__versio {
     min-width: 58px;
+    max-width: 96px;
+    white-space: normal;
     margin-right: 8px;
     font-size: 14px;
     color: #46331f;
