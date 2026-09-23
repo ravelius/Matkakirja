@@ -34,8 +34,11 @@ keksinnot | vesistot | pois`, loki `Documents/linssi-loki.txt`.
   (LinssiOhjain.PeiteKasittelija), selitekortti, astronautin koukut (AstronauttiKerros.Avaus-, Kuva-,
   SumuKasittelija), ihmisen matkan koukut (IhmisenMatkaKerros.*Kasittelija: musta, valot, jakso, kello,
   kuva, pulu, tunne, loppu), keksintöjen koukut (KeksinnotKerros.*Kasittelija, EsittelyUIssa).
-- **Siirtoseppä (nippu 4):** linssiaineistoon keksintöjen luentojen rungot ja juuri sekä linssien
-  musiikkiraitojen osoitteet (pyydetty 23.9. klo 18).
+- **Siirtoseppä: VALMIS koepaketissa v9** (`/Users/Shared/Claude/sisalto-koe/v9`): linssiaineiston rivi
+  `linssiluennat` = {keksinnot | ihmisen-matka: {juuri, pysakit: [{vuosi, otsikko, runko, url}],
+  puheet: [{avain, runko, url}]}} (keksinnöt 26 + esittely + valinaytos-1873; ihmisen matka 20 +
+  esittely + loppu). Musiikki: aanitaulut `siirtyma:keksinnot` ja `siirtyma:ihmisen-matka` (data.ampari).
+  Topografian ja satelliitin LINSSI-metatiedot ovat moduuleissa, joten kovakoodatut tiedot voi korvata niillä.
 - **Pelikoodari:** kertojan mykistys (EsityksenAani.Mykistetty), musiikin pito
   (LinssiOhjain.MusiikkiKasittelija), omistus (Linssirekisteri.Saatavilla; kynnykset
   Linssirekisteri.Avauskynnykset).
@@ -52,8 +55,10 @@ keksinnot | vesistot | pois`, loki `Documents/linssi-loki.txt`.
 1. Vesistöjen merge ja laitehavainnot (ks. taulukko).
 2. Laitehavainnot (Natiiviseppä/Laitetestaaja) ihmisen matkasta, astronautista ja keksinnöistä.
 3. Vertailu ja maatiedot, kun MaaTila on masterissa (linssit ovat karttatiloja; maalehti ja käyrät Natiivi-UI).
-4. Ihmisen matkan tutkimusvaihe (viisi virtanappia, nostokortit) ja muisti; keksintöjen luennat, kun
-   paketti tuo rungot.
+4. Keksintöjen pysäkkiluennat linssiluennat-rivistä: soitin (kuten EsityksenAani) ja
+   `Pysakkiajo`n luentaSoi-koukku; esittely- ja välinäytöspuheet. Musiikki aanitauluista Pelikoodarin
+   kautta.
+5. Ihmisen matkan tutkimusvaihe (viisi virtanappia, nostokortit) ja muisti.
 
 ## Raportit (pelin repo, docs/raportit/)
 
