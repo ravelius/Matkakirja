@@ -4,9 +4,10 @@
   "title": "Matkakirja-vienti: manifest",
   "description": "Viennin sisällysluettelo. Tuoja tarkistaa tästä, että sai kaiken: jokaisen moduulin exportit lukumäärineen, tiedostojen sha256-tiivisteet ja laskennat.",
   "type": "object",
-  "required": ["$skeema", "mediaJuuri", "laskennat", "media", "kokoelmat", "moduulit"],
+  "required": ["$skeema", "skeemaversio", "mediaJuuri", "laskennat", "media", "kokoelmat", "moduulit"],
   "properties": {
     "$skeema": { "const": "matkakirja-vienti/1/manifest" },
+    "skeemaversio": { "type": "string", "pattern": "^1\\.[0-9]+$" },
     "kuvaus": { "type": "string" },
     "mediaJuuri": { "type": "string", "format": "uri" },
     "laskennat": { "type": "object" },

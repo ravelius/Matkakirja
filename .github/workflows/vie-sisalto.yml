@@ -1,0 +1,183 @@
+# Vie sisältöpaketin ämpäriin natiivia peliä varten (Siirtoseppä 23.9.2026).
+#
+# Omistajan tilaus 23.9.2026 klo 10.05: nostotekstin tai kuvan muutoksen
+# pitää päivittyä sekä web-peliin että natiiviin iOS-peliin samasta
+# lähteestä. js/packs pysyy ainoana lähteenä. Pages julkaisee webin, ja
+# tämä työnkulku vie samasta commitista versioidun sisältöpaketin
+# ämpäriin, josta natiivi lukee sen (docs/raportit/
+# sisallon-siirtoputki-20260923.md osa 5).
+#
+# Ämpärissä:
+#   sisalto/1/v<N>/        muuttumaton paketti (vie-sisalto.mjs:n tulos +
+#                          osoitin.json), Cache-Control vuosi, immutable
+#   sisalto/1/uusin.json   osoitin, max-age 60 s. Kirjoitetaan VIIMEISENÄ,
+#                          kun paketti on tarkistettu julkisesta osoitteesta.
+#
+# N on sisältöversio: CI:n laskuri, erillään APP_VERSIONista. Jos paketin
+# tiiviste ei muuttunut (pelkkä koodimuutos), mitään ei viedä. Säilytetään
+# 20 uusinta versiota. Palautus: käsiajo syötteellä `palauta: N`, joka
+# kopioi sisalto/1/v<N>/osoitin.json:n osoittimeksi.
+#
+# Ajokone on GitHubin ubuntu (kuten peilaa.yml), ei Mac: push ei saa
+# kuormittaa omistajan Macia.
+#
+# Salaisuudet ovat samat kuin muissa ämpärityönkuluissa:
+#   R2_ACCOUNT_ID  R2_ACCESS_KEY_ID  R2_SECRET_ACCESS_KEY  R2_BUCKET
+
+name: Vie sisältöpaketti ämpäriin
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'js/**'
+      - 'assets/data/**'
+      - 'tools/vienti/**'
+      - '.github/workflows/vie-sisalto.yml'
+  workflow_dispatch:
+    inputs:
+      palauta:
+        description: 'Palauta osoitin versioon N (tyhjä = tavallinen vienti)'
+        required: false
+        default: ''
+
+permissions:
+  contents: read
+
+# Ajot jonoon, ei keskeytystä: kaksi rinnakkaista ajoa laskisivat saman N:n.
+concurrency:
+  group: vie-sisalto
+  cancel-in-progress: false
+
+jobs:
+  vie:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      # R2 ei hyväksy aws-cli 2.23:n oletustarkistussummia (ks. peilaa.yml).
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+      AWS_MAX_ATTEMPTS: '10'
+      AWS_RETRY_MODE: adaptive
+      AMPARI: ${{ secrets.R2_BUCKET }}
+      PAATE: https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com
+      JULKINEN: https://media.matkakirja.app
+      PALAUTA: ${{ inputs.palauta }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Tarkista että salaisuudet ovat tallessa
+        env:
+          TILI: ${{ secrets.R2_ACCOUNT_ID }}
+          AVAIN: ${{ secrets.R2_ACCESS_KEY_ID }}
+          SALAISUUS: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+        run: |
+          set -euo pipefail
+          puuttuu=""
+          [ -n "$TILI" ]      || puuttuu="$puuttuu R2_ACCOUNT_ID"
+          [ -n "$AVAIN" ]     || puuttuu="$puuttuu R2_ACCESS_KEY_ID"
+          [ -n "$SALAISUUS" ] || puuttuu="$puuttuu R2_SECRET_ACCESS_KEY"
+          [ -n "$AMPARI" ]    || puuttuu="$puuttuu R2_BUCKET"
+          if [ -n "$puuttuu" ]; then
+            echo "::error::Näitä salaisuuksia ei löydy:$puuttuu"
+            exit 1
+          fi
+
+      # --- Palautus: vain osoitin vaihtuu, paketteja ei kosketa ------------
+      - name: Palauta osoitin versioon N
+        if: env.PALAUTA != ''
+        run: |
+          set -euo pipefail
+          case "$PALAUTA" in (*[!0-9]*|'') echo "::error::palauta on luku, sai: $PALAUTA"; exit 1;; esac
+          aws s3 cp "s3://$AMPARI/sisalto/1/v$PALAUTA/osoitin.json" palautus.json --endpoint-url "$PAATE"
+          aws s3 cp palautus.json "s3://$AMPARI/sisalto/1/uusin.json" --endpoint-url "$PAATE" \
+            --content-type application/json --cache-control 'public, max-age=60'
+          echo "Osoitin palautettu versioon v$PALAUTA."
+
+      # --- Tavallinen vienti -----------------------------------------------
+      - name: Testit (vienti ja paketin skeema)
+        if: env.PALAUTA == ''
+        run: node --test tests/vienti.test.mjs tests/sisaltopaketti.test.mjs
+
+      - name: Nouda edellinen osoitin ja suurin versio
+        if: env.PALAUTA == ''
+        id: tila
+        run: |
+          set -uo pipefail
+          mkdir -p edellinen
+          loki=$(aws s3 cp "s3://$AMPARI/sisalto/1/uusin.json" edellinen/uusin.json --endpoint-url "$PAATE" 2>&1)
+          if [ $? -ne 0 ]; then
+            if echo "$loki" | grep -qiE 'does not exist|NoSuchKey|404'; then
+              echo "Ei vielä osoitinta: ensimmäinen sisältöversio."
+              rm -f edellinen/uusin.json
+            else
+              echo "$loki"; exit 1
+            fi
+          fi
+          suurin=$(aws s3 ls "s3://$AMPARI/sisalto/1/" --endpoint-url "$PAATE" 2>/dev/null \
+            | sed -n 's/.*PRE v\([0-9][0-9]*\)\/$/\1/p' | sort -n | tail -1)
+          echo "suurin=${suurin:-0}" >> "$GITHUB_OUTPUT"
+          echo "Suurin ämpärissä oleva versio: ${suurin:-ei yhtään}"
+
+      - name: Vie sisältö ja valmistele paketti
+        if: env.PALAUTA == ''
+        id: julkaisu
+        run: |
+          set -euo pipefail
+          node tools/vienti/vie-sisalto.mjs
+          node tools/vienti/julkaise-sisalto.mjs --edellinen edellinen/uusin.json \
+            --suurin "${{ steps.tila.outputs.suurin }}" --commit "$GITHUB_SHA"
+
+      - name: Vie paketti (muuttumaton versiokansio)
+        if: env.PALAUTA == '' && steps.julkaisu.outputs.muuttui == 'true'
+        run: |
+          set -euo pipefail
+          N="${{ steps.julkaisu.outputs.versio }}"
+          aws s3 sync "dist/sisalto/v$N" "s3://$AMPARI/sisalto/1/v$N/" --endpoint-url "$PAATE" \
+            --content-type application/json --cache-control 'public, max-age=31536000, immutable' \
+            --no-progress --only-show-errors
+
+      - name: Tarkista paketti julkisesta osoitteesta
+        if: env.PALAUTA == '' && steps.julkaisu.outputs.muuttui == 'true'
+        run: |
+          set -euo pipefail
+          N="${{ steps.julkaisu.outputs.versio }}"
+          for f in manifest.json osoitin.json kokoelmat/kaupungit.json; do
+            odotettu=$(sha256sum "dist/sisalto/v$N/$f" | cut -d' ' -f1)
+            saatu=$(curl -fsSL --retry 5 --retry-delay 3 "$JULKINEN/sisalto/1/v$N/$f" | sha256sum | cut -d' ' -f1)
+            if [ "$odotettu" != "$saatu" ]; then
+              echo "::error::$f ei vastaa julkisesta osoitteesta ($saatu ≠ $odotettu); osoitinta ei vaihdeta."
+              exit 1
+            fi
+          done
+          echo "Paketti v$N luettavissa: $JULKINEN/sisalto/1/v$N/"
+
+      # Osoitin VIIMEISENÄ: sovellus ei koskaan näe osoitinta pakettiin,
+      # jota ei vielä ole kokonaan ämpärissä.
+      - name: Päivitä osoitin
+        if: env.PALAUTA == '' && steps.julkaisu.outputs.muuttui == 'true'
+        run: |
+          set -euo pipefail
+          aws s3 cp dist/sisalto/uusin.json "s3://$AMPARI/sisalto/1/uusin.json" --endpoint-url "$PAATE" \
+            --content-type application/json --cache-control 'public, max-age=60'
+          cat dist/sisalto/uusin.json
+
+      - name: Siivoa vanhat versiot (20 uusinta jää)
+        if: env.PALAUTA == '' && steps.julkaisu.outputs.muuttui == 'true'
+        run: |
+          set -euo pipefail
+          N="${{ steps.julkaisu.outputs.versio }}"
+          for v in $(aws s3 ls "s3://$AMPARI/sisalto/1/" --endpoint-url "$PAATE" \
+              | sed -n 's/.*PRE v\([0-9][0-9]*\)\/$/\1/p'); do
+            if [ "$v" -le $((N - 20)) ]; then
+              echo "Poistetaan v$v"
+              aws s3 rm "s3://$AMPARI/sisalto/1/v$v/" --recursive --endpoint-url "$PAATE" --only-show-errors
+            fi
+          done
