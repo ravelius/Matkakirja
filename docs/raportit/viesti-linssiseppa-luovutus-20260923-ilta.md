@@ -37,12 +37,11 @@ linssit-kontaktiarkki-20260923.md. Edellinen luovutus: viesti-linssiseppa-luovut
 - Ydin, AVPlayer-liitännäinen ja Unity-sovitin ovat masterissa; Natiiviseppä on kääntänyt .mm:n ja ATS-korjauksen
   (NSAllowsArbitraryLoadsForMedia). **Laitteella ei ole vielä kuultu yhtään lähetystä**: v16:ssa kaikki 115 asemaa
   ovat luokassa linkki.
-- **AVOIN, tee ensin:** Fablen tarkennettu päätös 23.9. ilta: **luokat sallittu JA epaselva soivat, vain kielletty
-  on linkki**; korvaavat asemat 16 maalle: docs/raportit/radio-korvaavat-asemat-20260923.md. Nykyinen koodi
-  (RadioLinssi.ToimintoAsemalle) soittaa vain "sallittu"-luokan, "linkki" avaa sivun, "kielletty" soittaa
-  vara-äänitteen tai ei mitään, luokaton ei mitään. Muutettava: `epaselva` → Soita; `kielletty` → Linkki (sivu),
-  tarkista luokkanimi kokoelmasta (epaselva/epäselvä) ja päivitä RadioTestit. Laitetesti sen jälkeen
-  (`linssi radio`, `radio <ISO3>`, `radio tila`).
+- **Luokkasääntö toteutettu** (haara linssiseppa/radioluokat, merge-pyyntö Natiivisepällä): omistajan päätös
+  23.9. klo 21.1x — "sallittu" ja "epaselva" soivat, "kielletty" (ja v16:n vanha "linkki") avaa aseman sivun,
+  ilman sivua ei mitään; luokaton ei soi eikä näy asteikolla, ei edes kehittäjätilassa. Korvaavat asemat 16 maalle:
+  docs/raportit/radio-korvaavat-asemat-20260923.md (Siirtoseppä päivittää kokoelman). **Seuraavaksi:** laitetesti,
+  kun kokoelmassa on soivia asemia (`linssi radio`, `radio <ISO3>`, `radio tila`).
 - Siirtosepältä pyydetty yksi sallittu testiasema koekansioon (voi olla tarpeeton päätöksen jälkeen).
 - Natiivi-UI tekee kotelon, pistenäytön ja kartuscha-merkin myöhemmin (rajapinta: RadioLinssi.TilaMuuttui,
   Asemat, MaanAsema, Viritä, SoitaKaupunki, Keskeyta, Taajuus; RadioAineisto.PistefontinMerkit).
@@ -56,7 +55,7 @@ linssit-kontaktiarkki-20260923.md. Edellinen luovutus: viesti-linssiseppa-luovut
 
 ## Avoimet
 
-1. Radion luokkasääntö (yllä) ja ensimmäinen kuultu lähetys iPadilla.
+1. Ensimmäinen kuultu radiolähetys iPadilla (luokkasääntö on tehty).
 2. Kontaktiarkin erot (docs/raportit/linssit-kontaktiarkki-20260923.md): UI linssin päällä tarkistettava
    Natiivi-UI:n koukkujen jälkeen; astronautin sumu (Natiivi-UI korjasi, vertaa); vesistöjen webkuva
    (Laitetestaaja, linssi ajaa oman kameransa); keksintöjen tummennuksen reiän kulku hypyssä (web siirraReikaMatkalla).
