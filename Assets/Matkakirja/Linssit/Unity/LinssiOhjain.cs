@@ -68,6 +68,7 @@ namespace Matkakirja.Natiivi
             StartCoroutine(LataaAstronautti());
             StartCoroutine(LataaKeksinnot());
             StartCoroutine(LataaIhmisenMatka());
+            StartCoroutine(LataaVesistot());
             rekisteri.Vaihtui += l => Kirjaa("auki: " + (l?.Tiedot.Id ?? "ei mitään"));
             komentoPolku = Path.Combine(Application.persistentDataPath, "linssi-komento.txt");
             lokiPolku = Path.Combine(Application.persistentDataPath, "linssi-loki.txt");
@@ -207,6 +208,57 @@ namespace Matkakirja.Natiivi
                 if (kerros != null) Destroy(kerros.gameObject);
                 kerros = null;
                 aani = null;
+            }
+        }
+
+        /// <summary>
+        /// Vesistölinssi: maasto (järvet, joet), nimipaketti (luokat ja nimet) ja
+        /// LINSSI-tiedot paketista. Pallon muunnos ja järvien kolmiointi lasketaan
+        /// kerran tässä (muutama ms), joten linssin avaus on vain meshien rakennus.
+        /// Ei avauskynnystä (Linssirekisteri.Avauskynnykset): vain kehittäjätilassa.
+        /// </summary>
+        System.Collections.IEnumerator LataaVesistot()
+        {
+            string maasto = null, nimet = null, linssi = null;
+            yield return LinssiSisalto.Hae("moduulit/js/packs/maailmankartta-maasto.json", t => maasto = t);
+            yield return LinssiSisalto.Hae("moduulit/js/packs/maailmankartta-nimet.json", t => nimet = t);
+            yield return LinssiSisalto.Hae("moduulit/js/linssit/vesistot.json", t => linssi = t);
+            if (maasto == null || linssi == null) { Kirjaa("vesistöt: aineisto puuttuu"); yield break; }
+            try
+            {
+                var a = Matkakirja.Linssit.Vesistot.VesistotAineisto.Lue(Matkakirja.Peli.MiniJson.Jasenna(maasto),
+                    nimet == null ? null : Matkakirja.Peli.MiniJson.Jasenna(nimet), Matkakirja.Peli.MiniJson.Jasenna(linssi));
+                var pallolla = Matkakirja.Linssit.Vesistot.VesistotPallolle.Laske(a);
+                rekisteri.Lisaa(new VesistotSovitin(this, a, pallolla));
+                Kirjaa($"vesistöt: {pallolla.Jarvet.Count} järveä, {pallolla.Uomat.Count} uomaa, {pallolla.Nimet.Count} nimeä, muunnos {pallolla.KestoMs:F1} ms");
+            }
+            catch (Exception e) { Kirjaa("vesistöt: " + e.Message); }
+        }
+
+        /// <summary>Vesistölinssi Unityssä: 3D-kerros avatessa, purku sulkiessa (logiikka VesistotLinssissä).</summary>
+        sealed class VesistotSovitin : ILinssi
+        {
+            readonly LinssiOhjain o;
+            readonly Matkakirja.Linssit.Vesistot.VesistotAineisto aineisto;
+            readonly Matkakirja.Linssit.Vesistot.VesistotPallolla pallolla;
+            Matkakirja.Linssit.Vesistot.VesistotLinssi linssi;
+            VesistotKerros kerros;
+            public VesistotSovitin(LinssiOhjain o, Matkakirja.Linssit.Vesistot.VesistotAineisto a, Matkakirja.Linssit.Vesistot.VesistotPallolla p)
+            { this.o = o; aineisto = a; pallolla = p; }
+            public LinssiTiedot Tiedot => aineisto.Tiedot;
+            public bool Auki => linssi?.Auki ?? false;
+            public void Avaa(ILinssiYmparisto y)
+            {
+                kerros = VesistotKerros.Luo(o.kierto);
+                linssi = new Matkakirja.Linssit.Vesistot.VesistotLinssi(aineisto, kerros, pallolla);
+                linssi.Avaa(y);
+            }
+            public void Paivita() => linssi?.Paivita();
+            public void Sulje()
+            {
+                linssi?.Sulje();   // kutsuu kerroksen Pois-metodia, joka tuhoaa sen
+                linssi = null;
+                kerros = null;
             }
         }
 
