@@ -662,6 +662,22 @@ test('skeema 1.22: muutosrivi osoittimeen ja muutosloki-natiivi', async () => {
   assert.ok(Array.isArray(JSON.parse(tiedostot.get('kokoelmat/muutosloki-natiivi.json')).alkiot));
 });
 
+test('B7: maisemakorit pelin porrastuksella, aarreaiheet ja tilaraidat', async () => {
+  const { kaupunkiKori, maaKori, tyyppiKori } = await import('../js/aani-ehdokkaat.js');
+  const { MAAILMANKARTTA: P } = await import('../js/packs/maailmankartta.js');
+  const a = JSON.parse(tiedostot.get('kokoelmat/aanitaulut.json')).alkiot;
+  const korit = a.filter((r) => r.laji === 'maisemakori');
+  assert.equal(korit.length, P.cities.length + 4);
+  for (const c of P.cities.slice(0, 40)) {
+    const oma = kaupunkiKori(P.id, c.id);
+    const maa = oma.length ? [] : maaKori(P.id, c.id, P.map.cityCountry);
+    const odotus = oma.length ? oma : maa.length ? maa : (c.ambience ? tyyppiKori(c.ambience, P.id) : []);
+    assert.deepEqual(korit.find((k) => k.paikka === c.id).kori, odotus, c.id);
+  }
+  assert.equal(korit.find((k) => k.paikka === 'etusivu').vakio, true);
+  assert.match(a.find((r) => r.id === 'aarreaihe:paa').url, /musa-paaaarre-lyria\.mp3$/);
+});
+
 test('skeema 1.9: offline-manifesti maittain (laatat, maasto, media, tavut)', async () => {
   const m = JSON.parse(tiedostot.get('manifest.json'));
   const o = JSON.parse(tiedostot.get(m.offline.tiedosto));

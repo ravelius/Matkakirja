@@ -30,7 +30,7 @@ import { KOHDE_MAAT, kohteenKategoria } from '../../js/fokuskohteet.js';
 import { nostosymPaakategoria } from '../../js/fokusnosto-symbolit.js';
 import { MAAILMANKARTAN_NIMET } from '../../js/packs/maailmankartta-nimet.js';
 import { ratkaiseMedia, sivustoReitit } from './media.mjs';
-import { aaniUrl, horatioAanenKesto } from '../../js/media.js';
+import { aaniUrl, horatioAanenKesto, musaPolku } from '../../js/media.js';
 import { aikaleimojenOsoite, ratkaiseAnkkurit, AIKALEIMOJEN_VERSIO } from '../../js/luentareaktiot.js';
 import { livianEleidenOsoite } from '../../js/livia-puheeleet-lataus.js';
 import { livianPuheeleenTiedot, livianLuentareaktionTiedot } from '../../js/livia-tilanteet.js';
@@ -492,6 +492,25 @@ function radioKokoelma(hae) {
     { iso3: 'maat' }, rivit);
 }
 
+function maisemakorit(P, hae) {
+  const { kaupunkiKori, maaKori, tyyppiKori } = hae('js/aani-ehdokkaat.js');
+  const { VAKIOPAIKAT } = hae('js/ambience-stream.js');
+  const { JALKAMATKAN_MAISEMA } = hae('js/ui.js');
+  const lauta = P.id;
+  const cc = P.map.cityCountry ?? {};
+  const kori = (paikka, tyyppi) => {
+    const oma = kaupunkiKori(lauta, paikka);
+    const maa = oma.length ? [] : maaKori(lauta, paikka, cc);
+    const [porras, lista] = oma.length ? ['kaupunki', oma] : maa.length ? ['maa', maa] : ['tyyppi', tyyppi ? tyyppiKori(tyyppi, lauta) : []];
+    return { id: `maisemakori:${paikka}`, laji: 'maisemakori', paikka, tyyppi: tyyppi ?? null, porras, vakio: VAKIOPAIKAT.has(paikka), kori: lista };
+  };
+  return [
+    ...P.cities.map((c) => ({ ...kori(c.id, c.ambience ?? null), kaupunki: c.id })),
+    kori('etusivu', 'lentoasema'), kori('lentomatka', 'lentokone'),
+    kori('jalkamatka', JALKAMATKAN_MAISEMA), kori('merimatka', 'meri'),
+  ];
+}
+
 function aaniKokoelma(ns, hae) {
   const aani = hae('js/sound.js');
   const siirtyma = hae('js/siirtymamusiikki.js');
@@ -522,13 +541,28 @@ function aaniKokoelma(ns, hae) {
       id: `musiikkiketju:${c.id}`, laji: 'musiikkiketju', kaupunki: c.id,
       ketju: valitsin.musiikkiketju(c.id, P.map.cityCountry?.[c.id] ?? null),
     })),
+    // B7 (Pelikoodari 23.9.2026): äänimaiseman korit pelin omilla funktioilla
+    // (js/ambience-stream.js arvoAani: kaupunkiKori → maaKori → tyyppiKori).
+    ...maisemakorit(P, hae),
+    // Tilaraidat ja aarreaiheet täysin poluin (musaPolku + aaniUrl).
+    ...Object.entries(valitsin.TILARAIDAT).map(([nimi, v]) => ({
+      id: `tilaraitaUrl:${nimi}`, laji: 'tilaraitaUrl', nimi, url: aaniUrl(musaPolku(v.tunnus)),
+    })),
+    ...Object.entries(hae('js/ui.js').AARRE_MUSIIKKI).map(([nimi, polku]) => ({
+      id: `aarreaihe:${nimi}`, laji: 'aarreaihe', nimi, tunnus: polku.split('/').at(-1).replace(/(-lyria)?\.mp3$/, ''),
+      url: aaniUrl(polku),
+    })),
   ];
   return taulukko('js/sound.js + js/siirtymamusiikki.js + js/musiikkivalitsin.js',
     'Äänitaulut natiiville. tehoste/ambienssi: synteesi = webin Web Audio -synteesi (ei datana), naytte = '
       + 'äänite, jos sellainen on (REAL_SAMPLES; url + credit). pulu: pulun tehosteet (juuri + data). siirtyma: '
       + 'matkan musiikki lajeittain (jalan, laiva, lento). tilaraita/paikkaraita/pohjaraita: musiikin tasot. '
       + 'musiikkiketju: kaupungin raidat parhaasta alkaen (musiikkiketju()); soitin ottaa ensimmäisen olemassa '
-      + 'olevan. Avoin tila (lehti, matkalaukku) menee ketjun kärkeen TILARAIDAT-järjestyksessä.',
+      + 'olevan. Avoin tila (lehti, matkalaukku) menee ketjun kärkeen TILARAIDAT-järjestyksessä. maisemakori '
+      + '(B7): kaupungin tai virtuaalipaikan (etusivu, lentomatka, jalkamatka, merimatka) äänimaisema = kori (url-lista '
+      + '#alku/#voima-fragmentein, js/aani-ehdokkaat.js jaaAlku), porras (kaupunki | maa | tyyppi), tyyppi; vakio = true → '
+      + 'soita kori[0], muuten arvo satunnaisesti. tilaraitaUrl ja aarreaihe (tavallinen = musa-aarre, paa = musa-paaaarre '
+      + 'tähtilaatalle): valmiit osoitteet.',
     { kaupunki: 'kaupungit' }, rivit);
 }
 
