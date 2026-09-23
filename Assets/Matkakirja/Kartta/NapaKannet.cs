@@ -26,6 +26,11 @@ namespace Matkakirja
         public int sektoreita = 96;
         public int kehia = 16;
 
+        readonly System.Collections.Generic.List<GameObject> kannet = new System.Collections.Generic.List<GameObject>();
+
+        /// <summary>KarttaKerrokset "napakannet".</summary>
+        public void Nakyvat(bool nakyy) { foreach (var k in kannet) k.SetActive(nakyy); }
+
         void Start()
         {
             if (georeferenssi == null) georeferenssi = GetComponentInParent<CesiumGeoreference>();
@@ -39,6 +44,7 @@ namespace Matkakirja
             go.transform.SetParent(georeferenssi.transform, false);
             go.AddComponent<MeshFilter>().sharedMesh = Verkko(suunta);
             go.AddComponent<MeshRenderer>().sharedMaterial = materiaali;
+            kannet.Add(go);
         }
 
         Mesh Verkko(int suunta)

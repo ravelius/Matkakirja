@@ -49,7 +49,9 @@ namespace Matkakirja.Editori
             var palloGo = new GameObject("Pallo");
             palloGo.transform.SetParent(georefGo.transform, false);
             var pallo = palloGo.AddComponent<Cesium3DTileset>();
-            pallo.tilesetSource = CesiumDataSource.FromUrl;
+            // Maasto kytkimen takana (Komennot: maasto paalle/pois, Documents/maasto.txt),
+            // kunnes laattojen rajasaumat on korjattu; oletus on ellipsoidi.
+            pallo.tilesetSource = CesiumDataSource.FromEllipsoid;
             pallo.url = MaastoUrl;
             pallo.showCreditsOnScreen = false;
 
@@ -80,6 +82,13 @@ namespace Matkakirja.Editori
             reitit.lento = Viiva("Reitti-lento", new Color32(150, 54, 40, 153), 2.5f, new Vector4(0.35f, 0.6f, 0.35f / 2.4f, 0));
             reitit.korostus = Viiva("Reitti-korostus", new Color32(96, 40, 26, 230), 4f, new Vector4(0.35f, 0.6f, 0.35f / 1.2f, 0));
             merkit.reitit = reitit;
+
+            var kerrokset = georefGo.AddComponent<KarttaKerrokset>();
+            kerrokset.pallo = pallo;
+            kerrokset.pohja = kerros;
+            kerrokset.merkit = merkit;
+            kerrokset.reitit = reitit;
+            kerrokset.napakannet = kannet;
 
             var korttiGo = new GameObject("Käyttöliittymä");
             var kortti = korttiGo.AddComponent<NimiKortti>();

@@ -9,7 +9,7 @@ using UnityEngine.UI;
 
 namespace Matkakirja.Natiivi
 {
-    public sealed class Tilarivi : MonoBehaviour
+    public sealed class Tilarivi : MonoBehaviour, ITilarivi
     {
         public TMP_FontAsset fontti;
         public Color pohja = new Color32(0xf3, 0xea, 0xd3, 0xf2);

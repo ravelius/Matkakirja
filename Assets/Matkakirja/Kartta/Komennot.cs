@@ -25,6 +25,8 @@ namespace Matkakirja
     ///   nipistys cx cy d0 d1 s    kahden sormen nipistys keskipisteen ympäri, sormien
     ///                             väli d0 → d1 (osuus näytön leveydestä)
     ///   kallista y0 y1 s          kahden sormen pystyveto (kallistus), y näytön osuutena
+    ///   maasto paalle|pois        Karttasepän maasto (layer.json) tai ellipsoidi; valinta
+    ///                             muistetaan tiedostossa Documents/maasto.txt
     /// </summary>
     public class Komennot : MonoBehaviour
     {
@@ -37,7 +39,23 @@ namespace Matkakirja
         string mittausNimi;
         StringBuilder mittaus;
 
-        void Start() => polku = Path.Combine(Application.persistentDataPath, "komento.txt");
+        void Start()
+        {
+            polku = Path.Combine(Application.persistentDataPath, "komento.txt");
+            if (File.Exists(MaastoTiedosto)) Maasto(File.ReadAllText(MaastoTiedosto).Trim() == "paalle");
+        }
+
+        static string MaastoTiedosto => Path.Combine(Application.persistentDataPath, "maasto.txt");
+
+        /// <summary>Vaihtaa pallon pohjan maastoon (tileset.url) tai ellipsoidiin.</summary>
+        static void Maasto(bool paalle)
+        {
+            var pallo = FindAnyObjectByType<CesiumForUnity.Cesium3DTileset>();
+            if (pallo == null) return;
+            var lahde = paalle ? CesiumForUnity.CesiumDataSource.FromUrl : CesiumForUnity.CesiumDataSource.FromEllipsoid;
+            if (pallo.tilesetSource != lahde) pallo.tilesetSource = lahde;
+            File.WriteAllText(MaastoTiedosto, paalle ? "paalle" : "pois");
+        }
 
         void Update()
         {
@@ -110,6 +128,9 @@ namespace Matkakirja
                         b1 = new Unity.Mathematics.float2(0.6f, (float)D(2)),
                         kesto = (float)D(3),
                     });
+                    break;
+                case "maasto":
+                    Maasto(o[1] == "paalle");
                     break;
                 case "odota":
                     odotus = Time.unscaledTime + (float)D(1);
