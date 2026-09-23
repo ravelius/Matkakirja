@@ -25,7 +25,7 @@ namespace Matkakirja
     ///   nipistys cx cy d0 d1 s    kahden sormen nipistys keskipisteen ympäri, sormien
     ///                             väli d0 → d1 (osuus näytön leveydestä)
     ///   kallista y0 y1 s          kahden sormen pystyveto (kallistus), y näytön osuutena
-    ///   alue lataa|peru|poista <ISO3|maailma> | alue tila   offline-lataus (Alueet)
+    ///   alue|offline lataa|peru|poista <ISO3|maailma> | offline tila   offline-lataus (Alueet)
     ///   palvelin                  laattapalvelimen osumat lokiin (offline / välimuisti / verkko)
     ///   valot <aihe>|kaikki|ei|tila     karttavalot (AiheValot), tila = laskurit lokiin
     ///   valot osoita <id>               napauttaa valon kohtaa (esim. skandaali:shakkiturkkilainen)
@@ -143,6 +143,7 @@ namespace Matkakirja
                     Maasto(o[1] == "paalle");
                     break;
                 case "alue":
+                case "offline":
                 {
                     // alue lataa|peru|poista <id> | alue tila
                     var al = FindAnyObjectByType<Alueet>();
