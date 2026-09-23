@@ -9,6 +9,7 @@
 //   [ kansikuva, kuvateksti ja lähde ]
 //   Johdanto (lehden "kaupunki"-aiheen johdanto)
 //   [lehti]   Lue kaupunkilehti   · Nykytaide, Luonto …
+//   [silmä]   Nähtävyydet          (web liuskan rivi: kaupungilla on kohdekartta)
 //   [kirja]   Turistiopas          (web liuskan rivi: kaupungilla on oppaan artikkeli)
 //   [kompassi] Liiku tänne
 //   [kone]    Mannerlento (300 £)    (omassa kaupungissa, mantereen aarre löytynyt)
@@ -40,6 +41,7 @@ namespace Matkakirja.Natiivi
         KaupunkiToiminnot toiminnot;
         string kaupunki;
         OpasArtikkeli opas;
+        bool nahtavyyksia;
 
         public bool Auki { get; private set; }
         /// <summary>Kortin alue (pulu hyppää kortin yläpuolelle).</summary>
@@ -92,13 +94,14 @@ namespace Matkakirja.Natiivi
             alue.style.paddingBottom = r.w + 14;
             alue.style.paddingLeft = r.x + 12;
             alue.style.paddingRight = r.z + 12;
-            alue.style.paddingTop = r.y + Ylapalkki.Korkeus + 12;
+            alue.style.paddingTop = r.y + Ylapalkki.Varaus + 12;
         }
 
         public void Nayta(string kaupunkiId, string nimi, KaupunkiToiminnot t)
         {
             kaupunki = kaupunkiId;
             opas = null;
+            nahtavyyksia = false;
             toiminnot = t ?? new KaupunkiToiminnot();
             nimio.text = (nimi ?? kaupunkiId ?? "").ToUpperInvariant();
             maa.text = "";
@@ -151,6 +154,13 @@ namespace Matkakirja.Natiivi
                 });
             }
             RakennaRivit(k);
+            // Nähtävyydet-rivi, kun kaupungilla on kohdekartta (web KAUPUNKIKARTAT).
+            Kohdekartat.Hae(k.Id, kk =>
+            {
+                if (kk == null || !Auki || kaupunki != k.Id) return;
+                nahtavyyksia = true;
+                RakennaRivit(k);
+            });
             // Turistiopas-rivi, kun oppaan artikkeli on (kaupunkilehdet ladataan tarvittaessa).
             LehtiSisalto.HaeOpas(k.Id, o =>
             {
@@ -168,6 +178,11 @@ namespace Matkakirja.Natiivi
             {
                 string aiheet = k != null && k.Aiheet.Count > 0 ? string.Join(" · ", k.Aiheet.GetRange(0, Mathf.Min(3, k.Aiheet.Count))) : null;
                 Rivi(LehtiIkoni, "Lue kaupunkilehti", aiheet, t.LueLehti);
+            }
+            if (nahtavyyksia)
+            {
+                string id = kaupunki;
+                Rivi(Ikonit.Viiva["silma"], "Nähtävyydet", null, () => UiNakymat.Hae()?.Nahtavyysnakyma.Avaa(id));
             }
             if (opas != null)
             {

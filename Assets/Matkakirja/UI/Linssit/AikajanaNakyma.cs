@@ -168,8 +168,8 @@ namespace Matkakirja.Natiivi
         void Asettele()
         {
             // Yläkulman rivillä ovat taikalasit ja "Sulje linssi": ylärivi niiden alle, paneeli sen alle.
-            ylarivi.style.top = Ylapalkki.Korkeus + 8 + 48;
-            paneeli.style.top = Ylapalkki.Korkeus + 8 + 48 + 52;
+            ylarivi.style.top = Ylapalkki.Varaus + 8 + 48;
+            paneeli.style.top = Ylapalkki.Varaus + 8 + 48 + 52;
         }
 
         // --- tila ------------------------------------------------------------------------

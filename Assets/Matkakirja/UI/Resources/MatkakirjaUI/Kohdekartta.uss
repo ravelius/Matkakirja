@@ -1,0 +1,64 @@
+/* Kohdekartta: kaupungin nähtävyyskartta (UI/Kohdekartta.cs). */
+
+/* --- nähtävyysnäkymä: tiivis lehtiarkki (Nahtavyysnakyma.cs; web .tiivis-lehtiarkki) ---- */
+
+.mk-nahtavyydet {
+    width: 100%;
+    max-width: 760px;
+    max-height: 92%;
+    flex-shrink: 1;
+    padding: 12px 16px 16px 16px;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.3);
+    background-color: #f5f0e2;
+    color: rgba(58, 42, 26, 0.95);
+}
+
+.mk-nahtavyydet__yla {
+    flex-direction: row;
+    align-items: center;
+    flex-shrink: 0;
+    padding-bottom: 6px;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(70, 51, 31, 0.25);
+}
+
+.mk-nahtavyydet__otsikko {
+    flex-grow: 1;
+    font-size: 24px;
+    color: #3a2a1a;
+}
+
+.mk-nahtavyydet__vieritys {
+    flex-shrink: 1;
+}
+
+.mk-nahtavyydet__nappirivi {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 8px 0 6px 0;
+}
+
+.mk-nahtavyydet__kokoruutu {
+    min-height: 32px;
+    padding: 3px 12px;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.45);
+    border-radius: 3px;
+    background-color: rgba(255, 252, 242, 0.5);
+    color: #46331f;
+}
+
+.mk-nahtavyydet__kokoruutu .mk-nappi__teksti {
+    font-size: 12.5px;
+}
+
+.mk-nahtavyydet__esittely {
+    margin-top: 10px;
+    font-size: 16px;
+    white-space: normal;
+}
+
+.mk-nahtavyydet__luelisaa {
+    margin-top: 4px;
+}

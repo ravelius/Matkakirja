@@ -1490,3 +1490,38 @@
 .mk-radio__sivu .mk-nappi__teksti {
     font-size: 12.5px;
 }
+
+/* --- vertailun maakäyrät (Maakayrakuva.cs): webin .maakayrat, .maakayra-otsikko,
+ * .maakayra-lahde ja p.johdanto (css/styles.css). Kuvion kehys ja akselitekstit
+ * ovat Maa numeroina -sivun (Lehti.uss .mk-numerot__kuvio / __akseli). ----------- */
+
+.mk-vertailuarkki__kayrat {
+    margin: 12px 4px 0 4px;
+}
+
+.mk-maakayrat {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 5px 0 10px 0;
+}
+
+.mk-maakayrat__otsikko {
+    margin: 0 0 5px 0;
+    font-size: 12.5px;
+    white-space: normal;
+    color: #211d18;
+}
+
+.mk-maakayrat__tila {
+    font-size: 16px;
+    white-space: normal;
+    margin: 4px 0 14px 0;
+    color: rgba(70, 51, 31, 0.9);
+}
+
+.mk-maakayrat__lahde {
+    margin: 0 0 8px 0;
+    font-size: 11.5px;
+    white-space: normal;
+    color: rgba(70, 51, 31, 0.68);
+}

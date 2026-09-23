@@ -45,6 +45,15 @@ korkeudet metreinä. Kaaret ovat asteina kapeammassa näyttösuunnassa.
 | `bool OnReitti(a, b)` | valmis | |
 | `List<(lat, lon)> Polku(a, b)` | tulossa | Reitin polku kamera-ajoa ja nappulaa varten (sama kuin piirretty viiva). |
 
+## 3b. Pelinappula ja aloituslento — `Nappula` (`KarttaKerrokset.Instanssi.nappula`)
+
+| Jäsen | Tila | Merkitys |
+|---|---|---|
+| `void Aseta(lat, lon)`, `Piilota()` | valmis | Nappula näkyviin pisteeseen / pois. |
+| `void Aja(IList<(lat, lon)> matkapisteet, kestoS, Action valmis)` | valmis | Autokyyti pisteiden läpi, kamera seuraa (`seuraaKamera`). |
+| `void Lenna(lat0, lon0, lat1, lon1, kestoS, Action valmis)` | valmis | Lento isoympyräkaarena. |
+| `void AloitusLento(lahtoLat, lahtoLon, lat, lon, kestoS, Action lahti, Action valmis)` | valmis | Omistajan aloituskaava: kamera zoomaa lähtöön (`lahtoZoomS` 2,5 s, kaari 18,6°), sitten `lahti` (Pelikoodari: koneen ääni ja intro-luenta), lentokone lentää kaarta pitkin `kestoS` sekuntia kameran seuratessa ja noustessa niin, että kaari näkyy; perillä `valmis` (Pelikoodari: AloituslentoPaattyi → UI) ja kone vaihtuu nappulaksi. Sormi ei pysäytä lentoa. Testi: `nappula aloitus 51.5 -0.13 41.9 12.5 20`. |
+
 ## 4. Kerrokset linsseille — `KarttaKerrokset` (valmis, `KarttaKerrokset.Instanssi`)
 
 Linssi ei koske Cesium-komponentteihin suoraan. Se pyytää kerroksen avaimella:

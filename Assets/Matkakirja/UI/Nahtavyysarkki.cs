@@ -16,6 +16,9 @@
 // nosto jakson 2 jälkeen, "Suunnittele matka" -linkit.
 // Leveys ≥ 640 pt: kainalo, kapea kuva ja säägraafi rinnakkain tekstin kanssa (webin
 // float); kapeammalla allekkain kuten webin puhelintaitto.
+// Kohdekartan juttu (AvaaKohde): ☰ oikeassa yläkulmassa = saman kaupungin muut kohteet (teksti tai
+// wiki, ≥ 2), ‹ › reunoilla ja 40 pt:n vaakapyyhkäisy = selattavat (teksti + kuva), kiertää ympäri
+// (web taytaNahtavyysValikko, varustaNahtavyysSelaus). Oppaassa ei valikkoa eikä nuolia.
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,6 +47,10 @@ namespace Matkakirja.Natiivi
         readonly ScrollView vieritys;
         readonly Kuvasuurennos suurennos;
         readonly List<string> luettavat = new List<string>();
+        readonly Button valikkoNappi, edellinen, seuraava;
+        readonly VisualElement valikko;
+        Kohdekartta kartta;
+        KohdekarttaKohde nykyinen;
         bool opas, luetaan;
         int lukuVersio;
 
@@ -82,6 +89,31 @@ namespace Matkakirja.Natiivi
             Rakenne.Tausta(sulje, Kuviot.Kulta);
             Kirjasimet.Aseta(sulje, Kirjasin.KoneLihava);
 
+            // ☰ ja ‹ ›: kortin sisaruksia (eivät vieri sisällön mukana).
+            valikkoNappi = Rakenne.Nappi(null, "mk-nahtavyys__valikkonappi", VaihdaValikko, arkki, Ikonit.Valikko);
+            valikkoNappi.tooltip = "Kaupungin nähtävyydet";
+            valikko = Rakenne.El("mk-nahtavyys__valikko", arkki);
+            valikko.style.display = DisplayStyle.None;
+            edellinen = Rakenne.Nappi("‹", "mk-nahtavyys__nuoli mk-nahtavyys__nuoli--vasen", () => Selaa(-1), arkki);
+            seuraava = Rakenne.Nappi("›", "mk-nahtavyys__nuoli mk-nahtavyys__nuoli--oikea", () => Selaa(1), arkki);
+            Vector2 vetoAlku = default;
+            bool veto = false;
+            arkki.RegisterCallback<PointerDownEvent>(e =>
+            {
+                var t = e.target as VisualElement;
+                veto = t != null && !Sisalla(t, "mk-nahtavyys__kuvakehys") && !Sisalla(t, "mk-nahtavyys__valikko");
+                vetoAlku = e.position;
+            }, TrickleDown.TrickleDown);
+            arkki.RegisterCallback<PointerUpEvent>(e =>
+            {
+                if (!veto) return;
+                veto = false;
+                var d = (Vector2)e.position - vetoAlku;
+                if (Mathf.Abs(d.x) > 40f && Mathf.Abs(d.x) > Mathf.Abs(d.y)) Selaa(d.x < 0 ? 1 : -1);
+            }, TrickleDown.TrickleDown);
+            arkki.RegisterCallback<PointerCancelEvent>(_ => veto = false, TrickleDown.TrickleDown);
+            PaivitaSelaus();
+
             suurennos = new Kuvasuurennos(juuri);
             ui.TurvaMuuttui += Asettele;
             peite.RegisterCallback<GeometryChangedEvent>(_ => Asettele());
@@ -90,6 +122,12 @@ namespace Matkakirja.Natiivi
         float arkkiLeveys;
         // Asetettu leveys (resolvedStyle ei ole vielä valmis taiton hetkellä).
         bool Levea => arkkiLeveys >= Levearaja;
+
+        static bool Sisalla(VisualElement e, string luokka)
+        {
+            for (; e != null; e = e.parent) if (e.ClassListContains(luokka)) return true;
+            return false;
+        }
 
         void Asettele()
         {
@@ -112,6 +150,7 @@ namespace Matkakirja.Natiivi
         public void AvaaOpas(OpasArtikkeli o)
         {
             if (o == null) return;
+            kartta = null; nykyinen = null;
             Aloita(true, null, o.Nimi);
             opasTiedot = o;
             // Leveyden mukainen taitto vasta kun arkin leveys tiedetään.
@@ -120,8 +159,32 @@ namespace Matkakirja.Natiivi
 
         OpasArtikkeli opasTiedot;
 
-        /// <summary>Nähtävyysjuttu (web avaaNahtavyys ilman valikkoa ja selausta).</summary>
+        /// <summary>
+        /// Kohdekartan kohde (web nahtavyysKohteet + avaaNahtavyys): juttu arkkiin valikon ja selauksen
+        /// kanssa, pelkkä wiki-kohde Wikipediaan.
+        /// </summary>
+        public void AvaaKohde(Kohdekartta k, KohdekarttaKohde kohde)
+        {
+            if (k == null || kohde == null) return;
+            if (kohde.Juttu == null || string.IsNullOrEmpty(kohde.Juttu.Teksti))
+            {
+                if (!string.IsNullOrEmpty(kohde.Wiki))
+                    Application.OpenURL("https://fi.wikipedia.org/wiki/" + Uri.EscapeDataString(kohde.Wiki.Replace(' ', '_')));
+                return;
+            }
+            kartta = k;
+            nykyinen = kohde;
+            AvaaJuttu(kohde.Juttu, kohde.Numero);
+        }
+
+        /// <summary>Nähtävyysjuttu ilman karttayhteyttä (ei valikkoa eikä selausta).</summary>
         public void Avaa(NahtavyysKohde k, int? numero = null)
+        {
+            kartta = null; nykyinen = null;
+            AvaaJuttu(k, numero);
+        }
+
+        void AvaaJuttu(NahtavyysKohde k, int? numero)
         {
             if (k == null) return;
             Aloita(false, string.Join(" · ", new[] { numero.HasValue ? "Kohde " + numero : null, k.Aika }.Where(x => !string.IsNullOrEmpty(x))), k.Nimi);
@@ -136,6 +199,8 @@ namespace Matkakirja.Natiivi
             Pikkuseloste.Sulje();
             opas = onOpas;
             arkki.EnableInClassList("mk-nahtavyys--opas", onOpas);
+            valikko.style.display = DisplayStyle.None;
+            PaivitaSelaus();
             aika.text = (aikarivi ?? "").ToUpperInvariant();
             aika.style.display = string.IsNullOrEmpty(aikarivi) ? DisplayStyle.None : DisplayStyle.Flex;
             otsikko.text = nimi ?? "";
@@ -174,6 +239,48 @@ namespace Matkakirja.Natiivi
             SyoteLukko.Vapauta(this);
             Aanet.PulunTehoste("paper");
             Suljettu?.Invoke();
+        }
+
+        // --- valikko ja selaus (kohdekartan jutut) ----------------------------------------------------
+
+        List<KohdekarttaKohde> Selattavat => kartta?.Kohteet.Where(x => x.Selattava).ToList() ?? new List<KohdekarttaKohde>();
+
+        void PaivitaSelaus()
+        {
+            var lista = Selattavat;
+            bool selattava = !opas && nykyinen != null && lista.Count > 1 && lista.Contains(nykyinen);
+            edellinen.style.display = seuraava.style.display = selattava ? DisplayStyle.Flex : DisplayStyle.None;
+            bool valikoitava = !opas && kartta != null && kartta.Kohteet.Count(x => x.Avattava) >= 2;
+            valikkoNappi.style.display = valikoitava ? DisplayStyle.Flex : DisplayStyle.None;
+        }
+
+        void Selaa(int suunta)
+        {
+            var lista = Selattavat;
+            int i = nykyinen != null ? lista.IndexOf(nykyinen) : -1;
+            if (opas || i < 0 || lista.Count < 2 || suurennos.Auki) return;
+            var k = lista[(i + suunta + lista.Count) % lista.Count];
+            Aanet.PulunTehoste("paper");
+            AvaaKohde(kartta, k);
+        }
+
+        void VaihdaValikko()
+        {
+            if (valikko.style.display == DisplayStyle.Flex) { valikko.style.display = DisplayStyle.None; return; }
+            valikko.Clear();
+            var v = new ScrollView(ScrollViewMode.Vertical);
+            v.AddToClassList("mk-nahtavyys__valikkovieritys");
+            v.verticalScrollerVisibility = ScrollerVisibility.Hidden;
+            valikko.Add(v);
+            foreach (var k in kartta?.Kohteet.Where(x => x.Avattava) ?? Enumerable.Empty<KohdekarttaKohde>())
+            {
+                var kohde = k;
+                var rivi = Rakenne.Nappi(null, "mk-nahtavyys__valikkorivi", () => { valikko.style.display = DisplayStyle.None; AvaaKohde(kartta, kohde); }, v);
+                rivi.EnableInClassList("mk-valittu", k == nykyinen);
+                Kirjasimet.Aseta(Rakenne.Teksti(k.Numero.ToString(), "mk-nahtavyys__valikkonumero", rivi), Kirjasin.KoneLihava);
+                Kirjasimet.Aseta(Rakenne.Teksti(k.Nimi, "mk-nahtavyys__valikkonimi", rivi), k == nykyinen ? Kirjasin.LukuLihava : Kirjasin.Luku);
+            }
+            valikko.style.display = DisplayStyle.Flex;
         }
 
         // --- nähtävyysjuttu -------------------------------------------------------------------------

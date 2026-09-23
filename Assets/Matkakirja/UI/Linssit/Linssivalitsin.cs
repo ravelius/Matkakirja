@@ -74,7 +74,7 @@ namespace Matkakirja.Natiivi
         void Asettele()
         {
             // Linssi auki: karttaselitteen nappi on piilossa, joten taikalasit nousevat sen paikalle.
-            float yla = Ylapalkki.Korkeus + 8 + (aukiId != null ? 0 : 48);
+            float yla = Ylapalkki.Varaus + 8 + (aukiId != null ? 0 : 48);
             nappi.style.top = yla;
             paneeli.style.top = yla + 48;
         }

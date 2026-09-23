@@ -7,3 +7,4 @@
 @import url("Lehti.uss");
 @import url("Sahke.uss");
 @import url("Sahketehtava.uss");
+@import url("Kohdekartta.uss");

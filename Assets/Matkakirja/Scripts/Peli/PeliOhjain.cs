@@ -2,7 +2,7 @@
 //
 //   kartta → napautus kaupunkiin → matkavalinta (MatkaDialogi) → Matkan teot
 //   (PeliApu.Matkusta) → kamera-ajo kohteeseen (IKamera.Aja) → saapuessa
-//   kaupunkilehti (ILehti, LehtiKuori) → lehti suljetaan → tallennus → kartta.
+//   kaupunkilehti (ILehtiNakyma, Natiivi-UI) → lehti suljetaan → tallennus → kartta.
 //   Reitin varrella ei lehteä: "Heitä noppaa" -nappi jatkaa kohti tavoitetta.
 //   Kaupungissa, jossa on tehtävä (laatta, kohtaaminen, tutkimaton), alareunan
 //   "Tutki kaupunkia" -nappi avaa kysymyksen (Kysely.Tutki → IKysymysNakyma,
@@ -17,7 +17,7 @@
 // Modaalisen näkymän ajan pallo ei ota kosketuksia (SyoteLukko).
 //
 // KÄYNNISTYY ITSE: RuntimeInitializeOnLoadMethod(AfterSceneLoad) etsii
-// kohtauksesta PalloKierron (IKamera), KaupunkiMerkit ja LehtiKuoren ja luo
+// kohtauksesta PalloKierron (IKamera) ja KaupunkiMerkit ja luo
 // olion "PeliOhjain". Rakennus.cs:ään ei tarvita muutoksia. Pois päältä:
 // tiedosto Documents/peli-pois.txt käynnistyksessä tai testikomento 'peli pois'
 // (3D-mittaukset, joissa napautuksen pitää lentää kaupunkiin kuten ennen).
@@ -62,8 +62,7 @@ namespace Matkakirja.Natiivi
 
         PalloKierto kierto;
         KaupunkiMerkit merkit;
-        LehtiKuori lehti;
-        /// <summary>Natiivilehti (PeliNakymat.Lehti); kun asetettu, WKWebView-kuorta ei käytetä.</summary>
+        /// <summary>Natiivilehti (PeliNakymat.Lehti, Natiivi-UI). null = ei lehteä (WKWebView-kuori poistettu, A4).</summary>
         ILehtiNakyma lehtiNakyma;
         /// <summary>Fokustehtävät ja vihreä aarrepiste (kokoelma fokusvirrat, Fokus.cs).</summary>
         Fokusdata fokus = new Fokusdata();
@@ -115,13 +114,13 @@ namespace Matkakirja.Natiivi
         public MatkanTulos Viimeisin { get; private set; }
         public string ViimeViesti { get; private set; }
         public string ViimeVirhe { get; private set; }
-        public bool LehtiAuki => lehtiNakyma != null ? lehtiNakyma.Auki : lehti != null && lehti.Auki;
-        /// <summary>Onko jokin lehti käytössä (natiivilehti tai kuori).</summary>
-        bool LehtiOn => lehtiNakyma != null || lehti != null;
+        public bool LehtiAuki => lehtiNakyma != null && lehtiNakyma.Auki;
+        /// <summary>Onko lehti käytössä (natiivilehti asetettu).</summary>
+        bool LehtiOn => lehtiNakyma != null;
         /// <summary>Lehden sivu tuli näkyviin (omistaja, aihe, sivu, laji): pulun ja luentojen reaktiot.</summary>
         public event Action<string, string, int, string> LehtiSivuNakyi;
-        /// <summary>Kaupunkilehden kuori (Natiivi-UI: Avautui-tapahtuma latauspeitteelle).</summary>
-        public LehtiKuori Lehti => lehti;
+        /// <summary>Natiivilehti (Natiivi-UI: Avautui-tapahtuma); null ilman PeliNakymat.Lehti-tehdasta.</summary>
+        public ILehtiNakyma Lehti => lehtiNakyma;
         /// <summary>Kaupunkikortin kaupunki, kun kortti on auki; muuten null.</summary>
         public string KorttiKaupunki { get; private set; }
         /// <summary>Kysymysmoottori (null, kunnes kysymykset on ladattu).</summary>
@@ -333,7 +332,7 @@ namespace Matkakirja.Natiivi
             }
             var go = new GameObject("PeliOhjain");
             var o = go.AddComponent<PeliOhjain>();
-            o.Alusta(kierto, FindAnyObjectByType<KaupunkiMerkit>(), FindAnyObjectByType<LehtiKuori>() ?? LehtiKuori.Hae());
+            o.Alusta(kierto, FindAnyObjectByType<KaupunkiMerkit>());
         }
 
         void Awake()
@@ -346,15 +345,13 @@ namespace Matkakirja.Natiivi
         {
             if (Instanssi == this) Instanssi = null;
             if (kierto != null) kierto.KaupunkiNapautettu -= Napautettu;
-            if (lehti != null) { lehti.Suljettu -= LehtiSuljettu; lehti.Viesti -= LehtiViesti; }
             if (lehtiNakyma != null) lehtiNakyma.Suljettu -= LehtiSuljettu;
         }
 
-        void Alusta(PalloKierto k, KaupunkiMerkit m, LehtiKuori l)
+        void Alusta(PalloKierto k, KaupunkiMerkit m)
         {
             kierto = k;
             merkit = m;
-            lehti = l;
             TMP_FontAsset fontti = m != null ? m.fontti : null;
             if (fontti == null) { var kortti = FindAnyObjectByType<NimiKortti>(); if (kortti != null) fontti = kortti.fontti; }
 
@@ -388,12 +385,6 @@ namespace Matkakirja.Natiivi
             {
                 SyoteLukko.LisaaNakymaPeitto(() => lehtiNakyma.Auki);
                 lehtiNakyma.Suljettu += LehtiSuljettu;
-            }
-            else if (lehti != null)
-            {
-                SyoteLukko.LisaaNakymaPeitto(() => lehti != null && lehti.Auki);
-                ((ILehti)lehti).Suljettu += LehtiSuljettu;
-                lehti.Viesti += LehtiViesti;
             }
 
             if (File.Exists(PoisPolku))
@@ -1378,59 +1369,14 @@ namespace Matkakirja.Natiivi
             {
                 lehtiNakyma.Nayta(new LehtiAvaus { Maalehti = maa != null, Kaupunki = kaupunki, Maa = maa, Aihe = sivu },
                     LehtiTilaNyt(kaupunki), TeeLehtiTeko);
-                return;
             }
-            string tila = matka == null ? null
-                : "{\"raha\":" + matka.Tila.Pelaaja.Raha.ToString(System.Globalization.CultureInfo.InvariantCulture)
-                  + ",\"kaupat\":" + matka.Tila.Kaupat.Json() + "}";
-            lehti.Avaa(kaupunki, tila, maa, sivu);
-        }
-
-        /// <summary>
-        /// Lehtikuoren viesti {tapahtuma:'teko', teko, args} (verkkopelin
-        /// js/lehtikuori.js kytkeTekoSilta): lehden kauppa- tai palkkioteko
-        /// toistetaan natiivin Kaupoilla, jolloin raha ja kirjanpito tallentuvat.
-        /// </summary>
-        void LehtiViesti(string json)
-        {
-            Dictionary<string, object> o;
-            try { o = MiniJson.Objekti(MiniJson.Jasenna(json)); }
-            catch (Exception e) { Debug.LogWarning("MATKAKIRJA peli: lehden viesti ei jäsenny: " + e.Message); return; }
-            if (MiniJson.Teksti(o, "tapahtuma") != "teko") return;
-            var teko = MiniJson.Teksti(o, "teko");
-            var a = MiniJson.Kentta(o, "args") as List<object> ?? new List<object>();
-            var t = LehdenTeko(teko, a);
-            Debug.Log($"MATKAKIRJA peli: lehden teko {teko} → {(t.Ok ? "ok" : t.Virhe)}, raha {matka?.Tila.Pelaaja.Raha}");
-        }
-
-        /// <summary>Lehden teko nimellä ja argumenteilla (webin metodinimet). Myös testikomento 'lehti-teko'.</summary>
-        public KauppaTulos LehdenTeko(string teko, IReadOnlyList<object> a)
-        {
-            string S(int i) => i < a.Count ? a[i] as string : null;
-            bool B(int i) => i < a.Count && a[i] is bool b && b;
-            int? I(int i) => i < a.Count && a[i] is double d ? (int)d : (int?)null;
-            return KauppaTeko(k =>
-            {
-                switch (teko)
-                {
-                    case "actionKulttuuri": return k.Kulttuuri(S(0), B(1), I(2) ?? KauppaVakiot.KulttuuriPalkkio);
-                    case "actionMinitehtava": return k.Minitehtava(S(0), S(1), B(2), I(3) ?? KauppaVakiot.MinitehtavaPalkkio);
-                    case "kirjaaNostotehtava": k.KirjaaNostotehtava(); return new KauppaTulos { Ok = true };
-                    case "merkitseAarrepisteOhje": { bool uusi = k.MerkitseAarrepisteOhje(); return uusi ? new KauppaTulos { Ok = true } : KauppaTulos.Epaonnistui("Ohje jo nähty"); }
-                    case "actionPullaVinkki": return k.PullaVinkki(S(0), I(1) ?? KauppaVakiot.PullaHinta);
-                    case "actionPullaOstos": return k.PullaOstos(S(0), I(1) ?? KauppaVakiot.PullaHinta, S(2) ?? "sai vinkin");
-                    case "actionElaintaky": return k.Elaintaky(S(0), I(1));
-                    case "myonnaJuliste": return k.MyonnaJuliste(S(0));
-                    default: return KauppaTulos.Epaonnistui("tuntematon teko " + teko);
-                }
-            });
         }
 
         /// <summary>Sulkee lehden (testikomento 'sulje-lehti').</summary>
         public string SuljeLehti()
         {
             if (!LehtiAuki) return "lehti ei ole auki";
-            if (lehtiNakyma != null) lehtiNakyma.Sulje(); else lehti.Sulje();
+            lehtiNakyma.Sulje();
             return null;
         }
 
