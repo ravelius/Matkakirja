@@ -144,7 +144,9 @@ namespace Matkakirja
                     if (o[1] == "lataa") al.Lataa(o[2]);
                     else if (o[1] == "peru") al.Peru(o[2]);
                     else if (o[1] == "poista") al.Poista(o[2]);
-                    var sb = new StringBuilder("MATKAKIRJA alueet:");
+                    long vapaa = -1;
+                    try { vapaa = new DriveInfo(Application.persistentDataPath).AvailableFreeSpace; } catch { }
+                    var sb = new StringBuilder($"MATKAKIRJA alueet (vapaa {vapaa / 1073741824.0:0.0} Gt):");
                     foreach (var a in al.Luettelo)
                         if (a.Tila != Alueet.Tila.Ei || a.Id == "maailma")
                             sb.Append($" {a.Id}={a.Tila} {a.Ladattu / 1048576.0:0.0}/{a.Tavut / 1048576.0:0.0} Mt");

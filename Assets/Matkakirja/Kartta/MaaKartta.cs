@@ -170,7 +170,9 @@ namespace Matkakirja
             };
             tunnukset.SetPixelData(kartta, 0);
             tunnukset.Apply(false, true);
-            paletti = new Texture2D(256, 2, TextureFormat.RGBA32, false, true)
+            // sRGB (linear = false): webin värit ovat sRGB:tä, ja URP muuntaa näytteen lineaariseksi.
+            // Lineaarisena täyttö näkyi iPadilla haaleana (Linssisepän kontaktiarkki 23.9.).
+            paletti = new Texture2D(256, 2, TextureFormat.RGBA32, false, false)
             {
                 name = "Maapaletti", filterMode = FilterMode.Point, wrapMode = TextureWrapMode.Clamp,
             };

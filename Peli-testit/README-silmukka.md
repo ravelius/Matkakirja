@@ -72,7 +72,8 @@ JSON-tiedostot. 3D:n `komento.txt` (esim. `kuva nimi`) toimii rinnalla.
 | `napauta kaupunki` | kuin sormi kaupungin merkillä (KaupunkiMerkit.ValitseKaupunki) |
 | `valitse bussi\|lento\|liftaus\|laiva` | matkavalinnan nappi |
 | `peruuta` | matkavalinnan Peruuta |
-| `matka kaupunki tapa` | valinta ilman dialogia |
+| `mannerlennot` | kortin "Mannerlento": matkavalinta mannerlennoille (vain kun mantereen aarre löytyi ja vaihe Toiminta) |
+| `matka kaupunki tapa` | valinta ilman dialogia (tapa bussi, lento, liftaus, laiva tai mannerlento) |
 | `heita` | "Heitä noppaa" (kesken reitin) |
 | `sulje-lehti` | sulkee lehden kuin pelaaja |
 | `ohita-traileri` | saapumistrailerin ohitus. Kun Natiivi-UI:n traileri on käytössä, saapuminen menee Matkalla → **Traileri** → Lehti, kerran per kaupunki eikä aarrekaupungeissa; käsikirjoituksissa `odota-tila lehti` tarvitsee lisäaikaa tai `ohita-traileri` |
@@ -86,7 +87,7 @@ JSON-tiedostot. 3D:n `komento.txt` (esim. `kuva nimi`) toimii rinnalla.
 | `jatka` | tuloksen Jatka-nappi: kysymys kiinni, vuoro päättyy |
 | `luento kaupunki\|intro\|lento\|saapuminen kaupunki` | soittaa luennan ehdoitta (tila-JSONin `puhe`: soi, url, aika, virhe) |
 | `puhe seis\|pois\|paalle` | pysäyttää puheen / kertoja pois tai päälle (Asetukset Kytkin.Kertoja) |
-| `tila [nimi]` | `peli-tila.json` / `peli-tila-nimi.json`: silmukka, vaihe, sijainti, raha, päivä, aika, tilarivi, dialogi ja vaihtoehdot, tavoite, lehtiAuki, viesti, virhe, viimeisin matka; erä 4: syoteEstetty, tutkiTarjolla, kysymys (laji, otsikko, kysymys, vaihtoehdot, piilotetut, vihje, sekunnit, jaljella, vastattu, valittu, oikea, oikein, aikaLoppui, loyto, viesti) |
+| `tila [nimi]` | `peli-tila.json` / `peli-tila-nimi.json`: silmukka, vaihe, sijainti, raha, päivä, aika, tilarivi, dialogi ja vaihtoehdot, tavoite, lehtiAuki, viesti, virhe, viimeisin matka; erä 4: syoteEstetty, tutkiTarjolla, kysymys (laji, otsikko, kysymys, vaihtoehdot, piilotetut, vihje, sekunnit, jaljella, vastattu, valittu, oikea, oikein, aikaLoppui, loyto, viesti); laukku (sijainti, kukkaro, tietaja, tilastot, aarni, kateissa, tavarat, julisteet) |
 | `odota s` / `odota-tila tila [max s]` | tauko / odota tilaa Kartta, Dialogi, Matkalla, Lehti (aikaraja kirjataan lokiin) |
 | `uusi-peli [siemen]` | uusi peli Pariisista, toistettava noppa |
 | `peli pois\|paalle` | silmukka pois/päälle |

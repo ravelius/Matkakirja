@@ -46,7 +46,15 @@ namespace Matkakirja.Natiivi
         public void Lataa(string id) => alueet.Lataa(id);
         public void Peru(string id) => alueet.Peru(id);
         public void Poista(string id) => alueet.Poista(id);
-        public long VapaaTila => -1;
+        /// <summary>Vapaa levytila tavuina (statvfs DriveInfon kautta), tai -1.</summary>
+        public long VapaaTila
+        {
+            get
+            {
+                try { return new System.IO.DriveInfo(Application.persistentDataPath).AvailableFreeSpace; }
+                catch (Exception) { return -1; }
+            }
+        }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         static void Kytke()

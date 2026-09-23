@@ -150,6 +150,55 @@ namespace Matkakirja.Natiivi
 
     public sealed class Kohtaamiskuva { public string Url, Alt, Lyhyt, Kuvateksti; }
 
+    /// <summary>
+    /// Kokoelmat kuvakysymykset ja lippumaat (skeema 1.9+): kuvapooli, liput ja
+    /// tiedostonimi → valmis https-osoite (KysymysApu.Nakyma, osoitteet).
+    /// Kumpikin teksti saa puuttua (null): muoto jää silloin pois kuten webissä.
+    /// </summary>
+    public sealed class Kuvakokoelmat
+    {
+        public List<(string Kaupunki, string Tiedosto, string Lahde)> Kuvat;
+        public List<Lippumaa> Liput;
+        public readonly Dictionary<string, string> Osoitteet = new Dictionary<string, string>();
+
+        public static Kuvakokoelmat Lue(string kuvat, string liput)
+        {
+            var k = new Kuvakokoelmat();
+            if (kuvat != null)
+            {
+                k.Kuvat = new List<(string, string, string)>();
+                foreach (var a in MiniJson.Taulukko(MiniJson.Kentta(MiniJson.Objekti(MiniJson.Jasenna(kuvat)), "alkiot")))
+                {
+                    var o = MiniJson.Objekti(a);
+                    string kaupunki = MiniJson.Teksti(o, "kaupunki"), f = MiniJson.Teksti(o, "tiedosto"), u = MiniJson.Teksti(o, "url");
+                    if (string.IsNullOrEmpty(kaupunki) || string.IsNullOrEmpty(f)) continue;
+                    k.Kuvat.Add((kaupunki, f, MiniJson.Teksti(o, "lahde")));
+                    if (!string.IsNullOrEmpty(u)) k.Osoitteet[f] = u;
+                }
+            }
+            if (liput != null)
+            {
+                k.Liput = Kysymysdata.LueLiput(liput);
+                foreach (var a in MiniJson.Taulukko(MiniJson.Kentta(MiniJson.Objekti(MiniJson.Jasenna(liput)), "alkiot")))
+                {
+                    var o = MiniJson.Objekti(a);
+                    string f = MiniJson.Teksti(o, "lippu"), u = MiniJson.Teksti(o, "url");
+                    if (!string.IsNullOrEmpty(f) && !string.IsNullOrEmpty(u)) k.Osoitteet[f] = u;
+                }
+            }
+            return k;
+        }
+
+        /// <summary>Kuva- ja lippumuoto kyselyyn (vain kun data on; muuten paino siirtyy visalle kuten webissä).</summary>
+        public void Kytke(Kysely kysely)
+        {
+            if (Kuvat != null)
+                kysely.AsetaKuvat(Kuvat.Select(x => x.Kaupunki),
+                    Kuvat.GroupBy(x => x.Kaupunki).ToDictionary(g => g.Key, g => (g.First().Tiedosto, g.First().Lahde)));
+            if (Liput != null) kysely.Liput = Liput;
+        }
+    }
+
     /// <summary>Laattatyypin näyttötiedot (web TOKEN_TYPES / mannerTypes / paikallisaarre).</summary>
     public sealed class Aarre { public string Nimi, Fakta, KuvaUrl; }
 
