@@ -17,9 +17,15 @@
 //                kerrallaan (web INTRO_TYPE_MS 190, tauot välimerkeistä) ja kertoja
 //                lukee intro-puhe.mp3:n (Puhe). Napautus arkkiin kirjoittaa loppuun.
 //                Lopuksi kehystetty nappi VALITSE ALOITUSKAUPUNKI.
-//   3 VALINTA    webissä valinta tehdään pallolla (ETUSIVUN_KOHTEET); natiivissa
-//                pergamenttikortti, jossa lähtökaupungit (PeliOhjain.Lahtokaupungit,
-//                paketin aloitus = true) lippuineen. Valinta → Aloita(id).
+//   3 VALINTA    pallolla kuten webissä (js/ui.js aloitaPallolta, js/pallolauta/lauta.js
+//                aloitusnakyma/aloitusKohteet; omistaja 23.9.2026: "valitaan KARTALTA"):
+//                verho häipyy, kamera ajetaan kiinteään valintanäkymään (30° N, 17° E,
+//                pallon säde 0,55 ruudun korkeudesta, Lontoo ja Ateena mahtuvat kuvaan),
+//                näkyvissä vain Lontoo ja lähtökaupungit (PeliOhjain.Lahtokaupungit,
+//                paketin aloitus = true), ja jokaisella valittavalla on sykkivä kultapiste
+//                (Natiivisepän Karttapisteet, web .pallolauta-huomio #eab84e). Napautus
+//                kaupunkiin tai pisteeseen valitsee suoraan (web doPickStart) → Aloita(id).
+//                Ilman palloa (3D ei käytössä) varana pergamenttikortti lippuineen.
 // Matkan huipennus (Huipennus alla): PeliOhjain.KaikkiAarteetLoytyi → webin
 // #winner-dialog ("Jatka vaeltamista" / "Uusi matka" → avausteksti ja valinta).
 //
@@ -33,6 +39,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Text.RegularExpressions;
 using Matkakirja.Peli;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -267,9 +274,13 @@ namespace Matkakirja.Natiivi
             SyoteLukko.Esta(this);
         }
 
+        /// <summary>Testikomento (ui aloitus valinta kortti): varakortti pallon sijaan.</summary>
+        public bool PakotaKortti;
+
         public void Piilota()
         {
             if (!Auki) return;
+            LopetaPallovalinta();
             Auki = false;
             kirjoitus?.Pause();
             juuri.style.opacity = 0f;
@@ -349,11 +360,13 @@ namespace Matkakirja.Natiivi
 
         void NaytaValinta()
         {
-            // Web aloitaKartalta: avauksen puhe loppuu, kun valinta alkaa.
+            // Web aloitaKartalta: avauksen puhe loppuu, kun valinta alkaa; naksahdus (sfx clack).
             Puhe.Instanssi?.Pysayta();
             Aanet.PulunTehoste("pulu.kujerrus");
             UiSisalto.Lataa(() =>
             {
+                if (!Auki || ValitseePallolla) return;
+                if (!PakotaKortti && AloitaPallovalinta()) return;
                 valintaLista.Clear();
                 foreach (var (id, nimi) in kohteet)
                 {
@@ -378,9 +391,118 @@ namespace Matkakirja.Natiivi
 
         void Valitse(string id)
         {
+            LopetaPallovalinta();
             Rakenne.Nayta(valinta, false, 200);
             Piilota();
             aloita?.Invoke(id);
+        }
+
+        // --- valinta pallolla (web aloitaPallolta; lauta.js aloitusnakyma, aloitusKohteet) --
+
+        public const double ValintaLat = 30, ValintaLon = 17;
+        const double PallonOsuus = 0.55, AnkkuriVara = 0.78;
+        /// <summary>Web ALOITUSVALINNAN_ANKKURIT: Lontoo ja Ateena mahtuvat kuvaan kapeallakin ruudulla.</summary>
+        static readonly string[] Ankkurit = { "lontoo", "ateena" };
+        const string Lahto = "lontoo";
+        static readonly Color Huomio = new Color32(0xea, 0xb8, 0x4e, 0xff);
+        const string PisteEtuliite = "aloitus:";
+
+        KaupunkiMerkit valintaMerkit;
+        Karttapisteet valintaPisteet;
+        PalloKierto valintaKierto;
+        readonly List<string> valintaIdt = new List<string>();
+
+        /// <summary>Lähtövalinta pallolla käynnissä (verho pois, pallon syöte vapaana).</summary>
+        public bool ValitseePallolla { get; private set; }
+
+        /// <summary>Valinta pallolle, jos 3D-kartta on käytössä; false = varakortti.</summary>
+        bool AloitaPallovalinta()
+        {
+            var kk = KarttaKerrokset.Instanssi;
+            var kierto = kk != null && kk.pisteet != null ? kk.pisteet.kierto : null;
+            if (kk == null || kk.merkit == null || kierto == null) return false;
+            valintaMerkit = kk.merkit;
+            valintaPisteet = kk.pisteet;
+            valintaKierto = kierto;
+            ValitseePallolla = true;
+
+            // Verho ja arkki häipyvät (web intro-fade); pallo saa syötteen.
+            juuri.style.opacity = 0f;
+            juuri.schedule.Execute(() => { if (ValitseePallolla) juuri.style.display = DisplayStyle.None; }).StartingIn(900);
+            SyoteLukko.Vapauta(this);
+
+            valintaIdt.Clear();
+            foreach (var (id, _) in kohteet) if (id != null && id != Lahto) valintaIdt.Add(id);
+            var nakyvat = new HashSet<string>(valintaIdt) { Lahto };
+            valintaMerkit.NaytaVain(nakyvat);
+            foreach (var id in valintaIdt)
+            {
+                valintaMerkit.Korosta(id, Huomio);
+                var k = UiSisalto.Kaupunki(id);
+                if (k != null && !double.IsNaN(k.Lat)) valintaPisteet.Aseta(PisteEtuliite + id, k.Lat, k.Lon, Huomio, false);
+            }
+            valintaKierto.KaupunkiNapautettu += KaupunkiValittu;
+            valintaPisteet.Napautettu += PisteValittu;
+            valintaKierto.Aja(ValintaLat, ValintaLon, ValintanakymanKorkeus(), 1.6f, null);
+            return true;
+        }
+
+        void KaupunkiValittu(string id)
+        {
+            if (ValitseePallolla && valintaIdt.Contains(id)) UiKerros.PaaSaikeessa(() => Valitse(id));
+        }
+
+        void PisteValittu(string pid)
+        {
+            if (!ValitseePallolla || pid == null || !pid.StartsWith(PisteEtuliite)) return;
+            string id = pid.Substring(PisteEtuliite.Length);
+            if (valintaIdt.Contains(id)) UiKerros.PaaSaikeessa(() => Valitse(id));
+        }
+
+        void LopetaPallovalinta()
+        {
+            if (!ValitseePallolla) return;
+            ValitseePallolla = false;
+            if (valintaKierto != null) valintaKierto.KaupunkiNapautettu -= KaupunkiValittu;
+            if (valintaPisteet != null)
+            {
+                valintaPisteet.Napautettu -= PisteValittu;
+                foreach (var id in valintaIdt) valintaPisteet.Poista(PisteEtuliite + id);
+            }
+            if (valintaMerkit != null)
+            {
+                foreach (var id in valintaIdt) valintaMerkit.Korosta(id, null);
+                valintaMerkit.NaytaVain(null);
+            }
+            valintaIdt.Clear();
+        }
+
+        /// <summary>
+        /// Web aloitusvalinnanKorkeus: pallon säde 0,55 ruudun korkeudesta (kameran pystysuora fov), ja
+        /// ankkurikaupungit mahtuvat 78 %:iin ruudun puolikkaasta. Tulos metreinä pinnasta.
+        /// </summary>
+        double ValintanakymanKorkeus()
+        {
+            var kamera = valintaKierto.GetComponent<Camera>();
+            double fov = kamera != null ? kamera.fieldOfView : 40.0;
+            double tan = math.tan(math.radians(fov / 2));
+            double suhde = math.max(0.05, Screen.width / (double)math.max(1, Screen.height));
+            double d = 1.0 / math.max(1e-6, math.sin(math.atan(2 * PallonOsuus * tan)));
+            double a0 = math.radians(ValintaLat), b0 = math.radians(ValintaLon);
+            var keskus = new double3(math.cos(a0) * math.cos(b0), math.cos(a0) * math.sin(b0), math.sin(a0));
+            var ita = new double3(-math.sin(b0), math.cos(b0), 0);
+            var pohjoinen = new double3(-math.sin(a0) * math.cos(b0), -math.sin(a0) * math.sin(b0), math.cos(a0));
+            foreach (var id in Ankkurit)
+            {
+                var k = UiSisalto.Kaupunki(id);
+                if (k == null || double.IsNaN(k.Lat)) continue;
+                double a = math.radians(k.Lat), b = math.radians(k.Lon);
+                var v = new double3(math.cos(a) * math.cos(b), math.cos(a) * math.sin(b), math.sin(a));
+                double e = math.dot(v, ita), n = math.dot(v, pohjoinen), u = math.dot(v, keskus);
+                d = math.max(d, math.max(u + math.abs(e) / math.max(1e-6, AnkkuriVara * suhde * tan),
+                                         u + math.abs(n) / math.max(1e-6, AnkkuriVara * tan)));
+            }
+            return (d - 1) * CesiumForUnity.CesiumWgs84Ellipsoid.GetMaximumRadius();
         }
 
         // --- periaatteet (web naytaPeriaatteet, sanasta sanaan) ------------------------
@@ -449,7 +571,7 @@ namespace Matkakirja.Natiivi
 
         // --- testi ---------------------------------------------------------------------
 
-        /// <summary>Testikomento: portti | avaus | loppu | valinta (ilman peliä; valinta kirjataan ilmoitukseen).</summary>
+        /// <summary>Testikomento: portti | avaus | loppu | valinta | kortti (ilman peliä; valinta kirjataan ilmoitukseen).</summary>
         public void Testaa(string vaihe, Action<string> valittu)
         {
             // Pelin lähtökaupungit (paketin aloitus = true, 19 kpl), jos peli on ladattu; muuten webin varalista.
@@ -459,7 +581,9 @@ namespace Matkakirja.Natiivi
             Portista();
             if (vaihe == "avaus") return;
             KirjoitaLoppuun();
-            if (vaihe == "valinta") NaytaValinta();
+            // valinta = pallolla (kuten pelissä), kortti = varakortti ilman palloa.
+            PakotaKortti = vaihe == "kortti";
+            if (vaihe == "valinta" || vaihe == "kortti") NaytaValinta();
         }
     }
 

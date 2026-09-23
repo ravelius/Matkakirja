@@ -11,7 +11,7 @@
 //                                             tulos [laattatyyppi], kohtaaminen,
 //                                             kohtaaminen-tervehdys (KysymysEsimerkki.cs)
 //   ui selite                                 karttaselite auki (Nostot-välilehti)
-//   ui aloitus [portti|avaus|valinta|jatka]   aloitusnäkymä ilman peliä (valinta → ilmoitus)
+//   ui aloitus [portti|avaus|valinta|kortti|jatka]  aloitusnäkymä ilman peliä (valinta pallolla, kortti = vara; → ilmoitus)
 //   ui aloita [kaupunki] | ui jatka           automaatio: ohittaa aloitusnäkymän (UusiMatka / Jatka);
 //                                             listan ulkopuolinen kaupunki (pariisi) = oletuslähtö Pariisi
 //   ui lehti <kaupunki> [sivu] | ui lehti sivu n | ui lehti kuva | ui maalehti <ISO> [aihe] | ui lehti sisallys
@@ -24,6 +24,7 @@
 //   ui seloste                                laukku esimerkillä + Aarnin luettelon pikkuseloste
 //   ui nahtavyydet [kaupunki] [kohde n]      nähtävyysnäkymä (oletus firenze); kohde n avaa n:nnen kohteen jutun
 //   ui opas [kaupunki] [vieritä px]           turistiopas (oletus lontoo), valinnainen vieritys
+//   ui ylapalkki [vaaka|pysty|auto|auki]    vaaka-asennon piilotettu yläpalkki ja väkäsnappi (auki = avaa väkäsistä)
 //   ui liike                                  pieni liike: pulu lentää kerran heti (ohittaa levon)
 //   ui leima [muutos] [syy]                   tapahtumakupla: rahan muutos (oletus +10 Lehden minitehtävä ratkesi)
 //   ui noppa [1–6 | pois]                     näkyvä noppa: heitto Pariisista lepopaikkaan / häivytys
@@ -240,6 +241,11 @@ namespace Matkakirja.Natiivi
                 case "noppa":
                     if (loput == "pois") { ui.Noppa.Haivyta(); return null; }
                     ui.HeitaNoppa(int.TryParse(loput, out var silmat) ? Mathf.Clamp(silmat, 1, 6) : UnityEngine.Random.Range(1, 7), 48.857, 2.352, null);
+                    return null;
+                case "ylapalkki":
+                    if (loput == "auki") { ui.Tilarivi.Avaa(); return Ylapalkki.Piilossa ? null : "palkki ei ole piilossa (ui ylapalkki vaaka)"; }
+                    Ylapalkki.Pakota = loput == "vaaka" ? true : loput == "pysty" ? false : (bool?)null;
+                    ui.Tilarivi.Paivita();
                     return null;
                 case "liike":
                     return ui.Liike.Lenna(true) ? null : "pieni liike on pois päältä tai lento jo käynnissä";

@@ -94,7 +94,7 @@ namespace Matkakirja.Natiivi
             alue.style.paddingBottom = r.w + 14;
             alue.style.paddingLeft = r.x + 12;
             alue.style.paddingRight = r.z + 12;
-            alue.style.paddingTop = r.y + Ylapalkki.Korkeus + 12;
+            alue.style.paddingTop = r.y + Ylapalkki.Varaus + 12;
         }
 
         public void Nayta(string kaupunkiId, string nimi, KaupunkiToiminnot t)

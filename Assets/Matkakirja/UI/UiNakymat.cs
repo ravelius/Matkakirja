@@ -87,6 +87,7 @@ namespace Matkakirja.Natiivi
             Valikko = new Paavalikko(kerros, () => Tilarivi.Alareuna, Vahvistus);
             Aanentasot = new Aanentasot(kerros, () => Tilarivi.Alareuna);
             Matkalaukku = new Matkalaukku(kerros, () => Tilarivi.Alareuna, () => Tilarivi.Pilleri);
+            Tilarivi.PudotusAuki = () => Valikko.Auki || Aanentasot.Auki || Matkalaukku.Auki;
             Kaupunkikortti = new KaupunkiKortti(kerros);
             Kysymys = new KysymysNakyma(kerros);
             Kartuscha = new Kartuscha(kerros);
