@@ -47,6 +47,11 @@ namespace Matkakirja
         public float tarkeaKirjain = 15f;
         public float valistys = 3f;
 
+        [Tooltip("Merkin korkeus pinnan (maasto tai ellipsoidi) yläpuolella, metreinä.")]
+        public double nosto = 5000.0;
+        /// <summary>Pallo, jonka maastosta merkkien pintakorkeus luetaan (tyhjä = haetaan kohtauksesta).</summary>
+        public Cesium3DTileset pallo;
+
         class Merkki
         {
             public Sisalto.Kaupunki kaupunki;
@@ -75,6 +80,64 @@ namespace Matkakirja
             nelio = Nelio();
             if (kierto != null) kierto.Napautettu += Napautus;
             StartCoroutine(Sisalto.Hae<Sisalto.Kaupunki>("kaupungit", k => StartCoroutine(Rakenna(k))));
+            StartCoroutine(SeuraaMaastoa());
+        }
+
+        /// <summary>
+        /// Nimiöt pinnalle: kun pallon lähde on maasto (Komennot "maasto paalle"), merkkien
+        /// pintakorkeus luetaan maastosta kerran (Cesium SampleHeightMostDetailed, kaikki
+        /// kaupungit yhdellä pyynnöllä); ellipsoidilla korkeus on 0. Merkki on aina
+        /// <see cref="nosto"/> metriä pinnan yläpuolella.
+        /// </summary>
+        IEnumerator SeuraaMaastoa()
+        {
+            CesiumDataSource? edellinen = null;
+            int kaupunkeja = -1;
+            var odota = new WaitForSeconds(0.5f);
+            while (true)
+            {
+                yield return odota;
+                if (pallo == null) pallo = FindAnyObjectByType<Cesium3DTileset>();
+                if (pallo == null || merkit.Count == 0) continue;
+                if (pallo.tilesetSource == edellinen && merkit.Count == kaupunkeja) continue;
+                edellinen = pallo.tilesetSource;
+                kaupunkeja = merkit.Count;
+                var kohteet = merkit.ToArray();
+                var korkeudet = new double[kohteet.Length];
+                if (edellinen == CesiumDataSource.FromUrl)
+                {
+                    var paikat = new double3[kohteet.Length];
+                    for (int i = 0; i < kohteet.Length; i++)
+                        paikat[i] = new double3(kohteet[i].kaupunki.lon, kohteet[i].kaupunki.lat, 0);
+                    float alku = Time.realtimeSinceStartup;
+                    var tehtava = pallo.SampleHeightMostDetailed(paikat);
+                    while (!tehtava.IsCompleted) yield return null;
+                    if (pallo.tilesetSource != edellinen) continue; // vaihtui kesken: uusi kierros
+                    if (tehtava.IsFaulted || tehtava.Result == null)
+                    {
+                        Debug.LogWarning("MATKAKIRJA kaupungit: maaston korkeudet epäonnistuivat: " + tehtava.Exception?.GetBaseException().Message);
+                        continue;
+                    }
+                    var tulos = tehtava.Result;
+                    int onnistui = 0;
+                    for (int i = 0; i < kohteet.Length; i++)
+                        if (tulos.sampleSuccess[i]) { korkeudet[i] = tulos.longitudeLatitudeHeightPositions[i].z; onnistui++; }
+                    Debug.Log($"MATKAKIRJA kaupungit: maastokorkeus {onnistui}/{kohteet.Length} kaupungille, " +
+                              $"{(Time.realtimeSinceStartup - alku) * 1000f:0} ms");
+                }
+                AsetaKorkeudet(kohteet, korkeudet);
+            }
+        }
+
+        void AsetaKorkeudet(Merkki[] kohteet, double[] korkeudet)
+        {
+            for (int i = 0; i < kohteet.Length; i++)
+            {
+                var k = kohteet[i].kaupunki;
+                var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(
+                    new double3(k.lon, k.lat, korkeudet[i] + nosto));
+                kohteet[i].pinta = (float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef);
+            }
         }
 
         /// <summary>Tärkeys 0–2 merkin tyyliä varten: paketin 1.2-kenttä tai vanha päättely.</summary>
@@ -100,7 +163,7 @@ namespace Matkakirja
                 if (++kehyksessa > rakennusKehys) { kehyksessa = 0; yield return null; }
                 int tarkeys = Tarkeys(k, paketinTarkeys);
                 var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(
-                    new double3(k.lon, k.lat, 5000.0));
+                    new double3(k.lon, k.lat, nosto));
                 double3 u = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef);
 
                 var juuri = new GameObject("Kaupunki " + k.id).transform;
