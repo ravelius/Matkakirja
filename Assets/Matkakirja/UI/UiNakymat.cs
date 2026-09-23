@@ -31,6 +31,7 @@ namespace Matkakirja.Natiivi
         public readonly Karttaselite Karttaselite;
         public readonly Kartuscha Kartuscha;
         public readonly Pulu Pulu;
+        public readonly Tietoja Tietoja;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         static void KytkeTehdas()
@@ -67,6 +68,8 @@ namespace Matkakirja.Natiivi
             Pulu = Natiivi.Pulu.Hae();
             // Livia lennähtää paikalle, kun käyttöliittymä on valmis (webin ensisaapuminen: handoff).
             kerros.Juuri(UiKerros.Tilarivi).schedule.Execute(() => Pulu.Tilanne("arrival")).StartingIn(1500);
+            Tietoja = new Tietoja(kerros);
+            Valikko.TietojaPainettu += Tietoja.Avaa;
             UiSisalto.Lataa(null); // kaupunkidata valmiiksi ennen ensimmäistä napautusta
 
             Tilarivi.Valikko.clicked += () => { Aanentasot.Sulje(); Valikko.Vaihda(); };
@@ -137,6 +140,7 @@ namespace Matkakirja.Natiivi
             Kysymys.Piilota();
             Karttaselite.Sulje();
             Kartuscha.Sulje();
+            Tietoja.Sulje();
         }
 
         /// <summary>Testikomento 'ui matka': esimerkkivalinta ilman peliä.</summary>

@@ -12,6 +12,7 @@
 //                                             kohtaaminen-tervehdys (KysymysEsimerkki.cs)
 //   ui selite                                 karttaselite auki
 //   ui pulu sano [teksti] | aani [lähde n] | ele id | tilanne laji | tunne t | pois | paalle
+//   ui tietoja                                tekijätiedot ja lähteet
 //   ui kartuscha [ISO3] [auki]                kartuscha maalle ilman peliä (oletus ITA)
 //   ui heitto [teksti]                        kartan toimintonappi näkyviin
 //   ui viesti teksti                          tilarivin hetkellinen viesti
@@ -126,6 +127,7 @@ namespace Matkakirja.Natiivi
                         default: return "ui pulu sano|aani|ele|tilanne|tunne|pois|paalle";
                     }
                 }
+                case "tietoja": ui.Tietoja.Avaa(); return null;
                 case "selite": ui.Karttaselite.Avaa(); return UiPalvelut.KarttaValot == null ? "ei KarttaValot-palvelua: vain selitykset" : null;
                 case "kartuscha":
                 {
