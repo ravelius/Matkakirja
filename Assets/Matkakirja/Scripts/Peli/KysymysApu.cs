@@ -174,9 +174,8 @@ namespace Matkakirja.Natiivi
             if (kuvat != null)
             {
                 k.Kuvat = new List<(string, string, string)>();
-                foreach (var a in MiniJson.Taulukko(MiniJson.Kentta(MiniJson.Objekti(MiniJson.Jasenna(kuvat)), "alkiot")))
+                foreach (var o in MiniJson.Alkiot(kuvat))
                 {
-                    var o = MiniJson.Objekti(a);
                     string kaupunki = MiniJson.Teksti(o, "kaupunki"), f = MiniJson.Teksti(o, "tiedosto"), u = MiniJson.Teksti(o, "url");
                     if (string.IsNullOrEmpty(kaupunki) || string.IsNullOrEmpty(f)) continue;
                     k.Kuvat.Add((kaupunki, f, MiniJson.Teksti(o, "lahde")));
@@ -186,9 +185,8 @@ namespace Matkakirja.Natiivi
             if (liput != null)
             {
                 k.Liput = Kysymysdata.LueLiput(liput);
-                foreach (var a in MiniJson.Taulukko(MiniJson.Kentta(MiniJson.Objekti(MiniJson.Jasenna(liput)), "alkiot")))
+                foreach (var o in MiniJson.Alkiot(liput))
                 {
-                    var o = MiniJson.Objekti(a);
                     string f = MiniJson.Teksti(o, "lippu"), u = MiniJson.Teksti(o, "url");
                     if (!string.IsNullOrEmpty(f) && !string.IsNullOrEmpty(u)) k.Osoitteet[f] = u;
                 }
@@ -247,10 +245,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Kokoelma laatat (alkio "tokens": data.types, data.mannerTypes).</summary>
         public void LueLaatat(string json)
         {
-            var juuri = MiniJson.Objekti(MiniJson.Jasenna(json));
-            foreach (var a in MiniJson.Taulukko(MiniJson.Kentta(juuri, "alkiot")))
+            foreach (var a in MiniJson.Alkiot(json))
             {
-                var d = MiniJson.Kentta(MiniJson.Objekti(a), "data") as Dictionary<string, object>;
+                var d = MiniJson.Kentta(a, "data") as Dictionary<string, object>;
                 if (d == null) continue;
                 Taulu(tyypit, MiniJson.Kentta(d, "types"));
                 if (MiniJson.Kentta(d, "mannerTypes") is Dictionary<string, object> m)
@@ -261,10 +258,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Kokoelma paikallisaarteet: maa (ISO3), data.pieniAarre/isoAarre {name, kuva, fakta}, kuvat.*.url.</summary>
         public void LuePaikallisaarteet(string json)
         {
-            var juuri = MiniJson.Objekti(MiniJson.Jasenna(json));
-            foreach (var a in MiniJson.Taulukko(MiniJson.Kentta(juuri, "alkiot")))
+            foreach (var o in MiniJson.Alkiot(json))
             {
-                var o = MiniJson.Objekti(a);
                 var maa = MiniJson.Teksti(o, "maa") ?? MiniJson.Teksti(o, "id");
                 var d = MiniJson.Kentta(o, "data") as Dictionary<string, object>;
                 var kuvat = MiniJson.Kentta(o, "kuvat") as Dictionary<string, object>;
@@ -312,10 +307,8 @@ namespace Matkakirja.Natiivi
 
         static IEnumerable<(string Kaupunki, Dictionary<string, object> Data)> Alkiot(string json)
         {
-            var juuri = MiniJson.Objekti(MiniJson.Jasenna(json));
-            foreach (var a in MiniJson.Taulukko(MiniJson.Kentta(juuri, "alkiot")))
+            foreach (var o in MiniJson.Alkiot(json))
             {
-                var o = MiniJson.Objekti(a);
                 var d = MiniJson.Kentta(o, "data") as Dictionary<string, object>;
                 var k = MiniJson.Teksti(o, "kaupunki") ?? MiniJson.Teksti(o, "id");
                 if (d != null && k != null) yield return (k, d);
@@ -361,10 +354,8 @@ namespace Matkakirja.Natiivi
         {
             var avaimet = new Dictionary<string, string>();
             foreach (var k in Kaupungit.Keys) avaimet[KuvaAvain(k)] = k;
-            var juuri = MiniJson.Objekti(MiniJson.Jasenna(json));
-            foreach (var a in MiniJson.Taulukko(MiniJson.Kentta(juuri, "alkiot")))
+            foreach (var o in MiniJson.Alkiot(json))
             {
-                var o = MiniJson.Objekti(a);
                 var d = MiniJson.Kentta(o, "data") as Dictionary<string, object>;
                 var url = MiniJson.Teksti(o, "url");
                 if (d == null || string.IsNullOrEmpty(url)) continue;

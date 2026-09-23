@@ -205,7 +205,7 @@ namespace Matkakirja.Peli
 
         static IEnumerable<Dictionary<string, object>> Alkiot(string json) =>
             json == null ? Enumerable.Empty<Dictionary<string, object>>()
-                : MiniJson.Taulukko(MiniJson.Kentta(MiniJson.Objekti(MiniJson.Jasenna(json)), "alkiot")).Select(MiniJson.Objekti);
+                : MiniJson.Alkiot(json);
 
         /// <summary>Lukee kokoelmien tekstit (kumpi tahansa voi olla null).</summary>
         public static Kauppasisalto Lue(string elaintaytJson, string julisteetJson)

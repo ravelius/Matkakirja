@@ -34,6 +34,29 @@ namespace Matkakirja.Peli
         public static List<object> Taulukko(object arvo) =>
             arvo as List<object> ?? throw new FormatException("odotettiin taulukkoa");
 
+        // --- null-turvalliset luvut (kenttä voi puuttua paketista) ------------
+        // Objekti ja Taulukko heittävät tarkoituksella (tallennus, reitit: rikkinäinen
+        // syöte on virhe). Sisältökokoelmissa puuttuva kenttä tai rikkinäinen alkio
+        // ei saa kaataa koko luetteloa: niihin nämä.
+
+        /// <summary>Objekti tai null (arvo null tai muu kuin objekti); ei heitä.</summary>
+        public static Dictionary<string, object> ObjektiTaiNull(object arvo) => arvo as Dictionary<string, object>;
+
+        /// <summary>Taulukko tai tyhjä lista (arvo null tai muu kuin taulukko); ei heitä.</summary>
+        public static List<object> TaulukkoTaiTyhja(object arvo) => arvo as List<object> ?? new List<object>();
+
+        /// <summary>
+        /// Kokoelman alkiot ({ alkiot: [ {…}, … ] }) objekteina. Puuttuva tai null
+        /// alkiot-kenttä = ei alkioita, ja muut kuin objektialkiot ohitetaan.
+        /// Virheellinen JSON heittää yhä (Jasenna).
+        /// </summary>
+        public static IEnumerable<Dictionary<string, object>> Alkiot(string json)
+        {
+            var juuri = ObjektiTaiNull(Jasenna(json));
+            foreach (var a in TaulukkoTaiTyhja(Kentta(juuri, "alkiot")))
+                if (a is Dictionary<string, object> o) yield return o;
+        }
+
         /// <summary>Kentän arvo tai null, jos kenttää ei ole.</summary>
         public static object Kentta(Dictionary<string, object> o, string nimi) =>
             o != null && o.TryGetValue(nimi, out var v) ? v : null;

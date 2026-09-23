@@ -96,8 +96,8 @@ namespace Matkakirja.Peli
             var nimi = MiniJson.Teksti(runko, "nimi");
             if (nimi != null && nimi != odotettuNimi)
                 throw new FormatException($"odotettiin kokoelmaa '{odotettuNimi}', saatiin '{nimi}'");
-            foreach (var a in MiniJson.Taulukko(MiniJson.Kentta(runko, "alkiot")))
-                yield return MiniJson.Objekti(a);
+            foreach (var a in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(runko, "alkiot")))
+                if (a is Dictionary<string, object> o) yield return o;
         }
 
         static List<string> Tekstit(object arvo)
@@ -201,10 +201,10 @@ namespace Matkakirja.Peli
         {
             var l = new List<Lippumaa>();
             // Testinäyte {"maat": […]} tai paketin kokoelma lippumaat {"alkiot": [{iso, nimi, lippu, url}]}.
-            var juuri = MiniJson.Objekti(MiniJson.Jasenna(json));
-            foreach (var a in MiniJson.Taulukko(MiniJson.Kentta(juuri, "maat") ?? MiniJson.Kentta(juuri, "alkiot")))
+            var juuri = MiniJson.ObjektiTaiNull(MiniJson.Jasenna(json));
+            foreach (var a in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(juuri, "maat") ?? MiniJson.Kentta(juuri, "alkiot")))
             {
-                var o = MiniJson.Objekti(a);
+                if (!(a is Dictionary<string, object> o)) continue;
                 l.Add(new Lippumaa { Iso = MiniJson.Teksti(o, "iso"), Nimi = MiniJson.Teksti(o, "nimi"), Lippu = MiniJson.Teksti(o, "lippu") });
             }
             return l;
