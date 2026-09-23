@@ -19,7 +19,15 @@
 //   ui lehti fokus [kaupunki] [juliste]       kaupunkilehti fokustehtävän sivulla (oletus ateena; AARTEEN AVAUS,
 //                                             juliste = JULISTE-tehtävä); vastaus ja pulla kirjataan, jos peli on käynnissä
 //   ui lehti fokus-vastaa n | fokus-pulla     napauttaa fokustehtävän vaihtoehtoa n (0–) / pullanappia (2× = osto)
-//   ui nosto <valoId>                         nostokortti: skandaali:<id> | hetki:<id> | elaintaky:<ISO> | kohde:<id>[@ISO]
+//   ui nosto <valoId> [nappi]                 nostokortti: skandaali:<id> | hetki:<id> | elaintaky:<ISO> | kohde:<id>[@ISO]
+//                                             | takynosto:<id>[@kaupunki] (esim. areena, schliemann, maailmannayttely-1873)
+//                                             | syvennys:<kaupunki>-<täky> (esim. ateena-nike); nappi painetaan
+//                                             latauksen jälkeen: lisaa | ihme | leikekirja | kartalla | liite |
+//                                             valokuva | vastaa<n> (0–) | juliste | kysy<n>
+//   ui nostonappi <nappi>                     painaa auki olevan nostokortin nappia (esim. vastaa0, sitten juliste)
+//   ui ihme [kohde[@ISO]]                     kohdekortti ja "Koe ihme" -suurennos (oletus akropolis@GRC;
+//                                             kadonnut ihme on kortin ensimmäinen kuva nauhoineen: ui nosto kohde:crystal-palace@GBR)
+//   ui leikekirja [kohde[@ISO]]               kohdekortti ja sen "Livian leikekirja" (oletus troija@TUR)
 //   ui huipennus                              matkan huipennus (kaikki aarteet) esimerkkiluvuin
 //   ui sahke liuska|apu|sulje|kiinni|uusi|jasen|tila   sähkeliuska ja retkikuntaosio valekutsuin (SahkeNakyma.Testaa)
 //   ui sahketehtava [kaupunki] [tila]         pöllön sähketehtävä ilman peliä (oletus sofia tyhja), oikea sisältö ja
@@ -250,8 +258,27 @@ namespace Matkakirja.Natiivi
                     return null;
                 }
                 case "nosto":
-                    ui.Nostokortti.Avaa(loput.Length > 0 ? loput : "skandaali:shakkiturkkilainen");
+                {
+                    var no = loput.Split(new[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries);
+                    string valo = no.Length > 0 ? no[0] : "skandaali:shakkiturkkilainen";
+                    ui.Nostokortti.Testaa(valo, no.Length > 1 ? no[1] : null, v => Kirjaa("ui nosto " + valo + ": " + (v ?? "auki")));
                     return null;
+                }
+                case "nostonappi":
+                {
+                    string tulos = "ok";
+                    ui.Nostokortti.Testaa(null, loput.Trim(), v => tulos = v);
+                    return tulos == "ok" ? null : tulos;
+                }
+                case "ihme":
+                case "leikekirja":
+                {
+                    string kohde = loput.Trim().Length > 0 ? loput.Trim() : osat[1] == "ihme" ? "akropolis@GRC" : "troija@TUR";
+                    string valo = kohde.StartsWith("kohde:") ? kohde : "kohde:" + kohde;
+                    string nappi = osat[1].ToLowerInvariant();
+                    ui.Nostokortti.Testaa(valo, nappi, v => Kirjaa("ui " + nappi + " " + kohde + ": " + (v ?? "ok")));
+                    return null;
+                }
                 case "huipennus":
                     ui.Huipennus.Nayta(new MatkanYhteenveto { Paivat = 83, Kaupungit = 41, Aarteet = 6, AarteitaKaikkiaan = 6 },
                         () => ui.Aloitus.NaytaAvaus(id => ui.Tilarivi.Viesti("Lähtö: " + id)));

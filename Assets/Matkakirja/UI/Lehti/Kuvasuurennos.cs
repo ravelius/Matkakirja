@@ -1,6 +1,7 @@
 // KUVASUURENNOS (Natiivi-UI): kuva isona paperikehyksessä, pitkä selite ja lähderivi
 // (webin naytaKulttuuriKuva / avaaKohdeSuurennos). Sarjaa voi selata ‹ ›; napautus kuvan
-// ohi sulkee. Kuvat NostoSisalto.HaeKuva-reitillä (https, media.json, Commons).
+// ohi sulkee. Kuvat NostoSisalto.HaeKuva-reitillä (https, media.json, Commons). Ihmekuvalla
+// kulmanauha kuten kortissa (web avaaKohdeSuurennos piirraIhmenauha).
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,8 @@ namespace Matkakirja.Natiivi
     {
         readonly VisualElement kerros, kuva;
         readonly Label teksti, lahde, laskuri;
+        VisualElement nauha;
+        Texture2D ladattu;
         readonly Button edellinen, seuraava;
         List<LehtiKuva> sarja = new List<LehtiKuva>();
         int i, versio;
@@ -29,6 +32,7 @@ namespace Matkakirja.Natiivi
             seuraava = Rakenne.Nappi("›", "mk-nosto__selaa mk-nosto__selaa--oikea", () => Nayta(i + 1), kuva);
             kuva.pickingMode = PickingMode.Position;
             laskuri = Rakenne.Teksti("", "mk-nosto__laskuri", kuva);
+            kuva.RegisterCallback<GeometryChangedEvent>(_ => Nostokortti.SovitaNauha(kuva, nauha, ladattu));
             Kirjasimet.Aseta(laskuri, Kirjasin.Kone);
             teksti = Rakenne.Teksti("", "mk-nosto__suurennosteksti", kehys);
             Kirjasimet.Aseta(teksti, Kirjasin.Luku);
@@ -59,7 +63,24 @@ namespace Matkakirja.Natiivi
             var k = sarja[i];
             int v = ++versio;
             kuva.style.backgroundImage = StyleKeyword.None;
-            NostoSisalto.HaeKuva(k.Lahde, t => { if (t != null && v == versio) kuva.style.backgroundImage = new StyleBackground(t); });
+            ladattu = null;
+            nauha?.RemoveFromHierarchy();
+            nauha = null;
+            if (k.Nauha != null)
+            {
+                nauha = Nostokortti.Ihmenauha(kuva, k.Nauha);
+                nauha.style.display = DisplayStyle.None; // näkyviin, kun kuvan kulma tiedetään
+                nauha.SendToBack();
+            }
+            NostoSisalto.HaeKuva(k.Lahde, t =>
+            {
+                if (t == null || v != versio) return;
+                ladattu = t;
+                kuva.style.backgroundImage = new StyleBackground(t);
+                if (nauha == null) return;
+                nauha.style.display = DisplayStyle.Flex;
+                Nostokortti.SovitaNauha(kuva, nauha, t);
+            });
             teksti.text = k.Selite ?? k.Lyhyt ?? "";
             teksti.style.display = teksti.text.Length > 0 ? DisplayStyle.Flex : DisplayStyle.None;
             lahde.text = k.LahdeRivi ?? "";
