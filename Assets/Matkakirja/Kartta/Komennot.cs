@@ -31,6 +31,7 @@ namespace Matkakirja
     ///   valot osoita <id>               napauttaa valon kohtaa (esim. skandaali:shakkiturkkilainen)
     ///   maakunta <ISO3:tunnus>|pois  maakunnan värjäys (B17)
     ///   maat paalle|pois | maat korosta ISO3 [#täyttö #raja] | maat pois-korostus   Maatila (MaaKartta)
+    ///   lentokaaret lähtö kohde … | lentokaaret pois   lentolistan kaaret + kameran sovitus (Reitit)
     ///   nappula aseta lat lon | aja lat lon … kesto | lenna lat0 lon0 lat1 lon1 kesto | aloitus lat0 lon0 lat1 lon1 kesto | pois
     ///   piste <id> lat lon [lukittu] | piste pois <id>   pelin karttapiste (vihreä)
     ///   napauta x y               synteettinen napautus (osuus näytöstä, origo vasen alakulma)
@@ -138,6 +139,18 @@ namespace Matkakirja
                         kesto = (float)D(3),
                     });
                     break;
+                case "lentokaaret":
+                {
+                    // lentokaaret <lähtö> <kohde> … | lentokaaret pois ; sovita = kamera kohteisiin (Reitit.SovitaKohteet)
+                    var rt = FindAnyObjectByType<Reitit>();
+                    if (rt == null) break;
+                    if (o.Length < 3) { rt.Lentokaaret(null, null); break; }
+                    var kohteet = new List<string>();
+                    for (int i = 2; i < o.Length; i++) kohteet.Add(o[i]);
+                    rt.Lentokaaret(o[1], kohteet);
+                    rt.SovitaKohteet(kohteet);
+                    break;
+                }
                 case "nappula":
                 {
                     // nappula aseta lat lon | nappula aja lat lon lat lon … kesto | nappula lenna lat0 lon0 lat1 lon1 kesto | nappula pois
