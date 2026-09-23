@@ -136,7 +136,7 @@ namespace Matkakirja
         {
             latausAlkanut = true;
             string teksti = null;
-            yield return Sisalto.HaeTeksti("maarajat", t => teksti = t);
+            yield return Sisalto.HaeTeksti("maarajat", t => teksti = t, true);
             if (teksti == null) { Debug.LogWarning("MATKAKIRJA maat: maarajat.json puuttuu (paketti ennen nippua 4?)"); latausAlkanut = false; yield break; }
             float alku = Time.realtimeSinceStartup;
             int w = leveys, h = leveys / 2;

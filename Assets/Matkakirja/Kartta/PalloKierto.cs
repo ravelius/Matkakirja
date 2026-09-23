@@ -106,6 +106,12 @@ namespace Matkakirja
         /// </summary>
         public Func<bool> NakymaPeitetty;
         public static int PeitettyVali = 4;
+
+        /// <summary>
+        /// Kaukoleikkauksen alaraja metreinä (0 = pelkkä pallo). Linssit, jotka piirtävät
+        /// pallon taakse (Linssisepän tähtitaivas), nostavat tätä ajaksi ja palauttavat 0:n.
+        /// </summary>
+        public double KaukorajaVahintaan;
         public bool Peitetty { get; private set; }
 
         void PaivitaPeitto()
@@ -458,7 +464,7 @@ namespace Matkakirja
             {
                 double r = CesiumWgs84Ellipsoid.GetMaximumRadius();
                 kamera.nearClipPlane = (float)math.max(100.0, korkeus * 0.02);
-                kamera.farClipPlane = (float)(korkeus + 2.0 * r);
+                kamera.farClipPlane = (float)math.max(korkeus + 2.0 * r, KaukorajaVahintaan);
                 if (kallistus > 0) kamera.nearClipPlane = (float)math.max(50.0, korkeus * 0.01);
             }
         }
