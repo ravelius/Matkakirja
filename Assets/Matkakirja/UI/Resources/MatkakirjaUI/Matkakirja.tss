@@ -3,3 +3,4 @@
 @import url("Kysymys.uss");
 @import url("Kartta.uss");
 @import url("Pulu.uss");
+@import url("Linssit.uss");

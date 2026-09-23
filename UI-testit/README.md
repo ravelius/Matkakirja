@@ -173,6 +173,85 @@ SVG:ksi ja verrattiin Chromiumissa webin `livianUusiPelikuva`-kuvaan 832 tilassa
 (”z Z”, ”…”, ”?”) ovat viivakorvikkeita ja ryhmän peittävyys kerrotaan osille
 (leijunnan siipien ristihäive), muuten kuvat vastaavat toisiaan.
 
+## Linssit (valitsin, peite, selite, astronautti, vertailu, aikajanat)
+
+`Assets/Matkakirja/UI/Linssit/` (tyylit `Resources/MatkakirjaUI/Linssit.uss`) kytkee
+Linssisepän koukut natiiviin UI:hin: `LinssiOhjain.PeiteKasittelija`,
+`MusiikkiKasittelija` (tyhjä, ellei äänillä ole omaa), `VahennettyLiikeKysely` ("Pieni
+liike" pois = vähennetty liike), `Rekisteri` (valitsin, `Vaihtui`), `AstronauttiKerros`
+(avaus, kuvanäkymä, sumu), `VertailuLinssi`/`MaatiedotLinssi` (alapalkki, vertailuarkki,
+maakyltti → `PeliOhjain.LueMaalehti`), `KeksinnotKerros` (esittely, kello, paneeli,
+välinäytös, tauko, loppu) ja `IhmisenMatkaKerros` (musta, valot, kertomus, kello, kuva,
+pulu, tunne, loppu). Linssin ollessa auki kartuscha ja karttaselitteen nappi väistyvät
+ja oikeaan yläkulmaan tulee "✕ Sulje linssi". Kerrokset: 5 sumu, 24 ihmisen matkan
+musta, 25 linssien kalusteet, 37 peite/avaus/kuvanäkymä/vertailuarkki, 38 sulkunappi.
+
+Oikeat linssit avataan Linssisepän komennoilla (`Documents/linssi-komento.txt`:
+`linssi topografia`, `linssi satelliitti`, `linssi pois`, `maa ITA`, `vertaa`, `lehti`).
+UI-osat ilman linssiä esimerkkiaineistolla (`LinssiKomennot.cs`):
+
+- `ui linssi valitsin` — valitsin auki (ilman LinssiOhjainta esimerkkilinssit).
+- `ui linssi peite [pois]` — odotuspeite rgba(20,16,10,.96) päälle / pois (häivytys 320 ms).
+- `ui linssi selite [pois]` — selitekortti esimerkkiriveillä (topografian värit ja lähde).
+- `ui linssi astro [musta|otsikko|paljastus|pois]` — astronautin avaus; ilman vaihetta
+  koko sarja oikeassa ajassa (musta 2 s, otsikko häipyy 0,7 s, musta 1,1 s).
+- `ui linssi kuva [tunnus]` — kuvanäkymä sisältöpaketin kohteella (oletus ensimmäinen);
+  jos aineisto ei lataudu, kaksi Commonsin NASA-kuvaa (pikkukuvanauha, zoomi, lisätiedot).
+- `ui linssi sumu p` — avaruussumun peitto 0…1 (0 = pois); kalvot ajelehtivat.
+- `ui linssi vertailu [arkki|taynna]` — alapalkki (Suomi, Italia, Japani) / vertailuarkki /
+  "Vertailuun mahtuu 4 maata" -ilmoitus.
+- `ui linssi maa [ISO3]` — maakyltti (oletus ITA); napautus avaa maalehden, jos peli käy.
+- `ui linssi keksinnot [esittely|pysakki i|valinaytos [i]|loppu]` — keksintökaaren osat
+  paketin `keksinnot.json`:n teksteillä.
+- `ui linssi matka [musta|valot|jakso i|kuva i|loppu]` — ihmisen matkan osat paketin
+  kertomuksella ja löytöpaikoilla.
+- `ui linssi sulje` — auki oleva linssi kiinni; `ui linssi pois` — testinäkymät pois.
+
+Kuvasarja linssien tarkistukseen:
+
+```
+ui linssi valitsin
+odota 1
+kuva linssi-valitsin
+ui linssi pois
+ui linssi selite
+ui linssi maa ITA
+odota 2
+kuva linssi-selite
+ui linssi pois
+ui linssi astro musta
+odota 1
+kuva linssi-astro-musta
+ui linssi astro pois
+ui linssi sumu 0.62
+odota 2
+kuva linssi-sumu
+ui linssi sumu 0
+ui linssi kuva
+odota 5
+kuva linssi-kuva
+ui linssi pois
+ui linssi vertailu
+odota 2
+kuva linssi-vertailu
+ui linssi vertailu arkki
+odota 2
+kuva linssi-vertailuarkki
+ui linssi pois
+ui linssi keksinnot pysakki 3
+odota 3
+kuva linssi-keksinnot
+ui linssi keksinnot valinaytos
+odota 1
+kuva linssi-valinaytos
+ui linssi pois
+ui linssi matka jakso 0
+odota 3
+kuva linssi-matka-pimea
+ui linssi matka kuva 2
+odota 3
+kuva linssi-matka-kuva
+ui linssi pois
 Pulun keskustelu (vaatii, että pollo-worker sallii natiivin chatin; muuten näkyy selittävä rivi):
 
 ```
