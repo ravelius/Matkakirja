@@ -4364,6 +4364,8 @@ export class UI {
 
   /** Renderin pallohaara: avaa pallon tarvittaessa, päivittää merkit. */
   paivitaPallolauta() {
+    // Lehtikuori (js/lehtikuori.js): pelkkä lehti, lautaa ei avata eikä herätetä.
+    if (this.lehtikuori) return;
     if (this.pallolauta) {
       this.pallolauta.paivita();
       return;

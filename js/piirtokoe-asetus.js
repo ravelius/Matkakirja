@@ -335,6 +335,8 @@ export const SUORAAN_AVAIN = 'matkakirja-suoraan-kartalle';
 /** Onko testitila "Suoraan kartalle" päällä (valikko tai ?koe=suoraan). */
 export function suoraanKartallePaalla(haku) {
   if (haku === undefined && lueMuisti(SUORAAN_AVAIN) === '1') return true;
+  // Lehtikuori (?lehti=, js/lehtikuori.js) ohittaa saman: ei päivitysikkunaa, traileria eikä luentaa.
+  try { if (new URLSearchParams(haku ?? globalThis.location?.search ?? '').get('lehti')) return true; } catch { /* ei osoitetta */ }
   return voimassaOlevatKokeet(haku).has('suoraan');
 }
 
