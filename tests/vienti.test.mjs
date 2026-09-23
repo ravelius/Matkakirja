@@ -161,6 +161,9 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
     tarinakaari: avaimia(ns('tarinakaari.js').TARINAKAARI),
     saapumispuheet: avaimia(ns('saapumispuheet.js').SAAPUMISPUHEET),
     fokusvirrat: avaimia(ns('fokusvirrat.js').FOKUSVIRRAT),
+    saannot: new Set(['js/rules.js', 'js/game.js'].flatMap((f) => Object.entries(ns(f))
+      .filter(([, v]) => ['number', 'string', 'boolean'].includes(typeof v)).map(([n]) => n))).size,
+    saapuminen: P.cities.length,
   };
   assert.deepEqual(manifest.kokoelmat.map((k) => k.nimi).sort(), Object.keys(odotus).sort(),
     'uudella kokoelmalla pitää olla lukumäärätarkistus tässä');
@@ -179,7 +182,10 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
     for (const [kentta, kohde] of Object.entries(viittaukset)) {
       for (const a of alkiot) {
         if (a[kentta] == null) continue;
-        assert.ok(idt.get(kohde).has(a[kentta]), `${k.nimi}/${a.id}.${kentta} → ${kohde}: ${a[kentta]} puuttuu`);
+        // Viittaus voi olla myös id-taulukko (saapuminen.historianHetket).
+        for (const id of [].concat(a[kentta])) {
+          assert.ok(idt.get(kohde).has(id), `${k.nimi}/${a.id}.${kentta} → ${kohde}: ${id} puuttuu`);
+        }
       }
     }
   }

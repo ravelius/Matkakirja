@@ -33,6 +33,9 @@ export const LISAMODUULIT = [
   m('js/pollo.js', ['LIVIAN_MIETINNAT', 'POLLO_AARRE']),
   m('js/game.js', ['ASKERS', 'MANNER_NIMET', 'FORM_WEIGHTS']),
   m('js/tokens.js', ['TOKEN_TYPES']),
+  // Matkustuksen hinnat (laiva, lento, bussi); skeema 1.4 kokoaa ne ja
+  // game.js:n vakiot kokoelmaan saannot (tools/vienti/kokoelmat.mjs).
+  m('js/rules.js', ['SEA_FEE', 'FLIGHT_PRICE', 'BUS_FARE']),
   m('js/sisaltotaulut.js', ['SAAPUMISLUENNAT', 'HAVAINTOLUENNAT', 'LAUTA_TUNNUSLUVUT', 'EI_VALOKUVAKYSYMYKSEEN']),
   m('js/livia-tilanteet.js', ['LIVIAN_TUNTEET', 'LIVIAN_PUHEMERKITYKSET']),
   m('js/livia-pilotti-cuet.js', ['LIVIAN_LUENTA_CUET', 'LIVIAN_LUENTAKAUPUNGIT']),
