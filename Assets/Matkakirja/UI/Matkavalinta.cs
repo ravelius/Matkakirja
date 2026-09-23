@@ -40,6 +40,10 @@ namespace Matkakirja.Natiivi
         readonly Button vaihtoNappi, liikuNappi;
         readonly VisualElement liiku, liuku;
         bool liukuAuki, liikuNakyy, sallittu = true;
+        // Nopan siirtolista ("Noppa n") ei sulkeudu ilman valintaa (web, Fablen päätös 24.9.): ei Peruuta-nappia
+        // eikä taustan napautusta. Ohjain avaisi listan muuten heti uudelleen.
+        bool pakollinen;
+        static readonly System.Text.RegularExpressions.Regex NoppaOtsikko = new System.Text.RegularExpressions.Regex(@"^Noppa \d+$");
 
         public bool Auki { get; private set; }
         /// <summary>Valinnan himmennys, jonka ensimmäinen lapsi on kortti (pulu hyppää sen yläpuolelle).</summary>
@@ -80,7 +84,7 @@ namespace Matkakirja.Natiivi
             // --- modaalinen valinta ---
             himmennys = Rakenne.El("mk-himmennys mk-himmennys--kevyt", juuri);
             himmennys.style.display = DisplayStyle.None;
-            himmennys.RegisterCallback<PointerDownEvent>(e => { if (e.target == himmennys) Peruuta(); });
+            himmennys.RegisterCallback<PointerDownEvent>(e => { if (e.target == himmennys && !pakollinen) Peruuta(); });
 
             kortti = new Kortti("mk-matkavalinta");
             himmennys.Add(kortti);
@@ -134,8 +138,12 @@ namespace Matkakirja.Natiivi
                 Rakenne.Teksti(nimi, "mk-valintarivi__nimi", tekstit);
                 if (!string.IsNullOrEmpty(selite)) Rakenne.Teksti(selite, "mk-valintarivi__selite", tekstit);
             }
-            var alarivi = Rakenne.El("mk-kortti__napit", rivit, PickingMode.Ignore);
-            Rakenne.Nappi("Peruuta", "mk-nappi--haamu", Peruuta, alarivi);
+            pakollinen = NoppaOtsikko.IsMatch(otsikkoTeksti ?? "");
+            if (!pakollinen)
+            {
+                var alarivi = Rakenne.El("mk-kortti__napit", rivit, PickingMode.Ignore);
+                Rakenne.Nappi("Peruuta", "mk-nappi--haamu", Peruuta, alarivi);
+            }
 
             Asettele();
             if (!Auki)
