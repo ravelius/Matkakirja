@@ -1,49 +1,48 @@
-# Fablen luovutus 23.9.2026 klo 00.30 (Mac-käyttäjä koodaus, sessio 22.9. klo 20.13 → 23.9. klo 00.30)
+# Fablen luovutus 23.9.2026 klo 10.55 (Mac-käyttäjä koodaus, sessio 22.9. klo 20.13 → 23.9. klo 10.55)
 
 Edellinen luovutus: viesti-fable-luovutus-20260922-ilta.md. Kaikki päätökset lokissa
-docs/raamattu-loki/paatokset-2026-09.md (22.9. klo 20.14 → 23.9. klo 00.29). Raamattua ei muutettu.
+docs/raamattu-loki/paatokset-2026-09.md (22.9. klo 20.14 → 23.9. klo 10.5x, ~80 otsikkoa).
+Raamattua ei muutettu. Viikkokiintiö (kaikki mallit) 89 % klo 10.50, nollautuu 25.9. klo 08.
 
-## Tuotanto: v2140 (v2139 liikemittari p5 + v2140 koe ?koe=vientibudjetti mainissa klo 00.40)
-Illan sarja v2124–v2138: profiiliketju, Piirtokoe-valikko (4 tilaa + automaattilataus), alpha0 aito,
-profiili jakaa, eivienti laattoihin, tilarivi, mittari p4, Piirtokoe 7, valikon siivous (Vedon
-seuranta ja Tarkkuus pois valikosta, liput ?koe=/?tarkkuus= toimivat), orvot globe.gl-tickerit pois,
-kaksi palstaa kaikkiin nostoihin (#2868, kuva ensin isona → Lisää → kuva vasemmalle, teksti oikealle,
-≥ 1100 px), lehtipalstat pidempiin nostoihin (#2871, ≥ 600 merkkiä / 2 kappaletta, teksti ≥ 600 px),
-Codexin Pulun 70 elettä (v2138). Mac-Safari-Piirtokoe-raportti mainissa (#2852).
+## Tuotanto: v2144 (klo 10.1x); Julkaisijan jono #2890–#2901 + "Suoraan kartalle"
+Aamun sarja: v2141 Syötekoe-valikko (piirtokokeet pois, kosketuslipun korjaus), v2142 nimiölukko
+(näkyvä nimiö ei vaihda kylkeä vedossa eikä zoomissa — omistajan sitova sääntö), v2143 paljas
+kartta (Syötekoe 5–8), v2144 kerroskytkimet. Jonossa: #2893 kallistus koelippuna (v2145),
+#2895/#2897/#2900 NC-korvaukset 23/23, #2898 äänten lisenssiportti (NC/ND ei soi, vartija),
+#2901 lähderivit, raportit #2890 (siirtoputki + yhteinen sisältölähde), #2891/#2892 (3D),
+#2896/#2899 (lisenssit). Tulossa etusijalla: Pelikoodarin "Suoraan kartalle" -kytkin (⚙).
 
-## SULAVUUS: MISSÄ OLLAAN (tärkein)
-- Omistajan iPad-kierros (v2135/36): eivienti pudotti >20 ms 25 % → 8 %, MUTTA omistaja: "tökkii yhtä
-  pahasti, vain isompi hyppäys kun liike pysähtyy. Vika on jossain muualla." → laattabudjetti oletukseksi
-  PERUTTU (#2874 suljettu; tehdään tarvittaessa lipuksi ?koe=vientibudjetti). alpha0 ja Safarin 120 Hz
-  -lippu eivät auttaneet. ?koe=syotetouch "ehkä parempi kuin muut" = ainoa myönteinen signaali.
-- Johtopäätös: kehysaikamittari ei mittaa nähtyä nykimistä; suunta on syöteputki (interpolointi laskee
-  kohta-ajan ja sormen näytteet eri kelloista; iOS toimittaa touchmoven kehysrytmissä).
-- Pelikoodarin liikemittari #2875 (profiili p5: rivit liike ja syöte) → v2139. WebKit: interpvanha CV
-  46–54 %, interp 17–23 %, syotekello 12–20 %, tahdistettu 14–16 %.
-- AAMUN KIERROS omistajalle v2139:llä, kehysprofiili päällä, 10 s veto: 1) oletus, 2) ?koe=syotetouch,
-  3) ?koe=syotekello, 4) ?koe=syotetouch,syotekello. Vertaa CV, nollat, tuplat, virheen sd. Jos
-  syotetouch tasaisin → Pelikoodari tekee PR:n "touch oletukseksi kosketuslaitteilla".
-- Sivulöydös: vanhalla vientitahdilla kirjaston pohja (~400 dc) piirtyy 52–82 %:ssa vetokehyksistä,
-  koska häipyvät laatat eivät peitä (dc 431) → oma korjaus myöhemmin (peittävä laatta alle).
-- Nettiselvitykset lokissa (Safarin GPU-prosessi; alpha/komposiittori; ProMotion; three r186 / globe.gl
-  2.46.2 uusimmat, ei korjauksia; WebGPU ainoa uusi reitti; MapLibre ei ratkaissut iOS:ää).
+## SULAVUUS (tärkein avoin)
+- Poissuljettu: kehysaika, tekstuurilataukset (eivienti, vientibudjetti), puskurikirjoitukset,
+  häivytys, pikselisuhde, alfakanava, 60/120 Hz. Ainoa myönteinen: ?koe=syotetouch "ehkä parempi".
+- Valikossa Syötekoe 1–4 (oletus/kosketus suoraan/yhteinen kello/molemmat) + 5 Paljas kartta
+  kerroskytkimin. Liikemittari p5 (rivit liike/syöte). OMISTAJAN KIERROS ODOTTAA: tila 5 ensin,
+  sitten 1–4; jos touch tasaisin → Pelikoodari: touch oletukseksi kosketuslaitteilla.
+- Sivulöydös: kirjaston pohja (~400 dc) piirtyy häivytyksen aikana ja kallistuksen usvan alla →
+  oma erä (peittävä laatta / pohjan rajaus).
 
-## CI
-WebKit-savukkeet kaatuvat launch-aikakatkaisuun 22.9. klo 19.44 alkaen (ympäristö, ei koodi); ajurin
-restart ei auttanut. Muistio Laitetestaajan haarassa laitetestaaja-ci-webkit (docs/raportit/
-ci-webkit-launch-20260922.md). AAMULLA: koneen reboot omistajan kanssa → webkit-2336 uudelleenasennus →
-ajurin env-dump. Siihen asti merget omistajan säännöllä: vain launch-aikakatkaisut sallittuja punaisia.
-savuke-kerma-heti V2 punainen myös mainilla (Ranska σ 0,7 vs Saksa 10) — tutkimatta.
+## NATIIVI PELI (omistajan suunta 23.9.)
+Uusi natiivi iOS-peli rinnalle, maapallo ensin, sisältö siirretään; web ilmainen, App Store
+maksullinen tai 3D-lisäosat IAP:na. Raportit: 3d-selvitys (suositus Unity 6.3 + Cesium; Google
+3D-laatat ei EU:ssa, ei myöskään vanhalla projektilla), 3d-unreal-vs-unity (Unity), 3d-google-
+laatat-eu, 3d-prototyypin-valmius (Xcode 27 riski, levy 68 Gt, git-lfs puuttuu, koodaus ilman
+allekirjoitusta), sisallon-siirtoputki (vie-sisalto.mjs 391 moduulia, yhteinen sisältölähde:
+CI vie paketin ämpäriin, web ei muutu; App Store: WKWebView-kuori 4.2-riski, IAP StoreKit 2,
+Livia-chat 5.1.2(i)). OMISTAJA LUKEE RAPORTIT, moottoripäätös auki; prototyyppiä ei aloitettu.
+Lisenssit: NC 23/23 korvattu; SA ~9 600 kuvaa (attribuutio, juristi ennen maksullista);
+radiot pois uudesta pelistä (omistaja), pysyvät ilmaisessa; 394 herokuvaa Commons-viitteistä →
+Siirtoseppä selvittää (johdannaisriski).
 
-## Sessiot
-Pelikoodari ja Karttaseppä Opus 5.5 (omistaja vaihtoi 22.9. klo 20.55); Pelikoodari nollattu 21.45,
-Laitetestaaja 20.33, Karttaseppä 00.05. RC päällä kaikilla (Fable kytkee, luokitin estää sessioita
-itse). Julkaisija: head-tarkistus nappaa haaraan lisätyt commitit; ei mergejä yöllä ilman Fablen viestiä.
+## Sessiot (8): Pelikoodari (67 %, luovutus tulossa), Karttaseppä, 3D-selvittäjä, Siirtoseppä
+(Opus 5.5); Julkaisija, Laitetestaaja, Sisältökirjuri (51 %), Postivahti (Sonnet). Session id:t
+lokissa 09.48. Luokitin estää sessioita kytkemästä omaa RC:tä → Fable kytkee. CI: WebKit-
+savukkeet kaatuvat launch-aikakatkaisuun (ympäristö); koneen reboot omistajan kanssa tekemättä;
+merget omistajan säännöllä. Laitetestaajan pulu-QA (v2138) tekemättä.
 
-## Jono aamulle
-1. Omistaja: syöteputken kierros (yllä). 2. Laitetestaaja: Pulun 70 eleen live-QA v2138 → posti/
-fable-codex-pulun-eleet-qa-20260923.md; sitten CI-reboot-kierros. 3. Pelikoodari: kierroksen analyysi →
-touch oletukseksi?; sitten Codexin kaksi lisäkohtausta (liviaEnsitapaaminen → uusi-ilahtuu,
-liviaPitkaKirjahaku → uusi-bookPanic, ehdot posti/codex-fable-pulun-lisakohtaukset-20260923.md).
-4. Karttaseppä: odottaa omistajan päätöksiä (kartta 22c, nostotason poltto harmaalla pisteellä, meren
-lika). 5. Julkaisija: hae laitetestaaja-ci-webkit-muistio mainiin docs-PR:nä.
+## Jono
+1. Omistaja: "Suoraan kartalle" → Paljas kartta -tuntuma → Syötekoe 1–4 → 3D-päätös.
+2. Pelikoodari (uusi): kierroksen analyysi; lahteet.js; Codexin Pulu-kohtaukset; pohjaerä.
+3. Karttaseppä: kallistus vaihe 2 (lento, pelaajan liike, pohja usvan alta) omistajan kokeilun jälkeen;
+   163 kaupungin lat/lon (Siirtosepän löydös); kartta 22c ja nostotason poltto odottavat omistajaa.
+4. Laitetestaaja: pulu-QA v2138 + CI-reboot. 5. Julkaisija: 33 Commons-kuvaa ämpäriin (peilaa-media
+   ei lue js/linssit). 6. Codex: kuittaukset postilaatikossa.
