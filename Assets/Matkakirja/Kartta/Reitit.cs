@@ -130,6 +130,16 @@ namespace Matkakirja
             return true;
         }
 
+        bool nakyvat = true;
+
+        /// <summary>KarttaKerrokset "reitit": piirretyt reitit piiloon tai näkyviin.</summary>
+        public void Nakyvat(bool nakyy)
+        {
+            nakyvat = nakyy;
+            foreach (var g in naytetyt) g.SetActive(nakyy);
+            if (korostettu != null) korostettu.SetActive(nakyy);
+        }
+
         public void Tyhjenna(bool myosKorostus = true)
         {
             foreach (var g in naytetyt) Destroy(g);
@@ -228,6 +238,7 @@ namespace Matkakirja
             go.transform.SetParent(georeferenssi.transform, false);
             go.AddComponent<MeshFilter>().sharedMesh = mesh;
             go.AddComponent<MeshRenderer>().sharedMaterial = materiaali;
+            go.SetActive(nakyvat);
             return go;
         }
     }
