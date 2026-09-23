@@ -596,6 +596,23 @@ test('skeema 1.17: lehtitehtävät ja pullan nimet', async () => {
   assert.equal(f.PULLA_YLEISNIMI, 'makea pulla');
 });
 
+test('skeema 1.18: nahtavyydet ja miniatyyrit päätasolla', async () => {
+  const { NAHTAVYYSJUTUT } = await import('../js/packs/nahtavyysjutut.js');
+  const n = JSON.parse(tiedostot.get('kokoelmat/nahtavyydet.json')).alkiot;
+  const firenze = n.find((a) => a.kaupunki === 'firenze' && a.teksti);
+  assert.deepEqual(firenze.kappaleet, firenze.teksti.split('\n\n').filter(Boolean));
+  assert.ok(n.every((a) => Array.isArray(a.kuvat) && a.kuvat.every((k) => /^https:\/\//.test(k.url))));
+  const raakaKuvia = n.reduce((s, a) => s + (a.data?.kuvat?.length ?? 0), 0);
+  const kuvia = n.reduce((s, a) => s + a.kuvat.length, 0);
+  assert.ok(kuvia >= raakaKuvia - 5, `kuvia ${kuvia} / ${raakaKuvia}`);
+  assert.ok(Object.keys(NAHTAVYYSJUTUT).length > 0);
+  const m = JSON.parse(tiedostot.get('kokoelmat/miniatyyrit.json')).alkiot;
+  assert.ok(m.every((a) => a.kuva && /^https:\/\//.test(a.kuva.url)));
+  const { assetOsoite } = await import('../js/media.js');
+  const tunnus = m.find((a) => typeof a.data === 'string' && !a.data.includes('/'));
+  assert.equal(tunnus.kuva.url, assetOsoite('miniatyyrit', tunnus.data));
+});
+
 test('skeema 1.9: offline-manifesti maittain (laatat, maasto, media, tavut)', async () => {
   const m = JSON.parse(tiedostot.get('manifest.json'));
   const o = JSON.parse(tiedostot.get(m.offline.tiedosto));

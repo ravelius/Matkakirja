@@ -116,8 +116,10 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        karttapiste()-funktiolla, kartat ämpärissä assets/kartat/),
  *        kokoelma lehtitehtavat (fokusvirtojen lehtitehtävät) ja moduuli
  *        js/fokustehtavat.js (PULLA_NIMET, PULLA_YLEISNIMI, palkkio).
+ *   1.18 nahtavyydet ja miniatyyrit päätasolle (2.0-polun ensimmäinen
+ *        tyypitys, docs/raportit/sisaltopaketti-2-0-suunnitelma-20260923.md).
  */
-export const SKEEMAVERSIO_TARKKA = '1.17';
+export const SKEEMAVERSIO_TARKKA = '1.18';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 const tavuja = (s) => Buffer.byteLength(s);

@@ -24,6 +24,7 @@
  * Live-haut (päivän sää, uutiset, iTunes-esikuuntelu, Wikipedia) eivät
  * tule pakettiin: kokoelmien kuvauksissa on rajapinta, josta natiivi hakee.
  */
+import { assetOsoite } from '../../js/media.js';
 import { readFileSync } from 'node:fs';
 import { sarjallista } from './sarjallista.mjs';
 import { mediaLaji, ratkaiseMedia } from './media.mjs';
@@ -468,6 +469,30 @@ export function rikastaLehdet(kokoelmat, ns, hae, { media: mediaLista = [], taul
       + '(juliste; tehtävän oma avain voittaa kaupungin oletuksen; null = kaupungille ei ole julistetta), palkkio = puntaa oikeasta vastauksesta '
       + '(js/fokustehtavat.js FOKUS_TEHTAVA_PALKKIO). visa = { kysymys, vaihtoehdot, oikea (indeksi), fakta }.',
     { kaupunki: 'kaupungit', juliste: 'julisteet' }, lehtitehtavat);
+
+  // Skeema 1.18 (2.0-polku, Fable 23.9.2026): nahtavyydet ja miniatyyrit
+  // päätasolle (natiivin Kohdekartat.cs lukee niitä). Kappaleet kuten
+  // js/nahtavyydet.js (teksti.split('\n\n')).
+  for (const a of kokoelmat.nahtavyydet.alkiot) {
+    const d = a.data ?? {};
+    Object.assign(a, {
+      aika: d.aika ?? null, teksti: d.teksti ?? null,
+      kappaleet: String(d.teksti ?? '').split('\n\n').filter(Boolean),
+      wiki: d.wiki ?? null, lahde: d.lahde ?? null, nosto: d.nosto ?? null,
+      lainaus: d.lainaus ? { teksti: d.lainaus.teksti ?? null, lahde: d.lainaus.lahde ?? null } : null,
+      kuvat: (d.kuvat ?? []).map((o) => R.kuva(o)).filter(Boolean),
+    });
+  }
+  kokoelmat.nahtavyydet.kuvaus += ' Skeema 1.18: päätasolla aika, teksti, kappaleet (teksti jaettuna tyhjästä rivistä '
+    + 'kuten webissä), wiki, lahde, nosto, lainaus { teksti, lahde } ja kuvat [{ arvo, url, varat, leveys, korkeus, '
+    + 'lyhyt, selite, lahde }]. Avain kaupunki + nimi (kohdekartat.kohteet[].nimi).';
+  for (const a of kokoelmat.miniatyyrit.alkiot) {
+    const arvo = typeof a.data === 'string' ? a.data : a.data?.url ?? null;
+    // Pelkkä tunnus (kuva vain ämpärissä) ratkaistaan pelin assetOsoite-funktiolla.
+    a.kuva = arvo ? { arvo, ...(media(arvo, 'miniatyyri') ?? { url: assetOsoite('miniatyyrit', arvo), varat: [] }) } : null;
+  }
+  kokoelmat.miniatyyrit.kuvaus += ' Skeema 1.18: kuva = { arvo, url, varat, leveys, korkeus } (piirroskuva kohteelle '
+    + 'kaupunki + nimi).';
 
   kokoelmat.kohdekartat = taulukko('js/packs/maakartat.js#KAUPUNKIKARTAT',
     'Kaupunkien kohdekartat (Nähtävyydet). kuva = näytettävä kartta (värikartta, jos on, muuten juliste; url/varat/'
