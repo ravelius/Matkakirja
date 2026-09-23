@@ -2,6 +2,7 @@
 // Natiivi-UI:n koukut kellolle, paneelille, välinäytökselle ja loppusanoille.
 // Valon tilat kuten webin lampunTila: ajossa palavat syttyneet ja nykyinen,
 // selauksessa kaikki (tulevat himmeämpinä), lopussa kaikki palavat.
+// Kartta tummuu linssin ajaksi (Tummennus.cs), ja reikä seuraa nykyistä lamppua.
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +26,8 @@ namespace Matkakirja.Natiivi
         public static bool EsittelyUIssa;
 
         Valot valot;
+        Tummennus tummennus;
+        List<(double Lat, double Lon)> paikat;
         List<string> tunnukset;
         int nykyinen = -1;
         double kello;
@@ -38,6 +41,8 @@ namespace Matkakirja.Natiivi
             k.valot = Valot.Luo(kierto.georeferenssi,
                 a.Pysakit.Select((p, i) => (i.ToString(), p.Paalu ? double.NaN : p.Lat, p.Paalu ? double.NaN : p.Lon)).ToList(),
                 LinssiOhjain.Instanssi?.VahennettyLiike ?? false, kierto.GetComponent<Camera>());
+            k.paikat = a.Pysakit.Select(p => p.Paalu ? (double.NaN, double.NaN) : (p.Lat, p.Lon)).ToList();
+            k.tummennus = Tummennus.Luo(kierto, go.transform);
             return k;
         }
 
@@ -49,6 +54,14 @@ namespace Matkakirja.Natiivi
 
         void Aseta(int i, ValonVaihe v) { if (i >= 0 && i < tunnukset.Count) valot?.Tila(tunnukset[i], v, kello); }
 
+        /// <summary>Reikä nykyisen lampun kohdalle; merkkipaalu (ei paikkaa) ja -1 = tasainen.</summary>
+        void Reika(int i)
+        {
+            if (tummennus == null) return;
+            if (i >= 0 && i < paikat.Count) tummennus.Reika(paikat[i].Lat, paikat[i].Lon);
+            else tummennus.Reika(double.NaN, double.NaN);
+        }
+
         public void Kello(double vuosi) => KelloKasittelija?.Invoke(vuosi);
 
         public void Sytyta(int i)
@@ -56,6 +69,7 @@ namespace Matkakirja.Natiivi
             if (nykyinen >= 0 && nykyinen != i) Aseta(nykyinen, ValonVaihe.Palaa);
             Aseta(i, ValonVaihe.Nykyinen);
             nykyinen = i;
+            Reika(i);
             PysakkiKasittelija?.Invoke(i);
         }
 
@@ -64,6 +78,7 @@ namespace Matkakirja.Natiivi
             for (int k = 0; k < tunnukset.Count; k++)
                 Aseta(k, i < 0 ? ValonVaihe.Sammunut : k == i ? ValonVaihe.Nykyinen : k > i ? ValonVaihe.Tuleva : ValonVaihe.Palaa);
             nykyinen = i;
+            Reika(i);
             if (i >= 0) PysakkiKasittelija?.Invoke(i);
         }
 
