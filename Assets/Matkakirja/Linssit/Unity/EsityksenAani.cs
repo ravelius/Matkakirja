@@ -57,9 +57,18 @@ namespace Matkakirja.Natiivi
         void Aloita(double kohtaMs)
         {
             odottavaKohta = null;
-            lahde.time = Mathf.Clamp((float)(kohtaMs / 1000), 0, Mathf.Max(0, aanite.length - 0.01f));
+            float t = Mathf.Clamp((float)(kohtaMs / 1000), 0, Mathf.Max(0, aanite.length - 0.01f));
+            // Kelaus sekä ennen että jälkeen Playn: iPadilla pelkkä ennen asetettu time
+            // ei aina tarttunut (ääni alkoi nollasta). Esitys pyytää lisäksi uuden
+            // kelauksen, jos kohta ei osu jaksoon (Esitys.AanenToleranssiMs).
+            lahde.time = t;
             lahde.Play();
+            lahde.time = t;
         }
+
+        /// <summary>Linssi-lokiin: lataus, soitto ja kohta.</summary>
+        public string Tila => virhe ? "virhe" : aanite == null ? "latautuu"
+            : $"{(lahde.isPlaying ? "soi" : tauolla ? "tauolla" : "seis")} {lahde.time:F1}/{aanite.length:F0} s{(Mykistetty?.Invoke() ?? false ? " mykistetty" : "")}";
 
         public void Soita(double kohtaMs)
         {

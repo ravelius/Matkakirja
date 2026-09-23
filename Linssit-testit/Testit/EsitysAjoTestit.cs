@@ -20,7 +20,15 @@ namespace Matkakirja.Linssit.Testit
             public readonly double Pituus;
             public readonly List<double> Siirrot = new List<double>();
             public ValeAani(ValeYmparisto y, double pituus) { this.y = y; Pituus = pituus; }
-            public void Soita(double kohta) { Siirrot.Add(kohta); alku = y.Kello * 1000 - kohta; tauolla = null; }
+            /// <summary>Kuinka monta ensimmäistä kelausta epäonnistuu (ääni alkaa nollasta; iPad-vika).</summary>
+            public int RikkiKelauksia;
+            public void Soita(double kohta)
+            {
+                Siirrot.Add(kohta);
+                if (RikkiKelauksia > 0) { RikkiKelauksia--; kohta = 0; }
+                alku = y.Kello * 1000 - kohta;
+                tauolla = null;
+            }
             public void Tauko() { if (alku != null) tauolla = KohtaMs; }
             public void Jatka() { if (tauolla is double k) { alku = y.Kello * 1000 - k; tauolla = null; } }
             public void Lopeta() { alku = null; }
@@ -178,6 +186,25 @@ namespace Matkakirja.Linssit.Testit
             Aja(e, y, Esitysmatikka.KelauksenMs / 1000);
             // Kelaus perillä 50 000:ssa, ja kello on jo lähtenyt kohti 45 000:ta.
             Oleta.Tosi(n.Kellossa <= 50000 && n.Kellossa > 49500, "kelaus perillä: " + n.Kellossa);
+        }
+
+        [Testi] static void EpaonnistunutKelausEiJumita()
+        {
+            // iPad: hyppy jaksoon, mutta ääni alkaa nollasta (kelaus ei tartu kahdesti).
+            var (e, y, n, a, leimat, kertomus) = Luo();
+            e.Aloita();
+            Aja(e, y, 5);
+            a.RikkiKelauksia = 2;
+            int siirtoja = a.Siirrot.Count;
+            e.Valitse("levantti");
+            Aja(e, y, 3);
+            Oleta.Sama("levantti", kertomus[e.I].Id);
+            Oleta.Tosi(e.Kulunut > 2500, "kello kulkee seinäkellolla: " + e.Kulunut);
+            // Kelausta pyydettiin uudelleen, ja kolmas yritys tarttui: ääni ohjaa taas.
+            Oleta.Tosi(a.Siirrot.Count - siirtoja >= 3, "uudet kelaukset: " + (a.Siirrot.Count - siirtoja));
+            var l = leimat["levantti"];
+            Oleta.Tosi(Math.Abs(a.KohtaMs.Value - (l.Alku + e.Kulunut)) < 50, "ääni ja kello tahdissa");
+            Oleta.Tosi(a.Siirrot.Count - siirtoja <= 4, "ei kelaustulvaa: " + (a.Siirrot.Count - siirtoja));
         }
 
         [Testi] static void TaukoPysayttaaAjan()
