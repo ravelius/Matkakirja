@@ -65116,6 +65116,110 @@ export const KULTTUURI_KATEGORIAT = {
           + 'ja monessa kohdassa portaat korvaavat ajoradan kokonaan.',
       },
     },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Haukka vuokrana, lähes neljän kuukauden piiritys, ritarien antautuminen '
+          + 'Napoleonille ja kaksi vuotta pommituksia: neljä vaihetta, joissa pieni saari '
+          + 'oli Välimeren taistelujen keskipisteessä.',
+      tehtava: {
+        kysymys: 'Mitä johanniittaritarien piti maksaa vuosittain, kun keisari Kaarle V '
+            + 'antoi heille Maltan vuonna 1530?',
+        vaihtoehdot: [
+          'Tynnyrillinen maltalaista viiniä',
+          'Sata kultadukaattia',
+          'Kaksi varustettua kaleeria',
+          'Yksi maltalainen haukka',
+        ],
+        oikea: 3,
+        fakta: 'Kaarle V antoi Maltan, Gozon ja Tripolin ritarikunnalle ikuiseksi '
+            + 'läänitykseksi. Vuosimaksuksi riitti yksi maltalainen haukka, joka lähetettiin '
+            + 'Sisilian varakuninkaalle.',
+      },
+      nostot: [
+        {
+          otsikko: 'Saari, jonka vuokra oli yksi haukka',
+          tiedosto: 'Prise de Malte en 1530.jpg',
+          teksti: 'Johanniittaritarit menettivät tukikohtansa Rodoksella vuonna 1522, kun '
+              + 'osmanit valtasivat saaren kuuden kuukauden piirityksen jälkeen. Seitsemän '
+              + 'vuoden vaelluksen jälkeen keisari Kaarle V antoi heille Sisilian kuninkaana '
+              + 'Maltan, Gozon ja Pohjois-Afrikan Tripolin ikuiseksi läänitykseksi. '
+              + 'Vuosimaksu oli yksi maltalainen haukka, joka lähetettiin Sisilian '
+              + 'varakuninkaalle. Suurmestari Philippe Villiers de L\'Isle-Adam purjehti '
+              + 'Suureen satamaan 26. lokakuuta 1530, mutta moni ritari haaveili yhä '
+              + 'Rodoksen takaisinvaltaamisesta, sillä Malta oli pieni ja karu saari. '
+              + 'Ritarit asettuivat Birgun kaupunkiin ja rakensivat sen vanhan linnan '
+              + 'uudelleen Pyhän Angelon linnakkeeksi.',
+          lyhyt: 'Punaviittaiset ritarit ja ritarikunnan valkoristinen lippu Maltan '
+              + 'rannalla.',
+          selite: 'René Théodore Berthonin vuonna 1839 maalaama kuva ritarikunnan '
+              + 'saapumisesta Maltalle vuonna 1530: punaviittaiset ritarit, trumpetit ja '
+              + 'valkoristinen lippu linnoituksen edustalla.',
+          lahde: 'René Théodore Berthon, Wikimedia Commons (PD)',
+          wiki: 'Hospitaller Malta',
+        },
+        {
+          otsikko: 'Lähes neljän kuukauden piiritys',
+          tiedosto: 'Matteo Perez d\' Aleccio (1547-1616) - The Siege of Malta, Capture of St Elmo, 23 June 1565 - BHC0254 - Royal Museums Greenwich.jpg',
+          teksti: 'Sulttaani Suleiman Suuri lähetti vuonna 1565 valtavan laivaston '
+              + 'ajamaan ritarit Maltalta. Piiritys kesti 18. toukokuuta – 8. syyskuuta, ja '
+              + 'saarta puolusti noin 500 ritaria ja 6 000 jalkaväen sotilasta. Osmanit '
+              + 'hyökkäsivät ensin Pyhän Elmon linnakkeeseen Sciberras-vuoren kärjessä, '
+              + 'nykyisen Vallettan paikalla, ja sen valtaaminen 23. kesäkuuta maksoi heille '
+              + 'ainakin 6 000 miestä. Birgu ja Senglea kestivät silti pommituksen, jossa '
+              + 'aikalaiskertoja Francisco Balbin mukaan ammuttiin noin 130 000 tykinkuulaa. '
+              + 'Voiton jälkeen Euroopasta virtasi Maltalle rahaa, ja suurmestari Jean de '
+              + 'Valette rakensi Sciberras-vuorelle linnoitetun kaupungin, joka sai hänen '
+              + 'nimensä.',
+          lyhyt: 'Osmanien joukot ja tykit Pyhän Elmon linnakkeen ympärillä kesäkuussa '
+              + '1565.',
+          selite: 'Matteo Perez d\'Aleccion maalaus Pyhän Elmon valtauksesta 23. kesäkuuta '
+              + '1565 on Greenwichissä Lontoossa. Saman taiteilijan freskot piirityksestä '
+              + 'koristavat Vallettan Suurmestarin palatsin valtaistuinsalia.',
+          lahde: 'Matteo Perez d\'Aleccio, Royal Museums Greenwich, Wikimedia Commons (PD)',
+          wiki: 'Great Siege of Malta',
+        },
+        {
+          otsikko: 'Ritarikunnan loppu ja ranskalaisten kaksi vuotta',
+          tiedosto: 'Palazzo Parisio plaque Napoleon Bonaparte.jpg',
+          teksti: 'Kesäkuun 9. päivänä 1798 Egyptiin matkalla ollut Napoleon Bonaparten '
+              + 'laivasto saapui Vallettan edustalle. Suurmestari Ferdinand von Hompesch '
+              + 'vetosi Maltan puolueettomuuteen ja suostui päästämään satamaan vain kaksi '
+              + 'laivaa kerrallaan, jolloin Napoleon määräsi pommituksen ja maihinnousun. '
+              + 'Vaikka Valletta olisi kestänyt pitkän piirityksen, Hompesch luovutti saaret '
+              + 'ranskalaisille vastineeksi tiloista ja eläkkeistä itselleen ja ritareilleen. '
+              + 'Ranskalaiset lakkauttivat aateliston ja orjuuden, mutta kun he alkoivat '
+              + 'ryöstää kirkkojen omaisuutta, maltalaiset nousivat syyskuussa kapinaan ja '
+              + 'saartoivat varuskunnan Vallettaan. Ranskalaiset antautuivat briteille 5. '
+              + 'syyskuuta 1800, kun heidän ruokavaransa olivat loppumassa.',
+          lyhyt: 'Napoleonin muistolaatta Palazzo Parision kalkkikiviseinässä Vallettassa.',
+          selite: 'Palazzo Parision marmorilaatan mukaan Napoleon asui talossa 12.–18. '
+              + 'kesäkuuta 1798. Nykyään rakennuksessa toimii Maltan ulkoministeriö.',
+          lahde: 'Сале, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'French occupation of Malta',
+        },
+        {
+          otsikko: 'Saari, joka sai George-ristin',
+          tiedosto: 'BombDamageMalta.jpg',
+          teksti: 'Kesäkuusta 1940 marraskuuhun 1942 Saksan ja Italian ilmavoimat yrittivät '
+              + 'pommittaa ja näännyttää brittien Maltan antautumaan, sillä saarelta käsin '
+              + 'iskettiin Pohjois-Afrikkaan kulkeviin huoltokuljetuksiin. Pelkästään 20. '
+              + 'maaliskuuta – 28. huhtikuuta 1942 saksalaiset pudottivat saarelle 6 557 '
+              + 'tonnia pommeja, niistä 3 150 tonnia Vallettaan. Ruoka ja vesi alkoivat '
+              + 'loppua, ja elokuun 1942 Pedestal-saattueen 14 kauppalaivasta upotettiin '
+              + 'yhdeksän. Kuningas Yrjö VI myönsi 15. huhtikuuta 1942 George-ristin koko '
+              + 'saarelle sen asukkaiden sankaruuden kunniaksi. Risti on ollut Maltan '
+              + 'lipussa vuodesta 1943, ja itse kunniamerkki ja kuninkaan viestit ovat nyt '
+              + 'Pyhän Elmon linnakkeen sotamuseossa.',
+          lyhyt: 'Pommituksissa raunioitunut Kingsway, Vallettan pääkatu, huhtikuussa 1942.',
+          selite: 'Sotilaat ja siviilit raivaavat raunioita Vallettan pääkadulla Kingswaylla '
+              + 'huhtikuussa 1942. Kuvan otti kuninkaallisen laivaston valokuvaaja J. E. '
+              + 'Russell.',
+          lahde: 'J. E. Russell, Royal Navy, Imperial War Museums, Wikimedia Commons (PD)',
+          wiki: 'Siege of Malta (World War II)',
+        },
+      ],
+    },
   ],
 
   /*
