@@ -20,6 +20,7 @@
  */
 import { sarjallista } from './sarjallista.mjs';
 import { laudaltaAsteiksi } from '../../js/fokusmitat.js';
+import { ISO2 } from './iso2.mjs';
 
 const LAUTA = 'js/packs/maailmankartta.js';
 
@@ -35,15 +36,22 @@ function lautaKokoelmat(ns) {
     const tarkka = c.pallo ?? pallo[c.id];
     const arvio = tarkka ? null : laudaltaAsteiksi('maailmankartta', c.x, c.y);
     const asteet = tarkka ?? arvio;
+    const maa = P.map.cityCountry?.[c.id] ?? null;
     return {
       id: c.id,
       nimi: c.name,
-      maa: P.map.cityCountry?.[c.id] ?? null,
+      maa,
+      // Skeema 1.1: natiivi 3D-proto lukee maan ISO2-koodina ja
+      // harventaa nimiä tyypin mukaan (3D-selvittäjä 23.9.2026).
+      maa2: maa ? ISO2[maa] ?? null : null,
       manner: P.map.cityManner?.[c.id] ?? null,
       lat: asteet ? Math.round(asteet.lat * 1e4) / 1e4 : null,
       lon: asteet ? Math.round(asteet.lon * 1e4) / 1e4 : null,
       sijaintiLahde: tarkka ? 'pallopiste' : 'laudalta-laskettu',
       saari: saaret.has(c.id),
+      lentokentta: Boolean(c.airport),
+      aloitus: Boolean(c.start),
+      tyyppi: c.ambience ?? null,
       data: c,
     };
   });
@@ -68,7 +76,7 @@ function lautaKokoelmat(ns) {
   }
   return {
     kaupungit: taulukko(`${LAUTA}#MAAILMANKARTTA.cities`,
-      'Pelilaudan kaupungit. lat/lon: pallopiste jos on, muuten laudan Miller-koordinaateista laskettu. maa = ISO3.',
+      'Pelilaudan kaupungit. lat/lon: pallopiste jos on, muuten laudan Miller-koordinaateista laskettu. maa = ISO3, maa2 = ISO2 (tools/vienti/iso2.mjs). tyyppi = laudan ambience, lentokentta ja aloitus laudan liput.',
       {}, kaupungit),
     reitit: taulukko(`${LAUTA}#MAAILMANKARTTA.edges+airRoutes`,
       'Kaupunkien väliset yhteydet: maa/meri (edges, steps = askelia) ja lentoreitit.',

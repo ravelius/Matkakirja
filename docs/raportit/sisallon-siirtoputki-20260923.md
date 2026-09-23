@@ -320,6 +320,20 @@ välimuistittaa packit kuten nyt.
 Arvio: 1–1,5 sessiota työnkululle ja manifestin laajennukselle, 0,5
 sessiota sisältöversion näyttämiselle (työhuone ja natiivin tietoja-sivu).
 
+**Toteutus, osa 1 (23.9.2026, Fablen erä):** `.github/workflows/vie-sisalto.yml`,
+`tools/vienti/julkaise-sisalto.mjs` (versio, tiiviste, osoitin),
+`tools/vienti/validoi.mjs` (skeematarkistus ilman riippuvuuksia) ja
+`tests/sisaltopaketti.test.mjs`. Poikkeamat suunnitelmasta:
+- N lasketaan ämpärin suurimmasta versiosta eikä osoittimesta, jotta
+  palautuksen jälkeen ei kirjoiteta olemassa olevan version päälle.
+- Osoitin on myös versiokansiossa (`v<N>/osoitin.json`), ja palautus
+  kopioi sen.
+- `minSovellus` on `{ ios: 1, web: null }`, koska web ei lue pakettia.
+- Skeema 1.1: kaupungeille `maa2` (ISO2), `tyyppi`, `lentokentta` ja
+  `aloitus` 3D-proton tarpeen mukaan (3D-selvittäjä 23.9.).
+
+Funktiot tunnisteiksi ja sisältöversion näyttäminen ovat myöhempiä osia.
+
 ### 5.3 Yhteensopivuus: vanha sovellus ja uusi sisältö
 
 - **Skeeman major.minor.** `matkakirja-vienti/1` on major. Lisäykset
