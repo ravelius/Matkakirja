@@ -1,0 +1,2353 @@
+{
+ "vertailuMax": 4,
+ "vertailunSavyt": {
+  "valittu": {
+   "vari": "rgba(176, 58, 43, 0.3)",
+   "reuna": "#b03a2b"
+  },
+  "valittavissa": {
+   "vari": "rgba(120, 96, 62, 0.06)",
+   "reuna": "rgba(70, 51, 31, 0.55)"
+  },
+  "himmea": {
+   "vari": "rgba(120, 96, 62, 0.03)",
+   "reuna": "rgba(70, 51, 31, 0.25)"
+  }
+ },
+ "maatietojenSavyt": {
+  "valittu": {
+   "vari": "rgba(176, 34, 34, 0.16)",
+   "reuna": "rgba(140, 30, 30, 0.9)"
+  },
+  "valittavissa": {
+   "vari": "rgba(140, 110, 70, 0.05)",
+   "reuna": "rgba(70, 51, 31, 0.55)"
+  }
+ },
+ "vertailuvarit": [
+  "#a4691c",
+  "#b03a2b",
+  "#4a6b3a",
+  "#35577f"
+ ],
+ "nimimaat": [
+  "AFG",
+  "AGO",
+  "ARE",
+  "ARG",
+  "ARM",
+  "AUS",
+  "AUT",
+  "AZE",
+  "BEL",
+  "BGD",
+  "BGR",
+  "BIH",
+  "BLR",
+  "BOL",
+  "BRA",
+  "BTN",
+  "CAN",
+  "CHE",
+  "CHL",
+  "CHN",
+  "CMR",
+  "COD",
+  "COL",
+  "CUB",
+  "CZE",
+  "DEU",
+  "DNK",
+  "DZA",
+  "ECU",
+  "EGY",
+  "ESP",
+  "EST",
+  "ETH",
+  "FIN",
+  "FJI",
+  "FRA",
+  "GBR",
+  "GEO",
+  "GHA",
+  "GRC",
+  "GRL",
+  "GTM",
+  "HRV",
+  "HUN",
+  "IDN",
+  "IND",
+  "IRL",
+  "IRN",
+  "IRQ",
+  "ISL",
+  "ITA",
+  "JOR",
+  "JPN",
+  "KAZ",
+  "KEN",
+  "KGZ",
+  "KHM",
+  "KOR",
+  "KWT",
+  "LAO",
+  "LBR",
+  "LBY",
+  "LKA",
+  "LTU",
+  "LVA",
+  "MAR",
+  "MDA",
+  "MDG",
+  "MEX",
+  "MKD",
+  "MLI",
+  "MMR",
+  "MNE",
+  "MNG",
+  "MOZ",
+  "MYS",
+  "NAM",
+  "NGA",
+  "NIC",
+  "NLD",
+  "NOR",
+  "NPL",
+  "NZL",
+  "OMN",
+  "PAK",
+  "PAN",
+  "PER",
+  "PHL",
+  "PNG",
+  "POL",
+  "PRK",
+  "PRT",
+  "PRY",
+  "ROU",
+  "RUS",
+  "SAU",
+  "SDN",
+  "SDS",
+  "SEN",
+  "SLB",
+  "SLE",
+  "SOM",
+  "SRB",
+  "SVK",
+  "SVN",
+  "SWE",
+  "SYR",
+  "TCD",
+  "THA",
+  "TJK",
+  "TKM",
+  "TLS",
+  "TUN",
+  "TUR",
+  "TWN",
+  "TZA",
+  "UGA",
+  "UKR",
+  "URY",
+  "USA",
+  "UZB",
+  "VEN",
+  "VNM",
+  "VUT",
+  "YEM",
+  "ZAF",
+  "ZWE"
+ ],
+ "laudanMaat": [
+  "AFG",
+  "AGO",
+  "ALB",
+  "ARE",
+  "ARG",
+  "ARM",
+  "AUS",
+  "AUT",
+  "AZE",
+  "BEL",
+  "BGD",
+  "BGR",
+  "BIH",
+  "BLR",
+  "BOL",
+  "BRA",
+  "BTN",
+  "CAN",
+  "CHE",
+  "CHL",
+  "CHN",
+  "CMR",
+  "COD",
+  "COL",
+  "CUB",
+  "CYP",
+  "CZE",
+  "DEU",
+  "DNK",
+  "DZA",
+  "ECU",
+  "EGY",
+  "ESP",
+  "EST",
+  "ETH",
+  "FIN",
+  "FJI",
+  "FRA",
+  "GBR",
+  "GEO",
+  "GHA",
+  "GRC",
+  "GRL",
+  "GTM",
+  "HKG",
+  "HRV",
+  "HUN",
+  "IDN",
+  "IND",
+  "IRL",
+  "IRN",
+  "IRQ",
+  "ISL",
+  "ITA",
+  "JOR",
+  "JPN",
+  "KAZ",
+  "KEN",
+  "KGZ",
+  "KHM",
+  "KOR",
+  "KWT",
+  "LAO",
+  "LBR",
+  "LBY",
+  "LKA",
+  "LTU",
+  "LUX",
+  "LVA",
+  "MAR",
+  "MDA",
+  "MDG",
+  "MEX",
+  "MKD",
+  "MLI",
+  "MLT",
+  "MMR",
+  "MNE",
+  "MNG",
+  "MOZ",
+  "MYS",
+  "NAM",
+  "NGA",
+  "NIC",
+  "NLD",
+  "NOR",
+  "NPL",
+  "NZL",
+  "OMN",
+  "PAK",
+  "PAN",
+  "PER",
+  "PHL",
+  "PNG",
+  "POL",
+  "PRK",
+  "PRT",
+  "PRY",
+  "QAT",
+  "ROU",
+  "RUS",
+  "SAU",
+  "SDN",
+  "SDS",
+  "SEN",
+  "SGP",
+  "SHN",
+  "SLB",
+  "SLE",
+  "SOM",
+  "SRB",
+  "SVK",
+  "SVN",
+  "SWE",
+  "SYR",
+  "TCD",
+  "THA",
+  "TJK",
+  "TKM",
+  "TLS",
+  "TUN",
+  "TUR",
+  "TWN",
+  "TZA",
+  "UGA",
+  "UKR",
+  "URY",
+  "USA",
+  "UZB",
+  "VEN",
+  "VNM",
+  "VUT",
+  "YEM",
+  "ZAF",
+  "ZWE"
+ ],
+ "tunnusluvut": {
+  "ITA": [
+   [
+    "Väkiluku",
+    "59 milj."
+   ],
+   [
+    "Pinta-ala",
+    "302 000 km²"
+   ],
+   [
+    "Tulot",
+    "42 100 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,64"
+   ]
+  ],
+  "FRA": [
+   [
+    "Väkiluku",
+    "69 milj."
+   ],
+   [
+    "Pinta-ala",
+    "610 000 km²"
+   ],
+   [
+    "Tulot",
+    "45 000 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,80"
+   ]
+  ],
+  "ESP": [
+   [
+    "Väkiluku",
+    "49 milj."
+   ],
+   [
+    "Pinta-ala",
+    "510 000 km²"
+   ],
+   [
+    "Tulot",
+    "34 000 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,74"
+   ]
+  ],
+  "POL": [
+   [
+    "Väkiluku",
+    "37 milj."
+   ],
+   [
+    "Pinta-ala",
+    "310 000 km²"
+   ],
+   [
+    "Tulot",
+    "22 000 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,65"
+   ]
+  ],
+  "BIH": [
+   [
+    "Väkiluku",
+    "3,2 milj."
+   ],
+   [
+    "Pinta-ala",
+    "51 000 km²"
+   ],
+   [
+    "Tulot",
+    "8 800 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,34"
+   ]
+  ],
+  "ISL": [
+   [
+    "Väkiluku",
+    "390 000"
+   ],
+   [
+    "Pinta-ala",
+    "103 000 km²"
+   ],
+   [
+    "Tulot",
+    "81 000 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,72"
+   ]
+  ],
+  "GRC": [
+   [
+    "Väkiluku",
+    "10 milj."
+   ],
+   [
+    "Pinta-ala",
+    "132 000 km²"
+   ],
+   [
+    "Tulot",
+    "25 400 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,57"
+   ]
+  ],
+  "HRV": [
+   [
+    "Väkiluku",
+    "3,9 milj."
+   ],
+   [
+    "Pinta-ala",
+    "56 600 km²"
+   ],
+   [
+    "Tulot",
+    "25 400 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,59"
+   ]
+  ],
+  "BGR": [
+   [
+    "Väkiluku",
+    "6,4 milj."
+   ],
+   [
+    "Pinta-ala",
+    "111 000 km²"
+   ],
+   [
+    "Tulot",
+    "17 800 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,50"
+   ]
+  ],
+  "GBR": [
+   [
+    "Väkiluku",
+    "69 milj."
+   ],
+   [
+    "Pinta-ala",
+    "244 000 km²"
+   ],
+   [
+    "Tulot",
+    "54 550 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,69"
+   ]
+  ],
+  "IRL": [
+   [
+    "Väkiluku",
+    "5,5 milj."
+   ],
+   [
+    "Pinta-ala",
+    "70 000 km²"
+   ],
+   [
+    "Tulot",
+    "87 360 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,82"
+   ]
+  ],
+  "TUR": [
+   [
+    "Väkiluku",
+    "86 milj."
+   ],
+   [
+    "Pinta-ala",
+    "785 000 km²"
+   ],
+   [
+    "Tulot",
+    "16 300 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,11"
+   ]
+  ],
+  "PRT": [
+   [
+    "Väkiluku",
+    "11 milj."
+   ],
+   [
+    "Pinta-ala",
+    "92 000 km²"
+   ],
+   [
+    "Tulot",
+    "29 930 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,72"
+   ]
+  ],
+  "MYS": [
+   [
+    "Väkiluku",
+    "36 milj."
+   ],
+   [
+    "Pinta-ala",
+    "330 000 km²"
+   ],
+   [
+    "Tulot",
+    "11 650 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,36"
+   ]
+  ],
+  "SGP": [
+   [
+    "Väkiluku",
+    "6,0 milj."
+   ],
+   [
+    "Pinta-ala",
+    "728 km²"
+   ],
+   [
+    "Tulot",
+    "75 820 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,36"
+   ]
+  ],
+  "NLD": [
+   [
+    "Väkiluku",
+    "18 milj."
+   ],
+   [
+    "Pinta-ala",
+    "42 000 km²"
+   ],
+   [
+    "Tulot",
+    "68 530 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,77"
+   ]
+  ],
+  "DEU": [
+   [
+    "Väkiluku",
+    "83 milj."
+   ],
+   [
+    "Pinta-ala",
+    "358 000 km²"
+   ],
+   [
+    "Tulot",
+    "60 200 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,78"
+   ]
+  ],
+  "CZE": [
+   [
+    "Väkiluku",
+    "11 milj."
+   ],
+   [
+    "Pinta-ala",
+    "79 000 km²"
+   ],
+   [
+    "Tulot",
+    "32 960 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,79"
+   ]
+  ],
+  "AUT": [
+   [
+    "Väkiluku",
+    "9,2 milj."
+   ],
+   [
+    "Pinta-ala",
+    "84 000 km²"
+   ],
+   [
+    "Tulot",
+    "60 360 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,76"
+   ]
+  ],
+  "HUN": [
+   [
+    "Väkiluku",
+    "9,5 milj."
+   ],
+   [
+    "Pinta-ala",
+    "93 000 km²"
+   ],
+   [
+    "Tulot",
+    "23 850 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,32"
+   ]
+  ],
+  "CHE": [
+   [
+    "Väkiluku",
+    "9,1 milj."
+   ],
+   [
+    "Pinta-ala",
+    "41 000 km²"
+   ],
+   [
+    "Tulot",
+    "110 330 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,84"
+   ]
+  ],
+  "ROU": [
+   [
+    "Väkiluku",
+    "19 milj."
+   ],
+   [
+    "Pinta-ala",
+    "238 000 km²"
+   ],
+   [
+    "Tulot",
+    "20 190 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,46"
+   ]
+  ],
+  "UKR": [
+   [
+    "Väkiluku",
+    "39 milj."
+   ],
+   [
+    "Pinta-ala",
+    "604 000 km²"
+   ],
+   [
+    "Tulot",
+    "5 510 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,24"
+   ]
+  ],
+  "RUS": [
+   [
+    "Väkiluku",
+    "144 milj."
+   ],
+   [
+    "Pinta-ala",
+    "17 125 000 km²"
+   ],
+   [
+    "Tulot",
+    "15 960 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,06"
+   ]
+  ],
+  "FIN": [
+   [
+    "Väkiluku",
+    "5,6 milj."
+   ],
+   [
+    "Pinta-ala",
+    "338 000 km²"
+   ],
+   [
+    "Tulot",
+    "55 250 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,81"
+   ]
+  ],
+  "EST": [
+   [
+    "Väkiluku",
+    "1,4 milj."
+   ],
+   [
+    "Pinta-ala",
+    "45 000 km²"
+   ],
+   [
+    "Tulot",
+    "32 310 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,84"
+   ]
+  ],
+  "LVA": [
+   [
+    "Väkiluku",
+    "1,8 milj."
+   ],
+   [
+    "Pinta-ala",
+    "65 000 km²"
+   ],
+   [
+    "Tulot",
+    "24 980 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,75"
+   ]
+  ],
+  "LTU": [
+   [
+    "Väkiluku",
+    "2,9 milj."
+   ],
+   [
+    "Pinta-ala",
+    "65 000 km²"
+   ],
+   [
+    "Tulot",
+    "30 500 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,71"
+   ]
+  ],
+  "SWE": [
+   [
+    "Väkiluku",
+    "11 milj."
+   ],
+   [
+    "Pinta-ala",
+    "450 000 km²"
+   ],
+   [
+    "Tulot",
+    "63 010 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,85"
+   ]
+  ],
+  "NOR": [
+   [
+    "Väkiluku",
+    "5,6 milj."
+   ],
+   [
+    "Pinta-ala",
+    "385 000 km²"
+   ],
+   [
+    "Tulot",
+    "97 310 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,85"
+   ]
+  ],
+  "DNK": [
+   [
+    "Väkiluku",
+    "6,0 milj."
+   ],
+   [
+    "Pinta-ala",
+    "43 000 km²"
+   ],
+   [
+    "Tulot",
+    "77 190 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,88"
+   ]
+  ],
+  "BEL": [
+   [
+    "Väkiluku",
+    "11,9 milj."
+   ],
+   [
+    "Pinta-ala",
+    "30 700 km²"
+   ],
+   [
+    "Tulot",
+    "59 500 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,79"
+   ]
+  ],
+  "LUX": [
+   [
+    "Väkiluku",
+    "0,7 milj."
+   ],
+   [
+    "Pinta-ala",
+    "2 590 km²"
+   ],
+   [
+    "Tulot",
+    "95 720 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,78"
+   ]
+  ],
+  "MLT": [
+   [
+    "Väkiluku",
+    "0,6 milj."
+   ],
+   [
+    "Pinta-ala",
+    "320 km²"
+   ],
+   [
+    "Tulot",
+    "41 440 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,62"
+   ]
+  ],
+  "SVK": [
+   [
+    "Väkiluku",
+    "5,4 milj."
+   ],
+   [
+    "Pinta-ala",
+    "49 000 km²"
+   ],
+   [
+    "Tulot",
+    "26 410 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,57"
+   ]
+  ],
+  "SVN": [
+   [
+    "Väkiluku",
+    "2,1 milj."
+   ],
+   [
+    "Pinta-ala",
+    "20 500 km²"
+   ],
+   [
+    "Tulot",
+    "35 520 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,59"
+   ]
+  ],
+  "TZA": [
+   [
+    "Väkiluku",
+    "68 milj."
+   ],
+   [
+    "Pinta-ala",
+    "950 000 km²"
+   ],
+   [
+    "Tulot",
+    "1 200 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,26"
+   ]
+  ],
+  "COD": [
+   [
+    "Väkiluku",
+    "105 milj."
+   ],
+   [
+    "Pinta-ala",
+    "2,3 milj. km²"
+   ],
+   [
+    "Tulot",
+    "700 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,15"
+   ]
+  ],
+  "SOM": [
+   [
+    "Väkiluku",
+    "18 milj."
+   ],
+   [
+    "Pinta-ala",
+    "640 000 km²"
+   ],
+   [
+    "Tulot",
+    "600 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,08"
+   ]
+  ],
+  "SDN": [
+   [
+    "Väkiluku",
+    "48 milj."
+   ],
+   [
+    "Pinta-ala",
+    "1,9 milj. km²"
+   ],
+   [
+    "Tulot",
+    "800 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,07"
+   ]
+  ],
+  "ZAF": [
+   [
+    "Väkiluku",
+    "63 milj."
+   ],
+   [
+    "Pinta-ala",
+    "1,2 milj. km²"
+   ],
+   [
+    "Tulot",
+    "6 500 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,54"
+   ]
+  ],
+  "NAM": [
+   [
+    "Väkiluku",
+    "3 milj."
+   ],
+   [
+    "Pinta-ala",
+    "820 000 km²"
+   ],
+   [
+    "Tulot",
+    "5 000 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,55"
+   ]
+  ],
+  "SEN": [
+   [
+    "Väkiluku",
+    "18 milj."
+   ],
+   [
+    "Pinta-ala",
+    "200 000 km²"
+   ],
+   [
+    "Tulot",
+    "1 600 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,42"
+   ]
+  ],
+  "MLI": [
+   [
+    "Väkiluku",
+    "23 milj."
+   ],
+   [
+    "Pinta-ala",
+    "1,2 milj. km²"
+   ],
+   [
+    "Tulot",
+    "900 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,13"
+   ]
+  ],
+  "NGA": [
+   [
+    "Väkiluku",
+    "230 milj."
+   ],
+   [
+    "Pinta-ala",
+    "900 000 km²"
+   ],
+   [
+    "Tulot",
+    "2 000 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,26"
+   ]
+  ],
+  "CMR": [
+   [
+    "Väkiluku",
+    "29 milj."
+   ],
+   [
+    "Pinta-ala",
+    "480 000 km²"
+   ],
+   [
+    "Tulot",
+    "1 700 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,12"
+   ]
+  ],
+  "GHA": [
+   [
+    "Väkiluku",
+    "34 milj."
+   ],
+   [
+    "Pinta-ala",
+    "240 000 km²"
+   ],
+   [
+    "Tulot",
+    "2 300 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,61"
+   ]
+  ],
+  "LBR": [
+   [
+    "Väkiluku",
+    "5,5 milj."
+   ],
+   [
+    "Pinta-ala",
+    "110 000 km²"
+   ],
+   [
+    "Tulot",
+    "700 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,38"
+   ]
+  ],
+  "SLE": [
+   [
+    "Väkiluku",
+    "8,5 milj."
+   ],
+   [
+    "Pinta-ala",
+    "72 000 km²"
+   ],
+   [
+    "Tulot",
+    "600 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,35"
+   ]
+  ],
+  "MOZ": [
+   [
+    "Väkiluku",
+    "34 milj."
+   ],
+   [
+    "Pinta-ala",
+    "800 000 km²"
+   ],
+   [
+    "Tulot",
+    "600 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,25"
+   ]
+  ],
+  "AGO": [
+   [
+    "Väkiluku",
+    "37 milj."
+   ],
+   [
+    "Pinta-ala",
+    "1,2 milj. km²"
+   ],
+   [
+    "Tulot",
+    "2 000 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,17"
+   ]
+  ],
+  "MDG": [
+   [
+    "Väkiluku",
+    "31 milj."
+   ],
+   [
+    "Pinta-ala",
+    "590 000 km²"
+   ],
+   [
+    "Tulot",
+    "500 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,25"
+   ]
+  ],
+  "DZA": [
+   [
+    "Väkiluku",
+    "46 milj."
+   ],
+   [
+    "Pinta-ala",
+    "2,4 milj. km²"
+   ],
+   [
+    "Tulot",
+    "4 500 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,13"
+   ]
+  ],
+  "MAR": [
+   [
+    "Väkiluku",
+    "38 milj."
+   ],
+   [
+    "Pinta-ala",
+    "450 000 km²"
+   ],
+   [
+    "Tulot",
+    "4 000 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,13"
+   ]
+  ],
+  "EGY": [
+   [
+    "Väkiluku",
+    "115 milj."
+   ],
+   [
+    "Pinta-ala",
+    "1 milj. km²"
+   ],
+   [
+    "Tulot",
+    "4 000 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,07"
+   ]
+  ],
+  "LBY": [
+   [
+    "Väkiluku",
+    "7 milj."
+   ],
+   [
+    "Pinta-ala",
+    "1,8 milj. km²"
+   ],
+   [
+    "Tulot",
+    "7 000 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,10"
+   ]
+  ],
+  "ETH": [
+   [
+    "Väkiluku",
+    "130 milj."
+   ],
+   [
+    "Pinta-ala",
+    "1,1 milj. km²"
+   ],
+   [
+    "Tulot",
+    "1 100 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,20"
+   ]
+  ],
+  "UGA": [
+   [
+    "Väkiluku",
+    "48 milj."
+   ],
+   [
+    "Pinta-ala",
+    "240 000 km²"
+   ],
+   [
+    "Tulot",
+    "1 000 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,20"
+   ]
+  ],
+  "SDS": [
+   [
+    "Väkiluku",
+    "12 milj."
+   ],
+   [
+    "Pinta-ala",
+    "620 000 km²"
+   ],
+   [
+    "Tulot",
+    "500 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,06"
+   ]
+  ],
+  "KEN": [
+   [
+    "Väkiluku",
+    "55 milj."
+   ],
+   [
+    "Pinta-ala",
+    "580 000 km²"
+   ],
+   [
+    "Tulot",
+    "2 100 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,32"
+   ]
+  ],
+  "TCD": [
+   [
+    "Väkiluku",
+    "18 milj."
+   ],
+   [
+    "Pinta-ala",
+    "1,3 milj. km²"
+   ],
+   [
+    "Tulot",
+    "700 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,10"
+   ]
+  ],
+  "TUN": [
+   [
+    "Väkiluku",
+    "12 milj."
+   ],
+   [
+    "Pinta-ala",
+    "160 000 km²"
+   ],
+   [
+    "Tulot",
+    "4 000 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,30"
+   ]
+  ],
+  "ZWE": [
+   [
+    "Väkiluku",
+    "16 milj."
+   ],
+   [
+    "Pinta-ala",
+    "390 000 km²"
+   ],
+   [
+    "Tulot",
+    "1 700 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,15"
+   ]
+  ],
+  "JOR": [
+   [
+    "Väkiluku",
+    "12 milj."
+   ],
+   [
+    "Pinta-ala",
+    "89 000 km²"
+   ],
+   [
+    "Tulot",
+    "5 260 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,27"
+   ]
+  ],
+  "ARE": [
+   [
+    "Väkiluku",
+    "12 milj."
+   ],
+   [
+    "Pinta-ala",
+    "84 000 km²"
+   ],
+   [
+    "Tulot",
+    "51 550 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,08"
+   ]
+  ],
+  "IRN": [
+   [
+    "Väkiluku",
+    "92 milj."
+   ],
+   [
+    "Pinta-ala",
+    "1 648 000 km²"
+   ],
+   [
+    "Tulot",
+    "4 650 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,10"
+   ]
+  ],
+  "JPN": [
+   [
+    "Väkiluku",
+    "123 milj."
+   ],
+   [
+    "Pinta-ala",
+    "378 000 km²"
+   ],
+   [
+    "Tulot",
+    "38 340 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,73"
+   ]
+  ],
+  "CHN": [
+   [
+    "Väkiluku",
+    "1,4 mrd."
+   ],
+   [
+    "Pinta-ala",
+    "9 560 000 km²"
+   ],
+   [
+    "Tulot",
+    "14 230 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,04"
+   ]
+  ],
+  "IDN": [
+   [
+    "Väkiluku",
+    "283 milj."
+   ],
+   [
+    "Pinta-ala",
+    "1 917 000 km²"
+   ],
+   [
+    "Tulot",
+    "4 920 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,30"
+   ]
+  ],
+  "TLS": [
+   [
+    "Väkiluku",
+    "1,4 milj."
+   ],
+   [
+    "Pinta-ala",
+    "14 900 km²"
+   ],
+   [
+    "Tulot",
+    "1 650 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,55"
+   ]
+  ],
+  "IND": [
+   [
+    "Väkiluku",
+    "1,5 mrd."
+   ],
+   [
+    "Pinta-ala",
+    "3 287 000 km²"
+   ],
+   [
+    "Tulot",
+    "2 550 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,26"
+   ]
+  ],
+  "CYP": [
+   [
+    "Väkiluku",
+    "1,4 milj."
+   ],
+   [
+    "Pinta-ala",
+    "9 250 km²"
+   ],
+   [
+    "Tulot",
+    "36 110 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,66"
+   ]
+  ],
+  "SYR": [
+   [
+    "Väkiluku",
+    "26 milj."
+   ],
+   [
+    "Pinta-ala",
+    "185 000 km²"
+   ],
+   [
+    "Tulot",
+    "720 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,05"
+   ]
+  ],
+  "SAU": [
+   [
+    "Väkiluku",
+    "37 milj."
+   ],
+   [
+    "Pinta-ala",
+    "2 150 000 km²"
+   ],
+   [
+    "Tulot",
+    "36 070 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,05"
+   ]
+  ],
+  "YEM": [
+   [
+    "Väkiluku",
+    "42 milj."
+   ],
+   [
+    "Pinta-ala",
+    "528 000 km²"
+   ],
+   [
+    "Tulot",
+    "740 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,04"
+   ]
+  ],
+  "OMN": [
+   [
+    "Väkiluku",
+    "5,5 milj."
+   ],
+   [
+    "Pinta-ala",
+    "310 000 km²"
+   ],
+   [
+    "Tulot",
+    "19 520 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,14"
+   ]
+  ],
+  "QAT": [
+   [
+    "Väkiluku",
+    "3,0 milj."
+   ],
+   [
+    "Pinta-ala",
+    "11 500 km²"
+   ],
+   [
+    "Tulot",
+    "74 330 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,09"
+   ]
+  ],
+  "KWT": [
+   [
+    "Väkiluku",
+    "4,9 milj."
+   ],
+   [
+    "Pinta-ala",
+    "17 800 km²"
+   ],
+   [
+    "Tulot",
+    "41 110 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,13"
+   ]
+  ],
+  "IRQ": [
+   [
+    "Väkiluku",
+    "47 milj."
+   ],
+   [
+    "Pinta-ala",
+    "435 000 km²"
+   ],
+   [
+    "Tulot",
+    "5 690 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,22"
+   ]
+  ],
+  "KAZ": [
+   [
+    "Väkiluku",
+    "21 milj."
+   ],
+   [
+    "Pinta-ala",
+    "2 720 000 km²"
+   ],
+   [
+    "Tulot",
+    "13 740 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,13"
+   ]
+  ],
+  "MNG": [
+   [
+    "Väkiluku",
+    "3,6 milj."
+   ],
+   [
+    "Pinta-ala",
+    "1 560 000 km²"
+   ],
+   [
+    "Tulot",
+    "6 210 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,42"
+   ]
+  ],
+  "KOR": [
+   [
+    "Väkiluku",
+    "52 milj."
+   ],
+   [
+    "Pinta-ala",
+    "100 000 km²"
+   ],
+   [
+    "Tulot",
+    "37 880 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,74"
+   ]
+  ],
+  "TWN": [
+   [
+    "Väkiluku",
+    "23 milj."
+   ],
+   [
+    "Pinta-ala",
+    "36 200 km²"
+   ],
+   [
+    "Tulot",
+    "35 200 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,70"
+   ]
+  ],
+  "PHL": [
+   [
+    "Väkiluku",
+    "117 milj."
+   ],
+   [
+    "Pinta-ala",
+    "300 000 km²"
+   ],
+   [
+    "Tulot",
+    "4 850 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,29"
+   ]
+  ],
+  "VNM": [
+   [
+    "Väkiluku",
+    "101 milj."
+   ],
+   [
+    "Pinta-ala",
+    "331 000 km²"
+   ],
+   [
+    "Tulot",
+    "4 490 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,10"
+   ]
+  ],
+  "THA": [
+   [
+    "Väkiluku",
+    "72 milj."
+   ],
+   [
+    "Pinta-ala",
+    "513 000 km²"
+   ],
+   [
+    "Tulot",
+    "7 130 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,31"
+   ]
+  ],
+  "MMR": [
+   [
+    "Väkiluku",
+    "55 milj."
+   ],
+   [
+    "Pinta-ala",
+    "677 000 km²"
+   ],
+   [
+    "Tulot",
+    "1 210 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,01"
+   ]
+  ],
+  "NPL": [
+   [
+    "Väkiluku",
+    "30 milj."
+   ],
+   [
+    "Pinta-ala",
+    "147 000 km²"
+   ],
+   [
+    "Tulot",
+    "1 480 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,51"
+   ]
+  ],
+  "LKA": [
+   [
+    "Väkiluku",
+    "22 milj."
+   ],
+   [
+    "Pinta-ala",
+    "65 600 km²"
+   ],
+   [
+    "Tulot",
+    "3 870 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,61"
+   ]
+  ],
+  "PAK": [
+   [
+    "Väkiluku",
+    "255 milj."
+   ],
+   [
+    "Pinta-ala",
+    "796 000 km²"
+   ],
+   [
+    "Tulot",
+    "1 500 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,18"
+   ]
+  ],
+  "AFG": [
+   [
+    "Väkiluku",
+    "44 milj."
+   ],
+   [
+    "Pinta-ala",
+    "653 000 km²"
+   ],
+   [
+    "Tulot",
+    "390 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,02"
+   ]
+  ],
+  "UZB": [
+   [
+    "Väkiluku",
+    "37 milj."
+   ],
+   [
+    "Pinta-ala",
+    "449 000 km²"
+   ],
+   [
+    "Tulot",
+    "3 670 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,08"
+   ]
+  ],
+  "ARG": [
+   [
+    "Väkiluku",
+    "46 milj."
+   ],
+   [
+    "Pinta-ala",
+    "2,8 milj. km²"
+   ],
+   [
+    "Tulot",
+    "13 530 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,52"
+   ]
+  ],
+  "BOL": [
+   [
+    "Väkiluku",
+    "12 milj."
+   ],
+   [
+    "Pinta-ala",
+    "1,1 milj. km²"
+   ],
+   [
+    "Tulot",
+    "4 160 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,35"
+   ]
+  ],
+  "BRA": [
+   [
+    "Väkiluku",
+    "212 milj."
+   ],
+   [
+    "Pinta-ala",
+    "8,5 milj. km²"
+   ],
+   [
+    "Tulot",
+    "9 930 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,70"
+   ]
+  ],
+  "CAN": [
+   [
+    "Väkiluku",
+    "41 milj."
+   ],
+   [
+    "Pinta-ala",
+    "10,0 milj. km²"
+   ],
+   [
+    "Tulot",
+    "54 110 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,74"
+   ]
+  ],
+  "CHL": [
+   [
+    "Väkiluku",
+    "20 milj."
+   ],
+   [
+    "Pinta-ala",
+    "757 000 km²"
+   ],
+   [
+    "Tulot",
+    "15 840 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,78"
+   ]
+  ],
+  "COL": [
+   [
+    "Väkiluku",
+    "53 milj."
+   ],
+   [
+    "Pinta-ala",
+    "1,1 milj. km²"
+   ],
+   [
+    "Tulot",
+    "7 090 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,56"
+   ]
+  ],
+  "CUB": [
+   [
+    "Väkiluku",
+    "11 milj."
+   ],
+   [
+    "Pinta-ala",
+    "110 000 km²"
+   ],
+   [
+    "Tulot",
+    "9 010 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,06"
+   ]
+  ],
+  "ECU": [
+   [
+    "Väkiluku",
+    "18 milj."
+   ],
+   [
+    "Pinta-ala",
+    "256 000 km²"
+   ],
+   [
+    "Tulot",
+    "6 400 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,39"
+   ]
+  ],
+  "GTM": [
+   [
+    "Väkiluku",
+    "18 milj."
+   ],
+   [
+    "Pinta-ala",
+    "109 000 km²"
+   ],
+   [
+    "Tulot",
+    "5 780 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,52"
+   ]
+  ],
+  "MEX": [
+   [
+    "Väkiluku",
+    "131 milj."
+   ],
+   [
+    "Pinta-ala",
+    "2,0 milj. km²"
+   ],
+   [
+    "Tulot",
+    "12 760 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,22"
+   ]
+  ],
+  "NIC": [
+   [
+    "Väkiluku",
+    "6,9 milj."
+   ],
+   [
+    "Pinta-ala",
+    "130 000 km²"
+   ],
+   [
+    "Tulot",
+    "2 510 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,02"
+   ]
+  ],
+  "PAN": [
+   [
+    "Väkiluku",
+    "4,5 milj."
+   ],
+   [
+    "Pinta-ala",
+    "75 300 km²"
+   ],
+   [
+    "Tulot",
+    "17 950 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,57"
+   ]
+  ],
+  "PER": [
+   [
+    "Väkiluku",
+    "34 milj."
+   ],
+   [
+    "Pinta-ala",
+    "1,3 milj. km²"
+   ],
+   [
+    "Tulot",
+    "7 530 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,51"
+   ]
+  ],
+  "PRY": [
+   [
+    "Väkiluku",
+    "6,9 milj."
+   ],
+   [
+    "Pinta-ala",
+    "407 000 km²"
+   ],
+   [
+    "Tulot",
+    "6 290 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,38"
+   ]
+  ],
+  "URY": [
+   [
+    "Väkiluku",
+    "3,4 milj."
+   ],
+   [
+    "Pinta-ala",
+    "176 000 km²"
+   ],
+   [
+    "Tulot",
+    "22 000 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,79"
+   ]
+  ],
+  "USA": [
+   [
+    "Väkiluku",
+    "340 milj."
+   ],
+   [
+    "Pinta-ala",
+    "9,8 milj. km²"
+   ],
+   [
+    "Tulot",
+    "82 910 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,57"
+   ]
+  ],
+  "VEN": [
+   [
+    "Väkiluku",
+    "28 milj."
+   ],
+   [
+    "Pinta-ala",
+    "912 000 km²"
+   ],
+   [
+    "Tulot",
+    "3 840 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,04"
+   ]
+  ],
+  "AUS": [
+   [
+    "Väkiluku",
+    "27 milj."
+   ],
+   [
+    "Pinta-ala",
+    "7,7 milj. km²"
+   ],
+   [
+    "Tulot",
+    "62 680 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,79"
+   ]
+  ],
+  "FJI": [
+   [
+    "Väkiluku",
+    "929 000"
+   ],
+   [
+    "Pinta-ala",
+    "18 300 km²"
+   ],
+   [
+    "Tulot",
+    "5 820 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,40"
+   ]
+  ],
+  "NZL": [
+   [
+    "Väkiluku",
+    "5,3 milj."
+   ],
+   [
+    "Pinta-ala",
+    "268 000 km²"
+   ],
+   [
+    "Tulot",
+    "47 070 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,79"
+   ]
+  ],
+  "PNG": [
+   [
+    "Väkiluku",
+    "11 milj."
+   ],
+   [
+    "Pinta-ala",
+    "463 000 km²"
+   ],
+   [
+    "Tulot",
+    "2 860 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,38"
+   ]
+  ],
+  "SLB": [
+   [
+    "Väkiluku",
+    "819 000"
+   ],
+   [
+    "Pinta-ala",
+    "28 900 km²"
+   ],
+   [
+    "Tulot",
+    "1 910 $/v"
+   ],
+   [
+    "V-Dem",
+    "0,54"
+   ]
+  ]
+ }
+}

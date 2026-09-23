@@ -167,8 +167,11 @@ namespace Matkakirja.Natiivi
             x.VuoroVaihtuu = !x.Oikein && x.Laji != KysymysLaji.Pulma;
             if (x.Oikein && x.Loyto == null && x.Laji != KysymysLaji.Pulma)
             {
-                x.Loyto = "Löysit: Kätketty matka-arkku · +640 £";
+                x.Loyto = "Löysit: Ivalojoen kultahippu · +640 £";
                 x.LoytoTyyppi = "isoAarre";
+                x.LoytoNimi = "Ivalojoen kultahippu";
+                x.LoytoKuvaUrl = Kuvat.PeiliJuuri + "kohtaamiset/aarteet/paikallis/fin-iso.jpg";
+                x.LoytoFakta = "Ivalojoen kultaryntäys alkoi 1870, ja huippuvuonna 1871 joelta huuhdottiin yli 50 kiloa kultaa.";
             }
             if (x.Yritys.HasValue)
             {
@@ -177,6 +180,8 @@ namespace Matkakirja.Natiivi
                     ? "Márta ojentaa rasian höyryn läpi: \"Tämä lojui kylpylän kellarissa vuosikymmeniä. Kolme kaupunkia, yksi rasia — sopivaa, eikö?\""
                     : "Márta virnistää ja ravistaa vettä käsistään: \"Ei vielä. Höyry hämärtää näön — kokeile toista kulmaa.\"";
                 x.RepliikkiLoyto = x.Oikein;
+                // Kaaren aarreteksti kätkökuvan kanssa (web kohtaaminen-katko.jpg).
+                if (x.Oikein) x.KatkoKuvaUrl = "https://matkakirja.app/assets/kohtaamiset/kohtaaminen-katko.jpg";
                 if (!x.Oikein)
                     x.Loyto = x.Yritys < x.Yrityksia ? KysymysApu.UusiYritysOhje : "Kätkö sulkeutui — tämän kaupungin aarre on menetetty.";
             }
@@ -396,11 +401,26 @@ namespace Matkakirja.Natiivi
             {
                 "star" => "Löysit: Unohdettu aarre · +1 ◈",
                 "mannerAarre" => "Löysit: Mantereen aarre · +1000 £",
-                "pieniAarre" => "Löysit: Kourallinen hopeakolikoita · +180 £",
+                "pieniAarre" => "Löysit: Tervatynnyrin pohjalta löytynyt hopeariksi · +180 £",
                 "robber" => "Laatan alla odotti ryöstäjä!",
                 "pollo" => "Laatan alta lehahti pöllö!",
-                _ => "Löysit: Kätketty matka-arkku · +640 £",
+                "piirros" => "Löysit: Kätketty matka-arkku · +640 £",
+                _ => "Löysit: Ivalojoen kultahippu · +640 £",
             };
+            // Maakohtainen löytö (kokoelma paikallisaarteet, FIN): oma nimi, fakta ja kuva ämpäristä.
+            if (tyyppi == "isoAarre")
+            {
+                d.LoytoNimi = "Ivalojoen kultahippu";
+                d.LoytoKuvaUrl = Kuvat.PeiliJuuri + "kohtaamiset/aarteet/paikallis/fin-iso.jpg";
+                d.LoytoFakta = "Ivalojoen kultaryntäys alkoi 1870, ja huippuvuonna 1871 joelta huuhdottiin yli 50 kiloa kultaa.";
+            }
+            else if (tyyppi == "pieniAarre")
+            {
+                d.LoytoNimi = "Tervatynnyrin pohjalta löytynyt hopeariksi";
+                d.LoytoKuvaUrl = Kuvat.PeiliJuuri + "kohtaamiset/aarteet/paikallis/fin-pieni.jpg";
+                d.LoytoFakta = "Terva oli 1800-luvun Suomen tärkein vientitavara, ja Oulu oli maailman suurimpia tervasatamia.";
+            }
+            if (tyyppi == "piirros") d.LoytoTyyppi = "isoAarre"; // ilman kuvaa: webin piirrosikoni
             if (tyyppi == "robber") d.JatkaTeksti = "Kohtaa ryöstäjä";
             d.TulosVaihe = 2;
             return d;

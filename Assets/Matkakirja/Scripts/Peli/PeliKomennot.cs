@@ -167,9 +167,10 @@ namespace Matkakirja.Natiivi
                     switch (A(1))
                     {
                         case "seis": if (Puhe.Instanssi != null) Puhe.Instanssi.Pysayta(); return null;
+                        case "ohita": ohjain.OhitaLuento(); return null;
                         case "pois": Puhe.Paalla = false; return null;
                         case "paalle": Puhe.Paalla = true; return null;
-                        default: return "käyttö: puhe seis|pois|paalle";
+                        default: return "käyttö: puhe seis|ohita|pois|paalle";
                     }
                 case "tila":
                 {

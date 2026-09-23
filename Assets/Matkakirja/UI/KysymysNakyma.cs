@@ -493,7 +493,9 @@ namespace Matkakirja.Natiivi
         {
             var laatikko = TulosLaatikko(d, s);
             laatikko.AddToClassList("mk-kysymys__tulos--paljastus");
-            if (d.Oikein && LaattaIkoni.Tunnettu(d.LoytoTyyppi)) laatikko.Add(new LaattaIkoni(d.LoytoTyyppi));
+            // Löydön oma kuva (manner-/maakohtainen aarre) ensin, laattatyypin kuva tai piirros varana.
+            if (d.Oikein && (LaattaIkoni.Tunnettu(d.LoytoTyyppi) || !string.IsNullOrEmpty(d.LoytoKuvaUrl)))
+                laatikko.Add(new LaattaIkoni(d.LoytoTyyppi, d.LoytoKuvaUrl));
             var runko = Rakenne.El("mk-kysymys__tulosrunko", laatikko, PickingMode.Ignore);
 
             // Kaksintaistelun Loyto kertoo jo oikean vastauksen ("Rosvo vei rahat — oikea vastaus oli …").
@@ -501,20 +503,44 @@ namespace Matkakirja.Natiivi
                 && d.Oikea >= 0 && d.Vaihtoehdot != null && d.Oikea < d.Vaihtoehdot.Count;
             var rivit = Rivit(d.Loyto);
             if (oikeaErikseen) Vahva(runko, (d.AikaLoppui ? "Aika loppui. " : "") + $"Oikea vastaus oli \"{d.Vaihtoehdot[d.Oikea]}\".");
-            else if (d.Oikein && rivit.Count == 0) Vahva(runko, "Oikein!");
+            else if (d.Oikein && rivit.Count == 0) Vahva(runko, string.IsNullOrEmpty(d.LoytoNimi) ? "Oikein!" : "Löysit: " + d.LoytoNimi);
             foreach (var rivi in rivit)
             {
                 // Uuden yrityksen ohje ja kätkön sulkeutuminen punaruskealla (web .quiz-uusi-yritys, .quiz-lukko).
                 if (rivi == KysymysApu.UusiYritysOhje || rivi.StartsWith("Kätkö sulkeutui")) Ohje(runko, rivi);
                 else Vahva(runko, rivi);
             }
+            // Löydön oma fakta (web: aarteen fakta, esim. Ivalojoen kultaryntäys) löytörivin alle.
+            if (d.Oikein && !string.IsNullOrEmpty(d.LoytoFakta))
+            {
+                var lf = Rakenne.Teksti(d.LoytoFakta, "mk-kysymys__loytofakta", runko);
+                lf.enableRichText = false;
+                Kirjasimet.Aseta(lf, Kirjasin.LukuKursiivi);
+            }
             if (d.VuoroVaihtuu) Kirjasimet.Aseta(Rakenne.Teksti(KysymysApu.VuoroVaihtuuRivi, "mk-kysymys__fakta", runko), Kirjasin.Luku);
+            // Kätkökuva kaaren aarretekstin yläpuolelle (web .katko-kuva: keskellä, ≤ 170 pt).
+            if (!string.IsNullOrEmpty(d.KatkoKuvaUrl)) Katko(runko, d.KatkoKuvaUrl);
             foreach (var rivi in Rivit(d.Repliikki))
                 Kirjoitettava(rivi, "mk-kysymys__repliikki", runko, Kirjasin.LukuKursiivi, RepliikkiMs);
             if (!string.IsNullOrEmpty(d.Fakta))
                 Kirjoitettava(d.Fakta, "mk-kysymys__fakta", runko, Kirjasin.Luku, RepliikkiMs);
             Lahteet(runko, d.Lahteet);
             return laatikko;
+        }
+
+        void Katko(VisualElement isa, string url)
+        {
+            var katko = Rakenne.El("mk-kysymys__katko", isa, PickingMode.Ignore);
+            string odotettu = avain;
+            Kuvat.Hae(url, t =>
+            {
+                if (avain != odotettu || katko.panel == null) return;
+                if (t == null) { katko.style.display = DisplayStyle.None; return; } // web: onerror → kuva pois
+                katko.style.backgroundImage = new StyleBackground(t);
+                float leveys = katko.resolvedStyle.width;
+                if (float.IsNaN(leveys) || leveys <= 0) leveys = 170;
+                katko.style.height = Mathf.Clamp(leveys * t.height / Mathf.Max(1f, t.width), 60, 220);
+            });
         }
 
         static VisualElement TulosLaatikko(KysymysNaytto d, VisualElement s)
