@@ -983,10 +983,12 @@ namespace Matkakirja.Natiivi
             // esivalitulla tai itse valitulla noppatavalla (PeliOhjain.Liiku.cs).
             if (Tila == SilmukanTila.Kartta && Kaytossa && matka.Tila.Vaihe == Vaihe.Heitto)
                 NaytaHeittonappi(Tavoite != null ? "Heitä noppaa → " + PeliApu.KaupunginNimi(verkko, Tavoite) : "Heitä noppaa", () => Heita());
+            else if (Tila == SilmukanTila.Kartta && Kaytossa && matka.Tila.Vaihe == Vaihe.Siirto && Tavoite != null)
+                NaytaHeittonappi("Jatka matkaa → " + PeliApu.KaupunginNimi(verkko, Tavoite), () => Heita());
             else if (Tila == SilmukanTila.Kartta && Kaytossa && matka.Tila.Vaihe == Vaihe.Siirto)
-                // Noppa on heitetty mutta kohde valitsematta (siirtolista suljettiin tai tallennus jäi väliin).
-                NaytaHeittonappi(Tavoite != null ? "Jatka matkaa → " + PeliApu.KaupunginNimi(verkko, Tavoite)
-                    : $"Noppa {matka.Tila.Noppa}: valitse kohde", () => Heita());
+                // Noppa heitetty, kohde valitsematta (esim. tallennus jäi siirtovaiheeseen): web näyttää siirrot
+                // suoraan (vaihe 'move'), eikä listaa voi sulkea ilman valintaa (Fable 24.9.2026).
+                AvaaSiirrot();
             else
                 dialogi.PiilotaHeitto();
             LiikuMuuttui?.Invoke();

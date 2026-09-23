@@ -103,7 +103,7 @@ namespace Matkakirja.Natiivi
 
         Action<int> riviValittu;
 
-        void NaytaRivit(string otsikko, string ala, List<MatkaVaihtoehto> rivit, Action<int> valittu)
+        void NaytaRivit(string otsikko, string ala, List<MatkaVaihtoehto> rivit, Action<int> valittu, Action peruttu = null)
         {
             vaihtoehdot = rivit;
             DialogiKohde = null;
@@ -112,7 +112,7 @@ namespace Matkakirja.Natiivi
             riviValittu = valittu;
             dialogi.Nayta(otsikko, ala, rivit.Select(v => (v.Nimi, v.Selite)).ToList(),
                 i => { if (riviValittu == null) return; riviValittu = null; valittu(i); },
-                () => Kartalle(false));
+                peruttu ?? (() => Kartalle(false)));
             LiikuMuuttui?.Invoke();
         }
 
@@ -160,13 +160,17 @@ namespace Matkakirja.Natiivi
             return null;
         }
 
-        /// <summary>Nopan siirrot matkavalintaan (otsikko "Noppa n"); peruminen jättää heittonapin "valitse kohde".</summary>
+        /// <summary>
+        /// Nopan siirrot matkavalintaan (otsikko "Noppa n"). Web: lista ei sulkeudu ilman valintaa, joten
+        /// näkymän sulkeminen avaa sen uudelleen (Fable 24.9.2026).
+        /// </summary>
         void AvaaSiirrot()
         {
             var rivit = PeliApu.SiirtoRivit(matka);
             if (rivit.Count == 0) { Kartalle(false); return; }
             string ala = $"{matka.Tila.Pelaaja.Raha} {PeliApu.Valuutta} · valitse kohde listasta tai kartalta";
-            NaytaRivit($"Noppa {matka.Tila.Noppa}", ala, rivit.Select(x => x.Rivi).ToList(), i => Siirry(rivit[i].Avain));
+            NaytaRivit($"Noppa {matka.Tila.Noppa}", ala, rivit.Select(x => x.Rivi).ToList(), i => Siirry(rivit[i].Avain),
+                () => { if (matka?.Tila.Vaihe == Vaihe.Siirto) AvaaSiirrot(); else Kartalle(false); });
         }
 
         /// <summary>Nopan siirron avain napautetulle kaupungille ("c:id"), jos se on siirroissa; muuten null.</summary>
