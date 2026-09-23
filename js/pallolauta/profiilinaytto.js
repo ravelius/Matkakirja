@@ -58,7 +58,8 @@ export function koetilanNimi(kokeet) {
   for (const [pika, ryhma] of Object.entries(PALJAAT_PIKAVALINNAT)) {
     if (kaikki.includes(pika)) kaikki = kaikki.filter((k) => k !== 'paljas' && k !== `kerros-${ryhma}`);
   }
-  const nimet = kaikki.filter((k) => k && k !== 'profiili' && !(paljas && PALJAAN_LISAKOKEET.includes(k))).sort();
+  // `suoraan` on testitila eikä koe: se näkyy tilarivillä omana merkintänään.
+  const nimet = kaikki.filter((k) => k && k !== 'profiili' && k !== 'suoraan' && !(paljas && PALJAAN_LISAKOKEET.includes(k))).sort();
   return nimet.length ? nimet.join(',') : 'normaali';
 }
 
@@ -68,10 +69,11 @@ export function koetilanNimi(kokeet) {
  * `koe` on latauksessa voimaan tullut tila — kokeet luetaan kerrosten
  * luonnissa — ja `seuraava` valikon nykyinen valinta, jos se eroaa.
  */
-export function koetilarivi({ koe, seuraava = null, versio = '' } = {}) {
+export function koetilarivi({ koe, seuraava = null, versio = '', suoraan = false } = {}) {
   const nyt = koe || 'normaali';
   const vaihto = seuraava && seuraava !== nyt ? ` (seuraavassa latauksessa: ${koetilanOtsikko(seuraava)})` : '';
-  return `${koetilanOtsikko(nyt)}${vaihto} · profiili p${PROFIILIN_VERSIO}${versio ? ` · ${versio}` : ''}`;
+  // Testitila "Suoraan kartalle" (omistaja 23.9.2026) näkyy kaappauksessa.
+  return `${koetilanOtsikko(nyt)}${vaihto}${suoraan ? ' · suoraan' : ''} · profiili p${PROFIILIN_VERSIO}${versio ? ` · ${versio}` : ''}`;
 }
 
 /**
@@ -393,6 +395,7 @@ export function profiilitiiviste({
     t: Date.now(),
     ua,
     koe: koetila?.koe || 'normaali',
+    suoraan: Boolean(koetila?.suoraan),
     koeSeuraava: koetila?.seuraava ?? null,
     profiiliVersio: PROFIILIN_VERSIO,
     versio: koetila?.versio ?? '',
