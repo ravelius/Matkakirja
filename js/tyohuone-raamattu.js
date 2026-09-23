@@ -588,9 +588,9 @@ export const RAAMATTU = {
         'ALKU: tarina alkaa Lontoosta. Ensimmäisen kohteen saa '
           + 'valita kartalta — valinta ratkaisee, minkä mantereen '
           + 'pääaarretta etsitään ensin. Aloituskaupunki valitaan laudan '
-          + 'start-merkityistä kaupungeista (js/packs/maailma.js; 23.9.2026 '
-          + 'tilanne Lontoo ja New York; natiivi käyttää samaa listaa, ei '
-          + 'vanhojen mannerlautojen 14 kaupunkia). Vanha beta-rajaus '
+          + 'start-merkityistä kaupungeista (aktiivinen lauta maailmankartta; '
+          + '23.9.2026 tilanne 19 kaupunkia Lontoosta Perthiin; paketin '
+          + 'kaupungit[].aloitus on sama lista ja natiivi lukee sen). Vanha beta-rajaus '
           + '"vain Ateena" (25.8.2026) on purettu.',
         'VUORO: matkustustapa (liftaus/bussi/laiva/lento, ks. LIIKKUMINEN) → noppa → siirto. '
           + 'Heitto, laiva tai lento = 6 h matka-aikaa.',
