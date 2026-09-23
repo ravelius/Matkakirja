@@ -11,7 +11,7 @@
 //                sumuverhon päällä; alaosassa pergamenttiarkki, jolle paikkarivi
 //                ("Heathrow, Lontoo, syyskuu 2026") ja avausteksti naputetaan sana
 //                kerrallaan (web INTRO_TYPE_MS 190, tauot välimerkeistä) ja kertoja
-//                lukee intro-puhe.mp3:n. Napautus arkkiin kirjoittaa loppuun.
+//                lukee intro-puhe.mp3:n (Puhe). Napautus arkkiin kirjoittaa loppuun.
 //                Lopuksi kehystetty nappi VALITSE ALOITUSKAUPUNKI.
 //   3 VALINTA    webissä valinta tehdään pallolla (ETUSIVUN_KOHTEET); natiivissa
 //                pergamenttikortti, jossa lähtökaupungit (PeliOhjain.Lahtokaupungit,
@@ -178,7 +178,6 @@ namespace Matkakirja.Natiivi
             if (!Auki) return;
             Auki = false;
             kirjoitus?.Pause();
-            Aanet.Pysayta(AaniKanava.Kertoja);
             juuri.style.opacity = 0f;
             juuri.schedule.Execute(() => { if (!Auki) juuri.style.display = DisplayStyle.None; }).StartingIn(900);
             SyoteLukko.Vapauta(this);
@@ -216,7 +215,8 @@ namespace Matkakirja.Natiivi
             sanat = IntroText.Split(' ');
             sana = 0;
             runko.text = "";
-            Aanet.Soita(AaniKanava.Kertoja, IntroPuhe);
+            // Puhe: yksi puhuja kerrallaan ja musiikin vaimennus (Pelikoodarin Puhe.cs).
+            Puhe.Hae()?.Soita(IntroPuhe);
             kirjoitus?.Pause();
             kirjoitus = runko.schedule.Execute(Seuraava).StartingIn(Tahti + 600);
         }
@@ -255,7 +255,8 @@ namespace Matkakirja.Natiivi
 
         void NaytaValinta()
         {
-            Aanet.Pysayta(AaniKanava.Kertoja);
+            // Web aloitaKartalta: avauksen puhe loppuu, kun valinta alkaa.
+            Puhe.Instanssi?.Pysayta();
             Aanet.PulunTehoste("pulu.kujerrus");
             UiSisalto.Lataa(() =>
             {
