@@ -127,8 +127,17 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        kokoelmaLkm ja muutos (automaattinen sisältörivi, julkaise-sisalto.mjs).
  *   1.23 offline.json ryhmat: maailma, maanosat (7) ja kaikki summattuine
  *        tavuineen; maat[].manner (omistaja: lataus maanosittain; arvot kuten kaupungit.manner).
+ *   1.24 Natiivi-UI:n datatoiveet (tools/vienti/saapumiset.mjs, karttavalot.mjs):
+ *        kokoelmat saapumistekstit (kaupungit ilman fokusvirtaa: pakin kuvaus
+ *        ja nosto tai havainto, kuvapino R.kuva-muodossa, äänite), liviansaapumiset
+ *        (LIVIAN_SAAPUMISET valintasääntöineen) ja takynostot (NOSTO_MAAT);
+ *        karttavalot uusiksi webin pallon nostokerroksesta (maanKohdemerkit:
+ *        + syvennykset, täky- ja maalehtinostot, napakohteet, kohdekartalle
+ *        siirretyt paakartalla false; nimio, paikka, kategoria, tunnus, ladottu,
+ *        taso, lahizoom, kaupunkiAvain, kohdekartta, takynosto, liitetytNostot);
+ *        kohdekartat.kohteet[].linkit ja aihe.
  */
-export const SKEEMAVERSIO_TARKKA = '1.23';
+export const SKEEMAVERSIO_TARKKA = '1.24';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 const tavuja = (s) => Buffer.byteLength(s);

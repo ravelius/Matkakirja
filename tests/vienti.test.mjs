@@ -30,6 +30,8 @@ import { JUURI, kokoaVienti } from '../tools/vienti/vie-sisalto.mjs';
 import { onSaantoArvo } from '../tools/vienti/kokoelmat.mjs';
 import { palauta } from '../tools/vienti/sarjallista.mjs';
 import { PEILI_JUURI } from '../js/media.js';
+import { LIVIAN_SAAPUMISET } from '../js/fokusvirta.js';
+import { NOSTO_MAAT } from '../js/fokusnosto.js';
 import { LISAMODUULIT, LISATIEDOSTOT } from '../tools/vienti/lahteet.mjs';
 
 const eka = await kokoaVienti();
@@ -187,6 +189,11 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
     pulmaaineisto: 7,
     maastonimet: ['vuoret', 'jarvet', 'joet'].reduce((a, l) => a + ns('maailmankartta-nimet.js').MAAILMANKARTAN_NIMET[l].length, 0),
     karttavalot: kokoelma('karttavalot').alkiot.length,
+    // Skeema 1.24: kaupungit ilman fokusvirtaa (matkakirja tai havainto), Livian taulu, NOSTO_MAAT.
+    saapumistekstit: P.cities.filter((c) => !ns('fokusvirrat.js').FOKUSVIRRAT[c.id]
+      && (ns('js/sisaltotaulut.js').SAAPUMISTEKSTIT.maailmankartta[c.id] || P.placeFacts[c.id]?.length)).length,
+    liviansaapumiset: avaimia(LIVIAN_SAAPUMISET),
+    takynostot: Object.values(NOSTO_MAAT).reduce((a, l) => a + l.length, 0),
     maarajat: Object.keys(JSON.parse(readFileSync(join(JUURI, 'assets/data/maapolygonit.json'), 'utf8')).maat).length,
     maat: Object.keys(P.map.countryShapes).length,
     karttamerkit: readdirSync(join(JUURI, 'assets/nostotyypit')).filter((f) => /^merkki-.+\.png$/.test(f)).length,

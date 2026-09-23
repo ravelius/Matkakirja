@@ -26,8 +26,6 @@ import { PAAKAUPUNGIT } from './paakaupungit.mjs';
 import { lueKorkeudet } from './korkeudet.mjs';
 import { maarajaRivit, MAARAJOJEN_TOLERANSSI } from './maarajat.mjs';
 import { lueMaakuntarajat, MAAKUNTARAJOJEN_TOLERANSSI } from './maakuntarajat.mjs';
-import { KOHDE_MAAT, kohteenKategoria } from '../../js/fokuskohteet.js';
-import { nostosymPaakategoria } from '../../js/fokusnosto-symbolit.js';
 import { MAAILMANKARTAN_NIMET } from '../../js/packs/maailmankartta-nimet.js';
 import { ratkaiseMedia, sivustoReitit } from './media.mjs';
 import { aaniUrl, horatioAanenKesto, musaPolku } from '../../js/media.js';
@@ -38,6 +36,8 @@ import { repliikit as livianRepliikit } from '../generoi-pulu.mjs';
 import { lueLivianEleet, eleidenTila } from './livian-eleet.mjs';
 import { lueRadiotarkistus } from './radiotarkistus.mjs';
 import { rikastaLehdet } from './lehdet.mjs';
+import { karttavaloKokoelma, rikastaKohdekartat, takynostoKokoelma } from './karttavalot.mjs';
+import { saapumisKokoelmat } from './saapumiset.mjs';
 import { kohtaamiskuvaKohteelle, kohtaamiskuvaTavalliselleKohtaamiselle } from '../../js/kohtaamiskuvat-data.js';
 import {
   LINSSILUENTA_JUURI, luennanRunko, luennanOsoite, kaarenPuheet, puheenTiiviste,
@@ -856,14 +856,8 @@ function karttamerkkiKokoelma() {
 }
 
 /*
- * KARTTAVALOT JA MAASTONIMET (Natiivisepän tarve 23.9.2026 ilta).
- * Web ei kokoa karttavaloja yhdeksi listaksi: pisteet syntyvät piirrossa.
- * Tämä kokoaa saman datan (Sonnet-agentin selvitys, tarkistettu):
- *   - fokuskohteet (KOHDE_MAAT, sis. kuratoidut maastokohteet): aihe =
- *     nostosymPaakategoria(kohteenKategoria(k)), sijainti laudalta asteiksi
- *   - eläintäyt (ELAINTAKYT, lat/lon suoraan), historian hetket (vain
- *     kartalla === true), skandaalit (lat/lon suoraan).
- * tarkeys: kaupunkivalolle kaupungin tarkeys, muille kohteen taso ?? 1.
+ * MAASTONIMET (Natiivisepän tarve 23.9.2026 ilta). Karttavalot: skeemasta
+ * 1.24 tools/vienti/karttavalot.mjs (webin pallon nostokerroksen joukko).
  * Maastonimet (MAAILMANKARTAN_NIMET: vuoret, järvet, joet) ovat webissä
  * vain tasokartan nimiökerroksessa, eivät pallolla.
  */
@@ -871,49 +865,6 @@ const asteiksi = (x, y) => {
   const a = laudaltaAsteiksi('maailmankartta', x, y);
   return a ? { lat: Math.round(a.lat * 1e4) / 1e4, lon: Math.round(a.lon * 1e4) / 1e4 } : null;
 };
-
-function karttavaloKokoelma(hae, kaupungit) {
-  const tarkeydet = new Map(kaupungit.map((k) => [k.id, k.tarkeys]));
-  const rivit = [];
-  const nahdyt = new Set();
-  const lisaa = (rivi) => {
-    let id = rivi.id; let n = 2;
-    while (nahdyt.has(id)) id = `${rivi.id}~${n++}`;
-    nahdyt.add(id);
-    rivit.push({ ...rivi, id });
-  };
-  for (const [maa, lista] of Object.entries(KOHDE_MAAT)) {
-    for (const k of lista) {
-      const aihe = nostosymPaakategoria(kohteenKategoria(k));
-      const xy = k.laudat?.maailmankartta;
-      const p = xy && asteiksi(xy.x, xy.y);
-      if (!aihe || !p) continue;
-      const kaupunki = tarkeydet.has(k.kaupunki) ? k.kaupunki : (tarkeydet.has(k.id) ? k.id : null);
-      lisaa({ id: `kohde:${k.id}`, aihe, nimi: k.nimi, ...p, maa, kaupunki,
-        tarkeys: aihe === 'kaupungit' && kaupunki ? tarkeydet.get(kaupunki) : (k.taso ?? 1), lahde: 'fokuskohde' });
-    }
-  }
-  for (const [maa, t] of Object.entries(hae('js/packs/elaintakyt.js').ELAINTAKYT)) {
-    if (Number.isFinite(t.lat) && Number.isFinite(t.lon)) {
-      lisaa({ id: `elaintaky:${maa}`, aihe: 'elaimet', nimi: t.elain ?? t.otsikko, lat: t.lat, lon: t.lon, maa, kaupunki: null, tarkeys: 1, lahde: 'elaintaky' });
-    }
-  }
-  for (const h of hae('js/packs/historian-hetket.js').HISTORIAN_HETKET) {
-    if (!h.kartalla) continue;
-    lisaa({ id: `hetki:${h.id}`, aihe: 'hetket', nimi: h.nimio ?? h.otsikko, lat: h.lat, lon: h.lon, maa: h.iso ?? null, kaupunki: null, tarkeys: 1, lahde: 'historianHetket' });
-  }
-  for (const [maa, lista] of Object.entries(hae('js/packs/skandaalit.js').SKANDAALIT)) {
-    for (const sk of lista) {
-      lisaa({ id: `skandaali:${sk.id}`, aihe: 'skandaalit', nimi: sk.nimio ?? sk.otsikko, lat: sk.lat, lon: sk.lon, maa, kaupunki: null, tarkeys: 1, lahde: 'skandaalit' });
-    }
-  }
-  return taulukko('js/fokuskohteet.js#KOHDE_MAAT + ELAINTAKYT + HISTORIAN_HETKET + SKANDAALIT',
-    'Karttavalot pallolle: aihe (kaupungit, luonto, elaimet, historia, ihmeet, hetket, kulttuuri, kauppa, skandaalit; '
-      + 'js/karttavalot.js KARTTAVALO_AIHEET), nimi, lat/lon, maa (ISO3), tarkeys 0–3, lahde = lähdekokoelma. '
-      + 'Aiheen kaupungit valot ovat laudan ulkopuolisia pikkukaupunkeja (laudan kaupungit ovat kokoelmassa kaupungit); '
-      + 'kaupunki on täytetty vain, jos valo on laudan kaupunki, ja silloin tarkeys = kaupungit.tarkeys, muuten kohteen taso tai 1.',
-    { kaupunki: 'kaupungit' }, rivit);
-}
 
 function maastonimiKokoelma() {
   const rivit = [];
@@ -990,10 +941,17 @@ export function kokoaKokoelmat(nimiavaruudet, { media = [] } = {}) {
       + '(uusin.json muutos { paiva, teksti }); näytä se listan kärjessä, jos sen päivä on uusin.',
     {}, [...muutosloki.rivit].sort((a, b) => (a.paiva === b.paiva ? String(b.versio).localeCompare(String(a.versio)) : b.paiva.localeCompare(a.paiva)))
       .map((r) => ({ id: String(r.versio), versio: String(r.versio), paiva: r.paiva, teksti: r.teksti })));
-  kokoelmat.karttavalot = karttavaloKokoelma(hae, kokoelmat.kaupungit.alkiot);
+  // Skeema 1.24: karttavalot = webin pallon nostokerroksen joukko (tools/vienti/karttavalot.mjs).
+  const valot = karttavaloKokoelma(ns, hae, kokoelmat.kaupungit.alkiot, taulukko);
+  kokoelmat.karttavalot = valot.kokoelma;
   rikastaNippu4(kokoelmat, ns);
   // Skeema 1.15: lehdet natiiville (tools/vienti/lehdet.mjs).
-  rikastaLehdet(kokoelmat, ns, hae, { media, taulukko });
+  const R = rikastaLehdet(kokoelmat, ns, hae, { media, taulukko });
+  // Skeema 1.24 (Natiivi-UI:n toiveet 1, 3 ja 4): kohdekarttojen linkkien aihe,
+  // saapumistekstit ja Livian saapumisrepliikit.
+  rikastaKohdekartat(kokoelmat.kohdekartat, valot.haeKohde, valot.luokittele);
+  kokoelmat.takynostot = takynostoKokoelma(ns, R, taulukko, kokoelmat.karttavalot);
+  Object.assign(kokoelmat, saapumisKokoelmat(ns, hae, R, taulukko));
   // Kätkökuva (Pelikoodari 23.9.2026): web näyttää sen kaaren aarretekstin
   // yhteydessä (assets/kohtaamiset/kohtaaminen-katko.jpg). Ämpärissä skeemasta 1.12.
   kokoelmat.saannot.alkiot.push({
