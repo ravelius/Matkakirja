@@ -13,6 +13,13 @@
 // ennätys (recordNoted, recordMark.day) ja pöllöliput. Samaan versioon
 // valinnaisina: nähdyt pulmat (puzzlesSeen) ja avoin tapahtumakortti (eventCard).
 // Versiot 1 ja 2 latautuvat; niissä ei ole laattoja (ks. Matka.Lataa).
+// Versio 4 (23.9.2026, versionosto): versioon 3 ilman nostoa tulleet kentät
+// (kaupat, voittaja, avoinKaksintaistelu, pulmatNahty, tapahtumakortti) ovat
+// nyt version sisältöä. Nosto estää vanhempaa sovellusta lukemasta uutta
+// tallennusta ja hävittämästä sen kenttiä hiljaa seuraavassa tallennuksessa:
+// uudempi versio heittää UudempiTallennus-poikkeuksen (PeliOhjain säilyttää
+// tiedoston). VERSIOPOLKU: uusi kenttä tai merkityksen muutos = uusi versio,
+// askel Paivita-metodiin ja testi (Peli-testit/Testit/TallennusTestit.cs).
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -50,10 +57,21 @@ namespace Matkakirja.Peli
         public List<string> LoytoMaat = new List<string>();
     }
 
+    /// <summary>
+    /// Tallennus on tehty uudemmalla sovelluksella (versio &gt; TallennusVersio).
+    /// Tiedostoa ei saa korvata: sen kentät katoaisivat.
+    /// </summary>
+    public sealed class UudempiTallennus : FormatException
+    {
+        public readonly int Versio;
+        public UudempiTallennus(int versio)
+            : base($"tallennusversio {versio} on uudempi kuin sovelluksen {Pelitila.TallennusVersio}") => Versio = versio;
+    }
+
     /// <summary>Pelin tila (web Game): matkan kentät ja kello.</summary>
     public sealed class Pelitila
     {
-        public const int TallennusVersio = 3;
+        public const int TallennusVersio = 4;
 
         public List<Pelaaja> Pelaajat = new List<Pelaaja>();
         public int Vuorossa;                                   // web current
@@ -214,9 +232,9 @@ namespace Matkakirja.Peli
         {
             var o = MiniJson.Objekti(MiniJson.Jasenna(json));
             var versio = (int)(MiniJson.Luku(o, "versio") ?? 0);
-            // Versio 1 (erä 1) luetaan oletuksin: ei pisteitä eikä kysymystilaa.
-            // Versiot 1–2: ei laattoja (Laatat = null); Matka.Lataa voi jakaa ne.
-            if (versio < 1 || versio > TallennusVersio) throw new FormatException($"tuntematon tallennusversio {versio}");
+            if (versio > TallennusVersio) throw new UudempiTallennus(versio);
+            if (versio < 1) throw new FormatException($"tuntematon tallennusversio {versio}");
+            Paivita(o, versio);
             var t = new Pelitila
             {
                 LuettuVersio = versio,
@@ -273,6 +291,31 @@ namespace Matkakirja.Peli
             foreach (var s in Tekstit(o, "pulmatNahty")) if (s != null) t.NahdytPulmat.Add(s);
             t.Tapahtumakortti = Tapahtumakortti.Lue(MiniJson.Kentta(o, "tapahtumakortti") as Dictionary<string, object>);
             return t;
+        }
+
+        /// <summary>
+        /// Versiopolku: vie jäsennetyn tallennuksen askel kerrallaan nykyiseen
+        /// versioon ennen lukua. Nykyiset askeleet täydentävät vain oletuksia,
+        /// jotka lukija antaisi muutenkin; ne on kirjattu tähän, jotta seuraava
+        /// muutos (uudelleennimeäminen, merkityksen muutos) saa paikkansa.
+        /// </summary>
+        static void Paivita(Dictionary<string, object> o, int versio)
+        {
+            // 1 → 2 (erä 2): pelaajan xp, kysytty, oikein, taso ja kysely puuttuvat → oletukset.
+            // 2 → 3 (erä 3): laattamaailma puuttuu → null; Matka.Lataa jakaa laatat
+            //   laattamäärillä (LuettuVersio < 3), muuten peli jatkuu ilman laattoja.
+            // 3 → 4 (versionosto): kaupat, voittaja, avoinKaksintaistelu, pulmatNahty ja
+            //   tapahtumakortti olivat valinnaisia; puuttuva = tyhjä (lukija hoitaa).
+            for (int v = versio; v < TallennusVersio; v++)
+            {
+                switch (v)
+                {
+                    case 3:
+                        if (!o.ContainsKey("pulmatNahty")) o["pulmatNahty"] = new List<object>();
+                        break;
+                }
+            }
+            o["versio"] = (double)TallennusVersio;
         }
 
         static List<string> Tekstit(Dictionary<string, object> o, string nimi) =>
