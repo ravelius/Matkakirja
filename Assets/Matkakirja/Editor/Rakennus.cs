@@ -109,6 +109,8 @@ namespace Matkakirja.Editori
             maakunnat.piilotaKaupungit = false;
             maakunnat.jonoLisa = 1;
             maakunnat.toleranssi = 0.1;
+            // Maakunnat ovat Euroopassa (FRA DEU ITA ESP GBR POL AUT CHE): 44° × 26° → 4096 × 2420, noin 1,2 km/teksel.
+            maakunnat.rajaus = new Vector4(-12f, 35f, 32f, 61f);
             kerrokset.maakunnat = maakunnat;
             var nappula = georefGo.AddComponent<Nappula>();
             nappula.georeferenssi = georef;

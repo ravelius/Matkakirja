@@ -38,6 +38,9 @@ namespace Matkakirja
         public bool piilotaKaupungit = true;
         [Tooltip("Piirtojärjestys kuorten kesken (maakunnat maiden päälle).")]
         public int jonoLisa = 0;
+        [Tooltip("Tunnuskartan rajaus (länsi, etelä, itä, pohjoinen) asteina; nollat = koko maailma. " +
+                 "Maakunnille Eurooppa: sama tekstuurimuisti, noin 9× tarkempi raja. Rajauksen ulkopuoliset alueet jätetään pois.")]
+        public Vector4 rajaus;
 
         public event Action<string> MaaNapautettu;
         public bool Paalla { get; private set; }
@@ -145,7 +148,11 @@ namespace Matkakirja
             yield return Sisalto.HaeTeksti(kokoelma, t => teksti = t, true);
             if (teksti == null) { Debug.LogWarning($"MATKAKIRJA maat: {kokoelma}.json puuttuu tästä paketista"); latausAlkanut = false; yield break; }
             float alku = Time.realtimeSinceStartup;
-            int w = leveys, h = leveys / 2;
+            bool rajattu = rajaus.z > rajaus.x && rajaus.w > rajaus.y;
+            double lon0 = rajattu ? rajaus.x : -180, lat1 = rajattu ? rajaus.w : 90;
+            double lonVali = rajattu ? rajaus.z - rajaus.x : 360, latVali = rajattu ? rajaus.w - rajaus.y : 180;
+            int w = leveys, h = (int)math.round(leveys * latVali / lonVali);
+            var r4 = rajaus;
             MaatAineisto aineistoT = null;
             byte[] kartta = null;
             List<Maa> jarjestys = null;
@@ -153,9 +160,11 @@ namespace Matkakirja
             {
                 aineistoT = MaatAineisto.LueRajat(Peli.MiniJson.Jasenna(teksti));
                 jarjestys = new List<Maa>(aineistoT.Maat.Values);
+                // Rajatussa kartassa vain rajauksen sisään osuvat alueet (FRA:n merentakaiset pois).
+                if (rajattu) jarjestys.RemoveAll(m => m.E < r4.x || m.W > r4.z || m.N < r4.y || m.S > r4.w);
                 jarjestys.Sort((x, y) => string.CompareOrdinal(x.Id, y.Id));
                 if (jarjestys.Count > 255) jarjestys.RemoveRange(255, jarjestys.Count - 255);
-                kartta = Rasteroi(jarjestys, w, h);
+                kartta = Rasteroi(jarjestys, w, h, lon0, lat1, lonVali, latVali, !rajattu);
             });
             while (!tehtava.IsCompleted) yield return null;
             if (tehtava.IsFaulted)
@@ -171,7 +180,8 @@ namespace Matkakirja
 
             tunnukset = new Texture2D(w, h, TextureFormat.R8, false, true)
             {
-                name = "Maatunnukset", filterMode = FilterMode.Point, wrapModeU = TextureWrapMode.Repeat,
+                name = "Maatunnukset", filterMode = FilterMode.Point,
+                wrapModeU = rajattu ? TextureWrapMode.Clamp : TextureWrapMode.Repeat,
                 wrapModeV = TextureWrapMode.Clamp,
             };
             tunnukset.SetPixelData(kartta, 0);
@@ -194,7 +204,7 @@ namespace Matkakirja
         /// leikkaukset riveittäin (pikselin keskikohta) ja täytetään parit. x kiertää
         /// leveyden yli (päivämääräraja, renkaat voivat jatkua yli ±180°).
         /// </summary>
-        static byte[] Rasteroi(List<Maa> maat, int w, int h)
+        static byte[] Rasteroi(List<Maa> maat, int w, int h, double lon0, double lat1, double lonVali, double latVali, bool kierra)
         {
             var kartta = new byte[w * h];
             var rivit = new List<float>[h];
@@ -208,8 +218,8 @@ namespace Matkakirja
                     {
                         var p0 = rengas[i];
                         var p1 = rengas[(i + 1) % rengas.Length];
-                        double x0 = (p0.Lon + 180.0) / 360.0 * w, y0 = (90.0 - p0.Lat) / 180.0 * h;
-                        double x1 = (p1.Lon + 180.0) / 360.0 * w, y1 = (90.0 - p1.Lat) / 180.0 * h;
+                        double x0 = (p0.Lon - lon0) / lonVali * w, y0 = (lat1 - p0.Lat) / latVali * h;
+                        double x1 = (p1.Lon - lon0) / lonVali * w, y1 = (lat1 - p1.Lat) / latVali * h;
                         if (y0 == y1) continue;
                         double ya = Math.Min(y0, y1), yb = Math.Max(y0, y1);
                         int r0 = Math.Max(0, (int)Math.Ceiling(ya - 0.5));
@@ -235,7 +245,8 @@ namespace Matkakirja
                         int xa = (int)Math.Ceiling(l[i] - 0.5), xb = (int)Math.Ceiling(l[i + 1] - 0.5) - 1;
                         for (int x = xa; x <= xb; x++)
                         {
-                            int xx = ((x % w) + w) % w;
+                            int xx = kierra ? ((x % w) + w) % w : x;
+                            if (xx < 0 || xx >= w) continue;
                             kartta[rivi + xx] = arvo;
                         }
                     }
@@ -271,6 +282,9 @@ namespace Matkakirja
             kuori.sharedMaterial.renderQueue = materiaali.renderQueue + jonoLisa;
             kuori.sharedMaterial.SetTexture("_Tunnus", tunnukset);
             kuori.sharedMaterial.SetTexture("_Paletti", paletti);
+            bool rj = rajaus.z > rajaus.x && rajaus.w > rajaus.y;
+            kuori.sharedMaterial.SetVector("_Alue", rj ? new Vector4(rajaus.x, rajaus.w, rajaus.z - rajaus.x, rajaus.w - rajaus.y)
+                                                       : new Vector4(-180, 90, 360, 180));
             kuori.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
             kuori.receiveShadows = false;
             kuori.enabled = false;
