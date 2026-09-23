@@ -86,3 +86,12 @@ test('lehtikuori: teko-silta ja natiivin alkutila', async () => {
   assert.equal(peli.kirjaaNostotehtava(), 3);
   assert.deepEqual(viestit.map((v) => v.teko), ['actionKulttuuri', 'myonnaJuliste', 'kirjaaNostotehtava']);
 });
+
+test('lehtikuori: maalehden parametrit', async () => {
+  const { lehtikuorenMaa } = await import('../js/lehtikuori.js');
+  assert.deepEqual(lehtikuorenMaa('?lehti=rooma&maa=ITA&sivu=historia'), { maa: 'ITA', sivu: 'historia' });
+  assert.deepEqual(lehtikuorenMaa('?lehti=rooma&maa=ITA'), { maa: 'ITA', sivu: null });
+  assert.deepEqual(lehtikuorenMaa('?lehti=rooma&maa=ITA&sivu=<x>'), { maa: 'ITA', sivu: null }, 'kelvoton sivu pois');
+  assert.equal(lehtikuorenMaa('?lehti=rooma&maa=ita'), null, 'vain ISO3 isoilla');
+  assert.equal(lehtikuorenMaa('?lehti=rooma'), null);
+});

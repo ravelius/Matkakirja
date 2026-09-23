@@ -48,6 +48,24 @@ export function lehtikuorenKaupunki(search = globalThis.location?.search ?? '') 
   }
 }
 
+/**
+ * Maalehti kuoressa: `?lehti=<kaupunki>&maa=<ISO3>[&sivu=<aihe-id>]` avaa
+ * kaupungin sijaan maan lehden (kartuscha, natiivin Natiivi-UI), aiheen
+ * sivulta jos annettu. Kaupunki pysyy pelin sijaintina (pikatie tarvitsee
+ * kaupungin). Palauttaa { maa, sivu } tai null.
+ */
+export function lehtikuorenMaa(search = globalThis.location?.search ?? '') {
+  try {
+    const q = new URLSearchParams(search);
+    const maa = q.get('maa');
+    if (!maa || !/^[A-Z]{3}$/.test(maa)) return null;
+    const sivu = q.get('sivu');
+    return { maa, sivu: sivu && /^[a-z0-9-]{1,60}$/.test(sivu) ? sivu : null };
+  } catch {
+    return null;
+  }
+}
+
 /** Viesti natiiville kuorelle; selaimessa pelkkä sivutapahtuma. */
 export function ilmoitaNatiiville(tapahtuma, tiedot = {}, ikkuna = globalThis) {
   const viesti = { tapahtuma, ...tiedot };
@@ -60,15 +78,17 @@ export function ilmoitaNatiiville(tapahtuma, tiedot = {}, ikkuna = globalThis) {
  * Avaa kaupungin lehden ja kytkee sulkemisen natiiville. `ui` on jo
  * asennettu (mount) ja `ui.lehtikuori` tosi.
  */
-export function avaaLehtikuori(ui, kaupunki) {
+export function avaaLehtikuori(ui, kaupunki, maalehti = lehtikuorenMaa()) {
   const city = ui.game.board.cityById.get(kaupunki);
   if (!city) return false;
+  const maa = maalehti?.maa && ui.game.pack?.map?.countryShapes?.[maalehti.maa] ? maalehti : null;
   const dialogi = ui.arrivalDialog;
   dialogi?.addEventListener('close', () => {
-    ilmoitaNatiiville('lehti-suljettu', { kaupunki });
+    ilmoitaNatiiville('lehti-suljettu', { kaupunki, ...(maa ? { maa: maa.maa } : {}) });
   }, { once: true });
-  ui.openArrival(city, { ohitaLehtilukko: true });
-  ilmoitaNatiiville('lehti-auki', { kaupunki });
+  if (maa) ui.avaaMaalehti(maa.maa, { sivu: maa.sivu });
+  else ui.openArrival(city, { ohitaLehtilukko: true });
+  ilmoitaNatiiville('lehti-auki', { kaupunki, ...(maa ? { maa: maa.maa } : {}) });
   return true;
 }
 
