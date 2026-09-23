@@ -526,3 +526,20 @@ odota 3
 kuva kohdekortti-korostukset
 ui sulje
 ```
+
+Pieni liike ja noppa (`PieniLiike.cs`, `Noppa.cs`): kerros 10 pallon päällä ja muun UI:n alla.
+Pulu lentää levossa 60–120 s välein, ja sävy vaihtuu vuorokaudenajan mukaan. Noppa (web js/die.js)
+heitetään Pelikoodarin koukusta PeliNakymat.Noppa: se lähtee pelaajan ruutupisteestä
+(PalloKierto.RuutuPiste, nappula 5000 m) ja pomppii lepopaikkaan oikeaan alaneljännekseen.
+Liike jatkuu valmis()-kutsusta, ja noppa häipyy MatkaPerilla-tapahtumassa. `ui liike`,
+`ui noppa [1–6|pois]`.
+
+```
+ui noppa 5
+odota 3
+kuva noppa-5
+ui noppa pois
+ui liike
+odota 1
+kuva pieni-liike-pulu
+```

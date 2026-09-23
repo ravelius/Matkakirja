@@ -1121,3 +1121,26 @@
     white-space: normal;
     color: rgba(58, 38, 16, 0.7);
 }
+
+/* --- noppa (UI/Noppa.cs; webin .die-layer, css/styles.css ~2103) ---------------- */
+/* Kerros koko isän alueella, ei poimi kosketuksia. Kuutio, varjo ja silmät piirretään
+ * koodissa (generateVisualContent), joten USS:ssä on vain asettelu ja häivytys. */
+
+.mk-noppa,
+.mk-noppa__pinta,
+.mk-noppa__viivat {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* Uuteen kaupunkiin saavuttaessa noppa katoaa 0,42 s:ssa (die.js haivyta). Siirtymä on
+ * vain tässä luokassa, jotta uusi heitto palauttaa nopan näkyviin heti. */
+.mk-noppa--haipyy {
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.42s;
+    transition-timing-function: ease;
+}
