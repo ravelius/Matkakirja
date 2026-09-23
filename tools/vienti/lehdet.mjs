@@ -494,6 +494,30 @@ export function rikastaLehdet(kokoelmat, ns, hae, { media: mediaLista = [], taul
   kokoelmat.miniatyyrit.kuvaus += ' Skeema 1.18: kuva = { arvo, url, varat, leveys, korkeus } (piirroskuva kohteelle '
     + 'kaupunki + nimi).';
 
+  // Skeema 1.19 (2.0-polku): kysymykset ja pulmat päätasolle
+  // (natiivin Kysymysdata.cs ja Pulmat.cs lukevat niitä).
+  for (const a of kokoelmat.kysymykset.alkiot) {
+    const d = a.data ?? {};
+    const vaite = !Array.isArray(d.options);
+    Object.assign(a, {
+      laji: vaite ? 'vaite' : 'visa', kysymys: d.q ?? null, vaihtoehdot: vaite ? null : d.options,
+      oikea: d.correct ?? null, taso: d.level ?? null, vihje: d.hint ?? null, fakta: d.fact ?? null,
+      lahde: d.source ?? null, paikka: d.place ?? null,
+    });
+  }
+  kokoelmat.kysymykset.kuvaus += ' Skeema 1.19: päätasolla laji (visa | vaite), kysymys, vaihtoehdot (visa), oikea '
+    + '(visa: indeksi; väite: tosi/epätosi), taso, vihje, fakta, lahde (url tai teksti), paikka (väitteen paikka).';
+  for (const a of kokoelmat.pulmat.alkiot) {
+    const d = a.data ?? {};
+    Object.assign(a, {
+      otsikko: d.title ?? null, selite: d.selite ?? null, vihje: d.hint ?? null, kysymys: d.q ?? null,
+      vaihtoehdot: d.options ?? null, oikea: d.correct ?? null, fakta: d.fact ?? null, lahde: d.source ?? null,
+      luonnos: d.sketch ?? null, kuvaLahteet: d.kuvaLahteet ?? null,
+    });
+  }
+  kokoelmat.pulmat.kuvaus += ' Skeema 1.19: päätasolla otsikko, selite, vihje, kysymys, vaihtoehdot ja oikea (kiinteät '
+    + 'pulmat; generaattoripulmat arpovat nämä), fakta, lahde, luonnos (piirroksen parametrit) ja kuvaLahteet.';
+
   kokoelmat.kohdekartat = taulukko('js/packs/maakartat.js#KAUPUNKIKARTAT',
     'Kaupunkien kohdekartat (Nähtävyydet). kuva = näytettävä kartta (värikartta, jos on, muuten juliste; url/varat/'
       + 'leveys/korkeus, ämpärissä assets/kartat/), juliste ja varikartta erikseen. rajat = ydinrajaus asteina '

@@ -613,6 +613,16 @@ test('skeema 1.18: nahtavyydet ja miniatyyrit päätasolla', async () => {
   assert.equal(tunnus.kuva.url, assetOsoite('miniatyyrit', tunnus.data));
 });
 
+test('skeema 1.19: kysymykset ja pulmat päätasolla', () => {
+  const k = JSON.parse(tiedostot.get('kokoelmat/kysymykset.json')).alkiot;
+  assert.ok(k.every((a) => a.kysymys === a.data.q && a.fakta === a.data.fact));
+  assert.ok(k.filter((a) => a.laji === 'visa').every((a) => Number.isInteger(a.oikea) && a.oikea < a.vaihtoehdot.length));
+  assert.ok(k.filter((a) => a.laji === 'vaite').every((a) => typeof a.oikea === 'boolean'));
+  const p = JSON.parse(tiedostot.get('kokoelmat/pulmat.json')).alkiot;
+  assert.ok(p.every((a) => a.otsikko && a.kysymys));
+  assert.deepEqual(p.find((a) => a.id === 'punnukset').luonnos, p.find((a) => a.id === 'punnukset').data.sketch);
+});
+
 test('skeema 1.9: offline-manifesti maittain (laatat, maasto, media, tavut)', async () => {
   const m = JSON.parse(tiedostot.get('manifest.json'));
   const o = JSON.parse(tiedostot.get(m.offline.tiedosto));

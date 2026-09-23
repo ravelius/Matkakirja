@@ -118,8 +118,9 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        js/fokustehtavat.js (PULLA_NIMET, PULLA_YLEISNIMI, palkkio).
  *   1.18 nahtavyydet ja miniatyyrit päätasolle (2.0-polun ensimmäinen
  *        tyypitys, docs/raportit/sisaltopaketti-2-0-suunnitelma-20260923.md).
+ *   1.19 kysymykset ja pulmat päätasolle (2.0-polku).
  */
-export const SKEEMAVERSIO_TARKKA = '1.18';
+export const SKEEMAVERSIO_TARKKA = '1.19';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 const tavuja = (s) => Buffer.byteLength(s);
