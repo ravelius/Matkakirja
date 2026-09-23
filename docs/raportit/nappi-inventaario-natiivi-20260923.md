@@ -92,7 +92,7 @@ KOKEET-osion sijainti rikkoo omistajan linjausta: natiivin KOKEET-osio (Astronau
 
 | Nappi / toiminto | Web | Natiivi | Tila | Kenelle |
 |---|---|---|---|---|
-| Lähteet-dialogi: nimikilpi ja koko lähdeluettelo linkkeineen | index.html:1112, lahteet.js, ui.js:18413 | UI/Tietoja.cs | osittain: 6 lyhyttä osiota, ei koko luetteloa eikä linkkejä | NUI, SS |
+| Lähteet-dialogi: nimikilpi ja koko lähdeluettelo linkkeineen | index.html:1112, lahteet.js, ui.js:18413 | UI/Tietoja.cs (moduulit/js/lahteet.json) | on: nimikilpi, tekijänoikeus ja koko luettelo (webissäkään ei linkkejä); v11:ssä moduulit/ 404 → vara | NUI, SS |
 | Lähteet: "Sulje" | index.html:1122 | Tietoja.cs:45 | on | NUI |
 | Palaute "Kerro mitä huomasit": viesti, "Lähetä palautetta", "Takaisin peliin" | ui.js:17613–17762 | puuttuu | puuttuu | NUI |
 | Ehdotuslomake "Lähetä ehdotus" (kuvat, tarkennus, nimimerkki, krediitti, lisenssi) | ehdotukset.js:479–555 | puuttuu | puuttuu | NUI |
@@ -255,7 +255,7 @@ Webissä nämä avautuvat kaupunkiliuskasta. Natiivissa niihin ei ole reittiä.
 | Eläintäkyn palkkio | elaintaky.js | Nostokortti.cs:297 | on | NUI |
 | Kohdekortti: lukijan kysymys (+25) ja "Kysy pululta" -kysymykset | fokuskohteet.js:5478 | Nostokortti.cs:165 | on | NUI |
 | Kohdekortti: korostetut sanat → "Kysy pululta lisää" | fokuskohteet.js:5390 | puuttuu (Nostokortti.cs:17 "ei korostuksia") | puuttuu | NUI |
-| Kohdekortti: kierros ("Avaa kierros", pelin sisäinen kehys, "Avaa selaimessa ↗", ✕) | fokuskohteet.js:5545–5628 | Nostokortti.cs:172 (avaa ulkoisen linkin) | osittain | NUI |
+| Kohdekortti: kierros ("Avaa kierros", pelin sisäinen kehys, "Avaa selaimessa ↗", ✕) | fokuskohteet.js:5545–5628 | Nostokortti.cs:172 (avaa ulkoisen linkin) | ei tarvita nyt: webin datassa ei yhtään kierrosta (poistettu 26.8.2026) | – |
 | "Koe ihme" | fokuskohteet.js:5103 | puuttuu | puuttuu | NUI, SS |
 | "Livian leikekirja" | fokuskohteet.js:6355 | puuttuu | puuttuu | NUI, SS |
 | Täkynostokortti (kuvat, teksti, visa, "Kysy pululta") | fokusnosto.js:1128, 1737 | puuttuu (NostoSisalto.cs: vain skandaali, hetki, eläintäky ja kohde) | puuttuu | NUI, SS |
@@ -293,13 +293,13 @@ Webissä nämä avautuvat kaupunkiliuskasta. Natiivissa niihin ei ole reittiä.
 | Jatkokysymykset | pollo.js:5505 | PuluChat.cs:311 | on | NUI |
 | "Yritä uudelleen" | pollo.js:5533 | PuluChat.cs:302 | on | NUI |
 | Linssin valmiit kysymykset chatissa | pollo.js:2227 | UI/Linssit/MinipulunKortti.cs:110 (vain astronautti) | osittain | NUI, LS |
-| "Ehdota sisältöä" (chatin ylärivi) | pollo.js:1941 | puuttuu | puuttuu | NUI |
-| "Näytä puhekuplat" | pollo.js:1972 | puuttuu | puuttuu | NUI |
+| "Ehdota sisältöä" (chatin ylärivi) | pollo.js:1941 | PuluChat.cs (ylärivi) | on | NUI |
+| "Näytä puhekuplat" | pollo.js:1972 | PuluChat.cs (ylärivi) | on | NUI |
 | Vastauksen kuva → "Näytä kuva isompana" | pollo.js:5305 | puuttuu | puuttuu | NUI |
 | Kuvakortti "Avaa juttu" | pollo.js:5098 | puuttuu | puuttuu | NUI |
 | Matkakirjalinkit ("Lue: …") | pollo.js:5477 | puuttuu | puuttuu | NUI, PK |
 | Käsitelinkit ("Kerro lisää: aihe") | pollo.js:5824 | puuttuu | puuttuu | NUI |
-| "Ehdota tallennettavaksi" (poiminta) | pollo.js:5230 | puuttuu | puuttuu | NUI |
+| "Ehdota tallennettavaksi" (poiminta) | pollo.js:5230 | PuluChat.PoimintaRivi | on (kehittäjätilassa "Tallenna juttuun" samaan kanavaan); webin paketin pillerit artikkelin lopussa (pollo-poiminnat.js, 1 pari) puuttuvat | NUI |
 | Paikkakysymys: kamera lentää, "‹ Palaa" | pulu-paikka.js:742 | PuluChat.cs:125, 452 | on | NUI, NS |
 | Paikkamerkki kartalla | pulu-paikka.js | puuttuu | puuttuu | NS |
 | Puhekuplan napautus (kuittaus) | pollo.js:4062 | UI/Pulu/PuluKuplat.cs:61 | on | NUI |
@@ -475,6 +475,15 @@ natiivitunnistusta ja iOS-kuvanvalitsinta, Pelikoodari), täkynostokortti, syven
 "Livian leikekirja" (259–264; kartalta avaus odottaa Siirtosepän nosto-/syvennysvaloja), aarteen paljastus
 koko ruudulle (204) ja reaktiot (266; lähetys odottaa workeria), pelin tehosteet ja lentomoottori (B7),
 "Mitä uutta" + sisältöpäivityksen rivi, offline-lataus maanosittain (omistaja 24.9.).
+
+## Tehty (päivitys 24.9.2026 aamu, Natiivi-UI)
+
+Merge-pyynnössä (natiivi-ui/ipad-korjaukset, /lahteet, /chat-ylarivi): Lähteet-dialogi (95), chatin
+"Ehdota sisältöä" ja "Ehdota tallennettavaksi" (poiminta), kierros ei tarvita (258). iPad-tarkistuksen
+korjaukset: maalehden otsikko (MiniJson.Objekti heitti puuttuvasta kentästä → UI:ssa Rakenne.Olio) ja
+matkakirjakortti lappuna luennan aikana kaikilla laitteilla (webin TEKSTIT PIILOON KAIKILLA LAITTEILLA).
+Odottaa muita: Liiku/kulkutapaliuku ja "Vaihda matkustustapa" (PK:n rajapinta), ✈-kohdemerkit (NS),
+sanelu (PK: iOS-puheentunnistus), tiedeliite ja aikajanalinssit (LS).
 
 ## Ei webissä, odottaa omistajaa
 
