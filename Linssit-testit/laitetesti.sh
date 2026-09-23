@@ -32,7 +32,11 @@ kaynnista() { xcrun devicectl device process launch --device $UDID --terminate-e
 
 case "$1" in
   sisalto)
-    for f in kokoelmat/linssiaineisto.json kokoelmat/maat.json; do
+    # maarajat.json vain pyydettäessä (MAARAJAT=1): Natiiviseppä on voinut kopioida
+    # polkuun oman versionsa, jota ei ylikirjoiteta.
+    TIEDOSTOT="kokoelmat/linssiaineisto.json kokoelmat/maat.json"
+    [ "$MAARAJAT" = 1 ] && TIEDOSTOT="$TIEDOSTOT kokoelmat/maarajat.json"
+    for f in ${=TIEDOSTOT}; do
       sinne "$KOE/$f" "sisalto/$VERSIO/$f" && echo "välimuistiin: $VERSIO/$f"
     done
     kaynnista ;;
