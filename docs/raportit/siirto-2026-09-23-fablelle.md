@@ -44,3 +44,14 @@ malleista oli 89 % klo 10.50 (nollautuu 25.9. klo 08) — pidä erät pieninä.
 ## Tila siirtohetkellä
 Tuotanto v2144 (+ Julkaisijan jono #2890–#2901 ja "Suoraan kartalle" käsittelyssä).
 Kaikki muu: docs/raportit/viesti-fable-luovutus-20260923.md.
+
+## Lisäys klo 11.30
+- Fable 65 % → tämä sessio luovuttaa nyt. Julkaisija (71 %) viimeistelee #2902:n ja kirjoittaa
+  luovutuksen; UUSI FABLE nollaa sen (kaava: RC pois → clear_session self → 75 s → aloitusviesti
+  → RC päälle; muistio session-nollaus-automaattinen.md). Julkaisijan jäljellä oleva jono
+  luovutuksessa.
+- Googlen 3D-laatat: maksullisuus ei ole este; tee lukutesti vanhan projektin avaimella 3D-
+  juuriosoitteeseen (avain ympäristöstä), 200 = oikeus voimassa nyt; Google-näkymä vain omana
+  koko ruudun näkymänä. Omistaja haluaa nykyajan näkymät isoisän näkökulman rinnalle.
+- Codexin idle-QA-rajaus → Laitetestaajalle (loki 11.10). 94 ChatGPT-erän heron viitteet →
+  kysymys omistajalle avoinna.
