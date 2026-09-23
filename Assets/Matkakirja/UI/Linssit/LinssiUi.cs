@@ -140,6 +140,7 @@ namespace Matkakirja.Natiivi
             string id = linssi?.Tiedot?.Id;
             ui.Kartuscha.NaytaSallittu(!paalla);
             ui.OfflineTila.NaytaSallittu(!paalla);
+            ui.Matkavalinta.NaytaSallittu(!paalla);
             ui.Karttaselite.NaytaNappi(!paalla);
             if (paalla) ui.Karttaselite.Sulje();
             Valitsin.Sulje();

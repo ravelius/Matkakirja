@@ -13,6 +13,12 @@
 // jotta kalvo on repaleinen harso eikä tasainen himmennys. Webin kangas on
 // 512², tässä 256² bilineaarisesti venytettynä (harso on joka tapauksessa
 // pehmeä). Vähennetty liike: ei ajelehdintaa.
+//
+// LINEAARINEN VÄRIAVARUUS (Linssisepän iPad-vertailu 08a9101): projekti on Linear,
+// joten UI Toolkit sekoittaa läpikuultavat kerrokset lineaarisesti. Vaalea harso
+// tummalla taustalla näkyy silloin paljon vaaleampana kuin webin sRGB-sekoituksessa
+// (koko ruutu siniharmaa, avaruus ei pysy tummana). Korjaus: alfa ja peittävyys
+// korotetaan potenssiin 2,2 (alfa_lin = alfa_sRGB^2,2), jolloin tulos vastaa webiä.
 // Kerros 5: 3D-pallon ja sen merkkien päällä, kaiken muun UI:n alla.
 using Matkakirja.Linssit.Astronautti;
 using UnityEngine;
@@ -23,6 +29,8 @@ namespace Matkakirja.Natiivi
     public sealed class Avaruussumu
     {
         const int Koko = 256;
+        /// <summary>sRGB-sekoituksen vastine lineaarisessa avaruudessa (ks. alkukommentti).</summary>
+        static float Gamma => QualitySettings.activeColorSpace == ColorSpace.Linear ? 2.2f : 1f;
         static readonly (float Paino, float KokoPt, Vector2 Nopeus)[] Kalvot =
         {
             (1f, 760f, new Vector2(5.5f, -2.2f)),
@@ -82,7 +90,7 @@ namespace Matkakirja.Natiivi
             {
                 var (paino, kokoPt, nopeus) = Kalvot[i];
                 var st = kalvot[i].style;
-                st.opacity = peitto * paino;
+                st.opacity = Mathf.Pow(peitto * paino, Gamma);
                 float koko = Mathf.Round(kokoPt * mitta);
                 st.backgroundSize = new BackgroundSize(new Length(koko), new Length(koko));
                 if (!liike) continue;
@@ -112,6 +120,7 @@ namespace Matkakirja.Natiivi
                     float u = (x + 0.5f) / Koko;
                     float n = Fraktaali(u, v, 3, 5, 71829, 0.55f);
                     float alfa = Mathf.Pow(Mathf.Clamp01((n - Kynnys) / (1 - Kynnys)), 0.9f);
+                    alfa = Mathf.Pow(alfa, Gamma);
                     float k = 0.82f + 0.28f * n;
                     px[y * Koko + x] = new Color32(
                         (byte)Mathf.Min(255, Mathf.RoundToInt(206 * k)),
