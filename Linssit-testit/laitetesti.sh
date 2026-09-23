@@ -29,7 +29,7 @@ kaynnista() { xcrun devicectl device process launch --device $UDID --terminate-e
 
 case "$1" in
   sisalto)
-    for f in kokoelmat/linssiaineisto.json kokoelmat/maat.json kokoelmat/maarajat.json; do
+    for f in kokoelmat/linssiaineisto.json kokoelmat/maat.json; do
       sinne "$KOE/$f" "sisalto/$VERSIO/$f" && echo "välimuistiin: $VERSIO/$f"
     done
     kaynnista ;;
