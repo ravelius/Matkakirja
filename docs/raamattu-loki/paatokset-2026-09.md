@@ -1735,3 +1735,7 @@ Klo 10.12. NC-tarkistus: grep löysi BY-NC-viittauksia js/lahteet.js, js/kuvagal
 ## NC-TARKISTUS ALUSTAVA: KUVAT TURVASSA (js/kuvagalleria.js HYLKAA noncommercial/no-deriv), ONGELMA AANISSA — VAHINTAAN 6 MUSIIKKINAYTETTA (maa-kategoriat 3894/13967/15296, kulttuuri-kategoriat 10983/15578/15884) JA 3 AANIMAISEMAA (europe-kielet 37/41/55, archive.org aporee) CC BY-NC(-SA); lahteet.js 245/251 KOKOELMAT 'CC BY-NC KOHTEITTAIN'; FREESOUND-AANET TARKISTAMATTA → SIIRTOSEPPA TEKEE TAYDEN INVENTAARION (docs/raportit/lisenssi-inventaario-20260923.md), SISALTOKIRJURI HERATETTY KORVAAMAAN (23.9.2026 klo 10.11)
 
 Klo 10.13. Korvaajat CC0/CC BY/BY-SA/PD, sama tunnelma ja kesto, lisenssi kirjataan js/lahteet.js:ään.
+
+## OMISTAJA (KORTTI 10.16): LUKEE 3D-RAPORTIT ENSIN, MOOTTORIPAATOS MYOHEMMIN; 3D-SELVITTAJA VALMISTELEE PROTOTYYPIN VALMIUSLISTAN (docs/raportit/3d-prototyypin-valmius-20260923.md) ILMAN ASENNUKSIA (23.9.2026 klo 10.12)
+
+Klo 10.16. Prototyyppiä ei aloiteta ennen omistajan päätöstä.
