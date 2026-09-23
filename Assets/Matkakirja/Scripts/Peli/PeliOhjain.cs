@@ -84,6 +84,10 @@ namespace Matkakirja.Natiivi
         Loyto kysymysLoyto;
         readonly List<string> kysymysLisat = new List<string>();
         float kysymysJaljella;
+        bool tervehdysAloitettu, tulosPaljastettu;
+        float paljastusAika;
+        /// <summary>Tuomion kesto ennen paljastusta (web visa.js: 900 ms).</summary>
+        const float TuomioS = 0.9f;
         bool lukossa;
 
         Reittiverkko verkko;
@@ -197,6 +201,7 @@ namespace Matkakirja.Natiivi
                 Vihje = () => Vihje(),
                 Puolita = () => Puolita(),
                 Jatka = () => JatkaKysymyksesta(),
+                Aloita = () => AloitaKysymys(),
             };
             gameObject.AddComponent<PeliKomennot>().ohjain = this;
             puhe = Puhe.Hae();
@@ -382,6 +387,8 @@ namespace Matkakirja.Natiivi
             yield return HaeKokoelma("paikkatiedot", false, t => paikat = t);
             string pulmaTeksti = null, rosvoTeksti = null, tapahtumaTeksti = null, kuvaTeksti = null, lippuTeksti = null, kohtaamisTeksti = null;
             yield return HaeTiedosto("kokoelmat/kohtaamiset.json", false, true, t => kohtaamisTeksti = t);
+            string kuvaKohtaamiset = null;
+            yield return HaeTiedosto("kokoelmat/kohtaamiskuvat.json", false, true, t => kuvaKohtaamiset = t);
             yield return HaeTiedosto("kokoelmat/kuvakysymykset.json", false, true, t => kuvaTeksti = t);
             yield return HaeTiedosto("kokoelmat/lippumaat.json", false, true, t => lippuTeksti = t);
             try { LueKuvatJaLiput(kuvaTeksti, lippuTeksti); }
@@ -402,8 +409,11 @@ namespace Matkakirja.Natiivi
                 d.LueKysymykset(kysymykset);
                 if (kaari != null) d.LueTarinakaari(kaari);
                 kohtaamiset = new Kohtaamiset();
+                // Kaikki laudan kaupungit avaimiksi: kuvat kohdistetaan nimellä (web kuvaAvain).
+                foreach (var id in verkko.Kaupungit.Keys) kohtaamiset.Kaupungit[id] = new Kohtaaminen();
                 if (kaari != null) kohtaamiset.LueTarinakaari(kaari);
                 if (kohtaamisTeksti != null) kohtaamiset.LueKohtaamiset(kohtaamisTeksti);
+                if (kuvaKohtaamiset != null) kohtaamiset.LueKohtaamiskuvat(kuvaKohtaamiset);
                 if (paikat != null) d.LuePaikkatiedot(paikat);
                 Kysymykset = d;
                 KytkeKysely();
@@ -884,6 +894,8 @@ namespace Matkakirja.Natiivi
         void LehtiSuljettu(string kaupunki)
         {
             if (Tila != SilmukanTila.Lehti) return;
+            bool maalehti = maalehtiAuki;
+            maalehtiAuki = false;
             Tallenna();
             Kartalle(false);
             // Lehdestä avattu tehtävä (esim. sähkeen ryöstäjä) näkyviin vasta nyt.
@@ -891,18 +903,41 @@ namespace Matkakirja.Natiivi
             // Lehden aikana tapahtunut mannerlento: kamera pelaajaan.
             var k = PeliApu.Koordinaatti(verkko, matka.Tila.Pelaaja.Sijainti);
             if (matka.Tila.Pelaaja.Sijainti.Kaupunki != kaupunki && k.HasValue) Ajo(k.Value.Lat, k.Value.Lon, SaapumisKaari, 1.5f, null);
-            // Isoisän matkakirjaluento kaupungissa kerran istunnossa, kun lehti on luettu.
-            var l = luennat.OtaLuento(kaupunki);
+            // Isoisän matkakirjaluento kaupungissa kerran istunnossa, kun lehti on luettu (ei maalehdestä).
+            var l = maalehti ? null : luennat.OtaLuento(kaupunki);
             if (l != null && SoitaLuento(l, 0.6f) == null && !string.IsNullOrEmpty(l.Paikkarivi)) Viesti(l.Paikkarivi);
         }
 
         /// <summary>Avaa lehden natiivin rahalla ja kauppojen kirjanpidolla (lehtikuoren #tila).</summary>
-        void AvaaLehti(string kaupunki)
+        bool maalehtiAuki;
+
+        /// <summary>
+        /// Maalehti (kartuscha, Natiivi-UI): maan lehti aiheen sivulta (aihe = webin
+        /// MAA_KATEGORIAT-id, esim. "historia"). Pelaajan sijainti on kuoren kaupunki
+        /// (reitillä lähtökaupunki). Palauttaa virheen tai null.
+        /// </summary>
+        public string LueMaalehti(string iso3, string aihe = null)
+        {
+            if (lehti == null) return "lehteä ei ole";
+            if (matka == null) return "peli ei ole valmis";
+            if (Tila != SilmukanTila.Kartta) return "silmukka on tilassa " + Tila;
+            var s = matka.Tila.Pelaaja.Sijainti;
+            var kaupunki = s.Kaupungissa ? s.Kaupunki : verkko.Reitit.TryGetValue(s.Reitti, out var r) ? r.A : null;
+            if (kaupunki == null) return "sijainti ei ole kaupungissa eikä reitillä";
+            PiilotaKortti();
+            dialogi.PiilotaHeitto();
+            Tila = SilmukanTila.Lehti;
+            maalehtiAuki = true;
+            AvaaLehti(kaupunki, iso3, aihe);
+            return null;
+        }
+
+        void AvaaLehti(string kaupunki, string maa = null, string sivu = null)
         {
             string tila = matka == null ? null
                 : "{\"raha\":" + matka.Tila.Pelaaja.Raha.ToString(System.Globalization.CultureInfo.InvariantCulture)
                   + ",\"kaupat\":" + matka.Tila.Kaupat.Json() + "}";
-            lehti.Avaa(kaupunki, tila);
+            lehti.Avaa(kaupunki, tila, maa, sivu);
         }
 
         /// <summary>
@@ -1020,6 +1055,8 @@ namespace Matkakirja.Natiivi
             {
                 // Jatkettaessa aika on tallennuksessa; uusi tehtävä asettaa sen tässä.
                 kysymysJaljella = TehtavanSekunnit() ?? 0;
+                tervehdysAloitettu = false;
+                tulosPaljastettu = false;
                 dialogi.Piilota();
                 dialogi.PiilotaHeitto();
                 DialogiKohde = null;
@@ -1035,6 +1072,9 @@ namespace Matkakirja.Natiivi
                     // Kaupungin tavallinen tervehdys kerran istunnossa (web ui.kohtaamisetNahty).
                     if (KysymysApu.LisaaKohtaaminen(KysymysTila, q, kohtaamiset, q.Kaupunki != null && tervehdyksetNahty.Contains(q.Kaupunki)))
                         tervehdyksetNahty.Add(q.Kaupunki);
+                    // Näytetty tervehdys pysyy tervehdyssivulla, kunnes pelaaja painaa Aloita peli.
+                    if (!tervehdysAloitettu && KysymysTila.Tervehdys == null && !q.Valittu.HasValue) tervehdysAloitettu = true;
+                    KysymysApu.LisaaVaiheet(KysymysTila, kysely, q, tervehdysAloitettu);
                 }
                     break;
                 case Tehtava.Kaksintaistelu:
@@ -1046,16 +1086,31 @@ namespace Matkakirja.Natiivi
                     KysymysTila.Viesti = viesti;
                     break;
             }
+            KysymysTila.TulosVaihe = !KysymysTila.Vastattu ? 0
+                : tehtava == Tehtava.Tapahtuma || tulosPaljastettu ? 2 : 1;
             if (Kaytossa) kysymysNakyma.Nayta(KysymysTila, kysymysToiminnot);
             if (KysymysTila.Sekunnit.HasValue) kysymysNakyma.PaivitaAika(kysymysJaljella);
             tilarivi.Aseta(PeliApu.TilaTeksti(verkko, matka.Tila));
         }
 
+        /// <summary>Tervehdyssivun "Aloita peli" (testikomento 'aloita'): kysymys ja aika alkavat.</summary>
+        public string AloitaKysymys()
+        {
+            if (Tila != SilmukanTila.Kysymys || KysymysTila == null) return "kysymys ei ole auki";
+            if (!KysymysTila.TervehdysVaihe) return "ei tervehdyssivua";
+            tervehdysAloitettu = true;
+            NaytaKysymys();
+            return null;
+        }
+
         string KysymysTeko(Func<TekoTulos> teko)
         {
             if (Tila != SilmukanTila.Kysymys || AvoinTehtava == Tehtava.Ei) return "kysymys ei ole auki";
+            bool vastattuEnnen = KysymysTila != null && KysymysTila.Vastattu;
             var t = teko();
             if (!t.Ok) { NaytaKysymys(t.Virhe); return t.Virhe; }
+            // Vastaus: ensin tuomio, 0,9 s myöhemmin paljastus (Update).
+            if (!vastattuEnnen) { tulosPaljastettu = false; paljastusAika = Time.unscaledTime + TuomioS; }
             Tallenna();
             NaytaKysymys();
             return null;
@@ -1128,7 +1183,15 @@ namespace Matkakirja.Natiivi
 
         void PaivitaKysymysAika()
         {
+            if (Tila == SilmukanTila.Kysymys && KysymysTila != null && KysymysTila.TulosVaihe == 1 && Time.unscaledTime >= paljastusAika)
+            {
+                tulosPaljastettu = true;
+                NaytaKysymys();
+                return;
+            }
             if (Tila != SilmukanTila.Kysymys || KysymysTila == null || KysymysTila.Vastattu || !KysymysTila.Sekunnit.HasValue) return;
+            // Tervehdyssivulla aika ei kulu (web: tiimalasi vasta Aloita peli -napista).
+            if (KysymysTila.TervehdysVaihe) return;
             if (!Kaytossa) return;
             kysymysJaljella -= Time.unscaledDeltaTime;
             if (kysymysJaljella > 0) { kysymysNakyma.PaivitaAika(kysymysJaljella); return; }

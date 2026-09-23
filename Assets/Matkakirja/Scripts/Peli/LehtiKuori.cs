@@ -106,7 +106,13 @@ namespace Matkakirja.Natiivi
         public void Avaa(string kaupunki) => Avaa(kaupunki, null);
 
         /// <summary>Avaa lehden; tilaJson (raha ja kaupat) risuaitaan lehtikuorelle (LehtiOsoite.LisaaTila).</summary>
-        public void Avaa(string kaupunki, string tilaJson)
+        public void Avaa(string kaupunki, string tilaJson) => Avaa(kaupunki, tilaJson, null, null);
+
+        /// <summary>
+        /// Avaa lehden; maa (ISO3) avaa maalehden aiheen sivulta (sivu = aiheen id)
+        /// kaupungin sijaan. Kaupunki on pelin sijainti ja palaa Suljettu-tapahtumassa.
+        /// </summary>
+        public void Avaa(string kaupunki, string tilaJson, string maa, string sivu)
         {
             if (Auki) Sulje();
 
@@ -119,6 +125,7 @@ namespace Matkakirja.Natiivi
                 return;
             }
 
+            if (maa != null) osoite = LehtiOsoite.LisaaMaa(osoite, maa, sivu);
             osoite = LehtiOsoite.LisaaTila(osoite, tilaJson);
             Auki = true;
             AukiKaupunki = kaupunki;

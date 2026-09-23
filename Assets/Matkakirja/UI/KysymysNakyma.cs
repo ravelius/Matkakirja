@@ -1,0 +1,635 @@
+// KYSYMYSNÄKYMÄ (Natiivi-UI, erä 3): Pelikoodarin IKysymysNakyma UI Toolkitilla.
+//
+// Verkkopelin tehtäväkortti #quiz-dialog (index.html, js/visa.js renderQuiz ja
+// renderDuel, js/ui.js syncOptions ja sourceLine) pergamenttikorttina tumman
+// himmennyksen päällä (pelidialogien kerros 30):
+//
+//   [PULMA] Pariisi · aarrekysymys                 ⧗ 38     ← .quiz-head + tiimalasi
+//   ─────────────────────────────────────────────
+//   [ pulman luonnos | valokuva | lippu ]                   ← .quiz-sketch / .quiz-photo
+//   Kahvilan tarjoilija kysyy:                              ← kehys (kursiivi)
+//   Kysymys kirjoituskoneella                               ← .quiz-question
+//   ✎ ostettu vihje / rosvon huomautus                      ← .quiz-hint-text
+//   (A) vaihtoehto  (B) …  yksi sarake kuten puhelimessa    ← .quiz-option
+//   [ Oikein! · löytö · fakta · LÄHDE: … ]                  ← .quiz-result
+//   ─────────────────────────────────────────────
+//   [Vihje (40 £)]            [50:50 (80 £)]  [Jatka matkaa] ← menu: .lifeline, .primary
+//
+// Otsikkorivi ja napit pysyvät paikallaan; väli vierii (ScrollView), kun
+// kortti ei mahdu puhelimen ruudulle. Tapahtumakortti (#event-dialog) käyttää
+// samaa korttia: "Matkalla sattui", teksti, vaikutus ja Jatka.
+//
+// Sopimus (RAJAPINTA.md): ohjain kutsuu Nayta jokaisen teon jälkeen, ja näkymä
+// rakentaa sisällön datasta uudelleen (ei omaa pelitilaa). PaivitaAika tulee
+// joka ruudussa, kun Sekunnit != null. Syötelukko on ohjaimen: näkymä ei kutsu
+// SyoteLukkoa. Himmennyksen napautus ei sulje kysymystä (modaalinen, kuten web).
+// Webin kirjoituskoneefekti ja kaksivaiheinen tuomio → paljastus ovat ohjaimen
+// vuon asia; tämä näkymä näyttää tuloksen kerralla (tuomio + löytö + fakta).
+using System;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UIElements;
+
+namespace Matkakirja.Natiivi
+{
+    public sealed class KysymysNakyma : IKysymysNakyma
+    {
+        const string Kirjaimet = "ABCDEFGH";
+        const float ViestiKestoS = 3.5f;
+
+        readonly UiKerros kerros;
+        readonly VisualElement himmennys, paa, aika, napit;
+        readonly Kortti kortti;
+        readonly Label leima, kaupunki, sekunnit, viesti;
+        readonly Tiimalasi tiimalasi;
+        readonly ScrollView vieritys;
+        KysymysNaytto nakyva;
+        KysymysToiminnot toiminnot;
+        string avain;
+        bool odottaa;
+        int? aikaraja;
+        IVisualElementScheduledItem viestiPiiloon;
+
+        public bool Auki { get; private set; }
+
+        /// <summary>Viimeksi näytetty tila (testikomennot).</summary>
+        public KysymysNaytto Nakyva => Auki ? nakyva : null;
+
+        /// <summary>Kutsutaan Piilotan yhteydessä (testikomentojen esimerkkiajastin pysähtyy).</summary>
+        public event Action Piilotettu;
+
+        public KysymysNakyma(UiKerros kerros)
+        {
+            this.kerros = kerros;
+            var juuri = kerros.Juuri(UiKerros.Pelidialogit);
+            kerros.Turva(UiKerros.Pelidialogit); // turva-alueen reunat lasketaan vain kerroksille, joilla on turva
+
+            himmennys = Rakenne.El("mk-himmennys mk-himmennys--tumma", juuri);
+            himmennys.style.display = DisplayStyle.None;
+
+            kortti = new Kortti("mk-kysymys");
+            himmennys.Add(kortti);
+            var sisus = kortti.Sisus;
+
+            // --- otsikkorivi: leima, kaupunki ja tiimalasi ---
+            paa = Rakenne.El("mk-kysymys__paa", sisus, PickingMode.Ignore);
+            var paateksti = Rakenne.El("mk-kysymys__paateksti", paa, PickingMode.Ignore);
+            leima = Rakenne.Teksti("", "mk-kysymys__leima", paateksti);
+            Kirjasimet.Aseta(leima, Kirjasin.KoneLihava);
+            kaupunki = Rakenne.Teksti("", "mk-kysymys__kaupunki", paateksti);
+            Kirjasimet.Aseta(kaupunki, Kirjasin.LukuKursiivi);
+            aika = Rakenne.El("mk-kysymys__aika", paa, PickingMode.Ignore);
+            tiimalasi = new Tiimalasi();
+            aika.Add(tiimalasi);
+            sekunnit = Rakenne.Teksti("", "mk-kysymys__sekunnit", aika);
+            Kirjasimet.Aseta(sekunnit, Kirjasin.KoneLihava);
+
+            // --- vierivä sisältö ---
+            vieritys = new ScrollView(ScrollViewMode.Vertical);
+            vieritys.AddToClassList("mk-kysymys__vieritys");
+            vieritys.verticalScrollerVisibility = ScrollerVisibility.Hidden;
+            vieritys.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
+            sisus.Add(vieritys);
+
+            // --- viesti ja napit (aina näkyvissä kortin alareunassa) ---
+            viesti = Rakenne.Teksti("", "mk-kysymys__viesti", sisus);
+            Kirjasimet.Aseta(viesti, Kirjasin.LukuKursiivi);
+            viesti.style.display = DisplayStyle.None;
+            napit = Rakenne.El("mk-kysymys__napit", sisus, PickingMode.Ignore);
+            Kirjasimet.Aseta(napit, Kirjasin.Kone);
+
+            kerros.TurvaMuuttui += Asettele;
+        }
+
+        void Asettele()
+        {
+            // Kortti turva-alueen sisään (lovi, kotipalkki); himmennys peittää koko ruudun.
+            var r = kerros.Reunat(UiKerros.Pelidialogit);
+            himmennys.style.paddingTop = r.y + 10;
+            himmennys.style.paddingBottom = r.w + 10;
+            himmennys.style.paddingLeft = r.x + 8;
+            himmennys.style.paddingRight = r.z + 8;
+        }
+
+        // --- IKysymysNakyma -------------------------------------------------------
+
+        public void Nayta(KysymysNaytto d, KysymysToiminnot t)
+        {
+            if (d == null) { Piilota(); return; }
+            string uusiAvain = d.Laji + "\u001f" + d.Otsikko + "\u001f" + d.Kysymys;
+            bool uusi = uusiAvain != avain || !Auki;
+            bool vastattiinNyt = d.Vastattu && nakyva != null && !nakyva.Vastattu && !uusi;
+            avain = uusiAvain;
+            nakyva = d;
+            toiminnot = t ?? new KysymysToiminnot();
+            odottaa = false;
+
+            bool tapahtuma = d.Laji == KysymysLaji.Tapahtumakortti;
+            RakennaPaa(d, uusi, tapahtuma);
+            vieritys.Clear();
+            var sisalto = vieritys.contentContainer;
+            VisualElement tulos = null;
+            if (tapahtuma) RakennaTapahtuma(d, sisalto);
+            else tulos = RakennaKysymys(d, sisalto, uusi);
+            RakennaNapit(d);
+            NaytaViesti(d.Viesti);
+
+            Asettele();
+            if (uusi) vieritys.scrollOffset = Vector2.zero;
+            // Vastauksen jälkeen tulos näkyviin (se on vaihtoehtojen alla, usein ruudun ulkopuolella).
+            if (vastattiinNyt && tulos != null)
+                vieritys.schedule.Execute(() => { if (tulos.panel != null) vieritys.ScrollTo(tulos); }).StartingIn(60);
+            if (!Auki)
+            {
+                Auki = true;
+                Rakenne.Nayta(himmennys, true, 320);
+            }
+        }
+
+        public void PaivitaAika(float jaljellaS)
+        {
+            if (!Auki || !aikaraja.HasValue) return;
+            float jaljella = Mathf.Max(0, jaljellaS);
+            int s = Mathf.CeilToInt(jaljella);
+            string teksti = s.ToString();
+            if (sekunnit.text != teksti) sekunnit.text = teksti;
+            bool kiire = s <= 10;
+            aika.EnableInClassList("mk-kysymys__aika--kiire", kiire);
+            tiimalasi.Kiire = kiire;
+            tiimalasi.Edistys = 1f - jaljella / Mathf.Max(1, aikaraja.Value);
+            // hg-shake: kiireessä lasi keinuu −1,5° ↔ 1,5° sekunnin jaksolla.
+            if (kiire && jaljella > 0)
+            {
+                float vaihe = Mathf.Repeat(Time.unscaledTime, 1f);
+                float k = vaihe < 0.45f ? Mathf.SmoothStep(0, 1, vaihe / 0.45f) : Mathf.SmoothStep(1, 0, (vaihe - 0.45f) / 0.55f);
+                tiimalasi.style.rotate = new Rotate(new Angle(-1.5f + 3f * k));
+            }
+            else tiimalasi.style.rotate = StyleKeyword.Null;
+        }
+
+        public void Piilota()
+        {
+            toiminnot = null;
+            aikaraja = null;
+            viestiPiiloon?.Pause();
+            viesti.RemoveFromClassList("mk-auki");
+            viesti.style.display = DisplayStyle.None;
+            if (!Auki) return;
+            Auki = false;
+            avain = null;
+            Rakenne.Nayta(himmennys, false, 250);
+            Piilotettu?.Invoke();
+        }
+
+        // --- rakennus ---------------------------------------------------------------
+
+        void RakennaPaa(KysymysNaytto d, bool uusi, bool tapahtuma)
+        {
+            paa.style.display = tapahtuma ? DisplayStyle.None : DisplayStyle.Flex;
+            // Leima vain pulmissa ja valokuvissa (web: kehys kertoo muuten, kuka kysyy).
+            string leimaTeksti = d.Laji switch
+            {
+                KysymysLaji.Pulma => "PULMA",
+                KysymysLaji.Kuva => "VALOKUVA",
+                KysymysLaji.Lippu => "LIPPU",
+                _ => null,
+            };
+            leima.text = leimaTeksti ?? "";
+            leima.style.display = leimaTeksti == null ? DisplayStyle.None : DisplayStyle.Flex;
+            kaupunki.text = d.Otsikko ?? "";
+
+            // Tiimalasi vain vastaamattomassa, aikarajallisessa kysymyksessä (pulmassa ei kelloa).
+            bool kello = d.Sekunnit.HasValue && !d.Vastattu && !tapahtuma;
+            bool alkaa = kello && (uusi || !aikaraja.HasValue);
+            aikaraja = kello ? d.Sekunnit : null;
+            aika.style.display = kello ? DisplayStyle.Flex : DisplayStyle.None;
+            if (!kello) return;
+            if (alkaa)
+            {
+                sekunnit.text = d.Sekunnit.Value.ToString();
+                aika.RemoveFromClassList("mk-kysymys__aika--kiire");
+                tiimalasi.Kiire = false;
+                tiimalasi.Edistys = 0;
+                tiimalasi.style.rotate = StyleKeyword.Null;
+                // hg-turn: lasi kääntyy ylösalaisesta oikein päin.
+                tiimalasi.AddToClassList("mk-kysymys__tiimalasi--ylosalaisin");
+                tiimalasi.schedule.Execute(() => tiimalasi.RemoveFromClassList("mk-kysymys__tiimalasi--ylosalaisin")).StartingIn(30);
+            }
+        }
+
+        VisualElement RakennaKysymys(KysymysNaytto d, VisualElement s, bool uusi)
+        {
+            // Pulman luonnos ja selite (Kehys = pulman selite).
+            bool pulma = d.Laji == KysymysLaji.Pulma;
+            if (pulma)
+            {
+                s.Add(new PulmaLuonnos(d.PulmaId, d.Luonnos));
+                if (!string.IsNullOrEmpty(d.Kehys)) Kirjasimet.Aseta(Rakenne.Teksti(d.Kehys, "mk-kysymys__selite", s), Kirjasin.LukuKursiivi);
+            }
+
+            // Valokuva tai lippu.
+            if (!string.IsNullOrEmpty(d.KuvaUrl) && (d.Laji == KysymysLaji.Kuva || d.Laji == KysymysLaji.Lippu))
+                Kuva(s, d.KuvaUrl, d.Laji == KysymysLaji.Lippu, pulma ? null : d.KuvaLahde);
+
+            // Kehys: kuka kysyy (web: "Kaupunki — kehys:"); väittämässä isoisän päiväkirja ja paikka.
+            string kehys = pulma ? null : Kehys(d);
+            if (!string.IsNullOrEmpty(kehys)) Kirjasimet.Aseta(Rakenne.Teksti(kehys, "mk-kysymys__kehys", s), Kirjasin.LukuKursiivi);
+
+            var kysymys = Rakenne.Teksti(d.Kysymys ?? "", "mk-kysymys__kysymys", s);
+            kysymys.enableRichText = false;
+            Kirjasimet.Aseta(kysymys, Kirjasin.Kone);
+
+            // Ostettu vihje; kaksintaistelussa rosvon huomautus samalla lapulla (web quiz-hint-text).
+            if (!d.Vastattu)
+            {
+                if (!string.IsNullOrEmpty(d.Vihje)) Lappu(s, d.Vihje);
+                if (!string.IsNullOrEmpty(d.Huomautus)) Lappu(s, d.Huomautus);
+            }
+
+            Vaihtoehdot(d, s, uusi);
+            if (pulma && d.VaihtoehtoKuvat != null && !string.IsNullOrEmpty(d.KuvaLahde))
+                Kirjasimet.Aseta(Rakenne.Teksti(d.KuvaLahde, "mk-kysymys__kuvalahteet", s), Kirjasin.Kone);
+
+            return d.Vastattu ? Tulos(d, s) : null;
+        }
+
+        static string Kehys(KysymysNaytto d)
+        {
+            string k = d.Kehys;
+            if (string.IsNullOrEmpty(k) && d.Laji == KysymysLaji.Vaite)
+            {
+                // Web openClaim-otsikko: isoisä puhuu, ja paikka on usein muu kuin pelaajan sijainti.
+                string paikka = string.IsNullOrEmpty(d.Paikka) ? "" : " · " + d.Paikka;
+                return $"Isoisän päiväkirjasta, 1873{paikka} — pitääkö tämä yhä paikkansa?";
+            }
+            if (string.IsNullOrEmpty(k)) return null;
+            if (d.Laji == KysymysLaji.Vaite && !string.IsNullOrEmpty(d.Paikka)) k += " · " + d.Paikka;
+            // "… kysyy" → "… kysyy:" (web: `${city.name} — ${quiz.frame}:`).
+            return char.IsLetter(k[k.Length - 1]) ? k + ":" : k;
+        }
+
+        void Lappu(VisualElement s, string teksti)
+        {
+            var lappu = Rakenne.El("mk-kysymys__vihje", s, PickingMode.Ignore);
+            Rakenne.Teksti("✎", "mk-kysymys__vihjemerkki", lappu);
+            var l = Rakenne.Teksti(teksti, "mk-kysymys__vihjeteksti", lappu);
+            l.enableRichText = false;
+            Kirjasimet.Aseta(l, Kirjasin.LukuKursiivi);
+        }
+
+        void Kuva(VisualElement s, string url, bool lippu, string lahde)
+        {
+            var kehys = Rakenne.El("mk-kysymys__kuvakehys", s, PickingMode.Ignore);
+            if (lippu) kehys.AddToClassList("mk-kysymys__kuvakehys--lippu");
+            var kuva = Rakenne.El("mk-kysymys__kuva", kehys, PickingMode.Ignore);
+            Label lahdeRivi = null;
+            if (!string.IsNullOrEmpty(lahde))
+            {
+                lahdeRivi = Rakenne.Teksti(lahde, "mk-kysymys__kuvalahde", s);
+                Kirjasimet.Aseta(lahdeRivi, Kirjasin.Kone);
+            }
+            string odotettu = avain;
+            Kuvat.Hae(url, t =>
+            {
+                if (avain != odotettu || kuva.panel == null) return;
+                if (t == null)
+                {
+                    // Kuva ei latautunut: kysymykseen voi silti vastata (web: tilalle jää teksti).
+                    kehys.style.display = DisplayStyle.None;
+                    if (lahdeRivi != null) lahdeRivi.style.display = DisplayStyle.None;
+                    return;
+                }
+                kuva.style.backgroundImage = new StyleBackground(t);
+                // object-fit: cover, max-height 220 px (lippu: contain, pienempi kehys).
+                float leveys = kuva.resolvedStyle.width;
+                if (float.IsNaN(leveys) || leveys <= 0) leveys = 320;
+                float suhde = (float)t.width / Mathf.Max(1, t.height);
+                kuva.style.height = lippu
+                    ? Mathf.Clamp((leveys - 16) / suhde + 16, 70, 170)
+                    : Mathf.Clamp(leveys / suhde, 120, 220);
+            });
+        }
+
+        void Vaihtoehdot(KysymysNaytto d, VisualElement s, bool uusi)
+        {
+            int n = d.Vaihtoehdot?.Count ?? 0;
+            if (n == 0) return;
+            var lista = Rakenne.El("mk-kysymys__vaihtoehdot", s, PickingMode.Ignore);
+            if (n > 4) lista.AddToClassList("mk-kysymys__vaihtoehdot--tiivis"); // kaksintaistelun 8 vaihtoehtoa
+            for (int i = 0; i < n; i++)
+            {
+                int indeksi = i;
+                bool pois = d.Piilotetut != null && d.Piilotetut.Contains(i);
+                bool oikea = d.Vastattu && i == d.Oikea;
+                bool vaara = d.Vastattu && i == d.Valittu && !d.Oikein;
+                var b = Rakenne.Nappi(null, "mk-kysymys__vaihtoehto", () => Vastaa(indeksi), lista);
+                b.AddToClassList(i % 2 == 0 ? "mk-kysymys__vaihtoehto--pariton" : "mk-kysymys__vaihtoehto--parillinen");
+                if (oikea) b.AddToClassList("mk-kysymys__vaihtoehto--oikea");
+                if (vaara) b.AddToClassList("mk-kysymys__vaihtoehto--vaara");
+                if (pois) b.AddToClassList("mk-kysymys__vaihtoehto--pois");
+                b.SetEnabled(!pois && !d.Vastattu);
+
+                VisualElement rivi = b;
+                string kuvaUrl = d.VaihtoehtoKuvat != null && i < d.VaihtoehtoKuvat.Count ? d.VaihtoehtoKuvat[i] : null;
+                if (!string.IsNullOrEmpty(kuvaUrl))
+                {
+                    b.AddToClassList("mk-kysymys__vaihtoehto--kuvallinen");
+                    var kuva = Rakenne.El("mk-kysymys__vaihtoehtokuva", b, PickingMode.Ignore);
+                    Kuvat.Hae(kuvaUrl, t =>
+                    {
+                        if (kuva.panel == null) return;
+                        if (t == null) kuva.style.display = DisplayStyle.None; // nimi jää, pulmaan voi vastata
+                        else kuva.style.backgroundImage = new StyleBackground(t);
+                    });
+                    rivi = Rakenne.El("mk-kysymys__vaihtoehtorivi", b, PickingMode.Ignore);
+                }
+                var kirjain = Rakenne.Teksti(Kirjaimet[Mathf.Min(i, Kirjaimet.Length - 1)].ToString(), "mk-kysymys__kirjain", rivi);
+                Kirjasimet.Aseta(kirjain, Kirjasin.KoneLihava);
+                string teksti = d.Vaihtoehdot[i] ?? "";
+                // Väärä valinta ja 50:50:n poistama yliviivataan (text-decoration: line-through).
+                var l = Rakenne.Teksti(vaara || pois ? "<s>" + teksti.Replace("<", "‹") + "</s>" : teksti, "mk-kysymys__vaihtoehtoteksti", rivi);
+                l.enableRichText = vaara || pois;
+                Kirjasimet.Aseta(l, Kirjasin.Kone);
+
+                // option-in: uusi kysymys liu'uttaa vaihtoehdot esiin porrastetusti.
+                if (uusi && !d.Vastattu)
+                {
+                    b.AddToClassList("mk-kysymys__vaihtoehto--tulossa");
+                    b.schedule.Execute(() => b.RemoveFromClassList("mk-kysymys__vaihtoehto--tulossa")).StartingIn(40 + i * 70);
+                }
+            }
+        }
+
+        VisualElement Tulos(KysymysNaytto d, VisualElement s)
+        {
+            var laatikko = Rakenne.El("mk-kysymys__tulos", s, PickingMode.Ignore);
+            laatikko.AddToClassList(d.Oikein ? "mk-kysymys__tulos--oikein" : "mk-kysymys__tulos--vaarin");
+            string tuomio = d.AikaLoppui ? "Aika loppui!" : d.Oikein ? "Oikein!" : "Väärin.";
+            Kirjasimet.Aseta(Rakenne.Teksti(tuomio, "mk-kysymys__tuomio", laatikko), Kirjasin.KoneLihava);
+
+            // Kaksintaistelun Loyto kertoo jo oikean vastauksen ("Rosvo vei rahat — oikea vastaus oli …").
+            bool oikeaErikseen = !d.Oikein && d.Laji != KysymysLaji.Kaksintaistelu
+                && d.Oikea >= 0 && d.Vaihtoehdot != null && d.Oikea < d.Vaihtoehdot.Count;
+            if (oikeaErikseen) Vahva(laatikko, $"Oikea vastaus oli \"{d.Vaihtoehdot[d.Oikea]}\".");
+            if (!string.IsNullOrEmpty(d.Loyto))
+                foreach (var rivi in d.Loyto.Split('\n'))
+                    if (rivi.Trim().Length > 0) Vahva(laatikko, rivi);
+            if (!string.IsNullOrEmpty(d.Fakta))
+            {
+                var f = Rakenne.Teksti(d.Fakta, "mk-kysymys__fakta", laatikko);
+                f.enableRichText = false;
+                Kirjasimet.Aseta(f, Kirjasin.Luku);
+            }
+            Lahteet(laatikko, d.Lahteet);
+            return laatikko;
+        }
+
+        static void Vahva(VisualElement isa, string teksti)
+        {
+            var l = Rakenne.Teksti(teksti, "mk-kysymys__vahva", isa);
+            l.enableRichText = false;
+            Kirjasimet.Aseta(l, Kirjasin.LukuLihava);
+        }
+
+        /// <summary>Web sourceLine: "LÄHDE:" ja lähteet pisteellä eroteltuina; verkko-osoitteesta palvelimen nimi linkkinä.</summary>
+        static void Lahteet(VisualElement isa, List<string> lahteet)
+        {
+            if (lahteet == null) return;
+            var rivi = Rakenne.El("mk-kysymys__lahde", null, PickingMode.Ignore);
+            int n = 0;
+            foreach (var raaka in lahteet)
+            {
+                var lahde = raaka?.Trim();
+                if (string.IsNullOrEmpty(lahde)) continue;
+                if (n++ == 0) Kirjasimet.Aseta(Rakenne.Teksti("LÄHDE:", "mk-kysymys__lahdeotsikko", rivi), Kirjasin.Kone);
+                else Rakenne.Teksti(" · ", "mk-kysymys__lahdeteksti", rivi);
+                bool url = (lahde.StartsWith("https://") || lahde.StartsWith("http://")) && lahde.IndexOf(' ') < 0;
+                string nimi = lahde;
+                if (url && Uri.TryCreate(lahde, UriKind.Absolute, out var u))
+                    nimi = u.Host.StartsWith("www.") ? u.Host.Substring(4) : u.Host;
+                var l = Rakenne.Teksti(nimi, "mk-kysymys__lahdeteksti", rivi);
+                l.enableRichText = false;
+                Kirjasimet.Aseta(l, Kirjasin.Luku);
+                if (url)
+                {
+                    l.AddToClassList("mk-kysymys__lahdelinkki");
+                    l.pickingMode = PickingMode.Position;
+                    string osoite = lahde;
+                    l.RegisterCallback<ClickEvent>(_ => Application.OpenURL(osoite));
+                }
+            }
+            if (n > 0) isa.Add(rivi);
+        }
+
+        void RakennaTapahtuma(KysymysNaytto d, VisualElement s)
+        {
+            Kirjasimet.Aseta(Rakenne.Teksti("Matkalla sattui", "mk-kortti__otsikko", s), Kirjasin.LukuLihava);
+            if (!string.IsNullOrEmpty(d.Otsikko))
+                Kirjasimet.Aseta(Rakenne.Teksti(d.Otsikko, "mk-kysymys__tapahtumapaikka", s), Kirjasin.Kone);
+            var teksti = Rakenne.Teksti(d.Kysymys ?? "", "mk-kysymys__tapahtumateksti", s);
+            teksti.enableRichText = false;
+            Kirjasimet.Aseta(teksti, Kirjasin.Luku);
+            if (!string.IsNullOrEmpty(d.Loyto))
+                Kirjasimet.Aseta(Rakenne.Teksti(d.Loyto, "mk-kysymys__vaikutus", s), Kirjasin.Kone);
+        }
+
+        void RakennaNapit(KysymysNaytto d)
+        {
+            napit.Clear();
+            bool tapahtuma = d.Laji == KysymysLaji.Tapahtumakortti;
+            if (!d.Vastattu && !tapahtuma)
+            {
+                // Vihje: tarjolla → hinta; ostettu → harmaa "Vihje ostettu" (web quizHint).
+                if (d.VihjeTarjolla)
+                {
+                    var v = Rakenne.Nappi($"Vihje ({d.VihjeHinta} {d.Valuutta})", "mk-kysymys__apu mk-kysymys__vihjenappi", () => Teko(toiminnot?.Vihje), napit);
+                    v.SetEnabled(d.Raha >= d.VihjeHinta);
+                }
+                else if (!string.IsNullOrEmpty(d.Vihje))
+                    Rakenne.Nappi("Vihje ostettu", "mk-kysymys__apu mk-kysymys__vihjenappi", null, napit).SetEnabled(false);
+
+                // 50:50 tai kaksintaistelun helpotus (kallo); käytetty → harmaa.
+                if (d.PuolitusTarjolla)
+                {
+                    string teksti = d.PuolitusTeksti ?? $"50:50 ({d.PuolitusHinta} {d.Valuutta})";
+                    bool kallo = d.Laji == KysymysLaji.Kaksintaistelu && !teksti.Contains("käytetty");
+                    var p = Rakenne.Nappi(teksti, "mk-kysymys__apu", () => Teko(toiminnot?.Puolita), napit, kallo ? Ikonit.Viiva["kallo"] : null);
+                    p.SetEnabled(!d.PuolitusHarmaa && d.Raha >= d.PuolitusHinta);
+                }
+                else if (d.Laji != KysymysLaji.Kaksintaistelu && d.Piilotetut != null && d.Piilotetut.Count > 0)
+                    Rakenne.Nappi("50:50 käytetty", "mk-kysymys__apu", null, napit).SetEnabled(false);
+            }
+            if (d.Vastattu)
+            {
+                var j = Rakenne.Nappi(string.IsNullOrEmpty(d.JatkaTeksti) ? "Jatka" : d.JatkaTeksti, "mk-nappi--kulta mk-kysymys__jatka",
+                    () => Teko(toiminnot?.Jatka), napit);
+                Rakenne.Tausta(j, Kuviot.Pysty("dialogi-kulta", Kuviot.Vari("#e9c169"), Kuviot.Vari("#d3a03c")));
+                Kirjasimet.Aseta(j, Kirjasin.KoneLihava);
+            }
+            napit.style.display = napit.childCount > 0 ? DisplayStyle.Flex : DisplayStyle.None;
+        }
+
+        // --- teot -------------------------------------------------------------------
+
+        void Vastaa(int i)
+        {
+            if (!Auki || odottaa || nakyva == null || nakyva.Vastattu) return;
+            var v = toiminnot?.Vastaa;
+            if (v == null) return;
+            odottaa = true; // tuplanapautus ennen ohjaimen seuraavaa Nayta-kutsua ei vastaa kahdesti
+            v(i);
+            if (Auki) himmennys.schedule.Execute(() => odottaa = false).StartingIn(400);
+        }
+
+        void Teko(Action a)
+        {
+            if (!Auki || odottaa || a == null) return;
+            odottaa = true;
+            a();
+            // Jos ohjain ei päivittänyt näkymää (esim. teko hylättiin hiljaa), napit vapautuvat.
+            if (Auki) himmennys.schedule.Execute(() => odottaa = false).StartingIn(400);
+        }
+
+        void NaytaViesti(string teksti)
+        {
+            if (string.IsNullOrEmpty(teksti)) return; // edellinen viesti häipyy omalla ajastimellaan
+            viesti.text = teksti;
+            viestiPiiloon?.Pause();
+            Rakenne.Nayta(viesti, true, 250);
+            viestiPiiloon = viesti.schedule.Execute(() => Rakenne.Nayta(viesti, false, 250)).StartingIn((long)(ViestiKestoS * 1000));
+        }
+
+        // --- tiimalasi --------------------------------------------------------------
+
+        /// <summary>
+        /// Webin tiimalasi (index.html #hourglass, viewBox 44 × 68; visa.js setSand):
+        /// puukehys, lasi, valuva hiekka ylhäällä suppilona ja alhaalla kekona,
+        /// ohut virta kaulassa ja kiilto. Kiire (≤ 10 s) värjää hiekan punaiseksi.
+        /// </summary>
+        public sealed class Tiimalasi : VisualElement
+        {
+            static readonly Color Puu = Kuviot.Vari("#8a6534");
+            static readonly Color Muste = Kuviot.Vari("#46331f");
+            static readonly Color Hiekka = Kuviot.Vari("#c08a3e", 0.92f);
+            static readonly Color Virta = Kuviot.Vari("#b07f38", 0.75f);
+            static readonly Color Punainen = Kuviot.Vari("#a83c2c", 0.92f);
+            float edistys;
+            bool kiire;
+
+            public Tiimalasi()
+            {
+                AddToClassList("mk-kysymys__tiimalasi");
+                pickingMode = PickingMode.Ignore;
+                generateVisualContent += Piirra;
+            }
+
+            /// <summary>0 = täysi yläkupu, 1 = kaikki valunut.</summary>
+            public float Edistys
+            {
+                get => edistys;
+                set { value = Mathf.Clamp01(value); if (Mathf.Abs(value - edistys) < 0.002f) return; edistys = value; MarkDirtyRepaint(); }
+            }
+
+            public bool Kiire
+            {
+                get => kiire;
+                set { if (kiire == value) return; kiire = value; MarkDirtyRepaint(); }
+            }
+
+            void Piirra(MeshGenerationContext mgc)
+            {
+                var r = contentRect;
+                float s = Mathf.Min(r.width / 44f, r.height / 68f);
+                if (float.IsNaN(s) || s <= 0) return;
+                var o = new Vector2(r.x + (r.width - 44 * s) * 0.5f, r.y + (r.height - 68 * s) * 0.5f);
+                Vector2 P(float x, float y) => o + new Vector2(x, y) * s;
+                var p = mgc.painter2D;
+                p.lineJoin = LineJoin.Round;
+                p.lineCap = LineCap.Round;
+
+                // Puukehys: kansi, pohja ja kaksi pylvästä.
+                p.fillColor = Puu;
+                p.strokeColor = Muste;
+                p.lineWidth = 1.1f * s;
+                foreach (var (x, y, w, h, rr) in new[] { (3f, 1.4f, 38f, 5.2f, 1.8f), (3f, 61.4f, 38f, 5.2f, 1.8f), (5.4f, 6f, 2.6f, 56f, 1.2f), (36f, 6f, 2.6f, 56f, 1.2f) })
+                {
+                    Pyorea(p, P(x, y), w * s, h * s, rr * s);
+                    p.Fill();
+                    p.Stroke();
+                }
+
+                // Lasi.
+                p.BeginPath();
+                p.MoveTo(P(8, 7)); p.LineTo(P(36, 7)); p.LineTo(P(22.6f, 33.6f)); p.LineTo(P(22.6f, 34.4f));
+                p.LineTo(P(36, 61)); p.LineTo(P(8, 61)); p.LineTo(P(21.4f, 34.4f)); p.LineTo(P(21.4f, 33.6f));
+                p.ClosePath();
+                p.fillColor = new Color(1, 1, 1, 0.16f);
+                p.Fill();
+                p.lineWidth = 1.2f * s;
+                p.Stroke();
+
+                // Hiekka (visa.js setSand).
+                float t = edistys;
+                const float Cx = 22;
+                var hiekka = kiire ? Punainen : Hiekka;
+                if (t < 0.999f)
+                {
+                    float pinta = 8.4f + t * 25.2f;
+                    float puoli = Mathf.Max(0, 12.8f - (pinta - 8.4f) * 0.4901f);
+                    float kuoppa = 1.5f * (1 - t) + 0.25f;
+                    p.BeginPath();
+                    p.MoveTo(P(Cx - puoli, pinta));
+                    p.QuadraticCurveTo(P(Cx, pinta + kuoppa * 2), P(Cx + puoli, pinta));
+                    p.LineTo(P(22.45f, 33.6f)); p.LineTo(P(21.55f, 33.6f));
+                    p.ClosePath();
+                    p.fillColor = hiekka;
+                    p.Fill();
+                }
+                float taso = 60.2f - t * 25.8f;
+                if (t > 0.004f && t < 0.999f)
+                {
+                    p.BeginPath();
+                    p.MoveTo(P(21.55f, 33.6f)); p.LineTo(P(22.45f, 33.6f)); p.LineTo(P(22.45f, taso)); p.LineTo(P(21.55f, taso));
+                    p.ClosePath();
+                    p.fillColor = kiire ? new Color(Punainen.r, Punainen.g, Punainen.b, 0.75f) : Virta;
+                    p.Fill();
+                }
+                if (t > 0.001f)
+                {
+                    float alaPuoli = Mathf.Min(12.8f, 0.45f + (taso - 34.4f) * 0.4787f);
+                    float korkeus = 60.2f - taso;
+                    float keko = Mathf.Min(2.6f, Mathf.Min(korkeus * 0.5f, (taso - 34.4f) * 0.4f));
+                    p.BeginPath();
+                    p.MoveTo(P(9.2f, 60.2f)); p.LineTo(P(34.8f, 60.2f)); p.LineTo(P(Cx + alaPuoli, taso));
+                    p.QuadraticCurveTo(P(Cx, taso - keko * 2), P(Cx - alaPuoli, taso));
+                    p.ClosePath();
+                    p.fillColor = hiekka;
+                    p.Fill();
+                }
+
+                // Kiilto.
+                p.BeginPath();
+                p.MoveTo(P(12.5f, 9.4f)); p.LineTo(P(18.5f, 9.4f)); p.LineTo(P(22, 30));
+                p.strokeColor = new Color(1, 1, 1, 0.5f);
+                p.lineWidth = 1.4f * s;
+                p.Stroke();
+            }
+
+            static void Pyorea(Painter2D p, Vector2 a, float w, float h, float r)
+            {
+                r = Mathf.Min(r, Mathf.Min(w, h) * 0.5f);
+                p.BeginPath();
+                p.MoveTo(new Vector2(a.x + r, a.y));
+                p.LineTo(new Vector2(a.x + w - r, a.y));
+                p.ArcTo(new Vector2(a.x + w, a.y), new Vector2(a.x + w, a.y + r), r);
+                p.LineTo(new Vector2(a.x + w, a.y + h - r));
+                p.ArcTo(new Vector2(a.x + w, a.y + h), new Vector2(a.x + w - r, a.y + h), r);
+                p.LineTo(new Vector2(a.x + r, a.y + h));
+                p.ArcTo(new Vector2(a.x, a.y + h), new Vector2(a.x, a.y + h - r), r);
+                p.LineTo(new Vector2(a.x, a.y + r));
+                p.ArcTo(new Vector2(a.x, a.y), new Vector2(a.x + r, a.y), r);
+                p.ClosePath();
+            }
+        }
+    }
+}

@@ -15,10 +15,12 @@
 //   sulje-lehti               sulkee kaupunkilehden kuin pelaaja
 //   kortti kaupunki           kaupunkikortti (vain jos Natiivi-UI on asettanut PeliNakymat.KaupunkiKortti)
 //   liiku kaupunki            kortin "Liiku tänne" → matkavalinta (ilman korttia kuten napauta)
+//   maalehti ISO3 [aihe]      maan lehti aiheen sivulta (kartuscha)
 //   lue-lehti kaupunki        kaupunkilehti ilman matkaa (kortin "Lue kaupunkilehti")
 //   tutki [vaikea]            "Tutki kaupunkia" -nappi: kysymys auki (tila Kysymys)
 //   vastaa i | vastaa oikea   valitsee vaihtoehdon i (0..) tai oikean
 //   vastaa vaara              valitsee ensimmäisen näkyvän väärän vaihtoehdon
+//   aloita                    tervehdyssivun Aloita peli (kohtaaminen)
 //   vihje | puolita           vihje (40 £) tai 50:50 (80 £)
 //   jatka                     tuloksen Jatka-nappi: kysymys kiinni, vuoro päättyy
 //   luento kaupunki|intro|lento|saapuminen kaupunki   soittaa luennan (kerran-säännöistä välittämättä)
@@ -119,6 +121,8 @@ namespace Matkakirja.Natiivi
                     return A(1) == null ? "kaupunki puuttuu" : ohjain.AvaaKortti(A(1));
                 case "liiku":
                     return A(1) == null ? "kaupunki puuttuu" : ohjain.Liiku(A(1));
+                case "maalehti":
+                    return A(1) == null ? "maa puuttuu" : ohjain.LueMaalehti(A(1), A(2));
                 case "lue-lehti":
                     return A(1) == null ? "kaupunki puuttuu" : ohjain.LueLehti(A(1));
                 case "tutki":
@@ -139,6 +143,8 @@ namespace Matkakirja.Natiivi
                     else if (!int.TryParse(A(1), NumberStyles.Integer, CultureInfo.InvariantCulture, out i)) return "käyttö: vastaa i|oikea|vaara";
                     return ohjain.Vastaa(i);
                 }
+                case "aloita":
+                    return ohjain.AloitaKysymys();
                 case "vihje":
                     return ohjain.Vihje();
                 case "puolita":
