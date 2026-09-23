@@ -2643,3 +2643,7 @@ Neljäs Natiivi-UI-sessio tänään.
 ## LAITETESTAAJA NOLLATAAN (71 %): TARKISTUSLISTA omistajan-testflight-lista-20260924.md, LUOVUTUS -yo.md, ALOITUS viesti-laitetestaaja-aloitus.md. PELIKOODARI: MIGRAATIO v3/v4 → v5 TESTATTU (43f2820, 168/168); YOPORTTI PR #2990 (23.9.2026 klo 22.28)
 
 Migraatio varmistettu TestFlight 1:n tallennuksilla.
+
+## RADIO SOI iPADILLA (LINSSISEPPA, MASTER 5dd794d, v18-RADIOT): RaBe, ByteFM, RADIO HELSINKI JA AKABOOZI LUKITTUIVAT ~2,6 s:SSA JA SOIVAT 10 s MYOHEMMIN (AVPlayer Playing); NAYTTORIVIT WEBIN MUKAISET; LOKI proto-3d/lokit/radiotesti-20260923-b/. NATIIVI-UI KAYNNISTETTY UUDELLEEN klo 22.3x (23.9.2026 klo 22.28)
+
+Radio-linssi natiivissa toimii päästä päähän.
