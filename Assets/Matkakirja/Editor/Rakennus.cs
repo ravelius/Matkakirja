@@ -116,6 +116,9 @@ namespace Matkakirja.Editori
             PlayerSettings.iOS.sdkVersion = sdk;
             PlayerSettings.iOS.simulatorSdkArchitecture = AppleMobileArchitectureSimulator.ARM64;
             PlayerSettings.iOS.targetOSVersionString = "17.0";
+            // Omistajan Personal Team (ilmainen provisiointi, 7 päivää).
+            PlayerSettings.iOS.appleDeveloperTeamID = "F72JLS57C5";
+            PlayerSettings.iOS.appleEnableAutomaticSigning = true;
             PlayerSettings.defaultInterfaceOrientation = UIOrientation.AutoRotation;
         }
 
@@ -147,11 +150,11 @@ namespace Matkakirja.Editori
             Kaanna("Build/iOS-sim");
         }
 
-        /// <summary>Xcode-projekti laitteelle: Build/iOS-laite.</summary>
+        /// <summary>Xcode-projekti laitteelle: Build/laite.</summary>
         public static void IosLaite()
         {
             AsetaIos(iOSSdkVersion.DeviceSDK);
-            Kaanna("Build/iOS-laite");
+            Kaanna("Build/laite");
         }
     }
 }
