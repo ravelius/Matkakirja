@@ -23,9 +23,13 @@ namespace Matkakirja.Natiivi
         public const string Sahkepalkkio = "Sähkepalkkio";
         public const string Oletus = "Matkakassa";
 
-        /// <summary>Lehden minitehtävä (web "Lehden minitehtävä ratkesi"); fokustehtävä "Aarteen avaus ratkesi".</summary>
+        /// <summary>
+        /// Lehden minitehtävä (web "Lehden minitehtävä ratkesi"). Fokustehtävän leima on webissä
+        /// "&lt;nimilaatta&gt; ratkesi" (AARTEEN AVAUS, JULISTE …): näkymä antaa nimilaatan LehtiTeko.Selitteessä;
+        /// ilman sitä yleinen "Lehden tehtävä ratkesi".
+        /// </summary>
         public static string Minitehtava(string aihe) =>
-            aihe != null && aihe.StartsWith(Matkakirja.Natiivi.Fokusdata.Etuliite + ":") ? "Aarteen avaus ratkesi" : "Lehden minitehtävä ratkesi";
+            aihe != null && aihe.StartsWith(Matkakirja.Natiivi.Fokusdata.Etuliite + ":") ? "Lehden tehtävä ratkesi" : "Lehden minitehtävä ratkesi";
     }
 
     public sealed partial class PeliOhjain
