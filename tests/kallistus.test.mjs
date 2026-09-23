@@ -15,7 +15,8 @@ import {
   kameranKehys, kallistettuKehys, laattakerroksenOsuma, pinnanRuutupiste, laattakerroksenNakyvissa, pallonPiste,
 } from '../js/pallolaatat.js';
 import {
-  asennaKallistus, kallistusKaytossa, KALLISTUS_AVAIN, KALLISTUS_MAX, KALLISTUS_RAJA_KERROIN,
+  asennaKallistus, kallistusKaytossa, kallistusTila, pysyvaKallistuskulma, KALLISTUS_AVAIN, KALLISTUS_MAX,
+  KALLISTUS_PYSYVA_KULMA, KALLISTUS_RAJA_KERROIN,
 } from '../js/pallolauta/kallistus.js';
 
 const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
@@ -166,11 +167,70 @@ test('reduced motion: ei kallistusta', async () => {
 
 test('kytkentä: lauta asentaa vain koelipulla, kallistus on ele ladonnalle, CSS2D-ennuste ohitetaan', () => {
   const lauta = lue('../js/pallolauta/lauta.js');
-  assert.match(lauta, /const kallistus = kallistusKaytossa\(piirtokokeet\(\)\) \? asennaKallistus\(/);
+  assert.match(lauta, /const kallistustila = kallistusTila\(piirtokokeet\(\)\);\n\s*const kallistus = kallistustila \? asennaKallistus\(\{/);
+  assert.match(lauta, /pysyva: kallistustila === 'pysyva', pysyvaKulma: pysyvaKallistuskulma\(\)/);
   assert.match(lauta, /\|\| kallistus\?\.kaynnissa\(\)\);/);
   assert.match(lauta, /if \(kallistus && kesto > 0\) void kallistus\.esitteleAjonJalkeen\(\(\) => kamera\.kameraAjossa\?\.\(\)\);/);
   const pallo = lue('../js/pallo.js');
   assert.match(pallo, /if \(pov\?\.kallistus\?\.kulma \|\| edellinen\?\.pov\?\.kallistus\?\.kulma\) return lepo;/);
   const css = lue('../css/styles.css');
   assert.match(css, /body\.pallolauta-kallistettu \.pallolauta-maapaneeli/);
+});
+
+/*
+ * PYSYVÄ KALLISTUS (valikon kytkin, Fable 23.9.2026): kallistus pysyy
+ * syötteessä, eleet ajetaan (kirjaston update ohitetaan lipulla), kortit
+ * eivät piiloudu ja vakaa kallistus ei ole ele ladonnalle.
+ */
+test('tila: kytkin ja ?koe=kallistuspysyva ovat pysyviä, ?koe=kallistus on esittely', () => {
+  const muisti = (arvo) => ({ localStorage: { getItem: () => arvo } });
+  assert.equal(kallistusTila(new Set(), muisti(null)), null);
+  assert.equal(kallistusTila(new Set(['kallistus']), muisti(null)), 'esittely');
+  assert.equal(kallistusTila(new Set(['kallistuspysyva']), muisti(null)), 'pysyva');
+  assert.equal(kallistusTila(new Set(), muisti('1')), 'pysyva');
+  assert.equal(kallistusTila(new Set(['kallistus']), muisti('1')), 'pysyva');
+  assert.equal(kallistusTila(new Set(), muisti('0')), null);
+  assert.equal(kallistusKaytossa(new Set(), muisti('1')), true);
+  const osoite = (haku) => ({ location: { search: haku } });
+  assert.equal(pysyvaKallistuskulma(osoite('')), KALLISTUS_PYSYVA_KULMA);
+  assert.equal(pysyvaKallistuskulma(osoite('?kallistuskulma=30')), 30);
+  assert.equal(pysyvaKallistuskulma(osoite('?kallistuskulma=80')), KALLISTUS_MAX);
+  assert.equal(pysyvaKallistuskulma(osoite('?kallistuskulma=1')), KALLISTUS_PYSYVA_KULMA);
+  assert.ok(KALLISTUS_PYSYVA_KULMA >= 20 && KALLISTUS_PYSYVA_KULMA <= 25);
+  // Valikon rivi käyttää samaa avainta ilman tuontia.
+  const main = lue('../js/main.js');
+  assert.match(main, new RegExp(`const KALLISTUS_AVAIN = '${KALLISTUS_AVAIN}';`));
+  assert.match(main, /dataset\.kytkin = 'kallistus'/);
+});
+
+test('pysyvä: syöte ei suorista, eleet jäävät, kortit eivät piiloudu, vakaa kulma ei ole ele', async () => {
+  const { pallo, ohjaimet } = ankkaPallo();
+  const eleita = [];
+  ohjaimet.update = function pallonSyoteUpdate() { eleita.push(1); return ohjaimet.__kirjastoOhi ? false : 'alkuperainen'; };
+  const kuuntelijat = {};
+  const kotelo = {
+    addEventListener: (n, f) => { kuuntelijat[n] = f; }, removeEventListener() {}, appendChild() {},
+    classList: { toggle: (c, p) => { if (p) throw new Error(`luokka ${c} ei saa tulla pysyvässä`); } },
+  };
+  const ajastimet = [];
+  const ikkuna = {
+    performance: { now: () => 0 }, setTimeout: (f, ms) => { ajastimet.push({ f, ms }); return ajastimet.length; }, clearTimeout() {},
+  };
+  const k = asennaKallistus({ pallo, kotelo, ikkuna, pysyva: true, pysyvaKulma: 22 });
+  assert.equal(ajastimet.at(-1).ms, 1200, 'kulma tulee asennuksen jälkeen');
+  await k.kallista({ kulma: 22, kesto: 0 });
+  assert.equal(k.tila().paalla, true);
+  assert.equal(k.kaynnissa(), false, 'vakaa kallistus ei estä ladontaa');
+  assert.equal(ohjaimet.update(), false, 'kirjaston update ohitetaan');
+  assert.equal(eleita.length, 1, 'eleiden update ajetaan');
+  kuuntelijat.pointerdown?.();
+  kuuntelijat.wheel?.();
+  assert.equal(k.tila().kulma, 22, 'syöte ei suorista');
+  // Kirjaston tween suoristaa ja kulma palaa sen jälkeen.
+  pallo.pointOfView({ lat: 46 }, 800);
+  assert.equal(k.tila().paalla, false);
+  assert.equal(ohjaimet.__kirjastoOhi, undefined);
+  assert.equal(ajastimet.at(-1).ms, 800 + 150);
+  assert.equal(await k.esittele(), false, 'esittelyä ei ajeta pysyvässä');
+  k.pura();
 });

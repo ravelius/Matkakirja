@@ -72,11 +72,12 @@ const ylinRivi = (sivu, ehto = '') => sivu.waitForFunction((e) => {
 }, ehto, { timeout: 20000 }).then((h) => h.jsonValue()).catch(() => '');
 
 const avaaValikko = async (sivu) => {
-  await sivu.evaluate(() => { const m = document.getElementById('paavalikko'); if (m?.hidden) document.getElementById('menu-btn')?.click(); });
+  // Kokeet ovat ratasvalikon kehittäjäryhmässä Mittaus (23.9.2026); kehittäjätila on muistissa.
+  await sivu.evaluate(() => { const m = document.getElementById('kehittaja-valikko'); if (m?.hidden) document.getElementById('kehittaja-valikko-btn')?.click(); });
   await sivu.waitForSelector('#piirtokoe-valikko button[data-piirtokoe="syotetouch"]', { state: 'visible', timeout: 10000 });
 };
 try {
-  const { ctx, sivu, virheet } = await avaa('', { 'matkakirja-piirtokoe': 'normaali', 'matkakirja-kehysprofiili': '1' });
+  const { ctx, sivu, virheet } = await avaa('', { 'matkakirja-piirtokoe': 'normaali', 'matkakirja-kehysprofiili': '1', 'matkakirja-kehittaja': '1' });
   await ylinRivi(sivu, 'Normaali');
   // L4 ensin: valinta ja paluu viiveen aikana ei lataa.
   let navigaatioita = 0;
