@@ -22,6 +22,7 @@ namespace Matkakirja.Natiivi
     public sealed class KaupunkiTiedot
     {
         public string Id, Nimi, Maa, MaaNimi, Johdanto;
+        public double Lat = double.NaN, Lon = double.NaN;
         /// <summary>Lipun osoitteet järjestyksessä (url, varat).</summary>
         public List<string> Lippu = new List<string>();
         public List<Kuvateksti> Kansikuvat = new List<Kuvateksti>();
@@ -60,6 +61,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Kaupungin tiedot, tai null (ei vielä ladattu tai tuntematon).</summary>
         public static KaupunkiTiedot Kaupunki(string id) =>
             id != null && kaupungit != null && kaupungit.TryGetValue(id, out var k) ? k : null;
+
+        /// <summary>Kaikki kaupungit (tyhjä, kunnes ladattu).</summary>
+        public static IEnumerable<KaupunkiTiedot> Kaikki => kaupungit != null ? kaupungit.Values : (IEnumerable<KaupunkiTiedot>)new KaupunkiTiedot[0];
 
         /// <summary>Maan tiedot ISO3-koodilla, tai null.</summary>
         public static MaaTiedot Maa(string iso3) =>
@@ -178,7 +182,11 @@ namespace Matkakirja.Natiivi
             {
                 string id = MiniJson.Teksti(a, "id");
                 if (id == null) continue;
-                t[id] = new KaupunkiTiedot { Id = id, Nimi = MiniJson.Teksti(a, "nimi") ?? id, Maa = MiniJson.Teksti(a, "maa") };
+                t[id] = new KaupunkiTiedot
+                {
+                    Id = id, Nimi = MiniJson.Teksti(a, "nimi") ?? id, Maa = MiniJson.Teksti(a, "maa"),
+                    Lat = MiniJson.Luku(a, "lat") ?? double.NaN, Lon = MiniJson.Luku(a, "lon") ?? double.NaN,
+                };
             }
 
             var maat = new Dictionary<string, (string Nimi, List<string> Lippu)>();
