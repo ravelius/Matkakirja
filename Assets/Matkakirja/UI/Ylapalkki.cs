@@ -138,6 +138,42 @@ namespace Matkakirja.Natiivi
         /// <summary>Ruudun koko tai testikomento muutti tilaa: näkymät asettuvat uudelleen (TurvaMuuttui).</summary>
         public void Paivita() => kerros.PakotaTurva();
 
+        // Web @keyframes laukku-elo (0,9 s): (hetki, kulma °, mittakaava).
+        static readonly (float T, float Kulma, float Koko)[] LaukkuElo =
+            { (0f, 0f, 1f), (0.14f, -7f, 1.14f), (0.32f, 6f, 1.1f), (0.52f, -4f, 1.06f), (0.72f, 2.5f, 1.03f), (1f, 0f, 1f) };
+        IVisualElementScheduledItem eloAjastin;
+
+        /// <summary>
+        /// Laukku herää eloon, kun sinne tulee jotain uutta (web elavoitaLaukku, .turn-pill.laukku-elo):
+        /// pieni heilahdus 0,9 s. Pieni liike: ei heilahdusta (web prefers-reduced-motion).
+        /// </summary>
+        public void ElavoitaLaukku()
+        {
+            eloAjastin?.Pause();
+            pilleri.style.rotate = StyleKeyword.Null;
+            pilleri.style.scale = StyleKeyword.Null;
+            if (LinssiUi.VahennettyLiike() || pilleri.style.display == DisplayStyle.None) return;
+            float alku = Time.unscaledTime;
+            eloAjastin = pilleri.schedule.Execute(() =>
+            {
+                float t = Mathf.Clamp01((Time.unscaledTime - alku) / 0.9f);
+                int i = 1;
+                while (i < LaukkuElo.Length - 1 && LaukkuElo[i].T < t) i++;
+                var a = LaukkuElo[i - 1];
+                var b = LaukkuElo[i];
+                float s = Mathf.SmoothStep(0f, 1f, (t - a.T) / Mathf.Max(0.0001f, b.T - a.T));
+                pilleri.style.rotate = new Rotate(new Angle(Mathf.Lerp(a.Kulma, b.Kulma, s)));
+                float k = Mathf.Lerp(a.Koko, b.Koko, s);
+                pilleri.style.scale = new Scale(new Vector2(k, k));
+                if (t >= 1f)
+                {
+                    eloAjastin?.Pause();
+                    pilleri.style.rotate = StyleKeyword.Null;
+                    pilleri.style.scale = StyleKeyword.Null;
+                }
+            }).Every(16);
+        }
+
         void PaivitaNappi()
         {
             vakasnappi.style.display = piilossa && nakyy ? DisplayStyle.Flex : DisplayStyle.None;

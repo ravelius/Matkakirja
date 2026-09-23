@@ -36,6 +36,15 @@
 //                                             kategorian n:s rivi (kortti kiinni, nosto auki); alas/ylos = kelausrivi
 //   ui turistiinfo [kaupunki]                 turisti-info-merkin napautus (UiPalvelut.IlmoitaTuristiInfo, oletus lontoo)
 //   ui huipennus                              matkan huipennus (kaikki aarteet) esimerkkiluvuin
+//   ui paljastus [tyyppi] [kaupunki] [kaari]  aarteen paljastus koko ruudulle ilman peliä ja ääniä (Paljastus.Testaa):
+//                                             star (oletus) | isoAarre | pieniAarre | mannerAarre | pollo | piirros;
+//                                             kaupunki antaa mantereen nimen (oletus pariisi); kaari = kaaritekstin paikka
+//   ui reaktio [nakyma] [arg]                 reaktionapit KUIVANA (ei verkkoa, ei jonoa; Reaktiot.Kuiva = true):
+//                                             lehti [kaupunki] (aihesivu 2, oletus firenze) | nosto [kohde:id@ISO] (oletus pompeji) |
+//                                             nahtavyys [kaupunki] [n] | huono (Mikä oli vialla?) | virhe (lomake,
+//                                             "Lähetä Livialle" / "Peru") | tila (oma ääni, jono) | kuiva pois
+//   ui reaktio laheta virhe <kohde> <teksti>  OIKEA lähetys erikseen: virheilmoitus workerille (POST /laheta)
+//   ui reaktio laheta aani <kohde> [symboli]  OIKEA ääni (POST /reaktio; tyhjä symboli = peru oma)
 //   ui sahke liuska|apu|sulje|kiinni|uusi|jasen|tila   sähkeliuska ja retkikuntaosio valekutsuin (SahkeNakyma.Testaa)
 //   ui sahketehtava [kaupunki] [tila]         pöllön sähketehtävä ilman peliä (oletus sofia tyhja), oikea sisältö ja
 //                                             hakemisto, hiljainen. Tilat: tyhja | ohi | ohi2 (vinkki) | pullat (ostettu) |
@@ -60,6 +69,10 @@
 //                                             kuvallinen juttu tai kohde n) → "Avaa juttu" nähtävyysarkkiin;
 //                                             ohittaa sijaintiehdon (webissä vain kaupungissa, jossa pelaaja on)
 //   ui tietoja                                tekijätiedot ja lähteet
+//   ui tehoste <nimi> [voima] | ui tehoste lista  tehoste siivutaulusta (webin sfx.play-nimet: correct, wrong,
+//                                             quizOpen, tick, dieLand, paper, popup …) tai pulun (pulu.kujerrus);
+//                                             lista = kaikki nimet lokiin. SOI ÄÄNEEN (mykistettynä hiljaa)
+//   ui lentoaani alku [kesto s] | loppu       lennon moottoriääni (PeliOhjain.LentoAani ilman peliä)
 //   ui palaute [palaute|ehdotus|kuvavinkki|pro|periaate|kuvapalaute]
 //                                             palaute- ja ehdotuslomake AUKI ILMAN LÄHETYSTÄ: palaute (oletus) =
 //                                             "Kerro mitä huomasit" kuten hampurilaisesta; ehdotus/kuvavinkki/pro
@@ -150,6 +163,60 @@ namespace Matkakirja.Natiivi
                 Kirjaa(rivi + " → " + (tulos ?? "ok"));
             }
             PaivitaLivia();
+        }
+
+        /// <summary>
+        /// ui reaktio: näkymät kuivana (Reaktiot.Kuiva = true, ei verkkoa eikä jonoa). Vain
+        /// "ui reaktio laheta …" lähettää oikeasti (Reaktiot.TestiLahetys).
+        /// </summary>
+        string Reaktio(UiNakymat ui, string loput)
+        {
+            var r = loput.Split(new[] { ' ' }, 4, System.StringSplitOptions.RemoveEmptyEntries);
+            string laji = r.Length > 0 ? r[0].ToLowerInvariant() : "lehti";
+            if (laji == "laheta")
+            {
+                if (r.Length < 3) return "ui reaktio laheta virhe|aani <kohde> [teksti|symboli]";
+                return Reaktiot.TestiLahetys(r[1].ToLowerInvariant(), r[2], r.Length > 3 ? r[3] : "", t => Kirjaa("ui reaktio laheta: " + t));
+            }
+            if (laji == "kuiva") { Reaktiot.Kuiva = !(r.Length > 1 && r[1] == "pois"); return "kuiva = " + Reaktiot.Kuiva; }
+            if (laji == "tila")
+            {
+                var v = Reaktiot.Viimeisin;
+                return "kuiva = " + Reaktiot.Kuiva + ", jonossa " + Reaktiot.Jonossa
+                    + (v != null ? ", viimeisin " + v.Avain + " oma = '" + Reaktiot.OmaAani(v.Avain) + "'" : "");
+            }
+            Reaktiot.Kuiva = true;
+            switch (laji)
+            {
+                case "lehti":
+                    ui.Lehti.Nayta(LehtiLaji.Kaupunki, r.Length > 1 ? r[1].ToLowerInvariant() : "firenze", null, 1);
+                    return null;
+                case "nosto":
+                    ui.Nostokortti.Avaa(r.Length > 1 ? r[1] : "kohde:pompeji@ITA");
+                    return null;
+                case "nahtavyys":
+                {
+                    string kid = r.Length > 1 ? r[1].ToLowerInvariant() : "firenze";
+                    int nro = r.Length > 2 && int.TryParse(r[2], out var n) ? n : 0;
+                    Kohdekartat.Hae(kid, k =>
+                    {
+                        var kohde = k?.Kohteet.Find(x => nro > 0 ? x.Numero == nro : x.Selattava);
+                        if (kohde != null) ui.Nahtavyydet.AvaaKohde(k, kohde);
+                        else Kirjaa("ui reaktio nahtavyys: ei kohdetta " + kid);
+                    });
+                    return null;
+                }
+                case "huono":
+                case "virhe":
+                {
+                    // Auki olevan näkymän viimeisin rivi, muuten erillinen testirivi (ei piirry mihinkään).
+                    var rivi = Reaktiot.Viimeisin?.Juuri.panel != null ? Reaktiot.Viimeisin
+                        : Reaktiot.Piirra(new VisualElement(), "testi:reaktio", "Testirivi");
+                    if (laji == "huono") rivi.AvaaKysymys(); else rivi.AvaaVirheikkuna();
+                    return rivi.Avain;
+                }
+                default: return "ui reaktio lehti|nosto|nahtavyys|huono|virhe|tila|kuiva pois|laheta";
+            }
         }
 
         void Kirjaa(string teksti)
@@ -289,6 +356,26 @@ namespace Matkakirja.Natiivi
                     if (loput.Length > 0) ui.Chat.Kysy(loput); else ui.Chat.Vaihda();
                     return null;
                 case "tietoja": ui.Tietoja.Avaa(); return null;
+                case "tehoste":
+                {
+                    var tk = loput.Split(new[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries);
+                    if (tk.Length == 0 || tk[0] == "lista")
+                        return string.Join(" ", Aanet.TehosteNimet) + " | " + string.Join(" ", Aanet.PulunTehosteNimet);
+                    float voima = tk.Length > 1 ? float.Parse(tk[1], CultureInfo.InvariantCulture) : 1f;
+                    if (tk[0].StartsWith("pulu.")) { Aanet.PulunTehoste(tk[0], voima); return null; }
+                    return Aanet.Tehoste(tk[0], voima) ? null : "ei soinut (tuntematon nimi tai Äänimaisema pois): " + tk[0];
+                }
+                case "lentoaani":
+                {
+                    var la = loput.Split(new[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries);
+                    string mita = la.Length > 0 ? la[0] : "alku";
+                    if (mita == "loppu") { Aanet.LentoAani(false); return null; }
+                    if (mita != "alku") return "ui lentoaani alku [kesto] | loppu";
+                    float kesto = la.Length > 1 ? float.Parse(la[1], CultureInfo.InvariantCulture) : 4.8f;
+                    if (Aanet.LentoSoi) return "soi jo";
+                    Aanet.LentoAani(true, kesto);
+                    return null;
+                }
                 case "palaute":
                     switch (loput.Length > 0 ? loput : "palaute")
                     {
@@ -368,6 +455,10 @@ namespace Matkakirja.Natiivi
                     return null;
                 }
                 case "kaupunki": return Kaupunki(ui, loput);
+                case "paljastus":
+                    return ui.Paljastus.Testaa(loput);
+                case "reaktio":
+                    return Reaktio(ui, loput);
                 case "huipennus":
                     ui.Huipennus.Nayta(new MatkanYhteenveto { Paivat = 83, Kaupungit = 41, Aarteet = 6, AarteitaKaikkiaan = 6 },
                         () => ui.Aloitus.NaytaAvaus(id => ui.Tilarivi.Viesti("Lähtö: " + id)));

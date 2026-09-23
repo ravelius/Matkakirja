@@ -133,6 +133,8 @@ namespace Matkakirja.Natiivi
             // Lehti aukeaa kaiken päälle: auki jääneet valikot ja popupit kiinni.
             Lehti.Avautui += _ => { Valikko.Sulje(); Aanentasot.Sulje(); Matkalaukku.Sulje(); Vahvistus.Sulje(); Julistegalleria.Sulje(); Minipopup.SuljeAuki(); };
             Paljastus = new Paljastus(kerros);
+            // Löytö päätyy matkalaukkuun: laukku heilahtaa paljastuksen sulkeutuessa (web elavoitaLaukku).
+            Paljastus.Suljettiin += aarre => { if (aarre) Tilarivi.ElavoitaLaukku(); };
             Sahke = new SahkeNakyma(kerros, Valikko);
             Sahkelomake = new SahketehtavaNakyma(kerros); // pelidialogien kerros (30), pulun kuplat päällä
             Julistegalleria = new Julistegalleria(kerros); // laukun päälle (sama kerros, myöhemmin)
@@ -156,6 +158,7 @@ namespace Matkakirja.Natiivi
             Valikko.EhdotaPainettu += () => Palaute.Avaa();
             Tilarivi.LogoPainettu += () => { Valikko.Sulje(); Aanentasot.Sulje(); Matkalaukku.Sulje(); Tietoja.Avaa(); };
             UiSisalto.Lataa(null); // kaupunkidata valmiiksi ennen ensimmäistä napautusta
+            Aanet.Alusta(); // tehostekanava, mykistyksen napsahdus ja tehosteiden tiedostot laitteelle
 
             Tilarivi.Valikko.clicked += () => { Aanentasot.Sulje(); Matkalaukku.Sulje(); Valikko.Vaihda(); };
             Tilarivi.Ratas.clicked += () => { Valikko.Sulje(); Matkalaukku.Sulje(); Aanentasot.Vaihda(); };
@@ -177,6 +180,7 @@ namespace Matkakirja.Natiivi
         }
 
         bool ohjainKytketty;
+        MatkanYhteenveto odottavaHuipennus;
 
         void KytkeOhjain()
         {
@@ -213,7 +217,24 @@ namespace Matkakirja.Natiivi
             // Sähkehakemisto valmiiksi, kun saavutaan sähkekaupunkiin (lehtien jäsennys ennen pisteen napautusta).
             o.MatkaPerilla += kaupunki => UiKerros.PaaSaikeessa(() => EsilataaSahkehakemisto(kaupunki));
             EsilataaSahkehakemisto(o.PelaajanKaupunki);
-            o.KaikkiAarteetLoytyi += yv => UiKerros.PaaSaikeessa(() => Huipennus.Nayta(yv, () => UusiMatka(o)));
+            // Huipennus vasta, kun viimeisen aarteen kysymys (ja sen paljastus) on suljettu: tapahtuma
+            // tulee löytöhetkellä, ennen paljastusta, eikä huipennus saa jäädä paljastuksen alle.
+            // Web: voittoikkuna aukeaa → sfx.play('win').
+            o.KaikkiAarteetLoytyi += yv => UiKerros.PaaSaikeessa(() =>
+            {
+                if (!Kysymys.Auki && !Paljastus.Auki) { Aanet.Tehoste("win"); Huipennus.Nayta(yv, () => UusiMatka(o)); return; }
+                odottavaHuipennus = yv;
+            });
+            Kysymys.Piilotettu += () =>
+            {
+                var yv = odottavaHuipennus;
+                odottavaHuipennus = null;
+                if (yv != null) { Aanet.Tehoste("win"); Huipennus.Nayta(yv, () => UusiMatka(o)); }
+            };
+            // Pelin tehosteet (webin sfx.play-tunnukset) ja lennon moottoriääni (startFlight/stopFlight),
+            // B7 §1.8: siivut UI:n äänimoottorilla.
+            o.Aani += tunnus => UiKerros.PaaSaikeessa(() => Aanet.Tehoste(tunnus));
+            o.LentoAani += (alkaa, kesto) => UiKerros.PaaSaikeessa(() => Aanet.LentoAani(alkaa, kesto));
             // Lehti (WKWebView) aukeaa kaiken päälle: auki jääneet valikot kiinni.
             if (o.Lehti != null) o.Lehti.Avautui += _ => { Valikko.Sulje(); Aanentasot.Sulje(); Matkalaukku.Sulje(); Vahvistus.Sulje(); };
         }
@@ -268,6 +289,7 @@ namespace Matkakirja.Natiivi
 
         public void SuljeKaikki()
         {
+            odottavaHuipennus = null; // uusi matka tai UI pois: odottanut huipennus ei enää kuulu tähän hetkeen
             Valikko.Sulje();
             Aanentasot.Sulje();
             Matkalaukku.Sulje();
@@ -315,7 +337,10 @@ namespace Matkakirja.Natiivi
             kierto ??= UnityEngine.Object.FindAnyObjectByType<PalloKierto>();
             if (kierto != null && kierto.RuutuPiste(lat, lon, out var ruutu, 5000))
                 alku = UnityEngine.UIElements.RuntimePanelUtils.ScreenToPanel(juuri.panel, new Vector2(ruutu.x, Screen.height - ruutu.y));
-            Noppa.Heita(arvo, alku, loppu, valmis, vahennettyLiike: LinssiUi.VahennettyLiike());
+            // Web animateDie: onTick → dieTick (pyörintä), onBounce → clack (pomppu). dieLand tulee
+            // PeliOhjaimen Aani-tapahtumasta.
+            Noppa.Heita(arvo, alku, loppu, valmis, vahennettyLiike: LinssiUi.VahennettyLiike(),
+                pomppu: () => Aanet.Tehoste("clack"), kohina: () => Aanet.Tehoste("dieTick"));
         }
 
         /// <summary>Testikomento 'ui matka': esimerkkivalinta ilman peliä.</summary>

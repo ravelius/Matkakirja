@@ -44,8 +44,8 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>
-        /// Avaa uuden minipopupin (sulkee edellisen); rakenna täyttää Sisallon. kerros = UI-kerros
-        /// (oletus valikot; aloitusnäkymän periaatteista Traileri, ettei popup jää niiden alle).
+        /// Avaa uuden minipopupin (sulkee edellisen); rakenna täyttää Sisallon. kerros = UiKerros-kerros
+        /// (oletus Valikot; Traileri = lehden, nähtävyysarkin ja aloitusnäkymän päälle, ettei popup jää alle).
         /// </summary>
         public static Minipopup Avaa(string otsikko, Action<VisualElement> rakenna, string luokka = null, int kerros = UiKerros.Valikot)
         {

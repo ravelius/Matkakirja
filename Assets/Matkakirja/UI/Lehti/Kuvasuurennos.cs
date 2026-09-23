@@ -1,7 +1,8 @@
 // KUVASUURENNOS (Natiivi-UI): kuva isona paperikehyksessä, pitkä selite ja lähderivi
 // (webin naytaKulttuuriKuva / avaaKohdeSuurennos). Sarjaa voi selata ‹ ›; napautus kuvan
 // ohi sulkee. Kuvat NostoSisalto.HaeKuva-reitillä (https, media.json, Commons). Ihmekuvalla
-// kulmanauha kuten kortissa (web avaaKohdeSuurennos piirraIhmenauha).
+// kulmanauha kuten kortissa (web avaaKohdeSuurennos piirraIhmenauha) ja oma reaktiorivi
+// (LehtiKuva.Reaktio, web piirraReaktiot luokalla reaktiot-suurennos).
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,7 +12,8 @@ namespace Matkakirja.Natiivi
 {
     public sealed class Kuvasuurennos
     {
-        readonly VisualElement kerros, kuva;
+        readonly VisualElement kerros, kuva, kehys;
+        ReaktioRivi reaktiot;
         readonly Label teksti, lahde, laskuri;
         VisualElement nauha;
         Texture2D ladattu;
@@ -26,7 +28,7 @@ namespace Matkakirja.Natiivi
             kerros = Rakenne.El("mk-nosto__suurennos mk-suurennos", isa);
             kerros.style.display = DisplayStyle.None;
             kerros.RegisterCallback<PointerDownEvent>(e => { if (e.target == kerros) Sulje(); });
-            var kehys = Rakenne.El("mk-nosto__suurennoskehys", kerros);
+            kehys = Rakenne.El("mk-nosto__suurennoskehys", kerros);
             kuva = Rakenne.El("mk-nosto__suurennoskuva", kehys, PickingMode.Ignore);
             edellinen = Rakenne.Nappi("‹", "mk-nosto__selaa mk-nosto__selaa--vasen", () => Nayta(i - 1), kuva);
             seuraava = Rakenne.Nappi("›", "mk-nosto__selaa mk-nosto__selaa--oikea", () => Nayta(i + 1), kuva);
@@ -88,6 +90,10 @@ namespace Matkakirja.Natiivi
             bool monta = sarja.Count > 1;
             edellinen.style.display = seuraava.style.display = laskuri.style.display = monta ? DisplayStyle.Flex : DisplayStyle.None;
             laskuri.text = $"{i + 1} / {sarja.Count}";
+            // Kuvan oma reaktiorivi paperin alle (web avaaKohdeSuurennos / naytaKulttuuriKuva: kuva.reaktio,
+            // käytännössä Matkakirjan ihme); vaihtuu kuvan mukana.
+            reaktiot?.Juuri.RemoveFromHierarchy();
+            reaktiot = Reaktiot.Piirra(kehys, k.Reaktio, k.ReaktioOtsikko ?? k.Otsikko ?? k.Lyhyt, "mk-reaktiot--suurennos");
         }
     }
 }
