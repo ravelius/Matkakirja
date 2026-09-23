@@ -52,8 +52,10 @@ namespace Matkakirja
         public GameObject koneMalli;
         [Tooltip("Koneen materiaali (URP Lit, hopea); FBX:n omat materiaalit eivät ole URP:tä.")]
         public Material koneMateriaali;
+        [Tooltip("Raidan (Raita) ja ikkunoiden (Ikkunat) materiaalit; null = koneMateriaali.")]
+        public Material raitaMateriaali, ikkunaMateriaali;
         [Tooltip("3D-koneen koko ruudulla iOS-pisteinä (siipiväli).")]
-        public float malliPx = 90f;
+        public float malliPx = 110f;
         public Savujana savu;
         public Aurinko aurinko;
 
@@ -345,11 +347,6 @@ namespace Matkakirja
             float kerroin = Screen.dpi > 0 ? Mathf.Max(1f, Screen.dpi / 163f) : 1f;
             float pikseli = 2f * etaisyys * Mathf.Tan(kamera.fieldOfView * 0.5f * Mathf.Deg2Rad) / Mathf.Max(1, Screen.height);
             malli.transform.localScale = Vector3.one * (pikseli * malliPx * kerroin / malliKoko);
-            if (Time.frameCount % 240 == 0)
-            {
-                var ruutu = kamera.WorldToScreenPoint(paikka);
-                Debug.Log($"MATKAKIRJA nappula: kone ruudulla {ruutu.x:0},{ruutu.y:0} z {ruutu.z:0}, etäisyys {etaisyys:0} m, mittakaava {malli.transform.localScale.x:0.#}, aktiivinen {malli.activeInHierarchy}, near {kamera.nearClipPlane:0} far {kamera.farClipPlane:0}");
-            }
         }
 
         Vector3 Maailmaan(double lat0, double lon0, double lat1, double lon1, double p, double huippu)
@@ -387,10 +384,12 @@ namespace Matkakirja
                     foreach (var r in malli.GetComponentsInChildren<Renderer>())
                     {
                         r.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
-                        if (koneMateriaali != null)
+                        var oma = r.name.StartsWith("Raita") && raitaMateriaali != null ? raitaMateriaali
+                            : r.name.StartsWith("Ikkun") && ikkunaMateriaali != null ? ikkunaMateriaali : koneMateriaali;
+                        if (oma != null)
                         {
                             var m = r.sharedMaterials;
-                            for (int i = 0; i < m.Length; i++) m[i] = koneMateriaali;
+                            for (int i = 0; i < m.Length; i++) m[i] = oma;
                             r.sharedMaterials = m;
                         }
                         if (rajat == null) rajat = r.bounds; else { var b = rajat.Value; b.Encapsulate(r.bounds); rajat = b; }
