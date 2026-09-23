@@ -28,7 +28,7 @@
 // "Sulje linssi" -pillerin aina, kun ylärivi on käytettävissä (web: ✕ ja ↺ pois
 // palkista 8.9.2026); ValikkoKaytettavissa kertoo sen LinssiUi:lle.
 // Aloita alusta: keksinnöissä Ajo.Alusta(aineiston alku) paikan päällä (web
-// alusta); ihmisen matkassa odottaa Linssisepän rajapintaa (IhmisenAlustus).
+// alusta); ihmisen matkassa IhmisenMatkaLinssi.AloitaAlusta (IhmisenAlustus).
 // IHMISEN MATKAN ALOITUS: EsittelyUIssa = true: musta ruutu, Ken Burns -taustakuvat
 // (AvausTausta) ja pergamentti, jossa IHMISEN_MATKA_ALOITUS; Käynnistä →
 // IhmisenMatkaLinssi.Kaynnista() (false = vanat vielä laskennassa → uusi yritys).
@@ -73,13 +73,9 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// IHMISEN MATKAN "ALOITA ALUSTA" (web aloitaAlusta: muisti pois ja linssi uudestaan
-        /// avausjaksosta). PUUTTUU Linssisepältä: IhmisenMatkaLinssi.AloitaAlusta(), joka purkaa
-        /// esityksen ja luo uuden avausjaksosta käynnistämättä sitä (EsittelyUIssa: aloituskortti
-        /// ja Käynnistä). Esitys.Aloita ei käynnisty uudelleen päättyneenä, eikä UI voi luoda
-        /// Esitystä itse. Kun rajapinta on, kytkentä on tämä yksi rivi (rivi näkyy silloin valikossa):
-        ///     static readonly Func<IhmisenMatkaLinssi, bool> IhmisenAlustus = l => l.AloitaAlusta();
+        /// avausjaksosta; Linssisepän IhmisenMatkaLinssi.AloitaAlusta, false suljettuna).
         /// </summary>
-        static readonly Func<IhmisenMatkaLinssi, bool> IhmisenAlustus = null;
+        static readonly Func<IhmisenMatkaLinssi, bool> IhmisenAlustus = l => l.AloitaAlusta();
 
         public AikajanaNakyma(UiKerros kerros, LinssiUi linssit)
         {

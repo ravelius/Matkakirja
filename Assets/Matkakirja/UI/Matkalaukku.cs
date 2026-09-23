@@ -67,11 +67,9 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// Keskeneräiset linssit omalle harmaalle rivilleen (web linssimoduulin `kesken: true`,
-        /// omistaja 20.9.2026). LinssiTiedot ei vielä kerro tätä (Linssisepän rajapinta):
-        /// siihen asti webin kolme keskeneräistä tunnuksilla. Kun kenttä on, rivi on
-        ///     static bool Kesken(Matkakirja.Linssit.LinssiTiedot t) => t.Kesken;
+        /// omistaja 20.9.2026; Linssisepän LinssiTiedot.Kesken).
         /// </summary>
-        static bool Kesken(Matkakirja.Linssit.LinssiTiedot t) => t.Id == "vertailu" || t.Id == "maatiedot" || t.Id == "vesistot";
+        static bool Kesken(Matkakirja.Linssit.LinssiTiedot t) => t.Kesken;
         PeliOhjain kuunneltu;
         Func<LaukkuNaytto> testiData;
         LaukkuNaytto naytetty;
