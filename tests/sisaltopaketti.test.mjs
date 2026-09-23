@@ -526,6 +526,17 @@ test('maakuntarajat (B17): avaimet ja renkaat', () => {
   assert.ok(wien.bbox[0] > 16 && wien.bbox[2] < 16.7 && wien.bbox[1] > 48 && wien.bbox[3] < 48.4);
 });
 
+test('lisenssikirjanpito: aineistot ja GPL-rajat', () => {
+  const m = JSON.parse(tiedostot.get('manifest.json'));
+  const l = JSON.parse(tiedostot.get(m.lisenssit.tiedosto));
+  const ids = l.aineistot.map((a) => a.id);
+  assert.ok(ids.includes('historical-basemaps') && ids.includes('natural-earth') && ids.includes('copernicus-dem'));
+  const gpl = l.aineistot.find((a) => a.id === 'historical-basemaps');
+  assert.equal(gpl.lisenssi, 'GPL-3.0');
+  assert.match(gpl.kaytto, /ämpäri/);
+  assert.ok(l.aineistot.every((a) => a.nimi && a.lisenssi && a.lahde && a.attribuutio && a.kaytto));
+});
+
 test('skeema 1.9: offline-manifesti maittain (laatat, maasto, media, tavut)', async () => {
   const m = JSON.parse(tiedostot.get('manifest.json'));
   const o = JSON.parse(tiedostot.get(m.offline.tiedosto));
