@@ -108,6 +108,36 @@ kuva huipennus
 ui sulje
 ```
 
+Lehti (`Lehti/Lehtinakyma.cs`, `LehtiSisalto.cs`; natiivi, WKWebView poistuu): kaupunkilehti
+(etusivu, "pintaa syvemmältä", aiheet, maan Menovinkit) ja maalehti (aiheet, sisällys ☰).
+Sivu vaihtuu napeista tai vaakapyyhkäisyllä; kuvan napautus avaa suurennoksen; kaiutin lukee sivun.
+`ui lehti <kaupunki> [sivu]`, `ui lehti sivu <n>`, `ui lehti kuva`, `ui maalehti <ISO> [aihe]`,
+`ui lehti sisallys` (maalehti).
+
+```
+ui aloita pariisi
+ui lehti firenze
+odota 4
+kuva lehti-etusivu
+ui lehti sivu 1
+odota 3
+kuva lehti-sivu1
+ui lehti sivu 3
+odota 3
+kuva lehti-aihe
+ui lehti kuva
+odota 2
+kuva lehti-suurennos
+ui sulje
+ui maalehti ITA
+odota 3
+kuva maalehti
+ui lehti sisallys
+odota 1
+kuva maalehti-sisallys
+ui sulje
+```
+
 Nostokortit (`Nostokortti.cs`, `NostoSisalto.cs`): karttavalon napautus (UiPalvelut.ValoNapautettu)
 avaa kortin. Kuvallinen kortti aukeaa ensin kuvana (LISÄÄ), sitten koko korttina; kuvan
 napautus avaa suurennoksen. `ui nosto <valoId>`: `skandaali:shakkiturkkilainen`,

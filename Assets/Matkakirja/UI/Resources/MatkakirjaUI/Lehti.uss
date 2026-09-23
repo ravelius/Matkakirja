@@ -1,0 +1,496 @@
+/* LEHTI (Natiivi-UI): kaupunki- ja maalehti — webin .dialog.lehti.arkki (css/styles.css). */
+
+.mk-lehti__peite {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(14, 9, 4, 0.34);
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.22s;
+}
+
+.mk-lehti__peite.mk-auki {
+    opacity: 1;
+}
+
+.mk-lehti {
+    width: 100%;
+    max-width: 960px;
+    height: 100%;
+    padding: 10px 0 0 0;
+    background-color: #f5f0e2;
+    color: rgba(58, 42, 26, 0.95);
+    overflow: hidden;
+}
+
+.mk-lehti__ylarivi {
+    flex-direction: row;
+    align-items: center;
+    padding: 4px 14px 6px 14px;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(70, 51, 31, 0.25);
+    flex-shrink: 0;
+}
+
+.mk-lehti__ylanimi {
+    flex-grow: 1;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: rgba(70, 51, 31, 0.8);
+    -unity-text-align: middle-center;
+}
+
+.mk-lehti__ikoninappi {
+    width: 40px;
+    height: 36px;
+    min-height: 36px;
+    padding: 0;
+    border-width: 0;
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #46331f;
+    justify-content: center;
+}
+
+.mk-lehti__ikoninappi > .mk-ikoni {
+    margin-right: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.mk-lehti__ikoninappi.mk-valittu {
+    background-color: rgba(217, 161, 59, 0.3);
+}
+
+.mk-lehti__sivupaikka {
+    flex-grow: 1;
+    flex-shrink: 1;
+    overflow: hidden;
+}
+
+.mk-lehti__sivu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.mk-lehti__sivu > .unity-scroll-view__content-viewport > .unity-scroll-view__content-container {
+    padding: 18px 26px 28px 26px;
+}
+
+.mk-lehti__sivu--liuku {
+    transition-property: translate, opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+/* --- masto ------------------------------------------------------------------ */
+
+.mk-lehti__masto {
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.mk-lehti__nimioyla {
+    font-size: 9.5px;
+    letter-spacing: 3.3px;
+    color: rgba(70, 51, 31, 0.7);
+}
+
+.mk-lehti__nimio {
+    font-size: 38px;
+    letter-spacing: 4px;
+    color: #16130f;
+    -unity-text-align: middle-center;
+    white-space: normal;
+    margin: 2px 0 4px 0;
+}
+
+.mk-lehti__paivays {
+    align-self: stretch;
+    padding: 4px 0;
+    border-top-width: 3px;
+    border-bottom-width: 1px;
+    border-top-color: rgba(70, 51, 31, 0.75);
+    border-bottom-color: rgba(70, 51, 31, 0.5);
+}
+
+.mk-lehti__paivaysteksti {
+    font-size: 11px;
+    letter-spacing: 1.8px;
+    -unity-text-align: middle-center;
+    color: #46331f;
+}
+
+/* --- aihe ja teksti ------------------------------------------------------------- */
+
+.mk-lehti__aihe {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 4px 0 12px 0;
+    padding: 6px 0;
+    border-top-width: 3px;
+    border-bottom-width: 1px;
+    border-top-color: rgba(70, 51, 31, 0.75);
+    border-bottom-color: rgba(70, 51, 31, 0.45);
+}
+
+.mk-lehti__aiheteksti {
+    flex-shrink: 1;
+    font-size: 21px;
+    letter-spacing: 1.2px;
+    color: #16130f;
+    -unity-text-align: middle-center;
+    white-space: normal;
+}
+
+.mk-lehti__lippu {
+    width: 30px;
+    height: 20px;
+    margin-left: 10px;
+    border-width: 0.5px;
+    border-color: rgba(70, 51, 31, 0.35);
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.mk-lehti__johdanto {
+    font-size: 16px;
+    white-space: normal;
+    margin-bottom: 16px;
+    color: rgba(58, 42, 26, 0.9);
+}
+
+.mk-lehti__esittely,
+.mk-lehti__leipa {
+    font-size: 16px;
+    white-space: normal;
+    margin-bottom: 10px;
+    color: rgba(58, 42, 26, 0.95);
+}
+
+.mk-lehti__osasto {
+    font-size: 11px;
+    letter-spacing: 2.2px;
+    color: #7a5514;
+    margin: 6px 0 8px 0;
+}
+
+.mk-lehti__nosto {
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(70, 51, 31, 0.18);
+}
+
+.mk-lehti__nosto-otsikkorivi {
+    flex-direction: row;
+    align-items: flex-end;
+    margin-bottom: 8px;
+}
+
+.mk-lehti__nosto-otsikko {
+    flex-grow: 1;
+    flex-shrink: 1;
+    font-size: 19px;
+    white-space: normal;
+    color: #16130f;
+}
+
+.mk-lehti__aika {
+    margin-left: 10px;
+    font-size: 12px;
+    color: rgba(70, 51, 31, 0.7);
+}
+
+.mk-lehti__nostoloppu {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.mk-lehti__linkki {
+    min-height: 32px;
+    margin: 4px 12px 0 0;
+    padding: 0;
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: #7a5514;
+}
+
+.mk-lehti__linkki .mk-nappi__teksti {
+    font-size: 13px;
+}
+
+/* --- kuvat ---------------------------------------------------------------------- */
+
+.mk-lehti__kuvakehys {
+    margin: 2px 0 6px 0;
+    border-width: 3px;
+    border-color: #f7efdc;
+    background-color: rgba(70, 51, 31, 0.08);
+    overflow: hidden;
+}
+
+.mk-lehti__kuva {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.mk-lehti__paakuva .mk-lehti__kuva {
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.mk-lehti__kuvateksti {
+    font-size: 13px;
+    white-space: normal;
+    color: rgba(33, 29, 24, 0.78);
+    margin-bottom: 2px;
+}
+
+.mk-lehti__lahde {
+    font-size: 10.5px;
+    white-space: normal;
+    color: rgba(70, 51, 31, 0.6);
+    margin-bottom: 8px;
+}
+
+.mk-lehti__kuvasarja {
+    margin-bottom: 10px;
+}
+
+.mk-lehti__kuvarivi {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 6px 0 14px 0;
+}
+
+.mk-lehti__kuvasolu {
+    width: 49%;
+}
+
+/* --- matkailijalle, listat, maaosasto --------------------------------------------- */
+
+.mk-lehti__matkailijalle {
+    margin-top: 8px;
+    padding: 12px 14px;
+    border-width: 1px;
+    border-color: rgba(122, 85, 20, 0.35);
+    background-color: rgba(214, 190, 140, 0.18);
+}
+
+.mk-lehti__lista {
+    margin-bottom: 14px;
+}
+
+.mk-lehti__listarivi {
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.mk-lehti__listakuva {
+    width: 96px;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.mk-lehti__listatekstit {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.mk-lehti__listanimi {
+    font-size: 15.5px;
+    white-space: normal;
+    color: #16130f;
+}
+
+.mk-lehti__listateksti {
+    font-size: 14px;
+    white-space: normal;
+    color: rgba(58, 42, 26, 0.9);
+}
+
+.mk-lehti__maaosasto {
+    margin-bottom: 16px;
+    padding: 10px 12px;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.3);
+    background-color: rgba(255, 252, 242, 0.45);
+}
+
+.mk-lehti__tunnusrivi {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3px 0;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(70, 51, 31, 0.12);
+}
+
+.mk-lehti__tunnusnimi {
+    font-size: 12.5px;
+    color: rgba(70, 51, 31, 0.8);
+}
+
+.mk-lehti__tunnusarvo {
+    font-size: 14px;
+    color: #16130f;
+    -unity-text-align: middle-right;
+}
+
+.mk-lehti__tervehdys {
+    margin-top: 8px;
+    font-size: 14px;
+    white-space: normal;
+}
+
+/* --- minitehtävä (webin .fokusvirta-visa lehdessä) --------------------------------- */
+
+.mk-lehti__tehtava {
+    margin-top: 20px;
+    padding: 12px 15px 13px 15px;
+    border-width: 3px;
+    border-color: rgba(60, 44, 26, 0.6);
+    background-color: rgba(214, 190, 140, 0.22);
+}
+
+.mk-lehti__tehtavaotsake {
+    font-size: 10.5px;
+    letter-spacing: 3px;
+    color: rgba(70, 51, 31, 0.8);
+    margin-bottom: 6px;
+}
+
+.mk-lehti__kysymys {
+    font-size: 16.5px;
+    white-space: normal;
+    color: #211d18;
+    margin-bottom: 4px;
+}
+
+.mk-lehti__tehtavavihje {
+    font-size: 13px;
+    -unity-font-style: italic;
+    white-space: normal;
+    color: rgba(33, 29, 24, 0.65);
+    margin-bottom: 6px;
+}
+
+.mk-lehti__tehtavatulos {
+    margin-top: 8px;
+    font-size: 14.5px;
+    white-space: normal;
+    color: #9a2b21;
+}
+
+.mk-lehti__tehtavatulos.mk-oikein {
+    color: #2f6b3a;
+}
+
+/* --- alapalkki ja sisällys ------------------------------------------------------------ */
+
+.mk-lehti__alapalkki {
+    flex-direction: row;
+    align-items: center;
+    flex-shrink: 0;
+    padding: 8px 14px 14px 14px;
+    border-top-width: 1px;
+    border-top-color: rgba(70, 51, 31, 0.25);
+}
+
+.mk-lehti__poistu {
+    min-height: 40px;
+    padding: 0 10px 0 0;
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(70, 51, 31, 0.55);
+}
+
+.mk-lehti__poistu .mk-nappi__teksti {
+    font-size: 13px;
+}
+
+.mk-lehti__selaus {
+    flex-shrink: 1;
+    min-height: 40px;
+    margin-left: 8px;
+    padding: 6px 12px;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.45);
+    border-radius: 3px;
+    background-color: rgba(255, 252, 242, 0.5);
+    color: #46331f;
+}
+
+.mk-lehti__selaus--seuraava {
+    margin-left: auto;
+    background-color: rgba(217, 161, 59, 0.22);
+    border-color: rgba(122, 85, 20, 0.6);
+}
+
+.mk-lehti__selaus .mk-nappi__teksti {
+    font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.mk-lehti__sisallys {
+    position: absolute;
+    top: 52px;
+    left: 10px;
+    width: 340px;
+    max-width: 92%;
+    max-height: 80%;
+    padding: 10px 12px;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.4);
+    background-color: #f7efdc;
+}
+
+.mk-lehti__sisallysyla {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.mk-lehti__sisallysotsikko {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #46331f;
+}
+
+.mk-lehti__sisallysvieritys {
+    flex-shrink: 1;
+}
+
+.mk-lehti__sisallysrivi {
+    justify-content: flex-start;
+    min-height: 44px;
+    margin-bottom: 4px;
+    padding: 6px 8px;
+    border-width: 0;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #211d18;
+}
+
+.mk-lehti__sisallysrivi.mk-valittu {
+    background-color: rgba(217, 161, 59, 0.2);
+}
+
+.mk-suurennos {
+    position: absolute;
+}

@@ -14,6 +14,7 @@
 //   ui aloitus [portti|avaus|valinta|jatka]   aloitusnäkymä ilman peliä (valinta → ilmoitus)
 //   ui aloita [kaupunki] | ui jatka           automaatio: ohittaa aloitusnäkymän (UusiMatka / Jatka);
 //                                             listan ulkopuolinen kaupunki (pariisi) = oletuslähtö Pariisi
+//   ui lehti <kaupunki> [sivu] | ui lehti sivu n | ui lehti kuva | ui maalehti <ISO> [aihe] | ui lehti sisallys
 //   ui nosto <valoId>                         nostokortti: skandaali:<id> | hetki:<id> | elaintaky:<ISO> | kohde:<id>[@ISO]
 //   ui huipennus                              matkan huipennus (kaikki aarteet) esimerkkiluvuin
 //   ui laukku [esimerkki]                     matkalaukku (pelin data; esimerkki = keksitty sisältö)
@@ -187,6 +188,19 @@ namespace Matkakirja.Natiivi
                     string v = osat[1].ToLowerInvariant() == "jatka" ? o.Jatka() : o.UusiMatka(lahto);
                     if (v == null) ui.Aloitus.Piilota();
                     return v;
+                }
+                case "lehti":
+                case "maalehti":
+                {
+                    var l = loput.Split(' ');
+                    if (osat[1] == "lehti" && (l[0] == "sivu" || l[0] == "kuva" || l[0] == "sisallys"))
+                    {
+                        ui.Lehti.Testaa(l[0], l.Length > 1 && int.TryParse(l[1], out var sn) ? sn : 0);
+                        return null;
+                    }
+                    if (osat[1] == "maalehti") ui.Lehti.Nayta(LehtiLaji.Maa, l[0].Length > 0 ? l[0] : "ITA", l.Length > 1 ? l[1] : null);
+                    else ui.Lehti.Nayta(LehtiLaji.Kaupunki, l[0].Length > 0 ? l[0] : "firenze", null, l.Length > 1 && int.TryParse(l[1], out var s) ? s : (int?)null);
+                    return null;
                 }
                 case "nosto":
                     ui.Nostokortti.Avaa(loput.Length > 0 ? loput : "skandaali:shakkiturkkilainen");
