@@ -2307,3 +2307,7 @@ Fable: reverseY-korjaus otetaan seuraavaan sisäiseen TestFlight-buildiin, ei t�
 ## SISALTOKIRJURI: AIKALEIMOJEN KOHDISTUS — 6 OIKEAA KUITTIA LOYTYI, KUIVA-AJO PUHDAS 45/45, MUTTA kuittirivit()-VALIDAATTORI HYLKAA KAIKKI (KUITIT mp3_44100_128, NYKYINEN OUTPUT_FORMAT mp3_44100_192) → FABLEN PAATOS: kohdista-luennat.mjs HYVAKSYY KUITIN OMAN outputFormatin KUN TUOTANNON MP3:N sha256 VASTAA KUITTIA (OIKEA VARTIJA); generoi-luennat.mjs:n TARKISTUS ENNALLAAN (23.9.2026 klo 18.29)
 
 Kohdistus ei tuota ääntä, joten bittinopeustarkistus ei suojaa mitään siinä.
+
+## LINSSISEPPA: 18 PUUTTUVAA iso2:TA KORJATTU PR #2960 (tools/vienti/iso2.mjs KATTOI VAIN KAUPUNKIMAAT; UUSI TESTI VAATII KOODIN JOKAISELLE LAUDAN MAALLE); SIIRTOSEPPA REBASEAA NIPPU4:AAN; SEURAAVA LINSSIEN KYTKENTA KUN MAATILA TULEE (23.9.2026 klo 18.30)
+
+PR #2960 Julkaisijan jonoon (pieni, ei ajoaikaista koodia → testit-vihreällä).
