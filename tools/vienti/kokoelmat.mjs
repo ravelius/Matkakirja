@@ -407,6 +407,48 @@ function linssiKokoelma(hae) {
     {}, rivit);
 }
 
+/*
+ * ÄÄNITAULUT (skeema 1.8, siirtosuunnitelman #2948 korjauslistan kohta 3).
+ * Webin tehosteet ja ambienssit ovat Web Audio -synteesiä (js/sound.js
+ * SOUNDS, AMBIENCES), jota natiivi ei aja: se saa nimet ja näytteet ja
+ * tekee äänen omilla näytteillään. Musiikin ketju lasketaan pelin omalla
+ * musiikkiketju()-funktiolla jokaiselle kaupungille ilman tiloja
+ * (lehti ja matkalaukku menevät ketjun kärkeen, kun ne ovat auki).
+ */
+function aaniKokoelma(ns, hae) {
+  const aani = hae('js/sound.js');
+  const siirtyma = hae('js/siirtymamusiikki.js');
+  const valitsin = hae('js/musiikkivalitsin.js');
+  const P = ns.MAAILMANKARTTA;
+  const rivit = [
+    ...aani.AANITEHOSTEET.map((nimi) => ({
+      id: `tehoste:${nimi}`, laji: 'tehoste', nimi, synteesi: true, naytte: aani.REAL_SAMPLES[nimi] ?? null,
+    })),
+    ...Object.entries(aani.REAL_SAMPLES).filter(([n]) => !aani.AANITEHOSTEET.includes(n)).map(([nimi, n]) => ({
+      id: `tehoste:${nimi}`, laji: 'tehoste', nimi, synteesi: false, naytte: n,
+    })),
+    ...aani.AMBIENCE_TYPES.map((nimi) => ({ id: `ambienssi:${nimi}`, laji: 'ambienssi', nimi, synteesi: true, naytte: null })),
+    ...Object.entries(aani.PULUN_TEHOSTEET).map(([nimi, v]) => ({
+      id: `pulu:${nimi}`, laji: 'pulu', nimi, juuri: aani.PULUN_TEHOSTEJUURI, data: v,
+    })),
+    ...Object.entries(siirtyma.RAIDAT).map(([nimi, v]) => ({ id: `siirtyma:${nimi}`, laji: 'siirtyma', nimi, data: v })),
+    ...Object.entries(valitsin.TILARAIDAT).map(([nimi, v]) => ({ id: `tila:${nimi}`, laji: 'tilaraita', nimi, data: v })),
+    ...Object.entries(valitsin.PAIKKARAIDAT).map(([nimi, v]) => ({ id: `paikka:${nimi}`, laji: 'paikkaraita', nimi, data: v })),
+    { id: 'pohjaraita', laji: 'pohjaraita', nimi: valitsin.POHJARAITA },
+    ...P.cities.map((c) => ({
+      id: `musiikkiketju:${c.id}`, laji: 'musiikkiketju', kaupunki: c.id,
+      ketju: valitsin.musiikkiketju(c.id, P.map.cityCountry?.[c.id] ?? null),
+    })),
+  ];
+  return taulukko('js/sound.js + js/siirtymamusiikki.js + js/musiikkivalitsin.js',
+    'Äänitaulut natiiville. tehoste/ambienssi: synteesi = webin Web Audio -synteesi (ei datana), naytte = '
+      + 'äänite, jos sellainen on (REAL_SAMPLES; url + credit). pulu: pulun tehosteet (juuri + data). siirtyma: '
+      + 'matkan musiikki lajeittain (jalan, laiva, lento). tilaraita/paikkaraita/pohjaraita: musiikin tasot. '
+      + 'musiikkiketju: kaupungin raidat parhaasta alkaen (musiikkiketju()); soitin ottaa ensimmäisen olemassa '
+      + 'olevan. Avoin tila (lehti, matkalaukku) menee ketjun kärkeen TILARAIDAT-järjestyksessä.',
+    { kaupunki: 'kaupungit' }, rivit);
+}
+
 /** nimiavaruudet: Map<moduulipolku, moduulin nimiavaruus> */
 export function kokoaKokoelmat(nimiavaruudet) {
   const ns = {
@@ -426,5 +468,6 @@ export function kokoaKokoelmat(nimiavaruudet) {
     saapuminen: saapumisKokoelma(ns, hae),
     esilasketut: esilaskettuKokoelma(ns, hae),
     linssiaineisto: linssiKokoelma(hae),
+    aanitaulut: aaniKokoelma(ns, hae),
   };
 }

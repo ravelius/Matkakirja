@@ -167,6 +167,10 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
       .filter(([, v]) => onSaantoArvo(v)).map(([n]) => n))).size,
     tapahtumat: ns('africa.js').AFRICA.events.length,
     linssiaineisto: 7,
+    aanitaulut: new Set([...ns('js/sound.js').AANITEHOSTEET, ...Object.keys(ns('js/sound.js').REAL_SAMPLES)]).size
+      + ns('js/sound.js').AMBIENCE_TYPES.length + Object.keys(ns('js/sound.js').PULUN_TEHOSTEET).length
+      + Object.keys(ns('js/siirtymamusiikki.js').RAIDAT).length + Object.keys(ns('js/musiikkivalitsin.js').TILARAIDAT).length
+      + Object.keys(ns('js/musiikkivalitsin.js').PAIKKARAIDAT).length + 1 + P.cities.length,
     saapuminen: P.cities.length,
     esilasketut: ns('historian-hetket.js').HISTORIAN_HETKET.length + avaimia(ns('elaintakyt.js').ELAINTAKYT)
       + new Set(Object.values(P.map.countryShapes).map((m) => m.nimi).filter(Boolean)).size + 2 + 1,

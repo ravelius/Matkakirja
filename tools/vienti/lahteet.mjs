@@ -46,6 +46,10 @@ export const LISAMODUULIT = [
   m('js/fokusnosto-symbolit.js', ['NOSTOSYM_LUOKAT', 'NOSTOSYM_PAAKATEGORIAT', 'NOSTOSYM_TYYPIT', 'NOSTOSYM_PISTE_VARIT']),
   m('js/karttaselite.js', ['KARTTASELITE_JARJESTYS', 'KARTTASELITE_KOKONIMET']),
   m('js/kaupunkimusiikki.js', ['ALUERAIDAT', 'ALUEEN_MAAT']),
+  // Skeema 1.8: äänitaulut natiiville (kokoelma aanitaulut).
+  m('js/sound.js', ['REAL_SAMPLES', 'PULUN_TEHOSTEET', 'PULUN_TEHOSTEJUURI', 'AMBIENCE_TYPES', 'AANITEHOSTEET']),
+  m('js/siirtymamusiikki.js', ['RAIDAT', 'SIIRTYMALAJIT']),
+  m('js/musiikkivalitsin.js', ['TILARAIDAT', 'PAIKKARAIDAT', 'POHJARAITA']),
   m('js/aani-ehdokkaat.js', ['EHDOKKAAT', 'TYYPPI_EHDOKKAAT', 'KAUPUNKI_EHDOKKAAT', 'TYYPPI_NIMET', 'KAUPUNGIT_TYYPEITTAIN', 'HUUDAHDUKSET']),
   m('js/viitekuva-herot.js', ['VIITEKUVA_HEROT']),
   m('js/lahteet.js', ['LAHTEET', 'PELI']),

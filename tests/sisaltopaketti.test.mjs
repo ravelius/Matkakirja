@@ -367,3 +367,15 @@ test('skeema 1.7: linssiaineisto (maskit purkautuvat, osoitteet medialistassa)',
   assert.match(rivit.get('kertomus').data.manifesti, /^https:\/\/media\.matkakirja\.app\/.+\/puhe\/kertomus-manifesti\.json$/);
   assert.deepEqual(rivit.get('avauskynnykset').data.kynnykset.map((k) => k.tp), [400, 800, 1400, 2200]);
 });
+
+test('skeema 1.8: äänitaulut ja musiikkiketju vastaavat peliä', async () => {
+  const rivit = JSON.parse(tiedostot.get('kokoelmat/aanitaulut.json')).alkiot;
+  const id = new Map(rivit.map((r) => [r.id, r]));
+  const { AANITEHOSTEET, REAL_SAMPLES } = await import('../js/sound.js');
+  for (const nimi of AANITEHOSTEET) assert.ok(id.has(`tehoste:${nimi}`), nimi);
+  assert.deepEqual(id.get('tehoste:dice').naytte, REAL_SAMPLES.dice);
+  const { musiikkiketju } = await import('../js/musiikkivalitsin.js');
+  assert.deepEqual(id.get('musiikkiketju:rooma').ketju, musiikkiketju('rooma', 'ITA'));
+  assert.equal(rivit.filter((r) => r.laji === 'musiikkiketju').length, 266);
+  assert.deepEqual(['jalan', 'laiva', 'lento'].filter((l) => !id.has(`siirtyma:${l}`)), []);
+});

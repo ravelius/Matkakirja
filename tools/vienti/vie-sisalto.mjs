@@ -66,8 +66,10 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        litteät sääntörakenteet; kokoelma tapahtumat (AFRICA.events)
  *   1.7  kokoelma linssiaineisto (maskit, manifestit, pilvet, astronautin
  *        äänet, avauskynnykset)
+ *   1.8  kokoelma aanitaulut (tehosteet ja näytteet, ambienssit, pulu,
+ *        siirtymä-, tila- ja paikkaraidat, musiikkiketju kaupungeittain)
  */
-export const SKEEMAVERSIO_TARKKA = '1.7';
+export const SKEEMAVERSIO_TARKKA = '1.8';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 const tavuja = (s) => Buffer.byteLength(s);
