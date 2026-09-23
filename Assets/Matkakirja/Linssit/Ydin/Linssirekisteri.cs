@@ -83,6 +83,19 @@ namespace Matkakirja.Linssit
         /// <summary>Uusi auki oleva linssi (null = kaikki kiinni).</summary>
         public event Action<ILinssi> Vaihtui;
 
+        /// <summary>
+        /// LINSSIN PORTTI (web js/ui.js linssikarttaEstaa + js/ui-apurit.js linssiEstaa, omistaja 4.9.2026:
+        /// "pitää kaikki muu blokata varmuuden vuoksi kun linssi alkaa"): näiden linssien ajan Liiku ja
+        /// Matkusta ovat harmaana, kaupungin napautus ei liikuta eikä avaa lehteä. Webissä luokan
+        /// body.aikajana-paalla asettavat aikajana (ihmisen matka, keksinnöt), topografia ja satelliitti;
+        /// radio, vertailu, maatiedot, vesistöt ja isoisä eivät.
+        /// </summary>
+        public static readonly IReadOnlyCollection<string> PorttiLinssit =
+            new HashSet<string>(StringComparer.Ordinal) { "ihmisen-matka", "keksinnot", "topografia", "satelliitti" };
+
+        /// <summary>Estääkö auki oleva linssi pelin kartan (Liiku, siirrot, lehdet).</summary>
+        public bool EstaaKartan => Auki != null && PorttiLinssit.Contains(Auki.Tiedot.Id);
+
         public Linssirekisteri(ILinssiYmparisto ymparisto)
         {
             this.ymparisto = ymparisto ?? throw new ArgumentNullException(nameof(ymparisto));

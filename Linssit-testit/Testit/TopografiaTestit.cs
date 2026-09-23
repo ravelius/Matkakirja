@@ -245,5 +245,21 @@ namespace Matkakirja.Linssit.Testit
             r.Lisaa(new Koe("a", 1));
             Oleta.Heittaa<System.ArgumentException>(() => r.Lisaa(new Koe("a", 2)));
         }
+
+        [Testi] static void PorttiKutenWebinLinssikarttaEstaa()
+        {
+            var y = new ValeYmparisto();
+            var r = new Linssirekisteri(y);
+            r.Lisaa(new Topografia());
+            Oleta.Tosi(!r.EstaaKartan, "ei linssiä");
+            r.Valitse("topografia");
+            Oleta.Tosi(r.EstaaKartan, "topografia estää");
+            r.Sulje();
+            Oleta.Tosi(!r.EstaaKartan, "sulku palauttaa");
+            foreach (var id in new[] { "radio", "vertailu", "maatiedot", "vesistot", "isoisa-1873" })
+                Oleta.Tosi(!Linssirekisteri.PorttiLinssit.Contains(id), id + " ei estä (web)");
+            foreach (var id in new[] { "ihmisen-matka", "keksinnot", "topografia", "satelliitti" })
+                Oleta.Tosi(Linssirekisteri.PorttiLinssit.Contains(id), id + " estää (web)");
+        }
     }
 }
