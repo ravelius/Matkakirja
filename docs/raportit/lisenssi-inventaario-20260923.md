@@ -132,7 +132,8 @@ päivittää.
   hakuhetkellä. Lähteen sivuja (Freesound, archive.org) ei haettu. Kun
   korvaaja valitaan, lisenssi tarkistetaan lähteestä.
 - Grep-ristitarkistus `grep -rniE "by-nc|nc-sa|nc-nd|noncommercial|by-nd"
-  js/` antaa 28 osumaa: 23 ääntä, 2 `lahteet.js`-riviä ja 2
+  js/` antaa 28 osumaa: 24 äänitteen riviä (23 tiedostoa, koska Kairon yö on
+  kahdessa korissa), 2 `lahteet.js`-riviä ja 2
   `kuvagalleria.js`-suodatinriviä, eli kaikki on katettu.
 - Muut kaupallisen version kysymykset kuuluvat raporttiin
   docs/raportit/sisallon-siirtoputki-20260923.md, kohta 5.6. Niitä ovat
