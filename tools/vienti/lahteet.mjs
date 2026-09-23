@@ -22,6 +22,11 @@
  * Sisältö, joka asuu moduulin SISÄISESSÄ muuttujassa (ei exporttia), ei
  * näy tälle työkalulle — raportin "ei mekaaniset" -lista.
  */
+import { readdirSync } from 'node:fs';
+import { dirname, join, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 const m = (moduuli, exportit, luokka = 'peli') => ({ moduuli, exportit, luokka });
 
 export const LISAMODUULIT = [
@@ -39,7 +44,7 @@ export const LISAMODUULIT = [
   m('js/rules.js', ['SEA_FEE', 'FLIGHT_PRICE', 'BUS_FARE']),
   m('js/sisaltotaulut.js', ['SAAPUMISLUENNAT', 'HAVAINTOLUENNAT', 'LAUTA_TUNNUSLUVUT', 'EI_VALOKUVAKYSYMYKSEEN', 'KAIKKI_VALOKUVAT']),
   m('js/livia-tilanteet.js', ['LIVIAN_TUNTEET', 'LIVIAN_PUHEMERKITYKSET']),
-  m('js/livia-pilotti-cuet.js', ['LIVIAN_LUENTA_CUET', 'LIVIAN_LUENTAKAUPUNGIT']),
+  m('js/livia-pilotti-cuet.js', ['LIVIAN_LUENTA_CUET', 'LIVIAN_LUENTAKAUPUNGIT', 'ERA5_ODOTTAVAT_KAUPUNGIT']),
   m('js/liviapuhe.js', ['LIVIAN_AANIJUURI', 'LIVIAN_AANILAHTEET', 'LIVIAN_KAUPUNKILAHTEET', 'LIVIAN_AANITETYT',
     'LIVIAN_AANIERAT', 'LIVIAN_KESTOT', 'LIVIAN_VERSIOIDUT_AANET', 'LIVIAN_AANITETTY_PALJASTUS']),
   m('js/media.js', ['AANI_JUURI', 'ASSET_KANSIOT', 'R2_ASSETIT', 'HORATIO_TUOTANTO', 'VERSIOIDUT_HORATIO_AANET', 'UUSITUT_AANET']),
@@ -89,4 +94,8 @@ export const LISAMODUULIT = [
 export const LISATIEDOSTOT = [
   'assets/data/maakayrat.json',
   'assets/data/maapolygonit.json',
+  // Skeema 1.9: matkakirjaluentojen sanatason aikaleimat (luentareaktiot);
+  // kansio luetaan, joten uusi luenta tulee mukaan ilman muutosta tähän.
+  ...readdirSync(join(JUURI, 'assets/aikaleimat')).filter((f) => f.endsWith('.json')).sort()
+    .map((f) => `assets/aikaleimat/${f}`),
 ];

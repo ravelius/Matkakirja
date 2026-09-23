@@ -408,3 +408,19 @@ test('skeema 1.9: luennat valmiilla ääniosoitteella', async () => {
   assert.equal(rivit.size, 47);
   assert.ok([...rivit.values()].filter((r) => r.kesto).length >= 40, 'kestot Horatio-kuiteista');
 });
+
+test('skeema 1.9: luentojen aikaleimat ja Livian puheen cuet', async () => {
+  const luennat = new Map(JSON.parse(tiedostot.get('kokoelmat/luennat.json')).alkiot.map((r) => [r.id, r]));
+  const pariisi = luennat.get('matkakirja:pariisi');
+  const { aikaleimojenOsoite } = await import('../js/luentareaktiot.js');
+  assert.equal(pariisi.aikaleimat, aikaleimojenOsoite(pariisi.aanite));
+  assert.ok(pariisi.aikaleimaTiedosto && tiedostot.has(pariisi.aikaleimaTiedosto), 'aikaleimat paketissa');
+  assert.equal(JSON.parse(tiedostot.get(pariisi.aikaleimaTiedosto)).kaupunki, 'pariisi');
+  const livia = JSON.parse(tiedostot.get('kokoelmat/livianpuhe.json')).alkiot;
+  assert.equal(livia.length, 45);
+  const ateena = livia.find((r) => r.id === 'ateena');
+  const { livianAaniOsoite } = await import('../js/liviapuhe.js');
+  assert.equal(ateena.aani, livianAaniOsoite('ateena', 2));
+  assert.match(ateena.eleet, /^https:\/\/media\.matkakirja\.app\/.+livia-ateena-3\.eleet\.json(\?.*)?$/);
+  assert.ok(ateena.cuet.length >= 3 && ateena.cuet.every((c) => c.ankkuri && c.tarkoitus));
+});
