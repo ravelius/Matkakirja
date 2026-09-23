@@ -1659,3 +1659,7 @@ Klo 00.50. Poissuljettu tähän mennessä: kehysaika, tekstuurilataukset (eivien
 ## OMISTAJA (08.34, iPHONE v2140): SYOTEKOKEET VALIKKOON → PIIRTOKOE-OSIO VAIHTUU SYOTEKOE-OSIOKSI: 1 OLETUS, 2 KOSKETUS SUORAAN (syotetouch), 3 YHTEINEN KELLO (syotekello), 4 MOLEMMAT; PIIRTOKOKEET VAIN ?koe=-LIPPUINA (KAIKKI MITATTU, EI AUTTANEET) (23.9.2026 klo 08.35)
 
 Pelikoodari tekee pienen PR:n heti aamulla; automaattilataus ja overlayn tilarivi kuten Piirtokokeessa.
+
+## PR #2879: SYOTEKOE VALIKOSSA (1 OLETUS, 2 KOSKETUS SUORAAN, 3 YHTEINEN KELLO, 4 MOLEMMAT), PIIRTOKOKEET POIS VALIKOSTA; VIKA KORJATTU: KOSKETUSLIPPU LUETTIIN VAIN OSOITTEESTA → VALIKON 'KOSKETUS SUORAAN' EI OLISI VAIKUTTANUT; VARTIJA TARKISTAA ETTA NAYTTEET TULEVAT KOSKETUKSISTA (23.9.2026 klo 08.45)
+
+Pelikoodari klo 08.5x: savukkeet 6/6 ja 5/5, testit 4047/0. Julkaisija → v2141. Omistajan kierros: tilat 1–4, 10 s veto, overlayn liike- (vaihtelu, nollat, tuplat) ja syöte-rivit (kosk, virheen sd).
