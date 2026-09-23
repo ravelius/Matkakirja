@@ -2379,3 +2379,7 @@ Julkaisijalle ilmoitettu suoraan; savuke normaalisti (lehtisisältö).
 ## NATIIVI-UI NOLLATTU klo 19.1x (78 %): LINSSIKOUKUT natiivi-ui/linssit 9b1d035 JA TRAILERI f160300 MERGE-PYYNNOSSA, CHAT MASTERISSA; LUOVUTUS viesti-natiivi-ui-luovutus-20260923.md (9df5842ce), ALOITUS viesti-natiivi-ui-aloitus.md (23.9.2026 klo 19.13)
 
 Uusi sessio: koukkujen kytkentä Linssisepän kanssa, kontaktiarkit, Maakunnat, offline-UI, ero-lista.
+
+## PELIKOODARI NOLLATAAN klo 19.1x (71 %): LUOVUTUS viesti-pelikoodari-luovutus-20260923-natiivi3.md, ALOITUS viesti-pelikoodari-aloitus.md; e78892f (PULMAKORJAUS, TAPAHTUMAKORTIT POIS KARTALTA) MERGE-PYYNNOSSA → NATIIVISEPPA MERGEAA ENNEN Build/testflight-2:TA; #2956 JA #2965 MAINISSA, #2955 ODOTTAA #2942 (23.9.2026 klo 19.17)
+
+Uusi sessio jatkaa kuva-/lippukysymyksistä ja pulmapiirroksista.
