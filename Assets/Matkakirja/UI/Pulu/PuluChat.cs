@@ -181,7 +181,7 @@ namespace Matkakirja.Natiivi
             return l;
         }
 
-        void Vierita(VisualElement e) => virta.schedule.Execute(() => virta.ScrollTo(e)).StartingIn(30);
+        void Vierita(VisualElement e) => Rakenne.Vierita(virta, e, 30);
 
         void Sirut(IList<string> tekstit, string luokka, bool jatko)
         {

@@ -181,7 +181,7 @@ namespace Matkakirja.Natiivi
             if (sivuVaihtui) vieritys.scrollOffset = Vector2.zero;
             // Tuomio ja paljastus näkyviin (tulos on vaihtoehtojen alla, usein ruudun ulkopuolella).
             if (tulosVaihtui && tulos != null && !uusi)
-                vieritys.schedule.Execute(() => { if (tulos.panel != null) vieritys.ScrollTo(tulos); }).StartingIn(60);
+                Rakenne.Vierita(vieritys, tulos, 60);
             edellinenTulosVaihe = tulosVaihe;
             edellinenTervehdys = tervehdys;
             if (!Auki)
