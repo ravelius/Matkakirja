@@ -2355,3 +2355,7 @@ PR #2961 Julkaisijan jonoon nipun 3 jälkeen (koskee ajoaikaista tarkistusta →
 ## NATIIVISEPPA: Build/testflight-2 VALMIS — MASTER 219188b (reverseY, MAATILA, PULU/LIVIA, LUENNAT, unity-tarkistus-KORJAUS), fi.matkakirja.peli 1.0.0 (2); (1) 741352b KOSKEMATON; (2) ANNETAAN JULKAISIJALLE KUN (1) ON LADATTU (23.9.2026 klo 18.54)
 
 Odottaa Julkaisijan ilmoitusta buildista (1).
+
+## FABLEN PAATOS: POLLO-WORKERIN NATIIVISAANTO LAAJENNETAAN PUHEESTA MYOS CHATTIIN ('vastaus' + 'ehdotukset') SAMOILLA RAJOILLA KUIN WEBISSA; PELIKOODARI TEKEE PR:N #2956:N JATKOKSI, NATIIVI-UI RAKENTAA CHAT-PANEELIN. SISALTOKIRJURI NOLLATTU klo 18.5x (LUOVUTUS viesti-sisaltokirjuri-luovutus-20260923.md, ALOITUS viesti-sisaltokirjuri-aloitus.md). OMISTAJA LAHETTI JULKAISIJALLE ASC-KUTSUPYYNNON (SISAINEN RYHMA) (23.9.2026 klo 19.00)
+
+Koko peli natiiviin, kustannus ei muutu.
