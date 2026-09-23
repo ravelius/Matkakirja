@@ -51,7 +51,8 @@ namespace Matkakirja.Natiivi
         {
             get
             {
-                try { return new System.IO.DriveInfo(Application.persistentDataPath).AvailableFreeSpace; }
+                // iOS:llä DriveInfo voi palauttaa 0 (hiekkalaatikko): 0 = ei tiedossa.
+                try { long v = new System.IO.DriveInfo(Application.persistentDataPath).AvailableFreeSpace; return v > 0 ? v : -1; }
                 catch (Exception) { return -1; }
             }
         }

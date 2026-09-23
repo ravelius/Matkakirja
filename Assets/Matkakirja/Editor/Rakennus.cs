@@ -55,6 +55,8 @@ namespace Matkakirja.Editori
             pallo.tilesetSource = CesiumDataSource.FromUrl;
             pallo.url = MaastoUrl;
             pallo.showCreditsOnScreen = false;
+            // Peli ei käytä fysiikkaa: Cesium paistoi jokaiselle laatalle törmäysverkon (iPad-loki 23.9.).
+            pallo.createPhysicsMeshes = false;
 
             var kerros = palloGo.AddComponent<CesiumUrlTemplateRasterOverlay>();
             kerros.templateUrl = LaattaUrl;

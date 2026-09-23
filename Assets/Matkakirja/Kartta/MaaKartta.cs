@@ -95,8 +95,9 @@ namespace Matkakirja
 
         void Napautus(Vector2 ruutu)
         {
-            if (!Paalla || osuma == null || kierto == null) return;
-            if (!RuutuPallolle(ruutu, out double lat, out double lon)) return;
+            if (!Paalla) return;
+            if (osuma == null || kierto == null) { Debug.Log($"MATKAKIRJA maat: napautus ohitettu (osuma {osuma != null}, kierto {kierto != null})"); return; }
+            if (!RuutuPallolle(ruutu, out double lat, out double lon)) { Debug.Log($"MATKAKIRJA maat: napautus {ruutu} ohi pallon"); return; }
             var iso3 = osuma.Hae(lat, lon, toleranssi);
             Debug.Log($"MATKAKIRJA maat: napautus {lat:0.00} {lon:0.00} → {iso3 ?? "meri"}");
             if (iso3 != null) MaaNapautettu?.Invoke(iso3);
@@ -106,25 +107,24 @@ namespace Matkakirja
         public bool RuutuPallolle(Vector2 ruutu, out double lat, out double lon)
         {
             lat = lon = 0;
-            var kamera = kierto.GetComponent<Camera>() ?? Camera.main;
+            var kamera = kierto.GetComponent<Camera>();
+            if (kamera == null) kamera = Camera.main;
             if (kamera == null || georeferenssi == null) return false;
+            // Pallotesti Unityn avaruudessa (säde = päiväntasaajan säde): napojen virhe on alle
+            // 21 km, mikä mahtuu osumatestin 0,5°:n toleranssiin. Osuma muunnetaan ECEF:ksi ja
+            // siitä leveydeksi ja pituudeksi.
             Ray r = kamera.ScreenPointToRay(ruutu);
             var gt = georeferenssi.transform;
-            double3 o = georeferenssi.TransformUnityPositionToEarthCenteredEarthFixed((float3)gt.InverseTransformPoint(r.origin));
-            double3 p = georeferenssi.TransformUnityPositionToEarthCenteredEarthFixed(
-                (float3)gt.InverseTransformPoint(r.origin + r.direction * 1000f));
-            double3 s = math.normalize(p - o);
-            // Ellipsoidi palloksi: z skaalataan a/b:llä.
-            const double a = 6378137.0, b = 6356752.314245;
-            double3 k = new double3(1, 1, a / b);
-            double3 o2 = o * k, s2 = math.normalize(s * k);
-            double B = math.dot(o2, s2), C = math.dot(o2, o2) - a * a;
+            double3 keskus = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);
+            double3 o = (float3)gt.InverseTransformPoint(r.origin);
+            double3 s = math.normalize((double3)(float3)gt.InverseTransformDirection(r.direction));
+            double3 oc = o - keskus;
+            const double a = 6378137.0;
+            double B = math.dot(oc, s), C = math.dot(oc, oc) - a * a;
             double D = B * B - C;
-            if (D < 0) return false;
-            double t = -B - math.sqrt(D);
-            if (t < 0) return false;
-            double3 osuma2 = o2 + s2 * t;
-            double3 ecef = osuma2 / k;
+            if (D < 0 || -B - math.sqrt(D) < 0) return false;
+            double3 osumaU = o + s * (-B - math.sqrt(D));
+            double3 ecef = georeferenssi.TransformUnityPositionToEarthCenteredEarthFixed(osumaU);
             double3 llh = CesiumWgs84Ellipsoid.EarthCenteredEarthFixedToLongitudeLatitudeHeight(ecef);
             lon = llh.x; lat = llh.y;
             return true;
