@@ -68,3 +68,14 @@ test('reliefin laatta: kartan ulkopuoli on reliefin täytesävyä, ei pergamenti
   const sisa = (200 * LAATTA + 100) * 3;
   assert.deepEqual([...relief.subarray(sisa, sisa + 3)], SININEN);
 });
+
+test('kylläisyys: CSS saturate -matriisi, harmaa säilyy, oma kansio', async () => {
+  const { kyllaista, reliefinKansio: kansio } = await import('../tools/tee-pallolaatat.mjs');
+  const b = Buffer.from([200, 100, 50, 128, 128, 128, 0, 0, 0]);
+  kyllaista(b, 0.8);
+  // Selaimen saturate(0.8) samoille arvoille (feColorMatrix, sRGB).
+  assert.deepEqual([...b], [184, 104, 64, 128, 128, 128, 0, 0, 0]);
+  assert.deepEqual([...kyllaista(Buffer.from([10, 20, 30]), 1)], [10, 20, 30]);
+  assert.equal(kansio('20260920', 0.8), 'matkakirja/reliefipyramidi/20260920/pallo-k08/');
+  assert.equal(kansio('20260920'), 'matkakirja/reliefipyramidi/20260920/pallo/');
+});
