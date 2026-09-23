@@ -264,7 +264,7 @@ namespace Matkakirja.Natiivi
             using (var r = Pyynto(runko.ToString()))
             {
                 yield return r.SendWebRequest();
-                var json = MiniJson.Objekti(Jasenna(r.downloadHandler?.text));
+                var json = Rakenne.Olio(Jasenna(r.downloadHandler?.text));
                 if (r.responseCode == 403) t.Virhe = EiNatiivissa;
                 else if (r.result != UnityWebRequest.Result.Success)
                 {
@@ -283,7 +283,7 @@ namespace Matkakirja.Natiivi
                         t.Jatkot = new List<string>();
                         foreach (var x in j) if (x is string s) t.Jatkot.Add(s);
                     }
-                    t.Paikka = MiniJson.Objekti(MiniJson.Kentta(json, "paikka"));
+                    t.Paikka = Rakenne.Olio(MiniJson.Kentta(json, "paikka"));
                     if (syy == null) { historia.Add(("kayttaja", kysymys)); historia.Add(("pollo", Nakyva(t.Vastaus))); }
                 }
                 else t.Virhe = EiSaanut;
@@ -325,16 +325,16 @@ namespace Matkakirja.Natiivi
                 {
                     yield return r.SendWebRequest();
                     if (r.result != UnityWebRequest.Result.Success) continue;
-                    var o = MiniJson.Objekti(Jasenna(r.downloadHandler.text));
+                    var o = Rakenne.Olio(Jasenna(r.downloadHandler.text));
                     if (o == null || MiniJson.Teksti(o, "type") == "disambiguation") continue;
                     string tiiv = (MiniJson.Teksti(o, "extract") ?? "").Trim();
                     if (tiiv.Length == 0) continue;
                     var y = new WikiYhteenveto
                     {
                         Kieli = kieli, Otsikko = MiniJson.Teksti(o, "title") ?? otsikko, Tiivistelma = tiiv,
-                        Kuva = MiniJson.Teksti(MiniJson.Objekti(MiniJson.Kentta(o, "originalimage")), "source")
-                            ?? MiniJson.Teksti(MiniJson.Objekti(MiniJson.Kentta(o, "thumbnail")), "source"),
-                        Osoite = MiniJson.Teksti(MiniJson.Objekti(MiniJson.Kentta(MiniJson.Objekti(MiniJson.Kentta(o, "content_urls")), "desktop")), "page"),
+                        Kuva = MiniJson.Teksti(Rakenne.Olio(MiniJson.Kentta(o, "originalimage")), "source")
+                            ?? MiniJson.Teksti(Rakenne.Olio(MiniJson.Kentta(o, "thumbnail")), "source"),
+                        Osoite = MiniJson.Teksti(Rakenne.Olio(MiniJson.Kentta(Rakenne.Olio(MiniJson.Kentta(o, "content_urls")), "desktop")), "page"),
                     };
                     if (tiiv.Length >= 200) { valmis(y); yield break; }
                     vara ??= y;
@@ -371,8 +371,8 @@ namespace Matkakirja.Natiivi
                 {
                     yield return r.SendWebRequest();
                     if (r.result != UnityWebRequest.Result.Success) continue;
-                    var haku = Rakenne.Lista(MiniJson.Kentta(MiniJson.Objekti(MiniJson.Kentta(MiniJson.Objekti(Jasenna(r.downloadHandler.text)), "query")), "search"));
-                    osuma = haku != null && haku.Count > 0 ? MiniJson.Teksti(MiniJson.Objekti(haku[0]), "title") : null;
+                    var haku = Rakenne.Lista(MiniJson.Kentta(Rakenne.Olio(MiniJson.Kentta(Rakenne.Olio(Jasenna(r.downloadHandler.text)), "query")), "search"));
+                    osuma = haku != null && haku.Count > 0 ? MiniJson.Teksti(Rakenne.Olio(haku[0]), "title") : null;
                 }
                 if (osuma == null || !OtsikkoVastaa(aihe, osuma)) continue;
                 WikiYhteenveto y = null;
@@ -599,7 +599,7 @@ namespace Matkakirja.Natiivi
             yield return r.SendWebRequest();
             odotus.RemoveFromHierarchy();
             if (poletti != ehdotusPoletti || r.result != UnityWebRequest.Result.Success) yield break; // ei kriittinen
-            var lista = Rakenne.Lista(MiniJson.Kentta(MiniJson.Objekti(Jasenna(r.downloadHandler.text)), "ehdotukset"));
+            var lista = Rakenne.Lista(MiniJson.Kentta(Rakenne.Olio(Jasenna(r.downloadHandler.text)), "ehdotukset"));
             if (lista == null) yield break;
             var tekstit = new List<string>();
             foreach (var x in lista) if (x is string s && s.Length > 0) tekstit.Add(s);

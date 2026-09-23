@@ -204,11 +204,11 @@ namespace Matkakirja.Natiivi
             if (json == null) yield break;
             try
             {
-                var v = MiniJson.Objekti(MiniJson.Kentta(MiniJson.Objekti(MiniJson.Jasenna(json)), "exportit"));
+                var v = Rakenne.Olio(MiniJson.Kentta(Rakenne.Olio(MiniJson.Jasenna(json)), "exportit"));
                 string Arvo(string nimi)
                 {
                     var x = MiniJson.Kentta(v, nimi);
-                    if (MiniJson.Objekti(x) is Dictionary<string, object> o) x = MiniJson.Kentta(o, "arvo") ?? x;
+                    if (Rakenne.Olio(x) is Dictionary<string, object> o) x = MiniJson.Kentta(o, "arvo") ?? x;
                     return x as string;
                 }
                 introText = Arvo("INTRO_TEXT") ?? introText;
@@ -216,15 +216,15 @@ namespace Matkakirja.Natiivi
                 introValinta = Arvo("INTRO_VALINTA") ?? introValinta;
                 valintaNappi.Q<Label>().text = introValinta.ToUpperInvariant();
                 valintaOtsikko.text = introValinta;
-                var p = MiniJson.Objekti(MiniJson.Kentta(v, "PERIAATTEET"));
-                if (p != null && MiniJson.Objekti(MiniJson.Kentta(p, "arvo")) is Dictionary<string, object> pa) p = pa;
+                var p = Rakenne.Olio(MiniJson.Kentta(v, "PERIAATTEET"));
+                if (p != null && Rakenne.Olio(MiniJson.Kentta(p, "arvo")) is Dictionary<string, object> pa) p = pa;
                 if (p != null && MiniJson.Kentta(p, "osat") is List<object> osat && osat.Count > 0)
                 {
                     periaateOtsikko.text = MiniJson.Teksti(p, "otsikko") ?? periaateOtsikko.text;
                     periaateVieritys.Clear();
                     foreach (var x in osat)
                     {
-                        var o = MiniJson.Objekti(x);
+                        var o = Rakenne.Olio(x);
                         if (o == null) continue;
                         if (MiniJson.Teksti(o, "otsikko") is string ot)
                             Kirjasimet.Aseta(Rakenne.Teksti(ot.ToUpperInvariant(), "mk-tietoja__otsikko", periaateVieritys), Kirjasin.Kone);

@@ -87,7 +87,7 @@ namespace Matkakirja.Natiivi
 
         static Dictionary<string, SaaTiedot> Jasenna(string json)
         {
-            var juuri = MiniJson.Objekti(MiniJson.Jasenna(json));
+            var juuri = Rakenne.Olio(MiniJson.Jasenna(json));
             var st = new List<KeyValuePair<string, object>>();
             if (MiniJson.Kentta(juuri, "alkiot") is List<object> alkiot)
             {
@@ -97,8 +97,8 @@ namespace Matkakirja.Natiivi
             }
             else
             {
-                var ex = MiniJson.Objekti(MiniJson.Kentta(juuri, "exportit"));
-                var mod = MiniJson.Objekti(MiniJson.Kentta(ex, "SAATIEDOT"));
+                var ex = Rakenne.Olio(MiniJson.Kentta(juuri, "exportit"));
+                var mod = Rakenne.Olio(MiniJson.Kentta(ex, "SAATIEDOT"));
                 if (mod != null) st.AddRange(mod);
             }
             var tulos = new Dictionary<string, SaaTiedot>();

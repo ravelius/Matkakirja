@@ -229,7 +229,7 @@ namespace Matkakirja.Natiivi
 
         static NumeroAineisto Jasenna(string json)
         {
-            var juuri = MiniJson.Objekti(MiniJson.Jasenna(json));
+            var juuri = Rakenne.Olio(MiniJson.Jasenna(json));
             var tulos = new NumeroAineisto();
             var meta = MiniJson.Kentta(juuri, "meta") as Dictionary<string, object>;
             if (MiniJson.Kentta(meta, "pyramidiRyhmat") is List<object> ryhmat) tulos.PyramidiRyhmia = ryhmat.Count;
