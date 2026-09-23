@@ -441,6 +441,21 @@ test('skeema 1.9: offline-manifesti maittain (laatat, maasto, media, tavut)', as
   assert.ok(o.maat.NOR.laattoja.rasteri < bboxLaattoja);
   assert.ok(Object.keys(o.maat.FRA.maasto).length > 0, 'Ranskan syvä maasto available-alueella');
   assert.deepEqual(Object.keys(o.globaali.rasteri), ['0', '1', '2', '3', '4', '5']);
+  assert.equal(o.globaali.media.length, 0, 'globaali = vain laatat ja maasto');
+  assert.ok(o.valinnaiset.aanet.media.length > 0 && o.valinnaiset.aanet.tavuja > 0);
   assert.ok(o.maat.ITA.media.every((u) => /^https:\/\//.test(u)));
   assert.ok(!JSON.stringify(o).includes('upload.wikimedia.org/wikipedia/commons/thumb'), 'ulkoiset kuva-URLit eivät ole pelin mediaa');
+});
+
+test('skeema 1.9: maat kartuschaa varten', async () => {
+  const maat = new Map(JSON.parse(tiedostot.get('kokoelmat/maat.json')).alkiot.map((r) => [r.id, r]));
+  const { MAATIEDOT } = await import('../js/sisaltotaulut.js');
+  const kreikka = maat.get('GRC');
+  assert.equal(kreikka.iso2, 'GR');
+  assert.match(kreikka.paikallinen, /ΕΛΛΑΣ/);
+  assert.deepEqual(kreikka.tiedot, JSON.parse(JSON.stringify(MAATIEDOT.maailmankartta.GRC)));
+  assert.ok(/^https:\/\//.test(kreikka.lippuUrl));
+  const { MAA_KATEGORIAT } = await import('../js/packs/maa-kategoriat.js');
+  const [iso] = Object.keys(MAA_KATEGORIAT);
+  assert.deepEqual(maat.get(iso).aiheet.map((a) => a.id), MAA_KATEGORIAT[iso].map((a) => a.id));
 });

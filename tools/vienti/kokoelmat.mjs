@@ -577,6 +577,39 @@ function livianPuheKokoelma(hae) {
     }));
 }
 
+/*
+ * MAAT (skeema 1.9, Natiivi-UI:n kartuscha 23.9.2026): yksi rivi laudan
+ * maata kohden (countryShapes, ISO3), kuten webin maapaneeli
+ * (js/pallolauta/maapaneeli.js) ne kokoaa: nimi, lippu, paikallinen nimi
+ * ja valtiomuoto 1873 (FOKUS_MAANIMET), tunnusluvut ja tervehdykset
+ * (MAATIEDOT.maailmankartta) sekä maalehden aiheet järjestyksessä.
+ */
+function maaKokoelma(ns, hae) {
+  const P = ns.MAAILMANKARTTA;
+  const { MAATIEDOT } = hae('js/sisaltotaulut.js');
+  const { FOKUS_MAANIMET } = hae('js/packs/fokus-grc.js');
+  const { MAA_KATEGORIAT } = hae('js/packs/maa-kategoriat.js');
+  const tiedot = MAATIEDOT.maailmankartta ?? {};
+  const rivit = Object.entries(P.map.countryShapes).map(([iso, maa]) => {
+    const lippu = maa.lippu ? ratkaiseMedia(maa.lippu, 'lippu-commons') : null;
+    const nimet = FOKUS_MAANIMET[iso] ?? {};
+    return {
+      id: iso, iso2: ISO2[iso] ?? null, nimi: maa.nimi ?? null, wiki: maa.wiki ?? null,
+      lippu: maa.lippu ?? null, lippuUrl: lippu?.url ?? null,
+      paikallinen: nimet.paikallinen ?? null, valtiomuoto: nimet.valtiomuoto ?? null,
+      tiedot: tiedot[iso] ?? null,
+      maalehti: Object.hasOwn(MAA_KATEGORIAT, iso) ? iso : null,
+      aiheet: (MAA_KATEGORIAT[iso] ?? []).map((a) => ({ id: a.id, nimi: a.nimi })),
+    };
+  });
+  return taulukko(`${LAUTA}#MAAILMANKARTTA.map.countryShapes + MAATIEDOT + FOKUS_MAANIMET`,
+    'Laudan maat kartuschaa varten (id = ISO3): nimi, lippu (Commons) ja lippuUrl, paikallinen nimi ja valtiomuoto '
+      + '1873 (FOKUS_MAANIMET, ei kaikilla), tiedot = MAATIEDOT (vakiluku, pintaAla, sijat, demokratia {arvo, sija}, '
+      + 'keskitulo {arvo, sija}, tervehdykset [{teksti, kieli, osuus, lippu}]) tai null, maalehti = maalehdet-id, '
+      + 'aiheet = maalehden aiheet järjestyksessä.',
+    { maalehti: 'maalehdet' }, rivit);
+}
+
 /** nimiavaruudet: Map<moduulipolku, moduulin nimiavaruus> */
 export function kokoaKokoelmat(nimiavaruudet) {
   const ns = {
@@ -600,5 +633,6 @@ export function kokoaKokoelmat(nimiavaruudet) {
     ...kysymyskuvaKokoelmat(ns, hae),
     luennat: luentoKokoelma(hae),
     livianpuhe: livianPuheKokoelma(hae),
+    maat: maaKokoelma(ns, hae),
   };
 }
