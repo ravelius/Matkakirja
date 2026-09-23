@@ -85,7 +85,7 @@ namespace Matkakirja.Natiivi
             Lomake.Teksti(lohko, "Jos tämä peli kiinnostaa, lähetä palautetta. "
                 + "Voit myös osallistua pelin kehittämiseen — sisältöä, kuvia, "
                 + "kysymyksiä tai koodia.");
-            Lomake.Teksti(lohko, "Pelin oikeassa alakulmassa on huutomerkki. Sitä "
+            Lomake.Teksti(lohko, "Valikossa on nappi \"ehdota sisältöä\". Sitä "
                 + "napauttamalla voit lähettää palautetta juuri siitä kohdasta, "
                 + "jossa olet — kätevää etenkin, jos jokin näyttää menneen vikaan.");
             Kentat(lohko, "", kerros);
