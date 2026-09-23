@@ -169,10 +169,22 @@ jobs:
 
       # Osoitin VIIMEISENÄ: sovellus ei koskaan näe osoitinta pakettiin,
       # jota ei vielä ole kokonaan ämpärissä.
+      # Osoitinvartija (Fable 23.9.2026): osoitin luetaan uudelleen juuri
+      # ennen kirjoitusta. Pienempi skeemaversio kuin ämpärin osoittimessa
+      # (esim. koepaketti ennen haarojen mergeä) jättää osoittimen ennalleen;
+      # paketti jää silti ämpäriin versiokansioonsa.
       - name: Päivitä osoitin
         if: env.PALAUTA == '' && steps.julkaisu.outputs.muuttui == 'true'
         run: |
           set -euo pipefail
+          if ! aws s3 cp "s3://$AMPARI/sisalto/1/uusin.json" nykyinen-osoitin.json --endpoint-url "$PAATE" >/dev/null 2>&1; then
+            rm -f nykyinen-osoitin.json
+          fi
+          paatos=$(node tools/vienti/osoitinvartija.mjs nykyinen-osoitin.json dist/sisalto/uusin.json)
+          if [ "$paatos" != "korvaa" ]; then
+            echo "::warning::Osoitinta ei vaihdettu: ${paatos#ohita }"
+            exit 0
+          fi
           aws s3 cp dist/sisalto/uusin.json "s3://$AMPARI/sisalto/1/uusin.json" --endpoint-url "$PAATE" \
             --content-type application/json --cache-control 'public, max-age=60'
           cat dist/sisalto/uusin.json
