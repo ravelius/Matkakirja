@@ -1315,10 +1315,14 @@ namespace Matkakirja.Natiivi
             SaavuLehteen(kaupunki);
         }
 
+        /// <summary>Kaupunki, jonka saapumislehti on auki: sen sulkeminen aloittaa matkakirjaluennan (web saapuminen).</summary>
+        string saapumisLehti;
+
         void SaavuLehteen(string kaupunki)
         {
             if (kaupunki != null && LehtiOn)
             {
+                saapumisLehti = kaupunki;
                 Tila = SilmukanTila.Lehti;
                 AvaaLehti(kaupunki);
                 return;
@@ -1343,8 +1347,11 @@ namespace Matkakirja.Natiivi
             // Lehden aikana tapahtunut mannerlento: kamera pelaajaan.
             var k = PeliApu.Koordinaatti(verkko, matka.Tila.Pelaaja.Sijainti);
             if (matka.Tila.Pelaaja.Sijainti.Kaupunki != kaupunki && k.HasValue) Ajo(k.Value.Lat, k.Value.Lon, SaapumisKaari, 1.5f, null);
-            // Isoisän matkakirjaluento kaupungissa kerran istunnossa, kun lehti on luettu (ei maalehdestä).
-            var l = maalehti ? null : luennat.OtaLuento(kaupunki);
+            // Isoisän matkakirjaluento saapuessa, kun saapumislehti on luettu (web: jokaisella saapumisella;
+            // ei kortista avatusta lehdestä eikä maalehdestä).
+            bool saapuminen = saapumisLehti != null && saapumisLehti == kaupunki;
+            saapumisLehti = null;
+            var l = maalehti || !saapuminen ? null : luennat.OtaLuento(kaupunki);
             if (l != null && SoitaLuento(l, 0.6f) == null && !string.IsNullOrEmpty(l.Paikkarivi)) Viesti(l.Paikkarivi);
         }
 

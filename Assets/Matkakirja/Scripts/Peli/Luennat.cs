@@ -9,7 +9,8 @@
 //               kokoelma saapumispuheet, 45 Euroopan kaupunkia)
 //   luento      isoisän matkakirjamerkintä kaupungissa (fokusvirran
 //               matkakirja.aanite, 45 kaupunkia; kokoelma luennat, kun
-//               Siirtoseppä on sen vienyt), kerran per kaupunki istunnossa
+//               Siirtoseppä on sen vienyt), jokaisella saapumisella (web luettuSaapuminen:
+//               sama merkintä ei ala uudelleen peräkkäin)
 // Web lukee muut tekstit puhesynteesillä (pollo-worker); natiivissa se odottaa
 // workerin lupaa (Origin-lista), joten niistä ei tässä vielä ole.
 using System;
@@ -74,7 +75,8 @@ namespace Matkakirja.Natiivi
 
         readonly Dictionary<string, Luento> saapumispuheet = new Dictionary<string, Luento>();
         readonly Dictionary<string, Luento> luennot = new Dictionary<string, Luento>();
-        readonly HashSet<string> kuullut = new HashSet<string>();
+        /// <summary>Viimeksi luettu saapumisluento (web ui.luettuSaapuminen).</summary>
+        string edellinen;
         bool lentoKuultu;
 
         public Luento Intro { get; private set; } = OletusIntro;
@@ -146,10 +148,14 @@ namespace Matkakirja.Natiivi
         public Luento Saapumispuhe(string kaupunki) =>
             kaupunki != null && saapumispuheet.TryGetValue(kaupunki, out var l) ? l : null;
 
-        /// <summary>Kaupungin matkakirjaluento, jos sitä ei ole vielä kuultu tässä istunnossa (ja merkitsee kuulluksi).</summary>
+        /// <summary>
+        /// Kaupungin matkakirjaluento saapuessa (web: jokaisella saapumisella; sama merkintä ei ala
+        /// uudelleen, jos se luettiin juuri edellisenä, web luettuSaapuminen), tai null.
+        /// </summary>
         public Luento OtaLuento(string kaupunki)
         {
-            if (kaupunki == null || !luennot.TryGetValue(kaupunki, out var l) || !kuullut.Add(kaupunki)) return null;
+            if (kaupunki == null || !luennot.TryGetValue(kaupunki, out var l) || kaupunki == edellinen) return null;
+            edellinen = kaupunki;
             return l;
         }
 
