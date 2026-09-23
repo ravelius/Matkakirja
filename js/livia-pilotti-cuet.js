@@ -399,7 +399,7 @@ const LUENTA_CUET_20260914 = Object.freeze({
   },
   {
     "id": "budapest.livia.c2",
-    "ankkuri": "onhan siellä",
+    "ankkuri": "suuhun: onhan siellä",
     "esiintyma": 1,
     "tarkoitus": "hammastys",
     "voimakkuus": 0.55
@@ -681,7 +681,7 @@ const LUENTA_CUET_20260914 = Object.freeze({
   },
   {
     "id": "bergen.livia.c4",
-    "ankkuri": "meitä. Meitä!",
+    "ankkuri": "kuvasivat meitä. Meitä!",
     "esiintyma": 1,
     "tarkoitus": "ilo",
     "voimakkuus": 0.6

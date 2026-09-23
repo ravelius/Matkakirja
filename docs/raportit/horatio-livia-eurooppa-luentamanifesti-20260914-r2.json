@@ -1063,7 +1063,7 @@
           },
           {
             "cueId": "budapest.livia.c2",
-            "anchor": "onhan siellä",
+            "anchor": "suuhun: onhan siellä",
             "occurrence": 1,
             "intent": "hammastys",
             "strength": 0.55
@@ -1779,7 +1779,7 @@
           },
           {
             "cueId": "bergen.livia.c4",
-            "anchor": "meitä. Meitä!",
+            "anchor": "kuvasivat meitä. Meitä!",
             "occurrence": 1,
             "intent": "ilo",
             "strength": 0.6
