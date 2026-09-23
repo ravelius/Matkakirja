@@ -86,6 +86,7 @@ namespace Matkakirja.Natiivi
         bool tervehditty, kysyy;
         string viimeMietinta;
         int ehdotusPoletti, kuvaPoletti;
+        Button naytaKuplat;
         readonly Kuvasuurennos suurennos;
         (double Lat, double Lon, double Korkeus)? paluupaikka;
 
@@ -102,6 +103,11 @@ namespace Matkakirja.Natiivi
 
             paneeli = Rakenne.El("mk-chat", juuri);
             paneeli.style.display = DisplayStyle.None;
+            // Ylärivi (web .pollo-ylarivi): "Näytä puhekuplat" tuo ohi menneen repliikin takaisin.
+            var ylarivi = Rakenne.El("mk-chat__ylarivi", paneeli, PickingMode.Ignore);
+            naytaKuplat = Rakenne.Nappi("Näytä puhekuplat", "mk-chat__pilleri", () => { Sulje(); pulu.NaytaViimeisinKupla(); }, ylarivi);
+            naytaKuplat.tooltip = "Tuo ohi menneet puhekuplat takaisin näkyviin";
+            Kirjasimet.Aseta(naytaKuplat, Kirjasin.Luku);
             virta = new ScrollView(ScrollViewMode.Vertical);
             virta.AddToClassList("mk-chat__virta");
             virta.verticalScrollerVisibility = ScrollerVisibility.Hidden;
@@ -153,6 +159,7 @@ namespace Matkakirja.Natiivi
             Rakenne.Nayta(paneeli, true, 200);
             SyoteLukko.Esta(this);
             pulu.Tilanne("chatOpen");
+            naytaKuplat.style.display = pulu.KuplaPalautettavissa ? DisplayStyle.Flex : DisplayStyle.None;
             if (!tervehditty) { tervehditty = true; Tervehdi(); }
             paneeli.EnableInClassList("mk-chat--alku", historia.Count == 0);
             HaeEhdotukset();

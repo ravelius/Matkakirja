@@ -84,7 +84,8 @@ namespace Matkakirja.Natiivi
 
     public sealed class OpasKausi { public string Nimi, Kk, Lampotila, Kuvaus; }
 
-    public enum LehtiSivuLaji { Etusivu, Aihe }
+    /// <summary>MaaEtusivu = maan korkokartta ja perustiedot, Numeroina = "Maa numeroina" (skeema 1.15+ sivut).</summary>
+    public enum LehtiSivuLaji { Etusivu, Aihe, MaaEtusivu, Numeroina }
 
     public sealed class LehtiSivu
     {
@@ -107,6 +108,7 @@ namespace Matkakirja.Natiivi
     public static class LehtiSisalto
     {
         static Dictionary<string, List<object>> kaupungit, maat;
+        static readonly Dictionary<string, List<string>> maaSivut = new Dictionary<string, List<string>>();
         static bool haussa;
 
         static Dictionary<string, object> Ob(object x) => x as Dictionary<string, object>;
@@ -122,7 +124,7 @@ namespace Matkakirja.Natiivi
                 yield return Sisalto.HaeTeksti("kaupunkilehdet", t => k = t, valinnainen: true);
                 yield return Sisalto.HaeTeksti("maalehdet", t => m = t, valinnainen: true);
                 kaupungit = Taulu(k, "kaupunki");
-                maat = Taulu(m, "maa");
+                maat = Taulu(m, "maa", maaSivut);
                 haussa = false;
             }
             bool kaupunkiValmis = false;
@@ -131,7 +133,7 @@ namespace Matkakirja.Natiivi
             valmis(laji == LehtiLaji.Kaupunki ? Kaupunkilehti(omistaja) : Maalehti(omistaja?.ToUpperInvariant()));
         }
 
-        static Dictionary<string, List<object>> Taulu(string json, string avain)
+        static Dictionary<string, List<object>> Taulu(string json, string avain, Dictionary<string, List<string>> sivut = null)
         {
             var t = new Dictionary<string, List<object>>();
             try
@@ -144,6 +146,9 @@ namespace Matkakirja.Natiivi
                     // kansi) rinnalla. Tyypitetty aiheet vain, kun dataa ei ole (Elämää-kaupungit).
                     var aiheet = Rakenne.Lista(MiniJson.Kentta(o, "data")) ?? Rakenne.Lista(MiniJson.Kentta(o, "aiheet"));
                     if (id != null && aiheet != null) t[id] = aiheet;
+                    // Skeema 1.15: sivujärjestys (maa-etusivu, aiheet, maa-numeroina).
+                    if (sivut != null && id != null && Rakenne.Lista(MiniJson.Kentta(o, "sivut")) is List<object> sl)
+                        sivut[id] = sl.OfType<string>().ToList();
                 }
             }
             catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui lehti: " + e.Message); }
@@ -192,11 +197,28 @@ namespace Matkakirja.Natiivi
             if (iso == null || maat == null || !maat.TryGetValue(iso, out var data)) return null;
             var m = UiSisalto.Maa(iso);
             var l = new Lehti { Laji = LehtiLaji.Maa, Omistaja = iso, Maa = iso, Nimi = m?.Nimi ?? iso, MaaNimi = m?.Nimi };
-            foreach (var a in data.Select(Ob).Where(x => x != null).Select(Aihe))
+            var aiheet = data.Select(Ob).Where(x => x != null).Select(Aihe).ToList();
+            foreach (var a in aiheet) a.LainattuMaasta = iso;
+            LehtiSivu AiheSivu(LehtiAihe a) =>
+                new LehtiSivu { Laji = LehtiSivuLaji.Aihe, Aihe = a, TehtavaAihe = iso + ":" + a.Id, Otsikko = a.Otsikko ?? a.Nimi, Lyhyt = a.Nimi };
+            if (maaSivut.TryGetValue(iso, out var jarjestys) && jarjestys.Count > 0)
             {
-                a.LainattuMaasta = iso;
-                l.Sivut.Add(new LehtiSivu { Laji = LehtiSivuLaji.Aihe, Aihe = a, TehtavaAihe = iso + ":" + a.Id, Otsikko = a.Otsikko ?? a.Nimi, Lyhyt = a.Nimi });
+                // Webin sivut: maan etusivu (korkokartta), aiheet ja "Maa numeroina" (js/maalehti.js).
+                foreach (var id in jarjestys)
+                {
+                    if (id == "maa-etusivu" && m?.KarttaUrl != null)
+                        l.Sivut.Add(new LehtiSivu { Laji = LehtiSivuLaji.MaaEtusivu, Aihe = new LehtiAihe { Id = id }, Otsikko = l.Nimi, Lyhyt = l.Nimi });
+                    else if (id == "maa-numeroina" && m?.Numeroina != null)
+                    {
+                        string ots = MiniJson.Teksti(m.Numeroina, "otsikko") ?? l.Nimi + " numeroina";
+                        l.Sivut.Add(new LehtiSivu { Laji = LehtiSivuLaji.Numeroina, Aihe = new LehtiAihe { Id = id }, Otsikko = ots, Lyhyt = ots });
+                    }
+                    else if (aiheet.FirstOrDefault(a => a.Id == id) is LehtiAihe a) l.Sivut.Add(AiheSivu(a));
+                }
+                // Järjestyksestä puuttuvat aiheet loppuun, ettei mitään katoa.
+                foreach (var a in aiheet) if (!jarjestys.Contains(a.Id)) l.Sivut.Add(AiheSivu(a));
             }
+            else foreach (var a in aiheet) l.Sivut.Add(AiheSivu(a));
             return l.Sivut.Count > 0 ? l : null;
         }
 
@@ -207,6 +229,10 @@ namespace Matkakirja.Natiivi
             int i = l.Sivut.FindIndex(s => s.Laji == LehtiSivuLaji.Aihe && s.Aihe.Id == aihe);
             return Math.Max(0, i);
         }
+
+        /// <summary>Yksittäinen nosto (esim. maakartan nosto) samalla jäsennyksellä kuin aiheiden nostot.</summary>
+        public static LehtiNosto Nosto(Dictionary<string, object> n) =>
+            n == null ? null : Aihe(new Dictionary<string, object> { ["nostot"] = new List<object> { n } }).Nostot.FirstOrDefault();
 
         static LehtiAihe Aihe(Dictionary<string, object> o)
         {

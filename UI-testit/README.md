@@ -476,3 +476,28 @@ nostokortin ja luennan pikkukuvien suurennosta voi selata ‹ ›; pulun vastauk
 kuva (vastauksen ensimmäinen [[käsite]] tai kysymys), napautus → kuva isompana tiivistelmän ja
 lähteen kanssa. Testit: `ui kysymys kuva` / `ui kysymys lippu` / `ui kysymys kohtaaminen` ja
 napautus kuvaan, `ui nosto hetki:kolumbus-portugali-1484` ja kuvan napautus, `ui chat Mikä on Colosseum?`.
+
+Maalehden sivut skeemassa 1.15+ (webin järjestys, `maalehdet.sivut`): maan etusivu (korkokartta
+kaupunkipisteineen → suurennos, perustiedot, V-Dem-selitys minipopupissa, tervehdykset, kartan nosto),
+aiheet ja "Maa numeroina" (`Lehti/MaaNumeroina.cs`: käyrät maakayrat.json:sta, Suomi vertailuviivana,
+1873-merkintä, ikäpyramidi). Lipun tarina (`Lippuikkuna.cs`): kartuschan lippu tai maalehden aiheotsikon
+lippu; `ui lippu [ISO3]`. Pulun chat: vastauksen [[käsitteet]] ovat linkkejä ("Kerro lisää: aihe"),
+ylärivin "Näytä puhekuplat" palauttaa ohi menneen repliikin. Kohdekortin korostetut sanat kysyvät
+pululta. Periaatteissa GitHub-linkki ja © -rivi.
+
+```
+ui maalehti FRA
+odota 4
+kuva maalehti-etusivu
+ui lehti viimeinen
+odota 5
+kuva maalehti-numeroina
+ui lippu FIN
+odota 3
+kuva lipun-tarina
+ui sulje
+ui nosto kohde:thessaloniki@GRC
+odota 3
+kuva kohdekortti-korostukset
+ui sulje
+```

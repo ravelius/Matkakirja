@@ -47,6 +47,17 @@ namespace Matkakirja.Natiivi
         public string Vakiluku, VakilukuSija, PintaAla, PintaAlaSija, Demokratia, DemokratiaSija, Keskitulo, KeskituloSija;
         public List<(string Teksti, string Kieli, string Lippu, string Osuus)> Tervehdykset = new List<(string, string, string, string)>();
         public List<(string Id, string Nimi)> Aiheet = new List<(string, string)>();
+        /// <summary>V-Demin selitys ja lähdelinkki (web naytaVdemInfo).</summary>
+        public string DemokratiaSelitys, DemokratiaLinkki;
+        /// <summary>Skeema 1.15+: maan korkokartta etusivulle (null = ei maa-etusivua).</summary>
+        public string KarttaUrl, KarttaLahde;
+        public List<(string Nimi, float X, float Y, bool Paa)> KarttaKaupungit = new List<(string, float, float, bool)>();
+        /// <summary>Kartan nosto (raaka nosto-olio, LehtiSisalto.Nosto).</summary>
+        public Dictionary<string, object> KarttaNosto;
+        /// <summary>Skeema 1.15+: "Maa numeroina" -sivun tekstit (raaka olio, MaaNumeroina.Rakenna).</summary>
+        public Dictionary<string, object> Numeroina;
+        /// <summary>Skeema 1.15+: lipun tarina (web LIPPUTIEDOT: maa, symboliikka, kappaleet, versiot).</summary>
+        public Dictionary<string, object> Lipputarina;
         public bool OnTiedot => Vakiluku != null || PintaAla != null || Demokratia != null || Keskitulo != null || Tervehdykset.Count > 0;
     }
 
@@ -189,7 +200,11 @@ namespace Matkakirja.Natiivi
                     m.PintaAla = MiniJson.Teksti(tiedot, "pintaAla");
                     m.PintaAlaSija = MiniJson.Teksti(tiedot, "pintaAlaSija");
                     var dem = MiniJson.Objekti(MiniJson.Kentta(tiedot, "demokratia"));
-                    if (dem != null) { m.Demokratia = MiniJson.Teksti(dem, "arvo"); m.DemokratiaSija = MiniJson.Teksti(dem, "sija"); }
+                    if (dem != null)
+                    {
+                        m.Demokratia = MiniJson.Teksti(dem, "arvo"); m.DemokratiaSija = MiniJson.Teksti(dem, "sija");
+                        m.DemokratiaSelitys = MiniJson.Teksti(dem, "selitys"); m.DemokratiaLinkki = MiniJson.Teksti(dem, "linkki");
+                    }
                     var tulo = MiniJson.Objekti(MiniJson.Kentta(tiedot, "keskitulo"));
                     if (tulo != null) { m.Keskitulo = MiniJson.Teksti(tulo, "arvo"); m.KeskituloSija = MiniJson.Teksti(tulo, "sija"); }
                     var terv = Rakenne.Lista(MiniJson.Kentta(tiedot, "tervehdykset"));
@@ -201,6 +216,19 @@ namespace Matkakirja.Natiivi
                             m.Tervehdykset.Add((MiniJson.Teksti(o, "teksti"), MiniJson.Teksti(o, "kieli"), MiniJson.Teksti(o, "lippu"), MiniJson.Teksti(o, "osuus")));
                         }
                 }
+                var kartta = MiniJson.Objekti(MiniJson.Kentta(a, "maakartta"));
+                if (kartta != null)
+                {
+                    var kk = MiniJson.Objekti(MiniJson.Kentta(kartta, "kuva"));
+                    m.KarttaUrl = MiniJson.Teksti(kk, "url") ?? MiniJson.Teksti(kk, "arvo");
+                    m.KarttaLahde = MiniJson.Teksti(kartta, "lahde") ?? MiniJson.Teksti(kk, "lahde");
+                    foreach (var x in Rakenne.Lista(MiniJson.Kentta(kartta, "kaupungit")) ?? new List<object>())
+                        if (MiniJson.Objekti(x) is Dictionary<string, object> ko && MiniJson.Luku(ko, "x") is double kx && MiniJson.Luku(ko, "y") is double ky)
+                            m.KarttaKaupungit.Add((MiniJson.Teksti(ko, "nimi"), (float)kx, (float)ky, MiniJson.Totuus(ko, "paa")));
+                    m.KarttaNosto = MiniJson.Objekti(MiniJson.Kentta(kartta, "nosto"));
+                }
+                m.Numeroina = MiniJson.Objekti(MiniJson.Kentta(a, "numeroina"));
+                m.Lipputarina = MiniJson.Objekti(MiniJson.Kentta(a, "lipputarina"));
                 var aiheet = Rakenne.Lista(MiniJson.Kentta(a, "aiheet"));
                 if (aiheet != null)
                     foreach (var x in aiheet)

@@ -62,7 +62,15 @@ namespace Matkakirja.Natiivi
 
             masto = Rakenne.Nappi(null, "mk-kartuscha__masto", Vaihda, kortti);
             var nimirivi = Rakenne.El("mk-kartuscha__nimirivi", masto, PickingMode.Ignore);
-            lippu = Rakenne.El("mk-kartuscha__lippu", nimirivi, PickingMode.Ignore);
+            lippu = Rakenne.El("mk-kartuscha__lippu", nimirivi);
+            // Lipun napautus → lipun tarina (web maapaneeli avaaLippuikkuna); muuten masto kuten ennen.
+            lippu.RegisterCallback<PointerDownEvent>(e =>
+            {
+                string maa = testiIso ?? iso;
+                if (!Lippuikkuna.On(maa)) return;
+                e.StopPropagation();
+                Lippuikkuna.Avaa(maa);
+            });
             nimi = Rakenne.Teksti("", "mk-kartuscha__nimi", nimirivi);
             Kirjasimet.Aseta(nimi, Kirjasin.LukuLihava);
             Rakenne.El("mk-kartuscha__viiva", masto, PickingMode.Ignore);

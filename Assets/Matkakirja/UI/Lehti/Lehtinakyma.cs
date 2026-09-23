@@ -224,9 +224,13 @@ namespace Matkakirja.Natiivi
             Kaanna(nyt + (d.x < 0 ? 1 : -1));
         }
 
+        // Sivun tekstit, joita ei merkitä mk-lehti__luettava-luokalla (Maa numeroina).
+        readonly List<string> lisaLuettavat = new List<string>();
+
         void NaytaSivu(int i, int suunta)
         {
             PysaytaLuenta();
+            lisaLuettavat.Clear();
             var vanha = sivu;
             nyt = i;
             sivu = new ScrollView(ScrollViewMode.Vertical);
@@ -235,8 +239,18 @@ namespace Matkakirja.Natiivi
             sivu.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
             sivupaikka.Add(sivu);
             var s = lehti.Sivut[i];
-            if (s.Laji == LehtiSivuLaji.Etusivu) Etusivu(sivu.contentContainer, s);
-            else Aihesivu(sivu.contentContainer, s);
+            switch (s.Laji)
+            {
+                case LehtiSivuLaji.Etusivu: Etusivu(sivu.contentContainer, s); break;
+                case LehtiSivuLaji.MaaEtusivu: MaaEtusivu(sivu.contentContainer); break;
+                case LehtiSivuLaji.Numeroina:
+                {
+                    var c = sivu.contentContainer;
+                    MaaNumeroina.Rakenna(c, lehti.Maa, UiSisalto.Maa(lehti.Maa)?.Numeroina, lisaLuettavat.Add);
+                    break;
+                }
+                default: Aihesivu(sivu.contentContainer, s); break;
+            }
 
             if (vanha != null)
             {
@@ -397,7 +411,10 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(Rakenne.Teksti((sivu.Otsikko ?? "").ToUpperInvariant(), "mk-lehti__aiheteksti", ot), Kirjasin.KoneLihava);
             if (a.LainattuMaasta != null && UiSisalto.Maa(a.LainattuMaasta)?.Lippu.FirstOrDefault() is string lippu)
             {
-                var l = Rakenne.El("mk-lehti__lippu", ot, PickingMode.Ignore);
+                var l = Rakenne.El("mk-lehti__lippu", ot);
+                string lippuMaa = a.LainattuMaasta;
+                // Lipun tarina (web aihe-lippu-nappi, maalehti.js).
+                if (Lippuikkuna.On(lippuMaa)) l.AddManipulator(new Clickable(() => Lippuikkuna.Avaa(lippuMaa)));
                 Natiivi.Kuvat.Hae(lippu, t => { if (t != null) l.style.backgroundImage = new StyleBackground(t); }, "liput");
             }
             if (!string.IsNullOrEmpty(a.Johdanto)) Kappale(s, a.Johdanto, "mk-lehti__johdanto", Kirjasin.LukuKursiivi);
@@ -563,6 +580,47 @@ namespace Matkakirja.Natiivi
             });
         }
 
+        /// <summary>
+        /// Maan etusivu (web piirraMaaEtusivu, skeema 1.15+): masto, maan nimi, korkokartta
+        /// kaupunkipisteineen (napautus → suurennos) ja lähde, perustiedot ja tervehdykset
+        /// sekä kartan nosto. Radio tulee radion kuoren kanssa.
+        /// </summary>
+        void MaaEtusivu(VisualElement s)
+        {
+            var m = UiSisalto.Maa(lehti.Maa);
+            Masto(s);
+            var ot = Rakenne.El("mk-lehti__aihe", s, PickingMode.Ignore);
+            Kirjasimet.Aseta(Rakenne.Teksti((lehti.Nimi ?? "").ToUpperInvariant(), "mk-lehti__aiheteksti", ot), Kirjasin.KoneLihava);
+            if (m?.KarttaUrl != null)
+            {
+                var kehys = Rakenne.El("mk-lehti__maakartta", s);
+                var kuva = Rakenne.El("mk-lehti__maakarttakuva", kehys, PickingMode.Ignore);
+                float suhde = 1f;
+                void Mitoita() { float w = kehys.resolvedStyle.width; if (w > 0 && !float.IsNaN(w)) kehys.style.height = Mathf.Round(w * suhde); }
+                kehys.RegisterCallback<GeometryChangedEvent>(e => { if (e.oldRect.width != e.newRect.width) Mitoita(); });
+                NostoSisalto.HaeKuva(m.KarttaUrl, t =>
+                {
+                    if (t == null) { kehys.style.display = DisplayStyle.None; return; }
+                    kuva.style.backgroundImage = new StyleBackground(t);
+                    suhde = (float)t.height / Mathf.Max(1, t.width);
+                    Mitoita();
+                });
+                foreach (var (nimi, x, y, paa) in m.KarttaKaupungit)
+                {
+                    var piste = Rakenne.El(paa ? "mk-lehti__maapiste mk-lehti__maapiste--paa" : "mk-lehti__maapiste", kehys, PickingMode.Ignore);
+                    piste.style.left = Length.Percent(x);
+                    piste.style.top = Length.Percent(y);
+                    var n = Rakenne.Teksti(nimi ?? "", x > 60 ? "mk-lehti__maapistenimi mk-lehti__maapistenimi--vasen" : "mk-lehti__maapistenimi", piste);
+                    Kirjasimet.Aseta(n, paa ? Kirjasin.KoneLihava : Kirjasin.Kone);
+                }
+                string url = m.KarttaUrl, lahde = m.KarttaLahde, nimiKartta = lehti.Nimi + " — korkokartta";
+                kehys.RegisterCallback<ClickEvent>(_ => suurennos.Avaa(new List<LehtiKuva> { new LehtiKuva { Lahde = url, Selite = nimiKartta, LahdeRivi = lahde } }));
+                if (!string.IsNullOrEmpty(lahde)) Kirjasimet.Aseta(Rakenne.Teksti(lahde, "mk-lehti__lahde", s), Kirjasin.Kone);
+            }
+            Maaosasto(s, m);
+            if (LehtiSisalto.Nosto(m?.KarttaNosto) is LehtiNosto nosto) Nosto(s, nosto);
+        }
+
         void Maaosasto(VisualElement s, MaaTiedot m)
         {
             if (m == null) return;
@@ -580,6 +638,18 @@ namespace Matkakirja.Natiivi
                 var r = Rakenne.El("mk-lehti__tunnusrivi", laatikko, PickingMode.Ignore);
                 Kirjasimet.Aseta(Rakenne.Teksti(nimi, "mk-lehti__tunnusnimi", r), Kirjasin.Kone);
                 Kirjasimet.Aseta(Rakenne.Teksti(arvo, "mk-lehti__tunnusarvo", r), Kirjasin.LukuLihava);
+            }
+            if (!string.IsNullOrEmpty(m.DemokratiaSelitys))
+            {
+                // Web naytaVdemInfo: V-Demin selitys minipopupissa.
+                string selitys = m.DemokratiaSelitys, linkki = m.DemokratiaLinkki, arvo = m.Demokratia;
+                var b = Rakenne.Nappi($"Demokratiaindeksi {arvo} · V-Dem ›", "mk-lehti__linkki", () => Minipopup.Avaa("Demokratiaindeksi (V-Dem)", c =>
+                {
+                    Kirjasimet.Aseta(Rakenne.Teksti(selitys, "mk-minipopup__teksti", c), Kirjasin.Luku);
+                    if (!string.IsNullOrEmpty(linkki))
+                        Kirjasimet.Aseta(Rakenne.Nappi("Avaa lähde ›", "mk-lehti__linkki", () => Application.OpenURL(linkki), c), Kirjasin.Kone);
+                }), laatikko);
+                Kirjasimet.Aseta(b, Kirjasin.Kone);
             }
             if (m.Tervehdykset.Count > 0)
             {
@@ -679,7 +749,8 @@ namespace Matkakirja.Natiivi
         void VaihdaLuenta()
         {
             if (luetaan) { PysaytaLuenta(); return; }
-            var palat = sivu?.contentContainer.Query<Label>(className: "mk-lehti__luettava").ToList().Select(l => l.text).Where(x => !string.IsNullOrWhiteSpace(x)).ToList();
+            var palat = sivu?.contentContainer.Query<Label>(className: "mk-lehti__luettava").ToList().Select(l => l.text)
+                .Concat(lisaLuettavat).Where(x => !string.IsNullOrWhiteSpace(x)).ToList();
             var puhe = Puhe.Hae();
             if (palat == null || palat.Count == 0 || puhe == null) return;
             luetaan = true;
@@ -716,7 +787,7 @@ namespace Matkakirja.Natiivi
                     PaivitaTila(new LehtiTila { Matkapaiva = 12, TehtavaNappi = mita == "tehtava" ? "Tapaa gondolieeri" : "Gondolieeri ei tavattavissa", TehtavaNappiPois = mita != "tehtava" });
                     break;
                 case "viimeinen": if (lehti != null) Kaanna(lehti.Sivut.Count - 1); break;
-                case "sisallys": if (lehti?.Laji == LehtiLaji.Maa) VaihdaSisallys(); break;
+                case "sisallys": if (lehti != null && lehti.Sivut.Count >= 2) VaihdaSisallys(); break;
                 case "kuva":
                     var k = sivu?.contentContainer.Q(className: "mk-lehti__kuvakehys");
                     if (k != null) using (var e = ClickEvent.GetPooled()) { e.target = k; k.SendEvent(e); }
