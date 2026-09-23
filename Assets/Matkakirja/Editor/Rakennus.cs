@@ -399,6 +399,11 @@ namespace Matkakirja.Editori
             // Radiolinssi (AVPlayer): Icecast-asemista osa on http-osoitteissa; poikkeus koskee vain
             // AVFoundationin mediaa, ei muuta verkkoliikennettä (App Storen hyväksymä avain).
             ats.SetBoolean("NSAllowsArbitraryLoadsForMedia", true);
+            // Pöllön sanelu (Pelikoodari, Scripts/Peli/Sanelu.cs): ilman näitä Sanelu.Saatavilla = false.
+            plist.root.SetString("NSMicrophoneUsageDescription",
+                "Matkakirja käyttää mikrofonia, kun kysyt pöllöltä ääneen. Ääntä ei tallenneta.");
+            plist.root.SetString("NSSpeechRecognitionUsageDescription",
+                "Puheesi muutetaan tekstiksi, jotta pöllö ymmärtää kysymyksesi. Tunnistus tehdään laitteella aina, kun se on mahdollista.");
             plist.WriteToFile(plistPolku);
         }
 
