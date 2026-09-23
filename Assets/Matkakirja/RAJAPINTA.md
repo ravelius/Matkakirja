@@ -19,6 +19,7 @@ korkeudet metreinä. Kaaret ovat asteina kapeammassa näyttösuunnassa.
 | `event Action<Vector2> Napautettu` | valmis | Raaka napautus näytön pikseleinä (osumaton napautus = tyhjä kohta). |
 | `bool SyoteEstetty` | valmis | Kosketusten esto dialogin, lehden tai linssin oman eleen ajaksi. Pallo ei lue sormia eikä tunnista napautuksia, ja liuku pysähtyy. `Aja` ja synteettiset eleet toimivat edelleen. Asettaja palauttaa arvon `false`, kun oma näkymä sulkeutuu. |
 | `Func<Vector2,bool> UiPeittaa` | valmis | Natiivi-UI:n peittokysely: kosketus, joka alkaa UI:n päältä, ei liikuta palloa koko eleen aikana. |
+| `Func<bool> NakymaPeitetty`, `bool Peitetty` | valmis | Koko näytön peitto (WKWebView-lehti). Asettaa vain `SyoteLukko` (`LisaaNakymaPeitto(Func<bool>)`, Pelikoodari). Peiton aikana pallo piirtää joka `PeitettyVali` (4.) kehyksen, ja kehysmittari kirjaa kehykset luokkaan `peitto`, ei lepoon. |
 | `event Action NakymaMuuttui` | valmis | Kameratila muuttui tässä kehyksessä (linssit, sumu). |
 | `bool Liikkeessa` | valmis | Sormi, liuku tai ajo käynnissä (mittarit ja UI). |
 | `double kallistus` (0–60°) | valmis | Kahden sormen pystyveto kallistaa. Kallistus on sallittu vain alle 3000 km:n korkeudella, ja raja liukuu. |
@@ -55,6 +56,14 @@ Linssi ei koske Cesium-komponentteihin suoraan. Se pyytää kerroksen avaimella:
 | `event Action<string> KerrosValmis` | Linssin rasteri ladattu näkyvältä alueelta (Cesium ComputeLoadProgress). |
 | `event Action<string> KerrosEpaonnistui` | Rasterin lataus epäonnistui (OnCesiumRasterOverlayLoadFailure). |
 
+**Maatila (tulossa, Linssisepän vertailu ja maatiedot):**
+
+| Jäsen | Merkitys |
+|---|---|
+| `void MaaTila(bool)` | Kaupungit ja nimiöt piiloon, maiden rajat näkyviin; napautus osuu maahan eikä kaupunkiin. |
+| `event Action<string> MaaNapautettu` | iso2 napautetusta maasta (countryShapes, sama aineisto kuin `Sumu.PaljastaMaa`). |
+| `void Korosta(string iso2, Color)`, `void KorostusPois()` | Maan täyttö ja raja korostusvärillä. |
+
 Alfa on nyt vain 0 tai 1 (kerros pois tai päällä), ja välimuoto on tulossa. `Nakyvyys("laatat", false)` poistaa pohjan Cesiumista, ja palautus lukee laatat levyvälimuistista. `"maasto"` vaihtaa ellipsoidin ja Karttasepän maaston välillä (kytkimen takana, kunnes rajasaumat on korjattu).
 
 ## 5. Valokeila (tulossa)
@@ -86,11 +95,18 @@ striimataan ämpäristä ja välimuistitetaan (Cesiumin oma SQLite-välimuisti j
 Documents/sisalto). Pelaaja voi valinnaisesti ladata alueita offline-käyttöön maittain
 asetuksista. **Natiivi-UI tekee valinnan ja näkymän, Natiiviseppä lataa.**
 
+Toteutus: `Alueet` toteuttaa Natiivi-UI:n rajapinnan `IOfflineLataus` (UI/UiPalvelut.cs:
+`Maat`, `Muuttui`, `Lataa`, `Peru`, `Poista`, `VapaaTila`) ja asettaa `UiPalvelut.Offline`.
+Latauslista tulee Siirtosepän manifestista `offline.json` (juuressa `lahteet`: rasterin ja
+maaston osoitepohjat; `maat.ISO3`: rasteri- ja maastotasojen laattarajat, media-avaimet ja
+tavut). Globaalisti kerran: rasteri z0–z5 ja maasto z0–z6; maittain rasteri z6–z8 ja
+maaston syvemmät tasot. Alla oleva taulukko on alkuperäinen luonnos.
+
 | Jäsen | Merkitys |
 |---|---|
 | `IReadOnlyList<Alue> Alueet.Luettelo()` | Ladattavat alueet: `iso2`, nimi, koko tavuina (arvio), onko ladattu, versio. |
-| `IEnumerator Alueet.Lataa(string iso2, IProgress<float> eteneminen)` | Lataa pallolaatat z0–z8 (maailma, kerran), maan syvät tasot, maaston (layer.json-alue), sisältöpaketin ja maan median (media.json). Jatkuu keskeytyksestä. |
-| `void Alueet.Poista(string iso2)` | Vapauttaa tilan (yhteinen z0–z8 jää). |
+| `IEnumerator Alueet.Lataa(string iso2, IProgress<float> eteneminen)` | Lataa pallolaatat z0–z5 (maailma, kerran), maan syvät tasot, maaston (layer.json-alue), sisältöpaketin ja maan median (media.json). Jatkuu keskeytyksestä. |
+| `void Alueet.Poista(string iso2)` | Vapauttaa tilan (yhteinen z0–z5 jää). |
 | `long Alueet.Kaytossa()`, `void Alueet.TyhjennaValimuisti()` | Välimuistin koko ja tyhjennys asetuksista. |
 | `event Action<string> Alueet.Muuttui` | Lataus valmis, poistettu tai uusi versio saatavilla. |
 
