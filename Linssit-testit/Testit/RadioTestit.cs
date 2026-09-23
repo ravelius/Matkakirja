@@ -162,6 +162,30 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(a.Asemat.Values.Count(x => !string.IsNullOrEmpty(x.Sivu)), toiminnot[RadioLinssi.Toiminto.Linkki]);
         }
 
+        [Testi] static void KoepaketinV17RiviYksiSoi()
+        {
+            // v17 (skeema 1.16): 115 maata, rivi 1 soi aina; 17 kiellettyä yleisradiota rivinä 2.
+            var a = RadioAineisto.Lue(Paketti("radiot-kokoelma-v17.json"), null, Paketti("kaupungit-radio.json"));
+            Oleta.Sama(115, a.Asemat.Count);
+            Oleta.Tosi(a.Asemat.Values.All(x => x.Jarjestys == 1 && x.Id == x.Iso3), "kanava on rivi 1");
+            Oleta.Tosi(a.Asemat.Values.All(x => RadioLinssi.ToimintoAsemalle(x) == RadioLinssi.Toiminto.Soita), "kaikki kanavat soivat");
+            Oleta.Sama(17, a.Vaihtoehdot.Count);
+            Oleta.Tosi(a.Vaihtoehdot.Values.SelectMany(v => v).All(x => x.Luokka == "kielletty" && x.Id.EndsWith(":yleisradio")
+                && RadioLinssi.ToimintoAsemalle(x) == RadioLinssi.Toiminto.Linkki), "yleisradio linkkinä");
+            Oleta.Sama("ByteFM", a.Asemat["DEU"].Nimi);
+            Oleta.Sama("sallittu", a.Asemat["CHE"].Luokka);
+        }
+
+        [Testi] static void PieninJarjestysVoittaaRivienJarjestyksesta()
+        {
+            var a = RadioAineisto.Lue(MiniJson.Jasenna("{\"alkiot\":[" +
+                "{\"id\":\"FIN:yleisradio\",\"iso3\":\"FIN\",\"jarjestys\":2,\"nimi\":\"Yle\",\"luokka\":\"kielletty\",\"sivu\":\"https://yle.fi/\"}," +
+                "{\"id\":\"FIN\",\"iso3\":\"FIN\",\"jarjestys\":1,\"nimi\":\"Radio Helsinki\",\"url\":\"https://rh/live\",\"luokka\":\"epaselva\"}]}"),
+                null, Paketti("kaupungit-radio.json"));
+            Oleta.Sama("Radio Helsinki", a.Asemat["FIN"].Nimi);
+            Oleta.Sama("Yle", a.Vaihtoehdot["FIN"].Single().Nimi);
+        }
+
         [Testi] static void RadionKaupungitKutenWebissa()
         {
             foreach (var p in K().GetProperty("nakyvat").EnumerateObject())
