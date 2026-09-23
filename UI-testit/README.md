@@ -115,3 +115,60 @@ odota 3
 kuva kysymys-kohtaaminen
 ui sulje
 ```
+
+Pulu ja luennat (erä 5):
+
+```
+ui pulu sano Minä olen Livia. Kirjekyyhky, en mikään pulu.
+odota 2
+kuva pulu-kupla
+ui pulu aani avaus 1
+odota 3
+kuva pulu-puhuu
+ui pulu ele flyAway
+odota 1
+kuva pulu-lento
+ui luento ateena
+odota 4
+kuva luento-kortti
+ui luento ateena loppu
+odota 5
+kuva luento-pulu
+```
+## Livia (pulu) ilman peliä
+
+`Assets/Matkakirja/UI/Livia/` on webin kokopulun (js/livia-svg.js, js/livia-svg-paa.js,
+js/livia-uudet-versiot.js, asentologiikka js/livia-pikselit.js) siirto: `LiviaKuva`
+(VisualElement, Painter2D), `LiviaTila` (yhden ruudun asento) ja `LiviaEleet`
+(pelin 70 elettä, kestot, ryhmät ja nimet). Eleiden ajoitus ja valinta eivät kuulu tähän.
+
+- `ui livia [ele] [p] [astro] [leiju] [puhe] [mini]` — Livia 152 × 304 pt keskellä
+  kerrosta 40 (oletus `blink 0.5`), alla ele, p ja nimi. `astro` = kypärä ja leijunta,
+  `leiju` = karttaleijunta, `puhe` = nokka puhuu kellon mukaan, `mini` = minipulu-rajaus.
+- `ui livia kierros [astro|leiju|puhe]` — kaikki eleet peräkkäin oikeassa kestossaan
+  (0,4 s tauko välissä, yhteensä noin 4,5 min), videotarkistukseen.
+- `ui livia pois` — poistaa kuvan.
+
+Kuvasarja (esim. webin kuviin vertaamiseen):
+
+```
+ui livia blink 0.5
+odota 1
+kuva livia-blink
+ui livia welcome 0.4
+odota 1
+kuva livia-welcome
+ui livia bunFeast 0.8
+odota 1
+kuva livia-pulla
+ui livia shock 0.5 astro
+odota 3
+kuva livia-astro
+ui livia pois
+```
+
+Piirron tarkistus ilman Unityä (tehty siirrossa 23.9.2026): primitiivilista tulostettiin
+SVG:ksi ja verrattiin Chromiumissa webin `livianUusiPelikuva`-kuvaan 832 tilassa
+(kaikki eleet p = 0 … 1, puhe, leijunta, astronautti, `right` 60). Erot: tekstit
+(”z Z”, ”…”, ”?”) ovat viivakorvikkeita ja ryhmän peittävyys kerrotaan osille
+(leijunnan siipien ristihäive), muuten kuvat vastaavat toisiaan.

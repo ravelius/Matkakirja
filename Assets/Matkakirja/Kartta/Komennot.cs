@@ -25,6 +25,7 @@ namespace Matkakirja
     ///   nipistys cx cy d0 d1 s    kahden sormen nipistys keskipisteen ympäri, sormien
     ///                             väli d0 → d1 (osuus näytön leveydestä)
     ///   kallista y0 y1 s          kahden sormen pystyveto (kallistus), y näytön osuutena
+    ///   valot <aihe>|kaikki|ei|tila     karttavalot (AiheValot), tila = laskurit lokiin
     ///   maat paalle|pois | maat korosta ISO3 [#täyttö #raja] | maat pois-korostus   Maatila (MaaKartta)
     ///   maasto paalle|pois        Karttasepän maasto (layer.json) tai ellipsoidi; valinta
     ///                             muistetaan tiedostossa Documents/maasto.txt
@@ -133,6 +134,17 @@ namespace Matkakirja
                 case "maasto":
                     Maasto(o[1] == "paalle");
                     break;
+                case "valot":
+                {
+                    // valot <aihe> | valot kaikki | valot ei | valot tila (laskurit lokiin)
+                    var av = FindAnyObjectByType<AiheValot>();
+                    if (av == null) break;
+                    if (o[1] != "tila") av.Valitse(o[1]);
+                    var valoRivi = new StringBuilder("MATKAKIRJA valot: valittu " + av.Valittu + ":");
+                    foreach (var p in av.Laskurit) valoRivi.Append(' ').Append(p.Key).Append('=').Append(p.Value);
+                    Debug.Log(valoRivi.ToString());
+                    break;
+                }
                 case "maat":
                 {
                     // maat paalle|pois | maat korosta ISO3 [#täyttö #raja] | maat pois-korostus
