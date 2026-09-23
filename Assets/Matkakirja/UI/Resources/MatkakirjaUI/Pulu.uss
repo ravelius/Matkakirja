@@ -863,3 +863,76 @@
     color: #211d18;
     opacity: 0.8;
 }
+
+/* Syöte: sanelun tilarivi, kirjoitusrivi ja nappirivi (web .pollo-syote, .pollo-sanelu-tila, .pollo-sanelu). */
+.mk-chat__syote {
+    flex-shrink: 0;
+    padding: 8px 8px 9px 8px;
+    border-top-width: 1px;
+    border-color: rgba(122, 85, 20, 0.25);
+}
+
+.mk-chat__syote > .mk-chat__rivi {
+    padding: 0 0 6px 0;
+    border-top-width: 0;
+}
+
+.mk-chat__sanelutila {
+    margin-bottom: 6px;
+    font-size: 13px;
+    color: rgba(33, 29, 24, 0.62);
+    -unity-text-align: middle-center;
+    white-space: normal;
+}
+
+.mk-chat__nappirivi {
+    flex-direction: row;
+}
+
+.mk-chat__nappula {
+    flex-grow: 1;
+    flex-basis: 0;
+    min-width: 0;
+    height: 36px;
+    min-height: 36px;
+    margin: 0 3px;
+    padding: 2px 5px;
+    justify-content: center;
+    align-items: center;
+    border-width: 1px;
+    border-color: rgba(122, 85, 20, 0.45);
+    border-radius: 8px;
+    background-color: #f5f0e2;
+    color: #7a5514;
+}
+
+.mk-chat__nappula > .mk-ikoni {
+    width: 18px;
+    height: 18px;
+    margin-right: 0;
+}
+
+.mk-chat__nappirivi > .mk-chat__kaiutin {
+    width: auto;
+    height: 36px;
+    min-height: 36px;
+    margin-left: 3px;
+    background-color: #f5f0e2;
+}
+
+.mk-chat__mikki {
+    flex-grow: 2;
+    flex-direction: row;
+}
+
+.mk-chat__mikki--kuuntelee {
+    background-color: #7a5514;
+    border-color: #7a5514;
+    color: #f7f1e2;
+}
+
+.mk-chat__mikkiteksti {
+    margin-left: 6px;
+    font-size: 12.5px;
+    color: #f7f1e2;
+}

@@ -284,7 +284,7 @@ namespace Matkakirja.Natiivi
             if (ele != null && LiviaEleet.Ryhma(ele) == "Liike") return false;
             if (laji == "bunGranted") { Aanet.PulunTehoste("pulu.pulla-riemu"); return Toista("bunFeast", laji); }
             if (laji == "narrationEnd") { if (omistaja == "narration" || omistaja == "reaction") Katkaise(); return false; }
-            bool vapaa = laji == "card" || laji == "narration" || laji == "answer" || laji == "reaction";
+            bool vapaa = laji == "card" || laji == "narration" || laji == "answer" || laji == "reaction" || laji == "microphone" || laji == "error";
             if (!vapaa && nyt - viimeTilanne < VahimmaisVali) return false;
             if (Aanet.PuluPuhuu && laji != "photo") return false;
             string id = laji switch
@@ -292,6 +292,8 @@ namespace Matkakirja.Natiivi
                 "success" => "grin",
                 "retry" => "nod",
                 "emotion" => TunteenEle(tunne),
+                "error" => TunteenEle(tunne), // web virhereaktio: tunnetagin ele (sanelu: hämmentynyt)
+                "microphone" => "listen",     // web livia-eleet: mikrofoni auki → kuuntelee
                 "answer" => RepliikinEle(teksti) is var r && r != "blink" ? r : "smile",
                 "card" => AiheenEle(symboli, teksti),
                 "photo" => kaupunki == "venetsia" ? "love" : "present",
