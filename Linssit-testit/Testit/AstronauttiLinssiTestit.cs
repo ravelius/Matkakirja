@@ -127,5 +127,21 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(0f, y.AjonKesto);
             Oleta.Sama("pois", n.Loki.Last());
         }
-    }
+    
+        [Testi] static void KyllaisyysKytkinValitseeSarjan()
+        {
+            var vanha = (AstronauttiLinssi.Kyllaisyys, AstronauttiLinssi.VaimeaSarja);
+            try
+            {
+                AstronauttiLinssi.Kyllaisyys = 1.0;
+                Oleta.Sama(Topografia.ReliefiSarja, AstronauttiLinssi.ReliefinSarja());
+                AstronauttiLinssi.Kyllaisyys = AstronauttiLinssi.WebinKyllaisyys;
+                AstronauttiLinssi.VaimeaSarja = null;
+                Oleta.Sama(Topografia.ReliefiSarja, AstronauttiLinssi.ReliefinSarja(), "ei vaimeaa sarjaa → täysvärinen");
+                AstronauttiLinssi.VaimeaSarja = "https://esim/{z}/{x}/{y}.jpg";
+                Oleta.Sama("https://esim/{z}/{x}/{y}.jpg", AstronauttiLinssi.ReliefinSarja());
+            }
+            finally { (AstronauttiLinssi.Kyllaisyys, AstronauttiLinssi.VaimeaSarja) = vanha; }
+        }
+}
 }

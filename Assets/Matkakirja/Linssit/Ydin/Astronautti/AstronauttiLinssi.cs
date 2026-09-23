@@ -44,6 +44,23 @@ namespace Matkakirja.Linssit.Astronautti
         public const int PaljastuksenKehykset = 3;
         public const double OtsikonHaivytysMs = 700, MustanHaivytysMs = 1100;
 
+        /// <summary>
+        /// Reliefin kylläisyys astronautin kamerassa: webissä 0,8 (satelliitti-avaruus.js
+        /// RELIEFIN_SATURAATIO, canvas saturate). Natiivi valitsee sarjan, koska Cesiumin
+        /// rasterikerroksella ei ole kylläisyyssäätöä: 1,0 = Topografia.ReliefiSarja,
+        /// 0,8 = VaimeaSarja (Karttasepän polttama saturate(0.8) -versio). Omistaja
+        /// vertaa molempia TestFlightissa (Fable 23.9.); UI tai testikomento asettaa.
+        /// </summary>
+        public static double Kyllaisyys = 1.0;
+        public const double WebinKyllaisyys = 0.8;
+
+        /// <summary>saturate(0.8) -reliefisarja (null = ei vielä ämpärissä → täysvärinen).</summary>
+        public static string VaimeaSarja = null;
+
+        /// <summary>Kytkimen mukainen sarja; vaimea vain, jos se on olemassa.</summary>
+        public static string ReliefinSarja() =>
+            Kyllaisyys < 0.95 && !string.IsNullOrEmpty(VaimeaSarja) ? VaimeaSarja : Topografia.ReliefiSarja;
+
         public static readonly LinssiTiedot AstronauttiTiedot = new LinssiTiedot
         {
             Id = "satelliitti",
@@ -99,7 +116,7 @@ namespace Matkakirja.Linssit.Astronautti
             foreach (var k in new[] { "reitit", "napakannet" }) y.Kerrokset.Nakyvyys(k, false);
             y.Kerrokset.LisaaRasteri(Kerros, new Rasteri
             {
-                Url = Topografia.ReliefiSarja, Projektio = Projektio.WebMercator,
+                Url = ReliefinSarja(), Projektio = Projektio.WebMercator,
                 MinTaso = 0, MaxTaso = Topografia.ReliefiMaxTaso, Alfa = 1f,
             });
             y.Kerrokset.Nakyvyys(Topografia.Pohja, false);
