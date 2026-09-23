@@ -139,3 +139,24 @@ namespace Matkakirja.Linssit.Testit
         }
     }
 }
+
+namespace Matkakirja.Linssit.Testit
+{
+    public static class PilvikuvaTestit
+    {
+        [Testi] static void PilvienAlfaKutenWebissa()
+        {
+            var k = System.Text.Json.JsonDocument.Parse(System.IO.File.ReadAllText(System.IO.Path.Combine(
+                System.AppContext.BaseDirectory, "..", "kultaiset", "pilvet.json"))).RootElement;
+            int l = k.GetProperty("L").GetInt32(), kk = k.GetProperty("K").GetInt32();
+            var data = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Select(k.GetProperty("syote").EnumerateArray(), x => (byte)x.GetInt32()));
+            Astronautti.Pilvikuva.Alfa(data, l, kk);
+            int i = 0;
+            foreach (var v in k.GetProperty("tulos").EnumerateArray())
+            {
+                Oleta.Sama((byte)v.GetInt32(), data[i], "tavu " + i);
+                i++;
+            }
+        }
+    }
+}
