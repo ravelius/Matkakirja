@@ -153,3 +153,93 @@ päivittää.
    `musiikkiNayteNimi`-kentissä käyttäen samaa `lisenssiKelpaa()`-
    sääntöä. Näin NC ei palaa huomaamatta. Tämä on Pelikoodarin erä.
 3. `lahteet.js`:n kaksi riviä päivitetään, kun korvaukset ovat valmiit.
+
+## Jatko 23.9.2026: radiot, liput, ulkoiset kuvat ja julisteet
+
+Fablen jatkotilaus. Yksityiskohdat ovat liitteissä:
+[radiot](lisenssi-inventaario-20260923-liite-radiot.md) (115 asemaa
+lähteineen) ja
+[liput, kuvat ja julisteet](lisenssi-inventaario-20260923-liite-kuvat.md).
+Molemmat ovat Sonnet-agenttien verkkoselvityksiä.
+
+### Radiovirrat: yksikään asema ei ole sallittu kaupalliseen käyttöön
+
+Peli soittaa `js/packs/radiot.js`:n 115 asemaa suoraan asemalta
+(`js/linssit/radio.js`, `new Audio(url)`, ei välityspalvelinta eikä
+tallennusta). Aiempi luku 78 koski vain niitä rivejä, joilta lisenssi
+puuttui. Asemia on kaikkiaan 115.
+
+- **Radio Browser** jakaa asemaluettelon vapaasti, mutta palvelu ei anna
+  mitään oikeuksia itse lähetyksiin.
+- **Kielletty, 16 asemaa.** Tarkistetut suuret yleisradiot kieltävät
+  ehdoissaan kolmannen osapuolen kaupallisen käytön ilman sopimusta: BBC
+  (GBR ja UGA), Yle, Radio France, ARD/Deutschlandradio, RTVE, NRK,
+  Sveriges Radio, ORF, SRG SSR, NPO, CBC, ABC, RTHK, RTP ja VRT. BBC:n ja
+  ABC:n sivuja ei saatu auki, joten niiden tieto perustuu hakutuloksiin.
+- **Epäselvä, 99 asemaa.** Näistä ei löytynyt julkisia ehtoja, joten
+  oletus on, että käyttö vaatii luvan. Ryhmään kuuluvat RAI, DR, TRT ja
+  RTÉ sekä kaikki kaupalliset ja paikalliset asemat.
+- **Sallittu: 0.**
+- **Musiikin välityskorvaukset** (Teosto ja Gramex) jäivät ratkaisematta.
+  Suora virta sovelluksessa voi synnyttää oman korvausvelvoitteen, joten
+  asiaa on kysyttävä järjestöiltä ennen kaupallista julkaisua.
+
+**Suositus:** maksullisessa versiossa radiolinssi joko poistetaan tai
+korvataan omalla äänisisällöllä, kunnes lupia on. Todennäköisesti
+halvin vaihtoehto on pitää radio vain ilmaisessa web-versiossa, mutta
+epävarmaa on, onko sekään "ei-kaupallista", jos sama peli on myynnissä.
+Kaupallisen välittäjän (esim. Radio Garden -tyyppinen palvelu, jolla on
+neuvotellut oikeudet) mahdollisuutta ei selvitetty.
+
+### Liput: kaikki kunnossa
+
+183 lipusta 131:llä on lisenssi jo datassa (`lippu-tekijat.js` 8 ja
+`lipputiedot.js` 124). Loput 52 haettiin Commonsin rajapinnasta, ja
+kaikki ovat Public Domain tai CC0 ilman attribuutiovaatimusta. Aiempi
+luku 34 laski sisarkenttiä eri rajauksella. Toimenpiteitä ei tarvita.
+
+### Ulkoiset kuvat: ei yhtään aidosti lisensoimatonta
+
+Ne 24 kuvaa, joilta lisenssi näytti puuttuvan, ovat joko jo
+dokumentoituja tai pelin omia:
+
+- Satelliittikuvat (NASA PD), yö- ja reliefikartat sekä kookoskrapu ovat
+  kaikki dokumentoituja. Lisenssi on vain objektipuussa syvemmällä kuin
+  rivitason tarkistus katsoi.
+- Fokusvirtojen `lahteet[]` ovat taustaviitteitä, joita ei näytetä
+  pelaajalle.
+- **29 isoisän kuvaa ovat pelin omaa kuvaputkea** eivätkä Commonsista:
+  `etusivun-isoisakuvat.js` (27 riviä) ja `isoisan-valokuvat.js:43` ja
+  `:55`. Niiltä puuttuu vain `lahde`-kenttä, ja naapuririveillä on jo
+  vakiintunut ilmaus (`'Matkakirjan havainnekuva'` tai `'Kuvaputken
+  generoitu valokuva'`). Korjaukseen riittää kentän täydennys, eikä
+  lisenssi ole ongelma.
+
+### Julisteet: selvä, yksi avoin kohta
+
+- **114 julistetta** (`julisteet.js`) ovat tekstistä generoituja OpenAI
+  `gpt-image-2` -mallilla (`tools/juliste-ajuri.mjs` →
+  `tools/pollo/worker.js`), eivät Commons-johdannaisia. Lähderivi on
+  moduulitason vakio `JULISTE_LAHDE = 'Matkakirjan oma paino'`
+  (rivi 69), ei rivikohtainen kenttä, ja siksi rivitason tarkistus
+  merkitsi ne tuntemattomiksi. Suositus lähderiviksi: *"Matkakirjan oma
+  paino, tuotettu OpenAI gpt-image-2:lla"* ja tuotantopäivä.
+- **Avoin: kaupunkilehden 394 herokuvaa** (`kulttuuri-kategoriat.js`
+  `ampari`). Kun kohdassa on `tarkkaKohde: true`, hero-ajuri lähettää
+  mallille 2–4 Commonsin viitekuvaa (PD, CC0, CC BY tai CC BY-SA;
+  docs/moduulit/viitekuvat.md). Jos lopputulos katsotaan viitekuvan
+  johdannaiseksi, BY- ja BY-SA-ehdot periytyvät. Viitteiden loki
+  (`viitekuvat-loki.txt`) on ollut generointiajon paikallinen tiedosto,
+  eikä sitä ole repossa. Selvitettävä ennen maksullista versiota:
+  1. Kuinka moni heroista käytti viitekuvia? Työlistoista
+     `tools/hero-tyolista-*.mjs` saa `tarkkaKohde`-kohteet.
+  2. Kirjataan niiden viitteet lähderiville.
+  3. Linjataan, riittääkö attribuutio.
+
+### Korvausten tilanne
+
+Sisältökirjurin tiedon mukaan C (kolme kielinäytettä) ja D:n kolme
+näytettä (GBR, IRL ja Pietari) ovat PR #2895:ssä, ja D:n loput kolme
+(FIN, Barcelona ja Kiova) ovat PR #2897:ssä. **Korit A ja B eivät ole
+vielä kenenkään työlistalla.** Niissä on 14 ambienssiääntä
+`js/aani-ehdokkaat.js`-tiedostossa.
