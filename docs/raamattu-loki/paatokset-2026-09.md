@@ -2639,3 +2639,7 @@ Raportit PR #2970.
 ## NATIIVI-UI NOLLATAAN klo 22.3x (78 %): LUOVUTUS viesti-natiivi-ui-luovutus-20260923-yo.md (7c049d92e); NOPPA JA PIENI LIIKE MASTERISSA, LEIMA MERGE-PYYNNOSSA, SAHKENAKYMAT JA NAHTAVYYDET KESKEN WORKTREEISSA (COMMITTAAMATTOMIA TIEDOSTOJA → UUSI SESSIO OTTAA TALTEEN); ALOITUS viesti-natiivi-ui-aloitus.md (23.9.2026 klo 22.26)
 
 Neljäs Natiivi-UI-sessio tänään.
+
+## LAITETESTAAJA NOLLATAAN (71 %): TARKISTUSLISTA omistajan-testflight-lista-20260924.md, LUOVUTUS -yo.md, ALOITUS viesti-laitetestaaja-aloitus.md. PELIKOODARI: MIGRAATIO v3/v4 → v5 TESTATTU (43f2820, 168/168); YOPORTTI PR #2990 (23.9.2026 klo 22.28)
+
+Migraatio varmistettu TestFlight 1:n tallennuksilla.
