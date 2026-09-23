@@ -105,6 +105,16 @@ namespace Matkakirja.Linssit.Testit
             finally { Linssirekisteri.Kehittajatila = vanha; }
         }
 
+        [Testi] static void KoepaketinKokoelmaLinkkeina()
+        {
+            // v16: kaikki asemat linkkejä ennen lupia; sivuttomat eivät tee mitään.
+            var a = RadioAineisto.Lue(Paketti("radiot-kokoelma.json"), null, Paketti("kaupungit-radio.json"));
+            Oleta.Sama(115, a.Asemat.Count);
+            var toiminnot = a.Asemat.Values.GroupBy(RadioLinssi.ToimintoAsemalle).ToDictionary(g => g.Key, g => g.Count());
+            Oleta.Tosi(!toiminnot.ContainsKey(RadioLinssi.Toiminto.Soita), "ei suoria lähetyksiä ilman lupaa");
+            Oleta.Sama(a.Asemat.Values.Count(x => !string.IsNullOrEmpty(x.Sivu)), toiminnot[RadioLinssi.Toiminto.Linkki]);
+        }
+
         [Testi] static void HybridiSoittaaLinkittaaJaAanittaa()
         {
             var y = new ValeYmparisto();
