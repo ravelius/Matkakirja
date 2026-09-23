@@ -35,6 +35,8 @@ namespace Matkakirja.Natiivi
             Osio(vieritys, "Kartta ja maasto", KarttaKerrokset.Tekijatiedot);
             Osio(vieritys, "Kuvat",
                 "Valokuvat, julisteet ja liput ovat Wikimedia Commonsista (vapaat lisenssit); tekijä ja lisenssi näkyvät kunkin kuvan yhteydessä.");
+            Osio(vieritys, "3D-mallit",
+                "Lentokone (DC-3-tyyppinen potkurikone) on pelin oma malli, CC0 (public domain).");
             Osio(vieritys, "Äänet",
                 "Pulun äänitehosteet ovat Freesoundista (CC0 ja CC BY). Luennat ja Livian repliikit ovat pelin omia äänitteitä.");
             Osio(vieritys, "Fontit",
