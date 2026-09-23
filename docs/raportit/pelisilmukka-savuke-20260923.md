@@ -7,7 +7,7 @@ simulaattorissa"). Työkalu: `tools/mittaus/aja-pelisilmukka-savuke.mjs`
 NakymaPeitetty + Natiivi-UI:n tilarivi/kaupunkikortti"), simulaattori
 iPhone 18 Pro (1572C658…).
 
-## Tulos: 1/6 tarkistuspistettä OK
+## Ensimmäinen ajo (viralliset silmukka-30s.txt): 1/6 tarkistuspistettä OK
 
 Silmukka KÄYNNISTYY ja tallentaa tilat oikein (uusi-peli, tila-tarkistus
 toimivat) — `1-alku` täsmää odotettuun täydellisesti. Kaikki tästä eteenpäin
@@ -27,11 +27,42 @@ jälkeen — matkavalinnan sijaan avautuu jokin UUSI välitila
 (`odota-tila dialogi` ei koskaan täyty, `valitse bussi` epäonnistuu koska
 oikea dialogi ei ole auki).
 
-**Tämä on todennäköisesti odotettu seuraus Natiiviseppän samassa käännöksessä
-mainitusta UI-muutoksesta** ("Natiivi-UI:n tilarivi/kaupunkikortti") — EI
-välttämättä bugi pelilogiikassa, vaan testikäsikirjoitus on jäänyt jälkeen
-uudesta UI-vuosta (kaupunkikortti lienee uusi välivaihe ennen matkavalintaa).
-En osaa sanoa varmasti kumpi — raportoin havainnon, en arvaa korjausta.
+**Vahvistettu (Pelikoodari + Fable 23.9.): ei bugi.** Kaupunkikortti on
+tarkoituksellinen välivaihe, ja vika oli testikäsikirjoituksessa. Pelikoodari
+lisäsi uuden `liiku kaupunki` -testikomennon ja päivitti `silmukka-30s.txt`:n
+(kortista jatketaan `liiku`-rivillä matkavalintaan) — muutos on haarassa
+`pelikoodari/kysymys-ui`, merge Natiiviseppältä kesken. Yksi odotusarvo
+muuttui samalla: `1-alku` on nyt vaiheessa **Toiminta** (ei Heitto), koska
+erä 4:n tutkiminen purkaa liftauksen esivalinnan — ei vaikuta tähän
+tarkistuslistaan (vaihetta ei tarkisteta).
+
+## Väliajo ennen mergeä: 5/5 sovellettavaa tarkistuspistettä OK
+
+Pelikoodarin ohjeistamana ohitin kaupunkikortin `matka kaupunki tapa`
+-komennolla (toimii jo nyt, sama proto-master 160f175) validoidakseni
+ydinlogiikan ennen `liiku`-mergeä. Väliaikainen käsikirjoitus:
+`tools/mittaus/silmukka-30s-ohitus.txt`, ajuri:
+`tools/mittaus/aja-pelisilmukka-ohitus-savuke.mjs`. `2-dialogi`-tarkistuspiste
+jätetty pois (ei sovellu ohitukseen — kortti/dialogi-UI:ta ei testata tällä).
+
+```
+216.81 matka lontoo bussi → ok [Matkalla]
+218.42 odota-tila → ok Lehti [Lehti]      (Lontooseen saavuttu, lehti auki)
+222.44 sulje-lehti → ok [Kartta]
+223.44 matka pariisi liftaus → ok [Matkalla]
+225.06 odota-tila → ok Lehti [Lehti]      (Pariisiin saavuttu, lehti auki)
+228.07 sulje-lehti → ok [Kartta]
+```
+
+**Kaikki 5 tarkistuspistettä täsmäsivät odotettuun** (sijainti, raha 300→250,
+päivä 1, aika aamu→keskipäivä) — matka-, lehti- ja tallennuslogiikka toimivat
+oikein. Ainoa löydös koko kierroksesta oli kaupunkikortin puuttuva
+testikomento, joka on jo korjattu (mergeä odottamassa). Ei kaatumisia
+kummallakaan ajolla.
+
+**Lopullinen 6/6-ajo virallisella (liiku-komennollisella) `silmukka-30s.txt`:llä
+tehdään heti kun `pelikoodari/kysymys-ui` on mergetty masteriin** — ilmoitan
+sen jälkeen erikseen.
 
 ## Muut havainnot
 
@@ -55,8 +86,8 @@ taulukkoa vasten, mykistää äänen ajaksi. Vaatii boot-tun simulaattorin jossa
 
 ## Seuraava askel
 
-Pelikoodarin/Natiiviseppän päätettäväksi: päivitetäänkö `silmukka-30s.txt`
-uuteen kaupunkikortti-välivaiheeseen (lisää esim. `valitse-kortti`-komento
-tai vastaava), vai onko kaupunkikortin pitänyt johtaa suoraan dialogiin eikä
-tehnyt niin (oikea bugi). Kun käsikirjoitus on ajan tasalla, tämä savuke
-ajetaan uudelleen jokaisen VP:n jälkeen kuten sulavuusportti.
+1. Odota `pelikoodari/kysymys-ui` (liiku-komento) merge masteriin.
+2. Aja `tools/mittaus/aja-pelisilmukka-savuke.mjs` (virallinen
+   `silmukka-30s.txt`, päivitetty) uudelleen — tavoite 6/6.
+3. Poista väliaikainen ohitussavuke kun virallinen kattaa saman.
+4. Ajetaan jatkossa jokaisen VP:n jälkeen kuten sulavuusportti.

@@ -1,0 +1,25 @@
+# Väliaikainen ohitusversio silmukka-30s.txt:stä (Laitetestaaja 23.9.2026),
+# kunnes Pelikoodarin liiku-komennolla päivitetty virallinen versio on
+# mergetty (pelikoodari/kysymys-ui, commit 1f-sarjaa). Ohittaa
+# kaupunkikortin suoraan matka-komennolla (Pelikoodarin antama ohje) —
+# EI testaa kaupunkikortti-UI:ta, vain matkalogiikkaa ja lehteä.
+odota-tila kartta 40
+uusi-peli 12345
+odota 2
+tila 1-alku
+matka lontoo bussi
+odota-tila lehti 6
+tila 3-lehti-lontoo
+odota 4
+sulje-lehti
+odota-tila kartta 3
+odota 1
+tila 4-lontoossa
+matka pariisi liftaus
+odota-tila lehti 6
+tila 5-lehti-pariisi
+odota 3
+sulje-lehti
+odota-tila kartta 3
+odota 1
+tila 6-loppu
