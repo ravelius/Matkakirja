@@ -37,8 +37,14 @@
  * (CLAUDE.md: mitään henkilötietoa ei viedä ulkopuoliselle palvelulle).
  *
  * Paluuarvo: 0 kun yksikään kaupunki ei ylitä rajaa, 1 kun ylittää.
- * Puuttuva koordinaatti (ei wiki-sivua, ei koordinaattia sivulla) ei
- * kaada ajoa — se raportoidaan omana listanaan.
+ * WIKI-KENTTÄ, JOTA EI LÖYDY fi-WIKIPEDIASTA, TAI SIVU ILMAN
+ * KOORDINAATTIA KAATAA AJON (1) (Fablen päätös 23.9.2026). Ennen se näkyi vain "ei koordinaattia" -rivinä, ja
+ * yhdeksän kaupunkia jäi mittaamatta: Gao oli pallolla 374 km ja Exmouth
+ * 89 km väärässä paikassa, eikä vartio huomannut
+ * (docs/raportit/kaupunkien-latlon-20260923.md). Korjaus on kirjoittaa
+ * kenttään olemassa olevan fi-artikkelin nimi (ei uudelleenohjausta).
+ * Sivu ilman koordinaattia on käytännössä aina täsmennyssivu: "Gao" on
+ * fi-Wikipediassa täsmennys (Q253173), ja kaupunki jäi siksi mittaamatta.
  */
 import { mkdirSync, readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
@@ -112,14 +118,20 @@ function kirjoitaValimuistiin(nimi, tieto) {
  * ei löydy — sellainen nimi jää ilman koordinaattia ja raportoidaan
  * omana listanaan (korjaus on kirjoittaa pakkaan artikkelin oikea nimi).
  */
-async function haeKoordinaatit(nimet) {
-  const arvot = nimet.map((n) => `${JSON.stringify(n)}@fi`).join(' ');
+/** fi-Wikipediasta löytyneet sivunimet ja ne, joita ei löytynyt. */
+const LOYTYI_SIVU = new Set();
+const EI_SIVUA = new Set();
+
+async function haeKoordinaatit(nimet, kieli = 'fi') {
+  const arvot = nimet.map((n) => `${JSON.stringify(n)}@${kieli}`).join(' ');
+  // Koordinaatti on valinnainen, jotta vastaus kertoo myös, onko sivu
+  // olemassa: rivi ilman koordinaattia = sivu on, piste puuttuu.
   const kysely = `SELECT ?title ?coord WHERE {
   VALUES ?title { ${arvot} }
   ?artikkeli schema:about ?kohde ;
-    schema:isPartOf <https://fi.wikipedia.org/> ;
+    schema:isPartOf <https://${kieli}.wikipedia.org/> ;
     schema:name ?title .
-  ?kohde wdt:P625 ?coord .
+  OPTIONAL { ?kohde wdt:P625 ?coord . }
 }`;
   /*
    * Kyselypalvelu kuristaa nopeat sarjat (429). Yritetään uudestaan
@@ -144,6 +156,10 @@ async function haeKoordinaatit(nimet) {
   const ulos = new Map(nimet.map((n) => [n, null]));
   for (const rivi of data?.results?.bindings ?? []) {
     const nimi = rivi?.title?.value;
+    if (kieli === 'fi' && nimi && ulos.has(nimi)) LOYTYI_SIVU.add(nimi);
+  }
+  for (const rivi of data?.results?.bindings ?? []) {
+    const nimi = rivi?.title?.value;
     const piste = /Point\(\s*(-?[\d.]+)\s+(-?[\d.]+)\s*\)/.exec(rivi?.coord?.value ?? '');
     if (!nimi || !piste || !ulos.has(nimi)) continue;
     // Wikidatan piste on Point(lon lat).
@@ -158,7 +174,13 @@ async function koordinaatit(nimet) {
   const puuttuvat = [];
   for (const nimi of nimet) {
     const muistissa = lueValimuistista(nimi);
-    if (muistissa) ulos.set(nimi, muistissa.paikka ?? null);
+    // Vanha välimuistirivi ilman sivutietoa haetaan uudestaan, jos
+    // koordinaatti puuttuu: muuten puuttuvaa sivua ei erotettaisi.
+    if (muistissa && (muistissa.paikka || muistissa.sivu !== undefined || VERKOTON)) {
+      ulos.set(nimi, muistissa.paikka ?? null);
+      if (muistissa.sivu === false) EI_SIVUA.add(nimi);
+      else if (muistissa.paikka || muistissa.sivu) LOYTYI_SIVU.add(nimi);
+    }
     else puuttuvat.push(nimi);
   }
   if (!puuttuvat.length) return ulos;
@@ -170,9 +192,19 @@ async function koordinaatit(nimet) {
     const era = puuttuvat.slice(i, i + 60);
     if (i) await new Promise((v) => { setTimeout(v, 1200); });
     const haettu = await haeKoordinaatit(era);
+    /*
+     * EN-VARAREITTI: kaupunki, jolla ei ole fi-artikkelia (Birdsville,
+     * Coober Pedy…), mitataan samannimisen en-artikkelin kautta, jotta
+     * sen poikkeama näkyy. Wiki-kenttää ei voi vaihtaa en-nimeksi, koska
+     * peli käyttää sitä artikkelien avaimena (js/lehti.js ARTIKKELIT).
+     */
+    const ilmanSivua = era.filter((n) => !LOYTYI_SIVU.has(n));
+    const enHaettu = ilmanSivua.length ? await haeKoordinaatit(ilmanSivua, 'en') : new Map();
     for (const nimi of era) {
-      const paikka = haettu.get(nimi) ?? null;
-      kirjoitaValimuistiin(nimi, { nimi, paikka, haettu: new Date().toISOString() });
+      const paikka = haettu.get(nimi) ?? enHaettu.get(nimi) ?? null;
+      const sivu = LOYTYI_SIVU.has(nimi);
+      if (!sivu) EI_SIVUA.add(nimi);
+      kirjoitaValimuistiin(nimi, { nimi, paikka, sivu, haettu: new Date().toISOString() });
       ulos.set(nimi, paikka);
     }
   }
@@ -227,9 +259,10 @@ async function main() {
   const mitatut = raportti.filter((r) => r.km !== null).sort((a, b) => b.km - a.km);
   const ilman = raportti.filter((r) => r.km === null);
   const yli = mitatut.filter((r) => r.km > RAJA_KM);
+  const eiSivua = raportti.filter((r) => !r.wiki || EI_SIVUA.has(r.wiki));
 
   if (JSONA) {
-    console.log(JSON.stringify({ raja: RAJA_KM, mitatut, ilman }, null, 2));
+    console.log(JSON.stringify({ raja: RAJA_KM, mitatut, ilman, eiSivua }, null, 2));
   } else {
     const mediaani = mitatut.length
       ? mitatut[Math.floor(mitatut.length / 2)].km : 0;
@@ -242,9 +275,18 @@ async function main() {
         + ` lauta ${r.laudalla.lat.toFixed(3)},${r.laudalla.lon.toFixed(3)}`
         + `  oikea ${r.oikea.lat.toFixed(3)},${r.oikea.lon.toFixed(3)}`);
     }
-    for (const r of ilman) console.log(`  (ei koordinaattia) ${r.lauta}/${r.id} — wiki ${r.wiki}`);
+    for (const r of ilman.filter((x) => !eiSivua.includes(x))) {
+      console.log(`  (ei koordinaattia, täsmennyssivu?) ${r.lauta}/${r.id} — wiki ${r.wiki}`);
+    }
+    if (eiSivua.length) {
+      console.log(`  wiki-kenttä ei osu fi-Wikipediaan: ${eiSivua.length} (mitattu en-wikin kautta, jos sieltä löytyi)`);
+      for (const r of eiSivua) {
+        console.log(`  (ei fi-sivua) ${r.lauta}/${r.id} — wiki ${r.wiki ?? '(puuttuu)'}`
+          + (r.km !== null ? ` — en-wiki ${r.km.toFixed(1)} km` : ' — ei en-wikissäkään'));
+      }
+    }
   }
-  process.exit(yli.length ? 1 : 0);
+  process.exit(yli.length || ilman.length || eiSivua.length ? 1 : 0);
 }
 
 if (process.argv[1] && import.meta.url === `file://${process.argv[1]}`) {
