@@ -11,6 +11,12 @@
 // päällä. Puhuu-tapahtuma (tosi alkaessa, epätosi loppuessa) on musiikin ja
 // ambienssin vaimennusta varten (web puheAlkoi/puheLoppui).
 //
+// PUHESYNTEESI (Lue): muut tekstit luetaan pollo-workerin puheella kuten
+// webissä (js/puhe.js haePala: POST {tehtava:'puhe', teksti, persoona}).
+// Natiivi tunnistautuu otsakkeella x-matkakirja-natiivi = bundle id ja samalla
+// tunnisteella User-Agentissa (verkkopelin PR #2956, Fablen päätös 23.9.2026).
+// Äänitetyt luennat ovat ensisijaisia; synteesi on välimuistissa kuten äänitteet.
+//
 // iOS: äänettömyyskytkin mykistäisi Unityn oletusistunnon (Ambient). Web
 // Safarissa media soi kytkimestä huolimatta, joten natiivi asettaa istunnon
 // Playback + MixWithOthers (Plugins/iOS/MatkakirjaAani.mm) ensimmäisellä
@@ -32,6 +38,9 @@ namespace Matkakirja.Natiivi
     public sealed class Puhe : MonoBehaviour
     {
         public const string KytkinAvain = "matkakirja.luennat";
+        public const string Puhepalvelin = "https://matkakirja-pollo.samireivinen.workers.dev";
+        /// <summary>Workerin PUHE_TEKSTIN_KATTO (tools/pollo/rajat.js).</summary>
+        public const int TekstinKatto = 1000;
         /// <summary>Luennan loppuhäivytys (web LUENNAN_HAIPYMA_S).</summary>
         public const float Haivytys = 1.5f;
         /// <summary>Uuden puheen alkuhäivytys (web: kertoja alkaa pehmeästi).</summary>
@@ -107,8 +116,48 @@ namespace Matkakirja.Natiivi
             this.loppu = loppu;
             SoivaUrl = url;
             ViimeVirhe = null;
-            lataus = StartCoroutine(LataaJaSoita(url, viiveS, oma));
+            lataus = StartCoroutine(LataaJaSoita(url, () => new UnityWebRequest(url, UnityWebRequest.kHttpVerbGET), viiveS, oma));
             return true;
+        }
+
+        /// <summary>
+        /// Lukee tekstin puhesynteesillä (persoona: merkinnat | kertoja | pulu,
+        /// web PUHE_PERSOONAT). Muuten kuten Soita. Liian pitkä teksti katkaistaan
+        /// virkkeen rajalta workerin kattoon.
+        /// </summary>
+        public bool Lue(string teksti, string persoona = "merkinnat", float viiveS = 0, Action loppu = null)
+        {
+            if (!Paalla || string.IsNullOrWhiteSpace(teksti)) return false;
+            teksti = Katkaise(teksti.Trim(), TekstinKatto);
+            AsetaIstunto();
+            int oma = ++tunnus;
+            if (lataus != null) StopCoroutine(lataus);
+            if (lahde.isPlaying) Haivyta(Alkuhaivytys, false);
+            this.loppu = loppu;
+            SoivaUrl = "puhe:" + persoona + ":" + teksti;
+            ViimeVirhe = null;
+            string runko = "{\"tehtava\":\"puhe\",\"teksti\":" + PeliApu.Json(teksti) + ",\"persoona\":" + PeliApu.Json(persoona) + "}";
+            lataus = StartCoroutine(LataaJaSoita(SoivaUrl, () =>
+            {
+                var r = new UnityWebRequest(Puhepalvelin, UnityWebRequest.kHttpVerbPOST)
+                {
+                    uploadHandler = new UploadHandlerRaw(Encoding.UTF8.GetBytes(runko)) { contentType = "application/json" },
+                };
+                r.SetRequestHeader("Content-Type", "application/json");
+                r.SetRequestHeader("x-matkakirja-natiivi", Application.identifier);
+                r.SetRequestHeader("User-Agent", "Matkakirja/" + Application.version + " (" + Application.identifier + ")");
+                return r;
+            }, viiveS, oma));
+            return true;
+        }
+
+        /// <summary>Katkaisee tekstin viimeiseen virkkeen loppuun ennen kattoa (tai kattoon).</summary>
+        public static string Katkaise(string teksti, int katto)
+        {
+            if (teksti.Length <= katto) return teksti;
+            int raja = Math.Max(teksti.LastIndexOf(". ", katto, StringComparison.Ordinal),
+                Math.Max(teksti.LastIndexOf("! ", katto, StringComparison.Ordinal), teksti.LastIndexOf("? ", katto, StringComparison.Ordinal)));
+            return raja > katto / 3 ? teksti.Substring(0, raja + 1) : teksti.Substring(0, katto);
         }
 
         /// <summary>Pysäyttää häivyttäen (web haivytaAani); loppu-kutsua ei tehdä.</summary>
@@ -122,7 +171,7 @@ namespace Matkakirja.Natiivi
             else AsetaPuhuu(false);
         }
 
-        IEnumerator LataaJaSoita(string url, float viiveS, int oma)
+        IEnumerator LataaJaSoita(string url, Func<UnityWebRequest> pyynto, float viiveS, int oma)
         {
             float alku = Time.unscaledTime;
             string tiedosto = Path.Combine(Kansio, Tiiviste(url) + Paate(url));
@@ -130,7 +179,7 @@ namespace Matkakirja.Natiivi
             {
                 Directory.CreateDirectory(Kansio);
                 string valiaikainen = tiedosto + ".lataus";
-                using (var r = new UnityWebRequest(url, UnityWebRequest.kHttpVerbGET))
+                using (var r = pyynto())
                 {
                     r.downloadHandler = new DownloadHandlerFile(valiaikainen) { removeFileOnAbort = true };
                     r.timeout = 60;

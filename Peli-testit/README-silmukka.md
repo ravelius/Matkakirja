@@ -75,6 +75,7 @@ JSON-tiedostot. 3D:n `komento.txt` (esim. `kuva nimi`) toimii rinnalla.
 | `matka kaupunki tapa` | valinta ilman dialogia |
 | `heita` | "Heitä noppaa" (kesken reitin) |
 | `sulje-lehti` | sulkee lehden kuin pelaaja |
+| `liiku kaupunki` | kortin "Liiku tänne": kortti kiinni, matkavalinta auki (tila Dialogi) |
 | `kortti kaupunki` / `lue-lehti kaupunki` | kaupunkikortti (Natiivi-UI:n tehdas) / lehti ilman matkaa |
 | `tutki [vaikea]` | "Tutki kaupunkia" -nappi: kysymys auki (tila Kysymys) |
 | `vastaa i\|oikea\|vaara` | vaihtoehto i (0..), oikea tai ensimmäinen näkyvä väärä |
@@ -103,6 +104,8 @@ uusi-peli 12345
 odota 2
 tila 1-alku
 napauta lontoo
+odota 1
+liiku lontoo
 odota-tila dialogi 3
 odota 1.5
 tila 2-dialogi
@@ -115,6 +118,8 @@ odota-tila kartta 3
 odota 1
 tila 4-lontoossa
 napauta pariisi
+odota 1
+liiku pariisi
 odota-tila dialogi 3
 odota 1
 valitse liftaus
@@ -131,7 +136,7 @@ Odotettu (laskettu dotnetilla samalla paketilla ja 266 laatalla):
 
 | Tiedosto | silmukka | sijainti | raha · päivä · aika | muuta |
 |---|---|---|---|---|
-| 1-alku | Kartta | c:pariisi | 300 · 1 · aamu | vaihe Heitto (liftaus esivalittu) |
+| 1-alku | Kartta | c:pariisi | 300 · 1 · aamu | vaihe Toiminta (Pysy purkaa liftauksen esivalinnan, erä 4) |
 | 2-dialogi | Dialogi | c:pariisi | 300 · 1 · aamu | dialogi lontoo, vaihtoehdot Bussi 50, Liftaus 0 (askelia 3) |
 | 3-lehti-lontoo | Lehti | c:lontoo | 250 · 1 · aamu | lehtiAuki true, viimeisin saapui lontoo |
 | 4-lontoossa | Kartta | c:lontoo | 250 · 1 · aamu | lehtiAuki false |
