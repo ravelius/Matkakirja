@@ -401,3 +401,339 @@
     -unity-text-align: middle-center;
     color: var(--map-ink);
 }
+
+/* --- Karttaselitteen välilehdet (webin .karttaselite-valilehti) --------------------- */
+
+.mk-selite__valilehdet {
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.mk-selite__valilehti {
+    min-height: 28px;
+    padding: 3px 7px;
+    margin-right: 4px;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0);
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(70, 51, 31, 0.7);
+}
+
+.mk-selite__valilehti .mk-nappi__teksti {
+    font-size: 11px;
+    letter-spacing: 1.3px;
+}
+
+.mk-selite__valilehti.mk-valittu {
+    border-color: rgba(70, 51, 31, 0.3);
+    background-color: rgba(255, 252, 242, 0.85);
+    color: rgba(70, 51, 31, 0.96);
+}
+
+.mk-selite__paneeli {
+    flex-shrink: 1;
+    min-height: 0;
+}
+
+.mk-selite.mk-selite--maakunnat {
+    width: 268px;
+}
+
+/* --- Maakunnat-välilehti (webin .maakunnat-*) ---------------------------------------- */
+
+.mk-maakunnat {
+    flex-shrink: 1;
+    min-height: 0;
+}
+
+.mk-maakunnat__lista {
+    position: relative;
+}
+
+.mk-maakunnat__tila {
+    padding: 10px 8px;
+    font-size: 12px;
+    color: rgba(70, 51, 31, 0.7);
+}
+
+.mk-maakunnat__maa {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 32px;
+    padding: 4px 6px;
+    border-width: 0;
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(70, 51, 31, 0.92);
+}
+
+.mk-maakunnat__maa:active {
+    background-color: rgba(70, 51, 31, 0.07);
+}
+
+.mk-maakunnat__nuoli {
+    width: 14px;
+    margin-right: 5px;
+    font-size: 11px;
+    -unity-text-align: middle-center;
+    transition-property: rotate;
+    transition-duration: 0.16s;
+}
+
+.mk-maakunnat__maa.mk-auki .mk-maakunnat__nuoli {
+    rotate: 90deg;
+}
+
+.mk-maakunnat__maanimi {
+    font-size: 11.5px;
+    letter-spacing: 1.3px;
+}
+
+.mk-maakunnat__rivi {
+    justify-content: flex-start;
+    min-height: 34px;
+    padding: 4px 42px 4px 24px;
+    border-width: 0;
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(70, 51, 31, 0.92);
+}
+
+.mk-maakunnat__rivi:active {
+    background-color: rgba(70, 51, 31, 0.07);
+}
+
+.mk-maakunnat__rivi.mk-valittu {
+    background-color: rgba(70, 51, 31, 0.1);
+}
+
+.mk-maakunnat__nimi {
+    font-size: 13.8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.mk-maakunnat__rivi.mk-valittu .mk-maakunnat__nimi {
+    -unity-font-style: bold;
+}
+
+/* Tyhjä peukalo: sama pilleri kuin Nostot-välilehdellä, luvun paikka tyhjänä. */
+.mk-peukalo--tyhja {
+    border-color: rgba(70, 51, 31, 0.24);
+}
+
+.mk-maakunnat__luonnehdinta {
+    flex-shrink: 0;
+    margin: 4px 2px 0 2px;
+    padding: 8px 8px 4px 8px;
+    border-top-width: 1px;
+    border-color: rgba(70, 51, 31, 0.18);
+}
+
+.mk-maakunnat__lnimi {
+    font-size: 11px;
+    letter-spacing: 1.3px;
+    color: rgba(70, 51, 31, 0.75);
+    margin-bottom: 4px;
+}
+
+.mk-maakunnat__lrivi {
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.mk-maakunnat__lteksti {
+    flex-shrink: 1;
+    flex-grow: 1;
+    font-size: 13px;
+    white-space: normal;
+    color: rgba(70, 51, 31, 0.92);
+}
+
+.mk-maakunnat__lisaa {
+    width: 30px;
+    height: 30px;
+    min-height: 30px;
+    margin-left: 8px;
+    padding: 0;
+    flex-shrink: 0;
+    border-width: 1px;
+    border-color: rgba(122, 85, 20, 0.32);
+    border-radius: 15px;
+    background-color: rgba(255, 252, 242, 0.7);
+    color: rgba(70, 51, 31, 0.85);
+    align-items: center;
+    justify-content: center;
+}
+
+.mk-maakunnat__lisaa:active {
+    background-color: rgb(255, 252, 242);
+}
+
+.mk-maakunnat__lisaa > .mk-ikoni {
+    width: 18px;
+    height: 18px;
+    --mk-ikoni-viiva: 1.8;
+}
+
+/* --- Maakunnan kortti (webin .maakunta-kortti) --------------------------------------- */
+
+.mk-maakuntaKortti__kerros {
+    background-color: rgba(18, 12, 4, 0.3);
+}
+
+.mk-maakuntaKortti {
+    width: 100%;
+    max-width: 480px;
+    max-height: 86%;
+    padding: 10px 12px 14px 12px;
+    border-width: 1px;
+    border-color: rgba(122, 85, 20, 0.32);
+    border-radius: 12px;
+    background-color: #f5f0e2;
+    color: #211d18;
+}
+
+.mk-maakuntaKortti__sulje {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+}
+
+.mk-maakuntaKortti__sisalto {
+    flex-shrink: 1;
+}
+
+.mk-maakuntaKortti__otsikko {
+    font-size: 20px;
+    margin: 4px 40px 10px 2px;
+    white-space: normal;
+    color: #211d18;
+}
+
+.mk-maakuntaKortti__kuvat {
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.mk-maakuntaKortti__kuva {
+    flex-grow: 1;
+    flex-basis: 0;
+    margin-right: 6px;
+}
+
+.mk-maakuntaKortti__kuva--karuselli {
+    flex-grow: 0;
+    flex-basis: auto;
+    width: 220px;
+}
+
+.mk-maakuntaKortti__kuvapinta {
+    height: 150px;
+    border-radius: 6px;
+    background-color: rgba(70, 51, 31, 0.1);
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.mk-maakuntaKortti__lahde {
+    margin-top: 3px;
+    font-size: 9.5px;
+    white-space: normal;
+    color: rgba(70, 51, 31, 0.7);
+}
+
+.mk-maakuntaKortti__teksti {
+    font-size: 15px;
+    white-space: normal;
+    margin-bottom: 10px;
+}
+
+.mk-maakuntaKortti__kysymys {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 36px;
+    margin-top: 4px;
+    padding: 6px 8px;
+    border-width: 1px;
+    border-color: rgba(122, 85, 20, 0.28);
+    border-radius: 8px;
+    background-color: rgba(255, 252, 242, 0.7);
+    color: rgba(70, 51, 31, 0.95);
+}
+
+.mk-maakuntaKortti__kysymys.mk-auki {
+    background-color: rgba(255, 252, 242, 1);
+    border-color: rgba(122, 85, 20, 0.5);
+}
+
+.mk-maakuntaKortti__kysymys > .mk-ikoni {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+
+.mk-maakuntaKortti__kysymysteksti {
+    flex-shrink: 1;
+    font-size: 14px;
+    white-space: normal;
+}
+
+.mk-maakuntaKortti__vastaus {
+    margin: 6px 4px 4px 32px;
+    font-size: 14px;
+    white-space: normal;
+    color: #211d18;
+}
+
+/* --- Offline-latauksen tila (OfflineTilaUi): pieni pilleri yläpalkin alla vasemmalla --- */
+
+.mk-offlineTila {
+    position: absolute;
+    left: 12px;
+    min-height: 30px;
+    max-width: 70%;
+    padding: 5px 12px 7px 12px;
+    border-width: 1px;
+    border-color: rgba(217, 161, 59, 0.55);
+    border-radius: 15px;
+    background-color: rgba(37, 27, 18, 0.9);
+    color: var(--ink-light);
+    overflow: hidden;
+}
+
+.mk-offlineTila:active {
+    background-color: rgba(58, 42, 28, 0.95);
+}
+
+.mk-offlineTila.mk-verkoton {
+    border-color: rgba(243, 230, 208, 0.35);
+}
+
+.mk-offlineTila__teksti {
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mk-offlineTila__palkki {
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: 3px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: rgba(243, 230, 208, 0.18);
+}
+
+.mk-offlineTila__taytto {
+    height: 100%;
+    border-radius: 1px;
+    background-color: var(--accent);
+}

@@ -10,7 +10,9 @@
 // rivien yli valitsee. Valinta ja laskurit: UiPalvelut.KarttaValot
 // (Natiiviseppä); asettamaton palvelu = pelkät selitykset ilman valintaa.
 // Sulkeutuu ✕:sta ja napautuksesta paneelin ohi (napautus menee silti kartalle).
-// Webin toinen välilehti "Maakunnat" tulee omana eränään.
+// Välilehdet NOSTOT | MAAKUNNAT (webin karttaselite-valilehti; valinta muistetaan:
+// PlayerPrefs matkakirja-karttaselite-valilehti). Maakunnat-välilehden sisältö on
+// Maakunnat.cs:ssä ja rakentuu, kun välilehti avataan ensi kerran.
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -22,7 +24,11 @@ namespace Matkakirja.Natiivi
     {
         readonly UiKerros kerros;
         readonly Button nappi;
-        readonly VisualElement paneeli, lista, peukalo;
+        const string ValilehtiAvain = "matkakirja-karttaselite-valilehti";
+        readonly VisualElement paneeli, lista, peukalo, paneeliNostot, paneeliMaakunnat;
+        readonly Button valilehtiNostot, valilehtiMaakunnat;
+        public readonly Maakunnat Maakunnat;
+        bool maakunnatAuki;
         readonly Label linssiLuku;
         readonly Dictionary<string, (Button Rivi, Label Luku)> rivit = new Dictionary<string, (Button, Label)>();
         IKarttaValot kuunneltu;
@@ -46,15 +52,22 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(paneeli, Kirjasin.Kone);
 
             var ylarivi = Rakenne.El("mk-selite__ylarivi", paneeli, PickingMode.Ignore);
-            Rakenne.Teksti("NOSTOT", "mk-selite__otsikko", ylarivi);
+            var valilehdet = Rakenne.El("mk-selite__valilehdet", ylarivi, PickingMode.Ignore);
+            valilehtiNostot = Rakenne.Nappi("NOSTOT", "mk-selite__valilehti", () => VaihdaValilehti(false), valilehdet);
+            valilehtiMaakunnat = Rakenne.Nappi("MAAKUNNAT", "mk-selite__valilehti", () => VaihdaValilehti(true), valilehdet);
             var sulje = Rakenne.Nappi("✕", "mk-selite__sulje", Sulje, ylarivi);
             sulje.tooltip = "Sulje karttaselitteet";
 
+            paneeliNostot = Rakenne.El("mk-selite__paneeli", paneeli, PickingMode.Ignore);
             var vieritys = new ScrollView(ScrollViewMode.Vertical);
             vieritys.AddToClassList("mk-selite__vieritys");
             vieritys.verticalScrollerVisibility = ScrollerVisibility.Hidden;
             vieritys.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
-            paneeli.Add(vieritys);
+            paneeliNostot.Add(vieritys);
+            paneeliMaakunnat = Rakenne.El("mk-selite__paneeli", paneeli, PickingMode.Ignore);
+            Maakunnat = new Maakunnat(kerros, paneeliMaakunnat);
+            maakunnatAuki = PlayerPrefs.GetString(ValilehtiAvain, "") == "maakunnat";
+            NaytaValilehti();
             lista = Rakenne.El("mk-selite__lista", vieritys);
 
             peukalo = Rakenne.El("mk-peukalo", lista, PickingMode.Ignore);
@@ -74,6 +87,27 @@ namespace Matkakirja.Natiivi
             kerros.TurvaMuuttui += () => { nappi.style.top = Ylapalkki.Korkeus + 8; paneeli.style.top = Ylapalkki.Korkeus + 8; };
             // Napautus paneelin ohi (myös pallolle, jota UI ei näe) sulkee.
             kerros.JokaRuutu += TarkistaOhiNapautus;
+        }
+
+        /// <summary>Välilehti vaihtuu (web vaihdaValilehti); valinta muistetaan laitteella.</summary>
+        public void VaihdaValilehti(bool maakunnat)
+        {
+            if (maakunnat == maakunnatAuki) return;
+            maakunnatAuki = maakunnat;
+            PlayerPrefs.SetString(ValilehtiAvain, maakunnat ? "maakunnat" : "nostot");
+            PlayerPrefs.Save();
+            NaytaValilehti();
+            if (Auki && !maakunnat) Paivita();
+        }
+
+        void NaytaValilehti()
+        {
+            paneeliNostot.style.display = maakunnatAuki ? DisplayStyle.None : DisplayStyle.Flex;
+            paneeliMaakunnat.style.display = maakunnatAuki ? DisplayStyle.Flex : DisplayStyle.None;
+            valilehtiNostot.EnableInClassList("mk-valittu", !maakunnatAuki);
+            valilehtiMaakunnat.EnableInClassList("mk-valittu", maakunnatAuki);
+            paneeli.EnableInClassList("mk-selite--maakunnat", maakunnatAuki);
+            if (maakunnatAuki && Auki) Maakunnat.Avautui();
         }
 
         void LuoRivi(NostoMerkit.Rivi r)
@@ -134,6 +168,7 @@ namespace Matkakirja.Natiivi
             Auki = true;
             KytkePalvelu();
             Paivita();
+            if (maakunnatAuki) Maakunnat.Avautui();
             Rakenne.Nayta(paneeli, true, 220);
             nappi.AddToClassList("mk-valittu");
         }
@@ -203,7 +238,7 @@ namespace Matkakirja.Natiivi
 
         void TarkistaOhiNapautus()
         {
-            if (!Auki) return;
+            if (!Auki || Maakunnat.KorttiAuki) return;
             var osoitin = Pointer.current;
             if (osoitin == null || !osoitin.press.wasPressedThisFrame) return;
             var ruutu = osoitin.position.ReadValue();

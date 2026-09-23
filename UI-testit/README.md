@@ -66,6 +66,43 @@ odota 3
 kuva selite
 ```
 
+Karttaselitteen Maakunnat-välilehti (`Maakunnat.cs`; data sisältöpaketin moduuleista
+karttatyokalu-maakunnat, maakunnat-luonnehdinnat, maakunnat-pulu):
+`ui maakunnat [kortti] [ISO:tunnus]` avaa selitteen Maakunnat-välilehdelle, valitsee alueen
+(avaa sen maan) ja `kortti` avaa ⊕-kortin (kuvat, pitkä teksti, Pulun kysymykset).
+`ui selite` palauttaa Nostot-välilehden.
+
+```
+ui maakunnat ITA:Toscana
+odota 3
+kuva maakunnat
+ui maakunnat kortti FRA:Grand Est
+odota 4
+kuva maakunta-kortti
+ui sulje
+```
+
+Offline-latauksen tila (`OfflineTilaUi.cs`): pilleri yläpalkin alla vasemmalla näkyy, kun
+lataus on käynnissä tai verkkoa ei ole; napautus avaa ratas-paneelin. `ui offline demo`
+vaihtaa tilalle keksityn palvelun (Ranska latautuu ~6 s ja valmistuu, Italia epäonnistuu
+puolivälissä, Saksa on jo laitteella), `ui offline verkoton|verkko` pakottaa verkon tilan,
+`ui offline pois` palauttaa oikean palvelun ja laitteen verkon tilan.
+
+```
+ui offline demo
+odota 2
+kuva offline-lataus
+ui asetukset
+odota 1
+kuva offline-asetukset
+ui sulje
+odota 8
+ui offline verkoton
+odota 1
+kuva offline-verkoton
+ui offline pois
+```
+
 Kuvasarja kysymysnäkymän tarkistukseen (erä 3):
 
 ```
@@ -203,8 +240,9 @@ UI-osat ilman linssiä esimerkkiaineistolla (`LinssiKomennot.cs`):
 - `ui linssi maa [ISO3]` — maakyltti (oletus ITA); napautus avaa maalehden, jos peli käy.
 - `ui linssi keksinnot [esittely|pysakki i|valinaytos [i]|loppu]` — keksintökaaren osat
   paketin `keksinnot.json`:n teksteillä.
-- `ui linssi matka [musta|valot|jakso i|kuva i|loppu]` — ihmisen matkan osat paketin
-  kertomuksella ja löytöpaikoilla.
+- `ui linssi matka [aloitus|musta|valot|jakso i|kuva i|loppu]` — ihmisen matkan osat paketin
+  kertomuksella ja löytöpaikoilla (`aloitus` = aloituskortti Ken Burns -taustalla; ilman auki
+  olevaa linssiä Käynnistä vain sulkee kortin).
 - `ui linssi sulje` — auki oleva linssi kiinni; `ui linssi pois` — testinäkymät pois.
 
 Kuvasarja linssien tarkistukseen:
@@ -244,6 +282,10 @@ kuva linssi-keksinnot
 ui linssi keksinnot valinaytos
 odota 1
 kuva linssi-valinaytos
+ui linssi pois
+ui linssi matka aloitus
+odota 6
+kuva linssi-matka-aloitus
 ui linssi pois
 ui linssi matka jakso 0
 odota 3

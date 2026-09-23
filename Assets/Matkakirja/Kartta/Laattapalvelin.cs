@@ -63,7 +63,15 @@ namespace Matkakirja
         {
             int q = polku.IndexOf('?');
             string perus = q < 0 ? polku : polku.Substring(0, q);
-            if (q >= 0) perus += "__" + polku.Substring(q + 1).Replace('/', '_').Replace('&', '_').Replace('=', '-');
+            if (q >= 0)
+            {
+                // Cesium lisää maastolaattoihin extensions=…; staattinen tiedosto ei riipu siitä,
+                // joten avain on sama kuin Alueiden lataamalla (layer.jsonin tiles-pohja).
+                var osat = new System.Collections.Generic.List<string>();
+                foreach (var o in polku.Substring(q + 1).Split('&'))
+                    if (o.Length > 0 && !o.StartsWith("extensions=")) osat.Add(o);
+                if (osat.Count > 0) perus += "__" + string.Join("_", osat).Replace('/', '_').Replace('=', '-');
+            }
             return Path.Combine(juuri, perus.Replace('/', Path.DirectorySeparatorChar));
         }
 

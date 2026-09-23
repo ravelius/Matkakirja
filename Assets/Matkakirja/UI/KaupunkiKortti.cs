@@ -11,6 +11,7 @@
 //   [lehti]   Lue kaupunkilehti   · Nykytaide, Luonto …
 //   [kompassi] Liiku tänne
 //   [lasi]    Tutki kaupunkia        (omassa kaupungissa)
+//   [kone]    Mannerlento (300 £)    (omassa kaupungissa, mantereen aarre löytynyt)
 //                              [Sulje]
 //
 // Näyttödata tulee sisältöpaketista (UiSisalto, Kuvat); toiminnot antaa
@@ -160,6 +161,7 @@ namespace Matkakirja.Natiivi
                 Rivi(LehtiIkoni, "Lue kaupunkilehti", aiheet, t.LueLehti);
             }
             if (t.Tutki != null) Rivi(Ikonit.Viiva["suurennuslasi"], t.TutkiTeksti ?? "Tutki kaupunkia", null, t.Tutki);
+            if (t.Mannerlento != null) Rivi(Ikonit.Viiva["kone"], t.MannerlentoTeksti ?? "Mannerlento", null, t.Mannerlento);
             if (t.Liiku != null) Rivi(Ikonit.Viiva["kompassi"], t.LiikuTeksti ?? "Liiku tänne", null, t.Liiku);
             var napit = Rakenne.El("mk-kortti__napit", rivit, PickingMode.Ignore);
             Rakenne.Nappi("Sulje", "mk-nappi--haamu", Sulje, napit);

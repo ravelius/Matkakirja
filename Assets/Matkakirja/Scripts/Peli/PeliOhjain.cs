@@ -77,9 +77,7 @@ namespace Matkakirja.Natiivi
         Tapahtumadata tapahtumadata;
         /// <summary>Tapahtumakortit maailmankartalla (web: ei; Fablen linjaus ennen päälle kytkemistä).</summary>
         public static bool TapahtumakortitMaailmankartalla = false;
-        List<Lippumaa> lippumaat;
-        List<(string Kaupunki, string Tiedosto, string Lahde)> kuvakohteet;
-        readonly Dictionary<string, string> kuvaOsoitteet = new Dictionary<string, string>();
+        Kuvakokoelmat kuvakokoelmat;
         Kohtaamiset kohtaamiset;
         readonly Aarrenimet aarrenimet = new Aarrenimet();
         readonly HashSet<string> tervehdyksetNahty = new HashSet<string>();
@@ -482,30 +480,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Kokoelmat kuvakysymykset ja lippumaat (skeema 1.9): kuvapooli, liput ja valmiit osoitteet.</summary>
         void LueKuvatJaLiput(string kuvat, string liput)
         {
-            if (kuvat != null)
-            {
-                kuvakohteet = new List<(string, string, string)>();
-                var alkiot = MiniJson.Taulukko(MiniJson.Kentta(MiniJson.Objekti(MiniJson.Jasenna(kuvat)), "alkiot"));
-                foreach (var a in alkiot)
-                {
-                    var o = MiniJson.Objekti(a);
-                    string k = MiniJson.Teksti(o, "kaupunki"), f = MiniJson.Teksti(o, "tiedosto"), u = MiniJson.Teksti(o, "url");
-                    if (string.IsNullOrEmpty(k) || string.IsNullOrEmpty(f)) continue;
-                    kuvakohteet.Add((k, f, MiniJson.Teksti(o, "lahde")));
-                    if (!string.IsNullOrEmpty(u)) kuvaOsoitteet[f] = u;
-                }
-            }
-            if (liput != null)
-            {
-                lippumaat = Kysymysdata.LueLiput(liput);
-                foreach (var a in MiniJson.Taulukko(MiniJson.Kentta(MiniJson.Objekti(MiniJson.Jasenna(liput)), "alkiot")))
-                {
-                    var o = MiniJson.Objekti(a);
-                    string f = MiniJson.Teksti(o, "lippu"), u = MiniJson.Teksti(o, "url");
-                    if (!string.IsNullOrEmpty(f) && !string.IsNullOrEmpty(u)) kuvaOsoitteet[f] = u;
-                }
-            }
-            Debug.Log($"MATKAKIRJA peli: kuvakysymyksiä {kuvakohteet?.Count ?? 0}, lippumaita {lippumaat?.Count ?? 0}");
+            kuvakokoelmat = Kuvakokoelmat.Lue(kuvat, liput);
+            Debug.Log($"MATKAKIRJA peli: kuvakysymyksiä {kuvakokoelmat.Kuvat?.Count ?? 0}, lippumaita {kuvakokoelmat.Liput?.Count ?? 0}");
         }
 
         /// <summary>Saapumispuheet (v2:ssa) ja luennat (tuleva kokoelma); kumpikin valinnainen.</summary>
@@ -617,8 +593,13 @@ namespace Matkakirja.Natiivi
                 }
                 catch (Exception e)
                 {
-                    Debug.LogWarning("MATKAKIRJA peli: tallennus ei kelpaa (" + e.Message + "), aloitetaan uusi peli");
-                    try { File.Copy(TallennusPolku, Path.Combine(Documents, "tallennus-rikki.json"), true); } catch { }
+                    // Talteen ennen kuin uusi peli korvaa tiedoston: uudemman sovelluksen
+                    // tallennus (UudempiTallennus) omalla nimellään, jotta päivitetty
+                    // sovellus tai tuki voi palauttaa sen; aikaleima ettei edellinen katoa.
+                    var nimi = (e is UudempiTallennus u ? "tallennus-v" + u.Versio : "tallennus-rikki")
+                        + "-" + DateTime.UtcNow.ToString("yyyyMMdd-HHmmss", System.Globalization.CultureInfo.InvariantCulture) + ".json";
+                    Debug.LogWarning("MATKAKIRJA peli: tallennus ei kelpaa (" + e.Message + "), talteen " + nimi + ", aloitetaan uusi peli");
+                    try { File.Copy(TallennusPolku, Path.Combine(Documents, nimi), true); } catch { }
                 }
             }
             if (matka == null || matka.Tila.Vaihe == Vaihe.Ohi)
@@ -689,11 +670,7 @@ namespace Matkakirja.Natiivi
             if (tapahtumakortit != null) tapahtumakortit.Tapahtui += (laji, teksti) => kysymysLisat.Add(teksti);
             rosvo = kaksintaistelut != null ? new Kaksintaistelu(matka, kaksintaistelut) : null;
             kaupat = new Kaupat(matka);
-            // Kuva- ja lippumuoto vain, kun data on (muuten niiden paino siirtyy visalle kuten webissä).
-            if (kuvakohteet != null)
-                kysely.AsetaKuvat(kuvakohteet.Select(x => x.Kaupunki),
-                    kuvakohteet.GroupBy(x => x.Kaupunki).ToDictionary(g => g.Key, g => (g.First().Tiedosto, g.First().Lahde)));
-            if (lippumaat != null) kysely.Liput = lippumaat;
+            kuvakokoelmat?.Kytke(kysely);
             // Pysy-tapa tuli tarjolle vasta nyt: vuoron alun esivalinta puretaan kuten webissä.
             if (matka.ArvioiEsivalinta()) Tallenna();
             if (AvoinTehtava != Tehtava.Ei) { if (Tila == SilmukanTila.Kartta) NaytaKysymys(); }
@@ -824,6 +801,7 @@ namespace Matkakirja.Natiivi
             if (!verkko.Kaupungit.ContainsKey(kaupunki)) return "tuntematon kaupunki " + kaupunki;
             var p = matka.Tila.Pelaaja;
             bool oma = p.Sijainti.Kaupungissa && p.Sijainti.Kaupunki == kaupunki;
+            bool mannerlento = oma && kaupat != null && kaupat.MannerLennot().Count > 0;
             var t = new KaupunkiToiminnot
             {
                 LueLehti = lehti != null ? () => LueLehti(kaupunki) : (Action)null,
@@ -831,6 +809,8 @@ namespace Matkakirja.Natiivi
                 LiikuTeksti = oma ? null : "Liiku tänne",
                 Tutki = oma && TutkiTarjolla ? () => { PiilotaKortti(); Tutki(); } : (Action)null,
                 TutkiTeksti = oma && TutkiTarjolla ? "Tutki kaupunkia" : null,
+                Mannerlento = mannerlento ? () => { PiilotaKortti(); AvaaMannerlennot(); } : (Action)null,
+                MannerlentoTeksti = mannerlento ? $"Mannerlento ({Vakiot.LentoHinta} {PeliApu.Valuutta})" : null,
                 Sulje = () => PiilotaKortti(),
             };
             KorttiKaupunki = kaupunki;
@@ -882,7 +862,7 @@ namespace Matkakirja.Natiivi
             if (vaihtoehdot.Count == 0) ala += " · ei kulkutapaa nyt";
             dialogi.Nayta(PeliApu.KaupunginNimi(verkko, kaupunki), ala,
                 vaihtoehdot.Select(v => (v.Nimi, v.Selite)).ToList(),
-                i => Matkusta(DialogiKohde, vaihtoehdot[i].Tapa),
+                i => Matkusta(DialogiKohde, vaihtoehdot[i].Tapa, vaihtoehdot[i].Mannerlento),
                 () => Kartalle(false));
 
             // Yleiskuva: pelaaja ja kohde samaan kuvaan (korvaa 3D:n lennon napautettuun kaupunkiin).
@@ -898,6 +878,28 @@ namespace Matkakirja.Natiivi
             return null;
         }
 
+        /// <summary>
+        /// Matkavalinta mannerlennoille (kortin "Mannerlento", testikomento 'mannerlennot'):
+        /// rivi per mantere, jonka aarre on kateissa. Palauttaa virheen tai null.
+        /// </summary>
+        public string AvaaMannerlennot()
+        {
+            if (matka == null || kaupat == null) return "peli ei ole valmis";
+            if (Tila != SilmukanTila.Kartta && Tila != SilmukanTila.Dialogi) return "silmukka on tilassa " + Tila;
+            var kohteet = kaupat.MannerLennot();
+            if (kohteet.Count == 0) return "mannerlentoa ei ole tarjolla";
+            vaihtoehdot = kohteet.Select(PeliApu.MannerlentoVaihtoehto).ToList();
+            DialogiKohde = null;
+            Tila = SilmukanTila.Dialogi;
+            dialogi.PiilotaHeitto();
+            var p = matka.Tila.Pelaaja;
+            dialogi.Nayta("Mannerlento", $"{p.Raha} {PeliApu.Valuutta} · mantereen aarre löytyi, matka voi jatkua",
+                vaihtoehdot.Select(v => (v.Nimi, v.Selite)).ToList(),
+                i => Matkusta(kohteet[i].Kaupunki, Kulkutapa.Lento, true),
+                () => Kartalle(false));
+            return null;
+        }
+
         /// <summary>Peruuta-nappi (myös testikomento).</summary>
         public string Peruuta()
         {
@@ -910,9 +912,11 @@ namespace Matkakirja.Natiivi
         public string Valitse(Kulkutapa tapa)
         {
             if (Tila != SilmukanTila.Dialogi) return "matkavalinta ei ole auki";
-            if (!vaihtoehdot.Any(v => v.Tapa == tapa))
+            if (DialogiKohde == null) return "mannerlentolista: valitse komennolla 'matka <kaupunki> mannerlento'";
+            var valittu = vaihtoehdot.FirstOrDefault(v => v.Tapa == tapa);
+            if (valittu == null)
                 return $"{PeliApu.TavanNimi(tapa)} ei ole tarjolla (tarjolla: {string.Join(", ", vaihtoehdot.Select(v => v.Nimi))})";
-            return Matkusta(DialogiKohde, tapa);
+            return Matkusta(DialogiKohde, tapa, valittu.Mannerlento);
         }
 
         /// <summary>"Heitä noppaa" -nappi: matka jatkuu kohti tavoitetta.</summary>
@@ -927,7 +931,7 @@ namespace Matkakirja.Natiivi
         /// Matka kohteeseen valitulla tavalla (dialogin nappi, heittonappi ja
         /// testikomento 'matka'). Palauttaa virheen tai null.
         /// </summary>
-        public string Matkusta(string kohde, Kulkutapa tapa)
+        public string Matkusta(string kohde, Kulkutapa tapa, bool mannerlento = false)
         {
             if (matka == null) return "peli ei ole valmis";
             if (Tila != SilmukanTila.Kartta && Tila != SilmukanTila.Dialogi) return "silmukka on tilassa " + Tila;
@@ -937,7 +941,7 @@ namespace Matkakirja.Natiivi
             if (kohde != null) Tavoite = kohde;
 
             tapahtumat.Clear();
-            var t = PeliApu.Matkusta(matka, Tavoite, tapa);
+            var t = PeliApu.Matkusta(matka, Tavoite, tapa, mannerlento);
             Viimeisin = t;
             if (!t.Ok)
             {
@@ -1215,7 +1219,7 @@ namespace Matkakirja.Natiivi
                 case Tehtava.Kysymys:
                 {
                     var q = matka.Tila.Kysely.Kysymys;
-                    KysymysTila = KysymysApu.Nakyma(kysely, q, kysymysLoyto, kysymysLisat, viesti, kuvaOsoitteet, aarrenimet);
+                    KysymysTila = KysymysApu.Nakyma(kysely, q, kysymysLoyto, kysymysLisat, viesti, kuvakokoelmat?.Osoitteet, aarrenimet);
                     // Kaupungin tavallinen tervehdys kerran istunnossa (web ui.kohtaamisetNahty).
                     if (KysymysApu.LisaaKohtaaminen(KysymysTila, q, kohtaamiset, q.Kaupunki != null && tervehdyksetNahty.Contains(q.Kaupunki)))
                         tervehdyksetNahty.Add(q.Kaupunki);

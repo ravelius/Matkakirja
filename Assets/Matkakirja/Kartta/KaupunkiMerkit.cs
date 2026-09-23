@@ -108,6 +108,7 @@ namespace Matkakirja
                 kaupunkeja = merkit.Count;
                 var kohteet = merkit.ToArray();
                 var korkeudet = new double[kohteet.Length];
+                for (int i = 0; i < kohteet.Length; i++) korkeudet[i] = kohteet[i].kaupunki.korkeus;
                 if (edellinen == CesiumDataSource.FromUrl && maastoKorkeudet)
                 {
                     var paikat = new double3[kohteet.Length];
@@ -166,8 +167,9 @@ namespace Matkakirja
             {
                 if (++kehyksessa > rakennusKehys) { kehyksessa = 0; yield return null; }
                 int tarkeys = Tarkeys(k, paketinTarkeys);
+                // Paketin korkeus (skeema 1.10; puuttuva = 0) + nosto. Maaston SampleHeight korvaa sen, jos päällä.
                 var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(
-                    new double3(k.lon, k.lat, nosto));
+                    new double3(k.lon, k.lat, k.korkeus + nosto));
                 double3 u = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef);
 
                 var juuri = new GameObject("Kaupunki " + k.id).transform;

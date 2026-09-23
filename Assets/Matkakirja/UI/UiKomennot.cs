@@ -5,12 +5,14 @@
 //
 //   ui valikko | ui asetukset | ui sulje      avaa päävalikon / äänentasot, sulkee
 //   ui matka                                  esimerkkimatkavalinta (ilman peliä)
-//   ui kortti [kaupunki]                      kaupunkikortti (oletus firenze, ilman peliä)
+//   ui kortti [kaupunki] [oma]                kaupunkikortti (oletus firenze, ilman peliä; oma = Tutki + Mannerlento)
 //   ui kysymys [laji]                         esimerkkikysymys ilman peliä: visa (oletus), vaite,
 //                                             kuva, lippu, pulma [id], kaksintaistelu,
 //                                             tapahtumakortti, tulos [laattatyyppi], kohtaaminen,
 //                                             kohtaaminen-tervehdys (KysymysEsimerkki.cs)
-//   ui selite                                 karttaselite auki
+//   ui selite                                 karttaselite auki (Nostot-välilehti)
+//   ui offline demo|verkoton|verkko|pois      offline-tilan pilleri: keksitty lataus / verkon tila
+//   ui maakunnat [kortti] [ISO:tunnus]        karttaselite Maakunnat-välilehdellä, valinta, kortti
 //   ui pulu sano [teksti] | aani [lähde n] | ele id | tilanne laji | tunne t | pois | paalle
 //   ui tietoja                                tekijätiedot ja lähteet
 //   ui chat [kysymys]                         pulun keskustelu auki / kysy
@@ -164,7 +166,25 @@ namespace Matkakirja.Natiivi
                     if (loput.Length > 0) ui.Chat.Kysy(loput); else ui.Chat.Vaihda();
                     return null;
                 case "tietoja": ui.Tietoja.Avaa(); return null;
-                case "selite": ui.Karttaselite.Avaa(); return UiPalvelut.KarttaValot == null ? "ei KarttaValot-palvelua: vain selitykset" : null;
+                case "offline":
+                    switch (loput)
+                    {
+                        case "demo": OfflineTilaUi.TestiLataus.Kaynnista(); return null;
+                        case "verkoton": ui.OfflineTila.TestaaVerkoton(true); return null;
+                        case "verkko": ui.OfflineTila.TestaaVerkoton(false); return null;
+                        case "pois": OfflineTilaUi.TestiLataus.Lopeta(); ui.OfflineTila.TestaaVerkoton(null); return null;
+                        default: return "ui offline demo|verkoton|verkko|pois";
+                    }
+                case "maakunnat":
+                {
+                    bool kortti = loput == "kortti" || loput.StartsWith("kortti ");
+                    string avain = (kortti ? loput.Substring(6) : loput).Trim();
+                    ui.Karttaselite.Avaa();
+                    ui.Karttaselite.VaihdaValilehti(true);
+                    ui.Karttaselite.Maakunnat.Testaa(avain.Length > 0 ? avain : null, kortti);
+                    return null;
+                }
+                case "selite": ui.Karttaselite.Avaa(); ui.Karttaselite.VaihdaValilehti(false); return UiPalvelut.KarttaValot == null ? "ei KarttaValot-palvelua: vain selitykset" : null;
                 case "kartuscha":
                 {
                     var ks = loput.Split(' ');
@@ -172,12 +192,21 @@ namespace Matkakirja.Natiivi
                     return null;
                 }
                 case "kortti":
-                    ui.Kaupunkikortti.Nayta(loput.Length > 0 ? loput : "firenze", null, new KaupunkiToiminnot
+                {
+                    // "ui kortti <id> oma": oman kaupungin rivit (Tutki, Mannerlento) Liiku-rivin sijaan.
+                    var ko = loput.Split(' ');
+                    bool oma = ko.Length > 1 && ko[1] == "oma";
+                    ui.Kaupunkikortti.Nayta(ko[0].Length > 0 ? ko[0] : "firenze", null, new KaupunkiToiminnot
                     {
-                        LueLehti = () => ui.Tilarivi.Viesti("Lue lehti"), Liiku = () => ui.Tilarivi.Viesti("Liiku"),
+                        LueLehti = () => ui.Tilarivi.Viesti("Lue lehti"),
+                        Liiku = oma ? null : () => ui.Tilarivi.Viesti("Liiku"),
+                        Tutki = oma ? () => ui.Tilarivi.Viesti("Tutki") : null,
+                        Mannerlento = oma ? () => ui.Tilarivi.Viesti("Mannerlento") : null,
+                        MannerlentoTeksti = oma ? "Mannerlento (300 £)" : null,
                         Sulje = () => { },
                     });
                     return null;
+                }
                 case "kysymys": return ui.Esimerkkikysymys(loput);
                 case "heitto": ui.Matkavalinta.NaytaHeitto(loput.Length > 0 ? loput : "Heitä noppaa → Lontoo", () => ui.Tilarivi.Viesti("Noppa: 4")); return null;
                 case "viesti": ui.Tilarivi.Viesti(loput, 4f); return null;

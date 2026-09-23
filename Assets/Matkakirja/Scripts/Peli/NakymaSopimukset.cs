@@ -76,6 +76,12 @@ namespace Matkakirja.Natiivi
         /// <summary>"Tutki kaupunkia" (oma kaupunki, tehtävä tarjolla).</summary>
         public Action Tutki;
         public string TutkiTeksti;
+        /// <summary>
+        /// Oma kaupunki, mantereen aarre löytynyt: "Mannerlento" (web mannerLennot) →
+        /// matkavalinta, jossa rivi per mantere ("Lennä Oseaniaan: Sydney"). null = ei tarjolla.
+        /// </summary>
+        public Action Mannerlento;
+        public string MannerlentoTeksti;
         /// <summary>Sulje-nappi tai ohi-napautus: kortti kiinni, kartta.</summary>
         public Action Sulje;
     }

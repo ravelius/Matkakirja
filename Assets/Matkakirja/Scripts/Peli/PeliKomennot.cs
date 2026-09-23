@@ -106,12 +106,15 @@ namespace Matkakirja.Natiivi
                     var tapa = PeliApu.TapaTekstista(A(1));
                     return tapa == null ? "tuntematon tapa " + A(1) : ohjain.Valitse(tapa.Value);
                 }
+                case "mannerlennot":
+                    return ohjain.AvaaMannerlennot();
                 case "peruuta":
                     return ohjain.Peruuta();
                 case "matka":
                 {
+                    if (A(2) == "mannerlento") return A(1) == null ? "kaupunki puuttuu" : ohjain.Matkusta(A(1), Matkakirja.Peli.Kulkutapa.Lento, true);
                     var tapa = PeliApu.TapaTekstista(A(2));
-                    if (A(1) == null || tapa == null) return "käyttö: matka kaupunki bussi|lento|liftaus|laiva";
+                    if (A(1) == null || tapa == null) return "käyttö: matka kaupunki bussi|lento|liftaus|laiva|mannerlento";
                     return ohjain.Matkusta(A(1), tapa.Value);
                 }
                 case "heita":
