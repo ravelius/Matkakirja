@@ -24,6 +24,9 @@
 //   ui tietaja [pisteet]                      Tietäjän tie -minipopup (oletus 120)
 //   ui seloste                                laukku esimerkillä + Aarnin luettelon pikkuseloste
 //   ui opas [kaupunki] [vieritä px]           turistiopas (oletus lontoo), valinnainen vieritys
+//   ui liike                                  pieni liike: pulu lentää kerran heti (ohittaa levon)
+//   ui leima [muutos] [syy]                   tapahtumakupla: rahan muutos (oletus +10 Lehden minitehtävä ratkesi)
+//   ui noppa [1–6 | pois]                     näkyvä noppa: heitto Pariisista lepopaikkaan / häivytys
 //   ui lippu [ISO3]                           lipun tarina (oletus FIN; skeema 1.15 maat.lipputarina)
 //   ui offline demo|verkoton|verkko|pois      offline-tilan pilleri: keksitty lataus / verkon tila
 //   ui maakunnat [kortti] [ISO:tunnus]        karttaselite Maakunnat-välilehdellä, valinta, kortti
@@ -228,6 +231,19 @@ namespace Matkakirja.Natiivi
                     UiSisalto.Lataa(() => ui.Julistegalleria.Avaa(System.Linq.Enumerable.Select(System.Linq.Enumerable.Take(UiSisalto.Julisteet, n), j => j.Id)));
                     return null;
                 }
+                case "leima":
+                {
+                    var l = loput.Split(new[] { ' ' }, 2);
+                    int m = int.TryParse(l[0], out var mm) ? mm : 10;
+                    ui.Leima.Raha(m, l.Length > 1 ? l[1] : "Lehden minitehtävä ratkesi");
+                    return null;
+                }
+                case "noppa":
+                    if (loput == "pois") { ui.Noppa.Haivyta(); return null; }
+                    ui.HeitaNoppa(int.TryParse(loput, out var silmat) ? Mathf.Clamp(silmat, 1, 6) : UnityEngine.Random.Range(1, 7), 48.857, 2.352, null);
+                    return null;
+                case "liike":
+                    return ui.Liike.Lenna(true) ? null : "pieni liike on pois päältä tai lento jo käynnissä";
                 case "lippu":
                 {
                     string maa = loput.Length > 0 ? loput.ToUpperInvariant() : "FIN";

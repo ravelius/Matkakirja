@@ -1121,3 +1121,92 @@
     white-space: normal;
     color: rgba(58, 38, 16, 0.7);
 }
+
+/* --- noppa (UI/Noppa.cs; webin .die-layer, css/styles.css ~2103) ---------------- */
+/* Kerros koko isän alueella, ei poimi kosketuksia. Kuutio, varjo ja silmät piirretään
+ * koodissa (generateVisualContent), joten USS:ssä on vain asettelu ja häivytys. */
+
+.mk-noppa,
+.mk-noppa__pinta,
+.mk-noppa__viivat {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* Uuteen kaupunkiin saavuttaessa noppa katoaa 0,42 s:ssa (die.js haivyta). Siirtymä on
+ * vain tässä luokassa, jotta uusi heitto palauttaa nopan näkyviin heti. */
+.mk-noppa--haipyy {
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.42s;
+    transition-timing-function: ease;
+}
+
+/* --- tapahtumakupla (Leima.cs; web .event-toast.stamp) ------------------------------------ */
+
+.mk-leimat {
+    position: absolute;
+    top: 16%;
+    left: 0;
+    right: 0;
+    align-items: center;
+}
+
+.mk-leima {
+    position: absolute;
+    flex-direction: row;
+    align-items: center;
+    max-width: 80%;
+    padding: 11px 18px;
+    border-width: 1px;
+    border-color: rgba(120, 168, 108, 0.55);
+    border-radius: 14px;
+    background-color: rgba(46, 33, 20, 0.88);
+    color: var(--ink-light);
+    opacity: 0;
+    translate: 0 18px;
+    scale: 0.92 0.92;
+    transition-property: opacity, translate, scale;
+    transition-duration: 0.28s;
+    transition-timing-function: ease-out-back;
+}
+
+.mk-leima.mk-auki {
+    opacity: 1;
+    translate: 0 0;
+    scale: 1 1;
+}
+
+.mk-leima--lahtee {
+    opacity: 0;
+    translate: 0 -14px;
+    scale: 0.97 0.97;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+}
+
+.mk-leima__ikoni {
+    width: 26px;
+    height: 26px;
+    margin-right: 11px;
+    color: var(--accent);
+}
+
+.mk-leima__tekstit {
+    flex-shrink: 1;
+}
+
+.mk-leima__teksti {
+    font-size: 16.8px;
+    white-space: normal;
+    color: var(--ink-light);
+}
+
+.mk-leima__ala {
+    font-size: 13.6px;
+    white-space: normal;
+    color: var(--muted);
+}

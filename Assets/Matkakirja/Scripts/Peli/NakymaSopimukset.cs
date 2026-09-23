@@ -240,6 +240,13 @@ namespace Matkakirja.Natiivi
         public static Action<string, string, Action> Saapumistraileri;
         /// <summary>Asettamaton = ei korttia: napautus avaa matkavalinnan suoraan (erän 3 vuo).</summary>
         public static Func<GameObject, IKaupunkiKortti> KaupunkiKortti;
+        /// <summary>
+        /// Näkyvä noppa (web ui.animateDie, js/die.js; B16/P45): (silmäluku, lähtöpisteen lat, lon, valmis).
+        /// PeliOhjain.Matkusta kutsuu heitosta ennen liikettä; nappula ja kamera lähtevät vasta valmis()-kutsusta
+        /// (varareitti 4 s). Noppa jää näkyviin, kunnes PeliOhjain.MatkaPerilla. Asettamaton = liike heti ja
+        /// silmäluku tilariville ("Noppa n").
+        /// </summary>
+        public static Action<int, double, double, Action> Noppa;
         /// <summary>Natiivilehti. Asettamaton = WKWebView-kuori (LehtiKuori), kunnes se poistetaan (A4).</summary>
         public static Func<GameObject, ILehtiNakyma> Lehti;
         /// <summary>Sähkeliuska ja retkikuntaosio. Asettamaton = ei sähkepintaa natiivissa (ohjain ei pollaa).</summary>

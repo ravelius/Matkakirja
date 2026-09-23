@@ -22,6 +22,7 @@ korkeudet metreinä. Kaaret ovat asteina kapeammassa näyttösuunnassa.
 | `Func<bool> NakymaPeitetty`, `bool Peitetty` | valmis | Koko näytön peitto (WKWebView-lehti). Asettaa vain `SyoteLukko` (`LisaaNakymaPeitto(Func<bool>)`, Pelikoodari). Peiton aikana pallo piirtää joka `PeitettyVali` (4.) kehyksen, ja kehysmittari kirjaa kehykset luokkaan `peitto`, ei lepoon. |
 | `event Action NakymaMuuttui` | valmis | Kameratila muuttui tässä kehyksessä (linssit, sumu). |
 | `bool Liikkeessa` | valmis | Sormi, liuku tai ajo käynnissä (mittarit ja UI). |
+| `bool RuutuPiste(lat, lon, out Vector2 ruutu, korkeus = 0)` | valmis | Pisteen paikka näytön pikseleinä (origo vasen ala kuten Input); false = takapuolella tai ruudun ulkopuolella (Natiivi-UI:n noppa). |
 | `double kallistus` (0–60°) | valmis | Kahden sormen pystyveto kallistaa. Kallistus on sallittu vain alle 3000 km:n korkeudella, ja raja liukuu. |
 
 ## 2. Kaupungit — `KaupunkiMerkit` (CesiumGeoreference-olio)

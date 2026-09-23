@@ -242,6 +242,15 @@ namespace Matkakirja.Linssit.Maat
             return t;
         }
 
+        /// <summary>
+        /// Maakäyrien aineisto (paketin tiedostot/assets/data/maakayrat.json); LinssiOhjain lataa sen
+        /// laiskasti linssin ensimmäisellä avauksella kuten web lataaMaakayrat. null = ei vielä.
+        /// </summary>
+        public MaakayratAineisto Kayrat;
+
+        /// <summary>Vertailunäkymän käyrät valinnoille (web piirraVertailu); null, jos aineisto ei ole vielä tullut.</summary>
+        public Vertailukuva Kayrakuva() => Kayrat == null ? null : Maakayrat.Vertailu(valinnat, Kayrat);
+
         /// <summary>Vertaa-nappi. Palauttaa, pyydettiinkö näkymä.</summary>
         public bool Vertaa()
         {
