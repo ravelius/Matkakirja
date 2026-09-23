@@ -1961,3 +1961,25 @@
     font-size: 11px;
     color: rgba(70, 51, 31, 0.6);
 }
+
+/* --- pieni liike (PieniLiike.cs; web .pallolauta-liike) ------------------------------------ */
+
+.mk-liike {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.mk-liike__savy {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition-property: opacity, background-color;
+    transition-duration: 2s;
+}
