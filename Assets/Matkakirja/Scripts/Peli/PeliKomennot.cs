@@ -31,6 +31,13 @@
 //   odota-tila tila [max s]   odottaa silmukan tilaa (Kartta, Dialogi, Matkalla, Lehti, Kysymys), oletus 20 s
 //   uusi-peli [siemen]        uusi peli Pariisista (siemen = toistettava noppa)
 //   peli pois | peli paalle   pelisilmukka pois (3D:n napautus kuten ennen) tai päälle
+//   sahke kaynnista           sähkelinjan terveystarkistus myös ilman Natiivi-UI:n sähkenäkymää
+//   sahke perusta [Adj Subst] retkikunta (nimimerkki arvotaan, jos puuttuu); tulos lokiin
+//   sahke liity KOODI [Adj Subst] | sahke eroa | sahke pollaa | sahke vinkki pohjaId paikkaId
+//   kaveriapu | kaveriapu-valmis   kysymyksen "Kysy kaverilta (25 £)" / kortin Selvä tai Peru odotus
+//   sahketehtava avaa [kaupunki]   pöllön sähketehtävä (oletus: pelaajan kaupunki), myös ilman näkymää
+//   sahketehtava laheta aukko=arvo …   lomakkeen lähetys (välilyönti arvossa: _)
+//   sahketehtava vapaa teksti…     vapaa vastaus (pöllön tuomio lokiin) | sahketehtava sulje
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -215,12 +222,56 @@ namespace Matkakirja.Natiivi
                     // uusi-peli [siemen] [kaupunki]: oletuslähtö on Lontoo (C8); käsikirjoitukset antavat kaupungin.
                     ohjain.UusiPeli(long.TryParse(A(1), NumberStyles.Integer, CultureInfo.InvariantCulture, out var s) ? s : (long?)null, A(2));
                     return null;
+                case "sahke":
+                    return Sahke(o);
+                case "kaveriapu":
+                    return ohjain.KysyKaverilta();
+                case "kaveriapu-valmis":
+                    return ohjain.KaveriapuValmis();
+                case "sahketehtava":
+                    switch (A(1))
+                    {
+                        case "avaa": return ohjain.AvaaSahketehtava(A(2) ?? ohjain.PelaajanKaupunki);
+                        case "sulje": return ohjain.SuljeSahkekortti();
+                        case "vapaa": return ohjain.SahkeVapaa(string.Join(" ", o, 2, Math.Max(0, o.Length - 2)));
+                        case "laheta":
+                        {
+                            var arvot = new Dictionary<string, string>();
+                            for (int i = 2; i < o.Length; i++)
+                            {
+                                int yh = o[i].IndexOf('=');
+                                if (yh > 0) arvot[o[i].Substring(0, yh)] = o[i].Substring(yh + 1).Replace('_', ' ');
+                            }
+                            return ohjain.SahkeLaheta(arvot);
+                        }
+                        default: return "käyttö: sahketehtava avaa|laheta|vapaa|sulje";
+                    }
                 case "peli":
                     if (A(1) != "pois" && A(1) != "paalle") return "käyttö: peli pois|paalle";
                     ohjain.AsetaKaytossa(A(1) == "paalle");
                     return null;
                 default:
                     return "tuntematon komento";
+            }
+        }
+
+        /// <summary>Sähkepinnan testikomennot; verkkotulokset kirjataan lokiin, kun ne saapuvat.</summary>
+        string Sahke(string[] o)
+        {
+            string A(int i) => o.Length > i ? o[i] : null;
+            var s = ohjain.Sahke;
+            if (s == null) return "sähkepinta puuttuu";
+            string Nimi(int alku) => o.Length > alku + 1 ? o[alku] + " " + o[alku + 1] : s.ArvoNimet(1)[0];
+            void Tulos(string mika, string r) => Kirjaa("sahke " + mika, r ?? "ok");
+            switch (A(1))
+            {
+                case "kaynnista": return ohjain.KaynnistaSahke(true);
+                case "perusta": s.Perusta(Nimi(2), r => Tulos("perusta", r)); return null;
+                case "liity": s.Liity(A(2), Nimi(3), r => Tulos("liity", r)); return null;
+                case "eroa": s.Eroa(); return null;
+                case "pollaa": s.Pollaa(() => Tulos("pollaa", "jono " + s.Jono.Count)); return null;
+                case "vinkki": s.LahetaVinkki(A(2), A(3), ohjain.Matka, (ok, r) => Tulos("vinkki", r)); return null;
+                default: return "käyttö: sahke kaynnista|perusta|liity|eroa|pollaa|vinkki";
             }
         }
 

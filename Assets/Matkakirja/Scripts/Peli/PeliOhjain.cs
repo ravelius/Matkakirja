@@ -47,10 +47,10 @@ using UnityEngine.Networking;
 namespace Matkakirja.Natiivi
 {
     /// <summary>Silmukan tila (testikomentojen 'odota-tila' ja peli-tila.json).</summary>
-    public enum SilmukanTila { Lataa, Kartta, Dialogi, Matkalla, Lehti, Virhe, Kysymys, Traileri, Aloitus }
+    public enum SilmukanTila { Lataa, Kartta, Dialogi, Matkalla, Lehti, Virhe, Kysymys, Traileri, Aloitus, Sahketehtava }
 
     [DisallowMultipleComponent]
-    public sealed class PeliOhjain : MonoBehaviour
+    public sealed partial class PeliOhjain : MonoBehaviour
     {
         /// <summary>Varaoletus, jos lähtöä ei valita: tarina alkaa Lontoosta (Fablen tarkastus C8).</summary>
         public const string AloitusKaupunki = "lontoo";
@@ -362,6 +362,7 @@ namespace Matkakirja.Natiivi
                 Jatka = () => JatkaKysymyksesta(),
                 Aloita = () => AloitaKysymys(),
             };
+            AlustaSahke();
             gameObject.AddComponent<PeliKomennot>().ohjain = this;
             puhe = Puhe.Hae();
             puhe.Puhuu += PuheMuuttui;
@@ -408,6 +409,7 @@ namespace Matkakirja.Natiivi
             if (!paalla)
             {
                 dialogi.Piilota(); dialogi.PiilotaHeitto(); kysymysNakyma.Piilota();
+                if (sahkeKorttiKaupunki != null) SuljeSahkekortti();
                 if (Tila == SilmukanTila.Dialogi || Tila == SilmukanTila.Kysymys) Tila = SilmukanTila.Kartta;
             }
             else if (AvoinTehtava != Tehtava.Ei) NaytaKysymys();
@@ -508,6 +510,7 @@ namespace Matkakirja.Natiivi
 
             yield return HaeLaattamaarat();
             AloitaTaiJatka();
+            KaynnistaSahke();
             yield return HaeKysymykset();
             yield return HaeLuennat();
         }
@@ -570,6 +573,7 @@ namespace Matkakirja.Natiivi
             try
             {
                 fokus = Fokusdata.Lue(fokusvirrat);
+                LueSahketehtavat(fokusvirrat);
                 if (KulttuurivisaTarjolla != null) fokus.Kulttuurivisa = KulttuurivisaTarjolla;
             }
             catch (Exception e) { Debug.LogWarning("MATKAKIRJA peli: fokusvirrat eivät jäsenny: " + e.Message); }
@@ -856,6 +860,7 @@ namespace Matkakirja.Natiivi
                 var rivi = $"Uusi tietäjätaso: {taso.Nimi}" + (string.IsNullOrEmpty(taso.Onnittelu) ? "" : " — " + taso.Onnittelu);
                 if (Tila == SilmukanTila.Kysymys) kysymysLisat.Add(rivi); else tapahtumat.Add(rivi);
             };
+            SahkeKytke(m);
             kysely = null;
             KytkeKysely();
         }
@@ -907,12 +912,14 @@ namespace Matkakirja.Natiivi
             }
             catch (Exception e) { Debug.LogError("MATKAKIRJA peli: tallennus epäonnistui: " + e.Message); }
             PaivitaAarrepiste();
+            SahkeTallennettu();
             try { TilaMuuttui?.Invoke(); } catch (Exception e) { Debug.LogException(e); }
         }
 
         void OnApplicationPause(bool tauko)
         {
-            if (!tauko) return;
+            // Web visibilitychange: etualalle palatessa sähkeet heti.
+            if (!tauko) { SahkeEtualalle(); return; }
             Tallenna();
             // Web taustaHiljennaLuennat: taustalle mentäessä luenta katkeaa (ei jää tauolle).
             if (puhe != null) puhe.Pysayta(0.1f);
@@ -968,6 +975,7 @@ namespace Matkakirja.Natiivi
             {
                 case SilmukanTila.Dialogi:
                 case SilmukanTila.Kysymys:
+                case SilmukanTila.Sahketehtava:
                     PysaytaKamera(); // modaalinen: himmennyksen napautus peruu, pallo ei lennä
                     return;
                 case SilmukanTila.Matkalla:
@@ -1465,6 +1473,9 @@ namespace Matkakirja.Natiivi
             var a = Aarrepiste();
             if (a == null) return "aarrepistettä ei ole";
             if (a.Lukittu) { Viesti("Aarteen jälki on vielä piilossa: " + Fokusdata.Lukkolappu + "."); return "lukittu"; }
+            // Sähkekaupunki: pöllön sähke kohtaamisen sijaan (web piirraSisalto); ilman näkymää laattakysymys.
+            if (sahketehtavat.ContainsKey(a.Kaupunki) && (sahketehtavaNakyma != null || sahketila.LentoKesken(a.Kaupunki)))
+                return AvaaSahketehtava(a.Kaupunki);
             return EtsiKatko(a.Kaupunki);
         }
 
@@ -1555,6 +1566,7 @@ namespace Matkakirja.Natiivi
                     if (!tervehdysAloitettu && KysymysTila.Tervehdys == null && !q.Valittu.HasValue) tervehdysAloitettu = true;
                     bool tervehdysEnnen = tervehdysNakyi;
                     KysymysApu.LisaaVaiheet(KysymysTila, kysely, q, tervehdysAloitettu);
+                    LisaaKaveriapu(KysymysTila);
                     tervehdysNakyi = KysymysTila.TervehdysVaihe;
                     if (tervehdysNakyi && !tervehdysEnnen)
                     {
@@ -1680,6 +1692,8 @@ namespace Matkakirja.Natiivi
             // Tervehdyssivulla aika ei kulu (web: tiimalasi vasta Aloita peli -napista).
             if (KysymysTila.TervehdysVaihe) return;
             if (!Kaytossa) return;
+            // Kaveriavun odotus: tiimalasi seis (web sahkePysaytaKello).
+            if (KelloPysaytetty) return;
             int ennen = Mathf.CeilToInt(kysymysJaljella);
             kysymysJaljella -= Time.unscaledDeltaTime;
             // Web visa.js: tikitys viimeisillä kymmenellä sekunnilla, kerran per kokonainen sekunti.
@@ -1781,8 +1795,10 @@ namespace Matkakirja.Natiivi
             KytkeRekisteri();
             PaivitaReaktiot();
             PaivitaKysymysAika();
+            PaivitaSahke();
             // Pallo ei ota kosketuksia modaalisen näkymän (ja lehden) aikana.
-            bool esta = Kaytossa && (Tila == SilmukanTila.Dialogi || Tila == SilmukanTila.Kysymys || Tila == SilmukanTila.Lehti || Tila == SilmukanTila.Traileri);
+            bool esta = Kaytossa && (Tila == SilmukanTila.Dialogi || Tila == SilmukanTila.Kysymys || Tila == SilmukanTila.Lehti
+                                     || Tila == SilmukanTila.Traileri || Tila == SilmukanTila.Sahketehtava);
             if (esta != lukossa) { lukossa = esta; SyoteLukko.Aseta(this, esta); }
         }
 
@@ -1841,6 +1857,7 @@ namespace Matkakirja.Natiivi
                 + ",\"laukku\":" + Natiivi.Laukku.Json(Laukku())
                 + ",\"aanet\":[" + string.Join(",", aaniLoki.Select(PeliApu.Json)) + "],\"lentoSoi\":" + (lentoSoi ? "true" : "false")
                 + ",\"aarrepiste\":" + (Aarrepiste() is Aarrepiste ap ? "{\"kaupunki\":" + PeliApu.Json(ap.Kaupunki) + ",\"lukittu\":" + (ap.Lukittu ? "true" : "false") + "}" : "null")
+                + ",\"sahke\":" + SahkeJson()
                 + ",\"tehtavaNappi\":" + PeliApu.Json(matka != null && matka.Tila.Pelaaja.Sijainti.Kaupungissa ? LehtiTilaNyt(matka.Tila.Pelaaja.Sijainti.Kaupunki).TehtavaNappi : null);
             return json.Substring(0, json.Length - 1) + lisa + "}";
         }

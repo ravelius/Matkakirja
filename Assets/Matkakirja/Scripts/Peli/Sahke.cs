@@ -20,7 +20,7 @@
 //     web näyttää tunnuksen sellaisenaan); omat sähkeet ja omat apupyynnöt merkitään nähdyiksi
 //     mutta ei näytetä (worker hylkää vastauksen omaan pyyntöön 409:llä);
 //   - terveystarkistus lukee HTTP-tilan eikä virheviestiä: 401/404 = laitteen tunnus vanhentunut
-//     (unohdetaan, linja auki), 403 = Origin-portti (natiivi ei pääse sisään, linja KIINNI);
+//     (unohdetaan, linja auki), 403 = portti ei päästä natiivia (linja KIINNI; natiiviportti web-PR #2985);
 //   - vinkkisähke tarkistetaan logiikassa: vinkata saa vain itse löydetystä aarteesta.
 // Ei UnityEngineä: testattavissa (Peli-testit/Testit/SahkeTestit.cs).
 using System;

@@ -316,6 +316,19 @@ namespace Matkakirja.Natiivi
         /// <summary>"Sähkeen palkkio nyt N puntaa. Jokainen ohilyönti pienentää sitä — mutta aarre ei lukitu koskaan."</summary>
         public string Maksurivi;
         public int Palkkio;
+
+        /// <summary>
+        /// Oikean vastauksen kuittaus (web sahkeOsui): Sahke = vastaussähke paluutahdilla, Teksti = Livian
+        /// kuittaus ja fakta kappaleina, Nappi = "Anna Livian mennä" (Sulje). Lomake on silloin epätosi.
+        /// </summary>
+        public bool Kuittaus;
+        public string Teksti, Nappi;
+
+        /// <summary>Pullat lomakkeen alla (web piirraSahkePullat): tarjolla, jos tehtävällä on vinkki / vastauslinkki.</summary>
+        public bool VinkkiTarjolla, VinkkiOstettu, LinkkiTarjolla, LinkkiOstettu;
+        public int VinkkiHinta = KauppaVakiot.SahkePullaVinkkiHinta, LinkkiHinta = KauppaVakiot.SahkePullaLinkkiHinta;
+        /// <summary>Ostetun linkin nappi (web vastauslinkinNappi) tai null.</summary>
+        public string LinkkiNappi;
     }
 
     /// <summary>
@@ -370,6 +383,31 @@ namespace Matkakirja.Natiivi
                 Palkkio = palkkio,
                 Maksurivi = $"Sähkeen palkkio nyt {palkkio} puntaa. Jokainen ohilyönti pienentää sitä — mutta aarre ei lukitu koskaan.",
             };
+        }
+
+        /// <summary>Kuittauskortti oikean vastauksen jälkeen (web sahkeOsui): kirjoitetaan kerran istunnossa.</summary>
+        public SahkeKortti KuittausKortti(Sahketehtava t)
+        {
+            var sahke = t.Vastaussahke;
+            return new SahkeKortti
+            {
+                Hahmo = t.Hahmo, Sahke = sahke, Kuittaus = true, Lomake = false,
+                Aikataulu = SahkeTulkinta.KirjoitusAikataulu(sahke, SahkeTulkinta.PaluuMerkkiMs, SahkeTulkinta.PaluuKattoMs, SahkeTulkinta.PaluuRivivaliMs),
+                Animoi = Kerran(kirjoitettu, t.Kaupunki + ":vastaus"),
+                Teksti = Kuittaus(t), Nappi = t.Lento,
+            };
+        }
+
+        /// <summary>Pullojen tila kortille pelin kirjanpidosta (Kaupat.PullaOstettu; säilyy tallennuksen yli).</summary>
+        public static SahkeKortti Pullat(SahkeKortti k, Sahketehtava t, Kaupat kaupat)
+        {
+            if (k == null || !k.Lomake || string.IsNullOrEmpty(t.Id)) return k;
+            k.VinkkiTarjolla = t.Vinkki.Count > 0;
+            k.VinkkiOstettu = kaupat != null && kaupat.PullaOstettu(t.PullaAvain("vinkki"));
+            k.LinkkiTarjolla = t.Vastauslinkki != null;
+            k.LinkkiOstettu = k.LinkkiTarjolla && kaupat != null && kaupat.PullaOstettu(t.PullaAvain("linkki"));
+            k.LinkkiNappi = k.LinkkiOstettu ? t.Vastauslinkki.Nappi : null;
+            return k;
         }
 
         SahkeVastausTulos Tulos(Sahketehtava t, SahkeVastausLaji laji, string teksti = null, List<SahkeAukko> vaarat = null) => new SahkeVastausTulos
@@ -445,10 +483,10 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Kokonainen pulla Livialle (50 £): Livian vinkki (web piirraSahkePullat).</summary>
         public static KauppaTulos OstaVinkki(Kaupat kaupat, Sahketehtava t) =>
-            kaupat.PullaOstos(t.PullaAvain("vinkki"), KauppaVakiot.SahkePullaVinkkiHinta, "sai vinkin");
+            kaupat.PullaOstos(t.PullaAvain("vinkki"), KauppaVakiot.SahkePullaVinkkiHinta, "sai vinkin sähkeen vastaukseen");
 
         /// <summary>Puolikas pulla (25 £): suora linkki vastaukseen (Sahketehtava.Vastauslinkki).</summary>
         public static KauppaTulos OstaLinkki(Kaupat kaupat, Sahketehtava t) =>
-            kaupat.PullaOstos(t.PullaAvain("linkki"), KauppaVakiot.SahkePullaLinkkiHinta, "sai linkin");
+            kaupat.PullaOstos(t.PullaAvain("linkki"), KauppaVakiot.SahkePullaLinkkiHinta, "sai suoran linkin sähkeen vastaukseen");
     }
 }

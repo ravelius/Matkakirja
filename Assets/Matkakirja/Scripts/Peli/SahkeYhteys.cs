@@ -75,6 +75,50 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>
+        /// Pöllön tuomio vapaasta sähkevastauksesta (web kysySahketuomio): POST pollo-workeriin
+        /// {tehtava:"sahke", id, vastaus} → {kohde: bool, vuosi: bool}; aukon tunnus → osui. valmis(null) =
+        /// pöllöä ei tavoitettu (verkko, 10 s aikakatkaisu, kelvoton vastaus) eikä ohilyöntiä lasketa.
+        /// Natiivi tunnistautuu kuten puhe ja chat (x-matkakirja-natiivi; workerin natiiviportti, PR #2985).
+        /// </summary>
+        public static void Tuomio(string tehtavaId, string teksti, Action<System.Collections.Generic.Dictionary<string, bool>> valmis)
+        {
+            if (string.IsNullOrEmpty(tehtavaId)) { valmis?.Invoke(null); return; }
+            UnityWebRequest r;
+            try
+            {
+                var runko = SahkeTeksti.JsonOlio(("tehtava", "sahke"), ("id", tehtavaId), ("vastaus", teksti ?? ""));
+                r = new UnityWebRequest(Puhe.Puhepalvelin, "POST")
+                {
+                    downloadHandler = new DownloadHandlerBuffer(),
+                    uploadHandler = new UploadHandlerRaw(Encoding.UTF8.GetBytes(runko)) { contentType = "application/json" },
+                    timeout = SahkeTulkinta.TulkintaMs / 1000,
+                };
+                r.SetRequestHeader("Content-Type", "application/json");
+                r.SetRequestHeader("x-matkakirja-natiivi", Application.identifier);
+                r.SetRequestHeader("User-Agent", "Matkakirja/" + Application.version + " (" + Application.identifier + ")");
+            }
+            catch (Exception e) { Debug.LogWarning("Sähketuomio ei lähtenyt: " + e.Message); valmis?.Invoke(null); return; }
+            try
+            {
+                r.SendWebRequest().completed += _ =>
+                {
+                    System.Collections.Generic.Dictionary<string, bool> tulos = null;
+                    try
+                    {
+                        if (r.result == UnityWebRequest.Result.Success
+                            && Matkakirja.Peli.MiniJson.Jasenna(r.downloadHandler.text) is System.Collections.Generic.Dictionary<string, object> d
+                            && d.TryGetValue("kohde", out var k) && k is bool kb && d.TryGetValue("vuosi", out var v) && v is bool vb)
+                            tulos = new System.Collections.Generic.Dictionary<string, bool> { ["kohde"] = kb, ["vuosi"] = vb };
+                    }
+                    catch (Exception) { tulos = null; }
+                    finally { r.Dispose(); }
+                    valmis?.Invoke(tulos);
+                };
+            }
+            catch (Exception e) { Debug.LogWarning("Sähketuomio kaatui: " + e.Message); r.Dispose(); valmis?.Invoke(null); }
+        }
+
+        /// <summary>
         /// Laitteen muisti (web localStorage): PlayerPrefs. Arvo null poistaa avaimen.
         /// Käyttö: new Sahkepinta(new SahkeYhteys(), SahkeYhteys.Lue, SahkeYhteys.Kirjoita).
         /// </summary>

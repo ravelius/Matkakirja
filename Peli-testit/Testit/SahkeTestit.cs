@@ -554,6 +554,33 @@ namespace Matkakirja.Peli.Testit
             var jalkeen = tila.Kortti(t);
             Oleta.Tosi(!jalkeen.Lomake && jalkeen.Sahke == t.Lahetetty, "lähetetyn kuittaus");
             Oleta.Sama(SahkeVastausLaji.JoVastattu, tila.Laheta(t, vaarin).Laji);
+
+            var kuittaus = tila.KuittausKortti(t);
+            Oleta.Tosi(kuittaus.Kuittaus && !kuittaus.Lomake && kuittaus.Animoi, "kuittaus kirjoitetaan kerran");
+            Oleta.Tosi(!tila.KuittausKortti(t).Animoi, "toisella kerralla valmiina");
+            Oleta.Sama(SahketehtavaTila.Kuittaus(t), kuittaus.Teksti);
+            Oleta.Sama(t.Lento, kuittaus.Nappi);
+            Oleta.Sama(SahkeTulkinta.PaluuMerkkiMs >= kuittaus.Aikataulu.Rivit[0].Merkkivali, true, "paluutahti");
+        }
+
+        [Testi] static void SahkepullatKirjanpidosta()
+        {
+            var t = Tehtavat()["tukholma"];
+            var m = Matka.UusiPeli(KultaisetApu.Verkko, new Satunnainen(9L), "Fogg", "pariisi", KultaisetApu.Laattamaarat);
+            var ka = new Kaupat(m);
+            m.Tila.Pelaaja.Raha = 100;
+            var tila = new SahketehtavaTila();
+            var k = SahketehtavaTila.Pullat(tila.Kortti(t), t, ka);
+            Oleta.Sama(t.Vinkki.Count > 0, k.VinkkiTarjolla, "vinkki tarjolla");
+            Oleta.Sama(t.Vastauslinkki != null, k.LinkkiTarjolla, "linkki tarjolla");
+            Oleta.Tosi(!k.VinkkiOstettu && !k.LinkkiOstettu && k.LinkkiNappi == null, "ei ostettu");
+            if (t.Vastauslinkki == null) return;
+            Oleta.Tosi(SahketehtavaTila.OstaLinkki(ka, t).Ok, "linkki ostettu");
+            Oleta.Sama(75, m.Tila.Pelaaja.Raha, "25 £");
+            k = SahketehtavaTila.Pullat(tila.Kortti(t), t, ka);
+            Oleta.Tosi(k.LinkkiOstettu && k.LinkkiNappi == t.Vastauslinkki.Nappi, "linkkinappi näkyvissä");
+            Oleta.Tosi(!SahketehtavaTila.OstaLinkki(ka, t).Ok, "ei kahdesti");
+            Oleta.Sama(75, m.Tila.Pelaaja.Raha);
         }
     }
 }
