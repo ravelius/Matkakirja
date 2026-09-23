@@ -74,14 +74,20 @@ function lautaKokoelmat(ns) {
       aloitus: Boolean(c.start),
       tyyppi: c.ambience ?? null,
       tarkeys: tarkeys(c, reitteja.get(c.id) ?? 0, Boolean(maa) && PAAKAUPUNGIT[maa] === c.id),
+      // Skeema 1.5 (3D-selvittäjä 23.9.2026): natiivin reittigeometria
+      // lasketaan verkkopelin kaavalla laudan pisteistä, jotta viiva osuu
+      // laattoihin. Laudan Miller-yksiköt (maailmankartta).
+      lauta: { x: c.x, y: c.y },
       data: c,
     };
   });
   const reitit = [
+    // Skeema 1.5: askelia (laudan steps) ja via (taitepisteet laudan
+    // Miller-yksiköissä, [[x, y], …]; tyhjä = suora) päätasolla.
     ...P.edges.map((e, i) => ({
-      id: `reitti:${i}`, laji: e.type ?? 'maa', a: e.a, b: e.b, data: e,
+      id: `reitti:${i}`, laji: e.type ?? 'maa', a: e.a, b: e.b, askelia: e.steps ?? null, via: e.via ?? [], data: e,
     })),
-    ...P.airRoutes.map((e, i) => ({ id: `lento:${i}`, laji: 'lento', a: e.a, b: e.b, data: e })),
+    ...P.airRoutes.map((e, i) => ({ id: `lento:${i}`, laji: 'lento', a: e.a, b: e.b, askelia: null, via: [], data: e })),
   ];
   const kysymykset = [];
   for (const [ryhma, lista] of Object.entries(P.questions)) {
@@ -98,10 +104,10 @@ function lautaKokoelmat(ns) {
   }
   return {
     kaupungit: taulukko(`${LAUTA}#MAAILMANKARTTA.cities`,
-      'Pelilaudan kaupungit. lat/lon: pallopiste jos on, muuten laudan Miller-koordinaateista laskettu. maa = ISO3, maa2 = ISO2 (tools/vienti/iso2.mjs). tyyppi = laudan ambience, lentokentta ja aloitus laudan liput. tarkeys 0–3 nimiöiden harvennukseen (3 = pääkaupunki tai aloitus). data = laudan raakaolio (x, y, la, lx, ly…), johon natiivi ei nojaa.',
+      'Pelilaudan kaupungit. lat/lon: pallopiste jos on, muuten laudan Miller-koordinaateista laskettu. maa = ISO3, maa2 = ISO2 (tools/vienti/iso2.mjs). tyyppi = laudan ambience, lentokentta ja aloitus laudan liput. tarkeys 0–3 nimiöiden harvennukseen (3 = pääkaupunki tai aloitus). lauta = { x, y } laudan Miller-yksiköissä (reittigeometriaan). data = laudan raakaolio (x, y, la, lx, ly…), johon natiivi ei nojaa.',
       {}, kaupungit),
     reitit: taulukko(`${LAUTA}#MAAILMANKARTTA.edges+airRoutes`,
-      'Kaupunkien väliset yhteydet: maa/meri (edges, steps = askelia) ja lentoreitit.',
+      'Kaupunkien väliset yhteydet: laji maa | sea (meri) | lento. askelia = laudan steps (lennolla null), via = taitepisteet laudan Miller-yksiköissä [[x, y], …] (tyhjä = suora viiva).',
       { a: 'kaupungit', b: 'kaupungit' }, reitit),
     kysymykset: taulukko(`${LAUTA}#MAAILMANKARTTA.questions`,
       'Visakysymykset. ryhma = kaupunki-id tai yleinen ryhmä (general, claims).',

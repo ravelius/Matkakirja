@@ -472,6 +472,9 @@ Kolme Sonnet-agenttia analysoi funktiot tiedostoittain.
   ja pulmapiirrokset tunnisteilla (`linssi:topografia.piirra`,
   `pulma:roomalaiset`, `pulmapiirros:<id>`), karttapiste ja mittakaava.
 - kuollut (4): paivanKuva, fokuskohteetDeu, juliste, maanAiheOtsikko.
+- Kaupungeille `lauta: {x, y}` ja reiteille `askelia` ja `via` päätasolle
+  (3D-selvittäjän pyyntö): natiivin reittigeometria lasketaan verkkopelin
+  kaavalla laudan pisteistä, eikä sen tarvitse nojata `data`-kenttiin.
 - Kokoelma `laatat` (Pelikoodarin pyyntö): MAAILMANKARTTA.tokens
   sellaisenaan yhtenä alkiona, jotta natiivin laattojen jaon ei tarvitse
   lukea 1,6 Mt:n laudan raakamoduulia.

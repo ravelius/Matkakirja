@@ -323,3 +323,16 @@ test('skeema 1.5: laatat-kokoelma on laudan tokens sellaisenaan', () => {
   assert.deepEqual(rivi.data, JSON.parse(JSON.stringify(P.tokens)));
   assert.deepEqual(Object.keys(rivi.data), ['types', 'mannerTypes', 'counts']);
 });
+
+test('skeema 1.5: laudan pisteet ja reittien taitteet päätasolla (reittigeometria)', () => {
+  const P = nimiavaruudet.get('js/packs/maailmankartta.js').MAAILMANKARTTA;
+  const lontoo = kaupungit.alkiot.find((k) => k.id === 'lontoo');
+  const c = P.cities.find((x) => x.id === 'lontoo');
+  assert.deepEqual(lontoo.lauta, { x: c.x, y: c.y });
+  const reitit = JSON.parse(tiedostot.get('kokoelmat/reitit.json')).alkiot;
+  const lp = reitit.find((r) => r.a === 'lontoo' && r.b === 'pariisi');
+  assert.deepEqual(lp.via, [[5894, 1353]]);
+  assert.equal(lp.askelia, 3);
+  assert.equal(reitit.filter((r) => r.via.length).length, P.edges.filter((e) => e.via).length);
+  assert.ok(reitit.filter((r) => r.laji === 'lento').every((r) => r.askelia === null && r.via.length === 0));
+});

@@ -61,7 +61,7 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        (saapumishaut kaupungeittain valmiiksi laskettuina)
  *   1.5  manifest.logiikka (jokainen paketin funktio luokiteltuna,
  *        tools/vienti/logiikka.mjs), kokoelmat esilasketut ja laatat,
- *        media.suurennos
+ *        media.suurennos; kaupungit.lauta {x, y}, reitit.askelia ja via
  */
 export const SKEEMAVERSIO_TARKKA = '1.5';
 
