@@ -130,9 +130,6 @@ namespace Matkakirja.Natiivi
         {
             suljettu = valmis;
             string tyyppi = d.LoytoTyyppi;
-            // Web playTokenReveal: laatan aarreääni (star/gem/empty) paljastuskortin näyttöhetkellä
-            // (Pelikoodari b32be57: ohjain ei enää soita sitä vastaushetkellä).
-            if (aanet && Aarre(tyyppi)) Aanet.Tehoste(Aanitunnukset.Aarre(tyyppi));
             bool pollo = tyyppi == "pollo";
             bool paa = tyyppi == "star";
             aarreNyt = Aarre(tyyppi);
@@ -192,6 +189,9 @@ namespace Matkakirja.Natiivi
                 kerros.AddToClassList("mk-kuva");
                 if (!aanet) return;
                 if (aarreNyt) Pulu.Hae().Tunne("ilo", 0.8f);
+                // Web playTokenReveal: sfx.play(treasureSound(type)) kuvan noustessa (ei pöllöllä, naytaPolloAarre).
+                // Pelikoodari b32be57: ohjain ei enää soita laatan ääntä vastaushetkellä.
+                if (!pollo) Aanet.Tehoste(Aanitunnukset.Aarre(tyyppi));
                 SoitaMusiikki(pollo ? null : paa ? MusiikkiPaa : MusiikkiTavallinen);
                 if (paa) SoitaHihkaisu();
             }
