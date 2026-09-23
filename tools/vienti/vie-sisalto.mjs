@@ -126,7 +126,7 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *   1.22 kokoelma muutosloki-natiivi (Julkaisijan rivit) ja osoittimeen
  *        kokoelmaLkm ja muutos (automaattinen sisältörivi, julkaise-sisalto.mjs).
  *   1.23 offline.json ryhmat: maailma, maanosat (7) ja kaikki summattuine
- *        tavuineen; maat[].maanosa (omistaja: lataus maanosittain).
+ *        tavuineen; maat[].manner (omistaja: lataus maanosittain; arvot kuten kaupungit.manner).
  */
 export const SKEEMAVERSIO_TARKKA = '1.23';
 

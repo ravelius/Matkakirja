@@ -687,10 +687,10 @@ test('skeema 1.23: offline-ryhmät maanosittain ja kaikki', () => {
   const jaettu = Object.values(mantereet).flatMap((r) => r.maat);
   assert.equal(jaettu.length, new Set(jaettu).size, 'maa vain yhdessä maanosassa');
   assert.deepEqual([...jaettu].sort(), kaikki.maat);
-  assert.ok(Object.values(o.maat).every((m) => m.maanosa && o.ryhmat[m.maanosa]));
+  assert.ok(Object.values(o.maat).every((m) => m.manner && o.ryhmat[m.manner]));
   const summa = Object.values(mantereet).reduce((a, r) => a + r.tavuja.yht, 0) + maailma.tavuja.yht;
   assert.equal(kaikki.tavuja.yht, summa);
-  assert.equal(o.maat.FRA.maanosa, 'europe');
+  assert.equal(o.maat.FRA.manner, 'europe');
 });
 
 test('skeema 1.9: offline-manifesti maittain (laatat, maasto, media, tavut)', async () => {

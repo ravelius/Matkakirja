@@ -336,7 +336,7 @@ function kokoaRyhmat(maat, kartta, mannerNimet, globaaliTavut) {
   }
   const kaikki = Object.keys(maat).sort();
   ryhmat.kaikki = { nimi: 'Kaikki', maat: kaikki, tavuja: summaa([globaaliTavut, ...kaikki.map((iso) => maat[iso].tavuja)]) };
-  for (const iso of Object.keys(maat)) maat[iso].maanosa = maanosa[iso] ?? null;
+  for (const iso of Object.keys(maat)) maat[iso].manner = maanosa[iso] ?? null;
   return ryhmat;
 }
 
