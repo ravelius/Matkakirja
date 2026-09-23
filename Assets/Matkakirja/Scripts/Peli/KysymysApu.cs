@@ -273,6 +273,9 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        /// <summary>Mantereet laatat.mannerTypes-järjestyksessä (Aarnin luettelo, web aarreLuettelo).</summary>
+        public IEnumerable<string> Mantereet => mantereet.Keys;
+
         /// <summary>Web aarreMantereella(tyyppi, manner, maa): null, jos tyyppiä ei tunneta.</summary>
         public Aarre Hae(string tyyppi, string manner, string maa)
         {

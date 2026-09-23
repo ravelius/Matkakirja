@@ -163,6 +163,23 @@ namespace Matkakirja.Natiivi
         /// <summary>Pelisilmukka päälle/pois (Natiivi-UI piilottaa omat näkymänsä).</summary>
         public event Action<bool> KaytossaMuuttui;
 
+        /// <summary>
+        /// Pelin tila tallentui teon jälkeen (raha, tavarat, julisteet, tietäjäpisteet voivat
+        /// muuttua): laukun päivitys ja kukkaron välähdys (Natiivi-UI). Ei joka ruudussa.
+        /// </summary>
+        public event Action TilaMuuttui;
+
+        /// <summary>Kokoelma julisteet (ja eläintäyt) laukkua varten; null ennen latausta.</summary>
+        Kauppasisalto kauppasisalto;
+
+        /// <summary>
+        /// Matkalaukun sisältö (web #passport-dialog): kukkaro, tietäjätaso, tilastot,
+        /// Aarnin luettelo, tavarat ja julisteet. null ennen kuin peli on valmis.
+        /// linssejaOmistetaan: Linssisepän omistustieto tyhjän laukun tekstiin.
+        /// </summary>
+        public LaukkuNaytto Laukku(bool linssejaOmistetaan = false) =>
+            matka == null ? null : Natiivi.Laukku.Rakenna(matka, aarrenimet, kauppasisalto, linssejaOmistetaan);
+
         List<MatkaVaihtoehto> vaihtoehdot = new List<MatkaVaihtoehto>();
         readonly List<string> tapahtumat = new List<string>();
         string saapumisKaupunki;
@@ -429,6 +446,11 @@ namespace Matkakirja.Natiivi
             yield return HaeTiedosto("kokoelmat/laatat.json", false, true, t => laattaTeksti = t);
             yield return HaeTiedosto("kokoelmat/paikallisaarteet.json", false, true, t => paikallisTeksti = t);
             yield return HaeTiedosto("kokoelmat/saannot.json", false, true, t => saannotTeksti = t);
+            string elaintayt = null, julisteet = null;
+            yield return HaeTiedosto("kokoelmat/elaintayt.json", false, true, t => elaintayt = t);
+            yield return HaeTiedosto("kokoelmat/julisteet.json", false, true, t => julisteet = t);
+            try { kauppasisalto = Kauppasisalto.Lue(elaintayt, julisteet); }
+            catch (Exception e) { Debug.LogWarning("MATKAKIRJA peli: julisteet tai eläintäyt eivät jäsenny: " + e.Message); }
             try
             {
                 // Löytöjen manner- ja maakohtaiset nimet (web aarreMantereella).
@@ -711,6 +733,7 @@ namespace Matkakirja.Natiivi
                 PeliApu.KirjoitaAtomisesti(TavoitePolku, Tavoite ?? "");
             }
             catch (Exception e) { Debug.LogError("MATKAKIRJA peli: tallennus epäonnistui: " + e.Message); }
+            try { TilaMuuttui?.Invoke(); } catch (Exception e) { Debug.LogException(e); }
         }
 
         void OnApplicationPause(bool tauko)
@@ -1353,6 +1376,65 @@ namespace Matkakirja.Natiivi
             return null;
         }
 
+        // --- laitetestin pakotukset (testikomennot koe rosvo / koe tapahtuma) ----
+
+        /// <summary>
+        /// Laitetesti: avaa rosvon kaksintaistelun heti kuten ryöstäjälaatan jälkeen
+        /// (maailmankartalla ei ole ryöstäjiä). Vaatii kartan ja vaiheen Toiminta
+        /// (Heitto puretaan, jos Matka sallii). Palauttaa virheen tai null.
+        /// </summary>
+        public string KoeKaksintaistelu()
+        {
+            var e = KoeValmis();
+            if (e != null) return e;
+            if (rosvo == null) return "kaksintaistelukysymyksiä ei ole ladattu";
+            matka.Tila.KaksintaisteluOdottaa = true;
+            if (!matka.KaksintaisteluAlkaa()) return "kaksintaistelu ei alkanut";
+            return KoeNayta();
+        }
+
+        /// <summary>
+        /// Laitetesti: avaa tapahtumakortin paketin kokoelmasta (Afrikan laudan kortit),
+        /// vaikka kortit eivät ole maailmankartalla käytössä. Koukut puretaan heti,
+        /// joten tavallinen peli ei ala tarjota kortteja. Palauttaa virheen tai null.
+        /// </summary>
+        public string KoeTapahtuma()
+        {
+            var e = KoeValmis();
+            if (e != null) return e;
+            if (tapahtumadata == null || tapahtumadata.Kortit.Count == 0) return "tapahtumakortteja ei ole ladattu";
+            if (tapahtumakortit == null)
+            {
+                tapahtumakortit = new Tapahtumat(kysely, tapahtumadata);
+                if (!TapahtumakortitMaailmankartalla) { kysely.TapahtumiaOn = null; kysely.AvaaTapahtuma = null; }
+                tapahtumakortit.Tapahtui += (laji, teksti) => kysymysLisat.Add(teksti);
+            }
+            var p = matka.Tila.Pelaaja;
+            var r = tapahtumakortit.Avaa(p.Sijainti.Kaupungissa ? p.Sijainti.Kaupunki : null);
+            return r.Ok ? KoeNayta() : r.Virhe;
+        }
+
+        string KoeValmis()
+        {
+            if (matka == null || kysely == null) return "peli ei ole valmis";
+            if (Tila != SilmukanTila.Kartta) return "silmukka on tilassa " + Tila;
+            if (matka.Tila.Vaihe == Vaihe.Heitto && !matka.PeruKulkutapa().Ok) return "vaihe Heitto, eikä kulkutapaa voi perua";
+            if (matka.Tila.Vaihe != Vaihe.Toiminta) return "vaihe " + matka.Tila.Vaihe + " (tarvitaan Toiminta)";
+            PiilotaKortti();
+            dialogi.PiilotaHeitto();
+            return null;
+        }
+
+        string KoeNayta()
+        {
+            kysymysLoyto = null;
+            kysymysLisat.Clear();
+            Tallenna();
+            NaytaKysymys();
+            Debug.Log("MATKAKIRJA peli: koe " + AvoinTehtava + " auki");
+            return AvoinTehtava == Tehtava.Ei ? "näkymä ei auennut" : null;
+        }
+
         void PaivitaKysymysAika()
         {
             if (Tila == SilmukanTila.Kysymys && KysymysTila != null && KysymysTila.TulosVaihe == 1 && Time.unscaledTime >= paljastusAika)
@@ -1458,7 +1540,8 @@ namespace Matkakirja.Natiivi
                 + ",\"puhe\":{\"paalla\":" + (Puhe.Paalla ? "true" : "false") + ",\"soi\":" + (puhe != null && puhe.Soi ? "true" : "false")
                 + ",\"url\":" + PeliApu.Json(puhe?.SoivaUrl) + ",\"aika\":" + ((int)((puhe?.Aika ?? 0) * 10) / 10.0).ToString(System.Globalization.CultureInfo.InvariantCulture)
                 + ",\"virhe\":" + PeliApu.Json(puhe?.ViimeVirhe) + ",\"saapumispuheita\":" + luennat.Saapumispuheita + ",\"luentoja\":" + luennat.Luentoja + "}"
-                + ",\"kysymys\":" + KysymysApu.Json(KysymysTila, kysymysJaljella);
+                + ",\"kysymys\":" + KysymysApu.Json(KysymysTila, kysymysJaljella)
+                + ",\"laukku\":" + Natiivi.Laukku.Json(Laukku());
             return json.Substring(0, json.Length - 1) + lisa + "}";
         }
     }

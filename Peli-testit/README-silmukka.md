@@ -72,6 +72,7 @@ JSON-tiedostot. 3D:n `komento.txt` (esim. `kuva nimi`) toimii rinnalla.
 | `napauta kaupunki` | kuin sormi kaupungin merkillä (KaupunkiMerkit.ValitseKaupunki) |
 | `valitse bussi\|lento\|liftaus\|laiva` | matkavalinnan nappi |
 | `peruuta` | matkavalinnan Peruuta |
+| `koe rosvo` / `koe tapahtuma` | laitetesti: avaa rosvon kaksintaistelun tai tapahtumakortin heti (kartta, vaihe Toiminta; maailmankartalla ei ole ryöstäjiä eikä kortteja). Sen jälkeen `aloita`, `vastaa`, `puolita` (Helpotus), `jatka`, `tila` |
 | `mannerlennot` | kortin "Mannerlento": matkavalinta mannerlennoille (vain kun mantereen aarre löytyi ja vaihe Toiminta) |
 | `matka kaupunki tapa` | valinta ilman dialogia (tapa bussi, lento, liftaus, laiva tai mannerlento) |
 | `heita` | "Heitä noppaa" (kesken reitin) |
@@ -87,7 +88,7 @@ JSON-tiedostot. 3D:n `komento.txt` (esim. `kuva nimi`) toimii rinnalla.
 | `jatka` | tuloksen Jatka-nappi: kysymys kiinni, vuoro päättyy |
 | `luento kaupunki\|intro\|lento\|saapuminen kaupunki` | soittaa luennan ehdoitta (tila-JSONin `puhe`: soi, url, aika, virhe) |
 | `puhe seis\|pois\|paalle` | pysäyttää puheen / kertoja pois tai päälle (Asetukset Kytkin.Kertoja) |
-| `tila [nimi]` | `peli-tila.json` / `peli-tila-nimi.json`: silmukka, vaihe, sijainti, raha, päivä, aika, tilarivi, dialogi ja vaihtoehdot, tavoite, lehtiAuki, viesti, virhe, viimeisin matka; erä 4: syoteEstetty, tutkiTarjolla, kysymys (laji, otsikko, kysymys, vaihtoehdot, piilotetut, vihje, sekunnit, jaljella, vastattu, valittu, oikea, oikein, aikaLoppui, loyto, viesti) |
+| `tila [nimi]` | `peli-tila.json` / `peli-tila-nimi.json`: silmukka, vaihe, sijainti, raha, päivä, aika, tilarivi, dialogi ja vaihtoehdot, tavoite, lehtiAuki, viesti, virhe, viimeisin matka; erä 4: syoteEstetty, tutkiTarjolla, kysymys (laji, otsikko, kysymys, vaihtoehdot, piilotetut, vihje, sekunnit, jaljella, vastattu, valittu, oikea, oikein, aikaLoppui, loyto, viesti); laukku (sijainti, kukkaro, tietaja, tilastot, aarni, kateissa, tavarat, julisteet) |
 | `odota s` / `odota-tila tila [max s]` | tauko / odota tilaa Kartta, Dialogi, Matkalla, Lehti (aikaraja kirjataan lokiin) |
 | `uusi-peli [siemen]` | uusi peli Pariisista, toistettava noppa |
 | `peli pois\|paalle` | silmukka pois/päälle |
@@ -151,6 +152,22 @@ Jos laattamääriä ei saatu (peli ilman laattoja), noppa on eri ja liftaus voi 
 silloin `odota-tila lehti` kirjaa aikarajan ja `heita` jatkaa. Reitin varren kokeilu:
 `uusi-peli 1`, `matka marseille liftaus` (noppa 3 → `e:pariisi|marseille:3`, Heitä-nappi
 näkyy), `heita` (noppa 2 → Marseille, lehti).
+
+### Kaksintaistelu ja tapahtumakortti (`Peli-testit/silmukka-rosvo.txt`, 23.9.2026)
+
+Pakotettu laitetesti (`koe rosvo`, `koe tapahtuma`). Tarkista `peli-tila-*.json`-tiedostoista:
+
+| tila | odotus |
+|---|---|
+| r1-alku | `silmukka` Kartta, sijainti Pariisi, `laukku.kukkaro` "£300" |
+| r2-rosvo | `silmukka` Kysymys, `kysymys.laji` Kaksintaistelu, 8 vaihtoehtoa, `sekunnit` 45, ruudulla Helpotus-nappi |
+| r3-helpotus | `kysymys.piilotetut` ei tyhjä, raha puolittunut (rosvo vei puolet), aika kuluu |
+| r4-vastattu | `vastattu` true, `oikein` true, ei saalista (helpotuksen jälkeen) |
+| r5-kartalla | `silmukka` Kartta, vaihe Heitto tai Toiminta (vuoro päättyi), `syoteEstetty` false |
+| t1-kortti | `kysymys.laji` Tapahtumakortti, teksti ja vaikutusrivi, vain Jatka |
+| t2-loppu | `silmukka` Kartta; raha muuttui kortin mukaan, kyyti siirsi naapurikaupunkiin tai vuoro meni (viive) |
+
+Kuvakaappaukset r2, r3 ja t1: Natiivi-UI:n kysymysnäkymä (kaksintaistelun 8 vaihtoehtoa kahdessa sarakkeessa, tapahtumakortti).
 
 ### Kysymysvirta (`Peli-testit/silmukka-kysymys.txt`, erä 4)
 

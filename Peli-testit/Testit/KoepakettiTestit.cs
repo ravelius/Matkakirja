@@ -63,6 +63,10 @@ namespace Matkakirja.Peli.Testit
             Oleta.Tosi(nimet.Hae("pieniAarre", "europe", "FIN")?.Nimi != null, "paikallisaarteet");
             Oleta.Tosi(ky.TehtavaTarjolla(m.Tila.Pelaaja) || true, "kysely");
             KuvaJaLippuKysymyksetHttps(k, L);
+            var laukku = Laukku.Rakenna(m, nimet, Kauppasisalto.Lue(L("elaintayt"), L("julisteet")));
+            Console.WriteLine($"  laukku: Aarnin luettelo {laukku.AarninLuettelo.Count}, julisteita {laukku.JulisteitaKaikkiaan}, {laukku.Kukkaro}");
+            Oleta.Tosi(laukku.AarninLuettelo.Count == 7 && laukku.AarninLuettelo.All(a => a.KuvaUrl != null), "Aarnin luettelo kuvineen");
+            Oleta.Tosi(laukku.JulisteitaKaikkiaan > 100, "julisteet");
         }
 
         /// <summary>
