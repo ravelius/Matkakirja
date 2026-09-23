@@ -9,7 +9,7 @@ Lähde: main `eaeda81cf` (v2143).
 ## Tulos lyhyesti
 
 - `node tools/vienti/vie-sisalto.mjs` tuottaa `dist/vienti/`-kansioon
-  421 tiedostoa (59 Mt) alle sekunnissa. Vienti on deterministinen, eikä
+  423 tiedostoa (59 Mt) alle sekunnissa. Vienti on deterministinen, eikä
   se tarvitse verkkoa.
 - Kaikki 353 js/packs-moduulia ja 38 muuta sisältömoduulia viedään
   häviöttömästi: 544 exporttia. Mukana on 125 funktiota. Ne ovat
@@ -19,6 +19,9 @@ Lähde: main `eaeda81cf` (v2143).
   (js/media.js). Lisäksi viitteissä on 1 681 lähde- ja lisenssilinkkiä.
 - 21 kokoelmaa tyypitettyinä entiteetteinä, esimerkiksi kaupungit
   lat/lon-koordinaatein, reitit, kysymykset, lehdet ja kohtaamiset.
+- Skeemaversio on **1.1** (`manifest.skeemaversio`): versiossa 1.1
+  kaupungit saivat kentät `maa2` (ISO2), `tyyppi`, `lentokentta` ja
+  `aloitus` natiivin 3D-proton tarpeen mukaan.
 - `tests/vienti.test.mjs` (6 testiä, 3 s) todistaa, ettei mitään jää pois.
   Se vertaa jokaista exporttia suoraan lähdemoduuliin. Testi on todettu
   herkäksi: kun Set muutettiin taulukoksi, testi kaatui.
@@ -27,7 +30,10 @@ Lähde: main `eaeda81cf` (v2143).
   versioidun paketin ämpäriin, ja natiivi lukee sen. Web on sama lähde
   ilman muutoksia, koska se julkaistaan samasta commitista. Tähän kuluu
   3,5–5 sessiota. Maksullista versiota estävät 23 NC-ääntä, jotka on
-  korvattava; kuvissa NC-tapauksia ei ole.
+  korvattava; kuvissa NC-tapauksia ei ole. **Osa 1 on toteutettu
+  23.9.2026 (PR #2925):** paketti menee ämpäriin jokaisesta mergestä
+  (ks. 5.2). Osa 2 (funktiot tunnisteiksi) alkaa, kun 3D-proto on
+  lukenut paketin.
 - Mekaaninen osa on nyt valmis. Suurin työ on ei-mekaanisessa osassa eli
   UI:ssa ja Liviassa, ei sisällössä. Arvio on lopussa.
 
@@ -94,7 +100,10 @@ jokaiseen osoitteeseen varareitteineen, ajettu 23.9.2026 kaikille
 11 626 pelin omalle mediaosoitteelle): 11 588 vastaa. Poikkeuksia on 38:
 
 - 33 Commons-kuvaa puuttuu ämpäristä: 24 on keksintöjen linssissä
-  (`kuvaAito`), 8 kaupunkilehdessä ja 1 maalehdessä.
+  (`kuvaAito`), 8 kaupunkilehdessä ja 1 maalehdessä. **Korjattu PR:ssä
+  #2913:** peilaus lukee js/linssit, ja 8 väärää nimeä korjattiin
+  (kaarevat heittomerkit ja Yllästunturi). Uudelleentarkistuksessa
+  aukkoja oli 32.
   `tools/peilaa-media.mjs` ei lue js/linssit-kansiota. Varareitti
   Commonsiin on olemassa, mutta Commons vastasi tarkistukseen 429
   (pyyntöraja), joten kuvia ei voitu todentaa sitä kautta.
@@ -132,12 +141,13 @@ laiteasetuksia tai kertalippuja.
 
 ```
 dist/vienti/
-  manifest.json          sisällysluettelo: moduulit, exportit, lukumäärät, sha256
+  manifest.json          sisällysluettelo: skeemaversio, moduulit, exportit, lukumäärät, sha256
   moduulit/js/packs/*.json, moduulit/js/*.json   RAAKAKERROS, häviötön
   kokoelmat/*.json       21 tyypitettyä entiteettikokoelmaa id-viittauksin
   media.json             kaikki mediaviitteet: laji, url, varat, ämpärin avain, esiintymät
   tiedostot/assets/data/ maakayrat.json, maapolygonit.json sellaisinaan
-  skeema/*.schema.json   JSON Schema 2020-12 jokaiselle tiedostolajille
+  skeema/*.schema.json   JSON Schema 2020-12 jokaiselle tiedostolajille (myös
+                         kaupunki.schema.json ja osoitin.schema.json, skeema 1.1)
 ```
 
 - **Raakakerros** on totuus: jokainen export sellaisenaan. JSONiin
@@ -157,6 +167,12 @@ dist/vienti/
   suurimmillaan 4,7° (Sansibar). Kenttä `sijaintiLahde` kertoo, kumpi arvo
   on käytössä. Tarkat pisteet loppuja 163:a varten ovat avoin tehtävä
   (ks. kohta 4).
+- **Kaupungit, skeema 1.1** (`skeema/kaupunki.schema.json`): id, nimi,
+  maa (pelin ISO3; Etelä-Sudan `SDS`), `maa2` (ISO2,
+  `tools/vienti/iso2.mjs` Wikidatasta), manner, lat, lon,
+  sijaintiLahde, saari, `lentokentta`, `aloitus`, `tyyppi` (laudan
+  ambience) ja data. Natiivin 3D-proton ensimmäinen tarve on id, nimi,
+  lat, lon ja maa2; muita kenttiä käytetään nimien harventamiseen.
 - **Media** osoittaa ämpäriin eikä kopioi tiedostoja. Natiivi peli voi
   hakea ne ajon aikana tai esiladata paketiksi.
 - **Manifest** antaa tuojalle tarkistuslistan: jos tuoja laskee
@@ -176,6 +192,13 @@ Testi (`tests/vienti.test.mjs`) tarkistaa kuusi asiaa:
    viittaus osuu.
 5. Jokainen mediaesiintymä osoittaa oikeaan merkkijonoon.
 6. Tiivisteet täsmäävät tiedostoihin.
+
+Toinen testi (`tests/sisaltopaketti.test.mjs`, 7 testiä) valvoo
+julkaisua. Se tarkistaa paketin skeemat `tools/vienti/validoi.mjs`:llä ja
+kaupunkien 3D-kentät. Se varmistaa myös, että validaattori hylkää
+rikkinäisen arvon, että versiointi toimii (sama sisältö → sama N,
+muuttunut → N+1, palautuksen jälkeen ämpärin suurin + 1) ja että
+työnkulku kirjoittaa osoittimen vasta paketin jälkeen.
 
 ## 3. Mikä on mekaanista, mikä ei
 
@@ -241,10 +264,9 @@ web-näkymät pidetään kuoressa. Näkymät voivat lukea tätä samaa vientiä.
    paikkaan (`aanet/…`), ja se on myös viennissä (esim.
    `siirtymamusiikki.js`, `tyohuone-musiikki.js`). Tuojan pitää suosia
    `ampari`-kenttää, kun rivillä on molemmat.
-2. 33 Commons-kuvaa puuttuu ämpäristä (ks. 1.2), koska peilaustyökalu
-   ei lue js/linssit-kansiota. Korjaus on laajentaa `tools/peilaa-media.mjs`
-   lukemaan js/linssit ja ajaa se uudelleen. Tehtävä kuuluu Julkaisijalle
-   tai Pelikoodarille.
+2. ~~33 Commons-kuvaa puuttuu ämpäristä~~. Korjattu PR:ssä #2913
+   (peilaus lukee js/linssit, 8 nimeä korjattu), ja PR #2916 poisti
+   peilausajosta 357 turhaa 404-virhettä.
 3. Osa lipuista on vain repon kopiona eikä ämpärissä. Esimerkiksi
    `liput/flag-of-armenia.png` palauttaa 404. Vienti antaa silloin
    ensisijaiseksi osoitteeksi repon kopion, kuten pelikin.
@@ -254,14 +276,20 @@ web-näkymät pidetään kuoressa. Näkymät voivat lukea tätä samaa vientiä.
    lähde, vaikka tiedosto on työhuoneen. Se on viety luokalla `kehittaja`.
 6. 163 kaupungilla ei ole tarkkaa lat/lon-pistettä, joten niiden
    sijainti on laudalta laskettu likiarvo (virhe enintään 4,7°).
-   Natiivin pallon merkit tarvitsevat tarkat pisteet: tehtävä sopii
-   Karttasepälle, ja pohjaksi käy `PALLON_KAUPUNKIPISTEET`.
+   **Ehdotukset lähteineen ovat PR:ssä #2922**
+   (`docs/raportit/kaupunkien-latlon-20260923.tsv`, Fablen päätökset
+   mukana), ja Sisältökirjuri kirjaa ne `PALLON_KAUPUNKIPISTEET`iin.
+   Samalla löytyi Gao (374 km) ja Exmouth (89 km). Vartio
+   `tools/tarkista-laudan-pisteet.mjs` ilmoittaa nyt myös wiki-kentät,
+   joita ei löydy fi-Wikipediasta.
 7. Vienti ei muuta peliä. Sen testi ajetaan normaalissa
    `node --test` -portissa (3 s). `dist/` on .gitignoressa.
 
 Työkalut: `tools/vienti/vie-sisalto.mjs`, `sarjallista.mjs`,
-`media.mjs`, `kokoelmat.mjs`, `lahteet.mjs`, `tarkista-media.mjs` ja
-`skeema/`. Testi: `tests/vienti.test.mjs`.
+`media.mjs`, `kokoelmat.mjs`, `lahteet.mjs`, `tarkista-media.mjs`,
+`julkaise-sisalto.mjs`, `validoi.mjs`, `iso2.mjs` ja `skeema/`.
+Työnkulku: `.github/workflows/vie-sisalto.yml`. Testit:
+`tests/vienti.test.mjs` ja `tests/sisaltopaketti.test.mjs`.
 
 ## 5. Yhteinen sisältölähde kahdelle pelille
 
@@ -297,16 +325,17 @@ Uusi työnkulku `vie-sisalto.yml` käyttää samoja R2-secretejä kuin 33
 nykyistä ämpärityönkulkua. Sen osoitinmalli on sama kuin `pyramidi.json`-
 ja `laatat.json`-tiedostoilla.
 
-1. Työnkulku laukeaa pushista mainiin polkusuodattimella `js/**` ja
-   `assets/data/**`.
+1. Työnkulku laukeaa pushista mainiin polkusuodattimella `js/**`,
+   `assets/data/**` ja `tools/vienti/**`.
 2. Se ajaa viennin ja testin. Jos paketin tiiviste ei muuttunut, mitään
    ei viedä.
 3. Paketti viedään muuttumattomana polkuun `sisalto/1/v<N>/`
    (`Cache-Control: immutable`, vuosi) ja tarkistetaan julkisesta
    osoitteesta.
 4. Osoitin `sisalto/1/uusin.json` kirjoitetaan **viimeisenä** (max-age
-   60 s). Siinä on `{ versio, polku, sha256, skeema, minSovellus,
-   edellinen, commit, appVersion }`.
+   60 s). Siinä on `{ $skeema, versio, polku, sha256, skeemaversio,
+   minSovellus, edellinen, commit, appVersion, julkaistu }`
+   (`skeema/osoitin.schema.json`).
 5. Palautus tehdään käsiajolla `palauta: N`, joka vaihtaa osoittimen.
    20 viimeisintä versiota säilytetään.
 
@@ -336,7 +365,8 @@ Funktiot tunnisteiksi ja sisältöversion näyttäminen ovat myöhempiä osia.
 
 ### 5.3 Yhteensopivuus: vanha sovellus ja uusi sisältö
 
-- **Skeeman major.minor.** `matkakirja-vienti/1` on major. Lisäykset
+- **Skeeman major.minor.** Nykyinen on 1.1 (`SKEEMAVERSIO_TARKKA`,
+  manifestissa ja osoittimessa). `matkakirja-vienti/1` on major. Lisäykset
   (uusi kenttä, uusi kokoelma) nostavat minoria, ja vanha sovellus
   ohittaa tuntemattomat kentät. Poisto tai merkityksen muutos nostaa
   majoria, jolloin osoitin vaihtuu (`sisalto/2/…`). Vanha sovellus ei
@@ -346,8 +376,8 @@ Funktiot tunnisteiksi ja sisältöversion näyttäminen ovat myöhempiä osia.
   kentät se vaatii. Tuoja validoi paketin ennen käyttöönottoa, ja jos
   jokin puuttuu, vanha paketti pysyy käytössä. Skeemat
   (`skeema/*.schema.json`) ovat tämän tarkistuksen pohja.
-- **`minSovellus`** kirjataan manifestiin ja osoittimeen erikseen webille
-  ja iOS:lle. Näin sisältö, joka vaatii uutta koodia (esimerkiksi uusi
+- **`minSovellus`** kirjataan osoittimeen erikseen webille ja iOS:lle,
+  nyt `{ ios: 1, web: null }` (web ei lue pakettia). Näin sisältö, joka vaatii uutta koodia (esimerkiksi uusi
   pulmatyyppi), ei mene vanhalle sovellukselle.
 - **Avoin riski:** vanhan koodin käytös uusien enum-arvojen kanssa
   (token-tyyppi, linssi-id, pulmageneraattori) on tarkistamatta. Tuojan
@@ -466,7 +496,7 @@ docs/raportit/lisenssi-inventaario-20260923.md (PR #2896).
 4. **Funktiot datassa.** Ne ovat App Storen kohdan 2.5.2 riski ja estävät
    kahden kielen toteutuksen. Torjunta: generaattoritunnisteet (2–3
    sessiota) ennen kuin natiivi lukee paketin.
-5. **Ämpärin aukot.** 33 kuvaa puuttuu ämpäristä (4, havainto 2), ja
+5. **Ämpärin aukot.** 33 kuvaa puuttui ämpäristä (korjattu, #2913), ja
    service worker ei välttämättä toimi WKWebView-kuoressa
    (`WKAppBoundDomains` puuttuu, tarkistamatta). Torjunta:
    `tarkista-media.mjs` CI:hin viikoittain ja laitetestaajalle
@@ -480,7 +510,7 @@ docs/raportit/lisenssi-inventaario-20260923.md (PR #2896).
    (Pelikoodari).
 2. **Seuraavaksi (3,5–5 sessiota):**
    - `vie-sisalto.yml`: CI vie paketin ämpäriin versioituna ja päivittää
-     osoittimen.
+     osoittimen. **Tehty (#2925).**
    - sisältöversio näkyviin
    - funktiot datasta tunnisteiksi.
    Web ei muutu: se on sama lähde, koska Pages ja paketti syntyvät samasta
