@@ -84,6 +84,7 @@ namespace Matkakirja.Editori
             reitit.korostus = Viiva("Reitti-korostus", new Color32(96, 40, 26, 230), 4f, new Vector4(0.35f, 0.6f, 0.35f / 1.2f, 0));
             merkit.reitit = reitit;
 
+            georefGo.AddComponent<Laattapalvelin>();
             var kerrokset = georefGo.AddComponent<KarttaKerrokset>();
             kerrokset.pallo = pallo;
             kerrokset.pohja = kerros;
@@ -320,6 +321,19 @@ namespace Matkakirja.Editori
         }
 
         static bool TestFlightVienti;
+
+        /// <summary>Laattapalvelin (127.0.0.1) vaatii ATS-poikkeuksen paikalliselle verkolle.</summary>
+        [UnityEditor.Callbacks.PostProcessBuild(190)]
+        static void PaikallinenVerkkoPlist(BuildTarget kohde, string polku)
+        {
+            if (kohde != BuildTarget.iOS) return;
+            var plistPolku = Path.Combine(polku, "Info.plist");
+            var plist = new UnityEditor.iOS.Xcode.PlistDocument();
+            plist.ReadFromFile(plistPolku);
+            var ats = plist.root["NSAppTransportSecurity"]?.AsDict() ?? plist.root.CreateDict("NSAppTransportSecurity");
+            ats.SetBoolean("NSAllowsLocalNetworking", true);
+            plist.WriteToFile(plistPolku);
+        }
 
         [UnityEditor.Callbacks.PostProcessBuild(200)]
         static void TestFlightPlist(BuildTarget kohde, string polku)

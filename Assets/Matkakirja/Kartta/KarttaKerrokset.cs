@@ -125,7 +125,7 @@ namespace Matkakirja
             }
             var k = pallo.gameObject.AddComponent<CesiumUrlTemplateRasterOverlay>();
             k.materialKey = avainCesium;
-            k.templateUrl = url;
+            k.templateUrl = Laattapalvelin.Paikallinen(url);
             k.projection = projektio;
             k.minimumLevel = min;
             k.maximumLevel = max;
