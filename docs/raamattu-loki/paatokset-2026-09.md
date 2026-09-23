@@ -2867,3 +2867,7 @@ Omistaja päivittää TestFlightista aamulla.
 ## UUSI FABLE ALOITTI klo 02.5x NOLLAUKSEN JALKEEN: LUOVUTUS 60a326ccf LUETTU, 10 APUSESSIOTA AUKI (KAIKKI PAITSI POSTIVAHTI JA KARTTASEPPA TYOSSA), JONON KOHTA 1 VALMIS (BUILD 4 OMISTAJAN SAATAVILLA klo 02.53); SEURAAVAKSI KUULOKOKEEN TULOS, #2984 → KETJU, OMISTAJAN AAMUKOKEILU (24.9.2026 klo 02.56)
 
 Uusi Fable-sessio (tili B, haara claude/bold-ride-vow4ki) jatkaa luovutuksen jonosta. Aloitusviesti tuli Postivahdilta. Ei aloitusviestejä auki oleville sessioille. Sallintalista (jonon kohta 6): yön luokitinestot (revoke-koodin commit, credential exploration) eivät ole permissions-sääntöjä vaan auto-tilan luokittimen päätöksiä; niitä ei voi avata sallintalistalla → esitetään omistajalle aamun kortissa tiedoksi, ei rivejä.
+
+## SIIRTOSEPPA: SKEEMA 1.26 (siirtoseppa-saapumiset 90fa97343, v33, 63/63) LISAA PAATASOKENTAT (TARINAKAARI, PAIKKATIEDOT, KOHTAAMISET, KOHTAAMISKUVAT, PAIKALLISAARTEET, SAAPUMISPUHEET, FOKUSVIRTOJEN KOHTAAMISPISTE JA SAHKETEHTAVA); PAKETTIVARTIJA 29 PUNAISTA = LUKIJOIDEN VAIHTO PAATASOON (POLKUKARTTA PELIKOODARILLE); muutosloki-natiivi KORJATTU (f9a022dd5). FABLE: #2984 JONON KARKI, JULKAISIJA MERGEAA --admin JOS VAIN savukkeet-mac PUNAINEN (YLEINEN VIKA 23.9. ILLASTA) JA SELVITTAA JUURISYYN (24.9.2026 klo 02.59)
+
+Siirtosepän ilmoitus klo 03.0x; #2984 tarkistukset käynnissä (reitti vihreä, savukkeet-mac ja testit ajavat).
