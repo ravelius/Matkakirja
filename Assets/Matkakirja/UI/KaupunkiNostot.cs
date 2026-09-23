@@ -4,13 +4,19 @@
 // (kaupunkikartanSiirretyt). Toteutus natiivisti, ei käännös.
 //
 // Kaupungin sisäiset nostot kahdesta lähteestä, tässä järjestyksessä (web: kartalta + siirretyt):
-//   1. KARTALTA: karttavalot (kokoelma karttavalot, sama lähde kuin pallon valoilla), joiden oma
-//      paikka on enintään 12 km kaupungin keskuksesta (haversine, ensin karkea astelaatikko).
-//      Pois: laudan kaupungit (valon kaupunki-kenttä) sekä kohdekartalle linkitetyt nostot
-//      (web karsiKaupunkikartanNostot: ne asuvat kohdekartalla eivätkä ole pääkartan merkkejä)
-//      — paitsi Ranskassa, jossa ne palaavat lähizoomiin (web KOHDEKARTAN_NOSTOT_LAHIZOOMIIN).
+//   1. KARTALTA: karttavalot (kokoelma karttavalot, skeema 1.24 = webin pallon nostokerroksen
+//      kokoaja), joiden paikkanimi on kaupungin nimi (web paikkaNimi: vain noston oma datapaikka,
+//      paikkaLahde data) tai joiden oma paikka (lat/lon, ei ladottu) on enintään 12 km kaupungin
+//      keskuksesta (haversine, ensin karkea astelaatikko). Pois: laudan kaupungit (valon
+//      kaupunki-kenttä) ja valot, jotka eivät ole pääkartalla (paakartalla false: web
+//      karsiKaupunkikartanNostot, ne asuvat kohdekartalla). Vanhassa paketissa ilman paakartalla-
+//      kenttää vara: kohdekartalle linkitetyt pois paitsi Ranskassa (KOHDEKARTAN_NOSTOT_LAHIZOOMIIN).
+//      Rivin nimi on valon nimi (kohteen nimi, aina täytetty).
 //   2. KOHDEKARTALTA SIIRRETYT: kohdekartan kohteet ilman miniatyyripiirrosta (ei numeroympyräkartoilla),
-//      joilla on juttu tai wiki. Aihe tulee linkitetyn noston valosta; ilman sitä "Muut".
+//      joilla on juttu tai wiki. Aihe on kohteen oma (skeema 1.24 kohteet[].aihe = linkkien aihe); vanhassa
+//      paketissa linkitetyn noston valosta; ilman sitä "Muut". Web v2154 (siirretynAihe + hetkiKohdetieto):
+//      kohdekartan hetket eivät ole "Muut"-kasassa; miniatyyrilliset (22 hetkeä) jäävät kartalle, ja
+//      ainoa siirretty hetki (New York, Brooklyn 1883) saa aiheen hetket linkistään.
 // Kategoria = karttaselitteen aihe (nimi NostoMerkit.Jarjestys Koko = web aiheenNimi, väri web
 // karttavaloVari --sym-*). Tuntematon tai puuttuva aihe → "Muut", aina listan lopussa. Järjestys on
 // ensiesiintymän järjestys (web ladontaNro; natiivissa valon tärkeys, sitten paketin järjestys).
@@ -73,14 +79,20 @@ namespace Matkakirja.Natiivi
 
         sealed class Valo
         {
-            public string Id, Aihe, Nimi, Maa;
+            public string Id, Aihe, Nimi, Maa, Tunnus;
+            /// <summary>Noston oma paikkanimi (web paikkaNimi), vain kun paikkaLahde = data; muuten null.</summary>
+            public string Paikka;
             public double Lat, Lon;
             public int Tarkeys, Jarjestys;
             public bool LaudanKaupunki;
+            /// <summary>Skeema 1.24 paakartalla (null = vanha paketti ilman kenttää).</summary>
+            public bool? Paakartalla;
         }
 
         static List<Valo> valot;
         static Dictionary<string, Valo> valotIdlla;
+        /// <summary>Webin noston tunnus → valon id (skeema 1.24 tunnus; ensimmäinen, jos sama kohde on usean maan valona).</summary>
+        static Dictionary<string, string> valotTunnuksella;
         static bool haussa;
         static readonly List<Action> odottajat = new List<Action>();
         static readonly Dictionary<string, List<NostoKategoria>> muisti = new Dictionary<string, List<NostoKategoria>>();
@@ -109,6 +121,7 @@ namespace Matkakirja.Natiivi
             var ulos = new List<KaupunkiNosto>();
             if (k == null) return ulos;
             var linkitetyt = LinkitetytValot();
+            string kaupunginNimi = NimiAvain(k.Nimi);
             if (valot != null && !double.IsNaN(k.Lat) && !double.IsNaN(k.Lon))
             {
                 double latRaja = SadeKm / 111.2;
@@ -117,12 +130,16 @@ namespace Matkakirja.Natiivi
                 foreach (var v in valot)
                 {
                     if (v.LaudanKaupunki) continue;
+                    // Vain pääkartan nostot (web liuskanLahde = nostokerroksen rivit).
+                    if (v.Paakartalla == false) continue;
+                    if (v.Paakartalla == null && linkitetyt.Contains(v.Id) && !LahizoomiinMaat.Contains(v.Maa ?? "")) continue;
+                    // Datan oma polku: paikkanimi on kaupungin nimi (web luoSisaisyysTesti).
+                    if (kaupunginNimi.Length > 0 && NimiAvain(v.Paikka) == kaupunginNimi) { kartalta.Add(v); continue; }
                     if (Math.Abs(v.Lat - k.Lat) > latRaja) continue;
                     double dLon = Math.Abs(v.Lon - k.Lon);
                     if (dLon > 180) dLon = 360 - dLon;
                     if (dLon > lonRaja) continue;
                     if (EtaisyysKm(k.Lat, k.Lon, v.Lat, v.Lon) > SadeKm) continue;
-                    if (linkitetyt.Contains(v.Id) && !LahizoomiinMaat.Contains(v.Maa ?? "")) continue;
                     kartalta.Add(v);
                 }
                 foreach (var v in kartalta.OrderByDescending(x => x.Tarkeys).ThenBy(x => x.Jarjestys))
@@ -138,9 +155,16 @@ namespace Matkakirja.Natiivi
             return ulos;
         }
 
-        /// <summary>Siirretyn kohteen aihe linkitetyn noston valosta; skandaali-/hetki-tunnus lajistaan.</summary>
+        /// <summary>Web nimiAvain: iso/pieni kirjain ja reunavälit eivät eroa.</summary>
+        static string NimiAvain(string s) => string.IsNullOrEmpty(s) ? "" : s.Trim().ToLowerInvariant();
+
+        /// <summary>
+        /// Siirretyn kohteen aihe: kohteen oma (skeema 1.24, linkkien aihe), vanhassa paketissa
+        /// linkitetyn noston valosta; skandaali-/hetki-tunnus lajistaan.
+        /// </summary>
         static string SiirretynAihe(KohdekarttaKohde kohde)
         {
+            if (!string.IsNullOrEmpty(kohde.Aihe)) return kohde.Aihe;
             foreach (var n in kohde.Nostot)
                 if (valotIdlla != null && valotIdlla.TryGetValue(ValoLinkista(n), out var v) && !string.IsNullOrEmpty(v.Aihe)) return v.Aihe;
             string eka = kohde.Nostot.Count > 0 ? kohde.Nostot[0] : null;
@@ -151,12 +175,16 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>
-        /// Kohdekartan nostolinkki → karttavalon id: "skandaali-x" → "skandaali:x", "hetki-x" → "hetki:x",
-        /// muut kohteita ("bastilji" → "kohde:bastilji").
+        /// Kohdekartan nostolinkki → karttavalon id: valon tunnus-kentästä (skeema 1.24), muuten muodosta
+        /// "skandaali-x" → "skandaali:x", "hetki-x" → "hetki:x", "syvennys-k-t" → "syvennys:k-t",
+        /// "nosto-x" → "nosto:x", muut kohteita ("bastilji" → "kohde:bastilji").
         /// </summary>
         static string ValoLinkista(string linkki)
         {
+            if (valotTunnuksella != null && valotTunnuksella.TryGetValue(linkki, out var id)) return id;
             if (linkki.StartsWith("skandaali-", StringComparison.Ordinal)) return "skandaali:" + linkki.Substring(10);
+            if (linkki.StartsWith("syvennys-", StringComparison.Ordinal)) return "syvennys:" + linkki.Substring(9);
+            if (linkki.StartsWith("nosto-", StringComparison.Ordinal)) return "nosto:" + linkki.Substring(6);
             if (linkki.StartsWith("hetki-", StringComparison.Ordinal)) return "hetki:" + linkki.Substring(6);
             return "kohde:" + linkki;
         }
@@ -238,13 +266,18 @@ namespace Matkakirja.Natiivi
             while (!tehtava.IsCompleted) yield return null;
             valot = tulos ?? new List<Valo>();
             valotIdlla = new Dictionary<string, Valo>();
-            foreach (var v in valot) valotIdlla[v.Id] = v;
+            valotTunnuksella = new Dictionary<string, string>();
+            foreach (var v in valot)
+            {
+                valotIdlla[v.Id] = v;
+                if (v.Tunnus != null && !valotTunnuksella.ContainsKey(v.Tunnus)) valotTunnuksella[v.Tunnus] = v.Id;
+            }
             haussa = false;
             var kutsut = odottajat.ToArray();
             odottajat.Clear();
             foreach (var k in kutsut) { try { k(); } catch (Exception e) { Debug.LogException(e); } }
             // Tyhjä lataus (verkko poikki): seuraava haku yrittää uudelleen.
-            if (valot.Count == 0) { valot = null; valotIdlla = null; }
+            if (valot.Count == 0) { valot = null; valotIdlla = null; valotTunnuksella = null; }
         }
 
         static List<Valo> Jasenna(string json)
@@ -261,8 +294,11 @@ namespace Matkakirja.Natiivi
                 l.Add(new Valo
                 {
                     Id = id, Aihe = MiniJson.Teksti(o, "aihe"), Nimi = MiniJson.Teksti(o, "nimi"), Maa = MiniJson.Teksti(o, "maa"),
+                    Tunnus = MiniJson.Teksti(o, "tunnus"),
+                    Paikka = MiniJson.Teksti(o, "paikkaLahde") == "data" ? MiniJson.Teksti(o, "paikka") : null,
                     Lat = lat, Lon = lon, Tarkeys = (int)(MiniJson.Luku(o, "tarkeys") ?? 0), Jarjestys = i++,
                     LaudanKaupunki = MiniJson.Kentta(o, "kaupunki") != null,
+                    Paakartalla = MiniJson.Kentta(o, "paakartalla") is bool pk ? pk : (bool?)null,
                 });
             }
             return l;

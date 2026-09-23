@@ -13,7 +13,12 @@
 //                                       fokuskaupunki = virran merkintä (otsikko
 //                                       heti, teksti luennan alkaessa; ilman
 //                                       luentoa suoraan ja Livia perään), muu
-//                                       kaupunki = saapumisteksti tai -havainto.
+//                                       kaupunki = saapumisteksti tai -havainto
+//                                       (kokoelma saapumistekstit): äänite soi
+//                                       sekunnin kuluttua, jos se vastaa tekstiä
+//                                       (nyt Kairo), muuten web lukee lukija-tekstin
+//                                       puhesynteesillä (Puhe.Lue); vain Kertoja
+//                                       päällä ja kerran peräkkäin (web luettuSaapuminen).
 //                                       Reitin varrella (null) kortti EI vaihdu
 //                                       (omistajan päätös); tyhjään korttiin tulee
 //                                       paikkatieto "Matkalla — X".
@@ -24,6 +29,11 @@
 //                                       lähtökaupungissa; reitillä arvottu tieto).
 //   aloitusnäkymä                      → kortti piiloon ja tyhjäksi (web pickstart).
 // Intro ja lento-alku (kaupunki null) eivät avaa korttia.
+//
+// Livian saapumisrepliikit (kokoelma liviansaapumiset, web LIVIAN_SAAPUMISET): webissä
+// fokusmoodissa pollo.kommentti voittaa taulun, ja kaikki 10 riviä ovat fokuskaupunkeja,
+// joilla kommentti on; kaupungeilla ilman fokusvirtaa rivejä ei ole. Natiivi on aina
+// fokusmoodissa (LehtiTila.Fokusmoodi), joten taulu ei tuo tähän yhtään kuplaa.
 using System;
 using System.Collections.Generic;
 using Matkakirja.Peli;
@@ -50,6 +60,9 @@ namespace Matkakirja.Natiivi
         readonly HashSet<string> luentoAlkanut = new HashSet<string>();
         // Web fokusaarreMerkinta / fokusaarreOdottaa / fokusaarreKerrottu.
         string aarreLippu;
+        /// <summary>Web luettuSaapuminen: viimeksi luettu saapumismerkintä (sama ei ala uudelleen peräkkäin).</summary>
+        string luettuSaapuminen;
+        bool kertojaOli;
         readonly HashSet<string> aarreOdottaa = new HashSet<string>();
         readonly HashSet<string> aarreKerrottu = new HashSet<string>();
 
@@ -70,6 +83,18 @@ namespace Matkakirja.Natiivi
             o.MatkaPerilla += Perilla;
             o.TilaMuuttui += TarkistaAarre;
             Ajastin.Execute(Tarkkaile).Every(300);
+            // Kaiutin (Kertoja-kytkin) päälle saapumistekstin kortissa: äänite alkaa (web kaiutinnappi
+            // aloittaa merkinnän luennan). Vain äänitteelliselle merkinnälle, jolla kaiutin näkyy.
+            kertojaOli = Asetukset.Paalla(Kytkin.Kertoja);
+            Asetukset.Muuttui += _ =>
+            {
+                bool paalla = Asetukset.Paalla(Kytkin.Kertoja);
+                bool paalle = paalla && !kertojaOli;
+                kertojaOli = paalla;
+                var m = kortti.Merkinta;
+                if (paalle && kortti.Nakyy && m?.AaniUrl != null && m.Kaiutin && !Aanet.KertojaPuhuu)
+                    Puhe.Hae().Soita(m.AaniUrl);
+            };
             // Kortti avattiin kesken luennon (esim. UI syntyi myöhemmin).
             if (o.SoivaLuento != null) Alkoi(o.SoivaLuento.Kaupunki);
         }
@@ -150,7 +175,7 @@ namespace Matkakirja.Natiivi
                 // Sama merkintä jo kortissa (web factKey): ei kirjoiteta uudelleen.
                 if (kortti.Avain == m.Avain && kortti.Nakyy) return;
                 luentoOdotus?.Pause();
-                if (!fokus) { kortti.Nayta(m); return; }
+                if (!fokus) { kortti.Nayta(m); LueSaapuminen(m); return; }
                 // Fokusmerkintä odottaa luentoa (web aloitaMerkinta): otsikko heti, teksti luennan alkaessa.
                 kaupunki = k;
                 bool luentoTulossa = ohjain?.Luennat?.Luento(k) != null && !luentoAlkanut.Contains(k)
@@ -159,6 +184,25 @@ namespace Matkakirja.Natiivi
                 if (!luentoTulossa) { KirjoitaIlmanLuentoa(k); return; }
                 luentoOdotus = Ajastin.Execute(() => KirjoitaIlmanLuentoa(k)).StartingIn(LuentoOdotusMs);
             });
+        }
+
+        /// <summary>
+        /// Web renderFact saapumishaarat: äänite (playDiaryVoice) tai puhesynteesi (lueMerkinta,
+        /// persoona "merkinnat") sekunnin hengähdyksen jälkeen, jos kortissa on yhä sama merkintä.
+        /// Kertoja pois = ei luentaa. Sama merkintä uudelleen peräkkäin ei aloita alusta.
+        /// </summary>
+        void LueSaapuminen(Merkinta m)
+        {
+            if (m.AaniUrl == null && m.Lukija == null) return;
+            if (luettuSaapuminen == m.Avain) return;
+            luettuSaapuminen = m.Avain;
+            if (!Asetukset.Paalla(Kytkin.Kertoja)) return;
+            Ajastin.Execute(() =>
+            {
+                if (kortti.Avain != m.Avain || !Asetukset.Paalla(Kytkin.Kertoja)) return;
+                if (m.AaniUrl != null) Puhe.Hae().Soita(m.AaniUrl);
+                else Puhe.Hae().Lue(m.Lukija);
+            }).StartingIn(1000);
         }
 
         /// <summary>Fokusmerkintä ilman luentoa (kuultu jo, kertoja pois): kirjoitus, sitten Livian vuoro (web fokusvirtaMerkintaLuettu).</summary>
@@ -308,7 +352,9 @@ namespace Matkakirja.Natiivi
                 luentoOdotus?.Pause();
                 kortti.Nayta(m);
                 tulos(m.Laji + " · " + m.Otsikko + " · " + m.Paikkarivi + (m.Wiki != null ? " · kuva: " + m.Wiki : "")
-                      + (m.Lahteet.Count > 0 ? " · lähde: " + string.Join(", ", m.Lahteet) : ""));
+                      + (m.Lahteet.Count > 0 ? " · lähde: " + string.Join(", ", m.Lahteet) : "")
+                      + (m.Valokuvat.Count > 0 ? " · valokuvia " + m.Valokuvat.Count : "")
+                      + (m.AaniUrl != null ? " · äänite: " + m.AaniUrl : m.Lukija != null ? " · lukija " + m.Lukija.Length + " merkkiä" : ""));
             });
         }
     }

@@ -19,22 +19,30 @@
 //   ui lehti fokus [kaupunki] [juliste]       kaupunkilehti fokustehtävän sivulla (oletus ateena; AARTEEN AVAUS,
 //                                             juliste = JULISTE-tehtävä); vastaus ja pulla kirjataan, jos peli on käynnissä
 //   ui lehti fokus-vastaa n | fokus-pulla     napauttaa fokustehtävän vaihtoehtoa n (0–) / pullanappia (2× = osto)
-//   ui nosto <valoId> [nappi]                 nostokortti: skandaali:<id> | hetki:<id> | elaintaky:<ISO> | kohde:<id>[@ISO]
-//                                             | takynosto:<id>[@kaupunki] (esim. areena, schliemann, maailmannayttely-1873)
-//                                             | syvennys:<kaupunki>-<täky> (esim. ateena-nike); nappi painetaan
+//   ui nosto <valoId> [nappi]                 nostokortti karttavalon id:llä (kokoelma karttavalot, skeema 1.24):
+//                                             skandaali:<id> | hetki:<id> | elaintaky:<ISO> | kohde:<id>[@ISO]
+//                                             (napakohde: kohde:ata-etelanapa-asema, kohde:ark-pohjoisnapa)
+//                                             | nosto:<id> (täkynosto tai maalehtinosto, kokoelma takynostot:
+//                                             nosto:sofia-korut, nosto:maalehti-peilisali) | takynosto:<id>[@kaupunki]
+//                                             (esim. areena, schliemann, maailmannayttely-1873)
+//                                             | syvennys:<kaupunki>-<täky> (esim. wien-sahko, ateena-nike); lokiin
+//                                             laji · luokka · otsikko (· leikekirja · kartalla); nappi painetaan
 //                                             latauksen jälkeen: lisaa | ihme | leikekirja | kartalla | liite |
 //                                             valokuva | vastaa<n> (0–) | juliste | kysy<n>
 //                                             (lisäkaupunki: kohde:nakyva-kaupunki-lyon → lisäkaupungin kortti)
 //   ui nostonappi <nappi>                     painaa auki olevan nostokortin nappia (esim. vastaa0, sitten juliste)
 //   ui ihme [kohde[@ISO]]                     kohdekortti ja "Koe ihme" -suurennos (oletus akropolis@GRC;
 //                                             kadonnut ihme on kortin ensimmäinen kuva nauhoineen: ui nosto kohde:crystal-palace@GBR)
-//   ui leikekirja [kohde[@ISO]]               kohdekortti ja sen "Livian leikekirja" (oletus troija@TUR)
+//   ui leikekirja [kohde[@ISO]]               kohdekortti ja sen "Livian leikekirja" (oletus troija@TUR; Kreikka:
+//                                             delfoi@GRC, olympos@GRC, antikythera@GRC). Pelissä pooli on pelaajan
+//                                             kaupungin (web nostoPooli), ilman peliä kohteen maan täkynosto
+//   ui pooli <kaupunki>                       kaupungin täkypooli lokiin (web nostoKaupunginPooli: oma virta tai
+//                                             kokoelma takynostot.kaupungit), esim. ui pooli ateena
 //   ui lisakaupunki [nimi]                    lisäkaupungin kortti (oletus lyon = kohde:nakyva-kaupunki-lyon)
 //   ui kaupunki <id> [nostot [aihe|n] | kohde n | alas | ylos]  kaupunkikortti ilman peliä (kuten ui kortti) ja
 //                                             nostokategoriat haitarina: nostot = avaa aiheen (tai n:nnen,
 //                                             oletus ensimmäinen) ja kirjaa kategoriat lokiin; kohde n = avatun
 //                                             kategorian n:s rivi (kortti kiinni, nosto auki); alas/ylos = kelausrivi
-//   ui turistiinfo [kaupunki]                 turisti-info-merkin napautus (UiPalvelut.IlmoitaTuristiInfo, oletus lontoo)
 //   ui huipennus                              matkan huipennus (kaikki aarteet) esimerkkiluvuin
 //   ui paljastus [tyyppi] [kaupunki] [kaari]  aarteen paljastus koko ruudulle ilman peliä ja ääniä (Paljastus.Testaa):
 //                                             star (oletus) | isoAarre | pieniAarre | mannerAarre | pollo | piirros;
@@ -86,7 +94,9 @@
 //                                             fokus (virran merkintä) | aarre (aarremerkintä) | saapuminen (pakin
 //                                             kuvaus + nosto) | kaari (tarinakaaren saapuminen) | havainto (isoisän
 //                                             paikkatieto, "Katso kuva") | satunnainen | reitti ("Matkalla — X", lähderivi);
-//                                             ilman lajia kuten saapuessa. Esim. tanger havainto, bergen reitti, ateena aarre
+//                                             ilman lajia kuten saapuessa. Esim. tanger havainto, bergen reitti, ateena aarre.
+//                                             Saapumistekstit (skeema 1.24): lokiin valokuvien määrä ja äänite (kairo)
+//                                             tai lukijan pituus; esim. kairo, fes (havainto kokoelmasta)
 //   ui kartuscha [ISO3] [auki]                kartuscha maalle ilman peliä (oletus ITA)
 //   ui heitto [teksti]                        kartan toimintonappi näkyviin
 //   ui viesti teksti                          tilarivin hetkellinen viesti
@@ -426,7 +436,13 @@ namespace Matkakirja.Natiivi
                 {
                     var no = loput.Split(new[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries);
                     string valo = no.Length > 0 ? no[0] : "skandaali:shakkiturkkilainen";
-                    ui.Nostokortti.Testaa(valo, no.Length > 1 ? no[1] : null, v => Kirjaa("ui nosto " + valo + ": " + (v ?? "auki")));
+                    ui.Nostokortti.Testaa(valo, no.Length > 1 ? no[1] : null, v => Kirjaa("ui nosto " + valo + ": " + (v ?? "auki · " + ui.Nostokortti.Kuvaus)));
+                    return null;
+                }
+                case "pooli":
+                {
+                    string pk = loput.Trim().Length > 0 ? loput.Trim().ToLowerInvariant() : "ateena";
+                    UiKerros.Hae().StartCoroutine(NostoSisalto.Pooli(pk, l => Kirjaa("ui pooli " + pk + ": " + l.Count + (l.Count > 0 ? " · " + string.Join(", ", l) : ""))));
                     return null;
                 }
                 case "nostonappi":
@@ -441,19 +457,12 @@ namespace Matkakirja.Natiivi
                     string kohde = loput.Trim().Length > 0 ? loput.Trim() : osat[1] == "ihme" ? "akropolis@GRC" : "troija@TUR";
                     string valo = kohde.StartsWith("kohde:") ? kohde : "kohde:" + kohde;
                     string nappi = osat[1].ToLowerInvariant();
-                    ui.Nostokortti.Testaa(valo, nappi, v => Kirjaa("ui " + nappi + " " + kohde + ": " + (v ?? "ok")));
+                    ui.Nostokortti.Testaa(valo, nappi, v => Kirjaa("ui " + nappi + " " + kohde + ": " + (v ?? "ok · " + ui.Nostokortti.Kuvaus)));
                     return null;
                 }
                 case "lisakaupunki":
                     ui.Nostokortti.Avaa("kohde:nakyva-kaupunki-" + (loput.Length > 0 ? loput.ToLowerInvariant() : "lyon"));
                     return null;
-                case "turistiinfo":
-                {
-                    string tk = loput.Length > 0 ? loput : "lontoo";
-                    UiPalvelut.OnkoTuristiInfo(tk, on => Kirjaa("turisti-info " + tk + ": " + (on ? "on" : "ei opasta")));
-                    UiPalvelut.IlmoitaTuristiInfo(tk);
-                    return null;
-                }
                 case "kaupunki": return Kaupunki(ui, loput);
                 case "paljastus":
                     return ui.Paljastus.Testaa(loput);

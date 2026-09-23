@@ -5,11 +5,19 @@
 //   "elaintaky:<ISO>"  kokoelma elaintayt        (elain, otsikko, teksti, kuva | kuvat[url])
 //   "kohde:<id>[~n]"   moduulit fokuskohteet-/maastokohteet-/hahmotelma-<iso> (maa karttavaloista;
 //                      testeissä "kohde:<id>@ISO"); kentästä ihme "Koe ihme" / kadonneen ihmeen kuva
-//                      ensimmäiseksi, ja "Livian leikekirja", jos jokin maan täkynosto nimeää kohteen
-//   "takynosto:<id>[@kaupunki]"  kokoelma fokusvirrat → virta.takynostot (web js/fokusnosto.js; myös
-//                      "nosto:<id>" ja webin merkkitunnus "nosto-<id>")
+//                      ensimmäiseksi, ja "Livian leikekirja", jos pelaajan kaupungin täkypooli nimeää
+//                      kohteen (web nostoKohteelle). Napakohteet (lahde napakohde, web napanostonRivi →
+//                      avaaFokuskohde): sama kohdekortti moduulista maastokohteet-ata/-ark; arktisen
+//                      valon maa on tyhjä, joten maa luetaan tunnuksen etuliitteestä ("ark-…" → ARK).
+//   "nosto:<id>"       karttavalon täkynosto ja maalehtinosto (skeema 1.24, lahde takynosto |
+//                      maalehtinosto): kokoelma takynostot (web NOSTO_MAAT); web avaaNosto →
+//                      avaaNostonKortti, eli maalehtinostokin avaa noston kortin eikä maalehteä.
+//   "takynosto:<id>[@kaupunki]"  sama; kokoelma takynostot ensin, vara fokusvirrat → virta.takynostot
+//                      (kaupungin oma pooli, esim. Sevilla ja Edinburgh; myös webin merkkitunnus "nosto-<id>")
 //   "syvennys:<kaupunki>-<täky>" kokoelma fokusvirrat → virta.takyt + moduuli syvennyspaikat
 //                      (web js/syvennys.js; myös "syvennys:<kaupunki>:<täky>" ja "syvennys-<kaupunki>-<täky>")
+// Täkypooli (web nostoKaupunginPooli): kaupungin oma virta.takynostot voittaa, muuten maan NOSTO_MAAT;
+// kokoelman takynostot kenttä kaupungit kertoo valmiiksi, minkä kaupunkien pooliin nosto kuuluu (Pooli).
 // Täkynoston "Katso X kartalla" lukee kohteen nimen ja paikan karttavaloista (kohde:<id>).
 // Lisäkaupunki (web js/kaupunkinosto.js latoLisakaupunginKortti, PAATOKSET 16): aiheen "kaupungit"
 // kohdevalo, jonka kohde on moduulissa nakyvat-kaupungit-<iso> lipulla kaupunkikortti →
@@ -106,9 +114,16 @@ namespace Matkakirja.Natiivi
         static readonly Dictionary<string, Dictionary<string, Dictionary<string, object>>> kokoelmat =
             new Dictionary<string, Dictionary<string, Dictionary<string, object>>>();
         static readonly Dictionary<string, object> moduulit = new Dictionary<string, object>();
-        /// <summary>Karttavalot id:n mukaan: maa, aihe, nimi ja paikka (kohdekortin maa, lisäkaupungin aihe,
-        /// täkynoston "Katso X kartalla").</summary>
-        static Dictionary<string, (string Maa, string Aihe, string Nimi, double Lat, double Lon)> valot;
+        /// <summary>Karttavalo (kokoelma karttavalot): kohdekortin maa, lisäkaupungin aihe, täkynoston
+        /// "Katso X kartalla" ja napakohteen laji.</summary>
+        sealed class Valo
+        {
+            public string Maa, Aihe, Nimi, Lahde;
+            public double Lat, Lon;
+        }
+
+        /// <summary>Karttavalot id:n mukaan.</summary>
+        static Dictionary<string, Valo> valot;
         static Dictionary<string, string> media;
         static bool mediaHaussa;
         static readonly List<Action> mediaOdottajat = new List<Action>();
@@ -156,7 +171,12 @@ namespace Matkakirja.Natiivi
                     if (iso == null)
                     {
                         yield return ValojenMaat();
-                        if (valot.TryGetValue("kohde:" + tunnus, out var valo)) iso = valo.Maa;
+                        valot.TryGetValue("kohde:" + tunnus, out var valo);
+                        iso = valo?.Maa;
+                        // Arktiksen napakohteella ei ole maata (kokoelma maat): moduuli maastokohteet-ark
+                        // tunnuksen etuliitteestä ("ark-pohjoisnapa").
+                        if (iso == null && (valo == null || valo.Lahde == "napakohde") && tunnus.Length > 4 && tunnus[3] == '-')
+                            iso = tunnus.Substring(0, 3);
                     }
                     int tilde = tunnus.IndexOf('~');
                     if (tilde > 0) tunnus = tunnus.Substring(0, tilde);
@@ -180,17 +200,32 @@ namespace Matkakirja.Natiivi
                     if (at > 0) { kaupunki = tunnus.Substring(at + 1).ToLowerInvariant(); tunnus = tunnus.Substring(0, at); }
                     yield return Odota(Fokusvirrat.Lataa);
                     yield return Odota(UiSisalto.Lataa);
+                    // Skeema 1.24: kokoelma takynostot (web NOSTO_MAAT, myös maalehtinostot) ensin.
                     Dictionary<string, object> d = null;
-                    foreach (var v in Fokusvirrat.Kaikki)
+                    string iso = null;
+                    yield return Alkio("takynostot", tunnus, (x, m) => { d = x; iso = m; });
+                    if (d != null)
                     {
-                        if (kaupunki != null && v.Kaupunki != kaupunki) continue;
-                        d = v.Takynostot?.Select(Ob).FirstOrDefault(x => x != null && T(x, "id") == tunnus);
-                        if (d != null) { kaupunki = v.Kaupunki; break; }
+                        var kaupungit = Kaupungit(d);
+                        if (kaupunki == null || !kaupungit.Contains(kaupunki))
+                            kaupunki = kaupungit.Contains(PeliOhjain.Instanssi?.PelaajanKaupunki ?? "")
+                                ? PeliOhjain.Instanssi.PelaajanKaupunki : kaupungit.FirstOrDefault() ?? kaupunki;
                     }
-                    if (d == null) break;
+                    else
+                    {
+                        // Vara: kaupungin oma pooli fokusvirrasta (vanha paketti; Sevilla, Edinburgh).
+                        foreach (var v in Fokusvirrat.Kaikki)
+                        {
+                            if (kaupunki != null && v.Kaupunki != kaupunki) continue;
+                            d = v.Takynostot?.Select(Ob).FirstOrDefault(x => x != null && T(x, "id") == tunnus);
+                            if (d != null) { kaupunki = v.Kaupunki; break; }
+                        }
+                        if (d == null) break;
+                        iso = UiSisalto.Kaupunki(kaupunki)?.Maa;
+                    }
                     Dictionary<string, object> luokat = null;
                     yield return ModuuliArvo("moduulit/js/fokusnosto-symbolit.json", "NOSTOSYM_LUOKAT", x => luokat = Ob(x));
-                    n = Takynosto(tunnus, kaupunki, UiSisalto.Kaupunki(kaupunki)?.Maa, d, luokat);
+                    n = Takynosto(tunnus, kaupunki, iso ?? UiSisalto.Kaupunki(kaupunki)?.Maa, d, luokat);
                     if (n.KohdeId != null)
                     {
                         yield return ValojenMaat();
@@ -228,13 +263,14 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>
-        /// Webin merkkitunnukset ("nosto-<id>", "syvennys-<kaupunki>-<täky>") ja lyhyt "nosto:" natiivin
-        /// valo-id:iksi. Karttavaloissa ei vielä ole täkynostoja eikä syvennyksiä (Siirtoseppä).
+        /// Webin merkkitunnukset ("nosto-<id>", "syvennys-<kaupunki>-<täky>") ja karttavalon "nosto:<id>"
+        /// natiivin valo-id:iksi (takynosto:, syvennys:).
         /// </summary>
         static string Normalisoi(string valoId)
         {
             if (string.IsNullOrEmpty(valoId)) return valoId;
             if (valoId.StartsWith("nosto-")) return "takynosto:" + valoId.Substring(6);
+            // Skeema 1.24: karttavalon täkynosto ja maalehtinosto ("nosto:sofia-korut", "nosto:maalehti-peilisali").
             if (valoId.StartsWith("nosto:")) return "takynosto:" + valoId.Substring(6);
             if (valoId.StartsWith("syvennys-")) return "syvennys:" + valoId.Substring(9);
             return valoId;
@@ -249,17 +285,43 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>
-        /// Web piirraKohteenNosto: täkynosto, jonka kohde on tämä kohde, avautuu kohdekortin "Livian
-        /// leikekirja" -napista. Pooli on kohteen maan kaupunkien täkynostot (webin NOSTO_MAAT-taulua ei
-        /// ole paketissa, joten maa luetaan kaupungin tiedoista).
+        /// Web piirraKohteenNosto + nostoKohteelle: täkynosto, jonka kohde on tämä kohde, avautuu kohdekortin
+        /// "Livian leikekirja" -napista. Pooli on pelaajan kaupungin täkypooli (web nostoPooli: reitillä
+        /// tyhjä); kokoelman takynostot kenttä kaupungit kertoo jäsenyyden (Kreikka: Delfoin Kastrin kylä,
+        /// Olympoksen huippu ja Antikytheran kone Ateenassa ja Kreetalla). Ilman peliä (testikomento)
+        /// kelpaa kohteen maan nosto. Vara vanhalle paketille: fokusvirtojen takynostot maan mukaan.
         /// </summary>
         static IEnumerator Leikekirja(Nosto n)
         {
+            var ohjain = PeliOhjain.Instanssi;
+            bool peli = ohjain?.Matka != null;
+            string oma = peli ? ohjain.PelaajanKaupunki : null;
+            if (peli && oma == null) yield break;
             yield return Odota(Fokusvirrat.Lataa);
             yield return Odota(UiSisalto.Lataa);
+            // Kaupungin oma pooli voittaa (web nostoKaupunginPooli): sen nostot ovat fokusvirrassa.
+            var omaVirta = oma != null ? Fokusvirrat.Hae(oma)?.Takynostot : null;
+            if (omaVirta == null || omaVirta.Count == 0)
+            {
+                yield return LataaKokoelma("takynostot");
+                if (kokoelmat.TryGetValue("takynostot", out var taulu) && taulu.Count > 0)
+                {
+                    foreach (var d in taulu.Values)
+                    {
+                        if (T(d, "kohde") != n.Id || T(d, "otsikko") == null) continue;
+                        var kaupungit = Kaupungit(d);
+                        if (oma != null ? !kaupungit.Contains(oma) : T(d, "$maa") != n.Iso) continue;
+                        n.LeikekirjaOtsikko = T(d, "otsikko");
+                        n.LeikekirjaValo = "takynosto:" + T(d, "id") + ((oma ?? kaupungit.FirstOrDefault()) is string k ? "@" + k : "");
+                        yield break;
+                    }
+                    yield break;
+                }
+            }
             foreach (var v in Fokusvirrat.Kaikki)
             {
-                if (v.Takynostot == null || UiSisalto.Kaupunki(v.Kaupunki)?.Maa != n.Iso) continue;
+                if (v.Takynostot == null) continue;
+                if (oma != null ? v.Kaupunki != oma : UiSisalto.Kaupunki(v.Kaupunki)?.Maa != n.Iso) continue;
                 var d = v.Takynostot.Select(Ob).FirstOrDefault(x => x != null && T(x, "kohde") == n.Id && T(x, "otsikko") != null);
                 if (d == null) continue;
                 n.LeikekirjaOtsikko = T(d, "otsikko");
@@ -268,7 +330,40 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        /// <summary>Täkynoston kaupungit (kokoelma takynostot: poolin jäsenyys), tyhjä ilman kenttää.</summary>
+        static List<string> Kaupungit(Dictionary<string, object> d) =>
+            (MiniJson.Kentta(d, "kaupungit") as List<object>)?.OfType<string>().ToList() ?? new List<string>();
+
+        /// <summary>
+        /// Kaupungin täkypooli (web nostoKaupunginPooli): valo-id:t "takynosto:&lt;id&gt;@kaupunki". Kaupungin
+        /// oma virta.takynostot voittaa, muuten kokoelman takynostot, joiden kaupungit sisältää kaupungin.
+        /// </summary>
+        public static IEnumerator Pooli(string kaupunki, Action<List<string>> valmis)
+        {
+            var tulos = new List<string>();
+            yield return Odota(Fokusvirrat.Lataa);
+            var omat = Fokusvirrat.Hae(kaupunki)?.Takynostot;
+            if (omat != null && omat.Count > 0)
+                tulos.AddRange(omat.Select(Ob).Where(x => T(x, "id") != null).Select(x => "takynosto:" + T(x, "id") + "@" + kaupunki));
+            else
+            {
+                yield return LataaKokoelma("takynostot");
+                if (kokoelmat.TryGetValue("takynostot", out var taulu))
+                    foreach (var d in taulu.Values)
+                        if (Kaupungit(d).Contains(kaupunki)) tulos.Add("takynosto:" + T(d, "id") + "@" + kaupunki);
+            }
+            valmis(tulos);
+        }
+
         static IEnumerator Alkio(string kokoelma, string id, Action<Dictionary<string, object>, string> valmis)
+        {
+            yield return LataaKokoelma(kokoelma);
+            kokoelmat[kokoelma].TryGetValue(id, out var d);
+            valmis(d, d != null ? T(d, "$maa") : null);
+        }
+
+        /// <summary>Kokoelma kerran muistiin (id → data; maa talteen kenttään $maa).</summary>
+        static IEnumerator LataaKokoelma(string kokoelma)
         {
             if (!kokoelmat.TryGetValue(kokoelma, out var taulu))
             {
@@ -295,8 +390,6 @@ namespace Matkakirja.Natiivi
                 catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui nostot: " + kokoelma + ": " + e.Message); }
                 kokoelmat[kokoelma] = taulu;
             }
-            taulu.TryGetValue(id, out var d);
-            valmis(d, d != null ? T(d, "$maa") : null);
         }
 
         static IEnumerator ValojenMaat()
@@ -304,12 +397,16 @@ namespace Matkakirja.Natiivi
             if (valot != null) yield break;
             string teksti = null;
             yield return Sisalto.HaeTeksti("karttavalot", t => teksti = t, valinnainen: true);
-            var m = new Dictionary<string, (string, string, string, double, double)>();
+            var m = new Dictionary<string, Valo>();
             try
             {
                 foreach (var a in MiniJson.Kentta(Ob(MiniJson.Jasenna(teksti ?? "{}")), "alkiot") as List<object> ?? new List<object>())
                     if (Ob(a) is Dictionary<string, object> o && T(o, "id") is string id)
-                        m[id] = (T(o, "maa"), T(o, "aihe"), T(o, "nimi"), MiniJson.Luku(o, "lat") ?? double.NaN, MiniJson.Luku(o, "lon") ?? double.NaN);
+                        m[id] = new Valo
+                        {
+                            Maa = T(o, "maa"), Aihe = T(o, "aihe"), Nimi = T(o, "nimi"), Lahde = T(o, "lahde"),
+                            Lat = MiniJson.Luku(o, "lat") ?? double.NaN, Lon = MiniJson.Luku(o, "lon") ?? double.NaN,
+                        };
             }
             catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui nostot: karttavalot: " + e.Message); }
             valot = m;
@@ -541,14 +638,16 @@ namespace Matkakirja.Natiivi
             var n = new Nosto
             {
                 Laji = NostoLaji.Takynosto, Id = id, Iso = iso, Kaupunki = kaupunki,
-                Luokka = Ylarivi(T(d, "symboli"), luokat),
+                Luokka = Ylarivi(T(d, "symboli") ?? T(d, "kategoria"), luokat),
                 Otsikko = T(d, "otsikko"), Teksti = teksti, Looppi = looppi,
                 Meta = looppi ? T(d, "paivays") ?? Liita(T(Ob(MiniJson.Kentta(d, "paikka")), "nimi"), T(d, "vuosi")) : null,
                 Ingressi = looppi ? T(d, "ingressi") : null,
                 VisaKaupunki = "nosto", VisaAihe = id, VisaPalkkio = 25,
                 VisaRahaSyy = "Lukijan kysymys ratkesi", VisaNostotehtava = true,
                 KohdeId = T(d, "kohde"),
-                Aani = T(d, "aani"), MusiikkiNayte = T(d, "musiikkiNayte"), MusiikkiNayteNimi = T(d, "musiikkiNayteNimi"),
+                // Fokusvirrassa osoitteet ovat merkkijonoja, kokoelmassa takynostot olioita {url, nimi, …}.
+                Aani = Osoite(MiniJson.Kentta(d, "aani")), MusiikkiNayte = Osoite(MiniJson.Kentta(d, "musiikkiNayte")),
+                MusiikkiNayteNimi = T(d, "musiikkiNayteNimi") ?? T(Ob(MiniJson.Kentta(d, "musiikkiNayte")), "nimi"),
             };
             var kuvat = new List<object>();
             if (MiniJson.Kentta(d, "kuva") is object k1) kuvat.Add(k1);
@@ -564,8 +663,15 @@ namespace Matkakirja.Natiivi
             if (musiikki is string url) n.Musiikkilinkit.Add(("Apple Music", url));
             else if (musiikki is List<object> linkit)
                 foreach (var l in linkit.Select(Ob).Where(l => l != null))
-                    if (T(l, "url") is string u && u.Length > 0) n.Musiikkilinkit.Add((T(l, "nimi") ?? "Apple Music", u));
+                    if (T(l, "url") is string u && u.Length > 0) n.Musiikkilinkit.Add((T(l, "nimi") ?? T(l, "nakyva") ?? "Apple Music", u));
             return n;
+        }
+
+        /// <summary>Äänen osoite: merkkijono sellaisenaan tai olion url (null = ei ääntä).</summary>
+        static string Osoite(object arvo)
+        {
+            string u = arvo as string ?? T(Ob(arvo), "url");
+            return string.IsNullOrEmpty(u) ? null : u;
         }
 
         /// <summary>
