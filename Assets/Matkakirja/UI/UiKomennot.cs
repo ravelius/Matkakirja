@@ -21,6 +21,11 @@
 //   ui lehti fokus-vastaa n | fokus-pulla     napauttaa fokustehtävän vaihtoehtoa n (0–) / pullanappia (2× = osto)
 //   ui nosto <valoId>                         nostokortti: skandaali:<id> | hetki:<id> | elaintaky:<ISO> | kohde:<id>[@ISO]
 //   ui huipennus                              matkan huipennus (kaikki aarteet) esimerkkiluvuin
+//   ui sahke liuska|apu|sulje|kiinni|uusi|jasen|tila   sähkeliuska ja retkikuntaosio valekutsuin (SahkeNakyma.Testaa)
+//   ui sahketehtava [kaupunki] [tila]         pöllön sähketehtävä ilman peliä (oletus sofia tyhja), oikea sisältö ja
+//                                             hakemisto, hiljainen. Tilat: tyhja | ohi | ohi2 (vinkki) | pullat (ostettu) |
+//                                             odotus (pöllön tuomio matkalla 8 s) | eivastausta | osui (kuittaus) |
+//                                             lahetetty | sulje | tila (SahketehtavaNakyma.Testaa)
 //   ui laukku [esimerkki]                     matkalaukku (pelin data; esimerkki = keksitty sisältö)
 //   ui julisteet [n]                          julistegalleria, n ensimmäistä voitettuna (oletus 7)
 //   ui tietaja [pisteet]                      Tietäjän tie -minipopup (oletus 120)
@@ -227,6 +232,10 @@ namespace Matkakirja.Natiivi
                     ui.Huipennus.Nayta(new MatkanYhteenveto { Paivat = 83, Kaupungit = 41, Aarteet = 6, AarteitaKaikkiaan = 6 },
                         () => ui.Aloitus.NaytaAvaus(id => ui.Tilarivi.Viesti("Lähtö: " + id)));
                     return null;
+                case "sahke":
+                    return ui.Sahke.Testaa(loput.Length > 0 ? loput : "liuska");
+                case "sahketehtava":
+                    return ui.Sahkelomake.Testaa(loput);
                 case "laukku":
                     ui.Valikko.Sulje(); ui.Aanentasot.Sulje();
                     ui.Matkalaukku.Testaa(loput == "esimerkki" ? new System.Func<LaukkuNaytto>(Matkalaukku.Esimerkki) : null);

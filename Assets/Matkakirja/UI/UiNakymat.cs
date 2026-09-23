@@ -44,6 +44,9 @@ namespace Matkakirja.Natiivi
         public readonly Nostokortti Nostokortti;
         public readonly Lehtinakyma Lehti;
         public readonly Paljastus Paljastus;
+        public readonly SahkeNakyma Sahke;
+        /// <summary>Pöllön sähketehtävä (sähkösanomalomake, PeliNakymat.Sahketehtava).</summary>
+        public readonly SahketehtavaNakyma Sahkelomake;
         public readonly Julistegalleria Julistegalleria;
         public readonly Nahtavyysarkki Nahtavyydet;
         public readonly Nahtavyysnakyma Nahtavyysnakyma;
@@ -59,6 +62,18 @@ namespace Matkakirja.Natiivi
             PeliNakymat.KaupunkiKortti = _ => Hae().Kaupunkikortti;
             PeliNakymat.Saapumistraileri = (kaupunki, url, valmis) => Hae().Traileri.NaytaPelista(kaupunki, url, valmis);
             PeliNakymat.Kysymys = _ => Hae().Kysymys;
+            // Sähkelinja (B5): pöllön liuska ja valikon retkikunta. Asettamattomana linjaa ei avata.
+            PeliNakymat.Sahke = _ => Hae().Sahke;
+            // Pöllön sähketehtävä: vihreä piste sähkekaupungissa avaa lomakkeen laattakysymyksen sijaan.
+            PeliNakymat.Sahketehtava = _ => Hae().Sahkelomake;
+            // Sähkehakemisto maalle (web sisaltohakemisto) ja Livian linkki kartan kohteeseen (web kohdeavaus).
+            PeliOhjain.SahkeHakemisto = SahkeHakemistot.Hae;
+            PeliOhjain.AvaaKohde = (maa, kohde) =>
+            {
+                if (string.IsNullOrEmpty(maa) || string.IsNullOrEmpty(kohde)) return false;
+                Hae().Nostokortti.Avaa("kohde:" + kohde + "@" + maa.ToUpperInvariant());
+                return true;
+            };
             // Näkyvä noppa (B16/P45): liike odottaa valmis()-kutsua (Pelikoodarin koukku, varareitti 4 s).
             PeliNakymat.Noppa = (arvo, lat, lon, valmis) => UiKerros.PaaSaikeessa(() => Hae().HeitaNoppa(arvo, lat, lon, valmis));
             // Natiivilehti (B1): WKWebView-kuori jää käyttämättä.
@@ -114,6 +129,8 @@ namespace Matkakirja.Natiivi
             // Lehti aukeaa kaiken päälle: auki jääneet valikot ja popupit kiinni.
             Lehti.Avautui += _ => { Valikko.Sulje(); Aanentasot.Sulje(); Matkalaukku.Sulje(); Vahvistus.Sulje(); Julistegalleria.Sulje(); Minipopup.SuljeAuki(); };
             Paljastus = new Paljastus(kerros);
+            Sahke = new SahkeNakyma(kerros, Valikko);
+            Sahkelomake = new SahketehtavaNakyma(kerros); // pelidialogien kerros (30), pulun kuplat päällä
             Julistegalleria = new Julistegalleria(kerros); // laukun päälle (sama kerros, myöhemmin)
             // Karttavalon napautus (Natiiviseppä: AiheValot → KarttaValotSilta) → nostokortti;
             // linssin aikana ei (web linssiEstaa).
@@ -177,9 +194,24 @@ namespace Matkakirja.Natiivi
             o.RahaMuuttui += (muutos, syy, _) => UiKerros.PaaSaikeessa(() => Leima.Raha(muutos, syy));
             // Noppa häipyy, kun nappula on perillä (web haivyta saapuessa).
             o.MatkaPerilla += _ => UiKerros.PaaSaikeessa(() => Noppa.Haivyta());
+            // Livian sähkekuplat (johdanto, odotus, vinkki, linkin saate, oikein, paluu) puluun.
+            o.LivianKuplat += (kaupunki, kentta, kuplat) => Sahkelomake.LivianKuplat(kaupunki, kentta, kuplat);
+            // Sähkehakemisto valmiiksi, kun saavutaan sähkekaupunkiin (lehtien jäsennys ennen pisteen napautusta).
+            o.MatkaPerilla += kaupunki => UiKerros.PaaSaikeessa(() => EsilataaSahkehakemisto(kaupunki));
+            EsilataaSahkehakemisto(o.PelaajanKaupunki);
             o.KaikkiAarteetLoytyi += yv => UiKerros.PaaSaikeessa(() => Huipennus.Nayta(yv, () => UusiMatka(o)));
             // Lehti (WKWebView) aukeaa kaiken päälle: auki jääneet valikot kiinni.
             if (o.Lehti != null) o.Lehti.Avautui += _ => { Valikko.Sulje(); Aanentasot.Sulje(); Matkalaukku.Sulje(); Vahvistus.Sulje(); };
+        }
+
+        static void EsilataaSahkehakemisto(string kaupunki)
+        {
+            if (kaupunki == null) return;
+            Fokusvirrat.Lataa(() =>
+            {
+                var t = Fokusvirrat.Hae(kaupunki)?.Sahketehtava;
+                if (t != null) SahkeHakemistot.Lataa(t.HakemistoMaa ?? UiSisalto.Kaupunki(kaupunki)?.Maa, null);
+            });
         }
 
         void NaytaAloitus(PeliOhjain o)
@@ -241,6 +273,7 @@ namespace Matkakirja.Natiivi
             Matkavalinta.PiilotaHeitto();
             Kaupunkikortti.Piilota();
             Kysymys.Piilota();
+            Sahkelomake.Sulje();
             Karttaselite.Sulje();
             Karttaselite.Maakunnat.SuljeKortti();
             Kartuscha.Sulje();
