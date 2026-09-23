@@ -17,10 +17,13 @@
  *   5. skeema 1.2: kaupunkien tärkeys 0–3 (pääkaupungit ja aloitus 3) ja
  *      tiedostojen koot manifestissa;
  *   6. osa 2 (funktiot tunnisteiksi): kaupunkidatassa ei ole funktioita —
- *      pulmat nimeävät generaattorinsa, packien tekstit ovat pohjia.
+ *      pulmat nimeävät generaattorinsa, packien tekstit ovat pohjia;
+ *   7. skeema 1.3: lehden web-riippuvuudet (web/lehti.json) ovat täydet ja
+ *      tiivisteet vastaavat repon tiedostoja.
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 
 import { kokoaVienti, JUURI, SKEEMAVERSIO_TARKKA } from '../tools/vienti/vie-sisalto.mjs';
@@ -196,4 +199,27 @@ test('osa 2: pulmien generaattorit ja tekstipohjat', () => {
   assert.equal(taytaPohja(lauta.texts.winnerStar, { name: 'Fogg', money: 120 }),
     'Fogg toi unohdetun aarteen kotiin 120 punnan kanssa.');
   assert.equal(taytaPohja('{name} ja {tuntematon}', { name: 'A' }), 'A ja {tuntematon}');
+});
+
+test('skeema 1.3: lehden web-riippuvuudet WKWebView-kuorelle', () => {
+  const m = JSON.parse(tiedostot.get('manifest.json'));
+  const rivi = m.webNakymat.find((w) => w.nimi === 'lehti');
+  assert.ok(rivi, 'manifest.webNakymat: lehti puuttuu');
+  const lehti = JSON.parse(tiedostot.get(rivi.tiedosto));
+  assert.deepEqual(validoiNimella(lehti, 'web-nakyma.schema.json'), []);
+  const polut = new Set(lehti.moduulit.map((t) => t.polku));
+  for (const p of ['js/main.js', 'js/ui.js', 'js/lehti.js', 'js/maalehti.js', 'js/packs/kulttuuri-kategoriat.js', 'js/media.js']) {
+    assert.ok(polut.has(p), `${p} puuttuu lehden riippuvuuksista`);
+  }
+  assert.equal(lehti.sivu, 'index.html?lehti={kaupunki}');
+  assert.deepEqual(lehti.sivut.map((t) => t.polku), ['index.html']);
+  assert.ok(lehti.tyylit.some((t) => t.polku === 'css/styles.css'));
+  // Tiivisteet vastaavat repoa: kuori voi tarkistaa hakemansa version.
+  for (const t of [...lehti.moduulit, ...lehti.tyylit].slice(0, 40)) {
+    const b = readFileSync(`${JUURI}/${t.polku}`);
+    assert.equal(t.sha256, createHash('sha256').update(b).digest('hex'), t.polku);
+    assert.equal(t.tavuja, b.length, t.polku);
+  }
+  assert.equal(lehti.tavuja.koodi, [...lehti.sivut, ...lehti.moduulit, ...lehti.tyylit].reduce((a, t) => a + t.tavuja, 0));
+  assert.ok(validoiNimella({ ...lehti, moduulit: [{ polku: 'x.js', tavuja: 1 }] }, 'web-nakyma.schema.json').length);
 });

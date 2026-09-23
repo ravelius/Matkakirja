@@ -19,10 +19,11 @@ Lähde: main `eaeda81cf` (v2143).
   (js/media.js). Lisäksi viitteissä on 1 681 lähde- ja lisenssilinkkiä.
 - 21 kokoelmaa tyypitettyinä entiteetteinä, esimerkiksi kaupungit
   lat/lon-koordinaatein, reitit, kysymykset, lehdet ja kohtaamiset.
-- Skeemaversio on **1.2** (`manifest.skeemaversio`): versiossa 1.1
+- Skeemaversio on **1.3** (`manifest.skeemaversio`): versiossa 1.1
   kaupungit saivat kentät `maa2` (ISO2), `tyyppi`, `lentokentta` ja
   `aloitus` natiivin 3D-proton tarpeen mukaan, versiossa 1.2 `tarkeys`
-  (0–3), ja manifest sai tiedostojen koot (`tavuja`).
+  (0–3), ja manifest sai tiedostojen koot (`tavuja`), versiossa 1.3
+  lehden web-riippuvuudet (`web/lehti.json`).
 - `tests/vienti.test.mjs` (6 testiä, 3 s) todistaa, ettei mitään jää pois.
   Se vertaa jokaista exporttia suoraan lähdemoduuliin. Testi on todettu
   herkäksi: kun Set muutettiin taulukoksi, testi kaatui.
@@ -368,6 +369,21 @@ sessiota sisältöversion näyttämiselle (työhuone ja natiivin tietoja-sivu).
 - `minSovellus` on `{ ios: 1, web: null }`, koska web ei lue pakettia.
 - Skeema 1.1: kaupungeille `maa2` (ISO2), `tyyppi`, `lentokentta` ja
   `aloitus` 3D-proton tarpeen mukaan (3D-selvittäjä 23.9.).
+- Skeema 1.3 (Fablen linjaus 23.9.: natiivi etusijalle, lehti aluksi
+  web-koodina WKWebView-kuoressa): `web/lehti.json` listaa lehden
+  riippuvuudet lähdekoodista laskettuna (`tools/vienti/web-riippuvuudet.mjs`).
+  Kuori avaa sivun `index.html?lehti=<kaupunki-id>` (Pelikoodari, PR #2942,
+  tapahtumat `lehti-auki` ja `lehti-suljettu` kanavaan
+  webkit.messageHandlers.matkakirja). Juuri on js/main.js, koska lehti
+  käyttää ui-olion 44 jäsentä. Mukana ovat index.html, JS-sulkeuma (554
+  moduulia, 24 dynaamista) ja CSS (14 tiedostoa), yhteensä noin 43 Mt
+  koodia. Lisäksi paikallisia tiedostoja ja kansioita on noin 370 Mt,
+  joista kohdekartat 263 Mt, ja ne haetaan ajon aikana osoitteesta `juuriUrl`.
+  Koodin kokoa pienentäisivät laiskat tuonnit laudalle; niistä ei ole
+  vielä päätöstä. Jokaisella
+  tiedostolla on sha256, joten kuori tietää, mitä versiota paketti vastaa.
+  Manifestissa on `webNakymat`. Vientityönkulku käynnistyy nyt myös
+  css/-, assets/- ja index.html-muutoksista.
 - Skeema 1.2 (3D-selvittäjän palaute 23.9. klo 14.29): kaupungeille
   `tarkeys` 0–3; manifestiin `tavuja` kokoelmille, medialle ja
   lisätiedostoille (moduuleilla se oli jo); `kaupunki.data` merkitty
@@ -377,7 +393,7 @@ Funktiot tunnisteiksi ja sisältöversion näyttäminen ovat myöhempiä osia.
 
 ### 5.3 Yhteensopivuus: vanha sovellus ja uusi sisältö
 
-- **Skeeman major.minor.** Nykyinen on 1.2 (`SKEEMAVERSIO_TARKKA`,
+- **Skeeman major.minor.** Nykyinen on 1.3 (`SKEEMAVERSIO_TARKKA`,
   manifestissa ja osoittimessa). `matkakirja-vienti/1` on major. Lisäykset
   (uusi kenttä, uusi kokoelma) nostavat minoria, ja vanha sovellus
   ohittaa tuntemattomat kentät. Poisto tai merkityksen muutos nostaa
@@ -385,7 +401,7 @@ Funktiot tunnisteiksi ja sisältöversion näyttäminen ovat myöhempiä osia.
   koskaan näe uutta majoria, vaan jää viimeiseen yhteensopivaan
   pakettiin. Historia: 1.0 ensimmäinen vienti; 1.1 kaupunkien maa2,
   tyyppi, lentokentta, aloitus; 1.2 kaupunkien tarkeys ja manifestin
-  tavuja. Raakaoliot (`data`) eivät kuulu sopimukseen: niiden kentät
+  tavuja; 1.3 web-näkymien riippuvuuslistat (web/lehti.json). Raakaoliot (`data`) eivät kuulu sopimukseen: niiden kentät
   voivat muuttua ilman versionnostoa.
 - **Pakolliset kentät.** Jokainen sovellus julistaa, mitkä kokoelmat ja
   kentät se vaatii. Tuoja validoi paketin ennen käyttöönottoa, ja jos

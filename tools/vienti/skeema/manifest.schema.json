@@ -20,6 +20,11 @@
       "type": "array",
       "items": { "type": "object", "required": ["nimi", "tiedosto", "lahde", "lkm", "sha256", "tavuja"] }
     },
+    "webNakymat": {
+      "type": "array",
+      "description": "Web-näkymien riippuvuuslistat (skeema 1.3), ks. web-nakyma.schema.json",
+      "items": { "type": "object", "required": ["nimi", "tiedosto", "sha256", "tavuja"] }
+    },
     "moduulit": {
       "type": "array",
       "items": {
