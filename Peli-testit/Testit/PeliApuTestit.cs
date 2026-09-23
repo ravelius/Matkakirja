@@ -114,6 +114,18 @@ namespace Matkakirja.Peli.Testit
             Oleta.Tosi(!PeliApu.Matkusta(m, "pariisi", Kulkutapa.Lento, true).Ok, "ei toista mannerlentoa ilman aarretta");
         }
 
+        [Testi] static void AanitunnuksetKutenWeb()
+        {
+            // js/ui-apurit.js EVENT_SOUND ja js/sound.js treasureSound.
+            Oleta.Sama("ferry", Aanitunnukset.Tapahtuma("fare"));
+            Oleta.Sama("coin", Aanitunnukset.Tapahtuma("aid"));
+            Oleta.Sama("turn", Aanitunnukset.Tapahtuma("jotain"));
+            Oleta.Sama(null, Aanitunnukset.Tapahtuma("treasure"));
+            Oleta.Sama("star", Aanitunnukset.Aarre(Laattatyypit.Paaaarre));
+            Oleta.Sama("gem", Aanitunnukset.Aarre(Laattatyypit.PieniAarre));
+            Oleta.Sama("empty", Aanitunnukset.Aarre("empty"));
+        }
+
         [Testi] static void BussiLontooseenSaapuuIlmanAikaa()
         {
             var m = UusiPariisissa();
