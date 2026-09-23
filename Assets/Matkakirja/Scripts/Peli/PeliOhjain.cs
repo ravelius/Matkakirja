@@ -617,8 +617,13 @@ namespace Matkakirja.Natiivi
                 }
                 catch (Exception e)
                 {
-                    Debug.LogWarning("MATKAKIRJA peli: tallennus ei kelpaa (" + e.Message + "), aloitetaan uusi peli");
-                    try { File.Copy(TallennusPolku, Path.Combine(Documents, "tallennus-rikki.json"), true); } catch { }
+                    // Talteen ennen kuin uusi peli korvaa tiedoston: uudemman sovelluksen
+                    // tallennus (UudempiTallennus) omalla nimellään, jotta päivitetty
+                    // sovellus tai tuki voi palauttaa sen; aikaleima ettei edellinen katoa.
+                    var nimi = (e is UudempiTallennus u ? "tallennus-v" + u.Versio : "tallennus-rikki")
+                        + "-" + DateTime.UtcNow.ToString("yyyyMMdd-HHmmss", System.Globalization.CultureInfo.InvariantCulture) + ".json";
+                    Debug.LogWarning("MATKAKIRJA peli: tallennus ei kelpaa (" + e.Message + "), talteen " + nimi + ", aloitetaan uusi peli");
+                    try { File.Copy(TallennusPolku, Path.Combine(Documents, nimi), true); } catch { }
                 }
             }
             if (matka == null || matka.Tila.Vaihe == Vaihe.Ohi)

@@ -339,7 +339,7 @@ namespace Matkakirja.Peli.Testit
         {
             var (m, ky, kt) = RyostajanJalkeen();
             var ilman = m.Tallenna();
-            Oleta.Tosi(!ilman.Contains("avoinKaksintaistelu") && ilman.Contains("\"versio\":3"), "valinnainen kenttä, versio 3");
+            Oleta.Tosi(!ilman.Contains("avoinKaksintaistelu") && ilman.Contains("\"versio\":4"), "valinnainen kenttä, versio 4");
             ky.Sulje();
             kt.Helpotus();
             kt.Avoin.Sekunnit = 17;   // käyttöliittymän tiimalasi
@@ -352,7 +352,7 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(17, kt2.Avoin.Sekunnit.Value);
             Oleta.Sama(string.Join(",", kt.Avoin.Piilotetut), string.Join(",", kt2.Avoin.Piilotetut));
             Oleta.Tosi(kt2.Vastaa(kt2.Avoin.Oikea).Ok && kt2.Avoin.Saalis == null, "helpotuksen jälkeen ei saalista");
-            // Vanha versio 3 -tallennus ilman kenttää latautuu ilman kaksintaistelua.
+            // Tallennus ilman kenttää (myös vanha versio 3) latautuu ilman kaksintaistelua.
             Oleta.Tosi(Matka.Lataa(KultaisetApu.Verkko, ilman).Tila.Kaksintaistelu == null, "vanha tallennus");
         }
 

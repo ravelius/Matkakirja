@@ -9,7 +9,7 @@ verkkopelin `Game` (yksinpeli vaellustilassa).
     Satunnainen (mulberry32), Reittiverkko, LehtiOsoite.
   - **Matka** — tilakone (vuoro, kulkutavat, heitto, siirto, bussi, lento, pankkiapu) ja
     erästä 3 laattojen jako luonnissa, laatan kääntö (web revealToken), lukitus, ennätys.
-  - **Pelitila** — tallennettava tila (tallennusversio **3**).
+  - **Pelitila** — tallennettava tila (tallennusversio **4**; versiopolku Pelitila.Paivita, uudempi = UudempiTallennus, TallennusTestit).
   - **Laatat** — Laattamaailma (jako, kääntö, lukitus; JS Map -järjestys JarjestettyKartta),
     Laattamaarat (paketin `kokoelmat/laatat.json`), Loyto (yhden käännön tulos).
   - **Kysely** + Kysymysdata — kysymysmoottori (js/game.js actionQuiz…closeQuiz).
