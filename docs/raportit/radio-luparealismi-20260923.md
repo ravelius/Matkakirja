@@ -127,3 +127,13 @@ Perustuu tiedostoihin `js/packs/radiot.js`, `tools/vienti/radiokorvaavat.json`, 
 ## Asemat jotka jo jakavat striiminsa itse muihin sovelluksiin
 
 Ei loytynyt yhtaan asemaa naiden 98 joukosta, jonka omilla sivuilla olisi (kuten 17 jo luokitellun korvaavan aseman joukossa on Byte.fm, ORANGE 94.0, BNR Nieuwsradio, 3RRR) nimenomainen kehotus kayttaa striimiosoitetta "toisessa soittimessa"/"favorite app"-tyyliin. Osa asemista (esim. PHL/DZRH) on itsehostattu AzuraCastilla, jolloin hostausalustan ToS ei itsessaan estä upotusta, mutta paatos on silti kokonaan aseman omistajan (tässä Manila Broadcasting Company) käsissä, eika mitaan julkista lupaa ole loydetty.
+
+
+## Omistajan päätökset (23.9.2026, Fablen kautta)
+
+- **Poliittisesti riskialttiit 8 asemaa** (AFG, RUS, CUB, VEN, YEM, MMR, SDN,
+  SYR) pidetään kuten webissä, ilman muutosta. Ne **tarkistetaan uudelleen
+  ennen App Store -arviota**.
+- Lupakirjeen ensimmäinen aalto pysyy ennallaan: 17 korvaavaa asemaa sekä
+  WNYC, All India Radio ja Radio 9090 (docs/raportit/radio-luvat-mallikirje-20260923.md).
+  Realismi 3:n asemat (18) ovat toinen aalto.

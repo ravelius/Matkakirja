@@ -96,3 +96,11 @@ luvalla.
 Ensin 12 epäselvää korvaavaa asemaa (pienet yhteisö- ja opiskelijaradiot
 vastaavat yleensä nopeasti), sitten 5 sallittua kirjallisen kuittauksen
 vuoksi ja lopuksi USA, IND ja EGY.
+
+## Toinen aalto ja ennen App Storea tarkistettavat
+
+- Toinen aalto: 18 realismi 3:n asemaa (docs/raportit/radio-luparealismi-20260923.md).
+- Ennen App Store -arviota tarkistetaan uudelleen 8 poliittisesti
+  riskialtista asemaa (AFG, RUS, CUB, VEN, YEM, MMR, SDN, SYR; omistajan
+  päätös 23.9.2026: toistaiseksi kuten webissä) sekä Teoston ja Gramexin
+  korvauskysymys.
