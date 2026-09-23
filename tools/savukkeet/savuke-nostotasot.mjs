@@ -11,7 +11,9 @@
  *   2. Kolmostaso (savukkeen ujuttama `taso: 3` kahdelle kakkostason
  *      nostolle) on piilossa saapumisnäkymässä ja näkyvissä lähizoomilla
  *      (½ saapumisnäkymän leveydestä); ykköstaso pysyy näkyvissä.
- *   3. Ei reunan ylityksiä saapumisessa eikä lähizoomilla (4 px).
+ *   3. Ei reunan ylityksiä saapumisessa eikä lähizoomilla (4 px);
+ *      ruudulla lukossa pidetty nimiö saa leikkautua (omistaja 23.9.2026,
+ *      js/pallolauta/sovittelu.js sääntö 5: näkyvä nimiö ei loikkaa).
  *   4. Sovittelu: yksikään ykköstason lappu ei ole piilotettu.
  *   5. Ei sivuvirheitä.
  * Aja: PLAYWRIGHT_JS=… CHROMIUM=… node tools/savukkeet/savuke-nostotasot.mjs [kuvakansio]
@@ -108,7 +110,11 @@ const LUE = `async (kohde) => {
   // ruudun ulkopuolinen lappu on tarkoituksellinen. Reunan ylitys on
   // vain lappu, joka on osittain ruudussa ja ylittää reunan > 4 px.
   const ruudussa = (r) => r.x1 > 0 && r.x0 < W && r.y1 > 0 && r.y0 < H;
-  const yli = laput.filter((r) => ruudussa(r) && (r.x0 < -4 || r.y0 < -4 || r.x1 > W + 4 || r.y1 > H + 4)).map((r) => r.nimi);
+  // NÄKYVÄ NIMIÖ PITÄÄ PUOLENSA (omistaja 23.9.2026, sovittelu.js sääntö 5):
+  // ruudulla lukossa pidetty lappu saa leikkautua reunaan, se ei loikkaa.
+  const asennot = [...l.nostot.sovittelunAsennot()];
+  const lukossa = (r) => asennot.some(([k, a]) => (k === r.avain || k.endsWith(':' + r.id)) && (a.syy === 'nakyva' || a.syy === 'palaa'));
+  const yli = laput.filter((r) => ruudussa(r) && !lukossa(r) && (r.x0 < -4 || r.y0 < -4 || r.x1 > W + 4 || r.y1 > H + 4)).map((r) => r.nimi);
   const elementit = [...document.querySelectorAll('.pallolauta-nosto[data-nosto]')].map((el) => {
     const g = el.querySelector('.pallolauta-nosto-siirto');
     const m = /scale\\(([\\d.]+)\\)/.exec(g?.style.transform ?? '');
@@ -131,7 +137,16 @@ const LUE = `async (kohde) => {
     const cx = (o.x0 + o.x1) / 2; const cy = (o.y0 + o.y1) / 2;
     const reunalla = cx < 60 || cy < 60 || cx > koti.width - 60 || cy > koti.height - 60;
     const meri = /meri/.test(String(o.laji ?? o.symLaji ?? '')) || /Étretat|Etretat/.test(o.nimi);
-    return { nimi: o.nimi, sallittu: reunalla || meri };
+    /*
+     * SOVITTELUN OMA SYY (23.9.2026, nimiölukko): ruudulla lukossa pidetty
+     * ykköstaso ei loikkaa kaupungin nimen tai kyltin tieltä toiselle
+     * puolelle vaan häipyy paikallaan (sovittelu.js sääntö 5), joten
+     * reunaetäisyys ei enää kerro syytä. Este 'kiintea' (kaupungin nimi,
+     * kyltti, nappula), 'reuna' ja 'ranta' ovat sallittuja; 'lappu' ei.
+     */
+    const a = [...l.nostot.sovittelunAsennot()].find(([k]) => k.endsWith(':' + o.id))?.[1];
+    const sallittuEste = ['kiintea', 'reuna', 'ranta'].includes(a?.este);
+    return { nimi: o.nimi, sallittu: reunalla || meri || sallittuEste, syy: a?.syy, este: a?.este };
   });
   return {
     nimiollisia: laput.length,
@@ -278,7 +293,9 @@ for (const ruutu of RUUDUT) {
     const laput = l.nostot.lappuLaatikot();
     const lahella = { osumissa: nakyvissa(l.nostot.osumat()), lapuissa: nakyvissa(laput), taso1: laput.filter((r) => r.taso === 1).length,
       // Vain osittain ruudussa oleva lappu on ylitys (liikevara, ks. LUE).
-      yli: laput.filter((r) => r.x1 > 0 && r.x0 < W && r.y1 > 0 && r.y0 < H && (r.x0 < -4 || r.y0 < -4 || r.x1 > W + 4 || r.y1 > H + 4))
+      // Lukossa ruudulla pidetty saa leikkautua (sovittelu.js sääntö 5, ks. LUE).
+      yli: laput.filter((r) => r.x1 > 0 && r.x0 < W && r.y1 > 0 && r.y0 < H
+        && ![...l.nostot.sovittelunAsennot()].some(([k, a]) => (k === r.avain || k.endsWith(':' + r.id)) && (a.syy === 'nakyva' || a.syy === 'palaa')) && (r.x0 < -4 || r.y0 < -4 || r.x1 > W + 4 || r.y1 > H + 4))
         .map((r) => ({ nimi: r.nimi, x0: Math.round(r.x0), x1: Math.round(r.x1), y0: Math.round(r.y0), y1: Math.round(r.y1), W, H })) };
     for (const k of KOLMOSET) delete k.taso;
     return { tunnukset, saapuen, lahella };

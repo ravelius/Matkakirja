@@ -4011,6 +4011,15 @@ export function luoNostot({
       return sovittelu;
     }
     const reunaNyt = reuna?.() ?? null;
+    /*
+     * NÄKYVÄ NIMIÖ PITÄÄ PUOLENSA PANOROINNISSA JA ZOOMISSA (omistaja
+     * 23.9.2026, sovittelu.js sääntö 5): ruutu ilman turva-alueita
+     * (reuna on sisempi) — lappu lovessa tai kotipalkin alla on yhä
+     * pelaajan silmissä.
+     */
+    const ruutuNyt = ruutu?.() ?? null;
+    const ruutuLaatikko = ruutuNyt?.leveys > 0 && ruutuNyt?.korkeus > 0
+      ? { x0: 0, y0: 0, x1: ruutuNyt.leveys, y1: ruutuNyt.korkeus } : null;
     const tulos = sovitteleLaput({
       laput: lappuja.map(({ r, datum, laatikko }) => ({
         avain: datum.avain,
@@ -4032,6 +4041,7 @@ export function luoNostot({
       esteet: kiinteat.length ? [...nimet, ...kiinteat] : nimet,
       lukot: sovitellutAsennot,
       reuna: reunaNyt,
+      ruutu: ruutuLaatikko,
       rantaviiva: rantaviivaOn && typeof rantaviiva === 'function' ? rantaviiva() : (rantaviivaOn ? (rantaviiva ?? []) : []),
     });
     let muuttui = false;
@@ -4456,6 +4466,8 @@ export function luoNostot({
       .filter(({ datum }) => datum.nimioNakyy && datum.nimi)
       .map(({ datum, laatikko }) => ({
         id: datum.id,
+        // Sovittelun lukon avain (sovittelunAsennot): eläintäyn id ei ole avaimessa.
+        avain: datum.avain,
         nimi: datum.nimi,
         // Perhe kertoo savukkeelle, mikä ovi lapun takaa aukeaa
         // (nosto = kohdekortti, elain = eläintäky, aihemerkki = viuhka).

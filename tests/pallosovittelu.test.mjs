@@ -19,7 +19,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 
 import {
-  SOVITTELUN_KYLJET, SOVITTELUN_HYSTEREESI_PX,
+  SOVITTELUN_KYLJET, SOVITTELUN_HYSTEREESI_PX, SOVITTELUN_NAKYVYYSVARA_PX,
   laatikotLimittyvat, laatikkoSisalla, reunaanSiirto, sovitteleLaput,
   sovittelunPainoarvo, sovittelunEhdokkaat,
 } from '../js/pallolauta/sovittelu.js';
@@ -426,4 +426,104 @@ test('ikonit ovat esteitä (tyyppimerkit 21.9.2026): kakkostaso väistää toise
   });
   assert.equal(asento(t2, 'ykkonen').kylki, 'oikea');
   assert.equal(asento(t2, 'ykkonen').nimio, true);
+});
+
+/*
+ * NÄKYVÄ NIMIÖ PITÄÄ PUOLENSA (sääntö 5; omistaja 23.9.2026, iPhone v2140:
+ * *"Mitkään tekstit eivät saisi vaihtaa paikkaa panoroitaessa kun ne ovat
+ * ruudulla."*). Selaimessa: tools/savukkeet/savuke-nimiolukko-veto.mjs.
+ */
+const RUUTU = { x0: 0, y0: 0, x1: 390, y1: 844 };
+
+test('sääntö 5: ruudulla oleva lukittu nimiö pitää kylkensä reunalla (nimi saa leikkautua)', () => {
+  const lukot = new Map([['a', { kylki: 'oikea', dx: 0, dy: 0, nimio: true }]]);
+  // Nimiö ylittää ruudun oikean laidan: ennen sääntöä 5 kylki vaihtui.
+  const laput = [koelappu('a', 370, 100)];
+  const vanha = sovitteleLaput({ laput, lukot, reuna: RUUTU });
+  assert.notEqual(asento(vanha, 'a').kylki, 'oikea', 'vastakoe: ilman ruutua reuna vaihtaa kyljen');
+  const t = sovitteleLaput({ laput, lukot, reuna: RUUTU, ruutu: RUUTU });
+  assert.equal(asento(t, 'a').kylki, 'oikea');
+  assert.equal(asento(t, 'a').nimio, true);
+  assert.equal(asento(t, 'a').syy, 'nakyva');
+  assert.equal(t.kylkiVaihtui, 0);
+});
+
+test('sääntö 5: tukossa oleva näkyvä nimiö häipyy paikallaan eikä loikkaa', () => {
+  const lukot = new Map([['a', { kylki: 'oikea', dx: 0, dy: 0, nimio: true }]]);
+  const este = { x0: 108, y0: 95, x1: 160, y1: 105 };
+  const t = sovitteleLaput({ laput: [koelappu('a', 100, 100)], esteet: [este], lukot, ruutu: RUUTU });
+  assert.deepEqual(
+    { kylki: asento(t, 'a').kylki, nimio: asento(t, 'a').nimio, este: asento(t, 'a').este },
+    { kylki: 'oikea', nimio: false, este: 'kiintea' },
+  );
+  assert.equal(t.kylkiVaihtui, 0);
+});
+
+test('sääntö 5: törmäyksessä tulokas väistää, ruudulla jo oleva pitää paikkansa', () => {
+  // b tulee oikealta a:n nimiön päälle; b:llä on lyhyempi nimi (painoarvo voittaisi ilman ikää).
+  const a = koelappu('a', 100, 100, 'oikea', { nimi: 'pitka nimi' });
+  const b = koelappu('b', 150, 100, 'vasen', { nimi: 'b' });
+  const lukot = new Map([['a', { kylki: 'oikea', dx: 0, dy: 0, nimio: true }]]);
+  const t = sovitteleLaput({ laput: [b, a], lukot, ruutu: RUUTU });
+  assert.equal(asento(t, 'a').kylki, 'oikea');
+  assert.equal(asento(t, 'a').nimio, true);
+  assert.notEqual(asento(t, 'b').kylki, 'vasen');
+  // Eleen aikana tullut (syy 'ele') väistää levossa lukittua.
+  const lukot2 = new Map([
+    ['a', { kylki: 'oikea', dx: 0, dy: 0, nimio: true }],
+    ['b', { kylki: 'vasen', dx: 0, dy: 0, nimio: true, syy: 'ele' }],
+  ]);
+  const t2 = sovitteleLaput({ laput: [b, a], lukot: lukot2, ruutu: RUUTU });
+  assert.equal(asento(t2, 'a').nimio, true);
+  assert.equal(asento(t2, 'b').kylki, 'vasen', 'ruudulla ollut tulokaskaan ei loikkaa');
+  assert.equal(asento(t2, 'b').nimio, false, 'vaan häipyy');
+});
+
+test('sääntö 5: zoomi ei pura lukkoa; puoli saa vaihtua vasta, kun lappu on poissa ruudulta', () => {
+  const lukot = new Map([['a', { kylki: 'oikea', dx: 0, dy: 0, nimio: true }]]);
+  const reuna = { x0: 0, y0: 0, x1: 130, y1: 300 };
+  // Zoomi kasvatti nimiön reunan yli (sama laatikko kuin panoroinnissa): kylki pysyy.
+  const zoom = sovitteleLaput({ laput: [koelappu('a', 100, 100)], lukot, reuna, ruutu: reuna });
+  assert.equal(asento(zoom, 'a').kylki, 'oikea');
+  assert.equal(asento(zoom, 'a').nimio, true);
+  // Poissa ruudulta (yli näkyvyysvaran): vapaa ratkaisu.
+  const reunaIso = { x0: 0, y0: 0, x1: 130, y1: 900 };
+  const t = sovitteleLaput({
+    laput: [koelappu('a', 100, 400)], lukot, reuna: reunaIso, ruutu: { x0: 0, y0: 0, x1: 130, y1: 400 - 5 - SOVITTELUN_NAKYVYYSVARA_PX - 1 },
+  });
+  assert.notEqual(asento(t, 'a').kylki, 'oikea');
+});
+
+test('sääntö 5: kaksi lukittua törmää (zoomi) → kumpikaan ei siirry, alempi prioriteetti häipyy', () => {
+  const a = koelappu('a', 100, 100, 'oikea', { taso: 1, nimi: 'ykkönen' });
+  const b = koelappu('b', 130, 100, 'oikea', { taso: 1, nimi: 'ykkönen pitkä' });
+  const c = koelappu('c', 150, 100, 'vasen', { taso: 2, nimi: 'c' });
+  const lukot = new Map([
+    ['a', { kylki: 'oikea', dx: 0, dy: 0, nimio: true }],
+    ['b', { kylki: 'oikea', dx: 0, dy: 0, nimio: true }],
+    ['c', { kylki: 'vasen', dx: 0, dy: 0, nimio: true }],
+  ]);
+  const t = sovitteleLaput({ laput: [c, b, a], lukot, ruutu: RUUTU });
+  assert.deepEqual([asento(t, 'a').kylki, asento(t, 'a').nimio], ['oikea', true]);
+  // Ykköstasokaan ei saa pakkoasentoa toisen päälle ruudulla lukossa.
+  assert.deepEqual([asento(t, 'b').kylki, asento(t, 'b').nimio], ['oikea', false]);
+  assert.deepEqual([asento(t, 'c').kylki, asento(t, 'c').nimio], ['vasen', false]);
+  assert.equal(t.kylkiVaihtui, 0);
+});
+
+test('sääntö 5: ruudulla häivytetty palaa vain lukittuun kylkeensä', () => {
+  const lukot = new Map([['a', { kylki: 'oikea', dx: 0, dy: 0, nimio: false }]]);
+  const este = { x0: 108, y0: 95, x1: 160, y1: 105 };
+  const t = sovitteleLaput({ laput: [koelappu('a', 100, 100)], esteet: [este], lukot, ruutu: RUUTU });
+  assert.equal(asento(t, 'a').nimio, false, 'vasen olisi vapaa, mutta toiselle puolelle ei ilmestytä');
+  assert.equal(asento(t, 'a').kylki, 'oikea');
+  const vapaa = sovitteleLaput({ laput: [koelappu('a', 100, 100)], lukot, ruutu: RUUTU });
+  assert.equal(asento(vapaa, 'a').nimio, true);
+  assert.equal(asento(vapaa, 'a').syy, 'palaa');
+});
+
+test('sääntö 5 on kytketty: nostokerros antaa sovittelulle ruudun', () => {
+  const nostot = lue('../js/pallolauta/nostot.js');
+  assert.match(nostot, /reuna: reunaNyt,\n\s+ruutu: ruutuLaatikko,/);
+  assert.match(nostot, /x0: 0, y0: 0, x1: ruutuNyt\.leveys, y1: ruutuNyt\.korkeus/);
 });
