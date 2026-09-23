@@ -29,7 +29,7 @@ Natiivisepän RAJAPINTA.md (proto-3d).*
 | 6 | Vertailu | vertailu.js, js/vertailu.js, maakayrat.js | Maatila (Natiiviseppä), valinnat, laput, Vertaa | Valmis, iPad OK. Maakäyrät (B18): Natiivi-UI piirtää, data puuttuu (ks. alla) |
 | 7 | Maatiedot | maatiedot.js | Maatila, kaksivaiheinen valinta, maalehti | Valmis, iPad OK |
 | 8 | **Maailmanradio** | radio.js (2215), radiosoitin.js (1248), viritin.js (1209), pistenaytto.js (1430), packs/radiot.js (115 maata) | Karttatila: yksi kaupunki per maa play-nappina, viritys 2,6 s kolmessa vaiheessa, tasatehoinen ristihäivytys, aidot viritysäänet; omistajan hybridimalli (sallittu soitetaan, linkki → aseman sivu, kielletty → vara-äänite) | **Ydin ja Unity valmiit** (linssiseppa/radio f26f85b, testit webin kultaisia vastaan): RadioLinssi, AVPlayer-liitännäinen MatkakirjaRadio.mm, KaupunkiMerkit-kytkentä. Odottaa: Natiivisepän käännös, Pelikoodarin napautus- ja luentakoukut, Natiivi-UI:n kotelo ja kartuscha, Siirtosepän radiot.json luokkineen |
-| 9 | **Isoisän linssi 1873** | haara karttaseppa-isoisan-linssi (erä 1 kesken, tauolla 21.9.): isoisa-1873.js, valtiot-1873.js, rajat-1873.json.gz | Erä 1: rajat 1873 pallolle (viivat), nimet 1873 nimiöinä, nykyrajat piiloon. Erä 2: Horation reitti katkoviivana, retroasu (seepia, tumma muste). Valokuvat, äänet ja media myöhemmin | **Ei aloitettu.** Odottaa webin erää 1 ja lisenssipäätöstä: raja-aineisto on GPL-3.0 (historical-basemaps) — käykö maksulliseen appiin? |
+| 9 | **Isoisän linssi 1873** | haara karttaseppa-isoisan-linssi (erä 1 kesken, tauolla 21.9.): isoisa-1873.js, valtiot-1873.js, rajat-1873.json.gz | Erä 1: rajat 1873 pallolle (viivat), nimet 1873 nimiöinä, nykyrajat piiloon. Erä 2: Horation reitti katkoviivana, retroasu (seepia, tumma muste). Valokuvat, äänet ja media myöhemmin | **Ei aloitettu.** Odottaa webin erää 1. Lisenssi päätetty (Fable 23.9.): GPL-3.0-rajat striimataan ämpäristä, ei binaariin; attribuutio ja lähdelinkki tekijätietoihin (Siirtoseppä kirjaa) |
 
 ## Omistus ja kynnykset (A7, C9)
 
@@ -63,11 +63,12 @@ kehittäjätila avaavat kaikki.
 
 ## Muille
 
-| Tarve | Kenelle |
-|---|---|
-| Kehittäjätilan lippu natiivissa (kaikki linssit auki) ja omistuksen tallennus | Pelikoodari |
-| Radion striimisoitin (AVPlayer-liitännäinen) | Linssiseppä ehdottaa tekevänsä; Natiiviseppä kääntää |
-| Radioasemat ja lisenssit maksulliseen appiin | Siirtoseppä |
-| Kartuschan radio-merkki, radiosoittimen kotelo ja pistenäyttö | Natiivi-UI |
-| saturate(0.8) -reliefisarja | Karttaseppä |
-| Isoisän linssin raja-aineiston lisenssi (GPL-3.0) | Fable / omistaja |
+| Tarve | Kenelle | Tila |
+|---|---|---|
+| Omistuksen tallennus ja Linssirekisteri.Omistaa-koukku | Pelikoodari | Koukku masterissa; kehittäjätila: sisäinen build päällä, App Store (MATKAKIRJA_APPSTORE) pois |
+| Radiotilan napautus- ja luentakoukut, pelaajan kaupunki | Pelikoodari | Tulossa (pelikoodari/linssikytkennat) |
+| Radion AVPlayer-liitännäinen | Linssiseppä (tehty), Natiiviseppä kääntää | Merge-pyynnössä |
+| Radioasemat luokkineen ja lisenssit | Siirtoseppä | Kokoelma radiot.json tulossa |
+| Kartuschan radio-merkki, radiosoittimen kotelo ja pistenäyttö | Natiivi-UI | Koukut lähetetty |
+| saturate(0.8) -reliefisarja | Karttaseppä | Valmis (pallo-k08), kytketty |
+| Kynnysten kytkin KOKEET-valikkoon | Natiivi-UI | Tulossa |
