@@ -1,0 +1,234 @@
+using System.Collections;
+using System.Collections.Generic;
+using CesiumForUnity;
+using Matkakirja.Peli;
+using Unity.Mathematics;
+using UnityEngine;
+
+namespace Matkakirja
+{
+    /// <summary>
+    /// Reitit pallolla verkkopelin tapaan (js/pallolauta/reitit.js). Koko reittiverkko
+    /// on jo laattojen sisällä, joten pallolle piirretään vain elävä kerros:
+    /// valitun kaupungin naapurireitit (maa hento muste, meri sinertävä), sen
+    /// lentokaaret (poltettu sinooperi) ja korostettu, valittu reitti.
+    ///
+    /// Maa- ja merireittien polku lasketaan samalla kaavalla kuin laattoihin
+    /// poltettu viiva (ReittiGeometria), joten viiva osuu kartan reittiin.
+    /// </summary>
+    public class Reitit : MonoBehaviour
+    {
+        public CesiumGeoreference georeferenssi;
+        public Material maa, meri, lento, korostus;
+        [Tooltip("Viivan korkeus ellipsoidin yläpuolella, metreinä.")]
+        public double viivanKorkeus = 4000.0;
+        [Tooltip("Lentokaaren huippu pallon säteinä 180°:n matkalla (LENTOKAAREN_KORKEUS).")]
+        public double kaarenKorkeus = 0.5;
+
+        class Kaupunki { public string id; public double lat, lon; public double2 lauta; public bool lautaOn; }
+
+        class Reitti
+        {
+            public string id, laji, tyyppi, a, b;
+            public List<double2> via;
+            public List<double3> pisteet; // (lat, lon, korkeus), laskettu tarvittaessa
+        }
+
+        readonly Dictionary<string, Kaupunki> kaupungit = new Dictionary<string, Kaupunki>();
+        readonly List<Reitti> reitit = new List<Reitti>();
+        readonly Dictionary<string, List<Reitti>> naapurit = new Dictionary<string, List<Reitti>>();
+        readonly List<GameObject> naytetyt = new List<GameObject>();
+        GameObject korostettu;
+
+        public bool Valmis { get; private set; }
+
+        IEnumerator Start()
+        {
+            string kt = null, rt = null;
+            yield return Sisalto.HaeTeksti("kaupungit", t => kt = t);
+            yield return Sisalto.HaeTeksti("reitit", t => rt = t);
+            if (kt == null || rt == null) yield break;
+
+            foreach (var o in MiniJson.Taulukko(MiniJson.Kentta(MiniJson.Objekti(MiniJson.Jasenna(kt)), "alkiot")))
+            {
+                var k = MiniJson.Objekti(o);
+                var c = new Kaupunki
+                {
+                    id = MiniJson.Teksti(k, "id"),
+                    lat = MiniJson.Luku(k, "lat") ?? 0,
+                    lon = MiniJson.Luku(k, "lon") ?? 0,
+                };
+                // Laudan piste (raakaolio data): reitin polku lasketaan siitä kuten verkkopelissä.
+                if (MiniJson.Kentta(k, "data") is Dictionary<string, object> d &&
+                    MiniJson.Luku(d, "x") is double x && MiniJson.Luku(d, "y") is double y)
+                {
+                    c.lauta = new double2(x, y);
+                    c.lautaOn = true;
+                }
+                kaupungit[c.id] = c;
+            }
+            foreach (var o in MiniJson.Taulukko(MiniJson.Kentta(MiniJson.Objekti(MiniJson.Jasenna(rt)), "alkiot")))
+            {
+                var r = MiniJson.Objekti(o);
+                var d = MiniJson.Kentta(r, "data") as Dictionary<string, object>;
+                var reitti = new Reitti
+                {
+                    id = MiniJson.Teksti(r, "id"),
+                    laji = MiniJson.Teksti(r, "laji"),
+                    a = MiniJson.Teksti(r, "a"),
+                    b = MiniJson.Teksti(r, "b"),
+                    tyyppi = d != null ? MiniJson.Teksti(d, "type") : null,
+                };
+                if (d != null && MiniJson.Kentta(d, "via") is List<object> via)
+                {
+                    reitti.via = new List<double2>();
+                    foreach (var v in via)
+                    {
+                        var xy = MiniJson.Taulukko(v);
+                        reitti.via.Add(new double2(System.Convert.ToDouble(xy[0]), System.Convert.ToDouble(xy[1])));
+                    }
+                }
+                if (!kaupungit.ContainsKey(reitti.a) || !kaupungit.ContainsKey(reitti.b)) continue;
+                reitit.Add(reitti);
+                Lisaa(reitti.a, reitti);
+                Lisaa(reitti.b, reitti);
+            }
+            Valmis = true;
+            Debug.Log($"MATKAKIRJA reitit: {reitit.Count} reittiä, {kaupungit.Count} kaupunkia");
+        }
+
+        void Lisaa(string kaupunki, Reitti r)
+        {
+            if (!naapurit.TryGetValue(kaupunki, out var l)) naapurit[kaupunki] = l = new List<Reitti>();
+            l.Add(r);
+        }
+
+        /// <summary>Onko kaupunkien välillä reitti (kumpaan suuntaan tahansa)?</summary>
+        public bool OnReitti(string a, string b) => Hae(a, b) != null;
+
+        Reitti Hae(string a, string b)
+        {
+            if (!naapurit.TryGetValue(a, out var l)) return null;
+            return l.Find(r => (r.a == a && r.b == b) || (r.a == b && r.b == a));
+        }
+
+        /// <summary>Näyttää kaupungin naapurireitit ja lentokaaret (vanhat pois).</summary>
+        public void NaytaNaapurit(string kaupunki)
+        {
+            Tyhjenna(false);
+            if (!naapurit.TryGetValue(kaupunki, out var l)) return;
+            foreach (var r in l) naytetyt.Add(Piirra(r, Materiaali(r)));
+        }
+
+        /// <summary>Korostaa reitin a–b (valittu matka). Palauttaa false, jos reittiä ei ole.</summary>
+        public bool Korosta(string a, string b)
+        {
+            if (korostettu != null) Destroy(korostettu);
+            var r = Hae(a, b);
+            if (r == null) return false;
+            korostettu = Piirra(r, korostus);
+            return true;
+        }
+
+        public void Tyhjenna(bool myosKorostus = true)
+        {
+            foreach (var g in naytetyt) Destroy(g);
+            naytetyt.Clear();
+            if (myosKorostus && korostettu != null) { Destroy(korostettu); korostettu = null; }
+        }
+
+        Material Materiaali(Reitti r) => r.laji == "lento" ? lento : r.laji == "sea" || r.tyyppi == "sea" ? meri : maa;
+
+        void Update()
+        {
+            float kerroin = Screen.dpi > 0 ? Mathf.Max(1f, Screen.dpi / 163f) : 1f;
+            foreach (var m in new[] { maa, meri, lento, korostus })
+                if (m != null) m.SetFloat("_Kerroin", kerroin);
+        }
+
+        List<double3> Pisteet(Reitti r)
+        {
+            if (r.pisteet != null) return r.pisteet;
+            var A = kaupungit[r.a];
+            var B = kaupungit[r.b];
+            var ulos = new List<double3>();
+            if (r.laji == "lento" || !A.lautaOn || !B.lautaOn)
+            {
+                // Lentokaari: isoympyrä, joka nousee keskeltä matkan pituuden mukaan.
+                double kulma = ReittiGeometria.Kulma(A.lat, A.lon, B.lat, B.lon);
+                double huippu = r.laji == "lento"
+                    ? kaarenKorkeus * math.clamp(kulma / 180.0, 0.02, 1.0) * CesiumWgs84Ellipsoid.GetMaximumRadius()
+                    : 0;
+                int n = math.max(16, (int)(kulma * 2));
+                for (int i = 0; i <= n; i++)
+                {
+                    double t = (double)i / n;
+                    var p = ReittiGeometria.Isoympyra(A.lat, A.lon, B.lat, B.lon, t);
+                    ulos.Add(new double3(p.x, p.y, viivanKorkeus + huippu * math.sin(math.PI_DBL * t)));
+                }
+            }
+            else
+            {
+                // Mutkien tiiviste lasketaan verkkopelin reitin tunnuksesta edgeId(a, b) = "a|b".
+                var polku = ReittiGeometria.LaudanPolku(r.a + "|" + r.b, r.tyyppi ?? (r.laji == "sea" ? "sea" : null), A.lauta, B.lauta, r.via);
+                polku = ReittiGeometria.Korjaa(polku,
+                    ReittiGeometria.Siirtyma(A.lauta, A.lat, A.lon),
+                    ReittiGeometria.Siirtyma(B.lauta, B.lat, B.lon));
+                foreach (var p in polku)
+                {
+                    var ll = ReittiGeometria.Asteiksi(p.x, p.y);
+                    ulos.Add(new double3(ll.x, ll.y, viivanKorkeus));
+                }
+            }
+            return r.pisteet = ulos;
+        }
+
+        GameObject Piirra(Reitti r, Material materiaali)
+        {
+            var pisteet = Pisteet(r);
+            int n = pisteet.Count;
+            var paikat = new Vector3[n * 2];
+            var seuraavat = new Vector3[n * 2];
+            var puolet = new Vector2[n * 2];
+            var u = new Vector3[n];
+            for (int i = 0; i < n; i++)
+            {
+                var p = pisteet[i];
+                var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(p.y, p.x, p.z));
+                u[i] = (float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef);
+            }
+            double matka = 0;
+            for (int i = 0; i < n; i++)
+            {
+                if (i > 0) matka += ReittiGeometria.Kulma(pisteet[i - 1].x, pisteet[i - 1].y, pisteet[i].x, pisteet[i].y);
+                // Viimeisellä pisteellä suunta jatkuu edellisestä.
+                Vector3 seur = i < n - 1 ? u[i + 1] : u[i] + (u[i] - u[i - 1]);
+                for (int s = 0; s < 2; s++)
+                {
+                    int j = i * 2 + s;
+                    paikat[j] = u[i];
+                    seuraavat[j] = seur;
+                    puolet[j] = new Vector2(s == 0 ? -1 : 1, (float)matka);
+                }
+            }
+            var kolmiot = new int[(n - 1) * 6];
+            for (int i = 0, t = 0; i < n - 1; i++)
+            {
+                int a = i * 2;
+                kolmiot[t++] = a; kolmiot[t++] = a + 1; kolmiot[t++] = a + 2;
+                kolmiot[t++] = a + 1; kolmiot[t++] = a + 3; kolmiot[t++] = a + 2;
+            }
+            var mesh = new Mesh { name = "Reitti " + r.id };
+            mesh.vertices = paikat;
+            mesh.SetUVs(0, seuraavat);
+            mesh.SetUVs(1, puolet);
+            mesh.triangles = kolmiot;
+            mesh.RecalculateBounds();
+            var go = new GameObject("Reitti " + r.id);
+            go.transform.SetParent(georeferenssi.transform, false);
+            go.AddComponent<MeshFilter>().sharedMesh = mesh;
+            go.AddComponent<MeshRenderer>().sharedMaterial = materiaali;
+            return go;
+        }
+    }
+}

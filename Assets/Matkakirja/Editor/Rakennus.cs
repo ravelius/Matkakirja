@@ -64,6 +64,15 @@ namespace Matkakirja.Editori
             merkit.pisteMateriaali = Materiaali("Kaupunkipiste", "Matkakirja/Piste", new Color32(0x3b, 0x2f, 0x22, 0xff));
             merkit.fontti = Fontti();
 
+            // Reitit: värit ja katkot verkkopelin js/pallolauta/reitit.js REITIN_VARIT ja *_KATKO_AST.
+            var reitit = georefGo.AddComponent<Reitit>();
+            reitit.georeferenssi = georef;
+            reitit.maa = Viiva("Reitti-maa", new Color32(74, 58, 36, 107), 2.5f, new Vector4(0.16f, 0.5f, 0, 0));
+            reitit.meri = Viiva("Reitti-meri", new Color32(61, 85, 112, 107), 2.5f, new Vector4(0.16f, 0.5f, 0, 0));
+            reitit.lento = Viiva("Reitti-lento", new Color32(150, 54, 40, 153), 2.5f, new Vector4(0.35f, 0.6f, 0.35f / 2.4f, 0));
+            reitit.korostus = Viiva("Reitti-korostus", new Color32(96, 40, 26, 230), 4f, new Vector4(0.35f, 0.6f, 0.35f / 1.2f, 0));
+            merkit.reitit = reitit;
+
             var korttiGo = new GameObject("Käyttöliittymä");
             var kortti = korttiGo.AddComponent<NimiKortti>();
             kortti.fontti = merkit.fontti;
@@ -138,6 +147,15 @@ namespace Matkakirja.Editori
             foreach (var t in fa.atlasTextures) { t.name = "EBGaramond SDF Atlas"; AssetDatabase.AddObjectToAsset(t, fa); }
             AssetDatabase.SaveAssets();
             return AssetDatabase.LoadAssetAtPath<TMPro.TMP_FontAsset>(FonttiAsset);
+        }
+
+        static Material Viiva(string nimi, Color vari, float paksuus, Vector4 katko)
+        {
+            var m = Materiaali(nimi, "Matkakirja/Viiva", vari);
+            m.SetFloat("_Paksuus", paksuus);
+            m.SetVector("_Katko", katko);
+            EditorUtility.SetDirty(m);
+            return m;
         }
 
         static Material KansiMateriaali(string nimi, Color vari) => Materiaali(nimi, "Matkakirja/Napakansi", vari);

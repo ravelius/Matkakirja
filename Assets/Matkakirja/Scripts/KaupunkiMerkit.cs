@@ -23,6 +23,7 @@ namespace Matkakirja
         public Camera kamera;
         public PalloKierto kierto;
         public NimiKortti kortti;
+        public Reitit reitit;
         [Tooltip("Kaupunkiin saapumisen näkymä: kapeamman suunnan kaari asteina " +
                  "(verkkopelin PALLO_SUKELLUSLEVEYS 620 laudan yksikköä = 18,6°).")]
         public double saapumisKaari = 18.6;
@@ -171,12 +172,28 @@ namespace Matkakirja
             ValitseKaupunki(paras.kaupunki);
         }
 
-        /// <summary>Lento kaupunkiin ja nimikortti saapuessa (myös ohjelmallisesti).</summary>
+        string valittu;
+
+        /// <summary>
+        /// Lento kaupunkiin ja nimikortti saapuessa (myös ohjelmallisesti). Jos edellisestä
+        /// valitusta kaupungista on reitti, se korostetaan lennon ajaksi; saavuttaessa
+        /// näytetään uuden kaupungin naapurireitit.
+        /// </summary>
         public void ValitseKaupunki(Sisalto.Kaupunki k)
         {
             kortti?.Piilota();
             kierto.IlmoitaKaupunki(k.id);
-            kierto.Aja(k.lat, k.lon, kierto.KorkeusKaarelle(saapumisKaari), saapumisKesto, () => kortti?.Nayta(k));
+            if (reitit != null)
+            {
+                reitit.Tyhjenna();
+                if (valittu != null && valittu != k.id) reitit.Korosta(valittu, k.id);
+            }
+            valittu = k.id;
+            kierto.Aja(k.lat, k.lon, kierto.KorkeusKaarelle(saapumisKaari), saapumisKesto, () =>
+            {
+                kortti?.Nayta(k);
+                if (reitit != null) { reitit.Tyhjenna(); reitit.NaytaNaapurit(k.id); }
+            });
         }
 
         public bool ValitseKaupunki(string id)

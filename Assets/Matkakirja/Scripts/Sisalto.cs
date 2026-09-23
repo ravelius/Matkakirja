@@ -56,22 +56,40 @@ namespace Matkakirja
         /// <summary>Hakee kokoelman. valmis(null) = ei verkkoa eikä välimuistia.</summary>
         public static IEnumerator Hae<T>(string kokoelma, Action<T[]> valmis)
         {
-            string versioPolku = null;
-            using (var p = UnityWebRequest.Get(Osoitin))
+            string teksti = null;
+            yield return HaeTeksti(kokoelma, t => teksti = t);
+            valmis(teksti == null ? null : JsonUtility.FromJson<Kokoelma<T>>(teksti).alkiot);
+        }
+
+        /// <summary>
+        /// Hakee kokoelman raakatekstinä (sisäkkäiset taulukot, kuten reittien via,
+        /// luetaan MiniJsonilla). Osoitin haetaan kerran istuntoa kohden.
+        /// </summary>
+        public static IEnumerator HaeTeksti(string kokoelma, Action<string> valmis)
+        {
+            while (osoitinHaussa) yield return null;
+            string versioPolku = istunnonPolku;
+            if (versioPolku == null)
             {
-                p.timeout = 10;
-                yield return p.SendWebRequest();
-                if (p.result == UnityWebRequest.Result.Success)
+                osoitinHaussa = true;
+                using (var p = UnityWebRequest.Get(Osoitin))
                 {
-                    var o = JsonUtility.FromJson<OsoitinTiedot>(p.downloadHandler.text);
-                    versioPolku = o.polku;
-                    Debug.Log($"MATKAKIRJA sisältö: versio {o.versio}, skeema {o.skeemaversio}, {o.polku}");
+                    p.timeout = 10;
+                    yield return p.SendWebRequest();
+                    if (p.result == UnityWebRequest.Result.Success)
+                    {
+                        var o = JsonUtility.FromJson<OsoitinTiedot>(p.downloadHandler.text);
+                        versioPolku = o.polku;
+                        Debug.Log($"MATKAKIRJA sisältö: versio {o.versio}, skeema {o.skeemaversio}, {o.polku}");
+                    }
+                    else if (File.Exists(ViimeisinPolku))
+                    {
+                        versioPolku = File.ReadAllText(ViimeisinPolku).Trim();
+                        Debug.LogWarning($"MATKAKIRJA sisältö: osoitin ei vastaa ({p.error}), käytetään {versioPolku}");
+                    }
                 }
-                else if (File.Exists(ViimeisinPolku))
-                {
-                    versioPolku = File.ReadAllText(ViimeisinPolku).Trim();
-                    Debug.LogWarning($"MATKAKIRJA sisältö: osoitin ei vastaa ({p.error}), käytetään {versioPolku}");
-                }
+                osoitinHaussa = false;
+                istunnonPolku = versioPolku;
             }
             if (versioPolku == null) { valmis(null); yield break; }
 
@@ -98,7 +116,10 @@ namespace Matkakirja
                 File.WriteAllText(tiedosto, teksti);
                 File.WriteAllText(ViimeisinPolku, versioPolku);
             }
-            valmis(JsonUtility.FromJson<Kokoelma<T>>(teksti).alkiot);
+            valmis(teksti);
         }
+
+        static bool osoitinHaussa;
+        static string istunnonPolku;
     }
 }
