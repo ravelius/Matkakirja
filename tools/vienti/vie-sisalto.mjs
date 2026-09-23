@@ -70,10 +70,13 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *   1.8  kokoelma aanitaulut (tehosteet ja näytteet, ambienssit, pulu,
  *        siirtymä-, tila- ja paikkaraidat, musiikkiketju kaupungeittain)
  *   1.9  kokoelmat kuvakysymykset, lippumaat, pulmaaineisto, luennat
- *        (aikaleimoineen), livianpuhe, maat, karttamerkit, karttavalot,
- *        maastonimet ja maarajat; offline.json (manifest.offline)
+ *        (aikaleimoineen), livianpuhe ja maat; offline.json (manifest.offline)
+ *   1.10 (nippu 4) kokoelmat karttamerkit, karttavalot, maastonimet ja
+ *        maarajat; muotokuva kohtaamisiin ja tarinakaareen, laattojen ja
+ *        paikallisaarteiden kuvat, linssiluennat, saannot KATKOKUVA.
+ *        Vertaa versioita numeroina (1.10 > 1.9), ei merkkijonoina.
  */
-export const SKEEMAVERSIO_TARKKA = '1.9';
+export const SKEEMAVERSIO_TARKKA = '1.10';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 const tavuja = (s) => Buffer.byteLength(s);
