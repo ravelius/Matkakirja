@@ -434,7 +434,10 @@ namespace Matkakirja.Natiivi
                     }
                     else if (!a.isPlaying && nyt - l.KaynnistysAika > Aanilataus.LatausvahtiS)
                     {
+                        // Klippi ei lähtenyt soimaan (esim. striimi ei aukea): purkuvirhe, kerran.
                         var ll = l;
+                        l.Kaynnistetty = l.Ladattu = false;
+                        a.Stop();
                         Tee(() => Epaonnistui(ll, new Latausvirhe { Purku = true }));
                         continue;
                     }
