@@ -7,7 +7,8 @@
 //
 // TÄMÄN ERÄN LAAJUUS: yksinpeli vaellustilassa (roaming), matkustus,
 // saapuminen, raha ja aika. Laatat, kysymykset, kaksintaistelut, XP ja
-// pulmat puuttuvat; niille on koukut:
+// pulmat puuttuvat; niille on koukut (erä 2: Peli/Kysely.cs asettaa kaksi
+// ensimmäistä ja Peli/Kokemus.cs kuuntelee Saapui-tapahtumaa):
 //   TehtavaTarjolla  — web tehtavaTarjolla: tuo 'stay'-tavan (Pysy)
 //   Tutki            — web actionQuiz: mitä Pysy tekee
 //   Tavoitteet       — web needsAid: laattakaupungit (null = kaikki, kuten
@@ -68,6 +69,19 @@ namespace Matkakirja.Peli
         /// </summary>
         public static Matka UusiPeli(IReittiverkko verkko, Satunnainen satunnainen, string nimi, string aloitus)
         {
+            var m = Luo(verkko, satunnainen, nimi, aloitus);
+            m.AloitaVuoro();
+            return m;
+        }
+
+        /// <summary>
+        /// Kuten UusiPeli, mutta ensimmäinen vuoro jää aloittamatta: kutsuja
+        /// kytkee ensin koukut (Kysely, laatat), koska webin konstruktorin
+        /// beginTurn laskee automaattivalinnan jo niiden kanssa. Sen jälkeen
+        /// kutsutaan AloitaVuoro().
+        /// </summary>
+        public static Matka Luo(IReittiverkko verkko, Satunnainen satunnainen, string nimi, string aloitus)
+        {
             if (!verkko.Kaupungit.ContainsKey(aloitus)) throw new ArgumentException($"Tuntematon kaupunki {aloitus}");
             var tila = new Pelitila();
             tila.Pelaajat.Add(new Pelaaja
@@ -77,9 +91,7 @@ namespace Matkakirja.Peli
                 Aloitus = aloitus,
                 Sijainti = Sijainti.KaupungissaSijainti(aloitus),
             });
-            var m = new Matka(verkko, satunnainen, tila);
-            m.AloitaVuoro();
-            return m;
+            return new Matka(verkko, satunnainen, tila);
         }
 
         /// <summary>

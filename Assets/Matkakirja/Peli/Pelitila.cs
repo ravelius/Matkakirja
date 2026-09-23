@@ -2,10 +2,12 @@
 // datana (pelaajat, vaihe, noppa, kulkutapa, kello) sekä tallennus omaan
 // yksinkertaiseen JSON-muotoon ja takaisin (MiniJson).
 //
-// Säännöt ovat Peli/Matka.cs:ssä; tämä tiedosto ei päätä mitään, vaan
-// pitää kirjaa. Tämän erän laajuus: yksinpeli (roaming), matkustus, raha
-// ja aika. Laatat, kysymykset, kaksintaistelut, XP ja pulmat tulevat
-// myöhemmissä erissä omiin kenttiinsä (tallennusversio nousee silloin).
+// Säännöt ovat Peli/Matka.cs:ssä ja Peli/Kysely.cs:ssä; tämä tiedosto ei
+// päätä mitään, vaan pitää kirjaa. Erä 1: yksinpeli (roaming), matkustus,
+// raha ja aika. Erä 2 (tallennusversio 2): tietäjäpisteet ja tietoprosentin
+// laskurit pelaajalle sekä kysymysmoottorin tila (Kyselytila: käytetyt
+// kysymykset, tutkitut, kohtaamiset, aarrelukot, avoin kysymys).
+// Laatat, kaksintaistelut ja pulmat tulevat omiin kenttiinsä.
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -24,12 +26,21 @@ namespace Matkakirja.Peli
         public string Aloitus;                   // web start
         /// <summary>Käydyt kaupungit (web world.visited; yksi lauta).</summary>
         public HashSet<string> Kaydyt = new HashSet<string>();
+        /// <summary>Tietäjäpisteet (web xp). Lisäys vain Kokemus.Anna-portin kautta.</summary>
+        public int Xp;
+        /// <summary>Kysytyt ja oikein vastatut (web quizAsked, quizCorrect): tietoprosentti.</summary>
+        public int Kysytty;
+        public int Oikein;
+        /// <summary>Kysymysten taso (web quizLevel: 'easy' → Helppo, muuten Perus).</summary>
+        public Vaikeustaso Taso = Vaikeustaso.Perus;
+        /// <summary>Tekoälypelaaja (web isBot): ei kohtaamisia eikä tasokuplia.</summary>
+        public bool Botti;
     }
 
     /// <summary>Pelin tila (web Game): matkan kentät ja kello.</summary>
     public sealed class Pelitila
     {
-        public const int TallennusVersio = 1;
+        public const int TallennusVersio = 2;
 
         public List<Pelaaja> Pelaajat = new List<Pelaaja>();
         public int Vuorossa;                                   // web current
@@ -55,6 +66,9 @@ namespace Matkakirja.Peli
         public uint Siemen;
         public long Arvontoja;
 
+        /// <summary>Kysymysmoottorin tila (Peli/Kysely.cs).</summary>
+        public Kyselytila Kysely = new Kyselytila();
+
         // --- aika (web elapsedHours, dayCount, timeOfDay) -------------------
 
         /// <summary>Kuluneet tunnit matkan alusta; ensimmäinen vuoro on hetki nolla.</summary>
@@ -76,9 +90,10 @@ namespace Matkakirja.Peli
         // --- tallennus ------------------------------------------------------
 
         /// <summary>
-        /// Tila JSON-tekstinä. Kentät ovat tämän erän omia (ei webin
+        /// Tila JSON-tekstinä. Kentät ovat portin omia (ei webin
         /// toJSON-muoto): versio, siemen, arvontoja, vuorossa, vaihe,
-        /// vuoroLaskuri, noppa, kulkutapa, autoMatka, odottavaMaksu, pelaajat.
+        /// vuoroLaskuri, noppa, kulkutapa, autoMatka, odottavaMaksu, pelaajat
+        /// (myös xp, kysytty, oikein, taso, botti) ja kysely (Kyselytila).
         /// Sijainti tallennetaan avaimena (web posKey).
         /// </summary>
         public string ToJson()
@@ -109,9 +124,17 @@ namespace Matkakirja.Peli
                 // Järjestetty, jotta sama tila antaa aina saman tekstin.
                 var kaydyt = p.Kaydyt.OrderBy(k => k, StringComparer.Ordinal).Select(Teksti);
                 sb.Append(",\"kaydyt\":[").Append(string.Join(",", kaydyt)).Append(']');
+                Kentta(sb, "xp", p.Xp.ToString(CultureInfo.InvariantCulture));
+                Kentta(sb, "kysytty", p.Kysytty.ToString(CultureInfo.InvariantCulture));
+                Kentta(sb, "oikein", p.Oikein.ToString(CultureInfo.InvariantCulture));
+                Kentta(sb, "taso", Teksti(p.Taso.ToString()));
+                Kentta(sb, "botti", p.Botti ? "true" : "false");
                 sb.Append('}');
             }
-            sb.Append("]}");
+            sb.Append(']');
+            sb.Append(",\"kysely\":");
+            Kysely.Kirjoita(sb);
+            sb.Append('}');
             return sb.ToString();
         }
 
@@ -123,7 +146,8 @@ namespace Matkakirja.Peli
         {
             var o = MiniJson.Objekti(MiniJson.Jasenna(json));
             var versio = (int)(MiniJson.Luku(o, "versio") ?? 0);
-            if (versio != TallennusVersio) throw new FormatException($"tuntematon tallennusversio {versio}");
+            // Versio 1 (erä 1) luetaan oletuksin: ei pisteitä eikä kysymystilaa.
+            if (versio != TallennusVersio && versio != 1) throw new FormatException($"tuntematon tallennusversio {versio}");
             var t = new Pelitila
             {
                 Siemen = (uint)(MiniJson.Luku(o, "siemen") ?? 0),
@@ -147,12 +171,19 @@ namespace Matkakirja.Peli
                     Raha = (int)(MiniJson.Luku(pd, "raha") ?? 0),
                     Sijainti = LueSijainti(MiniJson.Teksti(pd, "sijainti")),
                     Aloitus = MiniJson.Teksti(pd, "aloitus"),
+                    Xp = (int)(MiniJson.Luku(pd, "xp") ?? 0),
+                    Kysytty = (int)(MiniJson.Luku(pd, "kysytty") ?? 0),
+                    Oikein = (int)(MiniJson.Luku(pd, "oikein") ?? 0),
+                    Taso = MiniJson.Teksti(pd, "taso") is string taso
+                        ? (Vaikeustaso)Enum.Parse(typeof(Vaikeustaso), taso) : Vaikeustaso.Perus,
+                    Botti = MiniJson.Totuus(pd, "botti"),
                 };
                 foreach (var kay in MiniJson.Taulukko(MiniJson.Kentta(pd, "kaydyt") ?? new List<object>()))
                     p.Kaydyt.Add((string)kay);
                 t.Pelaajat.Add(p);
             }
             if (t.Pelaajat.Count == 0) throw new FormatException("tallennuksessa ei ole pelaajia");
+            t.Kysely = Kyselytila.Lue(MiniJson.Kentta(o, "kysely") as Dictionary<string, object>);
             return t;
         }
 
@@ -176,7 +207,7 @@ namespace Matkakirja.Peli
         }
 
         /// <summary>JSON-merkkijono lainausmerkkeineen; null → null.</summary>
-        static string Teksti(string s)
+        internal static string Teksti(string s)
         {
             if (s == null) return "null";
             var sb = new StringBuilder(s.Length + 2);
