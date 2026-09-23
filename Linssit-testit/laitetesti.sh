@@ -13,6 +13,10 @@
 #   ./laitetesti.sh astronautti <kansio>   kuvasarja ja loki
 #   ./laitetesti.sh keksinnot <kansio>     kuvasarja ja loki
 #   ./laitetesti.sh maat <kansio>          vertailu ja maatiedot: valinnat, täysi lista, lehti
+#   ./laitetesti.sh radio <kansio> [radiot.json]
+#                                          radiokokoelma koekansioon, uudelleenkäynnistys, asemat
+#                                          RADIOT (oletus "CHE DEU UGA FIN") ~12 s kukin äänellä 0
+#                                          (vanha käännös ohittaa "radio aani 0" kanavattomana maana)
 #   ./laitetesti.sh kontakti <kansio>      kontaktiarkin natiivikuvat (samat näkymät kuin webin
 #                                          kuvissa, ks. docs/raportit/linssit-kontaktiarkki-*.md)
 #
@@ -68,6 +72,14 @@ case "$1" in
     linssi "maa JPN"; sleep 3; kuva kontakti-maatiedot
     linssi "lehti" "maa KOR"; sleep 3; kuva linssitesti-maatiedot-kor
     linssi "linssi pois"; sleep 4; hae "$2"; tail -20 "$2/linssi-loki.txt" ;;
+  radio)
+    sinne "${3:-/Users/Shared/Claude/proto-3d/lokit/radio-koe/kokoelmat/radiot.json}" sisalto-koe/kokoelmat/radiot.json && echo "koekansioon: kokoelmat/radiot.json"
+    kaynnista; portti
+    linssi "tila" "linssi radio"; sleep 6; linssi "radio aani 0"; sleep 1
+    for m in ${=RADIOT:-CHE DEU UGA FIN}; do
+      linssi "radio $m"; sleep 12; linssi "radio tila"; sleep 1; kuva linssitesti-radio-$m
+    done
+    linssi "radio stop" "linssi pois"; sleep 3; hae "$2"; grep -a "radio" "$2/linssi-loki.txt" | tail -30 ;;
   kontakti)
     # Kiinteät näkymät (lat lon korkeus km); keksinnöt, ihmisen matka ja astronautti
     # ohjaavat kameraa itse, joten niistä otetaan linssin oma näkymä.

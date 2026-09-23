@@ -13,10 +13,9 @@
 // KaupunkiMerkit.NaytaVain/Korosta), joten koko tilakone testataan ilman editoria.
 // UI (Natiivi-UI: kotelo, pistenäyttö, kartuscha) lukee TilaMuuttui-tapahtumaa.
 //
-// HYBRIDIMALLI (omistaja 23.9.2026, Siirtosepän lisenssiluokat): "sallittu" soitetaan,
-// "linkki" näyttää aseman nimen ja sivun (UI: "Avaa aseman sivu"), "kielletty" soittaa vain
-// vara-äänitteen, jos sellainen on. Luokaton (varareitti) ei soi koskaan, ei edes
-// kehittäjätilassa (Fablen sitova sääntö 23.9.2026: esim. Yle on kielletty).
+// LISENSSILUOKAT (omistaja 23.9.2026 klo 21.1x): "sallittu" ja "epaselva" soitetaan,
+// "kielletty" näyttää aseman nimen ja sivun (UI: "Avaa aseman sivu"), luokaton ei soi eikä
+// linkitä missään tilassa (ei edes kehittäjätilassa).
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -111,18 +110,25 @@ namespace Matkakirja.Linssit.Radio
         /// <summary>Mitä asemalle tehdään sen lisenssiluokan mukaan (hybridimalli).</summary>
         public enum Toiminto { Soita, Aanite, Linkki, Ei }
 
+        /// <summary>
+        /// Omistajan päätös 23.9.2026 klo 21.1x (kumoaa aiemman): "sallittu" ja "epaselva" soivat,
+        /// "kielletty" on linkki aseman sivulle (ilman sivua ei mitään), luokaton ei soi eikä
+        /// linkitä. Vanha luokka "linkki" (koepaketti v16) käsitellään kuten kielletty.
+        /// </summary>
         public static Toiminto ToimintoAsemalle(Asema a)
         {
             if (a == null) return Toiminto.Ei;
             switch (a.Luokka)
             {
-                case "sallittu": return string.IsNullOrEmpty(a.Url) ? Toiminto.Ei : Toiminto.Soita;
-                case "linkki": return string.IsNullOrEmpty(a.Sivu) ? (string.IsNullOrEmpty(a.VaraUrl) ? Toiminto.Ei : Toiminto.Aanite) : Toiminto.Linkki;
-                case "kielletty": return string.IsNullOrEmpty(a.VaraUrl) ? Toiminto.Ei : Toiminto.Aanite;
-                // Luokaton (moduulin varareitti, kokoelma puuttuu) ei soi koskaan, ei edes
-                // kehittäjätilassa (Fablen sitova radiosääntö 23.9.2026).
-                case null: return string.IsNullOrEmpty(a.Sivu) ? Toiminto.Ei : Toiminto.Linkki;
-                default: return Toiminto.Ei;
+                case "sallittu":
+                case "epaselva":
+                case "epäselvä":
+                    return string.IsNullOrEmpty(a.Url) ? Toiminto.Ei : Toiminto.Soita;
+                case "kielletty":
+                case "linkki":
+                    return string.IsNullOrEmpty(a.Sivu) ? Toiminto.Ei : Toiminto.Linkki;
+                default:
+                    return Toiminto.Ei;   // luokaton (kokoelma puuttuu) tai tuntematon luokka
             }
         }
 

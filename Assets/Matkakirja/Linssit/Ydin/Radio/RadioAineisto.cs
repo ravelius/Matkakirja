@@ -3,8 +3,11 @@
 //
 // Lähteet sisältöpaketissa, ensisijainen ensin:
 //   kokoelmat/radiot.json          Siirtoseppä 23.9. (omistajan hybridimalli): { id, iso3, nimi, url,
-//                                  tyyppi, yleisradio, lahde, sivu, luokka "sallittu" | "linkki" |
-//                                  "kielletty", peruste, varaAani { url, kesto, tekija, lisenssi } | null }
+//                                  tyyppi, yleisradio, lahde, sivu, luokka "sallittu" | "epaselva" |
+//                                  "kielletty", jarjestys, peruste, varaAani { url, kesto, tekija, lisenssi } | null }
+//                                  Skeema 1.16 (v17): useampi rivi per maa; kanava = pienin jarjestys
+//                                  (rivi 1 soi aina), muut rivit Vaihtoehdot-listaan (esim. kielletty
+//                                  yleisradio "<ISO3>:yleisradio", jarjestys 2 → linkki UI:lle).
 //   moduulit/js/packs/radiot.json  RADIOT { ISO3: { url, asema, virallinen } } (varareitti ilman
 //                                  lisenssitietoa: luokka null → ei soittoa, ei edes kehittäjätilassa)
 //   kokoelmat/kaupungit.json       kaupungit laudan järjestyksessä (maa, aloitus, lentokentta)
@@ -23,15 +26,16 @@ namespace Matkakirja.Linssit.Radio
 {
     public sealed class Asema
     {
-        public string Iso3, Nimi, Url, Tyyppi;
+        public string Id, Iso3, Nimi, Url, Tyyppi;
         public bool Yleisradio;
+        /// <summary>Maan rivien järjestys (skeema 1.16); puuttuva = 1.</summary>
+        public int Jarjestys = 1;
         /// <summary>
-        /// Omistajan hybridimalli (23.9.2026): "sallittu" = soitetaan sovelluksessa, "linkki" =
-        /// aseman oma sivu avataan (ei soittoa), "kielletty" = vain vara-äänite jos on.
-        /// null = tuntematon (varareitin moduuli): ei soittoa missään tilassa.
+        /// Omistajan luokkasääntö (23.9.2026 klo 21.1x): "sallittu" ja "epaselva" soivat, "kielletty"
+        /// (ja v16:n vanha "linkki") avaa aseman sivun. null = tuntematon (varareitin moduuli): ei soittoa.
         /// </summary>
         public string Luokka;
-        /// <summary>Aseman oma https-sivu (luokka linkki).</summary>
+        /// <summary>Aseman oma sivu (luokka kielletty → linkki).</summary>
         public string Sivu;
         /// <summary>Vanha äänite (kielletty tai lähetyksen varareitti), null jos ei ole.</summary>
         public string VaraUrl;
@@ -57,6 +61,8 @@ namespace Matkakirja.Linssit.Radio
         public static readonly ISet<char> Pistefontti = new HashSet<char>(PistefontinMerkit);
 
         public readonly Dictionary<string, Asema> Asemat = new Dictionary<string, Asema>(StringComparer.Ordinal);
+        /// <summary>Maan muut rivit järjestyksessä (skeema 1.16), esim. kielletty yleisradio linkkinä.</summary>
+        public readonly Dictionary<string, List<Asema>> Vaihtoehdot = new Dictionary<string, List<Asema>>(StringComparer.Ordinal);
         public readonly List<RadioKaupunki> Kaupungit = new List<RadioKaupunki>();
         public readonly Dictionary<string, string> Maat = new Dictionary<string, string>(StringComparer.Ordinal);
         public readonly List<string> Viritysaanet = new List<string>();
@@ -67,6 +73,11 @@ namespace Matkakirja.Linssit.Radio
 
         static Dictionary<string, object> Ob(object x) => x as Dictionary<string, object>;
         static List<object> Lista(object x) => x as List<object>;
+        static void Lisaa(Dictionary<string, List<Asema>> d, string iso, Asema a)
+        {
+            if (!d.TryGetValue(iso, out var l)) d[iso] = l = new List<Asema>();
+            l.Add(a);
+        }
         static Dictionary<string, object> Vienti(object moduuli, string nimi)
         {
             var o = Ob(MiniJson.Kentta(Ob(MiniJson.Kentta(Ob(moduuli), "exportit")), nimi));
@@ -93,14 +104,20 @@ namespace Matkakirja.Linssit.Radio
                     var luokka = MiniJson.Teksti(r, "luokka")
                         ?? MiniJson.Teksti(Ob(MiniJson.Kentta(r, "lisenssi")), "luokka");
                     if (iso == null) continue;
-                    a.Asemat[iso] = new Asema
+                    var asema = new Asema
                     {
+                        Id = MiniJson.Teksti(r, "id") ?? iso,
                         Iso3 = iso, Nimi = MiniJson.Teksti(r, "nimi"), Url = url, Tyyppi = MiniJson.Teksti(r, "tyyppi"),
                         Yleisradio = MiniJson.Totuus(r, "yleisradio"), Luokka = luokka,
+                        Jarjestys = (int)(MiniJson.Luku(r, "jarjestys") ?? 1),
                         Sivu = MiniJson.Teksti(r, "sivu"),
                         VaraUrl = MiniJson.Teksti(Ob(MiniJson.Kentta(r, "varaAani")), "url"),
                     };
+                    // Kanava = pienin järjestys (tasapelissä ensimmäinen); muut rivit vaihtoehdoiksi.
+                    if (a.Asemat.TryGetValue(iso, out var ed) && ed.Jarjestys <= asema.Jarjestys) Lisaa(a.Vaihtoehdot, iso, asema);
+                    else { if (ed != null) Lisaa(a.Vaihtoehdot, iso, ed); a.Asemat[iso] = asema; }
                 }
+                foreach (var v in a.Vaihtoehdot.Values) v.Sort((x, y) => x.Jarjestys.CompareTo(y.Jarjestys));
             }
             else if (Vienti(radiotModuuli, "RADIOT") is Dictionary<string, object> taulu)
             {
