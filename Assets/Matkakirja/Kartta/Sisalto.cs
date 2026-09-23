@@ -40,6 +40,8 @@ namespace Matkakirja
             public string sijaintiLahde;
             /// <summary>Skeema 1.2: 0–3 (3 = pääkaupunki tai aloitus). -1 = ei paketissa.</summary>
             public int tarkeys = -1;
+            /// <summary>Skeema 1.10: pintakorkeus metreinä merenpinnasta (null paketissa = 0).</summary>
+            public double korkeus;
         }
 
         [Serializable]
