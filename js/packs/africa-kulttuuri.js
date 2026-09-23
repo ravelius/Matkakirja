@@ -1433,45 +1433,20 @@ export const AFRICA_KULTTUURI = {
         + 'koti, vanhan sulttaanikunnan maa.',
     },
   },
+  // Suakinin litteät nostot siirtyivät kaupunkilehteen
+  // (kulttuuri-kategoriat.js, suakin) 23.9.2026: koralli ja pyhiinvaeltajat
+  // kirjoitettiin siellä uudelleen lähteestä tarkistettuina, ja "Kahvia ja
+  // helmiä" jäi pois, koska sille ei löytynyt lähdettä. Visan lähdejuttu on
+  // Rakennukset-sivun "Talot merenpohjasta"; visan fakta korjattiin samalla
+  // (korallia ei sahattu, eikä se sulanut sateisiin).
   suakin: {
-    nostot: [
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Korallista rakennettu kaupunki',
-        tiedosto: 'Suakin,el-Geyf mosque.jpg',
-        teksti: 'Suakinin talot ja moskeijat rakennettiin '
-          + 'korallikivestä, jota sahattiin lohkareina merestä. '
-          + 'Huokoinen kivi viilensi huoneet helteellä — mutta kun '
-          + 'kaupunki hiljeni, korallitalot alkoivat sulaa sateisiin '
-          + 'kuin sokeri.',
-        selite: 'El-Geyfin moskeija Suakinissa: korallikiviset seinät '
-          + 'ja veistetyt puuparvekkeet kertovat ajasta, jolloin saaren '
-          + 'kaupunki oli Punaisenmeren tärkeimpiä satamia.',
-        lahde: 'Bertramz, Wikimedia Commons (CC BY 3.0)',
-      },
-      {
-        tyyppi: 'teksti',
-        otsikko: 'Pyhiinvaeltajien satama',
-        teksti: 'Suakinista purjehdittiin vuosisatojen ajan Mekkaan: '
-          + 'pyhiinvaeltajat kokoontuivat saarelle koko Afrikan '
-          + 'sisämaasta ja odottivat monsuunituulta, joka kantaisi '
-          + 'dhow-veneet Punaisenmeren yli.',
-      },
-      {
-        tyyppi: 'teksti',
-        otsikko: 'Kahvia ja helmiä',
-        teksti: 'Suakinin basaarissa vaihtoivat omistajaa Jemenin kahvi, '
-          + 'Intian kankaat, norsunluu ja helmet, joita sukeltajat '
-          + 'nostivat riutoilta vapaasukelluksella. Helmenkalastajien '
-          + 'laulut tahdittivat sukelluksia kuin airot soutua.',
-      },
-    ],
     kysymys: {
       q: 'Mistä Suakinin talot rakennettiin?',
       options: ['Tiilestä', 'Marmorista', 'Korallikivestä', 'Puusta'],
       correct: 2,
-      fact: 'Korallia sahattiin merestä lohkareina — huokoinen kivi '
-        + 'viilensi talot, mutta suli hoitamattomana sateisiin.',
+      fact: 'Korallikivi nostettiin merenpohjasta — ilman suojaavaa '
+        + 'rappausta se rapautui nopeasti, ja vanha kaupunki on nyt '
+        + 'raunioina.',
     },
   },
   rashafun: {

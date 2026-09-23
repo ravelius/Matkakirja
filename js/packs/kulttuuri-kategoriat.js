@@ -106801,4 +106801,329 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * SUAKIN (Afrikan kaupunkilehtierä O7, toinen erä, 23.9.2026).
+   *
+   * KANSI ON HISTORIAN SIVU (Timbuktun ja Karthagon malli): kannella on
+   * kahdeksan juttua, toinen aihe on Rakennukset ("Korallikaupunki")
+   * minitehtävineen. Kansikuvat, avauskuvat ja matkailijalle-osio tulevat
+   * myöhemmällä kierroksella.
+   *
+   * VANHAT LITTEÄT NOSTOT (africa-kulttuuri.js) siirtyivät tänne
+   * lähteestä tarkistettuina. Korjattua: (1) Korallia ei "sahattu" eikä
+   * lähde sano huokoisen kiven viilentäneen huoneita — lähteen mukaan
+   * madrepori eli korallikivi nostettiin merenpohjasta. (2) Talot eivät
+   * "sulaneet sateisiin kuin sokeri": Suakinissa ei juuri sada (vain
+   * loka–joulukuussa satunnaisia kuuroja), ja lähde sanoo, että
+   * rappaamattomat rakennukset rapautuivat nopeasti. Kulttuurivisan
+   * fakta korjattiin samaksi. (3) Pyhiinvaeltajat eivät lähteen mukaan
+   * "odottaneet monsuunia"; lähteessä on lautat Aydhabista ja Suakinista
+   * sekä vakaat tuulet, jotka estivät suuria laivoja purjehtimasta
+   * Suezin asti ennen höyrylaivoja. (4) "Kahvia ja helmiä" jätettiin
+   * pois: yksikään luettu artikkeli ei kerro Suakinin kahvista,
+   * helmenkalastajista tai heidän lauluistaan (Selman Reisin helmet
+   * koskevat Dahlakin saaria). Kulttuurivisan (talot korallikivestä)
+   * lähdejuttu on Rakennukset-sivun "Talot merenpohjasta"; minitehtävä
+   * kysyy ovien puuta eikä osu visaan.
+   *
+   * FAKTAPOHJA: en-Wikipedia raakatekstinä 23.9.2026 — Suakin (myös
+   * hakusana Sawakin ohjautuu sinne), ʿAydhab, Habesh Eyalet, Özdemir
+   * Pasha, Islamization of the Sudan region, Pêro da Covilhã, Johann
+   * Ludwig Burckhardt, Hedley Churchward, Osman Digna, Hadendoa, Suakin
+   * Expedition, Herbert Kitchener, Port Sudan, Architecture of Sudan
+   * (Greenlaw'n kuvaus), Mashrabiya. Osmanien maakunnan perustamisvuosi
+   * on lähteissä ristiriitainen (Suakin 1555, Habesh Eyalet 1557), joten
+   * tekstissä on vain "1550-luvulla". Suakin-artikkelin väite Kitcheneristä
+   * Suakinissa jo 1883–1885 poikkeaa Kitchener-artikkelista; tekstissä on
+   * Kitchener-artikkelin tarkempi tieto (maaherra 1886, haava 1888).
+   *
+   * KUVAT katsottu silmin 900 px:n esikatseluna, kaikki >= 1200 px ja
+   * käyttämättömiä muualla repossa: Egyptin kansallispankin rauniot ja
+   * taustalla lautta (Bertramz), Dom João de Castron kartta 1541 (saari
+   * täynnä taloja, laivoja kanavassa), šafiittimoskeijan minareetti ja
+   * mihrab (Bertramz), Morionasin vesiväri 1875 (saari satamasuulta,
+   * punainen lippu, höyrylaiva), Cronaun piirros 1884 (kaupunki maan
+   * puolelta, vartija, teltta, kameli), War Officen kartta tammikuulta
+   * 1885 (linnakkeet, kaivot, rautatie) ja Bunksin raunioiden kuva 2008.
+   * Van Disin 1961 kuva (009) ja tullitalo ovat jo africa-valokuvat.js:ssä
+   * ja el-Geyfin moskeija valokuvat-paikalliset.js:ssä, joten niitä ei
+   * käytetty.
+   */
+  suakin: [
+    {
+      id: 'kaupunki',
+      nimi: 'Suakin',
+      johdanto: 'Punaisenmeren saarikaupunki, jonka talot nostettiin '
+        + 'merenpohjan korallista. Täältä pyhiinvaeltajat ylittivät meren '
+        + 'Mekkaan, täällä osmanien pasha piti hoviaan, ja isoisän aikaan '
+        + 'Egyptin kediivi rakensi kaupunkia uudelleen. Nykyään vanha '
+        + 'kaupunki on raunioina.',
+      nostot: [
+        {
+          otsikko: 'Tori saaren päällä',
+          teksti: 'Beja-kansan kielellä Suakinin nimi on Oosook, ja se '
+            + 'saattaa juontua arabian sanasta suq, tori. Kaupunki on '
+            + 'luultavasti sama kuin Ptolemaioksen Limen Evangelis, Hyvän '
+            + 'toivon satama, joka kuvataan pyöreäksi saareksi pitkän '
+            + 'lahdelman perällä. Antiikin aikana Punaisenmeren pääsatama '
+            + 'oli kuitenkin pohjoisempi Berenike. Nimeltä Suakinin mainitsee '
+            + 'ensimmäisenä 900-luvulla al-Hamdani, jonka mukaan se oli jo '
+            + 'silloin vanha kaupunki; tuolloin se oli pieni bejojen kylä. '
+            + 'Brittiläisen amiraliteetin merikartoissa 1800-luvun lopulla '
+            + 'nimi kirjoitettiin Sauakin, mutta sanomalehdissä useimmiten '
+            + 'Suakim.',
+          wiki: 'Suakin',
+        },
+        {
+          otsikko: 'Kaksi satamaa, yksi meri',
+          teksti: 'Keskiajalla Suakinin kilpailija oli pohjoisempi Aydhab, '
+            + 'ja välit olivat verisiä. Kun Suakinin hallitsija Ala al-Din '
+            + 'al-Asba\'ani anasti lähistöllä merellä kuolleiden kauppiaiden '
+            + 'tavarat, hän suututti mamelukkisulttaani Baibarsin, ja Qusin '
+            + 'maaherra hyökkäsi 1264 Aydhabin tuella. Hallitsija pakeni. '
+            + 'Kun sulttaani Barsbay hävitti Aydhabin 1426, osa sen '
+            + 'asukkaista pakeni Suakiniin — ja heidät surmattiin. Ibn '
+            + 'Battutan mukaan Suakinia hallitsi 1332 Mekan šarifin poika, '
+            + 'joka oli seudun perimystavan mukaan saanut vallan äitinsä '
+            + 'veljiltä, bejojen päälliköiltä. 1300-luvun lopulla hedareb-heimo '
+            + 'teki kaupungista pääkaupunkinsa, ja Suakinista tuli Koillis-Afrikan '
+            + 'tärkein Punaisenmeren satama.',
+          wiki: 'ʿAydhab',
+        },
+        {
+          otsikko: 'Pyhiinvaeltajien lautta',
+          teksti: 'Mekkaan matkaavat muslimipyhiinvaeltajat ylittivät '
+            + 'Punaisenmeren lautoilla Aydhabista ja Suakinista, ja samoihin '
+            + 'satamiin saapui Intiasta lasteja, jotka jatkoivat Egyptiin. '
+            + 'Satamat olivat kaukana etelässä, koska ennen höyrylaivoja '
+            + 'vakaat tuulet vaikeuttivat suurten alusten purjehdusta Suezin '
+            + 'asti. Kun osmanit valloittivat Egyptin 1517, heidän '
+            + 'tehtäväkseen tuli suojella pyhiinvaeltajien matkaa. Vielä '
+            + 'vuonna 1910 Suakiniin poikkesi Bombaysta tullut vanha '
+            + 'pyhiinvaeltajalaiva SS Islamic, ja kyydissä oli Hedley '
+            + 'Churchward, ensimmäinen tunnettu brittiläinen muslimi, joka '
+            + 'teki pyhiinvaelluksen Mekkaan. Suakinista lähtee yhä joka '
+            + 'päivä lautta Jiddaan.',
+          tiedosto: 'Suakin,national bank.jpg',
+          lyhyt: 'Egyptin kansallispankin rauniot Suakinin saarella, taustalla satamassa matkustajalautta.',
+          selite: 'Egyptin kansallispankin rauniot Suakinin saarella 2008. '
+            + 'Taustalla satamassa on matkustajalautta: Suakinista '
+            + 'liikennöi yhä päivittäin lauttoja Jiddaan.',
+          lahde: 'Bertramz, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Islamization of the Sudan region',
+        },
+        {
+          otsikko: 'Portugalilaisten kartta',
+          teksti: 'Jo 1300-luvulla Suakinissa ja Massawassa asui '
+            + 'venetsialaisia kauppiaita. 1480-luvun lopulla portugalilainen '
+            + 'Pêro da Covilhã, joka oli lähetetty tiedustelemaan '
+            + 'Intian-kaupan reittejä, kulki karavaanin mukana aavikon yli '
+            + 'El-Toriin ja Suakiniin ja purjehti sieltä Adeniin. '
+            + 'Myöhemmin portugalilaiset tulivat sotalaivoin: he piirittivät '
+            + 'Suakinia 1513 ja valtasivat sen hetkeksi 1541. Samalla '
+            + 'retkellä aatelismies Dom João de Castro piirsi kaupungista '
+            + 'kartan merikirjaansa, joka kokosi tietoa Punaisenmeren '
+            + 'rannikoista ja vesistä. Portugaliksi kaupungin nimi '
+            + 'kirjoitettiin Çuaquem ja meren nimi Mar Roxo.',
+          tiedosto: 'Dom João de Castro - Roteiro do Mar Roxo - Suakin.jpg',
+          lyhyt: 'Dom João de Castron piirros Suakinista 1541: saari täynnä taloja, laivoja kapeassa kanavassa.',
+          selite: 'Dom João de Castron merikirjan Roteiro do Mar Roxo kartta '
+            + 'Suakinista 1541: pyöreä saari täynnä taloja laguunin '
+            + 'keskellä ja laivoja kapeassa kanavassa, joka johtaa '
+            + 'avomerelle. Käsikirjoitus on Coimbran yliopiston '
+            + 'kirjastossa.',
+          lahde: 'Dom João de Castro, Wikimedia Commons (CC0)',
+          wiki: 'Pêro da Covilhã',
+        },
+        {
+          otsikko: 'Osmanien pashan kaupunki',
+          teksti: 'Kun osmanit valloittivat Egyptin 1517, heistä tuli '
+            + 'Punaisenmeren mahtavin valta. 1550-luvulla Özdemir-pasha '
+            + 'miehitti Suakinin, ja kaupungista tuli uuden Habeshin '
+            + 'maakunnan pashan asuinpaikka. Osmanit korjasivat kaupungin '
+            + 'kaksi päämoskeijaa, šafiittien ja hanafiittien, vahvistivat '
+            + 'linnoituksen muureja ja rakensivat uusia teitä ja taloja. '
+            + 'Vuonna 1571 Habeshin maaherra murtoi Sennarin '
+            + 'funj-sulttaanikunnan joukkojen piirityksen. Maakunnan '
+            + 'hallinto siirtyi kuitenkin pian meren yli Jiddaan, ja '
+            + 'Suakiniin jäi osmanien tullimies. Kun portugalilaiset olivat '
+            + 'avanneet merireitin Afrikan ympäri, kauppiaat alkoivat jättää '
+            + 'kaupunkia. Sveitsiläinen matkailija Johann Ludwig Burckhardt '
+            + 'näki 1800-luvun alussa kaksi kolmasosaa taloista raunioina.',
+          tiedosto: 'Suakin,Schafai minaret.jpg',
+          lyhyt: 'Šafiittimoskeijan minareetti seisoo yhä sortuneiden seinien keskellä.',
+          selite: 'Šafiittimoskeijan minareetti Suakinin saarella 2008. '
+            + 'Kivestä muurattu torni on pystyssä, vaikka moskeijan seinät '
+            + 'sen ympärillä ovat sortuneet.',
+          lahde: 'Bertramz, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Habesh Eyalet',
+        },
+        {
+          otsikko: 'Kediivin uusi Suakin',
+          teksti: 'Vuonna 1865 Egyptin kediivi Ismail sai Suakinin '
+            + 'osmaneilta ja ryhtyi herättämään sitä henkiin. Seuraavana '
+            + 'vuonna Habeshin rannikko liitettiin muodollisesti Egyptiin. '
+            + 'Egypti rakensi Suakiniin uusia taloja, myllyjä, moskeijoita '
+            + 'ja sairaaloita sekä kirkon kaupunkiin muuttaneille kopteille. '
+            + 'Samoihin aikoihin rakennuksiin alkoi tulla piirteitä Egyptistä '
+            + 'ja Euroopasta. Isoisän matkan aikaan 1873 Suakin oli siis '
+            + 'keskellä uutta nousuaan: kaupunkia, jonka Burckhardt oli '
+            + 'nähnyt puoliksi raunioina, rakennettiin uudelleen.',
+          tiedosto: '"L\'île de Souakim (mer rouge) vue prise de l\'entrée du port" - par D. Morionas - btv1b8459557r.jpg',
+          lyhyt: 'D. Morionasin vesiväri 1875: Suakinin saari satamasuulta, valkoiset talot ja höyrylaiva.',
+          selite: 'D. Morionasin vesivärimaalaus Suakinin saaresta '
+            + 'satamasuulta nähtynä 1875: valkoiset talot ja minareetit '
+            + 'nousevat vedenrajasta, katolla liehuu punainen lippu, '
+            + 'oikealla on höyrylaiva ja edustalla purjevene.',
+          lahde: 'D. Morionas, Bibliothèque nationale de France, Wikimedia Commons (PD)',
+          wiki: 'Suakin',
+        },
+        {
+          otsikko: 'Parrakas kenraali',
+          teksti: 'Mahdin kapinan kuuluisin sotapäällikkö Osman Digna syntyi '
+            + 'kertoman mukaan Suakinissa. Hänen isänsä oli kurdi ja äitinsä '
+            + 'hadendoa-heimosta, ja alun perin hän oli nimeltään Osman Ali. '
+            + 'Hän kävi orjakauppaa Aleksandriassa, kunnes englantilaiset '
+            + 'pakottivat hänet lopettamaan. Nimen Digna, parrakas, hän sai '
+            + 'tuuhean partansa vuoksi. Helmikuussa 1884 hän löi El Tebissä '
+            + 'paljon suuremman egyptiläisen armeijan, ja Tamain taistelussa '
+            + 'hänen soturinsa murtautuivat brittijalkaväen neliömuodostelman '
+            + 'läpi. Britit voittivat, mutta Rudyard Kipling kirjoitti '
+            + 'hadendoa-sotureista runonsa Fuzzy-Wuzzy. Osman Digna jatkoi '
+            + 'taistelua, kunnes hänet vangittiin Tokarin lähellä '
+            + 'tammikuussa 1900. Hän istui kahdeksan vuotta vankilassa '
+            + 'Rosettassa ja kuoli Egyptissä 1926.',
+          tiedosto: 'Die Gartenlaube (1884) b 181 2.jpg',
+          lyhyt: 'Suakin maan puolelta Rudolf Cronaun piirroksessa 1884: vartija, teltta ja kameli.',
+          selite: 'Rudolf Cronaun piirros Die Gartenlaube -lehdessä 1884: '
+            + 'Suakin maan puolelta nähtynä. Edustalla kivääriä kantava '
+            + 'vartija, teltta ja kameli, taustalla valkoiset talot ja '
+            + 'minareetit.',
+          lahde: 'Rudolf Cronau, Wikimedia Commons (PD)',
+          wiki: 'Osman Digna',
+        },
+        {
+          otsikko: 'Piiritetty satama',
+          teksti: 'Brittiarmeija taisteli Suakinin ympärillä 1883–1885, ja '
+            + 'kaupunki kesti pitkän piirityksen. Kenraali Gerald Graham toi '
+            + 'tänne kaksi retkikuntaa, helmikuussa 1884 ja maaliskuussa '
+            + '1885. Jälkimmäisen piti myös suojella rautatietä, jota '
+            + 'alettiin rakentaa Suakinista Berberiin Niilin varrelle. '
+            + 'Mukana oli 770 miestä Uudesta Etelä-Walesista Australiasta. '
+            + 'Kahden kuukauden kuluttua Lontoon hallitus luopui sekä '
+            + 'radasta että sotaretkestä, ja joukot lähtivät 17. toukokuuta '
+            + '1885. Syyskuussa 1886 Herbert Kitchener nimitettiin Itä-Sudanin '
+            + 'ja Punaisenmeren rannikon maaherraksi — käytännössä alueeseen '
+            + 'kuului tuskin muuta kuin Suakinin satama. Tammikuussa 1888 hän '
+            + 'haavoittui leukaan taistelussa Handubissa, ja joulukuussa 1888 '
+            + 'Osman Digna yritti turhaan vallata kaupungin vesilinnakkeet.',
+          tiedosto: 'Suakin and defences, January 1885.png',
+          lyhyt: 'Brittien kartta Suakinista puolustuslaitteineen tammikuussa 1885.',
+          selite: 'Brittien sotaministeriön tiedusteluosaston kartta '
+            + 'Suakinista tammikuussa 1885: saarikaupunki lahden perällä, '
+            + 'ympärillä linnakkeita, kaivoja ja hautausmaita sekä '
+            + 'rautatie.',
+          lahde: 'Great Britain War Office, National Library of Australia, Wikimedia Commons (PD)',
+          wiki: 'Suakin Expedition',
+        },
+      ],
+    },
+    {
+      id: 'rakennukset',
+      nimi: 'Korallikaupunki',
+      johdanto: 'Suakinin talot muurattiin merenpohjasta nostetusta '
+        + 'korallikivestä, rapattiin valkoisiksi ja koristeltiin puisilla '
+        + 'ikkunoilla ja veistetyillä ovilla. Kun satama hiljeni, '
+        + 'korallikaupunki mureni raunioiksi — mutta se on tallessa '
+        + 'piirustuksissa.',
+      tehtava: {
+        kysymys: 'Mistä puusta Suakinin talojen ovet tehtiin?',
+        vaihtoehdot: [
+          'Jaavan tiikistä',
+          'Libanonin setristä',
+          'Taatelipalmusta',
+          'Eebenpuusta',
+        ],
+        oikea: 0,
+        fakta: 'Ovet tehtiin Jaavan tiikistä, ja niiden yläpuolelle '
+          + 'veistettiin kivinen ovikatos.',
+      },
+      nostot: [
+        {
+          otsikko: 'Talot merenpohjasta',
+          teksti: 'Suakinin rakennukset muurattiin enimmäkseen madreporista '
+            + 'eli korallikivestä, joka nostettiin merenpohjasta. Osmanien '
+            + 'aikana kaupungin talot rakennettiin samaan tapaan kuin '
+            + 'Jiddassa meren toisella puolella ja Massawassa etelämpänä '
+            + 'rannikolla. Talot rapattiin valkoisiksi, ja niissä oli jopa '
+            + 'neljä kerrosta. Usein kolme tai useampia taloja seisoi '
+            + 'yhtenä rivinä, ja rivien välissä kulki kapeita kujia. '
+            + 'Moskeijatkin muurattiin korallikivestä: šafiittimoskeijan '
+            + 'raunioissa näkyvät yhä kivilohkot, rappauksen jäänteet ja '
+            + 'veistetyt koristeet.',
+          tiedosto: 'Suakin,Schafia mihrab.jpg',
+          lyhyt: 'Šafiittimoskeijan mihrab ja minbar raunioina: kivilohkoja, rappausta ja veistoksia.',
+          selite: 'Šafiittimoskeijan mihrab eli rukoussyvennys ja sen '
+            + 'vieressä minbar eli saarnatuoli raunioina 2008: '
+            + 'muurattuja kivilohkoja, valkoisen rappauksen jäänteitä ja '
+            + 'veistettyjä koristeita.',
+          lahde: 'Bertramz, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Suakin',
+        },
+        {
+          otsikko: 'Ikkunat ja ovet',
+          teksti: 'Suakinin taloissa oli suuria puisia ikkunoita, joita '
+            + 'arabiaksi kutsuttiin nimellä rushān. Sama rakenne tunnetaan '
+            + 'laajemmin nimellä mashrabiya: ylempien kerrosten ulokeikkuna, '
+            + 'jonka puuristikko ohjaa ilmavirtaa, viilentää ja suojaa '
+            + 'asukkaiden yksityisyyttä. Jiddassa samaa ikkunaa kutsutaan '
+            + 'nimellä rōshān, ja osmanien aikana mashrabiya oli '
+            + 'suosituimmillaan. Talojen ovet tehtiin Jaavan tiikistä, ja '
+            + 'niiden yläpuolelle veistettiin kivinen ovikatos. Katonreunaa '
+            + 'kiersi hammaslistan kaltainen kaide. 1860-luvulta alkaen '
+            + 'rakennuksiin alkoi tulla piirteitä Egyptistä ja Euroopasta.',
+          wiki: 'Mashrabiya',
+        },
+        {
+          otsikko: 'Taideopettaja, joka mittasi kaupungin',
+          teksti: 'Suakin on tallessa paperilla, koska brittiläinen '
+            + 'taideopettaja Jean-Pierre Greenlaw, joka oli perustanut '
+            + 'Khartumiin muotoilukoulun, mittasi ja piirsi sen talot. '
+            + 'Hänen kirjansa Suakinin korallirakennuksista sisältää '
+            + 'mittapiirustuksia ja tarkkoja luonnoksia. Greenlaw\'n mukaan '
+            + '1500–1900-luvuilla rakennettu Suakin oli kuin jalokivi: '
+            + 'esimerkki rakennustavasta, joka oli kehittynyt Punaisenmeren '
+            + 'rannikon oloihin. Taloissa oli kaksi tai kolme kerrosta ja '
+            + 'seinissä paljon luukullisia ikkunoita, ja katoilla oli '
+            + 'kattoterasseja, kharjah, joilla nukuttiin illan viileydessä '
+            + 'kuun ja tähtien alla. Kalkitut seinät korostivat ikkunoita ja '
+            + 'veistettyjä ovia, ja kaupunki seisoi tasaisella saarella '
+            + 'laguunin keskellä.',
+          wiki: 'Architecture of Sudan',
+        },
+        {
+          otsikko: 'Korallikaupungin loppu',
+          teksti: 'Kun Mahdin valtio oli kukistettu, britit eivät halunneet '
+            + 'rakentaa Suakinia uudelleen. Sen sijaan 1905–1909 noin 50 '
+            + 'kilometriä pohjoiseen rakennettiin Port Sudan korvaamaan '
+            + 'vanha satama, jonka korallit olivat tukkineet. Viimeiset '
+            + 'britit lähtivät Suakinista 1922. Ilman suojaavaa rappausta '
+            + 'rakennukset rapautuivat nopeasti, ja saaren kaupunki sortui '
+            + 'raunioiksi. Sudanin muinaismuistovirasto on vuodesta 2000 '
+            + 'tutkinut ja dokumentoinut Suakinin historiaa, ja 2022 Sudan '
+            + 'Memory -verkkohanke julkaisi vanhoja valokuvia, '
+            + 'rakennuspiirustuksia ja kolmiulotteisen mallin kaupungista. '
+            + 'Vuonna 2018 Turkki sai saaren 99 vuoden vuokralle ja aikoo '
+            + 'entisöidä osmanien aikaisen satamakaupungin.',
+          tiedosto: 'Suakin.JPG',
+          lyhyt: 'Suakinin saaren rauniot 2008: korallikiveä kasoina ja sortuneiden talojen seiniä.',
+          selite: 'Suakinin saaren rauniot 2008: korallikivilohkoja '
+            + 'kasoina, joukossa puisia ikkunakehyksiä, ja taustalla '
+            + 'sortuneiden talojen seinänpätkiä ja minareetti.',
+          lahde: 'Bunks, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Port Sudan',
+        },
+      ],
+    },
+  ],
 };
