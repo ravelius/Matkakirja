@@ -245,6 +245,9 @@ namespace Matkakirja.Natiivi
             if (!d.Vastattu)
             {
                 if (!string.IsNullOrEmpty(d.Vihje)) y = Lisaa("Vihje: " + d.Vihje, 15, FontStyles.Italic, y + 2, leveys);
+                y = Lisaa(d.Huomautus, 14, FontStyles.Italic, y, leveys);
+                string puolitusTeksti = d.PuolitusTeksti ?? $"50:50 {d.PuolitusHinta} {d.Valuutta}";
+                bool puolitusKay = !d.PuolitusHarmaa && d.Raha >= d.PuolitusHinta;
                 bool vihje = d.VihjeTarjolla, puolitus = d.PuolitusTarjolla;
                 if (vihje || puolitus)
                 {
@@ -253,19 +256,22 @@ namespace Matkakirja.Natiivi
                     if (vihje && puolitus)
                     {
                         kv = Nappi($"Vihje {d.VihjeHinta} {d.Valuutta}", y, puoli, -(puoli + Vali) / 2, nappi, d.Raha >= d.VihjeHinta, () => t?.Vihje?.Invoke(), 15);
-                        Nappi($"50:50 {d.PuolitusHinta} {d.Valuutta}", y, puoli, (puoli + Vali) / 2, nappi, d.Raha >= d.PuolitusHinta, () => t?.Puolita?.Invoke(), 15);
+                        Nappi(puolitusTeksti, y, puoli, (puoli + Vali) / 2, nappi, puolitusKay, () => t?.Puolita?.Invoke(), 15);
                     }
                     else if (vihje)
                         kv = Nappi($"Vihje {d.VihjeHinta} {d.Valuutta}", y, puoli, 0, nappi, d.Raha >= d.VihjeHinta, () => t?.Vihje?.Invoke(), 15);
                     else
-                        kv = Nappi($"50:50 {d.PuolitusHinta} {d.Valuutta}", y, puoli, 0, nappi, d.Raha >= d.PuolitusHinta, () => t?.Puolita?.Invoke(), 15);
+                        kv = Nappi(puolitusTeksti, y, d.PuolitusTeksti != null ? leveys : puoli, 0, nappi, puolitusKay, () => t?.Puolita?.Invoke(), 15);
                     y += kv + Vali;
                 }
             }
             else
             {
-                string tulos = d.AikaLoppui ? "Aika loppui." : d.Oikein ? "Oikein!" : "Väärin.";
-                y = Lisaa(tulos, 20, FontStyles.Bold, y + 4, leveys);
+                if (d.Laji != KysymysLaji.Tapahtumakortti)
+                {
+                    string tulos = d.AikaLoppui ? "Aika loppui." : d.Oikein ? "Oikein!" : "Väärin.";
+                    y = Lisaa(tulos, 20, FontStyles.Bold, y + 4, leveys);
+                }
                 y = Lisaa(d.Loyto, 17, FontStyles.Normal, y, leveys);
                 y = Lisaa(d.Fakta, 15, FontStyles.Normal, y, leveys, null, TextAlignmentOptions.Left);
                 if (d.Lahteet != null && d.Lahteet.Count > 0)

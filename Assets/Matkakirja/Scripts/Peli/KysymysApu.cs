@@ -10,7 +10,7 @@ using Matkakirja.Peli;
 namespace Matkakirja.Natiivi
 {
     /// <summary>Kysymyksen muoto näkymälle (Peli.KysymysMuoto ilman pelilogiikan riippuvuutta).</summary>
-    public enum KysymysLaji { Visa, Vaite, Kuva, Lippu, Tapahtuma, Pulma }
+    public enum KysymysLaji { Visa, Vaite, Kuva, Lippu, Tapahtuma, Pulma, Kaksintaistelu, Tapahtumakortti }
 
     /// <summary>
     /// Avoimen kysymyksen näytettävä tila. Ohjain rakentaa tämän uudelleen jokaisen
@@ -42,6 +42,20 @@ namespace Matkakirja.Natiivi
         /// <summary>50:50-nappi näkyvissä (neljä vaihtoehtoa, ei käytetty, ei vastattu).</summary>
         public bool PuolitusTarjolla;
         public int PuolitusHinta;
+        /// <summary>Puolitusnapin teksti; null = "50:50 {hinta} £" (kaksintaistelussa "Helpotus (rosvo vie X p)").</summary>
+        public string PuolitusTeksti;
+        /// <summary>Puolitusnappi näkyy mutta harmaana (kaksintaistelun helpotukset käytetty).</summary>
+        public bool PuolitusHarmaa;
+        /// <summary>Lisärivi vaihtoehtojen alla ennen vastausta (esim. "Rosvo on vienyt 150 puntaa."), tai null.</summary>
+        public string Huomautus;
+
+        // --- pulma (Laji Pulma) ---
+        /// <summary>Pulman tunniste (web puzzleId), piirroksen valintaan.</summary>
+        public string PulmaId;
+        /// <summary>Piirroksen data (web sketchData, MiniJson-muoto: Dictionary/List/double/string/bool), tai null.</summary>
+        public Dictionary<string, object> Luonnos;
+        /// <summary>Vaihtoehtojen kuvat (https) samassa järjestyksessä kuin Vaihtoehdot, tai null.</summary>
+        public List<string> VaihtoehtoKuvat;
         /// <summary>Pelaajan raha (napit harmaana, jos ei riitä; ohjain kertoo virheen Viestinä).</summary>
         public int Raha;
         public string Valuutta = "£";
@@ -173,6 +187,19 @@ namespace Matkakirja.Natiivi
             else if (q.Laji == KysymysMuoto.Lippu && !string.IsNullOrEmpty(q.LippuTiedosto))
                 d.KuvaUrl = CommonsUrl(q.LippuTiedosto, 320);
             if (d.KuvaUrl != null) d.KuvaLahde = "Wikimedia Commons";
+            if (q.Laji == KysymysMuoto.Pulma && q.PulmaTiedot != null)
+            {
+                var t = q.PulmaTiedot;
+                if (!string.IsNullOrEmpty(t.Otsikko)) d.Otsikko = string.IsNullOrEmpty(kaupunki) ? t.Otsikko : kaupunki + " · " + t.Otsikko;
+                d.Kehys = Iso(t.Selite) ?? d.Kehys;
+                d.PulmaId = q.PulmaId;
+                d.Luonnos = t.Luonnos;
+                if (t.Kuvat != null)
+                {
+                    d.VaihtoehtoKuvat = t.Kuvat.Select(x => string.IsNullOrEmpty(x?.Tiedosto) ? null : CommonsUrl(x.Tiedosto, 480)).ToList();
+                    d.KuvaLahde = t.KuvaLahteet;
+                }
+            }
 
             if (vastattu)
             {
@@ -188,6 +215,69 @@ namespace Matkakirja.Natiivi
             }
             return d;
         }
+        /// <summary>Rosvon kaksintaistelu näkymäksi (web visa.js renderDuel): 8 vaihtoehtoa, helpotus, 45 s.</summary>
+        public static KysymysNaytto Kaksintaistelu(Kaksintaistelu rosvo, string valuutta = "£")
+        {
+            var d = rosvo.Avoin;
+            var p = rosvo.Matka.Tila.Pelaaja;
+            bool vastattu = d.Valittu.HasValue;
+            int hinta = rosvo.HelpotuksenHinta;
+            var n = new KysymysNaytto
+            {
+                Laji = KysymysLaji.Kaksintaistelu,
+                Otsikko = "Rosvon kaksintaistelu — " + p.Nimi,
+                Kehys = "Ryöstäjä tukkii tien. Väärä vastaus vie kaikki rahasi.",
+                Kysymys = d.Kysymys,
+                Vaihtoehdot = new List<string>(d.Vaihtoehdot),
+                Piilotetut = new List<int>(d.Piilotetut),
+                PuolitusTarjolla = !vastattu,
+                PuolitusHarmaa = d.Helpotukset >= KaksintaisteluVakiot.Helpotukset || hinta <= 0,
+                PuolitusHinta = 0,
+                PuolitusTeksti = d.Helpotukset >= KaksintaisteluVakiot.Helpotukset ? "Helpotukset käytetty" : $"Helpotus (rosvo vie {hinta} {valuutta})",
+                Huomautus = d.Helpotukset > 0 ? $"Rosvo on vienyt {d.Viety} puntaa." : null,
+                Raha = p.Raha,
+                Valuutta = valuutta,
+                Sekunnit = KaksintaisteluVakiot.Sekunnit,
+                Vastattu = vastattu,
+                Valittu = d.Valittu ?? -1,
+                Oikea = d.Oikea,
+                Oikein = d.OikeinVastattu == true,
+                AikaLoppui = d.AikaLoppui,
+                JatkaTeksti = "Jatka matkaa",
+            };
+            if (vastattu)
+            {
+                n.Fakta = d.Fakta;
+                n.Lahteet = new List<string>(d.Lahteet ?? new List<string>());
+                n.Loyto = d.OikeinVastattu == true
+                    ? (d.Saalis.HasValue ? $"Voitit rosvon — saalis {d.Saalis.Value} puntaa!" : "Voitit rosvon — loput rahat säilyvät.")
+                    : (d.AikaLoppui ? "Aika loppui. " : "") + $"Rosvo vei rahat — oikea vastaus oli \"{d.Vaihtoehdot[d.Oikea]}\".";
+            }
+            return n;
+        }
+
+        /// <summary>Tapahtumakortti näkymäksi: teksti ja Jatka (ei vaihtoehtoja, ei aikarajaa).</summary>
+        public static KysymysNaytto Tapahtumakortti(Matka m, Tapahtumakortti kortti)
+        {
+            string kaupunki = kortti.Kaupunki != null && m.Verkko.Kaupungit.TryGetValue(kortti.Kaupunki, out var k) ? k.Nimi : kortti.Kaupunki;
+            string vaikutus = null;
+            if (kortti.Vaikutus?.Laji == TapahtumaVaikutus.Raha && kortti.Vaikutus.Maara.HasValue)
+                vaikutus = kortti.Vaikutus.Maara.Value >= 0 ? $"+{kortti.Vaikutus.Maara.Value} puntaa" : $"{kortti.Vaikutus.Maara.Value} puntaa";
+            else if (kortti.Vaikutus?.Laji == TapahtumaVaikutus.Kyyti) vaikutus = "Kyyti naapurikaupunkiin";
+            else if (kortti.Vaikutus?.Laji == TapahtumaVaikutus.Viive) vaikutus = "Menetät vuoron";
+            return new KysymysNaytto
+            {
+                Laji = KysymysLaji.Tapahtumakortti,
+                Otsikko = string.IsNullOrEmpty(kaupunki) ? "Tapahtuma" : kaupunki + " · tapahtuma",
+                Kysymys = kortti.Teksti,
+                Raha = m.Tila.Pelaaja.Raha,
+                Vastattu = true,
+                Oikein = true,
+                Loyto = vaikutus,
+                JatkaTeksti = "Jatka",
+            };
+        }
+
         static string J(string s)
         {
             if (s == null) return "null";

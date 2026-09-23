@@ -61,6 +61,13 @@ namespace Matkakirja.Natiivi
         ITilarivi tilarivi;
         IKysymysNakyma kysymysNakyma;
         Kysely kysely;
+        Kaksintaistelu rosvo;
+        Pulmat pulmat;
+        Tapahtumat tapahtumakortit;
+        Kaupat kaupat;
+        Pulmadata pulmadata;
+        Kaksintaistelut kaksintaistelut;
+        Tapahtumadata tapahtumadata;
         KysymysToiminnot kysymysToiminnot;
         Loyto kysymysLoyto;
         readonly List<string> kysymysLisat = new List<string>();
@@ -89,6 +96,10 @@ namespace Matkakirja.Natiivi
         public bool LehtiAuki => lehti != null && lehti.Auki;
         /// <summary>Kysymysmoottori (null, kunnes kysymykset on ladattu).</summary>
         public Kysely Kysely => kysely;
+        /// <summary>Rosvon kaksintaistelu (null, kunnes kokoelma on ladattu).</summary>
+        public Kaksintaistelu Kaksintaistelu => rosvo;
+        /// <summary>Ostot ja palkkiot (Natiivi-UI:n lehdet, pulu, sähke kutsuvat PeliOhjaimen kautta).</summary>
+        public Kaupat Kaupat => kaupat;
         /// <summary>Avoimen kysymyksen näkymätila (null, jos kysymys ei ole auki).</summary>
         public KysymysNaytto KysymysTila { get; private set; }
         /// <summary>Pelisilmukka päälle/pois (Natiivi-UI piilottaa omat näkymänsä).</summary>
@@ -200,7 +211,7 @@ namespace Matkakirja.Natiivi
                 dialogi.Piilota(); dialogi.PiilotaHeitto(); kysymysNakyma.Piilota();
                 if (Tila == SilmukanTila.Dialogi || Tila == SilmukanTila.Kysymys) Tila = SilmukanTila.Kartta;
             }
-            else if (matka != null && matka.Tila.Vaihe == Vaihe.Kysymys && kysely != null) NaytaKysymys();
+            else if (AvoinTehtava != Tehtava.Ei) NaytaKysymys();
             else PaivitaNakyma();
             KaytossaMuuttui?.Invoke(paalla);
         }
@@ -343,6 +354,16 @@ namespace Matkakirja.Natiivi
             yield return HaeKokoelma("kysymykset", false, t => kysymykset = t);
             yield return HaeKokoelma("tarinakaari", false, t => kaari = t);
             yield return HaeKokoelma("paikkatiedot", false, t => paikat = t);
+            string pulmaTeksti = null, rosvoTeksti = null, tapahtumaTeksti = null;
+            yield return HaeKokoelma("kaksintaistelut", false, t => rosvoTeksti = t);
+            yield return HaeTiedosto("kokoelmat/pulmat.json", false, true, t => pulmaTeksti = t);
+            yield return HaeTiedosto("kokoelmat/tapahtumat.json", false, true, t => tapahtumaTeksti = t);
+            try { if (pulmaTeksti != null) pulmadata = Pulmadata.Lue(pulmaTeksti); }
+            catch (Exception e) { Debug.LogWarning("MATKAKIRJA peli: pulmat eivät jäsenny: " + e.Message); }
+            try { if (rosvoTeksti != null) kaksintaistelut = Kaksintaistelut.Lue(rosvoTeksti); }
+            catch (Exception e) { Debug.LogWarning("MATKAKIRJA peli: kaksintaistelut eivät jäsenny: " + e.Message); }
+            try { if (tapahtumaTeksti != null) tapahtumadata = Tapahtumadata.Lue(tapahtumaTeksti); }
+            catch (Exception e) { Debug.LogWarning("MATKAKIRJA peli: tapahtumat eivät jäsenny: " + e.Message); }
             if (kysymykset == null) yield break;
             try
             {
@@ -429,21 +450,28 @@ namespace Matkakirja.Natiivi
             if (matka == null || Kysymykset == null || (kysely != null && kysely.Matka == matka)) return;
             kysely = new Kysely(matka, Kysymykset);
             kysely.Tapahtui += (laji, teksti) => kysymysLisat.Add(teksti);
+            pulmat = pulmadata != null ? Pulmat.Kytke(kysely, pulmadata) : null;
+            tapahtumakortit = tapahtumadata != null && tapahtumadata.Kortit.Count > 0 ? Tapahtumat.Kytke(kysely, tapahtumadata) : null;
+            if (tapahtumakortit != null) tapahtumakortit.Tapahtui += (laji, teksti) => kysymysLisat.Add(teksti);
+            rosvo = kaksintaistelut != null ? new Kaksintaistelu(matka, kaksintaistelut) : null;
+            kaupat = new Kaupat(matka);
             // Pysy-tapa tuli tarjolle vasta nyt: vuoron alun esivalinta puretaan kuten webissä.
             if (matka.ArvioiEsivalinta()) Tallenna();
-            if (matka.Tila.Vaihe == Vaihe.Kysymys)
-            {
-                if (matka.Tila.Kysely.Kysymys != null && Tila == SilmukanTila.Kartta) NaytaKysymys();
-                else if (matka.Tila.Kysely.Kysymys == null) SuljeAvoinKysymys();
-            }
+            if (AvoinTehtava != Tehtava.Ei) { if (Tila == SilmukanTila.Kartta) NaytaKysymys(); }
+            else if (matka.Tila.Vaihe == Vaihe.Kysymys || matka.Tila.Vaihe == Vaihe.Kaksintaistelu || matka.Tila.Vaihe == Vaihe.Tapahtuma)
+                SuljeAvoinKysymys();
             else PaivitaNakyma();
         }
 
-        /// <summary>Kysymysvaihe ilman kysymystä tai moottoria: suljetaan ja vuoro päättyy (erän 3 käytös).</summary>
+        /// <summary>Kysymys-, kaksintaistelu- tai tapahtumavaihe ilman näytettävää (moottori tai data puuttuu): vuoro päättyy.</summary>
         void SuljeAvoinKysymys()
         {
-            if (matka == null || matka.Tila.Vaihe != Vaihe.Kysymys) return;
+            if (matka == null) return;
+            var v = matka.Tila.Vaihe;
+            if (v != Vaihe.Kysymys && v != Vaihe.Kaksintaistelu && v != Vaihe.Tapahtuma) return;
             matka.Tila.Kysely.Kysymys = null;
+            matka.Tila.Kaksintaistelu = null;
+            matka.Tila.Tapahtumakortti = null;
             matka.Tila.Vaihe = Vaihe.Toiminta;
             matka.PaataVuoro();
             Tallenna();
@@ -454,9 +482,13 @@ namespace Matkakirja.Natiivi
         {
             if (matka == null) return;
             // Kuten web (visa.js): jäljellä oleva aika talteen kokonaisina sekunteina.
-            var q = matka.Tila.Kysely.Kysymys;
-            if (Tila == SilmukanTila.Kysymys && q != null && q.Sekunnit.HasValue && !q.Valittu.HasValue)
-                q.Sekunnit = Mathf.Max(1, Mathf.CeilToInt(kysymysJaljella));
+            if (Tila == SilmukanTila.Kysymys && KysymysTila != null && KysymysTila.Sekunnit.HasValue && !KysymysTila.Vastattu)
+            {
+                int jaljella = Mathf.Max(1, Mathf.CeilToInt(kysymysJaljella));
+                var q = matka.Tila.Kysely.Kysymys;
+                if (AvoinTehtava == Tehtava.Kysymys) q.Sekunnit = jaljella;
+                else if (AvoinTehtava == Tehtava.Kaksintaistelu) matka.Tila.Kaksintaistelu.Sekunnit = jaljella;
+            }
             try
             {
                 PeliApu.KirjoitaAtomisesti(TallennusPolku, matka.Tallenna());
@@ -687,36 +719,74 @@ namespace Matkakirja.Natiivi
             kysymysLisat.Clear();
             var t = kysely.Tutki(vaikea);
             if (!t.Ok) { Virhe(t.Virhe); PaivitaNakyma(); return t.Virhe; }
-            if (matka.Tila.Vaihe != Vaihe.Kysymys || matka.Tila.Kysely.Kysymys == null)
+            if (AvoinTehtava == Tehtava.Ei)
             {
-                // Esim. tutkiminen ilman kysymystä: ei avattavaa näkymää.
                 Tallenna();
                 PaivitaNakyma();
                 return null;
             }
-            kysymysJaljella = matka.Tila.Kysely.Kysymys.Sekunnit ?? 0;
             Tallenna();
             NaytaKysymys();
-            Debug.Log($"MATKAKIRJA peli: kysymys {matka.Tila.Kysely.Kysymys.Laji} {matka.Tila.Kysely.Kysymys.Kaupunki}");
+            var q = matka.Tila.Kysely.Kysymys;
+            Debug.Log($"MATKAKIRJA peli: {AvoinTehtava} {q?.Laji} {q?.Kaupunki ?? matka.Tila.Tapahtumakortti?.Kaupunki}");
             return null;
         }
 
-        /// <summary>Avoin kysymys näkyviin (myös tallennuksesta jatkettaessa).</summary>
+        /// <summary>Mikä modaalinen tehtävä on auki pelitilassa.</summary>
+        public enum Tehtava { Ei, Kysymys, Kaksintaistelu, Tapahtuma }
+
+        public Tehtava AvoinTehtava
+        {
+            get
+            {
+                if (matka == null) return Tehtava.Ei;
+                var t = matka.Tila;
+                if (t.Vaihe == Vaihe.Kysymys && t.Kysely.Kysymys != null && kysely != null) return Tehtava.Kysymys;
+                if (t.Vaihe == Vaihe.Kaksintaistelu && t.Kaksintaistelu != null && rosvo != null) return Tehtava.Kaksintaistelu;
+                if (t.Vaihe == Vaihe.Tapahtuma && t.Tapahtumakortti != null && tapahtumakortit != null) return Tehtava.Tapahtuma;
+                return Tehtava.Ei;
+            }
+        }
+
+        int? TehtavanSekunnit()
+        {
+            switch (AvoinTehtava)
+            {
+                case Tehtava.Kysymys: { var q = matka.Tila.Kysely.Kysymys; return q.Valittu.HasValue ? null : q.Sekunnit; }
+                case Tehtava.Kaksintaistelu: { var d = matka.Tila.Kaksintaistelu; return d.Valittu.HasValue ? null : d.Sekunnit; }
+                default: return null;
+            }
+        }
+
+        /// <summary>Avoin tehtävä (kysymys, pulma, kaksintaistelu, tapahtumakortti) näkyviin, myös tallennuksesta jatkettaessa.</summary>
         void NaytaKysymys(string viesti = null)
         {
-            var q = matka?.Tila.Kysely.Kysymys;
-            if (q == null || kysely == null) return;
+            var tehtava = AvoinTehtava;
+            if (tehtava == Tehtava.Ei) return;
             if (Tila != SilmukanTila.Kysymys)
             {
-                // Jatkettaessa aika on tallennuksessa; uusi kysymys asetti sen Tutkissa.
-                if (!q.Valittu.HasValue) kysymysJaljella = q.Sekunnit ?? 0;
+                // Jatkettaessa aika on tallennuksessa; uusi tehtävä asettaa sen tässä.
+                kysymysJaljella = TehtavanSekunnit() ?? 0;
                 dialogi.Piilota();
                 dialogi.PiilotaHeitto();
                 DialogiKohde = null;
                 Tila = SilmukanTila.Kysymys;
                 PysaytaKamera();
             }
-            KysymysTila = KysymysApu.Nakyma(kysely, q, kysymysLoyto, kysymysLisat, viesti);
+            switch (tehtava)
+            {
+                case Tehtava.Kysymys:
+                    KysymysTila = KysymysApu.Nakyma(kysely, matka.Tila.Kysely.Kysymys, kysymysLoyto, kysymysLisat, viesti);
+                    break;
+                case Tehtava.Kaksintaistelu:
+                    KysymysTila = KysymysApu.Kaksintaistelu(rosvo);
+                    KysymysTila.Viesti = viesti;
+                    break;
+                case Tehtava.Tapahtuma:
+                    KysymysTila = KysymysApu.Tapahtumakortti(matka, matka.Tila.Tapahtumakortti);
+                    KysymysTila.Viesti = viesti;
+                    break;
+            }
             if (Kaytossa) kysymysNakyma.Nayta(KysymysTila, kysymysToiminnot);
             if (KysymysTila.Sekunnit.HasValue) kysymysNakyma.PaivitaAika(kysymysJaljella);
             tilarivi.Aseta(PeliApu.TilaTeksti(verkko, matka.Tila));
@@ -724,7 +794,7 @@ namespace Matkakirja.Natiivi
 
         string KysymysTeko(Func<TekoTulos> teko)
         {
-            if (Tila != SilmukanTila.Kysymys || kysely == null) return "kysymys ei ole auki";
+            if (Tila != SilmukanTila.Kysymys || AvoinTehtava == Tehtava.Ei) return "kysymys ei ole auki";
             var t = teko();
             if (!t.Ok) { NaytaKysymys(t.Virhe); return t.Virhe; }
             Tallenna();
@@ -732,46 +802,78 @@ namespace Matkakirja.Natiivi
             return null;
         }
 
-        /// <summary>Vaihtoehdon valinta (näkymä ja testikomento 'vastaa i').</summary>
+        /// <summary>Vaihtoehdon valinta (näkymä ja testikomento 'vastaa i'): kysymys, pulma tai kaksintaistelu.</summary>
         public string Vastaa(int indeksi)
         {
-            var r = KysymysTeko(() => kysely.Vastaa(indeksi));
-            if (r == null) Debug.Log($"MATKAKIRJA peli: vastaus {indeksi}, {(KysymysTila.Oikein ? "oikein" : "väärin")}"
-                                     + (kysymysLoyto != null ? ", laatta " + kysymysLoyto.WebTulos : ""));
+            var tehtava = AvoinTehtava;
+            if (tehtava == Tehtava.Tapahtuma) return "tapahtumakortissa ei vastata";
+            var r = KysymysTeko(() => tehtava == Tehtava.Kaksintaistelu ? rosvo.Vastaa(indeksi) : kysely.Vastaa(indeksi));
+            if (r == null) Debug.Log($"MATKAKIRJA peli: {tehtava} vastaus {indeksi}, {(KysymysTila.Oikein ? "oikein" : "väärin")}"
+                                     + (kysymysLoyto != null ? ", laatta " + kysymysLoyto.WebTulos : "") + $", raha {matka.Tila.Pelaaja.Raha}");
             return r;
         }
 
-        public string Vihje() => KysymysTeko(() => kysely.Vihje());
-        public string Puolita() => KysymysTeko(() => kysely.Puolita());
+        public string Vihje() =>
+            AvoinTehtava == Tehtava.Kysymys ? KysymysTeko(() => kysely.Vihje()) : "vihjettä ei ole tarjolla";
 
-        /// <summary>Tuloksen Jatka-nappi (testikomento 'jatka'): kysymys suljetaan ja vuoro päättyy.</summary>
+        /// <summary>50:50 kysymyksessä, helpotus kaksintaistelussa.</summary>
+        public string Puolita()
+        {
+            switch (AvoinTehtava)
+            {
+                case Tehtava.Kysymys: return KysymysTeko(() => kysely.Puolita());
+                case Tehtava.Kaksintaistelu: return KysymysTeko(() => rosvo.Helpotus());
+                default: return "50:50 ei ole tarjolla";
+            }
+        }
+
+        /// <summary>
+        /// Tuloksen Jatka-nappi (testikomento 'jatka'): kysymys suljetaan (ryöstäjän
+        /// jälkeen alkaa kaksintaistelu samassa näkymässä), kaksintaistelu ja
+        /// tapahtumakortti päättävät vuoron.
+        /// </summary>
         public string JatkaKysymyksesta()
         {
-            if (Tila != SilmukanTila.Kysymys || kysely == null) return "kysymys ei ole auki";
-            var q = matka.Tila.Kysely.Kysymys;
-            if (q != null && !q.Valittu.HasValue) return "kysymykseen ei ole vastattu";
-            var t = kysely.Sulje();
+            var tehtava = AvoinTehtava;
+            if (Tila != SilmukanTila.Kysymys || tehtava == Tehtava.Ei) return "kysymys ei ole auki";
+            if (KysymysTila != null && !KysymysTila.Vastattu) return "kysymykseen ei ole vastattu";
+            var lahto = matka.Tila.Pelaaja.Sijainti;
+            TekoTulos t;
+            switch (tehtava)
+            {
+                case Tehtava.Kysymys: t = kysely.Sulje(); break;
+                case Tehtava.Kaksintaistelu: t = rosvo.Sulje(); break;
+                default: t = tapahtumakortit.Sulje(); break;
+            }
             if (!t.Ok) return t.Virhe;
-            kysymysNakyma.Piilota();
-            KysymysTila = null;
             kysymysLoyto = null;
             kysymysLisat.Clear();
             Tallenna();
-            // Kaksintaistelu (ryöstäjä) tulee myöhemmässä erässä; siihen asti matka jatkuu kartalla.
-            Kartalle(false);
+            if (AvoinTehtava != Tehtava.Ei)
+            {
+                // Ryöstäjä: kaksintaistelu jatkuu samassa näkymässä uudella ajastimella.
+                Tila = SilmukanTila.Kartta;
+                NaytaKysymys();
+                Debug.Log("MATKAKIRJA peli: " + AvoinTehtava + " alkoi");
+                return null;
+            }
+            kysymysNakyma.Piilota();
+            KysymysTila = null;
+            // Tapahtumakortin kyyti siirtää pelaajaa: kamera seuraa.
+            Kartalle(!matka.Tila.Pelaaja.Sijainti.Equals(lahto));
             return null;
         }
 
         void PaivitaKysymysAika()
         {
             if (Tila != SilmukanTila.Kysymys || KysymysTila == null || KysymysTila.Vastattu || !KysymysTila.Sekunnit.HasValue) return;
-            // Lehti tai tausta ei kuluta aikaa; ajastin pysyy myös pelin ollessa pois päältä.
             if (!Kaytossa) return;
             kysymysJaljella -= Time.unscaledDeltaTime;
             if (kysymysJaljella > 0) { kysymysNakyma.PaivitaAika(kysymysJaljella); return; }
             kysymysJaljella = 0;
             kysymysNakyma.PaivitaAika(0);
-            KysymysTeko(() => kysely.AikaLoppui());
+            if (AvoinTehtava == Tehtava.Kaksintaistelu) KysymysTeko(() => rosvo.AikaLoppui());
+            else KysymysTeko(() => kysely.AikaLoppui());
         }
 
         // --- kamera -----------------------------------------------------------

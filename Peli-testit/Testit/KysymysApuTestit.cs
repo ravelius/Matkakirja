@@ -102,5 +102,82 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama("https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20C%C3%B4te%20d'Ivoire.svg?width=320",
                 KysymysApu.CommonsUrl("Flag of Côte d'Ivoire.svg", 320));
         }
+        [Testi] static void KaksintaisteluNakymaksi()
+        {
+            var m = Matka.Luo(KultaisetApu.Verkko, new Satunnainen(7), "Fogg", "pariisi", KultaisetApu.Laattamaarat);
+            new Kysely(m, KyselyTestit.Data);
+            var rosvo = new Kaksintaistelu(m, Kaksintaistelut.LueKansiosta(KultaisetApu.Paketti));
+            m.AloitaVuoro();
+            m.Tila.Pelaaja.Raha = 300;
+            Oleta.Tosi(rosvo.Aloita().Ok, "aloita");
+            var d = KysymysApu.Kaksintaistelu(rosvo);
+            Oleta.Sama(KysymysLaji.Kaksintaistelu, d.Laji);
+            Oleta.Sama("Rosvon kaksintaistelu — Fogg", d.Otsikko);
+            Oleta.Sama(8, d.Vaihtoehdot.Count, "8 vaihtoehtoa");
+            Oleta.Sama("Helpotus (rosvo vie 150 £)", d.PuolitusTeksti);
+            Oleta.Tosi(d.PuolitusTarjolla && !d.PuolitusHarmaa && !d.VihjeTarjolla, "napit");
+            Oleta.Sama((int?)KaksintaisteluVakiot.Sekunnit, d.Sekunnit);
+
+            Oleta.Tosi(rosvo.Helpotus().Ok, "helpotus");
+            d = KysymysApu.Kaksintaistelu(rosvo);
+            Oleta.Sama(4, d.Piilotetut.Count, "neljä pois");
+            Oleta.Sama("Rosvo on vienyt 150 puntaa.", d.Huomautus);
+            Oleta.Sama(150, d.Raha);
+
+            var a = rosvo.Avoin;
+            int vaara = Enumerable.Range(0, 8).First(i => i != a.Oikea && !a.Piilotetut.Contains(i));
+            Oleta.Tosi(rosvo.Vastaa(vaara).Ok, "vastaa");
+            d = KysymysApu.Kaksintaistelu(rosvo);
+            Oleta.Tosi(d.Vastattu && !d.Oikein && !d.PuolitusTarjolla, "väärin");
+            Oleta.Sama($"Rosvo vei rahat — oikea vastaus oli \"{a.Vaihtoehdot[a.Oikea]}\".", d.Loyto);
+            Oleta.Sama(0, m.Tila.Pelaaja.Raha);
+            MiniJson.Jasenna(KysymysApu.Json(d, 0));
+        }
+
+        [Testi] static void TapahtumakorttiNakymaksi()
+        {
+            var m = Matka.Luo(KultaisetApu.Verkko, new Satunnainen(3), "Fogg", "pariisi", KultaisetApu.Laattamaarat);
+            var k = new Kysely(m, KyselyTestit.Data);
+            var tap = Tapahtumat.Kytke(k, Tapahtumadata.LueKansiosta(KultaisetApu.Paketti));
+            m.AloitaVuoro();
+            Oleta.Tosi(tap.Avaa("pariisi").Ok, "avaa");
+            var d = KysymysApu.Tapahtumakortti(m, m.Tila.Tapahtumakortti);
+            Oleta.Sama(KysymysLaji.Tapahtumakortti, d.Laji);
+            Oleta.Sama("Pariisi · tapahtuma", d.Otsikko);
+            Oleta.Sama(m.Tila.Tapahtumakortti.Teksti, d.Kysymys);
+            Oleta.Tosi(d.Vastattu && d.Vaihtoehdot.Count == 0 && d.Sekunnit == null, "vain Jatka");
+            Oleta.Tosi(tap.Sulje().Ok, "sulje");
+            Oleta.Tosi(m.Tila.Vaihe != Vaihe.Tapahtuma, "kiinni");
+        }
+        [Testi] static void PulmaNakymaksi()
+        {
+            var data = Pulmadata.LueKansiosta(KultaisetApu.Paketti);
+            Oleta.Tosi(data.Pulmat.Count > 0, "pulmia");
+            int nahty = 0;
+            foreach (var pm in data.Pulmat)
+            {
+                if (!KultaisetApu.Verkko.Kaupungit.ContainsKey(pm.Kaupunki)) continue;
+                var m = Matka.Luo(KultaisetApu.Verkko, new Satunnainen(11), "Fogg", "pariisi", KultaisetApu.Laattamaarat);
+                var k = new Kysely(m, KyselyTestit.Data);
+                Pulmat.Kytke(k, data);
+                m.AloitaVuoro();
+                m.Tila.Pelaaja.Sijainti = Sijainti.KaupungissaSijainti(pm.Kaupunki);
+                m.ArvioiEsivalinta();
+                if (k.KaariTarina(pm.Kaupunki) != null) continue;
+                var r = k.Tutki();
+                Oleta.Tosi(r.Ok, pm.Id + ": " + r.Virhe);
+                var q = m.Tila.Kysely.Kysymys;
+                Oleta.Sama(KysymysMuoto.Pulma, q.Laji, pm.Id);
+                var d = KysymysApu.Nakyma(k, q);
+                Oleta.Sama(KysymysLaji.Pulma, d.Laji);
+                Oleta.Sama(q.PulmaId, d.PulmaId);
+                Oleta.Tosi(d.Otsikko.Contains(q.PulmaTiedot.Otsikko ?? "pulma"), d.Otsikko);
+                Oleta.Sama(q.Vaihtoehdot.Count, d.Vaihtoehdot.Count);
+                if (q.PulmaTiedot.Kuvat != null) Oleta.Sama(q.Vaihtoehdot.Count, d.VaihtoehtoKuvat.Count, "kuvat");
+                MiniJson.Jasenna(KysymysApu.Json(d, 0));
+                nahty++;
+            }
+            Oleta.Tosi(nahty > 0, "ainakin yksi pulma avattiin");
+        }
     }
 }
