@@ -186,6 +186,8 @@ namespace Matkakirja.Natiivi
                 }
             Tila.Muuttui += TilaMuuttui;
             Asetukset.Muuttui += AsetuksetMuuttuivat;
+            Sanelu.Alkoi += SaneluAlkoi;
+            Sanelu.Loppui += SaneluLoppui;
             // Oletuksesta poikkeavat asetukset koneeseen ennen ensimmäistä paikkaa (ei pohjaa ilman paikkaa).
             if (!Asetukset.Paalla(Kytkin.Aanimaisema)) Tila.AanimaisemaPaalle(false);
             if (!Asetukset.Paalla(Kytkin.Musiikki)) Tila.MusiikkiPaalle(false);
@@ -197,6 +199,8 @@ namespace Matkakirja.Natiivi
         {
             Asetukset.Muuttui -= AsetuksetMuuttuivat;
             if (Tila != null) Tila.Muuttui -= TilaMuuttui;
+            Sanelu.Alkoi -= SaneluAlkoi;
+            Sanelu.Loppui -= SaneluLoppui;
             foreach (var l in elavat.ToArray()) Vapauta(l);
             foreach (var k in new List<Klippi>(klipit.Values)) Tuhoa(k);
             if (Instanssi == this) Instanssi = null;
@@ -218,6 +222,25 @@ namespace Matkakirja.Natiivi
                 Tila.AsetaLiuku(Musiikkitaso.Asetuksesta(Asetukset.Taso(Voima.Musiikki)));
             }
             if (kaikki || nimi == nameof(Voima.Tausta)) Tila.AsetaTausta(Asetukset.Taso(Voima.Tausta));
+        }
+
+        // SANELUN KOVA TAUKO (web ambience-stream.js taukoaSanelunAjaksi / jatkaSanelunJalkeen, §2.8):
+        // maisema ja pohjaraita pysäytetään oikeasti sanelun ajaksi ja jatketaan samasta kohdasta.
+        // Kone ei tiedä tauosta (web: saneluTauolla-lippu soittimessa), joten toiveet pysyvät ennallaan.
+        readonly List<Lahde> sanelunTauottamat = new List<Lahde>();
+
+        void SaneluAlkoi()
+        {
+            foreach (var l in elavat)
+                if ((l.Kanava == Kanava.Pohja || l.Kanava == Kanava.Maisema) && l.Kaynnistetty && !l.Tauotettu && l.A.isPlaying)
+                { l.A.Pause(); l.Tauotettu = true; sanelunTauottamat.Add(l); }
+        }
+
+        void SaneluLoppui()
+        {
+            foreach (var l in sanelunTauottamat)
+                if (!l.Vapautettu && l.Tauotettu && !jaassa) { l.A.UnPause(); l.Tauotettu = false; }
+            sanelunTauottamat.Clear();
         }
 
         void OnApplicationPause(bool tauko)
