@@ -537,6 +537,20 @@ test('lisenssikirjanpito: aineistot ja GPL-rajat', () => {
   assert.ok(l.aineistot.every((a) => a.nimi && a.lisenssi && a.lahde && a.attribuutio && a.kaytto));
 });
 
+test('skeema 1.16: radiot luokittain ja viritysäänet', async () => {
+  const { RADIOT } = await import('../js/packs/radiot.js');
+  const radiot = JSON.parse(tiedostot.get('kokoelmat/radiot.json')).alkiot;
+  assert.equal(radiot.length, Object.keys(RADIOT).length);
+  assert.ok(radiot.every((r) => ['sallittu', 'linkki', 'kielletty'].includes(r.luokka)));
+  assert.ok(radiot.every((r) => r.sivu === null || /^https?:\/\//.test(r.sivu)));
+  assert.equal(radiot.find((r) => r.id === 'FIN').url, RADIOT.FIN.url);
+  const { aaniUrl } = await import('../js/media.js');
+  const { VIRITYSAANET, viritysPolku } = await import('../js/packs/viritysaanet.js');
+  const viritys = JSON.parse(tiedostot.get('kokoelmat/aanitaulut.json')).alkiot.filter((a) => a.laji === 'viritys');
+  assert.deepEqual(viritys.map((v) => v.url), VIRITYSAANET.map((a) => aaniUrl(viritysPolku(a))));
+  assert.ok(viritys.every((v) => v.lisenssi && v.tekija));
+});
+
 test('skeema 1.9: offline-manifesti maittain (laatat, maasto, media, tavut)', async () => {
   const m = JSON.parse(tiedostot.get('manifest.json'));
   const o = JSON.parse(tiedostot.get(m.offline.tiedosto));

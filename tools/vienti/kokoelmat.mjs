@@ -441,12 +441,48 @@ function linssiKokoelma(hae) {
  * musiikkiketju()-funktiolla jokaiselle kaupungille ilman tiloja
  * (lehti ja matkalaukku menevät ketjun kärkeen, kun ne ovat auki).
  */
+/*
+ * RADIOT (skeema 1.16, omistajan kortti 23.9.2026: radio hybridinä
+ * luokittain). Asema maittain js/packs/radiot.js RADIOT:sta ja
+ * lisenssiluokka tools/vienti/radioluokat.json:sta
+ * (docs/raportit/lisenssi-inventaario-20260923-liite-radiot-hybridi.md).
+ * sallittu = natiivi saa soittaa urlin; linkki = vain "Avaa aseman
+ * sivu" (sivu), ei soittoa sovelluksessa; kielletty = ei soittoa eikä
+ * linkkiä. Nimen saa näyttää, logoa ei ilman lupaa.
+ */
+const radioTyyppi = (url) => (/\.m3u8(\?|$)/i.test(url) ? 'hls' : /\.aac(\?|$)|aac/i.test(url) ? 'aac'
+  : /\.mp3(\?|$)|mp3/i.test(url) ? 'mp3' : null);
+function radioKokoelma(hae) {
+  const { RADIOT } = hae('js/packs/radiot.js');
+  const luokat = JSON.parse(readFileSync(new URL('./radioluokat.json', import.meta.url), 'utf8')).luokat;
+  return taulukko('js/packs/radiot.js#RADIOT + tools/vienti/radioluokat.json',
+    'Suorat radiolähetykset maittain (id = ISO3). luokka: sallittu = soita url; linkki = näytä nimi ja '
+      + '"Avaa aseman sivu" (sivu), älä soita sovelluksessa; kielletty = ei soittoa eikä linkkiä. sivu voi olla '
+      + 'null (ei luotettavaa kotisivua): silloin linkki-luokassa näytetään vain nimi. Logoja ei näytetä ilman '
+      + 'aseman lupaa. yleisradio = maan virallinen ykkösradio. tyyppi päätelty osoitteesta (mp3 | aac | hls | null).',
+    { iso3: 'maat' },
+    Object.keys(RADIOT).sort().map((iso) => {
+      const r = RADIOT[iso]; const l = luokat[iso] ?? {};
+      return {
+        id: iso, iso3: iso, nimi: r.asema, url: r.url, tyyppi: radioTyyppi(r.url), yleisradio: Boolean(r.virallinen),
+        lahde: 'radio-browser', sivu: l.sivu ?? null, luokka: l.luokka ?? 'linkki', peruste: l.peruste ?? null,
+        perusteLahde: l.lahde ?? null, varaAani: null,
+      };
+    }));
+}
+
 function aaniKokoelma(ns, hae) {
   const aani = hae('js/sound.js');
   const siirtyma = hae('js/siirtymamusiikki.js');
   const valitsin = hae('js/musiikkivalitsin.js');
   const P = ns.MAAILMANKARTTA;
+  // Radioerä (skeema 1.16): viritysäänet (radion haku), pelin osoitteella.
+  const viritys = hae('js/packs/viritysaanet.js');
   const rivit = [
+    ...viritys.VIRITYSAANET.map((a) => ({
+      id: `viritys:${a.tiedosto}`, laji: 'viritys', nimi: a.tiedosto, synteesi: false,
+      url: aaniUrl(viritys.viritysPolku(a)), kesto: a.kesto, kuvaus: a.kuvaus, tekija: a.tekija, lisenssi: a.lisenssi, lahde: a.lahde,
+    })),
     ...aani.AANITEHOSTEET.map((nimi) => ({
       id: `tehoste:${nimi}`, laji: 'tehoste', nimi, synteesi: true, naytte: aani.REAL_SAMPLES[nimi] ?? null,
     })),
@@ -867,6 +903,7 @@ export function kokoaKokoelmat(nimiavaruudet, { media = [] } = {}) {
     esilasketut: esilaskettuKokoelma(ns, hae),
     linssiaineisto: linssiKokoelma(hae),
     aanitaulut: aaniKokoelma(ns, hae),
+    radiot: radioKokoelma(hae),
     ...kysymyskuvaKokoelmat(ns, hae),
     luennat: luentoKokoelma(hae),
     livianpuhe: livianPuheKokoelma(hae),
