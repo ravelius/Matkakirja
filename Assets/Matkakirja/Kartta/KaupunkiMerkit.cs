@@ -24,6 +24,9 @@ namespace Matkakirja
         public PalloKierto kierto;
         public NimiKortti kortti;
         public Reitit reitit;
+
+        /// <summary>KarttaKerrokset: "kaupungit" (pisteet ja nimiöt) ja "nimiot".</summary>
+        public bool merkitNakyvat = true, nimiotNakyvat = true;
         [Tooltip("Kaupunkiin saapumisen näkymä: kapeamman suunnan kaari asteina " +
                  "(verkkopelin PALLO_SUKELLUSLEVEYS 620 laudan yksikköä = 18,6°).")]
         public double saapumisKaari = 18.6;
@@ -222,7 +225,7 @@ namespace Matkakirja
                 Vector3 kohti = kt.position - paikka;
                 float etaisyys = kohti.magnitude;
                 Vector3 normaali = gt.TransformDirection(m.normaali);
-                bool edessa = Vector3.Dot(normaali, kohti / etaisyys) > 0.12f;
+                bool edessa = merkitNakyvat && Vector3.Dot(normaali, kohti / etaisyys) > 0.12f;
                 if (m.juuri.gameObject.activeSelf != edessa) m.juuri.gameObject.SetActive(edessa);
                 if (!edessa) continue;
 
@@ -239,7 +242,7 @@ namespace Matkakirja
                 var koko = m.koko * kerroin;
                 var suorakulmio = new Rect(ruutu.x - 4 * kerroin, ruutu.y - koko.y * 0.5f - 2 * kerroin,
                     koko.x + 8 * kerroin, koko.y + 4 * kerroin);
-                bool mahtuu = true;
+                bool mahtuu = nimiotNakyvat;
                 foreach (var v in varatut)
                     if (v.Overlaps(suorakulmio)) { mahtuu = false; break; }
                 if (mahtuu)

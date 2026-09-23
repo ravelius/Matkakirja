@@ -80,6 +80,29 @@ namespace Matkakirja
 
         public void IlmoitaKaupunki(string id) => KaupunkiNapautettu?.Invoke(id);
 
+        /// <summary>
+        /// Kosketusten esto (dialogi, lehti, linssin oma ele): kun tosi, pallo ei lue
+        /// sormia eikä tunnista napautuksia. Käynnissä oleva liuku pysähtyy.
+        /// Kamera-ajot (Aja) ja synteettiset eleet toimivat edelleen.
+        /// </summary>
+        public bool SyoteEstetty
+        {
+            get => syoteEstetty;
+            set { syoteEstetty = value; if (value) { liuku = 0; vetoNopeus = 0; edellinenSormia = 0; } }
+        }
+        bool syoteEstetty;
+
+        /// <summary>
+        /// UI:n peittokysely (Natiivi-UI): jos kosketus alkaa pisteestä, jonka UI peittää
+        /// (näytön pikseleinä), pallo ei lue koko elettä ennen kuin sormet nousevat.
+        /// </summary>
+        public Func<Vector2, bool> UiPeittaa;
+        bool eleUilla;
+
+        /// <summary>Kameratila muuttui tässä kehyksessä (pituus, leveys, korkeus tai kallistus).</summary>
+        public event Action NakymaMuuttui;
+        double4 edellinenNakyma;
+
         class Ajo
         {
             public double3 alku, loppu; // (pituus, leveys, korkeus)
@@ -118,6 +141,8 @@ namespace Matkakirja
                 if (ajo != null) Etene(Time.unscaledDeltaTime);
             }
             Aseta();
+            var nakyma = new double4(pituus, leveys, korkeus, kallistus);
+            if (!nakyma.Equals(edellinenNakyma)) { edellinenNakyma = nakyma; NakymaMuuttui?.Invoke(); }
         }
 
         float Kerroin => Screen.dpi > 0 ? Mathf.Max(1f, Screen.dpi / 163f) : 1f;
@@ -193,7 +218,16 @@ namespace Matkakirja
         void Ohjaa(double dt)
         {
             var sormet = Kosketus.activeTouches;
-            int n = sormet.Count;
+            int n = syoteEstetty ? 0 : sormet.Count;
+            if (n > 0 && edellinenSormia == 0 && !eleUilla && UiPeittaa != null && UiPeittaa(sormet[0].screenPosition))
+                eleUilla = true;
+            if (eleUilla)
+            {
+                if (n == 0 && !(Mouse.current?.leftButton.isPressed ?? false)) eleUilla = false;
+                n = 0;
+                edellinenSormia = 0;
+                if (eleUilla) return;
+            }
             float2 keski = 0;
             float vali = 0;
 
@@ -217,7 +251,7 @@ namespace Matkakirja
                 keski /= n;
                 if (n >= 2) vali = math.distance(sormet[0].screenPosition, sormet[1].screenPosition);
             }
-            else if (Mouse.current != null && Mouse.current.leftButton.isPressed)
+            else if (!syoteEstetty && Mouse.current != null && Mouse.current.leftButton.isPressed)
             {
                 n = 1;
                 keski = Mouse.current.position.ReadValue();

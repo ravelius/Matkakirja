@@ -1,0 +1,21 @@
+{
+    "name": "Matkakirja.Kartta",
+    "rootNamespace": "Matkakirja",
+    "references": [
+        "CesiumForUnity",
+        "Unity.Mathematics",
+        "Unity.InputSystem",
+        "Unity.TextMeshPro",
+        "UnityEngine.UI",
+        "Matkakirja.Peli"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
