@@ -28,7 +28,9 @@
  * savukkeet käyttävät, ja se ajetaan kerran jaksossa (oletus 3 s).
  */
 
-import { PALJAAN_LISAKOKEET, PALJAAT_KOKEET, PIIRTOKOKEIDEN_VAIHTOEHDOT } from '../piirtokoe-asetus.js';
+import {
+  PALJAAN_KERROKSET, PALJAAN_LISAKOKEET, PALJAAT_KOKEET, PALJAAT_PIKAVALINNAT, PIIRTOKOKEIDEN_VAIHTOEHDOT,
+} from '../piirtokoe-asetus.js';
 
 /** Rollaavan ikkunan pituus (ms). */
 export const PROFIILIN_JAKSO_MS = 3000;
@@ -49,9 +51,13 @@ export const PROFIILIN_VERSIO = 5;
  * aakkosjärjestyksessä; ei yhtään = `normaali` (sama kuin valikon oletus).
  */
 export function koetilanNimi(kokeet) {
-  const kaikki = [...(kokeet ?? [])];
+  let kaikki = [...(kokeet ?? [])];
   // Paljaan kartan lisäriisunnat kuuluvat tilaan eivätkä ole omia kokeitaan.
   const paljas = kaikki.some((k) => PALJAAT_KOKEET.includes(k));
+  // Pikavalinta (6–8) nimeää itse paljaan ja oman ryhmänsä.
+  for (const [pika, ryhma] of Object.entries(PALJAAT_PIKAVALINNAT)) {
+    if (kaikki.includes(pika)) kaikki = kaikki.filter((k) => k !== 'paljas' && k !== `kerros-${ryhma}`);
+  }
   const nimet = kaikki.filter((k) => k && k !== 'profiili' && !(paljas && PALJAAN_LISAKOKEET.includes(k))).sort();
   return nimet.length ? nimet.join(',') : 'normaali';
 }
@@ -75,11 +81,15 @@ export function koetilarivi({ koe, seuraava = null, versio = '' } = {}) {
  * lippu, jota valikossa ei ole (tai useampi yhtä aikaa), näkyy raakana.
  */
 export function koetilanOtsikko(koe) {
+  const osat = String(koe).split(',').map((l) => l.trim()).filter(Boolean);
+  // Paljaan kartan kerroskytkimet lyhenteinä valikon järjestyksessä: "+nimiöt +runko".
+  const kerrokset = PALJAAN_KERROKSET.filter((k) => osat.includes(`kerros-${k.avain}`)).map((k) => ` +${k.lyhenne}`).join('');
+  const perus = osat.filter((l) => !l.startsWith('kerros-')).sort().join(',') || 'normaali';
   // Monilippuinen tila ("Molemmat") verrataan järjestyksestä riippumatta.
   const jarjesta = (x) => String(x).split(',').map((l) => l.trim()).filter(Boolean).sort().join(',');
-  const i = PIIRTOKOKEIDEN_VAIHTOEHDOT.findIndex((k) => jarjesta(k.lippu ?? 'normaali') === jarjesta(koe));
-  if (i < 0) return `koe: ${koe}`;
-  return `koe ${i + 1}/${PIIRTOKOKEIDEN_VAIHTOEHDOT.length} ${PIIRTOKOKEIDEN_VAIHTOEHDOT[i].nimi}`;
+  const i = PIIRTOKOKEIDEN_VAIHTOEHDOT.findIndex((k) => jarjesta(k.lippu ?? 'normaali') === perus);
+  if (i < 0) return `koe: ${perus}${kerrokset}`;
+  return `koe ${i + 1}/${PIIRTOKOKEIDEN_VAIHTOEHDOT.length} ${PIIRTOKOKEIDEN_VAIHTOEHDOT[i].nimi}${kerrokset}`;
 }
 
 const p = (x, n = 0) => (Number.isFinite(x) ? x.toFixed(n) : '—');

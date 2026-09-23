@@ -8,6 +8,7 @@ import { asetaLiike, liikePaalla } from './kartta-liike.js';
 import {
   PIIRTOKOKEIDEN_VAIHTOEHDOT, asetaKehysprofiili, asetaPiirtokoe,
   kehysprofiiliPaalla, piirtokoeValinta, koetilanAvain, luoKoevaihdonLataaja, unohdaPoistetutValinnat,
+  PALJAAN_KERROKSET, PALJAAT_KOKEET, asetaPaljasKerros, paljaatKerrokset,
 } from './piirtokoe-asetus.js';
 import { unohdaTarkkuus } from './tarkkuus-asetus.js';
 import {
@@ -153,7 +154,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-09-21.2143';
+const APP_VERSION = '2026-09-21.2144';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -757,11 +758,53 @@ if (piirtokoeValikko) {
     rivi.addEventListener('click', () => {
       asetaPiirtokoe(koe.avain);
       naytaPiirtokoe();
+      naytaPaljaatKerrokset();
       koevaihto.muuttui();
     });
     piirtokoeValikko.appendChild(rivi);
   }
   naytaPiirtokoe();
+}
+
+/*
+ * KARTTA → KERROKSET PALJAAN KARTAN PÄÄLLE (omistaja 23.9.2026 klo 09.25):
+ * yksi kytkin ryhmää kohti, näkyvissä vain kun Syötekoe on Paljas kartta.
+ * Kytkin tallentuu ja tulee voimaan latauksessa (sama automaattilataus).
+ */
+const paljaatOtsikko = document.getElementById('paljaat-kerrokset-otsikko');
+const paljaatValikko = document.getElementById('paljaat-kerrokset-valikko');
+const naytaPaljaatKerrokset = () => {
+  if (!paljaatValikko) return;
+  const nakyvissa = PALJAAT_KOKEET.includes(piirtokoeValinta());
+  paljaatValikko.hidden = !nakyvissa;
+  if (paljaatOtsikko) paljaatOtsikko.hidden = !nakyvissa;
+  const paalla = new Set(paljaatKerrokset());
+  for (const rivi of paljaatValikko.querySelectorAll('button')) {
+    const on = paalla.has(rivi.dataset.paljasKerros);
+    rivi.classList.toggle('valittu', on);
+    rivi.setAttribute('aria-checked', on ? 'true' : 'false');
+    rivi.querySelector('.aanikytkin-tila').textContent = on ? 'päällä' : 'pois';
+  }
+};
+if (paljaatValikko) {
+  for (const ryhma of PALJAAN_KERROKSET) {
+    const rivi = document.createElement('button');
+    rivi.type = 'button';
+    rivi.className = 'aanikytkin';
+    rivi.dataset.paljasKerros = ryhma.avain;
+    rivi.setAttribute('role', 'switch');
+    rivi.setAttribute('aria-label', `${ryhma.nimi} paljaan kartan päälle`);
+    rivi.innerHTML = `<span class="viiva-ikoni">${svg('<path d="M4 9l8-4 8 4-8 4z"/><path d="M4 14l8 4 8-4"/>')}</span>`
+      + `<span class="aanikytkin-nimi">${ryhma.nimi}</span>`
+      + '<span class="aanikytkin-tila"></span>';
+    rivi.addEventListener('click', () => {
+      asetaPaljasKerros(ryhma.avain, !paljaatKerrokset().includes(ryhma.avain));
+      naytaPaljaatKerrokset();
+      koevaihto.muuttui();
+    });
+    paljaatValikko.appendChild(rivi);
+  }
+  naytaPaljaatKerrokset();
 }
 
 if (profiiliValikko) {

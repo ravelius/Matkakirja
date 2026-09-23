@@ -221,7 +221,7 @@ test('koevaihto: muutos ajastaa latauksen viiveellä ja näyttää "Ladataan…"
   try {
     globalThis.location = { search: '' };
     const alussa = koetilanAvain();
-    assert.equal(alussa, 'normaali|0');
+    assert.equal(alussa, 'normaali|0|');
     const ajastetut = [];
     let ladattu = 0;
     const naytetty = [];
@@ -260,7 +260,7 @@ test('koevaihto: main.js kytkee lataajan sekä kokeeseen että kehysprofiiliin',
   const main = readFileSync(new URL('../js/main.js', import.meta.url), 'utf8');
   assert.match(main, /const koevaihto = luoKoevaihdonLataaja\(\{\n  alussa: koetilanAvain\(\),\n  lataa: \(\) => location\.reload\(\),/);
   assert.match(main, /piirtokoeVihje\.textContent = lataus \? 'Ladataan…' : '';/);
-  assert.equal(main.match(/koevaihto\.muuttui\(\);/g)?.length, 2, 'Piirtokoe-rivit ja kehysprofiilin kytkin');
+  assert.equal(main.match(/koevaihto\.muuttui\(\);/g)?.length, 3, 'Syötekoe-rivit, paljaan kerroskytkimet ja kehysprofiilin kytkin');
   assert.doesNotMatch(main, /Tulee voimaan seuraavassa latauksessa/);
 });
 
@@ -308,23 +308,66 @@ test('paljas: yksi lippu asettaa kerrokset ja lisäriisunnat, menu jää käytt�
   const { voimassaOlevatKokeet, PALJAAN_LISAKOKEET } = await import('../js/piirtokoe-asetus.js');
   const h = '?koe=paljas';
   assert.equal(paljasTila(h), 'paljas');
-  for (const k of ['vektorit', 'nimet', 'nostot', 'nappula', 'kohteet', 'pulu', 'aanet']) assert.equal(kerrosKaytossa(k, h), false, k);
+  for (const k of ['vektorit', 'nimet', 'nostot', 'nappula', 'kohteet', 'pulu', 'aanet', 'liike']) assert.equal(kerrosKaytossa(k, h), false, k);
   assert.equal(kerrosKaytossa('laatat', h), true);
   assert.equal(kerrosKaytossa('ui', h), true, 'ui jää: yläpalkin valikkonappi pysyy');
   const luokat = kerrostenBodyLuokat(h);
-  assert.ok(luokat.includes('kerros-pois-dom') && luokat.includes('paljas-kartta'));
+  assert.ok(luokat.includes('kerros-pois-dom') && luokat.includes('paljas-kartta') && luokat.includes('kerros-pois-liike'));
   assert.ok(!luokat.includes('kerros-pois-ui'), 'valikkonappi ei katoa');
   for (const k of PALJAAN_LISAKOKEET) assert.ok(voimassaOlevatKokeet(h).has(k), k);
-  assert.ok(laattakerroksenKokeet(h).has('eihaive') && laattakerroksenKokeet(h).has('eipohja'));
   assert.equal(lepopiirtoKaytossa(h), false, 'piirto joka rAF:ssa');
   assert.equal(lepopiirtoKaytossa(''), true, 'ilman lippua lepopiirto ennallaan');
-  // Puolitus: kukin lisää yhden ryhmän.
-  assert.ok(kerrosKaytossa('nimet', '?koe=paljasnimet') && !kerrosKaytossa('nostot', '?koe=paljasnimet'));
-  assert.ok(kerrosKaytossa('nostot', '?koe=paljassymbolit') && !kerrosKaytossa('nimet', '?koe=paljassymbolit'));
-  assert.ok(kerrosKaytossa('pulu', '?koe=paljasdom') && !kerrostenBodyLuokat('?koe=paljasdom').includes('kerros-pois-dom'));
-  // ?kerrokset= voittaa (ablaatiotikkaan mittaukset eivät muutu).
+  // ?kerrokset= voittaa (ablaatiotikkaan mittaukset eivät muutu); tikkaalla liike kulkee pulun mukana.
   assert.equal(paljasTila('?koe=paljas&kerrokset=porras2'), null);
   assert.equal(kerrosKaytossa('vektorit', '?koe=paljas&kerrokset=porras2'), true);
+  assert.equal(kerrosKaytossa('liike', '?kerrokset=porras5'), false);
+  assert.equal(kerrosKaytossa('liike', '?kerrokset=porras6'), true);
+  assert.equal(kerrosKaytossa('liike', ''), true);
+});
+
+/*
+ * KERROKSET-KYTKIMET (omistaja 23.9.2026 klo 09.25): jokainen ryhmä yksin
+ * päällä muuttaa vain oman ryhmänsä — kerrokset, lisäriisunnat ja luokat.
+ */
+test('paljas: jokainen kerroskytkin tuo vain oman ryhmänsä', async () => {
+  const { kerrosKaytossa, kerrostenBodyLuokat, paljasTila } = await import('../js/pallolauta/kerrokset.js');
+  const { voimassaOlevatKokeet, PALJAAN_KERROKSET } = await import('../js/piirtokoe-asetus.js');
+  const tikas = ['vektorit', 'nimet', 'nostot', 'nappula', 'kohteet', 'pulu', 'liike', 'aanet'];
+  const pohja = { kerrokset: tikas.filter((k) => kerrosKaytossa(k, '?koe=paljas')), kokeet: [...voimassaOlevatKokeet('?koe=paljas')].sort(), dom: kerrostenBodyLuokat('?koe=paljas').includes('kerros-pois-dom') };
+  for (const ryhma of PALJAAN_KERROKSET) {
+    const h = `?koe=paljas,kerros-${ryhma.avain}`;
+    const tuodut = tikas.filter((k) => kerrosKaytossa(k, h) && !pohja.kerrokset.includes(k));
+    assert.deepEqual(tuodut.sort(), [...ryhma.tikas].sort(), `${ryhma.avain}: kerrokset`);
+    const kokeet = [...voimassaOlevatKokeet(h)].filter((k) => !k.startsWith('kerros-'));
+    const poistuneet = pohja.kokeet.filter((k) => !kokeet.includes(k));
+    assert.deepEqual(poistuneet.sort(), [...ryhma.riisunta].sort(), `${ryhma.avain}: riisunnat`);
+    assert.equal(kerrostenBodyLuokat(h).includes('kerros-pois-dom'), ryhma.avain !== 'dom', `${ryhma.avain}: DOM`);
+  }
+  // Pikavalinnat 6–8 = paljas + yksi ryhmä.
+  assert.equal(paljasTila('?koe=paljasnimet'), 'paljas');
+  assert.ok(kerrosKaytossa('nimet', '?koe=paljasnimet') && !kerrosKaytossa('nostot', '?koe=paljasnimet'));
+  assert.ok(kerrosKaytossa('nostot', '?koe=paljassymbolit') && !kerrosKaytossa('nimet', '?koe=paljassymbolit'));
+  assert.ok(!kerrostenBodyLuokat('?koe=paljasdom').includes('kerros-pois-dom') && kerrostenBodyLuokat('?koe=paljas').includes('kerros-pois-dom'));
+  // Kaksi yhtä aikaa: molemmat ryhmät.
+  assert.ok(kerrosKaytossa('nimet', '?koe=paljas,kerros-nimiot,kerros-runko') && kerrosKaytossa('vektorit', '?koe=paljas,kerros-nimiot,kerros-runko'));
+});
+
+test('paljas: kerroskytkin tallentuu vain paljaaseen tilaan ja kuuluu koetilaan (lataus)', async () => {
+  const { asetaPaljasKerros, paljaatKerrokset } = await import('../js/piirtokoe-asetus.js');
+  const pura = valeMuisti();
+  try {
+    globalThis.location = { search: '' };
+    asetaPaljasKerros('runko', true);
+    asetaPaljasKerros('nimiot', true);
+    assert.deepEqual(paljaatKerrokset(), ['nimiot', 'runko'], 'valikon järjestyksessä');
+    assert.ok(!tallennetutKokeet().has('kerros-runko'), 'ei vaikuta ilman paljasta tilaa');
+    asetaPiirtokoe('paljas');
+    assert.ok(tallennetutKokeet().has('kerros-runko') && tallennetutKokeet().has('paljas'));
+    const ennen = koetilanAvain();
+    asetaPaljasKerros('runko', false);
+    assert.notEqual(koetilanAvain(), ennen, 'kytkin muuttaa koetilaa → automaattilataus');
+    assert.ok(!laattakerroksenKokeet().has('kerros-runko'));
+  } finally { pura(); }
 });
 
 test('paljas: CSS jättää kankaan, overlayn ja valikon näkyviin', () => {

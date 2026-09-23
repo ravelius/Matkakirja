@@ -727,7 +727,7 @@
       "env": {
         "SAVUKE_MOOTTORI": "webkit"
       },
-      "huomautus": "Paljas kartta (Syotekoe 5-8, omistaja 23.9.2026 klo 09.20). Valinta laitteen muistissa kuten valikosta; sama nakyma normaalisti ja 4 paljaassa tilassa. K1 paljas dc <= 80 (mitattu 49, normaali 66), K2 kartan paalla 0 nakyvaa sivun elementtia (normaali 74), K3 valikkonappi nakyy ja avaa valikon, K4 lepopiirto pois + tilarivi 'koe 5/8 Paljas kartta', K5 vastakoe normaali, K6 puolitus (nimiot 51, symbolit 50 dc; DOM-tila 74 elementtia), K7 ei sivuvirheita. WebKit 7/7."
+      "huomautus": "Paljas kartta ja Kerrokset-kytkimet (Syotekoe 5-8, omistaja 23.9.2026 klo 09.20 ja 09.25; 6-8 pikavalintoja = paljas + yksi ryhma). Valinta laitteen muistissa kuten valikosta; normaali, paljas, jokainen 9 kytkimesta yksin ja pikavalinta 6. Tunnusluvut: muuDc (piirtokutsut laatat piilossa, yksi render), dom (nakyvat sivun elementit kartan paalla), pulu, liike, lepo, ilmakeha (liput), haive, aanet. K1 paljas dom 0 ja ryhmat pois, K2 valikkonappi avaa valikon ja 9 kytkinta, K3 tilarivi 'koe 5/8 Paljas kartta' ja '+nimiöt', K4 vastakoe normaali, K5 jokainen kytkin muuttaa vain oman ryhmansa (muuDc: paljas 2, +nimiot 4, +symbolit 3, +runko 17), K8 pikavalinta 6 = paljas + nimiot, K7 napautus lataa sivun, K6 ei sivuvirheita. WebKit 8/8."
     }
   }
 }

@@ -288,6 +288,10 @@ test('ylin rivi kertoo koetilan ja mittarin version (omistajan kaappaukset 22.9.
   assert.equal(koetilarivi({ koe: 'syotetouch' }), `koe 2/8 Kosketus suoraan · profiili p${PROFIILIN_VERSIO}`);
   // Paljas kartta (omistaja 23.9.2026 klo 09.20): yksi lippu, oma numero.
   assert.equal(koetilarivi({ koe: 'paljas' }), `koe 5/8 Paljas kartta · profiili p${PROFIILIN_VERSIO}`);
+  // Pikavalinta ja kytkin yhdessä: "koe 6/8 Paljas + nimiöt +runko".
+  assert.equal(koetilarivi({ koe: koetilanNimi(new Set(['paljasnimet', 'paljas', 'kerros-nimiot', 'kerros-runko', 'eihaive'])) }), `koe 6/8 Paljas + nimiöt +runko · profiili p${PROFIILIN_VERSIO}`);
+  // Kerroskytkimet lyhenteinä valikon järjestyksessä (omistaja 23.9.2026 klo 09.25).
+  assert.equal(koetilarivi({ koe: koetilanNimi(new Set(['paljas', 'kerros-runko', 'kerros-nimiot', 'eihaive'])) }), `koe 5/8 Paljas kartta +nimiöt +runko · profiili p${PROFIILIN_VERSIO}`);
   assert.equal(koetilanNimi(new Set(['paljas', 'eihaive', 'levovanha', 'eipohja', 'eiilmakeha', 'eikaiutin', 'profiili'])), 'paljas', 'lisäriisunnat eivät näy tilan nimessä');
   assert.equal(koetilarivi({ koe: koetilanNimi(new Set(['syotetouch', 'syotekello', 'profiili'])) }), `koe 4/8 Molemmat · profiili p${PROFIILIN_VERSIO}`, 'monilippu järjestyksestä riippumatta');
   // Valikosta poistettu piirtokoe näkyy osoitteesta raakana.
