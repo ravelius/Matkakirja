@@ -7,9 +7,12 @@
 //   [pikkukuva] [pikkukuva]                              (luentakuvat + PuluCam)
 //
 // Tumma nahkapaneeli (--panel #2a1f16 + kultainen yläliukuma), American
-// Typewriter, vasen yläkulma yläpalkin alla, leveys min(340, 62 %). Puhelimessa
-// kortti pienenee merkinnän jälkeen yhden rivin pilleriksi ("pieni", pergamentti-
-// kaistale), napautus avaa. Kaiutin on Kertoja-kytkin (webin #fact-kuuntele,
+// Typewriter, vasen yläkulma yläpalkin alla, leveys min(340, 62 %). Lappu ("pieni",
+// yhden rivin pergamenttikaistale, napautus avaa) webin asetaPaivakirjanKoko-säännöillä:
+// puhelimessa merkintä alkaa lappuna (web PUHELIN_KYSELY; iPad ei ole puhelin), ja
+// kertojan luennan aikana tekstit ovat piilossa KAIKILLA laitteilla (omistaja 15.9.2026,
+// Raamattu "TEKSTIT PIILOON KAIKILLA LAITTEILLA"): auki oleva kortti kutistuu, kun
+// kertoja alkaa, eikä luennan loppu avaa sitä (KARTTAUUDISTUKSEN PAATOKSET 38/1). Kaiutin on Kertoja-kytkin (webin #fact-kuuntele,
 // omistaja 25.8.2026) ja sen kolme kaarta toimivat VU-mittarina kertojan äänestä
 // (kynnykset 0,04 / 0,10 / 0,20; vain opacity).
 //
@@ -61,8 +64,12 @@ namespace Matkakirja.Natiivi
 
         string[] sanat;
         int naytetty, lihavia;
-        IVisualElementScheduledItem kirjoitus, pienennys;
+        IVisualElementScheduledItem kirjoitus;
         bool pieni, wikiHaussa;
+        // Webin luentavahti (ui.js, 200 ms): tekstipiilo päällä kertojan ajan + välirauha.
+        const long ValirauhaMs = 900 + 400; // SAAPUMISEN_KUPLA_LUENNAN_JALKEEN_MS + 400
+        bool luentaPiilo;
+        float kertojaLoppui = -1f;
         string wiki;
         Merkinta merkinta;
         Action kirjoitettu;
@@ -116,12 +123,36 @@ namespace Matkakirja.Natiivi
 
             kerros.TurvaMuuttui += Asettele;
             kerros.JokaRuutu += Mittari;
+            kortti.schedule.Execute(Luentavahti).Every(200);
             Asetukset.Muuttui += _ => PaivitaKaiutin();
             Asettele();
             PaivitaKaiutin();
         }
 
         void Asettele() => kortti.style.top = Ylapalkki.Varaus + 8;
+
+        /// <summary>Web puhelinTila (max-width 699 / max-height 520 CSS-pikseliä): iPhone kyllä, iPad ei.</summary>
+        static bool Puhelin => Application.platform == RuntimePlatform.IPhonePlayer
+            ? !SystemInfo.deviceModel.StartsWith("iPad") : Screen.width < Screen.height;
+
+        /// <summary>Web tekstitPiilossa: puhelin tai kertojan luenta.</summary>
+        bool TekstitPiilossa => Puhelin || luentaPiilo;
+
+        /// <summary>
+        /// Webin luentavahti: kertojan alkaessa auki oleva kortti kutistuu lapuksi; puheenvuorojen
+        /// välissä piilo pysyy välirauhan ajan (ei välähdystä). Loppu ei avaa korttia millään laitteella.
+        /// </summary>
+        void Luentavahti()
+        {
+            bool kertoja = Aanet.KertojaPuhuu;
+            float nyt = Time.realtimeSinceStartup;
+            if (kertoja) kertojaLoppui = nyt;
+            bool piiloon = kertoja || (kertojaLoppui >= 0f && (nyt - kertojaLoppui) * 1000f < ValirauhaMs);
+            if (!piiloon) kertojaLoppui = -1f;
+            if (piiloon == luentaPiilo) return;
+            luentaPiilo = piiloon;
+            if (piiloon && Nakyy && !pieni) AsetaPieni(true);
+        }
 
         /// <summary>
         /// Uusi merkintä korttiin: otsikko, paikkarivi ja kuvaikoni heti, teksti
@@ -134,7 +165,6 @@ namespace Matkakirja.Natiivi
             merkinta = m;
             kirjoitettu = valmis;
             kirjoitus?.Pause();
-            pienennys?.Pause();
             otsikko.text = m.PaikkaAika ? m.Otsikko ?? "" : (m.Otsikko ?? "Matkapäiväkirja").ToUpperInvariant();
             otsikko.EnableInClassList("mk-matkakirja__otsikko--paikka", m.PaikkaAika);
             // Lappu: otsikko ja lyhyt paikkarivi (web #fact-voice + .fact-place-lyhyt).
@@ -150,7 +180,7 @@ namespace Matkakirja.Natiivi
             Piiloon(lahderivi, true);
             pikkukuvat.Clear();
             if (m.Valokuvat.Count > 0) LisaaValokuva(m.Valokuvat);
-            AsetaPieni(false);
+            AsetaPieni(TekstitPiilossa);
             kortti.style.display = DisplayStyle.Flex;
             sanat = null;
             teksti.text = "";
@@ -174,7 +204,6 @@ namespace Matkakirja.Natiivi
         public void Piilota()
         {
             kirjoitus?.Pause();
-            pienennys?.Pause();
             kortti.style.display = DisplayStyle.None;
         }
 
@@ -236,19 +265,12 @@ namespace Matkakirja.Natiivi
             var k = kirjoitettu;
             kirjoitettu = null;
             try { k?.Invoke(); } catch (Exception e) { Debug.LogException(e); }
-            // Puhelimessa kortti pienenee merkinnän jälkeen (webin asetaPaivakirjanKoko), kun luento on ohi.
-            pienennys?.Pause();
-            pienennys = kortti.schedule.Execute(() =>
-            {
-                if (!Aanet.KertojaPuhuu && Screen.width < Screen.height) AsetaPieni(true);
-            }).Every(1500);
         }
 
         void AsetaPieni(bool p)
         {
             pieni = p;
             kortti.EnableInClassList("mk-matkakirja--pieni", p);
-            if (p) pienennys?.Pause();
         }
 
         /// <summary>Luennan jälkeen: pikkukuvat kortin loppuun (webin paivitaMatkakirjanPikkukuvat).</summary>

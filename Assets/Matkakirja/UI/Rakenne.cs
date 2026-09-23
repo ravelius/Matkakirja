@@ -91,6 +91,11 @@ namespace Matkakirja.Natiivi
         /// kaatoi koko UiSisallon jäsennyksen).
         /// </summary>
         public static System.Collections.Generic.List<object> Lista(object arvo) => arvo as System.Collections.Generic.List<object>;
+        /// <summary>
+        /// JSON-olio tai null (MiniJson.Objekti heittää puuttuvasta kentästä FormatExceptionin, jolloin
+        /// koko jäsennys kaatui: esim. maat ilman maakarttaa → maalehden otsikossa ISO-koodi).
+        /// </summary>
+        public static System.Collections.Generic.Dictionary<string, object> Olio(object arvo) => arvo as System.Collections.Generic.Dictionary<string, object>;
 
         /// <summary>
         /// ScrollView.ScrollTo turvallisesti viiveellä: elementti on voinut poistua (odotusrivi,
