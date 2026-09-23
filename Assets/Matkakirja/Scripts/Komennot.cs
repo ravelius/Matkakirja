@@ -24,6 +24,7 @@ namespace Matkakirja
     ///                             nopea veto on heitto: irrotuksen jälkeen pallo liukuu
     ///   nipistys cx cy d0 d1 s    kahden sormen nipistys keskipisteen ympäri, sormien
     ///                             väli d0 → d1 (osuus näytön leveydestä)
+    ///   kallista y0 y1 s          kahden sormen pystyveto (kallistus), y näytön osuutena
     /// </summary>
     public class Komennot : MonoBehaviour
     {
@@ -99,6 +100,17 @@ namespace Matkakirja
                     });
                     break;
                 }
+                case "kallista":
+                    kierto.AloitaEle(new PalloKierto.Ele
+                    {
+                        kaksi = true,
+                        a0 = new Unity.Mathematics.float2(0.4f, (float)D(1)),
+                        a1 = new Unity.Mathematics.float2(0.4f, (float)D(2)),
+                        b0 = new Unity.Mathematics.float2(0.6f, (float)D(1)),
+                        b1 = new Unity.Mathematics.float2(0.6f, (float)D(2)),
+                        kesto = (float)D(3),
+                    });
+                    break;
                 case "odota":
                     odotus = Time.unscaledTime + (float)D(1);
                     break;

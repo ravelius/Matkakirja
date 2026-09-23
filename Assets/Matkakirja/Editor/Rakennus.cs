@@ -31,6 +31,13 @@ namespace Matkakirja.Editori
             "https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-22c-pohja-20260922c/{z}/{x}/{reverseY}.jpg";
         public const int LaattaMaxTaso = 8;
 
+        /// <summary>
+        /// Karttasepän maasto (quantized-mesh-1.0, EPSG:4326, Copernicus GLO-30): nyt
+        /// Ranska z1–z12, muu maailma z0 = 0 m. Korkeudet ovat merenpinnasta (EGM2008),
+        /// ei ellipsoidista; Ranskassa ero on noin 50 m, mikä ei näy pallolla.
+        /// </summary>
+        public const string MaastoUrl = "https://media.matkakirja.app/julisteet/maasto/2026-09-23a/layer.json";
+
         public static void LuoPallo()
         {
             var kohtaus = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
@@ -42,7 +49,8 @@ namespace Matkakirja.Editori
             var palloGo = new GameObject("Pallo");
             palloGo.transform.SetParent(georefGo.transform, false);
             var pallo = palloGo.AddComponent<Cesium3DTileset>();
-            pallo.tilesetSource = CesiumDataSource.FromEllipsoid;
+            pallo.tilesetSource = CesiumDataSource.FromUrl;
+            pallo.url = MaastoUrl;
             pallo.showCreditsOnScreen = false;
 
             var kerros = palloGo.AddComponent<CesiumUrlTemplateRasterOverlay>();

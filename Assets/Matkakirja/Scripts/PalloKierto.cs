@@ -50,6 +50,16 @@ namespace Matkakirja
         public double taytto = 0.92;
         public double maxLeveys = 80.0;
 
+        [Header("Kallistus")]
+        [Tooltip("Kameran kallistus pystysuorasta, asteina (0 = suoraan alas).")]
+        public double kallistus = 0.0;
+        [Tooltip("Suurin kallistus lähimmässä näkymässä.")]
+        public double maxKallistus = 60.0;
+        [Tooltip("Korkeus (km), jonka yläpuolella kallistus on nolla; väliltä se liukuu.")]
+        public double kallistusRajaKm = 3000.0;
+        [Tooltip("Kallistusasteita näytön pisteelle kahden sormen pystyvedossa.")]
+        public double kallistusHerkkyys = 0.25;
+
         [Header("Napautus")]
         [Tooltip("Suurin liike näytön pisteinä, joka vielä on napautus.")]
         public float napautusLiike = 10f;
@@ -118,6 +128,14 @@ namespace Matkakirja
             double pysty = math.radians(kamera != null ? kamera.fieldOfView : 40.0) / 2.0;
             double vaaka = math.atan(math.tan(pysty) * (kamera != null ? kamera.aspect : 1.0));
             return math.min(pysty, vaaka);
+        }
+
+        /// <summary>Sallittu kallistus tällä korkeudella: kaukaa pallo katsotaan aina suoraan.</summary>
+        public double KallistusRaja()
+        {
+            double raja = kallistusRajaKm * 1000.0;
+            double min = MinKorkeus();
+            return maxKallistus * math.saturate((raja - korkeus) / math.max(1.0, raja - min));
         }
 
         /// <summary>Korkeus, jolla koko pallo mahtuu kuvan kapeampaan suuntaan.</summary>
@@ -223,7 +241,14 @@ namespace Matkakirja
                 // Sormien määrän vaihtuessa aloitetaan uusi veto ilman hyppyä.
                 if (n == edellinenSormia)
                 {
-                    Kierra(keski - edellinenKeski, dt);
+                    float2 siirto = keski - edellinenKeski;
+                    if (n >= 2)
+                    {
+                        // Kahden sormen pystyveto kallistaa (kuten Apple Mapsissa), vaakaveto pyörittää.
+                        kallistus = math.clamp(kallistus - siirto.y / Kerroin * kallistusHerkkyys, 0, KallistusRaja());
+                        siirto.y = 0;
+                    }
+                    Kierra(siirto, dt);
                     if (n >= 2 && edellinenVali > 1f && vali > 1f)
                         korkeus = math.clamp(korkeus * edellinenVali / vali, MinKorkeus(), MaxKorkeus());
                 }
@@ -344,17 +369,25 @@ namespace Matkakirja
         {
             if (georeferenssi == null) return;
             if (korkeus <= 0.0) korkeus = MaxKorkeus();
-            double3 ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(
-                new double3(pituus, leveys, korkeus));
-            double3 paikka = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef);
-            double3 keskus = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);
-            double3 pohjoinen = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(
-                new double3(0, 0, 1_000_000.0)) - keskus;
+            kallistus = math.min(kallistus, KallistusRaja());
 
-            var p = georeferenssi.transform.TransformPoint((float3)paikka);
-            var k = georeferenssi.transform.TransformPoint((float3)keskus);
-            var ylos = georeferenssi.transform.TransformDirection((float3)math.normalize(pohjoinen));
-            transform.SetPositionAndRotation(p, Quaternion.LookRotation(k - p, ylos));
+            // Kamera kiertää maanpinnan pistettä (pituus, leveys): kallistus kääntää sen
+            // pystysuorasta etelään päin, etäisyys pysyy samana. Kallistus 0 = entinen
+            // suora katse maan keskipisteeseen.
+            double3 kohde = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(pituus, leveys, 0));
+            double3 ylos = CesiumWgs84Ellipsoid.GeodeticSurfaceNormal(kohde);
+            double3 napa = new double3(0, 0, 1);
+            double3 pohjoinen = math.normalize(napa - ylos * math.dot(napa, ylos));
+            double k = math.radians(kallistus);
+            double3 suunta = ylos * math.cos(k) - pohjoinen * math.sin(k);
+            double3 silma = kohde + suunta * korkeus;
+            double3 kameranYlos = pohjoinen * math.cos(k) + ylos * math.sin(k);
+
+            var gt = georeferenssi.transform;
+            var p = gt.TransformPoint((float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(silma));
+            var t = gt.TransformPoint((float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(kohde));
+            var yl = gt.TransformDirection((float3)georeferenssi.TransformEarthCenteredEarthFixedDirectionToUnity(kameranYlos));
+            transform.SetPositionAndRotation(p, Quaternion.LookRotation(t - p, yl));
 
             // Leikkaustasot seuraavat korkeutta: lähellä pintaa tarkkuus riittää.
             var kamera = GetComponent<Camera>();
@@ -363,6 +396,7 @@ namespace Matkakirja
                 double r = CesiumWgs84Ellipsoid.GetMaximumRadius();
                 kamera.nearClipPlane = (float)math.max(100.0, korkeus * 0.02);
                 kamera.farClipPlane = (float)(korkeus + 2.0 * r);
+                if (kallistus > 0) kamera.nearClipPlane = (float)math.max(50.0, korkeus * 0.01);
             }
         }
     }

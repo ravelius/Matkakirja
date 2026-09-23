@@ -21,7 +21,7 @@ namespace Matkakirja
         public CesiumGeoreference georeferenssi;
         public Material maa, meri, lento, korostus;
         [Tooltip("Viivan korkeus ellipsoidin yläpuolella, metreinä.")]
-        public double viivanKorkeus = 4000.0;
+        public double viivanKorkeus = 5000.0;
         [Tooltip("Lentokaaren huippu pallon säteinä 180°:n matkalla (LENTOKAAREN_KORKEUS).")]
         public double kaarenKorkeus = 0.5;
 

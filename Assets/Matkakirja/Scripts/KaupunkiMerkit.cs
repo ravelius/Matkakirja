@@ -97,7 +97,7 @@ namespace Matkakirja
                 if (++kehyksessa > rakennusKehys) { kehyksessa = 0; yield return null; }
                 int tarkeys = Tarkeys(k, paketinTarkeys);
                 var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(
-                    new double3(k.lon, k.lat, 3000.0));
+                    new double3(k.lon, k.lat, 5000.0));
                 double3 u = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef);
 
                 var juuri = new GameObject("Kaupunki " + k.id).transform;
