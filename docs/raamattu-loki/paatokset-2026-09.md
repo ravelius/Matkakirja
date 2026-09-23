@@ -1795,3 +1795,7 @@ Klo 10.58. Apusessiot ovat koneen paikallisia (eivät tilikohtaisia); Remote Con
 ## SUORAAN KARTALLE -TESTITILA VALMIS (PR #2902, PELIKOODARI): KYTKIN VALIKON KARTTA-OSIOSSA KEHYSPROFIILIN ALLA + ?koe=suoraan, TILARIVILLA '· suoraan'; OHITTAA 'PELI PAIVITTYI' -IKKUNAN, SAAPUMISTRAILERIN, ISOT LUENTAKUVAT, PULUN VALIHUUDOT JA SAAPUMISKUPLAN; ISOISAN LUENTA EI KAYNNISTY ITSESTAAN (KUUNTELE-NAPPI TOIMII); KARTTA NAKYY 1,3–1,9 s (WebKit 7/7) (23.9.2026 klo 10.57)
 
 Klo 11.0x, testit 4074/0. Julkaisijalle etusijalla. Pelikoodari kirjoittaa luovutuksen (67 %).
+
+## PELIKOODARI NOLLATAAN (67 %) TILINVAIHTOA VARTEN; LUOVUTUS viesti-pelikoodari-luovutus-20260923.md (f9f01b992) (23.9.2026 klo 10.58)
+
+Klo 11.0x. Uusi Pelikoodari odottaa tehtävää uudelta Fablelta (tili B).
