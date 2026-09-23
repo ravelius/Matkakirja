@@ -2,13 +2,14 @@
 # LINSSIEN LAITETESTI iPadilla ilman käännöstä (Linssiseppä 23.9.2026).
 #
 # Käyttää asennettua sovellusta (Natiiviseppä asentaa: tyokalut/ipad.sh asenna).
-# Sisältö: paikallisen koepaketin linssitiedostot kopioidaan sovelluksen
-# sisältövälimuistiin sen versiopolun alle, jota osoitin nyt näyttää
-# (Documents/sisalto/<versiopolku>/…); LinssiSisalto ja Sisalto lukevat välimuistin
-# ennen verkkoa. devicectl ei osaa poistaa, joten kopiot jäävät välimuistiin —
-# ne ovat käyttämättömiä heti, kun osoitin vaihtaa versiota.
+# Sisältö: koepaketin linssitiedostot kopioidaan koekansioon Documents/sisalto-koe/<polku>,
+# jonka Sisalto ja LinssiSisalto lukevat ennen versiopolkua (Natiiviseppä 705fc50), joten
+# osoittimen vaihtuminen ei riko kokeita. devicectl ei osaa poistaa: kopiot ovat voimassa,
+# kunnes ne korvataan. Vanhempi asennus ilman koekansiota: KOEKANSIO=0 (versiopolku).
 #
-#   ./laitetesti.sh sisalto [koepaketti]   v11:n linssiaineisto + maat välimuistiin
+#   ./laitetesti.sh sisalto [koepaketti]   linssiaineisto + maat (+ MAARAJAT=1) koekansioon,
+#                                          uudelleenkäynnistys ja aloitusportin ohitus
+#   ./laitetesti.sh portti                 aloitusportin ohitus (ui aloita pariisi)
 #   ./laitetesti.sh astronautti <kansio>   kuvasarja ja loki
 #   ./laitetesti.sh keksinnot <kansio>     kuvasarja ja loki
 #   ./laitetesti.sh maat <kansio>          vertailu ja maatiedot: valinnat, täysi lista, lehti
@@ -27,15 +28,25 @@ sinne() { xcrun devicectl device copy to --device $UDID --domain-type appDataCon
 hae() { mkdir -p "$1"; xcrun devicectl device copy from --device $UDID --domain-type appDataContainer --domain-identifier $ID --source Documents --destination "$1" >/dev/null; }
 linssi() { print -l "$@" > $TMP/l.txt; sinne $TMP/l.txt linssi-komento.txt; }
 kartta() { print -l "$@" > $TMP/k.txt; sinne $TMP/k.txt komento.txt; }
+ui() { print -l "$@" > $TMP/u.txt; sinne $TMP/u.txt ui-komento.txt; }
+# Aloitusportin ohitus (Natiivi-UI): muuten Jatka matkaa / Uusi matka jää linssien päälle.
+portti() { sleep ${1:-20}; ui "ui aloita pariisi"; sleep 6; }
 kuva() { kartta "kuva $1"; sleep 3; }
 kaynnista() { xcrun devicectl device process launch --device $UDID --terminate-existing $ID | tail -1; }
 
 case "$1" in
   sisalto)
-    for f in kokoelmat/linssiaineisto.json kokoelmat/maat.json; do
-      sinne "$KOE/$f" "sisalto/$VERSIO/$f" && echo "välimuistiin: $VERSIO/$f"
+    # maarajat.json vain pyydettäessä (MAARAJAT=1): Natiiviseppä on voinut kopioida
+    # polkuun oman versionsa, jota ei ylikirjoiteta.
+    TIEDOSTOT="kokoelmat/linssiaineisto.json kokoelmat/maat.json"
+    [ "$MAARAJAT" = 1 ] && TIEDOSTOT="$TIEDOSTOT kokoelmat/maarajat.json"
+    for f in ${=TIEDOSTOT}; do
+      if [ "${KOEKANSIO:-1}" = 1 ]; then sinne "$KOE/$f" "sisalto-koe/$f" && echo "koekansioon: $f"
+      else sinne "$KOE/$f" "sisalto/$VERSIO/$f" && echo "välimuistiin: $VERSIO/$f"; fi
     done
-    kaynnista ;;
+    kaynnista; portti ;;
+  portti)
+    portti 0 ;;
   astronautti)
     linssi "tila" "linssi satelliitti"; sleep 12; kuva linssitesti-astro-avaus
     sleep 15; kuva linssitesti-astro-27s
@@ -67,6 +78,6 @@ case "$1" in
     linssi "keksinnot 25" "keksinnot jatka"; sleep 12; kuva kontakti-keksinnot-loppu
     linssi "linssi ihmisen-matka"; sleep 20; linssi "esitys levantti"; sleep 6; linssi "esitys tauko"; sleep 2; kuva kontakti-ihmisen-matka-levantti
     linssi "linssi pois"; sleep 4; hae "$2"; tail -12 "$2/linssi-loki.txt" ;;
-  *) echo "käyttö: $0 sisalto [koepaketti] | astronautti <kansio> | keksinnot <kansio> | maat <kansio> | kontakti <kansio>"; exit 1 ;;
+  *) echo "käyttö: $0 sisalto [koepaketti] | portti | astronautti <kansio> | keksinnot <kansio> | maat <kansio> | kontakti <kansio>"; exit 1 ;;
 esac
 rm -rf $TMP

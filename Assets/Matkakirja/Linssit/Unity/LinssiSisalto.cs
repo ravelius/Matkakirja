@@ -3,6 +3,7 @@
 // haetaan tässä samalla kaavalla (uusin.json → versiopolku → tiedosto,
 // välimuisti persistentDataPath/sisalto/<polku>). Sama välimuisti ja
 // viimeisin.txt kuin Sisalto.cs:llä, joten offline-käynnistys toimii kummallekin.
+// Koekansio Documents/sisalto-koe/<polku> luetaan ensin (sama kuin Sisalto.HaePaketista).
 using System;
 using System.Collections;
 using System.IO;
@@ -24,6 +25,10 @@ namespace Matkakirja.Natiivi
         /// <summary>Hakee paketin tiedoston tekstinä (polku versiokansion alta, esim. "moduulit/js/linssit/satelliitti-data.json").</summary>
         public static IEnumerator Hae(string polku, Action<string> valmis)
         {
+            // Koekansio ensin (Natiivisepän Sisalto 705fc50): Documents/sisalto-koe/<polku>
+            // on versiosta riippumaton, joten osoittimen vaihtuminen ei riko laitekokeita.
+            string koe = Path.Combine(Application.persistentDataPath, "sisalto-koe", polku.Replace('/', Path.DirectorySeparatorChar));
+            if (File.Exists(koe)) { valmis(File.ReadAllText(koe)); yield break; }
             while (haussa) yield return null;
             if (versioPolku == null)
             {
