@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 /*
  * NATIIVIN "MITÄ UUTTA" -RIVIT (skeema 1.22, Natiivi-UI:n MitaUutta.cs).
- * Julkaisija lisää rivin jokaisesta TestFlight-buildista, joka on ladattu
+ * Julkaisija lisää rivin jokaisesta TestFlight-buildista (build = CFBundleVersion,
+ * aikaleima), joka on ladattu
  * App Store Connectiin:
  *
- *   node tools/vienti/muutosloki-natiivi.mjs --versio "1.0.0 (3)" \
+ *   node tools/vienti/muutosloki-natiivi.mjs --versio "1.0.0 (202609232339)" \
  *     --teksti "Radiolinssi natiivissa. Korjattu asemien suodatus." [--paiva 2026-09-24]
  *
  * Tiedosto tools/vienti/muutosloki-natiivi.json, rivit uusin ensin.
