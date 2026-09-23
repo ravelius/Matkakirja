@@ -556,10 +556,12 @@ test('skeema 1.16: radiot luokittain ja viritysäänet', async () => {
   assert.ok(radiot.every((r) => ['sallittu', 'epaselva', 'kielletty'].includes(r.luokka)));
   // Jokaisessa maassa soiva asema ensin; kielletty yleisradio vain linkkinä toisena.
   assert.ok(ensisijaiset.every((r) => r.luokka !== 'kielletty' && /^https:\/\//.test(r.url)));
-  assert.ok(radiot.filter((r) => r.jarjestys === 2).every((r) => r.luokka === 'kielletty' && r.id === `${r.iso3}:yleisradio`));
-  assert.equal(radiot.filter((r) => r.jarjestys === 2).length, 17);
+  // Omistaja 23.9.2026: kiellettyjä ei pakettiin; 17 maassa soi korvaava asema.
+  assert.equal(radiot.length, Object.keys(RADIOT).length);
+  assert.ok(!radiot.some((r) => r.luokka === 'kielletty'));
+  assert.equal(radiot.filter((r) => r.lahde === 'korvaava').length, 17);
   assert.ok(radiot.every((r) => r.sivu === null || /^https?:\/\//.test(r.sivu)));
-  assert.equal(radiot.find((r) => r.id === 'FIN:yleisradio').url, RADIOT.FIN.url);
+  assert.notEqual(radiot.find((r) => r.id === 'FIN').url, RADIOT.FIN.url, 'Yle korvattu');
   assert.equal(radiot.find((r) => r.id === 'ITA').url, RADIOT.ITA.url);
   const { aaniUrl } = await import('../js/media.js');
   const { VIRITYSAANET, viritysPolku } = await import('../js/packs/viritysaanet.js');

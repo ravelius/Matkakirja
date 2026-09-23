@@ -12,10 +12,12 @@ lupaa.** Asemalista ja perusteet ovat liitteessä
   **kielletty on linkki** ("Avaa aseman sivu"). Kokoelma `radiot` (skeema
   1.16): 115 maata. 17 maassa kielletyn yleisradion tilalla soi korvaava
   asema (`tools/vienti/radiokorvaavat.json`, lähde
-  docs/raportit/radio-korvaavat-asemat-20260923.md), ja yleisradio jää
-  toiseksi riviksi linkkinä.
+  docs/raportit/radio-korvaavat-asemat-20260923.md). Omistajan päätös
+  23.9.2026: kiellettyjä yleisradioita ei viedä pakettiin lainkaan, vaan ne
+  ovat vain lisenssi-inventaariossa.
 - Luokat: korvaavista 5 sallittu (ByteFM, ORANGE 94.0, RaBe, BNR, 3RRR) ja
-  12 epaselva; muut 98 maata epaselva; 17 yleisradiota kielletty.
+  12 epaselva; muut 98 maata epaselva. Kielletyt 17 yleisradiota eivät ole
+  paketissa.
 - Nimi ja linkki aseman sivulle ovat sallittuja ilman lupaa. Logoja ei
   käytetä ilman aseman lupaa.
 - Kun asema myöntää luvan, luokka muutetaan arvoon `sallittu`

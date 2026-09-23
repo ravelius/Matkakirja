@@ -466,20 +466,20 @@ function radioKokoelma(hae) {
     };
     const k = korvaavat[iso];
     if (!k) { rivit.push({ id: iso, jarjestys: 1, ...alkuperainen }); continue; }
-    // Kielletyn yleisradion tilalle soiva asema (radio-korvaavat-asemat-20260923.md);
-    // yleisradio jää toiseksi riviksi linkkinä.
+    // Kielletyn yleisradion tilalle soiva asema (radio-korvaavat-asemat-20260923.md).
+    // Omistaja 23.9.2026: kielletty yleisradio ei tule pakettiin lainkaan
+    // (se on vain lisenssi-inventaariossa).
     rivit.push({
       id: iso, jarjestys: 1, iso3: iso, nimi: k.nimi, url: k.url, tyyppi: radioTyyppi(k.url), yleisradio: false,
       lahde: 'korvaava', sivu: k.sivu, luokka: k.luokka, peruste: k.peruste, perusteLahde: k.lahde, varaAani: null,
       kaupunki: k.kaupunki, kuvaus: k.kuvaus,
     });
-    rivit.push({ id: `${iso}:yleisradio`, jarjestys: 2, ...alkuperainen });
   }
   return taulukko('js/packs/radiot.js#RADIOT + tools/vienti/radioluokat.json + tools/vienti/radiokorvaavat.json',
     'Suorat radiolähetykset maittain. Omistajan linjaus 23.9.2026: luokat sallittu ja epaselva SOIVAT '
       + 'natiivissa (url); kielletty näytetään vain nimenä ja "Avaa aseman sivu" -linkkinä (sivu), ei soittoa. '
-      + 'Maalla voi olla kaksi riviä: jarjestys 1 = soiva asema (17 maassa kielletyn yleisradion tilalle valittu '
-      + 'korvaava asema, lahde korvaava), jarjestys 2 = yleisradio linkkinä (id <ISO3>:yleisradio). sivu voi olla null. '
+      + 'Yksi soiva asema per maa (jarjestys 1); 17 maassa kielletyn yleisradion tilalla on korvaava asema (lahde '
+      + 'korvaava). Kielletyt asemat eivät ole paketissa (docs/raportit/lisenssi-inventaario-20260923.md). sivu voi olla null. '
       + 'Logoja ei näytetä ilman aseman lupaa. tyyppi päätelty osoitteesta (mp3 | aac | hls | null).',
     { iso3: 'maat' }, rivit);
 }
