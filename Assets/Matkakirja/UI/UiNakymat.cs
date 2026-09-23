@@ -41,6 +41,7 @@ namespace Matkakirja.Natiivi
         public readonly LinssiUi Linssit;
         public readonly Aloitusnakyma Aloitus;
         public readonly Huipennus Huipennus;
+        public readonly Nostokortti Nostokortti;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         static void KytkeTehdas()
@@ -90,6 +91,14 @@ namespace Matkakirja.Natiivi
             Tietoja = new Tietoja(kerros);
             Aloitus = new Aloitusnakyma(kerros);
             Huipennus = new Huipennus(kerros);
+            Nostokortti = new Nostokortti(kerros);
+            // Karttavalon napautus (Natiiviseppä: AiheValot → KarttaValotSilta) → nostokortti;
+            // linssin aikana ei (web linssiEstaa).
+            UiPalvelut.ValoNapautettu += id => UiKerros.PaaSaikeessa(() =>
+            {
+                if (LinssiUi.Rekisteri?.Auki != null || Aloitus.Auki) return;
+                Nostokortti.Avaa(id);
+            });
             // Linssit (valitsin, peite, selite, astronautti, vertailu, aikajanat): kartuschan ja selitteen jälkeen.
             Linssit = new LinssiUi(kerros, this);
             Valikko.TietojaPainettu += Tietoja.Avaa;
@@ -189,6 +198,9 @@ namespace Matkakirja.Natiivi
             Aanentasot.Sulje();
             Matkalaukku.Sulje();
             Huipennus.Sulje();
+            // Aloitus (kerros 45) jäi muuten kaiken päälle: ui sulje ja pelin tilanvaihdot sulkevat sen.
+            Aloitus.Piilota();
+            Nostokortti.Sulje();
             Vahvistus.Sulje();
             Matkavalinta.Piilota();
             Matkavalinta.PiilotaHeitto();

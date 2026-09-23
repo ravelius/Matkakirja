@@ -25,9 +25,10 @@ namespace Matkakirja
     ///   nipistys cx cy d0 d1 s    kahden sormen nipistys keskipisteen ympäri, sormien
     ///                             väli d0 → d1 (osuus näytön leveydestä)
     ///   kallista y0 y1 s          kahden sormen pystyveto (kallistus), y näytön osuutena
-    ///   alue lataa|peru|poista <ISO3|maailma> | alue tila   offline-lataus (Alueet)
+    ///   alue|offline lataa|peru|poista <ISO3|maailma> | offline tila   offline-lataus (Alueet)
     ///   palvelin                  laattapalvelimen osumat lokiin (offline / välimuisti / verkko)
     ///   valot <aihe>|kaikki|ei|tila     karttavalot (AiheValot), tila = laskurit lokiin
+    ///   valot osoita <id>               napauttaa valon kohtaa (esim. skandaali:shakkiturkkilainen)
     ///   maat paalle|pois | maat korosta ISO3 [#täyttö #raja] | maat pois-korostus   Maatila (MaaKartta)
     ///   napauta x y               synteettinen napautus (osuus näytöstä, origo vasen alakulma)
     ///   maasto paalle|pois        Karttasepän maasto (layer.json) tai ellipsoidi; valinta
@@ -142,6 +143,7 @@ namespace Matkakirja
                     Maasto(o[1] == "paalle");
                     break;
                 case "alue":
+                case "offline":
                 {
                     // alue lataa|peru|poista <id> | alue tila
                     var al = FindAnyObjectByType<Alueet>();
@@ -167,6 +169,13 @@ namespace Matkakirja
                     // valot <aihe> | valot kaikki | valot ei | valot tila (laskurit lokiin)
                     var av = FindAnyObjectByType<AiheValot>();
                     if (av == null) break;
+                    if (o[1] == "osoita" && o.Length > 2)
+                    {
+                        // valot osoita <id>: napauttaa valon kohtaa näytöllä (valon napautuksen päästä päähän -testi)
+                        if (av.RuutuPaikka(o[2], out var rp)) kierto.Napauta(rp);
+                        else Debug.LogWarning("MATKAKIRJA valot: " + o[2] + " ei näy");
+                        break;
+                    }
                     if (o[1] != "tila") av.Valitse(o[1]);
                     var valoRivi = new StringBuilder("MATKAKIRJA valot: valittu " + av.Valittu + ":");
                     foreach (var p in av.Laskurit) valoRivi.Append(' ').Append(p.Key).Append('=').Append(p.Value);

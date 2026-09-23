@@ -181,7 +181,7 @@ namespace Matkakirja.Natiivi
             if (sivuVaihtui) vieritys.scrollOffset = Vector2.zero;
             // Tuomio ja paljastus näkyviin (tulos on vaihtoehtojen alla, usein ruudun ulkopuolella).
             if (tulosVaihtui && tulos != null && !uusi)
-                vieritys.schedule.Execute(() => { if (tulos.panel != null) vieritys.ScrollTo(tulos); }).StartingIn(60);
+                Rakenne.Vierita(vieritys, tulos, 60);
             edellinenTulosVaihe = tulosVaihe;
             edellinenTervehdys = tervehdys;
             if (!Auki)
@@ -298,7 +298,6 @@ namespace Matkakirja.Natiivi
             if (!d.Vastattu)
             {
                 if (!string.IsNullOrEmpty(d.Vihje)) Lappu(s, d.Vihje);
-                if (!string.IsNullOrEmpty(d.Huomautus)) Lappu(s, d.Huomautus);
             }
 
             Vaihtoehdot(d, s);
@@ -644,9 +643,9 @@ namespace Matkakirja.Natiivi
                 // 50:50; käytetty → harmaa.
                 if (d.PuolitusTarjolla)
                 {
-                    string teksti = d.PuolitusTeksti ?? $"50:50 ({d.PuolitusHinta} {d.Valuutta})";
+                    string teksti = $"50:50 ({d.PuolitusHinta} {d.Valuutta})";
                     var p = Rakenne.Nappi(teksti, "mk-kysymys__apu", () => Teko(toiminnot?.Puolita), napit);
-                    p.SetEnabled(!d.PuolitusHarmaa && d.Raha >= d.PuolitusHinta);
+                    p.SetEnabled(d.Raha >= d.PuolitusHinta);
                 }
                 else if (d.Piilotetut != null && d.Piilotetut.Count > 0)
                     Rakenne.Nappi("50:50 käytetty", "mk-kysymys__apu", null, napit).SetEnabled(false);

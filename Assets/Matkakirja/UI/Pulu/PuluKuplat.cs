@@ -65,7 +65,7 @@ namespace Matkakirja.Natiivi
             PaivitaHannat();
             while (kuplat.Count > PinoEnintaan) Poista(kuplat[0], false);
             AsetaKesto(k, kestoMs > 0 ? kestoMs : Lukuaika(teksti));
-            vieritys.schedule.Execute(() => vieritys.ScrollTo(el)).StartingIn(30);
+            Rakenne.Vierita(vieritys, el, 30);
             Aanet.PulunTehoste("pulu.sahke");
             return k;
         }

@@ -37,6 +37,8 @@ namespace Matkakirja
 
         [Tooltip("Rinnakkaiset verkkohaut (UnityWebRequest).")]
         public int rinnakkain = 12;
+        [Tooltip("Välimuistin yläraja megatavuina; käynnistyksessä karsitaan vanhimmat 75 %:iin (offline-kansio ei kuulu tähän).")]
+        public int valimuistiMt = 600;
 
         TcpListener kuuntelija;
         CancellationTokenSource lopetus;
@@ -96,12 +98,36 @@ namespace Matkakirja
                 _ = Task.Run(() => Kuuntele(lopetus.Token));
                 Debug.Log("MATKAKIRJA laattapalvelin: " + Juuri);
                 OhjaaCesium();
+                long raja = (long)valimuistiMt * 1048576;
+                _ = Task.Run(() => Karsi(valimuisti, raja));
             }
             catch (Exception e)
             {
                 Juuri = null;
                 Debug.LogWarning("MATKAKIRJA laattapalvelin ei käynnistynyt, Cesium hakee suoraan: " + e.Message);
             }
+        }
+
+        /// <summary>Karsii välimuistin vanhimmat tiedostot (viimeisin käyttö = muokkausaika), kun koko ylittää rajan.</summary>
+        static void Karsi(string kansio, long raja)
+        {
+            try
+            {
+                var tiedostot = new DirectoryInfo(kansio).GetFiles("*", SearchOption.AllDirectories);
+                long koko = 0;
+                foreach (var f in tiedostot) koko += f.Length;
+                if (koko <= raja) return;
+                Array.Sort(tiedostot, (x, y) => x.LastWriteTimeUtc.CompareTo(y.LastWriteTimeUtc));
+                long tavoite = raja * 3 / 4;
+                int poistettu = 0;
+                foreach (var f in tiedostot)
+                {
+                    if (koko <= tavoite) break;
+                    try { koko -= f.Length; f.Delete(); poistettu++; } catch { }
+                }
+                Debug.Log($"MATKAKIRJA laattapalvelin: välimuisti karsittu, {poistettu} tiedostoa pois, {koko / 1048576} Mt jäljellä");
+            }
+            catch (Exception e) { Debug.LogWarning("MATKAKIRJA laattapalvelin: karsinta epäonnistui: " + e.Message); }
         }
 
         /// <summary>Kohtauksen pallo (maasto) ja pohjalaatat hakemaan palvelimen kautta.</summary>
@@ -202,7 +228,13 @@ namespace Matkakirja
             string f = Tiedosto(offline, polku);
             if (File.Exists(f)) { Interlocked.Increment(ref Offline); return (200, File.ReadAllBytes(f)); }
             f = Tiedosto(valimuisti, polku);
-            if (File.Exists(f)) { Interlocked.Increment(ref Valimuistista); return (200, File.ReadAllBytes(f)); }
+            if (File.Exists(f))
+            {
+                Interlocked.Increment(ref Valimuistista);
+                var sisalto = File.ReadAllBytes(f);
+                try { File.SetLastWriteTimeUtc(f, DateTime.UtcNow); } catch { }
+                return (200, sisalto);
+            }
             var h = new Haku { Polku = polku };
             jono.Enqueue(h);
             var (tila, data) = await h.Valmis.Task;

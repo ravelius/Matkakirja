@@ -744,3 +744,380 @@
     margin-right: 6px;
     --mk-ikoni-viiva: 2.2;
 }
+
+/* --- Nostokortti (webin .fokusnosto-kortti, .fokuskohde-popup, skandaalin lisälehti) --- */
+
+.mk-nosto__kerros {
+    background-color: rgba(18, 12, 4, 0.3);
+}
+
+.mk-nosto {
+    width: 100%;
+    max-width: 544px;
+    max-height: 88%;
+    padding: 11px 13px 12px 13px;
+    border-width: 1px;
+    border-color: rgba(122, 85, 20, 0.32);
+    border-radius: 12px;
+    background-color: #f5f0e2;
+    color: #211d18;
+}
+
+.mk-nosto--kohde {
+    max-width: 384px;
+}
+
+.mk-nosto--looppi {
+    max-width: 640px;
+    background-color: #f6ecc6;
+    border-color: rgba(122, 85, 20, 0.45);
+}
+
+.mk-nosto--esittely {
+    max-width: 760px;
+    padding: 8px;
+}
+
+.mk-nosto__sisus {
+    flex-shrink: 1;
+}
+
+.mk-nosto__sulje {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 34px;
+    height: 34px;
+    min-height: 34px;
+    padding: 0;
+    border-width: 0;
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #46331f;
+}
+
+.mk-nosto__sulje .mk-nappi__teksti {
+    font-size: 20px;
+    -unity-text-align: middle-center;
+}
+
+.mk-nosto__ylarivi {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: #7a5514;
+    margin: 2px 40px 6px 0;
+}
+
+.mk-nosto__nimio {
+    font-size: 9.5px;
+    letter-spacing: 3.3px;
+    color: rgba(70, 51, 31, 0.7);
+    -unity-text-align: middle-center;
+}
+
+.mk-nosto__paivays {
+    margin: 4px 0 8px 0;
+    padding: 4px 0;
+    border-top-width: 3px;
+    border-bottom-width: 1px;
+    border-top-color: rgba(70, 51, 31, 0.75);
+    border-bottom-color: rgba(70, 51, 31, 0.5);
+}
+
+.mk-nosto__paivaysteksti {
+    font-size: 11px;
+    letter-spacing: 1.8px;
+    -unity-text-align: middle-center;
+    white-space: normal;
+    color: #46331f;
+}
+
+.mk-nosto__otsikko {
+    font-size: 20px;
+    white-space: normal;
+    margin: 0 30px 6px 0;
+    color: #16130f;
+}
+
+.mk-nosto--looppi .mk-nosto__otsikko {
+    font-size: 26px;
+    margin-right: 0;
+}
+
+.mk-nosto--kohde .mk-nosto__otsikko {
+    font-size: 16.5px;
+}
+
+.mk-nosto__meta {
+    font-size: 12px;
+    color: rgba(33, 29, 24, 0.58);
+    margin-bottom: 8px;
+    white-space: normal;
+}
+
+.mk-nosto__ingressi {
+    font-size: 16px;
+    white-space: normal;
+    margin-bottom: 8px;
+    color: #2a231b;
+}
+
+.mk-nosto__teksti {
+    font-size: 15.5px;
+    white-space: normal;
+    margin-bottom: 9px;
+}
+
+.mk-nosto__kuvasarja {
+    margin: 4px 0 10px 0;
+}
+
+.mk-nosto__kuvakehys {
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: rgba(70, 51, 31, 0.1);
+}
+
+.mk-nosto__kuva {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.mk-nosto__kuvateksti {
+    margin-top: 5px;
+    font-size: 12.5px;
+    white-space: normal;
+    color: rgba(33, 29, 24, 0.78);
+}
+
+.mk-nosto__esittelyrivi {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 6px;
+}
+
+.mk-nosto__esittelyrivi .mk-nosto__kuvateksti {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin: 0 10px 0 2px;
+}
+
+.mk-nosto__lisaa {
+    min-height: 36px;
+    padding: 6px 14px;
+    border-width: 1px;
+    border-color: rgba(122, 85, 20, 0.6);
+    border-radius: 4px;
+    background-color: rgba(214, 168, 62, 0.2);
+    color: #6d4d12;
+}
+
+.mk-nosto__lisaa .mk-nappi__teksti {
+    font-size: 13px;
+    letter-spacing: 1.5px;
+}
+
+.mk-nosto__selaa {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 24%;
+    border-width: 0;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.mk-nosto__selaa--vasen {
+    left: 0;
+    justify-content: flex-start;
+    padding-left: 10px;
+}
+
+.mk-nosto__selaa--oikea {
+    right: 0;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+
+.mk-nosto__selaa .mk-nappi__teksti {
+    font-size: 34px;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.mk-nosto__laskuri {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    background-color: rgba(20, 14, 8, 0.6);
+    color: #f3e6d0;
+    font-size: 11px;
+}
+
+.mk-nosto__visa {
+    margin: 8px 0 6px 0;
+    padding: 10px 12px;
+    border-width: 1px;
+    border-color: rgba(122, 85, 20, 0.45);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.42);
+}
+
+.mk-nosto__visaotsikko {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: #7a5514;
+    margin-bottom: 4px;
+}
+
+.mk-nosto__visakysymys {
+    font-size: 16px;
+    white-space: normal;
+    margin-bottom: 4px;
+}
+
+.mk-nosto__visavihje {
+    font-size: 12.5px;
+    -unity-font-style: italic;
+    color: rgba(33, 29, 24, 0.65);
+    white-space: normal;
+    margin-bottom: 6px;
+}
+
+.mk-nosto__visanappi {
+    justify-content: flex-start;
+    min-height: 42px;
+    margin-top: 5px;
+    padding: 6px 10px;
+    border-width: 1px;
+    border-color: rgba(122, 85, 20, 0.35);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.62);
+    color: #211d18;
+}
+
+.mk-nosto__visanappi .mk-nappi__teksti {
+    white-space: normal;
+    font-size: 14.5px;
+}
+
+.mk-nosto__visanappi.mk-oikein {
+    border-color: #2f6b3a;
+    background-color: rgba(47, 107, 58, 0.16);
+}
+
+.mk-nosto__visanappi.mk-vaarin {
+    border-color: #9a2b21;
+    background-color: rgba(154, 43, 33, 0.12);
+}
+
+.mk-nosto__visatulos {
+    margin-top: 8px;
+    font-size: 14.5px;
+    white-space: normal;
+    color: #9a2b21;
+}
+
+.mk-nosto__visatulos.mk-oikein {
+    color: #2f6b3a;
+}
+
+.mk-nosto__palkkio {
+    margin-top: 6px;
+    padding-top: 8px;
+    border-top-width: 1px;
+    border-top-color: rgba(122, 85, 20, 0.28);
+    font-size: 13.5px;
+    color: #7a5514;
+    white-space: normal;
+}
+
+.mk-nosto__kysyotsikko {
+    margin: 10px 0 6px 0;
+    font-size: 13px;
+    color: #46331f;
+}
+
+.mk-nosto__kysymys {
+    justify-content: flex-start;
+    min-height: 38px;
+    margin-bottom: 6px;
+    padding: 6px 10px;
+    border-width: 1px;
+    border-color: rgba(122, 85, 20, 0.5);
+    border-radius: 8px;
+    background-color: rgba(236, 226, 200, 0.6);
+    color: #46331f;
+}
+
+.mk-nosto__kysymys .mk-nappi__teksti,
+.mk-nosto__kierros .mk-nappi__teksti {
+    white-space: normal;
+    font-size: 13.5px;
+}
+
+.mk-nosto__kierros {
+    min-height: 44px;
+    margin-top: 6px;
+    border-width: 1px;
+    border-color: rgba(122, 85, 20, 0.6);
+    border-radius: 4px;
+    background-color: rgba(214, 168, 62, 0.18);
+    color: #6d4d12;
+    justify-content: center;
+}
+
+.mk-nosto__suurennos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background-color: rgba(18, 12, 4, 0.55);
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.22s;
+}
+
+.mk-nosto__suurennos.mk-auki {
+    opacity: 1;
+}
+
+.mk-nosto__suurennoskehys {
+    width: 100%;
+    max-width: 640px;
+    padding: 9px;
+    border-width: 1px;
+    border-color: rgba(58, 38, 16, 0.35);
+    border-radius: 2px;
+    background-color: #f8f3e6;
+}
+
+.mk-nosto__suurennoskuva {
+    height: 420px;
+    max-height: 60%;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.mk-nosto__suurennosteksti {
+    margin-top: 8px;
+    font-size: 14.5px;
+    white-space: normal;
+    color: #3a2610;
+}
+
+.mk-nosto__lahde {
+    margin-top: 4px;
+    font-size: 11.5px;
+    white-space: normal;
+    color: rgba(58, 38, 16, 0.7);
+}

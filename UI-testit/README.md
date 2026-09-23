@@ -18,7 +18,7 @@ Pelikoodarin näkymärajapinnat `Scripts/Peli/NakymaSopimukset.cs` ovat Assembly
   (paljastus: löydön kuva — ensin löydön oma kuva `LoytoKuvaUrl`, varana laattatyypin
   kuva tai webin piirros: `isoAarre` (oletus, Ivalojoen kultahippu: maakohtainen nimi,
   fakta ja kuva ämpäristä), `pieniAarre` (tervatynnyrin hopeariksi), `star` (aarrekuva
-  ämpäristä), `mannerAarre`, `robber`, `pollo` ja `piirros` (ilman kuvaa: kätköarkku-
+  ämpäristä), `mannerAarre`, `pollo` ja `piirros` (ilman kuvaa: kätköarkku-
   piirros) — 50:50 käytetty, fakta, lähteet, Jatka), `kohtaaminen` (Márta, Budapest:
   pieni kohtaamiskuva, "yritys 1/2", vastauksen jälkeen repliikki, oikeasta vastauksesta
   löytö ja kätkökuva `KatkoKuvaUrl`, väärästä uuden yrityksen ohje) ja `kohtaaminen-tervehdys` (tervehdyssivu:
@@ -86,6 +86,8 @@ Aloitusnäkymä ja matkan huipennus (`Aloitusnakyma.cs`): peli jää tilaan Aloi
 (PeliOhjain.AloitusNakyma = true). Portti (Aloita seikkailu, tai Jatka matkaa / Uusi matka),
 julisteotsikko ja naputettava avausteksti (kertoja lukee intro-puhe.mp3:n; napautus
 kirjoittaa loppuun), VALITSE ALOITUSKAUPUNKI → lähtökaupungit → PeliOhjain.UusiMatka(id).
+Automaatio ohittaa aloituksen: `ui aloita pariisi` (Pariisi = oletuslähtö; lähtökaupunkilistan
+kaupunki kuten `ui aloita ateena` aloittaa siitä) tai `ui jatka` (tallennettu matka).
 `ui aloitus [portti|avaus|valinta|jatka]` ilman peliä, `ui huipennus` kaikkien aarteiden
 huipennus esimerkkiluvuin.
 
@@ -103,6 +105,28 @@ ui sulje
 ui huipennus
 odota 1
 kuva huipennus
+ui sulje
+```
+
+Nostokortit (`Nostokortti.cs`, `NostoSisalto.cs`): karttavalon napautus (UiPalvelut.ValoNapautettu)
+avaa kortin. Kuvallinen kortti aukeaa ensin kuvana (LISÄÄ), sitten koko korttina; kuvan
+napautus avaa suurennoksen. `ui nosto <valoId>`: `skandaali:shakkiturkkilainen`,
+`hetki:kolumbus-portugali-1484`, `elaintaky:FIN`, `kohde:thessaloniki@GRC`.
+
+```
+ui aloita pariisi
+ui nosto skandaali:shakkiturkkilainen
+odota 3
+kuva nosto-skandaali-kuva
+ui nosto hetki:kolumbus-portugali-1484
+odota 3
+kuva nosto-hetki
+ui nosto elaintaky:FIN
+odota 3
+kuva nosto-elain
+ui nosto kohde:thessaloniki@GRC
+odota 3
+kuva nosto-kohde
 ui sulje
 ```
 

@@ -169,7 +169,7 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(k, livia ? Kirjasin.Luku : Kirjasin.Kone);
             k.EnableInClassList("mk-odottaa", odottaa);
             if (livia) Aanet.PulunTehoste("pulu.kujerrus");
-            virta.schedule.Execute(() => virta.ScrollTo(k));
+            Rakenne.Vierita(virta, k);
             return k;
         }
 

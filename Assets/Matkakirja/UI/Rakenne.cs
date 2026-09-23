@@ -84,5 +84,28 @@ namespace Matkakirja.Natiivi
         }
 
         sealed class NayttoVersio { }
+
+        /// <summary>
+        /// JSON-taulukko tai null. MiniJson.Taulukko heittää myös puuttuvasta kentästä (null),
+        /// joten valinnaiset kentät luetaan tällä (tuotannon v11:n maat ilman tervehdyksiä
+        /// kaatoi koko UiSisallon jäsennyksen).
+        /// </summary>
+        public static System.Collections.Generic.List<object> Lista(object arvo) => arvo as System.Collections.Generic.List<object>;
+
+        /// <summary>
+        /// ScrollView.ScrollTo turvallisesti viiveellä: elementti on voinut poistua (odotusrivi,
+        /// sirut) ennen kuin ajastus ehtii. ScrollTo heittää silloin ArgumentExceptionin, ja
+        /// UI Toolkitin ajastin yrittää heittävää tehtävää uudelleen joka ruudussa (laitteella
+        /// kymmeniä virheitä pinossa) — siksi tarkistus ja poikkeuksen nielaisu.
+        /// </summary>
+        public static void Vierita(ScrollView v, VisualElement e, long viiveMs = 0)
+        {
+            if (v == null || e == null) return;
+            v.schedule.Execute(() =>
+            {
+                if (e.panel == null || !v.contentContainer.Contains(e)) return;
+                try { v.ScrollTo(e); } catch (System.ArgumentException) { }
+            }).StartingIn(viiveMs);
+        }
     }
 }
