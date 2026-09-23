@@ -29021,7 +29021,7 @@ body[data-mode] .fact-card.pieni > button#fact-kuuntele.fact-kuuntele.ghost {
 body.kerros-pois-pulu .pollo-nappi,
 body.kerros-pois-pulu .pollo-paneeli,
 body.kerros-pois-pulu .pollo-kuplapino-kehys,
-body.kerros-pois-pulu .pallolauta-liike,
+body.kerros-pois-liike .pallolauta-liike,
 body.kerros-pois-ui .topbar,
 body.kerros-pois-ui .turn-card,
 body.kerros-pois-ui .ylapalkki-nappi,
@@ -29034,7 +29034,8 @@ body.kerros-pois-ui .pallolauta-kartuutsi { display: none !important; }
  * ylimääräiset elementit"; js/pallolauta/kerrokset.js PALJAAT_TILAT).
  * body.kerros-pois-dom: kaikki sivun elementit näkymättömiin paitsi
  * pallon kangas, kehysprofiilin overlay ja ratasvalikko (nappi ja
- * pudotus), jotta tilan voi vaihtaa takaisin. `visibility` periytyy, joten
+ * pudotus), jotta tilan voi vaihtaa takaisin, sekä pulu ja pieni liike,
+ * joilla on omat Kerrokset-kytkimensä. `visibility` periytyy, joten
  * yksittäisten luokkien jahtaamista ei tarvita; animoivat ja omaa kerrosta
  * pitävät elementit lisäksi display: none, jottei niitä sommitella.
  */
@@ -29045,11 +29046,16 @@ body.kerros-pois-dom .profiilinaytto *,
 body.kerros-pois-dom #menu-btn,
 body.kerros-pois-dom #menu-btn *,
 body.kerros-pois-dom #paavalikko,
-body.kerros-pois-dom #paavalikko * { visibility: visible !important; }
+body.kerros-pois-dom #paavalikko *,
+/* Pulu ja pieni liike ovat omia kytkimiään (kerros-pois-pulu / -liike). */
 body.kerros-pois-dom .pallolauta-liike,
+body.kerros-pois-dom .pallolauta-liike *,
 body.kerros-pois-dom .pollo-nappi,
+body.kerros-pois-dom .pollo-nappi *,
 body.kerros-pois-dom .pollo-paneeli,
+body.kerros-pois-dom .pollo-paneeli *,
 body.kerros-pois-dom .pollo-kuplapino-kehys,
+body.kerros-pois-dom .pollo-kuplapino-kehys * { visibility: visible !important; }
 body.kerros-pois-dom .maapaneeli-nurkka,
 body.kerros-pois-dom .monitoimi-nappi,
 body.kerros-pois-dom .saapumistraileri,

@@ -28,7 +28,9 @@
  * savukkeet käyttävät, ja se ajetaan kerran jaksossa (oletus 3 s).
  */
 
-import { PALJAAN_LISAKOKEET, PALJAAT_KOKEET, PIIRTOKOKEIDEN_VAIHTOEHDOT } from '../piirtokoe-asetus.js';
+import {
+  PALJAAN_KERROKSET, PALJAAN_LISAKOKEET, PALJAAT_KOKEET, PIIRTOKOKEIDEN_VAIHTOEHDOT,
+} from '../piirtokoe-asetus.js';
 
 /** Rollaavan ikkunan pituus (ms). */
 export const PROFIILIN_JAKSO_MS = 3000;
@@ -75,11 +77,15 @@ export function koetilarivi({ koe, seuraava = null, versio = '' } = {}) {
  * lippu, jota valikossa ei ole (tai useampi yhtä aikaa), näkyy raakana.
  */
 export function koetilanOtsikko(koe) {
+  const osat = String(koe).split(',').map((l) => l.trim()).filter(Boolean);
+  // Paljaan kartan kerroskytkimet lyhenteinä valikon järjestyksessä: "+nimiöt +runko".
+  const kerrokset = PALJAAN_KERROKSET.filter((k) => osat.includes(`kerros-${k.avain}`)).map((k) => ` +${k.lyhenne}`).join('');
+  const perus = osat.filter((l) => !l.startsWith('kerros-')).sort().join(',') || 'normaali';
   // Monilippuinen tila ("Molemmat") verrataan järjestyksestä riippumatta.
   const jarjesta = (x) => String(x).split(',').map((l) => l.trim()).filter(Boolean).sort().join(',');
-  const i = PIIRTOKOKEIDEN_VAIHTOEHDOT.findIndex((k) => jarjesta(k.lippu ?? 'normaali') === jarjesta(koe));
-  if (i < 0) return `koe: ${koe}`;
-  return `koe ${i + 1}/${PIIRTOKOKEIDEN_VAIHTOEHDOT.length} ${PIIRTOKOKEIDEN_VAIHTOEHDOT[i].nimi}`;
+  const i = PIIRTOKOKEIDEN_VAIHTOEHDOT.findIndex((k) => jarjesta(k.lippu ?? 'normaali') === perus);
+  if (i < 0) return `koe: ${perus}${kerrokset}`;
+  return `koe ${i + 1}/${PIIRTOKOKEIDEN_VAIHTOEHDOT.length} ${PIIRTOKOKEIDEN_VAIHTOEHDOT[i].nimi}${kerrokset}`;
 }
 
 const p = (x, n = 0) => (Number.isFinite(x) ? x.toFixed(n) : '—');

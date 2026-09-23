@@ -1,17 +1,20 @@
 /*
- * SAVUKE: PALJAS KARTTA (Syötekoe 5–8, omistaja 23.9.2026 klo 09.20:
- * "riisutaan kartalta kaikki ylimääräiset elementit ja katsotaan loppuuko
- * tökkiminen"). Sama näkymä normaalisti ja jokaisessa paljaassa tilassa
- * (valinta laitteen muistissa kuten valikosta):
- *   K1 paljas: piirtokutsuja enintään PALJAS_DC_MAX (vain laatat)
- *   K2 paljas: kartan päällä ei yhtään näkyvää sivun elementtiä
- *      (kangas, kehysprofiili ja ratasvalikon nappi sallittu)
- *   K3 paljas: valikkonappi näkyy ja avaa valikon (paluu tilasta)
- *   K4 paljas: lepopiirto pois (piirto joka rAF:ssa), tilarivi "koe 5/8 Paljas kartta"
- *   K5 vastakoe normaali: piirtokutsuja ja DOM-elementtejä selvästi enemmän
- *   K6 puolitus: nimiöt ja symbolit lisäävät piirtokutsuja, DOM-tila tuo
- *      elementit takaisin
- *   K7 ei sivuvirheitä
+ * SAVUKE: PALJAS KARTTA JA KERROKSET-KYTKIMET (Syötekoe 5, omistaja
+ * 23.9.2026 klo 09.20 ja 09.25). Valinta laitteen muistissa kuten valikosta.
+ * Joka tilasta mitataan ryhmien tunnusluvut:
+ *   muuDc     piirtokutsut ilman laattoja (laatat hetkeksi piiloon, yksi
+ *             render): nimiöt, symbolit, runko, ilmakehä ja pohja
+ *   dom       näkyvät sivun elementit kartan päällä (kangas, kehysprofiili,
+ *             ratasvalikko, pulu ja pieni liike eivät lasketa)
+ *   pulu, liike, lepo, ilmakehä, häive  — päällä vai ei
+ *   K1 paljas: dom 0, kaikki ryhmät pois
+ *   K2 paljas: valikkonappi näkyy ja avaa valikon (paluu tilasta)
+ *   K3 paljas: tilarivi "koe 5/5 Paljas kartta"; kytkimen kanssa "+lyhenne"
+ *   K4 vastakoe normaali: ryhmät päällä (pulun nappi on tässä näkymässä
+ *      normaalistikin piilossa, joten sitä ei vaadita)
+ *   K5 jokainen kytkin yksin päällä muuttaa vain oman ryhmänsä
+ *   K7 valikon kytkimen napautus lataa sivun ja tuo ryhmän ("+nimiöt")
+ *   K6 ei sivuvirheitä
  * KÄYTTÖ: PLAYWRIGHT_JS=... SAVUKE_MOOTTORI=webkit node tools/savukkeet/savuke-paljas-kartta.mjs
  */
 import http from 'node:http';
@@ -73,62 +76,103 @@ const ylinRivi = (sivu, ehto = '') => sivu.waitForFunction((e) => {
   return r.startsWith('koe') && r.includes(e) ? r : false;
 }, ehto, { timeout: 20000 }).then((h) => h.jsonValue()).catch(() => '');
 
-const PALJAS_DC_MAX = 80;
 const mittaa = (sivu) => sivu.evaluate(async () => {
   const ui = window.matkakirja.ui;
+  const pallo = ui.pallonInstanssi;
   const kotelo = ui.pallolauta.kotelo;
-  const r = ui.pallonInstanssi.renderer();
-  // Kaksi kehystä, jotta viimeisin render on tältä tilalta.
+  const r = pallo.renderer();
   await new Promise((ok) => requestAnimationFrame(() => requestAnimationFrame(ok)));
   const dc = r.info.render.calls;
+  // Muut kuin laattojen piirtokutsut tarkasti: laatat (userData.laattakerros) hetkeksi piiloon, yksi render.
+  const piilotetut = [];
+  pallo.scene().traverse((o) => { if (o.userData?.laattakerros && o.visible) { o.visible = false; piilotetut.push(o); } });
+  r.render(pallo.scene(), pallo.camera());
+  const muuDc = r.info.render.calls;
+  for (const o of piilotetut) o.visible = true;
   const kangas = r.domElement;
   const alue = kotelo.getBoundingClientRect();
-  const sallittu = (el) => el === kangas || el.closest('.profiilinaytto') || el.closest('#menu-btn') || el.closest('#paavalikko');
-  const nakyvat = [...document.body.querySelectorAll('*')].filter((el) => {
-    if (sallittu(el) || el.contains(kangas)) return false;
-    const cs = getComputedStyle(el);
-    if (cs.visibility !== 'visible' || cs.display === 'none' || Number(cs.opacity) === 0) return false;
+  const nakyy = (el) => {
+    if (!el) return false;
+    const cs = getComputedStyle(el); const b = el.getBoundingClientRect();
+    return cs.visibility === 'visible' && cs.display !== 'none' && Number(cs.opacity) > 0 && b.width >= 1 && b.height >= 1;
+  };
+  const omat = '.profiilinaytto, #menu-btn, #paavalikko, .pollo-nappi, .pollo-paneeli, .pollo-kuplapino-kehys, .pallolauta-liike';
+  const dom = [...document.body.querySelectorAll('*')].filter((el) => {
+    if (el === kangas || el.contains(kangas) || el.closest(omat)) return false;
+    if (!nakyy(el)) return false;
     const b = el.getBoundingClientRect();
-    if (b.width < 1 || b.height < 1) return false;
     return b.right > alue.left && b.left < alue.right && b.bottom > alue.top && b.top < alue.bottom;
   });
+  const { laattakerroksenKokeet } = await import('/js/pallolaatat.js');
   const nappi = document.getElementById('menu-btn');
-  const nb = nappi?.getBoundingClientRect();
   return {
-    dc, dom: nakyvat.length, esim: nakyvat.slice(0, 4).map((el) => `${el.tagName.toLowerCase()}.${[...el.classList].slice(0, 2).join('.')}`),
-    nappi: Boolean(nappi && getComputedStyle(nappi).visibility === 'visible' && nb.width > 0),
-    lepo: ui.pallonInstanssi.__piirto?.tila?.()?.paalla ?? null,
+    muuDc, dc, dom: dom.length, esim: dom.slice(0, 3).map((el) => `${el.tagName.toLowerCase()}.${[...el.classList].slice(0, 2).join('.')}`),
+    pulu: nakyy(document.querySelector('.pollo-nappi')),
+    liike: nakyy(document.querySelector('.pallolauta-liike')),
+    lepo: Boolean(pallo.__piirto?.tila?.()?.paalla),
+    // Kuori näkyy vain kaukaa (ilmakehän vahti), joten ryhmä luetaan lipuista.
+    ilmakeha: !laattakerroksenKokeet().has('eiilmakeha') && !laattakerroksenKokeet().has('eipohja'),
+    haive: !laattakerroksenKokeet().has('eihaive'),
+    nappi: nakyy(nappi),
     rivi: document.querySelector('.profiilinaytto > div')?.textContent ?? '',
   };
 });
+const RYHMAT = ['nimiot', 'symbolit', 'runko', 'ilmakeha', 'haive', 'lepo', 'pulu', 'dom', 'liike'];
 const tulos = {};
 const virheet = [];
-try {
-  for (const koe of ['normaali', 'paljas', 'paljasnimet', 'paljassymbolit', 'paljasdom']) {
-    const { ctx, sivu, virheet: v } = await avaa('', { 'matkakirja-piirtokoe': koe, 'matkakirja-kehysprofiili': '1' });
-    await sivu.waitForTimeout(4500);
-    await ylinRivi(sivu);
-    tulos[koe] = await mittaa(sivu);
-    tieto(koe, JSON.stringify(tulos[koe]));
-    if (koe === 'paljas') {
-      await sivu.click('#menu-btn');
-      tulos.valikko = await sivu.evaluate(() => { const m = document.getElementById('paavalikko'); return Boolean(m && !m.hidden && getComputedStyle(m).visibility === 'visible'); });
-    }
-    virheet.push(...v);
-    await ctx.close();
+const tila = async (nimi, muisti) => {
+  const { ctx, sivu, virheet: v } = await avaa('', { 'matkakirja-kehysprofiili': '1', ...muisti });
+  await sivu.waitForTimeout(4500);
+  await ylinRivi(sivu);
+  tulos[nimi] = await mittaa(sivu);
+  tieto(nimi, JSON.stringify({ ...tulos[nimi], rivi: undefined, esim: tulos[nimi].esim.join(',') }));
+  if (nimi === 'paljas') {
+    await sivu.click('#menu-btn');
+    tulos.valikko = await sivu.evaluate(() => {
+      const m = document.getElementById('paavalikko');
+      const k = document.getElementById('paljaat-kerrokset-valikko');
+      return { auki: Boolean(m && !m.hidden && getComputedStyle(m).visibility === 'visible'), kytkimia: k && !k.hidden ? k.querySelectorAll('button').length : 0 };
+    });
+    // K7: kytkimen napautus → "Ladataan…" → lataus → tilarivi "+nimiöt".
+    const lataus = sivu.waitForEvent('load', { timeout: 15000 }).then(() => true).catch(() => false);
+    await sivu.click('#paljaat-kerrokset-valikko button[data-paljas-kerros="nimiot"]');
+    const ladattu = await lataus;
+    await sivu.waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null, { timeout: 90000 }).catch(() => {});
+    tulos.napautus = { ladattu, rivi: await ylinRivi(sivu, '+nimiöt') };
   }
+  virheet.push(...v);
+  await ctx.close();
+};
+try {
+  await tila('normaali', { 'matkakirja-piirtokoe': 'normaali' });
+  await tila('paljas', { 'matkakirja-piirtokoe': 'paljas' });
+  for (const r of RYHMAT) await tila(r, { 'matkakirja-piirtokoe': 'paljas', 'matkakirja-paljaat-kerrokset': r });
 } finally {
   await selain.close();
   palvelin.close();
 }
 const P = tulos.paljas; const N = tulos.normaali;
-vaadi('K1 paljas: piirtokutsuja ≤ ' + PALJAS_DC_MAX, P.dc <= PALJAS_DC_MAX, `dc ${P.dc}`);
-vaadi('K2 paljas: kartan päällä ei näkyviä sivun elementtejä', P.dom === 0, `${P.dom}: ${P.esim.join(', ')}`);
-vaadi('K3 paljas: valikkonappi näkyy ja avaa valikon', P.nappi && tulos.valikko === true, JSON.stringify({ nappi: P.nappi, valikko: tulos.valikko }));
-vaadi('K4 paljas: lepopiirto pois ja tilarivi', P.lepo !== true && /^koe 5\/8 Paljas kartta · profiili p\d+/.test(P.rivi), JSON.stringify({ lepo: P.lepo, rivi: P.rivi }));
-vaadi('K5 vastakoe normaali: enemmän piirtokutsuja ja DOM-elementtejä', N.dc > P.dc && N.dom > 5, `normaali dc ${N.dc} dom ${N.dom}, paljas dc ${P.dc} dom ${P.dom}`);
-vaadi('K6 puolitus: nimiöt ja symbolit lisäävät dc:tä, DOM-tila tuo elementit', tulos.paljasnimet.dc > P.dc && tulos.paljassymbolit.dc > P.dc && tulos.paljasdom.dom > 0 && tulos.paljasnimet.dom === 0 && tulos.paljassymbolit.dom === 0,
-  ['paljasnimet', 'paljassymbolit', 'paljasdom'].map((k) => `${k} dc ${tulos[k].dc} dom ${tulos[k].dom}`).join(' · '));
-vaadi('K7 ei sivuvirheitä', virheet.length === 0, virheet.join(' | '));
+vaadi('K1 paljas: dom 0, kaikki ryhmät pois', P.dom === 0 && !P.pulu && !P.liike && !P.lepo && !P.ilmakeha && !P.haive, JSON.stringify(P));
+vaadi('K2 paljas: valikkonappi näkyy ja avaa valikon, 9 kytkintä', P.nappi && tulos.valikko?.auki && tulos.valikko?.kytkimia === RYHMAT.length, JSON.stringify(tulos.valikko));
+vaadi('K3 tilarivi', /^koe 5\/5 Paljas kartta · profiili p\d+/.test(P.rivi) && /^koe 5\/5 Paljas kartta \+nimiöt · /.test(tulos.nimiot.rivi), `${P.rivi} | ${tulos.nimiot.rivi}`);
+vaadi('K4 vastakoe normaali: ryhmät päällä', N.muuDc > P.muuDc + 5 && N.dom > 5 && N.liike && N.lepo && N.haive && N.ilmakeha, JSON.stringify(N));
+/* Oma muutos ja muiden pysyvyys. Piirtokutsut: +1 riittää omaksi muutokseksi, ±1 on sama. */
+const omaMuutos = {
+  nimiot: (t) => t.muuDc > P.muuDc, symbolit: (t) => t.muuDc > P.muuDc, runko: (t) => t.muuDc > P.muuDc + 3,
+  ilmakeha: (t) => t.ilmakeha, haive: (t) => t.haive, lepo: (t) => t.lepo, pulu: (t) => t.pulu, dom: (t) => t.dom > 5, liike: (t) => t.liike,
+};
+const dcRyhmat = new Set(['nimiot', 'symbolit', 'runko', 'ilmakeha']);
+// Ilmakehä ja pohja: pohja on piilossa aina kun laatat peittävät, joten muuDc voi pysyä.
+const rikkeet = [];
+for (const r of RYHMAT) {
+  const t = tulos[r];
+  if (!omaMuutos[r](t)) rikkeet.push(`${r}: oma ryhmä ei muuttunut`);
+  for (const k of ['pulu', 'liike', 'lepo', 'ilmakeha', 'haive']) if (k !== r && t[k] !== P[k]) rikkeet.push(`${r}: myös ${k}`);
+  if (r !== 'dom' && t.dom !== 0) rikkeet.push(`${r}: dom ${t.dom} (${t.esim.join(',')})`);
+  if (!dcRyhmat.has(r) && Math.abs(t.muuDc - P.muuDc) > 1) rikkeet.push(`${r}: muuDc ${t.muuDc} vs ${P.muuDc}`);
+}
+vaadi('K5 jokainen kytkin muuttaa vain oman ryhmänsä', rikkeet.length === 0, rikkeet.join(' · '));
+vaadi('K7 kytkimen napautus lataa sivun ja tuo ryhmän', tulos.napautus?.ladattu && /^koe 5\/5 Paljas kartta \+nimiöt/.test(tulos.napautus?.rivi ?? ''), JSON.stringify(tulos.napautus));
+vaadi('K6 ei sivuvirheitä', virheet.length === 0, virheet.join(' | '));
 console.log(`\n${lapi}/${kaikki} läpi`);
 process.exit(lapi === kaikki ? 0 : 1);

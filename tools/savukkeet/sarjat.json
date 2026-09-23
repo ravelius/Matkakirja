@@ -697,7 +697,7 @@
       "env": {
         "SAVUKE_MOOTTORI": "chromium"
       },
-      "huomautus": "Kehysprofiilin ylin rivi kertoo koetilan (omistajan iPhone-kaappaukset 22.9.2026 eivat kertoneet Piirtokoe-valintaa). T1 ?koe=profiili,syotekello -> 'koe 3/8 Yhteinen kello · profiili pN · vNNNN' (valikossa Syötekoe 23.9.2026) (numero ja nimi valikon jarjestyksessa); T2 valikon tallennus syotetouch + kytkin ilman lippua; T3 valinta vaihdetaan kesken istunnon -> '(seuraavassa latauksessa: koe 1/8 Oletus)', koska kokeet luetaan kerrosten luonnissa; T4 ei sivuvirheita. Chromium ja WebKit 5/5."
+      "huomautus": "Kehysprofiilin ylin rivi kertoo koetilan (omistajan iPhone-kaappaukset 22.9.2026 eivat kertoneet Piirtokoe-valintaa). T1 ?koe=profiili,syotekello -> 'koe 3/5 Yhteinen kello · profiili pN · vNNNN' (valikossa Syötekoe 23.9.2026) (numero ja nimi valikon jarjestyksessa); T2 valikon tallennus syotetouch + kytkin ilman lippua; T3 valinta vaihdetaan kesken istunnon -> '(seuraavassa latauksessa: koe 1/5 Oletus)', koska kokeet luetaan kerrosten luonnissa; T4 ei sivuvirheita. Chromium ja WebKit 5/5."
     },
     "savuke-eihaive-veto.mjs": {
       "env": {
@@ -709,7 +709,7 @@
       "env": {
         "SAVUKE_MOOTTORI": "chromium"
       },
-      "huomautus": "Piirtokokeen valinta lataa sivun (omistaja 22.9.2026 klo 23.05: v2133-kierroksen 3/5 kaappausta mittasi vanhaa koetta, koska sivua ei ladattu). L1 valikosta Syötekoe 'Kosketus suoraan' -> vihje 'Ladataan…', L2 sivu latautuu itse 600 ms:n jalkeen, L3 latauksen jalkeen overlay 'koe 2/8 Kosketus suoraan' (Syötekoe-valikko, omistaja 23.9.2026 klo 08.34), L6 latauksen jälkeen pallonSyote.touchLahde ilman 'seuraavassa latauksessa', L4 valinta ja paluu viiveen aikana ei lataa, L5 ei sivuvirheita. Chromium ja WebKit 5/5; vanhalla main.js:lla L1-L3 kaatuvat."
+      "huomautus": "Piirtokokeen valinta lataa sivun (omistaja 22.9.2026 klo 23.05: v2133-kierroksen 3/5 kaappausta mittasi vanhaa koetta, koska sivua ei ladattu). L1 valikosta Syötekoe 'Kosketus suoraan' -> vihje 'Ladataan…', L2 sivu latautuu itse 600 ms:n jalkeen, L3 latauksen jalkeen overlay 'koe 2/5 Kosketus suoraan' (Syötekoe-valikko, omistaja 23.9.2026 klo 08.34), L6 latauksen jälkeen pallonSyote.touchLahde ilman 'seuraavassa latauksessa', L4 valinta ja paluu viiveen aikana ei lataa, L5 ei sivuvirheita. Chromium ja WebKit 5/5; vanhalla main.js:lla L1-L3 kaatuvat."
     },
     "savuke-liikemittari.mjs": {
       "env": {
@@ -727,7 +727,7 @@
       "env": {
         "SAVUKE_MOOTTORI": "webkit"
       },
-      "huomautus": "Paljas kartta (Syotekoe 5-8, omistaja 23.9.2026 klo 09.20). Valinta laitteen muistissa kuten valikosta; sama nakyma normaalisti ja 4 paljaassa tilassa. K1 paljas dc <= 80 (mitattu 49, normaali 66), K2 kartan paalla 0 nakyvaa sivun elementtia (normaali 74), K3 valikkonappi nakyy ja avaa valikon, K4 lepopiirto pois + tilarivi 'koe 5/8 Paljas kartta', K5 vastakoe normaali, K6 puolitus (nimiot 51, symbolit 50 dc; DOM-tila 74 elementtia), K7 ei sivuvirheita. WebKit 7/7."
+      "huomautus": "Paljas kartta ja Kerrokset-kytkimet (Syotekoe 5, omistaja 23.9.2026 klo 09.20 ja 09.25). Valinta laitteen muistissa kuten valikosta; normaali, paljas ja jokainen 9 kytkimesta yksin. Tunnusluvut: muuDc (piirtokutsut laatat piilossa, yksi render), dom (nakyvat sivun elementit kartan paalla), pulu, liike, lepo, ilmakeha (liput), haive. K1 paljas dom 0 ja ryhmat pois, K2 valikkonappi avaa valikon ja 9 kytkinta, K3 tilarivi 'koe 5/5 Paljas kartta' ja '+nimiöt', K4 vastakoe normaali, K5 jokainen kytkin muuttaa vain oman ryhmansa (mitattu muuDc: paljas 2, +nimiot 4, +symbolit 3, +runko 17), K6 ei sivuvirheita. WebKit 6/6 kahdesti."
     }
   }
 }
