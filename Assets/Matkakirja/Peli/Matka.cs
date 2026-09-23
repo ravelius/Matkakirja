@@ -18,10 +18,12 @@
 //   PysaytaSaapuessa — web offerQuiz: tosi → vuoro ei pääty saapumiseen
 //   Saapui           — web visitCity: XP, arrivalFact ja lehti kuuntelevat tätä
 // Laattojen koukut (null = ei toteutettu):
-//   Kaksintaistelu      — web beginDuel: ryöstäjän jälkeen, tosi = alkoi
-//   LinssiKylkiaisena   — web linssiAarteenKylkiaisena (passi ei kuulu tänne)
-// Puuttuu: checkWin (vaelluksessa aina epätosi), mannerlennot
-// (actionMannerLento), porttikaupungit ja muut laudat (worlds).
+//   Kaksintaistelu      — web beginDuel: ryöstäjän jälkeen, tosi = alkoi (Kaksintaistelu.cs)
+//   LinssiKylkiaisena   — web linssiAarteenKylkiaisena (passi ei kuulu tänne; Linssiseppä)
+// Muualla: pulmat ja tapahtumakortit (Pulmat.cs, Tapahtumat.cs), kaupat,
+// mannerlennot ja checkWin (Kaupat.cs, Voitto.cs; Matka ei vielä kutsu
+// voittotarkistusta, vaelluksessa se on aina epätosi).
+// Puuttuu: porttikaupungit ja muut laudat (worlds), botit.
 using System;
 using System.Collections.Generic;
 using System.Linq;

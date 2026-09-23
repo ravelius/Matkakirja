@@ -92,6 +92,20 @@ namespace Matkakirja.Peli
             return true;
         }
 
+        /// <summary>
+        /// Natiivin alkutila lehdelle risuaitaan: osoite#tila=&lt;base64url(UTF-8 JSON)&gt;
+        /// (verkkopelin js/lehtikuori.js lehtikuorenTila). Risuaita ei lähde
+        /// palvelimelle. Tyhjä JSON → osoite sellaisenaan.
+        /// </summary>
+        public static string LisaaTila(string osoite, string tilaJson)
+        {
+            if (string.IsNullOrEmpty(osoite) || string.IsNullOrEmpty(tilaJson)) return osoite;
+            var b64 = Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(tilaJson))
+                .TrimEnd('=').Replace('+', '-').Replace('/', '_');
+            int risu = osoite.IndexOf('#');
+            return (risu >= 0 ? osoite.Substring(0, risu) : osoite) + "#tila=" + b64;
+        }
+
         /// <summary>Kuten YritaRakentaa, mutta heittää ArgumentExceptionin.</summary>
         public static string Rakenna(string kaupunki, string pohja = OletusPohja)
         {
