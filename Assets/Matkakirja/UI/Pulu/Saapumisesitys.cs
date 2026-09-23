@@ -82,6 +82,8 @@ namespace Matkakirja.Natiivi
             o.LuentoLoppui += Loppui;
             o.MatkaPerilla += Perilla;
             o.TilaMuuttui += TarkistaAarre;
+            // Aloituslento alkaa: kortti ja luentakuvat pois lennon tieltä (web renderFact aloituslentoKesken).
+            o.AloituslentoAlkoi += _ => UiKerros.PaaSaikeessa(() => { kortti.Piilota(); kortti.Kuvat.Tyhjenna(false); });
             Ajastin.Execute(Tarkkaile).Every(300);
             // Kaiutin (Kertoja-kytkin) päälle saapumistekstin kortissa: äänite alkaa (web kaiutinnappi
             // aloittaa merkinnän luennan). Vain äänitteelliselle merkinnälle, jolla kaiutin näkyy.
@@ -257,6 +259,9 @@ namespace Matkakirja.Natiivi
         public void Alkoi(string k, bool pakota = false)
         {
             if (string.IsNullOrEmpty(k)) return;
+            // Web renderFact: aloituslennon aikana (aloituslentoKesken) matkakirjakorttia ei piirretä —
+            // intro-luento soi lennon päällä ilman korttia ja luentakuvia, jotta kone ja pallo näkyvät.
+            if (!pakota && Lennolla) return;
             kaupunki = k;
             luentoAlkanut.Add(k);
             Matkakirjamerkinnat.Lataa(() =>
@@ -283,8 +288,11 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Luento loppui: Livian vuoro (kerran per kaupunkikäynti), sitten kuvat pois.</summary>
+        static bool Lennolla => PeliOhjain.Instanssi != null && PeliOhjain.Instanssi.AloituslentoKaynnissa;
+
         public void Loppui(string k)
         {
+            if (Lennolla) return;
             vaihto?.Pause();
             if (string.IsNullOrEmpty(k) || k != kaupunki) return;
             var v = Fokusvirrat.Hae(k);

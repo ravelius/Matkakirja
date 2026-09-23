@@ -189,6 +189,9 @@ namespace Matkakirja.Natiivi
                 kerros.AddToClassList("mk-kuva");
                 if (!aanet) return;
                 if (aarreNyt) Pulu.Hae().Tunne("ilo", 0.8f);
+                // Web playTokenReveal: sfx.play(treasureSound(type)) kuvan noustessa (ei pöllöllä, naytaPolloAarre).
+                // Pelikoodari b32be57: ohjain ei enää soita laatan ääntä vastaushetkellä.
+                if (!pollo) Aanet.Tehoste(Aanitunnukset.Aarre(tyyppi));
                 SoitaMusiikki(pollo ? null : paa ? MusiikkiPaa : MusiikkiTavallinen);
                 if (paa) SoitaHihkaisu();
             }
@@ -250,11 +253,13 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>
-        /// Kaaren aarreteksti (web TARINAKAARI[kaupunki].aarre). Ohjain liittää sen repliikin ensimmäiseksi
-        /// riviksi ja antaa samalla kätkökuvan (KysymysApu.LisaaKohtaaminen), joten kätkökuva on merkki.
+        /// Kaaren aarreteksti (web TARINAKAARI[kaupunki].aarre): Pelikoodarin KysymysNaytto.KaariAarre
+        /// (b32be57). Varana vanha päättely: ohjain liittää tekstin repliikin ensimmäiseksi riviksi ja
+        /// antaa samalla kätkökuvan (KysymysApu.LisaaKohtaaminen).
         /// </summary>
         static string KaarenAarre(KysymysNaytto d)
         {
+            if (!string.IsNullOrEmpty(d.KaariAarre)) return d.KaariAarre;
             if (string.IsNullOrEmpty(d.KatkoKuvaUrl) || string.IsNullOrEmpty(d.Repliikki)) return null;
             foreach (var r in d.Repliikki.Split('\n')) if (r.Trim().Length > 0) return r.Trim();
             return null;

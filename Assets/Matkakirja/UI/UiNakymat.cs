@@ -330,9 +330,10 @@ namespace Matkakirja.Natiivi
             kierto ??= UnityEngine.Object.FindAnyObjectByType<PalloKierto>();
             if (kierto != null && kierto.RuutuPiste(lat, lon, out var ruutu, 5000))
                 alku = UnityEngine.UIElements.RuntimePanelUtils.ScreenToPanel(juuri.panel, new Vector2(ruutu.x, Screen.height - ruutu.y));
-            // Web animateDie: onTick → dieTick (pyörintä), onBounce → clack (pomppu). dieLand tulee
-            // PeliOhjaimen Aani-tapahtumasta.
+            // Web animateDie: onTick → dieTick (pyörintä), onLand → dieLand (ensimmäinen osuma; ohjain ei
+            // soita sitä näkyvän nopan kanssa, Pelikoodari b32be57), onBounce → clack (pomppu).
             Noppa.Heita(arvo, alku, loppu, valmis, vahennettyLiike: LinssiUi.VahennettyLiike(),
+                laskeutui: () => Aanet.Tehoste(Aanitunnukset.Noppa),
                 pomppu: () => Aanet.Tehoste("clack"), kohina: () => Aanet.Tehoste("dieTick"));
         }
 
