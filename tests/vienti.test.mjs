@@ -27,6 +27,7 @@ import { readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { JUURI, kokoaVienti } from '../tools/vienti/vie-sisalto.mjs';
+import { onSaantoArvo } from '../tools/vienti/kokoelmat.mjs';
 import { palauta } from '../tools/vienti/sarjallista.mjs';
 import { PEILI_JUURI } from '../js/media.js';
 import { LISAMODUULIT, LISATIEDOSTOT } from '../tools/vienti/lahteet.mjs';
@@ -162,8 +163,9 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
     tarinakaari: avaimia(ns('tarinakaari.js').TARINAKAARI),
     saapumispuheet: avaimia(ns('saapumispuheet.js').SAAPUMISPUHEET),
     fokusvirrat: avaimia(ns('fokusvirrat.js').FOKUSVIRRAT),
-    saannot: new Set(['js/rules.js', 'js/game.js'].flatMap((f) => Object.entries(ns(f))
-      .filter(([, v]) => ['number', 'string', 'boolean'].includes(typeof v)).map(([n]) => n))).size,
+    saannot: new Set(['js/rules.js', 'js/game.js', 'js/tokens.js', 'js/ai.js'].flatMap((f) => Object.entries(ns(f))
+      .filter(([, v]) => onSaantoArvo(v)).map(([n]) => n))).size,
+    tapahtumat: ns('africa.js').AFRICA.events.length,
     saapuminen: P.cities.length,
     esilasketut: ns('historian-hetket.js').HISTORIAN_HETKET.length + avaimia(ns('elaintakyt.js').ELAINTAKYT)
       + new Set(Object.values(P.map.countryShapes).map((m) => m.nimi).filter(Boolean)).size + 2 + 1,

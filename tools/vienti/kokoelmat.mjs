@@ -121,6 +121,14 @@ function lautaKokoelmat(ns) {
       'Aarrelaatat sellaisenaan yhtenä alkiona: data = { types, mannerTypes, counts } '
         + '(laattatyypit, mantereiden omat tyypit, määrät laudalla).',
       {}, [{ id: 'tokens', data: P.tokens }]),
+    // Tapahtumakortit (Fablen kaanonipäätös 23.9.2026): tuodaan sellaisenaan
+    // AFRICA.events-taulusta; maailmankartalla niitä ei ole, natiivi tekee
+    // mekanismin yleisenä (effect.kind raha | kyyti | viive).
+    tapahtumat: taulukko('js/packs/africa.js#AFRICA.events',
+      'Tapahtumakortit (vain Afrikan laudalla; maailmankartalla ei tapahtumia). effect.kind: raha '
+        + '(amount, kukkaro ei mene miinukselle), kyyti (ilmainen siirto rideTarget-kaupunkiin), viive '
+        + '(yksi ylimääräinen vuoro paikallaan).',
+      {}, (ns.AFRICA_EVENTS ?? []).map((e, i) => ({ id: `afrikka:${i}`, lauta: 'africa', data: e }))),
     kaksintaistelut: taulukko(`${LAUTA}#MAAILMANKARTTA.duels`, 'Kaksintaistelukysymykset.', {},
       P.duels.map((d, i) => ({ id: `kaksintaistelu:${i}`, data: d }))),
     pulmat: taulukko(`${LAUTA}#MAAILMANKARTTA.puzzles`,
@@ -212,8 +220,9 @@ function sisaltoKokoelmat(hae, kaupunkiIdt) {
  *
  * Natiivi porttaa matkustuksen ja saapumisen ensin (Fable 23.9.2026).
  * Sen luvut ja kaupunkikohtaiset haut ovat webissä koodia:
- *   - saannot: js/rules.js:n ja js/game.js:n kaikki luku-, teksti- ja
- *     totuusarvovakiot (hinnat, aloitusraha, vuoron tunnit, XP…).
+ *   - saannot: js/rules.js:n, js/game.js:n, js/tokens.js:n ja js/ai.js:n
+ *     sääntöarvot (hinnat, aloitusraha, vuoron tunnit, XP, aarteiden
+ *     arvovälit, botin taito; onSaantoArvo).
  *     Kootaan nimiavaruudesta automaattisesti, joten uusi vakio tulee
  *     mukaan ilman muutosta tähän.
  *   - saapuminen: rivi per laudan kaupunki, jossa pelin saapumishakujen
@@ -224,14 +233,30 @@ function sisaltoKokoelmat(hae, kaupunkiIdt) {
  *     natiivin tarvitse toistaa varasääntöjä (esim. vanha tallenne:
  *     kaupungin oma, muuten maan).
  */
-const SAANTOMODUULIT = ['js/rules.js', 'js/game.js'];
+const SAANTOMODUULIT = ['js/rules.js', 'js/game.js', 'js/tokens.js', 'js/ai.js'];
+
+/*
+ * Sääntöarvo = luku, teksti, totuusarvo tai litteä rakenne niistä
+ * (taulukko tai olio, jonka arvot ovat primitiivejä: PIENI_AARRE_ARVO
+ * { min, max }, FORM_WEIGHTS). Sisäkkäiset rakenteet (TOKEN_TYPES,
+ * ASKERS) ovat sisältöä ja kulkevat raakakerroksessa.
+ */
+const PRIMITIIVI = ['number', 'string', 'boolean'];
+export function onSaantoArvo(arvo) {
+  if (PRIMITIIVI.includes(typeof arvo)) return true;
+  if (Array.isArray(arvo)) return arvo.every((a) => PRIMITIIVI.includes(typeof a));
+  if (arvo && Object.getPrototypeOf(arvo) === Object.prototype) {
+    return Object.values(arvo).every((a) => PRIMITIIVI.includes(typeof a));
+  }
+  return false;
+}
 
 function saantoKokoelma(hae) {
   const alkiot = [];
   const nahdyt = new Set();
   for (const moduuli of SAANTOMODUULIT) {
     for (const [nimi, arvo] of Object.entries(hae(moduuli)).sort(([a], [b]) => (a < b ? -1 : 1))) {
-      if (!['number', 'string', 'boolean'].includes(typeof arvo)) continue;
+      if (!onSaantoArvo(arvo)) continue;
       // game.js vie rules.js:n hinnat edelleen; alkuperäinen moduuli voittaa.
       if (nahdyt.has(nimi)) continue;
       nahdyt.add(nimi);
@@ -240,7 +265,7 @@ function saantoKokoelma(hae) {
   }
   return taulukko(SAANTOMODUULIT.join('+'),
     'Pelin sääntövakiot: matkustuksen hinnat (SEA_FEE laiva, FLIGHT_PRICE lento, BUS_FARE bussi), '
-      + 'aloitusraha, vuoron tunnit, palkkiot ja XP. id = vakion nimi koodissa. SEA_FARE (game.js) '
+      + 'aloitusraha, vuoron tunnit, palkkiot, XP, aarteiden arvovälit (PIENI_AARRE_ARVO, ISO_AARRE_ARVO: min–max, 10 punnan askel) ja botin taito (BOT_SKILL). id = vakion nimi koodissa. SEA_FARE (game.js) '
       + 'on SEA_FEE:n vanha kaksoiskappale.',
     {}, alkiot);
 }
@@ -324,6 +349,7 @@ function esilaskettuKokoelma(ns, hae) {
 /** nimiavaruudet: Map<moduulipolku, moduulin nimiavaruus> */
 export function kokoaKokoelmat(nimiavaruudet) {
   const ns = {
+    AFRICA_EVENTS: nimiavaruudet.get('js/packs/africa.js')?.AFRICA?.events,
     ...nimiavaruudet.get(LAUTA),
     ...nimiavaruudet.get('js/packs/maailmankartta-pallopisteet.js'),
   };
