@@ -15,10 +15,8 @@
 // - Pulmat: generate-funktiot eivät ole sisältöpaketissa → pendingPuzzle pois.
 // - Linssi aarteen kylkiäisenä (passi, localStorage) → g.linssiAarteet = {}.
 //   C#: koukku Matka.LinssiKylkiaisena.
-// - Kaksintaistelu (beginDuel) → korvataan stubilla, joka laskee alkaneet ja
-//   päättää vuoron. C#: koukku Matka.Kaksintaistelu tekee saman.
-// - Maailmankartan laatoissa ei ole ryöstäjiä; koe-ajot käyttävät koelaudan
-//   määriä (ryöstäjiä ja ylimääräisiä pääaarteita, ks. laattajälki).
+// - Rosvolaatat ja kaksintaistelu on poistettu pelistä (Raamattu 25.8.2026);
+//   koe-ajot käyttävät koelaudan määriä (ylimääräisiä pääaarteita, ks. laattajälki).
 // - Pöllö aarteena on webissä pois päältä (POLLO_ON_AARRE = false); yksi
 //   ajo pyytää sen päälle (polloAarteena: true).
 // - Kentät, joita ei tallenneta (viimeAarre), nollataan ennen jokaista tekoa.
@@ -34,12 +32,6 @@ const { tietajataso } = await import(pathToFileURL(join(JS, 'tietajatasot.js')).
 
 // --- rajaukset ennen pelin luontia -------------------------------------
 Game.prototype.pendingPuzzle = () => null;
-Game.prototype.beginDuel = function beginDuelStub() {
-  this.kaksintaisteluja = (this.kaksintaisteluja ?? 0) + 1;
-  this.phase = 'action';
-  this.endTurn();
-  return { ok: true };
-};
 
 const VUOROT = 120;
 const MAX_TEOT = 300;
@@ -48,8 +40,8 @@ const pack = packById('maailmankartta');
 if (pack.id !== 'maailmankartta') throw new Error('maailmankartta puuttuu');
 if ((pack.events ?? []).length) throw new Error('maailmankartalla on tapahtumia: rajaus ei enää päde');
 
-// Koelauta: 266 laattaa kuten maailmankartalla, mutta 40 ryöstäjää ja 20 pääaarretta.
-const KOE_MAARAT = { star: 20, mannerAarre: 7, robber: 40, isoAarre: 82, pieniAarre: 117 };
+// Koelauta: 266 laattaa kuten maailmankartalla, mutta 20 pääaarretta.
+const KOE_MAARAT = { star: 20, mannerAarre: 7, isoAarre: 82, pieniAarre: 157 };
 const koepaketti = { ...pack, tokens: { ...pack.tokens, counts: KOE_MAARAT } };
 const KUVAT = pack.cities.filter((_, i) => i % 4 === 0).map((c) => c.id);
 
@@ -130,8 +122,6 @@ function tila(g, teko) {
     loydot: n,
     viimeLoyto: n ? `${p.finds[n - 1]}@${p.findManner[n - 1]}/${p.findMaa[n - 1]}` : null,
     arvo: g.viimeAarre?.arvo ?? null,
-    duelArmed: g.duelArmed,
-    kaksintaisteluja: g.kaksintaisteluja ?? 0,
     polloLoydetty: g.polloLoydetty,
     recordNoted: g.recordNoted,
     recordDay: g.recordMark?.day ?? null,
@@ -267,12 +257,11 @@ for (const ajo of AJOT) {
 const tekoja = jaljet.reduce((s, j) => s + j.askeleet.length - 1, 0);
 const tahtia = jaljet.reduce((s, j) => s + j.askeleet.at(-1).tahdet, 0);
 const ennatyksia = jaljet.filter((j) => j.askeleet.at(-1).recordDay !== null).length;
-const kaksintaisteluja = jaljet.reduce((s, j) => s + j.askeleet.at(-1).kaksintaisteluja, 0);
 const pollot = jaljet.filter((j) => j.lopuksi.finds.includes('empty')).length;
 const mannerAarteita = jaljet.reduce((s, j) => s + j.lopuksi.finds.filter((f) => f === 'mannerAarre').length, 0);
 // Siemenet on valittu niin, että jälki kattaa jokaisen löytölajin.
-if (tahtia < 3 || ennatyksia < 2 || kaksintaisteluja < 1 || pollot < 1 || !lajit.lukko || mannerAarteita < 1) {
-  throw new Error(`jälki ei kata kaikkea: tähtiä ${tahtia}, ennätyksiä ${ennatyksia}, kaksintaisteluja ${kaksintaisteluja}, `
+if (tahtia < 3 || ennatyksia < 2 || pollot < 1 || !lajit.lukko || mannerAarteita < 1) {
+  throw new Error(`jälki ei kata kaikkea: tähtiä ${tahtia}, ennätyksiä ${ennatyksia}, `
     + `pöllöjä ${pollot}, lukkoja ${lajit.lukko ?? 0}, mantereen aarteita ${mannerAarteita}`);
 }
 const rivit = jaljet.map((j) => {
@@ -281,4 +270,4 @@ const rivit = jaljet.map((j) => {
   return `${alku},"askeleet":[\n${askeleet.map((a) => JSON.stringify(a)).join(',\n')}\n]}`;
 });
 writeFileSync(join(tama, 'pelijalki.json'), `{"$kuvaus":"Verkkopelin js/game.js pelijälki laattoineen (Kultaiset/tee-pelijalki.mjs). Älä muokkaa käsin.",\n"lauta":"maailmankartta","vuorot":${VUOROT},"maxTeot":${MAX_TEOT},"kuvat":${JSON.stringify(KUVAT)},\n"jaljet":[\n${rivit.join(',\n')}\n]}\n`);
-console.log(`pelijalki.json: ${jaljet.length} ajoa, ${tekoja} tekoa, tähtiä ${tahtia}, ennätyksiä ${ennatyksia}, kaksintaisteluja ${kaksintaisteluja}, pöllöjä ${pollot}`, lajit);
+console.log(`pelijalki.json: ${jaljet.length} ajoa, ${tekoja} tekoa, tähtiä ${tahtia}, ennätyksiä ${ennatyksia}, pöllöjä ${pollot}`, lajit);

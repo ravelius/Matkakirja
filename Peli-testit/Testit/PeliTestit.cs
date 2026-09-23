@@ -2,7 +2,7 @@
 // kokonaisuutena kuten verkkopelin Game. Kultainen jälki Kultaiset/pelijalki.json
 // (Kultaiset/tee-pelijalki.mjs): laatat jaetaan konstruktorissa, kysymykset
 // kääntävät laattoja (rahat, tähdet, tietäjäpisteet, ennätys, löytöpaikat),
-// kohtaamiset lukitsevat kätköjä ja ryöstäjä virittää kaksintaistelun.
+// ja kohtaamiset lukitsevat kätköjä.
 // Käsikirjoitus on KyselyKasikirjoitus (sama kuin skriptissä).
 using System;
 using System.Collections.Generic;
@@ -32,7 +32,7 @@ namespace Matkakirja.Peli.Testit
         static string N(string s) => s ?? "null";
 
         /// <summary>C#-tila samoin kentin kuin skriptin tila().</summary>
-        static Dictionary<string, object> Rivi(string teko, Kysely ky, int kaksintaisteluja)
+        static Dictionary<string, object> Rivi(string teko, Kysely ky)
         {
             var m = ky.Matka;
             var t = m.Tila;
@@ -75,8 +75,6 @@ namespace Matkakirja.Peli.Testit
                 ["loydot"] = n,
                 ["viimeLoyto"] = n == 0 ? null : $"{p.Loydot[n - 1]}@{N(p.LoytoMantereet[n - 1])}/{N(p.LoytoMaat[n - 1])}",
                 ["arvo"] = m.ViimeLoyto?.Arvo,
-                ["duelArmed"] = t.KaksintaisteluOdottaa,
-                ["kaksintaisteluja"] = kaksintaisteluja,
                 ["polloLoydetty"] = t.PolloLoydetty,
                 ["recordNoted"] = t.EnnatysKirjattu,
                 ["recordDay"] = t.EnnatysPaiva,
@@ -105,7 +103,6 @@ namespace Matkakirja.Peli.Testit
             int vuorot = (int)MiniJson.Luku(Jalki, "vuorot").Value;
             int maxTeot = (int)MiniJson.Luku(Jalki, "maxTeot").Value;
             var nimi = $"siemen {siemen} {alku}";
-            int kaksintaisteluja = 0;
 
             Kysely Kytke(Matka mm)
             {
@@ -113,8 +110,6 @@ namespace Matkakirja.Peli.Testit
                 if (MiniJson.Totuus(ajo, "liput")) k.Liput = KyselyTestit.Liput;
                 if (MiniJson.Totuus(ajo, "kuvat"))
                     k.AsetaKuvat(MiniJson.Taulukko(MiniJson.Kentta(Jalki, "kuvat")).Cast<string>());
-                // Skriptin beginDuel-stub: kaksintaistelu "alkaa" ja vuoro päättyy.
-                mm.Kaksintaistelu = _ => { kaksintaisteluja++; mm.Tila.Vaihe = Vaihe.Toiminta; mm.PaataVuoro(); return true; };
                 return k;
             }
 
@@ -133,7 +128,7 @@ namespace Matkakirja.Peli.Testit
             {
                 if (i >= askeleet.Count) throw new Exception($"{nimi}: C# jatkoi jäljen jälkeen ({teko})");
                 var odotettu = askeleet[i];
-                var saatu = Rivi(teko, ky, kaksintaisteluja);
+                var saatu = Rivi(teko, ky);
                 var eroja = saatu.Keys.Union(odotettu.Keys)
                     .Where(key => KyselyTestit.Kanoninen(MiniJson.Kentta(odotettu, key)) != KyselyTestit.Kanoninen(saatu.TryGetValue(key, out var v) ? v : null))
                     .Select(key => $"\n  {key}: web {KyselyTestit.Kanoninen(MiniJson.Kentta(odotettu, key))}\n  {new string(' ', key.Length)}  C#  {KyselyTestit.Kanoninen(saatu.TryGetValue(key, out var v) ? v : null)}")
@@ -185,7 +180,7 @@ namespace Matkakirja.Peli.Testit
             foreach (var ajo in Ajot) yht += ToistaAjo(ajo, 0);
             Oleta.Tosi(yht > 2000, "askelia " + yht);
             var loydot = Ajot.SelectMany(a => MiniJson.Taulukko(MiniJson.Objekti(a["lopuksi"])["finds"]).Cast<string>()).ToList();
-            foreach (var laji in new[] { "star", "mannerAarre", "isoAarre", "pieniAarre", "robber", "empty" })
+            foreach (var laji in new[] { "star", "mannerAarre", "isoAarre", "pieniAarre", "empty" })
                 Oleta.Tosi(loydot.Contains(laji), "jäljestä puuttuu löytö " + laji);
         }
 
@@ -276,29 +271,6 @@ namespace Matkakirja.Peli.Testit
             m.Tila.VuoroLaskuri = 1;
             m.KaannaLaatta(tahdet[1]);
             Oleta.Sama(2 * Kokemus.Paaaarre, m.Tila.Pelaaja.Xp, "noteRecord kerran pelissä");
-        }
-
-        [Testi] static void RyostajaVirittaaKaksintaistelunJaVuoroPaattyyIlmanKoukkua()
-        {
-            var maarat = new Laattamaarat().Lisaa("star", 7).Lisaa("mannerAarre", 7).Lisaa("robber", 252);
-            var m = Matka.Luo(KultaisetApu.Verkko, new Satunnainen(4L), "Fogg", "pariisi", maarat);
-            var ky = new Kysely(m, KyselyTestit.Data);
-            m.AloitaVuoro();
-            var rosvo = m.Laatat.Laatat.First(kv => kv.Value == Laattatyypit.Ryostaja).Key;
-            m.Tila.Pelaaja.Sijainti = Sijainti.KaupungissaSijainti(rosvo);
-            m.Tila.Vaihe = Vaihe.Toiminta;
-            Oleta.Tosi(ky.Tutki(muoto: KysymysMuoto.Visa).Ok, "kysymys");
-            var q = m.Tila.Kysely.Kysymys;
-            ky.Vastaa(q.Oikea);
-            Oleta.Sama("robber", q.Loyto);
-            Oleta.Tosi(m.Tila.KaksintaisteluOdottaa, "lippu");
-            Oleta.Sama(300, m.Tila.Pelaaja.Raha, "ryöstäjä ei anna rahaa");
-            // Tallennus kuljettaa lipun.
-            Oleta.Tosi(Matka.Lataa(KultaisetApu.Verkko, m.Tallenna()).Tila.KaksintaisteluOdottaa, "lippu tallessa");
-            int vuoro = m.Tila.VuoroLaskuri;
-            Oleta.Tosi(ky.Sulje().Ok, "sulje");
-            Oleta.Tosi(!m.Tila.KaksintaisteluOdottaa, "lippu laski");
-            Oleta.Sama(vuoro + 1, m.Tila.VuoroLaskuri, "ilman koukkua vuoro päättyy");
         }
 
         [Testi] static void PolloKorvaaEnsimmaisenLaatan()

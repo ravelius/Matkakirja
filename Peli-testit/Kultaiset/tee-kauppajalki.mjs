@@ -18,7 +18,7 @@
 //
 // RAJAUKSET (samat kuin pelijäljessä): pulmat pois (pendingPuzzle), linssi
 // aarteen kylkiäisenä pois (linssiAarteet = {}), liput pois (flagTargets),
-// kaksintaistelu = stub, joka laskee alkaneet ja päättää vuoron, linssikynnys
+// linssikynnys
 // pois (tarkistaLinssikynnys; C#: Kokemus.KynnysYlitetty-koukku on null).
 import { writeFileSync } from 'node:fs';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -29,21 +29,15 @@ const JS = resolve(process.argv[2] ?? '/Users/Shared/Claude/Matkakirja-pelikooda
 const { Game } = await import(pathToFileURL(join(JS, 'game.js')).href);
 const { packById } = await import(pathToFileURL(join(JS, 'pack.js')).href);
 
-let kaksintaisteluja = 0;
 Game.prototype.pendingPuzzle = () => null;
 Game.prototype.tarkistaLinssikynnys = () => {};
-Game.prototype.beginDuel = function beginDuelStub() {
-  kaksintaisteluja++;
-  this.phase = 'action';
-  this.endTurn();
-  return { ok: true };
-};
 
 const ordinaali = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
 const pack = packById('maailmankartta');
 if (pack.id !== 'maailmankartta') throw new Error('maailmankartta puuttuu');
 if (Array.isArray(pack.texts.schedule)) throw new Error('maailmankartalla on aikataulu: updateSchedule pitää portata');
-const KOE_MAARAT = { star: 20, mannerAarre: 7, robber: 40, isoAarre: 82, pieniAarre: 117 };
+// Rosvolaatat ja kaksintaistelu on poistettu pelistä (Raamattu 25.8.2026): koelaudalla ei ryöstäjiä.
+const KOE_MAARAT = { star: 20, mannerAarre: 7, isoAarre: 82, pieniAarre: 157 };
 const koepaketti = { ...pack, tokens: { ...pack.tokens, counts: KOE_MAARAT } };
 
 const pos = (p) => (p.pos.type === 'city' ? `c:${p.pos.city}` : `e:${p.pos.edge}:${p.pos.idx}`);
@@ -81,8 +75,6 @@ function tila(g, teko, args, tulos) {
     kaannetyt: g.revealed.size,
     starsFound: [...g.world.starsFound.entries()].map(([m, c]) => `${m}=${c}`),
     viimeLoyto: n ? `${p.finds[n - 1]}@${p.findManner[n - 1]}/${p.findMaa[n - 1]}` : null,
-    duelArmed: g.duelArmed,
-    kaksintaisteluja,
     quiz: g.quiz ? { cityId: g.quiz.cityId, chosen: g.quiz.chosen, right: g.quiz.right } : null,
     // Tapahtumat (web emit): laji aina, teksti vain lajeille, joiden teksti on portissa sama.
     tapahtumat: g.takeEvents().map((e) => (e.kind === 'flight' || e.kind === 'aid' ? `${e.kind}:${e.text}` : e.kind)),
@@ -131,7 +123,12 @@ function suorita(g, teko, args) {
     case 'elaintakylunastettu': return g.elaintakyLunastettu(args[0]);
     case 'juliste': return g.myonnaJuliste(args[0]);
     case 'mannerlento': return g.actionMannerLento(args[0]);
-    case 'sahke': return g.avaaAarreSahkeella(...args);
+    case 'sahke': {
+      // Web palauttaa yhä duel-kentän (vanha rosvopolku); rosvot on poistettu pelistä, joten se ei kuulu jälkeen.
+      const { duel, ...tulos } = g.avaaAarreSahkeella(...args);
+      if (duel) throw new Error('sähke avasi kaksintaistelun, vaikka rosvolaattoja ei ole');
+      return tulos;
+    }
     case 'voitto': return g.checkWin();
     case 'travel': return { ok: g.actionTravel(args[0]).ok };
     case 'stay': return { ok: g.actionTravel('stay').ok };
@@ -146,7 +143,6 @@ function suorita(g, teko, args) {
 
 /** Yksi ajo: kasikirjoitus(k) kutsuu k(teko, ...args) ja voi lukea pelin k.g:stä. */
 function aja({ nimi, seed, start, koe = false, pollo = false }, kasikirjoitus) {
-  kaksintaisteluja = 0;
   let g = kytke(new Game({
     players: [{ name: 'Fogg', color: '#c9a227', start }],
     pack: koe ? koepaketti : pack,
@@ -160,9 +156,7 @@ function aja({ nimi, seed, start, koe = false, pollo = false }, kasikirjoitus) {
   const k = (teko, ...args) => {
     let tulos = null;
     if (teko === 'tallenna') {
-      const kaksi = kaksintaisteluja;
       g = kytke(Game.fromJSON(JSON.parse(JSON.stringify(g.toJSON()))));
-      kaksintaisteluja = kaksi;
     } else {
       tulos = suorita(g, teko, args);
     }
@@ -286,12 +280,12 @@ ajot.push(aja({ nimi: 'mannerlento', seed: 21, start: 'pariisi' }, (k) => {
   k('close');
 }));
 
-// C: koelauta ryöstäjineen (sähke ryöstäjään → kaksintaistelu), pöllö aarteena.
-ajot.push(aja({ nimi: 'ryöstäjä ja pöllö', seed: 13, start: 'newyork', koe: true, pollo: true }, (k) => {
+// C: koelauta, pöllö aarteena.
+ajot.push(aja({ nimi: 'pöllö', seed: 13, start: 'newyork', koe: true, pollo: true }, (k) => {
   k('sahke', laatta(k.g, 'pieniAarre'), 200);    // pöllö korvaa ensimmäisen laatan
-  k('sahke', laatta(k.g, 'robber'), 200);        // palkkio ennen kääntöä, sitten kaksintaistelu
+  k('sahke', laatta(k.g, 'isoAarre'), 200);
   k('tallenna');
-  k('sahke', laatta(k.g, 'robber'), 0);
+  k('sahke', laatta(k.g, 'pieniAarre'), 0);
   const oma = k.g.mannerOf(kaupunki(k.g));
   k('sahke', laattaMantereella(k.g, 'star', oma), 200);
   k('sahke', laattaMantereella(k.g, 'star', oma), 200);   // koelaudalla toinen tähti samalla mantereella
@@ -311,7 +305,6 @@ const vikaTeot = new Set(kaikki.filter((s) => s.tulos?.ok === false).map((s) => 
 for (const t of ['kulttuuri', 'minitehtava', 'pullavinkki', 'pullaostos', 'elaintaky', 'mannerlento', 'sahke']) {
   if (!okTeot.has(t) || !vikaTeot.has(t)) throw new Error(`kattavuus: ${t} ok ${okTeot.has(t)} vika ${vikaTeot.has(t)}`);
 }
-if (!kaikki.some((s) => s.teko === 'sahke' && s.tulos?.duel)) throw new Error('kattavuus: sähke ryöstäjään');
 if (!kaikki.some((s) => s.teko === 'sahke' && s.tulos?.found === 'pollo')) throw new Error('kattavuus: sähke pöllöön');
 if (!kaikki.some((s) => s.toiminnot.mannerFlights.length > 1)) throw new Error('kattavuus: mannerlentoja');
 

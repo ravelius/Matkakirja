@@ -26,7 +26,6 @@ namespace Matkakirja.Peli.Testit
                 ["BUS_FARE"] = Vakiot.BussiHinta, ["FLIGHT_PRICE"] = Vakiot.LentoHinta, ["SEA_FEE"] = Vakiot.MeriHinta,
                 ["SEA_FARE"] = Vakiot.MeriHinta, ["START_MONEY"] = Vakiot.AloitusRaha, ["STRANDED_AID"] = Vakiot.HataApu,
                 ["TURN_HOURS"] = Vakiot.VuoronTunnit,
-                ["DUEL_PRIZE"] = KaksintaisteluVakiot.Saalis,
                 ["EXPLORE_REWARD"] = KysymysVakiot.TutkimusPalkkio, ["FIFTY_FIFTY_PRICE"] = KysymysVakiot.PuolitusHinta,
                 ["FLAG_CHOICES"] = KysymysVakiot.LippuVaihtoehdot, ["PHOTO_CHOICES"] = KysymysVakiot.KuvaVaihtoehdot,
                 ["HARD_BONUS"] = KysymysVakiot.VaikeaPalkkio, ["HINT_PRICE"] = KysymysVakiot.VihjeHinta,

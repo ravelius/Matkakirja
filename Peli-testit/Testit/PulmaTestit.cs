@@ -74,7 +74,6 @@ namespace Matkakirja.Peli.Testit
             public Kysely Kysely;
             public Pulmat Pulmat;
             public Tapahtumat Tapahtumat;
-            public int Kaksintaisteluja;
         }
 
         static Dictionary<string, object> Rivi(string teko, Peli pe)
@@ -115,8 +114,6 @@ namespace Matkakirja.Peli.Testit
                 {
                     ["cityId"] = kortti.Kaupunki, ["text"] = kortti.Teksti, ["effect"] = Vaikutus(kortti.Vaikutus),
                 },
-                ["duelArmed"] = t.KaksintaisteluOdottaa,
-                ["kaksintaisteluja"] = pe.Kaksintaisteluja,
                 ["quiz"] = KysymysRivi(k.Kysymys),
             };
         }
@@ -128,8 +125,6 @@ namespace Matkakirja.Peli.Testit
             pe.Kysely = new Kysely(m, KyselyTestit.Data);
             pe.Pulmat = Pulmat.Kytke(pe.Kysely, Pulmadata);
             pe.Tapahtumat = tapahtumat ? Tapahtumat.Kytke(pe.Kysely, Tapahtumadata) : null;
-            // Skriptin beginDuel-stub: kaksintaistelu "alkaa" ja vuoro päättyy.
-            m.Kaksintaistelu = _ => { pe.Kaksintaisteluja++; m.Tila.Vaihe = Vaihe.Toiminta; m.PaataVuoro(); return true; };
         }
 
         /// <summary>Vertaa askeleen; puzzlePrevPhase ohitetaan latauksen jälkeen (web fromJSON nollaa sen, jälki ei lataa).</summary>

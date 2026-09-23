@@ -14,8 +14,9 @@ verkkopelin `Game` (yksinpeli vaellustilassa).
     Laattamaarat (paketin `kokoelmat/laatat.json`), Loyto (yhden käännön tulos).
   - **Kysely** + Kysymysdata — kysymysmoottori (js/game.js actionQuiz…closeQuiz).
   - **Kokemus** — tietäjäpisteet (awardXp, ainoa pisteportti), -tasot, tietoprosentti.
-  - **Kaksintaistelu** + Kaksintaistelut — rosvon kaksintaistelu (js/game.js beginDuel,
-    actionDuelRelief, answerDuel, timeoutDuel, closeDuel), paketin `kokoelmat/kaksintaistelut.json`.
+  - Rosvolaatat ja rosvon kaksintaistelu on POISTETTU pelistä (Raamattu 25.8.2026; natiivista
+    23.9.2026). Laattamaarat.Lue ohittaa muut kuin aarretyypit (Ohitetut), vanhan tallennuksen
+    rosvolaatta katoaa ja vaihe Kaksintaistelu luetaan Toiminnaksi.
   - **Kaupat** — ostot ja palkkiot (kulttuurivisa, lehden minitehtävä, nostolaskuri,
     pulun karttaohje, pulla Livialle, eläintäky, juliste, mannerlento, pöllön sähke,
     availableActions); tila Pelitila.Kaupat (Kauppatila). KauppaVakiot = webin hinnat ja
@@ -45,11 +46,6 @@ matka.Bussi(kohde); matka.Lenna(kohde); matka.PeruKulkutapa();
 kysely.Tutki(vaikea); kysely.Vastaa(i); kysely.Vihje(); kysely.Puolita(); kysely.Kaveriapu();
 kysely.AikaLoppui(); kysely.Sulje();
 
-var rosvo = new Kaksintaistelu(matka, Kaksintaistelut.LueKansiosta(paketti)); // Matka.Kaksintaistelu-koukku
-// kysely.Sulje() ryöstäjän jälkeen → matka.Tila.Vaihe == Vaihe.Kaksintaistelu (tai rosvo.Alkoi)
-rosvo.Avoin;   // Kysymys, Vaihtoehdot (8), Piilotetut, Oikea, Sekunnit, Helpotukset, Viety, Saalis, Fakta, Lahteet
-rosvo.Helpotus(); rosvo.Vastaa(i); rosvo.AikaLoppui(); rosvo.Sulje();   // Sulje päättää vuoron
-rosvo.HelpotuksenHinta; rosvo.HelpotusTarjolla;                          // napin teksti ja tila
 
 var kaupat = new Kaupat(matka);         // ostot ja palkkiot; ei koukkuja
 kaupat.Kulttuuri(k, oikein); kaupat.Minitehtava(k, aihe, oikein, KauppaVakiot.TakyPalkkio);
@@ -65,18 +61,17 @@ var tapahtumat = Tapahtumat.Kytke(kysely, Tapahtumadata.LueKansiosta(paketti)); 
 // Tapahtuma: Tila.Vaihe == Vaihe.Tapahtuma, Tila.Tapahtumakortti.Teksti → tapahtumat.Sulje().
 
 string json = matka.Tallenna();
-var ladattu = Matka.Lataa(verkko, json, maarat);  // luo sen jälkeen uudet Kysely, Kaksintaistelu, Kaupat (+ Pulmat.Kytke)
+var ladattu = Matka.Lataa(verkko, json, maarat);  // luo sen jälkeen uudet Kysely, Kaupat (+ Pulmat.Kytke)
 ```
 
 - Tila: `matka.Tila` (vaihe, pelaaja: Raha, Xp, Tahdet, Loydot/LoytoMantereet/LoytoMaat),
   `matka.Laatat` (Laatat, Kaannetyt, TahdetLoydetty), `matka.LaattaTassa(id)`,
   `matka.LaattaKaupungissa()`, `matka.ViimeLoyto` (viimeisin arvo, ei tallenneta),
   `matka.Kokemus`.
-- Tapahtumat: `Matka.Saapui`, `Matka.Tapahtui` (fare, flight, aid, stuck, treasure, robber),
+- Tapahtumat: `Matka.Saapui`, `Matka.Tapahtui` (fare, flight, aid, stuck, treasure),
   `Matka.Loysi` (pelaaja, Loyto), `Kysely.Tapahtui`, `Kokemus.TasoNousi` / `OtaNousut()`,
   `matka.OtaPolloPaljastus()`.
-- Koukut (null = ei toteutettu): `Matka.Kaksintaistelu` (web beginDuel; tosi = alkoi,
-  muuten vuoro päättyy), `Matka.LinssiKylkiaisena`, `Kokemus.KynnysYlitetty` (linssit),
+- Koukut (null = ei toteutettu): `Matka.LinssiKylkiaisena`, `Kokemus.KynnysYlitetty` (linssit),
   `Kysely.PulmaOdottaa/AvaaPulma` (Pulmat.Kytke), `Kysely.TapahtumiaOn/AvaaTapahtuma`
   (Tapahtumat.Kytke), `Kysely.Liput`,
   `Kysely.AsetaKuvat`. Ohitus: `Matka.Tavoitteet` (oletus kääntämättömät laatat).
@@ -87,9 +82,9 @@ var ladattu = Matka.Lataa(verkko, json, maarat);  // luo sen jälkeen uudet Kyse
 ## Tallennus
 
 Versio 3 lisää `laattamaailma` (laatat, käännetyt, tähdet taulukkoina Map-järjestyksessä),
-pelaajalle `tahdet`, `loydot`, `loytoMantereet`, `loytoMaat` sekä `kaksintaistelu`,
-`ennatys`, `ennatysPaiva`, `polloAarteena`, `polloLoydetty` ja valinnaisena
-`avoinKaksintaistelu` (vain kun kaksintaistelu on auki; vaihe `Kaksintaistelu`). Versiot 1–2 latautuvat:
+pelaajalle `tahdet`, `loydot`, `loytoMantereet`, `loytoMaat` sekä
+`ennatys`, `ennatysPaiva`, `polloAarteena`, `polloLoydetty` (vanhat kentät `kaksintaistelu` ja
+`avoinKaksintaistelu` ohitetaan, rosvo poistettu). Versiot 1–2 latautuvat:
 `Matka.Lataa(verkko, json, maarat)` jakaa niille laatat pelin omalla satunnaisuudella
 tallennuksen kohdasta (sama tallennus → sama jako; lukitut kaupungit menettävät laattansa),
 koska tyhjä maailma jättäisi vanhan pelin ilman yhtään aarretta. Ilman määriä vanha peli
@@ -114,9 +109,8 @@ muuttua ilman webin muutosta; C# toistaa ne identtisesti, myös satunnaislukukut
 | `tee-matkajalki.mjs` | matkajalki.json | MatkaTestit | matkustus ilman tehtäviä, oikea laattajako |
 | `tee-kysymysjalki.mjs` | kysymysjalki.json, liput.json | KyselyTestit | kysymykset, rajatut käännöt |
 | `tee-laattajalki.mjs` | laattajalki.json, paketti/laatat.json | LaattaTestit | jako, käännöt, lukitus |
-| `tee-kaksintaistelujalki.mjs` | kaksintaistelujalki.json, paketti/kaksintaistelut.json (sisalto/1/v2) | KaksintaisteluTestit | koko peli 220 ryöstäjän koelaudalla ja oikea kaksintaistelu: oikein, väärin, aika, helpotukset, rahan puute, virheteot; web ja C# myös tallennuksen yli |
-| `tee-kauppajalki.mjs` | kauppajalki.json (+ näytteet paketti/elaintayt.json, julisteet.json paketista v2) | KauppaTestit | jokainen kauppateko onnistuvana ja epäonnistuvana, sähke ryöstäjään ja pöllöön, tallennus välissä ja joka teon jälkeen |
+| `tee-kauppajalki.mjs` | kauppajalki.json (+ näytteet paketti/elaintayt.json, julisteet.json paketista v2) | KauppaTestit | jokainen kauppateko onnistuvana ja epäonnistuvana, sähke pöllöön, tallennus välissä ja joka teon jälkeen |
 | `tee-pulmajalki.mjs` | pulmajalki.json, paketti/tapahtumat.json | PulmaTestit | generaattorit (11 × 25 siementä), pulmien avaus/vastaus/sulku kuudella tavalla laatallisena ja laatattomana, koko peli pulmineen ja Afrikan tapahtumakortein, tallennus välein 1, 2, 3 ja 5 |
-| `tee-pelijalki.mjs` | pelijalki.json | PeliTestit | koko peli laattoineen (~2700 tekoa, 9 siementä, pöllö- ja ryöstäjäajot), myös tallennus/lataus välein 7 ja 3 |
+| `tee-pelijalki.mjs` | pelijalki.json | PeliTestit | koko peli laattoineen (~2700 tekoa, 9 siementä, pöllöajo; koelaudalla ei ryöstäjiä), myös tallennus/lataus välein 7 ja 3 |
 
 `.meta`-tiedostot eivät ole mukana: Unity luo ne ensimmäisessä tuonnissa (3D-selvittäjän editori).

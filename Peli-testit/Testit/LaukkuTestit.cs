@@ -61,7 +61,7 @@ namespace Matkakirja.Peli.Testit
             // Kaksi samaa pientä aarretta samasta maasta ryhmittyy (web "×2").
             p.Loydot.Add(Laattatyypit.PieniAarre); p.LoytoMantereet.Add("europe"); p.LoytoMaat.Add("FIN");
             p.Loydot.Add(Laattatyypit.PieniAarre); p.LoytoMantereet.Add("europe"); p.LoytoMaat.Add("FIN");
-            p.Loydot.Add("robber"); p.LoytoMantereet.Add("europe"); p.LoytoMaat.Add("FIN");
+            p.Loydot.Add("empty"); p.LoytoMantereet.Add("europe"); p.LoytoMaat.Add("FIN");
             var kaupat = new Kaupat(m);
             var avaimet = Julisteet.Julisteet.Keys.Take(4).ToList();
             foreach (var a in avaimet) kaupat.MyonnaJuliste(a);
@@ -77,7 +77,7 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(2, pieni.Maara);
             Oleta.Sama(Nimet.Hae(Laattatyypit.PieniAarre, "europe", "FIN").Nimi + " ×2", pieni.Teksti, "maan oma nimi");
             Oleta.Sama("tavara:pieniAarre:europe:FIN", pieni.Id);
-            Oleta.Sama(2, d.Tavarat.Count, "ryöstäjä ei ole tavara");
+            Oleta.Sama(2, d.Tavarat.Count, "pöllön tyhjä ei ole tavara");
             Oleta.Tosi(d.Raha > Vakiot.AloitusRaha, "pääaarteen palkkio kukkarossa");
 
             Oleta.Sama(string.Join(",", avaimet), string.Join(",", d.Julisteet.Select(j => j.Avain)), "voittojärjestys");

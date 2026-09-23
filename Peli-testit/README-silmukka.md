@@ -72,7 +72,7 @@ JSON-tiedostot. 3D:n `komento.txt` (esim. `kuva nimi`) toimii rinnalla.
 | `napauta kaupunki` | kuin sormi kaupungin merkillä (KaupunkiMerkit.ValitseKaupunki) |
 | `valitse bussi\|lento\|liftaus\|laiva` | matkavalinnan nappi |
 | `peruuta` | matkavalinnan Peruuta |
-| `koe rosvo` / `koe tapahtuma` | laitetesti: avaa rosvon kaksintaistelun tai tapahtumakortin heti (kartta, vaihe Toiminta; maailmankartalla ei ole ryöstäjiä eikä kortteja). Sen jälkeen `aloita`, `vastaa`, `puolita` (Helpotus), `jatka`, `tila` |
+| `koe tapahtuma` | laitetesti: avaa tapahtumakortin heti (kartta, vaihe Toiminta; maailmankartalla ei ole kortteja). Sen jälkeen `jatka`, `tila` |
 | `mannerlennot` | kortin "Mannerlento": matkavalinta mannerlennoille (vain kun mantereen aarre löytyi ja vaihe Toiminta) |
 | `matka kaupunki tapa` | valinta ilman dialogia (tapa bussi, lento, liftaus, laiva tai mannerlento) |
 | `heita` | "Heitä noppaa" (kesken reitin) |
@@ -154,21 +154,16 @@ silloin `odota-tila lehti` kirjaa aikarajan ja `heita` jatkaa. Reitin varren kok
 `uusi-peli 1`, `matka marseille liftaus` (noppa 3 → `e:pariisi|marseille:3`, Heitä-nappi
 näkyy), `heita` (noppa 2 → Marseille, lehti).
 
-### Kaksintaistelu ja tapahtumakortti (`Peli-testit/silmukka-rosvo.txt`, 23.9.2026)
+### Tapahtumakortti (`Peli-testit/silmukka-tapahtuma.txt`, 23.9.2026)
 
-Pakotettu laitetesti (`koe rosvo`, `koe tapahtuma`). Tarkista `peli-tila-*.json`-tiedostoista:
+Pakotettu laitetesti (`koe tapahtuma`; rosvon kaksintaistelu on poistettu pelistä). Laitetestaajan
+kierros 23.9. (build 4b47b35) meni läpi 7/7 vielä kaksintaistelun kanssa. Tarkista `peli-tila-*.json`:
 
 | tila | odotus |
 |---|---|
-| r1-alku | `silmukka` Kartta, sijainti Pariisi, `laukku.kukkaro` "£300" |
-| r2-rosvo | `silmukka` Kysymys, `kysymys.laji` Kaksintaistelu, 8 vaihtoehtoa, `sekunnit` 45, ruudulla Helpotus-nappi |
-| r3-helpotus | `kysymys.piilotetut` ei tyhjä, raha puolittunut (rosvo vei puolet), aika kuluu |
-| r4-vastattu | `vastattu` true, `oikein` true, ei saalista (helpotuksen jälkeen) |
-| r5-kartalla | `silmukka` Kartta, vaihe Heitto tai Toiminta (vuoro päättyi), `syoteEstetty` false |
-| t1-kortti | `kysymys.laji` Tapahtumakortti, teksti ja vaikutusrivi, vain Jatka |
+| t0-alku | `silmukka` Kartta, sijainti Pariisi |
+| t1-kortti | `kysymys.laji` Tapahtumakortti, teksti ja vaikutusrivi, vain Jatka, `vastattu` true |
 | t2-loppu | `silmukka` Kartta; raha muuttui kortin mukaan, kyyti siirsi naapurikaupunkiin tai vuoro meni (viive) |
-
-Kuvakaappaukset r2, r3 ja t1: Natiivi-UI:n kysymysnäkymä (kaksintaistelun 8 vaihtoehtoa kahdessa sarakkeessa, tapahtumakortti).
 
 ### Kysymysvirta (`Peli-testit/silmukka-kysymys.txt`, erä 4)
 
@@ -217,8 +212,7 @@ luetaan `/Users/Shared/Claude/proto-3d/Matkakirja-proto/Library/ScriptAssemblies
   Erä 4: matkavalinnan, kysymyksen ja lehden ajan pallo on lukossa (SyoteLukko → PalloKierto.SyoteEstetty; heittonapin päältä alkava veto ei pyöritä palloa, UiPeittaa).
 - Samassa kysymysnäkymässä (IKysymysNakyma) kulkevat myös pulmat (Pysy-tapa pulmakaupungissa;
   piirros `KysymysNaytto.Luonnos`/`PulmaId` ja vaihtoehtokuvat odottavat Natiivi-UI:n näkymää,
-  UGUI-vara näyttää vain tekstit), rosvon kaksintaistelu (ryöstäjälaatan Jatka → 8 vaihtoehtoa,
-  Helpotus-nappi, 45 s) ja tapahtumakortit (vain `PeliOhjain.TapahtumakortitMaailmankartalla = true`; webin maailmankartalla kortteja ei ole, paketin kokoelma on Afrikan laudan).
+  UGUI-vara näyttää vain tekstit) ja tapahtumakortit (vain `PeliOhjain.TapahtumakortitMaailmankartalla = true`; webin maailmankartalla kortteja ei ole, paketin kokoelma on Afrikan laudan).
   Kaupat (`PeliOhjain.Kaupat`) on luotu, mutta sen teot kutsuvat lehti, pulu ja sähke (Natiivi-UI). Kuva- ja lippukysymykset tarvitsevat kuvapoolin ja maalistan (Kysely.AsetaKuvat,
   Kysely.Liput), joita ei vielä ladata: niiden paino siirtyy visalle kuten webissä.
 - Auki jäänyt kysymys avataan latauksessa uudelleen jäljellä olevalla ajalla (web visa.js);

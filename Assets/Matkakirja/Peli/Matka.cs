@@ -18,7 +18,6 @@
 //   PysaytaSaapuessa — web offerQuiz: tosi → vuoro ei pääty saapumiseen
 //   Saapui           — web visitCity: XP, arrivalFact ja lehti kuuntelevat tätä
 // Laattojen koukut (null = ei toteutettu):
-//   Kaksintaistelu      — web beginDuel: ryöstäjän jälkeen, tosi = alkoi (Kaksintaistelu.cs)
 //   LinssiKylkiaisena   — web linssiAarteenKylkiaisena (passi ei kuulu tänne; Linssiseppä)
 // Muualla: pulmat ja tapahtumakortit (Pulmat.cs, Tapahtumat.cs), kaupat,
 // mannerlennot ja checkWin (Kaupat.cs, Voitto.cs; Matka ei vielä kutsu
@@ -66,11 +65,6 @@ namespace Matkakirja.Peli
         public Func<IEnumerable<string>> Tavoitteet;
         /// <summary>Saapumispysähdys (web offerQuiz). Tosi → vuoro ei pääty.</summary>
         public Func<Pelaaja, bool> PysaytaSaapuessa;
-        /// <summary>
-        /// Web beginDuel: ryöstäjä löytyi ja kysymys suljettiin. Tosi = kaksintaistelu
-        /// alkoi (vuoro ei pääty). null tai epätosi → vuoro päättyy tavalliseen tapaan.
-        /// </summary>
-        public Func<Pelaaja, bool> Kaksintaistelu;
         /// <summary>Web linssiAarteenKylkiaisena(pelaaja, kaupunki, tyyppi): tavallisen löydön jälkeen.</summary>
         public Action<Pelaaja, string, string> LinssiKylkiaisena;
 
@@ -79,7 +73,7 @@ namespace Matkakirja.Peli
 
         /// <summary>Pelaaja saapui kaupunkiin (pelaaja, kaupunki, ensikäynti). Web visitCity.</summary>
         public event Action<Pelaaja, string, bool> Saapui;
-        /// <summary>Näytölle animoitava tapahtuma (web emit): 'fare', 'flight', 'aid', 'stuck', 'treasure', 'robber'.</summary>
+        /// <summary>Näytölle animoitava tapahtuma (web emit): 'fare', 'flight', 'aid', 'stuck', 'treasure'.</summary>
         public event Action<string, string> Tapahtui;
 
         public Matka(IReittiverkko verkko, Satunnainen satunnainen, Pelitila tila = null)
@@ -552,8 +546,8 @@ namespace Matkakirja.Peli
         /// <summary>
         /// Web revealToken: kääntää laatan vuorossa olevalle pelaajalle ja
         /// kirjaa löydön (finds, findManner, findMaa), rahat, tähdet,
-        /// tietäjäpisteet (Kokemus.Anna) ja ennätyksen. Ryöstäjä nostaa
-        /// kaksintaistelun lipun (Tila.KaksintaisteluOdottaa). Pöllö
+        /// tietäjäpisteet (Kokemus.Anna) ja ennätyksen. Rosvolaattoja ei ole
+        /// (poistettu pelistä, Raamattu 25.8.2026). Pöllö
         /// (Tila.PolloAarteena, oletus pois) korvaa ensimmäisen laatan.
         /// Palauttaa null, jos kaupungissa ei ole laattaa.
         /// </summary>
@@ -579,16 +573,8 @@ namespace Matkakirja.Peli
             p.Tahdet += l.TahtiLisays;
             if (l.TpLisays != 0) Kokemus.Anna(p, l.TpLisays);
             if (l.Ennatys) KirjaaEnnatys(p);
-            if (l.Kaksintaistelu)
-            {
-                Tila.KaksintaisteluOdottaa = true;
-                Tapahtui?.Invoke("robber", "Ryöstäjä!");
-            }
-            else
-            {
-                Tapahtui?.Invoke("treasure", $"+{l.RahaLisays} puntaa");
-                if (l.Tyyppi != Laattatyypit.Paaaarre) LinssiKylkiaisena?.Invoke(p, kaupunki, l.Tyyppi);
-            }
+            Tapahtui?.Invoke("treasure", $"+{l.RahaLisays} puntaa");
+            if (l.Tyyppi != Laattatyypit.Paaaarre) LinssiKylkiaisena?.Invoke(p, kaupunki, l.Tyyppi);
             Loysi?.Invoke(p, l);
             return l;
         }
@@ -615,18 +601,6 @@ namespace Matkakirja.Peli
             Kokemus.Anna(p ?? P, LaattaVakiot.TpEnnatys);
             Tila.EnnatysPaiva = paiva;
             return paiva;
-        }
-
-        /// <summary>
-        /// Web closeQuiz/avaaAarreSahkeella: jos ryöstäjä odottaa, lippu laskee
-        /// ja Kaksintaistelu-koukku saa pelin. Tosi = kaksintaistelu alkoi
-        /// (vuoro ei pääty). Ilman koukkua ryöstäjä ei tee mitään.
-        /// </summary>
-        public bool KaksintaisteluAlkaa()
-        {
-            if (!Tila.KaksintaisteluOdottaa) return false;
-            Tila.KaksintaisteluOdottaa = false;
-            return Kaksintaistelu != null && Kaksintaistelu(P);
         }
 
         /// <summary>Web takePolloPaljastus: palauttaa ja nollaa lipun.</summary>
