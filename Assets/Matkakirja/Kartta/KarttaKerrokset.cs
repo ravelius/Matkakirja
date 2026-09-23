@@ -41,6 +41,27 @@ namespace Matkakirja
             "provided under COPERNICUS by the European Union and ESA; all rights reserved.\n" +
             "Pallo: Cesium for Unity (Apache 2.0).";
 
+        /// <summary>
+        /// Kameran taustaväri linssin ajaksi (astronautti: webin tummansininen avaruus).
+        /// null palauttaa pelin oman taustan.
+        /// </summary>
+        public void Taustavari(Color? vari)
+        {
+            var kamera = Camera.main;
+            if (kamera == null) return;
+            if (vari.HasValue)
+            {
+                if (!alkuperainenTausta.HasValue) alkuperainenTausta = kamera.backgroundColor;
+                kamera.backgroundColor = vari.Value;
+            }
+            else if (alkuperainenTausta.HasValue)
+            {
+                kamera.backgroundColor = alkuperainenTausta.Value;
+                alkuperainenTausta = null;
+            }
+        }
+        Color? alkuperainenTausta;
+
         /// <summary>Maatila linsseille (IMaaKartta, RAJAPINTA.md luku 4).</summary>
         public Matkakirja.Linssit.Maat.IMaaKartta Maat => maaKartta;
         public MaaKartta maaKartta;
