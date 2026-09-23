@@ -607,8 +607,37 @@ export function reliefinLuettelo(pohja, relief, versio) {
 export const RELIEFIN_VALI = { pohjoinen: 84, etela: -65.43 };
 export const RELIEFIN_TAYTE = [37, 78, 144];
 
-/** Reliefisarjan ämpärikansio: reliefipyramidin versio + pallo/. */
-export const reliefinKansio = (versio) => `matkakirja/reliefipyramidi/${versio}/pallo/`;
+/** Reliefisarjan ämpärikansio: reliefipyramidin versio + pallo/ (tai pallo-k08/ kylläisyydellä 0,8). */
+export const reliefinKansio = (versio, kyllaisyys = 1) => `matkakirja/reliefipyramidi/${versio}/pallo${kyllaisyys === 1 ? '' : `-k${String(Math.round(kyllaisyys * 100)).padStart(3, '0').replace(/0$/, '')}`}/`;
+
+/*
+ * KYLLÄISYYS (--kyllaisyys s, Linssiseppä 23.9.2026): webin reliefi
+ * piirretään vaimeana (satelliitti-avaruus.js RELIEFIN_SATURAATIO, canvas
+ * saturate(0.8)), mutta Cesiumin rasterissa ei ole kylläisyyssäätöä, joten
+ * sama muunnos poltetaan laattoihin. Matriisi on CSS/SVG:n saturate
+ * (Filter Effects, feColorMatrix type="saturate") sRGB-arvoihin, kuten
+ * selaimen canvas-suodin sen tekee.
+ */
+export function kylliastyMatriisi(s) {
+  return [
+    [0.213 + 0.787 * s, 0.715 - 0.715 * s, 0.072 - 0.072 * s],
+    [0.213 - 0.213 * s, 0.715 + 0.285 * s, 0.072 - 0.072 * s],
+    [0.213 - 0.213 * s, 0.715 - 0.715 * s, 0.072 + 0.928 * s],
+  ];
+}
+
+/** RGB-puskuri (3 kanavaa) paikallaan kylläisyydellä s. */
+export function kyllaista(rgb, s) {
+  if (s === 1) return rgb;
+  const m = kylliastyMatriisi(s);
+  for (let i = 0; i < rgb.length; i += 3) {
+    const r = rgb[i]; const g = rgb[i + 1]; const b = rgb[i + 2];
+    for (let c = 0; c < 3; c += 1) {
+      rgb[i + c] = Math.max(0, Math.min(255, Math.round(m[c][0] * r + m[c][1] * g + m[c][2] * b)));
+    }
+  }
+  return rgb;
+}
 
 /** Laskee yhden Mercator-laatan RGB-puskurin. */
 export async function laskeLaatta(luettelo, lukija, Z, X, Y) {
@@ -863,6 +892,9 @@ async function paa() {
    * versio on sen kansion nimi (…/reliefipyramidi/<versio>/…).
    */
   const reliefLahde = lippu('--relief');
+  const kyllaisyys = Number(lippu('--kyllaisyys') ?? 1);
+  if (!(kyllaisyys >= 0 && kyllaisyys <= 2)) throw new Error(`--kyllaisyys: 0…2 (${kyllaisyys})`);
+  if (kyllaisyys !== 1 && !reliefLahde) throw new Error('--kyllaisyys vain --relief-sarjalle');
   let luettelo = pohjaLuettelo;
   let kansio = laattojenKansio(pohjaLuettelo.versio, nostot, tunniste);
   if (reliefLahde) {
@@ -872,7 +904,8 @@ async function paa() {
     const relief = /^https?:/.test(reliefLahde) ? await noudaJson(reliefLahde) : JSON.parse(readFileSync(reliefLahde, 'utf8'));
     luettelo = reliefinLuettelo(pohjaLuettelo, relief, versio);
     asetaPyramidiJuuri('matkakirja/reliefipyramidi/');
-    kansio = reliefinKansio(versio);
+    kansio = reliefinKansio(versio, kyllaisyys);
+    luettelo.kyllaisyys = kyllaisyys;
   }
   const lista = osanLaatat(min, max, alue, osa);
   const yhteensa = lista.length;
@@ -918,6 +951,7 @@ async function paa() {
   const alkuAika = Date.now();
   for (const [Z, X, Y] of lista) {
     const rgb = await laskeLaatta(luettelo, lukija, Z, X, Y); // eslint-disable-line no-await-in-loop
+    if (luettelo.kyllaisyys && luettelo.kyllaisyys !== 1) kyllaista(rgb, luettelo.kyllaisyys);
     const jpg = await sharp(rgb, { raw: { width: LAATTA, height: LAATTA, channels: 3 } }).jpeg({ quality: LAATU }).toBuffer(); // eslint-disable-line no-await-in-loop
     mkdirSync(join(ulos, String(Z), String(X)), { recursive: true });
     writeFileSync(join(ulos, String(Z), String(X), `${Y}.jpg`), jpg);
@@ -960,7 +994,7 @@ export function kirjoitaLuettelo(ulos, luettelo, {
     nostot: nostot ? (luettelo.nostotaso?.versio ?? null) : null,
     ...(tunniste ? { tunniste } : {}),
     // Reliefisarjan lähde (ETOPO 2022, public domain) attribuutiota varten.
-    ...(luettelo.relief ? { relief: true, lahde: luettelo.lahde } : {}),
+    ...(luettelo.relief ? { relief: true, lahde: luettelo.lahde, kyllaisyys: luettelo.kyllaisyys ?? 1 } : {}),
     tasot: { min, max },
     laatta: LAATTA,
     muoto: 'jpg',
