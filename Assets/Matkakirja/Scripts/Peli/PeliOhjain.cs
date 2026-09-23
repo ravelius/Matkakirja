@@ -202,6 +202,8 @@ namespace Matkakirja.Natiivi
             ((IKamera)kierto).KaupunkiNapautettu += Napautettu;
             // Heittonapin päältä alkava veto ei pyöritä palloa.
             SyoteLukko.LisaaPeitto(p => Kaytossa && dialogi.PeittaaPisteen(p));
+            // Lehti (WKWebView) peittää pallon: pallo piirtää harvemmin sen ajan (NakymaPeitetty).
+            if (lehti != null) SyoteLukko.LisaaNakymaPeitto(() => lehti != null && lehti.Auki);
             ((ILehti)lehti).Suljettu += LehtiSuljettu;
             lehti.Viesti += LehtiViesti;
 
