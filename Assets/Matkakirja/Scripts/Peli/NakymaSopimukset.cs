@@ -167,6 +167,25 @@ namespace Matkakirja.Natiivi
     }
 
     /// <summary>
+    /// Sähkepinta (web js/sahke.js; Pelikoodarin ehdotus 23.9.2026, Natiivi-UI toteuttaa): pöllön tuoma
+    /// paperiliuska ja retkikuntaosio. Kaveriavun nappi ja kortti kulkevat kysymysnäkymän kautta
+    /// (KysymysNaytto.Kaveriapu/KaveriapuKortti, KysymysToiminnot.KysyKaverilta/KaveriapuValmis).
+    /// </summary>
+    public interface ISahkeNakyma
+    {
+        /// <summary>
+        /// Liuska ruudulle (yksi kerrallaan; ohjain nostaa seuraavan jonosta, kun ruutu on vapaa):
+        /// sähke = Saate + Teksti (lennättimen kirjaimin) + Alarivi; apupyyntö = Saate, Alarivi, Kysymys ja
+        /// vaihtoehtonapit A–D (veikkaa(i)) sekä "En osaa auttaa". suljettu: ✕, ohitus tai veikkauksen jälkeen.
+        /// </summary>
+        void NaytaLiuska(SahkeViesti viesti, Action<int> veikkaa, Action suljettu);
+        void SuljeLiuska();
+        bool LiuskaAuki { get; }
+        /// <summary>Retkikuntaosio valikon lomakkeeseen (sama kutsu päivittää; Sahkepinta.Muuttui).</summary>
+        void NaytaRetkikunta(RetkikuntaNaytto tila, RetkikuntaToiminnot toiminnot);
+    }
+
+    /// <summary>
     /// Näkymätehdas. Kenttä null = UGUI-varanäkymä. Aseta ennen kohtauksen
     /// latausta (BeforeSceneLoad); PeliOhjain luo näkymät AfterSceneLoad-vaiheessa.
     /// </summary>
@@ -187,5 +206,7 @@ namespace Matkakirja.Natiivi
         public static Func<GameObject, IKaupunkiKortti> KaupunkiKortti;
         /// <summary>Natiivilehti. Asettamaton = WKWebView-kuori (LehtiKuori), kunnes se poistetaan (A4).</summary>
         public static Func<GameObject, ILehtiNakyma> Lehti;
+        /// <summary>Sähkeliuska ja retkikuntaosio. Asettamaton = ei sähkepintaa natiivissa (ohjain ei pollaa).</summary>
+        public static Func<GameObject, ISahkeNakyma> Sahke;
     }
 }
