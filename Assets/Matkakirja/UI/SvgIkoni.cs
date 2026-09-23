@@ -299,6 +299,8 @@ namespace Matkakirja.Natiivi
         SvgKuvio kuvio;
         float viiva = 1.75f;
         public float Ruutu = 24f;
+        /// <summary>viewBoxin vasen yläkulma (webin nostosymbolit: −8 −8 16 16 → Alku (−8, −8), Ruutu 16).</summary>
+        public Vector2 Alku = Vector2.zero;
 
         public SvgIkoni(string d = null)
         {
@@ -325,7 +327,7 @@ namespace Matkakirja.Natiivi
             if (r.width <= 0 || r.height <= 0) return;
             float s = Mathf.Min(r.width, r.height) / Ruutu;
             var siirto = new Vector2(r.x + (r.width - Ruutu * s) * 0.5f, r.y + (r.height - Ruutu * s) * 0.5f);
-            Vector2 P(Vector2 v) => siirto + v * s;
+            Vector2 P(Vector2 v) => siirto + (v - Alku) * s;
 
             var p = mgc.painter2D;
             var vari = resolvedStyle.color;
