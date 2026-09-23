@@ -16,6 +16,9 @@
 //                                             listan ulkopuolinen kaupunki (pariisi) = oletuslähtö Pariisi
 //   ui lehti <kaupunki> [sivu] | ui lehti sivu n | ui lehti kuva | ui maalehti <ISO> [aihe] | ui lehti sisallys
 //   ui lehti tehtava | tehtava-pois | viimeinen  alapalkin tehtävänappi (keksitty tila) / viimeinen sivu (Maa-liite)
+//   ui lehti fokus [kaupunki] [juliste]       kaupunkilehti fokustehtävän sivulla (oletus ateena; AARTEEN AVAUS,
+//                                             juliste = JULISTE-tehtävä); vastaus ja pulla kirjataan, jos peli on käynnissä
+//   ui lehti fokus-vastaa n | fokus-pulla     napauttaa fokustehtävän vaihtoehtoa n (0–) / pullanappia (2× = osto)
 //   ui nosto <valoId>                         nostokortti: skandaali:<id> | hetki:<id> | elaintaky:<ISO> | kohde:<id>[@ISO]
 //   ui huipennus                              matkan huipennus (kaikki aarteet) esimerkkiluvuin
 //   ui laukku [esimerkki]                     matkalaukku (pelin data; esimerkki = keksitty sisältö)
@@ -205,9 +208,12 @@ namespace Matkakirja.Natiivi
                 case "maalehti":
                 {
                     var l = loput.Split(' ');
-                    if (osat[1] == "lehti" && (l[0] == "sivu" || l[0] == "kuva" || l[0] == "sisallys" || l[0] == "tehtava" || l[0] == "tehtava-pois" || l[0] == "viimeinen"))
+                    if (osat[1] == "lehti" && (l[0] == "sivu" || l[0] == "kuva" || l[0] == "sisallys" || l[0] == "tehtava" || l[0] == "tehtava-pois" || l[0] == "viimeinen"
+                        || l[0] == "fokus-vastaa" || l[0] == "fokus-pulla"))
+                        return ui.Lehti.Testaa(l[0], l.Length > 1 && int.TryParse(l[1], out var sn) ? sn : 0);
+                    if (osat[1] == "lehti" && l[0] == "fokus")
                     {
-                        ui.Lehti.Testaa(l[0], l.Length > 1 && int.TryParse(l[1], out var sn) ? sn : 0);
+                        ui.Lehti.TestaaFokus(l.Length > 1 && l[1].Length > 0 ? l[1].ToLowerInvariant() : "ateena", l.Length > 2 && l[2] == "juliste");
                         return null;
                     }
                     if (osat[1] == "maalehti") ui.Lehti.Nayta(LehtiLaji.Maa, l[0].Length > 0 ? l[0] : "ITA", l.Length > 1 ? l[1] : null);
