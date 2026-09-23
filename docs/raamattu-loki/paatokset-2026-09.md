@@ -2103,3 +2103,7 @@ Kirjattu Fable.
 ## KARTTASEPPA NOLLATAAN (72 %): LUOVUTUS viesti-karttaseppa-luovutus-20260923-b.md (karttaseppa-tyo-20260922 2ea9c9856); DEM-TYOKALU HAARASSA karttaseppa-maasto, COPERNICUS GLO-30 (155 RUUTUA) NAS:ISSA koodaus/Claude/Matkakirja-arkisto/dem/copernicus-glo30; MAASTOAJO z0–12 KESKEYTETTY z10:N JALKEEN LEVYRUUHKAN TAKIA (UUSINTAKOMENTO LUOVUTUKSESSA); POLTOT 23a VALMIINA wt/karttaseppa-poltto-23a (EI POISTETA), ODOTTAVAT CI-VUOROA JA RUUHKAN LOPPUA (23.9.2026 klo 15.29)
 
 Kirjattu Fable.
+
+## MAASTO (KARTTASEPPA, /Users/Shared/Claude/maasto-poltto/aja-maasto.sh, HAARA karttaseppa-maasto): z0–z10 VALMIS, z11–z12 ODOTTAA 'LEVY VAPAA' (114 000 LAATTAA, ~0,8 Gt, ~10 min + VIENTI 15–20 min) → AMPARIIN julisteet/maasto/2026-09-23a, layer.json CESIUMILLE; FABLE: z12 (76 m) RIITTAA PROTOON, z13 (30 m, 368 000 LAATTAA) VASTA OMISTAJAN KOKEILUN JALKEEN; PR MAASTO-HAARASTA (23.9.2026 klo 15.33)
+
+Kirjattu Fable.
