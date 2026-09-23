@@ -106114,4 +106114,813 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  managua: [
+    {
+      id: 'kaupunki',
+      nimi: 'Managua',
+      johdanto: 'Managua oli kalastajakylä, josta tehtiin pääkaupunki '
+        + 'sovinnolla kahden riitaisan kaupungin väliin — ja jonka järvi, '
+        + 'tulivuoret ja toistuvat järistykset ovat muovanneet uudestaan '
+        + 'yhä uudelleen.',
+      nostot: [
+        {
+          otsikko: 'Kalastajakylä kahden riitapukarin välissä',
+          teksti: 'Managua oli 1800-luvun alussa pieni kalastajakylä '
+            + 'Xolotlán-järven rannalla, virallisesti Leal Villa de '
+            + 'Santiago de Managua vuodesta 1819. Pääkaupungiksi siitä '
+            + 'tuli 1852, kun liittovaltion johtaja Fulgencio Vega '
+            + 'ehdotti sitä sovintoratkaisuksi kahden toisiaan vihaavan '
+            + 'kaupungin väliin: liberaali León halusi hallita, '
+            + 'konservatiivinen Granada ei suostunut siihen. '
+            + 'Rakennustyöt kestivät vuosia, ja pääkaupungin asema '
+            + 'vakiintui vasta 1850-luvun lopulla. Isoisän matkatessa '
+            + '1873 Managua oli siis vielä nuori hallintokaupunki, '
+            + 'tuskin viisitoistavuotias pääkaupunkina — kalastajakylän '
+            + 'maine ei ollut vielä haihtunut, ja järvi näkyi joka '
+            + 'kadulta.',
+          tiedosto: 'Lake Managua from the Malecon.jpg',
+          lyhyt: 'Xolotlán-järvi auringonlaskussa Managuan rantakadulta.',
+          selite: 'Managua nojaa yhä samaan järveen, jonka rannalle '
+            + 'kalastajakylä perustettiin 1800-luvun alussa.',
+          lahde: 'Byralaal, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Managua',
+        },
+        {
+          otsikko: 'Rakennukset jäivät seisomaan tyhjinä',
+          teksti: 'Jouluaaton aattona 1972, kello puoli yksi yöllä, maa '
+            + 'tärähti voimakkuudella 6,3 ja repi Managuan keskustan '
+            + 'auki. Järistys tuhosi kolmetoista neliökilometriä '
+            + 'ydinkeskustaa ja vaurioitti lähes kaksinkertaisen alan '
+            + 'lisää, noin 53 000 kotia jäi käyttökelvottomaksi ja yli '
+            + '300 000 ihmistä vaille kotia. Kuolonuhreja arvioidaan '
+            + 'neljästä yhteentoista tuhanteen. Somozan hallinto keräsi '
+            + 'ulkomailta hätäapua, mutta suuri osa siitä katosi '
+            + 'matkalla eikä koskaan tavoittanut uhreja — kerrotaan '
+            + 'jopa talvivaatteita lähetetyn trooppiseen maahan. '
+            + 'Jälleenrakennus jäi vuosikymmeniksi puolitiehen: vielä '
+            + '1994 keskustassa oli tyhjiä tontteja, joilla ei ollut '
+            + 'mitään.',
+          tiedosto: 'Downtown Managua, July 1994.jpg',
+          lyhyt: 'Managuan keskusta oli yhä tyhjillään yli '
+            + 'kaksikymmentä vuotta suurjäristyksen jälkeen.',
+          selite: 'Vuoden 1972 järistyksen tuhoama keskusta seisoi osin '
+            + 'rakentamattomana vielä kesällä 1994.',
+          lahde: 'James Postema, Wikimedia Commons (CC BY 4.0)',
+          wiki: '1972 Nicaragua earthquake',
+        },
+        {
+          otsikko: 'Osoite ilman katua eikä numeroa',
+          teksti: 'Managuan osoitteissa ei ole katujen nimiä eikä '
+            + 'talonumeroita: matka lasketaan varoina, vanhana '
+            + 'espanjalaisena pituusmittana jota ei käytetä juuri '
+            + 'missään muualla, ja suunnaksi ilmoitetaan usein '
+            + '"järvelle" pohjoisen sijaan, koska kaupunki nojaa '
+            + 'Xolotlániin. Lähtöpisteenä toimii tunnettu maamerkki, '
+            + 'kuten iso pyöreä Rotonda Plaza Inter -risteys. Moni '
+            + 'perinteinen maamerkki hävisi kuitenkin vuoden 1972 '
+            + 'järistyksessä: osoite voi yhä viitata rakennukseen tai '
+            + 'puuhun, joka ei ole ollut olemassa vuosikymmeniin, ja '
+            + 'silti paikalliset löytävät perille.',
+          tiedosto: 'ROTONDA PLAZA INTER, MANAGUA- NICARAGUA. - panoramio.jpg',
+          lyhyt: 'Rotonda Plaza Inter on yksi Managuan tunnetuimmista '
+            + 'osoitteen lähtöpisteistä.',
+          selite: 'Iso liikenneympyrä toimii managualaisille '
+            + 'maamerkkinä, josta etäisyydet lasketaan varoina.',
+          lahde: 'feinteriano, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Katedraali, joka selvisi yhdestä järistyksestä muttei toisesta',
+          teksti: 'Belgialainen insinööri Pablo Dambach johti Managuan '
+            + 'katedraalin rakennustyötä 1928–1938; uusklassinen '
+            + 'kirkko sai esikuvansa Pariisin Saint-Sulpicesta, ja sen '
+            + 'rautarunko tuotiin laivalla Belgiasta. Runko oli jo '
+            + 'pystyssä, kun vuoden 1931 järistys ravisteli kaupunkia '
+            + '— se selvisi kevyin vaurioin. Vuoden 1972 järistys oli '
+            + 'toista maata: katedraali vaurioitui pahoin ja '
+            + 'julistettiin käyttökelvottomaksi, mutta sitä ei '
+            + 'purettu. Se seisoo yhä raunioituneena keskellä '
+            + 'kaupunkia, ja sen julkisivussa on laatta Rubén Daríon '
+            + 'runosta. Uusi katedraali valmistui vasta 1993, ja '
+            + 'vanhan tornikello siirrettiin lopulta Kulttuuripalatsiin.',
+          tiedosto: 'Old Cathedral of Managua with quote of Rubén Darío.jpg',
+          lyhyt: 'Managuan vanha katedraali seisoo yhä raunioituneena '
+            + 'keskustassa.',
+          selite: 'Katedraalin julkisivussa on laatta Rubén Daríon '
+            + 'runosta; rakennus vaurioitui pahoin 1972.',
+          lahde: 'Taza, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Old Cathedral of Managua',
+        },
+        {
+          otsikko: 'Palatsi joka kesti, ja komento joka valtasi sen',
+          teksti: 'Sama Pablo Dambach suunnitteli myös Managuan '
+            + 'kansallispalatsin, joka rakennettiin 1936–1940 vuoden '
+            + '1931 järistyksen opetuksin vahvistettuna. Se piti '
+            + 'pintansa: vuoden 1972 järistys jätti sen pystyyn, '
+            + 'vaikka koko ympäröivä kortteli murskaantui. Palatsissa '
+            + 'kokoontui kansalliskokous yli viidenkymmenen vuoden '
+            + 'ajan, kunnes 22. elokuuta 1978 komentaja Edén Pastora '
+            + '— lisänimeltään "Komentaja Nolla" — johti '
+            + 'sandinistikapinallisten joukon istuntosaliin ja otti '
+            + 'kongressin panttivangiksi. Isku ruokki vallankumousta, '
+            + 'joka kaatoi Somozan hallinnon 1979. Nykyään rakennus on '
+            + 'Kulttuuripalatsi: siellä ovat kansallismuseo, -kirjasto '
+            + 'ja -arkisto.',
+          tiedosto: 'Palacio Nacional de la cultura en Managua.jpg',
+          lyhyt: 'Kansallispalatsi kesti vuoden 1972 järistyksen, '
+            + 'vaikka korttelin muut talot sortuivat.',
+          selite: 'Sama arkkitehti Pablo Dambach suunnitteli sekä '
+            + 'palatsin että vanhan katedraalin.',
+          lahde: 'Oscar Mojica, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'National Palace of Culture, Managua',
+        },
+        {
+          otsikko: 'Miljoonakaupunki pesäpallon lipun alla',
+          teksti: 'Nykyinen Managua on yli miljoonan asukkaan kaupunki: '
+            + 'vuonna 2023 sen väkiluku oli noin 1,06 miljoonaa ja koko '
+            + 'metropolialueen lähes 1,4 miljoonaa. Kaupungin 40 000 '
+            + 'katsojan pesäpallostadion on nimetty Dennis Martínezin '
+            + 'mukaan. Granadassa syntynyt Martínez oli 1976 '
+            + 'ensimmäinen nicaragualainen pääsarjapelaaja, ja '
+            + 'heinäkuussa 1991 hänestä tuli ensimmäinen Yhdysvaltain '
+            + 'ulkopuolella syntynyt pelaaja, joka heitti täydellisen '
+            + 'pelin — Montreal Exposin paidassa Los Angeles '
+            + 'Dodgersia vastaan lukemin 2–0. Pesäpallo on Nicaraguan '
+            + 'suosituin urheilulaji, ja stadion täyttyy yhä '
+            + 'säännöllisesti otteluihin.',
+          tiedosto: 'Estadio Nacional Dennis Martinez.jpg',
+          lyhyt: 'Kansallisstadion on nimetty Nicaraguan ensimmäisen '
+            + 'pääsarjapelaajan mukaan.',
+          selite: 'Dennis Martínez heitti 1991 täydellisen pelin '
+            + 'ensimmäisenä Yhdysvaltain ulkopuolella syntyneenä.',
+          lahde: 'OswaldoFlores88, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Dennis Martínez',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Järvi ja tulivuoret',
+      johdanto: 'Managuan ympärillä maa on elossa: kaupunki lepää '
+        + 'järven rannalla ja tulivuorten varjossa, ja sen alla kytee '
+        + 'sama voima, joka tasaisin väliajoin ravistelee sitä. '
+        + 'Täältä löytyvät järvi, kraatteri ja kaksi tulivuorta.',
+      tehtava: {
+        kysymys: 'Mitä lintuja pesii Masayan tulivuoren Santiago-'
+          + 'kraatterin myrkyllisissä kaasuissa?',
+        vaihtoehdot: [
+          'Vihreitä papukaijoja, chocoyoja',
+          'Valkopäämerikotkia',
+          'Flamingoja',
+          'Kolibreja',
+        ],
+        oikea: 0,
+        fakta: 'Chocoyot pesivät kraatterin seinämillä ja näyttävät '
+          + 'sietävän rikkidioksidia paremmin kuin useimmat muut '
+          + 'eläimet.',
+      },
+      nostot: [
+        {
+          otsikko: 'Xolotlán, järvi jonka rannalla kaupunki asuu',
+          teksti: 'Managua nojaa Xolotlán-järveen, jota kutsutaan myös '
+            + 'Managuan järveksi: se on 65 kilometriä pitkä ja 25 '
+            + 'leveä, keskisyvyydeltään vain noin yhdeksän ja puoli '
+            + 'metriä. Vuodesta 1927 kaupungin jätevedet on laskettu '
+            + 'suoraan järveen, ja vasta 2009 valmistunut '
+            + 'brittiläinen puhdistamo käsittelee siitä noin 40 '
+            + 'prosenttia — järveä on sanottu Keski-Amerikan '
+            + 'saastuneimmaksi. Silti järvessä elää yhä parikymmentä '
+            + 'kalalajia, ja rannoilla kalastetaan edelleen ruoaksi. '
+            + 'Tipitapa-joki yhdistää sen Nicaraguajärveen, mutta '
+            + 'putous joella estää Nicaraguajärven härkähaita '
+            + 'uimasta tänne asti.',
+          tiedosto: 'View of Lake Xolotlan and Momotombo Volcano - En Route to Leon - Nicaragua (30748896873).jpg',
+          lyhyt: 'Xolotlán-järvi ja Momotombo-tulivuori näkyvät '
+            + 'samassa maisemassa León-tiellä.',
+          selite: 'Managuan järvi on Keski-Amerikan saastuneimpia, '
+            + 'mutta siinä elää yhä parikymmentä kalalajia.',
+          lahde: 'Adam Jones, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Lake Managua',
+        },
+        {
+          otsikko: 'Tiscapa, kraatterijärvi keskellä kaupunkia',
+          teksti: 'Keskellä Managuaa, hotellien ja toimistojen '
+            + 'välissä, on Tiscapan kraatterijärvi — yli 10 000 '
+            + 'vuotta sitten syntynyt tulivuoren kraatteri, joka on '
+            + 'täyttynyt vedellä. Sen reunalla sijaitsi aikoinaan '
+            + 'diktaattori Anastasio Somozan palatsi ja bunkkeri, ja '
+            + 'mäen rinteeseen louhitut vankisellit tunnettiin '
+            + 'nimellä Masmorras — sinne suljettiin poliittisia '
+            + 'vankeja. Maaliskuussa 1934 kapinallisjohtaja Augusto '
+            + 'Sandino kutsuttiin neuvotteluun lähelle Tiscapaa, ja '
+            + 'kokouksen jälkeen Somozan miehet väijyttivät ja '
+            + 'teloittivat hänet. Nykyään reunalla on '
+            + 'luonnonsuojelualue ravintoloineen ja seikkailurata, ja '
+            + 'näköalalta erottaa yhä kaupungin vanhat rauniot.',
+          tiedosto: 'Laguna de Tiscapa.jpg',
+          lyhyt: 'Tiscapan kraatterijärvi syntyi tulivuoren '
+            + 'purkauksesta yli 10 000 vuotta sitten.',
+          selite: 'Kraatterin reunalla sijaitsi aikoinaan diktaattori '
+            + 'Somozan palatsi ja vankila.',
+          lahde: 'Haakon S. Krohn, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Tiscapa Lagoon',
+        },
+        {
+          otsikko: 'Momotombo, tulivuori joka näkyy kauas',
+          teksti: 'Momotombo kohoaa 1 297 metriä Xolotlán-järven '
+            + 'rannalta, ja sen symmetrinen huippu näkyy kauas — se '
+            + 'on ilmestynyt jopa tulitikkuaskien kylkeen. Vuoden '
+            + '1610 purkaus oli niin tuhoisa, että koko León-kaupunki '
+            + 'siirrettiin uuteen paikkaan; myöhemmät purkaukset '
+            + 'osuivat vuosiin 1886, 1905 ja viimeksi 2015–2016. '
+            + 'Runoilija Rubén Darío omisti vuorelle oman runonsa, ja '
+            + 'sen kupeella toimii geoterminen voimala, joka '
+            + 'hyödyntää tulivuoren lämpöä sähköksi. Pieni saari '
+            + 'nimeltä Momotombito, "pikku-Momotombo", kohoaa '
+            + 'lähellä järven pinnalta samannimisen emovuoren '
+            + 'edustalla.',
+          tiedosto: 'Isla Momotombito in Lake Managua, and Momotombo Volcano, with San Cristobal Volcano in the distance.jpg',
+          lyhyt: 'Momotombo-tulivuori kohoaa 1 297 metriä '
+            + 'Xolotlán-järven rannalta.',
+          selite: 'Etualalla erottuu pieni Momotombito-saari, '
+            + '"pikku-Momotombo", emovuorensa edustalla.',
+          lahde: 'Pi3.124, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Momotombo',
+        },
+        {
+          otsikko: 'Masaya, Helvetin suu jossa linnut pesivät',
+          teksti: 'Noin kaksikymmentä kilometriä Managuasta etelään '
+            + 'aukeaa Masayan tulivuori, jonka Santiago-kraatteri '
+            + 'savuaa jatkuvasti rikkidioksidia. Espanjalaiset '
+            + 'ristivät sen "Helvetin suuksi" ja pystyttivät '
+            + '1500-luvulla kraatterin reunalle ristin, Cruz de '
+            + 'Bobadillan, manaamaan paholaisen pois. Kraatterin '
+            + 'seinämillä pesii silti joukko vihreitä papukaijoja, '
+            + 'chocoyoja, jotka näyttävät sietävän myrkyllisiä '
+            + 'kaasuja siellä missä pedot eivät uskalla käydä. '
+            + 'Vuonna 1979 alueesta tuli Nicaraguan ensimmäinen '
+            + 'kansallispuisto, ja huhtikuussa 2001 kraatterista '
+            + 'singahti räjähdyksessä halkaisijaltaan 60-senttisiä '
+            + 'kiviä puolen kilometrin päähän.',
+          tiedosto: 'Cráter Santiago del Volcán Masaya.jpg',
+          lyhyt: 'Masayan Santiago-kraatteri savuaa jatkuvasti; '
+            + 'taustalla Cruz de Bobadillan risti.',
+          selite: 'Espanjalaiset pystyttivät ristin 1500-luvulla '
+            + 'manaamaan paholaisen pois "Helvetin suusta".',
+          lahde: 'Chicho96, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Masaya Volcano',
+        },
+      ],
+    },
+  ],
+  saoluis: [
+    {
+      id: 'kaupunki',
+      nimi: 'São Luís',
+      johdanto: 'São Luís on ainoa Ranskan perustama Brasilian osavaltion pääkaupunki, ja sen kolmivärinen historia näkyy kaduilla: ranskalainen linnake, hollantilainen valtaus, portugalilaiset asulejot. Täältä löytyy myös reggaen sydän.',
+      nostot: [
+        {
+          otsikko: 'Kaupunki jonka Ranska perusti',
+          teksti: 'São Luís syntyi syyskuussa 1612, kun ranskalainen upseeri Daniel de la Touche, Sieur de la Ravardière, pystytti saarelle Fort Saint-Louis’n ja nimesi paikan kuningas Ludvig XIII:n mukaan. Ranskalaiset haaveilivat mantereen kokoisesta Ranskan Ekvaattorista, mutta unelma jäi lyhyeksi: portugalilaiset karkottivat heidät jo 1615, ja hollantilaiset hallitsivat kaupunkia vielä vuosina 1641–1644. Kun isoisä saapui satamaan 1873, hän astui ainoaan Brasilian osavaltion pääkaupunkiin, jonka Ranska on koskaan perustanut – kadunkulmien ranskalainen, hollantilainen ja portugalilainen kerrostuma näkyy yhä kivikaduilla ja vanhoissa kauppahuoneissa.',
+          tiedosto: 'Old town in São Luís, Maranhão, Brazil 01.jpg',
+          lyhyt: 'Kivetty kuja nousee portaina São Luísin siirtomaa-ajan vanhassa kaupungissa.',
+          selite: 'Kuva on otettu vanhan kaupungin kivikadulta, jonka reunoilla siirtomaa-ajan talot kohoavat parvekkeineen ja kaari-ikkunoineen; kadun päässä portaat nousevat kohti ylempää katutasoa.',
+          lahde: 'Ridiculopathy, Wikimedia Commons (CC0)',
+          wiki: 'Equinoctial France',
+        },
+        {
+          otsikko: 'Leijonien palatsi meren rannalla',
+          teksti: 'Ranskalaisen linnakkeen paikalle nousi 1700-luvulla kuvernöörin palatsi, jota on sittemmin purettu ja rakennettu uudelleen useaan otteeseen – nykyinen rakennus juontuu vuodelta 1857 ja sitä laajennettiin vielä 1896. Palácio dos Leões toimii yhä Maranhãon osavaltion hallituksen istuimena ja kuvernöörin virka-asuntona, ja sen viidessä juhlasalissa säilytetään noin 1 300 taideteoksen kokoelmaa: maalauksia, kristallia, portugalilaista hopeaa ja ranskalaisia mattoja. Mereltä katsottuna valkoinen rakennusrivistö kohoaa yhä samalla niemenkärjellä, jolla ranskalaiset pystyttivät ensimmäisen varustuksensa yli neljä vuosisataa sitten.',
+          tiedosto: 'Mar2024. São Luís, Maranhão. Palácio dos Leões 01.jpg',
+          lyhyt: 'Palácio dos Leões, Maranhãon kuvernöörin palatsi, kohoaa mereltä katsottuna niemenkärjellä.',
+          selite: 'Palatsikokonaisuus näkyy mereltä käsin: valkoiset, punakattoiset rakennukset ja palmut sijaitsevat niemenkärjellä, jolla ranskalaiset pystyttivät alkuperäisen puolustusvarustuksensa 1612.',
+          lahde: 'Ridiculopathy, Wikimedia Commons (CC0)',
+          wiki: 'Timeline of São Luís, Maranhão',
+        },
+        {
+          otsikko: 'Voiton Neitsyt tuomiokirkossa',
+          teksti: 'Tuomiokirkon rakentaminen alkoi jo 1619, ja se vihittiin käyttöön 1622 – siis vain muutama vuosi sen jälkeen, kun portugalilaiset olivat karkottaneet ranskalaiset saarelta. Kirkko sai nimen Nossa Senhora da Vitória, Voiton Neitsyt, Guaxenduban taistelun kunniaksi: portugalilaisten vuonna 1615 käymä voitto kiihdytti ranskalaisten lopullista häätöä Maranhãosta. Nykyinen vaalean keltainen julkisivu kellotorneineen syntyi myöhemmin, kun kirkkoa laajennettiin 1700-luvun lopulla klassismin hengessä – lopputulos on portugalilaisen siirtomaabarokin ja uusklassismin yhdistelmä keskellä Praça Dom Pedro II:ta.',
+          tiedosto: 'Igreja da Sé - São Luís - 20231229170850.jpg',
+          lyhyt: 'São Luísin tuomiokirkon vaaleankeltainen julkisivu kellotorneineen Praça Dom Pedro II:lla.',
+          selite: 'Tuomiokirkon vaaleankeltainen, uusklassinen julkisivu kahdella kellotornillaan avautuu Praça Dom Pedro II:n reunalla, keskellä São Luísin vanhaa kaupunkia.',
+          lahde: 'Maiara Boaz, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Portuguese conquest of Maranhão',
+        },
+        {
+          otsikko: 'Maailmanperintöä ja rapistumista',
+          teksti: 'Unesco listasi São Luísin vanhan kaupungin maailmanperintökohteeksi 1997 – täällä on säilynyt enemmän Latinalaisen Amerikan siirtomaa-ajan kauppataloja kuin missään muualla mantereella. Todellisuus rappukatujen varrella on silti kahtiajakoinen: osa taloista on kunnostettu turisteille, mutta yhtä moni seisoo tyhjänä, rapautuvine julkisivuineen, ja seinillä näkyy katutaidetta. Kivetyt, jyrkät kujat nousevat portaina satamasta ylös, ja monissa niistä risteää sekä ylellisyyttä että köyhyyttä samalla korttelilla – muistutus siitä, ettei vanha kauppakaupunki ole pelkkä postikortti.',
+          tiedosto: 'Old town in São Luís, Maranhão, Brazil 02.jpg',
+          lyhyt: 'Rapistuva kivikuja nousee portaina kohti vanhan kaupungin ylätasannetta.',
+          selite: 'Kivikuja nousee leveinä portaina ylös; osa talojen julkisivuista on haalistunut ja niiden seinillä näkyy katutaidetta, mikä kertoo vanhan kaupungin epätasaisesta kunnostustilanteesta.',
+          lahde: 'Ridiculopathy, Wikimedia Commons (CC0)',
+          wiki: 'São Luís, Maranhão',
+        },
+        {
+          otsikko: 'Härkä joka tanssii koko yön',
+          teksti: 'Bumba-meu-boi syntyi siirtomaa-ajan istutuksilla eurooppalaisen näytelmäperinteen, orjuutettujen afrikkalaisten rytmien ja alkuperäiskansojen symboliikan sekoituksena. Kesäkuun pyhimysjuhlien aikaan kadut täyttyvät ryhmistä, jotka esittävät tarinan härästä, joka kuolee ja herää henkiin – jokainen ryhmä ompelee vuosittain uudet, helmillä ja höyhenillä koristellut härän naamiot ja puvut, jotka eivät häviä komeudessa karnevaalille. Unesco julisti Maranhãon bumba-meu-boi-perinteen ihmiskunnan aineettomaksi kulttuuriperinnöksi joulukuussa 2019. Tarina kantaa mukanaan myös raskaamman kerroksen: sen juuret ovat orjuuden ja vastarinnan historiassa.',
+          tiedosto: 'Bumba Boi Maranhao.jpg',
+          lyhyt: 'Bumba-meu-boi-esiintyjän helmikoristeltu härän naamio kesäkuun juhlassa.',
+          selite: 'Kuvassa on lähikuva Bumba-meu-boi-esiintyjän härän naamiosta: musta, helmillä ja koruompeluksin koristeltu pääosa ja vaaleanoranssi vaate, taustalla kesäkuun juhlien värikkäät liput.',
+          lahde: 'Mauricioalexandre55, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Bumba Meu Boi',
+        },
+        {
+          otsikko: 'Brasilian Jamaika',
+          teksti: '1970-luvun puolivälissä São Luísiin alkoi kantautua reggaeta lyhytaaltoradioista ja merimiesten tuomilta levyiltä, ja kaupunki rakastui siihen välittömästi. Levittäjiksi nousivat radiolat – valtavat, itse rakennetut kaiutintornit, joita DJ:t ajavat korttelijuhliin. Niitä on nykyään yli 200 pelkässä Maranhãossa, ja DJ Serralheiron radiola on yksi paikallisista instituutioista. Lempinimi ’Brasilian Jamaika’ vakiintui 1980-luvulla, kun radiolakulttuuri räjähti käsiin, ja reggae sulautui muihin paikallisiin perinteisiin, kuten bumba-meu-boihin. Praça do Reggae -aukio on nykyään pyhitetty tälle intohimolle keskellä vanhaa kaupunkia.',
+          tiedosto: 'Praça do Reggae, São Luís.jpg',
+          lyhyt: 'Reggaeaiheinen seinämaalaus vanhan talon julkisivulla Praça do Reggaella.',
+          selite: 'Seinämaalaus esittää aurinkolasipäistä, hattuniekkaa hahmoa viidakkokasvien keskellä; taustalla erottuu rapistunut, ikkunaluukuin varustettu siirtomaa-ajan talo.',
+          lahde: 'Artur Oliveira Silva, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Reggae Maranhão Museum',
+        },
+      ],
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Asulejot ja kirkkotaide',
+      johdanto: 'São Luísin julkisivut ovat kaupungin oma taidegalleria: portugalilaiset lasitetut laatat, asulejot, peittävät satoja siirtomaa-ajan taloja, ja tuomiokirkon sisällä väriloisto jatkuu katto- ja lasimaalauksissa.',
+      tehtava: {
+        kysymys: 'Minkä takia monen São Luísin asulejotalon laasti rapautuu laattojen ympäriltä?',
+        vaihtoehdot: [
+          'Koska laatat on kiinnitetty väärällä liimalla',
+          'Koska kostea, suolainen merituuli syövyttää laastia vuosikymmenten saatossa',
+          'Koska maanjäristykset halkeilevat seiniä',
+          'Koska laatat imevät auringon lämpöä ja räjähtävät',
+        ],
+        oikea: 1,
+        fakta: 'Itse lasitettu laattapinta kestää hyvin, mutta laattojen väliin jäävä laasti ei kestä saarikaupungin kosteaa, suolaista ilmastoa yhtä hyvin – siksi rapautuminen näkyy usein juuri laattojen saumoissa ja reunoilla.',
+      },
+      nostot: [
+        {
+          otsikko: 'Portugalista tuotu kuorrutus',
+          teksti: 'Kun portugalilaiset asettuivat São Luísiin, he toivat mukanaan maurien Iberian niemimaalle jättämän perinteen: lasitetut keraamiset laatat, asulejot. Kaupungista tuli Brasilian laatoitetuin – Rua Portugalin varrella on enemmän laatoitettuja kauppahuoneiden julkisivuja kuin missään muualla Latinalaisessa Amerikassa. Laatat eivät olleet pelkkää koristelua: niiden lasitettu pinta kestää päiväntasaajan auringon, sadekauden kosteuden ja meren suolaisen ilman paremmin kuin rappaus, ja ne toimivat lämmöneristeenä kivitalojen seinissä. Kadulla kävely on kuin näytekirjan selaamista – jokainen talo kilpailee naapuriaan komeammalla kuvioinnilla.',
+          tiedosto: 'Azulejaria da fachada da edificação à Praça João Lisboa, 102 - São Luís - 20250711155551.jpg',
+          lyhyt: 'Sinivalkoisilla asulejolaatoilla katettu kauppahuoneen julkisivu São Luísissa.',
+          selite: 'Kaksikerroksisen kauppahuoneen koko julkisivu on katettu sinivalkoisilla, kukka- ja pistekuvioisilla asulejolaatoilla; alakerrassa toimii nykyään liike.',
+          lahde: 'Ciriice, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Azulejo',
+        },
+        {
+          otsikko: 'Geometrian kieli seinällä',
+          teksti: 'Lähikuvassa erottuvat ruudukoksi asetellut vinoneliöt, joiden keskellä toistuu sininen kukka- tai lehtikuvio kullankeltaisten viivojen ristikossa – tyypillinen 1800-luvun portugalilainen laattamalli, joka maalattiin käsin ja poltettiin ennen kiinnitystä. Moni tällainen julkisivu on yli sata vuotta vanha, ja ajan hammas näkyy: rapautunutta laastia pilkottaa laattojen välistä, ja muutama laatta on lohjennut kokonaan. Silti värit – meripihkankeltainen, tummansininen, ruohonvihreä – pysyvät kirkkaina, koska lasitettu pinta ei haalene auringossa samalla tavalla kuin maali. Laatat kestävät vuosisatoja paremmin kuin talon rappaus niiden ympärillä.',
+          tiedosto: 'Azulejaria da fachada da edificação à Praça João Lisboa, 53 - São Luís - 20250711155254.jpg',
+          lyhyt: 'Lähikuva 1800-luvun portugalilaisesta laattakuvioinnista, jossa laasti on paikoin rapautunut.',
+          selite: 'Lähikuvassa toistuva vinoneliökuvio kullankeltaisin viivoin ja sinisin, lehtikuvioin koristelluin ruuduin; laattojen saumoista pilkottaa paikoin paljasta laastia.',
+          lahde: 'Ciriice, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Sata vuotta suolaista merituulta',
+          teksti: 'Tämän talon sinivalkoinen kukkakuvio kaartuu parvekkeen alle asti, mutta laastin rapautuminen näkyy erityisesti ikkunan holvikaaren ympärillä. Syynä on saarikaupungin ilmasto: kostea, suolainen merituuli syövyttää vuosikymmenten saatossa laattojen väliin jäävää laastia, vaikka itse lasitettu pinta kestäisi. Perintöviranomaiset ovat luetteloineet satoja tällaisia julkisivuja suojeltaviksi, mutta kunnostus on kallista ja hidasta – monen talon omistaja ei yksinkertaisesti pysty maksamaan sitä. Siksi vanhassa kaupungissa näkee vierekkäin sekä äskettäin kunnostettuja loistavia julkisivuja että rapistuvia, joiden laatat irtoavat hiljalleen.',
+          tiedosto: 'Azulejaria da fachada da edificação à Praça João Lisboa, 78 - São Luís - 20250711155450.jpg',
+          lyhyt: 'Kukkakuvioidut laatat parvekkeen alla, laasti rapautuneena holvikaaren ympärillä.',
+          selite: 'Sinivalkoinen kukkakuviointi peittää talon julkisivua parvekkeen alla; laasti on rapautunut erityisesti holvikaari-ikkunan ympäriltä, ja talon numero 78 näkyy kaaren keskellä.',
+          lahde: 'Ciriice, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Taivas tuomiokirkon katossa',
+          teksti: 'Tuomiokirkon holvikattoon on maalattu illuusio taivaasta: siniset pilvet täyttävät kupolin, ja keskellä kultareunaisessa kehyksessä Kristus kohoaa käsivarret levällään ympärillään leijuvien pienten enkelien seuratessa. Tällaiset trompe l’oeil -kattomaalaukset olivat suosittuja katolisissa kirkoissa ympäri Portugalin siirtomaita, koska ne veivät katsojan huomion pois raskaista kivipilareista ja loivat vaikutelman rajattomasta tilasta. Maalaus kuuluu samaan 1700-luvun lopun laajennukseen, joka antoi kirkolle nykyisen uusklassisen ulkoasunsa – sisällä barokin väri ja liike elävät silti yhä katossa.',
+          tiedosto: 'Pintura do teto da Igreja da Sé - São Luís.jpg',
+          lyhyt: 'Tuomiokirkon kattoon maalattu taivas, jossa Kristus kohoaa enkelien ympäröimänä.',
+          selite: 'Kirkon holvikattoon maalattu kohtaus näyttää Kristuksen kohoamassa käsivarret levällään pilvien ja pienten enkelien ympäröimänä, kultareunaisen koristekehyksen sisällä.',
+          lahde: 'Maiara Boaz, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Karitsa lasimaalauksessa',
+          teksti: 'Kirkon ikkunoissa toistuu Jumalan Karitsan aihe: valkoinen karitsa seisoo sädekehän edessä ja kantaa sorkallaan lippua, jossa on punainen risti. Kuva-aihe on kristikunnan vanhimpia symboleita – karitsa viittaa uhriin ja lippu ylösnousemuksen voittoon kuolemasta. Toisin kuin talojen asulejot, jotka ovat maalattua keramiikkaa, lasimaalaus rakennetaan värillisistä lasinpaloista lyijylistojen väliin; auringonvalo suodattuu niiden läpi ja maalaa lattialle värikkään kuvion. Ikkunat ovat nuorempia kuin kirkon 1600-luvun perustukset – ne ovat osa niitä lukuisia kunnostuskerroksia, jotka ovat muokanneet rakennusta vuosisatojen kuluessa.',
+          tiedosto: 'Vitral da Igreja da Sé - São Luís - 20180628144419.jpg',
+          lyhyt: 'Lasimaalaus tuomiokirkossa: Jumalan Karitsa kantaa ristilippua.',
+          selite: 'Kaarevassa ikkunassa on lasimaalaus valkoisesta karitsasta, joka kantaa sorkallaan punarististä lippua sädekehän edessä; ympärillä on värikäs geometrinen lasikuvio.',
+          lahde: 'Maiara Boaz, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+  ],
+  sanjuan: [
+    {
+      id: 'kaupunki',
+      nimi: 'San Juan',
+      johdanto:
+        'San Juanin kansisivulla tavataan Espanjan vanhin siirtokunta nykyisen Yhdysvaltain alueella: perustamistarina, värikäs vanhakaupunki, kuvernöörin linna ja hetki vuodelta 1873, jolloin saarella lakkautettiin orjuus.',
+      nostot: [
+        {
+          otsikko: 'Kaksi nimeä, yksi kaupunki',
+          teksti:
+            'Ponce de León perusti ensimmäisen siirtokunnan lähistölle vuonna 1508 nimellä Caparra; huonon sijainnin vuoksi asukkaat siirtyivät 1521 nykyiselle kalliosaarelle, ja kaupunki sai nimen Ciudad de Puerto Rico de San Juan Bautista. Vuosisatojen mittaan nimet vaihtoivat paikkaa: koko saaresta tuli Puerto Rico, ja kalliolla oleva kaupunki jäi pelkäksi San Juaniksi — vanhoissa espanjalaiskartoissa kaupunki saatettiin vielä merkitä muotoon "Puerto Rico de Puerto Rico". San Juan on vanhin Espanjan perustama siirtokunta nykyisen Yhdysvaltain alueella ja toiseksi vanhin eurooppalaisten perustama pääkaupunki koko Amerikassa, heti Santo Domingon jälkeen.',
+          tiedosto: 'Aerial View Of Old San Juan.jpg',
+          lyhyt: 'Vanhan San Juanin kattoja ja kujia ilmasta kuvattuna.',
+          selite:
+            'Ilmakuva Vanhasta San Juanista lentokoneesta, joka lähestyy kaupungin lentokenttää; kuva näyttää kalliosaaren tiiviin ruutukaavan.',
+          lahde: 'Coolcaesar, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'San Juan, Puerto Rico',
+        },
+        {
+          otsikko: 'Vapaus vuonna 1873',
+          teksti:
+            'Isoisän matkavuonna 1873 Espanjan kansalliskokous päätti 22. maaliskuuta lakkauttaa orjuuden Puerto Ricossa. Päätös vapautti noin 29 000 orjaa, mikä oli tuolloin noin viisi prosenttia koko saaren väestöstä. Vapaus ei ollut ehdoton: entiset omistajat saivat korvauksen, ja vapautetut velvoitettiin jatkamaan työtä entisillä tiloillaan vielä kolme vuotta, minkä lisäksi täysiä kansalaisoikeuksia sai odottaa viisi vuotta. Päätöstä ajoi pitkäjänteinen orjuudenvastainen liike, ja lopullinen sysäys tuli, kun Espanjaan julistettiin tasavalta pari kuukautta aiemmin. Puerto Rico on sittemmin muistanut tapahtumaa vuosittaisena juhlapäivänä.',
+          tiedosto: 'Puerta de San Juan (1905).jpg',
+          lyhyt: 'Kaupunginportti Puerta de San Juan kuvattuna vuonna 1905.',
+          selite:
+            'Vanha valokuva San Juanin kaupunginportista muutama vuosikymmen isoisän matkan jälkeen; portti johti satamasta suoraan muurien sisään.',
+          lahde: 'Tuntematon, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Siniset kadut ja väriseinät',
+          teksti:
+            'Vanhan San Juanin katujen pinta ei ole tavallista kiveä vaan adoquines-nimisiä sinertäviä laattoja, jotka valmistettiin 1700—1800-luvuilla Espanjassa rautasulaton kuonasta ja tuotiin Atlantin yli laivojen painolastina. Kadunvarsien talot maalataan perinteisesti kirkkain värein — okrankeltaista, korallinpunaista, turkoosia — ja monissa on koristeelliset rautaparvekkeet toiseen kerrokseen asti. Kaupunki valvoo tarkkaan, mitä sävyjä vanhassa kaupunginosassa saa käyttää, jotta katukuva pysyy yhtenäisenä. Kapeat, suorakulmaiset korttelit periytyvät siirtomaa-ajan kaupunkisuunnittelusta, jossa kadut asetettiin tuulen mukaan viilentämään kuumaa saarta.',
+          tiedosto: 'Buildings on Calle del Cristo, San Juan, Puerto Rico.jpg',
+          lyhyt: 'Calle del Criston värikkäitä taloja ja sinertäviä katukiviä.',
+          selite:
+            'Näkymä Calle del Cristolta, jonka talot on maalattu perinteisin kirkkain värein ja jonka pinnassa erottuvat siniset adoquines-laatat.',
+          lahde: 'Todd Van Hoosear, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Old San Juan',
+        },
+        {
+          otsikko: 'Vanhin asuttu kuvernöörintalo',
+          teksti:
+            'La Fortaleza rakennettiin 1530-luvulla puolustuslinnoitukseksi sisäänkäynnin suojaksi, mutta se osoittautui huonosti sijoitetuksi varsinaista merihyökkäystä vastaan, ja puolustustehtävä siirtyi myöhemmin El Morrolle ja San Cristóbalille. Rakennuksesta tuli sen sijaan Puerto Ricon espanjalaishallinnon keskus, ja se on toiminut saaren ylimmän johtajan asuntona yhtäjaksoisesti 1500-luvulta asti — sitä pidetään läntisen pallonpuoliskon vanhimpana yhä käytössä olevana kuvernöörinlinnana. Vuosisatojen aikana taloon on lisätty muun muassa juhlavampi sisäänkäynti ja puutarhoja, ja tänäkin päivänä siellä asuu ja työskentelee Puerto Ricon istuva kuvernööri.',
+          tiedosto: 'La Fortaleza in San Juan, Puerto Rico.jpg',
+          lyhyt: 'La Fortaleza, Puerto Ricon kuvernöörin virka-asunto.',
+          selite:
+            'Näkymä La Fortalezan linnamaiseen julkisivuun Calle Fortalezan päästä; rakennus on ollut saaren johtajan asuntona yli neljä vuosisataa.',
+          lahde: 'vxla, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'La Fortaleza',
+        },
+        {
+          otsikko: 'Ponce de Leónin hauta',
+          teksti:
+            'Catedral de San Juan Bautista on Amerikan mantereen vanhimpia yhä käytössä olevia kirkkorakennuksia; sen juuret ulottuvat 1520-luvulle, vaikka hirmumyrskyt ja tulipalot ovat pakottaneet rakentamaan sitä uudelleen vuosisatojen kuluessa. Kirkon sisällä lepää San Juanin perustajan, Juan Ponce de Leónin, marmorinen hautaholvi — hänen jäännöksensä siirrettiin tänne 1900-luvun alussa aiemmasta haudastaan. Katedraalissa säilytetään myös vuosisatoja vanhaa espanjalaista veistotaidetta ja mumioitunutta pyhäinjäännöstä. Rakennuksen yksinkertainen, paksuseinäinen ulkoasu kertoo ajasta, jolloin kirkkojen piti kestää sekä myrskyjä että hyökkäyksiä.',
+          tiedosto:
+            'Catedral de San Juan Bautista de Puerto Rico - DSC06868.JPG',
+          lyhyt: 'Catedral de San Juan Bautistan julkisivu Vanhassa San Juanissa.',
+          selite:
+            'San Juanin katedraalin ulkoseinä; rakennuksen sisällä on muun muassa kaupungin perustajan Ponce de Leónin hauta.',
+          lahde: 'Daderot, Wikimedia Commons (PD)',
+          wiki: 'Cathedral of San Juan, Puerto Rico',
+        },
+        {
+          otsikko: 'Talo joka on nähnyt kaiken',
+          teksti:
+            'Casa Blanca rakennettiin 1520-luvulla Ponce de Leónin suvulle asunnoksi, vaikka valloittaja itse ei ehtinyt siinä koskaan asua — hän kuoli haavoihinsa Kuubassa ennen taloon muuttoa. Ponce de Leónin jälkeläiset asuivat rakennuksessa lähes kolmen vuosisadan ajan, ja sitä pidetään yhtenä läntisen pallonpuoliskon pisimpään yhtäjaksoisesti asuttuna eurooppalaistyyppisenä talona. 1800-luvun lopulla Yhdysvaltain armeija otti rakennuksen komentajansa asunnoksi, ja sen ympärille istutettu varjoisa puutarha lammikkoineen muistuttaa yhä siitä, miten poikkeuksellisen kauan yksi talo on saanut palvella kotina keskellä linnoitettua kaupunkia.',
+          tiedosto: 'San Juan - Casa Blanca.jpg',
+          lyhyt: 'Casa Blanca ja merimuuri valokuvassa vuodelta 1901.',
+          selite:
+            'Vanha valokuva Casa Blancasta ja sitä ympäröivästä merimuurista; talo oli Ponce de Leónin suvun asuntona lähes 250 vuotta.',
+          lahde: 'Detroit Photographic Co., Wikimedia Commons (PD)',
+          wiki: 'Casa Blanca (San Juan)',
+        },
+      ],
+    },
+    {
+      id: 'linnoitukset',
+      nimi: 'Linnoitukset',
+      johdanto:
+        'San Juania ympäröi Amerikan vanhimpia säilyneitä linnoitusjärjestelmiä: kaksi valtavaa espanjalaislinnaketta, kilometrien mittaiset kaupunginmuurit ja yksi saaren tunnetuimmista aavetarinoista.',
+      tehtava: {
+        kysymys: 'Minä vuonna maanjäristys vaurioitti osan San Juanin kaupunginmuureista?',
+        vaihtoehdot: ['1521', '1783', '1867', '1898'],
+        oikea: 2,
+        fakta:
+          'Voimakas maanjäristys vaurioitti osaa San Juanin kaupunginmuurista vuonna 1867 — vain kuusi vuotta ennen isoisän matkaa.',
+      },
+      nostot: [
+        {
+          otsikko: 'El Morro vahtii sataman suuta',
+          teksti:
+            'Kuningas Kaarle V antoi luvan linnoituksen rakentamiseen kalliosaaren kärkeen vuonna 1539, mutta lopullisen muodon suunnittelivat vasta 1580-luvulla insinöörit Juan de Tejada ja Bautista Antonelli. Espanjalaiset laajensivat ja vahvistivat linnaketta useaan otteeseen 1700-luvulle asti, kunnes se sai nykyisen kuusikerroksisen, paksuine muureineen ja vallihautoineen varustetun muotonsa. El Morro sijaitsee korkealla kalliolla sataman kapeimman kohdan yllä, jotta sen tykit hallitsivat jokaista satamaan pyrkivää laivaa. Linnakkeen huipulla seisoo nykyään majakka, joka on peräisin 1900-luvun alusta ja jatkaa yhä samaa tehtävää merenkulkijoiden opastajana.',
+          tiedosto: 'Castillo San Felipe del Morro, Puerto Rico.jpg',
+          lyhyt: 'El Morron muureja ja bastioneja meren yllä.',
+          selite:
+            'Näkymä Castillo San Felipe del Morron ulkomuureihin ja bastioneihin kalliosaaren kärjessä.',
+          lahde: 'Breezy Baldwin, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Castillo San Felipe del Morro',
+        },
+        {
+          otsikko: 'San Cristóbal, mantereen suurin linnake',
+          teksti:
+            'Kun El Morro suojasi satamaa merta vasten, San Cristóbal rakennettiin suojaamaan kaupunkia maapuolelta — suunnalta, josta vihollinen saattoi yllättäen hyökätä laivaston huomaamatta. Linnake valmistui 1783, ja sitä pidetään laajuudeltaan suurimpana Espanjan koskaan Uuteen maailmaan rakentamana linnoituksena: se levittäytyi lähes 30 hehtaarin alueelle ja kiersi aikanaan suuren osan kaupunkia. Sisältä löytyy syviä tyrmiä, kasarmeja, ruutivarastoja ja käytäviä, joita pitkin sotilaat liikkuivat linjalta toiselle vihollisen näkemättä heitä. Vuonna 1897 kolmasosa linnakkeesta purettiin, jotta liikenne saatiin kulkemaan paremmin.',
+          tiedosto:
+            'Castillo de San Cristóbal fort in San Juan, Puerto Rico.jpg',
+          lyhyt: 'San Cristóbalin muureja ja tykkitasanteita.',
+          selite:
+            'Näkymä Castillo San Cristóbalin muureihin ja tykkitasanteisiin, jotka kiersivät aikanaan suuren osan kaupunkia.',
+          lahde: 'Jorge Láscar, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Castillo San Cristóbal (San Juan)',
+        },
+        {
+          otsikko: 'Muuri joka kesti maanjäristyksen',
+          teksti:
+            'San Juanin kaupunginmuurit alkoivat nousta 1500-luvulla, ja parhaimmillaan ne kiersivät koko kalliosaaren — yksi Pohjois-Amerikan kolmesta yhä lähes kokonaisena säilyneestä kaupunginmuurijärjestelmästä, samaan seuraan kuuluvat vain Québecin ja Campechen muurit. Muurit ovat paikoin yli kymmenen metriä korkeat ja useita metrejä paksut, ja niiden sisään rakennettiin porttien lisäksi tykkitasanteita ja vartiotorneja. Vuonna 1867 voimakas maanjäristys vaurioitti osaa muurista — vain kuusi vuotta ennen isoisän matkaa. Nykyisin noin kolme neljäsosaa alkuperäisistä muureista on yhä pystyssä, ja niiden päältä avautuu näkymä kaupunkiin ja merelle.',
+          tiedosto: 'Old San Juan - City Walls 02.jpg',
+          lyhyt: 'San Juanin vanhaa kaupunginmuuria merenrannassa.',
+          selite:
+            'Osa San Juanin vanhoista kaupunginmuureista; muuri kiersi aikanaan koko kalliosaaren.',
+          lahde: 'P. Hughes, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Walls of Old San Juan',
+        },
+        {
+          otsikko: 'Piru vei vahdin',
+          teksti:
+            'Kauimpana muusta linnoituksesta törröttävä pieni kivinen vartiokoju tunnetaan nimellä Garita del Diablo, Pirun vahtikoju. Legendan mukaan sinne komennettu sotilas nimeltä Sánchez katosi jäljettömiin kesken vahtivuoronsa; aamulla paikalta löytyivät vain hänen varusteensa, ei miestä itseään. Tuulen ulvonta ja aaltojen jyske tekivät paikasta pelätyn vartiopaikan, ja sotilaat uskoivat pian, että itse paholainen oli noutanut kadonneen toverinsa. Toisen, maallisemman version mukaan Sánchez ei hukkunut mereen, vaan pakeni rakastettunsa Dianan kanssa vuorille perustaakseen uuden elämän kaukana vartiokojusta. Kumpi tarina on totta, sitä ei tiedä kukaan.',
+          tiedosto: 'San Juan, Garita del Diablo 1.jpg',
+          lyhyt: 'Garita del Diablo, Pirun vahtikoju kallion reunalla.',
+          selite:
+            'Garita del Diablo -niminen kivinen vartiokoju, joka työntyy erilleen muusta linnoituksesta meren ylle.',
+          lahde: 'LBM1948, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'San Juan National Historic Site',
+        },
+        {
+          otsikko: 'Kaupunki jota ei saatu valtaukseen',
+          teksti:
+            'San Juanin linnoitukset joutuivat koetukselle useita kertoja. Amiraali Francis Drake yritti vallata kaupungin 1595, mutta espanjalaisten tykistö upotti hänen laivojaan satamassa, ja hyökkäys torjuttiin. Kolme vuotta myöhemmin kreivi Cumberland valtasi kaupungin, mutta punatauti verotti joukkoja niin ankarasti, että englantilaiset vetäytyivät pian saaliineen. Pahin isku koettiin 1625, kun amiraali Hendricksz poltti suuren osan kaupungista — El Morro kuitenkin kesti piirityksen. Jokainen epäonnistunut valtausyritys vahvisti Espanjan uskoa siihen, että puolustusta kannatti laajentaa, mikä selittää El Morron ja San Cristóbalin myöhemmät laajennukset.',
+          tiedosto: 'Hendricksz 1625 attack on San Juan, Puerto Rico.jpg',
+          lyhyt: 'Nykyaikainen kartta hollantilaisten vuoden 1625 hyökkäysreitistä.',
+          selite:
+            'Wikimedia-käyttäjän piirtämä havainnekartta, joka näyttää amiraali Hendrickszin joukkojen etenemisreitin San Juanin satamaan vuonna 1625.',
+          lahde: 'Caballero1967, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Battle of San Juan (1625)',
+        },
+      ],
+    },
+  ],
+  noumea: [
+    {
+      id: 'kaupunki',
+      nimi: 'Nouméa',
+      johdanto:
+        'Nouméa syntyi rangaistussiirtolana Uuden-Kaledonian niemelle 1854, ja isoisän matkan aikaan 1873 kaupunki eli vankityön, kommunardien ja vasta löydetyn nikkelin murroksessa. Sivut kertovat sen ensimmäiset vuosikymmenet.',
+      nostot: [
+        {
+          otsikko: 'Port-de-France niemen kärjessä',
+          teksti:
+            'Ranska perusti asutuksen Uuden-Kaledonian eteläkärkeen vuonna 1854 ja nimesi sen Port-de-Franceksi. Paikka valittiin suojaisan syvän sataman vuoksi: kaupunkia ympäröivässä suojariutassa on vain kolme kapeaa aukkoa, joista laivat pääsevät turvallisesti niemen rannalle. Vuonna 1866 asutus sai nykyisen nimensä Nouméa, paikallisen kielen mukaan. Ensimmäiset vuodet olivat karuja: makea vesi loppui usein kesken, ja pieni siirtokunta eli pitkään laivojen tuomien muonatoimitusten varassa, ennen kuin ympäröivää maaseutua saatiin viljelyyn asukkaiden ruoaksi.',
+          tiedosto: 'General View of Noumea, by Peace.jpg',
+          lyhyt: 'Nouméa 1900-luvun taitteessa, kuvattuna korkealta paikalta.',
+          selite:
+            'Yleisnäkymä Nouméasta ennen vuotta 1906: matala siirtokuntakaupunki levittäytyy rantaviivan mukaisesti kukkuloiden välissä.',
+          lahde: 'Peace, Wikimedia Commons (PD)',
+          wiki: 'Nouméa',
+        },
+        {
+          otsikko: 'Vankityö rakensi kaupungin',
+          teksti:
+            'Toukokuussa 1864 ensimmäiset raskaisiin töihin tuomitut miehet astuivat maihin nelikuisen merimatkan jälkeen. Seuraavien vuosikymmenten aikana Ranska kuljetti Uuteen-Kaledoniaan lähes 22 000 vankia, ja heidän pakkotyönsä muovasi Nouméan katukuvaa: kukkuloita tasoitettiin, teitä louhittiin ja rakennuksia nostettiin palkatta. Vangit majoitettiin erillään kaupungista Île Noun saarelle, mutta heidät soudettiin päivittäin työmaille. Isoisän matkan aikaan 1873 vankisiirtola oli täydessä käynnissä; se lakkautettiin vasta 1900-luvun alkupuolella, ja monet entiset vangit jäivät saarelle vapaina siirtolaisina.',
+          tiedosto:
+            'Les bagnards sur un chantier de la ville de Noumea, arasement de la butte Conneau.jpg',
+          lyhyt: 'Vangit tasoittavat kukkulaa Nouméan rakennustyömaalla.',
+          selite:
+            'Vangit lapioivat ja kuljettavat maa-aineksia Nouméan Butte Conneau -kukkulan tasoitustyömaalla 1800-luvun lopulla.',
+          lahde:
+            'Kakou Serge - Decouverte photographique de la Nouvelle-Caledonie. 1848-1900. Ates Sud, Arles, 1998, Wikimedia Commons (PD)',
+          wiki: 'Penal colony of New Caledonia',
+        },
+        {
+          otsikko: 'Kommunardit saapuvat',
+          teksti:
+            'Pariisin kommuunin kukistuttua 1871 Ranska tuomitsi tuhansia kapinallisia karkotukseen. Vuodesta 1872 alkaen yli 4000 poliittista vankia purjehti Nouméaan; vaarallisimpina pidetyt suljettiin Ducosin niemelle, muut saivat asua vapaammin Île des Pinsillä. Joukossa oli opettaja ja anarkisti Louise Michel, joka piti karkotuksen aikana koulua paikallisille lapsille ja tutustui kanakkien kulttuuriin poikkeuksellisen läheltä. Armahdus vuonna 1880 päästi suurimman osan kommunardeista kotimatkalle, mutta muutamakymmentä perhettä päätti jäädä Uuteen-Kaledoniaan pysyvästi.',
+          tiedosto:
+            'Portrait de Louise Michel (1830-1905), pendant la Commune de Paris 1871. PH15063.jpg',
+          lyhyt: 'Louise Michel valokuvattuna ennen karkotustaan Uuteen-Kaledoniaan.',
+          selite:
+            'Valokuvaaja Ernest Appertin muotokuva Louise Michelistä Pariisin kommuunin ajalta vuonna 1871, ennen tämän karkotusta.',
+          lahde: 'Ernest Charles Appert, Wikimedia Commons (CC0)',
+          wiki: 'Louise Michel',
+        },
+        {
+          otsikko: 'Vihreä kivi joka muutti kaiken',
+          teksti:
+            'Vuonna 1864 saarelle lähetetty kaivosinsinööri Jules Garnier löysi vihertävää kiveä, jota kukaan ei ollut osannut nimetä: nikkeliä sitovan silikaattimineraalin, joka sai myöhemmin hänen mukaansa nimen garnieriitti. Löytö osoitti, että Uudessa-Kaledoniassa on poikkeuksellisen rikkaita nikkeliesiintymiä lähellä maan pintaa. Kaivostoiminta lähti todelliseen kasvuun juuri isoisän matkan jälkeisinä vuosina 1870-luvulla, ja nikkelistä tuli nopeasti siirtokunnan tärkein vientituote vankityön ja kolonisoinnin rinnalle. Nykyään saarella arvioidaan olevan noin kymmenesosa koko maailman nikkelivaroista.',
+          tiedosto: 'Garnierit - Numea, Neukaledonien.jpg',
+          lyhyt: 'Nouméasta löytynyt vihreä garnieriittinäyte.',
+          selite:
+            'Vihreä garnieriittinäyte, nikkeliä sisältävä mineraali, joka on peräisin juuri Nouméan seudulta.',
+          lahde: "Ra'ike, Wikimedia Commons (CC BY-SA 3.0)",
+          wiki: 'Jules Garnier',
+        },
+        {
+          otsikko: 'Majakka joka rakennettiin Pariisissa',
+          teksti:
+            'Nouméan edustan suojariutassa on vain kolme laivoille kelpaavaa aukkoa, ja tärkeintä niistä, Boularin väylää, valvoo Amédéen saaren majakka. Sen 56-metrinen rautatorni valmistettiin osina Pariisissa vuonna 1862, kuljetettiin Seineä pitkin Le Havreen ja purjehdittiin sieltä maailman toiselle laidalle. Torni koottiin lopulliselle paikalleen ja sytytettiin ensi kertaa marraskuussa 1865 - Ranskan ensimmäinen metallinen majakka. 247 kierreporrasta johtavat huipulle, josta valo kantoi kauas merelle ja opasti etenkin vankilaivoja turvallisesti perille asti.',
+          tiedosto: 'Phare Amédée.JPG',
+          lyhyt: 'Amédéen saaren 56-metrinen rautamajakka.',
+          selite:
+            'Amédéen saari ilmasta kuvattuna: rautamajakka kohoaa keskellä matalaa kasvillisuutta, ympärillä hiekkaranta ja kirkas laguunivesi.',
+          lahde: 'ToucanWings, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Amédée Lighthouse',
+        },
+        {
+          otsikko: 'Niemi kahden lahden välissä',
+          teksti:
+            'Nouméa levittäytyy kapealle niemelle kahden suojaisan lahden, Baie des Citronsin ja Anse Vatan, väliin - muoto joka antoi kaupungille sen syvän luonnonsataman. Korkein maamerkki nousee kaupungin sydämeen vasta isoisän matkan jälkeen: Saint-Josephin katedraalin rakensi 1887-1897 vankityövoima erään entisen vangin, Labullen, piirustusten mukaan. Kaksitorninen kirkko kohoaa yhä satama-altaan yllä ja on merkitty historialliseksi muistomerkiksi. Niemen kärjestä avautuu näkymä sekä vuoristoiseen sisämaahan että ulapan suojariuttaan, joka kiertää koko saarta kuin muuri.',
+          tiedosto: 'Cathédrale Saint Joseph de Nouméa.jpg',
+          lyhyt: 'Saint-Josephin katedraali valaistuna satama-altaan rannalta.',
+          selite:
+            'Nouméan Saint-Josephin katedraali valaistuna pimeällä, kuvattuna Baie de la Moselle -satama-altaan rannalta.',
+          lahde: 'StephaneFradetPhotographie, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Nouméa Cathedral',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto:
+        'Nouméaa ympäröi maailman pisimpiin kuuluva suojariutta ja sen sisään jäävä laguuni, kaupungin omia rantoja reunustavat pilviin kurkottavat käpymännyt, ja sisämaan metsissä asustaa lintu, joka on unohtanut lentää.',
+      tehtava: {
+        kysymys:
+          'Minä vuonna Uuden-Kaledonian laguunit hyväksyttiin Unescon maailmanperintölistalle?',
+        vaihtoehdot: ['2008', '1998', '2012', '2004'],
+        oikea: 0,
+        fakta:
+          'Unesco liitti Uuden-Kaledonian laguunit maailmanperintöluetteloon vuonna 2008 niiden riuttojen monimuotoisuuden vuoksi.',
+      },
+      nostot: [
+        {
+          otsikko: 'Maailman pisin yhtenäinen suojariutta',
+          teksti:
+            'Uutta-Kaledoniaa kiertää suojariutta, joka jatkuu katkeamatta lähes 1500 kilometrin matkan - pisin yhtenäinen riutta koko maailmassa ja kolmanneksi suurin riuttajärjestelmä Australian Isoimman riutan ja Väli-Amerikan riutan jälkeen. Riutan sisään jää 24 000 neliökilometrin laguuni, keskisyvyydeltään noin 25 metriä. Unesco liitti laguunit maailmanperintöluetteloon vuonna 2008 nimellä Uuden-Kaledonian laguunit: riuttojen monimuotoisuus ja niihin liittyvät ekosysteemit. Nouméan edustalla riuttaan avautuu vain kolme laivaväylää, ja yksi niistä kulkee tässä lehdessä jo esitellyn Amédéen majakan ohi.',
+          tiedosto: 'New Caledonia lagoon.jpg',
+          lyhyt: 'Ilmakuva Uuden-Kaledonian laguunista.',
+          selite:
+            'Ilmakuva Uuden-Kaledonian laguunista, jossa matala hiekkapohja piirtää veteen vaihtelevia turkoosin sävyjä.',
+          lahde: 'Frenchytahiti, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'New Caledonia Barrier Reef',
+        },
+        {
+          otsikko: 'Laguuni täynnä elämää',
+          teksti:
+            'Nouméan edustan laguunissa elää yli 2300 kalalajia ja yli 2000 nilviäislajia - määrä, joka tekee siitä yhden maailman monimuotoisimmista merialueista. Vedet ovat myös maailman kolmanneksi suurimman dugongikannan koti, ja vihreät merikilpikonnat nousevat laguunin hiekkarannoille munimaan. Matala, lämmin vesi näkyy ilmasta katsottuna vaihtelevina turkoosin sävyinä sen mukaan, kuinka syvältä hiekkapohja kajastaa läpi. Riutan suojaama laguuni pitää aallokon poissa Nouméan rannoilta, minkä ansiosta kaupungin uimarannat pysyvät tyyninä lähes ympäri vuoden.',
+          tiedosto: 'New Caledonia blue lagoon.jpg',
+          lyhyt: 'Laguunin syvyysvyöhykkeet turkoosin ja sinisen sävyinä.',
+          selite:
+            'Toinen ilmakuva samasta laguunista: veden syvyyserot piirtävät pintaan selvät turkoosin ja sinisen vyöhykkeet.',
+          lahde: 'Frenchytahiti, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'New Caledonia Barrier Reef',
+        },
+        {
+          otsikko: 'Lintu joka unohti lentää',
+          teksti:
+            'Uuden-Kaledonian sademetsissä elää kagu, harmaahöyheninen ja punajalkainen lintu, joka ei enää osaa lentää kunnolla - siivet kantavat sen ilmaan vain hätätilanteessa. Sen nokan tyvessä on kaikilta muilta linnuilta puuttuvat sarveiskudoksen läpät, jotka suojaavat sieraimia kun se kaivaa etanoita ja matoja metsän pohjakerroksesta. Kagu on Uuden-Kaledonian tunnetuin eläinsymboli, mutta myös uhanalainen: luontoon päästetyt koirat, kissat ja rotat ovat vieneet sen kannan enää muutamaan sataan yksilöön. Rotat syövät yli puolet poikasista ennen kuin ne ehtivät lähteä pesästä.',
+          tiedosto: 'Kagu 0A2A2595.jpg',
+          lyhyt: 'Villi kagu-lintu Uuden-Kaledonian metsässä.',
+          selite:
+            'Villi kagu kuvattuna Uuden-Kaledonian eteläosan metsässä syyskuussa 2022; vaaleanharmaa höyhenpuku ja punaiset jalat erottuvat selvästi.',
+          lahde: 'JJ Harrison, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Kagu',
+        },
+        {
+          otsikko: 'Käpymänty joka kurottaa taivaaseen',
+          teksti:
+            'Nouméan rantaviivaa, erityisesti Anse Vatan ja Baie des Citronsin lahtia, reunustavat kapeat, sylinterinmuotoiset käpymännyt, jotka voivat kasvaa villeinä jopa 60 metrin korkuisiksi. Puulaji on Uudelle-Kaledonialle ainutlaatuinen eikä kasva luonnostaan missään muualla maailmassa; brittiläinen kasvitieteilijä nimesi sen 1700-luvulla kapteeni James Cookin mukaan, joka näki puita purjehtiessaan saaren ohi. Tutkijat ovat havainneet puissa oudon piirteen: ne kallistuvat kohti päiväntasaajaa, pohjoisella pallonpuoliskolla etelään ja eteläisellä pohjoiseen, eikä kallistuksen syytä vieläkään täysin tunneta.',
+          tiedosto: 'Araucaria columnaris, Nouméa, New Caledonia 1.jpg',
+          lyhyt: 'Pylväsmäisiä käpymäntyjä Nouméan rannalla.',
+          selite:
+            'Kapeita, pylväsmäisiä käpymäntyjä Nouméassa kesäkuussa 2023 kuvattuna; latvukset kurottavat suoraan ylöspäin.',
+          lahde: 'Jonathan Harker, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Araucaria columnaris',
+        },
+      ],
+    },
+  ],
+  puertomontt: [
+    {
+      id: 'kaupunki',
+      nimi: 'Puerto Montt',
+      johdanto:
+        'Patagonian portti Reloncavín selän rannalla: saksalaisten siirtolaisten vuonna 1853 perustama puukaupunki on kasvanut lohenkasvatuksen ja matkailun keskukseksi kahden tulivuoren katveessa.',
+      nostot: [
+        {
+          otsikko: 'Melipullista Puerto Montiksi',
+          teksti:
+            'Puerto Montt perustettiin virallisesti 12. helmikuuta 1853, kun siirtolaisasiamies Vicente Pérez Rosales valitsi paikan Reloncavín selän rannalta hallituksen Etelä-Chilen asutusohjelmaa varten. Alue tunnettiin mapudungun-kielisellä nimellä Melipulli, "neljä kukkulaa", ja metsää oli raivattu tontille jo edellisenä syksynä. Uusi kaupunki sai nimensä presidentti Manuel Monttilta, joka käynnisti saksalaisten siirtolaisten muuton Llanquihuen järven seudulle 1850-luvulla. Kun isoisä kulki tällä rannikolla vuonna 1873, kaupunki oli vasta parikymppinen nuori satama - silti jo Patagonian porttina tunnettu.',
+          tiedosto: 'Chile - Puerto Montt - Panorama.jpg',
+          lyhyt: 'Puerto Montt kohoaa mäeltä rantaan, Reloncavín selkä taustalla.',
+          selite:
+            'Näkymä kaupungin yli mäeltä: värikkäitä kattoja ja keskustan rakennuksia, taustalla Reloncavín selän sininen vesi, jolla näkyy risteilyalus.',
+          lahde: 'HaSt, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Puerto Montt',
+        },
+        {
+          otsikko: 'Lauta ja pärekatto',
+          teksti:
+            'Angelmón torialueen vanhat rakennukset on tehty samalla tavalla kuin koko kaupunki aikoinaan: seinät ovat leveää lautaa, ja monin paikoin näkyy vielä käsin lohkottuja tejuela-päreitä, usein kestävästä alerce-puusta. Saksalaiset siirtolaiset toivat mukanaan kirvestyön ja rakennustaidon, joka sovitettiin sateiseen ilmastoon jyrkin harjakattoin ja aaltopeltisuojauksin. Suuri osa vanhasta puukaupungista tuhoutui toukokuun 1960 jättiläismäisessä maanjäristyksessä ja sitä seuranneessa hyökyaallossa, jotka repivät mukaansa sataman ja rautatieaseman. Kaupunki rakennettiin uudelleen samalla puutekniikalla, joka näkyy yhä torin kujien seinissä.',
+          tiedosto: 'Chile - Puerto Montt 33 - beautiful wood market (6983633181).jpg',
+          lyhyt: 'Angelmón vanha puurakennus pärekatteineen ja peltikattoineen.',
+          selite:
+            'Rapautunut puutalo, jonka seinissä vuorottelevat harmaa lauta ja turkoosit tejuela-päreet, katolla aaltopelti - tyypillistä alueen vanhaa rakennustapaa.',
+          lahde: 'McKay Savage, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Angelmón tori',
+          teksti:
+            'Angelmón kalatori ja käsityöläismarkkinat sijaitsevat parin kilometrin päässä keskustasta lahdenpoukamassa, jonne kalastajaveneet tuovat päivän saaliin joka aamu. Kujien varsilla myydään merilevää, simpukoita ja suurikokoisia juustokiekkoja, ja keittiöistä tuoksuu curanto - maakuopassa tai kattilassa haudutettu äyriäis-liha-perunapata, jota pidetään alueen tunnetuimpana ruokalajina. Torin nimi juontuu perimätiedon mukaan varhaisesta lääkäristä, jonka nimeä paikalliset ääntivät omalla tavallaan. Nykyään tori palvelee sekä asukkaita että matkailijoita, mutta yhä ennen kaikkea kalastajia ja heidän perheitään.',
+          tiedosto: 'Chile - Puerto Montt 34 - local food market (6983639835).jpg',
+          lyhyt: 'Juustokiekkoja pinossa Angelmón torin kujalla.',
+          selite:
+            'Kapea, katettu torikuja, jonka myyntipöydällä on kymmeniä keltaisia juustokiekkoja; kauppias seisoo asiakkaan kanssa kujan perällä.',
+          lahde: 'McKay Savage, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Risti saaren laella',
+          teksti:
+            'Kapean, vain muutaman sadan metrin levyisen salmen takana kohoaa Isla Tenglo, pieni saari jonka harjanteella seisoo valkoinen risti - kaupungin tunnetuimpia maamerkkejä, joka näkyy laajalle Reloncavín selälle. Saarella asuu enää harvoja kalastajaperheitä, sillä maaperä on niukkaa eikä sähköverkko yllä joka taloon. Vene kuljettaa matkan minuutissa, ja saarelaiset tunnetaan erityisesti curanto-perinteestään: samaa ruokaa kuin Angelmón torillakin, mutta täällä valmistettuna vanhalla tavalla kuumennettujen kivien päällä maakuopassa. Rannalla siintävät kaupungin kerrostalot muistuttavat, miten lähellä saari todellisuudessa on.',
+          tiedosto: 'Cruz de Isla Tenglo.JPG',
+          lyhyt: 'Valkoinen risti Isla Tenglon harjanteella, kaupunki edessä.',
+          selite:
+            'Metsäisen saaren laella kohoava valkoinen risti, ja edessä salmen toisella puolella Puerto Montin kerrostalo Chilen lippuineen.',
+          lahde: 'Rodolfo Ditzel Lacoa, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Ankkuri torilla',
+          teksti:
+            'Kapteeni Luis Alcázarin aukiolla lepää valtava, mustaksi maalattu laivan ankkuri korokkeella, jonka portaat kiertävät koko patsaan ympäri - muistomerkki kaupungin merenkulku- ja kalastusperinteelle. Puerto Montt on 1800-luvulta asti ollut Pohjois-Patagonian tärkein kauppasatama: sen kautta kulki puuta, villaa ja karjaa etelän harvaan asutuilta seuduilta, ja samaa reittiä siirtolaiset ja tavara kulkivat sisämaahan Llanquihuen järvelle asti. Aukion takana kohoava kukkula ja sen huipulla siintävä valkoinen risti kuuluvat Isla Tenglon maisemaan salmen toisella puolella. Ankkuri on suosittu tapaamispaikka ja yksi kaupungin tunnetuimmista veistoksista.',
+          tiedosto:
+            'Plazoleta capitán Luis Alcázar, Monumento Ancla, Puerto Montt - A74059020240105.jpg',
+          lyhyt: 'Musta laivan ankkuri korokkeella kaupungin torilla.',
+          selite:
+            'Suuri, mustaksi maalattu ankkuripatsas pyöreällä kivikorokkeella, taustalla mäki, jonka huipulla siintää Isla Tenglon valkoinen risti.',
+          lahde: 'Rjcastillo, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Rantabulevardi ja kasvava kaupunki',
+          teksti:
+            'Costanera-rantabulevardi kiertää lahden rantaa keskustan ohi, ja sen varrella kohoavat kaupungin korkeimmat tornitalot - merkki siitä, miten pieni siirtolaiskylä on kasvanut Los Lagosin alueen pääkaupungiksi. Vuoden 2017 väestönlaskennassa asukkaita oli 245 902, ja vuoteen 2024 mennessä luku oli noussut jo yli 277 000:een. Kasvu on ollut nopeinta 1980-luvun lopulta lähtien, kun lohenkasvatus ja Patagonian matkailu toivat kaupunkiin uutta työtä ja väkeä. El Tepualin lentokenttä yhdistää kaupungin muuhun Chileen, ja satamasta lähtevät lautat kuljettavat matkustajia edelleen Chiloén saaristoon ja etelän fjordeille.',
+          tiedosto: 'Costanera de Puerto Montt.jpg',
+          lyhyt: 'Rantabulevardi ja tornitaloja Puerto Montin merenrannassa.',
+          selite:
+            'Costanera-kadun varrella kohoavia korkeita asuin- ja liiketorneja, edessä rantakivikko ja Reloncavín selän sininen vesi.',
+          lahde: 'Manxuc, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Puerto Montt',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto:
+        'Kaksi jylhää tulivuorta, avomeren tapainen vuono ja tuhatvuotiaita puita - Puerto Montin ympäristö on yhtä aikaa uhkaavan kaunis ja poikkeuksellisen rikas, ja siitä on tullut myös yksi maailman suurimmista lohenkasvatusalueista.',
+      tehtava: {
+        kysymys:
+          'Kuinka monta vuotta Calbuco-tulivuori oli ollut purkautumatta ennen huhtikuun 2015 purkaustaan?',
+        vaihtoehdot: ['18 vuotta', '43 vuotta', '65 vuotta', '90 vuotta'],
+        oikea: 1,
+        fakta: 'Calbuco oli ollut hiljaa 43 vuotta, kunnes se purkautui uudelleen huhtikuussa 2015.',
+      },
+      nostot: [
+        {
+          otsikko: 'Osorno-tulivuori',
+          teksti:
+            'Llanquihuen järven yli kohoaa Osorno, 2652 metriä korkea ja lähes täydellisen symmetrinen jäätikköhuippuinen tulivuori, jota on verrattu Japanin Fuji-vuoreen. Osorno on purkautunut ainakin yksitoista kertaa vuosien 1575 ja 1869 välillä, ja viimeisin purkaus tapahtui juuri 1869 - vain neljä vuotta ennen kuin isoisä kulki samalla seudulla vuonna 1873. Luonnontutkija Charles Darwin näki vuonna 1835 Osornon purkautuvan Beagle-aluksen kannelta lähellä Ancudia ja pohti päiväkirjassaan, liittyvätkö kaukaiset tulivuoret toisiinsa maan alla. Yli sadan vuoden ajan Osorno on ollut hiljaa, ja nykyään sen rinteillä hiihdetään ja vaelletaan.',
+          tiedosto: 'Volcán Osorno y lago Llanquihue desde el sector Los Riscos.jpg',
+          lyhyt: 'Lumihuippuinen Osorno kohoaa Llanquihuen järven yllä.',
+          selite:
+            'Symmetrinen, kokonaan lumipeitteinen tulivuorenhuippu kohoaa suoraan järven takaa selkeällä säällä.',
+          lahde: 'Jorge Morales Piderit, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Osorno (volcano)',
+        },
+        {
+          otsikko: 'Calbuco herää',
+          teksti:
+            'Noin 70 kilometrin päässä kaupungista kohoava Calbuco oli ollut purkautumatta 43 vuotta, kunnes se huhtikuun 2015 lopulla syöksi taivaalle kilometrien korkuisen tuhkapilven. Kuvassa pilvi kohoaa suoraan Puerto Montin kattojen takaa - purkaus näkyi ja tuntui koko kaupungissa, vaikka tulivuori on lahden toisella puolella. 1890-luvun suuri purkaussarja tuhosi aikanaan saksalaissiirtokuntien peltoja Llanquihuen järven ympärillä, ja hallitus joutui auttamaan viljelijöitä uudelleen asettumisessa. Calbuco on yksi Etelä-Chilen aktiivisimmista tulivuorista, ja sen historiaan mahtuu yli kolmekymmentä purkausta jääkauden jälkeiseltä ajalta.',
+          tiedosto: 'Erupción Volcán Calbuco (17062565578).jpg',
+          lyhyt: 'Calbucon tuhkapilvi kohoaa Puerto Montin kattojen takaa.',
+          selite:
+            'Valtava vaaleanharmaa tuhkapilvi nousee pystysuoraan taivaalle kaupungin tornitalojen ja kattojen takaa iltavalossa.',
+          lahde: 'Carolina Barría Kemp, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Calbuco (volcano)',
+        },
+        {
+          otsikko: 'Reloncavín selkä',
+          teksti:
+            'Puerto Montt sijaitsee juuri siinä kohdassa, jossa Reloncavín selkä avautuu pohjoiseen - paikassa jota pidetään Chilen keskilaakson ja Tyynenmeren fjordivyöhykkeen rajana. Etelään avautuu Calbucon saaristo Tenglon, Maillénin ja Huarin saarineen, ja Carretera Austral, Patagonian pääväylä, kulkee selän itärantaa pitkin ennen kuin katkeaa lautalle. Vuonon vesi vaihtelee makean jokiveden ja suolaisen merenveden välillä, mikä tekee siitä ainutlaatuisen elinympäristön monille kaloille ja äyriäisille. Sään mukana selän pinta vaihtaa nopeasti väriään tyynen sinisestä myrskyn harmaaseen.',
+          tiedosto: 'Cruce Estuario de Reloncaví.jpg',
+          lyhyt: 'Vene ja auringonvalo Reloncavín selän tyynellä vedellä.',
+          selite:
+            'Vuonon tyyni vesi kimaltaa auringossa, ympärillä pilvien peittämät vuoret ja pieni vene keskellä selkää.',
+          lahde: 'Manxuc, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Reloncaví Sound',
+        },
+        {
+          otsikko: 'Lohta merestä',
+          teksti:
+            'Fjordien tyyni, kylmä vesi teki Los Lagosin alueesta 1980-luvun lopulta lähtien yhden maailman suurimmista lohenkasvatusalueista - kuvan kaltaiset pyöreät kasvatusaltaat kelluvat kymmenittäin lahdissa ja salmissa, taustalla lumihuippuinen tulivuori. Suurin osa hautomoista, kasvatusaltaista ja pakkaamoista sijaitsee Puerto Montin eteläpuolella, ja ala työllistää alueella kymmeniä tuhansia ihmisiä kalanviljelystä jalostukseen. Chilestä on tullut Norjan jälkeen maailman toiseksi suurin viljellyn lohen tuottaja, vaikka ala on saanut myös kritiikkiä vesistöjen kuormituksesta. Kalankasvatuksen rinnalla jatkuu yhä perinteinen rannikkokalastus.',
+          tiedosto: 'Cultivo de salmón.jpg',
+          lyhyt: 'Pyöreitä lohenkasvatusaltaita merellä, tulivuori taustalla.',
+          selite:
+            'Rivistö pyöreitä verkkoaltaita ja huoltolautta kelluvat merellä, taustalla lumihuippuinen tulivuori siintää selkeässä säässä.',
+          lahde: 'Jackripper11, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Aquaculture in Chile',
+        },
+        {
+          otsikko: 'Tuhatvuotiaat puut',
+          teksti:
+            'Puerto Montin kupeessa avautuva Alerce Andinon kansallispuisto suojelee alerce-puita eli Fitzroya cupressoides -lehtikuusia, jotka kasvavat hitaasti mutta elävät poikkeuksellisen pitkään - laji tunnetaan yhtenä maailman pitkäikäisimmistä, ja vanhimmaksi mitattu yksilö on yli 3600 vuotta vanha. Sen kestävää pärepuuta käytettiin vuosisatoja kattojen ja seinien materiaalina, ja siitä tuli aikanaan niin arvokasta, että sillä maksettiin kauppaa kuin rahalla. Liiallinen hakkuu ajoi lajin uhanalaiseksi, ja kaataminen kiellettiin Chilessä vuonna 1976 - puisto on yhä yksi harvoja paikkoja, joissa vanhat metsät ovat säilyneet koskemattomina.',
+          tiedosto: 'Alerce Tree in Alerce Andino National Park.jpg',
+          lyhyt: 'Vanha alerce-puu kurottautuu korkealle metsän kattoon.',
+          selite:
+            'Kuvakulma alhaalta ylös kohti korkean, suoran rungon latvaa, joka häviää muiden puiden lomaan kirkasta taivasta vasten.',
+          lahde: 'Joshua Stone, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Fitzroya',
+        },
+      ],
+    },
+  ],
 };
