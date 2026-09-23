@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2149, teksti: 'Savukeregressiot korjattu: pulu ja nimiölukko' },
   { v: 2148, teksti: 'Isoisan etusivukuvat: lahde-kentta taydennetty' },
   { v: 2147, teksti: 'Testitila Suoraan kartalle' },
   { v: 2146, teksti: 'NC/ND-lisenssit: ambienssikorit A ja B' },
