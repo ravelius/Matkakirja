@@ -62,6 +62,15 @@ namespace Matkakirja.Natiivi
         PalloKierto kierto;
         KaupunkiMerkit merkit;
         LehtiKuori lehti;
+        /// <summary>Natiivilehti (PeliNakymat.Lehti); kun asetettu, WKWebView-kuorta ei käytetä.</summary>
+        ILehtiNakyma lehtiNakyma;
+        /// <summary>Fokustehtävät ja vihreä aarrepiste (kokoelma fokusvirrat, Fokus.cs).</summary>
+        Fokusdata fokus = new Fokusdata();
+        /// <summary>
+        /// Natiivi-UI asettaa: onko kaupungilla kulttuurivisa (web KULTTUURIT[lauta][kaupunki].kysymys),
+        /// joka on yksi aarteen avaajista. Asettamaton = ei.
+        /// </summary>
+        public static Func<string, bool> KulttuurivisaTarjolla;
         IMatkaValinta dialogi;
         ITilarivi tilarivi;
         IKysymysNakyma kysymysNakyma;
@@ -105,7 +114,11 @@ namespace Matkakirja.Natiivi
         public MatkanTulos Viimeisin { get; private set; }
         public string ViimeViesti { get; private set; }
         public string ViimeVirhe { get; private set; }
-        public bool LehtiAuki => lehti != null && lehti.Auki;
+        public bool LehtiAuki => lehtiNakyma != null ? lehtiNakyma.Auki : lehti != null && lehti.Auki;
+        /// <summary>Onko jokin lehti käytössä (natiivilehti tai kuori).</summary>
+        bool LehtiOn => lehtiNakyma != null || lehti != null;
+        /// <summary>Lehden sivu tuli näkyviin (omistaja, aihe, sivu, laji): pulun ja luentojen reaktiot.</summary>
+        public event Action<string, string, int, string> LehtiSivuNakyi;
         /// <summary>Kaupunkilehden kuori (Natiivi-UI: Avautui-tapahtuma latauspeitteelle).</summary>
         public LehtiKuori Lehti => lehti;
         /// <summary>Kaupunkikortin kaupunki, kun kortti on auki; muuten null.</summary>
@@ -283,6 +296,7 @@ namespace Matkakirja.Natiivi
             if (Instanssi == this) Instanssi = null;
             if (kierto != null) kierto.KaupunkiNapautettu -= Napautettu;
             if (lehti != null) { lehti.Suljettu -= LehtiSuljettu; lehti.Viesti -= LehtiViesti; }
+            if (lehtiNakyma != null) lehtiNakyma.Suljettu -= LehtiSuljettu;
         }
 
         void Alusta(PalloKierto k, KaupunkiMerkit m, LehtiKuori l)
@@ -301,6 +315,7 @@ namespace Matkakirja.Natiivi
             kysymysNakyma = PeliNakymat.Kysymys?.Invoke(gameObject);
             if (kysymysNakyma == null) { var kd = gameObject.AddComponent<KysymysDialogi>(); kd.Rakenna(fontti); kysymysNakyma = kd; }
             kaupunkiKortti = PeliNakymat.KaupunkiKortti?.Invoke(gameObject);
+            lehtiNakyma = PeliNakymat.Lehti?.Invoke(gameObject);
             kysymysToiminnot = new KysymysToiminnot
             {
                 Vastaa = i => Vastaa(i),
@@ -316,10 +331,18 @@ namespace Matkakirja.Natiivi
             ((IKamera)kierto).KaupunkiNapautettu += Napautettu;
             // Heittonapin päältä alkava veto ei pyöritä palloa.
             SyoteLukko.LisaaPeitto(p => Kaytossa && dialogi.PeittaaPisteen(p));
-            // Lehti (WKWebView) peittää pallon: pallo piirtää harvemmin sen ajan (NakymaPeitetty).
-            if (lehti != null) SyoteLukko.LisaaNakymaPeitto(() => lehti != null && lehti.Auki);
-            ((ILehti)lehti).Suljettu += LehtiSuljettu;
-            lehti.Viesti += LehtiViesti;
+            // Lehti peittää pallon: pallo piirtää harvemmin sen ajan (NakymaPeitetty).
+            if (lehtiNakyma != null)
+            {
+                SyoteLukko.LisaaNakymaPeitto(() => lehtiNakyma.Auki);
+                lehtiNakyma.Suljettu += LehtiSuljettu;
+            }
+            else if (lehti != null)
+            {
+                SyoteLukko.LisaaNakymaPeitto(() => lehti != null && lehti.Auki);
+                ((ILehti)lehti).Suljettu += LehtiSuljettu;
+                lehti.Viesti += LehtiViesti;
+            }
 
             if (File.Exists(PoisPolku))
             {
@@ -503,6 +526,14 @@ namespace Matkakirja.Natiivi
             string elaintayt = null, julisteet = null;
             yield return HaeTiedosto("kokoelmat/elaintayt.json", false, true, t => elaintayt = t);
             yield return HaeTiedosto("kokoelmat/julisteet.json", false, true, t => julisteet = t);
+            string fokusvirrat = null;
+            yield return HaeTiedosto("kokoelmat/fokusvirrat.json", false, true, t => fokusvirrat = t);
+            try
+            {
+                fokus = Fokusdata.Lue(fokusvirrat);
+                if (KulttuurivisaTarjolla != null) fokus.Kulttuurivisa = KulttuurivisaTarjolla;
+            }
+            catch (Exception e) { Debug.LogWarning("MATKAKIRJA peli: fokusvirrat eivät jäsenny: " + e.Message); }
             try { kauppasisalto = Kauppasisalto.Lue(elaintayt, julisteet); }
             catch (Exception e) { Debug.LogWarning("MATKAKIRJA peli: julisteet tai eläintäyt eivät jäsenny: " + e.Message); }
             try
@@ -746,7 +777,7 @@ namespace Matkakirja.Natiivi
             var aloitus = lahtokaupunki != null && verkko.Kaupungit.ContainsKey(lahtokaupunki) ? lahtokaupunki
                 : verkko.Kaupungit.ContainsKey(AloitusKaupunki) ? AloitusKaupunki
                 : (verkko.KaupunkiLista.FirstOrDefault(k => k.Aloitus) ?? verkko.KaupunkiLista[0]).Id;
-            if (lehti != null && lehti.Auki) lehti.Sulje();
+            if (LehtiAuki) SuljeLehti();
             jatkettava = null;
             var rng = new Satunnainen(siemen ?? (long)(uint)DateTime.UtcNow.Ticks);
             matka = Laattamaarat != null
@@ -871,8 +902,6 @@ namespace Matkakirja.Natiivi
             bool kesken = Tila == SilmukanTila.Kartta && matka.Tila.Vaihe == Vaihe.Heitto && !matka.Tila.Pelaaja.Sijainti.Kaupungissa;
             if (kesken && Kaytossa)
                 dialogi.NaytaHeitto(Tavoite != null ? "Heitä noppaa → " + PeliApu.KaupunginNimi(verkko, Tavoite) : "Heitä noppaa", () => Heita());
-            else if (TutkiTarjolla && Kaytossa)
-                dialogi.NaytaHeitto("Tutki kaupunkia", () => Tutki());
             else
                 dialogi.PiilotaHeitto();
         }
@@ -927,11 +956,9 @@ namespace Matkakirja.Natiivi
             bool mannerlento = oma && kaupat != null && kaupat.MannerLennot().Count > 0;
             var t = new KaupunkiToiminnot
             {
-                LueLehti = lehti != null ? () => LueLehti(kaupunki) : (Action)null,
+                LueLehti = LehtiOn ? () => LueLehti(kaupunki) : (Action)null,
                 Liiku = oma ? null : () => { PiilotaKortti(); AvaaDialogi(kaupunki); },
                 LiikuTeksti = oma ? null : "Liiku tänne",
-                Tutki = oma && TutkiTarjolla ? () => { PiilotaKortti(); Tutki(); } : (Action)null,
-                TutkiTeksti = oma && TutkiTarjolla ? "Tutki kaupunkia" : null,
                 Mannerlento = mannerlento ? () => { PiilotaKortti(); AvaaMannerlennot(); } : (Action)null,
                 MannerlentoTeksti = mannerlento ? $"Mannerlento ({Vakiot.LentoHinta} {PeliApu.Valuutta})" : null,
                 Sulje = () => PiilotaKortti(),
@@ -958,7 +985,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Kaupunkilehti ilman matkaa (kortin "Lue kaupunkilehti"). Palauttaa virheen tai null.</summary>
         public string LueLehti(string kaupunki)
         {
-            if (lehti == null) return "lehteä ei ole";
+            if (!LehtiOn) return "lehteä ei ole";
             if (Tila != SilmukanTila.Kartta) return "silmukka on tilassa " + Tila;
             PiilotaKortti();
             dialogi.PiilotaHeitto();
@@ -1174,7 +1201,7 @@ namespace Matkakirja.Natiivi
 
         void SaavuLehteen(string kaupunki)
         {
-            if (kaupunki != null && lehti != null)
+            if (kaupunki != null && LehtiOn)
             {
                 Tila = SilmukanTila.Lehti;
                 AvaaLehti(kaupunki);
@@ -1210,7 +1237,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public string LueMaalehti(string iso3, string aihe = null)
         {
-            if (lehti == null) return "lehteä ei ole";
+            if (!LehtiOn) return "lehteä ei ole";
             if (matka == null) return "peli ei ole valmis";
             if (Tila != SilmukanTila.Kartta) return "silmukka on tilassa " + Tila;
             var s = matka.Tila.Pelaaja.Sijainti;
@@ -1226,6 +1253,12 @@ namespace Matkakirja.Natiivi
 
         void AvaaLehti(string kaupunki, string maa = null, string sivu = null)
         {
+            if (lehtiNakyma != null)
+            {
+                lehtiNakyma.Nayta(new LehtiAvaus { Maalehti = maa != null, Kaupunki = kaupunki, Maa = maa, Aihe = sivu },
+                    LehtiTilaNyt(kaupunki), TeeLehtiTeko);
+                return;
+            }
             string tila = matka == null ? null
                 : "{\"raha\":" + matka.Tila.Pelaaja.Raha.ToString(System.Globalization.CultureInfo.InvariantCulture)
                   + ",\"kaupat\":" + matka.Tila.Kaupat.Json() + "}";
@@ -1275,9 +1308,111 @@ namespace Matkakirja.Natiivi
         /// <summary>Sulkee lehden (testikomento 'sulje-lehti').</summary>
         public string SuljeLehti()
         {
-            if (lehti == null || !lehti.Auki) return "lehti ei ole auki";
-            lehti.Sulje();
+            if (!LehtiAuki) return "lehti ei ole auki";
+            if (lehtiNakyma != null) lehtiNakyma.Sulje(); else lehti.Sulje();
             return null;
+        }
+
+        // --- natiivilehti, tehtävänappi ja vihreä aarrepiste (B1, B3) -----------
+
+        /// <summary>Lehden näkymätila (web lehtikuoren tila + fokustehtävät). Tehtävänappi vain omassa kaupungissa.</summary>
+        LehtiTila LehtiTilaNyt(string kaupunki)
+        {
+            var t = new LehtiTila();
+            if (matka == null || kaupat == null) return t;
+            var p = matka.Tila.Pelaaja;
+            t.Raha = p.Raha;
+            t.Matkapaiva = matka.Tila.Paiva();
+            t.KulttuuriVastattu = k => kaupat.KulttuuriVastattu(k);
+            t.MinitehtavaVastattu = (k, a) => kaupat.MinitehtavaVastattu(k, a);
+            t.MinitehtavaRatkaistu = (k, a) => kaupat.MinitehtavaRatkaistu(k, a);
+            t.PullaVinkkiOstettu = k => kaupat.PullaVinkkiOstettu(k);
+            t.JulisteLaukussa = k => kaupat.JulisteLaukussa(k);
+            t.AarreAuki = k => fokus.AarreAuki(kaupat, k);
+            bool oma = p.Sijainti.Kaupungissa && p.Sijainti.Kaupunki == kaupunki && matka.Tila.Vaihe == Vaihe.Toiminta;
+            var nappi = oma ? KysymysApu.TehtavaNappi(kysely, kaupunki, kohtaamiset, pulmat) : null;
+            t.TehtavaNappi = nappi?.Teksti;
+            t.TehtavaNappiPois = nappi?.Pois ?? false;
+            return t;
+        }
+
+        /// <summary>Natiivilehden teko (ILehtiNakyma.Nayta:n teeTeko): tulos heti, tila päivittyy lehteen.</summary>
+        KauppaTulos TeeLehtiTeko(LehtiTeko t)
+        {
+            if (t == null) return KauppaTulos.Epaonnistui("teko puuttuu");
+            KauppaTulos tulos;
+            switch (t.Laji)
+            {
+                case LehtiTekoLaji.Kulttuurivastaus: tulos = KauppaTeko(k => k.Kulttuuri(t.Kaupunki, t.Oikein)); break;
+                case LehtiTekoLaji.Minitehtavavastaus:
+                    tulos = KauppaTeko(k => k.Minitehtava(t.Kaupunki, t.Aihe, t.Oikein, t.Palkkio > 0 ? t.Palkkio : KauppaVakiot.MinitehtavaPalkkio));
+                    break;
+                case LehtiTekoLaji.JulisteMyonto: tulos = KauppaTeko(k => k.MyonnaJuliste(t.Avain)); break;
+                case LehtiTekoLaji.PullaVinkki: tulos = KauppaTeko(k => k.PullaVinkki(t.Kaupunki)); break;
+                case LehtiTekoLaji.EtsiKatko:
+                {
+                    // Web etsiKatko: lehti kiinni ja kohtaaminen/kysymys alkaa (LehtiSuljettu näyttää sen).
+                    var virhe = EtsiKatko(t.Kaupunki);
+                    return virhe == null ? new KauppaTulos { Ok = true } : KauppaTulos.Epaonnistui(virhe);
+                }
+                case LehtiTekoLaji.AvaaMaalehti:
+                    maalehtiAuki = true;
+                    lehtiNakyma?.Nayta(new LehtiAvaus { Maalehti = true, Maa = t.Maa, Aihe = t.Aihe, Kaupunki = t.Kaupunki },
+                        LehtiTilaNyt(t.Kaupunki), TeeLehtiTeko);
+                    return new KauppaTulos { Ok = true };
+                case LehtiTekoLaji.SivuNakyi:
+                    try { LehtiSivuNakyi?.Invoke(t.Omistaja, t.Aihe, t.Sivu, t.SivunLaji); } catch (Exception e) { Debug.LogException(e); }
+                    return new KauppaTulos { Ok = true };
+                default: return KauppaTulos.Epaonnistui("tuntematon teko " + t.Laji);
+            }
+            if (lehtiNakyma != null && lehtiNakyma.Auki) lehtiNakyma.PaivitaTila(LehtiTilaNyt(t.Kaupunki));
+            return tulos;
+        }
+
+        /// <summary>
+        /// Web etsiKatko / avaaFokusKohtaaminen: kohtaaminen tai laattakysymys pelaajan kaupungissa (lehden
+        /// tehtävänappi, vihreä piste, laatan napautus). Kohtaamiskaupungissa muoto on visa, ellei pulma odota.
+        /// Lehden ollessa auki se suljetaan ja kysymys näkyy sulkeutumisen jälkeen. Palauttaa virheen tai null.
+        /// </summary>
+        public string EtsiKatko(string kaupunki = null)
+        {
+            if (matka == null || kysely == null) return "peli ei ole valmis";
+            var p = matka.Tila.Pelaaja;
+            if (!p.Sijainti.Kaupungissa || (kaupunki != null && p.Sijainti.Kaupunki != kaupunki)) return "pelaaja ei ole kaupungissa " + kaupunki;
+            if (Tila != SilmukanTila.Kartta && Tila != SilmukanTila.Lehti) return "silmukka on tilassa " + Tila;
+            if (matka.Tila.Vaihe == Vaihe.Heitto) matka.PeruKulkutapa();
+            if (matka.Tila.Vaihe != Vaihe.Toiminta) return "vaihe " + matka.Tila.Vaihe;
+            if (puhe != null && puhe.Soi) puhe.Pysayta();
+            kysymysLoyto = null;
+            kysymysLisat.Clear();
+            bool quiz = fokus.Kohtaaminen(p.Sijainti.Kaupunki) && pulmat?.Odottaa() == null;
+            var t = kysely.Tutki(false, quiz ? KysymysMuoto.Visa : (KysymysMuoto?)null);
+            if (!t.Ok) { Virhe(t.Virhe); return t.Virhe; }
+            Tallenna();
+            if (Tila == SilmukanTila.Lehti) { SuljeLehti(); return null; }   // LehtiSuljettu näyttää kysymyksen
+            if (AvoinTehtava != Tehtava.Ei) NaytaKysymys(); else PaivitaNakyma();
+            return null;
+        }
+
+        /// <summary>Nykyisen kaupungin vihreä aarrepiste (web fokusvirtaKohtaamispiste) tai null.</summary>
+        public Aarrepiste Aarrepiste() => matka != null && kaupat != null ? fokus.Piste(kaupat) : null;
+
+        /// <summary>Aarrepiste asteina (lat, lon) piirtoa varten (laudan Miller-piste → ReittiGeometria.Asteiksi).</summary>
+        public (double Lat, double Lon)? AarrepisteAsteina()
+        {
+            var a = Aarrepiste();
+            if (a == null) return null;
+            var d = ReittiGeometria.Asteiksi(a.X, a.Y);
+            return (d.x, d.y);
+        }
+
+        /// <summary>Vihreän pisteen napautus: auki → kohtaaminen/kysymys (EtsiKatko), lukittuna ohje. Virhe tai null.</summary>
+        public string AvaaAarrepiste()
+        {
+            var a = Aarrepiste();
+            if (a == null) return "aarrepistettä ei ole";
+            if (a.Lukittu) { Viesti("Aarteen jälki on vielä piilossa: " + Fokusdata.Lukkolappu + "."); return "lukittu"; }
+            return EtsiKatko(a.Kaupunki);
         }
 
         // --- kysymys (erä 4) ---------------------------------------------------
@@ -1614,7 +1749,9 @@ namespace Matkakirja.Natiivi
                 + ",\"virhe\":" + PeliApu.Json(puhe?.ViimeVirhe) + ",\"saapumispuheita\":" + luennat.Saapumispuheita + ",\"luentoja\":" + luennat.Luentoja + "}"
                 + ",\"kysymys\":" + KysymysApu.Json(KysymysTila, kysymysJaljella)
                 + ",\"laukku\":" + Natiivi.Laukku.Json(Laukku())
-                + ",\"aanet\":[" + string.Join(",", aaniLoki.Select(PeliApu.Json)) + "],\"lentoSoi\":" + (lentoSoi ? "true" : "false");
+                + ",\"aanet\":[" + string.Join(",", aaniLoki.Select(PeliApu.Json)) + "],\"lentoSoi\":" + (lentoSoi ? "true" : "false")
+                + ",\"aarrepiste\":" + (Aarrepiste() is Aarrepiste ap ? "{\"kaupunki\":" + PeliApu.Json(ap.Kaupunki) + ",\"lukittu\":" + (ap.Lukittu ? "true" : "false") + "}" : "null")
+                + ",\"tehtavaNappi\":" + PeliApu.Json(matka != null && matka.Tila.Pelaaja.Sijainti.Kaupungissa ? LehtiTilaNyt(matka.Tila.Pelaaja.Sijainti.Kaupunki).TehtavaNappi : null);
             return json.Substring(0, json.Length - 1) + lisa + "}";
         }
     }

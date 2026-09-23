@@ -106,6 +106,10 @@ namespace Matkakirja.Natiivi
                     var tapa = PeliApu.TapaTekstista(A(1));
                     return tapa == null ? "tuntematon tapa " + A(1) : ohjain.Valitse(tapa.Value);
                 }
+                case "etsi-katko":
+                    return ohjain.EtsiKatko(A(1));
+                case "aarrepiste":
+                    return ohjain.AvaaAarrepiste();
                 case "mannerlennot":
                     return ohjain.AvaaMannerlennot();
                 case "peruuta":

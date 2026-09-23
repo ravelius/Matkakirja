@@ -12,6 +12,7 @@
 // Sopimus kokonaisuudessaan: /Users/Shared/Claude/proto-3d/RAJAPINTA.md.
 using System;
 using System.Collections.Generic;
+using Matkakirja.Peli;
 using UnityEngine;
 
 namespace Matkakirja.Natiivi
@@ -73,7 +74,7 @@ namespace Matkakirja.Natiivi
         /// <summary>"Liiku tänne" → matkavalinta (muu kuin oma kaupunki).</summary>
         public Action Liiku;
         public string LiikuTeksti;
-        /// <summary>"Tutki kaupunkia" (oma kaupunki, tehtävä tarjolla).</summary>
+        /// <summary>POISTUMASSA (Fablen tarkastus A6): ei enää aseteta; tehtävään mennään lehden tehtävänapista ja vihreästä pisteestä.</summary>
         public Action Tutki;
         public string TutkiTeksti;
         /// <summary>
@@ -99,6 +100,72 @@ namespace Matkakirja.Natiivi
         bool Auki { get; }
     }
 
+    // --- natiivilehti (B1, sovittu Natiivi-UI:n kanssa 23.9.2026; korvaa WKWebView-kuoren) ---
+
+    /// <summary>Mikä lehti avataan: kaupunkilehti (Kaupunki) tai maalehti (Maa = ISO3), ja mistä aiheesta/sivulta.</summary>
+    public sealed class LehtiAvaus
+    {
+        public bool Maalehti;
+        public string Kaupunki;
+        public string Maa;
+        public string Aihe;
+        public int? Sivu;
+        /// <summary>Omistaja: kaupunki tai ISO3 (Avautui/Suljettu-tapahtumien tunnus).</summary>
+        public string Omistaja => Maalehti ? Maa : Kaupunki;
+    }
+
+    /// <summary>
+    /// Pelin tila lehdelle (web lehtikuoren tila + fokustehtävät). Kyselyt ovat funktioita, jotta
+    /// PaivitaTila ei kopioi kirjanpitoa. TehtavaNappi = lehden alanappi (web tehtavaNapinTila):
+    /// teksti tai null (ei nappia); TehtavaNappiPois = näkyy harmaana.
+    /// </summary>
+    public sealed class LehtiTila
+    {
+        public int Raha;
+        public int Matkapaiva;
+        public bool Fokusmoodi = true;
+        public Func<string, bool> KulttuuriVastattu = _ => false;
+        public Func<string, string, bool> MinitehtavaVastattu = (_, __) => false;
+        public Func<string, string, bool> MinitehtavaRatkaistu = (_, __) => false;
+        public Func<string, bool> PullaVinkkiOstettu = _ => false;
+        public Func<string, bool> JulisteLaukussa = _ => false;
+        /// <summary>Web aarreAuki: aarteen jälki on jo kartalla tai laatta käännetty (avaavasta kysymyksestä vain rahaa).</summary>
+        public Func<string, bool> AarreAuki = _ => false;
+        public string TehtavaNappi;
+        public bool TehtavaNappiPois;
+    }
+
+    public enum LehtiTekoLaji { Kulttuurivastaus, Minitehtavavastaus, JulisteMyonto, PullaVinkki, EtsiKatko, AvaaMaalehti, SivuNakyi }
+
+    /// <summary>
+    /// Lehden teko ohjaimelle (TeeTeko → KauppaTulos heti). Kentät lajin mukaan:
+    /// Kulttuurivastaus (Kaupunki, Oikein), Minitehtavavastaus (Kaupunki, Aihe, Oikein, Palkkio: 10 tai 50
+    /// fokus-tehtävä), JulisteMyonto (Avain), PullaVinkki (Kaupunki), EtsiKatko (Kaupunki: lehti sulkeutuu ja
+    /// kohtaaminen tai kysymys alkaa), AvaaMaalehti (Maa, Aihe), SivuNakyi (Omistaja, Aihe, Sivu, SivunLaji).
+    /// </summary>
+    public sealed class LehtiTeko
+    {
+        public LehtiTekoLaji Laji;
+        public string Kaupunki, Aihe, Avain, Maa, Omistaja, SivunLaji;
+        public bool Oikein;
+        public int Palkkio;
+        public int Sivu;
+    }
+
+    /// <summary>Natiivilehti (Natiivi-UI, UI Toolkit): sisältö paketista, pelin tila ohjaimelta.</summary>
+    public interface ILehtiNakyma
+    {
+        void Nayta(LehtiAvaus avaus, LehtiTila tila, Func<LehtiTeko, KauppaTulos> teeTeko);
+        /// <summary>Tila muuttui (raha, vastatut, tehtävänappi) lehden ollessa auki.</summary>
+        void PaivitaTila(LehtiTila tila);
+        void Sulje();
+        bool Auki { get; }
+        /// <summary>Omistaja (kaupunki tai ISO3).</summary>
+        event Action<string> Avautui;
+        /// <summary>Omistaja; kerran per avaus, myös Sulje-kutsusta.</summary>
+        event Action<string> Suljettu;
+    }
+
     /// <summary>
     /// Näkymätehdas. Kenttä null = UGUI-varanäkymä. Aseta ennen kohtauksen
     /// latausta (BeforeSceneLoad); PeliOhjain luo näkymät AfterSceneLoad-vaiheessa.
@@ -118,5 +185,7 @@ namespace Matkakirja.Natiivi
         public static Action<string, string, Action> Saapumistraileri;
         /// <summary>Asettamaton = ei korttia: napautus avaa matkavalinnan suoraan (erän 3 vuo).</summary>
         public static Func<GameObject, IKaupunkiKortti> KaupunkiKortti;
+        /// <summary>Natiivilehti. Asettamaton = WKWebView-kuori (LehtiKuori), kunnes se poistetaan (A4).</summary>
+        public static Func<GameObject, ILehtiNakyma> Lehti;
     }
 }

@@ -72,6 +72,7 @@ JSON-tiedostot. 3D:n `komento.txt` (esim. `kuva nimi`) toimii rinnalla.
 | `napauta kaupunki` | kuin sormi kaupungin merkillä (KaupunkiMerkit.ValitseKaupunki) |
 | `valitse bussi\|lento\|liftaus\|laiva` | matkavalinnan nappi |
 | `peruuta` | matkavalinnan Peruuta |
+| `etsi-katko [kaupunki]` / `aarrepiste` | lehden tehtävänappi (Etsi kätkö / Tapaa X; lehti auki → sulkeutuu ja kysymys alkaa) / vihreän aarrepisteen napautus (lukittuna ohje) |
 | `mannerlennot` | kortin "Mannerlento": matkavalinta mannerlennoille (vain kun mantereen aarre löytyi ja vaihe Toiminta) |
 | `matka kaupunki tapa` | valinta ilman dialogia (tapa bussi, lento, liftaus, laiva tai mannerlento) |
 | `heita` | "Heitä noppaa" (kesken reitin) |
@@ -87,7 +88,7 @@ JSON-tiedostot. 3D:n `komento.txt` (esim. `kuva nimi`) toimii rinnalla.
 | `jatka` | tuloksen Jatka-nappi: kysymys kiinni, vuoro päättyy |
 | `luento kaupunki\|intro\|lento\|saapuminen kaupunki` | soittaa luennan ehdoitta (tila-JSONin `puhe`: soi, url, aika, virhe) |
 | `puhe seis\|pois\|paalle` | pysäyttää puheen / kertoja pois tai päälle (Asetukset Kytkin.Kertoja) |
-| `tila [nimi]` | `peli-tila.json` / `peli-tila-nimi.json`: silmukka, vaihe, sijainti, raha, päivä, aika, tilarivi, dialogi ja vaihtoehdot, tavoite, lehtiAuki, viesti, virhe, viimeisin matka; erä 4: syoteEstetty, tutkiTarjolla, kysymys (laji, otsikko, kysymys, vaihtoehdot, piilotetut, vihje, sekunnit, jaljella, vastattu, valittu, oikea, oikein, aikaLoppui, loyto, viesti); laukku (sijainti, kukkaro, tietaja, tilastot, aarni, kateissa, tavarat, julisteet); aanet (12 viimeisintä PeliOhjain.Aani-tunnusta), lentoSoi |
+| `tila [nimi]` | `peli-tila.json` / `peli-tila-nimi.json`: silmukka, vaihe, sijainti, raha, päivä, aika, tilarivi, dialogi ja vaihtoehdot, tavoite, lehtiAuki, viesti, virhe, viimeisin matka; erä 4: syoteEstetty, tutkiTarjolla, kysymys (laji, otsikko, kysymys, vaihtoehdot, piilotetut, vihje, sekunnit, jaljella, vastattu, valittu, oikea, oikein, aikaLoppui, loyto, viesti); laukku (sijainti, kukkaro, tietaja, tilastot, aarni, kateissa, tavarat, julisteet); aanet (12 viimeisintä PeliOhjain.Aani-tunnusta), lentoSoi, aarrepiste (kaupunki, lukittu), tehtavaNappi |
 | `odota s` / `odota-tila tila[\|tila…] [max s]` | tauko / odota tilaa Kartta, Dialogi, Matkalla, Lehti, Kysymys, Traileri, Aloitus; useampi pystyviivalla (aikaraja kirjataan lokiin) |
 | `jatka-matka` / `uusi-matka [kaupunki] [siemen]` | aloitusnäkymän Jatka / Uusi matka lähtökaupungista (tila Aloitus, kun `PeliOhjain.AloitusNakyma` on päällä; `uusi-peli` toimii myös sieltä) |
 | `uusi-peli [siemen] [kaupunki]` | uusi peli (oletus Lontoo, PeliOhjain.AloitusKaupunki), toistettava noppa; käsikirjoitukset antavat `pariisi` |
