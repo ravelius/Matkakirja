@@ -464,9 +464,11 @@ pulun "Avaa juttu" (299) ja Livian avausesittely, linssin hampurilainen (317) ja
 oma DC-3-lentokone (CC0). Merge-pyynnössä: "Mitä uutta" ja "Peli päivittyi" (74–75), eläintäkyjen kuvaosoitteet.
 Ei tarvita: isoisän vanha valokuva → postikortti (rivi 213) — webissä pienoiskuva on piilotettu
 omistajan tilauksesta 23.8.2026 (css .fact-valokuva display none).
-Työn alla (agentit): sähketehtävä (rivi 220), pulun "Avaa juttu" ja Livian avausesittely, linssin
-hampurilainen ja varusteiden esikatselu (rivit 278, osio 17), matkakirjakortin muut polut ja
-"Katso kuva" (rivi 214; natiivi näytti korttia vain 50 fokusvirtakaupungissa 266:sta).
+Merge-pyynnössä myös: matkakirjakortin kaikki webin polut ja "Katso kuva" (rivi 214; ennen korttia
+näytettiin vain 50 fokusvirtakaupungissa 266:sta), kaupunkikortin nostohaitari, kelausrivit ja
+lisäkaupungin kortti (rivit 132, 133, 136; 135: webin kaupunkipopup ja turisti-infon välipopup eivät
+ole webissä käytössä → ei tarvita). Turisti-info-merkki (134): UI valmis, merkki Natiivisepältä.
+Datat Siirtosepältä: saapumistekstit (~214 kaupunkia), karttavaloista puuttuvat nostot.
 
 ## Ei webissä, odottaa omistajaa
 
