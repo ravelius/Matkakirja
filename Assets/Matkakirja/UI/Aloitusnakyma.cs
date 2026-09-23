@@ -305,7 +305,8 @@ namespace Matkakirja.Natiivi
             Auki = false;
             kirjoitus?.Pause();
             juuri.style.opacity = 0f;
-            juuri.schedule.Execute(() => { if (!Auki) juuri.style.display = DisplayStyle.None; }).StartingIn(900);
+            // Ei lennolla: Valitse → Piilota → LentoKirjoitus, ja tämä ajastin piilotti avaustekstin heti (TF4, Laitetestaaja).
+            juuri.schedule.Execute(() => { if (!Auki && !lennolla) juuri.style.display = DisplayStyle.None; }).StartingIn(900);
             SyoteLukko.Vapauta(this);
         }
 
@@ -426,6 +427,8 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public static bool LuentaPelilta;
         bool lennolla, lentoOhi = true;
+        /// <summary>Avausteksti on lennon kaistaleella (tai kirjoittumassa sinne).</summary>
+        public bool Lennolla => lennolla;
 
         /// <summary>
         /// Avausteksti naputetaan pallon päälle alareunan pergamenttikaistaleelle (arkki ilman verhoa ja
