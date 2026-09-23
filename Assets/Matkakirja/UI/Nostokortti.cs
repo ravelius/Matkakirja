@@ -19,7 +19,7 @@
 //   täkynosto  (web js/fokusnosto.js avaaNostonKortti) luokka, [lööppi: LISÄLEHTI, päiväys], otsikko,
 //              [ingressi], äänirivi (näyte, musiikki, Apple Music), kuvat, lunastus, valokuva
 //              "näin se löytyi", isoisän karttaliite (napautus → suurena), LUKIJAN KYSYMYS (+25,
-//              nostotehtävälaskuri), "Katso X kartalla" (kamera kohteeseen → kohdekortti), pulun
+//              nostotehtävälaskuri), "Katso X kartalla" (→ kohdekortti), pulun
 //              kysymykset (3); kaiutin "Kuuntele kortti"
 //   syvennys   (web js/syvennys.js avaaSyvennys) luokka, otsikko, kuva, tarina, minivisa (+50,
 //              "<kaupunki>"/"fokus:<täky>"); oikea vastaus myöntää kaupungin julisteen ja tuo napin
@@ -53,9 +53,6 @@ namespace Matkakirja.Natiivi
         int kuvaIndeksi, versio;
         /// <summary>Kortin napit nimellä testikomentoja varten (ui nosto … &lt;nappi&gt;, ui ihme, ui leikekirja).</summary>
         readonly Dictionary<string, Action> napit = new Dictionary<string, Action>();
-        /// <summary>"Katso X kartalla": kaari (asteina), jolla kamera näyttää kohteen ympäristön.</summary>
-        const double KohdeKaari = 8.0;
-        const float KohdeAjo = 1.4f;
 
         public bool Auki { get; private set; }
 
@@ -328,8 +325,7 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>
-        /// Web nostonKarttakohde + kohdenappi: kortti kiinni, kamera ajaa kohteeseen ja kohteen oma
-        /// kortti aukeaa perillä (web avaaFokuskohde, tietoruutu merkin vieressä).
+        /// Web nostonKarttakohde + kohdenappi: kortti kiinni ja kohteen oma kortti auki (web avaaFokuskohde).
         /// </summary>
         void Kohdenappi(VisualElement isa, Nosto n)
         {
@@ -341,21 +337,10 @@ namespace Matkakirja.Natiivi
 
         void KatsoKartalla(Nosto n)
         {
+            // Web: suljeNostonKortti + avaaFokuskohde — kamera ei liiku, kohteen kortti aukeaa heti.
             string valo = "kohde:" + n.KohdeId + (n.KohdeIso != null ? "@" + n.KohdeIso : "");
             Sulje();
-            int v = versio;
-            bool avattu = false;
-            void AvaaKohde()
-            {
-                if (avattu || v != versio) return;
-                avattu = true;
-                Avaa(valo);
-            }
-            var kierto = UnityEngine.Object.FindAnyObjectByType<PalloKierto>();
-            if (kierto == null) { AvaaKohde(); return; }
-            kierto.Aja(n.KohdeLat, n.KohdeLon, kierto.KorkeusKaarelle(KohdeKaari), KohdeAjo, () => UiKerros.PaaSaikeessa(AvaaKohde));
-            // Sormi ruudulla keskeyttää ajon ilman valmis-kutsua: kortti aukeaa silti.
-            kerros.schedule.Execute(AvaaKohde).StartingIn((long)(KohdeAjo * 1000) + 600);
+            Avaa(valo);
         }
 
         /// <summary>
