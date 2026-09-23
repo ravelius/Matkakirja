@@ -29031,8 +29031,9 @@ body.kerros-pois-ui .pallolauta-kartuutsi { display: none !important; }
  * PALJAS KARTTA (omistaja 23.9.2026 klo 09.20: "riisutaan kartalta kaikki
  * ylimääräiset elementit"; js/pallolauta/kerrokset.js PALJAAT_TILAT).
  * body.kerros-pois-dom: kaikki sivun elementit näkymättömiin paitsi
- * pallon kangas, kehysprofiilin overlay ja ratasvalikko (nappi ja
- * pudotus), jotta tilan voi vaihtaa takaisin, sekä pulu ja pieni liike,
+ * pallon kangas, kehysprofiilin overlay, hampurilainen ja ratasvalikko
+ * (nappi ja pudotus; kokeet ovat rattaan Mittaus-ryhmässä), jotta tilan
+ * voi vaihtaa takaisin, sekä pulu ja pieni liike,
  * joilla on omat Kerrokset-kytkimensä. `visibility` periytyy, joten
  * yksittäisten luokkien jahtaamista ei tarvita; animoivat ja omaa kerrosta
  * pitävät elementit lisäksi display: none, jottei niitä sommitella.
@@ -29045,6 +29046,11 @@ body.kerros-pois-dom #menu-btn,
 body.kerros-pois-dom #menu-btn *,
 body.kerros-pois-dom #paavalikko,
 body.kerros-pois-dom #paavalikko *,
+/* Kokeet ovat ratasvalikon Mittaus-ryhmässä (23.9.2026): ratas näkyviin. */
+body.kerros-pois-dom #kehittaja-valikko-btn,
+body.kerros-pois-dom #kehittaja-valikko-btn *,
+body.kerros-pois-dom #kehittaja-valikko,
+body.kerros-pois-dom #kehittaja-valikko *,
 /* Pulu ja pieni liike ovat omia kytkimiään (kerros-pois-pulu / -liike). */
 body.kerros-pois-dom .pallolauta-liike,
 body.kerros-pois-dom .pallolauta-liike *,

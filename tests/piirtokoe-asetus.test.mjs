@@ -373,7 +373,7 @@ test('paljas: kerroskytkin tallentuu vain paljaaseen tilaan ja kuuluu koetilaan 
 test('paljas: CSS jättää kankaan, overlayn ja valikon näkyviin', () => {
   const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
   assert.match(css, /body\.kerros-pois-dom \{ visibility: hidden; \}/);
-  for (const s of ['.pallo-kotelo canvas', '.profiilinaytto', '#menu-btn', '#paavalikko']) {
+  for (const s of ['.pallo-kotelo canvas', '.profiilinaytto', '#menu-btn', '#paavalikko', '#kehittaja-valikko-btn', '#kehittaja-valikko']) {
     assert.ok(css.includes(`body.kerros-pois-dom ${s}`), s);
   }
 });
