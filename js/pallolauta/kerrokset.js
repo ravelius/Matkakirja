@@ -1,4 +1,4 @@
-import { tallennetutKokeet } from '../piirtokoe-asetus.js';
+import { laajennaKokeet, tallennetutKokeet } from '../piirtokoe-asetus.js';
 /*
  * ABLAATIOTIKAS — `?kerrokset=<lista>` (omistajan menetelmä 21.9.2026,
  * Fable: sulavuusmittaus kerros kerrallaan; VAIN MITTAUKSEEN, ei
@@ -64,10 +64,42 @@ export function kerroksetHausta(haku) {
   return new Set(lista);
 }
 
-let muisti = { haku: null, joukko: null };
+/*
+ * PALJAS KARTTA (omistaja 23.9.2026 klo 09.20, js/piirtokoe-asetus.js):
+ * Syötekoe-valikon tilat 5–8 ovat tikkaan kerrosjoukkoja. `dom` ei ole
+ * tikkaan kerros (portaiden mittaukset eivät saa muuttua): se kertoo,
+ * jäävätkö kartan päällä olevat sivun elementit näkyviin
+ * (body.kerros-pois-dom, css/styles.css PALJAS KARTTA).
+ */
+export const PALJAAT_TILAT = Object.freeze({
+  /*
+   * `ui` pysyy kaikissa: sen pois kytkeminen piilottaa yläpalkin ja sen
+   * mukana valikkonapin, eikä omistaja pääsisi takaisin. Näkyvyys hoidetaan
+   * kerros-pois-dom-luokalla, joka jättää valikon esiin.
+   */
+  paljas: { kerrokset: ['laatat', 'ui'], dom: false },
+  paljasnimet: { kerrokset: ['laatat', 'ui', 'nimet'], dom: false },
+  paljassymbolit: { kerrokset: ['laatat', 'ui', 'nostot', 'nappula'], dom: false },
+  paljasdom: { kerrokset: ['laatat', 'ui', 'kohteet', 'pulu'], dom: true },
+});
+
+/** Voimassa oleva paljas tila (avain) tai null. `?kerrokset=` voittaa. */
+export function paljasTila(haku) {
+  const h = haku ?? (() => { try { return globalThis.location?.search ?? ''; } catch { return ''; } })();
+  if (kerroksetHausta(h)) return null;
+  const kokeet = piirtokokeet(haku);
+  return Object.keys(PALJAAT_TILAT).find((k) => kokeet.has(k)) ?? null;
+}
+
+let muisti = { avain: null, joukko: null };
 function joukkoNyt(haku) {
   const h = haku ?? (() => { try { return globalThis.location?.search ?? ''; } catch { return ''; } })();
-  if (muisti.haku !== h) muisti = { haku: h, joukko: kerroksetHausta(h) };
+  // Tallennettu koe vaihtuu vain latauksen kautta, joten muisti hakua kohti riittää.
+  const avain = `${haku === undefined ? 'm' : 'h'}|${h}`;
+  if (muisti.avain !== avain) {
+    const paljas = paljasTila(haku);
+    muisti = { avain, joukko: kerroksetHausta(h) ?? (paljas ? new Set(PALJAAT_TILAT[paljas].kerrokset) : null) };
+  }
   return muisti.joukko;
 }
 
@@ -95,7 +127,13 @@ export function ablaatioPaalla(haku) {
 export function kerrostenBodyLuokat(haku) {
   const joukko = joukkoNyt(haku);
   if (!joukko) return [];
-  return KERROKSET.filter((k) => !joukko.has(k)).map((k) => `kerros-pois-${k}`);
+  const luokat = KERROKSET.filter((k) => !joukko.has(k)).map((k) => `kerros-pois-${k}`);
+  const paljas = paljasTila(haku);
+  if (paljas) {
+    luokat.push('paljas-kartta');
+    if (!PALJAAT_TILAT[paljas].dom) luokat.push('kerros-pois-dom');
+  }
+  return luokat;
 }
 
 /*
@@ -126,7 +164,7 @@ export function piirtokokeet(haku) {
   const joukko = new Set(arvo.split(',').map((k) => k.trim()).filter(Boolean));
   // Ratasvalikon valinta on sama kuin lippu; ks. js/pallolaatat.js.
   if (haku === undefined) for (const lippu of tallennetutKokeet()) joukko.add(lippu);
-  return joukko;
+  return laajennaKokeet(joukko);
 }
 
 /** Lisää kokeiden tyylit dokumenttiin (kerran). Palauttaa lisätyt nimet. */

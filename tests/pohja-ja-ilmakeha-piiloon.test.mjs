@@ -39,7 +39,9 @@ test('ilmakehän vahti asennetaan rakennaPallossa ja kirjoittaa vain muutokset',
 
 test('pohja piiloon vain kun kerros peittää koko ruudun; koelippu pohjavanha', () => {
   const pallo = lue('../js/pallo.js');
-  assert.match(pallo, /const piiloon = pohjanPiilotus && kerrosKaytossa && kerros\.peittaaKokonaan\(\);/);
+  assert.match(pallo, /const piiloon = eiPohjaa \|\| \(pohjanPiilotus && kerrosKaytossa && kerros\.peittaaKokonaan\(\)\);/);
+  // Paljas kartta (`eipohja`, omistaja 23.9.2026): pohja aina piilossa.
+  assert.match(pallo, /const eiPohjaa = laattakerroksenKokeet\(\)\.has\('eipohja'\);/);
   assert.match(pallo, /moottori\.visible = !piiloon;/);
   assert.match(pallo, /laattakerroksenKokeet\(\)\.has\('pohjavanha'\)/);
   // Vapautetun kerroksen jälkeen pohja palaa (kutsu myös kun kerros ei ole käytössä).

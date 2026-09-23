@@ -147,7 +147,7 @@ import { luoMaapaneeli, paneelinLaatikko } from './maapaneeli.js';
 import { luoLinssit } from './linssit.js';
 import { glLuokat, glNimiotKaytossa, luoNimiokerrosGL, rasteroiTeksti } from '../pallonimiot-gl.js';
 import { luoGlNimiosovitin } from './glnimiot-sovitin.js';
-import { ablaatioPaalla, kerrosKaytossa, kerrostenBodyLuokat, asennaPiirtokokeet, piirtokokeet } from './kerrokset.js';
+import { paljasTila, ablaatioPaalla, kerrosKaytossa, kerrostenBodyLuokat, asennaPiirtokokeet, piirtokokeet } from './kerrokset.js';
 import { asennaKehysprofiili } from './kehysprofiili.js';
 import { luoProfiilinaytto, koetilanNimi } from './profiilinaytto.js';
 import { vedonSeuranta } from '../vedon-seuranta.js';
@@ -2126,6 +2126,8 @@ export async function avaaPallolauta(ui) {
       asetukset: () => ({ veto: vedonSeuranta(), tarkkuus: tarkkuusLiikkeessa() }),
       lepo: () => pallo.__piirto?.tila?.() ?? null,
       tila: () => ({ koe: koeAlussa, seuraava: koetilanNimi(piirtokokeet()), versio: sovellusversio }),
+      // Paljas kartta: 1 s:n jakso, DOM-kirjoitus minimiin mutta luvut tuoreina (omistaja 23.9.2026).
+      ...(paljasTila() ? { jaksoMs: 1000 } : {}),
     })
     : () => {};
   const vektorit = pallovektoritPaalla() && kerrosKaytossa('vektorit') ? luoPallovektorit({ pallo, kotelo, reitit }) : null;
