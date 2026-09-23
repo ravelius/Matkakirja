@@ -25,6 +25,7 @@ namespace Matkakirja
     ///   nipistys cx cy d0 d1 s    kahden sormen nipistys keskipisteen ympäri, sormien
     ///                             väli d0 → d1 (osuus näytön leveydestä)
     ///   kallista y0 y1 s          kahden sormen pystyveto (kallistus), y näytön osuutena
+    ///   palvelin                  laattapalvelimen osumat lokiin (offline / välimuisti / verkko)
     ///   valot <aihe>|kaikki|ei|tila     karttavalot (AiheValot), tila = laskurit lokiin
     ///   maat paalle|pois | maat korosta ISO3 [#täyttö #raja] | maat pois-korostus   Maatila (MaaKartta)
     ///   maasto paalle|pois        Karttasepän maasto (layer.json) tai ellipsoidi; valinta
@@ -133,6 +134,10 @@ namespace Matkakirja
                     break;
                 case "maasto":
                     Maasto(o[1] == "paalle");
+                    break;
+                case "palvelin":
+                    Debug.Log($"MATKAKIRJA laattapalvelin: {Laattapalvelin.Juuri} offline {Laattapalvelin.Offline}, " +
+                              $"välimuisti {Laattapalvelin.Valimuistista}, verkko {Laattapalvelin.Verkosta}, virheitä {Laattapalvelin.Virheita}");
                     break;
                 case "valot":
                 {
