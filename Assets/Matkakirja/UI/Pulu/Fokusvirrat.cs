@@ -96,7 +96,7 @@ namespace Matkakirja.Natiivi
         {
             if (string.IsNullOrEmpty(teksti)) return;
             var juuri = MiniJson.Objekti(MiniJson.Jasenna(teksti));
-            var alkiot = MiniJson.Taulukko(MiniJson.Kentta(juuri, "alkiot"));
+            var alkiot = Rakenne.Lista(MiniJson.Kentta(juuri, "alkiot"));
             if (alkiot == null) return;
             foreach (var a in alkiot)
             {
@@ -119,11 +119,11 @@ namespace Matkakirja.Natiivi
                 var p = MiniJson.Objekti(MiniJson.Kentta(d, "pollo"));
                 if (p != null)
                 {
-                    var kuvat = MiniJson.Taulukko(MiniJson.Kentta(p, "kuvat"));
+                    var kuvat = Rakenne.Lista(MiniJson.Kentta(p, "kuvat"));
                     if (kuvat != null) foreach (var k in kuvat) { var vk = Kuva(k); if (vk != null) v.PuluKuvat.Add(vk); }
                     var kommentit = MiniJson.Kentta(p, "kommentti");
                     if (kommentit is string yksi) v.PuluKommentit.Add(yksi);
-                    else if (MiniJson.Taulukko(kommentit) is List<object> lista)
+                    else if (Rakenne.Lista(kommentit) is List<object> lista)
                         foreach (var r in lista) if (r is string s) v.PuluKommentit.Add(s);
                 }
                 t[kaupunki] = v;

@@ -266,7 +266,7 @@ namespace Matkakirja.Natiivi
                     var syy = MiniJson.Teksti(json, "syy");
                     if (string.IsNullOrEmpty(t.Vastaus)) { t.Vastaus = EiTullut; t.Uusittava = true; }
                     else if (syy != null && syy != "kieltaytyi") t.Uusittava = true;
-                    if (MiniJson.Taulukko(MiniJson.Kentta(json, "jatkot")) is List<object> j)
+                    if (Rakenne.Lista(MiniJson.Kentta(json, "jatkot")) is List<object> j)
                     {
                         t.Jatkot = new List<string>();
                         foreach (var x in j) if (x is string s) t.Jatkot.Add(s);
@@ -380,7 +380,7 @@ namespace Matkakirja.Natiivi
             yield return r.SendWebRequest();
             odotus.RemoveFromHierarchy();
             if (poletti != ehdotusPoletti || r.result != UnityWebRequest.Result.Success) yield break; // ei kriittinen
-            var lista = MiniJson.Taulukko(MiniJson.Kentta(MiniJson.Objekti(Jasenna(r.downloadHandler.text)), "ehdotukset"));
+            var lista = Rakenne.Lista(MiniJson.Kentta(MiniJson.Objekti(Jasenna(r.downloadHandler.text)), "ehdotukset"));
             if (lista == null) yield break;
             var tekstit = new List<string>();
             foreach (var x in lista) if (x is string s && s.Length > 0) tekstit.Add(s);
