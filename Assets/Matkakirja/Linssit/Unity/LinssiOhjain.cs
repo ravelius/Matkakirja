@@ -18,6 +18,7 @@
 // ihmisen matkalle "esitys <jakso-id> | tauko | jatka | tila"; kaikille
 // "kamera <lat> <lon> <korkeus km>" (hyppy kuvakaappausta varten), "tila" ja
 // "kyllaisyys 0.8|1" (astronautin reliefi) ja "kehittaja 0|1" (kaikki linssit auki);
+// radiolle "radio <ISO3> | kaupunki <id> | taajuus <0–1> | stop | tila";
 // molemmat muistetaan PlayerPrefsissä.
 // Tulos lokiin ja Documents/linssi-loki.txt:hen.
 using System;
@@ -120,6 +121,7 @@ namespace Matkakirja.Natiivi
             StartCoroutine(LataaIhmisenMatka());
             StartCoroutine(LataaVesistot());
             StartCoroutine(LataaMaat());
+            StartCoroutine(LataaRadio());
             rekisteri.Vaihtui += l => Kirjaa("auki: " + (l?.Tiedot.Id ?? "ei mitään"));
             komentoPolku = Path.Combine(Application.persistentDataPath, "linssi-komento.txt");
             lokiPolku = Path.Combine(Application.persistentDataPath, "linssi-loki.txt");
@@ -444,6 +446,97 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        /// <summary>
+        /// Maailmanradio: asemat (kokoelmat/radiot.json, varalla moduuli RADIOT), kaupungit,
+        /// maat, viritysäänet ja LINSSI. Jäsennys taustasäikeessä.
+        /// </summary>
+        System.Collections.IEnumerator LataaRadio()
+        {
+            string radiot = null, moduuli = null, kaupungit = null, maat = null, aanet = null, linssi = null;
+            yield return LinssiSisalto.Hae("kokoelmat/radiot.json", t => radiot = t);
+            yield return LinssiSisalto.Hae("moduulit/js/packs/radiot.json", t => moduuli = t);
+            yield return LinssiSisalto.Hae("kokoelmat/kaupungit.json", t => kaupungit = t);
+            yield return LinssiSisalto.Hae("kokoelmat/maat.json", t => maat = t);
+            yield return LinssiSisalto.Hae("moduulit/js/packs/viritysaanet.json", t => aanet = t);
+            yield return LinssiSisalto.Hae("moduulit/js/linssit/radio.json", t => linssi = t);
+            if ((radiot == null && moduuli == null) || kaupungit == null) { Kirjaa("radio: asemat tai kaupungit puuttuvat"); yield break; }
+            object J(string t) => t == null ? null : Matkakirja.Peli.MiniJson.Jasenna(t);
+            var lataus = System.Threading.Tasks.Task.Run(() =>
+                Matkakirja.Linssit.Radio.RadioAineisto.Lue(J(radiot), J(moduuli), J(kaupungit), J(maat), J(aanet), J(linssi)));
+            while (!lataus.IsCompleted) yield return null;
+            if (lataus.IsFaulted) { Kirjaa("radio: " + lataus.Exception?.InnerException?.Message); yield break; }
+            var a = lataus.Result;
+            rekisteri.Lisaa(new RadioSovitin(this, a));
+            var luokat = a.Asemat.Values.GroupBy(x => x.Luokka ?? "tuntematon").Select(g => $"{g.Key} {g.Count()}");
+            Kirjaa($"radio: {a.Asemat.Count} asemaa ({string.Join(", ", luokat)}), {a.Viritysaanet.Count} viritysääntä");
+        }
+
+        /// <summary>
+        /// Maailmanradio Unityssä: lähetys ja viritin luodaan avatessa, kartta Natiivisepän
+        /// KaupunkiMerkit.NaytaVain/Korosta ja PalloKierto.KaupunkiNapautettu. Natiivi-UI lukee
+        /// Linssi.TilaMuuttui-tapahtumaa (kotelo, pistenäyttö) ja kartuscha Linssi.MaanAsema.
+        /// </summary>
+        public sealed class RadioSovitin : ILinssi
+        {
+            static readonly Color Soiva = new Color32(194, 69, 47, 255);   // web PUNAINEN #c2452f
+            readonly LinssiOhjain o;
+            readonly Matkakirja.Linssit.Radio.RadioAineisto aineisto;
+            Matkakirja.Linssit.Radio.RadioLinssi linssi;
+            RadioVirta virta;
+            RadioViritin viritin;
+            Kartta kartta;
+
+            public RadioSovitin(LinssiOhjain o, Matkakirja.Linssit.Radio.RadioAineisto a) { this.o = o; aineisto = a; }
+            public LinssiTiedot Tiedot => aineisto.Tiedot;
+            public bool Auki => linssi?.Auki ?? false;
+            /// <summary>Auki oleva radio (Natiivi-UI), muuten null.</summary>
+            public Matkakirja.Linssit.Radio.RadioLinssi Linssi => linssi;
+            /// <summary>Asemat ilman avaamista (kartuscha: maan asema).</summary>
+            public Matkakirja.Linssit.Radio.RadioAineisto Aineisto => aineisto;
+
+            public void Avaa(ILinssiYmparisto y)
+            {
+                virta = RadioVirta.Luo(o.transform);
+                viritin = RadioViritin.Luo(o.transform, aineisto.Viritysaanet);
+                kartta = new Kartta(o.kierto);
+                linssi = new Matkakirja.Linssit.Radio.RadioLinssi(aineisto, virta, viritin, kartta,
+                    Matkakirja.Linssit.Radio.RadioAineisto.Pistefontti);
+                linssi.TilaMuuttui += t => o.Kirjaa($"radio: {t.Vaihe}{(t.Viritys != Matkakirja.Linssit.Radio.ViritysVaihe.Ei ? "/" + t.Viritys : "")} " +
+                    $"{t.AsemaId ?? "-"} {t.KaupunkiNimi ?? ""} {t.Nimi ?? ""}{(t.Viesti != null ? " (" + t.Viesti + ")" : "")}{(t.Sivu != null ? " → " + t.Sivu : "")}");
+                linssi.Avaa(y);
+            }
+            public void Paivita() => linssi?.Paivita();
+            public void Sulje()
+            {
+                linssi?.Sulje();
+                linssi = null;
+                if (virta != null) Destroy(virta.gameObject);
+                if (viritin != null) Destroy(viritin.gameObject);
+                kartta?.Pura();
+                virta = null; viritin = null; kartta = null;
+            }
+
+            sealed class Kartta : Matkakirja.Linssit.Radio.IRadioKartta
+            {
+                readonly PalloKierto kierto;
+                public event Action<string> KaupunkiNapautettu;
+                public Kartta(PalloKierto k) { kierto = k; if (kierto != null) kierto.KaupunkiNapautettu += Valita; }
+                void Valita(string id) => KaupunkiNapautettu?.Invoke(id);
+                public void Pura() { if (kierto != null) kierto.KaupunkiNapautettu -= Valita; }
+                static KaupunkiMerkit Merkit => KarttaKerrokset.Instanssi?.merkit;
+                public void NaytaVain(ICollection<string> kaupungit) => Merkit?.NaytaVain(kaupungit);
+                public void Korosta(string kaupunki)
+                {
+                    var m = Merkit;
+                    if (m == null) return;
+                    if (edellinen != null && edellinen != kaupunki) m.Korosta(edellinen, null);
+                    if (kaupunki != null) m.Korosta(kaupunki, Soiva);
+                    edellinen = kaupunki;
+                }
+                string edellinen;
+            }
+        }
+
         public sealed class KeksinnotSovitin : ILinssi
         {
             readonly LinssiOhjain o;
@@ -619,6 +712,16 @@ namespace Matkakirja.Natiivi
                 {
                     AsetaAstronautinKyllaisyys((float)Luku(osat[1]));
                     Kirjaa($"astronautin kylläisyys {Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Kyllaisyys:F1}, sarja {Matkakirja.Linssit.Astronautti.AstronauttiLinssi.ReliefinSarja()}");
+                }
+                else if (osat[0] == "radio" && osat.Length > 1)
+                {
+                    var r = (rekisteri.Auki as RadioSovitin)?.Linssi;
+                    if (r == null) Kirjaa("radio: linssi ei ole auki");
+                    else if (osat[1] == "stop") r.Keskeyta();
+                    else if (osat[1] == "taajuus" && osat.Length > 2) r.Taajuus(Luku(osat[2]));
+                    else if (osat[1] == "tila") Kirjaa($"radio: {r.Tila.Vaihe} {r.Tila.AsemaId} {r.Tila.Rivi1} / {r.Tila.Rivi2}, asteikolla {r.Asteikko.Count}, näkyvissä {r.Nakyvat.Count}");
+                    else if (osat[1] == "kaupunki" && osat.Length > 2) r.SoitaKaupunki(osat[2]);
+                    else r.Viritä(osat[1].ToUpperInvariant());
                 }
                 else if (osat[0] == "tila")
                     Kirjaa($"tila: auki {rekisteri.Auki?.Tiedot.Id ?? "ei"}, kamera {Kamera}");
