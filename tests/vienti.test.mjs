@@ -275,3 +275,21 @@ test('manifestin tiivisteet vastaavat tiedostoja', () => {
   for (const t of manifest.lisatiedostot) assert.equal(sha(tiedostot.get(t.tiedosto)), t.sha256, t.tiedosto);
   assert.equal(sha(tiedostot.get('media.json')), manifest.media.sha256);
 });
+
+test('muutosloki-natiivi: rivien tarkistus ja järjestys', async () => {
+  const { tarkistaMuutosloki, jarjesta, lueMuutosloki } = await import('../tools/vienti/muutosloki-natiivi.mjs');
+  assert.deepEqual(tarkistaMuutosloki(lueMuutosloki().rivit), []);
+  const hyva = { versio: '1.0.0 (3)', paiva: '2026-09-24', teksti: 'Radiolinssi. Korjauksia.' };
+  assert.deepEqual(tarkistaMuutosloki([hyva]), []);
+  assert.equal(tarkistaMuutosloki([{ ...hyva, versio: '1.0.0' }]).length, 1);
+  assert.equal(tarkistaMuutosloki([{ ...hyva, paiva: '24.9.2026' }]).length, 1);
+  assert.equal(tarkistaMuutosloki([{ ...hyva, teksti: 'Yksi. Kaksi. Kolme. Neljä.' }]).length, 1);
+  assert.equal(tarkistaMuutosloki([hyva, hyva]).length, 1);
+  assert.equal(tarkistaMuutosloki([{ ...hyva, build: 3 }]).length, 1);
+  const j = jarjesta([
+    { versio: '0.1.0 (1)', paiva: '2026-09-23', teksti: 'a' },
+    { versio: '1.0.0 (10)', paiva: '2026-09-24', teksti: 'c' },
+    { versio: '1.0.0 (9)', paiva: '2026-09-24', teksti: 'b' },
+  ]);
+  assert.deepEqual(j.map((r) => r.versio), ['1.0.0 (10)', '1.0.0 (9)', '0.1.0 (1)']);
+});

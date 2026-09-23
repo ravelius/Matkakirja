@@ -45,6 +45,7 @@ import {
 import { createHash } from 'node:crypto';
 import { readdirSync, readFileSync } from 'node:fs';
 import { existsSync } from 'node:fs';
+import { lueMuutosloki, jarjesta as jarjestaMuutosloki } from './muutosloki-natiivi.mjs';
 
 const LAUTA = 'js/packs/maailmankartta.js';
 
@@ -934,13 +935,12 @@ export function kokoaKokoelmat(nimiavaruudet, { media = [] } = {}) {
       + 'Maat: AUT, CHE, DEU, ESP, FRA (myös merentakaiset alueet), GBR, ITA, POL.',
     {}, maakunnat.alueet);
   // Skeema 1.22 (Natiivi-UI:n "Mitä uutta"): käsin kirjoitetut rivit, uusin ensin.
-  const muutosloki = JSON.parse(readFileSync(new URL('./muutosloki-natiivi.json', import.meta.url), 'utf8'));
+  const muutosloki = lueMuutosloki();
   kokoelmat['muutosloki-natiivi'] = taulukko('tools/vienti/muutosloki-natiivi.json',
     'Natiivin "Mitä uutta" -rivit uusin ensin: { id = versio, versio (build), paiva (YYYY-MM-DD), teksti }. '
       + 'Julkaisija lisää rivin jokaisesta TestFlight-buildista. Sisältöpäivitysten rivi on osoittimessa '
       + '(uusin.json muutos { paiva, teksti }); näytä se listan kärjessä, jos sen päivä on uusin.',
-    {}, [...muutosloki.rivit].sort((a, b) => (a.paiva === b.paiva ? String(b.versio).localeCompare(String(a.versio)) : b.paiva.localeCompare(a.paiva)))
-      .map((r) => ({ id: String(r.versio), versio: String(r.versio), paiva: r.paiva, teksti: r.teksti })));
+    {}, jarjestaMuutosloki(muutosloki.rivit).map((r) => ({ id: r.versio, versio: r.versio, paiva: r.paiva, teksti: r.teksti })));
   // Skeema 1.24: karttavalot = webin pallon nostokerroksen joukko (tools/vienti/karttavalot.mjs).
   const valot = karttavaloKokoelma(ns, hae, kokoelmat.kaupungit.alkiot, taulukko);
   kokoelmat.karttavalot = valot.kokoelma;
