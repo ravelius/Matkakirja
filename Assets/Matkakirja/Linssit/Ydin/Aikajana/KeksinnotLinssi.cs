@@ -94,6 +94,14 @@ namespace Matkakirja.Linssit.Aikajana
             Ajo = new Pysakkiajo(aineisto.Pysakit, aineisto.Alku, aineisto.Alue, y, nakyma, luentaSoi);
             // Pimeässä ajettu avauskamera (web AVAUS_KAMERA_MS 700).
             Ajo.SovitaAlkuun(700);
+            // Web avaa: pysäkkiajolla musiikki alkaa heti esittelyn alla puolella tasolla
+            // (aloitaMusiikki(false)); Käynnistä nostaa täyteen (Pysakkiajo.Jatka).
+            Ajo.MusiikkiLaji = aineisto.Musiikki;
+            if (Ajo.MusiikkiLaji != null)
+            {
+                y.LinssiMusiikki(Ajo.MusiikkiLaji);
+                y.LinssiMusiikkiHimmennys(Pysakkiajo.TaukoHimmennys);
+            }
             // Kertoja lukee esittelyn laatikon auetessa (web avaa → ESITTELYN_RUNKO).
             if (luennat?.Esittely != null) Soita(luennat.Esittely);
         }
@@ -136,6 +144,7 @@ namespace Matkakirja.Linssit.Aikajana
             Auki = false;
             Ajo.Tauko();
             Hiljaa();
+            if (Ajo.MusiikkiLaji != null) y.LinssiMusiikki(null);
             y.Pelikerrokset(true);
             y.MusiikkiPitoon(false);
             y.AjaKamera(talteen, y.VahennettyLiike ? 0f : 0.9f);

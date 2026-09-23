@@ -162,10 +162,29 @@ namespace Matkakirja.Linssit.Aikajana
             AloitaJakso(0);
         }
 
+        /// <summary>Kertomuskaaren oma raita (web kaari.musiikki 'ihmisen-matka'); null = hiljainen.</summary>
+        public string MusiikkiLaji;
+        bool musiikkiAlkoi;
+
+        /// <summary>
+        /// Web sytytaValot / avaus ohi → ajo.aloitaMusiikki(true): musta ruutu on hiljainen, raita
+        /// nousee valojen syttyessä. Tauolla ja lopussa puoleen, jatkossa täyteen (saadaMusiikki).
+        /// </summary>
+        void MusiikkiSisaan()
+        {
+            if (MusiikkiLaji == null || musiikkiAlkoi) return;
+            musiikkiAlkoi = true;
+            y.LinssiMusiikki(MusiikkiLaji);
+            y.LinssiMusiikkiHimmennys(Kaynnissa ? 1 : Pysakkiajo.TaukoHimmennys);
+        }
+
+        void MusiikkiTaso(double taso) { if (musiikkiAlkoi) y.LinssiMusiikkiHimmennys(taso); }
+
         public void Tauko()
         {
             if (!Kaynnissa) return;
             Kaynnissa = false;
+            MusiikkiTaso(Pysakkiajo.TaukoHimmennys);
             aani?.Tauko();
             if (!double.IsNaN(avaruusAlku) && double.IsNaN(avaruusTauko) && AvaruuttaJaljella() > 0)
                 avaruusTauko = Nyt - avaruusAlku;
@@ -176,6 +195,7 @@ namespace Matkakirja.Linssit.Aikajana
             if (Kaynnissa || Paattynyt) return;
             Kaynnissa = true;
             alkuHetki = Nyt - Kulunut;
+            MusiikkiTaso(1);
             aani?.Jatka();
             if (!double.IsNaN(avaruusTauko))
             {
@@ -240,6 +260,7 @@ namespace Matkakirja.Linssit.Aikajana
         public void Pura()
         {
             Kaynnissa = false;
+            if (musiikkiAlkoi) { musiikkiAlkoi = false; y.LinssiMusiikki(null); }
             aani?.Lopeta();
         }
 
@@ -261,6 +282,7 @@ namespace Matkakirja.Linssit.Aikajana
                 KaynnistaAvaruusajo(null);
                 if (valotOdottaa) SytytaValot();
                 AvausOhi = true;
+                MusiikkiSisaan();
             }
             I = i;
             alkuHetki = Nyt - kulunut;
@@ -310,6 +332,8 @@ namespace Matkakirja.Linssit.Aikajana
             if (valotOdottaa) SytytaValot();
             AvausOhi = true;
             Kaynnissa = false;
+            MusiikkiSisaan();
+            MusiikkiTaso(Pysakkiajo.TaukoHimmennys);
             var viimeinen = Nykyinen;
             if (viimeinen?.Alue != null) AjaAlueeseen(viimeinen.Alue, y.VahennettyLiike ? 0 : Esitysmatikka.LopunAsetusMs);
             nakyma.Kuva(null);
@@ -402,6 +426,7 @@ namespace Matkakirja.Linssit.Aikajana
             kohdeajonTauko = Nyt + (y.VahennettyLiike ? 0 : Math.Min(Esitysmatikka.MarokonTaukoMs, vara));
             nakyma.Valot(Esitysmatikka.ValojenMs);
             nakyma.VirtojenPito(true);
+            MusiikkiSisaan();
         }
 
         /// <summary>Millisekunnit ensimmäisen kohdejakson alkuun (äänitteestä tai varakestoista).</summary>

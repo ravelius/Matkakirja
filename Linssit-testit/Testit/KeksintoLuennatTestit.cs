@@ -171,6 +171,32 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(l.OnKaynnistetty && l.Ajo.Kaynnissa, "käynnissä");
         }
 
+        [Testi] static void LinssimusiikkiKutenWebissa()
+        {
+            // web aikajana.js: avaus aloitaMusiikki(false) = puolet, Käynnistä täyteen, tauko puoleen,
+            // loppu puoleen, sulku feidaus pois.
+            var y = new ValeYmparisto();
+            var l = new KeksinnotLinssi(A(), new TyhjaNakyma());
+            l.Avaa(y);
+            Oleta.Sama("keksinnot", y.Raita);
+            Oleta.Sama(0.5, y.RaidanTaso, "esittelyn alla puolet");
+            l.Kaynnista();
+            Oleta.Sama(1.0, y.RaidanTaso, "ajossa täysi");
+            l.Ajo.Tauko();
+            Oleta.Sama(0.5, y.RaidanTaso, "tauolla puolet");
+            l.Ajo.Jatka();
+            for (int i = 0; i < 20 && !l.Ajo.Paattynyt; i++)
+            {
+                Aja(l, y, 120, () => l.Ajo.ValinaytosAuki);
+                if (l.Ajo.ValinaytosAuki) { Oleta.Sama(1.0, y.RaidanTaso, "välinäytös ei himmennä"); l.JatkaValinaytoksesta(); }
+            }
+            Oleta.Tosi(l.Ajo.Paattynyt, "kaari loppui");
+            Oleta.Sama(0.5, y.RaidanTaso, "lopussa puolet");
+            l.Sulje();
+            Oleta.Sama(null, y.Raita, "sulku: pois");
+            Oleta.Sama(1, y.Loki.Count(r => r == "raita keksinnot"), "raita aloitetaan kerran");
+        }
+
         [Testi] static void IlmanSoitintaKutenEnnen()
         {
             var y = new ValeYmparisto();

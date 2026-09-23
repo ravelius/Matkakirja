@@ -78,12 +78,23 @@ namespace Matkakirja.Linssit.Aikajana
             AjaPysakille(0, kestoMs);
         }
 
+        /// <summary>
+        /// Linssin oma raita (web aikajana.js AIKAJANA_TAUKO_HIMMENNYS): tauolla ja kaaren lopussa
+        /// musiikki jää soimaan puoleen tasoon, ei katkea.
+        /// </summary>
+        public const double TaukoHimmennys = 0.5;
+        /// <summary>Kaaren musiikkilaji (web kaari.musiikki); null = hiljainen kaari, ei kosketa soittimeen.</summary>
+        public string MusiikkiLaji;
+
+        void Saada(double taso) { if (MusiikkiLaji != null) y.LinssiMusiikkiHimmennys(taso); }
+
         public void Jatka()
         {
             if (Paattynyt) return;
             if (ValinaytosAuki) ValinaytosAuki = false;
             Kaynnissa = true;
             nakyma.Tauolla(false);
+            Saada(1);
         }
 
         public void Tauko()
@@ -91,6 +102,7 @@ namespace Matkakirja.Linssit.Aikajana
             if (!Kaynnissa) return;
             Kaynnissa = false;
             nakyma.Tauolla(true);
+            Saada(TaukoHimmennys);
         }
 
         /// <summary>Kutsutaan joka kehys; dtMs rajataan 200 ms:iin (web kehys).</summary>
@@ -166,6 +178,7 @@ namespace Matkakirja.Linssit.Aikajana
             var r = alue.Rajaus();
             double leveys = Math.Max(r.LeveysAst, r.KorkeusAst * y.Kuvasuhde) * 1.06;
             Aja(new LatLon(r.Lat, r.Lon), leveys, Kameramatikka.LoppuAjoMs);
+            Saada(TaukoHimmennys);
             nakyma.Loppu();
         }
 
