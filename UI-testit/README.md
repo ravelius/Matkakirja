@@ -129,6 +129,30 @@ Sivu vaihtuu napeista tai vaakapyyhkäisyllä; kuvan napautus avaa suurennoksen;
 `ui lehti <kaupunki> [sivu]`, `ui lehti sivu <n>`, `ui lehti kuva`, `ui maalehti <ISO> [aihe]`,
 `ui lehti sisallys` (maalehti).
 
+Pelissä lehti avautuu Pelikoodarin ILehtiNakyma-sopimuksella (`PeliNakymat.Lehti`): LehtiTila
+(raha, matkapäivä, vastatut, tehtävänappi) ja LehtiTeko (minitehtävä, juliste, Etsi kätkö,
+maalehti, sivu näkyi). Alapalkki kuten webissä: Poistu vasemmalla, Edellinen/Seuraava kahdella
+rivillä (suunta + sivun nimi), maalehdessä ☰; kaupunkilehdessä täysleveä tehtävänappi jokaisella
+sivulla ja viimeisellä sivulla "Maa-liite". Minitehtävän palkintojuliste (kaupungeilla, joilla
+on juliste): vedos laatikon kyljessä, oikea vastaus → VOITETTU ja "Lunasta juliste".
+`ui lehti tehtava | tehtava-pois` näyttää keksityn tehtävänapin, `ui lehti viimeinen` kääntää
+viimeiselle sivulle.
+
+```
+ui lehti venetsia
+odota 4
+ui lehti tehtava
+odota 1
+kuva lehti-tehtavanappi
+ui lehti viimeinen
+odota 3
+kuva lehti-liite-ja-tehtava
+ui lehti tehtava-pois
+odota 1
+kuva lehti-tehtava-pois
+ui sulje
+```
+
 ```
 ui aloita pariisi
 ui lehti firenze
