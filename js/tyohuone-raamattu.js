@@ -130,7 +130,9 @@ export const RAAMATTU = {
           + 'samoja laattoja. Natiivin ensimmäinen pelattava tavoite: matkustus pallolla ja '
           + 'kaupunkilehdet; sen jälkeen korkeusmalli, kallistus ja auringonvalo. Web on ilmainen, '
           + 'natiivi maksullinen tai 3D-lisäosat IAP:na; radiot vain webissä; lisensseissä '
-          + 'attribuutio riittää (ei juristia). Prototyyppi /Users/Shared/Claude/proto-3d.',
+          + 'attribuutio riittää (ei juristia). Peli on mahdollisimman pieni: sisältö, media, '
+          + 'laatat ja maasto striimataan ämpäristä, pelaaja voi ladata alueita offline-käyttöön '
+          + 'halutessaan (omistaja 23.9.). Prototyyppi /Users/Shared/Claude/proto-3d.',
         'CLAUDEN JA CHATGPT/CODEXIN AGENTTISÄÄNNÖT ERIKSEEN (omistaja 11.9.2026 '
           + 'tekstisession kautta, sanatarkasti: "Peliä kehitetään Claudella ja '
           + 'ChatGPT/Codexilla. Opus/Sonnet-rajoitus ja Fable-mallin agenttikäytön '
