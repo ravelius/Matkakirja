@@ -440,6 +440,7 @@ namespace Matkakirja.Natiivi
             juuri.style.opacity = 1f;
             juuri.pickingMode = PickingMode.Ignore;
             intro.AddToClassList("mk-aloitus__intro--lento");
+            intro.EnableInClassList("mk-aloitus__intro--vaaka", Screen.width > Screen.height);
             portti.style.display = DisplayStyle.None;
             valinta.style.display = DisplayStyle.None;
             valintaNappi.style.display = DisplayStyle.None;
@@ -468,6 +469,7 @@ namespace Matkakirja.Natiivi
                     juuri.style.display = DisplayStyle.None;
                     juuri.pickingMode = PickingMode.Position;
                     intro.RemoveFromClassList("mk-aloitus__intro--lento");
+                    intro.RemoveFromClassList("mk-aloitus__intro--vaaka");
                 }).StartingIn(900);
             }).StartingIn(viiveMs);
         }

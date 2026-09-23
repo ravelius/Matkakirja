@@ -1275,8 +1275,34 @@
 
 .mk-aloitus__intro--lento > .mk-aloitus__arkki {
     flex-grow: 0;
-    padding: 16px 16px 30px 16px;
-    opacity: 0.96;
+    max-height: 34%;
+    padding: 10px 16px 18px 16px;
+    opacity: 0.94;
+}
+
+/* Lennolla kaistale on matala, jotta kone ja savujana näkyvät (Natiivisepän huomio 24.9.):
+ * leveämpi palsta, pienempi teksti; vaakaruudulla vielä matalampi (--vaaka). */
+.mk-aloitus__intro--lento .mk-aloitus__palsta {
+    width: 92%;
+    max-width: 720px;
+}
+
+.mk-aloitus__intro--lento .mk-aloitus__paikka {
+    margin-bottom: 6px;
+    font-size: 13px;
+}
+
+.mk-aloitus__intro--lento .mk-aloitus__runko {
+    font-size: 16px;
+}
+
+.mk-aloitus__intro--vaaka > .mk-aloitus__arkki {
+    max-height: 30%;
+    padding: 6px 16px 10px 16px;
+}
+
+.mk-aloitus__intro--vaaka .mk-aloitus__runko {
+    font-size: 14px;
 }
 
 .mk-aloitus__palsta {
