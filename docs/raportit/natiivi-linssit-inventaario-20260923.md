@@ -26,10 +26,10 @@ Natiivisepän RAJAPINTA.md (proto-3d).*
 | 3 | Astronautin kamera | 7 tiedostoa (~10 600) | Reliefi, pilvikuori, tähdet, ISS, 64 kohdetta, avaruuden tausta ja ilmakehän hehku | Valmis, iPad OK. Kylläisyys 0,8/1,0 kytkimen takana (omistaja päättää TestFlightissa; vaimea sarja Karttasepältä) |
 | 4 | Keksinnöt | keksinnot.js + aikajana | Pysäkkiajo, valot, tummennus, pysäkkiluennat | Valmis, iPad OK. Puuttuu: reiän kulku hypyssä, tiedeliite (B18) |
 | 5 | Vesistöt | vesistot.js (700) | Topografia + joet, järvet (Tasavari), nimet | Valmis, iPad OK |
-| 6 | Vertailu | vertailu.js, js/vertailu.js, maakayrat.js | Maatila (Natiiviseppä), valinnat, laput, Vertaa | Valmis, iPad OK. Maakäyrät (B18): Natiivi-UI piirtää, data puuttuu (ks. alla) |
+| 6 | Vertailu | vertailu.js, js/vertailu.js, maakayrat.js | Maatila (Natiiviseppä), valinnat, laput, Vertaa | Valmis, iPad OK. Maakäyrät (B18): data paketissa v17+, geometria Ydin/Maat/Maakayrat (= web, 550 osaa), Natiivi-UI piirtää |
 | 7 | Maatiedot | maatiedot.js | Maatila, kaksivaiheinen valinta, maalehti | Valmis, iPad OK |
 | 8 | **Maailmanradio** | radio.js (2215), radiosoitin.js (1248), viritin.js (1209), pistenaytto.js (1430), packs/radiot.js (115 maata) | Karttatila: yksi kaupunki per maa play-nappina, viritys 2,6 s kolmessa vaiheessa, tasatehoinen ristihäivytys, aidot viritysäänet; omistajan hybridimalli (sallittu soitetaan, linkki → aseman sivu, kielletty → vara-äänite) | **Ydin ja Unity valmiit** (linssiseppa/radio f26f85b, testit webin kultaisia vastaan): RadioLinssi, AVPlayer-liitännäinen MatkakirjaRadio.mm, KaupunkiMerkit-kytkentä. Odottaa: Natiivisepän käännös, Pelikoodarin napautus- ja luentakoukut, Natiivi-UI:n kotelo ja kartuscha, Siirtosepän radiot.json luokkineen |
-| 9 | **Isoisän linssi 1873** | haara karttaseppa-isoisan-linssi (erä 1 kesken, tauolla 21.9.): isoisa-1873.js, valtiot-1873.js, rajat-1873.json.gz | Erä 1: rajat 1873 pallolle (viivat), nimet 1873 nimiöinä, nykyrajat piiloon. Erä 2: Horation reitti katkoviivana, retroasu (seepia, tumma muste). Valokuvat, äänet ja media myöhemmin | **Ei aloitettu.** Odottaa webin erää 1. Lisenssi päätetty (Fable 23.9.): GPL-3.0-rajat striimataan ämpäristä, ei binaariin; attribuutio ja lähdelinkki tekijätietoihin (Siirtoseppä kirjaa) |
+| 9 | **Isoisän linssi 1873** | haara karttaseppa-isoisan-linssi (erä 1, a65b2eef2): isoisa-1873.js, valtiot-1873.js, rajat-1873.json | Erä 1: rajat 1873 pallolle (viivat), nimet 1873 nimiöinä, nykyrajat piiloon. Erä 2: Horation reitti katkoviivana, retroasu (seepia, tumma muste). Valokuvat, äänet ja media myöhemmin | **Erä 1 valmis, iPad OK 23.9.** (proto isoisa-1873): 185 rajaa, 133 nimeä, GPL-aineisto ämpärissä matkakirja/linssit/isoisa-1873/20260921/ (LICENSE, lähteet). Nykyrajat pois rajattomalla pohjasarjalla (Fable 23.9.: webin rajanpiilotuksen vastine), kun Karttaseppä saa sen valmiiksi. **Erä 2 puuttuu: ei webissä, odottaa omistajaa** (Fable 23.9. klo 22.4x) |
 
 ## Omistus ja kynnykset (A7, C9)
 
@@ -72,3 +72,12 @@ kehittäjätila avaavat kaikki.
 | Kartuschan radio-merkki, radiosoittimen kotelo ja pistenäyttö | Natiivi-UI | Koukut lähetetty |
 | saturate(0.8) -reliefisarja | Karttaseppä | Valmis (pallo-k08), kytketty |
 | Kynnysten kytkin KOKEET-valikkoon | Natiivi-UI | Tulossa |
+
+## Päivitys 23.9.2026 yö (Linssiseppä)
+
+- Radio: ensimmäinen lähetys soi iPadilla (master 5dd794d, v18): RaBe, ByteFM, Radio Helsinki ja http-ATS-koe
+  lukittuvat ~2,6 s. Korjaus: AVPlayer automaticallyWaitsToMinimizeStalling oletukseen (854a44c). Tauko ja
+  webin näyttörivit tehty (943be95).
+- Astronautin reliefi: oletus webin 0,8, täysväri vain KOKEET-kytkimellä (Fable 23.9.; 558d0b0).
+- Sitova sääntö (omistaja 23.9. klo 22.3x): linsseihin ei mitään, mitä webissä ei ole, ilman Fablen/omistajan
+  lupaa. Puuttuvat tästä syystä: isoisä 1873 erä 2.
