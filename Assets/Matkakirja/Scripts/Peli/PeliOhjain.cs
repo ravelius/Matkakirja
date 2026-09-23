@@ -77,9 +77,7 @@ namespace Matkakirja.Natiivi
         Tapahtumadata tapahtumadata;
         /// <summary>Tapahtumakortit maailmankartalla (web: ei; Fablen linjaus ennen päälle kytkemistä).</summary>
         public static bool TapahtumakortitMaailmankartalla = false;
-        List<Lippumaa> lippumaat;
-        List<(string Kaupunki, string Tiedosto, string Lahde)> kuvakohteet;
-        readonly Dictionary<string, string> kuvaOsoitteet = new Dictionary<string, string>();
+        Kuvakokoelmat kuvakokoelmat;
         Kohtaamiset kohtaamiset;
         readonly Aarrenimet aarrenimet = new Aarrenimet();
         readonly HashSet<string> tervehdyksetNahty = new HashSet<string>();
@@ -482,30 +480,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Kokoelmat kuvakysymykset ja lippumaat (skeema 1.9): kuvapooli, liput ja valmiit osoitteet.</summary>
         void LueKuvatJaLiput(string kuvat, string liput)
         {
-            if (kuvat != null)
-            {
-                kuvakohteet = new List<(string, string, string)>();
-                var alkiot = MiniJson.Taulukko(MiniJson.Kentta(MiniJson.Objekti(MiniJson.Jasenna(kuvat)), "alkiot"));
-                foreach (var a in alkiot)
-                {
-                    var o = MiniJson.Objekti(a);
-                    string k = MiniJson.Teksti(o, "kaupunki"), f = MiniJson.Teksti(o, "tiedosto"), u = MiniJson.Teksti(o, "url");
-                    if (string.IsNullOrEmpty(k) || string.IsNullOrEmpty(f)) continue;
-                    kuvakohteet.Add((k, f, MiniJson.Teksti(o, "lahde")));
-                    if (!string.IsNullOrEmpty(u)) kuvaOsoitteet[f] = u;
-                }
-            }
-            if (liput != null)
-            {
-                lippumaat = Kysymysdata.LueLiput(liput);
-                foreach (var a in MiniJson.Taulukko(MiniJson.Kentta(MiniJson.Objekti(MiniJson.Jasenna(liput)), "alkiot")))
-                {
-                    var o = MiniJson.Objekti(a);
-                    string f = MiniJson.Teksti(o, "lippu"), u = MiniJson.Teksti(o, "url");
-                    if (!string.IsNullOrEmpty(f) && !string.IsNullOrEmpty(u)) kuvaOsoitteet[f] = u;
-                }
-            }
-            Debug.Log($"MATKAKIRJA peli: kuvakysymyksiä {kuvakohteet?.Count ?? 0}, lippumaita {lippumaat?.Count ?? 0}");
+            kuvakokoelmat = Kuvakokoelmat.Lue(kuvat, liput);
+            Debug.Log($"MATKAKIRJA peli: kuvakysymyksiä {kuvakokoelmat.Kuvat?.Count ?? 0}, lippumaita {kuvakokoelmat.Liput?.Count ?? 0}");
         }
 
         /// <summary>Saapumispuheet (v2:ssa) ja luennat (tuleva kokoelma); kumpikin valinnainen.</summary>
@@ -694,11 +670,7 @@ namespace Matkakirja.Natiivi
             if (tapahtumakortit != null) tapahtumakortit.Tapahtui += (laji, teksti) => kysymysLisat.Add(teksti);
             rosvo = kaksintaistelut != null ? new Kaksintaistelu(matka, kaksintaistelut) : null;
             kaupat = new Kaupat(matka);
-            // Kuva- ja lippumuoto vain, kun data on (muuten niiden paino siirtyy visalle kuten webissä).
-            if (kuvakohteet != null)
-                kysely.AsetaKuvat(kuvakohteet.Select(x => x.Kaupunki),
-                    kuvakohteet.GroupBy(x => x.Kaupunki).ToDictionary(g => g.Key, g => (g.First().Tiedosto, g.First().Lahde)));
-            if (lippumaat != null) kysely.Liput = lippumaat;
+            kuvakokoelmat?.Kytke(kysely);
             // Pysy-tapa tuli tarjolle vasta nyt: vuoron alun esivalinta puretaan kuten webissä.
             if (matka.ArvioiEsivalinta()) Tallenna();
             if (AvoinTehtava != Tehtava.Ei) { if (Tila == SilmukanTila.Kartta) NaytaKysymys(); }
@@ -1247,7 +1219,7 @@ namespace Matkakirja.Natiivi
                 case Tehtava.Kysymys:
                 {
                     var q = matka.Tila.Kysely.Kysymys;
-                    KysymysTila = KysymysApu.Nakyma(kysely, q, kysymysLoyto, kysymysLisat, viesti, kuvaOsoitteet, aarrenimet);
+                    KysymysTila = KysymysApu.Nakyma(kysely, q, kysymysLoyto, kysymysLisat, viesti, kuvakokoelmat?.Osoitteet, aarrenimet);
                     // Kaupungin tavallinen tervehdys kerran istunnossa (web ui.kohtaamisetNahty).
                     if (KysymysApu.LisaaKohtaaminen(KysymysTila, q, kohtaamiset, q.Kaupunki != null && tervehdyksetNahty.Contains(q.Kaupunki)))
                         tervehdyksetNahty.Add(q.Kaupunki);
