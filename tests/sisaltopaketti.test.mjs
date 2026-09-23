@@ -424,3 +424,23 @@ test('skeema 1.9: luentojen aikaleimat ja Livian puheen cuet', async () => {
   assert.match(ateena.eleet, /^https:\/\/media\.matkakirja\.app\/.+livia-ateena-3\.eleet\.json(\?.*)?$/);
   assert.ok(ateena.cuet.length >= 3 && ateena.cuet.every((c) => c.ankkuri && c.tarkoitus));
 });
+
+test('skeema 1.9: offline-manifesti maittain (laatat, maasto, media, tavut)', async () => {
+  const m = JSON.parse(tiedostot.get('manifest.json'));
+  const o = JSON.parse(tiedostot.get(m.offline.tiedosto));
+  assert.deepEqual(validoiNimella(o, 'offline.schema.json'), []);
+  const { MAAILMANKARTTA: P } = await import('../js/packs/maailmankartta.js');
+  const muodolliset = Object.entries(P.map.countryShapes).filter(([, v]) => v.renkaat?.length).map(([k]) => k);
+  assert.deepEqual(Object.keys(o.maat).sort(), muodolliset.sort(), 'jokainen muodollinen maa');
+  const fin = o.maat.FIN;
+  assert.equal(fin.iso2, 'FI');
+  assert.deepEqual(Object.keys(fin.rasteri), ['6', '7', '8']);
+  assert.ok(fin.laattoja.rasteri > 0 && fin.tavuja.yht === fin.tavuja.rasteri + fin.tavuja.maasto + fin.tavuja.media);
+  // Muodon leikkaus ei yliarvioi: laattoja vähemmän kuin bbox-välissä.
+  const bboxLaattoja = Object.values(o.maat.NOR.rasteri).reduce((a, [x0, y0, x1, y1]) => a + (x1 - x0 + 1) * (y1 - y0 + 1), 0);
+  assert.ok(o.maat.NOR.laattoja.rasteri < bboxLaattoja);
+  assert.ok(Object.keys(o.maat.FRA.maasto).length > 0, 'Ranskan syvä maasto available-alueella');
+  assert.deepEqual(Object.keys(o.globaali.rasteri), ['0', '1', '2', '3', '4', '5']);
+  assert.ok(o.maat.ITA.media.every((u) => /^https:\/\//.test(u)));
+  assert.ok(!JSON.stringify(o).includes('upload.wikimedia.org/wikipedia/commons/thumb'), 'ulkoiset kuva-URLit eivät ole pelin mediaa');
+});
