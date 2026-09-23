@@ -123,8 +123,15 @@ namespace Matkakirja.Natiivi
                 string k = null, m = null;
                 yield return Sisalto.HaeTeksti("kaupunkilehdet", t => k = t, valinnainen: true);
                 yield return Sisalto.HaeTeksti("maalehdet", t => m = t, valinnainen: true);
-                kaupungit = Taulu(k, "kaupunki");
-                maat = Taulu(m, "maa", maaSivut);
+                // Jäsennys taustasäikeessä: kaupunkilehdet on 3,7–11 Mt, ja pääsäikeessä se pysäytti
+                // ruudun (Natiivisepän mittaus: kaupunkikortin avaus 23.9.).
+                Dictionary<string, List<object>> ka = null, ma = null;
+                var ms = new Dictionary<string, List<string>>();
+                var tehtava = System.Threading.Tasks.Task.Run(() => { ka = Taulu(k, "kaupunki"); ma = Taulu(m, "maa", ms); });
+                while (!tehtava.IsCompleted) yield return null;
+                foreach (var kv in ms) maaSivut[kv.Key] = kv.Value;
+                kaupungit = ka ?? new Dictionary<string, List<object>>();
+                maat = ma ?? new Dictionary<string, List<object>>();
                 haussa = false;
             }
             bool kaupunkiValmis = false;
@@ -316,14 +323,33 @@ namespace Matkakirja.Natiivi
             return a;
         }
 
-        /// <summary>Kaupungin turistiopas (null = ei opasta). Lataa kaupunkilehdet tarvittaessa.</summary>
-        public static void HaeOpas(string kaupunki, Action<OpasArtikkeli> valmis) =>
-            UiKerros.Hae().StartCoroutine(Hae(LehtiLaji.Kaupunki, kaupunki, l =>
+        static readonly Dictionary<string, OpasArtikkeli> oppaat = new Dictionary<string, OpasArtikkeli>();
+
+        /// <summary>
+        /// Kaupungin turistiopas (null = ei opasta). Lataa kaupunkilehdet tarvittaessa. Jäsentää vain
+        /// kansiaiheen matkailijalle-kentän (ei koko lehteä) ja muistaa tuloksen: kaupunkikortti kysyy
+        /// tätä jokaisella avauksella.
+        /// </summary>
+        public static void HaeOpas(string kaupunki, Action<OpasArtikkeli> valmis)
+        {
+            if (kaupunki != null && oppaat.TryGetValue(kaupunki, out var muistettu)) { valmis(muistettu); return; }
+            UiKerros.Hae().StartCoroutine(HaeOpasReitti(kaupunki, valmis));
+        }
+
+        static IEnumerator HaeOpasReitti(string kaupunki, Action<OpasArtikkeli> valmis)
+        {
+            // Sama latausreitti kuin lehdellä, mutta ilman lehden rakentamista.
+            yield return Hae(LehtiLaji.Kaupunki, null, _ => { });
+            OpasArtikkeli o = null;
+            if (kaupunki != null && kaupungit != null && kaupungit.TryGetValue(kaupunki, out var data))
             {
-                var o = l?.Sivut.Select(x => x.Aihe?.Opas).FirstOrDefault(x => x != null);
+                var kansi = data.Select(Ob).FirstOrDefault(x => x != null && T(x, "id") == "kaupunki");
+                o = Opas(Ob(MiniJson.Kentta(Ob(MiniJson.Kentta(kansi, "matkailijalle")), "artikkeli")));
                 if (o != null) o.Kaupunki = kaupunki;
-                valmis(o);
-            }));
+            }
+            if (kaupunki != null) oppaat[kaupunki] = o;
+            valmis(o);
+        }
 
         static void Kuvat(object arvo, List<LehtiKuva> kohde)
         {

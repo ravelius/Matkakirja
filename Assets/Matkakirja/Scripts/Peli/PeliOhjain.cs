@@ -183,6 +183,12 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public event Action<int, string, int> RahaMuuttui;
 
+        /// <summary>
+        /// Matkan liike päättyi (kaupunki, johon saavuttiin, tai null reitin varrella) ennen lehteä tai
+        /// traileria: Natiivi-UI:n noppa häipyy (web: noppa jää näkyviin saapumiseen asti).
+        /// </summary>
+        public event Action<string> MatkaPerilla;
+
         // --- aloitusnäkymä ja virstanpylväät (Natiivi-UI) -------------------
 
         /// <summary>
@@ -1181,7 +1187,8 @@ namespace Matkakirja.Natiivi
             Tallenna();
 
             var osat = new List<string>();
-            if (t.Noppa.HasValue) osat.Add("Noppa " + t.Noppa.Value);
+            // Näkyvä noppa kertoo silmäluvun itse (web: ei tekstiä); ilman sitä tilariville.
+            if (t.Noppa.HasValue && (PeliNakymat.Noppa == null || !Kaytossa)) osat.Add("Noppa " + t.Noppa.Value);
             osat.AddRange(tapahtumat);
             if (t.Saapui != null) osat.Add("Saavuit: " + PeliApu.KaupunginNimi(verkko, t.Saapui));
             Viesti(string.Join(" · ", osat));
@@ -1206,6 +1213,35 @@ namespace Matkakirja.Natiivi
             if (lentoRepliikki != null) SoitaLuento(lentoRepliikki, 0.2f);
             else if (t.Saapui != null && PeliNakymat.Saapumistraileri == null) SoitaLuento(luennat.Saapumispuhe(t.Saapui), 0.3f);
             float kesto = PeliApu.AjoKesto(kulma);
+            // Näkyvä noppa (B16/P45, web animateDie): liike alkaa vasta, kun noppa on pysähtynyt.
+            if (t.Noppa.HasValue && PeliNakymat.Noppa != null && Kaytossa && a.HasValue)
+            {
+                int tunnus = ++noppaTunnus;
+                noppaLiike = () => AloitaLiike(t, a, b.Value, kesto);
+                noppaLoppuu = Time.unscaledTime + NopanVaraS;
+                try { PeliNakymat.Noppa(t.Noppa.Value, a.Value.Lat, a.Value.Lon, () => { if (tunnus == noppaTunnus) NoppaValmis(); }); }
+                catch (Exception e) { Debug.LogException(e); NoppaValmis(); }
+                return null;
+            }
+            AloitaLiike(t, a, b.Value, kesto);
+            return null;
+        }
+
+        const float NopanVaraS = 4f;   // valmis-kutsun varareitti, jos näkymä ei kutsu sitä
+        int noppaTunnus;
+        Action noppaLiike;
+        float noppaLoppuu;
+
+        void NoppaValmis()
+        {
+            var l = noppaLiike;
+            noppaLiike = null;
+            if (l != null && Tila == SilmukanTila.Matkalla) l();
+        }
+
+        /// <summary>Lentoääni, nappula tai kamera-ajo kohteeseen; perillä Perilla.</summary>
+        void AloitaLiike(MatkanTulos t, (double Lat, double Lon)? a, (double Lat, double Lon) b, float kesto)
+        {
             if (t.Tapa == Kulkutapa.Lento) Lentoaani(true, kesto);
             var nappula = Nappula;
             if (nappula != null && a.HasValue)
@@ -1213,16 +1249,15 @@ namespace Matkakirja.Natiivi
                 // Pelinappula (Natiiviseppä, B16): liftaus, laiva ja bussi ajavat reitin pisteet
                 // (autokyyti), lento lentää kaaren; kamera seuraa nappulaa (seuraaKamera).
                 if (t.Tapa == Kulkutapa.Lento)
-                    NappulaAjo(v => nappula.Lenna(a.Value.Lat, a.Value.Lon, b.Value.Lat, b.Value.Lon, kesto, v), kesto, Perilla);
+                    NappulaAjo(v => nappula.Lenna(a.Value.Lat, a.Value.Lon, b.Lat, b.Lon, kesto, v), kesto, Perilla);
                 else
                 {
                     var pisteet = PeliApu.Matkapisteet(verkko, t.Lahto, t.Polku, t.Kohde);
                     NappulaAjo(v => nappula.Aja(pisteet, kesto, v), kesto, Perilla);
                 }
-                return null;
+                return;
             }
-            Ajo(b.Value.Lat, b.Value.Lon, SaapumisKaari, kesto, Perilla);
-            return null;
+            Ajo(b.Lat, b.Lon, SaapumisKaari, kesto, Perilla);
         }
 
         /// <summary>Kamera-ajo perille: kaupungissa lehti, reitin varrella takaisin kartalle.</summary>
@@ -1232,6 +1267,8 @@ namespace Matkakirja.Natiivi
             Lentoaani(false);
             var kaupunki = saapumisKaupunki;
             saapumisKaupunki = null;
+            // Liike päättyi (kaupunki tai null = reitin varrella): noppa häipyy (web saapuessa).
+            try { MatkaPerilla?.Invoke(kaupunki); } catch (Exception e) { Debug.LogException(e); }
             if (kaupunki != null) Aanita(Aanitunnukset.Saapuminen);
             if (kaupunki != null && TraileriTarjolla(kaupunki))
             {
@@ -1819,6 +1856,7 @@ namespace Matkakirja.Natiivi
         void Update()
         {
             if (ajoValmis != null && Time.unscaledTime > ajoLoppuu) AjoValmis();
+            if (noppaLiike != null && Time.unscaledTime > noppaLoppuu) NoppaValmis();
             KytkeRekisteri();
             PaivitaReaktiot();
             PaivitaKysymysAika();
