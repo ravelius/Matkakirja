@@ -372,7 +372,7 @@ SVG:ksi ja verrattiin Chromiumissa webin `livianUusiPelikuva`-kuvaan 832 tilassa
 (”z Z”, ”…”, ”?”) ovat viivakorvikkeita ja ryhmän peittävyys kerrotaan osille
 (leijunnan siipien ristihäive), muuten kuvat vastaavat toisiaan.
 
-## Linssit (valitsin, peite, selite, astronautti, vertailu, aikajanat)
+## Linssit (valitsin, peite, selite, astronautti, vertailu, aikajanat, radio)
 
 `Assets/Matkakirja/UI/Linssit/` (tyylit `Resources/MatkakirjaUI/Linssit.uss`) kytkee
 Linssisepän koukut natiiviin UI:hin: `LinssiOhjain.PeiteKasittelija`,
@@ -405,6 +405,13 @@ UI-osat ilman linssiä esimerkkiaineistolla (`LinssiKomennot.cs`):
 - `ui linssi matka [aloitus|musta|valot|jakso i|kuva i|loppu]` — ihmisen matkan osat paketin
   kertomuksella ja löytöpaikoilla (`aloitus` = aloituskortti Ken Burns -taustalla; ilman auki
   olevaa linssiä Käynnistä vain sulkee kortin).
+- `ui linssi radio [hiljaa|viritys|soi|linkki|virhe|pois]` — maailmanradion kotelo alalaidassa
+  keksityllä `RadioTila`lla ilman linssiä (oletus `soi`: pitkä asemannimi vierii pistenäytössä).
+  `viritys` = siirtymä (nimirivi liukuu nykäyksittäin 1,25 s) ja sen jälkeen haku; `linkki` =
+  aseman nimi ja "Avaa aseman sivu"; `virhe` = punertava lasi, "EI KUULU". Asteikon nimen
+  napautus ajaa koko virityssarjan (siirtymä → haku → lukitus → soi); merkkivalo = tauko/jatka.
+  Oikea radio Linssisepän komennoilla (`linssi radio`, sitten `radio FIN`, `radio kaupunki <id>`,
+  `radio stop`); kuori seuraa `RadioLinssi.TilaMuuttui`a.
 - `ui linssi sulje` — auki oleva linssi kiinni; `ui linssi pois` — testinäkymät pois.
 
 Kuvasarja linssien tarkistukseen:
@@ -459,6 +466,24 @@ ui linssi matka kuva 2
 odota 3
 kuva linssi-matka-kuva
 ui linssi pois
+ui linssi radio soi
+odota 2
+kuva linssi-radio-soi
+ui linssi radio viritys
+odota 2
+kuva linssi-radio-viritys
+ui linssi radio linkki
+odota 1
+kuva linssi-radio-linkki
+ui linssi radio virhe
+odota 1
+kuva linssi-radio-virhe
+ui linssi radio hiljaa
+odota 1
+kuva linssi-radio-hiljaa
+ui linssi pois
+```
+
 Pulun keskustelu (vaatii, että pollo-worker sallii natiivin chatin; muuten näkyy selittävä rivi):
 
 ```

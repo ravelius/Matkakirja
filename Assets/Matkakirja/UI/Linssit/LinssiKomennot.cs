@@ -15,6 +15,8 @@
 //   ui linssi maa [ISO3]                  maatietojen maakyltti (oletus ITA; napautus avaa maalehden)
 //   ui linssi keksinnot [esittely|pysakki i|valinaytos [i]|loppu]
 //   ui linssi matka [aloitus|musta|valot|jakso i|kuva i|loppu]
+//   ui linssi radio [hiljaa|viritys|soi|linkki|virhe|pois]  maailmanradion kotelo keksityllä
+//                                         RadioTilalla (oletus soi; asteikon nimi ajaa virityssarjan)
 //   ui linssi sulje                       auki oleva linssi kiinni (Rekisteri.Sulje)
 //   ui linssi pois                        kaikki linssien testinäkymät pois
 using System.Collections.Generic;
@@ -28,7 +30,7 @@ namespace Matkakirja.Natiivi
 {
     public static class LinssiKomennot
     {
-        public const string Ohje = "ui linssi valitsin|peite|selite|astro|kuva|sumu|vertailu|maa|keksinnot|matka|sulje|pois";
+        public const string Ohje = "ui linssi valitsin|peite|selite|astro|kuva|sumu|vertailu|maa|keksinnot|matka|radio|sulje|pois";
 
         public static string Aja(UiNakymat ui, string loput)
         {
@@ -77,6 +79,8 @@ namespace Matkakirja.Natiivi
                     return l.Aikajana.TestaaKeksinnot(a1.Length > 0 ? a1 : "pysakki", Luku(a1 == "pysakki" || a1 == "valinaytos" ? a2 : a1, a1 == "valinaytos" ? -1 : 0));
                 case "matka":
                     return l.Aikajana.TestaaIhminen(a1.Length > 0 ? a1 : "jakso", Luku(a2, 0));
+                case "radio":
+                    return l.Radio.Testaa(a1);
                 case "sulje":
                     l.SuljeLinssi();
                     return null;
@@ -90,6 +94,7 @@ namespace Matkakirja.Natiivi
                         l.Aikajana.Pois();
                     }
                     l.Maat.TestiPois();
+                    l.Radio.TestiPois();
                     return null;
                 default:
                     return Ohje;
