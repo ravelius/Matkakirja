@@ -900,11 +900,37 @@ export const LAATTAKERROS_TUKI_SYVYYSSIIRTO = -4;
  */
 export const LAATTAKERROS_SYVYYSSIIRTO_HIENOMPI = -10;
 export const LAATTAKERROS_SYVYYSSIIRTO_KARKEAMPI = -6;
+/*
+ * KARKEAMMAT PORRASTETAAN TASOERON MUKAAN (23.9.2026, omistaja: "vaihdos
+ * ei ole nätti, siinä tulee aika häiritsevääkin värinää"; kaappaukset
+ * docs/raportit/kaappaukset/omistaja-20260923/meri-ropelo-1335-*.webp:
+ * tummia salmiakkeja säännöllisissä riveissä vain tasonvaihdon ajan).
+ *
+ * MITATTU SYY: tasolla z tuki z−2 on −4 ja nykyinen −8. Kun taso vaihtuu
+ * z → z+1, vanha z ja entinen tuki (tuki-lippu pois) ovat MOLEMMAT
+ * "karkeampia" ja saivat saman −6:n — niiden järjestyksen ratkaisi taas
+ * pelkkä jänteen painuma. Karkean verkon kärkien ympärillä karkea laatta
+ * on hienompaa lähempänä kameraa, joten z−2:n suurennettu sisältö pisti
+ * esiin salmiakkeina karkean verkon ruudukossa, kunnes uusi taso peitti
+ * sen (WebKit, Lioninlahti z7→z8, z8-lataus estettynä: 8 × z7 ja 16 × z5
+ * samalla −6:lla). Nyt jokainen askel karkeammaksi on 2 yksikköä
+ * taaempana: z−1 −6, z−2 −4, z−3 −2, sitä karkeammat −1 (yhä pohjan
+ * edessä). Tuki noudattaa samaa porrasta, mutta ei tule −4:ää lähemmäs.
+ */
+export const LAATTAKERROS_SYVYYSSIIRTO_PORRAS = 2;
 /** Laatan polygonOffsetUnits sen suhteesta valittuun tasoon. */
 export function laatanSyvyyssiirto(t, valittuZ) {
-  if (t?.tuki) return LAATTAKERROS_TUKI_SYVYYSSIIRTO;
-  if (!Number.isFinite(valittuZ) || !Number.isFinite(t?.z) || t.z === valittuZ) return LAATTAKERROS_SYVYYSSIIRTO;
-  return t.z > valittuZ ? LAATTAKERROS_SYVYYSSIIRTO_HIENOMPI : LAATTAKERROS_SYVYYSSIIRTO_KARKEAMPI;
+  const tasoton = !Number.isFinite(valittuZ) || !Number.isFinite(t?.z);
+  if (t?.tuki) {
+    if (tasoton || t.z >= valittuZ) return LAATTAKERROS_TUKI_SYVYYSSIIRTO;
+    return Math.max(LAATTAKERROS_TUKI_SYVYYSSIIRTO, karkeammanSiirto(valittuZ - t.z));
+  }
+  if (tasoton || t.z === valittuZ) return LAATTAKERROS_SYVYYSSIIRTO;
+  return t.z > valittuZ ? LAATTAKERROS_SYVYYSSIIRTO_HIENOMPI : karkeammanSiirto(valittuZ - t.z);
+}
+/** Karkeamman laatan siirto tasoerosta (1 → KARKEAMPI, sitten portaittain taemmas). */
+function karkeammanSiirto(ero) {
+  return Math.min(-1, LAATTAKERROS_SYVYYSSIIRTO_KARKEAMPI + (ero - 1) * LAATTAKERROS_SYVYYSSIIRTO_PORRAS);
 }
 /** Ennakon katto muistista: näin monta laattaa jätetään tavukatosta vapaaksi. */
 export const LAATTAKERROS_ENNAKKO_MUISTIVARA = 4;
