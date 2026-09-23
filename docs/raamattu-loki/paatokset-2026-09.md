@@ -1723,3 +1723,7 @@ Pelikoodari klo 09.5x, testit 4051/0, savuke 7/7. Omistajan kierros: tila 5 ilma
 ## OMISTAJAN AJATUS: WEB-VERSIO AINA ILMAINEN, APP STORE -VERSIO MAKSULLINEN TAI 3D-LISAOSAT LISAMAKSULLISIA (MARKKINOINTIMALLI); SELVITYS: MITEN KAKSI PELIA PYSYVAT SISALLOLTAAN AJAN TASALLA YHTA AIKAA → FABLEN KANTA: YKSI SISALTOLAHDE (VERSIOITU JSON-PAKETTI AMPARISSA, MOLEMMAT PELIT HAKEVAT KAYNNISTYESSA, SISALTOVERSIO ERILLAAN KOODIVERSIOSTA); TARKISTETTAVAT: CC-NC/SA-LISENSSIT MAKSULLISESSA KAYTOSSA, APURAHAN AVOIMUUSEHDOT, APPLEN 15–30 % JA IAP-PAKKO (23.9.2026 klo 10.08)
 
 Klo 10.05. Siirtosepän tehtävä laajennettu: yhteinen sisältölähde, julkaisuputki, skeeman versiointi, webin muutos vaiheittain, App Storen säännöt datan lataamisesta, IAP-rajaus, lisenssijakauma js/lahteet.js:stä.
+
+## SIIRTOSEPPA: SISALLON SIIRTOPUTKI VALMIS (PR #2890): tools/vienti/vie-sisalto.mjs VIE 391 MODUULIA / 544 EXPORTTIA HAVIOTTOMASTI JSONIKSI + 21 KOKOELMAA + media.json (20 391 VIITETTA) + JSON SCHEMA, DETERMINISTINEN < 1 s, TESTIT 6/6 (PALAUTUU TAVULLEEN); ARVIO: SISALTO MEKAANINEN (< 5 SESSIOTA), EI-MEKAANINEN UI 25–40 + PALLO 10–15 + LIVIA 12–20 + LOGIIKKA 3–5 + TALLENNUS ~1 = ~50–90 SESSIOTA (23.9.2026 klo 10.09)
+
+Avoimet: 33 Commons-kuvaa puuttuu ämpäristä (peilaa-media ei lue js/linssit → Julkaisija/Karttaseppä), 163 kaupungilta puuttuu tarkka lat/lon (laudalta laskettu, virhe ≤ 4,7° → Karttaseppä), 8 sisäistä taulua vaatii export-sanan (Pelikoodari). Raportti docs/raportit/sisallon-siirtoputki-20260923.md. Yhteinen sisältölähde -laajennus (10.05) seuraavaksi.
