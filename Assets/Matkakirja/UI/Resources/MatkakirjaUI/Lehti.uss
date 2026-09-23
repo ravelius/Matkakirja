@@ -1307,6 +1307,7 @@
 
 .mk-fokus__pullatehty {
     margin-top: 0;
+}
 
 /* Nähtävyysarkin ☰-valikko ja ‹ › -nuolet (web .nahtavyys-valikko-nappi, .nahtavyys-nuoli). */
 .mk-nahtavyys__valikkonappi {
