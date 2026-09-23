@@ -87,7 +87,9 @@ namespace Matkakirja.Natiivi
             peite.RegisterCallback<GeometryChangedEvent>(_ => Asettele());
         }
 
-        bool Levea => arkki.resolvedStyle.width >= Levearaja;
+        float arkkiLeveys;
+        // Asetettu leveys (resolvedStyle ei ole vielä valmis taiton hetkellä).
+        bool Levea => arkkiLeveys >= Levearaja;
 
         void Asettele()
         {
@@ -98,6 +100,7 @@ namespace Matkakirja.Natiivi
             float leveys = opas && w >= 760f ? Mathf.Min(w * 0.84f, 840f)
                 : puhelin ? Mathf.Min(w * 0.9f, 640f) : Mathf.Min(w * 0.92f, 860f);
             arkki.style.width = leveys;
+            arkkiLeveys = leveys;
             peite.style.paddingTop = r.y + 22f;
             peite.style.paddingBottom = r.w + (puhelin ? 10f : 22f);
             peite.style.justifyContent = puhelin ? Justify.FlexEnd : Justify.Center;
