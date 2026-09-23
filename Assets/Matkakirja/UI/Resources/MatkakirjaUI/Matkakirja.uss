@@ -1,0 +1,815 @@
+/* MATKAKIRJA UI (Natiivi-UI, 23.9.2026): verkkopelin css/styles.css:n ilme UI Toolkitille.
+ * Tokenit (:root, styles.css 72–239):
+ *   --bg #1d1610 · --panel #2a1f16 · --panel-2 #35271a · --line #4b3826
+ *   --ink-light #f3e6d0 · --muted #b39c7d · --accent #d9a13b · --accent-dark #8a6114
+ *   --kulta #eab84e (määrittelemätön webissä, varaväri on käytössä oleva arvo)
+ *   --map-ink #46331f · --map-ink-soft #8a6c46 · --mark #b03a2b
+ * Liukuvärit ja pergamentti tulevat koodista (Kuviot.cs), fontit järjestelmästä
+ * (Kirjasimet.cs); tämän tiedoston -unity-font on varafontti.
+ * Siirtymät: USS ei tue cubic-bezieriä, joten lähin nimetty käyrä.
+ */
+
+:root {
+    --bg: #1d1610;
+    --panel: #2a1f16;
+    --panel-2: #35271a;
+    --line: #4b3826;
+    --ink-light: #f3e6d0;
+    --muted: #b39c7d;
+    --accent: #d9a13b;
+    --accent-dark: #8a6114;
+    --kulta: #eab84e;
+    --map-ink: #46331f;
+    --map-ink-soft: #8a6c46;
+    --rivi-tausta: rgba(53, 39, 26, 0.55);
+}
+
+.mk-juuri {
+    -unity-font-definition: url("../../../Fontit/EBGaramond.ttf");
+    font-size: 15px;
+    color: var(--ink-light);
+}
+
+/* Oletusteeman .unity-label-reunat pois; sama tarkkuus, myöhempi sääntö voittaa,
+ * ja .mk-*-luokkien omat marginaalit ohittavat tämän. */
+.unity-label {
+    margin: 0;
+    padding: 0;
+}
+
+.mk-turva {
+    position: absolute;
+}
+
+/* --- ikonit ------------------------------------------------------------ */
+
+.mk-ikoni {
+    width: 19px;
+    height: 19px;
+    flex-shrink: 0;
+    --mk-ikoni-viiva: 1.7;
+}
+
+/* --- napit (button, button.primary, button.ghost) ----------------------- */
+
+.mk-nappi {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    margin: 0;
+    padding: 8px 13px;
+    border-width: 1px;
+    border-color: var(--line);
+    border-radius: 10px;
+    background-color: var(--panel-2);
+    color: var(--ink-light);
+    transition-property: background-color, border-color, color, -unity-background-image-tint-color;
+    transition-duration: 0.12s;
+}
+
+.mk-nappi:active {
+    background-color: #43331f;
+}
+
+.mk-nappi:disabled {
+    opacity: 0.45;
+}
+
+.mk-nappi > .mk-ikoni {
+    margin-right: 7px;
+}
+
+.mk-nappi__teksti {
+    font-size: 15px;
+    -unity-text-align: middle-left;
+    white-space: nowrap;
+}
+
+.mk-nappi--kulta {
+    background-color: var(--accent);
+    border-color: var(--accent-dark);
+    color: #2c1e07;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+}
+
+.mk-nappi--kulta:active {
+    background-color: var(--accent);
+    -unity-background-image-tint-color: rgb(232, 226, 214);
+}
+
+.mk-nappi--haamu {
+    background-color: rgba(0, 0, 0, 0);
+    min-height: 38px;
+    padding: 6px 12px;
+    border-color: rgba(70, 51, 31, 0.5);
+    color: var(--map-ink);
+}
+
+.mk-nappi--haamu:active {
+    background-color: rgba(70, 51, 31, 0.12);
+}
+
+/* --- yläpalkki (.topbar) ja tilapilleri (.turn-pill) --------------------- */
+
+.mk-ylapalkki {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    flex-direction: row;
+    align-items: center;
+    border-bottom-width: 1px;
+    border-color: var(--line);
+    background-color: #2f2217;
+}
+
+.mk-logo {
+    width: 104px;
+    height: 26px;
+    flex-shrink: 0;
+    -unity-background-scale-mode: scale-to-fit;
+    background-position-x: left;
+}
+
+.mk-pilleri {
+    flex-shrink: 1;
+    min-width: 0;
+    min-height: 30px;
+    height: 30px;
+    margin: 0 8px;
+    padding: 0 11px;
+    border-radius: 15px;
+    background-color: var(--panel);
+    border-color: var(--line);
+    font-size: 14.4px;
+}
+
+.mk-pilleri:active {
+    border-color: var(--kulta);
+    background-color: var(--panel);
+}
+
+.mk-pilleri > .mk-ikoni {
+    width: 17px;
+    height: 17px;
+    margin-right: 6px;
+    color: var(--ink-light);
+}
+
+.mk-pilleri__raha {
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.mk-pilleri__kello {
+    flex-shrink: 1;
+    min-width: 0;
+    margin-left: 6px;
+    color: var(--muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition-property: color;
+    transition-duration: 0.7s;
+    transition-timing-function: ease-out;
+}
+
+/* aika-valahdys: päivän vaihtuessa kello syttyy kultaiseksi ja himmenee takaisin */
+.mk-pilleri__kello.mk-valahdys {
+    color: var(--kulta);
+    transition-duration: 0.15s;
+}
+
+.mk-ylapalkki__napit {
+    flex-direction: row;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+.mk-ikoninappi {
+    width: 40px;
+    height: 40px;
+    min-height: 40px;
+    padding: 0;
+    margin-left: 7px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.12);
+}
+
+.mk-ikoninappi > .mk-ikoni {
+    margin-right: 0;
+    width: 18px;
+    height: 18px;
+}
+
+.mk-ikoninappi.mk-valittu {
+    border-color: var(--accent);
+    color: var(--accent);
+    background-color: var(--panel);
+}
+
+/* --- hetkellinen viesti (.event-toast) ----------------------------------- */
+
+.mk-ilmoitus {
+    position: absolute;
+    top: 16%;
+    left: 50%;
+    max-width: 340px;
+    padding: 12px 18px;
+    border-width: 1px;
+    border-color: var(--accent);
+    border-radius: 14px;
+    background-color: rgba(38, 27, 16, 0.96);
+    opacity: 0;
+    translate: -50% 14px;
+    transition-property: opacity, translate;
+    transition-duration: 0.28s;
+    transition-timing-function: ease-out-back;
+}
+
+.mk-ilmoitus.mk-auki {
+    opacity: 1;
+    translate: -50% 0;
+}
+
+.mk-ilmoitus__teksti {
+    font-size: 16.8px;
+    white-space: normal;
+    -unity-text-align: middle-center;
+    color: var(--ink-light);
+}
+
+/* --- himmennys ja pergamenttikortti (.dialog, .dialog-card) --------------- */
+
+.mk-himmennys {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.25s;
+}
+
+.mk-himmennys.mk-auki {
+    opacity: 1;
+}
+
+.mk-himmennys--tumma {
+    background-color: rgba(14, 9, 4, 0.72);
+}
+
+.mk-himmennys--kevyt {
+    background-color: rgba(14, 9, 4, 0.35);
+    justify-content: flex-end;
+}
+
+.mk-kortti-kehys {
+    width: 100%;
+    max-width: 420px;
+    translate: 0 16px;
+    rotate: -1.2deg;
+    scale: 0.97 0.97;
+    transition-property: translate, rotate, scale;
+    transition-duration: 0.32s;
+    transition-timing-function: ease-out-back;
+}
+
+.mk-himmennys.mk-auki .mk-kortti-kehys,
+.mk-kaupunkikortti-alue.mk-auki .mk-kortti-kehys {
+    translate: 0 0;
+    rotate: 0deg;
+    scale: 1 1;
+}
+
+.mk-kortti__varjo {
+    position: absolute;
+    left: 6px;
+    right: 6px;
+    top: 16px;
+    bottom: -12px;
+    background-color: rgba(0, 0, 0, 0.32);
+    border-top-left-radius: 26px;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 24px;
+    border-bottom-left-radius: 18px;
+}
+
+.mk-kortti__katkoviiva {
+    position: absolute;
+    left: -6px;
+    right: -6px;
+    top: -6px;
+    bottom: -6px;
+    rotate: -0.45deg;
+    border-color: rgba(70, 51, 31, 0.32);
+}
+
+.mk-kortti {
+    padding: 18px 21px 16px 21px;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.45);
+    border-top-left-radius: 22px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 14px;
+    background-color: #ecd8ae;
+    color: var(--map-ink);
+}
+
+.mk-kortti__otsikko {
+    font-size: 23px;
+    white-space: normal;
+    margin-bottom: 4px;
+}
+
+.mk-kortti__alaotsikko {
+    font-size: 14.5px;
+    color: var(--map-ink-soft);
+    white-space: normal;
+    margin-bottom: 14px;
+}
+
+.mk-kortti__teksti {
+    font-size: 16px;
+    white-space: normal;
+    margin-bottom: 12px;
+}
+
+.mk-kortti__napit {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 6px;
+}
+
+.mk-kortti__napit > .mk-nappi {
+    margin-left: 10px;
+}
+
+/* --- matkavalinta ------------------------------------------------------- */
+
+.mk-matkavalinta__rivit {
+    flex-direction: column;
+}
+
+.mk-valintarivi {
+    justify-content: flex-start;
+    min-height: 58px;
+    margin-bottom: 8px;
+    padding: 8px 14px 8px 12px;
+}
+
+.mk-valintarivi > .mk-ikoni {
+    width: 26px;
+    height: 26px;
+    margin-right: 13px;
+    color: var(--accent);
+}
+
+.mk-valintarivi__tekstit {
+    flex-direction: column;
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+
+.mk-valintarivi__nimi {
+    font-size: 17px;
+    color: var(--ink-light);
+}
+
+.mk-valintarivi__selite {
+    font-size: 12.5px;
+    color: var(--muted);
+    white-space: normal;
+    margin-top: 2px;
+}
+
+.mk-toimintonappi {
+    position: absolute;
+    left: 50%;
+    translate: -50% 0;
+    min-width: 230px;
+    height: 52px;
+    padding: 0 22px;
+    border-radius: 12px;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.2s;
+}
+
+.mk-toimintonappi.mk-auki {
+    opacity: 1;
+}
+
+.mk-toimintonappi > .mk-ikoni {
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+    color: #2c1e07;
+}
+
+.mk-toimintonappi .mk-nappi__teksti {
+    font-size: 18px;
+}
+
+/* --- pudotuspaneelit (.paavalikko, .kehittaja-valikko) ------------------ */
+
+.mk-sulkija {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.mk-pudotus {
+    position: absolute;
+    width: 300px;
+    max-width: 88%;
+    padding: 8px 12px 10px 12px;
+    background-color: var(--panel);
+    border-width: 1px;
+    border-color: var(--line);
+    border-radius: 10px;
+    opacity: 0;
+    translate: 0 -6px;
+    transition-property: opacity, translate;
+    transition-duration: 0.18s;
+    transition-timing-function: ease-out;
+}
+
+.mk-pudotus.mk-auki {
+    opacity: 1;
+    translate: 0 0;
+}
+
+.mk-paavalikko {
+    width: 320px;
+}
+
+.mk-pudotus__vieritys {
+    flex-shrink: 1;
+}
+
+.mk-pudotus__otsikko {
+    font-size: 11.5px;
+    letter-spacing: 2.4px;
+    color: var(--accent);
+    -unity-text-align: middle-center;
+    -unity-font-style: bold;
+    margin: 8px 0 9px 0;
+}
+
+.mk-kytkinrivi {
+    justify-content: flex-start;
+    min-height: 44px;
+    margin-bottom: 7px;
+    padding: 0 12px;
+    border-width: 1.2px;
+    border-radius: 8px;
+    background-color: var(--rivi-tausta);
+    color: rgba(230, 214, 184, 0.62);
+}
+
+.mk-kytkinrivi > .mk-ikoni {
+    margin-right: 12px;
+    opacity: 0.7;
+}
+
+.mk-kytkinrivi.mk-valittu {
+    background-color: var(--panel-2);
+    border-color: var(--accent-dark);
+    color: var(--accent);
+}
+
+.mk-kytkinrivi.mk-valittu > .mk-ikoni {
+    opacity: 1;
+}
+
+.mk-kytkinrivi__nimi {
+    flex-grow: 1;
+    font-size: 13.5px;
+    letter-spacing: 0.8px;
+}
+
+.mk-kytkinrivi__tila {
+    font-size: 11.5px;
+    letter-spacing: 1.5px;
+    opacity: 0.8;
+}
+
+.mk-pudotus__erotin {
+    height: 1px;
+    margin: 8px 0 12px 0;
+    background-color: var(--line);
+}
+
+.mk-komentorivi {
+    min-height: 44px;
+    margin-bottom: 7px;
+    border-width: 1.2px;
+    border-radius: 8px;
+    border-color: var(--accent-dark);
+    background-color: var(--rivi-tausta);
+    color: var(--accent);
+}
+
+.mk-komentorivi:active {
+    background-color: var(--panel-2);
+    color: var(--ink-light);
+}
+
+.mk-komentorivi .mk-nappi__teksti {
+    font-size: 14.5px;
+    letter-spacing: 0.6px;
+    -unity-text-align: middle-center;
+}
+
+.mk-pudotus__pohjarivi {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 4px;
+}
+
+.mk-pudotus__versio {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+/* --- äänentasot (liukusäätimet) ------------------------------------------- */
+
+.mk-saadinrivi {
+    flex-direction: row;
+    align-items: center;
+    min-height: 38px;
+    padding: 0 2px;
+}
+
+.mk-saadinrivi__nimi {
+    width: 118px;
+    flex-shrink: 0;
+    font-size: 13.5px;
+    color: var(--ink-light);
+}
+
+.mk-saadinrivi__arvo {
+    width: 48px;
+    flex-shrink: 0;
+    font-size: 13px;
+    color: var(--kulta);
+    -unity-text-align: middle-right;
+}
+
+.mk-saadin {
+    flex-grow: 1;
+    flex-shrink: 1;
+    height: 30px;
+    margin: 0 4px;
+}
+
+.mk-saadin .unity-base-slider__input {
+    height: 30px;
+}
+
+.mk-saadin #unity-drag-container {
+    height: 30px;
+}
+
+.mk-saadin #unity-tracker {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 5px;
+    margin-top: -2.5px;
+    border-width: 0;
+    border-radius: 3px;
+    background-color: var(--line);
+}
+
+.mk-saadin .unity-base-slider__fill {
+    background-color: var(--kulta);
+    border-radius: 3px;
+}
+
+.mk-saadin #unity-dragger {
+    position: absolute;
+    top: 50%;
+    width: 18px;
+    height: 18px;
+    margin-top: -9px;
+    border-width: 0;
+    border-radius: 9px;
+    background-color: var(--kulta);
+}
+
+.mk-saadin #unity-dragger-border {
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* --- offline-lataus ------------------------------------------------------ */
+
+.mk-offline {
+    margin-top: 10px;
+    padding-top: 4px;
+    border-top-width: 1px;
+    border-color: var(--line);
+}
+
+.mk-offline__selite {
+    font-size: 11.5px;
+    color: var(--muted);
+    white-space: normal;
+    -unity-text-align: middle-center;
+    margin-bottom: 8px;
+}
+
+.mk-offline-rivi {
+    flex-direction: row;
+    align-items: center;
+    min-height: 50px;
+    margin-bottom: 6px;
+    padding: 6px 8px 6px 12px;
+    border-width: 1.2px;
+    border-radius: 8px;
+    border-color: var(--line);
+    background-color: var(--rivi-tausta);
+}
+
+.mk-offline-rivi.mk-valittu {
+    border-color: var(--accent-dark);
+}
+
+.mk-offline-rivi.mk-virhe {
+    border-color: #d9705f;
+}
+
+.mk-offline-rivi__tiedot {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.mk-offline-rivi__nimi {
+    font-size: 14px;
+    color: var(--ink-light);
+}
+
+.mk-offline-rivi__tieto {
+    font-size: 11.5px;
+    color: var(--muted);
+    white-space: normal;
+    margin-top: 1px;
+}
+
+.mk-edistyminen {
+    height: 4px;
+    margin-top: 5px;
+    border-radius: 2px;
+    background-color: var(--line);
+    overflow: hidden;
+}
+
+.mk-edistyminen__taytto {
+    height: 100%;
+    width: 0;
+    background-color: var(--kulta);
+}
+
+.mk-pikkunappi {
+    min-height: 32px;
+    padding: 4px 10px;
+    margin-left: 8px;
+    border-color: var(--accent-dark);
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--accent);
+}
+
+.mk-pikkunappi .mk-nappi__teksti {
+    font-size: 12.5px;
+}
+
+.mk-offline__vapaa {
+    font-size: 11.5px;
+    color: var(--muted);
+    -unity-text-align: middle-right;
+    margin-top: 4px;
+}
+
+/* --- kaupunkikortti (kaupunkiliuska + lehden masto) ---------------------- */
+
+.mk-kaupunkikortti-alue {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: flex-end;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.22s;
+}
+
+.mk-kaupunkikortti-alue.mk-auki {
+    opacity: 1;
+}
+
+.mk-kaupunkikortti {
+    max-height: 62%;
+}
+
+.mk-kaupunkikortti > .mk-kortti {
+    flex-shrink: 1;
+    padding: 14px 18px 14px 18px;
+}
+
+.mk-kaupunkikortti__vieritys {
+    flex-shrink: 1;
+}
+
+.mk-masto {
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.mk-masto__ylarivi {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 16px;
+}
+
+.mk-masto__lippu {
+    height: 15px;
+    width: 22px;
+    margin-right: 7px;
+    border-width: 0.5px;
+    border-color: rgba(70, 51, 31, 0.35);
+    -unity-background-scale-mode: stretch-to-fill;
+}
+
+.mk-masto__maa {
+    font-size: 10.5px;
+    letter-spacing: 3.2px;
+    color: rgba(70, 51, 31, 0.7);
+}
+
+.mk-masto__nimio {
+    font-size: 30px;
+    letter-spacing: 3px;
+    -unity-text-align: middle-center;
+    white-space: normal;
+    color: var(--map-ink);
+    margin-top: 2px;
+}
+
+.mk-masto__viiva {
+    height: 1px;
+    width: 72%;
+    margin-top: 6px;
+    background-color: rgba(70, 51, 31, 0.45);
+}
+
+.mk-kansikuva {
+    margin-bottom: 10px;
+}
+
+.mk-kansikuva__kuva {
+    height: 168px;
+    border-radius: 6px;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.3);
+    -unity-background-scale-mode: scale-and-crop;
+    background-color: rgba(70, 51, 31, 0.08);
+}
+
+.mk-kansikuva__teksti {
+    font-size: 13px;
+    white-space: normal;
+    color: var(--map-ink-soft);
+    margin-top: 5px;
+}
+
+.mk-kansikuva__lahde {
+    font-size: 9.5px;
+    white-space: normal;
+    color: rgba(70, 51, 31, 0.55);
+    margin-top: 2px;
+}
+
+.mk-kaupunkikortti__johdanto {
+    font-size: 15.5px;
+    white-space: normal;
+    margin-bottom: 12px;
+}
+
+.mk-kaupunkikortti__rivit {
+    flex-direction: column;
+}

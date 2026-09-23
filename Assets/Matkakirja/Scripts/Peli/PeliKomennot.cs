@@ -13,11 +13,16 @@
 //   matka kaupunki tapa       napauta + valitse yhdellä rivillä (ilman dialogia)
 //   heita                     "Heitä noppaa" (matka kesken reitillä, kohti tavoitetta)
 //   sulje-lehti               sulkee kaupunkilehden kuin pelaaja
+//   kortti kaupunki           kaupunkikortti (vain jos Natiivi-UI on asettanut PeliNakymat.KaupunkiKortti)
+//   liiku kaupunki            kortin "Liiku tänne" → matkavalinta (ilman korttia kuten napauta)
+//   lue-lehti kaupunki        kaupunkilehti ilman matkaa (kortin "Lue kaupunkilehti")
 //   tutki [vaikea]            "Tutki kaupunkia" -nappi: kysymys auki (tila Kysymys)
 //   vastaa i | vastaa oikea   valitsee vaihtoehdon i (0..) tai oikean
 //   vastaa vaara              valitsee ensimmäisen näkyvän väärän vaihtoehdon
 //   vihje | puolita           vihje (40 £) tai 50:50 (80 £)
 //   jatka                     tuloksen Jatka-nappi: kysymys kiinni, vuoro päättyy
+//   luento kaupunki|intro|lento|saapuminen kaupunki   soittaa luennan (kerran-säännöistä välittämättä)
+//   puhe seis|pois|paalle     pysäyttää puheen / luennat pois tai päälle (PlayerPrefs)
 //   tila [nimi]               kirjoittaa Documents/peli-tila.json (tai peli-tila-nimi.json)
 //   odota s                   seuraava rivi s sekunnin päästä
 //   odota-tila tila [max s]   odottaa silmukan tilaa (Kartta, Dialogi, Matkalla, Lehti, Kysymys), oletus 20 s
@@ -110,6 +115,12 @@ namespace Matkakirja.Natiivi
                     return ohjain.Heita();
                 case "sulje-lehti":
                     return ohjain.SuljeLehti();
+                case "kortti":
+                    return A(1) == null ? "kaupunki puuttuu" : ohjain.AvaaKortti(A(1));
+                case "liiku":
+                    return A(1) == null ? "kaupunki puuttuu" : ohjain.Liiku(A(1));
+                case "lue-lehti":
+                    return A(1) == null ? "kaupunki puuttuu" : ohjain.LueLehti(A(1));
                 case "tutki":
                     return ohjain.Tutki(A(1) == "vaikea");
                 case "vastaa":
@@ -134,6 +145,26 @@ namespace Matkakirja.Natiivi
                     return ohjain.Puolita();
                 case "jatka":
                     return ohjain.JatkaKysymyksesta();
+                case "luento":
+                {
+                    var l = ohjain.Luennat;
+                    switch (A(1))
+                    {
+                        case null: return "käyttö: luento kaupunki|intro|lento|saapuminen kaupunki";
+                        case "intro": return ohjain.SoitaLuento(l.Intro);
+                        case "lento": return ohjain.SoitaLuento(l.LentoAlku);
+                        case "saapuminen": return ohjain.SoitaLuento(l.Saapumispuhe(A(2)));
+                        default: return ohjain.SoitaLuento(l.Luento(A(1)));
+                    }
+                }
+                case "puhe":
+                    switch (A(1))
+                    {
+                        case "seis": if (Puhe.Instanssi != null) Puhe.Instanssi.Pysayta(); return null;
+                        case "pois": Puhe.Paalla = false; return null;
+                        case "paalle": Puhe.Paalla = true; return null;
+                        default: return "käyttö: puhe seis|pois|paalle";
+                    }
                 case "tila":
                 {
                     var nimi = A(1) == null ? "peli-tila.json" : "peli-tila-" + A(1) + ".json";

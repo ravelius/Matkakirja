@@ -8,7 +8,8 @@ namespace Matkakirja
     /// <summary>
     /// Kehysaikamittari. Nostaa kehystavoitteen näytön taajuuteen (ProMotion 120 Hz),
     /// koska Unity rajaa iOS:llä oletuksena 30 kehykseen sekunnissa. Kirjaa kehysajat
-    /// erikseen liikkeessä (veto, liuku, zoomi) ja levossa, ja kirjoittaa ne viiden
+    /// erikseen liikkeessä (veto, liuku, zoomi), levossa ja peitossa (koko näytön lehti
+    /// pallon päällä, PalloKierto.Peitetty: pallo ei näy), ja kirjoittaa ne viiden
     /// sekunnin jaksoina tiedostoon persistentDataPath/kehysajat.jsonl.
     ///
     /// Simulaattorin luvut kertovat vain, ettei koodissa ole ilmeistä pullonkaulaa:
@@ -21,6 +22,7 @@ namespace Matkakirja
 
         readonly List<float> liike = new List<float>();
         readonly List<float> lepo = new List<float>();
+        readonly List<float> peitto = new List<float>();
         float alku;
         string polku;
         float tavoite;
@@ -39,7 +41,8 @@ namespace Matkakirja
         void Update()
         {
             float ms = Time.unscaledDeltaTime * 1000f;
-            if (Time.frameCount > 5) (pallo != null && pallo.Liikkeessa ? liike : lepo).Add(ms);
+            if (Time.frameCount > 5)
+                (pallo == null ? lepo : pallo.Peitetty ? peitto : pallo.Liikkeessa ? liike : lepo).Add(ms);
             if (Time.realtimeSinceStartup - alku >= jakso)
             {
                 Kirjaa();
@@ -51,11 +54,12 @@ namespace Matkakirja
         {
             string rivi = "{" +
                 $"\"t\":{F(Time.realtimeSinceStartup)},\"tavoiteMs\":{F(tavoite)}," +
-                $"\"liike\":{Tilasto(liike)},\"lepo\":{Tilasto(lepo)}" + "}";
+                $"\"liike\":{Tilasto(liike)},\"lepo\":{Tilasto(lepo)},\"peitto\":{Tilasto(peitto)}" + "}";
             File.AppendAllText(polku, rivi + "\n");
             Debug.Log("MATKAKIRJA kehysajat " + rivi);
             liike.Clear();
             lepo.Clear();
+            peitto.Clear();
         }
 
         string Tilasto(List<float> a)

@@ -211,6 +211,7 @@ namespace Matkakirja.Natiivi
             float y = Reuna + 4;
             y = Lisaa(d.Otsikko, 14, FontStyles.SmallCaps, y, leveys);
             y = Lisaa(d.Kehys, 15, FontStyles.Italic, y, leveys);
+            if (!d.Vastattu) y = Lisaa(d.Tervehdys, 15, FontStyles.Normal, y, leveys, null, TextAlignmentOptions.Left);
             y = Lisaa(d.Paikka, 17, FontStyles.Bold, y, leveys);
             y = Lisaa(d.Kysymys, 20, FontStyles.Normal, y, leveys);
 
@@ -272,6 +273,7 @@ namespace Matkakirja.Natiivi
                     string tulos = d.AikaLoppui ? "Aika loppui." : d.Oikein ? "Oikein!" : "Väärin.";
                     y = Lisaa(tulos, 20, FontStyles.Bold, y + 4, leveys);
                 }
+                y = Lisaa(d.Repliikki, 15, FontStyles.Italic, y, leveys, null, TextAlignmentOptions.Left);
                 y = Lisaa(d.Loyto, 17, FontStyles.Normal, y, leveys);
                 y = Lisaa(d.Fakta, 15, FontStyles.Normal, y, leveys, null, TextAlignmentOptions.Left);
                 if (d.Lahteet != null && d.Lahteet.Count > 0)

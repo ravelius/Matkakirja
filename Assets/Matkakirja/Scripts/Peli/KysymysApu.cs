@@ -78,6 +78,14 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Hetkellinen ilmoitus (esim. "Rahat eivät riitä"), tai null.</summary>
         public string Viesti;
+
+        // --- kohtaaminen (web visa.js: KOHTAAMISET ja TARINAKAARI) ---
+        /// <summary>Hahmon tervehdys ennen kysymystä (kaaren kohtaaminen tai kaupungin tervehdys), tai null.</summary>
+        public string Tervehdys;
+        /// <summary>Hahmon repliikki vastauksen jälkeen (löytö, tyhjä tai väärin), tai null.</summary>
+        public string Repliikki;
+        /// <summary>Repliikki on löytörepliikki (luetaan ääneen, web lueKertojana).</summary>
+        public bool RepliikkiLoyto;
     }
 
     /// <summary>Kysymysnäkymän takaisinkutsut (ohjain kutsuu pelilogiikkaa).</summary>
@@ -90,9 +98,104 @@ namespace Matkakirja.Natiivi
         public Action Jatka;
     }
 
+    /// <summary>Kaupungin kohtaamistekstit (kokoelmat kohtaamiset ja tarinakaari).</summary>
+    public sealed class Kohtaaminen
+    {
+        public string Tervehdys, Loyto, Tyhja, Vaarin;
+        /// <summary>Tarinakaaren henkilön kohtaaminen ja aarreteksti (TARINAKAARI[id].kohtaaminen, .aarre).</summary>
+        public string KaariKohtaaminen, KaariAarre;
+    }
+
+    /// <summary>Kohtaamistekstit kaupungeittain.</summary>
+    public sealed class Kohtaamiset
+    {
+        public readonly Dictionary<string, Kohtaaminen> Kaupungit = new Dictionary<string, Kohtaaminen>();
+
+        Kohtaaminen Hae(string k)
+        {
+            if (!Kaupungit.TryGetValue(k, out var x)) Kaupungit[k] = x = new Kohtaaminen();
+            return x;
+        }
+
+        static IEnumerable<(string Kaupunki, Dictionary<string, object> Data)> Alkiot(string json)
+        {
+            var juuri = MiniJson.Objekti(MiniJson.Jasenna(json));
+            foreach (var a in MiniJson.Taulukko(MiniJson.Kentta(juuri, "alkiot")))
+            {
+                var o = MiniJson.Objekti(a);
+                var d = MiniJson.Kentta(o, "data") as Dictionary<string, object>;
+                var k = MiniJson.Teksti(o, "kaupunki") ?? MiniJson.Teksti(o, "id");
+                if (d != null && k != null) yield return (k, d);
+            }
+        }
+
+        /// <summary>Kokoelma kohtaamiset (web KOHTAAMISET): tervehdys, loyto, tyhja, vaarin.</summary>
+        public void LueKohtaamiset(string json)
+        {
+            foreach (var (k, d) in Alkiot(json))
+            {
+                var x = Hae(k);
+                x.Tervehdys = MiniJson.Teksti(d, "tervehdys");
+                x.Loyto = MiniJson.Teksti(d, "loyto");
+                x.Tyhja = MiniJson.Teksti(d, "tyhja");
+                x.Vaarin = MiniJson.Teksti(d, "vaarin");
+            }
+        }
+
+        /// <summary>Kokoelma tarinakaari (web TARINAKAARI): kohtaaminen ja aarre.</summary>
+        public void LueTarinakaari(string json)
+        {
+            foreach (var (k, d) in Alkiot(json))
+            {
+                var x = Hae(k);
+                x.KaariKohtaaminen = MiniJson.Teksti(d, "kohtaaminen");
+                x.KaariAarre = MiniJson.Teksti(d, "aarre");
+            }
+        }
+
+        public Kohtaaminen Kaupunki(string k) => k != null && Kaupungit.TryGetValue(k, out var x) ? x : null;
+    }
+
     /// <summary>AvoinKysymys → KysymysNaytto (PeliOhjain kutsuu jokaisen teon jälkeen).</summary>
     public static class KysymysApu
     {
+        /// <summary>Web visa.js UUSI_YRITYS_OHJE (kohtaamisen ensimmäinen väärä vastaus).</summary>
+        public const string UusiYritysOhje = "Yksi yritys on vielä jäljellä: voit tavata hänet "
+            + "uudelleen. Jos toinenkin vastaus menee väärin, aarre jää ikuisiksi ajoiksi piiloon.";
+
+        /// <summary>
+        /// Kohtaamisen tekstit näkymään (web visa.js renderQuiz): tervehdys ennen
+        /// vastausta (kaaren kohtaaminen aina, kaupungin tervehdys vain kerran —
+        /// tervehdysNahty kertoo, onko se jo nähty), repliikki vastauksen jälkeen,
+        /// kaaren aarreteksti oikeasta vastauksesta ja uuden yrityksen ohje.
+        /// Palauttaa true, jos kaupungin tavallinen tervehdys näytettiin nyt.
+        /// </summary>
+        public static bool LisaaKohtaaminen(KysymysNaytto d, AvoinKysymys q, Kohtaamiset kohtaamiset, bool tervehdysNahty)
+        {
+            if (kohtaamiset == null || q == null) return false;
+            var x = kohtaamiset.Kaupunki(q.Kaupunki);
+            if (x == null) return false;
+            bool visa = q.Laji == KysymysMuoto.Visa;
+            var kaari = q.Kaari ? x : null;
+            bool tervehdysNyt = false;
+            if (!q.Valittu.HasValue)
+            {
+                if (kaari != null) d.Tervehdys = kaari.KaariKohtaaminen;
+                else if (visa && !tervehdysNahty && !string.IsNullOrEmpty(x.Tervehdys)) { d.Tervehdys = x.Tervehdys; tervehdysNyt = true; }
+                return tervehdysNyt;
+            }
+            bool oikein = q.OikeinVastattu == true;
+            if (visa)
+            {
+                bool loyto = oikein && (q.Tutkimus || q.Loyto != null);
+                d.Repliikki = !oikein ? x.Vaarin : loyto ? x.Loyto : x.Tyhja;
+                d.RepliikkiLoyto = loyto && !string.IsNullOrEmpty(d.Repliikki);
+            }
+            if (kaari != null && oikein && !string.IsNullOrEmpty(kaari.KaariAarre)) d.Repliikki = kaari.KaariAarre + (d.Repliikki != null ? "\n" + d.Repliikki : "");
+            if (q.Kaari && !oikein && q.AarreLukittui != true) d.Loyto = (d.Loyto != null ? d.Loyto + "\n" : "") + UusiYritysOhje;
+            return false;
+        }
+
         /// <summary>Commons-tiedoston osoite halutulla leveydellä (web commonsUrl; PNG-pienennös myös SVG:stä).</summary>
         public static string CommonsUrl(string tiedosto, int leveys) =>
             "https://commons.wikimedia.org/wiki/Special:FilePath/" + Koodaa(tiedosto) + "?width=" + leveys;
@@ -143,12 +246,14 @@ namespace Matkakirja.Natiivi
         static string Iso(string s) => string.IsNullOrEmpty(s) ? s : char.ToUpperInvariant(s[0]) + s.Substring(1);
 
         /// <summary>
-        /// Rakentaa näytettävän tilan. loyto = tämän kysymyksen aikana käännetty
+        /// Rakentaa näytettävän tilan. osoitteet = kuva- tai lipputiedoston nimi →
+        /// valmis https-osoite (kokoelmat kuvakysymykset ja lippumaat); puuttuva
+        /// nimi → Commons Special:FilePath. loyto = tämän kysymyksen aikana käännetty
         /// laatta (Matka.Loysi) tai null; lisat = muut palkkiorivit (Kysely.Tapahtui);
         /// viesti = epäonnistuneen teon virhe.
         /// </summary>
         public static KysymysNaytto Nakyma(Kysely kysely, AvoinKysymys q, Loyto loyto = null,
-            IEnumerable<string> lisat = null, string viesti = null)
+            IEnumerable<string> lisat = null, string viesti = null, IReadOnlyDictionary<string, string> osoitteet = null)
         {
             var m = kysely.Matka;
             var p = m.Tila.Pelaaja;
@@ -182,11 +287,14 @@ namespace Matkakirja.Natiivi
                 AikaLoppui = q.AikaLoppui,
                 Viesti = viesti,
             };
-            if (q.Laji == KysymysMuoto.Kuva && !string.IsNullOrEmpty(q.KuvaTiedosto))
-                d.KuvaUrl = q.KuvaTiedosto.StartsWith("http", StringComparison.Ordinal) ? q.KuvaTiedosto : CommonsUrl(q.KuvaTiedosto, 640);
-            else if (q.Laji == KysymysMuoto.Lippu && !string.IsNullOrEmpty(q.LippuTiedosto))
-                d.KuvaUrl = CommonsUrl(q.LippuTiedosto, 320);
-            if (d.KuvaUrl != null) d.KuvaLahde = "Wikimedia Commons";
+            string Osoite(string tiedosto, int leveys) =>
+                tiedosto.StartsWith("http", StringComparison.Ordinal) ? tiedosto
+                : osoitteet != null && osoitteet.TryGetValue(tiedosto, out var u) && !string.IsNullOrEmpty(u) ? u
+                : CommonsUrl(tiedosto, leveys);
+            if (q.Laji == KysymysMuoto.Kuva && !string.IsNullOrEmpty(q.KuvaTiedosto)) d.KuvaUrl = Osoite(q.KuvaTiedosto, 640);
+            else if (q.Laji == KysymysMuoto.Lippu && !string.IsNullOrEmpty(q.LippuTiedosto)) d.KuvaUrl = Osoite(q.LippuTiedosto, 320);
+            // Kuvan tekijä kerrotaan faktassa vastauksen jälkeen (web: vastaus paljastaisi paikan).
+            if (d.KuvaUrl != null) d.KuvaLahde = q.Laji == KysymysMuoto.Lippu ? "Lippu: Wikimedia Commons" : null;
             if (q.Laji == KysymysMuoto.Pulma && q.PulmaTiedot != null)
             {
                 var t = q.PulmaTiedot;

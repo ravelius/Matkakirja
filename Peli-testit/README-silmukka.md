@@ -75,10 +75,14 @@ JSON-tiedostot. 3D:n `komento.txt` (esim. `kuva nimi`) toimii rinnalla.
 | `matka kaupunki tapa` | valinta ilman dialogia |
 | `heita` | "Heitä noppaa" (kesken reitin) |
 | `sulje-lehti` | sulkee lehden kuin pelaaja |
+| `liiku kaupunki` | kortin "Liiku tänne": kortti kiinni, matkavalinta auki (tila Dialogi) |
+| `kortti kaupunki` / `lue-lehti kaupunki` | kaupunkikortti (Natiivi-UI:n tehdas) / lehti ilman matkaa |
 | `tutki [vaikea]` | "Tutki kaupunkia" -nappi: kysymys auki (tila Kysymys) |
 | `vastaa i\|oikea\|vaara` | vaihtoehto i (0..), oikea tai ensimmäinen näkyvä väärä |
 | `vihje` / `puolita` | vihje 40 £ / 50:50 80 £ (virhe näkyy kysymyksen alareunassa) |
 | `jatka` | tuloksen Jatka-nappi: kysymys kiinni, vuoro päättyy |
+| `luento kaupunki\|intro\|lento\|saapuminen kaupunki` | soittaa luennan ehdoitta (tila-JSONin `puhe`: soi, url, aika, virhe) |
+| `puhe seis\|pois\|paalle` | pysäyttää puheen / luennat pois tai päälle |
 | `tila [nimi]` | `peli-tila.json` / `peli-tila-nimi.json`: silmukka, vaihe, sijainti, raha, päivä, aika, tilarivi, dialogi ja vaihtoehdot, tavoite, lehtiAuki, viesti, virhe, viimeisin matka; erä 4: syoteEstetty, tutkiTarjolla, kysymys (laji, otsikko, kysymys, vaihtoehdot, piilotetut, vihje, sekunnit, jaljella, vastattu, valittu, oikea, oikein, aikaLoppui, loyto, viesti) |
 | `odota s` / `odota-tila tila [max s]` | tauko / odota tilaa Kartta, Dialogi, Matkalla, Lehti (aikaraja kirjataan lokiin) |
 | `uusi-peli [siemen]` | uusi peli Pariisista, toistettava noppa |
@@ -100,6 +104,8 @@ uusi-peli 12345
 odota 2
 tila 1-alku
 napauta lontoo
+odota 1
+liiku lontoo
 odota-tila dialogi 3
 odota 1.5
 tila 2-dialogi
@@ -112,6 +118,8 @@ odota-tila kartta 3
 odota 1
 tila 4-lontoossa
 napauta pariisi
+odota 1
+liiku pariisi
 odota-tila dialogi 3
 odota 1
 valitse liftaus
@@ -128,7 +136,7 @@ Odotettu (laskettu dotnetilla samalla paketilla ja 266 laatalla):
 
 | Tiedosto | silmukka | sijainti | raha · päivä · aika | muuta |
 |---|---|---|---|---|
-| 1-alku | Kartta | c:pariisi | 300 · 1 · aamu | vaihe Heitto (liftaus esivalittu) |
+| 1-alku | Kartta | c:pariisi | 300 · 1 · aamu | vaihe Toiminta (Pysy purkaa liftauksen esivalinnan, erä 4) |
 | 2-dialogi | Dialogi | c:pariisi | 300 · 1 · aamu | dialogi lontoo, vaihtoehdot Bussi 50, Liftaus 0 (askelia 3) |
 | 3-lehti-lontoo | Lehti | c:lontoo | 250 · 1 · aamu | lehtiAuki true, viimeisin saapui lontoo |
 | 4-lontoossa | Kartta | c:lontoo | 250 · 1 · aamu | lehtiAuki false |
@@ -157,6 +165,18 @@ Odotettu siemenellä 12345 (Testit/SilmukkaKysymysTestit.cs toistaa saman logiik
 | k7-lehti-pariisi | Lehti | c:pariisi | 440 | noppa 2, yö |
 | k8-loppu | Kartta | c:pariisi | 440 | tutkiTarjolla true |
 
+
+## Isoisän luennat (Puhe.cs, Luennat.cs)
+
+- **Intro** (`audio/intro-puhe.mp3?v=2`) uuden pelin alussa, kun tallennusta ei ole.
+- **Lennon alku** (`audio/puhe-lento-alku.mp3?v=2`) ensimmäisellä lennolla istunnossa.
+- **Saapumispuhe** (kokoelma `saapumispuheet`, 45 Euroopan kaupunkia) kamera-ajon alkaessa kohti kaupunkia.
+- **Matkakirjaluento** (kokoelma `luennat`, kun Siirtoseppä on sen vienyt) lehden sulkeuduttua,
+  kerran per kaupunki istunnossa; paikkarivi tilariville.
+- Yksi puhuja kerrallaan, loppuhäivytys 1,5 s, taustalle mentäessä katkeaa. Äänitteet välimuistiin
+  `persistentDataPath/aani/`. iOS-istunto Playback + MixWithOthers (`Plugins/iOS/MatkakirjaAani.mm`),
+  joten äänettömyyskytkin ei mykistä luentaa (kuten Safari webissä).
+- Kokeilu: `luento intro`, `odota 2`, `tila puhe` → `puhe.soi` true ja `puhe.aika` > 0.
 
 ## Käännöstarkistus ilman editoria
 
