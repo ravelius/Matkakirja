@@ -70,6 +70,9 @@ export function tarkistaPaketti(tiedostot) {
       ));
     }
   }
+  for (const w of manifest.webNakymat ?? []) {
+    virheet.push(...validoiNimella(lue(w.tiedosto), 'web-nakyma.schema.json', { polku: w.tiedosto }));
+  }
   return virheet;
 }
 

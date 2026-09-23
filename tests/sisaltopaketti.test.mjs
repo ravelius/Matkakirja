@@ -15,10 +15,13 @@
  *      ei kirjoiteta olemassa olevan päälle);
  *   4. työnkulku kirjoittaa osoittimen vasta paketin jälkeen;
  *   5. skeema 1.2: kaupunkien tärkeys 0–3 (pääkaupungit ja aloitus 3) ja
- *      tiedostojen koot manifestissa.
+ *      tiedostojen koot manifestissa;
+ *   6. skeema 1.3: lehden web-riippuvuudet (web/lehti.json) ovat täydet ja
+ *      tiivisteet vastaavat repon tiedostoja.
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 
 import { kokoaVienti, JUURI, SKEEMAVERSIO_TARKKA } from '../tools/vienti/vie-sisalto.mjs';
@@ -148,4 +151,26 @@ test('työnkulun aws-sijoitukset kestävät bash -e:n', () => {
   for (const rivi of sijoitukset) {
     assert.ok(/if ! \w+=\$\(aws /.test(rivi) || /\|\| true/.test(rivi), `suojaamaton aws-sijoitus: ${rivi.trim()}`);
   }
+});
+
+test('skeema 1.3: lehden web-riippuvuudet WKWebView-kuorelle', () => {
+  const m = JSON.parse(tiedostot.get('manifest.json'));
+  const rivi = m.webNakymat.find((w) => w.nimi === 'lehti');
+  assert.ok(rivi, 'manifest.webNakymat: lehti puuttuu');
+  const lehti = JSON.parse(tiedostot.get(rivi.tiedosto));
+  assert.deepEqual(validoiNimella(lehti, 'web-nakyma.schema.json'), []);
+  const polut = new Set(lehti.moduulit.map((t) => t.polku));
+  for (const p of ['js/lehti.js', 'js/maalehti.js', 'js/packs/kulttuuri-kategoriat.js', 'js/media.js']) {
+    assert.ok(polut.has(p), `${p} puuttuu lehden riippuvuuksista`);
+  }
+  assert.ok(!polut.has('js/main.js') && !polut.has('js/ui.js'), 'lehti ei tuo peliä');
+  assert.ok(lehti.tyylit.some((t) => t.polku === 'css/styles.css'));
+  // Tiivisteet vastaavat repoa: kuori voi tarkistaa hakemansa version.
+  for (const t of [...lehti.moduulit, ...lehti.tyylit].slice(0, 40)) {
+    const b = readFileSync(`${JUURI}/${t.polku}`);
+    assert.equal(t.sha256, createHash('sha256').update(b).digest('hex'), t.polku);
+    assert.equal(t.tavuja, b.length, t.polku);
+  }
+  assert.equal(lehti.tavuja.koodi, [...lehti.moduulit, ...lehti.tyylit].reduce((a, t) => a + t.tavuja, 0));
+  assert.ok(validoiNimella({ ...lehti, moduulit: [{ polku: 'x.js', tavuja: 1 }] }, 'web-nakyma.schema.json').length);
 });

@@ -21,6 +21,8 @@
  *                          reitit, maat...) id-viittauksineen — tuojan
  *                          helppo lähtöpiste (tools/vienti/kokoelmat.mjs).
  *   tiedostot/...          valmiit JSON-aineistot sellaisenaan (lahteet.mjs).
+ *   web/<näkymä>.json      web-näkymän (lehti) koodi- ja tiedostoriippuvuudet
+ *                          natiivin WKWebView-kuorelle (web-riippuvuudet.mjs).
  *   skeema/*.schema.json   JSON Schema (2020-12) jokaiselle tiedostolajille.
  *   manifest.json          sisällysluettelo: moduulit, exportit, lukumäärät,
  *                          tiivisteet. Tuoja tarkistaa tästä, että sai kaiken.
@@ -39,6 +41,7 @@ import { sarjallista } from './sarjallista.mjs';
 import { LISAMODUULIT, LISATIEDOSTOT } from './lahteet.mjs';
 import { TARKKUUS, mediaLaji, ratkaiseMedia } from './media.mjs';
 import { kokoaKokoelmat } from './kokoelmat.mjs';
+import { kokoaWebNakymat } from './web-riippuvuudet.mjs';
 
 export const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 export const SKEEMAVERSIO = 'matkakirja-vienti/1';
@@ -51,8 +54,10 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *   1.1  kaupungit: maa2 (ISO2), tyyppi, lentokentta, aloitus; osoitin
  *   1.2  kaupungit: tarkeys 0–3; manifest: tavuja kokoelmille, medialle
  *        ja lisätiedostoille; kaupunki.data merkitty raakaolioksi
+ *   1.3  web/<näkymä>.json: web-näkymän (lehti) JS/CSS/tiedostoriippuvuudet
+ *        WKWebView-kuorelle; manifest.webNakymat
  */
-export const SKEEMAVERSIO_TARKKA = '1.2';
+export const SKEEMAVERSIO_TARKKA = '1.3';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 const tavuja = (s) => Buffer.byteLength(s);
@@ -166,6 +171,12 @@ export async function kokoaVienti({ juuri = JUURI } = {}) {
     return { lahde: polku, tiedosto: `tiedostot/${polku}`, sha256: sha(teksti), tavuja: tavuja(teksti) };
   });
 
+  const webNakymat = kokoaWebNakymat(juuri).map(({ nimi, tiedosto, sisalto }) => {
+    const teksti = JSON.stringify(sisalto) + '\n';
+    tiedostot.set(tiedosto, teksti);
+    return { nimi, tiedosto, sha256: sha(teksti), tavuja: tavuja(teksti) };
+  });
+
   const skeemat = readdirSync(join(JUURI, 'tools/vienti/skeema')).filter((f) => f.endsWith('.json')).sort();
   for (const f of skeemat) tiedostot.set(`skeema/${f}`, readFileSync(join(JUURI, 'tools/vienti/skeema', f), 'utf8'));
 
@@ -190,6 +201,7 @@ export async function kokoaVienti({ juuri = JUURI } = {}) {
     skeemat: skeemat.map((f) => `skeema/${f}`),
     media: { tiedosto: 'media.json', sha256: sha(mediaTeksti), tavuja: tavuja(mediaTeksti) },
     kokoelmat: kokoelmaKuvaus,
+    webNakymat,
     moduulit: manifestModuulit,
   };
   tiedostot.set('manifest.json', JSON.stringify(manifest, null, 1) + '\n');
