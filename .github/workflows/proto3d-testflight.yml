@@ -116,6 +116,22 @@ jobs:
           fi
           echo "ASC_AVAIN_POLKU=$polku" >> "$GITHUB_ENV"
 
+      # Ilman tätä -allowProvisioningUpdates ei voi tallentaa Applen
+      # luomaa varmennetta ("User interaction is not allowed" archive-
+      # vaiheessa) — sama lohko kuin ios-testflight.yml:ssä.
+      - name: Luo väliaikainen avainnippu
+        run: |
+          set -euo pipefail
+          salasana=$(openssl rand -base64 24)
+          echo "::add-mask::$salasana"
+          nippu="$RUNNER_TEMP/proto3d.keychain-db"
+          security create-keychain -p "$salasana" "$nippu"
+          security set-keychain-settings -lut 21600 "$nippu"
+          security unlock-keychain -p "$salasana" "$nippu"
+          security list-keychains -d user -s "$nippu" $(security list-keychains -d user | sed 's/"//g')
+          security default-keychain -s "$nippu"
+          echo "AVAINNIPPU=$nippu" >> "$GITHUB_ENV"
+
       - name: Arkistoi ja allekirjoita
         working-directory: ${{ env.PROJEKTI }}
         env:
@@ -282,3 +298,6 @@ jobs:
         run: |
           rm -rf "$RUNNER_TEMP/asc" "$HOME/.appstoreconnect/private_keys" || true
           rm -f "$RUNNER_TEMP/ExportOptions.plist" || true
+          if [ -n "${AVAINNIPPU:-}" ]; then
+            security delete-keychain "$AVAINNIPPU" || true
+          fi
