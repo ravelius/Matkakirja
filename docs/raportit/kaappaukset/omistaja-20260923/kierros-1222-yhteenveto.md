@@ -20,3 +20,8 @@ yksin max 134 ms ja >20 ms 33 % sekä rast 154 ja puskurikirjoitukset 6.4/kehys.
 lukujen valossa, Kosketus suoraan (2) huonoin (max 138, p95 40). Kokeen 1 dc 408 ja kokeen 3 dc 475
 vs. 37–83 muissa: kerrosten määrä vaihtelee samassa kierroksessa (zoomitaso?).
 Omistajan tuntuma: kysytty erikseen.
+
+Omistajan tuntuma (kortti klo 12.4x): "Pelkkä kartta tökki kaikkein vähiten, mutta siinäkin on
+yksi tökkäys yleensä, jos vedän kerran ja jätän kartan liikkumaan itsestään loppuun. Ja siinä
+lopussa on vähän turhan nopea liikkeen lopetus, jos sen pystyisi vielä pehmeämmin hidastamaan sen
+ihan lopun vierityksen. Syöttökokeet kaikki tökkivät. En huomannut kovin isoa eroa niiden välillä."
