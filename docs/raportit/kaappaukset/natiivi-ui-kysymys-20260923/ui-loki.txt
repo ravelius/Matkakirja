@@ -1,0 +1,32 @@
+18.03.16 odota 3 → ok
+18.03.19 ui kysymys visa → ok
+18.03.19 odota 2 → ok
+18.03.21 kuva kysymys-visa → ui-kysymys-visa.png
+18.03.21 ui kysymys vaite → ok
+18.03.21 odota 2 → ok
+18.03.23 kuva kysymys-vaite → ui-kysymys-vaite.png
+18.03.23 ui kysymys kuva → ok
+18.03.23 odota 4 → ok
+18.03.27 kuva kysymys-kuva → ui-kysymys-kuva.png
+18.03.27 ui kysymys lippu → ok
+18.03.27 odota 4 → ok
+18.03.31 kuva kysymys-lippu → ui-kysymys-lippu.png
+18.03.31 ui kysymys pulma pylvaat → ok
+18.03.31 odota 5 → ok
+18.03.36 kuva kysymys-pulma → ui-kysymys-pulma.png
+18.03.36 ui kysymys pulma kukko → ok
+18.03.36 odota 1 → ok
+18.03.37 kuva kysymys-kukko → ui-kysymys-kukko.png
+18.03.37 ui kysymys pulma kuunvaiheet → ok
+18.03.37 odota 1 → ok
+18.03.38 kuva kysymys-kuunvaiheet → ui-kysymys-kuunvaiheet.png
+18.03.38 ui kysymys kaksintaistelu → ok
+18.03.38 odota 2 → ok
+18.03.40 kuva kysymys-kaksintaistelu → ui-kysymys-kaksintaistelu.png
+18.03.40 ui kysymys tapahtumakortti → ok
+18.03.40 odota 1 → ok
+18.03.41 kuva kysymys-tapahtuma → ui-kysymys-tapahtuma.png
+18.03.41 ui kysymys tulos → ok
+18.03.41 odota 1 → ok
+18.03.42 kuva kysymys-tulos → ui-kysymys-tulos.png
+18.03.42 ui sulje → ok
