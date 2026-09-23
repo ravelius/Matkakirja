@@ -1707,3 +1707,7 @@ Apurahassa ei tarkkoja lupauksia: 3D-maailmat joissa pelaaja kävelee (aikahyppy
 ## KAKSI UUTTA OPUS 5.5 -SESSIOTA: 3D-SELVITTAJA (MOOTTORIVERTAILU, docs/raportit/3d-selvitys-20260923.md, HAARA selvittaja-3d) JA SIIRTOSEPPA (MOOTTORINEUTRAALI SISALLON SIIRTOPUTKI: INVENTAARIO, JSON-SKEEMA, tools/vienti/vie-sisalto.mjs + TESTI, RAPORTTI sisallon-siirtoputki-20260923.md, HAARA siirtoseppa-vienti) (23.9.2026 klo 09.48)
 
 Omistaja loi sessiot klo 09.47, Fable nimesi. Session id:t: 3D-selvittäjä local_fd5eeed5…, Siirtoseppä local_8319363e…; molemmat cwd /Users/samireivinen/Matkakirja-opus (Pelikoodarin checkout) → ohjeistettu omiin worktreisiin /Users/koodaus/wt-selvittaja-3d ja wt-siirtoseppa-vienti. RC päällä. Roolisetti nyt 8 sessiota.
+
+## KERROSKYTKIMET SAMASSA PR:SSA #2883 (KORVAAVAT TILAT 6–8): PALJAS KARTTA -TILASSA 9 KYTKINTA (NIMIOT, SYMBOLIT+NOSTOPISTEET, GL-RUNKO, ILMAKEHA+POHJA, HAIVYTYS, LEPOPIIRTO, PULU, DOM-KERROKSET, PIENI LIIKE); TILARIVI 'koe 5/5 Paljas kartta +nimiöt +runko'; OSOITE ?koe=paljas,kerros-nimiot,…; dc ILMAN LAATTOJA: PALJAS 2, NIMIOT 4, SYMBOLIT 3, RUNKO 17; DOM-KERROKSET 64 ELEMENTTIA (23.9.2026 klo 09.52)
+
+Pelikoodari klo 09.5x, testit 4051/0, savuke 7/7. Omistajan kierros: tila 5 ilman kytkimiä; jos tökkiminen loppuu, ryhmät päälle yksi kerrallaan.
