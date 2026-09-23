@@ -24,6 +24,9 @@ import { ISO2 } from './iso2.mjs';
 import { PAAKAUPUNGIT } from './paakaupungit.mjs';
 import { ratkaiseMedia } from './media.mjs';
 import { aaniUrl, horatioAanenKesto } from '../../js/media.js';
+import { aikaleimojenOsoite } from '../../js/luentareaktiot.js';
+import { livianEleidenOsoite } from '../../js/livia-puheeleet-lataus.js';
+import { existsSync } from 'node:fs';
 
 const LAUTA = 'js/packs/maailmankartta.js';
 
@@ -519,7 +522,16 @@ const ERIKOISLUENNAT = [
 
 function luentoKokoelma(hae) {
   const { FOKUSVIRRAT } = hae('js/packs/fokusvirrat.js');
-  const aani = (polku) => ({ url: aaniUrl(polku), kesto: horatioAanenKesto(polku) });
+  // aikaleimat = sanatason ajoitus (js/luentareaktiot.js aikaleimojenOsoite);
+  // aikaleimaTiedosto = sama JSON paketissa, jos se on repossa.
+  const aani = (polku) => {
+    const nimi = polku.split('/').at(-1).replace(/\.mp3$/, '.aikaleimat.json');
+    const repo = `assets/aikaleimat/${nimi}`;
+    return {
+      url: aaniUrl(polku), kesto: horatioAanenKesto(polku), aikaleimat: aikaleimojenOsoite(polku),
+      aikaleimaTiedosto: existsSync(new URL(`../../${repo}`, import.meta.url)) ? `tiedostot/${repo}` : null,
+    };
+  };
   const rivit = [
     ...ERIKOISLUENNAT.map((l) => ({ id: l.id, kaupunki: null, paikkarivi: null, teksti: null, kuvaus: l.kuvaus,
       aanite: l.aanite, ...aani(l.aanite) })),
@@ -530,8 +542,39 @@ function luentoKokoelma(hae) {
   ];
   return taulukko('js/packs/fokusvirrat.js#FOKUSVIRRAT.*.matkakirja + erikoisluennat',
     'Isoisän luennat: intro ja lento-alku sekä matkakirjaluennat kaupungeittain. url = valmis https-osoite '
-      + '(aaniUrl), kesto sekunteina tai null, aanite = repopolku.',
+      + '(aaniUrl), kesto sekunteina tai null, aanite = repopolku, aikaleimat = sanatason ajoitus ämpärissä '
+      + '(url + .aikaleimat.json), aikaleimaTiedosto = sama paketissa (tiedostot/…) tai null.',
     { kaupunki: 'kaupungit' }, rivit);
+}
+
+/*
+ * LIVIAN PUHE (skeema 1.9, siirtosuunnitelman #2948 korjauslistan kohta
+ * 4): Livian luentakommenttien cuet (ankkuri = sana tekstissä, tarkoitus,
+ * voimakkuus) ja osoitteet. Ratkaistut ajoitukset ovat ämpärissä äänen
+ * vieressä (.eleet.json, js/livia-puheeleet-lataus.js); ne on validoitu
+ * tekstiSha256:ta ja cue-listaa vasten. odottaa = cuet kirjoitettu, ääni
+ * tai eleet vielä tekemättä (ERA5_ODOTTAVAT_KAUPUNGIT).
+ */
+function livianPuheKokoelma(hae) {
+  const cuet = hae('js/livia-pilotti-cuet.js');
+  const { livianAaniOsoite } = hae('js/liviapuhe.js');
+  const odottaa = new Set(cuet.ERA5_ODOTTAVAT_KAUPUNGIT ?? []);
+  return taulukko('js/livia-pilotti-cuet.js#LIVIAN_LUENTA_CUET',
+    'Livian luentakommentit kaupungeittain: aani = mp3 ämpärissä, eleet = ratkaistut cue-ajat (.eleet.json aanen '
+      + 'vieressä), cuet = { id, ankkuri, esiintyma, tarkoitus, voimakkuus }, tekstiSha256 = kommentin tekstin '
+      + 'tiiviste, jota eleet vastaavat. odottaa = eleitä ei vielä ole.',
+    { kaupunki: 'kaupungit' },
+    Object.values(cuet.LIVIAN_LUENTA_CUET).map((c) => {
+      // Pelin omat osoitefunktiot: avain <kaupunki>-3 = kommenttikuplan
+      // indeksi 2; versioitu polku tai ?v= kuten pelissä.
+      const indeksi = Number(c.avain.split('-').at(-1)) - 1;
+      const aani = livianAaniOsoite(c.kaupunki, indeksi);
+      return {
+        id: c.kaupunki, kaupunki: c.kaupunki, revision: c.revision, kentta: c.kentta, kupla: c.kupla,
+        tekstiSha256: c.tekstiSha256, aani, eleet: aani ? livianEleidenOsoite(aani) : null,
+        odottaa: odottaa.has(c.kaupunki), cuet: c.cuet,
+      };
+    }));
 }
 
 /** nimiavaruudet: Map<moduulipolku, moduulin nimiavaruus> */
@@ -556,5 +599,6 @@ export function kokoaKokoelmat(nimiavaruudet) {
     aanitaulut: aaniKokoelma(ns, hae),
     ...kysymyskuvaKokoelmat(ns, hae),
     luennat: luentoKokoelma(hae),
+    livianpuhe: livianPuheKokoelma(hae),
   };
 }

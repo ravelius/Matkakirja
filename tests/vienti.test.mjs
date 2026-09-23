@@ -175,6 +175,7 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
       && (ns('js/sisaltotaulut.js').KAIKKI_VALOKUVAT[c.id]?.uusi?.tiedosto || ns('js/sisaltotaulut.js').KAIKKI_VALOKUVAT[c.id]?.tiedosto)).length,
     lippumaat: Object.values(P.map.countryShapes).filter((m) => m.lippu && m.nimi).length,
     pulmaaineisto: 7,
+    livianpuhe: Object.keys(ns('js/livia-pilotti-cuet.js').LIVIAN_LUENTA_CUET).length,
     luennat: 2 + Object.values(ns('fokusvirrat.js').FOKUSVIRRAT).filter((v) => v?.matkakirja?.aanite).length,
     saapuminen: P.cities.length,
     esilasketut: ns('historian-hetket.js').HISTORIAN_HETKET.length + avaimia(ns('elaintakyt.js').ELAINTAKYT)
