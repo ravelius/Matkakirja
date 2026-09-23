@@ -15,7 +15,7 @@ import { fileURLToPath } from 'node:url';
 
 const tama = dirname(fileURLToPath(import.meta.url));
 const juuri = process.argv[2] ?? '/Users/Shared/Claude/wt/linssiseppa-webmain';
-const paketti = process.argv[3] ?? '/Users/Shared/Claude/sisalto-koe/v15';
+const paketti = process.argv[3] ?? '/Users/Shared/Claude/sisalto-koe/v16';
 const R = await import(join(juuri, 'js/linssit/radio.js'));
 const P = await import(join(juuri, 'js/linssit/pistenaytto.js'));
 const S = await import(join(juuri, 'js/linssit/radiosoitin.js'));
@@ -26,6 +26,8 @@ const lue = (p) => JSON.parse(readFileSync(join(paketti, p), 'utf8'));
 const kirjoita = (nimi, olio) => writeFileSync(join(tama, 'paketti', nimi), JSON.stringify(olio));
 
 kirjoita('radiot.json', lue('moduulit/js/packs/radiot.json'));
+// Siirtosepän kokoelma (v16+): luokka, sivu, varaAani.
+try { kirjoita('radiot-kokoelma.json', lue('kokoelmat/radiot.json')); } catch { /* vanhempi paketti */ }
 kirjoita('viritysaanet.json', lue('moduulit/js/packs/viritysaanet.json'));
 const kaupungit = lue('kokoelmat/kaupungit.json');
 kirjoita('kaupungit-radio.json', {

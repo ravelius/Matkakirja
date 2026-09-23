@@ -51,6 +51,17 @@ namespace Matkakirja.Linssit.Testit
         static RadioAineisto aineisto;
         static RadioAineisto A() => aineisto ??= RadioAineisto.Lue(null, Paketti("radiot.json"), Paketti("kaupungit-radio.json"),
             Paketti("maat.json"), Paketti("viritysaanet.json"));
+        /// <summary>Tilakoneen testeihin: sama aineisto kaikki asemat "sallittu"-luokassa.</summary>
+        static RadioAineisto sallittu;
+        static RadioAineisto S()
+        {
+            if (sallittu != null) return sallittu;
+            sallittu = RadioAineisto.Lue(null, Paketti("radiot.json"), Paketti("kaupungit-radio.json"),
+                Paketti("maat.json"), Paketti("viritysaanet.json"));
+            foreach (var a in sallittu.Asemat.Values) a.Luokka = "sallittu";
+            return sallittu;
+        }
+
         static HashSet<char> Fontti() => K().GetProperty("fontti").GetString().ToHashSet();
 
         [Testi] static void VakiotKutenWebissa()
@@ -93,14 +104,41 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(RadioLinssi.Toiminto.Linkki, RadioLinssi.ToimintoAsemalle(a.MaanAsema("SWE")));
             Oleta.Sama(RadioLinssi.Toiminto.Aanite, RadioLinssi.ToimintoAsemalle(a.MaanAsema("NOR")));
             Oleta.Sama(RadioLinssi.Toiminto.Ei, RadioLinssi.ToimintoAsemalle(a.MaanAsema("DNK")));
-            // Luokaton (varareitti) vain kehittäjätilassa.
+            // Luokaton (varareitti) ei soi koskaan, ei edes kehittäjätilassa (Fablen sääntö).
             var vanha = Linssirekisteri.Kehittajatila;
             try
             {
-                Linssirekisteri.Kehittajatila = false;
-                Oleta.Sama(RadioLinssi.Toiminto.Ei, RadioLinssi.ToimintoAsemalle(A().MaanAsema("FIN")));
                 Linssirekisteri.Kehittajatila = true;
-                Oleta.Sama(RadioLinssi.Toiminto.Soita, RadioLinssi.ToimintoAsemalle(A().MaanAsema("FIN")));
+                Oleta.Sama(RadioLinssi.Toiminto.Ei, RadioLinssi.ToimintoAsemalle(A().MaanAsema("FIN")));
+            }
+            finally { Linssirekisteri.Kehittajatila = vanha; }
+        }
+
+        [Testi] static void KoepaketinKokoelmaLinkkeina()
+        {
+            // v16: kaikki asemat linkkejä ennen lupia; sivuttomat eivät tee mitään.
+            var a = RadioAineisto.Lue(Paketti("radiot-kokoelma.json"), null, Paketti("kaupungit-radio.json"));
+            Oleta.Sama(115, a.Asemat.Count);
+            var toiminnot = a.Asemat.Values.GroupBy(RadioLinssi.ToimintoAsemalle).ToDictionary(g => g.Key, g => g.Count());
+            Oleta.Tosi(!toiminnot.ContainsKey(RadioLinssi.Toiminto.Soita), "ei suoria lähetyksiä ilman lupaa");
+            Oleta.Sama(a.Asemat.Values.Count(x => !string.IsNullOrEmpty(x.Sivu)), toiminnot[RadioLinssi.Toiminto.Linkki]);
+        }
+
+        [Testi] static void LuokatonJaKiellettyEivatSoiKehittajatilassakaan()
+        {
+            var vanha = Linssirekisteri.Kehittajatila;
+            Linssirekisteri.Kehittajatila = true;
+            try
+            {
+                var v = new ValeVirta();
+                var l = new RadioLinssi(A(), v, new ValeViritin(), new ValeRadioKartta(), Fontti());
+                l.Avaa(new ValeYmparisto());
+                l.Viritä("FIN");
+                Oleta.Tosi(v.Auki == null, "luokaton ei soi");
+                var h = new RadioLinssi(Hybridi(), v, new ValeViritin(), new ValeRadioKartta(), Fontti());
+                h.Avaa(new ValeYmparisto());
+                h.Viritä("DNK");
+                Oleta.Tosi(v.Auki == null && h.Tila.Vaihe == RadioVaihe.Virhe, "kielletty ilman vara-äänitettä ei soi");
             }
             finally { Linssirekisteri.Kehittajatila = vanha; }
         }
@@ -171,7 +209,7 @@ namespace Matkakirja.Linssit.Testit
             var v = new ValeVirta();
             var w = new ValeViritin();
             var k = new ValeRadioKartta();
-            var l = new RadioLinssi(A(), v, w, k, Fontti());
+            var l = new RadioLinssi(S(), v, w, k, Fontti());
             var tilat = new List<RadioTila>();
             l.TilaMuuttui += t => tilat.Add(t);
             l.Avaa(y);
@@ -193,7 +231,7 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama("RADIO POIS", l.Tila.Rivi1);
             Oleta.Tosi(l.Asteikko.Count > 80, "asteikolla kanavalliset: " + l.Asteikko.Count);
             // Asteikko lännestä itään.
-            var lon = l.Asteikko.Select(id => A().Kaupunki(id).Lon).ToList();
+            var lon = l.Asteikko.Select(id => S().Kaupunki(id).Lon).ToList();
             Oleta.Tosi(lon.Zip(lon.Skip(1), (a, b) => a <= b).All(x => x), "pituusasteen mukaan");
             l.Sulje();
             Oleta.Sama(null, k.Vain);
@@ -253,7 +291,7 @@ namespace Matkakirja.Linssit.Testit
             Aja(l, y, 0.1);
             Oleta.Sama(RadioVaihe.Virhe, l.Tila.Vaihe);
             Oleta.Sama("EI KUULU", l.Tila.Rivi1);
-            var kanavaton = l.Nakyvat.FirstOrDefault(id => A().MaanAsema(A().Kaupunki(id)?.Iso3) == null);
+            var kanavaton = l.Nakyvat.FirstOrDefault(id => S().MaanAsema(S().Kaupunki(id)?.Iso3) == null);
             Oleta.Tosi(kanavaton != null, "kanavaton kaupunki löytyy");
             k.Napauta(kanavaton);
             Oleta.Sama("Ei asemaa", l.Tila.Viesti);
