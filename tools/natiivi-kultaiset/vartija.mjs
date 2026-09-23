@@ -10,7 +10,7 @@
 // vasten ja vertaa tulosten sha256-tiivisteitä tiedostoon tiivisteet.json.
 // Jos jälki muuttuu, verkkopelin sääntö tai laudan sisältö on muuttunut, ja
 // natiivin porttia pitää ehkä päivittää. Sisältöpaketin syötteet (kaupungit,
-// reitit, kaksintaistelut) tehdään tuoreesta viennistä (tools/vienti), joten
+// reitit) tehdään tuoreesta viennistä (tools/vienti), joten
 // vartija seuraa samaa sisältöä, jonka natiivi saa ämpäristä.
 //
 // Kun testi tests/natiivi-kultaiset.test.mjs punastuu:
@@ -36,7 +36,7 @@ import { kokoaVienti } from '../vienti/vie-sisalto.mjs';
 const TAMA = dirname(fileURLToPath(import.meta.url));
 export const JUURI = resolve(TAMA, '../..');
 export const TIIVISTEET = join(TAMA, 'tiivisteet.json');
-const SYOTTEET = ['kaupungit', 'reitit', 'kaksintaistelut'];
+const SYOTTEET = ['kaupungit', 'reitit'];
 
 /** Skriptit, jotka tuottavat jäljet (aakkosjärjestyksessä). */
 export const skriptit = () => readdirSync(TAMA).filter((f) => /^tee-.*\.mjs$/.test(f)).sort();
