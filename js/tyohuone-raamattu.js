@@ -142,7 +142,7 @@ export const RAAMATTU = {
           + 'kaupunkilehdet; sen jälkeen korkeusmalli, kallistus ja auringonvalo. Web on ilmainen, '
           + 'natiivi maksullinen tai 3D-lisäosat IAP:na; radiot myös natiiviin (23.9. klo 20.2x); lisensseissä '
           + 'attribuutio riittää (ei juristia). Peli on mahdollisimman pieni: sisältö, media, '
-          + 'laatat ja maasto striimataan ämpäristä, pelaaja voi ladata alueita offline-käyttöön '
+          + 'laatat ja maasto striimataan ämpäristä, pelaaja voi ladata alueita offline-käyttöön MAANOSITTAIN tai ylimpänä vaihtoehtona KAIKKI (omistaja 23.9.2026 klo 23.2x: ei yksittäisiä maita) '
           + 'halutessaan (omistaja 23.9.). Prototyyppi /Users/Shared/Claude/proto-3d. '
           + 'VAIN AJANTASAISTA JA VAIN NATIIVIA (omistaja 23.9.2026 klo 20.1x, sitova): natiiviin '
           + 'siirretään vain se, mikä on Raamatun VOIMASSA OLEVAA kaanonia — ei webin koodissa '
