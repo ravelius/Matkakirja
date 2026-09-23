@@ -107,5 +107,33 @@ namespace Matkakirja.Natiivi
                 try { v.ScrollTo(e); } catch (System.ArgumentException) { }
             }).StartingIn(viiveMs);
         }
+
+        /// <summary>
+        /// CSS-gridin repeat(auto-fill, minmax(min, 1fr)) + gap UI Toolkitissa: sarakkeita niin
+        /// monta kuin mahtuu, lapset venyvät tasaleveiksi. koko(lapsi, leveys) asettaa
+        /// lapsen mittasuhteen (esim. juliste 2:3), koska USS:ssä ei ole aspect-ratiota.
+        /// </summary>
+        public static void Ruudukko(VisualElement r, float min, float rako, System.Action<VisualElement, float> koko = null)
+        {
+            r.style.flexDirection = FlexDirection.Row;
+            r.style.flexWrap = Wrap.Wrap;
+            void Asettele()
+            {
+                float w = r.contentRect.width;
+                if (float.IsNaN(w) || w <= 0) return;
+                int sarakkeet = Mathf.Max(1, Mathf.FloorToInt((w + rako) / (min + rako)));
+                float lw = Mathf.Floor((w - rako * (sarakkeet - 1)) / sarakkeet);
+                for (int i = 0; i < r.childCount; i++)
+                {
+                    var c = r[i];
+                    c.style.width = lw;
+                    c.style.marginRight = (i % sarakkeet == sarakkeet - 1) ? 0 : rako;
+                    c.style.marginBottom = rako;
+                    koko?.Invoke(c, lw);
+                }
+            }
+            r.RegisterCallback<GeometryChangedEvent>(e => { if (!Mathf.Approximately(e.oldRect.width, e.newRect.width)) Asettele(); });
+            r.schedule.Execute(Asettele);
+        }
     }
 }

@@ -33,6 +33,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Lehden muut aiheet ("Nykytaide", "Luonto" …) lehden sisällysluetteloon.</summary>
         public List<string> Aiheet = new List<string>();
         public string JulisteTiedosto, JulisteOtsikko;
+        /// <summary>Maanosa (kaupungit.manner: europe, middleeast, africa, asia, northamerica, southamerica, oceania).</summary>
+        public string Manner;
         /// <summary>Onko kaupungilla oma kaupunkilehti (kategoria "kaupunki").</summary>
         public bool Lehti;
     }
@@ -53,8 +55,18 @@ namespace Matkakirja.Natiivi
         public string Tiedosto, Lyhyt, Selite, Lahde;
     }
 
+    /// <summary>Tuotantojuliste (kokoelma julisteet): galleria ja laukku.</summary>
+    public sealed class JulisteTiedot
+    {
+        public string Id, Kaupunki, KaupunkiNimi, Tiedosto, Otsikko, Lyhyt, Selite;
+        public string Url => string.IsNullOrEmpty(Tiedosto) ? null : "https://media.matkakirja.app/julisteet/" + Tiedosto;
+    }
+
     public static class UiSisalto
     {
+        /// <summary>Kaikki julisteet paketin järjestyksessä (tyhjä, kunnes ladattu).</summary>
+        public static IReadOnlyList<JulisteTiedot> Julisteet => JulisteLista ?? (IReadOnlyList<JulisteTiedot>)new JulisteTiedot[0];
+        static List<JulisteTiedot> JulisteLista;
         static Dictionary<string, KaupunkiTiedot> kaupungit;
         static Dictionary<string, MaaTiedot> maat = new Dictionary<string, MaaTiedot>();
         static bool haussa;
@@ -216,7 +228,7 @@ namespace Matkakirja.Natiivi
                 if (id == null) continue;
                 t[id] = new KaupunkiTiedot
                 {
-                    Id = id, Nimi = MiniJson.Teksti(a, "nimi") ?? id, Maa = MiniJson.Teksti(a, "maa"),
+                    Id = id, Nimi = MiniJson.Teksti(a, "nimi") ?? id, Maa = MiniJson.Teksti(a, "maa"), Manner = MiniJson.Teksti(a, "manner"),
                     Lat = MiniJson.Luku(a, "lat") ?? double.NaN, Lon = MiniJson.Luku(a, "lon") ?? double.NaN,
                 };
             }
@@ -261,14 +273,23 @@ namespace Matkakirja.Natiivi
                 }
             }
 
+            var kaikki = new List<JulisteTiedot>();
             foreach (var a in Alkiot(julisteet))
             {
                 string id = MiniJson.Teksti(a, "kaupunki");
                 var d = MiniJson.Objekti(MiniJson.Kentta(a, "data"));
+                if (d != null)
+                    kaikki.Add(new JulisteTiedot
+                    {
+                        Id = MiniJson.Teksti(a, "id") ?? id, Kaupunki = id, KaupunkiNimi = MiniJson.Teksti(d, "kaupunki"),
+                        Tiedosto = MiniJson.Teksti(d, "tiedosto"), Otsikko = MiniJson.Teksti(d, "otsikko"),
+                        Lyhyt = MiniJson.Teksti(d, "lyhyt"), Selite = MiniJson.Teksti(d, "selite"),
+                    });
                 if (id == null || d == null || !t.TryGetValue(id, out var k) || k.JulisteTiedosto != null) continue;
                 k.JulisteTiedosto = MiniJson.Teksti(d, "tiedosto");
                 k.JulisteOtsikko = MiniJson.Teksti(d, "otsikko");
             }
+            JulisteLista = kaikki;
             return t;
         }
     }

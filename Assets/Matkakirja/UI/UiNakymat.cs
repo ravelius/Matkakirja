@@ -44,6 +44,7 @@ namespace Matkakirja.Natiivi
         public readonly Nostokortti Nostokortti;
         public readonly Lehtinakyma Lehti;
         public readonly Paljastus Paljastus;
+        public readonly Julistegalleria Julistegalleria;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         static void KytkeTehdas()
@@ -96,6 +97,7 @@ namespace Matkakirja.Natiivi
             Nostokortti = new Nostokortti(kerros);
             Lehti = new Lehtinakyma(kerros);
             Paljastus = new Paljastus(kerros);
+            Julistegalleria = new Julistegalleria(kerros); // laukun päälle (sama kerros, myöhemmin)
             // Karttavalon napautus (Natiiviseppä: AiheValot → KarttaValotSilta) → nostokortti;
             // linssin aikana ei (web linssiEstaa).
             UiPalvelut.ValoNapautettu += id => UiKerros.PaaSaikeessa(() =>
@@ -207,6 +209,9 @@ namespace Matkakirja.Natiivi
             Nostokortti.Sulje();
             Lehti.Sulje();
             Paljastus.Sulje();
+            Julistegalleria.Sulje();
+            Minipopup.SuljeAuki();
+            Pikkuseloste.Sulje();
             Vahvistus.Sulje();
             Matkavalinta.Piilota();
             Matkavalinta.PiilotaHeitto();
