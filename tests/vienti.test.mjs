@@ -164,6 +164,8 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
     saannot: new Set(['js/rules.js', 'js/game.js'].flatMap((f) => Object.entries(ns(f))
       .filter(([, v]) => ['number', 'string', 'boolean'].includes(typeof v)).map(([n]) => n))).size,
     saapuminen: P.cities.length,
+    esilasketut: ns('historian-hetket.js').HISTORIAN_HETKET.length + avaimia(ns('elaintakyt.js').ELAINTAKYT)
+      + new Set(Object.values(P.map.countryShapes).map((m) => m.nimi).filter(Boolean)).size + 2 + 1,
   };
   assert.deepEqual(manifest.kokoelmat.map((k) => k.nimi).sort(), Object.keys(odotus).sort(),
     'uudella kokoelmalla pitää olla lukumäärätarkistus tässä');

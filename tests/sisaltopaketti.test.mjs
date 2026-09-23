@@ -21,7 +21,9 @@
  *   7. skeema 1.3: lehden web-riippuvuudet (web/lehti.json) ovat täydet ja
  *      tiivisteet vastaavat repon tiedostoja;
  *   8. skeema 1.4: matkustuksen hinnat (saannot) ja saapumishaut
- *      (saapuminen) vastaavat pelin omia vakioita ja funktioita.
+ *      (saapuminen) vastaavat pelin omia vakioita ja funktioita;
+ *   9. skeema 1.5: jokainen paketin funktio on luokiteltu
+ *      (tools/vienti/logiikka.mjs), esilasketut vastaavat pelin funktioita.
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -159,50 +161,6 @@ test('työnkulun aws-sijoitukset kestävät bash -e:n', () => {
   }
 });
 
-/*
- * Kaupunkidata = packin export, jolla on cities-taulukko (laudat ja
- * lähdepackit), sekä pulmataulukot (*_PUZZLES). Natiivi lukee nämä
- * sisältöpaketista, joten niissä ei saa olla funktioita: logiikka nimetään
- * tunnisteella (pulma.generaattori → js/pulmageneraattorit.js) ja tekstit
- * ovat pohjia (js/tekstipohja.js). Generaattorirekisterit ovat logiikkaa
- * ja saavat olla funktioita.
- */
-test('osa 2: kaupunkidatassa ei ole funktioita', () => {
-  const tarkistetut = [];
-  for (const m of manifest.moduulit.filter((x) => x.luokka === 'pack')) {
-    const ns = nimiavaruudet.get(m.moduuli);
-    for (const e of m.exportit) {
-      const arvo = ns[e.nimi];
-      const onKaupunkidata = (arvo && typeof arvo === 'object' && Array.isArray(arvo.cities))
-        || /_PUZZLES$/.test(e.nimi);
-      if (!onKaupunkidata) continue;
-      tarkistetut.push(`${m.moduuli}#${e.nimi}`);
-      assert.equal(e.funktioita, 0, `${m.moduuli}#${e.nimi}: ${e.funktioita} funktiota kaupunkidatassa — käytä tunnistetta (js/pulmageneraattorit.js) tai tekstipohjaa (js/tekstipohja.js)`);
-    }
-  }
-  assert.ok(tarkistetut.includes('js/packs/maailmankartta.js#MAAILMANKARTTA'));
-  assert.ok(tarkistetut.includes('js/packs/europe-puzzles.js#EUROPE_PUZZLES'));
-  assert.ok(tarkistetut.length >= 12, tarkistetut.join(', '));
-});
-
-test('osa 2: pulmien generaattorit ja tekstipohjat', () => {
-  const lauta = nimiavaruudet.get('js/packs/maailmankartta.js').MAAILMANKARTTA;
-  const generoidut = lauta.puzzles.filter((p) => p.generaattori);
-  assert.equal(generoidut.length, 11);
-  for (const p of generoidut) assert.equal(typeof PULMAGENERAATTORIT[p.generaattori], 'function', p.id);
-  for (const m of manifest.moduulit.filter((x) => x.luokka === 'pack')) {
-    for (const arvo of Object.values(nimiavaruudet.get(m.moduuli))) {
-      const t = arvo?.texts;
-      if (!t || !Array.isArray(arvo.cities)) continue;
-      assert.match(t.starFound, /\{name\}.*\{city\}/, `${m.moduuli}: starFound`);
-      assert.match(t.winnerStar, /\{name\}.*\{money\}/, `${m.moduuli}: winnerStar`);
-    }
-  }
-  assert.equal(taytaPohja(lauta.texts.winnerStar, { name: 'Fogg', money: 120 }),
-    'Fogg toi unohdetun aarteen kotiin 120 punnan kanssa.');
-  assert.equal(taytaPohja('{name} ja {tuntematon}', { name: 'A' }), 'A ja {tuntematon}');
-});
-
 test('skeema 1.3: lehden web-riippuvuudet WKWebView-kuorelle', () => {
   const m = JSON.parse(tiedostot.get('manifest.json'));
   const rivi = m.webNakymat.find((w) => w.nimi === 'lehti');
@@ -260,4 +218,100 @@ test('skeema 1.4: saapumishaut vastaavat pelin funktioita jokaisessa kaupungissa
   const rooma = rivit.find((r) => r.id === 'rooma');
   assert.equal(rooma.kaupunkilehti, 'rooma');
   assert.equal(rooma.paikallisaarteet, 'ITA');
+});
+
+/*
+ * Kaupunkidata = packin export, jolla on cities-taulukko (laudat ja
+ * lähdepackit), sekä pulmataulukot (*_PUZZLES). Natiivi lukee nämä
+ * sisältöpaketista, joten niissä ei saa olla funktioita: logiikka nimetään
+ * tunnisteella (pulma.generaattori → js/pulmageneraattorit.js) ja tekstit
+ * ovat pohjia (js/tekstipohja.js). Generaattorirekisterit ovat logiikkaa
+ * ja saavat olla funktioita.
+ */
+test('osa 2: kaupunkidatassa ei ole funktioita', () => {
+  const tarkistetut = [];
+  for (const m of manifest.moduulit.filter((x) => x.luokka === 'pack')) {
+    const ns = nimiavaruudet.get(m.moduuli);
+    for (const e of m.exportit) {
+      const arvo = ns[e.nimi];
+      const onKaupunkidata = (arvo && typeof arvo === 'object' && Array.isArray(arvo.cities))
+        || /_PUZZLES$/.test(e.nimi);
+      if (!onKaupunkidata) continue;
+      tarkistetut.push(`${m.moduuli}#${e.nimi}`);
+      assert.equal(e.funktioita, 0, `${m.moduuli}#${e.nimi}: ${e.funktioita} funktiota kaupunkidatassa — käytä tunnistetta (js/pulmageneraattorit.js) tai tekstipohjaa (js/tekstipohja.js)`);
+    }
+  }
+  assert.ok(tarkistetut.includes('js/packs/maailmankartta.js#MAAILMANKARTTA'));
+  assert.ok(tarkistetut.includes('js/packs/europe-puzzles.js#EUROPE_PUZZLES'));
+  assert.ok(tarkistetut.length >= 12, tarkistetut.join(', '));
+});
+
+test('osa 2: pulmien generaattorit ja tekstipohjat', () => {
+  const lauta = nimiavaruudet.get('js/packs/maailmankartta.js').MAAILMANKARTTA;
+  const generoidut = lauta.puzzles.filter((p) => p.generaattori);
+  assert.equal(generoidut.length, 11);
+  for (const p of generoidut) assert.equal(typeof PULMAGENERAATTORIT[p.generaattori], 'function', p.id);
+  for (const m of manifest.moduulit.filter((x) => x.luokka === 'pack')) {
+    for (const arvo of Object.values(nimiavaruudet.get(m.moduuli))) {
+      const t = arvo?.texts;
+      if (!t || !Array.isArray(arvo.cities)) continue;
+      assert.match(t.starFound, /\{name\}.*\{city\}/, `${m.moduuli}: starFound`);
+      assert.match(t.winnerStar, /\{name\}.*\{money\}/, `${m.moduuli}: winnerStar`);
+    }
+  }
+  assert.equal(taytaPohja(lauta.texts.winnerStar, { name: 'Fogg', money: 120 }),
+    'Fogg toi unohdetun aarteen kotiin 120 punnan kanssa.');
+  assert.equal(taytaPohja('{name} ja {tuntematon}', { name: 'A' }), 'A ja {tuntematon}');
+});
+
+test('skeema 1.5: jokainen paketin funktio on luokiteltu natiiville', async () => {
+  const { LOGIIKKA } = await import('../tools/vienti/logiikka.mjs');
+  const loydetyt = new Set();
+  const kay = (o, polku, kohta) => {
+    if (!o || typeof o !== 'object') return;
+    if ('$funktio' in o) { loydetyt.add(`${kohta}${polku}`); return; }
+    for (const [k, v] of Object.entries(o)) kay(v, `${polku}/${k}`, kohta);
+  };
+  for (const m of manifest.moduulit) {
+    const { exportit } = JSON.parse(tiedostot.get(m.tiedosto));
+    for (const [nimi, arvo] of Object.entries(exportit)) kay(arvo, '', `${m.moduuli}#${nimi}`);
+  }
+  for (const k of manifest.kokoelmat) {
+    assert.ok(!tiedostot.get(k.tiedosto).includes('"$funktio"'), `kokoelmassa ${k.nimi} on funktio`);
+  }
+  const luetellut = new Set(Object.keys(LOGIIKKA));
+  const puuttuvat = [...loydetyt].filter((k) => !luetellut.has(k));
+  const vanhentuneet = [...luetellut].filter((k) => !loydetyt.has(k));
+  assert.deepEqual(puuttuvat, [], 'uusi funktio paketissa: luokittele se tiedostoon tools/vienti/logiikka.mjs');
+  assert.deepEqual(vanhentuneet, [], 'tools/vienti/logiikka.mjs:ssä on rivi funktiolle, jota ei enää ole');
+  const lista = manifest.logiikka;
+  assert.equal(lista.length, luetellut.size);
+  for (const r of lista) {
+    const vaadittu = { logiikka: 'tunniste', saanto: 'saanto', esilaskettu: 'esilaskettu', media: 'media' }[r.luokka];
+    if (vaadittu) assert.ok(r[vaadittu], `${r.kohta}: ${vaadittu} puuttuu`);
+  }
+});
+
+test('skeema 1.5: esilasketut ja suurennokset vastaavat pelin funktioita', async () => {
+  const esi = JSON.parse(tiedostot.get('kokoelmat/esilasketut.json')).alkiot;
+  const hae = (funktio, avain) => esi.find((r) => r.funktio === funktio && r.avain === avain)?.arvo;
+  const { maanGenetiivi } = await import('../js/packs/maa-kategoriat.js');
+  assert.equal(hae('maanGenetiivi', 'Alankomaat'), maanGenetiivi('Alankomaat'));
+  assert.equal(hae('maanGenetiivi', 'Alankomaat'), 'Alankomaiden');
+  const { HISTORIAN_HETKET, hetkenKuvat } = await import('../js/packs/historian-hetket.js');
+  assert.deepEqual(hae('hetkenKuvat', HISTORIAN_HETKET[0].id), JSON.parse(JSON.stringify(hetkenKuvat(HISTORIAN_HETKET[0]))));
+  assert.ok(hae('linssiSelite', 'topografia').length > 3);
+  assert.equal(hae('pulmapiirrokset', 'kaikki').length, 11);
+  const { valokuvaSuurennos } = await import('../js/packs/africa-valokuvat.js');
+  const { VALOKUVAT_FLICKR } = await import('../js/packs/valokuvat-flickr.js');
+  const kuvat = JSON.parse(tiedostot.get('media.json')).viitteet.filter((v) => v.laji === 'kuva-commons');
+  let verrattu = 0;
+  for (const v of kuvat) {
+    // Rajatun Flickr-kuvan suurennos on repon oma rajaus; Nodessa peli ei
+    // tiedä omaa kansiotaan, joten ne verrataan vain muotoon.
+    if (VALOKUVAT_FLICKR.get(v.arvo)?.rajattu) { assert.match(v.suurennos, /assets\/valokuvat\/|_h\.jpg$/); continue; }
+    assert.equal(v.suurennos, valokuvaSuurennos(v.arvo, 1600), v.arvo);
+    verrattu++;
+  }
+  assert.ok(verrattu > 1000);
 });

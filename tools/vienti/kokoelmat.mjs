@@ -278,6 +278,37 @@ function saapumisKokoelma(ns, hae) {
     }));
 }
 
+/*
+ * ESILASKETUT (skeema 1.5, osa 2 erä B): apufunktioiden tulokset, joita
+ * natiivi tarvitsee mutta joita ei saa suoraan datasta (poikkeustaulu on
+ * moduulin sisäinen tai tulos yhdistää kenttiä). Vienti ajaa pelin oman
+ * funktion jokaiselle arvolle; tools/vienti/logiikka.mjs kertoo, mikä
+ * funktio kirjoittaa minkäkin funktio-kentän.
+ */
+function esilaskettuKokoelma(ns, hae) {
+  const P_ = 'js/packs/';
+  const rivit = [];
+  const lisaa = (funktio, avain, arvo) => rivit.push({ id: `${funktio}:${avain}`, funktio, avain, arvo });
+  const { HISTORIAN_HETKET, hetkenKuvat } = hae(`${P_}historian-hetket.js`);
+  for (const h of HISTORIAN_HETKET) lisaa('hetkenKuvat', h.id, hetkenKuvat(h));
+  const { ELAINTAKYT, elaintakynKuvat } = hae(`${P_}elaintakyt.js`);
+  for (const iso of Object.keys(ELAINTAKYT)) lisaa('elaintakynKuvat', iso, elaintakynKuvat(ELAINTAKYT[iso]));
+  const { maanGenetiivi } = hae(`${P_}maa-kategoriat.js`);
+  const maat = [...new Set(Object.values(ns.MAAILMANKARTTA.map.countryShapes).map((m) => m.nimi).filter(Boolean))].sort();
+  for (const nimi of maat) lisaa('maanGenetiivi', nimi, maanGenetiivi(nimi));
+  for (const linssi of ['topografia', 'vesistot']) {
+    lisaa('linssiSelite', linssi, hae(`js/linssit/${linssi}.js`).LINSSI.selite());
+  }
+  const piirrettavat = ns.MAAILMANKARTTA.puzzles.map((p) => p.id).filter((id) => (
+    hae(`${P_}africa-puzzles.js`).onAfrikanPulma(id) || hae(`${P_}europe-puzzles.js`).onEuroopanPulma(id)));
+  lisaa('pulmapiirrokset', 'kaikki', piirrettavat);
+  return taulukko('tools/vienti/logiikka.mjs (esilaskettu)',
+    'Apufunktioiden tulokset valmiiksi laskettuina pelin omilla funktioilla. funktio = pelin funktio '
+      + '(hetkenKuvat, elaintakynKuvat, maanGenetiivi, linssiSelite = LINSSI.selite(), pulmapiirrokset = '
+      + 'pulmat, joille onAfrikanPulma/onEuroopanPulma), avain = sen argumentti, arvo = tulos.',
+    {}, rivit);
+}
+
 /** nimiavaruudet: Map<moduulipolku, moduulin nimiavaruus> */
 export function kokoaKokoelmat(nimiavaruudet) {
   const ns = {
@@ -294,5 +325,6 @@ export function kokoaKokoelmat(nimiavaruudet) {
     ...sisaltoKokoelmat(hae, kaupunkiIdt),
     saannot: saantoKokoelma(hae),
     saapuminen: saapumisKokoelma(ns, hae),
+    esilasketut: esilaskettuKokoelma(ns, hae),
   };
 }

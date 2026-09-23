@@ -42,6 +42,7 @@ import { LISAMODUULIT, LISATIEDOSTOT } from './lahteet.mjs';
 import { TARKKUUS, mediaLaji, ratkaiseMedia } from './media.mjs';
 import { kokoaKokoelmat } from './kokoelmat.mjs';
 import { kokoaWebNakymat } from './web-riippuvuudet.mjs';
+import { logiikkaLista } from './logiikka.mjs';
 
 export const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 export const SKEEMAVERSIO = 'matkakirja-vienti/1';
@@ -58,8 +59,10 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        WKWebView-kuorelle; manifest.webNakymat
  *   1.4  kokoelmat saannot (hinnat ja sääntövakiot) ja saapuminen
  *        (saapumishaut kaupungeittain valmiiksi laskettuina)
+ *   1.5  manifest.logiikka (jokainen paketin funktio luokiteltuna,
+ *        tools/vienti/logiikka.mjs), kokoelma esilasketut, media.suurennos
  */
-export const SKEEMAVERSIO_TARKKA = '1.4';
+export const SKEEMAVERSIO_TARKKA = '1.5';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 const tavuja = (s) => Buffer.byteLength(s);
@@ -204,6 +207,7 @@ export async function kokoaVienti({ juuri = JUURI } = {}) {
     media: { tiedosto: 'media.json', sha256: sha(mediaTeksti), tavuja: tavuja(mediaTeksti) },
     kokoelmat: kokoelmaKuvaus,
     webNakymat,
+    logiikka: logiikkaLista(),
     moduulit: manifestModuulit,
   };
   tiedostot.set('manifest.json', JSON.stringify(manifest, null, 1) + '\n');
