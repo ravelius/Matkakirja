@@ -64,5 +64,30 @@ namespace Matkakirja.Natiivi
             File.WriteAllText(tiedosto, k.downloadHandler.text);
             valmis(k.downloadHandler.text);
         }
+
+        /// <summary>
+        /// Striimattu linssiaineisto paketin ulkopuolelta (esim. GPL-3.0-rajat 1873, jotka eivät saa
+        /// olla binaarissa eivätkä paketissa). Koekansio Documents/sisalto-koe/virta/&lt;nimi&gt; ensin,
+        /// sitten välimuisti persistentDataPath/virta/&lt;nimi&gt; (offline), sitten osoite.
+        /// </summary>
+        public static IEnumerator HaeVirrasta(string osoite, string nimi, Action<string> valmis)
+        {
+            string koe = Path.Combine(Application.persistentDataPath, "sisalto-koe", "virta", nimi);
+            if (File.Exists(koe)) { valmis(File.ReadAllText(koe)); yield break; }
+            string tiedosto = Path.Combine(Application.persistentDataPath, "virta", nimi);
+            if (File.Exists(tiedosto)) { valmis(File.ReadAllText(tiedosto)); yield break; }
+            using var k = UnityWebRequest.Get(osoite);
+            k.timeout = 20;
+            yield return k.SendWebRequest();
+            if (k.result != UnityWebRequest.Result.Success)
+            {
+                Debug.LogWarning($"MATKAKIRJA linssit: {osoite} epäonnistui: {k.error}");
+                valmis(null);
+                yield break;
+            }
+            Directory.CreateDirectory(Path.GetDirectoryName(tiedosto));
+            File.WriteAllText(tiedosto, k.downloadHandler.text);
+            valmis(k.downloadHandler.text);
+        }
     }
 }

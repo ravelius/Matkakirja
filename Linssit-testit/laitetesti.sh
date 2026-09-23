@@ -17,6 +17,9 @@
 #                                          radiokokoelma koekansioon, uudelleenkäynnistys, asemat
 #                                          RADIOT (oletus "CHE DEU UGA FIN") ~12 s kukin äänellä 0
 #                                          (vanha käännös ohittaa "radio aani 0" kanavattomana maana)
+#   ./laitetesti.sh isoisa <kansio> [isoisa-1873.json]
+#                                          striimattava 1873-aineisto koekansioon (sisalto-koe/virta/),
+#                                          uudelleenkäynnistys, linssi Euroopan ja Balkanin yllä
 #   ./laitetesti.sh kontakti <kansio>      kontaktiarkin natiivikuvat (samat näkymät kuin webin
 #                                          kuvissa, ks. docs/raportit/linssit-kontaktiarkki-*.md)
 #
@@ -80,6 +83,15 @@ case "$1" in
       linssi "radio $m"; sleep 12; linssi "radio tila"; sleep 1; kuva linssitesti-radio-$m
     done
     linssi "radio stop" "linssi pois"; sleep 3; hae "$2"; grep -a "radio" "$2/linssi-loki.txt" | tail -30 ;;
+  isoisa)
+    sinne "${3:-/Users/Shared/Claude/proto-3d/lokit/isoisa-1873/isoisa-1873.json}" sisalto-koe/virta/isoisa-1873.json && echo "koekansioon: virta/isoisa-1873.json"
+    kaynnista; portti
+    linssi "tila" "linssi isoisa-1873"; sleep 4
+    linssi "kamera 50 12 6000"; sleep 8; linssi "isoisa tila"; kuva linssitesti-isoisa-eurooppa
+    linssi "kamera 44 22 1500"; sleep 8; linssi "isoisa tila"; kuva linssitesti-isoisa-balkan
+    linssi "kamera 48.5 7 700"; sleep 8; linssi "isoisa tila"; kuva linssitesti-isoisa-elsass
+    linssi "kamera 20 30 20000"; sleep 8; linssi "isoisa tila"; kuva linssitesti-isoisa-pallo
+    linssi "linssi pois"; sleep 3; hae "$2"; grep -a "isoisä\|auki" "$2/linssi-loki.txt" | tail -12 ;;
   kontakti)
     # Kiinteät näkymät (lat lon korkeus km); keksinnöt, ihmisen matka ja astronautti
     # ohjaavat kameraa itse, joten niistä otetaan linssin oma näkymä.
