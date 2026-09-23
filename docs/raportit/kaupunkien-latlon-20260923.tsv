@@ -1,0 +1,164 @@
+id	nimi	maa	luokka	lat	lon	lahde	lauta_lat	lauta_lon	poikkeama_km	huomio
+lontoo	Lontoo	GBR	piste	51.507	-0.128	Wikidata Q84 P625 (fi-wiki: Lontoo)	51.505	-0.115	1	
+istanbul	Istanbul	TUR	piste	41.010	28.960	Wikidata Q406 P625 (fi-wiki: Istanbul)	41.010	28.895	5	
+dublin	Dublin	IRL	piste	53.350	-6.260	Wikidata Q1761 P625 (fi-wiki: Dublin)	53.368	-6.259	2	
+edinburgh	Edinburgh	GBR	piste	55.953	-3.189	Wikidata Q23436 P625 (fi-wiki: Edinburgh)	55.954	-3.187	0	
+pariisi	Pariisi	FRA	piste	48.857	2.352	Wikidata Q90 P625 (fi-wiki: Pariisi)	48.845	2.333	2	
+lissabon	Lissabon	PRT	piste	38.708	-9.139	Wikidata Q597 P625 (fi-wiki: Lissabon)	38.731	-9.124	3	
+madrid	Madrid	ESP	piste	40.417	-3.703	Wikidata Q2807 P625 (fi-wiki: Madrid)	40.404	-3.709	2	
+granada	Granada	ESP	piste	37.175	-3.600	Wikidata Q8810 P625 (fi-wiki: Granada)	37.170	-3.604	1	
+sevilla	Sevilla	ESP	piste	37.389	-5.995	Wikidata Q8717 P625 (fi-wiki: Sevilla)	37.389	-5.989	1	
+amsterdam	Amsterdam	NLD	piste	52.367	4.883	Wikidata Q727 P625 (fi-wiki: Amsterdam)	52.381	4.886	2	
+bryssel	Bryssel	BEL	piste	50.847	4.353	Wikidata Q240 P625 (fi-wiki: Bryssel)	50.850	4.352	0	pistemäinen kohde (region of Belgium)
+luxemburg	Luxemburg	LUX	piste	49.611	6.130	Wikidata Q1842 P625 (fi-wiki: Luxemburg (kaupunki))	49.613	6.131	0	
+berliini	Berliini	DEU	piste	52.517	13.383	Wikidata Q64 P625 (fi-wiki: Berliini)	52.532	13.376	2	
+praha	Praha	CZE	piste	50.087	14.421	Wikidata Q1085 P625 (fi-wiki: Praha)	50.098	14.417	1	
+kosice	Košice	SVK	piste	48.717	21.250	Wikidata Q25409 P625 (fi-wiki: Košice)	48.717	21.260	1	
+ljubljana	Ljubljana	SVN	piste	46.051	14.506	Wikidata Q437 P625 (fi-wiki: Ljubljana)	46.057	14.507	1	
+wien	Wien	AUT	piste	48.208	16.372	Wikidata Q1741 P625 (fi-wiki: Wien)	48.198	16.397	2	
+varsova	Varsova	POL	piste	52.230	21.011	Wikidata Q270 P625 (fi-wiki: Varsova)	52.229	21.032	1	
+krakova	Krakova	POL	piste	50.061	19.937	Wikidata Q31487 P625 (fi-wiki: Krakova)	50.062	19.937	0	
+alpit	Alpit	CHE	alue	47.666	7.334	laudan piste (laudaltaAsteiksi, laudan tarkoittama kohta); viitteeksi Wikidata Q1286 P625 (fi-wiki: Alpit): 46.578, 8.615 (alueen keskipiste)	47.666	7.334	155	alue: Wikidatan piste on keskipiste; 7.9. linjaus: alueita ei siirretä pallolla
+venetsia	Venetsia	ITA	piste	45.440	12.332	Wikidata Q641 P625 (fi-wiki: Venetsia)	45.460	12.452	10	
+firenze	Firenze	ITA	piste	43.771	11.254	Wikidata Q2044 P625 (fi-wiki: Firenze)	43.771	11.255	0	
+rooma	Rooma	ITA	piste	41.893	12.483	Wikidata Q220 P625 (fi-wiki: Rooma)	41.887	12.491	1	
+sisilia	Sisilia	ITA	alue	38.123	13.376	laudan piste (laudaltaAsteiksi, laudan tarkoittama kohta); viitteeksi Wikidata Q4951156 P625 (fi-wiki: Sisilia): 37.567, 14.267 (alueen keskipiste)	38.123	13.376	100	alue: Wikidatan piste on keskipiste; 7.9. linjaus: alueita ei siirretä pallolla
+valletta	Valletta	MLT	piste	35.898	14.512	Wikidata Q23800 P625 (fi-wiki: Valletta)	35.898	14.516	0	
+ateena	Ateena	GRC	piste	37.984	23.728	Wikidata Q1524 P625 (fi-wiki: Ateena)	37.970	23.741	2	
+kreeta	Kreeta	GRC	alue	35.294	25.304	laudan piste (laudaltaAsteiksi, laudan tarkoittama kohta); viitteeksi Wikidata Q34374 P625 (fi-wiki: Kreeta): 35.310, 24.893 (alueen keskipiste)	35.294	25.304	37	alue: Wikidatan piste on keskipiste; 7.9. linjaus: alueita ei siirretä pallolla
+dubrovnik	Dubrovnik	HRV	piste	42.640	18.108	Wikidata Q1722 P625 (fi-wiki: Dubrovnik)	42.722	18.167	10	
+sofia	Sofia	BGR	piste	42.698	23.322	Wikidata Q472 P625 (fi-wiki: Sofia)	42.684	23.324	2	
+bukarest	Bukarest	ROU	piste	44.413	26.098	Wikidata Q19660 P625 (fi-wiki: Bukarest)	44.432	26.084	2	
+kiova	Kiova	UKR	piste	50.450	30.524	Wikidata Q1899 P625 (fi-wiki: Kiova)	50.442	30.509	1	
+odessa	Odessa	UKR	piste	46.477	30.733	Wikidata Q1874 P625 (fi-wiki: Odessa)	46.562	30.668	11	
+moskova	Moskova	RUS	piste	55.751	37.617	Wikidata Q649 P625 (fi-wiki: Moskova)	55.764	37.646	2	
+pietari	Pietari	RUS	piste	59.950	30.317	Wikidata Q656 P625 (fi-wiki: Pietari (kaupunki))	59.946	30.302	1	
+tampere	Tampere	FIN	piste	61.498	23.760	Wikidata Q40840 P625 (fi-wiki: Tampere)	61.498	23.762	0	
+tukholma	Tukholma	SWE	piste	59.329	18.069	Wikidata Q1754 P625 (fi-wiki: Tukholma)	59.338	18.062	1	
+oslo	Oslo	NOR	piste	59.913	10.739	Wikidata Q585 P625 (fi-wiki: Oslo)	59.908	10.772	2	
+bergen	Bergen	NOR	piste	60.392	5.323	Wikidata Q26793 P625 (fi-wiki: Bergen)	60.390	5.321	0	
+kobenhavn	Kööpenhamina	DNK	piste	55.676	12.569	Wikidata Q1748 P625 (fi-wiki: Kööpenhamina)	55.689	12.542	2	
+lappi	Rovaniemi	FIN	piste	66.503	25.728	Wikidata Q103717 P625 (fi-wiki: Rovaniemi)	66.487	25.718	2	
+islanti	Islanti	ISL	alue	64.150	-21.820	laudan piste (laudaltaAsteiksi, laudan tarkoittama kohta); viitteeksi Wikidata Q189 P625 (fi-wiki: Islanti): 65.000, -19.000 (alueen keskipiste)	64.150	-21.820	164	alue: Wikidatan piste on keskipiste; 7.9. linjaus: alueita ei siirretä pallolla
+tanger	Tanger	MAR	piste	35.770	-5.803	Wikidata Q126148 P625 (fi-wiki: Tanger)	35.814	-5.707	10	
+kairo	Kairo	EGY	piste	30.044	31.236	Wikidata Q85 P625 (fi-wiki: Kairo)	30.000	31.226	5	
+tripoli	Tripoli	LBY	piste	32.888	13.188	Wikidata Q3579 P625 (fi-wiki: Tripoli)	32.881	13.226	4	
+alkufra	Al Kufra	LBY	piste	24.183	23.283	Wikidata Q172114 P625 (fi-wiki: Kufra)	24.240	23.276	6	
+sahara	Sahara	DZA	alue	26.561	8.501	laudan piste (laudaltaAsteiksi, laudan tarkoittama kohta); viitteeksi Wikidata Q6583 P625 (fi-wiki: Sahara): 23.080, 12.612 (alueen keskipiste)	26.561	8.501	567	alue: Wikidatan piste on keskipiste; 7.9. linjaus: alueita ei siirretä pallolla
+ahaggar	Ahaggar	DZA	alue	21.440	3.401	laudan piste (laudaltaAsteiksi, laudan tarkoittama kohta); viitteeksi Wikidata Q26399 P625 (fi-wiki: Ahaggar): 23.167, 5.833 (alueen keskipiste)	21.440	3.401	315	alue: Wikidatan piste on keskipiste; 7.9. linjaus: alueita ei siirretä pallolla
+fes	Fès	MAR	piste	34.043	-5.003	Wikidata Q80985 P625 (fi-wiki: Fès)	34.030	-4.981	3	
+gao	Gao	MLI	piste	16.267	-0.050	Wikidata Q188904 P625 (en-wiki: Gao)	14.559	2.951	374	yli 15 km: siirtyy pallolla 374 km; fi-wiki-nimi "Gao" ei löydy Wikidatasta: korjaa wiki-kenttä
+sierraleone	Sierra Leone	SLE	alue	8.640	-12.874	laudan piste (laudaltaAsteiksi, laudan tarkoittama kohta); viitteeksi Wikidata Q1044 P625 (fi-wiki: Sierra Leone): 8.500, -12.100 (alueen keskipiste)	8.640	-12.874	87	alue: Wikidatan piste on keskipiste; 7.9. linjaus: alueita ei siirretä pallolla
+kappalmas	Kap Palmas	LBR	tarkistettava	4.376	-7.717	Wikidata Q1034489 P625 (en-wiki: Cape Palmas)	4.799	-6.949	97	niemi = pistemäinen kohde, mutta 7.9. listattu alueeksi; Wikidatan piste on niemen kärki; fi-wiki-nimi "Cape Palmas" ei löydy Wikidatasta: korjaa wiki-kenttä
+orjarannikko	Orjarannikko	NGA	tarina	8.321	3.851	laudan piste; Wikidata Q850031 P625 (fi-wiki: Ouidah): 6.367, 2.083	8.321	3.851	292	laudan nimi rannikkoalue, wiki-sivu Ouidah (7.9. jätetty tarinan ratkaistavaksi)
+tshadjarvi	Tšad-järvi	TCD	alue	13.600	15.251	laudan piste (laudaltaAsteiksi, laudan tarkoittama kohta); viitteeksi Wikidata Q125309 P625 (fi-wiki: Tšadjärvi): 13.098, 14.534 (alueen keskipiste)	13.600	15.251	96	alue: Wikidatan piste on keskipiste; 7.9. linjaus: alueita ei siirretä pallolla
+kamerun	Kamerun	CMR	tarina	2.561	10.601	laudan piste; Wikidata Q190562 P625 (fi-wiki: Kamerunvuori): 4.217, 9.172	2.561	10.601	243	wiki-sivu Kamerunvuori (tulivuoren huippu), laudan piste 243 km muualla: tarkoittaako lauta vuorta vai aluetta?
+kongo	Kongo	COD	alue	-4.800	13.001	laudan piste (laudaltaAsteiksi, laudan tarkoittama kohta); viitteeksi Wikidata Q3503 P625 (fi-wiki: Kongo (joki)): -6.075, 12.450 (alueen keskipiste)	-4.800	13.001	154	alue: Wikidatan piste on keskipiste; 7.9. linjaus: alueita ei siirretä pallolla
+angola	Angola	AGO	alue	-12.001	16.001	laudan piste (laudaltaAsteiksi, laudan tarkoittama kohta); viitteeksi Wikidata Q916 P625 (fi-wiki: Angola): -12.350, 17.350 (alueen keskipiste)	-12.001	16.001	152	alue: Wikidatan piste on keskipiste; 7.9. linjaus: alueita ei siirretä pallolla
+namib	Namib	NAM	alue	-23.600	15.626	laudan piste (laudaltaAsteiksi, laudan tarkoittama kohta); viitteeksi Wikidata Q131377 P625 (fi-wiki: Namib): -23.000, 15.000 (alueen keskipiste)	-23.600	15.626	92	alue: Wikidatan piste on keskipiste; 7.9. linjaus: alueita ei siirretä pallolla
+sthelena	St. Helena	SHN	alue	-13.760	-4.624	laudan piste (laudaltaAsteiksi, laudan tarkoittama kohta); viitteeksi Wikidata Q34497 P625 (fi-wiki: Saint Helena): -15.950, -5.717 (alueen keskipiste)	-13.760	-4.624	270	alue: Wikidatan piste on keskipiste; 7.9. linjaus: alueita ei siirretä pallolla
+kimberley	Kimberley	ZAF	piste	-28.738	24.764	Wikidata Q125905 P625 (fi-wiki: Kimberley (Etelä-Afrikka))	-28.721	24.776	2	
+mosambik	Mosambik	MOZ	tarina	-19.544	34.586	laudan piste; Wikidata Q331099 P625 (fi-wiki: Mosambikin saari): -15.037, 40.733	-19.544	34.586	823	laudan nimi alue Mosambik, wiki-sivu Mosambikin saari; laudan piste Beiran rannikolla (7.9. jätetty tarinan ratkaistavaksi)
+madagaskar	Madagaskar	MDG	alue	-19.426	48.902	laudan piste (laudaltaAsteiksi, laudan tarkoittama kohta); viitteeksi Wikidata Q1019 P625 (fi-wiki: Madagaskar): -20.000, 47.000 (alueen keskipiste)	-19.426	48.902	209	alue: Wikidatan piste on keskipiste; 7.9. linjaus: alueita ei siirretä pallolla
+viktoria	Viktoria Nyanza	UGA	alue	0.000	31.751	laudan piste (laudaltaAsteiksi, laudan tarkoittama kohta); viitteeksi Wikidata Q5505 P625 (en-wiki: Lake Victoria): -1.000, 33.000 (alueen keskipiste)	0.000	31.751	178	alue: Wikidatan piste on keskipiste; 7.9. linjaus: alueita ei siirretä pallolla; fi-wiki-nimi "Victoria-järvi" ei löydy Wikidatasta: korjaa wiki-kenttä
+tanganjika	Tanganjika	COD	alue	-7.361	29.126	laudan piste (laudaltaAsteiksi, laudan tarkoittama kohta); viitteeksi Wikidata Q5511 P625 (fi-wiki: Tanganjikajärvi): -6.100, 29.500 (alueen keskipiste)	-7.361	29.126	146	alue: Wikidatan piste on keskipiste; 7.9. linjaus: alueita ei siirretä pallolla
+bahrelghazal	Bahr el Ghazal	SDS	alue	7.999	27.026	laudan piste (laudaltaAsteiksi, laudan tarkoittama kohta); viitteeksi Wikidata Q803639 P625 (en-wiki: Bahr el Ghazal): 8.000, 28.000 (alueen keskipiste)	7.999	27.026	107	alue: Wikidatan piste on keskipiste; 7.9. linjaus: alueita ei siirretä pallolla; fi-wiki-nimi "Bahr el Ghazal" ei löydy Wikidatasta: korjaa wiki-kenttä
+darfur	Darfur	SDN	alue	14.559	23.126	laudan piste (laudaltaAsteiksi, laudan tarkoittama kohta); viitteeksi Wikidata Q46733 P625 (fi-wiki: Darfur): 13.000, 25.000 (alueen keskipiste)	14.559	23.126	267	alue: Wikidatan piste on keskipiste; 7.9. linjaus: alueita ei siirretä pallolla
+suakin	Suakin	SDN	piste	19.102	37.330	Wikidata Q571215 P625 (fi-wiki: Suakin)	19.119	37.301	4	
+addisabeba	Addis Abeba	ETH	piste	9.036	38.752	Wikidata Q3624 P625 (fi-wiki: Addis Abeba)	9.039	38.726	3	
+lalibela	Lalibela	ETH	piste	12.036	39.046	Wikidata Q207590 P625 (fi-wiki: Lalibela)	12.030	39.041	1	
+rashafun	Ras Hafun	SOM	tarkistettava	10.419	51.275	Wikidata Q3237966 P625 (en-wiki: Ras Hafun)	10.560	50.501	86	niemi = pistemäinen kohde; Wikidatan piste on niemen kärki; fi-wiki-nimi "Ras Hafun" ei löydy Wikidatasta: korjaa wiki-kenttä
+izmir	Izmir	TUR	piste	38.413	27.138	Wikidata Q35997 P625 (fi-wiki: İzmir)	38.422	27.119	2	
+ankara	Ankara	TUR	piste	39.936	32.839	Wikidata Q3640 P625 (fi-wiki: Ankara)	39.918	32.840	2	
+kapadokia	Kappadokia	TUR	alue	38.355	35.039	laudan piste (laudaltaAsteiksi, laudan tarkoittama kohta); viitteeksi Wikidata Q217265 P625 (fi-wiki: Kappadokia): 38.671, 34.839 (alueen keskipiste)	38.355	35.039	39	alue: Wikidatan piste on keskipiste; 7.9. linjaus: alueita ei siirretä pallolla
+nikosia	Nikosia	CYP	piste	35.172	33.365	Wikidata Q3856 P625 (fi-wiki: Nikosia)	35.156	33.359	2	
+halab	Aleppo	SYR	piste	36.200	37.160	Wikidata Q41183 P625 (fi-wiki: Aleppo)	36.211	37.160	1	
+damaskos	Damaskos	SYR	piste	33.513	36.292	Wikidata Q3766 P625 (fi-wiki: Damaskos)	33.490	36.320	4	
+siinai	Siinai	EGY	alue	28.558	33.959	laudan piste (laudaltaAsteiksi, laudan tarkoittama kohta); viitteeksi Wikidata Q36755 P625 (fi-wiki: Siinai): 29.500, 34.000 (alueen keskipiste)	28.558	33.959	105	alue: Wikidatan piste on keskipiste; 7.9. linjaus: alueita ei siirretä pallolla
+luxor	Luxor	EGY	piste	25.697	32.644	Wikidata Q130514 P625 (fi-wiki: Luxor)	25.701	32.639	1	
+medina	Medina	SAU	piste	24.470	39.610	Wikidata Q35484 P625 (fi-wiki: Medina)	24.475	39.599	1	
+mekka	Mekka	SAU	piste	21.422	39.826	Wikidata Q5806 P625 (fi-wiki: Mekka)	21.414	39.800	3	
+riad	Riad	SAU	piste	24.650	46.710	Wikidata Q3692 P625 (fi-wiki: Riad)	24.613	46.721	4	
+rubalkhali	Rub al-Khali	SAU	alue	20.495	50.999	laudan piste (laudaltaAsteiksi, laudan tarkoittama kohta); viitteeksi Wikidata Q229269 P625 (fi-wiki: Rub al-Khali): 20.000, 50.000 (alueen keskipiste)	20.495	50.999	118	alue: Wikidatan piste on keskipiste; 7.9. linjaus: alueita ei siirretä pallolla
+sana	Sana	YEM	piste	15.350	44.200	Wikidata Q2471 P625 (fi-wiki: Sanaa)	15.361	44.201	1	
+aden	Aden	YEM	piste	12.800	45.033	Wikidata Q131694 P625 (fi-wiki: Aden)	12.810	45.041	1	
+salalah	Salalah	OMN	piste	17.020	54.090	Wikidata Q1294439 P625 (fi-wiki: Salala)	16.963	53.963	15	
+masqat	Masqat	OMN	piste	23.614	58.592	Wikidata Q3826 P625 (fi-wiki: Masqat)	23.591	58.559	4	
+doha	Doha	QAT	piste	25.286	51.529	Wikidata Q3861 P625 (fi-wiki: Doha)	25.293	51.521	1	
+kuwait	Kuwait	KWT	piste	29.375	47.980	Wikidata Q35178 P625 (fi-wiki: Kuwait (kaupunki))	29.319	48.104	14	
+bagdad	Bagdad	IRQ	piste	33.315	44.366	Wikidata Q1530 P625 (fi-wiki: Bagdad)	33.319	44.360	1	
+mosul	Mosul	IRQ	piste	36.342	43.129	Wikidata Q83317 P625 (fi-wiki: Mosul)	36.347	43.121	1	
+tabriz	Tabriz	IRN	piste	38.074	46.296	Wikidata Q80053 P625 (fi-wiki: Tabriz)	38.081	46.319	2	
+teheran	Teheran	IRN	piste	35.689	51.390	Wikidata Q3616 P625 (fi-wiki: Teheran)	35.700	51.401	2	
+isfahan	Isfahan	IRN	piste	32.653	51.675	Wikidata Q42053 P625 (fi-wiki: Isfahan)	32.639	51.680	2	
+persepolis	Persepolis	IRN	piste	29.935	52.890	Wikidata Q129072 P625 (fi-wiki: Persepolis)	29.918	52.880	2	
+tokio	Tokio	JPN	piste	35.689	139.692	Wikidata Q1490 P625 (fi-wiki: Tokio)	35.700	139.700	1	
+jekaterinburg	Jekaterinburg	RUS	piste	56.836	60.613	Wikidata Q887 P625 (fi-wiki: Jekaterinburg)	56.801	60.599	4	
+astana	Astana	KAZ	piste	51.133	71.433	Wikidata Q1520 P625 (fi-wiki: Astana)	51.200	71.399	8	
+novosibirsk	Novosibirsk	RUS	piste	55.033	82.917	Wikidata Q883 P625 (fi-wiki: Novosibirsk)	55.000	82.901	4	
+irkutsk	Irkutsk	RUS	piste	52.289	104.280	Wikidata Q6576 P625 (fi-wiki: Irkutsk)	52.300	104.300	2	
+jakutsk	Jakutsk	RUS	piste	62.027	129.732	Wikidata Q6610 P625 (fi-wiki: Jakutsk)	62.000	129.701	3	
+magadan	Magadan	RUS	piste	59.567	150.800	Wikidata Q7968 P625 (fi-wiki: Magadan)	59.599	150.800	4	
+kamtsatka	Kamtšatka	RUS	alue	52.999	158.720	laudan piste (laudaltaAsteiksi, laudan tarkoittama kohta); viitteeksi Wikidata Q993 P625 (fi-wiki: Kamtšatkan niemimaa): 57.000, 160.000 (alueen keskipiste)	52.999	158.720	452	alue: Wikidatan piste on keskipiste; 7.9. linjaus: alueita ei siirretä pallolla
+sahalin	Sahalin	RUS	alue	50.000	142.700	laudan piste (laudaltaAsteiksi, laudan tarkoittama kohta); viitteeksi Wikidata Q7792 P625 (fi-wiki: Sahalin): 50.500, 143.000 (alueen keskipiste)	50.000	142.700	60	alue: Wikidatan piste on keskipiste; 7.9. linjaus: alueita ei siirretä pallolla
+peking	Peking	CHN	piste	39.904	116.408	Wikidata Q956 P625 (fi-wiki: Peking)	39.901	116.399	1	
+soul	Soul	KOR	piste	37.560	126.990	Wikidata Q8684 P625 (fi-wiki: Soul (kaupunki))	37.599	127.001	4	
+xian	Xi’an	CHN	piste	34.261	108.942	Wikidata Q5826 P625 (fi-wiki: Xi’an)	34.299	108.899	6	
+hanoi	Hanoi	VNM	piste	21.024	105.841	Wikidata Q1858 P625 (fi-wiki: Hanoi)	21.001	105.800	5	
+bangkok	Bangkok	THA	piste	13.750	100.517	Wikidata Q1861 P625 (fi-wiki: Bangkok)	13.801	100.499	6	
+yangon	Yangon	MMR	piste	16.805	96.156	Wikidata Q37995 P625 (fi-wiki: Yangon)	16.800	96.200	5	
+mandalay	Mandalay	MMR	piste	21.983	96.084	Wikidata Q185518 P625 (fi-wiki: Mandalay)	22.010	96.110	4	
+sumatra	Sumatra	IDN	alue	4.200	97.601	laudan piste (laudaltaAsteiksi, laudan tarkoittama kohta); viitteeksi Wikidata Q3492 P625 (fi-wiki: Sumatra): -0.299, 101.271 (alueen keskipiste)	4.200	97.601	645	alue: Wikidatan piste on keskipiste; 7.9. linjaus: alueita ei siirretä pallolla
+borneo	Borneo	IDN	alue	1.551	110.300	laudan piste (laudaltaAsteiksi, laudan tarkoittama kohta); viitteeksi Wikidata Q36117 P625 (fi-wiki: Borneo): -1.000, 114.000 (alueen keskipiste)	1.551	110.300	500	alue: Wikidatan piste on keskipiste; 7.9. linjaus: alueita ei siirretä pallolla
+kolkata	Kolkata	IND	piste	22.567	88.370	Wikidata Q1348 P625 (fi-wiki: Kalkutta)	22.601	88.400	5	
+kabul	Kabul	AFG	piste	34.533	69.166	Wikidata Q5838 P625 (fi-wiki: Kabul)	34.499	69.200	5	
+samarkand	Samarkand	UZB	piste	39.655	66.976	Wikidata Q5753 P625 (fi-wiki: Samarkand)	39.699	66.899	8	
+kashgar	Kašgar	CHN	piste	39.450	75.983	Wikidata Q170521 P625 (fi-wiki: Kašgar)	39.500	75.899	9	
+anchorage	Anchorage	USA	piste	61.217	-149.894	Wikidata Q39450 P625 (fi-wiki: Anchorage)	61.199	-149.899	2	
+whitehorse	Whitehorse	CAN	piste	60.717	-135.056	Wikidata Q2055 P625 (fi-wiki: Whitehorse)	60.701	-135.100	3	
+yellowknife	Yellowknife	CAN	piste	62.442	-114.397	Wikidata Q2061 P625 (fi-wiki: Yellowknife)	62.499	-114.400	6	
+yellowstone	Yellowstone	USA	piste	44.600	-110.500	Wikidata Q351 P625 (fi-wiki: Yellowstonen kansallispuisto)	44.601	-110.500	0	pistemäinen kohde (national park)
+winnipeg	Winnipeg	CAN	piste	49.896	-97.139	Wikidata Q2135 P625 (fi-wiki: Winnipeg)	49.901	-97.099	3	
+labrador	Labrador	CAN	alue	53.300	-60.400	laudan piste (laudaltaAsteiksi, laudan tarkoittama kohta); viitteeksi Wikidata Q380307 P625 (fi-wiki: Labrador): 54.000, -62.000 (alueen keskipiste)	53.300	-60.400	131	alue: Wikidatan piste on keskipiste; 7.9. linjaus: alueita ei siirretä pallolla
+toronto	Toronto	CAN	piste	43.670	-79.387	Wikidata Q172 P625 (fi-wiki: Toronto)	43.700	-79.399	3	
+chicago	Chicago	USA	piste	41.882	-87.628	Wikidata Q1297 P625 (fi-wiki: Chicago)	41.899	-87.601	3	
+appalakit	Appalakit	USA	alue	37.501	-80.500	laudan piste (laudaltaAsteiksi, laudan tarkoittama kohta); viitteeksi Wikidata Q93332 P625 (fi-wiki: Appalakit): 38.000, -79.000 (alueen keskipiste)	37.501	-80.500	143	alue: Wikidatan piste on keskipiste; 7.9. linjaus: alueita ei siirretä pallolla
+bermuda	Bermuda	GBR	piste	32.320	-64.740	Wikidata Q23635 P625 (fi-wiki: Bermuda)	32.299	-64.750	3	pistemäinen kohde (British Overseas Territories)
+denver	Denver	USA	piste	39.739	-104.985	Wikidata Q16554 P625 (fi-wiki: Denver)	39.699	-105.001	5	
+grandcanyon	Grand Canyon	USA	piste	36.097	-112.095	Wikidata Q118841 P625 (fi-wiki: Grand Canyon)	36.100	-112.099	0	pistemäinen kohde (canyon)
+hawaii	Havaiji	USA	alue	20.000	-156.301	laudan piste (laudaltaAsteiksi, laudan tarkoittama kohta); viitteeksi Wikidata Q782 P625 (fi-wiki: Havaiji): 21.500, -158.000 (alueen keskipiste)	20.000	-156.301	243	alue: Wikidatan piste on keskipiste; 7.9. linjaus: alueita ei siirretä pallolla
+monterrey	Monterrey	MEX	piste	25.684	-100.318	Wikidata Q81033 P625 (fi-wiki: Monterrey)	25.701	-100.300	3	
+bogota	Bogotá	COL	piste	4.610	-74.082	Wikidata Q2841 P625 (fi-wiki: Bogotá)	4.709	-74.071	11	
+quito	Quito	ECU	piste	-0.220	-78.513	Wikidata Q2900 P625 (fi-wiki: Quito)	-0.180	-78.469	7	
+galapagos	Galápagos	ECU	alue	-0.741	-90.301	laudan piste (laudaltaAsteiksi, laudan tarkoittama kohta); viitteeksi Wikidata Q38095 P625 (fi-wiki: Galápagossaaret): -0.667, -90.550 (alueen keskipiste)	-0.741	-90.301	29	alue: Wikidatan piste on keskipiste; 7.9. linjaus: alueita ei siirretä pallolla
+boavista	Boa Vista	BRA	piste	2.820	-60.672	Wikidata Q181056 P625 (fi-wiki: Boa Vista (Roraima))	2.819	-60.670	0	
+manaus	Manaus	BRA	piste	-3.119	-60.022	Wikidata Q40236 P625 (fi-wiki: Manaus (kaupunki))	-3.119	-60.019	0	
+santarem	Santarém	BRA	piste	-2.443	-54.708	Wikidata Q659450 P625 (fi-wiki: Santarém (Brasilia))	-2.439	-54.709	0	
+iquitos	Iquitos	PER	piste	-3.733	-73.250	Wikidata Q193289 P625 (fi-wiki: Iquitos)	-3.751	-73.249	2	
+portovelho	Porto Velho	BRA	piste	-8.762	-63.904	Wikidata Q172512 P625 (fi-wiki: Porto Velho)	-8.759	-63.901	0	
+bananal	Ilha do Bananal	BRA	alue	-10.801	-50.161	laudan piste (laudaltaAsteiksi, laudan tarkoittama kohta); viitteeksi Wikidata Q282059 P625 (fi-wiki: Bananal): -11.356, -50.236 (alueen keskipiste)	-10.801	-50.161	62	alue: Wikidatan piste on keskipiste; 7.9. linjaus: alueita ei siirretä pallolla
+titicaca	Titicaca	PER	piste	-15.825	-69.325	Wikidata Q35342 P625 (fi-wiki: Titicaca)	-15.800	-69.349	4	pistemäinen kohde (lake)
+santacruz	Santa Cruz	BOL	piste	-17.789	-63.197	Wikidata Q170688 P625 (fi-wiki: Santa Cruz de la Sierra)	-17.779	-63.181	2	
+campogrande	Campo Grande	BRA	piste	-20.469	-54.622	Wikidata Q168929 P625 (fi-wiki: Campo Grande)	-20.450	-54.619	2	
+iguazu	Iguazú	ARG	piste	-25.695	-54.437	Wikidata Q36332 P625 (fi-wiki: Iguassun putoukset)	-25.690	-54.439	1	pistemäinen kohde (waterfall)
+salta	Salta	ARG	piste	-24.788	-65.411	Wikidata Q36307 P625 (fi-wiki: Salta)	-24.789	-65.410	0	
+asuncion	Asunción	PRY	piste	-25.280	-57.634	Wikidata Q2933 P625 (fi-wiki: Asunción)	-25.302	-57.640	2	
+sanambrosio	San Ambrosio	CHL	piste	-26.320	-80.000	Wikidata Q1160526 P625 (en-wiki: Desventuradas Islands)	-26.349	-79.900	10	pistemäinen kohde (archipelago); fi-wiki-nimi "Desventuradas Islands" ei löydy Wikidatasta: korjaa wiki-kenttä
+robinsoncrusoe	Robinson Crusoe	CHL	piste	-33.641	-78.841	Wikidata Q156325 P625 (fi-wiki: Juan Fernándezin saaret)	-33.624	-78.916	7	pistemäinen kohde (archipelago)
+falkland	Falkland	GBR	alue	-51.879	-59.083	laudan piste (laudaltaAsteiksi, laudan tarkoittama kohta); viitteeksi Wikidata Q9648 P625 (fi-wiki: Falklandinsaaret): -51.730, -59.220 (alueen keskipiste)	-51.879	-59.083	19	alue: Wikidatan piste on keskipiste; 7.9. linjaus: alueita ei siirretä pallolla
+caphorn	Kap Horn	CHL	piste	-55.980	-67.289	Wikidata Q4078 P625 (fi-wiki: Kap Horn)	-55.901	-67.249	9	pistemäinen kohde (cape)
+alicesprings	Alice Springs	AUS	piste	-23.700	133.867	Wikidata Q17872 P625 (fi-wiki: Alice Springs)	-23.699	133.901	3	
+kalgoorlie	Kalgoorlie	AUS	piste	-30.749	121.466	Wikidata Q329503 P625 (fi-wiki: Kalgoorlie)	-30.700	121.499	6	
+nullarbor	Nullarbor	AUS	alue	-31.400	130.001	laudan piste (laudaltaAsteiksi, laudan tarkoittama kohta); viitteeksi Wikidata Q381050 P625 (fi-wiki: Nullarborin tasanko): -30.768, 128.970 (alueen keskipiste)	-31.400	130.001	121	alue: Wikidatan piste on keskipiste; 7.9. linjaus: alueita ei siirretä pallolla
+birdsville	Birdsville	AUS	piste	-25.899	139.352	Wikidata Q865118 P625 (en-wiki: Birdsville)	-25.900	139.400	5	fi-wiki-nimi "Birdsville" ei löydy Wikidatasta: korjaa wiki-kenttä
+exmouth	Exmouth	AUS	piste	-21.933	114.128	Wikidata Q1383990 P625 (en-wiki: Exmouth, Western Australia)	-22.299	114.899	89	yli 15 km: siirtyy pallolla 89 km; fi-wiki-nimi "Exmouth, Western Australia" ei löydy Wikidatasta: korjaa wiki-kenttä
+mountisa	Mount Isa	AUS	piste	-20.725	139.495	Wikidata Q606335 P625 (fi-wiki: Mount Isa)	-20.700	139.499	3	
+cooberpedy	Coober Pedy	AUS	piste	-29.014	134.755	Wikidata Q779188 P625 (en-wiki: Coober Pedy)	-29.000	134.801	5	fi-wiki-nimi "Coober Pedy" ei löydy Wikidatasta: korjaa wiki-kenttä
+sepik	Sepik	PNG	alue	-4.500	143.201	laudan piste (laudaltaAsteiksi, laudan tarkoittama kohta); viitteeksi Wikidata Q848308 P625 (fi-wiki: Sepik): -3.842, 144.539 (alueen keskipiste)	-4.500	143.201	165	alue: Wikidatan piste on keskipiste; 7.9. linjaus: alueita ei siirretä pallolla
+honiara	Honiara	SLB	piste	-9.433	159.950	Wikidata Q40921 P625 (fi-wiki: Honiara)	-9.399	159.899	7	
+portvila	Port Vila	VUT	piste	-17.733	168.317	Wikidata Q37806 P625 (fi-wiki: Port Vila)	-17.700	168.299	4	
+noumea	Nouméa	FRA	piste	-22.267	166.450	Wikidata Q9733 P625 (fi-wiki: Nouméa)	-22.199	166.400	9	
+norfolk	Norfolk	AUS	piste	-29.033	167.950	Wikidata Q31057 P625 (fi-wiki: Norfolkinsaari)	-29.049	167.951	2	pistemäinen kohde (external territory of Australia)
+auckland	Auckland	NZL	piste	-36.849	174.765	Wikidata Q37100 P625 (fi-wiki: Auckland)	-36.899	174.800	6	
+dunedin	Dunedin	NZL	piste	-45.874	170.504	Wikidata Q133073 P625 (fi-wiki: Dunedin (Uusi-Seelanti))	-45.870	170.501	1	
+bali	Bali	IDN	alue	-8.500	115.100	laudan piste (laudaltaAsteiksi, laudan tarkoittama kohta); viitteeksi Wikidata Q4648 P625 (fi-wiki: Bali): -8.356, 115.072 (alueen keskipiste)	-8.500	115.100	16	alue: Wikidatan piste on keskipiste; 7.9. linjaus: alueita ei siirretä pallolla
