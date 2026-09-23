@@ -20,7 +20,11 @@ import { fileURLToPath } from 'node:url';
 
 const TAMA = dirname(fileURLToPath(import.meta.url));
 export const KORKEUSTIEDOSTO = join(TAMA, 'kaupunkien-korkeudet.json');
-const OLETUS_DEM = '/Volumes/NAS-Homes/koodaus/Claude/Matkakirja-arkisto/dem/copernicus-glo30';
+// Karttasepän maastokansio (vain luku) ja Siirtosepän omat kaupunkiruudut
+// (Euroopan ulkopuoliset GLO-30 ja puuttuvien kohdalla GLO-90, ladattu
+// omistajan luvalla 23.9.2026). Karttasepän kansioon ei kirjoiteta.
+const ARKISTO = '/Volumes/NAS-Homes/koodaus/Claude/Matkakirja-arkisto/dem';
+const OLETUS_DEM = [`${ARKISTO}/copernicus-glo30`, `${ARKISTO}/kaupunkikorkeudet`];
 
 export function lueKorkeudet() {
   return existsSync(KORKEUSTIEDOSTO) ? JSON.parse(readFileSync(KORKEUSTIEDOSTO, 'utf8')) : { kaupungit: {} };
@@ -44,7 +48,7 @@ async function paivita(dem) {
     // GLO-30:n julkisesta jakelusta puuttuu muutama ruutu (esim. N38 E046,
     // Tabriz); silloin käytetään saman kansion GLO-90-ruutua (COG_30).
     const polku = [ruudunNimi(k.lat, k.lon), ruudunNimi(k.lat, k.lon).replace('_COG_10_', '_COG_30_')]
-      .map((n) => join(dem, n)).find((p) => existsSync(p));
+      .flatMap((n) => dem.map((kansio) => join(kansio, n))).find((p) => existsSync(p));
     if (!polku) { tulos[k.id] = null; continue; }
     const r = avaaGeotiff(polku);
     try {
@@ -64,7 +68,7 @@ async function paivita(dem) {
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const i = process.argv.indexOf('--dem');
-  const dem = i > 0 ? process.argv[i + 1] : OLETUS_DEM;
+  const dem = i > 0 ? [process.argv[i + 1]] : OLETUS_DEM;
   if (process.argv.includes('--paivita')) {
     // Ei top-level awaitia: kokoelmat.mjs tuo tämän moduulin, ja paivita()
     // tuo vie-sisalto.mjs:n, joten odotus moduulin tasolla lukitsisi
