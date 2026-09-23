@@ -183,7 +183,10 @@ Paketin juuressa, manifestissa `offline: { tiedosto, sha256, tavuja }`. Lähde
                             "skeema": "tms", "projektio": "EPSG:4326", "globaaliMax": 6 } },
   "globaali": { "rasteri": { "0": [x0,y0,x1,y1], … "5": … },
                 "maasto":  { "0": [[x0,y0,x1,y1], …], … "6": … },   // layer.json available -välit
-                "media": [url, …], "tavuja": { "rasteri", "maasto", "media", "yht" } },
+                "media": [], "tavuja": { "rasteri", "maasto", "media": 0, "yht" } },   // noin 14 Mt
+  "valinnaiset": { "aanet":   { "media": [url, …], "tavuja" },     // maahan sitomaton media,
+                   "kuvat":   { "media": [url, …], "tavuja" },     // ladataan erikseen
+                   "linssit": { "media": [url, …], "tavuja" } },
   "maat": { "FIN": { "iso2": "FI", "nimi": "Suomi",
                      "rasteri": { "6": [x0,y0,x1,y1], "7": …, "8": … },
                      "maasto":  { "7": [x0,y0,x1,y1], … },            // vain available-alueella
@@ -198,9 +201,10 @@ Paketin juuressa, manifestissa `offline: { tiedosto, sha256, tavuja }`. Lähde
 - `media` = valmiit https-osoitteet (ei avaimia). Viite voi kuulua usealle maalle, joten
   poisto tehdään viitelaskennalla. Ulkoiset lähde- ja viitekuvat eivät kuulu mukaan.
 - Tavut ovat arvioita: keskikoko otoksesta × määrä (`tools/vienti/offline-koot.json`,
-  päivitys `node tools/vienti/offline.mjs --paivita-koot`). Nykyarvio: globaali noin 560 Mt
-  (josta media noin 550 Mt, ambienssit ja luennat), maan mediaani noin 30 Mt, suurin Ranska
-  noin 460 Mt (maasto z7–z12).
+  päivitys `node tools/vienti/offline.mjs --paivita-koot`). Nykyarvio: globaali noin 14 Mt
+  (vain laatat ja maasto, Natiiviseppä 23.9.), valinnaiset äänet noin 190 Mt, kuvat noin
+  350 Mt ja linssit noin 8 Mt, maan mediaani noin 30 Mt, suurin Ranska noin 460 Mt
+  (maasto z7–z12).
 - Avain on ISO3 (pelin maakoodi), ja `iso2` on mukana `Alueet.Luettelo()`:a varten.
 
 ### 10.3 Palvelinrajapinnat (Cloudflare Workers, sopimus natiiville)
@@ -286,6 +290,15 @@ isäntien lista palvelimella, CORS `*`) + MyMemory-käännös (avaimeton).
 tilastot.js` (GitHub API) vain omistajan työhuoneessa. Karttalaatta-/
 vektori-/reliefimoduulit hakevat vain staattista dataa — rajattu
 tehtävänannon ulkopuolelle.
+
+#### Päätös: natiivin tunnistus (Fable 23.9.2026, sitova)
+
+- Web: `Origin`-sallittulista kuten nyt (`*_ORIGINIT`).
+- Natiivi: ei `Origin`-otsaketta. Sen sijaan **vaaditaan** otsake `x-matkakirja-natiivi` ja
+  sovelluksen bundle id `User-Agent`-otsakkeessa (sama kuin pollo-worker, Matkakirja-repon
+  PR #2956), muuten pyyntö hylätään.
+- Sama sääntö koskee kaikkia palvelinrajapintoja (pulu ja puhe, sähke, ehdotukset ja
+  reaktiot, uutisproxy). Jokaiseen workeriin tarvitaan sama tarkistus kuin pollo-workerissa.
 
 #### Natiivin huomiot
 
