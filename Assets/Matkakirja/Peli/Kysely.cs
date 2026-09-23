@@ -22,16 +22,10 @@
 //                     tähdet, pisteet, löytöpaikat, ennätys); palauttaa
 //                     web-tuloksen, esim. 'pieniAarre' tai 'pollo'
 //   AarreLukittuu   — web lukitseAarre:n laattaosa → Matka.LukitseLaatta
-//   Kaksintaistelu  — web closeQuiz: duelArmed → beginDuel. Tosi = kaksintaistelu
-//                     alkoi eikä vuoro pääty → Matka.KaksintaisteluAlkaa
-//                     (itse kaksintaistelu on Matka.Kaksintaistelu-koukku)
 // MUUT KOUKUT (null = ominaisuutta ei ole):
 //   PulmaOdottaa, AvaaPulma — web pendingPuzzle / openPuzzle: Pulmat.Kytke
 //                     (Peli/Pulmat.cs, generaattorit portattu C#:ksi); vastaus-
 //                     ja sulkulogiikka (Laji Pulma) on tässä
-//   TapahtumiaOn, AvaaTapahtuma — web pack.events / openEvent: Tapahtumat.Kytke
-//                     (Peli/Tapahtumat.cs; maailmankartalla ei tapahtumia, joten
-//                     paino on nolla kuten webissä)
 //   Liput           — web pack.map.countryShapes (ei sisältöpaketissa)
 //   AsetaKuvat      — web setPhotoPool (käyttöliittymä syöttää kuratoidut kuvat)
 using System;
@@ -43,7 +37,7 @@ using System.Text;
 namespace Matkakirja.Peli
 {
     /// <summary>Pysähdyksen muoto (web form / quiz.kind): quiz, claim, photo, flag, event, puzzle.</summary>
-    public enum KysymysMuoto { Visa, Vaite, Kuva, Lippu, Tapahtuma, Pulma }
+    public enum KysymysMuoto { Visa, Vaite, Kuva, Lippu, Pulma }
 
     /// <summary>Kysymysten vaikeustaso (web difficulty / quizLevel): easy, normal, hard.</summary>
     public enum Vaikeustaso { Helppo, Perus, Vaikea }
@@ -185,7 +179,8 @@ namespace Matkakirja.Peli
             var t = new Kyselytila();
             if (o == null) return t;
             foreach (var s in Tekstit(MiniJson.Kentta(o, "kaytetyt"))) t.Kaytetyt.Add(s);
-            if (MiniJson.Teksti(o, "viimeMuoto") is string vm) t.ViimeMuoto = (KysymysMuoto)Enum.Parse(typeof(KysymysMuoto), vm);
+            // Poistettu muoto (vanhan tallennuksen "Tapahtuma", C1) = ei edellistä erikoismuotoa.
+            if (MiniJson.Teksti(o, "viimeMuoto") is string vm && Enum.TryParse(vm, out KysymysMuoto viime)) t.ViimeMuoto = viime;
             foreach (var s in Tekstit(MiniJson.Kentta(o, "tutkitut"))) t.Tutkitut.Add(s);
             if (MiniJson.Kentta(o, "kaari") is List<object> kaaret)
                 foreach (var k in kaaret.Cast<List<object>>())
@@ -238,11 +233,12 @@ namespace Matkakirja.Peli
         /// <summary>Pysähdyksen muotojen painot (web FORM_WEIGHTS) Object.entries-järjestyksessä.</summary>
         public static readonly IReadOnlyList<KeyValuePair<KysymysMuoto, int>> MuotoPainot = new[]
         {
-            new KeyValuePair<KysymysMuoto, int>(KysymysMuoto.Visa, 55),
+            // Visa 55 + webin event-paino 12: maailmankartalla ei ole tapahtumia, joten web siirtää
+            // sen aina visalle (formWeights). Tapahtumamuoto on poistettu natiivista (C1).
+            new KeyValuePair<KysymysMuoto, int>(KysymysMuoto.Visa, 67),
             new KeyValuePair<KysymysMuoto, int>(KysymysMuoto.Vaite, 15),
             new KeyValuePair<KysymysMuoto, int>(KysymysMuoto.Kuva, 10),
             new KeyValuePair<KysymysMuoto, int>(KysymysMuoto.Lippu, 8),
-            new KeyValuePair<KysymysMuoto, int>(KysymysMuoto.Tapahtuma, 12),
         };
 
         /// <summary>Kysyjät kaupungin äänimaiseman (Kaupunki.Tyyppi) mukaan (web ASKERS).</summary>
@@ -313,11 +309,8 @@ namespace Matkakirja.Peli
         public Func<string, bool> LaattaTassa;
         public Func<string, string> LaattaKaantyy;
         public Action<string> AarreLukittuu;
-        public Func<bool> Kaksintaistelu;
         public Func<Pelaaja, bool> PulmaOdottaa;
         public Func<TekoTulos> AvaaPulma;
-        public Func<bool> TapahtumiaOn;
-        public Func<string, TekoTulos> AvaaTapahtuma;
         /// <summary>Lippukysymyksen maat (web countryShapes-järjestyksessä). null = ei lippumuotoa.</summary>
         public IReadOnlyList<Lippumaa> Liput;
 
@@ -341,7 +334,6 @@ namespace Matkakirja.Peli
                 LaattaTassa = matka.LaattaTassa;
                 LaattaKaantyy = c => matka.KaannaLaatta(c)?.WebTulos;
                 AarreLukittuu = c => matka.LukitseLaatta(c);
-                Kaksintaistelu = matka.KaksintaisteluAlkaa;
             }
         }
 
@@ -360,7 +352,7 @@ namespace Matkakirja.Peli
             if (kaupunki == null) return false;
             return Laatta(kaupunki)
                 || (PulmaOdottaa != null && PulmaOdottaa(p))
-                || (!p.Botti && KaariTarina(kaupunki) != null)
+                || KaariTarina(kaupunki) != null
                 || VoiTutkia(kaupunki);
         }
 
@@ -421,7 +413,6 @@ namespace Matkakirja.Peli
         {
             var painot = MuotoPainot.ToDictionary(p => p.Key, p => p.Value);
             if (Data.Vaitteet.Count == 0) painot[KysymysMuoto.Vaite] = 0;
-            if (TapahtumiaOn == null || AvaaTapahtuma == null || !TapahtumiaOn()) painot[KysymysMuoto.Tapahtuma] = 0;
             if (KuvaKohteet().Count == 0 || Kaupungit.Count < KysymysVakiot.KuvaVaihtoehdot) painot[KysymysMuoto.Kuva] = 0;
             if (LippuKohteet().Count < KysymysVakiot.LippuVaihtoehdot) painot[KysymysMuoto.Lippu] = 0;
             if (K.ViimeMuoto.HasValue && K.ViimeMuoto.Value != KysymysMuoto.Visa && painot.ContainsKey(K.ViimeMuoto.Value))
@@ -556,7 +547,7 @@ namespace Matkakirja.Peli
             if (Tila.Vaihe != Vaihe.Toiminta) return TekoTulos.Epaonnistui("Väärä vaihe");
             var p = P;
             var nykyinen = KaupunkiJossa(p);
-            var kaari = (vaikea || (muoto.HasValue && muoto.Value != KysymysMuoto.Visa) || p.Botti || nykyinen == null)
+            var kaari = (vaikea || (muoto.HasValue && muoto.Value != KysymysMuoto.Visa) || nykyinen == null)
                 ? null : KaariTarina(nykyinen);
 
             // Pulma on kohtaamisen jälkeen pysähdyksen ainoa tehtävä.
@@ -578,8 +569,6 @@ namespace Matkakirja.Peli
                 case KysymysMuoto.Vaite: return AvaaVaite(laatta);
                 case KysymysMuoto.Kuva: return AvaaKuva(laatta);
                 case KysymysMuoto.Lippu: return AvaaLippu(laatta);
-                case KysymysMuoto.Tapahtuma:
-                    return AvaaTapahtuma != null ? AvaaTapahtuma(laatta) : TekoTulos.Epaonnistui("Tapahtumat tulevat myöhemmässä erässä");
             }
 
             string q, fakta;
@@ -766,7 +755,7 @@ namespace Matkakirja.Peli
 
             if (oikein)
             {
-                // Vaikean kysymyksen palkkio ennen laatan kääntöä: ryöstäjä vie senkin.
+                // Vaikean kysymyksen palkkio ennen laatan kääntöä (web järjestys).
                 if (q.Vaikea)
                 {
                     p.Raha += KysymysVakiot.VaikeaPalkkio;
@@ -841,7 +830,7 @@ namespace Matkakirja.Peli
 
         /// <summary>
         /// Web closeQuiz: laatattoman kaupungin pulma palaa edelliseen
-        /// vaiheeseen; muuten kaksintaistelu (koukku) tai vuoron päätös.
+        /// vaiheeseen; muuten vuoro päättyy.
         /// </summary>
         public TekoTulos Sulje()
         {
@@ -856,7 +845,6 @@ namespace Matkakirja.Peli
             }
             K.Kysymys = null;
             if (Tila.Vaihe == Vaihe.Ohi) return TekoTulos.Onnistui();
-            if (Kaksintaistelu != null && Kaksintaistelu()) return TekoTulos.Onnistui();
             Tila.Vaihe = Vaihe.Toiminta;
             Matka.PaataVuoro();
             return TekoTulos.Onnistui();

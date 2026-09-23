@@ -1,11 +1,10 @@
-// Pulmien ja tapahtumakorttien testit (Peli/Pulmat.cs, Peli/Tapahtumat.cs).
+// Pulmien testit (Peli/Pulmat.cs). Tapahtumakortit on poistettu (Fablen tarkastus C1).
 // Kultainen jälki Kultaiset/pulmajalki.json (Kultaiset/tee-pulmajalki.mjs):
 //   arvonnat  — jokainen generaattori siemenillä 1…25, tulos ja kulutus
 //   pulmaAjot — peli alkaa pulmakaupungista, pulma avataan ja siihen
 //               vastataan kuudella tavalla (oikein, väärin, vihje, 50:50,
 //               sulkeminen vastaamatta, aika loppui), laatallinen ja laataton
-//   peliAjot  — koko peli pulmineen kysymysjäljen käsikirjoituksella, osassa
-//               Afrikan tapahtumakortit (raha, kyyti, viive)
+//   peliAjot  — koko peli pulmineen kysymysjäljen käsikirjoituksella
 // Kaikki toistetaan myös tallentaen ja ladaten kesken pelin.
 using System;
 using System.Collections.Generic;
@@ -23,13 +22,11 @@ namespace Matkakirja.Peli.Testit
         static Pulmadata pulmadata;
         static Pulmadata Pulmadata => pulmadata ??= Pulmadata.LueKansiosta(KultaisetApu.Paketti);
 
-        static Tapahtumadata tapahtumadata;
-        static Tapahtumadata Tapahtumadata => tapahtumadata ??= Tapahtumadata.LueKansiosta(KultaisetApu.Paketti);
 
         static List<Dictionary<string, object>> Lista(string nimi) =>
             MiniJson.Taulukko(MiniJson.Kentta(Jalki, nimi)).Select(MiniJson.Objekti).ToList();
 
-        static string Web(Vaihe v) => v == Vaihe.Tapahtuma ? "event" : KyselyTestit.Web(v);
+        static string Web(Vaihe v) => KyselyTestit.Web(v);
         static List<object> Jarj(IEnumerable<string> l) => l.OrderBy(x => x, StringComparer.Ordinal).Cast<object>().ToList();
 
         // --- tilarivi kuten skriptin tila() ------------------------------------
@@ -60,21 +57,11 @@ namespace Matkakirja.Peli.Testit
             };
         }
 
-        static Dictionary<string, object> Vaikutus(TapahtumaVaikutus v)
-        {
-            if (v == null) return null;
-            var d = new Dictionary<string, object> { ["kind"] = v.Laji };
-            if (v.Maara.HasValue) d["amount"] = v.Maara.Value;
-            return d;
-        }
-
         sealed class Peli
         {
             public Matka Matka;
             public Kysely Kysely;
             public Pulmat Pulmat;
-            public Tapahtumat Tapahtumat;
-            public int Kaksintaisteluja;
         }
 
         static Dictionary<string, object> Rivi(string teko, Peli pe)
@@ -83,7 +70,6 @@ namespace Matkakirja.Peli.Testit
             var t = m.Tila;
             var p = t.Pelaaja;
             var k = t.Kysely;
-            var kortti = t.Tapahtumakortti;
             return new Dictionary<string, object>
             {
                 ["teko"] = teko,
@@ -111,25 +97,16 @@ namespace Matkakirja.Peli.Testit
                 ["pulmaOdottaa"] = pe.Pulmat.Odottaa()?.Id,
                 ["puzzlesSeen"] = Jarj(t.NahdytPulmat),
                 ["puzzlePrevPhase"] = k.PulmaEdellinenVaihe.HasValue ? Web(k.PulmaEdellinenVaihe.Value) : null,
-                ["eventCard"] = kortti == null ? null : new Dictionary<string, object>
-                {
-                    ["cityId"] = kortti.Kaupunki, ["text"] = kortti.Teksti, ["effect"] = Vaikutus(kortti.Vaikutus),
-                },
-                ["duelArmed"] = t.KaksintaisteluOdottaa,
-                ["kaksintaisteluja"] = pe.Kaksintaisteluja,
                 ["quiz"] = KysymysRivi(k.Kysymys),
             };
         }
 
-        /// <summary>Kysely, pulmat ja (valinnaisesti) tapahtumat uudelle tai ladatulle matkalle.</summary>
-        static void Kytke(Peli pe, Matka m, bool tapahtumat)
+        /// <summary>Kysely ja pulmat uudelle tai ladatulle matkalle.</summary>
+        static void Kytke(Peli pe, Matka m)
         {
             pe.Matka = m;
             pe.Kysely = new Kysely(m, KyselyTestit.Data);
             pe.Pulmat = Pulmat.Kytke(pe.Kysely, Pulmadata);
-            pe.Tapahtumat = tapahtumat ? Tapahtumat.Kytke(pe.Kysely, Tapahtumadata) : null;
-            // Skriptin beginDuel-stub: kaksintaistelu "alkaa" ja vuoro päättyy.
-            m.Kaksintaistelu = _ => { pe.Kaksintaisteluja++; m.Tila.Vaihe = Vaihe.Toiminta; m.PaataVuoro(); return true; };
         }
 
         /// <summary>Vertaa askeleen; puzzlePrevPhase ohitetaan latauksen jälkeen (web fromJSON nollaa sen, jälki ei lataa).</summary>
@@ -144,12 +121,12 @@ namespace Matkakirja.Peli.Testit
         }
 
         /// <summary>Tallentaa ja lataa pelin; tallennuksen pitää pysyä samana latauksen yli.</summary>
-        static void TallennaJaLataa(Peli pe, bool tapahtumat, string nimi)
+        static void TallennaJaLataa(Peli pe, string nimi)
         {
             var json = pe.Matka.Tallenna();
             var m2 = Matka.Lataa(KultaisetApu.Verkko, json, KultaisetApu.Laattamaarat);
             Oleta.Sama(json, m2.Tallenna(), nimi + ": tallennus pysyy samana latauksen yli");
-            Kytke(pe, m2, tapahtumat);
+            Kytke(pe, m2);
         }
 
         // --- 1. arvonnat ----------------------------------------------------------
@@ -206,7 +183,7 @@ namespace Matkakirja.Peli.Testit
             var pe = new Peli();
             var rng = new Satunnainen(siemen);
             var m = Matka.Luo(KultaisetApu.Verkko, rng, "Fogg", alku, KultaisetApu.Laattamaarat);
-            Kytke(pe, m, false);
+            Kytke(pe, m);
             m.AloitaVuoro();
             Oleta.Sama((long)MiniJson.Luku(ajo, "rngAlussa").Value, rng.Kutsuja, nimi + ": alun kulutus");
             if (MiniJson.Totuus(ajo, "laatatonta")) m.Laatat.Laatat.Poista(alku);
@@ -249,14 +226,13 @@ namespace Matkakirja.Peli.Testit
                         tulos = ky.Vastaa(valinta);
                     }
                 }
-                else if (t.Vaihe == Vaihe.Tapahtuma) { teko = "event:close"; tulos = pe.Tapahtumat.Sulje(); }
                 else break;
                 if (!tulos.Ok) throw new Exception($"{nimi}: {teko} epäonnistui: {tulos.Virhe}");
                 if (i >= askeleet.Count) throw new Exception($"{nimi}: C# jatkoi jäljen jälkeen ({teko})");
                 Vertaa(nimi, i, askeleet[i], Rivi(teko, pe), ladattu); i++;
                 if (tallennaVali > 0 && (n + 1) % tallennaVali == 0)
                 {
-                    TallennaJaLataa(pe, false, nimi);
+                    TallennaJaLataa(pe, nimi);
                     ladattu = true;
                 }
             }
@@ -285,7 +261,6 @@ namespace Matkakirja.Peli.Testit
         {
             var siemen = (long)MiniJson.Luku(ajo, "seed").Value;
             var alku = MiniJson.Teksti(ajo, "start");
-            bool tapahtumat = MiniJson.Totuus(ajo, "tapahtumat");
             var nimi = $"peli siemen {siemen} {alku}";
             var askeleet = MiniJson.Taulukko(ajo["askeleet"]).Select(MiniJson.Objekti).ToList();
             int vuorot = (int)MiniJson.Luku(Jalki, "vuorot").Value;
@@ -294,7 +269,7 @@ namespace Matkakirja.Peli.Testit
             var pe = new Peli();
             var rng = new Satunnainen(siemen);
             var m = Matka.Luo(KultaisetApu.Verkko, rng, "Fogg", alku, KultaisetApu.Laattamaarat);
-            Kytke(pe, m, tapahtumat);
+            Kytke(pe, m);
             m.AloitaVuoro();
             Oleta.Sama((long)MiniJson.Luku(ajo, "rngAlussa").Value, rng.Kutsuja, nimi + ": alun kulutus");
 
@@ -305,19 +280,12 @@ namespace Matkakirja.Peli.Testit
             for (int n = 0; n < maxTeot && pe.Matka.Tila.VuoroLaskuri <= vuorot; n++)
             {
                 pe.Matka.ViimeLoyto = null;
-                string teko;
-                if (pe.Matka.Tila.Vaihe == Vaihe.Tapahtuma)
-                {
-                    var tulos = pe.Tapahtumat.Sulje();
-                    if (!tulos.Ok) throw new Exception($"{nimi}: tapahtuman sulku epäonnistui: {tulos.Virhe}");
-                    teko = "event:close";
-                }
-                else teko = kk.Seuraava(pe.Kysely);
+                string teko = kk.Seuraava(pe.Kysely);
                 if (i >= askeleet.Count) throw new Exception($"{nimi}: C# jatkoi jäljen jälkeen ({teko})");
                 Vertaa(nimi, i, askeleet[i], Rivi(teko, pe), ladattu); i++;
                 if (tallennaVali > 0 && (n + 1) % tallennaVali == 0)
                 {
-                    TallennaJaLataa(pe, tapahtumat, nimi);
+                    TallennaJaLataa(pe, nimi);
                     ladattu = true;
                 }
             }
@@ -331,12 +299,9 @@ namespace Matkakirja.Peli.Testit
             Oleta.Tosi(ajot.Count >= 7, "ajoja " + ajot.Count);
             int yht = ajot.Sum(a => ToistaPeliAjo(a, 0));
             Oleta.Tosi(yht > 2000, "askelia " + yht);
-            // Jäljessä on pulmia ja jokainen tapahtumavaikutus (skripti vartioi samaa).
+            // Jäljessä on pulmia (skripti vartioi samaa).
             var rivit = ajot.SelectMany(a => MiniJson.Taulukko(a["askeleet"]).Select(MiniJson.Objekti)).ToList();
             Oleta.Tosi(rivit.Any(r => MiniJson.Kentta(r, "quiz") is Dictionary<string, object> q && MiniJson.Teksti(q, "kind") == "puzzle"), "pulma peliajossa");
-            foreach (var laji in new[] { "raha", "kyyti", "viive" })
-                Oleta.Tosi(rivit.Any(r => MiniJson.Kentta(r, "eventCard") is Dictionary<string, object> e
-                    && MiniJson.Kentta(e, "effect") is Dictionary<string, object> f && MiniJson.Teksti(f, "kind") == laji), "tapahtuma " + laji);
         }
 
         [Testi] static void KultaisetPeliAjotTallennuksenYli()
@@ -435,89 +400,13 @@ namespace Matkakirja.Peli.Testit
             ky.Matka.AloitaVuoro();
             ky.Tutki();
             var json = ky.Matka.Tallenna();
-            Oleta.Tosi(json.Contains("\"pulmatNahty\":[\"ala\"]") && json.Contains("\"tapahtumakortti\":null"), "uudet kentät");
+            Oleta.Tosi(json.Contains("\"pulmatNahty\":[\"ala\"]") && !json.Contains("tapahtumakortti"), "uudet kentät");
             var vanha = json.Substring(0, json.IndexOf(",\"pulmatNahty\":", StringComparison.Ordinal)).Replace("\"versio\":4", "\"versio\":3") + "}";
             vanha = vanha.Replace(",\"pulmaTiedot\":", ",\"eiKaytossa\":");
             var t = Pelitila.FromJson(vanha);
             Oleta.Sama(0, t.NahdytPulmat.Count, "ei nähtyjä");
-            Oleta.Tosi(t.Tapahtumakortti == null, "ei korttia");
             Oleta.Tosi(t.Kysely.Kysymys.PulmaTiedot == null, "ei pulman tietoja");
             Oleta.Sama(3, t.LuettuVersio, "versio ennallaan");
-        }
-
-        // --- tapahtumat ------------------------------------------------------------
-
-        [Testi] static void TapahtumadataLuetaanKaikistaMuodoista()
-        {
-            var taulu = Tapahtumadata.Lue(@"[{""text"":""A"",""effect"":{""kind"":""raha"",""amount"":-60}},{""text"":""B""}]");
-            Oleta.Sama(2, taulu.Kortit.Count);
-            Oleta.Sama(-60, taulu.Kortit[0].Vaikutus.Maara);
-            Oleta.Tosi(taulu.Kortit[1].Vaikutus == null, "ei vaikutusta");
-            var events = Tapahtumadata.Lue(@"{""events"":[{""text"":""C"",""effect"":{""kind"":""kyyti""}}]}");
-            Oleta.Sama("kyyti", events.Kortit[0].Vaikutus.Laji);
-            Oleta.Tosi(!events.Kortit[0].Vaikutus.Maara.HasValue, "ei määrää");
-            var kokoelma = Tapahtumadata.Lue(@"{""nimi"":""tapahtumat"",""alkiot"":[{""id"":""x"",""data"":{""text"":""D"",""effect"":{""kind"":""viive""}}}]}");
-            Oleta.Sama("D", kokoelma.Kortit[0].Teksti);
-            bool heitti = false;
-            try { Tapahtumadata.Lue(@"[{""effect"":{""kind"":""viive""}}]"); } catch (FormatException) { heitti = true; }
-            Oleta.Tosi(heitti, "kortti ilman tekstiä");
-            Oleta.Sama(12, Tapahtumadata.Kortit.Count, "testiaineisto: Afrikan kortit");
-            Oleta.Sama(0, Tapahtumadata.LueKansiosta(Path.Combine(KultaisetApu.Juuri, "ei-ole")).Kortit.Count);
-        }
-
-        static Tapahtumat PienetTapahtumat(Kysely ky, string json) => Tapahtumat.Kytke(ky, Tapahtumadata.Lue(json));
-
-        [Testi] static void RahatapahtumaEiVieMiinukselle()
-        {
-            var ky = PieniKysely("ala", out var laatat);
-            laatat.Laatat["ala"] = "pieniAarre";
-            var m = ky.Matka;
-            var ta = PienetTapahtumat(ky, @"[{""text"":""Maksu"",""effect"":{""kind"":""raha"",""amount"":-500}}]");
-            m.AloitaVuoro();
-            Oleta.Sama("88,0,0,0,12", string.Join(",", ky.Painot("ala").Select(x => x.Value)), "tapahtumien paino 12, puuttuvat muodot visalle");
-            Oleta.Tosi(ky.Tutki(muoto: KysymysMuoto.Tapahtuma).Ok, "nimetty muoto avaa tapahtuman");
-            Oleta.Sama(Vaihe.Tapahtuma, m.Tila.Vaihe);
-            Oleta.Tosi(m.Kulkutavat().Count == 0, "kortin aikana ei matkusteta");
-            Oleta.Sama("ala", ta.Kortti.Kaupunki);
-            Oleta.Tosi(m.Tila.Kysely.Kaytetyt.Contains("Maksu"), "kortti käytetty");
-            var viestit = new List<string>();
-            ta.Tapahtui += (laji, teksti) => viestit.Add(laji + ":" + teksti);
-            Oleta.Tosi(ta.Sulje().Ok, "sulje");
-            Oleta.Sama(0, m.Tila.Pelaaja.Raha, "raha ei mene miinukselle");
-            Oleta.Sama("raha:Fogg menetti 300 puntaa.", string.Join("|", viestit));
-            Oleta.Sama(2, m.Tila.VuoroLaskuri, "vuoro päättyi");
-            Oleta.Tosi(laatat.Laatat.ContainsKey("ala"), "laatta jää kääntämättä");
-            Oleta.Tosi(!ta.Sulje().Ok, "ei avointa korttia");
-        }
-
-        [Testi] static void KyytiJaViive()
-        {
-            var ky = PieniKysely("saari", out var laatat);
-            laatat.Laatat["saari"] = "pieniAarre";
-            var m = ky.Matka;
-            var ta = PienetTapahtumat(ky, @"[{""text"":""Kyyti"",""effect"":{""kind"":""kyyti""}},{""text"":""Viive"",""effect"":{""kind"":""viive""}}]");
-            m.AloitaVuoro();
-            // Saaresta ainoa naapuri on ala (merireitti): kyyti vie sinne ja kirjaa saapumisen.
-            m.Tila.Tapahtumakortti = new Tapahtumakortti { Kaupunki = "saari", Teksti = "Kyyti", Vaikutus = ta.Data.Kortit[0].Vaikutus };
-            m.Tila.Vaihe = Vaihe.Tapahtuma;
-            long ennen = m.Satunnainen.Kutsuja;
-            Oleta.Tosi(ta.Sulje().Ok, "kyyti");
-            Oleta.Sama("c:ala", m.Tila.Pelaaja.Sijainti.Avain);
-            Oleta.Tosi(m.Tila.Pelaaja.Kaydyt.Contains("ala"), "saapuminen kirjattu");
-            Oleta.Sama("ala", m.Tila.Kysely.Havainto, "saapumishavainto");
-            Oleta.Tosi(m.Satunnainen.Kutsuja >= ennen + 1, "kyytikohde arvottiin");
-            // Viive: kaksi vuoroa.
-            m.Tila.Tapahtumakortti = new Tapahtumakortti { Kaupunki = "ala", Teksti = "Viive", Vaikutus = ta.Data.Kortit[1].Vaikutus };
-            m.Tila.Vaihe = Vaihe.Tapahtuma;
-            int vuoro = m.Tila.VuoroLaskuri;
-            // Tapahtumakortti kulkee tallennuksessa.
-            var json = m.Tallenna();
-            var m2 = Matka.Lataa(ValeVerkko.Pieni(), json);
-            Oleta.Sama(json, m2.Tallenna());
-            Oleta.Sama("Viive", m2.Tila.Tapahtumakortti.Teksti);
-            Oleta.Sama(Vaihe.Tapahtuma, m2.Tila.Vaihe);
-            Oleta.Tosi(ta.Sulje().Ok, "viive");
-            Oleta.Sama(vuoro + 2, m.Tila.VuoroLaskuri, "viive vie ylimääräisen vuoron");
         }
     }
 }

@@ -149,7 +149,7 @@ namespace Matkakirja.Peli.Testit
         internal static string Web(KysymysMuoto m) => m switch
         {
             KysymysMuoto.Visa => "quiz", KysymysMuoto.Vaite => "claim", KysymysMuoto.Kuva => "photo",
-            KysymysMuoto.Lippu => "flag", KysymysMuoto.Tapahtuma => "event", _ => "puzzle",
+            KysymysMuoto.Lippu => "flag", _ => "puzzle",
         };
 
         // --- kanoninen muoto: avaimet aakkosjärjestyksessä ---------------------
@@ -448,14 +448,14 @@ namespace Matkakirja.Peli.Testit
         {
             var ky = PieniKysely("ala", out _);
             string P(List<KeyValuePair<KysymysMuoto, int>> p) => string.Join(",", p.Select(x => x.Value));
-            // Ei kuvia, ei lippuja, ei tapahtumia: 55 + 10 + 8 + 12 = 85.
-            Oleta.Sama("85,15,0,0,0", P(ky.Painot("ala")));
+            // Ei kuvia eikä lippuja: 67 (visa 55 + webin tapahtumapaino 12) + 10 + 8 = 85.
+            Oleta.Sama("85,15,0,0", P(ky.Painot("ala")));
             ky.Matka.Tila.Kysely.ViimeMuoto = KysymysMuoto.Vaite;
-            Oleta.Sama("100,0,0,0,0", P(ky.Painot("ala")), "sama erikoismuoto ei toistu");
+            Oleta.Sama("100,0,0,0", P(ky.Painot("ala")), "sama erikoismuoto ei toistu");
             ky.AsetaKuvat(new[] { "bee", "cee", "bee" });
             ky.Matka.Tila.Kysely.ViimeMuoto = KysymysMuoto.Visa;
             Oleta.Sama("bee,cee", string.Join(",", ky.KuvaKohteet()), "kaksoiset pois");
-            Oleta.Sama("75,15,10,0,0", P(ky.Painot("ala")));
+            Oleta.Sama("75,15,10,0", P(ky.Painot("ala")));
         }
 
         [Testi] static void TutkiminenPalkitseeKerranJaAvaaVuoron()
@@ -545,7 +545,7 @@ namespace Matkakirja.Peli.Testit
             ky.Kokemus.TasoNousi += (_, t) => nousut.Add(t.Taso);
             m.Tila.Pelaaja.Xp = 90;
             Oleta.Tosi(m.Bussi("bee").Ok, "bussi");
-            Oleta.Sama(90 + Kokemus.UusiLauta + Kokemus.UusiKaupunki, m.Tila.Pelaaja.Xp, "uusi lauta + uusi kaupunki");
+            Oleta.Sama(90 + Kokemus.EnsimmainenKaupunki + Kokemus.UusiKaupunki, m.Tila.Pelaaja.Xp, "uusi lauta + uusi kaupunki");
             Oleta.Sama("2", string.Join(",", nousut));
             Oleta.Sama("bee", m.Tila.Kysely.Havainto);
             m.Tila.Vaihe = Vaihe.Toiminta;

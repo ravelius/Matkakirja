@@ -25,6 +25,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Matkakirja.Peli
@@ -36,7 +37,6 @@ namespace Matkakirja.Peli
         public const string MannerAarre = "mannerAarre";
         public const string IsoAarre = "isoAarre";
         public const string PieniAarre = "pieniAarre";
-        public const string Ryostaja = "robber";
         /// <summary>Sisäinen merkki: pöllön korvaama laatta (ei aarre).</summary>
         public const string Tyhja = "empty";
 
@@ -74,9 +74,17 @@ namespace Matkakirja.Peli
         public readonly List<KeyValuePair<string, int>> Maarat = new List<KeyValuePair<string, int>>();
 
         public Laattamaarat() { }
-        public Laattamaarat(IEnumerable<KeyValuePair<string, int>> maarat) { Maarat.AddRange(maarat); }
+        public Laattamaarat(IEnumerable<KeyValuePair<string, int>> maarat) { foreach (var m in maarat) Lisaa(m.Key, m.Value); }
 
-        public Laattamaarat Lisaa(string tyyppi, int maara) { Maarat.Add(new KeyValuePair<string, int>(tyyppi, maara)); return this; }
+        public Laattamaarat Lisaa(string tyyppi, int maara)
+        {
+            if (!Laattatyypit.OnAarre(tyyppi)) throw new ArgumentException($"laattatyyppi {tyyppi} ei ole aarre (poistettu pelistä)");
+            Maarat.Add(new KeyValuePair<string, int>(tyyppi, maara));
+            return this;
+        }
+
+        /// <summary>Paketin tyypit, jotka Lue ohitti (ei aarre, esim. robber).</summary>
+        public readonly List<string> Ohitetut = new List<string>();
 
         public int Yhteensa { get { int s = 0; foreach (var m in Maarat) s += m.Value; return s; } }
 
@@ -104,6 +112,9 @@ namespace Matkakirja.Peli
             {
                 if (kv.Key.StartsWith("$")) continue;
                 if (!(kv.Value is double d)) throw new FormatException($"laattamäärä {kv.Key} ei ole luku");
+                // Vain aarteet: rosvolaatat, jalokivet, tyhjät ja muut poistetut tyypit eivät
+                // pääse pinoon, vaikka paketissa olisi niille määrä (Raamattu 25.8.2026).
+                if (!Laattatyypit.OnAarre(kv.Key)) { tulos.Ohitetut.Add(kv.Key); continue; }
                 tulos.Lisaa(kv.Key, (int)d);
             }
             return tulos;
@@ -154,13 +165,12 @@ namespace Matkakirja.Peli
 
     /// <summary>
     /// Yhden laatan käännön tulos (web revealToken). Matka kirjaa sen pelaajalle:
-    ///   pelaaja.Raha += RahaLisays; pelaaja.Tahdet += TahtiLisays;
+    ///   pelaaja.Raha += RahaLisays; pelaaja.Paaaarteet += PaaaarreLisays;
     ///   pelaaja.Tp += TpLisays (web awardXp: linssi- ja tasokynnykset);
     ///   finds.Add(Tyyppi); findManner.Add(Manner); findMaa.Add(Maa);
     ///   jos Ennatys: web noteRecord (kerran pelissä recordNoted; jos päivä
     ///     &lt;= EnnatysPaivat, pelaaja.Tp += TpEnnatys) — pelin päivälaskuri on Matkalla;
     ///   jos Pollo: PolloLoydetty = true (pöllön paljastus UI:lle);
-    ///   jos Kaksintaistelu: web duelArmed = true → beginDuel (KOUKKU, ei tässä);
     ///   muuten linssi aarteen kylkiäisenä (web linssiAarteenKylkiaisena, KOUKKU,
     ///   vain isoAarre) ja lopuksi checkWin (Matka).
     /// </summary>
@@ -174,7 +184,7 @@ namespace Matkakirja.Peli
         /// <summary>Web viimeAarre.arvo (arvoAarteenArvo): löytöhetkellä arvottu arvo. Pöllöllä 0.</summary>
         public int Arvo;
         public int RahaLisays;
-        public int TahtiLisays;
+        public int PaaaarreLisays;
         public int TpLisays;
         /// <summary>Web findManner: laudan cityManner tai null (EI laudan tunnusta).</summary>
         public string Manner;
@@ -182,8 +192,6 @@ namespace Matkakirja.Peli
         public string Maa;
         /// <summary>Pääaarre löytyi: Matka kutsuu webin noteRecordin vastineen (ennätysbonus).</summary>
         public bool Ennatys;
-        /// <summary>Ryöstäjä: web duelArmed = true.</summary>
-        public bool Kaksintaistelu;
         /// <summary>Pääaarre vaelluksessa, ja muilla mantereilla on vielä aarre löytämättä (web MANNERLENTO_ILMOITUS).</summary>
         public bool MannerlentoIlmoitus;
 
@@ -204,7 +212,7 @@ namespace Matkakirja.Peli
         /// <summary>Käännetyt laatat: kaupunki → tyyppi (web world.revealed).</summary>
         public JarjestettyKartta Kaannetyt { get; } = new JarjestettyKartta();
         /// <summary>Löytyneet pääaarteet: manner → kaupunki (web world.starsFound).</summary>
-        public JarjestettyKartta TahdetLoydetty { get; } = new JarjestettyKartta();
+        public JarjestettyKartta PaaaarteetLoydetty { get; } = new JarjestettyKartta();
 
         readonly List<Kaupunki> kaupunkiLista;
         readonly Dictionary<string, Kaupunki> kaupungit = new Dictionary<string, Kaupunki>();
@@ -218,7 +226,7 @@ namespace Matkakirja.Peli
 
         /// <summary>
         /// Tyhjä maailma tallennuksen palautusta varten: kutsuja täyttää Laatat,
-        /// Kaannetyt ja TahdetLoydetty tallennuksen järjestyksessä.
+        /// Kaannetyt ja PaaaarteetLoydetty tallennuksen järjestyksessä.
         /// </summary>
         public static Laattamaailma Tyhja(IReadOnlyList<Kaupunki> kaupungit, string lautaId = "maailmankartta") =>
             new Laattamaailma(lautaId, kaupungit);
@@ -231,10 +239,10 @@ namespace Matkakirja.Peli
             kaupungit.TryGetValue(kaupunki, out var k) && k.Manner != null ? k.Manner : LautaId;
 
         /// <summary>Web mantereenTahtiLoytynyt.</summary>
-        public bool TahtiLoytynyt(string manner) => TahdetLoydetty.ContainsKey(manner);
+        public bool PaaaarreLoytynyt(string manner) => PaaaarteetLoydetty.ContainsKey(manner);
 
         /// <summary>Web starFound: onko yksikään pääaarre löytynyt.</summary>
-        public bool JokinTahtiLoytynyt => TahdetLoydetty.Count > 0;
+        public bool JokinPaaaarreLoytynyt => PaaaarteetLoydetty.Count > 0;
 
         /// <summary>Laudan muut mantereet kaupunkijärjestyksessä (web muutMantereet).</summary>
         public List<string> MuutMantereet(string manner)
@@ -440,21 +448,18 @@ namespace Matkakirja.Peli
                 case Laattatyypit.Paaaarre:
                 {
                     var manner = MannerOf(kaupunki);
-                    TahdetLoydetty.Aseta(manner, kaupunki);
-                    loyto.TahtiLisays = 1;
+                    PaaaarteetLoydetty.Aseta(manner, kaupunki);
+                    loyto.PaaaarreLisays = 1;
                     loyto.TpLisays = LaattaVakiot.TpPaaaarre;
                     loyto.Ennatys = true;
                     if (vaellus)
                     {
                         loyto.RahaLisays = LaattaVakiot.PaaaarrePalkkio;
                         foreach (var m in MuutMantereet(manner))
-                            if (!TahtiLoytynyt(m)) { loyto.MannerlentoIlmoitus = true; break; }
+                            if (!PaaaarreLoytynyt(m)) { loyto.MannerlentoIlmoitus = true; break; }
                     }
                     break;
                 }
-                case Laattatyypit.Ryostaja:
-                    loyto.Kaksintaistelu = true;
-                    break;
                 default:
                     loyto.RahaLisays = loyto.Arvo;
                     break;
@@ -486,7 +491,7 @@ namespace Matkakirja.Peli
             sb.Append("{\"lauta\":").Append(Pelitila.Teksti(LautaId));
             sb.Append(",\"laatat\":"); Parit(sb, Laatat);
             sb.Append(",\"kaannetyt\":"); Parit(sb, Kaannetyt);
-            sb.Append(",\"tahdet\":"); Parit(sb, TahdetLoydetty);
+            sb.Append(",\"tahdet\":"); Parit(sb, PaaaarteetLoydetty);
             sb.Append('}');
         }
 
@@ -507,8 +512,11 @@ namespace Matkakirja.Peli
                 }
             }
             Tayta(w.Laatat, "laatat");
+            // Vanhan tallennuksen kääntämätön rosvo- tai muu poistettu laatta katoaa (ei löydy laatan alta).
+            foreach (var kaupunki in w.Laatat.Where(kv => !Laattatyypit.OnAarre(kv.Value)).Select(kv => kv.Key).ToList())
+                w.Laatat.Poista(kaupunki);
             Tayta(w.Kaannetyt, "kaannetyt");
-            Tayta(w.TahdetLoydetty, "tahdet");
+            Tayta(w.PaaaarteetLoydetty, "tahdet");
             return w;
         }
 

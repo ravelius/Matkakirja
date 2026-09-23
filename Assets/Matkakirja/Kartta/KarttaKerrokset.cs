@@ -65,6 +65,10 @@ namespace Matkakirja
         /// <summary>Maatila linsseille (IMaaKartta, RAJAPINTA.md luku 4).</summary>
         public Matkakirja.Linssit.Maat.IMaaKartta Maat => maaKartta;
         public MaaKartta maaKartta;
+        /// <summary>Maakuntien värjäys (B17): avaimet "ISO:tunnus", Natiivi-UI:n Maakunnat-välilehti.</summary>
+        public MaaKartta maakunnat;
+        /// <summary>Pelinappula (Pelikoodari: Matkalla-tila, RAJAPINTA luku 3).</summary>
+        public Nappula nappula;
 
         void Awake()
         {

@@ -112,18 +112,16 @@ namespace Matkakirja.Peli.Testit
                     var kohta = $"{nimi} kääntö {kaupunki} #{kaannoksia}";
                     long ennen = rng.Kutsuja;
                     var l = maailma.Kaanna(kaupunki, rng, vaellus, polloAarteena && !polloLoydetty);
-                    bool duel = false;
                     if (l != null)
                     {
                         raha += l.RahaLisays;
-                        tahtia += l.TahtiLisays;
+                        tahtia += l.PaaaarreLisays;
                         xp += l.TpLisays;
                         if (l.Ennatys && !ennatysKirjattu) { ennatysKirjattu = true; xp += LaattaVakiot.TpEnnatys; }
                         finds.Add(l.Tyyppi);
                         findManner.Add(l.Manner);
                         findMaa.Add(l.Maa);
                         if (l.Pollo) polloLoydetty = true;
-                        duel = l.Kaksintaistelu;
                     }
                     Oleta.Sama((string)k["tulos"], l?.WebTulos, kohta + " tulos");
                     // Web viimeAarre asetetaan vain tavallisessa löydössä (ei pöllö, ei tyhjä).
@@ -132,8 +130,7 @@ namespace Matkakirja.Peli.Testit
                     Oleta.Sama(Kokonais(k["raha"]), raha, kohta + " raha");
                     Oleta.Sama(Kokonais(k["tahdet"]), tahtia, kohta + " tähdet");
                     Oleta.Sama(Kokonais(k["xp"]), xp, kohta + " tp");
-                    Oleta.Sama(Parit(k["starsFound"]), Parit(maailma.TahdetLoydetty), kohta + " starsFound");
-                    Oleta.Sama((bool)k["duelArmed"], duel, kohta + " duelArmed");
+                    Oleta.Sama(Parit(k["starsFound"]), Parit(maailma.PaaaarteetLoydetty), kohta + " starsFound");
                     Oleta.Sama((bool)k["polloLoydetty"], polloLoydetty, kohta + " polloLoydetty");
                     Oleta.Sama(Kokonais(k["rngKaanto"]), rng.Kutsuja - ennen, kohta + " kutsuja käännössä");
                     Oleta.Sama(Kokonais(k["rngCalls"]), rng.Kutsuja, kohta + " rngCalls");
@@ -218,7 +215,6 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(1000L, rng.Kutsuja);
             Oleta.Sama(1000, Laattamaailma.ArvoAarteenArvo(Laattatyypit.MannerAarre, rng));
             Oleta.Sama(0, Laattamaailma.ArvoAarteenArvo(Laattatyypit.Paaaarre, rng));
-            Oleta.Sama(0, Laattamaailma.ArvoAarteenArvo(Laattatyypit.Ryostaja, rng));
             Oleta.Sama(1000L, rng.Kutsuja, "kiinteät eivät kuluta");
         }
 

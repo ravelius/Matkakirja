@@ -22,8 +22,6 @@ namespace Matkakirja.Peli.Testit
             var m = Matka.Luo(verkko, new Satunnainen(1), "Fogg", "pariisi", maarat);
             var ky = new Kysely(m, data);
             Pulmat.Kytke(ky, Pulmadata.Lue(L("pulmat")));
-            var tapahtumat = Tapahtumadata.Lue(L("tapahtumat"));
-            var rosvo = new Kaksintaistelu(m, Kaksintaistelut.Lue(L("kaksintaistelut")));
             var liput = Kysymysdata.LueLiput(L("lippumaat"));
             var luennat = new Luennat();
             luennat.LueSaapumispuheet(L("saapumispuheet"));
@@ -51,7 +49,7 @@ namespace Matkakirja.Peli.Testit
                 osumat += l.ReaktioAjat(l.Kesto ?? 30).Count;
             }
             Console.WriteLine($"  kaupunkeja {verkko.Kaupungit.Count}, laattoja {maarat.Yhteensa}, pulmia {Pulmadata.Lue(L("pulmat")).Pulmat.Count} (ohitettu {Pulmadata.Lue(L("pulmat")).Ohitetut.Count}), " +
-                $"tapahtumia {tapahtumat.Kortit.Count}, kaksintaisteluja {rosvo.Data.Kysymykset.Count}, lippuja {liput.Count}, kuvia {kuvat.Count} (laudan ulkopuolella {kuvattomat}), " +
+                $"laattatyypit ohi [{string.Join(",", maarat.Ohitetut)}], lippuja {liput.Count}, kuvia {kuvat.Count} (laudan ulkopuolella {kuvattomat}), " +
                 $"saapumispuheita {luennat.Saapumispuheita}, luentoja {luennat.Luentoja}, reaktioita {reaktioita} (ankkuri osuu {osumat}/{ankkurit}), " +
                 $"kuvia kohtaamisissa {ko.Kaupungit.Count(x => x.Value.KaariKuva != null)}+{ko.Kaupungit.Count(x => x.Value.TavallinenKuva != null)}");
             Oleta.Tosi(verkko.Kaupungit.Count > 200 && maarat.Yhteensa > 0, "lauta");

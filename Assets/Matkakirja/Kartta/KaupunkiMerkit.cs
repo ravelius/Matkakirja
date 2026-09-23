@@ -27,6 +27,37 @@ namespace Matkakirja
 
         /// <summary>KarttaKerrokset: "kaupungit" (pisteet ja nimiöt) ja "nimiot".</summary>
         public bool merkitNakyvat = true, nimiotNakyvat = true;
+
+        /// <summary>
+        /// Suodatin linsseille (Linssisepän radio: vain kanavakaupungit): null = kaikki näkyvät,
+        /// muuten vain luettelon kaupungit. RAJAPINTA luku 2, NaytaKaupungit.
+        /// </summary>
+        public void NaytaVain(ICollection<string> kaupungit)
+        {
+            suodatin = kaupungit == null ? null : new HashSet<string>(kaupungit);
+        }
+        HashSet<string> suodatin;
+
+        /// <summary>Yksittäisen kaupungin pisteen korostusväri (null = pois). RAJAPINTA luku 2, Korosta.</summary>
+        public void Korosta(string id, Color? vari)
+        {
+            var m = merkit.Find(x => x.kaupunki.id == id);
+            if (m == null) return;
+            var r = m.pisteT.GetComponent<MeshRenderer>();
+            if (vari.HasValue)
+            {
+                korostusLohko ??= new MaterialPropertyBlock();
+                korostusLohko.SetColor("_BaseColor", vari.Value);
+                r.SetPropertyBlock(korostusLohko);
+                m.pisteT.localScale = new Vector3(m.pisteKoko * 1.5f, m.pisteKoko * 1.5f, 1);
+            }
+            else
+            {
+                r.SetPropertyBlock(null);
+                m.pisteT.localScale = new Vector3(m.pisteKoko, m.pisteKoko, 1);
+            }
+        }
+        MaterialPropertyBlock korostusLohko;
         [Tooltip("Kaupunkiin saapumisen näkymä: kapeamman suunnan kaari asteina " +
                  "(verkkopelin PALLO_SUKELLUSLEVEYS 620 laudan yksikköä = 18,6°).")]
         public double saapumisKaari = 18.6;
@@ -238,7 +269,7 @@ namespace Matkakirja
             float parasEtaisyys = osumaSade * kerroin;
             foreach (var m in merkit)
             {
-                if (!m.juuri.gameObject.activeSelf) continue;
+                if (!m.juuri.gameObject.activeSelf) continue; // suodatetut ja takapuolen merkit ovat pois
                 Vector3 p = kamera.WorldToScreenPoint(m.juuri.position);
                 float d = Vector2.Distance(ruutu, p);
                 // Näkyvän nimiön päällä napautus osuu myös.
@@ -303,7 +334,8 @@ namespace Matkakirja
                 Vector3 kohti = kt.position - paikka;
                 float etaisyys = kohti.magnitude;
                 Vector3 normaali = gt.TransformDirection(m.normaali);
-                bool edessa = merkitNakyvat && Vector3.Dot(normaali, kohti / etaisyys) > 0.12f;
+                bool edessa = merkitNakyvat && (suodatin == null || suodatin.Contains(m.kaupunki.id))
+                    && Vector3.Dot(normaali, kohti / etaisyys) > 0.12f;
                 if (m.juuri.gameObject.activeSelf != edessa) m.juuri.gameObject.SetActive(edessa);
                 if (!edessa) continue;
 
