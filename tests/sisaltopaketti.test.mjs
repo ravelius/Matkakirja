@@ -467,6 +467,23 @@ test('skeema 1.11: Livian cue-data (ele, validoidut ajat, repliikit)', async () 
   assert.equal(repliikit.find((r) => r.id === 'ateena-3').kaupunki, 'ateena');
 });
 
+test('skeema 1.12: repon assets/-kuvat ämpärissä, Pages varana', async () => {
+  const { sivustonAssetit } = await import('../tools/vienti/vie-sisalto.mjs');
+  const { muuttuneet } = await import('../tools/vienti/sivustoassetit.mjs');
+  const media = JSON.parse(tiedostot.get('media.json')).viitteet;
+  assert.equal(media.filter((v) => v.url?.startsWith('https://matkakirja.app/')).length, 0, 'ei Pages-ensisijaisia');
+  const repo = media.find((v) => v.laji === 'repo');
+  assert.match(repo.url, /^https:\/\/media\.matkakirja\.app\/assets\/.+\?v=[0-9a-f]{12}$/);
+  assert.deepEqual(repo.varat, [`https://matkakirja.app/${repo.avain}`]);
+  const kypara = JSON.parse(tiedostot.get('kokoelmat/saannot.json')).alkiot.find((a) => a.id === 'LIVIAN_ASTRONAUTTI_KYPARA');
+  assert.match(kypara.arvo.url, /assets\/livia\/livia-astronauttikypara-2x\.png\?v=/);
+  const assetit = sivustonAssetit(tiedostot);
+  assert.ok(assetit['assets/livia/livia-astronauttikypara-2x.png']);
+  assert.ok(Object.values(assetit).every((sha) => /^[0-9a-f]{64}$/.test(sha)));
+  assert.equal(repo.url.split('?v=')[1], assetit[repo.avain].slice(0, 12));
+  assert.deepEqual(muuttuneet({ a: '1', b: '2' }, { a: '1', b: '3' }), ['b']);
+});
+
 test('skeema 1.9: offline-manifesti maittain (laatat, maasto, media, tavut)', async () => {
   const m = JSON.parse(tiedostot.get('manifest.json'));
   const o = JSON.parse(tiedostot.get(m.offline.tiedosto));
@@ -516,7 +533,7 @@ test('nippu 4: muotokuvat, laattakuvat, karttamerkit, linssiluennat, kätkökuva
   const { luennanOsoite } = await import('../js/linssipuhe.js');
   const { LINSSI } = await import('../js/linssit/keksinnot.js');
   assert.equal(ll.keksinnot.pysakit[0].url, luennanOsoite(LINSSI.aikajana.tapahtumat[0]));
-  assert.match(K('saannot').find((r) => r.id === 'KATKOKUVA').arvo.url, /kohtaaminen-katko\.jpg$/);
+  assert.match(K('saannot').find((r) => r.id === 'KATKOKUVA').arvo.url, /kohtaaminen-katko\.jpg\?v=[0-9a-f]{12}$/);
 });
 
 test('nippu 4: karttavalot, maastonimet ja maarajat pallolle', async () => {

@@ -164,7 +164,7 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
     saapumispuheet: avaimia(ns('saapumispuheet.js').SAAPUMISPUHEET),
     fokusvirrat: avaimia(ns('fokusvirrat.js').FOKUSVIRRAT),
     saannot: new Set(['js/rules.js', 'js/game.js', 'js/tokens.js', 'js/ai.js'].flatMap((f) => Object.entries(ns(f))
-      .filter(([, v]) => onSaantoArvo(v)).map(([n]) => n))).size + 1, // + KATKOKUVA
+      .filter(([, v]) => onSaantoArvo(v)).map(([n]) => n))).size + 2, // + KATKOKUVA, LIVIAN_ASTRONAUTTI_KYPARA
     tapahtumat: ns('africa.js').AFRICA.events.length,
     linssiaineisto: 8,
     aanitaulut: new Set([...ns('js/sound.js').AANITEHOSTEET, ...Object.keys(ns('js/sound.js').REAL_SAMPLES)]).size

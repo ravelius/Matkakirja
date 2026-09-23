@@ -39,7 +39,7 @@ import { dirname, join, relative, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { sarjallista } from './sarjallista.mjs';
 import { LISAMODUULIT, LISATIEDOSTOT } from './lahteet.mjs';
-import { TARKKUUS, mediaLaji, ratkaiseMedia } from './media.mjs';
+import { SIVUSTON_ASSET_ETULIITE, TARKKUUS, mediaLaji, ratkaiseMedia, sivustonTiiviste } from './media.mjs';
 import { kokoaKokoelmat } from './kokoelmat.mjs';
 import { kokoaWebNakymat } from './web-riippuvuudet.mjs';
 import { logiikkaLista } from './logiikka.mjs';
@@ -81,8 +81,13 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        eleetTila, aaniTavut, aaniSha256 (tools/vienti/livian-eleet.mjs);
  *        luennat.reaktiot[].ele; kokoelma livianrepliikit (68 äänitettyä
  *        repliikkiä).
+ *   1.12 Sivuston assetit ämpärissä: repon assets/-kuvat (karttamerkit,
+ *        kätkökuva, liput, kartat, valokuvat…) osoittavat
+ *        media.matkakirja.app/assets/…?v=<sha256 12>, Pages varana;
+ *        saannot LIVIAN_ASTRONAUTTI_KYPARA. CI vie tiedostot
+ *        (tools/vienti/sivustoassetit.mjs).
  */
-export const SKEEMAVERSIO_TARKKA = '1.11';
+export const SKEEMAVERSIO_TARKKA = '1.12';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 const tavuja = (s) => Buffer.byteLength(s);
@@ -245,6 +250,16 @@ export async function kokoaVienti({ juuri = JUURI } = {}) {
   return { tiedostot, manifest, nimiavaruudet };
 }
 
+/** Paketin viittaamat ämpärin assets/-tiedostot: { polku: sha256 }. */
+export function sivustonAssetit(tiedostot) {
+  const polut = new Set();
+  const malli = new RegExp(`${SIVUSTON_ASSET_ETULIITE.replaceAll('.', '[.]')}([^"?\\s]+)[?]v=`, 'g');
+  for (const teksti of tiedostot.values()) {
+    for (const [, polku] of teksti.matchAll(malli)) polut.add(`assets/${polku}`);
+  }
+  return Object.fromEntries([...polut].sort().map((p) => [p, sivustonTiiviste(p)]));
+}
+
 export function kirjoita(tiedostot, ulos) {
   rmSync(ulos, { recursive: true, force: true });
   for (const [polku, teksti] of tiedostot) {
@@ -259,6 +274,9 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
   const ulos = resolve(i > 0 ? process.argv[i + 1] : join(JUURI, 'dist/vienti'));
   const { tiedostot, manifest } = await kokoaVienti();
   kirjoita(tiedostot, ulos);
+  // Ämpäriin vietävät sivuston assetit paketin ulkopuolelle (CI:n syöte).
+  const assetit = sivustonAssetit(tiedostot);
+  writeFileSync(join(dirname(ulos), 'sivusto-assetit.json'), `${JSON.stringify(assetit, null, 1)}\n`);
   const l = manifest.laskennat;
   const tavut = [...tiedostot.values()].reduce((a, t) => a + Buffer.byteLength(t), 0);
   console.log(`vienti → ${relative(process.cwd(), ulos) || '.'}: ${tiedostot.size} tiedostoa, ${(tavut / 1e6).toFixed(1)} Mt`);

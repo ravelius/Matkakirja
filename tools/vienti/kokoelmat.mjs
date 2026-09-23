@@ -27,7 +27,7 @@ import { maarajaRivit, MAARAJOJEN_TOLERANSSI } from './maarajat.mjs';
 import { KOHDE_MAAT, kohteenKategoria } from '../../js/fokuskohteet.js';
 import { nostosymPaakategoria } from '../../js/fokusnosto-symbolit.js';
 import { MAAILMANKARTAN_NIMET } from '../../js/packs/maailmankartta-nimet.js';
-import { ratkaiseMedia } from './media.mjs';
+import { ratkaiseMedia, sivustoReitit } from './media.mjs';
 import { aaniUrl, horatioAanenKesto } from '../../js/media.js';
 import { aikaleimojenOsoite, ratkaiseAnkkurit, AIKALEIMOJEN_VERSIO } from '../../js/luentareaktiot.js';
 import { livianEleidenOsoite } from '../../js/livia-puheeleet-lataus.js';
@@ -697,11 +697,10 @@ function maaKokoelma(ns, hae) {
  *     eikä peli näytä niille lähderiviä: tekija ja lisenssi ovat null.
  *   - laatat: kuvat tyypeittäin ja mantereittain, paikallisaarteet[].kuvat.
  *   - karttamerkit: assets/nostotyypit/merkki-*.png (karttaselite), jotka
- *     ovat vain Pagesissa (matkakirja.app), eivät ämpärissä.
+ *     viedään ämpäriin (assets/, skeema 1.12, media.mjs sivustoReitit).
  *   - linssiaineisto: linssiluennat (pysäkkien ja kaaren puheiden osoitteet
  *     pelin omilla runkosäännöillä, js/linssipuhe.js).
  */
-const PAGES_JUURI = 'https://matkakirja.app/';
 
 function muotokuva(kuva) {
   if (!kuva) return null;
@@ -754,7 +753,7 @@ function karttamerkkiKokoelma() {
   const kansio = new URL('../../assets/nostotyypit/', import.meta.url);
   const rivit = readdirSync(kansio).filter((f) => /^merkki-.+\.png$/.test(f)).sort().map((f) => {
     const b = readFileSync(new URL(f, kansio));
-    return { id: f.replace(/^merkki-|\.png$/g, ''), tiedosto: `assets/nostotyypit/${f}`, url: `${PAGES_JUURI}assets/nostotyypit/${f}`,
+    return { id: f.replace(/^merkki-|\.png$/g, ''), tiedosto: `assets/nostotyypit/${f}`, url: sivustoReitit(`assets/nostotyypit/${f}`)[0],
       tavuja: b.length, sha256: createHash('sha256').update(b).digest('hex') };
   });
   return taulukko('assets/nostotyypit/merkki-*.png',
@@ -880,10 +879,16 @@ export function kokoaKokoelmat(nimiavaruudet) {
   kokoelmat.karttavalot = karttavaloKokoelma(hae, kokoelmat.kaupungit.alkiot);
   rikastaNippu4(kokoelmat, ns);
   // Kätkökuva (Pelikoodari 23.9.2026): web näyttää sen kaaren aarretekstin
-  // yhteydessä (assets/kohtaamiset/kohtaaminen-katko.jpg). Vain Pagesissa.
+  // yhteydessä (assets/kohtaamiset/kohtaaminen-katko.jpg). Ämpärissä skeemasta 1.12.
   kokoelmat.saannot.alkiot.push({
     id: 'KATKOKUVA', moduuli: 'assets/kohtaamiset/kohtaaminen-katko.jpg',
     arvo: mediaOsoite('assets/kohtaamiset/kohtaaminen-katko.jpg'),
+  });
+  // Livian astronauttikypärä (Natiivi-UI 23.9.2026): ainoa Livian rasteri,
+  // js/livia-astronautti.js LIVIAN_ASTRONAUTTI_KYPARA.
+  kokoelmat.saannot.alkiot.push({
+    id: 'LIVIAN_ASTRONAUTTI_KYPARA', moduuli: 'js/livia-astronautti.js',
+    arvo: mediaOsoite('assets/livia/livia-astronauttikypara-2x.png'),
   });
   kokoelmat.linssiaineisto.alkiot.push({
     id: 'linssiluennat', linssi: null, laji: 'luennat',
