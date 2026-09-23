@@ -190,6 +190,14 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(0, b.Avauksia);
         }
 
+        [Testi] static void TopografiaAukeaaRadionKynnyksella()
+        {
+            Oleta.Sama(1400, Linssirekisteri.Avauskynnykset["topografia"]);
+            Oleta.Tosi(!Linssirekisteri.Avauskynnykset.ContainsKey("radio"));
+            Oleta.Sama("ihmisen-matka,keksinnot", string.Join(",", Linssirekisteri.Auenneet(1399)));
+            Oleta.Sama("ihmisen-matka,keksinnot,topografia,satelliitti", string.Join(",", Linssirekisteri.Auenneet(2200)));
+        }
+
         [Testi] static void KaksoistunnusHeittaa()
         {
             var r = new Linssirekisteri(new ValeYmparisto());

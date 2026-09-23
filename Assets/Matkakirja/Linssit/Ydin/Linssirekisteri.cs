@@ -8,6 +8,25 @@ namespace Matkakirja.Linssit
 {
     public sealed class Linssirekisteri
     {
+        /// <summary>
+        /// Tietäjäpisteraja, jolla linssi aukeaa (web js/linssit/omistus.js
+        /// LINSSIKYNNYKSET [400, 800, 1400, 2200] rekisterijärjestyksessä).
+        /// Natiivissa radio jää pois, ja sen 1400 tp:n kynnys on topografian
+        /// (Fablen päätös 23.9.2026). Linssi, jota taulussa ei ole, aukeaa vain
+        /// kehittäjätilassa. Omistuksen tallennus on Pelikoodarin (Saatavilla).
+        /// </summary>
+        public static readonly IReadOnlyDictionary<string, int> Avauskynnykset = new Dictionary<string, int>
+        {
+            ["ihmisen-matka"] = 400,
+            ["keksinnot"] = 800,
+            ["topografia"] = 1400,
+            ["satelliitti"] = 2200,
+        };
+
+        /// <summary>Linssit, jotka annetulla pistemäärällä ovat auenneet, kynnysjärjestyksessä.</summary>
+        public static IReadOnlyList<string> Auenneet(int tietajapisteet) =>
+            Avauskynnykset.Where(k => tietajapisteet >= k.Value).OrderBy(k => k.Value).Select(k => k.Key).ToList();
+
         readonly List<ILinssi> linssit = new List<ILinssi>();
         readonly ILinssiYmparisto ymparisto;
 
