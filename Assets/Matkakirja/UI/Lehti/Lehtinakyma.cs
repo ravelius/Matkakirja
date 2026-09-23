@@ -61,6 +61,8 @@ namespace Matkakirja.Natiivi
         string avausKaupunki;
 
         public bool Auki { get; private set; }
+        /// <summary>Auki olevan sivun nimi (palautteen ehdotusSivu) tai null.</summary>
+        public string AukiSivunNimi => Auki && lehti != null && nyt >= 0 ? SivunNimi(nyt) : null;
         /// <summary>Lehti avautui (omistaja: kaupunki tai ISO).</summary>
         public event Action<string> Avautui;
         /// <summary>Lehti suljettiin (omistaja), kerran per avaus.</summary>
@@ -424,15 +426,19 @@ namespace Matkakirja.Natiivi
             }
             if (!string.IsNullOrEmpty(a.Johdanto)) Kappale(s, a.Johdanto, "mk-lehti__johdanto", Kirjasin.LukuKursiivi);
 
-            foreach (var n in a.Nostot) Nosto(s, n);
-            foreach (var (otsikko, kohteet) in a.Lista) Lista(s, otsikko, kohteet);
+            // Reaktioiden sivuavain (web aihesivunAvain → aiheAvain): maalehdessä ISO3, muuten kaupunki.
+            string sivuAvain = Reaktiot.AiheAvain(lehti.Omistaja, a.Id);
+            foreach (var n in a.Nostot) Nosto(s, n, sivuAvain);
+            foreach (var (otsikko, kohteet) in a.Lista) Lista(s, otsikko, kohteet, sivuAvain);
+            // Sivun oma reaktiorivi juttujen perään, ennen tehtävää (web piirraAiheenReaktiot).
+            Reaktiot.Piirra(s, sivuAvain, a.Nimi ?? sivu.Otsikko);
             bool fokustehtava = fokus.Piirra(s, lehti, nyt);
             if (!fokustehtava && a.Tehtava != null && sivu.TehtavaAihe != null) Tehtava(s, a.Tehtava, sivu.TehtavaAihe);
             if (a.Nostot.Count == 0 && a.Lista.Count == 0 && a.Tehtava == null && !fokustehtava && string.IsNullOrEmpty(a.Johdanto))
                 Kappale(s, "Tämä sivu täydentyy myöhemmin.", "mk-lehti__leipa");
         }
 
-        void Nosto(VisualElement s, LehtiNosto n)
+        void Nosto(VisualElement s, LehtiNosto n, string sivuAvain = null)
         {
             var lohko = Rakenne.El("mk-lehti__nosto", s, PickingMode.Ignore);
             var otsikkorivi = Rakenne.El("mk-lehti__nosto-otsikkorivi", lohko, PickingMode.Ignore);
@@ -465,12 +471,20 @@ namespace Matkakirja.Natiivi
                 var b = Rakenne.Nappi("Avaa sivusto ›", "mk-lehti__linkki", () => Application.OpenURL(url), loppu);
                 Kirjasimet.Aseta(b, Kirjasin.Kone);
             }
+            // Loppurivin reaktiot "Lue lisää aiheesta" -napin rinnalle (web leipa-loppurivi, otsikkoAvain).
+            Reaktiot.Piirra(loppu, Reaktiot.OtsikkoAvain(sivuAvain, n.Otsikko), n.Otsikko, "mk-reaktiot--loppu");
         }
 
-        void Lista(VisualElement s, string otsikko, List<LehtiListaKohde> kohteet)
+        void Lista(VisualElement s, string otsikko, List<LehtiListaKohde> kohteet, string sivuAvain = null)
         {
             var lohko = Rakenne.El("mk-lehti__lista", s, PickingMode.Ignore);
-            if (!string.IsNullOrEmpty(otsikko)) Kirjasimet.Aseta(Rakenne.Teksti(otsikko.ToUpperInvariant(), "mk-lehti__osasto", lohko), Kirjasin.Kone);
+            if (!string.IsNullOrEmpty(otsikko))
+            {
+                // Ryhmäotsikko on väliotsikko: pieni reaktionappi rivin päähän (web piirraVinkkilista).
+                var orivi = Rakenne.El("mk-lehti__osastorivi", lohko, PickingMode.Ignore);
+                Kirjasimet.Aseta(Rakenne.Teksti(otsikko.ToUpperInvariant(), "mk-lehti__osasto", orivi), Kirjasin.Kone);
+                Reaktiot.PiirraOtsikolle(orivi, sivuAvain, otsikko);
+            }
             foreach (var k in kohteet)
             {
                 var rivi = Rakenne.El("mk-lehti__listarivi", lohko, PickingMode.Ignore);

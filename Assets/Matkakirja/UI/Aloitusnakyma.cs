@@ -187,6 +187,14 @@ namespace Matkakirja.Natiivi
         string introText = IntroText, introPaikka = IntroPaikka, introValinta = IntroValinta;
         Label valintaOtsikko, periaateOtsikko;
         ScrollView periaateVieritys;
+        VisualElement periaateLinkki, periaatePalaute;
+
+        /// <summary>Testikomento (ui palaute periaate): periaatteet auki ja vieritys palautelohkoon.</summary>
+        public void AvaaPeriaatteet()
+        {
+            Rakenne.Nayta(periaatteet, true, 250);
+            Rakenne.Vierita(periaateVieritys, periaatePalaute, 350);
+        }
 
         /// <summary>Tekstit paketista (moduulit/js/ui-tekstit.json); puuttuva moduuli = koodin vara.</summary>
         System.Collections.IEnumerator LataaTekstit()
@@ -223,6 +231,9 @@ namespace Matkakirja.Natiivi
                         if (MiniJson.Teksti(o, "teksti") is string te)
                             Rakenne.Teksti(te, "mk-kortti__teksti mk-aloitus__periaate", periaateVieritys);
                     }
+                    // Linkki ja palautelohko säilyvät paketin tekstien jälkeen (web: ennen oikeusriviä).
+                    if (periaateLinkki != null) periaateVieritys.Add(periaateLinkki);
+                    if (periaatePalaute != null) periaateVieritys.Add(periaatePalaute);
                     if (MiniJson.Teksti(p, "oikeudet") is string oik) Rakenne.Teksti(oik, "mk-kortti__teksti mk-aloitus__periaate", periaateVieritys);
                 }
             }
@@ -429,6 +440,7 @@ namespace Matkakirja.Natiivi
             juuri.style.opacity = 1f;
             juuri.pickingMode = PickingMode.Ignore;
             intro.AddToClassList("mk-aloitus__intro--lento");
+            intro.EnableInClassList("mk-aloitus__intro--vaaka", Screen.width > Screen.height);
             portti.style.display = DisplayStyle.None;
             valinta.style.display = DisplayStyle.None;
             valintaNappi.style.display = DisplayStyle.None;
@@ -457,6 +469,7 @@ namespace Matkakirja.Natiivi
                     juuri.style.display = DisplayStyle.None;
                     juuri.pickingMode = PickingMode.Position;
                     intro.RemoveFromClassList("mk-aloitus__intro--lento");
+                    intro.RemoveFromClassList("mk-aloitus__intro--vaaka");
                 }).StartingIn(900);
             }).StartingIn(viiveMs);
         }
@@ -628,6 +641,9 @@ namespace Matkakirja.Natiivi
             // Web periaate-linkit ja -oikeudet (ui.js naytaPeriaatteet).
             var gh = Rakenne.Nappi("Pelin GitHub-sivu", "mk-lehti__linkki mk-aloitus__periaatelinkki", () => Application.OpenURL("https://github.com/ravelius/Matkakirja"), v);
             Kirjasimet.Aseta(gh, Kirjasin.Kone);
+            periaateLinkki = gh;
+            // Web periaatePalaute: palautelohko linkin jälkeen (lomake: PalauteLomake.cs).
+            periaatePalaute = PalauteLomake.PeriaateLohko(v, UiKerros.Traileri);
             Kirjasimet.Aseta(Rakenne.Teksti("© Visuaaliviestinnän Instituutti Tampere Oy", "mk-aloitus__oikeudet", v), Kirjasin.Kone);
             var napit = Rakenne.El("mk-kortti__napit", kortti.Sisus, PickingMode.Ignore);
             var sulje = Rakenne.Nappi("Takaisin", "mk-nappi--haamu", () => Rakenne.Nayta(h, false, 250), napit);

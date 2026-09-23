@@ -52,8 +52,10 @@ namespace Matkakirja
         public GameObject koneMalli;
         [Tooltip("Koneen materiaali (URP Lit, hopea); FBX:n omat materiaalit eivät ole URP:tä.")]
         public Material koneMateriaali;
+        [Tooltip("Raidan (Raita) ja ikkunoiden (Ikkunat) materiaalit; null = koneMateriaali.")]
+        public Material raitaMateriaali, ikkunaMateriaali;
         [Tooltip("3D-koneen koko ruudulla iOS-pisteinä (siipiväli).")]
-        public float malliPx = 90f;
+        public float malliPx = 110f;
         public Savujana savu;
         public Aurinko aurinko;
 
@@ -382,15 +384,18 @@ namespace Matkakirja
                     foreach (var r in malli.GetComponentsInChildren<Renderer>())
                     {
                         r.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
-                        if (koneMateriaali != null)
+                        var oma = r.name.StartsWith("Raita") && raitaMateriaali != null ? raitaMateriaali
+                            : r.name.StartsWith("Ikkun") && ikkunaMateriaali != null ? ikkunaMateriaali : koneMateriaali;
+                        if (oma != null)
                         {
                             var m = r.sharedMaterials;
-                            for (int i = 0; i < m.Length; i++) m[i] = koneMateriaali;
+                            for (int i = 0; i < m.Length; i++) m[i] = oma;
                             r.sharedMaterials = m;
                         }
                         if (rajat == null) rajat = r.bounds; else { var b = rajat.Value; b.Encapsulate(r.bounds); rajat = b; }
                     }
                     if (rajat != null) malliKoko = Mathf.Max(0.01f, Mathf.Max(rajat.Value.size.x, rajat.Value.size.z));
+                    Debug.Log($"MATKAKIRJA nappula: kone {malli.GetComponentsInChildren<Renderer>().Length} osaa, koko {malliKoko:0.##} m, rajat {rajat?.size}");
                 }
                 if (malli != null) malli.SetActive(paalle);
                 olio.SetActive(!paalle);

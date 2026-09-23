@@ -7,10 +7,14 @@
 //   Taustamusiikki ━━●──────   35 %
 //   Taustaäänet    ━━━━━━━━●  100 %
 //   LATAA OFFLINE-KÄYTTÖÖN            (UiPalvelut.Offline, Natiiviseppä)
-//   Ranska      312 Mt     [ Lataa ]
-//   Italia      ▓▓▓▓░░ 58 %  [ Peru ]
-//   Espanja     ✓ ladattu  [ Poista ]
+//   Kaikki      osittain · 1,2 / 9,8 Gt  [ Lataa ]
+//   Eurooppa    ✓ ladattu · 1,2 Gt       [ Poista ]
+//   Aasia       ▓▓▓▓░░ 58 %              [ Peru ]
+//   Afrikka     2,1 Gt                   [ Lataa ]
 //   vapaata 23,4 Gt
+// Omistajan päätös 24.9.2026: vain "Kaikki" ylimpänä ja maanosat, ei yksittäisiä maita. Rivin tila
+// kootaan maanosan maista (kaikki valmiina = ladattu, osa = osittain, ei yhtään = ei); toiminto
+// kohdistuu maanosan maihin (Lataa puuttuvat, Peru latautuvat, Poista ladatut).
 //
 // Liukusäätimet: kultainen (--kulta #eab84e) täyttö ja nuppi, arvo kultaisena
 // tasalevein numeroin. Kehittäjän kytkimet (maailma, mittari) ja työhuone
@@ -46,7 +50,7 @@ namespace Matkakirja.Natiivi
 
             offlineOsio = Rakenne.El("mk-offline", Sisalto, PickingMode.Ignore);
             Rakenne.Teksti("LATAA OFFLINE-KÄYTTÖÖN", "mk-pudotus__otsikko", offlineOsio);
-            Rakenne.Teksti("Kartat ja lehdet tulevat verkosta. Ladatut maat toimivat ilman yhteyttä.", "mk-offline__selite", offlineOsio);
+            Rakenne.Teksti("Kartat ja lehdet tulevat verkosta. Ladatut maanosat toimivat ilman yhteyttä.", "mk-offline__selite", offlineOsio);
             AukiMuuttui += auki => { if (!auki) Asetukset.Tallenna(); };
             offlineLista = Rakenne.El("mk-offline__lista", offlineOsio, PickingMode.Ignore);
             offlineTyhja = Rakenne.Teksti("Ladattavia maita ei ole vielä saatavilla. Kartat ja lehdet tulevat verkosta.", "mk-offline__selite", offlineOsio);
@@ -100,11 +104,14 @@ namespace Matkakirja.Natiivi
             if (palvelu == null) return;
 
             var nahty = new HashSet<string>();
-            foreach (var maa in palvelu.Maat)
+            var ryhmat = Ryhmat(palvelu.Maat);
+            foreach (var (id, nimi, maat) in ryhmat)
             {
-                nahty.Add(maa.Id);
-                if (!offlineRivit.TryGetValue(maa.Id, out var r)) offlineRivit[maa.Id] = r = UusiOfflineRivi(maa.Id);
-                PaivitaRivi(r, maa);
+                nahty.Add(id);
+                if (!offlineRivit.TryGetValue(id, out var r)) offlineRivit[id] = r = UusiOfflineRivi(id);
+                r.Juuri.BringToFront();
+                var (k, osittain) = Kooste(id, nimi, maat);
+                PaivitaRivi(r, k, osittain);
             }
             foreach (var id in new List<string>(offlineRivit.Keys))
                 if (!nahty.Contains(id)) { offlineRivit[id].Juuri.RemoveFromHierarchy(); offlineRivit.Remove(id); }
@@ -135,7 +142,7 @@ namespace Matkakirja.Natiivi
             return r;
         }
 
-        void PaivitaRivi(OfflineRivi r, OfflineMaa m)
+        void PaivitaRivi(OfflineRivi r, OfflineMaa m, bool osittain)
         {
             r.Nimi.text = m.Nimi;
             bool latautuu = m.Tila == OfflineTila.Latautuu || m.Tila == OfflineTila.Jonossa;
@@ -150,26 +157,96 @@ namespace Matkakirja.Natiivi
                 case OfflineTila.Jonossa: teksti = "jonossa · " + Koko(m.Tavut); nappi = "Peru"; break;
                 case OfflineTila.Latautuu: teksti = Mathf.RoundToInt(osuus * 100) + " % · " + Koko(m.Ladattu) + " / " + Koko(m.Tavut); nappi = "Peru"; break;
                 case OfflineTila.Valmis: teksti = "ladattu · " + Koko(m.Tavut); nappi = "Poista"; break;
-                case OfflineTila.Virhe: teksti = "ei onnistunut" + (string.IsNullOrEmpty(m.Virhe) ? "" : ": " + m.Virhe); nappi = "Yritä uudelleen"; break;
-                default: teksti = Koko(m.Tavut); nappi = "Lataa"; break;
+                case OfflineTila.Virhe: teksti = (osittain ? "osittain · " : "") + "ei onnistunut" + (string.IsNullOrEmpty(m.Virhe) ? "" : ": " + m.Virhe); nappi = "Yritä uudelleen"; break;
+                default:
+                    teksti = osittain ? "osittain · " + Koko(m.Ladattu) + " / " + Koko(m.Tavut) : "ei ladattu · " + Koko(m.Tavut);
+                    nappi = "Lataa"; break;
             }
             r.Tieto.text = teksti;
             ((Label)r.Nappi.Q<Label>(className: "mk-nappi__teksti")).text = nappi;
+        }
+
+        // --- maanosat --------------------------------------------------------------
+
+        static readonly (string Id, string Nimi)[] Maanosat =
+        {
+            ("europe", "Eurooppa"), ("middleeast", "Lähi-itä"), ("africa", "Afrikka"), ("asia", "Aasia"),
+            ("northamerica", "Pohjois-Amerikka"), ("southamerica", "Etelä-Amerikka"), ("oceania", "Oseania"),
+        };
+        const string Kaikki = "kaikki";
+
+        /// <summary>Maan maanosa: palvelun antama, muuten yleisin maan kaupunkien manner.</summary>
+        static string MaanManner(OfflineMaa m)
+        {
+            if (!string.IsNullOrEmpty(m.Manner)) return m.Manner;
+            var laskut = new Dictionary<string, int>();
+            foreach (var k in UiSisalto.Kaikki)
+                if (k.Maa == m.Id && !string.IsNullOrEmpty(k.Manner))
+                    laskut[k.Manner] = (laskut.TryGetValue(k.Manner, out var n) ? n : 0) + 1;
+            string paras = null; int suurin = 0;
+            foreach (var p in laskut) if (p.Value > suurin) { suurin = p.Value; paras = p.Key; }
+            return paras;
+        }
+
+        /// <summary>"Kaikki" ylimpänä, sitten maanosat, joissa on ladattavaa (tuntematon manner vain Kaikissa).</summary>
+        static List<(string Id, string Nimi, List<OfflineMaa> Maat)> Ryhmat(IReadOnlyList<OfflineMaa> maat)
+        {
+            var tulos = new List<(string, string, List<OfflineMaa>)>();
+            if (maat == null || maat.Count == 0) return tulos;
+            tulos.Add((Kaikki, "Kaikki", new List<OfflineMaa>(maat)));
+            var jaot = new Dictionary<string, List<OfflineMaa>>();
+            foreach (var m in maat)
+            {
+                var mn = MaanManner(m);
+                if (mn == null) continue;
+                if (!jaot.TryGetValue(mn, out var l)) jaot[mn] = l = new List<OfflineMaa>();
+                l.Add(m);
+            }
+            foreach (var (id, nimi) in Maanosat)
+                if (jaot.TryGetValue(id, out var l)) tulos.Add((id, nimi, l));
+            return tulos;
+        }
+
+        /// <summary>Maanosan rivi kootaan sen maista (sama OfflineMaa-muoto kuin yksittäisellä maalla).</summary>
+        static (OfflineMaa Rivi, bool Osittain) Kooste(string id, string nimi, List<OfflineMaa> maat)
+        {
+            var k = new OfflineMaa { Id = id, Nimi = nimi };
+            int valmiit = 0, virheet = 0; bool latautuu = false, jonossa = false;
+            foreach (var m in maat)
+            {
+                k.Tavut += Math.Max(0, m.Tavut);
+                switch (m.Tila)
+                {
+                    case OfflineTila.Valmis: valmiit++; k.Ladattu += Math.Max(0, m.Tavut); break;
+                    case OfflineTila.Latautuu: latautuu = true; k.Ladattu += Math.Max(0, m.Ladattu); break;
+                    case OfflineTila.Jonossa: jonossa = true; break;
+                    case OfflineTila.Virhe: virheet++; if (k.Virhe == null) k.Virhe = m.Nimi + ": " + m.Virhe; break;
+                }
+            }
+            k.Tila = latautuu ? OfflineTila.Latautuu : jonossa ? OfflineTila.Jonossa
+                : valmiit == maat.Count ? OfflineTila.Valmis : virheet > 0 ? OfflineTila.Virhe : OfflineTila.Ei;
+            return (k, valmiit > 0 && valmiit < maat.Count);
         }
 
         void OfflineToiminto(string id)
         {
             var palvelu = UiPalvelut.Offline;
             if (palvelu == null) return;
-            OfflineMaa maa = null;
-            foreach (var m in palvelu.Maat) if (m.Id == id) { maa = m; break; }
-            if (maa == null) return;
-            switch (maa.Tila)
+            List<OfflineMaa> maat = null;
+            foreach (var (rid, _, l) in Ryhmat(palvelu.Maat)) if (rid == id) { maat = l; break; }
+            if (maat == null) return;
+            var k = Kooste(id, id, maat).Rivi;
+            foreach (var m in maat)
             {
-                case OfflineTila.Jonossa:
-                case OfflineTila.Latautuu: palvelu.Peru(id); break;
-                case OfflineTila.Valmis: palvelu.Poista(id); break;
-                default: palvelu.Lataa(id); break;
+                switch (k.Tila)
+                {
+                    case OfflineTila.Jonossa:
+                    case OfflineTila.Latautuu:
+                        if (m.Tila == OfflineTila.Jonossa || m.Tila == OfflineTila.Latautuu) palvelu.Peru(m.Id);
+                        break;
+                    case OfflineTila.Valmis: palvelu.Poista(m.Id); break;
+                    default: if (m.Tila != OfflineTila.Valmis) palvelu.Lataa(m.Id); break;
+                }
             }
             PaivitaOffline();
         }

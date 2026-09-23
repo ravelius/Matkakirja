@@ -24,6 +24,10 @@ namespace Matkakirja.Natiivi
     public sealed class LehtiKuva
     {
         public string Lahde, Lyhyt, Selite, LahdeRivi, Vuosi, Otsikko;
+        /// <summary>Matkakirjan ihmeen kulmanauhan teksti (Nostokortti.Ihmenauha), muuten null.</summary>
+        public string Nauha;
+        /// <summary>Suurennoksen reaktiorivin tunniste ja otsikko (web teos.reaktio), muuten null.</summary>
+        public string Reaktio, ReaktioOtsikko;
     }
 
     public sealed class LehtiNosto

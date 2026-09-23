@@ -19,8 +19,16 @@
 //   ui lehti fokus [kaupunki] [juliste]       kaupunkilehti fokustehtävän sivulla (oletus ateena; AARTEEN AVAUS,
 //                                             juliste = JULISTE-tehtävä); vastaus ja pulla kirjataan, jos peli on käynnissä
 //   ui lehti fokus-vastaa n | fokus-pulla     napauttaa fokustehtävän vaihtoehtoa n (0–) / pullanappia (2× = osto)
-//   ui nosto <valoId>                         nostokortti: skandaali:<id> | hetki:<id> | elaintaky:<ISO> | kohde:<id>[@ISO]
+//   ui nosto <valoId> [nappi]                 nostokortti: skandaali:<id> | hetki:<id> | elaintaky:<ISO> | kohde:<id>[@ISO]
+//                                             | takynosto:<id>[@kaupunki] (esim. areena, schliemann, maailmannayttely-1873)
+//                                             | syvennys:<kaupunki>-<täky> (esim. ateena-nike); nappi painetaan
+//                                             latauksen jälkeen: lisaa | ihme | leikekirja | kartalla | liite |
+//                                             valokuva | vastaa<n> (0–) | juliste | kysy<n>
 //                                             (lisäkaupunki: kohde:nakyva-kaupunki-lyon → lisäkaupungin kortti)
+//   ui nostonappi <nappi>                     painaa auki olevan nostokortin nappia (esim. vastaa0, sitten juliste)
+//   ui ihme [kohde[@ISO]]                     kohdekortti ja "Koe ihme" -suurennos (oletus akropolis@GRC;
+//                                             kadonnut ihme on kortin ensimmäinen kuva nauhoineen: ui nosto kohde:crystal-palace@GBR)
+//   ui leikekirja [kohde[@ISO]]               kohdekortti ja sen "Livian leikekirja" (oletus troija@TUR)
 //   ui lisakaupunki [nimi]                    lisäkaupungin kortti (oletus lyon = kohde:nakyva-kaupunki-lyon)
 //   ui kaupunki <id> [nostot [aihe|n] | kohde n | alas | ylos]  kaupunkikortti ilman peliä (kuten ui kortti) ja
 //                                             nostokategoriat haitarina: nostot = avaa aiheen (tai n:nnen,
@@ -28,6 +36,15 @@
 //                                             kategorian n:s rivi (kortti kiinni, nosto auki); alas/ylos = kelausrivi
 //   ui turistiinfo [kaupunki]                 turisti-info-merkin napautus (UiPalvelut.IlmoitaTuristiInfo, oletus lontoo)
 //   ui huipennus                              matkan huipennus (kaikki aarteet) esimerkkiluvuin
+//   ui paljastus [tyyppi] [kaupunki] [kaari]  aarteen paljastus koko ruudulle ilman peliä ja ääniä (Paljastus.Testaa):
+//                                             star (oletus) | isoAarre | pieniAarre | mannerAarre | pollo | piirros;
+//                                             kaupunki antaa mantereen nimen (oletus pariisi); kaari = kaaritekstin paikka
+//   ui reaktio [nakyma] [arg]                 reaktionapit KUIVANA (ei verkkoa, ei jonoa; Reaktiot.Kuiva = true):
+//                                             lehti [kaupunki] (aihesivu 2, oletus firenze) | nosto [kohde:id@ISO] (oletus pompeji) |
+//                                             nahtavyys [kaupunki] [n] | huono (Mikä oli vialla?) | virhe (lomake,
+//                                             "Lähetä Livialle" / "Peru") | tila (oma ääni, jono) | kuiva pois
+//   ui reaktio laheta virhe <kohde> <teksti>  OIKEA lähetys erikseen: virheilmoitus workerille (POST /laheta)
+//   ui reaktio laheta aani <kohde> [symboli]  OIKEA ääni (POST /reaktio; tyhjä symboli = peru oma)
 //   ui sahke liuska|apu|sulje|kiinni|uusi|jasen|tila   sähkeliuska ja retkikuntaosio valekutsuin (SahkeNakyma.Testaa)
 //   ui sahketehtava [kaupunki] [tila]         pöllön sähketehtävä ilman peliä (oletus sofia tyhja), oikea sisältö ja
 //                                             hakemisto, hiljainen. Tilat: tyhja | ohi | ohi2 (vinkki) | pullat (ostettu) |
@@ -52,6 +69,16 @@
 //                                             kuvallinen juttu tai kohde n) → "Avaa juttu" nähtävyysarkkiin;
 //                                             ohittaa sijaintiehdon (webissä vain kaupungissa, jossa pelaaja on)
 //   ui tietoja                                tekijätiedot ja lähteet
+//   ui tehoste <nimi> [voima] | ui tehoste lista  tehoste siivutaulusta (webin sfx.play-nimet: correct, wrong,
+//                                             quizOpen, tick, dieLand, paper, popup …) tai pulun (pulu.kujerrus);
+//                                             lista = kaikki nimet lokiin. SOI ÄÄNEEN (mykistettynä hiljaa)
+//   ui lentoaani alku [kesto s] | loppu       lennon moottoriääni (PeliOhjain.LentoAani ilman peliä)
+//   ui palaute [palaute|ehdotus|kuvavinkki|pro|periaate|kuvapalaute]
+//                                             palaute- ja ehdotuslomake AUKI ILMAN LÄHETYSTÄ: palaute (oletus) =
+//                                             "Kerro mitä huomasit" kuten hampurilaisesta; ehdotus/kuvavinkki/pro
+//                                             vierittää (ja avaa väkäsen); periaate = aloitusportin periaatteet
+//                                             palautelohkon kohdalla; kuvapalaute = havainnekuvan palaute
+//                                             minipopupissa keksityllä kuvalla. Lähetys vain napista käsin.
 //   ui chat [kysymys]                         pulun keskustelu auki / kysy
 //   ui traileri [kaupunki]                    saapumistraileri ilman puhetta (oletus lontoo)
 //   ui luento [kaupunki] [loppu]              matkakirjakortti + luentakuvat (oletus ateena); loppu = Livian vuoro
@@ -136,6 +163,60 @@ namespace Matkakirja.Natiivi
                 Kirjaa(rivi + " → " + (tulos ?? "ok"));
             }
             PaivitaLivia();
+        }
+
+        /// <summary>
+        /// ui reaktio: näkymät kuivana (Reaktiot.Kuiva = true, ei verkkoa eikä jonoa). Vain
+        /// "ui reaktio laheta …" lähettää oikeasti (Reaktiot.TestiLahetys).
+        /// </summary>
+        string Reaktio(UiNakymat ui, string loput)
+        {
+            var r = loput.Split(new[] { ' ' }, 4, System.StringSplitOptions.RemoveEmptyEntries);
+            string laji = r.Length > 0 ? r[0].ToLowerInvariant() : "lehti";
+            if (laji == "laheta")
+            {
+                if (r.Length < 3) return "ui reaktio laheta virhe|aani <kohde> [teksti|symboli]";
+                return Reaktiot.TestiLahetys(r[1].ToLowerInvariant(), r[2], r.Length > 3 ? r[3] : "", t => Kirjaa("ui reaktio laheta: " + t));
+            }
+            if (laji == "kuiva") { Reaktiot.Kuiva = !(r.Length > 1 && r[1] == "pois"); return "kuiva = " + Reaktiot.Kuiva; }
+            if (laji == "tila")
+            {
+                var v = Reaktiot.Viimeisin;
+                return "kuiva = " + Reaktiot.Kuiva + ", jonossa " + Reaktiot.Jonossa
+                    + (v != null ? ", viimeisin " + v.Avain + " oma = '" + Reaktiot.OmaAani(v.Avain) + "'" : "");
+            }
+            Reaktiot.Kuiva = true;
+            switch (laji)
+            {
+                case "lehti":
+                    ui.Lehti.Nayta(LehtiLaji.Kaupunki, r.Length > 1 ? r[1].ToLowerInvariant() : "firenze", null, 1);
+                    return null;
+                case "nosto":
+                    ui.Nostokortti.Avaa(r.Length > 1 ? r[1] : "kohde:pompeji@ITA");
+                    return null;
+                case "nahtavyys":
+                {
+                    string kid = r.Length > 1 ? r[1].ToLowerInvariant() : "firenze";
+                    int nro = r.Length > 2 && int.TryParse(r[2], out var n) ? n : 0;
+                    Kohdekartat.Hae(kid, k =>
+                    {
+                        var kohde = k?.Kohteet.Find(x => nro > 0 ? x.Numero == nro : x.Selattava);
+                        if (kohde != null) ui.Nahtavyydet.AvaaKohde(k, kohde);
+                        else Kirjaa("ui reaktio nahtavyys: ei kohdetta " + kid);
+                    });
+                    return null;
+                }
+                case "huono":
+                case "virhe":
+                {
+                    // Auki olevan näkymän viimeisin rivi, muuten erillinen testirivi (ei piirry mihinkään).
+                    var rivi = Reaktiot.Viimeisin?.Juuri.panel != null ? Reaktiot.Viimeisin
+                        : Reaktiot.Piirra(new VisualElement(), "testi:reaktio", "Testirivi");
+                    if (laji == "huono") rivi.AvaaKysymys(); else rivi.AvaaVirheikkuna();
+                    return rivi.Avain;
+                }
+                default: return "ui reaktio lehti|nosto|nahtavyys|huono|virhe|tila|kuiva pois|laheta";
+            }
         }
 
         void Kirjaa(string teksti)
@@ -275,6 +356,40 @@ namespace Matkakirja.Natiivi
                     if (loput.Length > 0) ui.Chat.Kysy(loput); else ui.Chat.Vaihda();
                     return null;
                 case "tietoja": ui.Tietoja.Avaa(); return null;
+                case "tehoste":
+                {
+                    var tk = loput.Split(new[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries);
+                    if (tk.Length == 0 || tk[0] == "lista")
+                        return string.Join(" ", Aanet.TehosteNimet) + " | " + string.Join(" ", Aanet.PulunTehosteNimet);
+                    float voima = tk.Length > 1 ? float.Parse(tk[1], CultureInfo.InvariantCulture) : 1f;
+                    if (tk[0].StartsWith("pulu.")) { Aanet.PulunTehoste(tk[0], voima); return null; }
+                    return Aanet.Tehoste(tk[0], voima) ? null : "ei soinut (tuntematon nimi tai Äänimaisema pois): " + tk[0];
+                }
+                case "lentoaani":
+                {
+                    var la = loput.Split(new[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries);
+                    string mita = la.Length > 0 ? la[0] : "alku";
+                    if (mita == "loppu") { Aanet.LentoAani(false); return null; }
+                    if (mita != "alku") return "ui lentoaani alku [kesto] | loppu";
+                    float kesto = la.Length > 1 ? float.Parse(la[1], CultureInfo.InvariantCulture) : 4.8f;
+                    if (Aanet.LentoSoi) return "soi jo";
+                    Aanet.LentoAani(true, kesto);
+                    return null;
+                }
+                case "palaute":
+                    switch (loput.Length > 0 ? loput : "palaute")
+                    {
+                        case "palaute": ui.Palaute.Avaa(); return null;
+                        case "ehdotus": case "kuvavinkki": case "pro": ui.Palaute.Avaa(loput); return null;
+                        case "periaate":
+                            ui.Aloitus.Testaa("portti", id => ui.Tilarivi.Viesti("Lähtö: " + id));
+                            ui.Aloitus.AvaaPeriaatteet();
+                            return null;
+                        case "kuvapalaute":
+                            Kuvavinkki.AvaaKuvapalaute("kuvat/havainne/esimerkki.jpg", "Havainnekuva: esimerkki (testikomento)", PalauteLomake.EhdotusSivu(""));
+                            return null;
+                        default: return "ui palaute palaute|ehdotus|kuvavinkki|pro|periaate|kuvapalaute";
+                    }
                 case "aloitus":
                     ui.Aloitus.Testaa(loput.Length > 0 ? loput : "portti", id => ui.Tilarivi.Viesti("Lähtö: " + id));
                     return null;
@@ -308,8 +423,27 @@ namespace Matkakirja.Natiivi
                     return null;
                 }
                 case "nosto":
-                    ui.Nostokortti.Avaa(loput.Length > 0 ? loput : "skandaali:shakkiturkkilainen");
+                {
+                    var no = loput.Split(new[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries);
+                    string valo = no.Length > 0 ? no[0] : "skandaali:shakkiturkkilainen";
+                    ui.Nostokortti.Testaa(valo, no.Length > 1 ? no[1] : null, v => Kirjaa("ui nosto " + valo + ": " + (v ?? "auki")));
                     return null;
+                }
+                case "nostonappi":
+                {
+                    string tulos = "ok";
+                    ui.Nostokortti.Testaa(null, loput.Trim(), v => tulos = v);
+                    return tulos == "ok" ? null : tulos;
+                }
+                case "ihme":
+                case "leikekirja":
+                {
+                    string kohde = loput.Trim().Length > 0 ? loput.Trim() : osat[1] == "ihme" ? "akropolis@GRC" : "troija@TUR";
+                    string valo = kohde.StartsWith("kohde:") ? kohde : "kohde:" + kohde;
+                    string nappi = osat[1].ToLowerInvariant();
+                    ui.Nostokortti.Testaa(valo, nappi, v => Kirjaa("ui " + nappi + " " + kohde + ": " + (v ?? "ok")));
+                    return null;
+                }
                 case "lisakaupunki":
                     ui.Nostokortti.Avaa("kohde:nakyva-kaupunki-" + (loput.Length > 0 ? loput.ToLowerInvariant() : "lyon"));
                     return null;
@@ -321,6 +455,10 @@ namespace Matkakirja.Natiivi
                     return null;
                 }
                 case "kaupunki": return Kaupunki(ui, loput);
+                case "paljastus":
+                    return ui.Paljastus.Testaa(loput);
+                case "reaktio":
+                    return Reaktio(ui, loput);
                 case "huipennus":
                     ui.Huipennus.Nayta(new MatkanYhteenveto { Paivat = 83, Kaupungit = 41, Aarteet = 6, AarteitaKaikkiaan = 6 },
                         () => ui.Aloitus.NaytaAvaus(id => ui.Tilarivi.Viesti("Lähtö: " + id)));
