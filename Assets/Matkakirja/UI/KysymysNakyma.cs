@@ -16,8 +16,7 @@
 //   [Vihje (40 £)]            [50:50 (80 £)]  [Jatka matkaa] ← menu: .lifeline, .primary
 //
 // Otsikkorivi ja napit pysyvät paikallaan; väli vierii (ScrollView), kun
-// kortti ei mahdu puhelimen ruudulle. Tapahtumakortti (#event-dialog) käyttää
-// samaa korttia: "Matkalla sattui", teksti, vaikutus ja Jatka.
+// kortti ei mahdu puhelimen ruudulle. (Tapahtumakortit on poistettu pelistä, Fablen C1.)
 //
 // Kohtaaminen (erä 4, web visa.js "KOHTAAMISEN KAKSI SIVUA"): TervehdysVaihe =
 // sivu 1: iso kohtaamiskuva kuvateksteineen, hahmon tervehdys kirjoituskoneella,
@@ -146,8 +145,7 @@ namespace Matkakirja.Natiivi
             toiminnot = t ?? new KysymysToiminnot();
             odottaa = false;
 
-            bool tapahtuma = d.Laji == KysymysLaji.Tapahtumakortti;
-            bool tervehdys = d.TervehdysVaihe && !d.Vastattu && !tapahtuma;
+            bool tervehdys = d.TervehdysVaihe && !d.Vastattu;
             int tulosVaihe = !d.Vastattu ? 0 : d.TulosVaihe <= 0 ? 2 : Mathf.Min(d.TulosVaihe, 2);
             if (uusi)
             {
@@ -166,12 +164,11 @@ namespace Matkakirja.Natiivi
             aloitaNappi = null;
             varoitus = null;
 
-            RakennaPaa(d, uusi, tapahtuma, tervehdys);
+            RakennaPaa(d, uusi, tervehdys);
             vieritys.Clear();
             var sisalto = vieritys.contentContainer;
             VisualElement tulos = null;
-            if (tapahtuma) RakennaTapahtuma(d, sisalto);
-            else if (tervehdys) RakennaTervehdys(d, sisalto);
+            if (tervehdys) RakennaTervehdys(d, sisalto);
             else tulos = RakennaKysymys(d, sisalto, tulosVaihe);
             RakennaNapit(d, tulosVaihe, tervehdys);
             NaytaViesti(d.Viesti);
@@ -231,9 +228,9 @@ namespace Matkakirja.Natiivi
 
         // --- rakennus ---------------------------------------------------------------
 
-        void RakennaPaa(KysymysNaytto d, bool uusi, bool tapahtuma, bool tervehdys)
+        void RakennaPaa(KysymysNaytto d, bool uusi, bool tervehdys)
         {
-            paa.style.display = tapahtuma ? DisplayStyle.None : DisplayStyle.Flex;
+            paa.style.display = DisplayStyle.Flex;
             // Leima vain pulmissa ja valokuvissa (web: kehys kertoo muuten, kuka kysyy).
             string leimaTeksti = d.Laji switch
             {
@@ -250,7 +247,7 @@ namespace Matkakirja.Natiivi
 
             // Tiimalasi vain vastaamattomassa, aikarajallisessa kysymyksessä (pulmassa ei kelloa,
             // tervehdyssivulla aika ei kulu).
-            bool kello = d.Sekunnit.HasValue && !d.Vastattu && !tapahtuma && !tervehdys;
+            bool kello = d.Sekunnit.HasValue && !d.Vastattu && !tervehdys;
             bool alkaa = kello && (uusi || !aikaraja.HasValue);
             aikaraja = kello ? d.Sekunnit : null;
             aika.style.display = kello ? DisplayStyle.Flex : DisplayStyle.None;
@@ -603,23 +600,10 @@ namespace Matkakirja.Natiivi
             if (n > 0) isa.Add(rivi);
         }
 
-        void RakennaTapahtuma(KysymysNaytto d, VisualElement s)
-        {
-            Kirjasimet.Aseta(Rakenne.Teksti("Matkalla sattui", "mk-kortti__otsikko", s), Kirjasin.LukuLihava);
-            if (!string.IsNullOrEmpty(d.Otsikko))
-                Kirjasimet.Aseta(Rakenne.Teksti(d.Otsikko, "mk-kysymys__tapahtumapaikka", s), Kirjasin.Kone);
-            var teksti = Rakenne.Teksti(d.Kysymys ?? "", "mk-kysymys__tapahtumateksti", s);
-            teksti.enableRichText = false;
-            Kirjasimet.Aseta(teksti, Kirjasin.Luku);
-            if (!string.IsNullOrEmpty(d.Loyto))
-                Kirjasimet.Aseta(Rakenne.Teksti(d.Loyto, "mk-kysymys__vaikutus", s), Kirjasin.Kone);
-        }
-
         void RakennaNapit(KysymysNaytto d, int tulosVaihe, bool tervehdys)
         {
             napit.Clear();
             napit.EnableInClassList("mk-kysymys__napit--keski", tervehdys);
-            bool tapahtuma = d.Laji == KysymysLaji.Tapahtumakortti;
             if (tervehdys)
             {
                 // "Aloita peli" / "Yritä viimeistä kertaa": näkyviin, kun tervehdys on kirjoitettu.
@@ -629,7 +613,7 @@ namespace Matkakirja.Natiivi
                 Kirjasimet.Aseta(aloitaNappi, Kirjasin.KoneLihava);
                 aloitaNappi.style.display = DisplayStyle.None;
             }
-            else if (!d.Vastattu && !tapahtuma)
+            else if (!d.Vastattu)
             {
                 // Vihje: tarjolla → hinta; ostettu → harmaa "Vihje ostettu" (web quizHint).
                 if (d.VihjeTarjolla)

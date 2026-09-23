@@ -1,6 +1,6 @@
 /* KYSYMYSNÄKYMÄ (Natiivi-UI, erä 3): verkkopelin #quiz-dialog (css/styles.css
  * "--- tietovisa ---", .quiz-option, .quiz-result, .lifeline, tiimalasi,
- * .quiz-hint-text, .quiz-sketch, .quiz-photo) ja tapahtumakortti (#event-dialog).
+ * .quiz-hint-text, .quiz-sketch, .quiz-photo).
  * Mitat puhelimen mukaan: styles.css:n @media (max-width: 560px) ja
  * (pointer: coarse) -säännöt (yksi sarake, isot vaihtoehtonapit).
  * USS:ssä ei ole elliptisiä kulmasäteitä (86px 14px 92px 12px / 12px 92px …),
@@ -425,31 +425,6 @@
 .mk-kysymys__lahdelinkki {
     border-bottom-width: 1px;
     border-color: rgba(122, 96, 57, 0.6);
-}
-
-/* --- tapahtumakortti (#event-dialog: .fact-place, .arrival-text, .arrival-ask) --- */
-
-.mk-kysymys__tapahtumapaikka {
-    font-size: 12.8px;
-    letter-spacing: 0.5px;
-    white-space: normal;
-    color: var(--map-ink-soft);
-    margin-bottom: 4px;
-}
-
-.mk-kysymys__tapahtumateksti {
-    font-size: 15.5px;
-    white-space: normal;
-    color: #5a4326;
-    margin: 6px 0 12px 0;
-}
-
-.mk-kysymys__vaikutus {
-    font-size: 13.6px;
-    letter-spacing: 0.7px;
-    white-space: normal;
-    color: var(--map-ink);
-    margin-bottom: 6px;
 }
 
 /* --- hetkellinen viesti ja napit (menu, .lifeline, .primary) ---------------- */

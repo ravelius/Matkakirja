@@ -14,7 +14,7 @@ Pelikoodarin näkymärajapinnat `Scripts/Peli/NakymaSopimukset.cs` ovat Assembly
   `lippu`, `pulma [id]` (luonnos Painter2D:llä; id: `pylvaat` (oletus, valokuvavaihtoehdot),
   `roomalaiset`, `kuunvaiheet`, muut webin oletusdatalla: `hieroglyfit`, `punnukset`,
   `naksutus`, `vesileilit`, `suolaaltaat`, `geysir`, `laiturit`, `kukko`),
-  `tapahtumakortti`, `tulos [laattatyyppi]`
+  `tulos [laattatyyppi]`
   (paljastus: löydön kuva — ensin löydön oma kuva `LoytoKuvaUrl`, varana laattatyypin
   kuva tai webin piirros: `isoAarre` (oletus, Ivalojoen kultahippu: maakohtainen nimi,
   fakta ja kuva ämpäristä), `pieniAarre` (tervatynnyrin hopeariksi), `star` (aarrekuva
@@ -216,9 +216,6 @@ kuva kysymys-kukko
 ui kysymys pulma kuunvaiheet
 odota 1
 kuva kysymys-kuunvaiheet
-ui kysymys tapahtumakortti
-odota 1
-kuva kysymys-tapahtuma
 ui kysymys tulos
 odota 1
 kuva kysymys-tulos
