@@ -202,8 +202,9 @@ namespace Matkakirja.Natiivi
         {
             if (sahke == null) return "sähkelinja ei ole käytössä";
             if (Tila != SilmukanTila.Kysymys || AvoinTehtava != Tehtava.Kysymys) return "kysymys ei ole auki";
+            rahaSyy = RahaSyyt.Kaveriapu;
             var t = sahke.KysyKaverilta(kysely);
-            if (!t.Ok) { NaytaKysymys(t.Virhe); return t.Virhe; }
+            if (!t.Ok) { rahaSyy = null; NaytaKysymys(t.Virhe); return t.Virhe; }
             Aanita(Aanitunnukset.Vihje);
             Tallenna();
             NaytaKysymys();
@@ -355,13 +356,14 @@ namespace Matkakirja.Natiivi
         {
             if (!sahketehtavat.TryGetValue(kaupunki, out var t)) return;
             if (sahkeKorttiKaupunki != null) SuljeSahkekortti();
-            var r = KauppaTeko(ka => sahketila.Paljasta(ka, t));
+            var r = KauppaTeko(ka => sahketila.Paljasta(ka, t), RahaSyyt.Sahkepalkkio);
             Debug.Log($"MATKAKIRJA peli: sähkeaarre {kaupunki} → {(r.Ok ? "ok" : r.Virhe)}, raha {matka?.Tila.Pelaaja.Raha}");
         }
 
         KauppaTulos OstaSahkepulla(Sahketehtava t, bool vinkki)
         {
-            var r = KauppaTeko(ka => vinkki ? SahketehtavaTila.OstaVinkki(ka, t) : SahketehtavaTila.OstaLinkki(ka, t));
+            var r = KauppaTeko(ka => vinkki ? SahketehtavaTila.OstaVinkki(ka, t) : SahketehtavaTila.OstaLinkki(ka, t),
+                vinkki ? RahaSyyt.Pulla : RahaSyyt.PuolikasPulla);
             if (!r.Ok) return r;
             // Kokonainen pulla ostaa sanat (kupla), puolikas pelkän osoitteen (linkkinappi kortille).
             Kuplat(t.Kaupunki, vinkki ? "vinkki" : "linkkiSaate", vinkki ? t.Vinkki : t.LinkkiSaate);

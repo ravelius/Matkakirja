@@ -176,6 +176,13 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public event Action TilaMuuttui;
 
+        /// <summary>
+        /// Kukkaro muuttui teon jälkeen (web kukkaroleima): (muutos puntina, syy näyttötekstinä, saldo).
+        /// Syy on webin leiman alarivi ("Lehden minitehtävä ratkesi", "pulla Livialle", "Bussimatka −5 puntaa").
+        /// Tulee ennen TilaMuuttui-tapahtumaa. Kolikon ääni tulee erikseen Aani("coin")-tapahtumasta, kun rahaa tulee.
+        /// </summary>
+        public event Action<int, string, int> RahaMuuttui;
+
         // --- aloitusnäkymä ja virstanpylväät (Natiivi-UI) -------------------
 
         /// <summary>
@@ -648,16 +655,17 @@ namespace Matkakirja.Natiivi
         /// ajaa teon, tallentaa ja päivittää näkymän. Mannerlento siirtää kameran.
         /// Esim. PeliOhjain.Instanssi.KauppaTeko(k => k.Kulttuuri(id, oikein)).
         /// </summary>
-        public KauppaTulos KauppaTeko(Func<Kaupat, KauppaTulos> teko)
+        public KauppaTulos KauppaTeko(Func<Kaupat, KauppaTulos> teko, string rahanSyy = null)
         {
+            rahaSyy = rahanSyy;
             if (kaupat == null || matka == null) return KauppaTulos.Epaonnistui("peli ei ole valmis");
             var lahto = matka.Tila.Pelaaja.Sijainti;
             tapahtumat.Clear();
             KauppaTulos t;
             int rahaEnnen = matka.Tila.Pelaaja.Raha;
             try { t = teko(kaupat); }
-            catch (Exception e) { Debug.LogException(e); return KauppaTulos.Epaonnistui(e.Message); }
-            if (!t.Ok) return t;
+            catch (Exception e) { Debug.LogException(e); rahaSyy = null; return KauppaTulos.Epaonnistui(e.Message); }
+            if (!t.Ok) { rahaSyy = null; return t; }
             if (matka.Tila.Pelaaja.Raha > rahaEnnen) Aanita(Aanitunnukset.Kolikot);
             Tallenna();
             if (tapahtumat.Count > 0) Viesti(string.Join(" · ", tapahtumat));
@@ -864,6 +872,8 @@ namespace Matkakirja.Natiivi
                 if (Tila == SilmukanTila.Kysymys) kysymysLisat.Add(rivi); else tapahtumat.Add(rivi);
             };
             SahkeKytke(m);
+            rahaNahty = m.Tila.Pelaaja.Raha;
+            rahaSyy = null;
             kysely = null;
             KytkeKysely();
         }
@@ -919,6 +929,7 @@ namespace Matkakirja.Natiivi
             catch (Exception e) { Debug.LogError("MATKAKIRJA peli: tallennus epäonnistui: " + e.Message); }
             PaivitaAarrepiste();
             SahkeTallennettu();
+            IlmoitaRaha();
             using (Ajoita("tallennus.tilaMuuttui"))
                 try { TilaMuuttui?.Invoke(); } catch (Exception e) { Debug.LogException(e); }
         }
@@ -1416,12 +1427,13 @@ namespace Matkakirja.Natiivi
             KauppaTulos tulos;
             switch (t.Laji)
             {
-                case LehtiTekoLaji.Kulttuurivastaus: tulos = KauppaTeko(k => k.Kulttuuri(t.Kaupunki, t.Oikein)); break;
+                case LehtiTekoLaji.Kulttuurivastaus: tulos = KauppaTeko(k => k.Kulttuuri(t.Kaupunki, t.Oikein), RahaSyyt.Kulttuuri); break;
                 case LehtiTekoLaji.Minitehtavavastaus:
-                    tulos = KauppaTeko(k => k.Minitehtava(t.Kaupunki, t.Aihe, t.Oikein, t.Palkkio > 0 ? t.Palkkio : KauppaVakiot.MinitehtavaPalkkio));
+                    tulos = KauppaTeko(k => k.Minitehtava(t.Kaupunki, t.Aihe, t.Oikein, t.Palkkio > 0 ? t.Palkkio : KauppaVakiot.MinitehtavaPalkkio),
+                        RahaSyyt.Minitehtava(t.Aihe));
                     break;
-                case LehtiTekoLaji.JulisteMyonto: tulos = KauppaTeko(k => k.MyonnaJuliste(t.Avain)); break;
-                case LehtiTekoLaji.PullaVinkki: tulos = KauppaTeko(k => k.PullaVinkki(t.Kaupunki)); break;
+                case LehtiTekoLaji.JulisteMyonto: tulos = KauppaTeko(k => k.MyonnaJuliste(t.Avain), RahaSyyt.Juliste); break;
+                case LehtiTekoLaji.PullaVinkki: tulos = KauppaTeko(k => k.PullaVinkki(t.Kaupunki), RahaSyyt.Pulla); break;
                 case LehtiTekoLaji.EtsiKatko:
                 {
                     // Web etsiKatko: lehti kiinni ja kohtaaminen/kysymys alkaa (LehtiSuljettu näyttää sen).
@@ -1612,7 +1624,7 @@ namespace Matkakirja.Natiivi
             if (Tila != SilmukanTila.Kysymys || AvoinTehtava == Tehtava.Ei) return "kysymys ei ole auki";
             bool vastattuEnnen = KysymysTila != null && KysymysTila.Vastattu;
             var t = teko();
-            if (!t.Ok) { NaytaKysymys(t.Virhe); return t.Virhe; }
+            if (!t.Ok) { rahaSyy = null; NaytaKysymys(t.Virhe); return t.Virhe; }
             // Vastaus: ensin tuomio, 0,9 s myöhemmin paljastus (Update).
             if (!vastattuEnnen) { tulosPaljastettu = false; paljastusAika = Time.unscaledTime + TuomioS; }
             Tallenna();
@@ -1645,6 +1657,7 @@ namespace Matkakirja.Natiivi
         public string Vihje()
         {
             if (AvoinTehtava != Tehtava.Kysymys) return "vihjettä ei ole tarjolla";
+            rahaSyy = RahaSyyt.Vihje;
             var r = KysymysTeko(() => kysely.Vihje());
             if (r == null) Aanita(Aanitunnukset.Vihje);
             return r;
@@ -1655,7 +1668,7 @@ namespace Matkakirja.Natiivi
         {
             switch (AvoinTehtava)
             {
-                case Tehtava.Kysymys: return Aanella(KysymysTeko(() => kysely.Puolita()), Aanitunnukset.Puolitus);
+                case Tehtava.Kysymys: rahaSyy = RahaSyyt.Puolitus; return Aanella(KysymysTeko(() => kysely.Puolita()), Aanitunnukset.Puolitus);
                 default: return "50:50 ei ole tarjolla";
             }
         }
