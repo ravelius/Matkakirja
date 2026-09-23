@@ -132,7 +132,7 @@ export function glNostonInstanssi(d, sprite, osa, opacity) {
 
 /** Onko noston ikoni hehkupiste (kategorian värikiekko ilman kuvamerkkiä). */
 export function glOnHehkupiste(d) {
-  return Boolean(d) && !d.kuvamerkki && !d.poltettu && NOSTOSYM_PISTEET.includes(d.kategoria);
+  return Boolean(d) && !d.kuvamerkki && !d.poltettu && !d.pisteLaatassa && NOSTOSYM_PISTEET.includes(d.kategoria);
 }
 
 /**
@@ -400,7 +400,9 @@ export function luoGlNimiosovitin({
         const ikoninPeitto = haivytys && !haivytys.poistu ? haivytys.mista : peitto;
         const instanssi = glNostonInstanssi(d, ikoni, 'ikoni', ikoninPeitto);
         if (haivytys && !haivytys.poistu) haivytys.instanssi = instanssi;
-        gl.push(instanssi);
+        // Piste laatassa (koe `poltetutnostot`, nostot.js onPisteLaatassa): ikoni on
+        // nostotason laatassa, rungolle vain nimiö.
+        if (!d.pisteLaatassa) gl.push(instanssi);
         if (!ikoni.vanhaRasteri) ikonit.set(tunnus, { avain: ikoni.avain, instanssi });
       }
       if (nimio) {

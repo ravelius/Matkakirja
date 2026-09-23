@@ -362,7 +362,9 @@ export function lepokerroksenTaso(tasot, tarvePxAste, teravyys = LEPOKERROS_TERA
  * täsmälleen sama versio (muuten sama merkki olisi levossa laatassa ja
  * liikkeessä elävänä tai poissa). Null = ei kerrosta lainkaan.
  */
-export function lepokerroksenKerrokset(pallonLuettelo, pyramidi, variMaa = null) {
+export function lepokerroksenKerrokset(pallonLuettelo, pyramidi, variMaa = null, {
+  poltetutNostot = laattakerroksenKokeet().has('poltetutnostot'),
+} = {}) {
   if (!pallonLuettelo?.versio || !pyramidi?.versio) return null;
   if (pallonLuettelo.versio !== pyramidi.versio) return null;
   const viivat = pallonLuettelo.viivat ?? null;
@@ -418,8 +420,12 @@ export function lepokerroksenKerrokset(pallonLuettelo, pyramidi, variMaa = null)
    */
   const nostoKirjaus = variMaa ? (pyramidi.nostotasot?.[variMaa] ?? null) : null;
   // Kohdemaan nimiöt elävinä (js/pallo.js KOHDEMAAN_NIMIOT_ELAVINA):
-  // nostolaatastoa ei ladota, muuten elävä nimiö piirtyisi poltetun päälle.
-  const nostotMaittain = !nostot && !KOHDEMAAN_NIMIOT_ELAVINA
+  // nostolaatastoa ei ladota, muuten elävä nimiö piirtyisi poltetun päälle —
+  // PAITSI kun laatasto on poltettu ilman nimiä (`nimiot: false`) ja koe
+  // `poltetutnostot` on päällä: silloin laatta kantaa vain merkin
+  // (js/pallo.js pallonNostonPisteLaatassa).
+  const nimetonLaatasto = poltetutNostot && nostoKirjaus?.nimiot === false;
+  const nostotMaittain = !nostot && (!KOHDEMAAN_NIMIOT_ELAVINA || nimetonLaatasto)
     && Boolean(nostoKirjaus?.versio && nostoKirjaus.tasot?.length);
   /*
    * ══════════════════════════════════════════════════════════════
