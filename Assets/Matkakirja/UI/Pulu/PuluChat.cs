@@ -401,6 +401,48 @@ namespace Matkakirja.Natiivi
             });
         }
 
+        // --- käsitelinkit (web jasennaKasitteet, a.pollo-kasitelinkki) --------------------------------
+
+        const int KasitteidenKatto = 12;
+
+        /// <summary>
+        /// Vastauksen [[käsite|muoto]] → pisteviivalla alleviivattu linkki (näkyvä muoto); napautus
+        /// kysyy "Kerro lisää: aihe" perusmuodosta. Muu teksti suojataan rich textiltä.
+        /// </summary>
+        static string Kasitelinkit(string vastaus)
+        {
+            string koko = vastaus ?? "";
+            var sb = new StringBuilder();
+            int kohta = 0, n = 0;
+            string Suojaa(string x) => Nakyva(x).Replace("[[", "").Replace("]]", "").Replace("<", "<noparse><</noparse>");
+            foreach (Match m in KasiteKuvio.Matches(koko))
+            {
+                if (n >= KasitteidenKatto) break;
+                string k = m.Groups[1].Value.Trim();
+                if (k.Length == 0) continue;
+                int p = k.IndexOf('|');
+                string aihe = (p < 0 ? k : k.Substring(0, p)).Trim();
+                string muoto = p < 0 ? k : k.Substring(p + 1).Split('|')[^1].Trim();
+                if (aihe.Length == 0) aihe = muoto;
+                sb.Append(Suojaa(koko.Substring(kohta, m.Index - kohta)));
+                sb.Append("<link=\"").Append(aihe.Replace("\"", "")).Append("\"><color=#6b5a44><u>").Append(muoto.Replace("<", "")).Append("</u></color></link>");
+                kohta = m.Index + m.Length;
+                n++;
+            }
+            sb.Append(Suojaa(koko.Substring(kohta)));
+            return sb.ToString();
+        }
+
+        void KytkeKasitelinkit(Label kupla)
+        {
+            kupla.pickingMode = PickingMode.Position;
+            kupla.RegisterCallback<UnityEngine.UIElements.Experimental.PointerUpLinkTagEvent>(e =>
+            {
+                if (string.IsNullOrEmpty(e.linkID) || kysyy) return;
+                Kysy("Kerro lisää: " + e.linkID, true);
+            });
+        }
+
         /// <summary>Wiki-linkit [[…]] ja putkimerkintä pois näkyvästä tekstistä.</summary>
         static string Nakyva(string vastaus) => Regex.Replace(vastaus ?? "", @"\[\[(?:[^\]|]*\|)?([^\]]*)\]\]", "$1");
 
@@ -425,7 +467,8 @@ namespace Matkakirja.Natiivi
                 yield break;
             }
             string nakyva = Nakyva(t.Vastaus);
-            var kupla = Viesti("mk-chat__livia", nakyva);
+            var kupla = Viesti("mk-chat__livia", Kasitelinkit(t.Vastaus));
+            KytkeKasitelinkit(kupla);
             UiKerros.Hae().StartCoroutine(VastausKuva(kupla, t.Vastaus, kysymys));
             pulu.Tilanne("answer", nakyva);
             if (AaniPaalla) Puhe.Hae()?.Lue(nakyva, "pollo");
