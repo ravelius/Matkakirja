@@ -1711,3 +1711,7 @@ Omistaja loi sessiot klo 09.47, Fable nimesi. Session id:t: 3D-selvittäjä loca
 ## KERROSKYTKIMET SAMASSA PR:SSA #2883 (KORVAAVAT TILAT 6–8): PALJAS KARTTA -TILASSA 9 KYTKINTA (NIMIOT, SYMBOLIT+NOSTOPISTEET, GL-RUNKO, ILMAKEHA+POHJA, HAIVYTYS, LEPOPIIRTO, PULU, DOM-KERROKSET, PIENI LIIKE); TILARIVI 'koe 5/5 Paljas kartta +nimiöt +runko'; OSOITE ?koe=paljas,kerros-nimiot,…; dc ILMAN LAATTOJA: PALJAS 2, NIMIOT 4, SYMBOLIT 3, RUNKO 17; DOM-KERROKSET 64 ELEMENTTIA (23.9.2026 klo 09.52)
 
 Pelikoodari klo 09.5x, testit 4051/0, savuke 7/7. Omistajan kierros: tila 5 ilman kytkimiä; jos tökkiminen loppuu, ryhmät päälle yksi kerrallaan.
+
+## 3D-SELVITYS VALMIS (PR #2887, docs/raportit/3d-selvitys-20260923.md): SUOSITUS UNITY 6.3 LTS + CESIUM FOR UNITY (URP, C#, PUHDAS NATIIVI iOS); KAKKONEN GODOT 4 (PARAS TEKOALYLLE, OMA LAATTAMOOTTORI); UNREAL JA REALITYKIT EIVAT SOVI; TARKEIN LOYDOS: GOOGLEN PHOTOREALISTIC 3D TILES EI SAATAVILLA UUSILLE EU/ETA-PROJEKTEILLE 8.7.2025 ALKAEN → FOTOREALISMI KOHDEKOHTAISINA MALLEINA; PROTOTYYPPI 3–4 vk, RINNAKKAISVERSIO 6–12 kk; v2142 (NIMIOLUKKO) JA v2143 (PALJAS KARTTA) TUOTANNOSSA; KERROSKYTKIMET #2888 → v2144 (23.9.2026 klo 09.58)
+
+3D-selvittäjä klo 09.55. Omistajalle tarkistettavaa: lasketaanko apuraha Unity Personalin 200 k$ rajaan; onko ennen 8.7.2025 luotua Google Cloud -projektia. Julkaisija mergesi #2883:n ensimmäisen version (v2143) ennen kytkimien commitia → kytkimet #2888.
