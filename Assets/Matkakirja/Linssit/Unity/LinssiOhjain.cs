@@ -42,6 +42,10 @@ namespace Matkakirja.Natiivi
         public static Action<bool> PeiteKasittelija;
         /// <summary>Taustamusiikin pito (Pelikoodarin äänet asettavat).</summary>
         public static Action<bool> MusiikkiKasittelija;
+        /// <summary>Linssin oma raita (Pelikoodari: Aanisoitin.LinssiMusiikki): laji tai null = pois.</summary>
+        public static Action<string> LinssiMusiikkiKasittelija;
+        /// <summary>Raidan taso 0…1 (Pelikoodari: Aanisoitin.LinssiHimmennys): 1 ajossa, 0,5 tauolla ja lopussa.</summary>
+        public static Action<double> LinssiHimmennysKasittelija;
         /// <summary>Vähennetty liike (iOS UIAccessibilityIsReduceMotionEnabled, liitännäinen).</summary>
         public static Func<bool> VahennettyLiikeKysely;
 
@@ -752,6 +756,10 @@ namespace Matkakirja.Natiivi
         }
 
         public void MusiikkiPitoon(bool pidossa) => MusiikkiKasittelija?.Invoke(pidossa);
+
+        public void LinssiMusiikki(string laji) => LinssiMusiikkiKasittelija?.Invoke(laji);
+
+        public void LinssiMusiikkiHimmennys(double taso) => LinssiHimmennysKasittelija?.Invoke(taso);
 
         public bool VahennettyLiike => VahennettyLiikeKysely?.Invoke() ?? false;
 

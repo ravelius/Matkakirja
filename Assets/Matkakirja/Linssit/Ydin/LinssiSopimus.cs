@@ -144,6 +144,14 @@ namespace Matkakirja.Linssit
         /// <summary>Taustamusiikki pitoon linssin ajaksi (web pidaMusiikkiKiinni).</summary>
         void MusiikkiPitoon(bool pidossa);
 
+        /// <summary>
+        /// Linssin oma raita (web aikajana.js aloitaMusiikki / lopetaMusiikki → siirtymamusiikki.js):
+        /// laji kaaresta ("keksinnot", "ihmisen-matka"); null = feidaus pois. Sama laji ei ala alusta.
+        /// </summary>
+        void LinssiMusiikki(string laji);
+        /// <summary>Raidan taso (web saadaMusiikki): 1 ajossa, AjonTaukoHimmennys tauolla ja lopussa.</summary>
+        void LinssiMusiikkiHimmennys(double taso);
+
         /// <summary>Käyttäjä on pyytänyt vähennettyä liikettä.</summary>
         bool VahennettyLiike { get; }
 

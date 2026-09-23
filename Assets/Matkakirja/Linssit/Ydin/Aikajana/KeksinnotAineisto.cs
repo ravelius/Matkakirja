@@ -15,6 +15,8 @@ namespace Matkakirja.Linssit.Aikajana
         public Laatikko Alue;
         public LinssiTiedot Tiedot;
         public string Otsikko;
+        /// <summary>Kaaren oma raita (web LINSSI.aikajana.musiikki).</summary>
+        public string Musiikki;
 
         static Dictionary<string, object> Ob(object x) => x as Dictionary<string, object>;
         static List<object> Lista(object x) => x as List<object>;
@@ -30,6 +32,7 @@ namespace Matkakirja.Linssit.Aikajana
                 Alku = MiniJson.Luku(kaari, "alku") ?? 1765,
                 Loppu = MiniJson.Luku(kaari, "loppu") ?? 1928,
                 Otsikko = MiniJson.Teksti(kaari, "otsikko"),
+                Musiikki = MiniJson.Teksti(kaari, "musiikki") ?? "keksinnot",
             };
             var alue = Ob(MiniJson.Kentta(kaari, "alue"));
             a.Alue = Kameramatikka.LaatikkoLaudalta(MiniJson.Luku(alue, "x") ?? 0, MiniJson.Luku(alue, "y") ?? 0,
