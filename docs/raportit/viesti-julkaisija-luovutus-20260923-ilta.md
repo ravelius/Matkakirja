@@ -1,4 +1,44 @@
-# Julkaisijan luovutus 23.9.2026 klo 19.56
+# Julkaisijan luovutus 23.9.2026 klo 20.10
+
+## 0. Myöhäiset lisäykset (kirjoitettu tämän raportin muun sisällön jälkeen)
+
+- **TestFlight build 2 ONNISTUI**: "UPLOAD SUCCEEDED with no errors"
+  (`Build/testflight-2`, master 6cdde82, `fi.matkakirja.peli` 1.0.0).
+  Sisäisen testiryhmän liitos sai 409:n (Apple käsittelee latausta) —
+  kokeile ASC-käyttäjäkutsu-tyylistä uudelleenyritystä `proto3d-testflight.yml`
+  ajamalla uudelleen VAIN se askel, tai odota ja tarkista ASC-UI:sta.
+- **Omistaja päätti suoraan** (ei relayn kautta, suora viesti tähän
+  sessioon): latasin sisältöpaketti v11:n ämpäriin `sisalto/1/v11/` ja
+  päivitin `sisalto/1/uusin.json`:n osoittamaan siihen. Todennettu
+  `https://media.matkakirja.app/sisalto/1/uusin.json`:sta. Avaimet
+  löytyivät `/Users/samireivinen/.zshrc`:stä (AWS_ACCESS_KEY_ID,
+  AWS_SECRET_ACCESS_KEY, AMPARI, PAATE — HUOM: EI `~/.zshrc` vaan
+  nimenomaan `/Users/samireivinen/.zshrc`, tämä sessio ajaa käyttäjänä
+  koodaus mutta tiedosto on lukukelpoinen).
+- **VAROITUS Siirtosepältä**: osoitin on nyt v11 (koepaketti, ei
+  main-CI:n tuottama), mutta seuraava main-push joka koskee `js/**`-
+  polkuja julkaisee CI:stä v12:n (skeema 1.9) v11:n päälle
+  automaattisesti `vie-sisalto.yml`:n kautta. Jos nippu 4 -ketju
+  (kohta 4) halutaan ämpäriin ENNEN sitä, se pitää mergetä ensin;
+  muuten hyväksy hetkellinen paluu 1.9:ään kunnes nippu 4 menee läpi.
+- **Uusi yksityinen varmuuskopiorepo** `ravelius/Matkakirja-natiivi`
+  luotu omistajan pyynnöstä: sisältää `/Users/Shared/Claude/proto-3d/
+  Matkakirja-proto`:n kaikki haarat etuliitteellä `proto/*` ja
+  `/Users/Shared/Claude/natiivi-peli`:n haarat etuliitteellä
+  `pelilogiikka/*` (kumpikin paikallinen git, ei ollut GitHub-remotea
+  ennen). Automaatio:
+  - `.git/hooks/post-merge` MOLEMMISSA paikallisissa geiteissä ajaa
+    `/Users/Shared/Claude/proto-3d/tyokalut/varmuuskopioi-natiivi.sh`
+    taustalla aina kun master-haaraan mergetään (push GitHubiin).
+  - `~/Library/LaunchAgents/app.matkakirja.natiivi-bundle.plist`
+    (launchd, ladattu) ajaa öisin klo 04.00 UTC
+    `/Users/Shared/Claude/proto-3d/tyokalut/bundle-natiivi-nas.sh`:n,
+    joka tekee `git bundle --all` kummastakin paikallisesta gitistä
+    NASiin (`/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/
+    natiivi-git-bundlet/`, 30 vrk säilö, vanhemmat siivotaan). Testattu
+    kerran käsin, toimi.
+  - Ei ehditty testata post-merge-koukkua oikealla mergellä (vain
+    käsin ajettu varmuuskopiointi kerran, toimi).
 
 ## 1. Lue ensin
 
@@ -74,10 +114,17 @@ suoraa lupaa):**
 
 ## 4. Nippu 4 (Siirtoseppä) — odottaa vuoroani, EI ALOITETTU
 
-Ketju kasvanut koko session ajan, viimeisin tila: `siirtoseppa-nippu4-kartta`
-(39d0582d8) → `siirtoseppa-livia-cuet` (c10060309, skeema 1.11) →
-`siirtoseppa-offline-maasto23b` (770b2a175, sisältää kaiken). Kohdennetut
-testit 0 fail, koko sarja ajamatta — se jää seuraavalle Julkaisijalle.
+Ketju kasvanut koko session ajan, VIIMEISIN tila (klo 20.05): `siirtoseppa-
+nippu4-kartta` → `siirtoseppa-livia-cuet` (skeema 1.11) →
+`siirtoseppa-offline-maasto23b` → `siirtoseppa-sivustoassetit`
+(cf7383ac9, skeema 1.12, **HUOM: lisää vie-sisalto.yml:ään askeleen
+joka vie 717 repon assets/-kuvaa, 276 Mt, assets/-alle ennen pakettia —
+ensimmäinen CI-ajo tämän jälkeen kestää normaalia pidempään**) →
+`siirtoseppa-korkeudet-maailma` (7d0d8e57d, sisältää kaiken).
+Kohdennetut testit 0 fail, koko sarja ajamatta — se jää seuraavalle
+Julkaisijalle. Merge VIIMEISIN pään haara (`siirtoseppa-korkeudet-
+maailma`), se sisältää koko ketjun. Katso myös kohta 0 — pointer-tilanne
+(v11 vs. tulevaa v12) vaikuttaa ajoitukseen.
 Sama kaava kuin nipuissa 2/3: uusi worktree, `git merge --no-edit` jokainen
 haara, `node --test tests/*.test.mjs` täysi ajo, `tools/uusi-versio.mjs`
 (TARKISTA main ensin — moni versionosto tänään), niputus, kaksoisavaimet,
