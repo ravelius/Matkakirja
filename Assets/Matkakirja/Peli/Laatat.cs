@@ -25,6 +25,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Matkakirja.Peli
@@ -36,7 +37,6 @@ namespace Matkakirja.Peli
         public const string MannerAarre = "mannerAarre";
         public const string IsoAarre = "isoAarre";
         public const string PieniAarre = "pieniAarre";
-        public const string Ryostaja = "robber";
         /// <summary>Sisäinen merkki: pöllön korvaama laatta (ei aarre).</summary>
         public const string Tyhja = "empty";
 
@@ -74,9 +74,17 @@ namespace Matkakirja.Peli
         public readonly List<KeyValuePair<string, int>> Maarat = new List<KeyValuePair<string, int>>();
 
         public Laattamaarat() { }
-        public Laattamaarat(IEnumerable<KeyValuePair<string, int>> maarat) { Maarat.AddRange(maarat); }
+        public Laattamaarat(IEnumerable<KeyValuePair<string, int>> maarat) { foreach (var m in maarat) Lisaa(m.Key, m.Value); }
 
-        public Laattamaarat Lisaa(string tyyppi, int maara) { Maarat.Add(new KeyValuePair<string, int>(tyyppi, maara)); return this; }
+        public Laattamaarat Lisaa(string tyyppi, int maara)
+        {
+            if (!Laattatyypit.OnAarre(tyyppi)) throw new ArgumentException($"laattatyyppi {tyyppi} ei ole aarre (poistettu pelistä)");
+            Maarat.Add(new KeyValuePair<string, int>(tyyppi, maara));
+            return this;
+        }
+
+        /// <summary>Paketin tyypit, jotka Lue ohitti (ei aarre, esim. robber).</summary>
+        public readonly List<string> Ohitetut = new List<string>();
 
         public int Yhteensa { get { int s = 0; foreach (var m in Maarat) s += m.Value; return s; } }
 
@@ -104,6 +112,9 @@ namespace Matkakirja.Peli
             {
                 if (kv.Key.StartsWith("$")) continue;
                 if (!(kv.Value is double d)) throw new FormatException($"laattamäärä {kv.Key} ei ole luku");
+                // Vain aarteet: rosvolaatat, jalokivet, tyhjät ja muut poistetut tyypit eivät
+                // pääse pinoon, vaikka paketissa olisi niille määrä (Raamattu 25.8.2026).
+                if (!Laattatyypit.OnAarre(kv.Key)) { tulos.Ohitetut.Add(kv.Key); continue; }
                 tulos.Lisaa(kv.Key, (int)d);
             }
             return tulos;
@@ -160,7 +171,6 @@ namespace Matkakirja.Peli
     ///   jos Ennatys: web noteRecord (kerran pelissä recordNoted; jos päivä
     ///     &lt;= EnnatysPaivat, pelaaja.Tp += TpEnnatys) — pelin päivälaskuri on Matkalla;
     ///   jos Pollo: PolloLoydetty = true (pöllön paljastus UI:lle);
-    ///   jos Kaksintaistelu: web duelArmed = true → beginDuel (KOUKKU, ei tässä);
     ///   muuten linssi aarteen kylkiäisenä (web linssiAarteenKylkiaisena, KOUKKU,
     ///   vain isoAarre) ja lopuksi checkWin (Matka).
     /// </summary>
@@ -182,8 +192,6 @@ namespace Matkakirja.Peli
         public string Maa;
         /// <summary>Pääaarre löytyi: Matka kutsuu webin noteRecordin vastineen (ennätysbonus).</summary>
         public bool Ennatys;
-        /// <summary>Ryöstäjä: web duelArmed = true.</summary>
-        public bool Kaksintaistelu;
         /// <summary>Pääaarre vaelluksessa, ja muilla mantereilla on vielä aarre löytämättä (web MANNERLENTO_ILMOITUS).</summary>
         public bool MannerlentoIlmoitus;
 
@@ -452,9 +460,6 @@ namespace Matkakirja.Peli
                     }
                     break;
                 }
-                case Laattatyypit.Ryostaja:
-                    loyto.Kaksintaistelu = true;
-                    break;
                 default:
                     loyto.RahaLisays = loyto.Arvo;
                     break;
@@ -507,6 +512,9 @@ namespace Matkakirja.Peli
                 }
             }
             Tayta(w.Laatat, "laatat");
+            // Vanhan tallennuksen kääntämätön rosvo- tai muu poistettu laatta katoaa (ei löydy laatan alta).
+            foreach (var kaupunki in w.Laatat.Where(kv => !Laattatyypit.OnAarre(kv.Value)).Select(kv => kv.Key).ToList())
+                w.Laatat.Poista(kaupunki);
             Tayta(w.Kaannetyt, "kaannetyt");
             Tayta(w.TahdetLoydetty, "tahdet");
             return w;

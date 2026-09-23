@@ -37,15 +37,12 @@ namespace Matkakirja.Peli.Testit
             public Kysely Ky;
             public Kaupat Ka;
             public readonly List<string> Tapahtumat = new List<string>();
-            public int Kaksintaisteluja;
 
             public void Kytke(Matka m)
             {
                 M = m;
                 Ky = new Kysely(m, KyselyTestit.Data);
                 Ka = new Kaupat(m);
-                // Skriptin beginDuel-stub: kaksintaistelu "alkaa" ja vuoro päättyy.
-                m.Kaksintaistelu = _ => { Kaksintaisteluja++; m.Tila.Vaihe = Vaihe.Toiminta; m.PaataVuoro(); return true; };
                 m.Tapahtui += Kirjaa;
                 Ky.Tapahtui += Kirjaa;
             }
@@ -70,7 +67,7 @@ namespace Matkakirja.Peli.Testit
                 d[k] = k switch
                 {
                     "palkittu" => (object)t.Palkittu, "uusi" => t.Uusi, "hinta" => t.Hinta, "palkkio" => t.Palkkio,
-                    "found" => t.Loyto, "duel" => (object)t.Kaksintaistelu, _ => throw new Exception(k),
+                    "found" => (object)t.Loyto, _ => throw new Exception(k),
                 };
             return d;
         }
@@ -108,7 +105,7 @@ namespace Matkakirja.Peli.Testit
                 case "juliste": return Tulos(ka.MyonnaJuliste(S(0)), "uusi");
                 case "mannerlento": return Tulos(ka.MannerLento(S(0)));
                 case "sahke":
-                    return Tulos(On(1) ? ka.AvaaAarreSahkeella(S(0), I(1)) : ka.AvaaAarreSahkeella(S(0)), "found", "palkkio", "duel");
+                    return Tulos(On(1) ? ka.AvaaAarreSahkeella(S(0), I(1)) : ka.AvaaAarreSahkeella(S(0)), "found", "palkkio");
                 case "voitto": return Voitto.Tarkista(m);
                 case "travel": return Ok(m.ValitseKulkutapa(KultaisetApu.Tavaksi(S(0))));
                 case "stay": return Ok(m.ValitseKulkutapa(Kulkutapa.Pysy));
@@ -153,8 +150,6 @@ namespace Matkakirja.Peli.Testit
                 ["kaannetyt"] = m.Laatat.Kaannetyt.Count,
                 ["starsFound"] = m.Laatat.TahdetLoydetty.Select(kv => (object)(kv.Key + "=" + kv.Value)).ToList(),
                 ["viimeLoyto"] = n == 0 ? null : $"{p.Loydot[n - 1]}@{N(p.LoytoMantereet[n - 1])}/{N(p.LoytoMaat[n - 1])}",
-                ["duelArmed"] = t.KaksintaisteluOdottaa,
-                ["kaksintaisteluja"] = pe.Kaksintaisteluja,
                 ["quiz"] = q == null ? null : new Dictionary<string, object>
                 {
                     ["cityId"] = q.Kaupunki, ["chosen"] = q.Valittu, ["right"] = q.OikeinVastattu,
@@ -308,24 +303,6 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama("maailmankartta", ka.Lauta);
             ka.PullaVinkki("rooma");
             Oleta.Tosi(ka.PullaOstettu("maailmankartta:rooma") && ka.PullaVinkkiOstettu("rooma"), "sama avainavaruus");
-        }
-
-        [Testi] static void SahkeRyostajaanIlmanKoukkuaPaattaaVuoron()
-        {
-            var maarat = new Laattamaarat().Lisaa("star", 7).Lisaa("mannerAarre", 7).Lisaa("robber", 252);
-            var m = Matka.UusiPeli(KultaisetApu.Verkko, new Satunnainen(4L), "Fogg", "pariisi", maarat);
-            var ka = new Kaupat(m);
-            var rosvo = m.Laatat.Laatat.First(kv => kv.Value == Laattatyypit.Ryostaja).Key;
-            // Ilman Kyselyä (ei Pysy-tapaa) Pariisin ainoa noppatapa esivalitaan: vaihe Heitto.
-            Oleta.Tosi(!ka.AvaaAarreSahkeella(rosvo, 200).Ok, "väärä vaihe");
-            m.PeruKulkutapa();
-            int vuoro = m.Tila.VuoroLaskuri;
-            var t = ka.AvaaAarreSahkeella(rosvo, 200);
-            Oleta.Tosi(t.Ok && t.Loyto == "robber" && !t.Kaksintaistelu, $"ei koukkua → ei kaksintaistelua ({t.Ok} {t.Virhe} {t.Loyto} {t.Kaksintaistelu})");
-            Oleta.Sama(500, m.Tila.Pelaaja.Raha, "palkkio maksettiin ennen kääntöä");
-            Oleta.Sama(Kokemus.VaikeaVastaus, m.Tila.Pelaaja.Xp);
-            Oleta.Tosi(!m.Tila.KaksintaisteluOdottaa, "lippu laski");
-            Oleta.Sama(vuoro + 1, m.Tila.VuoroLaskuri, "vuoro päättyi");
         }
 
         [Testi] static void VoittoVainMoninpelissa()

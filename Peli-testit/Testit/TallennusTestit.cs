@@ -2,6 +2,7 @@
 // latauksessa, uudempi pysäyttää latauksen omalla poikkeuksellaan (PeliOhjain
 // säilyttää tiedoston eikä korvaa sitä).
 using System;
+using System.Linq;
 
 namespace Matkakirja.Peli.Testit
 {
@@ -43,6 +44,29 @@ namespace Matkakirja.Peli.Testit
                 throw new Exception("uudempi tallennus latautui");
             }
             catch (UudempiTallennus e) { Oleta.Sama(Pelitila.TallennusVersio + 1, e.Versio); }
+        }
+
+        [Testi] static void RosvoPoistettuPaketistaJaTallennuksesta()
+        {
+            // Rosvolaatat on poistettu pelistä (Raamattu 25.8.2026): paketin robber-määrä ohitetaan.
+            var maarat = Laattamaarat.Lue("{\"counts\":{\"star\":7,\"robber\":12,\"mannerAarre\":7,\"empty\":3,\"pieniAarre\":20}}");
+            Oleta.Sama("star,mannerAarre,pieniAarre", string.Join(",", maarat.Maarat.Select(m => m.Key)));
+            Oleta.Sama("robber,empty", string.Join(",", maarat.Ohitetut));
+            try { new Laattamaarat().Lisaa("robber", 1); throw new Exception("robber hyväksyttiin"); }
+            catch (ArgumentException) { }
+
+            // Vanha tallennus: auki jäänyt kaksintaistelu ja kääntämätön rosvolaatta.
+            var m = PelattuPeli();
+            var json = m.Tallenna();
+            var kaupunki = m.Laatat.Laatat.First().Key;
+            var vanha = json.Replace("\"vaihe\":\"" + m.Tila.Vaihe + "\"", "\"vaihe\":\"Kaksintaistelu\"")
+                .Replace("\"polloAarteena\":", "\"kaksintaistelu\":true,\"avoinKaksintaistelu\":{\"q\":\"x\"},\"polloAarteena\":")
+                .Replace("[\"" + kaupunki + "\",\"" + m.Laatat.Laatat[kaupunki] + "\"]", "[\"" + kaupunki + "\",\"robber\"]");
+            Oleta.Tosi(vanha.Contains("\"robber\"") && vanha.Contains("Kaksintaistelu"), "vanha muoto rakennettu");
+            var l = Matka.Lataa(KultaisetApu.Verkko, vanha);
+            Oleta.Sama(Vaihe.Toiminta, l.Tila.Vaihe, "kaksintaistelu → Toiminta");
+            Oleta.Tosi(!l.LaattaTassa(kaupunki), "rosvolaatta katosi");
+            Oleta.Tosi(!l.Tallenna().Contains("aksintaistelu") && !l.Tallenna().Contains("robber"), "ei jälkiä tallennuksessa");
         }
 
         [Testi] static void PuuttuvaVersioOnRikki()

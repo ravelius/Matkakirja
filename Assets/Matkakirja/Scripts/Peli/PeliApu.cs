@@ -480,15 +480,15 @@ namespace Matkakirja.Natiivi
     public static class Aanitunnukset
     {
         public const string Oikein = "correct", Vaarin = "wrong", Vihje = "hint", Puolitus = "swipe",
-            Helpotus = "robber", KysymysAuki = "quizOpen", Tikitys = "tick", AikaLoppui = "timeout",
+            KysymysAuki = "quizOpen", Tikitys = "tick", AikaLoppui = "timeout",
             Saapuminen = "arrive", Noppa = "dieLand", Kolikot = "coin";
 
-        /// <summary>Web EVENT_SOUND[kind] ?? 'turn'; aarre ja ryöstäjä kuuluvat paljastukseen (null).</summary>
+        /// <summary>Web EVENT_SOUND[kind] ?? 'turn'; aarre kuuluu paljastukseen (null).</summary>
         public static string Tapahtuma(string laji)
         {
             switch (laji)
             {
-                case "treasure": case "robber": return null;
+                case "treasure": return null;
                 case "fare": return "ferry";
                 case "flight": return "flight";
                 case "aid": return "coin";
@@ -497,13 +497,12 @@ namespace Matkakirja.Natiivi
             }
         }
 
-        /// <summary>Web treasureSound(type).</summary>
+        /// <summary>Web treasureSound(type) ilman rosvoa (rosvolaatat poistettu pelistä).</summary>
         public static string Aarre(string tyyppi)
         {
             switch (tyyppi)
             {
                 case "star": return "star";
-                case "robber": return "robber";
                 case "empty": return "empty";
                 default: return "gem";
             }

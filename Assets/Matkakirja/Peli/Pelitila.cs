@@ -9,7 +9,7 @@
 // kysymykset, tutkitut, kohtaamiset, aarrelukot, avoin kysymys).
 // Erä 3 (tallennusversio 3): aarrelaatat (Laattamaailma: laatat, käännetyt,
 // löydetyt pääaarteet Map-järjestyksessä), pelaajan tähdet ja löydöt
-// (finds, findManner, findMaa), kaksintaistelun lippu (duelArmed),
+// (finds, findManner, findMaa),
 // ennätys (recordNoted, recordMark.day) ja pöllöliput. Samaan versioon
 // valinnaisina: nähdyt pulmat (puzzlesSeen) ja avoin tapahtumakortti (eventCard).
 // Versiot 1 ja 2 latautuvat; niissä ei ole laattoja (ks. Matka.Lataa).
@@ -110,10 +110,6 @@ namespace Matkakirja.Peli
 
         /// <summary>Laudan aarrelaatat (web world.tokens/revealed/starsFound). null = peli ilman laattoja.</summary>
         public Laattamaailma Laatat;
-        /// <summary>Ryöstäjä löytyi: kaksintaistelu alkaa kysymyksen sulkeutuessa (web duelArmed).</summary>
-        public bool KaksintaisteluOdottaa;
-        /// <summary>Avoin rosvon kaksintaistelu (web duel; Peli/Kaksintaistelu.cs). Tallennetaan vain, kun auki.</summary>
-        public AvoinKaksintaistelu Kaksintaistelu;
         /// <summary>Isoisän ennätys on jo kirjattu (web recordNoted).</summary>
         public bool EnnatysKirjattu;
         /// <summary>Ennätyksen rikkomispäivä (web recordMark.day), null jos ei rikottu.</summary>
@@ -155,8 +151,7 @@ namespace Matkakirja.Peli
         /// vuoroLaskuri, noppa, kulkutapa, autoMatka, odottavaMaksu, pelaajat
         /// (myös xp, kysytty, oikein, taso, botti, tahdet, loydot,
         /// loytoMantereet, loytoMaat), kysely (Kyselytila) ja versiosta 3
-        /// laattamaailma, kaksintaistelu, ennatys, ennatysPaiva, polloAarteena,
-        /// polloLoydetty; valinnaisena avoinKaksintaistelu (vain kun auki).
+        /// laattamaailma, ennatys, ennatysPaiva, polloAarteena, polloLoydetty.
         /// Sijainti tallennetaan avaimena (web posKey).
         /// </summary>
         public string ToJson()
@@ -207,9 +202,6 @@ namespace Matkakirja.Peli
             Kentta(sb, "voittaja", VoittajaId.HasValue ? VoittajaId.Value.ToString(CultureInfo.InvariantCulture) : "null");
             sb.Append(",\"laattamaailma\":");
             if (Laatat == null) sb.Append("null"); else Laatat.Kirjoita(sb);
-            Kentta(sb, "kaksintaistelu", KaksintaisteluOdottaa ? "true" : "false");
-            // Valinnainen kenttä (versio 3 ilman nostoa): puuttuu, kun kaksintaistelua ei ole auki.
-            if (Kaksintaistelu != null) { sb.Append(",\"avoinKaksintaistelu\":"); Kaksintaistelu.Kirjoita(sb); }
             Kentta(sb, "ennatys", EnnatysKirjattu ? "true" : "false");
             Kentta(sb, "ennatysPaiva", EnnatysPaiva.HasValue ? EnnatysPaiva.Value.ToString(CultureInfo.InvariantCulture) : "null");
             Kentta(sb, "polloAarteena", PolloAarteena ? "true" : "false");
@@ -280,8 +272,6 @@ namespace Matkakirja.Peli
             t.Kaupat = Kauppatila.Lue(MiniJson.Kentta(o, "kaupat") as Dictionary<string, object>);
             t.VoittajaId = MiniJson.Luku(o, "voittaja") is double vo ? (int)vo : (int?)null;
             if (MiniJson.Kentta(o, "laattamaailma") is Dictionary<string, object> lm) t.Laatat = Laattamaailma.Lue(lm, kaupungit);
-            t.KaksintaisteluOdottaa = MiniJson.Totuus(o, "kaksintaistelu");
-            t.Kaksintaistelu = AvoinKaksintaistelu.Lue(MiniJson.Kentta(o, "avoinKaksintaistelu") as Dictionary<string, object>);
             t.EnnatysKirjattu = MiniJson.Totuus(o, "ennatys");
             t.EnnatysPaiva = MiniJson.Luku(o, "ennatysPaiva") is double ep ? (int)ep : (int?)null;
             // Web fromJSON: polloLoydetty = polloAarteena ? (tallennettu ?? true) : true.
@@ -315,6 +305,10 @@ namespace Matkakirja.Peli
                         break;
                 }
             }
+            // Rosvon kaksintaistelu on poistettu pelistä (Raamattu 25.8.2026): vanhan tallennuksen
+            // kentät kaksintaistelu ja avoinKaksintaistelu ohitetaan, ja auki jäänyt kaksintaistelu
+            // palaa vaiheeseen Toiminta.
+            if (MiniJson.Teksti(o, "vaihe") == "Kaksintaistelu") o["vaihe"] = nameof(Vaihe.Toiminta);
             o["versio"] = (double)TallennusVersio;
         }
 

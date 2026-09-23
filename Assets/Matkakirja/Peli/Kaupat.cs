@@ -87,7 +87,6 @@ namespace Matkakirja.Peli
         public int Hinta;             // web hinta (pulla)
         public int Palkkio;           // web palkkio (eläintäky, sähke)
         public string Loyto;          // web found (sähke: tyyppi, 'pollo' tai null)
-        public bool Kaksintaistelu;   // web duel (sähke)
         public static KauppaTulos Epaonnistui(string virhe) => new KauppaTulos { Ok = false, Virhe = virhe };
     }
 
@@ -430,12 +429,8 @@ namespace Matkakirja.Peli
         /// Web avaaAarreSahkeella: oikea vastaussähke kääntää laatan ilman visaa.
         /// Palkkio (kutsujan laskema, KauppaVakiot.SahkePalkkioOhilyonneista)
         /// maksetaan ENNEN kääntöä, +25 tp (vaikea vastaus), sitten laatta
-        /// kääntyy (Matka.KaannaLaatta) ja vuoro päättyy kuten Kysely.Sulje:
-        /// ryöstäjän jälkeen Matka.Kaksintaistelu-koukku, muuten vuoro vaihtuu.
+        /// kääntyy (Matka.KaannaLaatta) ja vuoro päättyy kuten Kysely.Sulje.
         /// Kaupunkia ei tarvitse seistä (web ei tarkista sijaintia).
-        /// POIKKEAMA: web palauttaa duel = true aina ryöstäjän jälkeen; portissa
-        /// Kaksintaistelu = tosi vain, jos koukku aloitti kaksintaistelun
-        /// (ilman koukkua vuoro päättyy kuten Kysely.Sulje).
         /// </summary>
         public KauppaTulos AvaaAarreSahkeella(string kaupunki, int palkkio = 0)
         {
@@ -452,11 +447,6 @@ namespace Matkakirja.Peli
             var loyto = Matka.KaannaLaatta(kaupunki)?.WebTulos;
             var tulos = new KauppaTulos { Ok = true, Loyto = loyto, Palkkio = palkkio };
             if (Tila.Vaihe == Vaihe.Ohi) return tulos;
-            if (Tila.KaksintaisteluOdottaa && Matka.KaksintaisteluAlkaa())
-            {
-                tulos.Kaksintaistelu = true;
-                return tulos;
-            }
             Tila.Vaihe = Vaihe.Toiminta;
             Matka.PaataVuoro();
             return tulos;

@@ -109,9 +109,8 @@ namespace Matkakirja.Natiivi
                 case "koe":
                     switch (A(1))
                     {
-                        case "rosvo": return ohjain.KoeKaksintaistelu();
                         case "tapahtuma": return ohjain.KoeTapahtuma();
-                        default: return "käyttö: koe rosvo|tapahtuma";
+                        default: return "käyttö: koe tapahtuma";
                     }
                 case "mannerlennot":
                     return ohjain.AvaaMannerlennot();
@@ -142,7 +141,7 @@ namespace Matkakirja.Natiivi
                     return ohjain.Tutki(A(1) == "vaikea");
                 case "vastaa":
                 {
-                    // Näytön tila kattaa kysymyksen, pulman ja rosvon kaksintaistelun (Kysely.Kysymys vain kysymyksen).
+                    // Näytön tila kattaa kysymyksen ja pulman.
                     var q = ohjain.KysymysTila;
                     if (q == null) return "kysymys ei ole auki";
                     int i;

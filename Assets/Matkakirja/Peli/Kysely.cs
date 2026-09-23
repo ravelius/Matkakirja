@@ -22,9 +22,6 @@
 //                     tähdet, pisteet, löytöpaikat, ennätys); palauttaa
 //                     web-tuloksen, esim. 'pieniAarre' tai 'pollo'
 //   AarreLukittuu   — web lukitseAarre:n laattaosa → Matka.LukitseLaatta
-//   Kaksintaistelu  — web closeQuiz: duelArmed → beginDuel. Tosi = kaksintaistelu
-//                     alkoi eikä vuoro pääty → Matka.KaksintaisteluAlkaa
-//                     (itse kaksintaistelu on Matka.Kaksintaistelu-koukku)
 // MUUT KOUKUT (null = ominaisuutta ei ole):
 //   PulmaOdottaa, AvaaPulma — web pendingPuzzle / openPuzzle: Pulmat.Kytke
 //                     (Peli/Pulmat.cs, generaattorit portattu C#:ksi); vastaus-
@@ -313,7 +310,6 @@ namespace Matkakirja.Peli
         public Func<string, bool> LaattaTassa;
         public Func<string, string> LaattaKaantyy;
         public Action<string> AarreLukittuu;
-        public Func<bool> Kaksintaistelu;
         public Func<Pelaaja, bool> PulmaOdottaa;
         public Func<TekoTulos> AvaaPulma;
         public Func<bool> TapahtumiaOn;
@@ -341,7 +337,6 @@ namespace Matkakirja.Peli
                 LaattaTassa = matka.LaattaTassa;
                 LaattaKaantyy = c => matka.KaannaLaatta(c)?.WebTulos;
                 AarreLukittuu = c => matka.LukitseLaatta(c);
-                Kaksintaistelu = matka.KaksintaisteluAlkaa;
             }
         }
 
@@ -766,7 +761,7 @@ namespace Matkakirja.Peli
 
             if (oikein)
             {
-                // Vaikean kysymyksen palkkio ennen laatan kääntöä: ryöstäjä vie senkin.
+                // Vaikean kysymyksen palkkio ennen laatan kääntöä (web järjestys).
                 if (q.Vaikea)
                 {
                     p.Raha += KysymysVakiot.VaikeaPalkkio;
@@ -841,7 +836,7 @@ namespace Matkakirja.Peli
 
         /// <summary>
         /// Web closeQuiz: laatattoman kaupungin pulma palaa edelliseen
-        /// vaiheeseen; muuten kaksintaistelu (koukku) tai vuoron päätös.
+        /// vaiheeseen; muuten vuoro päättyy.
         /// </summary>
         public TekoTulos Sulje()
         {
@@ -856,7 +851,6 @@ namespace Matkakirja.Peli
             }
             K.Kysymys = null;
             if (Tila.Vaihe == Vaihe.Ohi) return TekoTulos.Onnistui();
-            if (Kaksintaistelu != null && Kaksintaistelu()) return TekoTulos.Onnistui();
             Tila.Vaihe = Vaihe.Toiminta;
             Matka.PaataVuoro();
             return TekoTulos.Onnistui();

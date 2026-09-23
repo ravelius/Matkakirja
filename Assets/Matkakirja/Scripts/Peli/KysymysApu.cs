@@ -10,7 +10,7 @@ using Matkakirja.Peli;
 namespace Matkakirja.Natiivi
 {
     /// <summary>Kysymyksen muoto näkymälle (Peli.KysymysMuoto ilman pelilogiikan riippuvuutta).</summary>
-    public enum KysymysLaji { Visa, Vaite, Kuva, Lippu, Tapahtuma, Pulma, Kaksintaistelu, Tapahtumakortti }
+    public enum KysymysLaji { Visa, Vaite, Kuva, Lippu, Tapahtuma, Pulma, Tapahtumakortti }
 
     /// <summary>
     /// Avoimen kysymyksen näytettävä tila. Ohjain rakentaa tämän uudelleen jokaisen
@@ -42,11 +42,11 @@ namespace Matkakirja.Natiivi
         /// <summary>50:50-nappi näkyvissä (neljä vaihtoehtoa, ei käytetty, ei vastattu).</summary>
         public bool PuolitusTarjolla;
         public int PuolitusHinta;
-        /// <summary>Puolitusnapin teksti; null = "50:50 {hinta} £" (kaksintaistelussa "Helpotus (rosvo vie X p)").</summary>
+        /// <summary>POISTUMASSA (kaksintaistelu poistettu, ei aseteta): puolitusnapin teksti; null = "50:50 {hinta} £".</summary>
         public string PuolitusTeksti;
-        /// <summary>Puolitusnappi näkyy mutta harmaana (kaksintaistelun helpotukset käytetty).</summary>
+        /// <summary>POISTUMASSA (kaksintaistelu poistettu, ei aseteta).</summary>
         public bool PuolitusHarmaa;
-        /// <summary>Lisärivi vaihtoehtojen alla ennen vastausta (esim. "Rosvo on vienyt 150 puntaa."), tai null.</summary>
+        /// <summary>POISTUMASSA (kaksintaistelu poistettu, ei aseteta): lisärivi vaihtoehtojen alla.</summary>
         public string Huomautus;
 
         // --- pulma (Laji Pulma) ---
@@ -110,7 +110,7 @@ namespace Matkakirja.Natiivi
         public string LoytoNimi, LoytoFakta, LoytoKuvaUrl;
         /// <summary>Kätkökuva kaaren aarretekstin yhteydessä (web kohtaaminen-katko.jpg), tai null.</summary>
         public string KatkoKuvaUrl;
-        /// <summary>Käännetyn laatan tyyppi (Laattatyypit: star, mannerAarre, isoAarre, pieniAarre, robber; "pollo"), tai null.</summary>
+        /// <summary>Käännetyn laatan tyyppi (Laattatyypit: star, mannerAarre, isoAarre, pieniAarre; "pollo"), tai null.</summary>
         public string LoytoTyyppi;
         /// <summary>Rivi "Vuoro vaihtuu — seuraavalla vuorolla saat uuden kysymyksen." (web: väärä vastaus).</summary>
         public bool VuoroVaihtuu;
@@ -519,7 +519,6 @@ namespace Matkakirja.Natiivi
                 case Laattatyypit.MannerAarre: return "Mantereen aarre";
                 case Laattatyypit.IsoAarre: return "Kätketty matka-arkku";
                 case Laattatyypit.PieniAarre: return "Kourallinen hopeakolikoita";
-                case Laattatyypit.Ryostaja: return "Ryöstäjä";
                 default: return null;
             }
         }
@@ -529,7 +528,6 @@ namespace Matkakirja.Natiivi
         {
             if (l == null) return null;
             if (l.Pollo) return "Laatan alta lehahti pöllö!";
-            if (l.Kaksintaistelu) return "Laatan alla odotti ryöstäjä!";
             var nimi = (l.Tyyppi != Laattatyypit.Tyhja ? nimet?.Hae(l.Tyyppi, l.Manner, l.Maa)?.Nimi : null) ?? LaatanNimi(l.Tyyppi);
             if (nimi == null) return "Laatta oli tyhjä.";
             var osat = new List<string> { "Löysit: " + nimi };
@@ -611,57 +609,17 @@ namespace Matkakirja.Natiivi
                 d.Lahteet = new List<string>(q.Lahteet ?? new List<string>());
                 var rivit = new List<string>();
                 var lt = LoytoTeksti(loyto, "£", nimet);
-                var aarre = loyto != null && !loyto.Pollo && !loyto.Kaksintaistelu ? nimet?.Hae(loyto.Tyyppi, loyto.Manner, loyto.Maa) : null;
+                var aarre = loyto != null && !loyto.Pollo ? nimet?.Hae(loyto.Tyyppi, loyto.Manner, loyto.Maa) : null;
                 if (aarre != null) { d.LoytoNimi = aarre.Nimi; d.LoytoFakta = aarre.Fakta; d.LoytoKuvaUrl = aarre.KuvaUrl; }
                 if (lt != null) rivit.Add(lt);
                 if (lisat != null) rivit.AddRange(lisat.Where(s => !string.IsNullOrEmpty(s)));
                 if (q.AarreLukittui == true) rivit.Add("Kätkö sulkeutui — tämän kaupungin aarre on menetetty.");
                 d.Loyto = rivit.Count > 0 ? string.Join("\n", rivit) : null;
-                d.JatkaTeksti = loyto != null && loyto.Kaksintaistelu ? "Kohtaa ryöstäjä" : "Jatka matkaa";
+                d.JatkaTeksti = "Jatka matkaa";
                 d.LoytoTyyppi = loyto?.WebTulos;
                 d.VuoroVaihtuu = q.OikeinVastattu != true && q.Laji != KysymysMuoto.Pulma;
             }
             return d;
-        }
-        /// <summary>Rosvon kaksintaistelu näkymäksi (web visa.js renderDuel): 8 vaihtoehtoa, helpotus, 45 s.</summary>
-        public static KysymysNaytto Kaksintaistelu(Kaksintaistelu rosvo, string valuutta = "£")
-        {
-            var d = rosvo.Avoin;
-            var p = rosvo.Matka.Tila.Pelaaja;
-            bool vastattu = d.Valittu.HasValue;
-            int hinta = rosvo.HelpotuksenHinta;
-            var n = new KysymysNaytto
-            {
-                Laji = KysymysLaji.Kaksintaistelu,
-                Otsikko = "Rosvon kaksintaistelu — " + p.Nimi,
-                Kehys = "Ryöstäjä tukkii tien. Väärä vastaus vie kaikki rahasi.",
-                Kysymys = d.Kysymys,
-                Vaihtoehdot = new List<string>(d.Vaihtoehdot),
-                Piilotetut = new List<int>(d.Piilotetut),
-                PuolitusTarjolla = !vastattu,
-                PuolitusHarmaa = d.Helpotukset >= KaksintaisteluVakiot.Helpotukset || hinta <= 0,
-                PuolitusHinta = 0,
-                PuolitusTeksti = d.Helpotukset >= KaksintaisteluVakiot.Helpotukset ? "Helpotukset käytetty" : $"Helpotus (rosvo vie {hinta} {valuutta})",
-                Huomautus = d.Helpotukset > 0 ? $"Rosvo on vienyt {d.Viety} puntaa." : null,
-                Raha = p.Raha,
-                Valuutta = valuutta,
-                Sekunnit = KaksintaisteluVakiot.Sekunnit,
-                Vastattu = vastattu,
-                Valittu = d.Valittu ?? -1,
-                Oikea = d.Oikea,
-                Oikein = d.OikeinVastattu == true,
-                AikaLoppui = d.AikaLoppui,
-                JatkaTeksti = "Jatka matkaa",
-            };
-            if (vastattu)
-            {
-                n.Fakta = d.Fakta;
-                n.Lahteet = new List<string>(d.Lahteet ?? new List<string>());
-                n.Loyto = d.OikeinVastattu == true
-                    ? (d.Saalis.HasValue ? $"Voitit rosvon — saalis {d.Saalis.Value} puntaa!" : "Voitit rosvon — loput rahat säilyvät.")
-                    : (d.AikaLoppui ? "Aika loppui. " : "") + $"Rosvo vei rahat — oikea vastaus oli \"{d.Vaihtoehdot[d.Oikea]}\".";
-            }
-            return n;
         }
 
         /// <summary>Tapahtumakortti näkymäksi: teksti ja Jatka (ei vaihtoehtoja, ei aikarajaa).</summary>
