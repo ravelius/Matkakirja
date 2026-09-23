@@ -1,0 +1,187 @@
+// Pakettivartijan testit (Pakettivartija.cs). Vain vartija: ./kaanna.sh Pakettivartija  (tai ./vartija.sh)
+//
+// Oletus (ei verkkoa): tuotantopaketin paikallinen kopio Kultaiset/tuotanto (uusin.json + v<N>/).
+// Ympäristömuuttujat:
+//   VARTIJA_HAE=1            hae tuore tuotantopaketti osoittimesta rakennus/paketit/tuotanto/-kansioon ja
+//                            vartioi se; kertoo, onko paikallinen kopio vanhentunut
+//   VARTIJA_PAIVITA=1        (HAE:n kanssa) kirjoita haettu paketti paikalliseksi kopioksi Kultaiset/tuotanto
+//   VARTIJA_OSOITIN=<url>    osoitin (oletus https://media.matkakirja.app/sisalto/1/uusin.json)
+//   VARTIJA_PAKETTI=<kansio> vartioi tämä paketti tuotannon sijaan (juuri, jossa uusin.json, tai versiokansio)
+//   VARTIJA_KOE=1|<kansio>   vartioi myös koepaketti (oletus /Users/Shared/Claude/sisalto-koe)
+//   VARTIJA_RAAKA_KIELLETTY=1 vaiheen 2 esikatselu: Paataso.RaakaKielletty päälle vartijan ajaksi
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using Matkakirja.Natiivi;
+
+namespace Matkakirja.Peli.Testit
+{
+    public static class PakettivartijaTestit
+    {
+        static string Ymp(string nimi) => Environment.GetEnvironmentVariable(nimi) is string s && s.Length > 0 ? s : null;
+        static bool Paalla(string nimi) => Ymp(nimi) is string s && s != "0";
+
+        static string PaikallinenKopio => Path.Combine(KultaisetApu.Juuri, "Kultaiset", "tuotanto");
+
+        static Paketti paikallinen;
+        static Paketti Paikallinen => paikallinen ??= Paketti.Kansiosta(PaikallinenKopio, "tuotanto, paikallinen kopio");
+
+        static void Vartioi(Paketti p)
+        {
+            bool vanha = Paataso.RaakaKielletty;
+            if (Paalla("VARTIJA_RAAKA_KIELLETTY")) Paataso.RaakaKielletty = true;
+            Vartijatulos t;
+            try { t = Pakettivartija.Tarkista(p); }
+            finally { Paataso.RaakaKielletty = vanha; }
+            Pakettivartija.Tulosta(t);
+            if (!t.Vihrea) throw new Exception($"pakettivartija punainen ({p.Nimi}): {t.Virheet.Count} virhettä, ensimmäinen: {t.Virheet[0]}");
+        }
+
+        /// <summary>Tuotantopaketti (paikallinen kopio tai lipulla tuore) jokaisen natiivin lukijan läpi.</summary>
+        [Testi] static void Tuotantopaketti()
+        {
+            if (Ymp("VARTIJA_PAKETTI") is string oma) { Vartioi(Paketti.Kansiosta(oma, "VARTIJA_PAKETTI")); return; }
+            if (!Paalla("VARTIJA_HAE"))
+            {
+                Console.WriteLine($"  (paikallinen kopio {Paikallinen.Versio}, julkaistu {MiniJson.Teksti(Paikallinen.Osoitin, "julkaistu")}; tuore: VARTIJA_HAE=1)");
+                Vartioi(Paikallinen);
+                return;
+            }
+            var osoitin = Ymp("VARTIJA_OSOITIN") ?? Pakettivartija.OsoitinOletus;
+            var kohde = Paalla("VARTIJA_PAIVITA") ? PaikallinenKopio : Path.Combine(KultaisetApu.Juuri, "rakennus", "paketit", "tuotanto");
+            string vanhaVersio = Directory.Exists(PaikallinenKopio) ? Paikallinen.Versio : "puuttuu";
+            paikallinen = null;
+            Pakettivartija.Hae(osoitin, kohde);
+            var tuore = Paketti.Kansiosta(kohde, "tuotanto, haettu " + osoitin);
+            if (tuore.Versio != vanhaVersio)
+                Console.WriteLine(Paalla("VARTIJA_PAIVITA")
+                    ? $"  PAIKALLINEN KOPIO PÄIVITETTY: {vanhaVersio} → {tuore.Versio} (Kultaiset/tuotanto, commitoi)"
+                    : $"  PAIKALLINEN KOPIO VANHENTUNUT: Kultaiset/tuotanto {vanhaVersio}, tuotanto {tuore.Versio} (päivitys: VARTIJA_HAE=1 VARTIJA_PAIVITA=1)");
+            else Console.WriteLine($"  paikallinen kopio ajan tasalla ({vanhaVersio})");
+            Vartioi(tuore);
+        }
+
+        /// <summary>Koepaketti (Siirtosepän paikallinen, mainia uudempi) vain lipulla VARTIJA_KOE.</summary>
+        [Testi] static void Koepaketti()
+        {
+            var koe = Ymp("VARTIJA_KOE");
+            if (koe == null || koe == "0") { Console.WriteLine("  (VARTIJA_KOE ei asetettu, ohitetaan)"); return; }
+            Vartioi(Paketti.Kansiosta(koe == "1" ? Pakettivartija.KoepakettiOletus : koe, "koepaketti"));
+        }
+
+        // --- vartijan omat testit (rikottu paketti muistissa) ---------------
+
+        static string Muokkaa(string kokoelma, Action<List<Dictionary<string, object>>> muutos)
+        {
+            var runko = MiniJson.Objekti(MiniJson.Jasenna(Paikallinen.Teksti(kokoelma)));
+            var alkiot = MiniJson.Taulukko(runko["alkiot"]).Select(MiniJson.Objekti).ToList();
+            muutos(alkiot);
+            runko["alkiot"] = alkiot.Cast<object>().ToList();
+            var sb = new StringBuilder(); Json.Kirjoita(sb, runko);
+            return sb.ToString();
+        }
+
+        static Vartijatulos Aja(Paketti p, string kokoelma) =>
+            Pakettivartija.Tarkista(p, Pakettivartija.Saannot.Where(s => s.Kokoelma == kokoelma || s.Kokoelma == "kaupungit"));
+
+        static void OletaVirhe(Vartijatulos t, string osa)
+        {
+            Oleta.Tosi(!t.Vihrea, "vartija ei punastunut: " + osa);
+            Oleta.Tosi(t.Virheet.Any(v => v.Contains(osa)), $"virhe '{osa}' puuttuu: {string.Join(" | ", t.Virheet)}");
+        }
+
+        [Testi] static void PuuttuvaPakollinenKenttaOnPunainen()
+        {
+            var teksti = Muokkaa("reitit", l => ((Dictionary<string, object>)l.First(o => (string)o["laji"] == "maa")["data"]).Remove("steps"));
+            var t = Aja(Paikallinen.Korvaa("reitit", teksti), "reitit");
+            OletaVirhe(t, "puuttuu data.steps");
+            OletaVirhe(t, "lukija kaatui");
+            var rivi = t.Rivit.First(r => r.Kokoelma == "reitit");
+            Oleta.Sama(1, rivi.Hylatty, "yksi reitti hylätty");
+            Oleta.Sama(rivi.Alkioita - 1, rivi.Luettu, "muut luettu");
+        }
+
+        [Testi] static void VaaraTyyppiOnPunainen()
+        {
+            var teksti = Muokkaa("kaupungit", l => l[0]["lat"] = "48.85");
+            var t = Aja(Paikallinen.Korvaa("kaupungit", teksti), "kaupungit");
+            OletaVirhe(t, "lat: odotettu luku, saatu teksti");
+            var sisakkainen = Muokkaa("fokusvirrat", l =>
+                ((List<object>)((Dictionary<string, object>)l.First(o => ((Dictionary<string, object>)o["data"]).ContainsKey("lehtitehtavat"))["data"])["lehtitehtavat"])
+                    .Add(new Dictionary<string, object> { ["id"] = 7.0 }));
+            OletaVirhe(Aja(Paikallinen.Korvaa("fokusvirrat", sisakkainen), "fokusvirrat"), "data.lehtitehtavat.*.id: odotettu teksti, saatu luku");
+        }
+
+        [Testi] static void KaksoisavainJaVierasKaupunkiOvatPunaisia()
+        {
+            var kaksois = Muokkaa("saapumispuheet", l => l.Add(l[0]));
+            OletaVirhe(Aja(Paikallinen.Korvaa("saapumispuheet", kaksois), "saapumispuheet"), "kaksoisavain");
+            var vieras = Muokkaa("kuvakysymykset", l => l[0]["kaupunki"] = "atlantis");
+            OletaVirhe(Aja(Paikallinen.Korvaa("kuvakysymykset", vieras), "kuvakysymykset"), "kaupunki 'atlantis' ei ole kaupungeissa");
+        }
+
+        [Testi] static void SuodinOhittaaIlmanVirhetta()
+        {
+            var t = Aja(Paikallinen, "kohtaamiskuvat");
+            var rivi = t.Rivit.Single(r => r.Kokoelma == "kohtaamiskuvat");
+            Oleta.Tosi(t.Vihrea, string.Join(" | ", t.Virheet));
+            Oleta.Sama(rivi.Alkioita, rivi.Luettu + rivi.Ohitettu, "kaikki luettu tai ohitettu");
+            var saannot = Aja(Paikallinen, "saannot").Rivit.Single(r => r.Kokoelma == "saannot");
+            Oleta.Sama(1, saannot.Luettu, "KATKOKUVA luettu");
+            Oleta.Tosi(saannot.Ohitettu > 0, "muut säännöt ohitettu");
+        }
+
+        [Testi] static void TuntematonSkeemaversioOnPunainen()
+        {
+            Oleta.Tosi(Pakettiskeema.Tunnettu("1.10") && Pakettiskeema.Tunnettu("1.9") && Pakettiskeema.Tunnettu("1.1"), "tunnetut");
+            Oleta.Tosi(!Pakettiskeema.Tunnettu("1.10.0") && !Pakettiskeema.Tunnettu("x") && !Pakettiskeema.Tunnettu(null), "muoto");
+            Oleta.Tosi(!Pakettiskeema.Tunnettu($"1.{Pakettiskeema.SuurinMinor + 1}") && !Pakettiskeema.Tunnettu("2.0") && !Pakettiskeema.Tunnettu("1.0"), "tuntemattomat");
+            foreach (var v in new[] { $"1.{Pakettiskeema.SuurinMinor + 1}", "2.0" })
+            {
+                var o = new Dictionary<string, object>(Paikallinen.Osoitin) { ["skeemaversio"] = v };
+                var m = new Dictionary<string, object>(Paikallinen.Manifest) { ["skeemaversio"] = v };
+                var p = new Paketti("skeema " + v, o, m, Paikallinen.Teksti);
+                OletaVirhe(Pakettivartija.Tarkista(p, Pakettivartija.Saannot.Take(1)), "tuntematon skeemaversio " + v);
+            }
+            var runko = Muokkaa("kaupungit", l => { }).Replace("matkakirja-vienti/1/kokoelma", "matkakirja-vienti/2/kokoelma");
+            OletaVirhe(Aja(Paikallinen.Korvaa("kaupungit", runko), "kaupungit"), "tuntematon $skeema");
+        }
+
+        [Testi] static void KopioVastaaManifestia()
+        {
+            var t = Aja(Paikallinen.Korvaa("kaupungit", Paikallinen.Teksti("kaupungit") + " "), "kaupungit");
+            OletaVirhe(t, "sha256 ei täsmää");
+        }
+
+        /// <summary>Vaihe 2: Paataso.RaakaKielletty poistaa data-varareitin lukijalta ja vartijalta.</summary>
+        [Testi] static void RaakaKiellettyKytkin()
+        {
+            const string kysymys = "{\"nimi\":\"kysymykset\",\"alkiot\":[{\"id\":\"general:0\",\"ryhma\":\"general\",%\"data\":{\"q\":\"Vanha?\",\"options\":[\"a\",\"b\"],\"correct\":1}}]}";
+            var vainRaaka = kysymys.Replace("%", "");
+            var paataso = kysymys.Replace("%", "\"kysymys\":\"Uusi?\",\"vaihtoehdot\":[\"c\",\"d\"],\"oikea\":0,");
+            Oleta.Tosi(!Paataso.RaakaKielletty, "oletus pois");
+            try
+            {
+                var d = new Kysymysdata(); d.LueKysymykset(vainRaaka);
+                Oleta.Sama("Vanha?", d.Yleiset[0].Q, "raaka varareitti oletuksena");
+                Paataso.RaakaKielletty = true;
+                d = new Kysymysdata(); d.LueKysymykset(paataso);
+                Oleta.Sama("Uusi?", d.Yleiset[0].Q, "päätaso");
+                Oleta.Sama(0, d.Yleiset[0].Oikea, "päätason oikea");
+                bool kaatui = false;
+                try { new Kysymysdata().LueKysymykset(vainRaaka); } catch (FormatException) { kaatui = true; }
+                Oleta.Tosi(kaatui, "raaka kielletty: data.q ei kelpaa");
+
+                var t = Pakettivartija.Tarkista(new Paketti("raaka", Paikallinen.Osoitin, new Dictionary<string, object>(),
+                    k => k == "kysymykset" ? vainRaaka : Paikallinen.Teksti(k)), Pakettivartija.Saannot.Where(s => s.Kokoelma == "kysymykset"));
+                OletaVirhe(t, "vain raakadatassa: kysymys|data.q");
+                t = Pakettivartija.Tarkista(new Paketti("päätaso", Paikallinen.Osoitin, new Dictionary<string, object>(),
+                    k => k == "kysymykset" ? paataso : Paikallinen.Teksti(k)), Pakettivartija.Saannot.Where(s => s.Kokoelma == "kysymykset"));
+                Oleta.Tosi(t.Vihrea, "päätason paketti vihreä ilman raakaa: " + string.Join(" | ", t.Virheet));
+            }
+            finally { Paataso.RaakaKielletty = false; }
+        }
+    }
+}

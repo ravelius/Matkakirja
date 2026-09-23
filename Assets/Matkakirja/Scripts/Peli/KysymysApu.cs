@@ -377,6 +377,17 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        /// <summary>Kokoelma saannot: KATKOKUVA (arvo.url) → KatkoKuvaUrl. Muut säännöt ohitetaan.</summary>
+        public void LueSaannot(string json)
+        {
+            foreach (var a in MiniJson.Taulukko(MiniJson.Kentta(MiniJson.Objekti(MiniJson.Jasenna(json)), "alkiot")))
+            {
+                var o = MiniJson.Objekti(a);
+                if (MiniJson.Teksti(o, "id") == "KATKOKUVA" && MiniJson.Kentta(o, "arvo") is Dictionary<string, object> k
+                    && MiniJson.Teksti(k, "url") is string url) KatkoKuvaUrl = url;
+            }
+        }
+
         /// <summary>Kokoelma tarinakaari (web TARINAKAARI): kohtaaminen ja aarre.</summary>
         public void LueTarinakaari(string json)
         {
