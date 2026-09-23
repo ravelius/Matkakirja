@@ -3282,6 +3282,9 @@ export const RAAMATTU = {
           + 'hahmojen tuotantoketju, kaupunkiparin työnjako, pituus- ja '
           + 'kuvapäätökset sekä erien tarkistuslistat (toteutusohje; '
           + 'kanoniset linjaukset pysyvät Raamatussa).',
+        'docs/moduulit/huipennus-teksti.md — huipennuksen kaanoniteksti '
+          + '(kaikki unohdetut aarteet löytyivät): otsikko, Foggin merkintä, '
+          + 'napit ja isoisän luentalause; sitova natiivissa ja webissä.',
         'docs/moduulit/aanet.md — siirtymämusiikki ja äänet: raitojen '
           + 'tuotanto-ohje (kesto, looppisauma, -33 LUFS, vienti).',
         'docs/moduulit/viitekuvat.md — viitekuvallinen herogenerointi: '
