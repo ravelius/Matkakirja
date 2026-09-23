@@ -315,3 +315,39 @@ test('skeema 1.5: esilasketut ja suurennokset vastaavat pelin funktioita', async
   }
   assert.ok(verrattu > 1000);
 });
+
+test('skeema 1.5: laatat-kokoelma on laudan tokens sellaisenaan', () => {
+  const P = nimiavaruudet.get('js/packs/maailmankartta.js').MAAILMANKARTTA;
+  const [rivi] = JSON.parse(tiedostot.get('kokoelmat/laatat.json')).alkiot;
+  assert.equal(rivi.id, 'tokens');
+  assert.deepEqual(rivi.data, JSON.parse(JSON.stringify(P.tokens)));
+  assert.deepEqual(Object.keys(rivi.data), ['types', 'mannerTypes', 'counts']);
+});
+
+test('skeema 1.5: laudan pisteet ja reittien taitteet päätasolla (reittigeometria)', () => {
+  const P = nimiavaruudet.get('js/packs/maailmankartta.js').MAAILMANKARTTA;
+  const lontoo = kaupungit.alkiot.find((k) => k.id === 'lontoo');
+  const c = P.cities.find((x) => x.id === 'lontoo');
+  assert.deepEqual(lontoo.lauta, { x: c.x, y: c.y });
+  const reitit = JSON.parse(tiedostot.get('kokoelmat/reitit.json')).alkiot;
+  const lp = reitit.find((r) => r.a === 'lontoo' && r.b === 'pariisi');
+  assert.deepEqual(lp.via, [[5894, 1353]]);
+  assert.equal(lp.askelia, 3);
+  assert.equal(reitit.filter((r) => r.via.length).length, P.edges.filter((e) => e.via).length);
+  assert.ok(reitit.filter((r) => r.laji === 'lento').every((r) => r.askelia === null && r.via.length === 0));
+});
+
+test('skeema 1.6: aarteiden arvovälit, botin taito ja tapahtumakortit', async () => {
+  const tokens = await import('../js/tokens.js');
+  const ai = await import('../js/ai.js');
+  const saannot = new Map(JSON.parse(tiedostot.get('kokoelmat/saannot.json')).alkiot.map((a) => [a.id, a]));
+  assert.deepEqual(saannot.get('PIENI_AARRE_ARVO').arvo, tokens.PIENI_AARRE_ARVO);
+  assert.deepEqual(saannot.get('ISO_AARRE_ARVO').arvo, tokens.ISO_AARRE_ARVO);
+  assert.equal(saannot.get('BOT_SKILL').arvo, ai.BOT_SKILL);
+  assert.ok(saannot.has('FORM_WEIGHTS'), 'litteä sääntörakenne');
+  assert.ok(!saannot.has('TOKEN_TYPES') && !saannot.has('ASKERS'), 'sisäkkäinen sisältö ei ole sääntö');
+  const { AFRICA } = await import('../js/packs/africa.js');
+  const tapahtumat = JSON.parse(tiedostot.get('kokoelmat/tapahtumat.json')).alkiot;
+  assert.equal(tapahtumat.length, AFRICA.events.length);
+  assert.deepEqual(new Set(tapahtumat.map((t) => t.data.effect.kind)), new Set(['raha', 'kyyti', 'viive']));
+});
