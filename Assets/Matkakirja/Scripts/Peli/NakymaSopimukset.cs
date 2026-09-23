@@ -147,6 +147,11 @@ namespace Matkakirja.Natiivi
         public bool Oikein;
         public int Palkkio;
         public int Sivu;
+        /// <summary>
+        /// Kukkaroleiman alarivi näkymän sanoin (web leiman sub): tehtävän nimilaatta ("… ratkesi")
+        /// tai pullan nimi ("croissant Livialle"). null = pelin oletusteksti (RahaSyyt).
+        /// </summary>
+        public string Selite;
     }
 
     /// <summary>Natiivilehti (Natiivi-UI, UI Toolkit): sisältö paketista, pelin tila ohjaimelta.</summary>
