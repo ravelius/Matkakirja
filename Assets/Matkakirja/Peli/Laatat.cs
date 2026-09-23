@@ -92,6 +92,9 @@ namespace Matkakirja.Peli
                     if (e is Dictionary<string, object> lauta && MiniJson.Kentta(lauta, "tokens") is Dictionary<string, object> t)
                     { o = t; break; }
             }
+            // Kokoelma kokoelmat/laatat.json (Siirtoseppä #2944): alkiot[0] = { id: 'tokens', data: { types, mannerTypes, counts } }.
+            if (MiniJson.Kentta(o, "alkiot") is List<object> alkiot && alkiot.Count > 0
+                && alkiot[0] is Dictionary<string, object> alkio && MiniJson.Kentta(alkio, "data") is Dictionary<string, object> data) o = data;
             if (MiniJson.Kentta(o, "tokens") is Dictionary<string, object> tok) o = tok;
             if (MiniJson.Kentta(o, "counts") is Dictionary<string, object> c) o = c;
             var tulos = new Laattamaarat();

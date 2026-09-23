@@ -60,6 +60,16 @@ namespace Matkakirja.Peli.Testit
                 string.Join(";", m.Maarat.Select(p => p.Key + "=" + p.Value)));
         }
 
+        [Testi] static void MaaratSisaltopaketinKokoelmasta()
+        {
+            // Kokoelma kokoelmat/laatat.json (Siirtoseppä #2944): tokens alkion data-kentässä.
+            var json = "{\"$skeema\":\"matkakirja-vienti/1/kokoelma\",\"nimi\":\"laatat\",\"alkiot\":[{\"id\":\"tokens\",\"data\":"
+                + "{\"types\":{},\"mannerTypes\":{},\"counts\":{\"star\":7,\"mannerAarre\":7,\"isoAarre\":82,\"pieniAarre\":170}}}]}";
+            var m = Laattamaarat.Lue(json);
+            Oleta.Sama("star=7;mannerAarre=7;isoAarre=82;pieniAarre=170",
+                string.Join(";", m.Maarat.Select(p => p.Key + "=" + p.Value)));
+        }
+
         [Testi] static void KultainenJalki()
         {
             int ajoja = 0, kaannoksia = 0, lukkoja = 0;
