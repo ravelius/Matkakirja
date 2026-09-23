@@ -74,3 +74,9 @@ pikselisuhde, alfakanava, 60/120 Hz. Ainoa myönteinen signaali:
 3. **Mittari ennen korjausta:** kehysaika näytti syyn, jota ei ollut;
    liikkeen tasaisuus ja kerrosten riisunta mittaavat sitä, mitä omistaja
    näkee.
+
+## Tila ennen Macin uudelleenkäynnistystä 23.9.2026 (~12.5x)
+
+- Kesken erä 1/3 (heiton tökkäys): haara `pelikoodari-heiton-tokkays` (200d68a9b, WIP, pushattu), worktree /Users/Shared/Claude/wt/pelikoodari-heiton-tokkays. Juurisyy: irrotuksen jälkeen 2 renderiä ilman siirtymää; liuku siirretty kirjaston tickiin (js/pallo.js `liu`/`liukuSyke`), mittari tools/savukkeet/mittaa-heitto.mjs: tökkäyksiä 10/19/10/3 → 1/0/0/0 (WebKit).
+- Seuraava askel: node --test 0 fail, vartija (testi + savuke astro-pallo/lepopiirto), PR; sitten erä 2 (liu'un lopun pehmennys, pohjaksi tämä haara: VAUHTI_KYNNYS on asteina → pysähdys on lähellä nopea) ja erä 3 (symbolikerroksen rasterointi vedon aikana).
+- Jonossa: Pulun orpo ele (Fablen viesti, posti/codex-…-orvon-eleen-omistajapaatos, postilaatikko 5bd844af6).
