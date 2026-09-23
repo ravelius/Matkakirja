@@ -9,6 +9,9 @@
 //              osio "Lataa offline-käyttöön" maittain (koko, edistyminen, poisto).
 //   KarttaValot  kartan aihevalot (webin js/karttavalot.js): karttaselite valitsee
 //              yhden aiheen, kartta sytyttää sen merkit ja kertoo laskurit.
+//   ValoNapautettu  karttavalon napautus (Natiiviseppä: AiheValot → KarttaValotSilta
+//              → IlmoitaValo(id), id karttavalot.json:sta, esim. "skandaali:…");
+//              Natiivi-UI avaa nostokortin (Nostokortti).
 using System;
 using System.Collections.Generic;
 
@@ -65,5 +68,9 @@ namespace Matkakirja.Natiivi
     {
         public static IOfflineLataus Offline;
         public static IKarttaValot KarttaValot;
+
+        /// <summary>Karttavaloa napautettiin (id karttavalot.json:sta). Pääsäikeessä.</summary>
+        public static event Action<string> ValoNapautettu;
+        public static void IlmoitaValo(string id) => ValoNapautettu?.Invoke(id);
     }
 }
