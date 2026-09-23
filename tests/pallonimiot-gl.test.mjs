@@ -129,3 +129,37 @@ test('atlaksen väriavaruus on NoColorSpace, ei pallon pinnan sRGB', () => {
   // Varjostin kirjoittaa näytteen sellaisenaan: jos tämä muuttuu, väriavaruus on mietittävä uudestaan.
   assert.match(lahde, /gl_FragColor = v;/);
 });
+
+/*
+ * HÄIVYTYS GPU:LLA (sulavuuserä 3, omistajan kierros 23.9.2026: "Paljas +
+ * symbolit" 6,4 puskurikirjoitusta/kehys ja >20 ms 33 %). Häivytys
+ * kirjoitetaan kerran instanssin mukana ja etenee varjostimessa — ei
+ * peittokirjoituksia joka kehys.
+ */
+test('häivytys GPU:lla: attribuutti kerran, varjostin laskee peiton kellosta', () => {
+  const { kerros, lapset } = luoKerros();
+  assert.equal(kerros.gpuHaivytys, true);
+  kerros.aseta('a', { lat: 0, lng: 0, avain: 'a', rasteri: rasteri(10, 10), peitto: 1 });
+  kerros.aseta('b', {
+    lat: 1, lng: 1, avain: 'b', rasteri: rasteri(10, 10), peitto: 0,
+    haivytys: { alku: 500, kestoMs: 180, mista: 0, mihin: 1 },
+  });
+  kerros.kehys({ W: 800, H: 600, suhde: 1 });
+  const mat = lapset[0].material;
+  const vs = mat.a[0].vertexShader;
+  assert.match(vs, /attribute vec4 haivytys;/);
+  assert.match(vs, /mix\(haivytys\.z, haivytys\.w, clamp\(\(haivytysAika - haivytys\.x\) \/ max\(haivytys\.y/);
+  assert.ok('haivytysAika' in mat.uniforms);
+  const h = lapset[0].geometry.attributes.haivytys.a[0];
+  // a: ei häivytystä (alku −1), b: alku 0,5 s, kesto 0,18 s, 0 → 1 (neljä kulmaa kumpikin).
+  assert.deepEqual([...h.slice(0, 4)], [-1, 1, 0, 0]);
+  assert.deepEqual([...h.slice(16, 20)].map((x) => Math.round(x * 1000) / 1000), [0.5, 0.18, 0, 1]);
+  // Häivytyksen aikana ei kirjoiteta puskureita; peitto() keskeyttää GPU-häivytyksen rakennuksella.
+  const ennen = kerros.mittarit().puskurikirjoituksia;
+  kerros.kehys({ W: 800, H: 600, suhde: 1 });
+  assert.equal(kerros.mittarit().puskurikirjoituksia, ennen, 'ei kirjoituksia pelkästä kehyksestä');
+  kerros.peitto('b', 0.3);
+  kerros.kehys({ W: 800, H: 600, suhde: 1 });
+  const h2 = lapset[0].geometry.attributes.haivytys.a[0];
+  assert.equal(h2[16], -1, 'peitto() otti häivytyksen pois');
+});

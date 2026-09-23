@@ -249,6 +249,8 @@ export function luoGlNimiosovitin({
   const haivytykset = new Map();
   /** Lepopiirto: häivytyksen ajan joka kehys piirretään (kehys() etenee vain piirrettäessä). */
   const ilmoitaHaivytys = () => ui?.pallonInstanssi?.__piirto?.tarvitaan?.(NOSTON_HAIVYTYS_MS + 50);
+  /** Häivytys instanssin mukaan GPU-rungolle (js/pallonimiot-gl.js HÄIVYTYS GPU:LLA). */
+  const haivytysKuvaus = (h) => ({ alku: h.alku, kestoMs: NOSTON_HAIVYTYS_MS, mista: h.mista, mihin: h.mihin });
   const nyt = () => globalThis.performance?.now?.() ?? Date.now();
 
   /** Rasteri atlakseen rungon rajapinnalla; false = ei tilaa. */
@@ -390,16 +392,18 @@ export function luoGlNimiosovitin({
         const edellinen = ikonit.get(tunnus);
         const vaihtui = edellinen && edellinen.avain !== ikoni.avain && !ikoni.vanhaRasteri;
         if (vaihtui) {
-          haivytykset.set(`${tunnus}#ikoni-vanha`, {
+          const vanha = {
             instanssi: { ...edellinen.instanssi, tunnus: `${tunnus}#ikoni-vanha`, opacity: edellinen.instanssi.opacity },
             alku: hetki, mista: edellinen.instanssi.opacity, mihin: 0, poistu: true,
-          }); ilmoitaHaivytys();
+          };
+          vanha.instanssi.haivytys = haivytysKuvaus(vanha);
+          haivytykset.set(`${tunnus}#ikoni-vanha`, vanha); ilmoitaHaivytys();
           haivytykset.set(`${tunnus}#ikoni`, { alku: hetki, mista: 0, mihin: peitto, poistu: false }); ilmoitaHaivytys();
         }
         const haivytys = haivytykset.get(`${tunnus}#ikoni`);
         const ikoninPeitto = haivytys && !haivytys.poistu ? haivytys.mista : peitto;
         const instanssi = glNostonInstanssi(d, ikoni, 'ikoni', ikoninPeitto);
-        if (haivytys && !haivytys.poistu) haivytys.instanssi = instanssi;
+        if (haivytys && !haivytys.poistu) { haivytys.instanssi = instanssi; instanssi.haivytys = haivytysKuvaus(haivytys); }
         gl.push(instanssi);
         if (!ikoni.vanhaRasteri) ikonit.set(tunnus, { avain: ikoni.avain, instanssi });
       }
@@ -409,16 +413,22 @@ export function luoGlNimiosovitin({
         const vaihtui = edellinen && edellinen.avain !== nimio.avain && edellinen.nakyy && nimioNakyy;
         if (vaihtui) {
           // Vanha nimiö häipyy paikallaan (E3): sama sprite, sama siirto kuin ennen.
-          haivytykset.set(`${tunnus}#nimio-vanha`, {
+          const vanha = {
             instanssi: { ...edellinen.instanssi, tunnus: `${tunnus}#nimio-vanha`, opacity: edellinen.instanssi.opacity },
             alku: hetki, mista: edellinen.instanssi.opacity, mihin: 0, poistu: true,
-          }); ilmoitaHaivytys();
+          };
+          vanha.instanssi.haivytys = haivytysKuvaus(vanha);
+          haivytykset.set(`${tunnus}#nimio-vanha`, vanha); ilmoitaHaivytys();
           haivytykset.set(`${tunnus}#nimio`, { alku: hetki, mista: 0, mihin: peitto, poistu: false }); ilmoitaHaivytys();
         }
         const haivytys = haivytykset.get(`${tunnus}#nimio`);
         const nimioPeitto = nimioNakyy ? (haivytys && !haivytys.poistu ? haivytys.mista : peitto) : 0;
         const instanssi = glNostonInstanssi(d, nimio, 'nimio', nimioPeitto);
-        if (haivytys && !haivytys.poistu) haivytys.instanssi = instanssi;
+        if (haivytys && !haivytys.poistu) {
+          haivytys.instanssi = instanssi;
+          // Piilotettu nimiö pysyy piilossa: häivytys vain näkyvälle.
+          if (nimioNakyy) instanssi.haivytys = haivytysKuvaus(haivytys);
+        }
         gl.push(instanssi);
         nimiot.set(tunnus, { avain: nimio.avain, nakyy: nimioNakyy, instanssi });
       }
@@ -509,19 +519,29 @@ export function luoGlNimiosovitin({
     return css2d;
   };
 
-  /** Häivytysten eteneminen (kehyskoukusta): peitto ajan mukaan, valmiit pois. */
+  /*
+   * Häivytysten eteneminen (kehyskoukusta): peitto ajan mukaan, valmiit pois.
+   *
+   * GPU-RUNGOLLA (`k.gpuHaivytys`, js/pallonimiot-gl.js HÄIVYTYS GPU:LLA)
+   * peittoa ei kirjoiteta joka kehyksessä: häivytys kulkee instanssin
+   * mukana (`haivytysKuvaus`) ja etenee varjostimessa. Tämä vain kirjaa
+   * JS-puolen peiton ja poistaa valmiit. Häipynyt vanha instanssi on
+   * peitoltaan nolla, joten sen poistava rakennus odottaa liikkeessä
+   * seuraavaa ladontaa — liikkeen kehykset eivät kirjoita puskureita.
+   */
   const etenaHaivytykset = (k) => {
     if (!haivytykset.size) return;
     const hetki = nyt();
+    const gpu = Boolean(k.gpuHaivytys);
     let poistettiin = false;
     for (const [t, h] of haivytykset) {
       const osuus = Math.min(1, (hetki - h.alku) / NOSTON_HAIVYTYS_MS);
       const peitto = h.mista + (h.mihin - h.mista) * osuus;
       if (h.instanssi) h.instanssi.opacity = peitto;
-      k.peitto?.(t, peitto);
+      if (!gpu) k.peitto?.(t, peitto);
       if (osuus >= 1) { haivytykset.delete(t); if (h.poistu) poistettiin = true; }
     }
-    if (poistettiin) vieKaikki(k);
+    if (poistettiin && !(gpu && liikkeessa())) vieKaikki(k);
   };
 
   // Kesken ollut rasteri valmistui: sama jako uudestaan seuraavassa kehyksessä.
