@@ -19,7 +19,9 @@
  *   6. osa 2 (funktiot tunnisteiksi): kaupunkidatassa ei ole funktioita —
  *      pulmat nimeävät generaattorinsa, packien tekstit ovat pohjia;
  *   7. skeema 1.3: lehden web-riippuvuudet (web/lehti.json) ovat täydet ja
- *      tiivisteet vastaavat repon tiedostoja.
+ *      tiivisteet vastaavat repon tiedostoja;
+ *   8. skeema 1.4: matkustuksen hinnat (saannot) ja saapumishaut
+ *      (saapuminen) vastaavat pelin omia vakioita ja funktioita.
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -222,4 +224,40 @@ test('skeema 1.3: lehden web-riippuvuudet WKWebView-kuorelle', () => {
   }
   assert.equal(lehti.tavuja.koodi, [...lehti.sivut, ...lehti.moduulit, ...lehti.tyylit].reduce((a, t) => a + t.tavuja, 0));
   assert.ok(validoiNimella({ ...lehti, moduulit: [{ polku: 'x.js', tavuja: 1 }] }, 'web-nakyma.schema.json').length);
+});
+
+test('skeema 1.4: matkustuksen hinnat ja sääntövakiot', async () => {
+  const rules = await import('../js/rules.js');
+  const game = await import('../js/game.js');
+  const saannot = new Map(JSON.parse(tiedostot.get('kokoelmat/saannot.json')).alkiot.map((a) => [a.id, a]));
+  for (const nimi of ['SEA_FEE', 'FLIGHT_PRICE', 'BUS_FARE']) {
+    assert.equal(saannot.get(nimi).arvo, rules[nimi], nimi);
+    assert.equal(saannot.get(nimi).moduuli, 'js/rules.js', nimi);
+  }
+  for (const nimi of ['START_MONEY', 'TURN_HOURS', 'RECORD_DAYS', 'HINT_PRICE']) {
+    assert.equal(saannot.get(nimi).arvo, game[nimi], nimi);
+  }
+});
+
+test('skeema 1.4: saapumishaut vastaavat pelin funktioita jokaisessa kaupungissa', async () => {
+  const { MAAILMANKARTTA: P } = await import('../js/packs/maailmankartta.js');
+  const { fokusvirtaKaupungille } = await import('../js/packs/fokusvirrat.js');
+  const { kaupunginJuliste } = await import('../js/packs/julisteet.js');
+  const { radioMaalle } = await import('../js/packs/radiot.js');
+  const { vanhaTallenne } = await import('../js/packs/vanhat-aanet.js');
+  const { hetketMaassa } = await import('../js/packs/historian-hetket.js');
+  const rivit = JSON.parse(tiedostot.get('kokoelmat/saapuminen.json')).alkiot;
+  assert.equal(rivit.length, P.cities.length);
+  for (const r of rivit) {
+    const maa = P.map.cityCountry?.[r.id] ?? null;
+    assert.equal(r.maa, maa, r.id);
+    assert.equal(r.fokusvirta !== null, Boolean(fokusvirtaKaupungille(r.id)), `${r.id}: fokusvirta`);
+    assert.equal(r.juliste !== null, Boolean(kaupunginJuliste(r.id)), `${r.id}: juliste`);
+    assert.deepEqual(r.radio, radioMaalle(maa), `${r.id}: radio`);
+    assert.deepEqual(r.vanhaTallenne, vanhaTallenne(r.id, maa), `${r.id}: vanha tallenne`);
+    assert.deepEqual(r.historianHetket, maa ? hetketMaassa(maa).map((h) => h.id) : [], `${r.id}: hetket`);
+  }
+  const rooma = rivit.find((r) => r.id === 'rooma');
+  assert.equal(rooma.kaupunkilehti, 'rooma');
+  assert.equal(rooma.paikallisaarteet, 'ITA');
 });

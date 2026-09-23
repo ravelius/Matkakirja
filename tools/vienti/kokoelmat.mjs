@@ -195,6 +195,89 @@ function sisaltoKokoelmat(hae, kaupunkiIdt) {
   };
 }
 
+/*
+ * SÄÄNNÖT JA SAAPUMINEN (skeema 1.4, sisältöpaketin osa 2 erä A).
+ *
+ * Natiivi porttaa matkustuksen ja saapumisen ensin (Fable 23.9.2026).
+ * Sen luvut ja kaupunkikohtaiset haut ovat webissä koodia:
+ *   - saannot: js/rules.js:n ja js/game.js:n kaikki luku-, teksti- ja
+ *     totuusarvovakiot (hinnat, aloitusraha, vuoron tunnit, XP…).
+ *     Kootaan nimiavaruudesta automaattisesti, joten uusi vakio tulee
+ *     mukaan ilman muutosta tähän.
+ *   - saapuminen: rivi per laudan kaupunki, jossa pelin saapumishakujen
+ *     tulokset valmiiksi laskettuina (fokusvirtaKaupungille,
+ *     kaupunginJuliste, luentakuvallisetKaupungit, radioMaalle,
+ *     vanhaTallenne, paikallisaarre, hetketMaassa). Haku ajetaan pelin
+ *     omilla funktioilla, joten taulu ei voi erkaantua pelistä, eikä
+ *     natiivin tarvitse toistaa varasääntöjä (esim. vanha tallenne:
+ *     kaupungin oma, muuten maan).
+ */
+const SAANTOMODUULIT = ['js/rules.js', 'js/game.js'];
+
+function saantoKokoelma(hae) {
+  const alkiot = [];
+  const nahdyt = new Set();
+  for (const moduuli of SAANTOMODUULIT) {
+    for (const [nimi, arvo] of Object.entries(hae(moduuli)).sort(([a], [b]) => (a < b ? -1 : 1))) {
+      if (!['number', 'string', 'boolean'].includes(typeof arvo)) continue;
+      // game.js vie rules.js:n hinnat edelleen; alkuperäinen moduuli voittaa.
+      if (nahdyt.has(nimi)) continue;
+      nahdyt.add(nimi);
+      alkiot.push({ id: nimi, moduuli, arvo });
+    }
+  }
+  return taulukko(SAANTOMODUULIT.join('+'),
+    'Pelin sääntövakiot: matkustuksen hinnat (SEA_FEE laiva, FLIGHT_PRICE lento, BUS_FARE bussi), '
+      + 'aloitusraha, vuoron tunnit, palkkiot ja XP. id = vakion nimi koodissa. SEA_FARE (game.js) '
+      + 'on SEA_FEE:n vanha kaksoiskappale.',
+    {}, alkiot);
+}
+
+function saapumisKokoelma(ns, hae) {
+  const P = ns.MAAILMANKARTTA;
+  const P_ = 'js/packs/';
+  const { fokusvirtaKaupungille, luentakuvallisetKaupungit } = hae(`${P_}fokusvirrat.js`);
+  const { kaupunginJuliste } = hae(`${P_}julisteet.js`);
+  const { radioMaalle } = hae(`${P_}radiot.js`);
+  const { vanhaTallenne } = hae(`${P_}vanhat-aanet.js`);
+  const { PAIKALLISAARTEET } = hae(`${P_}paikallisaarteet.js`);
+  const { paikallisaarre } = hae(`${P_}paikallisaarteet.js`);
+  const { hetketMaassa } = hae(`${P_}historian-hetket.js`);
+  const { KULTTUURI_KATEGORIAT } = hae(`${P_}kulttuuri-kategoriat.js`);
+  const { SAAPUMISPUHEET } = hae(`${P_}saapumispuheet.js`);
+  const { KOHTAAMISET } = hae(`${P_}kohtaamiset.js`);
+  const luentakuvalliset = luentakuvallisetKaupungit();
+  const oma = (taulu, id) => (Object.hasOwn(taulu, id) ? id : null);
+  return taulukko(`${LAUTA}#MAAILMANKARTTA.cities + saapumishaut`,
+    'Saapumisen haut kaupungeittain valmiiksi laskettuina pelin omilla funktioilla. '
+      + 'Viittaukset ovat id:itä muihin kokoelmiin (null = ei sisältöä); radio ja vanhaTallenne '
+      + 'ovat arvoja sellaisenaan (vanhaTallenne: kaupungin oma, muuten maan).',
+    {
+      kaupunki: 'kaupungit', fokusvirta: 'fokusvirrat', juliste: 'julisteet', kaupunkilehti: 'kaupunkilehdet',
+      saapumispuhe: 'saapumispuheet', kohtaaminen: 'kohtaamiset', paikallisaarteet: 'paikallisaarteet',
+      historianHetket: 'historianHetket',
+    },
+    P.cities.map((c) => {
+      const maa = P.map.cityCountry?.[c.id] ?? null;
+      const onAarteita = maa && (paikallisaarre('pieniAarre', maa) || paikallisaarre('isoAarre', maa));
+      return {
+        id: c.id,
+        kaupunki: c.id,
+        maa,
+        fokusvirta: fokusvirtaKaupungille(c.id) ? c.id : null,
+        luentakuva: luentakuvalliset.has(c.id),
+        juliste: kaupunginJuliste(c.id) ? c.id : null,
+        kaupunkilehti: oma(KULTTUURI_KATEGORIAT, c.id),
+        saapumispuhe: oma(SAAPUMISPUHEET, c.id),
+        kohtaaminen: oma(KOHTAAMISET, c.id),
+        paikallisaarteet: onAarteita && Object.hasOwn(PAIKALLISAARTEET, maa) ? maa : null,
+        historianHetket: maa ? hetketMaassa(maa).map((h) => h.id) : [],
+        radio: radioMaalle(maa),
+        vanhaTallenne: vanhaTallenne(c.id, maa),
+      };
+    }));
+}
+
 /** nimiavaruudet: Map<moduulipolku, moduulin nimiavaruus> */
 export function kokoaKokoelmat(nimiavaruudet) {
   const ns = {
@@ -206,5 +289,10 @@ export function kokoaKokoelmat(nimiavaruudet) {
     return nimiavaruudet.get(polku);
   };
   const kaupunkiIdt = new Set(ns.MAAILMANKARTTA.cities.map((c) => c.id));
-  return { ...lautaKokoelmat(ns), ...sisaltoKokoelmat(hae, kaupunkiIdt) };
+  return {
+    ...lautaKokoelmat(ns),
+    ...sisaltoKokoelmat(hae, kaupunkiIdt),
+    saannot: saantoKokoelma(hae),
+    saapuminen: saapumisKokoelma(ns, hae),
+  };
 }

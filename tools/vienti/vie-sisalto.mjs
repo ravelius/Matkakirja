@@ -56,8 +56,10 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        ja lisätiedostoille; kaupunki.data merkitty raakaolioksi
  *   1.3  web/<näkymä>.json: web-näkymän (lehti) JS/CSS/tiedostoriippuvuudet
  *        WKWebView-kuorelle; manifest.webNakymat
+ *   1.4  kokoelmat saannot (hinnat ja sääntövakiot) ja saapuminen
+ *        (saapumishaut kaupungeittain valmiiksi laskettuina)
  */
-export const SKEEMAVERSIO_TARKKA = '1.3';
+export const SKEEMAVERSIO_TARKKA = '1.4';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 const tavuja = (s) => Buffer.byteLength(s);
