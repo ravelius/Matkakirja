@@ -21,6 +21,11 @@ ei ole.
 
 ## Tila
 
+**Päivitys 23.9.2026 klo 12.39 (ennen Macin uudelleenkäynnistystä, tili B):**
+1. PR:t Julkaisijalla, kaikki valmiit ja pushattu: #2913 (peilaus lukee js/linssit, 32 kuvaa ämpäriin), #2916 (357 turhaa peilaus-404:ää pois), #2918 (60 heron pohjaviitteet lähderiville, viiteloki tools/hero-viiteloki.tsv; nostaa version).
+2. Kesken-listan kohdat 1 (herot, paitsi 94 ChatGPT-heroa) ja 4 ovat tehty; kohta 7 odottaa omistajan 3D-päätöstä. Seuraavaa erää ei ole annettu.
+3. Kansio /Users/Shared/Claude/Matkakirja-siirtoseppa, erä-worktreet /Users/Shared/Claude/wt/siirtoseppa-* (tools/uusi-worktree.sh on vain origin/v1973-prep-haarassa).
+
 main on `99522e54d` (#2899). Viimeisin pelin versio on v2145 (#2894).
 Siirtoseppä ei julkaise versioita: kaikki sen PR:t ovat raportteja tai
 työkaluja, joten versionumeroa ei nosteta.
