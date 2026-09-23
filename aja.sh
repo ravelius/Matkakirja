@@ -6,6 +6,8 @@ UNITY="/Applications/Unity/Hub/Editor/6000.3.24f1/Unity.app/Contents/MacOS/Unity
 mkdir -p tulokset
 case "$1" in
   luo)
+    [ -f "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset" ] || \
+      "$UNITY" -batchmode -quit -projectPath . -importPackage "$(find Library/PackageCache -name 'TMP Essential Resources.unitypackage' | head -1)" -logFile tulokset/tmp.log
     "$UNITY" -batchmode -quit -projectPath . -executeMethod Matkakirja.Editori.Rakennus.LuoPallo -logFile tulokset/luo.log ;;
   sim)
     "$UNITY" -batchmode -quit -projectPath . -buildTarget iOS -executeMethod Matkakirja.Editori.Rakennus.IosSimulaattori -logFile tulokset/sim.log ;;

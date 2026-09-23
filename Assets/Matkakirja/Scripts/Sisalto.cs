@@ -1,0 +1,102 @@
+using System;
+using System.Collections;
+using System.IO;
+using UnityEngine;
+using UnityEngine.Networking;
+
+namespace Matkakirja
+{
+    /// <summary>
+    /// Verkkopelin sisältöpaketti ämpäristä (Siirtoseppä, tools/vienti):
+    /// sisalto/1/uusin.json → polku (esim. sisalto/1/v1/) → kokoelmat/*.json.
+    /// Versiokansiot ovat muuttumattomia, joten haettu kokoelma tallennetaan
+    /// laitteelle ja luetaan sieltä, jos verkkoa ei ole.
+    /// </summary>
+    public static class Sisalto
+    {
+        public const string Juuri = "https://media.matkakirja.app/";
+        public const string Osoitin = Juuri + "sisalto/1/uusin.json";
+
+        [Serializable]
+        public class OsoitinTiedot
+        {
+            public int versio;
+            public string polku;
+            public string skeemaversio;
+        }
+
+        [Serializable]
+        public class Kaupunki
+        {
+            public string id;
+            public string nimi;
+            public string maa2;
+            public double lat;
+            public double lon;
+            public string tyyppi;
+            public bool lentokentta;
+            public bool aloitus;
+            public bool saari;
+            public string sijaintiLahde;
+        }
+
+        [Serializable]
+        class Kokoelma<T>
+        {
+            public T[] alkiot;
+        }
+
+        static string Valimuisti(string polku) =>
+            Path.Combine(Application.persistentDataPath, "sisalto", polku.Replace('/', Path.DirectorySeparatorChar));
+
+        static string ViimeisinPolku => Path.Combine(Application.persistentDataPath, "sisalto", "viimeisin.txt");
+
+        /// <summary>Hakee kokoelman. valmis(null) = ei verkkoa eikä välimuistia.</summary>
+        public static IEnumerator Hae<T>(string kokoelma, Action<T[]> valmis)
+        {
+            string versioPolku = null;
+            using (var p = UnityWebRequest.Get(Osoitin))
+            {
+                p.timeout = 10;
+                yield return p.SendWebRequest();
+                if (p.result == UnityWebRequest.Result.Success)
+                {
+                    var o = JsonUtility.FromJson<OsoitinTiedot>(p.downloadHandler.text);
+                    versioPolku = o.polku;
+                    Debug.Log($"MATKAKIRJA sisältö: versio {o.versio}, skeema {o.skeemaversio}, {o.polku}");
+                }
+                else if (File.Exists(ViimeisinPolku))
+                {
+                    versioPolku = File.ReadAllText(ViimeisinPolku).Trim();
+                    Debug.LogWarning($"MATKAKIRJA sisältö: osoitin ei vastaa ({p.error}), käytetään {versioPolku}");
+                }
+            }
+            if (versioPolku == null) { valmis(null); yield break; }
+
+            string polku = versioPolku + "kokoelmat/" + kokoelma + ".json";
+            string tiedosto = Valimuisti(polku);
+            string teksti = null;
+            if (File.Exists(tiedosto))
+            {
+                teksti = File.ReadAllText(tiedosto);
+            }
+            else
+            {
+                using var k = UnityWebRequest.Get(Juuri + polku);
+                k.timeout = 20;
+                yield return k.SendWebRequest();
+                if (k.result != UnityWebRequest.Result.Success)
+                {
+                    Debug.LogError($"MATKAKIRJA sisältö: {polku} epäonnistui: {k.error}");
+                    valmis(null);
+                    yield break;
+                }
+                teksti = k.downloadHandler.text;
+                Directory.CreateDirectory(Path.GetDirectoryName(tiedosto));
+                File.WriteAllText(tiedosto, teksti);
+                File.WriteAllText(ViimeisinPolku, versioPolku);
+            }
+            valmis(JsonUtility.FromJson<Kokoelma<T>>(teksti).alkiot);
+        }
+    }
+}

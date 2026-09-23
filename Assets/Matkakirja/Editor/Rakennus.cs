@@ -58,6 +58,12 @@ namespace Matkakirja.Editori
             kannet.pohjoinen = KansiMateriaali("Napakansi-pohjoinen", new Color32(0xba, 0xb6, 0xa6, 0xff));
             kannet.etela = KansiMateriaali("Napakansi-etela", new Color32(0xdc, 0xd6, 0xc6, 0xff));
 
+            var merkit = georefGo.AddComponent<KaupunkiMerkit>();
+            merkit.georeferenssi = georef;
+            merkit.pisteMateriaali = Materiaali("Kaupunkipiste", "Matkakirja/Piste", new Color32(0x3b, 0x2f, 0x22, 0xff));
+            merkit.fontti = AssetDatabase.LoadAssetAtPath<TMPro.TMP_FontAsset>(TmpFontti)
+                ?? throw new Exception("TMP-fonttia ei löydy (aja.sh luo tuo sen): (" + TmpFontti + ")");
+
             var kameraGo = new GameObject("Kamera") { tag = "MainCamera" };
             var kamera = kameraGo.AddComponent<Camera>();
             kamera.clearFlags = CameraClearFlags.SolidColor;
@@ -67,6 +73,7 @@ namespace Matkakirja.Editori
             kamera.fieldOfView = 40f;
             var kierto = kameraGo.AddComponent<PalloKierto>();
             kierto.georeferenssi = georef;
+            merkit.kamera = kamera;
             var mittari = kameraGo.AddComponent<KehysMittari>();
             mittari.pallo = kierto;
 
@@ -93,12 +100,16 @@ namespace Matkakirja.Editori
             Debug.Log("MATKAKIRJA: kohtaus luotu " + PalloKohtaus);
         }
 
-        /// <summary>Napakannen materiaali assetiksi (Matkakirja/Napakansi, häivytetty reuna).</summary>
-        static Material KansiMateriaali(string nimi, Color vari)
+        public const string TmpFontti = "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset";
+
+        static Material KansiMateriaali(string nimi, Color vari) => Materiaali(nimi, "Matkakirja/Napakansi", vari);
+
+        /// <summary>Materiaali assetiksi annetulla shaderilla ja värillä.</summary>
+        static Material Materiaali(string nimi, string shader, Color vari)
         {
             string polku = $"Assets/Matkakirja/Materiaalit/{nimi}.mat";
             Directory.CreateDirectory(Path.GetDirectoryName(polku));
-            var m = new Material(Shader.Find("Matkakirja/Napakansi"));
+            var m = new Material(Shader.Find(shader) ?? throw new Exception("Shaderia ei löydy: " + shader));
             m.SetColor("_BaseColor", vari);
             AssetDatabase.DeleteAsset(polku);
             AssetDatabase.CreateAsset(m, polku);
