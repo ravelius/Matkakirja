@@ -104,7 +104,7 @@ KOKEET-osion sijainti rikkoo omistajan linjausta: natiivin KOKEET-osio (Astronau
 
 | Nappi / toiminto | Web | Natiivi | Tila | Kenelle |
 |---|---|---|---|---|
-| "Liiku" (kompassi, avaa kulkutapaliu'un) | ui.js:11988 | Matkavalinta (Liiku + liuku) + PeliOhjain.Kulkutavat (PK) | on (merge-pyynnössä); kortin "Liiku tänne" säilyy kuten webissä | NUI, PK |
+| "Liiku" (kompassi, avaa kulkutapaliu'un) | ui.js:11988 | Matkavalinta (Liiku + liuku) + PeliOhjain.Kulkutavat (PK) | on (master 30fe586); kortin "Liiku tänne" säilyy kuten webissä | NUI, PK |
 | "Liftaus" | ui.js:11373 | Matkavalinta.cs:107 (rivi per kulkutapa) | on | NUI |
 | "Bussilla" → "Kaupunki (X p)" | ui.js:11378, 11420 | Matkavalinta.cs:107 | on | NUI |
 | "Laivalla (X p)" | ui.js:11385, 11426 | Matkavalinta.cs:107 | on | NUI |
@@ -112,7 +112,7 @@ KOKEET-osion sijainti rikkoo omistajan linjausta: natiivin KOKEET-osio (Astronau
 | Mannerlento "Lennä X: kaupunki (p)" | ui.js:11450 | UI/KaupunkiKortti.cs:172, NakymaSopimukset.cs:83 | on | NUI |
 | "Takaisin" (lentolista) | ui.js:11487 | Matkavalinta.cs:113 ("Peruuta") | on | NUI |
 | "Heitä noppa" | ui.js:11248 | Matkavalinta.cs:47 (heittonappi) | on | NUI |
-| "Vaihda matkustustapa" (kesken reitin) | ui.js:11262 | Matkavalinta (IHeittoVaihto, nuolinappi) | on (merge-pyynnössä) | PK, NUI |
+| "Vaihda matkustustapa" (kesken reitin) | ui.js:11262 | Matkavalinta (IHeittoVaihto, nuolinappi) | on (master 30fe586) | PK, NUI |
 | Nopan jälkeen kohderenkaan napautus kartalla | ui.js:10574 (doMove) | – (natiivi etenee itse kohti tavoitetta) | osittain | PK |
 | Pomppiva noppa kartalla | die.js | puuttuu (tulos vain ilmoituksena) | puuttuu | NS |
 | "Tutki" | ui.js:11636 | KaupunkiKortti "Tutki kaupunkia", heittonappi | on | NUI |
@@ -483,7 +483,7 @@ Merge-pyynnössä (natiivi-ui/ipad-korjaukset, /lahteet, /chat-ylarivi): Lähtee
 korjaukset: maalehden otsikko (MiniJson.Objekti heitti puuttuvasta kentästä → UI:ssa Rakenne.Olio) ja
 matkakirjakortti lappuna luennan aikana kaikilla laitteilla (webin TEKSTIT PIILOON KAIKILLA LAITTEILLA).
 Myöhemmin samana päivänä: sanelu ja "Kirjoita kysymys" (masterissa), Liiku, kulkutapaliuku ja "Vaihda
-matkustustapa" (merge-pyynnössä), B7-äänisoittimen koukut ja tehosteiden webpariteetti (masterissa).
+matkustustapa" (master 30fe586), B7-äänisoittimen koukut ja tehosteiden webpariteetti (masterissa).
 Odottaa muita: ✈-kohdemerkit (NS), tiedeliite ja aikajanalinssit (LS).
 
 ## Ei webissä, odottaa omistajaa
