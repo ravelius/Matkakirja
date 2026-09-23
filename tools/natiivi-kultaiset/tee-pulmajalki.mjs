@@ -40,6 +40,11 @@ const JS = resolve(process.argv[2] ?? '/Users/Shared/Claude/Matkakirja-pelikooda
 const { Game } = await import(pathToFileURL(join(JS, 'game.js')).href);
 const { packById } = await import(pathToFileURL(join(JS, 'pack.js')).href);
 const { AFRICA } = await import(pathToFileURL(join(JS, 'packs', 'africa.js')).href);
+// v2150 (#2963): pulma nimeää generaattorinsa tunnisteella (generaattori), funktio
+// rekisteristä js/pulmageneraattorit.js; vanhemmassa webissä pulma.generate.
+const { pulmanGeneraattori } = await import(pathToFileURL(join(JS, 'pulmageneraattorit.js')).href)
+  .catch(() => ({ pulmanGeneraattori: () => null }));
+const generaattori = (pulma) => pulma.generate ?? pulmanGeneraattori(pulma);
 
 Game.prototype.beginDuel = function beginDuelStub() {
   this.kaksintaisteluja = (this.kaksintaisteluja ?? 0) + 1;
@@ -82,10 +87,11 @@ const ei = (x) => (x === undefined ? null : x);
 // --- 1. arvonnat ---------------------------------------------------------
 const arvonnat = [];
 for (const pulma of PULMAT) {
-  if (!pulma.generate) continue;
+  const generate = generaattori(pulma);
+  if (!generate) continue;
   for (let siemen = 1; siemen <= 25; siemen++) {
     const rng = lahde(siemen);
-    const t = pulma.generate(rng);
+    const t = generate(rng);
     arvonnat.push({
       id: pulma.id,
       siemen,
@@ -385,7 +391,7 @@ const riveina = (lista) => lista.map((j) => {
 });
 writeFileSync(join(tama, 'pulmajalki.json'),
   `{"$kuvaus":"Verkkopelin pulmat ja tapahtumakortit (Kultaiset/tee-pulmajalki.mjs). Älä muokkaa käsin.",\n`
-  + `"lauta":"maailmankartta","pulmat":${JSON.stringify(PULMAT.map((p) => ({ id: p.id, city: p.city, generate: !!p.generate })))},\n`
+  + `"lauta":"maailmankartta","pulmat":${JSON.stringify(PULMAT.map((p) => ({ id: p.id, city: p.city, generate: !!generaattori(p) })))},\n`
   + `"muunnelmat":${JSON.stringify(MUUNNELMAT)},"vuorot":${VUOROT},"maxTeot":${MAX_TEOT},\n`
   + `"arvonnat":[\n${arvonnat.map((a) => JSON.stringify(a)).join(',\n')}\n],\n`
   + `"pulmaAjot":[\n${riveina(pulmaAjot).join(',\n')}\n],\n`
