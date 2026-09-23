@@ -1667,3 +1667,7 @@ Pelikoodari klo 08.5x: savukkeet 6/6 ja 5/5, testit 4047/0. Julkaisija → v2141
 ## OMISTAJAN LINJAUS (SITOVA): 'MITKAAN TEKSTIT EIVAT SAISI VAIHTAA PAIKKAA PANOROITAESSA KUN NE OVAT RUUDULLA' — NIMION PUOLI (VASEN/OIKEA/YLA/ALA) LUKITAAN KUN NIMIO ON NAKYVISSA; SIJOITTELU SAA MUUTTUA VAIN KUN NIMIO ON POISSA RUUDULTA TAI ZOOMI VAIHTUU (23.9.2026 klo 08.48)
 
 Omistaja klo 08.47 iPhonella (v2140), kaappaukset: 'Chambordin linna' ja 'Loire' hyppäävät symbolin toiselta puolelta toiselle kesken vedon. Epäily: hyppy on osa nähtyä nykimistä. Toteutus Karttasepälle (pallonimiot-gl / nimiölimitys): hystereesi — näkyvän nimiön puoli säilyy vaikka törmäyslaskenta ehdottaisi toista, kunnes nimiö poistuu ruudulta (marginaali) tai zoomtaso vaihtuu; törmäyksessä toinen (näkymätön tai uudempi) väistää; vartija WebKit-vedolla (0 puolenvaihtoa näkyvillä nimiöillä 10 s vedossa).
+
+## v2141 MAINISSA (#2880): SYOTEKOE-VALIKKO; CI-WEBKIT-MUISTIO MAINISSA (#2881, ILMAN VERSIOTA) (23.9.2026 klo 08.57)
+
+Julkaisija klo 08.5x, testit 4034/0. Omistajan kierros v2141:llä valikosta: tilat 1–4.
