@@ -9,7 +9,6 @@ koe rosvo
 odota-tila kysymys 3
 odota 2
 tila r2-rosvo
-aloita
 odota 1
 puolita
 odota 1

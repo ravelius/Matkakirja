@@ -142,7 +142,8 @@ namespace Matkakirja.Natiivi
                     return ohjain.Tutki(A(1) == "vaikea");
                 case "vastaa":
                 {
-                    var q = ohjain.Matka?.Tila.Kysely.Kysymys;
+                    // Näytön tila kattaa kysymyksen, pulman ja rosvon kaksintaistelun (Kysely.Kysymys vain kysymyksen).
+                    var q = ohjain.KysymysTila;
                     if (q == null) return "kysymys ei ole auki";
                     int i;
                     if (A(1) == "oikea") i = q.Oikea;

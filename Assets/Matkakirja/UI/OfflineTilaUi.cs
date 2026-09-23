@@ -2,8 +2,8 @@
 // lisäksi pelaaja näkee latauksen kulun ja verkon tilan kartalla.
 //
 //   Pilleri     yläpalkin alla vasemmalla, vain kun on kerrottavaa:
-//                 ⤓ Ladataan Ranska · 42 %       (yksi maa)
-//                 ⤓ Ladataan 3 maata · 42 %      (usea; osuus kaikista tavuista)
+//                 Ladataan Ranska · 42 %         (yksi maa)
+//                 Ladataan 3 maata · 42 %        (usea; osuus kaikista tavuista)
 //                 Ei verkkoa · 2 maata laitteella (Application.internetReachability)
 //               ohut edistymispalkki alareunassa; napautus avaa ratas-paneelin.
 //   Ilmoitus    kun maa valmistuu tai lataus epäonnistuu (Ylapalkki.Viesti).
@@ -87,7 +87,7 @@ namespace Matkakirja.Natiivi
                 long tavut = kaynnissa.Sum(m => Math.Max(0, m.Tavut)), ladattu = kaynnissa.Sum(m => Math.Max(0, m.Ladattu));
                 osuus = tavut > 0 ? Mathf.Clamp01((float)ladattu / tavut) : 0f;
                 string mita = kaynnissa.Count == 1 ? kaynnissa[0].Nimi : kaynnissa.Count + " maata";
-                rivi = (verkoton ? "Odottaa verkkoa · " : "⤓ Ladataan ") + mita + " · " + Mathf.RoundToInt(osuus * 100) + " %";
+                rivi = (verkoton ? "Odottaa verkkoa · " : "Ladataan ") + mita + " · " + Mathf.RoundToInt(osuus * 100) + " %";
             }
             else if (verkoton)
             {

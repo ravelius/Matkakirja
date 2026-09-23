@@ -693,3 +693,9 @@
     margin: 9px 0 5px 0;
     -unity-background-scale-mode: scale-to-fit;
 }
+
+.mk-kysymys__vihjemerkki.mk-ikoni {
+    width: 16px;
+    height: 16px;
+    --mk-ikoni-viiva: 1.6;
+}

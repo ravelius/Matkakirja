@@ -11,7 +11,11 @@ namespace Matkakirja.Natiivi
     public sealed class KarttaValotSilta : IKarttaValot
     {
         readonly AiheValot valot;
-        KarttaValotSilta(AiheValot valot) { this.valot = valot; }
+        KarttaValotSilta(AiheValot valot)
+        {
+            this.valot = valot;
+            valot.Napautettu += UiPalvelut.IlmoitaValo;
+        }
 
         public IReadOnlyDictionary<string, int> Laskurit => valot.Laskurit;
         public string Valittu => valot.Valittu;

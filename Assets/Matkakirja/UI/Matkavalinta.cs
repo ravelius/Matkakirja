@@ -137,6 +137,13 @@ namespace Matkakirja.Natiivi
             p?.Invoke();
         }
 
+        /// <summary>
+        /// Linssi päällä (webissä pelin paneeli visibility: hidden linssin ajan): heittonappi
+        /// piiloon näkyvyydellä, jolloin ohjaimen NaytaHeitto/PiilotaHeitto-tila säilyy.
+        /// </summary>
+        public void NaytaSallittu(bool sallitaan) =>
+            heitto.style.visibility = sallitaan ? Visibility.Visible : Visibility.Hidden;
+
         public void NaytaHeitto(string teksti, Action painettu)
         {
             heittoTeksti.text = teksti;

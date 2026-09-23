@@ -79,6 +79,16 @@ namespace Matkakirja
         /// <summary>Hakee paketin tiedoston versiopolun alta (esim. "offline.json"), välimuistin kautta.</summary>
         public static IEnumerator HaePaketista(string suhteellinen, Action<string> valmis, bool valinnainen)
         {
+            // Koekansio (testaus laitteella ja simulaattorissa): Documents/sisalto-koe/<suhteellinen>
+            // voittaa julkaistun paketin versiosta riippumatta.
+            string koe = Path.Combine(Application.persistentDataPath, "sisalto-koe",
+                suhteellinen.Replace('/', Path.DirectorySeparatorChar));
+            if (File.Exists(koe))
+            {
+                Debug.Log("MATKAKIRJA sisältö: koekansiosta " + suhteellinen);
+                valmis(File.ReadAllText(koe));
+                yield break;
+            }
             while (osoitinHaussa) yield return null;
             string versioPolku = istunnonPolku;
             if (versioPolku == null)

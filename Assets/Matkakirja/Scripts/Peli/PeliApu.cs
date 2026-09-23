@@ -472,4 +472,41 @@ namespace Matkakirja.Natiivi
             return sb.Append('}').ToString();
         }
     }
+
+    /// <summary>
+    /// Äänitapahtumien tunnukset webin sfx.play-nimin (js/sound.js), jotta Natiivi-UI:n
+    /// äänimoottori voi käyttää samaa aanitaulut-kokoelmaa. PeliOhjain.Aani kertoo tunnuksen.
+    /// </summary>
+    public static class Aanitunnukset
+    {
+        public const string Oikein = "correct", Vaarin = "wrong", Vihje = "hint", Puolitus = "swipe",
+            Helpotus = "robber", KysymysAuki = "quizOpen", Tikitys = "tick", AikaLoppui = "timeout",
+            Saapuminen = "arrive", Noppa = "dieLand", Kolikot = "coin";
+
+        /// <summary>Web EVENT_SOUND[kind] ?? 'turn'; aarre ja ryöstäjä kuuluvat paljastukseen (null).</summary>
+        public static string Tapahtuma(string laji)
+        {
+            switch (laji)
+            {
+                case "treasure": case "robber": return null;
+                case "fare": return "ferry";
+                case "flight": return "flight";
+                case "aid": return "coin";
+                case "stuck": return "stuck";
+                default: return "turn";
+            }
+        }
+
+        /// <summary>Web treasureSound(type).</summary>
+        public static string Aarre(string tyyppi)
+        {
+            switch (tyyppi)
+            {
+                case "star": return "star";
+                case "robber": return "robber";
+                case "empty": return "empty";
+                default: return "gem";
+            }
+        }
+    }
 }

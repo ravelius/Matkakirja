@@ -14,7 +14,7 @@
 // kehys aloitus|jatko|puhuttelu}; natiivi tunnistautuu x-matkakirja-natiivi +
 // User-Agent (Puhe.cs, PR #2956). 429 → workerin oma viesti (päivä-/kuukausiraja),
 // ei uusintaa. Sijaintikysymys ("missä …") ja vastauksen paikka → kamera lentää
-// paikkaan (webin pulu-paikka) ja "← Palaa" vie takaisin.
+// paikkaan (webin pulu-paikka) ja "‹ Palaa" vie takaisin.
 // Kaiutin (webin .pollo-kaiutin, pysyvä kytkin) lukee vastaukset Puhe.Lue(…, "pollo").
 using System;
 using System.Collections;
@@ -113,7 +113,7 @@ namespace Matkakirja.Natiivi
             kentta.textEdition.placeholder = "Kysy pululta…";
             kentta.RegisterCallback<KeyDownEvent>(e => { if (e.keyCode == KeyCode.Return || e.keyCode == KeyCode.KeypadEnter) { Kysy(kentta.value); e.StopPropagation(); } });
             rivi.Add(kentta);
-            var laheta = Rakenne.Nappi("→", "mk-chat__laheta", () => Kysy(kentta.value), rivi);
+            var laheta = Rakenne.Nappi(null, "mk-chat__laheta", () => Kysy(kentta.value), rivi, Ikonit.Nuoli);
             laheta.tooltip = "Lähetä";
             kaiutin = Rakenne.Nappi(null, "mk-chat__kaiutin", VaihdaAani, rivi, Ikonit.Viiva["kaiutin"]);
             kaiutin.tooltip = "Lue vastaukset ääneen";
@@ -444,9 +444,9 @@ namespace Matkakirja.Natiivi
             if (kierto == null) return;
             paluupaikka ??= (kierto.leveys, kierto.pituus, kierto.korkeus);
             kierto.Aja(lat, lon, kierto.KorkeusKaarelle(18.6), 1.5f, null);
-            palaa.Q<Label>(className: "mk-nappi__teksti").text = "← Palaa" + (nimi.Length > 0 ? " · " + nimi : "");
+            palaa.Q<Label>(className: "mk-nappi__teksti").text = "‹ Palaa" + (nimi.Length > 0 ? " · " + nimi : "");
             palaa.style.display = DisplayStyle.Flex;
-            Viesti("mk-chat__paikkarivi", "→ Näytän kartalla: " + nimi);
+            Viesti("mk-chat__paikkarivi", "› Näytän kartalla: " + nimi);
         }
 
         void Palaa()

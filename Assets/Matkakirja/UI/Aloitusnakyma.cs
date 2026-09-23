@@ -130,6 +130,14 @@ namespace Matkakirja.Natiivi
             periaatteet = Periaatteet(juuri);
         }
 
+        /// <summary>◈-aarremerkki viivaikonina (fonteissa ei ole ◈:tä).</summary>
+        public static SvgIkoni Merkki(string luokka)
+        {
+            var m = new SvgIkoni(Ikonit.Aarremerkki);
+            m.AddToClassList(luokka);
+            return m;
+        }
+
         static void JulisteRivi(VisualElement isa, string teksti, string luokka)
         {
             var l = Rakenne.Teksti(teksti, "mk-juliste__rivi " + luokka, isa);
@@ -140,7 +148,7 @@ namespace Matkakirja.Natiivi
         {
             var v = Rakenne.El("mk-juliste__viiva", isa, PickingMode.Ignore);
             Rakenne.El("mk-juliste__vaakaviiva", v, PickingMode.Ignore);
-            Rakenne.Teksti("◈", "mk-juliste__merkki", v);
+            v.Add(Merkki("mk-juliste__merkki"));
             Rakenne.El("mk-juliste__vaakaviiva", v, PickingMode.Ignore);
         }
 
@@ -394,7 +402,7 @@ namespace Matkakirja.Natiivi
             himmennys.style.display = DisplayStyle.None;
             var kortti = new Kortti("mk-huipennus");
             himmennys.Add(kortti);
-            var merkki = Rakenne.Teksti("◈", "mk-huipennus__merkki", kortti.Sisus);
+            kortti.Sisus.Add(Aloitusnakyma.Merkki("mk-huipennus__merkki"));
             var o = Rakenne.Teksti(Otsikko, "mk-kortti__otsikko mk-huipennus__otsikko", kortti.Sisus);
             Kirjasimet.Aseta(o, Kirjasin.LukuLihava);
             teksti = Rakenne.Teksti("", "mk-kortti__teksti", kortti.Sisus);

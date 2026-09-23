@@ -191,7 +191,9 @@ namespace Matkakirja.Natiivi
                 var ryhma = Rakenne.El("mk-maakunnat__ryhma", lista, PickingMode.Ignore);
                 string iso = m.Iso;
                 var otsikko = Rakenne.Nappi(null, "mk-maakunnat__maa", () => VaihdaRyhma(iso), ryhma);
-                Rakenne.Teksti("▸", "mk-maakunnat__nuoli", otsikko);
+                var nuoli = new SvgIkoni(Ikonit.NuoliOikea);
+                nuoli.AddToClassList("mk-maakunnat__nuoli");
+                otsikko.Add(nuoli);
                 var ot = Rakenne.Teksti((m.Nimi ?? iso).ToUpperInvariant(), "mk-maakunnat__maanimi", otsikko);
                 Kirjasimet.Aseta(ot, Kirjasin.Kone);
                 var ryhmanRivit = Rakenne.El("mk-maakunnat__rivit", ryhma, PickingMode.Ignore);
@@ -338,7 +340,7 @@ namespace Matkakirja.Natiivi
             himmennys.style.display = DisplayStyle.None;
             himmennys.RegisterCallback<PointerDownEvent>(e => { if (e.target == himmennys) Sulje(); });
             kortti = Rakenne.El("mk-maakuntaKortti", himmennys);
-            var sulje = Rakenne.Nappi("✕", "mk-selite__sulje mk-maakuntaKortti__sulje", Sulje, kortti);
+            var sulje = Rakenne.Nappi("×", "mk-selite__sulje mk-maakuntaKortti__sulje", Sulje, kortti);
             sulje.tooltip = "Sulje";
             sisalto = new ScrollView(ScrollViewMode.Vertical);
             sisalto.AddToClassList("mk-maakuntaKortti__sisalto");
