@@ -287,8 +287,8 @@ Webissä nämä avautuvat kaupunkiliuskasta. Natiivissa niihin ei ole reittiä.
 | Napautus paneelin ohi sulkee | pollo.js:1916 | PuluChat.cs:100 | on | NUI |
 | Kysymyskenttä ja "→" (lähetä) | pollo.js:2340–2351 | PuluChat.cs:111, 116 | on (palvelimen 403 natiiville: tarkista) | NUI, PK |
 | Kaiutin (vastaukset ääneen) | pollo.js:2395 | PuluChat.cs:118 | on | NUI |
-| Mikrofoni (sanelu) | pollo.js:2401 | puuttuu | puuttuu | NUI, PK |
-| "Kirjoita kysymys" (siirtymä sanelusta kirjoitukseen) | pollo.js:2378 | kenttä aina auki | osittain: tarvitaan, kun sanelu tulee | NUI |
+| Mikrofoni (sanelu) | pollo.js:2401 | PuluChat (nappirivi) + Sanelu.cs (PK) | on (merge-pyynnössä; näkyy, kun Info.plist-avaimet ovat buildissa) | NUI, PK |
+| "Kirjoita kysymys" (siirtymä sanelusta kirjoitukseen) | pollo.js:2378 | PuluChat (näppäimistönappi) | on | NUI |
 | Valmiit ehdotukset (sirut) | pollo.js:2166, 6254 | PuluChat.cs:193 | on | NUI |
 | Jatkokysymykset | pollo.js:5505 | PuluChat.cs:311 | on | NUI |
 | "Yritä uudelleen" | pollo.js:5533 | PuluChat.cs:302 | on | NUI |
