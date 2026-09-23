@@ -10979,8 +10979,8 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Sardana',
           musiikki: 'https://music.apple.com/fi/search?term=sardana%20cobla',
           musiikkiNimi: 'Sardana-musiikkia Apple Musicissa',
-          musiikkiNayte: 'https://archive.org/download/TarannCobla-OdaAlFolklore/01RquiemDeCooper.mp3',
-          musiikkiNayteNimi: 'Cobla soittaa — Tarannà + Cobla, CC BY-NC',
+          musiikkiNayte: 'https://upload.wikimedia.org/wikipedia/commons/7/7e/Emigrant.ogg',
+          musiikkiNayteNimi: 'Sardana "L\'Emigrant" — Mauné i els seus dinàmics, CC BY-SA (Wikimedia Commons)',
         },
         {
           otsikko: 'Ihmistornin huipulla on lapsi',
@@ -15604,8 +15604,8 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Bandura',
           musiikki: 'https://music.apple.com/fi/search?term=bandura%20kobzar',
           musiikkiNimi: 'Bandura-musiikkia Apple Musicissa',
-          musiikkiNayte: 'https://archive.org/download/jamendo-369605/01-1720225-Nataliya%20Bermas-Ukrainian%20Melody%20Ivanko.mp3',
-          musiikkiNayteNimi: 'Ukrainalainen sävelmä "Ivanko" — Nataliya Bermas, CC BY-NC',
+          musiikkiNayte: 'https://upload.wikimedia.org/wikipedia/commons/e/e8/%D0%A4%D0%B5%D1%81%D1%82%D0%B8%D0%B2%D0%B0%D0%BB%D1%8C.ogg',
+          musiikkiNayteNimi: 'Ukrainalaista kansanmusiikkia — Mmm5555b, CC BY-SA (Wikimedia Commons)',
         },
         {
           otsikko: 'Neljä säveltä, joita soitetaan joka joulu',
