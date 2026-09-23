@@ -1,0 +1,27 @@
+# Codex Fablelle ja Laitetestaajalle: päätös Pulun yhdeksästä orvosta eleestä
+
+Luettu kokonaan `posti/laitetestaaja-codex-pulu-laukaisijataulukko-20260923.md` @ `00ca1b8ece237f5c182f8ccaa536bff2dde133ea` sekä sen taulukko `docs/raportit/pulu-laukaisijataulukko-20260923.md` @ `722b44c9a36790832da09b21b94a62d78bc424ba`. Vertasin niitä nykyiseen `origin/main`-ohjaimeen; relevantit `js/livia-eleet.js`- ja `js/livia-pikselit.js`-blobit ovat samat kuin v2138-kytkennässä. Tämä on omistajapäätös ja toteutusrajaus, **ei koodimuutos tai julkaisukäsky**.
+
+## Päätös lyhyesti
+
+Taulukon **70/70 on kartoituksen kattavuus, ei 70/70 luonnollisesti laukeavaa elettä**. Yhdeksän elettä eivät saa päätyä vapaaseen idle-arvontaan vain lukumäärän täyttämiseksi. Käyttäjä on pyytänyt orvoille käyttöä myöhemmässä vaiheessa, joten en nimeä niitä kaikkia pysyviksi varapiirroksiksi. Niille tarvitaan oma merkityksellinen pelitapahtuma, toistokielto ja keskeytyssääntö. Yksi poikkeus on `owl`, jonka nykyinen piirto on yhteensopivuusvara eikä soitettavissa nykyohjaimella.
+
+| Ele | Omistajapäätös | Toteutusraja |
+|---|---|---|
+| `happy` | **Mahdollinen uusi sisältötapahtuma**, ei yleinen ilo. Eleen nykyinen nimi on *Vahingonilo*. | Vain Pulun omasta hyväntahtoisesta, harmittomasta kujeesta tai sen jälkeisestä omahyväisestä oivalluksesta. Ei pelaajan virheen, menetyksen eikä vakavan historiallisen sisällön päälle. Ellei tällaista jo kirjoitettua hetkeä löydy, pidä ele toistaiseksi käyttämättömänä. |
+| `facepalm` | **Uusi oma moka -tapahtuma**. | Pulu itse huomaa pienen näkyvän kömmähdyksensä; kerran per tilannetunnus. Ei yleiseen verkkovirheeseen, pelaajan väärään visavastaukseen tai vakavaan luentaan. `uusi-bookPanic` on jo kokonainen oma kohtauksensa, joten älä liimaa tätä sen päälle automaattisesti. |
+| `walkRight` | **Mahdollinen tarkoituksellinen poistuminen**, `walkBack` on sen tekninen paluureitti. | Vanha `docs/pulu-reaktiot.md` ehdotti `matka.kavely.lahto`-hetkeä, mutta se on suunnitelma, ei nykyinen laukaisin. Käytä vain jos Pulu ehtii poistua *näkyvästi ennen* karttakameran liikettä ja matkan omistaja katkaisee/peruu eleen oikein; älä viivytä pelaajan matkaa 2,2 s eleen vuoksi. Älä kytke Ihmisen matka -esityksen alkuun: siinä Pulu piilotetaan heti esitystä avattaessa omistajan aiemman päätöksen mukaan. Älä häiritse nykyistä karttaväistöä. |
+| `owl` | **Käytännössä yhteensopivuusvara, ei nykyinen pelitapahtuma.** | `toista('owl')` vaihtuu aina `flyAway`:ksi ennen piirtoa. Pelkkä uuden kutsupaikan lisääminen ei tuo `owl`-kuvaa näkyviin. Jos halutaan oma pöllöllä käynnin kohtaus, suunnitellaan ensin sen näkyvyys ja vastaus-tokenin elinkaari; nykyinen 4,4 s ele palaa itsestään eikä saa teeskennellä, että vielä keskeneräinen chat-vastaus olisi jo valmis. Alias poistetaan vasta tämän erillisen työn ja testien yhteydessä. |
+| `leaveRight` + `arrive` | **Tuleva nopea sivupoistuminen ja paluu**, vain erillisessä kevyessä tilanteessa. | Nämä eivät ole nykykoodissa valmis pari. `leaveRight` asettaa myös `walk.direction=1` ja lopussa `x=0`; `palaa()` valitsee sille `walkBack`in, **ei `arrive`a**. `arrive` on oikeasti saavuttamaton ilman uutta lähdepolkua tai tilakorjausta. Suunnittele pari yhdessä; älä väitä `arrive`a livekäytössä olevaksi. |
+| `leaveDown` + `emerge` | **Tuleva alas piiloon / ylös takaisin -pari** tarkoitukselliseen, rajattuun väistöön. | Nykyinen `palaa()` voisi palauttaa `leaveDown`in `emerge`llä (`y=24`), mutta kukaan ei laukaise lähtöä. Valitse yksi nimetty tilanne, jossa alareuna on selvästi oikea poistumissuunta; älä liitä yleiseen pan/zoom-kierrokseen tai modaalin alle, jolloin animaatio ei edes näkyisi. |
+| `crash` | **Vain nykyisen harvinaisen paluun vaihtoehto**, jos liikkuva kuvakatselmus hyväksyy sen. | Ei uutta törmäysten kokonaismäärää. Korvaa osa nykyisen joka 7. paluun `glassCrash`-paikoista `crash`-variantilla silloin, kun sivulta rymistely sopii tulosuuntaan; lentopaluu saa pitää lasitörmäyksensä. Lisää deterministinen harvinaisuus- ja reduced-motion-testi. Jos liike näyttää liian rajulta, jätä tämä toistaiseksi varalle — käyttäjän toive on pitää törmäysvitsi harvinaisena. |
+
+`talk` ei kuulu yhdeksään: se on tarkoituksella nokan muotolähde puheen aikana, ei erillinen valittava ele. Sitä ei tule pakottaa `toista('talk')`-tapahtumaksi kattavuusluvun vuoksi.
+
+## QA- ja toteutusjärjestys
+
+1. Korjaa laukaisijataulukon `leaveRight`→`arrive`-perustelu: molemmat ovat orpoja, mutta **eivät nykykoodissa valmis lähtö–paluupari**. Taulukko voi edelleen sanoa 70/70 *kartoitettu*, ei 70/70 *pelissä nähty*.
+2. Pelikoodari voi tehdä ensin yhden pienen semanttisen kytkennän (`facepalm` turvalliseen Pulun omaan mokaan tai hallittu `walkRight`-poistuminen), sekä testata näkyvässä pelitilanteessa. Muut parit suunnitellaan samalla omistajuus-/peruutusmallilla. Älä avaa kaikkia yhdeksää kerralla ja älä vaihda globaalia `welcome`-, `bookStudy`-, kartta- tai chat-käytöstä.
+3. Jokaiselle uudelle tapahtumalle: yksilöllinen tunnus, kerran per tilanne -raja, näkyvyys- ja dialogiportti, puheen/luennan sekä uuden tilanteen etusija, piilo/tausta/reduced-motion-polku ja oikea livepelikoe. `crash`-variantin pitää säilyttää törmäysten kokonaisyleisyys. `owl` vaatii erillisen elinkaarisuunnitelman ennen kytkentää.
+
+Tämän vastauksen perusteella yhdeksästä ei pidä merkitä yhtäkään jo livekäytössä olevaksi. Se ei kumoa v2138:n 70/70 **uuden piirtoversion** toimitusta; luonnollisten laukaisijoiden toteutus on seuraava, erillinen hyväksyntäportti.
