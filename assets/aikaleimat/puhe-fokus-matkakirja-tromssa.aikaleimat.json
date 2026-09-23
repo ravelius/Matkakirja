@@ -1,254 +1,187 @@
 {
   "versio": 2,
   "kaupunki": "tromssa",
-  "teksti": "Tromssaan on perustettu museo. Satamasta tuodaan sinne pohjoisen luita ja kiviä, asioita joista laivanvarustaja ei tavallisesti maksa. Pöydällä makasi pieni simpukka ja sen vieressä luu, jonka eläimeen en toivo törmääväni uimassa. Ikkunasta näkyi pyyntilaivojen mastoja. Sama meri ruokkii täällä sekä vatsan että uteliaisuuden. Jälkimmäinen vaikutti pohjattomalta.",
-  "tekstiSha256": "5cb5997c0e71252169afbb3dcbf43788bb6d9eaaa7e02a07e36321b1a20f467a",
+  "teksti": "Tromssan uuteen museoon tuotiin pohjoisen luita ja kiviä, joista laivanvarustaja ei tavallisesti maksa. Pienen simpukan vieressä oli luu, jonka eläimeen en tahtonut törmätä uimassa. Sama meri ruokki vatsan ja uteliaisuuden. Jälkimmäinen vaikutti pohjattomalta.",
+  "tekstiSha256": "2513dd99c892bdcb682c498025771e362c35a50f4008c7fa62b5a1d9e4026fdc",
   "aani": {
     "nimi": "puhe-fokus-matkakirja-tromssa.mp3",
     "versio": 2,
-    "tavut": 505356,
-    "sha256": "b403522378271bb00ac50d1969458394db911ba96560c2fa7167cca739991769"
+    "tavut": 359488,
+    "sha256": "2eb3201bb9406b61123d0242bfe44469c091c7b7a8de7c11f6de764fce0ea324"
   },
-  "kesto": 31459,
+  "kesto": 22380,
   "sanat": [
     {
-      "sana": "Tromssaan",
-      "alku": 79,
-      "loppu": 579
+      "sana": "Tromssan",
+      "alku": 180,
+      "loppu": 660
     },
     {
-      "sana": "on",
-      "alku": 620,
-      "loppu": 699
+      "sana": "uuteen",
+      "alku": 760,
+      "loppu": 1120
     },
     {
-      "sana": "perustettu",
-      "alku": 740,
-      "loppu": 1319
+      "sana": "museoon",
+      "alku": 1180,
+      "loppu": 1700
     },
     {
-      "sana": "museo",
-      "alku": 1379,
-      "loppu": 1819
-    },
-    {
-      "sana": "Satamasta",
-      "alku": 3119,
-      "loppu": 3619
-    },
-    {
-      "sana": "tuodaan",
-      "alku": 3659,
-      "loppu": 3980
-    },
-    {
-      "sana": "sinne",
-      "alku": 4079,
-      "loppu": 4319
+      "sana": "tuotiin",
+      "alku": 1760,
+      "loppu": 2160
     },
     {
       "sana": "pohjoisen",
-      "alku": 4360,
-      "loppu": 4900
+      "alku": 2220,
+      "loppu": 2820
     },
     {
       "sana": "luita",
-      "alku": 5019,
-      "loppu": 5400
+      "alku": 2880,
+      "loppu": 3420
     },
     {
       "sana": "ja",
-      "alku": 5460,
-      "loppu": 5519
+      "alku": 3480,
+      "loppu": 3600
     },
     {
       "sana": "kiviä",
-      "alku": 5659,
-      "loppu": 6019
-    },
-    {
-      "sana": "asioita",
-      "alku": 6819,
-      "loppu": 7259
+      "alku": 3660,
+      "loppu": 4059
     },
     {
       "sana": "joista",
-      "alku": 7319,
-      "loppu": 7579
+      "alku": 4600,
+      "loppu": 4880
     },
     {
       "sana": "laivanvarustaja",
-      "alku": 7659,
-      "loppu": 8460
+      "alku": 4940,
+      "loppu": 5820
     },
     {
       "sana": "ei",
-      "alku": 8500,
-      "loppu": 8599
+      "alku": 5880,
+      "loppu": 5980
     },
     {
       "sana": "tavallisesti",
-      "alku": 8639,
-      "loppu": 9220
+      "alku": 6020,
+      "loppu": 6660
     },
     {
       "sana": "maksa",
-      "alku": 9300,
-      "loppu": 9699
+      "alku": 6760,
+      "loppu": 7260
     },
     {
-      "sana": "Pöydällä",
-      "alku": 11579,
-      "loppu": 11939
+      "sana": "Pienen",
+      "alku": 9060,
+      "loppu": 9380
     },
     {
-      "sana": "makasi",
-      "alku": 12000,
-      "loppu": 12339
-    },
-    {
-      "sana": "pieni",
-      "alku": 12399,
-      "loppu": 12639
-    },
-    {
-      "sana": "simpukka",
-      "alku": 12739,
-      "loppu": 13380
-    },
-    {
-      "sana": "ja",
-      "alku": 13880,
-      "loppu": 13920
-    },
-    {
-      "sana": "sen",
-      "alku": 13979,
-      "loppu": 14119
+      "sana": "simpukan",
+      "alku": 9440,
+      "loppu": 9900
     },
     {
       "sana": "vieressä",
-      "alku": 14199,
-      "loppu": 14619
+      "alku": 9980,
+      "loppu": 10460
+    },
+    {
+      "sana": "oli",
+      "alku": 10520,
+      "loppu": 10660
     },
     {
       "sana": "luu",
-      "alku": 14699,
-      "loppu": 14939
+      "alku": 10760,
+      "loppu": 11000
     },
     {
       "sana": "jonka",
-      "alku": 15399,
-      "loppu": 15659
+      "alku": 11460,
+      "loppu": 11720
     },
     {
       "sana": "eläimeen",
-      "alku": 15759,
-      "loppu": 16279
+      "alku": 11800,
+      "loppu": 12320
     },
     {
       "sana": "en",
-      "alku": 16379,
-      "loppu": 16459
+      "alku": 12400,
+      "loppu": 12500
     },
     {
-      "sana": "toivo",
-      "alku": 16559,
-      "loppu": 16899
+      "sana": "tahtonut",
+      "alku": 12560,
+      "loppu": 13000
     },
     {
-      "sana": "törmääväni",
-      "alku": 16940,
-      "loppu": 17579
+      "sana": "törmätä",
+      "alku": 13060,
+      "loppu": 13460
     },
     {
       "sana": "uimassa",
-      "alku": 17680,
-      "loppu": 18239
-    },
-    {
-      "sana": "Ikkunasta",
-      "alku": 20139,
-      "loppu": 20619
-    },
-    {
-      "sana": "näkyi",
-      "alku": 20680,
-      "loppu": 20979
-    },
-    {
-      "sana": "pyyntilaivojen",
-      "alku": 21079,
-      "loppu": 21779
-    },
-    {
-      "sana": "mastoja",
-      "alku": 21859,
-      "loppu": 22339
+      "alku": 13560,
+      "loppu": 14140
     },
     {
       "sana": "Sama",
-      "alku": 23760,
-      "loppu": 24019
+      "alku": 16040,
+      "loppu": 16280
     },
     {
       "sana": "meri",
-      "alku": 24100,
-      "loppu": 24340
+      "alku": 16320,
+      "loppu": 16580
     },
     {
-      "sana": "ruokkii",
-      "alku": 24420,
-      "loppu": 24879
-    },
-    {
-      "sana": "täällä",
-      "alku": 24959,
-      "loppu": 25259
-    },
-    {
-      "sana": "sekä",
-      "alku": 25319,
-      "loppu": 25519
+      "sana": "ruokki",
+      "alku": 16660,
+      "loppu": 17000
     },
     {
       "sana": "vatsan",
-      "alku": 25599,
-      "loppu": 26000
+      "alku": 17060,
+      "loppu": 17460
     },
     {
-      "sana": "että",
-      "alku": 26340,
-      "loppu": 26559
+      "sana": "ja",
+      "alku": 17520,
+      "loppu": 17660
     },
     {
       "sana": "uteliaisuuden",
-      "alku": 26659,
-      "loppu": 27519
+      "alku": 17740,
+      "loppu": 18700
     },
     {
       "sana": "Jälkimmäinen",
-      "alku": 29500,
-      "loppu": 30099
+      "alku": 20220,
+      "loppu": 20860
     },
     {
       "sana": "vaikutti",
-      "alku": 30159,
-      "loppu": 30659
+      "alku": 20920,
+      "loppu": 21480
     },
     {
       "sana": "pohjattomalta",
-      "alku": 30719,
-      "loppu": 31459
+      "alku": 21520,
+      "loppu": 22380
     }
   ],
   "lauseet": [
-    79,
-    3119,
-    11579,
-    20139,
-    23760,
-    29500
+    180,
+    9060,
+    16040,
+    20220
   ],
-  "luotu": "2026-09-11T12:05:21.019Z"
+  "luotu": "2026-09-23T15:38:20.843Z"
 }

@@ -1,238 +1,147 @@
 {
   "versio": 2,
   "kaupunki": "odessa",
-  "teksti": "Odessan portaat on tehty niin leveiksi, että niitä pitkin voisi saapua kokonainen valtakunta. Minä saavuin yksin ja jouduin silti lepäämään puolivälissä. Satamassa vehnäsäkit siirtyivät selästä laivaan, ja ylhäällä puistokäytävällä herrat siirsivät vain kävelykeppiään. Merituuli kulki portaat yhdellä hengenvedolla. Sitä ei kukaan pysäyttänyt tullissa.",
-  "tekstiSha256": "1150b83696e62144e838b6a375b2b6899d3c25c5c55de659161c67989ce77412",
+  "teksti": "Odessan taloihin sahattiin kiveä kaupungin alta. Ylhäällä nousivat seinät, alhaalle jäi käytävien verkosto. Louhoksessa oppaani sammutti lampun näyttääkseen täydellisen pimeyden. Minä en ollut pyytänyt todistetta.",
+  "tekstiSha256": "9f81b01ee465e14b8a1f98d12212f83824c83362516cc1444300338d2937d61a",
   "aani": {
     "nimi": "puhe-fokus-matkakirja-odessa.mp3",
     "versio": 2,
-    "tavut": 460635,
-    "sha256": "a91515b62367ad77e99e985a47489c59d976c72710ff8cb2d06fd79574a866f5"
+    "tavut": 286346,
+    "sha256": "009f2b189bfa054d955ebac3af33ab45bb198883b9c22fe3c9a05ae3bd08d517"
   },
-  "kesto": 28680,
+  "kesto": 17800,
   "sanat": [
     {
       "sana": "Odessan",
-      "alku": 159,
-      "loppu": 579
+      "alku": 180,
+      "loppu": 580
     },
     {
-      "sana": "portaat",
-      "alku": 680,
-      "loppu": 1100
+      "sana": "taloihin",
+      "alku": 620,
+      "loppu": 1040
     },
     {
-      "sana": "on",
-      "alku": 1139,
-      "loppu": 1240
+      "sana": "sahattiin",
+      "alku": 1100,
+      "loppu": 1620
     },
     {
-      "sana": "tehty",
-      "alku": 1279,
-      "loppu": 1599
+      "sana": "kiveä",
+      "alku": 1680,
+      "loppu": 2040
     },
     {
-      "sana": "niin",
-      "alku": 1639,
-      "loppu": 1799
+      "sana": "kaupungin",
+      "alku": 2100,
+      "loppu": 2580
     },
     {
-      "sana": "leveiksi",
-      "alku": 1839,
-      "loppu": 2379
+      "sana": "alta",
+      "alku": 2720,
+      "loppu": 3020
     },
     {
-      "sana": "että",
-      "alku": 2779,
-      "loppu": 2960
+      "sana": "Ylhäällä",
+      "alku": 4380,
+      "loppu": 4740
     },
     {
-      "sana": "niitä",
-      "alku": 3019,
-      "loppu": 3220
+      "sana": "nousivat",
+      "alku": 4780,
+      "loppu": 5220
     },
     {
-      "sana": "pitkin",
-      "alku": 3319,
-      "loppu": 3639
+      "sana": "seinät",
+      "alku": 5280,
+      "loppu": 5700
     },
     {
-      "sana": "voisi",
-      "alku": 3720,
-      "loppu": 3959
+      "sana": "alhaalle",
+      "alku": 6340,
+      "loppu": 6760
     },
     {
-      "sana": "saapua",
-      "alku": 4019,
-      "loppu": 4420
+      "sana": "jäi",
+      "alku": 6820,
+      "loppu": 6960
     },
     {
-      "sana": "kokonainen",
-      "alku": 4480,
-      "loppu": 5019
+      "sana": "käytävien",
+      "alku": 7020,
+      "loppu": 7540
     },
     {
-      "sana": "valtakunta",
-      "alku": 5079,
-      "loppu": 5799
+      "sana": "verkosto",
+      "alku": 7600,
+      "loppu": 8280
+    },
+    {
+      "sana": "Louhoksessa",
+      "alku": 10220,
+      "loppu": 10840
+    },
+    {
+      "sana": "oppaani",
+      "alku": 10920,
+      "loppu": 11320
+    },
+    {
+      "sana": "sammutti",
+      "alku": 11380,
+      "loppu": 11800
+    },
+    {
+      "sana": "lampun",
+      "alku": 11840,
+      "loppu": 12180
+    },
+    {
+      "sana": "näyttääkseen",
+      "alku": 12220,
+      "loppu": 12900
+    },
+    {
+      "sana": "täydellisen",
+      "alku": 12940,
+      "loppu": 13520
+    },
+    {
+      "sana": "pimeyden",
+      "alku": 13580,
+      "loppu": 14080
     },
     {
       "sana": "Minä",
-      "alku": 7359,
-      "loppu": 7559
-    },
-    {
-      "sana": "saavuin",
-      "alku": 7619,
-      "loppu": 8000
-    },
-    {
-      "sana": "yksin",
-      "alku": 8099,
-      "loppu": 8460
-    },
-    {
-      "sana": "ja",
-      "alku": 8679,
-      "loppu": 8760
-    },
-    {
-      "sana": "jouduin",
-      "alku": 8819,
-      "loppu": 9139
-    },
-    {
-      "sana": "silti",
-      "alku": 9199,
-      "loppu": 9460
-    },
-    {
-      "sana": "lepäämään",
-      "alku": 9519,
-      "loppu": 10059
-    },
-    {
-      "sana": "puolivälissä",
-      "alku": 10159,
-      "loppu": 10899
-    },
-    {
-      "sana": "Satamassa",
-      "alku": 12719,
-      "loppu": 13219
-    },
-    {
-      "sana": "vehnäsäkit",
-      "alku": 13279,
-      "loppu": 13920
-    },
-    {
-      "sana": "siirtyivät",
-      "alku": 13979,
-      "loppu": 14519
-    },
-    {
-      "sana": "selästä",
-      "alku": 14599,
-      "loppu": 14979
-    },
-    {
-      "sana": "laivaan",
-      "alku": 15039,
-      "loppu": 15479
-    },
-    {
-      "sana": "ja",
-      "alku": 16180,
+      "alku": 16040,
       "loppu": 16260
     },
     {
-      "sana": "ylhäällä",
-      "alku": 16340,
-      "loppu": 16799
+      "sana": "en",
+      "alku": 16300,
+      "loppu": 16379
     },
     {
-      "sana": "puistokäytävällä",
-      "alku": 16859,
-      "loppu": 17799
+      "sana": "ollut",
+      "alku": 16440,
+      "loppu": 16640
     },
     {
-      "sana": "herrat",
-      "alku": 18119,
-      "loppu": 18459
+      "sana": "pyytänyt",
+      "alku": 16700,
+      "loppu": 17100
     },
     {
-      "sana": "siirsivät",
-      "alku": 18539,
-      "loppu": 19059
-    },
-    {
-      "sana": "vain",
-      "alku": 19159,
-      "loppu": 19399
-    },
-    {
-      "sana": "kävelykeppiään",
-      "alku": 19459,
-      "loppu": 20439
-    },
-    {
-      "sana": "Merituuli",
-      "alku": 22199,
-      "loppu": 22760
-    },
-    {
-      "sana": "kulki",
-      "alku": 22799,
-      "loppu": 23099
-    },
-    {
-      "sana": "portaat",
-      "alku": 23159,
-      "loppu": 23639
-    },
-    {
-      "sana": "yhdellä",
-      "alku": 23739,
-      "loppu": 24079
-    },
-    {
-      "sana": "hengenvedolla",
-      "alku": 24159,
-      "loppu": 24920
-    },
-    {
-      "sana": "Sitä",
-      "alku": 26619,
-      "loppu": 26840
-    },
-    {
-      "sana": "ei",
-      "alku": 26899,
-      "loppu": 26979
-    },
-    {
-      "sana": "kukaan",
-      "alku": 27039,
-      "loppu": 27459
-    },
-    {
-      "sana": "pysäyttänyt",
-      "alku": 27500,
-      "loppu": 28159
-    },
-    {
-      "sana": "tullissa",
-      "alku": 28219,
-      "loppu": 28680
+      "sana": "todistetta",
+      "alku": 17160,
+      "loppu": 17800
     }
   ],
   "lauseet": [
-    159,
-    7359,
-    12719,
-    22199,
-    26619
+    180,
+    4380,
+    10220,
+    16040
   ],
-  "luotu": "2026-09-11T12:05:02.740Z"
+  "luotu": "2026-09-23T15:34:40.748Z"
 }

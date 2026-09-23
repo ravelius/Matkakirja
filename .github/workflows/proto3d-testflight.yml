@@ -18,6 +18,10 @@ name: proto-3d TestFlight
 on:
   workflow_dispatch:
     inputs:
+      vienti_kansio:
+        description: 'Unity-viennin kansio Build/-alla (Natiiviseppä ilmoittaa uuden kansion jokaista uutta vientiä varten, esim. testflight, testflight-2)'
+        type: string
+        default: 'testflight'
       bundle_id:
         description: 'Bundle id — sama App Store -tietue kuin webkuorella (fi.matkakirja.peli), natiivi korvaa kuoren siinä'
         type: string
@@ -73,8 +77,8 @@ jobs:
         working-directory: ${{ env.PROJEKTI }}
         run: |
           set -euo pipefail
-          test -f Build/testflight/Unity-iPhone.xcodeproj/project.pbxproj
-          test -f Build/testflight/Info.plist
+          test -f Build/${{ inputs.vienti_kansio }}/Unity-iPhone.xcodeproj/project.pbxproj
+          test -f Build/${{ inputs.vienti_kansio }}/Info.plist
 
       # Ajon numero (github.run_number) on aina uniikki ja kasvava — App
       # Store Connect hylkää saman versio+build-parin kahdesti. Unity
@@ -92,8 +96,8 @@ jobs:
             build=$(date -u +%Y%m%d%H%M)
           fi
           echo "BUILD_NUMERO=$build" >> "$GITHUB_ENV"
-          /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $build" Build/testflight/Info.plist
-          /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString ${{ inputs.versio }}" Build/testflight/Info.plist
+          /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $build" Build/${{ inputs.vienti_kansio }}/Info.plist
+          /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString ${{ inputs.versio }}" Build/${{ inputs.vienti_kansio }}/Info.plist
 
       - name: Pura App Store Connect -avain
         env:
@@ -141,7 +145,7 @@ jobs:
         run: |
           set -euo pipefail
           xcodebuild \
-            -project Build/testflight/Unity-iPhone.xcodeproj \
+            -project Build/${{ inputs.vienti_kansio }}/Unity-iPhone.xcodeproj \
             -scheme Unity-iPhone \
             -configuration Release \
             -destination 'generic/platform=iOS' \
@@ -224,7 +228,7 @@ jobs:
           TESTAAJA: ${{ inputs.testaajan_email }}
         run: |
           set -euo pipefail
-          python3 -m pip install --quiet "pyjwt[crypto]==2.9.0"
+          python3 -m pip install --quiet --break-system-packages "pyjwt[crypto]==2.9.0"
           python3 - <<'PY'
           import os, sys, time, json, urllib.request, urllib.error
           import jwt
