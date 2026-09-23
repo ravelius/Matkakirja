@@ -347,13 +347,31 @@ namespace Matkakirja.Natiivi
                     t.enableRichText = true;
                 }
             }
-            if (!string.IsNullOrEmpty(a.MatkailijalleKappale))
+            if (!string.IsNullOrEmpty(a.MatkailijalleKappale)) Matkailijalle(s, a);
+        }
+
+        /// <summary>
+        /// Matkailijalle-lohko (web piirraMatkailijalle): oppaaseen kolme sisäänkäyntiä — vino
+        /// "Matkaopas"-nauha, kuvan napautus (ei suurennosta) ja "Lue lisää matkailijan oppaasta →".
+        /// </summary>
+        void Matkailijalle(VisualElement s, LehtiAihe a)
+        {
+            var m = Rakenne.El("mk-lehti__matkailijalle", s, PickingMode.Ignore);
+            Kirjasimet.Aseta(Rakenne.Teksti("MATKAILIJALLE", "mk-lehti__osasto", m), Kirjasin.Kone);
+            var opas = a.Opas;
+            if (opas != null) opas.Kaupunki = lehti.Omistaja;
+            Action avaa = opas != null ? () => UiNakymat.Hae()?.Nahtavyydet.AvaaOpas(opas) : (Action)null;
+            if (a.MatkailijalleKuva != null)
             {
-                var m = Rakenne.El("mk-lehti__matkailijalle", s, PickingMode.Ignore);
-                Kirjasimet.Aseta(Rakenne.Teksti("MATKAILIJALLE", "mk-lehti__osasto", m), Kirjasin.Kone);
-                if (a.MatkailijalleKuva != null) Kuva(m, a.MatkailijalleKuva, new List<LehtiKuva> { a.MatkailijalleKuva }, 0, "mk-lehti__nostokuva", 0.62f);
-                Kappale(m, a.MatkailijalleKappale, "mk-lehti__leipa");
+                Kuva(m, a.MatkailijalleKuva, new List<LehtiKuva> { a.MatkailijalleKuva }, 0, "mk-lehti__nostokuva", 0.62f, avaa);
+                Kuvateksti(m, a.MatkailijalleKuva);
             }
+            var kappaleet = Kappaleet(a.MatkailijalleKappale).ToList();
+            foreach (var k in kappaleet) Kappale(m, k, "mk-lehti__leipa");
+            if (avaa == null) return;
+            var kotelo = Rakenne.El("mk-lehti__opaskotelo", m, PickingMode.Ignore);
+            Kirjasimet.Aseta(Rakenne.Nappi("MATKAOPAS", "mk-lehti__opasnauha", avaa, kotelo), Kirjasin.Kone);
+            Kirjasimet.Aseta(Rakenne.Nappi("Lue lisää matkailijan oppaasta →", "mk-lehti__opaslinkki", avaa, m), Kirjasin.Luku);
         }
 
         void Masto(VisualElement s)
@@ -572,11 +590,11 @@ namespace Matkakirja.Natiivi
 
         // --- kuvat ja teksti --------------------------------------------------------------------
 
-        void Kuva(VisualElement isa, LehtiKuva k, List<LehtiKuva> sarja, int indeksi, string luokka, float suhde)
+        void Kuva(VisualElement isa, LehtiKuva k, List<LehtiKuva> sarja, int indeksi, string luokka, float suhde, Action napautus = null)
         {
             var kehys = Rakenne.El("mk-lehti__kuvakehys " + luokka, isa);
             var kuva = Rakenne.El("mk-lehti__kuva", kehys, PickingMode.Ignore);
-            kehys.RegisterCallback<ClickEvent>(_ => suurennos.Avaa(sarja, indeksi));
+            kehys.RegisterCallback<ClickEvent>(_ => { if (napautus != null) napautus(); else suurennos.Avaa(sarja, indeksi); });
             float omaSuhde = suhde;
             void Mitoita() { float w = kehys.resolvedStyle.width; if (w > 0) kehys.style.height = Mathf.Min(Mathf.Round(w * omaSuhde), 520f); }
             kehys.RegisterCallback<GeometryChangedEvent>(_ => Mitoita());

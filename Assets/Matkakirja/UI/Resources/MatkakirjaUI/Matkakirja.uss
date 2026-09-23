@@ -1758,3 +1758,75 @@
 .mk-galleria__vedos--kuvaton .mk-galleria__kuva .mk-katkokehys {
     display: flex;
 }
+
+/* --- SÄÄGRAAFI (Saagraafi.cs; web css .vuosisaa, .vuosisaa-kortti, .opas-saagraafi) ------ */
+/* Korkeus asetetaan koodissa leveydestä (viewBox 300×176); fonttikoot skaalautuvat. */
+.mk-saa {
+    width: 100%;
+    flex-shrink: 0;
+    background-color: rgba(255, 250, 238, 0.65);
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.35);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.mk-saa__akseli,
+.mk-saa__arvo {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    font-size: 8.5px;
+    color: rgba(70, 51, 31, 0.8);
+}
+
+.mk-saa__kuluva {
+    color: #7a5514;
+    -unity-font-style: bold;
+}
+
+/* Ääripäiden lukemat: halo pitää luvut luettavina palkkien päällä (web paint-order: stroke). */
+.mk-saa__arvo {
+    color: #8a5a12;
+    -unity-font-style: bold;
+    text-shadow: 0 0 2px rgba(245, 240, 226, 0.95);
+}
+
+.mk-saa__arvo--sade {
+    color: #4c6478;
+}
+
+/* Iso näkymä minipopupissa: webin sääkortti on enintään 480 px leveä. */
+.mk-saa__popup {
+    max-width: 480px;
+}
+
+.mk-saa__luonnehdinta {
+    margin: 10px 0 0 0;
+    font-size: 13.8px;
+    white-space: normal;
+    color: #2d2010;
+}
+
+.mk-saa__selite {
+    margin: 8px 0 0 0;
+    font-size: 11px;
+    white-space: normal;
+    color: rgba(70, 51, 31, 0.75);
+}
+
+/* Oppaan pieni kuvaaja (web .opas-saagraafi 15rem) ja kuvateksti. */
+.mk-saa__kelluke {
+    width: 240px;
+    max-width: 100%;
+    margin: 2px 0 10px 0;
+}
+
+.mk-saa__kelluke-teksti {
+    margin: 5px 0 0 0;
+    font-size: 10.2px;
+    letter-spacing: 0.2px;
+    white-space: normal;
+    color: rgba(58, 42, 21, 0.7);
+}
