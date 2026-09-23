@@ -5,7 +5,7 @@
 //
 //   ui valikko | ui asetukset | ui sulje      avaa päävalikon / äänentasot, sulkee
 //   ui matka                                  esimerkkimatkavalinta (ilman peliä)
-//   ui kortti [kaupunki]                      kaupunkikortti (oletus firenze, ilman peliä)
+//   ui kortti [kaupunki] [oma]                kaupunkikortti (oletus firenze, ilman peliä; oma = Tutki + Mannerlento)
 //   ui kysymys [laji]                         esimerkkikysymys ilman peliä: visa (oletus), vaite,
 //                                             kuva, lippu, pulma [id], kaksintaistelu,
 //                                             tapahtumakortti, tulos [laattatyyppi], kohtaaminen,
@@ -192,12 +192,21 @@ namespace Matkakirja.Natiivi
                     return null;
                 }
                 case "kortti":
-                    ui.Kaupunkikortti.Nayta(loput.Length > 0 ? loput : "firenze", null, new KaupunkiToiminnot
+                {
+                    // "ui kortti <id> oma": oman kaupungin rivit (Tutki, Mannerlento) Liiku-rivin sijaan.
+                    var ko = loput.Split(' ');
+                    bool oma = ko.Length > 1 && ko[1] == "oma";
+                    ui.Kaupunkikortti.Nayta(ko[0].Length > 0 ? ko[0] : "firenze", null, new KaupunkiToiminnot
                     {
-                        LueLehti = () => ui.Tilarivi.Viesti("Lue lehti"), Liiku = () => ui.Tilarivi.Viesti("Liiku"),
+                        LueLehti = () => ui.Tilarivi.Viesti("Lue lehti"),
+                        Liiku = oma ? null : () => ui.Tilarivi.Viesti("Liiku"),
+                        Tutki = oma ? () => ui.Tilarivi.Viesti("Tutki") : null,
+                        Mannerlento = oma ? () => ui.Tilarivi.Viesti("Mannerlento") : null,
+                        MannerlentoTeksti = oma ? "Mannerlento (300 £)" : null,
                         Sulje = () => { },
                     });
                     return null;
+                }
                 case "kysymys": return ui.Esimerkkikysymys(loput);
                 case "heitto": ui.Matkavalinta.NaytaHeitto(loput.Length > 0 ? loput : "Heitä noppaa → Lontoo", () => ui.Tilarivi.Viesti("Noppa: 4")); return null;
                 case "viesti": ui.Tilarivi.Viesti(loput, 4f); return null;
