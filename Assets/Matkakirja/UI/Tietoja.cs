@@ -89,8 +89,8 @@ namespace Matkakirja.Natiivi
             {
                 try
                 {
-                    var e = MiniJson.Objekti(MiniJson.Kentta(MiniJson.Objekti(MiniJson.Jasenna(json)), "exportit"));
-                    peli = MiniJson.Objekti(Arvo(e, "PELI"));
+                    var e = Rakenne.Olio(MiniJson.Kentta(Rakenne.Olio(MiniJson.Jasenna(json)), "exportit"));
+                    peli = Rakenne.Olio(Arvo(e, "PELI"));
                     ryhmat = Rakenne.Lista(Arvo(e, "LAHTEET"));
                 }
                 catch (System.FormatException) { /* rikkinäinen moduuli = vara */ }
@@ -116,12 +116,12 @@ namespace Matkakirja.Natiivi
             if (ryhmat != null)
                 foreach (var r in ryhmat)
                 {
-                    var ryhma = MiniJson.Objekti(r);
+                    var ryhma = Rakenne.Olio(r);
                     if (ryhma == null) continue;
                     var rivit = new List<Rivi>();
                     foreach (var x in Rakenne.Lista(MiniJson.Kentta(ryhma, "rivit")) ?? new List<object>())
                     {
-                        var o = MiniJson.Objekti(x);
+                        var o = Rakenne.Olio(x);
                         if (o == null || Teksti(o, "nimi") == null) continue;
                         rivit.Add(new Rivi { Nimi = Teksti(o, "nimi"), Tekija = Teksti(o, "tekija"), Lisenssi = Teksti(o, "lisenssi"), Huom = Teksti(o, "huom") });
                     }
@@ -147,7 +147,7 @@ namespace Matkakirja.Natiivi
         static object Arvo(Dictionary<string, object> exportit, string nimi)
         {
             var x = MiniJson.Kentta(exportit, nimi);
-            if (MiniJson.Objekti(x) is Dictionary<string, object> o && o.ContainsKey("arvo")) return o["arvo"];
+            if (Rakenne.Olio(x) is Dictionary<string, object> o && o.ContainsKey("arvo")) return o["arvo"];
             return x;
         }
 
