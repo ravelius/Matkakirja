@@ -53,6 +53,17 @@ namespace Matkakirja.Natiivi
             reliefi.tooltip = "Astronautin kameran reliefi: täysvärinen (1,0) tai webin vaimea (0,8). Näkyy seuraavalla avauksella.";
             Rakenne.Teksti("Astronautin reliefi", "mk-kytkinrivi__nimi", reliefi);
             reliefiTila = Rakenne.Teksti("", "mk-kytkinrivi__tila", reliefi);
+#if !MATKAKIRJA_APPSTORE
+            // Linssien avautumiskynnykset (Linssiseppä): kehittäjätilassa kaikki linssit auki.
+            kynnykset = Rakenne.Nappi(null, "mk-kytkinrivi", () =>
+            {
+                LinssiOhjain.AsetaKehittajatila(!Matkakirja.Linssit.Linssirekisteri.Kehittajatila);
+                Paivita();
+            }, kokeet, Ikonit.Viiva["taikalasit"]);
+            kynnykset.tooltip = "Linssien kynnykset: pois = kaikki linssit auki (kehittäjä).";
+            Rakenne.Teksti("Linssien kynnykset", "mk-kytkinrivi__nimi", kynnykset);
+            kynnyksetTila = Rakenne.Teksti("", "mk-kytkinrivi__tila", kynnykset);
+#endif
 
             Rakenne.El("mk-pudotus__erotin", Sisalto, PickingMode.Ignore);
             var uusi = Rakenne.Nappi("uusi peli", "mk-komentorivi", () =>
@@ -82,6 +93,8 @@ namespace Matkakirja.Natiivi
 
         readonly Button reliefi;
         readonly VisualElement kokeet;
+        Button kynnykset;
+        Label kynnyksetTila;
         readonly KehittajaIkkuna kehittaja;
         readonly Label reliefiTila;
 
@@ -113,6 +126,12 @@ namespace Matkakirja.Natiivi
             reliefi.EnableInClassList("mk-valittu", ReliefiTaysi);
             reliefiTila.text = ReliefiTaysi ? "TÄYSI" : "VAIMEA";
             kokeet.style.display = Asetukset.Kehittaja ? DisplayStyle.Flex : DisplayStyle.None;
+            if (kynnykset != null)
+            {
+                bool paalla = !Matkakirja.Linssit.Linssirekisteri.Kehittajatila;
+                kynnykset.EnableInClassList("mk-valittu", paalla);
+                kynnyksetTila.text = paalla ? "PÄÄLLÄ" : "POIS";
+            }
             versio.text = (Asetukset.Kehittaja ? "kehittäjä · " : "") + "v" + Application.version + (UiNakymat.SisaltoVersio != null ? " · sisältö " + UiNakymat.SisaltoVersio : "");
         }
     }
