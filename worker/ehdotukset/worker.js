@@ -14,6 +14,9 @@
  *   EHDOTUS_AVAIN     salaisuus: lista-, kohde-, kommentti- ja
  *                     pro-omistajareittien avain
  *   EHDOTUS_ORIGINIT  muuttuja: sallitut originit pilkulla erotettuna
+ *   EHDOTUS_NATIIVIT  valinnainen muuttuja: natiivin pelin bundle id:t
+ *                     pilkulla erotettuna (oletus kasittelija.js:n
+ *                     NATIIVIT_OLETUS; natiiviportti, 23.9.2026)
  *
  * Sama worker palvelee myös pro-sisällöntuottajia (worker/ehdotukset/
  * pro.js): tuottajien koodit, profiilit ja julkiset tekijäsivut — ja

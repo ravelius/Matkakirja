@@ -31,6 +31,19 @@
  * etuliitteellään (reaktiot/) eivätkä tallenna mitään henkilötietoa —
  * vain "montako ääntä tällä symbolilla on tässä kohteessa".
  *
+ * NATIIVIPORTTI (23.9.2026): natiivi iOS-peli (Unity, UnityWebRequest)
+ * ei lähetä Originia. Se pääsee pelaajan selainreiteille (/laheta,
+ * /kuvavinkki, /pro-tarkista, /pro-profiili, /reaktiot, /reaktio), kun
+ * Origin PUUTTUU ja otsake `x-matkakirja-natiivi` kantaa sallitun bundle
+ * id:n, joka esiintyy myös User-Agentissa (`Matkakirja/<versio> (<bundle
+ * id>)`). Sama malli kuin pöllöworkerissa (tools/pollo/rajat.js) ja
+ * sähkeworkerissa (worker/sahke/kasittelija.js). Sallitut tunnisteet:
+ * ympäristömuuttuja EHDOTUS_NATIIVIT (pilkkulista) tai oletus
+ * NATIIVIT_OLETUS. Väärä origin ei muutu sallituksi natiiviotsakkeella,
+ * natiivi ei tarvitse CORS-otsakkeita eikä OPTIONS-esilentoa, ja
+ * omistajan avainreitit vaativat yhä avaimen. Koko-, määrä- ja
+ * kuvarajat ovat samat kuin selaimella.
+ *
  * SÄHKÖPOSTI ei vuoda mihinkään muualle kuin meta.jsoniin yksityisessä
  * ämpärissä: sitä ei kirjoiteta lokiin eikä palauteta kenellekään
  * ilman avainta.
@@ -112,6 +125,29 @@ export function sallittuOrigin(origin, sallitut) {
   if (!origin) return false;
   if (sallitut.includes(origin)) return true;
   return /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(origin);
+}
+
+/*
+ * Natiiviportti. Kopio pöllöworkerin apufunktioista (tools/pollo/rajat.js)
+ * eikä tuonti: ehdotusworker paketoidaan omasta kansiostaan, eikä sen
+ * kuulu riippua tools/-kansiosta.
+ */
+export const NATIIVI_OTSAKE = 'x-matkakirja-natiivi';
+export const NATIIVIT_OLETUS = Object.freeze(['app.matkakirja.proto3d', 'app.matkakirja.peli']);
+
+/** Sallitut natiivitunnisteet: EHDOTUS_NATIIVIT (pilkkulista) ohittaa oletuksen. */
+export function sallitutNatiivit(env) {
+  const lista = String(env?.EHDOTUS_NATIIVIT ?? '')
+    .split(',').map((osa) => osa.trim()).filter(Boolean);
+  return lista.length ? lista : NATIIVIT_OLETUS;
+}
+
+/** Onko pyyntö sallitusta natiivista sovelluksesta? `otsakkeet` = Headers tai get(nimi)-olio. */
+export function sallittuNatiivi(otsakkeet, lista = NATIIVIT_OLETUS) {
+  const tunniste = String(otsakkeet?.get?.(NATIIVI_OTSAKE) ?? '').trim();
+  if (!tunniste || !lista.includes(tunniste)) return false;
+  const agentti = String(otsakkeet?.get?.('user-agent') ?? '');
+  return agentti.includes(tunniste);
 }
 
 function korsOtsakkeet(origin, sallitut) {
@@ -509,7 +545,8 @@ async function kommentti(pyynto, env, kors) {
  * Koko workerin käsittely.
  *
  * @param {Request} pyynto pyyntö
- * @param {object} env ympäristö: EHDOTUKSET (R2), EHDOTUS_AVAIN, EHDOTUS_ORIGINIT
+ * @param {object} env ympäristö: EHDOTUKSET (R2), EHDOTUS_AVAIN, EHDOTUS_ORIGINIT,
+ *   EHDOTUS_NATIIVIT
  * @param {object} apurit testien kello ja tunnus: { nyt, tunnus }
  * @returns {Promise<Response>} vastaus
  */
@@ -518,6 +555,13 @@ export async function kasittele(pyynto, env, apurit = {}) {
   const origin = pyynto.headers.get('origin');
   const sallitut = sallitutOriginit(env);
   const kors = { origin, sallitut };
+  /*
+   * Pelaajan reittien portti: pelin origin tai natiivi peli. Natiivi
+   * hyväksytään vain ilman Originia: vieras origin ei pelasta itseään
+   * natiiviotsakkeella.
+   */
+  const pelaajanPortti = () => sallittuOrigin(origin, sallitut)
+    || (!origin && sallittuNatiivi(pyynto.headers, sallitutNatiivit(env)));
 
   if (pyynto.method === 'OPTIONS') {
     if (!sallittuOrigin(origin, sallitut)) return new Response(null, { status: 403 });
@@ -533,7 +577,7 @@ export async function kasittele(pyynto, env, apurit = {}) {
      * on ainoa portti: ilman sitä worker olisi kenen tahansa avoin
      * tallennustila.
      */
-    if (!sallittuOrigin(origin, sallitut)) {
+    if (!pelaajanPortti()) {
       return vastaa({ virhe: 'Origin ei ole sallittu' }, { status: 403, ...kors });
     }
     return laheta(pyynto, env, kors, apurit);
@@ -549,7 +593,7 @@ export async function kasittele(pyynto, env, apurit = {}) {
     if (pyynto.method !== 'POST') {
       return vastaa({ virhe: 'Vain POST' }, { status: 405, ...kors });
     }
-    if (!sallittuOrigin(origin, sallitut)) {
+    if (!pelaajanPortti()) {
       return vastaa({ virhe: 'Origin ei ole sallittu' }, { status: 403, ...kors });
     }
     return kuvavinkkiReitti({
@@ -583,7 +627,7 @@ export async function kasittele(pyynto, env, apurit = {}) {
     if (proOmistajanPolku(url.pathname) && !avainKelpaa(url, env)) {
       return vastaa({ virhe: 'Avain puuttuu tai ei kelpaa' }, { status: 401, ...kors });
     }
-    if (proSelaimenPolku(url.pathname) && !sallittuOrigin(origin, sallitut)) {
+    if (proSelaimenPolku(url.pathname) && !pelaajanPortti()) {
       return vastaa({ virhe: 'Origin ei ole sallittu' }, { status: 403, ...kors });
     }
     if (!env.EHDOTUKSET) {
@@ -609,7 +653,7 @@ export async function kasittele(pyynto, env, apurit = {}) {
     if (omistajan && !avainKelpaa(url, env)) {
       return vastaa({ virhe: 'Avain puuttuu tai ei kelpaa' }, { status: 401, ...kors });
     }
-    if (!omistajan && !sallittuOrigin(origin, sallitut)) {
+    if (!omistajan && !pelaajanPortti()) {
       return vastaa({ virhe: 'Origin ei ole sallittu' }, { status: 403, ...kors });
     }
     if (!env.EHDOTUKSET) {
