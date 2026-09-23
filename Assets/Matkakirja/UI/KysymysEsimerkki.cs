@@ -5,6 +5,8 @@
 // ja kutsuvat Nayta uudestaan, ja aikaraja kuluu näkymän ajastimella
 // (PaivitaAika ~30 kertaa sekunnissa), jotta kuvakaappaukset ja kokeilu
 // laitteella toimivat ilman PeliOhjainta. Tekstit ovat verkkopelin tyylisiä.
+// Kuten PeliOhjain (erä 4): vastaus näyttää ensin tuomion (TulosVaihe 1) ja
+// 0,9 s myöhemmin paljastuksen (2); tervehdyssivun Aloita käynnistää ajan.
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,12 +16,13 @@ namespace Matkakirja.Natiivi
 {
     public static class KysymysEsimerkki
     {
-        public const string Lajit = "visa|vaite|kuva|lippu|pulma [id]|kaksintaistelu|tapahtumakortti|tulos";
+        public const string Lajit = "visa|vaite|kuva|lippu|pulma [id]|kaksintaistelu|tapahtumakortti|tulos [laattatyyppi]|kohtaaminen|kohtaaminen-tervehdys";
+        const long TuomioMs = 900;
 
         static KysymysNaytto d;
         static string vihje;
         static float jaljella;
-        static IVisualElementScheduledItem ajastin;
+        static IVisualElementScheduledItem ajastin, paljastus;
         static bool kytketty;
 
         /// <summary>Näyttää esimerkin; palauttaa virheen tekstinä tai null.</summary>
@@ -37,30 +40,53 @@ namespace Matkakirja.Natiivi
                 case "pulma": d = Pulma(osat.Length > 1 ? osat[1] : "pylvaat"); break;
                 case "kaksintaistelu": d = Kaksintaistelu(); break;
                 case "tapahtumakortti": d = Tapahtumakortti(); break;
-                case "tulos": d = Tulos(); break;
+                case "tulos": d = Tulos(osat.Length > 1 ? osat[1] : "isoAarre"); break;
+                case "kohtaaminen": d = Kohtaaminen(false); break;
+                case "kohtaaminen-tervehdys": d = Kohtaaminen(true); break;
                 default: return "tuntematon laji (" + Lajit + ")";
             }
-            if (!kytketty) { kytketty = true; n.Piilotettu += () => ajastin?.Pause(); }
-            var t = Toiminnot(n, ilmoitus);
-            jaljella = d.Sekunnit ?? 0;
-            n.Nayta(d, t);
-            if (d.Sekunnit.HasValue) n.PaivitaAika(jaljella);
+            if (!kytketty) { kytketty = true; n.Piilotettu += () => { ajastin?.Pause(); paljastus?.Pause(); }; }
             ajastin?.Pause();
-            if (d.Sekunnit.HasValue && !d.Vastattu)
-            {
-                var juuri = UiKerros.Hae().Juuri(UiKerros.Pelidialogit);
-                ajastin = juuri.schedule.Execute(ts =>
-                {
-                    if (!n.Auki || d == null || d.Vastattu) { ajastin?.Pause(); return; }
-                    jaljella -= ts.deltaTime / 1000f;
-                    if (jaljella > 0) { n.PaivitaAika(jaljella); return; }
-                    // Aika loppui: sama tulos kuin väärällä vastauksella, ilman valintaa.
-                    d.Vastattu = true; d.AikaLoppui = true; d.Valittu = -1; d.Oikein = false;
-                    Tuloksen(d);
-                    n.Nayta(d, t);
-                }).Every(33);
-            }
+            paljastus?.Pause();
+            jaljella = d.Sekunnit ?? 0;
+            n.Nayta(d, Toiminnot(n, ilmoitus));
+            if (d.Sekunnit.HasValue && !d.TervehdysVaihe) n.PaivitaAika(jaljella);
+            Ajastin(n, ilmoitus);
             return null;
+        }
+
+        /// <summary>Aikaraja kuluu, kun kysymys on esillä (ei tervehdyssivulla eikä vastattuna).</summary>
+        static void Ajastin(KysymysNakyma n, Action<string> ilmoitus)
+        {
+            ajastin?.Pause();
+            if (d == null || !d.Sekunnit.HasValue || d.Vastattu || d.TervehdysVaihe) return;
+            var juuri = UiKerros.Hae().Juuri(UiKerros.Pelidialogit);
+            ajastin = juuri.schedule.Execute(ts =>
+            {
+                if (!n.Auki || d == null || d.Vastattu) { ajastin?.Pause(); return; }
+                jaljella -= ts.deltaTime / 1000f;
+                if (jaljella > 0) { n.PaivitaAika(jaljella); return; }
+                // Aika loppui: sama tulos kuin väärällä vastauksella, ilman valintaa.
+                d.Vastattu = true; d.AikaLoppui = true; d.Valittu = -1; d.Oikein = false;
+                Tuloksen(n, ilmoitus);
+            }).Every(33);
+        }
+
+        /// <summary>Tuomio heti, paljastus 0,9 s myöhemmin (PeliOhjain TuomioS).</summary>
+        static void Tuloksen(KysymysNakyma n, Action<string> ilmoitus)
+        {
+            ajastin?.Pause();
+            Tuloksen(d);
+            d.TulosVaihe = 1;
+            n.Nayta(d, Toiminnot(n, ilmoitus));
+            var nyt = d;
+            paljastus?.Pause();
+            paljastus = UiKerros.Hae().Juuri(UiKerros.Pelidialogit).schedule.Execute(() =>
+            {
+                if (d != nyt || !n.Auki) return;
+                d.TulosVaihe = 2;
+                n.Nayta(d, Toiminnot(n, ilmoitus));
+            }).StartingIn(TuomioMs);
         }
 
         static KysymysToiminnot Toiminnot(KysymysNakyma n, Action<string> ilmoitus) => new KysymysToiminnot
@@ -69,8 +95,17 @@ namespace Matkakirja.Natiivi
             {
                 if (d == null || d.Vastattu) return;
                 d.Vastattu = true; d.Valittu = i; d.Oikein = i == d.Oikea;
-                Tuloksen(d);
+                Tuloksen(n, ilmoitus);
+            },
+            Aloita = () =>
+            {
+                if (d == null || !d.TervehdysVaihe) return;
+                d.TervehdysVaihe = false;
+                d.Varoitus = null;
+                jaljella = d.Sekunnit ?? 0;
                 n.Nayta(d, Toiminnot(n, ilmoitus));
+                if (d.Sekunnit.HasValue) n.PaivitaAika(jaljella);
+                Ajastin(n, ilmoitus);
             },
             Vihje = () =>
             {
@@ -118,16 +153,33 @@ namespace Matkakirja.Natiivi
             },
         };
 
-        /// <summary>Vastauksen jälkeen: apunapit pois (ohjaimessa KysymysApu.Nakyma tekee saman).</summary>
+        /// <summary>Vastauksen jälkeen kuten KysymysApu.Nakyma: apunapit pois, löytö, repliikki, vuoro vaihtuu.</summary>
         static void Tuloksen(KysymysNaytto x)
         {
             x.VihjeTarjolla = false;
             x.PuolitusTarjolla = false;
             if (x.Laji == KysymysLaji.Kaksintaistelu)
+            {
                 x.Loyto = x.Oikein ? "Voitit rosvon — saalis 220 puntaa!"
                     : (x.AikaLoppui ? "Aika loppui. " : "") + $"Rosvo vei rahat — oikea vastaus oli \"{x.Vaihtoehdot[x.Oikea]}\".";
-            else if (x.Oikein && x.Loyto == null && x.Laji != KysymysLaji.Pulma)
+                return;
+            }
+            x.VuoroVaihtuu = !x.Oikein && x.Laji != KysymysLaji.Pulma;
+            if (x.Oikein && x.Loyto == null && x.Laji != KysymysLaji.Pulma)
+            {
                 x.Loyto = "Löysit: Kätketty matka-arkku · +640 £";
+                x.LoytoTyyppi = "isoAarre";
+            }
+            if (x.Yritys.HasValue)
+            {
+                // Kohtaamisen repliikki (Márta, js/packs/kohtaamiset.js) ja uuden yrityksen ohje.
+                x.Repliikki = x.Oikein
+                    ? "Márta ojentaa rasian höyryn läpi: \"Tämä lojui kylpylän kellarissa vuosikymmeniä. Kolme kaupunkia, yksi rasia — sopivaa, eikö?\""
+                    : "Márta virnistää ja ravistaa vettä käsistään: \"Ei vielä. Höyry hämärtää näön — kokeile toista kulmaa.\"";
+                x.RepliikkiLoyto = x.Oikein;
+                if (!x.Oikein)
+                    x.Loyto = x.Yritys < x.Yrityksia ? KysymysApu.UusiYritysOhje : "Kätkö sulkeutui — tämän kaupungin aarre on menetetty.";
+            }
         }
 
         // --- esimerkit -------------------------------------------------------------
@@ -296,7 +348,39 @@ namespace Matkakirja.Natiivi
             JatkaTeksti = "Jatka",
         };
 
-        static KysymysNaytto Tulos()
+        /// <summary>
+        /// Kohtaaminen (web KOHTAAMISET.budapest + kohtaamiskuva): tervehdys = sivu 1
+        /// viimeisellä yrityksellä (varoitus, "Yritä viimeistä kertaa"); muuten suoraan
+        /// kysymyssivulle pienen kuvan kanssa, yritys 1/2.
+        /// </summary>
+        static KysymysNaytto Kohtaaminen(bool tervehdys) => new KysymysNaytto
+        {
+            Laji = KysymysLaji.Visa,
+            Otsikko = "Budapest · kohtaaminen",
+            Kehys = "Márta nojaa kylpylän porttiin ja kysyy",
+            Kysymys = "Minä vuonna Buda, Óbuda ja Pest yhdistettiin yhdeksi Budapestin kaupungiksi?",
+            Vaihtoehdot = new List<string> { "1848", "1867", "1873", "1896" },
+            Oikea = 2,
+            PuolitusTarjolla = true, PuolitusHinta = 80,
+            Raha = 300,
+            Sekunnit = 45,
+            Tervehdys = "Márta nojaa Széchenyin kylpylän porttiin sulkemisaikaan, kädet puuskassa: \"Isoisäsi kirja puhuu "
+                + "varmaan Budasta ja Pestistä kahtena eri kaupunkina. Näytä että tunnet maailmaa kuten piirtäjä — niin "
+                + "kerron, milloin niistä tuli yksi.\"",
+            MuotokuvaUrl = Kuvat.PeiliJuuri + "kohtaamiset/kasvo-budapest-marta-kylpyla-a.jpg",
+            MuotokuvaAlt = "Márta kohtaa pelaajan Széchenyin kylpylän sinisessä iltavalossa.",
+            MuotokuvaLyhyt = "Márta kohtaa pelaajan Széchenyin kylpylän illassa, kädet puuskassa ja virne huulillaan.",
+            TervehdysVaihe = tervehdys,
+            AloitaTeksti = tervehdys ? KysymysApu.ViimeisenYrityksenNappi : null,
+            Varoitus = tervehdys ? KysymysApu.ViimeisenYrityksenVaroitus : null,
+            Yritys = tervehdys ? 2 : 1,
+            Yrityksia = 2,
+            Fakta = "Buda, Óbuda ja Pest yhdistettiin Budapestiksi vuonna 1873 — samana vuonna, jona isoisä kulki Tonavan rantaa. "
+                + "Ketjusilta oli yhdistänyt kaupungit jo 1849.",
+            Lahteet = new List<string> { "https://fi.wikipedia.org/wiki/Budapest" },
+        };
+
+        static KysymysNaytto Tulos(string tyyppi)
         {
             var d = Visa();
             d.Vihje = vihje;
@@ -307,7 +391,18 @@ namespace Matkakirja.Natiivi
             d.Vastattu = true;
             d.Valittu = 1;
             d.Oikein = true;
-            d.Loyto = "Löysit: Kätketty matka-arkku · +640 £\n+1 ◈";
+            d.LoytoTyyppi = tyyppi;
+            d.Loyto = tyyppi switch
+            {
+                "star" => "Löysit: Unohdettu aarre · +1 ◈",
+                "mannerAarre" => "Löysit: Mantereen aarre · +1000 £",
+                "pieniAarre" => "Löysit: Kourallinen hopeakolikoita · +180 £",
+                "robber" => "Laatan alla odotti ryöstäjä!",
+                "pollo" => "Laatan alta lehahti pöllö!",
+                _ => "Löysit: Kätketty matka-arkku · +640 £",
+            };
+            if (tyyppi == "robber") d.JatkaTeksti = "Kohtaa ryöstäjä";
+            d.TulosVaihe = 2;
             return d;
         }
     }
