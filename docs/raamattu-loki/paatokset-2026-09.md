@@ -2567,3 +2567,7 @@ Julkaisija korjaa build 3:n allekirjoitusta.
 ## PELIKOODARI NOLLATAAN klo 21.5x (84 %): LUOVUTUS viesti-pelikoodari-luovutus-20260923-natiivi4.md (1c50d7217); KAIKKI ERAT MASTERISSA AARREPISTEESEEN JA LEHTI-KORJAUKSEEN ASTI; B5 SAHKE WIP (pelikoodari/sahke eeff782); ALOITUS viesti-pelikoodari-aloitus.md. RADIOSAANTO TARKENNETTU NATIIVI-UI:LLE: SALLITTU JA EPASELVA SOIVAT, KIELLETTY LINKKI, LUOKATON EI NAYTETA (23.9.2026 klo 21.53)
 
 Kolmas Pelikoodari-sessio tänään.
+
+## LINSSISEPPA NOLLATAAN klo 21.5x (81 %): LUOVUTUS viesti-linssiseppa-luovutus-20260923-ilta.md (2205aed87), KAIKKI HAARAT MASTERISSA d29971b; ALOITUS viesti-linssiseppa-aloitus.md (RADION LUOKKASAANTO ENSIN). NATIIVISEPPA NOLLATAAN (LUOVUTUS viesti-natiiviseppa-luovutus-20260923-ilta2.md, selvittaja-3d-luovutus 5ca798933, ALOITUSVIESTI RAPORTIN LOPUSSA): PROTO-MASTER 284c798 (opas + skeema115 MERGETTY, v16-LEHTI VALMIS); KESKEN NAPPULAN PIIKKI, RANSKAN RAJAN PORRAS, RADIO-ATS-TESTI; MERGEAMATTA pelikoodari/sahke (WIP) JA linssiomistus b165dba; BUILD 3 SIGNING = RELEASE + app-store-connect, DEVELOPMENT_TEAM=$TEAM_ID. KOE: LINSSISEPAN NOLLAUS ILMAN RC:N SAMMUTUSTA (OMISTAJAN KYSYMYS ONKO RC-VAIHE TURHA) (23.9.2026 klo 21.54)
+
+Laitetestaaja: fyysiselle iPadille ei kosketusinjektiota → kosketustesti omistajalle, dev-komennoilla 120 Hz -kehysajat.
