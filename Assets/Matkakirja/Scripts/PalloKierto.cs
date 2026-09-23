@@ -155,6 +155,23 @@ namespace Matkakirja
             return math.degrees(math.min(kaari, math.PI)) / math.max(1, Screen.height);
         }
 
+        /// <summary>
+        /// Synteettinen ele (Komennot: veto, nipistys): sormien paikat näytön osuuksina
+        /// (0–1) ajan funktiona. Syötetään samaan ohjaukseen kuin oikeat sormet.
+        /// </summary>
+        public class Ele
+        {
+            public float kesto, aika;
+            public float2 a0, a1;        // 1. sormi alussa ja lopussa
+            public float2 b0, b1;        // 2. sormi (vain nipistys)
+            public bool kaksi;
+        }
+
+        Ele ele;
+
+        /// <summary>Aloittaa synteettisen eleen; sen jälkeinen kehys ilman sormia on irrotus (liuku).</summary>
+        public void AloitaEle(Ele e) => ele = e;
+
         void Ohjaa(double dt)
         {
             var sormet = Kosketus.activeTouches;
@@ -162,7 +179,21 @@ namespace Matkakirja
             float2 keski = 0;
             float vali = 0;
 
-            if (n > 0)
+            if (ele != null)
+            {
+                ele.aika += (float)dt;
+                float t = math.saturate(ele.aika / ele.kesto);
+                var ruutu = new float2(Screen.width, Screen.height);
+                float2 a = math.lerp(ele.a0, ele.a1, t) * ruutu;
+                if (ele.kaksi)
+                {
+                    float2 b = math.lerp(ele.b0, ele.b1, t) * ruutu;
+                    n = 2; keski = (a + b) * 0.5f; vali = math.distance(a, b);
+                }
+                else { n = 1; keski = a; }
+                if (t >= 1f) ele = null;
+            }
+            else if (n > 0)
             {
                 for (int i = 0; i < n; i++) keski += (float2)sormet[i].screenPosition;
                 keski /= n;

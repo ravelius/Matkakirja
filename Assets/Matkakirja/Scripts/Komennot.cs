@@ -20,6 +20,10 @@ namespace Matkakirja
     ///   odota s                   seuraava rivi vasta s sekunnin päästä
     ///   mittaus alku nimi         raakakehysajat talteen (ms, yksi per rivi)
     ///   mittaus loppu             kirjoittaa Documents/mittaus-nimi.txt
+    ///   veto x0 y0 x1 y1 s        yhden sormen veto (näytön osuudet 0–1, y ylöspäin);
+    ///                             nopea veto on heitto: irrotuksen jälkeen pallo liukuu
+    ///   nipistys cx cy d0 d1 s    kahden sormen nipistys keskipisteen ympäri, sormien
+    ///                             väli d0 → d1 (osuus näytön leveydestä)
     /// </summary>
     public class Komennot : MonoBehaviour
     {
@@ -72,6 +76,29 @@ namespace Matkakirja
                 case "pallo":
                     kierto.Aja(kierto.leveys, kierto.pituus, kierto.MaxKorkeus(), 1.4f, null);
                     break;
+                case "veto":
+                    kierto.AloitaEle(new PalloKierto.Ele
+                    {
+                        a0 = new Unity.Mathematics.float2((float)D(1), (float)D(2)),
+                        a1 = new Unity.Mathematics.float2((float)D(3), (float)D(4)),
+                        kesto = (float)D(5),
+                    });
+                    break;
+                case "nipistys":
+                {
+                    float cx = (float)D(1), cy = (float)D(2), d0 = (float)D(3) / 2, d1 = (float)D(4) / 2;
+                    float suhde = (float)Screen.width / Screen.height; // väli mitataan leveyden osuutena
+                    kierto.AloitaEle(new PalloKierto.Ele
+                    {
+                        kaksi = true,
+                        a0 = new Unity.Mathematics.float2(cx - d0, cy - d0 * suhde),
+                        a1 = new Unity.Mathematics.float2(cx - d1, cy - d1 * suhde),
+                        b0 = new Unity.Mathematics.float2(cx + d0, cy + d0 * suhde),
+                        b1 = new Unity.Mathematics.float2(cx + d1, cy + d1 * suhde),
+                        kesto = (float)D(5),
+                    });
+                    break;
+                }
                 case "odota":
                     odotus = Time.unscaledTime + (float)D(1);
                     break;
