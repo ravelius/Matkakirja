@@ -320,6 +320,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Aloituskaava: portti häipyy suoraan lähtövalintaan kartalla (avausteksti tulee vasta lennolla).</summary>
         void PortistaKartalle()
         {
+            Aanisoitin.AvausAlkoi(); // web aloitaAvauksenAani (B7-soitin)
             portti.style.opacity = 0f;
             portti.schedule.Execute(() => portti.style.display = DisplayStyle.None).StartingIn(400);
             NaytaValinta();

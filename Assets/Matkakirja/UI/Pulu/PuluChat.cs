@@ -159,6 +159,7 @@ namespace Matkakirja.Natiivi
             sulkija.style.display = DisplayStyle.Flex;
             Rakenne.Nayta(paneeli, true, 200);
             SyoteLukko.Esta(this);
+            Aanisoitin.Hiljennys("pollo", true);
             pulu.Tilanne("chatOpen");
             naytaKuplat.style.display = pulu.KuplaPalautettavissa ? DisplayStyle.Flex : DisplayStyle.None;
             if (!tervehditty) { tervehditty = true; Tervehdi(); }
@@ -175,6 +176,7 @@ namespace Matkakirja.Natiivi
             sulkija.style.display = DisplayStyle.None;
             Rakenne.Nayta(paneeli, false, 200);
             SyoteLukko.Vapauta(this);
+            Aanisoitin.Hiljennys("pollo", false);
             pulu.Tilanne("chatClose");
             kentta.Blur();
         }
