@@ -49,7 +49,8 @@ namespace Matkakirja.Natiivi
         Linssirekisteri rekisteri;
 
         /// <summary>PlayerPrefs-avain astronautin reliefin kylläisyydelle (Natiivi-UI:n kehittäjävalikko).</summary>
-        public const string KyllaisyysAvain = "linssi.astronautti.kyllaisyys";
+        // v2: oletus vaihtui webin 0,8:aan (23.9.), vanha tallennettu 1,0 ei jää voimaan.
+        public const string KyllaisyysAvain = "linssi.astronautti.kyllaisyys.v2";
 
         /// <summary>PlayerPrefs-avain linssien kehittäjätilalle (kaikki auki).</summary>
         public const string KehittajatilaAvain = "linssi.kehittajatila";
@@ -106,8 +107,9 @@ namespace Matkakirja.Natiivi
             Instanssi = this;
             kierto = k;
             kerrokset = new KerrosSovitin();
-            // Astronautin reliefin kylläisyys (0,8 web / 1,0): omistajan vertailu TestFlightissa.
-            Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Kyllaisyys = PlayerPrefs.GetFloat(KyllaisyysAvain, 1f);
+            // Astronautin reliefin kylläisyys: oletus webin 0,8, täysväri 1,0 vain KOKEET-kytkimellä.
+            Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Kyllaisyys =
+                PlayerPrefs.GetFloat(KyllaisyysAvain, (float)Matkakirja.Linssit.Astronautti.AstronauttiLinssi.WebinKyllaisyys);
             // Kehittäjätila (kaikki linssit auki): sisäinen build oletuksena päällä, App Store ei koskaan.
 #if MATKAKIRJA_APPSTORE
             Linssirekisteri.Kehittajatila = false;   // App Store: kynnykset aina, ei kytkintä
