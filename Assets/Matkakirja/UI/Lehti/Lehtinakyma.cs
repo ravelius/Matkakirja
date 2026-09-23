@@ -11,12 +11,20 @@
 //             kursiivilla, nostot (otsikko + aika, kuva ja lyhyt kuvateksti + lähde, teksti
 //             kappaleittain, galleria ‹ ›, "Lue lisää aiheesta" (Wikipedia), musiikkinäyte),
 //             Menovinkit-listat, lopuksi lehden minitehtävä (+10 £)
-// Alapalkki: Poistu lehdestä · ‹ edellinen aihe · seuraava aihe › · maalehdessä Sisällys (☰).
+// Alapalkki (web paivitaTutkiAlapalkki): Poistu (himmeä, vasemmalla) · maalehdessä ☰ · Edellinen /
+// Seuraava (kaksi riviä: suunta ja sivun nimi); kaupunkilehdessä sen alla täysleveä tehtävänappi
+// (LehtiTila.TehtavaNappi: "Tapaa X" / "Etsi kätkö", harmaa = loppuun pelattu) jokaisella sivulla
+// ja viimeisellä sivulla "Maa-liite" (→ maalehti). Ylärivin ☰ (sisällys) molemmissa lehdissä, kun
+// sivuja on vähintään kaksi.
 // Sivunkääntö: vaakapyyhkäisy (≥ 60 pt ja |dx| ≥ 2|dy|) tai napit; sivu liukuu (300 ms),
 // paperiääni ja vieritys alkuun. Kaiutin lukee sivun leipätekstit kertojan äänellä
 // (Puhe.Lue kappaleittain ketjussa); sivunvaihto pysäyttää. Kuvan napautus → suurennos.
-// Pelin tila ja teot (minitehtävä, lehden kysymys, juliste, pulla, kätkö) kulkevat
-// Pelikoodarin ILehtiNakyma-sopimuksen kautta; siihen asti Tekoja-kutsu → PeliOhjain.KauppaTeko.
+// Pelin tila ja teot (minitehtävä, juliste, kätkö, maalehti, sivu näkyi) kulkevat Pelikoodarin
+// ILehtiNakyma-sopimuksen kautta (PeliNakymat.Lehti, LehtiTila, LehtiTeko). Testikomennon avaus
+// ilman peliä (Nayta(LehtiLaji, …)) tekee teot suoraan PeliOhjain.KauppaTekona.
+// Minitehtävän palkintojuliste (web piirraJulistepalkinto, omistaja 21.–22.8.2026): kaupunkilehdessä,
+// jos kaupungilla on juliste, tehtävälaatikon kyljessä vedos (Palkinto/Voitettu); oikea vastaus
+// myöntää sen heti ja tuo napin "Lunasta juliste" (suurennos). Jo ratkaistu → takautuva myöntö.
 // Maalehden ensimmäisellä sivulla masto ja maaosasto (tunnusluvut, tervehdykset).
 // Erot webiin: sivunkääntö on liuku eikä kirjan taitos; sää, uutiset, radio, kulttuurivisa,
 // maakartta ja maan intro tulevat, kun data on paketissa (Siirtoseppä, skeema 1.13).
@@ -30,13 +38,13 @@ using UnityEngine.UIElements;
 
 namespace Matkakirja.Natiivi
 {
-    public sealed class Lehtinakyma
+    public sealed class Lehtinakyma : ILehtiNakyma
     {
         const int Kerros = UiKerros.Traileri; // kaiken pelin UI:n päällä kuten webin dialogi
 
         readonly VisualElement peite, arkki, sivupaikka, alapalkki, sisallys, sisallysLista;
         readonly Label ylaNimi;
-        readonly Button kaiutin, sisallysNappi, poistu, edellinen, seuraava;
+        readonly Button kaiutin, sisallysNappi, alaSisallys, poistu, edellinen, seuraava, tehtavaNappi, liite;
         readonly Kuvasuurennos suurennos;
         ScrollView sivu;
         Lehti lehti;
@@ -45,6 +53,10 @@ namespace Matkakirja.Natiivi
         int lukuVersio;
         Vector2 veto0;
         bool vetaa;
+        // Pelin tila ja teot (ILehtiNakyma); null = testiavaus ilman ohjainta.
+        LehtiTila tila;
+        Func<LehtiTeko, KauppaTulos> teko;
+        string avausKaupunki;
 
         public bool Auki { get; private set; }
         /// <summary>Lehti avautui (omistaja: kaupunki tai ISO).</summary>
@@ -53,15 +65,26 @@ namespace Matkakirja.Natiivi
         public event Action<string> Suljettu;
         /// <summary>Sivu tuli näkyviin (omistaja, aiheId, sivu): pulun reaktiot ja luennat ohjaimessa.</summary>
         public event Action<string, string, int> SivuNakyi;
-        /// <summary>
-        /// Minitehtävän vastaus (kaupunki/omistaja, aihe, oikein, palkkio) → KauppaTulos. Pelikoodarin
-        /// ILehtiNakyma.TeeTeko korvaa; oletus PeliOhjain.KauppaTeko(Minitehtava).
-        /// </summary>
-        public Func<string, string, bool, int, KauppaTulos> Minitehtava = (kaupunki, aihe, oikein, palkkio) =>
-            PeliOhjain.Instanssi?.KauppaTeko(k => k.Minitehtava(kaupunki, aihe, oikein, palkkio));
-        /// <summary>Onko minitehtävä jo vastattu (kaupunki, aihe).</summary>
-        public Func<string, string, bool> MinitehtavaVastattu = (kaupunki, aihe) =>
-            PeliOhjain.Instanssi?.Kaupat?.MinitehtavaVastattu(kaupunki, aihe) ?? false;
+        /// <summary>Lehden teko ohjaimelle; ilman sopimusta (testiavaus) suoraan kauppoihin.</summary>
+        KauppaTulos Teko(LehtiTeko t)
+        {
+            if (teko != null) return teko(t);
+            var o = PeliOhjain.Instanssi;
+            if (o == null) return null;
+            switch (t.Laji)
+            {
+                case LehtiTekoLaji.Minitehtavavastaus: return o.KauppaTeko(k => k.Minitehtava(t.Kaupunki, t.Aihe, t.Oikein, t.Palkkio));
+                case LehtiTekoLaji.JulisteMyonto: return o.KauppaTeko(k => k.MyonnaJuliste(t.Avain));
+                default: return null;
+            }
+        }
+
+        bool MinitehtavaVastattu(string kaupunki, string aihe) =>
+            tila != null ? tila.MinitehtavaVastattu(kaupunki, aihe) : PeliOhjain.Instanssi?.Kaupat?.MinitehtavaVastattu(kaupunki, aihe) ?? false;
+        bool MinitehtavaRatkaistu(string kaupunki, string aihe) =>
+            tila != null ? tila.MinitehtavaRatkaistu(kaupunki, aihe) : PeliOhjain.Instanssi?.Kaupat?.MinitehtavaRatkaistu(kaupunki, aihe) ?? false;
+        bool JulisteLaukussa(string kaupunki) =>
+            tila != null ? tila.JulisteLaukussa(kaupunki) : PeliOhjain.Instanssi?.Kaupat?.JulisteLaukussa(kaupunki) ?? false;
 
         public Lehtinakyma(UiKerros ui)
         {
@@ -86,12 +109,18 @@ namespace Matkakirja.Natiivi
             sivupaikka.RegisterCallback<PointerCancelEvent>(_ => vetaa = false, TrickleDown.TrickleDown);
 
             alapalkki = Rakenne.El("mk-lehti__alapalkki", arkki, PickingMode.Ignore);
-            poistu = Rakenne.Nappi("Poistu lehdestä", "mk-lehti__poistu", Sulje, alapalkki);
+            var navi = Rakenne.El("mk-lehti__navi", alapalkki, PickingMode.Ignore);
+            poistu = Rakenne.Nappi("Poistu lehdestä", "mk-lehti__poistu", Sulje, navi);
             Kirjasimet.Aseta(poistu, Kirjasin.Kone);
-            edellinen = Rakenne.Nappi("", "mk-lehti__selaus", () => Kaanna(nyt - 1), alapalkki);
-            seuraava = Rakenne.Nappi("", "mk-lehti__selaus mk-lehti__selaus--seuraava", () => Kaanna(nyt + 1), alapalkki);
-            Kirjasimet.Aseta(edellinen, Kirjasin.Kone);
-            Kirjasimet.Aseta(seuraava, Kirjasin.Kone);
+            alaSisallys = Rakenne.Nappi(null, "mk-lehti__selaus mk-lehti__selaus--sisallys", VaihdaSisallys, navi, Ikonit.Valikko);
+            alaSisallys.tooltip = "Sisällys";
+            edellinen = Selausnappi("Edellinen", "mk-lehti__selaus--edellinen", () => Kaanna(nyt - 1), navi);
+            seuraava = Selausnappi("Seuraava", "mk-lehti__selaus--seuraava", () => Kaanna(nyt + 1), navi);
+            tehtavaNappi = Rakenne.Nappi("", "mk-lehti__tehtavanappi", EtsiKatko, alapalkki);
+            Rakenne.Tausta(tehtavaNappi, Kuviot.Kulta);
+            Kirjasimet.Aseta(tehtavaNappi, Kirjasin.KoneLihava);
+            liite = Rakenne.Nappi("", "mk-lehti__liite", AvaaLiite, alapalkki);
+            Kirjasimet.Aseta(liite, Kirjasin.Kone);
 
             sisallys = Rakenne.El("mk-lehti__sisallys", arkki);
             sisallys.style.display = DisplayStyle.None;
@@ -108,8 +137,33 @@ namespace Matkakirja.Natiivi
 
         // --- avaus ja sulkeminen -------------------------------------------------------------
 
-        /// <summary>Avaa lehden: kaupunkilehti (omistaja = kaupunki) tai maalehti (ISO3, aihe aloitussivuksi).</summary>
+        /// <summary>ILehtiNakyma: pelin avaama lehti tiloineen ja tekoineen.</summary>
+        public void Nayta(LehtiAvaus avaus, LehtiTila tila, Func<LehtiTeko, KauppaTulos> teeTeko)
+        {
+            if (avaus == null) return;
+            this.tila = tila;
+            teko = teeTeko;
+            avausKaupunki = avaus.Kaupunki;
+            Avaa(avaus.Maalehti ? LehtiLaji.Maa : LehtiLaji.Kaupunki, avaus.Omistaja, avaus.Aihe, avaus.Sivu);
+        }
+
+        /// <summary>ILehtiNakyma: raha, vastatut ja tehtävänappi muuttuivat (sivua ei piirretä uudelleen).</summary>
+        public void PaivitaTila(LehtiTila tila)
+        {
+            this.tila = tila;
+            if (Auki && lehti != null) PaivitaAlapalkki();
+        }
+
+        /// <summary>Testiavaus ilman peliä: kaupunkilehti (omistaja = kaupunki) tai maalehti (ISO3, aihe aloitussivuksi).</summary>
         public void Nayta(LehtiLaji laji, string omistaja, string aihe = null, int? sivu = null)
+        {
+            tila = null;
+            teko = null;
+            avausKaupunki = laji == LehtiLaji.Kaupunki ? omistaja : PeliOhjain.Instanssi?.Matka?.Tila.Pelaaja.Sijainti.Kaupunki;
+            Avaa(laji, omistaja, aihe, sivu);
+        }
+
+        void Avaa(LehtiLaji laji, string omistaja, string aihe, int? sivu)
         {
             UiKerros.Hae().StartCoroutine(LehtiSisalto.Hae(laji, omistaja, l =>
             {
@@ -121,10 +175,11 @@ namespace Matkakirja.Natiivi
                     Suljettu?.Invoke(omistaja);
                     return;
                 }
-                if (Auki && lehti != null && lehti.Omistaja != l.Omistaja) Suljettu?.Invoke(lehti.Omistaja);
+                // Lehdestä toiseen (Maa-liite) saman avauksen sisällä: Suljettu vasta lopullisesta sulkemisesta.
                 lehti = l;
                 ylaNimi.text = (l.Laji == LehtiLaji.Maa ? l.Nimi + " · maan oma lehti" : l.Nimi).ToUpperInvariant();
-                sisallysNappi.style.display = l.Laji == LehtiLaji.Maa && l.Sivut.Count >= 3 ? DisplayStyle.Flex : DisplayStyle.None;
+                // Ylärivin ☰ molemmissa lehdissä, kun sivuja on vähintään kaksi (web varmistaLehtiHampurilainen).
+                sisallysNappi.style.display = l.Sivut.Count >= 2 ? DisplayStyle.Flex : DisplayStyle.None;
                 sisallys.style.display = DisplayStyle.None;
                 int alku = sivu ?? LehtiSisalto.SivuAiheelle(l, aihe);
                 nyt = -1;
@@ -204,17 +259,66 @@ namespace Matkakirja.Natiivi
             }
             PaivitaAlapalkki();
             SivuNakyi?.Invoke(lehti.Omistaja, s.Aihe?.Id, i);
+            Teko(new LehtiTeko
+            {
+                Laji = LehtiTekoLaji.SivuNakyi, Omistaja = lehti.Omistaja, Aihe = s.Aihe?.Id, Sivu = i, Kaupunki = avausKaupunki,
+                SivunLaji = s.Laji == LehtiSivuLaji.Etusivu ? "etusivu" : lehti.Laji == LehtiLaji.Maa ? "maa" : "aihe",
+            });
+        }
+
+        static Button Selausnappi(string suunta, string luokka, Action painettu, VisualElement isa)
+        {
+            var b = Rakenne.Nappi(null, "mk-lehti__selaus " + luokka, painettu, isa);
+            Kirjasimet.Aseta(Rakenne.Teksti(suunta, "mk-lehti__selaussuunta", b), Kirjasin.Kone);
+            Kirjasimet.Aseta(Rakenne.Teksti("", "mk-lehti__selausaihe", b), Kirjasin.Kone);
+            return b;
+        }
+
+        string SivunNimi(int i) =>
+            i < 0 || i >= lehti.Sivut.Count ? "" : lehti.Sivut[i].Laji == LehtiSivuLaji.Etusivu ? "Etusivu" : lehti.Sivut[i].Lyhyt ?? lehti.Sivut[i].Otsikko ?? "";
+
+        /// <summary>Web etsiKatko: lehti kiinni ja kohtaaminen tai kysymys alkaa (ohjain sulkee lehden).</summary>
+        void EtsiKatko()
+        {
+            if (tila == null || tila.TehtavaNappiPois || lehti == null) return;
+            Aanet.PulunTehoste("paper");
+            var r = Teko(new LehtiTeko { Laji = LehtiTekoLaji.EtsiKatko, Kaupunki = lehti.Omistaja });
+            if (r != null && !r.Ok) UiNakymat.Hae()?.Tilarivi.Viesti(r.Virhe);
+            else if (Auki) Sulje();
+        }
+
+        /// <summary>"Maa-liite" kaupunkilehden viimeiseltä sivulta → maan oma lehti (web avaaMaalehti).</summary>
+        void AvaaLiite()
+        {
+            if (lehti == null || string.IsNullOrEmpty(lehti.Maa)) return;
+            if (teko != null) Teko(new LehtiTeko { Laji = LehtiTekoLaji.AvaaMaalehti, Maa = lehti.Maa, Kaupunki = avausKaupunki ?? lehti.Omistaja });
+            else Avaa(LehtiLaji.Maa, lehti.Maa, null, null);
         }
 
         void PaivitaAlapalkki()
         {
             var sivut = lehti.Sivut;
+            bool maalehti = lehti.Laji == LehtiLaji.Maa;
             bool ensimmainen = nyt == 0, viimeinen = nyt == sivut.Count - 1;
             edellinen.style.display = ensimmainen ? DisplayStyle.None : DisplayStyle.Flex;
             seuraava.style.display = viimeinen ? DisplayStyle.None : DisplayStyle.Flex;
-            if (!ensimmainen) edellinen.Q<Label>().text = "‹ " + sivut[nyt - 1].Lyhyt;
-            if (!viimeinen) seuraava.Q<Label>().text = sivut[nyt + 1].Lyhyt + " ›";
-            poistu.Q<Label>().text = lehti.Laji == LehtiLaji.Maa ? "Poistu" : "Poistu lehdestä";
+            edellinen.Q<Label>(className: "mk-lehti__selausaihe").text = SivunNimi(nyt - 1);
+            seuraava.Q<Label>(className: "mk-lehti__selausaihe").text = SivunNimi(nyt + 1);
+            alaSisallys.style.display = maalehti && sivut.Count >= 3 ? DisplayStyle.Flex : DisplayStyle.None;
+            poistu.Q<Label>().text = maalehti || viimeinen ? "Poistu" : "Poistu lehdestä";
+            // Tehtävänappi jokaisen kaupunkisivun alareunassa (omistaja 9.8.2026); maalehdessä ei.
+            string teksti = maalehti ? null : tila?.TehtavaNappi;
+            tehtavaNappi.style.display = teksti != null ? DisplayStyle.Flex : DisplayStyle.None;
+            if (teksti != null)
+            {
+                tehtavaNappi.Q<Label>().text = teksti;
+                tehtavaNappi.EnableInClassList("mk-lehti__tehtavanappi--pois", tila.TehtavaNappiPois);
+                tehtavaNappi.pickingMode = tila.TehtavaNappiPois ? PickingMode.Ignore : PickingMode.Position;
+            }
+            string maaNimi = lehti.MaaNimi;
+            bool liiteNakyy = !maalehti && viimeinen && !string.IsNullOrEmpty(lehti.Maa) && !string.IsNullOrEmpty(maaNimi);
+            liite.style.display = liiteNakyy ? DisplayStyle.Flex : DisplayStyle.None;
+            if (liiteNakyy) liite.Q<Label>().text = maaNimi + "-liite";
             alapalkki.style.display = DisplayStyle.Flex;
         }
 
@@ -257,7 +361,8 @@ namespace Matkakirja.Natiivi
             var m = Rakenne.El("mk-lehti__masto", s, PickingMode.Ignore);
             Kirjasimet.Aseta(Rakenne.Teksti("UNOHDETTU AARRE", "mk-lehti__nimioyla", m), Kirjasin.Kone);
             Kirjasimet.Aseta(Rakenne.Teksti(lehti.Nimi.ToUpperInvariant(), "mk-lehti__nimio", m), Kirjasin.Kone);
-            string paiva = PeliOhjain.Instanssi?.Matka != null ? PeliOhjain.Instanssi.Matka.Tila.Paiva() + ". matkapäivä" : null;
+            int? p0 = tila != null ? tila.Matkapaiva : PeliOhjain.Instanssi?.Matka?.Tila.Paiva();
+            string paiva = p0 > 0 ? p0 + ". matkapäivä" : null;
             string pvm = lehti.Laji == LehtiLaji.Maa ? "Maan oma lehti" : string.Join(" · ", new[] { lehti.MaaNimi, paiva }.Where(x => !string.IsNullOrEmpty(x)));
             var p = Rakenne.El("mk-lehti__paivays", m, PickingMode.Ignore);
             Kirjasimet.Aseta(Rakenne.Teksti(pvm.ToUpperInvariant(), "mk-lehti__paivaysteksti", p), Kirjasin.Kone);
@@ -342,39 +447,103 @@ namespace Matkakirja.Natiivi
 
         void Tehtava(VisualElement s, LehtiTehtava t, string aihe)
         {
-            string omistaja = lehti.Laji == LehtiLaji.Kaupunki ? lehti.Omistaja
-                : (PeliOhjain.Instanssi?.Matka?.Tila.Pelaaja.Sijainti.Kaupunki ?? lehti.Omistaja);
+            string omistaja = lehti.Laji == LehtiLaji.Kaupunki ? lehti.Omistaja : (avausKaupunki ?? lehti.Omistaja);
+            // Palkintojuliste vain kaupunkilehdessä (maan yhteinen sivu ei tarjoa samaa julistetta uudelleen).
+            var juliste = lehti.Laji == LehtiLaji.Kaupunki ? UiSisalto.Kaupunki(lehti.Omistaja) : null;
+            if (string.IsNullOrEmpty(juliste?.JulisteTiedosto)) juliste = null;
             var laatikko = Rakenne.El("mk-lehti__tehtava", s, PickingMode.Ignore);
             Kirjasimet.Aseta(Rakenne.Teksti("LEHDEN MINITEHTÄVÄ", "mk-lehti__tehtavaotsake", laatikko), Kirjasin.Kone);
-            Kirjasimet.Aseta(Rakenne.Teksti(t.Kysymys ?? "", "mk-lehti__kysymys", laatikko), Kirjasin.LukuLihava);
+            var runko = Rakenne.El("mk-lehti__tehtavarunko", laatikko, PickingMode.Ignore);
+            var palsta = Rakenne.El("mk-lehti__tehtavapalsta", runko, PickingMode.Ignore);
             if (MinitehtavaVastattu(omistaja, aihe))
             {
-                Kappale(laatikko, t.Fakta ?? "Tämän sivun minitehtävä on jo ratkaistu.", "mk-lehti__tehtavavihje");
+                // Takautuva myöntö: oikein ratkaistu ennen julisteita (web minitehtavatOikein).
+                if (juliste != null)
+                {
+                    bool voitettu = MinitehtavaRatkaistu(omistaja, aihe) || JulisteLaukussa(juliste.Id);
+                    if (voitettu) Teko(new LehtiTeko { Laji = LehtiTekoLaji.JulisteMyonto, Avain = juliste.Id, Kaupunki = omistaja });
+                    Julistepalkinto(runko, juliste, voitettu);
+                }
+                Kirjasimet.Aseta(Rakenne.Teksti("Tämän sivun minitehtävä on jo ratkaistu.", "mk-lehti__kysymys", palsta), Kirjasin.LukuLihava);
                 return;
             }
-            Kappale(laatikko, $"Oikeasta vastauksesta saat {KauppaVakiot.MinitehtavaPalkkio} puntaa.", "mk-lehti__tehtavavihje");
+            Action voita = juliste != null ? Julistepalkinto(runko, juliste, JulisteLaukussa(juliste.Id)) : null;
+            Kirjasimet.Aseta(Rakenne.Teksti(t.Kysymys ?? "", "mk-lehti__kysymys", palsta), Kirjasin.LukuLihava);
             var napit = new List<Button>();
-            var tulos = Rakenne.Teksti("", "mk-lehti__tehtavatulos", laatikko);
+            var tulos = Rakenne.Teksti("", "mk-lehti__tehtavatulos", palsta);
             tulos.style.display = DisplayStyle.None;
+            int palkkio = KauppaVakiot.MinitehtavaPalkkio;
             for (int i = 0; i < t.Vaihtoehdot.Count; i++)
             {
                 int valinta = i;
-                var b = Rakenne.Nappi(t.Vaihtoehdot[i], "mk-nosto__visanappi", null, laatikko);
+                var b = Rakenne.Nappi(t.Vaihtoehdot[i], "mk-nosto__visanappi", null, palsta);
                 Kirjasimet.Aseta(b, Kirjasin.Luku);
                 b.clicked += () =>
                 {
                     bool oikein = valinta == t.Oikea;
-                    var r = Minitehtava?.Invoke(omistaja, aihe, oikein, KauppaVakiot.MinitehtavaPalkkio);
-                    if (r != null && !r.Ok && r.Virhe != "Jo vastattu") { tulos.text = r.Virhe; tulos.style.display = DisplayStyle.Flex; return; }
-                    foreach (var x in napit) x.SetEnabled(false);
-                    if (t.Oikea >= 0 && t.Oikea < napit.Count) napit[t.Oikea].AddToClassList("mk-oikein");
-                    if (!oikein) b.AddToClassList("mk-vaarin");
-                    tulos.text = (oikein ? $"Oikein! +{KauppaVakiot.MinitehtavaPalkkio} puntaa. " : $"Oikea vastaus: {t.Vaihtoehdot[t.Oikea]}. ") + (t.Fakta ?? "");
+                    var r = Teko(new LehtiTeko { Laji = LehtiTekoLaji.Minitehtavavastaus, Kaupunki = omistaja, Aihe = aihe, Oikein = oikein, Palkkio = palkkio });
+                    if (r != null && !r.Ok) { tulos.text = r.Virhe; tulos.style.display = DisplayStyle.Flex; return; }
+                    // Web: vaihtoehdot pois, kehystetty tulos tilalle.
+                    foreach (var x in napit) x.RemoveFromHierarchy();
+                    tulos.text = (oikein ? $"Oikein! +{palkkio} puntaa. " : $"Oikea vastaus: {t.Vaihtoehdot[t.Oikea]}. ") + (t.Fakta ?? "");
                     tulos.EnableInClassList("mk-oikein", oikein);
+                    tulos.EnableInClassList("mk-vaarin", !oikein);
                     tulos.style.display = DisplayStyle.Flex;
+                    Aanet.PulunTehoste(oikein ? "correct" : "wrong");
+                    if (oikein) UiNakymat.Hae()?.Tilarivi.Viesti($"+{palkkio} puntaa · Lehden minitehtävä ratkesi");
+                    // Juliste myönnetään heti; nappi vain avaa katselun (omistaja 22.8.2026).
+                    if (oikein && juliste != null)
+                    {
+                        Teko(new LehtiTeko { Laji = LehtiTekoLaji.JulisteMyonto, Avain = juliste.Id, Kaupunki = omistaja });
+                        voita?.Invoke();
+                        var lunasta = Rakenne.Nappi("Lunasta juliste", "mk-lehti__lunastus", () => NaytaJuliste(juliste), palsta);
+                        Rakenne.Tausta(lunasta, Kuviot.Kulta);
+                        Kirjasimet.Aseta(lunasta, Kirjasin.KoneLihava);
+                    }
                 };
                 napit.Add(b);
             }
+        }
+
+        /// <summary>Pikkuvedos julisteesta tehtävälaatikon kyljessä; palauttaa "merkitse voitetuksi".</summary>
+        Action Julistepalkinto(VisualElement runko, KaupunkiTiedot k, bool voitettu)
+        {
+            var kotelo = Rakenne.El("mk-lehti__julistepalkinto", runko);
+            var kuva = Rakenne.El("mk-lehti__julistekuva", kotelo, PickingMode.Ignore);
+            var merkki = Rakenne.Teksti("", "mk-lehti__julistemerkki", kotelo);
+            Kirjasimet.Aseta(merkki, Kirjasin.KoneLihava);
+            Natiivi.Kuvat.Hae("https://media.matkakirja.app/julisteet/" + k.JulisteTiedosto, t =>
+            {
+                if (t == null) { kotelo.RemoveFromHierarchy(); return; }
+                kuva.style.backgroundImage = new StyleBackground(t);
+                kuva.style.height = Mathf.Round(kuva.resolvedStyle.width * t.height / Mathf.Max(1f, t.width));
+            });
+            kuva.RegisterCallback<GeometryChangedEvent>(e =>
+            {
+                var tx = kuva.resolvedStyle.backgroundImage.texture;
+                if (tx != null) kuva.style.height = Mathf.Round(e.newRect.width * tx.height / Mathf.Max(1f, tx.width));
+            });
+            void Aseta(bool v)
+            {
+                kotelo.EnableInClassList("mk-voitettu", v);
+                merkki.text = v ? "VOITETTU" : "PALKINTO";
+            }
+            Aseta(voitettu);
+            kotelo.RegisterCallback<ClickEvent>(_ => { if (kotelo.ClassListContains("mk-voitettu")) NaytaJuliste(k); });
+            return () => Aseta(true);
+        }
+
+        void NaytaJuliste(KaupunkiTiedot k)
+        {
+            var j = UiSisalto.Julisteet.FirstOrDefault(x => x.Kaupunki == k.Id);
+            suurennos.Avaa(new List<LehtiKuva>
+            {
+                new LehtiKuva
+                {
+                    Lahde = "https://media.matkakirja.app/julisteet/" + k.JulisteTiedosto, Otsikko = j?.Otsikko ?? k.JulisteOtsikko,
+                    Lyhyt = j?.Lyhyt, Selite = j?.Selite ?? j?.Lyhyt ?? k.JulisteOtsikko, LahdeRivi = "Matkakirjan oma paino",
+                },
+            });
         }
 
         void Maaosasto(VisualElement s, MaaTiedot m)
