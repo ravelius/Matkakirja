@@ -140,8 +140,12 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        ja renkaat rakennettuna samoista kaarista (Natiivisepän pyyntö,
  *        Fable 24.9.2026: rajat vektoriviivoina); tools/vienti/maakuntarajat.mjs
  *        kaariTopologia. Lisäksi julkaisun tarkistus skeemasopimus.mjs.
+ *   1.26 2.0-polku jatkuu (Pelikoodarin pakettivartija, v32): tarinakaari,
+ *        paikkatiedot, kohtaamiset, kohtaamiskuvat, paikallisaarteet,
+ *        saapumispuheet sekä fokusvirtojen kohtaamispiste ja sahketehtava
+ *        päätasolle (tools/vienti/tyypitys.mjs).
  */
-export const SKEEMAVERSIO_TARKKA = '1.25';
+export const SKEEMAVERSIO_TARKKA = '1.26';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 const tavuja = (s) => Buffer.byteLength(s);

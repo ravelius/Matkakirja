@@ -1010,3 +1010,20 @@ test('skeemasopimus: skeemanumero vastaa kenttiä', async () => {
   assert.ok(tarkistaSopimus(lisa, SKEEMAVERSIO_TARKKA).some((v) => v.includes('kentät muuttuivat')));
   assert.ok(tarkistaSopimus(tiedostot, '9.99').some((v) => v.includes('ei ole riviä')));
 });
+
+test('skeema 1.26: loput natiivin raakakentät päätasolla', () => {
+  const k = (n) => JSON.parse(tiedostot.get(`kokoelmat/${n}.json`)).alkiot;
+  const praha = k('tarinakaari').find((a) => a.id === 'praha');
+  assert.equal(praha.kohtaaminen, praha.data.kohtaaminen);
+  assert.equal(praha.kysymys.kysymys, praha.data.kysymys.q);
+  assert.deepEqual(praha.kysymys.vaihtoehdot, praha.data.kysymys.vaihtoehdot);
+  assert.ok(k('paikkatiedot').every((a) => typeof a.teksti === 'string' && a.teksti.length));
+  assert.ok(k('kohtaamiset').every((a) => a.tervehdys && a.loyto && a.tyhja && a.vaarin));
+  assert.ok(k('kohtaamiskuvat').every((a) => typeof a.tila === 'string'));
+  const fin = k('paikallisaarteet').find((a) => a.id === 'FIN');
+  assert.ok(fin.pieniAarre.nimi && fin.pieniAarre.url.startsWith('https://'));
+  assert.ok(k('saapumispuheet').every((a) => a.url?.startsWith('https://') && a.kesto > 0));
+  const sofia = k('fokusvirrat').find((a) => a.id === 'sofia');
+  assert.equal(sofia.sahketehtava.id, 'sofia-varna');
+  assert.equal(typeof sofia.kohtaamispiste.laudat.maailmankartta.x, 'number');
+});

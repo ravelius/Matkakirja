@@ -38,6 +38,7 @@ import { lueRadiotarkistus } from './radiotarkistus.mjs';
 import { rikastaLehdet } from './lehdet.mjs';
 import { karttavaloKokoelma, rikastaKohdekartat, takynostoKokoelma } from './karttavalot.mjs';
 import { saapumisKokoelmat } from './saapumiset.mjs';
+import { tyypitaLoput } from './tyypitys.mjs';
 import { kohtaamiskuvaKohteelle, kohtaamiskuvaTavalliselleKohtaamiselle } from '../../js/kohtaamiskuvat-data.js';
 import {
   LINSSILUENTA_JUURI, luennanRunko, luennanOsoite, kaarenPuheet, puheenTiiviste,
@@ -951,6 +952,8 @@ export function kokoaKokoelmat(nimiavaruudet, { media = [] } = {}) {
   rikastaNippu4(kokoelmat, ns);
   // Skeema 1.15: lehdet natiiville (tools/vienti/lehdet.mjs).
   const R = rikastaLehdet(kokoelmat, ns, hae, { media, taulukko });
+  // Skeema 1.26 (2.0-polku): loput natiivin raakakentät päätasolle (tools/vienti/tyypitys.mjs).
+  tyypitaLoput(kokoelmat);
   // Skeema 1.24 (Natiivi-UI:n toiveet 1, 3 ja 4): kohdekarttojen linkkien aihe,
   // saapumistekstit ja Livian saapumisrepliikit.
   rikastaKohdekartat(kokoelmat.kohdekartat, valot.haeKohde, valot.luokittele);

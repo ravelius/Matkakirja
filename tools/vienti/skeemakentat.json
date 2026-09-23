@@ -3,10 +3,11 @@
  "tiivisteet": {
   "1.16": "ee8f1651a9311fcd",
   "1.24": "a74682db468c1664",
-  "1.25": "137506a64fb28b4d"
+  "1.25": "137506a64fb28b4d",
+  "1.26": "6ce8cb0b49deb75c"
  },
  "uusin": {
-  "skeemaversio": "1.25",
+  "skeemaversio": "1.26",
   "kokoelmat": {
    "aanitaulut": [
     "data",
@@ -55,7 +56,9 @@
     "data",
     "id",
     "kaupunki",
+    "kohtaamispiste",
     "lehtitehtavat",
+    "sahketehtava",
     "virta"
    ],
    "historianHetket": [
@@ -154,15 +157,39 @@
    ],
    "kohtaamiset": [
     "data",
+    "hahmo",
     "id",
     "kaupunki",
-    "muotokuva"
+    "kehys",
+    "loyto",
+    "loytoLuenta",
+    "muotokuva",
+    "nappi",
+    "tervehdys",
+    "tervehdysLuenta",
+    "tunneLoyto",
+    "tunneTervehdys",
+    "tunneTyhja",
+    "tunneVaarin",
+    "tyhja",
+    "vaarin"
    ],
    "kohtaamiskuvat": [
+    "aktiivinen",
+    "alt",
     "data",
+    "hahmo",
+    "hetki",
     "id",
     "kaupunki",
-    "url"
+    "kaytto",
+    "kohde",
+    "kuvateksti",
+    "lyhyt",
+    "maa",
+    "tila",
+    "url",
+    "vihje"
    ],
    "kulttuurivisat": [
     "fakta",
@@ -373,13 +400,19 @@
    "paikallisaarteet": [
     "data",
     "id",
+    "isoAarre",
     "kuvat",
-    "maa"
+    "maa",
+    "pieniAarre"
    ],
    "paikkatiedot": [
+    "aani",
     "data",
     "id",
-    "kaupunki"
+    "kaupunki",
+    "lahde",
+    "teksti",
+    "wiki"
    ],
    "pulmaaineisto": [
     "data",
@@ -455,7 +488,14 @@
    "saapumispuheet": [
     "data",
     "id",
-    "kaupunki"
+    "iskulause",
+    "kaupunki",
+    "kesto",
+    "nimi",
+    "sha256",
+    "teksti",
+    "url",
+    "yksiOtto"
    ],
    "saapumistekstit": [
     "aani",
@@ -533,10 +573,20 @@
     "lauta"
    ],
    "tarinakaari": [
+    "aarre",
     "data",
+    "henkilo",
     "id",
     "kaupunki",
-    "muotokuva"
+    "kohtaaminen",
+    "kysymys",
+    "muotokuva",
+    "mykistetyt",
+    "nimi",
+    "otsikko",
+    "saapuminen",
+    "tunneAarre",
+    "tunneKohtaaminen"
    ]
   },
   "manifest": [

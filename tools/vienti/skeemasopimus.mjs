@@ -57,6 +57,8 @@ export const VAATIMUKSET = {
   '1.23': ['offline.ryhmat', 'offline.maat.*.manner'],
   '1.24': ['kokoelma:saapumistekstit', 'kokoelma:takynostot', 'kokoelma:liviansaapumiset'],
   '1.25': ['maakuntarajat/kaaret'],
+  '1.26': ['tarinakaari.kohtaaminen', 'paikkatiedot.teksti', 'kohtaamiset.tervehdys', 'kohtaamiskuvat.tila',
+    'paikallisaarteet.pieniAarre', 'saapumispuheet.url', 'fokusvirrat.sahketehtava'],
 };
 
 export function vertaa(a, b) {
