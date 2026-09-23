@@ -8,6 +8,7 @@
 //   AstronautinNakyma  musta avaus + otsikkokortti, kuvanäkymä, avaruussumu
 //   MaidenNakyma       vertailun alapalkki + vertailuarkki, maatietojen maakyltti
 //   AikajanaNakyma     keksintöjen ja ihmisen matkan esitys (kello, paneeli, kertomus)
+//   RadioNakyma        maailmanradion kotelo alalaidassa (pistenäyttö, merkkivalo, asteikko)
 // Linssin ollessa auki kartan kalusteet väistyvät (kartuscha, karttaselitteen
 // nappi) ja oikeaan yläkulmaan tulee "✕ Sulje linssi" (Rekisteri.Sulje).
 //
@@ -39,6 +40,7 @@ namespace Matkakirja.Natiivi
         public readonly AstronautinNakyma Astronautti;
         public readonly MaidenNakyma Maat;
         public readonly AikajanaNakyma Aikajana;
+        public readonly RadioNakyma Radio;
         readonly Button sulje;
         Linssirekisteri kuunneltu;
 
@@ -54,6 +56,7 @@ namespace Matkakirja.Natiivi
             Astronautti = new AstronautinNakyma(kerros);
             Maat = new MaidenNakyma(kerros, ui);
             Aikajana = new AikajanaNakyma(kerros, this);
+            Radio = new RadioNakyma(kerros);
 
             // Pieni pilleri oikeassa yläkulmassa, taikalasien vasemmalla puolella.
             var turva = kerros.Turva(SulkuKerros);
@@ -161,6 +164,7 @@ namespace Matkakirja.Natiivi
             Astronautti.Vaihtui(astro);
             Maat.Kytke(linssi);
             Aikajana.Kytke(linssi);
+            Radio.Kytke(linssi);
             if (!paalla) Peite.Aseta(false);
         }
 
