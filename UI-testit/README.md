@@ -15,10 +15,13 @@ Pelikoodarin näkymärajapinnat `Scripts/Peli/NakymaSopimukset.cs` ovat Assembly
   `roomalaiset`, `kuunvaiheet`, muut webin oletusdatalla: `hieroglyfit`, `punnukset`,
   `naksutus`, `vesileilit`, `suolaaltaat`, `geysir`, `laiturit`, `kukko`),
   `kaksintaistelu` (8 vaihtoehtoa, helpotus), `tapahtumakortti`, `tulos [laattatyyppi]`
-  (paljastus: löydön kuva tyypin mukaan — `star` (aarrekuva ämpäristä), `mannerAarre`,
-  `isoAarre` (oletus), `pieniAarre`, `robber`, `pollo` — 50:50 käytetty, fakta, lähteet,
-  Jatka), `kohtaaminen` (Márta, Budapest: pieni kohtaamiskuva, "yritys 1/2", vastauksen
-  jälkeen repliikki ja uuden yrityksen ohje) ja `kohtaaminen-tervehdys` (tervehdyssivu:
+  (paljastus: löydön kuva — ensin löydön oma kuva `LoytoKuvaUrl`, varana laattatyypin
+  kuva tai webin piirros: `isoAarre` (oletus, Ivalojoen kultahippu: maakohtainen nimi,
+  fakta ja kuva ämpäristä), `pieniAarre` (tervatynnyrin hopeariksi), `star` (aarrekuva
+  ämpäristä), `mannerAarre`, `robber`, `pollo` ja `piirros` (ilman kuvaa: kätköarkku-
+  piirros) — 50:50 käytetty, fakta, lähteet, Jatka), `kohtaaminen` (Márta, Budapest:
+  pieni kohtaamiskuva, "yritys 1/2", vastauksen jälkeen repliikki, oikeasta vastauksesta
+  löytö ja kätkökuva `KatkoKuvaUrl`, väärästä uuden yrityksen ohje) ja `kohtaaminen-tervehdys` (tervehdyssivu:
   iso kuva ja kuvateksti, tervehdys kirjoituskoneella, viimeisen yrityksen varoitus ja
   "Yritä viimeistä kertaa"; aika alkaa vasta napista). Esimerkki toimii kuin ohjain:
   vastaus näyttää tuomion ja 0,9 s myöhemmin paljastuksen (TulosVaihe 1 → 2), vihje,
@@ -99,6 +102,9 @@ kuva kysymys-tulos
 ui kysymys tulos star
 odota 3
 kuva kysymys-tulos-star
+ui kysymys tulos piirros
+odota 1
+kuva kysymys-tulos-piirros
 ui kysymys kohtaaminen-tervehdys
 odota 1
 kuva kysymys-tervehdys-kirjoitus

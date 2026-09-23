@@ -675,3 +675,21 @@
     white-space: normal;
     color: var(--map-ink);
 }
+
+/* --- löydön fakta ja kätkökuva (erä 5: LoytoFakta, KatkoKuvaUrl; .katko-kuva) --- */
+
+.mk-kysymys__loytofakta {
+    margin: 2px 0 3px 0;
+    font-size: 13.6px;
+    white-space: normal;
+    color: #6f5836;
+}
+
+.mk-kysymys__katko {
+    align-self: center;
+    width: 55%;
+    max-width: 170px;
+    height: 120px;
+    margin: 9px 0 5px 0;
+    -unity-background-scale-mode: scale-to-fit;
+}

@@ -13,6 +13,8 @@
 // R2 kohtaamiset/aarteet/…); muilla tyypeillä sillä laudalla ei ole kuvaa,
 // joten ne piirretään kuten webissä. Pöllön kuva (assets/tietaja/viisas-pollo.jpg)
 // ei ole ämpärissä: sen tilalla on webin pöllö-viivaikoni.
+// Erä 5: ohjaimen antama löydön oma kuva (KysymysNaytto.LoytoKuvaUrl, manner- tai
+// maakohtainen aarre) on ensisijainen; piirrosikoni on varana, jos se ei lataudu.
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -37,7 +39,7 @@ namespace Matkakirja.Natiivi
             tyyppi == "star" || tyyppi == "robber" || tyyppi == "pieniAarre" || tyyppi == "isoAarre"
             || tyyppi == "mannerAarre" || tyyppi == "pollo";
 
-        public LaattaIkoni(string tyyppi)
+        public LaattaIkoni(string tyyppi, string kuvaUrl = null)
         {
             this.tyyppi = tyyppi;
             AddToClassList("mk-laattaikoni");
@@ -48,7 +50,8 @@ namespace Matkakirja.Natiivi
                 var i = Rakenne.Ikoni(Ikonit.Viiva["pollo"], "mk-laattaikoni__pollo", this);
                 i.style.color = Muste;
             }
-            if (AarreKuvat.TryGetValue(tyyppi ?? "", out var url))
+            string url = !string.IsNullOrEmpty(kuvaUrl) ? kuvaUrl : AarreKuvat.TryGetValue(tyyppi ?? "", out var u) ? u : null;
+            if (url != null)
             {
                 kuva = Rakenne.El("mk-laattaikoni__kuva", this, PickingMode.Ignore);
                 kuva.style.display = DisplayStyle.None;
