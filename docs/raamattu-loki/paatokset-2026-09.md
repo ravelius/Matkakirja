@@ -1655,3 +1655,7 @@ Julkaisija klo 00.40: pieni sarjat.json-konflikti ratkaistu, testit vihreitä, h
 ## OMISTAJA iPADILLA: ?koe=vientibudjetti EI AUTTANUT NYKIMISEEN → LAATTAVIENTIEN SUUNTA SULJETTU KOKONAAN (eivienti, vientibudjetti); JALJELLA SYOTEPUTKI (AAMUN KIERROS v2140) (23.9.2026 klo 02.18)
 
 Klo 00.50. Poissuljettu tähän mennessä: kehysaika, tekstuurilataukset (eivienti, vientibudjetti), puskurikirjoitukset, häivytys, pikselisuhde, alfakanava, 60/120 Hz. Ainoa myönteinen: syotetouch.
+
+## OMISTAJA (08.34, iPHONE v2140): SYOTEKOKEET VALIKKOON → PIIRTOKOE-OSIO VAIHTUU SYOTEKOE-OSIOKSI: 1 OLETUS, 2 KOSKETUS SUORAAN (syotetouch), 3 YHTEINEN KELLO (syotekello), 4 MOLEMMAT; PIIRTOKOKEET VAIN ?koe=-LIPPUINA (KAIKKI MITATTU, EI AUTTANEET) (23.9.2026 klo 08.35)
+
+Pelikoodari tekee pienen PR:n heti aamulla; automaattilataus ja overlayn tilarivi kuten Piirtokokeessa.
