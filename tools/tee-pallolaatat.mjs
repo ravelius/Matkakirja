@@ -6,7 +6,7 @@
  *        [--ulos pallolaatat-ulos] [--alue lon0,lat0,lon1,lat1] [--tunniste b]
  *        [--osa i/n] [--noutovali ms]
  *        [--luettelo <paikallinen pyramidi.json>] [--lahde <kansio>]
- *        [--relief <reliefipyramidi.json: osoite tai polku>]
+ *        [--relief <reliefipyramidi.json: osoite tai polku>] [--ilman-viivoja]
  *
  * RELIEFISARJA (--relief, Linssiseppä 23.9.2026: natiivin
  * topografialinssi on Cesiumin rasterikerros, joka lukee vain Web
@@ -906,6 +906,17 @@ async function paa() {
     asetaPyramidiJuuri('matkakirja/reliefipyramidi/');
     kansio = reliefinKansio(versio, kyllaisyys);
     luettelo.kyllaisyys = kyllaisyys;
+  }
+  /*
+   * `--ilman-viivoja` (Linssiseppä 23.9.2026): sarja ilman viivatasoa eli
+   * ilman poltettuja nykyrajoja — natiivin isoisän linssi 1873 vaihtaa sen
+   * pohjan tilalle, jotta nykyrajat eivät näy vuoden 1873 rajojen alla.
+   * Luettelon viivat on silloin null. Oma --tunniste on pakollinen, koska
+   * laatat ovat vuoden välimuistissa.
+   */
+  if (argv.includes('--ilman-viivoja')) {
+    if (!tunniste) throw new Error('--ilman-viivoja vaatii oman --tunniste-lipun');
+    luettelo = { ...luettelo, viivataso: null };
   }
   const lista = osanLaatat(min, max, alue, osa);
   const yhteensa = lista.length;

@@ -4,6 +4,7 @@
  */
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 
 import {
   LAATTA, RELIEFIN_TAYTE, RELIEFIN_VALI, julisteenLeveysvali, laskeLaatta, reliefinKansio, reliefinLuettelo,
@@ -78,4 +79,10 @@ test('kylläisyys: CSS saturate -matriisi, harmaa säilyy, oma kansio', async ()
   assert.deepEqual([...kyllaista(Buffer.from([10, 20, 30]), 1)], [10, 20, 30]);
   assert.equal(kansio('20260920', 0.8), 'matkakirja/reliefipyramidi/20260920/pallo-k08/');
   assert.equal(kansio('20260920'), 'matkakirja/reliefipyramidi/20260920/pallo/');
+});
+
+test('--ilman-viivoja: luettelossa ei viivatasoa, vaatii tunnisteen', () => {
+  const src = readFileSync(new URL('../tools/tee-pallolaatat.mjs', import.meta.url), 'utf8');
+  assert.match(src, /--ilman-viivoja vaatii oman --tunniste-lipun/);
+  assert.match(src, /luettelo = \{ \.\.\.luettelo, viivataso: null \}/);
 });
