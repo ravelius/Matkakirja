@@ -289,6 +289,7 @@ const SHELL = [
   './js/pallolauta/glnimiot-sovitin.js',
   './js/pallolauta/kerrokset.js',
   './js/pallolauta/kehysprofiili.js',
+  './js/pallolauta/kallistus.js',
   './js/pallolauta/sumu.js',
   './css/aikajana.css',
   // Linssien yhteinen kehysliuku (16.9.2026): index.html lataa tämän

@@ -1180,6 +1180,74 @@ export function laattakerroksenTaso(tasot, tarvePxAste, nykyinen = null, {
 }
 
 /*
+ * ══ KAMERAKALLISTUS (koe, js/pallolauta/kallistus.js; suunnitelma
+ * docs/raportit/kamerakallistus-suunnitelma-20260923.md) ════════════
+ *
+ * Kallistuksen aikana `pointOfView()` palauttaa VIRTUAALISEN kameran:
+ * lat/lng on katsepiste P (ruudun keskellä), korkeus on kameran etäisyys
+ * P:stä pallon säteinä ja `kallistus` = { kulma, suunta, raja }. Kulma
+ * mitataan pinnan normaalista (0 = suoraan alas), suunta on katseen
+ * atsimuutti pohjoisesta myötäpäivään ja raja horisontin rajaus
+ * radiaaneina P:stä. Ilman kallistusta (kulma 0 tai kenttää ei ole)
+ * alla olevat funktiot ajavat vanhan polkunsa bitilleen samana.
+ *
+ * Kehys (pallon säteinä, origokeskinen): n = P:n normaali, u pohjoinen,
+ * r itä; katse h = u cos β + r sin β, oikea' = r cos β − u sin β,
+ * kameran suunta P:stä o = n cos α − h sin α, eteen f = −o,
+ * ylös' = h cos α + n sin α, silmä C = n + korkeus · o.
+ */
+/** Kallistus pov:sta tai null, kun kamera katsoo suoraan alas. */
+export function povinKallistus(pov) {
+  const k = pov?.kallistus;
+  return k && Number.isFinite(k.kulma) && Math.abs(k.kulma) > 1e-9 ? k : null;
+}
+
+/**
+ * Kameran kehys pallon säteinä annetulla kulmalla ja suunnalla (myös
+ * kulmalla 0). Yksi kaava laattakerrokselle ja kallistuksen kameralle
+ * (js/pallolauta/kallistus.js).
+ * @returns {{ n, silma, eteen, oikea, ylos }}
+ */
+export function kameranKehys(pov, kulma = 0, suunta = 0) {
+  const n = pallonPiste(pov.lat, pov.lng, 1);
+  let rx = n.z;
+  let rz = -n.x;
+  const rl = Math.hypot(rx, rz);
+  if (rl < 1e-9) { rx = 1; rz = 0; } else { rx /= rl; rz /= rl; }
+  const r = { x: rx, y: 0, z: rz };
+  const u = { x: n.y * rz, y: n.z * rx - n.x * rz, z: -n.y * rx };
+  const a = kulma * RAD;
+  const b = (Number.isFinite(suunta) ? suunta : 0) * RAD;
+  const yhd = (p, pa, q, qa) => ({ x: p.x * pa + q.x * qa, y: p.y * pa + q.y * qa, z: p.z * pa + q.z * qa });
+  const h = yhd(u, Math.cos(b), r, Math.sin(b));
+  const o = yhd(n, Math.cos(a), h, -Math.sin(a));
+  const alt = Math.max(0, pov.altitude);
+  return {
+    n,
+    silma: { x: n.x + alt * o.x, y: n.y + alt * o.y, z: n.z + alt * o.z },
+    eteen: { x: -o.x, y: -o.y, z: -o.z },
+    oikea: yhd(r, Math.cos(b), u, -Math.sin(b)),
+    ylos: yhd(h, Math.cos(a), n, Math.sin(a)),
+  };
+}
+
+/**
+ * Kallistetun kameran kehys ja horisontin raja, tai null ilman kallistusta.
+ * @returns {{ n, silma, eteen, oikea, ylos, raja: number }|null}
+ */
+export function kallistettuKehys(pov) {
+  const k = povinKallistus(pov);
+  if (!k || !Number.isFinite(pov?.lat) || !Number.isFinite(pov?.lng) || !Number.isFinite(pov?.altitude)) return null;
+  return {
+    ...kameranKehys(pov, k.kulma, k.suunta),
+    raja: Number.isFinite(k.raja) && k.raja > 0 ? k.raja : Infinity,
+  };
+}
+
+/** Pallon pisteiden (yksikkövektorit) välinen kulma radiaaneina. */
+const pisteidenKulma = (a, b) => Math.acos(Math.max(-1, Math.min(1, a.x * b.x + a.y * b.y + a.z * b.z)));
+
+/*
  * NÄYTTEET LASKETAAN, EI SÄTEENJÄLJITETÄ (mitattu 6.9.2026). Lepokerros
  * kysyi näkyvän alueen kirjastolta (`toGlobeCoords`) kerran levossa;
  * laattakerros tarvitsee sen kymmenen kertaa sekunnissa, eikä kirjaston
@@ -1202,6 +1270,32 @@ export function laattakerroksenTaso(tasot, tarvePxAste, nykyinen = null, {
  */
 export function laattakerroksenOsuma(pov, sx, sy, { fov = 50, kuvasuhde = 1, sade = 100 } = {}) {
   if (!Number.isFinite(pov?.lat) || !Number.isFinite(pov?.lng) || !Number.isFinite(pov?.altitude)) return null;
+  const kk = kallistettuKehys(pov);
+  if (kk) {
+    // KALLISTETTU (ks. KAMERAKALLISTUS): sama toisen asteen yhtälö silmästä C.
+    const tY = Math.tan((fov / 2) * RAD);
+    const tX = tY * kuvasuhde;
+    let ex = kk.eteen.x + kk.oikea.x * sx * tX + kk.ylos.x * sy * tY;
+    let ey = kk.eteen.y + kk.oikea.y * sx * tX + kk.ylos.y * sy * tY;
+    let ez = kk.eteen.z + kk.oikea.z * sx * tX + kk.ylos.z * sy * tY;
+    const el = Math.hypot(ex, ey, ez);
+    if (!(el > 0)) return null;
+    ex /= el; ey /= el; ez /= el;
+    const C = kk.silma;
+    const bb = 2 * (C.x * ex + C.y * ey + C.z * ez);
+    const cc = C.x * C.x + C.y * C.y + C.z * C.z - 1;
+    const dd = bb * bb - 4 * cc;
+    if (dd < 0) return null;
+    const tt = (-bb - Math.sqrt(dd)) / 2;
+    if (!(tt > 0)) return null;
+    const q = { x: C.x + tt * ex, y: C.y + tt * ey, z: C.z + tt * ez };
+    // Horisontin rajaus: kauempana kuin `raja` P:stä on usvan takana.
+    if (pisteidenKulma(q, kk.n) > kk.raja) return null;
+    return {
+      lat: Math.asin(Math.max(-1, Math.min(1, q.y))) / RAD,
+      lng: Math.atan2(q.x, q.z) / RAD,
+    };
+  }
   const n = pallonPiste(pov.lat, pov.lng, 1);
   /*
    * Ruudun oikea (itä) ja ylös (pohjoinen) kameran kehyksessä. Oikea on
@@ -1262,6 +1356,28 @@ export function laattakerroksenOsuma(pov, sx, sy, { fov = 50, kuvasuhde = 1, sad
 export function pinnanRuutupiste(pov, lat, lng, { fov = 50, kuvasuhde = 1, sade = 100 } = {}) {
   if (!Number.isFinite(pov?.lat) || !Number.isFinite(pov?.lng) || !Number.isFinite(pov?.altitude)) return null;
   if (!Number.isFinite(lat) || !Number.isFinite(lng)) return null;
+  const kk = kallistettuKehys(pov);
+  if (kk) {
+    // KALLISTETTU (ks. KAMERAKALLISTUS): projektio silmän C kehykseen.
+    const q = pallonPiste(lat, lng, 1);
+    const C = kk.silma;
+    const vx = q.x - C.x;
+    const vy = q.y - C.y;
+    const vz = q.z - C.z;
+    const syv = vx * kk.eteen.x + vy * kk.eteen.y + vz * kk.eteen.z;
+    if (!(syv > 1e-9)) return null;
+    const tY = Math.tan((fov / 2) * RAD);
+    const tX = tY * kuvasuhde;
+    const Cl = Math.hypot(C.x, C.y, C.z);
+    // Horisontti todellisesta silmästä + usvan raja katsepisteestä.
+    const edessa = (q.x * C.x + q.y * C.y + q.z * C.z) / Cl >= 1 / Cl && pisteidenKulma(q, kk.n) <= kk.raja;
+    return {
+      sx: (vx * kk.oikea.x + vy * kk.oikea.y + vz * kk.oikea.z) / (syv * tX),
+      sy: (vx * kk.ylos.x + vy * kk.ylos.y + vz * kk.ylos.z) / (syv * tY),
+      edessa,
+      syvyys: syv * sade,
+    };
+  }
   const n = pallonPiste(pov.lat, pov.lng, 1);
   let rx = n.z;
   let rz = -n.x;
@@ -1312,6 +1428,16 @@ export function pinnanRuutupiste(pov, lat, lng, { fov = 50, kuvasuhde = 1, sade 
  */
 export function laattakerroksenNakyvissa(alue, pov) {
   if (!alue || !Number.isFinite(pov?.altitude)) return true;
+  const kk = kallistettuKehys(pov);
+  if (kk) {
+    // KALLISTETTU: horisontti todellisesta silmästä ja usvan raja P:stä.
+    const c0 = pallonPiste((alue.lat0 + alue.lat1) / 2, (alue.lon0 + alue.lon1) / 2, 1);
+    const sade0 = pisteidenKulma(c0, pallonPiste(alue.lat1, alue.lon1, 1));
+    const Cl = Math.hypot(kk.silma.x, kk.silma.y, kk.silma.z);
+    const cHat = { x: kk.silma.x / Cl, y: kk.silma.y / Cl, z: kk.silma.z / Cl };
+    return pisteidenKulma(c0, cHat) <= Math.acos(Math.min(1, 1 / Cl)) + sade0
+      && pisteidenKulma(c0, kk.n) <= kk.raja + sade0;
+  }
   const n = pallonPiste(pov.lat, pov.lng, 1);
   const latK = (alue.lat0 + alue.lat1) / 2;
   const lonK = (alue.lon0 + alue.lon1) / 2;
