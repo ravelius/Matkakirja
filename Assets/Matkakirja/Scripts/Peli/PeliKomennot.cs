@@ -20,6 +20,7 @@
 //   tutki [vaikea]            "Tutki kaupunkia" -nappi: kysymys auki (tila Kysymys)
 //   vastaa i | vastaa oikea   valitsee vaihtoehdon i (0..) tai oikean
 //   vastaa vaara              valitsee ensimmäisen näkyvän väärän vaihtoehdon
+//   aloita                    tervehdyssivun Aloita peli (kohtaaminen)
 //   vihje | puolita           vihje (40 £) tai 50:50 (80 £)
 //   jatka                     tuloksen Jatka-nappi: kysymys kiinni, vuoro päättyy
 //   luento kaupunki|intro|lento|saapuminen kaupunki   soittaa luennan (kerran-säännöistä välittämättä)
@@ -142,6 +143,8 @@ namespace Matkakirja.Natiivi
                     else if (!int.TryParse(A(1), NumberStyles.Integer, CultureInfo.InvariantCulture, out i)) return "käyttö: vastaa i|oikea|vaara";
                     return ohjain.Vastaa(i);
                 }
+                case "aloita":
+                    return ohjain.AloitaKysymys();
                 case "vihje":
                     return ohjain.Vihje();
                 case "puolita":

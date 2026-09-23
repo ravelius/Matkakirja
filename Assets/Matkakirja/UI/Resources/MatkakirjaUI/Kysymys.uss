@@ -1,0 +1,677 @@
+/* KYSYMYSNÄKYMÄ (Natiivi-UI, erä 3): verkkopelin #quiz-dialog (css/styles.css
+ * "--- tietovisa ---", .quiz-option, .quiz-result, .lifeline, tiimalasi,
+ * .quiz-hint-text, .quiz-sketch, .quiz-photo) ja tapahtumakortti (#event-dialog).
+ * Mitat puhelimen mukaan: styles.css:n @media (max-width: 560px) ja
+ * (pointer: coarse) -säännöt (yksi sarake, isot vaihtoehtonapit).
+ * USS:ssä ei ole elliptisiä kulmasäteitä (86px 14px 92px 12px / 12px 92px …),
+ * joten käsin piirretty kulma tehdään kulmakohtaisilla säteillä; yliviivaus
+ * (text-decoration) tulee koodista rich text -tagina <s>.
+ */
+
+:root {
+    --mk-kysymys-muste: #3b2a18;
+    --mk-kysymys-kaupunki: #7a6039;
+    --mk-kysymys-oikea: #2f6b3f;
+    --mk-kysymys-oikea-teksti: #21532f;
+    --mk-kysymys-merkki: #b03a2b;
+}
+
+/* --- kortti ja himmennys ------------------------------------------------ */
+
+.mk-kysymys {
+    max-height: 100%;
+}
+
+.mk-kysymys > .mk-kortti {
+    flex-shrink: 1;
+    padding: 13px 14px 12px 14px;
+}
+
+.mk-kysymys__vieritys {
+    flex-shrink: 1;
+}
+
+/* --- otsikkorivi (.quiz-head): leima, kaupunki ja tiimalasi --------------- */
+
+.mk-kysymys__paa {
+    flex-direction: row;
+    align-items: center;
+    flex-shrink: 0;
+    margin-bottom: 10px;
+    padding-bottom: 7px;
+    border-bottom-width: 1px;
+    border-color: rgba(70, 51, 31, 0.35);
+}
+
+.mk-kysymys__paateksti {
+    flex-direction: row;
+    align-items: center;
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+    min-height: 30px;
+}
+
+.mk-kysymys__leima {
+    flex-shrink: 0;
+    margin-right: 9px;
+    padding: 3px 10px 2px 10px;
+    border-width: 1px;
+    border-radius: 12px;
+    border-color: rgba(70, 51, 31, 0.55);
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--map-ink);
+    rotate: -1.5deg;
+}
+
+.mk-kysymys__kaupunki {
+    flex-shrink: 1;
+    font-size: 14.4px;
+    white-space: normal;
+    color: var(--mk-kysymys-kaupunki);
+}
+
+/* --- tiimalasi (.quiz-timer, .hourglass, .quiz-seconds) ------------------- */
+
+.mk-kysymys__aika {
+    flex-direction: row;
+    align-items: center;
+    flex-shrink: 0;
+    margin-left: 8px;
+}
+
+.mk-kysymys__tiimalasi {
+    width: 30px;
+    height: 46px;
+    rotate: -1.5deg;
+    transition-property: rotate;
+    transition-duration: 0.7s;
+    transition-timing-function: ease-in-out-cubic;
+}
+
+/* Uusi kysymys: lasi alkaa ylösalaisin ja kääntyy (hg-turn). */
+.mk-kysymys__tiimalasi--ylosalaisin {
+    rotate: 178.5deg;
+    transition-duration: 0s;
+}
+
+.mk-kysymys__sekunnit {
+    min-width: 26px;
+    margin-left: 5px;
+    font-size: 15.7px;
+    -unity-text-align: middle-right;
+    color: var(--mk-kysymys-kaupunki);
+}
+
+.mk-kysymys__aika--kiire .mk-kysymys__sekunnit {
+    color: var(--mk-kysymys-merkki);
+}
+
+/* --- pulman luonnos (.quiz-sketch) ja selite (.quiz-selite) ---------------- */
+
+.mk-luonnos {
+    width: 100%;
+    max-width: 340px;
+    align-self: center;
+    flex-shrink: 0;
+    margin-bottom: 10px;
+    color: var(--mk-kysymys-muste);
+    overflow: hidden;
+}
+
+.mk-luonnos__teksti {
+    position: absolute;
+    width: 400px;
+    -unity-text-align: upper-center;
+    white-space: nowrap;
+    color: var(--mk-kysymys-muste);
+}
+
+.mk-kysymys__selite {
+    margin: -3px 0 8px 0;
+    font-size: 12.8px;
+    white-space: normal;
+    opacity: 0.75;
+    color: var(--map-ink);
+}
+
+/* --- valokuva ja lippu (.quiz-photo, #quiz-photo.quiz-lippu) --------------- */
+
+.mk-kysymys__kuvakehys {
+    flex-shrink: 0;
+    margin: 3px 0 10px 0;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.4);
+    border-radius: 3px;
+}
+
+.mk-kysymys__kuva {
+    height: 190px;
+    border-width: 4px;
+    border-color: #f7efdc;
+    border-radius: 3px;
+    background-color: rgba(70, 51, 31, 0.08);
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.mk-kysymys__kuvakehys--lippu .mk-kysymys__kuva {
+    height: 150px;
+    border-width: 8px;
+    border-color: rgba(252, 241, 212, 0.92);
+    background-color: rgba(252, 241, 212, 0.92);
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.mk-kysymys__kuvalahde {
+    font-size: 10px;
+    white-space: normal;
+    color: rgba(70, 51, 31, 0.55);
+    margin: -6px 0 9px 0;
+}
+
+/* --- kehys, kysymys ja vihje ---------------------------------------------- */
+
+.mk-kysymys__kehys {
+    font-size: 15px;
+    white-space: normal;
+    color: var(--mk-kysymys-kaupunki);
+    margin-bottom: 6px;
+}
+
+.mk-kysymys__kysymys {
+    font-size: 16.5px;
+    white-space: normal;
+    color: var(--map-ink);
+    margin-bottom: 11px;
+}
+
+/* .quiz-hint-text: kynämerkki ja kursiivi paperilapulla */
+.mk-kysymys__vihje {
+    flex-direction: row;
+    margin: -3px 0 12px 0;
+    padding: 8px 12px;
+    border-width: 1px;
+    border-color: rgba(120, 90, 40, 0.5);
+    border-top-left-radius: 12px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 13px;
+    border-bottom-left-radius: 7px;
+    background-color: rgba(240, 220, 170, 0.35);
+}
+
+.mk-kysymys__vihjemerkki {
+    flex-shrink: 0;
+    margin-right: 8px;
+    font-size: 14.7px;
+    opacity: 0.7;
+    color: #6b5227;
+}
+
+.mk-kysymys__vihjeteksti {
+    flex-shrink: 1;
+    font-size: 14.7px;
+    white-space: normal;
+    color: #6b5227;
+}
+
+/* --- vaihtoehdot (.quiz-options, .quiz-option, .letter) -------------------- */
+
+.mk-kysymys__vaihtoehdot {
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.mk-nappi.mk-kysymys__vaihtoehto {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 58px;
+    margin-bottom: 7px;
+    padding: 8px 12px 8px 11px;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.55);
+    border-top-left-radius: 14px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 16px;
+    border-bottom-left-radius: 9px;
+    background-color: rgba(255, 252, 243, 0.5);
+    color: var(--map-ink);
+    opacity: 1;
+    translate: 0 0;
+    transition-property: background-color, border-color, opacity, translate, rotate;
+    transition-duration: 0.15s, 0.15s, 0.3s, 0.3s, 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.mk-nappi.mk-kysymys__vaihtoehto--pariton {
+    rotate: -0.4deg;
+}
+
+.mk-nappi.mk-kysymys__vaihtoehto--parillinen {
+    rotate: 0.4deg;
+}
+
+/* option-in: vaihtoehdot liukuvat esiin 70 ms porrastuksella */
+.mk-nappi.mk-kysymys__vaihtoehto.mk-kysymys__vaihtoehto--tulossa {
+    opacity: 0;
+    translate: 0 10px;
+    rotate: -1deg;
+}
+
+.mk-nappi.mk-kysymys__vaihtoehto:active {
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+.mk-nappi.mk-kysymys__vaihtoehto:disabled {
+    opacity: 1;
+}
+
+.mk-kysymys__vaihtoehdot--tiivis > .mk-nappi.mk-kysymys__vaihtoehto {
+    min-height: 48px;
+    margin-bottom: 6px;
+    padding: 6px 11px 6px 10px;
+}
+
+.mk-kysymys__kirjain {
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    margin-right: 11px;
+    border-width: 2px;
+    border-radius: 15px;
+    border-color: var(--map-ink);
+    font-size: 15px;
+    -unity-text-align: middle-center;
+    color: var(--map-ink);
+}
+
+.mk-kysymys__vaihtoehtoteksti {
+    flex-grow: 1;
+    flex-shrink: 1;
+    font-size: 16.3px;
+    white-space: normal;
+    color: var(--map-ink);
+}
+
+.mk-kysymys__vaihtoehdot--tiivis .mk-kysymys__vaihtoehtoteksti {
+    font-size: 15px;
+}
+
+.mk-nappi.mk-kysymys__vaihtoehto.mk-kysymys__vaihtoehto--oikea {
+    background-color: rgba(94, 158, 106, 0.32);
+    border-color: var(--mk-kysymys-oikea);
+}
+
+.mk-kysymys__vaihtoehto--oikea .mk-kysymys__kirjain {
+    border-color: var(--mk-kysymys-oikea);
+    color: var(--mk-kysymys-oikea-teksti);
+}
+
+.mk-nappi.mk-kysymys__vaihtoehto.mk-kysymys__vaihtoehto--vaara {
+    background-color: rgba(176, 58, 43, 0.22);
+    border-color: var(--mk-kysymys-merkki);
+}
+
+/* 50:50:n poistama: haalea ja yliviivattu (.hidden-option) */
+.mk-nappi.mk-kysymys__vaihtoehto.mk-kysymys__vaihtoehto--pois:disabled {
+    opacity: 0.25;
+}
+
+/* .quiz-option.kuvallinen: valokuva vaihtoehdon yläosaan */
+.mk-nappi.mk-kysymys__vaihtoehto--kuvallinen {
+    flex-direction: column;
+    align-items: stretch;
+    padding-top: 8px;
+}
+
+.mk-kysymys__vaihtoehtokuva {
+    height: 118px;
+    margin-bottom: 7px;
+    border-width: 1px;
+    border-radius: 8px;
+    border-color: rgba(70, 51, 31, 0.3);
+    background-color: rgba(70, 51, 31, 0.08);
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.mk-kysymys__vaihtoehtorivi {
+    flex-direction: row;
+    align-items: center;
+}
+
+.mk-kysymys__kuvalahteet {
+    margin: 1px 0 4px 0;
+    font-size: 10px;
+    letter-spacing: 0.3px;
+    white-space: normal;
+    color: rgba(70, 51, 31, 0.55);
+}
+
+/* --- tulos (.quiz-result, .quiz-verdict, .source-line) --------------------- */
+
+.mk-kysymys__tulos {
+    flex-shrink: 0;
+    margin: 9px 0 2px 0;
+    padding: 10px 13px;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.45);
+    border-top-left-radius: 14px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 9px;
+    background-color: rgba(255, 255, 255, 0.42);
+}
+
+.mk-kysymys__tulos--oikein {
+    border-color: var(--mk-kysymys-oikea);
+}
+
+.mk-kysymys__tulos--vaarin {
+    border-color: var(--mk-kysymys-merkki);
+}
+
+.mk-kysymys__tuomio {
+    font-size: 22px;
+    letter-spacing: 0.8px;
+    white-space: normal;
+    color: var(--map-ink);
+    margin-bottom: 4px;
+}
+
+.mk-kysymys__tulos--oikein .mk-kysymys__tuomio {
+    color: var(--mk-kysymys-oikea-teksti);
+}
+
+.mk-kysymys__tulos--vaarin .mk-kysymys__tuomio {
+    color: var(--mk-kysymys-merkki);
+}
+
+.mk-kysymys__vahva {
+    font-size: 16.3px;
+    white-space: normal;
+    color: var(--map-ink);
+    margin-bottom: 2px;
+}
+
+.mk-kysymys__fakta {
+    font-size: 15.5px;
+    white-space: normal;
+    color: #6f5836;
+    margin-top: 3px;
+}
+
+.mk-kysymys__lahde {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 6px;
+}
+
+.mk-kysymys__lahdeotsikko {
+    margin-right: 5px;
+    font-size: 10.9px;
+    letter-spacing: 1.1px;
+    opacity: 0.75;
+    color: var(--mk-kysymys-kaupunki);
+}
+
+.mk-kysymys__lahdeteksti {
+    font-size: 12.5px;
+    white-space: normal;
+    color: var(--mk-kysymys-kaupunki);
+}
+
+.mk-kysymys__lahdelinkki {
+    border-bottom-width: 1px;
+    border-color: rgba(122, 96, 57, 0.6);
+}
+
+/* --- tapahtumakortti (#event-dialog: .fact-place, .arrival-text, .arrival-ask) --- */
+
+.mk-kysymys__tapahtumapaikka {
+    font-size: 12.8px;
+    letter-spacing: 0.5px;
+    white-space: normal;
+    color: var(--map-ink-soft);
+    margin-bottom: 4px;
+}
+
+.mk-kysymys__tapahtumateksti {
+    font-size: 15.5px;
+    white-space: normal;
+    color: #5a4326;
+    margin: 6px 0 12px 0;
+}
+
+.mk-kysymys__vaikutus {
+    font-size: 13.6px;
+    letter-spacing: 0.7px;
+    white-space: normal;
+    color: var(--map-ink);
+    margin-bottom: 6px;
+}
+
+/* --- hetkellinen viesti ja napit (menu, .lifeline, .primary) ---------------- */
+
+.mk-kysymys__viesti {
+    flex-shrink: 0;
+    margin-top: 7px;
+    font-size: 14px;
+    white-space: normal;
+    -unity-text-align: middle-center;
+    color: var(--mk-kysymys-merkki);
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.25s;
+}
+
+.mk-kysymys__viesti.mk-auki {
+    opacity: 1;
+}
+
+.mk-kysymys__napit {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    flex-shrink: 0;
+    margin-top: 10px;
+}
+
+.mk-kysymys__napit > .mk-nappi {
+    margin-left: 8px;
+    margin-top: 4px;
+}
+
+.mk-kysymys__napit > .mk-kysymys__vihjenappi {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.mk-nappi.mk-kysymys__apu {
+    min-height: 44px;
+    padding: 6px 12px;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.5);
+    border-top-left-radius: 13px;
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 14px;
+    border-bottom-left-radius: 8px;
+    background-color: rgba(255, 252, 243, 0.42);
+    color: var(--map-ink);
+}
+
+.mk-nappi.mk-kysymys__apu:active {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.mk-nappi.mk-kysymys__apu:disabled {
+    opacity: 0.4;
+}
+
+.mk-kysymys__apu .mk-nappi__teksti {
+    font-size: 13.6px;
+}
+
+.mk-kysymys__apu > .mk-ikoni {
+    width: 17px;
+    height: 17px;
+    margin-right: 6px;
+    color: var(--map-ink);
+}
+
+/* .dialog button.primary: linear-gradient(#e9c169, #d3a03c), reuna #7a5a12 */
+.mk-nappi.mk-kysymys__jatka {
+    min-height: 46px;
+    padding: 8px 18px;
+    border-color: #7a5a12;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 9px;
+    color: #33240a;
+}
+
+.mk-kysymys__jatka .mk-nappi__teksti {
+    font-size: 16px;
+}
+
+/* --- kohtaaminen (erä 4): .quiz-kohtaaminen-kuvio, .quiz-kohtaaminen,
+ *     .quiz-varoitus, .quiz-aloita, .quiz.kysymysvaihe ---------------------- */
+
+.mk-kysymys__muotokuva {
+    flex-shrink: 0;
+    margin: 2px 0 9px 0;
+}
+
+/* Iso kuva tervehdyssivulla: kuvasuhde säilyy (contain), katto ~41 % ruudusta. */
+.mk-kysymys__muotokuvakuva {
+    height: 220px;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+/* Kysymyssivulla pieni pyöristetty neliö: muistutus siitä, kuka kysyy. */
+.mk-kysymys__muotokuva--pieni {
+    align-self: flex-start;
+    margin: 0 0 7px 0;
+}
+
+.mk-kysymys__muotokuva--pieni > .mk-kysymys__muotokuvakuva {
+    width: 104px;
+    height: 104px;
+    border-radius: 12px;
+    border-width: 1px;
+    border-color: rgba(52, 36, 16, 0.28);
+    background-color: rgba(70, 51, 31, 0.08);
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.mk-kysymys__muotokuvateksti {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    margin-top: 5px;
+}
+
+.mk-kysymys__muotokuvaselite {
+    margin-right: 6px;
+    font-size: 12.8px;
+    white-space: normal;
+    color: rgba(58, 42, 22, 0.9);
+}
+
+.mk-kysymys__muotokuvalahde {
+    font-size: 10px;
+    letter-spacing: 0.3px;
+    color: rgba(70, 51, 31, 0.55);
+}
+
+.mk-kysymys__tervehdys {
+    margin: 5px 0 9px 0;
+    font-size: 15.2px;
+    white-space: normal;
+    color: rgba(58, 42, 22, 0.95);
+}
+
+.mk-kysymys__varoitus {
+    flex-shrink: 0;
+    margin: 6px 0 3px 0;
+    padding: 7px 11px;
+    border-left-width: 3px;
+    border-color: rgba(150, 58, 34, 0.75);
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background-color: rgba(150, 58, 34, 0.08);
+}
+
+.mk-kysymys__varoitusteksti {
+    font-size: 14.7px;
+    white-space: normal;
+    color: rgba(112, 42, 24, 0.95);
+}
+
+.mk-kysymys__napit--keski {
+    justify-content: center;
+}
+
+.mk-kysymys__napit--keski > .mk-nappi {
+    margin-left: 0;
+}
+
+.mk-nappi.mk-kysymys__aloita {
+    min-width: 180px;
+}
+
+/* --- paljastus: löydön kuva, ohjeet ja repliikki (.quiz-result, aarreIkoni,
+ *     .quiz-uusi-yritys, .kohtaaminen-repliikki) ------------------------------ */
+
+.mk-kysymys__tulos--paljastus {
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.mk-kysymys__tulosrunko {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.mk-laattaikoni {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    margin: 2px 10px 0 0;
+}
+
+/* Tarinallinen aarrekuva pyöreäksi rajattuna (.aarre-ikoni). */
+.mk-laattaikoni__kuva {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 28px;
+    border-width: 2px;
+    border-color: rgba(70, 51, 31, 0.35);
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.mk-laattaikoni__pollo {
+    width: 56px;
+    height: 56px;
+    --mk-ikoni-viiva: 1.5;
+}
+
+.mk-kysymys__ohje {
+    margin: 5px 0 2px 0;
+    font-size: 14.4px;
+    white-space: normal;
+    color: rgba(112, 42, 24, 0.95);
+}
+
+.mk-kysymys__repliikki {
+    margin-top: 5px;
+    font-size: 14.7px;
+    white-space: normal;
+    color: var(--map-ink);
+}

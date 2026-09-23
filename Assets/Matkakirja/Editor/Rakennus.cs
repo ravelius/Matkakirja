@@ -32,11 +32,11 @@ namespace Matkakirja.Editori
         public const int LaattaMaxTaso = 8;
 
         /// <summary>
-        /// Karttasepän maasto (quantized-mesh-1.0, EPSG:4326, Copernicus GLO-30): nyt
-        /// Ranska z1–z12, muu maailma z0 = 0 m. Korkeudet ovat merenpinnasta (EGM2008),
+        /// Karttasepän maasto (quantized-mesh-1.0, EPSG:4326, Copernicus GLO-30), poltto 23b:
+        /// koko maailma z0–z6 (korjattu RTIN-kaarevuus), Ranska z7–z12. Korkeudet ovat merenpinnasta (EGM2008),
         /// ei ellipsoidista; Ranskassa ero on noin 50 m, mikä ei näy pallolla.
         /// </summary>
-        public const string MaastoUrl = "https://media.matkakirja.app/julisteet/maasto/2026-09-23a/layer.json";
+        public const string MaastoUrl = "https://media.matkakirja.app/julisteet/maasto/2026-09-23b/layer.json";
 
         public static void LuoPallo()
         {
@@ -262,6 +262,47 @@ namespace Matkakirja.Editori
         {
             AsetaIos(iOSSdkVersion.DeviceSDK);
             Kaanna("Build/laite");
+        }
+
+        /// <summary>
+        /// Xcode-projekti TestFlightiin: Build/testflight (Julkaisija arkistoi ja lähettää
+        /// pilviallekirjoituksella). Ympäristömuuttujat:
+        ///   MATKAKIRJA_BUNDLE_ID  (oletus app.matkakirja.proto3d)
+        ///   MATKAKIRJA_TEAM       maksullisen tiimin Team ID (oletus Personal Team F72JLS57C5)
+        ///   MATKAKIRJA_VERSIO     CFBundleShortVersionString (oletus 0.1.0)
+        ///   MATKAKIRJA_BUILD      CFBundleVersion, kasvava kokonaisluku (pakollinen)
+        /// Info.plistiin ITSAppUsesNonExemptEncryption = false (vain HTTPS).
+        /// </summary>
+        public static void IosTestFlight()
+        {
+            string Ymp(string nimi, string oletus) =>
+                string.IsNullOrEmpty(Environment.GetEnvironmentVariable(nimi)) ? oletus : Environment.GetEnvironmentVariable(nimi);
+            var build = Ymp("MATKAKIRJA_BUILD", null)
+                ?? throw new Exception("MATKAKIRJA_BUILD puuttuu (kasvava build-numero)");
+            AsetaIos(iOSSdkVersion.DeviceSDK);
+            PlayerSettings.SetApplicationIdentifier(UnityEditor.Build.NamedBuildTarget.iOS,
+                Ymp("MATKAKIRJA_BUNDLE_ID", "app.matkakirja.proto3d"));
+            PlayerSettings.iOS.appleDeveloperTeamID = Ymp("MATKAKIRJA_TEAM", "F72JLS57C5");
+            PlayerSettings.bundleVersion = Ymp("MATKAKIRJA_VERSIO", "0.1.0");
+            PlayerSettings.iOS.buildNumber = build;
+            TestFlightVienti = true;
+            try { Kaanna("Build/testflight"); }
+            finally { TestFlightVienti = false; }
+            Debug.Log($"MATKAKIRJA: TestFlight-vienti {PlayerSettings.applicationIdentifier} " +
+                      $"{PlayerSettings.bundleVersion} ({build}), tiimi {PlayerSettings.iOS.appleDeveloperTeamID}");
+        }
+
+        static bool TestFlightVienti;
+
+        [UnityEditor.Callbacks.PostProcessBuild(200)]
+        static void TestFlightPlist(BuildTarget kohde, string polku)
+        {
+            if (kohde != BuildTarget.iOS || !TestFlightVienti) return;
+            var plistPolku = Path.Combine(polku, "Info.plist");
+            var plist = new UnityEditor.iOS.Xcode.PlistDocument();
+            plist.ReadFromFile(plistPolku);
+            plist.root.SetBoolean("ITSAppUsesNonExemptEncryption", false);
+            plist.WriteToFile(plistPolku);
         }
     }
 }

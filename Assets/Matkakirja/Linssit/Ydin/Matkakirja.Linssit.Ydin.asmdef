@@ -1,0 +1,16 @@
+{
+    "name": "Matkakirja.Linssit.Ydin",
+    "rootNamespace": "Matkakirja.Linssit",
+    "references": [
+        "Matkakirja.Peli"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": true
+}

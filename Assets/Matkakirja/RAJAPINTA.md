@@ -124,3 +124,196 @@ varapallo (z0–z2), jos verkkoa ei ole ensimmäisellä kerralla.
 
 Komentotiedosto `Documents/komento.txt` (Kartta, `Komennot.cs`) ja `Documents/peli-komento.txt`
 (Peli). Katso proto-3d/TYOTAPA.md.
+
+## 10. Ehdotukset: sisältöpaketti, offline ja palvelimet (Siirtoseppä 23.9.2026)
+
+Siirtoseppä ylläpitää kohtia 10.1–10.2 (paketti on Matkakirja-repossa, `tools/vienti/`).
+Kohta 10.3 on koottu web-pelin workereista (`tools/pollo/`, `worker/sahke/`,
+`worker/ehdotukset/`) natiivin sopimuspohjaksi, ja päätökset (origin/tunnistus) jäävät
+Natiivisepälle ja Fablelle.
+
+### 10.1 Sisältöpaketti (Siirtoseppä tarjoaa)
+
+Kaikki pelin sisältö datana, moottorineutraalina JSONina. Lähde: web-pelin
+`js/packs/*` ja nimetyt exportit (`tools/vienti/`), tausta
+`docs/raportit/sisallon-siirtoputki-20260923.md` (Matkakirja-repo).
+
+- **Osoitin:** `https://media.matkakirja.app/sisalto/1/uusin.json`. CI julkaisee sen jokaisesta
+  main-mergestä, jossa sisältö muuttui. Siihen asti, kun nippu 3 on mainissa,
+  koepaketti on paikallisesti kansiossa `/Users/Shared/Claude/sisalto-koe/uusin.json` (polku `v<N>/`).
+- **Osoittimen kentät:** `versio` (N), `polku` (`sisalto/1/v<N>/`), `sha256`, `skeemaversio` ("1.x"),
+  `minSovellus.ios`, `edellinen`, `commit`, `julkaistu`. `sha256` = sha256 riveistä
+  `<polku>\t<tiedoston sha256>\n` polkujen aakkosjärjestyksessä (tools/vienti/julkaise-sisalto.mjs
+  paketinTiiviste).
+- **Käyttöönotto:** lue osoitin. Jos major ≠ 1 tai `minSovellus.ios` on suurempi kuin
+  sovelluksen oma, pidä vanha paketti. Muuten lataa `manifest.json`, tarkista kunkin tiedoston
+  `sha256` ja `tavuja` ja vaihda paketti vasta, kun kaikki täsmää. **Vertaa skeemaversiota
+  numeroina** (1.10 > 1.9), älä merkkijonoina.
+- **Rakenne:** `manifest.json` (kokoelmat[], moduulit[], webNakymat[], logiikka[], media),
+  `kokoelmat/<nimi>.json` = `{ nimi, lahde, kuvaus, viittaukset, alkiot: [{ id, … }] }`
+  (viittaukset: kenttä → kokoelma), `media.json` (jokainen kuva, ääni ja URL: url, varat,
+  suurennos), `skeema/*.schema.json`, `moduulit/` (raakakerros, häviötön), `tiedostot/`
+  (JSON sellaisenaan, esim. luentojen aikaleimat), `web/lehti.json` (lehtikuoren riippuvuudet).
+- **Sopimus:** käytä päätason kenttiä. `data` on webin raakaolio, eikä siihen nojata (voi muuttua
+  ilman versionnostoa). Jos kenttä puuttuu, pyydä Siirtosepältä. Paketissa ei ole ajettavaa
+  koodia: `manifest.logiikka[]` luokittelee jokaisen webin funktion (media | esilaskettu |
+  saanto | logiikka tunnisteella, esim. `pulma:roomalaiset` | kuollut).
+
+| Kokoelma | Pääkäyttäjä | Sisältö |
+|---|---|---|
+| kaupungit, reitit, laatat | Natiiviseppä | lat/lon, maa2, tarkeys 0–3, lauta {x,y}; reitin laji, askelia, via; laattatyypit ja määrät |
+| saannot, saapuminen, tapahtumat | Pelikoodari | hinnat, XP, arvovälit, BOT_SKILL; saapumishaut kaupungeittain; tapahtumakortit |
+| kysymykset, kaksintaistelut, kuvakysymykset, lippumaat | Pelikoodari | visat ja väittämät; kuvat ja liput pelin arvontajärjestyksessä url:eineen |
+| pulmat, pulmaaineisto, esilasketut | Pelikoodari | generaattori-tunniste; pulmien lähdetaulut; esilasketut apufunktiot |
+| luennat, aanitaulut | Pelikoodari | isoisän luennat (url, kesto, aikaleimat); tehosteet, näytteet, musiikkiketju |
+| linssiaineisto (+ moduulit/js/linssit/*) | Linssiseppä | maskit, manifestit, pilvet, astronautin äänet, avauskynnykset |
+| kaupunkilehdet, maalehdet, nahtavyydet, miniatyyrit, julisteet, skandaalit, monumentit, historianHetket, elaintayt, paikallisaarteet | Natiivi-UI | lehtien ja nostojen sisältö |
+| fokusvirrat, saapumispuheet, kohtaamiset, kohtaamiskuvat, tarinakaari, livianpuhe, paikkatiedot | Natiivi-UI / Pelikoodari | saapumisvirta, puheet, kohtaamiset, Livian cuet (aani, eleet) |
+
+### 10.2 `offline.json` (Siirtoseppä, skeema 1.9, toteutettu)
+
+Paketin juuressa, manifestissa `offline: { tiedosto, sha256, tavuja }`. Lähde
+`tools/vienti/offline.mjs` (Matkakirja-repo), skeema `skeema/offline.schema.json`.
+
+```
+{ "$skeema": "matkakirja-vienti/1/offline", "arvio": true, "koot": { "haettu", "otos" },
+  "lahteet": { "rasteri": { "url": "…/{z}/{x}/{y}.jpg", "skeema": "xyz", "projektio": "EPSG:3857",
+                            "koko": 256, "minzoom": 0, "maxzoom": 8, "globaaliMax": 5 },
+               "maasto":  { "layer": "…/layer.json", "url": "…/{z}/{x}/{y}.terrain?v=…",
+                            "skeema": "tms", "projektio": "EPSG:4326", "globaaliMax": 6 } },
+  "globaali": { "rasteri": { "0": [x0,y0,x1,y1], … "5": … },
+                "maasto":  { "0": [[x0,y0,x1,y1], …], … "6": … },   // layer.json available -välit
+                "media": [], "tavuja": { "rasteri", "maasto", "media": 0, "yht" } },   // noin 14 Mt
+  "valinnaiset": { "aanet":   { "media": [url, …], "tavuja" },     // maahan sitomaton media,
+                   "kuvat":   { "media": [url, …], "tavuja" },     // ladataan erikseen
+                   "linssit": { "media": [url, …], "tavuja" } },
+  "maat": { "FIN": { "iso2": "FI", "nimi": "Suomi",
+                     "rasteri": { "6": [x0,y0,x1,y1], "7": …, "8": … },
+                     "maasto":  { "7": [x0,y0,x1,y1], … },            // vain available-alueella
+                     "laattoja": { "rasteri": 158, "maasto": 0 },       // muotoa leikkaavat
+                     "media": [url, …],
+                     "tavuja": { "rasteri", "maasto", "media", "yht" } }, … } }
+```
+
+- Laattaväli on maan bbox tällä tasolla. `laattoja` ja `tavuja` lasketaan vain laatoista,
+  jotka leikkaavat maan muotoa (countryShapes). Lataaja voi joko ladata koko välin tai ohittaa
+  laatat, jotka eivät leikkaa muotoa (pisteen testaus maan muotoa vasten).
+- `media` = valmiit https-osoitteet (ei avaimia). Viite voi kuulua usealle maalle, joten
+  poisto tehdään viitelaskennalla. Ulkoiset lähde- ja viitekuvat eivät kuulu mukaan.
+- Tavut ovat arvioita: keskikoko otoksesta × määrä (`tools/vienti/offline-koot.json`,
+  päivitys `node tools/vienti/offline.mjs --paivita-koot`). Nykyarvio: globaali noin 14 Mt
+  (vain laatat ja maasto, Natiiviseppä 23.9.), valinnaiset äänet noin 190 Mt, kuvat noin
+  350 Mt ja linssit noin 8 Mt, maan mediaani noin 30 Mt, suurin Ranska noin 460 Mt
+  (maasto z7–z12).
+- Avain on ISO3 (pelin maakoodi), ja `iso2` on mukana `Alueet.Luettelo()`:a varten.
+
+### 10.3 Palvelinrajapinnat (Cloudflare Workers, sopimus natiiville)
+
+#### Pöllö/Livia (chat, puhesynteesi, sähketuomio)
+
+Osoite: `POLLOPALVELIN` = `https://matkakirja-pollo.samireivinen.workers.dev`
+(js/packs/pollo-asetukset.js). Yksi POST-reitti, haarautuu kentällä
+`tehtava`. Palvelin: tools/pollo/worker.js + tools/pollo/rajat.js.
+
+| Polku | Metodi | Pyyntö | Vastaus |
+|---|---|---|---|
+| `/` (`vastaus`, oletus) | POST | `{kysymys, konteksti?, historia?[{rooli,teksti}], kehys?, striimi?}` | `{vastaus, jatkot[], syy:null, paikka?}` tai SSE (`pala`/`loppu`/`virhe`) |
+| `/` `tehtava:"ehdotukset"` | POST | `{konteksti?}` | `{ehdotukset:string[2]}` |
+| `/` `tehtava:"puhe"` | POST | `{teksti, persoona, lohko?, nopeus?, aani?, ohje?}` | `audio/mpeg`-virta |
+| `/` `tehtava:"sahke"` | POST | `{id, vastaus}` (AI-sähketuomari, eri asia kuin moninpelin sähkejärjestelmä) | `{tulkittu, kohde, vuosi}` |
+| `/` `tehtava:"tila"` | POST | `{}` | kulut/kiintiöt — vain kehittäjäkoodilla |
+
+- Tunnistus: valinnainen otsake `x-pollo-kehittaja` (vakioaikainen
+  vertailu `POLLO_KEHITTAJAKOODI`) ohittaa rajat, avaa puheen ääni/ohje-
+  säädöt ja `tila`-reitin. Ilman koodia peli toimii tunnistamattomana.
+- Rajat: chat/ehdotukset/sähke 30/vrk, 1500/kk per IP-tiiviste (KV);
+  puhe merkkeinä 60 000/vrk, 900 000/kk. Ylitys → 429.
+- CORS: `POLLO_ORIGINIT`-lista (tyhjä = kiinni kaikilta); origin
+  tarkistetaan myös POST:ssa, ei vain esilennossa.
+- Malli: Anthropic Messages API, `env.POLLO_MALLI` tai `claude-haiku-4-5-20251001`
+  (`ANTHROPIC_API_KEY`). Puhe: OpenAI `/v1/audio/speech`,
+  `gpt-4o-mini-tts`, äänet onyx/sage (`OPENAI_API_KEY`).
+- Puhevastaukset välimuistoidaan reunalla + R2:ssa; `JATKOT:`/`PAIKKA:`-
+  rivit ja SSE-jäsennys hoidetaan palvelimella, ei asiakkaassa.
+
+#### Sähke (moninpeli: retkikunta, sähkeet, kaveriapu)
+
+Osoite: `SAHKE_OSOITE` = `https://matkakirja-sahke.samireivinen.workers.dev`
+(js/sahke.js). Palvelin: worker/sahke/worker.js+kasittelija.js, D1-kanta,
+ei jaettua salaisuutta — jokainen jäsen saa oman avaimen.
+
+| Polku | Metodi | Pyyntö | Vastaus |
+|---|---|---|---|
+| `/retkikunta/luo` | POST | `{nimimerkki}` (generaattorista) | `{koodi, jasenId, avain}` |
+| `/retkikunta/liity` | POST | `{koodi, nimimerkki}` | `{jasenId, avain, jasenet}` (409 jos ≥8 jäsentä) |
+| `/retkikunta/tila` | GET | query `koodi, jasenId, avain` | `{jasenet, sahkeet[], apupyynnot[], apuvastaukset[]}` |
+| `/sahke` | POST | `{koodi, jasenId, avain, pohjaId, paikkaId}` (valkolistan pohja) | sähkerivi |
+| `/apu/kysy` | POST | `{koodi, jasenId, avain, apuId, kysymys, vaihtoehdot}` | apupyyntö |
+| `/apu/vastaa` | POST | `{koodi, jasenId, avain, apuId, veikkaus}` (indeksi) | vastausrivi |
+
+- Tunnistus: ei header-tokenia — `jasenId`+`avain` selväkielisenä
+  joka pyynnössä (avain paljastuu vain luonti-/liittymisvastauksessa).
+  Väärä pari → 401.
+- Rajat: kirjoitukset 30 kpl/60 s per jäsen → 429; retkikunta max 8.
+- CORS: `SAHKE_ORIGINIT`-lista + **aina** `localhost`/`127.0.0.1`.
+- Malli: ei tekoälyä — CRUD + rajattu sanasto/pohjalista.
+
+#### Ehdotukset + reaktiot (palaute, PRO-tuottajat, tykkäykset)
+
+Osoite: `EHDOTUS_OSOITE` = `https://matkakirja-ehdotukset.samireivinen.workers.dev`
+(js/ehdotukset.js, js/reaktiot.js). Palvelin: worker/ehdotukset/
+{worker,kasittelija,pro,reaktiot,kuvavinkki}.js, tallennus R2 (yksityinen).
+
+| Polku | Metodi | Pyyntö | Vastaus |
+|---|---|---|---|
+| `/laheta` | POST | `multipart/form-data`: teksti, sivu?, nimimerkki?, sahkoposti?, kuvat[≤3,≤8Mt], koodi? (+hunajapurkki) | `{ok, kansio}` |
+| `/kuvavinkki…` | POST | kuvapalautelomake (tarkistamatta tarkka kenttälista) | — |
+| `/pro-tarkista` | POST | `{sahkoposti, koodi}` | `{ok, nimi, tekijaId, tila, profiili}` |
+| `/reaktiot?kohteet=` | GET | pilkuin erotettu lista | `{<kohde>:{hieno,ihana,mielenkiintoinen,tylsa,virhe}}` |
+| `/reaktio` | POST | `{kohde, symboli?, edellinen?}` | päivitetyt laskurit |
+| `/lista`,`/kohde/…`,`/kommentti`,`/reaktio-lista`,`/reaktio-korjattu` | GET/PUT | `?avain=` | vain omistajan työhuoneelle |
+
+- Tunnistus: pelaajareitit vain Origin-tarkistuksella, ei tokenia.
+  Omistajareitit vaativat `?avain=EHDOTUS_AVAIN`.
+- Rajat: ei erillistä pyyntörajoitinta löydetty (tarkistamatta —
+  ehkä Cloudflaren oma suojaus); kuva ≤8 Mt/≤3 kpl, teksti ≤4000.
+  Yhden-äänen-per-laite (reaktiot) on selaimen localStoragessa, ei palvelimella.
+- CORS: `EHDOTUS_ORIGINIT`-lista; pro-julkiset sivut ilman origin-vaatimusta.
+- Malli: ei tekoälyä.
+
+#### Muut ei-media fetch()-kutsut js/*.js:ssä
+
+`js/saa.js` → Open-Meteo (avaimeton, suora). `js/uutiset.js` → oma
+worker `UUTISPROXY` (tools/uutisproxy/worker.js, avaimeton, sallittujen
+isäntien lista palvelimella, CORS `*`) + MyMemory-käännös (avaimeton).
+`js/ui.js` `PALAUTE_LOMAKE` on tyhjä = pois käytöstä. `js/tyohuone-
+tilastot.js` (GitHub API) vain omistajan työhuoneessa. Karttalaatta-/
+vektori-/reliefimoduulit hakevat vain staattista dataa — rajattu
+tehtävänannon ulkopuolelle.
+
+#### Päätös: natiivin tunnistus (Fable 23.9.2026, sitova)
+
+- Web: `Origin`-sallittulista kuten nyt (`*_ORIGINIT`).
+- Natiivi: ei `Origin`-otsaketta. Sen sijaan **vaaditaan** otsake `x-matkakirja-natiivi` ja
+  sovelluksen bundle id `User-Agent`-otsakkeessa (sama kuin pollo-worker, Matkakirja-repon
+  PR #2956), muuten pyyntö hylätään.
+- Sama sääntö koskee kaikkia palvelinrajapintoja (pulu ja puhe, sähke, ehdotukset ja
+  reaktiot, uutisproxy). Jokaiseen workeriin tarvitaan sama tarkistus kuin pollo-workerissa.
+
+#### Natiivin huomiot
+
+- Kaikki kolme workeria nojaavat selaimen `Origin`-otsakkeeseen;
+  natiivilla ei ole web-originia — tarvitaan joko oma origin-arvo
+  lisättynä *_ORIGINIT-listoihin tai app-kohtainen tunnistautuminen.
+- Sähke-worker päästää aina `localhost`/`127.0.0.1` — ei ratkaise
+  tuotanto-natiivin tarvetta.
+- Pöllön kehittäjäotsake on vain omistajan testaukseen, ei yleinen
+  natiivitoken — chat/puhe tarvitsee oman, rajoitetun tunnistautumisen
+  (esim. App Attest tai kiinteä app-avain).
+- Sähkeen `jasenId`+`avain`-tunnistus toimii sellaisenaan natiivissa
+  (säilö Keychainissa).
+- Pöllön SSE-jäsennys (`\n\n`-erotetut tapahtumat) pitää toteuttaa
+  natiivissa itse; `JATKOT:`/`PAIKKA:`-poiminta on jo palvelimella.
+- Ehdotukset-workerin pelaajareitit eivät vaadi tokenia, vain origin —
+  natiivi tarvitsee saman ratkaisun kuin pöllö/sähke, muuten reitit
+  ovat auki suoraan ilman appia.

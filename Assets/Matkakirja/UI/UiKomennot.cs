@@ -6,6 +6,10 @@
 //   ui valikko | ui asetukset | ui sulje      avaa päävalikon / äänentasot, sulkee
 //   ui matka                                  esimerkkimatkavalinta (ilman peliä)
 //   ui kortti [kaupunki]                      kaupunkikortti (oletus firenze, ilman peliä)
+//   ui kysymys [laji]                         esimerkkikysymys ilman peliä: visa (oletus), vaite,
+//                                             kuva, lippu, pulma [id], kaksintaistelu,
+//                                             tapahtumakortti, tulos [laattatyyppi], kohtaaminen,
+//                                             kohtaaminen-tervehdys (KysymysEsimerkki.cs)
 //   ui selite                                 karttaselite auki
 //   ui kartuscha [ISO3] [auki]                kartuscha maalle ilman peliä (oletus ITA)
 //   ui heitto [teksti]                        kartan toimintonappi näkyviin
@@ -111,6 +115,7 @@ namespace Matkakirja.Natiivi
                         Sulje = () => { },
                     });
                     return null;
+                case "kysymys": return ui.Esimerkkikysymys(loput);
                 case "heitto": ui.Matkavalinta.NaytaHeitto(loput.Length > 0 ? loput : "Heitä noppaa → Lontoo", () => ui.Tilarivi.Viesti("Noppa: 4")); return null;
                 case "viesti": ui.Tilarivi.Viesti(loput, 4f); return null;
                 case "tila": ui.Tilarivi.Aseta(loput); return null;
