@@ -1,4 +1,4 @@
-# Karttasepän luovutus 23.9.2026 (sessio 4 → sessio 5)
+# Karttasepän luovutus 23.9.2026 (sessio 5 → seuraava; päivitetty 23.9. päivällä)
 
 Rooli-worktree `/Users/samireivinen/Matkakirja-karttaseppa` haarassa
 `karttaseppa-tyo-20260922` (EI mergetä — mergetyn haaran worktree katoaa).
@@ -11,14 +11,54 @@ käytä `git stash push -- <polku>`).
 
 ## Tila
 
-- **#2868 → tuotannossa v2136** (#2869): kaksi palstaa kaikkiin nostoihin.
-- **#2871 Julkaisijalla → v2137**: lehtipalstat kaikkiin pidempiin nostoihin.
+- **Nimiölukko → tuotannossa v2142** (#2882 → julkaisu #2884): näkyvä nimiö ei
+  vaihda puolta panoroinnissa eikä zoomissa (ks. alla).
+- **Kamerakallistus vaihe 1 → mainissa v2145 KOELIPUN TAKANA** (#2893 → #2894):
+  `?koe=kallistus` tai localStorage `matkakirja-kallistus` = '1'. Ei oletus.
+  **Vaihe 2 odottaa omistajan kokeilua** (Fable 23.9.: ei uutta erää ennen sitä).
+- **Lehtipalstat → tuotannossa v2137** (#2871 → #2872); nostopalstat v2136.
 - **Pohjapoltto 2026-09-22c tuotannossa v2116** (vesiviivat laudan yksiköissä,
   laikut maailmaan, hieno rae ennallaan). Ajokansio
   `/Users/koodaus/pyramidi-poltto/ajo-20260922c`; edellinen luettelo talteen
   `ajo-20260922c/ampari-luettelo-edellinen.json`. Palautus: osoitin
   `2026-09-22-pohja`/`20260922a` + tuo luettelo takaisin ämpäriin.
-- #2830 (tasonvaihtomittaus poltolla 22c, raportti) — tarkista onko mainissa.
+- #2830 (tasonvaihtomittaus poltolla 22c) mergetty.
+
+## Nimiölukko (v2142) — mekanismi ja vartijat
+
+Omistaja 23.9. klo 08.47 (iPhone v2140, "Chambordin linna" ja "Loire"
+hyppäsivät): *"Mitkään tekstit eivät saisi vaihtaa paikkaa panoroitaessa kun
+ne ovat ruudulla."* Tarkennus: sama zoomissa, vain koko muuttuu.
+
+- `js/pallolauta/sovittelu.js` **sääntö 5**: ruudulla (16 px vara) oleva
+  lukittu lappu kokeilee vain lukittua kylkeään zoomista riippumatta; reuna ei
+  pura lukkoa (nimi saa leikkautua); tukossa häipyy paikallaan ja palaa samaan
+  kylkeen. Törmäyksessä vanhempi voittaa (levossa lukittu > eleen aikana tullut
+  > lukoton), saman ikäisistä painoarvo; ruudulla ei ykköstason pakkoasentoa.
+- Mittari `tools/savukkeet/savuke-nimiolukko-veto.mjs` (WebKit 390 px, Loire,
+  16 vetoa + 12 zoomiporrasta): main 34 puolenvaihtoa → 0.
+- Vartiolinjaus muuttui: `savuke-nimiot-vakaat` 3 ja `savuke-nostotasot` 3
+  sallivat lukossa pidetyn leikkautuvan nimiön; nostotasot 4 lukee piilotuksen
+  syyn sovittelusta. `savuke-nimiot-sulavat` on punainen myös mainissa (ei
+  tämän asia).
+
+## Kamerakallistus vaihe 1 (v2145, koelippu)
+
+Suunnitelma ja mittaustaulukko `docs/raportit/kamerakallistus-suunnitelma-20260923.md`.
+
+- `js/pallolauta/kallistus.js`: virtuaalinen pov (katsepiste + korkeus +
+  `kallistus`), todellinen kamera P + d·o katsoo P:hen, `OrbitControls.update`
+  ohitetaan kallistuksen ajan. Syöte suoristaa 250 ms. Kytketty vain maan
+  esittely (animoitu `saavu` → 25° + orbit ±20° 6 s + paluu).
+- `js/pallolaatat.js` `kameranKehys`/`kallistettuKehys`: osuma, ruutupiste ja
+  näkyvyys kallistetulle kameralle; horisontin raja 0,6 × korkeus; usva rajan
+  projektiosta. pallo.js: yksirivinen CSS2D-ennusteen vartija (Fable: pidä).
+- Mittari `tools/savukkeet/mittaa-kallistus.mjs` (WebKit 390/1400, Ranska tasot
+  6–8 × 0/15/30°, 9/9). 390 px taso 8 näkyviä 12/12/15 (katto 15,6 — niukka).
+  **dc 26 → 54** orbitissa: kirjaston pohjapalat (`globeTileEngine`) usvan alla.
+- **Vaihe 2 (omistajan kokeilun jälkeen):** iPhone-mittaus ratkaisee 20° vs 30°
+  (`KALLISTUS_MAX`); rajaa pohjan piirto usvan alta (sama ilmiö kuin
+  Pelikoodarin löydös pohjasta häivytyksessä); lento- ja liikekytkennät.
 
 ## Nostopalstat (#2868, v2136) — mekanismi ja vartijat
 
@@ -80,6 +120,8 @@ pidempiin ainakin."*
    hienorakenteesta, joten Pelikoodarin ruutuavaruuden rakekerros ei korjaisi
    likaa. Lippu `--paperirae ruutu` on olemassa (#2817), ei käytössä.
 4. **Kartta 22c ja nostotason poltto** odottavat omistajan kantaa (tuntumatesti).
+7. **163 kaupungin lat/lon Siirtosepältä** odottaa (Fablen luovutusviesti
+   23.9.; tarkista Fablelta, mihin ne tulevat ja mitä niille tehdään).
 5. **Isobaattivektorit** odottavat omistajan päätöstä (viikon työ).
 6. Nimiöversio h (CHE-siirrot) valmiina `ajo-20260922/nimiot-poltto-5.json`,
    ajetaan omana eränään.
@@ -99,8 +141,10 @@ pidempiin ainakin."*
 | Polku | Haara | Tila |
 | --- | --- | --- |
 | `/Users/samireivinen/Matkakirja-karttaseppa` | `karttaseppa-tyo-20260922` | rooli, EI mergetä |
-| `/Users/koodaus/wt-karttaseppa-lehtipalstat` | `karttaseppa-lehtipalstat` | #2871 auki — älä poista ennen mergeä |
-| `/Users/koodaus/wt-karttaseppa-nostopalstat` | `karttaseppa-nostopalstat` | mergetty (v2136), siivottavissa |
+| `/Users/koodaus/wt-karttaseppa-kallistus` | `karttaseppa-kallistus` | julkaistu v2145 (koelippu); vaihe 2 voi jatkaa tästä tai uudesta mainista |
+| `/Users/koodaus/wt-karttaseppa-nimiolukko` | `karttaseppa-nimiolukko` | julkaistu v2142, siivottavissa |
+| `/Users/koodaus/wt-karttaseppa-lehtipalstat` | `karttaseppa-lehtipalstat` | julkaistu v2137, siivottavissa |
+| `/Users/koodaus/wt-karttaseppa-nostopalstat` | `karttaseppa-nostopalstat` | julkaistu v2136, siivottavissa |
 | `/Users/koodaus/Matkakirja-karttaseppa-pr` | `karttaseppa-mittaus-22c` | #2830, erätyöhön |
 | `/Users/koodaus/Matkakirja-poltto-22c` | `karttaseppa-poltto-22c` | polttoworktree, siivottavissa |
 | `/Users/koodaus/Matkakirja-main-ref` | detached | vertailu, siivottavissa |
@@ -108,6 +152,7 @@ pidempiin ainakin."*
 
 ## Uusi sessio tekee ensin
 
-1. `git fetch origin`; tarkista #2871 (v2137) ja #2830 mainissa.
-2. Odota omistajan tuntumatestiä kartasta 22c ennen uusia karttatöitä.
-3. Muistio: `karttaseppa-tila-20260922-ilta` (auto-memory).
+1. `git fetch origin`; lue tämä ja auto-memory `karttaseppa-tila-20260923`.
+2. Ei uutta karttatyötä ennen omistajan kantaa: kartta 22c, nostotason poltto,
+   kallistuksen kokeilu (vaihe 2).
+3. Siivottavat worktreet yllä (älä poista rooli-worktreetä).
