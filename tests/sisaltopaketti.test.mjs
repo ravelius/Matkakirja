@@ -414,8 +414,15 @@ test('skeema 1.9: luentojen aikaleimat ja Livian puheen cuet', async () => {
   const pariisi = luennat.get('matkakirja:pariisi');
   const { aikaleimojenOsoite } = await import('../js/luentareaktiot.js');
   assert.equal(pariisi.aikaleimat, aikaleimojenOsoite(pariisi.aanite));
-  assert.ok(pariisi.aikaleimaTiedosto && tiedostot.has(pariisi.aikaleimaTiedosto), 'aikaleimat paketissa');
-  assert.equal(JSON.parse(tiedostot.get(pariisi.aikaleimaTiedosto)).kaupunki, 'pariisi');
+  // Aikaleimat vain, jos ne on kohdistettu nykyiseen tekstiin (23.9.2026 kaikki vanhentuneita).
+  if (pariisi.aikaleimaTiedosto) {
+    assert.equal(JSON.parse(tiedostot.get(pariisi.aikaleimaTiedosto)).teksti, pariisi.teksti);
+  } else {
+    assert.equal(pariisi.reaktioHetket, null);
+  }
+  const { FOKUSVIRRAT } = await import('../js/packs/fokusvirrat.js');
+  assert.deepEqual(pariisi.reaktiot, JSON.parse(JSON.stringify(FOKUSVIRRAT.pariisi.matkakirja.reaktiot)));
+  assert.match(pariisi.tekstiSha256, /^[0-9a-f]{64}$/);
   const livia = JSON.parse(tiedostot.get('kokoelmat/livianpuhe.json')).alkiot;
   assert.equal(livia.length, 45);
   const ateena = livia.find((r) => r.id === 'ateena');

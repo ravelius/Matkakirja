@@ -73,7 +73,9 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        (aikaleimoineen), livianpuhe ja maat; offline.json (manifest.offline)
  *   1.10 (nippu 4) kokoelmat karttamerkit, karttavalot, maastonimet ja
  *        maarajat; muotokuva kohtaamisiin ja tarinakaareen, laattojen ja
- *        paikallisaarteiden kuvat, linssiluennat, saannot KATKOKUVA.
+ *        paikallisaarteiden kuvat, linssiluennat, saannot KATKOKUVA;
+ *        luennat: reaktiot, tekstiSha256, reaktioHetket (vain voimassa
+ *        olevista aikaleimoista; vanhentuneet aikaleimat pois paketista).
  *        Vertaa versioita numeroina (1.10 > 1.9), ei merkkijonoina.
  */
 export const SKEEMAVERSIO_TARKKA = '1.10';

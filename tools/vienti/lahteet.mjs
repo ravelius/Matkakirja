@@ -22,11 +22,27 @@
  * Sisältö, joka asuu moduulin SISÄISESSÄ muuttujassa (ei exporttia), ei
  * näy tälle työkalulle — raportin "ei mekaaniset" -lista.
  */
-import { readdirSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+import { readdirSync, readFileSync } from 'node:fs';
+import { FOKUSVIRRAT } from '../../js/packs/fokusvirrat.js';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
+
+function voimassaOlevatAikaleimat() {
+  // Voimassa = kohdistettu täsmälleen nykyiseen matkakirjatekstiin (sama
+  // ehto kuin js/luentareaktiot.js tarkistaAikaleimat).
+  const kansio = join(JUURI, 'assets/aikaleimat');
+  const tekstit = new Map(Object.values(FOKUSVIRRAT).filter((v) => v?.matkakirja?.aanite)
+    .map((v) => [v.matkakirja.aanite.split('/').at(-1).replace(/\.mp3$/, '.aikaleimat.json'), v.matkakirja.teksti]));
+  return readdirSync(kansio).filter((f) => f.endsWith('.json')).sort().filter((f) => {
+    const d = JSON.parse(readFileSync(join(kansio, f), 'utf8'));
+    const teksti = tekstit.get(f);
+    return d.versio === 2 && teksti && d.teksti === teksti
+      && d.tekstiSha256 === createHash('sha256').update(teksti).digest('hex');
+  }).map((f) => `assets/aikaleimat/${f}`);
+}
 const m = (moduuli, exportit, luokka = 'peli') => ({ moduuli, exportit, luokka });
 
 export const LISAMODUULIT = [
@@ -94,8 +110,9 @@ export const LISAMODUULIT = [
 export const LISATIEDOSTOT = [
   'assets/data/maakayrat.json',
   'assets/data/maapolygonit.json',
-  // Skeema 1.9: matkakirjaluentojen sanatason aikaleimat (luentareaktiot);
-  // kansio luetaan, joten uusi luenta tulee mukaan ilman muutosta tähän.
-  ...readdirSync(join(JUURI, 'assets/aikaleimat')).filter((f) => f.endsWith('.json')).sort()
-    .map((f) => `assets/aikaleimat/${f}`),
+  // Matkakirjaluentojen sanatason aikaleimat (luentareaktiot) vain, kun
+  // ne on kohdistettu nykyiseen luentatekstiin: 23.9.2026 kaikki 45
+  // repon kopiota ovat vanhentuneita (teksti uusittu 14.9.), joten
+  // mukaan ei tule yhtään. Ks. kokoelmat.mjs luentoKokoelma.
+  ...voimassaOlevatAikaleimat(),
 ];

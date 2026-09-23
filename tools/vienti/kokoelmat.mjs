@@ -28,7 +28,7 @@ import { nostosymPaakategoria } from '../../js/fokusnosto-symbolit.js';
 import { MAAILMANKARTAN_NIMET } from '../../js/packs/maailmankartta-nimet.js';
 import { ratkaiseMedia } from './media.mjs';
 import { aaniUrl, horatioAanenKesto } from '../../js/media.js';
-import { aikaleimojenOsoite } from '../../js/luentareaktiot.js';
+import { aikaleimojenOsoite, ratkaiseAnkkurit, AIKALEIMOJEN_VERSIO } from '../../js/luentareaktiot.js';
 import { livianEleidenOsoite } from '../../js/livia-puheeleet-lataus.js';
 import { kohtaamiskuvaKohteelle, kohtaamiskuvaTavalliselleKohtaamiselle } from '../../js/kohtaamiskuvat-data.js';
 import {
@@ -534,12 +534,25 @@ function luentoKokoelma(hae) {
   const { FOKUSVIRRAT } = hae('js/packs/fokusvirrat.js');
   // aikaleimat = sanatason ajoitus (js/luentareaktiot.js aikaleimojenOsoite);
   // aikaleimaTiedosto = sama JSON paketissa, jos se on repossa.
-  const aani = (polku) => {
-    const nimi = polku.split('/').at(-1).replace(/\.mp3$/, '.aikaleimat.json');
-    const repo = `assets/aikaleimat/${nimi}`;
+  // Aikaleimat kelpaavat vain, jos ne on kohdistettu täsmälleen nykyiseen
+  // tekstiin (js/luentareaktiot.js tarkistaAikaleimat: versio, teksti,
+  // tekstiSha256). Repon kopio on paketissa vain silloin; muuten
+  // aikaleimaTiedosto ja reaktioHetket ovat null.
+  const sha = (t) => createHash('sha256').update(t).digest('hex');
+  const voimassaOlevat = (polku, teksti) => {
+    const repo = new URL(`../../assets/aikaleimat/${polku.split('/').at(-1).replace(/\.mp3$/, '.aikaleimat.json')}`, import.meta.url);
+    if (!teksti || !existsSync(repo)) return null;
+    const data = JSON.parse(readFileSync(repo, 'utf8'));
+    return data.versio === AIKALEIMOJEN_VERSIO && data.teksti === teksti && data.tekstiSha256 === sha(teksti) ? data : null;
+  };
+  const aani = (polku, teksti = null, reaktiot = null) => {
+    const data = voimassaOlevat(polku, teksti);
     return {
       url: aaniUrl(polku), kesto: horatioAanenKesto(polku), aikaleimat: aikaleimojenOsoite(polku),
-      aikaleimaTiedosto: existsSync(new URL(`../../${repo}`, import.meta.url)) ? `tiedostot/${repo}` : null,
+      tekstiSha256: teksti ? sha(teksti) : null,
+      aikaleimaTiedosto: data ? `tiedostot/assets/aikaleimat/${polku.split('/').at(-1).replace(/\.mp3$/, '.aikaleimat.json')}` : null,
+      reaktiot: reaktiot ?? null,
+      reaktioHetket: data && reaktiot ? Object.fromEntries(ratkaiseAnkkurit(reaktiot, data).map((r) => [r.id, r.hetki])) : null,
     };
   };
   const rivit = [
@@ -547,13 +560,16 @@ function luentoKokoelma(hae) {
       aanite: l.aanite, ...aani(l.aanite) })),
     ...Object.entries(FOKUSVIRRAT).filter(([, v]) => v?.matkakirja?.aanite).map(([kaupunki, v]) => ({
       id: `matkakirja:${kaupunki}`, kaupunki, paikkarivi: v.matkakirja.paikkarivi ?? null,
-      teksti: v.matkakirja.teksti ?? null, kuvaus: null, aanite: v.matkakirja.aanite, ...aani(v.matkakirja.aanite),
+      teksti: v.matkakirja.teksti ?? null, kuvaus: null, aanite: v.matkakirja.aanite,
+      ...aani(v.matkakirja.aanite, v.matkakirja.teksti ?? null, v.matkakirja.reaktiot ?? []),
     })),
   ];
   return taulukko('js/packs/fokusvirrat.js#FOKUSVIRRAT.*.matkakirja + erikoisluennat',
     'Isoisän luennat: intro ja lento-alku sekä matkakirjaluennat kaupungeittain. url = valmis https-osoite '
       + '(aaniUrl), kesto sekunteina tai null, aanite = repopolku, aikaleimat = sanatason ajoitus ämpärissä '
-      + '(url + .aikaleimat.json), aikaleimaTiedosto = sama paketissa (tiedostot/…) tai null.',
+      + '(url + .aikaleimat.json; voi puuttua), tekstiSha256 = nykyisen tekstin tiiviste, jota aikaleimojen on '
+      + 'vastattava, reaktiot = Livian kuuntelureaktiot sellaisenaan ({id, ankkuri, tarkoitus, voimakkuus, siirtyma}), '
+      + 'reaktioHetket = {id: ms} ja aikaleimaTiedosto vain, kun paketin aikaleimat on kohdistettu nykyiseen tekstiin.',
     { kaupunki: 'kaupungit' }, rivit);
 }
 
