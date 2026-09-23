@@ -90,38 +90,27 @@ namespace Matkakirja.Linssit.Testit
         }
 
         static RadioAineisto Hybridi() => RadioAineisto.Lue(MiniJson.Jasenna("{\"alkiot\":[" +
-            "{\"id\":\"FIN\",\"iso3\":\"FIN\",\"nimi\":\"Yle Radio 1\",\"url\":\"https://yle/r1\",\"tyyppi\":\"aac\",\"yleisradio\":true,\"luokka\":\"sallittu\"}," +
-            "{\"id\":\"SWE\",\"iso3\":\"SWE\",\"nimi\":\"P1\",\"url\":\"https://sr/p1\",\"sivu\":\"https://sverigesradio.se/p1\",\"luokka\":\"linkki\"}," +
-            "{\"id\":\"NOR\",\"iso3\":\"NOR\",\"nimi\":\"NRK P1\",\"url\":\"https://nrk/p1\",\"luokka\":\"kielletty\",\"varaAani\":{\"url\":\"https://media/nor.mp3\",\"kesto\":180}}," +
-            "{\"id\":\"DNK\",\"iso3\":\"DNK\",\"nimi\":\"DR P1\",\"url\":\"https://dr/p1\",\"luokka\":\"kielletty\"}]}"),
+            "{\"id\":\"FIN\",\"iso3\":\"FIN\",\"nimi\":\"Radio Helsinki\",\"url\":\"https://rh/live\",\"tyyppi\":\"mp3\",\"luokka\":\"sallittu\"}," +
+            "{\"id\":\"EST\",\"iso3\":\"EST\",\"nimi\":\"Raadio 2\",\"url\":\"https://err/r2\",\"tyyppi\":\"aac\",\"luokka\":\"epaselva\"}," +
+            "{\"id\":\"SWE\",\"iso3\":\"SWE\",\"nimi\":\"P1\",\"url\":\"https://sr/p1\",\"sivu\":\"https://sverigesradio.se/p1\",\"luokka\":\"kielletty\"}," +
+            "{\"id\":\"NOR\",\"iso3\":\"NOR\",\"nimi\":\"NRK P1\",\"url\":\"https://nrk/p1\",\"luokka\":\"kielletty\"}]}"),
             Paketti("radiot.json"), Paketti("kaupungit-radio.json"));
 
-        [Testi] static void KokoelmaEnsisijainenJaHybridiluokat()
+        [Testi] static void KokoelmaEnsisijainenJaLuokat()
         {
             var a = Hybridi();
             Oleta.Sama(4, a.Asemat.Count, "kokoelma voittaa moduulin");
-            Oleta.Sama(RadioLinssi.Toiminto.Soita, RadioLinssi.ToimintoAsemalle(a.MaanAsema("FIN")));
-            Oleta.Sama(RadioLinssi.Toiminto.Linkki, RadioLinssi.ToimintoAsemalle(a.MaanAsema("SWE")));
-            Oleta.Sama(RadioLinssi.Toiminto.Aanite, RadioLinssi.ToimintoAsemalle(a.MaanAsema("NOR")));
-            Oleta.Sama(RadioLinssi.Toiminto.Ei, RadioLinssi.ToimintoAsemalle(a.MaanAsema("DNK")));
-            // Luokaton (varareitti) ei soi koskaan, ei edes kehittäjätilassa (Fablen sääntö).
+            Oleta.Sama(RadioLinssi.Toiminto.Soita, RadioLinssi.ToimintoAsemalle(a.MaanAsema("FIN")), "sallittu soi");
+            Oleta.Sama(RadioLinssi.Toiminto.Soita, RadioLinssi.ToimintoAsemalle(a.MaanAsema("EST")), "epaselva soi");
+            Oleta.Sama(RadioLinssi.Toiminto.Linkki, RadioLinssi.ToimintoAsemalle(a.MaanAsema("SWE")), "kielletty = linkki");
+            Oleta.Sama(RadioLinssi.Toiminto.Ei, RadioLinssi.ToimintoAsemalle(a.MaanAsema("NOR")), "kielletty ilman sivua");
             var vanha = Linssirekisteri.Kehittajatila;
             try
             {
                 Linssirekisteri.Kehittajatila = true;
-                Oleta.Sama(RadioLinssi.Toiminto.Ei, RadioLinssi.ToimintoAsemalle(A().MaanAsema("FIN")));
+                Oleta.Sama(RadioLinssi.Toiminto.Ei, RadioLinssi.ToimintoAsemalle(A().MaanAsema("FIN")), "luokaton ei soi");
             }
             finally { Linssirekisteri.Kehittajatila = vanha; }
-        }
-
-        [Testi] static void KoepaketinKokoelmaLinkkeina()
-        {
-            // v16: kaikki asemat linkkejä ennen lupia; sivuttomat eivät tee mitään.
-            var a = RadioAineisto.Lue(Paketti("radiot-kokoelma.json"), null, Paketti("kaupungit-radio.json"));
-            Oleta.Sama(115, a.Asemat.Count);
-            var toiminnot = a.Asemat.Values.GroupBy(RadioLinssi.ToimintoAsemalle).ToDictionary(g => g.Key, g => g.Count());
-            Oleta.Tosi(!toiminnot.ContainsKey(RadioLinssi.Toiminto.Soita), "ei suoria lähetyksiä ilman lupaa");
-            Oleta.Sama(a.Asemat.Values.Count(x => !string.IsNullOrEmpty(x.Sivu)), toiminnot[RadioLinssi.Toiminto.Linkki]);
         }
 
         [Testi] static void LuokatonJaKiellettyEivatSoiKehittajatilassakaan()
@@ -135,35 +124,66 @@ namespace Matkakirja.Linssit.Testit
                 l.Avaa(new ValeYmparisto());
                 l.Viritä("FIN");
                 Oleta.Tosi(v.Auki == null, "luokaton ei soi");
+                Oleta.Sama(0, l.Asteikko.Count, "luokattomat eivät näy asteikolla");
                 var h = new RadioLinssi(Hybridi(), v, new ValeViritin(), new ValeRadioKartta(), Fontti());
                 h.Avaa(new ValeYmparisto());
-                h.Viritä("DNK");
-                Oleta.Tosi(v.Auki == null && h.Tila.Vaihe == RadioVaihe.Virhe, "kielletty ilman vara-äänitettä ei soi");
+                h.Viritä("SWE");
+                Oleta.Tosi(v.Auki == null && h.Tila.Vaihe == RadioVaihe.Linkki, "kielletty ei soi, linkki");
             }
             finally { Linssirekisteri.Kehittajatila = vanha; }
         }
 
-        [Testi] static void HybridiSoittaaLinkittaaJaAanittaa()
+        [Testi] static void LuokatSoittavatJaLinkittavat()
         {
             var y = new ValeYmparisto();
             var v = new ValeVirta();
-            var k = new ValeRadioKartta();
-            var l = new RadioLinssi(Hybridi(), v, new ValeViritin(), k, Fontti());
+            var l = new RadioLinssi(Hybridi(), v, new ValeViritin(), new ValeRadioKartta(), Fontti());
             l.Avaa(y);
             l.Viritä("SWE");
             Oleta.Sama(RadioVaihe.Linkki, l.Tila.Vaihe);
             Oleta.Sama("https://sverigesradio.se/p1", l.Tila.Sivu);
-            Oleta.Tosi(v.Auki == null, "linkki ei soita");
-            l.Viritä("NOR");
+            l.Viritä("EST");
             Oleta.Sama(RadioVaihe.Viritys, l.Tila.Vaihe);
-            Oleta.Sama("https://media/nor.mp3", v.Auki);
-            Oleta.Tosi(l.Tila.Aanite, "vara-äänite");
-            l.Viritä("DNK");
+            Oleta.Sama("https://err/r2", v.Auki);
+            l.Viritä("NOR");
             Oleta.Sama(RadioVaihe.Virhe, l.Tila.Vaihe);
             Oleta.Sama("Ei lähetystä", l.Tila.Viesti);
             l.Viritä("FIN");
-            Oleta.Sama("https://yle/r1", v.Auki);
-            Oleta.Tosi(!l.Tila.Aanite, "suora lähetys");
+            Oleta.Sama("https://rh/live", v.Auki);
+        }
+
+        [Testi] static void KoepaketinKokoelmaLinkkeina()
+        {
+            // v16: kaikki luokassa "linkki" (vanha nimi, käsitellään kuten kielletty).
+            var a = RadioAineisto.Lue(Paketti("radiot-kokoelma.json"), null, Paketti("kaupungit-radio.json"));
+            Oleta.Sama(115, a.Asemat.Count);
+            var toiminnot = a.Asemat.Values.GroupBy(RadioLinssi.ToimintoAsemalle).ToDictionary(g => g.Key, g => g.Count());
+            Oleta.Tosi(!toiminnot.ContainsKey(RadioLinssi.Toiminto.Soita), "ei suoria lähetyksiä");
+            Oleta.Sama(a.Asemat.Values.Count(x => !string.IsNullOrEmpty(x.Sivu)), toiminnot[RadioLinssi.Toiminto.Linkki]);
+        }
+
+        [Testi] static void KoepaketinV17RiviYksiSoi()
+        {
+            // v17 (skeema 1.16): 115 maata, rivi 1 soi aina; 17 kiellettyä yleisradiota rivinä 2.
+            var a = RadioAineisto.Lue(Paketti("radiot-kokoelma-v17.json"), null, Paketti("kaupungit-radio.json"));
+            Oleta.Sama(115, a.Asemat.Count);
+            Oleta.Tosi(a.Asemat.Values.All(x => x.Jarjestys == 1 && x.Id == x.Iso3), "kanava on rivi 1");
+            Oleta.Tosi(a.Asemat.Values.All(x => RadioLinssi.ToimintoAsemalle(x) == RadioLinssi.Toiminto.Soita), "kaikki kanavat soivat");
+            Oleta.Sama(17, a.Vaihtoehdot.Count);
+            Oleta.Tosi(a.Vaihtoehdot.Values.SelectMany(v => v).All(x => x.Luokka == "kielletty" && x.Id.EndsWith(":yleisradio")
+                && RadioLinssi.ToimintoAsemalle(x) == RadioLinssi.Toiminto.Linkki), "yleisradio linkkinä");
+            Oleta.Sama("ByteFM", a.Asemat["DEU"].Nimi);
+            Oleta.Sama("sallittu", a.Asemat["CHE"].Luokka);
+        }
+
+        [Testi] static void PieninJarjestysVoittaaRivienJarjestyksesta()
+        {
+            var a = RadioAineisto.Lue(MiniJson.Jasenna("{\"alkiot\":[" +
+                "{\"id\":\"FIN:yleisradio\",\"iso3\":\"FIN\",\"jarjestys\":2,\"nimi\":\"Yle\",\"luokka\":\"kielletty\",\"sivu\":\"https://yle.fi/\"}," +
+                "{\"id\":\"FIN\",\"iso3\":\"FIN\",\"jarjestys\":1,\"nimi\":\"Radio Helsinki\",\"url\":\"https://rh/live\",\"luokka\":\"epaselva\"}]}"),
+                null, Paketti("kaupungit-radio.json"));
+            Oleta.Sama("Radio Helsinki", a.Asemat["FIN"].Nimi);
+            Oleta.Sama("Yle", a.Vaihtoehdot["FIN"].Single().Nimi);
         }
 
         [Testi] static void RadionKaupungitKutenWebissa()

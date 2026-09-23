@@ -85,7 +85,8 @@ namespace Matkakirja.Natiivi
         readonly System.Random arpa = new System.Random();
         bool tervehditty, kysyy;
         string viimeMietinta;
-        int ehdotusPoletti;
+        int ehdotusPoletti, kuvaPoletti;
+        readonly Kuvasuurennos suurennos;
         (double Lat, double Lon, double Korkeus)? paluupaikka;
 
         public bool Auki { get; private set; }
@@ -126,6 +127,7 @@ namespace Matkakirja.Natiivi
             palaa.style.display = DisplayStyle.None;
             Kirjasimet.Aseta(palaa, Kirjasin.Kone);
 
+            suurennos = new Kuvasuurennos(juuri);
             kerros.TurvaMuuttui += Asettele;
             Asettele();
         }
@@ -158,6 +160,7 @@ namespace Matkakirja.Natiivi
 
         public void Sulje()
         {
+            suurennos.Sulje();
             if (!Auki) return;
             Auki = false;
             sulkija.style.display = DisplayStyle.None;
@@ -279,6 +282,125 @@ namespace Matkakirja.Natiivi
             valmis(t);
         }
 
+        // --- vastauksen kuva (web liitaVastausKuva, naytaVastausKuva, avaaWikiKuva) ---------------
+
+        static readonly Regex KasiteKuvio = new Regex(@"\[\[([^\[\]\n]{1,60})\]\]");
+        static readonly Regex PelkkaLuku = new Regex(@"^\d{1,4}(?:[.\-–]\d{1,4})?$");
+        static readonly Regex HuonoKuva = new Regex(@"montage|collage|kollaasi|mosaic|banner|coat|vaakuna|flag|lippu|locator|\bmap\b|kartta|logo|seal|icon|graph|diagram|chart|topography|density|evolution|\.svg$", RegexOptions.IgnoreCase);
+        static readonly string[] WikiKielet = { "fi", "en" };
+
+        /// <summary>Kuvan aihe: vastauksen ensimmäinen käsite [[aihe|muoto]] (ei pelkkä luku), muuten kysymys.</summary>
+        static string VastauskuvanAihe(string vastaus, string kysymys)
+        {
+            foreach (Match m in KasiteKuvio.Matches(vastaus ?? ""))
+            {
+                string k = m.Groups[1].Value.Trim();
+                int p = k.IndexOf('|');
+                string aihe = (p < 0 ? k : k.Substring(0, p)).Trim();
+                if (aihe.Length == 0 && p >= 0) aihe = k.Substring(p + 1).Split('|')[^1].Trim();
+                if (aihe.Length > 0 && !PelkkaLuku.IsMatch(aihe)) return aihe;
+            }
+            string siisti = Regex.Replace(Nakyva(kysymys ?? ""), @"\s+", " ").Trim().TrimEnd('?', '!', '.').Trim();
+            return siisti.Length > 0 ? siisti : null;
+        }
+
+        sealed class WikiYhteenveto { public string Kieli, Otsikko, Tiivistelma, Kuva, Osoite; }
+
+        static IEnumerator HaeYhteenveto(string otsikko, string[] kielet, Action<WikiYhteenveto> valmis)
+        {
+            WikiYhteenveto vara = null;
+            foreach (var kieli in kielet)
+            {
+                using (var r = UnityWebRequest.Get($"https://{kieli}.wikipedia.org/api/rest_v1/page/summary/{Uri.EscapeDataString(otsikko)}"))
+                {
+                    yield return r.SendWebRequest();
+                    if (r.result != UnityWebRequest.Result.Success) continue;
+                    var o = MiniJson.Objekti(Jasenna(r.downloadHandler.text));
+                    if (o == null || MiniJson.Teksti(o, "type") == "disambiguation") continue;
+                    string tiiv = (MiniJson.Teksti(o, "extract") ?? "").Trim();
+                    if (tiiv.Length == 0) continue;
+                    var y = new WikiYhteenveto
+                    {
+                        Kieli = kieli, Otsikko = MiniJson.Teksti(o, "title") ?? otsikko, Tiivistelma = tiiv,
+                        Kuva = MiniJson.Teksti(MiniJson.Objekti(MiniJson.Kentta(o, "originalimage")), "source")
+                            ?? MiniJson.Teksti(MiniJson.Objekti(MiniJson.Kentta(o, "thumbnail")), "source"),
+                        Osoite = MiniJson.Teksti(MiniJson.Objekti(MiniJson.Kentta(MiniJson.Objekti(MiniJson.Kentta(o, "content_urls")), "desktop")), "page"),
+                    };
+                    if (tiiv.Length >= 200) { valmis(y); yield break; }
+                    vara ??= y;
+                }
+            }
+            valmis(vara);
+        }
+
+        /// <summary>Otsikko vastaa aihetta (web otsikkoVastaa): hakutulos ei saa viedä sivuun.</summary>
+        static bool OtsikkoVastaa(string aihe, string otsikko)
+        {
+            string a = (aihe ?? "").ToLowerInvariant().Trim(), o = (otsikko ?? "").ToLowerInvariant().Trim();
+            if (a.Length == 0 || o.Length == 0) return false;
+            if (Regex.IsMatch(o, @"\(.+\)") && !Regex.IsMatch(a, @"\(.+\)")) return false;
+            if (a == o || a.Contains(o) || o.Contains(a)) return true;
+            int i = 0;
+            while (i < a.Length && i < o.Length && a[i] == o[i]) i++;
+            int lyhin = Mathf.Min(a.Length, o.Length);
+            return lyhin >= 4 && i >= Mathf.Max(4, Mathf.CeilToInt(lyhin * 0.7f));
+        }
+
+        /// <summary>Web haeKuvallinenArtikkeli: suora nimi ensin, haku varalle; kuva ei saa olla kartta, lippu tms.</summary>
+        static IEnumerator HaeKuvallinen(string aihe, Action<WikiYhteenveto> valmis)
+        {
+            bool Kelpaa(WikiYhteenveto y) => y?.Kuva != null && !HuonoKuva.IsMatch(y.Kuva);
+            WikiYhteenveto suora = null;
+            yield return HaeYhteenveto(aihe, WikiKielet, y => suora = y);
+            if (Kelpaa(suora)) { valmis(suora); yield break; }
+            if (suora != null) { valmis(null); yield break; }
+            foreach (var kieli in WikiKielet)
+            {
+                string osuma = null;
+                using (var r = UnityWebRequest.Get($"https://{kieli}.wikipedia.org/w/api.php?action=query&list=search&srsearch={Uri.EscapeDataString(aihe)}&srlimit=1&srnamespace=0&format=json&origin=*"))
+                {
+                    yield return r.SendWebRequest();
+                    if (r.result != UnityWebRequest.Result.Success) continue;
+                    var haku = Rakenne.Lista(MiniJson.Kentta(MiniJson.Objekti(MiniJson.Kentta(MiniJson.Objekti(Jasenna(r.downloadHandler.text)), "query")), "search"));
+                    osuma = haku != null && haku.Count > 0 ? MiniJson.Teksti(MiniJson.Objekti(haku[0]), "title") : null;
+                }
+                if (osuma == null || !OtsikkoVastaa(aihe, osuma)) continue;
+                WikiYhteenveto y = null;
+                yield return HaeYhteenveto(osuma, new[] { kieli }, x => y = x);
+                if (Kelpaa(y)) { valmis(y); yield break; }
+            }
+            valmis(null);
+        }
+
+        /// <summary>
+        /// Vastauksen kuva kuplan oikeaan yläkulmaan (web .pollo-vastauskuva, 5,2 rem): napautus →
+        /// kuva isompana (web avaaWikiKuva: kuva, tiivistelmä ja lähde, ei ilman lähdettään).
+        /// Ei yhteyttä tai ei kuvaa = kuvaton vastaus, joka on kelvollinen.
+        /// </summary>
+        IEnumerator VastausKuva(Label kupla, string vastaus, string kysymys)
+        {
+            int poletti = ++kuvaPoletti;
+            string aihe = VastauskuvanAihe(vastaus, kysymys);
+            if (aihe == null) yield break;
+            WikiYhteenveto y = null;
+            yield return HaeKuvallinen(aihe, x => y = x);
+            if (y == null || poletti != kuvaPoletti || kupla.panel == null) yield break;
+            Kuvat.Hae(y.Kuva, t =>
+            {
+                if (t == null || kupla.panel == null) return;
+                var nappi = Rakenne.El("mk-chat__vastauskuva", kupla);
+                nappi.tooltip = "Näytä kuva isompana";
+                nappi.style.backgroundImage = new StyleBackground(t);
+                kupla.AddToClassList("mk-chat__livia--kuva");
+                string lahde = "Wikipedia · " + y.Otsikko;
+                nappi.AddManipulator(new Clickable(() => suurennos.Avaa(new List<LehtiKuva>
+                {
+                    new LehtiKuva { Lahde = y.Kuva, Otsikko = y.Otsikko, Selite = y.Tiivistelma, LahdeRivi = lahde },
+                })));
+                Vierita(kupla);
+            });
+        }
+
         /// <summary>Wiki-linkit [[…]] ja putkimerkintä pois näkyvästä tekstistä.</summary>
         static string Nakyva(string vastaus) => Regex.Replace(vastaus ?? "", @"\[\[(?:[^\]|]*\|)?([^\]]*)\]\]", "$1");
 
@@ -303,7 +425,8 @@ namespace Matkakirja.Natiivi
                 yield break;
             }
             string nakyva = Nakyva(t.Vastaus);
-            Viesti("mk-chat__livia", nakyva);
+            var kupla = Viesti("mk-chat__livia", nakyva);
+            UiKerros.Hae().StartCoroutine(VastausKuva(kupla, t.Vastaus, kysymys));
             pulu.Tilanne("answer", nakyva);
             if (AaniPaalla) Puhe.Hae()?.Lue(nakyva, "pollo");
             if (paikkakysymys && !joLennetty && t.Paikka != null) LennaPaikkaan(t.Paikka);
