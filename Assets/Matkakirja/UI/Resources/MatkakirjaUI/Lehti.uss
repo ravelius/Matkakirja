@@ -388,31 +388,110 @@
 }
 
 .mk-lehti__tehtavatulos {
-    margin-top: 8px;
-    font-size: 14.5px;
+    margin-top: 11px;
+    padding: 8px 11px;
+    border-left-width: 4px;
+    border-left-color: rgba(60, 44, 26, 0.55);
+    background-color: rgba(60, 44, 26, 0.07);
+    font-size: 15px;
     white-space: normal;
-    color: #9a2b21;
+    color: #211d18;
 }
 
 .mk-lehti__tehtavatulos.mk-oikein {
-    color: #2f6b3a;
+    border-left-color: rgba(74, 124, 58, 0.9);
+    background-color: rgba(106, 158, 84, 0.2);
+}
+
+.mk-lehti__tehtavatulos.mk-vaarin {
+    border-left-color: rgba(74, 124, 58, 0.85);
+    background-color: rgba(106, 158, 84, 0.1);
+}
+
+/* Palkintojuliste tehtävälaatikon kyljessä (web .minitehtava-palkinnollinen, .juliste-palkinto). */
+.mk-lehti__tehtavarunko {
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.mk-lehti__tehtavapalsta {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.mk-lehti__julistepalkinto {
+    width: 110px;
+    flex-shrink: 0;
+    margin: 2px 0 10px 12px;
+    align-items: stretch;
+}
+
+.mk-lehti__julistekuva {
+    height: 165px;
+    border-width: 1px;
+    border-color: rgba(60, 44, 26, 0.55);
+    -unity-background-scale-mode: scale-to-fit;
+    opacity: 0.5;
+    -unity-background-image-tint-color: rgb(200, 190, 175);
+    transition-property: opacity, -unity-background-image-tint-color;
+    transition-duration: 0.26s;
+}
+
+.mk-lehti__julistepalkinto.mk-voitettu .mk-lehti__julistekuva {
+    opacity: 1;
+    border-color: rgba(60, 44, 26, 0.8);
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+}
+
+.mk-lehti__julistemerkki {
+    margin-top: 5px;
+    font-size: 9px;
+    letter-spacing: 2.2px;
+    -unity-text-align: upper-center;
+    color: rgba(60, 44, 26, 0.72);
+}
+
+.mk-lehti__julistepalkinto.mk-voitettu .mk-lehti__julistemerkki {
+    color: rgba(60, 44, 26, 0.95);
+}
+
+.mk-lehti__lunastus {
+    min-height: 44px;
+    margin-top: 8px;
+    border-width: 1px;
+    border-color: rgba(60, 44, 26, 0.65);
+    border-radius: 4px;
+    background-color: rgba(255, 253, 245, 0.9);
+    color: #211d18;
+}
+
+.mk-lehti__lunastus .mk-nappi__teksti {
+    font-size: 15.5px;
 }
 
 /* --- alapalkki ja sisällys ------------------------------------------------------------ */
 
 .mk-lehti__alapalkki {
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
     flex-shrink: 0;
     padding: 8px 14px 14px 14px;
     border-top-width: 1px;
     border-top-color: rgba(70, 51, 31, 0.25);
 }
 
+/* Poistu vasemmalla, eteenpäin vievä oikealla (omistaja 8.8.2026). */
+.mk-lehti__navi {
+    flex-direction: row;
+    align-items: stretch;
+}
+
 .mk-lehti__poistu {
     min-height: 40px;
-    padding: 0 10px 0 0;
-    border-width: 0;
+    margin-right: auto;
+    padding: 4px 12px;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.3);
+    border-radius: 3px;
     background-color: rgba(0, 0, 0, 0);
     color: rgba(70, 51, 31, 0.55);
 }
@@ -422,10 +501,11 @@
 }
 
 .mk-lehti__selaus {
+    flex-direction: column;
     flex-shrink: 1;
     min-height: 40px;
     margin-left: 8px;
-    padding: 6px 12px;
+    padding: 4px 12px;
     border-width: 1px;
     border-color: rgba(70, 51, 31, 0.45);
     border-radius: 3px;
@@ -434,16 +514,72 @@
 }
 
 .mk-lehti__selaus--seuraava {
-    margin-left: auto;
     background-color: rgba(217, 161, 59, 0.22);
     border-color: rgba(122, 85, 20, 0.6);
 }
 
-.mk-lehti__selaus .mk-nappi__teksti {
+.mk-lehti__selaus--sisallys {
+    flex-direction: row;
+    margin-left: 0;
+    margin-right: auto;
+    padding: 4px 11px;
+}
+
+.mk-lehti__selaus--sisallys > .mk-ikoni {
+    width: 18px;
+    height: 18px;
+    margin-right: 0;
+}
+
+.mk-lehti__selaussuunta {
     font-size: 13px;
+    -unity-text-align: middle-center;
+}
+
+.mk-lehti__selausaihe {
+    max-width: 150px;
+    font-size: 10.5px;
+    opacity: 0.72;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    -unity-text-align: middle-center;
+}
+
+/* Tehtävänappi (web #arrival-yes, primary) täysleveänä rivinä alapalkin alla. */
+.mk-lehti__tehtavanappi {
+    min-height: 0;
+    margin-top: 8px;
+    padding: 7px 13px;
+    border-width: 1px;
+    border-color: rgba(122, 85, 20, 0.6);
+    border-radius: 10px;
+    color: #2a1a08;
+}
+
+.mk-lehti__tehtavanappi .mk-nappi__teksti {
+    font-size: 14px;
+}
+
+.mk-lehti__tehtavanappi--pois {
+    opacity: 0.55;
+    -unity-background-image-tint-color: rgb(170, 170, 170);
+}
+
+/* "Maa-liite" kaupunkilehden viimeisellä sivulla (web .maa-liite-nappi). */
+.mk-lehti__liite {
+    min-height: 0;
+    margin-top: 8px;
+    padding: 7px 13px;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.45);
+    border-radius: 10px;
+    background-color: rgba(255, 252, 242, 0.5);
+    color: #46331f;
+}
+
+.mk-lehti__liite .mk-nappi__teksti {
+    font-size: 13px;
 }
 
 .mk-lehti__sisallys {

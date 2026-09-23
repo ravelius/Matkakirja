@@ -18,9 +18,11 @@
 // yläpalkin pillerissä (Ylapalkki.RahaMuuttui). VARUSTEET: linssit kuten webin
 // linssikotelo (Fablen tarkastus C3: sekä laukussa että kartan taikalaseissa);
 // rivin napautus sulkee laukun ja vaihtaa linssin (LinssiUi.ValitseLinssi).
-// Julistegalleria ja tietäjägalleria tulevat omina erinään.
+// Julisterivi avaa julistegallerian (Galleriat.cs), tietäjärivin i Tietäjän tien
+// (minipopup) ja Aarnin luettelon i pikkuselosteen (web pikkuselosteNappi).
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -30,6 +32,12 @@ namespace Matkakirja.Natiivi
     {
         const string TilastotAvain = "matkakirja-laukku-tilastot";
 
+        // Tarinakaanonia (Fablen teksti, web ui.js aarni-otsikko): ei lyhennetä.
+        public const string AarniSeloste = "Aarnin luettelo on isoisän vanhan ystävän, keräilijä Aarnin, kokoama "
+            + "lista aarteista, jotka ovat päässeet unohtumaan. Kateissa-luku "
+            + "kertoo, montako niistä on vielä löytämättä — jokainen matkalla "
+            + "ratkaistu johtolanka voi viedä yhden jäljille.";
+
         readonly Func<VisualElement> pilleri;
         readonly VisualElement matka, tilastot, lohko, aarteet, tavarat, julisteet;
         readonly Button tilastoNappi;
@@ -37,6 +45,7 @@ namespace Matkakirja.Natiivi
         readonly VisualElement varusteet;
         PeliOhjain kuunneltu;
         Func<LaukkuNaytto> testiData;
+        LaukkuNaytto naytetty;
 
         public Matkalaukku(UiKerros kerros, Func<float> alareuna, Func<VisualElement> pilleri) : base(kerros, alareuna, "mk-laukku")
         {
@@ -53,14 +62,28 @@ namespace Matkakirja.Natiivi
             Rakenne.Teksti("›", "mk-laukku__vakanen", tilastoNappi);
             lohko = Rakenne.El("mk-laukku__lohko", Sisalto, PickingMode.Ignore);
             tilastot = Rakenne.El("mk-laukku__rivit", lohko, PickingMode.Ignore);
-            Osio("Aarnin luettelo", lohko);
+            var aarniOtsikko = Rakenne.El("mk-laukku__osiorivi", lohko, PickingMode.Ignore);
+            Osio("Aarnin luettelo", aarniOtsikko);
+            Pikkuseloste.Nappi(AarniSeloste, aarniOtsikko);
             aarteet = Rakenne.El("mk-laukku__rivit", lohko, PickingMode.Ignore);
             Osio("Tavarat", lohko);
             tavarat = Rakenne.El("mk-laukku__rivit", lohko, PickingMode.Ignore);
-            julisteet = Rakenne.El("mk-laukku__julisteet", lohko, PickingMode.Ignore);
+            julisteet = Rakenne.El("mk-laukku__julisteet", lohko);
+            julisteet.AddManipulator(new Clickable(AvaaJulisteet));
             varusteOtsikko = Osio("Varusteet");
             varusteet = Rakenne.El("mk-laukku__rivit", Sisalto, PickingMode.Ignore);
             AsetaTilastot(PlayerPrefs.GetString(TilastotAvain, "0") == "1");
+            AukiMuuttui += auki => { if (!auki) Pikkuseloste.Sulje(); };
+        }
+
+        /// <summary>Testikomento: tilastolohko auki (Aarnin luettelo näkyviin).</summary>
+        public void AvaaTilastot() => AsetaTilastot(true);
+
+        void AvaaJulisteet()
+        {
+            var d = naytetty;
+            if (d == null || d.Julisteet.Count == 0) return;
+            UiNakymat.Hae().Julistegalleria.Avaa(d.Julisteet.Select(j => j.Avain));
         }
 
         Label Osio(string teksti, VisualElement isa = null)
@@ -95,6 +118,9 @@ namespace Matkakirja.Natiivi
         {
             KytkeOhjain();
             var d = testiData?.Invoke() ?? PeliOhjain.Instanssi?.Laukku();
+            if (d != null) KehittajanJulisteet(d);
+            naytetty = d;
+            Pikkuseloste.Sulje();
             matka.Clear(); tilastot.Clear(); aarteet.Clear(); tavarat.Clear(); julisteet.Clear();
             Varusteet();
             if (d == null)
@@ -152,6 +178,15 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        /// <summary>Kehittäjätilassa kaikki julisteet näkyvät voitettuina (web julisteVoitot, omistaja 22.8.2026).</summary>
+        static void KehittajanJulisteet(LaukkuNaytto d)
+        {
+            var kaikki = UiSisalto.Julisteet;
+            if (!Asetukset.Kehittaja || kaikki.Count == 0) return;
+            d.Julisteet = kaikki.Select(j => new LaukkuJuliste { Avain = j.Id, Otsikko = j.Otsikko, Lyhyt = j.Lyhyt, Selite = j.Selite, Url = j.Url }).ToList();
+            d.JulisteitaKaikkiaan = kaikki.Count;
+        }
+
         void Varusteet()
         {
             varusteet.Clear();
@@ -187,6 +222,10 @@ namespace Matkakirja.Natiivi
             if (!string.IsNullOrEmpty(t.AvatarUrl))
                 Kuvat.Hae(t.AvatarUrl, tex => { if (tex != null) kuva.style.backgroundImage = new StyleBackground(tex); });
             Rakenne.Teksti(t.Nimi, "mk-laukku__teksti", r);
+            // i heti nimikkeen perään, pisteet yksin oikeaan reunaan (omistaja 18.8.2026).
+            int pisteet = t.Pisteet;
+            var info = Rakenne.Nappi("i", "mk-seloste-nappi", () => Tietajagalleria.Avaa(pisteet), r);
+            Kirjasimet.Aseta(info, Kirjasin.Kone);
             Rakenne.Teksti(t.Pisteet + " tp", "mk-laukku__arvo", r);
             if (t.SeuraavaRaja == null) return;
             var palkki = Rakenne.El("mk-laukku__palkki", matka, PickingMode.Ignore);

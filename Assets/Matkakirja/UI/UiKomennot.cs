@@ -15,9 +15,13 @@
 //   ui aloita [kaupunki] | ui jatka           automaatio: ohittaa aloitusnäkymän (UusiMatka / Jatka);
 //                                             listan ulkopuolinen kaupunki (pariisi) = oletuslähtö Pariisi
 //   ui lehti <kaupunki> [sivu] | ui lehti sivu n | ui lehti kuva | ui maalehti <ISO> [aihe] | ui lehti sisallys
+//   ui lehti tehtava | tehtava-pois | viimeinen  alapalkin tehtävänappi (keksitty tila) / viimeinen sivu (Maa-liite)
 //   ui nosto <valoId>                         nostokortti: skandaali:<id> | hetki:<id> | elaintaky:<ISO> | kohde:<id>[@ISO]
 //   ui huipennus                              matkan huipennus (kaikki aarteet) esimerkkiluvuin
 //   ui laukku [esimerkki]                     matkalaukku (pelin data; esimerkki = keksitty sisältö)
+//   ui julisteet [n]                          julistegalleria, n ensimmäistä voitettuna (oletus 7)
+//   ui tietaja [pisteet]                      Tietäjän tie -minipopup (oletus 120)
+//   ui seloste                                laukku esimerkillä + Aarnin luettelon pikkuseloste
 //   ui offline demo|verkoton|verkko|pois      offline-tilan pilleri: keksitty lataus / verkon tila
 //   ui maakunnat [kortti] [ISO:tunnus]        karttaselite Maakunnat-välilehdellä, valinta, kortti
 //   ui pulu sano [teksti] | aani [lähde n] | ele id | tilanne laji | tunne t | pois | paalle
@@ -193,7 +197,7 @@ namespace Matkakirja.Natiivi
                 case "maalehti":
                 {
                     var l = loput.Split(' ');
-                    if (osat[1] == "lehti" && (l[0] == "sivu" || l[0] == "kuva" || l[0] == "sisallys"))
+                    if (osat[1] == "lehti" && (l[0] == "sivu" || l[0] == "kuva" || l[0] == "sisallys" || l[0] == "tehtava" || l[0] == "tehtava-pois" || l[0] == "viimeinen"))
                     {
                         ui.Lehti.Testaa(l[0], l.Length > 1 && int.TryParse(l[1], out var sn) ? sn : 0);
                         return null;
@@ -213,6 +217,28 @@ namespace Matkakirja.Natiivi
                     ui.Valikko.Sulje(); ui.Aanentasot.Sulje();
                     ui.Matkalaukku.Testaa(loput == "esimerkki" ? new System.Func<LaukkuNaytto>(Matkalaukku.Esimerkki) : null);
                     return null;
+                case "julisteet":
+                {
+                    int n = int.TryParse(loput, out var m) ? m : 7;
+                    UiSisalto.Lataa(() => ui.Julistegalleria.Avaa(System.Linq.Enumerable.Select(System.Linq.Enumerable.Take(UiSisalto.Julisteet, n), j => j.Id)));
+                    return null;
+                }
+                case "tietaja":
+                    Tietajagalleria.Avaa(int.TryParse(loput, out var tp) ? tp : 120);
+                    return null;
+                case "seloste":
+                {
+                    ui.Valikko.Sulje(); ui.Aanentasot.Sulje();
+                    ui.Matkalaukku.Testaa(Matkalaukku.Esimerkki);
+                    ui.Matkalaukku.AvaaTilastot();
+                    var juuri = ui.Kerros.Juuri(UiKerros.Valikot);
+                    juuri.schedule.Execute(() =>
+                    {
+                        var b = juuri.Q(className: "mk-laukku__osiorivi")?.Q<Button>(className: "mk-seloste-nappi");
+                        if (b != null) Pikkuseloste.Avaa(b, Matkalaukku.AarniSeloste);
+                    }).StartingIn(400);
+                    return null;
+                }
                 case "offline":
                     switch (loput)
                     {
