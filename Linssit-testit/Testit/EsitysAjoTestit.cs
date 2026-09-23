@@ -188,6 +188,20 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(n.Kellossa <= 50000 && n.Kellossa > 49500, "kelaus perillä: " + n.Kellossa);
         }
 
+        [Testi] static void HyppyKeskenMarokkoAjonAjaaOmaanKohteeseen()
+        {
+            var (e, y, n, a, leimat, kertomus) = Luo();
+            e.Aloita();
+            // Odotetaan, kunnes avauksen Marokko-ajo on lähtenyt (kamera kohti ~−8 °E).
+            for (int k = 0; k < 60 * 60 && !(e.ViimeisinAjo?.keskus.Lon < 0); k++) Aja(e, y, 1 / 60.0);
+            Oleta.Tosi(e.ViimeisinAjo?.keskus.Lon < 0, "Marokko-ajo lähti");
+            Oleta.Tosi(kertomus[e.I].Id != "jebel-irhoud", "yhä ennen ensimmäistä kohdetta: " + kertomus[e.I].Id);
+            e.Valitse("levantti");
+            var ajo = e.ViimeisinAjo.Value;
+            // Skhul ja Qafzeh ovat Levantissa (~32,7 °N, 35 °E), eivät Marokossa (~31 °N, −8 °E).
+            Oleta.Tosi(ajo.keskus.Lon > 25 && ajo.keskus.Lon < 45, "kamera Levanttiin: " + ajo.keskus.Lon);
+        }
+
         [Testi] static void EpaonnistunutKelausEiJumita()
         {
             // iPad: hyppy jaksoon, mutta ääni alkaa nollasta (kelaus ei tartu kahdesti).

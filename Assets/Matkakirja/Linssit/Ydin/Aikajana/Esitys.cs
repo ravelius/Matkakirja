@@ -287,8 +287,12 @@ namespace Matkakirja.Linssit.Aikajana
             {
                 nakyma.SytytaKohde(jakso.Kohde);
                 nakyma.Kuva(jakso.Kohde);
-                if (kohdeajo) kohdeajo = false;
-                else AjaKohteeseen(jakso.Kohde, kesto, alku, loppu);
+                // Avauksen Marokko-ajo on jo matkalla ensimmäiseen kohteeseen (web sama).
+                // Hyppy toiseen jaksoon kesken ajon (natiivin aikaselain, iPad 23.9.)
+                // ajaa kuitenkin oman kohteensa, muuten kamera jatkaisi Marokkoon.
+                bool ajoPerilla = kohdeajo && !hyppy && jakso == ensimmainenKohde;
+                kohdeajo = false;
+                if (!ajoPerilla) AjaKohteeseen(jakso.Kohde, kesto, alku, loppu);
             }
             else
             {
