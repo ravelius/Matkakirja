@@ -411,6 +411,28 @@ namespace Matkakirja.Peli
             return TekoTulos.Onnistui();
         }
 
+        /// <summary>
+        /// Vuoron alun automaattivalinta uudelleen, kun Pysy-tapa tuli tarjolle
+        /// vasta vuoron alun jälkeen (Kysely kytketään, kun kysymykset ovat
+        /// latautuneet): webissä Pysy estää esivalinnan (beginTurn), joten
+        /// esivalittu noppatapa puretaan ennen heittoa. Palauttaa true, jos purettiin.
+        /// </summary>
+        public bool ArvioiEsivalinta()
+        {
+            if (Tila.Vaihe != Vaihe.Heitto || !Tila.AutoMatka || !P.Sijainti.Kaupungissa) return false;
+            var valittu = Tila.Kulkutapa;
+            Tila.Vaihe = Vaihe.Toiminta;
+            bool pysy = Kulkutavat().Contains(Kulkutapa.Pysy);
+            Tila.Vaihe = Vaihe.Heitto;
+            if (!pysy) return false;
+            Tila.Kulkutapa = null;
+            Tila.OdottavaMaksu = 0;
+            Tila.Vaihe = Vaihe.Toiminta;
+            Tila.AutoMatka = false;
+            Tila.JatkaAutomaattisesti = false;
+            return valittu != null;
+        }
+
         /// <summary>Web actionRoll: heitto ja siirrot; ilman siirtoja vuoro päättyy.</summary>
         public TekoTulos Heita()
         {

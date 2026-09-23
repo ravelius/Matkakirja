@@ -4,6 +4,13 @@
 //   (PeliApu.Matkusta) → kamera-ajo kohteeseen (IKamera.Aja) → saapuessa
 //   kaupunkilehti (ILehti, LehtiKuori) → lehti suljetaan → tallennus → kartta.
 //   Reitin varrella ei lehteä: "Heitä noppaa" -nappi jatkaa kohti tavoitetta.
+//   Kaupungissa, jossa on tehtävä (laatta, kohtaaminen, tutkimaton), alareunan
+//   "Tutki kaupunkia" -nappi avaa kysymyksen (Kysely.Tutki → IKysymysNakyma,
+//   erä 4): vastaus, vihje, 50:50 ja aikaraja; oikea vastaus kääntää laatan.
+//
+// NÄKYMÄT: rajapintojen takana (NakymaSopimukset.cs). Natiivi-UI asettaa
+// UI Toolkit -toteutukset PeliNakymat-tehtaaseen; muuten UGUI-varanäkymät.
+// Modaalisen näkymän ajan pallo ei ota kosketuksia (SyoteLukko).
 //
 // KÄYNNISTYY ITSE: RuntimeInitializeOnLoadMethod(AfterSceneLoad) etsii
 // kohtauksesta PalloKierron (IKamera), KaupunkiMerkit ja LehtiKuoren ja luo
@@ -35,7 +42,7 @@ using UnityEngine.Networking;
 namespace Matkakirja.Natiivi
 {
     /// <summary>Silmukan tila (testikomentojen 'odota-tila' ja peli-tila.json).</summary>
-    public enum SilmukanTila { Lataa, Kartta, Dialogi, Matkalla, Lehti, Virhe }
+    public enum SilmukanTila { Lataa, Kartta, Dialogi, Matkalla, Lehti, Virhe, Kysymys }
 
     [DisallowMultipleComponent]
     public sealed class PeliOhjain : MonoBehaviour
@@ -50,8 +57,15 @@ namespace Matkakirja.Natiivi
         PalloKierto kierto;
         KaupunkiMerkit merkit;
         LehtiKuori lehti;
-        MatkaDialogi dialogi;
-        Tilarivi tilarivi;
+        IMatkaValinta dialogi;
+        ITilarivi tilarivi;
+        IKysymysNakyma kysymysNakyma;
+        Kysely kysely;
+        KysymysToiminnot kysymysToiminnot;
+        Loyto kysymysLoyto;
+        readonly List<string> kysymysLisat = new List<string>();
+        float kysymysJaljella;
+        bool lukossa;
 
         Reittiverkko verkko;
         Matka matka;
@@ -73,6 +87,12 @@ namespace Matkakirja.Natiivi
         public string ViimeViesti { get; private set; }
         public string ViimeVirhe { get; private set; }
         public bool LehtiAuki => lehti != null && lehti.Auki;
+        /// <summary>Kysymysmoottori (null, kunnes kysymykset on ladattu).</summary>
+        public Kysely Kysely => kysely;
+        /// <summary>Avoimen kysymyksen näkymätila (null, jos kysymys ei ole auki).</summary>
+        public KysymysNaytto KysymysTila { get; private set; }
+        /// <summary>Pelisilmukka päälle/pois (Natiivi-UI piilottaa omat näkymänsä).</summary>
+        public event Action<bool> KaytossaMuuttui;
 
         List<MatkaVaihtoehto> vaihtoehdot = new List<MatkaVaihtoehto>();
         readonly List<string> tapahtumat = new List<string>();
@@ -135,10 +155,19 @@ namespace Matkakirja.Natiivi
             if (fontti == null) { var kortti = FindAnyObjectByType<NimiKortti>(); if (kortti != null) fontti = kortti.fontti; }
 
             LuoTapahtumajarjestelma();
-            tilarivi = gameObject.AddComponent<Tilarivi>();
-            tilarivi.Rakenna(fontti);
-            dialogi = gameObject.AddComponent<MatkaDialogi>();
-            dialogi.Rakenna(fontti);
+            tilarivi = PeliNakymat.Tilarivi?.Invoke(gameObject);
+            if (tilarivi == null) { var t = gameObject.AddComponent<Tilarivi>(); t.Rakenna(fontti); tilarivi = t; }
+            dialogi = PeliNakymat.MatkaValinta?.Invoke(gameObject);
+            if (dialogi == null) { var d = gameObject.AddComponent<MatkaDialogi>(); d.Rakenna(fontti); dialogi = d; }
+            kysymysNakyma = PeliNakymat.Kysymys?.Invoke(gameObject);
+            if (kysymysNakyma == null) { var kd = gameObject.AddComponent<KysymysDialogi>(); kd.Rakenna(fontti); kysymysNakyma = kd; }
+            kysymysToiminnot = new KysymysToiminnot
+            {
+                Vastaa = i => Vastaa(i),
+                Vihje = () => Vihje(),
+                Puolita = () => Puolita(),
+                Jatka = () => JatkaKysymyksesta(),
+            };
             gameObject.AddComponent<PeliKomennot>().ohjain = this;
 
             ((IKamera)kierto).KaupunkiNapautettu += Napautettu;
@@ -166,8 +195,14 @@ namespace Matkakirja.Natiivi
         {
             Kaytossa = paalla;
             foreach (var c in GetComponentsInChildren<Canvas>(true)) c.enabled = paalla;
-            if (!paalla) { dialogi.Piilota(); dialogi.PiilotaHeitto(); if (Tila == SilmukanTila.Dialogi) Tila = SilmukanTila.Kartta; }
+            if (!paalla)
+            {
+                dialogi.Piilota(); dialogi.PiilotaHeitto(); kysymysNakyma.Piilota();
+                if (Tila == SilmukanTila.Dialogi || Tila == SilmukanTila.Kysymys) Tila = SilmukanTila.Kartta;
+            }
+            else if (matka != null && matka.Tila.Vaihe == Vaihe.Kysymys && kysely != null) NaytaKysymys();
             else PaivitaNakyma();
+            KaytossaMuuttui?.Invoke(paalla);
         }
 
         // --- sisältö --------------------------------------------------------
@@ -316,9 +351,11 @@ namespace Matkakirja.Natiivi
                 if (kaari != null) d.LueTarinakaari(kaari);
                 if (paikat != null) d.LuePaikkatiedot(paikat);
                 Kysymykset = d;
+                KytkeKysely();
                 Debug.Log($"MATKAKIRJA peli: kysymyksiä {d.Kaupungeittain.Sum(x => x.Value.Count)} kaupungeissa, {d.Yleiset.Count} yleistä, {d.Kaaret.Count} kaarta");
             }
             catch (Exception e) { Debug.LogWarning("MATKAKIRJA peli: kysymykset eivät jäsenny: " + e.Message); }
+            if (kysely == null) SuljeAvoinKysymys();
         }
 
         // --- peli ja tallennus ----------------------------------------------
@@ -350,13 +387,7 @@ namespace Matkakirja.Natiivi
             Kytke(matka);
             try { Tavoite = File.Exists(TavoitePolku) ? File.ReadAllText(TavoitePolku).Trim() : null; } catch { Tavoite = null; }
             if (Tavoite != null && !verkko.Kaupungit.ContainsKey(Tavoite)) Tavoite = null;
-            // Kysymys-UI:ta ei vielä ole: auki jäänyt kysymys suljetaan ja vuoro päättyy.
-            if (matka.Tila.Vaihe == Vaihe.Kysymys)
-            {
-                matka.Tila.Kysely.Kysymys = null;
-                matka.PaataVuoro();
-                Tallenna();
-            }
+            // Auki jäänyt kysymys avataan uudelleen, kun kysymykset on ladattu (KytkeKysely).
             Kartalle(true);
             // Heiton ja siirron väliin jäänyt tallennus: siirrytään heti.
             if (matka.Tila.Vaihe == Vaihe.Siirto)
@@ -377,6 +408,8 @@ namespace Matkakirja.Natiivi
             Kytke(matka);
             Tavoite = null;
             Viimeisin = null;
+            kysymysNakyma.Piilota();
+            KysymysTila = null;
             Tallenna();
             Debug.Log("MATKAKIRJA peli: uusi peli, " + PeliApu.TilaTeksti(verkko, matka.Tila));
             Kartalle(true);
@@ -385,11 +418,45 @@ namespace Matkakirja.Natiivi
         void Kytke(Matka m)
         {
             m.Tapahtui += (laji, teksti) => tapahtumat.Add(teksti);
+            m.Loysi += (p, l) => kysymysLoyto = l;
+            kysely = null;
+            KytkeKysely();
+        }
+
+        /// <summary>Kysymysmoottori matkaan, kun sekä matka että kysymykset ovat valmiit.</summary>
+        void KytkeKysely()
+        {
+            if (matka == null || Kysymykset == null || (kysely != null && kysely.Matka == matka)) return;
+            kysely = new Kysely(matka, Kysymykset);
+            kysely.Tapahtui += (laji, teksti) => kysymysLisat.Add(teksti);
+            // Pysy-tapa tuli tarjolle vasta nyt: vuoron alun esivalinta puretaan kuten webissä.
+            if (matka.ArvioiEsivalinta()) Tallenna();
+            if (matka.Tila.Vaihe == Vaihe.Kysymys)
+            {
+                if (matka.Tila.Kysely.Kysymys != null && Tila == SilmukanTila.Kartta) NaytaKysymys();
+                else if (matka.Tila.Kysely.Kysymys == null) SuljeAvoinKysymys();
+            }
+            else PaivitaNakyma();
+        }
+
+        /// <summary>Kysymysvaihe ilman kysymystä tai moottoria: suljetaan ja vuoro päättyy (erän 3 käytös).</summary>
+        void SuljeAvoinKysymys()
+        {
+            if (matka == null || matka.Tila.Vaihe != Vaihe.Kysymys) return;
+            matka.Tila.Kysely.Kysymys = null;
+            matka.Tila.Vaihe = Vaihe.Toiminta;
+            matka.PaataVuoro();
+            Tallenna();
+            if (Tila == SilmukanTila.Kysymys) Kartalle(false); else PaivitaNakyma();
         }
 
         void Tallenna()
         {
             if (matka == null) return;
+            // Kuten web (visa.js): jäljellä oleva aika talteen kokonaisina sekunteina.
+            var q = matka.Tila.Kysely.Kysymys;
+            if (Tila == SilmukanTila.Kysymys && q != null && q.Sekunnit.HasValue && !q.Valittu.HasValue)
+                q.Sekunnit = Mathf.Max(1, Mathf.CeilToInt(kysymysJaljella));
             try
             {
                 PeliApu.KirjoitaAtomisesti(TallennusPolku, matka.Tallenna());
@@ -426,6 +493,8 @@ namespace Matkakirja.Natiivi
             bool kesken = Tila == SilmukanTila.Kartta && matka.Tila.Vaihe == Vaihe.Heitto && !matka.Tila.Pelaaja.Sijainti.Kaupungissa;
             if (kesken && Kaytossa)
                 dialogi.NaytaHeitto(Tavoite != null ? "Heitä noppaa → " + PeliApu.KaupunginNimi(verkko, Tavoite) : "Heitä noppaa", () => Heita());
+            else if (TutkiTarjolla && Kaytossa)
+                dialogi.NaytaHeitto("Tutki kaupunkia", () => Tutki());
             else
                 dialogi.PiilotaHeitto();
         }
@@ -445,6 +514,7 @@ namespace Matkakirja.Natiivi
             switch (Tila)
             {
                 case SilmukanTila.Dialogi:
+                case SilmukanTila.Kysymys:
                     PysaytaKamera(); // modaalinen: himmennyksen napautus peruu, pallo ei lennä
                     return;
                 case SilmukanTila.Matkalla:
@@ -600,6 +670,110 @@ namespace Matkakirja.Natiivi
             return null;
         }
 
+        // --- kysymys (erä 4) ---------------------------------------------------
+
+        /// <summary>"Tutki kaupunkia" -nappi: kaupungissa, vuoron alussa, ja tehtävä tarjolla (web tehtavaTarjolla).</summary>
+        public bool TutkiTarjolla =>
+            kysely != null && matka != null && Tila == SilmukanTila.Kartta && matka.Tila.Vaihe == Vaihe.Toiminta
+            && matka.Tila.Pelaaja.Sijainti.Kaupungissa && kysely.TehtavaTarjolla(matka.Tila.Pelaaja);
+
+        /// <summary>Tutki-nappi (web actionTravel('stay')): avaa kysymyksen. Palauttaa virheen tai null.</summary>
+        public string Tutki(bool vaikea = false)
+        {
+            if (matka == null) return "peli ei ole valmis";
+            if (kysely == null) return "kysymykset eivät ole vielä latautuneet";
+            if (Tila != SilmukanTila.Kartta) return "silmukka on tilassa " + Tila;
+            kysymysLoyto = null;
+            kysymysLisat.Clear();
+            var t = kysely.Tutki(vaikea);
+            if (!t.Ok) { Virhe(t.Virhe); PaivitaNakyma(); return t.Virhe; }
+            if (matka.Tila.Vaihe != Vaihe.Kysymys || matka.Tila.Kysely.Kysymys == null)
+            {
+                // Esim. tutkiminen ilman kysymystä: ei avattavaa näkymää.
+                Tallenna();
+                PaivitaNakyma();
+                return null;
+            }
+            kysymysJaljella = matka.Tila.Kysely.Kysymys.Sekunnit ?? 0;
+            Tallenna();
+            NaytaKysymys();
+            Debug.Log($"MATKAKIRJA peli: kysymys {matka.Tila.Kysely.Kysymys.Laji} {matka.Tila.Kysely.Kysymys.Kaupunki}");
+            return null;
+        }
+
+        /// <summary>Avoin kysymys näkyviin (myös tallennuksesta jatkettaessa).</summary>
+        void NaytaKysymys(string viesti = null)
+        {
+            var q = matka?.Tila.Kysely.Kysymys;
+            if (q == null || kysely == null) return;
+            if (Tila != SilmukanTila.Kysymys)
+            {
+                // Jatkettaessa aika on tallennuksessa; uusi kysymys asetti sen Tutkissa.
+                if (!q.Valittu.HasValue) kysymysJaljella = q.Sekunnit ?? 0;
+                dialogi.Piilota();
+                dialogi.PiilotaHeitto();
+                DialogiKohde = null;
+                Tila = SilmukanTila.Kysymys;
+                PysaytaKamera();
+            }
+            KysymysTila = KysymysApu.Nakyma(kysely, q, kysymysLoyto, kysymysLisat, viesti);
+            if (Kaytossa) kysymysNakyma.Nayta(KysymysTila, kysymysToiminnot);
+            if (KysymysTila.Sekunnit.HasValue) kysymysNakyma.PaivitaAika(kysymysJaljella);
+            tilarivi.Aseta(PeliApu.TilaTeksti(verkko, matka.Tila));
+        }
+
+        string KysymysTeko(Func<TekoTulos> teko)
+        {
+            if (Tila != SilmukanTila.Kysymys || kysely == null) return "kysymys ei ole auki";
+            var t = teko();
+            if (!t.Ok) { NaytaKysymys(t.Virhe); return t.Virhe; }
+            Tallenna();
+            NaytaKysymys();
+            return null;
+        }
+
+        /// <summary>Vaihtoehdon valinta (näkymä ja testikomento 'vastaa i').</summary>
+        public string Vastaa(int indeksi)
+        {
+            var r = KysymysTeko(() => kysely.Vastaa(indeksi));
+            if (r == null) Debug.Log($"MATKAKIRJA peli: vastaus {indeksi}, {(KysymysTila.Oikein ? "oikein" : "väärin")}"
+                                     + (kysymysLoyto != null ? ", laatta " + kysymysLoyto.WebTulos : ""));
+            return r;
+        }
+
+        public string Vihje() => KysymysTeko(() => kysely.Vihje());
+        public string Puolita() => KysymysTeko(() => kysely.Puolita());
+
+        /// <summary>Tuloksen Jatka-nappi (testikomento 'jatka'): kysymys suljetaan ja vuoro päättyy.</summary>
+        public string JatkaKysymyksesta()
+        {
+            if (Tila != SilmukanTila.Kysymys || kysely == null) return "kysymys ei ole auki";
+            var q = matka.Tila.Kysely.Kysymys;
+            if (q != null && !q.Valittu.HasValue) return "kysymykseen ei ole vastattu";
+            var t = kysely.Sulje();
+            if (!t.Ok) return t.Virhe;
+            kysymysNakyma.Piilota();
+            KysymysTila = null;
+            kysymysLoyto = null;
+            kysymysLisat.Clear();
+            Tallenna();
+            // Kaksintaistelu (ryöstäjä) tulee myöhemmässä erässä; siihen asti matka jatkuu kartalla.
+            Kartalle(false);
+            return null;
+        }
+
+        void PaivitaKysymysAika()
+        {
+            if (Tila != SilmukanTila.Kysymys || KysymysTila == null || KysymysTila.Vastattu || !KysymysTila.Sekunnit.HasValue) return;
+            // Lehti tai tausta ei kuluta aikaa; ajastin pysyy myös pelin ollessa pois päältä.
+            if (!Kaytossa) return;
+            kysymysJaljella -= Time.unscaledDeltaTime;
+            if (kysymysJaljella > 0) { kysymysNakyma.PaivitaAika(kysymysJaljella); return; }
+            kysymysJaljella = 0;
+            kysymysNakyma.PaivitaAika(0);
+            KysymysTeko(() => kysely.AikaLoppui());
+        }
+
         // --- kamera -----------------------------------------------------------
 
         /// <summary>
@@ -627,6 +801,10 @@ namespace Matkakirja.Natiivi
         void Update()
         {
             if (ajoValmis != null && Time.unscaledTime > ajoLoppuu) AjoValmis();
+            PaivitaKysymysAika();
+            // Pallo ei ota kosketuksia modaalisen näkymän (ja lehden) aikana.
+            bool esta = Kaytossa && (Tila == SilmukanTila.Dialogi || Tila == SilmukanTila.Kysymys || Tila == SilmukanTila.Lehti);
+            if (esta != lukossa) { lukossa = esta; SyoteLukko.Aseta(this, esta); }
         }
 
         void LateUpdate()
@@ -669,8 +847,15 @@ namespace Matkakirja.Natiivi
                 ? null : "matkavalinta ei auennut (tila " + Tila + ")";
         }
 
-        public string TilaJson() =>
-            PeliApu.TilaJson(matka, Tila.ToString(), DialogiKohde, Tila == SilmukanTila.Dialogi ? vaihtoehdot : null,
+        public string TilaJson()
+        {
+            var json = PeliApu.TilaJson(matka, Tila.ToString(), DialogiKohde, Tila == SilmukanTila.Dialogi ? vaihtoehdot : null,
                 Tavoite, LehtiAuki, ViimeViesti, ViimeVirhe, Viimeisin);
+            // Kysymys ja syötelukko perään (PeliApu.TilaJson pysyy testattavana ilman Unityä).
+            var lisa = ",\"syoteEstetty\":" + (SyoteLukko.Estetty ? "true" : "false")
+                + ",\"tutkiTarjolla\":" + (TutkiTarjolla ? "true" : "false")
+                + ",\"kysymys\":" + KysymysApu.Json(KysymysTila, kysymysJaljella);
+            return json.Substring(0, json.Length - 1) + lisa + "}";
+        }
     }
 }

@@ -52,72 +52,7 @@ namespace Matkakirja.Natiivi
         string Otsikko { get; }
     }
 
-    /// <summary>Kysymyksen muoto näkymälle (Peli.KysymysMuoto ilman pelilogiikan riippuvuutta).</summary>
-    public enum KysymysLaji { Visa, Vaite, Kuva, Lippu, Tapahtuma, Pulma }
-
-    /// <summary>
-    /// Avoimen kysymyksen näytettävä tila. Ohjain rakentaa tämän uudelleen jokaisen
-    /// teon jälkeen ja kutsuu Nayta uudestaan (sama olio ei muutu näkymän alla).
-    /// </summary>
-    public sealed class KysymysNaytto
-    {
-        public KysymysLaji Laji;
-        /// <summary>Esim. "Pariisi · aarrekysymys", "Kohtaaminen", "Kaupungin tutkiminen".</summary>
-        public string Otsikko;
-        /// <summary>Kysyjä ja tilanne kursiivilla, esim. "kahvilan tarjoilija kysyy".</summary>
-        public string Kehys;
-        public string Kysymys;
-        /// <summary>Väittämän paikka (Vaite), muuten null.</summary>
-        public string Paikka;
-        /// <summary>Kuvan tai lipun osoite (Kuva, Lippu), muuten null. https-osoite.</summary>
-        public string KuvaUrl;
-        /// <summary>Kuvan lähde/attribuutio pienellä, tai null.</summary>
-        public string KuvaLahde;
-        public List<string> Vaihtoehdot = new List<string>();
-        /// <summary>50:50:n piilottamat vaihtoehdot (indeksit Vaihtoehdot-listaan).</summary>
-        public List<int> Piilotetut = new List<int>();
-
-        /// <summary>Ostettu vihje, tai null.</summary>
-        public string Vihje;
-        /// <summary>Vihjenappi näkyvissä (vihje olemassa, ei ostettu, ei vastattu).</summary>
-        public bool VihjeTarjolla;
-        public int VihjeHinta;
-        /// <summary>50:50-nappi näkyvissä (neljä vaihtoehtoa, ei käytetty, ei vastattu).</summary>
-        public bool PuolitusTarjolla;
-        public int PuolitusHinta;
-        /// <summary>Pelaajan raha (napit harmaana, jos ei riitä; ohjain kertoo virheen Viestinä).</summary>
-        public int Raha;
-        public string Valuutta = "£";
-        /// <summary>Aikaraja sekunteina tai null (ei aikarajaa, esim. pulma). Jäljellä tulee PaivitaAika-kutsuilla.</summary>
-        public int? Sekunnit;
-
-        // --- tulos (Vastattu = true) ---
-        public bool Vastattu;
-        /// <summary>Valittu indeksi; -1 = aika loppui.</summary>
-        public int Valittu = -1;
-        public int Oikea;
-        public bool Oikein;
-        public bool AikaLoppui;
-        public string Fakta;
-        public List<string> Lahteet = new List<string>();
-        /// <summary>Löytö tai palkkio yhdellä rivillä ("Löysit: Kätketty matka-arkku, 640 £"), tai null.</summary>
-        public string Loyto;
-        /// <summary>Jatka-napin teksti tuloksen jälkeen.</summary>
-        public string JatkaTeksti = "Jatka matkaa";
-
-        /// <summary>Hetkellinen ilmoitus (esim. "Rahat eivät riitä"), tai null.</summary>
-        public string Viesti;
-    }
-
-    /// <summary>Kysymysnäkymän takaisinkutsut (ohjain kutsuu pelilogiikkaa).</summary>
-    public sealed class KysymysToiminnot
-    {
-        public Action<int> Vastaa;
-        public Action Vihje;
-        public Action Puolita;
-        /// <summary>Tuloksen jälkeen: sulkee kysymyksen.</summary>
-        public Action Jatka;
-    }
+    // KysymysLaji, KysymysNaytto ja KysymysToiminnot: KysymysApu.cs (ilman UnityEngineä, testattavissa).
 
     /// <summary>Kysymys (modaalinen): kysymys, vaihtoehdot, vihje, 50:50, aikaraja ja tulos.</summary>
     public interface IKysymysNakyma

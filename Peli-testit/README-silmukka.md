@@ -75,7 +75,11 @@ JSON-tiedostot. 3D:n `komento.txt` (esim. `kuva nimi`) toimii rinnalla.
 | `matka kaupunki tapa` | valinta ilman dialogia |
 | `heita` | "Heitä noppaa" (kesken reitin) |
 | `sulje-lehti` | sulkee lehden kuin pelaaja |
-| `tila [nimi]` | `peli-tila.json` / `peli-tila-nimi.json`: silmukka, vaihe, sijainti, raha, päivä, aika, tilarivi, dialogi ja vaihtoehdot, tavoite, lehtiAuki, viesti, virhe, viimeisin matka |
+| `tutki [vaikea]` | "Tutki kaupunkia" -nappi: kysymys auki (tila Kysymys) |
+| `vastaa i\|oikea\|vaara` | vaihtoehto i (0..), oikea tai ensimmäinen näkyvä väärä |
+| `vihje` / `puolita` | vihje 40 £ / 50:50 80 £ (virhe näkyy kysymyksen alareunassa) |
+| `jatka` | tuloksen Jatka-nappi: kysymys kiinni, vuoro päättyy |
+| `tila [nimi]` | `peli-tila.json` / `peli-tila-nimi.json`: silmukka, vaihe, sijainti, raha, päivä, aika, tilarivi, dialogi ja vaihtoehdot, tavoite, lehtiAuki, viesti, virhe, viimeisin matka; erä 4: syoteEstetty, tutkiTarjolla, kysymys (laji, otsikko, kysymys, vaihtoehdot, piilotetut, vihje, sekunnit, jaljella, vastattu, valittu, oikea, oikein, aikaLoppui, loyto, viesti) |
 | `odota s` / `odota-tila tila [max s]` | tauko / odota tilaa Kartta, Dialogi, Matkalla, Lehti (aikaraja kirjataan lokiin) |
 | `uusi-peli [siemen]` | uusi peli Pariisista, toistettava noppa |
 | `peli pois\|paalle` | silmukka pois/päälle |
@@ -136,6 +140,26 @@ silloin `odota-tila lehti` kirjaa aikarajan ja `heita` jatkaa. Reitin varren kok
 `uusi-peli 1`, `matka marseille liftaus` (noppa 3 → `e:pariisi|marseille:3`, Heitä-nappi
 näkyy), `heita` (noppa 2 → Marseille, lehti).
 
+### Kysymysvirta (`Peli-testit/silmukka-kysymys.txt`, erä 4)
+
+Kysymysmoottori kytkeytyy, kun kysymykset ovat latautuneet; Pariisissa Pysy-tapa (tutkiminen)
+purkaa vuoron alun liftausesivalinnan (web beginTurn), joten `k1-alku` on vaihe **Toiminta**.
+Odotettu siemenellä 12345 (Testit/SilmukkaKysymysTestit.cs toistaa saman logiikan):
+
+| Tiedosto | silmukka | sijainti | raha | muuta |
+|---|---|---|---|---|
+| k1-alku | Kartta | c:pariisi | 300 | vaihe Toiminta, tutkiTarjolla true |
+| k2-lontoossa | Kartta | c:lontoo | 250 | tutkiTarjolla true (laatta + kohtaaminen) |
+| k3-kysymys | Kysymys | c:lontoo | 250 | kysymys.otsikko "Lontoo · kohtaaminen", 4 vaihtoehtoa, oikea 3 (näkyy vasta vastattua), syoteEstetty true* |
+| k4-vastattu | Kysymys | c:lontoo | 440 | oikein true, loyto "Löysit: Kourallinen hopeakolikoita · +190 £" |
+| k5-kartalla | Kartta | c:lontoo | 440 | vaihe Toiminta, keskipäivä, tutkiTarjolla false |
+| k6-reitilla | Kartta | e:lontoo\|pariisi:2 | 440 | viimeisin noppa 2, Heitä-nappi, ilta |
+| k7-lehti-pariisi | Lehti | c:pariisi | 440 | noppa 2, yö |
+| k8-loppu | Kartta | c:pariisi | 440 | tutkiTarjolla true |
+
+\* `syoteEstetty` on tosi vasta, kun PalloKierto toteuttaa `ISyoteEsto`:n (Natiiviseppä lisää
+mergessä); ennen sitä veto kysymyksen päällä pyörittää palloa.
+
 ## Käännöstarkistus ilman editoria
 
 `Peli-testit/unity-tarkistus.sh` kääntää Unityn csc:llä `Assets/Matkakirja/Peli/*.cs`
@@ -150,9 +174,12 @@ luetaan `/Users/Shared/Claude/proto-3d/Matkakirja-proto/Library/ScriptAssemblies
 
 - Pallon napautus ei tiedä UI:sta (PalloKierto lukee kosketukset suoraan): peli ohittaa
   napautukset matkavalinnan ja Heitä-napin päällä ja korvaa 3D:n lennon LateUpdatessa.
-  Veto dialogin päällä pyörittää silti palloa.
-- Kysymykset, laattojen kääntö, kaksintaistelu ja pulmat odottavat kysymys-UI:ta; laatat
-  vaikuttavat nyt vain pankkiavun tavoitteisiin. Auki jäänyt kysymys suljetaan latauksessa.
+  Erä 4: matkavalinnan, kysymyksen ja lehden ajan pallo on lukossa (SyoteLukko → ISyoteEsto).
+- Kaksintaistelu (ryöstäjä) ja pulmat tulevat seuraavissa erissä; ryöstäjän jälkeen matka
+  jatkuu kartalla. Kuva- ja lippukysymykset tarvitsevat kuvapoolin ja maalistan (Kysely.AsetaKuvat,
+  Kysely.Liput), joita ei vielä ladata: niiden paino siirtyy visalle kuten webissä.
+- Auki jäänyt kysymys avataan latauksessa uudelleen jäljellä olevalla ajalla (web visa.js);
+  jos kysymykset eivät lataudu, se suljetaan ja vuoro päättyy.
 - Maailmankartta-moduulin (1,7 Mt) jäsennys ensimmäisellä käynnistyksellä pääsäikeessä
   (~0,2 s Macilla), sen jälkeen tiivistetty välimuisti.
 - Simulaattorissa lehti on oikea WKWebView (verkko tarvitaan); editorissa lehti sulkeutuu
