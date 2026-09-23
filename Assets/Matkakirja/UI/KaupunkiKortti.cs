@@ -40,6 +40,8 @@ namespace Matkakirja.Natiivi
         string kaupunki;
 
         public bool Auki { get; private set; }
+        /// <summary>Kortin alue (pulu hyppää kortin yläpuolelle).</summary>
+        public VisualElement Alue => alue;
         public string Kaupunki => Auki ? kaupunki : null;
 
         public KaupunkiKortti(UiKerros kerros)

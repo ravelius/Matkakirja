@@ -11,6 +11,7 @@
 //                                             tapahtumakortti, tulos [laattatyyppi], kohtaaminen,
 //                                             kohtaaminen-tervehdys (KysymysEsimerkki.cs)
 //   ui selite                                 karttaselite auki
+//   ui pulu sano [teksti] | aani [lähde n] | ele id | tilanne laji | tunne t | pois | paalle
 //   ui kartuscha [ISO3] [auki]                kartuscha maalle ilman peliä (oletus ITA)
 //   ui heitto [teksti]                        kartan toimintonappi näkyviin
 //   ui viesti teksti                          tilarivin hetkellinen viesti
@@ -101,6 +102,30 @@ namespace Matkakirja.Natiivi
                 case "asetukset": ui.Aanentasot.Avaa(); return null;
                 case "sulje": ui.SuljeKaikki(); return null;
                 case "matka": ui.Esimerkkimatka(); return null;
+                case "pulu":
+                {
+                    var pu = ui.Pulu;
+                    var pk = loput.Split(new[] { ' ' }, 2);
+                    string arvo = pk.Length > 1 ? pk[1] : "";
+                    switch (pk[0])
+                    {
+                        case "sano": pu.Sano(arvo.Length > 0 ? arvo : "Minä olen Livia. Kirjekyyhky, en mikään pulu."); return null;
+                        case "aani":
+                        {
+                            var a = arvo.Split(' ');
+                            string lahde = a[0].Length > 0 ? a[0] : "avaus";
+                            int n = a.Length > 1 ? int.Parse(a[1]) - 1 : 0;
+                            pu.Sano("(" + lahde + " " + (n + 1) + ")", Pulu.AaniOsoite(lahde, n));
+                            return Pulu.AaniOsoite(lahde, n);
+                        }
+                        case "ele": return pu.Ele(arvo) ? null : "tuntematon ele " + arvo;
+                        case "tilanne": return pu.Tilanne(arvo) ? null : "ei elettä (väli, puhe tai tuntematon)";
+                        case "tunne": return pu.Tunne(arvo) ? null : "ei elettä";
+                        case "pois": pu.Nayta(false); return null;
+                        case "paalle": pu.Nayta(true); return null;
+                        default: return "ui pulu sano|aani|ele|tilanne|tunne|pois|paalle";
+                    }
+                }
                 case "selite": ui.Karttaselite.Avaa(); return UiPalvelut.KarttaValot == null ? "ei KarttaValot-palvelua: vain selitykset" : null;
                 case "kartuscha":
                 {

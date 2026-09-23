@@ -1,0 +1,113 @@
+/* PULU (Natiivi-UI, erä 5): Livian näyttämö ja puhekuplat (webin css/styles.css
+ * .livia-kasvot-pinta ~28163–28220 ja .pollo-vihje / .pollo-kuplapino ~21173–21667). */
+
+.mk-pulu {
+    position: absolute;
+    width: 152px;
+    height: 304px;
+    transform-origin: right bottom;
+    transition-property: bottom, scale;
+    transition-duration: 0.28s, 0.2s;
+    transition-timing-function: ease-out-back, ease-out;
+}
+
+/* Modaalinen dialogi auki: pulu pienenee kuten webin lehden aikana. */
+.mk-pulu.mk-pulu--pieni {
+    scale: 0.72 0.72;
+}
+
+.mk-pulu__nayttamo {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.mk-pulu__kuva {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+/* Linnun lepopaikka näyttämön alaosan keskellä (webin lepo 40 × 61). */
+.mk-pulu__kosketus {
+    position: absolute;
+    width: 64px;
+    height: 76px;
+    bottom: 0;
+    left: 44px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* --- kuplat ------------------------------------------------------------- */
+
+.mk-kuplapino {
+    position: absolute;
+    right: 4px;
+    bottom: 86px;
+    width: 272px;
+    max-height: 224px;
+    align-items: flex-end;
+}
+
+.mk-kuplapino__vieritys {
+    max-height: 224px;
+    flex-shrink: 1;
+}
+
+.mk-kuplapino__vieritys .unity-scroll-view__content-container {
+    align-items: flex-end;
+    padding-bottom: 9px;
+}
+
+.mk-kupla {
+    max-width: 272px;
+    margin-top: 8px;
+    padding: 8px 11px 8px 11px;
+    border-width: 1px;
+    border-color: rgba(122, 85, 20, 0.32);
+    border-radius: 9.6px;
+    background-color: #f4e7ca;
+    color: #211d18;
+    opacity: 0;
+    translate: 0 8px;
+    transition-property: opacity, translate;
+    transition-duration: 0.22s;
+    transition-timing-function: ease-out;
+}
+
+.mk-kupla.mk-auki {
+    opacity: 1;
+    translate: 0 0;
+}
+
+.mk-kupla.mk-kupla--vanha.mk-auki {
+    opacity: 0.55;
+}
+
+.mk-kupla__kappale {
+    font-size: 14.7px;
+    white-space: normal;
+    margin-bottom: 4px;
+}
+
+.mk-kupla__hanta {
+    display: none;
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    right: 18px;
+    bottom: -7px;
+    rotate: 45deg;
+    background-color: #f4e7ca;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-color: rgba(122, 85, 20, 0.32);
+}
+
+.mk-kupla.mk-kupla--viimeinen .mk-kupla__hanta {
+    display: flex;
+}

@@ -30,6 +30,7 @@ namespace Matkakirja.Natiivi
         public readonly KysymysNakyma Kysymys;
         public readonly Karttaselite Karttaselite;
         public readonly Kartuscha Kartuscha;
+        public readonly Pulu Pulu;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         static void KytkeTehdas()
@@ -46,6 +47,8 @@ namespace Matkakirja.Natiivi
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         static void Nollaa() => instanssi = null; // editorin Enter Play Mode ilman domain reloadia
 
+        public static bool Olemassa => instanssi != null;
+
         public static UiNakymat Hae() => instanssi ??= new UiNakymat(UiKerros.Hae());
 
         UiNakymat(UiKerros kerros)
@@ -61,6 +64,9 @@ namespace Matkakirja.Natiivi
             Kysymys = new KysymysNakyma(kerros);
             Kartuscha = new Kartuscha(kerros);
             Karttaselite = new Karttaselite(kerros);
+            Pulu = Natiivi.Pulu.Hae();
+            // Livia lennähtää paikalle, kun käyttöliittymä on valmis (webin ensisaapuminen: handoff).
+            kerros.Juuri(UiKerros.Tilarivi).schedule.Execute(() => Pulu.Tilanne("arrival")).StartingIn(1500);
             UiSisalto.Lataa(null); // kaupunkidata valmiiksi ennen ensimmäistä napautusta
 
             Tilarivi.Valikko.clicked += () => { Aanentasot.Sulje(); Valikko.Vaihda(); };
@@ -93,6 +99,7 @@ namespace Matkakirja.Natiivi
                 if (!paalla) SuljeKaikki();
                 Kerros.Nayta(paalla);
                 KorvaaNimikortti(paalla);
+                Pulu.Nayta(paalla);
             };
             if (!o.Kaytossa) Kerros.Nayta(false);
             KorvaaNimikortti(o.Kaytossa);
