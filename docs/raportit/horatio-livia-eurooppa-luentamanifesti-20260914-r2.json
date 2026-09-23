@@ -1779,20 +1779,13 @@
           },
           {
             "cueId": "bergen.livia.c4",
-            "anchor": "kuvasivat meitä",
-            "occurrence": 1,
-            "intent": "ilo",
-            "strength": 0.6
-          },
-          {
-            "cueId": "bergen.livia.c5",
-            "anchor": "Pidin siivet visusti kyljissä",
+            "anchor": "meitä. Meitä! Pidin siivet visusti kyljissä",
             "occurrence": 1,
             "intent": "miettiva",
             "strength": 0.45
           },
           {
-            "cueId": "bergen.livia.c6",
+            "cueId": "bergen.livia.c5",
             "anchor": "En aikonut pilata muodostelmaa",
             "occurrence": 1,
             "intent": "lammin",
