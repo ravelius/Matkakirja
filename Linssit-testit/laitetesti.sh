@@ -2,13 +2,12 @@
 # LINSSIEN LAITETESTI iPadilla ilman käännöstä (Linssiseppä 23.9.2026).
 #
 # Käyttää asennettua sovellusta (Natiiviseppä asentaa: tyokalut/ipad.sh asenna).
-# Sisältö: paikallisen koepaketin linssitiedostot kopioidaan sovelluksen
-# sisältövälimuistiin sen versiopolun alle, jota osoitin nyt näyttää
-# (Documents/sisalto/<versiopolku>/…); LinssiSisalto ja Sisalto lukevat välimuistin
-# ennen verkkoa. devicectl ei osaa poistaa, joten kopiot jäävät välimuistiin —
-# ne ovat käyttämättömiä heti, kun osoitin vaihtaa versiota.
+# Sisältö: koepaketin linssitiedostot kopioidaan koekansioon Documents/sisalto-koe/<polku>,
+# jonka Sisalto ja LinssiSisalto lukevat ennen versiopolkua (Natiiviseppä 705fc50), joten
+# osoittimen vaihtuminen ei riko kokeita. devicectl ei osaa poistaa: kopiot ovat voimassa,
+# kunnes ne korvataan. Vanhempi asennus ilman koekansiota: KOEKANSIO=0 (versiopolku).
 #
-#   ./laitetesti.sh sisalto [koepaketti]   v11:n linssiaineisto + maat välimuistiin
+#   ./laitetesti.sh sisalto [koepaketti]   linssiaineisto + maat (+ MAARAJAT=1) koekansioon
 #   ./laitetesti.sh astronautti <kansio>   kuvasarja ja loki
 #   ./laitetesti.sh keksinnot <kansio>     kuvasarja ja loki
 #   ./laitetesti.sh maat <kansio>          vertailu ja maatiedot: valinnat, täysi lista, lehti
@@ -37,7 +36,8 @@ case "$1" in
     TIEDOSTOT="kokoelmat/linssiaineisto.json kokoelmat/maat.json"
     [ "$MAARAJAT" = 1 ] && TIEDOSTOT="$TIEDOSTOT kokoelmat/maarajat.json"
     for f in ${=TIEDOSTOT}; do
-      sinne "$KOE/$f" "sisalto/$VERSIO/$f" && echo "välimuistiin: $VERSIO/$f"
+      if [ "${KOEKANSIO:-1}" = 1 ]; then sinne "$KOE/$f" "sisalto-koe/$f" && echo "koekansioon: $f"
+      else sinne "$KOE/$f" "sisalto/$VERSIO/$f" && echo "välimuistiin: $VERSIO/$f"; fi
     done
     kaynnista ;;
   astronautti)
