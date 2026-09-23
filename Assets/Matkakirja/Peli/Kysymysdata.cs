@@ -197,7 +197,9 @@ namespace Matkakirja.Peli
         public static List<Lippumaa> LueLiput(string json)
         {
             var l = new List<Lippumaa>();
-            foreach (var a in MiniJson.Taulukko(MiniJson.Kentta(MiniJson.Objekti(MiniJson.Jasenna(json)), "maat")))
+            // Testinäyte {"maat": […]} tai paketin kokoelma lippumaat {"alkiot": [{iso, nimi, lippu, url}]}.
+            var juuri = MiniJson.Objekti(MiniJson.Jasenna(json));
+            foreach (var a in MiniJson.Taulukko(MiniJson.Kentta(juuri, "maat") ?? MiniJson.Kentta(juuri, "alkiot")))
             {
                 var o = MiniJson.Objekti(a);
                 l.Add(new Lippumaa { Iso = MiniJson.Teksti(o, "iso"), Nimi = MiniJson.Teksti(o, "nimi"), Lippu = MiniJson.Teksti(o, "lippu") });

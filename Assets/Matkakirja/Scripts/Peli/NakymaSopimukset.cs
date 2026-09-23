@@ -65,6 +65,34 @@ namespace Matkakirja.Natiivi
         bool Auki { get; }
     }
 
+    /// <summary>Kaupunkikortin rivit (web kaupunkiliuska); null = rivi piiloon.</summary>
+    public sealed class KaupunkiToiminnot
+    {
+        /// <summary>"Lue kaupunkilehti".</summary>
+        public Action LueLehti;
+        /// <summary>"Liiku tänne" → matkavalinta (muu kuin oma kaupunki).</summary>
+        public Action Liiku;
+        public string LiikuTeksti;
+        /// <summary>"Tutki kaupunkia" (oma kaupunki, tehtävä tarjolla).</summary>
+        public Action Tutki;
+        public string TutkiTeksti;
+        /// <summary>Sulje-nappi tai ohi-napautus: kortti kiinni, kartta.</summary>
+        public Action Sulje;
+    }
+
+    /// <summary>
+    /// Kaupunkikortti kaupungin napautuksesta (Natiivi-UI). Kortti hakee
+    /// näyttödatansa (maa, lippu, kansikuva, johdanto) itse sisältöpaketista;
+    /// pelin tila tulee KaupunkiToiminnot-riveinä. Kortti ei ole modaalinen:
+    /// toisen kaupungin napautus näyttää kortin uudelleen (Nayta uudella id:llä).
+    /// </summary>
+    public interface IKaupunkiKortti
+    {
+        void Nayta(string kaupunkiId, string nimi, KaupunkiToiminnot toiminnot);
+        void Piilota();
+        bool Auki { get; }
+    }
+
     /// <summary>
     /// Näkymätehdas. Kenttä null = UGUI-varanäkymä. Aseta ennen kohtauksen
     /// latausta (BeforeSceneLoad); PeliOhjain luo näkymät AfterSceneLoad-vaiheessa.
@@ -74,5 +102,7 @@ namespace Matkakirja.Natiivi
         public static Func<GameObject, ITilarivi> Tilarivi;
         public static Func<GameObject, IMatkaValinta> MatkaValinta;
         public static Func<GameObject, IKysymysNakyma> Kysymys;
+        /// <summary>Asettamaton = ei korttia: napautus avaa matkavalinnan suoraan (erän 3 vuo).</summary>
+        public static Func<GameObject, IKaupunkiKortti> KaupunkiKortti;
     }
 }

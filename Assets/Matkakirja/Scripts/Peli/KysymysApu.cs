@@ -143,12 +143,14 @@ namespace Matkakirja.Natiivi
         static string Iso(string s) => string.IsNullOrEmpty(s) ? s : char.ToUpperInvariant(s[0]) + s.Substring(1);
 
         /// <summary>
-        /// Rakentaa näytettävän tilan. loyto = tämän kysymyksen aikana käännetty
+        /// Rakentaa näytettävän tilan. osoitteet = kuva- tai lipputiedoston nimi →
+        /// valmis https-osoite (kokoelmat kuvakysymykset ja lippumaat); puuttuva
+        /// nimi → Commons Special:FilePath. loyto = tämän kysymyksen aikana käännetty
         /// laatta (Matka.Loysi) tai null; lisat = muut palkkiorivit (Kysely.Tapahtui);
         /// viesti = epäonnistuneen teon virhe.
         /// </summary>
         public static KysymysNaytto Nakyma(Kysely kysely, AvoinKysymys q, Loyto loyto = null,
-            IEnumerable<string> lisat = null, string viesti = null)
+            IEnumerable<string> lisat = null, string viesti = null, IReadOnlyDictionary<string, string> osoitteet = null)
         {
             var m = kysely.Matka;
             var p = m.Tila.Pelaaja;
@@ -182,11 +184,14 @@ namespace Matkakirja.Natiivi
                 AikaLoppui = q.AikaLoppui,
                 Viesti = viesti,
             };
-            if (q.Laji == KysymysMuoto.Kuva && !string.IsNullOrEmpty(q.KuvaTiedosto))
-                d.KuvaUrl = q.KuvaTiedosto.StartsWith("http", StringComparison.Ordinal) ? q.KuvaTiedosto : CommonsUrl(q.KuvaTiedosto, 640);
-            else if (q.Laji == KysymysMuoto.Lippu && !string.IsNullOrEmpty(q.LippuTiedosto))
-                d.KuvaUrl = CommonsUrl(q.LippuTiedosto, 320);
-            if (d.KuvaUrl != null) d.KuvaLahde = "Wikimedia Commons";
+            string Osoite(string tiedosto, int leveys) =>
+                tiedosto.StartsWith("http", StringComparison.Ordinal) ? tiedosto
+                : osoitteet != null && osoitteet.TryGetValue(tiedosto, out var u) && !string.IsNullOrEmpty(u) ? u
+                : CommonsUrl(tiedosto, leveys);
+            if (q.Laji == KysymysMuoto.Kuva && !string.IsNullOrEmpty(q.KuvaTiedosto)) d.KuvaUrl = Osoite(q.KuvaTiedosto, 640);
+            else if (q.Laji == KysymysMuoto.Lippu && !string.IsNullOrEmpty(q.LippuTiedosto)) d.KuvaUrl = Osoite(q.LippuTiedosto, 320);
+            // Kuvan tekijä kerrotaan faktassa vastauksen jälkeen (web: vastaus paljastaisi paikan).
+            if (d.KuvaUrl != null) d.KuvaLahde = q.Laji == KysymysMuoto.Lippu ? "Lippu: Wikimedia Commons" : null;
             if (q.Laji == KysymysMuoto.Pulma && q.PulmaTiedot != null)
             {
                 var t = q.PulmaTiedot;
