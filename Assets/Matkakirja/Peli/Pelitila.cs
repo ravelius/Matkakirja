@@ -81,6 +81,14 @@ namespace Matkakirja.Peli
         /// <summary>Kysymysmoottorin tila (Peli/Kysely.cs).</summary>
         public Kyselytila Kysely = new Kyselytila();
 
+        /// <summary>
+        /// Kauppojen tila (Peli/Kaupat.cs): lehtitehtävät, pullat, eläintäyt,
+        /// julisteet. Tallennusversiossa 3 valinnainen kenttä "kaupat".
+        /// </summary>
+        public Kauppatila Kaupat = new Kauppatila();
+        /// <summary>Voittaja (web winner.id; Peli/Voitto.cs). Vain moninpelissä. Valinnainen kenttä "voittaja".</summary>
+        public int? VoittajaId;
+
         /// <summary>Laudan aarrelaatat (web world.tokens/revealed/starsFound). null = peli ilman laattoja.</summary>
         public Laattamaailma Laatat;
         /// <summary>Ryöstäjä löytyi: kaksintaistelu alkaa kysymyksen sulkeutuessa (web duelArmed).</summary>
@@ -170,6 +178,10 @@ namespace Matkakirja.Peli
             sb.Append(']');
             sb.Append(",\"kysely\":");
             Kysely.Kirjoita(sb);
+            // Kaupat ja voittaja (Peli/Kaupat.cs, Voitto.cs): versio 3, valinnaiset.
+            sb.Append(",\"kaupat\":");
+            Kaupat.Kirjoita(sb);
+            Kentta(sb, "voittaja", VoittajaId.HasValue ? VoittajaId.Value.ToString(CultureInfo.InvariantCulture) : "null");
             sb.Append(",\"laattamaailma\":");
             if (Laatat == null) sb.Append("null"); else Laatat.Kirjoita(sb);
             Kentta(sb, "kaksintaistelu", KaksintaisteluOdottaa ? "true" : "false");
@@ -237,6 +249,9 @@ namespace Matkakirja.Peli
             }
             if (t.Pelaajat.Count == 0) throw new FormatException("tallennuksessa ei ole pelaajia");
             t.Kysely = Kyselytila.Lue(MiniJson.Kentta(o, "kysely") as Dictionary<string, object>);
+            // Kaupat ja voittaja: puuttuva kenttä (vanha tallennus) = tyhjä tila.
+            t.Kaupat = Kauppatila.Lue(MiniJson.Kentta(o, "kaupat") as Dictionary<string, object>);
+            t.VoittajaId = MiniJson.Luku(o, "voittaja") is double vo ? (int)vo : (int?)null;
             if (MiniJson.Kentta(o, "laattamaailma") is Dictionary<string, object> lm) t.Laatat = Laattamaailma.Lue(lm, kaupungit);
             t.KaksintaisteluOdottaa = MiniJson.Totuus(o, "kaksintaistelu");
             t.Kaksintaistelu = AvoinKaksintaistelu.Lue(MiniJson.Kentta(o, "avoinKaksintaistelu") as Dictionary<string, object>);

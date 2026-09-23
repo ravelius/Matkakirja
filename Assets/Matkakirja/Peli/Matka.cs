@@ -510,6 +510,27 @@ namespace Matkakirja.Peli
             return TekoTulos.Onnistui();
         }
 
+        // --- rahan ja kauppojen tuki (Peli/Kaupat.cs) ------------------------
+
+        /// <summary>
+        /// Web actionMannerLento:n siirto-osa (Kaupat.MannerLento tarkistaa
+        /// kohteen): 300 p, ei lentokenttäehtoa, saapuminen ja vuoron päätös.
+        /// </summary>
+        internal void MannerLennonSiirto(string kohde)
+        {
+            var p = P;
+            Tila.Kulkutapa = Kulkutapa.Lento;
+            p.Raha -= Vakiot.LentoHinta;
+            p.Sijainti = Sijainti.KaupungissaSijainti(kohde);
+            KirjaaKaynti(p);
+            Tila.ViimePolku = null;
+            Tapahtui?.Invoke("flight", $"Lento kaupunkiin {Verkko.Kaupungit[kohde].Nimi}");
+            SaapumisenJalkeen(true);
+        }
+
+        /// <summary>Näytölle animoitava tapahtuma muista pelin osista (web emit).</summary>
+        internal void Ilmoita(string laji, string teksti) => Tapahtui?.Invoke(laji, teksti);
+
         // --- aarrelaatat (web revealToken, lukitseAarre, noteRecord) ----------
 
         /// <summary>Web tokens.has(kaupunki): kääntämätön laatta.</summary>
