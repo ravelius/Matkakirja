@@ -2,9 +2,9 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://matkakirja.app/vienti/1/kaupunki.schema.json",
   "title": "Matkakirja-vienti: kaupungit-kokoelman alkio",
-  "description": "Pelilaudan kaupunki. Natiivin 3D-proton ensimmäinen tarve (3D-selvittäjä 23.9.2026): id, nimi, lat, lon ja maa ISO2-koodina; tyyppi, lentokentta ja aloitus nimien harvennukseen. data = laudan alkuperäinen olio.",
+  "description": "Pelilaudan kaupunki. Natiivin 3D-proton ensimmäinen tarve (3D-selvittäjä 23.9.2026): id, nimi, lat, lon ja maa ISO2-koodina; tyyppi, lentokentta, aloitus ja tarkeys (skeema 1.2) nimien harvennukseen. data = laudan raakaolio, johon natiivi ei nojaa.",
   "type": "object",
-  "required": ["id", "nimi", "maa", "maa2", "manner", "lat", "lon", "sijaintiLahde", "saari", "lentokentta", "aloitus", "tyyppi", "data"],
+  "required": ["id", "nimi", "maa", "maa2", "manner", "lat", "lon", "sijaintiLahde", "saari", "lentokentta", "aloitus", "tyyppi", "tarkeys", "lauta", "data"],
   "properties": {
     "id": { "type": "string", "pattern": "^[a-z0-9]+$" },
     "nimi": { "type": "string" },
@@ -18,7 +18,15 @@
     "lentokentta": { "type": "boolean" },
     "aloitus": { "type": "boolean" },
     "tyyppi": { "type": ["string", "null"], "description": "laudan ambience (kaupunki, satama, erämaa…)" },
-    "data": { "$ref": "arvo.schema.json" }
+    "tarkeys": { "type": "integer", "minimum": 0, "maximum": 3, "description": "nimiöiden harvennus: 3 = pääkaupunki (tools/vienti/paakaupungit.mjs) tai aloituskaupunki, 2 = lentokenttä tai vähintään 6 reittiä, 1 = vähintään 4 reittiä, 0 = muut (skeema 1.2)" },
+    "lauta": {
+      "type": "object",
+      "description": "Kaupungin piste laudalla (maailmankartta, Miller-yksiköt); reittien geometria lasketaan näistä ja reitin via-pisteistä (skeema 1.5)",
+      "required": ["x", "y"],
+      "properties": { "x": { "type": "number" }, "y": { "type": "number" } },
+      "additionalProperties": false
+    },
+    "data": { "$ref": "arvo.schema.json", "description": "Laudan raakaolio sellaisenaan (x, y, la, lx, ly: laudan Miller-koordinaatit ja nimiön paikka; ambience, airport, start…). Pelin sisäinen muoto: natiivi ei nojaa siihen, ja kentät voivat muuttua ilman skeemaversion nostoa. Käytä päätason kenttiä." }
   },
   "additionalProperties": false
 }

@@ -129,7 +129,13 @@ export function ratkaiseMedia(arvo, laji) {
         PEILI_JUURI + avain,
         alkuperainen,
       ].filter(Boolean);
-      return { avain, url: reitit[0], varat: reitit.slice(1), alkuperainen };
+      // Skeema 1.5: suurennos (1600 px) kuten pelin valokuvaSuurennos():
+      // rajatun Flickr-kuvan suurennos on repon oma rajaus, muuten Flickrin
+      // h-koko tai Commons 1600 px.
+      const suurennos = lippu ? null : (VALOKUVAT_FLICKR.get(arvo)?.rajattu && oma
+        ? `${PELIN_JUURI}assets/valokuvat/${oma}`
+        : flickrOsoite(arvo, 'h') ?? `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(arvo)}?width=1600`);
+      return { avain, url: reitit[0], varat: reitit.slice(1), alkuperainen, ...(suurennos ? { suurennos } : {}) };
     }
     case 'kuva-flickr': {
       const url = flickrOsoite(arvo);

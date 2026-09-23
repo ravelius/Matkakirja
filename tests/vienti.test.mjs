@@ -27,6 +27,7 @@ import { readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { JUURI, kokoaVienti } from '../tools/vienti/vie-sisalto.mjs';
+import { onSaantoArvo } from '../tools/vienti/kokoelmat.mjs';
 import { palauta } from '../tools/vienti/sarjallista.mjs';
 import { PEILI_JUURI } from '../js/media.js';
 import { LISAMODUULIT, LISATIEDOSTOT } from '../tools/vienti/lahteet.mjs';
@@ -145,6 +146,7 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
     kysymykset: Object.values(P.questions).flat().length,
     paikkatiedot: Object.values(P.placeFacts).flat().length,
     kaksintaistelut: P.duels.length,
+    laatat: 1,
     pulmat: P.puzzles.length,
     kaupunkilehdet: avaimia(ns('kulttuuri-kategoriat.js').KULTTUURI_KATEGORIAT),
     maalehdet: avaimia(ns('maa-kategoriat.js').MAA_KATEGORIAT),
@@ -161,6 +163,24 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
     tarinakaari: avaimia(ns('tarinakaari.js').TARINAKAARI),
     saapumispuheet: avaimia(ns('saapumispuheet.js').SAAPUMISPUHEET),
     fokusvirrat: avaimia(ns('fokusvirrat.js').FOKUSVIRRAT),
+    saannot: new Set(['js/rules.js', 'js/game.js', 'js/tokens.js', 'js/ai.js'].flatMap((f) => Object.entries(ns(f))
+      .filter(([, v]) => onSaantoArvo(v)).map(([n]) => n))).size,
+    tapahtumat: ns('africa.js').AFRICA.events.length,
+    linssiaineisto: 7,
+    aanitaulut: new Set([...ns('js/sound.js').AANITEHOSTEET, ...Object.keys(ns('js/sound.js').REAL_SAMPLES)]).size
+      + ns('js/sound.js').AMBIENCE_TYPES.length + Object.keys(ns('js/sound.js').PULUN_TEHOSTEET).length
+      + Object.keys(ns('js/siirtymamusiikki.js').RAIDAT).length + Object.keys(ns('js/musiikkivalitsin.js').TILARAIDAT).length
+      + Object.keys(ns('js/musiikkivalitsin.js').PAIKKARAIDAT).length + 1 + P.cities.length,
+    kuvakysymykset: P.cities.filter((c) => !ns('js/sisaltotaulut.js').EI_VALOKUVAKYSYMYKSEEN.has(c.id)
+      && (ns('js/sisaltotaulut.js').KAIKKI_VALOKUVAT[c.id]?.uusi?.tiedosto || ns('js/sisaltotaulut.js').KAIKKI_VALOKUVAT[c.id]?.tiedosto)).length,
+    lippumaat: Object.values(P.map.countryShapes).filter((m) => m.lippu && m.nimi).length,
+    pulmaaineisto: 7,
+    maat: Object.keys(P.map.countryShapes).length,
+    livianpuhe: Object.keys(ns('js/livia-pilotti-cuet.js').LIVIAN_LUENTA_CUET).length,
+    luennat: 2 + Object.values(ns('fokusvirrat.js').FOKUSVIRRAT).filter((v) => v?.matkakirja?.aanite).length,
+    saapuminen: P.cities.length,
+    esilasketut: ns('historian-hetket.js').HISTORIAN_HETKET.length + avaimia(ns('elaintakyt.js').ELAINTAKYT)
+      + new Set(Object.values(P.map.countryShapes).map((m) => m.nimi).filter(Boolean)).size + 2 + 1,
   };
   assert.deepEqual(manifest.kokoelmat.map((k) => k.nimi).sort(), Object.keys(odotus).sort(),
     'uudella kokoelmalla pitää olla lukumäärätarkistus tässä');
@@ -179,7 +199,10 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
     for (const [kentta, kohde] of Object.entries(viittaukset)) {
       for (const a of alkiot) {
         if (a[kentta] == null) continue;
-        assert.ok(idt.get(kohde).has(a[kentta]), `${k.nimi}/${a.id}.${kentta} → ${kohde}: ${a[kentta]} puuttuu`);
+        // Viittaus voi olla myös id-taulukko (saapuminen.historianHetket).
+        for (const id of [].concat(a[kentta])) {
+          assert.ok(idt.get(kohde).has(id), `${k.nimi}/${a.id}.${kentta} → ${kohde}: ${id} puuttuu`);
+        }
       }
     }
   }
