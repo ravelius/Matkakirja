@@ -152,7 +152,7 @@ jobs:
               except urllib.error.HTTPError as e:
                   return e.code, json.loads(e.read())
 
-          tila, d = kutsu('/v1/certificates?filter[certificateType]=IOS_DEVELOPMENT,DISTRIBUTION,IOS_DISTRIBUTION&limit=50')
+          tila, d = kutsu('/v1/certificates?filter[certificateType]=DEVELOPMENT,IOS_DEVELOPMENT,DISTRIBUTION,IOS_DISTRIBUTION&limit=200')
           if tila != 200:
               print(f'::warning title=Varmenneluettelo epaonnistui::{tila}: {d}')
           else:
@@ -172,12 +172,12 @@ jobs:
       # ASC:hen ("private key not installed in keychain" -virhe). Salasana
       # on oma secret (PROTO3D_KEYCHAIN_PASSWORD), ei repossa.
       #
-      # Avainnippu lisätään käyttäjän hakulistaan VAIN tämän ajon ajaksi
-      # (poistetaan listalta — ei tiedostona — "Siivoa avaimet" -vaiheessa)
-      # ja oletusavainnippu palautetaan lopuksi. Muuten se jää pysyvästi
-      # omistajan Macin hakulistalle ja oletukseksi, mikä sai Unity Hubin
-      # kysymään avainnipun salasanaa Macin kirjautumissalasanan sijaan.
-      # set-key-partition-list estää codesign/xcodebuildin omat kyselyt.
+      # Ajuri toimii käyttäjänä koodaus (HOME=/Users/koodaus) — samassa
+      # kotihakemistossa kuin omistajan omat ohjelmat. Siksi avainnippua EI
+      # aseteta oletukseksi (se sai Unity Hubin kysymään sen salasanaa) vaan
+      # se lisätään vain hakulistan kärkeen ajon ajaksi ja poistetaan
+      # listalta lopuksi. Varmenteet luodaan itse ASC-API:lla (seuraava
+      # vaihe), joten xcodebuildin ei tarvitse kirjoittaa oletusnippuun.
       - name: Pysyvä avainnippu
         env:
           NIPPU_SALASANA: ${{ secrets.PROTO3D_KEYCHAIN_PASSWORD }}
@@ -189,14 +189,9 @@ jobs:
           fi
           security set-keychain-settings -lut 21600 "$nippu"
           security unlock-keychain -p "$NIPPU_SALASANA" "$nippu"
-          security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k "$NIPPU_SALASANA" "$nippu" || true
-          alkuperainen_oletus=$(security default-keychain -d user | sed 's/^[[:space:]]*"//;s/"[[:space:]]*$//')
-          echo "ALKUPERAINEN_OLETUSNIPPU=$alkuperainen_oletus" >> "$GITHUB_ENV"
-          nykyiset=$(security list-keychains -d user | sed 's/"//g')
-          if ! echo "$nykyiset" | grep -qF "$nippu"; then
-            security list-keychains -d user -s "$nippu" $nykyiset
-          fi
-          security default-keychain -s "$nippu"
+          nykyiset=$(security list-keychains -d user | sed 's/"//g' | grep -vF "$nippu" || true)
+          security list-keychains -d user -s "$nippu" $nykyiset
+          echo "Hakulista ajon ajaksi:"; security list-keychains -d user
           echo "AVAINNIPPU=$nippu" >> "$GITHUB_ENV"
 
       # Apple WWDR- ja Root-varmenteet (luottamusketju) — ilman näitä
@@ -211,31 +206,40 @@ jobs:
           for nimi in AppleWWDRCAG3 AppleWWDRCAG4 AppleWWDRCAG5 AppleWWDRCAG6 AppleRootCA-G2 AppleRootCA-G3; do
             if curl -fSL -o "$RUNNER_TEMP/$nimi.cer" "https://www.apple.com/certificateauthority/$nimi.cer"; then
               onnistui=$((onnistui + 1))
-              security import "$RUNNER_TEMP/$nimi.cer" -k "$AVAINNIPPU" -T /usr/bin/codesign -T /usr/bin/security || true
+              if ! tulos=$(security import "$RUNNER_TEMP/$nimi.cer" -k "$AVAINNIPPU" 2>&1); then
+                case "$tulos" in
+                  *"already exists"*) ;;
+                  *) echo "::warning title=Luottamusketjun tuonti epaonnistui::$nimi: $tulos" ;;
+                esac
+              fi
             else
               echo "::warning title=Luottamusketjun lataus epaonnistui::$nimi.cer ei latautunut"
             fi
           done
           echo "Ladattu $onnistui/6 Apple-luottamusketjun varmennetta."
 
-      # Varmistaa että avainnipussa on käyttökelpoinen Apple Distribution
-      # -identiteetti (varmenne + yksityinen avain) ja että ASC:ssä on
-      # App Store -provisiointiprofiili sille bundle id:lle. Jos
-      # identiteetti puuttuu, luo uuden avainparin + CSR:n ja pyytää
-      # ASC-API:lta varmenteen (kiintiö sallii rajallisen määrän — siksi
-      # avainnippu on pysyvä eikä uutta luoda joka ajolla). Lokiin vain
-      # CSR ja varmenne-ID, ei koskaan yksityistä avainta.
+      # Varmistaa, että pysyvässä avainnipussa on kaksi käyttökelpoista
+      # identiteettiä (varmenne + yksityinen avain): Development (Unityn
+      # pbxproj allekirjoittaa arkiston "iPhone Developer" -identiteetillä)
+      # ja Distribution (vienti App Store Connectiin). Identiteetti
+      # tunnistetaan varmenteen SHA-1:stä, EI nimestä: ASC:n IOS_DISTRIBUTION
+      # näkyy avainnipussa nimellä "iPhone Distribution", joten nimihaku
+      # "Apple Distribution" ei koskaan osunut ja jokainen ajo loi uuden
+      # varmenteen (23.9.2026). Uusi varmenne luodaan vain, jos yksikään
+      # ASC:n varmenne ei pariudu avainnipun avaimeen. Mitään ei peruta
+      # automaattisesti. Lokiin vain varmenne-ID:t, ei avaimia.
       - name: Varmista Distribution-identiteetti ja profiili
         env:
           ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
           ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
           TEAM_ID: ${{ secrets.TEAM_ID }}
           BUNDLE_ID: ${{ inputs.bundle_id }}
+          NIPPU_SALASANA: ${{ secrets.PROTO3D_KEYCHAIN_PASSWORD }}
         run: |
           set -euo pipefail
           python3 -m pip install --quiet --break-system-packages "pyjwt[crypto]==2.9.0"
           python3 - <<'PY'
-          import os, sys, time, json, base64, subprocess, urllib.request, urllib.error
+          import os, sys, time, json, base64, hashlib, subprocess, urllib.request, urllib.error
           import jwt
 
           nippu = os.environ['AVAINNIPPU']
@@ -262,87 +266,89 @@ jobs:
                   out = e.read()
                   return e.code, (json.loads(out) if out else {})
 
-          # 1) Onko avainnipussa jo Apple Distribution -identiteetti (varmenne + yksityinen avain)?
-          def identiteetti_loytyy():
-              out = subprocess.run(
-                  ['security', 'find-identity', '-v', '-p', 'codesigning', nippu],
-                  capture_output=True, text=True).stdout
-              return 'Apple Distribution' in out
+          def kelvolliset_sha1():
+              # "security find-identity -v" listaa vain identiteetit, joilla
+              # on sekä varmenne että yksityinen avain ja voimassa oleva ketju.
+              out = subprocess.run(['security', 'find-identity', '-v', '-p', 'codesigning', nippu],
+                                   capture_output=True, text=True).stdout
+              tulos = set()
+              for rivi in out.splitlines():
+                  osat = rivi.split()
+                  if len(osat) >= 2 and osat[0].endswith(')') and len(osat[1]) == 40:
+                      tulos.add(osat[1].upper())
+              return tulos
 
-          cert_id = None
-          if not identiteetti_loytyy():
-              # Avainnippu on pysyvä, joten edellisen (mahdollisesti kesken
-              # jääneen) ajon yksityinen avain saattaa jo olla tallessa —
-              # yritetään ensin liittää ASC:n olemassa olevat varmenteet
-              # siihen ennen uuden avainparin luontia (kiintiön säästö).
-              tila, d = kutsu('GET', '/v1/certificates?filter[certificateType]=IOS_DISTRIBUTION&limit=50')
-              ehdokkaat = d.get('data', []) if tila == 200 else []
-              print(f"ASC:ssa {len(ehdokkaat)} olemassa olevaa Distribution-varmennetta, yritetaan parittaa yksitellen.")
-              voittaja = None
-              for c in ehdokkaat:
-                  certpolku = f"{tmp}/olemassaoleva-{c['id']}.cer"
-                  with open(certpolku, 'wb') as f:
+          def sha1(sisalto_b64):
+              return hashlib.sha1(base64.b64decode(sisalto_b64)).hexdigest().upper()
+
+          def tuo(polku, kuvaus):
+              t = subprocess.run(['security', 'import', polku, '-k', nippu,
+                                  '-T', '/usr/bin/codesign', '-T', '/usr/bin/security'],
+                                 capture_output=True, text=True)
+              if t.returncode != 0 and 'already exists' not in t.stderr:
+                  print(f'::error title=security import epaonnistui::{kuvaus}: {t.stderr.strip()}')
+                  sys.exit(1)
+
+          def varmista_identiteetti(asc_tyyppi, cn):
+              tila, d = kutsu('GET', f'/v1/certificates?filter[certificateType]={asc_tyyppi}&limit=200')
+              if tila != 200:
+                  print(f'::error title=Varmenneluettelo epaonnistui::{asc_tyyppi} {tila}: {d}')
+                  sys.exit(1)
+              asc = d.get('data', [])
+              # Julkiset varmenteet avainnippuun: jos avain on jo tallessa,
+              # macOS parittaa ne identiteetiksi. Tuonti ei muuta ASC:tä.
+              for c in asc:
+                  polku = f"{tmp}/{c['id']}.cer"
+                  with open(polku, 'wb') as f:
                       f.write(base64.b64decode(c['attributes']['certificateContent']))
-                  tulos = subprocess.run(['security', 'import', certpolku, '-k', nippu,
-                                           '-T', '/usr/bin/codesign', '-T', '/usr/bin/security'],
-                                          capture_output=True, text=True)
-                  print(f"  {c['id']}: import exit={tulos.returncode} {tulos.stderr.strip()[:200]}")
-                  if voittaja is None and identiteetti_loytyy():
-                      voittaja = c['id']
-                      print(f"  -> {c['id']} pariutui, tama on kaytettava varmenne.")
-              if voittaja is not None:
-                  cert_id = voittaja
-                  # Omistajan lupa 23.9.2026: peru (revoke) muut kuin
-                  # pariutunut varmenne, jottei kiintio tayty orvoista.
-                  for c in ehdokkaat:
-                      if c['id'] != voittaja:
-                          tila_r, d_r = kutsu('DELETE', f"/v1/certificates/{c['id']}")
-                          print(f"  Perutaan orpo varmenne {c['id']}: {tila_r}")
+                  tuo(polku, f"varmenne {c['id']}")
+              kelvot = kelvolliset_sha1()
+              paritetut = [c['id'] for c in asc if sha1(c['attributes']['certificateContent']) in kelvot]
+              print(f"{asc_tyyppi}: ASC:ssa {len(asc)} ({', '.join(c['id'] for c in asc) or '-'}), "
+                    f"avainnipussa kaytettavissa {len(paritetut)} ({', '.join(paritetut) or '-'}).")
+              if paritetut:
+                  return paritetut[0]
 
-          if not identiteetti_loytyy():
-              print('Ei Distribution-identiteettiä avainnipussa — luodaan uusi.')
-              avainpolku = f'{tmp}/dist.key'; csrpolku = f'{tmp}/dist.csr'
+              print(f'{asc_tyyppi}: ei kaytettavaa identiteettia — luodaan uusi avainpari ja varmenne.')
+              avainpolku = f'{tmp}/{asc_tyyppi}.key'; csrpolku = f'{tmp}/{asc_tyyppi}.csr'
               subprocess.run(['openssl', 'genrsa', '-out', avainpolku, '2048'], check=True, capture_output=True)
               subprocess.run(['openssl', 'req', '-new', '-key', avainpolku, '-out', csrpolku,
-                               '-subj', f'/CN=Matkakirja Distribution/O={team_id}'], check=True, capture_output=True)
+                               '-subj', f'/CN={cn}/O={team_id}'], check=True, capture_output=True)
               csr = open(csrpolku).read()
-              print('--- CSR ---')
-              print(csr)
-              subprocess.run(['security', 'import', avainpolku, '-k', nippu,
-                               '-T', '/usr/bin/codesign', '-T', '/usr/bin/security'], check=True, capture_output=True)
-
+              tuo(avainpolku, f'{asc_tyyppi} yksityinen avain')
               tila, d = kutsu('POST', '/v1/certificates', {
                   'data': {'type': 'certificates',
-                           'attributes': {'csrContent': csr, 'certificateType': 'IOS_DISTRIBUTION'}}
+                           'attributes': {'csrContent': csr, 'certificateType': asc_tyyppi}}
               })
-              if tila == 409:
-                  # ASC sanoo että voimassa oleva varmenne on jo olemassa,
-                  # mutta paikallinen pariutus epäonnistui (siksi päädyttiin
-                  # tänne). Juuri luotua avainparia ei voi enää yhdistää
-                  # mihinkään olemassa olevaan ASC-varmenteeseen (yksityistä
-                  # avainta ei voi ladata takaisin) — tämä on korjattava
-                  # käsin (revoke ylimääräiset + luo yksi puhtaalta pöydältä,
-                  # tai poista avainnippu ja anna tämän vaiheen luoda kaikki
-                  # uudelleen tyhjästä).
-                  print(f'::error title=Varmennekiintio tayteen::ASC: {d}. Avainnipussa on jo yksityisia avaimia joita ei saatu parittua olemassa oleviin varmenteisiin — tarvitaan kasin siivous (revoke ASC-portaalissa tai avainnipun tyhjennys).')
-                  sys.exit(1)
               if tila not in (200, 201):
-                  print(f'::error title=Varmenteen luonti epaonnistui::{tila}: {d}')
+                  print(f'::error title=Varmenteen luonti epaonnistui ({asc_tyyppi})::{tila}: {d}. '
+                        f'ASC:n nykyiset: {[c["id"] for c in asc]} — perumisesta paattaa omistaja.')
                   sys.exit(1)
-              cert_id = d['data']['id']
-              print(f'Uusi Distribution-varmenne luotu, id={cert_id}')
-              certpolku = f'{tmp}/dist.cer'
-              with open(certpolku, 'wb') as f:
-                  f.write(base64.b64decode(d['data']['attributes']['certificateContent']))
-              subprocess.run(['security', 'import', certpolku, '-k', nippu,
-                               '-T', '/usr/bin/codesign', '-T', '/usr/bin/security'], check=True, capture_output=True)
-              if not identiteetti_loytyy():
-                  print('::warning title=Identiteetti ei viela nay::find-identity ei loytanyt juuri tuotua varmennetta valittomasti (voi olla luottamusketjun viive).')
-          elif cert_id is None:
-              print('Distribution-identiteetti löytyi avainnipusta, ei luoda uutta.')
-              tila, d = kutsu('GET', '/v1/certificates?filter[certificateType]=IOS_DISTRIBUTION&limit=50')
-              if tila == 200 and d.get('data'):
-                  cert_id = d['data'][0]['id']
+              uusi = d['data']
+              print(f"{asc_tyyppi}: uusi varmenne {uusi['id']} ({uusi['attributes'].get('name')}).")
+              polku = f"{tmp}/{uusi['id']}.cer"
+              with open(polku, 'wb') as f:
+                  f.write(base64.b64decode(uusi['attributes']['certificateContent']))
+              tuo(polku, f"uusi varmenne {uusi['id']}")
+              if sha1(uusi['attributes']['certificateContent']) not in kelvolliset_sha1():
+                  print(f"::error title=Identiteetti ei kelpaa::{uusi['id']} tuotiin, mutta find-identity ei hyvaksy sita "
+                        f"(luottamusketju tai avain puuttuu). Ei luoda enempaa.")
+                  sys.exit(1)
+              return uusi['id']
+
+          varmista_identiteetti('DEVELOPMENT', 'Matkakirja Development')
+          cert_id = varmista_identiteetti('IOS_DISTRIBUTION', 'Matkakirja Distribution')
+
+          # Avaimille codesign-oikeus ilman kyselyä (koskee vain jo tuotuja
+          # avaimia, siksi vasta tuontien jälkeen).
+          t = subprocess.run(['security', 'set-key-partition-list', '-S', 'apple-tool:,apple:,codesign:',
+                              '-s', '-k', os.environ['NIPPU_SALASANA'], nippu],
+                             capture_output=True, text=True)
+          if t.returncode != 0:
+              print(f'::error title=set-key-partition-list epaonnistui::{t.stderr.strip()}')
+              sys.exit(1)
+          print(subprocess.run(['security', 'find-identity', '-v', '-p', 'codesigning', nippu],
+                               capture_output=True, text=True).stdout)
 
           # 2) Onko bundle id:llä App Store -profiilia, joka sisältää tämän varmenteen?
           tila, d = kutsu('GET', f'/v1/bundleIds?filter[identifier]={bundle_id}')
@@ -399,13 +405,12 @@ jobs:
           print(f"Profiili asennettu: {profiili['attributes']['name']} (UUID {uuid})")
           PY
 
-      # UnityFramework on kehysmoduuli (embedded framework), joka ei tue
-      # provisiointiprofiilia lainkaan ("UnityFramework does not support
-      # provisioning profiles") — komentorivin PROVISIONING_PROFILE_SPECIFIER
-      # koskee kuitenkin KAIKKIA skeeman targeteja, joten manuaalinen
-      # profiili kaatuu framework-targetissa. Nyt kun ASC:ssä on oikea
-      # Distribution-varmenne ja App Store -profiili (ks. edellinen vaihe),
-      # Automatic-tila löytää ne itse eikä yritä enää Development-varmennetta.
+      # Arkisto allekirjoitetaan Development-identiteetillä (Unityn pbxproj:
+      # CODE_SIGN_IDENTITY="iPhone Developer", Automatic) ja vienti
+      # allekirjoittaa sen uudelleen Distributionilla. Komentorivillä EI
+      # anneta identiteettiä eikä profiilia: ne koskisivat kaikkia targeteja,
+      # ja UnityFramework ei tue profiilia eikä Distribution-identiteettiä
+      # Automatic-tilassa (ajot 23.9.2026).
       - name: Arkistoi ja allekirjoita
         working-directory: ${{ env.PROJEKTI }}
         env:
@@ -574,17 +579,18 @@ jobs:
         if: always()
         run: |
           rm -rf "$RUNNER_TEMP/asc" "$HOME/.appstoreconnect/private_keys" || true
-          rm -f "$RUNNER_TEMP/ExportOptions.plist" "$RUNNER_TEMP/dist.key" "$RUNNER_TEMP/dist.csr" "$RUNNER_TEMP/dist.cer" "$RUNNER_TEMP/proto3d.mobileprovision" || true
-          # Palauta omistajan oma oletusavainnippu ja poista testflight-
-          # avainnippu hakulistalta (ei tiedostona) — muuten se jää
-          # pysyvästi käyttöön ja macOS kysyy sen salasanaa muilta
-          # sovelluksilta (esim. Unity Hub) Macin oman salasanan sijaan.
-          if [ -n "${ALKUPERAINEN_OLETUSNIPPU:-}" ]; then
-            security default-keychain -s "$ALKUPERAINEN_OLETUSNIPPU" || true
+          rm -f "$RUNNER_TEMP/ExportOptions.plist" "$RUNNER_TEMP"/*.key "$RUNNER_TEMP"/*.csr "$RUNNER_TEMP"/*.cer "$RUNNER_TEMP/proto3d.mobileprovision" || true
+          # Testflight-avainnippu pois hakulistalta (tiedosto jää) ja
+          # oletusnipuksi login, jos jokin aiempi ajo jätti oletukseksi
+          # testflight-nipun — muuten omistajan ohjelmat (Unity Hub)
+          # kysyvät sen salasanaa.
+          nippu="$HOME/Library/Keychains/matkakirja-testflight.keychain-db"
+          jaljelle=$(security list-keychains -d user | sed 's/"//g' | grep -vF "$nippu" || true)
+          if [ -n "$jaljelle" ]; then
+            security list-keychains -d user -s $jaljelle || echo "::warning::hakulistan palautus epaonnistui"
           fi
-          if [ -n "${AVAINNIPPU:-}" ]; then
-            jaljelle=$(security list-keychains -d user | sed 's/"//g' | grep -vF "$AVAINNIPPU") || true
-            if [ -n "$jaljelle" ]; then
-              security list-keychains -d user -s $jaljelle || true
-            fi
+          if security default-keychain -d user | grep -qF "$nippu"; then
+            security default-keychain -d user -s "$HOME/Library/Keychains/login.keychain-db" || echo "::warning::oletusnipun palautus epaonnistui"
           fi
+          echo "Hakulista ajon jälkeen:"; security list-keychains -d user
+          echo "Oletusnippu:"; security default-keychain -d user
