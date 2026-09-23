@@ -108,3 +108,34 @@ namespace Matkakirja.Linssit.Testit
         }
     }
 }
+
+namespace Matkakirja.Linssit.Testit
+{
+    public static class TahdetTestit
+    {
+        [Testi] static void TahtitaivasKutenWebissa()
+        {
+            var k = System.Text.Json.JsonDocument.Parse(System.IO.File.ReadAllText(System.IO.Path.Combine(
+                System.AppContext.BaseDirectory, "..", "kultaiset", "tahdet.json"))).RootElement;
+            var arpa = Tahdet.Siemenluvut(Tahdet.Siemen);
+            foreach (var l in k.GetProperty("luvut").EnumerateArray()) Oleta.Sama(l.GetDouble(), arpa(), "mulberry32");
+            var joukot = Tahdet.Joukot(Tahdet.AstronautinKerroin);
+            int j = 0;
+            foreach (var o in k.GetProperty("joukot").EnumerateArray())
+            {
+                var jj = joukot[j++];
+                Oleta.Sama(o.GetProperty("tunnus").GetString(), jj.Tunnus);
+                Oleta.Sama(o.GetProperty("n").GetInt32(), jj.Pisteet.Count);
+                Oleta.Tosi(System.Math.Abs(o.GetProperty("koko").GetDouble() - jj.Koko) < 1e-12, "koko");
+                int i = 0;
+                foreach (var p in o.GetProperty("otos").EnumerateArray())
+                {
+                    var t = jj.Pisteet[i * 97]; i++;
+                    Oleta.Tosi(System.Math.Abs(p.GetProperty("lat").GetDouble() - t.Lat) < 1e-9, "lat");
+                    Oleta.Tosi(System.Math.Abs(p.GetProperty("lng").GetDouble() - t.Lon) < 1e-9, "lng");
+                    Oleta.Tosi(System.Math.Abs(p.GetProperty("alt").GetDouble() - t.Korkeus) < 1e-12, "alt");
+                }
+            }
+        }
+    }
+}
