@@ -144,7 +144,7 @@ namespace Matkakirja.Natiivi
             paneeli.style.left = r.x + 11;
             paneeli.style.right = r.z + 11;
             paneeli.style.bottom = r.w + 11;
-            palaa.style.top = Ylapalkki.Korkeus + 56;
+            palaa.style.top = Ylapalkki.Varaus + 56;
         }
 
         // --- avaus ja sulkeminen -------------------------------------------------

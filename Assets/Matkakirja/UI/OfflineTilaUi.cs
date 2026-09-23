@@ -47,7 +47,7 @@ namespace Matkakirja.Natiivi
             pilleri.schedule.Execute(Paivita).Every(2000);
         }
 
-        void Asettele() => pilleri.style.top = ylapalkki.Alareuna + 8;
+        void Asettele() => pilleri.style.top = Ylapalkki.Varaus + 8;
 
         /// <summary>Linssi tai muu koko ruudun näkymä: pilleri piiloon (ilmoitukset silti).</summary>
         public void NaytaSallittu(bool sallitaan)

@@ -4,6 +4,9 @@
 //   matkakirja: paikkarivi, teksti, luentakuva, luentakuva2
 //               kuva = {osoite|ampari|tiedosto, lyhyt, selite, lahde}
 //   pollo:      kuvat[] (PuluCam), kommentti[] (Livian repliikit luennan jälkeen)
+//   kohtaaminen + kohtaamispiste.laudat.maailmankartta {x, y}: aarteen avaus mahdollinen
+//               (lehden fokustehtävät ja pullavinkki, LehtiFokus.cs)
+//   lehtitehtavat: raakana varareitiksi, jos kokoelmaa lehtitehtavat (skeema 1.17) ei ole
 // Jäsennetään taustasäikeessä kerran (0,9 Mt), muistissa vain nämä kentät.
 using System;
 using System.Collections;
@@ -26,6 +29,10 @@ namespace Matkakirja.Natiivi
         public List<VirtaKuva> Luentakuvat = new List<VirtaKuva>();
         public List<VirtaKuva> PuluKuvat = new List<VirtaKuva>();
         public List<string> PuluKommentit = new List<string>();
+        /// <summary>Web aarteenAvausMahdollista: kohtaaminen ja sille paikka maailmankartalla.</summary>
+        public bool AarteenAvaus;
+        /// <summary>data.lehtitehtavat raakana (LehtiFokus lukee, jos kokoelma lehtitehtavat puuttuu).</summary>
+        public List<object> Lehtitehtavat;
 
         /// <summary>
         /// Paikkarivin jako (webin matkakirjanOtsikko): ensimmäisen vuosiluvun jälkeinen
@@ -126,6 +133,13 @@ namespace Matkakirja.Natiivi
                     else if (Rakenne.Lista(kommentit) is List<object> lista)
                         foreach (var r in lista) if (r is string s) v.PuluKommentit.Add(s);
                 }
+                if (MiniJson.Kentta(d, "kohtaaminen") != null
+                    && MiniJson.Kentta(MiniJson.Kentta(MiniJson.Kentta(d, "kohtaamispiste") as Dictionary<string, object>, "laudat")
+                        as Dictionary<string, object>, "maailmankartta") is Dictionary<string, object> piste
+                    && MiniJson.Luku(piste, "x") is double px && MiniJson.Luku(piste, "y") is double py
+                    && !double.IsNaN(px) && !double.IsNaN(py) && !double.IsInfinity(px) && !double.IsInfinity(py))
+                    v.AarteenAvaus = true;
+                v.Lehtitehtavat = Rakenne.Lista(MiniJson.Kentta(d, "lehtitehtavat"));
                 t[kaupunki] = v;
             }
         }

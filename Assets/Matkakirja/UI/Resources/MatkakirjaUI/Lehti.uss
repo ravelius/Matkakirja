@@ -1228,6 +1228,86 @@
     color: rgba(70, 51, 31, 0.68);
 }
 
+/* --- Fokustehtävät (web css/fokusvirta.css .fokus-tehtava, .fokus-pulla; LehtiFokus.cs) ----- */
+
+/* Nimilaatta ("AARTEEN AVAUS" / "JULISTE") ja vihjerivi keskitettynä yhtenä paalina. */
+.mk-fokus__otsake {
+    -unity-text-align: upper-center;
+}
+
+.mk-fokus__vihje {
+    margin: -2px 0 9px 0;
+    font-size: 13px;
+    white-space: normal;
+    -unity-text-align: upper-center;
+    color: rgba(60, 44, 26, 0.72);
+}
+
+.mk-fokus__vaihtoehdot {
+    margin-top: 4px;
+}
+
+/* Pullatarjous on laatikon jälkikirjoitus: katkoviiva erottaa sen vastaamisesta. */
+.mk-fokus__pulla {
+    margin-top: 13px;
+    padding-top: 10px;
+    border-top-width: 1px;
+    border-top-color: rgba(60, 44, 26, 0.38);
+}
+
+.mk-fokus__pullanappi {
+    min-height: 44px;
+    padding: 8px 17px;
+    border-width: 1px;
+    border-color: rgba(60, 44, 26, 0.6);
+    border-radius: 4px;
+    background-color: rgba(255, 253, 245, 0.72);
+    color: #211d18;
+}
+
+.mk-fokus__pullanappi .mk-nappi__teksti {
+    font-size: 15px;
+    white-space: normal;
+    -unity-text-align: middle-center;
+}
+
+.mk-fokus__pullanappi:hover {
+    background-color: #fffdf5;
+    border-color: rgba(60, 44, 26, 0.85);
+}
+
+/* Varmistus on eri nappi kuin tarjous: umpireuna ja lämmin kulta. */
+.mk-fokus__pullanappi--varmistus,
+.mk-fokus__pullanappi--varmistus:hover {
+    border-color: rgba(122, 85, 20, 0.75);
+    background-color: #e6b650;
+    color: #2c1e07;
+}
+
+.mk-fokus__pullanappi--varmistus .mk-nappi__teksti {
+    -unity-font-style: bold;
+}
+
+/* Tyhjä kassa: nappi näkyy mutta ei ota napautusta vastaan. */
+.mk-fokus__pullanappi--koyha,
+.mk-fokus__pullanappi--koyha:hover {
+    border-color: rgba(60, 44, 26, 0.35);
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(33, 29, 24, 0.55);
+}
+
+.mk-fokus__pullahuomio,
+.mk-fokus__pullatehty {
+    margin-top: 7px;
+    font-size: 13px;
+    white-space: normal;
+    -unity-text-align: upper-center;
+    color: rgba(60, 44, 26, 0.72);
+}
+
+.mk-fokus__pullatehty {
+    margin-top: 0;
+
 /* Nähtävyysarkin ☰-valikko ja ‹ › -nuolet (web .nahtavyys-valikko-nappi, .nahtavyys-nuoli). */
 .mk-nahtavyys__valikkonappi {
     position: absolute;
