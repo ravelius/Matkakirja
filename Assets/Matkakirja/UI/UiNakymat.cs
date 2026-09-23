@@ -190,6 +190,8 @@ namespace Matkakirja.Natiivi
             };
             // Aloitus ja matkan huipennus (Pelikoodarin tapahtumat); tila voi olla jo Aloitus.
             o.AloitusTarjolla += () => UiKerros.PaaSaikeessa(() => NaytaAloitus(o));
+            // Aloituskaava: avausteksti häipyy, kun aloituslento on perillä (Pelikoodarin PeliOhjain.Aloitus).
+            o.AloituslentoPaattyi += _ => UiKerros.PaaSaikeessa(Aloitus.AloituslentoPaattyi);
             if (o.Tila == SilmukanTila.Aloitus) NaytaAloitus(o);
             // Rahan muutos kupliksi (web buildToast kind stamp, "+10 puntaa · Lehden minitehtävä ratkesi").
             o.RahaMuuttui += (muutos, syy, _) => UiKerros.PaaSaikeessa(() => Leima.Raha(muutos, syy));
