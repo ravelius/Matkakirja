@@ -3,7 +3,7 @@
 // .intro-juliste, .intro-arkki, .intro-valinta).
 //
 //   1 PORTTI     tumma verho pallon päällä; yläosassa heti sama 1873-juliste kuin avauksessa
-//                ja yksi lause pelistä (webin kuvaus, index.html meta description) —
+//                ja yksi lause pelistä (Fablen kaanonlause 23.9.2026) —
 //                Laitetestaajan ensikokemus 23.9.: pelkkä pyörivä pallo ei kertonut pelistä
 //                mitään. Kehystetty nappi "Laita äänet päälle 🔈" (laittaa Äänimaiseman
 //                päälle ja kuittaa "Äänet päällä"), kultainen "Aloita seikkailu",
@@ -150,8 +150,8 @@ namespace Matkakirja.Natiivi
             UiKerros.Hae().StartCoroutine(LataaTekstit());
         }
 
-        // Webin pelikuvaus (index.html meta description, manifest) ilman nimeä, joka on julisteessa.
-        const string PorttiLause = "Kierrä maailmaa isoisän päiväkirjan kanssa, etsi aarteet ja opi matkalla.";
+        // Fablen kaanonlause (23.9.2026); webin meta description päivitetään samaksi.
+        const string PorttiLause = "Seuraa isoisän matkakirjaa vuodelta 1873 ja etsi Aarnin luettelon unohdetut aarteet.";
         Label porttiLause, aaniTeksti;
         Button aaniNappi;
 
