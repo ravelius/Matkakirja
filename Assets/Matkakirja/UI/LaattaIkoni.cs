@@ -5,7 +5,6 @@
 // kuva (themedTokenTypes: kuva), ja muuten piirrosikonina (js/mapart.js
 // drawTokenIcon, viewBox −13…13):
 //   star        viisisakarainen tähti (#e8b23c, reuna #6d4d12)
-//   robber      leveälierinen hattu ja silmänaamio
 //   pieniAarre  kolikkopino (kolme ellipsiä)
 //   isoAarre, mannerAarre  kätköarkku
 // Natiivin lauta on maailmankartta (Laatat.LautaId), jonka pääaarteella on
@@ -36,7 +35,7 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Onko tyypille kuva tai piirros (pöllö, aarteet, ryöstäjä).</summary>
         public static bool Tunnettu(string tyyppi) =>
-            tyyppi == "star" || tyyppi == "robber" || tyyppi == "pieniAarre" || tyyppi == "isoAarre"
+            tyyppi == "star" || tyyppi == "pieniAarre" || tyyppi == "isoAarre"
             || tyyppi == "mannerAarre" || tyyppi == "pollo";
 
         public LaattaIkoni(string tyyppi, string kuvaUrl = null)
@@ -101,13 +100,6 @@ namespace Matkakirja.Natiivi
                 case "star":
                     Polku("M0,-12 L3.5,-4 L12,-3.5 L5.6,2 L7.6,11 L0,6.4 L-7.6,11 L-5.6,2 L-12,-3.5 L-3.5,-4 Z",
                         Kuviot.Vari("#e8b23c"), Kuviot.Vari("#6d4d12"), 1.6f);
-                    break;
-                case "robber":
-                    Polku("M-12,-2 q12,-5 24,0 q-12,4 -24,0 z", Kuviot.Vari("#34291d"), null, 0);
-                    Polku("M-7,-2 q1,-8 7,-8 q6,0 7,8 z", Kuviot.Vari("#34291d"), null, 0);
-                    Polku("M-8,2 q8,-2 16,0 l0,4 q-8,2 -16,0 z", Kuviot.Vari("#6b5a45"), null, 0);
-                    Polku(Ellipsi(-3.5f, 4, 1.4f, 1.4f), Kuviot.Vari("#f7ecd2"), null, 0);
-                    Polku(Ellipsi(3.5f, 4, 1.4f, 1.4f), Kuviot.Vari("#f7ecd2"), null, 0);
                     break;
                 case "pieniAarre":
                     foreach (var cy in new[] { 6f, 1f, -4f })

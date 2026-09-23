@@ -18,7 +18,7 @@ Pelikoodarin näkymärajapinnat `Scripts/Peli/NakymaSopimukset.cs` ovat Assembly
   (paljastus: löydön kuva — ensin löydön oma kuva `LoytoKuvaUrl`, varana laattatyypin
   kuva tai webin piirros: `isoAarre` (oletus, Ivalojoen kultahippu: maakohtainen nimi,
   fakta ja kuva ämpäristä), `pieniAarre` (tervatynnyrin hopeariksi), `star` (aarrekuva
-  ämpäristä), `mannerAarre`, `robber`, `pollo` ja `piirros` (ilman kuvaa: kätköarkku-
+  ämpäristä), `mannerAarre`, `pollo` ja `piirros` (ilman kuvaa: kätköarkku-
   piirros) — 50:50 käytetty, fakta, lähteet, Jatka), `kohtaaminen` (Márta, Budapest:
   pieni kohtaamiskuva, "yritys 1/2", vastauksen jälkeen repliikki, oikeasta vastauksesta
   löytö ja kätkökuva `KatkoKuvaUrl`, väärästä uuden yrityksen ohje) ja `kohtaaminen-tervehdys` (tervehdyssivu:
