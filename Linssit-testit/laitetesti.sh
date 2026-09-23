@@ -16,7 +16,8 @@
 UDID=${UDID:-00008142-0019686E02F3801C}
 ID=app.matkakirja.proto3d
 KOE=${2:-/Users/Shared/Claude/sisalto-koe/v11}
-VERSIO=${VERSIO:-sisalto/1/v2}
+# Laitteen välimuistin versiopolku = osoittimen polku (esim. "sisalto/1/v3/").
+VERSIO=${VERSIO:-$(curl -s https://media.matkakirja.app/sisalto/1/uusin.json | python3 -c 'import json,sys; print(json.load(sys.stdin)["polku"].rstrip("/"))')}
 TMP=$(mktemp -d)
 
 sinne() { xcrun devicectl device copy to --device $UDID --domain-type appDataContainer --domain-identifier $ID --source "$1" --destination "Documents/$2" >/dev/null; }
@@ -28,7 +29,7 @@ kaynnista() { xcrun devicectl device process launch --device $UDID --terminate-e
 
 case "$1" in
   sisalto)
-    for f in kokoelmat/linssiaineisto.json kokoelmat/maat.json; do
+    for f in kokoelmat/linssiaineisto.json kokoelmat/maat.json kokoelmat/maarajat.json; do
       sinne "$KOE/$f" "sisalto/$VERSIO/$f" && echo "välimuistiin: $VERSIO/$f"
     done
     kaynnista ;;
