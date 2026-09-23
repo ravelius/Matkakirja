@@ -753,7 +753,12 @@ namespace Matkakirja.Natiivi
             if (mita == "kaynnista") l.Kaynnista();
             else if (mita == "jatka") l.JatkaValinaytoksesta();
             else if (mita == "tauko") l.Ajo.Tauko();
-            else if (int.TryParse(mita, out int i)) l.Ajo.Siirry(i);
+            else if (int.TryParse(mita, out int i))
+            {
+                // Selaus ennen Käynnistä-nappia: kaari käynnistetään ensin (esittely väistyy).
+                if (!l.OnKaynnistetty) l.Kaynnista();
+                l.Ajo.Siirry(i);
+            }
             else if (mita != "tila") { Kirjaa("keksinnöt: tuntematon " + mita); return; }
             var t = l.Ajo.Tila;
             Kirjaa($"keksinnöt: pysäkki {t.I}, vuosi {t.Paikka:F1}, käynnissä {l.Ajo.Kaynnissa}, välinäytös {l.Ajo.ValinaytosAuki}, luenta {System.IO.Path.GetFileName(l.Luenta ?? "-")}");

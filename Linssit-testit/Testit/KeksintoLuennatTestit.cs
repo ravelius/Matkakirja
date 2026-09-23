@@ -159,6 +159,18 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama("lopeta", s.Loki.Last());
         }
 
+        [Testi] static void KaynnistettyKerran()
+        {
+            var (l, y, s) = Avaa();
+            int n = 0;
+            l.Kaynnistetty += () => n++;
+            Oleta.Tosi(!l.OnKaynnistetty, "ennen nappia");
+            l.Kaynnista();
+            l.Kaynnista();
+            Oleta.Sama(1, n);
+            Oleta.Tosi(l.OnKaynnistetty && l.Ajo.Kaynnissa, "käynnissä");
+        }
+
         [Testi] static void IlmanSoitintaKutenEnnen()
         {
             var y = new ValeYmparisto();
