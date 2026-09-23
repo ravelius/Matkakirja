@@ -164,7 +164,12 @@ export const RAAMATTU = {
           + 'kamera yläviistosta ja muuttaa kulmaa ja korkeutta lennon vaiheen mukaan, laskussa '
           + 'puoliorbitti koneen ympäri; kone näkyy kolmiulotteisena KLASSISENA POTKURIKONEENA '
           + '(DC-3-tyyppinen, CC0-malli tai kuvaputken oma), ja sen perässä häipyvä savujana korvaa '
-          + 'webin punaisen viivan (kuljettu reitti säilyy logiikassa).',
+          + 'webin punaisen viivan (kuljettu reitti säilyy logiikassa). VARMENTEET JA PROFIILIT '
+          + '(omistaja 23.9.2026 klo 23.0x, sitova): Julkaisija saa ilman kysymistä perua vain '
+          + 'varmenteet ja profiilit, jotka automaatio on itse luonut samana päivänä ja jotka ovat '
+          + 'ylimääräisiä; jokainen peruminen kirjataan lokiin. Kuoriappin ja muiden vanhojen '
+          + 'varmenteiden perumiseen tarvitaan aina omistajan lupa. Allekirjoitusvarmenne säilyy '
+          + 'ajurin pysyvässä avainnipussa, eikä työnkulku luo uutta, jos käyttökelpoinen on.',
         'CLAUDEN JA CHATGPT/CODEXIN AGENTTISÄÄNNÖT ERIKSEEN (omistaja 11.9.2026 '
           + 'tekstisession kautta, sanatarkasti: "Peliä kehitetään Claudella ja '
           + 'ChatGPT/Codexilla. Opus/Sonnet-rajoitus ja Fable-mallin agenttikäytön '
