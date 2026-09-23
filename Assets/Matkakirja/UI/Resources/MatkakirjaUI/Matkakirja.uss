@@ -464,6 +464,122 @@
     font-size: 18px;
 }
 
+/* "Vaihda matkustustapa" heittonapin oikealla (web iconButton('nuoli')). */
+.mk-vaihtonappi {
+    position: absolute;
+    right: -58px;
+    top: 4px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.5);
+    border-radius: 12px;
+    background-color: #f5f0e2;
+    color: #46331f;
+}
+
+.mk-vaihtonappi > .mk-ikoni {
+    width: 20px;
+    height: 20px;
+    margin-right: 0;
+    color: #46331f;
+}
+
+/* Liiku ja kulkutapaliuku (web .monitoimi-nappi, .toimintorivi-liuku: ikonit, flex 1). */
+.mk-liiku {
+    position: absolute;
+    left: 50%;
+    translate: -50% 0;
+    align-items: center;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.2s;
+}
+
+.mk-liiku.mk-auki {
+    opacity: 1;
+}
+
+.mk-liiku__nappi {
+    flex-direction: row;
+    align-items: center;
+    height: 44px;
+    padding: 0 18px;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.5);
+    border-radius: 22px;
+    background-color: #f5f0e2;
+    color: #2c1e07;
+}
+
+.mk-liiku__nappi > .mk-ikoni {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    color: #7a5514;
+}
+
+.mk-liiku__nappi .mk-nappi__teksti {
+    font-size: 16px;
+}
+
+.mk-liiku__nappi.mk-valittu {
+    background-color: #d9a13b;
+    border-color: #7a5514;
+}
+
+.mk-liiku__nappi:disabled {
+    opacity: 0.45;
+}
+
+.mk-liiku__liuku {
+    flex-direction: row;
+    width: 300px;
+    margin-bottom: 8px;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.18s;
+}
+
+.mk-liiku__liuku.mk-auki {
+    opacity: 1;
+}
+
+.mk-liiku__tapa {
+    flex-grow: 1;
+    flex-basis: 0;
+    min-width: 0;
+    height: 48px;
+    margin: 0 3px;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.5);
+    border-radius: 12px;
+    background-color: #f5f0e2;
+    color: #46331f;
+}
+
+.mk-liiku__tapa > .mk-ikoni {
+    width: 24px;
+    height: 24px;
+    margin-right: 0;
+    color: #46331f;
+}
+
+.mk-liiku__tapa--korostettu {
+    background-color: #d9a13b;
+    border-color: #7a5514;
+}
+
+.mk-liiku__tapa--estetty {
+    opacity: 0.4;
+}
+
 /* --- pudotuspaneelit (.paavalikko, .kehittaja-valikko) ------------------ */
 
 .mk-sulkija {

@@ -203,6 +203,10 @@ namespace Matkakirja.Natiivi
             };
             // Aloitus ja matkan huipennus (Pelikoodarin tapahtumat); tila voi olla jo Aloitus.
             o.AloitusTarjolla += () => UiKerros.PaaSaikeessa(() => NaytaAloitus(o));
+            // Liiku ja kulkutapaliuku (Pelikoodarin PeliOhjain.Liiku): tila muuttui → napit uudelleen.
+            o.LiikuMuuttui += () => UiKerros.PaaSaikeessa(() => Matkavalinta.PaivitaLiiku(o));
+            o.TilaMuuttui += () => UiKerros.PaaSaikeessa(() => Matkavalinta.PaivitaLiiku(o));
+            Matkavalinta.PaivitaLiiku(o);
             // Aloituskaava: avausteksti häipyy, kun aloituslento on perillä (Pelikoodarin PeliOhjain.Aloitus).
             // Aloituslento ilman pallovalintaa (testikomento ui aloita, muut polut): avausteksti silti lennolle.
             o.AloituslentoAlkoi += _ => UiKerros.PaaSaikeessa(() => { if (!Aloitus.Lennolla) Aloitus.LentoKirjoitus(); });

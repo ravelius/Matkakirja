@@ -11,14 +11,22 @@
 // Kartan toimintonappi ("Heitä noppaa → Lontoo", "Tutki kaupunkia") on webin
 // button.primary: kultainen liukuväri, tumma teksti, nopan kuvake. Se istuu
 // ruudun alareunassa nimikortin yläpuolella (UGUI-versiossa 148 pt alhaalta).
+//
+// LIIKU (web ui.js ~11988, omistaja 13.9.2026 "alareunassa on koko ajan näkyvillä pieni 'liiku'
+// nappi"): kompassi + "Liiku" samassa paikassa kuin heittonappi. Napautus avaa kulkutapaliu'un
+// (liftaus, bussi, laiva, lento; web .toimintorivi-liuku: pelkät ikonit), jonka napautus kutsuu
+// PeliOhjain.ValitseKulkutapa; ohjain avaa kohteet tähän valintaan (Nayta). Estetty tapa on harmaa
+// ja sen syy tulee tilariville (web title "Bussilla — syy"). Heittovaiheessa Kulkutavat() on tyhjä:
+// Liiku piiloon, heittonappi ja sen vieressä "Vaihda matkustustapa" (IHeittoVaihto, web nuoli).
 using System;
 using System.Collections.Generic;
+using Matkakirja.Peli;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace Matkakirja.Natiivi
 {
-    public sealed class Matkavalinta : IMatkaValinta
+    public sealed class Matkavalinta : IMatkaValinta, IHeittoVaihto
     {
         public const float HeittoAlhaalta = 148f;
 
@@ -28,7 +36,10 @@ namespace Matkakirja.Natiivi
         readonly Label otsikko, alaotsikko, heittoTeksti;
         readonly SvgIkoni heittoIkoni;
         Action<int> valittu;
-        Action peru, heita;
+        Action peru, heita, vaihda;
+        readonly Button vaihtoNappi, liikuNappi;
+        readonly VisualElement liiku, liuku;
+        bool liukuAuki, liikuNakyy, sallittu = true;
 
         public bool Auki { get; private set; }
         /// <summary>Valinnan himmennys, jonka ensimmäinen lapsi on kortti (pulu hyppää sen yläpuolelle).</summary>
@@ -51,6 +62,20 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(heitto, Kirjasin.KoneLihava);
             heitto.style.bottom = HeittoAlhaalta;
             heitto.style.display = DisplayStyle.None;
+            // "Vaihda matkustustapa" heittonapin oikealle puolelle (web iconButton('nuoli')).
+            vaihtoNappi = Rakenne.Nappi(null, "mk-vaihtonappi", () => { var v = vaihda; v?.Invoke(); }, heitto, Ikonit.Viiva["nuoli"]);
+            vaihtoNappi.tooltip = PeliApu.VaihdaTeksti;
+            vaihtoNappi.style.display = DisplayStyle.None;
+
+            // --- Liiku ja kulkutapaliuku (ei modaalinen) ---
+            liiku = Rakenne.El("mk-liiku", turva, PickingMode.Ignore);
+            liiku.style.bottom = HeittoAlhaalta;
+            liiku.style.display = DisplayStyle.None;
+            liuku = Rakenne.El("mk-liiku__liuku", liiku, PickingMode.Ignore);
+            liuku.style.display = DisplayStyle.None;
+            liikuNappi = Rakenne.Nappi(null, "mk-liiku__nappi", VaihdaLiuku, liiku, Ikonit.Viiva["kompassi"]);
+            Rakenne.Teksti(Liikkuminen.LiikuTeksti, "mk-nappi__teksti", liikuNappi);
+            Kirjasimet.Aseta(liiku, Kirjasin.KoneLihava);
 
             // --- modaalinen valinta ---
             himmennys = Rakenne.El("mk-himmennys mk-himmennys--kevyt", juuri);
@@ -141,10 +166,111 @@ namespace Matkakirja.Natiivi
         /// Linssi päällä (webissä pelin paneeli visibility: hidden linssin ajan): heittonappi
         /// piiloon näkyvyydellä, jolloin ohjaimen NaytaHeitto/PiilotaHeitto-tila säilyy.
         /// </summary>
-        public void NaytaSallittu(bool sallitaan) =>
+        public void NaytaSallittu(bool sallitaan)
+        {
+            sallittu = sallitaan;
             heitto.style.visibility = sallitaan ? Visibility.Visible : Visibility.Hidden;
+            liiku.style.visibility = sallitaan ? Visibility.Visible : Visibility.Hidden;
+            if (!sallitaan) SuljeLiuku();
+        }
+
+        // --- Liiku (PeliOhjain.Kulkutavat, LiikuMuuttui) --------------------------------
+
+        IReadOnlyList<KulkutapaNappi> tavat = Array.Empty<KulkutapaNappi>();
+        bool liikuEstetty;
+
+        static string TavanIkoni(Kulkutapa t) => t switch
+        {
+            Kulkutapa.Bussi => "bussi", Kulkutapa.Meri => "purje", Kulkutapa.Lento => "kone", _ => "peukalo",
+        };
+
+        /// <summary>Ohjaimen LiikuMuuttui/TilaMuuttui: napit uudelleen; tyhjä lista = Liiku piiloon.</summary>
+        public void PaivitaLiiku(PeliOhjain o)
+        {
+            tavat = o?.Kulkutavat() ?? Array.Empty<KulkutapaNappi>();
+            liikuEstetty = o == null || o.LiikuEstetty;
+            bool nakyy = tavat.Count > 0;
+            if (!nakyy) SuljeLiuku();
+            liikuNappi.SetEnabled(!liikuEstetty);
+            if (liikuEstetty) SuljeLiuku();
+            if (liukuAuki) RakennaLiuku();
+            if (nakyy != liikuNakyy)
+            {
+                liikuNakyy = nakyy;
+                Rakenne.Nayta(liiku, nakyy, 200);
+            }
+            AsetteleLiiku();
+        }
+
+        // Heittonappi ja Liiku voivat näkyä yhtä aikaa (Tutki kaupunkia): Liiku sen yläpuolelle.
+        void AsetteleLiiku() => liiku.style.bottom = HeittoAlhaalta + (HeittoNakyy ? 62f : 0f);
+
+        /// <summary>Testikomento ui liiku: Liiku-napin napautus.</summary>
+        public void TestaaLiiku() { PaivitaLiiku(PeliOhjain.Instanssi); if (!liukuAuki) VaihdaLiuku(); }
+
+        void VaihdaLiuku()
+        {
+            if (liikuEstetty || !sallittu) return;
+            if (liukuAuki) { SuljeLiuku(); return; }
+            liukuAuki = true;
+            // Web: liuku peittää pöllön napin, joten avautuessaan se sulkee chatin.
+            if (UiNakymat.Olemassa) UiNakymat.Hae().Chat?.Sulje();
+            RakennaLiuku();
+            liikuNappi.AddToClassList("mk-valittu");
+            Rakenne.Nayta(liuku, true, 180);
+        }
+
+        void SuljeLiuku()
+        {
+            if (!liukuAuki) return;
+            liukuAuki = false;
+            liikuNappi.RemoveFromClassList("mk-valittu");
+            Rakenne.Nayta(liuku, false, 150);
+        }
+
+        void RakennaLiuku()
+        {
+            liuku.Clear();
+            foreach (var t in tavat)
+            {
+                var tapa = t;
+                var b = Rakenne.Nappi(null, "mk-liiku__tapa" + (tapa.Korostettu ? " mk-liiku__tapa--korostettu" : ""), () => ValitseTapa(tapa), liuku,
+                    Ikonit.Viiva[TavanIkoni(tapa.Laji)]);
+                b.tooltip = tapa.Estetty ? tapa.Teksti + " — " + tapa.Syy : tapa.Teksti;
+                b.EnableInClassList("mk-liiku__tapa--estetty", tapa.Estetty);
+            }
+        }
+
+        void ValitseTapa(KulkutapaNappi t)
+        {
+            if (t.Estetty)
+            {
+                // Web: harmaan napin title kertoo syyn; kosketuksessa syy tilariville.
+                if (UiNakymat.Olemassa) UiNakymat.Hae().Tilarivi.Viesti(t.Teksti + " — " + t.Syy);
+                return;
+            }
+            SuljeLiuku();
+            var virhe = PeliOhjain.Instanssi?.ValitseKulkutapa(t.Laji);
+            if (virhe != null && UiNakymat.Olemassa) UiNakymat.Hae().Tilarivi.Viesti(virhe);
+        }
+
+        // --- heittonappi (IMatkaValinta + IHeittoVaihto) ------------------------------------
+
+        public void NaytaHeitto(string teksti, Action painettu, Action kunVaihda)
+        {
+            vaihda = kunVaihda;
+            vaihtoNappi.style.display = kunVaihda != null ? DisplayStyle.Flex : DisplayStyle.None;
+            NaytaHeittoNappi(teksti, painettu);
+        }
 
         public void NaytaHeitto(string teksti, Action painettu)
+        {
+            vaihda = null;
+            vaihtoNappi.style.display = DisplayStyle.None;
+            NaytaHeittoNappi(teksti, painettu);
+        }
+
+        void NaytaHeittoNappi(string teksti, Action painettu)
         {
             heittoTeksti.text = teksti;
             heita = painettu;
@@ -155,20 +281,23 @@ namespace Matkakirja.Natiivi
                 HeittoNakyy = true;
                 Rakenne.Nayta(heitto, true, 200);
             }
+            AsetteleLiiku();
         }
 
         public void PiilotaHeitto()
         {
             heita = null;
+            vaihda = null;
             if (!HeittoNakyy) return;
             HeittoNakyy = false;
             Rakenne.Nayta(heitto, false, 200);
+            AsetteleLiiku();
         }
 
         public bool PeittaaPisteen(Vector2 ruutu)
         {
             if (Auki) return true;
-            return HeittoNakyy && kerros.PeittaaPisteen(ruutu);
+            return (HeittoNakyy || liikuNakyy) && kerros.PeittaaPisteen(ruutu);
         }
     }
 }
