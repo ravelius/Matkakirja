@@ -19,7 +19,9 @@
  *   6. skeema 1.3: lehden web-riippuvuudet (web/lehti.json) ovat täydet ja
  *      tiivisteet vastaavat repon tiedostoja;
  *   7. skeema 1.4: matkustuksen hinnat (saannot) ja saapumishaut
- *      (saapuminen) vastaavat pelin omia vakioita ja funktioita.
+ *      (saapuminen) vastaavat pelin omia vakioita ja funktioita;
+ *   8. osa 2 (funktiot tunnisteiksi): kaupunkidatassa ei ole funktioita —
+ *      pulmat nimeävät generaattorinsa, packien tekstit ovat pohjia.
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -31,8 +33,10 @@ import { kokoaJulkaisu, tarkistaPaketti, paketinTiiviste, MIN_SOVELLUS } from '.
 import { validoiNimella } from '../tools/vienti/validoi.mjs';
 import { ISO2 } from '../tools/vienti/iso2.mjs';
 import { PAAKAUPUNGIT } from '../tools/vienti/paakaupungit.mjs';
+import { PULMAGENERAATTORIT } from '../js/pulmageneraattorit.js';
+import { taytaPohja } from '../js/tekstipohja.js';
 
-const { tiedostot } = await kokoaVienti();
+const { tiedostot, manifest, nimiavaruudet } = await kokoaVienti();
 const kaupungit = JSON.parse(tiedostot.get('kokoelmat/kaupungit.json'));
 const JULKAISTU = '2026-09-23T12:00:00.000Z';
 
@@ -212,4 +216,48 @@ test('skeema 1.4: saapumishaut vastaavat pelin funktioita jokaisessa kaupungissa
   const rooma = rivit.find((r) => r.id === 'rooma');
   assert.equal(rooma.kaupunkilehti, 'rooma');
   assert.equal(rooma.paikallisaarteet, 'ITA');
+});
+
+/*
+ * Kaupunkidata = packin export, jolla on cities-taulukko (laudat ja
+ * lähdepackit), sekä pulmataulukot (*_PUZZLES). Natiivi lukee nämä
+ * sisältöpaketista, joten niissä ei saa olla funktioita: logiikka nimetään
+ * tunnisteella (pulma.generaattori → js/pulmageneraattorit.js) ja tekstit
+ * ovat pohjia (js/tekstipohja.js). Generaattorirekisterit ovat logiikkaa
+ * ja saavat olla funktioita.
+ */
+test('osa 2: kaupunkidatassa ei ole funktioita', () => {
+  const tarkistetut = [];
+  for (const m of manifest.moduulit.filter((x) => x.luokka === 'pack')) {
+    const ns = nimiavaruudet.get(m.moduuli);
+    for (const e of m.exportit) {
+      const arvo = ns[e.nimi];
+      const onKaupunkidata = (arvo && typeof arvo === 'object' && Array.isArray(arvo.cities))
+        || /_PUZZLES$/.test(e.nimi);
+      if (!onKaupunkidata) continue;
+      tarkistetut.push(`${m.moduuli}#${e.nimi}`);
+      assert.equal(e.funktioita, 0, `${m.moduuli}#${e.nimi}: ${e.funktioita} funktiota kaupunkidatassa — käytä tunnistetta (js/pulmageneraattorit.js) tai tekstipohjaa (js/tekstipohja.js)`);
+    }
+  }
+  assert.ok(tarkistetut.includes('js/packs/maailmankartta.js#MAAILMANKARTTA'));
+  assert.ok(tarkistetut.includes('js/packs/europe-puzzles.js#EUROPE_PUZZLES'));
+  assert.ok(tarkistetut.length >= 12, tarkistetut.join(', '));
+});
+
+test('osa 2: pulmien generaattorit ja tekstipohjat', () => {
+  const lauta = nimiavaruudet.get('js/packs/maailmankartta.js').MAAILMANKARTTA;
+  const generoidut = lauta.puzzles.filter((p) => p.generaattori);
+  assert.equal(generoidut.length, 11);
+  for (const p of generoidut) assert.equal(typeof PULMAGENERAATTORIT[p.generaattori], 'function', p.id);
+  for (const m of manifest.moduulit.filter((x) => x.luokka === 'pack')) {
+    for (const arvo of Object.values(nimiavaruudet.get(m.moduuli))) {
+      const t = arvo?.texts;
+      if (!t || !Array.isArray(arvo.cities)) continue;
+      assert.match(t.starFound, /\{name\}.*\{city\}/, `${m.moduuli}: starFound`);
+      assert.match(t.winnerStar, /\{name\}.*\{money\}/, `${m.moduuli}: winnerStar`);
+    }
+  }
+  assert.equal(taytaPohja(lauta.texts.winnerStar, { name: 'Fogg', money: 120 }),
+    'Fogg toi unohdetun aarteen kotiin 120 punnan kanssa.');
+  assert.equal(taytaPohja('{name} ja {tuntematon}', { name: 'A' }), 'A ja {tuntematon}');
 });

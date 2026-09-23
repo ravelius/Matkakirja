@@ -376,11 +376,11 @@ export const NORTHAMERICA = {
 
   texts: {
     intro: 'Peli alkaa! Etsikää Montezuman aarre ja palatkaa New Yorkiin, San Franciscoon tai Los Angelesiin.',
-    starFound: (name, city) => `◈ ${name} löysi MONTEZUMAN AARTEEN kaupungista ${city}!`,
+    starFound: '◈ {name} löysi MONTEZUMAN AARTEEN kaupungista {city}!',
     starToast: 'MONTEZUMAN AARRE!',
     starChase: 'Nyt on kiire kotiin — ensimmäisenä perille ehtinyt voittaa pelin.',
     winStar: 'toi Montezuman aarteen turvallisesti kotiin',
-    winnerStar: (name, money) => `${name} toi Montezuman aarteen kotiin ${money} punnan kanssa.`,
+    winnerStar: '{name} toi Montezuman aarteen kotiin {money} punnan kanssa.',
     // Saapumismerkinnät: yksi arvotaan laudalle saavuttaessa.
     // KAISTA B: tälle laudalle tarvitaan vielä vähintään neljä merkintää.
     diaries: [

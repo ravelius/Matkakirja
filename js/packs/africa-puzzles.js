@@ -513,7 +513,7 @@ export const GENERATORS = {
 export const AFRICA_PUZZLES = [
   {
     id: 'hieroglyfit',
-    generate: GENERATORS.hieroglyfit,
+    generaattori: 'hieroglyfit',
     city: 'kairo',
     title: 'Hieroglyfien luvut',
     selite: 'Piirroksessa: seinän lukumerkit — sauva, kaari ja köysikiehkura. Kolmen ensimmäisen rivin arvo lukee vieressä; neljäs on ratkaistava.',
@@ -529,7 +529,7 @@ export const AFRICA_PUZZLES = [
   },
   {
     id: 'punnukset',
-    generate: GENERATORS.punnukset,
+    generaattori: 'punnukset',
     city: 'kumasi',
     title: 'Kultapunnusten vaaka',
     selite: 'Piirroksessa: vaaka. Vasemmalla vadissa kultahiekka ja punnus, oikealla punnukset — luvut ovat punnusten arvoja.',
@@ -546,7 +546,7 @@ export const AFRICA_PUZZLES = [
   },
   {
     id: 'naksutus',
-    generate: GENERATORS.naksutus,
+    generaattori: 'naksutus',
     city: 'kapkaupunki',
     title: 'Kolme naksausta',
     selite: 'Piirroksessa: suu sivulta kolmesti — ylhäällä hampaat ja kitalaki, alhaalla kieli. Nuoli näyttää, mistä kohtaa kieli irtoaa naksahtaen; alla naksauksen kirjain.',
@@ -567,7 +567,7 @@ export const AFRICA_PUZZLES = [
   },
   {
     id: 'kuunvaiheet',
-    generate: GENERATORS.kuunvaiheet,
+    generaattori: 'kuunvaiheet',
     city: 'timbuktu',
     title: 'Kuu käsikirjoituksen sivulla',
     selite: 'Piirroksessa: kuun vaiheet järjestyksessä vasemmalta oikealle — viimeinen on jätetty tyhjäksi.',
@@ -582,7 +582,7 @@ export const AFRICA_PUZZLES = [
   },
   {
     id: 'vesileilit',
-    generate: GENERATORS.vesileilit,
+    generaattori: 'vesileilit',
     city: 'sahara',
     title: 'Neljä mittaa vettä',
     selite: 'Piirroksessa: kaksi leiliä — pienempään mahtuu kolme mittaa, isompaan viisi. Kaataa saa leilistä toiseen, täyttää ja tyhjentää saa vapaasti.',
