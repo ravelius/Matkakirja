@@ -9,7 +9,7 @@ namespace Matkakirja
     /// <summary>
     /// Pelin omat pisteet kartalla (B3: vihreä aarrepiste; Pelikoodari asettaa PeliOhjaimen
     /// TilaMuuttui-tapahtumasta). Piste on Valopiste-täplä (kolme kehää) ruudun vakiokokoisena;
-    /// lukittu piste piirretään himmeämpänä. Napautus: lähin piste 44 pt:n alueella,
+    /// lukittu piste piirretään himmeämpänä, avoin sykkii. Napautus: lähin piste 44 pt:n alueella,
     /// kaupunkimerkki voittaa kuten valoilla.
     /// </summary>
     public class Karttapisteet : MonoBehaviour
@@ -25,7 +25,11 @@ namespace Matkakirja
 
         public event Action<string> Napautettu;
 
-        sealed class Piste { public string Id; public GameObject Olio; public Material Oma; public Vector3 Paikka; public Vector3 Normaali; }
+        sealed class Piste { public string Id; public GameObject Olio; public Material Oma; public Vector3 Paikka; public Vector3 Normaali; public bool Lukittu; public float Koko; }
+
+        [Tooltip("Avoimen pisteen syke: jakso sekunteina ja koon vaihtelu (lukittu piste ei syki).")]
+        public float sykeJakso = 1.6f;
+        public float sykeMaara = 0.2f;
         readonly Dictionary<string, Piste> pisteet = new Dictionary<string, Piste>();
 
         void Start()
@@ -65,9 +69,18 @@ namespace Matkakirja
             // Valopiste laajentaa kärjet ruudulla objektin koordinaateissa: verkko pisteen kohdalle.
             p.Olio.GetComponent<MeshFilter>().sharedMesh = Verkko(p.Paikka, lukittu ? new Color(vari.r, vari.g, vari.b, 0.45f) : vari);
             float kerroin = Screen.dpi > 0 ? Mathf.Max(1f, Screen.dpi / 163f) : 1f;
-            p.Oma.SetFloat("_Koko", sade * kerroin);
+            p.Koko = sade * kerroin;
+            p.Lukittu = lukittu;
+            p.Oma.SetFloat("_Koko", p.Koko);
             p.Oma.SetVector("_Keskus", (Vector3)(float3)keskus);
             p.Olio.SetActive(true);
+        }
+
+        void Update()
+        {
+            float s = 1f + sykeMaara * 0.5f * (1f + Mathf.Sin(Time.unscaledTime * 2f * Mathf.PI / sykeJakso));
+            foreach (var p in pisteet.Values)
+                if (!p.Lukittu) p.Oma.SetFloat("_Koko", p.Koko * s);
         }
 
         public void Poista(string id)
