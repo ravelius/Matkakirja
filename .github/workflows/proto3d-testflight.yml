@@ -207,10 +207,16 @@ jobs:
       - name: Apple-luottamusketju avainnippuun
         run: |
           set -euo pipefail
+          onnistui=0
           for nimi in AppleWWDRCAG3 AppleWWDRCAG4 AppleWWDRCAG5 AppleWWDRCAG6 AppleRootCA-G2 AppleRootCA-G3; do
-            curl -fsSL -o "$RUNNER_TEMP/$nimi.cer" "https://www.apple.com/certificateauthority/$nimi.cer" || continue
-            security import "$RUNNER_TEMP/$nimi.cer" -k "$AVAINNIPPU" -T /usr/bin/codesign -T /usr/bin/security || true
+            if curl -fSL -o "$RUNNER_TEMP/$nimi.cer" "https://www.apple.com/certificateauthority/$nimi.cer"; then
+              onnistui=$((onnistui + 1))
+              security import "$RUNNER_TEMP/$nimi.cer" -k "$AVAINNIPPU" -T /usr/bin/codesign -T /usr/bin/security || true
+            else
+              echo "::warning title=Luottamusketjun lataus epaonnistui::$nimi.cer ei latautunut"
+            fi
           done
+          echo "Ladattu $onnistui/6 Apple-luottamusketjun varmennetta."
 
       # Varmistaa että avainnipussa on käyttökelpoinen Apple Distribution
       # -identiteetti (varmenne + yksityinen avain) ja että ASC:ssä on
