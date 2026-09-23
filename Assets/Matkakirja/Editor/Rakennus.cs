@@ -119,6 +119,10 @@ namespace Matkakirja.Editori
             var valot = georefGo.AddComponent<AiheValot>();
             valot.georeferenssi = georef;
             valot.materiaali = Materiaali("Karttavalo", "Matkakirja/Valopiste", Color.white);
+            var pisteet = georefGo.AddComponent<Karttapisteet>();
+            pisteet.georeferenssi = georef;
+            pisteet.materiaali = valot.materiaali;
+            kerrokset.pisteet = pisteet;
 
             var korttiGo = new GameObject("Käyttöliittymä");
             var kortti = korttiGo.AddComponent<NimiKortti>();
