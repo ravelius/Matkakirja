@@ -1,14 +1,18 @@
-# Fablen aloitusviesti (päivitetään jokaisessa Fablen nollauksessa)
+# Fablen aloitusviesti rebootin jälkeen (23.9.2026 klo 12.4x)
 
-Olet Fable, Matkakirjan päätoimittaja, Macin käyttäjässä koodaus,
-checkout /Users/samireivinen/Matkakirja-fable, haara claude/bold-ride-vow4ki
-(push aina myös v1973-prep). Lue CLAUDE.md, Raamatun Ydinajatus-osion
-kohta 2 "TYÖTAPA JA SESSIOT" (erityisesti KONTEKSTIN NOLLAUS ja FABLEN OMA
-NOLLAUS), uusin docs/raportit/viesti-fable-luovutus-*.md ja lokin viimeiset
-10 otsikkoa (docs/raamattu-loki/paatokset-2026-09.md). ListAgents: roolisessiot
-ovat auki, älä lähetä aloitusviestejä uudelleen. Kytke oma Remote Control
-päälle (set_remote_control self). Jatka luovutuksesta; kirjaa päätökset
-tools/raamattu-kirjaa.mjs:llä.
+Tili B, Fable 5.1, checkout /Users/Shared/Claude/Matkakirja-fable (vanha polku symlinkki), haara
+claude/bold-ride-vow4ki (push myös v1973-prep). Lue CLAUDE.md (Työtilat), Raamatun kohta 2,
+loki 23.9. klo 12.01–12.4x (docs/raamattu-loki/paatokset-2026-09.md), tämä tiedosto.
 
-Viimeisin luovutus: docs/raportit/viesti-fable-luovutus-20260923.md; tilinvaihdon siirtoprompti docs/raportit/siirto-2026-09-23-fablelle.md (23.9.2026).
-(päivitetään nollauksen yhteydessä).
+Reboot tehtiin CI-WebKit-vian takia (docs/raportit/ci-webkit-launch-20260922.md). Rebootin jälkeen:
+1. Omistaja avaa 8 roolisessiota kansioista /Users/Shared/Claude/Matkakirja-<rooli> (Resume previous
+   session jos tarjolla). Fable nimeää, kytkee RC:n itselle ja kaikille, antaa Postivahdille oman id:n.
+2. Laitetestaaja: yksi PR-savuke → poistuiko launch-virhe. Julkaisija: #2913 rerun yksinään, sitten
+   jono (#2895/#2897 Sisältökirjurin korjauksen jälkeen, #2898, #2916, #2917, Fablen haara).
+3. Pelikoodari: sulavuuserät 1–3 (heiton tökkäys, liu'un pehmennys, symbolikerros) luovutuksensa
+   mukaan; sitten Pulun orpo-ele.
+4. 3D-selvittäjä: Unity Editor -lataus (proto-3d) jatkuu; omistajalta Unity Personal -lisenssi
+   (OHJE-unity-lisenssi.md) ja Metal Toolchain. Siirtoseppä: hero-attribuutio 60. Sisältökirjuri:
+   #2895/#2897 lähteet. Karttaseppä: odottaa (kallistus vaihe 2 omistajan kokeilun jälkeen).
+5. Vanhat aliakset /Users/koodaus/Matkakirja-posti, wt-* ja /Users/samireivinen/Matkakirja-* voi
+   poistaa, kun sessiot on avattu uusista poluista.
