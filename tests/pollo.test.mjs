@@ -81,6 +81,8 @@ import {
   sahkeKehote,
   sahkeViesti,
   sallittuOrigin,
+  sallittuNatiivi,
+  NATIIVIT_OLETUS,
   siivoaHistoria,
   siivoaTeksti,
   siivoaVapaaVastaus,
@@ -2641,4 +2643,38 @@ test('lueNakyma astronautin kamerassa: suljettu kuva ei jää kontekstiin', () =
     doc: teeSeliteDoc({ nimi: 'Betsibokan suisto', seutu: '' }),
   });
   assert.match(ilmanSeutua, /Avattu valokuva avaruudesta: Betsibokan suisto$/m);
+});
+
+test('natiivi sovellus tunnistetaan otsakkeesta ja User-Agentista (vain oma bundle id)', () => {
+  const h = (o) => new Headers(o);
+  const ua = 'Matkakirja/1 CFNetwork/1568 Darwin/25.0 app.matkakirja.proto3d';
+  assert.equal(sallittuNatiivi(h({ 'x-matkakirja-natiivi': 'app.matkakirja.proto3d', 'user-agent': ua })), true);
+  assert.equal(sallittuNatiivi(h({ 'user-agent': ua })), false, 'otsake puuttuu');
+  assert.equal(sallittuNatiivi(h({ 'x-matkakirja-natiivi': 'app.matkakirja.proto3d', 'user-agent': 'curl/8' })), false, 'UA ei täsmää');
+  assert.equal(sallittuNatiivi(h({ 'x-matkakirja-natiivi': 'com.paha', 'user-agent': 'com.paha' })), false, 'vieras bundle id');
+  assert.equal(sallittuNatiivi(h({ 'x-matkakirja-natiivi': 'x', 'user-agent': 'x' }), ['x']), true, 'ympäristön lista');
+  assert.ok(NATIIVIT_OLETUS.includes('app.matkakirja.proto3d'));
+});
+
+test('worker: natiivi pääsee vain puheeseen', async () => {
+  const { default: worker } = await import('../tools/pollo/worker.js');
+  const env = { POLLO_ORIGINIT: 'https://matkakirja.app' };
+  const otsakkeet = {
+    'content-type': 'application/json',
+    'x-matkakirja-natiivi': 'app.matkakirja.proto3d',
+    'user-agent': 'Matkakirja app.matkakirja.proto3d',
+  };
+  const chat = await worker.fetch(new Request('https://pollo.example/', {
+    method: 'POST', headers: otsakkeet, body: JSON.stringify({ viestit: [] }),
+  }), env, {});
+  assert.equal(chat.status, 403);
+  assert.equal(await chat.text(), 'Natiiville vain puhe');
+  const vieras = await worker.fetch(new Request('https://pollo.example/', {
+    method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ tehtava: 'puhe', teksti: 'Hei.' }),
+  }), env, {});
+  assert.equal(vieras.status, 403, 'ilman originia ja tunnistetta kiinni');
+  const puhe = await worker.fetch(new Request('https://pollo.example/', {
+    method: 'POST', headers: otsakkeet, body: JSON.stringify({ tehtava: 'puhe', teksti: 'Hei.', persoona: 'merkinnat' }),
+  }), env, {});
+  assert.notEqual(puhe.status, 403, 'natiivi läpi puheen käsittelyyn (ilman avainta 503)');
 });
