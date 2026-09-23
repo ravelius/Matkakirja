@@ -19,7 +19,7 @@
 // "kamera <lat> <lon> <korkeus km>" (hyppy kuvakaappausta varten), "tila" ja
 // "kyllaisyys 0.8|1" (astronautin reliefi) ja "kehittaja 0|1" (kaikki linssit auki);
 // radiolle "radio <ISO3> | kaupunki <id> | taajuus <0–1> | aani <0–1> | stop | tila" (aani 0 = testit ilman ääntä, soi-tila näkyy silti);
-// molemmat muistetaan PlayerPrefsissä.
+// kylläisyys ja kehittäjätila muistetaan PlayerPrefsissä; isoisän linssille 1873 "isoisa tila".
 // Tulos lokiin ja Documents/linssi-loki.txt:hen.
 using System;
 using System.Collections.Generic;
@@ -126,6 +126,7 @@ namespace Matkakirja.Natiivi
             StartCoroutine(LataaVesistot());
             StartCoroutine(LataaMaat());
             StartCoroutine(LataaRadio());
+            StartCoroutine(LataaIsoisa());
             rekisteri.Vaihtui += l => Kirjaa("auki: " + (l?.Tiedot.Id ?? "ei mitään"));
             komentoPolku = Path.Combine(Application.persistentDataPath, "linssi-komento.txt");
             lokiPolku = Path.Combine(Application.persistentDataPath, "linssi-loki.txt");
@@ -322,6 +323,53 @@ namespace Matkakirja.Natiivi
             public void Sulje()
             {
                 linssi?.Sulje();   // kutsuu kerroksen Pois-metodia, joka tuhoaa sen
+                linssi = null;
+                kerros = null;
+            }
+        }
+
+        /// <summary>
+        /// Isoisän linssi 1873: rajat ja valtioiden nimet striimataan ämpäristä (GPL-3.0, ei binaariin),
+        /// maakunnat paketin nimistöstä (aika = '1873').
+        /// </summary>
+        System.Collections.IEnumerator LataaIsoisa()
+        {
+            string data = null, nimisto = null;
+            yield return LinssiSisalto.HaeVirrasta(Matkakirja.Linssit.Isoisa.Isoisa1873Linssi.AineistonOsoite, "isoisa-1873.json", t => data = t);
+            yield return LinssiSisalto.Hae("moduulit/js/packs/nimisto-1873.json", t => nimisto = t);
+            if (data == null) { Kirjaa("isoisä 1873: aineisto puuttuu"); yield break; }
+            try
+            {
+                var a = Matkakirja.Linssit.Isoisa.Isoisa1873Aineisto.Lue(Matkakirja.Peli.MiniJson.Jasenna(data),
+                    nimisto == null ? null : Matkakirja.Peli.MiniJson.Jasenna(nimisto));
+                rekisteri.Lisaa(new IsoisaSovitin(this, a));
+                Kirjaa($"isoisä 1873: {a.Viivat.Count} rajaa, {a.Nimet.Count} nimeä ({a.Lisenssi})");
+            }
+            catch (Exception e) { Kirjaa("isoisä 1873: " + e.Message); }
+        }
+
+        /// <summary>Isoisän linssi 1873 Unityssä: 3D-kerros avatessa, purku sulkiessa.</summary>
+        public sealed class IsoisaSovitin : ILinssi
+        {
+            readonly LinssiOhjain o;
+            readonly Matkakirja.Linssit.Isoisa.Isoisa1873Aineisto aineisto;
+            Matkakirja.Linssit.Isoisa.Isoisa1873Linssi linssi;
+            IsoisaKerros kerros;
+            public IsoisaSovitin(LinssiOhjain o, Matkakirja.Linssit.Isoisa.Isoisa1873Aineisto a) { this.o = o; aineisto = a; }
+            public LinssiTiedot Tiedot => Matkakirja.Linssit.Isoisa.Isoisa1873Linssi.IsoisaTiedot;
+            public bool Auki => linssi != null && linssi.Auki;
+            public Matkakirja.Linssit.Isoisa.Isoisa1873Linssi Linssi => linssi;
+            public IsoisaKerros Kerros => kerros;
+            public void Avaa(ILinssiYmparisto y)
+            {
+                kerros = IsoisaKerros.Luo(o.kierto);
+                linssi = new Matkakirja.Linssit.Isoisa.Isoisa1873Linssi(aineisto, kerros);
+                linssi.Avaa(y);
+            }
+            public void Paivita() => linssi?.Paivita();
+            public void Sulje()
+            {
+                linssi?.Sulje();   // kerroksen Pois tuhoaa sen
                 linssi = null;
                 kerros = null;
             }
@@ -730,6 +778,9 @@ namespace Matkakirja.Natiivi
                     else if (osat[1] == "kaupunki" && osat.Length > 2) r.SoitaKaupunki(osat[2]);
                     else r.Viritä(osat[1].ToUpperInvariant());
                 }
+                else if (osat[0] == "isoisa" && osat.Length > 1 && osat[1] == "tila")
+                    Kirjaa((rekisteri.Auki as IsoisaSovitin)?.Kerros is IsoisaKerros ik
+                        ? $"isoisä 1873: näkyvissä {ik.Nakyvia} nimeä, kamera {Kamera}" : "isoisä 1873: linssi ei ole auki");
                 else if (osat[0] == "tila")
                     Kirjaa($"tila: auki {rekisteri.Auki?.Tiedot.Id ?? "ei"}, kamera {Kamera}");
                 else if (osat[0] == "maa" && osat.Length > 1)
