@@ -2731,3 +2731,7 @@ Sähkekorjaukset menevät webiin v2154:ssä.
 ## SISALTOKIRJURI: BERGENIN JA SEVILLAN JULISTEET R2:SSA (julisteet/tuotanto/tuot-bergen.png, tuot-sevilla.png; VIETY SUORAAN MACILTA aws s3 cp, KOSKA vie-julisteet.yml AIKAKATKAISI KAHDESTI 15 MIN RAJAAN 880 TIEDOSTON SYNKASSA); PR #2991 VALMIS → FABLEN PAATOS: JULISTEVIENTI SIIRRETAAN MAC-AJURILLE JA SYNKATAAN VAIN MUUTTUNEET (JULKAISIJA). PELIKOODARI 70 % → LUOVUTUS ERAN JALKEEN; 5 h -KIINTIO 51 % (23.9.2026 klo 23.19)
 
 Omistajan sääntö: kaikki mikä voi, ajetaan Macilla.
+
+## PELIKOODARI NOLLATAAN klo 23.2x (70 %): LUOVUTUS viesti-pelikoodari-luovutus-20260923-natiivi5.md (428e93eae); B7 AANIERAT 1–2 AGENTILLA WORKTREESSA proto-pelikoodari-aani; ALOITUS viesti-pelikoodari-aloitus.md (23.9.2026 klo 23.21)
+
+Neljäs Pelikoodari-sessio tänään.
