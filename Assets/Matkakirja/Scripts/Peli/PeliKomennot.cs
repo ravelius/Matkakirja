@@ -106,6 +106,13 @@ namespace Matkakirja.Natiivi
                     var tapa = PeliApu.TapaTekstista(A(1));
                     return tapa == null ? "tuntematon tapa " + A(1) : ohjain.Valitse(tapa.Value);
                 }
+                case "koe":
+                    switch (A(1))
+                    {
+                        case "rosvo": return ohjain.KoeKaksintaistelu();
+                        case "tapahtuma": return ohjain.KoeTapahtuma();
+                        default: return "käyttö: koe rosvo|tapahtuma";
+                    }
                 case "mannerlennot":
                     return ohjain.AvaaMannerlennot();
                 case "peruuta":

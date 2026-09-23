@@ -1376,6 +1376,65 @@ namespace Matkakirja.Natiivi
             return null;
         }
 
+        // --- laitetestin pakotukset (testikomennot koe rosvo / koe tapahtuma) ----
+
+        /// <summary>
+        /// Laitetesti: avaa rosvon kaksintaistelun heti kuten ryöstäjälaatan jälkeen
+        /// (maailmankartalla ei ole ryöstäjiä). Vaatii kartan ja vaiheen Toiminta
+        /// (Heitto puretaan, jos Matka sallii). Palauttaa virheen tai null.
+        /// </summary>
+        public string KoeKaksintaistelu()
+        {
+            var e = KoeValmis();
+            if (e != null) return e;
+            if (rosvo == null) return "kaksintaistelukysymyksiä ei ole ladattu";
+            matka.Tila.KaksintaisteluOdottaa = true;
+            if (!matka.KaksintaisteluAlkaa()) return "kaksintaistelu ei alkanut";
+            return KoeNayta();
+        }
+
+        /// <summary>
+        /// Laitetesti: avaa tapahtumakortin paketin kokoelmasta (Afrikan laudan kortit),
+        /// vaikka kortit eivät ole maailmankartalla käytössä. Koukut puretaan heti,
+        /// joten tavallinen peli ei ala tarjota kortteja. Palauttaa virheen tai null.
+        /// </summary>
+        public string KoeTapahtuma()
+        {
+            var e = KoeValmis();
+            if (e != null) return e;
+            if (tapahtumadata == null || tapahtumadata.Kortit.Count == 0) return "tapahtumakortteja ei ole ladattu";
+            if (tapahtumakortit == null)
+            {
+                tapahtumakortit = new Tapahtumat(kysely, tapahtumadata);
+                if (!TapahtumakortitMaailmankartalla) { kysely.TapahtumiaOn = null; kysely.AvaaTapahtuma = null; }
+                tapahtumakortit.Tapahtui += (laji, teksti) => kysymysLisat.Add(teksti);
+            }
+            var p = matka.Tila.Pelaaja;
+            var r = tapahtumakortit.Avaa(p.Sijainti.Kaupungissa ? p.Sijainti.Kaupunki : null);
+            return r.Ok ? KoeNayta() : r.Virhe;
+        }
+
+        string KoeValmis()
+        {
+            if (matka == null || kysely == null) return "peli ei ole valmis";
+            if (Tila != SilmukanTila.Kartta) return "silmukka on tilassa " + Tila;
+            if (matka.Tila.Vaihe == Vaihe.Heitto && !matka.PeruKulkutapa().Ok) return "vaihe Heitto, eikä kulkutapaa voi perua";
+            if (matka.Tila.Vaihe != Vaihe.Toiminta) return "vaihe " + matka.Tila.Vaihe + " (tarvitaan Toiminta)";
+            PiilotaKortti();
+            dialogi.PiilotaHeitto();
+            return null;
+        }
+
+        string KoeNayta()
+        {
+            kysymysLoyto = null;
+            kysymysLisat.Clear();
+            Tallenna();
+            NaytaKysymys();
+            Debug.Log("MATKAKIRJA peli: koe " + AvoinTehtava + " auki");
+            return AvoinTehtava == Tehtava.Ei ? "näkymä ei auennut" : null;
+        }
+
         void PaivitaKysymysAika()
         {
             if (Tila == SilmukanTila.Kysymys && KysymysTila != null && KysymysTila.TulosVaihe == 1 && Time.unscaledTime >= paljastusAika)
