@@ -304,8 +304,13 @@ export function ratkaiseCueAjatElavana(tyo, vastaus, { vaadittuKattavuus = 0.95 
     throw new Error(`kattavuus ${(kattavuus * 100).toFixed(1)} % < vaadittu `
       + `${(vaadittuKattavuus * 100).toFixed(0)} % (puuttuvat: ${puuttuvat.join(', ') || '-'})`);
   }
-  const cuet = ratkaiseCuetSanoista(tyo, sanat, kesto);
-  return { cuet, kattavuus, kesto, puuttuvat };
+  try {
+    const cuet = ratkaiseCuetSanoista(tyo, sanat, kesto);
+    return { cuet, kattavuus, kesto, puuttuvat };
+  } catch (virhe) {
+    throw new Error(`${virhe.message} (kattavuus ${(kattavuus * 100).toFixed(1)} %, puuttuvat: `
+      + `${puuttuvat.join(', ') || '-'})`);
+  }
 }
 
 async function haeAanite(tyo) {
