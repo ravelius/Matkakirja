@@ -2299,3 +2299,7 @@ Kuori jää julkiseen ryhmään vain siihen asti, kun ensimmäinen hyväksytty n
 ## NATIIVIN TESTFLIGHT-VIENTI VALMIS: fi.matkakirja.peli 1.0.0 (1), Build/testflight, MASTER 741352b; VERSIO 1.0.0 PYSYY (JULKAISIJAN 0.4.0-EHDOTUS HYLATTY, EI UUTTA VIENTIA), JATKOSSA BUILD = AJON NUMERO (23.9.2026 klo 18.25)
 
 Julkaisijan push ja ajo odottavat omistajan lupaa Julkaisijan sessioon.
+
+## LINSSISEPPA (UUSI SESSIO): linssiseppa/maat 7e75c8c NATIIVISEPAN SEURAAVAAN MERGEEN — VERTAILU JA MAATIEDOT (MAAT ISO3, 18 MAALTA PUUTTUU iso2; MaaOsuma NAPAUTUKSEEN, Sumu.PaljastaMaahan, KAKSI LINSSIA, MAANIMET; 144/144 WEBIN KULTAISIA VASTAAN); iPAD-LOYDOS KORJATTU: RELIEFI VAAKARAITOINA, SYY CESIUMILTA PUUTTUI {reverseY}; ODOTTAA NATIIVISEPAN MAATILAA (TESTFLIGHTIN JALKEEN); UI-KOUKUT NATIIVI-UI:LLE (23.9.2026 klo 18.28)
+
+Fable: reverseY-korjaus otetaan seuraavaan sisäiseen TestFlight-buildiin, ei tämän illan buildiin.
