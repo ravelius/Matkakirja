@@ -28,6 +28,17 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public event Action LiikuMuuttui;
 
+        /// <summary>
+        /// Linssiportti (web linssikarttaEstaa / body.aikajana-paalla): Linssiseppä asettaa tämän
+        /// (LinssiOhjain.KarttaEstetty). Tosi = Liiku, matkustus, Tutki ja lehden avaus estetty, syy "linssi auki".
+        /// </summary>
+        public static Func<bool> LinssiEstaa;
+        public const string LinssiAukiSyy = "linssi auki";
+        static bool LinssiAuki { get { try { return LinssiEstaa?.Invoke() == true; } catch { return false; } } }
+
+        /// <summary>Linssiseppä kutsuu, kun portti vaihtuu (LinssiOhjain.PorttiMuuttui): Liiku luetaan uudelleen.</summary>
+        public static void LinssiPorttiMuuttui() => Instanssi?.LiikuMuuttui?.Invoke();
+
         /// <summary>Näkyykö heittonapin vieressä "Vaihda matkustustapa" (web: !autoTravel || muitaTapojaTarjolla).</summary>
         public bool VaihtoTarjolla => matka != null && Tila == SilmukanTila.Kartta && matka.VaihtoTarjolla();
 
@@ -43,7 +54,7 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Liiku harmaana (web monitoimi.disabled): kaikki tavat estetty tai valintaa ei ole nyt.</summary>
-        public bool LiikuEstetty => Liikkuminen.LiikuEstetty(Kulkutavat());
+        public bool LiikuEstetty => LinssiAuki || Liikkuminen.LiikuEstetty(Kulkutavat());
 
         /// <summary>
         /// Liiku-liu'un nappi (testikomento 'kulkutapa'): tapa ensin, kohteet sen jälkeen matkavalintaan
@@ -52,6 +63,7 @@ namespace Matkakirja.Natiivi
         public string ValitseKulkutapa(Kulkutapa laji)
         {
             if (matka == null) return "peli ei ole valmis";
+            if (LinssiAuki) return LinssiAukiSyy;
             var nappi = Kulkutavat().FirstOrDefault(n => n.Laji == laji);
             if (nappi == null) return $"matkustustapaa ei valita nyt (silmukka {Tila}, vaihe {matka.Tila.Vaihe})";
             if (nappi.Estetty) return nappi.Teksti + " — " + nappi.Syy;
