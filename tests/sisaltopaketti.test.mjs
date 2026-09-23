@@ -101,3 +101,16 @@ test('työnkulku vie paketin ennen osoitinta ja tarkistaa julkisen osoitteen vä
   assert.match(yml, /node --test tests\/vienti\.test\.mjs tests\/sisaltopaketti\.test\.mjs/);
   assert.match(yml, /cancel-in-progress: false/);
 });
+
+test('työnkulun aws-sijoitukset kestävät bash -e:n', () => {
+  // GitHub ajaa askeleet `bash -e`:llä: paljas `x=$(aws …)` lopettaa
+  // askeleen hiljaa, kun aws palauttaa virheen (ensimmäinen ajo
+  // 35850982363 kaatui puuttuvaan osoittimeen, 23.9.2026).
+  const yml = readFileSync(`${JUURI}/.github/workflows/vie-sisalto.yml`, 'utf8');
+  const sijoitukset = yml.split('\n')
+    .filter((r) => !/^\s*#/.test(r) && /=\$\(\s*\{?\s*aws /.test(r));
+  assert.ok(sijoitukset.length >= 2);
+  for (const rivi of sijoitukset) {
+    assert.ok(/if ! \w+=\$\(aws /.test(rivi) || /\|\| true/.test(rivi), `suojaamaton aws-sijoitus: ${rivi.trim()}`);
+  }
+});

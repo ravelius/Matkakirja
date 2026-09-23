@@ -112,8 +112,11 @@ jobs:
         run: |
           set -uo pipefail
           mkdir -p edellinen
-          loki=$(aws s3 cp "s3://$AMPARI/sisalto/1/uusin.json" edellinen/uusin.json --endpoint-url "$PAATE" 2>&1)
-          if [ $? -ne 0 ]; then
+          # GitHub ajaa askeleen komennolla `bash -e`, jota set ei poista:
+          # epäonnistuva `x=$(aws …)` lopetti askeleen ennen kuin puuttuva
+          # osoitin ehdittiin käsitellä (ensimmäinen ajo 35850982363,
+          # 23.9.2026). Siksi aws-kutsut ovat ehtolauseissa tai || true.
+          if ! loki=$(aws s3 cp "s3://$AMPARI/sisalto/1/uusin.json" edellinen/uusin.json --endpoint-url "$PAATE" 2>&1); then
             if echo "$loki" | grep -qiE 'does not exist|NoSuchKey|404'; then
               echo "Ei vielä osoitinta: ensimmäinen sisältöversio."
               rm -f edellinen/uusin.json
@@ -121,7 +124,8 @@ jobs:
               echo "$loki"; exit 1
             fi
           fi
-          suurin=$(aws s3 ls "s3://$AMPARI/sisalto/1/" --endpoint-url "$PAATE" 2>/dev/null \
+          # Tyhjä etuliite (ei vielä yhtään versiota) palauttaa aws s3 ls:ltä koodin 1.
+          suurin=$( { aws s3 ls "s3://$AMPARI/sisalto/1/" --endpoint-url "$PAATE" 2>/dev/null || true; } \
             | sed -n 's/.*PRE v\([0-9][0-9]*\)\/$/\1/p' | sort -n | tail -1)
           echo "suurin=${suurin:-0}" >> "$GITHUB_OUTPUT"
           echo "Suurin ämpärissä oleva versio: ${suurin:-ei yhtään}"
