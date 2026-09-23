@@ -86,6 +86,8 @@ namespace Matkakirja.Natiivi
         public string Repliikki;
         /// <summary>Repliikki on löytörepliikki (luetaan ääneen, web lueKertojana).</summary>
         public bool RepliikkiLoyto;
+        /// <summary>Kohtaamisen tuloslaji: loyto, tyhja tai vaarin (web tuloslaji), tai null.</summary>
+        public string Tuloslaji;
         /// <summary>Kohtaamiskuva (https) tervehdyssivulle ja pieneksi kysymyssivulle, tai null.</summary>
         public string MuotokuvaUrl;
         public string MuotokuvaAlt;
@@ -138,6 +140,8 @@ namespace Matkakirja.Natiivi
         public string Tervehdys, Loyto, Tyhja, Vaarin;
         /// <summary>Hahmon nimi ja napin teksti (web KOHTAAMISET[id].hahmo, .nappi).</summary>
         public string Hahmo, Nappi;
+        /// <summary>Sisällön tunnetagit (web kohtaamisenTunnetagi): laji → (tunne, voimakkuus).</summary>
+        public readonly Dictionary<string, (string Tunne, double Voimakkuus)> Tunteet = new Dictionary<string, (string, double)>();
         /// <summary>Kohtaamiskuvat (kokoelma kohtaamiskuvat): tarinakaaren henkilö ja tavallinen kohtaaminen.</summary>
         public Kohtaamiskuva KaariKuva, TavallinenKuva;
         /// <summary>Tarinakaaren henkilön kohtaaminen ja aarreteksti (TARINAKAARI[id].kohtaaminen, .aarre).</summary>
@@ -271,6 +275,10 @@ namespace Matkakirja.Natiivi
                 x.Vaarin = MiniJson.Teksti(d, "vaarin");
                 x.Hahmo = MiniJson.Teksti(d, "hahmo");
                 x.Nappi = MiniJson.Teksti(d, "nappi");
+                Tunne(x, d, "tunneTervehdys", "tervehdys");
+                Tunne(x, d, "tunneLoyto", "loyto");
+                Tunne(x, d, "tunneTyhja", "tyhja");
+                Tunne(x, d, "tunneVaarin", "vaarin");
             }
         }
 
@@ -323,7 +331,35 @@ namespace Matkakirja.Natiivi
                 var x = Hae(k);
                 x.KaariKohtaaminen = MiniJson.Teksti(d, "kohtaaminen");
                 x.KaariAarre = MiniJson.Teksti(d, "aarre");
+                Tunne(x, d, "tunneKohtaaminen", "kaari-tervehdys");
+                Tunne(x, d, "tunneAarre", "aarre");
             }
+        }
+
+        static void Tunne(Kohtaaminen x, Dictionary<string, object> d, string kentta, string laji)
+        {
+            if (MiniJson.Kentta(d, kentta) is Dictionary<string, object> t && MiniJson.Teksti(t, "tunne") is string tunne)
+                x.Tunteet[laji] = (tunne, MiniJson.Luku(t, "voimakkuus") ?? 0.5);
+        }
+
+        /// <summary>Web KOHTAAMISEN_OLETUSTUNTEET.</summary>
+        public static readonly IReadOnlyDictionary<string, (string Tunne, double Voimakkuus)> OletusTunteet =
+            new Dictionary<string, (string, double)>
+            {
+                ["tervehdys"] = ("lammin", 0.5), ["loyto"] = ("ilo", 0.7), ["tyhja"] = ("miettiva", 0.45),
+                ["vaarin"] = ("hammentynyt", 0.4), ["aarre"] = ("ilo", 0.7),
+            };
+
+        /// <summary>
+        /// Web kohtaamisenTunnetagi(laji, {kohtaaminen, kaariTarina}): sisällön tagi tai
+        /// oletus. laji: tervehdys, loyto, tyhja, vaarin, aarre; kaari = tarinakaaren kohtaaminen.
+        /// </summary>
+        public (string Tunne, double Voimakkuus)? Tunne(string kaupunki, string laji, bool kaari)
+        {
+            var x = Kaupunki(kaupunki);
+            string avain = laji == "tervehdys" && kaari ? "kaari-tervehdys" : laji;
+            if (x != null && x.Tunteet.TryGetValue(avain, out var t)) return t;
+            return OletusTunteet.TryGetValue(laji, out var o) ? o : ((string, double)?)null;
         }
 
         public Kohtaaminen Kaupunki(string k) => k != null && Kaupungit.TryGetValue(k, out var x) ? x : null;
@@ -374,6 +410,7 @@ namespace Matkakirja.Natiivi
             {
                 bool loyto = oikein && (q.Tutkimus || q.Loyto != null);
                 d.Repliikki = !oikein ? x.Vaarin : loyto ? x.Loyto : x.Tyhja;
+                d.Tuloslaji = !oikein ? "vaarin" : loyto ? "loyto" : "tyhja";
                 d.RepliikkiLoyto = loyto && !string.IsNullOrEmpty(d.Repliikki);
             }
             if (kaari != null && oikein && !string.IsNullOrEmpty(kaari.KaariAarre)) d.KatkoKuvaUrl = kohtaamiset.KatkoKuvaUrl;

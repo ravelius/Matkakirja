@@ -231,6 +231,8 @@ namespace Matkakirja.Natiivi
             lahde.volume = 0;
             lahde.Play();
             if (vanha != null && vanha != klippi) Destroy(vanha);
+            // Uusi puhe korvasi soivan: kuuntelijat näkevät lopun ja uuden alun.
+            if (puhuu) AsetaPuhuu(false);
             AsetaPuhuu(true);
             lataus = null;
             haivytys = StartCoroutine(Voimakkuuteen(Voimakkuus, Alkuhaivytys, false));
