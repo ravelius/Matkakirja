@@ -71,7 +71,11 @@ namespace Matkakirja
         /// Kuten yllä; valinnainen = true: puuttuva kokoelma (404, uudempi nippu kuin
         /// julkaistu paketti) kirjataan tavallisena lokirivinä eikä virheenä.
         /// </summary>
-        public static IEnumerator HaeTeksti(string kokoelma, Action<string> valmis, bool valinnainen)
+        public static IEnumerator HaeTeksti(string kokoelma, Action<string> valmis, bool valinnainen) =>
+            HaePaketista("kokoelmat/" + kokoelma + ".json", valmis, valinnainen);
+
+        /// <summary>Hakee paketin tiedoston versiopolun alta (esim. "offline.json"), välimuistin kautta.</summary>
+        public static IEnumerator HaePaketista(string suhteellinen, Action<string> valmis, bool valinnainen)
         {
             while (osoitinHaussa) yield return null;
             string versioPolku = istunnonPolku;
@@ -99,7 +103,7 @@ namespace Matkakirja
             }
             if (versioPolku == null) { valmis(null); yield break; }
 
-            string polku = versioPolku + "kokoelmat/" + kokoelma + ".json";
+            string polku = versioPolku + suhteellinen;
             string tiedosto = Valimuisti(polku);
             string teksti = null;
             if (File.Exists(tiedosto))
