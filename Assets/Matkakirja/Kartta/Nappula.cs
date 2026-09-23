@@ -77,7 +77,7 @@ namespace Matkakirja
 
         /// <summary>
         /// Lennon ensimmäisen kehyksen piikki (mittaus 24.9.: 209 ms + 42 ms) tulee koneen,
-        /// savun ja sumuvarjostinmuunnelman ensipiirrosta. Piirretään ne kerran heti alussa
+        /// savun, sumuvarjostinmuunnelman ja pilvikuoren ensipiirrosta. Piirretään ne kerran heti alussa
         /// näkymättömän pieninä, kun mitään ei vielä liiku.
         /// </summary>
         IEnumerator Esilammita()
@@ -100,6 +100,10 @@ namespace Matkakirja
                 savu.Lisaa(e1 + new double3(0.01, 0, 0));
             }
             if (aurinko != null) aurinko.Sumu(1e9, 2e9); // sumumuunnelma käännetään, sumua ei näy
+            // Linssisepän pilvikuori luodaan ensimmäisellä Nayta-kutsulla (mittaus: 40 ms lennon alussa):
+            // luodaan se nyt ja piilotetaan samassa kehyksessä, joten pilviä ei näy.
+            var pilvet = Matkakirja.Linssit.Pilvet.LentoPilvet.Instanssi;
+            if (pilvet != null && !pilvet.Nakyvissa) { pilvet.Nayta(2000.0, 0.01); pilvet.Piilota(0.01); }
             yield return null;
             yield return null;
             if (aurinko != null && liike == null) aurinko.Sumu(0, 0);

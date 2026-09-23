@@ -23,10 +23,14 @@
 //               lähderivi tekstin perään, "Katso kuva", jos wiki.
 //
 // Sisältö: fokusvirrat (Fokusvirrat.cs), paikkatiedot (PeliOhjain.Kysymykset tai
-// oma lataus ilman peliä), tarinakaari (vain `saapuminen`) ja valinnainen
-// kokoelma saapumistekstit, jota paketissa EI VIELÄ OLE (Siirtoseppä): alkiot
-// [{kaupunki, data: {kuvaus, nosto}}]. Kun se ilmestyy, Saapuminen-haara
-// toimii ilman koodimuutosta.
+// oma lataus ilman peliä), tarinakaari (vain `saapuminen`) ja kokoelma
+// saapumistekstit (skeema 1.24, 216 kaupunkia ilman fokusvirtaa). Kokoelma on
+// webin renderFact-valinta valmiiksi laskettuna: laji matkakirja (pakin kuvaus +
+// nosto) | kaari | havainto, otsikko, paikkarivi, lihavoitu + jatko, aani
+// (äänite, kun se vastaa tekstiä; nyt vain Kairo), lukija (teksti, jonka web lukee
+// puhesynteesillä ilman äänitettä), wiki ja kuvat (postikortin pino: muistikirjan
+// pikkukuva = kuvat[0], napautus avaa pinon). Nosto on pelkkää tekstiä (nosto.teksti).
+// Vanha muoto {kaupunki, data: {kuvaus, nosto}} luetaan yhä varalle.
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -56,6 +60,22 @@ namespace Matkakirja.Natiivi
         public string Wiki;
         /// <summary>Kaiutin (Kertoja-kytkin) näkyvissä: vain merkinnöillä, joilla on luento.</summary>
         public bool Kaiutin;
+        /// <summary>
+        /// Muistikirjan valokuva (web naytaFactValokuva): pino postikortin järjestyksessä, pikkukuvana
+        /// ensimmäinen. Tyhjä = ei kuvaa.
+        /// </summary>
+        public List<VirtaKuva> Valokuvat = new List<VirtaKuva>();
+        /// <summary>Saapumisen äänite (web SAAPUMISLUENNAT, luentaVastaaTekstia), tai null.</summary>
+        public string AaniUrl;
+        /// <summary>Ilman äänitettä puhesynteesillä luettava teksti (web lueMerkinta), tai null.</summary>
+        public string Lukija;
+    }
+
+    /// <summary>Kokoelman saapumistekstit alkio (skeema 1.24; vanhasta muodosta vain kuvaus ja nosto).</summary>
+    public sealed class Saapumisteksti
+    {
+        public string Kaupunki, Laji, Otsikko, Paikkarivi, Lihava, Jatko, Kuvaus, Nosto, AaniUrl, Lukija, Wiki;
+        public List<VirtaKuva> Kuvat = new List<VirtaKuva>();
     }
 
     public static class Matkakirjamerkinnat
@@ -63,7 +83,7 @@ namespace Matkakirja.Natiivi
         // Web VOICES (js/pack.js).
         public const string AaniNuori = "Nuoren Foggin havainto", AaniIsoisa = "Isoisän päiväkirjasta, 1873";
 
-        static Dictionary<string, (string Kuvaus, string Nosto)> saapumistekstit;
+        static Dictionary<string, Saapumisteksti> saapumistekstit;
         static Dictionary<string, string> kaarisaapumiset;
         static Dictionary<string, List<Paikkatieto>> omatPaikkatiedot;
         static bool ladattu, haussa;
@@ -89,16 +109,13 @@ namespace Matkakirja.Natiivi
                 yield return Sisalto.HaeTeksti("paikkatiedot", t => paikat = t, valinnainen: true);
             Task.Run(() =>
             {
-                var s = new Dictionary<string, (string, string)>();
+                var s = new Dictionary<string, Saapumisteksti>();
                 var k = new Dictionary<string, string>();
                 Dictionary<string, List<Paikkatieto>> p = null;
                 try
                 {
                     foreach (var (kaupunki, d) in Alkiot(st))
-                    {
-                        var kuvaus = MiniJson.Teksti(d, "kuvaus");
-                        if (!string.IsNullOrEmpty(kuvaus)) s[kaupunki] = (kuvaus, MiniJson.Teksti(d, "nosto") ?? "");
-                    }
+                        if (LueSaapumisteksti(kaupunki, d) is Saapumisteksti x) s[kaupunki] = x;
                     foreach (var (kaupunki, d) in Alkiot(kaari))
                     {
                         var saapuminen = MiniJson.Teksti(d, "saapuminen");
@@ -136,12 +153,68 @@ namespace Matkakirja.Natiivi
             if (!(MiniJson.Kentta(juuri, "alkiot") is List<object> alkiot)) yield break;
             foreach (var o in alkiot)
             {
-                var a = MiniJson.Objekti(o);
-                var d = MiniJson.Objekti(MiniJson.Kentta(a, "data")) ?? a;
+                if (!(o is Dictionary<string, object> a)) continue;
+                // Skeema 1.24: kentät alkion päätasolla (ei data-oliota); vanha muoto data-olion sisällä.
+                var d = MiniJson.Kentta(a, "lihavoitu") != null ? a : MiniJson.Kentta(a, "data") as Dictionary<string, object> ?? a;
                 var kaupunki = MiniJson.Teksti(a, "kaupunki") ?? MiniJson.Teksti(d, "kaupunki") ?? MiniJson.Teksti(d, "id");
                 if (kaupunki != null && d != null) yield return (kaupunki, d);
             }
         }
+
+        /// <summary>
+        /// Saapumistekstin alkio: skeema 1.24 (kentät päätasolla: laji, otsikko, lihavoitu, jatko,
+        /// nosto {teksti}, aani {url}, lukija, wiki, kuvat[]) tai vanha {kuvaus, nosto: "…"}.
+        /// </summary>
+        static Saapumisteksti LueSaapumisteksti(string kaupunki, Dictionary<string, object> d)
+        {
+            string kuvaus = MiniJson.Teksti(d, "kuvaus");
+            var nostoArvo = MiniJson.Kentta(d, "nosto");
+            string nosto = nostoArvo as string ?? MiniJson.Teksti(nostoArvo as Dictionary<string, object>, "teksti");
+            string lihava = MiniJson.Teksti(d, "lihavoitu");
+            if (string.IsNullOrEmpty(kuvaus) && string.IsNullOrEmpty(lihava)) return null;
+            var t = new Saapumisteksti
+            {
+                Kaupunki = kaupunki, Laji = MiniJson.Teksti(d, "laji") ?? "matkakirja",
+                Otsikko = MiniJson.Teksti(d, "otsikko"), Paikkarivi = MiniJson.Teksti(d, "paikkarivi"),
+                Kuvaus = kuvaus, Nosto = string.IsNullOrWhiteSpace(nosto) ? null : nosto.Trim(),
+                AaniUrl = Tyhja(MiniJson.Teksti(MiniJson.Kentta(d, "aani") as Dictionary<string, object>, "url")),
+                Lukija = Tyhja(MiniJson.Teksti(d, "lukija")), Wiki = Tyhja(MiniJson.Teksti(d, "wiki")),
+            };
+            if (lihava != null)
+            {
+                t.Lihava = lihava;
+                t.Jatko = MiniJson.Teksti(d, "jatko") ?? "";
+            }
+            else
+            {
+                // Vanha muoto: web ekaLause(kuvaus), loput ja nosto tavallisella fontilla.
+                var (eka, loput) = EkaLause(kuvaus);
+                t.Lihava = eka;
+                t.Jatko = string.Join(" ", new[] { loput, t.Nosto ?? "" }).Trim();
+            }
+            // Postikortin pino (historiakuva, lisät, nykykuva); pikkukuva on sen ensimmäinen.
+            var kuvat = MiniJson.Kentta(d, "kuvat") as List<object>;
+            if ((kuvat == null || kuvat.Count == 0) && MiniJson.Kentta(d, "kuva") is Dictionary<string, object> yksi)
+                kuvat = new List<object> { yksi };
+            foreach (var o in kuvat ?? new List<object>())
+            {
+                if (!(o is Dictionary<string, object> k)) continue;
+                string osoite = MiniJson.Teksti(k, "url") ?? MiniJson.Teksti(k, "arvo");
+                if (string.IsNullOrEmpty(osoite)) continue;
+                t.Kuvat.Add(new VirtaKuva
+                {
+                    Osoite = osoite,
+                    Lyhyt = MiniJson.Teksti(k, "lyhyt") ?? MiniJson.Teksti(k, "selite"),
+                    Selite = MiniJson.Teksti(k, "selite") ?? MiniJson.Teksti(k, "lyhyt"),
+                    Lahde = MiniJson.Teksti(k, "lahderivi") ?? MiniJson.Teksti(k, "lahde"),
+                });
+            }
+            return t;
+        }
+
+        /// <summary>Kaupungin saapumisteksti kokoelmasta (testikomennot), tai null.</summary>
+        public static Saapumisteksti HaeSaapumisteksti(string kaupunki) =>
+            kaupunki != null && saapumistekstit != null && saapumistekstit.TryGetValue(kaupunki, out var s) ? s : null;
 
         /// <summary>Kaupungin paikkatiedot (web pack.placeFacts[id]), tai null.</summary>
         public static List<Paikkatieto> Paikkatiedot(string kaupunki)
@@ -190,24 +263,46 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// Web renderFactin saapumishaara: SAAPUMISTEKSTIT ensin, tarinakaaren saapuminen
-        /// vain ilman sitä. kaariSaa = false ohittaa kaaren (testikomento).
+        /// vain ilman sitä. kaariSaa = false ohittaa kaaren (testikomento). Kokoelman
+        /// havaintorivi kuuluu Havainto-haaralle (web: saapumistekstiä ei ole).
         /// </summary>
         public static Merkinta Saapuminen(string kaupunki, bool kaariSaa = true)
         {
-            string kuvaus = null, nosto = "";
-            string laji = "saapuminen";
-            if (saapumistekstit != null && saapumistekstit.TryGetValue(kaupunki, out var s)) (kuvaus, nosto) = s;
-            else if (kaariSaa && kaarisaapumiset != null && kaarisaapumiset.TryGetValue(kaupunki, out var k)) { kuvaus = k; laji = "kaari"; }
-            if (string.IsNullOrEmpty(kuvaus)) return null;
             string nimi = Nimi(kaupunki);
+            if (saapumistekstit != null && saapumistekstit.TryGetValue(kaupunki, out var s))
+            {
+                if (s.Laji == "havainto") return null;
+                if (s.Laji == "kaari" && !kaariSaa) return null;
+                var sm = new Merkinta
+                {
+                    Avain = "saapui:" + kaupunki, Kaupunki = kaupunki, Laji = s.Laji == "kaari" ? "kaari" : "saapuminen",
+                    Lihava = s.Lihava, Teksti = s.Jatko,
+                    Valokuvat = s.Kuvat, AaniUrl = s.AaniUrl, Lukija = s.AaniUrl == null ? s.Lukija : null,
+                    // Web naytaMerkinnanKaiutin: kaiutin vain äänitteelle, ei puhesynteesille.
+                    Kaiutin = s.AaniUrl != null,
+                };
+                Otsake(sm, nimi, s.Otsikko ?? "Matkakirjasta", s.Paikkarivi ?? nimi);
+                return sm;
+            }
+            if (!kaariSaa || kaarisaapumiset == null || !kaarisaapumiset.TryGetValue(kaupunki, out var kuvaus)
+                || string.IsNullOrEmpty(kuvaus)) return null;
             var (eka, loput) = EkaLause(kuvaus);
             var m = new Merkinta
             {
-                Avain = "saapui:" + kaupunki, Kaupunki = kaupunki, Laji = laji,
-                Lihava = eka, Teksti = string.Join(" ", new[] { loput, nosto }).Trim(),
+                Avain = "saapui:" + kaupunki, Kaupunki = kaupunki, Laji = "kaari",
+                Lihava = eka, Teksti = loput,
             };
-            // Euroopan (fokusvirtapakin) kaupungilla sama otsikko kuin virran kortilla ("Kreeta, 1873").
-            if (Fokusvirrat.Hae(kaupunki) != null)
+            Otsake(m, nimi, "Matkakirjasta", nimi);
+            return m;
+        }
+
+        /// <summary>
+        /// Web: Euroopan (fokusvirtapakin) kaupungilla sama otsikko kuin virran kortilla
+        /// ("Kreeta, 1873"), muualla "Matkakirjasta" + kaupunki.
+        /// </summary>
+        static void Otsake(Merkinta m, string nimi, string otsikko, string paikkarivi)
+        {
+            if (Fokusvirrat.Hae(m.Kaupunki) != null)
             {
                 m.Otsikko = MatkakirjanOtsikko(nimi, nimi).Otsikko;
                 m.PaikkaAika = true;
@@ -216,15 +311,26 @@ namespace Matkakirja.Natiivi
             }
             else
             {
-                m.Otsikko = "Matkakirjasta";
-                m.Paikkarivi = nimi;
+                m.Otsikko = otsikko;
+                m.Paikkarivi = paikkarivi;
             }
-            return m;
         }
 
-        /// <summary>Web renderFactin saapumishavainto: isoisän paikkatieto ensin, muuten ensimmäinen.</summary>
+        /// <summary>
+        /// Web renderFactin saapumishavainto: kokoelman havaintorivi (skeema 1.24, kuvineen), muuten
+        /// isoisän paikkatieto ensin, muuten ensimmäinen.
+        /// </summary>
         public static Merkinta Havainto(string kaupunki)
         {
+            if (saapumistekstit != null && saapumistekstit.TryGetValue(kaupunki, out var s) && s.Laji == "havainto")
+                return new Merkinta
+                {
+                    Avain = "saapui:" + kaupunki, Kaupunki = kaupunki, Laji = "havainto",
+                    Otsikko = s.Otsikko ?? AaniIsoisa, Paikkarivi = s.Paikkarivi ?? Nimi(kaupunki),
+                    Lihava = s.Lihava, Teksti = s.Jatko, Wiki = s.Wiki,
+                    Valokuvat = s.Kuvat, AaniUrl = s.AaniUrl, Lukija = s.AaniUrl == null ? s.Lukija : null,
+                    Kaiutin = s.AaniUrl != null,
+                };
             var faktat = Paikkatiedot(kaupunki);
             if (faktat == null) return null;
             var f = faktat.Find(x => x.Aani == "isoisa") ?? faktat[0];
@@ -235,6 +341,8 @@ namespace Matkakirja.Natiivi
                 Avain = "saapui:" + kaupunki, Kaupunki = kaupunki, Laji = "havainto",
                 Otsikko = AanenOtsikko(f.Aani), Paikkarivi = Nimi(kaupunki),
                 Lihava = eka, Teksti = loput, Wiki = Tyhja(f.Wiki),
+                // Web havainto: ensimmäinen virke puhesynteesillä.
+                Lukija = Tyhja(eka),
             };
         }
 

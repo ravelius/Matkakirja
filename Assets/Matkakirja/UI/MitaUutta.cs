@@ -112,10 +112,25 @@ namespace Matkakirja.Natiivi
         /// Käynnistyksessä (UiNakymat): versio talteen; jos laitteella oli aiempi eri versio,
         /// "Peli päivittyi" kahden uusimman rivin kera (web paivitysTapahtui &amp;&amp; edellinenVersio).
         /// </summary>
+        /// <summary>
+        /// CFBundleVersion (build-numero), jos iOS-liitännäinen kertoo sen; muuten null. Ilman sitä
+        /// "Peli päivittyi" tunnistaa uuden buildin Unityn build-tunnisteesta (Application.buildGUID
+        /// vaihtuu joka viennissä; Rakennus.IosTestFlight vie jokaisen TestFlight-buildin erikseen).
+        /// </summary>
+        public static Func<string> BuildNumero;
+
+        /// <summary>Versio + build (Fable 24.9.: myös pelkkä build-numeron vaihto 1.0.0 (2) → (3) on päivitys).</summary>
+        static string VersioJaBuild()
+        {
+            string build = null;
+            try { build = BuildNumero?.Invoke(); } catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui build-numero: " + e.Message); }
+            return Application.version + " (" + (string.IsNullOrEmpty(build) ? Application.buildGUID : build) + ")";
+        }
+
         public void TarkistaPaivitys(bool pakota = false)
         {
             string edellinen = PlayerPrefs.GetString(VersioAvain, null);
-            string nyt = Application.version;
+            string nyt = VersioJaBuild();
             if (edellinen != nyt) { PlayerPrefs.SetString(VersioAvain, nyt); PlayerPrefs.Save(); }
             if (!pakota && (string.IsNullOrEmpty(edellinen) || edellinen == nyt)) return;
             Lataa(() =>
