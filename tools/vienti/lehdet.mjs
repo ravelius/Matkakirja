@@ -513,10 +513,14 @@ export function rikastaLehdet(kokoelmat, ns, hae, { media: mediaLista = [], taul
       otsikko: d.title ?? null, selite: d.selite ?? null, vihje: d.hint ?? null, kysymys: d.q ?? null,
       vaihtoehdot: d.options ?? null, oikea: d.correct ?? null, fakta: d.fact ?? null, lahde: d.source ?? null,
       luonnos: d.sketch ?? null, kuvaLahteet: d.kuvaLahteet ?? null,
+      // Pelikoodari 23.9.2026: generaattori ja kuvat päätasolle (vartija kieltää datan).
+      generaattori: d.generaattori ?? d.generate ?? null,
+      kuvat: Array.isArray(d.kuvat) ? d.kuvat.map((o) => (typeof o === 'object' ? R.kuva(o) ?? o : o)) : null,
     });
   }
   kokoelmat.pulmat.kuvaus += ' Skeema 1.19: päätasolla otsikko, selite, vihje, kysymys, vaihtoehdot ja oikea (kiinteät '
-    + 'pulmat; generaattoripulmat arpovat nämä), fakta, lahde, luonnos (piirroksen parametrit) ja kuvaLahteet.';
+    + 'pulmat; generaattoripulmat arpovat nämä), fakta, lahde, luonnos (piirroksen parametrit), kuvaLahteet, generaattori '
+    + '(arvontalogiikan tunniste, js/pulmageneraattorit.js) ja kuvat (vaihtoehtokuvat, jos kiinteitä; null = generaattori tuottaa).';
 
   // Skeema 1.20 (2.0-polku): elaintayt ja julisteet päätasolle
   // (natiivin Kaupat.cs, NostoSisalto.cs ja UiSisalto.cs).

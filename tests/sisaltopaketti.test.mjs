@@ -624,6 +624,7 @@ test('skeema 1.19: kysymykset ja pulmat päätasolla', () => {
   assert.ok(k.filter((a) => a.laji === 'vaite').every((a) => typeof a.oikea === 'boolean'));
   const p = JSON.parse(tiedostot.get('kokoelmat/pulmat.json')).alkiot;
   assert.ok(p.every((a) => a.otsikko && a.kysymys));
+  assert.ok(p.every((a) => a.generaattori === (a.data.generaattori ?? a.data.generate ?? null) && 'kuvat' in a));
   assert.deepEqual(p.find((a) => a.id === 'punnukset').luonnos, p.find((a) => a.id === 'punnukset').data.sketch);
 });
 
