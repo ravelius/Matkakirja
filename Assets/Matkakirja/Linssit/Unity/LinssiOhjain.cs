@@ -164,7 +164,7 @@ namespace Matkakirja.Natiivi
             Kirjaa($"ihmisen matka: {laskenta.Result.Vanat.Count} vanaa laskettu");
         }
 
-        sealed class IhmisenMatkaSovitin : ILinssi
+        public sealed class IhmisenMatkaSovitin : ILinssi
         {
             readonly LinssiOhjain o;
             readonly Matkakirja.Linssit.Aikajana.IhmisenMatkaAineisto aineisto;
@@ -202,6 +202,8 @@ namespace Matkakirja.Natiivi
                 kerros = IhmisenMatkaKerros.Luo(o.kierto, aineisto.Paikat);
                 aani = EsityksenAani.Luo(kerros.transform, aanite);
                 linssi = new Matkakirja.Linssit.Aikajana.IhmisenMatkaLinssi(aineisto, leimat, kerros, aani);
+                // Esittelylaatikko (Natiivi-UI) käynnistää esityksen Kaynnista-kutsulla.
+                linssi.Itsestaan = !IhmisenMatkaKerros.EsittelyUIssa;
                 linssi.Avaa(y);
                 if (vanat != null) VanatValmiit(vanat);
             }
@@ -243,7 +245,7 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Vesistölinssi Unityssä: 3D-kerros avatessa, purku sulkiessa (logiikka VesistotLinssissä).</summary>
-        sealed class VesistotSovitin : ILinssi
+        public sealed class VesistotSovitin : ILinssi
         {
             readonly LinssiOhjain o;
             readonly Matkakirja.Linssit.Vesistot.VesistotAineisto aineisto;
@@ -254,6 +256,8 @@ namespace Matkakirja.Natiivi
             { this.o = o; aineisto = a; pallolla = p; }
             public LinssiTiedot Tiedot => aineisto.Tiedot;
             public bool Auki => linssi?.Auki ?? false;
+            /// <summary>Auki oleva linssi (Natiivi-UI), muuten null.</summary>
+            public Matkakirja.Linssit.Vesistot.VesistotLinssi Linssi => linssi;
             public void Avaa(ILinssiYmparisto y)
             {
                 kerros = VesistotKerros.Luo(o.kierto);
@@ -392,7 +396,7 @@ namespace Matkakirja.Natiivi
             }
         }
 
-        sealed class KeksinnotSovitin : ILinssi
+        public sealed class KeksinnotSovitin : ILinssi
         {
             readonly LinssiOhjain o;
             readonly Matkakirja.Linssit.Aikajana.KeksinnotAineisto aineisto;
@@ -428,7 +432,7 @@ namespace Matkakirja.Natiivi
         /// Astronautin kamera Unityssä: luo 3D-kerroksen avatessa ja purkaa sen
         /// sulkiessa; logiikka on puhtaassa AstronauttiLinssissä.
         /// </summary>
-        sealed class AstronauttiSovitin : ILinssi
+        public sealed class AstronauttiSovitin : ILinssi
         {
             readonly LinssiOhjain o;
             readonly Matkakirja.Linssit.Astronautti.AstronauttiAineisto aineisto;
@@ -437,6 +441,10 @@ namespace Matkakirja.Natiivi
             public AstronauttiSovitin(LinssiOhjain o, Matkakirja.Linssit.Astronautti.AstronauttiAineisto a) { this.o = o; aineisto = a; }
             public LinssiTiedot Tiedot => Matkakirja.Linssit.Astronautti.AstronauttiLinssi.AstronauttiTiedot;
             public bool Auki => linssi?.Auki ?? false;
+            /// <summary>Auki oleva linssi (Natiivi-UI), muuten null.</summary>
+            public Matkakirja.Linssit.Astronautti.AstronauttiLinssi Linssi => linssi;
+            /// <summary>Auki olevan linssin 3D-kerros (Natiivi-UI: kohteiden napautus), muuten null.</summary>
+            public AstronauttiKerros Kerros => kerros;
             public void Avaa(ILinssiYmparisto y)
             {
                 kerros = AstronauttiKerros.Luo(o.kierto);
