@@ -222,13 +222,20 @@ namespace Matkakirja.Natiivi
 
         string Kehys(string kysymys, bool jatko) => Puhuttelu.IsMatch(kysymys) ? "puhuttelu" : jatko ? "jatko" : "aloitus";
 
-        IEnumerator Pyyda(string kysymys, bool jatko, bool paikkakysymys, bool joLennetty)
+        sealed class Tulos
         {
-            kysyy = true;
-            var odotus = Viesti("mk-chat__odottaa", Mietinta(true));
-            var pitka = odotus.schedule.Execute(() => odotus.text = Pitkat[arpa.Next(Pitkat.Length)]).StartingIn(6000);
-            pulu.Tilanne("answer", "hetkinen");
+            public string Vastaus, Virhe;
+            public bool Uusittava;
+            public List<string> Jatkot;
+            public Dictionary<string, object> Paikka;
+        }
 
+        /// <summary>
+        /// Pyyntö workerille paneelin kontekstilla, historialla ja kehyksellä; onnistunut
+        /// vastaus menee historiaan. Kutsuja pitää kysyy-lukon (yksi pyyntö kerrallaan).
+        /// </summary>
+        IEnumerator Laheta(string kysymys, bool jatko, Action<Tulos> valmis)
+        {
             var runko = new StringBuilder("{\"tehtava\":\"vastaus\",\"kysymys\":").Append(PeliApu.Json(kysymys))
                 .Append(",\"konteksti\":").Append(PeliApu.Json(Konteksti()))
                 .Append(",\"kehys\":").Append(PeliApu.Json(Kehys(kysymys, jatko)))
@@ -241,57 +248,89 @@ namespace Matkakirja.Natiivi
             }
             runko.Append("]}");
 
-            string vastaus = null, virheviesti = null;
-            List<string> jatkot = null;
-            Dictionary<string, object> paikka = null;
-            bool uusittava = false;
+            var t = new Tulos();
             using (var r = Pyynto(runko.ToString()))
             {
                 yield return r.SendWebRequest();
                 var json = MiniJson.Objekti(Jasenna(r.downloadHandler?.text));
-                if (r.responseCode == 403) virheviesti = EiNatiivissa;
+                if (r.responseCode == 403) t.Virhe = EiNatiivissa;
                 else if (r.result != UnityWebRequest.Result.Success)
                 {
-                    virheviesti = MiniJson.Teksti(json, "viesti") ?? EiSaanut;
+                    t.Virhe = MiniJson.Teksti(json, "viesti") ?? EiSaanut;
                     var syy = MiniJson.Teksti(json, "virhe");
-                    uusittava = syy != "paivaraja" && syy != "kuukausiraja";
+                    t.Uusittava = syy != "paivaraja" && syy != "kuukausiraja";
                 }
                 else if (json != null)
                 {
-                    vastaus = MiniJson.Teksti(json, "vastaus");
+                    t.Vastaus = MiniJson.Teksti(json, "vastaus");
                     var syy = MiniJson.Teksti(json, "syy");
-                    if (string.IsNullOrEmpty(vastaus)) { vastaus = EiTullut; uusittava = true; }
-                    else if (syy != null && syy != "kieltaytyi") uusittava = true;
+                    if (string.IsNullOrEmpty(t.Vastaus)) { t.Vastaus = EiTullut; t.Uusittava = true; }
+                    else if (syy != null && syy != "kieltaytyi") t.Uusittava = true;
                     if (MiniJson.Taulukko(MiniJson.Kentta(json, "jatkot")) is List<object> j)
                     {
-                        jatkot = new List<string>();
-                        foreach (var x in j) if (x is string s) jatkot.Add(s);
+                        t.Jatkot = new List<string>();
+                        foreach (var x in j) if (x is string s) t.Jatkot.Add(s);
                     }
-                    paikka = MiniJson.Objekti(MiniJson.Kentta(json, "paikka"));
-                    if (syy == null) { historia.Add(("kayttaja", kysymys)); historia.Add(("pollo", vastaus)); }
+                    t.Paikka = MiniJson.Objekti(MiniJson.Kentta(json, "paikka"));
+                    if (syy == null) { historia.Add(("kayttaja", kysymys)); historia.Add(("pollo", Nakyva(t.Vastaus))); }
                 }
-                else virheviesti = EiSaanut;
+                else t.Virhe = EiSaanut;
             }
+            valmis(t);
+        }
+
+        /// <summary>Wiki-linkit [[…]] ja putkimerkintä pois näkyvästä tekstistä.</summary>
+        static string Nakyva(string vastaus) => Regex.Replace(vastaus ?? "", @"\[\[(?:[^\]|]*\|)?([^\]]*)\]\]", "$1");
+
+        IEnumerator Pyyda(string kysymys, bool jatko, bool paikkakysymys, bool joLennetty)
+        {
+            kysyy = true;
+            var odotus = Viesti("mk-chat__odottaa", Mietinta(true));
+            var pitka = odotus.schedule.Execute(() => odotus.text = Pitkat[arpa.Next(Pitkat.Length)]).StartingIn(6000);
+            pulu.Tilanne("answer", "hetkinen");
+
+            Tulos t = null;
+            yield return Laheta(kysymys, jatko, x => t = x);
             pitka.Pause();
             odotus.RemoveFromHierarchy();
             kysyy = false;
 
-            if (virheviesti != null)
+            if (t.Virhe != null)
             {
-                Viesti("mk-chat__livia", virheviesti);
-                pulu.Tilanne("emotion", tunne: uusittava ? "hammentynyt" : "vakava", voimakkuus: 0.5f);
-                if (uusittava) Sirut(new[] { "Yritä uudelleen" }, "mk-chat__uusinta", jatko);
+                Viesti("mk-chat__livia", t.Virhe);
+                pulu.Tilanne("emotion", tunne: t.Uusittava ? "hammentynyt" : "vakava", voimakkuus: 0.5f);
+                if (t.Uusittava) Sirut(new[] { "Yritä uudelleen" }, "mk-chat__uusinta", jatko);
                 yield break;
             }
-            // Wiki-linkit [[…]] ja putkimerkintä pois näkyvästä tekstistä.
-            string nakyva = Regex.Replace(vastaus, @"\[\[(?:[^\]|]*\|)?([^\]]*)\]\]", "$1");
+            string nakyva = Nakyva(t.Vastaus);
             Viesti("mk-chat__livia", nakyva);
             pulu.Tilanne("answer", nakyva);
             if (AaniPaalla) Puhe.Hae()?.Lue(nakyva, "pollo");
-            if (paikkakysymys && !joLennetty && paikka != null) LennaPaikkaan(paikka);
-            if (uusittava) Sirut(new[] { "Yritä uudelleen" }, "mk-chat__uusinta", jatko);
-            else Sirut(jatkot, "mk-chat__jatkot", true);
+            if (paikkakysymys && !joLennetty && t.Paikka != null) LennaPaikkaan(t.Paikka);
+            if (t.Uusittava) Sirut(new[] { "Yritä uudelleen" }, "mk-chat__uusinta", jatko);
+            else Sirut(t.Jatkot, "mk-chat__jatkot", true);
         }
+
+        /// <summary>
+        /// Kysymys paneelin ulkopuolelta (webin polloUlkoinenKysymys: astronautin minipulu):
+        /// sama palvelin, konteksti, historia ja yhden pyynnön lukko, vastaus kutsujalle
+        /// (virheessä selittävä teksti). false = tyhjä kysymys tai pyyntö jo kesken.
+        /// </summary>
+        public bool KysyUlkoisesti(string kysymys, Action<string> valmis)
+        {
+            kysymys = (kysymys ?? "").Trim();
+            if (kysymys.Length == 0 || kysyy) return false;
+            if (kysymys.Length > KysymysKatto) kysymys = kysymys.Substring(0, KysymysKatto);
+            kysyy = true;
+            UiKerros.Hae().StartCoroutine(Laheta(kysymys, false, t =>
+            {
+                kysyy = false;
+                valmis?.Invoke(t.Virhe ?? Nakyva(t.Vastaus));
+            }));
+            return true;
+        }
+
+        public bool Kysyy => kysyy;
 
         UnityWebRequest Pyynto(string runko)
         {

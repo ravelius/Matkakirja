@@ -4,6 +4,10 @@
 //            [nuotti] Musiikki      PÄÄLLÄ
 //            [kaiutin] Äänimaisema  PÄÄLLÄ
 //   KARTTA   [aalto]  Pieni liike   PÄÄLLÄ
+//   KOKEET   [satelliitti] Astronautin reliefi  TÄYSI | VAIMEA
+//            (omistajan TestFlight-vertailu 24.9.2026: kylläisyys 1,0 vs. webin 0,8;
+//            LinssiOhjain.AsetaAstronautinKyllaisyys, muistetaan, näkyy seuraavalla
+//            avauksella. Poistetaan, kun omistaja on päättänyt.)
 //   ─────────────────────────────────────
 //            [ uusi peli ]
 //            [ tekijätiedot ja lähteet ]     (Tietoja: karttojen pakollinen attribuutio)
@@ -42,6 +46,11 @@ namespace Matkakirja.Natiivi
             Kytkinrivi(Kytkin.Aanimaisema, Ikonit.Aanimaisema);
             Otsikko("Kartta");
             Kytkinrivi(Kytkin.PieniLiike, Ikonit.PieniLiike);
+            Otsikko("Kokeet");
+            reliefi = Rakenne.Nappi(null, "mk-kytkinrivi", VaihdaReliefi, Sisalto, Ikonit.Viiva["satelliitti"]);
+            reliefi.tooltip = "Astronautin kameran reliefi: täysvärinen (1,0) tai webin vaimea (0,8). Näkyy seuraavalla avauksella.";
+            Rakenne.Teksti("Astronautin reliefi", "mk-kytkinrivi__nimi", reliefi);
+            reliefiTila = Rakenne.Teksti("", "mk-kytkinrivi__tila", reliefi);
 
             Rakenne.El("mk-pudotus__erotin", Sisalto, PickingMode.Ignore);
             var uusi = Rakenne.Nappi("uusi peli", "mk-komentorivi", () =>
@@ -65,6 +74,17 @@ namespace Matkakirja.Natiivi
             Asetukset.Muuttui += _ => { if (Auki) Paivita(); };
         }
 
+        readonly Button reliefi;
+        readonly Label reliefiTila;
+
+        static bool ReliefiTaysi => Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Kyllaisyys > 0.9f;
+
+        void VaihdaReliefi()
+        {
+            LinssiOhjain.AsetaAstronautinKyllaisyys(ReliefiTaysi ? 0.8f : 1f);
+            Paivita();
+        }
+
         void Kytkinrivi(Kytkin k, string ikoni)
         {
             var b = Rakenne.Nappi(null, "mk-kytkinrivi", () => Asetukset.Aseta(k, !Asetukset.Paalla(k)), Sisalto, ikoni);
@@ -82,6 +102,8 @@ namespace Matkakirja.Natiivi
                 pari.Value.Rivi.EnableInClassList("mk-valittu", paalla);
                 pari.Value.Tila.text = paalla ? "PÄÄLLÄ" : "POIS";
             }
+            reliefi.EnableInClassList("mk-valittu", ReliefiTaysi);
+            reliefiTila.text = ReliefiTaysi ? "TÄYSI" : "VAIMEA";
             versio.text = "v" + Application.version + (UiNakymat.SisaltoVersio != null ? " · sisältö " + UiNakymat.SisaltoVersio : "");
         }
     }

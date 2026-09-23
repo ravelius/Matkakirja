@@ -45,7 +45,7 @@ namespace Matkakirja.Natiivi
             kerros.TurvaMuuttui += Asettele;
         }
 
-        void Asettele()
+        protected virtual void Asettele()
         {
             var r = kerros.Reunat(UiKerros.Valikot);
             Paneeli.style.top = alareuna() + 6;

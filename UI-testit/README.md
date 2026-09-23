@@ -82,6 +82,41 @@ kuva maakunta-kortti
 ui sulje
 ```
 
+Aloitusnäkymä ja matkan huipennus (`Aloitusnakyma.cs`): peli jää tilaan Aloitus
+(PeliOhjain.AloitusNakyma = true). Portti (Aloita seikkailu, tai Jatka matkaa / Uusi matka),
+julisteotsikko ja naputettava avausteksti (kertoja lukee intro-puhe.mp3:n; napautus
+kirjoittaa loppuun), VALITSE ALOITUSKAUPUNKI → lähtökaupungit → PeliOhjain.UusiMatka(id).
+`ui aloitus [portti|avaus|valinta|jatka]` ilman peliä, `ui huipennus` kaikkien aarteiden
+huipennus esimerkkiluvuin.
+
+```
+ui aloitus portti
+odota 1
+kuva aloitus-portti
+ui aloitus avaus
+odota 6
+kuva aloitus-avaus
+ui aloitus valinta
+odota 2
+kuva aloitus-valinta
+ui sulje
+ui huipennus
+odota 1
+kuva huipennus
+ui sulje
+```
+
+Matkalaukku (`Matkalaukku.cs`, webin #passport-dialog): yläpalkin tilapilleri avaa laukun pillerin
+alle. `ui laukku` näyttää pelin datan (PeliOhjain.Laukku()), `ui laukku esimerkki` keksityn
+sisällön ilman peliä. "Matkan tilastot ›" avaa lohkon (tila muistetaan).
+
+```
+ui laukku esimerkki
+odota 2
+kuva laukku
+ui sulje
+```
+
 Offline-latauksen tila (`OfflineTilaUi.cs`): pilleri yläpalkin alla vasemmalla näkyy, kun
 lataus on käynnissä tai verkkoa ei ole; napautus avaa ratas-paneelin. `ui offline demo`
 vaihtaa tilalle keksityn palvelun (Ranska latautuu ~6 s ja valmistuu, Italia epäonnistuu
@@ -232,7 +267,7 @@ UI-osat ilman linssiä esimerkkiaineistolla (`LinssiKomennot.cs`):
 - `ui linssi selite [pois]` — selitekortti esimerkkiriveillä (topografian värit ja lähde).
 - `ui linssi astro [musta|otsikko|paljastus|pois]` — astronautin avaus; ilman vaihetta
   koko sarja oikeassa ajassa (musta 2 s, otsikko häipyy 0,7 s, musta 1,1 s).
-- `ui linssi kuva [tunnus]` — kuvanäkymä sisältöpaketin kohteella (oletus ensimmäinen);
+- `ui linssi kuva [tunnus] [pulu]` — kuvanäkymä sisältöpaketin kohteella (oletus ensimmäinen; `pulu` avaa minipulun kysymyskortin);
   jos aineisto ei lataudu, kaksi Commonsin NASA-kuvaa (pikkukuvanauha, zoomi, lisätiedot).
 - `ui linssi sumu p` — avaruussumun peitto 0…1 (0 = pois); kalvot ajelehtivat.
 - `ui linssi vertailu [arkki|taynna]` — alapalkki (Suomi, Italia, Japani) / vertailuarkki /
@@ -268,6 +303,9 @@ ui linssi sumu 0
 ui linssi kuva
 odota 5
 kuva linssi-kuva
+ui linssi kuva etna pulu
+odota 4
+kuva linssi-minipulu
 ui linssi pois
 ui linssi vertailu
 odota 2

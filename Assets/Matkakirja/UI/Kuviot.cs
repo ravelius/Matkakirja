@@ -30,6 +30,20 @@ namespace Matkakirja.Natiivi
         public static Texture2D KultaPainettu => Pysty("kulta-painettu", Vari("#f3c661"), Vari("#d9a13b"));
         public static Texture2D Ilmoitus => Pysty("ilmoitus", Vari("#2e2114", 0.96f), Vari("#1e150c", 0.96f));
 
+        /// <summary>Vaakasuora kahden värin liukuväri (vasemmalta oikealle).</summary>
+        public static Texture2D Vaaka(string nimi, Color vasen, Color oikea)
+        {
+            if (valimuisti.TryGetValue(nimi, out var t) && t != null) return t;
+            const int K = 64;
+            t = Uusi(nimi, K, 2);
+            var px = new Color[K * 2];
+            for (int x = 0; x < K; x++) px[x] = px[K + x] = Color.Lerp(vasen, oikea, (x + 0.5f) / K);
+            t.SetPixels(px);
+            t.Apply(false, true);
+            valimuisti[nimi] = t;
+            return t;
+        }
+
         /// <summary>Pystysuora kahden värin liukuväri (ylhäältä alas).</summary>
         public static Texture2D Pysty(string nimi, Color yla, Color ala)
         {

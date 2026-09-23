@@ -16,7 +16,8 @@
 // maatilan linsseille "maa <ISO3>" (napautus), "vertaa" ja "lehti" (maakyltti);
 // keksinnöille "keksinnot kaynnista | jatka | tauko | tila | <pysäkki 0–25>";
 // ihmisen matkalle "esitys <jakso-id> | tauko | jatka | tila"; kaikille
-// "kamera <lat> <lon> <korkeus km>" (hyppy kuvakaappausta varten) ja "tila".
+// "kamera <lat> <lon> <korkeus km>" (hyppy kuvakaappausta varten), "tila" ja
+// "kyllaisyys 0.8|1" (astronautin reliefi, muistetaan PlayerPrefsissä).
 // Tulos lokiin ja Documents/linssi-loki.txt:hen.
 using System;
 using System.Collections.Generic;
@@ -44,6 +45,17 @@ namespace Matkakirja.Natiivi
 
         PalloKierto kierto;
         Linssirekisteri rekisteri;
+
+        /// <summary>PlayerPrefs-avain astronautin reliefin kylläisyydelle (Natiivi-UI:n kehittäjävalikko).</summary>
+        public const string KyllaisyysAvain = "linssi.astronautti.kyllaisyys";
+
+        /// <summary>Asettaa ja muistaa astronautin reliefin kylläisyyden (0,8 tai 1,0); vaikuttaa seuraavaan avaukseen.</summary>
+        public static void AsetaAstronautinKyllaisyys(float arvo)
+        {
+            Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Kyllaisyys = arvo;
+            PlayerPrefs.SetFloat(KyllaisyysAvain, arvo);
+            PlayerPrefs.Save();
+        }
         KerrosSovitin kerrokset;
         string komentoPolku, lokiPolku;
         float komentoKello;
@@ -67,6 +79,8 @@ namespace Matkakirja.Natiivi
             Instanssi = this;
             kierto = k;
             kerrokset = new KerrosSovitin();
+            // Astronautin reliefin kylläisyys (0,8 web / 1,0): omistajan vertailu TestFlightissa.
+            Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Kyllaisyys = PlayerPrefs.GetFloat(KyllaisyysAvain, 1f);
             rekisteri = new Linssirekisteri(this);
             rekisteri.Lisaa(new Topografia());
             StartCoroutine(LataaAstronautti());
@@ -564,6 +578,11 @@ namespace Matkakirja.Natiivi
                     Esitys(osat[1]);
                 else if (osat[0] == "kamera" && osat.Length > 3)
                     AjaKamera(new Nakyma(Luku(osat[1]), Luku(osat[2]), Luku(osat[3]) * 1000), 0f);
+                else if (osat[0] == "kyllaisyys" && osat.Length > 1)
+                {
+                    AsetaAstronautinKyllaisyys((float)Luku(osat[1]));
+                    Kirjaa($"astronautin kylläisyys {Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Kyllaisyys:F1}, sarja {Matkakirja.Linssit.Astronautti.AstronauttiLinssi.ReliefinSarja()}");
+                }
                 else if (osat[0] == "tila")
                     Kirjaa($"tila: auki {rekisteri.Auki?.Tiedot.Id ?? "ei"}, kamera {Kamera}");
                 else if (osat[0] == "maa" && osat.Length > 1)

@@ -11,6 +11,10 @@
 //                                             tapahtumakortti, tulos [laattatyyppi], kohtaaminen,
 //                                             kohtaaminen-tervehdys (KysymysEsimerkki.cs)
 //   ui selite                                 karttaselite auki (Nostot-välilehti)
+//   ui aloitus [portti|avaus|valinta|jatka]   aloitusnäkymä ilman peliä (valinta → ilmoitus)
+//   ui aloita [kaupunki] | ui jatka           automaatio: ohittaa aloitusnäkymän (UusiMatka / Jatka)
+//   ui huipennus                              matkan huipennus (kaikki aarteet) esimerkkiluvuin
+//   ui laukku [esimerkki]                     matkalaukku (pelin data; esimerkki = keksitty sisältö)
 //   ui offline demo|verkoton|verkko|pois      offline-tilan pilleri: keksitty lataus / verkon tila
 //   ui maakunnat [kortti] [ISO:tunnus]        karttaselite Maakunnat-välilehdellä, valinta, kortti
 //   ui pulu sano [teksti] | aani [lähde n] | ele id | tilanne laji | tunne t | pois | paalle
@@ -166,6 +170,26 @@ namespace Matkakirja.Natiivi
                     if (loput.Length > 0) ui.Chat.Kysy(loput); else ui.Chat.Vaihda();
                     return null;
                 case "tietoja": ui.Tietoja.Avaa(); return null;
+                case "aloitus":
+                    ui.Aloitus.Testaa(loput.Length > 0 ? loput : "portti", id => ui.Tilarivi.Viesti("Lähtö: " + id));
+                    return null;
+                case "aloita":
+                case "jatka":
+                {
+                    var o = PeliOhjain.Instanssi;
+                    if (o == null) return "peli ei ole käynnissä";
+                    string v = osat[1].ToLowerInvariant() == "jatka" ? o.Jatka() : o.UusiMatka(loput.Length > 0 ? loput : null);
+                    if (v == null) ui.Aloitus.Piilota();
+                    return v;
+                }
+                case "huipennus":
+                    ui.Huipennus.Nayta(new MatkanYhteenveto { Paivat = 83, Kaupungit = 41, Aarteet = 6, AarteitaKaikkiaan = 6 },
+                        () => ui.Aloitus.NaytaAvaus(id => ui.Tilarivi.Viesti("Lähtö: " + id)));
+                    return null;
+                case "laukku":
+                    ui.Valikko.Sulje(); ui.Aanentasot.Sulje();
+                    ui.Matkalaukku.Testaa(loput == "esimerkki" ? new System.Func<LaukkuNaytto>(Matkalaukku.Esimerkki) : null);
+                    return null;
                 case "offline":
                     switch (loput)
                     {
