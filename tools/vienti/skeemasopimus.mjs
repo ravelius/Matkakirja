@@ -25,12 +25,14 @@ import { join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 export const KENTTAKUVA = new URL('./skeemakentat.json', import.meta.url);
+const VAKIOAVAIMET = new Set(['$skeema', 'nimi', 'lahde', 'kuvaus', 'viittaukset', 'alkiot']);
 
 /*
  * Tunnuskentät versioittain. Muodot:
  *   'kokoelma:<nimi>'          kokoelma on manifestissa
  *   '<kokoelma>.<kenttä>'       jollakin alkiolla on päätason kenttä
  *   '<kokoelma>#<id>'           alkio tällä id:llä on olemassa
+ *   '<kokoelma>/<avain>'        kokoelman juuressa on avain (esim. maakuntarajat/kaaret)
  *   'manifest.<avain>' | 'offline.<avain>' | 'offline.maat.*.<avain>' | 'media.<avain>'
  *   '!…'                       ei saa olla (poistot)
  */
@@ -54,6 +56,7 @@ export const VAATIMUKSET = {
   '1.22': ['kokoelma:muutosloki-natiivi'],
   '1.23': ['offline.ryhmat', 'offline.maat.*.manner'],
   '1.24': ['kokoelma:saapumistekstit', 'kokoelma:takynostot', 'kokoelma:liviansaapumiset'],
+  '1.25': ['maakuntarajat/kaaret'],
 };
 
 export function vertaa(a, b) {
@@ -90,6 +93,8 @@ function tayttyy(ehto, { lue, manifest, kokoelma }) {
     const md = lue(manifest.media.tiedosto);
     return (md?.viitteet ?? []).some((v) => v[ehto.slice(6)] !== undefined);
   }
+  const juuri = /^([^#./]+)\/(.+)$/.exec(ehto);
+  if (juuri) return kokoelma(juuri[1])?.[juuri[2]] !== undefined;
   const id = /^([^#.]+)#(.+)$/.exec(ehto);
   if (id) return (kokoelma(id[1])?.alkiot ?? []).some((a) => a.id === id[2]);
   const [k, kentta] = ehto.split('.');
@@ -102,7 +107,10 @@ export function kenttakuva(tiedostot) {
   const kokoelmat = {};
   for (const { nimi } of [...manifest.kokoelmat].sort((a, b) => a.nimi.localeCompare(b.nimi))) {
     const kentat = new Set();
-    for (const a of kokoelma(nimi)?.alkiot ?? []) for (const k of Object.keys(a)) kentat.add(k);
+    const k = kokoelma(nimi);
+    for (const a of k?.alkiot ?? []) for (const x of Object.keys(a)) kentat.add(x);
+    // Kokoelman juuren lisäavaimet (vakioavainten lisäksi) merkitään '/avain'.
+    for (const x of Object.keys(k ?? {})) if (!VAKIOAVAIMET.has(x)) kentat.add(`/${x}`);
     kokoelmat[nimi] = [...kentat].sort();
   }
   const o = manifest.offline ? lue(manifest.offline.tiedosto) : null;

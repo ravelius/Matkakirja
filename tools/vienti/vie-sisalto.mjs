@@ -136,8 +136,12 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        siirretyt paakartalla false; nimio, paikka, kategoria, tunnus, ladottu,
  *        taso, lahizoom, kaupunkiAvain, kohdekartta, takynosto, liitetytNostot);
  *        kohdekartat.kohteet[].linkit ja aihe.
+ *   1.25 maakuntarajat: juuren kaaret (rajaviivat, jokainen jaettu raja kerran)
+ *        ja renkaat rakennettuna samoista kaarista (Natiivisepän pyyntö,
+ *        Fable 24.9.2026: rajat vektoriviivoina); tools/vienti/maakuntarajat.mjs
+ *        kaariTopologia. Lisäksi julkaisun tarkistus skeemasopimus.mjs.
  */
-export const SKEEMAVERSIO_TARKKA = '1.24';
+export const SKEEMAVERSIO_TARKKA = '1.25';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 const tavuja = (s) => Buffer.byteLength(s);

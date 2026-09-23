@@ -534,6 +534,16 @@ test('maakuntarajat (B17): avaimet ja renkaat', () => {
   assert.ok(alueet.every((a) => a.id === `${a.iso3}:${a.id.split(':').slice(1).join(':')}` && a.nimi && a.renkaat.length));
   assert.ok(alueet.every((a) => a.renkaat.every((r) => r.length >= 4 && r.every(([lon, lat]) => Math.abs(lon) <= 180 && Math.abs(lat) <= 90))));
   const wien = alueet.find((a) => a.id === 'AUT:Wien');
+  // 1.25: renkaat kaarista — jokainen renkaan jana on kaarissa, sisärajat kahdesti renkaissa, kerran kaarissa.
+  const { kaaret } = JSON.parse(tiedostot.get('kokoelmat/maakuntarajat.json'));
+  const jana = (p, q) => [p.join(), q.join()].sort().join('|');
+  const kaarissa = new Map();
+  for (const k of kaaret) for (let i = 1; i < k.length; i += 1) kaarissa.set(jana(k[i - 1], k[i]), (kaarissa.get(jana(k[i - 1], k[i])) ?? 0) + 1);
+  const renkaissa = new Map();
+  for (const a of alueet) for (const r of a.renkaat) for (let i = 1; i < r.length; i += 1) renkaissa.set(jana(r[i - 1], r[i]), (renkaissa.get(jana(r[i - 1], r[i])) ?? 0) + 1);
+  assert.ok([...renkaissa.keys()].every((j) => kaarissa.has(j)), 'jokainen renkaan jana on kaarissa');
+  assert.ok([...renkaissa.values()].every((n) => n <= 2));
+  assert.ok([...renkaissa.values()].filter((n) => n === 2).length > 5000, 'sisärajat jaettu');
   assert.ok(wien.bbox[0] > 16 && wien.bbox[2] < 16.7 && wien.bbox[1] > 48 && wien.bbox[3] < 48.4);
 });
 
