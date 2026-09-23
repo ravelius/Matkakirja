@@ -13,6 +13,7 @@
 // ennätys (recordNoted, recordMark.day) ja pöllöliput. Samaan versioon
 // valinnaisina: nähdyt pulmat (puzzlesSeen) ja avoin tapahtumakortti (eventCard).
 // Versiot 1 ja 2 latautuvat; niissä ei ole laattoja (ks. Matka.Lataa).
+// Versio 5 (23.9.2026): pelikerran linssit (linssit; Linssiomistus, peninkulma).
 // Versio 4 (23.9.2026, versionosto): versioon 3 ilman nostoa tulleet kentät
 // (kaupat, voittaja, avoinKaksintaistelu, pulmatNahty, tapahtumakortti) ovat
 // nyt version sisältöä. Nosto estää vanhempaa sovellusta lukemasta uutta
@@ -69,7 +70,7 @@ namespace Matkakirja.Peli
     /// <summary>Pelin tila (web Game): matkan kentät ja kello.</summary>
     public sealed class Pelitila
     {
-        public const int TallennusVersio = 4;
+        public const int TallennusVersio = 5;
 
         public List<Pelaaja> Pelaajat = new List<Pelaaja>();
         public int Vuorossa;                                   // web current
@@ -116,6 +117,8 @@ namespace Matkakirja.Peli
         public bool PolloLoydetty = true;
         /// <summary>Nähdyt pulmat kaupunki-id:nä (web puzzlesSeen ilman laudan etuliitettä; Peli/Pulmat.cs).</summary>
         public HashSet<string> NahdytPulmat = new HashSet<string>();
+        /// <summary>Pelikerran linssit pelaajittain (web game.linssit; Peli/Linssiomistus.cs). Versio 5.</summary>
+        public Linssitila Linssit = new Linssitila();
         /// <summary>Luetun tallennuksen versio (0 = ei luettu). Ei tallenneta.</summary>
         public int LuettuVersio;
 
@@ -192,6 +195,8 @@ namespace Matkakirja.Peli
             // Kaupat (Peli/Kaupat.cs): versio 3.
             sb.Append(",\"kaupat\":");
             Kaupat.Kirjoita(sb);
+            sb.Append(",\"linssit\":");
+            Linssit.Kirjoita(sb);
             sb.Append(",\"laattamaailma\":");
             if (Laatat == null) sb.Append("null"); else Laatat.Kirjoita(sb);
             Kentta(sb, "ennatys", EnnatysKirjattu ? "true" : "false");
@@ -259,6 +264,7 @@ namespace Matkakirja.Peli
             t.Kysely = Kyselytila.Lue(MiniJson.Kentta(o, "kysely") as Dictionary<string, object>);
             // Kaupat: puuttuva kenttä (vanha tallennus) = tyhjä tila.
             t.Kaupat = Kauppatila.Lue(MiniJson.Kentta(o, "kaupat") as Dictionary<string, object>);
+            t.Linssit = Linssitila.Lue(MiniJson.Kentta(o, "linssit") as Dictionary<string, object>);
             if (MiniJson.Kentta(o, "laattamaailma") is Dictionary<string, object> lm) t.Laatat = Laattamaailma.Lue(lm, kaupungit);
             t.EnnatysKirjattu = MiniJson.Totuus(o, "ennatys");
             t.EnnatysPaiva = MiniJson.Luku(o, "ennatysPaiva") is double ep ? (int)ep : (int?)null;
@@ -281,6 +287,7 @@ namespace Matkakirja.Peli
             // 1 → 2 (erä 2): pelaajan xp, kysytty, oikein, taso ja kysely puuttuvat → oletukset.
             // 2 → 3 (erä 3): laattamaailma puuttuu → null; Matka.Lataa jakaa laatat
             //   laattamäärillä (LuettuVersio < 3), muuten peli jatkuu ilman laattoja.
+            // 4 → 5 (linssien hankinta, B8/B9): linssit (pelikerran linssit, peninkulma) puuttuu → tyhjä.
             // 3 → 4 (versionosto): kaupat, voittaja, avoinKaksintaistelu, pulmatNahty ja
             //   tapahtumakortti olivat valinnaisia; puuttuva = tyhjä (lukija hoitaa).
             for (int v = versio; v < TallennusVersio; v++)

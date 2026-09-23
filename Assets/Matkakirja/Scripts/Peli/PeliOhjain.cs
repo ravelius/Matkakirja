@@ -35,6 +35,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Matkakirja.Linssit;
 using Matkakirja.Peli;
 using TMPro;
 using UnityEngine;
@@ -258,6 +259,43 @@ namespace Matkakirja.Natiivi
 
         static string Documents => Application.persistentDataPath;
         static string TallennusPolku => Path.Combine(Documents, "tallennus.json");
+        /// <summary>Passi (leimat) on pelaajan oma eikä pelin: säilyy uuden pelin yli (web localStorage 'matkakirja.passi.v1').</summary>
+        static string PassiPolku => Path.Combine(Documents, "passi.json");
+
+        // --- linssit, passi ja radio (B8, B9, B14; Linssiseppä) ------------------
+
+        Passi passi;
+        Linssiomistus linssit;
+        Linssirekisteri kytkettyRekisteri;
+        /// <summary>Linssien omistus ja hankinta (null ennen peliä). Linssirekisteri.Omistaa kytketään tähän.</summary>
+        public Linssiomistus Linssit => linssit;
+        public Passi Passi => passi;
+        /// <summary>Radiotila (Linssiseppä): kaupungin napautus on play-nappi, ei korttia eikä matkavalintaa. null = sallittu.</summary>
+        public static Func<bool> NapautusSallittu;
+        /// <summary>Radiotila: luentojen ääni vaimeana (web luentaSallittu), tila päivittyy silti. null = sallittu.</summary>
+        public static Func<bool> LuentaSallittu;
+        /// <summary>Pelaajan kaupunki (reitillä null): radion oma kaupunki (web sääntö 1).</summary>
+        public string PelaajanKaupunki => matka != null && matka.Tila.Pelaaja.Sijainti.Kaupungissa ? matka.Tila.Pelaaja.Sijainti.Kaupunki : null;
+
+        void LataaPassi()
+        {
+            try { passi = File.Exists(PassiPolku) ? Passi.Lue(File.ReadAllText(PassiPolku)) : new Passi(); }
+            catch (Exception e) { Debug.LogWarning("MATKAKIRJA peli: passi ei kelpaa (" + e.Message + "), tyhjä passi"); passi = new Passi(); }
+            passi.Muuttui += () =>
+            {
+                try { PeliApu.KirjoitaAtomisesti(PassiPolku, passi.Kirjoita()); }
+                catch (Exception e) { Debug.LogError("MATKAKIRJA peli: passin tallennus epäonnistui: " + e.Message); }
+            };
+        }
+
+        /// <summary>Linssirekisterin omistus ja kynnyssääntö (omistajan sääntö, Linssiseppä) linssiomistukseen.</summary>
+        void KytkeRekisteri()
+        {
+            var r = LinssiOhjain.Rekisteri;
+            if (r == null || linssit == null || r == kytkettyRekisteri) return;
+            kytkettyRekisteri = r;
+            r.Omistaa = linssit.Omistaa;
+        }
         static string TavoitePolku => Path.Combine(Documents, "peli-tavoite.txt");
         static string PoisPolku => Path.Combine(Documents, "peli-pois.txt");
         static string SisaltoKansio => Path.Combine(Documents, "sisalto");
@@ -349,6 +387,7 @@ namespace Matkakirja.Natiivi
                 Debug.Log("MATKAKIRJA peli: " + PoisPolku + " löytyi, pelisilmukka pois päältä");
                 AsetaKaytossa(false);
             }
+            LataaPassi();
             StartCoroutine(Lataa());
         }
 
@@ -669,6 +708,7 @@ namespace Matkakirja.Natiivi
         {
             if (l == null) return "luentoa ei ole";
             if (!Puhe.Paalla) return "luennat pois päältä";
+            if (LuentaSallittu != null && !LuentaSallittu()) return "radio soi";
             odottavaLuento = l;
             if (!puhe.Soita(l.Url, viiveS)) { odottavaLuento = null; return "ei soi"; }
             Debug.Log("MATKAKIRJA peli: luento " + (l.Id ?? l.Kaupunki) + " " + l.Url);
@@ -795,6 +835,10 @@ namespace Matkakirja.Natiivi
 
         void Kytke(Matka m)
         {
+            linssit = new Linssiomistus(passi ?? new Passi(), m.Tila.Linssit).Kytke(m);
+            linssit.Kynnyssaanto = Linssirekisteri.Kynnys;   // omistajan sääntö (1400: radio ja topografia)
+            kytkettyRekisteri = null;
+            KytkeRekisteri();
             m.Tapahtui += (laji, teksti) => { tapahtumat.Add(teksti); if (m == matka) Aanita(Aanitunnukset.Tapahtuma(laji)); };
             m.Loysi += (p, l) =>
             {
@@ -913,6 +957,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         void Napautettu(string kaupunki)
         {
+            if (NapautusSallittu != null && !NapautusSallittu()) return;
             if (!Kaytossa || matka == null) return;
             bool uiPaalla = false;
             if (!ohitaPisteTarkistus && Pointer.current != null)
@@ -1005,6 +1050,7 @@ namespace Matkakirja.Natiivi
             if (p.Sijainti.Kaupungissa && p.Sijainti.Kaupunki == kaupunki) return null;
 
             vaihtoehdot = PeliApu.Vaihtoehdot(matka, kaupunki);
+            if (linssit != null && linssit.VapaaSiirtyminenKaytettavissa()) vaihtoehdot.Insert(0, PeliApu.VapaaVaihtoehto());
             DialogiKohde = kaupunki;
             Tila = SilmukanTila.Dialogi;
             dialogi.PiilotaHeitto();
@@ -1012,7 +1058,7 @@ namespace Matkakirja.Natiivi
             if (vaihtoehdot.Count == 0) ala += " · ei kulkutapaa nyt";
             dialogi.Nayta(PeliApu.KaupunginNimi(verkko, kaupunki), ala,
                 vaihtoehdot.Select(v => (v.Nimi, v.Selite)).ToList(),
-                i => Matkusta(DialogiKohde, vaihtoehdot[i].Tapa, vaihtoehdot[i].Mannerlento),
+                i => Matkusta(DialogiKohde, vaihtoehdot[i].Tapa, vaihtoehdot[i].Mannerlento, vaihtoehdot[i].Vapaa),
                 () => Kartalle(false));
 
             // Yleiskuva: pelaaja ja kohde samaan kuvaan (korvaa 3D:n lennon napautettuun kaupunkiin).
@@ -1081,7 +1127,7 @@ namespace Matkakirja.Natiivi
         /// Matka kohteeseen valitulla tavalla (dialogin nappi, heittonappi ja
         /// testikomento 'matka'). Palauttaa virheen tai null.
         /// </summary>
-        public string Matkusta(string kohde, Kulkutapa tapa, bool mannerlento = false)
+        public string Matkusta(string kohde, Kulkutapa tapa, bool mannerlento = false, bool vapaa = false)
         {
             if (matka == null) return "peli ei ole valmis";
             if (Tila != SilmukanTila.Kartta && Tila != SilmukanTila.Dialogi) return "silmukka on tilassa " + Tila;
@@ -1091,7 +1137,7 @@ namespace Matkakirja.Natiivi
             if (kohde != null) Tavoite = kohde;
 
             tapahtumat.Clear();
-            var t = PeliApu.Matkusta(matka, Tavoite, tapa, mannerlento);
+            var t = PeliApu.Matkusta(matka, Tavoite, tapa, mannerlento, vapaa && linssit != null ? linssit.VapaaSiirtyminen : (Func<string, TekoTulos>)null);
             Viimeisin = t;
             if (!t.Ok)
             {
@@ -1689,6 +1735,7 @@ namespace Matkakirja.Natiivi
         void Update()
         {
             if (ajoValmis != null && Time.unscaledTime > ajoLoppuu) AjoValmis();
+            KytkeRekisteri();
             PaivitaReaktiot();
             PaivitaKysymysAika();
             // Pallo ei ota kosketuksia modaalisen näkymän (ja lehden) aikana.

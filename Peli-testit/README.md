@@ -25,6 +25,13 @@ verkkopelin `Game` (yksinpeli vaellustilassa).
     (Fablen tarkastus A3 ja C1, 23.9.2026). Matkan huipennus on PeliOhjain.KaikkiAarteetLoytyi.
   - **Pulmat** + Pulmadata, Pulmageneraattorit — isoisän pulmat (pendingPuzzle, openPuzzle,
     kaikki 11 generate(rng)-funktiota taulukkoineen C#:na; paketin `kokoelmat/pulmat.json`).
+  - **Passi** — pelaajan leimat (js/passport.js): JSON-rajapinta Lue/Kirjoita, Leimaa, Korvaa, Lista,
+    IsoPaiva, LeimaPaiva. EI pelitallennuksessa; tallennuspaikka (web 'matkakirja.passi.v1') on
+    Unity-kerroksen, Muuttui-tapahtumasta.
+  - **Linssiomistus** + Linssitila — linssien omistus ja hankinta (js/linssit/omistus.js, game.js
+    tarkistaLinssikynnys ja linssiAarteenKylkiaisena): passi ∪ pelikerran lista, kynnykset
+    (Kynnyssaanto vaihdettavissa), ison aarteen kylkiäinen, optikon hyvitys, valmistuneet,
+    seitsemän peninkulman linssi (≥ 7 pääaarretta, päivä ≤ 80; ei webissä) ja VapaaSiirtyminen.
 - `Assets/Matkakirja/Scripts/Peli/LehtiKuori.cs` — ILehti-toteutus (GameObject `MatkakirjaLehti`).
 - `Assets/Plugins/iOS/MatkakirjaLehti.mm` — WKWebView-liitännäinen, ks. README-lehti.md.
 - `Assets/Matkakirja/Editor/LehtiKuoriXcode.cs` — WebKit.framework linkitys Xcode-vientiin.
@@ -56,6 +63,10 @@ kaupat.Toiminnot();                     // web availableActions
 var pulmat = Pulmat.Kytke(kysely, Pulmadata.LueKansiosta(paketti));          // koukut PulmaOdottaa/AvaaPulma
 // Pulma avautuu Pysy-tavasta (kysely.Tutki()) kuten webissä; auki: Tila.Kysely.Kysymys.Laji == Pulma,
 // näytettävät pulmat.Nakyma (Otsikko, Selite, Luonnos = web sketchData, Kuvat, KuvaLahteet).
+
+var passi = Passi.Lue(tallennettuPassi);  // passi.Muuttui += () => tallenna(passi.Kirjoita())
+var linssit = new Linssiomistus(passi, new Linssitila()).Kytke(matka);  // koukut LinssiKylkiaisena, KynnysYlitetty, Loysi
+linssit.Omistaa(tunnus); linssit.Myonsi += …; linssit.VapaaSiirtyminen(kohde);
 
 string json = matka.Tallenna();
 var ladattu = Matka.Lataa(verkko, json, maarat);  // luo sen jälkeen uudet Kysely, Kaupat (+ Pulmat.Kytke)
@@ -108,6 +119,7 @@ muuttua ilman webin muutosta; C# toistaa ne identtisesti, myös satunnaislukukut
 | `tee-laattajalki.mjs` | laattajalki.json, paketti/laatat.json | LaattaTestit | jako, käännöt, lukitus |
 | `tee-kauppajalki.mjs` | kauppajalki.json (+ näytteet paketti/elaintayt.json, julisteet.json paketista v2) | KauppaTestit | jokainen kauppateko onnistuvana ja epäonnistuvana, sähke pöllöön, tallennus välissä ja joka teon jälkeen |
 | `tee-pulmajalki.mjs` | pulmajalki.json | PulmaTestit | generaattorit (11 × 25 siementä), pulmien avaus/vastaus/sulku kuudella tavalla laatallisena ja laatattomana, koko peli pulmineen, tallennus välein 1, 2, 3 ja 5 |
+| `tee-linssijalki.mjs` | linssijalki.json | LinssiomistusTestit | passin leimat (JSON-teksti, stampList, isoDate, stampDate, rikkinäinen tallennus) ja omistus kolmella ajolla koerekisterillä (2 hiomassa-riviä): kylkiäiset, kynnykset (myös kaksi kerralla), optikon hyvitys, valmistuminen, kehittäjätila, toinen pelikerta samalla passilla, tallennus välissä ja joka teon jälkeen |
 | `tee-pelijalki.mjs` | pelijalki.json | PeliTestit | koko peli laattoineen (~2700 tekoa, 9 siementä, pöllöajo; koelaudalla ei ryöstäjiä), myös tallennus/lataus välein 7 ja 3 |
 
 `.meta`-tiedostot eivät ole mukana: Unity luo ne ensimmäisessä tuonnissa (3D-selvittäjän editori).

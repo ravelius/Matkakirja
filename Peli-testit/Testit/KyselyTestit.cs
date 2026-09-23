@@ -578,8 +578,8 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(string.Join(",", q1.Piilotetut), string.Join(",", q2.Piilotetut));
             Oleta.Sama(m.Tila.Kysely.Kaytetyt.Count, m2.Tila.Kysely.Kaytetyt.Count);
             // Versio 1 (erä 1) latautuu yhä.
-            Oleta.Tosi(json.Contains("\"versio\":4"), "tallennusversio 4");
-            var v1 = json.Replace("\"versio\":4", "\"versio\":1");
+            Oleta.Tosi(json.Contains("\"versio\":5"), "tallennusversio 4");
+            var v1 = json.Replace("\"versio\":5", "\"versio\":1");
             v1 = v1.Substring(0, v1.IndexOf(",\"kysely\":", StringComparison.Ordinal)) + "}";
             var vanha = Pelitila.FromJson(v1);
             Oleta.Sama(0, vanha.Kysely.Kaytetyt.Count);

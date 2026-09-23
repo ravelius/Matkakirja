@@ -267,12 +267,12 @@ namespace Matkakirja.Peli.Testit
             ka.Kulttuuri("pariisi", true);
             ka.Minitehtava("pariisi", "kaupunki", false);
             var json = m.Tallenna();
-            Oleta.Tosi(json.Contains("\"versio\":4") && json.Contains("\"kaupat\":{") && !json.Contains("voittaja"), "versio 4 kaupoin");
-            // Ilman kauppakenttiä: versio 4, vanhempi versio 3 ja versio 2.
+            Oleta.Tosi(json.Contains("\"versio\":5") && json.Contains("\"kaupat\":{") && !json.Contains("voittaja"), "nykyversio kaupoin");
+            // Ilman kauppakenttiä: nykyversio, vanhempi versio 3 ja versio 2.
             int a = json.IndexOf(",\"kaupat\":", StringComparison.Ordinal);
             int b = json.IndexOf(",\"laattamaailma\":", StringComparison.Ordinal);
             var ilman = json.Remove(a, b - a);
-            foreach (var vanha in new[] { ilman, ilman.Replace("\"versio\":4", "\"versio\":3"), ilman.Replace("\"versio\":4", "\"versio\":2") })
+            foreach (var vanha in new[] { ilman, ilman.Replace("\"versio\":5", "\"versio\":3"), ilman.Replace("\"versio\":5", "\"versio\":2") })
             {
                 var l = Matka.Lataa(KultaisetApu.Verkko, vanha, KultaisetApu.Laattamaarat);
                 Oleta.Sama(0, l.Tila.Kaupat.KulttuuriVastatut.Count, "tyhjä kirjanpito");
