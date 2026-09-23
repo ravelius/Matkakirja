@@ -507,6 +507,8 @@ namespace Matkakirja.Natiivi
             valintaKierto.KaupunkiNapautettu += KaupunkiValittu;
             valintaPisteet.Napautettu += PisteValittu;
             valintaKierto.Aja(ValintaLat, ValintaLon, ValintanakymanKorkeus(), 1.6f, null);
+            // Web naytaLivianAvaus: Livia liitää sisään ja esittelee valinnan (kerran laitteella).
+            LivianAvaus.Nayta(() => ValitseePallolla, valintaIdt.Count);
             return true;
         }
 

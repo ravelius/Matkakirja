@@ -161,9 +161,10 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// Kohdekartan kohde (web nahtavyysKohteet + avaaNahtavyys): juttu arkkiin valikon ja selauksen
-        /// kanssa, pelkkä wiki-kohde Wikipediaan.
+        /// kanssa, pelkkä wiki-kohde Wikipediaan. numero = false: aikarivillä ei "Kohde n" (pulun
+        /// linkki, web avaaNahtavyys numero null).
         /// </summary>
-        public void AvaaKohde(Kohdekartta k, KohdekarttaKohde kohde)
+        public void AvaaKohde(Kohdekartta k, KohdekarttaKohde kohde, bool numero = true)
         {
             if (k == null || kohde == null) return;
             if (kohde.Juttu == null || string.IsNullOrEmpty(kohde.Juttu.Teksti))
@@ -174,7 +175,7 @@ namespace Matkakirja.Natiivi
             }
             kartta = k;
             nykyinen = kohde;
-            AvaaJuttu(kohde.Juttu, kohde.Numero);
+            AvaaJuttu(kohde.Juttu, numero ? kohde.Numero : (int?)null);
         }
 
         /// <summary>Nähtävyysjuttu ilman karttayhteyttä (ei valikkoa eikä selausta).</summary>
