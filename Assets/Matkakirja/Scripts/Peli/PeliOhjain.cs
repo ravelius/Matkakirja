@@ -906,6 +906,7 @@ namespace Matkakirja.Natiivi
                 PeliApu.KirjoitaAtomisesti(TavoitePolku, Tavoite ?? "");
             }
             catch (Exception e) { Debug.LogError("MATKAKIRJA peli: tallennus epäonnistui: " + e.Message); }
+            PaivitaAarrepiste();
             try { TilaMuuttui?.Invoke(); } catch (Exception e) { Debug.LogException(e); }
         }
 
@@ -1716,6 +1717,41 @@ namespace Matkakirja.Natiivi
             catch (Exception e) { Debug.LogException(e); AjoValmis(); }
         }
 
+        // --- vihreä aarrepiste kartalle (B3, Natiivisepän Karttapisteet) ----------
+
+        const string AarrepisteId = "aarre";
+        /// <summary>Webin fokuspisteen vihreä (css/fokusvirta.css .fokuspiste #4f9d3a).</summary>
+        static readonly Color AarrepisteVari = new Color32(0x4f, 0x9d, 0x3a, 0xff);
+        Karttapisteet kytketytPisteet;
+
+        static Karttapisteet Pisteet => KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.pisteet : null;
+
+        /// <summary>Piste nykyisen kaupungin kohtaamispaikkaan (lukittuna tai auki), muuten pois.</summary>
+        void PaivitaAarrepiste()
+        {
+            var p = Pisteet;
+            if (p == null) return;
+            if (p != kytketytPisteet)
+            {
+                if (kytketytPisteet != null) kytketytPisteet.Napautettu -= PisteNapautettu;
+                kytketytPisteet = p;
+                p.Napautettu += PisteNapautettu;
+            }
+            var a = Kaytossa && Tila != SilmukanTila.Aloitus ? Aarrepiste() : null;
+            if (a == null) { p.Poista(AarrepisteId); return; }
+            var d = ReittiGeometria.Asteiksi(a.X, a.Y);
+            p.Aseta(AarrepisteId, d.x, d.y, AarrepisteVari, a.Lukittu);
+        }
+
+        void PisteNapautettu(string id)
+        {
+            if (id != AarrepisteId || !Kaytossa) return;
+            if (NapautusSallittu != null && !NapautusSallittu()) return;
+            if (Tila != SilmukanTila.Kartta) return;
+            var virhe = AvaaAarrepiste();
+            if (virhe != null && virhe != "lukittu") Debug.Log("MATKAKIRJA peli: aarrepiste: " + virhe);
+        }
+
         /// <summary>Nappula pelaajan kohdalle (lataus, uusi peli, mannerlento, matkan jälkeen); piiloon ilman peliä.</summary>
         void PaivitaNappula()
         {
@@ -1723,6 +1759,7 @@ namespace Matkakirja.Natiivi
             if (n == null || n.Liikkeessa) return;
             var k = matka != null ? PeliApu.Koordinaatti(verkko, matka.Tila.Pelaaja.Sijainti) : null;
             if (k.HasValue && Kaytossa) n.Aseta(k.Value.Lat, k.Value.Lon); else n.Piilota();
+            PaivitaAarrepiste();
         }
 
         void AjoValmis()
