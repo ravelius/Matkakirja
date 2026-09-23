@@ -46,6 +46,7 @@ namespace Matkakirja.Natiivi
         public readonly Paljastus Paljastus;
         public readonly Julistegalleria Julistegalleria;
         public readonly Nahtavyysarkki Nahtavyydet;
+        public readonly PieniLiike Liike;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         static void KytkeTehdas()
@@ -100,6 +101,7 @@ namespace Matkakirja.Natiivi
             Nostokortti = new Nostokortti(kerros);
             Lehti = new Lehtinakyma(kerros);
             Nahtavyydet = new Nahtavyysarkki(kerros); // lehden päälle (sama kerros, myöhemmin)
+            Liike = new PieniLiike(kerros); // kerros 10: pallon päällä, muun UI:n alla
             // Lehti aukeaa kaiken päälle: auki jääneet valikot ja popupit kiinni.
             Lehti.Avautui += _ => { Valikko.Sulje(); Aanentasot.Sulje(); Matkalaukku.Sulje(); Vahvistus.Sulje(); Julistegalleria.Sulje(); Minipopup.SuljeAuki(); };
             Paljastus = new Paljastus(kerros);
