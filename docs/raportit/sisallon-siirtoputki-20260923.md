@@ -19,7 +19,7 @@ Lähde: main `eaeda81cf` (v2143).
   (js/media.js). Lisäksi viitteissä on 1 681 lähde- ja lisenssilinkkiä.
 - 21 kokoelmaa tyypitettyinä entiteetteinä, esimerkiksi kaupungit
   lat/lon-koordinaatein, reitit, kysymykset, lehdet ja kohtaamiset.
-- Skeemaversio on **1.8** (`manifest.skeemaversio`): versiossa 1.1
+- Skeemaversio on **1.9** (`manifest.skeemaversio`): versiossa 1.1
   kaupungit saivat kentät `maa2` (ISO2), `tyyppi`, `lentokentta` ja
   `aloitus` natiivin 3D-proton tarpeen mukaan, versiossa 1.2 `tarkeys`
   (0–3), ja manifest sai tiedostojen koot (`tavuja`), versiossa 1.3
@@ -405,7 +405,7 @@ Funktiot tunnisteiksi ja sisältöversion näyttäminen ovat myöhempiä osia.
 
 ### 5.3 Yhteensopivuus: vanha sovellus ja uusi sisältö
 
-- **Skeeman major.minor.** Nykyinen on 1.8 (`SKEEMAVERSIO_TARKKA`,
+- **Skeeman major.minor.** Nykyinen on 1.9 (`SKEEMAVERSIO_TARKKA`,
   manifestissa ja osoittimessa). `matkakirja-vienti/1` on major. Lisäykset
   (uusi kenttä, uusi kokoelma) nostavat minoria, ja vanha sovellus
   ohittaa tuntemattomat kentät. Poisto tai merkityksen muutos nostaa
@@ -416,7 +416,8 @@ Funktiot tunnisteiksi ja sisältöversion näyttäminen ovat myöhempiä osia.
   tavuja; 1.3 web-näkymien riippuvuuslistat (web/lehti.json); 1.4 kokoelmat saannot
   ja saapuminen; 1.5 manifest.logiikka, kokoelma esilasketut ja media.suurennos; 1.6 aarteiden
   arvovälit ja botin taito saannoissa, kokoelma tapahtumat; 1.7 kokoelma
-  linssiaineisto; 1.8 kokoelma aanitaulut. Raakaoliot (`data`) eivät kuulu sopimukseen: niiden kentät
+  linssiaineisto; 1.8 kokoelma aanitaulut; 1.9 kokoelmat kuvakysymykset,
+  lippumaat, pulmaaineisto ja luennat. Raakaoliot (`data`) eivät kuulu sopimukseen: niiden kentät
   voivat muuttua ilman versionnostoa.
 - **Pakolliset kentät.** Jokainen sovellus julistaa, mitkä kokoelmat ja
   kentät se vaatii. Tuoja validoi paketin ennen käyttöönottoa, ja jos
