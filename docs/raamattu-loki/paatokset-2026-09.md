@@ -1731,3 +1731,7 @@ Avoimet: 33 Commons-kuvaa puuttuu ämpäristä (peilaa-media ei lue js/linssit �
 ## OMISTAJA: NC-EHTOISET AINEISTOT TARKISTETTAVA HETI JA KORVATTAVA, KOSKA PELISTA TEHDAAN JOSSAIN VAIHEESSA MAKSULLINEN (MUUT KOHDAT EIVAT ONGELMA); 3D-JATKORAPORTIT (PR #2891): GOOGLEN 3D-LAATAT EI VANHAN PROJEKTIN KAUTTA (UUSI PALVELU JA ALUSTA = MUUTOS → EEA-EHDOT, LISAKSI KIELTO 'WITH OR NEAR A NON-GOOGLE MAP'), EHDOLLISESTI CESIUM IONIN KAUTTA (~174 $/kk 1 000 PELAAJAA); UNREAL vs UNITY → UNITY 6.3 LTS (LUMEN EI TOIMI iOS:LLA, NANITE KOKEELLINEN, CESIUM-UNREAL APP STORE -KAATUMINEN AUKI, BLUEPRINT HEIKKO AGENTEILLE, SOVELLUS 150–300 Mt vs 30–50 Mt) (23.9.2026 klo 10.10)
 
 Klo 10.12. NC-tarkistus: grep löysi BY-NC-viittauksia js/lahteet.js, js/kuvagalleria.js, js/packs/maa-kategoriat.js, kulttuuri-kategoriat.js, europe-kielet.js (2–3 kpl kukin) ja js/aani-ehdokkaat.js (15, ehdokaslista). Tilataan täysi lisenssi-inventaario ja korvaus.
+
+## NC-TARKISTUS ALUSTAVA: KUVAT TURVASSA (js/kuvagalleria.js HYLKAA noncommercial/no-deriv), ONGELMA AANISSA — VAHINTAAN 6 MUSIIKKINAYTETTA (maa-kategoriat 3894/13967/15296, kulttuuri-kategoriat 10983/15578/15884) JA 3 AANIMAISEMAA (europe-kielet 37/41/55, archive.org aporee) CC BY-NC(-SA); lahteet.js 245/251 KOKOELMAT 'CC BY-NC KOHTEITTAIN'; FREESOUND-AANET TARKISTAMATTA → SIIRTOSEPPA TEKEE TAYDEN INVENTAARION (docs/raportit/lisenssi-inventaario-20260923.md), SISALTOKIRJURI HERATETTY KORVAAMAAN (23.9.2026 klo 10.11)
+
+Klo 10.13. Korvaajat CC0/CC BY/BY-SA/PD, sama tunnelma ja kesto, lisenssi kirjataan js/lahteet.js:ään.
