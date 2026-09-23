@@ -1,0 +1,75 @@
+# Ämpärin aukot viikoittain (Siirtoseppä 23.9.2026, Fablen erä).
+#
+# Tarkistaa jokaisen pelin oman mediaosoitteen (tools/vienti/
+# tarkista-media.mjs --kaikki, noin 11 600 HEAD-pyyntöä, 2–3 min) ja pitää
+# yllä yhtä GitHub-issueta "Ämpärin aukot (viikkotarkistus)": avaa tai
+# päivittää sen, kun aukkoja on, ja sulkee sen, kun niitä ei enää ole.
+# Siirtoputkiraportin osa 5.7, riski 5: aukko näkyy pelissä vasta
+# varareitin kautta tai ei ollenkaan.
+#
+# EI PR-PORTISSA (Fable): verkko ei ole deterministinen, ja Commons
+# kuristaa. Ajokone on GitHubin ubuntu, ei omistajan Mac.
+
+name: Ämpärin aukot (viikoittain)
+
+on:
+  schedule:
+    # Maanantaisin 05.15 UTC: sunnuntain peilausajon (peilaa.yml, 04.15)
+    # jälkeen, joten viikon peilaus on jo tehty.
+    - cron: '15 5 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: amparin-aukot
+  cancel-in-progress: false
+
+jobs:
+  tarkista:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      OTSIKKO: Ämpärin aukot (viikkotarkistus)
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Tarkista ämpäri
+        run: |
+          node tools/vienti/vie-sisalto.mjs
+          node tools/vienti/tarkista-media.mjs --kaikki
+
+      - name: Kokoa raportti
+        id: raportti
+        run: node tools/vienti/aukkoraportti.mjs --ulos aukot.md
+
+      - name: Päivitä issue
+        env:
+          AUKKOJA: ${{ steps.raportti.outputs.aukkoja }}
+        run: |
+          set -euo pipefail
+          # Tyhjä tai viallinen luku ei saa pudota "ei aukkoja" -haaraan
+          # ja sulkea issueta.
+          case "$AUKKOJA" in (''|*[!0-9]*) echo "::error::aukkoja-luku puuttuu: '$AUKKOJA'"; exit 1;; esac
+          nro=$(gh issue list --state open --limit 100 --json number,title \
+            -q '.[] | "\(.number)\t\(.title)"' | awk -F'\t' -v t="$OTSIKKO" '$2 == t { print $1; exit }')
+          if [ "$AUKKOJA" -gt 0 ]; then
+            if [ -n "$nro" ]; then
+              gh issue edit "$nro" --body-file aukot.md
+              echo "Päivitetty issue #$nro."
+            else
+              gh issue create --title "$OTSIKKO" --body-file aukot.md
+            fi
+          elif [ -n "$nro" ]; then
+            gh issue close "$nro" --comment "Ei aukkoja $(date -u +%F) (commit ${GITHUB_SHA:0:9})."
+            echo "Suljettu issue #$nro."
+          else
+            echo "Ei aukkoja, ei avointa issueta."
+          fi
