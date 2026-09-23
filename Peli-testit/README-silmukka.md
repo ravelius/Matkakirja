@@ -15,7 +15,7 @@ Kaikki koodi on kansiossa `Assets/Matkakirja/Scripts/Peli/` (Assembly-CSharp):
 
 **Ei Rakennus.cs- eikä kohtausmuutoksia.** `PeliOhjain.Kaynnista()` on
 `[RuntimeInitializeOnLoadMethod(AfterSceneLoad)]`: se etsii kohtauksesta `PalloKierto`,
-`KaupunkiMerkit` ja `LehtiKuori` (tai luo lehtikuoren `LehtiKuori.Hae()`), luo olion
+`KaupunkiMerkit`, luo olion
 `PeliOhjain` ja tarvittaessa `EventSystem` + `InputSystemUIInputModule` (UGUI-napit;
 projektin syöte on pelkkä Input System). Fontti otetaan `KaupunkiMerkit.fontti`sta.
 
@@ -58,7 +58,7 @@ pelin UI:ta piirretä. `peli paalle` palauttaa. Huom: kun peli on päällä, 3D:
 - **Ajo:** `IKamera.Aja(lat, lon, KorkeusKaarelle(18,6°), 1,5–3 s)`; reitin varren piste on
   isoympyrällä a→b osuudella idx/askeleet. Sormi keskeyttää PalloKierron ajon ilman
   valmis-kutsua, joten silmukalla on varareitti (kesto + 0,75 s).
-- **Perillä kaupungissa** → `LehtiKuori.Avaa(kaupunki)`; `Suljettu` → tallennus → kartta.
+- **Perillä kaupungissa** → natiivilehti (`ILehtiNakyma.Nayta`, Natiivi-UI); `Suljettu` → tallennus → kartta.
   **Reitin varrella** → ei lehteä, alareunaan "Heitä noppaa → Kohde".
 
 ## Testikomennot (Documents/peli-komento.txt)

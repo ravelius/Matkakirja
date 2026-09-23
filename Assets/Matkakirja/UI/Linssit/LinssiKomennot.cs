@@ -12,6 +12,10 @@
 //                                         tai Commonsin esimerkkikuvat, jos aineisto ei lataudu
 //   ui linssi sumu p                      avaruussumun peitto 0…1 (0 = pois)
 //   ui linssi vertailu [arkki|taynna]     alapalkki esimerkkimailla / vertailuarkki / täyden listan ilmoitus
+//   ui linssi vertailu FIN SWE [ITA JPN]  vertailuarkki näillä mailla (2–4 × ISO3) ja maakäyrät
+//                                         paketin maakayrat.json:sta (arkki = FIN ITA JPN)
+//   ui linssi vertailu latautuu|verkko    arkin käyrät hakutilassa ("Haetaan tilastoja…") /
+//                                         verkkoyhteysrivillä
 //   ui linssi maa [ISO3]                  maatietojen maakyltti (oletus ITA; napautus avaa maalehden)
 //   ui linssi keksinnot [esittely|pysakki i|valinaytos [i]|loppu]
 //   ui linssi matka [aloitus|musta|valot|jakso i|kuva i|loppu]
@@ -70,6 +74,14 @@ namespace Matkakirja.Natiivi
                     return null;
                 case "vertailu":
                     if (a1 == "taynna") { l.Maat.TestaaTaynna(); return null; }
+                    if (a1 == "latautuu" || a1 == "verkko") { l.Maat.TestaaVertailu(true, null, a1); return null; }
+                    if (a1.Length == 3)
+                    {
+                        var isot = new List<string>();
+                        for (int i = 1; i < osat.Length; i++) isot.Add(osat[i].ToUpperInvariant());
+                        l.Maat.TestaaVertailu(true, isot);
+                        return "maakäyrät: " + string.Join(" ", isot);
+                    }
                     l.Maat.TestaaVertailu(a1 == "arkki");
                     return null;
                 case "maa":

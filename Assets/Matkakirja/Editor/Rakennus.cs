@@ -129,10 +129,6 @@ namespace Matkakirja.Editori
             kortti.fontti = merkit.fontti;
             merkit.kortti = kortti;
 
-            // Pelikoodarin lehtikuori (Scripts/Peli/LehtiKuori.cs): nimen on oltava
-            // MatkakirjaLehti, koska iOS-liitännäinen etsii olion nimellä.
-            new GameObject(Matkakirja.Natiivi.LehtiKuori.PeliolionNimi).AddComponent<Matkakirja.Natiivi.LehtiKuori>();
-
             var kameraGo = new GameObject("Kamera") { tag = "MainCamera" };
             var kamera = kameraGo.AddComponent<Camera>();
             kamera.clearFlags = CameraClearFlags.SolidColor;

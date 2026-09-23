@@ -130,10 +130,4 @@ namespace Matkakirja.Peli
         event Action<string> KaupunkiNapautettu;
     }
 
-    /// <summary>Kaupunkilehti WKWebView-kuoressa (index.html?lehti=id, verkkopelin #2942).</summary>
-    public interface ILehti
-    {
-        void Avaa(string kaupunki);
-        event Action<string> Suljettu;
-    }
 }

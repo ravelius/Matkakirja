@@ -5,8 +5,8 @@ tietäjäpisteet, aarrelaatat) puhtaana C# 9:nä. Yksi `Matka` on sama kokonaisu
 verkkopelin `Game` (yksinpeli vaellustilassa).
 
 - `Assets/Matkakirja/Peli/` — asmdef **Matkakirja.Peli** (`noEngineReferences`, autoReferenced):
-  - Sopimukset (rajapinnat IReittiverkko, IKamera, ILehti), MiniJson, SisaltoTuonti,
-    Satunnainen (mulberry32), Reittiverkko, LehtiOsoite.
+  - Sopimukset (rajapinnat IReittiverkko, IKamera), MiniJson, SisaltoTuonti,
+    Satunnainen (mulberry32), Reittiverkko.
   - **Matka** — tilakone (vuoro, kulkutavat, heitto, siirto, bussi, lento, pankkiapu) ja
     erästä 3 laattojen jako luonnissa, laatan kääntö (web revealToken), lukitus, ennätys.
   - **Pelitila** — tallennettava tila (tallennusversio **4**; versiopolku Pelitila.Paivita, uudempi = UudempiTallennus, TallennusTestit).
@@ -32,9 +32,8 @@ verkkopelin `Game` (yksinpeli vaellustilassa).
     tarkistaLinssikynnys ja linssiAarteenKylkiaisena): passi ∪ pelikerran lista, kynnykset
     (Kynnyssaanto vaihdettavissa), ison aarteen kylkiäinen, optikon hyvitys, valmistuneet,
     seitsemän peninkulman linssi (≥ 7 pääaarretta, päivä ≤ 80; ei webissä) ja VapaaSiirtyminen.
-- `Assets/Matkakirja/Scripts/Peli/LehtiKuori.cs` — ILehti-toteutus (GameObject `MatkakirjaLehti`).
-- `Assets/Plugins/iOS/MatkakirjaLehti.mm` — WKWebView-liitännäinen, ks. README-lehti.md.
-- `Assets/Matkakirja/Editor/LehtiKuoriXcode.cs` — WebKit.framework linkitys Xcode-vientiin.
+- WKWebView-lehtikuori (LehtiKuori, MatkakirjaLehti.mm, LehtiOsoite) on poistettu (A4, 23.9.2026):
+  lehdet ovat natiiveja (Natiivi-UI, `ILehtiNakyma`).
 
 ## API lyhyesti Unity-kerrokselle
 

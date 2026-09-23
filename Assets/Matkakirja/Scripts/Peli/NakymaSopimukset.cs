@@ -247,7 +247,7 @@ namespace Matkakirja.Natiivi
         /// silmäluku tilariville ("Noppa n").
         /// </summary>
         public static Action<int, double, double, Action> Noppa;
-        /// <summary>Natiivilehti. Asettamaton = WKWebView-kuori (LehtiKuori), kunnes se poistetaan (A4).</summary>
+        /// <summary>Natiivilehti. Asettamaton = ei lehteä (WKWebView-kuori poistettu, A4).</summary>
         public static Func<GameObject, ILehtiNakyma> Lehti;
         /// <summary>Sähkeliuska ja retkikuntaosio. Asettamaton = ei sähkepintaa natiivissa (ohjain ei pollaa).</summary>
         public static Func<GameObject, ISahkeNakyma> Sahke;
