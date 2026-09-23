@@ -605,7 +605,12 @@ export const RAAMATTU = {
           + '(sydänteeman lunastus).',
         '80 PÄIVÄN PALKINTO: SEITSEMÄN PENINKULMAN LINSSI — vapaa '
           + 'siirtyminen mihin tahansa kaupunkiin ilman noppaa; '
-          + 'samalla kaikki linssit auki. Ei ostettavissa.',
+          + 'samalla kaikki linssit auki. Ei ostettavissa. TARKENNUS '
+          + '(Fable 23.9.2026, natiivin toteutus): ehto = seitsemäs pääaarre '
+          + 'löydetty päivään 80 mennessä, myöntö huipennuksessa; leima säilyy '
+          + 'passissa ja pitää linssit auki myös myöhemmissä peleissä, mutta '
+          + 'vapaa siirtyminen (hinta 0, kuluttaa vuoron) koskee vain peliä, jossa '
+          + 'se ansaittiin. Tunnus "peninkulma".',
       ],
     },
     {
