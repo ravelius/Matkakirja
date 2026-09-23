@@ -66,5 +66,14 @@ namespace Matkakirja.Peli.Testit
             Oleta.Tosi(!LehtiOsoite.YritaRakentaa("kairo", "https://x.example/?q=", out _, out var virhe));
             Oleta.Tosi(virhe.Contains("osoitepohja"), virhe);
         }
+        [Testi] static void TilaRisuaitaanKuinWebinBase64url()
+        {
+            // Odotettu = Node Buffer.from(json, 'utf8').toString('base64url') (verkkopelin lehtikuorenTila purkaa).
+            const string json = @"{""raha"":123,""kaupat"":{""kulttuuri"":[""maailmankartta:pariisi""],""julisteet"":[""pariisi""],""pullat"":[""sähke:ä""]}}";
+            var o = LehtiOsoite.LisaaTila("https://matkakirja.app/index.html?lehti=pariisi", json);
+            Oleta.Sama("https://matkakirja.app/index.html?lehti=pariisi#tila=eyJyYWhhIjoxMjMsImthdXBhdCI6eyJrdWx0dHV1cmkiOlsibWFhaWxtYW5rYXJ0dGE6cGFyaWlzaSJdLCJqdWxpc3RlZXQiOlsicGFyaWlzaSJdLCJwdWxsYXQiOlsic8OkaGtlOsOkIl19fQ", o);
+            Oleta.Sama("https://x/?lehti=a#tila=eyJyYWhhIjoxMjMsImthdXBhdCI6eyJrdWx0dHV1cmkiOlsibWFhaWxtYW5rYXJ0dGE6cGFyaWlzaSJdLCJqdWxpc3RlZXQiOlsicGFyaWlzaSJdLCJwdWxsYXQiOlsic8OkaGtlOsOkIl19fQ", LehtiOsoite.LisaaTila("https://x/?lehti=a#vanha", json), "vanha risuaita korvautuu");
+            Oleta.Sama("https://x/?lehti=a", LehtiOsoite.LisaaTila("https://x/?lehti=a", null));
+        }
     }
 }
