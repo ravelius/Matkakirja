@@ -16,8 +16,8 @@ aloituspiste. Lue ensin tämä dokumentti, sitten tarvittaessa raportit (lopussa
 
 | Haara | Commit | Sisältö | Tila |
 |---|---|---|---|
-| `linssiseppa/linssirunko` | f24645e | Linssisopimus, rekisteri, odotuspeite, topografia, LinssiOhjain (Unity), KarttaKerrokset-sovitin | Merge-pyyntö Natiivisepälle 23.9. ilta; testit 17/17 |
-| `linssiseppa/astronautti` | 7a86c81 | Kaikki edellinen + aikajana (asteikko, kello, kamera), ihmisen matka (esitys, virrat, vanat, valot, tähdet, kertojan ääni), astronautin kamera (pisteet, ISS, pilvet), keksinnöt (pysäkkiajo, valot) | Koekäännöspyyntö Natiivisepälle; testit 116/116, unity-tarkistus 0 virhettä. **Varjostimia ei ole koskaan käännetty** (Linssit/Resources/Varjostimet: Tahti, Pilvet, Havaintopiste, Valo, Vana) |
+| `linssiseppa/linssirunko` | f24645e | Linssisopimus, rekisteri, odotuspeite, topografia, LinssiOhjain (Unity), KarttaKerrokset-sovitin | **Mergetty masteriin 0244858** (Natiiviseppä 23.9. klo 18) |
+| `linssiseppa/astronautti` | daf5e93 | Kaikki edellinen + aikajana (asteikko, kello, kamera), ihmisen matka (esitys, virrat, vanat, valot, tähdet, kertojan ääni), astronautin kamera (pisteet, ISS, pilvet), keksinnöt (pysäkkiajo, valot) | Natiivisepän koekäännös: kaikki viisi varjostinta kääntyvät Metalille ilman virheitä, sim-vienti ok. **Merge-pyyntö koko haarasta lähetetty klo 18.10**; laitteella ei vielä ajettu. Testit 116/116 |
 | `linssiseppa/vesistot` | (ei vielä commitia) | Vesistölinssi: joet Viiva-materiaalilla, järvet Tasavari-varjostimella, nimet, rekisteröinti | Opus-agentti kesken klo 18.05 (tiedostot työpuussa). Jatkaja: tarkista `git log` ja `kaanna.sh`; jos agentti ei commitoinut, viimeistele ja commitoi, yhdistä `linssiseppa/astronautti`-haaraan ja poista worktree (`git worktree remove`) |
 
 Laitetesti ilman UI:ta: `Documents/linssi-komento.txt` → `linssi topografia | ihmisen-matka | satelliitti |
@@ -25,7 +25,7 @@ keksinnot | vesistot | pois`, loki `Documents/linssi-loki.txt`.
 
 ## Odottaa muilta
 
-- **Natiiviseppä:** merge (topografia) ja koekäännöksen loki (varjostinvirheet korjataan heti). Tulossa
+- **Natiiviseppä:** linssiseppa/astronautti-haaran merge ja ensimmäiset laitehavainnot. Tulossa
   RAJAPINTAAN: MaaTila(bool), MaaNapautettu(iso2), Korosta/KorostusPois (vertailu, maatiedot).
 - **Karttaseppä:** reliefisarja `media.matkakirja.app/matkakirja/reliefipyramidi/20260920/pallo/{z}/{x}/{y}.jpg`
   (PR #2950, ajo polton 23a jälkeen; oli 404 klo 18). Päivämäärärajan kaistale (lon −180…−175) paikataan
@@ -50,7 +50,7 @@ keksinnot | vesistot | pois`, loki `Documents/linssi-loki.txt`.
 ## Seuraavat työt
 
 1. Vesistöt valmiiksi ja yhdistys (ks. taulukko).
-2. Natiivisepän koekäännöksen virheet.
+2. Laitehavainnot (Natiiviseppä/Laitetestaaja) ihmisen matkasta, astronautista ja keksinnöistä.
 3. Vertailu ja maatiedot, kun MaaTila on masterissa (linssit ovat karttatiloja; maalehti ja käyrät Natiivi-UI).
 4. Ihmisen matkan tutkimusvaihe (viisi virtanappia, nostokortit) ja muisti; keksintöjen luennat, kun
    paketti tuo rungot.
