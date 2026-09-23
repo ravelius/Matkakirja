@@ -29,6 +29,7 @@ namespace Matkakirja
     ///   palvelin                  laattapalvelimen osumat lokiin (offline / välimuisti / verkko)
     ///   valot <aihe>|kaikki|ei|tila     karttavalot (AiheValot), tila = laskurit lokiin
     ///   valot osoita <id>               napauttaa valon kohtaa (esim. skandaali:shakkiturkkilainen)
+    ///   maakunta <ISO3:tunnus>|pois  maakunnan värjäys (B17)
     ///   maat paalle|pois | maat korosta ISO3 [#täyttö #raja] | maat pois-korostus   Maatila (MaaKartta)
     ///   nappula aseta lat lon | aja lat lon … kesto | lenna lat0 lon0 lat1 lon1 kesto | pois
     ///   napauta x y               synteettinen napautus (osuus näytöstä, origo vasen alakulma)
@@ -197,6 +198,18 @@ namespace Matkakirja
                     var valoRivi = new StringBuilder("MATKAKIRJA valot: valittu " + av.Valittu + ":");
                     foreach (var p in av.Laskurit) valoRivi.Append(' ').Append(p.Key).Append('=').Append(p.Value);
                     Debug.Log(valoRivi.ToString());
+                    break;
+                }
+                case "maakunta":
+                {
+                    // maakunta <ISO3:tunnus> | maakunta pois (B17, sama kuin Natiivi-UI:n Maakunnat-valinta)
+                    var mk = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.maakunnat : null;
+                    if (mk == null) break;
+                    mk.KorostusPois(null);
+                    if (o[1] == "pois") { mk.MaaTila(false); break; }
+                    mk.Korosta(rivi.Substring(rivi.IndexOf(' ') + 1),
+                        new Matkakirja.Linssit.Maat.Savy(new Matkakirja.Linssit.Maat.Rgba(0.7f, 0.3f, 0.2f, 0.35f), new Matkakirja.Linssit.Maat.Rgba(0.45f, 0.16f, 0.1f, 0.95f)));
+                    mk.MaaTila(true);
                     break;
                 }
                 case "maat":
