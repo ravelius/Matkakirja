@@ -311,6 +311,8 @@ namespace Matkakirja.Natiivi
                     Kirjasimet.Aseta(b, Kirjasin.Kone);
                 }
                 if (n.LeikekirjaValo != null) Leikekirja(sisus, n);
+                // Reaktiot kortin loppuun: tunniste on kohteen oma id (web kohdeReaktioTunniste).
+                Reaktiot.Piirra(sisus, Reaktiot.KohdeAvain(n.Id), n.Otsikko);
             }
         }
 
@@ -576,6 +578,7 @@ namespace Matkakirja.Natiivi
         static LehtiKuva Lehtikuva(NostoKuva k) => new LehtiKuva
         {
             Lahde = k.Lahde, Lyhyt = k.Lyhyt, Selite = k.Selite ?? k.Lyhyt, Nauha = k.Nauha,
+            Reaktio = k.Reaktio, ReaktioOtsikko = k.ReaktioOtsikko,
             LahdeRivi = string.Join(" · ", new[] { k.Tekija, k.LahdeRivi }.Where(x => !string.IsNullOrEmpty(x))),
         };
 

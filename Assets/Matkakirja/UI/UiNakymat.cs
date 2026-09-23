@@ -133,6 +133,8 @@ namespace Matkakirja.Natiivi
             // Lehti aukeaa kaiken päälle: auki jääneet valikot ja popupit kiinni.
             Lehti.Avautui += _ => { Valikko.Sulje(); Aanentasot.Sulje(); Matkalaukku.Sulje(); Vahvistus.Sulje(); Julistegalleria.Sulje(); Minipopup.SuljeAuki(); };
             Paljastus = new Paljastus(kerros);
+            // Löytö päätyy matkalaukkuun: laukku heilahtaa paljastuksen sulkeutuessa (web elavoitaLaukku).
+            Paljastus.Suljettiin += aarre => { if (aarre) Tilarivi.ElavoitaLaukku(); };
             Sahke = new SahkeNakyma(kerros, Valikko);
             Sahkelomake = new SahketehtavaNakyma(kerros); // pelidialogien kerros (30), pulun kuplat päällä
             Julistegalleria = new Julistegalleria(kerros); // laukun päälle (sama kerros, myöhemmin)
@@ -178,6 +180,7 @@ namespace Matkakirja.Natiivi
         }
 
         bool ohjainKytketty;
+        MatkanYhteenveto odottavaHuipennus;
 
         void KytkeOhjain()
         {
@@ -214,8 +217,20 @@ namespace Matkakirja.Natiivi
             // Sähkehakemisto valmiiksi, kun saavutaan sähkekaupunkiin (lehtien jäsennys ennen pisteen napautusta).
             o.MatkaPerilla += kaupunki => UiKerros.PaaSaikeessa(() => EsilataaSahkehakemisto(kaupunki));
             EsilataaSahkehakemisto(o.PelaajanKaupunki);
+            // Huipennus vasta, kun viimeisen aarteen kysymys (ja sen paljastus) on suljettu: tapahtuma
+            // tulee löytöhetkellä, ennen paljastusta, eikä huipennus saa jäädä paljastuksen alle.
             // Web: voittoikkuna aukeaa → sfx.play('win').
-            o.KaikkiAarteetLoytyi += yv => UiKerros.PaaSaikeessa(() => { Aanet.Tehoste("win"); Huipennus.Nayta(yv, () => UusiMatka(o)); });
+            o.KaikkiAarteetLoytyi += yv => UiKerros.PaaSaikeessa(() =>
+            {
+                if (!Kysymys.Auki && !Paljastus.Auki) { Aanet.Tehoste("win"); Huipennus.Nayta(yv, () => UusiMatka(o)); return; }
+                odottavaHuipennus = yv;
+            });
+            Kysymys.Piilotettu += () =>
+            {
+                var yv = odottavaHuipennus;
+                odottavaHuipennus = null;
+                if (yv != null) { Aanet.Tehoste("win"); Huipennus.Nayta(yv, () => UusiMatka(o)); }
+            };
             // Pelin tehosteet (webin sfx.play-tunnukset) ja lennon moottoriääni (startFlight/stopFlight),
             // B7 §1.8: siivut UI:n äänimoottorilla.
             o.Aani += tunnus => UiKerros.PaaSaikeessa(() => Aanet.Tehoste(tunnus));
@@ -274,6 +289,7 @@ namespace Matkakirja.Natiivi
 
         public void SuljeKaikki()
         {
+            odottavaHuipennus = null; // uusi matka tai UI pois: odottanut huipennus ei enää kuulu tähän hetkeen
             Valikko.Sulje();
             Aanentasot.Sulje();
             Matkalaukku.Sulje();

@@ -39,6 +39,8 @@ namespace Matkakirja.Natiivi
         public string LahdeRivi;
         /// <summary>Matkakirjan ihmeen kulmanauha (web KOHDE_IHMENAUHA "Unohdettu aarre"), muuten null.</summary>
         public string Nauha;
+        /// <summary>Suurennoksen reaktiorivin tunniste ja otsikko (web kuva.reaktio "ihme:&lt;nimi&gt;"), muuten null.</summary>
+        public string Reaktio, ReaktioOtsikko;
     }
 
     public sealed class NostoVisa
@@ -496,6 +498,8 @@ namespace Matkakirja.Natiivi
                 {
                     Lahde = ihmeOsoite, Lyhyt = T(ihme, "lyhyt") ?? T(ihme, "selite"), Selite = T(ihme, "selite") ?? T(ihme, "lyhyt"),
                     LahdeRivi = T(ihme, "lahde"), Nauha = IhmeNauha,
+                    // Ihme on oma sisältönsä: suurennos saa oman reaktiorivin (web ihmeReaktioTunniste).
+                    Reaktio = string.IsNullOrEmpty(n.Otsikko) ? null : "ihme:" + n.Otsikko, ReaktioOtsikko = n.Otsikko,
                 };
                 if (MiniJson.Totuus(ihme, "kadonnut"))
                 {
