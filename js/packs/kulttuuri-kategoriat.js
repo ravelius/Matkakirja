@@ -107026,4 +107026,326 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * KARTHAGO (Afrikan kaupunkilehtierä O7, 23.9.2026).
+   *
+   * KANSI ON HISTORIAN SIVU. tests/lehdet.test.mjs vaatii jokaiselle
+   * lehdelle kannen (id 'kaupunki') ja jokaiselle muulle sivulle
+   * minitehtävän, joten historian seitsemän juttua ovat kannessa
+   * (Timbuktun malli) ja toinen aihe on Taide ja taito. Kansikuvat,
+   * avauskuvat ja matkailijalle-osio tulevat myöhemmällä kierroksella.
+   *
+   * VANHAT LITTEÄT NOSTOT (africa-kulttuuri.js) siirtyivät tänne
+   * uudelleen kirjoitettuina: Sotanorsut ja Purppuraväri tarkistettiin
+   * lähteestä ja korjattiin (norsujen "omat nimet ja hoitajat" ja
+   * purppuran nimen syy-yhteys eivät löytyneet lähteestä), ja Karthagon
+   * rouvan kuva vaihdettiin, koska vanha tiedosto oli vain 668 px leveä.
+   * Kulttuurivisan (purppura ja merikotilot) lähdejuttu on "Väri, joka
+   * keitettiin kotiloista"; minitehtävä kysyy Tanitin merkistä eikä osu
+   * visaan.
+   *
+   * FAKTAPOHJA: en-Wikipedia raakatekstinä 23.9.2026 — Carthage, Hanno
+   * the Navigator, North African elephant, War elephant, Surus,
+   * Hannibal's crossing of the Alps, Carthago delenda est, Third Punic
+   * War, Salting the earth, Mago (agricultural writer), Eighth Crusade,
+   * Acropolium of Carthage, Christian Tuxen Falbe, Nathan Davis
+   * (traveller), French ironclad Magenta, Pricot de Sainte-Marie steles,
+   * Tyrian purple, Phoenicia, Tanit, Tophet, Necropolis of the Rabs,
+   * Carthage National Museum, Bardo National Museum; kappelin vuodet
+   * 1830 ja 1840–1841 sekä purku 1950 fr-Wikipediasta (Chapelle
+   * Saint-Louis de Carthage).
+   *
+   * KUVAT katsottu silmin 900 px:n esikatseluna, kaikki >= 1200 px ja
+   * käyttämättömiä muualla repossa: Schoffin kartta (reittiviiva
+   * Karthagosta Gibraltarin kautta Länsi-Afrikkaan), barkidien sekeli
+   * (norsu isoin korvin ja syöksyhampain, alla merkki), Byrsan
+   * puunilainen kortteli (matalat muurit, taustalla forumin
+   * perustuspilarit ja meri), Pyhän Ludvigin kappeli (postikortti,
+   * kupoli, ketjuaita), Falben kartta 1831 (Sebkha, Tunisin järvi,
+   * Sidi Bou Saïd, La Goulette), L'Illustration 27.11.1875 (sukeltaja
+   * ja lyhty hylyn sisällä), Wienin purppuravitriini (kolme kotiloa ja
+   * kolme kangasta), Lyonin stela (kirjoitus, palmu, Tanitin merkki
+   * vasemmalla alhaalla), siivekkään papittaren kansi (siivet ristissä
+   * jalkojen päällä) ja Karthagon rouva (sädekehä, sauva, nostettu
+   * käsi). Barkidien sekelin ja Falben kartan tekijäksi on merkitty se,
+   * minkä Commonsin Artist-kenttä antaa (BnF:n kolikkokuva ja Falbe).
+   */
+  karthago: [
+    {
+      id: 'kaupunki',
+      nimi: 'Karthago',
+      johdanto: 'Foinikialaisten kauppakaupunki, joka lähetti laivastoja '
+        + 'Atlantille ja norsuja Alppien yli, kunnes Rooma hävitti sen. '
+        + 'Isoisän aikaan rauniot olivat vasta alkaneet paljastaa '
+        + 'salaisuuksiaan kaivajille.',
+      nostot: [
+        {
+          otsikko: 'Hanno ja karvaiset saarelaiset',
+          teksti: 'Karthago lähetti 400-luvulla eaa. Hannon johtaman '
+            + 'laivaston Gibraltarin salmen läpi Atlantille. Hannon '
+            + 'omassa kertomuksessa laivoja on 60 ja ihmisiä 30 000, ja '
+            + 'tehtävä oli perustaa kaupunkeja Afrikan länsirannikolle. '
+            + 'Alkuteksti on kadonnut; jäljellä on noin sadan rivin '
+            + 'kreikkalainen lyhennelmä. Matkan lopussa miehistö kohtasi '
+            + 'saarella karvaisia ja villejä olentoja, joita tulkit '
+            + 'kutsuivat nimellä gorillai, ja kolmen vangitun nahat '
+            + 'vietiin Karthagon temppeliin. Vuonna 1847 nimi annettiin '
+            + 'gorillalle, vaikka lajin kuvaajat eivät väittäneet sitä '
+            + 'samaksi olennoksi. Kuinka kauas Hanno pääsi, on yhä '
+            + 'kiista: arviot ulottuvat Etelä-Marokosta Gaboniin.',
+          tiedosto: 'The Periplus of Hanno - Map to illustrate the Periplus of Hanno.png',
+          lyhyt: 'Hannon reitti Wilfred Schoffin kartassa 1913: Karthagosta Gibraltarin kautta Länsi-Afrikkaan.',
+          selite: 'Wilfred Schoffin vuoden 1913 käännökseen piirretty kartta '
+            + 'näyttää yhden tulkinnan Hannon reitistä: Karthagosta '
+            + 'Herkuleen pylväiden ohi ja Afrikan rannikkoa etelään '
+            + 'Länsi-Afrikkaan asti.',
+          lahde: 'Wilfred Harvey Schoff, Wikimedia Commons (PD)',
+          wiki: 'Hanno the Navigator',
+        },
+        {
+          otsikko: 'Norsut, jotka ylittivät Alpit',
+          teksti: 'Karthagon sotanorsut olivat pohjoisafrikkalaisia norsuja, '
+            + 'pienempiä kuin nykyiset savanninorsut: kolikoiden ja '
+            + 'maalausten perusteella niiden säkäkorkeus oli ehkä kaksi '
+            + 'ja puoli metriä. Kun Hannibal lähti 218 eaa. kohti '
+            + 'Italiaa, mukana oli 37 norsua. Rhônen yli ne hinattiin '
+            + 'lautoilla, joiden päälle oli levitetty maata, jotta '
+            + 'eläimet luulisivat yhä seisovansa rannalla. Alpeilla moni '
+            + 'kuoli, mutta eloonjääneet säikyttivät Trebian taistelussa '
+            + 'roomalaisten ratsuväen. Viimeisenä kerrotaan eläneen '
+            + 'Hannibalin oma norsu Surus, jonka nimi voi tarkoittaa '
+            + 'syyrialaista tai yksihampaista. Itse laji kuoli '
+            + 'sukupuuttoon Rooman aikana.',
+          tiedosto: 'Monnaie - Shekel, argent, Agrigente (?), Sicile - btv1b84835851 (2 of 2).jpg',
+          lyhyt: 'Barkidien hopeasekeli: kääntöpuolella suurikorvainen afrikkalainen norsu.',
+          selite: 'Hannibalin suvun, barkidien, nimissä lyöty hopeasekeli, '
+            + 'luultavasti Sisiliasta. Kääntöpuolen norsulla on suuret '
+            + 'korvat ja kaarevat syöksyhampaat kuten afrikkalaisilla '
+            + 'norsuilla.',
+          lahde: 'Bibliothèque nationale de France, Wikimedia Commons (PD)',
+          wiki: 'Sotanorsu',
+        },
+        {
+          otsikko: 'Karthago on tuhottava — vai säästettävä?',
+          teksti: 'Roomalainen Marcus Porcius Cato kävi Karthagossa 152 eaa. '
+            + 'ja säikähti kaupungin vaurautta. Siitä lähtien hän päätti '
+            + 'jokaisen senaatissa pitämänsä puheen vaatimukseen, että '
+            + 'Karthago on tuhottava, puhuipa hän mistä tahansa. Hänen '
+            + 'vastustajansa Scipio Nasica päätti omat puheensa '
+            + 'päinvastoin: Karthago on säästettävä. Sota alkoi 149 eaa., '
+            + 'ja keväällä 146 eaa. roomalaiset etenivät kaupungissa '
+            + 'kuusi päivää korttelin kerrallaan. Eloonjääneet 50 000 '
+            + 'myytiin orjiksi. Tarinaa suolalla kylvetystä maasta ei '
+            + 'löydy yhdestäkään antiikin lähteestä. Rooman ja Karthagon '
+            + 'pormestarit allekirjoittivat symbolisen rauhansopimuksen '
+            + 'vasta vuonna 1985.',
+          tiedosto: 'Quartier Punique.JPG',
+          lyhyt: 'Byrsan kukkulan puunilainen asuinkortteli säilyi roomalaisen forumin täytemaan alla.',
+          selite: 'Byrsan kukkulan puunilainen asuinkortteli oli asuttu, kun '
+            + 'roomalaiset tulivat. Se säilyi, koska myöhempi roomalainen '
+            + 'forum rakennettiin sen päälle; korkeat kivipilarit ovat '
+            + 'forumin perustuksia.',
+          lahde: 'BishkekRocks, Wikimedia Commons (PD)',
+          wiki: 'Carthago delenda est',
+        },
+        {
+          otsikko: 'Kirja, jonka Rooma käänsi',
+          teksti: 'Kun Rooma oli hävittänyt Karthagon, kaupungin kirjastot '
+            + 'lahjoitettiin Numidian kuninkaille. Yksi teos oli '
+            + 'poikkeus: Magon maanviljelysopas, 28 kirjaa puunilaiseksi '
+            + 'kirjoitettua tietoa, tuotiin Roomaan, ja senaatti maksoi '
+            + 'sen kääntämisen latinaksi. Opas kokosi puunilaisten ja '
+            + 'berberien viljelyperinnettä: oliivipuiden varttamista, '
+            + 'granaattiomenaa, mantelia, viikunaa ja taatelipalmua, '
+            + 'viinitarhoja, mehiläisiä ja karjaa. Alkuteksti ja '
+            + 'käännökset ovat kadonneet, mutta Varro, Columella ja '
+            + 'Plinius lainasivat sitä. Columellan mukaan Magon '
+            + 'ensimmäinen neuvo maatilan ostajalle oli myydä talonsa '
+            + 'kaupungista, jottei mieli vetäisi takaisin sinne.',
+          wiki: 'Mago (agricultural writer)',
+        },
+        {
+          otsikko: 'Kuningas, joka kuoli Karthagossa',
+          teksti: 'Ranskan kuningas Ludvig IX nousi maihin Tunisin rannikolle '
+            + 'ristiretkellä 1270 ja kuoli punatautiin pian saavuttuaan. '
+            + 'Perimätieto sijoittaa hänen leirinsä Byrsan kukkulalle, '
+            + 'vaikka sitä on myöhemmin epäilty. Elokuussa 1830 Tunisin '
+            + 'bei Husayn II luovutti Ranskan kuninkaalle maata '
+            + 'muistomerkkiä varten, ja kukkulan laelle rakennettiin '
+            + '1840–1841 pieni Pyhän Ludvigin kappeli. Kun isoisä kulki '
+            + 'Karthagossa 1873, kukkulalla seisoi tämä kappeli; museota '
+            + 'ja katedraalia ei vielä ollut. Kappelin yhteyteen '
+            + 'perustettiin 1875 museo kaivauslöydöille, ja viereen nousi '
+            + '1884–1890 suuri katedraali. Kappeli purettiin 1950; '
+            + 'katedraalissa pidetään nykyään konsertteja.',
+          tiedosto: 'Ancienne chapelle Saint Louis 1888.jpg',
+          lyhyt: 'Pyhän Ludvigin kappeli Byrsan kukkulalla 1800-luvun lopun postikortissa.',
+          selite: 'Pyhän Ludvigin kappeli Byrsan kukkulalla 1800-luvun lopun '
+            + 'postikortissa: kupolikattoinen muistokappeli, edessä '
+            + 'portaat ja pylväiden väliin pingotetut ketjut, oikealla '
+            + 'kaariholvattu rakennus.',
+          lahde: 'Tuntematon kuvaaja, Wikimedia Commons (PD)',
+          wiki: 'Acropolium of Carthage',
+        },
+        {
+          otsikko: 'Kartoittajat ja kaivajat ennen isoisää',
+          teksti: 'Kun isoisä saapui 1873, raunioita oli tutkittu jo puoli '
+            + 'vuosisataa. Tanskan konsuli Christian Tuxen Falbe mittasi '
+            + 'alueen 1830-luvun alussa ja teki ensimmäisen arkeologisen '
+            + 'kartoituksen. Brittiläinen Nathan Davis kaivoi British '
+            + 'Museumin laskuun 1856–1858, ja Lontooseen lähti '
+            + 'laatikoittain roomalaisia mosaiikkilattioita ja '
+            + 'puunilaisia kirjoituksia. Davisien luona vieraili 1858 '
+            + 'kirjailija Gustave Flaubert, jonka Karthagoon sijoittuva '
+            + 'romaani Salammbô lisäsi pian kiinnostusta raunioihin. '
+            + 'Charles Ernest Beulé kaivoi Byrsan kukkulaa 1860, ja 1866 '
+            + 'Tunisin pääministerin poika Muhammad Khaznadar johti '
+            + 'ensimmäiset paikalliset kaivaukset.',
+          tiedosto: 'Plan du terrain et des ruines de Carthage - levé et dessiné en 1831 par Falbe... - btv1b530984294.jpg',
+          lyhyt: 'Falben kartta Karthagon raunioista, mitattu 1831 ja julkaistu 1833.',
+          selite: 'Christian Tuxen Falben kartta Karthagon maastosta ja '
+            + 'raunioista, mitattu 1831: niemi Tunisin järven ja '
+            + 'suolajärven välissä, rannalla Sidi Bou Saïd ja etelässä La '
+            + 'Goulette.',
+          lahde: 'Christian Tuxen Falbe, Wikimedia Commons (PD)',
+          wiki: 'Christian Tuxen Falbe',
+        },
+        {
+          otsikko: 'Laiva, joka upposi kahdentuhannen kiven kanssa',
+          teksti: 'Vuosi isoisän käynnin jälkeen ranskalainen diplomaatti '
+            + 'Évariste Pricot de Sainte-Marie kaivoi vanhan forumin '
+            + 'läheltä esiin 2 170 puunilaista hautakiveä eli stelaa, '
+            + 'joita oli käytetty uudelleen roomalaisen muurin '
+            + 'rakennuskivinä. Ennen kuljetusta hän otti jokaisesta '
+            + 'paperijäljennöksen ja lähetti ne Ranskaan edeltä. Onneksi: '
+            + 'panssarilaiva Magenta, jolla kivet kuljetettiin, syttyi '
+            + 'palamaan Toulonin satamassa 31. lokakuuta 1875, räjähti ja '
+            + 'upposi. Noin 1 500 stelaa nostettiin pian pohjasta. Hylky '
+            + 'löydettiin uudelleen 1994, ja sukeltajat nostivat 843 '
+            + 'sukelluksella vielä 115 stelaa ja palaa. Arviolta '
+            + 'neljäsataa on yhä hylyssä.',
+          tiedosto: 'L\'illustration de 1875- naufrage du Magenta à Toulon.jpg',
+          lyhyt: 'L’Illustration 27.11.1875: sukeltaja tutkii Magentan hylkyä lyhdyn valossa.',
+          selite: 'L’Illustration-lehden kansi 27. marraskuuta 1875: '
+            + 'raskaaseen sukelluspukuun pukeutunut sukeltaja tutkii '
+            + 'Magentan hylyn sisätiloja lyhdyn valossa. Lehden piirtäjä '
+            + 'teki luonnoksensa itse sukelluspuvussa.',
+          lahde: 'L’Illustration, Wikimedia Commons (PD)',
+          wiki: 'Pricot de Sainte-Marie steles',
+        },
+      ],
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Taide ja taito',
+      johdanto: 'Karthagon taide kertoo kaupungista, jossa Egypti, Kreikka ja '
+        + 'Foinikia kohtasivat: kotiloista keitetty väri, tuhansiin '
+        + 'kiviin hakattu jumalattaren merkki, siivekäs papitar ja '
+        + 'kivestä ja lasista ladottu rouva.',
+      tehtava: {
+        kysymys: 'Mitä tanskalainen tutkija F. O. Hvidberg-Hansen näki Tanitin '
+          + 'merkissä?',
+        vaihtoehdot: [
+          'Naisen, joka nostaa kätensä',
+          'Purjelaivan edestä katsottuna',
+          'Palmupuun ja kuunsirpin',
+          'Norsun, jolla on torni selässään',
+        ],
+        oikea: 0,
+        fakta: 'Tulkinnassa puolisuunnikas on vartalo, vaakaviiva kädet ja '
+          + 'ympyrä pää. Myöhemmin puolisuunnikas vaihtui usein '
+          + 'tasakylkiseen kolmioon.',
+      },
+      nostot: [
+        {
+          otsikko: 'Väri, joka keitettiin kotiloista',
+          teksti: 'Foinikialaisten kallein kauppatavara oli purppura, joka '
+            + 'saatiin merikotiloiden rauhasen limasta. Värjäys vaati '
+            + 'valtavan määrän eläimiä: erään laskelman mukaan 12 000 '
+            + 'kotilosta saatiin 1,4 grammaa puhdasta väriä, vain yhden '
+            + 'vaatteen reunukseen. Karthagossa kankaita värjättiin jo '
+            + '700-luvulla eaa., ja roomalaisen Pliniuksen mukaan Afrikan '
+            + 'paras purppura tuli Djerban saarelta, heti Tyroksen '
+            + 'jälkeen. 300-luvulla jKr. vain Rooman keisari sai enää '
+            + 'pukeutua siihen. Kreikan sana phoinix tarkoitti sekä '
+            + 'foinikialaista, purppuraa että taatelipalmua — ja latinan '
+            + 'punicus on antanut suomeen sanan puunilainen.',
+          tiedosto: 'Purple Purpur.jpg',
+          lyhyt: 'Kolme purppurakotiloa ja niillä värjätyt kankaat Wienin luonnontieteellisessä museossa.',
+          selite: 'Kolme purppurakotilolajia ja niillä värjätyt kankaat '
+            + 'Wienin luonnontieteellisessä museossa: ylimmästä saatiin '
+            + 'punavioletti, keskimmäisestä sinivioletti ja alimmasta '
+            + 'tummanpunainen.',
+          lahde: 'U.Name.Me, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Tyrian purple',
+        },
+        {
+          otsikko: 'Tanitin merkki',
+          teksti: 'Karthagon tunnetuin kuvamerkki on Tanitin merkki: '
+            + 'puolisuunnikas, sen päällä vaakaviiva ja ylimpänä ympyrä. '
+            + 'Tanskalainen tutkija F. O. Hvidberg-Hansen tulkitsee sen '
+            + 'naiseksi, joka nostaa kätensä. Tanit oli jumalatar, joka '
+            + 'Karthagossa nousi muistomerkeissä usein jopa Baal Hammonin '
+            + 'edelle. Merkkiä hakattiin tuhansiin kivisteloihin '
+            + 'tophetissa, Salammbôn pyhäkössä, jonne haudattiin uurnissa '
+            + 'tuhkattuja pikkulapsia ja karitsoja. Onko osa lapsista '
+            + 'uhrattu, siitä tutkijat kiistelevät yhä. Kirjoituksissa '
+            + 'lahjoittaja kiittää jumalia saamastaan avusta — itse lasta '
+            + 'ei mainita koskaan.',
+          tiedosto: 'Stele with palm and Tanit sign-MBA Lyon 1969-86-IMG 0548.jpg',
+          lyhyt: 'Tophetin stela Lyonin taidemuseossa: puunilainen kirjoitus, palmu ja Tanitin merkki.',
+          selite: 'Karthagon tophetista peräisin oleva kalkkikivistela Lyonin '
+            + 'taidemuseossa: yläosassa puunilainen kirjoitus, alla palmu '
+            + 'ja vasemmassa alakulmassa Tanitin merkki.',
+          lahde: 'Rama, Wikimedia Commons (CC BY-SA 2.0 FR)',
+          wiki: 'Tanit',
+        },
+        {
+          otsikko: 'Siivekäs papitar',
+          teksti: 'Marraskuussa 1902 isä Alfred Louis Delattre avasi '
+            + 'Karthagon Sainte-Monique-kukkulalla hautakammion, jossa '
+            + 'oli kaksi marmorista sarkofagia: papin ja naisen, jota '
+            + 'kutsutaan siivekkääksi papittareksi. Hautarosvot olivat '
+            + 'rikkoneet kannet jo antiikin aikana, mutta kasvot '
+            + 'säästyivät. Kannen hahmolla on egyptiläinen kampaus, ja '
+            + 'linnun siivet kiertyvät hänen jalkojensa ympäri niin, että '
+            + 'alaruumis muistuttaa kalan pyrstöä. Toisessa kädessä on '
+            + 'ylösalaisin riippuva kyyhky, toisessa hajusteastia tai '
+            + 'rasia. Kirkkaat värit haalistuivat pian ilman '
+            + 'kosketuksessa. Tutkija Hédi Dridi on kutsunut teosta '
+            + 'puunilaisen sekoitustyylin manifestiksi.',
+          tiedosto: 'Carthago exhibition - Sarcophagus Lid of the Winged Priestess (49340885397).jpg',
+          lyhyt: 'Siivekkään papittaren sarkofagin kansi 300–200-luvulta eaa. näyttelyssä 2019.',
+          selite: 'Siivekkään papittaren marmorisarkofagin kansi '
+            + '300–200-luvulta eaa. näyttelyssä 2019: siivet kiertyvät '
+            + 'vartalon ympäri, ja siipien pinnassa näkyy yhä jälkiä '
+            + 'maalista.',
+          lahde: 'Jamie Heath, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Necropolis of the Rabs',
+        },
+        {
+          otsikko: 'Karthagon rouva',
+          teksti: 'Karthagon rouvaksi kutsuttu mosaiikki on luultavasti '
+            + '500-luvulta, ajalta, jolloin Karthago oli Bysantin '
+            + 'valtakunnan Pohjois-Afrikan pääkaupunki. Nainen katsoo '
+            + 'suoraan katsojaan, päänsä ympärillä sädekehä ja kädessään '
+            + 'sauva, ja perinteisesti hänen on ajateltu olevan '
+            + 'bysanttilainen keisarinna. Taiteilija vuorotteli '
+            + 'kivipaloja ja lasipaloja, ja piirroksen hienous tekee '
+            + 'teoksesta myöhäisantiikin mosaiikkitaiteen merkkiteoksen. '
+            + 'Karthagon ja muun Tunisian roomalaisia lattiamosaiikkeja '
+            + 'on koottu etenkin Tunisin Bardon museoon, jolla on yksi '
+            + 'maailman suurimmista roomalaisten mosaiikkien kokoelmista.',
+          tiedosto: 'Dame Carthage(MNC).jpg',
+          lyhyt: 'Karthagon rouva, luultavasti 500-luvun mosaiikki: sädekehä, sauva ja nostettu käsi.',
+          selite: 'Karthagon rouva, luultavasti 500-luvun mosaiikki: '
+            + 'sädekehäpäinen nainen pitää sauvaa ja nostaa oikean '
+            + 'kätensä, ja kehystä kiertävät jalokiviä muistuttavat '
+            + 'kuviot.',
+          lahde: 'Pradigue, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Carthage National Museum',
+        },
+      ],
+    },
+  ],
 };

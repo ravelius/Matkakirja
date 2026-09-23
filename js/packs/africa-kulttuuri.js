@@ -476,39 +476,11 @@ export const AFRICA_KULTTUURI = {
   },
 
   // --- Loput kaupungit (omistajan pyyntö: koko lauta valmiiksi) --------
+  // Karthagon litteät nostot siirtyivät kaupunkilehteen
+  // (kulttuuri-kategoriat.js, karthago) 23.9.2026: mosaiikki, purppura ja
+  // sotanorsut kirjoitettiin siellä uudelleen lähteestä tarkistettuina.
+  // Visan lähdejuttu on lehden "Väri, joka keitettiin kotiloista".
   karthago: {
-    nostot: [
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Karthagon mosaiikit',
-        tiedosto: 'Lady of Carthage Mosaic (Bardo).jpg',
-        teksti: 'Karthagon huviloiden lattiat päällystettiin mosaiikeilla: '
-          + 'tuhansista kivenpaloista ladottiin metsästyskohtauksia, '
-          + 'jumalia ja arkea. Parhaat niistä ovat nykyään Bardon museossa '
-          + 'Tunisissa — yksi maailman hienoimmista mosaiikkikokoelmista.',
-        selite: 'Karthagon rouva -mosaiikki 500-luvulta: kasvot on ladottu '
-          + 'niin pienistä paloista, että ilme elää kuin maalauksessa. '
-          + 'Teosta pidetään yhtenä myöhäisantiikin taidokkaimmista '
-          + 'muotokuvista.',
-        lahde: 'G41rn8, Wikimedia Commons (CC BY-SA 4.0)',
-      },
-      {
-        tyyppi: 'teksti',
-        otsikko: 'Purppuraväri',
-        teksti: 'Foinikialaisten kallein kauppatavara oli purppura, jota '
-          + 'keitettiin merikotiloista. Yhden viitan värjäykseen tarvittiin '
-          + 'tuhansia kotiloita — siksi purppura oli kuninkaiden väri, ja '
-          + 'siksi foinikialaisia kutsuttiin purppuranpunaisen kansaksi.',
-      },
-      {
-        tyyppi: 'teksti',
-        otsikko: 'Sotanorsut',
-        teksti: 'Karthago koulutti pohjoisafrikkalaisia norsuja sotaan, ja '
-          + 'Hannibal vei ne kuuluisasti Alppien yli Roomaa vastaan. '
-          + 'Norsuilla oli omat nimensä ja hoitajansa, ja parhaat niistä '
-          + 'tunnettiin koko valtakunnassa.',
-      },
-    ],
     kysymys: {
       q: 'Mistä Karthagon kuuluisa purppuraväri saatiin?',
       options: ['Merikotiloista', 'Hiekasta', 'Norsunluusta', 'Taatelinkivistä'],
