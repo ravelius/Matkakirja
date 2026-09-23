@@ -75,6 +75,7 @@ JSON-tiedostot. 3D:n `komento.txt` (esim. `kuva nimi`) toimii rinnalla.
 | `matka kaupunki tapa` | valinta ilman dialogia |
 | `heita` | "Heitä noppaa" (kesken reitin) |
 | `sulje-lehti` | sulkee lehden kuin pelaaja |
+| `maalehti ISO3 [aihe]` | maan lehti aiheen sivulta (kartuscha; web PR #2955) |
 | `liiku kaupunki` | kortin "Liiku tänne": kortti kiinni, matkavalinta auki (tila Dialogi) |
 | `kortti kaupunki` / `lue-lehti kaupunki` | kaupunkikortti (Natiivi-UI:n tehdas) / lehti ilman matkaa |
 | `tutki [vaikea]` | "Tutki kaupunkia" -nappi: kysymys auki (tila Kysymys) |
