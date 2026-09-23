@@ -218,5 +218,19 @@ namespace Matkakirja.Peli.Testit
             d = new KysymysNaytto();
             Oleta.Tosi(!KysymysApu.LisaaKohtaaminen(d, kuva, ko, false) && d.Tervehdys == null, "vain visa");
         }
+        [Testi] static void KohtaamiskuvatKuinWebissa()
+        {
+            // Odotettu = verkkopelin KOHTAAMISKUVAT_KOHTEELLE / _TAVALLISELLE -avaimet (node, 23.9.2026).
+            const string kaari = "alpit,amsterdam,ateena,barcelona,budapest,bukarest,dublin,granada,helsinki,islanti,istanbul,kobenhavn,krakova,lissabon,madrid,moskova,nikosia,odessa,oslo,pariisi,pietari,praha,riika,rooma,sarajevo,sofia,varsova,venetsia,vilna,wien";
+            const string tavallinen = "ateena,barcelona,bergen,bryssel,bukarest,dublin,edinburgh,firenze,granada,helsinki,istanbul,kiova,kobenhavn,kosice,krakova,ljubljana,luxemburg,marseille,moskova,oslo,pietari,praha,riika,rooma,sarajevo,sevilla,tallinna,tampere,tromssa,valletta,varsova,vilna";
+            var ko = new Kohtaamiset();
+            foreach (var k in KultaisetApu.Verkko.Kaupungit.Keys) ko.Kaupungit[k] = new Kohtaaminen();
+            ko.LueKohtaamiskuvat(System.IO.File.ReadAllText(System.IO.Path.Combine(KultaisetApu.Paketti, "kohtaamiskuvat.json")));
+            string Avaimet(System.Func<Kohtaaminen, Kohtaamiskuva> f) => string.Join(",",
+                ko.Kaupungit.Where(kv => f(kv.Value) != null).Select(kv => Kohtaamiset.KuvaAvain(kv.Key)).OrderBy(x => x, System.StringComparer.Ordinal));
+            Oleta.Sama(kaari, Avaimet(x => x.KaariKuva), "tarinakaaren kuvat");
+            Oleta.Sama(tavallinen, Avaimet(x => x.TavallinenKuva), "tavallisen kohtaamisen kuvat");
+            Oleta.Tosi(ko.Kaupunki("pariisi").KaariKuva.Url.StartsWith("https://media.matkakirja.app/kohtaamiset/"), "url");
+        }
     }
 }

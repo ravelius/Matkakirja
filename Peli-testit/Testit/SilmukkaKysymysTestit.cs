@@ -41,6 +41,18 @@ namespace Matkakirja.Peli.Testit
             ko.LueKohtaamiset(System.IO.File.ReadAllText(System.IO.Path.Combine(KultaisetApu.Paketti, "kohtaamiset.json")));
             Oleta.Tosi(!KysymysApu.LisaaKohtaaminen(d, q, ko, false), "kaaren tervehdys ei kuluta kaupungin tervehdystä");
             Oleta.Tosi(d.Tervehdys != null && d.Tervehdys.Contains("Leila"), d.Tervehdys);
+            ko.LueKohtaamiskuvat(System.IO.File.ReadAllText(System.IO.Path.Combine(KultaisetApu.Paketti, "kohtaamiskuvat.json")));
+            d = KysymysApu.Nakyma(k, q);
+            KysymysApu.LisaaKohtaaminen(d, q, ko, false);
+            KysymysApu.LisaaVaiheet(d, k, q, false);
+            Oleta.Tosi(d.TervehdysVaihe && d.AloitaTeksti == "Aloita peli" && d.Varoitus == null, "tervehdyssivu, ensimmäinen yritys");
+            Oleta.Sama(1, d.Yritys.Value, "yritys 1/2");
+            Oleta.Sama(2, d.Yrityksia.Value);
+            if (ko.Kaupunki("lontoo").KaariKuva != null) Oleta.Sama(ko.Kaupunki("lontoo").KaariKuva.Url, d.MuotokuvaUrl);
+            var d2 = KysymysApu.Nakyma(k, q);
+            KysymysApu.LisaaKohtaaminen(d2, q, ko, false);
+            KysymysApu.LisaaVaiheet(d2, k, q, true);
+            Oleta.Tosi(!d2.TervehdysVaihe, "Aloita painettu");
 
             Oleta.Tosi(k.Vastaa(q.Oikea).Ok, "vastaa");
             Oleta.Sama("pieniAarre", loyto?.WebTulos, "laatta");
@@ -51,6 +63,8 @@ namespace Matkakirja.Peli.Testit
             Oleta.Tosi(d.Tervehdys == null, "ei tervehdystä vastauksen jälkeen");
             Oleta.Tosi(d.RepliikkiLoyto && d.Repliikki.StartsWith(ko.Kaupunki("lontoo").KaariAarre), "kaaren aarre + löytörepliikki");
             Oleta.Tosi(d.Repliikki.EndsWith(ko.Kaupunki("lontoo").Loyto), d.Repliikki);
+            Oleta.Sama("pieniAarre", d.LoytoTyyppi);
+            Oleta.Tosi(!d.VuoroVaihtuu, "oikein: vuoro ei vaihdu -riviä");
 
             Oleta.Tosi(k.Sulje().Ok, "sulje");
             Oleta.Sama(Vaihe.Toiminta, m.Tila.Vaihe);

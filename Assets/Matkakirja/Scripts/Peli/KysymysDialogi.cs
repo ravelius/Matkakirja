@@ -209,9 +209,29 @@ namespace Matkakirja.Natiivi
 
             float leveys = Leveys - 2 * Reuna;
             float y = Reuna + 4;
-            y = Lisaa(d.Otsikko, 14, FontStyles.SmallCaps, y, leveys);
+            string otsikko = d.Yritys.HasValue ? $"{d.Otsikko} · yritys {d.Yritys}/{d.Yrityksia}" : d.Otsikko;
+            y = Lisaa(otsikko, 14, FontStyles.SmallCaps, y, leveys);
+            if (d.TervehdysVaihe)
+            {
+                // Tervehdyssivu: hahmo ja Aloita peli; kysymys ja aika vasta napista.
+                if (!string.IsNullOrEmpty(d.MuotokuvaUrl))
+                {
+                    var mk = new GameObject("Muotokuva", typeof(RectTransform), typeof(RawImage));
+                    mk.transform.SetParent(sisalto, false);
+                    kuva = mk.GetComponent<RawImage>();
+                    kuva.color = new Color(1, 1, 1, 0);
+                    Ylhaalta((RectTransform)mk.transform, y, 200, leveys);
+                    y += 200 + Vali;
+                    y = Lisaa(d.MuotokuvaLyhyt, 11, FontStyles.Italic, y - Vali + 2, leveys);
+                    LataaKuva(d.MuotokuvaUrl);
+                }
+                y = Lisaa(d.Tervehdys, 16, FontStyles.Normal, y, leveys, null, TextAlignmentOptions.Left);
+                y = Lisaa(d.Varoitus, 15, FontStyles.Bold, y, leveys, vaaraVari * 0.6f + muste * 0.4f);
+                y += Nappi(d.AloitaTeksti ?? "Aloita peli", y + 4, leveys * 0.7f, 0, nappi, true, () => t?.Aloita?.Invoke()) + Vali + 4;
+                Viimeistele(d, y, false);
+                return;
+            }
             y = Lisaa(d.Kehys, 15, FontStyles.Italic, y, leveys);
-            if (!d.Vastattu) y = Lisaa(d.Tervehdys, 15, FontStyles.Normal, y, leveys, null, TextAlignmentOptions.Left);
             y = Lisaa(d.Paikka, 17, FontStyles.Bold, y, leveys);
             y = Lisaa(d.Kysymys, 20, FontStyles.Normal, y, leveys);
 
@@ -273,23 +293,29 @@ namespace Matkakirja.Natiivi
                     string tulos = d.AikaLoppui ? "Aika loppui." : d.Oikein ? "Oikein!" : "Väärin.";
                     y = Lisaa(tulos, 20, FontStyles.Bold, y + 4, leveys);
                 }
+                if (d.TulosVaihe < 2) { Viimeistele(d, y + Reuna, true); return; }
                 y = Lisaa(d.Repliikki, 15, FontStyles.Italic, y, leveys, null, TextAlignmentOptions.Left);
                 y = Lisaa(d.Loyto, 17, FontStyles.Normal, y, leveys);
                 y = Lisaa(d.Fakta, 15, FontStyles.Normal, y, leveys, null, TextAlignmentOptions.Left);
                 if (d.Lahteet != null && d.Lahteet.Count > 0)
                     y = Lisaa("Lähde: " + string.Join(", ", d.Lahteet), 11, FontStyles.Italic, y, leveys, null, TextAlignmentOptions.Left);
+                if (d.VuoroVaihtuu) y = Lisaa(KysymysApu.VuoroVaihtuuRivi, 12, FontStyles.Italic, y, leveys);
                 y += Nappi(d.JatkaTeksti ?? "Jatka", y + 4, leveys * 0.7f, 0, nappi, true, () => t?.Jatka?.Invoke()) + Vali + 4;
             }
             y = Lisaa(d.Viesti, 14, FontStyles.Italic, y, leveys, vaaraVari * 0.6f + muste * 0.4f);
             y += Reuna - Vali;
+            Viimeistele(d, y, true);
+        }
 
+        void Viimeistele(KysymysNaytto d, float y, bool aika)
+        {
             sisalto.sizeDelta = new Vector2(Leveys, y);
             if (!Auki) sisalto.anchoredPosition = Vector2.zero;
             // Paneeli enintään turva-alueen korkeus − marginaali; loput vierii.
             float maksimi = Mathf.Max(200, turva.rect.height - 40);
             paneeli.sizeDelta = new Vector2(Leveys, Mathf.Min(y + 6, maksimi));
 
-            sekunnit = d.Vastattu ? null : d.Sekunnit;
+            sekunnit = d.Vastattu || !aika || d.TervehdysVaihe ? null : d.Sekunnit;
             aikaPalkki.gameObject.SetActive(sekunnit.HasValue);
             aikaTeksti.gameObject.SetActive(sekunnit.HasValue);
 
