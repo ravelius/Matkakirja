@@ -276,7 +276,10 @@ function ratkaiseCuetSanoista(tyo, sanat, kesto) {
   return alkurivit.map((cue, i) => {
     const seuraava = alkurivit[i + 1]?.alku ?? kesto;
     const loppu = Math.min(cue.alku + MAX_CUE_MS, seuraava, kesto);
-    if (loppu < cue.ankkuriLoppu || loppu <= cue.alku) throw new Error(`${cue.id}: cueväli ei kata ankkuria`);
+    if (loppu < cue.ankkuriLoppu || loppu <= cue.alku) {
+      throw new Error(`${cue.id}: cueväli ei kata ankkuria (alku ${cue.alku} ms, ankkuriLoppu `
+        + `${cue.ankkuriLoppu} ms, seuraavan cuen alku ${seuraava} ms, kesto ${kesto} ms)`);
+    }
     const { ankkuriLoppu, ...rivi } = cue;
     return { ...rivi, loppu };
   });
