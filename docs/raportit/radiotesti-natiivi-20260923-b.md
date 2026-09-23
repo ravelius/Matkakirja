@@ -44,3 +44,31 @@ sijaan Xcode/debugger-kautta) ennen kuin väitetään bugiksi.
 
 `Documents/sisalto-koe/` poistettu testin jälkeen. Sovellus jäi käyntiin
 simulaattorissa (proto-master `43f2820`, ei uudelleenkäännöstä tehty).
+
+## Lisäys 23.9.2026 klo ~22.55: relaunch-teoria KUMOTTU, oikea syy TLS
+
+Natiiviseppä käänsi ja asensi masterin `e510cfd` (sis. Linssisepän
+diagnoosicommitin 9b49703). Uusinta: sama koepaketti, kolme sallittua
+asemaa (AUS/Melbourne, AUT/Wien, NLD/Amsterdam) soivat **oikein**
+("Soi"-tila) sekä ilman relaunchia että sen jälkeen — relaunch ei siis
+ollut syy, alkuperäinen epäilyni oli väärä.
+
+`CHE/Alpit (Radio RaBe, stream.rabe.ch)` epäonnistuu kuitenkin
+JOHDONMUKAISESTI (2/2 yritystä, ilman relaunchia) uudella diagnoosilla:
+
+```
+radio: Asema ei vastaa | soitin: soitin 1, kohde 2, aika 1
+(AVPlayerWaitingWhileEvaluatingBufferingRateReason), kohta 0.00 s,
+puskuri tyhjä, loppuTila 0, soitinvirhe -,
+kohdevirhe Suojattu yhteys epäonnistui TLS-virheen johdosta.,
+virheloki - 0 -, istunto AVAudioSessionCategoryPlayback reitti Speaker
+```
+
+Eli **TLS-kättely epäonnistuu nimenomaan stream.rabe.ch:hen** AVPlayerilla
+simulaattorissa (Mac oma curl pääsee sisään normaalisti, joten kyse ei
+ole verkon saavutettavuudesta vaan TLS/varmenneyhteensopivuudesta
+AVPlayerin/simulaattorin ja tämän yhden palvelimen välillä). Muut
+asemat toimivat, joten kyse ei ole yleisestä simulaattoribugista eikä
+lisenssilogiikasta — pelkkä tämä yksi palvelin. En selvittänyt
+tarkemmin (TLS-versio/salausalgoritmi/varmenneketju), koska se vaatisi
+palvelimen omaa TLS-diagnostiikkaa, joka on Linssisepän/omistajan aluetta.
