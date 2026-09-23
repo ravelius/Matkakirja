@@ -2391,3 +2391,7 @@ Uusi sessio: CI-paketin tarkistus nipun 3 jälkeen, natiivisessioiden pyynnöt.
 ## LAITETESTAAJA NOLLATAAN klo 19.2x (70 %): LUOVUTUS viesti-laitetestaaja-luovutus-20260923-ilta.md (HAARA laitetestaaja), ALOITUS viesti-laitetestaaja-aloitus.md; 4 PR:AA MERGETTY; KESKEN KONTAKTI-WEB-AGENTTI LINSSISEPALLE JA PELISILMUKAN 6/6-AJO (liiku MERGETTY) (23.9.2026 klo 19.27)
 
 Uusi sessio: silmukka 6/6, kontaktiarkit, natiivin savukkeet.
+
+## NATIIVISEPPA ERA 4: Build/testflight-2 (MASTER 6cdde82, 1.0.0 (2)) VIETY; LAATTAPALVELIN 127.0.0.1 OFFLINE→VALIMUISTI→VERKKO, OFFLINE MAITTAIN TOIMII, AIHEVALOT 2672, KORKEUS PAKETISTA. FABLEN PAATOS: BUILD (1) HYLATAAN, JULKAISIJA LATAA SUORAAN (2):N; offline.json → MAASTO 23b SEURAAVAAN PAKETTIIN (23.9.2026 klo 19.33)
+
+Build (1) ei ehtinyt TestFlightiin avainnippuvian takia.
