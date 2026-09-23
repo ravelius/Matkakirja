@@ -1,7 +1,7 @@
 // KYSYMYSNÄKYMÄ (Natiivi-UI, erä 3): Pelikoodarin IKysymysNakyma UI Toolkitilla.
 //
 // Verkkopelin tehtäväkortti #quiz-dialog (index.html, js/visa.js renderQuiz ja
-// renderDuel, js/ui.js syncOptions ja sourceLine) pergamenttikorttina tumman
+// js/ui.js syncOptions ja sourceLine) pergamenttikorttina tumman
 // himmennyksen päällä (pelidialogien kerros 30):
 //
 //   [PULMA] Pariisi · aarrekysymys                 ⧗ 38     ← .quiz-head + tiimalasi
@@ -9,7 +9,7 @@
 //   [ pulman luonnos | valokuva | lippu ]                   ← .quiz-sketch / .quiz-photo
 //   Kahvilan tarjoilija kysyy:                              ← kehys (kursiivi)
 //   Kysymys kirjoituskoneella                               ← .quiz-question
-//   ✎ ostettu vihje / rosvon huomautus                      ← .quiz-hint-text
+//   ✎ ostettu vihje / huomautus                              ← .quiz-hint-text
 //   (A) vaihtoehto  (B) …  yksi sarake kuten puhelimessa    ← .quiz-option
 //   [ Oikein! · löytö · fakta · LÄHDE: … ]                  ← .quiz-result
 //   ─────────────────────────────────────────────
@@ -293,7 +293,8 @@ namespace Matkakirja.Natiivi
             kysymys.enableRichText = false;
             Kirjasimet.Aseta(kysymys, Kirjasin.Kone);
 
-            // Ostettu vihje; kaksintaistelussa rosvon huomautus samalla lapulla (web quiz-hint-text).
+            // Ostettu vihje ja ohjaimen huomautus samalla lapulla (web quiz-hint-text).
+            // Rosvon kaksintaistelu on poistettu pelistä (kaanon 25.8.2026).
             if (!d.Vastattu)
             {
                 if (!string.IsNullOrEmpty(d.Vihje)) Lappu(s, d.Vihje);
@@ -430,7 +431,7 @@ namespace Matkakirja.Natiivi
             bool liuku = !vaihtoehdotEsilla && !d.Vastattu;
             vaihtoehdotEsilla = true;
             var lista = Rakenne.El("mk-kysymys__vaihtoehdot", s, PickingMode.Ignore);
-            if (n > 4) lista.AddToClassList("mk-kysymys__vaihtoehdot--tiivis"); // kaksintaistelun 8 vaihtoehtoa
+            if (n > 4) lista.AddToClassList("mk-kysymys__vaihtoehdot--tiivis");
             for (int i = 0; i < n; i++)
             {
                 int indeksi = i;
@@ -500,8 +501,7 @@ namespace Matkakirja.Natiivi
                 laatikko.Add(new LaattaIkoni(d.LoytoTyyppi, d.LoytoKuvaUrl));
             var runko = Rakenne.El("mk-kysymys__tulosrunko", laatikko, PickingMode.Ignore);
 
-            // Kaksintaistelun Loyto kertoo jo oikean vastauksen ("Rosvo vei rahat — oikea vastaus oli …").
-            bool oikeaErikseen = !d.Oikein && d.Laji != KysymysLaji.Kaksintaistelu
+            bool oikeaErikseen = !d.Oikein
                 && d.Oikea >= 0 && d.Vaihtoehdot != null && d.Oikea < d.Vaihtoehdot.Count;
             var rivit = Rivit(d.Loyto);
             if (oikeaErikseen) Vahva(runko, (d.AikaLoppui ? "Aika loppui. " : "") + $"Oikea vastaus oli \"{d.Vaihtoehdot[d.Oikea]}\".");
@@ -641,15 +641,14 @@ namespace Matkakirja.Natiivi
                 else if (!string.IsNullOrEmpty(d.Vihje))
                     Rakenne.Nappi("Vihje ostettu", "mk-kysymys__apu mk-kysymys__vihjenappi", null, napit).SetEnabled(false);
 
-                // 50:50 tai kaksintaistelun helpotus (kallo); käytetty → harmaa.
+                // 50:50; käytetty → harmaa.
                 if (d.PuolitusTarjolla)
                 {
                     string teksti = d.PuolitusTeksti ?? $"50:50 ({d.PuolitusHinta} {d.Valuutta})";
-                    bool kallo = d.Laji == KysymysLaji.Kaksintaistelu && !teksti.Contains("käytetty");
-                    var p = Rakenne.Nappi(teksti, "mk-kysymys__apu", () => Teko(toiminnot?.Puolita), napit, kallo ? Ikonit.Viiva["kallo"] : null);
+                    var p = Rakenne.Nappi(teksti, "mk-kysymys__apu", () => Teko(toiminnot?.Puolita), napit);
                     p.SetEnabled(!d.PuolitusHarmaa && d.Raha >= d.PuolitusHinta);
                 }
-                else if (d.Laji != KysymysLaji.Kaksintaistelu && d.Piilotetut != null && d.Piilotetut.Count > 0)
+                else if (d.Piilotetut != null && d.Piilotetut.Count > 0)
                     Rakenne.Nappi("50:50 käytetty", "mk-kysymys__apu", null, napit).SetEnabled(false);
             }
             if (d.Vastattu && tulosVaihe >= 2)
