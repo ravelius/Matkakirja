@@ -7,7 +7,8 @@
 //   ui linssi peite [pois]                odotuspeite päälle / pois
 //   ui linssi selite [pois]               selitekortti esimerkkiriveillä
 //   ui linssi astro [musta|otsikko|paljastus|pois]  avaus; ilman vaihetta koko sarja oikeassa ajassa
-//   ui linssi kuva [tunnus]               astronautin kuvanäkymä: aineiston kohde (oletus ensimmäinen)
+//   ui linssi kuva [tunnus] [pulu]        astronautin kuvanäkymä: aineiston kohde (oletus ensimmäinen);
+//                                         pulu = minipulun kysymyskortti auki
 //                                         tai Commonsin esimerkkikuvat, jos aineisto ei lataudu
 //   ui linssi sumu p                      avaruussumun peitto 0…1 (0 = pois)
 //   ui linssi vertailu [arkki|taynna]     alapalkki esimerkkimailla / vertailuarkki / täyden listan ilmoitus
@@ -60,7 +61,7 @@ namespace Matkakirja.Natiivi
                         default: l.Astronautti.TestaaAvaus(); return null;
                     }
                 case "kuva":
-                    UiKerros.Hae().StartCoroutine(AvaaKuva(l, a1));
+                    UiKerros.Hae().StartCoroutine(AvaaKuva(l, a1 == "pulu" ? "" : a1, a1 == "pulu" || a2 == "pulu"));
                     return "ladataan aineistoa…";
                 case "sumu":
                     l.Astronautti.Sumu.Aseta(float.TryParse(a1, NumberStyles.Float, CultureInfo.InvariantCulture, out var p) ? p : 0.62f);
@@ -95,16 +96,17 @@ namespace Matkakirja.Natiivi
             }
         }
 
-        static System.Collections.IEnumerator AvaaKuva(LinssiUi l, string tunnus)
+        static System.Collections.IEnumerator AvaaKuva(LinssiUi l, string tunnus, bool pulu)
         {
-            string data = null;
+            string data = null, kysymykset = null;
             yield return LinssiSisalto.Hae("moduulit/js/linssit/satelliitti-data.json", t => data = t);
+            yield return LinssiSisalto.Hae("moduulit/js/linssit/astronaut-kysymykset.json", t => kysymykset = t);
             Havaintokohde kohde = null;
             if (data != null)
             {
                 try
                 {
-                    var a = AstronauttiAineisto.Lue(MiniJson.Jasenna(data));
+                    var a = AstronauttiAineisto.Lue(MiniJson.Jasenna(data), kysymykset == null ? null : MiniJson.Jasenna(kysymykset));
                     if (AstronauttiLinssi.AstronauttiTiedot.Lahde == null) AstronauttiLinssi.AstronauttiTiedot.Lahde = a.Lahde;
                     kohde = string.IsNullOrEmpty(tunnus) ? (a.Kohteet.Count > 0 ? a.Kohteet[0] : null) : a.Kohteet.Find(x => x.Tunnus == tunnus);
                 }
@@ -112,6 +114,7 @@ namespace Matkakirja.Natiivi
             }
             kohde ??= Kuvanakyma.Esimerkki();
             l.Astronautti.Kuva.Avaa(kohde, kohde.OletusIndeksi);
+            if (pulu) l.Astronautti.Kuva.AvaaPulukortti();
         }
 
         static IReadOnlyList<SeliteRivi> Esimerkkiselite() => new[]

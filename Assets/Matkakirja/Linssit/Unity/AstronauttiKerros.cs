@@ -51,6 +51,7 @@ namespace Matkakirja.Natiivi
         readonly List<Piste> pisteet = new List<Piste>();
         Tahtitaivas taivas;
         Pilvikuori pilvet;
+        Avaruus avaruus;
         Transform iss;
         GameObject rata;
         Mesh rataMesh;
@@ -104,6 +105,8 @@ namespace Matkakirja.Natiivi
         {
             taivas ??= Tahtitaivas.Luo(georeferenssi, Matkakirja.Linssit.Tahdet.AstronautinKerroin, LinssiOhjain.Instanssi?.VahennettyLiike ?? false);
             pilvet ??= Pilvikuori.Luo(georeferenssi, pilvienOsoite);
+            // Tumma avaruus ja ilmakehän hehku (web AVARUUDEN_TAUSTA, ILMAKEHAN_VARI).
+            avaruus ??= Avaruus.Luo(georeferenssi, georeferenssi.transform);
             if (pisteet.Count > 0) return;
             double3 keskus = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);
             foreach (var k in kohteet)
@@ -332,6 +335,7 @@ namespace Matkakirja.Natiivi
             if (kierto != null) kierto.Napautettu -= Napautus;
             if (taivas != null) Destroy(taivas.gameObject);
             if (pilvet != null) Destroy(pilvet.gameObject);
+            if (avaruus != null) Destroy(avaruus.gameObject);
             if (rataMesh != null) Destroy(rataMesh);
             Destroy(nelio);
             Destroy(pisteMateriaali);

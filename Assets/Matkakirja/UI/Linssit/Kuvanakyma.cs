@@ -12,10 +12,9 @@
 //                ensimmäisellä avauksella selite on auki 1,5 s ja kelautuu sitten.
 //   oikea ylä    ✕ sulkee kuvan (linssi jää auki; AstronauttiLinssi.SuljeKuva).
 //   vasen ala    pikkukuvat (38 × 26), jos kohteella on useampi havainto.
-//   oikea ala    minipulu astronauttina (LiviaKuva mini, leijuu itsestään).
-// TODO: minipulun kysymyskortti (webin satelliitti-pulukortti: kohteen
-// ASTRONAUTIN_KYSYMYKSET ja Livian vastaukset) tulee, kun pulun keskustelu on natiivissa;
-// nyt napautus kujertaa.
+//   oikea ala    minipulu astronauttina (LiviaKuva mini, leijuu itsestään);
+//                napautus kujertaa ja avaa minipulun kysymyskortin (MinipulunKortti:
+//                kohteen valmiit kysymykset + vapaa kysymys pulun chatin reittiä).
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -34,6 +33,7 @@ namespace Matkakirja.Natiivi
         readonly Label otsikko, teksti;
         readonly Button vakanen;
         readonly LiviaKuva minipulu;
+        readonly MinipulunKortti pulukortti;
         Havaintokohde kohde;
         int indeksi = -1;
         Texture2D tekstuuri;
@@ -99,7 +99,13 @@ namespace Matkakirja.Natiivi
             minipulu = new LiviaKuva(mini: true);
             pulukulma.Add(minipulu);
             minipulu.Aseta(new LiviaTila { Astronautti = true });
-            pulukulma.RegisterCallback<PointerDownEvent>(e => { e.StopPropagation(); Aanet.PulunTehoste("pulu.kujerrus"); });
+            pulukortti = new MinipulunKortti(turva);
+            pulukulma.RegisterCallback<PointerDownEvent>(e =>
+            {
+                e.StopPropagation();
+                Aanet.PulunTehoste("pulu.kujerrus");
+                pulukortti.Vaihda(kohde);
+            });
         }
 
         static void AsetaTurva(VisualElement turva, UiKerros kerros)
@@ -133,6 +139,7 @@ namespace Matkakirja.Natiivi
                 kelaus?.Pause();
                 if (ensiKerta) kelaus = selite.schedule.Execute(() => { if (!lisatiedotAuki) AsetaKiinni(true); }).StartingIn(1500);
                 RakennaNauha();
+                if (pulukortti.Auki) pulukortti.Avaa(k);
             }
             Valitse(Mathf.Clamp(i, 0, Math.Max(0, k.Havainnot.Count - 1)));
         }
@@ -148,6 +155,7 @@ namespace Matkakirja.Natiivi
             if (!Auki) return;
             Auki = false;
             juuri.style.display = DisplayStyle.None;
+            pulukortti.Sulje();
             sormet.Clear();
             SyoteLukko.Vapauta(this);
             kohde = null;
@@ -156,6 +164,9 @@ namespace Matkakirja.Natiivi
         }
 
         void SuljeKuva() => Sulje(true);
+
+        /// <summary>Testikomento: minipulun kysymyskortti auki nykyiselle kohteelle.</summary>
+        public void AvaaPulukortti() { if (Auki) pulukortti.Avaa(kohde); }
 
         void Valitse(int i)
         {

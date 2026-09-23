@@ -26,6 +26,7 @@ namespace Matkakirja.Natiivi
     {
         readonly Dictionary<Voima, (Slider Saadin, Label Arvo)> saatimet = new Dictionary<Voima, (Slider, Label)>();
         readonly VisualElement offlineOsio, offlineLista;
+        readonly Label offlineTyhja;
         readonly Label vapaaTila;
         readonly Dictionary<string, OfflineRivi> offlineRivit = new Dictionary<string, OfflineRivi>();
         IOfflineLataus kuunneltu;
@@ -48,6 +49,8 @@ namespace Matkakirja.Natiivi
             Rakenne.Teksti("Kartat ja lehdet tulevat verkosta. Ladatut maat toimivat ilman yhteyttä.", "mk-offline__selite", offlineOsio);
             AukiMuuttui += auki => { if (!auki) Asetukset.Tallenna(); };
             offlineLista = Rakenne.El("mk-offline__lista", offlineOsio, PickingMode.Ignore);
+            offlineTyhja = Rakenne.Teksti("Ladattavia maita ei ole vielä saatavilla. Kartat ja lehdet tulevat verkosta.", "mk-offline__selite", offlineOsio);
+            offlineTyhja.style.display = DisplayStyle.None;
             vapaaTila = Rakenne.Teksti("", "mk-offline__vapaa", offlineOsio);
             // Omat liukusäätimet päivittävät arvonsa itse; muut muutokset (Uusi peli nollaa) päivittävät kaiken.
             Asetukset.Muuttui += nimi => { if (Auki && !Asetukset.OnTaso(nimi)) Paivita(); };
@@ -105,6 +108,8 @@ namespace Matkakirja.Natiivi
             }
             foreach (var id in new List<string>(offlineRivit.Keys))
                 if (!nahty.Contains(id)) { offlineRivit[id].Juuri.RemoveFromHierarchy(); offlineRivit.Remove(id); }
+            // Paketissa ei vielä offline-luetteloa (tuotannon v3): selitys tyhjän listan tilalle.
+            offlineTyhja.style.display = nahty.Count == 0 ? DisplayStyle.Flex : DisplayStyle.None;
             long vapaa = palvelu.VapaaTila;
             vapaaTila.text = vapaa >= 0 ? "vapaata " + Koko(vapaa) : "";
         }
