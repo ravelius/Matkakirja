@@ -52,12 +52,24 @@ namespace Matkakirja.Natiivi
 
         /// <summary>PlayerPrefs-avain linssien kehittäjätilalle (kaikki auki).</summary>
         public const string KehittajatilaAvain = "linssi.kehittajatila";
-        /// <summary>Kehittäjätilan oletus, kun PlayerPrefsissä ei ole arvoa.</summary>
-        public static bool KehittajatilaOletus = true;
+        /// <summary>
+        /// Kehittäjätilan oletus, kun PlayerPrefsissä ei ole arvoa (Fable 23.9.2026): sisäisissä
+        /// TestFlight-buildeissa kaikki linssit auki, ja KOEKET-valikon "kynnykset päällä" kytkee
+        /// sen pois; App Store -versiossa kynnykset aina (määrite MATKAKIRJA_APPSTORE, jonka
+        /// Rakennus asettaa App Store -käännökseen).
+        /// </summary>
+#if MATKAKIRJA_APPSTORE
+        public static readonly bool KehittajatilaOletus = false;
+#else
+        public static readonly bool KehittajatilaOletus = true;
+#endif
 
         /// <summary>Kehittäjätila päälle/pois ja muistiin (Natiivi-UI:n KOKEET, testikomento kehittaja).</summary>
         public static void AsetaKehittajatila(bool paalla)
         {
+#if MATKAKIRJA_APPSTORE
+            return;   // App Store: kynnykset aina
+#endif
             Linssirekisteri.Kehittajatila = paalla;
             PlayerPrefs.SetInt(KehittajatilaAvain, paalla ? 1 : 0);
             PlayerPrefs.Save();
@@ -95,9 +107,12 @@ namespace Matkakirja.Natiivi
             kerrokset = new KerrosSovitin();
             // Astronautin reliefin kylläisyys (0,8 web / 1,0): omistajan vertailu TestFlightissa.
             Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Kyllaisyys = PlayerPrefs.GetFloat(KyllaisyysAvain, 1f);
-            // Kehittäjätila (kaikki linssit auki). Oletus päällä, kunnes Pelikoodarin omistus
-            // (Linssirekisteri.Omistaa) on kytketty; sitten oletus pois (A7, Fablen päätös).
+            // Kehittäjätila (kaikki linssit auki): sisäinen build oletuksena päällä, App Store ei koskaan.
+#if MATKAKIRJA_APPSTORE
+            Linssirekisteri.Kehittajatila = false;   // App Store: kynnykset aina, ei kytkintä
+#else
             Linssirekisteri.Kehittajatila = PlayerPrefs.GetInt(KehittajatilaAvain, KehittajatilaOletus ? 1 : 0) == 1;
+#endif
             rekisteri = new Linssirekisteri(this);
             rekisteri.Lisaa(new Topografia());
             StartCoroutine(LataaAstronautti());
