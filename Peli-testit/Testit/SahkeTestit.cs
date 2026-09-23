@@ -534,6 +534,10 @@ namespace Matkakirja.Peli.Testit
             var kortti = tila.Kortti(t);
             Oleta.Tosi(kortti.Lomake && kortti.Animoi && kortti.Palkkio == 200, "ensimmäinen avaus animoi, palkkio 200");
             Oleta.Tosi(!tila.Kortti(t).Animoi, "toinen avaus valmiina");
+            var tunnistus = tila.Kortti(t, null, "BGR");
+            Oleta.Sama("sofia", tunnistus.Kaupunki);
+            Oleta.Sama(t.HakemistoMaa ?? "BGR", tunnistus.HakemistoMaa, "hakemiston maa");
+            Oleta.Tosi(tunnistus.Laheta == t.Laheta && tunnistus.LahetaVapaa == t.LahetaVapaa && !string.IsNullOrEmpty(tunnistus.VapaaOtsake), "tekstit datasta");
 
             var vaarin = t.Aukot.ToDictionary(a => a.Id, a => "väärin");
             var r = tila.Laheta(t, vaarin);
