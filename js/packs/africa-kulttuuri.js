@@ -632,38 +632,13 @@ export const AFRICA_KULTTUURI = {
     },
   },
   gao: {
-    nostot: [
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Askian hauta',
-        tiedosto: 'Tombeau askia.jpg',
-        teksti: 'Gaossa kohoaa Askian hauta: Songhain keisarin '
-          + 'pyramidimainen savimonumentti 1400-luvulta, jonka seinistä '
-          + 'törröttävät puupalkit toimivat rappaajien tikkaina. Se on '
-          + 'Unescon maailmanperintökohde.',
-        selite: 'Askian hauta Gaossa: savipyramidi, jonka palkit '
-          + 'mahdollistavat vuosittaisen uudelleenrappauksen. Keisari '
-          + 'Askia Muhammad teki pyhiinvaellusmatkan Mekkaan ja toi '
-          + 'mukanaan rakennustaidon.',
-        lahde: 'Gio53, Wikimedia Commons (CC BY-SA 4.0)',
-      },
-      {
-        tyyppi: 'teksti',
-        otsikko: 'Griotit, elävät kirjastot',
-        teksti: 'Länsi-Afrikan historian muistavat griotit: laulavat '
-          + 'tarinankertojat, joiden suvut ovat säilyttäneet kuningasten '
-          + 'ja kylien vaiheet ulkomuistissa sukupolvien ketjuna. Kun '
-          + 'griot kuolee, sanotaan kokonaisen kirjaston palavan.',
-      },
-      {
-        tyyppi: 'teksti',
-        otsikko: 'Nigerjoen kalastajat',
-        teksti: 'Sorko-kalastajat ovat kulkeneet Nigerjokea pitkillä '
-          + 'puuveneillään vuosisatoja. Joki antaa kapteenikalaa ja '
-          + 'ahventa, ja kuivalla kaudella koko kylä nuottaa yhdessä — '
-          + 'saalis jaetaan vanhan tavan mukaan.',
-      },
-    ],
+    /*
+     * Gao sai kaupunkilehden (kulttuuri-kategoriat.js, 23.9.2026), joka
+     * korvaa litteät nostot. Sisältö siirrettiin sinne: Askian hauta
+     * kanteen, sorkot kanteen ja griotit Historian juttuun "Elävät
+     * kirjastot", joka on tämän visan lähdejuttu. Tänne jää vain visa
+     * (docs/moduulit/kaupunkilehti.md).
+     */
     kysymys: {
       q: 'Keitä kutsutaan Länsi-Afrikan eläviksi kirjastoiksi?',
       options: ['Griotteja', 'Kalastajia', 'Kultaseppiä', 'Karavaanikauppiaita'],

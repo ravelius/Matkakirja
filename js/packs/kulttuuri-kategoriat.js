@@ -106682,4 +106682,348 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * GAO (Opus 23.9.2026, paketti O7) — Afrikan laudan kaupunkilehti,
+   * kaksi aihetta: kansi (6 nostoa) ja Historia (6 nostoa +
+   * minitehtävä). Pohjana litteän taulun gao-lohko (africa-kulttuuri.js),
+   * jonka nostot siirtyivät tänne; siellä on jäljellä vain
+   * kulttuurivisa, jonka lähdejuttu on Historian "Elävät kirjastot".
+   *
+   * Väitteet on luettu en-Wikipedian teksteistä 23.9.2026: "Gao",
+   * "Songhai Empire", "Tomb of Askia", "Askia Muhammad I", "Sonni Ali",
+   * "Battle of Tondibi", "Gao-Saney", "Songhai people", "Gao Region",
+   * "Iwellemmedan people", "Griot", "Amadou Hampâté Bâ" ja
+   * "Sudano-Sahelian architecture". Lähteiden ristiriidat kirjoitetaan
+   * auki eikä niitä ratkaista: Gao-Saneyn kuninkaiden hautakivet
+   * ajoitetaan eri artikkeleissa 1000-luvun lopulle ja 1200-luvun
+   * alkuun, joten nosto antaa välin. Askian haudan Mekasta tuodut
+   * savet ovat perimätietoa ("kerrotaan").
+   *
+   * KORJATTU VANHASTA LITTEÄSTÄ NOSTOSTA: "kun griot kuolee, kirjasto
+   * palaa" ei ole griottien sanonta vaan Amadou Hampâté Bân Unesco-
+   * puheen jälkimuoto, ja puhe koski perinteentaitajia yleensä.
+   * Sorkojen "kapteenikala ja ahven" ja yhteinen nuottaus jätettiin
+   * pois, koska lähteestä ei löytynyt niille tukea.
+   *
+   * NYKYKONFLIKTI JA NYKYPOLITIIKKA JÄTETÄÄN POIS KOKONAAN
+   * (docs/moduulit/kaupunkilehti.md, Venäjän kaupunkien ja Kabulin
+   * linjaus). Uutisosiota ei tehdä. Commonsin 2010-luvun Gao-kuvista
+   * valtaosa on sotilas- ja pakolaiskuvia; niitä ei käytetty.
+   * MATKAILIJALLE-OSIOTA EI TEHTY tässä erässä (tilaus: 1–2 aihetta).
+   *
+   * KUVAT haettiin Commonsin rajapinnasta 23.9.2026 (koko, lisenssi ja
+   * tekijä extmetadatasta), ja jokainen katsottiin silmin 900 px
+   * esikatseluna. Gao-Saneyn hautakiven extmetadata sanoo "Public
+   * domain", mutta se on TEOKSEN lisenssi — valokuvan lisenssi on
+   * sivun wikitekstin mukaan CC BY 4.0, ja lähderivi on sen mukainen.
+   * HYLKÄYKSET: "Tombeau askia de loin.jpg" (kuvaajan oma muotokuva
+   * haudan edessä), "Tombeau askia.jpg" (päiväysleima kulmassa; hauta
+   * on jo parissa), "Vue du ciel à Gao.jpg" ja "Fleuve du desert de
+   * Gao.jpg" (sumeita lentokoneen ikkunakuvia), "Łodzie rybackie na
+   * rzece Nigrze - Gao - 001209s.jpg" (tunnistettavia kasvoja
+   * lähikuvassa), "Pg091 Rencontre de deux griots.jpg" (kaiverruksen
+   * tekijä tuntematon), "Le tombeau des Askia.jpg" ja "Askia.jpg"
+   * (alle 1 200 px).
+   */
+  gao: [
+    {
+      id: 'kaupunki',
+      nimi: 'Gao',
+      johdanto: 'Gao oli Songhain valtakunnan pääkaupunki Nigerin itärannalla '
+        + 'silloin, kun valtakunta oli Länsi-Afrikan suurin. 1800-luvulla '
+        + 'siitä oli jäljellä mattomajojen kylä ja savesta muurattu hauta.',
+      /*
+       * KANSIKUVAT: pääkuvaksi nousee ensimmäinen (1976, ruuhet ja
+       * rantatori). Ennen ja nyt -pari korvaa pikkurivin, joten kaksi
+       * muuta näkyvät suurennoksen sarjassa.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Łodzie rybackie na rzece Niger - Gao - 001208s.jpg',
+          lyhyt: 'Pitkiä puuruuhia Nigerin rannassa Gaossa 1976, rantatorilla väkeä ja takana savitaloja.',
+          selite: 'Pitkiä puuruuhia Nigerin rannassa Gaossa vuonna 1976. '
+            + 'Rantatörmällä on toriväkeä ja kuormia, ja taustalla kohoavat '
+            + 'tasakattoiset savitalot.',
+          lahde: 'Ryszard Vorbrich, Wikimedia Commons (CC BY-SA 3.0 pl)',
+        },
+        {
+          tiedosto: 'Mali, le marché à Gao (8438017791).jpg',
+          lyhyt: 'Gaon tori 1997: kauppiaita, vatteja ja puiden varjoa kaarioviaukkoisen rakennuksen vieressä.',
+          selite: 'Gaon tori vuonna 1997. Myyjät ovat levittäneet vatit ja säkit '
+            + 'maahan puiden varjoon, ja taustalla on kaarioviaukkoinen '
+            + 'rakennus.',
+          lahde: 'Jeanne Menjoulet from Paris, France, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Gao Mali 2006.jpg',
+          lyhyt: 'Hiekkamyrsky nousee Gaon matalien savitalojen ylle vuonna 2006.',
+          selite: 'Hiekkamyrskyn ruskea seinä nousee Gaon matalien savitalojen ja '
+            + 'hiekkakatujen ylle syyskuussa 2006.',
+          lahde: 'David Sessoms, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      /*
+       * ENNEN JA NYT: sama pari kuin matkakirjan valokuvataulussa
+       * (africa-valokuvat.js gao), tiedostonimet kopioitu sellaisinaan.
+       * Vanhan puolen lähderivi on kirjoitettu speksin muotoon
+       * (tekijä extmetadatasta: Walter Mittelholzer). Vuoden 2006
+       * kuvassa näkyvät Wikipedian mainitsemat muutokset: vuonna 1999
+       * rakennettu muuri ja 2000-luvun alussa katolle asennetut
+       * kaiuttimet. HAUTA ON PARISSA, JOTEN ASKIAN NOSTO ON KUVATON
+       * (sama linja kuin Kanon suurmoskeijassa: sama rakennus kolmesti
+       * samalla aukeamalla olisi aihetoistoa).
+       */
+      ennenNyt: [
+        {
+          tiedosto: 'ETH-BIB-Grabmal von Askia, Gao-Tschadseeflug 1930-31-LBS MH02-08-0548.tif',
+          vuosi: '1930–31',
+          lyhyt: 'Askian hauta 1930–31: savipyramidi hiekkakummulla, seinissä puupiikkejä.',
+          selite: 'Askian hauta vuosina 1930–31: savipyramidi seisoo '
+            + 'hiekkakummulla matalan muurin takana, ja sen seinistä '
+            + 'törröttää puunrunkoja kuin piikkejä.',
+          lahde: 'Walter Mittelholzer, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Tombeau dAskia in Gao by David Sessoms.jpg',
+          lyhyt: 'Sama hauta 2006: ympärillä muuri, katolla kaiuttimet ja ohi kulkee karjaa.',
+          selite: 'Sama hauta vuonna 2006: ympärille on rakennettu muuri, katolla '
+            + 'on kaiuttimet, ja edessä hiekka-aukiolla kulkee karjaa.',
+          lahde: 'David Sessoms from Fribourg, Switzerland, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kaupunki, jonka nimi on rummun ääni',
+          teksti: 'Vanhoissa arabiankielisissä kirjoissa Gao on Kawkaw tai Kuku. '
+            + 'Andalusialainen maantieteilijä al-Bakri kirjoitti '
+            + '1000-luvulla, että nimi jäljittelee rumpujen ääntä: niitä '
+            + 'lyötiin, kun kuningas istuutui aterialle. Ensimmäinen maininta '
+            + 'kaupungista on jo 800-luvun alkupuolelta, ja noin vuonna 872 '
+            + 'al-Yaqubi kutsui Kawkaw\'ta Saharan eteläpuolisten maiden '
+            + 'mahtavimmaksi valtakunnaksi, jonka kuninkaalle muutkin '
+            + 'kuninkaat olivat uskollisuuden velkaa. 900-luvulla Gao oli '
+            + 'kaksi kaupunkia: toisessa olivat torit ja kauppahuoneet, '
+            + 'toisessa asuivat kuningas ja hänen luotetut miehensä.',
+          wiki: 'Gao',
+        },
+        {
+          otsikko: 'Seinä, josta kasvaa puuta',
+          teksti: 'Askian hauta on seitsemäntoista metriä korkea porrastettu '
+            + 'savipyramidi ja Gaon suurin siirtomaa-aikaa vanhempi rakennus. '
+            + 'Sen rakennutti 1400-luvun lopulla Songhain hallitsija Askia '
+            + 'Muhammad, ja kerrotaan, että hän toi savet ja puut '
+            + 'Mekan-pyhiinvaellukseltaan tuhansien kamelien karavaanilla. '
+            + 'Seinistä törröttävät puunrungot ovat telineitä: niiden varassa '
+            + 'savipinta rapataan säännöllisesti uudelleen, ja työhön '
+            + 'osallistuu koko yhteisö. Samassa pihassa ovat kaksi moskeijaa, '
+            + 'hautausmaa ja kokoontumisaukio, ja kokonaisuus on Unescon '
+            + 'maailmanperintökohde.',
+          wiki: 'Tomb of Askia',
+        },
+        {
+          otsikko: 'Joki, joka levenee neljään kilometriin',
+          teksti: 'Gaossa sataa vain kesä–syyskuussa, keskimäärin noin 220 '
+            + 'millimetriä vuodessa, joten lähes kaikki viljely on Nigerin '
+            + 'veden varassa. Tulva syntyy kaukana lounaassa: Guinean ja '
+            + 'Norsunluurannikon pohjoisosan latvavesillä sataa eniten '
+            + 'elokuussa, mutta vesi kulkee sisämaan suiston läpi hitaasti, '
+            + 'ja Gaossa tulva on huipussaan vasta joulukuussa. Silloin joki '
+            + 'on täällä neljä kilometriä leveä. Kesä- ja heinäkuussa '
+            + 'virtaama on vain viisi prosenttia huipusta, ja uomaan nousee '
+            + 'saaria. Joen yli kuljettiin lautalla, kunnes Wabarian silta '
+            + 'avattiin 2006.',
+          tiedosto: 'ETH-BIB-Gao-Tschadseeflug 1930-31-LBS MH02-08-0521.tif',
+          lyhyt: 'Nigerin vesi Gaon rannan ruohikossa 1930–31, törmällä savitaloja ja puita.',
+          selite: 'Nigerin vesi ulottuu Gaon rannan ruohikkoon vuosina 1930–31, '
+            + 'ja rantatörmällä seisoo savitaloja ja vääräoksaisia puita.',
+          lahde: 'Walter Mittelholzer, Wikimedia Commons (PD)',
+          wiki: 'Niger River',
+        },
+        {
+          otsikko: 'Sorkot, joen ensimmäinen väki',
+          teksti: 'Gaon seudun varhaisimpia asukkaita olivat sorkot, jotka '
+            + 'perustivat pieniä kyliä Nigerin rannoille. He veistivät '
+            + 'kanootteja ja veneitä afrikkalaisiin mahonkeihin kuuluvasta '
+            + 'cailcedrat-puusta, kalastivat ja metsästivät veneistä käsin ja '
+            + 'kuljettivat tavaraa ja ihmisiä jokea pitkin. Toinen jokiväki, '
+            + 'gaot, oli erikoistunut krokotiilien ja virtahepojen pyyntiin. '
+            + 'Songhain valtakunta hankki suurimmat aluksensa sorkoilta: '
+            + 'kanta-alus pystyi kantamaan jopa kolmekymmentä tonnia, saman '
+            + 'kuorman kuin tuhat kantajaa tai kaksisataa kamelia.',
+          tiedosto: 'ETH-BIB-Bei Gao auf dem Niger-Tschadseeflug 1930-31-LBS MH02-08-0526.tif',
+          lyhyt: 'Veneilijä sauvoo kapeaa puuruuhta Nigerillä Gaon lähellä 1930–31.',
+          selite: 'Veneilijä sauvoo kapeaa puuruuhta Nigerillä Gaon lähellä '
+            + 'vuosina 1930–31. Veneen keskellä on punottu kuorma, ja '
+            + 'taustalla näkyy matala vastaranta.',
+          lahde: 'Walter Mittelholzer, Wikimedia Commons (PD)',
+          wiki: 'Songhai Empire',
+        },
+        {
+          otsikko: 'Isoisän aikaan: kolmesataa mattomajaa',
+          teksti: 'Kun Marokon sotajoukko kukisti Songhain 1591, valloittajat '
+            + 'tekivät pääkaupungikseen Timbuktun, ja Gao hiljeni. '
+            + 'Saksalainen tutkimusmatkailija Heinrich Barth pysähtyi täällä '
+            + '1854 paluumatkallaan Timbuktusta ja löysi köyhän kylän, jossa '
+            + 'oli noin kolmesataa punotuista matoista tehtyä majaa. Veneitä '
+            + 'oli vähän, koska puuta niiden rakentamiseen ei ollut, ja '
+            + 'vanhan kaupungin paikalla kasvoi kaprispensaikkoa. Isoisän '
+            + 'matkavuonna Gao ei ollut minkään eurooppalaisen vallan alla: '
+            + 'Ranska valtasi Timbuktun vasta 1894, ja Nigerin mutkan '
+            + 'songhaikylät olivat iwellemmedan-tuaregien vallan piirissä.',
+          tiedosto: 'ETH-BIB-Gao vom Niger aus gesehen-Tschadseeflug 1930-31-LBS MH02-08-0494.tif',
+          lyhyt: 'Gao joelta 1930–31: kupolimaisia mattomajoja savitalojen vieressä ja palmuja.',
+          selite: 'Gao Nigeriltä nähtynä vuosina 1930–31: kupolimaisia '
+            + 'mattomajoja savitalojen vieressä, palmuja ja rannassa '
+            + 'puuruuhia.',
+          lahde: 'Walter Mittelholzer, Wikimedia Commons (PD)',
+          wiki: 'Heinrich Barth',
+        },
+        {
+          otsikko: 'Vaaleanpunainen dyyni ja Greenwichin viiva',
+          teksti: 'Joen länsirannalla vastapäätä kaupunkia kohoaa suuri '
+            + 'hiekkadyyni, La Dune Rose, joka on saanut nimensä väristä: se '
+            + 'hehkuu vaaleanpunaisena aamunkoitossa ja illan hämärtyessä. '
+            + 'Dyynin reunalla Koiman kohdalla, neljä kilometriä Gaosta '
+            + 'pohjoiseen, maan pinnalla on merkkejä asutuksesta, joka on '
+            + 'vanhempi kuin 800-luku. Se voi olla läntinen Gao, josta 900- '
+            + 'ja 1000-lukujen kirjoittajat kertovat, mutta paikkaa ei ole '
+            + 'kaivettu. Kaupungin läpi kulkee myös Greenwichin '
+            + 'nollameridiaani: täällä Lontoon aika ja auringon aika ovat '
+            + 'lähes samat.',
+          wiki: 'Gao',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Gao oli ensin oman kuningaskuntansa pääkaupunki, sitten Malin '
+        + 'valtakunnan osa ja lopulta Songhain keskus. Tiedot tulevat '
+        + 'hautakivistä, matkakertomuksista, 1600-luvun kronikoista ja '
+        + 'griottien muistista.',
+      tehtava: {
+        kysymys: 'Mistä Gao-Saneyn marmoriset hautakivet luultavasti tuotiin?',
+        vaihtoehdot: [
+          'Egyptistä',
+          'Etelä-Espanjasta',
+          'Intiasta',
+          'Marokon vuorilta',
+        ],
+        oikea: 1,
+        fakta: 'Hautakivet veistettiin luultavasti Almeríassa, ja ne kulkivat '
+          + 'Saharan yli Nigerin mutkaan asti.',
+      },
+      nostot: [
+        {
+          otsikko: 'Marmoria Espanjasta',
+          teksti: 'Muutaman kilometrin päässä kaupungin itäpuolella on Gao-Saneyn '
+            + 'asuinkumpu, jossa asuttiin jo noin vuonna 700. Kaivauksissa on '
+            + 'löytynyt raudansulatuksen jälkiä, satoja kupariesineitä ja '
+            + 'tuhansia lasihelmiä, joiden lasi tuotiin ensin Irakista ja '
+            + 'myöhemmin Egyptistä. Vuonna 1939 ranskalaiset virkamiehet '
+            + 'löysivät hiekan peittämästä luolasta hienosti veistettyjä '
+            + 'marmorisia hautakiviä. Ne oli tehty luultavasti Almeríassa '
+            + 'Etelä-Espanjassa, ja niiden kufilainen kirjoitus nimeää kolme '
+            + 'muslimikuningasta, jotka lähteet ajoittavat eri tavoin '
+            + '1000-luvun lopun ja 1200-luvun alun välille.',
+          tiedosto: 'Stele Almeria Gao-Saney MNM R88-19-279 (cropped).jpg',
+          lyhyt: 'Gao-Saneyn marmorinen hautakivi, jonka kufilainen kirjoitus on veistetty kohokuvioksi.',
+          selite: 'Gao-Saneyn marmorinen hautakivi: kufilaiset kirjaimet on '
+            + 'veistetty kohokuvioksi, ja kivi on haljennut neljään osaan. Se '
+            + 'kuuluu Malin kansallismuseon kokoelmiin.',
+          lahde: 'Marie-Lan Nguyen, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Gao-Saney',
+        },
+        {
+          otsikko: 'Riisiä, kurkkuja ja kaurikotiloita',
+          teksti: 'Marokkolainen matkailija Ibn Battuta tuli Gaohon veneellä '
+            + 'Timbuktusta 1353, kun kaupunki kuului Malin valtakuntaan. Hän '
+            + 'kehui sitä yhdeksi seudun hienoimmista ja hedelmällisimmistä '
+            + 'kaupungeista: riisiä, maitoa, kanoja, kalaa ja kurkkuja, '
+            + 'joille ei ollut vertaa. Kauppaa käytiin kaurikotiloilla. '
+            + '1500-luvun alussa Leo Africanus näki suuren kaupungin ilman '
+            + 'ympärysmuuria, täynnä rikkaita kauppiaita, ja torin, jolla '
+            + 'myytiin orjia. 1580-luvulla laskettiin kronikan mukaan 7 626 '
+            + 'taloa olkimajoja lukuun ottamatta — arviolta 45 000 asukasta, '
+            + 'Länsi-Afrikan suurimpia kaupunkeja.',
+          tiedosto: 'ETH-BIB-Hauptstrasse in Gao-Tschadseeflug 1930-31-LBS MH02-08-0541.tif',
+          lyhyt: 'Gaon pääkatu joulukuussa 1930: pyöreäkulmaisia savitaloja ja puiden varjoa.',
+          selite: 'Gaon pääkatu joulukuussa 1930: pyöreäkulmaisia savitaloja, '
+            + 'hiekkakatu ja puiden varjo, jossa kaksi ihmistä askartelee '
+            + 'maahan levitettyjen mattojen äärellä.',
+          lahde: 'Walter Mittelholzer, Wikimedia Commons (PD)',
+          wiki: 'Ibn Battuta',
+        },
+        {
+          otsikko: 'Sonni Ali ja jokilaivasto',
+          teksti: 'Songhai irtautui Malin vallasta 1400-luvun alkupuolella, ja '
+            + 'Sonni Ali (hallitsi 1464–1492) teki pienestä valtiosta '
+            + 'valtakunnan ja Gaosta sen pääkaupungin. Hän valloitti '
+            + 'Timbuktun ja rakensi Nigerille laivaston, jolla hän piiritti '
+            + '1473 Djennéä, kunnes kaupunki antautui nälän murtamana. '
+            + 'Walatan valtaamiseksi hän yritti kaivaa satojen kilometrien '
+            + 'kanavan, mutta luopui hankkeesta 1483. Hänen kuolemastaan on '
+            + 'kaksi kertomusta: kronikan mukaan hän hukkui Nigeriin, '
+            + 'suullisen perimätiedon mukaan hänet surmasi sisarenpoika. '
+            + 'Kronikoitsijat kirjoittivat hänen sukunsa syrjäyttäneiden '
+            + 'askioiden näkökulmasta.',
+          tiedosto: 'ETH-BIB-Gao, mit langen Stangen werden die Boote auf dem Niger durch das Schilfdickicht mühsam geschleppt-Tschadseeflug 1930-31-LBS MH02-08-0501.tif',
+          lyhyt: 'Jokiproomua sauvotaan pitkillä seipäillä ruovikon läpi Gaon lähellä joulukuussa 1930.',
+          selite: 'Jokiproomua sauvotaan pitkillä seipäillä ruovikon läpi Gaon '
+            + 'lähellä joulukuussa 1930. Kannella on katettu suoja ja '
+            + 'kuormaa.',
+          lahde: 'Walter Mittelholzer, Wikimedia Commons (PD)',
+          wiki: 'Sonni Ali',
+        },
+        {
+          otsikko: 'Askia Suuri lähtee Mekkaan',
+          teksti: 'Sonni Alin kenraali Muhammad Ture kukisti tämän pojan Gaon '
+            + 'edustalla huhtikuussa 1493 ja otti arvonimen askia. Kolme '
+            + 'vuotta myöhemmin hän lähti pyhiinvaellukselle Mekkaan '
+            + 'viidensadan ratsumiehen ja tuhannen jalkamiehen kanssa, '
+            + 'perusti Medinaan majapaikan länsiafrikkalaisille '
+            + 'pyhiinvaeltajille ja palasi kotiin 50 000 dukaatin velassa. '
+            + 'Hän jakoi valtakunnan maakuntiin ja perusti ministeriöitä; '
+            + 'ministereihin kuului myös jokilaivaston päällikkö hi koy. '
+            + 'Vanhana ja sokeana hänet syrjäytti oma poika 1528, mutta hän '
+            + 'palasi vielä Gaohon ja kuoli siellä 1538.',
+          wiki: 'Askia Muhammad I',
+        },
+        {
+          otsikko: 'Kaksi tuntia Tondibissa',
+          teksti: 'Marokon sulttaani Ahmad al-Mansur luuli Songhain rikkauksien '
+            + 'tulevan kultakaivoksista ja lähetti 1590 Saharan yli '
+            + 'sotajoukon, jota johti lapsena vangiksi otettu '
+            + 'espanjalaissyntyinen Judar Pasha. Kuormastossa oli 8 000 '
+            + 'kamelia ja kahdeksan tykkiä. Gaon pohjoispuolella Tondibissa '
+            + '13. maaliskuuta 1591 songhait yrittivät murtaa marokkolaisten '
+            + 'rivit tuhannen naudan rynnäköllä, mutta laukausten pauke '
+            + 'käänsi karjan takaisin. Taistelu kesti noin kaksi tuntia. Gaon '
+            + 'asukkaat olivat jo lähteneet, ja ryöstäjät jatkoivat '
+            + 'rikkaampiin Timbuktuun ja Djennéhen.',
+          wiki: 'Battle of Tondibi',
+        },
+        {
+          otsikko: 'Elävät kirjastot',
+          teksti: 'Griotit ovat Länsi-Afrikan historioitsijoita, tarinankertojia, '
+            + 'ylistyslaulajia ja soittajia. Kamerunilainen muusikko Francis '
+            + 'Bebey kutsui griottia kansan perinteiden eläväksi arkistoksi, '
+            + 'ja griotteja sanotaan myös eläviksi kirjastoiksi. Taito kulkee '
+            + 'suvussa: lapset oppivat sukuluettelot ja laulut katsomalla, '
+            + 'toistamalla ja esiintymällä, ja jokaisella kuninkaalla oli '
+            + 'griottinsa. Malilainen kirjailija Amadou Hampâté Bâ vaati '
+            + 'Unescossa 1960 suullisen perinteen tallentamista: jokaisen '
+            + 'perinteentaitajan kuolema oli hänestä kuin hyödyntämättömän '
+            + 'kulttuuriaarteen palo. Tuttu muoto, jossa palaa kirjasto, '
+            + 'syntyi vasta Unescon keskustelussa 1962.',
+          tiedosto: 'Griots dans une arène au Niger.jpg',
+          lyhyt: 'Griotit rumpuineen perinteisen painin areenalla Nigerissä 2019.',
+          selite: 'Griotit rumpuineen perinteisen painin areenalla Nigerissä '
+            + 'vuonna 2019, ja taustalla katsomo on täynnä yleisöä.',
+          lahde: 'Amadouibrahim2, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Griot',
+        },
+      ],
+    },
+  ],
 };
