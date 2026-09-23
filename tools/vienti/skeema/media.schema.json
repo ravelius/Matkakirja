@@ -18,6 +18,7 @@
           "avain": { "type": "string" },
           "url": { "type": "string", "format": "uri" },
           "varat": { "type": "array", "items": { "type": "string", "format": "uri" }, "description": "Varareitit järjestyksessä, jos url ei vastaa (pelin oma järjestys)" },
+          "suurennos": { "type": "string", "format": "uri", "description": "Valokuvan suurennos (1600 px) kuten pelin valokuvaSuurennos() (skeema 1.5)" },
           "alkuperainen": { "type": "string", "format": "uri", "description": "Alkuperäinen lähde (Commons, Freesound, archive.org), varareitti" },
           "esiintymat": {
             "type": "array",

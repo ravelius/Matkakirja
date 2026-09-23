@@ -18,6 +18,10 @@ name: proto-3d TestFlight
 on:
   workflow_dispatch:
     inputs:
+      vienti_kansio:
+        description: 'Unity-viennin kansio Build/-alla (Natiiviseppä ilmoittaa uuden kansion jokaista uutta vientiä varten, esim. testflight, testflight-2)'
+        type: string
+        default: 'testflight'
       bundle_id:
         description: 'Bundle id — sama App Store -tietue kuin webkuorella (fi.matkakirja.peli), natiivi korvaa kuoren siinä'
         type: string
@@ -73,8 +77,8 @@ jobs:
         working-directory: ${{ env.PROJEKTI }}
         run: |
           set -euo pipefail
-          test -f Build/testflight/Unity-iPhone.xcodeproj/project.pbxproj
-          test -f Build/testflight/Info.plist
+          test -f Build/${{ inputs.vienti_kansio }}/Unity-iPhone.xcodeproj/project.pbxproj
+          test -f Build/${{ inputs.vienti_kansio }}/Info.plist
 
       # Ajon numero (github.run_number) on aina uniikki ja kasvava — App
       # Store Connect hylkää saman versio+build-parin kahdesti. Unity
@@ -92,8 +96,8 @@ jobs:
             build=$(date -u +%Y%m%d%H%M)
           fi
           echo "BUILD_NUMERO=$build" >> "$GITHUB_ENV"
-          /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $build" Build/testflight/Info.plist
-          /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString ${{ inputs.versio }}" Build/testflight/Info.plist
+          /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $build" Build/${{ inputs.vienti_kansio }}/Info.plist
+          /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString ${{ inputs.versio }}" Build/${{ inputs.vienti_kansio }}/Info.plist
 
       - name: Pura App Store Connect -avain
         env:
@@ -116,6 +120,22 @@ jobs:
           fi
           echo "ASC_AVAIN_POLKU=$polku" >> "$GITHUB_ENV"
 
+      # Ilman tätä -allowProvisioningUpdates ei voi tallentaa Applen
+      # luomaa varmennetta ("User interaction is not allowed" archive-
+      # vaiheessa) — sama lohko kuin ios-testflight.yml:ssä.
+      - name: Luo väliaikainen avainnippu
+        run: |
+          set -euo pipefail
+          salasana=$(openssl rand -base64 24)
+          echo "::add-mask::$salasana"
+          nippu="$RUNNER_TEMP/proto3d.keychain-db"
+          security create-keychain -p "$salasana" "$nippu"
+          security set-keychain-settings -lut 21600 "$nippu"
+          security unlock-keychain -p "$salasana" "$nippu"
+          security list-keychains -d user -s "$nippu" $(security list-keychains -d user | sed 's/"//g')
+          security default-keychain -s "$nippu"
+          echo "AVAINNIPPU=$nippu" >> "$GITHUB_ENV"
+
       - name: Arkistoi ja allekirjoita
         working-directory: ${{ env.PROJEKTI }}
         env:
@@ -125,7 +145,7 @@ jobs:
         run: |
           set -euo pipefail
           xcodebuild \
-            -project Build/testflight/Unity-iPhone.xcodeproj \
+            -project Build/${{ inputs.vienti_kansio }}/Unity-iPhone.xcodeproj \
             -scheme Unity-iPhone \
             -configuration Release \
             -destination 'generic/platform=iOS' \
@@ -208,7 +228,7 @@ jobs:
           TESTAAJA: ${{ inputs.testaajan_email }}
         run: |
           set -euo pipefail
-          python3 -m pip install --quiet "pyjwt[crypto]==2.9.0"
+          python3 -m pip install --quiet --break-system-packages "pyjwt[crypto]==2.9.0"
           python3 - <<'PY'
           import os, sys, time, json, urllib.request, urllib.error
           import jwt
@@ -282,3 +302,6 @@ jobs:
         run: |
           rm -rf "$RUNNER_TEMP/asc" "$HOME/.appstoreconnect/private_keys" || true
           rm -f "$RUNNER_TEMP/ExportOptions.plist" || true
+          if [ -n "${AVAINNIPPU:-}" ]; then
+            security delete-keychain "$AVAINNIPPU" || true
+          fi

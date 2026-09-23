@@ -22,6 +22,11 @@
  * Sisältö, joka asuu moduulin SISÄISESSÄ muuttujassa (ei exporttia), ei
  * näy tälle työkalulle — raportin "ei mekaaniset" -lista.
  */
+import { readdirSync } from 'node:fs';
+import { dirname, join, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 const m = (moduuli, exportit, luokka = 'peli') => ({ moduuli, exportit, luokka });
 
 export const LISAMODUULIT = [
@@ -32,16 +37,24 @@ export const LISAMODUULIT = [
   m('js/livia.js', ['LIVIAN_AVAUS']),
   m('js/pollo.js', ['LIVIAN_MIETINNAT', 'POLLO_AARRE']),
   m('js/game.js', ['ASKERS', 'MANNER_NIMET', 'FORM_WEIGHTS']),
-  m('js/tokens.js', ['TOKEN_TYPES']),
-  m('js/sisaltotaulut.js', ['SAAPUMISLUENNAT', 'HAVAINTOLUENNAT', 'LAUTA_TUNNUSLUVUT', 'EI_VALOKUVAKYSYMYKSEEN']),
+  m('js/tokens.js', ['TOKEN_TYPES', 'PIENI_AARRE_ARVO', 'ISO_AARRE_ARVO']),
+  m('js/ai.js', ['BOT_SKILL']),
+  // Matkustuksen hinnat (laiva, lento, bussi); skeema 1.4 kokoaa ne ja
+  // game.js:n vakiot kokoelmaan saannot (tools/vienti/kokoelmat.mjs).
+  m('js/rules.js', ['SEA_FEE', 'FLIGHT_PRICE', 'BUS_FARE']),
+  m('js/sisaltotaulut.js', ['SAAPUMISLUENNAT', 'HAVAINTOLUENNAT', 'LAUTA_TUNNUSLUVUT', 'EI_VALOKUVAKYSYMYKSEEN', 'KAIKKI_VALOKUVAT', 'MAATIEDOT']),
   m('js/livia-tilanteet.js', ['LIVIAN_TUNTEET', 'LIVIAN_PUHEMERKITYKSET']),
-  m('js/livia-pilotti-cuet.js', ['LIVIAN_LUENTA_CUET', 'LIVIAN_LUENTAKAUPUNGIT']),
+  m('js/livia-pilotti-cuet.js', ['LIVIAN_LUENTA_CUET', 'LIVIAN_LUENTAKAUPUNGIT', 'ERA5_ODOTTAVAT_KAUPUNGIT']),
   m('js/liviapuhe.js', ['LIVIAN_AANIJUURI', 'LIVIAN_AANILAHTEET', 'LIVIAN_KAUPUNKILAHTEET', 'LIVIAN_AANITETYT',
     'LIVIAN_AANIERAT', 'LIVIAN_KESTOT', 'LIVIAN_VERSIOIDUT_AANET', 'LIVIAN_AANITETTY_PALJASTUS']),
   m('js/media.js', ['AANI_JUURI', 'ASSET_KANSIOT', 'R2_ASSETIT', 'HORATIO_TUOTANTO', 'VERSIOIDUT_HORATIO_AANET', 'UUSITUT_AANET']),
   m('js/fokusnosto-symbolit.js', ['NOSTOSYM_LUOKAT', 'NOSTOSYM_PAAKATEGORIAT', 'NOSTOSYM_TYYPIT', 'NOSTOSYM_PISTE_VARIT']),
   m('js/karttaselite.js', ['KARTTASELITE_JARJESTYS', 'KARTTASELITE_KOKONIMET']),
   m('js/kaupunkimusiikki.js', ['ALUERAIDAT', 'ALUEEN_MAAT']),
+  // Skeema 1.8: äänitaulut natiiville (kokoelma aanitaulut).
+  m('js/sound.js', ['REAL_SAMPLES', 'PULUN_TEHOSTEET', 'PULUN_TEHOSTEJUURI', 'AMBIENCE_TYPES', 'AANITEHOSTEET']),
+  m('js/siirtymamusiikki.js', ['RAIDAT', 'SIIRTYMALAJIT']),
+  m('js/musiikkivalitsin.js', ['TILARAIDAT', 'PAIKKARAIDAT', 'POHJARAITA']),
   m('js/aani-ehdokkaat.js', ['EHDOKKAAT', 'TYYPPI_EHDOKKAAT', 'KAUPUNKI_EHDOKKAAT', 'TYYPPI_NIMET', 'KAUPUNGIT_TYYPEITTAIN', 'HUUDAHDUKSET']),
   m('js/viitekuva-herot.js', ['VIITEKUVA_HEROT']),
   m('js/lahteet.js', ['LAHTEET', 'PELI']),
@@ -63,6 +76,17 @@ export const LISAMODUULIT = [
   m('js/linssit/vertailu.js', ['LINSSI'], 'linssi'),
   m('js/linssit/maatiedot.js', ['LINSSI'], 'linssi'),
   m('js/linssit/vesistot.js', ['LINSSI'], 'linssi'),
+  // Skeema 1.7 (Linssisepän tarve 23.9.2026): ihmisen matkan maskit,
+  // äänimaisemien ja kertomuksen manifestien juuret, astronautin kameran
+  // pilvet ja äänet, linssien omistussäännöt. Kokoelma linssiaineisto
+  // kokoaa ne (tools/vienti/kokoelmat.mjs).
+  m('js/linssit/ihmisen-matka-maamaski.js', ['MAAMASKI'], 'linssi'),
+  m('js/linssit/ihmisen-matka-rantamaski.js', ['RANTAMASKI'], 'linssi'),
+  m('js/linssit/ihmisen-matka-aanimaisema.js', ['MAISEMAJUURI'], 'linssi'),
+  m('js/linssit/ihmisen-matka-luenta.js', ['KERTOMUS_MANIFESTI'], 'linssi'),
+  m('js/linssit/astro-sumu.js', ['PILVIEN_LAHDE', 'PILVIEN_OSOITE', 'PILVIEN_LEVEYS', 'PILVIEN_KORKEUS'], 'linssi'),
+  m('js/linssit/satelliitti-aani.js', ['ASTRONAUTIN_HUMINA', 'ASTRONAUTIN_MUSIIKKI', 'ASTRONAUTIN_MUSIIKKI_KAYTOSSA'], 'linssi'),
+  m('js/linssit/omistus.js', ['LINSSIKYNNYKSET', 'OPTIKON_HYVITYS', 'PERUSLINSSIT'], 'linssi'),
   m('js/tyohuone-kehitys-data.js', ['KAARI_PAKETIT'], 'kehittaja'),
 ];
 
@@ -70,4 +94,8 @@ export const LISAMODUULIT = [
 export const LISATIEDOSTOT = [
   'assets/data/maakayrat.json',
   'assets/data/maapolygonit.json',
+  // Skeema 1.9: matkakirjaluentojen sanatason aikaleimat (luentareaktiot);
+  // kansio luetaan, joten uusi luenta tulee mukaan ilman muutosta tähän.
+  ...readdirSync(join(JUURI, 'assets/aikaleimat')).filter((f) => f.endsWith('.json')).sort()
+    .map((f) => `assets/aikaleimat/${f}`),
 ];

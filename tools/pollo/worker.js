@@ -43,6 +43,7 @@ import {
   sahkeKehote,
   sahkeViesti,
   NATIIVIT_OLETUS,
+  natiivilleSallittu,
   sallittuNatiivi,
   sallittuOrigin,
   siivoaHistoria,
@@ -1914,8 +1915,9 @@ export default {
     } catch {
       return vastaa({ virhe: 'kysely', viesti: 'Pyyntö ei ollut JSONia.' }, { status: 400, ...kors });
     }
-    if (natiivi && runko?.tehtava !== 'puhe') {
-      return new Response('Natiiville vain puhe', { status: 403 });
+    // Natiivi: puhe ja chat (rajat alla samat kuin selaimella), ei kuva, sähke eikä tila.
+    if (natiivi && !natiivilleSallittu(runko?.tehtava)) {
+      return new Response('Tehtävä ei ole natiiville sallittu', { status: 403 });
     }
 
     /*

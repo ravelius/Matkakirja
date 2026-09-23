@@ -70,6 +70,12 @@ export function tarkistaPaketti(tiedostot) {
       ));
     }
   }
+  if (manifest.offline) {
+    virheet.push(...validoiNimella(lue(manifest.offline.tiedosto), 'offline.schema.json', { polku: manifest.offline.tiedosto }));
+  }
+  for (const w of manifest.webNakymat ?? []) {
+    virheet.push(...validoiNimella(lue(w.tiedosto), 'web-nakyma.schema.json', { polku: w.tiedosto }));
+  }
   return virheet;
 }
 
