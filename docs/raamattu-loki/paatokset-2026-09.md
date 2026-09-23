@@ -1695,3 +1695,7 @@ Klo 09.35. Perustelut: peli on sisältöä ja sisältöputkea, web on tavoittavu
 ## PR #2883 (PELIKOODARI): PALJAS KARTTA — SYOTEKOE-TILAT 5 PALJAS, 6 +NIMIOT, 7 +SYMBOLIT, 8 +DOM; ?koe=paljas POISTAA NIMIOT, SYMBOLIT, JOET/RAJAT, PULUN, PIENEN LIIKKEEN, AANET, HAIVYTYKSEN, LEPOPIIRRON, KIRJASTON POHJAN, ILMAKEHAN, KAIUTINMITTARIN JA KAIKKI DOM-KERROKSET (VALIKKONAPPI JAA); WebKit: dc 66 → 49, DOM-ELEMENTTEJA KARTAN PAALLA 74 → 0 (23.9.2026 klo 09.33)
 
 Testit 4049/0, savuke 7/7. → v2143 #2882:n perään. Kerroskytkimet (09.25) seuraavana erillisenä PR:nä. Omistajan kierros: 10 s veto tilassa 5; jos tökkiminen loppuu → puolitus 6–8/kytkimet; jos ei → vika laatoissa, vedossa tai selaimessa.
+
+## KAMERAKALLISTUKSEN SUUNNITELMA HYVAKSYTTY (KARTTASEPPA): VIRTUAALINEN POV + kallistus.js LASKEE KAMERAN P + d·(cos α·n + sin α·t), α=0 = NYKYINEN KAMERA; SYOTE SUORISTAA 250 ms; HORISONTTI K·d + PAPERIUSVA, KAUKAINEN PUOLISKO KARKEAMPI TASO, LAATTAKATTO 1,3 × TASO 8 / 0°; GL-NIMIOT JA CSS2D PROJISOIDAAN, RUUTUUN ANKKUROIDUT KORTIT SULJETAAN; KYTKENNAT KOELIPULLA (SAAVU 25° + ORBIT ±20°, LENTO 15–20°, PELAAJAN LIIKE 15°) (23.9.2026 klo 09.38)
+
+Ehdot: tween/OrbitControls-ylikirjoitus tarkistetaan ensin; syöteputkeen ei kosketa; mittarit myös 390 px; katto sitova, muuten 20°. Suunnitelma docs/raportit/kamerakallistus-suunnitelma-20260923.md (haara wt-karttaseppa-kallistus).
