@@ -126,6 +126,23 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama("empty", Aanitunnukset.Aarre("empty"));
         }
 
+        [Testi] static void NappulanMatkapisteetReitilta()
+        {
+            var m = UusiPariisissa();
+            var lahto = m.Tila.Pelaaja.Sijainti;
+            var t = PeliApu.Matkusta(m, "lontoo", Kulkutapa.Bussi);
+            Oleta.Tosi(t.Ok, t.Virhe);
+            var polku = t.Polku;
+            Oleta.Tosi(polku != null && polku.Count > 0, "bussin polku kirjattu");
+            var pisteet = PeliApu.Matkapisteet(KultaisetApu.Verkko, lahto, polku, t.Kohde);
+            Oleta.Sama(polku.Count + 1, pisteet.Count, "lähtö + reitin askeleet");
+            var a = PeliApu.Koordinaatti(KultaisetApu.Verkko, lahto).Value;
+            var b = PeliApu.Koordinaatti(KultaisetApu.Verkko, t.Kohde).Value;
+            Oleta.Tosi(pisteet[0] == (a.Lat, a.Lon) && pisteet[pisteet.Count - 1] == (b.Lat, b.Lon), "päät");
+            // Ilman polkua (lento): lähtö ja kohde.
+            Oleta.Sama(2, PeliApu.Matkapisteet(KultaisetApu.Verkko, lahto, null, t.Kohde).Count);
+        }
+
         [Testi] static void BussiLontooseenSaapuuIlmanAikaa()
         {
             var m = UusiPariisissa();

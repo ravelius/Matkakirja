@@ -47,12 +47,33 @@ namespace Matkakirja.Natiivi
         public Sijainti Kohde;
         /// <summary>Kaupunki, johon saavuttiin (Matka.Saapui), tai null reitin varrella.</summary>
         public string Saapui;
+        /// <summary>Kuljettu polku lähdön jälkeen (web path; nappulan matkapisteet), null lennossa.
+        /// Matka.Tila.ViimePolku nollautuu jo seuraavan vuoron alussa, joten se kirjataan tähän.</summary>
+        public List<Sijainti> Polku;
         public bool Liikkui => !Lahto.Equals(Kohde);
     }
 
     public static class PeliApu
     {
         public const string Valuutta = "puntaa";
+
+        /// <summary>
+        /// Pelinappulan matkapisteet (Kartta/Nappula.Aja): lähtö ja reitin askeleet (Matka.Tila.ViimePolku,
+        /// lähtö ei mukana kuten webin path) tai pelkkä kohde, jos polkua ei ole. Tuntemattomat ohitetaan.
+        /// </summary>
+        public static List<(double Lat, double Lon)> Matkapisteet(IReittiverkko v, Sijainti lahto, IReadOnlyList<Sijainti> polku, Sijainti kohde)
+        {
+            var pisteet = new List<(double, double)>();
+            void Lisaa(Sijainti s)
+            {
+                var k = Koordinaatti(v, s);
+                if (k.HasValue && (pisteet.Count == 0 || pisteet[pisteet.Count - 1] != (k.Value.Lat, k.Value.Lon))) pisteet.Add((k.Value.Lat, k.Value.Lon));
+            }
+            Lisaa(lahto);
+            if (polku != null && polku.Count > 0) foreach (var s in polku) Lisaa(s);
+            else Lisaa(kohde);
+            return pisteet;
+        }
 
         // --- nimet ------------------------------------------------------------
 
@@ -339,7 +360,10 @@ namespace Matkakirja.Natiivi
                 }
                 switch (tapa)
                 {
-                    case Kulkutapa.Bussi: r = m.Bussi(kohde); break;
+                    case Kulkutapa.Bussi:
+                        tulos.Polku = m.BussiPolku(KaupunkiJossa(m), kohde);
+                        r = m.Bussi(kohde);
+                        break;
                     case Kulkutapa.Lento:
                         if (!mannerlento) { r = m.Lenna(kohde); break; }
                         var ml = new Kaupat(m).MannerLento(kohde);
@@ -351,7 +375,9 @@ namespace Matkakirja.Natiivi
                         {
                             // Tallennus jäi heiton ja siirron väliin: noppa on jo heitetty.
                             tulos.Noppa = m.Tila.Noppa;
-                            r = m.Liiku(ValitseSiirto(m.Verkko, m.Tila.Siirrot, kohde, m.Tila.Kulkutapa ?? tapa));
+                            var jatko = ValitseSiirto(m.Verkko, m.Tila.Siirrot, kohde, m.Tila.Kulkutapa ?? tapa);
+                            tulos.Polku = Polku(m, jatko);
+                            r = m.Liiku(jatko);
                             break;
                         }
                         if (m.Tila.Vaihe == Vaihe.Toiminta)
@@ -365,6 +391,7 @@ namespace Matkakirja.Natiivi
                         if (m.Tila.Vaihe == Vaihe.Siirto)
                         {
                             var avain = ValitseSiirto(m.Verkko, m.Tila.Siirrot, kohde, m.Tila.Kulkutapa ?? tapa);
+                            tulos.Polku = Polku(m, avain);
                             r = m.Liiku(avain);
                         }
                         break;
@@ -378,6 +405,11 @@ namespace Matkakirja.Natiivi
             }
             finally { m.Saapui -= kuuntelija; }
         }
+
+        static string KaupunkiJossa(Matka m) => m.Tila.Pelaaja.Sijainti.Kaupungissa ? m.Tila.Pelaaja.Sijainti.Kaupunki : null;
+
+        static List<Sijainti> Polku(Matka m, string avain) =>
+            avain != null && m.Tila.Siirrot != null && m.Tila.Siirrot.TryGetValue(avain, out var s) ? new List<Sijainti>(s.Polku) : null;
 
         static MatkanTulos Epaonnistui(MatkanTulos t, Matka m, string virhe)
         {
