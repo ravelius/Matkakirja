@@ -384,7 +384,7 @@ namespace Matkakirja.Peli
             Matka.Laatat?.MannerOf(kaupunki)
             ?? (Matka.Verkko.Kaupungit.TryGetValue(kaupunki, out var k) && k.Manner != null ? k.Manner : Lauta);
 
-        bool TahtiLoytynyt(string manner) => Matka.Laatat != null && Matka.Laatat.TahtiLoytynyt(manner);
+        bool PaaaarreLoytynyt(string manner) => Matka.Laatat != null && Matka.Laatat.PaaaarreLoytynyt(manner);
 
         /// <summary>
         /// Web mannerLennot: kun oman mantereen pääaarre on löytynyt, lento
@@ -402,14 +402,14 @@ namespace Matkakirja.Peli
             if (p.Raha < Vakiot.LentoHinta) return kohteet;
             if (!p.Sijainti.Kaupungissa || !Matka.Verkko.Kaupungit.ContainsKey(p.Sijainti.Kaupunki)) return kohteet;
             var oma = MannerOf(p.Sijainti.Kaupunki);
-            if (!TahtiLoytynyt(oma)) return kohteet;
+            if (!PaaaarreLoytynyt(oma)) return kohteet;
             var nahdyt = new HashSet<string> { oma };
             foreach (var c in Matka.KaupunkiLista(Matka.Verkko))
             {
                 if (!c.Aloitus) continue;
                 var manner = MannerOf(c.Id);
                 if (!nahdyt.Add(manner)) continue;
-                if (TahtiLoytynyt(manner)) continue;
+                if (PaaaarreLoytynyt(manner)) continue;
                 kohteet.Add(new MannerlentoKohde { Kaupunki = c.Id, Manner = manner, Nimi = c.Nimi });
             }
             return kohteet;

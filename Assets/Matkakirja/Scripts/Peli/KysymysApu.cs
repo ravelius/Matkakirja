@@ -10,7 +10,9 @@ using Matkakirja.Peli;
 namespace Matkakirja.Natiivi
 {
     /// <summary>Kysymyksen muoto näkymälle (Peli.KysymysMuoto ilman pelilogiikan riippuvuutta).</summary>
-    public enum KysymysLaji { Visa, Vaite, Kuva, Lippu, Tapahtuma, Pulma, Tapahtumakortti }
+    public enum KysymysLaji { Visa, Vaite, Kuva, Lippu, Pulma,
+        /// <summary>POISTUMASSA (tapahtumakortit poistettu, C1): ei enää aseteta; Natiivi-UI siivoaa käytön.</summary>
+        Tapahtumakortti }
 
     /// <summary>
     /// Avoimen kysymyksen näytettävä tila. Ohjain rakentaa tämän uudelleen jokaisen
@@ -42,12 +44,6 @@ namespace Matkakirja.Natiivi
         /// <summary>50:50-nappi näkyvissä (neljä vaihtoehtoa, ei käytetty, ei vastattu).</summary>
         public bool PuolitusTarjolla;
         public int PuolitusHinta;
-        /// <summary>POISTUMASSA (kaksintaistelu poistettu, ei aseteta): puolitusnapin teksti; null = "50:50 {hinta} £".</summary>
-        public string PuolitusTeksti;
-        /// <summary>POISTUMASSA (kaksintaistelu poistettu, ei aseteta).</summary>
-        public bool PuolitusHarmaa;
-        /// <summary>POISTUMASSA (kaksintaistelu poistettu, ei aseteta): lisärivi vaihtoehtojen alla.</summary>
-        public string Huomautus;
 
         // --- pulma (Laji Pulma) ---
         /// <summary>Pulman tunniste (web puzzleId), piirroksen valintaan.</summary>
@@ -508,7 +504,14 @@ namespace Matkakirja.Natiivi
             return sb.ToString();
         }
 
-        public static KysymysLaji Laji(KysymysMuoto m) => (KysymysLaji)(int)m;
+        public static KysymysLaji Laji(KysymysMuoto m) => m switch
+        {
+            KysymysMuoto.Vaite => KysymysLaji.Vaite,
+            KysymysMuoto.Kuva => KysymysLaji.Kuva,
+            KysymysMuoto.Lippu => KysymysLaji.Lippu,
+            KysymysMuoto.Pulma => KysymysLaji.Pulma,
+            _ => KysymysLaji.Visa,
+        };
 
         /// <summary>Web TOKEN_TYPES[type].name (yleisnimet; maakohtaiset paikallisaarteet myöhemmin).</summary>
         public static string LaatanNimi(string tyyppi)
@@ -532,7 +535,7 @@ namespace Matkakirja.Natiivi
             if (nimi == null) return "Laatta oli tyhjä.";
             var osat = new List<string> { "Löysit: " + nimi };
             if (l.RahaLisays != 0) osat.Add($"+{l.RahaLisays} {valuutta}");
-            if (l.TahtiLisays != 0) osat.Add("+" + l.TahtiLisays + " ◈");
+            if (l.PaaaarreLisays != 0) osat.Add("+" + l.PaaaarreLisays + " ◈");
             return string.Join(" · ", osat);
         }
 
@@ -620,28 +623,6 @@ namespace Matkakirja.Natiivi
                 d.VuoroVaihtuu = q.OikeinVastattu != true && q.Laji != KysymysMuoto.Pulma;
             }
             return d;
-        }
-
-        /// <summary>Tapahtumakortti näkymäksi: teksti ja Jatka (ei vaihtoehtoja, ei aikarajaa).</summary>
-        public static KysymysNaytto Tapahtumakortti(Matka m, Tapahtumakortti kortti)
-        {
-            string kaupunki = kortti.Kaupunki != null && m.Verkko.Kaupungit.TryGetValue(kortti.Kaupunki, out var k) ? k.Nimi : kortti.Kaupunki;
-            string vaikutus = null;
-            if (kortti.Vaikutus?.Laji == TapahtumaVaikutus.Raha && kortti.Vaikutus.Maara.HasValue)
-                vaikutus = kortti.Vaikutus.Maara.Value >= 0 ? $"+{kortti.Vaikutus.Maara.Value} puntaa" : $"{kortti.Vaikutus.Maara.Value} puntaa";
-            else if (kortti.Vaikutus?.Laji == TapahtumaVaikutus.Kyyti) vaikutus = "Kyyti naapurikaupunkiin";
-            else if (kortti.Vaikutus?.Laji == TapahtumaVaikutus.Viive) vaikutus = "Menetät vuoron";
-            return new KysymysNaytto
-            {
-                Laji = KysymysLaji.Tapahtumakortti,
-                Otsikko = string.IsNullOrEmpty(kaupunki) ? "Tapahtuma" : kaupunki + " · tapahtuma",
-                Kysymys = kortti.Teksti,
-                Raha = m.Tila.Pelaaja.Raha,
-                Vastattu = true,
-                Oikein = true,
-                Loyto = vaikutus,
-                JatkaTeksti = "Jatka",
-            };
         }
 
         static string J(string s)

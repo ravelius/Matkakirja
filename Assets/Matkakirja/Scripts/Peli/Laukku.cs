@@ -146,7 +146,7 @@ namespace Matkakirja.Natiivi
                 d.AarninLuettelo.Add(new LaukkuAarre
                 {
                     Id = "aarni:" + manner, Manner = manner, Nimi = a.Nimi, KuvaUrl = a.KuvaUrl,
-                    Loydetty = m.Laatat != null && m.Laatat.TahtiLoytynyt(manner),
+                    Loydetty = m.Laatat != null && m.Laatat.PaaaarreLoytynyt(manner),
                 });
             }
 

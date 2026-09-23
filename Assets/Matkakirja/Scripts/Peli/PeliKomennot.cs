@@ -106,12 +106,6 @@ namespace Matkakirja.Natiivi
                     var tapa = PeliApu.TapaTekstista(A(1));
                     return tapa == null ? "tuntematon tapa " + A(1) : ohjain.Valitse(tapa.Value);
                 }
-                case "koe":
-                    switch (A(1))
-                    {
-                        case "tapahtuma": return ohjain.KoeTapahtuma();
-                        default: return "käyttö: koe tapahtuma";
-                    }
                 case "mannerlennot":
                     return ohjain.AvaaMannerlennot();
                 case "peruuta":
@@ -213,7 +207,8 @@ namespace Matkakirja.Natiivi
                     return ohjain.UusiMatka(A(1), long.TryParse(A(2), NumberStyles.Integer, CultureInfo.InvariantCulture, out var ms) ? ms : (long?)null);
                 case "uusi-peli":
                     if (ohjain.Verkko == null) return "sisältö ei ole vielä latautunut";
-                    ohjain.UusiPeli(long.TryParse(A(1), NumberStyles.Integer, CultureInfo.InvariantCulture, out var s) ? s : (long?)null);
+                    // uusi-peli [siemen] [kaupunki]: oletuslähtö on Lontoo (C8); käsikirjoitukset antavat kaupungin.
+                    ohjain.UusiPeli(long.TryParse(A(1), NumberStyles.Integer, CultureInfo.InvariantCulture, out var s) ? s : (long?)null, A(2));
                     return null;
                 case "peli":
                     if (A(1) != "pois" && A(1) != "paalle") return "käyttö: peli pois|paalle";

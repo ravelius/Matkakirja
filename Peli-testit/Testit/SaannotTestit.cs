@@ -34,7 +34,7 @@ namespace Matkakirja.Peli.Testit
                 ["PULLA_HINTA"] = KauppaVakiot.PullaHinta,
                 ["RECORD_DAYS"] = LaattaVakiot.EnnatysPaivat, ["STAR_PRIZE"] = LaattaVakiot.PaaaarrePalkkio,
                 ["MANNER_AARRE_ARVO"] = LaattaVakiot.MannerAarreArvo,
-                ["XP_EXPLORE"] = Kokemus.Tutkiminen, ["XP_HARD_ANSWER"] = Kokemus.VaikeaVastaus, ["XP_NEW_BOARD"] = Kokemus.UusiLauta,
+                ["XP_EXPLORE"] = Kokemus.Tutkiminen, ["XP_HARD_ANSWER"] = Kokemus.VaikeaVastaus, ["XP_NEW_BOARD"] = Kokemus.EnsimmainenKaupunki,
                 ["XP_NEW_CITY"] = Kokemus.UusiKaupunki, ["XP_PUZZLE"] = Kokemus.Pulma, ["XP_RECORD"] = Kokemus.Ennatys,
                 ["XP_STAR"] = Kokemus.Paaaarre,
             };
@@ -52,15 +52,18 @@ namespace Matkakirja.Peli.Testit
             Vali("PIENI_AARRE_ARVO", LaattaVakiot.PieniMin, LaattaVakiot.PieniMax);
             Vali("ISO_AARRE_ARVO", LaattaVakiot.IsoMin, LaattaVakiot.IsoMax);
             var painot = MiniJson.Objekti(s["FORM_WEIGHTS"]);
+            // Web: quiz, claim, photo, flag, event. Natiivissa ei tapahtumamuotoa (C1): webin event-paino
+            // siirtyy maailmankartalla aina visalle, joten C#:n visa = quiz + event.
             string[] webNimet = { "quiz", "claim", "photo", "flag", "event" };
             var cs = Kysely.MuotoPainot.ToList();
             Oleta.Sama(webNimet.Length, painot.Count, "FORM_WEIGHTS-avaimet");
+            Oleta.Sama(webNimet.Length - 1, cs.Count, "C#-muodot ilman tapahtumaa");
             for (int i = 0; i < webNimet.Length; i++)
-            {
-                // Järjestys on osa arvontaa (Object.entries): sama järjestys ja arvot.
                 Oleta.Sama(webNimet[i], painot.Keys.ElementAt(i), "FORM_WEIGHTS-järjestys");
-                if ((int)(double)painot[webNimet[i]] != cs[i].Value) erot.Add($"FORM_WEIGHTS.{webNimet[i]}: paketti {painot[webNimet[i]]}, C# {cs[i].Value}");
-            }
+            int W(string n) => (int)(double)painot[n];
+            if (W("quiz") + W("event") != cs[0].Value) erot.Add($"FORM_WEIGHTS.quiz+event: paketti {W("quiz") + W("event")}, C# {cs[0].Value}");
+            for (int i = 1; i < cs.Count; i++)
+                if (W(webNimet[i]) != cs[i].Value) erot.Add($"FORM_WEIGHTS.{webNimet[i]}: paketti {W(webNimet[i])}, C# {cs[i].Value}");
             if (!Equals(s["MANNERLENTO_ILMOITUS"], KauppaVakiot.MannerlentoIlmoitus)) erot.Add("MANNERLENTO_ILMOITUS-teksti eroaa");
             if (erot.Count > 0) throw new Exception("paketin säännöt ≠ C#: " + string.Join("; ", erot));
         }

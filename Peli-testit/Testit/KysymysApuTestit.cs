@@ -101,21 +101,6 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama("https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20C%C3%B4te%20d'Ivoire.svg?width=320",
                 KysymysApu.CommonsUrl("Flag of Côte d'Ivoire.svg", 320));
         }
-        [Testi] static void TapahtumakorttiNakymaksi()
-        {
-            var m = Matka.Luo(KultaisetApu.Verkko, new Satunnainen(3), "Fogg", "pariisi", KultaisetApu.Laattamaarat);
-            var k = new Kysely(m, KyselyTestit.Data);
-            var tap = Tapahtumat.Kytke(k, Tapahtumadata.LueKansiosta(KultaisetApu.Paketti));
-            m.AloitaVuoro();
-            Oleta.Tosi(tap.Avaa("pariisi").Ok, "avaa");
-            var d = KysymysApu.Tapahtumakortti(m, m.Tila.Tapahtumakortti);
-            Oleta.Sama(KysymysLaji.Tapahtumakortti, d.Laji);
-            Oleta.Sama("Pariisi · tapahtuma", d.Otsikko);
-            Oleta.Sama(m.Tila.Tapahtumakortti.Teksti, d.Kysymys);
-            Oleta.Tosi(d.Vastattu && d.Vaihtoehdot.Count == 0 && d.Sekunnit == null, "vain Jatka");
-            Oleta.Tosi(tap.Sulje().Ok, "sulje");
-            Oleta.Tosi(m.Tila.Vaihe != Vaihe.Tapahtuma, "kiinni");
-        }
         [Testi] static void PulmaNakymaksi()
         {
             var data = Pulmadata.LueKansiosta(KultaisetApu.Paketti);

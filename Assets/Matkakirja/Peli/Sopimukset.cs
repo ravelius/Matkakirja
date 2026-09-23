@@ -77,11 +77,11 @@ namespace Matkakirja.Peli
     public enum Kulkutapa { Maa, Meri, Lento, Bussi, Pysy }
 
     /// <summary>
-    /// Pelin vaihe (web phase). Tapahtuma = 'event' (tapahtumakortti auki, Peli/Tapahtumat.cs).
-    /// Webin 'duel' on poistettu pelistä (rosvolaatat, Raamattu 25.8.2026); vanhan tallennuksen
-    /// vaihe "Kaksintaistelu" luetaan Toiminnaksi (Pelitila.Paivita).
+    /// Pelin vaihe (web phase). Webin 'duel' (rosvolaatat, Raamattu 25.8.2026) ja 'event'
+    /// (tapahtumakortit, Fablen tarkastus C1 23.9.2026) on poistettu; vanhan tallennuksen
+    /// vaiheet "Kaksintaistelu" ja "Tapahtuma" luetaan Toiminnaksi (Pelitila.Paivita).
     /// </summary>
-    public enum Vaihe { Aloitus, Toiminta, Heitto, Siirto, Kysymys, Ohi, Tapahtuma }
+    public enum Vaihe { Aloitus, Toiminta, Heitto, Siirto, Kysymys, Ohi }
 
     /// <summary>Vuorokaudenaika (web timeOfDay).</summary>
     public enum Vuorokaudenaika { Aamu, Keskipaiva, Ilta, Yo }

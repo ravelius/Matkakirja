@@ -1,9 +1,9 @@
 // KULTAINEN KAUPPAJÄLKI: verkkopelin js/game.js ajaa rahan ja kauppojen
 // teot (kulttuurivisa, lehden minitehtävä, nostolaskuri, pulun karttaohje,
 // pullavinkki ja -ostos, eläintäky, juliste, mannerlento, pöllön sähke,
-// voittotarkistus, availableActions) onnistuvina ja epäonnistuvina, ja
+// availableActions) onnistuvina ja epäonnistuvina, ja
 // jokaisen teon tulos ja sen jälkeinen tila kirjataan tiedostoon
-// Kultaiset/kauppajalki.json. C#-portti (Peli/Kaupat.cs, Voitto.cs) toistaa
+// Kultaiset/kauppajalki.json. C#-portti (Peli/Kaupat.cs) toistaa
 // saman käsikirjoituksen testissä Testit/KauppaTestit.cs ja vaatii
 // identtisen jäljen, myös satunnaislukukutsujen määrän ja tallennuksen yli.
 //
@@ -95,7 +95,6 @@ function tila(g, teko, args, tulos) {
       elaintayt: jarj(g.elaintakyLunastetut),
       julisteet: jarj(g.julisteet),
     },
-    voittaja: g.winner ? g.winner.id : null,
   };
 }
 
@@ -129,7 +128,6 @@ function suorita(g, teko, args) {
       if (duel) throw new Error('sähke avasi kaksintaistelun, vaikka rosvolaattoja ei ole');
       return tulos;
     }
-    case 'voitto': return g.checkWin();
     case 'travel': return { ok: g.actionTravel(args[0]).ok };
     case 'stay': return { ok: g.actionTravel('stay').ok };
     case 'roll': return { ok: g.actionRoll().ok };
@@ -225,7 +223,6 @@ ajot.push(aja({ nimi: 'lehti ja kassa', seed: 7, start: 'pariisi' }, (k) => {
   k('elaintaky', 'FIN', 20);
   k('juliste', 'ateena-nike');
   k('minitehtava', 'pariisi', 'fokus:taky1', true, 50);
-  k('voitto');
   // Kassa ei ole vuorosidonnainen: sama toimii kesken matkan.
   k('raha', 300);
   k('travel', 'land');
@@ -260,7 +257,6 @@ ajot.push(aja({ nimi: 'mannerlento', seed: 21, start: 'pariisi' }, (k) => {
   k('cancel');
   k('tallenna');
   k('mannerlento', lennot[1].city);              // tasan 300: onnistuu, raha 0
-  k('voitto');
   k('raha', 1000);
   // Lennon jälkeen: uusi manner, sen tähti kateissa → ei lentoja.
   k('sahke', laatta(k.g, 'pieniAarre'), 0);       // palkkio 0: ei aid-tapahtumaa
@@ -294,7 +290,6 @@ ajot.push(aja({ nimi: 'pöllö', seed: 13, start: 'newyork', koe: true, pollo: t
   k('mannerlento', kohteet[0].city);
   k('kulttuuri', kaupunki(k.g), true, 25);
   k('pullavinkki', kaupunki(k.g));
-  k('voitto');
 }));
 
 const tekoja = ajot.reduce((s, a) => s + a.askeleet.length - 1, 0);

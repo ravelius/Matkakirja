@@ -45,10 +45,8 @@ namespace Matkakirja.Peli
         public int Oikein;
         /// <summary>Kysymysten taso (web quizLevel: 'easy' → Helppo, muuten Perus).</summary>
         public Vaikeustaso Taso = Vaikeustaso.Perus;
-        /// <summary>Tekoälypelaaja (web isBot): ei kohtaamisia eikä tasokuplia.</summary>
-        public bool Botti;
         /// <summary>Kannetut unohdetut aarteet (web stars).</summary>
-        public int Tahdet;
+        public int Paaaarteet;
         /// <summary>Käännetyt laatat tyyppeinä (web finds; pöllön korvaama "empty").</summary>
         public List<string> Loydot = new List<string>();
         /// <summary>Löydön manner samoin indeksein (web findManner; null = ei merkitty).</summary>
@@ -105,8 +103,6 @@ namespace Matkakirja.Peli
         /// julisteet. Tallennusversiossa 3 valinnainen kenttä "kaupat".
         /// </summary>
         public Kauppatila Kaupat = new Kauppatila();
-        /// <summary>Voittaja (web winner.id; Peli/Voitto.cs). Vain moninpelissä. Valinnainen kenttä "voittaja".</summary>
-        public int? VoittajaId;
 
         /// <summary>Laudan aarrelaatat (web world.tokens/revealed/starsFound). null = peli ilman laattoja.</summary>
         public Laattamaailma Laatat;
@@ -120,8 +116,6 @@ namespace Matkakirja.Peli
         public bool PolloLoydetty = true;
         /// <summary>Nähdyt pulmat kaupunki-id:nä (web puzzlesSeen ilman laudan etuliitettä; Peli/Pulmat.cs).</summary>
         public HashSet<string> NahdytPulmat = new HashSet<string>();
-        /// <summary>Avoin tapahtumakortti (web eventCard; Peli/Tapahtumat.cs), vaiheessa Tapahtuma.</summary>
-        public Tapahtumakortti Tapahtumakortti;
         /// <summary>Luetun tallennuksen versio (0 = ei luettu). Ei tallenneta.</summary>
         public int LuettuVersio;
 
@@ -186,8 +180,7 @@ namespace Matkakirja.Peli
                 Kentta(sb, "kysytty", p.Kysytty.ToString(CultureInfo.InvariantCulture));
                 Kentta(sb, "oikein", p.Oikein.ToString(CultureInfo.InvariantCulture));
                 Kentta(sb, "taso", Teksti(p.Taso.ToString()));
-                Kentta(sb, "botti", p.Botti ? "true" : "false");
-                Kentta(sb, "tahdet", p.Tahdet.ToString(CultureInfo.InvariantCulture));
+                Kentta(sb, "tahdet", p.Paaaarteet.ToString(CultureInfo.InvariantCulture));
                 Kentta(sb, "loydot", "[" + string.Join(",", p.Loydot.Select(Teksti)) + "]");
                 Kentta(sb, "loytoMantereet", "[" + string.Join(",", p.LoytoMantereet.Select(Teksti)) + "]");
                 Kentta(sb, "loytoMaat", "[" + string.Join(",", p.LoytoMaat.Select(Teksti)) + "]");
@@ -196,20 +189,17 @@ namespace Matkakirja.Peli
             sb.Append(']');
             sb.Append(",\"kysely\":");
             Kysely.Kirjoita(sb);
-            // Kaupat ja voittaja (Peli/Kaupat.cs, Voitto.cs): versio 3, valinnaiset.
+            // Kaupat (Peli/Kaupat.cs): versio 3.
             sb.Append(",\"kaupat\":");
             Kaupat.Kirjoita(sb);
-            Kentta(sb, "voittaja", VoittajaId.HasValue ? VoittajaId.Value.ToString(CultureInfo.InvariantCulture) : "null");
             sb.Append(",\"laattamaailma\":");
             if (Laatat == null) sb.Append("null"); else Laatat.Kirjoita(sb);
             Kentta(sb, "ennatys", EnnatysKirjattu ? "true" : "false");
             Kentta(sb, "ennatysPaiva", EnnatysPaiva.HasValue ? EnnatysPaiva.Value.ToString(CultureInfo.InvariantCulture) : "null");
             Kentta(sb, "polloAarteena", PolloAarteena ? "true" : "false");
             Kentta(sb, "polloLoydetty", PolloLoydetty ? "true" : "false");
-            // Pulmat ja tapahtumakortit: valinnaiset kentät (puuttuvat vanhasta tallennuksesta).
+            // Pulmat: valinnainen kenttä (puuttuu vanhasta tallennuksesta).
             Kentta(sb, "pulmatNahty", "[" + string.Join(",", NahdytPulmat.OrderBy(k => k, StringComparer.Ordinal).Select(Teksti)) + "]");
-            sb.Append(",\"tapahtumakortti\":");
-            if (Tapahtumakortti == null) sb.Append("null"); else Tapahtumakortti.Kirjoita(sb);
             sb.Append('}');
             return sb.ToString();
         }
@@ -256,8 +246,7 @@ namespace Matkakirja.Peli
                     Oikein = (int)(MiniJson.Luku(pd, "oikein") ?? 0),
                     Taso = MiniJson.Teksti(pd, "taso") is string taso
                         ? (Vaikeustaso)Enum.Parse(typeof(Vaikeustaso), taso) : Vaikeustaso.Perus,
-                    Botti = MiniJson.Totuus(pd, "botti"),
-                    Tahdet = (int)(MiniJson.Luku(pd, "tahdet") ?? 0),
+                    Paaaarteet = (int)(MiniJson.Luku(pd, "tahdet") ?? 0),
                     Loydot = Tekstit(pd, "loydot"),
                     LoytoMantereet = Tekstit(pd, "loytoMantereet"),
                     LoytoMaat = Tekstit(pd, "loytoMaat"),
@@ -268,18 +257,16 @@ namespace Matkakirja.Peli
             }
             if (t.Pelaajat.Count == 0) throw new FormatException("tallennuksessa ei ole pelaajia");
             t.Kysely = Kyselytila.Lue(MiniJson.Kentta(o, "kysely") as Dictionary<string, object>);
-            // Kaupat ja voittaja: puuttuva kenttä (vanha tallennus) = tyhjä tila.
+            // Kaupat: puuttuva kenttä (vanha tallennus) = tyhjä tila.
             t.Kaupat = Kauppatila.Lue(MiniJson.Kentta(o, "kaupat") as Dictionary<string, object>);
-            t.VoittajaId = MiniJson.Luku(o, "voittaja") is double vo ? (int)vo : (int?)null;
             if (MiniJson.Kentta(o, "laattamaailma") is Dictionary<string, object> lm) t.Laatat = Laattamaailma.Lue(lm, kaupungit);
             t.EnnatysKirjattu = MiniJson.Totuus(o, "ennatys");
             t.EnnatysPaiva = MiniJson.Luku(o, "ennatysPaiva") is double ep ? (int)ep : (int?)null;
             // Web fromJSON: polloLoydetty = polloAarteena ? (tallennettu ?? true) : true.
             t.PolloAarteena = MiniJson.Totuus(o, "polloAarteena");
             t.PolloLoydetty = !t.PolloAarteena || MiniJson.Totuus(o, "polloLoydetty", true);
-            // Pulmat ja tapahtumakortit (valinnaiset): web puzzlesSeen ?? [], eventCard ?? null.
+            // Pulmat (valinnainen): web puzzlesSeen ?? [].
             foreach (var s in Tekstit(o, "pulmatNahty")) if (s != null) t.NahdytPulmat.Add(s);
-            t.Tapahtumakortti = Tapahtumakortti.Lue(MiniJson.Kentta(o, "tapahtumakortti") as Dictionary<string, object>);
             return t;
         }
 
@@ -307,8 +294,11 @@ namespace Matkakirja.Peli
             }
             // Rosvon kaksintaistelu on poistettu pelistä (Raamattu 25.8.2026): vanhan tallennuksen
             // kentät kaksintaistelu ja avoinKaksintaistelu ohitetaan, ja auki jäänyt kaksintaistelu
-            // palaa vaiheeseen Toiminta.
-            if (MiniJson.Teksti(o, "vaihe") == "Kaksintaistelu") o["vaihe"] = nameof(Vaihe.Toiminta);
+            // palaa vaiheeseen Toiminta. Samoin poistetut tapahtumakortti (Fablen tarkastus C1),
+            // moninpelin voittaja ja tekoälypelaaja (A3): kentät tapahtumakortti, voittaja ja botti
+            // ohitetaan, ja auki jäänyt kortti palaa vaiheeseen Toiminta.
+            var vanhaVaihe = MiniJson.Teksti(o, "vaihe");
+            if (vanhaVaihe == "Kaksintaistelu" || vanhaVaihe == "Tapahtuma") o["vaihe"] = nameof(Vaihe.Toiminta);
             o["versio"] = (double)TallennusVersio;
         }
 

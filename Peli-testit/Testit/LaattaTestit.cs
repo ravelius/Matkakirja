@@ -115,7 +115,7 @@ namespace Matkakirja.Peli.Testit
                     if (l != null)
                     {
                         raha += l.RahaLisays;
-                        tahtia += l.TahtiLisays;
+                        tahtia += l.PaaaarreLisays;
                         xp += l.TpLisays;
                         if (l.Ennatys && !ennatysKirjattu) { ennatysKirjattu = true; xp += LaattaVakiot.TpEnnatys; }
                         finds.Add(l.Tyyppi);
@@ -130,7 +130,7 @@ namespace Matkakirja.Peli.Testit
                     Oleta.Sama(Kokonais(k["raha"]), raha, kohta + " raha");
                     Oleta.Sama(Kokonais(k["tahdet"]), tahtia, kohta + " tähdet");
                     Oleta.Sama(Kokonais(k["xp"]), xp, kohta + " tp");
-                    Oleta.Sama(Parit(k["starsFound"]), Parit(maailma.TahdetLoydetty), kohta + " starsFound");
+                    Oleta.Sama(Parit(k["starsFound"]), Parit(maailma.PaaaarteetLoydetty), kohta + " starsFound");
                     Oleta.Sama((bool)k["polloLoydetty"], polloLoydetty, kohta + " polloLoydetty");
                     Oleta.Sama(Kokonais(k["rngKaanto"]), rng.Kutsuja - ennen, kohta + " kutsuja käännössä");
                     Oleta.Sama(Kokonais(k["rngCalls"]), rng.Kutsuja, kohta + " rngCalls");

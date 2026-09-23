@@ -266,9 +266,8 @@ namespace Matkakirja.Natiivi
             if (!d.Vastattu)
             {
                 if (!string.IsNullOrEmpty(d.Vihje)) y = Lisaa("Vihje: " + d.Vihje, 15, FontStyles.Italic, y + 2, leveys);
-                y = Lisaa(d.Huomautus, 14, FontStyles.Italic, y, leveys);
-                string puolitusTeksti = d.PuolitusTeksti ?? $"50:50 {d.PuolitusHinta} {d.Valuutta}";
-                bool puolitusKay = !d.PuolitusHarmaa && d.Raha >= d.PuolitusHinta;
+                string puolitusTeksti = $"50:50 {d.PuolitusHinta} {d.Valuutta}";
+                bool puolitusKay = d.Raha >= d.PuolitusHinta;
                 bool vihje = d.VihjeTarjolla, puolitus = d.PuolitusTarjolla;
                 if (vihje || puolitus)
                 {
@@ -282,17 +281,14 @@ namespace Matkakirja.Natiivi
                     else if (vihje)
                         kv = Nappi($"Vihje {d.VihjeHinta} {d.Valuutta}", y, puoli, 0, nappi, d.Raha >= d.VihjeHinta, () => t?.Vihje?.Invoke(), 15);
                     else
-                        kv = Nappi(puolitusTeksti, y, d.PuolitusTeksti != null ? leveys : puoli, 0, nappi, puolitusKay, () => t?.Puolita?.Invoke(), 15);
+                        kv = Nappi(puolitusTeksti, y, puoli, 0, nappi, puolitusKay, () => t?.Puolita?.Invoke(), 15);
                     y += kv + Vali;
                 }
             }
             else
             {
-                if (d.Laji != KysymysLaji.Tapahtumakortti)
-                {
-                    string tulos = d.AikaLoppui ? "Aika loppui." : d.Oikein ? "Oikein!" : "Väärin.";
-                    y = Lisaa(tulos, 20, FontStyles.Bold, y + 4, leveys);
-                }
+                string tulos = d.AikaLoppui ? "Aika loppui." : d.Oikein ? "Oikein!" : "Väärin.";
+                y = Lisaa(tulos, 20, FontStyles.Bold, y + 4, leveys);
                 if (d.TulosVaihe < 2) { Viimeistele(d, y + Reuna, true); return; }
                 y = Lisaa(d.Repliikki, 15, FontStyles.Italic, y, leveys, null, TextAlignmentOptions.Left);
                 y = Lisaa(d.Loyto, 17, FontStyles.Normal, y, leveys);
