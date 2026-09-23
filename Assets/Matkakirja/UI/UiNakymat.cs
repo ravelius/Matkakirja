@@ -198,6 +198,8 @@ namespace Matkakirja.Natiivi
             Aanentasot.Sulje();
             Matkalaukku.Sulje();
             Huipennus.Sulje();
+            // Aloitus (kerros 45) jäi muuten kaiken päälle: ui sulje ja pelin tilanvaihdot sulkevat sen.
+            Aloitus.Piilota();
             Nostokortti.Sulje();
             Vahvistus.Sulje();
             Matkavalinta.Piilota();
