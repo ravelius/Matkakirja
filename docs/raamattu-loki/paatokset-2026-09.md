@@ -1819,3 +1819,7 @@ Klo 11.2x. Lähteet: developers.google.com/maps/comms/eea/faq, /maps/documentati
 ## OMISTAJAN PAATOS: GOOGLEN 3D-LAATTOJA EI KAYTETA OLLENKAAN (EU-EHDOT JA 'EI MUUN KARTAN KANSSA' -RAJOITUS); NYKYAJAN NAKYMAT TEHDAAN AVOIMELLA MAASTOLLA, OMILLA LAATOILLA JA KOHDEKOHTAISILLA 3D-MALLEILLA (23.9.2026 klo 11.35)
 
 Klo 11.35. Lukutestiä vanhalla avaimella ei tehdä; siirtopromptin kohta poistuu.
+
+## TILINVAIHTO TEHTY: UUSI FABLE TILILLA B (local_742d1717-d642-426a-840b-c5c0e75578bf); TILIN A SESSIOT EIVAT NAKYNEET, OMISTAJA AVASI KAHDEKSAN UUTTA ROOLISESSIOTA, FABLE NIMESI, LAHETTI ALOITUKSET LUOVUTUKSIIN JA KYTKI RC:N; SESSION ID:T: PELIKOODARI local_7b5a6c65, KARTTASEPPA local_445a5c7b, JULKAISIJA local_9922c4b6, LAITETESTAAJA local_992b689f, SISALTOKIRJURI local_e5685e4a, POSTIVAHTI local_6f3d4c35, 3D-SELVITTAJA local_860f922b, SIIRTOSEPPA local_7a1255c5; MAIN v2148 (#2906) + #2904 (23.9.2026 klo 12.01)
+
+Fable 5.1 tilillä B; viikkokiintiö tilillä B 0 %. Uudet sessiot aloittavat luovutusdokumenteistaan (haarat julkaisija-luovutus-20260923, pelikoodari-luovutus-20260923-yo, karttaseppa-tyo-20260922, laitetestaaja, selvittaja-3d-luovutus, siirtoseppa-luovutus). Jono ennallaan: omistajan kierrokset → Pelikoodarin analyysi → 3D-moottoripäätös.
