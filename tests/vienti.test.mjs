@@ -173,7 +173,7 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
       .filter(([n, v]) => onSaantoArvo(v) && !['DUEL_PRIZE', 'BOT_SKILL'].includes(n)).map(([n]) => n))).size + 2, // + KATKOKUVA, LIVIAN_ASTRONAUTTI_KYPARA
     tapahtumat: ns('africa.js').AFRICA.events.length,
     linssiaineisto: 8,
-    radiot: avaimia(ns('radiot.js').RADIOT) + Object.keys(JSON.parse(readFileSync(join(JUURI, 'tools/vienti/radiokorvaavat.json'), 'utf8')).asemat).length,
+    radiot: avaimia(ns('radiot.js').RADIOT),
     aanitaulut: ns('viritysaanet.js').VIRITYSAANET.length + new Set([...ns('js/sound.js').AANITEHOSTEET, ...Object.keys(ns('js/sound.js').REAL_SAMPLES)]).size
       + ns('js/sound.js').AMBIENCE_TYPES.length + Object.keys(ns('js/sound.js').PULUN_TEHOSTEET).length
       + Object.keys(ns('js/siirtymamusiikki.js').RAIDAT).length + Object.keys(ns('js/musiikkivalitsin.js').TILARAIDAT).length
