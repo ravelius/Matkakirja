@@ -124,6 +124,7 @@ namespace Matkakirja.Linssit.Vesistot
                 Jarjestys = (int)(MiniJson.Luku(linssi, "jarjestys") ?? 20),
                 Ikoni = MiniJson.Teksti(linssi, "ikoni"),
                 Valokuva = MiniJson.Totuus(linssi, "valokuva", true),
+                Kesken = MiniJson.Totuus(linssi, "kesken", false),
                 Lahde = lahde == null ? null : new Lahde
                 {
                     Aineisto = MiniJson.Teksti(lahde, "aineisto"), Lisenssi = MiniJson.Teksti(lahde, "lisenssi"),

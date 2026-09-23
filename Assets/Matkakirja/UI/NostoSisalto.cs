@@ -144,6 +144,9 @@ namespace Matkakirja.Natiivi
                         // Maa talteen dataan (skandaalin ja hetken minitehtävän avain).
                         var data = Ob(MiniJson.Kentta(o, "data")) ?? o;
                         if (T(o, "maa") != null && !data.ContainsKey("$maa")) data["$maa"] = T(o, "maa");
+                        // Skeema 1.20+: tyypitetty kuva.url on valmis osoite (esim. elaintayt: tunnus tai
+                        // assets/elaimet/… → kohtaamiset/elaimet/…); data.kuva on vain raaka arvo.
+                        if (T(Ob(MiniJson.Kentta(o, "kuva")), "url") is string url && !data.ContainsKey("$kuvaUrl")) data["$kuvaUrl"] = url;
                         taulu[aid] = data;
                     }
                 }
@@ -167,6 +170,18 @@ namespace Matkakirja.Natiivi
             }
             catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui nostot: karttavalot: " + e.Message); }
             valojenMaat = m;
+        }
+
+        /// <summary>
+        /// Maan karttakohteiden nimet (web KOHDE_MAAT[iso] → nimi) pöllön sähkehakemistoon: sillä nimellä
+        /// kohdekortti otsikoidaan ja pelaaja sen muistaa. Tyhjä lista, jos maalla ei ole fokuskohteita.
+        /// </summary>
+        public static IEnumerator Karttakohteet(string iso, Action<List<string>> valmis)
+        {
+            List<object> lista = null;
+            if (!string.IsNullOrEmpty(iso))
+                yield return Moduuli($"moduulit/js/packs/fokuskohteet-{iso.ToLowerInvariant()}.json", $"FOKUSKOHTEET_{iso.ToUpperInvariant()}", l => lista = l);
+            valmis(lista?.Select(Ob).Where(x => x != null).Select(x => T(x, "nimi")).Where(n => !string.IsNullOrEmpty(n)).ToList() ?? new List<string>());
         }
 
         static IEnumerator Moduuli(string polku, string vienti, Action<List<object>> valmis)
@@ -229,7 +244,7 @@ namespace Matkakirja.Natiivi
             string vara = elain == null ? null : char.ToUpperInvariant(elain[0]) + elain.Substring(1)
                 + (UiSisalto.Maa(iso)?.Nimi is string maa ? ", " + maa : "");
             if (MiniJson.Kentta(d, "kuvat") is List<object> kk && kk.Count > 0) Kuvat(n, kk, "url");
-            else if (T(d, "kuva") is string k) n.Kuvat.Add(new NostoKuva { Lahde = k, Lyhyt = vara, Selite = vara });
+            else if ((T(d, "$kuvaUrl") ?? T(d, "kuva")) is string k) n.Kuvat.Add(new NostoKuva { Lahde = k, Lyhyt = vara, Selite = vara });
             foreach (var x in n.Kuvat) { x.Lyhyt ??= vara; x.Selite ??= x.Lyhyt; }
             return n;
         }

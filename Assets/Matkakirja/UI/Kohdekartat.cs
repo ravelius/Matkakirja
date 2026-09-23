@@ -92,6 +92,14 @@ namespace Matkakirja.Natiivi
         static IEnumerable<Dictionary<string, object>> Alkiot(string json) =>
             (Rakenne.Lista(MiniJson.Kentta(Ob(MiniJson.Jasenna(json ?? "{}")), "alkiot")) ?? new List<object>()).Select(Ob).Where(x => x != null);
 
+        static string MiniatyyriOsoite(string polku)
+        {
+            if (polku.StartsWith("http")) return polku;
+            string nimi = polku.Substring(polku.LastIndexOf('/') + 1);
+            if (nimi.IndexOf('.') < 0) nimi += ".png";
+            return Aanet.Juuri + "kohtaamiset/miniatyyrit/" + nimi;
+        }
+
         static Dictionary<string, Kohdekartta> Jasenna(string kohdekartat, string nahtavyydet, string miniatyyrit)
         {
             // Nähtävyysjutut: "kaupunki:nimi" → data {aika, teksti, kuvat, lainaus, lahde, wiki}.
@@ -106,9 +114,13 @@ namespace Matkakirja.Natiivi
             var piirrokset = new Dictionary<string, string>();
             foreach (var a in Alkiot(miniatyyrit))
             {
-                string kaupunki = T(a, "kaupunki"), nimi = T(a, "nimi"), polku = T(a, "data") ?? T(Ob(MiniJson.Kentta(a, "data")), "url");
+                // Skeema 1.18: kuva.url on valmis osoite. Vanhemmassa paketissa data on polku
+                // ("assets/kartat/miniatyyrit/x.webp") tai pelkkä tunnus ("denver-…"); molemmat ovat
+                // ämpärissä kansiossa kohtaamiset/miniatyyrit/ (pelin assetOsoite, tunnukselle .png).
+                string kaupunki = T(a, "kaupunki"), nimi = T(a, "nimi");
+                string polku = T(Ob(MiniJson.Kentta(a, "kuva")), "url") ?? T(a, "data") ?? T(Ob(MiniJson.Kentta(a, "data")), "url");
                 if (kaupunki != null && nimi != null && polku != null)
-                    piirrokset[kaupunki + ":" + nimi] = polku.StartsWith("http") ? polku : Aanet.Juuri + polku.TrimStart('/');
+                    piirrokset[kaupunki + ":" + nimi] = MiniatyyriOsoite(polku);
             }
             var t = new Dictionary<string, Kohdekartta>();
             foreach (var a in Alkiot(kohdekartat))

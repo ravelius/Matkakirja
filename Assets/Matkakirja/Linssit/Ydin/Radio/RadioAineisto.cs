@@ -31,6 +31,12 @@ namespace Matkakirja.Linssit.Radio
         /// <summary>Maan rivien järjestys (skeema 1.16); puuttuva = 1.</summary>
         public int Jarjestys = 1;
         /// <summary>
+        /// Siirtosepän ATS-tasoinen kättelytarkistus (tools/vienti/radiotarkistus.mjs, koepaketti v24):
+        /// false = virta ei aukea iOS:llä (ei TLS 1.3:a eikä ECDHE:tä, varmenne, DNS) → ei soiteta;
+        /// null = tarkistamatta (soitetaan kuten ennen).
+        /// </summary>
+        public bool? Toimii;
+        /// <summary>
         /// Omistajan luokkasääntö (23.9.2026 klo 21.1x): "sallittu" ja "epaselva" soivat, "kielletty"
         /// (ja v16:n vanha "linkki") avaa aseman sivun. null = tuntematon (varareitin moduuli): ei soittoa.
         /// </summary>
@@ -73,6 +79,14 @@ namespace Matkakirja.Linssit.Radio
 
         static Dictionary<string, object> Ob(object x) => x as Dictionary<string, object>;
         static List<object> Lista(object x) => x as List<object>;
+        /// <summary>Onko nykyinen kanava parempi (tai yhtä hyvä) kuin uusi rivi.</summary>
+        static bool Parempi(Asema nyt, Asema uusi)
+        {
+            bool nytToimii = nyt.Toimii != false, uusiToimii = uusi.Toimii != false;
+            if (nytToimii != uusiToimii) return nytToimii;
+            return nyt.Jarjestys <= uusi.Jarjestys;
+        }
+
         static void Lisaa(Dictionary<string, List<Asema>> d, string iso, Asema a)
         {
             if (!d.TryGetValue(iso, out var l)) d[iso] = l = new List<Asema>();
@@ -110,11 +124,13 @@ namespace Matkakirja.Linssit.Radio
                         Iso3 = iso, Nimi = MiniJson.Teksti(r, "nimi"), Url = url, Tyyppi = MiniJson.Teksti(r, "tyyppi"),
                         Yleisradio = MiniJson.Totuus(r, "yleisradio"), Luokka = luokka,
                         Jarjestys = (int)(MiniJson.Luku(r, "jarjestys") ?? 1),
+                        Toimii = MiniJson.Kentta(r, "toimii") is bool t ? t : (bool?)null,
                         Sivu = MiniJson.Teksti(r, "sivu"),
                         VaraUrl = MiniJson.Teksti(Ob(MiniJson.Kentta(r, "varaAani")), "url"),
                     };
-                    // Kanava = pienin järjestys (tasapelissä ensimmäinen); muut rivit vaihtoehdoiksi.
-                    if (a.Asemat.TryGetValue(iso, out var ed) && ed.Jarjestys <= asema.Jarjestys) Lisaa(a.Vaihtoehdot, iso, asema);
+                    // Kanava = toimiva rivi pienimmällä järjestyksellä (tasapelissä ensimmäinen); toimimaton
+                    // (toimii false) väistyy toimivan tieltä. Muut rivit vaihtoehdoiksi.
+                    if (a.Asemat.TryGetValue(iso, out var ed) && Parempi(ed, asema)) Lisaa(a.Vaihtoehdot, iso, asema);
                     else { if (ed != null) Lisaa(a.Vaihtoehdot, iso, ed); a.Asemat[iso] = asema; }
                 }
                 foreach (var v in a.Vaihtoehdot.Values) v.Sort((x, y) => x.Jarjestys.CompareTo(y.Jarjestys));

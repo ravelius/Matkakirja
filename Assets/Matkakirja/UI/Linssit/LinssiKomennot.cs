@@ -21,6 +21,14 @@
 //   ui linssi matka [aloitus|musta|valot|jakso i|kuva i|loppu]
 //   ui linssi radio [hiljaa|viritys|soi|linkki|virhe|pois]  maailmanradion kotelo keksityllä
 //                                         RadioTilalla (oletus soi; asteikon nimi ajaa virityssarjan)
+//   ui linssi valikko [keksinnot|matka] [kiinni|alusta]
+//                                         aikajanan ylärivi esimerkillä ja sen hampurilaisvalikko
+//                                         auki (Poistu, Aloita alusta, Kertoja, Taustamusiikki);
+//                                         kiinni = vain nappi, alusta = valikon Aloita alusta -teko
+//   ui linssi varusteet [id|ei] [paalla]  matkalaukun Varusteet esimerkkilinsseillä: ilman id:tä
+//                                         lohko kertoo päällä olevasta; id = ruutu napautettu
+//                                         (esikatselu + Aktivoi), ei = "Ei linssiä" napautettu,
+//                                         paalla = napautettu linssi on päällä ("Ota pois")
 //   ui linssi sulje                       auki oleva linssi kiinni (Rekisteri.Sulje)
 //   ui linssi pois                        kaikki linssien testinäkymät pois
 using System.Collections.Generic;
@@ -34,7 +42,7 @@ namespace Matkakirja.Natiivi
 {
     public static class LinssiKomennot
     {
-        public const string Ohje = "ui linssi valitsin|peite|selite|astro|kuva|sumu|vertailu|maa|keksinnot|matka|radio|sulje|pois";
+        public const string Ohje = "ui linssi valitsin|peite|selite|astro|kuva|sumu|vertailu|maa|keksinnot|matka|radio|valikko|varusteet|sulje|pois";
 
         public static string Aja(UiNakymat ui, string loput)
         {
@@ -93,11 +101,39 @@ namespace Matkakirja.Natiivi
                     return l.Aikajana.TestaaIhminen(a1.Length > 0 ? a1 : "jakso", Luku(a2, 0));
                 case "radio":
                     return l.Radio.Testaa(a1);
+                case "valikko":
+                {
+                    bool matka = a1 == "matka";
+                    string teko = matka || a1 == "keksinnot" ? a2 : a1;
+                    if (matka) l.Aikajana.TestaaIhminen("kuva", 0);
+                    else l.Aikajana.TestaaKeksinnot("pysakki", 0);
+                    var v = l.Aikajana.Valikko;
+                    // Ylärivi saa mittansa vasta asettelussa: valikko auki seuraavissa ruuduissa.
+                    v.Nappi.schedule.Execute(() =>
+                    {
+                        if (teko == "alusta") l.Aikajana.AloitaAlusta();
+                        else if (teko != "kiinni") v.Avaa();
+                    }).StartingIn(300);
+                    return matka ? "ihmisen matka: valikko" : "keksinnöt: valikko";
+                }
+                case "varusteet":
+                {
+                    var linssit = new List<LinssiTiedot>(Esimerkkilinssit())
+                    {
+                        new LinssiTiedot { Id = "vertailu", Nimi = "Vertailu", Lyhyt = "Maat rinnakkain: väkiluku, pinta-ala ja elinajanodote.", Jarjestys = 40 },
+                    };
+                    bool ei = a1 == "ei";
+                    string id = ei || a1.Length == 0 ? null : a1;
+                    string auki = a2 == "paalla" ? id : null;
+                    ui.Matkalaukku.TestaaVarusteet(linssit, auki, ei || id != null, id);
+                    return null;
+                }
                 case "sulje":
                     l.SuljeLinssi();
                     return null;
                 case "pois":
                     l.Valitsin.Sulje();
+                    l.Aikajana.Valikko.Sulje();
                     l.Peite.Aseta(false);
                     if (LinssiUi.Rekisteri?.Auki == null)
                     {

@@ -92,7 +92,15 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(true, l.Esitys.Kaynnissa);
             for (int i = 0; i < 60 * 30; i++) { y.Kello += 1 / 60.0; r.Paivita(); }
             Oleta.Tosi(l.Esitys.I >= 2, "30 s:ssa ollaan jo kohdejaksoissa: " + l.Esitys.I);
+            // Valikon "Aloita alusta" (web aloitaAlusta): uusi esitys alusta, kamera ei liiku.
+            var vanha = l.Esitys;
+            int ajot = y.Loki.Count(rivi => rivi == "ajo");
+            Oleta.Tosi(l.AloitaAlusta(), "aloita alusta");
+            Oleta.Tosi(!ReferenceEquals(vanha, l.Esitys) && l.Esitys.Kaynnissa && l.Esitys.I == 0, "uusi esitys alusta: " + l.Esitys.I);
+            Oleta.Sama(true, l.Auki);
+            Oleta.Sama(ajot, y.Loki.Count(rivi => rivi == "ajo"), "ei paluuajoa");
             r.Sulje();
+            Oleta.Sama(false, l.AloitaAlusta(), "suljettuna ei tee mitään");
             Oleta.Sama(true, y.PelikerroksetNakyvissa);
         }
 

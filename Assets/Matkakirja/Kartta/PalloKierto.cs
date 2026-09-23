@@ -55,6 +55,13 @@ namespace Matkakirja
         public double kallistus = 0.0;
         [Tooltip("Suurin kallistus lähimmässä näkymässä.")]
         public double maxKallistus = 60.0;
+        [Tooltip("Katseen vaakasuunta asteina (0 = kamera katsoo pohjoiseen, 90 = itään). Pelaajan eleet olettavat 0:n; lennon kuvaus kääntää ja palauttaa.")]
+        public double suuntima = 0.0;
+        [Tooltip("Katsottavan pisteen korkeus metreinä (lennon kuvaus katsoo konetta).")]
+        public double katseKorkeus = 0.0;
+        [Tooltip("Suuntiman ja katseen korkeuden palautuksen aikavakio lennon jälkeen, sekunteja.")]
+        public double palautusAika = 0.6;
+
         [Tooltip("Korkeus (km), jonka yläpuolella kallistus on nolla; väliltä se liukuu.")]
         public double kallistusRajaKm = 3000.0;
         [Tooltip("Kallistusasteita näytön pisteelle kahden sormen pystyvedossa.")]
@@ -86,7 +93,30 @@ namespace Matkakirja
             if (korkeus > 0) this.korkeus = math.clamp(korkeus, MinKorkeus(), MaxKorkeus());
         }
 
-        public void SeurantaLoppui() => Seurataan = false;
+        public void SeurantaLoppui() { Seurataan = false; vapaaKuvaus = false; }
+
+        /// <summary>Lennon kuvaus: kallistus ei ole korkeuden rajoittama, ja suuntima palautuu vasta seurannan jälkeen.</summary>
+        bool vapaaKuvaus;
+
+        /// <summary>
+        /// Lennon kuvaus (Nappula, LENNON ESITYS): kamera kiertää pistettä (lat, lon, katseKorkeus)
+        /// annetulla etäisyydellä, kallistuksella ja suuntimalla. Asettaa kameran heti, jotta
+        /// kone ja kamera liikkuvat samassa kehyksessä. Keskeyttää ajon; SeurantaLoppui palauttaa.
+        /// </summary>
+        public void Kuvaa(double lat, double lon, double etaisyys, double kallistusAsteina, double suuntimaAsteina, double katseenKorkeus)
+        {
+            ajo = null;
+            liuku = 0;
+            Seurataan = true;
+            vapaaKuvaus = true;
+            leveys = lat;
+            pituus = lon;
+            korkeus = math.max(100.0, etaisyys);
+            kallistus = math.clamp(kallistusAsteina, 0, 85);
+            suuntima = suuntimaAsteina;
+            katseKorkeus = katseenKorkeus;
+            Aseta();
+        }
 
         /// <summary>
         /// Pisteen paikka näytöllä pikseleinä (origo vasen alakulma kuten Input), esim. Natiivi-UI:n
@@ -211,8 +241,9 @@ namespace Matkakirja
                 Ohjaa(Time.unscaledDeltaTime);
                 if (ajo != null) Etene(Time.unscaledDeltaTime);
             }
+            if (!Seurataan && (suuntima != 0 || katseKorkeus != 0)) Palauta(Time.unscaledDeltaTime);
             Aseta();
-            var nakyma = new double4(pituus, leveys, korkeus, kallistus);
+            var nakyma = new double4(pituus, leveys, korkeus, kallistus + suuntima * 1000.0);
             if (!nakyma.Equals(edellinenNakyma)) { edellinenNakyma = nakyma; NakymaMuuttui?.Invoke(); }
             bool lepo = !Liikkeessa && !Peitetty;
             if (lepo != Levossa) { Levossa = lepo; LepoMuuttui?.Invoke(lepo); }
@@ -480,23 +511,36 @@ namespace Matkakirja
             return v * (x - r / 2.0);
         }
 
+        /// <summary>Lennon jälkeen suuntima kääntyy lyhintä tietä pohjoiseen ja katse laskeutuu maahan.</summary>
+        void Palauta(double dt)
+        {
+            double a = 1.0 - math.exp(-dt / math.max(0.05, palautusAika));
+            double s = ((suuntima % 360.0) + 540.0) % 360.0 - 180.0;
+            s -= s * a;
+            suuntima = math.abs(s) < 0.05 ? 0.0 : s;
+            katseKorkeus = katseKorkeus < 1.0 ? 0.0 : katseKorkeus * (1.0 - a);
+        }
+
         public void Aseta()
         {
             if (georeferenssi == null) return;
             if (korkeus <= 0.0) korkeus = MaxKorkeus();
-            kallistus = math.min(kallistus, KallistusRaja());
+            if (!vapaaKuvaus) kallistus = math.min(kallistus, KallistusRaja());
 
-            // Kamera kiertää maanpinnan pistettä (pituus, leveys): kallistus kääntää sen
-            // pystysuorasta etelään päin, etäisyys pysyy samana. Kallistus 0 = entinen
-            // suora katse maan keskipisteeseen.
-            double3 kohde = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(pituus, leveys, 0));
+            // Kamera kiertää pistettä (pituus, leveys, katseKorkeus): kallistus kääntää sen
+            // pystysuorasta katsesuuntaa vastapäätä (suuntima 0 = kamera etelässä, katse
+            // pohjoiseen), etäisyys pysyy samana. Kallistus 0 = suora katse alas.
+            double3 kohde = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(pituus, leveys, katseKorkeus));
             double3 ylos = CesiumWgs84Ellipsoid.GeodeticSurfaceNormal(kohde);
             double3 napa = new double3(0, 0, 1);
             double3 pohjoinen = math.normalize(napa - ylos * math.dot(napa, ylos));
+            double3 ita = math.normalize(math.cross(pohjoinen, ylos));
+            double b = math.radians(suuntima);
+            double3 eteen = pohjoinen * math.cos(b) + ita * math.sin(b);
             double k = math.radians(kallistus);
-            double3 suunta = ylos * math.cos(k) - pohjoinen * math.sin(k);
+            double3 suunta = ylos * math.cos(k) - eteen * math.sin(k);
             double3 silma = kohde + suunta * korkeus;
-            double3 kameranYlos = pohjoinen * math.cos(k) + ylos * math.sin(k);
+            double3 kameranYlos = eteen * math.cos(k) + ylos * math.sin(k);
 
             var gt = georeferenssi.transform;
             var p = gt.TransformPoint((float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(silma));

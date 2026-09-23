@@ -85,6 +85,21 @@ namespace Matkakirja.Linssit.Aikajana
             return true;
         }
 
+        /// <summary>
+        /// Valikon "Aloita alusta" (web aikajana.js aloitaAlusta kertomuskaarella: muisti pois ja
+        /// ajo uudestaan samalla linssillä). Esitys puretaan ja aloitetaan alusta; kamera palaa
+        /// linssin sulkiessa yhä sinne, mistä linssi alun perin avattiin. Muistia ei natiivissa
+        /// vielä ole (inventaario: tutkimusvaihe ja muisti porttaamatta).
+        /// </summary>
+        public bool AloitaAlusta()
+        {
+            if (!Auki) return false;
+            Esitys?.Pura();
+            Esitys = new Esitys(aineisto.Kertomus, aineisto.Kohteet, leimat, () => vanat, y, nakyma, aani);
+            if (VanatValmiit && Itsestaan) Esitys.Aloita();
+            return true;
+        }
+
         public void Paivita() => Esitys?.Paivita();
 
         public void Sulje()

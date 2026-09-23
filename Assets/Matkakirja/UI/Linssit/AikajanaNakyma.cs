@@ -23,6 +23,12 @@
 // Ohjaimet (ylärivi): ◀ ⏸ ▶. Keksinnöissä selaus (Ajo.Siirry) ja
 // Ajo.Tauko/Jatka; ihmisen matkassa Esitys.Valitse(edellinen/seuraava jakso)
 // ja Esitys.Tauko/Jatka. Linssi-oliot sovittimien takaa: LinssiUi.Keksinnot/IhmisenMatka.
+// HAMPURILAINEN (LinssiValikko, web js/aikajana-valikko.js) ohjainten oikeassa
+// laidassa: Poistu, Aloita alusta, Kertoja, Taustamusiikki. Se korvaa linssin
+// "Sulje linssi" -pillerin aina, kun ylärivi on käytettävissä (web: ✕ ja ↺ pois
+// palkista 8.9.2026); ValikkoKaytettavissa kertoo sen LinssiUi:lle.
+// Aloita alusta: keksinnöissä Ajo.Alusta(aineiston alku) paikan päällä (web
+// alusta); ihmisen matkassa IhmisenMatkaLinssi.AloitaAlusta (IhmisenAlustus).
 // IHMISEN MATKAN ALOITUS: EsittelyUIssa = true: musta ruutu, Ken Burns -taustakuvat
 // (AvausTausta) ja pergamentti, jossa IHMISEN_MATKA_ALOITUS; Käynnistä →
 // IhmisenMatkaLinssi.Kaynnista() (false = vanat vielä laskennassa → uusi yritys).
@@ -58,6 +64,18 @@ namespace Matkakirja.Natiivi
         bool keksinnotHaussa, ihminenHaussa;
         IVisualElementScheduledItem mustaPois, yritys;
         readonly AvausTausta avausTausta;
+        /// <summary>Linssin hampurilaisvalikko ylärivin oikeassa laidassa.</summary>
+        public readonly LinssiValikko Valikko;
+        bool valikkoKaytossa;
+
+        /// <summary>Hampurilainen käytettävissä (ylärivi esillä, ei esittelyn alla): linssin sulkupilleri väistyy.</summary>
+        public event Action<bool> ValikkoKaytettavissa;
+
+        /// <summary>
+        /// IHMISEN MATKAN "ALOITA ALUSTA" (web aloitaAlusta: muisti pois ja linssi uudestaan
+        /// avausjaksosta; Linssisepän IhmisenMatkaLinssi.AloitaAlusta, false suljettuna).
+        /// </summary>
+        static readonly Func<IhmisenMatkaLinssi, bool> IhmisenAlustus = l => l.AloitaAlusta();
 
         public AikajanaNakyma(UiKerros kerros, LinssiUi linssit)
         {
@@ -81,6 +99,8 @@ namespace Matkakirja.Natiivi
             tauko.tooltip = "Tauko";
             seuraava = Rakenne.Nappi(null, "mk-aikajana-nappi", () => Selaa(1), ohjaimet, Ikonit.Toista);
             seuraava.tooltip = "Seuraava";
+            Valikko = new LinssiValikko(kerros, () => linssit.SuljeLinssi(), AloitaAlusta);
+            ohjaimet.Add(Valikko.Nappi);
 
             // Paneeli oikealla (webin .aikajana-ilmio): keksinnön tai löytöpaikan kortti.
             paneeli = Rakenne.El("mk-aikajana-paneeli", turva, PickingMode.Ignore);
@@ -131,6 +151,7 @@ namespace Matkakirja.Natiivi
             avausTausta = new AvausTausta(kerros.Juuri(LinssiUi.MustaKerros));
 
             kerros.TurvaMuuttui += Asettele;
+            kerros.JokaRuutu += VahdiValikkoa;
             Asettele();
 
             // Koukut.
@@ -215,6 +236,7 @@ namespace Matkakirja.Natiivi
             if (tila != Tila.Ei) Pois();
             tila = t;
             if (t == Tila.Keksinnot) ylarivi.style.display = DisplayStyle.Flex;
+            Valikko.NaytaAlusta(t == Tila.Keksinnot || IhmisenAlustus != null);
             tauolla = false;
             PaivitaTauko();
         }
@@ -223,6 +245,7 @@ namespace Matkakirja.Natiivi
         public void Pois()
         {
             tila = Tila.Ei;
+            Valikko.Sulje();
             ylarivi.style.display = DisplayStyle.None;
             ylarivi.style.opacity = StyleKeyword.Null;
             paneeli.style.display = DisplayStyle.None;
@@ -304,6 +327,59 @@ namespace Matkakirja.Natiivi
                 int i = Mathf.Clamp(e.I + suunta, 0, ihminen.Kertomus.Count - 1);
                 e.Valitse(ihminen.Kertomus[i].Id);
                 AsetaTauko(false);
+            }
+        }
+
+        // --- hampurilaisvalikko -----------------------------------------------------------
+
+        /// <summary>
+        /// Joka ruutu: onko hampurilainen käytettävissä (ylärivi esillä eikä esittelyn alla).
+        /// Pimeässä ja avaruusvaiheessa ylärivi on poissa (web esitys-musta/-avaruus), ja
+        /// silloin valikko sulkeutuu ja linssin oma sulkupilleri jää paikalleen.
+        /// </summary>
+        public void VahdiValikkoa()
+        {
+            bool kaytossa = tila != Tila.Ei
+                && ylarivi.style.display.value == DisplayStyle.Flex
+                && esittely.style.display.value != DisplayStyle.Flex;
+            if (!kaytossa) Valikko.Sulje();
+            if (kaytossa == valikkoKaytossa) return;
+            valikkoKaytossa = kaytossa;
+            ValikkoKaytettavissa?.Invoke(kaytossa);
+        }
+
+        /// <summary>Valikon "Aloita alusta" (web aloitaAlusta, kaksi haaraa).</summary>
+        public void AloitaAlusta()
+        {
+            if (tila == Tila.Keksinnot)
+            {
+                // Pysäkkiajolla ei ole muistia eikä avausjaksoa: ajo palaa ensimmäiselle
+                // pysäkille paikan päällä (web alusta). Linssiseppä sammuttaa valot, hiljentää
+                // luennan (Selaus(-1)) ja ajaa kameran alkuun; UI tyhjentää paneelit.
+                if (keksinnot == null) { LataaKeksinnot(AloitaAlusta); return; }
+                valinaytos.style.display = DisplayStyle.None;
+                paneeli.style.display = DisplayStyle.None;
+                Rakenne.Nayta(loppu, false, 0);
+                paikka.text = "";
+                pysakki = -1;
+                var ajo = LinssiUi.Keksinnot?.Ajo;
+                if (ajo != null) ajo.Alusta(keksinnot.Alku);
+                else
+                {
+                    // Testitila ilman linssiä: kello alkuun.
+                    AsetaKello(Mathf.FloorToInt((float)keksinnot.Alku).ToString(CultureInfo.InvariantCulture));
+                    AsetaTauko(false);
+                }
+                return;
+            }
+            if (tila == Tila.Ihminen)
+            {
+                var l = LinssiUi.IhmisenMatka;
+                if (IhmisenAlustus == null || l == null || !IhmisenAlustus(l)) return;
+                // Uusi esitys avausjaksosta: osat pois ja aloituskortti kuten linssin auetessa.
+                var auki = linssit.Auki;
+                Pois();
+                Kytke(auki);
             }
         }
 
@@ -510,6 +586,8 @@ namespace Matkakirja.Natiivi
         sealed class KeksintoTekstit
         {
             public string Otsikko, EsittelyOtsikko, EsittelyTeksti, LoppuOtsikko, LoppuTeksti;
+            /// <summary>Kaaren alkuvuosi (KeksinnotAineisto.Alku, sama oletus 1765): Aloita alusta.</summary>
+            public double Alku = 1765;
             public List<Pysakki> Pysakit = new List<Pysakki>();
             public List<string> Selitteet = new List<string>();
             public List<(string Otsikko, string Kertoja)> Valinaytokset = new List<(string, string)>();
@@ -554,6 +632,7 @@ namespace Matkakirja.Natiivi
                 LoppuOtsikko = MiniJson.Teksti(lo, "otsikko"),
                 LoppuTeksti = MiniJson.Teksti(lo, "teksti"),
                 Pysakit = aineisto.Pysakit,
+                Alku = aineisto.Alku,
             };
             // Sama järjestys kuin KeksinnotAineistossa: vuoden mukaan, saman vuoden sisällä aineiston järjestys.
             var tapahtumat = (MiniJson.Kentta(kaari, "tapahtumat") as List<object>) ?? (MiniJson.Kentta(v, "KEKSINNOT") as List<object>) ?? new List<object>();

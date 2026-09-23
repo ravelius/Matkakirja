@@ -16,8 +16,17 @@
 // Data: Pelikoodarin PeliOhjain.Instanssi.Laukku() (LaukkuNaytto), päivitys
 // PeliOhjain.TilaMuuttui-tapahtumasta auki ollessa. Kukkaron muutos välähtää
 // yläpalkin pillerissä (Ylapalkki.RahaMuuttui). VARUSTEET: linssit kuten webin
-// linssikotelo (Fablen tarkastus C3: sekä laukussa että kartan taikalaseissa);
-// rivin napautus sulkee laukun ja vaihtaa linssin (LinssiUi.ValitseLinssi).
+// linssikotelo (Fablen tarkastus C3: sekä laukussa että kartan taikalaseissa;
+// web index.html #linssi-kotelo, js/ui.js rakennaLinssivalikko):
+//   pyöreät varustekuvat ruudukossa (assets/varusteet/varuste-<tunnus>.jpg, varana
+//   linssin oma viivaikoni), "Ei linssiä" ensimmäisenä, keskeneräiset omalla
+//   harmaalla rivillään pienempinä; alla tietolohko (nimi + yhden rivin kuvaus).
+//   NAPAUTUS SELITTÄÄ, "Aktivoi" KYTKEE (omistaja 5.9.2026): ruudun napautus vain
+//   esikatselee (kevyt rengas + nimi ja kuvaus), ja selitteen alle tulee Aktivoi-nappi
+//   (päällä olevalle "Ota pois"), joka kytkee linssin ja sulkee laukun
+//   (LinssiUi.ValitseLinssi / SuljeLinssi). Päällä oleva linssi saa messinkirenkaan.
+//   Ilman napautusta lohko kertoo päällä olevasta linssistä, linssittömänä
+//   "Kartta sellaisena kuin isoisä sen piirsi."; laukun avaus nollaa esikatselun.
 // Julisterivi avaa julistegallerian (Galleriat.cs), tietäjärivin i Tietäjän tien
 // (minipopup) ja Aarnin luettelon i pikkuselosteen (web pikkuselosteNappi).
 using System;
@@ -43,6 +52,24 @@ namespace Matkakirja.Natiivi
         readonly Button tilastoNappi;
         readonly Label varusteOtsikko;
         readonly VisualElement varusteet;
+        // Esikatselu (web linssiEsikatselu): esikatselussa = ruutua on napautettu;
+        // esikatselu = napautetun linssin tunnus, null = "Ei linssiä".
+        bool esikatselussa;
+        string esikatselu;
+        IReadOnlyList<Matkakirja.Linssit.LinssiTiedot> testiLinssit;
+        string testiAuki;
+
+        /// <summary>Linssin kuva laukussa (web assets/varusteet/varuste-&lt;tunnus&gt;.jpg).</summary>
+        public static string VarusteKuva(string tunnus) => Laukku.SivustoJuuri + "assets/varusteet/varuste-" + tunnus + ".jpg";
+
+        // web LINSSI_EI_IKONI: taikalasit yliviivattuina ("Ei linssiä").
+        static readonly string EiLinssiaIkoni = Ikonit.Viiva["taikalasit"] + "<path d=\"M5.4 5.4 20 20\"/>";
+
+        /// <summary>
+        /// Keskeneräiset linssit omalle harmaalle rivilleen (web linssimoduulin `kesken: true`,
+        /// omistaja 20.9.2026; Linssisepän LinssiTiedot.Kesken).
+        /// </summary>
+        static bool Kesken(Matkakirja.Linssit.LinssiTiedot t) => t.Kesken;
         PeliOhjain kuunneltu;
         Func<LaukkuNaytto> testiData;
         LaukkuNaytto naytetty;
@@ -116,6 +143,8 @@ namespace Matkakirja.Natiivi
 
         protected override void Paivita()
         {
+            // Uusi avaus alkaa puhtaalta pöydältä: selite kertoo päällä olevasta linssistä (web openPassport).
+            if (!Auki) esikatselussa = false;
             KytkeOhjain();
             var d = testiData?.Invoke() ?? PeliOhjain.Instanssi?.Laukku();
             if (d != null) KehittajanJulisteet(d);
@@ -191,21 +220,117 @@ namespace Matkakirja.Natiivi
         {
             varusteet.Clear();
             var r = LinssiUi.Rekisteri;
-            var lista = r?.Valittavat;
+            var lista = testiLinssit ?? r?.Valittavat.Select(l => l.Tiedot).ToList();
             bool on = lista != null && lista.Count > 0;
             varusteOtsikko.style.display = varusteet.style.display = on ? DisplayStyle.Flex : DisplayStyle.None;
             if (!on) return;
-            string auki = r.Auki?.Tiedot?.Id;
-            foreach (var l in lista)
+            string auki = testiLinssit != null ? testiAuki : r?.Auki?.Tiedot?.Id;
+
+            // Ruudukko: "Ei linssiä" ensin, sitten valmiit; keskeneräiset omalle rivilleen.
+            var valmiit = Rakenne.El("mk-laukku__linssit", varusteet, PickingMode.Ignore);
+            Rakenne.Ruudukko(valmiit, 100f, 8f);
+            Ruutu(valmiit, null, auki, false);
+            foreach (var t in lista) if (!Kesken(t)) Ruutu(valmiit, t, auki, false);
+            if (lista.Any(Kesken))
             {
-                var t = l.Tiedot;
-                string id = t.Id;
-                var b = Rakenne.Nappi(null, "mk-laukku__varuste", () => { Sulje(); UiNakymat.Hae()?.Linssit.ValitseLinssi(id); }, varusteet,
-                    string.IsNullOrEmpty(t.Ikoni) ? Ikonit.Viiva["taikalasit"] : t.Ikoni);
-                b.EnableInClassList("mk-valittu", id == auki);
-                Rakenne.Teksti(t.Nimi ?? id, "mk-laukku__teksti", b);
-                if (id == auki) Kirjasimet.Aseta(Rakenne.Teksti("PÄÄLLÄ", "mk-laukku__aarretila", b), Kirjasin.Kone);
+                var kesken = Rakenne.El("mk-laukku__linssit mk-laukku__linssit--kesken", varusteet, PickingMode.Ignore);
+                Rakenne.Ruudukko(kesken, 100f, 8f);
+                foreach (var t in lista) if (Kesken(t)) Ruutu(kesken, t, auki, true);
             }
+
+            // Tietolohko: napautettu ruutu tai päällä oleva linssi (web paivitaLinssiTiedot).
+            var tiedot = Rakenne.El("mk-laukku__linssitiedot", varusteet, PickingMode.Ignore);
+            string tunnus = esikatselussa ? esikatselu : auki;
+            var linssi = tunnus == null ? null : lista.FirstOrDefault(x => x.Id == tunnus);
+            if (linssi == null)
+            {
+                if (esikatselussa) Nimio(tiedot, "Paljain silmin");
+                Lyhyt(tiedot, "Kartta sellaisena kuin isoisä sen piirsi.");
+                if (esikatselussa) Aktivointi(tiedot, null, null, auki);
+                return;
+            }
+            Nimio(tiedot, linssi.Nimi ?? linssi.Id);
+            if (!string.IsNullOrEmpty(linssi.Lyhyt)) Lyhyt(tiedot, linssi.Lyhyt);
+            if (esikatselussa) Aktivointi(tiedot, linssi.Id, linssi.Nimi, auki);
+        }
+
+        /// <summary>Pyöreä varusteruutu (web linssiLiuska): napautus esikatselee, ei kytke.</summary>
+        void Ruutu(VisualElement ruudukko, Matkakirja.Linssit.LinssiTiedot t, string auki, bool kesken)
+        {
+            string id = t?.Id;
+            string nimi = t == null ? "Ei linssiä" : (t.Nimi ?? id) + (kesken ? " (keskeneräinen)" : "");
+            var solu = Rakenne.El("mk-laukku__linssisolu", ruudukko, PickingMode.Ignore);
+            var b = Rakenne.Nappi(null, "mk-laukku__linssi", () => Esikatsele(id), solu,
+                t == null ? EiLinssiaIkoni : string.IsNullOrEmpty(t.Ikoni) ? Ikonit.Viiva["taikalasit"] : t.Ikoni);
+            b.tooltip = nimi;
+            b.EnableInClassList("mk-laukku__linssi--ei", t == null);
+            b.EnableInClassList("mk-laukku__linssi--kesken", kesken);
+            b.EnableInClassList("mk-paalla", id == auki);
+            b.EnableInClassList("mk-esikatselu", esikatselussa && id == esikatselu);
+            if (t == null) return;
+            // Varustekuva viivaikonin päälle; jos se ei lataudu, viivaikoni jää (web aarreIkoni onerror).
+            var kuva = Rakenne.El("mk-laukku__linssikuva", b, PickingMode.Ignore);
+            kuva.style.display = DisplayStyle.None;
+            Kuvat.Hae(VarusteKuva(id), tex =>
+            {
+                if (tex == null || kuva.panel == null) return;
+                kuva.style.backgroundImage = new StyleBackground(tex);
+                kuva.style.display = DisplayStyle.Flex;
+            });
+        }
+
+        void Nimio(VisualElement isa, string teksti)
+        {
+            var l = Rakenne.Teksti(teksti, "mk-laukku__linssinimi", isa);
+            Kirjasimet.Aseta(l, Kirjasin.Kone);
+        }
+
+        static void Lyhyt(VisualElement isa, string teksti) => Rakenne.Teksti(teksti, "mk-laukku__linssilyhyt", isa);
+
+        /// <summary>Aktivoi-nappi selitteen alle (web lisaaLinssinAktivointi); päällä olevalle "Ota pois".</summary>
+        void Aktivointi(VisualElement isa, string tunnus, string nimi, string auki)
+        {
+            bool paalla = tunnus != null && tunnus == auki;
+            var b = Rakenne.Nappi(paalla ? "OTA POIS" : "AKTIVOI", "mk-laukku__aktivoi", () => Aktivoi(paalla ? null : tunnus), isa);
+            b.EnableInClassList("mk-pois", paalla);
+            b.tooltip = paalla ? $"Ota linssi {nimi} pois käytöstä" : tunnus != null ? $"Aktivoi linssi {nimi}" : "Katso karttaa paljain silmin";
+            Kirjasimet.Aseta(b, Kirjasin.KoneLihava);
+        }
+
+        /// <summary>Ruudun napautus: selite vaihtuu, linssi ei kytkeydy (web esikatseleLinssi).</summary>
+        void Esikatsele(string tunnus)
+        {
+            esikatselussa = true;
+            esikatselu = tunnus;
+            Varusteet();
+            // Selitteen vaihto häivytetään sisään (web .linssi-tiedot.vaihtui, 220 ms).
+            var tiedot = varusteet.Q(className: "mk-laukku__linssitiedot");
+            if (tiedot == null) return;
+            tiedot.AddToClassList("mk-vaihtui");
+            tiedot.schedule.Execute(() => tiedot.RemoveFromClassList("mk-vaihtui"));
+        }
+
+        /// <summary>Aktivoi / Ota pois: kytkee linssin ja sulkee laukun (web aktivoiLinssi). null = paljain silmin.</summary>
+        void Aktivoi(string tunnus)
+        {
+            esikatselussa = false;
+            Sulje();
+            var l = UiNakymat.Hae()?.Linssit;
+            if (l == null) return;
+            if (tunnus == null) { l.SuljeLinssi(); testiAuki = null; }
+            else { l.ValitseLinssi(tunnus); testiAuki = tunnus; }
+        }
+
+        /// <summary>Testikomento: Varusteet näillä linsseillä ilman rekisteriä (auki = päällä oleva, esikatselu = napautettu).</summary>
+        public void TestaaVarusteet(IReadOnlyList<Matkakirja.Linssit.LinssiTiedot> linssit, string auki, bool napautettu, string esikatseltu)
+        {
+            testiLinssit = linssit;
+            testiAuki = auki;
+            if (!Auki) Avaa();
+            esikatselussa = napautettu;
+            esikatselu = esikatseltu;
+            Varusteet();
+            Rakenne.Vierita(Sisalto, varusteOtsikko, 50);
         }
 
         void Rivi(VisualElement isa, string nimi, string arvo)
@@ -264,6 +389,7 @@ namespace Matkakirja.Natiivi
         public void Testaa(Func<LaukkuNaytto> data)
         {
             testiData = data;
+            testiLinssit = null;
             if (Auki) Paivita(); else Avaa();
         }
 

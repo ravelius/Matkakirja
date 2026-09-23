@@ -4,6 +4,8 @@
 //            [nuotti] Musiikki      PÄÄLLÄ
 //            [kaiutin] Äänimaisema  PÄÄLLÄ
 //   KARTTA   [aalto]  Pieni liike   PÄÄLLÄ
+//   RETKIKUNTA (sähkelinja, UI/Sahke/SahkeNakyma rakentaa; piilossa, kunnes linjan tila selviää;
+//            web retkikuntaOsio asuu hampurilaisen palautelomakkeessa)
 //   KOKEET   [satelliitti] Astronautin reliefi  TÄYSI | VAIMEA
 //            (omistajan TestFlight-vertailu 24.9.2026: kylläisyys 1,0 vs. webin 0,8;
 //            LinssiOhjain.AsetaAstronautinKyllaisyys, muistetaan, näkyy seuraavalla
@@ -37,6 +39,8 @@ namespace Matkakirja.Natiivi
         public event Action UusiPeli;
         /// <summary>"tekijätiedot ja lähteet" painettiin.</summary>
         public event Action TietojaPainettu;
+        /// <summary>Retkikuntaosion paikka (SahkeNakyma täyttää; tyhjänä piilossa).</summary>
+        public readonly VisualElement Retkikunta;
 
         public Paavalikko(UiKerros kerros, Func<float> alareuna, Vahvistus vahvistus) : base(kerros, alareuna, "mk-paavalikko")
         {
@@ -46,6 +50,8 @@ namespace Matkakirja.Natiivi
             Kytkinrivi(Kytkin.Aanimaisema, Ikonit.Aanimaisema);
             Otsikko("Kartta");
             Kytkinrivi(Kytkin.PieniLiike, Ikonit.PieniLiike);
+            Retkikunta = Rakenne.El("mk-paavalikko__retkikunta", Sisalto, PickingMode.Ignore);
+            Retkikunta.style.display = DisplayStyle.None;
             // KOKEET vain kehittäjätilassa (Fablen tarkastus C4: ei App Storen pelaajille).
             kokeet = Rakenne.El("mk-paavalikko__kokeet", Sisalto, PickingMode.Ignore);
             Rakenne.Teksti("KOKEET", "mk-pudotus__otsikko", kokeet);
@@ -83,11 +89,13 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(tietoja, Kirjasin.KoneLihava);
 
             var pohja = Rakenne.El("mk-pudotus__pohjarivi", Sisalto, PickingMode.Ignore);
-            // Versiorivi avaa kehittäjätilan koodi-ikkunan (webin versiokulma #kehittaja-btn).
-            var versioNappi = Rakenne.Nappi("", "mk-pudotus__versionappi", () => { Sulje(); kehittaja.Avaa(); }, pohja);
+            // Versiorivi avaa "Mitä uutta" (webin versiokulma → #muutokset-dialog); sen Kehittäjä-nappi
+            // avaa kehittäjätilan koodi-ikkunan (webin #kehittaja-btn).
+            var versioNappi = Rakenne.Nappi("", "mk-pudotus__versionappi", () => { Sulje(); MitaUutta.Avaa(); }, pohja);
             versio = versioNappi.Q<Label>();
             versio.AddToClassList("mk-pudotus__versio");
             kehittaja = new KehittajaIkkuna(kerros);
+            MitaUutta = new MitaUutta(kerros, kehittaja.Avaa);
             Asetukset.Muuttui += _ => { if (Auki) Paivita(); };
         }
 
@@ -96,6 +104,7 @@ namespace Matkakirja.Natiivi
         Button kynnykset;
         Label kynnyksetTila;
         readonly KehittajaIkkuna kehittaja;
+        public readonly MitaUutta MitaUutta;
         readonly Label reliefiTila;
 
         static bool ReliefiTaysi => Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Kyllaisyys > 0.9f;

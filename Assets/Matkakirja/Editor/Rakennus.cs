@@ -23,12 +23,12 @@ namespace Matkakirja.Editori
 
         /// <summary>
         /// Pelin oma pallolaatasto (Web Mercator, z0–8, 256 px, jpg) ämpärissä.
-        /// Sama kansio kuin js/pallo.js:n PALLO_LAATTAKANSIO (Karttasepän poltto 22c,
-        /// docs/raportit/natiivi-laattaosoitteet-20260923.md). Slippy-rivi 0 on pohjoisin,
+        /// Karttasepän poltto 23a (sama sävy kuin isoisän linssin rajaton 23a-sarja; web on
+        /// vielä 22c:ssä), docs/raportit/natiivi-laattaosoitteet-20260923.md. Slippy-rivi 0 on pohjoisin,
         /// Cesiumin {y} eteläisin, joten osoitteessa on {reverseY}.
         /// </summary>
         public const string LaattaUrl =
-            "https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-22c-pohja-20260922c/{z}/{x}/{reverseY}.jpg";
+            "https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-23a-pohja-20260923a/{z}/{x}/{reverseY}.jpg";
         public const int LaattaMaxTaso = 8;
 
         /// <summary>
@@ -116,6 +116,12 @@ namespace Matkakirja.Editori
             nappula.georeferenssi = georef;
             nappula.materiaali = Materiaali("Nappula", "Matkakirja/Nappula", Color.white);
             kerrokset.nappula = nappula;
+            nappula.koneMalli = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Matkakirja/Kartta/Malli/DC3.fbx");
+            var savuGo = new GameObject("Savujana");
+            savuGo.transform.SetParent(georefGo.transform, false);
+            nappula.savu = savuGo.AddComponent<Savujana>();
+            nappula.savu.georeferenssi = georef;
+            nappula.savu.materiaali = Materiaali("Savu", "Matkakirja/Savu", Color.white);
             var valot = georefGo.AddComponent<AiheValot>();
             valot.georeferenssi = georef;
             valot.materiaali = Materiaali("Karttavalo", "Matkakirja/Valopiste", Color.white);
@@ -154,6 +160,11 @@ namespace Matkakirja.Editori
             valo.type = LightType.Directional;
             valo.intensity = 1.1f;
             valo.color = new Color(1f, 0.97f, 0.9f);
+            // Lennon ajaksi valo vaihtuu aurinkoon (LENNON ESITYS), muuten kameravalo.
+            var aurinko = valoGo.AddComponent<Aurinko>();
+            aurinko.georeferenssi = georef;
+            aurinko.valo = valo;
+            nappula.aurinko = aurinko;
             RenderSettings.ambientMode = UnityEngine.Rendering.AmbientMode.Flat;
             RenderSettings.ambientLight = new Color(0.45f, 0.42f, 0.38f);
 

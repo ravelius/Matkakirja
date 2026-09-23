@@ -127,7 +127,8 @@ namespace Matkakirja.Linssit.Radio
                 case "sallittu":
                 case "epaselva":
                 case "epäselvä":
-                    return string.IsNullOrEmpty(a.Url) ? Toiminto.Ei : Toiminto.Soita;
+                    // toimii false (Siirtosepän kättelytarkistus): virta ei aukea, ei soittoa eikä asteikkoa.
+                    return string.IsNullOrEmpty(a.Url) || a.Toimii == false ? Toiminto.Ei : Toiminto.Soita;
                 case "kielletty":
                 case "linkki":
                     return string.IsNullOrEmpty(a.Sivu) ? Toiminto.Ei : Toiminto.Linkki;

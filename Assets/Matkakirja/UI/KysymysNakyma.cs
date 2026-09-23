@@ -303,6 +303,7 @@ namespace Matkakirja.Natiivi
                 if (!string.IsNullOrEmpty(d.Vihje)) Lappu(s, d.Vihje);
             }
 
+            Apukortti(d, s); // kaveriavun odotus/veikkaus vaihtoehtojen yläpuolelle (web sahke-apukortti)
             Vaihtoehdot(d, s);
             if (pulma && d.VaihtoehtoKuvat != null && !string.IsNullOrEmpty(d.KuvaLahde))
                 Kirjasimet.Aseta(Rakenne.Teksti(d.KuvaLahde, "mk-kysymys__kuvalahteet", s), Kirjasin.Kone);
@@ -456,6 +457,8 @@ namespace Matkakirja.Natiivi
                 if (oikea) b.AddToClassList("mk-kysymys__vaihtoehto--oikea");
                 if (vaara) b.AddToClassList("mk-kysymys__vaihtoehto--vaara");
                 if (pois) b.AddToClassList("mk-kysymys__vaihtoehto--pois");
+                // Kaverin veikkaus on korostus, ei vastaus: kaikki napit pysyvät auki.
+                if (!d.Vastattu && d.KaveriapuKortti?.VeikattuIndeksi == i) b.AddToClassList("mk-kysymys__vaihtoehto--veikattu");
                 b.SetEnabled(!pois && !d.Vastattu);
 
                 VisualElement rivi = b;
@@ -617,6 +620,23 @@ namespace Matkakirja.Natiivi
             if (n > 0) isa.Add(rivi);
         }
 
+        /// <summary>Kaveriavun kortti (web sahkePaivitaApukortti): saate, virhe, veikkaus, nappi ja alarivi.</summary>
+        void Apukortti(KysymysNaytto d, VisualElement s)
+        {
+            var a = d.KaveriapuKortti;
+            if (a == null || d.Vastattu) return;
+            var kortti = Rakenne.El("mk-kysymys__apukortti", s, PickingMode.Ignore);
+            if (!string.IsNullOrEmpty(a.Saate)) Kirjasimet.Aseta(Rakenne.Teksti(a.Saate, "mk-kysymys__apusaate", kortti), Kirjasin.LukuKursiivi);
+            if (!string.IsNullOrEmpty(a.Virhe)) Kirjasimet.Aseta(Rakenne.Teksti(a.Virhe, "mk-kysymys__apualarivi", kortti), Kirjasin.Luku);
+            if (!string.IsNullOrEmpty(a.VeikkausTeksti)) Kirjasimet.Aseta(Rakenne.Teksti(a.VeikkausTeksti, "mk-kysymys__apuveikkaus", kortti), Kirjasin.LukuLihava);
+            if (!string.IsNullOrEmpty(a.Nappi))
+            {
+                var b = Rakenne.Nappi(a.Nappi, "mk-kysymys__apunappi", () => { Aanet.PulunTehoste("paper"); Teko(toiminnot?.KaveriapuValmis); }, kortti);
+                Kirjasimet.Aseta(b, Kirjasin.Kone);
+            }
+            if (!string.IsNullOrEmpty(a.Alarivi)) Kirjasimet.Aseta(Rakenne.Teksti(a.Alarivi, "mk-kysymys__apualarivi", kortti), Kirjasin.Luku);
+        }
+
         void RakennaNapit(KysymysNaytto d, int tulosVaihe, bool tervehdys)
         {
             napit.Clear();
@@ -650,6 +670,13 @@ namespace Matkakirja.Natiivi
                 }
                 else if (d.Piilotetut != null && d.Piilotetut.Count > 0)
                     Rakenne.Nappi("50:50 käytetty", "mk-kysymys__apu", null, napit).SetEnabled(false);
+
+                // Kaveriapu (web sahke.js "Kysy kaverilta (25 £)"); käytetty → harmaa "Kaverilta kysytty".
+                if (d.Kaveriapu != null && d.Kaveriapu.Nakyy)
+                {
+                    var k = Rakenne.Nappi(d.Kaveriapu.Teksti ?? "Kysy kaverilta", "mk-kysymys__apu", () => Teko(toiminnot?.KysyKaverilta), napit);
+                    k.SetEnabled(d.Kaveriapu.Kaytossa);
+                }
             }
             if (d.Vastattu && tulosVaihe >= 2)
             {
