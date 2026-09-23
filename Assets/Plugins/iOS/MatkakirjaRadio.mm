@@ -10,6 +10,8 @@
 //   MatkakirjaRadio_Voimakkuus(0…1)    ristihäivytys (RadioLinssi)
 //   MatkakirjaRadio_Tila()             0 ei virtaa, 1 yhdistää, 2 soi, 3 ei vastaa, 4 katkesi
 //   MatkakirjaRadio_Tauko(0|1)         merkkivalon tauko: pause/play (int, ei bool: P/Invoke-koko)
+//   MatkakirjaRadio_Kuvaus()           diagnoosi lokiin virheen hetkellä: tilat, odotuksen syy,
+//                                      virheet ja virhelokin viimeinen rivi (strdup, Unity vapauttaa)
 //
 // "Soi" = timeControlStatus Playing ja kohdan eteneminen (kuten webin 'playing' tai
 // 'timeupdate'): puskurointi ei ole vielä kuulumista.
@@ -96,6 +98,23 @@
     self.loppuTila = 0;
 }
 
+- (NSString*)kuvaus
+{
+    AVPlayer* s = self.soitin;
+    if (s == nil) return [NSString stringWithFormat:@"ei soitinta, loppuTila %d", self.loppuTila];
+    AVPlayerItem* k = s.currentItem;
+    AVPlayerItemErrorLogEvent* viime = k.errorLog.events.lastObject;
+    AVAudioSession* istunto = [AVAudioSession sharedInstance];
+    return [NSString stringWithFormat:@"soitin %ld, kohde %ld, aika %ld (%@), kohta %.2f s, puskuri %@, loppuTila %d, "
+        "soitinvirhe %@, kohdevirhe %@, virheloki %@ %ld %@, istunto %@ %@ reitti %@",
+        (long)s.status, (long)k.status, (long)s.timeControlStatus, s.reasonForWaitingToPlay ?: @"-",
+        CMTimeGetSeconds(k.currentTime), k.playbackBufferEmpty ? @"tyhjä" : @"ei tyhjä", self.loppuTila,
+        s.error.localizedDescription ?: @"-", k.error.localizedDescription ?: @"-",
+        viime.errorDomain ?: @"-", (long)viime.errorStatusCode, viime.errorComment ?: @"-",
+        istunto.category, istunto.isOtherAudioPlaying ? @"muu ääni soi" : @"",
+        istunto.currentRoute.outputs.firstObject.portType ?: @"ei ulostuloa"];
+}
+
 - (int)tila
 {
     if (self.soitin == nil) return self.loppuTila;
@@ -136,6 +155,13 @@ void MatkakirjaRadio_Voimakkuus(float arvo)
 int MatkakirjaRadio_Tila(void)
 {
     return [[MatkakirjaRadio jaettu] tila];
+}
+
+// Diagnoosi (C-merkkijono strdup:lla; IL2CPP vapauttaa palautetun char*:n free():llä).
+const char* MatkakirjaRadio_Kuvaus(void)
+{
+    const char* t = [[[MatkakirjaRadio jaettu] kuvaus] UTF8String];
+    return t ? strdup(t) : NULL;
 }
 
 // Merkkivalon tauko (web audio.pause/play): yhteys jää, data ei kulje mykistettynä.

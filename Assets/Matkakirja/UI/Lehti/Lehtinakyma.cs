@@ -10,7 +10,8 @@
 //   aihe      aihe-otsikko (versaali, viivat; lainatulla maasivulla lippu), johdanto
 //             kursiivilla, nostot (otsikko + aika, kuva ja lyhyt kuvateksti + lähde, teksti
 //             kappaleittain, galleria ‹ ›, "Lue lisää aiheesta" (Wikipedia), musiikkinäyte),
-//             Menovinkit-listat, lopuksi lehden minitehtävä (+10 £)
+//             Menovinkit-listat, lopuksi lehden minitehtävä (+10 £) tai sivulle sidottu fokustehtävä
+//             (AARTEEN AVAUS / JULISTE, +50 £, pullavinkki; LehtiFokus.cs)
 // Alapalkki (web paivitaTutkiAlapalkki): Poistu (himmeä, vasemmalla) · maalehdessä ☰ · Edellinen /
 // Seuraava (kaksi riviä: suunta ja sivun nimi); kaupunkilehdessä sen alla täysleveä tehtävänappi
 // (LehtiTila.TehtavaNappi: "Tapaa X" / "Etsi kätkö", harmaa = loppuun pelattu) jokaisella sivulla
@@ -46,6 +47,7 @@ namespace Matkakirja.Natiivi
         readonly Label ylaNimi;
         readonly Button kaiutin, sisallysNappi, alaSisallys, poistu, edellinen, seuraava, tehtavaNappi, liite;
         readonly Kuvasuurennos suurennos;
+        readonly LehtiFokus fokus;
         ScrollView sivu;
         Lehti lehti;
         int nyt = -1;
@@ -75,6 +77,7 @@ namespace Matkakirja.Natiivi
             {
                 case LehtiTekoLaji.Minitehtavavastaus: return o.KauppaTeko(k => k.Minitehtava(t.Kaupunki, t.Aihe, t.Oikein, t.Palkkio));
                 case LehtiTekoLaji.JulisteMyonto: return o.KauppaTeko(k => k.MyonnaJuliste(t.Avain));
+                case LehtiTekoLaji.PullaVinkki: return o.KauppaTeko(k => k.PullaVinkki(t.Kaupunki));
                 default: return null;
             }
         }
@@ -133,6 +136,7 @@ namespace Matkakirja.Natiivi
             sisallysLista = sv.contentContainer;
 
             suurennos = new Kuvasuurennos(juuri);
+            fokus = new LehtiFokus(() => tila, Teko, suurennos);
         }
 
         // --- avaus ja sulkeminen -------------------------------------------------------------
@@ -165,7 +169,8 @@ namespace Matkakirja.Natiivi
 
         void Avaa(LehtiLaji laji, string omistaja, string aihe, int? sivu)
         {
-            UiKerros.Hae().StartCoroutine(LehtiSisalto.Hae(laji, omistaja, l =>
+            // Fokustehtävät ensin (pieni kokoelma), jotta sivun oma minitehtävä osaa väistyä.
+            LehtiFokus.Lataa(() => UiKerros.Hae().StartCoroutine(LehtiSisalto.Hae(laji, omistaja, l =>
             {
                 if (l == null)
                 {
@@ -192,7 +197,7 @@ namespace Matkakirja.Natiivi
                     SyoteLukko.Esta(this);
                     Avautui?.Invoke(l.Omistaja);
                 }
-            }));
+            })));
         }
 
         public void Sulje()
@@ -421,8 +426,9 @@ namespace Matkakirja.Natiivi
 
             foreach (var n in a.Nostot) Nosto(s, n);
             foreach (var (otsikko, kohteet) in a.Lista) Lista(s, otsikko, kohteet);
-            if (a.Tehtava != null && sivu.TehtavaAihe != null) Tehtava(s, a.Tehtava, sivu.TehtavaAihe);
-            if (a.Nostot.Count == 0 && a.Lista.Count == 0 && a.Tehtava == null && string.IsNullOrEmpty(a.Johdanto))
+            bool fokustehtava = fokus.Piirra(s, lehti, nyt);
+            if (!fokustehtava && a.Tehtava != null && sivu.TehtavaAihe != null) Tehtava(s, a.Tehtava, sivu.TehtavaAihe);
+            if (a.Nostot.Count == 0 && a.Lista.Count == 0 && a.Tehtava == null && !fokustehtava && string.IsNullOrEmpty(a.Johdanto))
                 Kappale(s, "Tämä sivu täydentyy myöhemmin.", "mk-lehti__leipa");
         }
 
@@ -776,11 +782,16 @@ namespace Matkakirja.Natiivi
 
         // --- testi ---------------------------------------------------------------------------------
 
-        /// <summary>Testikomento: "sivu n" kääntää, "sisallys" avaa sisällyksen, "kuva" suurennoksen, "tehtava(-pois)" keksityn tehtävänapin, "viimeinen" viimeiselle sivulle.</summary>
-        public void Testaa(string mita, int n)
+        /// <summary>
+        /// Testikomento: "sivu n" kääntää, "sisallys" avaa sisällyksen, "kuva" suurennoksen, "tehtava(-pois)" keksityn
+        /// tehtävänapin, "viimeinen" viimeiselle sivulle, "fokus-vastaa n" / "fokus-pulla" napauttaa fokustehtävää.
+        /// </summary>
+        public string Testaa(string mita, int n)
         {
             switch (mita)
             {
+                case "fokus-vastaa":
+                case "fokus-pulla": return LehtiFokus.Testaa(sivu?.contentContainer, mita, n);
                 case "sivu": Kaanna(n); break;
                 case "tehtava":
                 case "tehtava-pois":
@@ -793,6 +804,16 @@ namespace Matkakirja.Natiivi
                     if (k != null) using (var e = ClickEvent.GetPooled()) { e.target = k; k.SendEvent(e); }
                     break;
             }
+            return null;
         }
+
+        /// <summary>Testikomento "ui lehti fokus [kaupunki] [juliste]": kaupunkilehti fokustehtävän sivulla (ilman peliä).</summary>
+        public void TestaaFokus(string kaupunki, bool juliste) =>
+            LehtiFokus.Lataa(() =>
+            {
+                int s = LehtiFokus.TestiSivu(kaupunki, juliste);
+                if (s < 0) UiNakymat.Hae()?.Tilarivi.Viesti("Ei fokustehtäviä: " + kaupunki);
+                Nayta(LehtiLaji.Kaupunki, kaupunki, null, s < 0 ? (int?)null : s);
+            });
     }
 }

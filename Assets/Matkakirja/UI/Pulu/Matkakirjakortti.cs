@@ -89,7 +89,7 @@ namespace Matkakirja.Natiivi
             PaivitaKaiutin();
         }
 
-        void Asettele() => kortti.style.top = Ylapalkki.Korkeus + 8;
+        void Asettele() => kortti.style.top = Ylapalkki.Varaus + 8;
 
         /// <summary>Näyttää kaupungin merkinnän ja aloittaa kirjoituskoneen (luento alkaa samalla hetkellä).</summary>
         public void Nayta(Saapumisvirta v)

@@ -4,6 +4,11 @@
 //   matkakirja: paikkarivi, teksti, luentakuva, luentakuva2
 //               kuva = {osoite|ampari|tiedosto, lyhyt, selite, lahde}
 //   pollo:      kuvat[] (PuluCam), kommentti[] (Livian repliikit luennan jälkeen)
+//   sahketehtava (Sahketehtava.Lue) ja sähkehakemiston otsikot: takyt[].otsikko,
+//               kohteet[].nimi, takynostot[].nimio (web sisaltohakemisto, lähde 3)
+//   kohtaaminen + kohtaamispiste.laudat.maailmankartta {x, y}: aarteen avaus mahdollinen
+//               (lehden fokustehtävät ja pullavinkki, LehtiFokus.cs)
+//   lehtitehtavat: raakana varareitiksi, jos kokoelmaa lehtitehtavat (skeema 1.17) ei ole
 // Jäsennetään taustasäikeessä kerran (0,9 Mt), muistissa vain nämä kentät.
 using System;
 using System.Collections;
@@ -26,6 +31,14 @@ namespace Matkakirja.Natiivi
         public List<VirtaKuva> Luentakuvat = new List<VirtaKuva>();
         public List<VirtaKuva> PuluKuvat = new List<VirtaKuva>();
         public List<string> PuluKommentit = new List<string>();
+        /// <summary>Pöllön sähketehtävä (web data.sahketehtava) tai null (SahketehtavaNakyma: leima, napit, hakemisto).</summary>
+        public Sahketehtava Sahketehtava;
+        /// <summary>Kaupungin omat otsikot sähkehakemistoon: täkyt, kohdenostot, täkynostojen nimiöt.</summary>
+        public List<string> Otsikot = new List<string>();
+        /// <summary>Web aarteenAvausMahdollista: kohtaaminen ja sille paikka maailmankartalla.</summary>
+        public bool AarteenAvaus;
+        /// <summary>data.lehtitehtavat raakana (LehtiFokus lukee, jos kokoelma lehtitehtavat puuttuu).</summary>
+        public List<object> Lehtitehtavat;
 
         /// <summary>
         /// Paikkarivin jako (webin matkakirjanOtsikko): ensimmäisen vuosiluvun jälkeinen
@@ -44,6 +57,12 @@ namespace Matkakirja.Natiivi
         static Dictionary<string, Saapumisvirta> virrat;
         static bool haussa;
         static readonly List<Action> odottajat = new List<Action>();
+
+        /// <summary>Onko kokoelma jo luettu (Hae palauttaa silloin lopullisen tuloksen).</summary>
+        public static bool Valmis => virrat != null;
+
+        /// <summary>Kaikki luetut virrat (tyhjä, kunnes ladattu).</summary>
+        public static IEnumerable<Saapumisvirta> Kaikki => virrat != null ? virrat.Values : (IEnumerable<Saapumisvirta>)new Saapumisvirta[0];
 
         public static Saapumisvirta Hae(string kaupunki) =>
             kaupunki != null && virrat != null && virrat.TryGetValue(kaupunki, out var v) ? v : null;
@@ -79,7 +98,7 @@ namespace Matkakirja.Natiivi
 
         static VirtaKuva Kuva(object o)
         {
-            var d = MiniJson.Objekti(o);
+            var d = o as Dictionary<string, object>;
             if (d == null) return null;
             var osoite = MiniJson.Teksti(d, "osoite") ?? MiniJson.Teksti(d, "tiedosto");
             var ampari = MiniJson.Teksti(d, "ampari");
@@ -100,12 +119,22 @@ namespace Matkakirja.Natiivi
             if (alkiot == null) return;
             foreach (var a in alkiot)
             {
-                var o = MiniJson.Objekti(a);
-                var d = MiniJson.Objekti(MiniJson.Kentta(o, "data")) ?? o;
+                var o = a as Dictionary<string, object>;
+                var d = MiniJson.Kentta(o, "data") as Dictionary<string, object> ?? o;
                 string kaupunki = MiniJson.Teksti(o, "kaupunki") ?? MiniJson.Teksti(d, "kaupunki");
                 if (kaupunki == null) continue;
                 var v = new Saapumisvirta { Kaupunki = kaupunki };
-                var m = MiniJson.Objekti(MiniJson.Kentta(d, "matkakirja"));
+                // Sähketehtävä ja hakemiston otsikot (web sisaltohakemisto, fokusvirran lähteet).
+                if (MiniJson.Kentta(d, "sahketehtava") is Dictionary<string, object> st)
+                {
+                    try { v.Sahketehtava = Sahketehtava.Lue(st, kaupunki); }
+                    catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui fokusvirrat: sähketehtävä " + kaupunki + ": " + e.Message); }
+                }
+                foreach (var (lohko, nimi) in new[] { ("takyt", "otsikko"), ("kohteet", "nimi"), ("takynostot", "nimio") })
+                    foreach (var x in Rakenne.Lista(MiniJson.Kentta(d, lohko)) ?? new List<object>())
+                        if (MiniJson.Teksti(x as Dictionary<string, object>, nimi) is string ots && ots.Length > 0) v.Otsikot.Add(ots);
+                // Puuttuva lohko ei saa kaataa koko kokoelman jäsennystä (MiniJson.Objekti heittää nullista).
+                var m = MiniJson.Kentta(d, "matkakirja") as Dictionary<string, object>;
                 if (m != null)
                 {
                     v.Paikkarivi = MiniJson.Teksti(m, "paikkarivi");
@@ -116,7 +145,7 @@ namespace Matkakirja.Natiivi
                         if (k != null) v.Luentakuvat.Add(k);
                     }
                 }
-                var p = MiniJson.Objekti(MiniJson.Kentta(d, "pollo"));
+                var p = MiniJson.Kentta(d, "pollo") as Dictionary<string, object>;
                 if (p != null)
                 {
                     var kuvat = Rakenne.Lista(MiniJson.Kentta(p, "kuvat"));
@@ -126,6 +155,13 @@ namespace Matkakirja.Natiivi
                     else if (Rakenne.Lista(kommentit) is List<object> lista)
                         foreach (var r in lista) if (r is string s) v.PuluKommentit.Add(s);
                 }
+                if (MiniJson.Kentta(d, "kohtaaminen") != null
+                    && MiniJson.Kentta(MiniJson.Kentta(MiniJson.Kentta(d, "kohtaamispiste") as Dictionary<string, object>, "laudat")
+                        as Dictionary<string, object>, "maailmankartta") is Dictionary<string, object> piste
+                    && MiniJson.Luku(piste, "x") is double px && MiniJson.Luku(piste, "y") is double py
+                    && !double.IsNaN(px) && !double.IsNaN(py) && !double.IsInfinity(px) && !double.IsInfinity(py))
+                    v.AarteenAvaus = true;
+                v.Lehtitehtavat = Rakenne.Lista(MiniJson.Kentta(d, "lehtitehtavat"));
                 t[kaupunki] = v;
             }
         }

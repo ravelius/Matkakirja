@@ -173,10 +173,13 @@ namespace Matkakirja.Linssit.Isoisa
         public static string AineistonOsoite = "https://media.matkakirja.app/matkakirja/linssit/isoisa-1873/20260921/isoisa-1873.json";
 
         /// <summary>
-        /// Rajaton pohjasarja nykyrajojen tilalle ({z}/{x}/{y}, Web Mercator); null = pelin
-        /// oma pohja jää (nykyrajat näkyvät poltettuina 1873-rajojen alla).
+        /// Rajaton pohjasarja nykyrajojen tilalle ({z}/{x}/{y}, Web Mercator): webin rajanpiilotuksen
+        /// tekninen vastine, koska natiivissa nykyrajat on poltettu laattoihin (Fable 23.9.2026).
+        /// Karttasepän 23a-pohja ilman viivatasoa (tee-pallolaatat --ilman-viivoja, PR #2980):
+        /// relief ja joet mukana, nykyrajat ja kaupunkipisteet pois. null = pelin oma pohja jää.
         /// </summary>
-        public static string RajatonPohja;
+        public static string RajatonPohja =
+            "https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-23a-pohja-20260923arajaton/{z}/{x}/{y}.jpg";
         public static int RajatonPohjaMaxTaso = 8;
         public const string Kerros = "isoisa-1873";
 

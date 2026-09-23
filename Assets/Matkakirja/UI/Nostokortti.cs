@@ -16,7 +16,8 @@
 // Pelin tila muuttuu vain PeliOhjain.KauppaTeko-kutsuilla (Pelikoodari). Kerros 40, pallo lukittu.
 // Kohdekortin korostetut sanat (web fokuskohteet piirraKorostettuSana): kunkin korostuksen
 // ensimmäinen esiintymä tekstissä on alleviivattu linkki, napautus → pulu "Kerro lisää: X (kohteessa Y)".
-// Erot webiin: kortti on keskellä (ei napautuspisteen vieressä), ei kaiutinta.
+// Kaiutin (web js/lukija.js lisaaLukijanappi, KortinLukija) vaiheessa 2 sulkuruksin vieressä.
+// Ero webiin: kortti on keskellä (ei napautuspisteen vieressä).
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,6 +35,7 @@ namespace Matkakirja.Natiivi
         readonly Kuvasuurennos suurennos;
         readonly ScrollView sisus;
         readonly Button sulje;
+        readonly KortinLukija lukija;
 
         Nosto nosto;
         int kuvaIndeksi, versio;
@@ -53,6 +55,7 @@ namespace Matkakirja.Natiivi
             kortti.Add(sisus);
             sulje = Rakenne.Nappi("×", "mk-nosto__sulje", Sulje, kortti);
             sulje.tooltip = "Sulje";
+            lukija = new KortinLukija(kortti, luokka: "mk-nosto__lukija");
             Kirjasimet.Aseta(kortti, Kirjasin.Luku);
 
             suurennos = new Kuvasuurennos(ui.Juuri(UiKerros.Valikot));
@@ -75,6 +78,7 @@ namespace Matkakirja.Natiivi
             versio++;
             if (!Auki) return;
             Auki = false;
+            lukija.Pysayta();
             Rakenne.Nayta(kerros, false, 200);
             suurennos.Sulje();
             SyoteLukko.Vapauta(this);
@@ -102,6 +106,7 @@ namespace Matkakirja.Natiivi
             sisus.Clear();
             sisus.scrollOffset = Vector2.zero;
             sulje.style.display = DisplayStyle.None;
+            lukija.Aseta(null);
             kortti.AddToClassList("mk-nosto--esittely");
             var k = nosto.Kuvat[0];
             var kuva = Kuvakehys(sisus, k, Vaihe2);
@@ -121,6 +126,12 @@ namespace Matkakirja.Natiivi
             sulje.style.display = DisplayStyle.Flex;
             kortti.RemoveFromClassList("mk-nosto--esittely");
             var n = nosto;
+            // Web: lööppi kuuluu luentaan; otsikko lajin mukaan (skandaalit.js, historian-hetket.js,
+            // elaintaky.js, fokuskohteet.js lisaaLukijanappi).
+            lukija.Aseta(new[] { n.Otsikko, n.Ingressi }.Concat(Kappaleet(n.Teksti)),
+                n.Laji == NostoLaji.Skandaali ? "Kuuntele lisälehti"
+                : n.Laji == NostoLaji.Kohde ? "Kuuntele: " + (n.Otsikko ?? "")
+                : n.Laji == NostoLaji.Elain ? "Kuuntele eläinkortti" : "Kuuntele hetki");
 
             var yla = Rakenne.Teksti(n.Luokka ?? "", "mk-nosto__ylarivi", sisus);
             Kirjasimet.Aseta(yla, Kirjasin.Kone);

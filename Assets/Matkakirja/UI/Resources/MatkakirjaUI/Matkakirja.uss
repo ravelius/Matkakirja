@@ -124,6 +124,53 @@
     background-color: #2f2217;
 }
 
+/* Vaaka-asento (web css/styles.css .ylapalkki-nappi, body.ylapalkki-auki .topbar): palkki liukuu
+ * oman korkeutensa verran ylös piiloon ja palaa väkäsnapista muun sisällön päälle (0,18 s). */
+.mk-ylapalkki--piilossa {
+    translate: 0 -100%;
+    transition-property: translate;
+    transition-duration: 0.18s;
+    transition-timing-function: ease;
+}
+
+.mk-ylapalkki--piilossa.mk-ylapalkki--auki {
+    translate: 0 0;
+}
+
+.mk-vakasnappi {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    min-height: 40px;
+    padding: 0;
+    border-width: 1px;
+    border-radius: 12px;
+    border-color: rgba(70, 51, 31, 0.35);
+    background-color: rgba(239, 220, 180, 0.9);
+    color: var(--map-ink);
+    justify-content: center;
+    transition-property: opacity;
+    transition-duration: 0.18s;
+}
+
+.mk-vakasnappi:active {
+    background-color: rgba(245, 231, 200, 0.95);
+}
+
+/* Auki olevan palkin alta nappi väistyy kokonaan (sulku napauttamalla palkin ulkopuolelle). */
+.mk-vakasnappi--auki {
+    opacity: 0;
+}
+
+.mk-vakasnappi > .mk-ikoni {
+    width: 20px;
+    height: 20px;
+    margin-right: 0;
+    --mk-ikoni-viiva: 1.6;
+}
+
 .mk-logo {
     width: 96px;
     height: 24px;
@@ -1139,6 +1186,22 @@
     transition-duration: 0.9s;
 }
 
+/* Aloituskaava: avausteksti lennon aikana pallon päällä — ei verhoa eikä julistetta, arkki
+ * kaistaleena alareunassa (napautus kirjoittaa loppuun). */
+.mk-aloitus__intro--lento {
+    justify-content: flex-end;
+}
+
+.mk-aloitus__intro--lento > .mk-aloitus__ylaosa {
+    display: none;
+}
+
+.mk-aloitus__intro--lento > .mk-aloitus__arkki {
+    flex-grow: 0;
+    padding: 16px 16px 30px 16px;
+    opacity: 0.96;
+}
+
 .mk-aloitus__palsta {
     width: 86%;
     max-width: 560px;
@@ -2119,4 +2182,37 @@
     opacity: 0;
     transition-property: opacity, background-color;
     transition-duration: 2s;
+}
+
+/* Kortin lukija (KortinLukija.cs, web .lukija-otsikkorivi > button.lukija-nappi): kaiutin ilman
+ * taustaa, luennan aikana kultainen, mykistettynä himmeä ja vinoviiva (Pulu.uss mk-kaiutin__vinoviiva). */
+.mk-lukija {
+    width: 34px;
+    height: 34px;
+    min-height: 34px;
+    padding: 0;
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: #46331f;
+    justify-content: center;
+    overflow: visible;
+}
+
+.mk-lukija > .mk-ikoni {
+    width: 21px;
+    height: 21px;
+    margin-right: 0;
+}
+
+.mk-lukija.mk-lukee {
+    color: #a8741a;
+}
+
+.mk-lukija.mk-mykistetty {
+    color: rgba(70, 51, 31, 0.5);
+}
+
+.mk-lukija > .mk-kaiutin__vinoviiva {
+    left: 16px;
+    top: 6px;
 }

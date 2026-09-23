@@ -23,12 +23,12 @@ namespace Matkakirja.Editori
 
         /// <summary>
         /// Pelin oma pallolaatasto (Web Mercator, z0–8, 256 px, jpg) ämpärissä.
-        /// Sama kansio kuin js/pallo.js:n PALLO_LAATTAKANSIO (Karttasepän poltto 22c,
-        /// docs/raportit/natiivi-laattaosoitteet-20260923.md). Slippy-rivi 0 on pohjoisin,
+        /// Karttasepän poltto 23a (sama sävy kuin isoisän linssin rajaton 23a-sarja; web on
+        /// vielä 22c:ssä), docs/raportit/natiivi-laattaosoitteet-20260923.md. Slippy-rivi 0 on pohjoisin,
         /// Cesiumin {y} eteläisin, joten osoitteessa on {reverseY}.
         /// </summary>
         public const string LaattaUrl =
-            "https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-22c-pohja-20260922c/{z}/{x}/{reverseY}.jpg";
+            "https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-23a-pohja-20260923a/{z}/{x}/{reverseY}.jpg";
         public const int LaattaMaxTaso = 8;
 
         /// <summary>

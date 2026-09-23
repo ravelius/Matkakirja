@@ -11,19 +11,28 @@
 //                                             tulos [laattatyyppi], kohtaaminen,
 //                                             kohtaaminen-tervehdys (KysymysEsimerkki.cs)
 //   ui selite                                 karttaselite auki (Nostot-välilehti)
-//   ui aloitus [portti|avaus|valinta|jatka]   aloitusnäkymä ilman peliä (valinta → ilmoitus)
+//   ui aloitus [portti|valinta|kortti|lento|jatka]  aloitusnäkymä ilman peliä (valinta kartalla + vahvistus, kortti = vara, lento = avausteksti pallon päällä)
 //   ui aloita [kaupunki] | ui jatka           automaatio: ohittaa aloitusnäkymän (UusiMatka / Jatka);
 //                                             listan ulkopuolinen kaupunki (pariisi) = oletuslähtö Pariisi
 //   ui lehti <kaupunki> [sivu] | ui lehti sivu n | ui lehti kuva | ui maalehti <ISO> [aihe] | ui lehti sisallys
 //   ui lehti tehtava | tehtava-pois | viimeinen  alapalkin tehtävänappi (keksitty tila) / viimeinen sivu (Maa-liite)
+//   ui lehti fokus [kaupunki] [juliste]       kaupunkilehti fokustehtävän sivulla (oletus ateena; AARTEEN AVAUS,
+//                                             juliste = JULISTE-tehtävä); vastaus ja pulla kirjataan, jos peli on käynnissä
+//   ui lehti fokus-vastaa n | fokus-pulla     napauttaa fokustehtävän vaihtoehtoa n (0–) / pullanappia (2× = osto)
 //   ui nosto <valoId>                         nostokortti: skandaali:<id> | hetki:<id> | elaintaky:<ISO> | kohde:<id>[@ISO]
 //   ui huipennus                              matkan huipennus (kaikki aarteet) esimerkkiluvuin
+//   ui sahke liuska|apu|sulje|kiinni|uusi|jasen|tila   sähkeliuska ja retkikuntaosio valekutsuin (SahkeNakyma.Testaa)
+//   ui sahketehtava [kaupunki] [tila]         pöllön sähketehtävä ilman peliä (oletus sofia tyhja), oikea sisältö ja
+//                                             hakemisto, hiljainen. Tilat: tyhja | ohi | ohi2 (vinkki) | pullat (ostettu) |
+//                                             odotus (pöllön tuomio matkalla 8 s) | eivastausta | osui (kuittaus) |
+//                                             lahetetty | sulje | tila (SahketehtavaNakyma.Testaa)
 //   ui laukku [esimerkki]                     matkalaukku (pelin data; esimerkki = keksitty sisältö)
 //   ui julisteet [n]                          julistegalleria, n ensimmäistä voitettuna (oletus 7)
 //   ui tietaja [pisteet]                      Tietäjän tie -minipopup (oletus 120)
 //   ui seloste                                laukku esimerkillä + Aarnin luettelon pikkuseloste
 //   ui nahtavyydet [kaupunki] [kohde n]      nähtävyysnäkymä (oletus firenze); kohde n avaa n:nnen kohteen jutun
 //   ui opas [kaupunki] [vieritä px]           turistiopas (oletus lontoo), valinnainen vieritys
+//   ui ylapalkki [vaaka|pysty|auto|auki]    vaaka-asennon piilotettu yläpalkki ja väkäsnappi (auki = avaa väkäsistä)
 //   ui liike                                  pieni liike: pulu lentää kerran heti (ohittaa levon)
 //   ui leima [muutos] [syy]                   tapahtumakupla: rahan muutos (oletus +10 Lehden minitehtävä ratkesi)
 //   ui noppa [1–6 | pois]                     näkyvä noppa: heitto Pariisista lepopaikkaan / häivytys
@@ -31,6 +40,9 @@
 //   ui offline demo|verkoton|verkko|pois      offline-tilan pilleri: keksitty lataus / verkon tila
 //   ui maakunnat [kortti] [ISO:tunnus]        karttaselite Maakunnat-välilehdellä, valinta, kortti
 //   ui pulu sano [teksti] | aani [lähde n] | ele id | tilanne laji | tunne t | pois | paalle
+//   ui pulu juttu [kaupunki] [n]              pulun kuvakortti nähtävyysjutulle (oletus firenze, ensimmäinen
+//                                             kuvallinen juttu tai kohde n) → "Avaa juttu" nähtävyysarkkiin;
+//                                             ohittaa sijaintiehdon (webissä vain kaupungissa, jossa pelaaja on)
 //   ui tietoja                                tekijätiedot ja lähteet
 //   ui chat [kysymys]                         pulun keskustelu auki / kysy
 //   ui traileri [kaupunki]                    saapumistraileri ilman puhetta (oletus lontoo)
@@ -44,6 +56,8 @@
 //   ui livia [ele] [p] [astro|leiju|puhe|mini] Livia (152 × 304) keskellä kerrosta 40 (oletus blink 0.5)
 //   ui livia kierros [astro|leiju|puhe]       kaikki eleet peräkkäin oikeassa ajassa (videotarkistus)
 //   ui livia pois                             Livia pois
+//   ui livia avaus [nollaa|peru]              Livian avausesittely (ensiliito + kuplat, ilman valintavahtia);
+//                                             nollaa = lippu matkakirja-livia-avaus pois ensin, peru = keskeytä
 //   ui linssi valitsin|peite|selite|astro|kuva|sumu|vertailu|maa|keksinnot|matka|radio|valikko|varusteet|sulje|pois
 //                                             linssien UI esimerkkiaineistolla (Linssit/LinssiKomennot.cs)
 //   ui linssi vertailu FIN SWE [ITA JPN]      vertailuarkki näillä mailla + maakäyrät (latautuu|verkko = tilat)
@@ -166,7 +180,23 @@ namespace Matkakirja.Natiivi
                         case "tunne": return pu.Tunne(arvo) ? null : "ei elettä";
                         case "pois": pu.Nayta(false); return null;
                         case "paalle": pu.Nayta(true); return null;
-                        default: return "ui pulu sano|aani|ele|tilanne|tunne|pois|paalle";
+                        case "juttu":
+                        {
+                            var j = arvo.Split(new[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries);
+                            string kid = j.Length > 0 ? j[0] : "firenze";
+                            int nro = j.Length > 1 && int.TryParse(j[1], out var jn) ? jn : 0;
+                            Kohdekartat.Hae(kid, k =>
+                            {
+                                var kohde = k?.Kohteet.Find(x => nro > 0 ? x.Numero == nro : x.Selattava);
+                                if (kohde == null) { Kirjaa("ui pulu juttu: ei kohdetta " + kid + (nro > 0 ? " " + nro : "")); return; }
+                                bool sijainti = PuluChat.NahtavyysAvattavissa(k, kohde);
+                                ui.Chat.AvaaNahtavyys(k, kohde, true);
+                                Kirjaa("ui pulu juttu: " + kohde.Nimi + (kohde.Juttu?.Kuvat.Count > 0 ? " (kuvakortti)" : " (juttu suoraan)")
+                                    + (sijainti ? "" : " — pelaaja ei ole kaupungissa, webissä linkkiä ei näytettäisi"));
+                            });
+                            return null;
+                        }
+                        default: return "ui pulu sano|aani|ele|tilanne|tunne|pois|paalle|juttu";
                     }
                 }
                 case "luento":
@@ -206,9 +236,12 @@ namespace Matkakirja.Natiivi
                 case "maalehti":
                 {
                     var l = loput.Split(' ');
-                    if (osat[1] == "lehti" && (l[0] == "sivu" || l[0] == "kuva" || l[0] == "sisallys" || l[0] == "tehtava" || l[0] == "tehtava-pois" || l[0] == "viimeinen"))
+                    if (osat[1] == "lehti" && (l[0] == "sivu" || l[0] == "kuva" || l[0] == "sisallys" || l[0] == "tehtava" || l[0] == "tehtava-pois" || l[0] == "viimeinen"
+                        || l[0] == "fokus-vastaa" || l[0] == "fokus-pulla"))
+                        return ui.Lehti.Testaa(l[0], l.Length > 1 && int.TryParse(l[1], out var sn) ? sn : 0);
+                    if (osat[1] == "lehti" && l[0] == "fokus")
                     {
-                        ui.Lehti.Testaa(l[0], l.Length > 1 && int.TryParse(l[1], out var sn) ? sn : 0);
+                        ui.Lehti.TestaaFokus(l.Length > 1 && l[1].Length > 0 ? l[1].ToLowerInvariant() : "ateena", l.Length > 2 && l[2] == "juliste");
                         return null;
                     }
                     if (osat[1] == "maalehti") ui.Lehti.Nayta(LehtiLaji.Maa, l[0].Length > 0 ? l[0] : "ITA", l.Length > 1 ? l[1] : null);
@@ -222,6 +255,10 @@ namespace Matkakirja.Natiivi
                     ui.Huipennus.Nayta(new MatkanYhteenveto { Paivat = 83, Kaupungit = 41, Aarteet = 6, AarteitaKaikkiaan = 6 },
                         () => ui.Aloitus.NaytaAvaus(id => ui.Tilarivi.Viesti("Lähtö: " + id)));
                     return null;
+                case "sahke":
+                    return ui.Sahke.Testaa(loput.Length > 0 ? loput : "liuska");
+                case "sahketehtava":
+                    return ui.Sahkelomake.Testaa(loput);
                 case "laukku":
                     ui.Valikko.Sulje(); ui.Aanentasot.Sulje();
                     ui.Matkalaukku.Testaa(loput == "esimerkki" ? new System.Func<LaukkuNaytto>(Matkalaukku.Esimerkki) : null);
@@ -242,6 +279,11 @@ namespace Matkakirja.Natiivi
                 case "noppa":
                     if (loput == "pois") { ui.Noppa.Haivyta(); return null; }
                     ui.HeitaNoppa(int.TryParse(loput, out var silmat) ? Mathf.Clamp(silmat, 1, 6) : UnityEngine.Random.Range(1, 7), 48.857, 2.352, null);
+                    return null;
+                case "ylapalkki":
+                    if (loput == "auki") { ui.Tilarivi.Avaa(); return Ylapalkki.Piilossa ? null : "palkki ei ole piilossa (ui ylapalkki vaaka)"; }
+                    Ylapalkki.Pakota = loput == "vaaka" ? true : loput == "pysty" ? false : (bool?)null;
+                    ui.Tilarivi.Paivita();
                     return null;
                 case "liike":
                     return ui.Liike.Lenna(true) ? null : "pieni liike on pois päältä tai lento jo käynnissä";
@@ -360,6 +402,12 @@ namespace Matkakirja.Natiivi
         string Livia(string loput)
         {
             var osat = new List<string>(loput.Split(new[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries));
+            if (osat.Count > 0 && osat[0] == "avaus")
+            {
+                if (osat.Count > 1 && osat[1] == "peru") { LivianAvaus.Peru(); return null; }
+                if (osat.Count > 1 && osat[1] == "nollaa") LivianAvaus.NollaaLippu();
+                return LivianAvaus.Nayta() ? null : LivianAvaus.Kaynnissa ? "avaus jo käynnissä" : "avaus jo nähty (ui livia avaus nollaa)";
+            }
             if (osat.Count > 0 && osat[0] == "pois")
             {
                 liviaKehys?.RemoveFromHierarchy();

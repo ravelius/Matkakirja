@@ -43,10 +43,10 @@ namespace Matkakirja.Natiivi
 
             nappi = Rakenne.Nappi(null, "mk-seliteNappi", Vaihda, turva, NostoMerkit.SeliteNappi);
             nappi.tooltip = "Karttaselitteet";
-            nappi.style.top = Ylapalkki.Korkeus + 8;
+            nappi.style.top = Ylapalkki.Varaus + 8;
 
             paneeli = Rakenne.El("mk-selite", turva);
-            paneeli.style.top = Ylapalkki.Korkeus + 8;
+            paneeli.style.top = Ylapalkki.Varaus + 8;
             paneeli.style.display = DisplayStyle.None;
             paneeli.Add(new KarheaKehys { Sade = 8, Paksuus = 1.2f });
             Kirjasimet.Aseta(paneeli, Kirjasin.Kone);
@@ -84,7 +84,15 @@ namespace Matkakirja.Natiivi
             lista.RegisterCallback<PointerCaptureOutEvent>(_ => vetaa = false);
             lista.RegisterCallback<GeometryChangedEvent>(_ => SiirraPeukalo());
 
-            kerros.TurvaMuuttui += () => { nappi.style.top = Ylapalkki.Korkeus + 8; paneeli.style.top = Ylapalkki.Korkeus + 8; };
+            kerros.TurvaMuuttui += Asettele;
+            Asettele();
+            // Vaakatilan väkäsnappi on oikeassa kulmassa: selite väistyy sen verran vasemmalle, ja
+            // auki olevan yläpalkin alta kumpikin väistyy kokonaan (web body.ylapalkki-auki .karttaselite).
+            Ylapalkki.AukiMuuttui += auki =>
+            {
+                nappi.style.opacity = auki ? 0f : 1f;
+                nappi.pickingMode = auki ? PickingMode.Ignore : PickingMode.Position;
+            };
             // Napautus paneelin ohi (myös pallolle, jota UI ei näe) sulkee.
             kerros.JokaRuutu += TarkistaOhiNapautus;
         }
@@ -234,6 +242,15 @@ namespace Matkakirja.Natiivi
             peukalo.style.height = l.height;
             linssiLuku.text = r.Luku.text;
             peukalo.EnableInClassList("mk-vetaa", vetaa);
+        }
+
+        void Asettele()
+        {
+            float yla = Ylapalkki.Varaus + 8, oikea = Ylapalkki.Piilossa ? 10 + 40 + 6 : 10;
+            nappi.style.top = yla;
+            paneeli.style.top = yla;
+            nappi.style.right = oikea;
+            paneeli.style.right = oikea;
         }
 
         void TarkistaOhiNapautus()

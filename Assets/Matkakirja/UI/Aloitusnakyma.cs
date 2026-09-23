@@ -10,6 +10,12 @@
 //                alhaalla linkki "Oppiminen on hauskaa" (periaatteet).
 //                Tallennettu matka (PeliOhjain.TallennusOn): "Jatka matkaa" (kulta) ja
 //                "Uusi matka" (haamu) — webissä tallennus jatkuu ilman porttia.
+// ALOITUSKAAVA (omistaja 23.9.2026, Raamattu, sitova): portti → kartta (lähtökaupungit korostettuina,
+// napautus + vahvistus) → suoraan lentoon Lontoosta valittuun kaupunkiin (kamera ja lentokaari
+// Natiivisepältä, koneen ääni ja isoisän intro-luenta Pelikoodarilta). Avausteksti naputetaan
+// LENNON AIKANA pallon päälle pergamenttikaistaleelle (LentoKirjoitus), ei omalle ruudulleen.
+// Alla vaiheet 2 ja 3 kuvaavat osia, joista kaava koostuu.
+//
 //   2 AVAUS      yläosassa 1873-juliste (◈-viivat, MATKAKIRJA, MAAILMAN YMPÄRI,
 //                KAHDEKSASSAKYMMENESSÄ PÄIVÄSSÄ, punainen OSA II · UNOHDETTU AARRE)
 //                sumuverhon päällä; alaosassa pergamenttiarkki, jolle paikkarivi
@@ -17,9 +23,15 @@
 //                kerrallaan (web INTRO_TYPE_MS 190, tauot välimerkeistä) ja kertoja
 //                lukee intro-puhe.mp3:n (Puhe). Napautus arkkiin kirjoittaa loppuun.
 //                Lopuksi kehystetty nappi VALITSE ALOITUSKAUPUNKI.
-//   3 VALINTA    webissä valinta tehdään pallolla (ETUSIVUN_KOHTEET); natiivissa
-//                pergamenttikortti, jossa lähtökaupungit (PeliOhjain.Lahtokaupungit,
-//                paketin aloitus = true) lippuineen. Valinta → Aloita(id).
+//   3 VALINTA    pallolla kuten webissä (js/ui.js aloitaPallolta, js/pallolauta/lauta.js
+//                aloitusnakyma/aloitusKohteet; omistaja 23.9.2026: "valitaan KARTALTA"):
+//                verho häipyy, kamera ajetaan kiinteään valintanäkymään (30° N, 17° E,
+//                pallon säde 0,55 ruudun korkeudesta, Lontoo ja Ateena mahtuvat kuvaan),
+//                näkyvissä vain Lontoo ja lähtökaupungit (PeliOhjain.Lahtokaupungit,
+//                paketin aloitus = true), ja jokaisella valittavalla on sykkivä kultapiste
+//                (Natiivisepän Karttapisteet, web .pallolauta-huomio #eab84e). Napautus
+//                kaupunkiin tai pisteeseen valitsee suoraan (web doPickStart) → Aloita(id).
+//                Ilman palloa (3D ei käytössä) varana pergamenttikortti lippuineen.
 // Matkan huipennus (Huipennus alla): PeliOhjain.KaikkiAarteetLoytyi → webin
 // #winner-dialog ("Jatka vaeltamista" / "Uusi matka" → avausteksti ja valinta).
 //
@@ -33,6 +45,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Text.RegularExpressions;
 using Matkakirja.Peli;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -140,7 +153,7 @@ namespace Matkakirja.Natiivi
             jatkaNappi = Rakenne.Nappi("Jatka matkaa", "mk-nappi--kulta mk-aloitus__aloita", Jatka, keskus);
             Rakenne.Tausta(jatkaNappi, Kuviot.Kulta);
             Kirjasimet.Aseta(jatkaNappi, Kirjasin.KoneLihava);
-            aloitaNappi = Rakenne.Nappi("Aloita seikkailu", "mk-nappi--kulta mk-aloitus__aloita", Portista, keskus);
+            aloitaNappi = Rakenne.Nappi("Aloita seikkailu", "mk-nappi--kulta mk-aloitus__aloita", PortistaKartalle, keskus);
             Rakenne.Tausta(aloitaNappi, Kuviot.Kulta);
             Kirjasimet.Aseta(aloitaNappi, Kirjasin.KoneLihava);
             var linkki = Rakenne.Nappi("Oppiminen on hauskaa", "mk-aloitus__linkki", () => Rakenne.Nayta(periaatteet, true, 250), portti);
@@ -246,6 +259,9 @@ namespace Matkakirja.Natiivi
         public void Nayta(Action<string> aloita, IReadOnlyList<(string Id, string Nimi)> kohteet = null, Action jatka = null)
         {
             this.aloita = aloita;
+            lennolla = false;
+            juuri.pickingMode = PickingMode.Position;
+            intro.RemoveFromClassList("mk-aloitus__intro--lento");
             PaivitaAaniNappi();
             this.jatka = jatka;
             this.kohteet = kohteet != null && kohteet.Count > 0 ? kohteet : Array.ConvertAll(Kohteet, id => (id, (string)null));
@@ -267,9 +283,13 @@ namespace Matkakirja.Natiivi
             SyoteLukko.Esta(this);
         }
 
+        /// <summary>Testikomento (ui aloitus valinta kortti): varakortti pallon sijaan.</summary>
+        public bool PakotaKortti;
+
         public void Piilota()
         {
             if (!Auki) return;
+            LopetaPallovalinta();
             Auki = false;
             kirjoitus?.Pause();
             juuri.style.opacity = 0f;
@@ -282,7 +302,15 @@ namespace Matkakirja.Natiivi
         {
             Nayta(aloita, kohteet);
             portti.style.display = DisplayStyle.None;
-            Portista();
+            NaytaValinta();
+        }
+
+        /// <summary>Aloituskaava: portti häipyy suoraan lähtövalintaan kartalla (avausteksti tulee vasta lennolla).</summary>
+        void PortistaKartalle()
+        {
+            portti.style.opacity = 0f;
+            portti.schedule.Execute(() => portti.style.display = DisplayStyle.None).StartingIn(400);
+            NaytaValinta();
         }
 
         void Jatka()
@@ -290,16 +318,6 @@ namespace Matkakirja.Natiivi
             var j = jatka;
             Piilota();
             j?.Invoke();
-        }
-
-        void Portista()
-        {
-            // Portti häipyy, juliste ja arkki nousevat (web intro-aloitettu, 0,9 s).
-            portti.style.opacity = 0f;
-            portti.schedule.Execute(() => portti.style.display = DisplayStyle.None).StartingIn(400);
-            intro.style.opacity = 1f;
-            arkki.style.opacity = 1f;
-            AloitaKirjoitus();
         }
 
         void AloitaKirjoitus()
@@ -310,7 +328,7 @@ namespace Matkakirja.Natiivi
             sana = 0;
             runko.text = "";
             // Puhe: yksi puhuja kerrallaan ja musiikin vaimennus (Pelikoodarin Puhe.cs).
-            Puhe.Hae()?.Soita(IntroPuhe);
+            if (!LuentaPelilta) Puhe.Hae()?.Soita(IntroPuhe);
             kirjoitus?.Pause();
             kirjoitus = runko.schedule.Execute(Seuraava).StartingIn(Tahti + 600);
         }
@@ -341,6 +359,7 @@ namespace Matkakirja.Natiivi
 
         void Valmis()
         {
+            if (lennolla) { LopetaLento(lentoOhi ? 2500 : 5000); return; }
             if (valintaNappi.style.display == DisplayStyle.Flex) return;
             valintaNappi.style.display = DisplayStyle.Flex;
             valintaNappi.style.opacity = 0f;
@@ -349,11 +368,13 @@ namespace Matkakirja.Natiivi
 
         void NaytaValinta()
         {
-            // Web aloitaKartalta: avauksen puhe loppuu, kun valinta alkaa.
+            // Web aloitaKartalta: avauksen puhe loppuu, kun valinta alkaa; naksahdus (sfx clack).
             Puhe.Instanssi?.Pysayta();
             Aanet.PulunTehoste("pulu.kujerrus");
             UiSisalto.Lataa(() =>
             {
+                if (!Auki || ValitseePallolla) return;
+                if (!PakotaKortti && AloitaPallovalinta()) return;
                 valintaLista.Clear();
                 foreach (var (id, nimi) in kohteet)
                 {
@@ -378,9 +399,187 @@ namespace Matkakirja.Natiivi
 
         void Valitse(string id)
         {
+            LopetaPallovalinta();
             Rakenne.Nayta(valinta, false, 200);
             Piilota();
             aloita?.Invoke(id);
+            LentoKirjoitus();
+        }
+
+        // --- avausteksti lennon aikana (aloituskaava) --------------------------------------
+
+        /// <summary>
+        /// Pelikoodari soittaa intro-luennan aloituslennolla (koneen ääni + isoisä). Niin kauan kuin
+        /// false, UI soittaa intro-puhe.mp3:n itse kirjoituksen alkaessa (Puhe.Soita).
+        /// </summary>
+        public static bool LuentaPelilta;
+        bool lennolla, lentoOhi = true;
+
+        /// <summary>
+        /// Avausteksti naputetaan pallon päälle alareunan pergamenttikaistaleelle (arkki ilman verhoa ja
+        /// julistetta). Kaistale häipyy, kun teksti on valmis ja lento ohi (AloituslentoPaattyi), tai
+        /// viimeistään 5 s tekstin jälkeen. Napautus kaistaleeseen kirjoittaa loppuun.
+        /// </summary>
+        public void LentoKirjoitus()
+        {
+            lennolla = true;
+            lentoOhi = false;
+            juuri.style.display = DisplayStyle.Flex;
+            juuri.style.opacity = 1f;
+            juuri.pickingMode = PickingMode.Ignore;
+            intro.AddToClassList("mk-aloitus__intro--lento");
+            portti.style.display = DisplayStyle.None;
+            valinta.style.display = DisplayStyle.None;
+            valintaNappi.style.display = DisplayStyle.None;
+            intro.style.opacity = 1f;
+            arkki.style.opacity = 1f;
+            AloitaKirjoitus();
+        }
+
+        /// <summary>Pelikoodarin/Natiivisepän aloituslento päättyi: kaistale häipyy, kun teksti on valmis.</summary>
+        public void AloituslentoPaattyi()
+        {
+            lentoOhi = true;
+            if (lennolla && (sanat == null || sana >= sanat.Length)) LopetaLento(1500);
+        }
+
+        void LopetaLento(long viiveMs)
+        {
+            juuri.schedule.Execute(() =>
+            {
+                if (!lennolla || Auki) return;
+                lennolla = false;
+                juuri.style.opacity = 0f;
+                juuri.schedule.Execute(() =>
+                {
+                    if (Auki || lennolla) return;
+                    juuri.style.display = DisplayStyle.None;
+                    juuri.pickingMode = PickingMode.Position;
+                    intro.RemoveFromClassList("mk-aloitus__intro--lento");
+                }).StartingIn(900);
+            }).StartingIn(viiveMs);
+        }
+
+        // --- valinta pallolla (web aloitaPallolta; lauta.js aloitusnakyma, aloitusKohteet) --
+
+        public const double ValintaLat = 30, ValintaLon = 17;
+        const double PallonOsuus = 0.55, AnkkuriVara = 0.78;
+        /// <summary>Web ALOITUSVALINNAN_ANKKURIT: Lontoo ja Ateena mahtuvat kuvaan kapeallakin ruudulla.</summary>
+        static readonly string[] Ankkurit = { "lontoo", "ateena" };
+        const string Lahto = "lontoo";
+        static readonly Color Huomio = new Color32(0xea, 0xb8, 0x4e, 0xff);
+        const string PisteEtuliite = "aloitus:";
+
+        KaupunkiMerkit valintaMerkit;
+        Karttapisteet valintaPisteet;
+        PalloKierto valintaKierto;
+        readonly List<string> valintaIdt = new List<string>();
+
+        /// <summary>Lähtövalinta pallolla käynnissä (verho pois, pallon syöte vapaana).</summary>
+        public bool ValitseePallolla { get; private set; }
+
+        /// <summary>Valinta pallolle, jos 3D-kartta on käytössä; false = varakortti.</summary>
+        bool AloitaPallovalinta()
+        {
+            var kk = KarttaKerrokset.Instanssi;
+            var kierto = kk != null && kk.pisteet != null ? kk.pisteet.kierto : null;
+            if (kk == null || kk.merkit == null || kierto == null) return false;
+            valintaMerkit = kk.merkit;
+            valintaPisteet = kk.pisteet;
+            valintaKierto = kierto;
+            ValitseePallolla = true;
+
+            // Verho ja arkki häipyvät (web intro-fade); pallo saa syötteen.
+            juuri.style.opacity = 0f;
+            juuri.schedule.Execute(() => { if (ValitseePallolla) juuri.style.display = DisplayStyle.None; }).StartingIn(900);
+            SyoteLukko.Vapauta(this);
+
+            valintaIdt.Clear();
+            foreach (var (id, _) in kohteet) if (id != null && id != Lahto) valintaIdt.Add(id);
+            var nakyvat = new HashSet<string>(valintaIdt) { Lahto };
+            valintaMerkit.NaytaVain(nakyvat);
+            foreach (var id in valintaIdt)
+            {
+                valintaMerkit.Korosta(id, Huomio);
+                var k = UiSisalto.Kaupunki(id);
+                if (k != null && !double.IsNaN(k.Lat)) valintaPisteet.Aseta(PisteEtuliite + id, k.Lat, k.Lon, Huomio, false);
+            }
+            valintaKierto.KaupunkiNapautettu += KaupunkiValittu;
+            valintaPisteet.Napautettu += PisteValittu;
+            valintaKierto.Aja(ValintaLat, ValintaLon, ValintanakymanKorkeus(), 1.6f, null);
+            // Web naytaLivianAvaus: Livia liitää sisään ja esittelee valinnan (kerran laitteella).
+            LivianAvaus.Nayta(() => ValitseePallolla, valintaIdt.Count);
+            return true;
+        }
+
+        void KaupunkiValittu(string id)
+        {
+            if (ValitseePallolla && valintaIdt.Contains(id)) UiKerros.PaaSaikeessa(() => Vahvista(id));
+        }
+
+        void PisteValittu(string pid)
+        {
+            if (!ValitseePallolla || pid == null || !pid.StartsWith(PisteEtuliite)) return;
+            string id = pid.Substring(PisteEtuliite.Length);
+            if (valintaIdt.Contains(id)) UiKerros.PaaSaikeessa(() => Vahvista(id));
+        }
+
+        /// <summary>Aloituskaava: napautus + vahvistus. Peruutus jättää valinnan kartalle.</summary>
+        void Vahvista(string id)
+        {
+            var v = UiNakymat.Olemassa ? UiNakymat.Hae().Vahvistus : null;
+            if (v == null) { Valitse(id); return; }
+            if (v.Auki) return;
+            var k = UiSisalto.Kaupunki(id);
+            string nimi = k?.Nimi ?? id;
+            v.Kysy(nimi, string.IsNullOrEmpty(k?.MaaNimi) ? "Lennät Lontoosta tänne ja matka alkaa." : k.MaaNimi + ". Lennät Lontoosta tänne ja matka alkaa.",
+                "Valitse toinen", "Aloita täältä", () => { if (ValitseePallolla) Valitse(id); });
+        }
+
+        void LopetaPallovalinta()
+        {
+            if (!ValitseePallolla) return;
+            ValitseePallolla = false;
+            if (valintaKierto != null) valintaKierto.KaupunkiNapautettu -= KaupunkiValittu;
+            if (valintaPisteet != null)
+            {
+                valintaPisteet.Napautettu -= PisteValittu;
+                foreach (var id in valintaIdt) valintaPisteet.Poista(PisteEtuliite + id);
+            }
+            if (valintaMerkit != null)
+            {
+                foreach (var id in valintaIdt) valintaMerkit.Korosta(id, null);
+                valintaMerkit.NaytaVain(null);
+            }
+            valintaIdt.Clear();
+        }
+
+        /// <summary>
+        /// Web aloitusvalinnanKorkeus: pallon säde 0,55 ruudun korkeudesta (kameran pystysuora fov), ja
+        /// ankkurikaupungit mahtuvat 78 %:iin ruudun puolikkaasta. Tulos metreinä pinnasta.
+        /// </summary>
+        double ValintanakymanKorkeus()
+        {
+            var kamera = valintaKierto.GetComponent<Camera>();
+            double fov = kamera != null ? kamera.fieldOfView : 40.0;
+            double tan = math.tan(math.radians(fov / 2));
+            double suhde = math.max(0.05, Screen.width / (double)math.max(1, Screen.height));
+            double d = 1.0 / math.max(1e-6, math.sin(math.atan(2 * PallonOsuus * tan)));
+            double a0 = math.radians(ValintaLat), b0 = math.radians(ValintaLon);
+            var keskus = new double3(math.cos(a0) * math.cos(b0), math.cos(a0) * math.sin(b0), math.sin(a0));
+            var ita = new double3(-math.sin(b0), math.cos(b0), 0);
+            var pohjoinen = new double3(-math.sin(a0) * math.cos(b0), -math.sin(a0) * math.sin(b0), math.cos(a0));
+            foreach (var id in Ankkurit)
+            {
+                var k = UiSisalto.Kaupunki(id);
+                if (k == null || double.IsNaN(k.Lat)) continue;
+                double a = math.radians(k.Lat), b = math.radians(k.Lon);
+                var v = new double3(math.cos(a) * math.cos(b), math.cos(a) * math.sin(b), math.sin(a));
+                double e = math.dot(v, ita), n = math.dot(v, pohjoinen), u = math.dot(v, keskus);
+                d = math.max(d, math.max(u + math.abs(e) / math.max(1e-6, AnkkuriVara * suhde * tan),
+                                         u + math.abs(n) / math.max(1e-6, AnkkuriVara * tan)));
+            }
+            return (d - 1) * CesiumForUnity.CesiumWgs84Ellipsoid.GetMaximumRadius();
         }
 
         // --- periaatteet (web naytaPeriaatteet, sanasta sanaan) ------------------------
@@ -449,17 +648,18 @@ namespace Matkakirja.Natiivi
 
         // --- testi ---------------------------------------------------------------------
 
-        /// <summary>Testikomento: portti | avaus | loppu | valinta (ilman peliä; valinta kirjataan ilmoitukseen).</summary>
+        /// <summary>Testikomento: portti | valinta | kortti | lento | jatka (ilman peliä; valinta kirjataan ilmoitukseen).</summary>
         public void Testaa(string vaihe, Action<string> valittu)
         {
             // Pelin lähtökaupungit (paketin aloitus = true, 19 kpl), jos peli on ladattu; muuten webin varalista.
             Nayta(valittu, PeliOhjain.Instanssi?.Lahtokaupungit(), vaihe == "jatka" ? () => valittu("(jatka)") : (Action)null);
             if (vaihe == "jatka") return;
             if (vaihe == "portti") return;
-            Portista();
-            if (vaihe == "avaus") return;
-            KirjoitaLoppuun();
-            if (vaihe == "valinta") NaytaValinta();
+            // lento = avausteksti pallon päällä (kuten valinnan jälkeen), valinta = kartalla,
+            // kortti = varakortti ilman palloa.
+            if (vaihe == "lento") { Piilota(); LentoKirjoitus(); return; }
+            PakotaKortti = vaihe == "kortti";
+            PortistaKartalle();
         }
     }
 
