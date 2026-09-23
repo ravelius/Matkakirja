@@ -26,11 +26,12 @@
 //                     alkoi eikä vuoro pääty → Matka.KaksintaisteluAlkaa
 //                     (itse kaksintaistelu on Matka.Kaksintaistelu-koukku)
 // MUUT KOUKUT (null = ominaisuutta ei ole):
-//   PulmaOdottaa, AvaaPulma — web pendingPuzzle / openPuzzle. Pulmien generate-
-//                     funktiot eivät ole sisältöpaketissa; vastaus- ja
-//                     sulkulogiikka (Laji Pulma) on silti portattu tähän
-//   TapahtumiaOn, AvaaTapahtuma — web pack.events / openEvent (maailmankartalla
-//                     ei tapahtumia, joten paino on nolla kuten webissä)
+//   PulmaOdottaa, AvaaPulma — web pendingPuzzle / openPuzzle: Pulmat.Kytke
+//                     (Peli/Pulmat.cs, generaattorit portattu C#:ksi); vastaus-
+//                     ja sulkulogiikka (Laji Pulma) on tässä
+//   TapahtumiaOn, AvaaTapahtuma — web pack.events / openEvent: Tapahtumat.Kytke
+//                     (Peli/Tapahtumat.cs; maailmankartalla ei tapahtumia, joten
+//                     paino on nolla kuten webissä)
 //   Liput           — web pack.map.countryShapes (ei sisältöpaketissa)
 //   AsetaKuvat      — web setPhotoPool (käyttöliittymä syöttää kuratoidut kuvat)
 using System;
@@ -99,6 +100,8 @@ namespace Matkakirja.Peli
         public string Loyto;                            // web found
         public bool Laatta;                             // web laatta (pulma laattakaupungissa)
         public string PulmaId;                          // web puzzleId
+        /// <summary>Pulman näytettävät lisätiedot (web title, selite, sketchData, kuvat, kuvaLahteet; Peli/Pulmat.cs). Muilla null.</summary>
+        public PulmanTiedot PulmaTiedot;
     }
 
     /// <summary>Kysymysmoottorin tallennettava tila (Pelitila.Kysely).</summary>
@@ -168,6 +171,7 @@ namespace Matkakirja.Peli
                 sb.Append(",\"loyto\":").Append(T(q.Loyto));
                 sb.Append(",\"laatta\":").Append(B(q.Laatta));
                 sb.Append(",\"pulmaId\":").Append(T(q.PulmaId));
+                if (q.PulmaTiedot != null) { sb.Append(",\"pulmaTiedot\":"); q.PulmaTiedot.Kirjoita(sb); }
                 sb.Append('}');
             }
             sb.Append('}');
@@ -222,6 +226,7 @@ namespace Matkakirja.Peli
                     Loyto = MiniJson.Teksti(q, "loyto"),
                     Laatta = MiniJson.Totuus(q, "laatta"),
                     PulmaId = MiniJson.Teksti(q, "pulmaId"),
+                    PulmaTiedot = PulmanTiedot.Lue(MiniJson.Kentta(q, "pulmaTiedot") as Dictionary<string, object>),
                 };
             }
             return t;

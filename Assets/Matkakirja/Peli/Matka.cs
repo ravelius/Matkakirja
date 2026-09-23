@@ -371,6 +371,9 @@ namespace Matkakirja.Peli
             Saapui?.Invoke(p, p.Sijainti.Kaupunki, uusi);
         }
 
+        /// <summary>Web visitCity siirron ulkopuolelta (tapahtumakortin kyyti, Peli/Tapahtumat.cs).</summary>
+        public void KirjaaSaapuminen(Pelaaja p = null) => KirjaaKaynti(p ?? P);
+
         /// <summary>Saapumisen jälkeen: pysähdys (koukku) tai vuoron päätös.</summary>
         void SaapumisenJalkeen(bool aikaKuluu)
         {

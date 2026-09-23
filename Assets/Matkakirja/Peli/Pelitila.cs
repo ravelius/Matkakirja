@@ -10,7 +10,8 @@
 // Erä 3 (tallennusversio 3): aarrelaatat (Laattamaailma: laatat, käännetyt,
 // löydetyt pääaarteet Map-järjestyksessä), pelaajan tähdet ja löydöt
 // (finds, findManner, findMaa), kaksintaistelun lippu (duelArmed),
-// ennätys (recordNoted, recordMark.day) ja pöllöliput.
+// ennätys (recordNoted, recordMark.day) ja pöllöliput. Samaan versioon
+// valinnaisina: nähdyt pulmat (puzzlesSeen) ja avoin tapahtumakortti (eventCard).
 // Versiot 1 ja 2 latautuvat; niissä ei ole laattoja (ks. Matka.Lataa).
 using System;
 using System.Collections.Generic;
@@ -103,6 +104,10 @@ namespace Matkakirja.Peli
         public bool PolloAarteena;
         /// <summary>Pöllö on jo löytynyt (web polloLoydetty = !polloAarteena alussa).</summary>
         public bool PolloLoydetty = true;
+        /// <summary>Nähdyt pulmat kaupunki-id:nä (web puzzlesSeen ilman laudan etuliitettä; Peli/Pulmat.cs).</summary>
+        public HashSet<string> NahdytPulmat = new HashSet<string>();
+        /// <summary>Avoin tapahtumakortti (web eventCard; Peli/Tapahtumat.cs), vaiheessa Tapahtuma.</summary>
+        public Tapahtumakortti Tapahtumakortti;
         /// <summary>Luetun tallennuksen versio (0 = ei luettu). Ei tallenneta.</summary>
         public int LuettuVersio;
 
@@ -191,6 +196,10 @@ namespace Matkakirja.Peli
             Kentta(sb, "ennatysPaiva", EnnatysPaiva.HasValue ? EnnatysPaiva.Value.ToString(CultureInfo.InvariantCulture) : "null");
             Kentta(sb, "polloAarteena", PolloAarteena ? "true" : "false");
             Kentta(sb, "polloLoydetty", PolloLoydetty ? "true" : "false");
+            // Pulmat ja tapahtumakortit: valinnaiset kentät (puuttuvat vanhasta tallennuksesta).
+            Kentta(sb, "pulmatNahty", "[" + string.Join(",", NahdytPulmat.OrderBy(k => k, StringComparer.Ordinal).Select(Teksti)) + "]");
+            sb.Append(",\"tapahtumakortti\":");
+            if (Tapahtumakortti == null) sb.Append("null"); else Tapahtumakortti.Kirjoita(sb);
             sb.Append('}');
             return sb.ToString();
         }
@@ -260,6 +269,9 @@ namespace Matkakirja.Peli
             // Web fromJSON: polloLoydetty = polloAarteena ? (tallennettu ?? true) : true.
             t.PolloAarteena = MiniJson.Totuus(o, "polloAarteena");
             t.PolloLoydetty = !t.PolloAarteena || MiniJson.Totuus(o, "polloLoydetty", true);
+            // Pulmat ja tapahtumakortit (valinnaiset): web puzzlesSeen ?? [], eventCard ?? null.
+            foreach (var s in Tekstit(o, "pulmatNahty")) if (s != null) t.NahdytPulmat.Add(s);
+            t.Tapahtumakortti = Tapahtumakortti.Lue(MiniJson.Kentta(o, "tapahtumakortti") as Dictionary<string, object>);
             return t;
         }
 

@@ -21,6 +21,10 @@ verkkopelin `Game` (yksinpeli vaellustilassa).
     availableActions); tila Pelitila.Kaupat (Kauppatila). KauppaVakiot = webin hinnat ja
     palkkiot, Kauppasisalto = paketin elaintayt.json ja julisteet.json.
   - **Voitto** — checkWin (vain moninpeli; vaelluksessa aina epätosi, Matka ei vielä kutsu).
+  - **Pulmat** + Pulmadata, Pulmageneraattorit — isoisän pulmat (pendingPuzzle, openPuzzle,
+    kaikki 11 generate(rng)-funktiota taulukkoineen C#:na; paketin `kokoelmat/pulmat.json`).
+  - **Tapahtumat** + Tapahtumadata — tapahtumakortit (openEvent, closeEvent, rideTarget;
+    maailmankartalla ei kortteja, jäsennin lukee lähdemoduulin muodon ja tulevan kokoelman).
 - `Assets/Matkakirja/Scripts/Peli/LehtiKuori.cs` — ILehti-toteutus (GameObject `MatkakirjaLehti`).
 - `Assets/Plugins/iOS/MatkakirjaLehti.mm` — WKWebView-liitännäinen, ks. README-lehti.md.
 - `Assets/Matkakirja/Editor/LehtiKuoriXcode.cs` — WebKit.framework linkitys Xcode-vientiin.
@@ -54,6 +58,11 @@ kaupat.Elaintaky(iso, KauppaVakiot.ElaintakyPalkkio); kaupat.MyonnaJuliste(avain
 kaupat.MannerLennot(); kaupat.MannerLento(k); kaupat.AvaaAarreSahkeella(k, palkkio);
 kaupat.Toiminnot();                     // web availableActions
 
+var pulmat = Pulmat.Kytke(kysely, Pulmadata.LueKansiosta(paketti));          // koukut PulmaOdottaa/AvaaPulma
+var tapahtumat = Tapahtumat.Kytke(kysely, Tapahtumadata.LueKansiosta(paketti)); // tyhjä maailmankartalla
+// Pulma avautuu Pysy-tavasta (kysely.Tutki()) kuten webissä; auki: Tila.Kysely.Kysymys.Laji == Pulma,
+// näytettävät pulmat.Nakyma (Otsikko, Selite, Luonnos = web sketchData, Kuvat, KuvaLahteet).
+// Tapahtuma: Tila.Vaihe == Vaihe.Tapahtuma, Tila.Tapahtumakortti.Teksti → tapahtumat.Sulje().
 
 string json = matka.Tallenna();
 var ladattu = Matka.Lataa(verkko, json, maarat);  // luo sen jälkeen uudet Kysely, Kaksintaistelu, Kaupat (+ Pulmat.Kytke)
@@ -68,7 +77,8 @@ var ladattu = Matka.Lataa(verkko, json, maarat);  // luo sen jälkeen uudet Kyse
   `matka.OtaPolloPaljastus()`.
 - Koukut (null = ei toteutettu): `Matka.Kaksintaistelu` (web beginDuel; tosi = alkoi,
   muuten vuoro päättyy), `Matka.LinssiKylkiaisena`, `Kokemus.KynnysYlitetty` (linssit),
-  `Kysely.PulmaOdottaa/AvaaPulma`, `Kysely.TapahtumiaOn/AvaaTapahtuma`, `Kysely.Liput`,
+  `Kysely.PulmaOdottaa/AvaaPulma` (Pulmat.Kytke), `Kysely.TapahtumiaOn/AvaaTapahtuma`
+  (Tapahtumat.Kytke), `Kysely.Liput`,
   `Kysely.AsetaKuvat`. Ohitus: `Matka.Tavoitteet` (oletus kääntämättömät laatat).
 - Pöllö aarteena: `Matka.Luo(…, polloAarteena: true)`; oletus pois kuten webissä.
 - Erien 1–2 muodot säilyvät: `Matka.UusiPeli/Luo(verkko, rng, nimi, aloitus)` ilman
@@ -83,7 +93,9 @@ pelaajalle `tahdet`, `loydot`, `loytoMantereet`, `loytoMaat` sekä `kaksintaiste
 `Matka.Lataa(verkko, json, maarat)` jakaa niille laatat pelin omalla satunnaisuudella
 tallennuksen kohdasta (sama tallennus → sama jako; lukitut kaupungit menettävät laattansa),
 koska tyhjä maailma jättäisi vanhan pelin ilman yhtään aarretta. Ilman määriä vanha peli
-jatkuu laatoitta.
+jatkuu laatoitta. Samaan versioon on lisätty valinnaiset `pulmatNahty` (web puzzlesSeen),
+`tapahtumakortti` (eventCard) ja avoimen pulman `kysymys.pulmaTiedot`; ilman niitä
+tallennus latautuu (ei nähtyjä pulmia, ei korttia).
 
 Kentät `kaupat` (Kauppatila) ja `voittaja` ovat versiossa 3 valinnaisia: puuttuessa
 kirjanpito on tyhjä ja voittajaa ei ole (versionumero ei noussut).
@@ -104,6 +116,7 @@ muuttua ilman webin muutosta; C# toistaa ne identtisesti, myös satunnaislukukut
 | `tee-laattajalki.mjs` | laattajalki.json, paketti/laatat.json | LaattaTestit | jako, käännöt, lukitus |
 | `tee-kaksintaistelujalki.mjs` | kaksintaistelujalki.json, paketti/kaksintaistelut.json (sisalto/1/v2) | KaksintaisteluTestit | koko peli 220 ryöstäjän koelaudalla ja oikea kaksintaistelu: oikein, väärin, aika, helpotukset, rahan puute, virheteot; web ja C# myös tallennuksen yli |
 | `tee-kauppajalki.mjs` | kauppajalki.json (+ näytteet paketti/elaintayt.json, julisteet.json paketista v2) | KauppaTestit | jokainen kauppateko onnistuvana ja epäonnistuvana, sähke ryöstäjään ja pöllöön, tallennus välissä ja joka teon jälkeen |
+| `tee-pulmajalki.mjs` | pulmajalki.json, paketti/tapahtumat.json | PulmaTestit | generaattorit (11 × 25 siementä), pulmien avaus/vastaus/sulku kuudella tavalla laatallisena ja laatattomana, koko peli pulmineen ja Afrikan tapahtumakortein, tallennus välein 1, 2, 3 ja 5 |
 | `tee-pelijalki.mjs` | pelijalki.json | PeliTestit | koko peli laattoineen (~2700 tekoa, 9 siementä, pöllö- ja ryöstäjäajot), myös tallennus/lataus välein 7 ja 3 |
 
 `.meta`-tiedostot eivät ole mukana: Unity luo ne ensimmäisessä tuonnissa (3D-selvittäjän editori).
