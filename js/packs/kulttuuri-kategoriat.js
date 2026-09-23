@@ -106478,4 +106478,327 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * MOSAMBIK eli Mosambikin saari, Ilha de Moçambique (Afrikan
+   * kaupunkilehtierä O7, toinen erä, 23.9.2026).
+   *
+   * KANSI ON HISTORIAN SIVU. tests/lehdet.test.mjs vaatii jokaiselle
+   * lehdelle kannen (id 'kaupunki') ja jokaiselle muulle sivulle
+   * minitehtävän, joten historian seitsemän juttua ovat kannessa
+   * (Timbuktun malli) ja toinen aihe on Soitto ja keittiö. Kansikuvat,
+   * avauskuvat ja matkailijalle-osio tulevat myöhemmällä kierroksella.
+   *
+   * VANHAT LITTEÄT NOSTOT (africa-kulttuuri.js) siirtyivät tänne
+   * lähteestä tarkistettuina ja korjattuina: (1) saarta ei sanottu
+   * lähteessä korallisaareksi, ja eteläpään Makutin talot ovat
+   * lähteen mukaan ruokotaloja, eivät "palmunlehväkattoisia";
+   * (2) marrabentan nimen alkuperä on lähteessä vain arvelu, ja
+   * hajoamaan soitettiin halpoja soittimia, ei "kitaroita niin, että
+   * kielet katkesivat" — kulttuurivisa korjattiin samaan asuun;
+   * (3) piripiri-katkarapuja "rannikon juhlaruokana" ei löytynyt
+   * lähteestä, ja lähteen mukaan kastikkeen syntypaikkaa ei tiedetä.
+   * Kulttuurivisan (marrabentan nimi) lähdejuttu on "Musiikki, joka
+   * soitti soittimet rikki"; minitehtävä kysyy matapasta eikä osu
+   * visaan.
+   *
+   * FAKTAPOHJA: en-Wikipedia raakatekstinä 23.9.2026 — Island of
+   * Mozambique, Vasco da Gama, Portuguese Mozambique, Chapel of Nossa
+   * Senhora de Baluarte, Fort São Sebastião (Mozambique), Siege of
+   * Mozambique (1607), Siege of Mozambique (1608), Luís de Camões, Os
+   * Lusíadas, Suez Canal, Marrabenta, Wazimbo, Piri piri, Mozambican
+   * cuisine.
+   *
+   * KUVAT katsottu silmin 900 px:n esikatseluna, kaikki >= 1200 px ja
+   * käyttämättömiä muualla repossa: Vasco da Gaman patsas entisen
+   * kuvernöörinpalatsin edessä (Stig Nygaard), Baluarten kappeli
+   * saaren kärjessä linnoituksen muurin vieressä (Stig Nygaard),
+   * Oossaanin kaiverrus VOC:n piirityksestä 1607 (laivat satamassa,
+   * tykkien savu rannalla), Fernão Gomesin muotokuva Camõesista,
+   * Kivikaupungin katu kaarikäytävineen (Jcornelius), Marrabenta-
+   * festivaalin yhtye Maputossa 2011 ja piripiri-kastikepullot
+   * Mosambikissa 2009. Vanhan luonnoksen Ilha de Mocambique.jpg jäi
+   * pois, koska se on jo käytössä valokuvat-paikalliset.js:ssä.
+   * Sairaalan kuvaa ei otettu, koska Commonsin "Hospital Novo" ei
+   * kuvauksensa perusteella ole varmasti vuoden 1877 sairaala.
+   */
+  mosambik: [
+    {
+      id: 'kaupunki',
+      nimi: 'Mosambik',
+      johdanto: 'Kolmen kilometrin mittainen saari, joka antoi nimensä '
+        + 'kokonaiselle maalle. Isoisän aikaan se oli yhä Portugalin '
+        + 'Itä-Afrikan pääkaupunki, mutta Suezin kanava oli juuri '
+        + 'avattu, ja saaren suuret vuosisadat olivat päättymässä.',
+      nostot: [
+        {
+          otsikko: 'Sulttaani, jonka nimen maa peri',
+          teksti: 'Saarelta löytyneet saviastiat kertovat, että kaupunki '
+            + 'oli olemassa viimeistään 1300-luvulla. Perimätiedon mukaan '
+            + 'sen ensimmäiset swahilinkieliset asukkaat tulivat '
+            + 'Kilwasta, ja 1400-luvulla saaren hallitsijoilla oli '
+            + 'yhteyksiä Angochen ja Quelimanen hallitsijoihin. '
+            + 'Portugalilainen Duarte Barbosa kirjoitti 1514, että '
+            + 'asukkaat olivat muslimeja ja puhuivat samaa swahilin '
+            + 'murretta kuin Angochessa. Saaren nimi tulee sulttaanista, '
+            + 'joka hallitsi saarta Vasco da Gaman aikaan ja jonka nimi '
+            + 'kirjataan muodossa Ali Musa Mbiki tai Mussa Bin Bique. '
+            + 'Myöhemmin nimi siirtyi koko mantereen maalle, ja saaren '
+            + 'nimeen lisättiin sana Ilha, saari. Nykyinen Mosambikin '
+            + 'valtio on siis nimetty pienen saaren sulttaanin mukaan.',
+          wiki: 'Island of Mozambique',
+        },
+        {
+          otsikko: 'Vasco da Gama esiintyy muslimina',
+          teksti: 'Vasco da Gaman laivasto viipyi Mosambikin saaren '
+            + 'tuntumassa 2.–29. maaliskuuta 1498 matkallaan Intiaan. '
+            + 'Itä-Afrikan rannikko oli osa Intian valtameren laajaa '
+            + 'kauppaverkkoa, ja Gama pelkäsi, että paikalliset '
+            + 'suhtautuisivat kristittyihin vihamielisesti. Hän esiintyi '
+            + 'siksi muslimina ja pääsi sulttaanin puheille. Vaatimattomien '
+            + 'kauppatavaroiden joukosta ei kuitenkaan löytynyt '
+            + 'hallitsijalle kelpaavaa lahjaa, ja pian asukkaat alkoivat '
+            + 'epäillä vieraita. Vihamielinen väkijoukko ajoi '
+            + 'portugalilaiset pakoon, ja satamasta lähtiessään Gama '
+            + 'ampui kostoksi tykeillä kaupunkia. Vierailu ei jäänyt '
+            + 'viimeiseksi: 1500-luvun alussa Portugali otti saaren '
+            + 'haltuunsa ja perusti sinne 1507 sataman ja '
+            + 'laivastotukikohdan Intian-matkojen pysähdyspaikaksi.',
+          tiedosto: 'Island of Mozambique.jpg',
+          lyhyt: 'Vasco da Gaman patsas entisen kuvernöörinpalatsin edessä Mosambikin saarella.',
+          selite: 'Vasco da Gaman patsas seisoo aukiolla Mosambikin saaren '
+            + 'entisen kuvernöörinpalatsin edessä. Punainen rakennus oli '
+            + 'alun perin jesuiittojen São Paulon kollegio, ja vasemmalla '
+            + 'kohoaa sen kappelin kellotorni.',
+          lahde: 'Stig Nygaard, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Vasco da Gama',
+        },
+        {
+          otsikko: 'Eteläisen pallonpuoliskon vanhin',
+          teksti: 'Saaren itäisimmässä kärjessä, linnoituksen muurien '
+            + 'ulkopuolella, seisoo pieni valkoinen Nossa Senhora de '
+            + 'Baluarten kappeli. Sinne pääsee linnoituksesta portin '
+            + 'kautta. Portugalilaiset rakensivat kappelin 1522, vain '
+            + 'viisitoista vuotta satamansa perustamisen jälkeen, ja sitä '
+            + 'pidetään eteläisen pallonpuoliskon vanhimpana '
+            + 'eurooppalaisena rakennuksena. Kappelin holvit edustavat '
+            + 'manueliinista tyyliä, ja sitä pidetään yhtenä Mosambikin '
+            + 'hienoimmista esimerkeistä tästä holviarkkitehtuurista. '
+            + 'Kappeli on hiljattain kunnostettu. Kun isoisä tuli '
+            + 'saarelle 1873, tämä pieni rakennus oli seissyt meren '
+            + 'äärellä jo yli kolmesataaviisikymmentä vuotta.',
+          tiedosto: 'Chapel of Nossa Senhora de Baluarte.jpg',
+          lyhyt: 'Nossa Senhora de Baluarten kappeli saaren kärjessä, oikealla linnoituksen muuri.',
+          selite: 'Valkoinen Nossa Senhora de Baluarten kappeli seisoo '
+            + 'matalien kivimuurien sisällä saaren kärjessä kirkkaan '
+            + 'veden äärellä. Oikealla kohoaa São Sebastiãon '
+            + 'linnoituksen kulmavarustus.',
+          lahde: 'Stig Nygaard, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Chapel of Nossa Senhora de Baluarte',
+        },
+        {
+          otsikko: 'Kissa, jota ei oteta ilman hansikkaita',
+          teksti: 'Saaren pohjoispään São Sebastiãon linnoitusta alettiin '
+            + 'rakentaa 1558, ja työ kesti noin viisikymmentä vuotta. Se '
+            + 'on Saharan eteläpuolisen Afrikan vanhin yhä kokonaisena '
+            + 'seisova linnoitus. Maaliskuussa 1607 Alankomaiden '
+            + 'Itä-Intian kauppakomppania VOC saapui kahdeksalla '
+            + 'sotalaivalla ja yli tuhannella miehellä. Komentaja Dom '
+            + 'Estêvão de Ataídella oli vain 60 sotilasta, 60 '
+            + 'portugalilaista asukasta ja joukko orjia. Paikalliset '
+            + 'afrikkalaiset heimot toimittivat muonaa linnoitukseen '
+            + 'mutta eivät hollantilaisille, ja kahden kuukauden kuluttua '
+            + 'piirittäjät sytyttivät kaupungin tuleen ja lähtivät. '
+            + 'Seuraavana vuonna tuli uusi laivasto. Kun sen komentaja '
+            + 'vaati antautumista, Ataíde vastasi, ettei linnoitus ollut '
+            + 'sellainen kissa, joka otetaan ilman hansikkaita. '
+            + 'Muureihin ammuttiin 1 250 tykinkuulaa, eikä linnoitus '
+            + 'silti kaatunut.',
+          tiedosto: 'AMH-6773-KB View of Mozambique.jpg',
+          lyhyt: 'Hollantilainen kaiverrus: VOC:n laivasto piirittää Mosambikin linnoitusta 1607.',
+          selite: 'Aart Dircksz Oossaanin 1600-luvun lopun kaiverrus '
+            + 'Paulus van Caerdenin piirityksestä 1607: hollantilaiset '
+            + 'sotalaivat täyttävät sataman, ja rannalla kaupungin '
+            + 'edustalla nousee tykkien savua.',
+          lahde: 'Aart Dircksz Oossaan, Wikimedia Commons (PD)',
+          wiki: 'Siege of Mozambique (1607)',
+        },
+        {
+          otsikko: 'Runoilija, jota ystävät ruokkivat',
+          teksti: 'Joulukuussa 1567 runoilija Luís de Camões lähti '
+            + 'kotimatkalle kohti Portugalia Pedro Barreton laivalla. '
+            + 'Barreto oli nimitetty kuvernööriksi, ja Camõesin oli '
+            + 'määrä odottaa Mosambikin saarella kyytiä Lissaboniin. '
+            + 'Varhaisten elämäkertojen mukaan Barreto petti lupauksensa, '
+            + 'ja kun historioitsija Diogo do Couto löysi ystävänsä '
+            + 'saarelta kaksi vuotta myöhemmin, runoilija oli niin köyhä, '
+            + 'että eli ystävien antaman ruoan varassa. Couton mukaan '
+            + 'Camões oli saanut eepoksensa Luusiadit valmiiksi painoa '
+            + 'varten, mutta toinen, filosofinen teos varastettiin '
+            + 'häneltä. Barreto vaati vielä 200 cruzadoa korvaukseksi '
+            + 'runoilijaan käyttämistään rahoista, ja ystävät keräsivät '
+            + 'summan. Luusiadit ilmestyi 1572, ja sen ensimmäisessä '
+            + 'laulussa Bacchus-jumala yllyttää Mosambikin muslimit '
+            + 'hyökkäämään Vasco da Gaman miesten kimppuun.',
+          tiedosto: 'Camões por Fernão Gomes.jpg',
+          lyhyt: 'Fernão Gomesin muotokuva Luís de Camõesista 1570-luvulta.',
+          selite: 'Taiteilija Fernão Gomesin muotokuva Luís de Camõesista '
+            + '1570-luvulta, pian runoilijan paluun jälkeen: parrakas '
+            + 'mies röyhelökauluksessa, oikeassa yläkulmassa nimi. Vanhan '
+            + 'jäljennöksen pinnassa näkyy halkeamia ja paikkauksia.',
+          lahde: 'Fernão Gomes, Wikimedia Commons (PD)',
+          wiki: 'Luís de Camões',
+        },
+        {
+          otsikko: 'Kivikaupunki ja ruokokaupunki',
+          teksti: 'Mosambikin saari on vain noin kolme kilometriä pitkä ja '
+            + '200–500 metriä leveä, ja nykyään se on kokonaan '
+            + 'rakennettu. Suurin osa historiallisista rakennuksista on '
+            + 'pohjoispään Kivikaupungissa. São Paulon palatsi ja kappeli '
+            + 'rakennettiin 1640 jesuiittojen kollegioksi, myöhemmin '
+            + 'siinä asui kuvernööri, ja nykyään se on museo. '
+            + 'Misericórdian kirkossa toimii kirkkotaiteen museo, jonka '
+            + 'aarre on makonde-tyylinen krusifiksi. Saarella on myös '
+            + 'useita moskeijoita ja hindutemppeli. Linnoituksia '
+            + 'lukuun ottamatta vain puolet kaupungista on rakennettu '
+            + 'kivestä: suurin osa noin 14 000 asukkaasta asuu '
+            + 'eteläpään Makutin kaupunginosassa ruokotaloissa. Koko '
+            + 'saari on Unescon maailmanperintökohde.',
+          tiedosto: 'Avenida Amílcar Cabral, Ilha de Moçambique.jpg',
+          lyhyt: 'Kivikaupungin katu Mosambikin saarella: rapattuja kivitaloja ja kaarikäytävä.',
+          selite: 'Avenida Amílcar Cabral saaren pohjoispään '
+            + 'Kivikaupungissa vuonna 2017. Kadun varrella on rapattuja '
+            + 'kivitaloja sinisine ikkunaluukkuineen, ja oikealla kulkee '
+            + 'holvikaarinen pylväskäytävä.',
+          lahde: 'Jcornelius, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Island of Mozambique',
+        },
+        {
+          otsikko: 'Kanava, joka vei saaren onnen',
+          teksti: 'Suezin kanava avattiin marraskuussa 1869, neljä vuotta '
+            + 'ennen isoisän matkaa. Laivat pääsivät nyt Euroopasta '
+            + 'Intian valtamerelle Välimeren ja Punaisenmeren kautta '
+            + 'kiertämättä Afrikkaa, ja saaren merkitys alkoi hiipua. '
+            + 'Portugalilaiset rakensivat vielä 1877 saarelle mahtavan '
+            + 'uusklassisen sairaalan puutarhoineen, lampineen ja '
+            + 'suihkulähteineen, ja se oli pitkään Saharan eteläpuolisen '
+            + 'Afrikan suurin sairaala. Pääkaupunki siirrettiin kuitenkin '
+            + '1898 mantereelle Lourenço Marquesiin, nykyiseen Maputoon, '
+            + 'ja 1900-luvun puolivälissä Nacalan uusi satama vei '
+            + 'loputkin kaupasta. Mantereeseen saari yhdistettiin '
+            + '1960-luvulla kolmen kilometrin sillalla. Nykyään se on '
+            + 'yksi Mosambikin nopeimmin kasvavista matkailukohteista.',
+          wiki: 'Suez Canal',
+        },
+      ],
+    },
+    {
+      id: 'arki',
+      nimi: 'Soitto ja keittiö',
+      johdanto: 'Kaukana saarelta etelään, Maputon kaupunginosissa, syntyi '
+        + 'tanssimusiikki, jonka nimi saattaa tarkoittaa rikkomista. '
+        + 'Keittiössä kohtaavat Afrikka, Portugali ja Intian valtameren '
+        + 'kauppa: pieni tulinen chili, maniokin lehdet ja kookosmaito.',
+      tehtava: {
+        kysymys: 'Mistä mosambikilainen matapa-muhennos tehdään?',
+        vaihtoehdot: [
+          'Maniokin lehdistä ja maapähkinöistä',
+          'Hirssistä ja hunajasta',
+          'Banaaneista ja kuivatusta kalasta',
+          'Maissijauhosta ja pavuista',
+        ],
+        oikea: 0,
+        fakta: 'Matapaan tulee maniokin lehtien ja jauhettujen '
+          + 'maapähkinöiden lisäksi sipulia, tomaattia ja chiliä, joskus '
+          + 'myös katkarapuja, ja se syödään usein riisin kanssa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Musiikki, joka soitti soittimet rikki',
+          teksti: 'Marrabenta on Mosambikin suosittua tanssimusiikkia. Se '
+            + 'kehittyi 1930- ja 1940-luvuilla nykyisessä pääkaupungissa '
+            + 'Maputossa, kun maa oli vielä Portugalin siirtomaa. '
+            + 'Portugalilaiset muusikot olivat soittaneet siellä fadoa ja '
+            + 'tuoneet mukanaan kitarat, mandoliinit ja rumpusetit, ja '
+            + 'katolinen kirkko toi länsimaisen harmonian. Mosambikilaiset '
+            + 'muusikot yhdistivät nämä afrikkalaisiin tanssirytmeihin, ja '
+            + 'uusi tyyli levisi 1940-luvulla nopeasti nuorten keskuuteen. '
+            + 'Nimi tulee ehkä portugalin sanasta rebentar, paikallisesti '
+            + 'arrabentar, joka tarkoittaa rikkomista: halpoja soittimia '
+            + 'soitettiin niin rajusti, että ne hajosivat. Laulaja Dilon '
+            + 'Djindji taas on selittänyt, että nimi viittaa hänen omiin '
+            + 'kiihkeisiin keikkoihinsa, jotka rikkoivat yleisön tunteiden '
+            + 'rajat.',
+          tiedosto: 'Festival da Marrabenta (5401169674).jpg',
+          lyhyt: 'Yhtye soittaa Marrabenta-festivaalilla Maputossa tammikuussa 2011.',
+          selite: 'Marrabenta-festivaalin konsertti ranskalais-'
+            + 'mosambikilaisessa kulttuurikeskuksessa Maputossa '
+            + 'tammikuussa 2011: laulaja soittaa kitaraa lavan keskellä, '
+            + 'ja hänen takanaan ovat rummut, kongat, sähkökitarat ja '
+            + 'kosketinsoittimet.',
+          lahde: 'Andrés Moreno, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Marrabenta',
+        },
+        {
+          otsikko: 'Yölintu ja sodan vuodet',
+          teksti: 'Marrabentan varhaisia suuria nimiä olivat Fany Pfumo, '
+            + 'Dilon Djindji ja Wazimbo. Wazimbo, oikealta nimeltään '
+            + 'Humberto Carlos Benfica, syntyi 1948 ja kasvoi Lourenço '
+            + 'Marquesin eli nykyisen Maputon Mafalalan kaupunginosassa. '
+            + 'Itsenäistymisen jälkeen hän lauloi radion big bandissa ja '
+            + 'nousi 1979 Orchestra Marrabenta Star de Moçambiquen '
+            + 'laulajaksi. Sisällissodan aikana hallitus sulki monia '
+            + 'soittopaikkoja, koska piti marrabentaa tapana ilmaista '
+            + 'tyytymättömyyttä, ja moni muusikko muutti Etelä-Afrikkaan. '
+            + 'Kun rauha palasi 1990-luvulla, levytysstudioita ja '
+            + 'esiintymispaikkoja ei enää ollut, ja yhtye hajosi 1995. '
+            + 'Wazimbon balladi Nwahulwana, yölintu, soi silti 2001 Sean '
+            + 'Pennin elokuvassa The Pledge, ja Maputossa marrabentaa '
+            + 'juhlitaan joka vuosi omalla festivaalilla.',
+          wiki: 'Wazimbo',
+        },
+        {
+          otsikko: 'Piripiri, pieni tulinen chili',
+          teksti: 'Piripiri on tuliterä chililajike, jonka portugalilaiset '
+            + 'jalostivat malagueta-chilistä eteläisen Afrikan '
+            + 'alueillaan. Swahiliksi pilipili tarkoittaa pippuria, ja '
+            + 'Oxfordin sanakirja johtaa nimen eteläisen Mosambikin '
+            + 'ronga-kielen pippuria tarkoittavasta sanasta. Kuten kaikki '
+            + 'chilit, piripiri on alun perin Amerikasta, mutta Afrikassa '
+            + 'se on kasvanut luonnonvaraisena jo vuosisatoja. Hedelmät '
+            + 'ovat vain 2–3 senttiä pitkiä ja kypsinä kirkkaanpunaisia '
+            + 'tai purppuraisia. Kastikkeen pääaineet ovat chili ja '
+            + 'valkosipuli öljyyn tai happamaan pohjaan, usein sitruunan '
+            + 'kera. Missä kastike keksittiin, sitä ei tiedetä: varmaa on '
+            + 'vain, että se syntyi jossain Portugalin imperiumissa. '
+            + 'Mosambikissa sana kirjoitetaan piri-piri, Etelä-Afrikassa '
+            + 'peri-peri.',
+          tiedosto: 'Piri piri sauce in Mozambique.jpg',
+          lyhyt: 'Piripiri-kastiketta pulloissa myytävänä Mosambikissa 2009.',
+          selite: 'Piripiri-kastiketta myytävänä Mosambikissa 2009. Osa '
+            + 'pulloista on alun perin ollut muiden juomien pulloja, ja '
+            + 'oikeassa reunassa on purkki säilöttyjä chilejä.',
+          lahde: 'Ossewa, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Piri piri',
+        },
+        {
+          otsikko: 'Maniokin lehtiä ja kookosmaitoa',
+          teksti: 'Ennen portugalilaisia Mosambikin tärkeimmät viljat '
+            + 'olivat hirssi ja durra. Portugalilaiset toivat maissin, '
+            + 'tomaatin, paprikan ja maniokin, jotka ovat nykyään '
+            + 'ruokavalion ydintä, ja Intiasta ja kauempaa idästä tulivat '
+            + 'appelsiinit, sitruunat ja monet mausteet. Monen '
+            + 'mosambikilaisen perusruoka on xima, maissijauhosta keitetty '
+            + 'paksu puuro. Tunnetuimpia ruokia on matapa, maniokin '
+            + 'lehdistä ja jauhetuista maapähkinöistä haudutettu '
+            + 'muhennos. Curryä pidetään yhtenä kansallisruoista, vaikka '
+            + 'siihen ei välttämättä tule currymaustetta lainkaan: se voi '
+            + 'olla mikä tahansa katkarapu-, kala-, liha- tai '
+            + 'kasvisruoka kastikkeessa. Curryn ja kookoksen liitto on '
+            + 'perua Goasta, Portugalin siirtomaasta Intiassa, ja samaa '
+            + 'perua ovat samosan mosambikilaiset serkut chamussat.',
+          wiki: 'Mozambican cuisine',
+        },
+      ],
+    },
+  ],
 };

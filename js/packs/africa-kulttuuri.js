@@ -1154,45 +1154,22 @@ export const AFRICA_KULTTUURI = {
         + 'vielä suurempi.',
     },
   },
+  /*
+   * Mosambikin litteät nostot siirtyivät kaupunkilehteen
+   * (kulttuuri-kategoriat.js, mosambik, 23.9.2026) lähteestä
+   * tarkistettuina; visan lähdejuttu on Soitto ja keittiö -sivun
+   * "Musiikki, joka soitti soittimet rikki". Visa korjattiin samalla:
+   * en-Wikipedian Marrabenta-artikkelin mukaan nimen alkuperä on vain
+   * arvelu, ja rikki soitettiin halpoja soittimia — katkeavista
+   * kitarankielistä lähde ei kerro.
+   */
   mosambik: {
-    nostot: [
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Mosambikin saaren kivikaupunki',
-        tiedosto: 'Ilha de Mocambique.jpg',
-        teksti: 'Mosambikin saari antoi nimensä koko maalle: pieni '
-          + 'korallisaari oli vuosisatoja Intian valtameren kaupan '
-          + 'keskus, jonka kivitalot, linnoitus ja kappeli ovat Unescon '
-          + 'maailmanperintöä.',
-        selite: 'Ilha de Moçambique mereltä: matala korallisaari '
-          + 'kivitaloineen. Saaren pohjoispää on rakennettu kivestä ja '
-          + 'eteläpää makuti-palmunlehväkatoista — kaksi maailmaa '
-          + 'samalla saarella.',
-        lahde: 'Stig Nygaard, Wikimedia Commons (CC BY 2.0)',
-      },
-      {
-        tyyppi: 'teksti',
-        otsikko: 'Marrabenta',
-        teksti: 'Mosambikin oma tanssimusiikki on marrabenta, joka '
-          + 'syntyi Maputon esikaupungeissa kitaroista ja paikallisista '
-          + 'rytmeistä. Nimi tulee sanasta rebentar, revetä — kitaroita '
-          + 'soitettiin niin, että kielet katkesivat.',
-      },
-      {
-        tyyppi: 'teksti',
-        otsikko: 'Piripiri',
-        teksti: 'Mosambikilainen keittiö tunnetaan piripiristä: pienestä '
-          + 'tulisesta chilistä, jota haudutetaan sitruunan ja '
-          + 'valkosipulin kanssa kastikkeeksi. Piripiri-katkaravut ovat '
-          + 'rannikon juhlaruoka, johon meri ja mauste kohtaavat.',
-      },
-    ],
     kysymys: {
-      q: 'Mistä marrabenta-musiikki sai nimensä?',
-      options: ['Meren aalloista', 'Katkeavista kitarankielistä', 'Rummun äänestä', 'Tanssin askelista'],
+      q: 'Mistä marrabenta-musiikin nimen arvellaan tulevan?',
+      options: ['Meren aalloista', 'Rikki soitetuista soittimista', 'Rummun äänestä', 'Tanssin askelista'],
       correct: 1,
-      fact: 'Rebentar tarkoittaa repeämistä — kitaroita soitettiin niin '
-        + 'rajusti, että kielet katkesivat.',
+      fact: 'Nimi tulee ehkä portugalin sanasta rebentar, rikkoa: halpoja '
+        + 'soittimia soitettiin niin rajusti, että ne hajosivat.',
     },
   },
   madagaskar: {
