@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://matkakirja.app/vienti/1/moduuli.schema.json",
+  "title": "Matkakirja-vienti: moduuli (raakakerros)",
+  "description": "Yhden sisältömoduulin kaikki exportit häviöttömästi. Tiedosto moduulit/<moduulin polku>.json.",
+  "type": "object",
+  "required": ["$skeema", "moduuli", "exportit"],
+  "properties": {
+    "$skeema": { "const": "matkakirja-vienti/1/moduuli" },
+    "moduuli": { "type": "string", "description": "Lähdemoduulin polku repossa, esim. js/packs/africa.js" },
+    "exportit": { "type": "object", "description": "Export-nimi → arvo", "additionalProperties": { "$ref": "arvo.schema.json" } }
+  },
+  "additionalProperties": false
+}

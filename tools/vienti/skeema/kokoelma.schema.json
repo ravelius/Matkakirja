@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://matkakirja.app/vienti/1/kokoelma.schema.json",
+  "title": "Matkakirja-vienti: kokoelma",
+  "description": "Yksi entiteettilaji taulukkona. Jokaisella alkiolla on yksikäsitteinen id; viittaukset kertovat, mitkä kentät ovat id-viittauksia mihin kokoelmaan. data = alkuperäinen olio sellaisenaan (arvo-skeeman mukaan).",
+  "type": "object",
+  "required": ["$skeema", "nimi", "lahde", "kuvaus", "viittaukset", "alkiot"],
+  "properties": {
+    "$skeema": { "const": "matkakirja-vienti/1/kokoelma" },
+    "nimi": { "type": "string" },
+    "lahde": { "type": "string", "description": "moduuli#export.polku, josta kokoelma johdettiin" },
+    "kuvaus": { "type": "string" },
+    "viittaukset": { "type": "object", "additionalProperties": { "type": "string" } },
+    "alkiot": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id"],
+        "properties": { "id": { "type": "string" }, "data": { "$ref": "arvo.schema.json" } }
+      }
+    }
+  },
+  "additionalProperties": false
+}

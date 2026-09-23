@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://matkakirja.app/vienti/1/manifest.schema.json",
+  "title": "Matkakirja-vienti: manifest",
+  "description": "Viennin sisällysluettelo. Tuoja tarkistaa tästä, että sai kaiken: jokaisen moduulin exportit lukumäärineen, tiedostojen sha256-tiivisteet ja laskennat.",
+  "type": "object",
+  "required": ["$skeema", "mediaJuuri", "laskennat", "media", "kokoelmat", "moduulit"],
+  "properties": {
+    "$skeema": { "const": "matkakirja-vienti/1/manifest" },
+    "kuvaus": { "type": "string" },
+    "mediaJuuri": { "type": "string", "format": "uri" },
+    "laskennat": { "type": "object" },
+    "media": { "type": "object", "required": ["tiedosto", "sha256"] },
+    "kokoelmat": {
+      "type": "array",
+      "items": { "type": "object", "required": ["nimi", "tiedosto", "lahde", "lkm", "sha256"] }
+    },
+    "moduulit": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["moduuli", "tiedosto", "lahdeSha256", "sha256", "tavuja", "exportit"],
+        "properties": {
+          "exportit": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["nimi", "laji", "lkm", "funktioita", "mediaviitteita"],
+              "properties": {
+                "laji": { "enum": ["taulukko", "olio", "map", "set", "funktio", "merkkijono", "luku", "totuusarvo", "null"] },
+                "lkm": { "type": ["integer", "null"] }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

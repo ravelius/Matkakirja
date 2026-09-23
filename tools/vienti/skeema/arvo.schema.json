@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://matkakirja.app/vienti/1/arvo.schema.json",
+  "title": "Matkakirja-vienti: arvo",
+  "description": "Mikä tahansa viety arvo. Tavallinen JSON sellaisenaan; muut JS-arvot $-merkintäolioina (tools/vienti/sarjallista.mjs). Datan omat $-alkuiset avaimet on pakotettu kaksoisdollarilla ($x → $$x).",
+  "$defs": {
+    "merkinta": {
+      "oneOf": [
+        { "type": "object", "required": ["$undefined"], "properties": { "$undefined": { "const": true } }, "additionalProperties": false },
+        { "type": "object", "required": ["$aukko"], "properties": { "$aukko": { "const": true } }, "additionalProperties": false },
+        { "type": "object", "required": ["$luku"], "properties": { "$luku": { "enum": ["NaN", "Infinity", "-Infinity", "-0"] } }, "additionalProperties": false },
+        { "type": "object", "required": ["$bigint"], "properties": { "$bigint": { "type": "string" } }, "additionalProperties": false },
+        { "type": "object", "required": ["$symboli"], "properties": { "$symboli": { "type": "string" } }, "additionalProperties": false },
+        { "type": "object", "required": ["$map"], "properties": { "$map": { "type": "array", "items": { "type": "array", "prefixItems": [{ "$ref": "#" }, { "$ref": "#" }], "minItems": 2, "maxItems": 2 } } }, "additionalProperties": false },
+        { "type": "object", "required": ["$set"], "properties": { "$set": { "type": "array", "items": { "$ref": "#" } } }, "additionalProperties": false },
+        { "type": "object", "required": ["$pvm"], "properties": { "$pvm": { "type": "string", "format": "date-time" } }, "additionalProperties": false },
+        { "type": "object", "required": ["$regexp", "liput"], "properties": { "$regexp": { "type": "string" }, "liput": { "type": "string" } }, "additionalProperties": false },
+        { "type": "object", "required": ["$typed", "base64"], "properties": { "$typed": { "type": "string" }, "base64": { "type": "string", "contentEncoding": "base64" } }, "additionalProperties": false },
+        { "type": "object", "required": ["$funktio", "lahde"], "description": "Logiikkaa, ei dataa: lähdeteksti mukana käsin siirtämistä varten.", "properties": { "$funktio": { "type": "string" }, "lahde": { "type": "string" } }, "additionalProperties": false },
+        { "type": "object", "required": ["$viittaus"], "description": "Kehäviittaus: JSON pointer saman exportin esi-isään.", "properties": { "$viittaus": { "type": "string" } }, "additionalProperties": false },
+        { "type": "object", "required": ["$luokka", "kentat"], "properties": { "$luokka": { "type": "string" }, "kentat": { "type": "object", "additionalProperties": { "$ref": "#" } } }, "additionalProperties": false }
+      ]
+    }
+  },
+  "anyOf": [
+    { "type": ["null", "boolean", "number", "string"] },
+    { "type": "array", "items": { "$ref": "#" } },
+    { "$ref": "#/$defs/merkinta" },
+    { "type": "object", "propertyNames": { "pattern": "^(?!\\$(?!\\$))" }, "additionalProperties": { "$ref": "#" } }
+  ]
+}
