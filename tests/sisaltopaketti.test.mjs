@@ -162,10 +162,11 @@ test('skeema 1.3: lehden web-riippuvuudet WKWebView-kuorelle', () => {
   const lehti = JSON.parse(tiedostot.get(rivi.tiedosto));
   assert.deepEqual(validoiNimella(lehti, 'web-nakyma.schema.json'), []);
   const polut = new Set(lehti.moduulit.map((t) => t.polku));
-  for (const p of ['js/lehti.js', 'js/maalehti.js', 'js/packs/kulttuuri-kategoriat.js', 'js/media.js']) {
+  for (const p of ['js/main.js', 'js/ui.js', 'js/lehti.js', 'js/maalehti.js', 'js/packs/kulttuuri-kategoriat.js', 'js/media.js']) {
     assert.ok(polut.has(p), `${p} puuttuu lehden riippuvuuksista`);
   }
-  assert.ok(!polut.has('js/main.js') && !polut.has('js/ui.js'), 'lehti ei tuo peliä');
+  assert.equal(lehti.sivu, 'index.html?lehti={kaupunki}');
+  assert.deepEqual(lehti.sivut.map((t) => t.polku), ['index.html']);
   assert.ok(lehti.tyylit.some((t) => t.polku === 'css/styles.css'));
   // Tiivisteet vastaavat repoa: kuori voi tarkistaa hakemansa version.
   for (const t of [...lehti.moduulit, ...lehti.tyylit].slice(0, 40)) {
@@ -173,7 +174,7 @@ test('skeema 1.3: lehden web-riippuvuudet WKWebView-kuorelle', () => {
     assert.equal(t.sha256, createHash('sha256').update(b).digest('hex'), t.polku);
     assert.equal(t.tavuja, b.length, t.polku);
   }
-  assert.equal(lehti.tavuja.koodi, [...lehti.moduulit, ...lehti.tyylit].reduce((a, t) => a + t.tavuja, 0));
+  assert.equal(lehti.tavuja.koodi, [...lehti.sivut, ...lehti.moduulit, ...lehti.tyylit].reduce((a, t) => a + t.tavuja, 0));
   assert.ok(validoiNimella({ ...lehti, moduulit: [{ polku: 'x.js', tavuja: 1 }] }, 'web-nakyma.schema.json').length);
 });
 

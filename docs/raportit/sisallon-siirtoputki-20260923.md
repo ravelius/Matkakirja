@@ -383,10 +383,15 @@ sessiota sisältöversion näyttämiselle (työhuone ja natiivin tietoja-sivu).
 - Skeema 1.3 (Fablen linjaus 23.9.: natiivi etusijalle, lehti aluksi
   web-koodina WKWebView-kuoressa): `web/lehti.json` listaa lehden
   riippuvuudet lähdekoodista laskettuna (`tools/vienti/web-riippuvuudet.mjs`).
-  Juuret ovat js/lehti.js ja js/maalehti.js. Mukana ovat JS-sulkeuma (264
-  moduulia, 13 dynaamista), CSS (5 tiedostoa), yhteensä noin 29 Mt koodia,
-  sekä paikalliset tiedostot ja kansiot (noin 300 Mt, joista kohdekartat
-  263 Mt), jotka haetaan ajon aikana osoitteesta `juuriUrl`. Jokaisella
+  Kuori avaa sivun `index.html?lehti=<kaupunki-id>` (Pelikoodari, PR #2942,
+  tapahtumat `lehti-auki` ja `lehti-suljettu` kanavaan
+  webkit.messageHandlers.matkakirja). Juuri on js/main.js, koska lehti
+  käyttää ui-olion 44 jäsentä. Mukana ovat index.html, JS-sulkeuma (554
+  moduulia, 24 dynaamista) ja CSS (14 tiedostoa), yhteensä noin 43 Mt
+  koodia. Lisäksi paikallisia tiedostoja ja kansioita on noin 370 Mt,
+  joista kohdekartat 263 Mt, ja ne haetaan ajon aikana osoitteesta `juuriUrl`.
+  Koodin kokoa pienentäisivät laiskat tuonnit laudalle; niistä ei ole
+  vielä päätöstä. Jokaisella
   tiedostolla on sha256, joten kuori tietää, mitä versiota paketti vastaa.
   Manifestissa on `webNakymat`. Vientityönkulku käynnistyy nyt myös
   css/-, assets/- ja index.html-muutoksista.

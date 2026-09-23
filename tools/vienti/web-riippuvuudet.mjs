@@ -27,11 +27,19 @@ import { dirname, join, normalize } from 'node:path';
 
 /** Näkymät ja niiden juurimoduulit. Uusi web-näkymä natiiviin = uusi rivi. */
 export const WEB_NAKYMAT = {
+  /*
+   * Lehtikuori (Pelikoodari, PR #2942): index.html?lehti=<kaupunki-id> avaa
+   * pelkän kaupunkilehden ilman lautaa. Tila eikä oma entry, koska lehti.js
+   * käyttää 44 ui-olion jäsentä (saapumisdialogin DOM, openArrival,
+   * mitoitaArkki…), joten juuri on main.js ja sulkeumaan tulee ui.js.
+   */
   lehti: {
-    kuvaus: 'Kaupunki- ja maalehti (js/lehti.js sivukoneisto, js/maalehti.js maaosasto). '
-      + 'Lehti on DOM-pinta, jonka funktiot saavat ui-olion parametrina; kuori tarvitsee '
-      + 'lisäksi index.html:n lehti-DOMin (#arrival-*).',
-    juuret: ['js/lehti.js', 'js/maalehti.js'],
+    kuvaus: 'Kaupunki- ja maalehti WKWebView-kuoressa: avaa sivu index.html?lehti=<kaupunki-id>. '
+      + 'Kuori kuulee webkit.messageHandlers.matkakirja-viestit { tapahtuma: "lehti-auki" | '
+      + '"lehti-suljettu", kaupunki }. Tila ei tallenna peliä. Pallolautaa ei avata, mutta sen '
+      + 'moduulit tulevat main.js:n staattisista tuonneista mukaan.',
+    sivu: 'index.html?lehti={kaupunki}',
+    juuret: ['js/main.js'],
   },
 };
 
@@ -54,7 +62,7 @@ function tiedosto(juuri, polku) {
 
 /**
  * Laskee yhden näkymän riippuvuudet. Palauttaa { juuret, tavuja,
- * moduulit, tyylit, tiedostot, kansiot }; dynaamisesti tuoduilla moduuleilla dynaaminen: true.
+ * sivut, moduulit, tyylit, tiedostot, kansiot }; dynaamisesti tuoduilla moduuleilla dynaaminen: true.
  */
 export function laskeRiippuvuudet(juuret, juuri) {
   const moduulit = new Set();
@@ -97,17 +105,20 @@ export function laskeRiippuvuudet(juuret, juuri) {
   });
   const moduuliLista = jarjesta(moduulit).map((p) => ({ ...tiedosto(juuri, p), ...(dynaamiset.has(p) ? { dynaaminen: true } : {}) }));
   const tyyliLista = jarjesta(tyylit).map((p) => tiedosto(juuri, p));
+  // Sivu itse (index.html) on koodia: DOM, johon lehti piirtää.
   const assetLista = jarjesta(assetit).map((p) => tiedosto(juuri, p));
+  const sivuLista = [tiedosto(juuri, 'index.html')];
   const summa = (l) => l.reduce((a, t) => a + t.tavuja, 0);
   return {
     juuret: [...juuret],
     // koodi = JS + CSS (paketoitava kuoreen); tiedostot + kansiot =
     // paikalliset kuvat ja data, jotka lehti hakee ajon aikana.
     tavuja: {
-      koodi: summa(moduuliLista) + summa(tyyliLista),
+      koodi: summa(sivuLista) + summa(moduuliLista) + summa(tyyliLista),
       tiedostot: summa(assetLista),
       kansiot: summa(kansioLista),
     },
+    sivut: sivuLista,
     moduulit: moduuliLista,
     tyylit: tyyliLista,
     tiedostot: assetLista,
@@ -125,6 +136,7 @@ export function kokoaWebNakymat(juuri) {
       nimi,
       kuvaus: n.kuvaus,
       juuriUrl: 'https://matkakirja.app/',
+      sivu: n.sivu,
       ...laskeRiippuvuudet(n.juuret, juuri),
     },
   }));
