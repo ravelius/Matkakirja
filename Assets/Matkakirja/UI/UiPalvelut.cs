@@ -7,6 +7,8 @@
 //              maasto, lehdet ämpäristä). Omistajan linjaus 23.9.2026: peli
 //              mahdollisimman pieni, kaikki striimataan; ratas-paneelissa
 //              osio "Lataa offline-käyttöön" maittain (koko, edistyminen, poisto).
+//   KarttaValot  kartan aihevalot (webin js/karttavalot.js): karttaselite valitsee
+//              yhden aiheen, kartta sytyttää sen merkit ja kertoo laskurit.
 using System;
 using System.Collections.Generic;
 
@@ -44,8 +46,24 @@ namespace Matkakirja.Natiivi
         long VapaaTila { get; }
     }
 
+    /// <summary>
+    /// Kartan aihevalot. Aihe-id:t webin KARTTASELITE_JARJESTYS: kaikki, kaupungit,
+    /// historia, ihmeet, hetket, skandaalit, luonto, elaimet, kulttuuri, kauppa, ei.
+    /// </summary>
+    public interface IKarttaValot
+    {
+        /// <summary>Aihe → näkyvien merkkien määrä nykyisellä näkymällä (puuttuva = 0).</summary>
+        IReadOnlyDictionary<string, int> Laskurit { get; }
+        /// <summary>Valittu aihe ("ei" = kaikki valot pois).</summary>
+        string Valittu { get; }
+        void Valitse(string aihe);
+        /// <summary>Valinta tai laskurit muuttuivat (enintään muutaman kerran sekunnissa).</summary>
+        event Action Muuttui;
+    }
+
     public static class UiPalvelut
     {
         public static IOfflineLataus Offline;
+        public static IKarttaValot KarttaValot;
     }
 }
