@@ -22,9 +22,9 @@ namespace Matkakirja.Natiivi
         public event Action Suljettu;
         public bool Auki => auki == this;
 
-        Minipopup(string otsikko, string luokka)
+        Minipopup(string otsikko, string luokka, int kerros)
         {
-            var juuri = UiKerros.Hae().Juuri(UiKerros.Valikot);
+            var juuri = UiKerros.Hae().Juuri(kerros);
             himmennys = Rakenne.El("mk-himmennys mk-minipopup", juuri);
             himmennys.style.display = DisplayStyle.None;
             himmennys.RegisterCallback<PointerDownEvent>(e => { if (e.target == himmennys) Sulje(); });
@@ -43,11 +43,14 @@ namespace Matkakirja.Natiivi
             Sisalto = v.contentContainer;
         }
 
-        /// <summary>Avaa uuden minipopupin (sulkee edellisen); rakenna täyttää Sisallon.</summary>
-        public static Minipopup Avaa(string otsikko, Action<VisualElement> rakenna, string luokka = null)
+        /// <summary>
+        /// Avaa uuden minipopupin (sulkee edellisen); rakenna täyttää Sisallon. kerros = UI-kerros
+        /// (oletus valikot; aloitusnäkymän periaatteista Traileri, ettei popup jää niiden alle).
+        /// </summary>
+        public static Minipopup Avaa(string otsikko, Action<VisualElement> rakenna, string luokka = null, int kerros = UiKerros.Valikot)
         {
             auki?.Sulje();
-            var m = new Minipopup(otsikko, luokka);
+            var m = new Minipopup(otsikko, luokka, kerros);
             rakenna?.Invoke(m.Sisalto);
             auki = m;
             Rakenne.Nayta(m.himmennys, true, 200);
@@ -56,8 +59,8 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Avaa minipopupin pelkällä tekstillä (web sisalto: string).</summary>
-        public static Minipopup AvaaTeksti(string otsikko, string teksti) =>
-            Avaa(otsikko, s => Rakenne.Teksti(teksti, "mk-minipopup__teksti", s));
+        public static Minipopup AvaaTeksti(string otsikko, string teksti, int kerros = UiKerros.Valikot) =>
+            Avaa(otsikko, s => Rakenne.Teksti(teksti, "mk-minipopup__teksti", s), null, kerros);
 
         public static void SuljeAuki() => auki?.Sulje();
 

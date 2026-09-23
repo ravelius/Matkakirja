@@ -948,6 +948,7 @@ namespace Matkakirja.Natiivi
         {
             using var _ = Ajoita("kartalle");
             Lentoaani(false);
+            PaataLento();
             dialogi.Piilota();
             PiilotaKortti();
             DialogiKohde = null;
@@ -1236,7 +1237,12 @@ namespace Matkakirja.Natiivi
         /// <summary>Lentoääni, nappula tai kamera-ajo kohteeseen; perillä Perilla.</summary>
         void AloitaLiike(MatkanTulos t, (double Lat, double Lon)? a, (double Lat, double Lon) b, float kesto)
         {
-            if (t.Tapa == Kulkutapa.Lento) Lentoaani(true, kesto);
+            if (t.Tapa == Kulkutapa.Lento)
+            {
+                Lentoaani(true, kesto);
+                if (a.HasValue)
+                    AloitaLento(Lentosuunnitelma.Laske(t.Lahto.Kaupungissa ? t.Lahto.Kaupunki : null, t.Kohde.Kaupunki, a.Value, b, kesto));
+            }
             var nappula = Nappula;
             if (nappula != null && a.HasValue)
             {
@@ -1259,6 +1265,7 @@ namespace Matkakirja.Natiivi
         {
             if (Tila != SilmukanTila.Matkalla) return;
             Lentoaani(false);
+            PaataLento();
             var kaupunki = saapumisKaupunki;
             saapumisKaupunki = null;
             // Liike päättyi (kaupunki tai null = reitin varrella): noppa häipyy (web saapuessa).
@@ -1308,10 +1315,14 @@ namespace Matkakirja.Natiivi
             SaavuLehteen(kaupunki);
         }
 
+        /// <summary>Kaupunki, jonka saapumislehti on auki: sen sulkeminen aloittaa matkakirjaluennan (web saapuminen).</summary>
+        string saapumisLehti;
+
         void SaavuLehteen(string kaupunki)
         {
             if (kaupunki != null && LehtiOn)
             {
+                saapumisLehti = kaupunki;
                 Tila = SilmukanTila.Lehti;
                 AvaaLehti(kaupunki);
                 return;
@@ -1336,8 +1347,11 @@ namespace Matkakirja.Natiivi
             // Lehden aikana tapahtunut mannerlento: kamera pelaajaan.
             var k = PeliApu.Koordinaatti(verkko, matka.Tila.Pelaaja.Sijainti);
             if (matka.Tila.Pelaaja.Sijainti.Kaupunki != kaupunki && k.HasValue) Ajo(k.Value.Lat, k.Value.Lon, SaapumisKaari, 1.5f, null);
-            // Isoisän matkakirjaluento kaupungissa kerran istunnossa, kun lehti on luettu (ei maalehdestä).
-            var l = maalehti ? null : luennat.OtaLuento(kaupunki);
+            // Isoisän matkakirjaluento saapuessa, kun saapumislehti on luettu (web: jokaisella saapumisella;
+            // ei kortista avatusta lehdestä eikä maalehdestä).
+            bool saapuminen = saapumisLehti != null && saapumisLehti == kaupunki;
+            saapumisLehti = null;
+            var l = maalehti || !saapuminen ? null : luennat.OtaLuento(kaupunki);
             if (l != null && SoitaLuento(l, 0.6f) == null && !string.IsNullOrEmpty(l.Paikkarivi)) Viesti(l.Paikkarivi);
         }
 
@@ -1810,6 +1824,7 @@ namespace Matkakirja.Natiivi
             PaivitaReaktiot();
             PaivitaKysymysAika();
             PaivitaSahke();
+            PaivitaLento();
             // Pallo ei ota kosketuksia modaalisen näkymän (ja lehden) aikana.
             bool esta = Kaytossa && (Tila == SilmukanTila.Dialogi || Tila == SilmukanTila.Kysymys || Tila == SilmukanTila.Lehti
                                      || Tila == SilmukanTila.Traileri || Tila == SilmukanTila.Sahketehtava || AloituslentoKaynnissa);
@@ -1873,6 +1888,8 @@ namespace Matkakirja.Natiivi
                 + ",\"aarrepiste\":" + (Aarrepiste() is Aarrepiste ap ? "{\"kaupunki\":" + PeliApu.Json(ap.Kaupunki) + ",\"lukittu\":" + (ap.Lukittu ? "true" : "false") + "}" : "null")
                 + ",\"sahke\":" + SahkeJson()
                 + ",\"ajoitus\":" + PeliApu.Json(viimeAjoitus)
+                + ",\"lento\":" + (Lento == null ? "null" : "{\"vaihe\":" + PeliApu.Json(lennonVaihe.ToString()) + ",\"kohde\":" + PeliApu.Json(Lento.Kohde)
+                    + ",\"kesto\":" + Lento.Kesto.ToString("0.0", System.Globalization.CultureInfo.InvariantCulture) + ",\"aloitus\":" + (Lento.Aloitus ? "true" : "false") + "}")
                 + ",\"tehtavaNappi\":" + PeliApu.Json(matka != null && matka.Tila.Pelaaja.Sijainti.Kaupungissa ? LehtiTilaNyt(matka.Tila.Pelaaja.Sijainti.Kaupunki).TehtavaNappi : null);
             return json.Substring(0, json.Length - 1) + lisa + "}";
         }

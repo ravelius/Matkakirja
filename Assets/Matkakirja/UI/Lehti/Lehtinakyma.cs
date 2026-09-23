@@ -61,6 +61,8 @@ namespace Matkakirja.Natiivi
         string avausKaupunki;
 
         public bool Auki { get; private set; }
+        /// <summary>Auki olevan sivun nimi (palautteen ehdotusSivu) tai null.</summary>
+        public string AukiSivunNimi => Auki && lehti != null && nyt >= 0 ? SivunNimi(nyt) : null;
         /// <summary>Lehti avautui (omistaja: kaupunki tai ISO).</summary>
         public event Action<string> Avautui;
         /// <summary>Lehti suljettiin (omistaja), kerran per avaus.</summary>

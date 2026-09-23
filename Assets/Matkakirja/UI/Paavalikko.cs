@@ -12,6 +12,7 @@
 //            avauksella. Poistetaan, kun omistaja on päättänyt.)
 //   ─────────────────────────────────────
 //            [ uusi peli ]
+//            [ ehdota sisältöä ]             (webin #palaute-kulma → "Kerro mitä huomasit", PalauteIkkuna)
 //            [ tekijätiedot ja lähteet ]     (Tietoja: karttojen pakollinen attribuutio)
 //   v1.0 · sisältö v1
 //
@@ -19,8 +20,7 @@
 // pyöristys 8; päällä-rivi: --panel-2, reuna --accent-dark, teksti --accent;
 // pois-rivi himmeä. Tilateksti versaalina ("päällä"/"pois").
 // Kehittäjän syötekokeet (webin Syötekoe, Kerrokset, Kehysprofiili) ja
-// laudanvalinta (piilossa webissäkin) jätetään pois. "ehdota sisältöä" tulee,
-// kun natiivilla on palautekanava.
+// laudanvalinta (piilossa webissäkin) jätetään pois.
 // Uusi peli kysyy varmistuksen (webin #nollaa-dialog) ja tyhjentää tallennuksen
 // ja ääniasetukset: PeliOhjain.UusiPeli (Pelikoodari) + Asetukset.Nollaa.
 using System;
@@ -37,6 +37,8 @@ namespace Matkakirja.Natiivi
 
         /// <summary>"uusi peli" vahvistettiin.</summary>
         public event Action UusiPeli;
+        /// <summary>"ehdota sisältöä" painettiin (webin #palaute-kulma).</summary>
+        public event Action EhdotaPainettu;
         /// <summary>"tekijätiedot ja lähteet" painettiin.</summary>
         public event Action TietojaPainettu;
         /// <summary>Retkikuntaosion paikka (SahkeNakyma täyttää; tyhjänä piilossa).</summary>
@@ -80,10 +82,16 @@ namespace Matkakirja.Natiivi
                     "Peruuta", "Aloita alusta", () =>
                     {
                         Asetukset.Nollaa();
+                        // Web tyhjennaMuistit pyyhkii myös pro-tunnuksen (matkakirja-pro-tunnus).
+                        Palautekanava.AsetaProTunnus(null, null);
                         UusiPeli?.Invoke();
                     });
             }, Sisalto);
             Kirjasimet.Aseta(uusi, Kirjasin.KoneLihava);
+
+            var ehdota = Rakenne.Nappi("ehdota sisältöä", "mk-komentorivi", () => { Sulje(); EhdotaPainettu?.Invoke(); }, Sisalto);
+            ehdota.tooltip = "Ehdota sisältöä tai lähetä palautetta tästä kohdasta";
+            Kirjasimet.Aseta(ehdota, Kirjasin.KoneLihava);
 
             var tietoja = Rakenne.Nappi("tekijätiedot ja lähteet", "mk-komentorivi", () => { Sulje(); TietojaPainettu?.Invoke(); }, Sisalto);
             Kirjasimet.Aseta(tietoja, Kirjasin.KoneLihava);

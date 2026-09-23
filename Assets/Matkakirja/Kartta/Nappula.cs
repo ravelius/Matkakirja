@@ -345,6 +345,11 @@ namespace Matkakirja
             float kerroin = Screen.dpi > 0 ? Mathf.Max(1f, Screen.dpi / 163f) : 1f;
             float pikseli = 2f * etaisyys * Mathf.Tan(kamera.fieldOfView * 0.5f * Mathf.Deg2Rad) / Mathf.Max(1, Screen.height);
             malli.transform.localScale = Vector3.one * (pikseli * malliPx * kerroin / malliKoko);
+            if (Time.frameCount % 240 == 0)
+            {
+                var ruutu = kamera.WorldToScreenPoint(paikka);
+                Debug.Log($"MATKAKIRJA nappula: kone ruudulla {ruutu.x:0},{ruutu.y:0} z {ruutu.z:0}, etäisyys {etaisyys:0} m, mittakaava {malli.transform.localScale.x:0.#}, aktiivinen {malli.activeInHierarchy}, near {kamera.nearClipPlane:0} far {kamera.farClipPlane:0}");
+            }
         }
 
         Vector3 Maailmaan(double lat0, double lon0, double lat1, double lon1, double p, double huippu)
@@ -391,6 +396,7 @@ namespace Matkakirja
                         if (rajat == null) rajat = r.bounds; else { var b = rajat.Value; b.Encapsulate(r.bounds); rajat = b; }
                     }
                     if (rajat != null) malliKoko = Mathf.Max(0.01f, Mathf.Max(rajat.Value.size.x, rajat.Value.size.z));
+                    Debug.Log($"MATKAKIRJA nappula: kone {malli.GetComponentsInChildren<Renderer>().Length} osaa, koko {malliKoko:0.##} m, rajat {rajat?.size}");
                 }
                 if (malli != null) malli.SetActive(paalle);
                 olio.SetActive(!paalle);

@@ -320,6 +320,8 @@ namespace Matkakirja.Natiivi
                     var r = teko(new LehtiTeko
                     {
                         Laji = LehtiTekoLaji.Minitehtavavastaus, Kaupunki = kaupunki, Aihe = t.Aihe, Oikein = oikein, Palkkio = t.Palkkio,
+                        // Kukkaroleima "<nimilaatta> ratkesi" (web fokustehtavat.js sub, nimilaatta raakana).
+                        Selite = rahaaVain ? AarreAukiOtsake : t.Otsake,
                     });
                     // Jo vastattu tai muu virhe: mitään ei piirretä eikä soiteta (web kirjaa → !ok).
                     if (r != null && !r.Ok) return;
@@ -424,7 +426,7 @@ namespace Matkakirja.Natiivi
                     return;
                 }
                 ajastin?.Pause();
-                var r = teko(new LehtiTeko { Laji = LehtiTekoLaji.PullaVinkki, Kaupunki = kaupunki });
+                var r = teko(new LehtiTeko { Laji = LehtiTekoLaji.PullaVinkki, Kaupunki = kaupunki, Selite = nimi + " Livialle" });
                 if (r != null && !r.Ok)
                 {
                     // Kassa ehti tyhjentyä tai ostos on jo tehty: nappi kertoo tilanteen.
