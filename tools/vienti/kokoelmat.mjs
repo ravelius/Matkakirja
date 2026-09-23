@@ -21,6 +21,7 @@
 import { sarjallista } from './sarjallista.mjs';
 import { laudaltaAsteiksi } from '../../js/fokusmitat.js';
 import { ISO2 } from './iso2.mjs';
+import { PAAKAUPUNGIT } from './paakaupungit.mjs';
 
 const LAUTA = 'js/packs/maailmankartta.js';
 
@@ -28,10 +29,30 @@ function taulukko(lahde, kuvaus, viittaukset, alkiot) {
   return { lahde, kuvaus, viittaukset, alkiot: alkiot.map((a) => sarjallista(a)) };
 }
 
+/*
+ * Skeema 1.2: kaupungin tärkeys 0–3 nimiöiden harvennukseen (3D-selvittäjä
+ * 23.9.2026). Reittimäärä = kaupungin päät laudan edges + airRoutes
+ * -taulukoissa; jakauma 266 kaupungilla: mediaani 3, q90 7.
+ *   3  pääkaupunki (tools/vienti/paakaupungit.mjs) tai aloituskaupunki
+ *   2  lentokenttä tai vähintään 6 reittiä
+ *   1  vähintään 4 reittiä
+ *   0  muut
+ */
+export function tarkeys(c, reitteja, onPaakaupunki) {
+  if (onPaakaupunki || c.start) return 3;
+  if (c.airport || reitteja >= 6) return 2;
+  if (reitteja >= 4) return 1;
+  return 0;
+}
+
 function lautaKokoelmat(ns) {
   const P = ns.MAAILMANKARTTA;
   const pallo = ns.PALLON_KAUPUNKIPISTEET ?? {};
   const saaret = new Set(P.islands);
+  const reitteja = new Map();
+  for (const e of [...P.edges, ...P.airRoutes]) {
+    for (const id of [e.a, e.b]) reitteja.set(id, (reitteja.get(id) ?? 0) + 1);
+  }
   const kaupungit = P.cities.map((c) => {
     const tarkka = c.pallo ?? pallo[c.id];
     const arvio = tarkka ? null : laudaltaAsteiksi('maailmankartta', c.x, c.y);
@@ -52,6 +73,7 @@ function lautaKokoelmat(ns) {
       lentokentta: Boolean(c.airport),
       aloitus: Boolean(c.start),
       tyyppi: c.ambience ?? null,
+      tarkeys: tarkeys(c, reitteja.get(c.id) ?? 0, Boolean(maa) && PAAKAUPUNGIT[maa] === c.id),
       data: c,
     };
   });
@@ -76,7 +98,7 @@ function lautaKokoelmat(ns) {
   }
   return {
     kaupungit: taulukko(`${LAUTA}#MAAILMANKARTTA.cities`,
-      'Pelilaudan kaupungit. lat/lon: pallopiste jos on, muuten laudan Miller-koordinaateista laskettu. maa = ISO3, maa2 = ISO2 (tools/vienti/iso2.mjs). tyyppi = laudan ambience, lentokentta ja aloitus laudan liput.',
+      'Pelilaudan kaupungit. lat/lon: pallopiste jos on, muuten laudan Miller-koordinaateista laskettu. maa = ISO3, maa2 = ISO2 (tools/vienti/iso2.mjs). tyyppi = laudan ambience, lentokentta ja aloitus laudan liput. tarkeys 0–3 nimiöiden harvennukseen (3 = pääkaupunki tai aloitus). data = laudan raakaolio (x, y, la, lx, ly…), johon natiivi ei nojaa.',
       {}, kaupungit),
     reitit: taulukko(`${LAUTA}#MAAILMANKARTTA.edges+airRoutes`,
       'Kaupunkien väliset yhteydet: maa/meri (edges, steps = askelia) ja lentoreitit.',

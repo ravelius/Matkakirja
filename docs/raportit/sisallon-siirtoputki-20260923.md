@@ -19,9 +19,10 @@ Lähde: main `eaeda81cf` (v2143).
   (js/media.js). Lisäksi viitteissä on 1 681 lähde- ja lisenssilinkkiä.
 - 21 kokoelmaa tyypitettyinä entiteetteinä, esimerkiksi kaupungit
   lat/lon-koordinaatein, reitit, kysymykset, lehdet ja kohtaamiset.
-- Skeemaversio on **1.1** (`manifest.skeemaversio`): versiossa 1.1
+- Skeemaversio on **1.2** (`manifest.skeemaversio`): versiossa 1.1
   kaupungit saivat kentät `maa2` (ISO2), `tyyppi`, `lentokentta` ja
-  `aloitus` natiivin 3D-proton tarpeen mukaan.
+  `aloitus` natiivin 3D-proton tarpeen mukaan, versiossa 1.2 `tarkeys`
+  (0–3), ja manifest sai tiedostojen koot (`tavuja`).
 - `tests/vienti.test.mjs` (6 testiä, 3 s) todistaa, ettei mitään jää pois.
   Se vertaa jokaista exporttia suoraan lähdemoduuliin. Testi on todettu
   herkäksi: kun Set muutettiin taulukoksi, testi kaatui.
@@ -171,8 +172,15 @@ dist/vienti/
   maa (pelin ISO3; Etelä-Sudan `SDS`), `maa2` (ISO2,
   `tools/vienti/iso2.mjs` Wikidatasta), manner, lat, lon,
   sijaintiLahde, saari, `lentokentta`, `aloitus`, `tyyppi` (laudan
-  ambience) ja data. Natiivin 3D-proton ensimmäinen tarve on id, nimi,
-  lat, lon ja maa2; muita kenttiä käytetään nimien harventamiseen.
+  ambience), `tarkeys` (1.2) ja data. Natiivin 3D-proton ensimmäinen
+  tarve on id, nimi, lat, lon ja maa2; muita kenttiä käytetään nimien
+  harventamiseen. `data` on laudan raakaolio (x, y, la, lx, ly…), johon
+  natiivi ei nojaa.
+- **Tärkeys (skeema 1.2)**: 3 = pääkaupunki (`tools/vienti/paakaupungit.mjs`,
+  staattinen taulu, määritelmä Wikidatan P36) tai aloituskaupunki,
+  2 = lentokenttä tai vähintään 6 reittiä, 1 = vähintään 4 reittiä,
+  0 = muut. Reitit = laudan `edges` + `airRoutes`. Jakauma 266
+  kaupungilla: 0: 130, 1: 25, 2: 23, 3: 88.
 - **Media** osoittaa ämpäriin eikä kopioi tiedostoja. Natiivi peli voi
   hakea ne ajon aikana tai esiladata paketiksi.
 - **Manifest** antaa tuojalle tarkistuslistan: jos tuoja laskee
@@ -360,18 +368,25 @@ sessiota sisältöversion näyttämiselle (työhuone ja natiivin tietoja-sivu).
 - `minSovellus` on `{ ios: 1, web: null }`, koska web ei lue pakettia.
 - Skeema 1.1: kaupungeille `maa2` (ISO2), `tyyppi`, `lentokentta` ja
   `aloitus` 3D-proton tarpeen mukaan (3D-selvittäjä 23.9.).
+- Skeema 1.2 (3D-selvittäjän palaute 23.9. klo 14.29): kaupungeille
+  `tarkeys` 0–3; manifestiin `tavuja` kokoelmille, medialle ja
+  lisätiedostoille (moduuleilla se oli jo); `kaupunki.data` merkitty
+  skeemaan raakaolioksi.
 
 Funktiot tunnisteiksi ja sisältöversion näyttäminen ovat myöhempiä osia.
 
 ### 5.3 Yhteensopivuus: vanha sovellus ja uusi sisältö
 
-- **Skeeman major.minor.** Nykyinen on 1.1 (`SKEEMAVERSIO_TARKKA`,
+- **Skeeman major.minor.** Nykyinen on 1.2 (`SKEEMAVERSIO_TARKKA`,
   manifestissa ja osoittimessa). `matkakirja-vienti/1` on major. Lisäykset
   (uusi kenttä, uusi kokoelma) nostavat minoria, ja vanha sovellus
   ohittaa tuntemattomat kentät. Poisto tai merkityksen muutos nostaa
   majoria, jolloin osoitin vaihtuu (`sisalto/2/…`). Vanha sovellus ei
   koskaan näe uutta majoria, vaan jää viimeiseen yhteensopivaan
-  pakettiin.
+  pakettiin. Historia: 1.0 ensimmäinen vienti; 1.1 kaupunkien maa2,
+  tyyppi, lentokentta, aloitus; 1.2 kaupunkien tarkeys ja manifestin
+  tavuja. Raakaoliot (`data`) eivät kuulu sopimukseen: niiden kentät
+  voivat muuttua ilman versionnostoa.
 - **Pakolliset kentät.** Jokainen sovellus julistaa, mitkä kokoelmat ja
   kentät se vaatii. Tuoja validoi paketin ennen käyttöönottoa, ja jos
   jokin puuttuu, vanha paketti pysyy käytössä. Skeemat
