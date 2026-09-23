@@ -92,7 +92,7 @@ export const TYYPPI_EHDOKKAAT = {
     { url: 'https://cdn.freesound.org/previews/411/411774_1910728-lq.mp3#voima=5.85', nimi: 'Aavikon yön hiljaisuus — Diegolar, CC BY' },
     { url: 'https://cdn.freesound.org/previews/565/565015_12186594-lq.mp3#voima=0.16', nimi: 'Hiekkamyrsky — blackatomproductions, CC0' },
     { url: 'https://cdn.freesound.org/previews/438/438877_2524442-lq.mp3#voima=0.52', nimi: 'Hiekkamyrskyn tuuli — craigsmith, CC0' },
-    { url: 'https://cdn.freesound.org/previews/635/635912_2247456-lq.mp3#voima=4.31', nimi: 'Kiuruja tuulisten dyynien yllä — Kinoton, CC0' },
+    { url: 'https://cdn.freesound.org/previews/635/635912_2247456-lq.mp3#voima=4.32', nimi: 'Kiuruja tuulisten dyynien yllä — Kinoton, CC0' },
     { url: 'https://cdn.freesound.org/previews/579/579250_2977885-lq.mp3#voima=0.27', nimi: 'Tuuli puissa — Danjocross, CC0' },
   ],
   meri: [
@@ -628,7 +628,7 @@ const OLETUSKORIT = {
     'https://cdn.freesound.org/previews/714/714271_14696146-lq.mp3#voima=0.98',
     'https://cdn.freesound.org/previews/411/411774_1910728-lq.mp3#voima=5.85',
     'https://cdn.freesound.org/previews/565/565015_12186594-lq.mp3#voima=0.16',
-    'https://cdn.freesound.org/previews/635/635912_2247456-lq.mp3#voima=4.31',
+    'https://cdn.freesound.org/previews/635/635912_2247456-lq.mp3#voima=4.32',
     'https://cdn.freesound.org/previews/579/579250_2977885-lq.mp3#voima=0.27',
   ],
   meri: [
@@ -762,7 +762,7 @@ export const KAUPUNKI_EHDOKKAAT = {
         nimi: 'Rue Montorgueil — Adi W, CC BY-SA' },
     ],
     marseille: [
-      { url: 'https://archive.org/download/aporee_5735_7211/MarseilleHafendampferundMwen.mp3',
+      { url: 'https://archive.org/download/aporee_5735_7211/MarseilleHafendampferundMwen.mp3#voima=0.35',
         nimi: 'Promenade Louis Braquier, satama-äänet ja lokit — Frank Schulte, CC BY-SA' },
     ],
     lissabon: [
@@ -774,11 +774,11 @@ export const KAUPUNKI_EHDOKKAAT = {
         nimi: 'Plaza de la Corrala, Lavapiés — Kamen Nedev, public domain' },
     ],
     barcelona: [
-      { url: 'https://archive.org/download/aporee_21584_25098/mercadobarcelona01.mp3',
+      { url: 'https://archive.org/download/aporee_21584_25098/mercadobarcelona01.mp3#voima=0.84',
         nimi: 'Ramblas, ruokatori — Carlos Santos, public domain' },
     ],
     granada: [
-      { url: 'https://archive.org/download/aporee_21765_25301/GranadaCalleCaldereraNuevacaminando.mp3',
+      { url: 'https://archive.org/download/aporee_21765_25301/GranadaCalleCaldereraNuevacaminando.mp3#voima=1.06',
         nimi: 'Calle Calderería Nueva, kävely — andresdiezblanco, public domain' },
     ],
     amsterdam: [
@@ -810,7 +810,7 @@ export const KAUPUNKI_EHDOKKAAT = {
         nimi: 'Raitiovaunumatka — Piotrek Zyla, public domain' },
     ],
     varsova: [
-      { url: 'https://archive.org/download/aporee_13075_15305/110804152036Warsawda16bit224.mp3',
+      { url: 'https://archive.org/download/aporee_13075_15305/110804152036Warsawda16bit224.mp3#voima=6',
         nimi: 'Kaupungin äänimaisema — damir.kustic, public domain' },
     ],
     krakova: [
@@ -864,7 +864,7 @@ export const KAUPUNKI_EHDOKKAAT = {
      * tools/mittaa-aanet.mjs:n kaavalla (−31,3 ja −33,9 LUFS).
      */
     sarajevo: [
-      { url: 'https://archive.org/download/aporee_72317_84452/bianuralsoundwalksarajevoferhadijastreet.mp3#voima=0.82',
+      { url: 'https://archive.org/download/aporee_72317_84452/bianuralsoundwalksarajevoferhadijastreet.mp3#voima=0.77',
         nimi: 'Ferhadija-kadun kävelykatu — Haris Sahačić, public domain' },
       { url: 'https://archive.org/download/aporee_72314_84448/soundoftheshadrvaninfrontofthemosque.mp3#voima=1.11',
         nimi: 'Suihkulähde Gazi Husrev-begin moskeijan edustalla — Haris Sahačić, public domain' },
@@ -951,7 +951,7 @@ export const KAUPUNKI_EHDOKKAAT = {
         nimi: 'Åboulevardin liikenne myöhään illalla — Adi W, CC BY-SA' },
     ],
     lappi: [
-      { url: 'https://archive.org/download/aporee_49673_56640/torinranta.mp3',
+      { url: 'https://archive.org/download/aporee_49673_56640/torinranta.mp3#voima=0.56',
         nimi: 'Torinranta perjantai-iltana, Oulu — dthundr, public domain' },
     ],
     tromssa: [
