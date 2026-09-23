@@ -1,223 +1,158 @@
 {
   "versio": 2,
   "kaupunki": "berliini",
-  "teksti": "Berliinissä paljastettiin voitonpylväs, jonka koristeina on vallattuja tykinputkia. Niin korkealle nostettu tykki ei ainakaan osu ohikulkijaan. Pylvään juurella poika myi lehtiä, ja katsojat polkivat hänen pudonneen numeronsa mutaan. Ostin senkin. Suuret voitot painetaan paksuin kirjaimin; pieni tappio oli pojan kasvoilla.",
-  "tekstiSha256": "d07097a1843e028c427166f5f2166f66c0e57c00882550e59dee7f6b3e1e27b8",
+  "teksti": "Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.",
+  "tekstiSha256": "e225f5fb7514e56df874d4a91d101b0e6b7cf325adf0423662c136cb4ba4c7a7",
   "aani": {
     "nimi": "puhe-fokus-matkakirja-berliini.mp3",
     "versio": 2,
-    "tavut": 441408,
-    "sha256": "9af43e57e6c6c7f33347f5589f9954d802bfcbf9cbdd91dc246ff5992153f525"
+    "tavut": 319782,
+    "sha256": "3da927e995f02d6bdadf62603b133975ea862773dc7344b728f93f3dac94556d"
   },
-  "kesto": 27479,
+  "kesto": 19900,
   "sanat": [
     {
-      "sana": "Berliinissä",
-      "alku": 219,
-      "loppu": 819
+      "sana": "Berliinin",
+      "alku": 140,
+      "loppu": 640
     },
     {
-      "sana": "paljastettiin",
-      "alku": 919,
-      "loppu": 1599
+      "sana": "lennätintoimistossa",
+      "alku": 680,
+      "loppu": 1940
     },
     {
-      "sana": "voitonpylväs",
-      "alku": 1639,
-      "loppu": 2480
+      "sana": "sähkösanoma",
+      "alku": 2320,
+      "loppu": 3000
     },
     {
-      "sana": "jonka",
-      "alku": 2759,
-      "loppu": 2980
+      "sana": "suljettiin",
+      "alku": 3060,
+      "loppu": 3580
     },
     {
-      "sana": "koristeina",
-      "alku": 3019,
-      "loppu": 3619
+      "sana": "kapseliin",
+      "alku": 3640,
+      "loppu": 4360
     },
     {
-      "sana": "on",
-      "alku": 3659,
-      "loppu": 3779
+      "sana": "Paineilma",
+      "alku": 5540,
+      "loppu": 6180
     },
     {
-      "sana": "vallattuja",
-      "alku": 3839,
-      "loppu": 4400
+      "sana": "vei",
+      "alku": 6320,
+      "loppu": 6480
     },
     {
-      "sana": "tykinputkia",
-      "alku": 4440,
-      "loppu": 5299
+      "sana": "sen",
+      "alku": 6540,
+      "loppu": 6720
     },
     {
-      "sana": "Niin",
-      "alku": 6579,
-      "loppu": 6739
+      "sana": "katujen",
+      "alku": 6780,
+      "loppu": 7220
     },
     {
-      "sana": "korkealle",
-      "alku": 6839,
-      "loppu": 7299
+      "sana": "alla",
+      "alku": 7320,
+      "loppu": 7540
     },
     {
-      "sana": "nostettu",
-      "alku": 7359,
-      "loppu": 7879
+      "sana": "kulkevaa",
+      "alku": 7600,
+      "loppu": 8140
     },
     {
-      "sana": "tykki",
-      "alku": 7919,
-      "loppu": 8399
+      "sana": "putkea",
+      "alku": 8180,
+      "loppu": 8640
     },
     {
-      "sana": "ei",
-      "alku": 8479,
-      "loppu": 8579
+      "sana": "pitkin",
+      "alku": 8680,
+      "loppu": 9040
     },
     {
-      "sana": "ainakaan",
-      "alku": 8659,
-      "loppu": 9079
+      "sana": "pörssiin",
+      "alku": 9100,
+      "loppu": 9760
     },
     {
-      "sana": "osu",
-      "alku": 9139,
-      "loppu": 9319
+      "sana": "Virkailija",
+      "alku": 11560,
+      "loppu": 12100
     },
     {
-      "sana": "ohikulkijaan",
-      "alku": 9399,
-      "loppu": 10219
+      "sana": "kysyi",
+      "alku": 12160,
+      "loppu": 12520
     },
     {
-      "sana": "Pylvään",
-      "alku": 12019,
-      "loppu": 12399
+      "sana": "oliko",
+      "alku": 12580,
+      "loppu": 12820
     },
     {
-      "sana": "juurella",
-      "alku": 12479,
-      "loppu": 12880
+      "sana": "minulla",
+      "alku": 12880,
+      "loppu": 13200
     },
     {
-      "sana": "poika",
-      "alku": 13000,
-      "loppu": 13279
+      "sana": "jotakin",
+      "alku": 13260,
+      "loppu": 13660
     },
     {
-      "sana": "myi",
-      "alku": 13340,
-      "loppu": 13500
+      "sana": "lähetettävää",
+      "alku": 13720,
+      "loppu": 14600
     },
     {
-      "sana": "lehtiä",
-      "alku": 13559,
-      "loppu": 14039
+      "sana": "Ei",
+      "alku": 16239,
+      "loppu": 16360
     },
     {
-      "sana": "ja",
-      "alku": 14559,
-      "loppu": 14619
+      "sana": "vielä",
+      "alku": 16420,
+      "loppu": 16720
     },
     {
-      "sana": "katsojat",
-      "alku": 14679,
-      "loppu": 15139
+      "sana": "Halusin",
+      "alku": 17720,
+      "loppu": 18040
     },
     {
-      "sana": "polkivat",
-      "alku": 15179,
-      "loppu": 15619
+      "sana": "nähdä",
+      "alku": 18080,
+      "loppu": 18300
     },
     {
-      "sana": "hänen",
-      "alku": 15659,
-      "loppu": 15839
+      "sana": "seuraavankin",
+      "alku": 18360,
+      "loppu": 19040
     },
     {
-      "sana": "pudonneen",
-      "alku": 15920,
-      "loppu": 16399
+      "sana": "kapselin",
+      "alku": 19080,
+      "loppu": 19500
     },
     {
-      "sana": "numeronsa",
-      "alku": 16440,
-      "loppu": 16939
-    },
-    {
-      "sana": "mutaan",
-      "alku": 17020,
-      "loppu": 17479
-    },
-    {
-      "sana": "Ostin",
-      "alku": 18819,
-      "loppu": 19139
-    },
-    {
-      "sana": "senkin",
-      "alku": 19199,
-      "loppu": 19639
-    },
-    {
-      "sana": "Suuret",
-      "alku": 21699,
-      "loppu": 22059
-    },
-    {
-      "sana": "voitot",
-      "alku": 22139,
-      "loppu": 22539
-    },
-    {
-      "sana": "painetaan",
-      "alku": 22600,
-      "loppu": 23100
-    },
-    {
-      "sana": "paksuin",
-      "alku": 23219,
-      "loppu": 23699
-    },
-    {
-      "sana": "kirjaimin",
-      "alku": 23799,
-      "loppu": 24379
-    },
-    {
-      "sana": "pieni",
-      "alku": 25519,
-      "loppu": 25779
-    },
-    {
-      "sana": "tappio",
-      "alku": 25840,
-      "loppu": 26399
-    },
-    {
-      "sana": "oli",
-      "alku": 26479,
-      "loppu": 26680
-    },
-    {
-      "sana": "pojan",
-      "alku": 26719,
-      "loppu": 27019
-    },
-    {
-      "sana": "kasvoilla",
-      "alku": 27079,
-      "loppu": 27479
+      "sana": "lähtevän",
+      "alku": 19540,
+      "loppu": 19900
     }
   ],
   "lauseet": [
-    219,
-    6579,
-    12019,
-    18819,
-    21699
+    140,
+    5540,
+    11560,
+    16239,
+    17720
   ],
-  "luotu": "2026-09-11T12:04:11.746Z"
+  "luotu": "2026-09-23T15:35:39.722Z"
 }

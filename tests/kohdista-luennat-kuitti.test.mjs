@@ -47,6 +47,39 @@ test('Horatio-kohdistus hyväksyy vain valmiin SHA-sidotun tuotantokuitin', asyn
   }
 });
 
+test('vanhan tuotantoerän outputFormat kelpaa kohdistukseen, mutta muu formaattiroska ei', async () => {
+  /*
+   * 23.9.2026, Fablen päätös: kaikki 23.9.2026 mennessä tuotetut
+   * kuitit kantavat vanhaa mp3_44100_128:aa, ja OUTPUT_FORMAT nostettiin
+   * myöhemmin mp3_44100_192:een. Kohdistus ei tuota ääntä, joten
+   * kuitin oma formaatti kelpaa — myös eräId lasketaan sillä, ei
+   * nykyisellä vakiolla (muuten batchId ei täsmäisi).
+   */
+  const id = 'praha';
+  const sourceCommit = '2'.repeat(40);
+  const vanhaFormaatti = 'mp3_44100_128';
+  const tyo = { id, ...kohdeTiedosto(id) };
+  const batch = {
+    id: tuotantoEraId([tyo], sourceCommit, vanhaFormaatti), sourceCommit, retryOf: null,
+  };
+  const audio = Buffer.from(`horatio-${id}-vanha-formaatti`);
+  const vanha = {
+    schemaVersion: 1,
+    batch,
+    cities: [kuittirivi(tyo, {
+      status: 'success', raw: audio, final: { data: audio, duration: 9.5 },
+      objectKeys: tuotantoAvaimet(tyo, { batchId: batch.id, sourceCommit }),
+    })],
+  };
+  vanha.cities[0].synthesis.outputFormat = vanhaFormaatti;
+  const rivit = await kuittirivit(vanha);
+  assert.ok(rivit.has('praha'));
+
+  const roska = structuredClone(vanha);
+  roska.cities[0].synthesis.outputFormat = 'jotain-muuta';
+  await assert.rejects(() => kuittirivit(roska), /ei kelpaa kohdistukseen/);
+});
+
 test('kohdistusliput kantavat kuitin eivatka oleta vientia', () => {
   assert.deepEqual(lueLiput(['--kuitti', 'valmis.json']), {
     kaupungit: [], kaikki: false, kuiva: false, vienti: false, sidonta: false, kuitti: 'valmis.json',
