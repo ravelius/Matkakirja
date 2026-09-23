@@ -53,7 +53,16 @@ namespace Matkakirja.Linssit.Testit
         static (Esitys e, ValeYmparisto y, ValeNakyma n, ValeAani a, Dictionary<string, JaksonLeimat> l, List<KertomusJakso> k) Luo()
         {
             var d = Data();
-            var kertomus = d.GetProperty("kertomus").EnumerateArray().Select(j => new KertomusJakso
+            var kertomus = EsitysAjoTestitApu.WebinKertomus();
+            var kohteet = d.GetProperty("kohteet").EnumerateObject()
+                .ToDictionary(p => p.Name, p => new LatLon(p.Value[0].GetDouble(), p.Value[1].GetDouble()));
+            return Luo2(d, kertomus, kohteet);
+        }
+
+        static (Esitys e, ValeYmparisto y, ValeNakyma n, ValeAani a, Dictionary<string, JaksonLeimat> l, List<KertomusJakso> k) Luo2(
+            JsonElement d, List<KertomusJakso> kertomus, Dictionary<string, LatLon> kohteet)
+        {
+            var _ = d.GetProperty("kertomus").EnumerateArray().Select(j => new KertomusJakso
             {
                 Id = j.GetProperty("id").GetString(),
                 Vaihe = j.GetProperty("vaihe").GetString(),
@@ -65,8 +74,6 @@ namespace Matkakirja.Linssit.Testit
                 Pulu = j.GetProperty("pulu").ValueKind == JsonValueKind.String ? j.GetProperty("pulu").GetString() : null,
                 Tunne = j.GetProperty("tunne").ValueKind == JsonValueKind.String ? j.GetProperty("tunne").GetString() : null,
             }).ToList();
-            var kohteet = d.GetProperty("kohteet").EnumerateObject()
-                .ToDictionary(p => p.Name, p => new LatLon(p.Value[0].GetDouble(), p.Value[1].GetDouble()));
             var rivit = d.GetProperty("leimat").EnumerateObject().Select(p => p.Value).OrderBy(v => v.GetProperty("alku").GetDouble())
                 .Select(v => (v.GetProperty("tunnus").GetString(), v.GetProperty("alku").GetDouble(), v.GetProperty("loppu").GetDouble(),
                     (IReadOnlyList<double>)v.GetProperty("lauseet").EnumerateArray().Select(x => x.GetDouble()).ToList(),
@@ -139,6 +146,8 @@ namespace Matkakirja.Linssit.Testit
             var ajo = e.ViimeisinAjo.Value;
             Oleta.Tosi(Math.Abs(ajo.keskus.Lat - 31.855) < 1 && Math.Abs(ajo.keskus.Lon + 8.8725) < 1, "kamera matkalla Jebel Irhoudiin: " + ajo.keskus);
             Oleta.Tosi(ajo.kestoMs >= Esitysmatikka.MarokonPohjaMs, "kohdeajon kesto ≥ pohja");
+            Oleta.Tosi(y.AjonPehmennys != null && Math.Abs(y.AjonPehmennys(0.5) - Esitysmatikka.MarokonKaari(0.5)) < 1e-12,
+                "kohdeajo Marokon kaarella");
             // Kohdejakson alku ei aja kameraa uudestaan (kohdeajo kulutetaan).
             var ennen = e.ViimeisinAjo;
             Aja(e, y, 0.2);
@@ -212,6 +221,27 @@ namespace Matkakirja.Linssit.Testit
         static void Lahella(double odotettu, double saatu, string mita, double tol)
         {
             if (Math.Abs(odotettu - saatu) > tol) throw new Exception($"{mita}: odotettu {odotettu}, saatu {saatu}");
+        }
+        }
+
+    public static class EsitysAjoTestitApu
+    {
+        public static System.Collections.Generic.List<KertomusJakso> WebinKertomus()
+        {
+            var d = System.Text.Json.JsonDocument.Parse(System.IO.File.ReadAllText(System.IO.Path.Combine(
+                System.AppContext.BaseDirectory, "..", "kultaiset", "ihmisen-matka.json"))).RootElement;
+            return d.GetProperty("kertomus").EnumerateArray().Select(j => new KertomusJakso
+            {
+                Id = j.GetProperty("id").GetString(),
+                Vaihe = j.GetProperty("vaihe").GetString(),
+                Kohde = j.GetProperty("kohde").ValueKind == System.Text.Json.JsonValueKind.String ? j.GetProperty("kohde").GetString() : null,
+                Hiljaiset = j.GetProperty("hiljaiset").EnumerateArray().Select(x => x.GetString()).ToList(),
+                Alue = j.GetProperty("alue").ValueKind == System.Text.Json.JsonValueKind.String ? j.GetProperty("alue").GetString() : null,
+                Vuosia = j.GetProperty("vuosia").ValueKind == System.Text.Json.JsonValueKind.Number ? j.GetProperty("vuosia").GetDouble() : (double?)null,
+                Teksti = j.GetProperty("teksti").GetString(),
+                Pulu = j.GetProperty("pulu").ValueKind == System.Text.Json.JsonValueKind.String ? j.GetProperty("pulu").GetString() : null,
+                Tunne = j.GetProperty("tunne").ValueKind == System.Text.Json.JsonValueKind.String ? j.GetProperty("tunne").GetString() : null,
+            }).ToList();
         }
     }
 }

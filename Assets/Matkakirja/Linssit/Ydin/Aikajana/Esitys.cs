@@ -401,8 +401,8 @@ namespace Matkakirja.Linssit.Aikajana
             for (int n = 0; n < kertomus.Count; n++) if (kertomus[n] == ensimmainenKohde) { i = n; break; }
             var (alku, loppu) = Tahti(i);
             kohdeajo = true;
-            // Web ajaa tämän marokonKaarella; natiivin kamera-ajolla on oma pehmennys (PalloKierto.Aja).
-            AjaKohteeseen(ensimmainenKohde.Kohde, kesto, alku, loppu);
+            // Kuutiollinen kiihdytys ja pitkä jarrutus (web marokonKaari).
+            AjaKohteeseen(ensimmainenKohde.Kohde, kesto, alku, loppu, t => Esitysmatikka.MarokonKaari(t));
         }
 
         // ── Kamera ────────────────────────────────────────────────────────
@@ -410,14 +410,14 @@ namespace Matkakirja.Linssit.Aikajana
         /// <summary>Viimeisin kamerarajaus (testit ja mittarit).</summary>
         public (LatLon keskus, double leveysAst, double kestoMs)? ViimeisinAjo { get; private set; }
 
-        void AjaKohteeseen(string tunnus, double kestoMs, double alku, double loppu)
+        void AjaKohteeseen(string tunnus, double kestoMs, double alku, double loppu, Func<double, double> pehmennys = null)
         {
             if (!kohteet.TryGetValue(tunnus, out var t)) return;
             var (rajaus, _) = Esitysmatikka.JaksonRajaus(t, vanat(), alku, loppu);
             double leveys = Math.Max(Esitysmatikka.Lahikuva,
                 Esitysmatikka.RajauksenLeveys(rajaus, y.Kuvasuhde, 0.14) ?? 0);
             var keskus = rajaus is Rajaus r ? new LatLon(r.Lat, r.Lon) : t;
-            Aja(keskus, Kameramatikka.LeveysAsteina(leveys), kestoMs);
+            Aja(keskus, Kameramatikka.LeveysAsteina(leveys), kestoMs, pehmennys);
         }
 
         void AjaAlueeseen(string alue, double kestoMs)
@@ -438,11 +438,11 @@ namespace Matkakirja.Linssit.Aikajana
             }
         }
 
-        void Aja(LatLon keskus, double leveysAst, double kestoMs)
+        void Aja(LatLon keskus, double leveysAst, double kestoMs, Func<double, double> pehmennys = null)
         {
             ViimeisinAjo = (keskus, leveysAst, kestoMs);
             double ms = y.VahennettyLiike ? 0 : kestoMs;
-            y.AjaKamera(new Nakyma(keskus.Lat, keskus.Lon, y.KorkeusLeveydelle(leveysAst)), (float)(ms / 1000));
+            y.AjaKamera(new Nakyma(keskus.Lat, keskus.Lon, y.KorkeusLeveydelle(leveysAst)), (float)(ms / 1000), pehmennys);
         }
     }
 }

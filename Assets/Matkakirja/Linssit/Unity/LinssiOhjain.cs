@@ -91,7 +91,11 @@ namespace Matkakirja.Natiivi
 
         public Nakyma Kamera => new Nakyma(kierto.leveys, kierto.pituus, kierto.korkeus, kierto.kallistus);
 
-        public void AjaKamera(Nakyma kohde, float kestoS) =>
+        /// <summary>
+        /// Pehmennys välitetään, kun PalloKierto.Aja(…, pehmennys) on masterissa
+        /// (Natiiviseppä 23.9.); siihen asti kamera ajaa oletusprofiililla.
+        /// </summary>
+        public void AjaKamera(Nakyma kohde, float kestoS, Func<double, double> pehmennys = null) =>
             kierto.Aja(kohde.Lat, kohde.Lon, kohde.Korkeus, Mathf.Max(0.01f, kestoS), null);
 
         /// <summary>

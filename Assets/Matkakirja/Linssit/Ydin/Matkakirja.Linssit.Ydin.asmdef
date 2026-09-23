@@ -1,7 +1,9 @@
 {
     "name": "Matkakirja.Linssit.Ydin",
     "rootNamespace": "Matkakirja.Linssit",
-    "references": [],
+    "references": [
+        "Matkakirja.Peli"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
