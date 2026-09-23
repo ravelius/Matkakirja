@@ -39,6 +39,8 @@ namespace Matkakirja.Natiivi
         public readonly Saapumistraileri Traileri;
         public readonly Tietoja Tietoja;
         public readonly LinssiUi Linssit;
+        public readonly Aloitusnakyma Aloitus;
+        public readonly Huipennus Huipennus;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         static void KytkeTehdas()
@@ -48,6 +50,8 @@ namespace Matkakirja.Natiivi
             PeliNakymat.KaupunkiKortti = _ => Hae().Kaupunkikortti;
             PeliNakymat.Saapumistraileri = (kaupunki, url, valmis) => Hae().Traileri.NaytaPelista(kaupunki, url, valmis);
             PeliNakymat.Kysymys = _ => Hae().Kysymys;
+            // Aloitusnäkymä: silmukka odottaa tilassa Aloitus (Jatka / Uusi matka).
+            PeliOhjain.AloitusNakyma = true;
         }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
@@ -84,6 +88,8 @@ namespace Matkakirja.Natiivi
             // Livia lennähtää paikalle, kun käyttöliittymä on valmis (webin ensisaapuminen: handoff).
             kerros.Juuri(UiKerros.Tilarivi).schedule.Execute(() => Pulu.Tilanne("arrival")).StartingIn(1500);
             Tietoja = new Tietoja(kerros);
+            Aloitus = new Aloitusnakyma(kerros);
+            Huipennus = new Huipennus(kerros);
             // Linssit (valitsin, peite, selite, astronautti, vertailu, aikajanat): kartuschan ja selitteen jälkeen.
             Linssit = new LinssiUi(kerros, this);
             Valikko.TietojaPainettu += Tietoja.Avaa;
@@ -131,8 +137,31 @@ namespace Matkakirja.Natiivi
                 if (laji == "tunne") Pulu.Tunne(tunne, v);
                 else Pulu.Tilanne(laji, null, tunne, v);
             };
+            // Aloitus ja matkan huipennus (Pelikoodarin tapahtumat); tila voi olla jo Aloitus.
+            o.AloitusTarjolla += () => UiKerros.PaaSaikeessa(() => NaytaAloitus(o));
+            if (o.Tila == SilmukanTila.Aloitus) NaytaAloitus(o);
+            o.KaikkiAarteetLoytyi += yv => UiKerros.PaaSaikeessa(() => Huipennus.Nayta(yv, () => UusiMatka(o)));
             // Lehti (WKWebView) aukeaa kaiken päälle: auki jääneet valikot kiinni.
             if (o.Lehti != null) o.Lehti.Avautui += _ => { Valikko.Sulje(); Aanentasot.Sulje(); Matkalaukku.Sulje(); Vahvistus.Sulje(); };
+        }
+
+        void NaytaAloitus(PeliOhjain o)
+        {
+            if (Aloitus.Auki) return;
+            SuljeKaikki();
+            Aloitus.Nayta(id => Aloita(o, id), o.Lahtokaupungit(), o.TallennusOn ? () => { var v = o.Jatka(); if (v != null) Tilarivi.Viesti(v); } : (System.Action)null);
+        }
+
+        void UusiMatka(PeliOhjain o)
+        {
+            SuljeKaikki();
+            Aloitus.NaytaAvaus(id => Aloita(o, id), o.Lahtokaupungit());
+        }
+
+        void Aloita(PeliOhjain o, string id)
+        {
+            var virhe = o.UusiMatka(id);
+            if (virhe != null) { Debug.LogWarning("MATKAKIRJA ui aloitus: " + virhe); Tilarivi.Viesti(virhe); }
         }
 
         KaupunkiMerkit merkit;
@@ -159,6 +188,7 @@ namespace Matkakirja.Natiivi
             Valikko.Sulje();
             Aanentasot.Sulje();
             Matkalaukku.Sulje();
+            Huipennus.Sulje();
             Vahvistus.Sulje();
             Matkavalinta.Piilota();
             Matkavalinta.PiilotaHeitto();

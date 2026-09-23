@@ -1037,3 +1037,299 @@
     border-color: rgba(70, 51, 31, 0.35);
     -unity-background-scale-mode: scale-and-crop;
 }
+
+/* --- Aloitusnäkymä (webin .start-gate, #intro, .intro-juliste, .intro-arkki) ------------- */
+
+.mk-aloitus {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition-property: opacity;
+    transition-duration: 0.9s;
+}
+
+.mk-aloitus__intro {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+    transition-property: opacity;
+    transition-duration: 0.9s;
+}
+
+.mk-aloitus__ylaosa {
+    height: 44%;
+    align-items: center;
+    justify-content: center;
+    padding-top: 24px;
+}
+
+.mk-juliste {
+    align-items: center;
+    width: 86%;
+    max-width: 560px;
+    color: var(--map-ink);
+}
+
+.mk-juliste__rivi {
+    -unity-text-align: middle-center;
+    color: var(--map-ink);
+    white-space: normal;
+    margin-bottom: 6px;
+}
+
+.mk-juliste__nimi {
+    font-size: 44px;
+    letter-spacing: 10px;
+}
+
+.mk-juliste__yla {
+    font-size: 22px;
+    letter-spacing: 5px;
+}
+
+.mk-juliste__ala {
+    font-size: 17px;
+    letter-spacing: 4px;
+}
+
+.mk-juliste__osa {
+    margin-top: 6px;
+    font-size: 13px;
+    letter-spacing: 5.5px;
+    color: #9c3a26;
+}
+
+.mk-juliste__viiva {
+    flex-direction: row;
+    align-items: center;
+    width: 70%;
+    max-width: 290px;
+    margin: 6px 0 10px 0;
+    color: rgba(70, 51, 31, 0.7);
+}
+
+.mk-juliste__vaakaviiva {
+    flex-grow: 1;
+    height: 4px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-color: rgba(70, 51, 31, 0.55);
+    border-bottom-color: rgba(70, 51, 31, 0.26);
+}
+
+.mk-juliste__merkki {
+    margin: 0 8px;
+    font-size: 12px;
+    color: rgba(70, 51, 31, 0.7);
+}
+
+.mk-aloitus__arkki {
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 16px 36px 16px;
+    border-top-width: 1px;
+    border-top-color: rgba(70, 51, 31, 0.3);
+    transition-property: opacity;
+    transition-duration: 0.9s;
+}
+
+.mk-aloitus__palsta {
+    width: 86%;
+    max-width: 560px;
+}
+
+.mk-aloitus__paikka {
+    margin-bottom: 14px;
+    font-size: 14.5px;
+    letter-spacing: 1px;
+    color: var(--map-ink);
+    -unity-text-align: middle-center;
+}
+
+.mk-aloitus__runko {
+    font-size: 18px;
+    color: var(--map-ink);
+    white-space: normal;
+    -unity-text-align: upper-center;
+    -unity-paragraph-spacing: 4px;
+}
+
+.mk-aloitus__valinta {
+    align-self: center;
+    min-height: 44px;
+    margin-top: 22px;
+    padding: 8px 22px;
+    border-width: 1.5px;
+    border-color: rgba(70, 51, 31, 0.75);
+    border-radius: 2px;
+    background-color: rgba(247, 237, 216, 0.55);
+    color: var(--map-ink);
+    transition-property: opacity;
+    transition-duration: 0.8s;
+}
+
+.mk-aloitus__valinta .mk-nappi__teksti {
+    font-size: 15px;
+    letter-spacing: 4px;
+}
+
+.mk-aloitus__valinta:active {
+    background-color: rgba(247, 237, 216, 0.85);
+    border-color: var(--map-ink);
+}
+
+.mk-aloitus__portti {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(36, 26, 18, 0.42);
+    transition-property: opacity;
+    transition-duration: 0.35s;
+}
+
+.mk-aloitus__porttireuna {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.55;
+}
+
+.mk-aloitus__keskus {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.mk-aloitus__aanet {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 14px;
+    color: #e8d6ac;
+}
+
+.mk-aloitus__aaniteksti {
+    font-size: 16px;
+    color: #e8d6ac;
+    margin-right: 4px;
+}
+
+.mk-aloitus__aanet > .mk-ikoni {
+    width: 20px;
+    height: 20px;
+}
+
+.mk-aloitus__aloita {
+    min-width: 220px;
+    min-height: 52px;
+    margin-top: 8px;
+    padding: 12px 30px;
+}
+
+.mk-aloitus__aloita .mk-nappi__teksti {
+    font-size: 18px;
+    letter-spacing: 0.6px;
+}
+
+.mk-aloitus__linkki {
+    position: absolute;
+    left: 52px;
+    right: 52px;
+    bottom: 42px;
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: #d8c091;
+}
+
+.mk-aloitus__linkki .mk-nappi__teksti {
+    font-size: 14px;
+    -unity-text-align: middle-center;
+}
+
+.mk-aloitus__valintakortti {
+    max-width: 520px;
+    max-height: 86%;
+}
+
+.mk-aloitus__valintavieritys {
+    flex-shrink: 1;
+}
+
+.mk-aloitus__kohteet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.mk-aloitus__kohde {
+    width: 49%;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 48px;
+    margin-bottom: 6px;
+    padding: 6px 8px;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.3);
+    border-radius: 6px;
+    background-color: rgba(255, 252, 242, 0.45);
+    color: var(--map-ink);
+}
+
+.mk-aloitus__kohde:active {
+    background-color: rgba(255, 252, 242, 0.9);
+    border-color: rgba(70, 51, 31, 0.6);
+}
+
+.mk-aloitus__lippu {
+    width: 30px;
+    height: 20px;
+    margin-right: 8px;
+    flex-shrink: 0;
+    border-width: 0.5px;
+    border-color: rgba(70, 51, 31, 0.35);
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.mk-aloitus__kohdetekstit {
+    flex-shrink: 1;
+}
+
+.mk-aloitus__kohdenimi {
+    font-size: 15px;
+    color: var(--map-ink);
+}
+
+.mk-aloitus__kohdemaa {
+    font-size: 11px;
+    color: rgba(70, 51, 31, 0.65);
+}
+
+.mk-aloitus__periaate {
+    margin-bottom: 6px;
+}
+
+/* --- Matkan huipennus (webin #winner-dialog) ------------------------------------------- */
+
+.mk-huipennus__merkki {
+    font-size: 30px;
+    color: #d9a13b;
+    -unity-text-align: middle-center;
+}
+
+.mk-huipennus__otsikko {
+    -unity-text-align: middle-center;
+}
