@@ -65,9 +65,215 @@ namespace Matkakirja.Natiivi
             kerrokset = new KerrosSovitin();
             rekisteri = new Linssirekisteri(this);
             rekisteri.Lisaa(new Topografia());
+            StartCoroutine(LataaAstronautti());
+            StartCoroutine(LataaKeksinnot());
+            StartCoroutine(LataaIhmisenMatka());
             rekisteri.Vaihtui += l => Kirjaa("auki: " + (l?.Tiedot.Id ?? "ei mitään"));
             komentoPolku = Path.Combine(Application.persistentDataPath, "linssi-komento.txt");
             lokiPolku = Path.Combine(Application.persistentDataPath, "linssi-loki.txt");
+        }
+
+        /// <summary>Astronautin kamera rekisteriin, kun sen aineisto on ladattu paketista.</summary>
+        System.Collections.IEnumerator LataaAstronautti()
+        {
+            string data = null, kysymykset = null;
+            yield return LinssiSisalto.Hae("moduulit/js/linssit/satelliitti-data.json", t => data = t);
+            yield return LinssiSisalto.Hae("moduulit/js/linssit/astronaut-kysymykset.json", t => kysymykset = t);
+            if (data == null) { Kirjaa("astronautin kamera: aineisto puuttuu"); yield break; }
+            try
+            {
+                var aineisto = Matkakirja.Linssit.Astronautti.AstronauttiAineisto.Lue(
+                    Matkakirja.Peli.MiniJson.Jasenna(data), kysymykset == null ? null : Matkakirja.Peli.MiniJson.Jasenna(kysymykset));
+                rekisteri.Lisaa(new AstronauttiSovitin(this, aineisto));
+                Kirjaa($"astronautin kamera: {aineisto.Kohteet.Count} kohdetta");
+            }
+            catch (Exception e) { Kirjaa("astronautin kamera: " + e.Message); }
+        }
+
+        static Dictionary<string, object> Olio(object x) => x as Dictionary<string, object>;
+
+        /// <summary>Hakee osoitteen tekstinä (manifestit ämpäristä); null, jos ei onnistu.</summary>
+        static System.Collections.IEnumerator HaeOsoite(string osoite, Action<string> valmis)
+        {
+            using var p = UnityEngine.Networking.UnityWebRequest.Get(osoite);
+            p.timeout = 20;
+            yield return p.SendWebRequest();
+            valmis(p.result == UnityEngine.Networking.UnityWebRequest.Result.Success ? p.downloadHandler.text : null);
+        }
+
+        /// <summary>
+        /// Ihmisen matka: aineisto, kertomusmanifesti ja rantamaski paketista; virrat ja
+        /// vanat lasketaan taustasäikeessä heti latauksen jälkeen, jotta ne ovat valmiit,
+        /// kun pelaaja avaa linssin (webissä Käynnistä-nappi odottaa samoin).
+        /// </summary>
+        System.Collections.IEnumerator LataaIhmisenMatka()
+        {
+            string data = null, kertomus = null, linssi = null, aineisto = null, manifesti = null;
+            yield return LinssiSisalto.Hae("moduulit/js/linssit/ihmisen-matka-data.json", t => data = t);
+            yield return LinssiSisalto.Hae("moduulit/js/linssit/ihmisen-matka-kertomus.json", t => kertomus = t);
+            yield return LinssiSisalto.Hae("moduulit/js/linssit/ihmisen-matka.json", t => linssi = t);
+            yield return LinssiSisalto.Hae("kokoelmat/linssiaineisto.json", t => aineisto = t);
+            if (data == null || kertomus == null || linssi == null) { Kirjaa("ihmisen matka: aineisto puuttuu"); yield break; }
+
+            Matkakirja.Linssit.Aikajana.IhmisenMatkaAineisto a;
+            Matkakirja.Linssit.Virrat.VirtaAineisto virrat;
+            Matkakirja.Linssit.Virrat.Ruutumaski rantamaski = null;
+            string manifestinOsoite = null, aanenJuuri = null;
+            try
+            {
+                a = Matkakirja.Linssit.Aikajana.IhmisenMatkaAineisto.Lue(Matkakirja.Peli.MiniJson.Jasenna(data), Matkakirja.Peli.MiniJson.Jasenna(kertomus));
+                var linssiOlio = Olio(Olio(Olio(Matkakirja.Peli.MiniJson.Jasenna(linssi))?["exportit"])?["LINSSI"]);
+                virrat = Matkakirja.Linssit.Virrat.AineistonLukija.LueLinssista(linssiOlio);
+                var alkiot = aineisto == null ? null : Olio(Matkakirja.Peli.MiniJson.Jasenna(aineisto))?["alkiot"] as List<object>;
+                foreach (var o in alkiot ?? new List<object>())
+                {
+                    var alkio = Olio(o);
+                    var id = alkio?["id"] as string;
+                    if (id == "rantamaski") rantamaski = Matkakirja.Linssit.Virrat.Ruutumaski.Lue(alkio);
+                    if (id == "kertomus" && Olio(alkio["data"]) is Dictionary<string, object> k)
+                    {
+                        manifestinOsoite = k.TryGetValue("manifesti", out var m) ? m as string : null;
+                        aanenJuuri = k.TryGetValue("juuri", out var j) ? j as string : null;
+                    }
+                }
+            }
+            catch (Exception e) { Kirjaa("ihmisen matka: " + e.Message); yield break; }
+
+            if (manifestinOsoite != null) yield return HaeOsoite(manifestinOsoite, t => manifesti = t);
+            object manifestiOlio = manifesti == null ? null : Matkakirja.Peli.MiniJson.Jasenna(manifesti);
+            var leimat = manifestiOlio == null
+                ? new Dictionary<string, Matkakirja.Linssit.Aikajana.JaksonLeimat>()
+                : Matkakirja.Linssit.Aikajana.IhmisenMatkaAineisto.LueManifesti(manifestiOlio);
+            string aanite = manifestiOlio == null || aanenJuuri == null ? null
+                : Matkakirja.Linssit.Aikajana.IhmisenMatkaAineisto.ManifestinAanite(manifestiOlio, aanenJuuri);
+
+            var sovitin = new IhmisenMatkaSovitin(this, a, leimat, aanite, virrat, rantamaski);
+            rekisteri.Lisaa(sovitin);
+            Kirjaa($"ihmisen matka: {a.Kertomus.Count} jaksoa, {leimat.Count} aikaleimaa, ääni {(aanite ?? "ei")}");
+
+            var laskenta = System.Threading.Tasks.Task.Run(() => Matkakirja.Linssit.Aikajana.IhmisenMatkaLinssi.Laske(virrat));
+            while (!laskenta.IsCompleted) yield return null;
+            if (laskenta.IsFaulted) { Kirjaa("ihmisen matka: virtojen laskenta: " + laskenta.Exception?.InnerException?.Message); yield break; }
+            sovitin.VanatValmiit(laskenta.Result);
+            Kirjaa($"ihmisen matka: {laskenta.Result.Vanat.Count} vanaa laskettu");
+        }
+
+        sealed class IhmisenMatkaSovitin : ILinssi
+        {
+            readonly LinssiOhjain o;
+            readonly Matkakirja.Linssit.Aikajana.IhmisenMatkaAineisto aineisto;
+            readonly IReadOnlyDictionary<string, Matkakirja.Linssit.Aikajana.JaksonLeimat> leimat;
+            readonly string aanite;
+            readonly Matkakirja.Linssit.Virrat.VirtaAineisto virrat;
+            readonly Matkakirja.Linssit.Virrat.Ruutumaski rantamaski;
+            Matkakirja.Linssit.Virrat.VanatTulos vanat;
+            Matkakirja.Linssit.Aikajana.IhmisenMatkaLinssi linssi;
+            IhmisenMatkaKerros kerros;
+            EsityksenAani aani;
+
+            public IhmisenMatkaSovitin(LinssiOhjain o, Matkakirja.Linssit.Aikajana.IhmisenMatkaAineisto a,
+                IReadOnlyDictionary<string, Matkakirja.Linssit.Aikajana.JaksonLeimat> leimat, string aanite,
+                Matkakirja.Linssit.Virrat.VirtaAineisto virrat, Matkakirja.Linssit.Virrat.Ruutumaski rantamaski)
+            { this.o = o; aineisto = a; this.leimat = leimat; this.aanite = aanite; this.virrat = virrat; this.rantamaski = rantamaski; }
+
+            public LinssiTiedot Tiedot => Matkakirja.Linssit.Aikajana.IhmisenMatkaLinssi.IhmisenMatkaTiedot;
+            public bool Auki => linssi?.Auki ?? false;
+            /// <summary>Käynnissä oleva linssi (Natiivi-UI: Esitys.Tauko/Jatka/Valitse).</summary>
+            public Matkakirja.Linssit.Aikajana.IhmisenMatkaLinssi Linssi => linssi;
+
+            public void VanatValmiit(Matkakirja.Linssit.Virrat.VanatTulos tulos)
+            {
+                vanat = tulos;
+                if (linssi == null) return;
+                if (rantamaski != null) kerros.AsetaVanat(tulos, virrat, rantamaski);
+                linssi.AsetaVanat(tulos);
+            }
+
+            public void Avaa(ILinssiYmparisto y)
+            {
+                kerros = IhmisenMatkaKerros.Luo(o.kierto, aineisto.Paikat);
+                aani = EsityksenAani.Luo(kerros.transform, aanite);
+                linssi = new Matkakirja.Linssit.Aikajana.IhmisenMatkaLinssi(aineisto, leimat, kerros, aani);
+                linssi.Avaa(y);
+                if (vanat != null) VanatValmiit(vanat);
+            }
+
+            public void Paivita() => linssi?.Paivita();
+
+            public void Sulje()
+            {
+                linssi?.Sulje();
+                linssi = null;
+                if (kerros != null) Destroy(kerros.gameObject);
+                kerros = null;
+                aani = null;
+            }
+        }
+
+        System.Collections.IEnumerator LataaKeksinnot()
+        {
+            string data = null;
+            yield return LinssiSisalto.Hae("moduulit/js/linssit/keksinnot.json", t => data = t);
+            if (data == null) { Kirjaa("keksinnöt: aineisto puuttuu"); yield break; }
+            try
+            {
+                var a = Matkakirja.Linssit.Aikajana.KeksinnotAineisto.Lue(Matkakirja.Peli.MiniJson.Jasenna(data));
+                rekisteri.Lisaa(new KeksinnotSovitin(this, a));
+                Kirjaa($"keksinnöt: {a.Pysakit.Count} pysäkkiä");
+            }
+            catch (Exception e) { Kirjaa("keksinnöt: " + e.Message); }
+        }
+
+        sealed class KeksinnotSovitin : ILinssi
+        {
+            readonly LinssiOhjain o;
+            readonly Matkakirja.Linssit.Aikajana.KeksinnotAineisto aineisto;
+            Matkakirja.Linssit.Aikajana.KeksinnotLinssi linssi;
+            KeksinnotKerros kerros;
+            public KeksinnotSovitin(LinssiOhjain o, Matkakirja.Linssit.Aikajana.KeksinnotAineisto a) { this.o = o; aineisto = a; }
+            public LinssiTiedot Tiedot => aineisto.Tiedot;
+            public bool Auki => linssi?.Auki ?? false;
+            /// <summary>Käynnissä oleva linssi (Natiivi-UI: Kaynnista, Ajo.Jatka, Ajo.Siirry).</summary>
+            public Matkakirja.Linssit.Aikajana.KeksinnotLinssi Linssi => linssi;
+            public void Avaa(ILinssiYmparisto y)
+            {
+                kerros = KeksinnotKerros.Luo(o.kierto, aineisto);
+                linssi = new Matkakirja.Linssit.Aikajana.KeksinnotLinssi(aineisto, kerros);
+                linssi.Avaa(y);
+                if (!KeksinnotKerros.EsittelyUIssa) linssi.Kaynnista();
+            }
+            public void Paivita() => linssi?.Paivita();
+            public void Sulje()
+            {
+                linssi?.Sulje();
+                linssi = null;
+                if (kerros != null) Destroy(kerros.gameObject);
+                kerros = null;
+            }
+        }
+
+        /// <summary>
+        /// Astronautin kamera Unityssä: luo 3D-kerroksen avatessa ja purkaa sen
+        /// sulkiessa; logiikka on puhtaassa AstronauttiLinssissä.
+        /// </summary>
+        sealed class AstronauttiSovitin : ILinssi
+        {
+            readonly LinssiOhjain o;
+            readonly Matkakirja.Linssit.Astronautti.AstronauttiAineisto aineisto;
+            Matkakirja.Linssit.Astronautti.AstronauttiLinssi linssi;
+            AstronauttiKerros kerros;
+            public AstronauttiSovitin(LinssiOhjain o, Matkakirja.Linssit.Astronautti.AstronauttiAineisto a) { this.o = o; aineisto = a; }
+            public LinssiTiedot Tiedot => Matkakirja.Linssit.Astronautti.AstronauttiLinssi.AstronauttiTiedot;
+            public bool Auki => linssi?.Auki ?? false;
+            public void Avaa(ILinssiYmparisto y)
+            {
+                kerros = AstronauttiKerros.Luo(o.kierto);
+                linssi = new Matkakirja.Linssit.Astronautti.AstronauttiLinssi(aineisto, kerros);
+                kerros.Linssi = linssi;
+                linssi.Avaa(y);
+            }
+            public void Paivita() => linssi?.Paivita();
+            public void Sulje() { linssi?.Sulje(); linssi = null; kerros = null; }
         }
 
         void Update()
@@ -91,8 +297,8 @@ namespace Matkakirja.Natiivi
 
         public Nakyma Kamera => new Nakyma(kierto.leveys, kierto.pituus, kierto.korkeus, kierto.kallistus);
 
-        public void AjaKamera(Nakyma kohde, float kestoS) =>
-            kierto.Aja(kohde.Lat, kohde.Lon, kohde.Korkeus, Mathf.Max(0.01f, kestoS), null);
+        public void AjaKamera(Nakyma kohde, float kestoS, Func<double, double> pehmennys = null) =>
+            kierto.Aja(kohde.Lat, kohde.Lon, kohde.Korkeus, Mathf.Max(0.01f, kestoS), null, pehmennys);
 
         /// <summary>
         /// Pelin oma loitonnuksen katto on jo koko pallo (PalloKierto.MaxKorkeus),
@@ -102,6 +308,27 @@ namespace Matkakirja.Natiivi
         public void ZoomiKatto(double? maxKorkeus) { }
 
         public double KokoPallonKorkeus => kierto.MaxKorkeus();
+
+        /// <summary>
+        /// PalloKierto.KorkeusKaarelle mittaa kapeamman suunnan kaaren. Pystyruudulla
+        /// se on leveys; vaakaruudulla leveyden kaari muunnetaan korkeuden kaareksi
+        /// kuvasuhteella (pienillä kulmilla tarkka, koko pallolla katto rajaa).
+        /// </summary>
+        public double KorkeusLeveydelle(double leveysAsteina)
+        {
+            double suhde = Kuvasuhde;
+            double kapea = suhde > 1 ? leveysAsteina / suhde : leveysAsteina;
+            return kierto.KorkeusKaarelle(kapea);
+        }
+
+        public double Kuvasuhde
+        {
+            get
+            {
+                var kamera = kierto.GetComponent<Camera>();
+                return kamera != null && kamera.aspect > 0 ? kamera.aspect : (double)Screen.width / Mathf.Max(1, Screen.height);
+            }
+        }
 
         public void Pelikerrokset(bool nakyvissa)
         {
