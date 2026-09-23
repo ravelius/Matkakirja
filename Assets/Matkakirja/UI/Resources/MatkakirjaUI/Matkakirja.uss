@@ -1186,6 +1186,22 @@
     transition-duration: 0.9s;
 }
 
+/* Aloituskaava: avausteksti lennon aikana pallon päällä — ei verhoa eikä julistetta, arkki
+ * kaistaleena alareunassa (napautus kirjoittaa loppuun). */
+.mk-aloitus__intro--lento {
+    justify-content: flex-end;
+}
+
+.mk-aloitus__intro--lento > .mk-aloitus__ylaosa {
+    display: none;
+}
+
+.mk-aloitus__intro--lento > .mk-aloitus__arkki {
+    flex-grow: 0;
+    padding: 16px 16px 30px 16px;
+    opacity: 0.96;
+}
+
 .mk-aloitus__palsta {
     width: 86%;
     max-width: 560px;
