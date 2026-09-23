@@ -190,8 +190,17 @@ const nuku = (ms) => execFileSync('sleep', [String(ms / 1000)]);
 // --- kerätään kohteet paketeista -------------------------------------------
 
 function kohteet() {
-  const paketit = readdirSync(join(JUURI, 'js/packs'))
-    .map((f) => readFileSync(join(JUURI, 'js/packs', f), 'utf8')).join('\n');
+  /*
+   * Linssimoduulit (js/linssit) luetaan pakettien rinnalla. Keksintöjen
+   * linssin aidot muotokuvat (`kuvaAito: { tiedosto: … }`) asuvat siellä,
+   * ja koska kansio puuttui tästä, 24 Commons-kuvaa jäi peilaamatta ja
+   * peli haki ne varareitin kautta (löytyi viennin mediatarkistuksessa
+   * 23.9.2026).
+   */
+  const lue = (kansio) => readdirSync(join(JUURI, kansio))
+    .filter((f) => f.endsWith('.js'))
+    .map((f) => readFileSync(join(JUURI, kansio, f), 'utf8')).join('\n');
+  const paketit = `${lue('js/packs')}\n${lue('js/linssit')}`;
   const muut = ['js/aani-ehdokkaat.js', 'js/ui.js', 'js/sisaltotaulut.js']
     .map((f) => readFileSync(join(JUURI, f), 'utf8')).join('\n');
   const kaikki = `${paketit}\n${muut}`;

@@ -14081,7 +14081,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Kaksi viikkoa jolloin tunturi syttyy tuleen',
           aika: 'syyskuu',
-          tiedosto: 'Vatikuru nature trail in Pallas-Yllastunturi National Park, Muonio, Lapland, Finland, 2021 September.jpg',
+          tiedosto: 'Vatikuru nature trail in Pallas-Yllästunturi National Park, Muonio, Lapland, Finland, 2021 September.jpg',
           teksti: 'Ruska on lyhyt, muutaman viikon mittainen ajanjakso syyskuun alussa, '
             + 'jolloin Lapin tunturikoivikot ja -kanervikot värjäytyvät nopeasti '
             + 'keltaisiksi, oransseiksi ja tulipunaisiksi ennen lehtien putoamista. Ilmiö '
