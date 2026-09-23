@@ -32,6 +32,13 @@ verkkopelin `Game` (yksinpeli vaellustilassa).
     tarkistaLinssikynnys ja linssiAarteenKylkiaisena): passi ∪ pelikerran lista, kynnykset
     (Kynnyssaanto vaihdettavissa), ison aarteen kylkiäinen, optikon hyvitys, valmistuneet,
     seitsemän peninkulman linssi (≥ 7 pääaarretta, päivä ≤ 80; ei webissä) ja VapaaSiirtyminen.
+  - **Aani/** (B7, musiikki ja äänimaisema; web js/ambience-stream.js, musiikkivalitsin.js,
+    kaupunkimusiikki.js, siirtymamusiikki.js, media.js, aani-ehdokkaat.js, ui.js aarreaihe):
+    AaniTaulut + AaniVakiot (paketin aanitaulut, skeema ≥ 1.22), AaniOsoite (Url, PeiliPolku,
+    Turvanimi, JaaAlku), Musiikkivalitsin + Musiikkitaso, Maisemakori (kori, arvonta, aloituskohta),
+    Vaisto, **AaniTila** (tapahtumakone → `Toive` kanavittain: Pohja, Maisema, Visa, Siirtyma, Aarre)
+    ja Tehostetaulu (siivut, sovittu Natiivi-UI:n kanssa). Kultainen jälki
+    `Kultaiset/aanijalki.json` (`node Kultaiset/tee-aanijalki.mjs <web/js>`), testit AaniTestit.
 - WKWebView-lehtikuori (LehtiKuori, MatkakirjaLehti.mm, LehtiOsoite) on poistettu (A4, 23.9.2026):
   lehdet ovat natiiveja (Natiivi-UI, `ILehtiNakyma`).
 
