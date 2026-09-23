@@ -266,7 +266,9 @@ test('koevaihto: main.js kytkee lataajan sekä kokeeseen että kehysprofiiliin',
 
 test('valikossa neljä syötekoetta omistajan järjestyksessä; poistetut liput vain osoitteessa', () => {
   // Omistaja 23.9.2026 klo 08.34 (Fablen kautta): Syötekoe valikkoon, piirtokokeet vain osoitteessa.
-  assert.deepEqual(PIIRTOKOKEIDEN_VAIHTOEHDOT.map((k) => k.avain), ['normaali', 'syotetouch', 'syotekello', 'molemmat']);
+  assert.deepEqual(PIIRTOKOKEIDEN_VAIHTOEHDOT.map((k) => k.avain), ['normaali', 'syotetouch', 'syotekello', 'molemmat',
+    // Paljas kartta ja puolitus (omistaja 23.9.2026 klo 09.20).
+    'paljas', 'paljasnimet', 'paljassymbolit', 'paljasdom']);
   const pura = valeMuisti();
   try {
     globalThis.location = { search: '?koe=dpr15' };
@@ -294,4 +296,41 @@ test('syötekoe valikosta päätyy syöteputkeen: Molemmat = kaksi lippua, mitta
     assert.equal(mittauslippuPaalla(), false, 'pelkkä kello ei ole vedon seurannan lippu');
     assert.ok(laattakerroksenKokeet().has('syotekello'));
   } finally { pura(); }
+});
+
+/*
+ * PALJAS KARTTA (omistaja 23.9.2026 klo 09.20): yksi lippu riisuu kartan
+ * laattoihin ja vetoon; 6–8 lisäävät kukin yhden ryhmän.
+ */
+test('paljas: yksi lippu asettaa kerrokset ja lisäriisunnat, menu jää käyttöön', async () => {
+  const { kerrosKaytossa, kerrostenBodyLuokat, paljasTila } = await import('../js/pallolauta/kerrokset.js');
+  const { lepopiirtoKaytossa } = await import('../js/pallolauta/lepopiirto.js');
+  const { voimassaOlevatKokeet, PALJAAN_LISAKOKEET } = await import('../js/piirtokoe-asetus.js');
+  const h = '?koe=paljas';
+  assert.equal(paljasTila(h), 'paljas');
+  for (const k of ['vektorit', 'nimet', 'nostot', 'nappula', 'kohteet', 'pulu', 'aanet']) assert.equal(kerrosKaytossa(k, h), false, k);
+  assert.equal(kerrosKaytossa('laatat', h), true);
+  assert.equal(kerrosKaytossa('ui', h), true, 'ui jää: yläpalkin valikkonappi pysyy');
+  const luokat = kerrostenBodyLuokat(h);
+  assert.ok(luokat.includes('kerros-pois-dom') && luokat.includes('paljas-kartta'));
+  assert.ok(!luokat.includes('kerros-pois-ui'), 'valikkonappi ei katoa');
+  for (const k of PALJAAN_LISAKOKEET) assert.ok(voimassaOlevatKokeet(h).has(k), k);
+  assert.ok(laattakerroksenKokeet(h).has('eihaive') && laattakerroksenKokeet(h).has('eipohja'));
+  assert.equal(lepopiirtoKaytossa(h), false, 'piirto joka rAF:ssa');
+  assert.equal(lepopiirtoKaytossa(''), true, 'ilman lippua lepopiirto ennallaan');
+  // Puolitus: kukin lisää yhden ryhmän.
+  assert.ok(kerrosKaytossa('nimet', '?koe=paljasnimet') && !kerrosKaytossa('nostot', '?koe=paljasnimet'));
+  assert.ok(kerrosKaytossa('nostot', '?koe=paljassymbolit') && !kerrosKaytossa('nimet', '?koe=paljassymbolit'));
+  assert.ok(kerrosKaytossa('pulu', '?koe=paljasdom') && !kerrostenBodyLuokat('?koe=paljasdom').includes('kerros-pois-dom'));
+  // ?kerrokset= voittaa (ablaatiotikkaan mittaukset eivät muutu).
+  assert.equal(paljasTila('?koe=paljas&kerrokset=porras2'), null);
+  assert.equal(kerrosKaytossa('vektorit', '?koe=paljas&kerrokset=porras2'), true);
+});
+
+test('paljas: CSS jättää kankaan, overlayn ja valikon näkyviin', () => {
+  const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
+  assert.match(css, /body\.kerros-pois-dom \{ visibility: hidden; \}/);
+  for (const s of ['.pallo-kotelo canvas', '.profiilinaytto', '#menu-btn', '#paavalikko']) {
+    assert.ok(css.includes(`body.kerros-pois-dom ${s}`), s);
+  }
 });

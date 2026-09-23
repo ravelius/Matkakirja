@@ -824,8 +824,15 @@ const MODULES = [
    */
   'js/saapumistraileri.js',
   /*
-   * Kaiuttimen VU-mittari (15.9.2026): ei tuo mitään, joten paikka on
-   * vapaa — kunhan se on ennen js/ui.js:ää, joka tuo sen.
+   * Piirtokoe-asetus ENNEN kaiutinmittaria (23.9.2026, Syötekoe 5-8):
+   * kaiutinmittari tuo sen nyt voimassaOlevatKokeet-lukuun. Ei omia
+   * riippuvuuksia, joten paikka muuten vapaa.
+   */
+  'js/piirtokoe-asetus.js',
+  /*
+   * Kaiuttimen VU-mittari (15.9.2026): tuo nyt piirtokoe-asetuksen
+   * (yllä); paikka on muuten vapaa — kunhan se on ennen js/ui.js:ää,
+   * joka tuo sen.
    */
   'js/kaiutinmittari.js',
   'js/fokusvirta.js',
@@ -1053,7 +1060,6 @@ const MODULES = [
    */
   'js/pulu-paikka.js',
   'js/kartta-liike.js',
-  'js/piirtokoe-asetus.js',
   'js/tarkkuus-asetus.js',
   // Kehittäjän pikatie (?lauta=pallo&dev=<kaupunki>): main.js tuo sen staattisesti;
   // ei pallolauta-tuonteja (kayttaa ui.pallolautaa vain ajossa, jos se on).

@@ -29029,6 +29029,35 @@ body.kerros-pois-ui .pallolauta-maapaneeli,
 body.kerros-pois-ui .kartuutsi,
 body.kerros-pois-ui .pallolauta-kartuutsi { display: none !important; }
 
+/*
+ * PALJAS KARTTA (omistaja 23.9.2026 klo 09.20: "riisutaan kartalta kaikki
+ * ylimääräiset elementit"; js/pallolauta/kerrokset.js PALJAAT_TILAT).
+ * body.kerros-pois-dom: kaikki sivun elementit näkymättömiin paitsi
+ * pallon kangas, kehysprofiilin overlay ja ratasvalikko (nappi ja
+ * pudotus), jotta tilan voi vaihtaa takaisin. `visibility` periytyy, joten
+ * yksittäisten luokkien jahtaamista ei tarvita; animoivat ja omaa kerrosta
+ * pitävät elementit lisäksi display: none, jottei niitä sommitella.
+ */
+body.kerros-pois-dom { visibility: hidden; }
+body.kerros-pois-dom .pallo-kotelo canvas,
+body.kerros-pois-dom .profiilinaytto,
+body.kerros-pois-dom .profiilinaytto *,
+body.kerros-pois-dom #menu-btn,
+body.kerros-pois-dom #menu-btn *,
+body.kerros-pois-dom #paavalikko,
+body.kerros-pois-dom #paavalikko * { visibility: visible !important; }
+body.kerros-pois-dom .pallolauta-liike,
+body.kerros-pois-dom .pollo-nappi,
+body.kerros-pois-dom .pollo-paneeli,
+body.kerros-pois-dom .pollo-kuplapino-kehys,
+body.kerros-pois-dom .maapaneeli-nurkka,
+body.kerros-pois-dom .monitoimi-nappi,
+body.kerros-pois-dom .saapumistraileri,
+body.kerros-pois-dom .turn-card,
+body.kerros-pois-dom .kartuutsi,
+body.kerros-pois-dom .pallolauta-kartuutsi,
+body.kerros-pois-dom .pallolauta-maapaneeli { display: none !important; }
+
 /* ===========================================================================
    LEHTIPALSTAT PITKÄLLE NOSTOTEKSTILLE (omistaja 22.9.2026 klo 23.48, iPad
    pystyssä: "Kaksi erilaista. Tuo kaksi palstaa näyttää paremmalta kaiken
