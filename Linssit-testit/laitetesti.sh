@@ -16,7 +16,8 @@
 #   ./laitetesti.sh radio <kansio> [radiot.json]
 #                                          radiokokoelma koekansioon, uudelleenkäynnistys, asemat
 #                                          RADIOT (oletus "CHE DEU UGA FIN") ~12 s kukin äänellä 0
-#                                          (vanha käännös ohittaa "radio aani 0" kanavattomana maana)
+#                                          (vanha käännös ohittaa "radio aani 0" kanavattomana maana);
+#                                          lopuksi relaunch (tapa + käynnistä) ja ensimmäinen asema uudelleen
 #   ./laitetesti.sh isoisa <kansio> [isoisa-1873.json]
 #                                          striimattava 1873-aineisto koekansioon (sisalto-koe/virta/),
 #                                          uudelleenkäynnistys, linssi Euroopan ja Balkanin yllä
@@ -79,10 +80,16 @@ case "$1" in
     sinne "${3:-/Users/Shared/Claude/proto-3d/lokit/radio-koe/kokoelmat/radiot.json}" sisalto-koe/kokoelmat/radiot.json && echo "koekansioon: kokoelmat/radiot.json"
     kaynnista; portti
     linssi "tila" "linssi radio"; sleep 6; linssi "radio aani 0"; sleep 1
-    for m in ${=RADIOT:-CHE DEU UGA FIN}; do
+    RADIOT=${RADIOT:-CHE DEU UGA FIN}
+    for m in ${=RADIOT}; do
       linssi "radio $m"; sleep 12; linssi "radio tila"; sleep 1; kuva linssitesti-radio-$m
     done
-    linssi "radio stop" "linssi pois"; sleep 3; hae "$2"; grep -a "radio" "$2/linssi-loki.txt" | tail -30 ;;
+    linssi "radio stop" "linssi pois"; sleep 2
+    # Relaunch → radio soi (Laitetestaajan simulaattorilöydös 23.9.): tapa, käynnistä, viritä uudelleen.
+    echo "— relaunch —"; kaynnista; portti
+    linssi "linssi radio"; sleep 6; linssi "radio aani 0"; sleep 1
+    linssi "radio ${RADIOT%% *}"; sleep 12; linssi "radio tila"; sleep 1; kuva linssitesti-radio-relaunch
+    linssi "radio stop" "linssi pois"; sleep 3; hae "$2"; grep -a "radio\|auki" "$2/linssi-loki.txt" | tail -30 ;;
   isoisa)
     sinne "${3:-/Users/Shared/Claude/proto-3d/lokit/isoisa-1873/isoisa-1873.json}" sisalto-koe/virta/isoisa-1873.json && echo "koekansioon: virta/isoisa-1873.json"
     kaynnista; portti
