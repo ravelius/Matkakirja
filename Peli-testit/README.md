@@ -14,6 +14,11 @@ verkkopelin `Game` (yksinpeli vaellustilassa).
     Laattamaarat (paketin `kokoelmat/laatat.json`), Loyto (yhden käännön tulos).
   - **Kysely** + Kysymysdata — kysymysmoottori (js/game.js actionQuiz…closeQuiz).
   - **Kokemus** — tietäjäpisteet (awardXp, ainoa pisteportti), -tasot, tietoprosentti.
+  - **Kaupat** — ostot ja palkkiot (kulttuurivisa, lehden minitehtävä, nostolaskuri,
+    pulun karttaohje, pulla Livialle, eläintäky, juliste, mannerlento, pöllön sähke,
+    availableActions); tila Pelitila.Kaupat (Kauppatila). KauppaVakiot = webin hinnat ja
+    palkkiot, Kauppasisalto = paketin elaintayt.json ja julisteet.json.
+  - **Voitto** — checkWin (vain moninpeli; vaelluksessa aina epätosi, Matka ei vielä kutsu).
 - `Assets/Matkakirja/Scripts/Peli/LehtiKuori.cs` — ILehti-toteutus (GameObject `MatkakirjaLehti`).
 - `Assets/Plugins/iOS/MatkakirjaLehti.mm` — WKWebView-liitännäinen, ks. README-lehti.md.
 - `Assets/Matkakirja/Editor/LehtiKuoriXcode.cs` — WebKit.framework linkitys Xcode-vientiin.
@@ -34,8 +39,15 @@ matka.Bussi(kohde); matka.Lenna(kohde); matka.PeruKulkutapa();
 kysely.Tutki(vaikea); kysely.Vastaa(i); kysely.Vihje(); kysely.Puolita(); kysely.Kaveriapu();
 kysely.AikaLoppui(); kysely.Sulje();
 
+var kaupat = new Kaupat(matka);         // ostot ja palkkiot; ei koukkuja
+kaupat.Kulttuuri(k, oikein); kaupat.Minitehtava(k, aihe, oikein, KauppaVakiot.TakyPalkkio);
+kaupat.PullaVinkki(k); kaupat.PullaOstos(KauppaVakiot.SahkePullaAvain(id, "vinkki"), 50);
+kaupat.Elaintaky(iso, KauppaVakiot.ElaintakyPalkkio); kaupat.MyonnaJuliste(avain);
+kaupat.MannerLennot(); kaupat.MannerLento(k); kaupat.AvaaAarreSahkeella(k, palkkio);
+kaupat.Toiminnot();                     // web availableActions
+
 string json = matka.Tallenna();
-var ladattu = Matka.Lataa(verkko, json, maarat);  // luo sen jälkeen uusi Kysely
+var ladattu = Matka.Lataa(verkko, json, maarat);  // luo sen jälkeen uusi Kysely ja Kaupat
 ```
 
 - Tila: `matka.Tila` (vaihe, pelaaja: Raha, Xp, Tahdet, Loydot/LoytoMantereet/LoytoMaat),
@@ -63,6 +75,9 @@ tallennuksen kohdasta (sama tallennus → sama jako; lukitut kaupungit menettäv
 koska tyhjä maailma jättäisi vanhan pelin ilman yhtään aarretta. Ilman määriä vanha peli
 jatkuu laatoitta.
 
+Kentät `kaupat` (Kauppatila) ja `voittaja` ovat versiossa 3 valinnaisia: puuttuessa
+kirjanpito on tyhjä ja voittajaa ei ole (versionumero ei noussut).
+
 ## Testit ja kultaiset jäljet
 
 `Peli-testit/` (Unityn ulkopuolella): `./kaanna.sh [nimen osa]` kääntää Peli-kansion +
@@ -77,6 +92,7 @@ muuttua ilman webin muutosta; C# toistaa ne identtisesti, myös satunnaislukukut
 | `tee-matkajalki.mjs` | matkajalki.json | MatkaTestit | matkustus ilman tehtäviä, oikea laattajako |
 | `tee-kysymysjalki.mjs` | kysymysjalki.json, liput.json | KyselyTestit | kysymykset, rajatut käännöt |
 | `tee-laattajalki.mjs` | laattajalki.json, paketti/laatat.json | LaattaTestit | jako, käännöt, lukitus |
+| `tee-kauppajalki.mjs` | kauppajalki.json (+ näytteet paketti/elaintayt.json, julisteet.json paketista v2) | KauppaTestit | jokainen kauppateko onnistuvana ja epäonnistuvana, sähke ryöstäjään ja pöllöön, tallennus välissä ja joka teon jälkeen |
 | `tee-pelijalki.mjs` | pelijalki.json | PeliTestit | koko peli laattoineen (~2700 tekoa, 9 siementä, pöllö- ja ryöstäjäajot), myös tallennus/lataus välein 7 ja 3 |
 
 `.meta`-tiedostot eivät ole mukana: Unity luo ne ensimmäisessä tuonnissa (3D-selvittäjän editori).

@@ -1,0 +1,56 @@
+{
+ "$skeema": "matkakirja-vienti/1/kokoelma",
+ "nimi": "julisteet",
+ "lahde": "js/packs/julisteet.js#JULISTEET",
+ "kuvaus": "Oman painon julisteet; avain on kaupunki-id tai kaupungin alikohde.",
+ "viittaukset": {
+  "kaupunki": "kaupungit"
+ },
+ "$nayte": "Näyte sisältöpaketin kokoelmasta sisalto/1/v2/kokoelmat/julisteet.json (alkioita 114, tässä 4 ensimmäistä/valittua sellaisenaan). Kaupat-testit (Testit/KauppaTestit.cs).",
+ "alkiot": [
+  {
+   "id": "istanbul",
+   "kaupunki": "istanbul",
+   "data": {
+    "tiedosto": "tuotanto/tuot-istanbul.png",
+    "kaupunki": "Istanbul",
+    "otsikko": "Konstantinopoli 1883",
+    "lyhyt": "Konstantinopoli 1883: ensimmäinen Orient Express päättyy yhä kauas idästä.",
+    "selite": "Ensimmäinen Orient Express lähti Pariisista 4. lokakuuta 1883, mutta sen pääte oli Giurgiu Tonavan varrella — Konstantinopoliin matkustettiin vielä lautalla ja laivalla, ja suora juna tuli vasta vuonna 1889."
+   }
+  },
+  {
+   "id": "tokio",
+   "kaupunki": "tokio",
+   "data": {
+    "tiedosto": "tuotanto/tuot-tokio.png",
+    "kaupunki": "Tokio",
+    "otsikko": "Tokio 1872",
+    "lyhyt": "Tokio 1872: Japanin ensimmäinen rautatie yhdistää sen juuri Yokohamaan.",
+    "selite": "Japanin ensimmäinen rautatie avattiin vuonna 1872 Tokion Shinbashista Yokohamaan; sitä ennen koko keisarikunnassa ei ollut metriäkään kiskoa."
+   }
+  },
+  {
+   "id": "moskova",
+   "kaupunki": "moskova",
+   "data": {
+    "tiedosto": "tuotanto/tuot-moskova.png",
+    "kaupunki": "Moskova",
+    "otsikko": "Moskova 1873",
+    "lyhyt": "Moskova 1873: vanha pääkaupunki, jonka ensimmäinen hevosraitiotie on tuore.",
+    "selite": "Isoisän matkavuonna Moskova oli keisarikunnan vanha pääkaupunki, jonka hallinto istui Pietarissa — kaupungin ensimmäinen hevosraitiotie oli avattu vasta edellisenä vuonna 1872."
+   }
+  },
+  {
+   "id": "ateena-nike",
+   "kaupunki": null,
+   "data": {
+    "tiedosto": "tuotanto/tuot-ateena-nike.png",
+    "kaupunki": "Ateena",
+    "otsikko": "Athena Nike 1873",
+    "lyhyt": "Athena Nike 1873: siivetön voitonjumalatar ei voi koskaan lentää kaupungista pois.",
+    "selite": "Athena Niken temppelin kadonnut puujumalankuva oli siivetön — ateenalaiset sanoivat, ettei voitto voisi koskaan lentää pois kaupungista. Kädessään sillä oli granaattiomena ja kypärä."
+   }
+  }
+ ]
+}
