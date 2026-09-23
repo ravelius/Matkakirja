@@ -10,7 +10,7 @@
 // vinkki vaatii kuvan ja paikan; kuvan kanssa oikeusrasti ja käyttölupa. Pro-tuottajan
 // muistissa oleva tunnus tarkistetaan kerran lomaketta rakennettaessa (/pro-tarkista), ja
 // koodi kulkee mukana; epäonnistunut tarkistus = tavallinen pelaajan vinkki.
-// Kuvanvalinta: Palautekanava.Kuvanvalitsin (iOS-liitännäinen puuttuu vielä).
+// Kuvanvalinta: Palautekanava.Kuvanvalitsin (Pelikoodarin iOS-kuvanvalitsin).
 using System;
 using System.Collections.Generic;
 using Matkakirja.Peli;

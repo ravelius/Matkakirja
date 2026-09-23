@@ -11,7 +11,7 @@
 //   video, KONTEKSTI paikka/aihe/fakta, OIKEUDET rasti/lisenssi/nimeämisrivi, "Lähetä
 //   materiaali" → POST /laheta koodin kanssa), väkänen "Oma tekijäsivu — kuva, esittely ja
 //   linkit" ("Lähetä profiili" → POST /pro-profiili) ja "Unohda tunnukseni tältä laitteelta".
-// Kuvat: Palautekanava.Kuvanvalitsin (iOS-liitännäinen puuttuu vielä); video-linkki toimii ilman.
+// Kuvat: Palautekanava.Kuvanvalitsin (Pelikoodarin iOS-kuvanvalitsin); video-linkki toimii ilman.
 using System;
 using System.Collections.Generic;
 using Matkakirja.Peli;

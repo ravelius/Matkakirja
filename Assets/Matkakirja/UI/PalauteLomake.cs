@@ -428,7 +428,8 @@ namespace Matkakirja.Natiivi
 
         void Valitse()
         {
-            // KYTKENTÄ: ilman iOS-liitännäistä kuvia ei voi valita (Palautekanava.Kuvanvalitsin).
+            // Pelikoodarin Scripts/Peli/Kuvanvalitsin.cs asettaa Palautekanava.Kuvanvalitsin iOS-laitteella;
+            // editorissa ja ilman liitännäistä kuvia ei voi valita.
             if (Palautekanava.Kuvanvalitsin == null)
             {
                 Tieto.text = "Kuvan valinta ei vielä toimi tässä sovelluksessa.";
@@ -439,11 +440,12 @@ namespace Matkakirja.Natiivi
 
         void Aseta(List<Liitekuva> kuvat)
         {
+            // Peruttu valinta (tai latausvirhe, jonka syy on lokissa "MATKAKIRJA kuvat:") ei muuta mitään:
+            // webin tiedostokenttä ei saa change-tapahtumaa perumisesta, joten aiemmat kuvat jäävät voimaan.
+            if (kuvat == null || kuvat.Count == 0) return;
             Valitut.Clear();
-            if (kuvat != null && kuvat.Count > enintaan)
+            if (kuvat.Count > enintaan)
                 Tieto.text = $"Valitse enintään {enintaan} kuvaa.";
-            else if (kuvat == null || kuvat.Count == 0)
-                Tieto.text = "";
             else
             {
                 long tavut = 0;
