@@ -131,9 +131,12 @@ namespace Matkakirja.Natiivi
             static TestiLataus nykyinen;
             readonly List<OfflineMaa> maat = new List<OfflineMaa>
             {
-                new OfflineMaa { Id = "FRA", Nimi = "Ranska", Tavut = 412L << 20, Tila = OfflineTila.Latautuu },
-                new OfflineMaa { Id = "ITA", Nimi = "Italia", Tavut = 356L << 20, Tila = OfflineTila.Jonossa },
-                new OfflineMaa { Id = "DEU", Nimi = "Saksa", Tavut = 388L << 20, Tila = OfflineTila.Valmis, Ladattu = 388L << 20 },
+                new OfflineMaa { Id = "FRA", Nimi = "Ranska", Tavut = 412L << 20, Tila = OfflineTila.Latautuu, Manner = "europe" },
+                new OfflineMaa { Id = "ITA", Nimi = "Italia", Tavut = 356L << 20, Tila = OfflineTila.Jonossa, Manner = "europe" },
+                new OfflineMaa { Id = "DEU", Nimi = "Saksa", Tavut = 388L << 20, Tila = OfflineTila.Valmis, Ladattu = 388L << 20, Manner = "europe" },
+                // Maanosarivit (omistaja 24.9.): Aasia ladattu, Afrikka ei, Eurooppa latautuu.
+                new OfflineMaa { Id = "JPN", Nimi = "Japani", Tavut = 290L << 20, Tila = OfflineTila.Valmis, Ladattu = 290L << 20, Manner = "asia" },
+                new OfflineMaa { Id = "EGY", Nimi = "Egypti", Tavut = 240L << 20, Tila = OfflineTila.Ei, Manner = "africa" },
             };
             IVisualElementScheduledItem ajo;
 
