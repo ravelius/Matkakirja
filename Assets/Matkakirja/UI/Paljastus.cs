@@ -192,7 +192,9 @@ namespace Matkakirja.Natiivi
                 // Web playTokenReveal: sfx.play(treasureSound(type)) kuvan noustessa (ei pöllöllä, naytaPolloAarre).
                 // Pelikoodari b32be57: ohjain ei enää soita laatan ääntä vastaushetkellä.
                 if (!pollo) Aanet.Tehoste(Aanitunnukset.Aarre(tyyppi));
-                SoitaMusiikki(pollo ? null : paa ? MusiikkiPaa : MusiikkiTavallinen);
+                // B7-soitin soittaa aarreaiheen omalla kanavallaan; oma soitto vain ilman soitinta (ei tuplana).
+                if (Aanisoitin.Instanssi != null) { if (!pollo) Aanisoitin.AarrePaljastui(tyyppi); }
+                else SoitaMusiikki(pollo ? null : paa ? MusiikkiPaa : MusiikkiTavallinen);
                 if (paa) SoitaHihkaisu();
             }
             void JatkaEsiin()

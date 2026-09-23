@@ -100,7 +100,7 @@ namespace Matkakirja.Natiivi
             varusteOtsikko = Osio("Varusteet");
             varusteet = Rakenne.El("mk-laukku__rivit", Sisalto, PickingMode.Ignore);
             AsetaTilastot(PlayerPrefs.GetString(TilastotAvain, "0") == "1");
-            AukiMuuttui += auki => { if (!auki) Pikkuseloste.Sulje(); };
+            AukiMuuttui += auki => { if (!auki) Pikkuseloste.Sulje(); Aanisoitin.MusiikkiTila("matkalaukku", auki); };
         }
 
         /// <summary>Testikomento: tilastolohko auki (Aarnin luettelo näkyviin).</summary>
