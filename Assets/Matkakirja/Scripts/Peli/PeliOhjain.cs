@@ -406,6 +406,30 @@ namespace Matkakirja.Natiivi
             catch (Exception e) { Debug.LogWarning("MATKAKIRJA peli: luennat eivät jäsenny: " + e.Message); }
         }
 
+        /// <summary>
+        /// Kauppa- tai palkkioteko (Natiivi-UI: lehti, pulu, sähke, mannerlento):
+        /// ajaa teon, tallentaa ja päivittää näkymän. Mannerlento siirtää kameran,
+        /// sähkeen ryöstäjä avaa kaksintaistelun (lehden ollessa auki vasta sen
+        /// sulkeuduttua). Esim. PeliOhjain.Instanssi.KauppaTeko(k => k.Kulttuuri(id, oikein)).
+        /// </summary>
+        public KauppaTulos KauppaTeko(Func<Kaupat, KauppaTulos> teko)
+        {
+            if (kaupat == null || matka == null) return KauppaTulos.Epaonnistui("peli ei ole valmis");
+            var lahto = matka.Tila.Pelaaja.Sijainti;
+            tapahtumat.Clear();
+            KauppaTulos t;
+            try { t = teko(kaupat); }
+            catch (Exception e) { Debug.LogException(e); return KauppaTulos.Epaonnistui(e.Message); }
+            if (!t.Ok) return t;
+            Tallenna();
+            if (tapahtumat.Count > 0) Viesti(string.Join(" · ", tapahtumat));
+            if (Tila == SilmukanTila.Lehti || Tila == SilmukanTila.Matkalla) { tilarivi.Aseta(PeliApu.TilaTeksti(verkko, matka.Tila)); return t; }
+            if (AvoinTehtava != Tehtava.Ei) { Tila = SilmukanTila.Kartta; NaytaKysymys(); }
+            else if (!matka.Tila.Pelaaja.Sijainti.Equals(lahto)) Kartalle(true);
+            else PaivitaNakyma();
+            return t;
+        }
+
         /// <summary>Soittaa luennan (kaiutinnappi, testikomento). Palauttaa virheen tai null.</summary>
         public string SoitaLuento(Luento l, float viiveS = 0)
         {
@@ -745,6 +769,11 @@ namespace Matkakirja.Natiivi
             if (Tila != SilmukanTila.Lehti) return;
             Tallenna();
             Kartalle(false);
+            // Lehdestä avattu tehtävä (esim. sähkeen ryöstäjä) näkyviin vasta nyt.
+            if (AvoinTehtava != Tehtava.Ei) { NaytaKysymys(); return; }
+            // Lehden aikana tapahtunut mannerlento: kamera pelaajaan.
+            var k = PeliApu.Koordinaatti(verkko, matka.Tila.Pelaaja.Sijainti);
+            if (matka.Tila.Pelaaja.Sijainti.Kaupunki != kaupunki && k.HasValue) Ajo(k.Value.Lat, k.Value.Lon, SaapumisKaari, 1.5f, null);
             // Isoisän matkakirjaluento kaupungissa kerran istunnossa, kun lehti on luettu.
             var l = luennat.OtaLuento(kaupunki);
             if (l != null && SoitaLuento(l, 0.6f) == null && !string.IsNullOrEmpty(l.Paikkarivi)) Viesti(l.Paikkarivi);
