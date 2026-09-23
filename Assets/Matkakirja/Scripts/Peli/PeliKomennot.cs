@@ -13,6 +13,7 @@
 //   matka kaupunki tapa       napauta + valitse yhdellä rivillä (ilman dialogia)
 //   heita                     "Heitä noppaa" (matka kesken reitillä, kohti tavoitetta)
 //   sulje-lehti               sulkee kaupunkilehden kuin pelaaja
+//   ohita-traileri            saapumistrailerin ohitus (Natiivi-UI:n traileri, tila Traileri)
 //   kortti kaupunki           kaupunkikortti (vain jos Natiivi-UI on asettanut PeliNakymat.KaupunkiKortti)
 //   liiku kaupunki            kortin "Liiku tänne" → matkavalinta (ilman korttia kuten napauta)
 //   maalehti ISO3 [aihe]      maan lehti aiheen sivulta (kartuscha)
@@ -117,6 +118,8 @@ namespace Matkakirja.Natiivi
                     return ohjain.Heita();
                 case "sulje-lehti":
                     return ohjain.SuljeLehti();
+                case "ohita-traileri":
+                    return ohjain.OhitaTraileri();
                 case "kortti":
                     return A(1) == null ? "kaupunki puuttuu" : ohjain.AvaaKortti(A(1));
                 case "liiku":

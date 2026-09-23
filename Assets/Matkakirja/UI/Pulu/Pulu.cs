@@ -368,10 +368,14 @@ namespace Matkakirja.Natiivi
         public static string AaniOsoite(string lahde, int indeksi, string versio = null) =>
             Aanet.Juuri + "aanet/pulu/livia-" + lahde + "-" + (indeksi + 1) + ".mp3" + (versio != null ? "?v=" + versio : "");
 
+        /// <summary>Pulun napautus (UiNakymat avaa keskustelun).</summary>
+        public event Action Napautus;
+
         void Napautettu()
         {
             viimeToimi = Aika;
-            if (nukkuu) { nukkuu = false; Toista("wake"); return; }
+            if (nukkuu) { nukkuu = false; Toista("wake"); }
+            if (Napautus != null) { Napautus(); return; }
             Aanet.PulunTehoste("pulu.kujerrus");
             if (Kuplat.Maara == 0 && viimeRepliikki != null) Kuplat.Lisaa(viimeRepliikki);
             Tilanne("chatOpen");

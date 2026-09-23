@@ -6,8 +6,12 @@
 // levittää ne kameraan päin kääntyväksi neliöksi. Pölykerros ajelehtii maapallon
 // akselin ympäri, muut ovat paikallaan.
 //
-// Kameran tausta ja clearFlags ovat Natiivisepän (RAJAPINTA.md); taivas ei koske
-// kameraan.
+// Kameran tausta ja clearFlags ovat Natiivisepän (RAJAPINTA.md). PalloKierto
+// asettaa kaukorajaksi korkeus + 2 R, mutta tähdet ovat 2,6–10,4 R pinnan
+// yläpuolella (astronautti kerroin 1,6), joten ne leikkautuivat pois (iPad
+// 2e26b45). Taivas pyytää siksi PalloKierto.KaukorajaVahintaan-arvoksi kameran
+// etäisyyden keskipisteestä + kaukaisimman tähden säteen, ja palauttaa sen
+// nollaksi poistuessaan.
 using System.Collections.Generic;
 using CesiumForUnity;
 using Matkakirja.Linssit;
@@ -26,6 +30,8 @@ namespace Matkakirja.Natiivi
         readonly List<(Tahtijoukko joukko, Transform olio, Material materiaali)> kerrokset =
             new List<(Tahtijoukko, Transform, Material)>();
         Vector3 akseli;
+        Vector3 keskusPaikallinen;
+        double kaukaisinSade;   // metreinä maan keskipisteestä
         float kierto;
         bool vahennettyLiike;
 
@@ -52,8 +58,10 @@ namespace Matkakirja.Natiivi
             double3 keskus = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);
             double3 napa = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(new double3(0, 0, MaanSade));
             akseli = ((Vector3)(float3)(napa - keskus)).normalized;
+            keskusPaikallinen = (Vector3)(float3)keskus;
             foreach (var joukko in Tahdet.Joukot(kerroin))
             {
+                foreach (var p in joukko.Pisteet) kaukaisinSade = System.Math.Max(kaukaisinSade, (1 + p.Korkeus) * MaanSade);
                 var olio = new GameObject("Tahdet-" + joukko.Tunnus).transform;
                 olio.SetParent(transform, false);
                 olio.localPosition = (Vector3)(float3)keskus;
@@ -118,6 +126,23 @@ namespace Matkakirja.Natiivi
                 m.SetFloat("_Peitto", p);
                 olio.gameObject.SetActive(p > 0.01f);
             }
+        }
+
+        PalloKierto pallo;
+
+        /// <summary>Kaukoraja kaukaisimman tähden taakse (kameran etäisyys keskipisteestä + tähtikuoren säde).</summary>
+        void Update()
+        {
+            if (georeferenssi == null) return;
+            if (pallo == null) pallo = FindAnyObjectByType<PalloKierto>();
+            if (pallo == null) return;
+            Vector3 keskus = georeferenssi.transform.TransformPoint(keskusPaikallinen);
+            pallo.KaukorajaVahintaan = Vector3.Distance(pallo.transform.position, keskus) + kaukaisinSade * 1.05;
+        }
+
+        void OnDisable()
+        {
+            if (pallo != null) pallo.KaukorajaVahintaan = 0;
         }
 
         void OnDestroy()

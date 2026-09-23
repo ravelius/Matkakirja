@@ -252,4 +252,13 @@ ui linssi matka kuva 2
 odota 3
 kuva linssi-matka-kuva
 ui linssi pois
+Pulun keskustelu (vaatii, että pollo-worker sallii natiivin chatin; muuten näkyy selittävä rivi):
+
+```
+ui chat
+odota 3
+kuva chat-auki
+ui chat Missä Sparta on?
+odota 8
+kuva chat-vastaus
 ```
