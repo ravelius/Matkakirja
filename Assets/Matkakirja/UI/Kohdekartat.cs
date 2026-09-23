@@ -6,6 +6,10 @@
 // Kohteen x/y ovat prosentteja kuvasta (pelin karttapiste()). Kun piirtoRajat on annettu, kuva on
 // ydinrajausta (rajat) laajempi: Ydin kertoo ydinalueen suorakulmion kuvan osuuksina 0–1, ja
 // levossa näytetään vain se (web ydinAla / lava).
+//
+// Skeema 1.24: kohteen linkit [{tunnus, laji, aihe, kategoria, nimi}] (laji fokuskohde | skandaalit |
+// historianHetket | syvennys | takynosto | maalehtinosto) ja aihe = ensimmäisen linkin aihe (sama kaava
+// kuin webin kaupunkiliuskassa: kohteenKategoria → nostosymPaakategoria). Vanhassa paketissa vain nosto.
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -21,6 +25,10 @@ namespace Matkakirja.Natiivi
         public string Nimi, Wiki, Nosto, NimiPuoli, Aika;
         /// <summary>Kaikki nostolinkit (web nosto: tunnus tai taulukko); Nosto = ensimmäinen.</summary>
         public List<string> Nostot = new List<string>();
+        /// <summary>Nostolinkit tyypitettyinä (skeema 1.24; tyhjä vanhassa paketissa).</summary>
+        public List<KohdeLinkki> Linkit = new List<KohdeLinkki>();
+        /// <summary>Kohteen aihe (karttaselitteen aihe, esim. "historia"), tai null.</summary>
+        public string Aihe;
         /// <summary>Paikka prosentteina kuvasta (0–100).</summary>
         public float X, Y;
         /// <summary>Kyltin siirto pikseleinä (web siirto {x, y}), tai nolla.</summary>
@@ -35,6 +43,13 @@ namespace Matkakirja.Natiivi
         public bool Selattava => Juttu != null && !string.IsNullOrEmpty(Juttu.Teksti) && Juttu.Kuvat.Count > 0;
         /// <summary>Avattava ☰-valikosta: teksti tai wiki.</summary>
         public bool Avattava => (Juttu != null && !string.IsNullOrEmpty(Juttu.Teksti)) || !string.IsNullOrEmpty(Wiki);
+    }
+
+    /// <summary>Kohdekartan kohteen nostolinkki (skeema 1.24 kohteet[].linkit[]).</summary>
+    public sealed class KohdeLinkki
+    {
+        /// <summary>Webin noston tunnus ("syvennys-amsterdam-haikarat", "nosto-…", "skandaali-…", "hetki-…", kohteen id).</summary>
+        public string Tunnus, Laji, Aihe, Kategoria, Nimi;
     }
 
     public sealed class Kohdekartta
@@ -174,6 +189,10 @@ namespace Matkakirja.Natiivi
                     if (linkki is string ls && ls.Length > 0) kohde.Nostot.Add(ls);
                     else foreach (var osa in Rakenne.Lista(linkki) ?? new List<object>()) if (osa is string xs && xs.Length > 0) kohde.Nostot.Add(xs);
                     kohde.Nosto = kohde.Nostot.Count > 0 ? kohde.Nostot[0] : null;
+                    foreach (var l in (Rakenne.Lista(MiniJson.Kentta(o, "linkit")) ?? new List<object>()).Select(Ob).Where(x => x != null))
+                        if (T(l, "tunnus") is string tunnus)
+                            kohde.Linkit.Add(new KohdeLinkki { Tunnus = tunnus, Laji = T(l, "laji"), Aihe = T(l, "aihe"), Kategoria = T(l, "kategoria"), Nimi = T(l, "nimi") });
+                    kohde.Aihe = T(o, "aihe") ?? kohde.Linkit.Select(x => x.Aihe).FirstOrDefault(x => !string.IsNullOrEmpty(x));
                     string avain = id + ":" + nimi;
                     piirrokset.TryGetValue(avain, out kohde.Piirros);
                     // Juttu: kohteen oma teksti (1.17) tai nähtävyyskokoelman juttu samalla nimellä.

@@ -15,7 +15,8 @@
 //
 // Kortin sisällön valitsee Saapumisesitys (Matkakirjamerkinnat.cs): fokusvirran
 // merkintä, aarremerkintä, pakin saapumisteksti, saapumishavainto tai arvottu
-// paikkatieto ("Matkalla — X"). Merkinnän mukaan kortissa on lihavoitu
+// paikkatieto ("Matkalla — X"). Saapumistekstillä ja -havainnolla on kaupungin
+// valokuva pikkukuvana (web #fact-valokuva), joka avaa kuvapinon. Merkinnän mukaan kortissa on lihavoitu
 // ensimmäinen lause (.fact-lead), lähderivi tekstin perään (.source-line:
 // "LÄHDE: fi.wikipedia.org") ja pieni kuvaikoni "Katso kuva" (#fact-image),
 // joka avaa ilmiön Wikipedia-artikkelin. Webin openWikiArticle on pelin oma
@@ -148,6 +149,7 @@ namespace Matkakirja.Natiivi
             lahderivi.Clear();
             Piiloon(lahderivi, true);
             pikkukuvat.Clear();
+            if (m.Valokuvat.Count > 0) LisaaValokuva(m.Valokuvat);
             AsetaPieni(false);
             kortti.style.display = DisplayStyle.Flex;
             sanat = null;
@@ -262,6 +264,29 @@ namespace Matkakirja.Natiivi
                 e.StopPropagation();
                 var sarja = pikkukuvat.Children().Select(x => x.userData as VirtaKuva).Where(x => x != null).ToList();
                 Kuvat.Suurenna(sarja, Mathf.Max(0, sarja.IndexOf(k)));
+            });
+        }
+
+        /// <summary>
+        /// Web naytaFactValokuva: muistikirjan kyljen pikkukuva (pinon ensimmäinen), napautus avaa
+        /// koko pinon (web postikortti; natiivissa luentakuvien selattava suurennos). Latausvirhe
+        /// piilottaa pikkukuvan (web factValokuvaKuva error). Ei userDataa: luennan pikkukuvien
+        /// sarja (LisaaPikkukuva) ei poimi tätä.
+        /// </summary>
+        void LisaaValokuva(List<VirtaKuva> pino)
+        {
+            var eka = pino[0];
+            var el = Rakenne.El("mk-matkakirja__pikkukuva mk-matkakirja__valokuva", pikkukuvat);
+            el.tooltip = eka.Lyhyt;
+            Natiivi.Kuvat.Hae(eka.Osoite, t =>
+            {
+                if (t != null) el.style.backgroundImage = new StyleBackground(t);
+                else el.style.display = DisplayStyle.None;
+            });
+            el.RegisterCallback<PointerDownEvent>(e =>
+            {
+                e.StopPropagation();
+                Kuvat.Suurenna(pino, 0);
             });
         }
 

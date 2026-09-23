@@ -16,7 +16,8 @@
 //              "Koe ihme" kuvien alla (säilyneen ihmeen kuva suurennokseen), teksti, LUKIJAN KYSYMYS
 //              (+25, "nosto"/id), "Kysy viisaalta pöllöltä pululta:" (PuluChat.Kysy), kierrokset
 //              (ulkoinen linkki), "Livian leikekirja" (kohteen nimeävä täkynosto, web piirraKohteenNosto)
-//   täkynosto  (web js/fokusnosto.js avaaNostonKortti) luokka, [lööppi: LISÄLEHTI, päiväys], otsikko,
+//   täkynosto  (web js/fokusnosto.js avaaNostonKortti; myös maalehtinosto, jonka web avaa samalla avaaNosto-
+//              polulla, ja karttavalon "nosto:<id>", kokoelma takynostot) luokka, [lööppi: LISÄLEHTI, päiväys], otsikko,
 //              [ingressi], äänirivi (näyte, musiikki, Apple Music), kuvat, lunastus, valokuva
 //              "näin se löytyi", isoisän karttaliite (napautus → suurena), LUKIJAN KYSYMYS (+25,
 //              nostotehtävälaskuri), "Katso X kartalla" (→ kohdekortti), pulun
@@ -58,6 +59,12 @@ namespace Matkakirja.Natiivi
         readonly Dictionary<string, Action> napit = new Dictionary<string, Action>();
 
         public bool Auki { get; private set; }
+
+        /// <summary>Auki olevan kortin tiivistelmä testilokiin: laji · luokka · otsikko [· leikekirja].</summary>
+        public string Kuvaus => nosto == null ? null
+            : nosto.Laji + " · " + nosto.Luokka + " · " + nosto.Otsikko
+              + (nosto.LeikekirjaValo != null ? " · leikekirja " + nosto.LeikekirjaValo : "")
+              + (nosto.KohdeId != null ? " · kartalla " + nosto.KohdeId : "");
 
         public Nostokortti(UiKerros ui)
         {
