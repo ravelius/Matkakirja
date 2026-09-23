@@ -65,9 +65,51 @@ namespace Matkakirja.Natiivi
             kerrokset = new KerrosSovitin();
             rekisteri = new Linssirekisteri(this);
             rekisteri.Lisaa(new Topografia());
+            StartCoroutine(LataaAstronautti());
             rekisteri.Vaihtui += l => Kirjaa("auki: " + (l?.Tiedot.Id ?? "ei mitään"));
             komentoPolku = Path.Combine(Application.persistentDataPath, "linssi-komento.txt");
             lokiPolku = Path.Combine(Application.persistentDataPath, "linssi-loki.txt");
+        }
+
+        /// <summary>Astronautin kamera rekisteriin, kun sen aineisto on ladattu paketista.</summary>
+        System.Collections.IEnumerator LataaAstronautti()
+        {
+            string data = null, kysymykset = null;
+            yield return LinssiSisalto.Hae("moduulit/js/linssit/satelliitti-data.json", t => data = t);
+            yield return LinssiSisalto.Hae("moduulit/js/linssit/astronaut-kysymykset.json", t => kysymykset = t);
+            if (data == null) { Kirjaa("astronautin kamera: aineisto puuttuu"); yield break; }
+            try
+            {
+                var aineisto = Matkakirja.Linssit.Astronautti.AstronauttiAineisto.Lue(
+                    Matkakirja.Peli.MiniJson.Jasenna(data), kysymykset == null ? null : Matkakirja.Peli.MiniJson.Jasenna(kysymykset));
+                rekisteri.Lisaa(new AstronauttiSovitin(this, aineisto));
+                Kirjaa($"astronautin kamera: {aineisto.Kohteet.Count} kohdetta");
+            }
+            catch (Exception e) { Kirjaa("astronautin kamera: " + e.Message); }
+        }
+
+        /// <summary>
+        /// Astronautin kamera Unityssä: luo 3D-kerroksen avatessa ja purkaa sen
+        /// sulkiessa; logiikka on puhtaassa AstronauttiLinssissä.
+        /// </summary>
+        sealed class AstronauttiSovitin : ILinssi
+        {
+            readonly LinssiOhjain o;
+            readonly Matkakirja.Linssit.Astronautti.AstronauttiAineisto aineisto;
+            Matkakirja.Linssit.Astronautti.AstronauttiLinssi linssi;
+            AstronauttiKerros kerros;
+            public AstronauttiSovitin(LinssiOhjain o, Matkakirja.Linssit.Astronautti.AstronauttiAineisto a) { this.o = o; aineisto = a; }
+            public LinssiTiedot Tiedot => Matkakirja.Linssit.Astronautti.AstronauttiLinssi.AstronauttiTiedot;
+            public bool Auki => linssi?.Auki ?? false;
+            public void Avaa(ILinssiYmparisto y)
+            {
+                kerros = AstronauttiKerros.Luo(o.kierto);
+                linssi = new Matkakirja.Linssit.Astronautti.AstronauttiLinssi(aineisto, kerros);
+                kerros.Linssi = linssi;
+                linssi.Avaa(y);
+            }
+            public void Paivita() => linssi?.Paivita();
+            public void Sulje() { linssi?.Sulje(); linssi = null; kerros = null; }
         }
 
         void Update()
