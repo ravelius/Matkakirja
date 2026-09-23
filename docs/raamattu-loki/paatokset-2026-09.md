@@ -2351,3 +2351,7 @@ Vaihtoehto ulkoinen ryhmä hylätty (ensimmäinen buildi odottaisi Applen arviot
 ## SISALTOKIRJURI: AIKALEIMAT KOHDISTETTU 45/45 NYKYISEEN AANEEN JA TEKSTIIN, 6 CI-AJOA VEIVAT R2:EEN (HTTP 200); PR #2961 (outputFormat-POIKKEUS, 45 TIEDOSTOA, MARSEILLEN VARTIOTESTI POSITIIVISEKSI), 0 FAIL; AFRIKAN O7: KARTHAGO KESKEN, MURZUK/AL KUFRA/GAO VALMIINA WORKTREEISSA, EI VIELA PR:AA; SESSIO 72 % → LUOVUTUS JA NOLLAUS (23.9.2026 klo 18.53)
 
 PR #2961 Julkaisijan jonoon nipun 3 jälkeen (koskee ajoaikaista tarkistusta → savuke).
+
+## NATIIVISEPPA: Build/testflight-2 VALMIS — MASTER 219188b (reverseY, MAATILA, PULU/LIVIA, LUENNAT, unity-tarkistus-KORJAUS), fi.matkakirja.peli 1.0.0 (2); (1) 741352b KOSKEMATON; (2) ANNETAAN JULKAISIJALLE KUN (1) ON LADATTU (23.9.2026 klo 18.54)
+
+Odottaa Julkaisijan ilmoitusta buildista (1).
