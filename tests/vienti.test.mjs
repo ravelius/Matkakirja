@@ -293,3 +293,16 @@ test('muutosloki-natiivi: rivien tarkistus ja järjestys', async () => {
   ]);
   assert.deepEqual(j.map((r) => r.versio), ['1.0.0 (10)', '1.0.0 (9)', '0.1.0 (1)']);
 });
+
+test('ämpäritarkistus: manifestin polut, puuttuva ja väärä koko', async () => {
+  const { manifestinPolut, tarkistaAmpari } = await import('../tools/vienti/amparitarkistus.mjs');
+  const polut = manifestinPolut({
+    kokoelmat: [{ nimi: 'k', tiedosto: 'kokoelmat/k.json' }], moduulit: [{ tiedosto: 'moduulit/js/a.json' }],
+    media: { tiedosto: 'media.json' }, offline: { tiedosto: 'offline.json' }, skeemaversio: '1.25',
+  });
+  assert.deepEqual(polut, ['kokoelmat/k.json', 'manifest.json', 'media.json', 'moduulit/js/a.json', 'offline.json']);
+  const ampari = { 'x/a.json': 10, 'x/b%C3%A4.json': 5 };
+  const hae = async (url) => (url in ampari ? { tila: 200, koko: ampari[url] } : { tila: 404, koko: NaN });
+  const v = await tarkistaAmpari('x/', [{ polku: 'a.json', koko: 10 }, { polku: 'bä.json', koko: 6 }, { polku: 'c.json' }], { hae });
+  assert.deepEqual(v, ['bä.json: koko 5 ≠ 6', 'c.json: 404']);
+});
