@@ -2863,3 +2863,7 @@ Kaikki 10 sessiota työssä; build 4 TestFlightissa.
 ## BUILD 4 (202609232339) KASITELTY JA OMISTAJAN SAATAVILLA TESTFLIGHTISSA: OMISTAJA ON SISAISESSA RYHMASSA 'BETA TESTAAJAT', JOKA SAA KAIKKI BUILDIT AUTOMAATTISESTI (run 35935682403); MUUTOSLOKI-RIVIT SIIRTOSEPALLE; JULKAISIJA JATKAA #2984 → NIGHTLY (24.9.2026 klo 02.53)
 
 Omistaja päivittää TestFlightista aamulla.
+
+## UUSI FABLE ALOITTI klo 02.5x NOLLAUKSEN JALKEEN: LUOVUTUS 60a326ccf LUETTU, 10 APUSESSIOTA AUKI (KAIKKI PAITSI POSTIVAHTI JA KARTTASEPPA TYOSSA), JONON KOHTA 1 VALMIS (BUILD 4 OMISTAJAN SAATAVILLA klo 02.53); SEURAAVAKSI KUULOKOKEEN TULOS, #2984 → KETJU, OMISTAJAN AAMUKOKEILU (24.9.2026 klo 02.56)
+
+Uusi Fable-sessio (tili B, haara claude/bold-ride-vow4ki) jatkaa luovutuksen jonosta. Aloitusviesti tuli Postivahdilta. Ei aloitusviestejä auki oleville sessioille. Sallintalista (jonon kohta 6): yön luokitinestot (revoke-koodin commit, credential exploration) eivät ole permissions-sääntöjä vaan auto-tilan luokittimen päätöksiä; niitä ei voi avata sallintalistalla → esitetään omistajalle aamun kortissa tiedoksi, ei rivejä.
