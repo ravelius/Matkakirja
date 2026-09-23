@@ -70,7 +70,8 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *   1.8  kokoelma aanitaulut (tehosteet ja näytteet, ambienssit, pulu,
  *        siirtymä-, tila- ja paikkaraidat, musiikkiketju kaupungeittain)
  *   1.9  kokoelmat kuvakysymykset, lippumaat, pulmaaineisto, luennat
- *        (aikaleimoineen), livianpuhe ja maat; offline.json (manifest.offline)
+ *        (aikaleimoineen), livianpuhe, maat, karttamerkit, karttavalot,
+ *        maastonimet ja maarajat; offline.json (manifest.offline)
  */
 export const SKEEMAVERSIO_TARKKA = '1.9';
 

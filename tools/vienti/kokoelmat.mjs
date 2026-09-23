@@ -22,6 +22,10 @@ import { sarjallista } from './sarjallista.mjs';
 import { laudaltaAsteiksi } from '../../js/fokusmitat.js';
 import { ISO2 } from './iso2.mjs';
 import { PAAKAUPUNGIT } from './paakaupungit.mjs';
+import { maarajaRivit, MAARAJOJEN_TOLERANSSI } from './maarajat.mjs';
+import { KOHDE_MAAT, kohteenKategoria } from '../../js/fokuskohteet.js';
+import { nostosymPaakategoria } from '../../js/fokusnosto-symbolit.js';
+import { MAAILMANKARTAN_NIMET } from '../../js/packs/maailmankartta-nimet.js';
 import { ratkaiseMedia } from './media.mjs';
 import { aaniUrl, horatioAanenKesto } from '../../js/media.js';
 import { aikaleimojenOsoite } from '../../js/luentareaktiot.js';
@@ -691,6 +695,86 @@ function karttamerkkiKokoelma() {
     {}, rivit);
 }
 
+/*
+ * KARTTAVALOT JA MAASTONIMET (Natiivisepän tarve 23.9.2026 ilta).
+ * Web ei kokoa karttavaloja yhdeksi listaksi: pisteet syntyvät piirrossa.
+ * Tämä kokoaa saman datan (Sonnet-agentin selvitys, tarkistettu):
+ *   - fokuskohteet (KOHDE_MAAT, sis. kuratoidut maastokohteet): aihe =
+ *     nostosymPaakategoria(kohteenKategoria(k)), sijainti laudalta asteiksi
+ *   - eläintäyt (ELAINTAKYT, lat/lon suoraan), historian hetket (vain
+ *     kartalla === true), skandaalit (lat/lon suoraan).
+ * tarkeys: kaupunkivalolle kaupungin tarkeys, muille kohteen taso ?? 1.
+ * Maastonimet (MAAILMANKARTAN_NIMET: vuoret, järvet, joet) ovat webissä
+ * vain tasokartan nimiökerroksessa, eivät pallolla.
+ */
+const asteiksi = (x, y) => {
+  const a = laudaltaAsteiksi('maailmankartta', x, y);
+  return a ? { lat: Math.round(a.lat * 1e4) / 1e4, lon: Math.round(a.lon * 1e4) / 1e4 } : null;
+};
+
+function karttavaloKokoelma(hae, kaupungit) {
+  const tarkeydet = new Map(kaupungit.map((k) => [k.id, k.tarkeys]));
+  const rivit = [];
+  const nahdyt = new Set();
+  const lisaa = (rivi) => {
+    let id = rivi.id; let n = 2;
+    while (nahdyt.has(id)) id = `${rivi.id}~${n++}`;
+    nahdyt.add(id);
+    rivit.push({ ...rivi, id });
+  };
+  for (const [maa, lista] of Object.entries(KOHDE_MAAT)) {
+    for (const k of lista) {
+      const aihe = nostosymPaakategoria(kohteenKategoria(k));
+      const xy = k.laudat?.maailmankartta;
+      const p = xy && asteiksi(xy.x, xy.y);
+      if (!aihe || !p) continue;
+      const kaupunki = tarkeydet.has(k.kaupunki) ? k.kaupunki : (tarkeydet.has(k.id) ? k.id : null);
+      lisaa({ id: `kohde:${k.id}`, aihe, nimi: k.nimi, ...p, maa, kaupunki,
+        tarkeys: aihe === 'kaupungit' && kaupunki ? tarkeydet.get(kaupunki) : (k.taso ?? 1), lahde: 'fokuskohde' });
+    }
+  }
+  for (const [maa, t] of Object.entries(hae('js/packs/elaintakyt.js').ELAINTAKYT)) {
+    if (Number.isFinite(t.lat) && Number.isFinite(t.lon)) {
+      lisaa({ id: `elaintaky:${maa}`, aihe: 'elaimet', nimi: t.elain ?? t.otsikko, lat: t.lat, lon: t.lon, maa, kaupunki: null, tarkeys: 1, lahde: 'elaintaky' });
+    }
+  }
+  for (const h of hae('js/packs/historian-hetket.js').HISTORIAN_HETKET) {
+    if (!h.kartalla) continue;
+    lisaa({ id: `hetki:${h.id}`, aihe: 'hetket', nimi: h.nimio ?? h.otsikko, lat: h.lat, lon: h.lon, maa: h.iso ?? null, kaupunki: null, tarkeys: 1, lahde: 'historianHetket' });
+  }
+  for (const [maa, lista] of Object.entries(hae('js/packs/skandaalit.js').SKANDAALIT)) {
+    for (const sk of lista) {
+      lisaa({ id: `skandaali:${sk.id}`, aihe: 'skandaalit', nimi: sk.nimio ?? sk.otsikko, lat: sk.lat, lon: sk.lon, maa, kaupunki: null, tarkeys: 1, lahde: 'skandaalit' });
+    }
+  }
+  return taulukko('js/fokuskohteet.js#KOHDE_MAAT + ELAINTAKYT + HISTORIAN_HETKET + SKANDAALIT',
+    'Karttavalot pallolle: aihe (kaupungit, luonto, elaimet, historia, ihmeet, hetket, kulttuuri, kauppa, skandaalit; '
+      + 'js/karttavalot.js KARTTAVALO_AIHEET), nimi, lat/lon, maa (ISO3), tarkeys 0–3, lahde = lähdekokoelma. '
+      + 'Aiheen kaupungit valot ovat laudan ulkopuolisia pikkukaupunkeja (laudan kaupungit ovat kokoelmassa kaupungit); '
+      + 'kaupunki on täytetty vain, jos valo on laudan kaupunki, ja silloin tarkeys = kaupungit.tarkeys, muuten kohteen taso tai 1.',
+    { kaupunki: 'kaupungit' }, rivit);
+}
+
+function maastonimiKokoelma() {
+  const rivit = [];
+  for (const [laji, lista] of [['vuori', MAAILMANKARTAN_NIMET.vuoret], ['jarvi', MAAILMANKARTAN_NIMET.jarvet]]) {
+    for (const t of lista ?? []) {
+      const p = asteiksi(t.x, t.y);
+      if (p) rivit.push({ id: `${laji}:${t.avain}`, laji, nimi: t.nimi, ...p, tarkeys: t.tarkeys ?? null, viiva: null });
+    }
+  }
+  for (const t of MAAILMANKARTAN_NIMET.joet ?? []) {
+    const viiva = t.pisteet.map(([x, y]) => asteiksi(x, y)).filter(Boolean).map((p) => [p.lon, p.lat]);
+    if (!viiva.length) continue;
+    const [lon, lat] = viiva[Math.floor(viiva.length / 2)];
+    rivit.push({ id: `joki:${t.avain}`, laji: 'joki', nimi: t.nimi, lat, lon, tarkeys: t.tarkeys ?? null, viiva });
+  }
+  return taulukko('js/packs/maailmankartta-nimet.js#MAAILMANKARTAN_NIMET',
+    'Maastonimet (vuoret, järvet, joet) asteina: tarkeys 1–3 (1 = tärkein), joella viiva [[lon, lat], …] ja '
+      + 'ankkuri keskipisteessä. Webissä vain tasokartan nimiökerroksessa, ei pallolla.',
+    {}, rivit);
+}
+
 /** nimiavaruudet: Map<moduulipolku, moduulin nimiavaruus> */
 export function kokoaKokoelmat(nimiavaruudet) {
   const ns = {
@@ -716,7 +800,16 @@ export function kokoaKokoelmat(nimiavaruudet) {
     livianpuhe: livianPuheKokoelma(hae),
     maat: maaKokoelma(ns, hae),
     karttamerkit: karttamerkkiKokoelma(),
+    // Natiivisepän tarve 23.9.2026 ilta: sumu (PaljastaMaa) ja maatila.
+    maastonimet: maastonimiKokoelma(),
+    maarajat: taulukko('assets/data/maapolygonit.json (Natural Earth 10m admin-0)',
+      `Maarajat asteina (id = ISO3, iso2, bbox [w, s, e, n], renkaat [[[lon, lat], …]]), harvennettu `
+        + `${MAARAJOJEN_TOLERANSSI}° Douglas–Peuckerilla; sama geometria kuin laattoihin poltettu rajaviiva. `
+        + 'Saaria ja reikiä ei eroteltu: täytä parillisuussäännöllä (even-odd). Päivämäärärajan ylittävän maan '
+        + 'rengas voi jatkua yli ±180° (sauma purettu), joten bbox voi kattaa lähes koko pituusasteen (USA, RUS, FJI).',
+      {}, maarajaRivit(new URL('../../assets/data/maapolygonit.json', import.meta.url))),
   };
+  kokoelmat.karttavalot = karttavaloKokoelma(hae, kokoelmat.kaupungit.alkiot);
   rikastaNippu4(kokoelmat, ns);
   // Kätkökuva (Pelikoodari 23.9.2026): web näyttää sen kaaren aarretekstin
   // yhteydessä (assets/kohtaamiset/kohtaaminen-katko.jpg). Vain Pagesissa.

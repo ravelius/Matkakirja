@@ -476,3 +476,23 @@ test('nippu 4: muotokuvat, laattakuvat, karttamerkit, linssiluennat, kätkökuva
   assert.equal(ll.keksinnot.pysakit[0].url, luennanOsoite(LINSSI.aikajana.tapahtumat[0]));
   assert.match(K('saannot').find((r) => r.id === 'KATKOKUVA').arvo.url, /kohtaaminen-katko\.jpg$/);
 });
+
+test('nippu 4: karttavalot, maastonimet ja maarajat pallolle', async () => {
+  const K = (n) => JSON.parse(tiedostot.get(`kokoelmat/${n}.json`)).alkiot;
+  const valot = K('karttavalot');
+  const { KARTTAVALO_TYYPIT } = await import('../js/karttavalot.js');
+  assert.ok(valot.length > 2500);
+  assert.ok(valot.every((v) => KARTTAVALO_TYYPIT.has(v.aihe) && Number.isFinite(v.lat) && Number.isFinite(v.lon)), 'aihe ja sijainti');
+  assert.equal(new Set(valot.map((v) => v.aihe)).size, KARTTAVALO_TYYPIT.size, 'kaikki aiheet');
+  const { HISTORIAN_HETKET } = await import('../js/packs/historian-hetket.js');
+  assert.equal(valot.filter((v) => v.aihe === 'hetket').length, HISTORIAN_HETKET.filter((h) => h.kartalla).length);
+  const nimet = K('maastonimet');
+  const himalaja = nimet.find((n) => n.id === 'vuori:himalaja');
+  assert.ok(Math.abs(himalaja.lat - 28.5) < 0.1 && Math.abs(himalaja.lon - 85) < 0.1);
+  assert.ok(nimet.filter((n) => n.laji === 'joki').every((n) => n.viiva.length >= 2));
+  const rajat = new Map(K('maarajat').map((r) => [r.id, r]));
+  const fin = rajat.get('FIN');
+  assert.equal(fin.iso2, 'FI');
+  const [w, s, e, n] = fin.bbox;
+  assert.ok(w > 19 && e < 32 && s > 59 && n < 71, `Suomen bbox ${fin.bbox}`);
+});
