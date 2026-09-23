@@ -681,7 +681,7 @@ const LUENTA_CUET_20260914 = Object.freeze({
   },
   {
     "id": "bergen.livia.c4",
-    "ankkuri": "kuvasivat meitä. Meitä!",
+    "ankkuri": "kuvasivat meitä",
     "esiintyma": 1,
     "tarkoitus": "ilo",
     "voimakkuus": 0.6

@@ -1779,7 +1779,7 @@
           },
           {
             "cueId": "bergen.livia.c4",
-            "anchor": "kuvasivat meitä. Meitä!",
+            "anchor": "kuvasivat meitä",
             "occurrence": 1,
             "intent": "ilo",
             "strength": 0.6
