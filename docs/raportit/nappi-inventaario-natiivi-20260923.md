@@ -459,7 +459,9 @@ arkin ☰ ja ‹ ›; rivit 129, 183, 184), lähtökaupunki valitaan pallolta (r
 aloituskaavalla (portti → kartta + vahvistus → lento Lontoosta, avausteksti lennon aikana pallon
 päällä; AloitusLento Natiivisepältä, ääni ja luenta Pelikoodarilta), vaaka-asennon yläpalkki ja
 väkäsnappi (rivi 62), vertailuarkin maakäyrät, lehden fokustehtävät ja pullavinkki.
-Merge-pyynnössä: kaiutin nostokortteihin (rivi 265, yhteinen KortinLukija), miniatyyrien osoitteet.
+Masterissa myös: kaiutin nostokortteihin (rivi 265, KortinLukija), miniatyyrien osoitteet, sähketehtävä (220),
+pulun "Avaa juttu" (299) ja Livian avausesittely, linssin hampurilainen (317) ja varusteiden esikatselu (278),
+oma DC-3-lentokone (CC0). Merge-pyynnössä: "Mitä uutta" ja "Peli päivittyi" (74–75), eläintäkyjen kuvaosoitteet.
 Ei tarvita: isoisän vanha valokuva → postikortti (rivi 213) — webissä pienoiskuva on piilotettu
 omistajan tilauksesta 23.8.2026 (css .fact-valokuva display none).
 Työn alla (agentit): sähketehtävä (rivi 220), pulun "Avaa juttu" ja Livian avausesittely, linssin
@@ -473,9 +475,9 @@ tehdä, vaan asia kysytään Fablen kautta omistajalta ja kirjataan tähän.
 
 | Asia | Tila |
 |---|---|
-| Aloituskaupungin vahvistus napautuksen jälkeen (webissä doPickStart suoraan) | omistajan aloituskaava 23.9.: tehty |
+| Aloituskaupungin vahvistus napautuksen jälkeen (webissä doPickStart suoraan) | Fable 24.9.: pois — napautus valitsee suoraan (natiivi-ui/tyypitys) |
 | Pullatarjous poistuu ratkaistun aarretehtävän jälkeen (webissä jää näkyviin) | omistaja 23.9.: natiivi näin, web korjataan (Pelikoodari) |
-| "Mitä uutta": webin muutosloki listaa webin versioita; natiivin omaa lokia ei ole paketissa | kysytty Fablelta: näytetäänkö webin loki vai natiivin oma (Siirtoseppä: data) |
+| "Mitä uutta": webin muutosloki listaa webin versioita | Fable 24.9.: natiivin oma loki (kokoelma muutosloki-natiivi, Julkaisija täyttää); tehty, varana "Ensimmäinen natiiviversio." |
 
 ## Yhteenveto
 
