@@ -177,7 +177,11 @@ ohje () {
   cat <<'OHJE'
 Käyttö: tools/polta-paikallisesti.sh [valitsimet]
 
-  --sarjat z8|kaikki|z0-z7|nostot   mitkä shardit ajetaan (oletus z8)
+  --sarjat z8|kaikki|z0-z7|nostot|syva   mitkä shardit ajetaan (oletus z8)
+                             syva    = syvät tasot z9-z10 vain --syva-alue-
+                                       alalle, rinnevarjo DEM:stä (--dem);
+                                       OLEMASSA OLEVAAN pohjaversioon.
+                                       Luetteloa EI viedä (ks. SYVÄT TASOT)
                              nostot  = vain nostotaso z5-z8 uuteen versioon
                              z8      = pohja z8 + viivataso z8 + nostotaso z8
                                        OLEMASSA OLEVIIN versiopolkuihin
@@ -226,7 +230,17 @@ Käyttö: tools/polta-paikallisesti.sh [valitsimet]
                              lepokerroksesta; PAATOKSET 34 kohta 17 d)
   --pallo-osia N             pallon sarjan shardeja (oletus: ytimet × 3;
                              yksi osa on kielletty monen ytimen koneella)
-  --pallo-tasot 0-8          pallon Mercator-tasot (oletus 0-8)
+  --pallo-tasot 0-8          pallon Mercator-tasot (oletus 0-8; syvä
+                             natiivisarja 9-11, oma --pallotunniste)
+  --pallo-alue lon0,lat0,lon1,lat1
+                             pallon sarja vain alueelle (oletus: koko
+                             maailma; syvällä sarjalla --syva-alue)
+  --dem <kansio>             Copernicus GLO-30 -ruudut syville tasoille
+                             (tools/maasto/dem-ikkuna.mjs; polussa ei
+                             välilyöntejä)
+  --syva-alue lon0,lat0,lon1,lat1
+                             syvien tasojen ala (oletus Ranska
+                             -5.5,41,9.8,51.5)
   --korvaa                   kirjoita pallon kansioon, jossa on jo valmis
                              laatat.json (oletuksena ajo kieltäytyy —
                              laatat ovat vuoden välimuistissa)
@@ -347,6 +361,8 @@ VAHTI_PID=""; RAPORTOI=0; EDISTYMISVAROITUS=0
 # Meriresepti ja tarkka rantaviiva (ks. ohje).
 DATA=""; YHTEISLIPUT=""; POHJALIPUT=""; VIIVALIPUT=""; RANTALIPUT=""; NOSTOLIPUT=""; NIMIOLIPUT=""
 NIMIOVERSIO=""; NIMIOT=""; ILMAN_NOSTOJA=0; ILMAN_NIMIOITA=0
+# SYVÄT TASOT z9-z10 (Karttaseppä 23.9.2026, ks. SYVÄT TASOT alempana).
+DEM=""; SYVA_ALUE="-5.5,41,9.8,51.5"; PALLO_ALUE=""
 
 while [ $# -gt 0 ]; do
   case "$1" in
@@ -375,6 +391,9 @@ while [ $# -gt 0 ]; do
     --pallo-ilman-nostoja) PALLON_NOSTOT=""; shift ;;
     --pallon-nostot) PALLON_NOSTOT="--nostot"; shift ;;
     --pallo-tasot) PALLO_TASOT="$2"; shift 2 ;;
+    --pallo-alue) PALLO_ALUE="$2"; shift 2 ;;
+    --dem) DEM="$2"; shift 2 ;;
+    --syva-alue) SYVA_ALUE="$2"; shift 2 ;;
     --nostot-ja-pallo) YKSI_AJO=1; shift ;;
     --pallon-lahde) PALLON_LAHDE="$2"; shift 2 ;;
     --pallo-luettelo) PALLO_LUETTELO="$2"; shift 2 ;;
@@ -436,12 +455,16 @@ if [ "$LAPSI" -eq 1 ]; then
   [ "$HAHMOTELMAT" -eq 1 ] || HAHMOTELMAT="${POLTTO_HAHMOTELMAT:-0}"
   [ "$ILMAN_NOSTOJA" -eq 1 ] || ILMAN_NOSTOJA="${POLTTO_ILMAN_NOSTOJA:-0}"
   [ "$ILMAN_NIMIOITA" -eq 1 ] || ILMAN_NIMIOITA="${POLTTO_ILMAN_NIMIOITA:-0}"
+  [ -n "$DEM" ] || DEM="${POLTTO_DEM:-}"
+  SYVA_ALUE="${POLTTO_SYVA_ALUE:-$SYVA_ALUE}"
+  [ -n "$PALLO_ALUE" ] || PALLO_ALUE="${POLTTO_PALLO_ALUE:-}"
 fi
 vie_lapsille () {
   export POLTTO_DATA="$DATA" POLTTO_YHTEISLIPUT="$YHTEISLIPUT" POLTTO_POHJALIPUT="$POHJALIPUT"
   export POLTTO_VIIVALIPUT="$VIIVALIPUT" POLTTO_RANTALIPUT="$RANTALIPUT" POLTTO_NOSTOLIPUT="$NOSTOLIPUT" POLTTO_NIMIOLIPUT="$NIMIOLIPUT"
   export POLTTO_NIMIOVERSIO="$NIMIOVERSIO" POLTTO_NIMIOT="$NIMIOT" POLTTO_PALLOTUNNISTE="$PALLOTUNNISTE"
   export POLTTO_HAHMOTELMAT="$HAHMOTELMAT" POLTTO_ILMAN_NOSTOJA="$ILMAN_NOSTOJA" POLTTO_ILMAN_NIMIOITA="$ILMAN_NIMIOITA"
+  export POLTTO_DEM="$DEM" POLTTO_SYVA_ALUE="$SYVA_ALUE" POLTTO_PALLO_ALUE="$PALLO_ALUE"
 }
 # Aineistokansio absoluuttiseksi; oletus on ULOS/ne-data (hae_aineisto).
 if [ -n "$DATA" ]; then
@@ -467,6 +490,50 @@ for luku in "$PALLO_MIN" "$PALLO_MAX"; do
   esac
 done
 [ "$PALLO_MIN" -le "$PALLO_MAX" ] || { echo "VIRHE: --pallo-tasot $PALLO_TASOT" >&2; exit 2; }
+
+# SYVÄT TASOT z9-z10 (Karttaseppä 23.9.2026). Natiivipeli lukee pallon
+# Web Mercator -sarjan Z9-Z11, jonka lähteet ovat pyramidin z8-z10
+# (tee-pallolaatat lahdetaso Z-1). z9 ja z10 poltetaan VAIN syvälle
+# alalle (oletus Ranska), ja niiden rinnevarjo tulee 30 metrin
+# Copernicus GLO-30:sta (generoi-laattapyramidi --dem, puuttuva ruutu
+# = vanha 1'-aineisto). Laatat menevät OLEMASSA OLEVAN pohjaversion
+# alle kuten z8 aikanaan: polut z9/ ja z10/ ovat uusia, eikä mitään
+# kirjoiteta vanhan päälle.
+#
+# LUETTELOA EI VIEDÄ AUTOMAATTISESTI. Luettelo, jossa on z9-z10, on
+# turvallinen vasta kun pelin tasokatto (js/laattapyramidi.js
+# PELIN_SYVIN_TASO) on tuotannossa — muuten tasokartta valitsisi syvässä
+# zoomissa alueen laattoja, joita alueen ulkopuolella ei ole. Luettelo
+# kootaan ja tarkistetaan (eheys), ja sen vienti on erillinen teko.
+#
+# PALLON SYVÄ SARJA (--pallo --pallo-tasot 9-11) menee OMAAN kansioonsa
+# (--pallotunniste), eikä pelin sarjan laatat.json:iin kosketa: sen
+# tasot.max on selaimen pallon katto. Lähteet luetaan ämpäristä (z8 on
+# siellä jo koko maailmalle), joten syvä pallosarja vaatii, että z9-z10
+# on viety (tai --pallon-lahde <kansio>).
+case "$SYVA_ALUE" in
+  *[!0-9.,-]*|'') echo "VIRHE: --syva-alue on muotoa lon0,lat0,lon1,lat1" >&2; exit 2 ;;
+esac
+if [ "$SARJAT" = "syva" ]; then
+  [ -n "$DEM" ] || { echo "VIRHE: --sarjat syva vaatii --dem <GLO-30-kansio>" >&2; exit 2; }
+  [ -d "$DEM" ] || { echo "VIRHE: --dem $DEM ei ole kansio" >&2; exit 2; }
+  DEM="$(cd "$DEM" && pwd)"
+  case "$DEM" in *" "*) echo "VIRHE: --dem-polussa ei saa olla välilyöntejä" >&2; exit 2 ;; esac
+  if [ "$LUETTELON_VIENTI" -eq 1 ] && [ "$LAPSI" -eq 0 ]; then
+    echo "· --sarjat syva: luettelo kootaan mutta EI viedä (PELIN_SYVIN_TASO ensin tuotantoon)"
+  fi
+  LUETTELON_VIENTI=0
+fi
+# Syvä pallosarja (Z9+) on aina alueen sarja. OLETUSALA ON SYVÄÄ ALAA
+# 0,4° KAPEAMPI joka reunalta: tee-pallolaatat ottaa jokaisen alaa
+# LEIKKAAVAN Mercator-laatan, ja Z10-laatta (0,35° leveä) ulottuu alan
+# reunan yli. Jos sen lähde (z9) puuttuu reunan takana, puuttuva osa
+# täytettäisiin merisävyllä — kaistale merta keskellä maata. Kavennus
+# takaa, että jokaisen syvän pallolaatan jokainen pikseli on poltetulla
+# alalla (z9-laatta ulottuu alan yli 0-0,53°, pallolaatta 0-0,35°).
+if [ -z "$PALLO_ALUE" ] && { [ "$SARJAT" = "syva" ] || [ "$PALLO_MIN" -ge 9 ]; }; then
+  PALLO_ALUE="$(echo "$SYVA_ALUE" | awk -F, '{ printf "%g,%g,%g,%g", $1 + 0.4, $2 + 0.4, $3 - 0.4, $4 - 0.4 }')"
+fi
 
 # RANTATON POHJA ON KOKO PYRAMIDIN UUSINTAPOLTTO.
 #
@@ -665,6 +732,8 @@ lue_ampari () {
       ["A_PATINA", j.patina ?? "kevyt"],
       ["A_PIIRIT", (j.viivataso?.piirit ?? true) ? "kylla" : "ei"],
       ["A_TASOT", (j.tasot ?? []).map((t) => t.z).join(" ")],
+      // Pohjan rantaviiva (syvä sarja jatkaa samaa pohjaa, ks. SYVÄT TASOT).
+      ["A_POHJA_RANTA", j.pohja?.rantaviiva === false ? "ei" : "kylla"],
     ];
     for (const [k, v] of rivit) console.log(`${k}=${JSON.stringify(String(v))}`);
   ' "$t"
@@ -688,6 +757,36 @@ lue_ampari () {
 # shardit ajetaan ilman sitä eli täsmälleen työnkulun argumenteilla.
 Z8_SARAKKEITA=338
 Z8_KAISTA=4
+
+# SYVIEN TASOJEN KAISTAT (23.9.2026). Syvä ala kattaa vain osan z10:n
+# 1350 sarakkeesta, joten kaistat lasketaan alasta eikä koko tasosta:
+# generaattorin oma työlista (--vain-lista) kertoo alan z10-sarakkeet,
+# jolloin kaista ja luettelon bittikartta tulevat samasta geometriasta.
+# Tulos välimuistiin (lapsiprosessit kutsuvat shardit-funktiota joka
+# kerta), avaimena ala. Rivi: "<ala> <ensimmäinen> <viimeinen>".
+#
+# Kaistat alkavat kahdeksalla jaollisesta sarakkeesta: z10-kaista (4)
+# on silloin tasan yksi z10-lohko ja z9-kaista (8 z10-saraketta = 4
+# z9-saraketta) tasan yksi z9-lohko, eikä yksikään lohko jakaudu kahdelle
+# shardille.
+SYVA_KAISTA=4
+syva_sarakkeet () {
+  local valimuisti="$ULOS/syva-sarakkeet.txt" rivi
+  if [ -s "$valimuisti" ]; then
+    rivi="$(cat "$valimuisti")"
+    if [ "${rivi%% *}" = "$SYVA_ALUE" ]; then echo "${rivi#* }"; return 0; fi
+  fi
+  node "$JUURI/tools/generoi-laattapyramidi.mjs" "$ULOS/syva-lista" \
+    --tasoja 11 --tasot 10 --syva-alue "$SYVA_ALUE" --vain-lista >/dev/null
+  rivi="$(node -e '
+    const j = JSON.parse(require("fs").readFileSync(process.argv[1], "utf8"));
+    const s = j.laatat.map((l) => l[1]);
+    if (!s.length) process.exit(1);
+    console.log(`${Math.floor(Math.min(...s) / 8) * 8} ${Math.max(...s)}`);
+  ' "$ULOS/syva-lista/laatat.json")" || { echo "VIRHE: syvällä alalla $SYVA_ALUE ei ole z10-laattoja" >&2; return 1; }
+  echo "$SYVA_ALUE $rivi" > "$valimuisti"
+  echo "$rivi"
+}
 
 # NOSTOTASON SHARDIT MAITTAIN (18.9.2026, Raamattu PAATOKSET 34
 # kohta 17 d: "muiden maiden nostot piiloon").
@@ -799,6 +898,29 @@ shardit () {
         [ -n "$NIMIOLIPUT" ] && nimioarg="$nimioarg $NIMIOLIPUT"
         echo "nimio-$NIMIOVERSIO|--tasoja 9 --tasot 4-8 $nimioarg"
       fi
+      ;;
+  esac
+  case "$SARJAT" in
+    syva)
+      # z10 lohko kerrallaan, z9 lohko kerrallaan (kaksi z10-lohkoa).
+      # Syvä taso on oma piirtoajonsa, koska DEM-ruudukon väli on tason
+      # pikseli (generoi-laattapyramidi.mjs DEM_KAYTOSSA).
+      local sarakkeet eka vika a b n
+      sarakkeet="$(syva_sarakkeet)" || return 1
+      eka="${sarakkeet% *}"; vika="${sarakkeet#* }"
+      local syvaarg="--tasoja 11 --syva-alue $SYVA_ALUE --dem $DEM --kaariminuutit $KORKEUS$pohjaarg"
+      a="$eka"; n=1
+      while [ "$a" -le "$vika" ]; do
+        b=$((a + SYVA_KAISTA - 1))
+        printf 'syva-z10-%03d|--tasot 10 --sarakkeet %s-%s %s\n' "$n" "$a" "$b" "$syvaarg"
+        a=$((b + 1)); n=$((n + 1))
+      done
+      a="$eka"; n=1
+      while [ "$a" -le "$vika" ]; do
+        b=$((a + SYVA_KAISTA * 2 - 1))
+        printf 'syva-z9-%03d|--tasot 9 --sarakkeet %s-%s %s\n' "$n" "$a" "$b" "$syvaarg"
+        a=$((b + 1)); n=$((n + 1))
+      done
       ;;
   esac
   case "$SARJAT" in
@@ -1031,6 +1153,10 @@ ajon_tunnus () {
     "${VERSIO:-}" "${VIIVAVERSIO:-}" "${NOSTOVERSIO:-}" "${RANTAVERSIO:-}" \
     "${ILMAN_RANTAVIIVAA:-0}" "${HAHMOTELMAT:-0}" \
     "${PALLOTUNNISTE:-}" "${PALLON_NOSTOT:-}"
+  # Syvä sarja: ala ja DEM-kansio kuuluvat tunnukseen (eri ala = eri
+  # kaistat, uusi DEM = eri laatat). Muille sarjoille tunnus on entinen.
+  if [ "${SARJAT:-}" = "syva" ]; then printf '/s%s/d%s' "$SYVA_ALUE" "$DEM"; fi
+  if [ -n "${PALLO_ALUE:-}" ]; then printf '/a%s' "$PALLO_ALUE"; fi
 }
 
 # Onko shardin valmis-merkki tästä samasta ajosta?
@@ -1236,6 +1362,10 @@ kokoa_luettelo () {
   local tasot="0-7" tasoja=""
   case "$SARJAT" in
     z8|kaikki|nostot) tasot="0-8"; tasoja="--tasoja 9" ;;
+    # Syvä sarja: luettelo z0-z10; syvien tasojen bittikartta tulee
+    # syvästä alasta (generoi-laattapyramidi syvaLaatastoBase64) ja
+    # korkeus.syvat kirjaa DEM:n lähdemaininnan.
+    syva) tasot="0-10"; tasoja="--tasoja 11 --syva-alue $SYVA_ALUE --dem $DEM" ;;
   esac
   local lisa=""
   [ "$PIIRIT" = "ei" ] && lisa="--eipiirit"
@@ -1336,7 +1466,7 @@ vertaa_luettelo () {
       for (const e of erot) console.error("  - " + e);
       process.exit(1);
     }
-    console.log("· luettelo täsmää ämpäriin z8:aa lukuun ottamatta");
+    console.log("· luettelo täsmää ämpäriin uusia tasoja (z8, syvät z9-z10) lukuun ottamatta");
   ' "$ULOS/ampari-luettelo.json" "$ULOS/luettelo/pyramidi.json" "$uudet"
 }
 
@@ -1431,6 +1561,7 @@ pallon_yritys () {
   # shellcheck disable=SC2086
   (cd "$JUURI" && node tools/tee-pallolaatat.mjs \
       --min "$PALLO_MIN" --max "$PALLO_MAX" $PALLON_NOSTOT $rantalippu \
+      $( [ -n "$PALLO_ALUE" ] && echo --alue "$PALLO_ALUE" ) \
       --tunniste "$PALLOTUNNISTE" --osa "$i/$PALLO_OSIA" \
       $( [ -n "$PALLO_LUETTELO" ] && echo --luettelo "$PALLO_LUETTELO" ) \
       $( [ -n "$PALLON_LAHDE" ] && echo --lahde "$PALLON_LAHDE" ) \
@@ -1533,6 +1664,7 @@ polta_pallo () {
   # shellcheck disable=SC2086
   (cd "$JUURI" && node tools/tee-pallolaatat.mjs --vain-luettelo \
     --min "$PALLO_MIN" --max "$PALLO_MAX" $PALLON_NOSTOT $rantalippu \
+    $( [ -n "$PALLO_ALUE" ] && echo --alue "$PALLO_ALUE" ) \
     $( [ -n "$PALLO_LUETTELO" ] && echo --luettelo "$PALLO_LUETTELO" ) \
     --tunniste "$PALLOTUNNISTE" --ulos "$luettelokansio")
   local kansio
@@ -1587,7 +1719,7 @@ polta_pallo () {
   # Aaltosulkeet ovat pakolliset: Macin bash 3.2 luki ajatusviivan (–)
   # muuttujan nimeen ja kaatui "PALLO_MIN?: unbound variable" (ajo
   # 34187497222, 8.9.2026) juuri ennen pallon shardien polttoa.
-  echo "· pallon sarja $kansio (tasot ${PALLO_MIN}–${PALLO_MAX})"
+  echo "· pallon sarja $kansio (tasot ${PALLO_MIN}–${PALLO_MAX}${PALLO_ALUE:+, alue $PALLO_ALUE})"
   echo "· pallon shardeja ajossa $maara / $PALLO_OSIA (rinnakkain $rinnakkain,"
   echo "  noutovali $NOUTOVALI ms, ranta ${rantalippu:-mukaan})"
   [ -n "$PALLON_LAHDE" ] && echo "  lähteet levyltä: $PALLON_LAHDE (ei verkkonoutoja)"
@@ -1866,6 +1998,19 @@ LAATU="${LAATU:-$A_LAATU}"
 PATINA="${PATINA:-$A_PATINA}"
 PIIRIT="${PIIRIT:-$A_PIIRIT}"
 
+# SYVÄ SARJA JATKAA ÄMPÄRIN POHJAA, joten sen on piirryttävä samoilla
+# pohjalipuilla kuin versio poltettiin (aja-*.sh: --data, --yhteisliput,
+# --pohjaliput). Rantaviiva on ainoa, jonka luettelo kertoo varmasti:
+# rannaton pohja + rantaviivallinen z9 olisi eri kartta.
+if [ "$SARJAT" = "syva" ] && [ "${A_POHJA_RANTA:-kylla}" = "ei" ]; then
+  case " $POHJALIPUT " in
+    *" --ilman-rantaviivaa "*) ;;
+    *) echo "VIRHE: ämpärin pohja $VERSIO on rannaton; anna syvälle sarjalle" >&2
+       echo "--pohjaliput \"--ilman-rantaviivaa …\" (samat pohjaliput kuin version poltossa)." >&2
+       exit 2 ;;
+  esac
+fi
+
 # Rannaton pohja on UUSI versio, ei lisä vanhaan: ämpärin nykyisen
 # version alle ei kirjoiteta eri sisältöä (laatat ovat vuoden
 # välimuistissa). Ja koska pohjan versio vaihtuu, pallon sarja on
@@ -2093,7 +2238,9 @@ fi
 if [ "$LUETTELO" -eq 1 ]; then
   echo luettelo > "$ULOS/lokit/vaihe.txt"
   kokoa_luettelo
-  if [ "$SARJAT" = "z8" ] && [ "$PAKOTA_LUETTELO" -eq 0 ]; then
+  # Syvä sarja lisää tasot z9-z10 olemassa olevaan versioon kuten z8
+  # aikanaan, joten sama vertailu koskee sitä: z0-z8 ja kerrokset ennallaan.
+  if { [ "$SARJAT" = "z8" ] || [ "$SARJAT" = "syva" ]; } && [ "$PAKOTA_LUETTELO" -eq 0 ]; then
     vertaa_luettelo
   fi
   # MAITTAISET NOSTOTASOT SHARDEISTA LUETTELOON — ENNEN EHEYTTÄ.
@@ -2155,7 +2302,16 @@ if [ "$PALLO" -eq 1 ]; then
   if [ "$LUETTELO" -eq 1 ] && [ -z "$PALLO_LUETTELO" ] && [ -s "${LUETTELO_VIETAVA:-}" ]; then
     PALLO_LUETTELO="$LUETTELO_VIETAVA"
   fi
-  if [ -z "$PALLON_LAHDE" ] && [ "$EI_LAHDETTA" -eq 0 ] && [ "$VAIN_PALLO" -eq 0 ]; then
+  if [ "$SARJAT" = "syva" ] && [ -z "$PALLON_LAHDE" ]; then
+    # SYVÄ PALLOSARJA LUKEE LÄHTEENSÄ ÄMPÄRISTÄ: Z9:n lähde on koko
+    # maailman z8, jota tällä ajolla ei ole levyllä. z9-z10 on siis
+    # oltava viety ensin (tämä ajo vei ne shardeittain).
+    if [ "$VIE" -ne 1 ]; then
+      echo "VIRHE: syvä pallosarja lukee z8-z10 ämpäristä, mutta --ei-vie jätti" >&2
+      echo "z9-z10:n viemättä. Anna --pallon-lahde <kansio> tai aja viennillä." >&2
+      exit 2
+    fi
+  elif [ -z "$PALLON_LAHDE" ] && [ "$EI_LAHDETTA" -eq 0 ] && [ "$VAIN_PALLO" -eq 0 ]; then
     kokoa_lahde_levylta
   fi
   polta_pallo
