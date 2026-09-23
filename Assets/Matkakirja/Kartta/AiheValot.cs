@@ -47,7 +47,13 @@ namespace Matkakirja
         public event Action Muuttui;
         public bool Valmis { get; private set; }
 
-        struct Valo { public string Aihe; public Vector3 Paikka; public Vector3 Normaali; }
+        struct Valo { public string Id, Aihe; public Vector3 Paikka; public Vector3 Normaali; }
+
+        /// <summary>Näkyvän valon napautus: karttavalot.json:n id (esim. "kohde:thessaloniki").</summary>
+        public event Action<string> Napautettu;
+        [Tooltip("Napautuksen osuma-alueen säde iOS-pisteinä (44 pt halkaisija).")]
+        public float osumaSade = 22f;
+        public KaupunkiMerkit merkit;
 
         readonly Dictionary<string, int> laskurit = new Dictionary<string, int>();
         readonly Dictionary<string, MeshRenderer> verkot = new Dictionary<string, MeshRenderer>();
@@ -60,6 +66,8 @@ namespace Matkakirja
             if (georeferenssi == null) georeferenssi = GetComponentInParent<CesiumGeoreference>();
             if (kierto == null) kierto = FindAnyObjectByType<PalloKierto>();
             if (kierto != null) kierto.NakymaMuuttui += () => nakymaMuuttui = true;
+            if (kierto != null) kierto.Napautettu += Napautus;
+            if (merkit == null) merkit = FindAnyObjectByType<KaupunkiMerkit>();
             StartCoroutine(Lataa());
         }
 
@@ -94,7 +102,8 @@ namespace Matkakirja
                 double lat = la is double dla ? dla : 0, lon = lo is double dlo ? dlo : 0;
                 var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(lon, lat, korkeus));
                 double3 u = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef);
-                valot.Add(new Valo { Aihe = aihe, Paikka = (float3)u, Normaali = (float3)math.normalize(u - keskus) });
+                string id = d.TryGetValue("id", out var iv) && iv is string ids ? ids : null;
+                valot.Add(new Valo { Id = id, Aihe = aihe, Paikka = (float3)u, Normaali = (float3)math.normalize(u - keskus) });
             }
             float kerroin = Screen.dpi > 0 ? Mathf.Max(1f, Screen.dpi / 163f) : 1f;
             foreach (var (aihe, vari) in Aiheet)
@@ -146,6 +155,32 @@ namespace Matkakirja
             // Kärjet laajenevat ruudulla: rajat koko maapallon kokoisiksi, ettei verkkoa karsita.
             m.bounds = new Bounds(Vector3.zero, Vector3.one * 2.6e7f);
             return m;
+        }
+
+        void Napautus(Vector2 ruutu)
+        {
+            if (!Valmis || Valittu == "ei" || Napautettu == null) return;
+            if (merkit != null && merkit.merkitNakyvat && merkit.OsuuKaupunkiin(ruutu)) return;
+            var kamera = kierto != null ? kierto.GetComponent<Camera>() : Camera.main;
+            if (kamera == null) return;
+            float kerroin = Screen.dpi > 0 ? Mathf.Max(1f, Screen.dpi / 163f) : 1f;
+            float paras = osumaSade * kerroin;
+            string osuma = null;
+            var gt = georeferenssi.transform;
+            Vector3 kameraPaikka = kamera.transform.position;
+            foreach (var v in valot)
+            {
+                if (v.Id == null || (Valittu != "kaikki" && v.Aihe != Valittu)) continue;
+                Vector3 p = gt.TransformPoint(v.Paikka);
+                if (Vector3.Dot(gt.TransformDirection(v.Normaali), (kameraPaikka - p).normalized) < 0.05f) continue;
+                Vector3 r = kamera.WorldToScreenPoint(p);
+                if (r.z <= 0) continue;
+                float d = Vector2.Distance(ruutu, r);
+                if (d < paras) { paras = d; osuma = v.Id; }
+            }
+            if (osuma == null) return;
+            Debug.Log("MATKAKIRJA valot: napautus " + osuma);
+            Napautettu?.Invoke(osuma);
         }
 
         void Update()

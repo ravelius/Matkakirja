@@ -223,6 +223,16 @@ namespace Matkakirja
         /// <summary>Napautus: lähin näkyvä merkki osuma-alueen sisällä (tai nimiö), muuten kortti piiloon.</summary>
         void Napautus(Vector2 ruutu)
         {
+            var paras = Osuma(ruutu);
+            if (paras == null) { kortti?.Piilota(); return; }
+            ValitseKaupunki(paras.kaupunki);
+        }
+
+        /// <summary>Osuuko napautus näkyvään kaupunkimerkkiin (AiheValot: kaupunki voittaa valon).</summary>
+        public bool OsuuKaupunkiin(Vector2 ruutu) => Osuma(ruutu) != null;
+
+        Merkki Osuma(Vector2 ruutu)
+        {
             float kerroin = Screen.dpi > 0 ? Mathf.Max(1f, Screen.dpi / 163f) : 1f;
             Merkki paras = null;
             float parasEtaisyys = osumaSade * kerroin;
@@ -240,8 +250,7 @@ namespace Matkakirja
                 }
                 if (d < parasEtaisyys) { parasEtaisyys = d; paras = m; }
             }
-            if (paras == null) { kortti?.Piilota(); return; }
-            ValitseKaupunki(paras.kaupunki);
+            return paras;
         }
 
         string valittu;
