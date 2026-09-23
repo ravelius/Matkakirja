@@ -36,12 +36,21 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(3, q.Oikea, "oikea");
             var d = KysymysApu.Nakyma(k, q);
             Oleta.Sama("Lontoo · kohtaaminen", d.Otsikko);
+            var ko = new Kohtaamiset();
+            ko.LueTarinakaari(System.IO.File.ReadAllText(System.IO.Path.Combine(KultaisetApu.Paketti, "tarinakaari.json")));
+            ko.LueKohtaamiset(System.IO.File.ReadAllText(System.IO.Path.Combine(KultaisetApu.Paketti, "kohtaamiset.json")));
+            Oleta.Tosi(!KysymysApu.LisaaKohtaaminen(d, q, ko, false), "kaaren tervehdys ei kuluta kaupungin tervehdystä");
+            Oleta.Tosi(d.Tervehdys != null && d.Tervehdys.Contains("Leila"), d.Tervehdys);
 
             Oleta.Tosi(k.Vastaa(q.Oikea).Ok, "vastaa");
             Oleta.Sama("pieniAarre", loyto?.WebTulos, "laatta");
             Oleta.Sama(440, m.Tila.Pelaaja.Raha, "löytö +190");
             d = KysymysApu.Nakyma(k, q, loyto);
             Oleta.Sama("Löysit: Kourallinen hopeakolikoita · +190 £", d.Loyto);
+            KysymysApu.LisaaKohtaaminen(d, q, ko, false);
+            Oleta.Tosi(d.Tervehdys == null, "ei tervehdystä vastauksen jälkeen");
+            Oleta.Tosi(d.RepliikkiLoyto && d.Repliikki.StartsWith(ko.Kaupunki("lontoo").KaariAarre), "kaaren aarre + löytörepliikki");
+            Oleta.Tosi(d.Repliikki.EndsWith(ko.Kaupunki("lontoo").Loyto), d.Repliikki);
 
             Oleta.Tosi(k.Sulje().Ok, "sulje");
             Oleta.Sama(Vaihe.Toiminta, m.Tila.Vaihe);

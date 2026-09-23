@@ -179,5 +179,44 @@ namespace Matkakirja.Peli.Testit
             }
             Oleta.Tosi(nahty > 0, "ainakin yksi pulma avattiin");
         }
+        [Testi] static void LippukysymysKokoelmanOsoitteella()
+        {
+            var liput = Kysymysdata.LueLiput(System.IO.File.ReadAllText(System.IO.Path.Combine(KultaisetApu.Paketti, "lippumaat.json")));
+            Oleta.Sama(135, liput.Count, "lippumaat (koepaketti v4)");
+            Oleta.Sama("ITA", liput[0].Iso);
+            var (m, k, _) = Laattakaupungissa();
+            k.Liput = liput;
+            Oleta.Tosi(k.Tutki(false, KysymysMuoto.Lippu).Ok, "lippukysymys");
+            var q = m.Tila.Kysely.Kysymys;
+            Oleta.Sama(KysymysMuoto.Lippu, q.Laji);
+            var osoitteet = new System.Collections.Generic.Dictionary<string, string> { [q.LippuTiedosto] = "https://esim.invalid/lippu.png" };
+            Oleta.Sama("https://esim.invalid/lippu.png", KysymysApu.Nakyma(k, q, osoitteet: osoitteet).KuvaUrl);
+            Oleta.Tosi(KysymysApu.Nakyma(k, q).KuvaUrl.StartsWith("https://commons.wikimedia.org/"), "Commons-vara");
+        }
+        [Testi] static void KohtaamisenRepliikitJaUusiYritys()
+        {
+            var ko = new Kohtaamiset();
+            ko.LueKohtaamiset(System.IO.File.ReadAllText(System.IO.Path.Combine(KultaisetApu.Paketti, "kohtaamiset.json")));
+            var x = ko.Kaupunki("lontoo");
+            Oleta.Tosi(x != null && x.Tervehdys != null && x.Vaarin != null, "lontoo");
+            var q = new AvoinKysymys { Kaupunki = "lontoo", Laji = KysymysMuoto.Visa };
+            var d = new KysymysNaytto();
+            Oleta.Tosi(KysymysApu.LisaaKohtaaminen(d, q, ko, false), "tervehdys näytettiin");
+            Oleta.Sama(x.Tervehdys, d.Tervehdys);
+            d = new KysymysNaytto();
+            Oleta.Tosi(!KysymysApu.LisaaKohtaaminen(d, q, ko, true) && d.Tervehdys == null, "kerran");
+            q.Valittu = 1; q.OikeinVastattu = false; q.Kaari = true;
+            d = new KysymysNaytto();
+            KysymysApu.LisaaKohtaaminen(d, q, ko, true);
+            Oleta.Sama(x.Vaarin, d.Repliikki);
+            Oleta.Tosi(!d.RepliikkiLoyto && d.Loyto == KysymysApu.UusiYritysOhje, "uusi yritys");
+            q.AarreLukittui = true;
+            d = new KysymysNaytto();
+            KysymysApu.LisaaKohtaaminen(d, q, ko, true);
+            Oleta.Sama(null, d.Loyto, "lukittu: ei lupausta");
+            var kuva = new AvoinKysymys { Kaupunki = "lontoo", Laji = KysymysMuoto.Kuva };
+            d = new KysymysNaytto();
+            Oleta.Tosi(!KysymysApu.LisaaKohtaaminen(d, kuva, ko, false) && d.Tervehdys == null, "vain visa");
+        }
     }
 }

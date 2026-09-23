@@ -1,11 +1,14 @@
 # Matkakirja erä 3: pelattava silmukka ~30 s (Pariisi → Lontoo → lehti → Pariisi → lehti).
 # Kopioi sovelluksen Documents/peli-komento.txt:ksi (ks. README-silmukka.md).
+# Kaupunkikortti (Natiivi-UI) on napautuksen ja matkavalinnan välissä: 'liiku' = kortin Liiku tänne.
 # Siemen 12345 laatoilla (266 laattaa): bussi Lontooseen 50 p, liftaus takaisin noppa 4.
 odota-tila kartta 40
 uusi-peli 12345
 odota 2
 tila 1-alku
 napauta lontoo
+odota 1
+liiku lontoo
 odota-tila dialogi 3
 odota 1.5
 tila 2-dialogi
@@ -18,6 +21,8 @@ odota-tila kartta 3
 odota 1
 tila 4-lontoossa
 napauta pariisi
+odota 1
+liiku pariisi
 odota-tila dialogi 3
 odota 1
 valitse liftaus

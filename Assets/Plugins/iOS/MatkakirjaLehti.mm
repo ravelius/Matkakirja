@@ -44,6 +44,8 @@ extern "C" {
 static NSString* const kKasittelijanNimi = @"matkakirja";
 static const char* const kUnityOlio = "MatkakirjaLehti";
 static const char* const kUnityMetodi = "LehtiSuljettu";
+static const char* const kUnityAvautui = "LehtiAvautui";   // sivu ilmoitti 'lehti-auki'
+static const char* const kUnityViesti = "LehtiViesti";     // muut sivun viestit JSONina
 // Jos sivu ei ilmoita 'lehti-auki' tässä ajassa (esim. tuntematon kaupunki,
 // jolloin verkkopuoli ei avaa mitään), näytetään sulje-nappi.
 static const NSTimeInterval kAukiAikarajaS = 12.0;
@@ -286,14 +288,23 @@ static NSString* MatkakirjaKaupunkiOsoitteesta(NSURL* osoite)
 
     if ([tapahtuma isEqualToString:@"lehti-auki"])
     {
+        BOOL ensimmainen = !self.lehtiAuki;
         self.lehtiAuki = YES;
         [self.latausosoitin stopAnimating];
         [self.varareitti removeFromSuperview];
         self.varareitti = nil;
+        if (ensimmainen) UnitySendMessage(kUnityOlio, kUnityAvautui, self.kaupunki ? [self.kaupunki UTF8String] : "");
     }
     else if ([tapahtuma isEqualToString:@"lehti-suljettu"])
     {
         [self suljeIlmoittaen:YES];
+    }
+    else if ([NSJSONSerialization isValidJSONObject:runko])
+    {
+        // Muut sivun viestit (esim. tuleva {tapahtuma:'teko', …}) Unitylle sellaisenaan.
+        NSData* data = [NSJSONSerialization dataWithJSONObject:runko options:0 error:nil];
+        NSString* json = data ? [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] : nil;
+        if (json) UnitySendMessage(kUnityOlio, kUnityViesti, [json UTF8String]);
     }
 }
 

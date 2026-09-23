@@ -8,7 +8,12 @@
 //    rekisteröidyn peiton päältä, ei liikuta palloa koko eleen aikana
 //    (PalloKierto.UiPeittaa on yksi Func, joten peitot kootaan tänne).
 //
-// Kukaan muu ei kirjoita PalloKierto.SyoteEstetty- tai UiPeittaa-kenttää.
+// 3) NÄKYMÄPEITTO koko ruudun näkymille (lehti WKWebView, tuleva valikko):
+//    pallo piirtää harvemmin, kun jokin rekisteröity näkymä peittää sen
+//    (PalloKierto.NakymaPeitetty, Natiiviseppä 23.9.; kerää kaikki peitot).
+//
+// Kukaan muu ei kirjoita PalloKierto.SyoteEstetty-, UiPeittaa- tai
+// NakymaPeitetty-kenttää.
 // Sopimus: /Users/Shared/Claude/proto-3d/RAJAPINTA.md.
 using System;
 using System.Collections.Generic;
@@ -22,6 +27,7 @@ namespace Matkakirja.Natiivi
     {
         static readonly HashSet<object> omistajat = new HashSet<object>();
         static readonly List<Func<Vector2, bool>> peitot = new List<Func<Vector2, bool>>();
+        static readonly List<Func<bool>> nakymaPeitot = new List<Func<bool>>();
         static PalloKierto kierto;
 
         /// <summary>Onko pallon syöte estetty (joku pitää lukkoa).</summary>
@@ -64,6 +70,27 @@ namespace Matkakirja.Natiivi
 
         public static void PoistaPeitto(Func<Vector2, bool> peittaa) => peitot.Remove(peittaa);
 
+        /// <summary>Rekisteröi koko ruudun näkymän peiton: tosi = pallo on piilossa (piirretään harvemmin).</summary>
+        public static void LisaaNakymaPeitto(Func<bool> peittaa)
+        {
+            if (peittaa == null || nakymaPeitot.Contains(peittaa)) return;
+            nakymaPeitot.Add(peittaa);
+            Kirjoita();
+        }
+
+        public static void PoistaNakymaPeitto(Func<bool> peittaa) => nakymaPeitot.Remove(peittaa);
+
+        /// <summary>Peittääkö jokin rekisteröity näkymä pallon.</summary>
+        public static bool NakymaPeitetty()
+        {
+            for (int i = 0; i < nakymaPeitot.Count; i++)
+            {
+                try { if (nakymaPeitot[i]()) return true; }
+                catch (Exception e) { Debug.LogWarning("MATKAKIRJA syöte: näkymäpeitto kaatui: " + e.Message); }
+            }
+            return false;
+        }
+
         /// <summary>Osuuko piste johonkin rekisteröityyn peittoon.</summary>
         public static bool Peittaa(Vector2 ruutu)
         {
@@ -82,6 +109,7 @@ namespace Matkakirja.Natiivi
             if (kierto == null) kierto = Object.FindAnyObjectByType<PalloKierto>();
             if (kierto == null) return;
             if (kierto.UiPeittaa == null) kierto.UiPeittaa = Peittaa;
+            if (kierto.NakymaPeitetty == null) kierto.NakymaPeitetty = NakymaPeitetty;
             if (kierto.SyoteEstetty != Estetty) kierto.SyoteEstetty = Estetty;
         }
 
@@ -90,6 +118,7 @@ namespace Matkakirja.Natiivi
         {
             omistajat.Clear();
             peitot.Clear();
+            nakymaPeitot.Clear();
             kierto = null;
         }
     }
