@@ -62,12 +62,14 @@ namespace Matkakirja.Natiivi
         /// <summary>Yhden sanelun enimmäiskesto (SFSpeechRecognizerin raja on noin minuutti).</summary>
         public const int EnintaanMs = 55000;
 
+#pragma warning disable 0067 // editorissa tapahtumia ei laukaista
         /// <summary>Äänet tauolle: sanelu ottaa ääni-istunnon (luvat on saatu, mikrofoni avautuu).</summary>
         public static event Action Alkoi;
         /// <summary>Mikrofoni on oikeasti auki (UI: "Kuuntelen…").</summary>
         public static event Action MikrofoniAuki;
         /// <summary>Mikrofoni kiinni ja ääni-istunto palautettu: äänet saavat jatkaa.</summary>
         public static event Action Loppui;
+#pragma warning restore 0067
 
         /// <summary>Aloita kutsuttu eikä valmis/virhe ole vielä tullut (lupien odotus mukaan lukien).</summary>
         public static bool Kaynnissa => nykyinen != 0;
