@@ -191,7 +191,9 @@ namespace Matkakirja.Natiivi
             {
                 vanat = tulos;
                 if (linssi == null) return;
-                if (rantamaski != null) kerros.AsetaVanat(tulos, virrat, rantamaski);
+                // Rantamaski (linssiaineisto) puuttuu julkaistusta paketista v2: vanat
+                // piirretään silloin ilman rannan leikkausta (VanaPiirto sietää nullin).
+                kerros.AsetaVanat(tulos, virrat, rantamaski);
                 linssi.AsetaVanat(tulos);
             }
 
@@ -506,6 +508,10 @@ namespace Matkakirja.Natiivi
             if (k == null) return;
             k.Nakyvyys("kaupungit", nakyvissa);
             k.Nakyvyys("nimiot", nakyvissa);
+            // Kaupungin nimikortti pois linssin tieltä (web body.aikajana-paalla .fact-card;
+            // iPad-kuvassa Pariisin kortti jäi ihmisen matkan päälle). Kortti palaa
+            // seuraavasta kaupungin napautuksesta, joten palautusta ei tarvita.
+            if (!nakyvissa) FindAnyObjectByType<NimiKortti>()?.Piilota();
         }
 
         public void Peite(bool paalla)

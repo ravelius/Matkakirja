@@ -190,6 +190,10 @@ namespace Matkakirja.Linssit.Maat
                     Rivi("V-Dem", MiniJson.Teksti(Ob(MiniJson.Kentta(tiedot, "demokratia")), "arvo"));
                 }
 
+            // Ilman maat.jsonia (julkaistu paketti v2) nimenä olisi ISO3-koodi:
+            // sellaista ei piirretä pallolle (Natiivisepän iPad-havainto 23.9.).
+            foreach (var m in a.Maat.Values) if (m.Nimi == m.Id) m.NimiPallolle = false;
+
             a.Vertailu = Tiedot(vertailuModuuli, "vertailu", "Vertailulinssi", 90);
             a.Maatiedot = Tiedot(maatiedotModuuli, "maatiedot", "Maiden tiedot", 95);
             return a;
