@@ -84,6 +84,9 @@ namespace Matkakirja.Natiivi
             // Linssin musiikin pito (Raamattu 14.9.): pohja pitoon, hiljennys 'linssi', maisema pois.
             // Suora asetus korvaa LinssiUi:n tyhjän oletuksen (se asettaa omansa vain ??=).
             LinssiOhjain.MusiikkiKasittelija = paalla => { if (aanisoitin != null) aanisoitin.Koukut.LinssiPito(paalla); };
+            // Linssin oma raita (Linssiseppä: keksinnot / ihmisen-matka, null = pois) ja sen himmennys.
+            LinssiOhjain.LinssiMusiikkiKasittelija = Aanisoitin.LinssiMusiikki;
+            LinssiOhjain.LinssiHimmennysKasittelija = Aanisoitin.LinssiHimmennys;
         }
 
         /// <summary>
