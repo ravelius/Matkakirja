@@ -78,6 +78,8 @@
  * silmukan, joten omistaja on YKSI (tämä moduuli) eikä kaksi.
  */
 
+import { voimassaOlevatKokeet } from '../piirtokoe-asetus.js';
+
 /** Varmistava syke levossa (ms): 4 fps. */
 export const LEPOPIIRTO_SYKE_MS = 250;
 /** Hitaiden animaatioiden tahti levossa (ms): 15 fps. */
@@ -96,10 +98,8 @@ export const LEPOPIIRTO_JALKIKEHYKSIA = 1;
  * levon kankaan sommittelijan kautta.
  */
 export function lepopiirtoKaytossa(haku) {
-  const h = haku ?? (() => { try { return globalThis.location?.search ?? ''; } catch { return ''; } })();
-  let kokeet = [];
-  try { kokeet = (new URLSearchParams(h).get('koe') ?? '').split(',').map((k) => k.trim()); } catch { kokeet = []; }
-  return !kokeet.includes('levovanha');
+  // Myös valikon tallennus ja paljas kartta (piirto joka rAF:ssa, omistaja 23.9.2026).
+  return !voimassaOlevatKokeet(haku).has('levovanha');
 }
 
 /**

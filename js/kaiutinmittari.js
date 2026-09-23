@@ -54,6 +54,8 @@
  * drop-shadow- eikä muutakaan suodatinta, ei myöskään skaalausta.
  */
 
+import { voimassaOlevatKokeet } from './piirtokoe-asetus.js';
+
 /** Kaaria kaiuttimessa — sama luku kuin index.html:n poluissa. */
 export const KAARIA = 3;
 
@@ -215,6 +217,8 @@ function piirraKaaret(kaaret, n) {
  */
 export function kaynnistaKaiutinmittari(nappi, haeMittari = null, asetukset = {}) {
   if (!nappi || typeof globalThis.requestAnimationFrame !== 'function') return false;
+  // Paljas kartta (omistaja 23.9.2026): ei omaa rAF-silmukkaa kartan päällä.
+  if (voimassaOlevatKokeet().has('eikaiutin')) return false;
   if (mittariKay?.nappi === nappi) return false;
   pysaytaKaiutinmittari();
   const kaaret = haeKaaret(nappi);

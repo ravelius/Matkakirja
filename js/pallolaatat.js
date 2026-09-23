@@ -26,7 +26,7 @@
  * Laattapyramidi ja projektio ovat oma asiansa: ne EIVÄT tuo palloa,
  * joten ne tuodaan tästä suoraan — sama ovi kuin tasokartalla.
  */
-import { tallennetutKokeet } from './piirtokoe-asetus.js';
+import { laajennaKokeet, tallennetutKokeet } from './piirtokoe-asetus.js';
 import {
   KOHDEMAAN_NIMIOT_ELAVINA,
   PYRAMIDIN_JAARAJA_LAT as JAARAJA_LAT,
@@ -1039,7 +1039,7 @@ export function laattakerroksenKokeet(haku) {
    * muistia, tai mittaus mittaisi väärää tilaa.
    */
   if (haku === undefined) for (const lippu of tallennetutKokeet()) joukko.add(lippu);
-  return joukko;
+  return laajennaKokeet(joukko);
 }
 /** Häive sisään ja ulos (ms). Reduced motion: 0. */
 export const LAATTAKERROS_HAIVE_MS = 260;

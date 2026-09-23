@@ -73,7 +73,57 @@ export const PIIRTOKOKEIDEN_VAIHTOEHDOT = [
     lippu: 'syotetouch,syotekello',
     ikoni: '<circle cx="8.5" cy="12" r="4.5"/><circle cx="15.5" cy="12" r="4.5"/>',
   },
+  /*
+   * PALJAS KARTTA JA PUOLITUS (omistaja 23.9.2026 klo 09.20: "riisutaan
+   * kartalta kaikki ylimääräiset elementit ja katsotaan loppuuko
+   * tökkiminen"). Paljas = vain laatat ja veto; 6–8 lisäävät kukin yhden
+   * ryhmän takaisin. Kerrokset: js/pallolauta/kerrokset.js PALJAAT_TILAT;
+   * muut riisunnat: PALJAAN_LISAKOKEET alla.
+   */
+  {
+    avain: 'paljas',
+    nimi: 'Paljas kartta',
+    seloste: 'Vain laatat ja veto: ei nimiöitä, symboleita, viivoja, pulua eikä DOM-kerroksia',
+    lippu: 'paljas',
+    ikoni: '<path d="M4.5 5.5h15v13h-15z"/>',
+  },
+  {
+    avain: 'paljasnimet',
+    nimi: 'Paljas + nimiöt',
+    seloste: 'Paljas kartta ja paikkojen nimet',
+    lippu: 'paljasnimet',
+    ikoni: '<path d="M4.5 5.5h15v13h-15z"/><path d="M8 12h8"/>',
+  },
+  {
+    avain: 'paljassymbolit',
+    nimi: 'Paljas + symbolit',
+    seloste: 'Paljas kartta ja nostojen symbolit ja pisteet',
+    lippu: 'paljassymbolit',
+    ikoni: '<path d="M4.5 5.5h15v13h-15z"/><circle cx="12" cy="12" r="2"/>',
+  },
+  {
+    avain: 'paljasdom',
+    nimi: 'Paljas + DOM-kerrokset',
+    seloste: 'Paljas kartta ja kartan päällä olevat sivun elementit',
+    lippu: 'paljasdom',
+    ikoni: '<path d="M4.5 5.5h15v13h-15z"/><path d="M4.5 9.5h15"/>',
+  },
 ];
+
+/** Paljaan kartan tilat (lippu = avain). */
+export const PALJAAT_KOKEET = Object.freeze(['paljas', 'paljasnimet', 'paljassymbolit', 'paljasdom']);
+/*
+ * Riisunnat, jotka eivät ole ablaatiotikkaan kerroksia: häivytys pois,
+ * piirto joka rAF:ssa (lepopiirto pois), kirjaston pohja ja ilmakehä pois,
+ * kaiutinmittari seis. Jokainen paljas tila asettaa ne kaikki.
+ */
+export const PALJAAN_LISAKOKEET = Object.freeze(['eihaive', 'levovanha', 'eipohja', 'eiilmakeha', 'eikaiutin']);
+
+/** Laajenna koejoukko: paljas tila tuo lisäriisunnat. Muokkaa ja palauttaa joukon. */
+export function laajennaKokeet(joukko) {
+  if (PALJAAT_KOKEET.some((k) => joukko.has(k))) for (const k of PALJAAN_LISAKOKEET) joukko.add(k);
+  return joukko;
+}
 
 export const PIIRTOKOKEEN_OLETUS = 'normaali';
 
@@ -200,4 +250,18 @@ export function luoKoevaihdonLataaja({
     },
     odottaa: () => ajastin !== null,
   };
+}
+
+/**
+ * Osoitteen `?koe=`-liput ja (ilman omaa hakua) valikon tallennus, paljaan
+ * kartan lisäriisunnat mukaan. Lehtimoduuleille (lepopiirto,
+ * kaiutinmittari), jotka eivät tuo js/pallolaatat.js:ää.
+ */
+export function voimassaOlevatKokeet(haku) {
+  const h = haku ?? (() => { try { return globalThis.location?.search ?? ''; } catch { return ''; } })();
+  let arvo = '';
+  try { arvo = new URLSearchParams(h).get('koe') ?? ''; } catch { arvo = ''; }
+  const joukko = new Set(arvo.split(',').map((k) => k.trim()).filter(Boolean));
+  if (haku === undefined) for (const lippu of tallennetutKokeet()) joukko.add(lippu);
+  return laajennaKokeet(joukko);
 }

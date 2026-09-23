@@ -28,7 +28,7 @@
  * savukkeet käyttävät, ja se ajetaan kerran jaksossa (oletus 3 s).
  */
 
-import { PIIRTOKOKEIDEN_VAIHTOEHDOT } from '../piirtokoe-asetus.js';
+import { PALJAAN_LISAKOKEET, PALJAAT_KOKEET, PIIRTOKOKEIDEN_VAIHTOEHDOT } from '../piirtokoe-asetus.js';
 
 /** Rollaavan ikkunan pituus (ms). */
 export const PROFIILIN_JAKSO_MS = 3000;
@@ -49,7 +49,10 @@ export const PROFIILIN_VERSIO = 5;
  * aakkosjärjestyksessä; ei yhtään = `normaali` (sama kuin valikon oletus).
  */
 export function koetilanNimi(kokeet) {
-  const nimet = [...(kokeet ?? [])].filter((k) => k && k !== 'profiili').sort();
+  const kaikki = [...(kokeet ?? [])];
+  // Paljaan kartan lisäriisunnat kuuluvat tilaan eivätkä ole omia kokeitaan.
+  const paljas = kaikki.some((k) => PALJAAT_KOKEET.includes(k));
+  const nimet = kaikki.filter((k) => k && k !== 'profiili' && !(paljas && PALJAAN_LISAKOKEET.includes(k))).sort();
   return nimet.length ? nimet.join(',') : 'normaali';
 }
 

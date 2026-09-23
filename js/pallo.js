@@ -1074,6 +1074,8 @@ export function ilmakehaNakyy({ altitude, fov, kuvasuhde, kuoriKorkeus }) {
 
 export function asennaIlmakehanVahti(pallo, kotelo, ikkuna = globalThis) {
   if (typeof pallo?.showAtmosphere !== 'function') return () => {};
+  // Paljas kartta (`eiilmakeha`, omistaja 23.9.2026): kuori pois koko ajaksi.
+  if (laattakerroksenKokeet().has('eiilmakeha')) { pallo.showAtmosphere(false); return () => {}; }
   if (laattakerroksenKokeet().has('ilmakehavanha')) return () => {};
   let paalla = true;
   const kehys = (mitat) => {
@@ -1719,8 +1721,10 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
    */
   const pohjanPiilotus = Boolean(kerros) && !laattakerroksenKokeet().has('pohjavanha');
   moottori.pohjaPiilossa = false;
+  // Paljas kartta (`eipohja`, omistaja 23.9.2026): kirjaston pohja aina piilossa.
+  const eiPohjaa = laattakerroksenKokeet().has('eipohja');
   const tahdistaPohjanNakyvyys = () => {
-    const piiloon = pohjanPiilotus && kerrosKaytossa && kerros.peittaaKokonaan();
+    const piiloon = eiPohjaa || (pohjanPiilotus && kerrosKaytossa && kerros.peittaaKokonaan());
     if (piiloon === moottori.pohjaPiilossa) return;
     moottori.pohjaPiilossa = piiloon;
     moottori.visible = !piiloon;

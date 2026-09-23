@@ -34,6 +34,7 @@
     "savuke-hehkupiste.mjs",
     "savuke-profiilitila.mjs",
     "savuke-koevaihto-lataus.mjs",
+    "savuke-paljas-kartta.mjs",
     "savuke-eihaive-veto.mjs",
     "savuke-liikemittari.mjs",
     "savuke-vientibudjetti.mjs",
@@ -696,7 +697,7 @@
       "env": {
         "SAVUKE_MOOTTORI": "chromium"
       },
-      "huomautus": "Kehysprofiilin ylin rivi kertoo koetilan (omistajan iPhone-kaappaukset 22.9.2026 eivat kertoneet Piirtokoe-valintaa). T1 ?koe=profiili,syotekello -> 'koe 3/4 Yhteinen kello · profiili pN · vNNNN' (valikossa Syötekoe 23.9.2026) (numero ja nimi valikon jarjestyksessa); T2 valikon tallennus syotetouch + kytkin ilman lippua; T3 valinta vaihdetaan kesken istunnon -> '(seuraavassa latauksessa: koe 1/4 Oletus)', koska kokeet luetaan kerrosten luonnissa; T4 ei sivuvirheita. Chromium ja WebKit 5/5."
+      "huomautus": "Kehysprofiilin ylin rivi kertoo koetilan (omistajan iPhone-kaappaukset 22.9.2026 eivat kertoneet Piirtokoe-valintaa). T1 ?koe=profiili,syotekello -> 'koe 3/8 Yhteinen kello · profiili pN · vNNNN' (valikossa Syötekoe 23.9.2026) (numero ja nimi valikon jarjestyksessa); T2 valikon tallennus syotetouch + kytkin ilman lippua; T3 valinta vaihdetaan kesken istunnon -> '(seuraavassa latauksessa: koe 1/8 Oletus)', koska kokeet luetaan kerrosten luonnissa; T4 ei sivuvirheita. Chromium ja WebKit 5/5."
     },
     "savuke-eihaive-veto.mjs": {
       "env": {
@@ -708,7 +709,7 @@
       "env": {
         "SAVUKE_MOOTTORI": "chromium"
       },
-      "huomautus": "Piirtokokeen valinta lataa sivun (omistaja 22.9.2026 klo 23.05: v2133-kierroksen 3/5 kaappausta mittasi vanhaa koetta, koska sivua ei ladattu). L1 valikosta Syötekoe 'Kosketus suoraan' -> vihje 'Ladataan…', L2 sivu latautuu itse 600 ms:n jalkeen, L3 latauksen jalkeen overlay 'koe 2/4 Kosketus suoraan' (Syötekoe-valikko, omistaja 23.9.2026 klo 08.34), L6 latauksen jälkeen pallonSyote.touchLahde ilman 'seuraavassa latauksessa', L4 valinta ja paluu viiveen aikana ei lataa, L5 ei sivuvirheita. Chromium ja WebKit 5/5; vanhalla main.js:lla L1-L3 kaatuvat."
+      "huomautus": "Piirtokokeen valinta lataa sivun (omistaja 22.9.2026 klo 23.05: v2133-kierroksen 3/5 kaappausta mittasi vanhaa koetta, koska sivua ei ladattu). L1 valikosta Syötekoe 'Kosketus suoraan' -> vihje 'Ladataan…', L2 sivu latautuu itse 600 ms:n jalkeen, L3 latauksen jalkeen overlay 'koe 2/8 Kosketus suoraan' (Syötekoe-valikko, omistaja 23.9.2026 klo 08.34), L6 latauksen jälkeen pallonSyote.touchLahde ilman 'seuraavassa latauksessa', L4 valinta ja paluu viiveen aikana ei lataa, L5 ei sivuvirheita. Chromium ja WebKit 5/5; vanhalla main.js:lla L1-L3 kaatuvat."
     },
     "savuke-liikemittari.mjs": {
       "env": {
@@ -721,6 +722,12 @@
         "SAVUKE_MOOTTORI": "webkit"
       },
       "huomautus": "KOE ?koe=vientibudjetti (omistaja 22.9.2026 klo 23.45: ei oletukseksi). Laattojen vienti vedon aikana budjetilla (omistajan iPad-kierros v2135/v2136 23.9.2026: eivienti pudotti >20 ms kehykset 25 % -> 8 %). Liikkeessa 1 vienti/kehys vain nakyvalle laatalle, ennakko 50 ms valein; levossa 2/kehys. Sama synteettinen veto 3 x 1,5 s, 500 px/s, Ranska alt 0,35, vain liikkeen kehykset: B0 esiehto vastakokeessa >= 10 vientia, B1 vastakoe oletus vie kaksi samassa kehyksessa, B2 budjetilla <= 1/kehys, B3 ennakkoja <= 21/s (kerroksen laskuri vedonEnnakkoja), B4 pohja (dc > 200) <= 15 % kehyksista, B5 levossa jono tyhja ja nakyvat taysin scenessa, B6 ei sivuvirheita. WebKit 7/7 useita kertoja; budjetti 37-43 vientia vs vanha 196-199; vanhalla koodilla B2 FAIL. Vanha tahti: pohja piirrossa 52-82 % vetokehyksista (haive kesken) = omistajan dc 431."
+    },
+    "savuke-paljas-kartta.mjs": {
+      "env": {
+        "SAVUKE_MOOTTORI": "webkit"
+      },
+      "huomautus": "Paljas kartta (Syotekoe 5-8, omistaja 23.9.2026 klo 09.20). Valinta laitteen muistissa kuten valikosta; sama nakyma normaalisti ja 4 paljaassa tilassa. K1 paljas dc <= 80 (mitattu 49, normaali 66), K2 kartan paalla 0 nakyvaa sivun elementtia (normaali 74), K3 valikkonappi nakyy ja avaa valikon, K4 lepopiirto pois + tilarivi 'koe 5/8 Paljas kartta', K5 vastakoe normaali, K6 puolitus (nimiot 51, symbolit 50 dc; DOM-tila 74 elementtia), K7 ei sivuvirheita. WebKit 7/7."
     }
   }
 }
