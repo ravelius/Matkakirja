@@ -80,6 +80,9 @@ namespace Matkakirja
 
         public void IlmoitaKaupunki(string id) => KaupunkiNapautettu?.Invoke(id);
 
+        /// <summary>Synteettinen napautus näytön pikseleinä (testikomento "napauta x y").</summary>
+        public void Napauta(Vector2 ruutu) => Napautettu?.Invoke(ruutu);
+
         /// <summary>
         /// Kosketusten esto (dialogi, lehti, linssin oma ele): kun tosi, pallo ei lue
         /// sormia eikä tunnista napautuksia. Käynnissä oleva liuku pysähtyy.
