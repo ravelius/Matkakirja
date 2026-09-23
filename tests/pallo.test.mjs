@@ -240,7 +240,17 @@ test('laatoitettu pallo: Mercator-laatat ämpäristä, z4-tekstuuri varana', asy
   // Liike jatkuu sormen irrottua: kitka ja kynnys (5.9.2026).
   const pallo2 = lue('../js/pallo.js');
   assert.match(pallo2, /const VAUHTI_KITKA = 0\.0028;/);
-  assert.match(pallo2, /requestAnimationFrame\(\(\) => liu\(/);
+  /*
+   * HEITON TÖKKÄYS (omistaja 23.9.2026, paljas kartta): liuku astuu
+   * kirjaston tickissä ennen renderiä (sovellaSyote), ei omassa rAF:ssa
+   * tickin jälkeen, ja sen kello jatkaa vedon aikajanaa. Vanha kaava
+   * jätti irrotuksen jälkeen kaksi renderiä ilman siirtymää.
+   */
+  assert.doesNotMatch(pallo2, /requestAnimationFrame\(\(\) => liu\(/, 'liuku ei astu omassa rAF:ssa');
+  assert.match(pallo2, /const sovellaSyote = \(\) => \{\n    const nyt = kehyksenHetki\(\);\n    paivitaKehysvali\(nyt\);\n    if \(vauhti\.liukuu\) \{ liu\(nyt\); return; \}/,
+    'liuku astuu tickissä ennen vetoa ja renderiä');
+  assert.match(pallo2, /vauhti\.liukuAika = vauhti\.aika;/, 'liu\'un kello alkaa viimeksi sovelletusta vetopaikasta');
+  assert.match(pallo2, /const tavoite = nyt - vauhti\.liukuViive;/, 'liuku seuraa samalla viiveellä kuin veto');
 });
 
 /*

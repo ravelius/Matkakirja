@@ -3651,10 +3651,44 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
   const VAUHTI_KYNNYS = 0.0006; // astetta/ms
   const vauhti = { lat: 0, lng: 0, aika: 0, raf: 0 };
   ui.pallonVauhti = vauhti; // mittausta varten (savukkeet)
-  const pysaytaLiuku = () => { if (vauhti.raf) cancelAnimationFrame(vauhti.raf); vauhti.raf = 0; };
-  const liu = (edellinen) => {
-    const nyt = performance.now();
-    const dt = Math.min(50, nyt - edellinen);
+  /*
+   * LIUKU ASTUU KIRJASTON TICKISSÄ, EI OMASSA rAF:SSA (omistaja 23.9.2026
+   * klo 12.4x, paljas kartta: *"siinäkin on yksi tökkäys yleensä, jos
+   * vedän kerran ja jätän kartan liikkumaan itsestään loppuun"*).
+   *
+   * MITATTU (tools/savukkeet/mittaa-heitto.mjs, WebKit, 4/4 heittoa):
+   * irrotuksen jälkeen KAKSI renderiä ilman siirtymää (~34 ms seisahdus)
+   * ennen kuin liuku lähti. Kaksi syytä:
+   *   1. Liu'un oma rAF rekisteröitiin pointerupissa, eli kirjaston tickin
+   *      JÄLKEEN — liu'un askel näkyi vasta seuraavassa renderissä, joten
+   *      irrotuksen jälkeinen ensimmäinen kehys piirtyi paikallaan.
+   *   2. rAF-kääre `() => liu(performance.now())` luki
+   *      lähtöhetken vasta takaisinkutsussa, joten ensimmäisen askeleen
+   *      dt oli ~0 ja toinenkin kehys seisoi.
+   * Nyt liuku astuu samassa paikassa kuin veto (`sovellaSyote`, ennen
+   * renderiä), ja sen kello jatkaa vedon aikajanaa: `aika` on viimeksi
+   * sovelletun vetopaikan hetki, ja joka askeleen tavoitehetki on
+   * kehyksen hetki miinus sama viive, jolla veto seurasi sormea. Ensimmäinen
+   * liukukehys siirtyy siis täyden kehyksen verran, kuten veto ennen sitä.
+   *
+   * `vauhti.raf` on yhä liu'un oma rAF-silmukka, mutta se vain pitää
+   * lepopiirron hereillä ja on "liukuu"-lippu muille (lauta.js vetoNyt,
+   * savukkeet). Jos kirjaston tick ei jostain syystä aja (tauko), silmukka
+   * astuu itse, jottei liuku jää roikkumaan.
+   */
+  const LIUKU_VARA_MS = 100;
+  const pysaytaLiuku = () => {
+    if (vauhti.raf) cancelAnimationFrame(vauhti.raf);
+    vauhti.raf = 0;
+    vauhti.liukuu = false;
+  };
+  const liu = (nyt) => {
+    if (!vauhti.liukuu) return;
+    vauhti.askelNyt = nyt;
+    const tavoite = nyt - vauhti.liukuViive;
+    const dt = Math.min(50, tavoite - vauhti.liukuAika);
+    if (!(dt > 0)) return; // sama kehys (update kahdesti) tai kello taaksepäin
+    vauhti.liukuAika = tavoite;
     const pov = pallo.pointOfView();
     const kohta = rajaaKohta(
       Math.max(-89.5, Math.min(89.5, pov.lat + vauhti.lat * dt)),
@@ -3666,8 +3700,15 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
     if (kohta.lngRajattu) vauhti.lng = 0;
     const vaimennus = Math.exp(-VAUHTI_KITKA * dt);
     vauhti.lat *= vaimennus; vauhti.lng *= vaimennus;
-    if (Math.hypot(vauhti.lat, vauhti.lng) > VAUHTI_KYNNYS) vauhti.raf = requestAnimationFrame(() => liu(nyt));
-    else vauhti.raf = 0;
+    if (!(Math.hypot(vauhti.lat, vauhti.lng) > VAUHTI_KYNNYS)) pysaytaLiuku();
+  };
+  const liukuSyke = () => {
+    if (!vauhti.liukuu) { vauhti.raf = 0; return; }
+    const nyt = performance.now();
+    if (nyt - vauhti.askelNyt > LIUKU_VARA_MS) liu(nyt);
+    if (!vauhti.liukuu) { vauhti.raf = 0; return; }
+    ilmoitaSyote();
+    vauhti.raf = requestAnimationFrame(liukuSyke);
   };
   /*
    * SYÖTE ON MUUTOSLÄHDE, JOTEN SE ILMOITTAA LEPOPIIRROLLE
@@ -3858,10 +3899,11 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
   const sovellaSyote = () => {
     const nyt = kehyksenHetki();
     paivitaKehysvali(nyt);
+    if (vauhti.liukuu) { liu(nyt); return; }
     if (syote.tapa === 'vanha') {
       // (1) v2097: viimeisin näyte sellaisenaan, kerran kehyksessä.
       const v = syote.veto;
-      if (v) { syote.veto = null; sovellaVeto(v.x, v.y, v.aika); }
+      if (v) { syote.veto = null; sovellaVeto(v.x, v.y, v.aika); syote.sovellusNyt = nyt; }
     } else if (syote.naytteet.length) {
       const n = syote.naytteet;
       const viimeinen = n[n.length - 1];
@@ -3922,6 +3964,7 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
       if (kohta) {
         syote.veto = null;
         sovellaVeto(kohta.x, kohta.y, kohta.t);
+        syote.sovellusNyt = nyt;
       }
     }
     if (syote.nipistys) { syote.nipistys = false; sovellaNipistys(); }
@@ -3948,10 +3991,19 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
     syote.veto = null; // irrotuksen jälkeen ei enää sovelleta
     tartunta = null;
     if (sormet.alhaalla > 0) return;
-    const seisahtunut = performance.now() - vauhti.aika > 150; // sormi pysähtyi ennen irrotusta
+    const nytP = performance.now();
+    const seisahtunut = nytP - vauhti.aika > 150; // sormi pysähtyi ennen irrotusta
     if (!ui.reducedMotion && !seisahtunut && Math.hypot(vauhti.lat, vauhti.lng) > VAUHTI_KYNNYS) {
       pysaytaLiuku();
-      vauhti.raf = requestAnimationFrame(() => liu(performance.now()));
+      // Liuku jatkaa vedon aikajanaa (ks. LIUKU ASTUU KIRJASTON TICKISSÄ):
+      // viive = kuinka paljon sovellettu vetopaikka oli kehyksen hetkeä jäljessä.
+      const viimeNyt = syote.sovellusNyt || nytP;
+      vauhti.liukuViive = Math.max(0, Math.min(2 * kehysvali, viimeNyt - vauhti.aika));
+      vauhti.liukuAika = vauhti.aika;
+      vauhti.askelNyt = nytP;
+      vauhti.liukuu = true;
+      ilmoitaSyote();
+      vauhti.raf = requestAnimationFrame(liukuSyke);
     }
     vauhti.aika = 0;
   };
