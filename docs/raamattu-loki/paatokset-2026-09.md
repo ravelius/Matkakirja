@@ -4431,3 +4431,7 @@ Käsketty: Sisältökirjuri poistaa pushatut worktreensä (PR:n ei tarvitse olla
 ## LEVY PALAUTUNUT 72 Gt VAPAATA; RAAMATTUUN WORKTREE-KATTO (3 PER ROOLI, POISTO PUSHIN JALKEEN, EI node_modules); CODEX: 5 MUOTOKUVAA LISAA (16/18), KUITATTU (24.9.2026 klo 18.37)
 
 Sisältökirjuri poisti 13 worktreetä, Natiiviseppä vanhat Build-kansiot (5,8 Gt), Julkaisija kaikki pr-worktreet (jono.sh poistaa edellisen ennen seuraavaa), Karttaseppä käsketty karsimaan kolmeen. Linssisepän lokien poisto (3,4 Gt + raakakuvien pienennys 1,2 → 0,1 Gt) skriptillä proto-3d/vapauta-levy-linssiseppa-20260924.sh — omistaja ajaa (lokikansioiden pysyvät poistot omistajalle). Codex-toimitus 7e455f60: Botticelli, Bellini, Piero di Cosimo, Fra Bartolomeo, Bronzino (osin myöhempiä kaiverruksia); Cima ja Fra Carnevale ilman varmaa kuvaa, ei sijaiskasvoja; kuitattu postilaatikkoon (612751936), Linssisepälle kohta 4.3. Build 10 odottaa Julkaise peli -ajoa 36020424867.
+
+## LEVY 82 Gt VAPAATA, wt/ 21 (TAVOITE < 20); KARTTASEPPA POISTI 7 (JALJELLA e28-ajo); NATIIVISEPALLA 9 → POSTIVAHTI PYYSI POISTOT (24.9.2026 klo 18.48)
+
+Aluenimet-worktree poistettu, haara pushattu (#3100). Saapuminen ja siirtokohteet säilyvät.
