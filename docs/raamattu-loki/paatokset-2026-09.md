@@ -4311,3 +4311,7 @@ Natiivi-UI:lla b10-jono 0e8ff30 testikäännöksessä, kuvaparit tulossa; luovut
 ## VIESTIRAJA NOLLATTU klo 18.2x: NATIIVI-UI:N LUOVUTUS (-h) JA NOLLAUS KASKETTY, SISALTOKIRJURIN N-ERAT ALOITETTU, POSTIVAHDIN ALOITUSVIESTIOHJE LAHETETTY (24.9.2026 klo 17.12)
 
 Kolme viestiä toimitettu omistajan 'tehty'-viestin jälkeen.
+
+## LINSSISEPPA b10d ISOLLA iPADILLA: LAMPUT WEBIN TASOLLA (PINOT VIELA HIMMEAMMAT), ISS-VIDEO, LINSSINIMET KYTKETTY; ASTROPULUN KUVAPARI ODOTTAA POLLOKOODIA KEHITYSAPISSA (24.9.2026 klo 17.16)
+
+Lamput: yksittäiset ka 69 vs 73–77, pinot 127 vs 174 → korjataan erikseen. ISS: proto-3d/lokit/linssit-iss-20260924/iss.mp4. Linssinimet: Natiivisepän kerros e8d95dd (kapiteeli 9,5/10,5 pt, pisteet) kytketty keksintöihin (linssiseppa/linssinimet f4a5a6d); nostonimet Natiivi-UI:n ehdolla, merinimet Siirtosepän viennillä (build 11). Astropulu: kehitys-App ID:n Keychainissa ei pöllökoodia → Fable: kuvapari odottaa, omistaja syöttää koodin itse; ei koodia sessioille.
