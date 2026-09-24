@@ -4467,3 +4467,7 @@ Julkaisija: build 9 allekirjoitettiin automaation varmenteella 'Apple Developmen
 ## LINSSISEPPA NOLLATTU (POSTIVAHTI): ALOITUSVIESTI HAARASTA linssiseppa-tyo-20260923 (klo 19.03), RC PAALLA; 5 h -KIINTIO 93 %, NOLLAUTUU 19.19 (24.9.2026 klo 19.08)
 
 Uusi Linssiseppä aloittaa radiouudistuksen suunnitelmasta ja löydöksestä 43.
+
+## SIVUVAIKUTUS: JULKAISIJAN AVAINNIPPUHAKULISTAN VAIHTO KATKAISEE gh-TOKENIN JA PUSHIT KAIKILTA koodaus-SESSIOILTA AJON AJAKSI (24.9.2026 klo 19.09)
+
+security list-keychains näyttää vain matkakirja-testflight + System; Fablen push epäonnistui ('could not read Username', gh: token invalid). Fable: ei hakulistan vaihtoa jatkossa; oikea korjaus poistaa login-avainnipusta vanhentunut 2RX77QMLHA-kehitysvarmenne (F72JLS57C5 personal), jolloin API-varmenne on ainoa F72JLS57C5:lle; RCD77XPB7M:n FD3S699799 jää kehityskäännöksille. Pushit jatkuvat kun ajo 36025102019 palauttaa listan.
