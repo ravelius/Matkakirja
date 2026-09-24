@@ -1,248 +1,183 @@
 {
   "versio": 2,
   "kaupunki": "venetsia",
-  "teksti": "Venetsiassa oven takana saattaa olla meri. Astuin aamulla majatalon portaille ja olin mennä kaupunkiin uimaan. Gondolieri tuli hakemaan ja piti ilmeensä ihailtavan suorana. Kuljimme palatsien ohi niin hiljaa, että kuulin lusikan osuvan kahvikuppiin yläkerrassa. Täällä taloilla on hienot julkisivut, mutta vesi pääsee kuuntelemaan niiden aamiaista.",
-  "tekstiSha256": "b50296f2a8bf6eaa8062938585c72d82ce480098fa0371f095bcdae996052ab4",
+  "teksti": "San Marcon kirkossa opas kertoi, kuinka Pyhän Markuksen ruumis oli tuotu Egyptistä sianlihan alla. Muslimivartijat olivat jättäneet korin tutkimatta. Katselin kultaisia mosaiikkeja. Minun laivastossani tällaisesta olisi seurannut kuulustelu. Venetsiassa oli rakennettu kirkko.",
+  "tekstiSha256": "3a88cfb0e91e8daad484c53fd87b50faf9a649bf08cbb8ced08b33f7a9cb87a5",
   "aani": {
     "nimi": "puhe-fokus-matkakirja-venetsia.mp3",
     "versio": 2,
-    "tavut": 433885,
-    "sha256": "d6361c2c5337e68b4c3a792b49243bf0fea24c157d2ac8593d38a60f7d7fc459"
+    "tavut": 373699,
+    "sha256": "bd406f392075e1e22d896ca36862576f2b4b78cf93ccb61016f69312798e33d8"
   },
-  "kesto": 27020,
+  "kesto": 23260,
   "sanat": [
     {
+      "sana": "San",
+      "alku": 180,
+      "loppu": 340
+    },
+    {
+      "sana": "Marcon",
+      "alku": 380,
+      "loppu": 800
+    },
+    {
+      "sana": "kirkossa",
+      "alku": 840,
+      "loppu": 1340
+    },
+    {
+      "sana": "opas",
+      "alku": 1420,
+      "loppu": 1660
+    },
+    {
+      "sana": "kertoi",
+      "alku": 1720,
+      "loppu": 2140
+    },
+    {
+      "sana": "kuinka",
+      "alku": 2500,
+      "loppu": 2780
+    },
+    {
+      "sana": "Pyhän",
+      "alku": 2840,
+      "loppu": 3080
+    },
+    {
+      "sana": "Markuksen",
+      "alku": 3140,
+      "loppu": 3660
+    },
+    {
+      "sana": "ruumis",
+      "alku": 3760,
+      "loppu": 4180
+    },
+    {
+      "sana": "oli",
+      "alku": 4240,
+      "loppu": 4400
+    },
+    {
+      "sana": "tuotu",
+      "alku": 4440,
+      "loppu": 4740
+    },
+    {
+      "sana": "Egyptistä",
+      "alku": 4840,
+      "loppu": 5700
+    },
+    {
+      "sana": "sianlihan",
+      "alku": 5800,
+      "loppu": 6460
+    },
+    {
+      "sana": "alla",
+      "alku": 6600,
+      "loppu": 6860
+    },
+    {
+      "sana": "Muslimivartijat",
+      "alku": 8660,
+      "loppu": 9640
+    },
+    {
+      "sana": "olivat",
+      "alku": 9700,
+      "loppu": 9960
+    },
+    {
+      "sana": "jättäneet",
+      "alku": 10020,
+      "loppu": 10540
+    },
+    {
+      "sana": "korin",
+      "alku": 10600,
+      "loppu": 10900
+    },
+    {
+      "sana": "tutkimatta",
+      "alku": 10960,
+      "loppu": 11760
+    },
+    {
+      "sana": "Katselin",
+      "alku": 12960,
+      "loppu": 13420
+    },
+    {
+      "sana": "kultaisia",
+      "alku": 13480,
+      "loppu": 14060
+    },
+    {
+      "sana": "mosaiikkeja",
+      "alku": 14100,
+      "loppu": 14960
+    },
+    {
+      "sana": "Minun",
+      "alku": 16700,
+      "loppu": 16940
+    },
+    {
+      "sana": "laivastossani",
+      "alku": 16980,
+      "loppu": 17760
+    },
+    {
+      "sana": "tällaisesta",
+      "alku": 17820,
+      "loppu": 18500
+    },
+    {
+      "sana": "olisi",
+      "alku": 18560,
+      "loppu": 18800
+    },
+    {
+      "sana": "seurannut",
+      "alku": 18860,
+      "loppu": 19320
+    },
+    {
+      "sana": "kuulustelu",
+      "alku": 19400,
+      "loppu": 20100
+    },
+    {
       "sana": "Venetsiassa",
-      "alku": 99,
-      "loppu": 859
+      "alku": 21580,
+      "loppu": 22180
     },
     {
-      "sana": "oven",
-      "alku": 899,
-      "loppu": 1100
+      "sana": "oli",
+      "alku": 22220,
+      "loppu": 22360
     },
     {
-      "sana": "takana",
-      "alku": 1179,
-      "loppu": 1519
+      "sana": "rakennettu",
+      "alku": 22400,
+      "loppu": 22960
     },
     {
-      "sana": "saattaa",
-      "alku": 1559,
-      "loppu": 1939
-    },
-    {
-      "sana": "olla",
-      "alku": 1979,
-      "loppu": 2200
-    },
-    {
-      "sana": "meri",
-      "alku": 2240,
-      "loppu": 2579
-    },
-    {
-      "sana": "Astuin",
-      "alku": 4039,
-      "loppu": 4360
-    },
-    {
-      "sana": "aamulla",
-      "alku": 4400,
-      "loppu": 4759
-    },
-    {
-      "sana": "majatalon",
-      "alku": 4819,
-      "loppu": 5299
-    },
-    {
-      "sana": "portaille",
-      "alku": 5339,
-      "loppu": 5879
-    },
-    {
-      "sana": "ja",
-      "alku": 6159,
-      "loppu": 6219
-    },
-    {
-      "sana": "olin",
-      "alku": 6259,
-      "loppu": 6399
-    },
-    {
-      "sana": "mennä",
-      "alku": 6460,
-      "loppu": 6679
-    },
-    {
-      "sana": "kaupunkiin",
-      "alku": 6739,
-      "loppu": 7339
-    },
-    {
-      "sana": "uimaan",
-      "alku": 7419,
-      "loppu": 7859
-    },
-    {
-      "sana": "Gondolieri",
-      "alku": 9079,
-      "loppu": 9699
-    },
-    {
-      "sana": "tuli",
-      "alku": 9760,
-      "loppu": 9920
-    },
-    {
-      "sana": "hakemaan",
-      "alku": 9979,
-      "loppu": 10519
-    },
-    {
-      "sana": "ja",
-      "alku": 10579,
-      "loppu": 10659
-    },
-    {
-      "sana": "piti",
-      "alku": 10719,
-      "loppu": 10920
-    },
-    {
-      "sana": "ilmeensä",
-      "alku": 11000,
-      "loppu": 11439
-    },
-    {
-      "sana": "ihailtavan",
-      "alku": 11539,
-      "loppu": 12059
-    },
-    {
-      "sana": "suorana",
-      "alku": 12159,
-      "loppu": 12599
-    },
-    {
-      "sana": "Kuljimme",
-      "alku": 14079,
-      "loppu": 14460
-    },
-    {
-      "sana": "palatsien",
-      "alku": 14519,
-      "loppu": 15059
-    },
-    {
-      "sana": "ohi",
-      "alku": 15179,
-      "loppu": 15399
-    },
-    {
-      "sana": "niin",
-      "alku": 15460,
-      "loppu": 15619
-    },
-    {
-      "sana": "hiljaa",
-      "alku": 15699,
-      "loppu": 16119
-    },
-    {
-      "sana": "että",
-      "alku": 16539,
-      "loppu": 16699
-    },
-    {
-      "sana": "kuulin",
-      "alku": 16819,
-      "loppu": 17119
-    },
-    {
-      "sana": "lusikan",
-      "alku": 17199,
-      "loppu": 17659
-    },
-    {
-      "sana": "osuvan",
-      "alku": 17739,
-      "loppu": 18040
-    },
-    {
-      "sana": "kahvikuppiin",
-      "alku": 18139,
-      "loppu": 18840
-    },
-    {
-      "sana": "yläkerrassa",
-      "alku": 18920,
-      "loppu": 19739
-    },
-    {
-      "sana": "Täällä",
-      "alku": 21840,
-      "loppu": 22059
-    },
-    {
-      "sana": "taloilla",
-      "alku": 22159,
-      "loppu": 22559
-    },
-    {
-      "sana": "on",
-      "alku": 22600,
-      "loppu": 22680
-    },
-    {
-      "sana": "hienot",
-      "alku": 22799,
-      "loppu": 23119
-    },
-    {
-      "sana": "julkisivut",
-      "alku": 23199,
-      "loppu": 23920
-    },
-    {
-      "sana": "mutta",
-      "alku": 24559,
-      "loppu": 24739
-    },
-    {
-      "sana": "vesi",
-      "alku": 24819,
-      "loppu": 25000
-    },
-    {
-      "sana": "pääsee",
-      "alku": 25100,
-      "loppu": 25439
-    },
-    {
-      "sana": "kuuntelemaan",
-      "alku": 25500,
-      "loppu": 26079
-    },
-    {
-      "sana": "niiden",
-      "alku": 26159,
-      "loppu": 26419
-    },
-    {
-      "sana": "aamiaista",
-      "alku": 26500,
-      "loppu": 27020
+      "sana": "kirkko",
+      "alku": 23020,
+      "loppu": 23260
     }
   ],
   "lauseet": [
-    99,
-    4039,
-    9079,
-    14079,
-    21840
+    180,
+    8660,
+    12960,
+    16700,
+    21580
   ],
-  "luotu": "2026-09-11T12:04:48.171Z"
+  "luotu": "2026-09-23T15:37:34.616Z"
 }

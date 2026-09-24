@@ -14,8 +14,12 @@
  *      kohdekortilla (Avignonin paavinpalatsi: kuva + kuvat).
  *   3. Generoitu kuva saa "Havainnekuva"-pientekstin lyhyeen
  *      kuvatekstiin (lahde alkaa "Tekoälyllä tuotettu havainnekuva.").
- *   4. Kuva pysyy samankokoisena pienestä kortista LISÄÄ-tilaan:
- *      korkeus LISÄÄ / pieni ≥ 0,8 (mitataan Chaîne des Puys, 2 kuvaa).
+ *   4. LISÄÄ-tilassa kuva pienenee palstaansa, mutta pysyy isona
+ *      (omistaja 22.9.2026 klo 23.06, v2136: *"ensin Kuva avautuu isona
+ *      ja kun klikkaa niin sitten kuva pienenee ja tulee teksti palsta
+ *      mukaan oikealle."*; Fablen raja 23.9.2026): korkeus LISÄÄ / pieni
+ *      ≥ 0,5 ja kuvan leveys ≥ 40 % kortin leveydestä (mitataan Chaîne
+ *      des Puys, 2 kuvaa). Vanha raja ≥ 0,8 oli ajalta ennen palstoja.
  *   5. Karuselli vaihtaa kuvaa pyyhkäisyllä (pointer-ele) ja
  *      nuolinäppäimillä (vasen/oikea), ei vain reunanuolista.
  *
@@ -213,8 +217,9 @@ for (const ruutu of RUUDUT) {
   if (KUVAKANSIO) await sivu.screenshot({ path: join(KUVAKANSIO, `nosto-lisaa-${ruutu.nimi}.png`) });
   const suhde = pieni.kuvaKorkeus ? lisaa.kuvaKorkeus / pieni.kuvaKorkeus : 0;
   tieto(`${ruutu.nimi} · kuvan korkeus pieni / LISÄÄ`, `${pieni.kuvaKorkeus} / ${lisaa.kuvaKorkeus} px (suhde ${suhde.toFixed(2)})`);
-  vaadi(`${ruutu.nimi} · 4. kuva pysyy lähes samankokoisena LISÄÄ-tilassa (≥ 0,8 × pieni)`,
-    suhde >= 0.8 && suhde <= 1.05, `suhde ${suhde.toFixed(2)}`);
+  const osuus = lisaa.kuva && lisaa.kortti?.w ? lisaa.kuva.w / lisaa.kortti.w : 0;
+  vaadi(`${ruutu.nimi} · 4. LISÄÄ-tilassa kuva pysyy isona (≥ 0,5 × vaihe 1, ≥ 40 % kortin leveydestä)`,
+    suhde >= 0.5 && suhde <= 1.05 && osuus >= 0.4, `suhde ${suhde.toFixed(2)}, leveysosuus ${osuus.toFixed(2)}`);
   vaadi(`${ruutu.nimi} · 1a. täkynoston kortissa ei ole työpolkulähderiviä`,
     lisaa.lahderivi.length === 0 && !TYOPOLKU.test(lisaa.lahderivi.join(' ')) && lisaa.teksti > 200,
     JSON.stringify(lisaa.lahderivi));

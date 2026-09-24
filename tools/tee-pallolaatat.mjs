@@ -6,6 +6,18 @@
  *        [--ulos pallolaatat-ulos] [--alue lon0,lat0,lon1,lat1] [--tunniste b]
  *        [--osa i/n] [--noutovali ms]
  *        [--luettelo <paikallinen pyramidi.json>] [--lahde <kansio>]
+ *        [--relief <reliefipyramidi.json: osoite tai polku>]
+ *
+ * RELIEFISARJA (--relief, Linssiseppä 23.9.2026: natiivin
+ * topografialinssi on Cesiumin rasterikerros, joka lukee vain Web
+ * Mercator- tai Geographic-tiilitystä). Lähteenä on reliefipyramidi
+ * (matkakirja/reliefipyramidi/<versio>/, sama Miller-arkki kuin pohjalla,
+ * z0–z7) ja tulos menee sen alle: <versio>/pallo/{Z}/{X}/{Y}.jpg,
+ * Z0–Z8. Geometria (projektio, rajaus) tulee pohjan luettelosta, koska
+ * reliefin luettelossa niitä ei ole (reliefinLuettelo). Relief on
+ * täysvärikartta ilman julisteen kehystä ja reunavarjoa, joten
+ * alakehystä ei vähennetä, reunaa ei nosteta, ja kartan ulkopuoli
+ * jatkaa reunarivin sävyä sarakkeittain (ei pergamentin merta ja jäätä).
  *
  * SHARDIT (--osa i/n, 7.9.2026). Sarja on 87 381 laattaa tasoille 0–8, ja
  * yhtenä prosessina se kesti Mac Studiolla noin kolme tuntia YHDELLÄ
@@ -177,7 +189,9 @@ export const SAVYN_TASOITUS = 12;
  * Julisteen meri on eri sävyinen eri kohdissa (varjostus), joten
  * täyte otetaan siitä merestä, johon se liittyy.
  */
-export const MERI_MITTAUS = { pohjoinen: { lon: 0 }, etela: { lon: -130 }, sisaan: REUNAN_NOSTO + 0.6 };
+export const MERI_MITTAUS = {
+  pohjoinen: { lon: 0 }, etela: { lon: -130 }, sisaan: REUNAN_NOSTO + 0.6, aukko: { lon: -170, lat: 0 },
+};
 const MERI_VARA = MERI_SAVY;
 const RAD = Math.PI / 180;
 /** Lähdelaattoja välimuistissa kerrallaan (512 × 512 × 4 t ≈ 1 Mt kukin). */
@@ -335,6 +349,11 @@ async function noudaLaatta(url, yrityksia = 9) {
  * tarvittava kerros/taso on kansiossa, ja kaatuu heti jos ei ole.
  */
 let lahdeKansio = null;
+/** Lähdepyramidin juuri ämpärissä (reliefisarjassa matkakirja/reliefipyramidi/). */
+let pyramidiJuuri = 'julisteet/pyramidi/';
+export function asetaPyramidiJuuri(juuri) {
+  pyramidiJuuri = juuri;
+}
 /** Paikallinen lähdekansio (sama rakenne kuin ämpärin julisteet/pyramidi/). */
 export function asetaLahde(kansio) {
   lahdeKansio = kansio || null;
@@ -354,7 +373,7 @@ async function noudaPyramidi(polku) {
     return readFileSync(tiedosto);
   }
   lahdeTilasto.verkosta += 1;
-  return noudaLaatta(`${JULKINEN_JUURI}julisteet/pyramidi/${polku}`);
+  return noudaLaatta(`${JULKINEN_JUURI}${pyramidiJuuri}${polku}`);
 }
 
 /**
@@ -483,7 +502,7 @@ function teeLukija(luettelo, sharp, { nostot = false, ranta = true } = {}) {
     const x = ((Math.floor(px) % W) + W) % W;
     const y = Math.min(taso.korkeus - 1, Math.max(0, Math.floor(py)));
     const k = muisti.get(`${z}/${Math.floor(x / L)}/${Math.floor(y / L)}`);
-    if (!k) { const m = meri?.pohjoinen ?? MERI_VARA; ulos[o] = m[0]; ulos[o + 1] = m[1]; ulos[o + 2] = m[2]; return; }
+    if (!k) { const m = meri?.aukko ?? meri?.pohjoinen ?? MERI_VARA; ulos[o] = m[0]; ulos[o + 1] = m[1]; ulos[o + 2] = m[2]; return; }
     const i = ((y % L) * k.w + (x % L)) * 4;
     ulos[o] = k.data[i]; ulos[o + 1] = k.data[i + 1]; ulos[o + 2] = k.data[i + 2];
   }
@@ -514,6 +533,13 @@ function teeLukija(luettelo, sharp, { nostot = false, ranta = true } = {}) {
     meri = {
       pohjoinen: await mittaa(MERI_MITTAUS.pohjoinen.lon, vali.pohjoinen - MERI_MITTAUS.sisaan),
       etela: await mittaa(MERI_MITTAUS.etela.lon, vali.etela + MERI_MITTAUS.sisaan),
+      /*
+       * RELIEFIN AUKKO: reliefipyramidi 20260920 on vailla arkin itäisintä
+       * osittaista laattasaraketta (z7 sarakkeet 167–168, lon −178,75…−175,
+       * mitattu 23.9.2026). Puuttuva lähdelaatta on reliefissä avomerta,
+       * joten se täytetään Tyynenmeren syvän meren sävyllä, ei Jäämeren.
+       */
+      aukko: luettelo.relief ? await mittaa(MERI_MITTAUS.aukko.lon, MERI_MITTAUS.aukko.lat) : null,
     };
     return meri;
   }
@@ -550,6 +576,33 @@ export function julisteenLeveysvali(luettelo) {
   return { pohjoinen, etela };
 }
 
+/**
+ * Reliefisarjan luettelo: reliefipyramidin tasot ja arkki, pohjan
+ * projektio ja rajaus (reliefin luettelossa niitä ei ole; arkki on sama,
+ * mikä tarkistetaan). Ei kehystä eikä kerroksia (viivat, ranta, nostot).
+ */
+export function reliefinLuettelo(pohja, relief, versio) {
+  const a = pohja.arkki; const b = relief.arkki;
+  if (!a || !b || ['x', 'y', 'w', 'h'].some((k) => Math.abs(a[k] - b[k]) > 1e-6)) {
+    throw new Error(`--relief: reliefin arkki ${JSON.stringify(b)} ei ole pohjan arkki ${JSON.stringify(a)}`);
+  }
+  return {
+    versio,
+    relief: true,
+    lahde: relief.lahde ?? null,
+    projektio: pohja.projektio,
+    arkki: relief.arkki,
+    rajaus: pohja.rajaus,
+    kehys: {},
+    laatta: relief.laatta ?? 512,
+    // Reliefin tasoilla ei ole pikseliaPerYksikko-kenttää (arkinPikseli).
+    tasot: relief.tasot.map((t) => ({ ...t, pikseliaPerYksikko: t.leveys / pohja.projektio.leveys })),
+  };
+}
+
+/** Reliefisarjan ämpärikansio: reliefipyramidin versio + pallo/. */
+export const reliefinKansio = (versio) => `matkakirja/reliefipyramidi/${versio}/pallo/`;
+
 /** Laskee yhden Mercator-laatan RGB-puskurin. */
 export async function laskeLaatta(luettelo, lukija, Z, X, Y) {
   const z = lahdetaso(Z);
@@ -569,6 +622,7 @@ export async function laskeLaatta(luettelo, lukija, Z, X, Y) {
     await lukija.varmista(z, a0.px, px1, Math.min(a0.py, a1.py), Math.max(a0.py, a1.py));
   }
   const meret = await lukija.mittaaMeri();
+  const relief = Boolean(luettelo.relief);
   /*
    * Reunarivien lähdelaatat ja sarakesävyt VAIN reunalaatoille (laatta
    * ulottuu täytteeseen tai reunakaistaan). Kansion c ensimmäinen ajo
@@ -614,7 +668,8 @@ export async function laskeLaatta(luettelo, lukija, Z, X, Y) {
           const keski = summa.map((v) => Math.round(v / k));
           const lum = (keski[0] + keski[1] + keski[2]) / 3;
           const kyllainen = Math.abs(keski[0] - keski[1]) > 18 || Math.abs(keski[1] - keski[2]) > 34;
-          if (!kyllainen && lum >= 150 && lum <= 235) savy = keski;
+          // Reliefissä kelpaa vain vesi (sininen): maa (Grönlanti) ei saa venyä täytteeksi.
+          if (relief ? keski[2] > keski[0] + 50 && keski[2] > keski[1] + 10 : (!kyllainen && lum >= 150 && lum <= 235)) savy = keski;
         }
         raaka.push(savy);
       }
@@ -659,13 +714,13 @@ export async function laskeLaatta(luettelo, lukija, Z, X, Y) {
       const o = (r * LAATTA + s) * 3;
       const a = kartalla ? arkinPikseli(luettelo, taso, lon, lat) : null;
       if (!a) {
-        const tayte = tayteRivilla(lat, reunanSavy(s, puoli));
+        const tayte = relief ? reunanSavy(s, puoli) : tayteRivilla(lat, reunanSavy(s, puoli));
         ulos[o] = tayte[0]; ulos[o + 1] = tayte[1]; ulos[o + 2] = tayte[2];
         continue;
       }
       // Lähin pikseli riittää: lähdetaso on aina tiheämpi kuin kohde.
       lukija.pikseli(z, a.px, a.py, ulos, o);
-      if (reuna > 0) nostaReuna(ulos, o, reunanSavy(s, puoli), reuna);
+      if (reuna > 0 && !relief) nostaReuna(ulos, o, reunanSavy(s, puoli), reuna);
     }
   }
   return ulos;
@@ -794,12 +849,28 @@ async function paa() {
   const luettelopolku = lippu('--luettelo');
   const lahde = lippu('--lahde');
   asetaLahde(lahde);
-  const luettelo = luettelopolku
+  const pohjaLuettelo = luettelopolku
     ? JSON.parse(readFileSync(luettelopolku, 'utf8'))
     : await noudaJson(LUETTELO);
-  const kansio = laattojenKansio(luettelo.versio, nostot, tunniste);
+  /*
+   * RELIEFISARJA: `--relief` on reliefipyramidi.jsonin osoite tai polku;
+   * versio on sen kansion nimi (…/reliefipyramidi/<versio>/…).
+   */
+  const reliefLahde = lippu('--relief');
+  let luettelo = pohjaLuettelo;
+  let kansio = laattojenKansio(pohjaLuettelo.versio, nostot, tunniste);
+  if (reliefLahde) {
+    const versio = /reliefipyramidi\/([^/]+)\//.exec(reliefLahde)?.[1];
+    if (!versio) throw new Error(`--relief: polusta ei löydy reliefipyramidi/<versio>/ (${reliefLahde})`);
+    if (nostot || tunniste) throw new Error('--relief: ei --nostot- eikä --tunniste-lippua');
+    const relief = /^https?:/.test(reliefLahde) ? await noudaJson(reliefLahde) : JSON.parse(readFileSync(reliefLahde, 'utf8'));
+    luettelo = reliefinLuettelo(pohjaLuettelo, relief, versio);
+    asetaPyramidiJuuri('matkakirja/reliefipyramidi/');
+    kansio = reliefinKansio(versio);
+  }
   const lista = osanLaatat(min, max, alue, osa);
   const yhteensa = lista.length;
+  if (luettelo.relief) console.log(`reliefi ${luettelo.versio} (pohjan geometria ${pohjaLuettelo.versio})`);
   console.log(`pyramidi ${luettelo.versio}, viivat ${luettelo.viivataso?.versio ?? '-'}, `
     + `ranta ${ranta ? (luettelo.rantataso?.versio ?? '-') : 'ei'}, `
     + `nostot ${nostot ? (luettelo.nostotaso?.versio ?? '-') : 'ei'}, `
@@ -882,6 +953,8 @@ export function kirjoitaLuettelo(ulos, luettelo, {
     ranta: ranta ? (luettelo.rantataso?.versio ?? null) : null,
     nostot: nostot ? (luettelo.nostotaso?.versio ?? null) : null,
     ...(tunniste ? { tunniste } : {}),
+    // Reliefisarjan lähde (ETOPO 2022, public domain) attribuutiota varten.
+    ...(luettelo.relief ? { relief: true, lahde: luettelo.lahde } : {}),
     tasot: { min, max },
     laatta: LAATTA,
     muoto: 'jpg',

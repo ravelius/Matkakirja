@@ -38,6 +38,26 @@
  *
  * SYÖTE SUORISTAA: pointerdown tai rulla → suoristus 250 ms:ssa.
  * Reduced motion: ei kallistusta lainkaan.
+ *
+ * ── PYSYVÄ KALLISTUS (valikon kytkin, Fable 23.9.2026) ─────────────
+ *
+ * Omistaja ei nähnyt esittelyä: se ajaa vain maan saapumisessa, ja
+ * testitila "Suoraan kartalle" ohittaa sen. Valikon Kartta-osion kytkin
+ * "Kallistus" (localStorage `matkakirja-kallistus` = '1', osoitteessa
+ * `?koe=kallistuspysyva`) pitää kallistuksen päällä myös vedossa ja
+ * zoomissa, jotta tuntuman voi arvioida laitteella. Kulma
+ * KALLISTUS_PYSYVA_KULMA, vertailuun `?kallistuskulma=30`
+ * (iPhone-mittaus 20° vs 30°). Erot esittelyyn:
+ *
+ *   - syöte ei suorista; eleet (js/pallo.js pallonSyoteUpdate) ajetaan
+ *     kuten ennen, vain kirjaston oma update ohitetaan lipulla
+ *     `ohjaimet.__kirjastoOhi` — veto lukee sormen kohdan kallistetulla
+ *     osumalla ja nipistys ankkuroi kallistetun kameran kautta;
+ *   - kortteja ei piiloteta (ei `pallolauta-kallistettu`-luokkaa) ja
+ *     ladonta ajaa: nimiöt projisoidaan todellisella kameralla
+ *     (getScreenCoords), joten ele-este on vain kulman muuttuessa;
+ *   - kirjaston oma tween (ms > 0) suoristaa hetkeksi ja kulma palaa
+ *     sen jälkeen; esittelyä ei ajeta. Ei oletus.
  */
 import { kameranKehys, pinnanRuutupiste } from '../pallolaatat.js';
 
@@ -54,13 +74,33 @@ export const KALLISTUS_RAJA_KERROIN = 0.6;
 export const USVAN_LIUKU = 0.12;
 /** Syötteen jälkeinen suoristus (ms). */
 export const KALLISTUS_SUORISTUS_MS = 250;
-/** Kehittäjäkytkin (Syötekoe-valikon ulkopuolella). */
+/** Valikon kytkin (Kartta → Kallistus): '1' = pysyvä kallistus. */
 export const KALLISTUS_AVAIN = 'matkakirja-kallistus';
+/** Pysyvän kallistuksen kulma (°), Fable 23.9.2026: 20–25°. */
+export const KALLISTUS_PYSYVA_KULMA = 22;
+/** Pysyvä kallistus palaa kirjaston tweenin jälkeen tämän viiveen päästä (ms). */
+export const KALLISTUS_PALUU_MS = 150;
 
-/** Onko koe päällä: `?koe=kallistus` tai localStorage-kytkin. */
+/**
+ * Kallistuksen tila: 'pysyva' (kytkin tai `?koe=kallistuspysyva`),
+ * 'esittely' (`?koe=kallistus`, vaihe 1) tai null.
+ */
+export function kallistusTila(kokeet, ikkuna = globalThis) {
+  if (kokeet?.has?.('kallistuspysyva')) return 'pysyva';
+  try { if (ikkuna.localStorage?.getItem(KALLISTUS_AVAIN) === '1') return 'pysyva'; } catch { /* ei muistia */ }
+  return kokeet?.has?.('kallistus') ? 'esittely' : null;
+}
+
+/** Onko kallistus asennettava (kumpi tahansa tila). */
 export function kallistusKaytossa(kokeet, ikkuna = globalThis) {
-  if (kokeet?.has?.('kallistus')) return true;
-  try { return ikkuna.localStorage?.getItem(KALLISTUS_AVAIN) === '1'; } catch { return false; }
+  return kallistusTila(kokeet, ikkuna) !== null;
+}
+
+/** Pysyvän kallistuksen kulma: `?kallistuskulma=` (5…KALLISTUS_MAX) tai oletus. */
+export function pysyvaKallistuskulma(ikkuna = globalThis) {
+  let arvo = NaN;
+  try { arvo = Number(new URLSearchParams(ikkuna.location?.search ?? '').get('kallistuskulma')); } catch { arvo = NaN; }
+  return Number.isFinite(arvo) && arvo >= 5 ? Math.min(KALLISTUS_MAX, arvo) : KALLISTUS_PYSYVA_KULMA;
 }
 
 const pehmea = (t) => (t < 0.5 ? 4 * t * t * t : 1 - ((-2 * t + 2) ** 3) / 2);
@@ -74,8 +114,12 @@ const rajaa = (k) => Math.max(0, Math.min(KALLISTUS_MAX, Number(k) || 0));
  * @param {HTMLElement} p.kotelo
  * @param {HTMLElement} [p.kuori]  laudan kuori (piilotusluokka)
  * @param {object} [p.ui]     reducedMotion
+ * @param {boolean} [p.pysyva]  pysyvä kallistus (valikon kytkin)
+ * @param {number} [p.pysyvaKulma]
  */
-export function asennaKallistus({ pallo, kotelo, kuori = null, ui = null, ikkuna = globalThis }) {
+export function asennaKallistus({
+  pallo, kotelo, kuori = null, ui = null, ikkuna = globalThis, pysyva = false, pysyvaKulma = KALLISTUS_PYSYVA_KULMA,
+}) {
   if (!pallo?.pointOfView || !pallo.camera || !pallo.controls) return null;
   const alkuperainen = pallo.pointOfView;
   const kamera = pallo.camera();
@@ -102,8 +146,16 @@ export function asennaKallistus({ pallo, kotelo, kuori = null, ui = null, ikkuna
     kotelo?.appendChild(usva);
   }
   const luokat = (paalla) => {
+    // Pysyvässä tilassa kortit jäävät: ne ankkuroidaan todellisella kameralla.
+    if (pysyva) return;
     for (const el of [kotelo, kuori, ikkuna.document?.body]) el?.classList?.toggle('pallolauta-kallistettu', paalla);
   };
+  /*
+   * ELEET JÄÄVÄT PYSYVÄSSÄ TILASSA: js/pallo.js pallonSyoteUpdate ajaa
+   * vedon ja nipistyksen ja ohittaa kirjaston updaten lipulla. Ilman
+   * sitä käärettä (esim. testit) update ohitetaan kokonaan kuten ennen.
+   */
+  const lipulla = () => pysyva && alkuperainenUpdate?.name === 'pallonSyoteUpdate';
   const sade = () => pallo.getGlobeRadius?.() ?? 100;
   const kallistusKentta = () => ({
     kulma, suunta, raja: rajaKerroin * Math.max(0.005, virtuaalinen?.altitude ?? 0),
@@ -148,6 +200,8 @@ export function asennaKallistus({ pallo, kotelo, kuori = null, ui = null, ikkuna
     ohjaimet.target.set(a.n.x * R, a.n.y * R, a.n.z * R);
     kamera.lookAt(ohjaimet.target);
     kamera.updateMatrixWorld();
+    // Pinnanlukijalle (js/pallolaatat.js pinnanPiste): sormen ja zoomin ankkuri.
+    kamera.__kallistusPov = { ...virtuaalinen, kallistus: kallistusKentta() };
     if (usva) asetaUsva(R);
     for (const f of kuuntelijat) f();
   };
@@ -162,7 +216,8 @@ export function asennaKallistus({ pallo, kotelo, kuori = null, ui = null, ikkuna
     // Vaiheessa 1 kamera-ajot ovat pelin omia rAF-ajoja (ms 0); kirjaston
     // oma tween kallistuksen aikana olisi uusi polku, joten se suoristaa.
     if (ms > 0) {
-      suorista({ kesto: 0 });
+      animoi({ kulma: 0, kesto: 0 });
+      palaaMyohemmin(ms + KALLISTUS_PALUU_MS);
       return alkuperainen.call(pallo, pov, ms);
     }
     virtuaalinen = uusi;
@@ -176,7 +231,8 @@ export function asennaKallistus({ pallo, kotelo, kuori = null, ui = null, ikkuna
     virtuaalinen = { lat: pov.lat, lng: pov.lng, altitude: pov.altitude };
     paalla = true;
     pallo.pointOfView = kaare;
-    ohjaimet.update = () => false;
+    if (lipulla()) ohjaimet.__kirjastoOhi = true;
+    else ohjaimet.update = () => false;
     luokat(true);
   };
   const irrota = () => {
@@ -185,7 +241,9 @@ export function asennaKallistus({ pallo, kotelo, kuori = null, ui = null, ikkuna
     paalla = false;
     pallo.pointOfView = alkuperainen;
     ohjaimet.update = alkuperainenUpdate;
+    delete ohjaimet.__kirjastoOhi;
     kamera.up.copy(ylosAlussa);
+    delete kamera.__kallistusPov;
     kulma = 0;
     luokat(false);
     if (usva) usva.style.opacity = '0';
@@ -245,7 +303,7 @@ export function asennaKallistus({ pallo, kotelo, kuori = null, ui = null, ikkuna
    * ylhäältä-näkymään. Syöte keskeyttää (suoristus 250 ms).
    */
   const esittele = async ({ kulma: k = 25, kaari = 20, kesto = 6000 } = {}) => {
-    if (ui?.reducedMotion) return false;
+    if (ui?.reducedMotion || pysyva) return false;
     // Keskeytetty vaihe (syöte, uusi kallistus) ratkeaa false: esittely väistyy.
     if (!await animoi({ kulma: k, suunta: 0, kesto: 900 })) return false;
     if (!await animoi({ kulma: k, suunta: 0, kesto, kaari })) return false;
@@ -269,14 +327,33 @@ export function asennaKallistus({ pallo, kotelo, kuori = null, ui = null, ikkuna
     return peruttu ? false : esittele();
   };
 
-  const syote = () => { if (paalla) suorista({ kesto: KALLISTUS_SUORISTUS_MS }); };
+  const syote = () => { if (paalla && !pysyva) suorista({ kesto: KALLISTUS_SUORISTUS_MS }); };
+
+  /*
+   * PYSYVÄ KULMA TAKAISIN: kirjaston tweenin jälkeen (ks. kaare) ja
+   * asennuksen jälkeen, kun kamera on asettunut. Ajastin on yksi; uusi
+   * pyyntö siirtää sitä.
+   */
+  let paluu = 0;
+  function palaaMyohemmin(ms) {
+    if (!pysyva || ui?.reducedMotion) return;
+    if (paluu) ikkuna.clearTimeout?.(paluu);
+    paluu = ikkuna.setTimeout?.(() => {
+      paluu = 0;
+      if (!paalla && !animaatio) animoi({ kulma: pysyvaKulma, suunta: 0, kesto: 700 });
+    }, ms) ?? 0;
+  }
+  palaaMyohemmin(1200);
   kotelo?.addEventListener('pointerdown', syote, { capture: true });
   kotelo?.addEventListener('wheel', syote, { capture: true, passive: true });
 
   return {
-    /** Onko kamera kallistettu (lauta.js: lepoladonta odottaa). */
-    kaynnissa: () => paalla,
-    tila: () => ({ paalla, kulma, suunta, virtuaalinen: virtuaalinen ? { ...virtuaalinen } : null }),
+    /**
+     * Onko kallistus ele (lauta.js: lepoladonta odottaa). Pysyvässä
+     * tilassa vain kulman muuttuessa: vakaa kallistus ei ole ele.
+     */
+    kaynnissa: () => (pysyva ? paalla && animaatio !== 0 : paalla),
+    tila: () => ({ paalla, kulma, suunta, pysyva, virtuaalinen: virtuaalinen ? { ...virtuaalinen } : null }),
     /** Kehittäjälle: kallista({ kulma, suunta, kesto }). */
     kallista: ({ kulma: k = 20, suunta: s = suunta, kesto = 800, raja } = {}) => {
       // Kehittäjälle ja mittarille: horisonttirajan kerroin (× korkeus, rad).
@@ -290,6 +367,8 @@ export function asennaKallistus({ pallo, kotelo, kuori = null, ui = null, ikkuna
     /** Kuuntelija jokaiselle kameran asetukselle (lauta: ladonta, usva). */
     kuuntele: (f) => { kuuntelijat.add(f); return () => kuuntelijat.delete(f); },
     pura: () => {
+      if (paluu) ikkuna.clearTimeout?.(paluu);
+      paluu = 0;
       pysayta();
       irrota();
       kotelo?.removeEventListener('pointerdown', syote, { capture: true });

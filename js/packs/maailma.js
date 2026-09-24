@@ -613,11 +613,11 @@ export const MAAILMA = {
       'Kone nousee. Isoisän kirja aukeaa sylissäni kuin se olisi odottanut tätä hetkeä.',
     ],
     intro: 'Peli alkaa! Etsikää Magellanin kompassi — maailmanympäripurjehtijan kadonnut aarre.',
-    starFound: (name, city) => `◈ ${name} löysi MAGELLANIN KOMPASSIN kaupungista ${city}!`,
+    starFound: '◈ {name} löysi MAGELLANIN KOMPASSIN kaupungista {city}!',
     starToast: 'MAGELLANIN KOMPASSI!',
     starChase: 'Nyt on kiire kotiin — ensimmäisenä perille ehtinyt voittaa pelin.',
     winStar: 'toi Magellanin kompassin turvallisesti kotiin',
-    winnerStar: (name, money) => `${name} toi Magellanin kompassin kotiin ${money} punnan kanssa.`,
+    winnerStar: '{name} toi Magellanin kompassin kotiin {money} punnan kanssa.',
     // Saapumismerkinnät: yksi arvotaan laudalle saavuttaessa.
     diaries: [
       'Isoisä kiersi tämän pallon kahdeksassakymmenessä päivässä ja piti sitä saavutuksena. Nykyään sen tekee vuorokaudessa kuka tahansa, jolla on varaa lippuun. Minä aion käyttää aikaa — katsoakseni, mitä hän ei ehtinyt nähdä.',

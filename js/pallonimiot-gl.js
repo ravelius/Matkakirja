@@ -192,6 +192,8 @@ attribute float skaala;    // css-px per rasterin px kertoimella 1
 attribute vec2 siirto;     // ladonnan siirto maapisteestä, css-px kertoimella 1
 attribute vec2 katto;      // koon kerroin = min(kerroin * a, b)
 attribute float syke;      // 1 = hehkupiste sykkii levossa (uniform sykeKerroin), 0 = ei
+attribute vec4 haivytys;   // (alku s, kesto s, mistä, mihin); alku < 0 = ei häivytystä (HÄIVYTYS GPU:LLA)
+uniform float haivytysAika; // s rungon luonnista (sama kello kuin haivytys.x)
 uniform float sykeKerroin; // pisteen koon kerroin juuri nyt (1 = lepo/liike ilman sykettä)
 uniform vec2 ruutu;        // ruutu laitepikseleinä
 uniform float kerroin;     // kuoren kerroin (nimiöiden koko zoomin mukaan)
@@ -211,7 +213,9 @@ void main() {
   clip.xy += px * 2.0 / ruutu * clip.w;
   gl_Position = clip;
   vUv = uvKoord;
-  vPeitto = peitto * edessa;
+  float p = peitto;
+  if (haivytys.x >= 0.0) p = mix(haivytys.z, haivytys.w, clamp((haivytysAika - haivytys.x) / max(haivytys.y, 0.001), 0.0, 1.0));
+  vPeitto = p * edessa;
 }
 `;
 
@@ -333,6 +337,25 @@ export function luoNimiokerrosGL({
   const likaa = () => { likainen = true; pallo?.__piirto?.tarvitaan(); };
   let kerroinNyt = 1;
   let sykeNyt = 1;
+  /*
+   * HÄIVYTYS GPU:LLA (sulavuuserä 3, omistajan kierros 23.9.2026 klo
+   * 12.22: "Paljas + symbolit" yksin max 134 ms ja >20 ms 33 % — paljas
+   * 7 % — ja puskurikirjoituksia 6,4 kehyksessä; täysissä tiloissa 17–22
+   * kirjoitusta/kehys ja pitkiä kehyksiä 25–28 %). Kirjoituksista valtaosa
+   * oli häivytysten peittoja: `peitto()` kirjoitti joka kehyksessä jokaisen
+   * häipyvän instanssin neljä kulmaa ja merkitsi attribuutin ladattavaksi —
+   * GPU:n juuri lukemaan puskuriin, mikä Safarin GPU-prosessissa odottaa
+   * edellisen kehyksen valmistumista (pitkien kehysten aika oli "vapaa",
+   * ei pääsäikeen työtä). Mitattu WebKit zoomissa: 462/502 kirjoitusta
+   * oli häivytyksen peittoja.
+   *
+   * Nyt häivytys kirjoitetaan KERRAN, instanssin mukana (alku, kesto,
+   * mistä, mihin), ja varjostin laskee peiton `haivytysAika`-uniformista.
+   * Häivytyksen aikana puskureihin ei kirjoiteta mitään.
+   */
+  const aikaPohja = ikkuna.performance?.now?.() ?? Date.now();
+  const haivytysSekunteina = (h) => (h && Number.isFinite(h.alku) && h.kestoMs > 0
+    ? [Math.max(0, (h.alku - aikaPohja) / 1000), h.kestoMs / 1000, h.mista, h.mihin] : null);
   const ruutu = { x: 1, y: 1 };
   let purettu = false;
 
@@ -393,6 +416,7 @@ export function luoNimiokerrosGL({
         dpr: { value: 1 },
         haive: { value: GLNIMIOT_HORISONTIN_HAIVE },
         sykeKerroin: { value: 1 },
+        haivytysAika: { value: 0 },
       },
       vertexShader: VERTEX,
       fragmentShader: FRAGMENT,
@@ -613,6 +637,7 @@ export function luoNimiokerrosGL({
       const siirto = new Float32Array(n * 4 * 2);
       const katto = new Float32Array(n * 4 * 2);
       const syke = new Float32Array(n * 4);
+      const haivytys = new Float32Array(n * 4 * 4);
       // Indeksit TAVALLISENA TAULUKKONA: setIndex valitsee itse Uint16/Uint32-
       // attribuutin. Scenestä luettu BufferAttribute on Float32-aliluokka,
       // ja liukulukuindeksit antoivat INVALID_ENUMin (piirto katosi hiljaa).
@@ -638,6 +663,9 @@ export function luoNimiokerrosGL({
           siirto[j * 2] = inst.dx; siirto[j * 2 + 1] = -inst.dy;
           katto[j * 2] = inst.kattoA; katto[j * 2 + 1] = inst.kattoB;
           syke[j] = inst.syke ? 1 : 0;
+          const h = inst.haivytys;
+          haivytys[j * 4] = h ? h[0] : -1; haivytys[j * 4 + 1] = h ? h[1] : 1;
+          haivytys[j * 4 + 2] = h ? h[2] : 0; haivytys[j * 4 + 3] = h ? h[3] : 0;
         }
         const b = i * 4;
         indeksit[i * 6] = b; indeksit[i * 6 + 1] = b + 2; indeksit[i * 6 + 2] = b + 1;
@@ -652,6 +680,7 @@ export function luoNimiokerrosGL({
       g.setAttribute('siirto', new L.BufferAttribute(siirto, 2));
       g.setAttribute('katto', new L.BufferAttribute(katto, 2));
       g.setAttribute('syke', new L.BufferAttribute(syke, 1));
+      g.setAttribute('haivytys', new L.BufferAttribute(haivytys, 4));
       g.setIndex(indeksit);
       g.setDrawRange(0, n * 6);
       sivu.verkko.visible = n > 0;
@@ -664,6 +693,8 @@ export function luoNimiokerrosGL({
   };
 
   return {
+    /** Häivytys kulkee instanssin mukana ja etenee varjostimessa (HÄIVYTYS GPU:LLA). */
+    gpuHaivytys: true,
     /**
      * Instanssi kerrokseen: rasteri (kuva, w, h, ankkuriX, ankkuriY) avaimella
      * `avain` — sama avain käyttää samaa atlaspaikkaa. Palauttaa true, jos
@@ -671,7 +702,7 @@ export function luoNimiokerrosGL({
      */
     aseta(id, {
       lat, lng, avain, rasteri = null, peitto = 1, opacity = null,
-      skaala = 1, dx = 0, dy = 0, katto = null, syke = false,
+      skaala = 1, dx = 0, dy = 0, katto = null, syke = false, haivytys = null,
     }) {
       if (purettu || !Number.isFinite(lat) || !Number.isFinite(lng) || !avain) return false;
       const uv = uvt.get(avain) ?? (rasteri ? varaaRasteri(avain, rasteri) : null);
@@ -682,6 +713,7 @@ export function luoNimiokerrosGL({
         dx: Number(dx) || 0, dy: Number(dy) || 0,
         kattoA: Number.isFinite(katto?.a) ? katto.a : 1, kattoB: Number.isFinite(katto?.b) ? katto.b : 1e6,
         syke: Boolean(syke),
+        haivytys: haivytysSekunteina(haivytys),
         piste: glMaapiste(lat, lng, sade),
       });
       likaa();
@@ -731,6 +763,8 @@ export function luoNimiokerrosGL({
       const inst = instanssit.get(id);
       if (!inst) return;
       inst.peitto = Math.max(0, Math.min(1, arvo));
+      // Käynnissä oleva GPU-häivytys ohittaisi peiton: pois, ja rakennus kirjoittaa sen.
+      if (inst.haivytys) { inst.haivytys = null; likaa(); return; }
       const attr = !likainen && inst.sivu ? inst.sivu.geometria.getAttribute('peitto') : null;
       if (!attr || !(inst.kulmaAlku >= 0) || inst.kulmaAlku + 3 >= attr.count) { likaa(); return; }
       if (jaassa(eiPuskuri)) { mittarit.jaadytettyja += 1; return; }
@@ -764,8 +798,9 @@ export function luoNimiokerrosGL({
         s.materiaali.uniforms.ruutu.value.set(ruutu.x, ruutu.y);
         s.materiaali.uniforms.kerroin.value = kerroinNyt;
         s.materiaali.uniforms.sykeKerroin.value = sykeNyt;
+        s.materiaali.uniforms.haivytysAika.value = ((ikkuna.performance?.now?.() ?? Date.now()) - aikaPohja) / 1000;
         s.materiaali.uniforms.dpr.value = suhde;
-        mittarit.uniformeja += 4;
+        mittarit.uniformeja += 5;
         if (s.likainen && jaassa(eiVienti)) { mittarit.jaadytettyja += 1; continue; }
         if (s.likainen) {
           s.tekstuuri.needsUpdate = true; s.likainen = false; s.viety = true;
