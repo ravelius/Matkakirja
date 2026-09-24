@@ -3527,3 +3527,7 @@ Julkaisijalle ilmoitettu.
 ## JULKAISIJA: FABLE-HAARAN SYNKKAUS VALMIS — MAIN YHDISTETTY claude/bold-ride-vow4ki:HIN (ca24b63bd, Matkakirja-fable FAST-FORWARD), DOCS + RAAMATTU + LOKI MAINISSA #3040 (klo 09.5x); .claude/settings.json JA tools/mac JAIVAT HAARAAN; MAINISSA MYOS #3041 (BUILD 5 MUUTOSLOKIRIVI), N8–N12 (v2158–v2162), #3046, #2985; NYT #3003 → EHDOTUKSET-WORKER, SITTEN N13–N16 JA ERA 2; #3038 PIDOSSA (PELIKOODARIN DOM-EHDOT KESKEN); sahke-worker UUDELLEEN KUN OMISTAJA ILMOITTAA (24.9.2026 klo 10.46)
 
 Fable jatkaa haarassa; Julkaisija synkkaa mainiin päivittäin.
+
+## FABLE NOLLAA ITSENSA klo 10.5x (73 %): LUOVUTUS viesti-fable-luovutus-20260924-b.md, ALOITUS viesti-fable-aloitus.md; POSTIVAHTI LAHETTAA ALOITUSVIESTIN KUN list_events = 0; OMISTAJA STUDIOLLA ~11.45 (D1-OIKEUS) (24.9.2026 klo 10.51)
+
+Kaava: Fable kutsuu clear_session self tämän vuoron lopussa.
