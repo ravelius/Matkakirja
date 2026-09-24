@@ -44,9 +44,18 @@ namespace Matkakirja
         [Header("Ohjaus")]
         [Tooltip("Liukuman hiipumisen aikavakio sekunteina.")]
         public double liukuAika = 0.35;
-        [Tooltip("Lähin näkymä: kapeamman suunnan kaari asteina. Verkkopelin lähin on 3,6° " +
-                 "(PALLOLAUDAN_SIIRTOLEVEYS); lähempänä pallolaattojen Z8 venyy sumeaksi.")]
-        public double minKaari = 3.6;
+        // LÄHIN ZOOMI WEBIN MUKAAN (omistajan build 9 -löydös 26, 24.9.2026; WEB ON MALLI, MITATTUNA):
+        // web js/pallolauta/kamera.js (origin/main 24.9.) 375 PALLOLAUDAN_LAHIN_LEVEYS = SIIRTOLEVEYS 120 / 2 = 60
+        // lautayksikköä RUUDUN LEVEYDELLÄ (lauta 12000 = 360°, eli 1,8°); 428–432 puhelin (leveys ≤ 480 css px ja
+        // dpr ≥ 2) pääsee yhden portaan syvemmälle, kerroin 1,5 → 40 yksikköä = 1,2° (Raamattu KARTTAUUDISTUKSEN
+        // PAATOKSET 34 kohta 15 c). Korkeus kuten 276 korkeusLeveydesta: leveys / (kuvasuhde · 2 tan(fov/2)).
+        // Aiempi natiivi 3,6° kapeammassa suunnassa oli siirtonäkymän leveys eikä lähin zoomi.
+        [Tooltip("Lähin näkymä: ruudun leveys lautayksikköinä (web PALLOLAUDAN_LAHIN_LEVEYS 60 = 1,8°).")]
+        public double lahinLeveys = 60.0;
+        [Tooltip("Puhelimen lähizoomin syvennys (web PUHELIMEN_LAHIZOOMIN_KERROIN).")]
+        public double puhelimenLahizoomi = 1.5;
+        [Tooltip("Kapean ruudun raja pisteinä, jota pidetään puhelimena (web PUHELIMEN_RUUTU_PX).")]
+        public double puhelimenRuutuPt = 480.0;
         [Tooltip("Kuinka suuren osan kapeammasta kuvakulmasta pallo täyttää kaukaisimmillaan.")]
         public double taytto = 0.92;
         public double maxLeveys = 80.0;
@@ -65,8 +74,6 @@ namespace Matkakirja
 
         [Tooltip("Korkeus (km), jonka yläpuolella kallistus on nolla; väliltä se liukuu.")]
         public double kallistusRajaKm = 3000.0;
-        [Tooltip("Kallistusasteita näytön pisteelle kahden sormen pystyvedossa.")]
-        public double kallistusHerkkyys = 0.25;
 
         [Header("Napautus")]
         [Tooltip("Suurin liike näytön pisteinä, joka vielä on napautus.")]
@@ -458,11 +465,19 @@ namespace Matkakirja
             return r / math.sin(PuoliKulma() * taytto) - r;
         }
 
-        /// <summary>Korkeus, jolla kapeampi suunta näyttää <see cref="minKaari"/> astetta.</summary>
+        /// <summary>
+        /// Lähin korkeus: ruudun leveys näyttää <see cref="lahinLeveys"/> lautayksikköä (puhelimella syvemmälle),
+        /// webin lahinKorkeus (js/pallolauta/kamera.js 442) samalla kaavalla.
+        /// </summary>
         public double MinKorkeus()
         {
             double r = CesiumWgs84Ellipsoid.GetMaximumRadius();
-            return math.radians(minKaari) * r / (2.0 * math.tan(PuoliKulma()));
+            var kamera = GetComponent<Camera>();
+            double tanPysty = math.tan(math.radians(kamera != null ? kamera.fieldOfView : 50.0) / 2.0);
+            double kuvasuhde = kamera != null ? kamera.aspect : 1.0;
+            bool puhelin = Screen.width / (double)Kerroin <= puhelimenRuutuPt && Kerroin >= 2f;
+            double asteet = lahinLeveys * 360.0 / 12000.0 / (puhelin ? math.max(1.0, puhelimenLahizoomi) : 1.0);
+            return math.radians(asteet) * r / (2.0 * tanPysty * math.max(0.01, kuvasuhde));
         }
 
         /// <summary>Korkeus, jolla kapeampi suunta näyttää annetun kaaren (asteina).</summary>
@@ -570,12 +585,9 @@ namespace Matkakirja
                 if (n == edellinenSormia)
                 {
                     float2 siirto = keski - edellinenKeski;
-                    if (n >= 2)
-                    {
-                        // Kahden sormen pystyveto kallistaa (kuten Apple Mapsissa), vaakaveto pyörittää.
-                        kallistus = math.clamp(kallistus - siirto.y / Kerroin * kallistusHerkkyys, 0, KallistusRaja());
-                        siirto.y = 0;
-                    }
+                    // Kahden sormen kallistus POIS (omistajan build 9 -löydös 25, 24.9.2026): se häiritsi; kallistusta
+                    // käytetään toistaiseksi vain animoiduissa kamera-ajoissa (lento, saapuminen, linssit). Kahden
+                    // sormen veto siirtää karttaa kuten yhden sormen veto.
                     Kierra(siirto, dt);
                     if (n >= 2 && edellinenVali > 1f && vali > 1f)
                         korkeus = math.clamp(korkeus * edellinenVali / vali, MinKorkeus(), MaxKorkeus());
