@@ -3987,4 +3987,71 @@ export const SAATIEDOT = {
       + '17–24 asteeseen. Sadetta on rannalla vähän — saaren '
       + 'ylängöllä sitä kertyy moninkertaisesti enemmän.',
   },
+
+  /*
+   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N11-kaupungit): Open-Meteon
+   * ERA5-arkisto, 1991–2020, otosvuodet 1992/2006/2020 koko vuodelta
+   * (tools/hae-saaperusdata.mjs); ylin/alin: tools/hae-saanormaalit.mjs
+   * --vain ahaggar,gao,kamerun,suakin,viktoria. Asemat: Tamanrasset
+   * (Ahaggar, n. 1400 m), Gao, Buea (Kamerunvuoren juurella), Suakin,
+   * Mwanza (Viktoriajärven ranta).
+   */
+  ahaggar: {
+    lat: 22.7850,
+    lon: 5.5228,
+    keskilampo: [11.8, 15.7, 18.8, 23.6, 26.5, 30.1, 29.5, 28.9, 26.7, 23.4, 15.8, 13.8],
+    ylin: [19, 22, 26, 31, 33, 36, 36, 35, 33, 30, 22, 21],
+    alin: [5, 9, 12, 16, 20, 24, 23, 23, 21, 17, 10, 7],
+    sade: [5, 1, 1, 0, 0, 0, 1, 0, 2, 2, 0, 0],
+    luonnehdinta: 'Ahaggarin vuoriston korkeus (n. 1400 metriä) '
+      + 'tekee talvesta viileän, 12 astetta, kun ympäröivä Sahara '
+      + 'on lämpimämpi. Kesäkuussa lämpötila kohoaa 30 asteeseen. '
+      + 'Sadetta ei käytännössä ole.',
+  },
+  gao: {
+    lat: 16.2666,
+    lon: -0.0500,
+    keskilampo: [22.1, 25.3, 28.6, 32.9, 34.8, 36, 33.1, 31, 32.8, 32.3, 26.6, 24.2],
+    ylin: [30, 33, 37, 41, 43, 42, 39, 36, 39, 39, 34, 32],
+    alin: [15, 18, 20, 25, 27, 30, 27, 26, 27, 26, 19, 16],
+    sade: [2, 0, 0, 0, 2, 2, 23, 53, 8, 1, 0, 0],
+    luonnehdinta: 'Gaossa toukokuu on polttavan kuuma, yli 34 '
+      + 'astetta, ja lämpötila pysyy korkeana läpi vuoden. Sadetta '
+      + 'kertyy vain lyhyen sadekauden aikana heinä–elokuussa.',
+  },
+  kamerun: {
+    lat: 4.1553,
+    lon: 9.2920,
+    keskilampo: [24, 24.4, 24.2, 24, 23.5, 22.4, 21.2, 21.1, 21.5, 22.4, 23.1, 23.6],
+    ylin: [27, 27, 27, 27, 26, 25, 23, 23, 24, 25, 26, 26],
+    alin: [21, 21, 21, 21, 21, 20, 19, 19, 19, 20, 20, 21],
+    sade: [52, 70, 203, 166, 201, 346, 929, 835, 840, 307, 141, 39],
+    luonnehdinta: 'Kamerunvuoren juurella on maailman '
+      + 'sateisimpia paikkoja: heinäkuu ja elokuu kastelevat '
+      + 'seutua yli 800 millimetrillä, ja koko vuoden kertymä on '
+      + 'moninkertainen Keski-Euroopan lukuihin verrattuna.',
+  },
+  suakin: {
+    lat: 19.1058,
+    lon: 37.3321,
+    keskilampo: [21.6, 21.6, 23.4, 25.7, 29.3, 31.8, 33.3, 34.3, 32.2, 29.2, 25.8, 23.2],
+    ylin: [24, 24, 27, 29, 33, 36, 38, 39, 37, 33, 28, 25],
+    alin: [19, 19, 20, 22, 26, 27, 28, 30, 28, 26, 24, 21],
+    sade: [35, 17, 5, 4, 2, 0, 1, 5, 2, 22, 103, 68],
+    luonnehdinta: 'Suakinissa kesä (kesä–syyskuu) on polttava, '
+      + 'yli 32 astetta, ja sade puuttuu kokonaan. Marraskuu tuo '
+      + 'Punaisenmeren rannikolle vuoden ainoan runsaan sadekauden.',
+  },
+  viktoria: {
+    lat: -2.5164,
+    lon: 32.9175,
+    keskilampo: [22.6, 22.8, 22.7, 22.2, 22.3, 22.5, 22.3, 22.3, 22.7, 22.4, 21.6, 21.4],
+    ylin: [25, 25, 25, 25, 25, 26, 26, 25, 26, 25, 24, 23],
+    alin: [20, 20, 20, 20, 20, 19, 19, 19, 20, 20, 19, 19],
+    sade: [130, 155, 208, 204, 91, 31, 7, 44, 91, 219, 297, 294],
+    luonnehdinta: 'Viktoriajärven rannalla lämpötila pysyy '
+      + 'tasaisen leutona, 21–23 astetta ympäri vuoden. Sadetta '
+      + 'kertyy kahdessa kaudessa: maalis–huhtikuussa ja '
+      + 'loka–joulukuussa, heinäkuu on selvästi kuivin.',
+  },
 };
