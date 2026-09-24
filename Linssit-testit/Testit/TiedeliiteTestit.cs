@@ -140,5 +140,23 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(kl < k0 && k0 < ki, $"länsi {kl:F2} < keski {k0:F2} < itä {ki:F2}");
             Oleta.Sama(Keski(-170), Keski(-100), "toive rajataan reunaan");
         }
+    
+        [Testi] static void KartanLamppuSiirtaaPysakkiinKutenWebissa()
+        {
+            // web napautaValoa: nykyinen vain pysäyttää, muu siirtyy tauolle.
+            var a = A();
+            var y = new ValeYmparisto { Kuvasuhde = 0.7, Nakokulma = 50 };
+            var l = new KeksinnotLinssi(a, new TyhjaNakyma());
+            Oleta.Sama(false, l.NapautaValoa(3), "kiinni");
+            l.Avaa(y); l.Kaynnista();
+            for (int k = 0; k < 60 * 2; k++) { y.Kello += 1 / 60.0; l.Paivita(); }
+            Oleta.Tosi(l.NapautaValoa(5));
+            Oleta.Sama(5, l.Ajo.Tila.I);
+            Oleta.Sama(false, l.Ajo.Kaynnissa, "tauolla");
+            l.Ajo.Jatka();
+            Oleta.Tosi(l.NapautaValoa(l.Ajo.Tila.I), "nykyinen");
+            Oleta.Sama(false, l.Ajo.Kaynnissa, "nykyinen pysäyttää");
+            Oleta.Sama(false, l.NapautaValoa(a.Pysakit.Count), "ohi");
+        }
     }
 }

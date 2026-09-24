@@ -48,6 +48,12 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public static Vector2? NostonPiste(string tunnus) => Instanssi != null ? Instanssi.Ruutupiste(tunnus) : null;
 
+        /// <summary>
+        /// Löytöpaikan lamppua napautettiin (web napautaValoa kertomuskaarella → nostokortti.avaa):
+        /// Natiivi-UI avaa paikan nostokortin tunnuksella.
+        /// </summary>
+        public static Action<string> LamppuNapautettu;
+
         /// <summary>Auki oleva kerros (null, kun ihmisen matka ei ole auki).</summary>
         public static IhmisenMatkaKerros Instanssi { get; private set; }
 
@@ -83,7 +89,16 @@ namespace Matkakirja.Natiivi
             bool vahennetty = LinssiOhjain.Instanssi?.VahennettyLiike ?? false;
             k.valot = Matkakirja.Natiivi.Valot.Luo(g, paikat.Select(p => (p.Tunnus, p.Lat, p.Lon)).ToList(), vahennetty, kierto.GetComponent<Camera>());
             k.taivas = Tahtitaivas.Luo(g, 1, vahennetty);
+            kierto.Napautettu += k.Napautettu;
             return k;
+        }
+
+        void Napautettu(Vector2 ruutu)
+        {
+            var t = valot?.Osuma(ruutu);
+            if (t == null) return;
+            LinssiOhjain.Instanssi?.Kirjaa("ihmisen matka: lamppu " + t);
+            LamppuNapautettu?.Invoke(t);
         }
 
         /// <summary>Lasketut vanat piirtoon (kutsutaan, kun taustalaskenta on valmis).</summary>
@@ -190,6 +205,7 @@ namespace Matkakirja.Natiivi
 
         void OnDestroy()
         {
+            if (kierto != null) kierto.Napautettu -= Napautettu;
             if (Instanssi == this) Instanssi = null;
             valot?.Pura();
             vanat?.Pura();

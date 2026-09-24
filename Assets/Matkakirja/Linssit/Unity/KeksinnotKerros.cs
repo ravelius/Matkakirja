@@ -25,8 +25,12 @@ namespace Matkakirja.Natiivi
         /// <summary>Onko UI:ssa esittelylaatikko; ilman sitä kello käynnistyy itse.</summary>
         public static bool EsittelyUIssa;
 
+        /// <summary>Lamppua napautettiin (pysäkin indeksi; web napautaValoa). Sovitin kutsuu linssiä.</summary>
+        public event Action<int> ValoNapautettu;
+
         Valot valot;
         Tummennus tummennus;
+        PalloKierto kierto;
         List<(double Lat, double Lon)> paikat;
         List<string> tunnukset;
         int nykyinen = -1;
@@ -43,6 +47,8 @@ namespace Matkakirja.Natiivi
                 LinssiOhjain.Instanssi?.VahennettyLiike ?? false, kierto.GetComponent<Camera>(), tummallaPohjalla: true);
             k.paikat = a.Pysakit.Select(p => p.Paalu ? (double.NaN, double.NaN) : (p.Lat, p.Lon)).ToList();
             k.tummennus = Tummennus.Luo(kierto, go.transform);
+            k.kierto = kierto;
+            kierto.Napautettu += k.Napautettu;
             return k;
         }
 
@@ -96,6 +102,16 @@ namespace Matkakirja.Natiivi
             LoppuKasittelija?.Invoke();
         }
 
-        void OnDestroy() => valot?.Pura();
+        void Napautettu(Vector2 ruutu)
+        {
+            var t = valot?.Osuma(ruutu);
+            if (t != null && int.TryParse(t, out int i)) ValoNapautettu?.Invoke(i);
+        }
+
+        void OnDestroy()
+        {
+            if (kierto != null) kierto.Napautettu -= Napautettu;
+            valot?.Pura();
+        }
     }
 }
