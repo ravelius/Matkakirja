@@ -1,6 +1,6 @@
 {
   "tilaus": "posti/fable-kuvaputki-radiopaneeli-tekstuurit-20260924.md",
-  "tila": "Tekstuuriosuus toimitettu R2:een ja tarkistettu; viitekuvat seuraavat erikseen",
+  "tila": "Tekstuurit ja viitekuvat toimitettu R2:een ja tarkistettu",
   "tekstuurit": [
     {
       "nimi": "dark-lacquered-wood-color-2048.png",
@@ -513,7 +513,236 @@
       "huomiot": "Color map is sRGB; normal-gl and roughness are linear data maps. Do not sample data maps as sRGB."
     }
   ],
-  "viitekuvat": [],
-  "todennus": "R2-kokorunko luettu takaisin; HTTP 200, image/png, mitat, tavut, SHA-256 ja CORS tarkistettu. Värikartoissa upotettu sRGB ICC; normal- ja roughness-kartat ovat lineaarisia datakarttoja.",
+  "viitekuvat": [
+    {
+      "nimi": "01-telefunken-1950.jpg",
+      "tyyppi": "radio",
+      "aikakausi": "c. 1950",
+      "url": "https://media.matkakirja.app/linssit/radio/viitekuvat/01-telefunken-1950.jpg",
+      "sha256": "9e52982e4a00ae943b4f2ccb4d96c324e3ebc662792e84a1206e2fb2a168f035",
+      "tavut": 202567,
+      "mitat": [
+        960,
+        787
+      ],
+      "lahde": "https://commons.wikimedia.org/wiki/File:Radio_Telefunken_1950.jpg",
+      "lahdeTiedosto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Radio_Telefunken_1950.jpg/960px-Radio_Telefunken_1950.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "tekija": "Ricce",
+      "lisenssi": "PD-self",
+      "lisenssiUrl": "https://commons.wikimedia.org/wiki/File:Radio_Telefunken_1950.jpg",
+      "attribuutio": "Ricce; https://commons.wikimedia.org/wiki/File:Radio_Telefunken_1950.jpg; PD-self (JPG/sRGB-muunnos Matkakirja)",
+      "huomiot": "Radion tai VU-mittarin toteutusviite; ei pelissä näytettävä kuva."
+    },
+    {
+      "nimi": "02-radionette-kurer-1950.jpg",
+      "tyyppi": "radio",
+      "aikakausi": "1950–1957",
+      "url": "https://media.matkakirja.app/linssit/radio/viitekuvat/02-radionette-kurer-1950.jpg",
+      "sha256": "90492d8e8d41f130075ca9fc4a9feb4286793453e62b1e94131a079a2800c382",
+      "tavut": 202666,
+      "mitat": [
+        960,
+        776
+      ],
+      "lahde": "https://commons.wikimedia.org/wiki/File:Radionette_kurer_front.png",
+      "lahdeTiedosto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Radionette_kurer_front.png/960px-Radionette_kurer_front.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "tekija": "Sindre Skrede",
+      "lisenssi": "PD-self",
+      "lisenssiUrl": "https://commons.wikimedia.org/wiki/File:Radionette_kurer_front.png",
+      "attribuutio": "Sindre Skrede; https://commons.wikimedia.org/wiki/File:Radionette_kurer_front.png; PD-self (JPG/sRGB-muunnos Matkakirja)",
+      "huomiot": "Radion tai VU-mittarin toteutusviite; ei pelissä näytettävä kuva."
+    },
+    {
+      "nimi": "03-ducretet-thomson-1955.jpg",
+      "tyyppi": "radio",
+      "aikakausi": "c. 1955",
+      "url": "https://media.matkakirja.app/linssit/radio/viitekuvat/03-ducretet-thomson-1955.jpg",
+      "sha256": "2a8243efa9edd138e39cff77eff4080f933b34bf22e5f9ac9747cab29c800445",
+      "tavut": 178829,
+      "mitat": [
+        960,
+        720
+      ],
+      "lahde": "https://commons.wikimedia.org/wiki/File:Ducretet-Thomson.jpg",
+      "lahdeTiedosto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Ducretet-Thomson.jpg/960px-Ducretet-Thomson.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "tekija": "Tangopaso",
+      "lisenssi": "PD-self",
+      "lisenssiUrl": "https://commons.wikimedia.org/wiki/File:Ducretet-Thomson.jpg",
+      "attribuutio": "Tangopaso; https://commons.wikimedia.org/wiki/File:Ducretet-Thomson.jpg; PD-self (JPG/sRGB-muunnos Matkakirja)",
+      "huomiot": "Radion tai VU-mittarin toteutusviite; ei pelissä näytettävä kuva."
+    },
+    {
+      "nimi": "04-punane-ret-1940s.jpg",
+      "tyyppi": "radio",
+      "aikakausi": "late 1940s–early 1950s",
+      "url": "https://media.matkakirja.app/linssit/radio/viitekuvat/04-punane-ret-1940s.jpg",
+      "sha256": "002f2db82da0b1389850012f87e22836d7d40f26215a2b6c9a6d4da7c250d2bf",
+      "tavut": 146997,
+      "mitat": [
+        960,
+        629
+      ],
+      "lahde": "https://commons.wikimedia.org/wiki/File:Raadio_Punane_Ret.jpg",
+      "lahdeTiedosto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Raadio_Punane_Ret.jpg/960px-Raadio_Punane_Ret.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "tekija": "Saaremaa Muuseum SA",
+      "lisenssi": "CC0-1.0",
+      "lisenssiUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attribuutio": "Saaremaa Muuseum SA; https://commons.wikimedia.org/wiki/File:Raadio_Punane_Ret.jpg; CC0-1.0 (JPG/sRGB-muunnos Matkakirja)",
+      "huomiot": "Radion tai VU-mittarin toteutusviite; ei pelissä näytettävä kuva."
+    },
+    {
+      "nimi": "05-toshiba-6sc19-1955.jpg",
+      "tyyppi": "radio",
+      "aikakausi": "c. 1955",
+      "url": "https://media.matkakirja.app/linssit/radio/viitekuvat/05-toshiba-6sc19-1955.jpg",
+      "sha256": "7f94dc8845bd629dde6dc8ce23eeef2f2e6787a68f5048fd72cf9ab4350935c9",
+      "tavut": 140034,
+      "mitat": [
+        960,
+        630
+      ],
+      "lahde": "https://commons.wikimedia.org/wiki/File:Toshiba_Vacuum_tube_Radio.jpg",
+      "lahdeTiedosto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Toshiba_Vacuum_tube_Radio.jpg/960px-Toshiba_Vacuum_tube_Radio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "tekija": "Masaki Ikeda",
+      "lisenssi": "PD-self",
+      "lisenssiUrl": "https://commons.wikimedia.org/wiki/File:Toshiba_Vacuum_tube_Radio.jpg",
+      "attribuutio": "Masaki Ikeda; https://commons.wikimedia.org/wiki/File:Toshiba_Vacuum_tube_Radio.jpg; PD-self (JPG/sRGB-muunnos Matkakirja)",
+      "huomiot": "Radion tai VU-mittarin toteutusviite; ei pelissä näytettävä kuva."
+    },
+    {
+      "nimi": "06-philco-pt44-front.jpg",
+      "tyyppi": "radio",
+      "aikakausi": "1940s",
+      "url": "https://media.matkakirja.app/linssit/radio/viitekuvat/06-philco-pt44-front.jpg",
+      "sha256": "0559963b853bad4b2135566e407a2a0ed9e2c5e3dc6cf15ccdb245e54e03384e",
+      "tavut": 157847,
+      "mitat": [
+        960,
+        719
+      ],
+      "lahde": "https://commons.wikimedia.org/wiki/File:Philco_radio_model_PT44_front.jpg",
+      "lahdeTiedosto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Philco_radio_model_PT44_front.jpg/960px-Philco_radio_model_PT44_front.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "tekija": "Armstrong1113149",
+      "lisenssi": "PD-self",
+      "lisenssiUrl": "https://commons.wikimedia.org/wiki/File:Philco_radio_model_PT44_front.jpg",
+      "attribuutio": "Armstrong1113149; https://commons.wikimedia.org/wiki/File:Philco_radio_model_PT44_front.jpg; PD-self (JPG/sRGB-muunnos Matkakirja)",
+      "huomiot": "Radion tai VU-mittarin toteutusviite; ei pelissä näytettävä kuva."
+    },
+    {
+      "nimi": "07-ferranti-255-1956.jpg",
+      "tyyppi": "radio",
+      "aikakausi": "1956",
+      "url": "https://media.matkakirja.app/linssit/radio/viitekuvat/07-ferranti-255-1956.jpg",
+      "sha256": "9a383f5bfccbd11fa69a308a9c8618ea9441516ac24d91e9ee9f2c0a2e29a094",
+      "tavut": 149758,
+      "mitat": [
+        960,
+        720
+      ],
+      "lahde": "https://commons.wikimedia.org/wiki/File:Ferranti_Model_255_vacuum_tube_radio,_1956_(24826639262).jpg",
+      "lahdeTiedosto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Ferranti_Model_255_vacuum_tube_radio%2C_1956_%2824826639262%29.jpg/960px-Ferranti_Model_255_vacuum_tube_radio%2C_1956_%2824826639262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "tekija": "Alex Liivet",
+      "lisenssi": "CC0-1.0",
+      "lisenssiUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attribuutio": "Alex Liivet; https://commons.wikimedia.org/wiki/File:Ferranti_Model_255_vacuum_tube_radio,_1956_(24826639262).jpg; CC0-1.0 (JPG/sRGB-muunnos Matkakirja)",
+      "huomiot": "Radion tai VU-mittarin toteutusviite; ei pelissä näytettävä kuva."
+    },
+    {
+      "nimi": "08-analog-vu-meter.jpg",
+      "tyyppi": "meter",
+      "aikakausi": "analog reference (photo 2006)",
+      "url": "https://media.matkakirja.app/linssit/radio/viitekuvat/08-analog-vu-meter.jpg",
+      "sha256": "786aefa8f57fe4e6eb4a228073779b9e19f924f8039192cb5d2f4d597d32f503",
+      "tavut": 33692,
+      "mitat": [
+        728,
+        426
+      ],
+      "lahde": "https://commons.wikimedia.org/wiki/File:VU_Meter.jpg",
+      "lahdeTiedosto": "https://upload.wikimedia.org/wikipedia/commons/f/f2/VU_Meter.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "tekija": "Iainf",
+      "lisenssi": "CC-BY-2.5",
+      "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5/",
+      "attribuutio": "Iainf; https://commons.wikimedia.org/wiki/File:VU_Meter.jpg; CC-BY-2.5 (JPG/sRGB-muunnos Matkakirja)",
+      "huomiot": "Radion tai VU-mittarin toteutusviite; ei pelissä näytettävä kuva."
+    },
+    {
+      "nimi": "09-emley-obstruction-lights.jpg",
+      "tyyppi": "tower",
+      "aikakausi": null,
+      "url": "https://media.matkakirja.app/linssit/radio/viitekuvat/09-emley-obstruction-lights.jpg",
+      "sha256": "b1a7cef958ab4e79af505ef08e94002e94bb6746843b6e10ec6e1619d70cee0a",
+      "tavut": 41467,
+      "mitat": [
+        683,
+        1024
+      ],
+      "lahde": "https://commons.wikimedia.org/wiki/File:Emley_Moor_Tower_by_night.jpg",
+      "lahdeTiedosto": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Emley_Moor_Tower_by_night.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "tekija": "steven earnshaw",
+      "lisenssi": "CC-BY-2.0",
+      "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "attribuutio": "steven earnshaw; https://commons.wikimedia.org/wiki/File:Emley_Moor_Tower_by_night.jpg; CC-BY-2.0 (JPG/sRGB-muunnos Matkakirja)",
+      "huomiot": "Toteutusviite, ei pelissä näytettävä kuva. Mastossa näkyy lentoestevaloja."
+    },
+    {
+      "nimi": "10-gliwice-radio-tower-dusk.jpg",
+      "tyyppi": "tower",
+      "aikakausi": null,
+      "url": "https://media.matkakirja.app/linssit/radio/viitekuvat/10-gliwice-radio-tower-dusk.jpg",
+      "sha256": "04ecc5ce8253e9305afb6a6fa762ff128d89cd33eb49623160a39b0cfcb912ee",
+      "tavut": 196057,
+      "mitat": [
+        673,
+        1600
+      ],
+      "lahde": "https://commons.wikimedia.org/wiki/File:Gliwice_Wieza_antenowa_wieczorem.jpg",
+      "lahdeTiedosto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Gliwice_Wieza_antenowa_wieczorem.jpg/960px-Gliwice_Wieza_antenowa_wieczorem.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "tekija": "Andrzej Jarczewski",
+      "lisenssi": "CC-BY-3.0",
+      "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "attribuutio": "Andrzej Jarczewski; https://commons.wikimedia.org/wiki/File:Gliwice_Wieza_antenowa_wieczorem.jpg; CC-BY-3.0 (JPG/sRGB-muunnos Matkakirja)",
+      "huomiot": "Toteutusviite, ei pelissä näytettävä kuva. Mastossa näkyy lentoestevaloja."
+    },
+    {
+      "nimi": "11-radio-tower-long-exposure.jpg",
+      "tyyppi": "tower",
+      "aikakausi": null,
+      "url": "https://media.matkakirja.app/linssit/radio/viitekuvat/11-radio-tower-long-exposure.jpg",
+      "sha256": "134da9339a05bd9d4deae2dca156e7e2d176e5aea2cfb3532c98cacbcd8be333",
+      "tavut": 208491,
+      "mitat": [
+        960,
+        1280
+      ],
+      "lahde": "https://commons.wikimedia.org/wiki/File:Radio_Tower_Long_Exposure.jpg",
+      "lahdeTiedosto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Radio_Tower_Long_Exposure.jpg/960px-Radio_Tower_Long_Exposure.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "tekija": "Harloh Massey",
+      "lisenssi": "CC-BY-2.0",
+      "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "attribuutio": "Harloh Massey; https://commons.wikimedia.org/wiki/File:Radio_Tower_Long_Exposure.jpg; CC-BY-2.0 (JPG/sRGB-muunnos Matkakirja)",
+      "huomiot": "Toteutusviite, ei pelissä näytettävä kuva. Mastossa näkyy lentoestevaloja."
+    },
+    {
+      "nimi": "12-wlw-guyed-mast-night.jpg",
+      "tyyppi": "tower",
+      "aikakausi": null,
+      "url": "https://media.matkakirja.app/linssit/radio/viitekuvat/12-wlw-guyed-mast-night.jpg",
+      "sha256": "6ae12c8b75f3d56262f5a370fb5cb3303fac0d6938ad81d4630a92a74ae47a33",
+      "tavut": 93409,
+      "mitat": [
+        960,
+        643
+      ],
+      "lahde": "https://commons.wikimedia.org/wiki/File:WLW_mast.jpg",
+      "lahdeTiedosto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/WLW_mast.jpg/960px-WLW_mast.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "tekija": "R.P. Piper",
+      "lisenssi": "CC-BY-2.0",
+      "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "attribuutio": "R.P. Piper; https://commons.wikimedia.org/wiki/File:WLW_mast.jpg; CC-BY-2.0 (JPG/sRGB-muunnos Matkakirja)",
+      "huomiot": "Toteutusviite, ei pelissä näytettävä kuva. Mastossa näkyy lentoestevaloja."
+    }
+  ],
+  "todennus": "R2-kokorunko luettu takaisin; HTTP 200, oikea MIME, mitat, tavut, SHA-256 ja CORS tarkistettu. Värikartoissa ja viite-JPG:issä upotettu sRGB ICC; normal- ja roughness-kartat ovat lineaarisia datakarttoja.",
   "kytkenta": "Ei liitetty Unity-materiaaleihin eikä todennettu julkaistussa pelissä."
 }
