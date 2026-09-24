@@ -16,6 +16,7 @@ Shader "Matkakirja/Linssit/Tummennus"
         _Reika("Reikä (x, y px, säde px, käytössä 0/1)", Vector) = (0, 0, 0, 0)
         _Peitto("Peitto", Range(0, 1)) = 1
         _Ruutu("Kameran pikselikoko (x, y)", Vector) = (1, 1, 0, 0)
+        _Eksponentti("Peittävyyden eksponentti lineaarisessa tilassa", Float) = 1.66
     }
     SubShader
     {
@@ -40,6 +41,7 @@ Shader "Matkakirja/Linssit/Tummennus"
                 float4 _Reika;
                 float4 _Ruutu;
                 half _Peitto;
+                half _Eksponentti;
             CBUFFER_END
 
             struct Syote { float4 paikka : POSITION; };
@@ -77,9 +79,11 @@ Shader "Matkakirja/Linssit/Tummennus"
             #if !defined(UNITY_COLORSPACE_GAMMA)
                 // Web sekoittaa kalvon sRGB-arvoihin (css-kalvo kanvaasin päällä), projekti on
                 // lineaarinen: sama 0,86 jätti iPadilla kartan kaksi kertaa webiä vaaleammaksi
-                // (kontakti 24.9.: meri 95 vs web 49, ennuste lineaarisekoitukselle 91). Lähes
-                // mustalla kalvolla lin((1-a)·S) = (1-a)^2,2 · lin(S), joten peittävyys muunnetaan.
-                c.a = 1 - pow(max(1 - c.a, 0), 2.2);
+                // (kontakti 24.9.: meri 95 vs web 49). Peittävyys muunnetaan a → 1 − (1 − a)^_Eksponentti.
+                // Teoria (puhdas potenssi) antaa 2,2, mutta se jätti kartan webiä tummemmaksi (32 vs 49),
+                // koska kalvon oma väri ja pohjan sävy eivät ole mustat. iPadin mittauksista
+                // (0,86 lineaarisena → 91, eksponentilla 2,2 → 32) sovitettu 1,66 antaa webin 49.
+                c.a = 1 - pow(max(1 - c.a, 0), _Eksponentti);
             #endif
                 return c;
             }

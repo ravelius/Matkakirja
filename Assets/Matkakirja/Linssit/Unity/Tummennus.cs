@@ -21,6 +21,8 @@ namespace Matkakirja.Natiivi
     public class Tummennus : MonoBehaviour
     {
         public const float ReianSadePt = 63f;
+        /// <summary>Peittävyyden eksponentti lineaarisessa tilassa (Tummennus.shader): iPadilla mitattu webin 49.</summary>
+        public const float Eksponentti = 1.66f;
         const float HaivytysS = 0.7f;
         static readonly Color Vari = new Color32(10, 7, 5, 219);     // 0,86
         static readonly Color Keski = new Color32(10, 7, 5, 89);     // 0,35
@@ -57,6 +59,7 @@ namespace Matkakirja.Natiivi
             t.materiaali.SetColor("_Vari", Vari);
             t.materiaali.SetColor("_Keski", Keski);
             t.materiaali.SetFloat("_Peitto", 0);
+            t.materiaali.SetFloat("_Eksponentti", Eksponentti);
             r.sharedMaterial = t.materiaali;
             r.shadowCastingMode = ShadowCastingMode.Off;
             r.receiveShadows = false;
