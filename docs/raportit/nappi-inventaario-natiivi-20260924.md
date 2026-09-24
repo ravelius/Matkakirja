@@ -41,7 +41,7 @@ ENNEN hyväksyntää — muistista tai rakennekuvasta arvaaminen ei riitä.
 | "Liiku" (monitoimi-nappi, avaa kulkutapaliuskan) | Sama, testattu tänään (läpinäkyvä/aktiivinen molemmat, B7-1) | SAMA | EI (rakennevertailu, ei pikselimitattu) |
 | Kulkutapaliuska: Liftaus/Bussilla/Laivalla/Lentäen | Sama liuska alarivillä (peukalo/bussi/laiva/lento), testattu tänään | SAMA | EI (rakennevertailu, ei pikselimitattu) |
 | "Heitä noppa" | Sama, testattu tänään ("Noppa 4" -kortti nopanheiton jälkeen) | SAMA | EI (rakennevertailu, ei pikselimitattu) |
-| Nopanheiton jälkeiset kohteet: web = renkaat kartalla, ei listaa | **Natiivi näyttää LISTAKORTIN renkaiden LISÄKSI** ("valitse kohde listasta TAI kartalta") — todennettu tänään, vahvistettu Pelikoodarin kanssa aidoksi eroksi | ERI | EI (rakennevertailu, ei pikselimitattu) |
+| Nopanheiton jälkeiset kohteet: web = renkaat kartalla, ei listaa | **Natiivi näytti LISTAKORTIN renkaiden LISÄKSI** ("valitse kohde listasta TAI kartalta") — todennettu, vahvistettu Pelikoodarin kanssa aidoksi eroksi. **Omistaja päätti klo 15.3x: lista pois, kohde valitaan kartalta kuten webissä** (Pelikoodari 4d3fe7a, build 9). | KORJAUS BUILD 9 | EI (rakennevertailu, ei pikselimitattu) |
 | "Tutki" (tutkinta-nappi) | Ei testattu tässä kierroksessa | EI TARKISTETTU | EI (rakennevertailu, ei pikselimitattu) |
 | Maiden lehdet -nappi (maailmanradio-nappi vastine) | Karttaselite/linssit-valikossa vastaava toiminto olemassa | EI TARKISTETTU tarkka vastaavuus | EI (rakennevertailu, ei pikselimitattu) |
 | Top-bar: logo/lähteet-nappi | Ei vastaavaa löydetty natiivin yläpalkista tässä kierroksessa | EI TARKISTETTU | EI (rakennevertailu, ei pikselimitattu) |
@@ -79,7 +79,7 @@ ENNEN hyväksyntää — muistista tai rakennekuvasta arvaaminen ei riitä.
 |---|---|---|---|
 | Äänenvoimakkuusliu'ut (Äänitehosteet/Pulun ääni/Lukija/Taustamusiikki/Taustaäänet) | Kaikki samat 5 liukua samassa järjestyksessä, samat oletusarvot (rivi 14, PASS) | SAMA | EI (rakennevertailu, ei pikselimitattu) |
 | Lukijaäänen persoona/nopeus-dialogi (vain kehittäjätila webissä) | Ei testattu, kehittäjärajattu molemmilla | EI TARKISTETTU | EI (rakennevertailu, ei pikselimitattu) |
-| Offline-lataukset | **Web: ei löytynyt vastaavaa UI-nappia** (vain automaattinen laattaesilataus, ei käyttäjän valitsemaa latauspainiketta). Natiivissa OMA "LATAA OFFLINE-KÄYTTÖÖN" -lohko asetusten alla (mantereittain, koot Gt/Mt) — tämä on natiivin OMA lisäominaisuus, ei web-paritettava | PUUTTUU WEBISTÄ (natiivilla on enemmän) | EI (rakennevertailu, ei pikselimitattu) |
+| Offline-lataukset | **Web: ei löytynyt vastaavaa UI-nappia** (vain automaattinen laattaesilataus, ei käyttäjän valitsemaa latauspainiketta). Natiivissa OMA "LATAA OFFLINE-KÄYTTÖÖN" -lohko asetusten alla (mantereittain, koot Gt/Mt) — Raamatussa nimetty hyväksytty natiivin lisäominaisuus. | HYVÄKSYTTY POIKKEAMA | EI (rakennevertailu, ei pikselimitattu) |
 
 ## 6. Lehdet (kaupunki- ja maalehdet)
 
@@ -168,22 +168,25 @@ ENNEN hyväksyntää — muistista tai rakennekuvasta arvaaminen ei riitä.
 Raamatun kaava (EI WEBISSÄ → KYSY): natiivin ominaisuudet, joita web ei
 tarjoa, listataan tässä eikä toteuteta ilman omistajan lupaa.
 
-- **Nopanheiton jälkeinen listakortti** (osiot 2 ja 9) — natiivi näyttää
-  ylimääräisen listan renkaiden lisäksi, web vain renkaat. Omistaja
-  päättää: poistetaanko natiivista vai pidetäänkö parannuksena.
-- **Offline-lataukset -lohko asetuksissa** (osio 5) — kokonaan natiivin
-  oma ominaisuus, webissä ei vastaavaa käyttäjän valitsemaa latausta.
+- ~~Nopanheiton jälkeinen listakortti~~ — **PÄÄTETTY (omistaja 24.9.
+  klo 15.3x): lista pois, kohde valitaan kartalta kuten webissä**
+  (Pelikoodari 4d3fe7a, korjaus build 9:ään). Ei enää odota.
+- ~~Offline-lataukset -lohko asetuksissa~~ — **HYVÄKSYTTY POIKKEAMA**
+  (Raamatussa nimetty natiivin oma lisäominaisuus). Ei enää odota.
 - Peninkulmalinssi ja huipennusnäkymä — hyväksytty jo 23.9. (Raamattu).
 - Maapallon tila -linssi — hyväksytty 24.9. (Raamattu), ensimmäinen
   vain-natiivi-ominaisuus.
 
 ## Yhteenveto
 
-Yli puolet tarkistetuista riveistä SAMA. Kaksi vahvistettua ERI-riviä:
-nopanheiton listakortti (osiot 2/9, odottaa omistajan päätöstä) ja
-aloituskaava natiivin omalla tavalla toteutettuna (osio 1, tarkoituksellinen
-ero, ei korjaustarvetta). Yksi PUUTTUU WEBISTÄ (offline-lataukset,
-natiivin oma lisä). Suuri osa osioista 3, 5 (lukija-dialogi), 6 (osa),
-7 (osa), 8 (osa), 10 (toiminta), 11 (toiminta) ja 12 (osa) jäi EI
-TARKISTETTU -tilaan ajanpuutteen vuoksi tällä kierroksella — ei
-tiedossa olevia bugeja, mutta ei myöskään positiivista vahvistusta.
+Yli puolet tarkistetuista riveistä SAMA. Kaikki aiemmin avoimet erot on
+nyt ratkaistu: nopanheiton listakortti KORJAUS BUILD 9:ään (omistaja
+päätti 24.9. klo 15.3x, ei enää odota), offline-lataukset HYVÄKSYTTY
+POIKKEAMA, aloituskaava natiivin omalla tavalla toteutettuna
+(tarkoituksellinen, ei korjaustarvetta), maalehden palstoitus (osio 6)
+VAHVISTETTU ERO reititetty Natiivi-UI:lle. Suuri osa osioista 3, 5
+(lukija-dialogi), 6 (osa), 7 (osa), 8 (osa), 10 (toiminta), 11
+(toiminta) ja 12 (osa) jäi EI TARKISTETTU -tilaan ajanpuutteen vuoksi
+tällä kierroksella — ei tiedossa olevia bugeja, mutta ei myöskään
+positiivista vahvistusta. Jatketaan build 8 -rivien (5/13/23) jälkeen,
+mitat mukaan (WEB ON MALLI).
