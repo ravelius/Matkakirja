@@ -123,7 +123,7 @@ namespace Matkakirja.Natiivi
             v.LisaRivi("Offline-kartat", Ikonit.Viiva["taitekartta"], () => Aanentasot.AvaaOsa(Aanentasot.Osa.Offline), () => UiPalvelut.Offline != null);
             v.LisaRivi("Asetukset", Ikonit.Kertoja, () => Valikko.AvaaOsa(Paavalikko.Osa.Asetukset));
             v.LisaRivi("Ehdota sisältöä", Ikonit.Kyna, Valikko.Ehdota);
-            v.LisaRivi("Tekijätiedot ja lähteet", Ikonit.Viiva["kirja"], Valikko.Tietoja);
+            v.LisaRivi("Tekijät ja lähteet", Ikonit.Viiva["kirja"], Valikko.Tietoja);
             v.LisaRivi("Mitä uutta", Ikonit.Viiva["tahti"], Valikko.MitaUutta.Avaa);
 #if !MATKAKIRJA_APPSTORE
             v.LisaRivi("Kehittäjä", Ikonit.Ratas, () => Valikko.AvaaOsa(Paavalikko.Osa.Kehittaja), () => Asetukset.Kehittaja);
