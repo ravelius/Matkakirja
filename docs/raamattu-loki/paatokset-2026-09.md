@@ -3647,3 +3647,7 @@ Fable välitti Natiivi-UI:lle.
 ## LOYDOS 23 A TARKENNETTU (OMISTAJA + FABLE WEBIN KOODISTA): LENNON AIKANA NATIIVI NAYTTAA AVAUSTEKSTIN (INTRO_TEXT 'Vintiltä löytyi…' + 'Heathrow, Lontoo') — VAARIN. WEBIN KAAVA: ALKUSIVULLA INTRO_PAIKKA 'Heathrow, Lontoo' + KUUKAUSI JA VUOSI LAITTEEN KELLOSTA, INTRO_TEXT JA LUENTA intro-puhe.mp3 (LUENNAT-KOKOELMA id 'intro'), NAPPI 'Valitse aloituskaupunki'; LENNON AIKANA VAIN flightFirst-REPLIIKKI 'Kone nousee. Isoisän kirja aukeaa sylissäni kuin se olisi odottanut tätä hetkeä.' JA LUENTA puhe-lento-alku.mp3 (id 'lento-alku'; js/packs/maailma.js flightFirst, tools/generoi-avaus.mjs LENTO_RUUTU); LENNON JALKEEN NORMAALI SAAPUMINEN → NATIIVI-UI, BUILD 7 (24.9.2026 klo 12.04)
 
 Kaikki kolme tekstiä ovat sisältöpaketissa (ui-tekstit + luennat), natiivi lukee ne sieltä, ei kovakoodaa.
+
+## NATIIVI-UI: LOYDOS 23 B TEHTY (natiivi-ui/iphone-island b779dc8): PeliOhjain.LennonVaiheMuuttui → YLAPALKKI, PILLERIT, ☰/⚙, KARTTA- JA LINSSINAPPI, NOSTOT, LIIKU, KARTUSCHA, MATKAKIRJA JA PULU HAIPYVAT 0,6 s, PALAAVAT 0,8 s; TEKSTIKAISTA JAA. TEKSTIEN TILA: NATIIVI NAYTTAA JA SOITTAA LENNOLLA AVAUSTEKSTIN (INTRO_TEXT + intro-puhe) RAAMATUN 23.9. ALOITUSKAAVAN MUKAAN → OMISTAJA MUUTTI: ALOITUSPORTILLE HEATHROW + AVAUSTEKSTI + intro-puhe, LENNOLLE flightFirst + puhe-lento-alku (RAAMATTU NATIIVIN ALOITUSKAAVA PAIVITETTY); AIKALEIMASYNKKA (intro-puhe.aikaleimat.json) HYVAKSYTTY KIRJOITUSKONEEN TAHTIIN (24.9.2026 klo 12.04)
+
+Fable: Natiivi-UI toteuttaa tekstit, Pelikoodari vaihtaa lennon äänen lento-alku-luentaan.
