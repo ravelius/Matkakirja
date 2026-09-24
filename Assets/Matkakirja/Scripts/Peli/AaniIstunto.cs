@@ -28,6 +28,14 @@ namespace Matkakirja.Natiivi
 #if UNITY_IOS && !UNITY_EDITOR
         [DllImport("__Internal")] static extern void MatkakirjaAani_Toisto();
         [DllImport("__Internal")] static extern string MatkakirjaAani_Tila();
+        [DllImport("__Internal")] static extern string MatkakirjaAani_Vaihda(string luokka);
+
+        /// <summary>Mittauksen istunnon vaihto (peli-komento aani istunto): playback | puhe | ambient.</summary>
+        public static string Vaihda(string luokka)
+        {
+            try { var r = MatkakirjaAani_Vaihda(luokka ?? ""); Debug.Log("MATKAKIRJA ääni-istunto (" + luokka + "): " + r); return r.StartsWith("VIRHE") ? r : null; }
+            catch (Exception e) { return e.Message; }
+        }
 
         /// <summary>Playback + MixWithOthers + setActive (MatkakirjaAani.mm).</summary>
         public static void Aseta(string syy)
@@ -45,6 +53,7 @@ namespace Matkakirja.Natiivi
 #else
         public static void Aseta(string syy) { }
         public static string Tila() => "ei iOS";
+        public static string Vaihda(string luokka) => "ei iOS";
 #endif
     }
 }

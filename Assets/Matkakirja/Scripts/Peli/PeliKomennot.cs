@@ -215,6 +215,33 @@ namespace Matkakirja.Natiivi
                     StartCoroutine(MittaaAani(float.TryParse(A(2), System.Globalization.NumberStyles.Float,
                         System.Globalization.CultureInfo.InvariantCulture, out var mittaS) ? mittaS : 3f));
                     return null;
+                case "aani" when A(1) == "sini":
+                {
+                    // Positiivinen kontrolli (löydös 49): 440 Hz 2 s omasta klipistä ilman latausta. rms > 0 = Unityn
+                    // miksaus toimii; rms 0 = ulostulo ei käy lainkaan (istunto, keskeytys tai AudioSettings).
+                    int taajuus = AudioSettings.outputSampleRate > 0 ? AudioSettings.outputSampleRate : 48000;
+                    var data = new float[taajuus * 2];
+                    for (int i = 0; i < data.Length; i++) data[i] = 0.3f * Mathf.Sin(2f * Mathf.PI * 440f * i / taajuus);
+                    var klippi = AudioClip.Create("sini440", data.Length, 1, taajuus, false);
+                    klippi.SetData(data, 0);
+                    var go = new GameObject("MatkakirjaSini");
+                    var l = go.AddComponent<AudioSource>();
+                    l.clip = klippi; l.spatialBlend = 0f; l.volume = 1f;
+                    l.Play();
+                    Destroy(go, 2.5f);
+                    return null;
+                }
+                case "aani" when A(1) == "istunto":
+                    // aani istunto playback|puhe|ambient: istunnon vaihto mittausta varten (AaniIstunto.Vaihda).
+                    return AaniIstunto.Vaihda(A(2));
+                case "aani" when A(1) == "nollaa":
+                {
+                    // Unityn ääni uudelleen käyntiin samoilla asetuksilla (FMOD avaa ulostulon uudelleen).
+                    var k = AudioSettings.GetConfiguration();
+                    bool ok = AudioSettings.Reset(k);
+                    Kirjaa("aani nollaa", (ok ? "ok" : "EPÄONNISTUI") + ", näytetaajuus " + AudioSettings.outputSampleRate);
+                    return null;
+                }
                 case "puhe":
                     switch (A(1))
                     {
@@ -339,9 +366,11 @@ namespace Matkakirja.Natiivi
             foreach (var l in FindObjectsByType<AudioSource>(FindObjectsInactive.Exclude, FindObjectsSortMode.None))
                 if (l.isPlaying) soivat.Add($"{l.gameObject.name}:{(l.clip != null ? l.clip.name : "-")}@{l.volume:0.00}{(l.mute ? " mykkä" : "")}");
             var inv = System.Globalization.CultureInfo.InvariantCulture;
-            Kirjaa("aani", string.Format(inv, "rms {0:0.00000}, huippu {1:0.0000}, kuuntelija {2:0.00}{3}, näytetaajuus {4}, soivia {5} [{6}], istunto: {7}",
+            var kokoonpano = AudioSettings.GetConfiguration();
+            Kirjaa("aani", string.Format(inv, "rms {0:0.00000}, huippu {1:0.0000}, kuuntelija {2:0.00}{3}, näytetaajuus {4} ({8} {9}, dsp {10}), soivia {5} [{6}], istunto: {7}",
                 rms, huippu, AudioListener.volume, AudioListener.pause ? " TAUOLLA" : "", AudioSettings.outputSampleRate,
-                soivat.Count, string.Join(", ", soivat), AaniIstunto.Tila()));
+                soivat.Count, string.Join(", ", soivat), AaniIstunto.Tila(), kokoonpano.sampleRate, kokoonpano.speakerMode,
+                kokoonpano.dspBufferSize));
         }
 
         void Kirjaa(string rivi, string tulos)
