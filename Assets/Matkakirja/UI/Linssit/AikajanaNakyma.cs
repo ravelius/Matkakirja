@@ -230,6 +230,14 @@ namespace Matkakirja.Natiivi
             kertomus.style.display = DisplayStyle.None;
             kertomusLaatikko = Rakenne.El("mk-aikajana-kertomus__laatikko", kertomus, PickingMode.Ignore);
             kertomusTeksti = Rakenne.Teksti("", "mk-aikajana-kertomus__teksti", kertomusLaatikko);
+            // Ruudun leveys vaihtui (kierto): laatikon leveys ja tasapaino uudelleen.
+            kertomus.RegisterCallback<GeometryChangedEvent>(e =>
+            {
+                if (Mathf.Approximately(e.oldRect.width, e.newRect.width)) return;
+                float ruutu = kertomus.panel?.visualTree.layout.width ?? 0f;
+                kertomus.EnableInClassList("mk-aikajana-kertomus--kapea", ruutu > 0f && ruutu <= 600f);
+                Tasapainota();
+            });
             kerros.JokaRuutu += PaivitaKertomus;
             Kirjasimet.Aseta(kertomusTeksti, Kirjasin.Luku);
 
@@ -1175,7 +1183,16 @@ namespace Matkakirja.Natiivi
             if (kertomusRaaka.Length == 0) return;
             kertomusTeksti.schedule.Execute(() =>
             {
-                float tila = kertomusLaatikko.contentRect.width;
+                // Web .aikajana-kertomusteksti: laatikko on koko rivin levyinen (min(34rem, 100vw − 2rem), keskellä
+                // min(40rem, 100vw − 3rem)) ja teksti tasapainotetaan sen sisällä. Leveys asetetaan tässä eikä luettaisi
+                // laatikosta: tekstin mittainen laatikko kavensi jokaisen osan edellistä kapeammaksi (build 5 -löydös 11:
+                // sana per rivi iPhonella).
+                float ulko = kertomus.contentRect.width;
+                if (float.IsNaN(ulko) || ulko <= 0) return;
+                float leveys = Mathf.Min(kertomus.ClassListContains("mk-keskella") ? 640f : 544f, ulko);
+                kertomusLaatikko.style.width = leveys;
+                var ls = kertomusLaatikko.resolvedStyle;
+                float tila = leveys - ls.paddingLeft - ls.paddingRight - ls.borderLeftWidth - ls.borderRightWidth;
                 if (float.IsNaN(tila) || tila <= 0) return;
                 var yksi = kertomusTeksti.MeasureTextSize(kertomusTeksti.text, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined);
                 if (float.IsNaN(yksi.x) || yksi.x <= tila) return;
