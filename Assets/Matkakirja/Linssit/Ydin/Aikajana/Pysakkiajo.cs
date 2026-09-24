@@ -177,12 +177,30 @@ namespace Matkakirja.Linssit.Aikajana
             Paattynyt = true;
             Kaynnissa = false;
             kameraKohde = -1;
-            // Koko kaari ruudulle (web sovitaKaareen, marginaali 0,03 kummallekin puolelle).
+            SovitaKaareen();
+            Saada(TaukoHimmennys);
+            nakyma.Loppu();
+        }
+
+        /// <summary>Kaaren alue laudalla (web kaari.alue); null = vanha lat/lon-rajaus.</summary>
+        public Kameramatikka.LautaLaatikko? AlueLaudalla;
+
+        /// <summary>
+        /// Koko kaari ruudulle (web sovitaKaareen): kaarenKameralaatikko + pallonKorkeus marginaalilla
+        /// 0,03 (vara 1,06) kameran omalla näkökentällä ja kuvasuhteella.
+        /// </summary>
+        void SovitaKaareen()
+        {
+            if (AlueLaudalla is Kameramatikka.LautaLaatikko a
+                && Kameramatikka.PallonKorkeus(Kameramatikka.KaarenKameralaatikko(a, y.Kuvasuhde < 1), y.Nakokulma, y.Kuvasuhde, 1 + 2 * 0.03) is var (keski, h))
+            {
+                ViimeisinAjo = (keski, double.NaN, Kameramatikka.LoppuAjoMs);
+                y.AjaKamera(new Nakyma(keski.Lat, keski.Lon, h * Kameramatikka.MaanSade), (float)((y.VahennettyLiike ? 0 : Kameramatikka.LoppuAjoMs) / 1000));
+                return;
+            }
             var r = alue.Rajaus();
             double leveys = Math.Max(r.LeveysAst, r.KorkeusAst * y.Kuvasuhde) * 1.06;
             Aja(new LatLon(r.Lat, r.Lon), leveys, Kameramatikka.LoppuAjoMs);
-            Saada(TaukoHimmennys);
-            nakyma.Loppu();
         }
 
         /// <summary>Selaus pysäkkiin i (web siirry): kello seis, kaikki valot palavat, kamera perille.</summary>

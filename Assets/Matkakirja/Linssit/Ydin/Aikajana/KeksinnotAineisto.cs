@@ -13,6 +13,8 @@ namespace Matkakirja.Linssit.Aikajana
         public List<Pysakki> Pysakit = new List<Pysakki>();
         public double Alku, Loppu;
         public Laatikko Alue;
+        /// <summary>Kaaren alue laudan yksiköissä (web kaari.alue) kameran kaarisovitukseen.</summary>
+        public Kameramatikka.LautaLaatikko AlueLaudalla;
         public LinssiTiedot Tiedot;
         public string Otsikko;
         /// <summary>Kaaren oma raita (web LINSSI.aikajana.musiikki).</summary>
@@ -35,6 +37,8 @@ namespace Matkakirja.Linssit.Aikajana
                 Musiikki = MiniJson.Teksti(kaari, "musiikki") ?? "keksinnot",
             };
             var alue = Ob(MiniJson.Kentta(kaari, "alue"));
+            a.AlueLaudalla = new Kameramatikka.LautaLaatikko(MiniJson.Luku(alue, "x") ?? 0, MiniJson.Luku(alue, "y") ?? 0,
+                MiniJson.Luku(alue, "w") ?? 12000, MiniJson.Luku(alue, "h") ?? 5399);
             a.Alue = Kameramatikka.LaatikkoLaudalta(MiniJson.Luku(alue, "x") ?? 0, MiniJson.Luku(alue, "y") ?? 0,
                 MiniJson.Luku(alue, "w") ?? 12000, MiniJson.Luku(alue, "h") ?? 5399);
             var lahde = Ob(MiniJson.Kentta(linssi, "lahde"));

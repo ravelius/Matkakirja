@@ -92,7 +92,7 @@ namespace Matkakirja.Linssit.Aikajana
             edellinen = y.Aika;
             y.Pelikerrokset(false);
             y.MusiikkiPitoon(true);
-            Ajo = new Pysakkiajo(aineisto.Pysakit, aineisto.Alku, aineisto.Alue, y, nakyma, luentaSoi);
+            Ajo = new Pysakkiajo(aineisto.Pysakit, aineisto.Alku, aineisto.Alue, y, nakyma, luentaSoi) { AlueLaudalla = aineisto.AlueLaudalla };
             // Pimeässä ajettu avauskamera (web AVAUS_KAMERA_MS 700).
             Ajo.SovitaAlkuun(700);
             // Web avaa: pysäkkiajolla musiikki alkaa heti esittelyn alla puolella tasolla

@@ -130,6 +130,8 @@ namespace Matkakirja.Linssit
         double KorkeusLeveydelle(double leveysAsteina);
         /// <summary>Ruudun leveys / korkeus.</summary>
         double Kuvasuhde { get; }
+        /// <summary>Kameran pystysuora näkökenttä asteina (web PALLO_FOV 50).</summary>
+        double Nakokulma { get; }
 
         /// <summary>
         /// Pelin kerrokset (kaupunkien nimet ja pisteet, nappula, nostot,
