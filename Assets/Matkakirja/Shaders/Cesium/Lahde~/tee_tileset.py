@@ -248,10 +248,16 @@ for o in list(kaavio):
 # Unityn maailmakoordinaateissa tulevat KorkeusKerroin.cs:stä (georeferenssi TrueOrigin → c = 0).
 # Siirto lasketaan maailmassa vektorina ja muunnetaan objektiavaruuteen suuntana (ei edestakaista pistemuunnosta,
 # joka lisäisi float-pyöristystä ~6,4e6 m:n koordinaateissa).
+# RINNEVALON TASAUS (omistajan löydös 46, build 12; Kartta/Karttavalo.cs): _maaKeski.w = paino w (0–1,
+# KorkeusKerroin.Tasaus). Normaali kierretään (Rodrigues) sillä kierrolla, joka vie pisteen ellipsoidinormaalin n kohti
+# kameran alapisteen geosentristä normaalia n0 = normalize(_WorldSpaceCameraPos − c): tasamaa saa koko ruudulla saman
+# N·L:n (matala aurinko ei vaalenna luodetta eikä tummenna kaakkoa), rinteiden kulma n:ään nähden säilyy. w = 0 →
+# normaali täsmälleen ennallaan (pallon mittakaava, lento, linssit).
 KORKEUS_RUNKO = (
     "posOut = posOS; nrmOut = nrmOS;\n"
     "float k = kerroin > 0.0 ? kerroin : 1.0;\n"
-    "if (k != 1.0)\n"
+    "float w = saturate(keski.w);\n"
+    "if (k != 1.0 || w > 0.0)\n"
     "{\n"
     "    const float ekv = 6378137.0;        // WGS84 isoakseli\n"
     "    const float nap = 6356752.314245;   // WGS84 pikkuakseli\n"
@@ -259,14 +265,27 @@ KORKEUS_RUNKO = (
     "    float3 ak = dot(akseli.xyz, akseli.xyz) > 0.5 ? normalize(akseli.xyz) : float3(0.0, 1.0, 0.0);\n"
     "    float r = max(length(d), 1.0);\n"
     "    float z = dot(d, ak);\n"
-    "    float uz = z / r;\n"
-    "    float sade = ekv * nap / sqrt(nap * nap * (1.0 - uz * uz) + ekv * ekv * uz * uz);\n"
-    "    float h = max(r - sade, 0.0);\n"
     "    float3 n = normalize(d + ak * z * (ekv * ekv / (nap * nap) - 1.0));\n"
-    "    posOut = posOS + mul((float3x3)GetWorldToObjectMatrix(), n * (h * (k - 1.0)));\n"
     "    float3 nw = TransformObjectToWorldNormal(nrmOS);\n"
-    "    float nr = dot(nw, n);\n"
-    "    nrmOut = TransformWorldToObjectNormal(normalize((nw - n * nr) * k + n * nr));\n"
+    "    if (k != 1.0)\n"
+    "    {\n"
+    "        float uz = z / r;\n"
+    "        float sade = ekv * nap / sqrt(nap * nap * (1.0 - uz * uz) + ekv * ekv * uz * uz);\n"
+    "        float h = max(r - sade, 0.0);\n"
+    "        posOut = posOS + mul((float3x3)GetWorldToObjectMatrix(), n * (h * (k - 1.0)));\n"
+    "        float nr = dot(nw, n);\n"
+    "        nw = normalize((nw - n * nr) * k + n * nr);\n"
+    "    }\n"
+    "    if (w > 0.0)\n"
+    "    {\n"
+    "        // Rinnevalon tasaus (loydos 46): kierto, joka vie n:n kohti kameran alapisteen normaalia n0 (painolla w).\n"
+    "        float3 n0 = normalize(_WorldSpaceCameraPos - keski.xyz);\n"
+    "        float3 t = normalize(n + (n0 - n) * w);\n"
+    "        float c = dot(n, t);\n"
+    "        float3 a = cross(n, t);\n"
+    "        nw = nw * c + cross(a, nw) + a * (dot(a, nw) / max(1.0 + c, 1e-4));\n"
+    "    }\n"
+    "    nrmOut = TransformWorldToObjectNormal(nw);\n"
     "}\n")
 
 def slotti(tyyppi, id_, nimi, suunta, arvo):
