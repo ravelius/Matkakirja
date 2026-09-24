@@ -108,7 +108,8 @@ namespace Matkakirja.Natiivi
         static float Oikea(float turvaOikea)
         {
             // Web #arrival-dialog.lehti[open] (max-width 600 px): vain lehti, ei nostokortit eikä muut dialogit.
-            bool lehti = UiNakymat.Olemassa && UiNakymat.Hae().Lehti.Auki;
+            // Näkymät voivat olla vielä rakenteilla (UiNakymat-konstruktori kutsuu Pulu.Hae ennen lehteä): Lehti ?.
+            bool lehti = UiNakymat.Olemassa && UiNakymat.Hae().Lehti?.Auki == true;
             return turvaOikea + (lehti && Ylapalkki.Puhelin ? 9.6f : 57.6f);
         }
 
