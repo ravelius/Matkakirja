@@ -1626,7 +1626,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(36, 26, 18, 0.42);
+    background-color: rgba(0, 0, 0, 0);
     transition-property: opacity;
     transition-duration: 0.35s;
 }
@@ -1637,7 +1637,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    opacity: 0.55;
+    -unity-background-scale-mode: stretch-to-fill;
 }
 
 .mk-aloitus__keskus {

@@ -133,7 +133,11 @@ namespace Matkakirja.Natiivi
 
             // 1 PORTTI (päällimmäisenä)
             portti = Rakenne.El("mk-aloitus__portti", juuri);
-            Rakenne.Tausta(Rakenne.El("mk-aloitus__porttireuna", portti, PickingMode.Ignore), Kuviot.Vinjetti);
+            // Web .start-gate: radial-gradient(ellipse at 50% 50%, rgba(36,26,18,.28) 40%, rgba(36,26,18,.6) 100%)
+            // koko ruudun pallon päällä (omistaja 24.9., build 5 -löydös 17). Sumennus (web backdrop-filter 6px)
+            // tulee kameran puolelta (Natiiviseppä); UI Toolkit ei sumenna 3D-kuvaa.
+            Rakenne.Tausta(Rakenne.El("mk-aloitus__porttireuna", portti, PickingMode.Ignore),
+                Kuviot.Soikio("aloitus-portti", new Color(36 / 255f, 26 / 255f, 18 / 255f, 0.28f), new Color(36 / 255f, 26 / 255f, 18 / 255f, 0.6f), 0.4f));
             // Juliste ja lause heti portissa; sama juliste jää avaukseen portin häipyessä.
             var porttiYla = Rakenne.El("mk-aloitus__ylaosa mk-aloitus__porttiyla", portti, PickingMode.Ignore);
             Rakenne.Tausta(porttiYla, Kuviot.Pysty("aloitus-verho", Kuviot.Vari("#f7edd8", 0.86f), Kuviot.Vari("#f7edd8", 0f)));

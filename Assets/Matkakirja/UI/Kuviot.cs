@@ -64,6 +64,30 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>
+        /// CSS radial-gradient(ellipse at 50% 50%, keski alku, reuna 100%): soikio kulmiin asti (farthest-corner),
+        /// keskellä tasainen väri alku-säteeseen, siitä lineaarisesti reunaväriin. Venyy elementin kokoon.
+        /// </summary>
+        public static Texture2D Soikio(string nimi, Color keski, Color reuna, float alku)
+        {
+            if (valimuisti.TryGetValue(nimi, out var t) && t != null) return t;
+            const int N = 128;
+            t = Uusi(nimi, N, N);
+            var px = new Color[N * N];
+            float kulma = 0.5f * Mathf.Sqrt(2f);
+            for (int y = 0; y < N; y++)
+            for (int x = 0; x < N; x++)
+            {
+                float dx = ((x + 0.5f) / N - 0.5f) / kulma, dy = ((y + 0.5f) / N - 0.5f) / kulma;
+                float r = Mathf.Sqrt(dx * dx + dy * dy);
+                px[y * N + x] = Color.Lerp(keski, reuna, Mathf.Clamp01((r - alku) / (1f - alku)));
+            }
+            t.SetPixels(px);
+            t.Apply(false, true);
+            valimuisti[nimi] = t;
+            return t;
+        }
+
+        /// <summary>
         /// Ihmisen matkan aloituksen reunapimennys (css/aikajana.css .aikajana-avaus-tausta):
         /// mask-image radial-gradient(ellipse 70% 76% at 50% 47%, #000 26%, .6 54%, .12 76%,
         /// transparent 92%) käännettynä mustaksi peitoksi, ja päälle ::after-kehyksen suorat
