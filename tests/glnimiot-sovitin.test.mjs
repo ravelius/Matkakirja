@@ -451,3 +451,45 @@ test('portaan vaihto nostolla: ikoni ja nimiö pysyvät rungolla vanhalla raster
   s.nostot([NOSTO({ mitta: 0.8 })]);
   assert.deepEqual(kerros.lista.filter((i) => !i.tunnus.endsWith('-vanha')).map((i) => i.avain), ['ikoni|32', 'nimio|32']);
 });
+
+/*
+ * HÄIVYTYS GPU:LLA (sulavuuserä 3): GPU-rungolla häivytys kulkee
+ * instanssin mukana eikä peittoa kirjoiteta joka kehys; häipyneen vanhan
+ * instanssin poistava rakennus odottaa liikkeessä seuraavaa ladontaa.
+ */
+test('GPU-häivytys: instanssit kantavat häivytyksen, ei peittokutsuja, poisto odottaa lepoa', () => {
+  const kerros = teeKerros();
+  kerros.gpuHaivytys = true;
+  let peittoja = 0;
+  kerros.peitto = () => { peittoja += 1; };
+  let hetki = 1000;
+  let liikkuu = false;
+  const alkuperainen = globalThis.performance.now;
+  globalThis.performance.now = () => hetki;
+  try {
+    const s = luoGlNimiosovitin({
+      kerros: () => kerros, rasterilahde: teeNostolahde(), ajasta: (f) => f(), liikkeessa: () => liikkuu,
+    });
+    s.nostot([NOSTO({ puoli: 'oikea', dx: 5 })]);
+    s.nostot([NOSTO({ puoli: 'vasen', dx: -5 })]);
+    const [ikoni, uusi, vanha] = kerros.lista;
+    assert.equal(ikoni.haivytys, undefined, 'ikoni ei häivy kylkivaihdossa');
+    assert.deepEqual(uusi.haivytys, { alku: 1000, kestoMs: NOSTON_HAIVYTYS_MS, mista: 0, mihin: 1 });
+    assert.deepEqual(vanha.haivytys, { alku: 1000, kestoMs: NOSTON_HAIVYTYS_MS, mista: 1, mihin: 0 });
+    hetki += NOSTON_HAIVYTYS_MS / 2;
+    s.kehys();
+    assert.equal(peittoja, 0, 'ei peittokirjoituksia kehyksessä');
+    // Valmis liikkeessä: vanha pois kirjanpidosta, mutta runkoa ei rakenneta nyt.
+    liikkuu = true;
+    hetki += NOSTON_HAIVYTYS_MS;
+    s.kehys();
+    assert.equal(s.haivytykset().size, 0);
+    assert.equal(kerros.lista.length, 3, 'rakennus odottaa ladontaa');
+    // Seuraava jako (ladonta) vie listan ilman vanhaa.
+    s.nostot([NOSTO({ puoli: 'vasen', dx: -5 })]);
+    assert.deepEqual(kerros.lista.map((i) => i.tunnus), ['nosto:lascaux#ikoni', 'nosto:lascaux#nimio']);
+    assert.equal(peittoja, 0);
+  } finally {
+    globalThis.performance.now = alkuperainen;
+  }
+});

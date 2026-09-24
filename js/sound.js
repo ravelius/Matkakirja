@@ -1356,7 +1356,7 @@ const ZOOM_VAUHTI_MAX = Math.max(...ZOOM_VAUHTI);
 
 // Oikeat äänitteet Freesoundista (CC0). Ladataan verkosta puskuriin;
 // ilman verkkoa vastaava syntetisoitu ääni soi entiseen tapaan.
-const REAL_SAMPLES = {
+export const REAL_SAMPLES = {
   dice: {
     url: 'https://cdn.freesound.org/previews/94/94031_1554038-lq.mp3',
     credit: '"Dice Roll" — LoafDV, Freesound (CC0)',
@@ -1462,7 +1462,7 @@ const PULUN_PERUSVOIMA = 0.35;
  * `kesto` on soitettavan siivun pituus ja `voima` tehostekohtainen
  * hienosäätö: tömähdys saa kuulua täydellä, hassu täyteääni ei.
  */
-const PULUN_TEHOSTEET = {
+export const PULUN_TEHOSTEET = {
   'pulu.siivet': { tunnus: 'siivet-lento', kesto: 1.4, voima: 0.9 },
   'pulu.siivet-lasku': { tunnus: 'siivet-laskeutuminen', kesto: 1.2, voima: 0.9 },
   'pulu.tomahdys': { tunnus: 'tomahdys-laskeutuminen', kesto: 0.7, voima: 1 },
@@ -2026,6 +2026,13 @@ const SOUNDS = {
     s.tone({ freq: 261, dur: 1.2, type: 'sine', gain: 0.1, delay: 0.56 });
   },
 };
+
+/*
+ * Tehosteiden nimet sisältöpakettiin (Siirtoseppä 23.9.2026, skeema 1.8):
+ * SOUNDS on synteesikoodia, jota natiivi ei aja; se tarvitsee nimet ja
+ * REAL_SAMPLES-näytteet (kokoelma aanitaulut).
+ */
+export const AANITEHOSTEET = Object.keys(SOUNDS);
 
 export const sfx = new Sound();
 

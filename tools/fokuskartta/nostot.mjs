@@ -486,7 +486,9 @@ function nostoladontaMerkit({
       sisaisia += 1;
     }
     if (merkki.poltettava && lukittuMaa) {
-      const a = lukittuAnkkuri(`nosto:${r.id}`);
+      // OMAN MAAN taulusta (23.9.2026): yhteisessä taulussa FRA voittaa, ja
+      // Espanjan `valimeri` paloi Touloniin (29 jaettua id:tä).
+      const a = lukittuAnkkuri(`nosto:${r.id}`, iso);
       const p = a ? asteetLaudalle(pack.id, a.lat, a.lng) : null;
       if (p) {
         merkki.x = p.x;

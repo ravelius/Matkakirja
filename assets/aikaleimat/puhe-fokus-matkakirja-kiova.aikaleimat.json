@@ -1,229 +1,167 @@
 {
   "versio": 2,
   "kaupunki": "kiova",
-  "teksti": "Kiovan luostarin kupolit näkyvät kauas Dneprille, mutta pyhiinvaeltajat menevät maan alle. Seurasin kynttilöitä luoliin. Kun oma liekkini sammui, edellä kulkeva nainen sytytti sen omastaan sanomatta mitään. Kaksi liekkiä, eikä ensimmäiseltä puuttunut mitään. Olen tutkinut monta tapaa siirtää omaisuutta. Tämän haluan muistaa.",
-  "tekstiSha256": "ca559a80dbbf8b7057f8d4d8d74a6c1c19b582e9dd656e58017c95216d4b950f",
+  "teksti": "Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.",
+  "tekstiSha256": "df38845d6a3dddab127bd2282a34d88100863a2a8722e200415f764da2434e92",
   "aani": {
     "nimi": "puhe-fokus-matkakirja-kiova.mp3",
     "versio": 2,
-    "tavut": 471919,
-    "sha256": "7f4df27859074814d7b3160bc4baf5a5d5f3b748b8f04a9019752c3f1331c6b1"
+    "tavut": 308079,
+    "sha256": "ed67e3f596eec60b09b8ab9566984ba655bc62643eeca88799e51f22627d6400"
   },
-  "kesto": 29420,
+  "kesto": 19180,
   "sanat": [
     {
-      "sana": "Kiovan",
-      "alku": 119,
-      "loppu": 579
+      "sana": "Kiovassa",
+      "alku": 220,
+      "loppu": 760
     },
     {
-      "sana": "luostarin",
-      "alku": 620,
-      "loppu": 1139
+      "sana": "ostin",
+      "alku": 800,
+      "loppu": 1100
     },
     {
-      "sana": "kupolit",
-      "alku": 1279,
-      "loppu": 1799
+      "sana": "kuivaa",
+      "alku": 1160,
+      "loppu": 1600
     },
     {
-      "sana": "näkyvät",
-      "alku": 1879,
-      "loppu": 2299
+      "sana": "hilloa",
+      "alku": 1660,
+      "loppu": 2080
     },
     {
-      "sana": "kauas",
-      "alku": 2359,
-      "loppu": 2759
+      "sana": "sokerissa",
+      "alku": 3020,
+      "loppu": 3520
     },
     {
-      "sana": "Dneprille",
-      "alku": 2859,
-      "loppu": 3619
+      "sana": "keitettyjä",
+      "alku": 3560,
+      "loppu": 4240
     },
     {
-      "sana": "mutta",
-      "alku": 4400,
-      "loppu": 4559
+      "sana": "ja",
+      "alku": 4320,
+      "loppu": 4420
     },
     {
-      "sana": "pyhiinvaeltajat",
-      "alku": 4679,
-      "loppu": 5559
+      "sana": "kuivattuja",
+      "alku": 4480,
+      "loppu": 5040
     },
     {
-      "sana": "menevät",
-      "alku": 5619,
-      "loppu": 6000
+      "sana": "hedelmiä",
+      "alku": 5080,
+      "loppu": 5580
     },
     {
-      "sana": "maan",
-      "alku": 6059,
-      "loppu": 6299
+      "sana": "Myyjä",
+      "alku": 7040,
+      "loppu": 7320
     },
     {
-      "sana": "alle",
-      "alku": 6399,
-      "loppu": 6699
+      "sana": "pakkasi",
+      "alku": 7360,
+      "loppu": 7780
     },
     {
-      "sana": "Seurasin",
-      "alku": 8179,
-      "loppu": 8619
+      "sana": "rasian",
+      "alku": 7820,
+      "loppu": 8180
     },
     {
-      "sana": "kynttilöitä",
-      "alku": 8679,
-      "loppu": 9300
+      "sana": "tuliaisiksi",
+      "alku": 8240,
+      "loppu": 9080
     },
     {
-      "sana": "luoliin",
-      "alku": 9359,
-      "loppu": 9840
+      "sana": "Palasin",
+      "alku": 10540,
+      "loppu": 10940
     },
     {
-      "sana": "Kun",
+      "sana": "puotiin",
       "alku": 11000,
-      "loppu": 11139
+      "loppu": 11480
     },
     {
-      "sana": "oma",
-      "alku": 11239,
-      "loppu": 11359
+      "sana": "ennen",
+      "alku": 11560,
+      "loppu": 11780
     },
     {
-      "sana": "liekkini",
-      "alku": 11460,
-      "loppu": 12000
+      "sana": "kuin",
+      "alku": 11840,
+      "loppu": 12040
     },
     {
-      "sana": "sammui",
-      "alku": 12079,
-      "loppu": 12519
+      "sana": "pääsin",
+      "alku": 12080,
+      "loppu": 12420
     },
     {
-      "sana": "edellä",
-      "alku": 13199,
-      "loppu": 13500
+      "sana": "majatalolle",
+      "alku": 12460,
+      "loppu": 13200
     },
     {
-      "sana": "kulkeva",
-      "alku": 13539,
-      "loppu": 13979
+      "sana": "Hän",
+      "alku": 14940,
+      "loppu": 15080
     },
     {
-      "sana": "nainen",
-      "alku": 14019,
-      "loppu": 14380
+      "sana": "katsoi",
+      "alku": 15120,
+      "loppu": 15520
     },
     {
-      "sana": "sytytti",
-      "alku": 14479,
-      "loppu": 14859
+      "sana": "tyhjää",
+      "alku": 15560,
+      "loppu": 15960
     },
     {
-      "sana": "sen",
-      "alku": 14899,
-      "loppu": 15079
+      "sana": "rasiaani",
+      "alku": 16020,
+      "loppu": 16820
     },
     {
-      "sana": "omastaan",
-      "alku": 15159,
-      "loppu": 15760
+      "sana": "ja",
+      "alku": 16880,
+      "loppu": 16940
     },
     {
-      "sana": "sanomatta",
-      "alku": 15920,
-      "loppu": 16399
+      "sana": "sitoi",
+      "alku": 16980,
+      "loppu": 17340
     },
     {
-      "sana": "mitään",
-      "alku": 16459,
-      "loppu": 16899
+      "sana": "uuden",
+      "alku": 17420,
+      "loppu": 17720
     },
     {
-      "sana": "Kaksi",
-      "alku": 18600,
-      "loppu": 18879
+      "sana": "kannen",
+      "alku": 17780,
+      "loppu": 18100
     },
     {
-      "sana": "liekkiä",
-      "alku": 18979,
-      "loppu": 19520
+      "sana": "tavallista",
+      "alku": 18140,
+      "loppu": 18620
     },
     {
-      "sana": "eikä",
-      "alku": 20159,
-      "loppu": 20359
-    },
-    {
-      "sana": "ensimmäiseltä",
-      "alku": 20439,
-      "loppu": 21159
-    },
-    {
-      "sana": "puuttunut",
-      "alku": 21199,
-      "loppu": 21659
-    },
-    {
-      "sana": "mitään",
-      "alku": 21719,
-      "loppu": 22139
-    },
-    {
-      "sana": "Olen",
-      "alku": 23760,
-      "loppu": 23939
-    },
-    {
-      "sana": "tutkinut",
-      "alku": 23979,
-      "loppu": 24399
-    },
-    {
-      "sana": "monta",
-      "alku": 24459,
-      "loppu": 24719
-    },
-    {
-      "sana": "tapaa",
-      "alku": 24819,
-      "loppu": 25119
-    },
-    {
-      "sana": "siirtää",
-      "alku": 25260,
-      "loppu": 25719
-    },
-    {
-      "sana": "omaisuutta",
-      "alku": 25799,
-      "loppu": 26559
-    },
-    {
-      "sana": "Tämän",
-      "alku": 28299,
-      "loppu": 28579
-    },
-    {
-      "sana": "haluan",
-      "alku": 28619,
-      "loppu": 28959
-    },
-    {
-      "sana": "muistaa",
-      "alku": 29019,
-      "loppu": 29420
+      "sana": "tiukemmin",
+      "alku": 18660,
+      "loppu": 19180
     }
   ],
   "lauseet": [
-    119,
-    8179,
-    11000,
-    18600,
-    23760,
-    28299
+    220,
+    7040,
+    10540,
+    14940
   ],
-  "luotu": "2026-09-11T12:04:57.433Z"
+  "luotu": "2026-09-23T15:34:34.637Z"
 }

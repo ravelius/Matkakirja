@@ -28,7 +28,7 @@ import {
 import {
   PANOROINNIN_HERKKYYS, PANOROINNIN_KOHTISUORA_RAJA, PANOROINNIN_LEVEYSRAJA, RULLAN_LIUKU_MS,
   RULLAN_RIVI_PX, RULLAN_SIVU_PX, RULLAN_SUORA_RAJA, VAUHDIN_KATTO_MS, VEDON_KATTO_RUUTUA,
-  nakyvaKaista, rajaaVauhti, rullanAskel, vedonSiirto,
+  nakyvaKaista, rajaaVauhti, rullanAskel, vedonSiirto, liukuLoppuAskel, LIUKU_LOPPU_PX_MS,
   ZOOMIN_ASKELKATTO, ZOOMIN_HERKKYYS, ZOOMIN_LIUKU_MS, kohdistaAnkkuri, zoominAskel,
   ENNUSTE_KEHYS_MAX_MS, ennustaKamera, pallonEnnusteKaytossa,
 } from '../js/pallo.js';
@@ -135,7 +135,10 @@ test('laatoitettu pallo: Mercator-laatat ämpäristä, z4-tekstuuri varana', asy
   const versio = PALLO_KIRJASTO.match(/globe\.gl-(\d+)\.(\d+)\.\d+\.min\.js$/);
   assert.ok(versio && (Number(versio[1]) > 2 || Number(versio[2]) >= 46), PALLO_KIRJASTO);
   /*
-   * TUNNISTE 20260922c, versio 2026-09-22c-pohja (22.9.2026 ilta: vesiviivat
+   * TUNNISTE 20260923a, versio 2026-09-23a-pohja (23.9.2026: sama kuin 22c,
+   * mutta vesiviivoitus.harvennus = 'haive' — harvennus häivyttää eikä katkaise;
+   * docs/raportit/kuvat/harvennus-haive-20260923/). Edellinen 20260922c,
+   * versio 2026-09-22c-pohja (22.9.2026 ilta: vesiviivat
    * laudan yksiköihin ja laikut maailmaan, jotta tasot piirtävät saman kuvion
    * samaan maantieteelliseen kohtaan — docs/raportit/vesiviivat-laudan-
    * yksikoihin-20260922.md; edellinen 20260922a 21.9.2026 ilta, isobaatit +
@@ -146,8 +149,8 @@ test('laatoitettu pallo: Mercator-laatat ämpäristä, z4-tekstuuri varana', asy
    * lepokerroksesta. Tunniste on pelkkiä kirjaimia ja numeroita, koska
    * tools/tee-pallolaatat.mjs hylkää muun.
    */
-  assert.equal(PALLO_LAATTAKANSIO, `${PALLO_LAATTAVERSIO}-20260922c`);
-  assert.equal(PALLO_LAATAT, `https://media.matkakirja.app/${laattojenKansio(PALLO_LAATTAVERSIO, false, '20260922c')}`);
+  assert.equal(PALLO_LAATTAKANSIO, `${PALLO_LAATTAVERSIO}-20260923a`);
+  assert.equal(PALLO_LAATAT, `https://media.matkakirja.app/${laattojenKansio(PALLO_LAATTAVERSIO, false, '20260923a')}`);
   assert.equal(pallonLaatta(3, 5, 4), `${PALLO_LAATAT}4/3/5.jpg`);
   assert.equal(PALLO_LAATTATASO_MAX, 8, 'taso 8 kaytossa 5.9.2026');
   /*
@@ -180,8 +183,8 @@ test('laatoitettu pallo: Mercator-laatat ämpäristä, z4-tekstuuri varana', asy
   assert.equal(laattatasoMax({ tasot: { min: 0, max: 7 } }), 7, 'varakansio ei kanna tasoa 8: vanha napalakki sekoittuisi (5.9.2026 klo 17.30)');
   assert.equal(laattatasoMax({ tasot: { min: 0, max: 6 } }), 6);
   assert.equal(laattatasoMax({ tasot: { min: 0, max: 8 } }), 8, 'luettelon 8 riittaa, kun sarja b kantaa sen');
-  assert.match(pallonLaatta(3, 5, 8), /laatat\/2026-09-22c-pohja-20260922c\/8\/3\/5\.jpg$/, 'taso 8 samasta kansiosta (varakansio pois 5.9.2026 klo 17.30)');
-  assert.match(pallonLaatta(3, 5, 7), /laatat\/2026-09-22c-pohja-20260922c\/7\/3\/5\.jpg$/, 'tasot 0-7 samasta sarjasta');
+  assert.match(pallonLaatta(3, 5, 8), /laatat\/2026-09-23a-pohja-20260923a\/8\/3\/5\.jpg$/, 'taso 8 samasta kansiosta (varakansio pois 5.9.2026 klo 17.30)');
+  assert.match(pallonLaatta(3, 5, 7), /laatat\/2026-09-23a-pohja-20260923a\/7\/3\/5\.jpg$/, 'tasot 0-7 samasta sarjasta');
   assert.equal(laattatasoMax({ tasot: { min: 0, max: 9 } }), PALLO_LAATTATASO_MAX);
   assert.equal(laattatasoMax(null), PALLO_LAATTATASO_MAX);
   const pallo = lue('../js/pallo.js');
@@ -240,7 +243,17 @@ test('laatoitettu pallo: Mercator-laatat ämpäristä, z4-tekstuuri varana', asy
   // Liike jatkuu sormen irrottua: kitka ja kynnys (5.9.2026).
   const pallo2 = lue('../js/pallo.js');
   assert.match(pallo2, /const VAUHTI_KITKA = 0\.0028;/);
-  assert.match(pallo2, /requestAnimationFrame\(\(\) => liu\(/);
+  /*
+   * HEITON TÖKKÄYS (omistaja 23.9.2026, paljas kartta): liuku astuu
+   * kirjaston tickissä ennen renderiä (sovellaSyote), ei omassa rAF:ssa
+   * tickin jälkeen, ja sen kello jatkaa vedon aikajanaa. Vanha kaava
+   * jätti irrotuksen jälkeen kaksi renderiä ilman siirtymää.
+   */
+  assert.doesNotMatch(pallo2, /requestAnimationFrame\(\(\) => liu\(/, 'liuku ei astu omassa rAF:ssa');
+  assert.match(pallo2, /const sovellaSyote = \(\) => \{\n    const nyt = kehyksenHetki\(\);\n    paivitaKehysvali\(nyt\);\n    if \(vauhti\.liukuu\) \{ liu\(nyt\); return; \}/,
+    'liuku astuu tickissä ennen vetoa ja renderiä');
+  assert.match(pallo2, /vauhti\.liukuAika = vauhti\.aika;/, 'liu\'un kello alkaa viimeksi sovelletusta vetopaikasta');
+  assert.match(pallo2, /const tavoite = nyt - vauhti\.liukuViive;/, 'liuku seuraa samalla viiveellä kuin veto');
 });
 
 /*
@@ -1269,4 +1282,32 @@ test('kytkentä: viisi syötetapaa ovat samassa rakennuksessa lippuina', () => {
    */
   assert.match(lahde, /const mittausLippu = mittauslippuPaalla\(\);/);
   assert.match(lahde, /if \(mittausLippu\) return; \/\/ mittausajossa lippu pitää valtansa/);
+});
+
+/*
+ * LIU'UN LOPPU PEHMEÄSTI (omistaja 23.9.2026: "pehmeämmin hidastaa sen
+ * ihan lopun vierityksen"). Loppuvaihe v0·(1 − s/T)²: sauma kitkaan on
+ * sileä, ja lopussa nopeus ja hidastuvuus ovat nolla.
+ */
+test('liu\'un loppuvaihe: sileä sauma, asettuu nollaan, tarkka matka', () => {
+  const KITKA = 0.0028;
+  const T = 2 / KITKA;
+  // Hidastuvuus vaiheen alussa = kitka · v0 (sama kuin eksponentiaalisen kitkan).
+  const h = 0.01;
+  const alku = liukuLoppuAskel(0, h, T);
+  assert.ok(Math.abs((1 - alku.nopeus) / h - KITKA) < 1e-4, `hidastuvuus ${(1 - alku.nopeus) / h}`);
+  // Koko vaiheen matka = v0·T/3 askeleista riippumatta (60 Hz ja 120 Hz samat).
+  const matka = (dt) => { let s = 0; let m = 0; for (;;) { const a = liukuLoppuAskel(s, s + dt, T); m += a.matka; s += dt; if (a.valmis) return m; } };
+  assert.ok(Math.abs(matka(16.7) - T / 3) < 1e-9);
+  assert.ok(Math.abs(matka(8.3) - T / 3) < 1e-9);
+  // Loppu: nopeus nolla, ja viimeisen kehyksen askel on pieni (ei seinää).
+  const loppu = liukuLoppuAskel(T - 16.7, T, T);
+  assert.equal(loppu.valmis, true);
+  assert.equal(loppu.nopeus, 0);
+  assert.ok(loppu.matka < 0.001 * 16.7, `viimeinen askel ${loppu.matka}`);
+  // Kynnys pikseleinä, noin 2,5 px/kehys.
+  assert.ok(LIUKU_LOPPU_PX_MS > 0.1 && LIUKU_LOPPU_PX_MS < 0.2);
+  const pallo = lue('../js/pallo.js');
+  assert.match(pallo, /if \(ruutunopeus\(vauhti, kohta\.lat\) < LIUKU_LOPPU_PX_MS\)/, 'kynnys luetaan ruudun pikseleinä');
+  assert.doesNotMatch(pallo, /hypot\(vauhti\.lat, vauhti\.lng\) > VAUHTI_KYNNYS\) pysaytaLiuku|> VAUHTI_KYNNYS\) vauhti\.raf = requestAnimationFrame/, 'ei asteisiin perustuvaa katkaisua kesken liu\'un');
 });

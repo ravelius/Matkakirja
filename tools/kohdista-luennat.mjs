@@ -56,6 +56,18 @@
  * ankkurit tekstistä sanasta sanaan TÄSMÄLLEEN KERRAN. Avainta ei
  * tulosteta koskaan.
  *
+ * POIKKEUS: KUITIN outputFormat EI VAADI TÄSMÄYSTÄ NYKYISEEN
+ * VAKIOON (23.9.2026, Fablen päätös, docs/raportit/-ei erillistä
+ * tiedostoa, sovittu Sisältökirjurin kanssa). Kaikki 23.9.2026
+ * mennessä tuotetut matkakirjaluentojen kuitit kantavat vanhaa
+ * bittinopeutta (mp3_44100_128); generoi-luennat.mjs:n OUTPUT_FORMAT
+ * nostettiin myöhemmin (mp3_44100_192). Kohdistus ei tuota ääntä,
+ * joten kuitin oma tuotantoaikainen formaatti kelpaa sellaisenaan —
+ * todellinen vartija on tuotannon mp3:n SHA-256- ja tavumäärävertailu
+ * (haeAanite+aanenTunnusluvut alla), joka ajetaan joka tapauksessa
+ * ennen kirjoitusta. generoi-luennat.mjs:n oma OUTPUT_FORMAT-tarkistus
+ * (uusi äänitys) ei muuttunut: se vaatii yhä nykyisen vakion.
+ *
  * SIDONTA (--sido) EI KUTSU ELEVENLABSIA LAINKAAN. Se lukee repossa jo
  * olevan aikaleimatiedoston (versio 1 tai 2), hakee äänitteen ja
  * kirjoittaa version 2 kentät tuoreina — teksti ja sanat säilyvät
@@ -83,7 +95,7 @@ import {
   PAKOTETUN_OSOITE, jaksonJasennys, karsiTagit, normalisoiAlignment, sovitaMerkit,
 } from './generoi-linssiluennat.mjs';
 import {
-  AANI, KUITIN_VERSIO, LOPPUTAUKO, MALLI, OUTPUT_FORMAT, STABILITY,
+  AANI, KUITIN_VERSIO, LOPPUTAUKO, MALLI, STABILITY,
   kohdeTiedosto, sha256, tuotantoEraId,
 } from './generoi-luennat.mjs';
 
@@ -180,7 +192,17 @@ export async function kuittirivit(data) {
       || rivi.ttsText?.text !== tts || rivi.ttsText?.sha256 !== sha256(tts)
       || rivi.synthesis?.voiceId !== AANI || rivi.synthesis?.model !== MALLI
       || rivi.synthesis?.settings?.stability !== STABILITY
-      || rivi.synthesis?.outputFormat !== OUTPUT_FORMAT
+      /*
+       * outputFormat EI VAADI täsmäystä nykyiseen OUTPUT_FORMAT-vakioon
+       * (23.9.2026, Fablen päätös): kohdistus ei tuota ääntä, joten
+       * kuitin oma tuotantoaikainen bittinopeus (esim. vanha
+       * mp3_44100_128 vs. myöhemmin nostettu mp3_44100_192) ei vaikuta
+       * kohdistuksen oikeellisuuteen — todellinen vartija on alempana
+       * (haeAanite+aanenTunnusluvut): tuotannon mp3:n SHA-256 ja
+       * tavumäärä verrataan tähän riviin ennen kirjoitusta. Vain
+       * merkkijonon muoto tarkistetaan, ettei rivi ole tyhjä tai roskaa.
+       */
+      || !/^mp3_\d+_\d+$/.test(rivi.synthesis?.outputFormat ?? '')
       || rivi.synthesis?.postprocess?.kind !== 'none'
       || rivi.generation?.status !== 'success'
       || !/^[0-9a-f]{64}$/.test(rivi.rawAudio?.sha256 ?? '')
@@ -198,7 +220,11 @@ export async function kuittirivit(data) {
     eratyot.push({ id, ...lahde });
     tulos.set(id, rivi);
   }
-  if (tuotantoEraId(eratyot, sourceCommit) !== batchId) {
+  // Sama peruste kuin rivin outputFormat-tarkistuksessa yllä: eräId
+  // lasketaan kuitin OMALLA tuotantoaikaisella formaatilla, ei
+  // nykyisellä OUTPUT_FORMAT-vakiolla.
+  const kuitinOutputFormat = data.cities[0]?.synthesis?.outputFormat;
+  if (tuotantoEraId(eratyot, sourceCommit, kuitinOutputFormat) !== batchId) {
     throw new Error('tuotantokuitin eratunnus ei vastaa sisaltoa ja reseptia');
   }
   return tulos;

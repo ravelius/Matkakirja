@@ -216,12 +216,41 @@ export const PALLON_PENGER_PX = { 1: 7, 2: 5 };
 
 /*
  * KORKEUDET PALLON PINNASTA. Kalvo (reliefi) on omana kuorenaan
- * 0,002:ssa, järvi juuri sen päällä ja uoma järven päällä — sama
- * järjestys kuin laudalla, jossa joki piirretään järven jälkeen, jotta
- * uoma jatkuu rantaan asti.
+ * 0,0015:ssä (js/pallolauta/linssit.js KALVON_SADE), järvi sen päällä ja
+ * uoma järven päällä — sama järjestys kuin laudalla, jossa joki
+ * piirretään järven jälkeen, jotta uoma jatkuu rantaan asti.
+ *
+ * UOMAN KORKEUS KULKEE PISTEISSÄ. Viivakerros ei lue datumin korkeutta
+ * vaan pisteen kolmannen luvun (js/pallolauta/reitit.js pathPointAlt);
+ * ennen 24.9.2026 pisteet olivat kaksilukuisia, ja uomat jäivät
+ * reittien 0,002:een eli JÄRVIEN ALLE ja kalvon syvyyssiirron ulottuville.
  */
 export const JARVEN_KORKEUS = 0.003;
 export const UOMAN_KORKEUS = 0.004;
+
+/*
+ * PIIRTOJÄRJESTYS PALLOLLA (Fable 24.9.2026: joet pätkittäisiä ja
+ * läpikuultavia). Uoma ja penger ovat samaa polkua samalla korkeudella,
+ * joten korkeus ei voi erottaa niitä — järjestys ratkaisee. Luvut ovat
+ * three.js:n renderOrder, ja kerros piirretään läpinäkyvässä jonossa
+ * ilman syvyyskirjoitusta (js/pallolauta/reitit.js KIINTEÄ
+ * PIIRTOJÄRJESTYS), kuten natiivissa (proto-3d VesistotKerros.cs: jonot
+ * 3000 järvet, 3001 penkereet, 3002–3004 uomat luokittain).
+ *
+ * Kaikki luvut ovat linssin reliefikalvon (1, js/pallolauta/linssit.js
+ * kalvo) YLÄPUOLELLA, jotta kalvo ei koskaan piirry veden päälle, ja
+ * pallon GL-nimiöiden (5, js/pallonimiot-gl.js) alapuolella. Pääjoki on
+ * päällimmäisenä: yhtymäkohdassa suuri uoma jatkuu ehjänä ja sivujoki
+ * laskee siihen.
+ */
+export const PALLON_JARJESTYS = {
+  jarvi: 1.2,
+  penger: 1.4,
+  uoma: { 3: 1.6, 2: 1.7, 1: 1.8 },
+};
+
+/** Piste korkeuden kanssa: [lat, lng, korkeus] (ks. UOMAN KORKEUS). */
+const korkeudella = (pisteet, korkeus) => pisteet.map(([lat, lng]) => [lat, lng, korkeus]);
 
 /*
  * Pisin sallittu väli kahden pisteen välillä asteina. Aineiston suurin
@@ -365,6 +394,7 @@ export function vesistotPallolle(aineisto, asteet) {
       vari: JARVEN_VESI,
       reuna: PENGER,
       korkeus: JARVEN_KORKEUS,
+      jarjestys: PALLON_JARJESTYS.jarvi,
     });
   });
 
@@ -379,7 +409,7 @@ export function vesistotPallolle(aineisto, asteet) {
     const luokka = jokiTarkeys.get(joki.nimi) ?? 3;
     const palat = katkaiseSauma(asteina);
     palat.forEach((pala, k) => {
-      const pisteet = tihennaKaarella(pala);
+      const pisteet = korkeudella(tihennaKaarella(pala), UOMAN_KORKEUS);
       const tunnus = palat.length > 1 ? `${i}/${k}` : `${i}`;
       const penger = PALLON_PENGER_PX[luokka];
       if (penger) {
@@ -390,6 +420,7 @@ export function vesistotPallolle(aineisto, asteet) {
           vari: PENGER,
           paksuus: penger,
           korkeus: UOMAN_KORKEUS,
+          jarjestys: PALLON_JARJESTYS.penger,
           katko: 0,
         });
       }
@@ -401,6 +432,7 @@ export function vesistotPallolle(aineisto, asteet) {
         vari: UOMA[luokka] ?? UOMA[3],
         paksuus: PALLON_UOMA_PX[luokka] ?? PALLON_UOMA_PX[3],
         korkeus: UOMAN_KORKEUS,
+        jarjestys: PALLON_JARJESTYS.uoma[luokka] ?? PALLON_JARJESTYS.uoma[3],
         katko: 0,
       });
     });

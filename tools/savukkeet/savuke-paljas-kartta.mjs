@@ -8,7 +8,8 @@
  *             ratasvalikko, pulu ja pieni liike eivät lasketa)
  *   pulu, liike, lepo, ilmakehä, häive, äänet  — päällä vai ei
  *   K1 paljas: dom 0, kaikki ryhmät pois
- *   K2 paljas: valikkonappi näkyy ja avaa valikon (paluu tilasta)
+ *   K2 paljas: ratas näkyy ja avaa valikon Mittaus-ryhmineen (paluu tilasta)
+ *   K9 ilman kehittäjätilaa Mittaus-ryhmä on piilossa (pelaaja ei näe kokeita)
  *   K3 paljas: tilarivi "koe 5/8 Paljas kartta"; kytkimen kanssa "+lyhenne"
  *   K4 vastakoe normaali: ryhmät päällä (pulun nappi on tässä näkymässä
  *      normaalistikin piilossa, joten sitä ei vaadita)
@@ -97,7 +98,7 @@ const mittaa = (sivu) => sivu.evaluate(async () => {
     const cs = getComputedStyle(el); const b = el.getBoundingClientRect();
     return cs.visibility === 'visible' && cs.display !== 'none' && Number(cs.opacity) > 0 && b.width >= 1 && b.height >= 1;
   };
-  const omat = '.profiilinaytto, #menu-btn, #paavalikko, .pollo-nappi, .pollo-paneeli, .pollo-kuplapino-kehys, .pallolauta-liike';
+  const omat = '.profiilinaytto, #menu-btn, #paavalikko, #kehittaja-valikko-btn, #kehittaja-valikko, .pollo-nappi, .pollo-paneeli, .pollo-kuplapino-kehys, .pallolauta-liike';
   const dom = [...document.body.querySelectorAll('*')].filter((el) => {
     if (el === kangas || el.contains(kangas) || el.closest(omat)) return false;
     if (!nakyy(el)) return false;
@@ -105,7 +106,7 @@ const mittaa = (sivu) => sivu.evaluate(async () => {
     return b.right > alue.left && b.left < alue.right && b.bottom > alue.top && b.top < alue.bottom;
   });
   const { laattakerroksenKokeet } = await import('/js/pallolaatat.js');
-  const nappi = document.getElementById('menu-btn');
+  const nappi = document.getElementById('kehittaja-valikko-btn');
   return {
     muuDc, dc, dom: dom.length, esim: dom.slice(0, 3).map((el) => `${el.tagName.toLowerCase()}.${[...el.classList].slice(0, 2).join('.')}`),
     pulu: nakyy(document.querySelector('.pollo-nappi')),
@@ -123,15 +124,15 @@ const RYHMAT = ['nimiot', 'symbolit', 'runko', 'ilmakeha', 'haive', 'lepo', 'pul
 const tulos = {};
 const virheet = [];
 const tila = async (nimi, muisti) => {
-  const { ctx, sivu, virheet: v } = await avaa('', { 'matkakirja-kehysprofiili': '1', ...muisti });
+  const { ctx, sivu, virheet: v } = await avaa('', { 'matkakirja-kehysprofiili': '1', 'matkakirja-kehittaja': '1', ...muisti });
   await sivu.waitForTimeout(4500);
   await ylinRivi(sivu);
   tulos[nimi] = await mittaa(sivu);
   tieto(nimi, JSON.stringify({ ...tulos[nimi], rivi: undefined, esim: tulos[nimi].esim.join(',') }));
   if (nimi === 'paljas') {
-    await sivu.click('#menu-btn');
+    await sivu.click('#kehittaja-valikko-btn');
     tulos.valikko = await sivu.evaluate(() => {
-      const m = document.getElementById('paavalikko');
+      const m = document.getElementById('kehittaja-valikko');
       const k = document.getElementById('paljaat-kerrokset-valikko');
       return { auki: Boolean(m && !m.hidden && getComputedStyle(m).visibility === 'visible'), kytkimia: k && !k.hidden ? k.querySelectorAll('button').length : 0 };
     });
@@ -149,6 +150,18 @@ try {
   await tila('normaali', { 'matkakirja-piirtokoe': 'normaali' });
   await tila('paljas', { 'matkakirja-piirtokoe': 'paljas' });
   for (const r of RYHMAT) await tila(r, { 'matkakirja-piirtokoe': 'paljas', 'matkakirja-paljaat-kerrokset': r });
+  // K9: pelaaja ilman kehittäjätilaa — ratas aukeaa (Äänentasot), Mittaus-ryhmä piilossa.
+  {
+    const { ctx, sivu, virheet: v } = await avaa('', {});
+    await sivu.click('#kehittaja-valikko-btn');
+    tulos.pelaaja = await sivu.evaluate(() => {
+      const g = document.getElementById('kehittaja-mittaus');
+      const m = document.getElementById('kehittaja-valikko');
+      return { auki: Boolean(m && !m.hidden), mittausPiilossa: Boolean(g?.hidden), hampurilaisessa: Boolean(document.querySelector('#paavalikko #piirtokoe-valikko')) };
+    });
+    virheet.push(...v);
+    await ctx.close();
+  }
   // Pikavalinta 6 = paljas + nimiöt.
   await tila('paljasnimet', { 'matkakirja-piirtokoe': 'paljasnimet' });
 } finally {
@@ -157,7 +170,7 @@ try {
 }
 const P = tulos.paljas; const N = tulos.normaali;
 vaadi('K1 paljas: dom 0, kaikki ryhmät pois', P.dom === 0 && !P.pulu && !P.liike && !P.lepo && !P.ilmakeha && !P.haive && !P.aanet, JSON.stringify(P));
-vaadi('K2 paljas: valikkonappi näkyy ja avaa valikon, 9 kytkintä', P.nappi && tulos.valikko?.auki && tulos.valikko?.kytkimia === RYHMAT.length, JSON.stringify(tulos.valikko));
+vaadi('K2 paljas: ratas näkyy ja avaa valikon, 9 kytkintä', P.nappi && tulos.valikko?.auki && tulos.valikko?.kytkimia === RYHMAT.length, JSON.stringify(tulos.valikko));
 vaadi('K3 tilarivi', /^koe 5\/8 Paljas kartta · profiili p\d+/.test(P.rivi) && /^koe 5\/8 Paljas kartta \+nimiöt · /.test(tulos.nimiot.rivi), `${P.rivi} | ${tulos.nimiot.rivi}`);
 vaadi('K4 vastakoe normaali: ryhmät päällä', N.muuDc > P.muuDc + 5 && N.dom > 5 && N.liike && N.lepo && N.haive && N.ilmakeha, JSON.stringify(N));
 /* Oma muutos ja muiden pysyvyys. Piirtokutsut: +1 riittää omaksi muutokseksi, ±1 on sama. */
@@ -179,6 +192,7 @@ for (const r of RYHMAT) {
 vaadi('K5 jokainen kytkin muuttaa vain oman ryhmänsä', rikkeet.length === 0, rikkeet.join(' · '));
 vaadi('K8 pikavalinta Paljas + nimiöt = paljas + nimiöt-ryhmä', tulos.paljasnimet.muuDc === tulos.nimiot.muuDc && tulos.paljasnimet.dom === 0 && /^koe 6\/8 Paljas \+ nimiöt · /.test(tulos.paljasnimet.rivi), JSON.stringify({ pika: tulos.paljasnimet.muuDc, ryhma: tulos.nimiot.muuDc, rivi: tulos.paljasnimet.rivi }));
 vaadi('K7 kytkimen napautus lataa sivun ja tuo ryhmän', tulos.napautus?.ladattu && /^koe 5\/8 Paljas kartta \+nimiöt/.test(tulos.napautus?.rivi ?? ''), JSON.stringify(tulos.napautus));
+vaadi('K9 pelaaja: Mittaus piilossa, ei kokeita hampurilaisessa', tulos.pelaaja?.auki && tulos.pelaaja.mittausPiilossa && !tulos.pelaaja.hampurilaisessa, JSON.stringify(tulos.pelaaja));
 vaadi('K6 ei sivuvirheitä', virheet.length === 0, virheet.join(' | '));
 console.log(`\n${lapi}/${kaikki} läpi`);
 process.exit(lapi === kaikki ? 0 : 1);
