@@ -158,8 +158,28 @@ namespace Matkakirja.Natiivi
         /// Webin luentavahti: kertojan alkaessa auki oleva kortti kutistuu lapuksi; puheenvuorojen
         /// välissä piilo pysyy välirauhan ajan (ei välähdystä). Loppu ei avaa korttia millään laitteella.
         /// </summary>
+        PalloKierto kierto;
+
+        /// <summary>
+        /// Web kutistaKortinLiikkeesta (mapPanen napautus, raahaus, nipistys): pelaajan napautus karttaan kutistaa
+        /// auki olevan kortin lapuksi. Kertojan luennan aikana kortti ei nouse takaisin (omistaja 15.9.2026), joten
+        /// palautusajastinta ei tarvita. Lapun oma napautus avaa kortin (PointerDown yllä).
+        /// </summary>
+        void KytkeKartta()
+        {
+            if (kierto != null) return;
+            kierto = UnityEngine.Object.FindAnyObjectByType<PalloKierto>();
+            if (kierto != null) kierto.Napautettu += _ => KartanLiike();
+        }
+
+        public void KartanLiike()
+        {
+            if (Nakyy && !pieni) AsetaPieni(true);
+        }
+
         void Luentavahti()
         {
+            KytkeKartta();
             bool kertoja = Aanet.KertojaPuhuu;
             float nyt = Time.realtimeSinceStartup;
             if (kertoja) kertojaLoppui = nyt;

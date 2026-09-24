@@ -312,7 +312,13 @@ namespace Matkakirja.Natiivi
                 return string.Format(CultureInfo.InvariantCulture, "napauta ({0:0.#}, {1:0.#}): kerros {2}, osuma [{3}]{4}", piste.x, piste.y, kerros,
                     string.Join(".", osuma.GetClasses()), nappi != null && nappi != osuma ? ", nappi [" + string.Join(".", nappi.GetClasses()) + "]" : "");
             }
-            return string.Format(CultureInfo.InvariantCulture, "napauta ({0:0.#}, {1:0.#}): ei osumaa UI:ssa (pallolle)", piste.x, piste.y);
+            // Ei UI-osumaa: napautus pallolle kuten sormi (PalloKierto.Napauta ruutupikseleinä, origo alakulma).
+            var kierto = UnityEngine.Object.FindAnyObjectByType<PalloKierto>();
+            var ref0 = UiKerros.Hae().Juuri(UiKerros.Valikot);
+            float pw = ref0?.layout.width ?? 0f, ph = ref0?.layout.height ?? 0f;
+            if (kierto != null && pw > 0 && ph > 0)
+                kierto.Napauta(new Vector2(piste.x * Screen.width / pw, Screen.height - piste.y * Screen.height / ph));
+            return string.Format(CultureInfo.InvariantCulture, "napauta ({0:0.#}, {1:0.#}): ei osumaa UI:ssa → pallolle{2}", piste.x, piste.y, kierto != null ? "" : " (ei palloa)");
         }
 
         void Kirjaa(string teksti)
