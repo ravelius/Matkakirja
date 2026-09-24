@@ -24,7 +24,8 @@ korkeudet metreinä. Kaaret ovat asteina kapeammassa näyttösuunnassa.
 | `event Action NakymaMuuttui` | valmis | Kameratila muuttui tässä kehyksessä (linssit, sumu). |
 | `bool Liikkeessa` | valmis | Sormi, liuku tai ajo käynnissä (mittarit ja UI). |
 | `bool RuutuPiste(lat, lon, out Vector2 ruutu, korkeus = 0)` | valmis | Pisteen paikka näytön pikseleinä (origo vasen ala kuten Input); false = takapuolella tai ruudun ulkopuolella (Natiivi-UI:n noppa). |
-| `double kallistus` (0–60°) | valmis | Kahden sormen pystyveto kallistaa. Kallistus on sallittu vain alle 3000 km:n korkeudella, ja raja liukuu. |
+| `double kallistus` (0–85°), `double KaytettyKallistus` | valmis | Kahden sormen yhdensuuntainen pystyveto kallistaa (ele lukitaan alussa: kallistus TAI nipistys+kierto, `KameraEleet`). `kallistus` on pelaajan tallennettu arvo; kuvassa käytetään `KaytettyKallistus` = min(tallennettu, raja): täysi ≤ 1500 km, nolla ≥ 7000 km (smootherstep), ja maaston rako (≥ 150 m tai 1 % etäisyydestä) voi pienentää sitä. Asentoa talteen ottava lukee `KaytettyKallistus`. |
+| `double suuntima`, `void PalautaPohjoinen(float kestoS = 0.4f)` | valmis | Katseen suunta (0 = pohjoinen ylös). Pelaaja kääntää kahden sormen kiertoeleellä, ja suunta pysyy; tuplanapautus ja `PalautaPohjoinen` kääntävät pohjoisen ylös lyhintä tietä (smootherstep, 0 = heti). **Natiivi-UI:** kompassinappi kutsuu `PalautaPohjoinen()` ja voi kiertää neulaa `-suuntima` astetta (myötäpäivään positiivinen, kuten UI Toolkitin rotate). Lennon kuvauksen suuntima palautuu lennon jälkeen nollaan. |
 
 ## 2. Kaupungit — `KaupunkiMerkit` (CesiumGeoreference-olio)
 

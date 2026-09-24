@@ -440,7 +440,8 @@ namespace Matkakirja.Natiivi
         {
             PiilotaVihje();
             if (string.IsNullOrEmpty(teksti) || !nakyvissa) return;
-            if (TekstitPiilossa) { piilotettu = teksti; piilotettuAika = Aika; return; }
+            // Muistiin kuten web viimeisinPiilotettuKupla: chatin "Näytä puhekuplat" palauttaa juuri tämän vihjeen.
+            if (TekstitPiilossa) { piilotettu = teksti; piilotettuAika = Aika; viimeRepliikki = teksti; return; }
             vihje = Kuplat.Lisaa(teksti, 10 * 60 * 1000f, null, "mk-kupla--vihje", aani: false);
         }
 

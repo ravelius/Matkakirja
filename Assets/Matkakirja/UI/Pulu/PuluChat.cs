@@ -543,10 +543,10 @@ namespace Matkakirja.Natiivi
                 var nappi = Rakenne.El("mk-chat__vastauskuva", Kuvallinen(kupla));
                 nappi.tooltip = "Näytä kuva isompana";
                 nappi.style.backgroundImage = new StyleBackground(t);
-                string lahde = "Wikipedia · " + y.Otsikko;
+                // E12 (web avaaWikiKuva): kuvatekstinä vain artikkelin otsikko ja lähdelinkki, ei tiivistelmää.
                 nappi.AddManipulator(new Clickable(() => suurennos.Avaa(new List<LehtiKuva>
                 {
-                    new LehtiKuva { Lahde = y.Kuva, Otsikko = y.Otsikko, Selite = y.Tiivistelma, LahdeRivi = lahde },
+                    new LehtiKuva { Lahde = y.Kuva, Otsikko = y.Otsikko, Lyhyt = y.Otsikko, LahdeRivi = "Kuva: Wikipedia — " + y.Otsikko, LahdeUrl = y.Osoite },
                 })));
                 Vierita(kupla);
             });

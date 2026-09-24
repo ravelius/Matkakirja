@@ -30,6 +30,8 @@ namespace Matkakirja.Natiivi
         public string Nauha;
         /// <summary>Suurennoksen reaktiorivin tunniste ja otsikko (web teos.reaktio), muuten null.</summary>
         public string Reaktio, ReaktioOtsikko;
+        /// <summary>Lähderivi linkkinä (web pollo-kuvalahde: "Kuva: Wikipedia — …" avaa artikkelin), muuten null.</summary>
+        public string LahdeUrl;
     }
 
     public sealed class LehtiNosto

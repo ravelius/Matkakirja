@@ -1,12 +1,12 @@
 // MATKAVALINTA (Natiivi-UI, erä 1): Pelikoodarin IMatkaValinta UI Toolkitilla.
 //
-// Pergamenttikortti ruudun alaosassa (peukalon ulottuvilla), himmennys kevyt
-// (rgba(14,9,4,.35)), jotta pallo ja reitti näkyvät taustalla — verkkopelin
-// matkavalinta on HUD-liuska eikä pimennä karttaa. Otsikko = kohdekaupunki,
-// alaotsikko = raha · päivä · aika. Jokainen kulkutapa on leveä nappi
-// (webin ikoniTekstiNappi 'wide'): viivaikoni (bussi, kone, peukalo, purje),
-// nimi ja selite (hinta · kesto). Peruuta = .ghost-nappi; himmennyksen napautus
-// peruu myös.
+// E5 (Fable 24.9., web renderTravelChoice): kohteet ovat toimintorivin leveitä nappeja suoraan kartan
+// päällä (web .actions: ikoniTekstiNappi 'wide' "Pariisi (50 p)"), ei himmennystä, otsikkoa eikä
+// alaotsikkoa ("kartan päälle ei kirjoiteta mitään"); paluu koko levyisellä nuoli-ikoninapilla
+// (iconButton('nuoli', 'Takaisin')). Mitat webistä (iPhone 393 / iPad 834): rivi 44 px, väli 6,4 px,
+// leveys min(549, ruutu − 44) keskellä, pohja rgba(250,243,226,.72), reuna 1 px rgba(122,85,20,.35),
+// pyöristys 10 px, American Typewriter 18,4 px #46331f, ikoni ja teksti keskellä. Selite (natiivin
+// kaupungin napautuksen polku) pienenä tekstin perässä; webin Liiku-polun riveillä sitä ei ole.
 //
 // Kartan toimintonappi ("Heitä noppaa → Lontoo", "Tutki kaupunkia") on webin
 // button.primary: kultainen liukuväri, tumma teksti, nopan kuvake. Se istuu
@@ -32,7 +32,6 @@ namespace Matkakirja.Natiivi
 
         readonly UiKerros kerros;
         readonly VisualElement himmennys, rivit, heitto;
-        readonly Kortti kortti;
         readonly Label otsikko, alaotsikko, heittoTeksti;
         readonly SvgIkoni heittoIkoni;
         Action<int> valittu;
@@ -45,8 +44,8 @@ namespace Matkakirja.Natiivi
         bool pakollinen;
 
         public bool Auki { get; private set; }
-        /// <summary>Valinnan himmennys, jonka ensimmäinen lapsi on kortti (pulu hyppää sen yläpuolelle).</summary>
-        public VisualElement KorttiAlue => himmennys;
+        /// <summary>Ei korttia, jonka yläpuolelle pulu hyppäisi: webissä pulu jää toimintorivin päälle (E5).</summary>
+        public VisualElement KorttiAlue => null;
         public bool HeittoNakyy { get; private set; }
         public string Otsikko => Auki ? otsikko.text : null;
 
@@ -81,18 +80,13 @@ namespace Matkakirja.Natiivi
             Rakenne.Teksti(Liikkuminen.LiikuTeksti, "mk-nappi__teksti", liikuNappi);
             Kirjasimet.Aseta(liiku, Kirjasin.KoneLihava);
 
-            // --- modaalinen valinta ---
-            himmennys = Rakenne.El("mk-himmennys mk-himmennys--kevyt", juuri);
+            // --- kohdevalinta toimintorivinä (web .actions, E5) ---
+            himmennys = Rakenne.El("mk-matkavalinta", juuri, PickingMode.Ignore);
             himmennys.style.display = DisplayStyle.None;
-            himmennys.RegisterCallback<PointerDownEvent>(e => { if (e.target == himmennys && !pakollinen) Peruuta(); });
-
-            kortti = new Kortti("mk-matkavalinta");
-            himmennys.Add(kortti);
-            otsikko = Rakenne.Teksti("", "mk-kortti__otsikko", kortti.Sisus);
-            Kirjasimet.Aseta(otsikko, Kirjasin.LukuLihava);
-            alaotsikko = Rakenne.Teksti("", "mk-kortti__alaotsikko", kortti.Sisus);
-            Kirjasimet.Aseta(alaotsikko, Kirjasin.LukuKursiivi);
-            rivit = Rakenne.El("mk-matkavalinta__rivit", kortti.Sisus, PickingMode.Ignore);
+            // Otsikko ja alaotsikko vain testilokille (Otsikko), eivät näy (web: kartan päälle ei kirjoiteta).
+            otsikko = new Label();
+            alaotsikko = new Label();
+            rivit = Rakenne.El("mk-matkavalinta__rivit", himmennys, PickingMode.Ignore);
             Kirjasimet.Aseta(rivit, Kirjasin.Kone);
 
             kerros.TurvaMuuttui += Asettele;
@@ -100,11 +94,12 @@ namespace Matkakirja.Natiivi
 
         void Asettele()
         {
-            // Kortti turva-alueen alareunan yläpuolelle (kotipalkki).
+            // Web .actions: 22 px sivuilta, enintään 549 px keskellä, alareuna 32 px (turva-alueen yläpuolella).
             var r = kerros.Reunat(UiKerros.Matkavalinta);
-            himmennys.style.paddingBottom = r.w + 18;
-            himmennys.style.paddingLeft = r.x + 12;
-            himmennys.style.paddingRight = r.z + 12;
+            float leveys = himmennys.panel != null ? himmennys.panel.visualTree.layout.width : 0f;
+            if (!(leveys > 0f)) return;
+            rivit.style.width = Mathf.Round(Mathf.Min(549f, leveys - r.x - r.z - 44f));
+            rivit.style.bottom = Mathf.Max(32f, r.w + 12f);
         }
 
         static string IkoniNimelle(string nimi)
@@ -132,17 +127,19 @@ namespace Matkakirja.Natiivi
             {
                 int indeksi = i;
                 var (nimi, selite) = vaihtoehdot[i];
-                Ikonit.Viiva.TryGetValue(IkoniNimelle(nimi), out var ikoni);
+                // Liiku-polun rivit ovat kohteita ("Lontoo (50 p)"): ikoni valitusta kulkutavasta (web: bussi/kone/purje).
+                string ikoniNimi = IkoniNimelle(nimi);
+                if (ikoniNimi == "kompassi" && valittuTapa.HasValue) ikoniNimi = TavanIkoni(valittuTapa.Value);
+                Ikonit.Viiva.TryGetValue(ikoniNimi, out var ikoni);
                 var b = Rakenne.Nappi(null, "mk-valintarivi", () => { if (Auki) valittu?.Invoke(indeksi); }, rivit, ikoni);
-                var tekstit = Rakenne.El("mk-valintarivi__tekstit", b, PickingMode.Ignore);
-                Rakenne.Teksti(nimi, "mk-valintarivi__nimi", tekstit);
-                if (!string.IsNullOrEmpty(selite)) Rakenne.Teksti(selite, "mk-valintarivi__selite", tekstit);
+                Rakenne.Teksti(nimi, "mk-valintarivi__nimi", b);
+                if (!string.IsNullOrEmpty(selite)) Rakenne.Teksti(selite, "mk-valintarivi__selite", b);
             }
             pakollinen = false;
             if (!pakollinen)
             {
-                var alarivi = Rakenne.El("mk-kortti__napit", rivit, PickingMode.Ignore);
-                Rakenne.Nappi("Peruuta", "mk-nappi--haamu", Peruuta, alarivi);
+                var takaisin = Rakenne.Nappi(null, "mk-valintarivi mk-valintarivi--takaisin", Peruuta, rivit, Ikonit.Viiva["nuoli"]);
+                takaisin.tooltip = "Takaisin";
             }
 
             Asettele();
@@ -196,6 +193,8 @@ namespace Matkakirja.Natiivi
         // --- Liiku (PeliOhjain.Kulkutavat, LiikuMuuttui) --------------------------------
 
         IReadOnlyList<KulkutapaNappi> tavat = Array.Empty<KulkutapaNappi>();
+        /// <summary>Liiku-liu'usta viimeksi valittu tapa (kohderivien ikoni); testikomento kulkutapa ohittaa liu'un.</summary>
+        Kulkutapa? valittuTapa;
         bool liikuEstetty;
 
         static string TavanIkoni(Kulkutapa t) => t switch
@@ -269,6 +268,7 @@ namespace Matkakirja.Natiivi
                 return;
             }
             SuljeLiuku();
+            valittuTapa = t.Laji;
             var virhe = PeliOhjain.Instanssi?.ValitseKulkutapa(t.Laji);
             if (virhe != null && UiNakymat.Olemassa) UiNakymat.Hae().Tilarivi.Viesti(virhe);
         }
@@ -315,8 +315,8 @@ namespace Matkakirja.Natiivi
 
         public bool PeittaaPisteen(Vector2 ruutu)
         {
-            if (Auki) return true;
-            return (HeittoNakyy || liikuNakyy) && kerros.PeittaaPisteen(ruutu);
+            // Rivit kartan päällä ilman himmennystä: vain napit peittävät (web .actions).
+            return (Auki || HeittoNakyy || liikuNakyy) && kerros.PeittaaPisteen(ruutu);
         }
     }
 }

@@ -403,7 +403,7 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// Web naytaFactValokuva: muistikirjan kyljen pikkukuva (pinon ensimmäinen), napautus avaa
-        /// koko pinon (web postikortti; natiivissa luentakuvien selattava suurennos). Latausvirhe
+        /// koko pinon postikortteina (web naytaPostikortti, Postikortti alla). Latausvirhe
         /// piilottaa pikkukuvan (web factValokuvaKuva error). Ei userDataa: luennan pikkukuvien
         /// sarja (LisaaPikkukuva) ei poimi tätä.
         /// </summary>
@@ -420,7 +420,7 @@ namespace Matkakirja.Natiivi
             el.RegisterCallback<PointerDownEvent>(e =>
             {
                 e.StopPropagation();
-                Kuvat.Suurenna(pino, 0);
+                Postikortti.Avaa(pino); // E13: web naytaPostikortti
             });
         }
 
@@ -463,12 +463,22 @@ namespace Matkakirja.Natiivi
 
         // --- kaiutin: Kertoja-kytkin ja VU-mittari -----------------------------------
 
-        void VaihdaKertoja() => Asetukset.Aseta(Kytkin.Kertoja, !Asetukset.Paalla(Kytkin.Kertoja));
+        /// <summary>Kortin kaiutin käänsi kertojan päälle (web factKuuntele: vain kortin nappi aloittaa merkinnän luennan).</summary>
+        public event Action KertojaPaalleKortista;
+
+        void VaihdaKertoja()
+        {
+            bool paalle = !Asetukset.Paalla(Kytkin.Kertoja);
+            Asetukset.Aseta(Kytkin.Kertoja, paalle);
+            if (paalle) KertojaPaalleKortista?.Invoke();
+        }
 
         void PaivitaKaiutin()
         {
             bool paalla = Asetukset.Paalla(Kytkin.Kertoja);
             kaiutin.EnableInClassList("mk-mykistetty", !paalla);
+            // E20: web paivitaKaiutinTila (title tilan mukaan).
+            kaiutin.tooltip = paalla ? "Luenta päällä — mykistä" : "Luenta pois — kytke päälle";
         }
 
         void Mittari()
@@ -495,6 +505,96 @@ namespace Matkakirja.Natiivi
                 kaariTaso[i] = Mathf.MoveTowards(kaariTaso[i], tavoite, nopeus);
                 kaaret[i].style.opacity = kaariTaso[i];
             }
+        }
+    }
+
+    /// <summary>
+    /// E13 (web naytaPostikortti ja postikorttiSulkija, css .postikortti): matkakirjan valokuvapino vinoina
+    /// postikortteina ruudun keskellä (leveys ja kuva-ikkuna webin @media-portain, nosto −52 %). Päällimmäinen kallistuu −4,5°,
+    /// alemmat +4° ja siirtyvät (14, 30) px ilman tekstejä. Kuva-ikkuna rajattuna,
+    /// kuvateksti 0,86rem ja lähde 0,6rem kirjoituskoneella, laskuri "i/n" oikeassa alakulmassa. Pinossa
+    /// vasen reunakaista (24 %) vie edelliseen ja oikea seuraavaan, keskiosa pitää kortin; napautus kortin
+    /// ohi sulkee (yhden kuvan kortti mistä tahansa). Ei varjoa eikä harmaasävyä (UITK:ssa ei box-shadow- eikä
+    /// filter-ominaisuutta).
+    /// </summary>
+    public static class Postikortti
+    {
+        static VisualElement verho;
+        static readonly List<VisualElement> kortit = new List<VisualElement>();
+        static int indeksi;
+
+        public static void Avaa(List<VirtaKuva> pino)
+        {
+            Sulje();
+            if (pino == null || pino.Count == 0) return;
+            var juuri = UiKerros.Hae().Juuri(UiKerros.Traileri);
+            verho = Rakenne.El("mk-postikortti__verho", juuri);
+            verho.RegisterCallback<PointerDownEvent>(Napautus);
+            float w = juuri.panel != null ? juuri.panel.visualTree.layout.width : 393f;
+            float h = juuri.panel != null ? juuri.panel.visualTree.layout.height : 852f;
+            var pinoEl = Rakenne.El("mk-postikortti", verho, PickingMode.Ignore);
+            // Web @media: ≥ 700 px min(88vw, 76vh, 720) ja kuva min(52vh, 500); ≥ 1000 × 760 min(84vw, 82vh, 880) ja
+            // min(60vh, 600); ≥ 1500 × 950 min(76vw, 84vh, 1040) ja min(64vh, 760); muuten min(84vw, 460) ja min(48vh, 330).
+            float leveys, kuvaKorkeus;
+            if (w >= 1500f && h >= 950f) { leveys = Mathf.Min(w * 0.76f, h * 0.84f, 1040f); kuvaKorkeus = Mathf.Min(h * 0.64f, 760f); }
+            else if (w >= 1000f && h >= 760f) { leveys = Mathf.Min(w * 0.84f, h * 0.82f, 880f); kuvaKorkeus = Mathf.Min(h * 0.6f, 600f); }
+            else if (w >= 700f) { leveys = Mathf.Min(w * 0.88f, h * 0.76f, 720f); kuvaKorkeus = Mathf.Min(h * 0.52f, 500f); }
+            else { leveys = Mathf.Min(w * 0.84f, 460f); kuvaKorkeus = Mathf.Min(h * 0.48f, 330f); }
+            pinoEl.style.width = Mathf.Round(leveys);
+            kortit.Clear();
+            indeksi = 0;
+            for (int i = 0; i < pino.Count; i++)
+            {
+                var k = pino[i];
+                var kortti = Rakenne.El("mk-postikortti__kortti", pinoEl, PickingMode.Ignore);
+                var kuva = Rakenne.El("mk-postikortti__kuva", kortti, PickingMode.Ignore);
+                kuva.style.height = Mathf.Round(kuvaKorkeus);
+                Kuvat.Hae(k.Osoite, t => { if (t != null) kuva.style.backgroundImage = new StyleBackground(t); });
+                // Web: lähde (.kuvalahde 0,6rem #8a7a60) kuvatekstin sisällä sen perässä.
+                string kuvateksti = k.Selite ?? k.Lyhyt ?? "";
+                if (!string.IsNullOrEmpty(k.Lahde))
+                    kuvateksti += (kuvateksti.Length > 0 ? " " : "") + "<size=9.6><color=#8a7a60>" + k.Lahde + "</color></size>";
+                var teksti = Rakenne.Teksti(kuvateksti, "mk-postikortti__teksti", kortti);
+                Kirjasimet.Aseta(teksti, Kirjasin.Kone);
+                teksti.style.display = kuvateksti.Length == 0 ? DisplayStyle.None : DisplayStyle.Flex;
+                if (pino.Count > 1) Kirjasimet.Aseta(Rakenne.Teksti($"{i + 1}/{pino.Count}", "mk-postikortti__laskuri", kortti), Kirjasin.Kone);
+                kortit.Add(kortti);
+            }
+            Jarjesta();
+        }
+
+        public static bool Auki => verho != null;
+
+        public static void Sulje()
+        {
+            verho?.RemoveFromHierarchy();
+            verho = null;
+            kortit.Clear();
+        }
+
+        /// <summary>Päällimmäinen ilman alla-luokkaa ja muiden päälle; muut sen alle pinoon.</summary>
+        static void Jarjesta()
+        {
+            for (int i = 0; i < kortit.Count; i++)
+                kortit[i].EnableInClassList("mk-postikortti__kortti--alla", i != indeksi);
+            if (kortit.Count > 0) kortit[indeksi].BringToFront();
+        }
+
+        static void Napautus(PointerDownEvent e)
+        {
+            e.StopPropagation();
+            if (kortit.Count == 0) { Sulje(); return; }
+            var paalla = kortit[indeksi];
+            var p = (Vector2)e.position;
+            bool kortilla = kortit.Any(k => k.worldBound.Contains(p));
+            if (kortit.Count < 2 || !kortilla) { Sulje(); return; }
+            // Web gallerianVyohyke: reunakaistat 24 % kortin leveydestä, keskiosa 52 % pitää kortin.
+            var r = paalla.worldBound;
+            float x = (p.x - r.xMin) / Mathf.Max(1f, r.width);
+            int askel = x < 0.24f ? -1 : x > 0.76f ? 1 : 0;
+            if (askel == 0) return;
+            indeksi = (indeksi + askel + kortit.Count) % kortit.Count;
+            Jarjesta();
         }
     }
 }

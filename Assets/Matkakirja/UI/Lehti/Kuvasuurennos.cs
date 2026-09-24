@@ -15,6 +15,7 @@ namespace Matkakirja.Natiivi
         readonly VisualElement kerros, kuva, kehys;
         ReaktioRivi reaktiot;
         readonly Label teksti, lahde, laskuri;
+        string lahdeUrl;
         VisualElement nauha;
         Texture2D ladattu;
         readonly Button edellinen, seuraava;
@@ -40,6 +41,7 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(teksti, Kirjasin.Luku);
             lahde = Rakenne.Teksti("", "mk-nosto__lahde", kehys);
             Kirjasimet.Aseta(lahde, Kirjasin.Kone);
+            lahde.RegisterCallback<ClickEvent>(e => { if (lahdeUrl != null) { e.StopPropagation(); Application.OpenURL(lahdeUrl); } });
         }
 
         public void Avaa(IReadOnlyList<LehtiKuva> kuvat, int alku = 0)
@@ -86,6 +88,9 @@ namespace Matkakirja.Natiivi
             teksti.text = k.Selite ?? k.Lyhyt ?? "";
             teksti.style.display = teksti.text.Length > 0 ? DisplayStyle.Flex : DisplayStyle.None;
             lahde.text = k.LahdeRivi ?? "";
+            lahdeUrl = string.IsNullOrEmpty(k.LahdeUrl) ? null : k.LahdeUrl;
+            lahde.pickingMode = lahdeUrl != null ? PickingMode.Position : PickingMode.Ignore;
+            lahde.EnableInClassList("mk-nosto__lahde--linkki", lahdeUrl != null);
             lahde.style.display = lahde.text.Length > 0 ? DisplayStyle.Flex : DisplayStyle.None;
             bool monta = sarja.Count > 1;
             edellinen.style.display = seuraava.style.display = laskuri.style.display = monta ? DisplayStyle.Flex : DisplayStyle.None;

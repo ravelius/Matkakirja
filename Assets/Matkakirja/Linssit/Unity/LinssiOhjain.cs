@@ -912,7 +912,7 @@ namespace Matkakirja.Natiivi
 
         public IKarttaKerrokset Kerrokset => kerrokset;
 
-        public Nakyma Kamera => new Nakyma(kierto.leveys, kierto.pituus, kierto.korkeus, kierto.kallistus);
+        public Nakyma Kamera => new Nakyma(kierto.leveys, kierto.pituus, kierto.korkeus, kierto.KaytettyKallistus);
 
         public void AjaKamera(Nakyma kohde, float kestoS, Func<double, double> pehmennys = null)
         {

@@ -276,7 +276,7 @@ namespace Matkakirja
                 avaimet[0] = new LennonAikajana.Avain
                 {
                     Osuus = 0, Kohde = -1, SuuntaAbs = true,
-                    Etaisyys = kierto.korkeus, Kallistus = kierto.kallistus, Suunta = kierto.suuntima,
+                    Etaisyys = kierto.korkeus, Kallistus = kierto.KaytettyKallistus, Suunta = kierto.suuntima,
                 };
 
             if (savu != null) savu.Aloita();
