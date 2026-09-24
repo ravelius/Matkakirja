@@ -304,6 +304,7 @@ namespace Matkakirja.Editori
             m.SetFloat("_Smoothness", 0.15f);
             EditorUtility.SetDirty(m);
             return new Maamerkit.Malli { id = id, prefab = prefab, materiaali = m };
+        }
 
         public const string KoneTekstuurit = "Assets/Matkakirja/Kartta/Malli/Tekstuurit/";
 
