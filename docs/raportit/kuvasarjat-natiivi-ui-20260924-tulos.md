@@ -23,34 +23,56 @@ tarpeen.
   "Vaihda matkustustapa" -nuolinappi, estettyjen ikonien harmaa tila
   ja tilarivin syy.
 
-## Poikkeamat / löydökset — tarkista
+## Poikkeamat (ensimmäinen kierros, master fff33f5) — RATKAISTU uusinnassa
 
-- **A4** "Ehdota sisältöä" -napautus EI sulkenut chattia eikä avannut
-  lomaketta kuten lista kuvaa. Sen sijaan greetingin alle ilmestyi kaksi
-  napautettavaa esimerkkikysymystä ("Milloin Lontoon metro…",
-  "Miten savuiset höyryveturit…") — vaikuttaa keskustelunaloitus-
-  ehdotukselta, ei sisällön ehdotuslomakkeelta. Napautuskoordinaatit
-  tarkistettu tarkasti (osuivat itse chip-tekstiin), toistettu 2×, sama
-  tulos. (A4-ehdota-sisaltoa.png)
-- **A5** `ui lehti ateena` → `ui chat Mikä on Akropolis?`: komento
-  palautti "ok" mutta MIKÄÄN ei muuttunut näytöllä — lehti pysyi auki
-  eikä chat-paneelia tai vastausta näkynyt lainkaan (odotettu 5–9 s).
-  En tiedä onko kyse siitä että chat piirtyy lehden alle (z-järjestys)
-  vai ettei komento oikeasti tee mitään lehden ollessa auki.
-  (A5-chat-lehdessa.png — näyttää vain lehden, ei chattia)
+- **A4**: napautus ei toiminut ensimmäisellä kierroksella. Selittyi:
+  greetingin valmiskysymykset eivät liity nappiin (Natiivi-UI:n
+  selitys), ja pilerin kosketusala oli liian pieni — korjattu.
+- **A5**: chat piirtyi lehden ALLE (z-järjestys) — korjattu haarassa
+  natiivi-ui/lehti-kulttuuri.
 
-## Ei ehditty
+## Uusinta (24.9.2026, master 0f5ff7f) — kaikki PASS
 
-- **A7** (oikea saapuminen luennan kanssa, kortin kutistuminen lapuksi):
-  `ui aloita <kaupunki>` -komento ohittaa Aloitusnakyman koko UI-virran
-  (sama havainto kuin aiemmin aloituslennossa) — silmukka hyppää
-  suoraan Karttaan ilman näkyvää saapumista tai luentaa, joten tätä ei
-  voi testata tällä komennolla. Vaatisi oikean napautusvirran (Aloita
-  seikkailu → valitse kaupunki) tarkalla ajoituksella.
-- **A8** (chat-nappirivi, sanelu lupakyselyineen): nappirivi (näppäimistö/
-  kaiutin/mikki) näkyy jo A3:n kuvassa, mutta mikin lupakysely →
-  "Kuuntelen…" → osittainen teksti -ketjua ei ehditty ajaa. Simulaattorin
-  mikrofoni/sanelu ei välttämättä vastaa oikeaa laitetta.
+- **A4** `ui chat` → napautus "Ehdota sisältöä" -pilleriin (tarkka
+  osuma, ei komento): chat sulkeutui, "Kerro mitä huomasit" -lomake
+  aukesi. Myös `ui chat ehdota` toimii samoin suoraan.
+  (A4-ehdota-toimii.png)
+- **A5** `ui lehti ateena` → `ui chat Mikä on Akropolis?`: chat ja pulu
+  nyt LEHDEN PÄÄLLÄ, oikea vastaus latautui ja sen alla nappi
+  "Tallenna juttuun" (listassa "Ehdota tallennettavaksi" — sama toiminto,
+  nykyinen teksti eri). (A5-chat-lehden-paalla-vastaus.png)
+  `ui chat ehdota` lehden ollessa auki: lomake avautuu lehden päällä,
+  sivuviite "Maailman aarrekartta · Lontoo · Etusivu" (pelaajan
+  sijainti, ei auki olevan lehden kaupunki — huomio, ei välttämättä bugi).
+  (A5-lomake-lehden-paalla.png)
+- **A7** ilman aloitusvirtaa: `ui matkakirja tanger havainto` (kortti
+  alkaa lappuna, kuten A6) → `ui luento tanger` → `ui luento tanger
+  loppu` (pysyy lappuna) → napautus lappuun avaa täyden kortin oikein.
+  Huom: koska kortti ALKAA jo lappuna iPhonella, "kutistuminen"-siirtymää
+  itsessään ei nähnyt — jos se pitää vahvistaa, tarvitaan tila jossa
+  kortti on ensin auki (esim. iPadilla, missä A6:n mukaan kortti alkaa
+  auki). (A7-luento-lappu-auki.png)
+
+## Uudet kohteet — kaikki löytyivät
+
+- `ui lehti ateena 1`: sivulla 2 (kuvien jälkeen, vieritettynä alas)
+  laatikko "LEHDEN KYSYMYS" ("Tutustuitko? Miten Tuulten torni näytti
+  aikaa…") ja neljä vastausriviä. (uusi-lehden-kysymys.png)
+- Kaupunkilehden sää-rivi: mastossa "☀ Tänään 13° (13…24°), melkein
+  selkeää · vuosiennuste ›" — näkyy A5:n kuvissa (etusivun alla).
+- `ui maalehti GRC` → uutinen/artikkeliosio vieritettynä ("Luostarit
+  nostettiin kalliolle korissa", Meteora) — rakenne sama kuin muut
+  aihesivut; en ole 100 % varma onko tämä juuri se "uutisosio" jota
+  tarkoitit erillisenä osiona vai yksi tavallisista aiheista.
+  (uusi-maalehti-uutinen.png)
+
+## Ei vieläkään ehditty
+
+- **A8** (mikin lupakysely → "Kuuntelen…" → osittainen teksti): nappirivi
+  näkyy (A3, A5 kuvissa), mutta itse sanelu vaatisi simulaattorin
+  mikrofonin/puheentunnistuksen, joka ei välttämättä vastaa oikeaa
+  laitetta — ei testattu tällä kierroksella ajan puutteessa.
+- Vaaka ja iPad jäivät edelleen pois.
 
 ## B ja C -osiot
 
