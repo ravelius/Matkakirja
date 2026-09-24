@@ -68,7 +68,7 @@ case "$1" in
     linssi "keksinnot jatka"; sleep 12; linssi "keksinnot tila"; kuva linssitesti-keks-loppu
     linssi "linssi pois"; sleep 4; hae "$2"; tail -25 "$2/linssi-loki.txt" ;;
   maat)
-    linssi "linssi vertailu"; sleep 4; linssi "kamera 60 15 5000"; sleep 5; kuva kontakti-vertailu-fin
+    linssi "linssi vertailu"; sleep 5; linssi "kamera 60 15 5000"; sleep 6; kuva kontakti-vertailu-fin
     linssi "maa SWE" "maa NOR"; sleep 3; kuva linssitesti-vertailu-3
     linssi "maa DNK"; sleep 3; kuva kontakti-vertailu
     linssi "maa DEU" "vertaa"; sleep 2
