@@ -33,6 +33,10 @@ namespace Matkakirja.Natiivi
     public sealed class LehtiNosto
     {
         public string Otsikko, Teksti, Aika, Wiki, Leveys, Linkki, Nayte, NayteNimi, Musiikki, MusiikkiNimi;
+        /// <summary>Web nosto.aani ("Kuuntele näyte"), nosto.esikuuntelu (Apple Musicin 30 s haku), nosto.linkkiNimi.</summary>
+        public string Aani, Esikuuntelu, LinkkiNimi;
+        /// <summary>Web nostonMusiikkilinkit: merkkijono = yksi Apple Music -linkki, lista = nimetyt linkit.</summary>
+        public List<(string Url, string Nimi, string Otsake)> Musiikkilinkit = new List<(string, string, string)>();
         public LehtiKuva Kuva;
         public List<LehtiKuva> Galleria = new List<LehtiKuva>();
     }
@@ -278,7 +282,14 @@ namespace Matkakirja.Natiivi
                     NayteNimi = T(n, "musiikkiNayteNimi") ?? T(Ob(MiniJson.Kentta(n, "musiikkiNayte")), "nimi"),
                     Musiikki = T(n, "musiikki"), MusiikkiNimi = T(n, "musiikkiNimi"),
                     Kuva = Kuva(n) ?? Kuva(Ob(MiniJson.Kentta(n, "kuva"))),
+                    Aani = T(n, "aani") ?? T(Ob(MiniJson.Kentta(n, "aani")), "url"),
+                    Esikuuntelu = T(n, "esikuuntelu"),
+                    LinkkiNimi = T(n, "linkkiNimi") ?? T(Ob(MiniJson.Kentta(n, "linkki")), "nimi"),
                 };
+                if (nosto.Musiikki != null) nosto.Musiikkilinkit.Add((nosto.Musiikki, "Apple Music", nosto.MusiikkiNimi));
+                else foreach (var m in (Rakenne.Lista(MiniJson.Kentta(n, "musiikki")) ?? new List<object>()).Select(Ob).Where(x => x != null))
+                    if (T(m, "url") is string mu && mu.Length > 0)
+                        nosto.Musiikkilinkit.Add((mu, T(m, "nimi") ?? "Apple Music", T(m, "otsake") ?? ((T(m, "nimi") ?? "") + " Apple Musicissa").Trim()));
                 foreach (var g in (Rakenne.Lista(MiniJson.Kentta(n, "galleria")) ?? new List<object>()).Select(Ob).Where(x => x != null))
                     if (Kuva(g) is LehtiKuva gk) nosto.Galleria.Add(gk);
                 a.Nostot.Add(nosto);

@@ -564,6 +564,9 @@ namespace Matkakirja.Natiivi
                 Kappale(s, "Tämä sivu täydentyy myöhemmin.", "mk-lehti__leipa");
         }
 
+        // Web kulttuuri-musiikkilinkki: nuotti (kaksi kaulaa ja palkki).
+        const string Nuotti = "<path d=\"M9 18.5V6.2l9-1.7v11.3\"/><circle class=\"taytto\" cx=\"6.8\" cy=\"18.6\" r=\"2.2\"/><circle class=\"taytto\" cx=\"15.8\" cy=\"15.9\" r=\"2.2\"/>";
+
         void Nosto(VisualElement s, LehtiNosto n, string sivuAvain = null)
         {
             var lohko = Rakenne.El("mk-lehti__nosto", s, PickingMode.Ignore);
@@ -577,18 +580,28 @@ namespace Matkakirja.Natiivi
                 Kuva(lohko, kuvat[0], kuvat, 0, "mk-lehti__nostokuva", n.Leveys == "taysi" ? 0.56f : 0.66f);
                 Kuvateksti(lohko, kuvat[0]);
             }
+            // Noston kuuntelu- ja musiikkinapit (web lisaaNostonNapit): näyte, musiikkilinkit, vapaa
+            // musiikkinäyte tai Apple Musicin esikuuntelu. Sama soitin kuin mediarivillä (Mediarivi.Kuuntele).
+            if (n.Aani != null || n.Musiikkilinkit.Count > 0 || n.Nayte != null || n.Esikuuntelu != null)
+            {
+                var media = Rakenne.El("mk-lehti__nostomedia", lohko, PickingMode.Ignore);
+                if (!string.IsNullOrEmpty(n.Aani)) Mediarivi.Kuuntele(media, "Kuuntele näyte", n.Aani);
+                foreach (var (mUrl, mNimi, mOtsake) in n.Musiikkilinkit)
+                {
+                    string u = mUrl;
+                    var ml = Rakenne.Nappi(mNimi, "mk-lehti__musiikkilinkki", () => Application.OpenURL(u), media, Nuotti);
+                    if (!string.IsNullOrEmpty(mOtsake)) ml.tooltip = mOtsake;
+                    Kirjasimet.Aseta(ml, Kirjasin.Kone);
+                }
+                if (!string.IsNullOrEmpty(n.Nayte)) Mediarivi.Kuuntele(media, "Kuuntele musiikkia", n.Nayte, null, n.NayteNimi ?? "Vapaasti lisensoitu ääninäyte");
+                else if (n.Esikuuntelu != null || n.Musiikki != null)
+                {
+                    string esi = n.Esikuuntelu, mus = n.Musiikki, nimi = n.MusiikkiNimi ?? n.Otsikko;
+                    Mediarivi.Kuuntele(media, "Kuuntele näyte", null, valmis => Mediarivi.HaeEsikuuntelu(esi, mus, nimi, valmis), "Esikuuntelu Apple Musicista (30 s)");
+                }
+            }
             foreach (var k in Kappaleet(n.Teksti)) Kappale(lohko, k, "mk-lehti__leipa");
             var loppu = Rakenne.El("mk-lehti__nostoloppu", lohko, PickingMode.Ignore);
-            if (!string.IsNullOrEmpty(n.Nayte))
-            {
-                string url = n.Nayte;
-                var b = Rakenne.Nappi("▷ " + (n.NayteNimi ?? "Kuuntele musiikkia"), "mk-lehti__linkki", () =>
-                {
-                    // Kulttuurinäyte vaimentaa taustan (web vaimennaTausta, B7-soitin); loppu palauttaa.
-                    if (Puhe.Hae()?.Soita(url, 0, () => Aanisoitin.Nayte(false)) == true) Aanisoitin.Nayte(true);
-                }, loppu);
-                Kirjasimet.Aseta(b, Kirjasin.Kone);
-            }
             if (!string.IsNullOrEmpty(n.Wiki))
             {
                 string wiki = n.Wiki, nimi = n.Otsikko;
@@ -599,7 +612,7 @@ namespace Matkakirja.Natiivi
             if (!string.IsNullOrEmpty(n.Linkki))
             {
                 string url = n.Linkki;
-                var b = Rakenne.Nappi("Avaa sivusto ›", "mk-lehti__linkki", () => Application.OpenURL(url), loppu);
+                var b = Rakenne.Nappi((n.LinkkiNimi ?? "Avaa sivusto") + " ›", "mk-lehti__linkki", () => Application.OpenURL(url), loppu);
                 Kirjasimet.Aseta(b, Kirjasin.Kone);
             }
             // Loppurivin reaktiot "Lue lisää aiheesta" -napin rinnalle (web leipa-loppurivi, otsikkoAvain).

@@ -94,6 +94,38 @@ namespace Matkakirja.Natiivi
             public SvgIkoni Merkki;
             public Label Nimi, Aika;
             public VisualElement Live;
+            /// <summary>Kehotusnappi ("Kuuntele näyte"): soidessa "Pysäytä näyte" (web pysaytaKulttuuriAani palauttaa).</summary>
+            public string Kehotus;
+        }
+
+        /// <summary>
+        /// Lehden kuuntelunappi (web .kulttuuri-kuuntele, kulttuuriAaniNapista / esikuunteluNapista): sama
+        /// soitin kuin mediarivillä, joten yksi ääni kerrallaan ja toinen painallus pysäyttää. tallenne soi
+        /// Puheella; haeVirta hakee ensimmäisellä painalluksella suoratoisto-osoitteen (Apple Musicin
+        /// esikuuntelu), joka soi AVPlayerilla.
+        /// </summary>
+        public static Button Kuuntele(VisualElement isa, string kehotus, string tallenne, Action<Action<string>> haeVirta = null, string otsake = null)
+        {
+            var b = Nappi(isa, kehotus, null, false, out var t);
+            t.Kehotus = kehotus;
+            if (otsake != null) b.tooltip = otsake;
+            string virtaUrl = null;
+            b.clicked += () =>
+            {
+                if (soiva != null || haeVirta == null) { Painettu(t, null, tallenne); return; }
+                if (virtaUrl != null) { Painettu(t, virtaUrl, null); return; }
+                t.Nimi.text = "Haetaan…";
+                b.SetEnabled(false);
+                haeVirta(url =>
+                {
+                    b.SetEnabled(true);
+                    t.Nimi.text = kehotus;
+                    if (string.IsNullOrEmpty(url)) { UiNakymat.Hae()?.Tilarivi.Viesti("Näytettä ei löytynyt"); return; }
+                    virtaUrl = url;
+                    if (soiva == null) Painettu(t, url, null);
+                });
+            };
+            return b;
         }
 
         static Button Nappi(VisualElement isa, string nimi, string luokka, bool live, out Napintila tila)
@@ -131,6 +163,7 @@ namespace Matkakirja.Natiivi
             soiva = t;
             t.Nappi.AddToClassList("mk-lehti__kuuntele--soi");
             t.Merkki.Polku = Seis;
+            if (t.Kehotus != null) t.Nimi.text = "Pysäytä näyte";
             Aanisoitin.Nayte(true);
             if (radio != null)
             {
@@ -204,8 +237,47 @@ namespace Matkakirja.Natiivi
             if (t == null) return;
             t.Nappi.RemoveFromClassList("mk-lehti__kuuntele--soi");
             t.Merkki.Polku = Soita;
+            if (t.Kehotus != null) t.Nimi.text = t.Kehotus;
             t.Aika.style.display = DisplayStyle.None;
             t.Aika.text = "";
+        }
+
+        /// <summary>
+        /// Apple Musicin 30 s esikuuntelu (web esikuunteluNapista): iTunes lookup kappaleen id:llä, jos
+        /// musiikkilinkissä on sellainen, muuten haku esikuuntelu- tai kappaleen nimellä; previewUrl.
+        /// </summary>
+        public static void HaeEsikuuntelu(string esikuuntelu, string musiikki, string nimi, Action<string> valmis)
+        {
+            string url;
+            string id = null;
+            if (esikuuntelu == null && musiikki != null)
+            {
+                var m = System.Text.RegularExpressions.Regex.Match(musiikki, @"[?&]i=(\d+)");
+                if (!m.Success) m = System.Text.RegularExpressions.Regex.Match(musiikki, @"/(?:song|album)/[^/]+/(?:id)?(\d+)");
+                if (m.Success) id = m.Groups[1].Value;
+            }
+            url = id != null
+                ? "https://itunes.apple.com/lookup?id=" + id + "&entity=song&limit=1&country=fi"
+                : "https://itunes.apple.com/search?term=" + Uri.EscapeDataString(esikuuntelu ?? nimi ?? "") + "&entity=song&limit=1&country=fi";
+            UiKerros.Hae().StartCoroutine(Hae(url, valmis));
+        }
+
+        static System.Collections.IEnumerator Hae(string url, Action<string> valmis)
+        {
+            using var r = UnityEngine.Networking.UnityWebRequest.Get(url);
+            r.timeout = 10;
+            yield return r.SendWebRequest();
+            string tulos = null;
+            if (r.result == UnityEngine.Networking.UnityWebRequest.Result.Success)
+            {
+                try
+                {
+                    var tulokset = Rakenne.Lista(MiniJson.Kentta(Rakenne.Olio(MiniJson.Jasenna(r.downloadHandler.text)), "results"));
+                    tulos = (tulokset ?? new List<object>()).Select(Rakenne.Olio).Select(o => MiniJson.Teksti(o, "previewUrl")).FirstOrDefault(u => !string.IsNullOrEmpty(u));
+                }
+                catch (FormatException) { }
+            }
+            valmis(tulos);
         }
 
         // --- aineisto ---------------------------------------------------------------------------
