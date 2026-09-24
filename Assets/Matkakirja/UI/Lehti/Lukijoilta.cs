@@ -3,9 +3,9 @@
 // haeProTuottajat, lisaaProTuottaja, paataProProfiili, proKuvaOsoite) ja js/reaktiot.js (haeReaktiolista,
 // merkitseVirheKorjatuksi).
 //
-// Ehdotukset haetaan ehdotusworkerilta kuratointiavaimella (GitHubin salaisuus EHDOTUS_AVAIN). Avain kysytään kerran
-// ja se jää tälle laitteelle (PlayerPrefs, sama avain kuin webin localStorage); hylätty avain unohdetaan. Webin
-// window.prompt-kyselyt ovat natiivissa kenttiä sivulla. Sähköposti näkyy vain täällä. Vain kehittäjätilassa eikä
+// Ehdotukset haetaan ehdotusworkerilta kuratointiavaimella (GitHubin salaisuus EHDOTUS_AVAIN). Avain syötetään
+// salasanakenttään; se säilyy vain Keychainissa (Fable 24.9.; toistaiseksi vain muistissa), ei koskaan lokissa, ja
+// hylätty avain unohdetaan. Webin window.prompt-kyselyt ovat natiivissa kenttiä sivulla. Sähköposti näkyy vain täällä. Vain kehittäjätilassa eikä
 // App Store -buildissa (Tyohuone.Sallittu).
 using System;
 using System.Collections;
@@ -21,14 +21,26 @@ namespace Matkakirja.Natiivi
 {
     public static class Lukijoilta
     {
-        const string AvainTalle = "matkakirja-ehdotus-avain"; // web EHDOTUS_AVAIN_TALLE
+        const string AvainTalle = "matkakirja-ehdotus-avain"; // vanha PlayerPrefs-avain (poistetaan)
         const string Nimi = "Lukijoilta";
         static string Osoite => Palautekanava.Osoite;
 
+        // Fable 24.9.: kuratointiavain vain iOS Keychainiin — ei PlayerPrefsiin, tiedostoon eikä lokiin. Keychain-liitäntä
+        // (Pelikoodarin MatkakirjaAvaimet.mm) on tilattu; siihen asti avain elää vain tämän käynnistyksen muistissa.
+        static string avain = "";
+
         static string Avain
         {
-            get => PlayerPrefs.GetString(AvainTalle, "");
-            set { if (string.IsNullOrEmpty(value)) PlayerPrefs.DeleteKey(AvainTalle); else PlayerPrefs.SetString(AvainTalle, value); PlayerPrefs.Save(); }
+            get { PoistaVanha(); return avain; }
+            set => avain = value ?? "";
+        }
+
+        /// <summary>Aiempi versio tallensi avaimen PlayerPrefsiin: pois laitteelta ensimmäisellä käytöllä.</summary>
+        static void PoistaVanha()
+        {
+            if (!PlayerPrefs.HasKey(AvainTalle)) return;
+            PlayerPrefs.DeleteKey(AvainTalle);
+            PlayerPrefs.Save();
         }
 
         static string Q(string s) => UnityWebRequest.EscapeURL(s ?? "").Replace("+", "%20");
@@ -82,7 +94,7 @@ namespace Matkakirja.Natiivi
             if (string.IsNullOrEmpty(Avain))
             {
                 Ohje("Ilman avainta ehdotuksia ei voi lukea. Avain on GitHubin salaisuus EHDOTUS_AVAIN, sama jolla worker "
-                    + "julkaistiin. Syötä avain alle — se jää tälle laitteelle.", true);
+                    + "julkaistiin. Syötä avain alle.", true);
                 return;
             }
             Ohje("Haetaan ehdotuksia…");
@@ -104,7 +116,7 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(k, Kirjasin.Kone);
             isa.Add(k);
             var napit = Rakenne.El("mk-tyohuone__napit", isa, PickingMode.Ignore);
-            Kirjasimet.Aseta(Rakenne.Nappi("Tallenna avain ja hae", "mk-tyohuone__nappi", () =>
+            Kirjasimet.Aseta(Rakenne.Nappi("Hae avaimella", "mk-tyohuone__nappi", () =>
             {
                 string a = (k.value ?? "").Trim();
                 if (a.Length == 0) return;
