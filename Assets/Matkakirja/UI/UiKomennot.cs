@@ -732,6 +732,10 @@ namespace Matkakirja.Natiivi
                     ui.Nostokortti.Testaa(valo, nappi, v => Kirjaa("ui " + nappi + " " + kohde + ": " + (v ?? "ok · " + ui.Nostokortti.Kuvaus)));
                     return null;
                 }
+                case "aihemerkit":
+                    // Löydös 50: ryhmitys koelipun takana (web ?aihemerkit=1).
+                    NostotKartalla.Aihemerkit = loput.Trim() == "on";
+                    return "aihemerkit = " + NostotKartalla.Aihemerkit;
                 case "lisakaupunki":
                     ui.Nostokortti.Avaa("kohde:nakyva-kaupunki-" + (loput.Length > 0 ? loput.ToLowerInvariant() : "lyon"));
                     return null;

@@ -7,8 +7,14 @@
 //   ✦ Olympos            ihmeet, skandaalit, eläimet: kynäsymboli (NostoMerkit) aihevärillä
 //   [kuva] Delfoi         historia, luonto, kulttuuri, kauppa: tyyppimerkki (merkki-*.png)
 //
-// Nimiö (11 px, Iowan kursiivi, pergamenttihalo) merkin oikealla puolella, tärkeillä (tarkeys ≥ 2)
-// hieman isompi. Koko kerros häivähtää Syttyminen-arvon mukaan (0 → 1, 0,7 s). Merkit näkyvät aina; karttaselitteen
+// LÖYDÖS 50 (25.9.2026, web-nostot-kartalla-mitat.txt): mitta = min(katto / 11, 0,7727 × zoomikerroin × oma),
+// oma 1,353 kaupungeilla ja 1,3 tasolla 1; katto 16 px, kertoimesta 2 kertoimeen 4 log2-lineaarisesti 22 px:iin.
+// Merkki: kuvamerkki vain tasolla 1 (1,6-kertainen ruutu) tai kertoimesta 4; muuten pisteperheet harmaana kiekkona
+// (#6f6a61, r 3,4) ja muut vektorina musteella. Nimiö Liberation Serif kursiivi 11 × mitta, ilman haloa, lyhennys
+// 18 merkkiin kokonaisin sanoin (web nostosymLyhennaNimio). Paikka webin 8 asennosta (nostosymNimioAsemointi),
+// väistö levossa (web sovittelu.js): kaupunki > taso 1 > taso 2 > taso 3, lyhyt nimi ensin; ei vapaata → nimiö
+// häipyy ja merkki jää. Ryhmitys vain koelipulla (web ?aihemerkit=1, ui aihemerkit on).
+// Koko kerros häivähtää Syttyminen-arvon mukaan (0 → 1, 0,7 s). Merkit näkyvät aina; karttaselitteen
 // valinta ohjaa vain karttavalojen hehkua (Natiiviseppä, web). Linssin ajan kerros on piilossa (NaytaSallittu),
 // paitsi linssinimet-tilassa (NostoKerros.LinssiNimet): merkit näkyvät ilman napautusta ja viuhkaa.
 //
@@ -48,6 +54,59 @@ namespace Matkakirja.Natiivi
             /// <summary>Ryhmän jäsenet (null = yksittäinen nosto).</summary>
             public List<NostoKerros.Nosto> Ryhma;
             public Vector2 Piste;
+            /// <summary>Mitoitus tältä kehykseltä: mitta (px / yksikkö), ikoniruudun puolikas yksikköinä, prioriteetti.</summary>
+            public float Mitta, Ruutu, Paino;
+            public bool Kiintea, Taso1;
+            /// <summary>Nimiön kylki (web SOVITTELUN_KYLJET) ja näkyvyys väistön jälkeen.</summary>
+            public string Kylki;
+            public bool NimioNakyy = true;
+            public Vector2 NimioKoko;
+        }
+
+        /// <summary>Koelippu (web ?aihemerkit=1): saman aiheen nostot ryhmämerkeiksi. Oletus pois (PAATOKSET 34/17 b).</summary>
+        public static bool Aihemerkit
+        {
+            get => PlayerPrefs.GetInt("matkakirja-aihemerkit", 0) == 1;
+            set { PlayerPrefs.SetInt("matkakirja-aihemerkit", value ? 1 : 0); PlayerPrefs.Save(); }
+        }
+
+        // Web js/pallolauta/nostot.js:398 NOSTON_MITTA (8,5 / 11), fokusnosto-symbolit.js NOSTOSYM_NIMIO_KOKO 11,
+        // NOSTOSYM_MINI_RUUTU 7,4, NOSTOSYM_PISTE_R 3,4, NOSTOSYM_NIMIO_X 8,9, NOSTOSYM_NIMIO_Y 0,36 × 11,
+        // NOSTOSYM_KUVAMERKIN_KERROIN 1,6, NOSTON_TASO1_KERROIN 1,3, kaupunki 11,5 / 8,5, NOSTOJEN_TYYPPIMERKIN_KERROIN 4.
+        const float NostonMitta = 8.5f / 11f, NimioK = 11f, MiniRuutu = 7.4f, NimioX = 8.9f, NimioY = 0.36f * 11f,
+            KuvamerkinKerroin = 1.6f, Taso1Kerroin = 1.3f, KaupunginKerroin = 11.5f / 8.5f, TyyppimerkinKerroin = 4f,
+            NimioMerkkeja = 18f, Nousu = 0.891f, Hystereesi = 6f;
+        static readonly string[] Kyljet = { "oikea", "vasen", "yla", "ala", "koillinen", "kaakko", "luode", "lounas" };
+
+        /// <summary>
+        /// Web kerroin = saapumisnäkymän kameran korkeus / nykyinen (min 0,2). Natiiviseppä lisää NostoKerros.ZoomKerroin;
+        /// siihen asti Osuus suhteessa saapumisnäkymän osuuteen (≈ 0,92, PalloKierto.taytto).
+        /// </summary>
+        static float ZoomKerroin(NostoKerros k) => Mathf.Max(0.2f, k.Osuus / 0.92f);
+
+        /// <summary>Datan nimiön kylki (Siirtoseppä, skeema 1.39 karttavalot puoli). Natiiviseppä lisää Nosto.Puoli.</summary>
+        static string DatanKylki(NostoKerros.Nosto s) => null;
+
+        /// <summary>Web nostosymNimionKattoPx: 16 px kertoimeen 2, log2-lineaarisesti 22 px:iin kertoimessa 4.</summary>
+        static float NimionKatto(float kerroin) =>
+            kerroin <= 2f ? 16f : kerroin >= 4f ? 22f : 16f + 6f * Mathf.Log(kerroin / 2f, 2f);
+
+        /// <summary>Web nostosymLyhennaNimio: yli 18 merkkiä → kokonaiset sanat 18:aan (ennen ja/sekä) + ".".</summary>
+        public static string Lyhenna(string nimi)
+        {
+            string siisti = System.Text.RegularExpressions.Regex.Replace((nimi ?? "").Trim(), @"\s+", " ");
+            if (siisti.Length <= NimioMerkkeja) return siisti;
+            var sanat = siisti.Split(' ');
+            int rinnastus = System.Array.FindIndex(sanat, x => x == "ja" || x == "sekä");
+            int n = rinnastus > 0 ? rinnastus : sanat.Length;
+            string ulos = sanat[0];
+            if (ulos.Length > NimioMerkkeja) return ulos.Substring(0, (int)NimioMerkkeja - 1) + ".";
+            for (int i = 1; i < n; i++)
+            {
+                if ((ulos + " " + sanat[i]).Length > NimioMerkkeja) break;
+                ulos += " " + sanat[i];
+            }
+            return ulos == siisti ? ulos : ulos + ".";
         }
 
         const float RyhmitysPx = 44f, RyhmitysVara = 1f, ViuhkaSivuun = 26f, ViuhkaVali = 30f, ViuhkaReuna = 10f;
@@ -127,12 +186,13 @@ namespace Matkakirja.Natiivi
                 pisteet[i] = RuntimePanelUtils.ScreenToPanel(paneeli, new Vector2(lista[i].Ruutu.x, Screen.height - lista[i].Ruutu.y));
             int n = 0;
             bool viuhkaLoytyi = false;
-            foreach (var kasa in Ryhmita(lista, pisteet))
+            float kerroin = ZoomKerroin(k);
+            foreach (var kasa in Aihemerkit ? Ryhmita(lista, pisteet) : Yksittain(lista.Count))
             {
                 var karki = kasa[0];
                 foreach (int i in kasa) if (lista[i].Tarkeys > lista[karki].Tarkeys) karki = i;
                 bool ryhma = kasa.Count > 1;
-                var m = Hae(n++, lista[karki], ryhma ? (k.Lahella ? RyhmanNimio(lista[karki].Nimio ?? lista[karki].Nimi) : "") : null, ryhma);
+                var m = Hae(n++, lista[karki], ryhma ? (k.Lahella ? RyhmanNimio(lista[karki].Nimio ?? lista[karki].Nimi) : "") : null, ryhma, kerroin);
                 m.Piste = pisteet[karki];
                 if (ryhma)
                 {
@@ -156,6 +216,113 @@ namespace Matkakirja.Natiivi
             }
             for (int i = n; i < merkit.Count; i++) merkit[i].El.style.display = DisplayStyle.None;
             if (viuhkanAvain != null && !viuhkaLoytyi) SuljeViuhka();
+            // Väistö vain levossa (web sovittelu levossa): liikkeen aikana kyljet ja näkyvyys pysyvät.
+            if (lepoKierto == null || lepoKierto.Levossa) Sovita(n);
+        }
+
+        static List<List<int>> Yksittain(int n)
+        {
+            var l = new List<List<int>>(n);
+            for (int i = 0; i < n; i++) l.Add(new List<int>(1) { i });
+            return l;
+        }
+
+        /// <summary>
+        /// Web nostosymNimioAsemointi: nimiön laatikko merkin keskipisteen suhteen (paneelin pisteet, y alas).
+        /// oikea/vasen: perusviiva +0,36 K, teksti alkaa/loppuu ±(8,9 + lisä); ylä/ala keskitettynä, perusviiva
+        /// −(ruutu + 0,25 K) / +(ruutu + 0,78 K); kulmat vaakakyljen x:llä ja ylä-/alarivin perusviivalla.
+        /// </summary>
+        static Rect NimionLaatikko(Merkki m, string kylki)
+        {
+            float mt = m.Mitta, fs = NimioK * mt, w = m.NimioKoko.x, h = m.NimioKoko.y;
+            float x = (NimioX + (m.Ruutu - MiniRuutu)) * mt;
+            float ylaPv = -(m.Ruutu + 0.25f * NimioK) * mt, alaPv = (m.Ruutu + 0.78f * NimioK) * mt, sivuPv = NimioY * mt;
+            float vasen, perus;
+            switch (kylki)
+            {
+                case "vasen": vasen = -x - w; perus = sivuPv; break;
+                case "yla": vasen = -w / 2f; perus = ylaPv; break;
+                case "ala": vasen = -w / 2f; perus = alaPv; break;
+                case "koillinen": vasen = x; perus = -m.Ruutu * mt; break;
+                case "kaakko": vasen = x; perus = alaPv; break;
+                case "luode": vasen = -x - w; perus = -m.Ruutu * mt; break;
+                case "lounas": vasen = -x - w; perus = alaPv; break;
+                default: vasen = x; perus = sivuPv; break;
+            }
+            return new Rect(vasen, perus - Nousu * fs, w, h);
+        }
+
+        /// <summary>
+        /// Web sovittelu.js: jono painon mukaan (kaupunki 0, taso 1 1000, taso 2 2000, taso 3 3000 + nimen pituus),
+        /// esteet = jo sijoitetut nimiöt, muiden merkkien ikonit (kaupunki ja taso 1 ohittavat ikonit) ja paneelin
+        /// reunat; ensin nykyinen kylki (näkyvä nimiö ei vaihda kylkeä), sitten datan kylki ja webin järjestys.
+        /// Ei vapaata → nimiö häipyy (180 ms), merkki jää. Hystereesi 6 px piilotetulle.
+        /// </summary>
+        void Sovita(int n)
+        {
+            float W = juuri.layout.width, H = juuri.layout.height;
+            if (n == 0 || float.IsNaN(W) || W <= 0) return;
+            var jono = new List<Merkki>(n);
+            for (int i = 0; i < n; i++) if (merkit[i].Nimio.text.Length > 0) jono.Add(merkit[i]);
+            jono.Sort((a, b) => a.Paino.CompareTo(b.Paino));
+            var ikonit = new List<Rect>(n);
+            for (int i = 0; i < n; i++)
+            {
+                var m = merkit[i];
+                float r = m.Ruutu * m.Mitta;
+                ikonit.Add(new Rect(m.Piste.x - r, m.Piste.y - r, 2f * r, 2f * r));
+            }
+            var varatut = new List<Rect>(jono.Count);
+            foreach (var m in jono)
+            {
+                string loytyi = null;
+                Rect paikka = default;
+                bool Vapaa(Rect r, float vara)
+                {
+                    var a = new Rect(r.x + m.Piste.x - vara, r.y + m.Piste.y - vara, r.width + 2f * vara, r.height + 2f * vara);
+                    if (a.xMin < 0 || a.yMin < 0 || a.xMax > W || a.yMax > H) return false;
+                    foreach (var v in varatut) if (v.Overlaps(a)) return false;
+                    if (!m.Kiintea)
+                        for (int i = 0; i < n; i++)
+                            if (merkit[i] != m && ikonit[i].Overlaps(a)) return false;
+                    paikka = a;
+                    return true;
+                }
+                float vara0 = m.NimioNakyy ? 0f : Hystereesi;
+                var ehdokkaat = new List<string>(10);
+                if (m.NimioNakyy && m.Kylki != null) ehdokkaat.Add(m.Kylki);
+                string datasta = DatanKylki(m.Id != null ? LoydaNosto(m.Id) : null);
+                if (datasta != null && !ehdokkaat.Contains(datasta)) ehdokkaat.Add(datasta);
+                foreach (var ky in Kyljet) if (!ehdokkaat.Contains(ky)) ehdokkaat.Add(ky);
+                foreach (var ky in ehdokkaat)
+                    if (Vapaa(NimionLaatikko(m, ky), vara0)) { loytyi = ky; break; }
+                // Taso 1 ei häivy muiden lappujen tieltä (sovittelu.js:311): pitää kylkensä.
+                if (loytyi == null && m.Taso1) { loytyi = m.Kylki ?? datasta ?? "oikea"; paikka = default; }
+                m.NimioNakyy = loytyi != null;
+                if (loytyi != null)
+                {
+                    m.Kylki = loytyi;
+                    if (paikka.width > 0) varatut.Add(paikka);
+                    AsetaNimio(m);
+                }
+                m.Nimio.style.opacity = m.NimioNakyy ? 1f : 0f;
+            }
+        }
+
+        NostoKerros.Nosto LoydaNosto(string id)
+        {
+            if (lahde == null) return null;
+            foreach (var s in lahde.Naytettavat) if (s.Id == id) return s;
+            return null;
+        }
+
+        /// <summary>Nimiö kylkeensä: laatikko merkin keskipisteen suhteen (El:n vasen ylä = keskipiste − ruutu).</summary>
+        static void AsetaNimio(Merkki m)
+        {
+            var r = NimionLaatikko(m, m.Kylki ?? "oikea");
+            float puoli = m.Ruutu * m.Mitta;
+            m.Nimio.style.left = Mathf.Round(r.x + puoli);
+            m.Nimio.style.top = Mathf.Round(r.y + puoli);
         }
 
         /// <summary>
@@ -194,7 +361,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Merkin muste: symboli 20 × 20 pisteen ympärillä ja nimiö oikealla (arvio 0,55 em / merkki).</summary>
         static Rect Laatikko(NostoKerros.Nosto s, Vector2 p)
         {
-            float koko = s.Tarkeys >= 2 ? 13.5f : 11f;
+            float koko = 11f;
             float leveys = 12f + (string.IsNullOrEmpty(s.Nimio) ? 0f : 2f + s.Nimio.Length * koko * 0.55f);
             return new Rect(p.x - 10f, p.y - 10f, 10f + leveys, 20f);
         }
@@ -277,7 +444,7 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Uusiokäyttö: i:s merkki tälle nostolle (symboli ja nimiö vaihdetaan vain tarvittaessa).</summary>
-        Merkki Hae(int i, NostoKerros.Nosto s, string nimio = null, bool ryhma = false)
+        Merkki Hae(int i, NostoKerros.Nosto s, string nimio = null, bool ryhma = false, float kerroin = 1f)
         {
             while (merkit.Count <= i)
             {
@@ -288,24 +455,52 @@ namespace Matkakirja.Natiivi
                 uusi.Nimio = Rakenne.Teksti("", "mk-nosto-merkki__nimio", uusi.El);
                 uusi.Nimio.pickingMode = PickingMode.Ignore;
                 uusi.Nimio.enableRichText = false;
-                Kirjasimet.Aseta(uusi.Nimio, Kirjasin.LukuKursiivi);
+                Kirjasimet.Aseta(uusi.Nimio, Kirjasin.Atlas);
                 merkit.Add(uusi);
             }
             var m = merkit[i];
             m.El.style.display = DisplayStyle.Flex;
+            if (m.Id != s.Id) { m.Kylki = null; m.NimioNakyy = true; }
             m.Id = s.Id;
-            string tyyppi = ryhma ? "ryhma|" + s.Aihe : (s.Aihe ?? "") + "|" + Kuva(s);
+            // Mitoitus (web nostot.js:633): mitta = min(katto / 11, 0,7727 × kerroin × oma).
+            bool kaupunki = s.Aihe == "kaupungit";
+            m.Taso1 = s.Taso == 1 && !ryhma;
+            float oma = kaupunki ? KaupunginKerroin : m.Taso1 ? Taso1Kerroin : 1f;
+            m.Mitta = Mathf.Min(NimionKatto(kerroin) / NimioK, NostonMitta * kerroin * oma);
+            bool kuvamerkki = !ryhma && Kuva(s) != null && (m.Taso1 || kerroin >= TyyppimerkinKerroin);
+            m.Ruutu = MiniRuutu * (m.Taso1 && kuvamerkki ? KuvamerkinKerroin : 1f);
+            m.Kiintea = kaupunki || m.Taso1;
+            string tyyppi = ryhma ? "ryhma|" + s.Aihe : (s.Aihe ?? "") + "|" + (kuvamerkki ? Kuva(s) : "-");
             if (tyyppi != m.Tyyppi)
             {
                 m.Tyyppi = tyyppi;
                 m.Symboli?.RemoveFromHierarchy();
-                m.Symboli = ryhma ? RyhmaSymboli(s) : Symboli(s);
+                m.Symboli = ryhma ? RyhmaSymboli(s) : Symboli(s, kuvamerkki);
                 m.El.Insert(0, m.Symboli);
             }
-            string nimi = nimio ?? s.Nimio ?? "";
+            // Merkin laatikko = ikoniruutu keskipisteen ympärillä; kuviot (16 yksikköä) keskelle.
+            float ruutuPx = 2f * m.Ruutu * m.Mitta, kuvioPx = 16f * m.Mitta;
+            m.El.style.width = ruutuPx;
+            m.El.style.height = ruutuPx;
+            m.El.style.marginLeft = m.El.style.marginTop = -ruutuPx / 2f;
+            foreach (var kv in m.Symboli.Children())
+            {
+                if (!kv.ClassListContains("mk-nosto-merkki__kuvio")) continue;
+                kv.style.width = kv.style.height = kuvioPx;
+                kv.style.left = kv.style.top = (ruutuPx - kuvioPx) / 2f;
+            }
+            string nimi = nimio ?? Lyhenna(s.Nimio ?? "");
             if (m.Nimio.text != nimi) m.Nimio.text = nimi;
             m.Nimio.style.display = nimi.Length > 0 ? DisplayStyle.Flex : DisplayStyle.None;
-            m.El.EnableInClassList("mk-nosto-merkki--tarkea", s.Tarkeys >= 2);
+            float fs = NimioK * m.Mitta;
+            if (!Mathf.Approximately(m.Nimio.resolvedStyle.fontSize, fs)) m.Nimio.style.fontSize = fs;
+            m.Nimio.EnableInClassList("mk-nosto-merkki__nimio--taso1", m.Taso1);
+            m.NimioKoko = nimi.Length > 0
+                ? m.Nimio.MeasureTextSize(nimi, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined)
+                : Vector2.zero;
+            // Web painoarvo (sovittelu.js:146): luokka × 1000 + nimen pituus.
+            m.Paino = (kaupunki ? 0 : m.Taso1 ? 1 : s.Taso >= 3 ? 3 : 2) * 1000f + nimi.Length;
+            AsetaNimio(m);
             return m;
         }
 
@@ -343,12 +538,16 @@ namespace Matkakirja.Natiivi
             return alue;
         }
 
-        VisualElement Symboli(NostoKerros.Nosto s)
+        /// <summary>
+        /// Web: kuvamerkki (kuvamerkki = true) koko ruutuun; pisteperheet harmaana kiekkona #6f6a61 ja musterenkaalla
+        /// (aiheväri vain karttaselitteen valossa); vektorit musteella rgba(58, 40, 25, 0,86).
+        /// </summary>
+        VisualElement Symboli(NostoKerros.Nosto s, bool kuvamerkki = true)
         {
             var alue = new VisualElement { pickingMode = PickingMode.Ignore };
             alue.AddToClassList("mk-nosto-merkki__symboli");
             if (s.Aihe == null || !rivit.TryGetValue(s.Aihe, out var r)) r = rivit["kaupungit"];
-            string kuva = Kuva(s);
+            string kuva = kuvamerkki ? Kuva(s) : null;
             if (kuva != null)
             {
                 alue.AddToClassList("mk-nosto-merkki__symboli--kuva");
@@ -360,7 +559,7 @@ namespace Matkakirja.Natiivi
             var taytto = new SvgIkoni(piste ? NostoMerkit.PisteTaytto : r.Vektori) { Ruutu = 16, Alku = new Vector2(-8, -8), pickingMode = PickingMode.Ignore };
             taytto.AddToClassList("mk-ikoni--tayta");
             taytto.AddToClassList("mk-nosto-merkki__kuvio");
-            taytto.style.color = Kuviot.Vari(r.Vari ?? "#8a6d4a");
+            taytto.AddToClassList(piste ? "mk-nosto-merkki__kiekko" : "mk-nosto-merkki__vektori");
             alue.Add(taytto);
             if (piste)
             {
