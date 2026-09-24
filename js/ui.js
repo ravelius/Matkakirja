@@ -87,7 +87,7 @@ import {
   stopDiaryVoice, stopIntroVoice,
   // Luennan NÄKYVÄT merkit lukevat kuuluvaa ääntä, eivät varattua
   // puheenvuoroa (15.9.2026, ks. kaynnistaLuentavahti).
-  soivaPuhuja,
+  soivaPuhuja, puheenKello,
   vapautaPuhuja,
 } from './luenta.js';
 import {
@@ -460,6 +460,7 @@ import { nollaaFokusmitat, paivitaFokusmitat, projisoiLaudalle } from './fokusmi
  * ainoa tapa sanoa, mikä vaihe maksaa. Ks. moduulin oma perustelu.
  */
 import { aloitaLinssiketju, merkitseLinssiketju, linssiketjunLoki } from './reliefipyramidi.js';
+import { aaniLisenssiSallittu } from './lisenssi.js';
 import { suoraanKartallePaalla } from './piirtokoe-asetus.js';
 import { taytaPohja } from './tekstipohja.js';
 import { INTRO_PAIKKA, INTRO_TEXT, INTRO_VALINTA, PERIAATTEET } from './ui-tekstit.js';
@@ -862,9 +863,9 @@ export { puhelinTila, luennanTekstipiilo, tekstitPiilossa };
  *   1. VÄLIRAUHA. Isoisän luennan ja Livian repliikin väliin jää
  *      hengähdys (SAAPUMISEN_KUPLA_LUENNAN_JALKEEN_MS = 900 ms).
  *      Ilman välirauhaa nappi välähtäisi siinä välissä näkyviin.
- *   2. VARAVENTTIILI. Jos vuoro jää jostain syystä roikkumaan, nappi
- *      tulee näkyviin viimeistään 30 sekunnin kuluttua — piiloon
- *      jäänyt Liiku olisi umpikuja.
+ *   2. VARAVENTTIILI. Jos puhe jää jumiin (mikään soitin ei etene
+ *      30 sekuntiin), nappi tulee näkyviin — piiloon jäänyt Liiku olisi
+ *      umpikuja. Ehjä pitkä luento ei laukaise sitä (löydös 45).
  */
 /** Kuinka usein napin vahti kysyy, onko joku äänessä. */
 const LUENTAVAHDIN_VALI_MS = 200;
@@ -4319,6 +4320,8 @@ export class UI {
 
   /** Renderin pallohaara: avaa pallon tarvittaessa, päivittää merkit. */
   paivitaPallolauta() {
+    // Lehtikuori (js/lehtikuori.js): pelkkä lehti, lautaa ei avata eikä herätetä.
+    if (this.lehtikuori) return;
     if (this.pallolauta) {
       this.pallolauta.paivita();
       return;
@@ -11690,8 +11693,17 @@ export class UI {
      * välkkyi päälle ja pois 400 ms:n välein).
      */
     if (this.luentavahti || typeof document === 'undefined') return;
-    // Puheenvuoron alku: varaventtiilin kello lähtee tästä.
-    let puheAlkoi = 0;
+    /*
+     * VARAVENTTIILI MITTAA PUHEEN EDISTYMISTÄ, EI KESTOA (löydös 45,
+     * 24.9.2026). Ennen kello lähti puheenvuoron alusta, joten jokainen yli
+     * 30 sekunnin luenta välähdytti Liikun (ja palautti hetkeksi tekstit
+     * ja hunnun) kesken puheen ja nollasi kellon (mitattu Ateena
+     * 393 × 852: Liiku näkyvissä t 33,4–33,6 s). Nyt venttiili aukeaa vasta,
+     * kun joku on "äänessä" mutta mikään soitin ei ole edennyt 30 sekuntiin
+     * (pysähtynyt virta) — ehjä pitkä luento ei koskaan laukaise sitä.
+     */
+    let kello = -1;
+    let viimeEdistys = 0;
     // Viimeisin hetki, jolloin joku oli äänessä: välirauhan kello.
     let puheLoppui = 0;
     // Sama kello erikseen kertojalle (tekstipiilo, ks. alempana).
@@ -11700,18 +11712,15 @@ export class UI {
       if (this.dead) return;
       const nyt = Date.now();
       const aanessa = Boolean(soivaPuhuja());
-      if (aanessa) {
-        if (!puheAlkoi) puheAlkoi = nyt;
-        puheLoppui = nyt;
-      } else if (!puheLoppui) {
-        puheAlkoi = 0;
-      }
-      const varaventtiili = puheAlkoi && nyt - puheAlkoi > LUENNAN_VARAVENTTIILI_MS;
+      const nytKello = puheenKello();
+      if (!aanessa || nytKello !== kello) { kello = nytKello; viimeEdistys = nyt; }
+      if (aanessa) puheLoppui = nyt;
+      const varaventtiili = aanessa && nyt - viimeEdistys > LUENNAN_VARAVENTTIILI_MS;
       // Välirauha: kahden puheenvuoron väliin jäävä hengähdys ei
       // paljasta nappia välähdykseksi.
       const valirauhassa = Boolean(puheLoppui) && nyt - puheLoppui < LUENNAN_VALIRAUHA_MS;
       const piiloon = !varaventtiili && (aanessa || valirauhassa);
-      if (!piiloon) { puheAlkoi = 0; puheLoppui = 0; }
+      if (!piiloon) puheLoppui = 0;
       document.body.classList.toggle('luenta-aanessa', piiloon);
       /*
        * KERTOJA ERIKSEEN PULUSTA (omistaja 14.9.2026): *"Luennan aikana
@@ -16240,7 +16249,14 @@ export class UI {
       linkki.appendChild(document.createTextNode(musiikki.nakyva));
       otsikkoRivi.appendChild(linkki);
     }
-    if (nosto.musiikkiNayte) {
+    /*
+     * LISENSSIPORTTI (Fable 23.9.2026, js/lisenssi.js): NC- tai ND-ehtoinen
+     * näyte ei soi. Silloin nosto käyttäytyy kuin näytettä ei olisi
+     * (esikuuntelu tai linkki voi tulla tilalle alla).
+     */
+    const musiikkiNayte = nosto.musiikkiNayte && aaniLisenssiSallittu(nosto.musiikkiNayteNimi)
+      ? nosto.musiikkiNayte : null;
+    if (musiikkiNayte) {
       const nappi = html('button', 'kulttuuri-kuuntele kulttuuri-musiikkinayte');
       nappi.type = 'button';
       nappi.title = nosto.musiikkiNayteNimi ?? 'Vapaasti lisensoitu ääninäyte';
@@ -16250,7 +16266,7 @@ export class UI {
         + '<circle cx="15.8" cy="15.9" r="2.2" fill="currentColor"/></svg>'
         + '<span>Kuuntele musiikkia</span><span class="aika" hidden></span>';
       nappi.addEventListener('click', () => this.kulttuuriAaniNapista(
-        { aani: nosto.musiikkiNayte, otsikko: nosto.otsikko }, nappi,
+        { aani: musiikkiNayte, otsikko: nosto.otsikko }, nappi,
       ));
       otsikkoRivi.appendChild(nappi);
     }
@@ -16277,7 +16293,7 @@ export class UI {
      * "Kuuntele näyte" -nappia vierekkäin ei kertoisi kumpi soi.
      * Nimenomainen `esikuuntelu`-termi toimii silloinkin.
      */
-    if ((nosto.esikuuntelu || typeof nosto.musiikki === 'string') && !nosto.musiikkiNayte) {
+    if ((nosto.esikuuntelu || typeof nosto.musiikki === 'string') && !musiikkiNayte) {
       const nappi = html('button', 'kulttuuri-kuuntele kulttuuri-musiikkinayte');
       nappi.type = 'button';
       nappi.title = 'Esikuuntelu Apple Musicista (30 s)';
@@ -17505,7 +17521,7 @@ export class UI {
     lohko.appendChild(johdanto);
 
     const vihje = html('p', 'periaate-teksti');
-    vihje.textContent = 'Pelin oikeassa alakulmassa on huutomerkki. Sitä '
+    vihje.textContent = 'Valikossa on nappi "ehdota sisältöä". Sitä '
       + 'napauttamalla voit lähettää palautetta juuri siitä kohdasta, '
       + 'jossa olet — kätevää etenkin, jos jokin näyttää menneen vikaan.';
     lohko.appendChild(vihje);

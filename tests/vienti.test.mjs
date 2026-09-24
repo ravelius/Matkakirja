@@ -26,7 +26,7 @@ import { createHash } from 'node:crypto';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
-import { JUURI, kokoaVienti } from '../tools/vienti/vie-sisalto.mjs';
+import { JUURI, kokoaVienti, peitaSahkopostit } from '../tools/vienti/vie-sisalto.mjs';
 import { onSaantoArvo } from '../tools/vienti/kokoelmat.mjs';
 import { palauta } from '../tools/vienti/sarjallista.mjs';
 import { PEILI_JUURI } from '../js/media.js';
@@ -125,7 +125,9 @@ test('jokainen export palautuu viennistä alkuperäisen kanssa samaksi', () => {
     const nimet = m.exportit.map((e) => e.nimi);
     assert.deepEqual(Object.keys(vienti.exportit), nimet, `${m.moduuli}: exportit`);
     for (const nimi of nimet) {
-      samat(ns[nimi], palauta(vienti.exportit[nimi]), `${m.moduuli}#${nimi}`);
+      // Kehittäjämoduuleista henkilöiden sähköpostit on peitetty (skeema 1.27).
+      const alkuperainen = m.luokka === 'kehittaja' ? JSON.parse(peitaSahkopostit(JSON.stringify(ns[nimi]))) : ns[nimi];
+      samat(alkuperainen, palauta(vienti.exportit[nimi]), `${m.moduuli}#${nimi}`);
     }
   }
 });
@@ -176,6 +178,10 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
     tapahtumat: ns('africa.js').AFRICA.events.length,
     linssiaineisto: 8,
     kohdekartat: avaimia(ns('maakartat.js').KAUPUNKIKARTAT),
+    maamerkit: JSON.parse(readFileSync(join(JUURI, 'tools/vienti/maamerkit.json'), 'utf8')).rivit.length,
+    aluenimet: ((a) => a.nimet.length + a.valtameret.length)(JSON.parse(readFileSync(join(JUURI, 'assets/data/aluenimet-natiivi.json'), 'utf8'))),
+    merinimet: ns('nimisto-1873.js').NIMISTO_1873.filter((n) => n.luokka === 'meri' && (!n.aika || n.aika === 'pysyva')).length,
+    tyohuonetilastot: 7, // mantereet (js/tyohuone-tilastot.js MANTEREET)
     'muutosloki-natiivi': JSON.parse(readFileSync(join(JUURI, 'tools/vienti/muutosloki-natiivi.json'), 'utf8')).rivit.length,
     lehtitehtavat: Object.values(ns('fokusvirrat.js').FOKUSVIRRAT).reduce((a, v) => a + (v?.lehtitehtavat?.length ?? 0), 0),
     radiot: avaimia(ns('radiot.js').RADIOT),
