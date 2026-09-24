@@ -22,6 +22,8 @@ namespace Matkakirja
         [Tooltip("Siirtymä kameravalon ja auringon välillä, sekunteja.")]
         public float siirtymaS = 1.5f;
         public Color sumuVari = new Color(0.86f, 0.80f, 0.68f);
+        [Tooltip("Lennon taivas (Matkakirja/Taivas): sininen ilmakehä auringon ajaksi, muuten pelin tausta.")]
+        public Material taivas;
 
         /// <summary>
         /// Aika, jonka mukaan aurinko paistaa (UTC). null = pelin paikallinen aika: aurinko on
@@ -80,6 +82,7 @@ namespace Matkakirja
                 kierto = Quaternion.Slerp(kameraValo, aurinko, s);
             }
             valo.transform.rotation = kierto;
+            Taivas(kamera != null ? kamera.GetComponent<Camera>() : null);
 
             RenderSettings.fog = sumu;
             if (sumu)
@@ -89,6 +92,38 @@ namespace Matkakirja
                 RenderSettings.fogStartDistance = (float)sumuAlku;
                 RenderSettings.fogEndDistance = (float)sumuLoppu;
             }
+        }
+
+        bool taivasPaalla;
+
+        /// <summary>
+        /// Sininen taivas lennon ajaksi (häivytys samalla osuudella kuin aurinko): kameran tausta vaihtuu
+        /// skyboxiin, jonka väri lasketaan pallon reunan kulmasta. Muulloin pelin oma yksivärinen tausta
+        /// (linssit, esim. astronautin musta avaruus, asettavat sen KarttaKerrokset.Taustavarilla).
+        /// </summary>
+        void Taivas(Camera kamera)
+        {
+            if (taivas == null || kamera == null || georeferenssi == null) return;
+            if (osuus <= 0f)
+            {
+                if (taivasPaalla) { kamera.clearFlags = CameraClearFlags.SolidColor; taivasPaalla = false; }
+                return;
+            }
+            if (!taivasPaalla)
+            {
+                RenderSettings.skybox = taivas;
+                kamera.clearFlags = CameraClearFlags.Skybox;
+                taivasPaalla = true;
+            }
+            var gt = georeferenssi.transform;
+            Vector3 keskus = gt.TransformPoint((float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero));
+            Vector3 kohti = keskus - kamera.transform.position;
+            float d = kohti.magnitude;
+            float r = (float)CesiumWgs84Ellipsoid.GetMaximumRadius() * gt.lossyScale.x;
+            taivas.SetVector("_Nadir", kohti / Mathf.Max(1f, d));
+            taivas.SetFloat("_Raja", Mathf.Asin(Mathf.Clamp01(r / Mathf.Max(r, d))));
+            taivas.SetColor("_Tausta", kamera.backgroundColor);
+            taivas.SetFloat("_Osuus", osuus * osuus * (3f - 2f * osuus));
         }
 
         /// <summary>Aurinko niin, että pituusasteella lon on paikallinen aurinkoaika tunti (deklinaatio päivämäärästä).</summary>
