@@ -165,8 +165,9 @@ namespace Matkakirja
         }
 
         /// <summary>
-        /// Lento isoympyräkaarena (lento, mannerlento) lennon esityksellä: kamera yläviistosta,
-        /// nousu → matkalento → lasku puoliorbitilla, aurinko, sumu, pilvet ja savujana.
+        /// Lento isoympyräkaarena (lento, mannerlento) lennon esityksellä: kamera LennonAikajanan mukaan
+        /// (syöksy koneelle, lähikuva, irtautuminen, matka, kohdekaupungin kierto ja lasku), aurinko, sumu,
+        /// pilvet ja savujana.
         /// </summary>
         public void Lenna(double lat0, double lon0, double lat1, double lon1, float kestoS, Action valmis)
         {
@@ -227,13 +228,23 @@ namespace Matkakirja
             double huippu = math.min(900000.0, reittiM * 0.12);
             var kamera = kierto != null ? kierto.GetComponent<Camera>() : null;
 
-            // Lähtöasento kamerasta: kuvaus liukuu siihen ensimmäisen sekunnin aikana.
-            var alkuAsento = kierto != null
-                ? new Asento { lat = kierto.leveys, lon = kierto.pituus, etaisyys = kierto.korkeus, kallistus = kierto.kallistus, suuntima = kierto.suuntima, katse = kierto.katseKorkeus }
-                : default;
-            // Lähikuva koneesta (ennen 18,6°:n näkymä ja matkalla jopa 1600 km).
-            double lahiEtaisyys = math.clamp(reittiM * 0.04, 90_000.0, 300_000.0);
-            double kaukoEtaisyys = math.clamp(reittiM * 0.09, lahiEtaisyys * 1.4, 650_000.0);
+            // LENNON AIKAJANA (omistaja 24.9.): kamera avainkehyksinä datana, kohdekaupungin kierto taulukosta.
+            var merkit = aloitusMerkit != null ? aloitusMerkit : FindAnyObjectByType<KaupunkiMerkit>();
+            string kohdeId = merkit != null ? merkit.LahinId(lat1, lon1) : null;
+            var kaupunki = kohdeId != null && LennonAikajana.Kaupungit.TryGetValue(kohdeId, out var kk)
+                ? kk : LennonAikajana.Oletus(Suuntima(lat0, lon0, lat1, lon1, 1.0), saapumisKorkeus);
+            double loppuKallistus = kierto != null ? kierto.KallistusRaja(saapumisKorkeus) : 0;
+            var avaimet = LennonAikajana.Laske(reittiM, saapumisKorkeus, loppuKallistus, kaupunki);
+            // Lähtöasento kamerasta (esim. Lontoon zoomin loppu): aikajanan ensimmäinen avain.
+            var alku0 = kierto != null
+                ? (lat: kierto.leveys, lon: kierto.pituus, katse: kierto.katseKorkeus)
+                : (lat: lat0, lon: lon0, katse: 0.0);
+            if (kierto != null)
+                avaimet[0] = new LennonAikajana.Avain
+                {
+                    Osuus = 0, Kohde = -1, SuuntaAbs = true,
+                    Etaisyys = kierto.korkeus, Kallistus = kierto.kallistus, Suunta = kierto.suuntima,
+                };
 
             if (savu != null) savu.Aloita();
             if (aurinko != null) aurinko.Aseta(true);
@@ -246,47 +257,45 @@ namespace Matkakirja
             {
                 float kulunut = Time.unscaledTime - alku;
                 double t = math.saturate(kulunut / kesto);
-                double p = AutokyydinVaihe(t);
+                // Koneen tempo: lähikuvassa lähes paikallaan, kiihdytys, tasainen matka, hidastus kaupunkiin.
+                double p = LennonAikajana.KoneenOsuus(t);
                 var q = ReittiGeometria.Isoympyra(lat0, lon0, lat1, lon1, p);
                 double h = huippu * math.sin(math.PI * p);
                 Siirra(q.x, q.y, h);
                 double suunta = Suuntima(lat0, lon0, lat1, lon1, p);
+                AsetaVaihe(LennonAikajana.Vaihe(t));
 
-                AsetaVaihe(p < NousuLoppuu ? LennonVaihe.Nousu : p < LaskuAlkaa ? LennonVaihe.Matka : LennonVaihe.Lasku);
-                // LENNON ESITYS (omistaja 24.9.): kamera koneen ETUVIISTOSTA ja lähellä, ja kulma, korkeus ja
-                // suunta muuttuvat koko ajan hitaasti (ei vaiheportaita): nousussa kamera loittonee ja laskee
-                // kulmaa, matkalla kiertää hitaasti koneen ympäri, laskussa puoliorbitti kuten ennen.
-                double nousu = Pehmea(p / 0.4);
-                double lasku = Pehmea((p - 0.68) / 0.32);
-                double matka = Pehmea(p / NousuLoppuu) * (1 - Pehmea((p - LaskuAlkaa) / (1 - LaskuAlkaa)));
-
-                var a = new Asento
+                var (etaisyys, kallistusNyt, suuntimaNyt, kohde) = LennonAikajana.Arvo(avaimet, t, suunta);
+                // Kohde: −1 lähtöpiste → 0 kone → 1 kohdekaupunki.
+                double klat, klon, katse;
+                if (kohde < 0)
                 {
-                    lat = q.x,
-                    lon = q.y,
-                    katse = nosto + h,
-                    etaisyys = math.lerp(math.lerp(lahiEtaisyys, kaukoEtaisyys, nousu), saapumisKorkeus, lasku),
-                    kallistus = math.lerp(math.lerp(38.0, 64.0, nousu), 40.0, lasku) + 4.0 * math.sin(math.PI * 2.0 * p),
-                    // Etuviisto (145° lentosuunnasta), hidas kierto koko matkan ajan, laskussa puoliorbitti.
-                    suuntima = suunta + 145.0 + 55.0 * p + 180.0 * lasku,
-                };
-                if (kierto != null)
-                {
-                    double sulau = Pehmea(kulunut / 2.5);
-                    if (sulau < 1) a = Asento.Sekoita(alkuAsento, a, sulau);
-                    kierto.Kuvaa(a.lat, a.lon, a.etaisyys, a.kallistus, a.suuntima, a.katse);
+                    double s = kohde + 1;
+                    klat = math.lerp(alku0.lat, q.x, s);
+                    klon = alku0.lon + ((q.y - alku0.lon + 540.0) % 360.0 - 180.0) * s;
+                    katse = math.lerp(alku0.katse, nosto + h, s);
                 }
+                else
+                {
+                    klat = math.lerp(q.x, lat1, kohde);
+                    klon = q.y + ((lon1 - q.y + 540.0) % 360.0 - 180.0) * kohde;
+                    katse = math.lerp(nosto + h, 0.0, kohde);
+                }
+                if (kierto != null) kierto.Kuvaa(klat, klon, etaisyys, kallistusNyt, suuntimaNyt, katse);
+
+                double matka = Pehmea((t - 0.30) / 0.10) * (1 - Pehmea((t - 0.70) / 0.10));
                 if (aurinko != null)
                 {
                     aurinko.Kohde(q.y);
-                    if (lasku > 0.3) aurinko.Aseta(false);
+                    // Aurinko ja rinnevarjot myös kaupungin kierron ajan; kameravalo palaa juuri ennen perillä oloa.
+                    if (t > 0.95) aurinko.Aseta(false);
                     // Etäisyyssumu matkalennon ajan: alku ja loppu karkaavat kauas nousussa ja laskussa.
-                    if (matka > 0.02) aurinko.Sumu(a.etaisyys * (1.1 + 6.0 * (1 - matka)), a.etaisyys * (4.0 + 30.0 * (1 - matka)));
+                    if (matka > 0.02) aurinko.Sumu(etaisyys * (1.1 + 6.0 * (1 - matka)), etaisyys * (4.0 + 30.0 * (1 - matka)));
                     else aurinko.Sumu(0, 0);
                 }
                 if (pilvet != null)
                 {
-                    if (lasku > 0.15) { if (pilvet.Nakyvissa) pilvet.Piilota(); }
+                    if (t > 0.78) { if (pilvet.Nakyvissa) pilvet.Piilota(); }
                     else pilvet.Korkeus(math.max(2000.0, (nosto + h) * 0.6));
                 }
                 PaivitaKone(kamera, lat0, lon0, lat1, lon1, p, huippu);
@@ -319,8 +328,6 @@ namespace Matkakirja
             Kone(false);
         }
 
-        const double NousuLoppuu = 0.2, LaskuAlkaa = 0.8;
-
         static double Pehmea(double x)
         {
             x = math.saturate(x);
@@ -337,25 +344,6 @@ namespace Matkakirja
             double y = math.sin(dl) * math.cos(f2);
             double x = math.cos(f1) * math.sin(f2) - math.sin(f1) * math.cos(f2) * math.cos(dl);
             return math.degrees(math.atan2(y, x));
-        }
-
-        struct Asento
-        {
-            public double lat, lon, etaisyys, kallistus, suuntima, katse;
-
-            public static Asento Sekoita(Asento a, Asento b, double s)
-            {
-                double ds = ((b.suuntima - a.suuntima) % 360.0 + 540.0) % 360.0 - 180.0;
-                return new Asento
-                {
-                    lat = math.lerp(a.lat, b.lat, s),
-                    lon = a.lon + ((b.lon - a.lon + 540.0) % 360.0 - 180.0) * s,
-                    etaisyys = math.exp(math.lerp(math.log(math.max(1.0, a.etaisyys)), math.log(math.max(1.0, b.etaisyys)), s)),
-                    kallistus = math.lerp(a.kallistus, b.kallistus, s),
-                    suuntima = a.suuntima + ds * s,
-                    katse = math.lerp(a.katse, b.katse, s),
-                };
-            }
         }
 
         /// <summary>3D-kone (DC-3) paikalleen, nokka lentosuuntaan ja koko ruudulla vakio; ilman mallia kuvan kierto.</summary>

@@ -178,6 +178,7 @@ namespace Matkakirja.Editori
             aurinko.georeferenssi = georef;
             aurinko.valo = valo;
             nappula.aurinko = aurinko;
+            aurinko.taivas = Materiaali("Taivas", "Matkakirja/Taivas", new Color(0.80f, 0.87f, 0.94f));
             RenderSettings.ambientMode = UnityEngine.Rendering.AmbientMode.Flat;
             RenderSettings.ambientLight = new Color(0.45f, 0.42f, 0.38f);
 

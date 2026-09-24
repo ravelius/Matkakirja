@@ -318,11 +318,14 @@ namespace Matkakirja
         }
 
         /// <summary>Sallittu kallistus tällä korkeudella: kaukaa pallo katsotaan aina suoraan.</summary>
-        public double KallistusRaja()
+        public double KallistusRaja() => KallistusRaja(korkeus);
+
+        /// <summary>Sallittu kallistus annetulla korkeudella (lennon lasku päättyy tähän, ettei kamera hyppää).</summary>
+        public double KallistusRaja(double korkeusM)
         {
             double raja = kallistusRajaKm * 1000.0;
             double min = MinKorkeus();
-            return maxKallistus * math.saturate((raja - korkeus) / math.max(1.0, raja - min));
+            return maxKallistus * math.saturate((raja - korkeusM) / math.max(1.0, raja - min));
         }
 
         /// <summary>Korkeus, jolla koko pallo mahtuu kuvan kapeampaan suuntaan.</summary>
