@@ -959,6 +959,49 @@ kontekstirajan takia. SEURAAVA SESSIO: toista TÄSMÄLLEEN tämä reitti
 äänet päällä (Mac-kaiuttimet turvassa, ks. Raamatun äänikäytäntö) ja
 lue `puhe.url` heti kun `lento`-kenttä ilmestyy.
 
+**LOPULLINEN TULOS 24.9. klo 13.3x (SHA 24c9194, iPhone 18 Pro): BUGI
+23A VAHVISTETTU, JUURISYY TARKENTUI.** Kaksi löydöstä:
+
+1. **`puhe pois` -komento on PYSYVÄ TALLENNETTU LIPPU, ei istuntokohtainen
+   mykistys.** Edellisen session `puhe pois` (ei `komento.txt: hiljaa`,
+   vaan `peli-komento.txt`-protokollan oma komento) jäi päälle
+   tallennukseen (`tallennus.json`) ja pysyi voimassa TÄYDEN
+   sovelluksen cold-restartin (`simctl terminate`+`launch`) yli.
+   `luento intro` -komento palautti `VIRHE luennat pois päältä` vielä
+   uudessakin prosessissa ennen korjausta. Korjaus: `puhe paalle` (pysyy
+   päällä uusienkin restartien yli, todennettu). **SEURAAVILLE
+   SESSIOILLE**: jos `puhe.paalla` pysyy `false`:na koko lennon ajan,
+   tarkista ensin `luento intro` -komennolla onko luennat päällä ennen
+   kuin oletat äänen olevan rikki.
+2. **Oikea B7-7-testi ajettu äänet päällä, `puhe paalle`-tilassa,
+   AIVAN ENSIMMÄINEN lento (portti → "Laita äänet päälle" → "Uusi
+   matka" → kartan kaupunkivalinta Ateena):** tiivis pollaus
+   (`peli-komento.txt: tila` n. 3–5 krt/s) läpi koko lennon (`Matkalla`/
+   `Nousu`→`Matka`→[Lasku ohitettiin nopeasti]→`Lehti`, ~9-10 s):
+   - `Aloitus`-vaiheessa (ennen lentoa, kartan zoom) `puhe.url` =
+     `intro-puhe.mp3` — OIKEIN.
+   - HETI kun `lento`-kenttä ilmestyi (`vaihe:"Nousu"`) `puhe.url` OLI
+     YHÄ `intro-puhe.mp3` (sama klippi jatkui/toistui lennon puolelle)
+     3 peräkkäisessä pollauksessa — VÄÄRIN, täsmää tunnettuun bugiin 23A.
+   - Sen jälkeen `puhe.url` putosi `null`:iin ja pysyi `null`:na LOPUN
+     `Nousu`-vaiheen, koko `Matka`-vaiheen ja saapumisen ajan (~35
+     pollausta, ~10 s) — `puhe-lento-alku.mp3` EI SOINUT KERTAAKAAN.
+   - Tukee tätä: testikomento `luento lento-alku` palauttaa
+     `VIRHE luentoa ei ole` (`luento intro` sen sijaan toimii) —
+     `lento-alku`-tunnus ei ole rekisteröity luentokatalogiin tässä
+     buildissa, mikä selittää miksei se koskaan käynnisty automaattisesti.
+   - Musiikkikanavat (pohja/maisema) toimivat koko ajan normaalisti
+     (oikeat URLit, tasot, streams) — vika on rajattu narraatio/puhe-
+     järjestelmään, ei äänijärjestelmään yleensä.
+
+   **PÄIVITETTY PASS/FAIL: FAIL.** Lento soittaa avaustekstin narraation
+   (`intro-puhe.mp3`) hetken lennon alussa, sen jälkeen ei mitään —
+   `puhe-lento-alku.mp3`/`lento-alku`-tunnus puuttuu luentokatalogista.
+   Korjaustarve kahdessa kohdassa: (a) rekisteröi `lento-alku`-luento
+   katalogiin oikealla mp3:lla, (b) varmista ettei lennon käynnistys
+   jätä edellisen (avaus-)narraation soimaan lennon puolelle.
+   Vastuu: Natiiviseppä/Pelikoodari.
+
 ## B7-9 (löydös 24A): Aloitusportin ruutu — PERUTTU, KS. KORJAUS ALLA
 
 **KORJAUS (Fable 24.9. klo 13.1x): OMISTAJA PERUI PORTIN MUUTOKSEN klo
@@ -1033,7 +1076,7 @@ Natiivi-UI:lta.
 | B7-4 | Radion VU-mittari | ⚠️ EI VOITU TESTATA (161fa35) | b7-4-vu-mittari-lepotila.png | Ei onnistuttu virittämään asemaa kosketuksella |
 | B7-5 | Lennon lähikuva | ✅ TODENNÄKÖINEN PASS (161fa35) | b7-5-lento-lahikuva.png | Vaiheiden ajoitus epäselvä, ks. huomio |
 | B7-6 | iPhonen yläreuna uusiksi (löydös 20) | ❌ FAIL — ei vielä toteutettu (161fa35) | b7-6-ylaosa-vanha-layout.png | Odotettua, tiedossa jo ennen ajoa |
-| B7-7 | Lennon oikea teksti (ei avausteksti) + UI piilossa | UI-piilotus ✅ PASS; ääni EI VOITU VARMISTAA (161fa35+24c9194) | | `puhe.url` oli null koko lennon ajan — ei ensimmäinen lento tuoreessa pelissä, uusinta tarvitaan |
+| B7-7 | Lennon oikea teksti (ei avausteksti) + UI piilossa | UI-piilotus ✅ PASS; ääni ❌ FAIL (24c9194, lopullinen) | | Lento soittaa `intro-puhe.mp3`:n hetken lennon alussa, sitten hiljaisuus koko loppulennon; `lento-alku`-luento puuttuu katalogista (`VIRHE luentoa ei ole`) |
 | B7-8 | ☰ Uusi peli → aloitusportti (ei suoraan Lontooseen) | ⚠️ EI SAATU TESTATTUA (161fa35) | | Kosketus ei osunut valikon vieritykseen |
 | B7-9 | Aloitusportti (VAATIMUS PERUTTU — nykyinen sisältö on oikea) | ✅ PASS (24c9194, korjatun määritelmän mukaan) | b7-9-portti-vielakin-vanha.png | Omistaja perui alkuperäisen "vain 3 elementtiä" -vaatimuksen 12.2x |
 | 14 | Navat | ✅ PASS (161fa35, ei kuulu build 7:ään erikseen) | | |
